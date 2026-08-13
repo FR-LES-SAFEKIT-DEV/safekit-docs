@@ -1,0 +1,2 @@
+# safekit-docs
+SafeKit documentation
