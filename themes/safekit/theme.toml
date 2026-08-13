@@ -1,0 +1,6 @@
+name = "SafeKit"
+license = "MIT"
+description = "SafeKit Hugo theme"
+
+[author]
+  name = "Eviden"

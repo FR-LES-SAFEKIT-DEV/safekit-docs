@@ -1,0 +1,46 @@
+<!DOCTYPE safe>
+<safe>
+<!-- Define the service names, in the startup order, separated by commas (,) -->
+<macro name="SERVICES" value="postgresql-9.5"/>
+ <!-- Replicate
+     * C:\Program Files\PostgreSQL\9.5\data\ default directory path of PostgreSQL database and redo log
+  -->
+<macro name="POSTGRESQLDIR" value="C:\Program Files\PostgreSQL\9.5\data\"/>
+
+<service mode="mirror" boot="on">
+  <!-- Heartbeat Configuration -->
+  <heart>
+    <heartbeat name="default">
+    </heartbeat>
+  </heart>
+  <!-- Virtual IP Configuration -->
+  <!-- Define the name or IP address of your virtual server 
+  -->
+  <vip>
+    <interface_list>
+        <interface> 
+	  <real_interface>
+               <virtual_addr addr="" where="one_side_alias" />
+          </real_interface>
+        </interface>
+    </interface_list>
+  </vip>
+  <!-- Software Error Detection Configuration -->
+  <errd polltimer="10">
+    <!-- PostgreSQL Server -->
+    <proc name="pg_ctl.exe" action="restart" class="prim" />
+  </errd>
+  <!-- File Replication Configuration -->
+  <rfs>
+	<replicated dir="%POSTGRESQLDIR%" >
+	  <notreplicated path="pg_stat_tmp"/>
+    <notreplicated path="postmaster.pid"/>
+	</replicated>
+  </rfs>
+  <!-- User scripts activation -->
+   <user>
+    <var name="SERVICES" value="%SERVICES%"/>
+    <var name="POSTGRESQLDIR" value="%POSTGRESQLDIR%"/>
+   </user>
+</service>
+</safe>

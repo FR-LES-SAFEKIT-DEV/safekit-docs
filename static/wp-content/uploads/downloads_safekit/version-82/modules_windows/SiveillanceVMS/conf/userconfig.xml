@@ -1,0 +1,59 @@
+<!DOCTYPE safe>
+<safe>
+ <!-- Define the service names, in the startup order, separated by commas (,)
+      Use the Get-Service PowerShell cmdlet to get the service names
+  -->
+  <macro name="SERVICES" value="W3SVC, MSSQLServer, Siemens Siveillance VMS Management Server, Siemens Siveillance VMS Log Server, Siemens Siveillance VMS Event Server, Siemens Siveillance VMS Data Collector Server"/>
+
+  <service mode="mirror" boot="on">
+    <!-- Heartbeat Configuration -->
+    <heart>
+      <heartbeat name="default">
+      </heartbeat>
+    </heart>
+    <!-- Virtual IP Configuration -->
+    <!-- Define the name or IP address of your virtual server 
+      -->
+    <vip>
+      <interface_list>
+        <interface>
+          <real_interface>
+            <virtual_addr addr="" where="one_side_alias" />
+          </real_interface>
+        </interface>
+      </interface_list>
+    </vip>
+	  <!-- Software Error Detection Configuration -->
+    <errd>
+      <proc name="sqlservr.exe" atleast="1" action="restart" class="prim" />
+      <proc name="VideoOS.Server.Service.exe" atleast="1" action="restart" class="prim" />
+    </errd>
+	
+    <!-- File Replication Configuration -->
+    <!-- Adapt with the directory of your SQL Server database and logs -->
+    <rfs>
+	    <replicated dir="C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA" />
+	    <replicated dir="C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Log" />
+    </rfs>
+    <!-- User scripts activation -->
+    <user>
+      <var name="SERVICES" value="%SERVICES%"/>
+    </user>
+
+    <!-- SafeKit 8.2 custom ckecker -->
+    <check>
+      <custom ident="app_pool_check" when="prim" exec="apppoolcheck.ps1" action="restart" />
+    </check>
+
+<!-- SafeKit 7.5 custom checker
+    <check>
+      <custom ident="app_pool_check" when="prim" exec="apppoolcheck.ps1" />
+    </check>
+    <failover><![CDATA[
+    	/* special line for the custom checker added to the default failover rules */
+    	app_pool_down:
+      	if (custom.app_pool_check == down) then restart();
+    	]]></failover>
+-->
+  </service>
+</safe>

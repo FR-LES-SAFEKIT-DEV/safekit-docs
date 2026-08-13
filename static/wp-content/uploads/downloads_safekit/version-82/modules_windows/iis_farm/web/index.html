@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Module Configuration</title>
+    <meta name="title" content="Module Configuration" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8"></meta>
+    <link type="text/css" href="/jqueryFileTree/jqueryFileTree.css" rel="stylesheet"/>
+    <style>
+      .macroContainer input {
+        width:30rem !important;
+      }
+    </style>
+    <script>
+
+$(function(){
+      function fileopen(el) {
+                if(location.hash.substring(1)[0]=='/')
+                   filepath=location.hash.substring(1)+'bin/'+$(el).attr('name')
+                else
+                   filepath='/modules/'+location.hash.substring(1)+'/bin/'+$(el).attr('name')
+
+                   if( $(el).data("ModuleWindow") && ($(el).data("ModuleWindow").closed == false))
+                                $(el).data("ModuleWindow").focus();
+                   else
+                                $(el).data("ModuleWindow", window.open("/edit.html?"+filepath, '',
+                 'directories=no,menubar=no,status=no,scrollbars=yes,resizable=yes,location=yes,toolbar=no,height=700,width=600'));
+      };
+
+      $("#renderTargets").delegate(".editScriptBtn", "click",function(){fileopen(this); return false;});
+      $('#showXml').button().click(dumpxml);
+      xmlRender($("#renderTargets"),$(userconfigXML));
+      			      
+      });
+
+    </script>	
+    <style>
+
+    </style>
+
+</head>
+<body>
+   	<div class="sectionDesc" lang="default">Define the main configuration parameters for the module, and edit scripts for starting and stopping the application</div>
+
+  <!-- Render  targets (integrator must write this) -->
+  
+  <div id="renderTargets">
+      
+      <div class="sectionContainer macroContainer">
+        <table id="macroTarget"  class="xmlTemplateExpand" rel="#macros"></table>
+      </div>
+      
+      <div id="farmTable" class="sectionContainer">
+        <div class="sectionLabel" lang="default">Farm Networks</div>
+	<div class="sectionDesc" lang="default">For changing the networks, go back to the previous tab</div>
+        <div id="lanTarget" class="xmlTemplateExpand" rel="#720lan">
+        </div>
+      </div>
+      
+      <div id="vipTable" class="sectionContainer">
+        <div class="sectionLabel"><span lang="default">Virtual IP Configuration</span><button class="xmlSingleNode xmlNodeNewBtn" rel="service/vip" name="#vipTarget,#lbTarget" title="define a cluster IP address configuration" lang="default">Define</button></div>
+		<div class="sectionDesc" lang="default">Define a virtual IP address for the cluster</div>
+		
+        <div class="IfExists xmlRemoveIfEmpty" rel="vip" name="#vipTarget">
+	  <button class="xmlNodeNewBtn" rel="vip interface" name="#vipTarget" title="add a new network interface" lang="default">New interface</button>
+          <div id="vipTarget" class="xmlTemplateExpand" rel="#vipLB"></div>
+          <button class="xmlNodeNewBtn" rel="vip > loadbalancing_list > group > rule" name="#lbTarget" title="add a load-balancing rule" lang="default">New rule</button>
+	  <br>
+	  <div id="lbTarget" class="xmlTemplateExpand" rel="#lb"></div>
+        </div>
+      </div>
+
+
+      <div id="errdTable" class="sectionContainer">
+        <div class="sectionLabel">
+	  <span lang="default">Process Checker</span>
+	  <button class="xmlSingleNode xmlNodeNewBtn" rel="service/errd" name="#errdTarget" title="define process termination detection configuration" lang="default">Define</button>			  
+	</div>
+		<div class="sectionDesc" lang="default">Define a process name to monitor</div>
+        <div class="IfExists xmlRemoveIfEmpty" rel="errd" name="#errdTarget">
+          <button class="xmlNodeNewBtn" rel="errd proc" name="#errdTarget" title="add a process to monitor" lang="default">New process</button>
+          <div id="errdTarget" class="xmlTemplateExpand" rel="#errd"></div>
+        </div>
+      </div>
+
+      <div id="userTable" class="sectionContainer IfExists" rel="user">
+        <div class="sectionLabel"><span lang="default">User Scripts Edition</span> </div>
+		<div class="sectionDesc" lang="default">Edit start_both and stop_both for inserting the start and stop of the application</div> 		
+          <ul class="jqueryFileTree" >
+         <li class="file edit editScriptBtn" name="start_both.ps1" title="Click to launch the editor"  lang="default"><span>start_both</span></li>
+         <li class="file edit editScriptBtn" name="stop_both.ps1" title="Click to launch the editor"  lang="default"><span>stop_both</span></li>
+         </ul>
+      </div>
+     
+  </div>
+</body>
+</html>

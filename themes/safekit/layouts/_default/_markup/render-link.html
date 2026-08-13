@@ -1,0 +1,7 @@
+{{- $url := .Destination -}}
+{{- $isExternal := or (hasPrefix $url "http://") (hasPrefix $url "https://") -}}
+{{- $isPDF := or (hasSuffix (lower $url) ".pdf") (hasSuffix (lower $url) ".txt") -}}
+{{- $isYouTube := or (in $url "youtube.com") (in $url "youtu.be") -}}
+{{- $isDownload := or (hasSuffix (lower $url) ".pptx") (hasSuffix (lower $url) ".docx") (hasSuffix (lower $url) ".doc") (hasSuffix (lower $url) ".exe") (hasSuffix (lower $url) ".msi") (hasSuffix (lower $url) ".bin") -}}
+<a href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if or $isPDF $isYouTube $isExternal }} target="_blank" rel="noopener"{{ end }}{{ if $isDownload }} download{{ end }}>{{ .Text | safeHTML }}</a>
+{{- /* */ -}}

@@ -1,0 +1,133 @@
+# Hugo configuration for SafeKit site
+baseURL = "https://fr-les-safekit-dev.github.io/safekit-docs/"
+relativeURLs = false
+locale = "en"
+title = "SafeKit - High Availability Software"
+theme = "safekit"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML (for <img> with dimensions)
+  [markup.highlight]
+    codeFences = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[languages]
+  [languages.en]
+    weight = 1
+    [languages.en.params]
+      label = "English"
+  [languages.fr]
+    weight = 2
+    [languages.fr.params]
+      label = "Français"
+  [languages.ja]
+    weight = 3
+    [languages.ja.params]
+      label = "日本語"
+  [languages.zh-hans]
+    weight = 4
+    [languages.zh-hans.params]
+      label = "简体中文"
+  [languages.ar]
+    weight = 5
+    [languages.ar.params]
+      label = "العربية"
+  [languages.de]
+    weight = 6
+    [languages.de.params]
+      label = "Deutsch"
+  [languages.es]
+    weight = 7
+    [languages.es.params]
+      label = "Español"
+  [languages.it]
+    weight = 8
+    [languages.it.params]
+      label = "Italiano"
+  [languages.ko]
+    weight = 9
+    [languages.ko.params]
+      label = "한국어"
+  [languages.pt-br]
+    weight = 10
+    [languages.pt-br.params]
+      label = "Português (Brasil)"
+  [languages.pt-pt]
+    weight = 11
+    [languages.pt-pt.params]
+      label = "Português (Portugal)"
+  [languages.nl]
+    weight = 12
+    [languages.nl.params]
+      label = "Nederlands"
+
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+    lang = "en"
+    excludeFiles = "{fr,ja,zh-hans,ar,de,es,it,ko,pt-br,pt-pt,nl}/**"
+  [[module.mounts]]
+    source = "content/fr"
+    target = "content"
+    lang = "fr"
+  [[module.mounts]]
+    source = "content/ja"
+    target = "content"
+    lang = "ja"
+  [[module.mounts]]
+    source = "content/zh-hans"
+    target = "content"
+    lang = "zh-hans"
+  [[module.mounts]]
+    source = "content/ar"
+    target = "content"
+    lang = "ar"
+  [[module.mounts]]
+    source = "content/de"
+    target = "content"
+    lang = "de"
+  [[module.mounts]]
+    source = "content/es"
+    target = "content"
+    lang = "es"
+  [[module.mounts]]
+    source = "content/it"
+    target = "content"
+    lang = "it"
+  [[module.mounts]]
+    source = "content/ko"
+    target = "content"
+    lang = "ko"
+  [[module.mounts]]
+    source = "content/pt-br"
+    target = "content"
+    lang = "pt-br"
+  [[module.mounts]]
+    source = "content/pt-pt"
+    target = "content"
+    lang = "pt-pt"
+  [[module.mounts]]
+    source = "content/nl"
+    target = "content"
+    lang = "nl"
+
+[outputFormats.MD]
+  mediaType = "text/markdown"
+  baseName = "index"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  page = ["HTML", "MD"]
+  section = ["HTML", "MD"]
+  home = ["HTML", "MD"]

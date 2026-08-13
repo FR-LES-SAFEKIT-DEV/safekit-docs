@@ -1,0 +1,112 @@
+{{ define "main" }}
+<div class="page-with-toc">
+    <aside class="toc-sidebar">
+        <nav class="toc-nav docs-toc" id="docs-toc"></nav>
+    </aside>
+    <article class="has-toc">
+        {{ .Content }}
+    </article>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var article = document.querySelector('article');
+    var toc = document.getElementById('docs-toc');
+    if (!article || !toc) return;
+
+    var headings = article.querySelectorAll('h1, h2, h3, h4');
+    if (headings.length === 0) return;
+
+    var root = document.createElement('ul');
+    var stack = [{ ul: root, level: 0 }];
+
+    headings.forEach(function(h) {
+        var level = parseInt(h.tagName[1]);
+        var id = h.id;
+        if (!id) return;
+
+        while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+            stack.pop();
+        }
+
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#' + id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+
+        var parentUl = stack[stack.length - 1].ul;
+        parentUl.appendChild(li);
+
+        var childUl = document.createElement('ul');
+        li.appendChild(childUl);
+        stack.push({ ul: childUl, level: level });
+    });
+
+    root.querySelectorAll('ul:empty').forEach(function(u) { u.remove(); });
+    toc.appendChild(root);
+
+    toc.querySelectorAll('li').forEach(function(li) {
+        var sub = li.querySelector('ul');
+        if (sub) {
+            li.classList.add('toc-has-children');
+            sub.style.display = 'none';
+            var toggle = document.createElement('span');
+            toggle.className = 'toc-toggle';
+            toggle.textContent = '+';
+            li.querySelector('a').appendChild(toggle);
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                li.classList.toggle('toc-open');
+                sub.style.display = li.classList.contains('toc-open') ? 'block' : 'none';
+                toggle.textContent = li.classList.contains('toc-open') ? '\u2212' : '+';
+            });
+        }
+    });
+
+    var allLinks = toc.querySelectorAll('a');
+    var targets = [];
+    allLinks.forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            var el = document.getElementById(href.substring(1));
+            if (el) targets.push({ el: el, link: link });
+        }
+    });
+
+    function updateSpy() {
+        var scrollPos = window.scrollY + 120;
+        var active = null;
+        for (var i = 0; i < targets.length; i++) {
+            if (targets[i].el.offsetTop <= scrollPos) active = targets[i];
+        }
+        allLinks.forEach(function(l) { l.classList.remove('toc-active'); });
+        // Collapse all sections first
+        toc.querySelectorAll('.toc-has-children.toc-open').forEach(function(li) {
+            li.classList.remove('toc-open');
+            var sub = li.querySelector('ul');
+            if (sub) sub.style.display = 'none';
+            var tog = li.querySelector('.toc-toggle');
+            if (tog) tog.textContent = '+';
+        });
+        // Expand only the active branch
+        if (active) {
+            active.link.classList.add('toc-active');
+            var parent = active.link.closest('li');
+            while (parent) {
+                if (parent.classList.contains('toc-has-children')) {
+                    parent.classList.add('toc-open');
+                    var sub = parent.querySelector('ul');
+                    if (sub) sub.style.display = 'block';
+                    var tog = parent.querySelector('.toc-toggle');
+                    if (tog) tog.textContent = '\u2212';
+                }
+                parent = parent.parentElement.closest('li');
+            }
+        }
+    }
+    window.addEventListener('scroll', updateSpy);
+    updateSpy();
+});
+</script>
+{{ end }}

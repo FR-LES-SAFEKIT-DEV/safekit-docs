@@ -1,0 +1,43 @@
+<!DOCTYPE safe>
+<safe>
+<!-- Define the service names, in the startup order, separated by commas (,) -->
+<macro name="SERVICES" value="oracle"/>
+<service mode="mirror" boot="on">
+  <!-- Heartbeat Configuration -->
+  <heart>
+    <heartbeat name="default">
+    </heartbeat>
+  </heart>
+  <!-- Virtual IP Configuration (used by Oracle SQL*Net Listener) -->
+  <!-- Define the IP address of your virtual server
+  -->
+  <vip>
+    <interface_list>
+      <interface>
+        <real_interface>
+          <virtual_addr addr="" where="one_side_alias" />
+        </real_interface>
+      </interface>
+    </interface_list>
+  </vip>
+  <!-- Software Error Detection Configuration -->
+  <errd polltimer="10">
+    <!-- Oracle databases
+    For monitoring one specific oracle instance, insert the attribute
+    argregex=".*SID$" where SID is the name of the DataBase
+    -->
+    <proc name="oracle" nameregex="ora_.*" action="restart" class="prim" />
+    <!-- <proc name="tnslsnr" action="restart" class="prim" /> -->
+  </errd>
+  <!-- File Replication Configuration -->
+  <!-- Define the path of your Oracle database directory and transaction logs
+  -->
+  <rfs>
+    <replicated dir="" />
+  </rfs>
+  <!-- User scripts -->
+  <user>
+    <var name="SERVICES" value="%SERVICES%"/>
+  </user>
+</service>
+</safe>

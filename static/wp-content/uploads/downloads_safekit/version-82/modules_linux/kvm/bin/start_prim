@@ -1,0 +1,37 @@
+#!/bin/bash
+# Script called on the primary server for starting application
+
+# For logging into SafeKit log use:
+# $SAFE/safekit printi | printe "message" 
+
+# stdout goes into Application log
+echo "Running start_prim $*" 
+
+res=0
+
+# Start VM_NAME
+unset LANG
+virsh start $VM_NAME
+state=$(virsh domstate $VM_NAME)
+if ([ "x$state" == "x" ]) ; then
+	res=1
+	$SAFE/safekit printe "$VM_NAME not found"
+else
+	let i=1
+	while ( [ $i -le 5 ] && [ "x$state" != "xrunning" ]); do
+      sleep 5
+      state=$(virsh domstate $VM_NAME)
+      let i=i+1
+	done
+	if ([ "x$state" != "xrunning" ]) ; then
+		res=1
+		$SAFE/safekit printe "$VM_NAME start failed"
+	fi
+fi
+
+if [ $res -ne 0 ] ; then
+  $SAFE/safekit printe "start_prim failed"
+  
+  # uncomment to stop SafeKit when critical
+  $SAFE/safekit stop -i "start_prim"
+fi

@@ -1,0 +1,22 @@
+<!-- Farm Architecture with Load-Balancing and Failover -->
+
+<!DOCTYPE safe>
+
+<safe>
+ <!-- Define the service names, in the startup order, separated by commas (,)
+      Use 'systemctl list-unit-files \-\-type=service' (remove the \) to get the service names
+  -->
+ <macro name="SERVICES" value=""/>
+
+ <service mode="farm" boot="on">
+
+  <farm>
+    <lan name="default">
+    </lan>
+  </farm>
+ 
+  <user>
+    <var name="SERVICES" value="%SERVICES%"/>
+  </user>
+ </service>
+</safe>

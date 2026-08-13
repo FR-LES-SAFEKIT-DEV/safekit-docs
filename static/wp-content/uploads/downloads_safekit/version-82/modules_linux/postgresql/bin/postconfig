@@ -1,0 +1,36 @@
+#!/bin/bash
+# Script called on module configuration
+
+unset POSIXLY_CORRECT
+# Import utils functions
+source "$SAFEUSERBIN/module_scripts_utils"
+
+# Array of service names as defined in SERVICES configuration variable
+servicesList=$(Get_ServicesArray)
+if [ -z "$servicesList" ]; then
+    # No services found
+    exit 0
+fi
+if [ -z "$servicesList" ]; then
+    exit 0
+fi
+
+IFS=',' read -r -a servicesArray <<< "$servicesList"
+echo "    SERVICES $servicesList"
+for serviceName in "${servicesArray[@]}"; do
+    # Check if the service exists
+    serviceName=$(echo "$serviceName" | xargs)  # Trim whitespace
+    serviceFullName=$(Test_Service_Exist -ServiceName "$serviceName")
+    if [ -z "$serviceFullName" ] ; then
+        echo "    The service '$serviceName.service' does not exist"
+        exit 1
+    else
+        # Set manual startup
+        Set_Service_Startup -ServiceName "$serviceName" -StartupType disable
+        if [ $? -eq 0 ]; then
+            echo "    '$serviceFullName' start at boot disabled"
+        else
+            echo "    Warning: $serviceFullName disabling start at boot failed"
+        fi
+    fi
+done

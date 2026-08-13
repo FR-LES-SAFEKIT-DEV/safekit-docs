@@ -1,0 +1,532 @@
+<header>
+    <nav class="navbar">
+        <a href="https://eviden.com" class="logo" target="_blank" rel="noopener">
+            <img src="{{ "wp-content/uploads/2026/01/eviden-logo-black-265-54.png" | relURL }}" alt="Eviden" height="32">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <div class="nav-menu">
+            {{ $currentPage := . }}
+            <a href="{{ .Site.Home.RelPermalink }}" class="nav-brand{{ if .IsHome }} active{{ end }}">SafeKit</a>
+            {{ $enSite := index (where site.Sites "Language.Lang" "en") 0 }}
+            {{ $sections := slice "solutions" "use-cases" "architectures" "best-practises" "quick-install" "resources" }}
+            {{ $labels := dict "solutions" "Solutions" "use-cases" "Use Cases" "architectures" "Architectures" "best-practises" "Best Practices" "quick-install" "Quick Install" "resources" "Resources" }}
+            {{ $currentSection := "" }}
+            {{ with $currentPage.Section }}{{ $currentSection = . }}{{ end }}
+            {{ if not $currentSection }}{{ $currentSection = index (split (strings.TrimPrefix "/" $currentPage.RelPermalink) "/") 0 }}{{ end }}
+            {{ if eq $currentSection "docs" }}{{ $currentSection = "resources" }}{{ end }}
+            {{ range $sections }}
+                {{ $sectionName := . }}
+                {{ $label := index $labels $sectionName }}
+                {{ if eq $sectionName "use-cases" }}
+                {{ with $enSite.GetPage "/use-cases" }}
+                <div class="dropdown">
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "use-cases" }} active{{ end }}">Use Cases ▾</a>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">SafeKit</h4>
+                                {{ with $enSite.GetPage "/use-cases/high-availability-software-ha-cluster-windows-linux" }}
+                                <a href="{{ .RelPermalink }}">Elevator pitch</a>
+                                {{ end }}
+                                <a href="{{ "use-cases/" | relURL }}">Customer use cases</a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Use cases</h4>
+                                {{ with $enSite.GetPage "/use-cases/best-worst-use-cases-high-availability" }}
+                                <a href="{{ .RelPermalink }}">Best/Worst Use Cases</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/application-clustering-software" }}
+                                <a href="{{ .RelPermalink }}">OEM use case for a software publisher</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites" }}
+                                <a href="{{ .RelPermalink }}">Edge HA</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/business-continuity-software" }}
+                                <a href="{{ .RelPermalink }}">Distributed Enterprise use case</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/business-continuity-and-disaster-recovery-software" }}
+                                <a href="{{ .RelPermalink }}">Remote sites and disaster recovery use case</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">High Availability in Physical Security Market</h4>
+                                {{ with $enSite.GetPage "/use-cases/physical-security-software-redundancy" }}
+                                <a href="{{ .RelPermalink }}">Physical Security Software</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/video-management-software-vms-redundancy" }}
+                                <a href="{{ .RelPermalink }}">Video Management Software (VMS)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/electronic-access-control-software-eacs-redundancy" }}
+                                <a href="{{ .RelPermalink }}">Electronic Access Control Software (EACS)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/building-management-system-software-bms-redundancy" }}
+                                <a href="{{ .RelPermalink }}">Building Management System Software (BMS)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/use-cases/scada-software-redundancy-high-availability" }}
+                                <a href="{{ .RelPermalink }}">SCADA Software</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ else if eq $sectionName "solutions" }}
+                {{ with $enSite.GetPage "/solutions" }}
+                <div class="dropdown">
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "solutions" }} active{{ end }}">Solutions ▾</a>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">New application (real-time replication and failover)</h4>
+                                {{ with $enSite.GetPage "/solutions/windows-high-availability-software-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Windows (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/linux-high-availability-software-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Linux (mirror.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">New application (network load balancing and failover)</h4>
+                                {{ with $enSite.GetPage "/solutions/windows-load-balancing-failover" }}
+                                <a href="{{ .RelPermalink }}">Windows (farm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/linux-load-balancing-failover" }}
+                                <a href="{{ .RelPermalink }}">Linux (farm.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Full VM or container real-time replication and failover</h4>
+                                {{ with $enSite.GetPage "/solutions/hyper-v-replication-automatic-failover-load-balancing" }}
+                                <a href="{{ .RelPermalink }}">Hyper-V (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing" }}
+                                <a href="{{ .RelPermalink }}">KVM (kvm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/docker-container-high-availability-cluster-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Docker (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers" }}
+                                <a href="{{ .RelPermalink }}">Podman (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers" }}
+                                <a href="{{ .RelPermalink }}">Kubernetes (k3s.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Database (real-time replication and failover)</h4>
+                                {{ with $enSite.GetPage "/solutions/sql-server-high-availability-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Microsoft SQL Server (sqlserver.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/postgresql-high-availability-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">PostgreSQL (postgresql.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/oracle-high-availability-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Oracle (oracle.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/mysql-high-availability-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">MySQL (mysql.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers" }}
+                                <a href="{{ .RelPermalink }}">MariaDB (mysql.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/firebird-high-availability-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Firebird (firebird.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Web (network load balancing and failover)</h4>
+                                {{ with $enSite.GetPage "/solutions/apache-load-balancing-failover-2" }}
+                                <a href="{{ .RelPermalink }}">Apache (apache_farm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/iis-load-balancing-failover" }}
+                                <a href="{{ .RelPermalink }}">IIS (iis_farm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/nginx-the-simplest-load-balancing-cluster-with-failover" }}
+                                <a href="{{ .RelPermalink }}">NGINX (farm.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                {{ with $enSite.GetPage "/solutions/aws-high-availability-cluster-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">AWS (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/aws-load-balancing-cluster-failover" }}
+                                <a href="{{ .RelPermalink }}">AWS (farm.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                {{ with $enSite.GetPage "/solutions/gcp-high-availability-cluster-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">GCP (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/gcp-load-balancing-cluster-failover" }}
+                                <a href="{{ .RelPermalink }}">GCP (farm.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                {{ with $enSite.GetPage "/solutions/azure-high-availability-cluster-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Azure (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/azure-load-balancing-cluster-failover" }}
+                                <a href="{{ .RelPermalink }}">Azure (farm.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Other clouds</h4>
+                                {{ with $enSite.GetPage "/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds" }}
+                                <a href="{{ .RelPermalink }}">All cloud solutions</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Physical security (real-time replication and failover)</h4>
+                                {{ with $enSite.GetPage "/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Milestone XProtect (milestone.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/nedap-high-availability-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Nedap (nedap.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers" }}
+                                <a href="{{ .RelPermalink }}">Genetec SQL Server (sqlserver.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk" }}
+                                <a href="{{ .RelPermalink }}">Bosch AMS (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk" }}
+                                <a href="{{ .RelPermalink }}">Bosch BIS (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk" }}
+                                <a href="{{ .RelPermalink }}">Bosch BVMS (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san" }}
+                                <a href="{{ .RelPermalink }}">Hanwha Vision (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk" }}
+                                <a href="{{ .RelPermalink }}">Hanwha Wisenet (hyperv.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Siemens (real-time replication and failover)</h4>
+                                {{ with $enSite.GetPage "/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active" }}
+                                <a href="{{ .RelPermalink }}">Siemens Siveillance suite (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active" }}
+                                <a href="{{ .RelPermalink }}">Siemens Desigo CC (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers" }}
+                                <a href="{{ .RelPermalink }}">Siemens Siveillance VMS (SiveillanceVMS.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active" }}
+                                <a href="{{ .RelPermalink }}">Siemens SiPass (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/siemens-siport-redundancy-high-availability-cluster-active-active" }}
+                                <a href="{{ .RelPermalink }}">Siemens SIPORT (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active" }}
+                                <a href="{{ .RelPermalink }}">Siemens SIMATIC PCS 7 (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active" }}
+                                <a href="{{ .RelPermalink }}">Siemens SIMATIC WinCC (hyperv.safe)</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ else if eq $sectionName "architectures" }}
+                {{ with $enSite.GetPage "/architectures" }}
+                <div class="dropdown">
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "architectures" }} active{{ end }}">Architectures ▾</a>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Basic architectures</h4>
+                                {{ with $enSite.GetPage "/architectures/file-replication-byte-level-with-failover-mirror-cluster" }}
+                                <a href="{{ .RelPermalink }}">Mirror Cluster</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/architectures/network-load-balancing-cluster" }}
+                                <a href="{{ .RelPermalink }}">Farm Cluster</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket" }}
+                                <a href="{{ .RelPermalink }}">SafeKit Console</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Advanced architectures</h4>
+                                {{ with $enSite.GetPage "/architectures/clustering-software-load-balancing-mirroring" }}
+                                <a href="{{ .RelPermalink }}">Farm+Mirror Cluster</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/architectures/active-active-cluster-real-time-replication" }}
+                                <a href="{{ .RelPermalink }}">Active Active Cluster with Replication</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/architectures/n-1-redundancy" }}
+                                <a href="{{ .RelPermalink }}">N-1 Cluster</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ else if eq $sectionName "quick-install" }}
+                {{ with $enSite.GetPage "/quick-install" }}
+                <div class="dropdown">
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "quick-install" }} active{{ end }}">Quick Install ▾</a>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">New application (real-time replication and failover)</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Windows (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Linux (mirror.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">New application (network load balancing and failover)</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Windows (farm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Linux (farm.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Full VM or container</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-hyper-v" }}
+                                <a href="{{ .RelPermalink }}">Hyper-V (hyperv.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-kvm" }}
+                                <a href="{{ .RelPermalink }}">KVM (kvm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-docker" }}
+                                <a href="{{ .RelPermalink }}">Docker (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-podman" }}
+                                <a href="{{ .RelPermalink }}">Podman (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-kubernetes" }}
+                                <a href="{{ .RelPermalink }}">Kubernetes (k3s.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Database (real-time replication and failover)</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server" }}
+                                <a href="{{ .RelPermalink }}">Microsoft SQL Server (sqlserver.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-postgresql" }}
+                                <a href="{{ .RelPermalink }}">PostgreSQL (postgresql.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-oracle" }}
+                                <a href="{{ .RelPermalink }}">Oracle (oracle.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-mysql" }}
+                                <a href="{{ .RelPermalink }}">MySQL (mysql.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-mariadb" }}
+                                <a href="{{ .RelPermalink }}">MariaDB (mysql.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-firebird" }}
+                                <a href="{{ .RelPermalink }}">Firebird (firebird.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Web (network load balancing and failover)</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Apache (apache_farm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">IIS (iis_farm.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">NGINX (farm.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover" }}
+                                <a href="{{ .RelPermalink }}">AWS (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">AWS (farm.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover" }}
+                                <a href="{{ .RelPermalink }}">GCP (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">GCP (farm.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Azure (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Azure (farm.safe)</a>
+                                {{ end }}
+                                <h4 class="mega-column-subtitle">Other clouds</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Cloud (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover" }}
+                                <a href="{{ .RelPermalink }}">Cloud (farm.safe)</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Physical security</h4>
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server" }}
+                                <a href="{{ .RelPermalink }}">Milestone XProtect (milestone.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/quick-install/safekit-quick-installation-guide-with-nedap" }}
+                                <a href="{{ .RelPermalink }}">Nedap (nedap.safe)</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ else if eq $sectionName "best-practises" }}
+                {{ with $enSite.GetPage "/best-practises" }}
+                <div class="dropdown">
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "best-practises" }} active{{ end }}">Best Practices ▾</a>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">High availability best practises</h4>
+                                {{ with $enSite.GetPage "/best-practises/high-availability-architectures-and-best-practices" }}
+                                <a href="{{ .RelPermalink }}">High Availability Architectures & Software Clustering Best Practices</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/shared-nothing-architecture-vs-shared-disk-architecture" }}
+                                <a href="{{ .RelPermalink }}">Shared Nothing vs. Shared Disk Architecture: Choosing the Best HA Cluster</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/clustering-software-vs-hardware-clustering" }}
+                                <a href="{{ .RelPermalink }}">Software clustering vs hardware clustering</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/vm-ha-vs-application-ha" }}
+                                <a href="{{ .RelPermalink }}">VM HA vs. Application HA: Choose Your Redundancy Level with SafeKit</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/high-availability-disaster-recovery-hadr" }}
+                                <a href="{{ .RelPermalink }}">High Availability and Disaster Recovery (HADR)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/high-availability-cluster-vs-fault-tolerant-system" }}
+                                <a href="{{ .RelPermalink }}">HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux" }}
+                                <a href="{{ .RelPermalink }}">How to Implement Redundant Servers with Simple HA Software</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Replication best practises</h4>
+                                {{ with $enSite.GetPage "/best-practises/data-replication-techniques" }}
+                                <a href="{{ .RelPermalink }}">Data Replication Techniques for High Availability: A Complete Comparison</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/synchronous-replication-vs-asynchronous-replication" }}
+                                <a href="{{ .RelPermalink }}">Synchronous vs. Asynchronous Replication: How SafeKit Ensures Zero Data Loss?</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/byte-level-file-replication-vs-block-level-disk-replication" }}
+                                <a href="{{ .RelPermalink }}">Byte-Level File Replication vs. Block-Level Disk Replication for HA</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/alternative-always-on-sql-server-express-standard-editions" }}
+                                <a href="{{ .RelPermalink }}">Alternative to SQL Server Always On: HA for Express and Standard Editions</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Clustering best practises</h4>
+                                {{ with $enSite.GetPage "/best-practises/how-a-virtual-ip-address-works" }}
+                                <a href="{{ .RelPermalink }}">How a Virtual IP Address (VIP) Works in High Availability Clustering?</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/power-outage-and-network-isolation-in-a-cluster" }}
+                                <a href="{{ .RelPermalink }}">Handling Power Outages and Network Isolation in a HA Cluster</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/heartbeat-failover-quorum-windows-linux-cluster" }}
+                                <a href="{{ .RelPermalink }}">Heartbeat, failover and quorum in a cluster</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster" }}
+                                <a href="{{ .RelPermalink }}">SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/what-is-rpo-and-rto-with-examples" }}
+                                <a href="{{ .RelPermalink }}">What are RPO and RTO? Definitions, Examples, and HA Strategies</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative" }}
+                                <a href="{{ .RelPermalink }}">Microsoft NLB vs SafeKit network load balancing</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ else if eq $sectionName "resources" }}
+                {{ with $enSite.GetPage "/resources" }}
+                <div class="dropdown">
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "resources" }} active{{ end }}">Resources ▾</a>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Free trial</h4>
+                                {{ with $enSite.GetPage "/resources/safekit-free-trial" }}
+                                <a href="{{ .RelPermalink }}">SafeKit free trial</a>
+                                {{ end }}
+                                <a href="https://safekit.eviden.com/resources/safekit-free-trial-licence-key-high-availability/">One-month license key</a>
+                                {{ with $enSite.GetPage "/resources/high-availability-solutions-ha-solutions-videos" }}
+                                <a href="{{ .RelPermalink }}">Demonstrations</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/resources/safekit-support" }}
+                                <a href="{{ .RelPermalink }}">Support</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/resources/safekit-on-line-training" }}
+                                <a href="{{ .RelPermalink }}">Free Training & Certification</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Technical documentations</h4>
+                                {{ with $enSite.GetPage "/quick-install" }}
+                                <a href="{{ .RelPermalink }}">SafeKit quick installation guides</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/resources/safekit-user-guide-82" }}
+                                <a href="{{ .RelPermalink }}">SafeKit user's guide</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/resources/safekit-release-notes-8-2" }}
+                                <a href="{{ .RelPermalink }}">SafeKit release notes</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/resources/ai-llm-resources-for-safekit" }}
+                                <a href="{{ .RelPermalink }}">AI/LLM Resources for SafeKit</a>
+                                {{ end }}
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Product information</h4>
+                                <a href="https://safekit.eviden.com/resources/high-availability-white-paper/">White Paper - Product</a>
+                                <a href="https://safekit.eviden.com/resources/high-availability-guide/">White Paper - High Availability Guide</a>
+                                {{ with $enSite.GetPage "/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation" }}
+                                <a href="{{ .RelPermalink }}">Technical Reference for RFI and RFP</a>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ else }}
+                {{ with $enSite.GetPage (printf "/%s" $sectionName) }}
+                <div class="dropdown">
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection $sectionName }} active{{ end }}">{{ $label }} ▾</a>
+                    <div class="mega-panel">
+                        <div class="mega-grid">
+                            {{ range .Pages.ByTitle }}
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
+                        <div class="mega-footer">
+                            <a href="{{ .RelPermalink }}">View all {{ $label }} →</a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            {{ end }}
+            <div class="nav-actions">
+                <a href="https://safekit.eviden.com/get-a-quote-safekit/" class="btn-quote">Get a Quote</a>
+                <a href="https://safekit.eviden.com/contact-us-for-safekit/">Contact</a>
+            </div>
+        </div>
+        {{ if .IsTranslated }}
+        <div class="lang-switch">
+            <span class="lang-current">{{ .Lang | upper }}</span>
+            <div class="lang-dropdown">
+                {{ $seen := slice }}
+                {{ range .Translations }}
+                {{ if and (ne .RelPermalink $.RelPermalink) (ne .Lang $.Lang) (not (in $seen .Lang)) }}
+                {{ $seen = $seen | append .Lang }}
+                <a href="{{ .RelPermalink }}">{{ .Lang | upper }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </nav>
+</header>

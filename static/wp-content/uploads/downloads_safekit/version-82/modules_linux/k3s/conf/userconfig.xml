@@ -1,0 +1,44 @@
+<!DOCTYPE safe><safe>
+	<macro name="STORAGEDIR" value="/var/SKreplicated-storage"/>
+	<macro name="NFSPROVDIR" value="/var/SKexported-storage"/>
+	<macro name="VIRTUALIP"  value=""/>
+  <macro name="MYSQLPROC" value="mariadbd"/>
+
+<service mode="mirror">
+  <!-- Heartbeat Configuration -->
+  <!-- Names or IP addresses on the default network are set during initialization in the console -->
+  <heart>
+    
+  <heartbeat name="default">
+    </heartbeat></heart>
+  <!-- Virtual IP Configuration -->
+  <vip>
+    <interface_list>
+        <interface> 
+	  <real_interface>
+               <virtual_addr addr="%VIRTUALIP%" where="one_side_alias"/>
+          </real_interface>
+        </interface>
+    </interface_list>
+  </vip>
+  <!-- Software Error Detection Configuration -->
+  <errd polltimer="10">
+    <!-- MySQL Server -->
+    <proc name="%MYSQLPROC%" action="restart" class="prim"/>
+  </errd>
+  <!-- File Replication Configuration -->
+  <!--
+     * /var/lib/mysql: default directory of MySQL database and logs
+  -->
+  <rfs>
+	<replicated dir="%STORAGEDIR%" />
+	<replicated dir="/var/lib/mysql" />
+  </rfs>
+  <!-- User scripts activation -->
+  <user>
+	  <var name="STORAGEDIR" value="%STORAGEDIR%"/> 
+	  <var name="NFSPROVDIR" value="%NFSPROVDIR%"/>
+	  <var name="VIRTUALIP"  value="%VIRTUALIP%"/>		  
+  </user>
+</service>
+</safe>

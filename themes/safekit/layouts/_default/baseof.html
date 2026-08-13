@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}"{{ if eq .Lang "ar" }} dir="rtl"{{ end }}>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} - SafeKit</title>
+    {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    <link rel="icon" href="{{ "wp-content/themes/safekit/computer-safekit-icon-svg.svg" | relURL }}" type="image/svg+xml">
+    {{ with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ end }}
+    <link rel="alternate" type="text/markdown" href="index.md">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/userguide.css" | relURL }}">
+</head>
+<body>
+    {{ partial "header.html" . }}
+    {{ partial "breadcrumb.html" . }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <a href="{{ "resources/safekit-support/" | relURL }}" class="chat-fab" title="Ask SafeKit AI">
+        <img src="{{ "wp-content/themes/safekit/chat-robot-1.svg" | relURL }}" alt="SafeKit AI Chat">
+        <span class="chat-fab-label">SafeKit AI</span>
+    </a>
+</body>
+</html>

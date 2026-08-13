@@ -1,0 +1,15 @@
+<nav class="breadcrumb" aria-label="Breadcrumb">
+{{ if .IsHome }}
+    <span class="current">Home</span>
+{{ else }}
+    <a href="{{ .Site.Home.RelPermalink }}">Home</a>
+    {{ if .Parent }}
+        {{ if and .Parent (not .Parent.IsHome) }}
+        <span class="sep">›</span>
+        <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+        {{ end }}
+    {{ end }}
+    <span class="sep">›</span>
+    <span class="current">{{ .Title }}</span>
+{{ end }}
+</nav>

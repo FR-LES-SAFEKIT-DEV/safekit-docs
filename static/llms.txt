@@ -1,0 +1,281 @@
+# SafeKit - High Availability Software by Eviden
+
+> SafeKit is an all-in-one high availability and load balancing software
+> for application clustering on Windows and Linux.
+> It provides real-time replication, automatic failover, and network load balancing
+> without shared storage (SAN) or specialized hardware.
+
+- Website: https://fr-les-safekit-dev.github.io/safekit-docs
+- Documentation: https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguideen.htm
+- Release Notes: https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.pdf
+
+## Home
+
+- [SafeKit: All-in-One SANless High Availability & Application Clustering Software](https://fr-les-safekit-dev.github.io/safekit-docs/)
+  Topics: What is SafeKit?, Why Choose SafeKit for Simple and Cost-Effective High Availability?, SafeKit Use Cases, Why an All-in-One SANless High Availability Product is Essential?, Choosing Your High Availability Strategy: VM HA vs. Application HA, SafeKit High Availability Limitations, SafeKit Technical Failover Tutorials & Demos, How the SafeKit mirror cluster works with Windows/Linux?, How the SafeKit cluster in farm mode works with Windows/Linux?, Comparison of SafeKit with Traditional High Availability (HA) Clusters, Architectural Differentiators: SafeKit Software-Defined vs. Hardware HA Clusters, Key Differentiators of the SafeKit Mirror Cluster, Key Differentiators of the SafeKit Farm Cluster, VM High Availability: SafeKit's SAN-Less vs. Hyper-V/VMware HA, SafeKit HA Free Trial & Technical Documentation, SafeKit Application Module Library: Ready-to-Use HA Solutions
+
+## Use Cases
+
+- [Industry-Specific High Availability Use Cases](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/)
+  Topics: SafeKit Use Cases
+
+- [OEM High Availability: Embedding SafeKit Clustering into Your Software](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/application-clustering-software/)
+  Topics: The OEM high availability use case
+
+- [Best and Worst High Availability Use Cases: A SafeKit Implementation Guide](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/best-worst-use-cases-high-availability/)
+  Topics: Best use cases of SafeKit high availability, Worst use cases of SafeKit high availability, SafeKit High Availability Limitations
+
+- [High Availability and Redundancy for Building Management Systems (BMS)](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/building-management-system-software-bms-redundancy/)
+  Topics: What is a building management system (BMS)?, Why a BMS software is critical?, Key players list in BMS, SafeKit brings two solutions for redundancy and high availability of a BMS software, SafeKit, a recognized solution on the security market
+
+- [Business Continuity and Disaster Recovery Software for 2-Node Clusters with SafeKit](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/business-continuity-and-disaster-recovery-software/)
+  Topics: Business continuity and disaster recovery software
+
+- [Standardizing High Availability for Distributed Enterprises with Many Branches](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/business-continuity-software/)
+  Topics: Business continuity in a distributed enterprise
+
+- [Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/)
+  Topics: The Edge HA Challenge, What Makes SafeKit the Natural Fit for Edge, Edge & Distributed Deployment Suitability, Why Edge OT Environments Are Different, Ideal Edge Use Cases, Edge vs. Data Center HA: Key Differences, Technical Minimum Requirements
+
+- [High Availability and Redundancy for Electronic Access Control Software (EACS)](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/electronic-access-control-software-eacs-redundancy/)
+  Topics: What is an electronic access control system (EACS)?, Why an EACS software is critical?, Key players list in EACS, SafeKit brings two solutions for redundancy and high availability of a EACS software, SafeKit, a recognized solution on the security market
+
+- [High Availability Software: Windows and Linux Clustering with SafeKit](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/high-availability-software-ha-cluster-windows-linux/)
+  Topics: 30 seconds elevator pitch for SafeKit
+
+- [High Availability and Redundancy for Physical Security Software](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/physical-security-software-redundancy/)
+  Topics: SafeKit brings two solutions for redundancy and high availability of a physical security software
+
+- [High Availability and Redundancy for SCADA and Industrial Control Systems (ICS)](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/scada-software-redundancy-high-availability/)
+  Topics: What is a SCADA system?, Why a SCADA software is critical?, Key players list in SCADA software, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market
+
+- [High Availability and Redundancy for Video Management Software (VMS)](https://fr-les-safekit-dev.github.io/safekit-docs/use-cases/video-management-software-vms-redundancy/)
+  Topics: What is video management software (VMS)?, Why a VMS software is critical?, Key players list in VMS, SafeKit brings two solutions for redundancy and high availability of a VMS software, SafeKit, a recognized solution on the security market
+
+## Solutions
+
+Topics common to most solutions below: Overview of the solution, How the SafeKit software simply implements a high availability cluster without shared storage (SAN)?, How the SafeKit mirror or farm cluster works with this application/platform?, SafeKit High Availability Limitations, Comparison vs. other clustering/NLB solutions, Video Guide: configuring a SafeKit HA cluster
+
+- [SafeKit Solutions on Windows and Linux with Application Modules](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/): Full index of all solution pages below
+
+### New Applications - Mirror clusters (synchronous replication)
+
+- [The Simplest Linux High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/linux-high-availability-software-synchronous-replication-failover/)
+- [The Simplest Windows High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/windows-high-availability-software-synchronous-replication-failover/)
+
+### New Applications - Farm clusters (network load balancing)
+
+- [SafeKit: All-in-One Linux Load Balancing & High Availability Software](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/linux-load-balancing-failover/)
+- [SafeKit: All-in-One Windows Load Balancing & High Availability Software](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/windows-load-balancing-failover/)
+
+### Physical Security / VMS clusters at the VM level
+Also: a recognized solution on the physical security market
+
+- [SafeKit High Availability for Bosch AMS: SANless Redundancy and Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/)
+- [SafeKit High Availability for Bosch BIS: 2-Node Cluster Without Shared Disk](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/)
+- [SafeKit High Availability for Bosch BVMS: SANless Video Management Redundancy](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/)
+- [SafeKit High Availability for Hanwha Vision: SANless Building Management Redundancy](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/)
+- [SafeKit High Availability for Hanwha Wisenet: SANless BMS Redundancy](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/)
+
+### Physical Security / VMS clusters at the application level
+Also: a recognized solution on the physical security market
+
+- [The Simplest Milestone XProtect High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
+- [The Simplest Nedap High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/nedap-high-availability-synchronous-replication-failover/)
+- [The Simplest Genetec SQL High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
+- [Siemens Siveillance VMS High Availability: 2-Node Shared-Nothing Cluster with SafeKit](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/)
+
+### Database clusters
+
+- [The Simplest Firebird High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/firebird-high-availability-synchronous-replication-failover/)
+- [The Simplest MariaDB High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/)
+- [The Simplest MySQL High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/mysql-high-availability-synchronous-replication-failover/)
+- [The Simplest Oracle High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/oracle-high-availability-synchronous-replication-failover/)
+- [The Simplest PostgreSQL High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/postgresql-high-availability-synchronous-replication-failover/)
+- [The Simplest Microsoft SQL Server High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/sql-server-high-availability-synchronous-replication-failover/)
+
+### Web Server clusters
+
+- [SafeKit: All-in-One Apache Load Balancing & High Availability Software](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/apache-load-balancing-failover-2/)
+- [SafeKit: All-in-One IIS Load Balancing & High Availability Software](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/iis-load-balancing-failover/)
+- [SafeKit: All-in-One NGINX Load Balancing & High Availability Software](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/)
+
+### Siemens Product clusters
+Also: a recognized solution on the physical security market
+
+- [Siemens Desigo CC High Availability: SANless 2-Node Redundancy](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
+- [High Availability for Siemens SIMATIC PCS 7: 2-Node SANless Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/)
+- [Siemens SIMATIC WinCC SCADA High Availability: 2-Node SANless Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/)
+- [High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/)
+- [High Availability for Siemens SIPORT Access Control: SANless Redundancy & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/)
+- [High Availability and Redundancy for Siemens Siveillance Suite: Active-Active SANless Clustering](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+
+### Virtual Machine clusters
+
+- [Simple Hyper-V High Availability Without Shared Storage (SAN)](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/hyper-v-replication-automatic-failover-load-balancing/)
+- [Simple Linux KVM High Availability without Shared Storage](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+### Container clusters
+Also: comparison vs. open-source Linux HA (Pacemaker/Corosync/DRBD)
+
+- [SafeKit: Docker High Availability & Real-Time Data Replication Software](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/)
+- [SafeKit: Podman High Availability & Real-Time Data Replication Software](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/)
+
+### Kubernetes cluster
+
+- [Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
+
+### Mirror clusters in Cloud (synchronous replication)
+
+- [Amazon AWS High Availability: SafeKit Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/aws-high-availability-cluster-synchronous-replication-failover/)
+- [Google GCP High Availability: SafeKit Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/gcp-high-availability-cluster-synchronous-replication-failover/)
+- [Microsoft Azure High Availability: SafeKit Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/azure-high-availability-cluster-synchronous-replication-failover/)
+- [Cloud-Agnostic High Availability: SafeKit Synchronous Replication & Failover](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/cloud-high-availability-cluster-synchronous-replication-failover/)
+
+### Farm clusters in Cloud (network load balancing)
+Also: enhances the native cloud load balancer with application-level monitoring and self-healing
+
+- [SafeKit: Amazon AWS Load Balancing & Application High Availability Farm Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/aws-load-balancing-cluster-failover/)
+- [SafeKit: Google GCP Load Balancing & Application High Availability Farm Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/gcp-load-balancing-cluster-failover/)
+- [SafeKit: Microsoft Azure Load Balancing & Application High Availability Farm Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/azure-load-balancing-cluster-failover/)
+- [SafeKit: Cloud Load Balancing & Application High Availability Farm Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/cloud-load-balancing-cluster-failover/)
+
+### Other
+
+- [Cluster in cloud computing: a generic solution for Amazon AWS, Microsoft Azure, Google GCP and other clouds](https://fr-les-safekit-dev.github.io/safekit-docs/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/)
+
+## Quick Installation Guides
+
+- [SafeKit High Availability Module Library: Quick Installation Guides for Windows & Linux](https://fr-les-safekit-dev.github.io/safekit-docs/quick-install/)
+  Topics: Full index of Quick Installation Guides, one per module: new Windows/Linux apps (mirror & farm), physical security/VMS (Milestone XProtect, Nedap), virtual machines (Hyper-V, KVM), databases (Firebird, MariaDB, SQL Server, MySQL, Oracle, PostgreSQL), web servers (IIS, Apache, NGINX), and cloud platforms (AWS, GCP, Azure, generic cloud — mirror & farm variants). Each guide covers: overview, module installation, step-by-step configuration, demonstration, and SafeKit High Availability Limitations. Also includes Milestone management migration and legacy Milestone configuration guides.
+
+## Architectures
+
+- [High Availability Architectures: Mirror, Farm, and Advanced Software Clustering](https://fr-les-safekit-dev.github.io/safekit-docs/architectures/)
+  Topics: What are the different high availability architectures and the different software clusters with SafeKit?, How to build high availability clusters with SafeKit?
+
+- [Active-Active Clustering Software with Real-Time Replication & Mutual Failover](https://fr-les-safekit-dev.github.io/safekit-docs/architectures/active-active-cluster-real-time-replication/)
+  Topics: How the active active cluster with real-time replication works?
+
+- [Clustering Software for Farms and Mirrors: High Availability & Load Balancing](https://fr-les-safekit-dev.github.io/safekit-docs/architectures/clustering-software-load-balancing-mirroring/)
+  Topics: High availability and scalability of critical web and database applications with the SafeKit clustering software
+
+- [SafeKit: Real-Time Byte-Level File Replication & Mirror Cluster Software](https://fr-les-safekit-dev.github.io/safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/)
+  Topics: How the SANless SafeKit Mirror Cluster Works with Windows or Linux, How the SafeKit software simply implements a SANless Windows or Linux high availability cluster?, How the SafeKit mirror cluster works with Windows or Linux?, SafeKit High Availability Limitations, Comparison: SafeKit for Windows or Linux vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster
+
+- [N-1 Redundancy Clustering: High Availability for Multiple Applications with One Backup](https://fr-les-safekit-dev.github.io/safekit-docs/architectures/n-1-redundancy/)
+  Topics: High availability with data replication and application failover from N servers to 1
+
+- [SafeKit: All-in-One Windows or Linux Network Load Balancing & High Availability Software](https://fr-les-safekit-dev.github.io/safekit-docs/architectures/network-load-balancing-cluster/)
+  Topics: The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for Windows/Linux, How the SafeKit software simply implements a Windows/Linux Network Load Balancing (NLB) cluster?, How the SafeKit cluster in farm mode works with Windows/Linux?, Comparison: SafeKit Farm Cluster for Windows/Linux vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit Farm NLB Cluster
+
+- [SafeKit Smart Console: Your High Availability Cluster in Your Pocket](https://fr-les-safekit-dev.github.io/safekit-docs/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/)
+  Topics: Smart Console: Intuitive, Mobile, and Error-Free High Availability, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit farm cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?
+
+## Best Practices
+
+- [High Availability Best Practices](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/)
+  Topics: SafeKit Clustering Best Practices: HA Architecture, Replication & Redundancy
+
+- [Alternative to SQL Server Always On: HA for Express and Standard Editions](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/alternative-always-on-sql-server-express-standard-editions/)
+  Topics: Alternative to Always On SQL Server for express and standard editions, How the SafeKit mirror cluster works with Microsoft SQL Server?, Video Guide: Configuring a SafeKit HA mirror cluster for SQL Server
+
+- [Byte-Level File Replication vs. Block-Level Disk Replication for HA](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)
+  Topics: Byte-level file replication vs block-level disk replication in a high availability cluster, Pros and cons of byte-level file replication vs block-level disk replication
+
+- [Software Clustering vs. Hardware Clustering for High Availability](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/clustering-software-vs-hardware-clustering/)
+  Topics: Difference between software clustering and hardware clustering?, Software Clustering vs Hardware Clustering: Pros and Cons
+
+- [Data Replication Techniques for High Availability: A Complete Comparison](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/data-replication-techniques/)
+  Topics: Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques
+
+- [Heartbeat, Failover and Quorum in Windows and Linux Clusters](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)
+  Topics: What are the different scenarios in case of network isolation in a cluster?, How heartbeats and failover work in a Windows or Linux cluster?, Split brain problem and quorum when servers are in two remote computer rooms, Simple cluster quorum with the SafeKit split brain checker
+
+- [High Availability Architectures & Software Clustering Best Practices](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/high-availability-architectures-and-best-practices/)
+  Topics: What are the high availability architectures and the best practices?, Comparative tables on high availability architectures and best practices
+
+- [HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/high-availability-cluster-vs-fault-tolerant-system/)
+  Topics: What is the difference between high availability and fault tolerance?, Pros and cons of high availability and fault tolerance
+
+- [Combining SafeKit High Availability with Disaster Recovery Backups](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/high-availability-disaster-recovery-hadr/)
+  Topics: Synchronous SafeKit Replication for HA vs. Asynchronous Backup Replication for DR, Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN), Asynchronous HADR: Disaster Recovery over Slow Networks (WAN), How to Combine HADR and Backup for Total System Resilience, Comparison of HADR Architectures: Fast vs. Slow Networks, Video Guide: How to Implement HADR with SafeKit
+
+- [How a Virtual IP Address (VIP) Works in High Availability Clustering?](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/how-a-virtual-ip-address-works/)
+  Topics: What is a virtual IP address in a high availability cluster?, Virtual IP Implementation in SafeKit, How a Virtual IP Address (VIP) Works in a Same-Subnet Failover (Mirror Cluster), How a Virtual IP (VIP) Works Across Different Subnets (Mirror Cluster), How a Load Balanced Virtual IP Works in a Same-Subnet Farm (Farm Cluster), How a Load Balanced Virtual IP Works Across Different Subnets (Farm Cluster), Virtual IP vs. DNS Redirection: Why DNS Failover Often Fails, Comparison: Virtual IP Implementation, Latency, and Application Transparency, Configuring a Virtual IP Address for Network Loadbalancing and High Availability, Frequently Asked Questions on Virtual IP (VIP)
+
+- [How to Implement Redundant Servers with Simple HA Software](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/)
+  Topics: How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?
+
+- [Microsoft NLB VMware Alternative: Multicast and Unicast Issues Solved](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/)
+  Topics: Microsoft NLB multicast mode, Microsoft NLB unicast mode, Alternative with SafeKit, How the SafeKit cluster in farm mode works with Windows?
+
+- [Handling Power Outages and Network Isolation in a HA Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/power-outage-and-network-isolation-in-a-cluster/)
+  Topics: What are the different scenarios in case of network isolation in a cluster?, What are the different scenarios in case of power outage in a cluster?
+
+- [SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/)
+  Topics: What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster?
+
+- [Shared Nothing vs. Shared Disk Architecture: Choosing the Best HA Cluster](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)
+  Topics: Shared nothing architecture vs shared disk architecture for high availability clusters, Shared Nothing Architecture vs Shared Disk Architecture: Pros and Cons, Video comparing a shared disk architecture and a shared nothing architecture when considering disaster recovery
+
+- [Synchronous vs. Asynchronous Replication: How SafeKit Ensures Zero Data Loss?](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/)
+  Topics: Data Loss or Not on Application Failover with Synchronous or Asynchronous Replication?, How Asynchronous Replication Works?, How Synchronous Replication Works?, How Semi-Synchronous Replication Works?, Final Verdict: Choosing the Right Replication for High Availability, Comparison Table: Synchronous vs. Asynchronous vs. Semi-Synchronous, Video Guide: Configuring Synchronous Real-Time Replication and High Availability, FAQ: Replication Strategies in High Availability Clusters
+
+- [VM HA vs. Application HA: Choose Your Redundancy Level with SafeKit](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/vm-ha-vs-application-ha/)
+  Topics: VM-Level vs Application-Level High Availability: Choosing the Right SafeKit Approach
+
+- [What are RPO and RTO? Definitions, Examples, and HA Strategies](https://fr-les-safekit-dev.github.io/safekit-docs/best-practises/what-is-rpo-and-rto-with-examples/)
+  Topics: Quick Summary: RPO vs. RTO, How do I calculate RPO and RTO for a High Availability and Business Continuity solution?, How do I determine RPO and RTO for a Backup and Disaster Recovery solution?, How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?, What are the RTO benchmarks for a SafeKit Farm Cluster with Load Balancing?, Comparison tables: RTO vs RPO, High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO, FAQ: Optimizing RPO and RTO for Business Continuity
+
+## Datasheets & White Papers
+
+- [SafeKit High Availability Software White Paper (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/documents/wp-safekit-en.pdf): Product white paper — 10 reasons to choose SafeKit, mirror/farm/active-active/N-1 architectures, integration and deployment
+- [White Paper - High Availability Guide](https://fr-les-safekit-dev.github.io/safekit-docs/resources/high-availability-guide/): Landing page for the HA Decision white paper
+- [HA Decision White Paper (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/documents/wp-hadecision-en.pdf): "High Availability (HA) – Choosing a Solution" — airport crisis case study illustrating what to look for when choosing a HA solution
+- [High Availability Overview Datasheet (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/documents/high-availability-overview.pdf)
+- [Nedap AEOS Cluster with SafeKit – Application Note (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf): Step-by-step SafeKit failover cluster setup with Nedap AEOS and SQL Server
+- [EULA (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/documents/eula-en.pdf)
+
+## Contact & Quote
+
+- [Get a Quote](https://fr-les-safekit-dev.github.io/safekit-docs/get-a-quote-safekit/)
+- [Contact Us](https://fr-les-safekit-dev.github.io/safekit-docs/contact-us-for-safekit/)
+
+## Resources
+
+- [SafeKit Resources](https://fr-les-safekit-dev.github.io/safekit-docs/resources/)
+  Topics: Free Trial, Technical Documentation & Product Information for SafeKit High Availability
+
+- [AI/LLM Resources for SafeKit](https://fr-les-safekit-dev.github.io/safekit-docs/resources/ai-llm-resources-for-safekit/)
+  Topics: How to use SafeKit llms.txt in your favorite LLM, Purpose of this page, SafeKit by Eviden, Jump to category, Product Overview, Competitive Positioning, Key Concepts & Educational Content, Use Cases, Edge & OT Solutions, Solutions by OS / Platform, Solutions by Database, Solutions by Web Server, Solutions by Virtualization & Containers, Solutions by Cloud, Quick Installation Guides, Documentation & Training, Free Trial & Contact, Datasheets & White Papers, RFP/RFI & EULA, SafeKit 8.2 – User Guide (split in Markdown files), Release Notes (split in Markdown files), SRB & KB, Training Slides
+
+- [SafeKit Cluster Key: One-Month Trial for Windows and Linux High Availability](https://fr-les-safekit-dev.github.io/safekit-docs/resources/high-availability-and-load-balancing-cluster-key/)
+  Topics: Receive a free SafeKit one-month license key by e-mail for Windows or Linux
+
+- [SafeKit High Availability & Failover Demos: SANless Clustering Video Tutorials](https://fr-les-safekit-dev.github.io/safekit-docs/resources/high-availability-solutions-ha-solutions-videos/)
+  Topics: SafeKit Technical Failover Tutorials & Demos
+
+- [High Availability Technical Reference for RFI and RFP Preparation](https://fr-les-safekit-dev.github.io/safekit-docs/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/)
+  Topics: Overview, Product Identity, Supported Operating Systems & Platforms, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Edge & Distributed Deployment Suitability, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links
+
+- [SafeKit Free Trial: Test Application and VM-Level High Availability](https://fr-les-safekit-dev.github.io/safekit-docs/resources/safekit-free-trial/)
+  Topics: SafeKit HA Free Trial & Technical Documentation
+
+- [SafeKit High Availability Training: Free Online Certification Program](https://fr-les-safekit-dev.github.io/safekit-docs/resources/safekit-on-line-training/)
+  Topics: How to Access the Training Platform?, Get SafeKit 8 Training Materials
+
+- [SafeKit Support](https://fr-les-safekit-dev.github.io/safekit-docs/resources/safekit-support/)
+  Topics: Free AI Level 1 Support, Standard Support & Maintenance, Free Certification & Training Program
+
+- [SafeKit User's Guide 8.2](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguideen.htm)
+  Topics: Overview and Table of Contents, Ch. 1 – Technical Overview, Ch. 2 – Installation, Ch. 3 – Web Console — Configuration & Monitoring, Ch. 4 – Tests (Installation, Mirror, Farm, Checkers), Ch. 5–6 – Mirror and Farm Module Administration, Ch. 7 – Troubleshooting, Ch. 8–9 – SafeKit Support and CLI, Ch. 10 – Advanced Administration (Environment, Services, Firewall, Security, Web Service, Notifications, SNMP, Logs), Ch. 11 – Securing the Web Service (HTTP/HTTPS, User Authentication), Ch. 12 – Cluster.xml Configuration Reference, Ch. 13 – Userconfig.xml (Heartbeat, Farm Topology, Virtual IP, File Replication, Scripts, Checkers), Ch. 14 – Scripts for Application Module Configuration, Ch. 15 – Configuration Examples, Ch. 16–17 – SafeKit in the Cloud and Third-Party Software
+
+- [SafeKit Release Notes 8.2 (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.pdf)
+  Topics: Overview and before starting (supported OS: Windows Server 2019/2022/2025, Windows 11, RHEL 8/9/10, Ubuntu 24.04; Linux packages; minor vs. major upgrade types), Major changes 8.2 — Web Console/Web Service/Logs (new PWA console, browser notifications, state timeline, OpenID auth, log levels, per-script log files), Major changes 8.2 — Replication/Checkers/Module Config (regex ! prefix, anti-ransomware folder, checker action attribute, splitbrain multiple witnesses, time-based attributes), Major changes 8.2 — Templates/Misc/OpenSSL/Apache (Podman template, permanent checker disable, SNMP changes, email agent, OpenSSL table, Apache modules), Major changes in 7.5.x and 7.4 (cloud support, SQLite, Kubernetes template, AWS/Azure/GCP), Restrictions and known problems (antivirus, replication limits, VIP constraints, SK-0071 to SK-0107), Migration instructions (upgrade from 7.4/7.5 to 8.2; minor upgrade 7.5.1 to 7.5.2)
+
+- [SafeKit 8.2 Software Release Bulletin (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/downloads_safekit/version-82/82softwarereleasebulletin.pdf)
+  Topics: Package builds index (Windows and Linux, per-version), release dates, supported OS/CPU per build, fixes and changes by build, known problems
+
+- [SafeKit 8.2 Knowledge Base (PDF)](https://fr-les-safekit-dev.github.io/safekit-docs/wp-content/uploads/downloads_safekit/version-82/knowledge-base.pdf)
+  Topics: SK issue articles indexed by SK ID (SK-0001 to SK-0107): symptoms, root cause, workarounds, remediation commands for replication, checkers, web console, virtual IP, module templates, SELinux, DNS resolution, Hyper-V/KVM

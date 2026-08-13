@@ -1,0 +1,39 @@
+<!-- Mirror Architecture with Real Time File Replication and Failover for KVM -->
+
+<!DOCTYPE safe>
+<safe>
+  <!-- Set value to the path of the virtual machines repository -->
+  <macro name="VM_PATH" value="/var/lib/libvirt/images" />
+  <!-- Set value to the name of the virtual machine -->
+  <macro name="VM_NAME" value="vm1" />
+
+ <service mode="mirror">
+  <!-- Heartbeat Configuration --> 
+  <heart>
+    <heartbeat name="default">
+    </heartbeat>
+  </heart>
+
+  <!-- File Mirroring Configuration -->
+  <rfs>
+	<replicated dir="%VM_PATH%/%VM_NAME%">
+	</replicated>
+	<!-- Uncomment for replicating the directory that contains snapshot xml files of the virtual machine
+	<replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%">
+	</replicated>
+	-->	
+  </rfs>
+
+  <!-- Custom checker Configuration -->
+  <check>
+    <custom ident="%VM_NAME%_check" exec="vmcheck" arg="%VM_NAME%" when="prim" action="restart"/>
+  </check>
+
+  <!-- User scripts Configuration -->
+  <user>
+    <var name="VM_PATH" value="%VM_PATH%/%VM_NAME%" />
+    <var name="VM_NAME" value="%VM_NAME%" />
+  </user>
+
+ </service>
+</safe>

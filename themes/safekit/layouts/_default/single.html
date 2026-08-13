@@ -1,0 +1,124 @@
+{{ define "main" }}
+{{ $siblings := slice }}
+{{ $hasParent := false }}
+{{ $isUserguide := hasPrefix .RelPermalink "/docs/userguide/" }}
+{{ if and .Parent $isUserguide }}
+  {{ $hasParent = true }}
+  {{ $siblings = .Parent.Pages }}
+{{ end }}
+<div class="page-with-toc">
+    {{ if or .TableOfContents (gt (len $siblings) 1) }}
+    <aside class="toc-sidebar">
+        <nav class="toc-nav">
+            {{ if .TableOfContents }}
+            <div class="sidebar-section open" id="sidebar-toc">
+                <h3 class="sidebar-toggle" data-target="sidebar-toc">{{ if $isUserguide }}Chapter {{ sub (div .Weight 10) 1 }}{{ else }}On this page{{ end }}</h3>
+                <div class="sidebar-content">
+                    {{ .TableOfContents }}
+                </div>
+            </div>
+            {{ end }}
+            {{ if gt (len $siblings) 1 }}
+            <div class="sidebar-section" id="sidebar-chapters">
+                <h3 class="sidebar-toggle" data-target="sidebar-chapters">All chapters</h3>
+                <div class="sidebar-content">
+                    <ul class="chapter-list">
+                        {{ if $hasParent }}
+                        <li{{ if eq .Parent.RelPermalink $.RelPermalink }} class="current"{{ end }}>
+                            <a href="{{ .Parent.RelPermalink }}">Overview</a>
+                        </li>
+                        {{ end }}
+                        {{ range $idx, $page := $siblings }}
+                        <li{{ if eq $page.RelPermalink $.RelPermalink }} class="current"{{ end }}>
+                            <a href="{{ $page.RelPermalink }}">{{ add $idx 1 }}. {{ $page.Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+        </nav>
+    </aside>
+    {{ end }}
+    <article{{ if or .TableOfContents (gt (len $siblings) 1) }} class="has-toc"{{ end }}>
+        {{ if $isUserguide }}<h1>{{ sub (div .Weight 10) 1 }}. {{ .Title }}</h1>{{ end }}
+        {{ .Content }}
+    </article>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Sidebar section toggle
+    document.querySelectorAll('.sidebar-toggle').forEach(function(h3) {
+        h3.addEventListener('click', function() {
+            var section = document.getElementById(this.dataset.target);
+            if (section) section.classList.toggle('open');
+        });
+    });
+
+    // Make TOC entries collapsible
+    document.querySelectorAll('#TableOfContents li').forEach(function(li) {
+        var sub = li.querySelector('ul');
+        if (sub) {
+            li.classList.add('toc-has-children');
+            sub.style.display = 'none';
+            var toggle = document.createElement('span');
+            toggle.className = 'toc-toggle';
+            toggle.textContent = '+';
+            li.querySelector('a').appendChild(toggle);
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                li.classList.toggle('toc-open');
+                sub.style.display = li.classList.contains('toc-open') ? 'block' : 'none';
+                toggle.textContent = li.classList.contains('toc-open') ? '\u2212' : '+';
+            });
+        }
+    });
+
+    // Scroll spy: highlight current section and expand only active branch
+    var tocLinks = document.querySelectorAll('#TableOfContents a');
+    var headings = [];
+    tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href');
+        if (id && id.startsWith('#')) {
+            var el = document.getElementById(id.substring(1));
+            if (el) headings.push({ el: el, link: link });
+        }
+    });
+
+    function updateActive() {
+        var scrollPos = window.scrollY + 100;
+        var active = null;
+        for (var i = 0; i < headings.length; i++) {
+            if (headings[i].el.offsetTop <= scrollPos) {
+                active = headings[i];
+            }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('toc-active'); });
+        document.querySelectorAll('#TableOfContents .toc-has-children.toc-open').forEach(function(li) {
+            li.classList.remove('toc-open');
+            var sub = li.querySelector('ul');
+            if (sub) sub.style.display = 'none';
+            var tog = li.querySelector('.toc-toggle');
+            if (tog) tog.textContent = '+';
+        });
+        if (active) {
+            active.link.classList.add('toc-active');
+            var parent = active.link.closest('li');
+            while (parent) {
+                if (parent.classList.contains('toc-has-children')) {
+                    parent.classList.add('toc-open');
+                    var sub = parent.querySelector('ul');
+                    if (sub) sub.style.display = 'block';
+                    var tog = parent.querySelector('.toc-toggle');
+                    if (tog) tog.textContent = '\u2212';
+                }
+                parent = parent.parentElement.closest('li');
+            }
+        }
+    }
+    window.addEventListener('scroll', updateActive);
+    updateActive();
+});
+</script>
+{{ end }}

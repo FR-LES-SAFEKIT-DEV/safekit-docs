@@ -1,0 +1,53 @@
+<!DOCTYPE safe><safe>
+  <macro name="VM_PATH" value="" />
+  <macro name="VM_NAME" value="" />
+  <macro name="NORMAL_STOP" value="stop"/>
+  <macro name="FORCE_STOP" value="stop"/>
+
+<service mode="mirror">
+  <!-- Heartbeat Configuration -->
+  <!-- Replace
+     * SERVER1_TO_BE_DEFINED and SERVER2_TO_BE_DEFINED by IP address of your 2 servers 
+  -->
+
+ 
+  <heart>
+    <heartbeat name="default">
+    </heartbeat>
+  </heart>
+
+  <!-- File Mirroring Configuration -->
+  <!-- Replace
+     * replace the path below by the path of your virtual machine repository
+     * Make sure all the files that constitute the virtual machine are under this directory
+     * Do *NOT* replicate configuration file, since they contain system specific virtual HW ids 
+     * If starting from an existing VM, export it, copy it at the same location
+     * on the other system, and import it. 
+     * Do not use smartwrite=3 config because hyper-v refuse to import such disks 
+     * WARNING:
+     * hyper-v 2016 is incompatible with namespace/zones, so the default configuration disable it to be on the safe side. 
+     * If you are on hyper-v 2012R2 and you need to optimize reintegration time, 
+     * remove the "namespacepolicy" attribute on the line below.
+  -->
+  <rfs scripts="on" acl="on" namespacepolicy="0" allocthreshold="10">
+	<replicated dir="%VM_PATH%\%VM_NAME%">
+	</replicated>
+  </rfs>
+
+  <check>
+    <custom ident="" exec="vmcheck.ps1" arg="%VM_NAME%" when="prim" action="restart"/>
+  </check>
+
+  <!-- User scripts Configuration -->
+  <!-- See TODO in SAFE/modules/MODULE/bin scripts
+       * replace the value below by the name of your virtual machine
+   -->
+  <user>
+    <var name="VM_PATH" value="%VM_PATH%\%VM_NAME%" />
+    <var name="VM_NAME" value="%VM_NAME%" />
+    <var name="NORMAL_STOP" value="%NORMAL_STOP%"/>
+    <var name="FORCE_STOP" value="%FORCE_STOP%"/>
+  </user>
+
+ </service>
+</safe>
