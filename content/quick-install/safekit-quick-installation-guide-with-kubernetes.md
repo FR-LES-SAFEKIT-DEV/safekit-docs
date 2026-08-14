@@ -11,95 +11,7 @@ topics: "High Availability Quick Installation Guide for Kubernetes, SafeKit High
 # K3S High Availability with SafeKit: Install the k3s.safe Module for Failover
 
 
-<!-- BEGIN INSERT: insert-safekit-mirror-guide-en lang="en" display="content" querystring="app=Kubernetes&amp;mod=k3s" -->
- 
-
-## High Availability Quick Installation Guide for Kubernetes {#quick-guide}
-
-This guide explains how to set up a **mirror cluster** for Kubernetes using SafeKit, ensuring automatic failover and synchronous replication without the need for shared storage. 
-
-For help, you can use [SafeKit AI 🤖](</resources/safekit-support/>).
-
-### 1\. Overview
-
-  * **Architecture:** Uses a two-node system (Primary/Secondary).
-  * **Data Protection:** Implements real-time synchronous replication for **zero data loss** (RPO=0).
-
-
-### 2\. Installation
-
-  * **Software:** Install the SafeKit engine on both servers.
-  * **Module:** Download the pre-configured `k3s.safe` application module.
-
-
-### 3\. Configuration
-
-  * **Web Console:** Configure the specific folders containing the Kubernetes files.
-  * **Monitoring:** Start monitoring and protecting the Kubernetes application.
-
-
-
-<!-- BEGIN INSERT: insert-safekit-usage-en lang="en" display="content" -->
- 
-
-## SafeKit High Availability Limitations {#safekit-ha-limitations}
-
-### Why a replication of a few Tera-bytes?
-
-Resynchronization time after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
-
-  * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
-  * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
-
-
-#### Alternative
-
-  * For a large volume of data, use [external shared storage](</best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
-  * More expensive, more complex.
-
-
-### Why a replication < 1,000,000 files?
-
-  * Resynchronization time performance after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
-  * Time to check each file between both nodes.
-
-
-#### Alternative
-
-  * Put the many files to replicate in a virtual hard disk / virtual machine.
-  * Only the files representing the virtual hard disk / virtual machine will be replicated and resynchronized in this case.
-
-
-### Why a failover ≤ 32 replicated VMs?
-
-  * Each VM runs in an independent mirror module.
-  * Maximum of 32 mirror modules running on the same cluster.
-
-
-#### Alternative
-
-  * Use an external shared storage and another VM clustering solution.
-  * More expensive, more complex.
-
-
-### Why a LAN/VLAN network between remote sites?
-
-  * Automatic failover of the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
-  * Good bandwidth for resynchronization ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
-
-
-#### Alternative
-
-  * Use a [load balancer for the virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
-  * Use backup solutions with asynchronous replication for high latency network.
-
-
-
-<!-- END INSERT: insert-safekit-usage-en lang="en" display="content" -->
- 
-
-
-<!-- END INSERT: insert-safekit-mirror-guide-en lang="en" display="content" querystring="app=Kubernetes&amp;mod=k3s" -->
+{{%  insert-safekit-mirror-guide-en app="Kubernetes" mod="k3s" %}}
  
 
 ## Overview of the SafeKit / Kubernetes solution
@@ -318,108 +230,18 @@ The previous helm command should download the WordPress image from `registry-1.d
 
 
 
-<!-- BEGIN INSERT: insert-safekit-network-isolation-en lang="en" display="content" -->
- 
-
-## What are the different scenarios in case of network isolation in a cluster? {#isolation}
-
-### A single network
-
-When there is a network isolation, the default behavior is:
-
-  * as heartbeats are lost for each node, each node goes to ALONE and runs the application with its virtual IP address (double execution of the application modifying its local data),
-  * when the isolation is repaired, one ALONE node is forced to stop and to resynchronize its data from the other node,
-  * at the end the cluster is PRIM-SECOND (or SECOND-PRIM according the duplicate virtual IP address detection made by Windows).
-
-
-### Two networks with a dedicated replication network
-
-When there is a network isolation, the behavior with a dedicated replication network is:
-
-  * a dedicated replication network is implemented on a private network,
-  * heartbeats on the production network are lost (isolated network),
-  * heartbeats on the replication network are working (not isolated network),
-  * the cluster stays in PRIM/SECOND state.
-
-
-### A single network and a splitbrain checker
-
-When there is a network isolation, the behavior with a split-brain checker is:
-
-  * a split-brain checker has been configured with the IP address of a witness (typically a router),
-  * the split-brain checker operates when a server goes from PRIM to ALONE or from SECOND to ALONE,
-  * in case of network isolation, before going to ALONE, both nodes test the IP address,
-  * the node which can access the IP address goes to ALONE, the other one goes to WAIT,
-  * when the isolation is repaired, the WAIT node resynchronizes its data and becomes SECOND.
-
-
-Note: If the witness is down or disconnected, both nodes go to WAIT and the application is no more running. That's why you must choose a robust witness like a router.
-
-
-<!-- END INSERT: insert-safekit-network-isolation-en lang="en" display="content" -->
+{{%  insert-safekit-network-isolation-en %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-<!-- BEGIN INSERT: insert-safekit-mirror-video-en lang="en" display="content" -->
- 
-
-### SafeKit Video: Application-Level Clustering (8:47) {#demo-mirror-ha-cluster}
-
-In this video, discover how SafeKit implements a **mirror HA cluster** without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. 
-
-### Chapters
-
-  1. [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  2. [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
-  3. [Start and test SQL replication, migration, failover on crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
-
-
-### Step-by-Step Implementation
-
-  * [Read the guide on setting up a mirrored cluster on Windows](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
-  * [Read the guide on setting up a mirrored cluster on Linux](</quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/>)
-
-
-&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
-
-
-<!-- END INSERT: insert-safekit-mirror-video-en lang="en" display="content" -->
+{{%  insert-safekit-mirror-video-en %}}
  
 
 
-<!-- BEGIN INSERT: insert-safekit-hub-en lang="en" display="content" -->
- 
-
-## 🔍 SafeKit High Availability Navigation Hub {#hub}
-
-**Explore SafeKit: Features, technical videos, documentation, and free trial**
-
-Resource Type | Description | Direct Link  
----|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
-  
-
-<!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
+{{%  insert-safekit-hub-en %}}
  
 
 
-<!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
-<div class="button-row">
-  <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
-  <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
-  <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
-</div>
-<!-- END INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
+{{%  insert-safekit-4-buttons-en %}}

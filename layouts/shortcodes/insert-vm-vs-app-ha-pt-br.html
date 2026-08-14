@@ -1,0 +1,21 @@
+{{/* Shortcode: insert-vm-vs-app-ha-pt-br — 1 instances in 1 files */}}
+ 
+
+## Escolhendo sua estratégia de Alta Disponibilidade: HA de VM vs. HA de Aplicação {#safekit-ha-redundancy-choices}
+
+SafeKit oferece duas abordagens principais para garantir a continuidade do negócio: Alta Disponibilidade de Máquina Virtual (VM HA) e Alta Disponibilidade de Aplicação (Application HA). Embora ambos os métodos forneçam capacidades de failover automático, eles diferem significativamente em escopo, mecanismos de replicação de dados, velocidade de recuperação e compatibilidade de plataforma. Esta comparação detalha essas diferenças para ajudar a identificar a estratégia ideal para ambientes de TI específicos, seja com foco em suporte amplo à virtualização ou em recuperação de aplicações granular e de alta velocidade.
+
+**Comparação de Recursos: SafeKit VM HA vs. Clustering de Aplicação SafeKit**
+
+Recurso de Comparação | VM HA com módulo SafeKit Hyper-V ou KVM | Application HA com módulos de aplicação SafeKit  
+---|---|---  
+Diagrama de Implantação |  |   
+Escopo de Failover | SafeKit em 2 hipervisores: replicação e failover da VM completa. | SafeKit em 2 máquinas virtuais ou físicas: replicação e failover no nível da aplicação.  
+Dados Replicados | Replica mais dados (Aplicação + Sistema Operacional). | Replica apenas os dados da aplicação, resultando em volumes menores de dados.  
+Processo de Recuperação &amp; Velocidade (RTO) | Reinicialização da VM no hipervisor 2 se o hipervisor 1 falhar. O tempo de recuperação depende da reinicialização do sistema operacional. Monitor de VM e mecanismo de failover. | Tempo de recuperação rápido com reinício da aplicação no SO2 se o servidor 1 falhar. Tipicamente cerca de 1 minuto ou menos (baixo RTO). Monitor de aplicação e failover por software.  
+Instalação | A aplicação é instalada uma vez em uma única VM. | A aplicação é instalada em dois nós.  
+Configuração | Solução genérica para qualquer aplicação/SO executado na VM. <br>• Não requer conhecimento técnico da aplicação instalada na VM.<br>• É a melhor solução se você não conhece como a aplicação funciona.<br>• Você só precisa definir a localização dos arquivos da VM.  | Requer conhecimento técnico da própria aplicação. <br>• Quais serviços precisam ser reiniciados.<br>• As pastas específicas da aplicação que precisam de replicação em tempo real.<br>• A configuração de um endereço IP virtual para failover.   
+Compatibilidade de Plataforma | Funciona com Windows/Hyper-V e Linux/KVM, mas não é compatível com VMware. | Independente de plataforma; funciona com máquinas físicas ou virtuais, infraestrutura em nuvem e qualquer hipervisor, incluindo VMware.  
+Ideal Para | Ideal para gerenciar ambientes complexos com múltiplas aplicações em várias VMs por meio de uma única política de HA. | Ideal para incorporar alta disponibilidade diretamente em uma solução de software, independentemente do hardware ou hipervisor subjacente.  
+  
+

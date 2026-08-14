@@ -1,0 +1,88 @@
+{{/* Shortcode: insert-safekit-mirror-en — 21 instances in 21 files */}}
+{{/* Parameters: app */}}
+ 
+
+## How the SafeKit mirror cluster works with Windows/Linux? {#safekit-mirror-cluster}
+
+### Step 1. Real-time replication {#step1}
+
+Server 1 (PRIM) runs the Windows/Linux application. Clients are connected to a [virtual IP address](/best-practises/how-a-virtual-ip-address-works/). SafeKit replicates in real time modifications made inside files through the network.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="File replication at byte level in a mirror Windows/Linux cluster">
+
+
+The replication is [synchronous](/best-practises/synchronous-replication-vs-asynchronous-replication/) with no data loss on failure contrary to asynchronous replication.
+
+You just have to configure the names of directories to replicate in SafeKit. There are no pre-requisites on disk organization. Directories may be located in the system disk.
+
+### Step 2. Automatic failover {#step2}
+
+When Server 1 fails, Server 2 takes over. SafeKit switches the virtual IP address and restarts the Windows/Linux application automatically on Server 2.
+
+The application finds the files replicated by SafeKit uptodate on Server 2. The application continues to run on Server 2 by locally modifying its files that are no longer replicated to Server 1.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover of Windows/Linux in a mirror cluster">
+
+
+The failover time is equal to the fault-detection time (30 seconds by default) plus the application start-up time.
+
+### Step 3. Automatic failback {#step3}
+
+Failback involves restarting Server 1 after fixing the problem that caused it to fail.
+
+SafeKit automatically resynchronizes the files, updating only the files modified on Server 2 while Server 1 was halted.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback in a mirror Windows/Linux cluster">
+
+
+Failback takes place without disturbing the Windows/Linux application, which can continue running on Server 2.
+
+### Step 4. Back to normal
+
+After reintegration, the files are once again in mirror mode, as in step 1. The system is back in high-availability mode, with the Windows/Linux application running on Server 2 and SafeKit replicating file updates to Server 1.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Return to normal operation in a mirror Windows/Linux cluster">
+
+
+If the administrator wishes the application to run on Server 1, this can be done manually through the web console at an appropriate time, or automatically through configuration.
+
+### How to configure a SafeKit Mirror Cluster for Windows/Linux? {#safekit-mirror-cluster-configure}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+
+
+The **SafeKit web console** provides an intuitive interface to orchestrate high availability for your critical applications. In just a few steps, you can configure a **SafeKit mirror cluster** to ensure business continuity:
+
+  * **Application Failover (Macros Tab):** Define the specific application services to be automatically restarted in the event of a failure.
+  * **Heartbeat network(s):** Dedicated communication path(s) used by cluster nodes to continuously monitor each other's health and availability and synchronize failover decisions.
+  * **Virtual IP Management:** Set up the Virtual IP (VIP) for transparent client reconnection after a failover.
+  * **Real-Time Replication:** Select the critical directories for host-based, synchronous byte-level replication.
+  * **Checkers:** Monitor the application's health and trigger automatic recovery if a process failure is detected.
+
+
+The SafeKit cluster includes a dedicated split-brain checker to resolve network isolation issues without the need for a third witness machine or an additional heartbeat network. Learn more about [heartbeat, failover and quorum in a cluster](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+
+### How to monitor a SafeKit mirror cluster for Windows/Linux? {#safekit-mirror-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+
+
+The **SafeKit management console** offers a unified view of your high availability infrastructure. It allows administrators to monitor the **operational state** of the cluster and track data synchronization in real-time.
+
+For a 2-node mirror cluster, the console clearly displays the roles of each server:
+
+  * **PRIM (Primary):** The active node currently running the application and managing the Virtual IP. It performs writes to the local storage and real-time replication to the secondary node.
+  * **SECOND (Secondary):** The standby node receiving synchronous byte-level updates. It is ready to take over instantly if the Primary fails.
+  * **ALONE State:** Visually alerts you when the cluster is running on a single node (e.g., during maintenance or after a failure), indicating that redundancy is temporarily lost.
+  * **Resynchronization Progress:** When a failed node recovers, its status turns orange during background data reintegration, ensuring no downtime during the "return to normal" phase.
+
+
+Beyond simple status icons, the interface provides **one-click failover orchestration** , allowing you to manually reassign the primary role for planned maintenance while ensuring continuous availability for user activity.
+
+

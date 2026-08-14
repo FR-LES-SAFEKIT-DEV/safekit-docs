@@ -1,0 +1,33 @@
+{{/* Shortcode: insert-safekit-scada-solutions-fr — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## SafeKit apporte deux solutions pour la redondance et la haute disponibilité des logiciels {{ .Get "app" }}
+
+### Redondance et haute disponibilité au niveau de l'application
+
+Dans ce type de solution, seules les données applicatives sont répliquées. Et seule l'application est redémarrée en cas de panne.
+
+
+<img src="/wp-content/uploads/2023/02/application-ha-4.png" width="168" alt="Redondance au niveau applicatif pour un logiciel {{ .Get "app" }}">
+
+
+Avec cette solution, des scripts de reprise doivent être écrits pour redémarrer l'application. Cette solution est indépendante de la plate-forme et fonctionne avec des applications à l'intérieur de machines physiques, de machines virtuelles, dans le Cloud. Tout hyperviseur est supporté (VMware, Hyper-V...).
+
+  * Solution pour une nouvelle application (scripts de reprise à écrire): [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/), [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### Redondance et haute disponibilité au niveau machine virtuelle
+
+Dans ce type de solution, le logiciel {{ .Get "app" }} est placé dans une machine virtuelle. La machine virtuelle (VM) complète est répliquée et redémarrée (Application + OS).
+
+
+<img src="/wp-content/uploads/2023/02/vm-ha-4.png" width="186" alt="Redondance au niveau machine virtuelle pour un logiciel {{ .Get "app" }}">
+
+
+L'avantage de cette solution est qu'il n'y a pas de scripts de reprise à écrire par application. Cette solution est générique pour tous les logiciels {{ .Get "app" }}. Elle fonctionne avec les hyperviseurs Windows/Hyper-V et Linux/KVM mais pas avec VMware. Il s'agit d'une solution active/active avec plusieurs machines virtuelles répliquées et redémarrées entre deux nœuds.
+
+  * Solutions pour une nouvelle application (pas de script de reprise à écrire) : [Windows/Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/), [Linux/KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+
+

@@ -7,4 +7,4 @@ title: "{{ .Title }}"
 lang: "{{ .Lang }}"
 ---
 
-{{ .RawContent }}
+{{ .Content }}

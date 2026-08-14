@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-nl — 1 instances in 1 files */}}
+ 
+
+## Beperkingen van SafeKit High Availability {#safekit-ha-limitations}
+
+### Waarom een replicatie van enkele terabytes?
+
+Resynchronisatietijd na een storing ([stap 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
+
+  * 1 Gb/s netwerk ≈ 3 uur voor 1 terabyte.
+  * 10 Gb/s netwerk ≈ 1 uur voor 1 terabyte of minder, afhankelijk van schrijfsnelheid van de schijf.
+
+
+#### Alternatief
+
+  * Voor een groot datavolume, gebruik [externe gedeelde opslag](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
+  * Duurder, complexer.
+
+
+### Waarom een replicatie < 1.000.000 bestanden?
+
+  * Resynchronisatieprestaties na een storing ([stap 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
+  * Tijd om elk bestand tussen beide nodes te controleren.
+
+
+#### Alternatief
+
+  * Plaats de vele te repliceren bestanden in een virtuele harde schijf / virtuele machine.
+  * Alleen de bestanden die de virtuele harde schijf / virtuele machine vertegenwoordigen, worden in dit geval gerepliceerd en gesynchroniseerd.
+
+
+### Waarom een failover ≤ 32 gerepliceerde VM's?
+
+  * Elke VM draait in een onafhankelijk spiegelmodule.
+  * Maximum van 32 spiegelmodules op dezelfde cluster.
+
+
+#### Alternatief
+
+  * Gebruik externe gedeelde opslag en een andere VM-clusteringoplossing.
+  * Duurder, complexer.
+
+
+### Waarom een LAN/VLAN-netwerk tussen externe sites?
+
+  * Automatische failover van het [virtuele IP-adres](/best-practises/how-a-virtual-ip-address-works/) met 2 nodes in hetzelfde subnet.
+  * Goede bandbreedte voor resynchronisatie ([stap 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) en goede latency voor [synchrone replicatie](/best-practises/synchronous-replication-vs-asynchronous-replication/) (typisch een round-trip van minder dan 2 ms).
+
+
+#### Alternatief
+
+  * Gebruik een [load balancer voor het virtuele IP-adres](/best-practises/how-a-virtual-ip-address-works/) als de 2 nodes zich in 2 subnets bevinden (ondersteund door SafeKit, vooral in de cloud).
+  * Gebruik back-upoplossingen met asynchrone replicatie voor netwerken met hoge latency.
+
+
+

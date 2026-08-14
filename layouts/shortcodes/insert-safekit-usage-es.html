@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-es — 1 instances in 1 files */}}
+ 
+
+## Limitaciones de la alta disponibilidad de SafeKit {#safekit-ha-limitations}
+
+### ¿Por qué una replicación de algunos terabytes?
+
+Tiempo de resincronización después de una falla ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
+
+  * Red de 1 Gb/s ≈ 3 horas para 1 terabyte.
+  * Red de 10 Gb/s ≈ 1 hora para 1 terabyte o menos, dependiendo del rendimiento de escritura en disco.
+
+
+#### Alternativa
+
+  * Para un gran volumen de datos, use [almacenamiento compartido externo](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
+  * Más costoso, más complejo.
+
+
+### ¿Por qué una replicación < 1.000.000 de archivos?
+
+  * Rendimiento del tiempo de resincronización después de una falla ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
+  * Tiempo para verificar cada archivo entre ambos nodos.
+
+
+#### Alternativa
+
+  * Ponga los muchos archivos a replicar en un disco duro virtual / máquina virtual.
+  * Solo los archivos que representan el disco duro virtual / máquina virtual se replicarán y resincronizarán en este caso.
+
+
+### ¿Por qué un failover ≤ 32 máquinas virtuales replicadas?
+
+  * Cada máquina virtual se ejecuta en un módulo espejo independiente.
+  * Máximo de 32 módulos espejo ejecutándose en el mismo clúster.
+
+
+#### Alternativa
+
+  * Use un almacenamiento compartido externo y otra solución de clustering para máquinas virtuales.
+  * Más costoso, más complejo.
+
+
+### ¿Por qué una red LAN/VLAN entre sitios remotos?
+
+  * Failover automático de la [dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/) con 2 nodos en la misma subred.
+  * Buen ancho de banda para la resincronización ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) y buena latencia para la [replicación síncrona](/best-practises/synchronous-replication-vs-asynchronous-replication/) (típicamente un tiempo de ida y vuelta inferior a 2 ms).
+
+
+#### Alternativa
+
+  * Use un [balanceador de carga para la dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/) si los 2 nodos están en 2 subredes (compatible con SafeKit, especialmente en la nube).
+  * Use soluciones de respaldo con replicación asíncrona para redes con alta latencia.
+
+
+

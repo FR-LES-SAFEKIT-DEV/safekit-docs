@@ -1,0 +1,88 @@
+{{/* Shortcode: insert-safekit-mirror-nl — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## Hoe werkt het SafeKit mirror-cluster met Windows/Linux? {#safekit-mirror-cluster}
+
+### Stap 1. Realtime replicatie {#step1}
+
+Server 1 (PRIM) voert de Windows/Linux-applicatie uit. Clients zijn verbonden met een [virtueel IP-adres](/best-practises/how-a-virtual-ip-address-works/). SafeKit repliceert wijzigingen in bestanden in realtime via het netwerk.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Bestandsreplicatie op byte-niveau in een mirror Windows/Linux-cluster">
+
+
+De replicatie is [synchroon](/best-practises/synchronous-replication-vs-asynchronous-replication/), wat in tegenstelling tot asynchrone replicatie zorgt voor nul dataverlies bij uitval.
+
+U hoeft alleen maar de namen van de te dupliceren mappen in SafeKit te configureren. Er zijn geen vereisten voor de schijfindeling. Mappen mogen zich gewoon op de systeemschijf bevinden.
+
+### Stap 2. Automatische failover {#step2}
+
+Wanneer Server 1 uitvalt, neemt Server 2 de taken over. SafeKit schakelt het virtuele IP-adres om en start de Windows/Linux-applicatie automatisch op Server 2.
+
+De applicatie vindt de door SafeKit gerepliceerde bestanden up-to-date terug op Server 2. De applicatie blijft draaien op Server 2 door lokaal haar bestanden aan te passen, die op dat moment niet langer naar Server 1 worden gerepliceerd.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover of Windows/Linux in een mirror-cluster">
+
+
+De failover-tijd is gelijk aan de foutdetectietijd (standaard 30 seconden) plus de opstarttijd van de applicatie.
+
+### Stap 3. Automatische failback {#step3}
+
+Failback houdt in dat Server 1 opnieuw wordt opgestart nadat het probleem dat de uitval veroorzaakte, is verholpen.
+
+SafeKit hersynchroniseert de bestanden automatisch, waarbij alleen de bestanden worden bijgewerkt die op Server 2 zijn gewijzigd terwijl Server 1 buiten werking was.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback in een mirror Windows/Linux-cluster">
+
+
+De failback vindt plaats zonder dat de Windows/Linux-applicatie wordt verstoord, die gewoon kan blijven draaien op Server 2.
+
+### Stap 4. Terug naar normaal
+
+Na de reïntegratie verkeren de bestanden weer in mirror-modus, net als in stap 1. Het systeem bevindt zich opnieuw in hoge-beschikbaarheidsmodus (high-availability mode), waarbij de Windows/Linux-applicatie op Server 2 draait en SafeKit de bestandswijzigingen naar Server 1 repliceert.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Terugkeer naar normale werking in een mirror Windows/Linux-cluster">
+
+
+Als de beheerder wil dat de applicatie op Server 1 draait, kan dit op een geschikt moment handmatig via de webconsole worden uitgevoerd, of automatisch via de configuratie worden ingesteld.
+
+### Hoe configureert u een SafeKit mirror-cluster voor Windows/Linux? {#safekit-mirror-cluster-configure}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuratiedashboard voor Windows/Linux met weergave van heartbeat-netwerken, virtuele IP-instellingen en realtime mapreplicatie voor een mirror-cluster.">
+
+
+De **SafeKit webconsole** biedt een intuïtieve interface om hoge beschikbaarheid voor uw kritieke applicaties te orkestreren. In slechts een paar stappen kunt u een **SafeKit mirror-cluster** configureren om de bedrijfscontinuïteit te waarborgen:
+
+  * **Applicatie-failover (tabblad Macros):** Definieer de specifieke applicatiediensten die automatisch herstart moeten worden in het geval van een storing.
+  * **Heartbeat-netwerk(en):** Toegewijde communicatiepaden die door de clusternodes worden gebruikt om continu elkaars status en beschikbaarheid te controleren en failover-beslissingen te synchroniseren.
+  * **Virtueel IP-beheer:** Stel het virtuele IP-adres (VIP) in voor een transparante herverbinding van clients na een failover.
+  * **Realtime replicatie:** Selecteer de kritieke mappen (directories) voor host-gebaseerde, synchrone replicatie op byte-niveau.
+  * **Checkers:** Monitor de status van de applicatie en activeer automatisch herstel zodra er een procesfout wordt gedetecteerd.
+
+
+Het SafeKit-cluster bevat een ingebouwde split-brain checker om netwerklokalisatieproblemen op te lossen zonder dat er een derde 'witness machine' (getuige) of een extra heartbeat-netwerk nodig is. Lees meer over [heartbeat, failover en quorum in een cluster](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+
+### Hoe monitort u een SafeKit mirror-cluster voor Windows/Linux? {#safekit-mirror-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+
+
+De **SafeKit-beheerconsole** biedt een universeel overzicht van uw hoge beschikbaarheidsinfrastructuur. Hiermee kunnen beheerders de **operationele status** van het cluster controleren en de datasynchronisatie in realtime volgen.
+
+Voor een mirror-cluster met 2 nodes toont de console duidelijk de rollen van elke server:
+
+  * **PRIM (Primary):** De actieve node die momenteel de applicatie uitvoert en het virtuele IP-adres beheert. Deze voert schrijfbewerkingen uit op de lokale opslag en verzorgt de realtime replicatie naar de secundaire node.
+  * **SECOND (Secondary):** De stand-by node die synchrone updates op byte-niveau ontvangt. Deze staat klaar om direct de taken over te nemen als de Primary uitvalt.
+  * **ALONE-status:** Waarschuwt u visueel wanneer het cluster op een enkele node draait (bijv. tijdens onderhoud of na een storing), wat aangeeft dat de redundantie tijdelijk is weggevallen.
+  * **Voortgang van de hersynchronisatie:** Wanneer een uitgevallen node herstelt, kleurt de status ervan oranje tijdens de gegevensreïntegatie op de achtergrond. Dit garandeert dat er geen downtime is tijdens de fase van de "terugkeer naar normaal".
+
+
+Naast eenvoudige statuspictogrammen biedt de interface **failover-orkestratie met één klik** , waardoor u de primaire rol handmatig kunt herverdelen voor gepland onderhoud, terwijl de continue beschikbaarheid voor gebruikersactiviteiten gewaarborgd blijft.
+
+

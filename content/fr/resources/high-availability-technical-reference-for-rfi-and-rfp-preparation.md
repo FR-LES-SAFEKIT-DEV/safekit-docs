@@ -260,11 +260,4 @@ Formation et certification gratuites | <https://training.my.evidian.com/mod/page
 Nous contacter | <https://safekit.eviden.com/contact-us-for-safekit/>  
   
 
-<!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
-<div class="button-row">
-  <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
-  <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
-  <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
-</div>
-<!-- END INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
+{{%  insert-safekit-4-buttons-fr %}}

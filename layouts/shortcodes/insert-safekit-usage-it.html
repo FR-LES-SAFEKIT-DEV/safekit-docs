@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-it — 1 instances in 1 files */}}
+ 
+
+## Limitazioni di SafeKit High Availability {#safekit-ha-limitations}
+
+### Perché una replica di alcuni Tera-byte?
+
+Tempo di risincronizzazione dopo un guasto ([passo 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
+
+  * Rete da 1 Gb/s ≈ 3 ore per 1 Tera-byte.
+  * Rete da 10 Gb/s ≈ 1 ora per 1 Tera-byte o meno, a seconda delle prestazioni di scrittura del disco.
+
+
+#### Alternativa
+
+  * Per un grande volume di dati, utilizzare [storage condiviso esterno](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
+  * Più costoso, più complesso.
+
+
+### Perché una replica < 1.000.000 di file?
+
+  * Prestazioni del tempo di risincronizzazione dopo un guasto ([passo 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
+  * Tempo per controllare ogni file tra i due nodi.
+
+
+#### Alternativa
+
+  * Inserire i molti file da replicare in un disco rigido virtuale / macchina virtuale.
+  * In questo caso verranno replicati e risincronizzati solo i file che rappresentano il disco rigido virtuale / la macchina virtuale.
+
+
+### Perché un failover ≤ 32 VM replicate?
+
+  * Ogni VM viene eseguita in un modulo mirror indipendente.
+  * Massimo 32 moduli mirror in esecuzione sullo stesso cluster.
+
+
+#### Alternativa
+
+  * Utilizzare uno storage condiviso esterno e un'altra soluzione di clustering per VM.
+  * Più costoso, più complesso.
+
+
+### Perché una rete LAN/VLAN tra siti remoti?
+
+  * Failover automatico dell'[indirizzo IP virtuale](/best-practises/how-a-virtual-ip-address-works/) con 2 nodi nella stessa subnet.
+  * Buona larghezza di banda per la risincronizzazione ([passo 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) e buona latenza per la [replica sincrona](/best-practises/synchronous-replication-vs-asynchronous-replication/) (tipicamente un round-trip inferiore a 2 ms).
+
+
+#### Alternativa
+
+  * Utilizzare un [load balancer per l'indirizzo IP virtuale](/best-practises/how-a-virtual-ip-address-works/) se i 2 nodi si trovano in 2 subnet (supportato da SafeKit, soprattutto nel cloud).
+  * Utilizzare soluzioni di backup con replica asincrona per reti ad alta latenza.
+
+
+

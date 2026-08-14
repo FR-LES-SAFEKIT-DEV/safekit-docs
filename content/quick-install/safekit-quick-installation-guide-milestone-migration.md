@@ -13,14 +13,7 @@ topics: "Eviden SafeKit"
 ## Eviden SafeKit
 
 
-<!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
-<div class="button-row">
-  <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
-  <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
-  <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
-</div>
-<!-- END INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
+{{%  insert-safekit-4-buttons-en %}}
  
 
 

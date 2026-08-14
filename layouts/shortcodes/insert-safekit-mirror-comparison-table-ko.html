@@ -1,0 +1,25 @@
+{{/* Shortcode: insert-safekit-mirror-comparison-table-ko — 1 instances in 1 files */}}
+ 
+
+올바른 데이터 복제 방식을 선택하는 것은 비즈니스 연속성을 보장하는 데 매우 중요합니다. 이 비교에서는 SafeKit 미러 클러스터의 실시간 파일 복제와 데이터베이스 수준 복제, 디스크 복제, 공유 디스크 솔루션, 내결함성 시스템 등 기존 대안 간의 주요 차별화 요소를 설명합니다.
+
+**SafeKit 미러 클러스터: 대체 복제 및 클러스터링 방식 대비 장점**
+
+특성 | SafeKit 장점 | 대안의 한계  
+---|---|---  
+**[3개 제품을 1개로](/best-practises/clustering-software-vs-hardware-clustering/)** | Windows 및 Linux에서 외부 공유/복제 스토리지, 로드 밸런싱 장비, OS 및 데이터베이스 엔터프라이즈 에디션 비용을 절감합니다. 동기식 실시간 파일 복제, 장애 모니터링, 자동 재시작, 가상 IP 페일오버 등 모든 클러스터링 기능을 포함합니다. | 기존 방식은 스토리지 복제, 로드 밸런싱, 클러스터링에 별도의 제품이 필요하여 비용과 복잡성이 증가합니다.  
+**[매우 간단한 구성](/solutions/)** | 애플리케이션 모듈을 통한 구성. 새로운 서비스와 복제 디렉토리를 쉽게 추가할 수 있습니다. 모두 중앙 집중식 웹 콘솔로 관리. 도메인 컨트롤러나 Active Directory가 필요 없습니다. | Microsoft 클러스터 및 유사 솔루션은 복잡한 Active Directory 구성과 도메인 컨트롤러가 필요합니다.  
+**[동기식 복제](/best-practises/synchronous-replication-vs-asynchronous-replication/)** | 실시간 복제는 동기식으로 장애 시 데이터 손실이 없습니다(RPO = 0). | 비동기식 복제는 장애 발생 시 아직 복제되지 않은 최근 트랜잭션을 잃을 수 있습니다.  
+**[완전 자동 페일백](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step3)** | 장애 후 서버가 재시작되면 복제 페일백이 완전히 자동으로 수행됩니다. 장애 서버는 나머지 서버의 애플리케이션을 중지하지 않고 클러스터에 재통합됩니다. | 대부분의 복제 솔루션(특히 데이터베이스 수준)은 수동 재동기화가 필요합니다. 페일백 중에 애플리케이션이 중지될 수도 있습니다.  
+**[모든 유형의 데이터 복제](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step1)** | 복제는 데이터베이스뿐만 아니라 복제가 필요한 모든 파일에 대해 작동합니다. | 데이터베이스 수준 복제는 데이터베이스만 보호하며 구성 파일, 로그 또는 기타 애플리케이션 데이터는 보호하지 않습니다.  
+**[파일 복제 vs. 디스크 복제](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)** | 복제는 시스템 디스크를 포함하여 어디에나 위치할 수 있는 파일 디렉토리를 기반으로 합니다. | 디스크 복제는 전용 파티션과 데이터를 저장하기 위한 특별한 애플리케이션 구성이 필요합니다.  
+**[파일 복제 vs. 공유 디스크](/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)** | 공유 인프라 없이 두 개의 원격 사이트에 서버를 배포할 수 있습니다. | 공유 디스크 솔루션은 물리적 근접성이 필요하며 원격 사이트를 지원할 수 없습니다.  
+**[원격 사이트 및 가상 IP](/best-practises/how-a-virtual-ip-address-works/)** | 모든 클러스터링 기능이 원격 사이트의 2대 서버에서 작동합니다. 확장 LAN은 레이어 2 VIP 리라우팅을 지원합니다. 서로 다른 IP 네트워크의 경우 SafeKit 헬스 체크를 통한 로드 밸런서로 VIP를 관리합니다. | 많은 클러스터링 솔루션은 원격 사이트 페일오버를 지원하지 않거나 예측 불가능한 복구 시간을 가진 복잡한 DNS 리다이렉션이 필요합니다.  
+**[쿼럼 및 스플릿 브레인](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)** | 2대의 서버만으로 작동합니다. 라우터로의 간단한 스플릿 브레인 체커가 사이트 간 네트워크 격리를 처리합니다. | 대부분의 클러스터링 솔루션은 쿼럼 관리를 위해 3번째 서버가 필요합니다.  
+**[액티브/액티브 클러스터](/architectures/active-active-cluster-real-time-replication/)** | 보조 서버는 전용이 아닙니다. 2개의 서로 다른 미러 모듈로 액티브/액티브 운영이 가능합니다. | [내결함성 시스템](/best-practises/high-availability-cluster-vs-fault-tolerant-system/)은 보조 서버를 명령어 수준에서 동기화된 동일 애플리케이션 실행에 전용화합니다.  
+**[통합 HA 솔루션](/architectures/clustering-software-load-balancing-mirroring/)** | SafeKit은 미러 클러스터(복제 + 페일오버)와 [팜 클러스터(로드 밸런싱 + 페일오버)](/architectures/network-load-balancing-cluster/)를 모두 구현합니다. N-티어 아키텍처를 Windows와 Linux에서 하나의 솔루션으로 고가용성을 실현할 수 있습니다. | 일반적인 아키텍처는 로드 밸런싱, 복제, 페일오버에 서로 다른 기술을 혼합하여 운영 복잡성을 증가시킵니다.  
+**[RTO / RPO](/best-practises/what-is-rpo-and-rto-with-examples/)** | 장애 시 빠른 애플리케이션 재시작: 약 1분 이내. 데이터 손실 제로(동기식 복제). | [전체 VM 복제](/best-practises/vm-ha-vs-application-ha/)(VMware HA, Hyper-V 클러스터)는 새로운 하이퍼바이저에서 전체 OS를 재부팅해야 하므로 복구 시간이 길어집니다.  
+  
+**요약하면** , SafeKit 미러 클러스터는 동기식 파일 복제, 자동 페일오버 및 페일백, 로드 밸런싱, 원격 사이트 지원을 결합한 통합적이고 비용 효율적인 고가용성 솔루션을 제공합니다. 전용 하드웨어, 공유 스토리지, 세 번째 쿼럼 서버가 필요 없습니다. 이러한 단순성은 표준 Windows 및 Linux 서버에서 안정적인 HA가 필요한 소프트웨어 제공업체와 조직에 특히 적합합니다.
+
+

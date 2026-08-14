@@ -1,0 +1,88 @@
+{{/* Shortcode: insert-safekit-mirror-es — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## ¿Cómo funciona el cluster espejo (mirror cluster) de SafeKit con Windows/Linux? {#safekit-mirror-cluster}
+
+### Paso 1. Replicación en tiempo real {#step1}
+
+El Servidor 1 (PRIM) ejecuta la aplicación Windows/Linux. Los clientes están conectados a una [dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/). SafeKit replica en tiempo real las modificaciones realizadas dentro de los archivos a través de la red.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Replicación de archivos a nivel de byte en un cluster espejo (mirror) de Windows/Linux">
+
+
+La replicación es [síncrona](/best-practises/synchronous-replication-vs-asynchronous-replication/), sin pérdida de datos en caso de fallo, a diferencia de la replicación asíncrona.
+
+Solo tiene que configurar los nombres de los directorios que desea replicar en SafeKit. No hay requisitos previos en la organización del disco. Los directorios pueden estar ubicados en el disco del sistema.
+
+### Paso 2. Failover automático {#step2}
+
+Cuando el Servidor 1 falla, el Servidor 2 asume el control. SafeKit cambia la dirección IP virtual y reinicia la aplicación Windows/Linux automáticamente en el Servidor 2.
+
+La aplicación encuentra los archivos replicados por SafeKit actualizados en el Servidor 2. La aplicación continúa ejecutándose en el Servidor 2 modificando localmente sus archivos, los cuales ya no se replican en el Servidor 1.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover de Windows/Linux en un cluster espejo (mirror cluster)">
+
+
+El tiempo de failover es igual al tiempo de detección de fallos (30 segundos por defecto) más el tiempo de inicio de la aplicación.
+
+### Paso 3. Failback automático {#step3}
+
+El failback implica reiniciar el Servidor 1 después de solucionar el problema que causó su fallo.
+
+SafeKit resincroniza automáticamente los archivos, actualizando únicamente los archivos modificados en el Servidor 2 mientras el Servidor 1 estaba detenido.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback en un cluster espejo (mirror) de Windows/Linux">
+
+
+El failback se lleva a cabo sin interrumpir la aplicación Windows/Linux, la cual puede continuar ejecutándose en el Servidor 2.
+
+### Paso 4. Retorno a la normalidad
+
+Después de la reintegración, los archivos vuelven a estar en modo espejo (mirror), como en el paso 1. El sistema regresa al modo de alta disponibilidad, con la aplicación Windows/Linux ejecutándose en el Servidor 2 y SafeKit replicando las actualizaciones de archivos en el Servidor 1.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Retorno a la operación normal en un cluster espejo (mirror) de Windows/Linux">
+
+
+Si el administrador desea que la aplicación se ejecute en el Servidor 1, esto se puede hacer manualmente a través de la consola web en el momento adecuado, o automáticamente mediante la configuración.
+
+### ¿Cómo configurar un Cluster Espejo (Mirror Cluster) de SafeKit para Windows/Linux? {#safekit-mirror-cluster-configure}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+
+
+La **consola web de SafeKit** ofrece una interfaz intuitiva para orquestar la alta disponibilidad de sus aplicaciones críticas. En solo unos pocos pasos, puede configurar un **cluster espejo de SafeKit** para garantizar la continuidad del negocio:
+
+  * **Failover de Aplicación (Pestaña Macros):** Defina los servicios de aplicación específicos que se reiniciarán automáticamente en caso de fallo.
+  * **Red(es) de Heartbeat:** Vía(s) de comunicación dedicada(s) utilizada(s) por los nodos del cluster para supervisar continuamente la salud y disponibilidad de los demás y sincronizar las decisiones de failover.
+  * **Gestión de IP Virtual:** Configure la IP Virtual (VIP) para una reconexión transparente del cliente después de un failover.
+  * **Replicación en Tiempo Real:** Seleccione los directorios críticos para la replicación síncrona basada en host a nivel de byte.
+  * **Checkers (Verificadores):** Supervistan la salud de la aplicación y activan la recuperación automática si se detecta un fallo en el proceso.
+
+
+El cluster SafeKit incluye un verificador de split-brain dedicado para resolver problemas de aislamiento de red sin necesidad de una tercera máquina testigo (witness) o de una red de heartbeat adicional. Obtenga más información sobre [heartbeat, failover y quórum en un cluster](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+
+### ¿Cómo monitorear un cluster espejo (mirror cluster) de SafeKit para Windows/Linux? {#safekit-mirror-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+
+
+La **consola de administración de SafeKit** ofrece una vista unificada de su infraestructura de alta disponibilidad. Permite a los administradores monitorear el **estado operativo** del cluster y realizar un seguimiento de la sincronización de datos en tiempo real.
+
+Para un cluster espejo de 2 nodos, la consola muestra claramente los roles de cada servidor:
+
+  * **PRIM (Primary):** El nodo activo que ejecuta actualmente la aplicación y gestiona la IP Virtual. Realiza escrituras en el almacenamiento local y la replicación en tiempo real en el nodo secundario.
+  * **SECOND (Secondary):** El nodo de reserva (standby) que recibe las actualizaciones síncronas a nivel de byte. Está listo para asumir el control instantáneamente si el Primario falla.
+  * **Estado ALONE:** Le alerta visualmente cuando el cluster se está ejecutando en un solo nodo (por ejemplo, durante tareas de mantenimiento o después de un fallo), lo que indica que la redundancia se ha perdido temporalmente.
+  * **Progresso de Resincronización:** Cuando un nodo que ha fallado se recupera, su estado cambia a naranja durante la reintegración de datos en segundo plano, lo que garantiza que no haya tiempo de inactividad durante la fase de "retorno a la normalidad".
+
+
+Más allá de los simples iconos de estado, la interfaz proporciona una **orquestación de failover con un solo clic** , lo que le permite reasignar manualmente el rol primario para mantenimientos planificados, garantizando al mismo tiempo la disponibilidad continua para la actividad de los usuarios.
+
+

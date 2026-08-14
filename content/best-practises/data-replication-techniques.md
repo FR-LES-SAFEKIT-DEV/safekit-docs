@@ -55,66 +55,12 @@ The solution is very simple to configure as only the paths of directories to rep
 ## Comparative tables between data replication techniques
 
 
-<!-- BEGIN INSERT: insert-safekit-mirror-comparison-table-en lang="en" display="content" -->
- 
-
-Choosing the right data replication approach is critical for ensuring business continuity. This comparison highlights the key differentiators of SafeKit's mirror cluster with real-time file replication against traditional alternatives such as database-level replication, disk replication, shared disk solutions, and fault-tolerant systems.
-
-**SafeKit mirror cluster: advantages over alternative replication and clustering approaches**
-
-Feature | SafeKit advantage | Limitation of alternatives  
----|---|---  
-**[3 products in 1](</best-practises/clustering-software-vs-hardware-clustering/>)** | Saves on Windows and Linux the cost of external shared/replicated storage, load balancing boxes, and enterprise editions of OS and databases. Includes all clustering features: synchronous real-time file replication, failure monitoring, automatic restart, virtual IP failover. | Traditional approaches require separate products for storage replication, load balancing, and clustering — increasing cost and complexity.  
-**[Very simple configuration](</solutions/>)** | Configuration via application modules. New services and replicated directories can be added easily. All managed through a centralized web console. No domain controller or Active Directory required. | Microsoft cluster and similar solutions require complex Active Directory configuration and domain controllers.  
-**[Synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>)** | Real-time replication is synchronous with no data loss on failure (RPO = 0). | Asynchronous replication can lose recent transactions that were not yet replicated at failure time.  
-**[Fully automated failback](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#step3>)** | After failure, when a server reboots, the replication failback is fully automatic. The failed server reintegrates the cluster without stopping the application on the remaining server. | Most replication solutions (especially database-level) require manual resynchronization. The application may even be stopped during failback.  
-**[Replication of any type of data](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#step1>)** | Replication works for databases and for any files that need to be replicated. | Database-level replication only protects the database, not configuration files, logs, or other application data.  
-**[File replication vs disk replication](</best-practises/byte-level-file-replication-vs-block-level-disk-replication/>)** | Replication is based on file directories that can be located anywhere, even on the system disk. | Disk replication requires a dedicated disk partition and special application configuration to store data there.  
-**[File replication vs shared disk](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>)** | Servers can be deployed in two remote sites with no shared infrastructure. | Shared disk solutions require physical proximity and cannot span remote sites.  
-**[Remote sites and virtual IP](</best-practises/how-a-virtual-ip-address-works/>)** | All clustering features work for 2 servers in remote sites. Extended LAN enables level-2 VIP rerouting. For different IP networks, VIP is managed via a load balancer with SafeKit health check. | Many clustering solutions do not support remote site failover or require complex DNS redirection with unpredictable recovery times.  
-**[Quorum and split brain](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)** | Works with only 2 servers. A simple split brain checker to a router handles network isolation between sites. | Most clustering solutions require a 3rd server for quorum management.  
-**[Active/active cluster](</architectures/active-active-cluster-real-time-replication/>)** | The secondary server is not dedicated. The cluster can run active/active with 2 different mirror modules. | [Fault-tolerant systems](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) dedicate the secondary to execute the same application synchronized at instruction level.  
-**[Uniform HA solution](</architectures/clustering-software-load-balancing-mirroring/>)** | SafeKit implements both mirror cluster (replication + failover) and [farm cluster (load balancing + failover)](</architectures/network-load-balancing-cluster/>). A N-tier architecture can be made HA with one solution on Windows and Linux. | Typical architectures mix different technologies for load balancing, replication, and failover — increasing operational complexity.  
-**[RTO / RPO](</best-practises/what-is-rpo-and-rto-with-examples/>)** | Quick application restart in case of failure: around 1 minute or less. Zero data loss (synchronous replication). | [Full VM replication](</best-practises/vm-ha-vs-application-ha/>) (VMware HA, Hyper-V cluster) requires rebooting the entire OS on a new hypervisor, resulting in longer recovery times.  
-  
-**In summary** , SafeKit's mirror cluster provides a unified, cost-effective high availability solution that combines synchronous file replication, automatic failover and failback, load balancing, and remote site support — all without requiring dedicated hardware, shared storage, or a third quorum server. This simplicity makes it particularly suited for software editors and organizations needing reliable HA on standard Windows and Linux servers.
-
-
-<!-- END INSERT: insert-safekit-mirror-comparison-table-en lang="en" display="content" -->
+{{%  insert-safekit-mirror-comparison-table-en %}}
  
 
 
-<!-- BEGIN INSERT: insert-safekit-hub-en lang="en" display="content" -->
- 
-
-## 🔍 SafeKit High Availability Navigation Hub {#hub}
-
-**Explore SafeKit: Features, technical videos, documentation, and free trial**
-
-Resource Type | Description | Direct Link  
----|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
-  
-
-<!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
+{{%  insert-safekit-hub-en %}}
  
 
 
-<!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
-<div class="button-row">
-  <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
-  <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
-  <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
-</div>
-<!-- END INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
+{{%  insert-safekit-4-buttons-en %}}

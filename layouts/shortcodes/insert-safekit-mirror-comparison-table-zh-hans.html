@@ -1,0 +1,25 @@
+{{/* Shortcode: insert-safekit-mirror-comparison-table-zh-hans — 1 instances in 1 files */}}
+ 
+
+选择正确的数据复制方法对于确保业务连续性至关重要。本对比突出了SafeKit镜像集群实时文件复制与传统替代方案（如数据库级复制、磁盘复制、共享磁盘解决方案和容错系统）之间的关键差异。
+
+**SafeKit镜像集群：相对于替代复制和集群方案的优势**
+
+特性 | SafeKit优势 | 替代方案的局限性  
+---|---|---  
+**[三合一产品](/best-practises/clustering-software-vs-hardware-clustering/)** | 在Windows和Linux上节省外部共享/复制存储、负载均衡设备以及操作系统和数据库企业版的成本。包含所有集群功能：同步实时文件复制、故障监控、自动重启、虚拟IP故障转移。 | 传统方案需要分别购买存储复制、负载均衡和集群产品——增加了成本和复杂性。  
+**[配置极其简单](/solutions/)** | 通过应用模块进行配置。可轻松添加新服务和复制目录。全部通过集中式Web控制台管理。无需域控制器或Active Directory。 | Microsoft集群和类似解决方案需要复杂的Active Directory配置和域控制器。  
+**[同步复制](/best-practises/synchronous-replication-vs-asynchronous-replication/)** | 实时复制为同步方式，故障时无数据丢失（RPO = 0）。 | 异步复制可能会丢失故障时尚未复制的最近事务。  
+**[全自动故障恢复](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step3)** | 故障后，当服务器重启时，复制故障恢复完全自动化。故障服务器重新加入集群，无需停止剩余服务器上的应用程序。 | 大多数复制解决方案（尤其是数据库级别）需要手动重新同步。应用程序甚至可能在故障恢复期间停止。  
+**[复制任何类型的数据](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step1)** | 复制适用于数据库以及任何需要复制的文件。 | 数据库级复制仅保护数据库，不保护配置文件、日志或其他应用数据。  
+**[文件复制与磁盘复制](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)** | 复制基于文件目录，可位于任何位置，甚至系统盘上。 | 磁盘复制需要专用磁盘分区和特殊的应用配置来存储数据。  
+**[文件复制与共享磁盘](/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)** | 服务器可以部署在两个远程站点，无需共享基础设施。 | 共享磁盘解决方案需要物理邻近，无法跨越远程站点。  
+**[远程站点和虚拟IP](/best-practises/how-a-virtual-ip-address-works/)** | 所有集群功能均适用于远程站点的两台服务器。扩展局域网支持二层VIP重定向。对于不同IP网络，VIP通过负载均衡器配合SafeKit健康检查进行管理。 | 许多集群解决方案不支持远程站点故障转移，或需要复杂的DNS重定向，恢复时间不可预测。  
+**[仲裁和脑裂](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)** | 仅需两台服务器即可工作。简单的脑裂检查器通过路由器处理站点间的网络隔离。 | 大多数集群解决方案需要第三台服务器进行仲裁管理。  
+**[主主集群](/architectures/active-active-cluster-real-time-replication/)** | 备用服务器非专用。集群可通过两个不同的镜像模块以主主模式运行。 | [容错系统](/best-practises/high-availability-cluster-vs-fault-tolerant-system/)将备用服务器专用于在指令级别同步执行相同应用程序。  
+**[统一高可用解决方案](/architectures/clustering-software-load-balancing-mirroring/)** | SafeKit同时实现镜像集群（复制+故障转移）和 [农场集群（负载均衡+故障转移）](/architectures/network-load-balancing-cluster/)。N层架构可通过一个解决方案在Windows和Linux上实现高可用。 | 典型架构混合使用不同技术进行负载均衡、复制和故障转移——增加了运维复杂性。  
+**[RTO / RPO](/best-practises/what-is-rpo-and-rto-with-examples/)** | 故障时快速重启应用程序：约1分钟或更短。零数据丢失（同步复制）。 | [完整虚拟机复制](/best-practises/vm-ha-vs-application-ha/)（VMware HA、Hyper-V集群）需要在新的虚拟化管理程序上重启整个操作系统，导致更长的恢复时间。  
+  
+**总结** ，SafeKit镜像集群提供了统一、经济高效的高可用解决方案，集同步文件复制、自动故障转移和恢复、负载均衡及远程站点支持于一体——无需专用硬件、共享存储或第三台仲裁服务器。这种简洁性使其特别适合需要在标准Windows和Linux服务器上实现可靠高可用的软件厂商和组织。
+
+

@@ -1,0 +1,88 @@
+{{/* Shortcode: insert-safekit-mirror-ko — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## SafeKit 미러 클러스터(mirror cluster)는 Windows/Linux과 어떻게 작동하나요? {#safekit-mirror-cluster}
+
+### 단계 1. 실시간 복제 {#step1}
+
+서버 1(PRIM)이 Windows/Linux 애플리케이션을 실행합니다. 클라이언트는 [가상 IP 주소](/best-practises/how-a-virtual-ip-address-works/)에 연결됩니다. SafeKit은 네트워크를 통해 파일 내부의 변경 사항을 실시간으로 복제합니다.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="미러 Windows/Linux 클러스터의 바이트 단위 파일 복제">
+
+
+이 복제 방식은 비동기 복제와 달리 장애 발생 시 데이터 손실이 없는 [동기식(synchronous)](/best-practises/synchronous-replication-vs-asynchronous-replication/) 복제입니다.
+
+SafeKit에서 복제할 디렉터리 이름만 구성하면 됩니다. 디스크 구조에 대한 사전 요구사항은 없습니다. 디렉터리는 시스템 디스크에 위치할 수도 있습니다.
+
+### 단계 2. 자동 장애 조치 (Failover) {#step2}
+
+서버 1에 장애가 발생하면 서버 2가 제어권을 넘겨받습니다. SafeKit은 가상 IP 주소를 전환하고 서버 2에서 Windows/Linux 애플리케이션을 자동으로 재시작합니다.
+
+애플리케이션은 서버 2에서 SafeKit에 의해 최신 상태로 복제된 파일들을 찾습니다. 애플리케이션은 서버 1로 더 이상 복제되지 않는 로컬 파일을 수정하면서 서버 2에서 계속 실행됩니다.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="미러 클러스터 환경에서 Windows/Linux의 장애 조치(Failover)">
+
+
+장애 조치 시간은 결함 감지 시간(기본값 30초)에 애플리케이션 시작 시간을 더한 값과 같습니다.
+
+### 단계 3. 자동 장애 복구 (Failback) {#step3}
+
+장애 복구(Failback)는 서버 1의 장애 원인을 해결한 후 서버 1을 재시작하는 과정을 포함합니다.
+
+SafeKit은 서버 1이 정지된 동안 서버 2에서 수정된 파일만 업데이트하여 파일을 자동으로 다시 동기화합니다.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="미러 Windows/Linux 클러스터의 장애 복구(Failback)">
+
+
+장애 복구는 서버 2에서 계속 실행 중인 Windows/Linux 애플리케이션에 영향을 주지 않고 백그라운드에서 진행됩니다.
+
+### 단계 4. 정상 상태로 복귀
+
+재통합이 완료되면 파일은 단계 1과 같이 다시 미러 모드로 돌아갑니다. 시스템은 고가용성 모드로 복귀하며, Windows/Linux 애플리케이션은 서버 2에서 실행되고 SafeKit은 파일 업데이트를 서버 1로 복제합니다.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="미러 Windows/Linux 클러스터의 정상 운영 상태 복귀">
+
+
+관리자가 애플리케이션을 서버 1에서 실행하기를 원할 경우, 적절한 시점에 웹 콘솔을 통해 수동으로 전환하거나 구성을 통해 자동으로 전환할 수 있습니다.
+
+### Windows/Linux을 위한 SafeKit 미러 클러스터 구성 방법은 무엇인가요? {#safekit-mirror-cluster-configure}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+
+
+**SafeKit 웹 콘솔** 은 중요 애플리케이션의 고가용성을 조율할 수 있는 직관적인 인터페이스를 제공합니다. 몇 단계만 거치면 비즈니스 연속성을 보장하는 **SafeKit 미러 클러스터** 를 구성할 수 있습니다:
+
+  * **애플리케이션 장애 조치 (Macros 탭):** 장애 발생 시 자동으로 재시작할 특정 애플리케이션 서비스를 정의합니다.
+  * **하트비트 네트워크 (Heartbeat network):** 클러스터 노드들이 서로의 상태와 가용성을 지속적으로 모니터링하고 장애 조치 결정을 동기화하는 데 사용하는 전용 통신 경로입니다.
+  * **가상 IP 관리 (Virtual IP Management):** 장애 조치(Failover) 후 클라이언트가 투명하게 재연결될 수 있도록 가상 IP(VIP)를 설정합니다.
+  * **실시간 복제 (Real-Time Replication):** 호스트 기반의 동기식 바이트 단위 복제를 수행할 핵심 디렉터리를 선택합니다.
+  * **체커 (Checkers):** 애플리케이션의 상태를 모니터링하고 프로세스 실패가 감지되면 자동 복구를 트리거합니다.
+
+
+SafeKit 클러스터에는 제3의 감시(witness) 장비나 추가 하트비트 네트워크 없이도 네트워크 격리 문제를 해결할 수 있는 전용 스플릿 브레인(split-brain) 체커가 포함되어 있습니다. [클러스터의 하트비트, 장애 조치 및 쿼럼](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)에 대해 자세히 알아보세요.
+
+### Windows/Linux을 위한 SafeKit 미러 클러스터 모니터링 방법은 무엇인가요? {#safekit-mirror-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+
+
+**SafeKit 관리 콘솔** 은 고가용성 인프라의 통합된 뷰를 제공합니다. 관리자는 이를 통해 클러스터의 **운영 상태** 를 모니터링하고 데이터 동기화를 실시간으로 추적할 수 있습니다.
+
+2노드 미러 클러스터의 경우, 콘솔에 각 서버의 역할이 명확하게 표시됩니다:
+
+  * **PRIM (Primary):** 현재 애플리케이션을 실행하고 가상 IP를 관리하는 활성(active) 노드입니다. 로컬 스토리지에 데이터를 기록하고 보조 노드로 실시간 복제를 수행합니다.
+  * **SECOND (Secondary):** 동기식 바이트 단위 업데이트를 수신하는 대기(standby) 노드입니다. 주 노드에 장애가 발생하면 즉시 제어권을 넘겨받을 준비가 되어 있습니다.
+  * **ALONE 상태:** 클러스터가 단일 노드에서 실행 중일 때(예: 유지보수 중 또는 장애 발생 후) 시각적인 경고를 표시하여 중복성(redundancy)이 일시적으로 상실되었음을 알려줍니다.
+  * **재동기화 진행 상태 (Resynchronization Progress):** 장애가 발생했던 노드가 복구되면 백그라운드 데이터 재통합이 진행되는 동안 상태가 주황색으로 변경되며, 이를 통해 '정상 복귀' 단계 중에도 가동 중지 시간이 발생하지 않도록 보장합니다.
+
+
+단순한 상태 아이콘을 넘어, 이 인터페이스는 **원클릭 장애 조치(failover) 조율** 기능을 제공하므로, 사용자 활동에 대한 지속적인 가용성을 보장하면서 계획된 유지보수를 위해 주(primary) 역할을 수동으로 재할당할 수 있습니다.
+
+

@@ -1,0 +1,88 @@
+{{/* Shortcode: insert-safekit-mirror-zh-hans — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## SafeKit 镜像集群如何与 Windows/Linux 协同工作？ {#safekit-mirror-cluster}
+
+### 步骤 1. 实时复制 {#step1}
+
+服务器 1 (PRIM) 运行 Windows/Linux 应用程序。客户端连接到一个 [虚拟 IP 地址](/best-practises/how-a-virtual-ip-address-works/)。SafeKit 通过网络实时复制文件内部所做的修改。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="镜像 Windows/Linux 集群中字节级的文件复制">
+
+
+与异步复制不同，该复制是 [同步的](/best-practises/synchronous-replication-vs-asynchronous-replication/)，在发生故障时不会丢失数据。
+
+您只需在 SafeKit 中配置需要复制的目录名称即可。对磁盘布局没有任何预备条件。目录可以位于系统盘中。
+
+### 步骤 2. 自动故障转移 {#step2}
+
+当服务器 1 发生故障时，服务器 2 将接管服务。SafeKit 会自动切换虚拟 IP 地址并在服务器 2 上重新启动 Windows/Linux 应用程序。
+
+应用程序在服务器 2 上能够找到由 SafeKit 复制的最新文件。应用程序继续在服务器 2 上运行，并在本地修改其文件（此时文件不再复制到服务器 1）。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="镜像集群中 Windows/Linux 的故障转移">
+
+
+故障转移时间等于故障检测时间（默认 30 秒）加上应用程序启动时间。
+
+### 步骤 3. 自动故障恢复 {#step3}
+
+故障恢复（Failback）是指在修复导致服务器 1 发生故障的问题后，重新启动服务器 1。
+
+SafeKit 会自动重新同步文件，仅更新在服务器 1 停机期间在服务器 2 上被修改过的文件。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="镜像 Windows/Linux 集群中的故障恢复">
+
+
+故障恢复过程不会干扰 Windows/Linux 应用程序的运行，该程序可以继续在服务器 2 上保持运行状态。
+
+### 步骤 4. 恢复正常运行
+
+重新集成完成后，文件将再次进入镜像模式，正如步骤 1 中所示。系统恢复到高可用模式，此时 Windows/Linux 应用程序在服务器 2 上运行，且 SafeKit 将文件更新实时复制到服务器 1。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="镜像 Windows/Linux 集群恢复正常运行">
+
+
+如果管理员希望应用程序在服务器 1 上运行，可以在合适的时间通过 Web 控制台进行手动切换，或者通过配置实现自动切换。
+
+### 如何为 Windows/Linux 配置 SafeKit 镜像集群？ {#safekit-mirror-cluster-configure}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+
+
+**SafeKit Web 控制台** 提供了一个直观的界面来构建和管理关键应用程序的高可用性。只需几个步骤，您就可以配置 **SafeKit 镜像集群** 以确保业务连续性：
+
+  * **应用程序故障转移（Macros 选项卡）：** 定义在发生故障时需要自动重新启动的具体应用程序服务。
+  * **心跳网络：** 集群节点使用的专用通信路径，用于持续监测彼此的健康状况和可用性，并同步故障转移决策。
+  * **虚拟 IP 管理：** 设置虚拟 IP (VIP)，以便在故障转移后实现客户端的透明无感重连。
+  * **实时复制：** 选择关键目录，进行基于主机的同步字节级复制。
+  * **检查器（Checkers）：** 监控应用程序的健康状况，并在检测到进程故障时触发自动恢复。
+
+
+SafeKit 集群包含一个专用的脑裂检查器（split-brain checker），用于解决网络隔离问题，而不需要第三台见证服务器（witness machine）或额外的心跳网络。了解更多关于 [集群中的心跳、故障转移和仲裁（quorum）](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)的信息。
+
+### 如何监控 Windows/Linux 的 SafeKit 镜像集群？ {#safekit-mirror-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+
+
+**SafeKit 管理控制台** 为您的高可用性基础设施提供了一个统一的视图。它允许管理员实时监控集群的**运行状态** 并跟踪数据同步情况。
+
+对于双节点镜像集群，控制台会清晰地显示每台服务器的角色：
+
+  * **PRIM (主节点)：** 当前正在运行应用程序并管理虚拟 IP 的活动节点。它负责写入本地存储，并向备用节点进行实时复制。
+  * **SECOND (备节点)：** 接收同步字节级更新的备用节点。如果主节点发生故障，它已准备好立即接管服务。
+  * **ALONE (孤立) 状态：** 当集群仅在单个节点上运行时（例如在维护期间或发生故障后）为您提供直观的警报，提示冗余已暂时丢失。
+  * **重新同步进度：** 当故障节点恢复时，在后台数据重新集成期间其状态会变为橙色，确保在“恢复正常”阶段不会出现停机时间。
+
+
+除了简单的状态图标外，该界面还提供了**一键式故障转移调度（one-click failover orchestration）** ，允许您在计划内维护时手动重新分配主节点角色，同时确保用户活动的持续可用性。
+
+

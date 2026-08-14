@@ -1,0 +1,23 @@
+{{/* Shortcode: insert-safekit-vm-vs-app-ha-comparison-table-nl — 1 instances in 1 files */}}
+ 
+
+Bij het implementeren van hoge beschikbaarheid is een belangrijke beslissing of u beschermt op het niveau van de **virtuele machine (VM)** of op het **applicatieniveau**. VM-niveau HA repliceert en failt over volledige virtuele machines, wat een generieke oplossing biedt voor elke applicatie. Applicatieniveau HA richt zich alleen op de applicatiegegevens en -diensten, wat resulteert in snellere hersteltijden en lager resourcegebruik. SafeKit biedt als enige **beide benaderingen** — zonder in beide gevallen gedeelde opslag (SAN) te vereisen — zodat u de beste keuze kunt maken voor uw infrastructuur en herstelvereisten.
+
+**SafeKit VM HA vs Applicatie HA vs Traditionele Hyper-V Cluster &amp; VMware HA**
+
+Criterium | VM HA met SafeKit Hyper-V of KVM module | Applicatie HA met SafeKit applicatiemodules | Microsoft Hyper-V Cluster &amp; VMware HA  
+---|---|---|---  
+**Architectuur** | SafeKit geïnstalleerd in 2 hypervisors. Replicatie en failover van de volledige VM. | SafeKit geïnstalleerd in 2 virtuele of fysieke machines. Replicatie en failover op applicatieniveau. | Hypervisor-cluster met gedeelde opslag. VM-herstart op een andere host als de hypervisor uitvalt.  
+**Opslag** | Geen gedeelde schijf — [synchrone realtime replicatie zonder gegevensverlies](/best-practises/synchronous-replication-vs-asynchronous-replication/) | Geen gedeelde schijf — synchrone replicatie van alleen applicatiegegevens | Vereist een gedeelde schijf en een specifieke externe schijvenbay  
+**Gerepliceerde gegevens** | Repliceert meer gegevens (applicatie + OS) | Repliceert alleen applicatiegegevens | Geen replicatie — gedeelde opslag toegankelijk voor alle hosts  
+**Hersteltijd** | Herstart van de VM op hypervisor 2 als hypervisor 1 crasht. Hersteltijd = tijd om de VM te herstarten. Failover als de VM crasht. | Snel herstel met herstart van de applicatie op server 2. Ongeveer 1 minuut of minder ([zie RTO/RPO hier](/best-practises/what-is-rpo-and-rto-with-examples/)). Geavanceerde applicatiechecker en software-failover. | Volledige VM-herstart op een nieuwe hypervisor. Hersteltijd hangt af van OS-herstart + applicatie-opstart.  
+**Disaster recovery / Externe locaties** | Geen SAN nodig — replicatie ingebouwd in SafeKit over externe locaties | Geen SAN nodig — replicatie ingebouwd in SafeKit over externe locaties | Vereist gerepliceerde schijvenbays via een SAN of vSAN  
+**Configuratie** | Definieer de locatie van de VM-bestandenmap waar de applicatie is geïnstalleerd. Generieke oplossing voor elke applicatie/OS. | Definieer te herstarten diensten, te repliceren applicatiemappen en een virtueel IP-adres voor failover in een [applicatiemodule](/solutions/). | Specifieke IT-vaardigheden vereist om het systeem te configureren  
+**Ondersteunde platformen** | Werkt met [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/) en [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) (niet rechtstreeks VMware, behalve door Hyper-V of KVM in VMware te nesten). | Werkt op elke infrastructuur: fysieke servers, VMware, Hyper-V, KVM virtuele machines, cloud. | Beperkt tot VMware vSphere of Microsoft Hyper-V omgevingen  
+**IT-vaardigheden** | Geen specifieke IT-vaardigheden vereist. Automatische failover. | Geen specifieke IT-vaardigheden vereist. Automatische failover. | Specifieke IT-vaardigheden vereist om het systeem te configureren  
+  
+**Samengevat** is SafeKit de enige oplossing die **zowel VM-niveau als applicatieniveau hoge beschikbaarheid biedt zonder gedeelde opslag**. Voor maximale flexibiliteit en de snelste hersteltijden (ongeveer 1 minuut) is applicatieniveau HA de voorkeursbenadering — het werkt op elk platform (fysiek, virtueel of cloud) en repliceert alleen de gegevens die ertoe doen. Voor omgevingen waar het beschermen van de volledige VM eenvoudiger is, biedt SafeKit's Hyper-V/KVM module een generiek, SAN-loos alternatief voor traditionele Microsoft Hyper-V Cluster of VMware HA — waardoor de kosten en complexiteit van gedeelde opslaginfrastructuur worden geëlimineerd, terwijl nul gegevensverlies wordt gegarandeerd door synchrone realtime replicatie.
+
+Merk op dat SafeKit-oplossingen het eenvoudigst te implementeren zijn maar **beperkt zijn tot replicatie van [enkele terabytes](/nl/#safekit-ha-limitations) en failover van [32 VM's](/nl/#safekit-ha-limitations)**.
+
+

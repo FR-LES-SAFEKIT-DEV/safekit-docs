@@ -1,0 +1,89 @@
+{{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
+{{/* Parameters: app, mod */}}
+ 
+
+## High Availability Quick Installation Guide for {{ .Get "app" }} {#quick-guide}
+
+This guide explains how to set up a **{{ .Get "mod" }} cluster** for {{ .Get "app" }} using SafeKit, ensuring automatic failover and synchronous replication without the need for shared storage. 
+
+For help, you can use [SafeKit AI 🤖](/resources/safekit-support/).
+
+### 1\. Overview
+
+  * **Architecture:** Uses a two-node system (Primary/Secondary).
+  * **Data Protection:** Implements real-time synchronous replication for **zero data loss** (RPO=0).
+
+
+### 2\. Installation
+
+  * **Software:** Install the SafeKit engine on both servers.
+  * **Module:** Download the pre-configured `{{ .Get "mod" }}.safe` application module.
+
+
+### 3\. Configuration
+
+  * **Web Console:** Configure the specific folders containing the {{ .Get "app" }} files.
+  * **Monitoring:** Start monitoring and protecting the {{ .Get "app" }} application.
+
+
+
+<!-- BEGIN INSERT: insert-safekit-usage-en lang="en" display="content" -->
+ 
+
+## SafeKit High Availability Limitations {#safekit-ha-limitations}
+
+### Why a replication of a few Tera-bytes?
+
+Resynchronization time after a failure ([step 3](/architectures/file-replication-byte-level-with-failover-{{ .Get "mod" }}-cluster/#safekit-{{ .Get "mod" }}-cluster))
+
+  * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
+  * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
+
+
+#### Alternative
+
+  * For a large volume of data, use [external shared storage](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
+  * More expensive, more complex.
+
+
+### Why a replication < 1,000,000 files?
+
+  * Resynchronization time performance after a failure ([step 3](/architectures/file-replication-byte-level-with-failover-{{ .Get "mod" }}-cluster/#safekit-{{ .Get "mod" }}-cluster)).
+  * Time to check each file between both nodes.
+
+
+#### Alternative
+
+  * Put the many files to replicate in a virtual hard disk / virtual machine.
+  * Only the files representing the virtual hard disk / virtual machine will be replicated and resynchronized in this case.
+
+
+### Why a failover ≤ 32 replicated VMs?
+
+  * Each VM runs in an independent {{ .Get "mod" }} module.
+  * Maximum of 32 {{ .Get "mod" }} modules running on the same cluster.
+
+
+#### Alternative
+
+  * Use an external shared storage and another VM clustering solution.
+  * More expensive, more complex.
+
+
+### Why a LAN/VLAN network between remote sites?
+
+  * Automatic failover of the [virtual IP address](/best-practises/how-a-virtual-ip-address-works/) with 2 nodes in the same subnet.
+  * Good bandwidth for resynchronization ([step 3](/architectures/file-replication-byte-level-with-failover-{{ .Get "mod" }}-cluster/#safekit-{{ .Get "mod" }}-cluster)) and good latency for [synchronous replication](/best-practises/synchronous-replication-vs-asynchronous-replication/) (typically a round-trip of less than 2ms).
+
+
+#### Alternative
+
+  * Use a [load balancer for the virtual IP address](/best-practises/how-a-virtual-ip-address-works/) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
+  * Use backup solutions with asynchronous replication for high latency network.
+
+
+
+<!-- END INSERT: insert-safekit-usage-en lang="en" display="content" -->
+ 
+
+

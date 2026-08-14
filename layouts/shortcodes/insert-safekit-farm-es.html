@@ -1,0 +1,65 @@
+{{/* Shortcode: insert-safekit-farm-es — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## ¿Cómo funciona el cluster SafeKit en modo farm con Windows/Linux? {#safekit-farm-cluster}
+
+### Dirección IP virtual en un cluster en modo farm {#virtual-ip-address-farm}
+
+
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="How the SafeKit cluster in farm mode implements Windows/Linux network load balancing and failover">
+
+
+En la figura anterior, la aplicación Windows/Linux se está ejecutando en los 3 servidores (3 es un ejemplo, pueden ser 2 o más). Los usuarios están conectados a una dirección IP virtual.
+
+La [dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/) está configurada localmente en cada servidor del cluster en modo farm.  
+El tráfico de entrada hacia la dirección IP virtual es recibido por todos los servidores y dividido entre ellos mediante un filtro de red dentro del kernel de cada servidor.
+
+SafeKit detecta fallos de hardware y software, reconfigura los filtros de red en caso de fallo y ofrece verificadores de aplicaciones y scripts de recuperación configurables.
+
+### Equilibrio de carga en un filtro de red {#network-load-balancing}
+
+El algoritmo de equilibrio de carga de red dentro del filtro de red se basa en la identidad de los paquetes del cliente (dirección IP del cliente, puerto TCP del cliente). Dependiendo de la identidad de la entrada del paquete del cliente, solo un filtro en un servidor acepta el paquete; los otros filtros en los demás servidores lo rechazan.
+
+Una vez que un paquete es aceptado por el filtro en un servidor, la aplicación Windows/Linux que responde a la solicitud del cliente solo utiliza la CPU y la memoria de este servidor. Los mensajes de salida se envían directamente desde el servidor de la aplicación al cliente.
+
+Si un servidor falla, el protocolo de heartbeat de la farm reconfigura los filtros en el cluster de equilibrio de carga de red para redistribuir el tráfico entre los servidores restantes disponibles.
+
+### Aplicaciones con estado (stateful) o sin estado (stateless) {#stateful-stateless}
+
+Con una aplicación Windows/Linux con estado (stateful), existe afinidad de sesión. El mismo cliente debe estar conectado al mismo servidor en múltiples sesiones TCP para recuperar su contexto en el servidor. En este caso, la regla de equilibrio de carga de SafeKit se configura basándose en la dirección IP del cliente. De este modo, el mismo cliente siempre está conectado al mismo servidor en múltiples sesiones TCP. Y los diferentes clientes se distribuyen entre los distintos servidores de la farm.
+
+Con una aplicación Windows/Linux sin estado (stateless), no existe afinidad de sesión. El mismo cliente puede conectarse a diferentes servidores de la farm en múltiples sesiones TCP. No hay ningún contexto almacenado localmente en un servidor de una sesión a otra. En este caso, la regla de equilibrio de carga de SafeKit se configura basándose en la identidad de la sesión TCP del cliente. Esta configuración es la mejor para distribuir las sesiones entre los servidores, pero requiere un servicio TCP sin afinidad de sesión.
+
+### ¿Cómo configurar un cluster SafeKit en modo farm para Windows/Linux? {#safekit-farm-cluster-configuration}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm-mode cluster configuration for Windows/Linux network load balancing and virtual IP management.">
+
+
+El **cluster SafeKit en modo farm** está diseñado para la alta disponibilidad y escalabilidad de los servicios. La configuración se centra en distribuir el tráfico entrante entre ambos nodos simultáneamente:
+
+  * **Servicios con equilibrio de carga (pestaña Macros):** Defina los servicios de aplicación específicos (por ejemplo, Apache, IIS, Nginx) que deben mantenerse activos en todos los nodos.
+  * **Red(es) de heartbeat:** Ruta(s) de comunicación utilizada(s) para detectar si un nodo ha abandonado la farm, lo que activa una redistribución inmediata de la carga.
+  * **IP virtual (Farm VIP):** A diferencia de un cluster mirror, la Farm VIP se comparte entre los nodos mediante un algoritmo de filtrado en el kernel para distribuir el tráfico de red.
+  * **Reglas de equilibrio de carga:** Defina la política de distribución del tráfico basándose en la dirección IP o el puerto de origen.
+  * **Verificadores (Checkers):** Monitorizan la salud de la aplicación y activan un reinicio automático si se detecta un fallo en un proceso.
+
+
+### ¿Cómo monitorizar un cluster SafeKit en modo farm para Windows/Linux? {#safekit-farm-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node farm-mode cluster showing both Windows/Linux nodes in UP state with active load balancing.">
+
+
+La monitorización de un cluster en modo farm proporciona visibilidad sobre la naturaleza **Activo-Activo** de la infraestructura, donde todos los nodos contribuyen al rendimiento de la aplicación (mostrando 2 nodos en este ejemplo):
+
+  * **Estado UP (50% en 2 nodos):** En una farm saludable, ambos nodos están en el estado "UP" (50%), lo que significa que ambos están recibiendo y procesando activamente las solicitudes de los clientes a través de la IP virtual compartida.
+  * **Reequilibrio automático:** Si un nodo falla, la consola muestra visualmente cómo el nodo restante asume el 100% del tráfico. No hay retraso por "failover", ya que el nodo superviviente ya está activo (más allá de un tiempo de detección de unos pocos segundos).
+  * **Inserción de nodos:** Cuando un nodo reparado se reinicia, pasa de "STOP" a "UP" y comienza a recibir automáticamente su parte de la carga sin intervención del administrador.
+  * **Sin sincronización de datos:** Tenga en cuenta que en un cluster en modo farm no existe el estado de resincronización "Naranja", ya que se espera que los nodos no tengan estado (stateless) o compartan una base de datos en el backend (que puede protegerse por separado en un cluster mirror).
+
+
+Más allá de los simples iconos de estado, la interfaz proporciona una gestión de nodos con un solo clic, lo que le permite detener o iniciar manualmente un nodo para tareas de mantenimiento planificadas, mientras que la IP virtual compartida redistribuye automáticamente el tráfico sin interrumpir la actividad del usuario.
+
+

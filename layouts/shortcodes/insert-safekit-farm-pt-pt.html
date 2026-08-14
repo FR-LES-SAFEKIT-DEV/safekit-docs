@@ -1,0 +1,65 @@
+{{/* Shortcode: insert-safekit-farm-pt-pt — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## Como funciona o cluster SafeKit em modo farm com Windows/Linux? {#safekit-farm-cluster}
+
+### Endereço IP virtual num cluster em modo farm {#virtual-ip-address-farm}
+
+
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="How the SafeKit cluster in farm mode implements Windows/Linux network load balancing and failover">
+
+
+Na figura anterior, a aplicação Windows/Linux está a ser executada nos 3 servidores (3 é um exemplo, podem ser 2 ou mais). Os utilizadores estão ligados a um endereço IP virtual.
+
+O [endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/) está configurado localmente em cada servidor no cluster em modo farm.  
+O tráfego de entrada para o endereço IP virtual é recebido por todos os servidores e dividido entre eles por um filtro de rede dentro do kernel de cada servidor.
+
+O SafeKit deteta falhas de hardware e software, reconfigura os filtros de rede em caso de falha e disponibiliza verificadores de aplicação e scripts de recuperação configuráveis.
+
+### Equilíbrio de carga num filtro de rede {#network-load-balancing}
+
+O algoritmo de equilíbrio de carga de rede dentro do filtro de rede baseia-se na identidade dos pacotes do cliente (endereço IP do cliente, porta TCP do cliente). Dependendo da identidade da entrada do pacote do cliente, apenas um filtro num servidor aceita o pacote; os outros filtros nos outros servidores rejeitam-no.
+
+Assim que um pacote é aceite pelo filtro num servidor, apenas a CPU e a memória deste servidor são utilizadas pela aplicação Windows/Linux que responde ao pedido do cliente. As mensagens de saída são enviadas diretamente do servidor da aplicação para o cliente.
+
+Se um servidor falhar, o protocolo de heartbeat da farm reconfigura os filtros no cluster de equilíbrio de carga de rede para redistribuir o tráfego pelos servidores restantes disponíveis.
+
+### Aplicações com estado (stateful) ou sem estado (stateless) {#stateful-stateless}
+
+Com uma aplicação Windows/Linux com estado (stateful), existe afinidade de sessão. O mesmo cliente deve estar ligado ao mesmo servidor em múltiplas sessões TCP para recuperar o seu contexto no servidor. Neste caso, a regra de equilíbrio de carga do SafeKit é configurada com base no endereço IP do cliente. Assim, o mesmo cliente está sempre ligado ao mesmo servidor em múltiplas sessões TCP. E os diferentes clientes são distribuídos pelos vários servidores da farm.
+
+Com uma aplicação Windows/Linux sem estado (stateless), não existe afinidade de sessão. O mesmo cliente pode estar ligado a diferentes servidores da farm em múltiplas sessões TCP. Não há contexto armazenado localmente num servidor de uma sessão para outra. Neste caso, a regra de equilíbrio de carga do SafeKit é configurada com base na identidade da sessão TCP do cliente. Esta configuração é a melhor para distribuir sessões entre servidores, mas requer um serviço TCP sem afinidade de sessão.
+
+### Como configurar um cluster SafeKit em modo farm para Windows/Linux? {#safekit-farm-cluster-configuration}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm-mode cluster configuration for Windows/Linux network load balancing and virtual IP management.">
+
+
+O **cluster SafeKit em modo farm** foi concebido para a alta disponibilidade e escalabilidade de serviços. A configuração foca-se na distribuição do tráfego de entrada por ambos os nós em simultâneo:
+
+  * **Serviços com equilíbrio de carga (separador Macros):** Defina os serviços de aplicação específicos (por exemplo, Apache, IIS, Nginx) que devem ser mantidos ativos em todos os nós.
+  * **Rede(s) de heartbeat:** Caminho(s) de comunicação utilizado(s) para detetar se um nó saiu da farm, acionando uma redistribuição imediata da carga.
+  * **IP Virtual (Farm VIP):** Ao contrário de um cluster mirror, o Farm VIP é partilhado entre os nós através de um algoritmo de filtragem de kernel para distribuir o tráfego de rede.
+  * **Regras de equilíbrio de carga:** Defina a política de distribuição de tráfego com base no endereço IP de origem ou na porta.
+  * **Verificadores (Checkers):** Monitorizam o estado de saúde da aplicação e acionam o reinício automático se for detetada uma falha no processo.
+
+
+### Como monitorizar um cluster SafeKit em modo farm para Windows/Linux? {#safekit-farm-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node farm-mode cluster showing both Windows/Linux nodes in UP state with active load balancing.">
+
+
+A monitorização de um cluster em modo farm oferece visibilidade sobre a natureza **Ativo-Ativo** da infraestrutura, onde todos os nós contribuem para o desempenho da aplicação (mostrando 2 nós neste exemplo):
+
+  * **Estado UP (50% em 2 nós):** Numa farm saudável, ambos os nós estão no estado "UP" (50%), o que significa que ambos estão ativamente a receber e a processar pedidos de clientes através do IP Virtual partilhado.
+  * **Reequilíbrio automático:** Se um nó falhar, a consola mostra visualmente o nó restante a assumir 100% do tráfego. Não existe atraso de "failover", uma vez que o nó sobrevivente já se encontra ativo (além de um tempo de deteção de alguns segundos).
+  * **Inserção de nós:** Quando um nó reparado é reiniciado, este passa do estado "STOP" para "UP" e começa automaticamente a receber a sua parte da carga, sem intervenção do administrador.
+  * **Sem sincronização de dados:** Note que, num cluster em modo farm, não existe o estado de ressincronização "Laranja", uma vez que se pressupõe que os nós não têm estado (stateless) ou partilham uma base de dados no backend (que pode ser protegida separadamente num cluster mirror).
+
+
+Para além dos ícones de estado simples, a interface disponibiliza a gestão de nós com um único clique, permitindo-lhe parar ou iniciar manualmente um nó para manutenção planeada, enquanto o IP Virtual partilhado redistribui automaticamente o tráfego sem interromper a atividade dos utilizadores.
+
+

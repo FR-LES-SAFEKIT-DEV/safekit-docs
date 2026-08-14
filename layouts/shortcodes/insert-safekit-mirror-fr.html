@@ -1,0 +1,88 @@
+{{/* Shortcode: insert-safekit-mirror-fr — 3 instances in 3 files */}}
+{{/* Parameters: app */}}
+ 
+
+## Comment fonctionne le cluster miroir SafeKit avec Windows/Linux ? {#safekit-mirror-cluster}
+
+### Étape 1. Réplication en temps réel {#step1}
+
+Le serveur 1 (PRIM) exécute l'application Windows/Linux. Les clients sont connectés à une [adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/). SafeKit réplique en temps réel via le réseau les modifications apportées à l'intérieur des fichiers.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Réplication de fichiers au niveau octet dans un cluster miroir Windows/Linux">
+
+
+La réplication est [synchrone](/best-practises/synchronous-replication-vs-asynchronous-replication/), sans perte de données en cas de panne, contrairement à la réplication asynchrone.
+
+Il vous suffit de configurer les noms des répertoires à répliquer dans SafeKit. Il n'y a aucun prérequis sur l'organisation des disques. Les répertoires peuvent être situés sur le disque système.
+
+### Étape 2. Basculement automatique {#step2}
+
+En cas de panne du serveur 1, le serveur 2 prend le relais (failover). SafeKit bascule l'adresse IP virtuelle et redémarre automatiquement l'application Windows/Linux sur le serveur 2.
+
+L'application retrouve sur le serveur 2 des fichiers à jour répliqués par SafeKit. L'application continue de s'exécuter sur le serveur 2 en modifiant localement ses fichiers, qui ne sont alors plus répliqués vers le serveur 1.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Basculement de Windows/Linux dans un cluster miroir">
+
+
+Le temps de basculement est égal au temps de détection de la panne (30 secondes par défaut) plus le temps de démarrage de l'application.
+
+### Étape 3. Retour automatique après panne {#step3}
+
+Le retour après panne (failback) consiste à redémarrer le serveur 1 après avoir résolu le problème qui a causé sa défaillance.
+
+SafeKit resynchronise automatiquement les fichiers, en mettant à jour uniquement les fichiers modifiés sur le serveur 2 pendant que le serveur 1 était arrêté.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Retour après panne dans un cluster miroir Windows/Linux">
+
+
+Le retour après panne se déroule sans perturber l'application Windows/Linux, qui peut continuer à s'exécuter sur le serveur 2.
+
+### Étape 4. Retour à la normale
+
+Après la réintégration, les fichiers repassent en mode miroir, comme à l'étape 1. Le système se retrouve en mode haute disponibilité, avec l'application Windows/Linux s'exécutant sur le serveur 2 et SafeKit répliquant les mises à jour de fichiers vers le serveur 1.
+
+
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Retour au fonctionnement normal dans un cluster miroir Windows/Linux">
+
+
+Si l'administrateur souhaite que l'application s'exécute sur le serveur 1, cela peut être fait manuellement via la console web au moment opportun, ou automatiquement par configuration.
+
+### Comment configurer un cluster miroir SafeKit pour Windows/Linux ? {#safekit-mirror-cluster-configure}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+
+
+La **console web SafeKit** offre une interface intuitive pour orchestrer la haute disponibilité de vos applications critiques. En quelques étapes seulement, vous pouvez configurer un **cluster miroir SafeKit** pour garantir la continuité d'activité :
+
+  * **Basculement d'application (onglet Macros) :** définissez les services applicatifs spécifiques à redémarrer automatiquement en cas de défaillance.
+  * **Réseau(x) de heartbeat :** canal(aux) de communication dédié(s) utilisé(s) par les nœuds du cluster pour surveiller mutuellement leur état de santé et leur disponibilité en continu, et pour synchroniser les décisions de basculement.
+  * **Gestion de l'IP virtuelle :** configurez l'adresse IP virtuelle (VIP) pour une reconnexion transparente des clients après un basculement.
+  * **Réplication en temps réel :** sélectionnez les répertoires critiques pour une réplication synchrone au niveau octet, basée sur l'hôte.
+  * **Checkers (Vérificateurs) :** surveillez l'état de santé de l'application et déclenchez une récupération automatique si une défaillance de processus est détectée.
+
+
+Le cluster SafeKit inclut un vérificateur de split-brain dédié pour résoudre les problèmes d'isolement réseau sans nécessiter de troisième machine témoin (witness) ou de réseau de heartbeat supplémentaire. En savoir plus sur le [heartbeat, le basculement et le quorum dans un cluster](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+
+### Comment surveiller un cluster miroir SafeKit pour Windows/Linux ? {#safekit-mirror-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+
+
+La **console de gestion SafeKit** offre une vue unifiée de votre infrastructure de haute disponibilité. Elle permet aux administrateurs de surveiller l'**état opérationnel** du cluster et de suivre la synchronisation des données en temps réel.
+
+Pour un cluster miroir à 2 nœuds, la console affiche clairement les rôles de chaque serveur :
+
+  * **PRIM (Primary) :** le nœud actif qui exécute actuellement l'application et gère l'IP virtuelle. Il effectue les écritures sur le stockage local et la réplication en temps réel vers le nœud secondaire.
+  * **SECOND (Secondary) :** le nœud en veille (standby) qui reçoit les mises à jour synchrones au niveau octet. Il est prêt à prendre le relais instantanément en cas de défaillance du Primaire.
+  * **État ALONE :** vous alerte visuellement lorsque le cluster fonctionne sur un seul nœud (par exemple, pendant une maintenance ou après une panne), indiquant que la redondance est temporairement perdue.
+  * **Progression de la resynchronisation :** lorsqu'un nœud défaillant récupère, son état passe à l'orange pendant la réintégration des données en arrière-plan, garantissant l'absence de temps d'arrêt pendant la phase de « retour à la normale ».
+
+
+Au-delà des simples icônes d'état, l'interface permet une **orchestration du basculement en un clic** , vous donnant la possibilité de réassigner manuellement le rôle primaire pour une maintenance planifiée tout en assurant une disponibilité continue pour l'activité des utilisateurs.
+
+

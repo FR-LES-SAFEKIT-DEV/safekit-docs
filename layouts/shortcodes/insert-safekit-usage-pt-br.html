@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-pt-br — 1 instances in 1 files */}}
+ 
+
+## Limitações de Alta Disponibilidade do SafeKit {#safekit-ha-limitations}
+
+### Por que uma replicação de alguns terabytes?
+
+Tempo de resincronização após uma falha ([etapa 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
+
+  * Rede de 1 Gb/s ≈ 3 horas para 1 terabyte.
+  * Rede de 10 Gb/s ≈ 1 hora para 1 terabyte ou menos, dependendo do desempenho de gravação do disco.
+
+
+#### Alternativa
+
+  * Para um grande volume de dados, use [armazenamento compartilhado externo](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
+  * Mais caro, mais complexo.
+
+
+### Por que uma replicação < 1.000.000 arquivos?
+
+  * Desempenho do tempo de resincronização após uma falha ([etapa 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
+  * Tempo para verificar cada arquivo entre os dois nós.
+
+
+#### Alternativa
+
+  * Coloque os muitos arquivos a serem replicados em um disco rígido virtual / máquina virtual.
+  * Somente os arquivos que representam o disco rígido virtual / máquina virtual serão replicados e resincronizados nesse caso.
+
+
+### Por que um failover ≤ 32 VMs replicadas?
+
+  * Cada VM é executada em um módulo de espelhamento independente.
+  * Máximo de 32 módulos de espelhamento executando no mesmo cluster.
+
+
+#### Alternativa
+
+  * Use um armazenamento compartilhado externo e outra solução de cluster para VMs.
+  * Mais caro, mais complexo.
+
+
+### Por que uma rede LAN/VLAN entre sites remotos?
+
+  * Failover automático do [endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/) com 2 nós na mesma sub-rede.
+  * Boa largura de banda para resincronização ([etapa 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) e boa latência para [replicação síncrona](/best-practises/synchronous-replication-vs-asynchronous-replication/) (tipicamente um tempo de ida e volta inferior a 2 ms).
+
+
+#### Alternativa
+
+  * Use um [balanceador de carga para o endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/) se os 2 nós estiverem em 2 sub-redes (suportado pelo SafeKit, especialmente na nuvem).
+  * Use soluções de backup com replicação assíncrona para redes com alta latência.
+
+
+

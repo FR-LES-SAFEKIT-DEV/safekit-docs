@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-zh-hans — 1 instances in 1 files */}}
+ 
+
+## SafeKit 高可用性限制条件 {#safekit-ha-limitations}
+
+### 为什么要复制几个 TB 的数据？
+
+故障后的重新同步时间（[步骤 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)）
+
+  * 1 Gb/s 网络 ≈ 1 TB 约需 3 小时。
+  * 10 Gb/s 网络 ≈ 1 TB 约需 1 小时或更少，取决于磁盘写入性能。
+
+
+#### 替代方案
+
+  * 对于大容量数据，使用 [外部共享存储](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/)。
+  * 更昂贵，更复杂。
+
+
+### 为什么复制少于 1,000,000 个文件？
+
+  * 故障后的重新同步性能（[步骤 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)）。
+  * 检查两个节点之间每个文件所需的时间。
+
+
+#### 替代方案
+
+  * 将需要复制的大量文件放入虚拟硬盘/虚拟机中。
+  * 在这种情况下，只复制和重新同步表示虚拟硬盘/虚拟机的文件。
+
+
+### 为什么故障切换 ≤ 32 个复制的虚拟机？
+
+  * 每个虚拟机运行在独立的镜像模块中。
+  * 同一集群最多运行 32 个镜像模块。
+
+
+#### 替代方案
+
+  * 使用外部共享存储和其他虚拟机集群解决方案。
+  * 更昂贵，更复杂。
+
+
+### 为什么远程站点之间需要 LAN/VLAN 网络？
+
+  * 在同一子网中两个节点的 [虚拟 IP 地址](/best-practises/how-a-virtual-ip-address-works/)自动故障切换。
+  * 良好的带宽用于重新同步（[步骤 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)）以及良好的延迟用于 [同步复制](/best-practises/synchronous-replication-vs-asynchronous-replication/)（通常往返时间小于 2 毫秒）。
+
+
+#### 替代方案
+
+  * 如果两个节点在不同子网中，使用 [虚拟 IP 地址的负载均衡器](/best-practises/how-a-virtual-ip-address-works/)（SafeKit 支持，尤其在云环境中）。
+  * 对于高延迟网络，使用带异步复制的备份解决方案。
+
+
+

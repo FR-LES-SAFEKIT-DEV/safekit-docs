@@ -1,0 +1,44 @@
+{{/* Shortcode: insert-safekit-security-solutions-en — 4 instances in 4 files */}}
+{{/* Parameters: app */}}
+ 
+
+## SafeKit brings two solutions for redundancy and high availability of a {{ .Get "app" }} software
+
+### Redundancy and high availability at the application level
+
+In this type of solution, only application data are replicated. And only the application is restared in case of failure.
+
+
+<img src="/wp-content/uploads/2023/02/application-ha-4.png" width="168" alt="Redundancy at the application level for a {{ .Get "app" }} software">
+
+
+This solution requires a technical understanding of the application. You need to define which services to restart, specify the application folders to replicate, and configure a virtual IP address for failover. But this solution is platform agnostic and works with applications inside physical machines, virtual machines, in the Cloud. Any hypervisor is supported (VMware, Hyper-V...).
+
+### Examples
+
+  * Video management: [Milestone (Management, SQL, Log, Event)/SafeKit](/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
+  * Video management: [Genetec (SQL)/SafeKit](/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
+  * Access control: [Nedap (AEOS, SQL)/SafeKit](/solutions/nedap-high-availability-synchronous-replication-failover/)
+  * New application (define services to restart, application folders to replicate, a virtual IP address for failover): [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/), [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### Redundancy and high availability at the virtual machine level
+
+In this type of solution, the {{ .Get "app" }} software is put inside a virtual machine. The full Virtual Machine (VM) is replicated and restarted (Application + OS).
+
+
+<img src="/wp-content/uploads/2023/02/vm-ha-4.png" width="184" alt="Redundancy at the virtual machine level for a {{ .Get "app" }} software">
+
+
+The advantage of this solution is that it does not require a technical understanding of the application; you only need to define the location of the VM files where the application is installed. This solution is generic for any {{ .Get "app" }} software. However, it works only with Windows/Hyper-V and Linux/KVM, but not with VMware. This is an active/active solution with several virtual machines replicated and restarted between two nodes.
+
+### Examples
+
+  * Building management: [Siemens Desigo CC/SafeKit](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
+  * Video management and access control: [Siemens Siveillance suite/SafeKit](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+  * New application (define the location of the VM files folder where the application is installed): [Windows/Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/), [Linux/KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+
+More comparison between [VM HA vs Application HA](/best-practises/vm-ha-vs-application-ha/)
+
+

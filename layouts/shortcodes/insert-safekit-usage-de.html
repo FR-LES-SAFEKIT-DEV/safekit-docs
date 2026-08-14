@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-de — 1 instances in 1 files */}}
+ 
+
+## Einschränkungen der SafeKit-Hochverfügbarkeit {#safekit-ha-limitations}
+
+### Warum eine Replikation von einigen Terabyte?
+
+Resynchronisationszeit nach einem Ausfall ([Schritt 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
+
+  * 1 Gb/s Netzwerk ≈ 3 Stunden für 1 Terabyte.
+  * 10 Gb/s Netzwerk ≈ 1 Stunde für 1 Terabyte oder weniger, abhängig von der Schreibgeschwindigkeit der Festplatten.
+
+
+#### Alternative
+
+  * Für ein großes Datenvolumen verwenden Sie [externen gemeinsamen Speicher](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
+  * Teurer, komplexer.
+
+
+### Warum eine Replikation < 1.000.000 Dateien?
+
+  * Leistung der Resynchronisationszeit nach einem Ausfall ([Schritt 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
+  * Zeit zum Überprüfen jeder Datei zwischen beiden Knoten.
+
+
+#### Alternative
+
+  * Legen Sie die vielen zu replizierenden Dateien in eine virtuelle Festplatte / virtuelle Maschine.
+  * Nur die Dateien, die die virtuelle Festplatte / virtuelle Maschine darstellen, werden in diesem Fall repliziert und resynchronisiert.
+
+
+### Warum ein Failover ≤ 32 replizierte VMs?
+
+  * Jede VM läuft in einem unabhängigen Spiegelmodul.
+  * Maximal 32 Spiegelmodule, die auf demselben Cluster laufen.
+
+
+#### Alternative
+
+  * Verwenden Sie einen externen gemeinsamen Speicher und eine andere VM-Clustering-Lösung.
+  * Teurer, komplexer.
+
+
+### Warum ein LAN/VLAN-Netzwerk zwischen entfernten Standorten?
+
+  * Automatisches Failover der [virtuellen IP-Adresse](/best-practises/how-a-virtual-ip-address-works/) mit 2 Knoten im selben Subnetz.
+  * Gute Bandbreite für die Resynchronisation ([Schritt 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) und gute Latenz für [synchrone Replikation](/best-practises/synchronous-replication-vs-asynchronous-replication/) (typischerweise eine Round-Trip-Zeit von weniger als 2 ms).
+
+
+#### Alternative
+
+  * Verwenden Sie einen [Load Balancer für die virtuelle IP-Adresse](/best-practises/how-a-virtual-ip-address-works/), wenn sich die 2 Knoten in 2 Subnetzen befinden (unterstützt von SafeKit, insbesondere in der Cloud).
+  * Verwenden Sie Backup-Lösungen mit asynchroner Replikation für Netzwerke mit hoher Latenz.
+
+
+

@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-ja — 1 instances in 1 files */}}
+ 
+
+## SafeKit 高可用性（HA）の制限事項 {#safekit-ha-limitations}
+
+### なぜ数テラバイトのレプリケーションが必要なのか？
+
+障害後の再同期時間（[ステップ 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)）
+
+  * 1 Gb/s ネットワーク ≈ 1 テラバイトで約 3 時間。
+  * 10 Gb/s ネットワーク ≈ 1 テラバイトで約 1 時間、またはディスク書き込み性能によりさらに短縮。
+
+
+#### 代替案
+
+  * 大量データの場合は、[外部共有ストレージ](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/)を使用。
+  * より高価で、より複雑。
+
+
+### なぜレプリケーション対象が 1,000,000 ファイル未満なのか？
+
+  * 障害後の再同期時間の性能（[ステップ 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)）。
+  * 両ノード間で各ファイルを確認する時間。
+
+
+#### 代替案
+
+  * 多数のファイルを仮想ハードディスク／仮想マシンにまとめる。
+  * この場合、仮想ハードディスク／仮想マシンを表すファイルのみがレプリケートおよび再同期される。
+
+
+### なぜフェイルオーバー対象が 32 個以下のレプリケート VM なのか？
+
+  * 各 VM は独立したミラーモジュールで動作。
+  * 同一クラスタで最大 32 個のミラーモジュールが稼働可能。
+
+
+#### 代替案
+
+  * 外部共有ストレージと別の VM クラスタリングソリューションを使用。
+  * より高価で、より複雑。
+
+
+### なぜリモートサイト間に LAN/VLAN ネットワークが必要なのか？
+
+  * 同一サブネット内の 2 ノードで [仮想 IP アドレス](/best-practises/how-a-virtual-ip-address-works/)の自動フェイルオーバー。
+  * 再同期のための十分な帯域幅（[ステップ 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)）と、[同期レプリケーション](/best-practises/synchronous-replication-vs-asynchronous-replication/)に適した低レイテンシ（通常ラウンドトリップ 2ms 未満）。
+
+
+#### 代替案
+
+  * 2 ノードが異なるサブネットにある場合、[仮想 IP アドレス用のロードバランサ](/best-practises/how-a-virtual-ip-address-works/)を使用（SafeKit でサポート、特にクラウド環境）。
+  * 高レイテンシネットワークでは非同期レプリケーションを用いたバックアップソリューションを使用。
+
+
+

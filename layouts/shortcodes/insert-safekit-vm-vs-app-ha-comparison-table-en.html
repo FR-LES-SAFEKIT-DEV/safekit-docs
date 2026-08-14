@@ -1,0 +1,23 @@
+{{/* Shortcode: insert-safekit-vm-vs-app-ha-comparison-table-en — 2 instances in 2 files */}}
+ 
+
+When implementing high availability, a key decision is whether to protect at the **virtual machine (VM) level** or at the **application level**. VM-level HA replicates and fails over entire virtual machines, providing a generic solution for any application. Application-level HA targets only the application data and services, resulting in faster recovery times and lower resource usage. SafeKit uniquely offers **both approaches** — without requiring shared storage (SAN) in either case — allowing you to choose the best fit for your infrastructure and recovery requirements.
+
+**SafeKit VM HA vs Application HA vs Traditional Hyper-V Cluster &amp; VMware HA**
+
+Criteria | VM HA with SafeKit Hyper-V or KVM module | Application HA with SafeKit application modules | Microsoft Hyper-V Cluster &amp; VMware HA  
+---|---|---|---  
+**Architecture** | SafeKit installed inside 2 hypervisors. Replication and failover of the full VM. | SafeKit installed inside 2 virtual or physical machines. Replication and failover at application level. | Hypervisor cluster with shared storage. VM restart on another host if the hypervisor fails.  
+**Storage** | No shared disk — [synchronous real-time replication with no data loss](/best-practises/synchronous-replication-vs-asynchronous-replication/) | No shared disk — synchronous replication of application data only | Requires a shared disk and a specific external bay of disks  
+**Data replicated** | Replicates more data (application + OS) | Replicates only application data | No replication — shared storage accessed by all hosts  
+**Recovery time** | Reboot of the VM on hypervisor 2 if hypervisor 1 crashes. Recovery time = time to reboot the VM. Failover if the VM crashes. | Quick recovery with restart of the application on server 2. Around 1 minute or less ([see RTO/RPO here](/best-practises/what-is-rpo-and-rto-with-examples/)). Advanced application checker and software failover. | Full VM reboot on a new hypervisor. Recovery time depends on OS reboot + application startup.  
+**Disaster recovery / Remote sites** | No SAN needed — replication built into SafeKit across remote sites | No SAN needed — replication built into SafeKit across remote sites | Requires replicated bays of disks across a SAN or vSAN  
+**Configuration** | Define the location of the VM files folder where the application is installed. Generic solution for any application/OS. | Define services to restart, application folders to replicate, and a virtual IP address for failover inside an [application module](/solutions/). | Specific IT skills required to configure the system  
+**Supported platforms** | Works with [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/) and [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) (not VMware directly, except by nesting Hyper-V or KVM inside VMware). | Works in any infrastructure: physical servers, VMware, Hyper-V, KVM virtual machines, cloud. | Limited to VMware vSphere or Microsoft Hyper-V environments  
+**IT skills** | No specific IT skill required. Automatic failover. | No specific IT skill required. Automatic failover. | Specific IT skills required to configure the system  
+  
+**In summary** , SafeKit is the only solution that provides **both VM-level and application-level high availability without shared storage**. For maximum flexibility and fastest recovery times (around 1 minute), application-level HA is the preferred approach — it works on any platform (physical, virtual, or cloud) and replicates only the data that matters. For environments where protecting the entire VM is simpler, SafeKit's Hyper-V/KVM module offers a generic, SAN-less alternative to traditional Microsoft Hyper-V Cluster or VMware HA — eliminating the cost and complexity of shared storage infrastructure while still guaranteeing zero data loss through synchronous real-time replication.
+
+Note that SafeKit solutions are the simplest to implement but are **limited to replication of [a few Tera-bytes](/#safekit-ha-limitations) and failover of [32 VMs](/#safekit-ha-limitations)**.
+
+

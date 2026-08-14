@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-ar — 1 instances in 1 files */}}
+ 
+
+## قيود التوافر العالي لبرنامج SafeKit {#safekit-ha-limitations}
+
+### لماذا يوصى بشبكة LAN/VLAN بين المواقع البعيدة؟
+
+  * تجاوز الفشل التلقائي لـ [عنوان IP الافتراضي (Virtual IP)](/best-practises/how-a-virtual-ip-address-works/) مع وجود عقدتين في نفس الشبكة الفرعية (Subnet).
+  * نطاق ترددي (Bandwidth) جيد لإعادة المزامنة ([الخطوة 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) وزمن وصول (Latency) جيد لـ [النسخ المتماثل المتزامن](/best-practises/synchronous-replication-vs-asynchronous-replication/) (عادةً ما يكون وقت الذهاب والإياب أقل من 2 مللي ثانية).
+
+
+#### البديل
+
+  * استخدم [موازن أحمال (Load Balancer) لعنوان IP الافتراضي](/best-practises/how-a-virtual-ip-address-works/) إذا كانت العقدتان في شبكتين فرعيتين مختلفتين (يدعم SafeKit ذلك، خاصة في السحابة).
+  * استخدم حلول النسخ الاحتياطي مع النسخ المتماثل غير المتزامن لشبكات زمن الوصول العالي.
+
+
+### لماذا يقتصر تجاوز الفشل (Failover) على 32 جهازاً افتراضياً (VMs) منسوخاً أو أقل؟
+
+  * يعمل كل جهاز افتراضي في وحدة مرآة (Mirror Module) مستقلة.
+  * الحد الأقصى هو 32 وحدة مرآة تعمل على نفس التجمع (Cluster).
+
+
+#### البديل
+
+  * استخدم وحدة تخزين مشتركة خارجية وحلاً آخر لتجميع الأجهزة الافتراضية (VM clustering).
+  * أكثر تكلفة وأكثر تعقيداً.
+
+
+### لماذا يوصى بنسخ متماثل لأقل من 1,000,000 ملف؟
+
+  * أداء وقت إعادة المزامنة بعد حدوث فشل ([الخطوة 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
+  * الوقت المستغرق لفحص كل ملف بين العقدتين (Nodes).
+
+
+#### البديل
+
+  * ضع الملفات الكثيرة المراد نسخها في قرص صلب افتراضي أو جهاز افتراضي.
+  * في هذه الحالة، سيتم فقط نسخ وإعادة مزامنة الملفات التي تمثل القرص الصلب الافتراضي أو الجهاز الافتراضي.
+
+
+### لماذا تقتصر عملية النسخ المتماثل على بضع تيرابايتات فقط؟
+
+وقت إعادة المزامنة بعد حدوث فشل ([الخطوة 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
+
+  * شبكة بسرعة 1 جيجابت/ثانية ≈ 3 ساعات لكل 1 تيرابايت.
+  * شبكة بسرعة 10 جيجابت/ثانية ≈ ساعة واحدة لكل 1 تيرابايت أو أقل، وذلك حسب أداء كتابة القرص.
+
+
+#### البديل
+
+  * للأحجام الكبيرة من البيانات، استخدم [وحدة تخزين مشتركة خارجية](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
+  * تكون أكثر تكلفة وأكثر تعقيداً.
+
+
+

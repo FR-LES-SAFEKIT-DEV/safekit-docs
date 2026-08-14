@@ -1,0 +1,88 @@
+{{/* Shortcode: insert-safekit-mirror-ja — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## SafeKit ミラークラスター（mirror cluster）は Windows/Linux とどのように連動しますか？ {#safekit-mirror-cluster}
+
+### ステップ 1. リアルタイムレプリケーション {#step1}
+
+サーバー1（PRIM）が Windows/Linux アプリケーションを実行します。クライアントは [仮想IPアドレス](/best-practises/how-a-virtual-ip-address-works/) に接続されます。SafeKitは、ファイル内に行われた変更をネットワーク経由でリアルタイムに複製します。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="ミラー Windows/Linux クラスターにおけるバイトレベルでのファイルレプリケーション">
+
+
+このレプリケーションは [同期（synchronous）方式](/best-practises/synchronous-replication-vs-asynchronous-replication/) であり、非同期レプリケーションとは異なり、障害発生時にデータが失われることはありません。
+
+SafeKitで複製するディレクトリ名を構成するだけで機能します。ディスク構成に関する前提条件はありません。ディレクトリはシステムディスク内に配置することも可能です。
+
+### ステップ 2. 自動フェイルオーバー {#step2}
+
+サーバー1が停止すると、サーバー2が処理を引き継ぎます。SafeKitは仮想IPアドレスを切り替え、サーバー2上で Windows/Linux アプリケーションを自動的に再起動します。
+
+アプリケーションは、SafeKitによってサーバー2に複製された最新の状態のファイルを見つけます。その後、サーバー1への複製を行うことなく、ローカルのファイルを変更しながらサーバー2上で実行を継続します。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="ミラークラスターにおける Windows/Linux のフェイルオーバー">
+
+
+フェイルオーバーに要する時間は、障害検出時間（デフォルトで30秒）とアプリケーションの起動時間を足した時間となります。
+
+### ステップ 3. 自動フェイルバック {#step3}
+
+フェイルバックとは、障害の原因となった問題を修正した後に、サーバー1を再起動する処理のことです。
+
+SafeKitはファイルを自動的に再同期し、サーバー1が停止している間にサーバー2側で変更されたファイルのみを更新します。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="ミラーリング Windows/Linux クラスターにおけるフェイルバック">
+
+
+フェイルバックは Windows/Linux アプリケーションの運用を妨げることなく実行されるため、アプリケーションはサーバー2側でそのまま実行を継続できます。
+
+### ステップ 4. 正常状態への復帰
+
+再組み込みが完了すると、ファイルはステップ1と同様に、再びミラーモードになります。システムは高可用性（HA）モードに戻り、Windows/Linux アプリケーションがサーバー2で実行され、SafeKitがサーバー1へのファイルの更新内容を複製するようになります。
+
+
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="ミラーリング Windows/Linux クラスターにおける正常運用への復帰">
+
+
+管理者がアプリケーションをサーバー1で実行させたい場合は、適切なタイミングでWebコンソールから手動で行うか、構成設定により自動で行うことができます。
+
+### Windows/LinuxのSafeKitミラークラスターを構成する方法は？ {#safekit-mirror-cluster-configure}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+
+
+**SafeKit Webコンソール** は、重要なアプリケーションの高可用性を統合制御するための直感的なインターフェースを提供します。わずか数ステップで**SafeKitミラークラスター** を構成し、ビジネスの継続性を確保できます。
+
+  * **アプリケーションのフェイルオーバー（「Macros」タブ）：** 障害発生時に自動的に再起動する特定のアプリケーションサービスを定義します。
+  * **ハートビートネットワーク：** クラスターノード間で相互の健全性と可用性を継続的に監視し、フェイルオーバーの決定を同期するために使用される専用の通信経路です。
+  * **仮想IP管理：** フェイルオーバー後にクライアントが透過的に再接続できるように、仮想IP（VIP）を設定します。
+  * **リアルタイムレプリケーション：** ホストベースの同期型バイトレベルレプリケーションを行う重要なディレクトリを選択します。
+  * **チェッカー（監視機能）：** アプリケーションの健全性を監視し、プロセスの障害が検出された場合に自動復旧をトリガーします。
+
+
+SafeKitクラスターには専用のスプリットブレインチェッカーが組み込まれているため、3台目のウィットネスマシン（監視サーバー）や追加のハートビートネットワークを必要とせずに、ネットワークの分断（孤立）問題を解決できます。詳細については、[クラスターにおけるハートビート、フェイルオーバー、およびクォーラム](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)をご覧ください。
+
+### Windows/LinuxのSafeKitミラークラスターを監視する方法は？ {#safekit-mirror-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+
+
+**SafeKit管理コンソール** は、高可用性インフラストラクチャの一元化されたビューを提供します。管理者はこれにより、クラスターの**運用状態** を監視し、データ同期をリアルタイムで追跡できます。
+
+2ノードのミラークラスターでは、各サーバーの役割がコンソールに明確に表示されます。
+
+  * **PRIM（プライマリ）：** 現在アプリケーションを実行し、仮想IPを管理しているアクティブなノードです。ローカルストレージへの書き込みと、セカンダリノードへのリアルタイムレプリケーションを実行します。
+  * **SECOND（セカンダリ）：** 同期型のバイトレベルの更新データを受信している待機（スタンバイ）ノードです。プライマリが深刻な障害に見舞われた場合、即座に処理を引き継ぐ（テイクオーバー）準備ができています。
+  * **ALONE（単独运行）状態：** クラスターが単一のノードで動作している場合（メンテナンス中や障害発生後など）に視覚的なアラートで通知し、冗長性が一時的に失われていることを示します。
+  * **再同期の進捗：** 障害が発生したノードが復旧すると、バックグラウンドでのデータ再組み込み中、そのステータスがオレンジ色に変わり、「正常状態への復帰」フェーズにおいてもダウンタイムが発生しないようにします。
+
+
+単なるステータスアイコンの表示にとどまらず、インターフェースには**ワンクリックで実行できるフェイルオーバー制御機能** が用意されています。これにより、計画メンテナンス時にプライマリの役割を手動で再割り当てでき、ユーザーの業務への継続的な可用性を確保できます。
+
+

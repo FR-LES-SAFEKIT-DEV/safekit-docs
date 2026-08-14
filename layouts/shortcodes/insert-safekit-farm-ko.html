@@ -1,0 +1,65 @@
+{{/* Shortcode: insert-safekit-farm-ko — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## 팜(farm) 모드의 SafeKit 클러스터가 Windows/Linux와 함께 작동하는 방식은 무엇인가요? {#safekit-farm-cluster}
+
+### 팜(farm) 모드 클러스터에서의 가상 IP 주소 {#virtual-ip-address-farm}
+
+
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="How the SafeKit cluster in farm mode implements Windows/Linux network load balancing and failover">
+
+
+이전 그림에서 Windows/Linux 애플리케이션은 3대의 서버에서 실행 중입니다(3대는 예시일 뿐이며, 2대 이상으로 구성 가능합니다). 사용자는 가상 IP 주소로 연결됩니다.
+
+[가상 IP 주소](/best-practises/how-a-virtual-ip-address-works/)는 팜 모드 클러스터의 각 서버에 로컬로 구성됩니다.  
+가상 IP 주소로 들어오는 수신 트래픽은 모든 서버가 수신하며, 각 서버 커널 내부의 네트워크 필터에 의해 서버 간에 분산됩니다.
+
+SafeKit은 하드웨어 및 소프트웨어 장애를 감지하고, 장애 발생 시 네트워크 필터를 재구성하며, 구성 가능한 애플리케이션 검사기(checker)와 복구 스크립트를 제공합니다.
+
+### 네트워크 필터에서의 부하 분산(Load Balancing) {#network-load-balancing}
+
+네트워크 필터 내부의 네트워크 부하 분산 알고리즘은 클라이언트 패킷의 식별 정보(클라이언트 IP 주소, 클라이언트 TCP 포트)를 기반으로 합니다. 입력된 클라이언트 패킷의 식별 정보에 따라, 오직 한 서버의 필터만 해당 패킷을 수용하고 다른 서버의 필터들은 이를 거부합니다.
+
+패킷이 특정 서버의 필터에 의해 수용되면, 클라이언트의 요청에 응답하는 Windows/Linux 애플리케이션은 해당 서버의 CPU와 메모리만 사용합니다. 출력 메시지는 애플리케이션 서버에서 클라이언트로 직접 전송됩니다.
+
+서버 장애가 발생하면, 팜 하트비트(heartbeat) 프로토콜이 네트워크 부하 분산 클러스터의 필터를 재구성하여 남아 있는 가용 서버로 트래픽을 다시 분산합니다.
+
+### 스테이트풀(Stateful) 또는 스테이트리스(Stateless) 애플리케이션 {#stateful-stateless}
+
+스테이트풀(Stateful) Windows/Linux 애플리케이션의 경우, 세션 어피니티(지속성)가 존재합니다. 동일한 클라이언트가 서버에서 자신의 컨텍스트(상태 정보)를 유지하려면 여러 TCP 세션에 걸쳐 동일한 서버에 연결되어야 합니다. 이 경우, SafeKit 부하 분산 규칙은 클라이언트 IP 주소를 기반으로 구성됩니다. 따라서 동일한 클라이언트는 여러 TCP 세션에서도 항상 동일한 서버로 연결됩니다. 그리고 서로 다른 클라이언트들은 팜 내의 여러 서버로 분산됩니다.
+
+스테이트리스(Stateless) Windows/Linux 애플리케이션의 경우, 세션 어피니티가 존재하지 않습니다. 동일한 클라이언트가 여러 TCP 세션에서 팜 내의 서로 다른 서버로 연결될 수 있습니다. 세션 간에 서버 로컬에 저장되는 컨텍스트가 없기 때문입니다. 이 경우, SafeKit 부하 분산 규칙은 TCP 클라이언트 세션 식별 정보를 기반으로 구성됩니다. 이 구성은 서버 간에 세션을 분산하는 데 가장 이상적이지만, 세션 어피니티를 요구하지 않는 TCP 서비스여야 합니다.
+
+### Windows/Linux의 팜(farm) 모드 SafeKit 클러스터를 구성하는 방법은 무엇인가요? {#safekit-farm-cluster-configuration}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm-mode cluster configuration for Windows/Linux network load balancing and virtual IP management.">
+
+
+**팜 모드 SafeKit 클러스터** 는 서비스의 고가용성과 확장성을 위해 설계되었습니다. 구성은 동시에 두 노드 모두로 유입되는 트래픽을 분산하는 데 중점을 둡니다:
+
+  * **부하 분산 서비스 (Macros 탭):** 모든 노드에서 활성 상태를 유지할 특정 애플리케이션 서비스(예: Apache, IIS, Nginx)를 정의합니다.
+  * **하트비트 네트워크:** 노드가 팜을 이탈했는지 감지하는 데 사용되는 통신 경로로, 이탈 감지 시 즉각적인 부하 재배분을 트리거합니다.
+  * **가상 IP (Farm VIP):** 미러 클러스터와 달리, Farm VIP는 네트워크 트래픽을 분산하기 위해 커널 필터링 알고리즘을 사용하여 노드 간에 공유됩니다.
+  * **부하 분산 규칙:** 소스 IP 주소 또는 포트를 기반으로 트래픽 분산 정책을 정의합니다.
+  * **체커 (Checkers):** 애플리케이션의 상태를 모니터링하고 프로세스 장애가 감지되면 자동으로 재시작을 트리거합니다.
+
+
+### Windows/Linux의 팜(farm) 모드 SafeKit 클러스터를 모니터링하는 방법은 무엇인가요? {#safekit-farm-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node farm-mode cluster showing both Windows/Linux nodes in UP state with active load balancing.">
+
+
+팜 모드에서 클러스터를 모니터링하면 모든 노드가 애플리케이션 성능에 기여하는 인프라의 **Active-Active** 특성을 시각적으로 확인할 수 있습니다(이 예시에서는 2개의 노드가 표시됨):
+
+  * **UP 상태 (2개 노드에서 각각 50%):** 정상적인 팜 구조에서는 두 노드가 모두 "UP"(50%) 상태로 유지되며, 이는 두 노드가 공유 가상 IP를 통해 클라이언트 요청을 대등하게 수신하고 처리하고 있음을 의미합니다.
+  * **자동 재배분 (Re-balancing):** 하나의 노드에 장애가 발생하면, 콘솔 상에서 나머지 노드가 트래픽의 100%를 즉시 처리하는 모습을 시각적으로 보여줍니다. 잔존 노드가 이미 활성화되어 있는 상태이므로 (몇 초간의 장애 감지 시간을 제외하고는) "장애 조치(failover)"로 인한 지연 시간이 없습니다.
+  * **노드 편입:** 복구된 노드가 재시작되면 "STOP"에서 "UP" 상태로 전환되며, 관리자의 수동 개입 없이 자동으로 자신의 할당량만큼 트래픽을 다시 수신하기 시작합니다.
+  * **데이터 동기화 없음:** 팜 모드 클러스터에서는 노드가 상태 정보가 없는 스테이트리스(stateless) 방식이거나 백엔드 데이터베이스를 공유하는 구조(이 데이터베이스는 미러 클러스터로 별도 보호 가능)이므로, "주황색"으로 표시되는 동기화 재개 상태가 존재하지 않습니다.
+
+
+단순한 상태 아이콘 확인을 넘어, 인터페이스에서 클릭 한 번으로 노드를 관리할 수 있습니다. 이를 통해 계획된 유지보수를 위해 노드를 수동으로 중지하거나 시작할 수 있으며, 그동안 공유 가상 IP는 사용자 활동을 중단시키지 않고 트래픽을 자동으로 재배분합니다.
+
+

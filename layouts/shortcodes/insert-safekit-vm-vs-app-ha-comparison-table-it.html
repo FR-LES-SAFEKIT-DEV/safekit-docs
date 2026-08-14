@@ -1,0 +1,23 @@
+{{/* Shortcode: insert-safekit-vm-vs-app-ha-comparison-table-it — 1 instances in 1 files */}}
+ 
+
+Nell'implementazione dell'alta disponibilità, una decisione chiave è se proteggere a livello di **macchina virtuale (VM)** o a livello di **applicazione**. L'HA a livello VM replica e fa il failover di intere macchine virtuali, fornendo una soluzione generica per qualsiasi applicazione. L'HA a livello applicativo si rivolge solo ai dati e ai servizi dell'applicazione, ottenendo tempi di ripristino più rapidi e un minor utilizzo delle risorse. SafeKit offre in modo unico **entrambi gli approcci** — senza richiedere storage condiviso (SAN) in nessuno dei due casi — consentendo di scegliere la soluzione più adatta alla propria infrastruttura e ai requisiti di ripristino.
+
+**SafeKit HA VM vs HA applicativa vs Hyper-V Cluster &amp; VMware HA tradizionali**
+
+Criterio | HA VM con modulo SafeKit Hyper-V o KVM | HA applicativa con moduli applicativi SafeKit | Microsoft Hyper-V Cluster &amp; VMware HA  
+---|---|---|---  
+**Architettura** | SafeKit installato in 2 hypervisor. Replica e failover della VM completa. | SafeKit installato in 2 macchine virtuali o fisiche. Replica e failover a livello applicativo. | Cluster di hypervisor con storage condiviso. Riavvio della VM su un altro host se l'hypervisor si guasta.  
+**Storage** | Nessun disco condiviso — [replica sincrona in tempo reale senza perdita di dati](/best-practises/synchronous-replication-vs-asynchronous-replication/) | Nessun disco condiviso — replica sincrona solo dei dati applicativi | Richiede un disco condiviso e un cabinet di dischi esterno specifico  
+**Dati replicati** | Replica più dati (applicazione + SO) | Replica solo i dati applicativi | Nessuna replica — storage condiviso accessibile da tutti gli host  
+**Tempo di ripristino** | Riavvio della VM sull'hypervisor 2 se l'hypervisor 1 si guasta. Tempo di ripristino = tempo di riavvio della VM. Failover se la VM si guasta. | Ripristino rapido con riavvio dell'applicazione sul server 2. Circa 1 minuto o meno ([vedi RTO/RPO qui](/best-practises/what-is-rpo-and-rto-with-examples/)). Verificatore applicativo avanzato e failover software. | Riavvio completo della VM su un nuovo hypervisor. Tempo di ripristino dipende da riavvio SO + avvio applicazione.  
+**Disaster recovery / Siti remoti** | Nessun SAN necessario — replica integrata in SafeKit tra siti remoti | Nessun SAN necessario — replica integrata in SafeKit tra siti remoti | Richiede cabinet di dischi replicati tramite SAN o vSAN  
+**Configurazione** | Definire la posizione della cartella dei file VM dove è installata l'applicazione. Soluzione generica per qualsiasi applicazione/SO. | Definire i servizi da riavviare, le cartelle applicative da replicare e un indirizzo IP virtuale per il failover in un [modulo applicativo](/solutions/). | Competenze IT specifiche richieste per configurare il sistema  
+**Piattaforme supportate** | Funziona con [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/) e [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) (non VMware direttamente, salvo annidando Hyper-V o KVM in VMware). | Funziona su qualsiasi infrastruttura: server fisici, macchine virtuali VMware, Hyper-V, KVM, cloud. | Limitato ad ambienti VMware vSphere o Microsoft Hyper-V  
+**Competenze IT** | Nessuna competenza IT specifica richiesta. Failover automatico. | Nessuna competenza IT specifica richiesta. Failover automatico. | Competenze IT specifiche richieste per configurare il sistema  
+  
+**In sintesi** , SafeKit è l'unica soluzione che fornisce **alta disponibilità sia a livello VM che a livello applicativo senza storage condiviso**. Per la massima flessibilità e i tempi di ripristino più rapidi (circa 1 minuto), l'HA a livello applicativo è l'approccio preferito — funziona su qualsiasi piattaforma (fisica, virtuale o cloud) e replica solo i dati importanti. Per gli ambienti in cui proteggere l'intera VM è più semplice, il modulo Hyper-V/KVM di SafeKit offre un'alternativa generica senza SAN ai tradizionali Microsoft Hyper-V Cluster o VMware HA — eliminando il costo e la complessità dell'infrastruttura di storage condiviso garantendo al contempo zero perdita di dati tramite replica sincrona in tempo reale.
+
+Si noti che le soluzioni SafeKit sono le più semplici da implementare ma sono **limitate alla replica di [alcuni terabyte](/it/#safekit-ha-limitations) e al failover di [32 VM](/it/#safekit-ha-limitations)**.
+
+

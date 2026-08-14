@@ -1,0 +1,23 @@
+{{/* Shortcode: insert-safekit-vm-vs-app-ha-comparison-table-zh-hans — 1 instances in 1 files */}}
+ 
+
+在实施高可用性时，一个关键决策是在**虚拟机（VM）级别** 还是在**应用级别** 进行保护。VM级别HA复制并故障转移整个虚拟机，为任何应用提供通用解决方案。应用级别HA仅针对应用数据和服务，从而实现更快的恢复时间和更低的资源使用。SafeKit独特地提供**两种方式** ——在两种情况下均无需共享存储（SAN）——让您可以选择最适合基础设施和恢复需求的方案。
+
+**SafeKit VM HA vs 应用HA vs 传统Hyper-V集群和VMware HA**
+
+标准 | SafeKit Hyper-V或KVM模块的VM HA | SafeKit应用模块的应用HA | Microsoft Hyper-V集群和VMware HA  
+---|---|---|---  
+**架构** | SafeKit安装在2个虚拟化管理程序中。完整VM的复制和故障转移。 | SafeKit安装在2台虚拟机或物理机中。应用级别的复制和故障转移。 | 带共享存储的虚拟化管理程序集群。如果管理程序故障，VM在另一主机上重启。  
+**存储** | 无需共享磁盘——[同步实时复制，零数据丢失](/best-practises/synchronous-replication-vs-asynchronous-replication/) | 无需共享磁盘——仅同步复制应用数据 | 需要共享磁盘和专用外部磁盘柜  
+**复制的数据** | 复制更多数据（应用+操作系统） | 仅复制应用数据 | 无复制——所有主机访问共享存储  
+**恢复时间** | 如果管理程序1崩溃，在管理程序2上重启VM。恢复时间=VM重启时间。如果VM崩溃则触发故障转移。 | 在服务器2上快速重启应用实现快速恢复。约1分钟或更短（[查看RTO/RPO](/best-practises/what-is-rpo-and-rto-with-examples/)）。高级应用检查器和软件故障转移。 | 在新的虚拟化管理程序上完全重启VM。恢复时间取决于操作系统重启+应用启动。  
+**灾难恢复/远程站点** | 无需SAN——SafeKit内置跨远程站点复制 | 无需SAN——SafeKit内置跨远程站点复制 | 需要通过SAN或vSAN进行跨站点磁盘柜复制  
+**配置** | 定义安装应用的VM文件夹位置。适用于任何应用/操作系统的通用解决方案。 | 定义要重启的服务、要复制的应用文件夹，以及 [应用模块](/solutions/)中用于故障转移的虚拟IP地址。 | 需要专业IT技能来配置系统  
+**支持的平台** | 支持 [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/)和 [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)（不直接支持VMware，除非在VMware中嵌套Hyper-V或KVM）。 | 适用于任何基础设施：物理服务器、VMware、Hyper-V、KVM虚拟机、云。 | 仅限于VMware vSphere或Microsoft Hyper-V环境  
+**IT技能** | 无需专业IT技能。自动故障转移。 | 无需专业IT技能。自动故障转移。 | 需要专业IT技能来配置系统  
+  
+**总结** ，SafeKit是唯一同时提供**VM级别和应用级别高可用且无需共享存储** 的解决方案。为获得最大灵活性和最快恢复时间（约1分钟），应用级别HA是首选方式——它适用于任何平台（物理、虚拟或云），且仅复制重要数据。对于保护整个VM更简单的环境，SafeKit的Hyper-V/KVM模块提供了传统Microsoft Hyper-V集群或VMware HA的通用无SAN替代方案——消除了共享存储基础设施的成本和复杂性，同时通过同步实时复制保证零数据丢失。
+
+请注意，SafeKit解决方案是最易实施的，但**限于复制 [几个TB的数据](/zh-hans/#safekit-ha-limitations)和故障转移 [32个VM](/zh-hans/#safekit-ha-limitations)**。
+
+

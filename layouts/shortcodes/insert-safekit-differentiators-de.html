@@ -1,0 +1,121 @@
+{{/* Shortcode: insert-safekit-differentiators-de — 1 instances in 1 files */}}
+ 
+
+## Vergleich von SafeKit mit herkömmlichen Hochverfügbarkeits- (HA-) Clustern {#safekit-ha-comparison}
+
+Dieser Vergleich zeigt die grundlegenden Unterschiede zwischen SafeKit und traditionellen Hochverfügbarkeits-Clusterlösungen (HA) wie Failover-Cluster, Virtualisierungs-HA und SQL Always-On. SafeKit ist als einfache, rein softwarebasierte Lösung für generische Anwendungsredundanz konzipiert – im Gegensatz zur hohen Komplexität und den spezifischen Speicheranforderungen (Shared Storage, SAN) traditioneller HA-Mechanismen. 
+
+**Vergleich von SafeKit mit traditionellen Hochverfügbarkeits-Clustern (HA)**
+
+Lösungen | Komplexität | Anmerkungen  
+---|---|---  
+Failover-Cluster (Microsoft) | Hoch | Spezifischer Speicher (Shared Storage, SAN)  
+Virtualisierung (VMware HA) | Hoch | Spezifischer Speicher (Shared Storage, SAN, vSAN)  
+SQL Always-On (Microsoft) | Hoch | Nur SQL ist redundant, erfordert SQL Enterprise Edition  
+SafeKit | Niedrig | Am einfachsten, generisch und rein softwarebasiert. Nicht geeignet für die Replikation großer Datenmengen.  
+  
+**Zusammenfassend** erreicht SafeKit eine Hochverfügbarkeit mit geringer Komplexität durch einen einfachen, softwarebasierten Spiegelungsmechanismus, der teure, dedizierte Hardware wie ein SAN (Storage Area Network) überflüssig macht. Dies macht es zu einer leicht zugänglichen Lösung, um Anwendungsredundanz schnell zu implementieren – ohne komplexe Infrastrukturänderungen. 
+
+## Architektonische Unterscheidungsmerkmale: SafeKit Software-Defined vs. Hardware HA Cluster {#ha-arch-diff}
+
+
+<!-- BEGIN INSERT: insert-safekit-software-vs-hardware-table-en lang="de" display="content" -->
+ 
+
+Die Wahl der richtigen Hochverfügbarkeitslösung (High Availability / HA) ist entscheidend für die Sicherstellung der Betriebskontinuität und die Minimierung von Ausfallzeiten. Dieser Vergleich bietet eine direkte, technische Gegenüberstellung zweier grundlegender Architekturansätze: Das softwaredefinierte Shared-Nothing-Clustering von SafeKit im Vergleich zu traditionellen HA-Methoden, die in der Regel auf Hardware, gemeinsamen Datenträgern (wie einem SAN) und komplexen Konfigurationen basieren. Diese Unterschiede betreffen die Einfachheit der Bereitstellung, Datenreplikationsmethoden, Wiederherstellungszeiten (RTO/RPO) und die betriebliche Komplexität. Die folgende Tabelle beschreibt die wesentlichen Unterschiede zu den wichtigsten Hochverfügbarkeitsthemen.
+
+**Hochverfügbarkeitsvergleich: SafeKit Software-Clustering vs. Traditionelle HA / Hardware-Clustering**
+
+Thema | SafeKit (Software-Clustering / Primärer Ansatz) | Traditionelle HA / Hardware-Clustering  
+---|---|---  
+**[Software-Clustering vs. Hardware-Clustering](/best-practises/clustering-software-vs-hardware-clustering/)** |  • Ein einfacher Software-Cluster, bei dem das SafeKit-Paket lediglich auf zwei Servern installiert wird  |  • Komplexes Hardware-Clustering mit externem Speicher oder Netzwerk-Load-Balancern   
+**[Shared-Nothing vs. Shared-Disk-Cluster](/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)** |  • SafeKit ist ein Shared-Nothing-Cluster: Einfach bereitzustellen, selbst an entfernten Standorten  |  • Ein Shared-Disk-Cluster ist komplex in der Bereitstellung   
+**[Anwendungs-Hochverfügbarkeit vs. Hochverfügbarkeit ganzer virtueller Maschinen](/best-practises/vm-ha-vs-application-ha/)** |  • Anwendungs-HA unterstützt Hardware- und Softwareausfälle durch Anwendungsprüfer (Checker).<br>• Schnelle Wiederherstellungszeit, da nur die Anwendung neu gestartet wird (RTO etwa 1 Minute oder weniger).<br>• Anwendungs-HA erfordert die Definition von Neustart-Skripten pro Anwendung sowie zu replizierenden Ordnern (SafeKit-Anwendungsmodule).  |  • Vollständige VM-HA unterstützt Hardwareausfälle und einige Softwareausfälle wie z. B. eine eingefrorene VM.<br>• VM-Neustart im Fehlerfall und Wiederherstellungszeit abhängig vom Neustart des Betriebssystems.<br>• Keine Neustart-Skripte bei vollständiger VM-HA erforderlich (SafeKit-Modulehyperv.safeoderkvm.safe). Hypervisoren arbeiten Aktiv/Aktiv mit mehreren virtuellen Maschinen.   
+**[Hochverfügbarkeit vs. Fehlertoleranz (Fault Tolerance)](/best-practises/high-availability-cluster-vs-fault-tolerant-system/)** |  • Kein dedizierter Server mit SafeKit. JederServer kann als Failover-Server des anderen dienen.<br>• Softwareausfall mit Neustart in einer anderen Betriebssystemumgebung.<br>• Reibungslose Aktualisierung von Anwendung und Betriebssystem Server für Server möglich (Version N und N+1 können koexistieren).  |  • Sekundärer Server dediziert für die Ausführung derselben Anwendung, synchronisiert auf Befehlsebene.<br>• Softwareausnahme tritt auf beiden Servern gleichzeitig auf.<br>• Reibungslose Aktualisierung nicht möglich.<br>• Spezielle fehlertolerante Hardware oder Hypervisoren erforderlich.   
+**[Synchrone Replikation vs. Asynchrone Replikation](/best-practises/synchronous-replication-vs-asynchronous-replication/)** |  • SafeKit implementiert eine synchrone Replikation in Echtzeit ohne Datenverlust im Fehlerfall.<br>• Zwingende Voraussetzung für Hochverfügbarkeit.  |  • Bei asynchroner Replikation kommt es im Fehlerfall zu Datenverlust.<br>• Nicht für Hochverfügbarkeit geeignet, sondern für Backup-Lösungen.   
+**[Dateireplikation auf Byte-Ebene vs. Festplattenreplikation auf Block-Ebene](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)** |  • SafeKit implementiert eine Echtzeit-Dateireplikation auf Byte-Ebene und wird einfach mit den zu replizierenden Anwendungsverzeichnissen konfiguriert, selbst auf der Systemfestplatte.  |  • Die Festplattenreplikation auf Block-Ebene ist komplex zu konfigurieren und erfordert die Ablage der Anwendungsdaten auf einer speziellen Festplatte.   
+**[Heartbeat, Failover und Quorum zur Vermeidung von 2 Master-Knoten](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)** |  • Um 2 Master-Knoten (Split-Brain) zu vermeiden, bietet SafeKit einen einfachen Split-Brain-Checker, der auf einem Router konfiguriert wird.  |  • Um 2 Master-Knoten zu vermeiden, erfordern andere Cluster eine komplexe Konfiguration mit einer dritten Maschine, einer speziellen Quorum-Festplatte oder einer speziellen Verbindungsleitung.   
+**[Virtuelle IP-Adresse: Primär/Sekundär, Netzwerk-Lastverteilung, Failover](/best-practises/how-a-virtual-ip-address-works/)** |  • Keine dedizierten Proxy-Server und keine spezielle Netzwerkkonfiguration in einem SafeKit-Cluster für virtuelle IP-Adressen erforderlich.  |  • Spezielle Netzwerkkonfiguration in anderen Clustern für virtuelle IP-Adressen erforderlich (Hinweis: SafeKit bietet einen an Load Balancer angepassten Health Check).   
+  
+**Zusammenfassend** hat die Architekturentscheidung zwischen Software-Clustering (wie SafeKit) und Hardware-Clustering (traditionelle Shared-Disk-/SAN-Lösungen) erhebliche Auswirkungen auf die Bereitstellungskomplexität, die Betriebskosten und die Effektivität der Wiederherstellung im Fehlerfall. Die wichtigste Erkenntnis aus diesem Vergleich ist die Entwicklung hin zu Shared-Nothing-Architekturen und Hochverfügbarkeit auf Anwendungsebene, bei denen eine schnelle Wiederherstellung von Anwendungen (niedrige RTO) und flexible Bereitstellungsoptionen (auch über verteilte Standorte hinweg) im Vordergrund stehen. Dies führt häufig zu einer schlankeren und widerstandsfähigeren Lösung als hochkomplexe, hardwareabhängige Clusterkonfigurationen. Um maximale Geschäftskontinuität bei gleichzeitig vereinfachter Verwaltung zu erreichen, ist die Bewertung eines softwarebasierten Ansatzes von entscheidender Bedeutung.
+
+
+<!-- END INSERT: insert-safekit-software-vs-hardware-table-en lang="de" display="content" -->
+ 
+
+## Schlüssel-Differenzierungsmerkmale des SafeKit Mirror Clusters {#safemirr-diff}
+
+
+<!-- BEGIN INSERT: insert-safekit-mirror-comparison-table-en lang="de" display="content" -->
+ 
+
+Die Wahl des richtigen Ansatzes zur Datenreplikation ist entscheidend für die Sicherstellung der Geschäftskontinuität. Dieser Vergleich hebt die wichtigsten Unterscheidungsmerkmale des SafeKit Mirror-Clusters mit Echtzeit-Dateireplikation gegenüber traditionellen Alternativen wie Datenbankreplikation, Festplattenreplikation, Shared-Disk-Lösungen und fehlertoleranten Systemen hervor.
+
+**SafeKit Mirror-Cluster: Vorteile gegenüber alternativen Replikations- und Clustering-Ansätzen**
+
+Merkmal | SafeKit-Vorteil | Einschränkung der Alternativen  
+---|---|---  
+**[3 Produkte in 1](/best-practises/clustering-software-vs-hardware-clustering/)** | Spart unter Windows und Linux die Kosten für externen gemeinsamen/replizierten Speicher, Load-Balancing-Geräte und Enterprise-Editionen von Betriebssystemen und Datenbanken. Enthält alle Cluster-Funktionen: synchrone Echtzeit-Dateireplikation, Störungsüberwachung, automatischer Neustart, virtueller IP-Failover. | Traditionelle Ansätze erfordern separate Produkte für Speicherreplikation, Lastverteilung und Clustering — was Kosten und Komplexität erhöht.  
+**[Sehr einfache Konfiguration](/solutions/)** | Konfiguration über Anwendungsmodule. Neue Dienste und replizierte Verzeichnisse können einfach hinzugefügt werden. Alles wird über eine zentrale Webkonsole verwaltet. Kein Domänencontroller oder Active Directory erforderlich. | Microsoft Cluster und ähnliche Lösungen erfordern eine komplexe Active-Directory-Konfiguration und Domänencontroller.  
+**[Synchrone Replikation](/best-practises/synchronous-replication-vs-asynchronous-replication/)** | Die Echtzeit-Replikation ist synchron ohne Datenverlust bei Ausfall (RPO = 0). | Asynchrone Replikation kann kürzlich durchgeführte Transaktionen verlieren, die zum Zeitpunkt des Ausfalls noch nicht repliziert wurden.  
+**[Vollautomatisches Failback](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step3)** | Nach einem Ausfall, wenn ein Server neu startet, ist das Replikations-Failback vollautomatisch. Der ausgefallene Server wird ohne Stopp der Anwendung auf dem verbleibenden Server wieder in den Cluster integriert. | Die meisten Replikationslösungen (insbesondere auf Datenbankebene) erfordern eine manuelle Resynchronisation. Die Anwendung kann während des Failbacks sogar gestoppt werden.  
+**[Replikation aller Datentypen](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step1)** | Die Replikation funktioniert für Datenbanken und für alle Dateien, die repliziert werden müssen. | Replikation auf Datenbankebene schützt nur die Datenbank, nicht Konfigurationsdateien, Protokolle oder andere Anwendungsdaten.  
+**[Dateireplikation vs. Festplattenreplikation](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)** | Die Replikation basiert auf Dateiverzeichnissen, die sich überall befinden können, sogar auf der Systemfestplatte. | Festplattenreplikation erfordert eine dedizierte Partition und eine spezielle Anwendungskonfiguration zur Datenspeicherung.  
+**[Dateireplikation vs. Shared Disk](/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)** | Server können an zwei entfernten Standorten ohne gemeinsame Infrastruktur eingesetzt werden. | Shared-Disk-Lösungen erfordern physische Nähe und können keine entfernten Standorte abdecken.  
+**[Entfernte Standorte und virtuelle IP](/best-practises/how-a-virtual-ip-address-works/)** | Alle Cluster-Funktionen funktionieren für 2 Server an entfernten Standorten. Extended LAN ermöglicht VIP-Umleitung auf Schicht 2. Für unterschiedliche IP-Netzwerke wird die VIP über einen Load Balancer mit SafeKit Health Check verwaltet. | Viele Clustering-Lösungen unterstützen kein Failover an entfernten Standorten oder erfordern eine komplexe DNS-Umleitung mit unvorhersehbaren Wiederherstellungszeiten.  
+**[Quorum und Split Brain](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)** | Funktioniert mit nur 2 Servern. Ein einfacher Split-Brain-Checker zu einem Router bewältigt die Netzwerkisolation zwischen Standorten. | Die meisten Clustering-Lösungen erfordern einen 3. Server für das Quorum-Management.  
+**[Aktiv/Aktiv-Cluster](/architectures/active-active-cluster-real-time-replication/)** | Der sekundäre Server ist nicht dediziert. Der Cluster kann mit 2 verschiedenen Mirror-Modulen aktiv/aktiv betrieben werden. | [Fehlertolerante Systeme](/best-practises/high-availability-cluster-vs-fault-tolerant-system/) widmen den sekundären Server der Ausführung derselben Anwendung, synchronisiert auf Befehlsebene.  
+**[Einheitliche HA-Lösung](/architectures/clustering-software-load-balancing-mirroring/)** | SafeKit implementiert sowohl Mirror-Cluster (Replikation + Failover) als auch [Farm-Cluster (Lastverteilung + Failover)](/architectures/network-load-balancing-cluster/). Eine N-Tier-Architektur kann mit einer einzigen Lösung auf Windows und Linux hochverfügbar gemacht werden. | Typische Architekturen mischen verschiedene Technologien für Lastverteilung, Replikation und Failover — was die betriebliche Komplexität erhöht.  
+**[RTO / RPO](/best-practises/what-is-rpo-and-rto-with-examples/)** | Schneller Neustart der Anwendung bei Ausfall: etwa 1 Minute oder weniger. Kein Datenverlust (synchrone Replikation). | [Vollständige VM-Replikation](/best-practises/vm-ha-vs-application-ha/) (VMware HA, Hyper-V Cluster) erfordert den Neustart des gesamten Betriebssystems auf einem neuen Hypervisor, was zu längeren Wiederherstellungszeiten führt.  
+  
+**Zusammenfassend** bietet der SafeKit Mirror-Cluster eine einheitliche, kosteneffiziente Hochverfügbarkeitslösung, die synchrone Dateireplikation, automatisches Failover und Failback, Lastverteilung und Unterstützung entfernter Standorte vereint — alles ohne dedizierte Hardware, gemeinsamen Speicher oder einen dritten Quorum-Server. Diese Einfachheit macht ihn besonders geeignet für Softwarehersteller und Organisationen, die zuverlässige HA auf Standard-Windows- und Linux-Servern benötigen.
+
+
+<!-- END INSERT: insert-safekit-mirror-comparison-table-en lang="de" display="content" -->
+ 
+
+## Schlüssel-Differenzierungsmerkmale des SafeKit Farm Clusters {#safefarm-diff}
+
+Das SafeKit Farm Cluster ist eine Hochverfügbarkeitslösung, die speziell für skalierbare Anwendungsumgebungen entwickelt wurde, in denen Lastverteilung und schnelles Failover unverzichtbar sind. Im Gegensatz zu herkömmlichen Methoden, die dedizierte Hardware-Load-Balancer oder komplexe Netzwerkkonfigurationen erfordern, bietet SafeKit eine integrierte, softwarebasierte Clusterlösung, die direkt auf den Anwendungsservern installiert wird. Die folgende Tabelle beschreibt die Kernfunktionen und einzigartigen Vorteile des SafeKit Farm Clusters und zeigt, wie es die Netzwerk-Lastverteilung vereinfacht und eine kontinuierliche Dienstverfügbarkeit auf Windows- und Linux-Plattformen sicherstellt. 
+
+**Wichtigste Alleinstellungsmerkmale des SafeKit Farm Clusters mit Lastverteilung und Failover**
+
+Vorteil | Detaillierter Nutzen und Mechanismus  
+---|---  
+[Kein Load Balancer, keine dedizierten Proxy-Server oder spezielle Multicast-Ethernet-Adresse](/best-practises/how-a-virtual-ip-address-works/) |  • Die Lösung erfordert keine Load Balancer oder dedizierten Proxy-Server oberhalb der Farm für die Lastverteilung. SafeKit wird direkt auf den Anwendungsservern in der Farm installiert. Die Lastverteilung basiert auf einer standardmäßigen virtuellen IP-Adresse/Ethernet-MAC-Adresse und funktioniert mit physischen Servern oder virtuellen Maschinen unter Windows und Linux ohne spezielle Netzwerkkonfiguration<br>• Dies ist bei Netzwerk-Load-Balancern nicht der Fall<br>• Dies ist bei dedizierten Proxies unter Linux nicht der Fall<br>• Dies ist bei einerspeziellen Multicast-Ethernet-Adresseunter Windows nicht der Fall   
+[Alle Cluster-Funktionen](/architectures/network-load-balancing-cluster/) |  • Die Lösung umfasst alle Cluster-Funktionen: virtuelle IP-Adresse, Lastverteilung nach Client-IP-Adresse oder nach Sitzungen, Überwachung von Server-/Netzwerk-/Softwareausfällen, automatischer Neustart der Anwendung mit kurzer Wiederherstellungszeit und eineReplikationsoption mit einem Spiegelmodul<br>• Dies ist bei anderen Lastverteilungslösungen nicht der Fall. Sie können Lastverteilung durchführen, enthalten aber keine vollständige Clusterlösung mit Neustartskripten und automatischem Anwendungsneustart bei Ausfällen. Sie bieten keine Replikationsoption<br>• Die Clusterkonfiguration ist sehr einfach und erfolgt überAnwendungsmodule. Unter Windows muss kein Domänencontroller oder Active Directory konfiguriert werden. Die Lösung funktioniert unter Windows und Linux   
+[Entfernte Standorte und virtuelle IP-Adresse](/best-practises/how-a-virtual-ip-address-works/) |  • Wenn Server über ein erweitertes LAN zwischen entfernten Standorten mit demselben IP-Netzwerk verbunden sind, funktioniert dievirtuelle IP-Adressevon SafeKit mit Lastverteilung auf Ebene 2<br>• Wenn Server mit verschiedenen IP-Netzwerken zwischen entfernten Standorten verbunden sind, kann die virtuelle IP-Adresse auf der Ebene eines Load Balancers mithilfe des SafeKit Health Checks konfiguriert werden. So können Sie Lastverteilung implementieren, aber auch alle Cluster-Funktionen von SafeKit nutzen, insbesondere die Überwachung und automatische Wiederherstellung der kritischen Anwendung auf den Anwendungsservern   
+[Einheitliche Hochverfügbarkeitslösung](/architectures/clustering-software-load-balancing-mirroring/) |  • SafeKit implementiert ein Farm-Cluster mit Lastverteilung und Failover. Aber es implementiert auch einSpiegel-Cluster mit Replikation und Failover.<br>• Somit kann eine N-Tier-Architektur mit derselben Lösung unter Windows und Linux hochverfügbar und lastverteilt gemacht werden (gleiche Installation, Konfiguration, Administration mit der SafeKit-Konsole oder der Befehlszeilenschnittstelle). Dies ist einzigartig auf dem Markt<br>• Dies ist bei einer Architektur, die verschiedene Technologien für Lastverteilung, Replikation und Failover kombiniert, nicht der Fall   
+  
+**Zusammenfassend** bietet das SafeKit Farm Cluster einen einheitlichen, softwarebasierten Ansatz für Lastverteilung und Hochverfügbarkeit, der Komplexität und Kosten drastisch reduziert. Durch die Integration von Lastverteilung und Failover direkt in die Anwendungsserverschicht mittels einer standardmäßigen virtuellen IP-Adresse entfällt die Notwendigkeit externer Netzwerkhardware (Load Balancer oder Proxies) und spezieller Multicast-Konfigurationen. Dieser integrierte Ansatz, kombiniert mit der Möglichkeit, ihn mit dem Spiegel-Cluster für vollständige N-Tier-HA zu kombinieren, macht SafeKit zu einer einzigartig einfachen und umfassenden Lösung für eine skalierbare und ausfallsichere Anwendungsbereitstellung in verschiedensten Umgebungen. 
+
+## VM-Hochverfügbarkeit: SafeKits SAN-lose vs. Hyper-V/VMware HA {#safe-vmha-diff}
+
+
+<!-- BEGIN INSERT: insert-safekit-vm-vs-app-ha-comparison-table-en lang="de" display="content" -->
+ 
+
+Bei der Implementierung von Hochverfügbarkeit ist eine zentrale Entscheidung, ob auf der Ebene der **virtuellen Maschine (VM)** oder auf der **Anwendungsebene** geschützt werden soll. VM-Ebene HA repliziert und failt komplette virtuelle Maschinen über und bietet eine generische Lösung für jede Anwendung. Anwendungsebene HA zielt nur auf die Anwendungsdaten und -dienste ab, was zu schnelleren Wiederherstellungszeiten und geringerem Ressourcenverbrauch führt. SafeKit bietet als einzige Lösung **beide Ansätze** — ohne in beiden Fällen gemeinsamen Speicher (SAN) zu benötigen — sodass Sie die beste Lösung für Ihre Infrastruktur und Wiederherstellungsanforderungen wählen können.
+
+**SafeKit VM HA vs. Anwendungs-HA vs. traditioneller Hyper-V Cluster &amp; VMware HA**
+
+Kriterium | VM HA mit SafeKit Hyper-V oder KVM Modul | Anwendungs-HA mit SafeKit Anwendungsmodulen | Microsoft Hyper-V Cluster &amp; VMware HA  
+---|---|---|---  
+**Architektur** | SafeKit in 2 Hypervisoren installiert. Replikation und Failover der vollständigen VM. | SafeKit in 2 virtuellen oder physischen Maschinen installiert. Replikation und Failover auf Anwendungsebene. | Hypervisor-Cluster mit gemeinsamem Speicher. VM-Neustart auf einem anderen Host bei Hypervisor-Ausfall.  
+**Speicher** | Keine gemeinsame Festplatte — [synchrone Echtzeit-Replikation ohne Datenverlust](/best-practises/synchronous-replication-vs-asynchronous-replication/) | Keine gemeinsame Festplatte — synchrone Replikation nur der Anwendungsdaten | Erfordert eine gemeinsame Festplatte und ein spezielles externes Festplattengehäuse  
+**Replizierte Daten** | Repliziert mehr Daten (Anwendung + Betriebssystem) | Repliziert nur Anwendungsdaten | Keine Replikation — gemeinsamer Speicher, auf den alle Hosts zugreifen  
+**Wiederherstellungszeit** | Neustart der VM auf Hypervisor 2, wenn Hypervisor 1 ausfällt. Wiederherstellungszeit = Zeit zum Neustart der VM. Failover bei VM-Absturz. | Schnelle Wiederherstellung mit Neustart der Anwendung auf Server 2. Etwa 1 Minute oder weniger ([siehe RTO/RPO hier](/best-practises/what-is-rpo-and-rto-with-examples/)). Erweiterte Anwendungsprüfung und Software-Failover. | Vollständiger VM-Neustart auf einem neuen Hypervisor. Wiederherstellungszeit abhängig von Betriebssystem-Neustart + Anwendungsstart.  
+**Disaster Recovery / Entfernte Standorte** | Kein SAN erforderlich — Replikation in SafeKit über entfernte Standorte integriert | Kein SAN erforderlich — Replikation in SafeKit über entfernte Standorte integriert | Erfordert replizierte Festplattengehäuse über ein SAN oder vSAN  
+**Konfiguration** | Speicherort des VM-Dateiordners definieren, in dem die Anwendung installiert ist. Generische Lösung für jede Anwendung/jedes Betriebssystem. | Zu startende Dienste, zu replizierende Anwendungsordner und eine virtuelle IP-Adresse für Failover in einem [Anwendungsmodul](/solutions/) definieren. | Spezifische IT-Kenntnisse zur Konfiguration des Systems erforderlich  
+**Unterstützte Plattformen** | Funktioniert mit [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/) und [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) (nicht direkt VMware, außer durch Verschachtelung von Hyper-V oder KVM in VMware). | Funktioniert in jeder Infrastruktur: physische Server, VMware, Hyper-V, KVM virtuelle Maschinen, Cloud. | Auf VMware vSphere oder Microsoft Hyper-V Umgebungen beschränkt  
+**IT-Kenntnisse** | Keine speziellen IT-Kenntnisse erforderlich. Automatisches Failover. | Keine speziellen IT-Kenntnisse erforderlich. Automatisches Failover. | Spezifische IT-Kenntnisse zur Konfiguration des Systems erforderlich  
+  
+**Zusammenfassend** ist SafeKit die einzige Lösung, die **sowohl VM-Ebene als auch Anwendungsebene Hochverfügbarkeit ohne gemeinsamen Speicher** bietet. Für maximale Flexibilität und schnellste Wiederherstellungszeiten (etwa 1 Minute) ist Anwendungsebene HA der bevorzugte Ansatz — er funktioniert auf jeder Plattform (physisch, virtuell oder Cloud) und repliziert nur die relevanten Daten. Für Umgebungen, in denen der Schutz der gesamten VM einfacher ist, bietet SafeKits Hyper-V/KVM-Modul eine generische, SAN-lose Alternative zum traditionellen Microsoft Hyper-V Cluster oder VMware HA — und eliminiert die Kosten und Komplexität gemeinsamer Speicherinfrastruktur bei gleichzeitiger Garantie von null Datenverlust durch synchrone Echtzeit-Replikation.
+
+Beachten Sie, dass SafeKit-Lösungen am einfachsten zu implementieren sind, aber auf die **Replikation von [einigen Terabyte](/de/#safekit-ha-limitations) und das Failover von [32 VMs](/de/#safekit-ha-limitations) beschränkt** sind.
+
+
+<!-- END INSERT: insert-safekit-vm-vs-app-ha-comparison-table-en lang="de" display="content" -->
+ 
+
+

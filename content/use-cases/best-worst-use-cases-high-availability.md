@@ -39,97 +39,12 @@ A distributed enterprise deploys [SafeKit in many branches](</use-cases/business
 ##  Worst use cases of SafeKit high availability 
 
 
-<!-- BEGIN INSERT: insert-safekit-usage-en lang="en" display="content" -->
- 
-
-## SafeKit High Availability Limitations {#safekit-ha-limitations}
-
-### Why a replication of a few Tera-bytes?
-
-Resynchronization time after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
-
-  * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
-  * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
-
-
-#### Alternative
-
-  * For a large volume of data, use [external shared storage](</best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
-  * More expensive, more complex.
-
-
-### Why a replication < 1,000,000 files?
-
-  * Resynchronization time performance after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
-  * Time to check each file between both nodes.
-
-
-#### Alternative
-
-  * Put the many files to replicate in a virtual hard disk / virtual machine.
-  * Only the files representing the virtual hard disk / virtual machine will be replicated and resynchronized in this case.
-
-
-### Why a failover ≤ 32 replicated VMs?
-
-  * Each VM runs in an independent mirror module.
-  * Maximum of 32 mirror modules running on the same cluster.
-
-
-#### Alternative
-
-  * Use an external shared storage and another VM clustering solution.
-  * More expensive, more complex.
-
-
-### Why a LAN/VLAN network between remote sites?
-
-  * Automatic failover of the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
-  * Good bandwidth for resynchronization ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
-
-
-#### Alternative
-
-  * Use a [load balancer for the virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
-  * Use backup solutions with asynchronous replication for high latency network.
-
-
-
-<!-- END INSERT: insert-safekit-usage-en lang="en" display="content" -->
+{{%  insert-safekit-usage-en %}}
  
 
 
-<!-- BEGIN INSERT: insert-safekit-hub-en lang="en" display="content" -->
- 
-
-## 🔍 SafeKit High Availability Navigation Hub {#hub}
-
-**Explore SafeKit: Features, technical videos, documentation, and free trial**
-
-Resource Type | Description | Direct Link  
----|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
-  
-
-<!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
+{{%  insert-safekit-hub-en %}}
  
 
 
-<!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
-<div class="button-row">
-  <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
-  <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
-  <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
-</div>
-<!-- END INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
+{{%  insert-safekit-4-buttons-en %}}

@@ -1,0 +1,21 @@
+{{/* Shortcode: insert-vm-vs-app-ha-fr — 1 instances in 1 files */}}
+ 
+
+## Choisir sa stratégie de haute disponibilité : HA VM vs HA applicative {#safekit-ha-redundancy-choices}
+
+SafeKit propose deux approches principales pour assurer la continuité d’activité : la HA des machines virtuelles (VM HA) et la HA applicative. Bien que ces deux méthodes offrent des mécanismes de basculement automatique, elles diffèrent sensiblement par leur périmètre, leurs mécanismes de réplication des données, leur vitesse de reprise et leur compatibilité plateforme. Cette comparaison met en évidence ces différences afin d’identifier la stratégie la plus adaptée à chaque environnement IT, selon que l’on privilégie un support large de la virtualisation ou une reprise applicative fine et rapide.
+
+**Comparaison des fonctionnalités : SafeKit VM HA vs clustering HA applicatif SafeKit**
+
+Critère de comparaison | VM HA avec module SafeKit Hyper-V ou KVM | HA applicative avec modules applicatifs SafeKit  
+---|---|---  
+Schéma de déploiement |  |   
+Périmètre du basculement | SafeKit dans 2 hyperviseurs : réplication et basculement de la VM complète. | SafeKit sur 2 machines virtuelles ou physiques : réplication et basculement au niveau applicatif.  
+Données répliquées | Réplication d’un volume plus important de données (application + système d’exploitation). | Réplication uniquement des données applicatives, réduisant le volume de données.  
+Processus et vitesse de reprise (RTO) | Redémarrage de la VM sur l’hyperviseur 2 si l’hyperviseur 1 tombe. Le temps de reprise dépend du redémarrage de l’OS. Vérification de la VM et mécanisme de basculement. | Temps de reprise rapide avec redémarrage de l’application sur OS2 si le serveur 1 tombe. Typiquement autour d’une minute ou moins (RTO faible). Vérification applicative et basculement logiciel.  
+Installation | L’application est installée une seule fois dans une VM. | L’application est installée sur deux nœuds.  
+Configuration | Solution générique pour toute application / OS exécuté dans la VM. <br>• Ne nécessite pas une connaissance technique de l’application installée dans la VM.<br>• Solution idéale si vous ne connaissez pas le fonctionnement interne de l’application.<br>• Il suffit de définir l’emplacement des fichiers de la VM.  | Nécessite une compréhension technique de l’application elle-même. <br>• Quels services doivent être redémarrés.<br>• Les répertoires applicatifs à répliquer en temps réel.<br>• La configuration d’une adresse IP virtuelle pour le basculement.   
+Compatibilité plateforme | Compatible avec Windows/Hyper-V et Linux/KVM, mais pas avec VMware. | Indépendant de la plateforme ; fonctionne sur machines physiques ou virtuelles, infrastructures cloud et tout hyperviseur, y compris VMware.  
+Cas d’usage idéal | Idéal pour gérer des environnements complexes avec plusieurs applications réparties sur plusieurs VM via une politique HA unique. | Idéal pour intégrer la haute disponibilité directement au sein d’une solution logicielle, indépendamment du matériel ou de l’hyperviseur.  
+  
+

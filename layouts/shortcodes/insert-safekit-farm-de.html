@@ -1,0 +1,65 @@
+{{/* Shortcode: insert-safekit-farm-de — 1 instances in 1 files */}}
+{{/* Parameters: app */}}
+ 
+
+## Wie funktioniert das SafeKit-Cluster im Farm-Modus mit Windows/Linux? {#safekit-farm-cluster}
+
+### Virtuelle IP-Adresse in einem Cluster im Farm-Modus {#virtual-ip-address-farm}
+
+
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="Wie das SafeKit-Cluster im Farm-Modus Netzwerk-Lastverteilung und Failover für Windows/Linux implementiert">
+
+
+In der vorherigen Abbildung läuft die Anwendung Windows/Linux auf 3 Servern (3 ist ein Beispiel, es können auch 2 oder mehr sein). Benutzer sind mit einer virtuellen IP-Adresse verbunden.
+
+Die [virtuelle IP-Adresse](/best-practises/how-a-virtual-ip-address-works/) ist lokal auf jedem Server im Cluster im Farm-Modus konfiguriert.  
+Der eingehende Datenverkehr an die virtuelle IP-Adresse wird von allen Servern empfangen und durch einen Netzwerkfilter im Kernel jedes Servers unter ihnen aufgeteilt.
+
+SafeKit erkennt Hardware- und Softwarefehler, konfiguriert Netzwerkfilter im Falle eines Ausfalls neu und bietet konfigurierbare Anwendungsprüfer (Checkers) sowie Wiederherstellungsskripte.
+
+### Lastverteilung in einem Netzwerkfilter {#network-load-balancing}
+
+Der Netzwerk-Lastverteilungsalgorithmus innerhalb des Netzwerkfilters basiert auf der Identität der Client-Pakete (Client-IP-Adresse, Client-TCP-Port). Abhängig von der Identität des eingehenden Client-Pakets akzeptiert nur ein Filter auf einem Server das Paket; die anderen Filter auf den anderen Servern lehnen es ab.
+
+Sobald ein Paket vom Filter auf einem Server akzeptiert wurde, werden nur die CPU und der Arbeitsspeicher dieses Servers von der Windows/Linux-Anwendung verwendet, die auf die Anfrage des Clients antwortet. Die Ausgangsnachrichten werden direkt vom Anwendungsserver an den Client gesendet.
+
+Wenn ein Server ausfällt, konfiguriert das Farm-Heartbeat-Protokoll die Filter im Netzwerk-Lastverteilungscluster neu, um den Datenverkehr auf den verbleibenden verfügbaren Servern neu auszubalancieren.
+
+### Zustandsbehaftete (stateful) oder zustandslose (stateless) Anwendungen {#stateful-stateless}
+
+Bei einer zustandsbehafteten (stateful) Windows/Linux-Anwendung gibt es eine Sitzungsaffinität (Session Affinity). Derselbe Client muss über mehrere TCP-Sitzungen hinweg mit demselben Server verbunden sein, um seinen Kontext auf dem Server abzurufen. In diesem Fall ist die SafeKit-Lastverteilungsregel auf Basis der Client-IP-Adresse konfiguriert. Dadurch ist derselbe Client über mehrere TCP-Sitzungen hinweg immer mit demselben Server verbunden. Verschiedene Clients werden so auf verschiedene Server in der Farm verteilt.
+
+Bei einer zustandslosen (stateless) Windows/Linux-Anwendung gibt es keine Sitzungsaffinität. Derselbe Client kann über mehrere TCP-Sitzungen hinweg mit verschiedenen Servern in der Farm verbunden sein. Es wird kein Kontext lokal auf einem Server von einer Sitzung zur nächsten gespeichert. In diesem Fall ist die SafeKit-Lastverteilungsregel auf Basis der Identität der TCP-Client-Sitzung konfiguriert. Diese Konfiguration eignet sich am besten für die Verteilung von Sitzungen auf die Server, erfordert jedoch einen TCP-Dienst ohne Sitzungsaffinität.
+
+### Wie konfiguriert man ein SafeKit-Cluster im Farm-Modus für Windows/Linux? {#safekit-farm-cluster-configuration}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web-Konsole: Cluster-Konfiguration im Farm-Modus für Windows/Linux Netzwerk-Lastverteilung und virtuelle IP-Verwaltung.">
+
+
+Das **SafeKit-Cluster im Farm-Modus** ist für hohe Verfügbarkeit und Skalierbarkeit von Diensten ausgelegt. Die Konfiguration konzentriert sich darauf, den eingehenden Datenverkehr gleichzeitig auf beide Knoten zu verteilen:
+
+  * **Lastverteilte Dienste (Registerkarte „Macros“):** Definieren Sie die spezifischen Anwendungsdienste (z. B. Apache, IIS, Nginx), die auf allen Knoten aktiv bleiben sollen.
+  * **Heartbeat-Netzwerk(e):** Kommunikationspfad(e), über die erkannt wird, ob ein Knoten die Farm verlassen hat, was eine sofortige Neuverteilung der Last auslöst.
+  * **Virtuelle IP (Farm VIP):** Im Gegensatz zu einem Spiegel-Cluster (Mirror-Cluster) wird die Farm-VIP mithilfe eines Kernel-Filteralgorithmus zwischen den Knoten geteilt, um den Netzwerkverkehr zu verteilen.
+  * **Lastverteilungsregeln:** Definieren Sie die Richtlinie für die Verkehrsverteilung basierend auf der Quell-IP-Adresse oder dem Quell-Port.
+  * **Prüfer (Checkers):** Überwachen Sie den Zustand der Anwendung und lösen Sie einen automatischen Neustart aus, wenn ein Prozessfehler erkannt wird.
+
+
+### Wie überwacht man ein SafeKit-Cluster im Farm-Modus für Windows/Linux? {#safekit-farm-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit-Konsole: Überwachung eines 2-Knoten-Clusters im Farm-Modus, bei dem beide Windows/Linux-Knoten im UP-Zustand sind mit aktiver Lastverteilung.">
+
+
+Die Überwachung eines Clusters im Farm-Modus bietet Einblick in die **Aktiv-Aktiv (Active-Active)** -Natur der Infrastruktur, bei der alle Knoten zur Leistung der Anwendung beitragen (in diesem Beispiel werden 2 Knoten gezeigt):
+
+  * **UP-Zustand (50 % auf 2 Knoten):** In einer gesunden Farm befinden sich beide Knoten im „UP“-Zustand (50 %), was bedeutet, dass beide aktiv Client-Anfragen über die gemeinsame virtuelle IP-Adresse empfangen und verarbeiten.
+  * **Automatische Neuausbalancierung:** Wenn ein Knoten ausfällt, zeigt die Konsole visuell an, dass der verbleibende Knoten 100 % des Datenverkehrs übernimmt. Es gibt keine „Failover“-Verzögerung, da der überlebende Knoten bereits aktiv ist (abgesehen von einer Erkennungszeit von wenigen Sekunden).
+  * **Knoten-Einfügung:** Wenn ein reparierter Knoten neu gestartet wird, wechselt er vom Zustand „STOP“ in den Zustand „UP“ und beginnt automatisch, seinen Anteil an der Last zu übernehmen, ohne dass ein Administrator eingreifen muss.
+  * **Keine Datensynchronisation:** Beachten Sie, dass es in einem Cluster im Farm-Modus keinen „orangefarbenen“ Resynchronisationszustand gibt, da die Knoten in der Regel zustandslos (stateless) sind oder eine gemeinsame Backend-Datenbank nutzen (die separat in einem Spiegel-Cluster geschützt werden kann).
+
+
+Neben einfachen Statussymbolen bietet die Benutzeroberfläche ein Knotenmanagement mit einem Klick. So können Sie einen Knoten für geplante Wartungsarbeiten manuell stoppen oder starten, während die gemeinsame virtuelle IP-Adresse den Datenverkehr automatisch neu verteilt, ohne die Aktivitäten der Benutzer zu unterbrechen.
+
+

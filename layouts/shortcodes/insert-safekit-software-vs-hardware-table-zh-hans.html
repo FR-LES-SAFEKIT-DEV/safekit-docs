@@ -1,0 +1,21 @@
+{{/* Shortcode: insert-safekit-software-vs-hardware-table-zh-hans — 1 instances in 1 files */}}
+ 
+
+选择合适的高可用性 (HA) 解决方案对于确保业务连续性和最大限度减少停机时间至关重要。本对比直接从技术角度评估了两种主要架构方法：SafeKit 的软件定义无共享 (Shared-Nothing) 集群，与通常依赖硬件、共享磁盘（如 SAN）和复杂配置的传统 HA 方法。这些差异涵盖了部署简易度、数据复制方法、恢复速度 (RTO/RPO) 以及运维复杂度。下表详细列出了关键高可用性主题的核心差异。
+
+**高可用性对比：SafeKit 软件集群 vs. 传统 HA / 硬件集群**
+
+主题 | SafeKit (软件集群 / 主要方法) | 传统 HA / 硬件集群  
+---|---|---  
+**[软件集群 vs. 硬件集群](/best-practises/clustering-software-vs-hardware-clustering/)** |  • 简单的软件集群，只需在两台服务器上安装 SafeKit 软件包  |  • 复杂的硬件集群，需要外部存储或网络负载均衡器   
+**[无共享架构 vs. 共享磁盘集群](/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)** |  • SafeKit 是无共享 (Shared-Nothing) 集群：即使在远程站点也易于部署  |  • 共享磁盘集群的部署过程非常复杂   
+**[应用级高可用 vs. 完整虚拟机高可用](/best-practises/vm-ha-vs-application-ha/)** |  • 应用级 HA 通过应用检查器同时支持硬件故障和软件故障。<br>• 仅重新启动应用程序即可实现快速恢复（RTO 约为 1 分钟或更短）。<br>• 应用级 HA 需要为每个应用程序定义重启脚本以及要复制的目录（SafeKit 应用模块）。  |  • 完整虚拟机 HA 支持硬件故障和部分软件故障（如虚拟机冻结）。<br>• 故障时需重启虚拟机，恢复时间取决于操作系统的重启速度。<br>• 完整虚拟机 HA 无需定义重启脚本（使用 SafeKithyperv.safe或kvm.safe模块）。Hypervisor 通过多个虚拟机实现双活/多活。   
+**[高可用性 vs. 容错系统](/best-practises/high-availability-cluster-vs-fault-tolerant-system/)** |  • SafeKit 无需专用服务器。每台服务器都可以互为对方的故障转移服务器。<br>• 发生软件故障时，可在另一个 OS 环境中重启应用。<br>• 支持逐台服务器平滑升级应用程序和 OS（版本 N 和 N+1 可以共存）。  |  • 备用服务器专门用于执行相同的应用程序，且在指令级别进行同步。<br>• 软件异常会导致两台服务器同时崩溃。<br>• 无法实现平滑升级。<br>• 需要特定的容错硬件或 Hypervisor。   
+**[同步复制 vs. 异步复制](/best-practises/synchronous-replication-vs-asynchronous-replication/)** |  • SafeKit 实现实时同步复制，发生故障时不会丢失任何数据。<br>• 高可用性的先决条件。  |  • 采用异步复制时，发生故障会导致数据丢失。<br>• 不适用于高可用性，仅适用于备份解决方案。   
+**[字节级文件复制 vs. 块级磁盘复制](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)** |  • SafeKit 实现实时的字节级文件复制，只需配置要复制的应用目录即可，甚至可以直接配置在系统盘上。  |  • 块级磁盘复制配置复杂，要求将应用程序数据存放在专用磁盘中。   
+**[心跳、故障转移与仲裁（避免双主节点）](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)** |  • 为避免出现双主节点（Split-Brain），SafeKit 在路由器上配置了一个简单的脑裂检查器。  |  • 为避免出现双主节点，其他集群需要复杂的配置，如第三台机器、专用仲裁盘或专用互联网络。   
+**[虚拟 IP 地址：主/备、网络负载均衡、故障转移](/best-practises/how-a-virtual-ip-address-works/)** |  • 在 SafeKit 集群中，虚拟 IP 地址无需 dedicated 代理服务器，也无需特殊的网络配置。  |  • 其他集群中的虚拟 IP 地址需要特殊的网络配置。（注：SafeKit 提供了适配负载均衡器的健康检查机制）。   
+  
+**总结** ：软件集群（如 SafeKit）与硬件集群（传统共享磁盘/SAN 架构）之间的架构选择，会对部署复杂度、运营成本以及故障恢复效率产生重大影响。这一比较的核心结论在于，高可用性架构正逐渐转向共享无（Shared-Nothing）的应用层高可用方案。此类方案优先实现应用的快速恢复（低 RTO）和灵活部署（即使跨越异地站点），因此通常比高度复杂、依赖专用硬件的集群配置更加简洁且更具韧性。为了在简化管理的同时实现最佳业务连续性，评估基于软件的高可用解决方案至关重要。
+
+

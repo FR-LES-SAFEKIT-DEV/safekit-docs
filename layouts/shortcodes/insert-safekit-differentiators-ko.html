@@ -1,0 +1,121 @@
+{{/* Shortcode: insert-safekit-differentiators-ko — 1 instances in 1 files */}}
+ 
+
+## SafeKit과 기존 고가용성(HA) 클러스터 비교 {#safekit-ha-comparison}
+
+이 비교는 SafeKit과 장애 조치 클러스터(Failover Cluster), 가상화 HA, SQL Always-On과 같은 기존 고가용성(HA) 클러스터 솔루션 간의 근본적인 차이를 보여줍니다. SafeKit은 범용 애플리케이션 이중화를 위한 저복잡도 순수 소프트웨어 솔루션으로 설계되었으며, 기존 HA 메커니즘의 높은 복잡성과 특정 스토리지 요구사항(공유 스토리지, SAN)과 대조됩니다. 
+
+**SafeKit과 기존 고가용성(HA) 클러스터 비교**
+
+솔루션 | 복잡도 | 비고  
+---|---|---  
+장애 조치 클러스터 (Microsoft) | 높음 | 특정 스토리지 필요 (공유 스토리지, SAN)  
+가상화 (VMware HA) | 높음 | 특정 스토리지 필요 (공유 스토리지, SAN, vSAN)  
+SQL Always-On (Microsoft) | 높음 | SQL만 이중화되며, SQL Enterprise Edition 필요  
+SafeKit | 낮음 | 가장 간단하고 범용적이며 순수 소프트웨어 방식. 대용량 데이터 복제에는 부적합.  
+  
+**요약하면** , SafeKit은 SAN(Storage Area Network)과 같은 고가의 전용 하드웨어가 필요 없는 간단한 소프트웨어 기반 미러링 메커니즘을 통해 저복잡도 고가용성을 달성합니다. 이를 통해 복잡한 인프라 변경 없이 애플리케이션 이중화를 신속하게 구현할 수 있는 접근성 높은 솔루션입니다. 
+
+## 아키텍처 차별점: SafeKit 소프트웨어 정의 vs. 하드웨어 HA 클러스터 {#ha-arch-diff}
+
+
+<!-- BEGIN INSERT: insert-safekit-software-vs-hardware-table-en lang="ko" display="content" -->
+ 
+
+올바른 고가용성(High Availability - HA) 솔루션을 선택하는 것은 비즈니스 연속성을 보장하고 다운타임을 최소화하는 데 매우 중요합니다. 본 비교 자료는 SafeKit의 소프트웨어 정의 셰어드 나싱(Shared-Nothing) 클러스터링과, 하드웨어, 공유 디스크(SAN 등) 및 복잡한 설정에 의존하는 전통적인 HA 방식을 직관적으로 비교·분석합니다. 이러한 차이점은 배포의 용이성, 데이터 복제 방식, 복구 속도(RTO/RPO), 그리고 운영 복잡성 전반에 걸쳐 있습니다. 아래 표는 주요 고가용성 주제별 차이점을 상세히 설명합니다.
+
+**고가용성 비교: SafeKit 소프트웨어 클러스터링 vs 전통적인 HA / 하드웨어 클러스터링**
+
+주제 | SafeKit (소프트웨어 클러스터링 / 주요 접근 방식) | 전통적인 HA / 하드웨어 클러스터링  
+---|---|---  
+**[소프트웨어 클러스터링 vs 하드웨어 클러스터링](/best-practises/clustering-software-vs-hardware-clustering/)** |  • 두 대의 서버에 SafeKit 패키지를 설치하기만 하면 되는 단순한 소프트웨어 클러스터  |  • 외부 스토리지나 네트워크 로드 밸런서가 필요한 복잡한 하드웨어 클러스터링   
+**[셰어드 나싱 vs 공유 디스크 클러스터](/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)** |  • SafeKit은 셰어드 나싱(Shared-Nothing) 클러스터로, 원격지 사이트에서도 쉽게 배포 가능  |  • 공유 디스크 클러스터는 배포 구성이 복잡함   
+**[애플리케이션 고가용성 vs 가상 머신 전체 고가용성](/best-practises/vm-ha-vs-application-ha/)** |  • 애플리케이션 체커를 통해 하드웨어 장애 및 소프트웨어 장애를 모두 지원.<br>• 애플리케이션만 재시작하므로 빠른 복구 시간 제공 (RTO 1분 이내 수준).<br>• 애플리케이션 HA는 애플리케이션별 재시작 스크립트 및 복제 대상 폴더(SafeKit 애플리케이션 모듈) 정의 필요.  |  • 전체 가상 머신(VM) HA는 하드웨어 장애 및 멈춤 현상과 같은 일부 소프트웨어 장애를 지원.<br>• 장애 발생 시 VM이 재시작되며, 복구 시간은 OS 재부팅 속도에 의존.<br>• 전체 VM HA에서는 재시작 스크립트 정의가 불필요 (SafeKithyperv.safe또는kvm.safe모듈 사용). 하이퍼바이저는 여러 VM을 통한 액티브/액티브 구조로 작동.   
+**[고가용성 vs 내결함성 (Fault Tolerance)](/best-practises/high-availability-cluster-vs-fault-tolerant-system/)** |  • SafeKit은 전용 서버가 필요 없음. 각서버가 서로의 페일오버(Failover) 서버 역할 수행 가능.<br>• 다른 OS 환경에서 재시작하여 소프트웨어 장애에 대응.<br>• 서버별로 애플리케이션 및 OS의 롤링 업그레이드 가능 (N 버전과 N+1 버전의 공존 가능).  |  • 명령어 수준에서 동기화되는 동일한 애플리케이션 실행 전용 세컨더리 서버 필요.<br>• 소프트웨어 예외 장애 발생 시 두 서버에서 동시에 문제 발생.<br>• 롤링 업그레이드 불가능.<br>• 특수 내결함성 하드웨어 또는 하이퍼바이저 필요.   
+**[동기식 복제 vs 비동기식 복제](/best-practises/synchronous-replication-vs-asynchronous-replication/)** |  • SafeKit은 실시간 동기식 복제를 구현하여 장애 발생 시 데이터 손실 제로 달성.<br>• 고가용성 구현을 위한 필수 전제 조건.  |  • 비동기식 복제는 장애 발생 시 데이터 손실 발생.<br>• 고가용성에는 적합하지 않으며 백업 솔루션 용도로 사용.   
+**[바이트 레벨 파일 복제 vs 블록 레벨 디스크 복제](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)** |  • SafeKit은 실시간 바이트 레벨 파일 복제를 구현하며, 시스템 디스크 내에 있더라도 복제할 애플리케이션 디렉터리를 지정하는 것만으로 손쉽게 설정 가능.  |  • 블록 레벨 디스크 복제는 설정을 위한 구성이 복잡하며 애플리케이션 데이터를 전용 디스크에 배치해야 함.   
+**[2개의 마스터 노드 발생 방지를 위한 하트비트, 페일오버 및 쿼럼](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)** |  • 2개의 마스터(스플릿 브레인) 발생을 방지하기 위해 SafeKit은 라우터에 설정하는 간단한 스플릿 브레인 체커를 제공.  |  • 2개의 마스터를 방지하기 위해 다른 클러스터는 제3의 머신, 전용 쿼럼 디스크 또는 전용 상호 연결 전용선 등의 복잡한 구성 필요.   
+**[가상 IP 주소: 프라이머리/세컨더리, 네트워크 로드 밸런싱, 페일오버](/best-practises/how-a-virtual-ip-address-works/)** |  • SafeKit 클러스터에서는 가상 IP 주소를 위한 전용 프록시 서버나 특별한 네트워크 구성이 불필요.  |  • 다른 클러스터에서는 가상 IP 주소를 위한 특별한 네트워크 설정 필요 (참고: SafeKit은 로드 밸런서에 맞춤화된 헬스 체크 기능 제공).   
+  
+**요약하면** , 소프트웨어 클러스터링(SafeKit 등)과 하드웨어 클러스터링(전통적인 공유 디스크/SAN 기반 아키텍처) 사이의 아키텍처 선택은 구축 복잡성, 운영 비용 및 장애 복구 효율성에 큰 영향을 미칩니다. 이 비교의 핵심 결론은 공유 디스크에 의존하지 않는 공유 없음(Shared-Nothing) 아키텍처와 애플리케이션 수준의 고가용성(HA)으로의 전환입니다. 이러한 접근 방식은 애플리케이션의 신속한 복구(낮은 RTO)와 유연한 구축(원격 사이트 간 구성 포함)을 우선시하며, 그 결과 하드웨어에 크게 의존하는 복잡한 클러스터 구성보다 더 간결하고 탄력적인 솔루션을 제공하는 경우가 많습니다. 관리 복잡성을 줄이면서 최대의 비즈니스 연속성을 확보하려면 소프트웨어 기반 접근 방식을 검토하는 것이 필수적입니다.
+
+
+<!-- END INSERT: insert-safekit-software-vs-hardware-table-en lang="ko" display="content" -->
+ 
+
+## SafeKit 미러 클러스터의 주요 차별점 {#safemirr-diff}
+
+
+<!-- BEGIN INSERT: insert-safekit-mirror-comparison-table-en lang="ko" display="content" -->
+ 
+
+올바른 데이터 복제 방식을 선택하는 것은 비즈니스 연속성을 보장하는 데 매우 중요합니다. 이 비교에서는 SafeKit 미러 클러스터의 실시간 파일 복제와 데이터베이스 수준 복제, 디스크 복제, 공유 디스크 솔루션, 내결함성 시스템 등 기존 대안 간의 주요 차별화 요소를 설명합니다.
+
+**SafeKit 미러 클러스터: 대체 복제 및 클러스터링 방식 대비 장점**
+
+특성 | SafeKit 장점 | 대안의 한계  
+---|---|---  
+**[3개 제품을 1개로](/best-practises/clustering-software-vs-hardware-clustering/)** | Windows 및 Linux에서 외부 공유/복제 스토리지, 로드 밸런싱 장비, OS 및 데이터베이스 엔터프라이즈 에디션 비용을 절감합니다. 동기식 실시간 파일 복제, 장애 모니터링, 자동 재시작, 가상 IP 페일오버 등 모든 클러스터링 기능을 포함합니다. | 기존 방식은 스토리지 복제, 로드 밸런싱, 클러스터링에 별도의 제품이 필요하여 비용과 복잡성이 증가합니다.  
+**[매우 간단한 구성](/solutions/)** | 애플리케이션 모듈을 통한 구성. 새로운 서비스와 복제 디렉토리를 쉽게 추가할 수 있습니다. 모두 중앙 집중식 웹 콘솔로 관리. 도메인 컨트롤러나 Active Directory가 필요 없습니다. | Microsoft 클러스터 및 유사 솔루션은 복잡한 Active Directory 구성과 도메인 컨트롤러가 필요합니다.  
+**[동기식 복제](/best-practises/synchronous-replication-vs-asynchronous-replication/)** | 실시간 복제는 동기식으로 장애 시 데이터 손실이 없습니다(RPO = 0). | 비동기식 복제는 장애 발생 시 아직 복제되지 않은 최근 트랜잭션을 잃을 수 있습니다.  
+**[완전 자동 페일백](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step3)** | 장애 후 서버가 재시작되면 복제 페일백이 완전히 자동으로 수행됩니다. 장애 서버는 나머지 서버의 애플리케이션을 중지하지 않고 클러스터에 재통합됩니다. | 대부분의 복제 솔루션(특히 데이터베이스 수준)은 수동 재동기화가 필요합니다. 페일백 중에 애플리케이션이 중지될 수도 있습니다.  
+**[모든 유형의 데이터 복제](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step1)** | 복제는 데이터베이스뿐만 아니라 복제가 필요한 모든 파일에 대해 작동합니다. | 데이터베이스 수준 복제는 데이터베이스만 보호하며 구성 파일, 로그 또는 기타 애플리케이션 데이터는 보호하지 않습니다.  
+**[파일 복제 vs. 디스크 복제](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/)** | 복제는 시스템 디스크를 포함하여 어디에나 위치할 수 있는 파일 디렉토리를 기반으로 합니다. | 디스크 복제는 전용 파티션과 데이터를 저장하기 위한 특별한 애플리케이션 구성이 필요합니다.  
+**[파일 복제 vs. 공유 디스크](/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/)** | 공유 인프라 없이 두 개의 원격 사이트에 서버를 배포할 수 있습니다. | 공유 디스크 솔루션은 물리적 근접성이 필요하며 원격 사이트를 지원할 수 없습니다.  
+**[원격 사이트 및 가상 IP](/best-practises/how-a-virtual-ip-address-works/)** | 모든 클러스터링 기능이 원격 사이트의 2대 서버에서 작동합니다. 확장 LAN은 레이어 2 VIP 리라우팅을 지원합니다. 서로 다른 IP 네트워크의 경우 SafeKit 헬스 체크를 통한 로드 밸런서로 VIP를 관리합니다. | 많은 클러스터링 솔루션은 원격 사이트 페일오버를 지원하지 않거나 예측 불가능한 복구 시간을 가진 복잡한 DNS 리다이렉션이 필요합니다.  
+**[쿼럼 및 스플릿 브레인](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)** | 2대의 서버만으로 작동합니다. 라우터로의 간단한 스플릿 브레인 체커가 사이트 간 네트워크 격리를 처리합니다. | 대부분의 클러스터링 솔루션은 쿼럼 관리를 위해 3번째 서버가 필요합니다.  
+**[액티브/액티브 클러스터](/architectures/active-active-cluster-real-time-replication/)** | 보조 서버는 전용이 아닙니다. 2개의 서로 다른 미러 모듈로 액티브/액티브 운영이 가능합니다. | [내결함성 시스템](/best-practises/high-availability-cluster-vs-fault-tolerant-system/)은 보조 서버를 명령어 수준에서 동기화된 동일 애플리케이션 실행에 전용화합니다.  
+**[통합 HA 솔루션](/architectures/clustering-software-load-balancing-mirroring/)** | SafeKit은 미러 클러스터(복제 + 페일오버)와 [팜 클러스터(로드 밸런싱 + 페일오버)](/architectures/network-load-balancing-cluster/)를 모두 구현합니다. N-티어 아키텍처를 Windows와 Linux에서 하나의 솔루션으로 고가용성을 실현할 수 있습니다. | 일반적인 아키텍처는 로드 밸런싱, 복제, 페일오버에 서로 다른 기술을 혼합하여 운영 복잡성을 증가시킵니다.  
+**[RTO / RPO](/best-practises/what-is-rpo-and-rto-with-examples/)** | 장애 시 빠른 애플리케이션 재시작: 약 1분 이내. 데이터 손실 제로(동기식 복제). | [전체 VM 복제](/best-practises/vm-ha-vs-application-ha/)(VMware HA, Hyper-V 클러스터)는 새로운 하이퍼바이저에서 전체 OS를 재부팅해야 하므로 복구 시간이 길어집니다.  
+  
+**요약하면** , SafeKit 미러 클러스터는 동기식 파일 복제, 자동 페일오버 및 페일백, 로드 밸런싱, 원격 사이트 지원을 결합한 통합적이고 비용 효율적인 고가용성 솔루션을 제공합니다. 전용 하드웨어, 공유 스토리지, 세 번째 쿼럼 서버가 필요 없습니다. 이러한 단순성은 표준 Windows 및 Linux 서버에서 안정적인 HA가 필요한 소프트웨어 제공업체와 조직에 특히 적합합니다.
+
+
+<!-- END INSERT: insert-safekit-mirror-comparison-table-en lang="ko" display="content" -->
+ 
+
+## SafeKit Farm 클러스터의 주요 차별점 {#safefarm-diff}
+
+SafeKit Farm Cluster는 부하 분산과 빠른 장애 조치가 필수적인 확장 가능한 애플리케이션 환경을 위해 특별히 설계된 고가용성 솔루션입니다. 전용 하드웨어 로드 밸런서나 복잡한 네트워크 구성을 필요로 하는 기존 방식과 달리, SafeKit은 애플리케이션 서버에 직접 설치되는 통합된 소프트웨어 정의 클러스터링 솔루션을 제공합니다. 아래 표는 SafeKit Farm Cluster의 핵심 기능과 고유한 장점을 상세히 설명하며, 네트워크 부하 분산을 어떻게 간소화하고 Windows 및 Linux 플랫폼에서 서비스의 지속적인 가용성을 보장하는지에 초점을 맞추고 있습니다. 
+
+**부하 분산 및 장애 조치를 갖춘 SafeKit Farm Cluster의 핵심 차별화 요소**
+
+장점 | 상세 이점 및 메커니즘  
+---|---  
+[로드 밸런서, 전용 프록시 서버 또는 특수 멀티캐스트 이더넷 주소 불필요](/best-practises/how-a-virtual-ip-address-works/) |  • 이 솔루션은 부하 분산을 구현하기 위해 팜 상위에 로드 밸런서나 전용 프록시 서버가 필요하지 않습니다. SafeKit은 팜의 애플리케이션 서버에 직접 설치됩니다. 부하 분산은 표준 가상 IP 주소/이더넷 MAC 주소를 기반으로 하며, 특별한 네트워크 구성 없이 Windows 및 Linux의 물리적 서버 또는 가상 머신에서 작동합니다<br>• 네트워크 로드 밸런서로는 이를 실현할 수 없습니다<br>• Linux의 전용 프록시로는 이를 실현할 수 없습니다<br>• Windows의특수 멀티캐스트 이더넷 주소로도 이를 실현할 수 없습니다   
+[모든 클러스터링 기능](/architectures/network-load-balancing-cluster/) |  • 이 솔루션은 모든 클러스터링 기능을 포함합니다: 가상 IP 주소, 클라이언트 IP 주소 또는 세션 기반 부하 분산, 서버/네트워크/소프트웨어 장애 모니터링, 빠른 복구 시간의 자동 애플리케이션 재시작, 그리고미러 모듈을 통한 복제 옵션<br>• 다른 부하 분산 솔루션으로는 이를 실현할 수 없습니다. 부하 분산은 가능하지만, 재시작 스크립트와 장애 시 자동 애플리케이션 재시작을 포함하는 완전한 클러스터링 솔루션은 포함하지 않습니다. 복제 옵션도 제공하지 않습니다<br>• 클러스터 구성은 매우 간단하며애플리케이션 모듈을 통해 이루어집니다. Windows에서 도메인 컨트롤러나 Active Directory를 구성할 필요가 없습니다. 이 솔루션은 Windows와 Linux에서 모두 작동합니다   
+[원격 사이트와 가상 IP 주소](/best-practises/how-a-virtual-ip-address-works/) |  • 원격 사이트 간 확장 LAN을 통해 서버가 동일한 IP 네트워크에 연결된 경우, SafeKit의가상 IP 주소는 레이어 2에서 부하 분산이 작동합니다<br>• 원격 사이트 간 서버가 서로 다른 IP 네트워크에 연결된 경우, SafeKit 헬스 체크를 활용하여 로드 밸런서 수준에서 가상 IP 주소를 구성할 수 있습니다. 이를 통해 부하 분산뿐만 아니라 SafeKit의 모든 클러스터링 기능, 특히 애플리케이션 서버에서 핵심 애플리케이션의 모니터링 및 자동 복구를 구현할 수 있습니다   
+[통합 고가용성 솔루션](/architectures/clustering-software-load-balancing-mirroring/) |  • SafeKit은 부하 분산과 장애 조치를 갖춘 팜 클러스터를 구현합니다. 또한복제와 장애 조치를 갖춘 미러 클러스터도 구현합니다.<br>• 따라서 N-tier 아키텍처를 Windows와 Linux에서 동일한 솔루션으로 고가용성과 부하 분산을 구현할 수 있습니다(SafeKit 콘솔 또는 명령줄 인터페이스를 통한 동일한 설치, 구성, 관리). 이는 시장에서 유일무이합니다<br>• 부하 분산, 복제, 장애 조치를 위해 서로 다른 기술을 혼합한 아키텍처로는 이를 실현할 수 없습니다   
+  
+**요약하면** , SafeKit Farm Cluster는 부하 분산과 고가용성에 대한 통합적이고 소프트웨어 기반의 접근 방식을 제공하여 복잡성과 비용을 획기적으로 줄입니다. 표준 가상 IP 주소를 사용하여 부하 분산과 장애 조치를 애플리케이션 서버 계층에 직접 내장함으로써, 외부 네트워크 하드웨어(로드 밸런서 또는 프록시)와 전용 멀티캐스트 구성의 필요성을 제거합니다. 이 통합 접근 방식은 완전한 N-tier HA를 위한 미러 클러스터와의 결합 능력과 더불어, SafeKit을 다양한 환경에서 확장 가능하고 탄력적인 애플리케이션 제공을 실현하는 독보적으로 간단하고 포괄적인 솔루션으로 만들어 줍니다. 
+
+## VM 고가용성: SafeKit의 SAN-Less vs. Hyper-V/VMware HA {#safe-vmha-diff}
+
+
+<!-- BEGIN INSERT: insert-safekit-vm-vs-app-ha-comparison-table-en lang="ko" display="content" -->
+ 
+
+고가용성을 구현할 때, **가상 머신(VM) 수준** 에서 보호할지 **애플리케이션 수준** 에서 보호할지가 핵심 결정 사항입니다. VM 수준 HA는 전체 가상 머신을 복제하고 페일오버하여 모든 애플리케이션에 대한 범용 솔루션을 제공합니다. 애플리케이션 수준 HA는 애플리케이션 데이터와 서비스만을 대상으로 하여 더 빠른 복구 시간과 낮은 리소스 사용량을 달성합니다. SafeKit은 **두 가지 접근 방식 모두** 를 유일하게 제공하며, 어느 경우에도 공유 스토리지(SAN)가 필요 없어 인프라와 복구 요구 사항에 가장 적합한 방식을 선택할 수 있습니다.
+
+**SafeKit VM HA vs 애플리케이션 HA vs 기존 Hyper-V 클러스터 &amp; VMware HA**
+
+기준 | SafeKit Hyper-V 또는 KVM 모듈의 VM HA | SafeKit 애플리케이션 모듈의 애플리케이션 HA | Microsoft Hyper-V 클러스터 &amp; VMware HA  
+---|---|---|---  
+**아키텍처** | SafeKit을 2개의 하이퍼바이저에 설치. 전체 VM의 복제 및 페일오버. | SafeKit을 2개의 가상 또는 물리 머신에 설치. 애플리케이션 수준의 복제 및 페일오버. | 공유 스토리지가 있는 하이퍼바이저 클러스터. 하이퍼바이저 장애 시 다른 호스트에서 VM 재시작.  
+**스토리지** | 공유 디스크 불필요 — [데이터 손실 없는 동기식 실시간 복제](/best-practises/synchronous-replication-vs-asynchronous-replication/) | 공유 디스크 불필요 — 애플리케이션 데이터만 동기식 복제 | 공유 디스크와 전용 외부 디스크 베이 필요  
+**복제 데이터** | 더 많은 데이터 복제 (애플리케이션 + OS) | 애플리케이션 데이터만 복제 | 복제 없음 — 모든 호스트가 공유 스토리지에 접근  
+**복구 시간** | 하이퍼바이저 1 장애 시 하이퍼바이저 2에서 VM 재부팅. 복구 시간 = VM 재부팅 시간. VM 장애 시 페일오버. | 서버 2에서 애플리케이션 재시작으로 빠른 복구. 약 1분 이내 ([RTO/RPO 보기](/best-practises/what-is-rpo-and-rto-with-examples/)). 고급 애플리케이션 체커 및 소프트웨어 페일오버. | 새 하이퍼바이저에서 전체 VM 재부팅. 복구 시간은 OS 재부팅 + 애플리케이션 시작에 따라 결정.  
+**재해 복구 / 원격 사이트** | SAN 불필요 — SafeKit에 원격 사이트 간 복제 내장 | SAN 불필요 — SafeKit에 원격 사이트 간 복제 내장 | SAN 또는 vSAN을 통한 디스크 베이 복제 필요  
+**구성** | 애플리케이션이 설치된 VM 파일 폴더 위치 정의. 모든 애플리케이션/OS에 대한 범용 솔루션. | 재시작할 서비스, 복제할 애플리케이션 폴더, 페일오버를 위한 가상 IP 주소를 [애플리케이션 모듈](/solutions/)에서 정의. | 시스템 구성에 전문 IT 기술 필요  
+**지원 플랫폼** | [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/)와 [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) 지원 (VMware 직접 지원 안 함, VMware 내에서 Hyper-V 또는 KVM 중첩 제외). | 모든 인프라에서 작동: 물리 서버, VMware, Hyper-V, KVM 가상 머신, 클라우드. | VMware vSphere 또는 Microsoft Hyper-V 환경으로 제한  
+**IT 기술** | 전문 IT 기술 불필요. 자동 페일오버. | 전문 IT 기술 불필요. 자동 페일오버. | 시스템 구성에 전문 IT 기술 필요  
+  
+**요약하면** , SafeKit은 **공유 스토리지 없이 VM 수준과 애플리케이션 수준 고가용성을 모두 제공하는** 유일한 솔루션입니다. 최대 유연성과 가장 빠른 복구 시간(약 1분)을 위해 애플리케이션 수준 HA가 선호되는 접근 방식입니다 — 모든 플랫폼(물리, 가상 또는 클라우드)에서 작동하며 중요한 데이터만 복제합니다. 전체 VM을 보호하는 것이 더 간단한 환경에서는 SafeKit의 Hyper-V/KVM 모듈이 기존 Microsoft Hyper-V 클러스터나 VMware HA에 대한 범용 SAN 불필요 대안을 제공하여 동기식 실시간 복제를 통한 데이터 손실 제로를 보장하면서 공유 스토리지 인프라의 비용과 복잡성을 제거합니다.
+
+SafeKit 솔루션은 구현이 가장 간단하지만 **[수 테라바이트](/ko/#safekit-ha-limitations)의 복제와 [32개 VM](/ko/#safekit-ha-limitations)의 페일오버로 제한**됩니다.
+
+
+<!-- END INSERT: insert-safekit-vm-vs-app-ha-comparison-table-en lang="ko" display="content" -->
+ 
+
+

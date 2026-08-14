@@ -1,0 +1,21 @@
+{{/* Shortcode: insert-vm-vs-app-ha-en — 1 instances in 1 files */}}
+ 
+
+## Choosing Your High Availability Strategy: VM HA vs. Application HA {#safekit-ha-redundancy-choices}
+
+SafeKit offers two primary approaches to ensure business continuity: Virtual Machine HA (VM HA) and Application HA. While both methods provide automatic failover capabilities, they differ significantly in their scope, data replication mechanisms, recovery speed, and platform compatibility. This comparison breaks down these differences to help identify the optimal strategy for specific IT environments, whether the focus is on broad virtualization support or granular, high-speed application recovery.
+
+**Feature Comparison: SafeKit VM HA vs. SafeKit Application HA Clustering**
+
+Comparison Feature | VM HA with SafeKit Hyper-V or KVM Module | Application HA with SafeKit Application Modules  
+---|---|---  
+Deployment Diagram |  |   
+Failover Scope | SafeKit inside 2 hypervisors: replication and failover of the full VM. | SafeKit inside 2 virtual or physical machines: replication and failover at the application level.  
+Data Replicated | Replicates more data (Application + Operating System). | Replicates only application data, leading to smaller data volumes.  
+Recovery Process &amp; Speed (RTO) | Reboot of VM on hypervisor 2 if hypervisor 1 crashes. Recovery time depends on the OS reboot. VM checker and failover mechanism. | Quick recovery time with restart of App on OS2 if server 1 crashes. Typically around 1 minute or less (low RTO). Application checker and software failover.  
+Installation | Application is installed once in a single VM. | Application is installed on two nodes.  
+Configuration | Generic solution for any application / OS running in the VM. <br>• It does not require a technical understanding of the application installed within the VM.<br>• It is the best solution if you do not know how the application works.<br>• You only need to define the location of the VM files.  | It requires a technical understanding of the application itself. <br>• Which services need to be restarted.<br>• The specific application folders that need real-time replication.<br>• The configuration of a virtual IP address for failover.   
+Platform Compatibility | Works with Windows/Hyper-V and Linux/KVM but is not compatible with VMware. | Platform agnostic; works with physical or virtual machines, cloud infrastructure, and any hypervisor, including VMware.  
+Ideal For | Ideal for managing complex environments with multiple applications across several VMs through a single HA policy. | Ideal for embedding high availability directly into a software solution, independent of the underlying hardware or hypervisor.  
+  
+

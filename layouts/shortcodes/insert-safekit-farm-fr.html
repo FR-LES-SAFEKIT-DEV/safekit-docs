@@ -1,0 +1,65 @@
+{{/* Shortcode: insert-safekit-farm-fr — 3 instances in 3 files */}}
+{{/* Parameters: app */}}
+ 
+
+## Comment fonctionne le cluster SafeKit en mode farm avec Windows/Linux ? {#safekit-farm-cluster}
+
+### Adresse IP virtuelle dans un cluster en mode farm {#virtual-ip-address-farm}
+
+
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="Comment le cluster SafeKit en mode farm implémente la répartition de charge réseau et le basculement de Windows/Linux">
+
+
+Sur la figure précédente, l'application Windows/Linux s'exécute sur les 3 serveurs (3 est un exemple, cela peut être 2 ou plus). Les utilisateurs sont connectés à une adresse IP virtuelle.
+
+L'[adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/) est configurée localement sur chaque serveur du cluster en mode farm.  
+Le trafic entrant vers l'adresse IP virtuelle est reçu par tous les serveurs et réparti entre eux par un filtre réseau situé dans le noyau (kernel) de chaque serveur.
+
+SafeKit détecte les pannes matérielles et logicielles, reconfigure les filtres réseau en cas de défaillance, et propose des scripts de vérification (checkers) et de reprise applicative configurables.
+
+### Répartition de charge dans un filtre réseau {#network-load-balancing}
+
+L'algorithme de répartition de charge réseau au sein du filtre réseau est basé sur l'identité des paquets clients (adresse IP du client, port TCP du client). En fonction de l'identité du paquet client entrant, un seul filtre dans un serveur accepte le paquet ; les autres filtres des autres serveurs le rejettent.
+
+Une fois qu'un paquet est accepté par le filtre d'un serveur, seuls le processeur (CPU) et la mémoire de ce serveur sont utilisés par l'application Windows/Linux qui répond à la demande du client. Les messages de sortie sont envoyés directement depuis le serveur d'application vers le client.
+
+Si un serveur tombe en panne, le protocole de battement de cœur (heartbeat) de la ferme reconfigure les filtres du cluster de répartition de charge réseau afin de rééquilibrer le trafic sur les serveurs disponibles restants.
+
+### Applications avec ou sans état (Stateful ou Stateless) {#stateful-stateless}
+
+Avec une application Windows/Linux avec état (stateful), il y a une affinité de session. Un même client doit être connecté au même serveur sur plusieurs sessions TCP afin de récupérer son contexte sur ce serveur. Dans ce cas, la règle de répartition de charge SafeKit est configurée sur l'adresse IP du client. Ainsi, un même client est toujours connecté au même serveur sur ses différentes sessions TCP. Les différents clients sont quant à eux répartis sur les différents serveurs de la ferme (farm).
+
+Avec une application Windows/Linux sans état (stateless), il n'y a pas d'affinité de session. Un même client peut être connecté à différents serveurs de la ferme sur plusieurs sessions TCP. Aucun contexte n'est stocké localement sur un serveur d'une session à l'autre. Dans ce cas, la règle de répartition de charge SafeKit est configurée sur l'identifiant de la session TCP du client. Cette configuration est la plus optimale pour répartir les sessions entre les serveurs, mais elle nécessite un service TCP sans affinité de session.
+
+### Comment configurer un cluster SafeKit en mode farm pour Windows/Linux ? {#safekit-farm-cluster-configuration}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="Console Web SafeKit : Configuration du cluster en mode farm pour la répartition de charge réseau et la gestion de l'IP virtuelle de Windows/Linux.">
+
+
+Le **cluster SafeKit en mode farm** est conçu pour la haute disponibilité et la scalabilité des services. La configuration se concentre sur la répartition du trafic entrant simultanément sur les deux nœuds :
+
+  * **Services avec répartition de charge (onglet Macros) :** Définissez les services applicatifs spécifiques (par exemple, Apache, IIS, Nginx) devant rester actifs sur tous les nœuds.
+  * **Réseau(x) de Heartbeat (battement de cœur) :** Chemin(s) de communication utilisé(s) pour détecter si un nœud a quitté la ferme, déclenchant ainsi une redistribution immédiate de la charge.
+  * **IP virtuelle (Farm VIP) :** Contrairement à un cluster miroir, la VIP Farm est partagée entre les nœuds à l'aide d'un algorithme de filtrage du noyau (kernel) pour répartir le trafic réseau.
+  * **Règles de répartition de charge :** Définissez la politique de distribution du trafic en fonction de l'adresse IP source ou du port.
+  * **Checkers (vérificateurs) :** Surveillent l'état de santé de l'application et déclenchent un redémarrage automatique si une défaillance de processus est détectée.
+
+
+### Comment superviser un cluster SafeKit en mode farm pour Windows/Linux ? {#safekit-farm-cluster-monitoring}
+
+
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="Console SafeKit : Supervision d'un cluster en mode farm à 2 nœuds montrant les deux nœuds de Windows/Linux à l'état UP avec répartition de charge active.">
+
+
+La supervision d'un cluster en mode farm offre une visibilité sur la nature **Actif-Actif** de l'infrastructure, où tous les nœuds contribuent aux performances de l'application (l'exemple ici présente 2 nœuds) :
+
+  * **État UP (50 % sur 2 nœuds) :** Dans une ferme saine, les deux nœuds sont à l'état « UP » (50 %), ce qui signifie qu'ils reçoivent et traitent activement les requêtes des clients via l'IP virtuelle partagée.
+  * **Rééquilibrage automatique :** Si un nœud tombe en panne, la console affiche visuellement le nœud restant prenant 100 % du trafic. Il n'y a pas de délai de basculement (failover), car le nœud survivant est déjà actif (hormis un temps de détection de quelques secondes).
+  * **Insertion de nœud :** Lorsqu'un nœud réparé est redémarré, il passe de l'état « STOP » à l'état « UP » et commence automatiquement à recevoir sa part de la charge, sans intervention de l'administrateur.
+  * **Pas de synchronisation de données :** Notez que dans un cluster en mode farm, il n'y a pas d'état de resynchronisation « Orange », car les nœuds sont censés être sans état ou partager une base de données interne (qui peut être protégée séparément dans un cluster miroir).
+
+
+Au-delà des simples icônes d'état, l'interface permet une gestion des nœuds en un clic, vous offrant la possibilité d'arrêter ou de démarrer manuellement un nœud pour une maintenance planifiée tandis que l'IP virtuelle partagée redistribue automatiquement le trafic sans interrompre l'activité des utilisateurs.
+
+

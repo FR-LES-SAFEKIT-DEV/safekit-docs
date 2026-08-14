@@ -1,0 +1,56 @@
+{{/* Shortcode: insert-safekit-usage-ko — 1 instances in 1 files */}}
+ 
+
+## SafeKit 고가용성(HA) 제한 사항 {#safekit-ha-limitations}
+
+### 왜 몇 테라바이트를 복제해야 하나요?
+
+장애 발생 후 재동기화 시간 ([단계 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
+
+  * 1 Gb/s 네트워크 ≈ 1 테라바이트에 약 3시간.
+  * 10 Gb/s 네트워크 ≈ 1 테라바이트에 약 1시간 또는 디스크 쓰기 성능에 따라 더 짧음.
+
+
+#### 대안
+
+  * 대용량 데이터의 경우 [외부 공유 스토리지](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/) 사용.
+  * 더 비싸고, 더 복잡함.
+
+
+### 왜 1,000,000개 미만의 파일을 복제해야 하나요?
+
+  * 장애 발생 후 재동기화 성능 ([단계 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
+  * 두 노드 간 각 파일을 확인하는 데 걸리는 시간.
+
+
+#### 대안
+
+  * 복제할 많은 파일을 가상 하드 디스크/가상 머신에 넣으세요.
+  * 이 경우 가상 하드 디스크/가상 머신을 나타내는 파일만 복제 및 재동기화됩니다.
+
+
+### 왜 장애 조치 시 ≤ 32개의 복제된 VM인가요?
+
+  * 각 VM은 독립적인 미러 모듈에서 실행됩니다.
+  * 동일한 클러스터에서 최대 32개의 미러 모듈 실행 가능.
+
+
+#### 대안
+
+  * 외부 공유 스토리지와 다른 VM 클러스터링 솔루션 사용.
+  * 더 비싸고, 더 복잡함.
+
+
+### 왜 원격 사이트 간 LAN/VLAN 네트워크인가요?
+
+  * 동일한 서브넷의 두 노드에서 [가상 IP 주소](/best-practises/how-a-virtual-ip-address-works/) 자동 장애 조치.
+  * 재동기화에 좋은 대역폭 ([단계 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))과 [동기식 복제](/best-practises/synchronous-replication-vs-asynchronous-replication/)에 좋은 지연 시간 (일반적으로 왕복 2ms 미만).
+
+
+#### 대안
+
+  * 두 노드가 서로 다른 서브넷에 있는 경우 [가상 IP 주소용 로드 밸런서](/best-practises/how-a-virtual-ip-address-works/) 사용 (SafeKit에서 지원, 특히 클라우드 환경).
+  * 지연 시간이 높은 네트워크에서는 비동기식 복제를 사용하는 백업 솔루션 사용.
+
+
+
