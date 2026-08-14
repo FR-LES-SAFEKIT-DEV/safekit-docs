@@ -10,16 +10,17 @@ layout: userguide
 
 <div class="userguide-container single-frame">
   <div class="doc-container">
-    <iframe id="doc-frame" name="doc" src="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.htm"></iframe>
+    <iframe id="doc-frame" name="doc" src="/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.htm"></iframe>
   </div>
 </div>
 
 <script>
   const docFrame = document.getElementById('doc-frame');
+  const docBaseSrc = docFrame.getAttribute('src');
 
   function loadDocumentWithHash() {
     const hash = window.location.hash;
-    docFrame.src = '/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.htm' + hash;
+    docFrame.src = docBaseSrc + hash;
   }
 
   function enhanceFrame(frameName) {

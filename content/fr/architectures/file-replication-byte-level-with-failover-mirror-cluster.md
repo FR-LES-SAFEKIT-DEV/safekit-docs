@@ -31,12 +31,12 @@ topics: "Fonctionnement du cluster miroir SANless SafeKit avec Windows/Linux, Ta
 En regroupant la **Haute Disponibilité** dans une couche logicielle légère, SafeKit offre une **redondance et une continuité d'activité de classe entreprise pour Windows/Linux** à une fraction du coût des suites de clustering traditionnelles.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg" width="512" alt="Architecture de cluster SafeKit HA pour Windows/Linux fournissant une IP virtuelle, un basculement automatique, un retour automatique après panne et une réplication en temps réel">
+<img src="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg" width="512" alt="Architecture de cluster SafeKit HA pour Windows/Linux fournissant une IP virtuelle, un basculement automatique, un retour automatique après panne et une réplication en temps réel">
 
  **Cluster miroir SafeKit HA pour Windows/Linux**  
 
 
-<a class="btn-quick-install" href="/safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/">⚡ Guide d'installation rapide d'un cluster miroir pour Windows/Linux ></a>
+<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/">⚡ Guide d'installation rapide d'un cluster miroir pour Windows/Linux ></a>
 ## Table des matières {#toc}
 
   * [Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité sans SAN pour Windows/Linux ?](<#safekit-mirror-ha-cluster>)
@@ -80,7 +80,7 @@ SafeKit se différencie des clusters traditionnels pour Windows/Linux grâce à 
 
   * **Réplication synchrone avec zéro perte de données :** SafeKit implémente une réplication 100 % synchrone, garantissant une intégrité totale des données pour les applications transactionnelles. En cas de défaillance, il n'y a **aucune perte de données (RPO=0)**. De plus, SafeKit est capable de répliquer non seulement les bases de données de Windows/Linux, mais aussi **tous les autres dossiers de données** (journaux, fichiers de configuration, etc.), assurant ainsi le miroir complet de tout l'environnement.
   * **Clustering simplifié à 2 nœuds :** Contrairement aux clusters standards qui nécessitent souvent un « témoin » (un 3e nœud, disque ou partage de fichiers) pour maintenir un quorum, SafeKit offre une haute disponibilité complète avec seulement deux serveurs redondants, réduisant ainsi les coûts et la complexité de l'infrastructure.  
-[En savoir plus sur notre mécanisme de heartbeat et de quorum](</safekit-docs/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
+[En savoir plus sur notre mécanisme de heartbeat et de quorum](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
   * **Gestion unifiée :** Les administrateurs peuvent gérer le basculement de Windows/Linux, la réplication des données et la supervision via une console SafeKit unique. Cela rend la haute disponibilité accessible aux équipes sans expertise spécialisée en administration de cluster.
   * **Modules de surveillance personnalisés (Checkers) :** SafeKit va au-delà de la simple surveillance des services de base ; il **propose des checkers** pour surveiller l'état de santé du processus de Windows/Linux. Le système est hautement extensible, permettant l'ajout de checkers personnalisés adaptés à votre environnement.
 
@@ -99,7 +99,7 @@ Contrairement aux solutions de haute disponibilité traditionnelles, SafeKit est
 
 ### Est-il possible de mettre en place un cluster miroir Windows/Linux sans compétences en clustering ?
 
-Oui. Cet article explique comment [**implémenter rapidement un cluster miroir Windows/Linux**](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>) sans avoir besoin d'une gestion SAN spécialisée ou de compétences complexes en clustering de haute disponibilité (HA). En utilisant les **scripts de basculement automatisés** de SafeKit pour gérer la réplication et le redémarrage de **Windows/Linux** , vous bénéficiez d'une solution de redondance robuste, nettement plus simple à déployer et à maintenir que les solutions de clustering traditionnelles.
+Oui. Cet article explique comment [**implémenter rapidement un cluster miroir Windows/Linux**](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>) sans avoir besoin d'une gestion SAN spécialisée ou de compétences complexes en clustering de haute disponibilité (HA). En utilisant les **scripts de basculement automatisés** de SafeKit pour gérer la réplication et le redémarrage de **Windows/Linux** , vous bénéficiez d'une solution de redondance robuste, nettement plus simple à déployer et à maintenir que les solutions de clustering traditionnelles.
 
 ### Au-delà de Windows/Linux, quels types d'applications et d'environnements SafeKit peut-il protéger ?
 
@@ -113,7 +113,7 @@ SafeKit est une solution de haute disponibilité polyvalente **compatible à la 
 
 SafeKit propose également des **clusters de type "Farm"** avec des fonctionnalités natives de **répartition de charge réseau et de basculement** (Network Load Balancing and Failover) pour les applications sans état (stateless) telles que les **serveurs Web**.
 
-[Explorez la liste complète des solutions de haute disponibilité supportées ici.](</safekit-docs/solutions/>)
+[Explorez la liste complète des solutions de haute disponibilité supportées ici.](</solutions/>)
 
 
 <!-- BEGIN INSERT: insert-safekit-mirror-en lang="fr" display="content" -->
@@ -123,13 +123,13 @@ SafeKit propose également des **clusters de type "Farm"** avec des fonctionnali
 
 ### Étape 1. Réplication en temps réel {#step1}
 
-Le serveur 1 (PRIM) exécute l'application Windows/Linux. Les clients sont connectés à une [adresse IP virtuelle](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>). SafeKit réplique en temps réel via le réseau les modifications apportées à l'intérieur des fichiers.
+Le serveur 1 (PRIM) exécute l'application Windows/Linux. Les clients sont connectés à une [adresse IP virtuelle](</best-practises/how-a-virtual-ip-address-works/>). SafeKit réplique en temps réel via le réseau les modifications apportées à l'intérieur des fichiers.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Réplication de fichiers au niveau octet dans un cluster miroir Windows/Linux">
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Réplication de fichiers au niveau octet dans un cluster miroir Windows/Linux">
 
 
-La réplication est [synchrone](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/>), sans perte de données en cas de panne, contrairement à la réplication asynchrone.
+La réplication est [synchrone](</best-practises/synchronous-replication-vs-asynchronous-replication/>), sans perte de données en cas de panne, contrairement à la réplication asynchrone.
 
 Il vous suffit de configurer les noms des répertoires à répliquer dans SafeKit. Il n'y a aucun prérequis sur l'organisation des disques. Les répertoires peuvent être situés sur le disque système.
 
@@ -140,7 +140,7 @@ En cas de panne du serveur 1, le serveur 2 prend le relais (failover). SafeKit b
 L'application retrouve sur le serveur 2 des fichiers à jour répliqués par SafeKit. L'application continue de s'exécuter sur le serveur 2 en modifiant localement ses fichiers, qui ne sont alors plus répliqués vers le serveur 1.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Basculement de Windows/Linux dans un cluster miroir">
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Basculement de Windows/Linux dans un cluster miroir">
 
 
 Le temps de basculement est égal au temps de détection de la panne (30 secondes par défaut) plus le temps de démarrage de l'application.
@@ -152,7 +152,7 @@ Le retour après panne (failback) consiste à redémarrer le serveur 1 après av
 SafeKit resynchronise automatiquement les fichiers, en mettant à jour uniquement les fichiers modifiés sur le serveur 2 pendant que le serveur 1 était arrêté.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Retour après panne dans un cluster miroir Windows/Linux">
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Retour après panne dans un cluster miroir Windows/Linux">
 
 
 Le retour après panne se déroule sans perturber l'application Windows/Linux, qui peut continuer à s'exécuter sur le serveur 2.
@@ -162,7 +162,7 @@ Le retour après panne se déroule sans perturber l'application Windows/Linux, q
 Après la réintégration, les fichiers repassent en mode miroir, comme à l'étape 1. Le système se retrouve en mode haute disponibilité, avec l'application Windows/Linux s'exécutant sur le serveur 2 et SafeKit répliquant les mises à jour de fichiers vers le serveur 1.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Retour au fonctionnement normal dans un cluster miroir Windows/Linux">
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Retour au fonctionnement normal dans un cluster miroir Windows/Linux">
 
 
 Si l'administrateur souhaite que l'application s'exécute sur le serveur 1, cela peut être fait manuellement via la console web au moment opportun, ou automatiquement par configuration.
@@ -170,7 +170,7 @@ Si l'administrateur souhaite que l'application s'exécute sur le serveur 1, cela
 ### Comment configurer un cluster miroir SafeKit pour Windows/Linux ? {#safekit-mirror-cluster-configure}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
 
 
 La **console web SafeKit** offre une interface intuitive pour orchestrer la haute disponibilité de vos applications critiques. En quelques étapes seulement, vous pouvez configurer un **cluster miroir SafeKit** pour garantir la continuité d'activité :
@@ -182,12 +182,12 @@ La **console web SafeKit** offre une interface intuitive pour orchestrer la haut
   * **Checkers (Vérificateurs) :** surveillez l'état de santé de l'application et déclenchez une récupération automatique si une défaillance de processus est détectée.
 
 
-Le cluster SafeKit inclut un vérificateur de split-brain dédié pour résoudre les problèmes d'isolement réseau sans nécessiter de troisième machine témoin (witness) ou de réseau de heartbeat supplémentaire. En savoir plus sur le [heartbeat, le basculement et le quorum dans un cluster](</safekit-docs/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
+Le cluster SafeKit inclut un vérificateur de split-brain dédié pour résoudre les problèmes d'isolement réseau sans nécessiter de troisième machine témoin (witness) ou de réseau de heartbeat supplémentaire. En savoir plus sur le [heartbeat, le basculement et le quorum dans un cluster](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
 ### Comment surveiller un cluster miroir SafeKit pour Windows/Linux ? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
 
 
 La **console de gestion SafeKit** offre une vue unifiée de votre infrastructure de haute disponibilité. Elle permet aux administrateurs de surveiller l'**état opérationnel** du cluster et de suivre la synchronisation des données en temps réel.
@@ -249,17 +249,17 @@ Dans cette vidéo, découvrez comment SafeKit implémente un **cluster miroir HA
 
 Type de ressource | Description | Lien direct  
 ---|---|---  
-**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</safekit-docs/fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
-**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</safekit-docs/fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
-**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</safekit-docs/fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
-**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</safekit-docs/fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
-**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
-**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</safekit-docs/fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
-**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</safekit-docs/fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
-**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</safekit-docs/fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
-**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</safekit-docs/fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
-**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</safekit-docs/fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
-**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
+**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
+**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
+**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
+**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
+**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
+**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
+**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
+**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
+**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
+**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
+**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
   
 
 <!-- END INSERT: insert-safekit-hub-fr lang="fr" display="content" -->
@@ -269,7 +269,7 @@ Type de ressource | Description | Lien direct
 <!-- BEGIN INSERT: insert-safekit-4-buttons-fr lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>

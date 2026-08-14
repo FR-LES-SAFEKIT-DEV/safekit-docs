@@ -25,12 +25,12 @@ While the standard open-source stack (MetalLB + Longhorn) for K3s is powerful fo
   * **IT Generalist Friendly:** Replaces complex **infrastructure YAML** for networking and storage with a **simple web GUI** and automated deployment scripts, leaving you to focus only on your applications.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg" width="512" alt="SafeKit architecture diagram for 2-node K3s high availability featuring integrated Virtual IP, real-time replication, and automatic failover.">
+<img src="/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg" width="512" alt="SafeKit architecture diagram for 2-node K3s high availability featuring integrated Virtual IP, real-time replication, and automatic failover.">
 
  **Shared-nothing high availability (HA) for 2-node K3s clusters**  
 
 
-<a class="btn-quick-install" href="/safekit-docs/quick-install/safekit-quick-installation-guide-with-kubernetes/">⚡ Quick Kubernetes HA cluster installation guide ></a>
+<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-kubernetes/">⚡ Quick Kubernetes HA cluster installation guide ></a>
 ## Table of Contents {#toc}
 
   * [How the SafeKit software simply implements a Kubernetes K3s high availability cluster?](<#safekit-mirror-k3s-cluster>)
@@ -74,7 +74,7 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
 
 SafeKit also provides **Farm Clusters** with native **Network Load Balancing and Failover** for stateless applications like **Web Servers**.
 
-[Explore the full list of supported HA solutions here.](</safekit-docs/solutions/>)
+[Explore the full list of supported HA solutions here.](</solutions/>)
 
 ### How SafeKit Achieves K3s High Availability? {#safekit-k3s-architecture-table}
 
@@ -95,20 +95,20 @@ Configuration Database |  • Hosts Virtual IP and MariaDB Port<br>• Manages a
 This stage illustrates the high-availability architecture between **Server 1 (PRIM)** and **Server 2 (SECOND)**. Both servers run K3s master and agent components as defined in the [architecture table](<#safekit-k3s-architecture-table>).
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="File replication at byte level in a Kubernetes K3s mirror cluster">
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="File replication at byte level in a Kubernetes K3s mirror cluster">
 
 
-Currently, the **Virtual IP (VIP)** , **NFS persistent storage** , and **MariaDB** are active on Server 1 (PRIM) only. The K3s master components on both nodes synchronize with each other by accessing the cluster state via the Virtual IP and the MariaDB port. SafeKit implements [synchronous replication](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/>) of MariaDB and persistent NFS files, ensuring **zero data loss (RPO = 0)** in the event of a failure.
+Currently, the **Virtual IP (VIP)** , **NFS persistent storage** , and **MariaDB** are active on Server 1 (PRIM) only. The K3s master components on both nodes synchronize with each other by accessing the cluster state via the Virtual IP and the MariaDB port. SafeKit implements [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) of MariaDB and persistent NFS files, ensuring **zero data loss (RPO = 0)** in the event of a failure.
 
 The K3s masters distribute the workload across both nodes (or more) by communicating directly with the K3s agents. External clients connect to the  
-[cluster's Virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) on the PRIM node. Using standard Kubernetes mechanisms, the K3s master relays traffic to pods distributed across the nodes. Similarly, pods access their **persistent volumes (PVs)** on the PRIM server via the Virtual IP and NFS port.
+[cluster's Virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) on the PRIM node. Using standard Kubernetes mechanisms, the K3s master relays traffic to pods distributed across the nodes. Similarly, pods access their **persistent volumes (PVs)** on the PRIM server via the Virtual IP and NFS port.
 
 ### Step 2: Automatic Failover and Service Continuity
 
 When **Server 1 (PRIM)** fails, **Server 2 (SECOND)** automatically takes over the cluster operations to ensure continuity.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover in a Kubernetes K3S mirror cluster">
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover in a Kubernetes K3S mirror cluster">
 
 
 SafeKit detects the failure and immediately migrates the cluster's **Virtual IP address** to Server 2. It then promotes the local **MariaDB** and **NFS services** to an active state. Because of the synchronous replication performed in Step 1, all MariaDB databases and NFS Persistent Volume (PV) files are already up-to-date on Server 2, ensuring zero data loss.
@@ -123,7 +123,7 @@ While Server 1 is offline, MariaDB and NFS services continue to run on Server 2,
 **Failback** occurs when Server 1 is restarted after the initial issue has been resolved. SafeKit automatically resynchronizes the MariaDB and NFS files, updating only the data modified on Server 2 during the downtime. This reintegration process is **non-disruptive** ; K3s master and agent components continue to run on Server 2 without interruption. 
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Automatic resynchronization and failback in a K3s mirror cluster">
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Automatic resynchronization and failback in a K3s mirror cluster">
 
  
 
@@ -138,7 +138,7 @@ SafeKit optimizes recovery time based on how the server was stopped:
 Following reintegration, the cluster returns to **full mirror mode** , mirroring the state described in Step 1. The system is once again in a highly available state: **MariaDB** and **NFS services** remain active on Server 2, while SafeKit performs real-time replication of all file updates back to Server 1. 
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Return to normal operation in a Kubernetes K3s mirror cluster">
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Return to normal operation in a Kubernetes K3s mirror cluster">
 
  
 
@@ -149,7 +149,7 @@ If the administrator prefers the MariaDB and NFS services to run on Server 1 (re
 ### How to configure a SafeKit Mirror Cluster? {#safekit-mirror-cluster-configure}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
 
 
 The **SafeKit web console** provides an intuitive interface to orchestrate high availability for your critical applications. In just a few steps, you can configure a **SafeKit mirror cluster** to ensure business continuity:
@@ -161,12 +161,12 @@ The **SafeKit web console** provides an intuitive interface to orchestrate high 
   * **Checkers:** Monitor the application's health and trigger automatic recovery if a process failure is detected.
 
 
-The SafeKit cluster includes a dedicated split-brain checker to resolve network isolation issues without the need for a third witness machine or an additional heartbeat network. Learn more about [heartbeat, failover and quorum in a cluster](</safekit-docs/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
+The SafeKit cluster includes a dedicated split-brain checker to resolve network isolation issues without the need for a third witness machine or an additional heartbeat network. Learn more about [heartbeat, failover and quorum in a cluster](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
 ### How to monitor a SafeKit mirror cluster? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png" width="478" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.">
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png" width="478" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.">
 
 
 The **SafeKit management console** offers a unified view of your high availability infrastructure. It allows administrators to monitor the **operational state** of the cluster and track data synchronization in real-time.
@@ -189,7 +189,7 @@ Beyond simple status icons, the interface provides **one-click failover orchestr
 
 ### Why a replication of a few Tera-bytes?
 
-Resynchronization time after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
+Resynchronization time after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
 
   * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
   * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
@@ -197,13 +197,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 #### Alternative
 
-  * For a large volume of data, use [external shared storage](</safekit-docs/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
+  * For a large volume of data, use [external shared storage](</best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
   * More expensive, more complex.
 
 
 ### Why a replication < 1,000,000 files?
 
-  * Resynchronization time performance after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
+  * Resynchronization time performance after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
   * Time to check each file between both nodes.
 
 
@@ -227,13 +227,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 ### Why a LAN/VLAN network between remote sites?
 
-  * Automatic failover of the [virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
-  * Good bandwidth for resynchronization ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
+  * Automatic failover of the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
+  * Good bandwidth for resynchronization ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
 
 
 #### Alternative
 
-  * Use a [load balancer for the virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
+  * Use a [load balancer for the virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
   * Use backup solutions with asynchronous replication for high latency network.
 
 
@@ -281,17 +281,17 @@ While this video demonstrates SafeKit's high availability for Microsoft SQL Serv
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -301,7 +301,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

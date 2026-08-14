@@ -18,7 +18,7 @@ topics: "High Availability Quick Installation Guide for Cloud, SafeKit High Avai
 
 This guide explains how to set up a **farm cluster** for Cloud using SafeKit, ensuring network load balancing and automatic failover.
 
-For help, you can use [SafeKit AI 🤖](</safekit-docs/resources/safekit-support/>).
+For help, you can use [SafeKit AI 🤖](</resources/safekit-support/>).
 
 ### 1\. Overview
 
@@ -46,7 +46,7 @@ For help, you can use [SafeKit AI 🤖](</safekit-docs/resources/safekit-support
 
 ### Why a replication of a few Tera-bytes?
 
-Resynchronization time after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
+Resynchronization time after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
 
   * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
   * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
@@ -54,13 +54,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 #### Alternative
 
-  * For a large volume of data, use [external shared storage](</safekit-docs/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
+  * For a large volume of data, use [external shared storage](</best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
   * More expensive, more complex.
 
 
 ### Why a replication < 1,000,000 files?
 
-  * Resynchronization time performance after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
+  * Resynchronization time performance after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
   * Time to check each file between both nodes.
 
 
@@ -84,13 +84,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 ### Why a LAN/VLAN network between remote sites?
 
-  * Automatic failover of the [virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
-  * Good bandwidth for resynchronization ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
+  * Automatic failover of the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
+  * Good bandwidth for resynchronization ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
 
 
 #### Alternative
 
-  * Use a [load balancer for the virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
+  * Use a [load balancer for the virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
   * Use backup solutions with asynchronous replication for high latency network.
 
 
@@ -104,7 +104,7 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 ## Overview of the SafeKit / Cloud solution
 
-The solution is described here: **[SafeKit: Cloud Load Balancing& Application High Availability Farm Cluster](</safekit-docs/solutions/cloud-load-balancing-cluster-failover/>)**.
+The solution is described here: **[SafeKit: Cloud Load Balancing& Application High Availability Farm Cluster](</solutions/cloud-load-balancing-cluster-failover/>)**.
 
 ## Installation of the SafeKit / Cloud solution on Windows and Linux (farm.safe)
 
@@ -125,7 +125,7 @@ You must configure the Cloud load balancer with:
   * URL /var/modules/farm/ready.txt (if farm is the module name that you will deploy later)
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Do not configure a virtual IP address and load balancing rules at step 4 in the step by step configuration below. The virtual IP address and load balancing rules are already set in the Cloud load balancer. Setting a virtual IP and load balancing rules at step 4 is useful for on-premise configuration only.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Do not configure a virtual IP address and load balancing rules at step 4 in the step by step configuration below. The virtual IP address and load balancing rules are already set in the Cloud load balancer. Setting a virtual IP and load balancing rules at step 4 is useful for on-premise configuration only.</span></div>
 
 ### Configuration of the Cloud network security
 
@@ -152,7 +152,7 @@ Note: the free version includes all SafeKit features. At the end of the trial, y
 Antiviruses may face detection challenges with SafeKit due to its close integration with the OS, virtual IP mechanisms, real-time replication and restart of critical services. 
 
 
-[ Download SafeKit (Windows) > ](</safekit-docs/resources/safekit-free-trial/>)
+[ Download SafeKit (Windows) > ](</resources/safekit-free-trial/>)
 
 
 <!-- END INSERT: insert-safekit-installation-package-windows-en lang="en" display="content" querystring="app=&amp;mod=mirror" -->
@@ -170,7 +170,7 @@ Antiviruses may face detection challenges with SafeKit due to its close integrat
   * Set the password for the web console and the default user **admin**. **Set the same password on all nodes.**
 
 
-[ Download SafeKit (Linux) > ](</safekit-docs/resources/safekit-free-trial/>)
+[ Download SafeKit (Linux) > ](</resources/safekit-free-trial/>)
 
 
 <!-- END INSERT: insert-safekit-installation-package-linux-en lang="en" display="content" querystring="app=&amp;mod=mirror" -->
@@ -187,7 +187,7 @@ Note: the generic **farm.safe** module that you are going to configure is delive
 ### Prerequisites
 
   * application installed on 2 nodes (or more).
-  * Virtual IP load balancing requires nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported (except with [cloud load balancers](</safekit-docs/resources/safekit-user-guide-82/#Cloud>)).
+  * Virtual IP load balancing requires nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported (except with [cloud load balancers](</resources/safekit-user-guide-82/#Cloud>)).
 
 
 ### 1\. Launch the SafeKit console
@@ -199,30 +199,30 @@ Note: the generic **farm.safe** module that you are going to configure is delive
 You can also run the console in a browser on a workstation external to the cluster.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>The configuration of SafeKit is done on both nodes from a single browser.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>The configuration of SafeKit is done on both nodes from a single browser.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>To secure the web console, see <a href="/safekit-docs/resources/safekit-user-guide-82/#https">11. Securing the SafeKit web service</a> in the User's Guide.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>To secure the web console, see <a href="/resources/safekit-user-guide-82/#https">11. Securing the SafeKit web service</a> in the User's Guide.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/01-login-large.png" alt="Start the SafeKit web console to configure the  cluster">
+<img src="/wp-content/uploads/2024/03/01-login-large.png" alt="Start the SafeKit web console to configure the  cluster">
 
 
 ### 2\. Configure node addresses
 
-  * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for [troubleshooting](</safekit-docs/resources/safekit-user-guide-82/#Troubleshooting>).
+  * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for [troubleshooting](</resources/safekit-user-guide-82/#Troubleshooting>).
   * Then, click on `Save and apply` to save the configuration.
   * Check the `Success` ✅ message on both nodes.
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you want, you can add a new `LAN and nodes` ( first ➕) to create a second heartbeat and a dedicated replication network.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you want, you can add a new `LAN and nodes` ( first ➕) to create a second heartbeat and a dedicated replication network.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you click on `Advanced configuration`, the `cluster.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you click on `Advanced configuration`, the `cluster.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/02-cluster-edit.png" alt="Enter the nodes of the  cluster">
+<img src="/wp-content/uploads/2024/03/02-cluster-edit.png" alt="Enter the nodes of the  cluster">
 
 
 ### 3\. Select a module
@@ -230,13 +230,13 @@ You can also run the console in a browser on a workstation external to the clust
   * In `New module`, click on the `farm.safe` module.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>In the blue banner at the top, 🛜 `node1` represents the console connection node. This node relays requests to `node2` when required.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>In the blue banner at the top, 🛜 `node1` represents the console connection node. This node relays requests to `node2` when required.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>The console looks for `xxx.safe` in the `Application_Modules/generic/` directory on the connection node (`node1`) if you placed a module there during installation.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>The console looks for `xxx.safe` in the `Application_Modules/generic/` directory on the connection node (`node1`) if you placed a module there during installation.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/04-module-new.png" alt="Choose the module for ">
+<img src="/wp-content/uploads/2024/03/04-module-new.png" alt="Choose the module for ">
 
 
 ### 4\. Configure the module
@@ -254,16 +254,16 @@ Application clients must be configured with the virtual IP address (or the DNS n
 For example, if a process name is displayed in `Monitored processes/services`, it will be monitored with a restart action in case of failure. Configuring a wrong process name will cause the module to stop right after its start.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you click on `Advanced configuration`, the `userconfig.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes with the restart scripts.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you click on `Advanced configuration`, the `userconfig.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes with the restart scripts.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>In a cloud deployment, you do not need to configure a virtual IP address and load balancing rules in SafeKit. The virtual IP and load balancing rules are managed at the <a href="/safekit-docs/resources/safekit-user-guide-82/#Cloud">cloud load balancer level</a>.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>In a cloud deployment, you do not need to configure a virtual IP address and load balancing rules in SafeKit. The virtual IP and load balancing rules are managed at the <a href="/resources/safekit-user-guide-82/#Cloud">cloud load balancer level</a>.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on Linux).</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on Linux).</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg" alt="Enter the  farm module settings">
+<img src="/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg" alt="Enter the  farm module settings">
 
 
 ### 5\. Edit scripts (optional)
@@ -274,7 +274,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
   * Additionally, `start_both.ps1` checks the startup of each service and stops the module if any service fails to start correctly.
 
 
-<img src="/safekit-docs/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png" alt="Enter the  module settings">
+<img src="/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png" alt="Enter the  module settings">
 
 
 ### 6\. Communication encryption (optional)
@@ -282,7 +282,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
   * Keep encryption of communication between nodes.
 
 
-<img src="/safekit-docs/wp-content/uploads/2025/05/07-module-encryption-1.png" alt="Communication encryption of the  module">
+<img src="/wp-content/uploads/2025/05/07-module-encryption-1.png" alt="Communication encryption of the  module">
 
 
 ### 7\. Save and apply
@@ -290,7 +290,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
   * `Save and apply` the configuration and scripts on both nodes.
 
 
-<img src="/safekit-docs/wp-content/uploads/2025/05/08-module-save-1.png" alt="Save and apply the  module configuration">
+<img src="/wp-content/uploads/2025/05/08-module-save-1.png" alt="Save and apply the  module configuration">
 
 
 ### 8\. Verify successful configuration
@@ -299,7 +299,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
 
 
-<img src="/safekit-docs/wp-content/uploads/2025/05/09-module-save-check-1.png" alt="Check the  module configuration success">
+<img src="/wp-content/uploads/2025/05/09-module-save-check-1.png" alt="Check the  module configuration success">
 
 
 ### 9\. Start the farm cluster on node 1 and node 2
@@ -307,7 +307,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
   * ⋯ `Start` the farm cluster as shown in the image.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png" alt="Start the  cluster on both nodes">
+<img src="/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png" alt="Start the  cluster on both nodes">
 
 
 ### 10\. Wait for the transition to UP (green) / UP (green)
@@ -315,17 +315,17 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 Node 1 and node 2 should reach the UP (green) state, which means that the `start_both` script has been executed on node 1 and node 2.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If UP (green) is not reached or if the application is not started, analyze why with the <a href="/safekit-docs/wp-content/uploads/2024/03/37-module-log-farm-script.png">module log 🖼️</a> of node 1 or node 2.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If UP (green) is not reached or if the application is not started, analyze why with the <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">module log 🖼️</a> of node 1 or node 2.</span></div>
 
   * Click the 🔍 **log** icon of `node1` or `node2` to open the module log and look for error messages such as a checker detecting an error and stopping the module.
   * Click on `start_both` in the log: output messages of the script are displayed on the right and errors can be detected such as a service incorrectly started.
   * Use the SafeKit AI 🤖 for assistance with log messages.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>Note that you have a 🕒 **<a href="/safekit-docs/wp-content/uploads/2026/05/safekit-console-timeline.png">timeline 🖼️</a>** that can be helpful to understand what happens in the cluster.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>Note that you have a 🕒 **<a href="/wp-content/uploads/2026/05/safekit-console-timeline.png">timeline 🖼️</a>** that can be helpful to understand what happens in the cluster.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/15-monitoring-up-up.png" alt="The  cluster is started">
+<img src="/wp-content/uploads/2024/03/15-monitoring-up-up.png" alt="The  cluster is started">
 
 
 ### 11\. Testing
@@ -343,10 +343,10 @@ You should see a mosaic of colors depending on nodes answering to HTTP requests.
   * Check that there is no more TCP connections on the stopped node and on the virtual IP address.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>Find more details, along with videos, in the <a href="/safekit-docs/resources/safekit-on-line-training/">SafeKit Online Training</a>.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>Find more details, along with videos, in the <a href="/resources/safekit-on-line-training/">SafeKit Online Training</a>.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/appli-19.png" alt="Test the virtual IP address of  with the mosaic">
+<img src="/wp-content/uploads/2024/03/appli-19.png" alt="Test the virtual IP address of  with the mosaic">
 
 
 ### 12\. Support
@@ -354,10 +354,10 @@ You should see a mosaic of colors depending on nodes answering to HTTP requests.
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span><a href="/safekit-docs/resources/safekit-support/">More information on the support here</a>.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span><a href="/resources/safekit-support/">More information on the support here</a>.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/32-snapshots-farm.png" alt="Take the  snaphots for support">
+<img src="/wp-content/uploads/2024/03/32-snapshots-farm.png" alt="Take the  snaphots for support">
 
 
 
@@ -383,8 +383,8 @@ In this video, learn how to implement a **virtual IP address** to provide a sing
 
 ### Step-by-Step Implementation
 
-  * [Read the guide on setting up a farm cluster on Windows](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
-  * [Read the guide on setting up a farm cluster on Linux](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/>)
+  * [Read the guide on setting up a farm cluster on Windows](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
+  * [Read the guide on setting up a farm cluster on Linux](</quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/>)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
@@ -403,17 +403,17 @@ In this video, learn how to implement a **virtual IP address** to provide a sing
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -423,7 +423,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

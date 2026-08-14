@@ -12,7 +12,7 @@ topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster de haute disponib
 
 ## Qu'est-ce qu'une adresse IP virtuelle dans un cluster de haute disponibilité ? {#virtual-ip-definition}
 
-  * **Définition :** Une **adresse IP virtuelle (VIP)** est une adresse réseau flottante utilisée dans les [clusters de haute disponibilité](</safekit-docs/fr/>) pour garantir un accès continu aux applications. Contrairement aux adresses IP standards, une VIP n'est pas liée à une interface matérielle physique spécifique, mais bascule entre les nœuds du cluster pour maintenir un point d'entrée unique et persistant pour les clients.
+  * **Définition :** Une **adresse IP virtuelle (VIP)** est une adresse réseau flottante utilisée dans les [clusters de haute disponibilité](</fr/>) pour garantir un accès continu aux applications. Contrairement aux adresses IP standards, une VIP n'est pas liée à une interface matérielle physique spécifique, mais bascule entre les nœuds du cluster pour maintenir un point d'entrée unique et persistant pour les clients.
   * **Aucun matériel requis :** SafeKit gère la VIP au niveau logiciel via l'**ARP gratuit (GARP)** , éliminant ainsi le besoin de répartiteurs de charge (load balancers) externes dans les environnements de même sous-réseau.
   * **Transparence applicative :** En se liant à une VIP locale, les applications restent "inconscientes" des événements de basculement (failover), préservant ainsi les adresses IP sources des clients et les configurations de sécurité existantes.
   * **Reprise après sinistre :** L'utilisation d'un **LAN étendu (Extended LAN)** permet d'utiliser la même VIP sur des centres de données distants, simplifiant le basculement de site à site par rapport au routage DNS complexe et aux délais de mise en cache TTL.
@@ -29,7 +29,7 @@ topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster de haute disponib
   * **Cloud et multi-sous-réseaux :** Gestion via les tests de santé (health checks) des répartiteurs de charge externes (AWS, Azure, GCP) pour rediriger le trafic entre différents sous-réseaux.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/vip-3-1024-fr.jpg" width="512" alt="Schéma comparatif du comportement de l'IP virtuelle (VIP) dans Evidian SafeKit : Clusters Mirror avec IP flottante sur le nœud actif vs Clusters Farm avec répartition de charge réseau sur tous les nœuds.">
+<img src="/wp-content/uploads/2026/01/vip-3-1024-fr.jpg" width="512" alt="Schéma comparatif du comportement de l'IP virtuelle (VIP) dans Evidian SafeKit : Clusters Mirror avec IP flottante sur le nœud actif vs Clusters Farm avec répartition de charge réseau sur tous les nœuds.">
 
   
 
@@ -38,7 +38,7 @@ topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster de haute disponib
 <!-- BEGIN INSERT: insert-safekit-4-buttons-fr lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>
@@ -67,7 +67,7 @@ Pour les organisations exigeant une continuité d'activité sans couture au sein
 ### Cluster miroir local : Basculement transparent à 2 nœuds Windows ou Linux
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png" width="256" alt="Mécanisme de basculement d'IP virtuelle (VIP) SafeKit entre deux serveurs dans le même sous-réseau">
+<img src="/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png" width="256" alt="Mécanisme de basculement d'IP virtuelle (VIP) SafeKit entre deux serveurs dans le même sous-réseau">
 
  Aliasing VIP SafeKit et mapping d'adresse MAC Dans un **cluster miroir SafeKit** standard où les deux nœuds résident dans le même sous-réseau local, la haute disponibilité est assurée par une **IP virtuelle (VIP) définie par logiciel**. Contrairement aux solutions matérielles, SafeKit gère cette VIP directement dans la pile réseau du système d'exploitation. Cette VIP agit comme un point d'entrée logique persistant pour les clients, superposé aux adresses IP physiques uniques du Serveur 1 et du Serveur 2 via l'**aliasing IP**. 
 
@@ -98,7 +98,7 @@ En s'appuyant sur l'infrastructure réseau externe, la solution **SafeKit Softwa
 ### Clusters miroir multi-sous-réseaux : implémentation Windows et Linux
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/05/vip-mirror-different-subnet.png" width="256" alt="Schéma d'un basculement d'IP virtuelle via un répartiteur de charge entre deux sous-réseaux différents">
+<img src="/wp-content/uploads/2023/05/vip-mirror-different-subnet.png" width="256" alt="Schéma d'un basculement d'IP virtuelle via un répartiteur de charge entre deux sous-réseaux différents">
 
  Routage du trafic multi-sous-réseaux via les tests de santé (Health Checks) du répartiteur de charge
 
@@ -120,9 +120,9 @@ Lors d'un **événement de basculement (failover)** , SafeKit bascule instantan�
 
 Ce modèle « Load Balancer + Health Check » est le standard de l'industrie pour la **Haute Disponibilité dans le Cloud**. Il est essentiel pour l'implémentation de SafeKit dans des environnements tels que :
 
-  * [**Amazon AWS**](</safekit-docs/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) (AWS Network Load Balancer)
-  * [**Microsoft Azure**](</safekit-docs/solutions/azure-high-availability-cluster-synchronous-replication-failover/>) (Azure Load Balancer)
-  * [**Google Cloud (GCP)**](</safekit-docs/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
+  * [**Amazon AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) (AWS Network Load Balancer)
+  * [**Microsoft Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) (Azure Load Balancer)
+  * [**Google Cloud (GCP)**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
 
 
 #### Considérations réseau : Répartiteur de charge vs LAN étendu
@@ -140,7 +140,7 @@ Pour les environnements à fort trafic, le **Guide d'architecture : Haute dispon
 ### Architecture de cluster de ferme : Équilibrage de charge sur des nœuds Windows ou Linux
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/05/vip-farm-same-subnet.png" width="256" alt="Schéma d'une IP virtuelle (VIP) avec équilibrage de charge au sein d'un cluster de ferme sur le même sous-réseau">
+<img src="/wp-content/uploads/2023/05/vip-farm-same-subnet.png" width="256" alt="Schéma d'une IP virtuelle (VIP) avec équilibrage de charge au sein d'un cluster de ferme sur le même sous-réseau">
 
  Traitement distribué du trafic via filtrage au niveau du noyau Dans un **cluster de ferme avec équilibrage de charge** , une adresse IP virtuelle (VIP) est utilisée pour répartir les requêtes clients sur plusieurs serveurs simultanément. Bien que cet exemple présente deux nœuds, l'architecture évolue pour supporter des fermes de serveurs plus importantes. Dans une configuration sur le même sous-réseau, la VIP est configurée sur la carte Ethernet de **chaque serveur** du cluster via l'aliasing IP. 
 
@@ -170,7 +170,7 @@ Le **Guide d'architecture : Mise à l'échelle des clusters de fermes dans des e
 ### Clusters de fermes multi-sous-réseaux : Évolutivité Windows et Linux multi-nœuds
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/05/vip-farm-different-subnet.png" width="256" alt="Schéma d'un cluster de ferme à charge équilibrée opérant sur deux sous-réseaux différents">
+<img src="/wp-content/uploads/2023/05/vip-farm-different-subnet.png" width="256" alt="Schéma d'un cluster de ferme à charge équilibrée opérant sur deux sous-réseaux différents">
 
  Distribution du trafic global via l'équilibrage de charge externe Lorsque les nœuds de la ferme sont répartis sur **différents sous-réseaux** (courant dans les déploiements cloud Multi-AZ), l'**IP Virtuelle (VIP)** est gérée par un **Load Balancer (LB)** externe. Le LB détient la VIP et dirige le trafic entrant vers les adresses IP physiques des serveurs situés dans leurs sous-réseaux respectifs. 
 
@@ -196,9 +196,9 @@ SafeKit fournit une **URL de Health Check** en temps réel sur chaque serveur de
 
 Cette architecture est le modèle fondamental pour les **clusters de fermes Cloud** , garantissant que si un sous-réseau ou une zone entière devient hors ligne, les nœuds restants continuent de gérer la charge. Ceci est supporté nativement par : 
 
-  * [**Amazon AWS**](</safekit-docs/solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer)
-  * [**Microsoft Azure**](</safekit-docs/solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer)
-  * [**Google Cloud (GCP)**](</safekit-docs/solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
+  * [**Amazon AWS**](</solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer)
+  * [**Microsoft Azure**](</solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer)
+  * [**Google Cloud (GCP)**](</solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
 
 
 ## IP virtuelle vs Redirection DNS : pourquoi le basculement DNS échoue souvent {#virtual-ip-vs-dns-redirection-failover}
@@ -211,7 +211,7 @@ S'appuyer sur le DNS pour le basculement (failover) crée souvent un **sentiment
 
 Dans une configuration réseau standard, un **Nom Virtuel** (le nom DNS) fait office de point d'entrée lisible par l'homme pour les utilisateurs. Cependant, pour que les données circulent sur le réseau, ce nom doit être résolu en une adresse **IP Physique** spécifique. 
 
-<img src="/safekit-docs/wp-content/uploads/2025/12/dns-rerouting.png" width="256" alt="Schéma montrant la résolution d'un nom DNS vers l'IP physique 1 dans un cluster à haute disponibilité">
+<img src="/wp-content/uploads/2025/12/dns-rerouting.png" width="256" alt="Schéma montrant la résolution d'un nom DNS vers l'IP physique 1 dans un cluster à haute disponibilité">
 
  Résolution DNS et clients « bloqués » sur l'IP physique 1 dans un cluster à haute disponibilité
 
@@ -270,8 +270,8 @@ Dans cette vidéo, apprenez comment implémenter une **adresse IP virtuelle** po
 
 ### Mise en œuvre étape par étape
 
-  * [Lire le guide de configuration d'un cluster ferme sous Windows](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
-  * [Lire le guide de configuration d'un cluster ferme sous Linux](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/>)
+  * [Lire le guide de configuration d'un cluster ferme sous Windows](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
+  * [Lire le guide de configuration d'un cluster ferme sous Linux](</quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/>)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
@@ -334,17 +334,17 @@ Oui. SafeKit évite la traduction d'adresse réseau source (SNAT). Comme la VIP 
 
 Type de ressource | Description | Lien direct  
 ---|---|---  
-**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</safekit-docs/fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
-**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</safekit-docs/fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
-**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</safekit-docs/fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
-**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</safekit-docs/fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
-**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
-**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</safekit-docs/fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
-**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</safekit-docs/fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
-**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</safekit-docs/fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
-**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</safekit-docs/fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
-**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</safekit-docs/fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
-**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
+**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
+**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
+**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
+**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
+**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
+**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
+**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
+**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
+**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
+**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
+**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
   
 
 <!-- END INSERT: insert-safekit-hub-fr lang="fr" display="content" -->
@@ -354,7 +354,7 @@ Type de ressource | Description | Lien direct
 <!-- BEGIN INSERT: insert-safekit-4-buttons-fr lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>

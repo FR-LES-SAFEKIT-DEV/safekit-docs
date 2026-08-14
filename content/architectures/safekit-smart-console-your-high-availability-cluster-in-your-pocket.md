@@ -29,7 +29,7 @@ Whether you are at your desk or on the move, the smartphone-compatible dashboard
 ### How to configure a SafeKit Mirror Cluster? {#safekit-mirror-cluster-configure}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
 
 
 The **SafeKit web console** provides an intuitive interface to orchestrate high availability for your critical applications. In just a few steps, you can configure a **SafeKit mirror cluster** to ensure business continuity:
@@ -41,12 +41,12 @@ The **SafeKit web console** provides an intuitive interface to orchestrate high 
   * **Checkers:** Monitor the application's health and trigger automatic recovery if a process failure is detected.
 
 
-The SafeKit cluster includes a dedicated split-brain checker to resolve network isolation issues without the need for a third witness machine or an additional heartbeat network. Learn more about [heartbeat, failover and quorum in a cluster](</safekit-docs/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
+The SafeKit cluster includes a dedicated split-brain checker to resolve network isolation issues without the need for a third witness machine or an additional heartbeat network. Learn more about [heartbeat, failover and quorum in a cluster](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
 ### How to monitor a SafeKit mirror cluster? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png" width="478" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.">
+<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png" width="478" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.">
 
 
 The **SafeKit management console** offers a unified view of your high availability infrastructure. It allows administrators to monitor the **operational state** of the cluster and track data synchronization in real-time.
@@ -66,7 +66,7 @@ Beyond simple status icons, the interface provides **one-click failover orchestr
 ### How to configure a SafeKit farm cluster? {#safekit-farm-cluster-configuration}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm cluster configuration for network load balancing and virtual IP management.">
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm cluster configuration for network load balancing and virtual IP management.">
 
 
 The **SafeKit farm cluster** is designed for high availability and scalability of services. The configuration focuses on distributing incoming traffic across both nodes simultaneously:
@@ -81,7 +81,7 @@ The **SafeKit farm cluster** is designed for high availability and scalability o
 ### How to monitor a SafeKit farm cluster? {#safekit-farm-cluster-monitoring}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node Farm cluster showing both nodes in UP state with active load balancing.">
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node Farm cluster showing both nodes in UP state with active load balancing.">
 
 
 Monitoring a farm cluster provides visibility into the **Active-Active** nature of the infrastructure, where all nodes contribute to the application's performance (showing 2 nodes in this example; scalable to additional nodes):
@@ -99,7 +99,7 @@ Beyond simple status icons, the interface provides one-click node management (**
 ### Multi-module visualization within a single cluster {#safekit-multi-module}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg" width="966" alt="SafeKit Web Console: 4 Hyper-V modules deployed on the same 2-nodes cluster.">
+<img src="/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg" width="966" alt="SafeKit Web Console: 4 Hyper-V modules deployed on the same 2-nodes cluster.">
 
 
 When deploying **multiple modules** on a single 2-node cluster, the SafeKit Web Console provides **individual monitoring widgets** for each module. This is particularly valuable for **SafeKit Hyper-V** solutions. 
@@ -118,7 +118,7 @@ This granular visibility ensures that even in high-density environments, you mai
 ### Multi-cluster visualization {#safekit-multi-cluster}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg" width="966" alt="SafeKit Web Console: 4 clusters deployed on 8 servers.">
+<img src="/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg" width="966" alt="SafeKit Web Console: 4 clusters deployed on 8 servers.">
 
 
 When deploying **multiple clusters** across several servers, you can either use multiple browser tabs to connect to each cluster or utilize the console's PWA (Progressive Web App) feature. By using the PWA, you remove the browser's navigation menus, saving screen space to better organize cluster monitoring on your desktop. 
@@ -169,17 +169,17 @@ By combining real-time PWA alerts with intelligent email grouping, SafeKit provi
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -189,7 +189,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

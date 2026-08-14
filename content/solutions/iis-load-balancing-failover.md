@@ -27,11 +27,11 @@ A SafeKit Farm Cluster for IIS is a software-defined Network Load Balancing (NLB
   * **OEM High Availability:** Enables software vendors to embed native clustering into their applications, providing a "cluster-ready" and software-only product without extra infrastructure.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg" width="512" alt="SafeKit High Availability IIS Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing">
+<img src="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg" width="512" alt="SafeKit High Availability IIS Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing">
 
 **SafeKit Farm NLB Cluster for IIS**
 
-<a class="btn-quick-install" href="/safekit-docs/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/">⚡ Quick farm cluster installation guide for IIS ></a>
+<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/">⚡ Quick farm cluster installation guide for IIS ></a>
 ## Table of Contents {#toc}
 
   * [How the SafeKit software simply implements a IIS Network Load Balancing (NLB) cluster?](<#safekit-farm-ha-cluster>)
@@ -78,7 +78,7 @@ This deep monitoring allows the system to detect "zombie" states—where the ser
 
 ### Is it possible to set up a IIS farm cluster without clustering skills?
 
-Yes. This article explains how to [**quickly implement a IIS farm cluster**](</safekit-docs/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/>) without the need for specialized and complex networking skills. By using SafeKit’s **virtual IP** to handle the network load balancing of **IIS** , you get a robust scalable solution that is significantly simpler to deploy and maintain than traditional NLB solutions.
+Yes. This article explains how to [**quickly implement a IIS farm cluster**](</quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/>) without the need for specialized and complex networking skills. By using SafeKit’s **virtual IP** to handle the network load balancing of **IIS** , you get a robust scalable solution that is significantly simpler to deploy and maintain than traditional NLB solutions.
 
 ### Beyond IIS, which applications and environments can SafeKit protect?
 
@@ -90,7 +90,7 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
   * **Cloud Infrastructure:** High availability for Cloud applications.
 
 
-[Explore the full list of supported HA solutions here.](</safekit-docs/solutions/>)
+[Explore the full list of supported HA solutions here.](</solutions/>)
 
 
 <!-- BEGIN INSERT: insert-safekit-farm-en lang="en" display="content" -->
@@ -101,12 +101,12 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
 ### Virtual IP address in a farm-mode cluster {#virtual-ip-address-farm}
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="How the SafeKit cluster in farm mode implements IIS network load balancing and failover">
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="How the SafeKit cluster in farm mode implements IIS network load balancing and failover">
 
 
 On the previous figure, the IIS application is running on the 3 servers (3 is an example, it can be 2 or more). Users are connected to a virtual IP address.
 
-The [virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) is configured locally on each server in the farm-mode cluster.  
+The [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) is configured locally on each server in the farm-mode cluster.  
 The input traffic to the virtual IP address is received by all the servers and split among them by a network filter inside each server's kernel.
 
 SafeKit detects hardware and software failures, reconfigures network filters in the event of a failure, and offers configurable application checkers and recovery scripts.
@@ -128,7 +128,7 @@ With a stateless IIS application, there is no session affinity. The same client 
 ### How to configure a SafeKit cluster in farm mode for IIS? {#safekit-farm-cluster-configuration}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm-mode cluster configuration for IIS network load balancing and virtual IP management.">
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm-mode cluster configuration for IIS network load balancing and virtual IP management.">
 
 
 The **SafeKit cluster in farm mode** is designed for high availability and scalability of services. The configuration focuses on distributing incoming traffic across both nodes simultaneously:
@@ -143,7 +143,7 @@ The **SafeKit cluster in farm mode** is designed for high availability and scala
 ### How to monitor a SafeKit cluster in farm mode for IIS? {#safekit-farm-cluster-monitoring}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node farm-mode cluster showing both IIS nodes in UP state with active load balancing.">
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node farm-mode cluster showing both IIS nodes in UP state with active load balancing.">
 
 
 Monitoring a cluster in farm mode provides visibility into the **Active-Active** nature of the infrastructure, where all nodes contribute to the application's performance (showing 2 nodes in this example):
@@ -192,8 +192,8 @@ In this video, learn how to implement a **virtual IP address** to provide a sing
 
 ### Step-by-Step Implementation
 
-  * [Read the guide on setting up a farm cluster on Windows](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
-  * [Read the guide on setting up a farm cluster on Linux](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/>)
+  * [Read the guide on setting up a farm cluster on Windows](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
+  * [Read the guide on setting up a farm cluster on Linux](</quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/>)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
@@ -216,17 +216,17 @@ In this video, learn how to implement a **virtual IP address** to provide a sing
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -236,7 +236,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

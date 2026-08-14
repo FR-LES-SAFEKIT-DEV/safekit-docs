@@ -18,7 +18,7 @@ topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO a
   * **SafeKit Capability:** Delivers **0 RPO** (no data loss) and **low RTO** (fast restart) through synchronous replication and automatic failover.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg" width="512" alt="A comparison chart of RPO (Recovery Point Objective) and RTO (Recovery Time Objective), illustrating how SafeKit achieves zero data loss and fast application restart.">
+<img src="/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg" width="512" alt="A comparison chart of RPO (Recovery Point Objective) and RTO (Recovery Time Objective), illustrating how SafeKit achieves zero data loss and fast application restart.">
 
 **RPO vs. RTO: Comparing Data Loss and Recovery Time in SafeKit**
 
@@ -38,7 +38,7 @@ topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO a
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>
@@ -52,13 +52,13 @@ topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO a
 **High Availability (HA)** is a technical architecture designed to ensure a system remains operational and accessible for a specified percentage of time (e.g., 99.99%).
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-icon-512x512-1.png" width="128" alt="SafeKit high availability software logo representing SANless clustering and synchronous replication">
+<img src="/wp-content/uploads/2026/01/safekit-icon-512x512-1.png" width="128" alt="SafeKit high availability software logo representing SANless clustering and synchronous replication">
 
 
 To achieve the RPO and RTO targets defined in a **Business Continuity Plan** , high availability is typically implemented through two primary architectures:
 
   * **Shared Disk System over a SAN:** A traditional cluster where 2 nodes are connected to a central Storage Area Network (SAN). If one node fails, the other one takes over access to the shared data.
-  * **SANless Synchronous Replication:** A modern "shared-nothing" architecture—implemented by [SafeKit software](</safekit-docs/> "SafeKit High Availability Software")—where data is replicated in real-time between local disks of 2 independent nodes, by eliminating the need for a SAN.
+  * **SANless Synchronous Replication:** A modern "shared-nothing" architecture—implemented by [SafeKit software](</> "SafeKit High Availability Software")—where data is replicated in real-time between local disks of 2 independent nodes, by eliminating the need for a SAN.
 
 
 ### What is the RPO of a High Availability Solution? {#what-is-rpo-high-availability}
@@ -88,7 +88,7 @@ To achieve a low RTO, a high availability solution utilizes **automatic failover
 A **Backup Solution** is a data protection strategy designed to create periodic copies of data to a secondary storage device or the cloud. Unlike High Availability, backup focuses on **long-term data retention** and recovery from data corruption or site-wide disasters.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/backup-icon.png" width="128" alt="Backup solution icon representing a backup architecture for long-term data retention">
+<img src="/wp-content/uploads/2026/01/backup-icon.png" width="128" alt="Backup solution icon representing a backup architecture for long-term data retention">
 
 
 To meet the RPO and RTO targets defined in a **Disaster Recovery Plan** , backup is typically implemented through two primary methods:
@@ -124,7 +124,7 @@ For a backup solution, the **RTO can range from several hours to days** , depend
 The **SafeKit Mirror Cluster** is a software-based high availability solution that implements a "shared-nothing" architecture. Unlike traditional clusters that require an expensive SAN, SafeKit uses the local resources of two standard servers to create a highly resilient environment.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="SafeKit Mirror Cluster architecture showing real-time byte-level file replication between primary and secondary nodes">
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="SafeKit Mirror Cluster architecture showing real-time byte-level file replication between primary and secondary nodes">
 
 
 To ensure maximum uptime and data protection within your **Business Continuity Plan** , the SafeKit mirror cluster operates through two integrated mechanisms:
@@ -135,7 +135,7 @@ To ensure maximum uptime and data protection within your **Business Continuity P
 
 ### What is the RPO of a SafeKit Mirror Cluster? {#rpo-safekit-example}
 
-The **RPO of a SafeKit mirror cluster is zero** because the data replication between nodes is [synchronous and real-time](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/> "Synchronous vs Asynchronous Replication").
+The **RPO of a SafeKit mirror cluster is zero** because the data replication between nodes is [synchronous and real-time](</best-practises/synchronous-replication-vs-asynchronous-replication/> "Synchronous vs Asynchronous Replication").
 
 This zero-data-loss guarantee is achieved through a **write-acknowledgment** process: a disk write is only confirmed to the application once it has been successfully written to the local disks of both the primary and secondary nodes.
 
@@ -163,7 +163,7 @@ By utilizing **application-level high availability** , SafeKit eliminates the "r
 The **SafeKit Farm Cluster** is a software-based high availability solution designed for stateless applications (like web servers) that require both **scalability** and **redundancy**. Unlike a mirror cluster that focuses on data replication, a farm cluster distributes incoming traffic across multiple active nodes.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="SafeKit Farm Cluster architecture demonstrating network load balancing and failover for stateless applications">
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="SafeKit Farm Cluster architecture demonstrating network load balancing and failover for stateless applications">
 
 
 To maintain **Business Continuity** for high-traffic environments, the SafeKit farm cluster operates through two core mechanisms:
@@ -230,7 +230,7 @@ See how SafeKit handles a critical failure. This video demonstrates **synchronou
   2. [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   3. [Start and test SQL replication, migration, failover on crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
-[Free trial here](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
+[Free trial here](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
 ### Video: Achieving Near-Zero RTO in a SafeKit Farm Cluster (5:03) {#demo-farm-cluster-rpo-rto}
 
@@ -244,7 +244,7 @@ Watch how SafeKit manages an Apache web farm to provide both performance scaling
   2. [Configure the cluster and the farm.safe module](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
   3. [Start and test network load balancing, failover on crash](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
 
-[Free trial here](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
+[Free trial here](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 
 ## FAQ: Optimizing RPO and RTO for Business Continuity {#faq-rpo-rto}
 
@@ -306,17 +306,17 @@ For maximum resilience, organizations use a **3-node hybrid architecture**. This
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -326,7 +326,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

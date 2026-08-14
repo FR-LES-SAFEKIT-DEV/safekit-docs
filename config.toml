@@ -1,6 +1,6 @@
 # Hugo configuration for SafeKit site
-baseURL = "https://fr-les-safekit-dev.github.io/safekit-docs/"
-relativeURLs = false
+baseURL = "https://fr-les-safekit-dev.github.io/"
+relativeURLs = true
 locale = "en"
 title = "SafeKit - High Availability Software"
 theme = "safekit"
@@ -126,6 +126,9 @@ disableKinds = ["taxonomy", "term"]
   baseName = "index"
   isPlainText = true
   notAlternative = true
+
+[params]
+  sitemapBaseURL = "https://fr-les-safekit-dev.github.io/safekit-docs/"
 
 [outputs]
   page = ["HTML", "MD"]

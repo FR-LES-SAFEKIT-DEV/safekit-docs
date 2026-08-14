@@ -18,7 +18,7 @@ topics: "High Availability Quick Installation Guide for Hyper-V, SafeKit High Av
 
 This guide explains how to set up a **mirror cluster** for Hyper-V using SafeKit, ensuring automatic failover and synchronous replication without the need for shared storage. 
 
-For help, you can use [SafeKit AI 🤖](</safekit-docs/resources/safekit-support/>).
+For help, you can use [SafeKit AI 🤖](</resources/safekit-support/>).
 
 ### 1\. Overview
 
@@ -46,7 +46,7 @@ For help, you can use [SafeKit AI 🤖](</safekit-docs/resources/safekit-support
 
 ### Why a replication of a few Tera-bytes?
 
-Resynchronization time after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
+Resynchronization time after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
 
   * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
   * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
@@ -54,13 +54,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 #### Alternative
 
-  * For a large volume of data, use [external shared storage](</safekit-docs/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
+  * For a large volume of data, use [external shared storage](</best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
   * More expensive, more complex.
 
 
 ### Why a replication < 1,000,000 files?
 
-  * Resynchronization time performance after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
+  * Resynchronization time performance after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
   * Time to check each file between both nodes.
 
 
@@ -84,13 +84,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 ### Why a LAN/VLAN network between remote sites?
 
-  * Automatic failover of the [virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
-  * Good bandwidth for resynchronization ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
+  * Automatic failover of the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
+  * Good bandwidth for resynchronization ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
 
 
 #### Alternative
 
-  * Use a [load balancer for the virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
+  * Use a [load balancer for the virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
   * Use backup solutions with asynchronous replication for high latency network.
 
 
@@ -104,7 +104,7 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 ## Overview of the SafeKit / Hyper-V solution
 
-The solution is described here: **[Simple Hyper-V High Availability Without Shared Storage (SAN)](</safekit-docs/solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
+The solution is described here: **[Simple Hyper-V High Availability Without Shared Storage (SAN)](</solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
 
 ## Installation of the SafeKit / Hyper-V solution on Windows (hyperv.safe)
 
@@ -115,7 +115,7 @@ The solution is described here: **[Simple Hyper-V High Availability Without Shar
   * Maximum 32 virtual machines per Hyper-V host.
   * Total replicated data limited to a few terabytes — beyond this, resynchronization time becomes significant.
   * Minimum 1Gb/s interconnect between nodes (10Gb/s recommended for faster resynchronization).
-  * IP failover requires both nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported (except with [cloud load balancers](</safekit-docs/resources/safekit-user-guide-82/#Cloud>)).
+  * IP failover requires both nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported (except with [cloud load balancers](</resources/safekit-user-guide-82/#Cloud>)).
 
 
 
@@ -147,7 +147,7 @@ Note: the free version includes all SafeKit features. At the end of the trial, y
 Antiviruses may face detection challenges with SafeKit due to its close integration with the OS, virtual IP mechanisms, real-time replication and restart of critical services. 
 
 
-[ Download SafeKit (Windows) > ](</safekit-docs/resources/safekit-free-trial/>)
+[ Download SafeKit (Windows) > ](</resources/safekit-free-trial/>)
 
 
 <!-- END INSERT: insert-safekit-installation-package-windows-en lang="en" display="content" querystring="app=Hyper-V&amp;mod=hyperv" -->
@@ -163,7 +163,7 @@ Antiviruses may face detection challenges with SafeKit due to its close integrat
   * Put **hyperv.safe** under **C:/safekit/Application_Modules/generic**.
 
 
-<a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ Download hyperv.safe (Windows) ></a> 
+<a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ Download hyperv.safe (Windows) ></a> 
 
 
 <!-- END INSERT: insert-safekit-82-installation-module-windows-en lang="en" display="content" querystring="app=Hyper-V&amp;mod=hyperv" -->
@@ -176,7 +176,7 @@ Antiviruses may face detection challenges with SafeKit due to its close integrat
  
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Read carefully these items before starting: </span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Read carefully these items before starting: </span></div>
 
   * The Hyper-V configuration is presented with a virtual machine named `VM1`. Read carefully "1. Prerequisites" for the **organization of VM1 files** , otherwise recovery on the secondary node may fail with inconsistent data.
   * You will have to repeat this configuration for all VMs that you want to replicate and to restart.
@@ -196,16 +196,16 @@ If all the files of VM1 are not in the same folder, use Hyper-V manager:
   * Import VM1, previously exported, into Hyper-V manager
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Take a snapshot or your VM before starting the procedure.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Take a snapshot or your VM before starting the procedure.</span></div>
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>VM1 must only be created on a single node. The only thing to create on the other node is the VM1 directory (D:/Repli-Hyper-V/VM1).</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>VM1 must only be created on a single node. The only thing to create on the other node is the VM1 directory (D:/Repli-Hyper-V/VM1).</span></div>
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Make sure the virtual switch name(s) referenced by the virtual machine exist on both Hyper-V servers and corresponds to the same physical network.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Make sure the virtual switch name(s) referenced by the virtual machine exist on both Hyper-V servers and corresponds to the same physical network.</span></div>
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Hyper‑V module (hyperv.safe) failover may fail if VM migration prerequisites are not met. To detect compatibility issues between Hyper‑V nodes (hardware, network, configuration), see <a href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/knowledge-base.pdf">KB SK-0088 in this document</a>.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Hyper‑V module (hyperv.safe) failover may fail if VM migration prerequisites are not met. To detect compatibility issues between Hyper‑V nodes (hardware, network, configuration), see <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf">KB SK-0088 in this document</a>.</span></div>
 
 ### 2\. Launch the SafeKit console
 
@@ -216,30 +216,30 @@ If all the files of VM1 are not in the same folder, use Hyper-V manager:
 You can also run the console in a browser on a workstation external to the cluster.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>The configuration of SafeKit is done on both nodes from a single browser.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>The configuration of SafeKit is done on both nodes from a single browser.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>To secure the web console, see <a href="/safekit-docs/resources/safekit-user-guide-82/#https">11. Securing the SafeKit web service</a> in the User's Guide.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>To secure the web console, see <a href="/resources/safekit-user-guide-82/#https">11. Securing the SafeKit web service</a> in the User's Guide.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/01-login-large.png" alt="Start the SafeKit web console to configure the Hyper-V cluster">
+<img src="/wp-content/uploads/2024/03/01-login-large.png" alt="Start the SafeKit web console to configure the Hyper-V cluster">
 
 
 ### 3\. Configure node addresses
 
-  * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for [troubleshooting](</safekit-docs/resources/safekit-user-guide-82/#Troubleshooting>).
+  * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for [troubleshooting](</resources/safekit-user-guide-82/#Troubleshooting>).
   * Then, click on `Save and apply` to save the configuration.
   * Check the `Success` ✅ message on both nodes.
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you want, you can add a new `LAN and nodes` ( first ➕) to create a second heartbeat and a dedicated replication network.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you want, you can add a new `LAN and nodes` ( first ➕) to create a second heartbeat and a dedicated replication network.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you click on `Advanced configuration`, the `cluster.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>If you click on `Advanced configuration`, the `cluster.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/02-cluster-edit.png" alt="Enter the nodes of the Hyper-V cluster">
+<img src="/wp-content/uploads/2024/03/02-cluster-edit.png" alt="Enter the nodes of the Hyper-V cluster">
 
 
 ### 4\. Select a module
@@ -247,13 +247,13 @@ You can also run the console in a browser on a workstation external to the clust
   * In `New module`, click on the `hyperv.safe` module.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>In the blue banner at the top, 🛜 `node1` represents the console connection node. This node relays requests to `node2` when required.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>In the blue banner at the top, 🛜 `node1` represents the console connection node. This node relays requests to `node2` when required.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>The console looks for `xxx.safe` in the `Application_Modules/generic/` directory on the connection node (`node1`) if you placed a module there during installation.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>The console looks for `xxx.safe` in the `Application_Modules/generic/` directory on the connection node (`node1`) if you placed a module there during installation.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/04-module-new.png" alt="Choose the module for Hyper-V">
+<img src="/wp-content/uploads/2024/03/04-module-new.png" alt="Choose the module for Hyper-V">
 
 
 ### 5\. Configure the module
@@ -278,13 +278,13 @@ The `NORMAL_STOP` and `FORCE_STOP` values can be "`stop`", "`save`" or "`off`":
 This will be the case, for example, when switching between primary and secondary roles.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>You do not need to configure a virtual IP address. VM1 will be rebooted on the secondary Hyper-V with its physical IP address, and this IP address will be rerouted.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>You do not need to configure a virtual IP address. VM1 will be rebooted on the secondary Hyper-V with its physical IP address, and this IP address will be rerouted.</span></div>
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>When you apply the SafeKit configuration, the `Automatic Start Action` of the virtual machine is set to `Nothing` in Hyper-V. This ensures that the VM does not start automatically when the Hyper‑V host starts, but is instead started only when the module itself is started.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>When you apply the SafeKit configuration, the `Automatic Start Action` of the virtual machine is set to `Nothing` in Hyper-V. This ensures that the VM does not start automatically when the Hyper‑V host starts, but is instead started only when the module itself is started.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png" alt="Enter the Hyper-V parameters">
+<img src="/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png" alt="Enter the Hyper-V parameters">
 
 
 ### 6\. Custom checker to detect VM malfunction {#vm-checker}
@@ -299,12 +299,12 @@ If the Hyper-V Heartbeat Service does not respond to the message (VM locked up, 
   * If you set `stopstart` in `Action`, there is a direct failover on the other Hyper-V node as soon as the VM does not respond to heartbeats.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>For maintenance, if you want to stop the virtual machine, the custom checker will restart it automatically. To avoid that, you can temporarly <a href="/safekit-docs/wp-content/uploads/2024/04/safekit-disable-checkers.png">suspend the checker 🖼️</a>. Or you can remove it by deleting the configuration line in the console.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>For maintenance, if you want to stop the virtual machine, the custom checker will restart it automatically. To avoid that, you can temporarly <a href="/wp-content/uploads/2024/04/safekit-disable-checkers.png">suspend the checker 🖼️</a>. Or you can remove it by deleting the configuration line in the console.</span></div>
 
-It’s the same when you want to restore a checkpoint. Hyper-V will stop the VM to perform the operation, and the VM checker may react negatively by automatically restarting the VM. To avoid this, [suspend the checker 🖼️](</safekit-docs/wp-content/uploads/2024/04/safekit-disable-checkers.png>) before proceeding with the operation.
+It’s the same when you want to restore a checkpoint. Hyper-V will stop the VM to perform the operation, and the VM checker may react negatively by automatically restarting the VM. To avoid this, [suspend the checker 🖼️](</wp-content/uploads/2024/04/safekit-disable-checkers.png>) before proceeding with the operation.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png" alt="Enter the Hyper-V custom checker parameters">
+<img src="/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png" alt="Enter the Hyper-V custom checker parameters">
 
 
 ### 7\. Edit scripts (optional)
@@ -317,7 +317,7 @@ It’s the same when you want to restore a checkpoint. Hyper-V will stop the VM 
   * Keep encryption of communication between nodes.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/07-module-encryption.png" alt="Communication encryption of the Hyper-V module">
+<img src="/wp-content/uploads/2024/03/07-module-encryption.png" alt="Communication encryption of the Hyper-V module">
 
 
 ### 9\. Save and apply
@@ -325,7 +325,7 @@ It’s the same when you want to restore a checkpoint. Hyper-V will stop the VM 
   * `Save and apply` the configuration and scripts on both nodes.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/08-module-save.png" alt="Save and apply the Hyper-V module configuration">
+<img src="/wp-content/uploads/2024/03/08-module-save.png" alt="Save and apply the Hyper-V module configuration">
 
 
 ### 10\. Verify successful configuration
@@ -334,7 +334,7 @@ It’s the same when you want to restore a checkpoint. Hyper-V will stop the VM 
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/09-module-save-check.png" alt="Check the Hyper-V module configuration success">
+<img src="/wp-content/uploads/2024/03/09-module-save-check.png" alt="Check the Hyper-V module configuration success">
 
 
 ### 11\. Start the node with up-to-date data
@@ -345,16 +345,16 @@ It’s the same when you want to restore a checkpoint. Hyper-V will stop the VM 
 When node 2 will be started, all data will be copied from node 1 to node 2.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If you make the wrong choice, you run the risk of synchronizing outdated data on both nodes.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If you make the wrong choice, you run the risk of synchronizing outdated data on both nodes.</span></div>
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>It is also assumed that `VM1` is stopped on node 1 so that SafeKit installs the replication mechanisms and then starts `VM1` in the `start_prim` script.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>It is also assumed that `VM1` is stopped on node 1 so that SafeKit installs the replication mechanisms and then starts `VM1` in the `start_prim` script.</span></div>
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Use `Start` for subsequent starts: SafeKit retains the most up-to-date server. Starting `As primary` is a special start-up the first time or during exceptional operations.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Use `Start` for subsequent starts: SafeKit retains the most up-to-date server. Starting `As primary` is a special start-up the first time or during exceptional operations.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png" alt="Start as primary the Hyper-V node with the up-to-date data">
+<img src="/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png" alt="Start as primary the Hyper-V node with the up-to-date data">
 
 
 ### 12\. Wait for the transition to ALONE (green)
@@ -362,17 +362,17 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
   * Node 1 should reach the ALONE (green) state, which means that the `start_prim` script has been executed on node 1.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If ALONE (green) is not reached or if VM1 is not started, analyze why with the <a href="/safekit-docs/wp-content/uploads/2024/03/24-module-log-script.png">module log 🖼️</a> of node 1.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If ALONE (green) is not reached or if VM1 is not started, analyze why with the <a href="/wp-content/uploads/2024/03/24-module-log-script.png">module log 🖼️</a> of node 1.</span></div>
 
   * Click the 🔍 **log** icon of `node1` to open the module log and look for error messages such as a checker detecting an error and stopping the module.
   * Click on `start_prim` in the log: output messages of the script are displayed on the right and errors can be detected such as VM1 incorrectly started.
   * Use the SafeKit AI 🤖 for assistance with log messages.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If the cluster is in `WAIT (red) not uptodate, STOP (red) not uptodate` state, stop the WAIT node and <a href="/safekit-docs/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png">force its start as primary 🖼️</a>.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If the cluster is in `WAIT (red) not uptodate, STOP (red) not uptodate` state, stop the WAIT node and <a href="/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png">force its start as primary 🖼️</a>.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/12-monitoring-alone-stop.png" alt="The first Hyper-V node starts as primary and becomes ALONE">
+<img src="/wp-content/uploads/2024/03/12-monitoring-alone-stop.png" alt="The first Hyper-V node starts as primary and becomes ALONE">
 
 
 ### 13\. Start node 2
@@ -381,17 +381,17 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
   * Wait for the SECOND (green) state.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>Node 2 stays in the SECOND (orange) state while resynchronizing the replicated directories (copy from node 1 to node 2).</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>Node 2 stays in the SECOND (orange) state while resynchronizing the replicated directories (copy from node 1 to node 2).</span></div>
 
 This may take a while depending on the size of files to resynchronize in replicated directories and the network bandwidth.
 
-To see the progress of the copy, see the [module log 🖼️](</safekit-docs/wp-content/uploads/2024/03/27-module-log-reintegration.png>) and the [replication resources 🖼️](</safekit-docs/wp-content/uploads/2024/03/26-replication-resources-reintegration.png>) of node 2. Use the SafeKit AI 🤖 for assistance with log messages.
+To see the progress of the copy, see the [module log 🖼️](</wp-content/uploads/2024/03/27-module-log-reintegration.png>) and the [replication resources 🖼️](</wp-content/uploads/2024/03/26-replication-resources-reintegration.png>) of node 2. Use the SafeKit AI 🤖 for assistance with log messages.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>When using Hyper-V differencing disks, only the differencing disk needs resynchronization after the initial sync, saving time for large virtual hard disks.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>When using Hyper-V differencing disks, only the differencing disk needs resynchronization after the initial sync, saving time for large virtual hard disks.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png" alt="Start the Hyper-V node 2">
+<img src="/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png" alt="Start the Hyper-V node 2">
 
 
 ### 14\. Verify that the cluster is operational
@@ -402,7 +402,7 @@ To see the progress of the copy, see the [module log 🖼️](</safekit-docs/wp-
 Only changes inside files are replicated in real time in this state.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/14-monitoring-prim-second.png" alt="The Hyper-V node 2 is SECOND (green)">
+<img src="/wp-content/uploads/2024/03/14-monitoring-prim-second.png" alt="The Hyper-V node 2 is SECOND (green)">
 
 
 ### 15\. Testing
@@ -412,30 +412,30 @@ Only changes inside files are replicated in real time in this state.
   * Check with Hyper-V manager that `VM1` is running on node 2.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If ALONE (green) is not reached on node2 or if VM1 is not started, analyze why with the <a href="/safekit-docs/wp-content/uploads/2024/03/38-module-log-script-second.png">module log 🖼️</a> of node 2.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If ALONE (green) is not reached on node2 or if VM1 is not started, analyze why with the <a href="/wp-content/uploads/2024/03/38-module-log-script-second.png">module log 🖼️</a> of node 2.</span></div>
 
   * Click the 🔍 **log** icon of `node2` to open the module log and look for error messages such as a checker detecting an error and stopping the module.
   * Click on `start_prim` in the log: output messages of the script are displayed on the right and errors can be detected such as VM1 incorrectly started.
   * Use the SafeKit AI 🤖 for assistance with log messages.
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>As the `start_prim` script imports the virtual machine on node 2, the failover can fail because of <a href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/knowledge-base.pdf">Hyper-V settings (see KB SK-0088 in this document)</a>.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>As the `start_prim` script imports the virtual machine on node 2, the failover can fail because of <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf">Hyper-V settings (see KB SK-0088 in this document)</a>.</span></div>
 
 
-<div class="callout callout-warning"><img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If everything is okay, initiate a start on node1, which will resynchronize the replicated directories from node2.</span></div>
+<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If everything is okay, initiate a start on node1, which will resynchronize the replicated directories from node2.</span></div>
 
-If things go wrong, stop node2 and [force the start as primary 🖼️](</safekit-docs/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png>) of node1, which will restart with its locally healthy data at the time of the stop.
-
-
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span>Note that you have a 🕒 **<a href="/safekit-docs/wp-content/uploads/2026/05/safekit-console-timeline.png">timeline 🖼️</a>** that can be helpful to understand what happens in the cluster.</span></div>
+If things go wrong, stop node2 and [force the start as primary 🖼️](</wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png>) of node1, which will restart with its locally healthy data at the time of the stop.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png" alt="Stop the Hyper-V module on the PRIM server">
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span>Note that you have a 🕒 **<a href="/wp-content/uploads/2026/05/safekit-console-timeline.png">timeline 🖼️</a>** that can be helpful to understand what happens in the cluster.</span></div>
+
+
+<img src="/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png" alt="Stop the Hyper-V module on the PRIM server">
 
 
 ### 16\. If necessary, configure a splitbrain checker
 
-  * See [What are the different scenarios in case of network isolation in a cluster?](</safekit-docs/best-practises/power-outage-and-network-isolation-in-a-cluster/>) to know if you need to configure a splitbrain checker.
+  * See [What are the different scenarios in case of network isolation in a cluster?](</best-practises/power-outage-and-network-isolation-in-a-cluster/>) to know if you need to configure a splitbrain checker.
   * Go to the module configuration and click on `Checkers / Splitbrain` (see image) to edit the splitbrain parameters.
   * `Save and apply` the new configuration to redeploy it on both nodes (module must be stopped on both nodes to save and apply).
 
@@ -447,7 +447,7 @@ If things go wrong, stop node2 and [force the start as primary 🖼️](</safeki
   * Note: you can set several IPs separated by white spaces. Pay attention that the IP addresses must be accessible from one node but not from the other in the event of network isolation.
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/04/safekit-split-brain-checker.png" alt="Enter the Hyper-V splitbrain parameters">
+<img src="/wp-content/uploads/2024/04/safekit-split-brain-checker.png" alt="Enter the Hyper-V splitbrain parameters">
 
 
 ### 17\. Automatic restart if a critical service fails inside the VM
@@ -465,7 +465,7 @@ Of course, you can implement more subtle recovery with your own scripts. But jus
 To test the feature, use Task Manager and kill the process (End task) associated to the critical service. A clean stop of the service through Service Manager or the "net stop" command does not trigger the recovery action inside Windows Service Manager.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/11/hyperv-critical-service.png" alt="Hyper-V VM critical services failover of Hyper-V module">
+<img src="/wp-content/uploads/2023/11/hyperv-critical-service.png" alt="Hyper-V VM critical services failover of Hyper-V module">
 
 
 ### 18\. Support
@@ -473,10 +473,10 @@ To test the feature, use Task Manager and kill the process (End task) associated
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
 
-<div class="callout"><img src="/safekit-docs/wp-content/uploads/2022/07/note.png" alt="Note"><span><a href="/safekit-docs/resources/safekit-support/">More information on the support here</a>.</span></div>
+<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span><a href="/resources/safekit-support/">More information on the support here</a>.</span></div>
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/30-snapshots-mirror.png" alt="Take the Hyper-V snaphots for support">
+<img src="/wp-content/uploads/2024/03/30-snapshots-mirror.png" alt="Take the Hyper-V snaphots for support">
 
 
 
@@ -502,8 +502,8 @@ In this video, discover how SafeKit implements **high availability for Hyper-V**
 
 ### Step-by-Step Implementation
 
-  * [Read the guide to set up a mirrored Hyper-V cluster on Windows.](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/>)
-  * [Read the guide to set up a mirrored KVM cluster on Linux.](</safekit-docs/quick-install/safekit-quick-installation-guide-with-kvm/>)
+  * [Read the guide to set up a mirrored Hyper-V cluster on Windows.](</quick-install/safekit-quick-installation-guide-with-hyper-v/>)
+  * [Read the guide to set up a mirrored KVM cluster on Linux.](</quick-install/safekit-quick-installation-guide-with-kvm/>)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
@@ -522,17 +522,17 @@ In this video, discover how SafeKit implements **high availability for Hyper-V**
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -542,7 +542,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

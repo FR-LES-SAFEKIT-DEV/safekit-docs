@@ -28,11 +28,11 @@ topics: "SafeKit for Hyper-V: 2-Node SANless Hyper-V Cluster, Table of Contents,
 By consolidating **High Availability** into a lightweight software layer, SafeKit delivers enterprise-grade redundancy and business continuity at a fraction of the cost of traditional virtualization suites.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg" width="512" alt="SafeKit High Availability Hyper-V Cluster Architecture">
+<img src="/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg" width="512" alt="SafeKit High Availability Hyper-V Cluster Architecture">
 
 **SafeKit HA Cluster for Hyper-V**
 
-<a class="btn-quick-install" href="/safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Quick Hyper-V HA cluster installation guide ></a>
+<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Quick Hyper-V HA cluster installation guide ></a>
 ## Table of Contents {#toc}
 
   * [How the SafeKit software simply implements a Hyper-V high availability cluster without shared storage on a SAN?](<#safekit-hyperv-ha-cluster>)
@@ -74,7 +74,7 @@ While VM-level HA is easier to set up, application-level HA is hypervisor-agnost
 SafeKit differentiates itself from traditional Hyper-V clustering solutions through its **shared-nothing architecture** and simplified management. While most competitors require a central SAN or vSAN to manage VM failover, SafeKit provides:
 
   * **Integrated Real-Time Replication:** Data synchronization is built directly into the solution, ensuring that Hyper-V virtual machines are mirrored synchronously without the overhead of managing a separate storage layer.
-  * **Simplified 2-Node Clustering:** Unlike enterprise stacks that recommend a 3-node "witness" quorum, SafeKit delivers full high availability with just two redundant servers. [Learn more about our heartbeat and quorum mechanism](</safekit-docs/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
+  * **Simplified 2-Node Clustering:** Unlike enterprise stacks that recommend a 3-node "witness" quorum, SafeKit delivers full high availability with just two redundant servers. [Learn more about our heartbeat and quorum mechanism](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
   * **Unified Management:** Administrators can manage VM failover, replication, and load balancing through a single SafeKit console , making it accessible to teams without specialized clustering expertise.
   * **Custom Checkers:** SafeKit goes beyond hardware monitoring; it utilizes **custom checkers** to detect if a VM has crashed, automatically triggering a local restart or a failover to the redundant node. The system is also highly extensible, allowing for the easy integration of new, user-defined custom checkers tailored to your specific environment.
 
@@ -92,7 +92,7 @@ Unlike most high-availability solutions on the market, SafeKit is designed to op
 
 ### Is it possible to set up a Hyper-V cluster without SAN or complex clustering skills?
 
-Yes. This article explains how to [**quickly implement a Hyper-V cluster**](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/>) without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s **automated failover scripts** to handle the replication and restart of **Hyper-V** virtual machines, you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional enterprise virtualization stacks.
+Yes. This article explains how to [**quickly implement a Hyper-V cluster**](</quick-install/safekit-quick-installation-guide-with-hyper-v/>) without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s **automated failover scripts** to handle the replication and restart of **Hyper-V** virtual machines, you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional enterprise virtualization stacks.
 
 ### Beyond Hyper-V, which applications and environments can SafeKit protect?
 
@@ -106,7 +106,7 @@ SafeKit is a versatile high-availability solution that extends far beyond standa
 
 SafeKit also provides **Farm Clusters** with native **Network Load Balancing and Failover** for stateless applications like **Web Servers**.
 
-[Explore the full list of supported HA solutions here.](</safekit-docs/solutions/>)
+[Explore the full list of supported HA solutions here.](</solutions/>)
 
 ## How the SafeKit Hyper-V cluster works? {#safekit-hyperv-ha-how-it-works}
 
@@ -117,10 +117,10 @@ The following steps are described for one Hyper-V virtual machine inside one mir
 Server 1 (PRIM) runs the Hyper-V VM (virtual machine). SafeKit replicates in real time the VM files (virtual hard disk, VM configuration). Only changes made in the files are replicated across the network.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="File replication at byte level in a mirror Hyper-V cluster">
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="File replication at byte level in a mirror Hyper-V cluster">
 
 
-The replication is [synchronous](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/>) with no data loss on failure contrary to asynchronous replication.
+The replication is [synchronous](</best-practises/synchronous-replication-vs-asynchronous-replication/>) with no data loss on failure contrary to asynchronous replication.
 
 You just have to configure the VM directory name in SafeKit. There are no pre-requisites on disk organization. The directory may be located in the system disk.
 
@@ -130,7 +130,7 @@ When Server 1 fails, Server 2 takes over. SafeKit restarts the Hyper-V VM on Ser
 The VM continues to run on Server 2 by locally modifying its files that are no longer replicated to Server 1.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover of Hyper-V in a mirror cluster">
+<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover of Hyper-V in a mirror cluster">
 
 
 The failover time is equal to the fault-detection time (set to 30 seconds by default) plus the VM reboot time.
@@ -140,7 +140,7 @@ The failover time is equal to the fault-detection time (set to 30 seconds by def
 Failback involves restarting Server 1 after fixing the problem that caused it to fail. SafeKit automatically resynchronizes the VM files.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback in a mirror Hyper-V cluster">
+<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback in a mirror Hyper-V cluster">
 
 
 Failback takes place without disturbing the Hyper-V VM, which can continue running on Server 2.
@@ -150,7 +150,7 @@ Failback takes place without disturbing the Hyper-V VM, which can continue runni
 After reintegration, the VM files are once again in mirror mode, as in step 1. The system is back in high-availability mode, with the Hyper-V VM running on Server 2 and SafeKit replicating file updates to Server 1.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Return to normal operation in a mirror Hyper-V cluster">
+<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Return to normal operation in a mirror Hyper-V cluster">
 
 
 If the administrator wishes the VM to run on Server 1, this can be done manually through the web console at an appropriate time, or automatically through configuration.
@@ -158,7 +158,7 @@ If the administrator wishes the VM to run on Server 1, this can be done manually
 ### How to configure a SafeKit Hyper-V Cluster? {#safekit-mirror-cluster-configure}
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png" width="694" alt="SafeKit Web Console: 2-node Hyper-V cluster dashboard for VM replication and automatic failover.">
+<img src="/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png" width="694" alt="SafeKit Web Console: 2-node Hyper-V cluster dashboard for VM replication and automatic failover.">
 
 
 The **SafeKit web console** provides an intuitive interface to configure high availability of your critical applications. In just a few steps, you can configure a **SafeKit Hyper-V cluster** to ensure business continuity:
@@ -167,12 +167,12 @@ The **SafeKit web console** provides an intuitive interface to configure high av
   * Enter in `VM_NAME`, the name of the Hyper-V virtual machine (VM1).
 
 
-The SafeKit cluster includes a dedicated [split-brain checker to resolve network isolation issues](</safekit-docs/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") without the need for a third witness machine or an additional heartbeat network.
+The SafeKit cluster includes a dedicated [split-brain checker to resolve network isolation issues](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") without the need for a third witness machine or an additional heartbeat network.
 
 ### How to monitor a SafeKit Hyper-V cluster? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/safekit-docs/wp-content/uploads/2024/03/14-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror Hyper-V cluster showing PRIM and SECOND states with active data replication.">
+<img src="/wp-content/uploads/2024/03/14-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror Hyper-V cluster showing PRIM and SECOND states with active data replication.">
 
 
 The **SafeKit management console** offers a unified view of your high availability infrastructure. It allows administrators to monitor the **operational state** of the cluster and track data synchronization in real-time.
@@ -197,7 +197,7 @@ Note that if you deploy several VMs for replication and failover, you will have 
 
 ### Why a replication of a few Tera-bytes?
 
-Resynchronization time after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
+Resynchronization time after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>))
 
   * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
   * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
@@ -205,13 +205,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 #### Alternative
 
-  * For a large volume of data, use [external shared storage](</safekit-docs/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
+  * For a large volume of data, use [external shared storage](</best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/>).
   * More expensive, more complex.
 
 
 ### Why a replication < 1,000,000 files?
 
-  * Resynchronization time performance after a failure ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
+  * Resynchronization time performance after a failure ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)).
   * Time to check each file between both nodes.
 
 
@@ -235,13 +235,13 @@ Resynchronization time after a failure ([step 3](</safekit-docs/architectures/fi
 
 ### Why a LAN/VLAN network between remote sites?
 
-  * Automatic failover of the [virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
-  * Good bandwidth for resynchronization ([step 3](</safekit-docs/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
+  * Automatic failover of the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) with 2 nodes in the same subnet.
+  * Good bandwidth for resynchronization ([step 3](</architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster>)) and good latency for [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) (typically a round-trip of less than 2ms).
 
 
 #### Alternative
 
-  * Use a [load balancer for the virtual IP address](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
+  * Use a [load balancer for the virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
   * Use backup solutions with asynchronous replication for high latency network.
 
 
@@ -281,8 +281,8 @@ In this video, discover how SafeKit implements **high availability for Hyper-V**
 
 ### Step-by-Step Implementation
 
-  * [Read the guide to set up a mirrored Hyper-V cluster on Windows.](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/>)
-  * [Read the guide to set up a mirrored KVM cluster on Linux.](</safekit-docs/quick-install/safekit-quick-installation-guide-with-kvm/>)
+  * [Read the guide to set up a mirrored Hyper-V cluster on Windows.](</quick-install/safekit-quick-installation-guide-with-hyper-v/>)
+  * [Read the guide to set up a mirrored KVM cluster on Linux.](</quick-install/safekit-quick-installation-guide-with-kvm/>)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
@@ -305,17 +305,17 @@ In this video, discover how SafeKit implements **high availability for Hyper-V**
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -325,7 +325,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

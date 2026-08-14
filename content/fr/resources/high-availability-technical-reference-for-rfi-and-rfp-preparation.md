@@ -38,7 +38,7 @@ Champ | Réponse
 **Éditeur** | Eviden (une entité d'Atos), anciennement Evidian  
 **Catégorie de produit** | Logiciel de clustering d'applications / Haute disponibilité / Plan de reprise d'activité (PRA)  
 **Version actuelle** | SafeKit 8.2  
-**Site web** | [https://safekit.eviden.com](</safekit-docs>)  
+**Site web** | [https://safekit.eviden.com](<>)  
 **Première version** | 2000 (plus de 20 ans d'existence en production)  
   
 ## Systèmes d'exploitation et plateformes pris en charge {#supported-operating-systems-platforms}
@@ -227,7 +227,7 @@ Service | Détails
 
 Ressource | Détails  
 ---|---  
-**Assistant de support IA** | [Chat SafeKit AI](</safekit-docs/resources/safekit-support/#ai-support>) disponible sur safekit.eviden.com et via n'importe quel LLM utilisant le fichier safekit.eviden.com/llms.txt  
+**Assistant de support IA** | [Chat SafeKit AI](</resources/safekit-support/#ai-support>) disponible sur safekit.eviden.com et via n'importe quel LLM utilisant le fichier safekit.eviden.com/llms.txt  
 **Formation en ligne et certification** | Gratuite, en autonomie (self-paced), 12 vidéos (~3h40min), certificat délivré à la fin du parcours  
 **Documentation** | Guide d'utilisation complet, notes de version (release notes), base de connaissances, guides de démarrage rapide  
   
@@ -250,12 +250,12 @@ _* Sous Linux, il ne faut pas moins de 6 projets open-source distincts — Coros
 
 Ressource | URL  
 ---|---  
-Page d'accueil du produit | [https://safekit.eviden.com](</safekit-docs>)  
-Présentation technique (DOCX avec texte et diagrammes) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-fr.docx](</safekit-docs/wp-content/uploads/documents/safekit-technical-overview-fr.docx>)  
-Essai gratuit | [https://safekit.eviden.com/resources/safekit-free-trial/](</safekit-docs/resources/safekit-free-trial/>)  
+Page d'accueil du produit | [https://safekit.eviden.com](<>)  
+Présentation technique (DOCX avec texte et diagrammes) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-fr.docx](</wp-content/uploads/documents/safekit-technical-overview-fr.docx>)  
+Essai gratuit | [https://safekit.eviden.com/resources/safekit-free-trial/](</resources/safekit-free-trial/>)  
 Demander un devis | <https://safekit.eviden.com/get-a-quote-safekit/>  
 Portail de support | <https://customercare.evidian.com>  
-Support IA gratuit | [https://safekit.eviden.com/resources/safekit-support/](</safekit-docs/resources/safekit-support/>)  
+Support IA gratuit | [https://safekit.eviden.com/resources/safekit-support/](</resources/safekit-support/>)  
 Formation et certification gratuites | <https://training.my.evidian.com/mod/page/view.php?id=712>  
 Nous contacter | <https://safekit.eviden.com/contact-us-for-safekit/>  
   
@@ -263,7 +263,7 @@ Nous contacter | <https://safekit.eviden.com/contact-us-for-safekit/>
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>

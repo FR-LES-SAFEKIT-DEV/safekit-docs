@@ -18,7 +18,7 @@ topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et 
   * **Capacité de SafeKit :** Offre un **RPO de 0** (aucune perte de données) et un **RTO faible** (redémarrage rapide) grâce à la réplication synchrone et au basculement automatique.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/08/rto-rpo-5-1024-fr-2.jpg" width="512" alt="Un graphique comparatif du RPO (perte de données maximale admissible) et du RTO (durée maximale d'indisponibilité), illustrant comment SafeKit garantit une perte de données nulle et un redémarrage rapide des applications.">
+<img src="/wp-content/uploads/2026/08/rto-rpo-5-1024-fr-2.jpg" width="512" alt="Un graphique comparatif du RPO (perte de données maximale admissible) et du RTO (durée maximale d'indisponibilité), illustrant comment SafeKit garantit une perte de données nulle et un redémarrage rapide des applications.">
 
 
 ## Table des matières
@@ -37,7 +37,7 @@ topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et 
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>
@@ -51,13 +51,13 @@ topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et 
 La **Haute Disponibilité (HA)** est une architecture technique conçue pour garantir qu'un système reste opérationnel et accessible pendant un pourcentage de temps spécifié (par exemple, 99,99 %).
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-icon-512x512-1.png" width="128" alt="Logo du logiciel de haute disponibilité SafeKit représentant le clustering sans SAN et la réplication synchrone">
+<img src="/wp-content/uploads/2026/01/safekit-icon-512x512-1.png" width="128" alt="Logo du logiciel de haute disponibilité SafeKit représentant le clustering sans SAN et la réplication synchrone">
 
 
 Pour atteindre les objectifs RPO et RTO définis dans un **Plan de Continuité d'Activité (PCA)** , la haute disponibilité est généralement mise en œuvre via deux architectures principales :
 
   * **Système à disques partagés via un SAN :** Un cluster traditionnel où 2 nœuds sont connectés à un réseau de stockage centralisé (SAN). Si un nœud tombe en panne, le second prend le relais pour accéder aux données partagées.
-  * **Réplication synchrone sans SAN (SANless) :** Une architecture moderne de type "shared-nothing" — mise en œuvre par le [logiciel SafeKit](</safekit-docs/> "Logiciel de Haute Disponibilité SafeKit") — où les données sont répliquées en temps réel entre les disques locaux de 2 nœuds indépendants, éliminant ainsi le besoin d'un SAN.
+  * **Réplication synchrone sans SAN (SANless) :** Une architecture moderne de type "shared-nothing" — mise en œuvre par le [logiciel SafeKit](</> "Logiciel de Haute Disponibilité SafeKit") — où les données sont répliquées en temps réel entre les disques locaux de 2 nœuds indépendants, éliminant ainsi le besoin d'un SAN.
 
 
 ### Quel est le RPO d'une solution de Haute Disponibilité ? {#what-is-rpo-high-availability}
@@ -87,7 +87,7 @@ Pour atteindre un RTO faible, une solution de haute disponibilité utilise le **
 Une **solution de sauvegarde** est une stratégie de protection des données conçue pour créer des copies périodiques des données sur un dispositif de stockage secondaire ou dans le cloud. Contrairement à la Haute Disponibilité, la sauvegarde se concentre sur la **rétention de données à long terme** et la récupération après une corruption de données ou un sinistre majeur à l'échelle d'un site.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/backup-icon.png" width="128" alt="Icône de solution de sauvegarde représentant une architecture de stockage pour la rétention à long terme">
+<img src="/wp-content/uploads/2026/01/backup-icon.png" width="128" alt="Icône de solution de sauvegarde représentant une architecture de stockage pour la rétention à long terme">
 
 
 Pour répondre aux objectifs RPO et RTO définis dans un **Plan de Reprise d'Activité (PRA)** , la sauvegarde est généralement mise en œuvre via deux méthodes principales :
@@ -123,7 +123,7 @@ Pour une solution de sauvegarde, le **RTO peut varier de plusieurs heures à plu
 Le **Cluster Miroir SafeKit** est une solution de haute disponibilité logicielle qui met en œuvre une architecture de type « shared-nothing » (sans partage de ressources). Contrairement aux clusters traditionnels qui nécessitent un SAN coûteux, SafeKit utilise les ressources locales de deux serveurs standards pour créer un environnement hautement résilient.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Architecture SafeKit Mirror Cluster montrant la réplication de fichiers au niveau octet en temps réel entre nœuds primaire et secondaire">
+<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Architecture SafeKit Mirror Cluster montrant la réplication de fichiers au niveau octet en temps réel entre nœuds primaire et secondaire">
 
 
 Pour garantir une disponibilité maximale et la protection des données au sein de votre **Plan de Continuité d'Activité (PCA)** , le cluster miroir SafeKit fonctionne via deux mécanismes intégrés :
@@ -134,7 +134,7 @@ Pour garantir une disponibilité maximale et la protection des données au sein 
 
 ### Quel est le RPO d'un Cluster Miroir SafeKit ? {#rpo-safekit-example}
 
-Le **RPO d'un cluster miroir SafeKit est de zéro** car la réplication des données entre les nœuds est [synchrone et en temps réel](</safekit-docs/best-practises/synchronous-replication-vs-asynchronous-replication/> "Réplication synchrone vs asynchrone").
+Le **RPO d'un cluster miroir SafeKit est de zéro** car la réplication des données entre les nœuds est [synchrone et en temps réel](</best-practises/synchronous-replication-vs-asynchronous-replication/> "Réplication synchrone vs asynchrone").
 
 Cette garantie de zéro perte de données est obtenue grâce à un processus d'**acquittement d'écriture** : une écriture sur disque n'est confirmée à l'application qu'une fois qu'elle a été effectuée avec succès sur les disques locaux des nœuds primaire et secondaire.
 
@@ -162,7 +162,7 @@ En utilisant la **haute disponibilité au niveau applicatif** , SafeKit élimine
 Le **Cluster Ferme SafeKit** est une solution de haute disponibilité logicielle conçue pour les applications sans état (comme les serveurs web) qui nécessitent à la fois **scalabilité** et **redondance**. Contrairement à un cluster miroir qui se concentre sur la réplication de données, un cluster ferme distribue le trafic entrant sur plusieurs nœuds actifs.
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="Architecture SafeKit Farm Cluster démontrant l'équilibrage de charge réseau et le basculement pour les applications sans état">
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="Architecture SafeKit Farm Cluster démontrant l'équilibrage de charge réseau et le basculement pour les applications sans état">
 
 
 Pour maintenir la **Continuité d'Activité** dans des environnements à fort trafic, le cluster ferme SafeKit fonctionne via deux mécanismes clés :
@@ -229,7 +229,7 @@ Découvrez comment SafeKit gère une panne critique. Cette vidéo démontre la *
   2. [Configurer le cluster et le module mirror.safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   3. [Démarrage et test de la réplication SQL, migration et failover sur crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
-[Essai gratuit ici](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
+[Essai gratuit ici](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
 ### Vidéo : Atteindre un RTO quasi nul avec un Cluster Ferme SafeKit (5:03) {#demo-farm-cluster-rpo-rto}
 
@@ -243,7 +243,7 @@ Découvrez comment SafeKit gère une ferme web Apache pour offrir à la fois une
   2. [Configurer le cluster et le module farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
   3. [Démarrage et test de l'équilibrage de charge réseau, failover sur crash](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
 
-[Essai gratuit ici](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
+[Essai gratuit ici](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 
 ## FAQ : Optimiser le RPO et le RTO pour la Continuité d'Activité {#faq-rpo-rto}
 
@@ -305,17 +305,17 @@ Pour une résilience maximale, les entreprises utilisent une **architecture hybr
 
 Type de ressource | Description | Lien direct  
 ---|---|---  
-**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</safekit-docs/fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
-**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</safekit-docs/fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
-**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</safekit-docs/fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
-**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</safekit-docs/fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
-**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
-**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</safekit-docs/fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
-**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</safekit-docs/fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
-**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</safekit-docs/fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
-**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</safekit-docs/fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
-**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</safekit-docs/fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
-**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
+**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
+**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
+**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
+**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
+**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
+**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
+**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
+**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
+**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
+**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
+**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="fr" display="content" -->
@@ -325,7 +325,7 @@ Type de ressource | Description | Lien direct
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>

@@ -19,7 +19,7 @@ Pour répondre aux contraintes des réseaux WAN à faible bande passante, SafeKi
 Par conséquent, l'environnement est protégé contre les défaillances matérielles ou logicielles via SafeKit, et sécurisé contre les erreurs logiques et les cybermenaces telles que les ransomwares grâce à la solution de sauvegarde.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg" width="512" alt="Un schéma technique montrant pourquoi la haute disponibilité (SafeKit) et les sauvegardes sont complémentaires : SafeKit gère le basculement matériel/logiciel via la réplication synchrone, tandis que la sauvegarde asynchrone protège contre les ransomwares et les erreurs logiques.">
+<img src="/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg" width="512" alt="Un schéma technique montrant pourquoi la haute disponibilité (SafeKit) et les sauvegardes sont complémentaires : SafeKit gère le basculement matériel/logiciel via la réplication synchrone, tandis que la sauvegarde asynchrone protège contre les ransomwares et les erreurs logiques.">
 
 
 ## Table des matières
@@ -36,7 +36,7 @@ Par conséquent, l'environnement est protégé contre les défaillances matérie
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>
@@ -48,7 +48,7 @@ Par conséquent, l'environnement est protégé contre les défaillances matérie
 ### Comment implémenter le HADR sur un réseau rapide ? {#hadr-fast-network-architecture}
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/remote-datacenters.png" width="256" alt="Architecture combinant la Haute Disponibilité et la Reprise d'Activité (HADR) sans disques partagés">
+<img src="/wp-content/uploads/2023/02/remote-datacenters.png" width="256" alt="Architecture combinant la Haute Disponibilité et la Reprise d'Activité (HADR) sans disques partagés">
 
 
 Pour implémenter le HADR sur un réseau rapide, déployez deux nœuds sur des sites distants afin d'assurer simultanément la Haute Disponibilité et la Reprise d'Activité. Cette configuration garantit que votre application reste disponible même en cas de défaillance complète d'un site, sans la complexité d'une infrastructure de stockage partagée.
@@ -61,8 +61,8 @@ Une solution SANless telle que SafeKit est essentielle car elle réplique les do
 
 Le HADR synchrone nécessite un LAN étendu ou un VLAN étendu (stretched VLAN) pour trois raisons critiques :
 
-  * **Basculement de l'IP virtuelle :** Un sous-réseau unique est nécessaire pour basculer automatiquement l'[adresse IP virtuelle](</safekit-docs/fr/best-practises/how-a-virtual-ip-address-works/>) entre les nœuds.
-  * **Faible latence :** La [réplication synchrone](</safekit-docs/fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) sans perte de données nécessite généralement un temps d'aller-retour réseau (RTT) inférieur à 2 ms.
+  * **Basculement de l'IP virtuelle :** Un sous-réseau unique est nécessaire pour basculer automatiquement l'[adresse IP virtuelle](</fr/best-practises/how-a-virtual-ip-address-works/>) entre les nœuds.
+  * **Faible latence :** La [réplication synchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) sans perte de données nécessite généralement un temps d'aller-retour réseau (RTT) inférieur à 2 ms.
   * **Bande passante élevée :** Une connexion de 1 Gb/s ou plus est requise pour garantir une resynchronisation rapide des données lors d'un retour après défaillance (failback).
 
 
@@ -71,7 +71,7 @@ Le HADR synchrone nécessite un LAN étendu ou un VLAN étendu (stretched VLAN) 
 ### Comment implémenter le HADR sur un réseau lent ? {#hadr-slow-network-architecture}
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/03/hadr-slow-network-1.png" width="256" alt="Architecture HADR séparant la Haute Disponibilité de la Reprise d'Activité">
+<img src="/wp-content/uploads/2023/03/hadr-slow-network-1.png" width="256" alt="Architecture HADR séparant la Haute Disponibilité de la Reprise d'Activité">
 
 
 Pour implémenter le HADR sur un réseau lent (WAN), l'architecture sépare généralement la **Haute Disponibilité** de la **Reprise d'Activité**. Dans ce scénario, deux nœuds sont déployés sur le site primaire pour la redondance locale, tandis qu'une stratégie distincte de sauvegarde ou de réplication asynchrone est utilisée pour protéger les données sur un site distant géographiquement éloigné.
@@ -94,11 +94,11 @@ Comme la réplication asynchrone sur un réseau lent implique une perte de donn�
 ### Comparatif entre Haute Disponibilité et Sauvegarde de données {#ha-vs-backup-comparison}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/04/safekit-icon-512x512-1.png" width="64" alt="Logo du logiciel de haute disponibilité SafeKit">
+<img src="/wp-content/uploads/2026/04/safekit-icon-512x512-1.png" width="64" alt="Logo du logiciel de haute disponibilité SafeKit">
 
  
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/backup-icon.png" width="64" alt="Icône de stratégie de sauvegarde de données">
+<img src="/wp-content/uploads/2026/01/backup-icon.png" width="64" alt="Icône de stratégie de sauvegarde de données">
 
 
 Bien que les deux soient critiques pour la protection des données, la **Haute Disponibilité (HA)** et les **solutions de sauvegarde** ciblent des risques différents. La **Haute Disponibilité** , propulsée par SafeKit, fournit un mécanisme de basculement « en direct » pour maintenir l'accès aux applications lors de pannes de serveurs ou de défaillances matérielles. À l'inverse, une **solution de sauvegarde** agit comme une archive « historique ». Tandis que la HA garantit une disponibilité système de 99,99 % en répliquant les données en temps réel, la sauvegarde se concentre sur l'intégrité des données, offrant les points de restauration nécessaires pour se remettre d'erreurs logiques, de suppressions accidentelles ou d'attaques par ransomware.
@@ -109,7 +109,7 @@ Non, la Haute Disponibilité et les sauvegardes sont complémentaires et non int
 
 ### Optimiser le RTO et le RPO : La synergie entre HA et sauvegarde {#ha-backup-rpo-rto}
 
-Pour bâtir une infrastructure véritablement résiliente, vous devez intégrer la Haute Disponibilité et la sauvegarde dans une stratégie unifiée. Ces deux technologies répondent à différentes dimensions de l'[équation du RTO (Recovery Time Objective) et du RPO (Recovery Point Objective)](</safekit-docs/fr/best-practises/what-is-rpo-and-rto-with-examples/>) : 
+Pour bâtir une infrastructure véritablement résiliente, vous devez intégrer la Haute Disponibilité et la sauvegarde dans une stratégie unifiée. Ces deux technologies répondent à différentes dimensions de l'[équation du RTO (Recovery Time Objective) et du RPO (Recovery Point Objective)](</fr/best-practises/what-is-rpo-and-rto-with-examples/>) : 
 
   * **Haute Disponibilité (via SafeKit) :** Vise une **récupération instantanée**. En maintenant un miroir synchrone et en direct de votre environnement, SafeKit atteint un RTO proche de zéro et un RPO nul. Si un serveur tombe en panne, l'application redémarre immédiatement sur le nœud secondaire, garantissant l'absence d'interruption de service ou de perte de données durant la transition.
   * **Solutions de sauvegarde :** Visent la **résilience des données**. Tandis que la HA maintient le service opérationnel (« live »), la sauvegarde crée un historique « immuable ». C'est votre dernier recours lorsque les données actives elles-mêmes sont compromises, vous permettant de restaurer une version saine de votre base de données à partir d'un point précis dans le temps, avant l'apparition d'un virus ou d'une suppression accidentelle.
@@ -156,17 +156,17 @@ Découvrez comment combiner la **Haute Disponibilité (HA)** et la **Reprise d'A
 
 Type de ressource | Description | Lien direct  
 ---|---|---  
-**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</safekit-docs/fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
-**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</safekit-docs/fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
-**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</safekit-docs/fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
-**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</safekit-docs/fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
-**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
-**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</safekit-docs/fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
-**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</safekit-docs/fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
-**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</safekit-docs/fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
-**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</safekit-docs/fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
-**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</safekit-docs/fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
-**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
+**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
+**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
+**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
+**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
+**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
+**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
+**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
+**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
+**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
+**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
+**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="fr" display="content" -->
@@ -176,7 +176,7 @@ Type de ressource | Description | Lien direct
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>

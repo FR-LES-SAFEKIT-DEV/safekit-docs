@@ -10,19 +10,20 @@ layout: userguide
 
 <div class="userguide-container">
   <div class="index-container">
-    <iframe id="index-frame" name="index" src="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/indexsafekituserguidefr.htm"></iframe>
+    <iframe id="index-frame" name="index" src="/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/indexsafekituserguidefr.htm"></iframe>
   </div>
   <div class="doc-container">
-    <iframe id="doc-frame" name="doc" src="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguidefr.htm"></iframe>
+    <iframe id="doc-frame" name="doc" src="/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguidefr.htm"></iframe>
   </div>
 </div>
 
 <script>
   const docFrame = document.getElementById('doc-frame');
+  const docBaseSrc = docFrame.getAttribute('src');
 
   function loadDocumentWithHash() {
     const hash = window.location.hash;
-    docFrame.src = '/safekit-docs/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguidefr.htm' + hash;
+    docFrame.src = docBaseSrc + hash;
   }
 
   function enhanceFrame(frameName) {

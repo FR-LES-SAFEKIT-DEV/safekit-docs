@@ -27,11 +27,11 @@ Un cluster SafeKit de type Farm pour Windows/Linux est une solution de répartit
   * **Haute disponibilité pour les éditeurs (OEM) :** Permet aux éditeurs de logiciels d'intégrer un clustering natif dans leurs applications, offrant ainsi un produit « prêt pour le cluster » et purement logiciel, sans infrastructure supplémentaire.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg" width="512" alt="Architecture de cluster SafeKit haute disponibilité pour Windows/Linux fournissant une IP virtuelle, un basculement automatique, un retour automatique et la répartition de charge réseau">
+<img src="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg" width="512" alt="Architecture de cluster SafeKit haute disponibilité pour Windows/Linux fournissant une IP virtuelle, un basculement automatique, un retour automatique et la répartition de charge réseau">
 
 **Cluster SafeKit Farm NLB pour Windows/Linux**
 
-<a class="btn-quick-install" href="/safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/">⚡ Guide d'installation rapide d'un cluster Farm pour Windows/Linux ></a>
+<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/">⚡ Guide d'installation rapide d'un cluster Farm pour Windows/Linux ></a>
 ## Table des matières {#toc}
 
   * [Comment le logiciel SafeKit implémente-t-il simplement un cluster de répartition de charge réseau (NLB) pour Windows/Linux ?](<#safekit-farm-ha-cluster>)
@@ -78,7 +78,7 @@ Cette surveillance approfondie permet au système de détecter les états « zom
 
 ### Est-il possible de configurer un cluster Farm pour Windows/Linux sans compétences en clustering ?
 
-Oui. Cet article explique comment [**implémenter rapidement un cluster Farm pour Windows/Linux**](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>) sans avoir besoin de compétences réseau spécialisées et complexes. En utilisant l'**IP virtuelle** de SafeKit pour gérer la répartition de charge réseau de **Windows/Linux** , vous obtenez une solution évolutive et robuste, nettement plus simple à déployer et à maintenir que les solutions NLB traditionnelles.
+Oui. Cet article explique comment [**implémenter rapidement un cluster Farm pour Windows/Linux**](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>) sans avoir besoin de compétences réseau spécialisées et complexes. En utilisant l'**IP virtuelle** de SafeKit pour gérer la répartition de charge réseau de **Windows/Linux** , vous obtenez une solution évolutive et robuste, nettement plus simple à déployer et à maintenir que les solutions NLB traditionnelles.
 
 ### Au-delà de Windows/Linux, quelles applications et quels environnements SafeKit peut-il protéger ?
 
@@ -90,7 +90,7 @@ SafeKit est une solution de haute disponibilité polyvalente, **à la fois pour 
   * **Infrastructure Cloud :** La haute disponibilité pour les applications Cloud.
 
 
-[Explorez la liste complète des solutions de haute disponibilité supportées ici.](</safekit-docs/solutions/>)
+[Explorez la liste complète des solutions de haute disponibilité supportées ici.](</solutions/>)
 
 
 <!-- BEGIN INSERT: insert-safekit-farm-en lang="fr" display="content" -->
@@ -101,12 +101,12 @@ SafeKit est une solution de haute disponibilité polyvalente, **à la fois pour 
 ### Adresse IP virtuelle dans un cluster en mode farm {#virtual-ip-address-farm}
 
 
-<img src="/safekit-docs/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="Comment le cluster SafeKit en mode farm implémente la répartition de charge réseau et le basculement de Windows/Linux">
+<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="Comment le cluster SafeKit en mode farm implémente la répartition de charge réseau et le basculement de Windows/Linux">
 
 
 Sur la figure précédente, l'application Windows/Linux s'exécute sur les 3 serveurs (3 est un exemple, cela peut être 2 ou plus). Les utilisateurs sont connectés à une adresse IP virtuelle.
 
-L'[adresse IP virtuelle](</safekit-docs/best-practises/how-a-virtual-ip-address-works/>) est configurée localement sur chaque serveur du cluster en mode farm.  
+L'[adresse IP virtuelle](</best-practises/how-a-virtual-ip-address-works/>) est configurée localement sur chaque serveur du cluster en mode farm.  
 Le trafic entrant vers l'adresse IP virtuelle est reçu par tous les serveurs et réparti entre eux par un filtre réseau situé dans le noyau (kernel) de chaque serveur.
 
 SafeKit détecte les pannes matérielles et logicielles, reconfigure les filtres réseau en cas de défaillance, et propose des scripts de vérification (checkers) et de reprise applicative configurables.
@@ -128,7 +128,7 @@ Avec une application Windows/Linux sans état (stateless), il n'y a pas d'affini
 ### Comment configurer un cluster SafeKit en mode farm pour Windows/Linux ? {#safekit-farm-cluster-configuration}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="Console Web SafeKit : Configuration du cluster en mode farm pour la répartition de charge réseau et la gestion de l'IP virtuelle de Windows/Linux.">
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="Console Web SafeKit : Configuration du cluster en mode farm pour la répartition de charge réseau et la gestion de l'IP virtuelle de Windows/Linux.">
 
 
 Le **cluster SafeKit en mode farm** est conçu pour la haute disponibilité et la scalabilité des services. La configuration se concentre sur la répartition du trafic entrant simultanément sur les deux nœuds :
@@ -143,7 +143,7 @@ Le **cluster SafeKit en mode farm** est conçu pour la haute disponibilité et l
 ### Comment superviser un cluster SafeKit en mode farm pour Windows/Linux ? {#safekit-farm-cluster-monitoring}
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="Console SafeKit : Supervision d'un cluster en mode farm à 2 nœuds montrant les deux nœuds de Windows/Linux à l'état UP avec répartition de charge active.">
+<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="Console SafeKit : Supervision d'un cluster en mode farm à 2 nœuds montrant les deux nœuds de Windows/Linux à l'état UP avec répartition de charge active.">
 
 
 La supervision d'un cluster en mode farm offre une visibilité sur la nature **Actif-Actif** de l'infrastructure, où tous les nœuds contribuent aux performances de l'application (l'exemple ici présente 2 nœuds) :
@@ -204,17 +204,17 @@ Dans cette vidéo, découvrez comment implémenter une **adresse IP virtuelle** 
 
 Type de ressource | Description | Lien direct  
 ---|---|---  
-**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</safekit-docs/fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
-**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</safekit-docs/fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
-**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</safekit-docs/fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
-**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</safekit-docs/fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
-**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
-**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</safekit-docs/fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
-**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</safekit-docs/fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
-**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</safekit-docs/fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
-**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</safekit-docs/fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
-**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</safekit-docs/fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
-**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</safekit-docs/fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
+**Fonctionnalités clés** | Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ? | [Voir pourquoi choisir SafeKit pour la Haute Disponibilité](</fr/#why-choose-safekit-for-ha> "Découvrez les fonctionnalités de SafeKit pour une haute disponibilité simple et économique")  
+**Cas d'usage** | Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques | [Voir tous les cas d'usage (Logiciels OEM, Serveurs Edge, SCADA, et plus)](</fr/#safekit-use-cases> "Découvrez les cas d'usage de SafeKit pour la haute disponibilité")  
+**Modèle de déploiement** | HA SANless tout-en-un : Cluster logiciel sans partage (Shared-Nothing) | [Voir SafeKit HA SANless tout-en-un](</fr/#all-in-one-sanless-ha> "En savoir plus sur la haute disponibilité SANless tout-en-un avec cluster logiciel sans partage")  
+**Stratégies HA** | SafeKit : Infrastructure (VM) vs Haute Disponibilité au niveau applicatif | [Voir SafeKit HA & Redondance : Niveau VM vs Niveau Applicatif](</fr/#safekit-ha-redundancy-choices> "Comparez la redondance au niveau VM avec les stratégies de haute disponibilité au niveau applicatif de SafeKit")  
+**Spécifications techniques** | Limitations techniques pour le clustering SafeKit | [Voir les limitations de la Haute Disponibilité SafeKit](</fr/#safekit-ha-limitations> "Configuration requise et limitations techniques pour le clustering d'applications SafeKit")  
+**Preuve de concept** | SafeKit : Démos de configuration HA et de basculement | [Voir les tutoriels de basculement SafeKit](</fr/#safekit-failover-tutorials> "Vidéos pas à pas sur la haute disponibilité SafeKit, de l'installation au basculement automatisé")  
+**Architecture** | Fonctionnement du cluster miroir SafeKit (Réplication et basculement en temps réel) | [Voir Cluster miroir SafeKit : réplication et basculement en temps réel](</fr/#safekit-mirror-cluster> "Découvrez l'architecture technique et le mécanisme de basculement du cluster miroir SafeKit")  
+**Architecture** | Fonctionnement du cluster de ferme SafeKit (Répartition de charge réseau et basculement) | [Voir Cluster de ferme SafeKit : répartition de charge et basculement](</fr/#safekit-farm-cluster> "Présentation technique de l'architecture du cluster de ferme SafeKit avec répartition de charge réseau")  
+**Avantages concurrentiels** | Comparaison : SafeKit vs Clusters de Haute Disponibilité (HA) traditionnels | [Voir la comparaison SafeKit vs Clusters HA traditionnels](</fr/#safekit-ha-comparison> "Comparaison détaillée du logiciel SafeKit par rapport aux clusters HA matériels traditionnels")  
+**Ressources techniques** | SafeKit Haute Disponibilité : Documentation, téléchargements et essai | [Voir l'essai gratuit SafeKit HA & la documentation technique](</fr/#safekit-ha-technical-resources> "Accédez à l'essai gratuit de SafeKit, à la documentation technique et aux livres blancs sur la haute disponibilité")  
+**Solutions préconfigurées** | Bibliothèque de modules applicatifs SafeKit : solutions HA prêtes à l'emploi | [Voir les modules applicatifs de Haute Disponibilité SafeKit](</fr/#safekit-ha-application-modules> "Parcourez la bibliothèque de modules SafeKit préconfigurés pour le basculement automatique d'applications")  
   
 
 <!-- END INSERT: insert-safekit-hub-fr lang="fr" display="content" -->
@@ -224,7 +224,7 @@ Type de ressource | Description | Lien direct
 <!-- BEGIN INSERT: insert-safekit-4-buttons-fr lang="fr" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
-  <a class="btn-action" href="/safekit-docs/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
   <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
 </div>

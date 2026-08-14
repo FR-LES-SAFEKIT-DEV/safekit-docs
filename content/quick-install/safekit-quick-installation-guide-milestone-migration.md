@@ -16,7 +16,7 @@ topics: "Eviden SafeKit"
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>
@@ -24,7 +24,7 @@ topics: "Eviden SafeKit"
  
 
 
-<img src="/safekit-docs/wp-content/uploads/2022/07/warning-small.png" alt="Warning">
+<img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning">
 
 
 This KB from Milestone explains the procedure: [How to upgrade an XProtect Management Server when full Safekit cluster is configured](<https://support.milestonesys.com/article/upgrade-XProtect-MS-when-full-Evidian-Safekit-cluster-is-configured-howto>).

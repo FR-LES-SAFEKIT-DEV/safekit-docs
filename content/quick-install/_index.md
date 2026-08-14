@@ -26,47 +26,47 @@ A SafeKit `.safe` module is essentially a pre‑configured High Availability (HA
 
 Application Category | Solutions | Quick Installation Guide | Application Module  
 ---|---|---|---  
-New Applications | [Windows Mirror Cluster Architecture](</safekit-docs/solutions/windows-high-availability-software-synchronous-replication-failover/> "How it works: Windows Real-Time Replication") | [Quick Installation Guide for Windows](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/> "Quick HA Installation Guide Windows Real-Time Replication \(mirror.safe\)") | mirror.safe (Windows)*  
-New Applications | [Linux Mirror Cluster Architecture](</safekit-docs/solutions/linux-high-availability-software-synchronous-replication-failover/> "How it works: Linux Real-Time Replication") | [Quick Installation Guide for Linux](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/> "Quick HA Installation Guide Linux Real-Time Replication \(mirror.safe\)") | mirror.safe (Linux)*  
-New Applications | [Windows Load Balancing Architecture](</safekit-docs/solutions/windows-load-balancing-failover/> "How it works: Windows Network Load Balancing") | [Quick Installation Guide for Windows](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/> "Quick HA Installation Guide Windows Network Load Balancing \(farm.safe\)") | farm.safe (Windows)*  
-New Applications | [Linux Load Balancing Architecture](</safekit-docs/solutions/linux-load-balancing-failover/> "How it works: Linux Network Load Balancing") | [Quick Installation Guide for Linux](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/> "Quick HA Installation Guide Linux Network Load Balancing \(farm.safe\)") | farm.safe (Linux)*  
-Databases | [Microsoft SQL Server Mirror Cluster Architecture](</safekit-docs/solutions/sql-server-high-availability-synchronous-replication-failover/> "How it works: SQL Server Mirroring") | [Quick Installation Guide for Microsoft SQL Server](</safekit-docs/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/> "Quick HA Installation Guide SQL Server Cluster") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver.safe" download="sqlserver.safe">⬇️ sqlserver.safe</a> (Windows)  
-Databases | [PostgreSQL Mirror Cluster Architecture](</safekit-docs/solutions/postgresql-high-availability-synchronous-replication-failover/> "How it works: PostgreSQL Replication") | [Quick Installation Guide for PostgreSQL](</safekit-docs/quick-install/safekit-quick-installation-guide-with-postgresql/> "Quick HA Installation Guide PostgreSQL Replication") |  <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe</a> (Windows)<br> <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe</a> (Linux)   
-Databases | [MySQL Mirror Cluster Architecture](</safekit-docs/solutions/mysql-high-availability-synchronous-replication-failover/> "How it works: MySQL Cluster") | [Quick Installation Guide for MySQL](</safekit-docs/quick-install/safekit-quick-installation-guide-with-mysql/> "Quick HA Installation Guide MySQL Cluster") |  <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Windows)<br> <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Linux)   
-Databases | [MariaDB Mirror Cluster Architecture](</safekit-docs/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/> "How it works: MariaDB Cluster") | [Quick Installation Guide for MariaDB](</safekit-docs/quick-install/safekit-quick-installation-guide-with-mariadb/> "Quick HA Installation Guide MariaDB Cluster") |  <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Windows)<br> <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Linux)   
-Databases | [Oracle Mirror Cluster Architecture](</safekit-docs/solutions/oracle-high-availability-synchronous-replication-failover/> "How it works: Oracle Failover") | [Quick Installation Guide for Oracle](</safekit-docs/quick-install/safekit-quick-installation-guide-with-oracle/> "Quick HA Installation Guide Oracle Failover Cluster") |  <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle.safe" download="oracle.safe">⬇️ oracle.safe</a> (Windows)<br> <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle.safe" download="oracle.safe">⬇️ oracle.safe</a> (Linux)   
-Databases | [Firebird Mirror Cluster Architecture](</safekit-docs/solutions/firebird-high-availability-synchronous-replication-failover/> "How it works: Firebird HA") | [Quick Installation Guide for Firebird](</safekit-docs/quick-install/safekit-quick-installation-guide-with-firebird/> "Quick HA Installation Guide Firebird") |  <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird.safe" download="firebird.safe">⬇️ firebird.safe</a> (Windows)<br> <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird.safe" download="firebird.safe">⬇️ firebird.safe</a> (Linux)   
-Web Servers | [Apache Load Balancing Architecture](</safekit-docs/solutions/apache-load-balancing-failover-2/> "How it works: Apache Load Balancing") | [Quick Installation Guide for Apache](</safekit-docs/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/> "Quick HA Guide Apache Load Balancing & Failover") |  <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe</a> (Windows)<br> <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe</a> (Linux)   
-Web Servers | [IIS Load Balancing Architecture](</safekit-docs/solutions/iis-load-balancing-failover/> "How it works: IIS Load Balancing") | [Quick Installation Guide for IIS](</safekit-docs/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/> "Quick HA Guide IIS Load Balancing & Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm.safe" download="iis_farm.safe">⬇️ iis_farm.safe</a> (Windows)  
-Web Servers | [NGINX Load Balancing Architecture](</safekit-docs/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/> "How it works: NGINX Load Balancing") | [Quick Installation Guide for NGINX](</safekit-docs/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/> "Quick HA Guide NGINX Load Balancing & Failover") | farm.safe (Windows & Linux)*  
-VMs and Containers | [Hyper-V VM HA Architecture](</safekit-docs/solutions/hyper-v-replication-automatic-failover-load-balancing/> "How it works: Hyper-V Replication") | [Quick Installation Guide for Hyper-V](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Installation Guide Hyper-V VM Replication") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-VMs and Containers | [KVM VM HA Architecture](</safekit-docs/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/> "How it works: KVM Replication") | [Quick Installation Guide for KVM](</safekit-docs/quick-install/safekit-quick-installation-guide-with-kvm/> "Quick HA Installation Guide KVM VM Replication") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm.safe" download="kvm.safe">⬇️ kvm.safe</a> (Linux)  
-VMs and Containers | [Docker Container HA Architecture](</safekit-docs/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/> "How it works: Docker Failover") | [Quick Installation Guide for Docker](</safekit-docs/quick-install/safekit-quick-installation-guide-with-docker/> "Quick HA Guide Docker Container Failover") | mirror.safe (Linux)*  
-VMs and Containers | [Podman Container HA Architecture](</safekit-docs/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/> "How it works: Podman Failover") | [Quick Installation Guide for Podman](</safekit-docs/quick-install/safekit-quick-installation-guide-with-podman/> "Quick HA Guide Podman Container Failover") | mirror.safe (Linux)*  
-VMs and Containers | [Kubernetes K3S Cluster Architecture](</safekit-docs/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/> "How it works: Kubernetes K3S") | [Quick Installation Guide for Kubernetes K3S](</safekit-docs/quick-install/safekit-quick-installation-guide-with-kubernetes/> "Quick HA Guide Kubernetes K3S Replication") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s.safe" download="k3s.safe">⬇️ k3s.safe</a> (Linux)  
-AWS Cloud | [AWS Mirror Cluster Architecture](</safekit-docs/solutions/aws-high-availability-cluster-synchronous-replication-failover/> "How it works: AWS Replication Cluster") | [Quick Installation Guide for AWS](</safekit-docs/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/> "Quick HA Guide AWS Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
-AWS Cloud | [AWS Load Balancing Architecture](</safekit-docs/solutions/aws-load-balancing-cluster-failover/> "How it works: AWS Load Balancing") | [Quick Installation Guide for AWS](</safekit-docs/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/> "Quick HA Guide AWS Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
-GCP Cloud | [GCP Mirror Cluster Architecture](</safekit-docs/solutions/gcp-high-availability-cluster-synchronous-replication-failover/> "How it works: GCP Replication Cluster") | [Quick Installation Guide for GCP](</safekit-docs/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/> "Quick HA Guide GCP Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
-GCP Cloud | [GCP Load Balancing Architecture](</safekit-docs/solutions/gcp-load-balancing-cluster-failover/> "How it works: GCP Load Balancing") | [Quick Installation Guide for GCP](</safekit-docs/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/> "Quick HA Guide GCP Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
-Azure Cloud | [Azure Mirror Cluster Architecture](</safekit-docs/solutions/azure-high-availability-cluster-synchronous-replication-failover/> "How it works: Azure Replication Cluster") | [Quick Installation Guide for Azure](</safekit-docs/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/> "Quick HA Guide Azure Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
-Azure Cloud | [Azure Load Balancing Architecture](</safekit-docs/solutions/azure-load-balancing-cluster-failover/> "How it works: Azure Load Balancing") | [Quick Installation Guide for Azure](</safekit-docs/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/> "Quick HA Guide Azure Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
-Cloud | [Cloud Mirror Cluster Architecture](</safekit-docs/solutions/cloud-high-availability-cluster-synchronous-replication-failover/> "How it works: Cloud Replication Cluster") | [Quick Installation Guide for Cloud](</safekit-docs/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/> "Quick HA Guide Cloud Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
-Cloud | [Cloud Load Balancing Architecture](</safekit-docs/solutions/cloud-load-balancing-cluster-failover/> "How it works: Cloud Load Balancing") | [Quick Installation Guide for Cloud](</safekit-docs/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/> "Quick HA Guide Cloud Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
-Physical Security / VMS | [Milestone XProtect Mirror Cluster Architecture](</safekit-docs/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/> "How it works: Milestone XProtect Failover") | [Quick Installation Guide for Milestone XProtect](</safekit-docs/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/> "Quick HA Guide Milestone XProtect Management Server Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone.safe" download="milestone.safe">⬇️ milestone.safe</a> (Windows)  
-Physical Security / VMS | [Nedap AEOS Mirror Cluster Architecture](</safekit-docs/solutions/nedap-high-availability-synchronous-replication-failover/> "How it works: Nedap AEOS Failover") | [Quick Installation Guide for Nedap AEOS](</safekit-docs/quick-install/safekit-quick-installation-guide-with-nedap/> "Quick HA Guide Nedap AEOS Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap.safe" download="nedap.safe">⬇️ nedap.safe</a> (Windows)  
-Physical Security / VMS | [Genetec SQL Mirror Cluster Architecture](</safekit-docs/solutions/sql-server-high-availability-synchronous-replication-failover/> "How it works: Genetec SQL Failover") | [Quick Installation Guide for Genetec (SQL Server)](</safekit-docs/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/> "Quick HA Guide Genetec SQL Server Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver.safe" download="sqlserver.safe">⬇️ sqlserver.safe</a> (Windows)  
-Physical Security / VMS | [Bosch AMS VM HA Architecture](</safekit-docs/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Bosch AMS HA") | [Quick Installation Guide for Bosch AMS](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Bosch AMS Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Physical Security / VMS | [Bosch BIS VM HA Architecture](</safekit-docs/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Bosch BIS HA") | [Quick Installation Guide for Bosch BIS](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Bosch BIS Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Physical Security / VMS | [Bosch BVMS VM HA Architecture](</safekit-docs/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Bosch BVMS HA") | [Quick Installation Guide for Bosch BVMS](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Bosch BVMS Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Physical Security / VMS | [Hanwha Vision VM HA Architecture](</safekit-docs/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/> "How it works: Hanwha Vision HA") | [Quick Installation Guide for Hanwha Vision](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Hanwha Vision Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Physical Security / VMS | [Hanwha Wisenet VM HA Architecture](</safekit-docs/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Hanwha Wisenet HA") | [Quick Installation Guide for Hanwha Wisenet](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Hanwha Wisenet Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Siemens Products | [Siemens Siveillance VM HA Architecture](</safekit-docs/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/> "How it works: Siemens Siveillance suite HA") | [Quick Installation Guide for Siemens Siveillance suite](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens Siveillance suite Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Siemens Products | [Siemens Desigo CC VM HA Architecture](</safekit-docs/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/> "How it works: Siemens Desigo CC HA") | [Quick Installation Guide for Siemens Desigo CC](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens Desigo CC Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Siemens Products | [Siemens Siveillance Mirror Cluster Architecture](</safekit-docs/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/> "How it works: Siemens Siveillance VMS Failover") | [Quick Installation Guide for Siemens Siveillance VMS](</safekit-docs/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/> "Quick HA Guide Siemens Siveillance VMS Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS.safe" download="SiveillanceVMS.safe">⬇️ SiveillanceVMS.safe</a> (Windows)  
-Siemens Products | [Siemens SiPass VM HA Architecture](</safekit-docs/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SiPass HA") | [Quick Installation Guide for Siemens SiPass](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SiPass Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Siemens Products | [Siemens SIPORT VM HA Architecture](</safekit-docs/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SIPORT HA") | [Quick Installation Guide for Siemens SIPORT](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SIPORT Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Siemens Products | [SIMATIC PCS 7 VM HA Architecture](</safekit-docs/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SIMATIC PCS 7 HA") | [Quick Installation Guide for Siemens SIMATIC PCS 7](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SIMATIC PCS 7 Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
-Siemens Products | [SIMATIC WinCC VM HA Architecture](</safekit-docs/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SIMATIC WinCC HA") | [Quick Installation Guide for Siemens SIMATIC WinCC](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SIMATIC WinCC Hyper-V Failover") | <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+New Applications | [Windows Mirror Cluster Architecture](</solutions/windows-high-availability-software-synchronous-replication-failover/> "How it works: Windows Real-Time Replication") | [Quick Installation Guide for Windows](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/> "Quick HA Installation Guide Windows Real-Time Replication \(mirror.safe\)") | mirror.safe (Windows)*  
+New Applications | [Linux Mirror Cluster Architecture](</solutions/linux-high-availability-software-synchronous-replication-failover/> "How it works: Linux Real-Time Replication") | [Quick Installation Guide for Linux](</quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/> "Quick HA Installation Guide Linux Real-Time Replication \(mirror.safe\)") | mirror.safe (Linux)*  
+New Applications | [Windows Load Balancing Architecture](</solutions/windows-load-balancing-failover/> "How it works: Windows Network Load Balancing") | [Quick Installation Guide for Windows](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/> "Quick HA Installation Guide Windows Network Load Balancing \(farm.safe\)") | farm.safe (Windows)*  
+New Applications | [Linux Load Balancing Architecture](</solutions/linux-load-balancing-failover/> "How it works: Linux Network Load Balancing") | [Quick Installation Guide for Linux](</quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/> "Quick HA Installation Guide Linux Network Load Balancing \(farm.safe\)") | farm.safe (Linux)*  
+Databases | [Microsoft SQL Server Mirror Cluster Architecture](</solutions/sql-server-high-availability-synchronous-replication-failover/> "How it works: SQL Server Mirroring") | [Quick Installation Guide for Microsoft SQL Server](</quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/> "Quick HA Installation Guide SQL Server Cluster") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver.safe" download="sqlserver.safe">⬇️ sqlserver.safe</a> (Windows)  
+Databases | [PostgreSQL Mirror Cluster Architecture](</solutions/postgresql-high-availability-synchronous-replication-failover/> "How it works: PostgreSQL Replication") | [Quick Installation Guide for PostgreSQL](</quick-install/safekit-quick-installation-guide-with-postgresql/> "Quick HA Installation Guide PostgreSQL Replication") |  <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe</a> (Windows)<br> <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe</a> (Linux)   
+Databases | [MySQL Mirror Cluster Architecture](</solutions/mysql-high-availability-synchronous-replication-failover/> "How it works: MySQL Cluster") | [Quick Installation Guide for MySQL](</quick-install/safekit-quick-installation-guide-with-mysql/> "Quick HA Installation Guide MySQL Cluster") |  <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Windows)<br> <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Linux)   
+Databases | [MariaDB Mirror Cluster Architecture](</solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/> "How it works: MariaDB Cluster") | [Quick Installation Guide for MariaDB](</quick-install/safekit-quick-installation-guide-with-mariadb/> "Quick HA Installation Guide MariaDB Cluster") |  <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Windows)<br> <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql.safe" download="mysql.safe">⬇️ mysql.safe</a> (Linux)   
+Databases | [Oracle Mirror Cluster Architecture](</solutions/oracle-high-availability-synchronous-replication-failover/> "How it works: Oracle Failover") | [Quick Installation Guide for Oracle](</quick-install/safekit-quick-installation-guide-with-oracle/> "Quick HA Installation Guide Oracle Failover Cluster") |  <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle.safe" download="oracle.safe">⬇️ oracle.safe</a> (Windows)<br> <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle.safe" download="oracle.safe">⬇️ oracle.safe</a> (Linux)   
+Databases | [Firebird Mirror Cluster Architecture](</solutions/firebird-high-availability-synchronous-replication-failover/> "How it works: Firebird HA") | [Quick Installation Guide for Firebird](</quick-install/safekit-quick-installation-guide-with-firebird/> "Quick HA Installation Guide Firebird") |  <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird.safe" download="firebird.safe">⬇️ firebird.safe</a> (Windows)<br> <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird.safe" download="firebird.safe">⬇️ firebird.safe</a> (Linux)   
+Web Servers | [Apache Load Balancing Architecture](</solutions/apache-load-balancing-failover-2/> "How it works: Apache Load Balancing") | [Quick Installation Guide for Apache](</quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/> "Quick HA Guide Apache Load Balancing & Failover") |  <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe</a> (Windows)<br> <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe</a> (Linux)   
+Web Servers | [IIS Load Balancing Architecture](</solutions/iis-load-balancing-failover/> "How it works: IIS Load Balancing") | [Quick Installation Guide for IIS](</quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/> "Quick HA Guide IIS Load Balancing & Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm.safe" download="iis_farm.safe">⬇️ iis_farm.safe</a> (Windows)  
+Web Servers | [NGINX Load Balancing Architecture](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/> "How it works: NGINX Load Balancing") | [Quick Installation Guide for NGINX](</quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/> "Quick HA Guide NGINX Load Balancing & Failover") | farm.safe (Windows & Linux)*  
+VMs and Containers | [Hyper-V VM HA Architecture](</solutions/hyper-v-replication-automatic-failover-load-balancing/> "How it works: Hyper-V Replication") | [Quick Installation Guide for Hyper-V](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Installation Guide Hyper-V VM Replication") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+VMs and Containers | [KVM VM HA Architecture](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/> "How it works: KVM Replication") | [Quick Installation Guide for KVM](</quick-install/safekit-quick-installation-guide-with-kvm/> "Quick HA Installation Guide KVM VM Replication") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm.safe" download="kvm.safe">⬇️ kvm.safe</a> (Linux)  
+VMs and Containers | [Docker Container HA Architecture](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/> "How it works: Docker Failover") | [Quick Installation Guide for Docker](</quick-install/safekit-quick-installation-guide-with-docker/> "Quick HA Guide Docker Container Failover") | mirror.safe (Linux)*  
+VMs and Containers | [Podman Container HA Architecture](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/> "How it works: Podman Failover") | [Quick Installation Guide for Podman](</quick-install/safekit-quick-installation-guide-with-podman/> "Quick HA Guide Podman Container Failover") | mirror.safe (Linux)*  
+VMs and Containers | [Kubernetes K3S Cluster Architecture](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/> "How it works: Kubernetes K3S") | [Quick Installation Guide for Kubernetes K3S](</quick-install/safekit-quick-installation-guide-with-kubernetes/> "Quick HA Guide Kubernetes K3S Replication") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s.safe" download="k3s.safe">⬇️ k3s.safe</a> (Linux)  
+AWS Cloud | [AWS Mirror Cluster Architecture](</solutions/aws-high-availability-cluster-synchronous-replication-failover/> "How it works: AWS Replication Cluster") | [Quick Installation Guide for AWS](</quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/> "Quick HA Guide AWS Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
+AWS Cloud | [AWS Load Balancing Architecture](</solutions/aws-load-balancing-cluster-failover/> "How it works: AWS Load Balancing") | [Quick Installation Guide for AWS](</quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/> "Quick HA Guide AWS Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
+GCP Cloud | [GCP Mirror Cluster Architecture](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/> "How it works: GCP Replication Cluster") | [Quick Installation Guide for GCP](</quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/> "Quick HA Guide GCP Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
+GCP Cloud | [GCP Load Balancing Architecture](</solutions/gcp-load-balancing-cluster-failover/> "How it works: GCP Load Balancing") | [Quick Installation Guide for GCP](</quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/> "Quick HA Guide GCP Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
+Azure Cloud | [Azure Mirror Cluster Architecture](</solutions/azure-high-availability-cluster-synchronous-replication-failover/> "How it works: Azure Replication Cluster") | [Quick Installation Guide for Azure](</quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/> "Quick HA Guide Azure Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
+Azure Cloud | [Azure Load Balancing Architecture](</solutions/azure-load-balancing-cluster-failover/> "How it works: Azure Load Balancing") | [Quick Installation Guide for Azure](</quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/> "Quick HA Guide Azure Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
+Cloud | [Cloud Mirror Cluster Architecture](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/> "How it works: Cloud Replication Cluster") | [Quick Installation Guide for Cloud](</quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/> "Quick HA Guide Cloud Replication Cluster \(mirror.safe\)") | mirror.safe (Windows & Linux)*  
+Cloud | [Cloud Load Balancing Architecture](</solutions/cloud-load-balancing-cluster-failover/> "How it works: Cloud Load Balancing") | [Quick Installation Guide for Cloud](</quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/> "Quick HA Guide Cloud Load Balancing Cluster \(farm.safe\)") | farm.safe (Windows & Linux)*  
+Physical Security / VMS | [Milestone XProtect Mirror Cluster Architecture](</solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/> "How it works: Milestone XProtect Failover") | [Quick Installation Guide for Milestone XProtect](</quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/> "Quick HA Guide Milestone XProtect Management Server Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone.safe" download="milestone.safe">⬇️ milestone.safe</a> (Windows)  
+Physical Security / VMS | [Nedap AEOS Mirror Cluster Architecture](</solutions/nedap-high-availability-synchronous-replication-failover/> "How it works: Nedap AEOS Failover") | [Quick Installation Guide for Nedap AEOS](</quick-install/safekit-quick-installation-guide-with-nedap/> "Quick HA Guide Nedap AEOS Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap.safe" download="nedap.safe">⬇️ nedap.safe</a> (Windows)  
+Physical Security / VMS | [Genetec SQL Mirror Cluster Architecture](</solutions/sql-server-high-availability-synchronous-replication-failover/> "How it works: Genetec SQL Failover") | [Quick Installation Guide for Genetec (SQL Server)](</quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/> "Quick HA Guide Genetec SQL Server Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver.safe" download="sqlserver.safe">⬇️ sqlserver.safe</a> (Windows)  
+Physical Security / VMS | [Bosch AMS VM HA Architecture](</solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Bosch AMS HA") | [Quick Installation Guide for Bosch AMS](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Bosch AMS Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Physical Security / VMS | [Bosch BIS VM HA Architecture](</solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Bosch BIS HA") | [Quick Installation Guide for Bosch BIS](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Bosch BIS Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Physical Security / VMS | [Bosch BVMS VM HA Architecture](</solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Bosch BVMS HA") | [Quick Installation Guide for Bosch BVMS](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Bosch BVMS Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Physical Security / VMS | [Hanwha Vision VM HA Architecture](</solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/> "How it works: Hanwha Vision HA") | [Quick Installation Guide for Hanwha Vision](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Hanwha Vision Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Physical Security / VMS | [Hanwha Wisenet VM HA Architecture](</solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/> "How it works: Hanwha Wisenet HA") | [Quick Installation Guide for Hanwha Wisenet](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Hanwha Wisenet Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Siemens Products | [Siemens Siveillance VM HA Architecture](</solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/> "How it works: Siemens Siveillance suite HA") | [Quick Installation Guide for Siemens Siveillance suite](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens Siveillance suite Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Siemens Products | [Siemens Desigo CC VM HA Architecture](</solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/> "How it works: Siemens Desigo CC HA") | [Quick Installation Guide for Siemens Desigo CC](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens Desigo CC Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Siemens Products | [Siemens Siveillance Mirror Cluster Architecture](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/> "How it works: Siemens Siveillance VMS Failover") | [Quick Installation Guide for Siemens Siveillance VMS](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/> "Quick HA Guide Siemens Siveillance VMS Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS.safe" download="SiveillanceVMS.safe">⬇️ SiveillanceVMS.safe</a> (Windows)  
+Siemens Products | [Siemens SiPass VM HA Architecture](</solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SiPass HA") | [Quick Installation Guide for Siemens SiPass](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SiPass Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Siemens Products | [Siemens SIPORT VM HA Architecture](</solutions/siemens-siport-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SIPORT HA") | [Quick Installation Guide for Siemens SIPORT](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SIPORT Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Siemens Products | [SIMATIC PCS 7 VM HA Architecture](</solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SIMATIC PCS 7 HA") | [Quick Installation Guide for Siemens SIMATIC PCS 7](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SIMATIC PCS 7 Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
+Siemens Products | [SIMATIC WinCC VM HA Architecture](</solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/> "How it works: Siemens SIMATIC WinCC HA") | [Quick Installation Guide for Siemens SIMATIC WinCC](</quick-install/safekit-quick-installation-guide-with-hyper-v/> "Quick HA Guide Siemens SIMATIC WinCC Hyper-V Failover") | <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe</a> (Windows)  
   
 
 <!-- END INSERT: insert-safekit-modules-en lang="en" display="content" -->
@@ -82,34 +82,34 @@ _Apache HTTP Server load balancing & failover (farm module). Distributes HTTP/HT
 
 #### Content (Windows)
 
-  * [apache_farm/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [apache_farm/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [apache_farm/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [apache_farm/bin/start_both.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/start_both.ps1>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
-  * [apache_farm/bin/stop_both.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/stop_both.ps1>) — Stops the application on all farm nodes (farm module); executed on module stop
-  * [apache_farm/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [apache_farm/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [apache_farm/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [apache_farm/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [apache_farm/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [apache_farm/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [apache_farm/bin/start_both.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/start_both.ps1>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
+  * [apache_farm/bin/stop_both.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/bin/stop_both.ps1>) — Stops the application on all farm nodes (farm module); executed on module stop
+  * [apache_farm/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [apache_farm/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [apache_farm/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### Content (Linux)
 
-  * [apache_farm/bin/module_scripts_utils](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
-  * [apache_farm/bin/postconfig](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
-  * [apache_farm/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [apache_farm/bin/start_both](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/start_both>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
-  * [apache_farm/bin/stop_both](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/stop_both>) — Stops the application on all farm nodes (farm module); executed on module stop
-  * [apache_farm/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [apache_farm/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [apache_farm/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [apache_farm/bin/module_scripts_utils](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
+  * [apache_farm/bin/postconfig](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
+  * [apache_farm/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [apache_farm/bin/start_both](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/start_both>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
+  * [apache_farm/bin/stop_both](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/bin/stop_both>) — Stops the application on all farm nodes (farm module); executed on module stop
+  * [apache_farm/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [apache_farm/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [apache_farm/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe (Windows)</a>
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/apache-load-balancing-failover-2/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe (Windows)</a>
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/apache_farm.safe" download="apache_farm.safe">⬇️ apache_farm.safe (Linux)</a>
+  * 📖 [How it works](</solutions/apache-load-balancing-failover-2/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/>)
 
 
 ### 📂 **farm.safe**
@@ -118,34 +118,34 @@ _Generic farm module template for network load balancing & failover of any appli
 
 #### Content (Windows)
 
-  * [farm/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [farm/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [farm/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [farm/bin/start_both.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/start_both.ps1>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
-  * [farm/bin/stop_both.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/stop_both.ps1>) — Stops the application on all farm nodes (farm module); executed on module stop
-  * [farm/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [farm/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [farm/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [farm/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [farm/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [farm/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [farm/bin/start_both.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/start_both.ps1>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
+  * [farm/bin/stop_both.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/bin/stop_both.ps1>) — Stops the application on all farm nodes (farm module); executed on module stop
+  * [farm/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [farm/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [farm/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### Content (Linux)
 
-  * [farm/bin/module_scripts_utils](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
-  * [farm/bin/postconfig](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
-  * [farm/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [farm/bin/start_both](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/start_both>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
-  * [farm/bin/stop_both](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/stop_both>) — Stops the application on all farm nodes (farm module); executed on module stop
-  * [farm/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [farm/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [farm/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [farm/bin/module_scripts_utils](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
+  * [farm/bin/postconfig](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
+  * [farm/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [farm/bin/start_both](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/start_both>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
+  * [farm/bin/stop_both](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/bin/stop_both>) — Stops the application on all farm nodes (farm module); executed on module stop
+  * [farm/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [farm/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [farm/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm.safe" download="farm.safe">⬇️ farm.safe (Windows)</a>
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm.safe" download="farm.safe">⬇️ farm.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/windows-load-balancing-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/farm.safe" download="farm.safe">⬇️ farm.safe (Windows)</a>
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/farm.safe" download="farm.safe">⬇️ farm.safe (Linux)</a>
+  * 📖 [How it works](</solutions/windows-load-balancing-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 
 
 ### 📂 **firebird.safe**
@@ -154,34 +154,34 @@ _Firebird database HA with real-time replication & automatic failover (mirror mo
 
 #### Content (Windows)
 
-  * [firebird/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [firebird/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [firebird/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [firebird/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [firebird/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [firebird/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [firebird/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [firebird/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [firebird/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [firebird/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [firebird/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [firebird/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [firebird/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [firebird/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [firebird/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [firebird/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### Content (Linux)
 
-  * [firebird/bin/module_scripts_utils](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
-  * [firebird/bin/postconfig](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
-  * [firebird/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [firebird/bin/start_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [firebird/bin/stop_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [firebird/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [firebird/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [firebird/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [firebird/bin/module_scripts_utils](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
+  * [firebird/bin/postconfig](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
+  * [firebird/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [firebird/bin/start_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [firebird/bin/stop_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [firebird/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [firebird/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [firebird/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird.safe" download="firebird.safe">⬇️ firebird.safe (Windows)</a>
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird.safe" download="firebird.safe">⬇️ firebird.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/firebird-high-availability-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-firebird/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/firebird.safe" download="firebird.safe">⬇️ firebird.safe (Windows)</a>
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/firebird.safe" download="firebird.safe">⬇️ firebird.safe (Linux)</a>
+  * 📖 [How it works](</solutions/firebird-high-availability-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-firebird/>)
 
 
 ### 📂 **hyperv.safe**
@@ -190,24 +190,24 @@ _Hyper-V virtual machine replication, automatic failover & load balancing (mirro
 
 #### Content (Windows)
 
-  * [hyperv/bin/_rfs_callback.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/_rfs_callback.ps1>) — Callback triggered during file replication events (manages VM state during replication)
-  * [hyperv/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [hyperv/bin/preparevm.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/preparevm.ps1>) — Prepares Hyper-V virtual machine before failover (export/import operations)
-  * [hyperv/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [hyperv/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [hyperv/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [hyperv/bin/vmcheck.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/vmcheck.ps1>) — Checker script monitoring Hyper-V virtual machine health status
-  * [hyperv/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [hyperv/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [hyperv/web/index.html.en](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/web/index.html.en>)
-  * [hyperv/web/index.html.ja](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/web/index.html.ja>)
+  * [hyperv/bin/_rfs_callback.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/_rfs_callback.ps1>) — Callback triggered during file replication events (manages VM state during replication)
+  * [hyperv/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [hyperv/bin/preparevm.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/preparevm.ps1>) — Prepares Hyper-V virtual machine before failover (export/import operations)
+  * [hyperv/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [hyperv/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [hyperv/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [hyperv/bin/vmcheck.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/bin/vmcheck.ps1>) — Checker script monitoring Hyper-V virtual machine health status
+  * [hyperv/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [hyperv/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [hyperv/web/index.html.en](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/web/index.html.en>)
+  * [hyperv/web/index.html.ja](</wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv/web/index.html.ja>)
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe (Windows)</a>
-  * 📖 [How it works](</safekit-docs/solutions/hyper-v-replication-automatic-failover-load-balancing/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-hyper-v/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/hyperv.safe" download="hyperv.safe">⬇️ hyperv.safe (Windows)</a>
+  * 📖 [How it works](</solutions/hyper-v-replication-automatic-failover-load-balancing/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-hyper-v/>)
 
 
 ### 📂 **iis_farm.safe**
@@ -216,21 +216,21 @@ _Microsoft IIS web server load balancing & failover (farm module). Distributes H
 
 #### Content (Windows)
 
-  * [iis_farm/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [iis_farm/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [iis_farm/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [iis_farm/bin/start_both.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/start_both.ps1>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
-  * [iis_farm/bin/stop_both.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/stop_both.ps1>) — Stops the application on all farm nodes (farm module); executed on module stop
-  * [iis_farm/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [iis_farm/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [iis_farm/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [iis_farm/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [iis_farm/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [iis_farm/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [iis_farm/bin/start_both.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/start_both.ps1>) — Starts the application on all farm nodes (farm module); executed during STOP→UP transition
+  * [iis_farm/bin/stop_both.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/bin/stop_both.ps1>) — Stops the application on all farm nodes (farm module); executed on module stop
+  * [iis_farm/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [iis_farm/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [iis_farm/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm.safe" download="iis_farm.safe">⬇️ iis_farm.safe (Windows)</a>
-  * 📖 [How it works](</safekit-docs/solutions/iis-load-balancing-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/iis_farm.safe" download="iis_farm.safe">⬇️ iis_farm.safe (Windows)</a>
+  * 📖 [How it works](</solutions/iis-load-balancing-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/>)
 
 
 ### 📂 **k3s.safe**
@@ -239,22 +239,22 @@ _Kubernetes K3s cluster HA with real-time replication & automatic failover (mirr
 
 #### Content (Linux)
 
-  * [k3s/manifest.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/manifest.xml>)
-  * [k3s/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [k3s/bin/start_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [k3s/bin/start_second](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/start_second>) — Starts the application on the secondary server (used by k3s module for K3s agent node)
-  * [k3s/bin/stop_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [k3s/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [k3s/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [k3s/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [k3s/manifest.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/manifest.xml>)
+  * [k3s/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [k3s/bin/start_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [k3s/bin/start_second](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/start_second>) — Starts the application on the secondary server (used by k3s module for K3s agent node)
+  * [k3s/bin/stop_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [k3s/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [k3s/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [k3s/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s.safe" download="k3s.safe">⬇️ k3s.safe (Linux)</a>
-  * ⬇️ [k3sconfig.sh (Linux)](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3sconfig.sh>)
-  * 📖 [How it works](</safekit-docs/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-kubernetes/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s.safe" download="k3s.safe">⬇️ k3s.safe (Linux)</a>
+  * ⬇️ [k3sconfig.sh (Linux)](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3sconfig.sh>)
+  * 📖 [How it works](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-kubernetes/>)
 
 
 ### 📂 **kvm.safe**
@@ -263,21 +263,21 @@ _Linux KVM virtual machine replication, automatic failover & load balancing (mir
 
 #### Content (Linux)
 
-  * [kvm/manifest.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/manifest.xml>)
-  * [kvm/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [kvm/bin/start_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [kvm/bin/stop_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [kvm/bin/vmcheck](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/vmcheck>) — Checker script monitoring KVM virtual machine health status
-  * [kvm/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [kvm/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [kvm/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [kvm/manifest.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/manifest.xml>)
+  * [kvm/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [kvm/bin/start_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [kvm/bin/stop_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [kvm/bin/vmcheck](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/bin/vmcheck>) — Checker script monitoring KVM virtual machine health status
+  * [kvm/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [kvm/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [kvm/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm.safe" download="kvm.safe">⬇️ kvm.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-kvm/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/kvm.safe" download="kvm.safe">⬇️ kvm.safe (Linux)</a>
+  * 📖 [How it works](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-kvm/>)
 
 
 ### 📂 **milestone.safe**
@@ -286,23 +286,23 @@ _Milestone XProtect VMS management server HA with replication & failover (mirror
 
 #### Content (Windows)
 
-  * [milestone/bin/apppoolcheck.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/apppoolcheck.ps1>) — Checker monitoring IIS application pools used by Siveillance VMS
-  * [milestone/bin/apppoollist.txt](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/apppoollist.txt>) — List of IIS application pools to monitor for Siveillance VMS health checking
-  * [milestone/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [milestone/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [milestone/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [milestone/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [milestone/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [milestone/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [milestone/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [milestone/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [milestone/bin/apppoolcheck.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/apppoolcheck.ps1>) — Checker monitoring IIS application pools used by Siveillance VMS
+  * [milestone/bin/apppoollist.txt](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/apppoollist.txt>) — List of IIS application pools to monitor for Siveillance VMS health checking
+  * [milestone/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [milestone/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [milestone/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [milestone/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [milestone/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [milestone/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [milestone/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [milestone/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone.safe" download="milestone.safe">⬇️ milestone.safe (Windows)</a>
-  * 📖 [How it works](</safekit-docs/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/milestone.safe" download="milestone.safe">⬇️ milestone.safe (Windows)</a>
+  * 📖 [How it works](</solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/>)
 
 
 ### 📂 **mirror.safe**
@@ -311,34 +311,34 @@ _Generic mirror module template for real-time file replication & failover of any
 
 #### Content (Windows)
 
-  * [mirror/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [mirror/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [mirror/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [mirror/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [mirror/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [mirror/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [mirror/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [mirror/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [mirror/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [mirror/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [mirror/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [mirror/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [mirror/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [mirror/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [mirror/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [mirror/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### Content (Linux)
 
-  * [mirror/bin/module_scripts_utils](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
-  * [mirror/bin/postconfig](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
-  * [mirror/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [mirror/bin/start_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [mirror/bin/stop_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [mirror/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [mirror/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [mirror/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [mirror/bin/module_scripts_utils](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
+  * [mirror/bin/postconfig](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
+  * [mirror/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [mirror/bin/start_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [mirror/bin/stop_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [mirror/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [mirror/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [mirror/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror.safe" download="mirror.safe">⬇️ mirror.safe (Windows)</a>
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror.safe" download="mirror.safe">⬇️ mirror.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/windows-high-availability-software-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/mirror.safe" download="mirror.safe">⬇️ mirror.safe (Windows)</a>
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/mirror.safe" download="mirror.safe">⬇️ mirror.safe (Linux)</a>
+  * 📖 [How it works](</solutions/windows-high-availability-software-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
 
 ### 📂 **mysql.safe**
@@ -347,34 +347,34 @@ _MySQL/MariaDB database HA with real-time replication & automatic failover (mirr
 
 #### Content (Windows)
 
-  * [mysql/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [mysql/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [mysql/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [mysql/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [mysql/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [mysql/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [mysql/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [mysql/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [mysql/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [mysql/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [mysql/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [mysql/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [mysql/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [mysql/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [mysql/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [mysql/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### Content (Linux)
 
-  * [mysql/bin/module_scripts_utils](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
-  * [mysql/bin/postconfig](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
-  * [mysql/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [mysql/bin/start_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [mysql/bin/stop_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [mysql/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [mysql/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [mysql/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [mysql/bin/module_scripts_utils](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
+  * [mysql/bin/postconfig](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
+  * [mysql/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [mysql/bin/start_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [mysql/bin/stop_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [mysql/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [mysql/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [mysql/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql.safe" download="mysql.safe">⬇️ mysql.safe (Windows)</a>
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql.safe" download="mysql.safe">⬇️ mysql.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/mysql-high-availability-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-mysql/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/mysql.safe" download="mysql.safe">⬇️ mysql.safe (Windows)</a>
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/mysql.safe" download="mysql.safe">⬇️ mysql.safe (Linux)</a>
+  * 📖 [How it works](</solutions/mysql-high-availability-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-mysql/>)
 
 
 ### 📂 **nedap.safe**
@@ -383,21 +383,21 @@ _Nedap AEOS electronic access control system HA with replication & failover (mir
 
 #### Content (Windows)
 
-  * [nedap/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [nedap/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [nedap/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [nedap/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [nedap/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [nedap/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [nedap/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [nedap/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [nedap/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [nedap/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [nedap/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [nedap/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [nedap/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [nedap/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [nedap/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [nedap/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap.safe" download="nedap.safe">⬇️ nedap.safe (Windows)</a>
-  * 📖 [How it works](</safekit-docs/solutions/nedap-high-availability-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-nedap/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/nedap.safe" download="nedap.safe">⬇️ nedap.safe (Windows)</a>
+  * 📖 [How it works](</solutions/nedap-high-availability-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-nedap/>)
 
 
 ### 📂 **oracle.safe**
@@ -406,34 +406,34 @@ _Oracle database HA with real-time replication & automatic failover (mirror modu
 
 #### Content (Windows)
 
-  * [oracle/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [oracle/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [oracle/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [oracle/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [oracle/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [oracle/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [oracle/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [oracle/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [oracle/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [oracle/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [oracle/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [oracle/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [oracle/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [oracle/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [oracle/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [oracle/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### Content (Linux)
 
-  * [oracle/bin/module_scripts_utils](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
-  * [oracle/bin/postconfig](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
-  * [oracle/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [oracle/bin/start_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [oracle/bin/stop_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [oracle/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [oracle/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [oracle/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [oracle/bin/module_scripts_utils](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
+  * [oracle/bin/postconfig](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
+  * [oracle/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [oracle/bin/start_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [oracle/bin/stop_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [oracle/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [oracle/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [oracle/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle.safe" download="oracle.safe">⬇️ oracle.safe (Windows)</a>
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle.safe" download="oracle.safe">⬇️ oracle.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/oracle-high-availability-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-oracle/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/oracle.safe" download="oracle.safe">⬇️ oracle.safe (Windows)</a>
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/oracle.safe" download="oracle.safe">⬇️ oracle.safe (Linux)</a>
+  * 📖 [How it works](</solutions/oracle-high-availability-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-oracle/>)
 
 
 ### 📂 **postgresql.safe**
@@ -442,34 +442,34 @@ _PostgreSQL database HA with real-time replication & automatic failover (mirror 
 
 #### Content (Windows)
 
-  * [postgresql/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [postgresql/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [postgresql/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [postgresql/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [postgresql/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [postgresql/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [postgresql/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [postgresql/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [postgresql/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [postgresql/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [postgresql/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [postgresql/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [postgresql/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [postgresql/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [postgresql/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [postgresql/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### Content (Linux)
 
-  * [postgresql/bin/module_scripts_utils](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
-  * [postgresql/bin/postconfig](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
-  * [postgresql/bin/prestart](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [postgresql/bin/start_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [postgresql/bin/stop_prim](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [postgresql/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [postgresql/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [postgresql/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [postgresql/bin/module_scripts_utils](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/module_scripts_utils>) — Shell utility functions shared across all module lifecycle scripts
+  * [postgresql/bin/postconfig](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/postconfig>) — Post-configuration script executed after module deployment (prepares environment)
+  * [postgresql/bin/prestart](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/prestart>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [postgresql/bin/start_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/start_prim>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [postgresql/bin/stop_prim](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/bin/stop_prim>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [postgresql/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [postgresql/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [postgresql/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe (Windows)</a>
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe (Linux)</a>
-  * 📖 [How it works](</safekit-docs/solutions/postgresql-high-availability-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-postgresql/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe (Windows)</a>
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/postgresql.safe" download="postgresql.safe">⬇️ postgresql.safe (Linux)</a>
+  * 📖 [How it works](</solutions/postgresql-high-availability-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-postgresql/>)
 
 
 ### 📂 **SiveillanceVMS.safe**
@@ -478,24 +478,24 @@ _Siemens Siveillance VMS HA with real-time replication & failover (mirror module
 
 #### Content (Windows)
 
-  * [SiveillanceVMS/bin/UpdateAuthServerUri.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/UpdateAuthServerUri.ps1>) — Updates the Siveillance VMS authentication server URI after failover to the new primary
-  * [SiveillanceVMS/bin/apppoolcheck.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/apppoolcheck.ps1>) — Checker monitoring IIS application pools used by Siveillance VMS
-  * [SiveillanceVMS/bin/apppoollist.txt](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/apppoollist.txt>) — List of IIS application pools to monitor for Siveillance VMS health checking
-  * [SiveillanceVMS/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [SiveillanceVMS/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [SiveillanceVMS/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [SiveillanceVMS/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [SiveillanceVMS/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [SiveillanceVMS/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [SiveillanceVMS/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [SiveillanceVMS/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [SiveillanceVMS/bin/UpdateAuthServerUri.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/UpdateAuthServerUri.ps1>) — Updates the Siveillance VMS authentication server URI after failover to the new primary
+  * [SiveillanceVMS/bin/apppoolcheck.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/apppoolcheck.ps1>) — Checker monitoring IIS application pools used by Siveillance VMS
+  * [SiveillanceVMS/bin/apppoollist.txt](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/apppoollist.txt>) — List of IIS application pools to monitor for Siveillance VMS health checking
+  * [SiveillanceVMS/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [SiveillanceVMS/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [SiveillanceVMS/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [SiveillanceVMS/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [SiveillanceVMS/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [SiveillanceVMS/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [SiveillanceVMS/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [SiveillanceVMS/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS.safe" download="SiveillanceVMS.safe">⬇️ SiveillanceVMS.safe (Windows)</a>
-  * 📖 [How it works](</safekit-docs/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS.safe" download="SiveillanceVMS.safe">⬇️ SiveillanceVMS.safe (Windows)</a>
+  * 📖 [How it works](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)
+  * 🚀 [Quick Installation Guide](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)
 
 
 ### 📂 **sqlserver.safe**
@@ -504,21 +504,21 @@ _Microsoft SQL Server HA with real-time replication & automatic failover (mirror
 
 #### Content (Windows)
 
-  * [sqlserver/bin/module_scripts_utils.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
-  * [sqlserver/bin/postconfig.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
-  * [sqlserver/bin/prestart.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
-  * [sqlserver/bin/start_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
-  * [sqlserver/bin/stop_prim.ps1](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
-  * [sqlserver/conf/userconfig.xml](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
-  * [sqlserver/conf/userconfig.xml.template](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
-  * [sqlserver/web/index.html](</safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
+  * [sqlserver/bin/module_scripts_utils.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/module_scripts_utils.ps1>) — PowerShell utility functions shared across all module lifecycle scripts
+  * [sqlserver/bin/postconfig.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/postconfig.ps1>) — Post-configuration script executed after module deployment (sets services to manual start, prepares environment)
+  * [sqlserver/bin/prestart.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/prestart.ps1>) — Pre-start script: preventive stop of the application before installing replication and virtual IP
+  * [sqlserver/bin/start_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/start_prim.ps1>) — Starts the application on the primary server (mirror module); executed during STOP→ALONE or SECOND→ALONE transitions
+  * [sqlserver/bin/stop_prim.ps1](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/bin/stop_prim.ps1>) — Stops the application on the primary server (mirror module); executed before failover or module stop
+  * [sqlserver/conf/userconfig.xml](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/conf/userconfig.xml>) — Module configuration file: heartbeat networks, virtual IP, file replication paths, checkers, and script activation
+  * [sqlserver/conf/userconfig.xml.template](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/conf/userconfig.xml.template>) — Configuration template with macro parameters (used by the web console wizard for guided setup)
+  * [sqlserver/web/index.html](</wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver/web/index.html>) — Web console description page displayed for this module in the SafeKit administration interface
 
 
 #### More information
 
-  * ⬇️ <a class="btn-download" href="/safekit-docs/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver.safe" download="sqlserver.safe">⬇️ sqlserver.safe (Windows)</a>
-  * 📖 [How it works](</safekit-docs/solutions/sql-server-high-availability-synchronous-replication-failover/>)
-  * 🚀 [Quick Installation Guide](</safekit-docs/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
+  * ⬇️ <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/sqlserver.safe" download="sqlserver.safe">⬇️ sqlserver.safe (Windows)</a>
+  * 📖 [How it works](</solutions/sql-server-high-availability-synchronous-replication-failover/>)
+  * 🚀 [Quick Installation Guide](</quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
 
 
 
@@ -531,17 +531,17 @@ _Microsoft SQL Server HA with real-time replication & automatic failover (mirror
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -551,7 +551,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

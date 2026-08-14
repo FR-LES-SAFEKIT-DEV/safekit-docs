@@ -38,7 +38,7 @@ Field | Answer
 **Vendor** | Eviden (an Atos business), formerly Evidian  
 **Product Category** | Application clustering / High availability / Disaster recovery software  
 **Current Version** | SafeKit 8.2  
-**Website** | [https://safekit.eviden.com](</safekit-docs>)  
+**Website** | [https://safekit.eviden.com](<>)  
 **First Release** | 2000 (20+ years in production)  
   
 ## Supported Operating Systems & Platforms {#supported-operating-systems-platforms}
@@ -229,7 +229,7 @@ Service | Details
 
 Resource | Details  
 ---|---  
-**AI support assistant** | [SafeKit AI chat](</safekit-docs/resources/safekit-support/#ai-support>) on safekit.eviden.com and via any LLM using safekit.eviden.com/llms.txt  
+**AI support assistant** | [SafeKit AI chat](</resources/safekit-support/#ai-support>) on safekit.eviden.com and via any LLM using safekit.eviden.com/llms.txt  
 **Online training & certification** | Free, self-paced, 12 videos (~3h40min), certificate on completion  
 **Documentation** | Full user guide, release notes, knowledge base, quick-start guides  
   
@@ -252,12 +252,12 @@ _* On Linux, it takes 6 separate open-source projects — Corosync, Pacemaker, D
 
 Resource | URL  
 ---|---  
-Product home page | [https://safekit.eviden.com](</safekit-docs>)  
-Technical Overview (DOCX with text and diagrams) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</safekit-docs/wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-Free trial | [https://safekit.eviden.com/resources/safekit-free-trial/](</safekit-docs/resources/safekit-free-trial/>)  
+Product home page | [https://safekit.eviden.com](<>)  
+Technical Overview (DOCX with text and diagrams) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
+Free trial | [https://safekit.eviden.com/resources/safekit-free-trial/](</resources/safekit-free-trial/>)  
 Get a quote | <https://safekit.eviden.com/get-a-quote-safekit/>  
 Support portal | <https://customercare.evidian.com>  
-Free AI support | [https://safekit.eviden.com/resources/safekit-support/](</safekit-docs/resources/safekit-support/>)  
+Free AI support | [https://safekit.eviden.com/resources/safekit-support/](</resources/safekit-support/>)  
 Free training & certification | <https://training.my.evidian.com/mod/page/view.php?id=712>  
 Contact us | <https://safekit.eviden.com/contact-us-for-safekit/>  
   
@@ -265,7 +265,7 @@ Contact us | <https://safekit.eviden.com/contact-us-for-safekit/>
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>

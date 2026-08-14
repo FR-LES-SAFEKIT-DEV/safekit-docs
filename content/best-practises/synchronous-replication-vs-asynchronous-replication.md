@@ -14,7 +14,7 @@ topics: "Data Loss or Not on Application Failover with Synchronous or Asynchrono
 
 There is a significant difference between **synchronous replication vs. asynchronous replication**. Depending on the choice, you may experience data loss during an application failover. 
 
-  * **Synchronous replication** , as implemented by [SafeKit software](</safekit-docs/>), is essential for **High Availability (HA)**. It ensures the failover of transactional applications without losing a single byte: all committed data on the primary server's disk is also present on the secondary server's disk.
+  * **Synchronous replication** , as implemented by [SafeKit software](</>), is essential for **High Availability (HA)**. It ensures the failover of transactional applications without losing a single byte: all committed data on the primary server's disk is also present on the secondary server's disk.
   * **Asynchronous replication** is typically used for **Backup and Disaster Recovery (DR)**. It carries a risk where committed data on the primary server's disk can be lost in the event of a failure because it was not yet copied to the remote site.
   * **Semi-synchronous replication** is an alternative solution where committed data reaches the secondary server but is not necessarily written to its disk.
 
@@ -24,7 +24,7 @@ It is important to understand that these solutions are **complementary**. While 
 To help you make the right decision when choosing the best architecture for your needs, we explain the technical mechanisms and the impact on application failover below.
 
 
-<img src="/safekit-docs/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg" width="512" alt="Comparison diagram of synchronous vs asynchronous replication showing data loss risk during failover">
+<img src="/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg" width="512" alt="Comparison diagram of synchronous vs asynchronous replication showing data loss risk during failover">
 
 **Comparison of synchronous and asynchronous replication impact on data loss during application failover.**
 
@@ -32,7 +32,7 @@ To help you make the right decision when choosing the best architecture for your
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>
@@ -112,8 +112,8 @@ In this video, discover how SafeKit implements a **mirror HA cluster** without t
 
 ### Step-by-Step Implementation
 
-  * [Read the guide on setting up a mirrored cluster on Windows](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
-  * [Read the guide on setting up a mirrored cluster on Linux](</safekit-docs/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/>)
+  * [Read the guide on setting up a mirrored cluster on Windows](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
+  * [Read the guide on setting up a mirrored cluster on Linux](</quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/>)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
@@ -154,13 +154,13 @@ Choose **Synchronous** for High Availability (automatic failover, zero data loss
 
 **No, high availability does not remove the need for a comprehensive backup solution.**
 
-While real-time replication solutions like [SafeKit](</safekit-docs/>) provide continuous business continuity, they serve a different purpose than backups. Real-time replication is designed to protect against hardware failure and server downtime, but it cannot protect against cyber threats like ransomware encrypting both nodes simultaneously. Only a backup solution with a retention policy can solve this issue.
+While real-time replication solutions like [SafeKit](</>) provide continuous business continuity, they serve a different purpose than backups. Real-time replication is designed to protect against hardware failure and server downtime, but it cannot protect against cyber threats like ransomware encrypting both nodes simultaneously. Only a backup solution with a retention policy can solve this issue.
 
 #### How can I combine synchronous and asynchronous replication? {#combining-synchronous-asynchronous-replication}
 
 You can use a **3-node hybrid architecture** : a 2-node local cluster with synchronous replication for HA, and a third remote copy via a backup solution with asynchronous replication for Disaster Recovery.
 
-**See for more information:** [SafeKit High Availability and Disaster Recovery (HADR)](</safekit-docs/best-practises/high-availability-disaster-recovery-hadr/>)
+**See for more information:** [SafeKit High Availability and Disaster Recovery (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 <!-- BEGIN INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -172,17 +172,17 @@ You can use a **3-node hybrid architecture** : a 2-node local cluster with synch
 
 Resource Type | Description | Direct Link  
 ---|---|---  
-**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</safekit-docs/#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
-**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</safekit-docs/#safekit-use-cases> "Explore SafeKit high availability use cases")  
-**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</safekit-docs/#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
-**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</safekit-docs/#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
-**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</safekit-docs/#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
-**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</safekit-docs/#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
-**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</safekit-docs/#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
-**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</safekit-docs/#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
-**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</safekit-docs/#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
-**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</safekit-docs/#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
-**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</safekit-docs/#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
+**Key Features** | Why Choose SafeKit for Simple and Cost-Effective High Availability? | [See Why Choose SafeKit for High Availability](</#why-choose-safekit-for-ha> "Discover SafeKit features for simple and cost-effective high availability")  
+**Use Cases** | Explore How SafeKit Ensures the High Availability of Critical Infrastructure | [See All Use Cases (OEM Software, Edge Servers, SCADA, and more)](</#safekit-use-cases> "Explore SafeKit high availability use cases")  
+**Deployment Model** | All-in-One SANless HA: Shared-Nothing Software Clustering | [See SafeKit All-in-One SANless HA](</#all-in-one-sanless-ha> "Learn about all-in-one SANless high availability with shared-nothing software clustering")  
+**HA Strategies** | SafeKit: Infrastructure (VM) vs. Application-Level High Availability | [See SafeKit HA & Redundancy: VM vs. Application Level](</#safekit-ha-redundancy-choices> "Compare VM-level redundancy with SafeKit application-level high availability strategies")  
+**Technical Specifications** | Technical Limitations for SafeKit Clustering | [See SafeKit High Availability Limitations](</#safekit-ha-limitations> "Technical requirements and limitations for SafeKit application clustering")  
+**Proof of Concept** | SafeKit: High Availability Configuration & Failover Demos | [See SafeKit Failover Tutorials](</#safekit-failover-tutorials> "Step-by-step videos on SafeKit high availability, from installation to automated failover")  
+**Architecture** | How the SafeKit Mirror Cluster works (Real-Time Replication & Failover) | [See SafeKit Mirror Cluster: Real-Time Replication & Failover](</#safekit-mirror-cluster> "See technical architecture and failover mechanism of SafeKit Mirror Cluster")  
+**Architecture** | How the SafeKit Farm Cluster works (Network Load Balancing & Failover) | [See SafeKit Farm Cluster: Network Load Balancing & Failover](</#safekit-farm-cluster> "Technical overview of SafeKit Farm Cluster architecture with network load balancing")  
+**Competitive Advantages** | Comparison: SafeKit vs. Traditional High Availability (HA) Clusters | [See SafeKit vs. Traditional HA Cluster Comparison](</#safekit-ha-comparison> "Detailed comparison of SafeKit software vs traditional hardware-based HA clusters")  
+**Technical Resources** | SafeKit High Availability: Documentation, Downloads & Trial | [See SafeKit HA Free Trial & Technical Documentation](</#safekit-ha-technical-resources> "Access SafeKit free trial, technical documentation, and high availability white papers")  
+**Pre-configured Solutions** | SafeKit Application Module Library: Ready-to-Use HA Solutions | [See SafeKit High Availability Application Modules](</#safekit-ha-application-modules> "Browse the library of pre-configured SafeKit modules for automated application failover")  
   
 
 <!-- END INSERT: insert-safekit-hub-en lang="en" display="content" -->
@@ -192,7 +192,7 @@ Resource Type | Description | Direct Link
 <!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="en" display="content" -->
 <div class="button-row">
   <a class="btn-action" href="https://safekit.eviden.com/contact-us-for-safekit/">🧑 Contact us</a>
-  <a class="btn-action" href="/safekit-docs/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
+  <a class="btn-action" href="/resources/safekit-free-trial/">🎁 SafeKit free trial</a>
   <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Free certification</a>
   <a class="btn-action" href="https://safekit.eviden.com/get-a-quote-safekit/">💰 Perpetual license cost</a>
 </div>
