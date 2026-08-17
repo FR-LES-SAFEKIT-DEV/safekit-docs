@@ -1,3 +1,0 @@
-VideoOS Management Server AppPool
-VideoOS IDP AppPool
-VideoOS Classic AppPool
