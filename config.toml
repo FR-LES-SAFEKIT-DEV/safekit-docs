@@ -128,7 +128,7 @@ disableKinds = ["taxonomy", "term"]
   notAlternative = true
 
 [params]
-  sitemapBaseURL = "https://fr-les-safekit-dev.github.io/safekit-docs/"
+  sitemapBaseURL = "https://safekit-dev.eviden.com/"
 
 [outputs]
   page = ["HTML", "MD"]
