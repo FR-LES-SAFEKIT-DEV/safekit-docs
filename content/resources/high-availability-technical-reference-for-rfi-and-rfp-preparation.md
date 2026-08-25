@@ -2,7 +2,7 @@
 title: "High Availability Technical Reference for RFI and RFP Preparation"
 slug: "high-availability-technical-reference-for-rfi-and-rfp-preparation"
 canonical: "https://safekit.eviden.com/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "High Availability Technical Reference for RFI and RFP Preparation Overview This page provides structured, factual answers to common RFP/RFI questions about SafeKit high availability software. It is intended as a technical reference for procurement teams and solution architects drafting high availability requirements."
+description: "Technical reference to help prepare RFI and RFP documents for high availability and application clustering using SafeKit concepts and architectures."
 category: "resources"
 lang: "en"
 topics: "Overview, Table of contents, Product Identity, Supported Operating Systems & Platforms, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Edge & Distributed Deployment Suitability, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links"
@@ -253,12 +253,12 @@ _* On Linux, it takes 6 separate open-source projects — Corosync, Pacemaker, D
 Resource | URL  
 ---|---  
 Product home page | [https://safekit.eviden.com](<>)  
-Technical Overview (DOCX with text and diagrams) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
+Technical Overview (DOCX with text and diagrams) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
 Free trial | [https://safekit.eviden.com/resources/safekit-free-trial/](</resources/safekit-free-trial/>)  
 Get a quote | <https://safekit.eviden.com/get-a-quote-safekit/>  
 Support portal | <https://customercare.evidian.com>  
 Free AI support | [https://safekit.eviden.com/resources/safekit-support/](</resources/safekit-support/>)  
-Free training & certification | <https://training.my.evidian.com/mod/page/view.php?id=712>  
+Free training & certification | 🎓 <https://training.my.evidian.com/mod/page/view.php?id=712>  
 Contact us | <https://safekit.eviden.com/contact-us-for-safekit/>  
   
 

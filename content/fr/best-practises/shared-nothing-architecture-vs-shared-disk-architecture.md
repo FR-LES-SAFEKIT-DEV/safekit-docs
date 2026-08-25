@@ -2,7 +2,7 @@
 title: "Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA"
 slug: "shared-nothing-architecture-vs-shared-disk-architecture"
 canonical: "https://safekit.eviden.com/fr/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
-description: "Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA Architecture sans partage vs architecture avec disques partagés pour les clusters de haute disponibilité"
+description: "Comparez les architectures « sans partage » et « avec partage de disque » pour une haute disponibilité. Découvrez comment SafeKit utilise une approche sans partage pour éliminer les coûts SAN, simplifier le basculement et assurer une réplication synchrone sans contraintes matérielles complexes."
 category: "best-practises"
 lang: "fr"
 topics: "Architecture sans partage vs architecture avec disques partagés pour les clusters de haute disponibilité, Architecture sans partage (shared nothing) vs architecture à disque partagé (shared disk) : avantages et inconvénients, Vidéo comparant un cluster avec disques partagés et un cluster sans partage avec 2 sites distants, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "Architecture sans partage vs architecture avec disques partagés pour l
 Cet article étudie les avantages et les inconvénients de l'architecture sans partage par rapport à l'architecture avec disques partagés pour les clusters de haute disponibilité. On s'intéresse aux contraintes matérielles, à l'impact sur l'organisation des données applicatives, au temps de récupération, à la simplicité de mise en œuvre.
 
 
-<img src="/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png" width="200" alt="Architecture sans partage par rapport à l'architecture avec disques partagés">
+![Architecture sans partage par rapport à l'architecture avec disques partagés](/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png "w:200")
 
 
 Les tableaux comparatifs suivants expliquent en détail la différence entre l'architecture avec disques partagés et SafeKit, un produit de clustering logiciel implémentant une architecture sans partage.

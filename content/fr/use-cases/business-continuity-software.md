@@ -2,7 +2,7 @@
 title: "Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales"
 slug: "business-continuity-software"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-software/"
-description: "Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales La continuité d’activité dans une entreprise distribuée"
+description: "Optimisez vos logiciels avec SafeKit. En tant que partenaire OEM, vous pouvez intégrer le basculement automatique et la réplication synchrone directement dans votre application. Offrez à vos clients une disponibilité 24 h/24 et 7 j/7 sous Windows et Linux, sans la complexité des clusters matériels."
 category: "use-cases"
 lang: "fr"
 topics: "La continuité d’activité dans une entreprise distribuée, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "La continuité d’activité dans une entreprise distribuée, 🔍 Hub 
 Déployer des dizaines de clusters n'est pas compliqué avec SafeKit.
 
 
-<img src="/wp-content/uploads/2023/02/distributed-enterprise-1.png" width="300" alt="Solution logicielle de continuité d'activité dans une entreprise">
+![Solution logicielle de continuité d'activité dans une entreprise](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
 ### Comment déployer un logiciel de continuité d'activité sans compétences informatiques spécifiques ?

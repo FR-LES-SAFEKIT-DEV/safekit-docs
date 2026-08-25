@@ -2,7 +2,7 @@
 title: "SafeKit Smart Console : votre cluster de haute disponibilité à portée de main"
 slug: "safekit-smart-console-your-high-availability-cluster-in-your-pocket"
 canonical: "https://safekit.eviden.com/fr/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
-description: "SafeKit Smart Console : votre cluster de haute disponibilité à portée de main Smart Console : une haute disponibilité intuitive, mobile et sans erreur Redéfinissez la gestion de la haute disponibilité avec une solution conçue pour la rapidité et la simplicité. La console web SafeKit se distingue par une prise en main immédiate, vous permettant […]"
+description: "Gérez vos clusters SafeKit en toute simplicité grâce à la Smart Console.Profitez d’une configuration sans code, d’une compatibilité smartphone et de notifications PWA en temps réel. Réduisez les erreurs humaines et garantissez une haute disponibilité à portée de main. En savoir plus."
 category: "architectures"
 lang: "fr"
 topics: "Smart Console : une haute disponibilité intuitive, mobile et sans erreur, Sommaire, Comment fonctionne un cluster miroir SafeKit avec la console web ?, Comment fonctionne un cluster ferme SafeKit avec la console web ?, Comment superviser plusieurs modules et plusieurs clusters via la console web ?, Comment surveiller les alertes dans la console et gérer les notifications par e-mail ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -30,7 +30,7 @@ Que vous soyez à votre bureau ou en déplacement, le tableau de bord compatible
 ### Comment configurer un cluster miroir SafeKit ? {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="Console web SafeKit : tableau de bord de configuration de la haute disponibilité affichant les réseaux de heartbeat, la configuration d’IP virtuelle et la réplication de répertoires en temps réel pour un cluster miroir.">
+![Console web SafeKit : tableau de bord de configuration de la haute disponibilité affichant les réseaux de heartbeat, la configuration d’IP virtuelle et la réplication de répertoires en temps réel pour un cluster miroir.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 La **console web SafeKit** fournit une interface intuitive pour orchestrer la haute disponibilité de vos applications critiques. En quelques étapes seulement, vous pouvez configurer un **cluster miroir SafeKit** afin d’assurer la continuité de service :
@@ -47,7 +47,7 @@ Le cluster SafeKit intègre un checker dédié de _split-brain_ permettant de r�
 ### Comment superviser un cluster miroir SafeKit ? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png" width="478" alt="Console web SafeKit : supervision en temps réel d’un cluster miroir à 2 nœuds affichant les états PRIM et SECOND avec réplication active des données.">
+![Console web SafeKit : supervision en temps réel d’un cluster miroir à 2 nœuds affichant les états PRIM et SECOND avec réplication active des données.](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
 
  
 
@@ -69,7 +69,7 @@ Au-delà des simples indicateurs d’état, l’interface propose une **orchestr
 ### Comment configurer un cluster ferme SafeKit ? {#safekit-farm-cluster-configuration}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="Console web SafeKit : configuration d’un cluster ferme pour l’équilibrage de charge réseau et la gestion des IP virtuelles.">
+![Console web SafeKit : configuration d’un cluster ferme pour l’équilibrage de charge réseau et la gestion des IP virtuelles.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
  
 
@@ -85,7 +85,7 @@ Le **cluster ferme SafeKit** est conçu pour assurer la haute disponibilité et 
 ### Comment superviser un cluster ferme SafeKit ? {#safekit-farm-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="Console SafeKit : supervision d’un cluster ferme à 2 nœuds affichant les deux nœuds à l’état UP avec équilibrage de charge actif.">
+![Console SafeKit : supervision d’un cluster ferme à 2 nœuds affichant les deux nœuds à l’état UP avec équilibrage de charge actif.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
  
 
@@ -105,7 +105,7 @@ Au-delà des simples icônes d’état, l’interface propose une gestion des n�
 ### Visualisation multi‑modules au sein d’un même cluster {#safekit-multi-module}
 
 
-<img src="/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg" width="966" alt="Console web SafeKit : 4 modules Hyper‑V déployés sur un même cluster à 2 nœuds.">
+![Console web SafeKit : 4 modules Hyper‑V déployés sur un même cluster à 2 nœuds.](/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg "w:966")
 
  
 
@@ -126,7 +126,7 @@ Cette visibilité fine garantit que, même dans des environnements à forte dens
 ### Visualisation multi‑clusters {#safekit-multi-cluster}
 
 
-<img src="/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg" width="966" alt="Console web SafeKit : 4 clusters déployés sur 8 serveurs.">
+![Console web SafeKit : 4 clusters déployés sur 8 serveurs.](/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg "w:966")
 
  
 
@@ -151,7 +151,7 @@ La console web SafeKit s’appuie sur les fonctionnalités natives du navigateur
 Ce mécanisme alerte immédiatement les utilisateurs lors d’événements critiques, améliorant la réactivité face à l’état du cluster et réduisant les temps de réponse.  
 
 
-###  [ Vidéo SafeKit : la console sur smartphone (0:54) ](<https://www.youtube.com/watch?v=W_qaeZmEozA>) {#demo-console}
+###  🎬 [Vidéo SafeKit : la console sur smartphone (0:54) ](<https://www.youtube.com/watch?v=W_qaeZmEozA>) {#demo-console}
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
@@ -167,7 +167,7 @@ SafeKit consigne automatiquement tous les **événements majeurs du cluster dans
 En combinant les alertes temps réel via la PWA avec un regroupement intelligent des notifications par e‑mail, SafeKit propose une stratégie de notification multi‑niveaux parfaitement adaptée aux opérations critiques.  
 
 
-###  [ Vidéo SafeKit : notifications e‑mail lors d’un basculement (1:04) ](<https://www.youtube.com/watch?v=arSUU45_AJs>) {#demo-notifications}
+###  🎬 [Vidéo SafeKit : notifications e‑mail lors d’un basculement (1:04) ](<https://www.youtube.com/watch?v=arSUU45_AJs>) {#demo-notifications}
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 

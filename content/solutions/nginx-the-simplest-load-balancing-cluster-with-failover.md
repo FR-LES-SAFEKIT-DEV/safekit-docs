@@ -2,7 +2,7 @@
 title: "SafeKit: All-in-One NGINX Load Balancing & High Availability Software"
 slug: "nginx-the-simplest-load-balancing-cluster-with-failover"
 canonical: "https://safekit.eviden.com/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
-description: "SafeKit: All-in-One NGINX Load Balancing & High Availability Software"
+description: "SafeKit provides a powerful, software-only NGINX load balancing and high availability solution. Replace complex NLB hardware with SafeKit’s integrated virtual IP, application monitoring, and automatic failover. Easily deploy an NGINX cluster on standard Windows servers today."
 category: "solutions"
 lang: "en"
 topics: "The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for NGINX, Table of Contents, How the SafeKit software simply implements a NGINX Network Load Balancing (NLB) cluster?, How the SafeKit cluster in farm mode works with NGINX?, Comparison: SafeKit Farm Cluster for NGINX vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit Farm NLB Cluster, 🔍 SafeKit High Availability Navigation Hub"

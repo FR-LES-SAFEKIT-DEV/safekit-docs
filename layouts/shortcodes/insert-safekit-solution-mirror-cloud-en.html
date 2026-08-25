@@ -19,7 +19,7 @@ While major **cloud providers** offer native redundancy, they often leave a sign
 By consolidating **High Availability** into a lightweight software layer, SafeKit delivers enterprise-grade redundancy and business continuity in the cloud at a fraction of the cost of traditional clustering suites.
 
 
-<img src="{{ .Get "img" }}" width="512" alt="SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Synchronous Real-time File Replication">
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Synchronous Real-time File Replication]({{ .Get "img" }} "w:512")
 
 **SafeKit HA Mirror Cluster for {{ .Get "app" }}**
 
@@ -99,157 +99,14 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
 
 SafeKit also provides **Farm Clusters** with native **Network Load Balancing and Failover** for stateless applications like **Web Servers**.
 
-[Explore the full list of supported HA solutions here.](/solutions/)
+💡 [Explore the full list of supported HA solutions here.](/solutions/)
 
 
-<!-- BEGIN INSERT: insert-safekit-mirror-en lang="en" display="content" -->
- 
-
-## How the SafeKit mirror cluster works with {{ .Get "app" }}? {#safekit-mirror-cluster}
-
-### Step 1. Real-time replication {#step1}
-
-Server 1 (PRIM) runs the {{ .Get "app" }} application. Clients are connected to a [virtual IP address](/best-practises/how-a-virtual-ip-address-works/). SafeKit replicates in real time modifications made inside files through the network.
-
-
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="File replication at byte level in a mirror {{ .Get "app" }} cluster">
-
-
-The replication is [synchronous](/best-practises/synchronous-replication-vs-asynchronous-replication/) with no data loss on failure contrary to asynchronous replication.
-
-You just have to configure the names of directories to replicate in SafeKit. There are no pre-requisites on disk organization. Directories may be located in the system disk.
-
-### Step 2. Automatic failover {#step2}
-
-When Server 1 fails, Server 2 takes over. SafeKit switches the virtual IP address and restarts the {{ .Get "app" }} application automatically on Server 2.
-
-The application finds the files replicated by SafeKit uptodate on Server 2. The application continues to run on Server 2 by locally modifying its files that are no longer replicated to Server 1.
-
-
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover of {{ .Get "app" }} in a mirror cluster">
-
-
-The failover time is equal to the fault-detection time (30 seconds by default) plus the application start-up time.
-
-### Step 3. Automatic failback {#step3}
-
-Failback involves restarting Server 1 after fixing the problem that caused it to fail.
-
-SafeKit automatically resynchronizes the files, updating only the files modified on Server 2 while Server 1 was halted.
-
-
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback in a mirror {{ .Get "app" }} cluster">
-
-
-Failback takes place without disturbing the {{ .Get "app" }} application, which can continue running on Server 2.
-
-### Step 4. Back to normal
-
-After reintegration, the files are once again in mirror mode, as in step 1. The system is back in high-availability mode, with the {{ .Get "app" }} application running on Server 2 and SafeKit replicating file updates to Server 1.
-
-
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Return to normal operation in a mirror {{ .Get "app" }} cluster">
-
-
-If the administrator wishes the application to run on Server 1, this can be done manually through the web console at an appropriate time, or automatically through configuration.
-
-### How to configure a SafeKit Mirror Cluster for {{ .Get "app" }}? {#safekit-mirror-cluster-configure}
-
-
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for {{ .Get "app" }} showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
-
-
-The **SafeKit web console** provides an intuitive interface to orchestrate high availability for your critical applications. In just a few steps, you can configure a **SafeKit mirror cluster** to ensure business continuity:
-
-  * **Application Failover (Macros Tab):** Define the specific application services to be automatically restarted in the event of a failure.
-  * **Heartbeat network(s):** Dedicated communication path(s) used by cluster nodes to continuously monitor each other's health and availability and synchronize failover decisions.
-  * **Virtual IP Management:** Set up the Virtual IP (VIP) for transparent client reconnection after a failover.
-  * **Real-Time Replication:** Select the critical directories for host-based, synchronous byte-level replication.
-  * **Checkers:** Monitor the application's health and trigger automatic recovery if a process failure is detected.
-
-
-The SafeKit cluster includes a dedicated split-brain checker to resolve network isolation issues without the need for a third witness machine or an additional heartbeat network. Learn more about [heartbeat, failover and quorum in a cluster](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
-
-### How to monitor a SafeKit mirror cluster for {{ .Get "app" }}? {#safekit-mirror-cluster-monitoring}
-
-
-<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for {{ .Get "app" }} showing PRIM and SECOND states with active data replication.">
-
-
-The **SafeKit management console** offers a unified view of your high availability infrastructure. It allows administrators to monitor the **operational state** of the cluster and track data synchronization in real-time.
-
-For a 2-node mirror cluster, the console clearly displays the roles of each server:
-
-  * **PRIM (Primary):** The active node currently running the application and managing the Virtual IP. It performs writes to the local storage and real-time replication to the secondary node.
-  * **SECOND (Secondary):** The standby node receiving synchronous byte-level updates. It is ready to take over instantly if the Primary fails.
-  * **ALONE State:** Visually alerts you when the cluster is running on a single node (e.g., during maintenance or after a failure), indicating that redundancy is temporarily lost.
-  * **Resynchronization Progress:** When a failed node recovers, its status turns orange during background data reintegration, ensuring no downtime during the "return to normal" phase.
-
-
-Beyond simple status icons, the interface provides **one-click failover orchestration** , allowing you to manually reassign the primary role for planned maintenance while ensuring continuous availability for user activity.
-
-
-<!-- END INSERT: insert-safekit-mirror-en lang="en" display="content" -->
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-en %}}" }}
  
 
 
-<!-- BEGIN INSERT: insert-safekit-usage-en lang="en" display="content" -->
- 
-
-## SafeKit High Availability Limitations {#safekit-ha-limitations}
-
-### Why a replication of a few Tera-bytes?
-
-Resynchronization time after a failure ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
-
-  * 1 Gb/s network ≈ 3 Hours for 1 Tera-bytes.
-  * 10 Gb/s network ≈ 1 Hour for 1 Tera-bytes or less depending on disk write performances.
-
-
-#### Alternative
-
-  * For a large volume of data, use [external shared storage](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
-  * More expensive, more complex.
-
-
-### Why a replication < 1,000,000 files?
-
-  * Resynchronization time performance after a failure ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
-  * Time to check each file between both nodes.
-
-
-#### Alternative
-
-  * Put the many files to replicate in a virtual hard disk / virtual machine.
-  * Only the files representing the virtual hard disk / virtual machine will be replicated and resynchronized in this case.
-
-
-### Why a failover ≤ 32 replicated VMs?
-
-  * Each VM runs in an independent mirror module.
-  * Maximum of 32 mirror modules running on the same cluster.
-
-
-#### Alternative
-
-  * Use an external shared storage and another VM clustering solution.
-  * More expensive, more complex.
-
-
-### Why a LAN/VLAN network between remote sites?
-
-  * Automatic failover of the [virtual IP address](/best-practises/how-a-virtual-ip-address-works/) with 2 nodes in the same subnet.
-  * Good bandwidth for resynchronization ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) and good latency for [synchronous replication](/best-practises/synchronous-replication-vs-asynchronous-replication/) (typically a round-trip of less than 2ms).
-
-
-#### Alternative
-
-  * Use a [load balancer for the virtual IP address](/best-practises/how-a-virtual-ip-address-works/) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).
-  * Use backup solutions with asynchronous replication for high latency network.
-
-
-
-<!-- END INSERT: insert-safekit-usage-en lang="en" display="content" -->
+{{ $.Page.RenderString "{{%  insert-safekit-usage-en %}}" }}
  
 
 ## Comparison: SafeKit for {{ .Get "app" }} vs. Native Cloud HA/DR Solutions {#safekit-mirror-ha-comparison}
@@ -280,9 +137,9 @@ In this video, discover how SafeKit implements a **mirror HA cluster** without t
 
 ### Video Highlights
 
-  1. [2 nodes with SQL Server](https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=0s) (0:32)
-  2. [Configure the cluster and the mirror.safe module](https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=32s) (3:58)
-  3. [Start and test SQL replication, migration, failover on crash](https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=270s) (4:17)
+  1. 🎬 [2 nodes with SQL Server](https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=0s) (0:32)
+  2. 🎬 [Configure the cluster and the mirror.safe module](https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=32s) (3:58)
+  3. 🎬 [Start and test SQL replication, migration, failover on crash](https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=270s) (4:17)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 

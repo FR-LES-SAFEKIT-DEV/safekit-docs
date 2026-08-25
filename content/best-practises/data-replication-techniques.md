@@ -2,7 +2,7 @@
 title: "Data Replication Techniques for High Availability: A Complete Comparison"
 slug: "data-replication-techniques"
 canonical: "https://safekit.eviden.com/best-practises/data-replication-techniques/"
-description: "Data Replication Techniques for High Availability: A Complete Comparison Data replication techniques at database level, disk level or file level?"
+description: "Compare data replication techniques at the database, disk, and file level. Learn why SafeKit proposes a SANless architecture for simple, real-time synchronous replication that ensures zero data loss and automatic failover on Windows and Linux."
 category: "best-practises"
 lang: "en"
 topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques, 🔍 SafeKit High Availability Navigation Hub"
@@ -17,7 +17,7 @@ topics: "Data replication techniques at database level, disk level or file level
 This article explores the pros and cons of data replication techniques at database level, disk level and file level for high availability clusters. We are looking at failover, failback, simplicity of implementation.
 
 
-<img src="/wp-content/uploads/2023/03/data-replication-techniques.png" width="128" alt="Data replication techniques">
+![Data replication techniques](/wp-content/uploads/2023/03/data-replication-techniques.png "w:128")
 
 
 The following comparative tables explain in detail the data replication techniques implemented by SafeKit, a high availability software product.

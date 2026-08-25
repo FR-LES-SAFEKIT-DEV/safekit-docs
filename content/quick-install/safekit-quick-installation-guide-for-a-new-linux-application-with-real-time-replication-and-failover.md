@@ -2,7 +2,7 @@
 title: "Linux High Availability with SafeKit: Install the mirror.safe Module for Failover"
 slug: "safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the mirror.safe module for SafeKit to enable synchronous real-time replication and automatic failover on Linux. This guide walks you through setting up a 2-node SANless cluster for critical Linux applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (mirror.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Linux, SafeKit High Avai
 
 ## Overview of the SafeKit / Linux solution
 
-The solutions is described here: **[The Simplest Linux High Availability: 2-Node Synchronous Replication& Failover](</solutions/linux-high-availability-software-synchronous-replication-failover/>).  
+The solutions is described here: **💡[The Simplest Linux High Availability: 2-Node Synchronous Replication & Failover](</solutions/linux-high-availability-software-synchronous-replication-failover/>).  
 **
 
 ## Installation of the SafeKit / Linux solution (mirror.safe)

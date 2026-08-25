@@ -2,7 +2,7 @@
 title: "Solutions SafeKit sur Windows et Linux avec des modules applicatifs"
 slug: "solutions"
 canonical: "https://safekit.eviden.com/fr/solutions/"
-description: "Solutions SafeKit sur Windows et Linux avec des modules applicatifs"
+description: "Découvrez la simplicité de configuration d'un cluster SafeKit avec des modules de haute disponibilité"
 category: "solutions"
 lang: "fr"
 topics: "Bibliothèque des modules applicatifs SafeKit : solutions HA prêtes à l’emploi, 🔍 Hub de navigation SafeKit Haute Disponibilité"

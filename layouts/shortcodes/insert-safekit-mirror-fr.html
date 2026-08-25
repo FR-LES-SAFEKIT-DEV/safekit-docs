@@ -9,7 +9,7 @@
 Le serveur 1 (PRIM) exécute l'application Windows/Linux. Les clients sont connectés à une [adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/). SafeKit réplique en temps réel via le réseau les modifications apportées à l'intérieur des fichiers.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Réplication de fichiers au niveau octet dans un cluster miroir Windows/Linux">
+![Réplication de fichiers au niveau octet dans un cluster miroir Windows/Linux](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 La réplication est [synchrone](/best-practises/synchronous-replication-vs-asynchronous-replication/), sans perte de données en cas de panne, contrairement à la réplication asynchrone.
@@ -23,7 +23,7 @@ En cas de panne du serveur 1, le serveur 2 prend le relais (failover). SafeKit b
 L'application retrouve sur le serveur 2 des fichiers à jour répliqués par SafeKit. L'application continue de s'exécuter sur le serveur 2 en modifiant localement ses fichiers, qui ne sont alors plus répliqués vers le serveur 1.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Basculement de Windows/Linux dans un cluster miroir">
+![Basculement de Windows/Linux dans un cluster miroir](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
 Le temps de basculement est égal au temps de détection de la panne (30 secondes par défaut) plus le temps de démarrage de l'application.
@@ -35,7 +35,7 @@ Le retour après panne (failback) consiste à redémarrer le serveur 1 après av
 SafeKit resynchronise automatiquement les fichiers, en mettant à jour uniquement les fichiers modifiés sur le serveur 2 pendant que le serveur 1 était arrêté.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Retour après panne dans un cluster miroir Windows/Linux">
+![Retour après panne dans un cluster miroir Windows/Linux](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
 
 Le retour après panne se déroule sans perturber l'application Windows/Linux, qui peut continuer à s'exécuter sur le serveur 2.
@@ -45,7 +45,7 @@ Le retour après panne se déroule sans perturber l'application Windows/Linux, q
 Après la réintégration, les fichiers repassent en mode miroir, comme à l'étape 1. Le système se retrouve en mode haute disponibilité, avec l'application Windows/Linux s'exécutant sur le serveur 2 et SafeKit répliquant les mises à jour de fichiers vers le serveur 1.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Retour au fonctionnement normal dans un cluster miroir Windows/Linux">
+![Retour au fonctionnement normal dans un cluster miroir Windows/Linux](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
 
 Si l'administrateur souhaite que l'application s'exécute sur le serveur 1, cela peut être fait manuellement via la console web au moment opportun, ou automatiquement par configuration.
@@ -53,7 +53,7 @@ Si l'administrateur souhaite que l'application s'exécute sur le serveur 1, cela
 ### Comment configurer un cluster miroir SafeKit pour Windows/Linux ? {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+![SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 La **console web SafeKit** offre une interface intuitive pour orchestrer la haute disponibilité de vos applications critiques. En quelques étapes seulement, vous pouvez configurer un **cluster miroir SafeKit** pour garantir la continuité d'activité :
@@ -70,7 +70,7 @@ Le cluster SafeKit inclut un vérificateur de split-brain dédié pour résoudre
 ### Comment surveiller un cluster miroir SafeKit pour Windows/Linux ? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
 
 
 La **console de gestion SafeKit** offre une vue unifiée de votre infrastructure de haute disponibilité. Elle permet aux administrateurs de surveiller l'**état opérationnel** du cluster et de suivre la synchronisation des données en temps réel.

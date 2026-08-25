@@ -2,7 +2,7 @@
 title: "Standardizing High Availability for Distributed Enterprises with Many Branches"
 slug: "business-continuity-software"
 canonical: "https://safekit.eviden.com/use-cases/business-continuity-software/"
-description: "Standardizing High Availability for Distributed Enterprises with Many Branches Business continuity in a distributed enterprise"
+description: "Secure every branch of your distributed enterprise with SafeKit. Deploy a standardized, software-only HA cluster at scale to ensure 24/7 uptime for critical branch applications. No shared storage, no complex SANs, and no on-site IT expertise required for Windows and Linux."
 category: "use-cases"
 lang: "en"
 topics: "Business continuity in a distributed enterprise, 🔍 SafeKit High Availability Navigation Hub"
@@ -17,7 +17,7 @@ topics: "Business continuity in a distributed enterprise, 🔍 SafeKit High Avai
 Deploying dozens of clusters is not complicated with SafeKit.
 
 
-<img src="/wp-content/uploads/2023/02/distributed-enterprise-1.png" width="300" alt="Business continuity software solution in an Enterprise">
+![Business continuity software solution in an Enterprise](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
 ### How to deploy a business continuity software without specific IT skills?

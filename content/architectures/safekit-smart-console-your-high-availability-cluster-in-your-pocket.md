@@ -2,7 +2,7 @@
 title: "SafeKit Smart Console: Your High Availability Cluster in Your Pocket"
 slug: "safekit-smart-console-your-high-availability-cluster-in-your-pocket"
 canonical: "https://safekit.eviden.com/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
-description: "SafeKit Smart Console: Your High Availability Cluster in Your Pocket Smart Console: Intuitive, Mobile, and Error-Free High Availability Redefine how you manage high availability with a solution built for speed and simplicity. The SafeKit Web Console offers a zero-learning-curve experience, allowing you to configure and control your infrastructure with zero-code requirements. Whether you are at […]"
+description: "Manage SafeKit clusters with ease using our Smart Console. Enjoy zero-code configuration, smartphone compatibility, and real-time PWA notifications. Eliminate human error and ensure high availability at your fingertips. Learn more."
 category: "architectures"
 lang: "en"
 topics: "Smart Console: Intuitive, Mobile, and Error-Free High Availability, Table of Contents, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit farm cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?, 🔍 SafeKit High Availability Navigation Hub"
@@ -29,7 +29,7 @@ Whether you are at your desk or on the move, the smartphone-compatible dashboard
 ### How to configure a SafeKit Mirror Cluster? {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+![SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 The **SafeKit web console** provides an intuitive interface to orchestrate high availability for your critical applications. In just a few steps, you can configure a **SafeKit mirror cluster** to ensure business continuity:
@@ -46,7 +46,7 @@ The SafeKit cluster includes a dedicated split-brain checker to resolve network 
 ### How to monitor a SafeKit mirror cluster? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png" width="478" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
 
 
 The **SafeKit management console** offers a unified view of your high availability infrastructure. It allows administrators to monitor the **operational state** of the cluster and track data synchronization in real-time.
@@ -66,7 +66,7 @@ Beyond simple status icons, the interface provides **one-click failover orchestr
 ### How to configure a SafeKit farm cluster? {#safekit-farm-cluster-configuration}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm cluster configuration for network load balancing and virtual IP management.">
+![SafeKit Web Console: Farm cluster configuration for network load balancing and virtual IP management.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
 The **SafeKit farm cluster** is designed for high availability and scalability of services. The configuration focuses on distributing incoming traffic across both nodes simultaneously:
@@ -81,7 +81,7 @@ The **SafeKit farm cluster** is designed for high availability and scalability o
 ### How to monitor a SafeKit farm cluster? {#safekit-farm-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node Farm cluster showing both nodes in UP state with active load balancing.">
+![SafeKit Console: Monitoring a 2-node Farm cluster showing both nodes in UP state with active load balancing.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
 Monitoring a farm cluster provides visibility into the **Active-Active** nature of the infrastructure, where all nodes contribute to the application's performance (showing 2 nodes in this example; scalable to additional nodes):
@@ -99,7 +99,7 @@ Beyond simple status icons, the interface provides one-click node management (**
 ### Multi-module visualization within a single cluster {#safekit-multi-module}
 
 
-<img src="/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg" width="966" alt="SafeKit Web Console: 4 Hyper-V modules deployed on the same 2-nodes cluster.">
+![SafeKit Web Console: 4 Hyper-V modules deployed on the same 2-nodes cluster.](/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg "w:966")
 
 
 When deploying **multiple modules** on a single 2-node cluster, the SafeKit Web Console provides **individual monitoring widgets** for each module. This is particularly valuable for **SafeKit Hyper-V** solutions. 
@@ -118,7 +118,7 @@ This granular visibility ensures that even in high-density environments, you mai
 ### Multi-cluster visualization {#safekit-multi-cluster}
 
 
-<img src="/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg" width="966" alt="SafeKit Web Console: 4 clusters deployed on 8 servers.">
+![SafeKit Web Console: 4 clusters deployed on 8 servers.](/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg "w:966")
 
 
 When deploying **multiple clusters** across several servers, you can either use multiple browser tabs to connect to each cluster or utilize the console's PWA (Progressive Web App) feature. By using the PWA, you remove the browser's navigation menus, saving screen space to better organize cluster monitoring on your desktop. 

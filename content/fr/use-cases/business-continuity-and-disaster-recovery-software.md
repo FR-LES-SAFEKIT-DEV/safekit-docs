@@ -2,7 +2,7 @@
 title: "Logiciel de continuité d'activité et de reprise après sinistre pour clusters à 2 nœuds avec SafeKit"
 slug: "business-continuity-and-disaster-recovery-software"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "Logiciel de continuité d'activité et de reprise après sinistre pour clusters à 2 nœuds avec SafeKit Comment mettre en place à la fois un PCA (Plan de Continuité d'Activité) et un PRA (Plan de Reprise d'Activité) ?"
+description: "SafeKit est un logiciel de continuité d'activité et de reprise après sinistre qui met en œuvre une solution de haute disponibilité simple entre deux salles informatiques distantes. Bénéficiez d'une disponibilité 24h/24 et 7j/7 avec SafeKit, le logiciel de continuité d'activité et de reprise après sinistre le plus facile à utiliser. Éliminez les SAN coûteux et les compétences informatiques complexes grâce à la réplication synchrone à 2 nœuds, au basculement automatique et à l'équilibrage de charge pour Windows et Linux. Zéro perte de données (RPO=0) pour les applications critiques dans tout environnement cloud ou sur site."
 category: "use-cases"
 lang: "fr"
 topics: "Comment mettre en place à la fois un PCA (Plan de Continuité d'Activité) et un PRA (Plan de Reprise d'Activité) ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -15,7 +15,7 @@ topics: "Comment mettre en place à la fois un PCA (Plan de Continuité d'Activi
 ### Raisons de choisir le logiciel SafeKit pour un PCA et un PRA
 
 
-<img src="/wp-content/uploads/2023/02/remote-datacenters.png" width="300" alt="Logiciel simple de continuité d'activité et de reprise après sinistre avec SafeKit">
+![Logiciel simple de continuité d'activité et de reprise après sinistre avec SafeKit](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
  
 

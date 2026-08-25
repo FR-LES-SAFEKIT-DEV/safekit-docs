@@ -2,7 +2,7 @@
 title: "Haute disponibilité OEM : Intégration du clustering SafeKit dans votre logiciel"
 slug: "application-clustering-software"
 canonical: "https://safekit.eviden.com/fr/use-cases/application-clustering-software/"
-description: "Haute disponibilité OEM : Intégration du clustering SafeKit dans votre logiciel Le cas d'usage OEM de la haute disponibilité"
+description: "Optimisez vos logiciels avec SafeKit. En tant que partenaire OEM, vous pouvez intégrer le basculement automatique et la réplication synchrone directement dans votre application. Offrez à vos clients une disponibilité 24 h/24 et 7 j/7 sous Windows et Linux, sans la complexité des clusters matériels."
 category: "use-cases"
 lang: "fr"
 topics: "Le cas d'usage OEM de la haute disponibilité, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "Le cas d'usage OEM de la haute disponibilité, 🔍 Hub de navigation S
 SafeKit est indépendant du matériel et fonctionne avec n'importe quel serveur physique ou virtuel.
 
 
-<img src="/wp-content/uploads/2023/02/application-clustering-software-3.png" width="250" alt="Cluster logiciel pour un éditeur logiciel avec SafeKit en OEM">
+![Cluster logiciel pour un éditeur logiciel avec SafeKit en OEM](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
 ### Cluster logiciel simple et économique pour un éditeur logiciel

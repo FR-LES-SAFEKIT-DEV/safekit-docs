@@ -1,9 +1,10 @@
 # Hugo configuration for SafeKit site
-baseURL = "https://fr-les-safekit-dev.github.io/"
+baseURL = "https://safekit-dev.eviden.com/"
 relativeURLs = true
 locale = "en"
 title = "SafeKit - High Availability Software"
 theme = "safekit"
+googleAnalytics = "G-DDCJJTPNYV"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -121,16 +122,10 @@ disableKinds = ["taxonomy", "term"]
     target = "content"
     lang = "nl"
 
-[outputFormats.MD]
-  mediaType = "text/markdown"
-  baseName = "index"
-  isPlainText = true
-  notAlternative = true
-
 [params]
   sitemapBaseURL = "https://safekit-dev.eviden.com/"
 
 [outputs]
-  page = ["HTML", "MD"]
-  section = ["HTML", "MD"]
-  home = ["HTML", "MD"]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]

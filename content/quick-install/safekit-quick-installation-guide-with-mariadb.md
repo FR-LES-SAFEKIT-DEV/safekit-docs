@@ -2,7 +2,7 @@
 title: "MariaDB High Availability with SafeKit: Install the mysql.safe Module for Failover"
 slug: "safekit-quick-installation-guide-with-mariadb"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-mariadb/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the mysql.safe module for SafeKit to enable synchronous real-time replication and automatic failover of MariaDB on Windows and Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for MariaDB, SafeKit High Availability Limitations, Overview of the SafeKit / MariaDB solution, Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe), Step by step configuration of the SafeKit / MariaDB solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for MariaDB, SafeKit High Av
 
 ## Overview of the SafeKit / MariaDB solution
 
-The solution is described here: **[The Simplest MariaDB High Availability: 2-Node Synchronous Replication& Failover](</solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>)**.
+The solution is described here: **💡[The Simplest MariaDB High Availability: 2-Node Synchronous Replication & Failover](</solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>)**.
 
 ## Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe)
 

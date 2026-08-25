@@ -2,7 +2,7 @@
 title: "Clustering logiciel vs. clustering matériel pour la haute disponibilité"
 slug: "clustering-software-vs-hardware-clustering"
 canonical: "https://safekit.eviden.com/fr/best-practises/clustering-software-vs-hardware-clustering/"
-description: "Clustering logiciel vs. clustering matériel pour la haute disponibilité Différence entre un cluster logiciel et un cluster matériel ?"
+description: "Comparez le clustering logiciel et le clustering matériel pour la haute disponibilité. Découvrez comment SafeKit élimine le besoin de stockage SAN coûteux, de boîtiers d'équilibrage de charge et de compétences informatiques spécialisées, tout en assurant une haute disponibilité 24h/24 et 7j/7 sur des serveurs standard."
 category: "best-practises"
 lang: "fr"
 topics: "Différence entre un cluster logiciel et un cluster matériel ?, Clustering logiciel vs clustering matériel : avantages et inconvénients, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "Différence entre un cluster logiciel et un cluster matériel ?, Cluste
 Cet article étudie les avantages et les inconvénients d'un cluster logiciel par rapport à un cluster matériel en examinant des fonctionnalités telles que la réplication de données, les disques partagés, l'équilibrage de charge, les prérequis matériels et logiciels, les compétences pour configurer le cluster...
 
 
-<img src="/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png" width="400" alt="Cluster logiciel vs cluster matériel">
+![Cluster logiciel vs cluster matériel](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
 
 Les tableaux comparatifs suivants détaillent la différence entre un cluster matériel et SafeKit, un cluster logiciel.

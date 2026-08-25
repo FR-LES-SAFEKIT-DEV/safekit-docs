@@ -2,7 +2,7 @@
 title: "IIS Network Load Balancing & Failover: Install the SafeKit iis_farm.safe Module"
 slug: "safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
-description: "SafeKit Video: Network Load Balancing and Virtual IP Management (5:03) In this video, learn how to implement a virtual IP address to provide a single entry point for a 2-node cluster. SafeKit simplifies network load balancing by automatically managing the virtual IP, ensuring that client traffic is distributed across nodes and redirected instantly during a […]"
+description: "Learn how to deploy the iis_farm.safe module on Windows for IIS Network Load Balancing and automatic failover. This guide shows you how to build a highly available cluster for web services and applications using a virtual IP, without the need for external hardware load balancers or complex configuration."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for IIS, SafeKit High Availability Limitations, Overview of the SafeKit / IIS solution, Installation of the SafeKit / IIS solution on Windows (iis_farm.safe), Step by step configuration of the SafeKit / IIS solution, Demonstration of the SafeKit farm solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for IIS, SafeKit High Availa
 
 ## Overview of the SafeKit / IIS solution
 
-The solution is described here: **[SafeKit: All-in-One IIS Load Balancing& High Availability Software](</solutions/iis-load-balancing-failover/>)**.
+The solution is described here: **💡[SafeKit: All-in-One IIS Load Balancing & High Availability Software](</solutions/iis-load-balancing-failover/>)**.
 
 ## Installation of the SafeKit / IIS solution on Windows (iis_farm.safe)
 

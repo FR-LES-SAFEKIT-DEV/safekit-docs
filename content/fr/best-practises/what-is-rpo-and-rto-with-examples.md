@@ -2,7 +2,7 @@
 title: "Que sont les RPO et les RTO ? Définitions, exemples et stratégies HA"
 slug: "what-is-rpo-and-rto-with-examples"
 canonical: "https://safekit.eviden.com/fr/best-practises/what-is-rpo-and-rto-with-examples/"
-description: "Que sont les RPO et les RTO ? Définitions, exemples et stratégies HA"
+description: "Apprenez les définitions de RPO (Objectif de point de récupération) et de RTO (Objectif de temps de récupération) à l'aide d'exemples concrets. Découvrez comment SafeKit garantit l'absence de perte de données (RPO=0) et un basculement rapide pour assurer la continuité de votre activité 24h/24 et 7j/7."
 category: "best-practises"
 lang: "fr"
 topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et le RTO pour une solution de Haute Disponibilité et de Continuité d'Activité ?, Comment déterminer le RPO et le RTO pour une solution de Sauvegarde et de Plan de Reprise d'Activité ?, Comment un Cluster Miroir SafeKit atteint-il un RPO zéro et un RTO faible ?, Quels sont les indicateurs RTO pour un Cluster Ferme SafeKit avec équilibrage de charge ?, Tableaux comparatifs : RTO vs RPO, La haute disponibilité en action : démonstrations en temps réel du RPO zéro et du RTO quasi nul, FAQ : Optimiser le RPO et le RTO pour la Continuité d'Activité, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -18,7 +18,7 @@ topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et 
   * **Capacité de SafeKit :** Offre un **RPO de 0** (aucune perte de données) et un **RTO faible** (redémarrage rapide) grâce à la réplication synchrone et au basculement automatique.
 
 
-<img src="/wp-content/uploads/2026/08/rto-rpo-5-1024-fr-2.jpg" width="512" alt="Un graphique comparatif du RPO (perte de données maximale admissible) et du RTO (durée maximale d'indisponibilité), illustrant comment SafeKit garantit une perte de données nulle et un redémarrage rapide des applications.">
+![Un graphique comparatif du RPO (perte de données maximale admissible) et du RTO (durée maximale d'indisponibilité), illustrant comment SafeKit garantit une perte de données nulle et un redémarrage rapide des applications.](/wp-content/uploads/2026/08/rto-rpo-5-1024-fr-2.jpg "w:512")
 
 
 ## Table des matières
@@ -44,7 +44,7 @@ topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et 
 La **Haute Disponibilité (HA)** est une architecture technique conçue pour garantir qu'un système reste opérationnel et accessible pendant un pourcentage de temps spécifié (par exemple, 99,99 %).
 
 
-<img src="/wp-content/uploads/2026/01/safekit-icon-512x512-1.png" width="128" alt="Logo du logiciel de haute disponibilité SafeKit représentant le clustering sans SAN et la réplication synchrone">
+![Logo du logiciel de haute disponibilité SafeKit représentant le clustering sans SAN et la réplication synchrone](/wp-content/uploads/2026/01/safekit-icon-512x512-1.png "w:128")
 
 
 Pour atteindre les objectifs RPO et RTO définis dans un **Plan de Continuité d'Activité (PCA)** , la haute disponibilité est généralement mise en œuvre via deux architectures principales :
@@ -80,7 +80,7 @@ Pour atteindre un RTO faible, une solution de haute disponibilité utilise le **
 Une **solution de sauvegarde** est une stratégie de protection des données conçue pour créer des copies périodiques des données sur un dispositif de stockage secondaire ou dans le cloud. Contrairement à la Haute Disponibilité, la sauvegarde se concentre sur la **rétention de données à long terme** et la récupération après une corruption de données ou un sinistre majeur à l'échelle d'un site.
 
 
-<img src="/wp-content/uploads/2026/01/backup-icon.png" width="128" alt="Icône de solution de sauvegarde représentant une architecture de stockage pour la rétention à long terme">
+![Icône de solution de sauvegarde représentant une architecture de stockage pour la rétention à long terme](/wp-content/uploads/2026/01/backup-icon.png "w:128")
 
 
 Pour répondre aux objectifs RPO et RTO définis dans un **Plan de Reprise d'Activité (PRA)** , la sauvegarde est généralement mise en œuvre via deux méthodes principales :
@@ -116,7 +116,7 @@ Pour une solution de sauvegarde, le **RTO peut varier de plusieurs heures à plu
 Le **Cluster Miroir SafeKit** est une solution de haute disponibilité logicielle qui met en œuvre une architecture de type « shared-nothing » (sans partage de ressources). Contrairement aux clusters traditionnels qui nécessitent un SAN coûteux, SafeKit utilise les ressources locales de deux serveurs standards pour créer un environnement hautement résilient.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Architecture SafeKit Mirror Cluster montrant la réplication de fichiers au niveau octet en temps réel entre nœuds primaire et secondaire">
+![Architecture SafeKit Mirror Cluster montrant la réplication de fichiers au niveau octet en temps réel entre nœuds primaire et secondaire](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 Pour garantir une disponibilité maximale et la protection des données au sein de votre **Plan de Continuité d'Activité (PCA)** , le cluster miroir SafeKit fonctionne via deux mécanismes intégrés :
@@ -155,7 +155,7 @@ En utilisant la **haute disponibilité au niveau applicatif** , SafeKit élimine
 Le **Cluster Ferme SafeKit** est une solution de haute disponibilité logicielle conçue pour les applications sans état (comme les serveurs web) qui nécessitent à la fois **scalabilité** et **redondance**. Contrairement à un cluster miroir qui se concentre sur la réplication de données, un cluster ferme distribue le trafic entrant sur plusieurs nœuds actifs.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="Architecture SafeKit Farm Cluster démontrant l'équilibrage de charge réseau et le basculement pour les applications sans état">
+![Architecture SafeKit Farm Cluster démontrant l'équilibrage de charge réseau et le basculement pour les applications sans état](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
 Pour maintenir la **Continuité d'Activité** dans des environnements à fort trafic, le cluster ferme SafeKit fonctionne via deux mécanismes clés :
@@ -218,9 +218,9 @@ Découvrez comment SafeKit gère une panne critique. Cette vidéo démontre la *
 
 #### Chapitres
 
-  1. [Configuration à 2 nœuds avec SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  2. [Configurer le cluster et le module mirror.safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
-  3. [Démarrage et test de la réplication SQL, migration et failover sur crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
+  1. 🎬 [Configuration à 2 nœuds avec SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
+  2. 🎬 [Configurer le cluster et le module mirror.safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  3. 🎬 [Démarrage et test de la réplication SQL, migration et failover sur crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
 [Essai gratuit ici](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
@@ -232,9 +232,9 @@ Découvrez comment SafeKit gère une ferme web Apache pour offrir à la fois une
 
 #### Chapitres
 
-  1. [Configuration à 2 nœuds avec Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  2. [Configurer le cluster et le module farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
-  3. [Démarrage et test de l'équilibrage de charge réseau, failover sur crash](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
+  1. 🎬 [Configuration à 2 nœuds avec Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
+  2. 🎬 [Configurer le cluster et le module farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  3. 🎬 [Démarrage et test de l'équilibrage de charge réseau, failover sur crash](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
 
 [Essai gratuit ici](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 

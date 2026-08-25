@@ -2,7 +2,7 @@
 title: "Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ?"
 slug: "how-a-virtual-ip-address-works"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-a-virtual-ip-address-works/"
-description: "Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ?"
+description: "Découvrez comment SafeKit utilise des adresses IP virtuelles (VIP) définies par logiciel pour garantir une disponibilité 24 h/24 et 7 j/7. Apprenez-en davantage sur le basculement automatique via ARP gratuit et découvrez pourquoi cette solution est plus performante que la redirection DNS pour assurer la continuité d'activité sous Windows et Linux."
 category: "best-practises"
 lang: "fr"
 topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster de haute disponibilité ?, Implémentation de l'IP virtuelle dans SafeKit, Table des matières, Fonctionnement d'une adresse IP virtuelle (VIP) lors d'un basculement sur le même sous-réseau (Cluster Mirror), Fonctionnement d'une IP virtuelle (VIP) à travers différents sous-réseaux (Cluster Mirror), Fonctionnement d'une IP virtuelle avec répartition de charge sur le même sous-réseau (Cluster Farm), Fonctionnement d'une IP virtuelle avec répartition de charge à travers différents sous-réseaux (Cluster Farm), IP virtuelle vs Redirection DNS : pourquoi le basculement DNS échoue souvent, Comparaison : mise en œuvre de l'IP virtuelle, latence et transparence applicative, Configuration d'une adresse IP virtuelle pour la répartition de charge et la haute disponibilité, Foire aux questions (FAQ) sur l'IP virtuelle (VIP), 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -29,7 +29,7 @@ topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster de haute disponib
   * **Cloud et multi-sous-réseaux :** Gestion via les tests de santé (health checks) des répartiteurs de charge externes (AWS, Azure, GCP) pour rediriger le trafic entre différents sous-réseaux.
 
 
-<img src="/wp-content/uploads/2026/01/vip-3-1024-fr.jpg" width="512" alt="Schéma comparatif du comportement de l'IP virtuelle (VIP) dans Evidian SafeKit : Clusters Mirror avec IP flottante sur le nœud actif vs Clusters Farm avec répartition de charge réseau sur tous les nœuds.">
+![Schéma comparatif du comportement de l'IP virtuelle (VIP) dans Evidian SafeKit : Clusters Mirror avec IP flottante sur le nœud actif vs Clusters Farm avec répartition de charge réseau sur tous les nœuds.](/wp-content/uploads/2026/01/vip-3-1024-fr.jpg "w:512")
 
   
 
@@ -60,7 +60,7 @@ Pour les organisations exigeant une continuité d'activité sans couture au sein
 ### Cluster miroir local : Basculement transparent à 2 nœuds Windows ou Linux
 
 
-<img src="/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png" width="256" alt="Mécanisme de basculement d'IP virtuelle (VIP) SafeKit entre deux serveurs dans le même sous-réseau">
+![Mécanisme de basculement d'IP virtuelle (VIP) SafeKit entre deux serveurs dans le même sous-réseau](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
  Aliasing VIP SafeKit et mapping d'adresse MAC Dans un **cluster miroir SafeKit** standard où les deux nœuds résident dans le même sous-réseau local, la haute disponibilité est assurée par une **IP virtuelle (VIP) définie par logiciel**. Contrairement aux solutions matérielles, SafeKit gère cette VIP directement dans la pile réseau du système d'exploitation. Cette VIP agit comme un point d'entrée logique persistant pour les clients, superposé aux adresses IP physiques uniques du Serveur 1 et du Serveur 2 via l'**aliasing IP**. 
 
@@ -91,7 +91,7 @@ En s'appuyant sur l'infrastructure réseau externe, la solution **SafeKit Softwa
 ### Clusters miroir multi-sous-réseaux : implémentation Windows et Linux
 
 
-<img src="/wp-content/uploads/2023/05/vip-mirror-different-subnet.png" width="256" alt="Schéma d'un basculement d'IP virtuelle via un répartiteur de charge entre deux sous-réseaux différents">
+![Schéma d'un basculement d'IP virtuelle via un répartiteur de charge entre deux sous-réseaux différents](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
  Routage du trafic multi-sous-réseaux via les tests de santé (Health Checks) du répartiteur de charge
 
@@ -113,9 +113,9 @@ Lors d'un **événement de basculement (failover)** , SafeKit bascule instantan�
 
 Ce modèle « Load Balancer + Health Check » est le standard de l'industrie pour la **Haute Disponibilité dans le Cloud**. Il est essentiel pour l'implémentation de SafeKit dans des environnements tels que :
 
-  * [**Amazon AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) (AWS Network Load Balancer)
-  * [**Microsoft Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) (Azure Load Balancer)
-  * [**Google Cloud (GCP)**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
+  * 💡 [**Amazon AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) (AWS Network Load Balancer)
+  * 💡 [**Microsoft Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) (Azure Load Balancer)
+  * 💡 [**Google Cloud (GCP)**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
 
 
 #### Considérations réseau : Répartiteur de charge vs LAN étendu
@@ -133,7 +133,7 @@ Pour les environnements à fort trafic, le **Guide d'architecture : Haute dispon
 ### Architecture de cluster de ferme : Équilibrage de charge sur des nœuds Windows ou Linux
 
 
-<img src="/wp-content/uploads/2023/05/vip-farm-same-subnet.png" width="256" alt="Schéma d'une IP virtuelle (VIP) avec équilibrage de charge au sein d'un cluster de ferme sur le même sous-réseau">
+![Schéma d'une IP virtuelle (VIP) avec équilibrage de charge au sein d'un cluster de ferme sur le même sous-réseau](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
  Traitement distribué du trafic via filtrage au niveau du noyau Dans un **cluster de ferme avec équilibrage de charge** , une adresse IP virtuelle (VIP) est utilisée pour répartir les requêtes clients sur plusieurs serveurs simultanément. Bien que cet exemple présente deux nœuds, l'architecture évolue pour supporter des fermes de serveurs plus importantes. Dans une configuration sur le même sous-réseau, la VIP est configurée sur la carte Ethernet de **chaque serveur** du cluster via l'aliasing IP. 
 
@@ -163,7 +163,7 @@ Le **Guide d'architecture : Mise à l'échelle des clusters de fermes dans des e
 ### Clusters de fermes multi-sous-réseaux : Évolutivité Windows et Linux multi-nœuds
 
 
-<img src="/wp-content/uploads/2023/05/vip-farm-different-subnet.png" width="256" alt="Schéma d'un cluster de ferme à charge équilibrée opérant sur deux sous-réseaux différents">
+![Schéma d'un cluster de ferme à charge équilibrée opérant sur deux sous-réseaux différents](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
  Distribution du trafic global via l'équilibrage de charge externe Lorsque les nœuds de la ferme sont répartis sur **différents sous-réseaux** (courant dans les déploiements cloud Multi-AZ), l'**IP Virtuelle (VIP)** est gérée par un **Load Balancer (LB)** externe. Le LB détient la VIP et dirige le trafic entrant vers les adresses IP physiques des serveurs situés dans leurs sous-réseaux respectifs. 
 
@@ -189,9 +189,9 @@ SafeKit fournit une **URL de Health Check** en temps réel sur chaque serveur de
 
 Cette architecture est le modèle fondamental pour les **clusters de fermes Cloud** , garantissant que si un sous-réseau ou une zone entière devient hors ligne, les nœuds restants continuent de gérer la charge. Ceci est supporté nativement par : 
 
-  * [**Amazon AWS**](</solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer)
-  * [**Microsoft Azure**](</solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer)
-  * [**Google Cloud (GCP)**](</solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
+  * 💡 [**Amazon AWS**](</solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer)
+  * 💡 [**Microsoft Azure**](</solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer)
+  * 💡 [**Google Cloud (GCP)**](</solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
 
 
 ## IP virtuelle vs Redirection DNS : pourquoi le basculement DNS échoue souvent {#virtual-ip-vs-dns-redirection-failover}
@@ -204,7 +204,7 @@ S'appuyer sur le DNS pour le basculement (failover) crée souvent un **sentiment
 
 Dans une configuration réseau standard, un **Nom Virtuel** (le nom DNS) fait office de point d'entrée lisible par l'homme pour les utilisateurs. Cependant, pour que les données circulent sur le réseau, ce nom doit être résolu en une adresse **IP Physique** spécifique. 
 
-<img src="/wp-content/uploads/2025/12/dns-rerouting.png" width="256" alt="Schéma montrant la résolution d'un nom DNS vers l'IP physique 1 dans un cluster à haute disponibilité">
+![Schéma montrant la résolution d'un nom DNS vers l'IP physique 1 dans un cluster à haute disponibilité](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
  Résolution DNS et clients « bloqués » sur l'IP physique 1 dans un cluster à haute disponibilité
 

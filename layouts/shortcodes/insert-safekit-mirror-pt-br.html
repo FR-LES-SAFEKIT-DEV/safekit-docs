@@ -9,7 +9,7 @@
 O Servidor 1 (PRIM) executa a aplicação Windows/Linux. Os clientes estão conectados a um [endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/). O SafeKit replica em tempo real as modificações feitas dentro dos arquivos através da rede.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Replicação de arquivos em nível de byte em um cluster espelho (mirror) do Windows/Linux">
+![Replicação de arquivos em nível de byte em um cluster espelho (mirror) do Windows/Linux](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 A replicação é [síncrona](/best-practises/synchronous-replication-vs-asynchronous-replication/), sem perda de dados em caso de falha, ao contrário da replicação assíncrona.
@@ -23,7 +23,7 @@ Quando o Servidor 1 falha, o Servidor 2 assume o controle. O SafeKit alterna o e
 A aplicação encontra os arquivos replicados pelo SafeKit atualizados no Servidor 2. A aplicação continua a ser executada no Servidor 2, modificando localmente seus arquivos, que não são mais replicados para o Servidor 1.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover do Windows/Linux em um cluster espelho (mirror cluster)">
+![Failover do Windows/Linux em um cluster espelho (mirror cluster)](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
 O tempo de failover é igual ao tempo de detecção de falhas (30 segundos por padrão) mais o tempo de inicialização da aplicação.
@@ -35,7 +35,7 @@ O failback envolve reiniciar o Servidor 1 após a correção do problema que cau
 O SafeKit ressincroniza automaticamente os arquivos, atualizando apenas os arquivos modificados no Servidor 2 enquanto o Servidor 1 estava parado.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback em um cluster espelho (mirror) do Windows/Linux">
+![Failback em um cluster espelho (mirror) do Windows/Linux](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
 
 O failback ocorre sem interromper a aplicação Windows/Linux, que pode continuar em execução no Servidor 2.
@@ -45,7 +45,7 @@ O failback ocorre sem interromper a aplicação Windows/Linux, que pode continua
 Após a reintegração, os arquivos ficam novamente em modo espelho (mirror), como no passo 1. O sistema volta ao modo de alta disponibilidade, com a aplicação Windows/Linux em execução no Servidor 2 e o SafeKit replicando as atualizações de arquivos para o Servidor 1.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Retorno à operação normal em um cluster espelho (mirror) do Windows/Linux">
+![Retorno à operação normal em um cluster espelho (mirror) do Windows/Linux](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
 
 Se o administrador desejar que a aplicação seja executada no Servidor 1, isso pode ser feito manualmente através do console web em um momento apropriado ou automaticamente através de configuração.
@@ -53,7 +53,7 @@ Se o administrador desejar que a aplicação seja executada no Servidor 1, isso 
 ### Como configurar um Cluster Espelho (Mirror Cluster) do SafeKit para o Windows/Linux? {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+![SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 O **console web do SafeKit** oferece uma interface intuitiva para orquestrar a alta disponibilidade de suas aplicações críticas. Em apenas alguns passos, você pode configurar um **cluster espelho do SafeKit** para garantir a continuidade dos negócios:
@@ -70,7 +70,7 @@ O cluster SafeKit inclui um verificador de split-brain dedicado para resolver pr
 ### Como monitorar um cluster espelho (mirror cluster) do SafeKit para o Windows/Linux? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
 
 
 O **console de gerenciamento do SafeKit** oferece uma visão unificada de sua infraestrutura de alta disponibilidade. Ele permite que os administradores monitorem o **estado operacional** do cluster e acompanhem a sincronização de dados em tempo real.

@@ -2,7 +2,7 @@
 title: "Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover"
 slug: "kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers"
 canonical: "https://safekit.eviden.com/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover"
+description: "Achieve K3s high availability on 2 nodes without external storage or etcd quorum. Learn how SafeKit provides zero-data-loss replication and automatic failover."
 category: "solutions"
 lang: "en"
 topics: "Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn?, Table of Contents, How the SafeKit software simply implements a Kubernetes K3s high availability cluster?, How the SafeKit mirror cluster works with Kubernetes K3S?, SafeKit High Availability Limitations, Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn), Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 SafeKit High Availability Navigation Hub"
@@ -25,7 +25,7 @@ While the standard open-source stack (MetalLB + Longhorn) for K3s is powerful fo
   * **IT Generalist Friendly:** Replaces complex **infrastructure YAML** for networking and storage with a **simple web GUI** and automated deployment scripts, leaving you to focus only on your applications.
 
 
-<img src="/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg" width="512" alt="SafeKit architecture diagram for 2-node K3s high availability featuring integrated Virtual IP, real-time replication, and automatic failover.">
+![SafeKit architecture diagram for 2-node K3s high availability featuring integrated Virtual IP, real-time replication, and automatic failover.](/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg "w:512")
 
  **Shared-nothing high availability (HA) for 2-node K3s clusters**  
 
@@ -74,7 +74,7 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
 
 SafeKit also provides **Farm Clusters** with native **Network Load Balancing and Failover** for stateless applications like **Web Servers**.
 
-[Explore the full list of supported HA solutions here.](</solutions/>)
+💡 [Explore the full list of supported HA solutions here.](</solutions/>)
 
 ### How SafeKit Achieves K3s High Availability? {#safekit-k3s-architecture-table}
 
@@ -95,7 +95,7 @@ Configuration Database |  • Hosts Virtual IP and MariaDB Port<br>• Manages a
 This stage illustrates the high-availability architecture between **Server 1 (PRIM)** and **Server 2 (SECOND)**. Both servers run K3s master and agent components as defined in the [architecture table](<#safekit-k3s-architecture-table>).
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="File replication at byte level in a Kubernetes K3s mirror cluster">
+![File replication at byte level in a Kubernetes K3s mirror cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 Currently, the **Virtual IP (VIP)** , **NFS persistent storage** , and **MariaDB** are active on Server 1 (PRIM) only. The K3s master components on both nodes synchronize with each other by accessing the cluster state via the Virtual IP and the MariaDB port. SafeKit implements [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) of MariaDB and persistent NFS files, ensuring **zero data loss (RPO = 0)** in the event of a failure.
@@ -108,7 +108,7 @@ The K3s masters distribute the workload across both nodes (or more) by communica
 When **Server 1 (PRIM)** fails, **Server 2 (SECOND)** automatically takes over the cluster operations to ensure continuity.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover in a Kubernetes K3S mirror cluster">
+![Failover in a Kubernetes K3S mirror cluster](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
 SafeKit detects the failure and immediately migrates the cluster's **Virtual IP address** to Server 2. It then promotes the local **MariaDB** and **NFS services** to an active state. Because of the synchronous replication performed in Step 1, all MariaDB databases and NFS Persistent Volume (PV) files are already up-to-date on Server 2, ensuring zero data loss.
@@ -123,7 +123,7 @@ While Server 1 is offline, MariaDB and NFS services continue to run on Server 2,
 **Failback** occurs when Server 1 is restarted after the initial issue has been resolved. SafeKit automatically resynchronizes the MariaDB and NFS files, updating only the data modified on Server 2 during the downtime. This reintegration process is **non-disruptive** ; K3s master and agent components continue to run on Server 2 without interruption. 
 
 
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Automatic resynchronization and failback in a K3s mirror cluster">
+![Automatic resynchronization and failback in a K3s mirror cluster](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
  
 
@@ -138,7 +138,7 @@ SafeKit optimizes recovery time based on how the server was stopped:
 Following reintegration, the cluster returns to **full mirror mode** , mirroring the state described in Step 1. The system is once again in a highly available state: **MariaDB** and **NFS services** remain active on Server 2, while SafeKit performs real-time replication of all file updates back to Server 1. 
 
 
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Return to normal operation in a Kubernetes K3s mirror cluster">
+![Return to normal operation in a Kubernetes K3s mirror cluster](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
  
 
@@ -149,7 +149,7 @@ If the administrator prefers the MariaDB and NFS services to run on Server 1 (re
 ### How to configure a SafeKit Mirror Cluster? {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+![SafeKit Web Console: High Availability configuration dashboard showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 The **SafeKit web console** provides an intuitive interface to orchestrate high availability for your critical applications. In just a few steps, you can configure a **SafeKit mirror cluster** to ensure business continuity:
@@ -166,7 +166,7 @@ The SafeKit cluster includes a dedicated split-brain checker to resolve network 
 ### How to monitor a SafeKit mirror cluster? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png" width="478" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
 
 
 The **SafeKit management console** offers a unified view of your high availability infrastructure. It allows administrators to monitor the **operational state** of the cluster and track data synchronization in real-time.
@@ -208,9 +208,9 @@ While this video demonstrates SafeKit's high availability for Microsoft SQL Serv
 
 ### Video Highlights
 
-  1. [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  2. [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
-  3. [Start and test SQL replication, migration, failover on crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
+  1. 🎬 [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
+  2. 🎬 [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  3. 🎬 [Start and test SQL replication, migration, failover on crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 

@@ -2,7 +2,7 @@
 title: "Combining SafeKit High Availability with Disaster Recovery Backups"
 slug: "high-availability-disaster-recovery-hadr"
 canonical: "https://safekit.eviden.com/best-practises/high-availability-disaster-recovery-hadr/"
-description: "Combining SafeKit High Availability with Disaster Recovery Backups"
+description: "Build a resilient HA/DR strategy by combining SafeKit for synchronous replication (RPO=0) with asynchronous backup for off-site disaster recovery. Ensure 24/7 application uptime and data integrity on Windows and Linux with this dual-layered approach."
 category: "best-practises"
 lang: "en"
 topics: "Synchronous SafeKit Replication for HA vs. Asynchronous Backup Replication for DR, Table of Contents, Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN), Asynchronous HADR: Disaster Recovery over Slow Networks (WAN), How to Combine HADR and Backup for Total System Resilience, Comparison of HADR Architectures: Fast vs. Slow Networks, Video Guide: How to Implement HADR with SafeKit, 🔍 SafeKit High Availability Navigation Hub"
@@ -19,7 +19,7 @@ To address the constraints of lower-bandwidth WANs, SafeKit is designed to be pa
 Consequently, the environment is protected against hardware or software failures via SafeKit, and secured against logical errors and cyber threats like ransomware through the backup solution.
 
 
-<img src="/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg" width="512" alt="A technical diagram showing why High Availability (SafeKit) and Backups are complementary: SafeKit handles hardware/software failover via synchronous replication, while asynchronous backup protects against ransomware and logical errors.">
+![A technical diagram showing why High Availability (SafeKit) and Backups are complementary: SafeKit handles hardware/software failover via synchronous replication, while asynchronous backup protects against ransomware and logical errors.](/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg "w:512")
 
 **HA vs Backup: Combining SafeKit Synchronous Replication with Asynchronous DR**
 
@@ -42,7 +42,7 @@ Consequently, the environment is protected against hardware or software failures
 ### How to implement HADR over a fast network? {#hadr-fast-network-architecture}
 
 
-<img src="/wp-content/uploads/2023/02/remote-datacenters.png" width="256" alt="Architecture combining High Availability and Disaster Recovery (HADR) without shared disks">
+![Architecture combining High Availability and Disaster Recovery (HADR) without shared disks](/wp-content/uploads/2023/02/remote-datacenters.png "w:256")
 
 
 To implement HADR over a fast network, deploy two nodes across remote sites to provide High Availability and Disaster Recovery simultaneously. This setup ensures that your application remains available even if an entire site fails, without the complexity of a shared storage infrastructure.
@@ -65,7 +65,7 @@ Synchronous HADR requires an extended LAN or a stretched VLAN for three critical
 ### How to implement HADR over a slow network? {#hadr-slow-network-architecture}
 
 
-<img src="/wp-content/uploads/2023/03/hadr-slow-network-1.png" width="256" alt="HADR architecture separating High Availability from Disaster Recovery">
+![HADR architecture separating High Availability from Disaster Recovery](/wp-content/uploads/2023/03/hadr-slow-network-1.png "w:256")
 
 
 To implement HADR over a slow network (WAN), the architecture typically separates **High Availability** from **Disaster Recovery**. In this scenario, two nodes are deployed at the primary site for local redundancy, while a separate backup or asynchronous replication strategy is used to protect data at a distant remote site.
@@ -88,11 +88,11 @@ Because asynchronous replication over a slow network involves potential data los
 ### Comparing High Availability and Data Backup {#ha-vs-backup-comparison}
 
 
-<img src="/wp-content/uploads/2026/04/safekit-icon-512x512-1.png" width="64" alt="SafeKit high availability software logo">
+![SafeKit high availability software logo](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png "w:64")
 
  
 
-<img src="/wp-content/uploads/2026/01/backup-icon.png" width="64" alt="Data Backup strategy icon">
+![Data Backup strategy icon](/wp-content/uploads/2026/01/backup-icon.png "w:64")
 
 
 Although both are critical for data protection, **High Availability (HA)** and **Backup Solutions** target different risks. **High Availability** , powered by SafeKit, provides a "live" failover mechanism to keep applications accessible during server outages or hardware failures. Conversely, a **Backup Solution** acts as a "historical" archive. While HA ensures 99.99% system availability by replicating data in real-time, backup focuses on data integrity, providing the necessary restoration points to recover from logical errors, accidental deletions, or ransomware attacks.
@@ -130,10 +130,10 @@ Learn how to combine **High Availability (HA)** and **Disaster Recovery (DR)** i
 
 ### Video Highlights
 
-  1. [Introduction to SafeKit HADR over Stretched VLANs](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s>) (1:06)
-  2. [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>)
-  3. [Failover Mechanics: Gratuitous ARP (GARP) & Virtual IP](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s>) (2:10)
-  4. [Designing for Slow WAN: HA vs. Backup Strategies](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s>) (2:45)
+  1. 🎬 [Introduction to SafeKit HADR over Stretched VLANs](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s>) (1:06)
+  2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>)
+  3. 🎬 [Failover Mechanics: Gratuitous ARP (GARP) & Virtual IP](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s>) (2:10)
+  4. 🎬 [Designing for Slow WAN: HA vs. Backup Strategies](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s>) (2:45)
 
 
 ### SafeKit Video: How to implement High Availability and Disaster Recovery (HADR) with SafeKit (7:40)

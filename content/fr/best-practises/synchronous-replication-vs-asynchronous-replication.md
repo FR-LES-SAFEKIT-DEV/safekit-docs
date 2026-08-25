@@ -2,7 +2,7 @@
 title: "Réplication synchrone vs. asynchrone : comment SafeKit garantit-il l’absence de perte de données ?"
 slug: "synchronous-replication-vs-asynchronous-replication"
 canonical: "https://safekit.eviden.com/fr/best-practises/synchronous-replication-vs-asynchronous-replication/"
-description: "Réplication synchrone vs. asynchrone : comment SafeKit garantit-il l’absence de perte de données ?"
+description: "Comparez la réplication synchrone et asynchrone pour la continuité d'activité. Découvrez comment SafeKit utilise la réplication synchrone en temps réel pour garantir l'absence de perte de données (RPO=0) dans les clusters haute disponibilité, et pourquoi la réplication asynchrone est mieux adaptée à la reprise après sinistre à distance."
 category: "best-practises"
 lang: "fr"
 topics: "Perte de données ou non lors du basculement d'application avec une réplication synchrone ou asynchrone ?, Table des matières, Comment fonctionne la réplication asynchrone ?, Comment fonctionne la réplication synchrone ?, Comment fonctionne la réplication semi-synchrone ?, Verdict final : choisir la bonne réplication pour la haute disponibilité, Tableau comparatif : réplication synchrone vs asynchrone vs semi-synchrone, Configuration de la réplication synchrone en temps réel et de la haute disponibilité, FAQ : Stratégies de réplication dans les clusters de haute disponibilité, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -24,7 +24,7 @@ Il est important de comprendre que ces solutions sont **complémentaires**. Tand
 Pour vous aider à prendre la bonne décision et choisir l'architecture la mieux adaptée à vos besoins, nous expliquons ci-dessous les mécanismes techniques et leur impact sur le basculement d'application.
 
 
-<img src="/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024-fr.jpg" width="512" alt="Schéma comparatif de la réplication synchrone vs asynchrone montrant le risque de perte de données lors du basculement">
+![Schéma comparatif de la réplication synchrone vs asynchrone montrant le risque de perte de données lors du basculement](/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024-fr.jpg "w:512")
 
   
 

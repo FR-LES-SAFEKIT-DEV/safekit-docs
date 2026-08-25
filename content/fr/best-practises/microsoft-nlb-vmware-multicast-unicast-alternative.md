@@ -2,7 +2,7 @@
 title: "Alternative à Microsoft NLB pour VMware : problèmes de multidiffusion et d’unicast résolus"
 slug: "microsoft-nlb-vmware-multicast-unicast-alternative"
 canonical: "https://safekit.eviden.com/fr/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "Alternative à Microsoft NLB pour VMware : problèmes de multidiffusion et d’unicast résolus Mode multicast de Microsoft NLB Comme expliqué dans la base de connaissances de VMware pour la configuration du mode multicast de Microsoft NLB, vous devez positionner manuellement la résolution ARP statique des switchs ou des routeurs réseaux pour chaque port connecté au cluster. […]"
+description: "Vous rencontrez des difficultés avec le multicast ou l'unicast de Microsoft NLB dans VMware ? SafeKit propose une solution simple : un cluster sans SAN. Bénéficiez d'un équilibrage de charge automatique et d'un basculement automatique sous Windows et Linux, sans entrées ARP statiques, usurpation d'adresse MAC ni configuration réseau complexe."
 category: "best-practises"
 lang: "fr"
 topics: "Mode multicast de Microsoft NLB, Mode unicast de Microsoft NLB, Alternative avec SafeKit, Comment fonctionne le cluster SafeKit en mode farm avec Windows ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"

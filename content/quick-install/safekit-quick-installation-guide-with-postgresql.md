@@ -2,7 +2,7 @@
 title: "PostgreSQL High Availability with SafeKit: Install the postgresql.safe Module for Failover"
 slug: "safekit-quick-installation-guide-with-postgresql"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-postgresql/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the postgresql.safe module for SafeKit to enable synchronous real-time replication and automatic failover of PostgreSQL on Windows and Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for PostgreSQL, SafeKit High Availability Limitations, Overview of the SafeKit / PostgreSQL solution, Installation of the SafeKit / PostgreSQL solution on Windows and Linux (postgresql.safe), Step by step configuration of the SafeKit / PostgreSQL solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for PostgreSQL, SafeKit High
 
 ## Overview of the SafeKit / PostgreSQL solution
 
-The solution is described here: **[The Simplest PostgreSQL High Availability: 2-Node Synchronous Replication& Failover](</solutions/postgresql-high-availability-synchronous-replication-failover/>)**.
+The solution is described here: **💡[The Simplest PostgreSQL High Availability: 2-Node Synchronous Replication & Failover](</solutions/postgresql-high-availability-synchronous-replication-failover/>)**.
 
 ## Installation of the SafeKit / PostgreSQL solution on Windows and Linux (postgresql.safe)
 

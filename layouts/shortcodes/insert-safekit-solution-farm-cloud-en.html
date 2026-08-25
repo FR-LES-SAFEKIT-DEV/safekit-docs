@@ -15,7 +15,7 @@ A SafeKit Farm Cluster for {{ .Get "app" }} is a software-defined high availabil
   * **Uniform Deployment (On-Prem or Cloud):** Aside from configuring the [Virtual IP within a Cloud Load Balancer](/best-practises/how-a-virtual-ip-address-works/), the SafeKit deployment process remains identical across on-premises and cloud environments.
 
 
-<img src="{{ .Get "img" }}" width="512" alt="SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing">
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing]({{ .Get "img" }} "w:512")
 
 **SafeKit Farm NLB Cluster for {{ .Get "app" }}**
 
@@ -75,7 +75,7 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
   * **Cloud Infrastructure:** High availability for Cloud applications.
 
 
-[Explore the full list of supported HA solutions here.](/solutions/)
+💡 [Explore the full list of supported HA solutions here.](/solutions/)
 
 ## How the SafeKit farm cluster works with {{ .Get "app" }}? {#safekit-farm-cluster}
 
@@ -95,7 +95,7 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
   * **Simplified Maintenance:** Each node includes a SafeKit web console connector, providing a "one-click" interface to manually exclude nodes from the cluster for hardware or software maintenance.
 
 
-<img src="/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png" width="256" alt="Diagram showing a SafeKit farm cluster for {{ .Get "app" }} with Multi-AZ redundancy, showing a load balancer using HTTP health checks to route traffic between active nodes and handle automatic failover.">
+![Diagram showing a SafeKit farm cluster for {{ .Get "app" }} with Multi-AZ redundancy, showing a load balancer using HTTP health checks to route traffic between active nodes and handle automatic failover.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
 
 **SafeKit NLB and HA Architecture for {{ .Get "app" }}**
 
@@ -114,7 +114,7 @@ Conversely, for a **stateless** {{ .Get "app" }} application, session affinity i
 ### How to configure a SafeKit farm cluster in {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-config.png" width="966" alt="SafeKit Web Console: Farm cluster configuration for network load balancing and virtual IP management.">
+![SafeKit Web Console: Farm cluster configuration for network load balancing and virtual IP management.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
 The **SafeKit farm cluster** is designed for high availability and scalability of services. The configuration focuses on distributing incoming traffic across both nodes simultaneously:
@@ -129,7 +129,7 @@ The **SafeKit farm cluster** is designed for high availability and scalability o
 ### How to monitor a SafeKit farm cluster in {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png" width="473" alt="SafeKit Console: Monitoring a 2-node Farm cluster showing both nodes in UP state with active load balancing.">
+![SafeKit Console: Monitoring a 2-node Farm cluster showing both nodes in UP state with active load balancing.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
 Monitoring a farm cluster provides visibility into the **Active-Active** nature of the infrastructure, where all nodes contribute to the application's performance (showing 2 nodes in this example):
@@ -167,9 +167,9 @@ Learn how to implement a **virtual IP address** to provide a single entry point 
 
 ### Video Highlights
 
-  1. [Architecture: Preparing 2 nodes for a shared Virtual IP](https://www.youtube.com/watch?v=1Ww2-cXHNx4&amp;t=0s) (0:13)
-  2. [Configuration: Setting up the farm.safe module and Virtual IP address](https://www.youtube.com/watch?v=1Ww2-cXHNx4&amp;t=13s) (2:20)
-  3. [Validation: Failover testing and Virtual IP redirection on server crash](https://www.youtube.com/watch?v=1Ww2-cXHNx4&amp;t=153s) (2:30)
+  1. 🎬 [Architecture: Preparing 2 nodes for a shared Virtual IP](https://www.youtube.com/watch?v=1Ww2-cXHNx4&amp;t=0s) (0:13)
+  2. 🎬 [Configuration: Setting up the farm.safe module and Virtual IP address](https://www.youtube.com/watch?v=1Ww2-cXHNx4&amp;t=13s) (2:20)
+  3. 🎬 [Validation: Failover testing and Virtual IP redirection on server crash](https://www.youtube.com/watch?v=1Ww2-cXHNx4&amp;t=153s) (2:30)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 

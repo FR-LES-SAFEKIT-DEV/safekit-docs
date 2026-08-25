@@ -2,7 +2,7 @@
 title: "The Simplest Microsoft SQL Server High Availability: 2-Node Synchronous Replication & Failover"
 slug: "sql-server-high-availability-synchronous-replication-failover"
 canonical: "https://safekit.eviden.com/solutions/sql-server-high-availability-synchronous-replication-failover/"
-description: "The Simplest Microsoft SQL Server High Availability: 2-Node Synchronous Replication & Failover"
+description: "The simplest way to implement Microsoft SQL Server High Availability. SafeKit provides a 2-node SANless cluster with synchronous replication and automatic failover—no AD or specialized skills required."
 category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Microsoft SQL Server, Table of Contents, How the SafeKit software simply implements a SANless Microsoft SQL Server high availability cluster?, How the SafeKit mirror cluster works with Microsoft SQL Server?, SafeKit High Availability Limitations, Comparison: SafeKit for Microsoft SQL Server vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 SafeKit High Availability Navigation Hub"

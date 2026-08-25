@@ -2,7 +2,7 @@
 title: "Les meilleurs et les pires cas d’usage de la haute disponibilité : guide de mise en œuvre SafeKit"
 slug: "best-worst-use-cases-high-availability"
 canonical: "https://safekit.eviden.com/fr/use-cases/best-worst-use-cases-high-availability/"
-description: "Les meilleurs et les pires cas d’usage de la haute disponibilité : guide de mise en œuvre SafeKit"
+description: "Identifiez les meilleurs et les pires cas d’usage de la haute disponibilité. Découvrez dans quels scénarios SafeKit excelle avec son clustering entièrement logiciel pour Windows et Linux, et apprenez quand les solutions traditionnelles à stockage partagé ou basées sur du matériel peuvent mettre votre entreprise en échec."
 category: "use-cases"
 lang: "fr"
 topics: "Meilleurs cas d'utilisation de la haute disponibilité SafeKit, Pires cas d'utilisation de la haute disponibilité SafeKit, Limitations de la haute disponibilité SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "Meilleurs cas d'utilisation de la haute disponibilité SafeKit, Pires c
 Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/application-clustering-software/>) pour la haute disponibilité de son application.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-ha-software.png" width="300" alt="Logiciel de clustering SafeKit OEM pour la haute disponibilité d'applications critiques">
+![Logiciel de clustering SafeKit OEM pour la haute disponibilité d'applications critiques](/wp-content/uploads/2023/02/safekit-ha-software.png "w:300")
 
 
 ### Entreprise distribuée
@@ -25,7 +25,7 @@ Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/a
 [Une entreprise distribuée déploie SafeKit](</fr/use-cases/business-continuity-software/>) dans de nombreuses succursales, sans compétence informatique spécifique.
 
 
-<img src="/wp-content/uploads/2023/02/distributed-enterprise-1.png" width="300" alt="Haute disponibilité dans une entreprise distribuée">
+![Haute disponibilité dans une entreprise distribuée](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
 ### Sites distants
@@ -33,7 +33,7 @@ Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/a
 [SafeKit est déployé dans deux sites distants](</fr/best-practises/high-availability-disaster-recovery-hadr/>) sans nécessiter de baies de disques répliqués à travers un SAN.
 
 
-<img src="/wp-content/uploads/2023/02/remote-datacenters.png" width="300" alt="Plan de continuité d'activité et plan de secours sans SAN répliqué">
+![Plan de continuité d'activité et plan de secours sans SAN répliqué](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
 
 ##  Pires cas d'utilisation de la haute disponibilité SafeKit 

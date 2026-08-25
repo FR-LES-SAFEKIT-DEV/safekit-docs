@@ -2,7 +2,7 @@
 title: "SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison"
 slug: "san-vs-nas-shared-storage-for-a-failover-cluster"
 canonical: "https://safekit.eviden.com/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster?"
+description: "Compare SAN vs. NAS shared storage for failover clusters. Learn why SafeKit proposes a SANless architecture that eliminates shared storage dependencies, simplifies failover scripts, and prevents data corruption without expensive hardware or complex quorum disks."
 category: "best-practises"
 lang: "en"
 topics: "What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster?, 🔍 SafeKit High Availability Navigation Hub"
@@ -15,7 +15,7 @@ topics: "What is the simplest solution between a SAN vs a NAS shared storage for
 ###  SAN shared storage or NAS iSCSI shared storage for a failover cluster 
 
 
-<img src="/wp-content/uploads/2023/03/raw-disk-shared-storage.png" width="200" alt="SAN shared storage or NAS iSCSI shared storage for a failover cluster">
+![SAN shared storage or NAS iSCSI shared storage for a failover cluster](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
 
 
 There are several elements that make this architecture complex to implement:
@@ -29,7 +29,7 @@ There are several elements that make this architecture complex to implement:
 ###  NAS SMB shared storage or NAS NFS shared storage for a failover cluster 
 
 
-<img src="/wp-content/uploads/2023/03/nas-shared-storage-1.png" width="200" alt="NAS SMB shared storage or NAS NFS shared storage for a failover cluster">
+![NAS SMB shared storage or NAS NFS shared storage for a failover cluster](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
 
 
 There are several elements that make this architecture simple to implement: 
@@ -42,7 +42,7 @@ There are several elements that make this architecture simple to implement:
 ###  Real-time replication and failover with Eviden SafeKit 
 
 
-<img src="/wp-content/uploads/2023/03/no-shared-storage.png" width="200" alt="Real-time replication and failover with SafeKit">
+![Real-time replication and failover with SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
 
 
 There are no such issues with SafeKit because its replication and failover solution does not require a shared storage.

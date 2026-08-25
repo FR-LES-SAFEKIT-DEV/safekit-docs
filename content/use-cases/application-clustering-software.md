@@ -2,7 +2,7 @@
 title: "OEM High Availability: Embedding SafeKit Clustering into Your Software"
 slug: "application-clustering-software"
 canonical: "https://safekit.eviden.com/use-cases/application-clustering-software/"
-description: "OEM High Availability: Embedding SafeKit Clustering into Your Software The OEM high availability use case"
+description: "Empower your software with SafeKit. As an OEM partner, you can embed automated failover and synchronous replication directly into your application. Offer your customers 24/7 uptime on Windows and Linux without the complexity of hardware clusters."
 category: "use-cases"
 lang: "en"
 topics: "The OEM high availability use case, 🔍 SafeKit High Availability Navigation Hub"
@@ -17,7 +17,7 @@ topics: "The OEM high availability use case, 🔍 SafeKit High Availability Navi
 SafeKit is independant of the hardware and works with any physical or virtual servers.
 
 
-<img src="/wp-content/uploads/2023/02/application-clustering-software-3.png" width="250" alt="Application clustering software with SafeKit">
+![Application clustering software with SafeKit](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
 ### Simple and economical application clustering software for a software publisher

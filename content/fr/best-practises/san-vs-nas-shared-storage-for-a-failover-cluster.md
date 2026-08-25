@@ -2,7 +2,7 @@
 title: "Comparaison détaillée du stockage partagé SAN et NAS pour le clustering HA"
 slug: "san-vs-nas-shared-storage-for-a-failover-cluster"
 canonical: "https://safekit.eviden.com/fr/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "Comparaison détaillée du stockage partagé SAN et NAS pour le clustering HA Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ?"
+description: "Comparez le stockage partagé SAN et NAS pour les clusters HA. Découvrez pourquoi SafeKit propose une architecture sans SAN qui élimine les dépendances au stockage partagé, simplifie les scripts de basculement et empêche la corruption des données sans matériel coûteux ni disques de quorum complexes."
 category: "best-practises"
 lang: "fr"
 topics: "Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -15,7 +15,7 @@ topics: "Quelle est la solution la plus simple entre un stockage partagé SAN ou
 ###  Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité 
 
 
-<img src="/wp-content/uploads/2023/03/raw-disk-shared-storage.png" width="200" alt="Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité">
+![Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
 
 
 Plusieurs éléments rendent cette architecture complexe à mettre en œuvre :
@@ -29,7 +29,7 @@ Plusieurs éléments rendent cette architecture complexe à mettre en œuvre :
 ###  Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité 
 
 
-<img src="/wp-content/uploads/2023/03/nas-shared-storage-1.png" width="200" alt="Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité">
+![Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
 
 
 Plusieurs éléments rendent cette architecture simple à mettre en œuvre : 
@@ -42,7 +42,7 @@ Plusieurs éléments rendent cette architecture simple à mettre en œuvre :
 ###  Réplication en temps réel et basculement avec Eviden SafeKit 
 
 
-<img src="/wp-content/uploads/2023/03/no-shared-storage.png" width="200" alt="Réplication en temps réel et basculement avec SafeKit">
+![Réplication en temps réel et basculement avec SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
 
 
 Il n'y a pas de tels problèmes avec SafeKit car sa solution de réplication et de basculement ne nécessite pas de stockage partagé.

@@ -2,7 +2,7 @@
 title: "High Availability Architectures: Mirror, Farm, and Advanced Software Clustering"
 slug: "architectures"
 canonical: "https://safekit.eviden.com/architectures/"
-description: "High Availability Architectures: Mirror, Farm, and Advanced Software Clustering What are the different high availability architectures and the different software clusters with SafeKit?"
+description: "Explore high availability architectures with SafeKit. Learn about Mirror, Farm, and Farm+Mirror clusters for SANless application failover and load balancing."
 category: "architectures"
 lang: "en"
 topics: "What are the different high availability architectures and the different software clusters with SafeKit?, How to build high availability clusters with SafeKit?, 🔍 SafeKit High Availability Navigation Hub"
@@ -15,7 +15,7 @@ topics: "What are the different high availability architectures and the differen
 ### Mirror cluster
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="SafeKit mirror cluster">
+![SafeKit mirror cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 [More information](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
@@ -23,7 +23,7 @@ topics: "What are the different high availability architectures and the differen
 ### Farm cluster
 
 
-<img src="/wp-content/uploads/2023/02/safekit-up-up-up-300.png" width="300" alt="SafeKit farm cluster">
+![SafeKit farm cluster](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
 [More information](</architectures/network-load-balancing-cluster/>)
@@ -31,7 +31,7 @@ topics: "What are the different high availability architectures and the differen
 ### Farm+mirror cluster
 
 
-<img src="/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png" width="300" alt="SafeKit farm + mirror cluster">
+![SafeKit farm + mirror cluster](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
 [More information](</architectures/clustering-software-load-balancing-mirroring/>)
@@ -39,7 +39,7 @@ topics: "What are the different high availability architectures and the differen
 ### Active/active cluster
 
 
-<img src="/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png" width="300" alt="SafeKit active active cluster with real-time replication">
+![SafeKit active active cluster with real-time replication](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
 [More information](</architectures/active-active-cluster-real-time-replication/>)
@@ -47,7 +47,7 @@ topics: "What are the different high availability architectures and the differen
 ### N-1 cluster
 
 
-<img src="/wp-content/uploads/2023/02/safekit-n-1-300-3.png" width="300" alt="SafeKit N-1 redundancy cluster">
+![SafeKit N-1 redundancy cluster](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
 [More information](</architectures/n-1-redundancy/>)

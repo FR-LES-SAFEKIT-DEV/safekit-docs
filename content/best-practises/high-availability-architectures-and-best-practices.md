@@ -2,7 +2,7 @@
 title: "High Availability Architectures & Software Clustering Best Practices"
 slug: "high-availability-architectures-and-best-practices"
 canonical: "https://safekit.eviden.com/best-practises/high-availability-architectures-and-best-practices/"
-description: "High Availability Architectures & Software Clustering Best Practices What are the high availability architectures and the best practices?"
+description: "Explore high availability (HA) architectures and best practices for application clustering. Learn how SafeKit software implements mirror and farm clusters without shared disks, providing zero data loss and automatic failover for critical applications."
 category: "best-practises"
 lang: "en"
 topics: "What are the high availability architectures and the best practices?, Comparative tables on high availability architectures and best practices, 🔍 SafeKit High Availability Navigation Hub"
@@ -17,7 +17,7 @@ topics: "What are the high availability architectures and the best practices?, C
 This article explores the different high availability architectures and the best practices by given the pros and cons of each architecture.
 
 
-<img src="/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png" width="400" alt="High availability architectures and best practices">
+![High availability architectures and best practices](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
 
 The following comparative tables explain in detail the SafeKit high availability architecture and its best practices (SafeKit is a software high availability product).

@@ -2,7 +2,7 @@
 title: "SafeKit Free Trial: Test Application and VM-Level High Availability"
 slug: "safekit-free-trial"
 canonical: "https://safekit.eviden.com/resources/safekit-free-trial/"
-description: "SafeKit Free Trial: Test Application and VM-Level High Availability"
+description: "Download the SafeKit free trial to test application and VM-level high availability. SafeKit proposes a SANless architecture for Windows and Linux, enabling zero data loss and auto-failover without a SAN."
 category: "resources"
 lang: "en"
 topics: "SafeKit HA Free Trial & Technical Documentation, 🔍 SafeKit High Availability Navigation Hub"

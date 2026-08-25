@@ -9,7 +9,7 @@
 서버 1(PRIM)이 Windows/Linux 애플리케이션을 실행합니다. 클라이언트는 [가상 IP 주소](/best-practises/how-a-virtual-ip-address-works/)에 연결됩니다. SafeKit은 네트워크를 통해 파일 내부의 변경 사항을 실시간으로 복제합니다.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="미러 Windows/Linux 클러스터의 바이트 단위 파일 복제">
+![미러 Windows/Linux 클러스터의 바이트 단위 파일 복제](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 이 복제 방식은 비동기 복제와 달리 장애 발생 시 데이터 손실이 없는 [동기식(synchronous)](/best-practises/synchronous-replication-vs-asynchronous-replication/) 복제입니다.
@@ -23,7 +23,7 @@ SafeKit에서 복제할 디렉터리 이름만 구성하면 됩니다. 디스크
 애플리케이션은 서버 2에서 SafeKit에 의해 최신 상태로 복제된 파일들을 찾습니다. 애플리케이션은 서버 1로 더 이상 복제되지 않는 로컬 파일을 수정하면서 서버 2에서 계속 실행됩니다.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="미러 클러스터 환경에서 Windows/Linux의 장애 조치(Failover)">
+![미러 클러스터 환경에서 Windows/Linux의 장애 조치(Failover)](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
 장애 조치 시간은 결함 감지 시간(기본값 30초)에 애플리케이션 시작 시간을 더한 값과 같습니다.
@@ -35,7 +35,7 @@ SafeKit에서 복제할 디렉터리 이름만 구성하면 됩니다. 디스크
 SafeKit은 서버 1이 정지된 동안 서버 2에서 수정된 파일만 업데이트하여 파일을 자동으로 다시 동기화합니다.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="미러 Windows/Linux 클러스터의 장애 복구(Failback)">
+![미러 Windows/Linux 클러스터의 장애 복구(Failback)](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
 
 장애 복구는 서버 2에서 계속 실행 중인 Windows/Linux 애플리케이션에 영향을 주지 않고 백그라운드에서 진행됩니다.
@@ -45,7 +45,7 @@ SafeKit은 서버 1이 정지된 동안 서버 2에서 수정된 파일만 업�
 재통합이 완료되면 파일은 단계 1과 같이 다시 미러 모드로 돌아갑니다. 시스템은 고가용성 모드로 복귀하며, Windows/Linux 애플리케이션은 서버 2에서 실행되고 SafeKit은 파일 업데이트를 서버 1로 복제합니다.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="미러 Windows/Linux 클러스터의 정상 운영 상태 복귀">
+![미러 Windows/Linux 클러스터의 정상 운영 상태 복귀](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
 
 관리자가 애플리케이션을 서버 1에서 실행하기를 원할 경우, 적절한 시점에 웹 콘솔을 통해 수동으로 전환하거나 구성을 통해 자동으로 전환할 수 있습니다.
@@ -53,7 +53,7 @@ SafeKit은 서버 1이 정지된 동안 서버 2에서 수정된 파일만 업�
 ### Windows/Linux을 위한 SafeKit 미러 클러스터 구성 방법은 무엇인가요? {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+![SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 **SafeKit 웹 콘솔** 은 중요 애플리케이션의 고가용성을 조율할 수 있는 직관적인 인터페이스를 제공합니다. 몇 단계만 거치면 비즈니스 연속성을 보장하는 **SafeKit 미러 클러스터** 를 구성할 수 있습니다:
@@ -70,7 +70,7 @@ SafeKit 클러스터에는 제3의 감시(witness) 장비나 추가 하트비트
 ### Windows/Linux을 위한 SafeKit 미러 클러스터 모니터링 방법은 무엇인가요? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
 
 
 **SafeKit 관리 콘솔** 은 고가용성 인프라의 통합된 뷰를 제공합니다. 관리자는 이를 통해 클러스터의 **운영 상태** 를 모니터링하고 데이터 동기화를 실시간으로 추적할 수 있습니다.

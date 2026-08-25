@@ -2,7 +2,7 @@
 title: "Heartbeat, Failover and Quorum in Windows and Linux Clusters"
 slug: "heartbeat-failover-quorum-windows-linux-cluster"
 canonical: "https://safekit.eviden.com/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Heartbeat, Failover and Quorum in Windows and Linux Clusters"
+description: "Learn how heartbeats, failover, and quorum work in a cluster. SafeKit proposes a SANless architecture that eliminates the need for a third quorum server or special quorum disk. Achieve high availability on Windows and Linux with a simple split-brain checker."
 category: "best-practises"
 lang: "en"
 topics: "What are the different scenarios in case of network isolation in a cluster?, How heartbeats and failover work in a Windows or Linux cluster?, Split brain problem and quorum when servers are in two remote computer rooms, Simple cluster quorum with the SafeKit split brain checker, 🔍 SafeKit High Availability Navigation Hub"
@@ -41,7 +41,7 @@ Although not mandatory, it is better to have two heartbeat channels on two diffe
 ## Split brain problem and quorum when servers are in two remote computer rooms
 
 
-<img src="/wp-content/uploads/2023/02/quorum-with-remote-sites.png" width="200" alt="Heartbeat, failover and quorum in a Windows or Linux cluster">
+![Heartbeat, failover and quorum in a Windows or Linux cluster](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
 
 
 ### Remote computer rooms
@@ -66,7 +66,7 @@ Unfortunately these new quorum devices add cost and complexity to the overall cl
 
 ### SafeKit split brain checker
 
-With the SafeKit high availability software, the quorum within a Windows or Linux cluster requires no third quorum server and no quorum disk. A [simple split brain checker](</resources/safekit-user-guide-82/#check_splitbrain>) is sufficient to avoid the double execution of an application.
+With the SafeKit high availability software, the quorum within a Windows or Linux cluster requires no third quorum server and no quorum disk. A 🛠️ [simple split brain checker](</resources/safekit-user-guide-82/#check_splitbrain>) is sufficient to avoid the double execution of an application.
 
 On the the loss of all heartbeats between servers, the split brain checker selects only one server to become the primary. The other server goes into the WAIT state, until it receives the other server's heartbeats again. It then goes back to secondary after having synchronized replicated data from the primary server.
 

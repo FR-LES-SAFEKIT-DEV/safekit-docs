@@ -2,7 +2,7 @@
 title: "Haute disponibilité et redondance pour les systèmes SCADA et les systèmes de contrôle industriel (ICS)"
 slug: "scada-software-redundancy-high-availability"
 canonical: "https://safekit.eviden.com/fr/use-cases/scada-software-redundancy-high-availability/"
-description: "Haute disponibilité et redondance pour les systèmes SCADA et les systèmes de contrôle industriel (ICS) Les systèmes SCADA permettent aux organisations industrielles de contrôler les processus industriels, d'interagir directement avec des dispositifs tels que des capteurs, des vannes, des pompes, des moteurs, via un logiciel et une interface homme-machine. Si le logiciel SCADA est en […]"
+description: "Protégez vos infrastructures critiques avec SafeKit, la solution logicielle de haute disponibilité sans SAN leader pour les systèmes SCADA. Garantissez une disponibilité 24h/24 et 7j/7 pour Wonderware, WinCC, iFix et Inductive Automation grâce à la réplication synchrone en temps réel et au basculement automatique. Atteignez le zéro perte de données (RPO=0) pour votre base de données industrielle sans nécessiter de stockage SAN complexe ni de compétences informatiques pointues."
 category: "use-cases"
 lang: "fr"
 topics: "Qu'est-ce qu'un système SCADA?, Pourquoi un logiciel SCADA est critique ?, Liste des acteurs clés dans les logiciels SCADA, SafeKit apporte deux solutions pour la redondance et la haute disponibilité des logiciels SCADA, SafeKit, une solution reconnue sur le marché SCADA, 🔍 Hub de navigation SafeKit Haute Disponibilité"

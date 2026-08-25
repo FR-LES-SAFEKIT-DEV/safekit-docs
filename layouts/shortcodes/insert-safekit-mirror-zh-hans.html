@@ -9,7 +9,7 @@
 服务器 1 (PRIM) 运行 Windows/Linux 应用程序。客户端连接到一个 [虚拟 IP 地址](/best-practises/how-a-virtual-ip-address-works/)。SafeKit 通过网络实时复制文件内部所做的修改。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="镜像 Windows/Linux 集群中字节级的文件复制">
+![镜像 Windows/Linux 集群中字节级的文件复制](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 与异步复制不同，该复制是 [同步的](/best-practises/synchronous-replication-vs-asynchronous-replication/)，在发生故障时不会丢失数据。
@@ -23,7 +23,7 @@
 应用程序在服务器 2 上能够找到由 SafeKit 复制的最新文件。应用程序继续在服务器 2 上运行，并在本地修改其文件（此时文件不再复制到服务器 1）。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="镜像集群中 Windows/Linux 的故障转移">
+![镜像集群中 Windows/Linux 的故障转移](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
 故障转移时间等于故障检测时间（默认 30 秒）加上应用程序启动时间。
@@ -35,7 +35,7 @@
 SafeKit 会自动重新同步文件，仅更新在服务器 1 停机期间在服务器 2 上被修改过的文件。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="镜像 Windows/Linux 集群中的故障恢复">
+![镜像 Windows/Linux 集群中的故障恢复](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
 
 故障恢复过程不会干扰 Windows/Linux 应用程序的运行，该程序可以继续在服务器 2 上保持运行状态。
@@ -45,7 +45,7 @@ SafeKit 会自动重新同步文件，仅更新在服务器 1 停机期间在服
 重新集成完成后，文件将再次进入镜像模式，正如步骤 1 中所示。系统恢复到高可用模式，此时 Windows/Linux 应用程序在服务器 2 上运行，且 SafeKit 将文件更新实时复制到服务器 1。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="镜像 Windows/Linux 集群恢复正常运行">
+![镜像 Windows/Linux 集群恢复正常运行](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
 
 如果管理员希望应用程序在服务器 1 上运行，可以在合适的时间通过 Web 控制台进行手动切换，或者通过配置实现自动切换。
@@ -53,7 +53,7 @@ SafeKit 会自动重新同步文件，仅更新在服务器 1 停机期间在服
 ### 如何为 Windows/Linux 配置 SafeKit 镜像集群？ {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+![SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 **SafeKit Web 控制台** 提供了一个直观的界面来构建和管理关键应用程序的高可用性。只需几个步骤，您就可以配置 **SafeKit 镜像集群** 以确保业务连续性：
@@ -70,7 +70,7 @@ SafeKit 集群包含一个专用的脑裂检查器（split-brain checker），�
 ### 如何监控 Windows/Linux 的 SafeKit 镜像集群？ {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
 
 
 **SafeKit 管理控制台** 为您的高可用性基础设施提供了一个统一的视图。它允许管理员实时监控集群的**运行状态** 并跟踪数据同步情况。

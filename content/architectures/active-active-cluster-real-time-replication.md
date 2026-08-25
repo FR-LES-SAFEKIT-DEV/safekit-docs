@@ -2,7 +2,7 @@
 title: "Active-Active Clustering Software with Real-Time Replication & Mutual Failover"
 slug: "active-active-cluster-real-time-replication"
 canonical: "https://safekit.eviden.com/architectures/active-active-cluster-real-time-replication/"
-description: "Active-Active Clustering Software with Real-Time Replication & Mutual Failover How the active active cluster with real-time replication works?"
+description: "Maximize resource utilization with SafeKit active-active clustering. Deploy mutual failover between two servers using real-time synchronous replication and multiple mirror modules. Ensure zero data loss (RPO=0) and automatic recovery for Windows and Linux without a SAN. Download the free trial."
 category: "architectures"
 lang: "en"
 topics: "How the active active cluster with real-time replication works?, 🔍 SafeKit High Availability Navigation Hub"
@@ -17,7 +17,7 @@ topics: "How the active active cluster with real-time replication works?, 🔍 S
 Applications are running on two servers in mutual failover. Each server is backup of the other server. And each application works on its own replicated file directories.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png" width="300" alt="SafeKit active active cluster with real-time replication">
+![SafeKit active active cluster with real-time replication](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
 If one server fails in an active active cluster, all applications will be active on the same server. After restart of the failed server, applications will return to run on their default primary server.
@@ -35,7 +35,7 @@ Note that:
 
 ### Example of an active active cluster
 
-The [Hyper-V](</solutions/hyper-v-replication-automatic-failover-load-balancing/>) or [KVM](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) solution with replication, automatic failover and load balancing of VMs is an example of an active-active cluster with N mirror modules replicating N virtual machines between two physical servers.
+The 💡 [Hyper-V](</solutions/hyper-v-replication-automatic-failover-load-balancing/>) or 💡 [KVM](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) solution with replication, automatic failover and load balancing of VMs is an example of an active-active cluster with N mirror modules replicating N virtual machines between two physical servers.
 
 In this configuration, a mirror module replicates a full virtual machine and restarts the virtual machine in case of failure. 
 

@@ -2,7 +2,7 @@
 title: "Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites"
 slug: "edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites"
 canonical: "https://safekit.eviden.com/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites The Edge HA Challenge Edge sites often have no data center and no HA expertise — yet business continuity is critical. A factory floor, an offshore oil platform, a hospital clinic, a retail store, or a 5G antenna site cannot afford downtime, […]"
+description: "Edge sites have no data center — but still need HA. SafeKit turns 2 standard servers into a plug-and-play HA cluster: no SAN, no IT staff, automatic failover."
 category: "use-cases"
 lang: "en"
 topics: "The Edge HA Challenge, What Makes SafeKit the Natural Fit for Edge, Edge & Distributed Deployment Suitability, Why Edge OT Environments Are Different, Ideal Edge Use Cases, Edge vs. Data Center HA: Key Differences, Technical Minimum Requirements, 🔍 SafeKit High Availability Navigation Hub"
@@ -19,7 +19,7 @@ Traditional HA solutions — Microsoft Failover Cluster (WSFC), Pacemaker/Corosy
 SafeKit was built for exactly this gap. It keeps edge applications running in factories, oil platforms, ships, building security, air traffic control, 5G networks, healthcare, retail, and more — with nothing more than two standard servers and a LAN.
 
 
-<img src="/wp-content/uploads/2026/05/safekit-edge-512-512.jpg" alt="SafeKit for Edge">
+![SafeKit for Edge](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
 
 
 ## What Makes SafeKit the Natural Fit for Edge
@@ -106,7 +106,7 @@ Criterion | Data Center HA (WSFC, Pacemaker, VMware HA) | SafeKit Edge HA
   * **No special OS edition** — Windows Server Standard is sufficient; no Datacenter license required
 
 
-For full technical specifications, sizing constraints, and procurement criteria, see the [RFP/RFI Technical Reference](</resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>).
+For full technical specifications, sizing constraints, and procurement criteria, see the 📘 [RFP/RFI Technical Reference](</resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>).
 
 
 {{%  insert-safekit-hub-en %}}

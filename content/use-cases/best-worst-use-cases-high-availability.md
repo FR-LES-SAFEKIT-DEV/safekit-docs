@@ -2,7 +2,7 @@
 title: "Best and Worst High Availability Use Cases: A SafeKit Implementation Guide"
 slug: "best-worst-use-cases-high-availability"
 canonical: "https://safekit.eviden.com/use-cases/best-worst-use-cases-high-availability/"
-description: "Best and Worst High Availability Use Cases: A SafeKit Implementation Guide"
+description: "Identify the best and worst use cases for high availability. Learn where SafeKit excels in software-defined clustering for Windows and Linux, and discover when traditional shared-storage or hardware-based HA might fail your business."
 category: "use-cases"
 lang: "en"
 topics: "Best use cases of SafeKit high availability, Worst use cases of SafeKit high availability, SafeKit High Availability Limitations, 🔍 SafeKit High Availability Navigation Hub"
@@ -17,7 +17,7 @@ topics: "Best use cases of SafeKit high availability, Worst use cases of SafeKit
 A software publisher uses [SafeKit as an OEM software](</use-cases/application-clustering-software/>) for high availability of its application
 
 
-<img src="/wp-content/uploads/2023/02/application-clustering-software-3.png" width="300" alt="Application Clustering Software for a Software Publisher">
+![Application Clustering Software for a Software Publisher](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:300")
 
 
 ### Distributed Enterprise
@@ -25,7 +25,7 @@ A software publisher uses [SafeKit as an OEM software](</use-cases/application-c
 A distributed enterprise deploys [SafeKit in many branches](</use-cases/business-continuity-software/>) without specific IT skills
 
 
-<img src="/wp-content/uploads/2023/02/distributed-enterprise-1.png" width="300" alt="High Availability Software in a Distributed Enterprise">
+![High Availability Software in a Distributed Enterprise](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
 ### Remote Sites
@@ -33,7 +33,7 @@ A distributed enterprise deploys [SafeKit in many branches](</use-cases/business
 [SafeKit is deployed in two remote sites](</best-practises/high-availability-disaster-recovery-hadr/>) without the need for replicated bays of disks through a SAN.
 
 
-<img src="/wp-content/uploads/2023/02/remote-datacenters.png" width="300" alt="Business Continuity and Disaster Recovery without a replicated SAN">
+![Business Continuity and Disaster Recovery without a replicated SAN](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
 
 ##  Worst use cases of SafeKit high availability 

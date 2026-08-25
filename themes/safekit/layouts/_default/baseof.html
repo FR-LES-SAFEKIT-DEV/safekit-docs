@@ -9,7 +9,7 @@
     {{ with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ end }}
     <link rel="alternate" type="text/markdown" href="index.md">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/userguide.css" | relURL }}">
+    {{ template "_internal/google_analytics.html" . }}
 </head>
 <body>
     {{ partial "header.html" . }}

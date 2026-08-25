@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.stopPropagation();
                 li.classList.toggle('toc-open');
                 sub.style.display = li.classList.contains('toc-open') ? 'block' : 'none';
-                toggle.textContent = li.classList.contains('toc-open') ? '\u2212' : '+';
+                toggle.textContent = li.classList.contains('toc-open') ? '-' : '+';
             });
         }
     });
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         var sub = parent.querySelector('ul');
                         if (sub) sub.style.display = 'block';
                         var tog = parent.querySelector('.toc-toggle');
-                        if (tog) tog.textContent = '\u2212';
+                        if (tog) tog.textContent = '-';
                     }
                     parent = parent.parentElement.closest('li');
                 }

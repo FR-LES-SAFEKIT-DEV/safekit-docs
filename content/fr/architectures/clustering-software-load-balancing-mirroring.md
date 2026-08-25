@@ -2,7 +2,7 @@
 title: "Logiciel de clustering pour fermes et miroirs : haute disponibilité et équilibrage de charge"
 slug: "clustering-software-load-balancing-mirroring"
 canonical: "https://safekit.eviden.com/fr/architectures/clustering-software-load-balancing-mirroring/"
-description: "Logiciel de clustering pour fermes et miroirs : haute disponibilité et équilibrage de charge Haute disponibilité et scalabilité des applications web et bases de données critiques avec le logiciel de clustering SafeKit"
+description: "Déployez des architectures avancées en combinant les modules SafeKit Farm et Mirror. Optimisez la charge réseau pour une évolutivité optimale et protégez vos données grâce à la réplication synchrone en temps réel. Créez facilement des clusters sans SAN sous Windows et Linux, sans compétences informatiques particulières. Téléchargez votre version d'essai gratuite."
 category: "architectures"
 lang: "fr"
 topics: "Haute disponibilité et scalabilité des applications web et bases de données critiques avec le logiciel de clustering SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -15,7 +15,7 @@ topics: "Haute disponibilité et scalabilité des applications web et bases de d
 ### Load balancing, mirroring et basculement sur panne
 
 
-<img src="/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png" width="300" alt="Logiciel de clustering avec load balancing et mirroring">
+![Logiciel de clustering avec load balancing et mirroring](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
 ### Exemple avec le logiciel de clustering SafeKit

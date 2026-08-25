@@ -2,7 +2,7 @@
 title: "SafeKit : Logiciel de réplication de fichiers en temps réel au niveau octet et de cluster miroir"
 slug: "file-replication-byte-level-with-failover-mirror-cluster"
 canonical: "https://safekit.eviden.com/fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
-description: "SafeKit : Logiciel de réplication de fichiers en temps réel au niveau octet et de cluster miroir"
+description: "SafeKit assure la réplication de fichiers en temps réel, au niveau octet, et la mise en miroir synchrone des données pour Windows et Linux. Mettez en place un cluster miroir haute disponibilité avec basculement automatique, sans les coûts d'un SAN. Garantissez l'absence de perte de données et une reprise après sinistre simplifiée dès aujourd'hui."
 category: "architectures"
 lang: "fr"
 topics: "Fonctionnement du cluster miroir SANless SafeKit avec Windows/Linux, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité sans SAN pour Windows/Linux ?, Comment fonctionne le cluster miroir SafeKit avec Windows/Linux ?, Comparaison : SafeKit pour Windows/Linux vs Autres Solutions de Clustering, Guide vidéo : Configuration d'un cluster miroir SafeKit HA, 🔍 Hub de navigation SafeKit Haute Disponibilité"

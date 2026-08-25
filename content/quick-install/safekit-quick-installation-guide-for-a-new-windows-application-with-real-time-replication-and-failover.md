@@ -2,7 +2,7 @@
 title: "Windows High Availability with SafeKit: Install the mirror.safe Module for Failover"
 slug: "safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the mirror.safe module for SafeKit to enable synchronous real-time replication and automatic failover on Windows. This guide walks you through setting up a 2-node SANless cluster for critical Windows applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Windows, SafeKit High Availability Limitations, Overview of the SafeKit / Windows solution, Installation on the SafeKit / Windows solutions (mirror.safe), Step by step configuration of the SafeKit / Windows solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Windows, SafeKit High Av
 
 ## Overview of the SafeKit / Windows solution
 
-The solution is described here: **[The Simplest Windows High Availability: 2-Node Synchronous Replication& Failover](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+The solution is described here: **💡[The Simplest Windows High Availability: 2-Node Synchronous Replication & Failover](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## Installation on the SafeKit / Windows solutions (mirror.safe)
 

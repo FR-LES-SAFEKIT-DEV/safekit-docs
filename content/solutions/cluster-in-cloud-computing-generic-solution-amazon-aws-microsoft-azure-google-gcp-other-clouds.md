@@ -2,7 +2,7 @@
 title: "Cluster in cloud computing: a generic solution for Amazon AWS, Microsoft Azure, Google GCP and other clouds"
 slug: "cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds"
 canonical: "https://safekit.eviden.com/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
-description: "Cluster in cloud computing: a generic solution for Amazon AWS, Microsoft Azure, Google GCP and other clouds"
+description: "How the Eviden SafeKit software provides a generic solution for cluster in cloud computing (Amazon AWS, Microsoft Azure, Google GCP and other clouds)"
 category: "solutions"
 lang: "en"
 topics: "Discover SafeKit in Microsoft Azure, Discover SafeKit in Google GCP, Discover SafeKit in Amazon AWS, Other cloud solutions with Eviden SafeKit, 🔍 SafeKit High Availability Navigation Hub"

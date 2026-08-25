@@ -2,7 +2,7 @@
 title: "Logiciel de clustering actif-actif avec réplication en temps réel et basculement mutuel"
 slug: "active-active-cluster-real-time-replication"
 canonical: "https://safekit.eviden.com/fr/architectures/active-active-cluster-real-time-replication/"
-description: "Logiciel de clustering actif-actif avec réplication en temps réel et basculement mutuel Comment fonctionne le cluster actif actif avec réplication en temps réel ?"
+description: "Optimisez l'utilisation de vos ressources grâce au clustering actif-actif de SafeKit. Déployez un basculement mutuel entre deux serveurs grâce à la réplication synchrone en temps réel et à plusieurs modules miroirs. Garantissez l'absence de perte de données (RPO=0) et une restauration automatique pour Windows et Linux, même sans SAN. Téléchargez la version d'essai gratuite."
 category: "architectures"
 lang: "fr"
 topics: "Comment fonctionne le cluster actif actif avec réplication en temps réel ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "Comment fonctionne le cluster actif actif avec réplication en temps r�
 Les applications s'exécutent sur deux serveurs en basculement mutuel. Chaque serveur est le backup de l'autre serveur. Et chaque application fonctionne sur ses propres répertoires de fichiers répliqués.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png" width="300" alt="Cluster actif actif SafeKit avec réplication en temps réel">
+![Cluster actif actif SafeKit avec réplication en temps réel](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
 Si un serveur tombe en panne dans un cluster actif actif, toutes les applications seront actives sur le même serveur. Après le redémarrage du serveur défaillant, les applications recommenceront à s'exécuter sur leur serveur principal par défaut.
@@ -35,7 +35,7 @@ Noter que:
 
 ### Exemple de cluster actif actif
 
-Les solutions [Hyper-V](</solutions/hyper-v-replication-automatic-failover-load-balancing/>) ou [KVM](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) avec réplication, basculement automatique et équilibrage de charge des VMs est un exemple de cluster actif-actif avec N modules miroirs répliquant N machines virtuelles entre deux serveurs physiques.
+Les solutions 💡 [Hyper-V](</solutions/hyper-v-replication-automatic-failover-load-balancing/>) ou 💡 [KVM](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) avec réplication, basculement automatique et équilibrage de charge des VMs est un exemple de cluster actif-actif avec N modules miroirs répliquant N machines virtuelles entre deux serveurs physiques.
 
 Dans cette configuration, un module miroir réplique une machine virtuelle complète et redémarre la machine virtuelle en cas de panne.
 

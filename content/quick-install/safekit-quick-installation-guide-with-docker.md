@@ -2,7 +2,7 @@
 title: "Docker High Availability with SafeKit: Install the mirror.safe Module for Failover"
 slug: "safekit-quick-installation-guide-with-docker"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-docker/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the mirror.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Docker containers on Linux. This guide walks you through setting up a 2-node shared-nothing cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Docker, SafeKit High Availability Limitations, Overview of the SafeKit / Docker solution, Installation of the SafeKit / Docker solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Docker solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Docker, SafeKit High Ava
 
 ## Overview of the SafeKit / Docker solution
 
-The solution is described here: **[SafeKit: Docker High Availability& Real-Time Data Replication Software](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+The solution is described here: **💡[SafeKit: Docker High Availability & Real-Time Data Replication Software](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## Installation of the SafeKit / Docker solution on Linux (mirror.safe)

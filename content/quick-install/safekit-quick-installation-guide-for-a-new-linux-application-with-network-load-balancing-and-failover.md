@@ -2,7 +2,7 @@
 title: "Linux Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
 slug: "safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
-description: "SafeKit Video: Network Load Balancing and Virtual IP Management (5:03) In this video, learn how to implement a virtual IP address to provide a single entry point for a 2-node cluster. SafeKit simplifies network load balancing by automatically managing the virtual IP, ensuring that client traffic is distributed across nodes and redirected instantly during a […]"
+description: "Learn how to deploy the farm.safe module for Linux Network Load Balancing and automatic failover. This guide shows you how to build a highly available cluster for web services and applications using a virtual IP, without the need for external hardware load balancers or complex configuration."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (farm.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit farm solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Linux, SafeKit High Avai
 
 ## Overview of the SafeKit / Linux solution
 
-The solution is described here: **[SafeKit: All-in-One Linux Load Balancing& High Availability Software](</solutions/linux-load-balancing-failover/>)**.
+The solution is described here: **💡[SafeKit: All-in-One Linux Load Balancing & High Availability Software](</solutions/linux-load-balancing-failover/>)**.
 
 ## Installation of the SafeKit / Linux solution (farm.safe)
 

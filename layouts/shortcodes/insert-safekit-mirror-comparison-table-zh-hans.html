@@ -8,7 +8,7 @@
 特性 | SafeKit优势 | 替代方案的局限性  
 ---|---|---  
 **[三合一产品](/best-practises/clustering-software-vs-hardware-clustering/)** | 在Windows和Linux上节省外部共享/复制存储、负载均衡设备以及操作系统和数据库企业版的成本。包含所有集群功能：同步实时文件复制、故障监控、自动重启、虚拟IP故障转移。 | 传统方案需要分别购买存储复制、负载均衡和集群产品——增加了成本和复杂性。  
-**[配置极其简单](/solutions/)** | 通过应用模块进行配置。可轻松添加新服务和复制目录。全部通过集中式Web控制台管理。无需域控制器或Active Directory。 | Microsoft集群和类似解决方案需要复杂的Active Directory配置和域控制器。  
+**💡[配置极其简单](/solutions/)** | 通过应用模块进行配置。可轻松添加新服务和复制目录。全部通过集中式Web控制台管理。无需域控制器或Active Directory。 | Microsoft集群和类似解决方案需要复杂的Active Directory配置和域控制器。  
 **[同步复制](/best-practises/synchronous-replication-vs-asynchronous-replication/)** | 实时复制为同步方式，故障时无数据丢失（RPO = 0）。 | 异步复制可能会丢失故障时尚未复制的最近事务。  
 **[全自动故障恢复](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step3)** | 故障后，当服务器重启时，复制故障恢复完全自动化。故障服务器重新加入集群，无需停止剩余服务器上的应用程序。 | 大多数复制解决方案（尤其是数据库级别）需要手动重新同步。应用程序甚至可能在故障恢复期间停止。  
 **[复制任何类型的数据](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step1)** | 复制适用于数据库以及任何需要复制的文件。 | 数据库级复制仅保护数据库，不保护配置文件、日志或其他应用数据。  

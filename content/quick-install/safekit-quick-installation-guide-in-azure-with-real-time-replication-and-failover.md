@@ -2,7 +2,7 @@
 title: "SafeKit quick installation guide in Azure (mirror.safe module for real-time replication and failover)"
 slug: "safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the mirror.safe module for SafeKit in Azre to enable synchronous real-time replication and automatic failover on Windows and Linux. This guide walks you through setting up a 2-node shared-nothing cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Azure, SafeKit High Availability Limitations, Overview of the SafeKit / Azure mirror solution, Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / Azure mirror solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Azure, SafeKit High Avai
 
 ## Overview of the SafeKit / Azure mirror solution
 
-The solution is described here: **[Microsoft Azure High Availability: SafeKit Synchronous Replication& Failover](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>)**.
+The solution is described here: **💡[Microsoft Azure High Availability: SafeKit Synchronous Replication & Failover](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe)
 
@@ -40,7 +40,10 @@ You must configure the Microsoft Azure load balancer with:
 For more information, see [the configuration of the Microsoft Azure load balancer](<https://learn.microsoft.com/en-us/azure/load-balancer/>). 
 
 
-<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Microsoft Azure load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.</span></div>
+![Warning](/wp-content/uploads/2022/07/warning-small.png)
+
+
+Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Microsoft Azure load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
 
 ### Configuration of the Microsoft Azure network security
 

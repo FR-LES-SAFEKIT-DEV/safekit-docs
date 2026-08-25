@@ -2,7 +2,7 @@
 title: "High Availability and Redundancy for SCADA and Industrial Control Systems (ICS)"
 slug: "scada-software-redundancy-high-availability"
 canonical: "https://safekit.eviden.com/use-cases/scada-software-redundancy-high-availability/"
-description: "High Availability and Redundancy for SCADA and Industrial Control Systems (ICS) SCADA systems make it possible to control industrial processes, to interact directly with devices such as sensors, valves, pumps, motors, through human-machine interface software. If the SCADA software is down, the production stops. That’s why, the SCADA software must be always available for operators […]"
+description: "Protect critical infrastructure with SafeKit, the leading SANless high availability software for SCADA. Ensure 24/7 uptime for Wonderware, WinCC, iFix, and Inductive Automation with real-time synchronous replication and automatic failover. Achieve zero data loss (RPO=0) for your industrial database without complex SAN storage or IT skills."
 category: "use-cases"
 lang: "en"
 topics: "What is a SCADA system?, Why a SCADA software is critical?, Key players list in SCADA software, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market, 🔍 SafeKit High Availability Navigation Hub"

@@ -2,7 +2,7 @@
 title: "GCP High Availability with SafeKit: Install the mirror.safe Module for Failover"
 slug: "safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the mirror.safe module for SafeKit in GCP to enable synchronous real-time replication and automatic failover on Windows and Linux. This guide walks you through setting up a 2-node shared-nothing cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for GCP, SafeKit High Availability Limitations, Overview of the SafeKit / GCP mirror solution, Installation of the SafeKit / GCP mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / GCP mirror solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for GCP, SafeKit High Availa
 
 ## Overview of the SafeKit / GCP mirror solution
 
-The solution is described here: **[Google GCP High Availability: SafeKit Synchronous Replication& Failover](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)**.
+The solution is described here: **💡[Google GCP High Availability: SafeKit Synchronous Replication & Failover](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation of the SafeKit / GCP mirror solution on Windows and Linux (mirror.safe)
 
@@ -40,7 +40,10 @@ You must configure the Google GCP load balancer with:
 For more information, see [the configuration of the Google GCP load balancer](<https://docs.cloud.google.com/load-balancing/docs/>). 
 
 
-<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Google GCP load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.</span></div>
+![Warning](/wp-content/uploads/2022/07/warning-small.png)
+
+
+Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Google GCP load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
 
 ### Configuration of the Google GCP network security
 

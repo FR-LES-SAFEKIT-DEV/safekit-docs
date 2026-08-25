@@ -9,7 +9,7 @@
 Server 1 (PRIM) voert de Windows/Linux-applicatie uit. Clients zijn verbonden met een [virtueel IP-adres](/best-practises/how-a-virtual-ip-address-works/). SafeKit repliceert wijzigingen in bestanden in realtime via het netwerk.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="Bestandsreplicatie op byte-niveau in een mirror Windows/Linux-cluster">
+![Bestandsreplicatie op byte-niveau in een mirror Windows/Linux-cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 De replicatie is [synchroon](/best-practises/synchronous-replication-vs-asynchronous-replication/), wat in tegenstelling tot asynchrone replicatie zorgt voor nul dataverlies bij uitval.
@@ -23,7 +23,7 @@ Wanneer Server 1 uitvalt, neemt Server 2 de taken over. SafeKit schakelt het vir
 De applicatie vindt de door SafeKit gerepliceerde bestanden up-to-date terug op Server 2. De applicatie blijft draaien op Server 2 door lokaal haar bestanden aan te passen, die op dat moment niet langer naar Server 1 worden gerepliceerd.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="Failover of Windows/Linux in een mirror-cluster">
+![Failover of Windows/Linux in een mirror-cluster](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
 De failover-tijd is gelijk aan de foutdetectietijd (standaard 30 seconden) plus de opstarttijd van de applicatie.
@@ -35,7 +35,7 @@ Failback houdt in dat Server 1 opnieuw wordt opgestart nadat het probleem dat de
 SafeKit hersynchroniseert de bestanden automatisch, waarbij alleen de bestanden worden bijgewerkt die op Server 2 zijn gewijzigd terwijl Server 1 buiten werking was.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="Failback in een mirror Windows/Linux-cluster">
+![Failback in een mirror Windows/Linux-cluster](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
 
 De failback vindt plaats zonder dat de Windows/Linux-applicatie wordt verstoord, die gewoon kan blijven draaien op Server 2.
@@ -45,7 +45,7 @@ De failback vindt plaats zonder dat de Windows/Linux-applicatie wordt verstoord,
 Na de reïntegratie verkeren de bestanden weer in mirror-modus, net als in stap 1. Het systeem bevindt zich opnieuw in hoge-beschikbaarheidsmodus (high-availability mode), waarbij de Windows/Linux-applicatie op Server 2 draait en SafeKit de bestandswijzigingen naar Server 1 repliceert.
 
 
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="Terugkeer naar normale werking in een mirror Windows/Linux-cluster">
+![Terugkeer naar normale werking in een mirror Windows/Linux-cluster](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
 
 Als de beheerder wil dat de applicatie op Server 1 draait, kan dit op een geschikt moment handmatig via de webconsole worden uitgevoerd, of automatisch via de configuratie worden ingesteld.
@@ -53,7 +53,7 @@ Als de beheerder wil dat de applicatie op Server 1 draait, kan dit op een geschi
 ### Hoe configureert u een SafeKit mirror-cluster voor Windows/Linux? {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuratiedashboard voor Windows/Linux met weergave van heartbeat-netwerken, virtuele IP-instellingen en realtime mapreplicatie voor een mirror-cluster.">
+![SafeKit Web Console: High Availability configuratiedashboard voor Windows/Linux met weergave van heartbeat-netwerken, virtuele IP-instellingen en realtime mapreplicatie voor een mirror-cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 De **SafeKit webconsole** biedt een intuïtieve interface om hoge beschikbaarheid voor uw kritieke applicaties te orkestreren. In slechts een paar stappen kunt u een **SafeKit mirror-cluster** configureren om de bedrijfscontinuïteit te waarborgen:
@@ -70,7 +70,7 @@ Het SafeKit-cluster bevat een ingebouwde split-brain checker om netwerklokalisat
 ### Hoe monitort u een SafeKit mirror-cluster voor Windows/Linux? {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
 
 
 De **SafeKit-beheerconsole** biedt een universeel overzicht van uw hoge beschikbaarheidsinfrastructuur. Hiermee kunnen beheerders de **operationele status** van het cluster controleren en de datasynchronisatie in realtime volgen.

@@ -2,7 +2,7 @@
 title: "Battement de cœur, basculement et quorum dans les clusters Windows et Linux"
 slug: "heartbeat-failover-quorum-windows-linux-cluster"
 canonical: "https://safekit.eviden.com/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Battement de cœur, basculement et quorum dans les clusters Windows et Linux"
+description: "Découvrez le fonctionnement des pulsations, du basculement et du quorum dans un cluster. SafeKit propose une architecture sans SAN qui élimine le besoin d'un troisième serveur de quorum ou d'un disque de quorum dédié. Bénéficiez d'une haute disponibilité sous Windows et Linux grâce à un simple outil de vérification de la présence d'un système isolé."
 category: "best-practises"
 lang: "fr"
 topics: "Quels sont les différents scénarios en cas d'isolement réseau dans un cluster ?, Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ?, Problème de split brain et quorum lorsque les serveurs sont dans deux salles informatiques distantes, Quorum simple avec le split brain checker de SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -41,7 +41,7 @@ Bien que non obligatoire, il est préférable d'avoir deux canaux de heartbeat s
 ## Problème de split brain et quorum lorsque les serveurs sont dans deux salles informatiques distantes
 
 
-<img src="/wp-content/uploads/2023/02/quorum-with-remote-sites.png" width="200" alt="Heartbeat, failover et quorum dans un cluster Windows ou Linux">
+![Heartbeat, failover et quorum dans un cluster Windows ou Linux](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
 
 
 ### Salles informatiques distantes
@@ -66,7 +66,7 @@ Malheureusement, ces nouveaux dispositifs de quorum ajoutent des coûts et de la
 
 ### Split brain checker de SafeKit
 
-Avec le logiciel de haute disponibilité SafeKit, le quorum au sein d'un cluster Windows ou Linux ne nécessite pas de troisième serveur de quorum ni de disque quorum. Un [split brain checker simple](</fr/resources/safekit-user-guide-82/#check_splitbrain>) est suffisant pour éviter la double exécution d'une application.
+Avec le logiciel de haute disponibilité SafeKit, le quorum au sein d'un cluster Windows ou Linux ne nécessite pas de troisième serveur de quorum ni de disque quorum. Un 🛠️ [split brain checker simple](</fr/resources/safekit-user-guide-82/#check_splitbrain>) est suffisant pour éviter la double exécution d'une application.
 
 En cas de perte de tous les heartbeats entre les serveurs, le split brain checker sélectionne un seul serveur pour devenir le serveur primaire. L'autre serveur passe à l'état WAIT jusqu'à ce qu'il reçoive à nouveau les heartbeats. Il repasse alors en secondaire après avoir resynchronisé les données répliquées du serveur primaire.
 

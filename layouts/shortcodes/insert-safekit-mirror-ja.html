@@ -9,7 +9,7 @@
 サーバー1（PRIM）が Windows/Linux アプリケーションを実行します。クライアントは [仮想IPアドレス](/best-practises/how-a-virtual-ip-address-works/) に接続されます。SafeKitは、ファイル内に行われた変更をネットワーク経由でリアルタイムに複製します。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-prim-second-300.png" width="300" alt="ミラー Windows/Linux クラスターにおけるバイトレベルでのファイルレプリケーション">
+![ミラー Windows/Linux クラスターにおけるバイトレベルでのファイルレプリケーション](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 このレプリケーションは [同期（synchronous）方式](/best-practises/synchronous-replication-vs-asynchronous-replication/) であり、非同期レプリケーションとは異なり、障害発生時にデータが失われることはありません。
@@ -23,7 +23,7 @@ SafeKitで複製するディレクトリ名を構成するだけで機能しま�
 アプリケーションは、SafeKitによってサーバー2に複製された最新の状態のファイルを見つけます。その後、サーバー1への複製を行うことなく、ローカルのファイルを変更しながらサーバー2上で実行を継続します。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-stop-alone-300.png" width="300" alt="ミラークラスターにおける Windows/Linux のフェイルオーバー">
+![ミラークラスターにおける Windows/Linux のフェイルオーバー](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
 フェイルオーバーに要する時間は、障害検出時間（デフォルトで30秒）とアプリケーションの起動時間を足した時間となります。
@@ -35,7 +35,7 @@ SafeKitで複製するディレクトリ名を構成するだけで機能しま�
 SafeKitはファイルを自動的に再同期し、サーバー1が停止している間にサーバー2側で変更されたファイルのみを更新します。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png" width="300" alt="ミラーリング Windows/Linux クラスターにおけるフェイルバック">
+![ミラーリング Windows/Linux クラスターにおけるフェイルバック](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
 
 フェイルバックは Windows/Linux アプリケーションの運用を妨げることなく実行されるため、アプリケーションはサーバー2側でそのまま実行を継続できます。
@@ -45,7 +45,7 @@ SafeKitはファイルを自動的に再同期し、サーバー1が停止して
 再組み込みが完了すると、ファイルはステップ1と同様に、再びミラーモードになります。システムは高可用性（HA）モードに戻り、Windows/Linux アプリケーションがサーバー2で実行され、SafeKitがサーバー1へのファイルの更新内容を複製するようになります。
 
 
-<img src="/wp-content/uploads/2023/02/safekit-second-prim-300.png" width="300" alt="ミラーリング Windows/Linux クラスターにおける正常運用への復帰">
+![ミラーリング Windows/Linux クラスターにおける正常運用への復帰](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
 
 管理者がアプリケーションをサーバー1で実行させたい場合は、適切なタイミングでWebコンソールから手動で行うか、構成設定により自動で行うことができます。
@@ -53,7 +53,7 @@ SafeKitはファイルを自動的に再同期し、サーバー1が停止して
 ### Windows/LinuxのSafeKitミラークラスターを構成する方法は？ {#safekit-mirror-cluster-configure}
 
 
-<img src="/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png" width="763" alt="SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.">
+![SafeKit Web Console: High Availability configuration dashboard for Windows/Linux showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
 **SafeKit Webコンソール** は、重要なアプリケーションの高可用性を統合制御するための直感的なインターフェースを提供します。わずか数ステップで**SafeKitミラークラスター** を構成し、ビジネスの継続性を確保できます。
@@ -70,7 +70,7 @@ SafeKitクラスターには専用のスプリットブレインチェッカー�
 ### Windows/LinuxのSafeKitミラークラスターを監視する方法は？ {#safekit-mirror-cluster-monitoring}
 
 
-<img src="/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png" width="604" alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.">
+![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for Windows/Linux showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
 
 
 **SafeKit管理コンソール** は、高可用性インフラストラクチャの一元化されたビューを提供します。管理者はこれにより、クラスターの**運用状態** を監視し、データ同期をリアルタイムで追跡できます。

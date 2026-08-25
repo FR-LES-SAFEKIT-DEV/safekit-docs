@@ -2,7 +2,7 @@
 title: "Cloud Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
 slug: "safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
-description: "SafeKit Video: Network Load Balancing and Virtual IP Management (5:03) In this video, learn how to implement a virtual IP address to provide a single entry point for a 2-node cluster. SafeKit simplifies network load balancing by automatically managing the virtual IP, ensuring that client traffic is distributed across nodes and redirected instantly during a […]"
+description: "Enhance Cloud Network Load Balancing with SafeKit's intelligent application monitoring. The farm.safe module provides a dedicated health check for the Cloud load balancer, enabling seamless HA at the application level. Achieve automatic self-healing and failover for mission-critical applications."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Cloud, SafeKit High Availability Limitations, Overview of the SafeKit / Cloud solution, Installation of the SafeKit / Cloud solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Cloud solution, Demonstration of the SafeKit farm solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Cloud, SafeKit High Avai
 
 ## Overview of the SafeKit / Cloud solution
 
-The solution is described here: **[SafeKit: Cloud Load Balancing& Application High Availability Farm Cluster](</solutions/cloud-load-balancing-cluster-failover/>)**.
+The solution is described here: **💡[SafeKit: Cloud Load Balancing & Application High Availability Farm Cluster](</solutions/cloud-load-balancing-cluster-failover/>)**.
 
 ## Installation of the SafeKit / Cloud solution on Windows and Linux (farm.safe)
 
@@ -37,7 +37,10 @@ You must configure the Cloud load balancer with:
   * URL /var/modules/farm/ready.txt (if farm is the module name that you will deploy later)
 
 
-<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>Do not configure a virtual IP address and load balancing rules at step 4 in the step by step configuration below. The virtual IP address and load balancing rules are already set in the Cloud load balancer. Setting a virtual IP and load balancing rules at step 4 is useful for on-premise configuration only.</span></div>
+![Warning](/wp-content/uploads/2022/07/warning-small.png)
+
+
+Do not configure a virtual IP address and load balancing rules at step 4 in the step by step configuration below. The virtual IP address and load balancing rules are already set in the Cloud load balancer. Setting a virtual IP and load balancing rules at step 4 is useful for on-premise configuration only.
 
 ### Configuration of the Cloud network security
 

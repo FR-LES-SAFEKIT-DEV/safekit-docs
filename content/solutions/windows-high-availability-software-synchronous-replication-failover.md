@@ -2,7 +2,7 @@
 title: "The Simplest Windows High Availability: 2-Node Synchronous Replication & Failover"
 slug: "windows-high-availability-software-synchronous-replication-failover"
 canonical: "https://safekit.eviden.com/solutions/windows-high-availability-software-synchronous-replication-failover/"
-description: "The Simplest Windows High Availability: 2-Node Synchronous Replication & Failover"
+description: "The simplest way to implement Windows High Availability. SafeKit provides a 2-node SANless cluster with synchronous replication and automatic failover—no AD or specialized skills required."
 category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Windows, Table of Contents, How the SafeKit software simply implements a SANless Windows high availability cluster?, How the SafeKit mirror cluster works with Windows?, SafeKit High Availability Limitations, Comparison: SafeKit for Windows vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 SafeKit High Availability Navigation Hub"

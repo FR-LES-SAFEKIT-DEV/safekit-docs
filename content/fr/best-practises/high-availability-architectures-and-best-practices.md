@@ -2,7 +2,7 @@
 title: "Architectures à haute disponibilité et bonnes pratiques de clustering logiciel"
 slug: "high-availability-architectures-and-best-practices"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-architectures-and-best-practices/"
-description: "Architectures à haute disponibilité et bonnes pratiques de clustering logiciel Quelles sont les architectures de haute disponibilité et les meilleures pratiques ?"
+description: "Explorez les architectures à haute disponibilité (HA) et les bonnes pratiques de clustering d'applications. Découvrez comment le logiciel SafeKit met en œuvre des clusters miroirs et des fermes de serveurs sans disques partagés, garantissant ainsi l'absence de perte de données et un basculement automatique pour les applications critiques."
 category: "best-practises"
 lang: "fr"
 topics: "Quelles sont les architectures de haute disponibilité et les meilleures pratiques ?, Tableaux comparatifs sur les architectures de haute disponibilité et les meilleures pratiques, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "Quelles sont les architectures de haute disponibilité et les meilleure
 Cet article explore les différentes architectures de haute disponibilité et les meilleures pratiques en donnant les avantages et les inconvénients de chaque architecture.
 
 
-<img src="/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png" width="400" alt="Différentes architectures de haute disponibilité et meilleures pratiques">
+![Différentes architectures de haute disponibilité et meilleures pratiques](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
 
 Les tableaux comparatifs suivants détaillent l'architecture de haute disponibilité de SafeKit et ses bonnes pratiques (SafeKit est un produit logiciel de haute disponibilité).

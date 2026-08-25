@@ -1,0 +1,52 @@
+{{- $dest := .Destination -}}
+{{- $relPath := strings.TrimPrefix "/" $dest -}}
+{{- $isLocal := and (strings.HasPrefix $relPath "wp-content/") (not (strings.HasPrefix $dest "http")) -}}
+{{- $img := "" -}}
+{{- if $isLocal -}}
+  {{- with resources.Get $relPath -}}{{- $img = . -}}{{- end -}}
+{{- end -}}
+{{- if not $img -}}
+<img src="{{ $dest | safeURL }}" alt="{{ .Text }}" loading="lazy" decoding="async">
+{{- else if or (eq $img.MediaType.SubType "svg+xml") (eq $img.MediaType.SubType "gif") -}}
+{{- /* SVG/GIF: serve as-is, Hugo's raster resize doesn't apply (or breaks animation) */ -}}
+<img src="{{ $img.RelPermalink }}" alt="{{ .Text }}" loading="lazy" decoding="async">
+{{- else -}}
+  {{- $quality := 82 -}}
+  {{- $fallbackWidth := 900 -}}
+  {{- $wpWidth := 0 -}}
+  {{- $title := .Title -}}
+  {{- if and $title (strings.HasPrefix $title "w:") -}}
+    {{- $n := strings.TrimPrefix "w:" $title | int -}}
+    {{- if gt $n 0 -}}{{- $wpWidth = $n -}}{{- end -}}
+  {{- end -}}
+  {{- $displayWidth := $fallbackWidth -}}
+  {{- if $wpWidth -}}{{- $displayWidth = $wpWidth -}}{{- end -}}
+  {{- if gt $displayWidth $img.Width -}}{{- $displayWidth = $img.Width -}}{{- end -}}
+  {{- /* Build a small/base/retina trio around the actual WordPress display width */ -}}
+  {{- $half := div $displayWidth 2 -}}
+  {{- $double := mul $displayWidth 2 -}}
+  {{- $widths := slice $half $displayWidth $double -}}
+  {{- $variants := slice -}}
+  {{- range $w := $widths -}}
+    {{- if and (gt $w 0) (lt $w $img.Width) -}}
+      {{- $variants = $variants | append ($img.Resize (printf "%dx q%d" $w $quality)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $variants = $variants | append $img -}}
+  {{- $srcsetParts := slice -}}
+  {{- range $v := $variants -}}
+    {{- $srcsetParts = $srcsetParts | append (printf "%s %dw" $v.RelPermalink $v.Width) -}}
+  {{- end -}}
+  {{- /* Default src/width/height: the variant matching the WordPress display
+         width, so images stay legible even without a responsive theme
+         stylesheet and even if the browser ignores srcset. */ -}}
+  {{- $default := $img -}}
+  {{- if gt $img.Width $displayWidth -}}
+    {{- $default = $img.Resize (printf "%dx q%d" $displayWidth $quality) -}}
+  {{- end -}}
+<img src="{{ $default.RelPermalink }}"
+     srcset="{{ delimit $srcsetParts ", " }}"
+     sizes="(max-width: {{ $displayWidth }}px) 100vw, {{ $displayWidth }}px"
+     width="{{ $default.Width }}" height="{{ $default.Height }}"
+     alt="{{ .Text }}" loading="lazy" decoding="async">
+{{- end -}}

@@ -2,7 +2,7 @@
 title: "Oracle High Availability with SafeKit: Install the oracle.safe Module for Failover"
 slug: "safekit-quick-installation-guide-with-oracle"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-oracle/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the oracle.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Oracle on Windows and Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Oracle, SafeKit High Availability Limitations, Overview of the SafeKit / Oracle solution, Installation of the SafeKit / Oracle solution on Windows and Linux (oracle.safe), Step by step configuration of the SafeKit / Oracle solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Oracle, SafeKit High Ava
 
 ## Overview of the SafeKit / Oracle solution
 
-The solution is described here: **[The Simplest Oracle High Availability: 2-Node Synchronous Replication& Failover](</solutions/oracle-high-availability-synchronous-replication-failover/>)**.
+The solution is described here: **💡[The Simplest Oracle High Availability: 2-Node Synchronous Replication & Failover](</solutions/oracle-high-availability-synchronous-replication-failover/>)**.
 
 ## Installation of the SafeKit / Oracle solution on Windows and Linux (oracle.safe)
 

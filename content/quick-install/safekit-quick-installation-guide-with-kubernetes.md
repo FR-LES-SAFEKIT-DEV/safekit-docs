@@ -2,7 +2,7 @@
 title: "K3S High Availability with SafeKit: Install the k3s.safe Module for Failover"
 slug: "safekit-quick-installation-guide-with-kubernetes"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-kubernetes/"
-description: "SafeKit Video: Application-Level Clustering (8:47) In this video, discover how SafeKit implements a mirror HA cluster without the complexity of a SAN. While this demonstration uses Microsoft SQL Server, the solution works identically for other databases and applications. Chapters 2 nodes with SQL Server (0:32) Configure the cluster and the mirror.safe module (3:58) Start and […]"
+description: "Deploy the k3s.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Kubernetes on Linux. This guide walks you through setting up a 2-node SANless cluster for critical Linux applications without shared storage."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Kubernetes, SafeKit High Availability Limitations, Overview of the SafeKit / Kubernetes solution, Installation and configuration of the SafeKit / Kubernetes solution on Linux (k3s.safe), What are the different scenarios in case of network isolation in a cluster?, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
@@ -16,7 +16,7 @@ topics: "High Availability Quick Installation Guide for Kubernetes, SafeKit High
 
 ## Overview of the SafeKit / Kubernetes solution
 
-The solution is described here: **[Kubernetes K3s High Availability: 2-Node Synchronous Replication& Failover](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
+The solution is described here: **💡[Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## Installation and configuration of the SafeKit / Kubernetes solution on Linux (k3s.safe)
 
@@ -32,7 +32,7 @@ Note: the k3sconfig.sh script installs K3S, MariaDB, NFS, SafeKit on 2 Linux Ubu
 
 [ Download SafeKit (Linux) > ](</resources/safekit-free-trial/>)
 
-<a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s.safe" download="k3s.safe">⬇️ Download k3s.safe (Linux) ></a> 
+<a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_linux/k3s.safe" download="k3s.safe">Download k3s.safe (Linux) ></a> 
 
 [ Download k3sconfig.sh > ](</wp-content/uploads/downloads_safekit/version-82/modules_linux/k3sconfig.sh>)
 
@@ -118,7 +118,7 @@ The reply should be similar to the image.
   * Check with Linux command lines that K3S is started on both nodes (started in `start_prim` and `start_second`) and that MariaDB is started on the primary node (started in `start_prim`).
 
 
-<img src="/wp-content/uploads/2024/03/14-monitoring-prim-second.png" alt="Kubernetes cluster started in the SafeKit web console">
+![Kubernetes cluster started in the SafeKit web console](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
 ### 7\. Testing
@@ -128,21 +128,30 @@ The reply should be similar to the image.
   * And with command lines on Linux, check the failover of services (stopped on node 1 in the `stop_prim` script and started on node 2 in the `start_prim` script). MariaDB and K3S should run on node2.
 
 
-<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If ALONE (green) is not reached on node2, analyze why with the module log of node 2.</span></div>
+![Warning](/wp-content/uploads/2022/07/warning-small.png)
+
+
+If ALONE (green) is not reached on node2, analyze why with the module log of node 2.
 
   * click on `node2` to display the module log.
   * [example of a SQL Server module log](</wp-content/uploads/2024/03/24-module-log-script.png>) where the service name in `start_prim` is invalid. The sqlserver.exe process is monitored but as it is not started, at the end the module stops.
 
 
-<div class="callout callout-warning"><img src="/wp-content/uploads/2022/07/warning-small.png" alt="Warning"><span>If everything is okay, initiate a start on node1, which will resynchronize the replicated directories from node2.</span></div>
+![Warning](/wp-content/uploads/2022/07/warning-small.png)
+
+
+If everything is okay, initiate a start on node1, which will resynchronize the replicated directories from node2.
 
 If things go wrong, stop node2 and [force the start as primary](</wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png>) of node1, which will restart with its locally healthy data at the time of the stop.
 
 
-<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span><a href="/resources/safekit-user-guide-82/#tests">More information on tests in the User's Guide.</a></span></div>
+![Note](/wp-content/uploads/2022/07/note.png)
 
 
-<img src="/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png" alt="Stop the  module on the PRIM server">
+🛠️ [More information on tests in the User's Guide.](</resources/safekit-user-guide-82/#tests>)
+
+
+![Stop the  module on the PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
 ### 8\. Try the cluster with a Kubernetes application like WordPress
@@ -196,10 +205,13 @@ The previous helm command should download the WordPress image from `registry-1.d
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
 
-<div class="callout"><img src="/wp-content/uploads/2022/07/note.png" alt="Note"><span><a href="/resources/safekit-user-guide-82/#Troubleshooting">Troubleshooting in the User's Guide.</a></span></div>
+![Note](/wp-content/uploads/2022/07/note.png)
 
 
-<img src="/wp-content/uploads/2024/03/30-snapshots-mirror.png" alt="Take the  snaphots for support">
+🛠️ [Troubleshooting in the User's Guide.](</resources/safekit-user-guide-82/#Troubleshooting>)
+
+
+![Take the  snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 
 ### 10\. If necessary, configure a splitbrain checker
@@ -226,7 +238,7 @@ The previous helm command should download the WordPress image from `registry-1.d
   * `arg="witness IP"` is an argument for the ping. Change this value with the IP of the witness (a robust element, typically a router).
 
 
-<img src="/wp-content/uploads/2024/03/05-module-mirror-edit-config.png" alt="Enter the  parameters">
+![Enter the  parameters](/wp-content/uploads/2024/03/05-module-mirror-edit-config.png)
 
 
 

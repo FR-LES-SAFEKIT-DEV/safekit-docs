@@ -2,7 +2,7 @@
 title: "Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité"
 slug: "byte-level-file-replication-vs-block-level-disk-replication"
 canonical: "https://safekit.eviden.com/fr/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
-description: "Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité Réplication de fichiers au niveau octet vs réplication de disques au niveau bloc dans un cluster de haute disponibilité"
+description: "Comparez la réplication de fichiers au niveau octet et la réplication de disque au niveau bloc. Découvrez pourquoi SafeKit propose une architecture sans SAN qui réplique uniquement les données modifiées au sein des fichiers, garantissant ainsi l'absence de perte de données (RPO 0), une récupération plus rapide (RTO) et une configuration simplifiée sous Windows et Linux."
 category: "best-practises"
 lang: "fr"
 topics: "Réplication de fichiers au niveau octet vs réplication de disques au niveau bloc dans un cluster de haute disponibilité, Avantages et inconvénients de la réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc, 🔍 Hub de navigation SafeKit Haute Disponibilité"
@@ -17,7 +17,7 @@ topics: "Réplication de fichiers au niveau octet vs réplication de disques au 
 Cet article étudie les avantages et les inconvénients de la réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc dans un cluster de haute disponibilité. Nous examinons le volume de données répliquées, l'impact sur l'organisation des données applicatives, le temps de récupération, la simplicité de mise en œuvre.
 
 
-<img src="/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png" width="200" alt="Réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc">
+![Réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc](/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png "w:200")
 
 
 Les tableaux comparatifs suivants détaillent la réplication de fichiers au niveau octet mise en œuvre par SafeKit, un produit logiciel de haute disponibilité.

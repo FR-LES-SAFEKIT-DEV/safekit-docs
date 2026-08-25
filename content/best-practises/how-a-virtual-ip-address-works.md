@@ -2,7 +2,7 @@
 title: "How a Virtual IP Address (VIP) Works in High Availability Clustering?"
 slug: "how-a-virtual-ip-address-works"
 canonical: "https://safekit.eviden.com/best-practises/how-a-virtual-ip-address-works/"
-description: "How a Virtual IP Address (VIP) Works in High Availability Clustering?"
+description: "Discover how SafeKit uses software-defined Virtual IP (VIP) addresses to ensure 24/7 uptime. Learn about automated failover via Gratuitous ARP and why it outperforms DNS redirection for business continuity on Windows and Linux."
 category: "best-practises"
 lang: "en"
 topics: "What is a virtual IP address in a high availability cluster?, Virtual IP Implementation in SafeKit, Table of Contents, How a Virtual IP Address (VIP) Works in a Same-Subnet Failover (Mirror Cluster), How a Virtual IP (VIP) Works Across Different Subnets (Mirror Cluster), How a Load Balanced Virtual IP Works in a Same-Subnet Farm (Farm Cluster), How a Load Balanced Virtual IP Works Across Different Subnets (Farm Cluster), Virtual IP vs. DNS Redirection: Why DNS Failover Often Fails, Comparison: Virtual IP Implementation, Latency, and Application Transparency, Configuring a Virtual IP Address for Network Loadbalancing and High Availability, Frequently Asked Questions on Virtual IP (VIP), 🔍 SafeKit High Availability Navigation Hub"
@@ -29,7 +29,7 @@ topics: "What is a virtual IP address in a high availability cluster?, Virtual I
   * **Cloud & Multi-Subnet:** Managed via external load balancer health checks (AWS, Azure, GCP) to redirect traffic across different subnets.
 
 
-<img src="/wp-content/uploads/2026/01/vip-3-1024.jpg" width="512" alt="Comparison diagram of Virtual IP (VIP) behavior in Evidian SafeKit: Mirror Clusters showing a floating IP on the active node vs. Farm Clusters showing network load balancing across all nodes.">
+![Comparison diagram of Virtual IP (VIP) behavior in Evidian SafeKit: Mirror Clusters showing a floating IP on the active node vs. Farm Clusters showing network load balancing across all nodes.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
 **Virtual IP implementation strategies for Mirror and Farm clusters in SafeKit.**
 
@@ -59,7 +59,7 @@ For organizations requiring seamless business continuity within a local infrastr
 ### Local Mirror Cluster: Seamless 2-Node Windows or Linux Failover
 
 
-<img src="/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png" width="256" alt="SafeKit Virtual IP (VIP) failover mechanism between two servers in the same subnet">
+![SafeKit Virtual IP (VIP) failover mechanism between two servers in the same subnet](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
  SafeKit VIP Aliasing and MAC Address Mapping In a standard **SafeKit mirror cluster** where both nodes reside in the same local subnet, high availability is achieved through a **software-defined Virtual IP (VIP)**. Unlike hardware-based solutions, SafeKit manages this VIP directly within the OS networking stack. This VIP acts as a persistent logical entry point for clients, layered on top of the unique physical IP addresses of Server 1 and Server 2 via **IP aliasing**. 
 
@@ -90,7 +90,7 @@ By leveraging external network infrastructure, **SafeKit Software-Defined High A
 ### Cross-Subnet Mirror Clusters: Windows & Linux Implementation
 
 
-<img src="/wp-content/uploads/2023/05/vip-mirror-different-subnet.png" width="256" alt="Diagram of a Virtual IP failover using a Load Balancer across two different subnets">
+![Diagram of a Virtual IP failover using a Load Balancer across two different subnets](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
  Multi-Subnet Traffic Routing via Load Balancer Health Checks When cluster nodes reside in **different subnets** , standard ARP-based failover is not possible. In this scenario, the **Virtual IP (VIP)** is hosted on a **Load Balancer (LB)** rather than the server's Ethernet card. The Load Balancer acts as the gateway, directing traffic to the physical IP addresses of the primary and secondary nodes based on real-time availability. 
 
@@ -109,9 +109,9 @@ During a **failover event** , SafeKit instantly toggles the health check respons
 
 This "Load Balancer + Health Check" model is the industry standard for **Cloud High Availability**. It is essential for implementing SafeKit in environments such as: 
 
-  * [**Amazon AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) (AWS Network Load Balancer)
-  * [**Microsoft Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) (Azure Load Balancer)
-  * [**Google Cloud (GCP)**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
+  * 💡 [**Amazon AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) (AWS Network Load Balancer)
+  * 💡 [**Microsoft Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) (Azure Load Balancer)
+  * 💡 [**Google Cloud (GCP)**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
 
 
 #### Network Considerations: Load Balancer vs. Extended LAN
@@ -129,7 +129,7 @@ For high-traffic environments, the **Architecture Guide: Scalable High Availabil
 ### Farm Cluster Architecture: Load Balancing Across Windows or Linux Nodes
 
 
-<img src="/wp-content/uploads/2023/05/vip-farm-same-subnet.png" width="256" alt="Diagram of a load balanced Virtual IP (VIP) within a same-subnet farm cluster">
+![Diagram of a load balanced Virtual IP (VIP) within a same-subnet farm cluster](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
  Distributed Traffic Processing via Kernel Filtering In a **load-balancing farm cluster** , a Virtual IP (VIP) address is used to distribute client requests across multiple servers simultaneously. While this example features two nodes, the architecture scales to support larger server farms. In a same-subnet configuration, the VIP is configured on the Ethernet card of **every server** in the cluster via IP aliasing. 
 
@@ -159,7 +159,7 @@ The **Architecture Guide: Scaling Farm Clusters in Multi-Zone and Cloud Environm
 ### Cross-Subnet Farm Clusters: Multi-Node Windows & Linux Scalability
 
 
-<img src="/wp-content/uploads/2023/05/vip-farm-different-subnet.png" width="256" alt="Diagram of a load-balanced farm cluster operating across two different subnets">
+![Diagram of a load-balanced farm cluster operating across two different subnets](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
  Global Traffic Distribution via External Load Balancing When farm nodes are distributed across **different subnets** (common in Multi-AZ cloud deployments), the **Virtual IP (VIP)** is managed by an external **Load Balancer (LB)**. The LB holds the VIP and directs incoming traffic to the physical IP addresses of the servers located in their respective subnets. 
 
@@ -185,9 +185,9 @@ SafeKit provides a real-time **Health Check URL** on every server in the farm to
 
 This architecture is the foundational model for **Cloud Farm clusters** , ensuring that if an entire subnet or zone goes offline, the remaining nodes continue to handle the load. This is natively supported by: 
 
-  * [**Amazon AWS**](</solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer)
-  * [**Microsoft Azure**](</solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer)
-  * [**Google Cloud (GCP)**](</solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
+  * 💡 [**Amazon AWS**](</solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer)
+  * 💡 [**Microsoft Azure**](</solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer)
+  * 💡 [**Google Cloud (GCP)**](</solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
 
 
 ## Virtual IP vs. DNS Redirection: Why DNS Failover Often Fails {#virtual-ip-vs-dns-redirection-failover}
@@ -200,7 +200,7 @@ Relying on DNS for failover often creates a **false sense of security** in high-
 
 In a standard networking setup, a **Virtual Name** (the DNS Name) acts as the human-readable entry point for users. However, for data to travel across the network, that name must be resolved to a specific **Physical IP** address. 
 
-<img src="/wp-content/uploads/2025/12/dns-rerouting.png" width="256" alt="Diagram showing DNS Name resolution to Physical IP 1 in a high availability cluster">
+![Diagram showing DNS Name resolution to Physical IP 1 in a high availability cluster](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
  DNS Resolution and "Stuck" Clients on Physical IP 1 in a High Availability Cluster
 

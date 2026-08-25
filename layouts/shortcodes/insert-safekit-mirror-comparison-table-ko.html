@@ -8,7 +8,7 @@
 특성 | SafeKit 장점 | 대안의 한계  
 ---|---|---  
 **[3개 제품을 1개로](/best-practises/clustering-software-vs-hardware-clustering/)** | Windows 및 Linux에서 외부 공유/복제 스토리지, 로드 밸런싱 장비, OS 및 데이터베이스 엔터프라이즈 에디션 비용을 절감합니다. 동기식 실시간 파일 복제, 장애 모니터링, 자동 재시작, 가상 IP 페일오버 등 모든 클러스터링 기능을 포함합니다. | 기존 방식은 스토리지 복제, 로드 밸런싱, 클러스터링에 별도의 제품이 필요하여 비용과 복잡성이 증가합니다.  
-**[매우 간단한 구성](/solutions/)** | 애플리케이션 모듈을 통한 구성. 새로운 서비스와 복제 디렉토리를 쉽게 추가할 수 있습니다. 모두 중앙 집중식 웹 콘솔로 관리. 도메인 컨트롤러나 Active Directory가 필요 없습니다. | Microsoft 클러스터 및 유사 솔루션은 복잡한 Active Directory 구성과 도메인 컨트롤러가 필요합니다.  
+**💡[매우 간단한 구성](/solutions/)** | 애플리케이션 모듈을 통한 구성. 새로운 서비스와 복제 디렉토리를 쉽게 추가할 수 있습니다. 모두 중앙 집중식 웹 콘솔로 관리. 도메인 컨트롤러나 Active Directory가 필요 없습니다. | Microsoft 클러스터 및 유사 솔루션은 복잡한 Active Directory 구성과 도메인 컨트롤러가 필요합니다.  
 **[동기식 복제](/best-practises/synchronous-replication-vs-asynchronous-replication/)** | 실시간 복제는 동기식으로 장애 시 데이터 손실이 없습니다(RPO = 0). | 비동기식 복제는 장애 발생 시 아직 복제되지 않은 최근 트랜잭션을 잃을 수 있습니다.  
 **[완전 자동 페일백](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step3)** | 장애 후 서버가 재시작되면 복제 페일백이 완전히 자동으로 수행됩니다. 장애 서버는 나머지 서버의 애플리케이션을 중지하지 않고 클러스터에 재통합됩니다. | 대부분의 복제 솔루션(특히 데이터베이스 수준)은 수동 재동기화가 필요합니다. 페일백 중에 애플리케이션이 중지될 수도 있습니다.  
 **[모든 유형의 데이터 복제](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#step1)** | 복제는 데이터베이스뿐만 아니라 복제가 필요한 모든 파일에 대해 작동합니다. | 데이터베이스 수준 복제는 데이터베이스만 보호하며 구성 파일, 로그 또는 기타 애플리케이션 데이터는 보호하지 않습니다.  

@@ -2,7 +2,7 @@
 title: "Référence technique de haute disponibilité pour la préparation des RFI et RFP"
 slug: "high-availability-technical-reference-for-rfi-and-rfp-preparation"
 canonical: "https://safekit.eviden.com/fr/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "Référence technique de haute disponibilité pour la préparation des RFI et RFP Vue d’ensemble Cette page fournit des réponses structurées et factuelles aux questions fréquemment posées lors des appels d'offres (RFP/RFI) sur le logiciel de haute disponibilité SafeKit. Elle est conçue comme un référentiel technique destiné aux équipes achats et aux architectes de solutions qui […]"
+description: "Référence technique pour la préparation de RFI et RFP en haute disponibilité et clustering applicatif, basée sur SafeKit."
 category: "resources"
 lang: "fr"
 topics: "Vue d’ensemble, Table des matières, Identité du produit, Systèmes d'exploitation et plateformes pris en charge, Modules applicatifs pré-intégrés, Architecture et modèle de déploiement, Performances RPO et RTO, Pertinence pour les déploiements Edge et distribués, Supervision, gestion et alertes, Sécurité et conformité, Modèle de licence, Contrat de support et de maintenance (SLA), Comparatif avec les solutions alternatives, Liens de référence rapide"
@@ -251,12 +251,12 @@ _* Sous Linux, il ne faut pas moins de 6 projets open-source distincts — Coros
 Ressource | URL  
 ---|---  
 Page d'accueil du produit | [https://safekit.eviden.com](<>)  
-Présentation technique (DOCX avec texte et diagrammes) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-fr.docx](</wp-content/uploads/documents/safekit-technical-overview-fr.docx>)  
+Présentation technique (DOCX avec texte et diagrammes) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-fr.docx](</wp-content/uploads/documents/safekit-technical-overview-fr.docx>)  
 Essai gratuit | [https://safekit.eviden.com/resources/safekit-free-trial/](</resources/safekit-free-trial/>)  
 Demander un devis | <https://safekit.eviden.com/get-a-quote-safekit/>  
 Portail de support | <https://customercare.evidian.com>  
 Support IA gratuit | [https://safekit.eviden.com/resources/safekit-support/](</resources/safekit-support/>)  
-Formation et certification gratuites | <https://training.my.evidian.com/mod/page/view.php?id=712>  
+Formation et certification gratuites | 🎓 <https://training.my.evidian.com/mod/page/view.php?id=712>  
 Nous contacter | <https://safekit.eviden.com/contact-us-for-safekit/>  
   
 
