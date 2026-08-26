@@ -117,7 +117,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    window.addEventListener('scroll', updateActive);
+    // Throttle with requestAnimationFrame instead of running updateActive()
+    // on every raw scroll event: it reads offsetTop for every heading then
+    // writes several classList/style changes, and calling that dozens of
+    // times per second during a scroll causes forced synchronous reflows
+    // (flagged by PageSpeed Insights as "Forced reflow" / layout thrashing).
+    // rAF collapses that down to at most once per rendered frame.
+    var tocRAFPending = false;
+    function onScroll() {
+        if (tocRAFPending) return;
+        tocRAFPending = true;
+        requestAnimationFrame(function () {
+            updateActive();
+            tocRAFPending = false;
+        });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
     updateActive();
 });
 </script>

@@ -105,7 +105,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    window.addEventListener('scroll', updateSpy);
+    var spyRAFPending = false;
+    function onSpyScroll() {
+        if (spyRAFPending) return;
+        spyRAFPending = true;
+        requestAnimationFrame(function () {
+            updateSpy();
+            spyRAFPending = false;
+        });
+    }
+    window.addEventListener('scroll', onSpyScroll, { passive: true });
     updateSpy();
 });
 </script>

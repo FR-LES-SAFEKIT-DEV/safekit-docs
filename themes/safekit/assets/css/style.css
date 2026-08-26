@@ -140,7 +140,7 @@ tr:nth-child(even) { background-color: #fafafa; }
 footer { text-align: center; padding: 2rem 1rem; margin-top: 2rem; border-top: 1px solid #eee; color: #4a4a4a; font-size: 0.85rem; }
 
 /* ==========================================================================
-   5. COMPOSANTS USERGUIDE & DOCUMENTATION
+   5. SIDEBAR & IFRAMES
    ========================================================================== */
 /* --- Sidebar Collapsible --- */
 .sidebar-section { margin-bottom: 1rem; }
@@ -151,48 +151,7 @@ footer { text-align: center; padding: 2rem 1rem; margin-top: 2rem; border-top: 1
 .sidebar-section.open > .sidebar-toggle::after { content: '-'; color: #0066cc; }
 .sidebar-toggle:hover { color: #0066cc; }
 
-/* --- Chapter list --- */
-.chapter-list { list-style: none; padding: 0; margin: 0; }
-.chapter-list li { margin: 0; }
-.chapter-list a { display: block; padding: 0.2rem 0; font-size: 0.78rem; color: #555; line-height: 1.4; border-left: 2px solid transparent; padding-left: 0.5rem; text-decoration: none; }
-.chapter-list a:hover { color: #0066cc; text-decoration: none; border-left-color: #0066cc; }
-.chapter-list li.current > a { color: #0066cc; font-weight: 600; border-left-color: #0066cc; }
-
-/* --- Callout boxes --- */
-.callout { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; margin: 1rem 0; background: #f0f7ff; border-radius: 4px; }
-.callout img { flex-shrink: 0; width: 24px; height: 24px; filter: brightness(0); }
-.callout img.inline-icon { max-height: 24px; max-width: 24px; display: inline; vertical-align: middle; }
-.callout span { flex: 1; }
-.callout span p { margin: 0.3rem 0; }
-.callout span p:first-child { margin-top: 0; }
-.callout span p:last-child { margin-bottom: 0; }
-.callout-warning { background: #f0f7ff; }
-
-/* --- Table Code Blocks --- */
-td pre { background: #f4f4f8; color: #333; padding: 0.75rem; border-radius: 6px; overflow-x: auto; margin: 0.5rem 0; font-size: 0.85em; border: 1px solid #e0e0e0; }
-td pre code { background: none; color: inherit; padding: 0; white-space: pre-wrap; word-break: break-word; }
-
-/* --- Inline Table of Contents --- */
-.inline-toc { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 6px; padding: 1.5rem 2rem; margin: 1.5rem 0; }
-.inline-toc p { margin: 0.15rem 0; line-height: 1.6; font-size: 0.85rem; }
-.inline-toc p.toc-h1 { padding-left: 0; font-weight: 600; margin-top: 0.5rem; }
-.inline-toc p.toc-h2 { padding-left: 1.5rem; }
-.inline-toc p.toc-h3 { padding-left: 3rem; font-size: 0.8rem; }
-.inline-toc p a { color: #333; text-decoration: underline; text-underline-offset: 2px; border-bottom: 1px solid transparent; transition: color 0.2s, border-bottom-color 0.2s; }
-.inline-toc p a:hover { color: #0066cc; border-bottom-color: #0066cc; }
-
-/* --- Docs Single Page Collapsible TOC --- */
-.docs-toc ul { list-style: none; padding: 0; margin: 0; }
-.docs-toc li { margin: 0; }
-.docs-toc > ul > li { margin-bottom: 0.3rem; }
-.docs-toc a { display: block; padding: 0.2rem 0; font-size: 0.78rem; color: #555; line-height: 1.4; text-decoration: none; border-left: 2px solid transparent; padding-left: 0.5rem; }
-.docs-toc > ul > li > a { font-weight: 600; font-size: 0.82rem; color: #333; }
-.docs-toc ul ul a { padding-left: 1.2rem; }
-.docs-toc ul ul ul a { padding-left: 2rem; font-size: 0.75rem; }
-.docs-toc ul ul ul ul a { padding-left: 2.8rem; font-size: 0.72rem; }
-.docs-toc a:hover { color: #0066cc; border-left-color: #0066cc; }
-.docs-toc a.toc-active { color: #0066cc; font-weight: 600; border-left-color: #0066cc; }
-.docs-toc a img { max-width: 14px; max-height: 14px; vertical-align: middle; margin: 0 2px; }
+/* ---  Make TOC entries collapsible --- */
 .toc-toggle { float: right; display: inline-block; width: 1rem; font-weight: 700; font-size: 0.75rem; color: #999; cursor: pointer; text-align: center; margin-right: 0.2rem; }
 .toc-toggle:hover { color: #0066cc; }
 
@@ -202,6 +161,7 @@ td pre code { background: none; color: inherit; padding: 0; white-space: pre-wra
 .userguide-container .doc-container { width: 80%; height: 100%; }
 .userguide-container iframe { width: 100%; height: 100%; border: none; }
 .userguide-container.single-frame .doc-container { width: 100%; }
+
 
 /* ==========================================================================
    6. BOUTONS & ELEMENTS INTERACTIFS (EXEMPTIONS SOULIGNEMENT)
@@ -221,11 +181,6 @@ article a.btn-quick-install:hover { background: #0052a3; text-decoration: none !
 article a.btn-download { display: inline-block; padding: 0.6rem 1.2rem; background: #0066cc; color: #fff !important; border-radius: 5px; font-weight: 600; font-size: 0.9rem; text-decoration: none !important; white-space: nowrap; transition: background 0.2s; margin: 0.3rem 0; }
 .btn-download:hover,
 article a.btn-download:hover { background: #0052a3; text-decoration: none !important; }
-
-.btn-download-green,
-article a.btn-download-green { display: inline-block; padding: 0.6rem 1.2rem; background: #0891b2; color: #fff !important; border-radius: 5px; font-weight: 600; font-size: 0.9rem; text-decoration: none !important; white-space: nowrap; transition: background 0.2s; margin: 0.3rem 0; }
-.btn-download-green:hover,
-article a.btn-download-green:hover { background: #0e7490; text-decoration: none !important; }
 
 .chat-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.25rem; z-index: 9999; text-decoration: none !important; transition: transform 0.2s; }
 .chat-fab:hover { transform: scale(1.08); text-decoration: none !important; }

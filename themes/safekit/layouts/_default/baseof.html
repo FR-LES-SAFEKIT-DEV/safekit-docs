@@ -8,8 +8,36 @@
     <link rel="icon" href="{{ "wp-content/themes/safekit/computer-safekit-icon-svg.svg" | relURL }}" type="image/svg+xml">
     {{ with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ end }}
     <link rel="alternate" type="text/markdown" href="index.md">
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-    {{ template "_internal/google_analytics.html" . }}
+
+{{ $css := resources.Get "css/style.css" | resources.Minify }}
+<style>{{ $css.Content | safeCSS }}</style>
+
+    {{ with .Site.Config.Services.GoogleAnalytics.ID }}
+    <script>
+      // Same GA4 setup as Hugo's built-in _internal/google_analytics.html,
+      // except the ~165 KiB gtag.js payload is fetched after the page has
+      // rendered instead of blocking in <head> — it was adding ~440ms of
+      // LCP render delay and 142ms of main-thread work per PageSpeed.
+      // gtag()/dataLayer calls made before the script arrives are queued
+      // and processed normally once it loads, so nothing else changes.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ . }}');
+
+      function __loadGtag() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id={{ . }}";
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(__loadGtag, { timeout: 3000 });
+      } else {
+        window.addEventListener('load', __loadGtag);
+      }
+    </script>
+    {{ end }}
 </head>
 <body>
     {{ partial "header.html" . }}

@@ -86,7 +86,16 @@ document.addEventListener('DOMContentLoaded', function() {
             active.link.parentElement.classList.add('current');
         }
     }
-    window.addEventListener('scroll', updateActive);
+    var sidebarRAFPending = false;
+    function onSidebarScroll() {
+        if (sidebarRAFPending) return;
+        sidebarRAFPending = true;
+        requestAnimationFrame(function () {
+            updateActive();
+            sidebarRAFPending = false;
+        });
+    }
+    window.addEventListener('scroll', onSidebarScroll, { passive: true });
     updateActive();
 
     // Make TOC entries collapsible (for non-userguide list pages)
@@ -148,7 +157,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-        window.addEventListener('scroll', updateTocActive);
+        var homeTocRAFPending = false;
+        function onHomeTocScroll() {
+            if (homeTocRAFPending) return;
+            homeTocRAFPending = true;
+            requestAnimationFrame(function () {
+                updateTocActive();
+                homeTocRAFPending = false;
+            });
+        }
+        window.addEventListener('scroll', onHomeTocScroll, { passive: true });
         updateTocActive();
     }
 });
