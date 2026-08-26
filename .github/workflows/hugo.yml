@@ -55,6 +55,12 @@ jobs:
         run: |
           hugo \
             --minify
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Export expanded Markdown
+        run: python scripts/expand_all_shortcodes.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
