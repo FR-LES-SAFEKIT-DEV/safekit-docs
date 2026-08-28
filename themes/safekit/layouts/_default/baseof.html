@@ -14,12 +14,8 @@
 
     {{ with .Site.Config.Services.GoogleAnalytics.ID }}
     <script>
-      // Same GA4 setup as Hugo's built-in _internal/google_analytics.html,
-      // except the ~165 KiB gtag.js payload is fetched after the page has
-      // rendered instead of blocking in <head> — it was adding ~440ms of
-      // LCP render delay and 142ms of main-thread work per PageSpeed.
-      // gtag()/dataLayer calls made before the script arrives are queued
-      // and processed normally once it loads, so nothing else changes.
+      // To deactivate the GA4 script generation, just comment in /config.toml googleAnalytics = "G-DDCJJTPNYV"
+      // Defer GA4 script loading post-render to reduce LCP delay without losing event queuing.
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());

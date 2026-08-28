@@ -1,6 +1,5 @@
 ---
-title: "Siemens Siveillance VMS High Availability: 2-Node Shared-Nothing Cluster with SafeKit"
-slug: "siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers"
+title: "Siemens Siveillance VMS High Availability: 2-Node Shared-Nothing Cluster with SafeKit - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "Achieve HA at the application level for Siemens Siveillance VMS using SafeKit. Our 2-node shared-nothing solution uses the SiveillanceVMS.safe module for real-time replication and automatic failover without a SAN. Ensure continuous video management with a simple, software-only cluster."
 category: "solutions"

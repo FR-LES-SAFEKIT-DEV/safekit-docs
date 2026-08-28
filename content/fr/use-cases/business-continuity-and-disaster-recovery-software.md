@@ -1,6 +1,5 @@
 ---
-title: "Logiciel de continuité d'activité et de reprise après sinistre pour clusters à 2 nœuds avec SafeKit"
-slug: "business-continuity-and-disaster-recovery-software"
+title: "Logiciel de continuité d'activité et de reprise après sinistre pour clusters à 2 nœuds avec SafeKit - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-and-disaster-recovery-software/"
 description: "SafeKit est un logiciel de continuité d'activité et de reprise après sinistre qui met en œuvre une solution de haute disponibilité simple entre deux salles informatiques distantes. Bénéficiez d'une disponibilité 24h/24 et 7j/7 avec SafeKit, le logiciel de continuité d'activité et de reprise après sinistre le plus facile à utiliser. Éliminez les SAN coûteux et les compétences informatiques complexes grâce à la réplication synchrone à 2 nœuds, au basculement automatique et à l'équilibrage de charge pour Windows et Linux. Zéro perte de données (RPO=0) pour les applications critiques dans tout environnement cloud ou sur site."
 category: "use-cases"

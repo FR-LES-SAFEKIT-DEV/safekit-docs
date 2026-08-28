@@ -1,6 +1,5 @@
 ---
-title: "Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité"
-slug: "byte-level-file-replication-vs-block-level-disk-replication"
+title: "Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Comparez la réplication de fichiers au niveau octet et la réplication de disque au niveau bloc. Découvrez pourquoi SafeKit propose une architecture sans SAN qui réplique uniquement les données modifiées au sein des fichiers, garantissant ainsi l'absence de perte de données (RPO 0), une récupération plus rapide (RTO) et une configuration simplifiée sous Windows et Linux."
 category: "best-practises"
@@ -50,24 +49,16 @@ Enfin, la solution n'est pas facile à configurer car des compétences sont néc
 
 ## Avantages et inconvénients de la réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc
 
-**Cluster avec réplication de fichiers au niveau octet** | **Cluster avec réplication de disques au niveau bloc**  
----|---  
-**Produit**  
-[SafeKit sous Windows et Linux](</fr/>) | Produits de réplication de disques comme [DRBD](<https://linbit.com/drbd/>)  
-**Organisation des données de l'application**  
-0 impact sur l'organisation des données de l'application avec SafeKit. Il suffit de définir les [répertoires à répliquer en temps réel](</fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/>). Même des répertoires dans le disque système peuvent être répliqués. | Impact sur l'organisation des données de l'application. Configuration spéciale de l'application pour mettre ses données sur un disque répliqué. Les données du disque système ne peuvent pas être répliquées.  
-**Réplication de données**  
-Réplication de fichiers en temps réel synchrone au niveau octet. Réplication de données temps réel et continue suivant l'activité d'écriture générée par l'application. **Aucune métadonnée** n'est répliquée. Seules les données modifiées à l'intérieur des fichiers sont répliquées et pas les fichiers dans leur totalité (réplication de fichiers au niveau octet). [Réplication synchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) pour éviter la perte de données en cas de panne | Réplication de disques au niveau bloc. Réplique toutes les données modifiées dans le disque répliqué. Les données applicatives et les **métadonnées** sont répliquées. Par exemple, l'heure du dernier accès à un fichier est répliquée (l'heure du dernier accès est modifiée chaque fois que le fichier est lu).  
-**Complexité du déploiement**  
-Non - installer un logiciel sur 2 serveurs | Oui - nécessite des compétences informatiques spécifiques pour la configuration du système d'exploitation et du disque répliqué  
-**Basculement**  
-Redémarrer simplement l'application sur le deuxième serveur | Remonter le système de fichiers du disque répliqué. Passer la procédure de récupération sur le système de fichiers. Et enfin redémarrer l'application  
-**Réintégration d'un serveur dans le cluster**  
-Réintégration automatique. Resynchronisation des données sur le serveur secondaire sans arrêter l'application sur le serveur principal. Pas de basculement d'application tant que les données ne sont pas resynchronisées. | Tous les produits ne sont pas au même niveau de fonctionnalité.  
-**Quorum et split brain**  
-Application exécutée sur un serveur unique après une isolation de réseau (split brain). Cohérence des données après un split brain. Pas besoin d'une troisième machine, d'un disque de quorum ou d'une voie de heartbeat spéciale pour le split brain. Plus d'informations sur les [heartbeats, le failover et le quorum](</fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) | Requiert un disque de quorum spécial ou un troisième serveur de quorum pour gérer le split brain  
-**Convient pour**  
-Les éditeurs de logiciels qui souhaitent ajouter une [option de haute disponibilité simple pour leur application](</fr/use-cases/application-clustering-software/>) | Les entreprises possédant des compétences en informatique dans le clustering  
+Critère | **Cluster avec réplication de fichiers au niveau octet** | **Cluster avec réplication de disques au niveau bloc**  
+---|---|---  
+Produit |  • [SafeKit sous Windows et Linux](/fr/)  |  • Produits de réplication de disques comme [DRBD](https://linbit.com/drbd/)   
+Organisation des données de l'application |  • 0 impact sur l'organisation des données de l'application avec SafeKit.<br>• Il suffit de définir les [répertoires à répliquer en temps réel](/fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Même des répertoires dans le disque système peuvent être répliqués.  |  • Impact sur l'organisation des données de l'application.<br>• Configuration spéciale de l'application pour mettre ses données sur un disque répliqué.<br>• Les données du disque système ne peuvent pas être répliquées.   
+Réplication de données |  • Réplication de fichiers en temps réel synchrone au niveau octet.<br>• Réplication de données temps réel et continue suivant l'activité d'écriture générée par l'application.<br>• Aucune métadonnéen'est répliquée. Seules les données modifiées à l'intérieur des fichiers sont répliquées et pas les fichiers dans leur totalité (réplication de fichiers au niveau octet).<br>• [Réplication synchrone](/fr/best-practises/synchronous-replication-vs-asynchronous-replication/)pour éviter la perte de données en cas de panne.  |  • Réplication de disques au niveau bloc.<br>• Réplique toutes les données modifiées dans le disque répliqué.<br>• Les données applicatives et lesmétadonnéessont répliquées.<br>• Par exemple, l'heure du dernier accès à un fichier est répliquée (l'heure du dernier accès est modifiée chaque fois que le fichier est lu).   
+Complexité du déploiement |  • Non - installer un logiciel sur 2 serveurs  |  • Oui - nécessite des compétences informatiques spécifiques pour la configuration du système d'exploitation et du disque répliqué   
+Basculement |  • Redémarrer simplement l'application sur le deuxième serveur  |  • Remonter le système de fichiers du disque répliqué.<br>• Passer la procédure de récupération sur le système de fichiers.<br>• Et enfin redémarrer l'application.   
+Réintégration d'un serveur dans le cluster |  • Réintégration automatique.<br>• Resynchronisation des données sur le serveur secondaire sans arrêter l'application sur le serveur principal.<br>• Pas de basculement d'application tant que les données ne sont pas resynchronisées.  |  • Tous les produits ne sont pas au même niveau de fonctionnalité.   
+Quorum et split brain |  • Application exécutée sur un serveur unique après une isolation de réseau (split brain).<br>• Cohérence des données après un split brain.<br>• Pas besoin d'une troisième machine, d'un disque de quorum ou d'une voie de heartbeat spéciale pour le split brain.<br>• Plus d'informations sur les [heartbeats, le failover et le quorum](/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).  |  • Requiert un disque de quorum spécial ou un troisième serveur de quorum pour gérer le split brain.   
+Convient pour |  • Les éditeurs de logiciels qui souhaitent ajouter une [option de haute disponibilité simple pour leur application](/fr/use-cases/application-clustering-software/)  |  • Les entreprises possédant des compétences en informatique dans le clustering   
   
 
 {{%  insert-safekit-hub-fr %}}

@@ -1,6 +1,5 @@
 ---
-title: "Firebird High Availability with SafeKit: Install the firebird.safe Module for Failover"
-slug: "safekit-quick-installation-guide-with-firebird"
+title: "Firebird High Availability with SafeKit: Install the firebird.safe Module for Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-firebird/"
 description: "Deploy the firebird.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Firebird on Windows and Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"

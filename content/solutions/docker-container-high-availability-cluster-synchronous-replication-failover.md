@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: Docker High Availability & Real-Time Data Replication Software"
-slug: "docker-container-high-availability-cluster-synchronous-replication-failover"
+title: "SafeKit: Docker High Availability & Real-Time Data Replication Software - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit provides a robust Docker high availability solution with integrated synchronous data replication. Implement a stateful container cluster with automatic failover and zero data loss on standard Linux servers. No SAN or shared storage required. Deploy in minutes."
 category: "solutions"
@@ -81,22 +80,22 @@ Yes. **SafeKit** is a highly versatile, generic high-availability software compa
 
 Feature | Traditional HA (K8s / Shared Storage) | SafeKit (SANless Mirror)  
 ---|---|---  
-Storage Architecture | Requires expensive **SAN or NAS** (Shared Disk) | **Shared-Nothing** : Uses local disks only  
-Replication Type | Often Block-level (Complex to configure) | **Byte-level File Replication** (Transparent)  
-Data Consistency | Depends on external storage reliability | **Synchronous Replication** (RPO = 0)  
-Network Setup | Complex (Load balancers, Ingress, etc.) | **Automatic Virtual IP (VIP)** failover  
-Skill Requirement | Expert (Kubernetes/Clustering specialists) | **Simple** : No specialized skills required  
-Failback Process | Manual or complex re-syncing | **Automatic Resynchronization** of modified data  
+Storage Architecture | Requires expensive **SAN or NAS** (Shared Disk) | Shared-Nothing: Uses local disks only  
+Replication Type | Often Block-level (Complex to configure) | Byte-level File Replication (Transparent)  
+Data Consistency | Depends on external storage reliability | Synchronous Replication (RPO = 0)  
+Network Setup | Complex (Load balancers, Ingress, etc.) | Automatic Virtual IP (VIP) failover  
+Skill Requirement | Expert (Kubernetes/Clustering specialists) | Simple: No specialized skills required  
+Failback Process | Manual or complex re-syncing | Automatic Resynchronization of modified data  
   
 ## Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD) {#safekit-vs-linux-ha-stack}
 
 Feature | Linux HA Stack (Pacemaker + Corosync + DRBD) | SafeKit (SANless Mirror)  
 ---|---|---  
-Architecture | **Modular:** Requires managing 3+ distinct tools and kernel modules. | **All-in-One:** Single integrated software for replication and failover.  
-Replication Level | **Block-level (DRBD):** Replicates the entire partition/disk volume. | **Byte-level (SafeKit):** Replicates only modified data inside specific files.  
-Ease of Configuration | **Complex:** Requires CLI (Command Line Interface) expertise to manually program ordering constraints (Virtual IP, mounts), application recovery scripts, and quorum/fencing rules. | **Simple:** Intuitive web console and ready-to-use application modules.  
-Fencing (STONITH) | **Mandatory to prevent corruption:** STONITH (Shoot The Other Node In The Head) requires a specialized hardware (IPMI/iDRAC) to literally cut the power or reboot the failing server. | **Software-based:** [Intelligent split-brain resolution without extra hardware.](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)  
-Failback Process | **Manual/Technical:** Risk of data divergence or "split-brain" during re-sync. | **Automatic & Transparent:** Background resynchronization with safe failback.  
+Architecture | Modular: Requires managing 3+ distinct tools and kernel modules. | All-in-One: Single integrated software for replication and failover.  
+Replication Level | Block-level (DRBD): Replicates the entire partition/disk volume. | Byte-level (SafeKit): Replicates only modified data inside specific files.  
+Ease of Configuration | Complex: Requires CLI (Command Line Interface) expertise to manually program ordering constraints (Virtual IP, mounts), application recovery scripts, and quorum/fencing rules. | Simple: Intuitive web console and ready-to-use application modules.  
+Fencing (STONITH) | Mandatory to prevent corruption: STONITH (Shoot The Other Node In The Head) requires a specialized hardware (IPMI/iDRAC) to literally cut the power or reboot the failing server. | Software-based: [Intelligent split-brain resolution without extra hardware.](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)  
+Failback Process | Manual/Technical: Risk of data divergence or "split-brain" during re-sync. | Automatic & Transparent: Background resynchronization with safe failback.  
 Maintenance | Requires high specialized skills to update/troubleshoot individual components. | Easy to maintain by general system administrators via web dashboard.  
   
 ## Docker High Availability Summary {#docker-ha-summary-quick-installation-guide}

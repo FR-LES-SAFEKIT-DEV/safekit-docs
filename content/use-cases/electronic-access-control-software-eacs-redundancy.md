@@ -1,6 +1,5 @@
 ---
-title: "High Availability and Redundancy for Electronic Access Control Software (EACS)"
-slug: "electronic-access-control-software-eacs-redundancy"
+title: "High Availability and Redundancy for Electronic Access Control Software (EACS) - SafeKit HA"
 canonical: "https://safekit.eviden.com/use-cases/electronic-access-control-software-eacs-redundancy/"
 description: "Ensure 24/7 building security with SafeKit, the simplest high availability software for Electronic Access Control (EACS). Prevent system lockouts with SANless 2-node clustering, real-time synchronous replication, and automatic failover for Nedap, TIL Technologies, Siemens, HID, and any Windows/Linux EACS. Achieve zero data loss (RPO=0) without a SAN."
 category: "use-cases"

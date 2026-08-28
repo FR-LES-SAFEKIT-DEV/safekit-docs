@@ -9,7 +9,6 @@ SafeKit offers two primary approaches to ensure business continuity: Virtual Mac
 
 Comparison Feature | VM HA with SafeKit Hyper-V or KVM Module | Application HA with SafeKit Application Modules  
 ---|---|---  
-Deployment Diagram |  |   
 Failover Scope | SafeKit inside 2 hypervisors: replication and failover of the full VM. | SafeKit inside 2 virtual or physical machines: replication and failover at the application level.  
 Data Replicated | Replicates more data (Application + Operating System). | Replicates only application data, leading to smaller data volumes.  
 Recovery Process &amp; Speed (RTO) | Reboot of VM on hypervisor 2 if hypervisor 1 crashes. Recovery time depends on the OS reboot. VM checker and failover mechanism. | Quick recovery time with restart of App on OS2 if server 1 crashes. Typically around 1 minute or less (low RTO). Application checker and software failover.  

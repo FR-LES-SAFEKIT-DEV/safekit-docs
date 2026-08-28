@@ -1,6 +1,5 @@
 ---
-title: "Battement de cœur, basculement et quorum dans les clusters Windows et Linux"
-slug: "heartbeat-failover-quorum-windows-linux-cluster"
+title: "Battement de cœur, basculement et quorum dans les clusters Windows et Linux - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
 description: "Découvrez le fonctionnement des pulsations, du basculement et du quorum dans un cluster. SafeKit propose une architecture sans SAN qui élimine le besoin d'un troisième serveur de quorum ou d'un disque de quorum dédié. Bénéficiez d'une haute disponibilité sous Windows et Linux grâce à un simple outil de vérification de la présence d'un système isolé."
 category: "best-practises"

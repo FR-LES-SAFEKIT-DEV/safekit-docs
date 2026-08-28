@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: Real-Time Byte-Level File Replication & Mirror Cluster Software"
-slug: "file-replication-byte-level-with-failover-mirror-cluster"
+title: "SafeKit: Real-Time Byte-Level File Replication & Mirror Cluster Software - SafeKit HA"
 canonical: "https://safekit.eviden.com/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
 description: "SafeKit provides real-time, byte-level file replication and synchronous data mirroring for Windows and Linux. Implement a high-availability mirror cluster with automatic failover without the cost of a SAN. Ensure zero data loss and simplified disaster recovery today."
 category: "architectures"

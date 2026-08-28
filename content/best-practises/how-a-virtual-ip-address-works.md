@@ -1,6 +1,5 @@
 ---
-title: "How a Virtual IP Address (VIP) Works in High Availability Clustering?"
-slug: "how-a-virtual-ip-address-works"
+title: "How a Virtual IP Address (VIP) Works in High Availability Clustering? - SafeKit HA"
 canonical: "https://safekit.eviden.com/best-practises/how-a-virtual-ip-address-works/"
 description: "Discover how SafeKit uses software-defined Virtual IP (VIP) addresses to ensure 24/7 uptime. Learn about automated failover via Gratuitous ARP and why it outperforms DNS redirection for business continuity on Windows and Linux."
 category: "best-practises"
@@ -234,11 +233,11 @@ DNS redirection is an inconsistent solution for a high availability solution. Fo
 
 Environment & Use Case | High Availability Type | Redirection Mechanism | Network Latency | Application Transparency & IP Locality  
 ---|---|---|---|---  
-**Primary/Backup** (High Availability) | Mirror Cluster | Gratuitous ARP / MAC Takeover | **Very low:** Time to detect and send broadcast GARP | **Full Transparency:** Virtual IP is local on the active node. Client IP is preserved.  
-**Load Balancing** (Active/Active) | Farm Cluster | Kernel-Level Network Filter / GARP | **Very Low:** Time to detect and reconfigure network filters | **Full Transparency:** Virtual IP is local on all nodes. Client IP is preserved.  
-**Same Subnet / Extended LAN** (VLAN Stretching) | Disaster Recovery (remote datacenters) | Standard IP Aliasing / GARP | **Low:** Depends on stretched VLAN RTT (Round Trip Time) | **Full Transparency:** Virtual IP is local on the nodes. Client IP is preserved.  
-**Different Subnets** | Disaster Recovery (remote datacenters / Cloud) | External Load Balancer | **Moderate:** Higher failover latency due to Load Balancer health check intervals | **⚠️ Partial Transparency:** Uses SNAT/DNAT. Virtual IP is **NOT** local on the nodes. Client IP is **NOT** preserved. Application must support it.  
-**DNS rerouting: No VIP** | Disaster Recovery (remote datacenters) | DNS Record Update (name / physical IP) | **High/Unpredictable:** Dependent on DNS TTL (Time To Live) and Client DNS Caching. | **⚠️ Unreliable:** Client must re-resolve DNS. Most often, clients continue using the stale IP resolved at startup and are not rerouted after a failover.  
+Primary/Backup (High Availability) | Mirror Cluster | Gratuitous ARP / MAC Takeover | Very low: Time to detect and send broadcast GARP | Full Transparency: Virtual IP is local on the active node. Client IP is preserved.  
+Load Balancing (Active/Active) | Farm Cluster | Kernel-Level Network Filter / GARP | Very Low: Time to detect and reconfigure network filters | Full Transparency: Virtual IP is local on all nodes. Client IP is preserved.  
+Same Subnet / Extended LAN (VLAN Stretching) | Disaster Recovery (remote datacenters) | Standard IP Aliasing / GARP | Low: Depends on stretched VLAN RTT (Round Trip Time) | Full Transparency: Virtual IP is local on the nodes. Client IP is preserved.  
+Different Subnets | Disaster Recovery (remote datacenters / Cloud) | External Load Balancer | Moderate: Higher failover latency due to Load Balancer health check intervals | ⚠️ Partial Transparency: Uses SNAT/DNAT. Virtual IP is **NOT** local on the nodes. Client IP is **NOT** preserved. Application must support it.  
+DNS rerouting: No VIP | Disaster Recovery (remote datacenters) | DNS Record Update (name / physical IP) | High/Unpredictable: Dependent on DNS TTL (Time To Live) and Client DNS Caching. | ⚠️ Unreliable: Client must re-resolve DNS. Most often, clients continue using the stale IP resolved at startup and are not rerouted after a failover.  
   
 ## Configuring a Virtual IP Address for Network Loadbalancing and High Availability {#virtual-ip-configuration-load-balancing-ha}
 

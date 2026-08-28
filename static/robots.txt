@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://safekit-dev.eviden.com/sitemap.xml
 Sitemap: https://safekit-dev.eviden.com/sitemap-md.xml

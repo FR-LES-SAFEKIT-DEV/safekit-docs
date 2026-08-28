@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: Software All-in-One per High Availability SANless e Application Clustering"
-slug: "high-availability-software-for-application-clustering"
+title: "SafeKit: Software All-in-One per High Availability SANless e Application Clustering - SafeKit HA"
 canonical: "https://safekit.eviden.com/it/"
 description: 'SafeKit è il software di alta disponibilità (HA) SANless "all-in-one" per Windows e Linux. Ottieni replica sincrona in tempo reale, failover automatico e bilanciamento del carico in un unico pacchetto semplice ed economico. Inizia la tua prova gratuita di 30 giorni.'
 category: "home"

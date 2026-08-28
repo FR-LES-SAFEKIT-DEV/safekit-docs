@@ -1,11 +1,10 @@
 ---
-title: "Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA"
-slug: "shared-nothing-architecture-vs-shared-disk-architecture"
+title: "Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
 description: "Comparez les architectures « sans partage » et « avec partage de disque » pour une haute disponibilité. Découvrez comment SafeKit utilise une approche sans partage pour éliminer les coûts SAN, simplifier le basculement et assurer une réplication synchrone sans contraintes matérielles complexes."
 category: "best-practises"
 lang: "fr"
-topics: "Architecture sans partage vs architecture avec disques partagés pour les clusters de haute disponibilité, Architecture sans partage (shared nothing) vs architecture à disque partagé (shared disk) : avantages et inconvénients, Vidéo comparant un cluster avec disques partagés et un cluster sans partage avec 2 sites distants, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Architecture sans partage vs architecture avec disques partagés pour les clusters de haute disponibilité, Architecture sans partage (shared nothing) vs architecture à disque partagé (shared disk) : avantages et inconvénients, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
 # Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA
@@ -53,16 +52,6 @@ Enfin, la solution est très simple à configurer puisque seuls les chemins des 
 
 {{%  insert-safekit-shared-nothing-vs-shared-disk-table-fr %}}
  
-
-## Vidéo comparant un cluster avec disques partagés et un cluster sans partage avec 2 sites distants
-
-### Contenu de la vidéo
-
-Cette vidéo illustre d'abord le travail à effectuer avec une architecture à disques partagés lorsque les deux serveurs d'un cluster de haute disponibilité doivent être placés sur deux sites distants.
-
-Ensuite, la vidéo montre le même cas d'utilisation avec l'architecture SafeKit sans partage.
-
-### Vidéo SafeKit : Reprise après sinistre avec un cluster à disque partagé et un cluster shared nothing (2:25)
 
 
 {{%  insert-safekit-hub-fr %}}

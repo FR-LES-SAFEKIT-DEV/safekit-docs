@@ -1,6 +1,5 @@
 ---
-title: "The Simplest MySQL High Availability: 2-Node Synchronous Replication & Failover"
-slug: "mysql-high-availability-synchronous-replication-failover"
+title: "The Simplest MySQL High Availability: 2-Node Synchronous Replication & Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/mysql-high-availability-synchronous-replication-failover/"
 description: "The simplest way to implement MySQL High Availability. SafeKit provides a 2-node SANless cluster with synchronous replication and automatic failover—no AD or specialized skills required."
 category: "solutions"

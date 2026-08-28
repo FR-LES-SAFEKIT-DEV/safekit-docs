@@ -1,6 +1,5 @@
 ---
-title: "SafeKit Cluster Key: One-Month Trial for Windows and Linux High Availability"
-slug: "high-availability-and-load-balancing-cluster-key"
+title: "SafeKit Cluster Key: One-Month Trial for Windows and Linux High Availability - SafeKit HA"
 canonical: "https://safekit.eviden.com/resources/high-availability-and-load-balancing-cluster-key/"
 description: "Request your SafeKit cluster key for a one-month trial on Windows and Linux. SafeKit proposes a SANless architecture for simple, all-in-one high availability and application clustering without a SAN."
 category: "resources"

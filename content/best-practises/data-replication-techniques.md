@@ -1,6 +1,5 @@
 ---
-title: "Data Replication Techniques for High Availability: A Complete Comparison"
-slug: "data-replication-techniques"
+title: "Data Replication Techniques for High Availability: A Complete Comparison - SafeKit HA"
 canonical: "https://safekit.eviden.com/best-practises/data-replication-techniques/"
 description: "Compare data replication techniques at the database, disk, and file level. Learn why SafeKit proposes a SANless architecture for simple, real-time synchronous replication that ensures zero data loss and automatic failover on Windows and Linux."
 category: "best-practises"

@@ -185,11 +185,11 @@ Note that if you deploy several VMs for replication and failover, you will have 
 
 Feature | SafeKit for {{ .Get "app" }} | MS Failover Clustering | Hyper-V Replica  
 ---|---|---|---  
-Architecture | **SANless (Shared-Nothing)** | Shared Storage (SAN/S2D) | Shared-Nothing  
-Failover Logic | **Fully Automatic** | Fully Automatic | Manual Intervention (not a HA solution)  
+Architecture | SANless (Shared-Nothing) | Shared Storage (SAN/S2D) | Shared-Nothing  
+Failover Logic | Fully Automatic | Fully Automatic | Manual Intervention (not a HA solution)  
 Replication Type | Synchronous (Zero RPO) | Synchronous (via SAN) | Asynchronous (Data Loss)  
-Quorum Requirement | **None (Built-in Checker)** | 3rd Node / Cloud Witness | None  
-AD Dependency | Independent | **Required (Active Directory)** | Independent  
+Quorum Requirement | None (Built-in Checker) | 3rd Node / Cloud Witness | None  
+AD Dependency | Independent | Required (Active Directory) | Independent  
 Deployment Complexity | Low (< 30 Minutes) | High (AD, Storage, Quorum) | Medium  
   
 **In summary** , by eliminating the need for a SAN and simplifying the setup—removing dependencies like **Active Directory** and specialized **Quorum** configurations—SafeKit provides a lean, hardware-agnostic alternative. This results in a significantly lower TCO while ensuring that your {{ .Get "app" }} environment remains resilient with zero data loss and automated recovery.

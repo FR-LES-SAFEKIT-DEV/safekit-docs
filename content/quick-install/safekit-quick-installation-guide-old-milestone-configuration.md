@@ -1,8 +1,6 @@
 ---
-title: "Old SafeKit Milestone Configuration"
-slug: "safekit-quick-installation-guide-old-milestone-configuration"
+title: "Old SafeKit Milestone Configuration - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
-description: "Be careful, some specific steps are required to configure on the virtual IP address else the failover is not working. 1. Launch the SafeKit console Launch the web console in a browser on one cluster node by connecting to http://localhost:9010. Enter admin as user name and the password defined during installation. You can also run […]"
 category: "quick-install"
 lang: "en"
 ---

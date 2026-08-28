@@ -1,6 +1,5 @@
 ---
-title: "Combining SafeKit High Availability with Disaster Recovery Backups"
-slug: "high-availability-disaster-recovery-hadr"
+title: "Combining SafeKit High Availability with Disaster Recovery Backups - SafeKit HA"
 canonical: "https://safekit.eviden.com/best-practises/high-availability-disaster-recovery-hadr/"
 description: "Build a resilient HA/DR strategy by combining SafeKit for synchronous replication (RPO=0) with asynchronous backup for off-site disaster recovery. Ensure 24/7 application uptime and data integrity on Windows and Linux with this dual-layered approach."
 category: "best-practises"
@@ -113,14 +112,14 @@ To build a truly resilient infrastructure, you must integrate both High Availabi
 
 Criteria | Fast Network (LAN/VLAN) | Slow Network (WAN)  
 ---|---|---  
-**Primary Scope** | Local Redundancy & High Availability | Site-to-Site Disaster Recovery  
-**Use Case** | Same Data Center or Campus | Remote Data Centers or Cloud Regions  
-**Replication Type** | Synchronous (Real-time) | Asynchronous / Backup  
-**RPO (Data Loss)** | Zero (RPO = 0) | Potential data loss (RPO > 0)  
-**Failover Process** | Automatic | Manual (Admin decision)  
-**Traffic Rerouting** | Virtual IP Address (VIP) | DNS Level (TTL dependent)  
-**Latency Requirement** | Low (typically < 2ms) | Supports high latency  
-**Primary Recovery Goal** | Immediate Business Continuity | Data Safety & Retention  
+Primary Scope | Local Redundancy & High Availability | Site-to-Site Disaster Recovery  
+Use Case | Same Data Center or Campus | Remote Data Centers or Cloud Regions  
+Replication Type | Synchronous (Real-time) | Asynchronous / Backup  
+RPO (Data Loss) | Zero (RPO = 0) | Potential data loss (RPO > 0)  
+Failover Process | Automatic | Manual (Admin decision)  
+Traffic Rerouting | Virtual IP Address (VIP) | DNS Level (TTL dependent)  
+Latency Requirement | Low (typically < 2ms) | Supports high latency  
+Primary Recovery Goal | Immediate Business Continuity | Data Safety & Retention  
   
 ## Video Guide: How to Implement HADR with SafeKit {#videoguide-hadr-safekit}
 
@@ -130,10 +129,10 @@ Learn how to combine **High Availability (HA)** and **Disaster Recovery (DR)** i
 
 ### Video Highlights
 
-  1. 🎬 [Introduction to SafeKit HADR over Stretched VLANs](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s>) (1:06)
-  2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>)
-  3. 🎬 [Failover Mechanics: Gratuitous ARP (GARP) & Virtual IP](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s>) (2:10)
-  4. 🎬 [Designing for Slow WAN: HA vs. Backup Strategies](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s>) (2:45)
+  1. 🎬 [Introduction to SafeKit HADR over Stretched VLANs](<https://youtu.be/g5zcTjiY7T4?t=0s>) (1:06)
+  2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://youtu.be/g5zcTjiY7T4?t=65s>)
+  3. 🎬 [Failover Mechanics: Gratuitous ARP (GARP) & Virtual IP](<https://youtu.be/g5zcTjiY7T4?t=166s>) (2:10)
+  4. 🎬 [Designing for Slow WAN: HA vs. Backup Strategies](<https://youtu.be/g5zcTjiY7T4?t=296s>) (2:45)
 
 
 ### SafeKit Video: How to implement High Availability and Disaster Recovery (HADR) with SafeKit (7:40)

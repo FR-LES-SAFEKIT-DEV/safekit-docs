@@ -9,7 +9,6 @@ SafeKit offre due approcci principali per garantire la continuità operativa: l�
 
 Caratteristica di confronto | VM HA con modulo SafeKit Hyper-V o KVM | Application HA con moduli applicativi SafeKit  
 ---|---|---  
-Schema di distribuzione |  |   
 Ambito del failover | SafeKit all’interno di 2 hypervisor: replica e failover della VM completa. | SafeKit su 2 macchine virtuali o fisiche: replica e failover a livello applicativo.  
 Dati replicati | Replica una quantità maggiore di dati (applicazione + sistema operativo). | Replica solo i dati applicativi, riducendo il volume di dati.  
 Processo e velocità di ripristino (RTO) | Riavvio della VM sull’hypervisor 2 se l’hypervisor 1 si arresta. Il tempo di ripristino dipende dal riavvio del sistema operativo. Controllo VM e meccanismo di failover. | Ripristino rapido con riavvio dell’applicazione su OS2 se il server 1 si arresta. Tipicamente circa 1 minuto o meno (RTO basso). Controllo applicativo e failover software.  

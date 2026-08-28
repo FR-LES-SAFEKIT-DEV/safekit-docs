@@ -1,6 +1,5 @@
 ---
-title: "Siemens Desigo CC High Availability: SANless 2-Node Redundancy"
-slug: "siemens-desigo-cc-redundancy-high-availability-cluster-active-active"
+title: "Siemens Desigo CC High Availability: SANless 2-Node Redundancy - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
 description: "Ensure 24/7 uptime for Siemens Desigo CC with SafeKit. Achieve SANless high availability, real-time replication, and automatic failover on just 2 nodes. Lower TCO by eliminating shared storage."
 category: "solutions"

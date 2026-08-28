@@ -1,6 +1,5 @@
 ---
-title: "Logiciel de clustering pour fermes et miroirs : haute disponibilité et équilibrage de charge"
-slug: "clustering-software-load-balancing-mirroring"
+title: "Logiciel de clustering pour fermes et miroirs : haute disponibilité et équilibrage de charge - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/architectures/clustering-software-load-balancing-mirroring/"
 description: "Déployez des architectures avancées en combinant les modules SafeKit Farm et Mirror. Optimisez la charge réseau pour une évolutivité optimale et protégez vos données grâce à la réplication synchrone en temps réel. Créez facilement des clusters sans SAN sous Windows et Linux, sans compétences informatiques particulières. Téléchargez votre version d'essai gratuite."
 category: "architectures"

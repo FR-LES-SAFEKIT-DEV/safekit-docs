@@ -9,7 +9,6 @@ SafeKit biedt twee primaire benaderingen om de bedrijfscontinuïteit te waarborg
 
 Vergelijkingskenmerk | VM HA met SafeKit Hyper-V of KVM-module | Application HA met SafeKit Application-modules  
 ---|---|---  
-Implementatiediagram |  |   
 Scope van failover | SafeKit binnen twee hypervisors: replicatie en failover van de volledige VM. | SafeKit op twee virtuele of fysieke machines: replicatie en failover op applicatieniveau.  
 Gerepliceerde gegevens | Repliceert meer gegevens (applicatie + besturingssysteem). | Repliceert uitsluitend applicatiegegevens, wat leidt tot kleinere datavolumes.  
 Herstelproces &amp; snelheid (RTO) | Herstart van de VM op hypervisor 2 wanneer hypervisor 1 uitvalt. Hersteltijd hangt af van de herstart van het besturingssysteem. VM-monitoring en failovermechanisme. | Snelle hersteltijd met herstart van de applicatie op OS2 wanneer server 1 uitvalt. Typisch rond 1 minuut of minder (lage RTO). Applicatiemonitoring en softwarematige failover.  

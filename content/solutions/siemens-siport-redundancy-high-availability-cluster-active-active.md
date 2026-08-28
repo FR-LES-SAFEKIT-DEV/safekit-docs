@@ -1,6 +1,5 @@
 ---
-title: "High Availability for Siemens SIPORT Access Control: SANless Redundancy & Failover"
-slug: "siemens-siport-redundancy-high-availability-cluster-active-active"
+title: "High Availability for Siemens SIPORT Access Control: SANless Redundancy & Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
 description: '"Ensure 24/7 uptime for Siemens SIPORT with SafeKit. Our 2-node SANless cluster provides synchronous replication and automatic failover without the cost of a SAN. Simple, reliable, and high-performance redundancy. Download the free trial.'
 category: "solutions"

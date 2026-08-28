@@ -1,6 +1,5 @@
 ---
-title: "Support SafeKit"
-slug: "safekit-support"
+title: "Support SafeKit - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/resources/safekit-support/"
 description: "SafeKit propose trois canaux de support : un support contractuel standard avec signalement d'incidents 24h/24 et 7j/7, une assistance gratuite basée sur l'intelligence artificielle via SafeKit AI, et un programme gratuit de formation et de certification en ligne."
 category: "resources"

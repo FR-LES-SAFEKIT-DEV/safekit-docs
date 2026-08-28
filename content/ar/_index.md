@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: برنامج متكامل للتوافر العالي (SANless) وتجميع التطبيقات (Application Clustering)"
-slug: "high-availability-software-for-application-clustering"
+title: "SafeKit: برنامج متكامل للتوافر العالي (SANless) وتجميع التطبيقات (Application Clustering) - SafeKit HA"
 canonical: "https://safekit.eviden.com/ar/"
 description: "SafeKit هو برنامج متكامل (all-in-one) لتحقيق الـ (HA) بدون شبكة تخزين (SANless) لأنظمة ويندوز ولينكس. احصل على ميزة النسخ المتماثل المتزامن في الوقت الفعلي، وفشل النظام التلقائي (Automatic Failover)، وموازنة الحمل (Load Balancing) في حزمة واحدة بسيطة واقتصادية. ابدأ تجربتك المجانية لمدة 30 يوماً."
 category: "home"

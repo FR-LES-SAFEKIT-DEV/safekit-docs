@@ -1,6 +1,5 @@
 ---
-title: "SafeKit High Availability Module Library: Quick Installation Guides for Windows & Linux"
-slug: "quick-install"
+title: "SafeKit High Availability Module Library: Quick Installation Guides for Windows & Linux - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/"
 description: "Access the complete library of SafeKit quick installation guides. Download pre-configured modules like mirror.safe and farm.safe for real-time replication, load balancing, and failover. Implement SANless high availability for SQL Server, Oracle, Hyper-V, and Linux applications in minutes."
 category: "quick-install"

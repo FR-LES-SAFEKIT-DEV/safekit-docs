@@ -1,6 +1,5 @@
 ---
-title: "SafeKit Release Notes 8.2"
-slug: "safekit-release-notes-8-2"
+title: "SafeKit Release Notes 8.2 - SafeKit HA"
 canonical: "https://safekit.eviden.com/resources/safekit-release-notes-8-2/"
 description: "This document provides information about SafeKit releases: major changes, restrictions and known problems, migration instructions."
 category: "resources"

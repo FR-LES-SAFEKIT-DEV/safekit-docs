@@ -1,6 +1,5 @@
 ---
-title: "Windows High Availability with SafeKit: Install the mirror.safe Module for Failover"
-slug: "safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover"
+title: "Windows High Availability with SafeKit: Install the mirror.safe Module for Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
 description: "Deploy the mirror.safe module for SafeKit to enable synchronous real-time replication and automatic failover on Windows. This guide walks you through setting up a 2-node SANless cluster for critical Windows applications without shared storage."
 category: "quick-install"

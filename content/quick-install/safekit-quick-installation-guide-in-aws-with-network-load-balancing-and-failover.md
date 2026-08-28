@@ -1,6 +1,5 @@
 ---
-title: "AWS Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
-slug: "safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover"
+title: "AWS Network Load Balancing & Failover: Install the SafeKit farm.safe Module - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "Enhance AWS Network Load Balancing with SafeKit's intelligent application monitoring. The farm.safe module provides a dedicated health check for the AWS load balancer, enabling seamless HA at the application level. Achieve automatic self-healing and failover for mission-critical applications."
 category: "quick-install"

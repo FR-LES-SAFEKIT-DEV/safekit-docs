@@ -1,6 +1,5 @@
 ---
-title: "Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites"
-slug: "edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites"
+title: "Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites - SafeKit HA"
 canonical: "https://safekit.eviden.com/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "Edge sites have no data center — but still need HA. SafeKit turns 2 standard servers into a plug-and-play HA cluster: no SAN, no IT staff, automatic failover."
 category: "use-cases"
@@ -41,15 +40,15 @@ SafeKit is specifically designed for edge, branch office, and distributed enterp
 
 Edge Requirement | SafeKit Answer  
 ---|---  
-**No dedicated IT staff on-site** | Automatic failover, no manual intervention required  
-**No SAN/NAS infrastructure** | SANless architecture, local disks only  
-**Remote management** | Web console accessible over HTTPS from any browser  
-**Low hardware footprint** | 2 standard servers or VMs, no special hardware  
-**Works behind firewalls/NAT** | Configurable ports, HTTPS-based console  
-**Multi-site disaster recovery** | Mirror between two geographic sites over stretched VLAN  
-**Air-gapped / offline networks** | No internet dependency; fully self-contained  
-**OEM/embedded deployment** | Silent install, scriptable, embeddable by software publishers  
-**Hundreds of distributed clusters** | Designed for distributed enterprises managing many branches  
+No dedicated IT staff on-site | Automatic failover, no manual intervention required  
+No SAN/NAS infrastructure | SANless architecture, local disks only  
+Remote management | Web console accessible over HTTPS from any browser  
+Low hardware footprint | 2 standard servers or VMs, no special hardware  
+Works behind firewalls/NAT | Configurable ports, HTTPS-based console  
+Multi-site disaster recovery | Mirror between two geographic sites over stretched VLAN  
+Air-gapped / offline networks | No internet dependency; fully self-contained  
+OEM/embedded deployment | Silent install, scriptable, embeddable by software publishers  
+Hundreds of distributed clusters | Designed for distributed enterprises managing many branches  
   
 ## Why Edge OT Environments Are Different
 
@@ -71,31 +70,31 @@ Any site without a data center — where high availability still matters:
 
 Vertical | Typical Edge Site | Critical Application  
 ---|---|---  
-**Physical security & surveillance** | Buildings, campuses, airports | VMS — Milestone, Genetec, Hanwha, Siemens Siveillance  
-**Building management (BMS)** | Office buildings, hospitals, factories | Siemens Desigo CC, Bosch BIS/BVMS  
-**Electronic access control (EACS)** | Secure facilities, campuses | Siemens SiPass, Nedap, Bosch AMS  
-**SCADA & industrial control** | Factories, substations, water plants | Any SCADA, DCS, or HMI software on Windows or Linux  
-**Air traffic control (ATC)** | Airports, control towers | ATC management and radar systems  
-**Operations control centers (OCC)** | Metro, railway, transit hubs | Railway signaling and station management  
-**Maritime** | Ships, naval vessels | Navigation, cargo and onboard management systems  
-**Oil & gas** | Offshore platforms, remote rigs | Process control and safety systems  
-**Telecommunications** | 5G antenna sites, MEC nodes | Multi-access edge computing (MEC) servers  
-**Healthcare** | Clinics, remote diagnostic centers | Medical imaging, patient data, remote diagnostics  
-**Retail** | Stores, branches, warehouses | Point-of-sale and inventory management  
-**Defense** | Forward operating bases, field units | Mission-critical command and communications systems  
+Physical security & surveillance | Buildings, campuses, airports | VMS — Milestone, Genetec, Hanwha, Siemens Siveillance  
+Building management (BMS) | Office buildings, hospitals, factories | Siemens Desigo CC, Bosch BIS/BVMS  
+Electronic access control (EACS) | Secure facilities, campuses | Siemens SiPass, Nedap, Bosch AMS  
+SCADA & industrial control | Factories, substations, water plants | Any SCADA, DCS, or HMI software on Windows or Linux  
+Air traffic control (ATC) | Airports, control towers | ATC management and radar systems  
+Operations control centers (OCC) | Metro, railway, transit hubs | Railway signaling and station management  
+Maritime | Ships, naval vessels | Navigation, cargo and onboard management systems  
+Oil & gas | Offshore platforms, remote rigs | Process control and safety systems  
+Telecommunications | 5G antenna sites, MEC nodes | Multi-access edge computing (MEC) servers  
+Healthcare | Clinics, remote diagnostic centers | Medical imaging, patient data, remote diagnostics  
+Retail | Stores, branches, warehouses | Point-of-sale and inventory management  
+Defense | Forward operating bases, field units | Mission-critical command and communications systems  
   
 ## Edge vs. Data Center HA: Key Differences
 
 Criterion | Data Center HA (WSFC, Pacemaker, VMware HA) | SafeKit Edge HA  
 ---|---|---  
-**Storage** | Requires SAN/NAS shared storage | SANless — local disks only  
-**Hardware** | Dedicated cluster nodes, HBAs, switches | Any two standard x86 servers  
-**OS expertise** | Windows Datacenter or Linux cluster OS skills | Standard Windows/Linux admin skills  
-**On-site staff** | Required for setup and intervention | Not required — fully automatic  
-**Internet/cloud dependency** | Often cloud-managed | Fully air-gap capable  
-**Deployment scale** | Single data center | Hundreds of distributed sites  
-**License cost** | High (Datacenter OS, SAN licenses) | Single affordable software license per cluster  
-**Typical RTO** | 1–5 minutes | Under 1 minute (configurable)  
+Storage | Requires SAN/NAS shared storage | SANless — local disks only  
+Hardware | Dedicated cluster nodes, HBAs, switches | Any two standard x86 servers  
+OS expertise | Windows Datacenter or Linux cluster OS skills | Standard Windows/Linux admin skills  
+On-site staff | Required for setup and intervention | Not required — fully automatic  
+Internet/cloud dependency | Often cloud-managed | Fully air-gap capable  
+Deployment scale | Single data center | Hundreds of distributed sites  
+License cost | High (Datacenter OS, SAN licenses) | Single affordable software license per cluster  
+Typical RTO | 1–5 minutes | Under 1 minute (configurable)  
   
 ## Technical Minimum Requirements
 

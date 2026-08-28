@@ -1,6 +1,5 @@
 ---
-title: "High Availability Architectures & Software Clustering Best Practices"
-slug: "high-availability-architectures-and-best-practices"
+title: "High Availability Architectures & Software Clustering Best Practices - SafeKit HA"
 canonical: "https://safekit.eviden.com/best-practises/high-availability-architectures-and-best-practices/"
 description: "Explore high availability (HA) architectures and best practices for application clustering. Learn how SafeKit software implements mirror and farm clusters without shared disks, providing zero data loss and automatic failover for critical applications."
 category: "best-practises"

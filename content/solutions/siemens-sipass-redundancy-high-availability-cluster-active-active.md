@@ -1,6 +1,5 @@
 ---
-title: "High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster"
-slug: "siemens-sipass-redundancy-high-availability-cluster-active-active"
+title: "High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "Ensure 24/7 uptime for Siemens SiPass access control. SafeKit provides simple SANless high availability with real-time replication and automatic failover on two standard servers. No SAN or specialized IT skills required. Download the free trial."
 category: "solutions"

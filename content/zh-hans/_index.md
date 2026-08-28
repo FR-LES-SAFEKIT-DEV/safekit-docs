@@ -1,6 +1,5 @@
 ---
-title: "SafeKit：全合一 SANless 高可用性与应用程序集群软件"
-slug: "high-availability-software-for-application-clustering"
+title: "SafeKit：全合一 SANless 高可用性与应用程序集群软件 - SafeKit HA"
 canonical: "https://safekit.eviden.com/zh-hans/"
 description: "SafeKit 是一款适用于 Windows 和 Linux 的全合一 SANless 高可用性（HA）软件。在一个简单且极具成本效益的软件包中，即可获得实时同步复制、自动故障转移和负载均衡功能。立即开始您的 30 天免费试用。"
 category: "home"

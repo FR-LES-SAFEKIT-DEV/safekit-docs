@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: All-in-One IIS Load Balancing & High Availability Software"
-slug: "iis-load-balancing-failover"
+title: "SafeKit: All-in-One IIS Load Balancing & High Availability Software - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/iis-load-balancing-failover/"
 description: "SafeKit provides a powerful, software-only IIS load balancing and high availability solution. Replace complex NLB hardware with SafeKit’s integrated virtual IP, application monitoring, and automatic failover. Easily deploy an IIS cluster on standard Windows servers today."
 category: "solutions"

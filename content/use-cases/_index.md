@@ -1,6 +1,5 @@
 ---
-title: "Industry-Specific High Availability Use Cases"
-slug: "use-cases"
+title: "Industry-Specific High Availability Use Cases - SafeKit HA"
 canonical: "https://safekit.eviden.com/use-cases/"
 description: "Discover how SafeKit delivers simple, SANless high availability for critical industries: OEM software, edge sites, VMS, EACS, SCADA, BMS, air traffic control, and metro operations."
 category: "use-cases"

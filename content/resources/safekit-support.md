@@ -1,6 +1,5 @@
 ---
-title: "SafeKit Support"
-slug: "safekit-support"
+title: "SafeKit Support - SafeKit HA"
 canonical: "https://safekit.eviden.com/resources/safekit-support/"
 description: "SafeKit offers three support channels: standard contractual support with 24/7 incident reporting, free AI-powered assistance via SafeKit AI, and a free online certification and training program."
 category: "resources"

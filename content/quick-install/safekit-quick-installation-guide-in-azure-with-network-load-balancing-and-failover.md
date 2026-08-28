@@ -1,6 +1,5 @@
 ---
-title: "Azure Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
-slug: "safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover"
+title: "Azure Network Load Balancing & Failover: Install the SafeKit farm.safe Module - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "Enhance Azure Network Load Balancing with SafeKit's intelligent application monitoring. The farm.safe module provides a dedicated health check for the Azure load balancer, enabling seamless HA at the application level. Achieve automatic self-healing and failover for mission-critical applications."
 category: "quick-install"

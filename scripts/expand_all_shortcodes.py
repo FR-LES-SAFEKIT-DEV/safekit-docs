@@ -3,8 +3,33 @@ import re
 from datetime import datetime
 from xml.dom import minidom
 from xml.etree import ElementTree as ET
+import sys
+from pathlib import Path
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Directory where this script is located
+SCRIPT_DIR = Path(__file__).resolve().parent
+
+# Candidates for BASE_DIR based on where 'content/' actually resides
+# 1. Local execution: project_root/safekit-hugo/content
+# 2. GitHub / Root execution (script inside scripts/): parent/content
+candidates = [
+    SCRIPT_DIR / "safekit-hugo",
+    SCRIPT_DIR.parent,
+]
+
+BASE_DIR = None
+
+# Find the first valid base directory containing a 'content' folder
+for path in candidates:
+    if (path / "content").is_dir():
+        BASE_DIR = path
+        break
+
+if BASE_DIR is None:
+    print("Error: Unable to locate project root ('content/' directory not found).", file=sys.stderr)
+    print(f"Searched candidates relative to: {SCRIPT_DIR}", file=sys.stderr)
+    sys.exit(1)
+    
 BASE_URL = "https://safekit-dev.eviden.com"
 
 # Shortcodes à ignorer et supprimer complètement (ainsi que leurs H2)
@@ -106,6 +131,8 @@ def rebuild_topics_from_h2(md_content, filename=""):
     """
     Extrait tous les titres ## et <h2> présents dans le corps du document
     après expansion/suppression des shortcodes et régénère la ligne "topics:".
+
+    Retourne (nouveau_contenu, nombre_de_h2_trouvés).
     """
     hugo_anchor_pattern = re.compile(r"\s*\{[#:][^\}]+\}\s*")
     extracted_h2s = []
@@ -133,17 +160,13 @@ def rebuild_topics_from_h2(md_content, filename=""):
         safe_h2s = [h2.replace('"', '\\"') for h2 in extracted_h2s]
         new_topics_str = f'topics: "{", ".join(safe_h2s)}"\n'
 
-        print(f"  [REBUILD TOPICS] [{filename}] ({len(extracted_h2s)} H2 trouvés)")
-        for h2 in extracted_h2s:
-            print(f'    ├─ "{h2}"')
-
         if topics_line_pattern.search(md_content):
-            return topics_line_pattern.sub(new_topics_str, md_content)
+            new_content = topics_line_pattern.sub(new_topics_str, md_content)
         else:
-            return re.sub(r"^(---\s*\r?\n)", r"\1" + new_topics_str, md_content, count=1)
+            new_content = re.sub(r"^(---\s*\r?\n)", r"\1" + new_topics_str, md_content, count=1)
+        return new_content, len(extracted_h2s)
     else:
-        print(f"  [REBUILD TOPICS] [{filename}] Aucun H2 -> suppression du champ topics")
-        return topics_line_pattern.sub("", md_content)
+        return topics_line_pattern.sub("", md_content), 0
 
 
 def fix_links(md_content):
@@ -188,7 +211,7 @@ def expand_file(input_file, output_file, shortcodes_dir):
         md_content = new_content
 
     # 2. Régénération intégrale des topics à partir des H2 restants
-    md_content = rebuild_topics_from_h2(md_content, filename=filename)
+    md_content, h2_count = rebuild_topics_from_h2(md_content, filename=filename)
 
     # 3. Nettoyage des liens et des sauts de ligne excessifs
     md_content = fix_links(md_content)
@@ -198,7 +221,7 @@ def expand_file(input_file, output_file, shortcodes_dir):
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(md_content)
 
-    return lang
+    return lang, h2_count
 
 
 def generate_language_sitemap(urls, output_path):
@@ -244,9 +267,16 @@ def generate_sitemap_index(sitemap_urls, output_path):
 
 
 def process_content_directory():
-    content_dir = os.path.join(BASE_DIR, "content")
-    public_dir = os.path.join(BASE_DIR, "public")
-    shortcodes_dir = os.path.join(BASE_DIR, "layouts", "shortcodes")
+    if os.path.exists(os.path.join(BASE_DIR, "safekit-hugo")):
+        project_dir = os.path.join(BASE_DIR, "safekit-hugo")
+    elif os.path.exists(os.path.join(BASE_DIR, "content")):
+        project_dir = BASE_DIR
+    else:
+        project_dir = BASE_DIR
+
+    content_dir = os.path.join(project_dir, "content")
+    public_dir = os.path.join(project_dir, "public")
+    shortcodes_dir = os.path.join(project_dir, "layouts", "shortcodes")
 
     count = 0
     urls_by_lang = {}
@@ -273,14 +303,15 @@ def process_content_directory():
 
                 output_file = os.path.join(public_dir, output_rel_path)
 
-                lang = expand_file(input_file, output_file, shortcodes_dir)
+                lang, h2_count = expand_file(input_file, output_file, shortcodes_dir)
                 count += 1
 
                 url_path = output_rel_path.replace("\\", "/")
                 md_url = f"{BASE_URL}/{url_path}"
                 urls_by_lang.setdefault(lang, []).append(md_url)
 
-                print(f"[OK] ({lang}) public/{output_rel_path}\n")
+                topics_note = f"{h2_count} H2 trouvés" if h2_count else "aucun H2"
+                print(f"[OK] ({lang}) public/{output_rel_path} ({topics_note})")
 
     # Génération dynamique des sitemaps par langue
     index_sitemap_urls = []

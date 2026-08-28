@@ -1,6 +1,5 @@
 ---
-title: "SafeKit High Availability for Bosch BVMS: SANless Video Management Redundancy"
-slug: "bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk"
+title: "SafeKit High Availability for Bosch BVMS: SANless Video Management Redundancy - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Ensure 24/7 availability for Bosch BVMS with SafeKit. Our simplest 2-node SANless cluster provides automatic failover and real-time replication without expensive shared disks. Protect your Video Management and Building Management System today."
 category: "solutions"

@@ -1,6 +1,5 @@
 ---
-title: "PostgreSQL High Availability with SafeKit: Install the postgresql.safe Module for Failover"
-slug: "safekit-quick-installation-guide-with-postgresql"
+title: "PostgreSQL High Availability with SafeKit: Install the postgresql.safe Module for Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-postgresql/"
 description: "Deploy the postgresql.safe module for SafeKit to enable synchronous real-time replication and automatic failover of PostgreSQL on Windows and Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"

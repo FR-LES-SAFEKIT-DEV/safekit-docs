@@ -1,6 +1,5 @@
 ---
-title: "Best and Worst High Availability Use Cases: A SafeKit Implementation Guide"
-slug: "best-worst-use-cases-high-availability"
+title: "Best and Worst High Availability Use Cases: A SafeKit Implementation Guide - SafeKit HA"
 canonical: "https://safekit.eviden.com/use-cases/best-worst-use-cases-high-availability/"
 description: "Identify the best and worst use cases for high availability. Learn where SafeKit excels in software-defined clustering for Windows and Linux, and discover when traditional shared-storage or hardware-based HA might fail your business."
 category: "use-cases"

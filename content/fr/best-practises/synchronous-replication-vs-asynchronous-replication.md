@@ -1,6 +1,5 @@
 ---
-title: "Réplication synchrone vs. asynchrone : comment SafeKit garantit-il l’absence de perte de données ?"
-slug: "synchronous-replication-vs-asynchronous-replication"
+title: "Réplication synchrone vs. asynchrone : comment SafeKit garantit-il l’absence de perte de données ? - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/synchronous-replication-vs-asynchronous-replication/"
 description: "Comparez la réplication synchrone et asynchrone pour la continuité d'activité. Découvrez comment SafeKit utilise la réplication synchrone en temps réel pour garantir l'absence de perte de données (RPO=0) dans les clusters haute disponibilité, et pourquoi la réplication asynchrone est mieux adaptée à la reprise après sinistre à distance."
 category: "best-practises"

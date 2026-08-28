@@ -1,6 +1,5 @@
 ---
-title: "SafeKit High Availability for Hanwha Wisenet: SANless BMS Redundancy"
-slug: "hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk"
+title: "SafeKit High Availability for Hanwha Wisenet: SANless BMS Redundancy - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Protect Hanwha Wisenet with SafeKit. Our 2-node SANless cluster provides the simplest automatic failover and real-time replication for your Building Management System without a SAN. Easy to deploy and manage. Get your free trial."
 category: "solutions"

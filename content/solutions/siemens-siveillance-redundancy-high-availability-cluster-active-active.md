@@ -1,6 +1,5 @@
 ---
-title: "High Availability and Redundancy for Siemens Siveillance Suite: Active-Active SANless Clustering"
-slug: "siemens-siveillance-redundancy-high-availability-cluster-active-active"
+title: "High Availability and Redundancy for Siemens Siveillance Suite: Active-Active SANless Clustering - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
 description: "Ensure 100% uptime for Siemens Siveillance Suite with SafeKit. Achieve SANless high availability, synchronous replication, and active-active clustering without complex hardware. Download the free trial today."
 category: "solutions"

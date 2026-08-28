@@ -1,6 +1,5 @@
 ---
-title: "Windows Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
-slug: "safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover"
+title: "Windows Network Load Balancing & Failover: Install the SafeKit farm.safe Module - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "Learn how to deploy the farm.safe module for Windows Network Load Balancing and automatic failover. This guide shows you how to build a highly available cluster for web services and applications using a virtual IP, without the need for external hardware load balancers or complex configuration."
 category: "quick-install"

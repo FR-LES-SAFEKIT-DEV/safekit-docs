@@ -1,6 +1,5 @@
 ---
-title: "Essai gratuit de SafeKit : testez la haute disponibilité des applications et des machines virtuelles."
-slug: "safekit-free-trial"
+title: "Essai gratuit de SafeKit : testez la haute disponibilité des applications et des machines virtuelles. - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/resources/safekit-free-trial/"
 description: "Téléchargez la version d'essai gratuite de SafeKit pour tester la haute disponibilité des applications et des machines virtuelles. SafeKit propose une architecture sans SAN pour Windows et Linux, garantissant l'absence de perte de données et un basculement automatique sans SAN."
 category: "resources"

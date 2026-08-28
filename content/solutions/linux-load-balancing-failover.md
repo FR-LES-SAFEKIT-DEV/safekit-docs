@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: All-in-One Linux Load Balancing & High Availability Software"
-slug: "linux-load-balancing-failover"
+title: "SafeKit: All-in-One Linux Load Balancing & High Availability Software - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/linux-load-balancing-failover/"
 description: "SafeKit provides a powerful, software-only Linux load balancing and high availability solution. Replace complex NLB hardware with SafeKit’s integrated virtual IP, application monitoring, and automatic failover. Easily deploy an SafeKit cluster on standard Linux servers today."
 category: "solutions"

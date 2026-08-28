@@ -1,6 +1,5 @@
 ---
-title: "SafeKit High Availability for Bosch AMS: SANless Redundancy and Failover"
-slug: "bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk"
+title: "SafeKit High Availability for Bosch AMS: SANless Redundancy and Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Ensure 100% uptime for Bosch AMS with SafeKit. Our 2-node SANless cluster provides real-time replication and automatic failover without the complexity of a SAN. Easy to deploy, high-performance redundancy for access management. Download the free trial."
 category: "solutions"

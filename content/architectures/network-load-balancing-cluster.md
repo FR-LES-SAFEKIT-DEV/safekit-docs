@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: All-in-One Windows or Linux Network Load Balancing & High Availability Software"
-slug: "network-load-balancing-cluster"
+title: "SafeKit: All-in-One Windows or Linux Network Load Balancing & High Availability Software - SafeKit HA"
 canonical: "https://safekit.eviden.com/architectures/network-load-balancing-cluster/"
 description: "SafeKit delivers high-performance network load balancing (NLB) and automatic failover in a single software package. Replace expensive hardware balancers with SafeKit’s kernel-level virtual IP management for Windows and Linux. Ideal for OEM integration and simplified cluster management."
 category: "architectures"

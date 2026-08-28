@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: Cloud Load Balancing & Application High Availability Farm Cluster"
-slug: "cloud-load-balancing-cluster-failover"
+title: "SafeKit: Cloud Load Balancing & Application High Availability Farm Cluster - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/cloud-load-balancing-cluster-failover/"
 description: "Enhance Cloud Load Balancer with SafeKit's intelligent application monitoring. Achieve seamless high availability with deep health checks, automatic self-healing, and failover for mission-critical farm clusters."
 category: "solutions"

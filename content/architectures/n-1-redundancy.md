@@ -1,6 +1,5 @@
 ---
-title: "N-1 Redundancy Clustering: High Availability for Multiple Applications with One Backup"
-slug: "n-1-redundancy"
+title: "N-1 Redundancy Clustering: High Availability for Multiple Applications with One Backup - SafeKit HA"
 canonical: "https://safekit.eviden.com/architectures/n-1-redundancy/"
 description: "Optimize your data center with SafeKit N-1 redundancy. Deploy N mirror modules over N+1 servers to provide high availability for multiple applications with a single shared backup. Eliminate SAN requirements and reduce hardware costs with real-time replication for Windows and Linux. Learn more."
 category: "architectures"

@@ -1,6 +1,5 @@
 ---
-title: "Cloud-Agnostic High Availability: SafeKit Synchronous Replication & Failover"
-slug: "cloud-high-availability-cluster-synchronous-replication-failover"
+title: "Cloud-Agnostic High Availability: SafeKit Synchronous Replication & Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
 description: "Deploy a simple Cloud-Agnostic High Availability: SafeKit Synchronous Replication & Failover HA cluster with SafeKit. Our shared-nothing architecture provides synchronous replication, automatic failover, and RPO=0 for Windows & Linux applications without the cost of cloud shared disks."
 category: "solutions"

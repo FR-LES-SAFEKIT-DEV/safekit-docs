@@ -1,6 +1,5 @@
 ---
-title: "Haute disponibilité et redondance pour les logiciels de gestion vidéo (VMS)"
-slug: "video-management-software-vms-redundancy"
+title: "Haute disponibilité et redondance pour les logiciels de gestion vidéo (VMS) - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/use-cases/video-management-software-vms-redundancy/"
 description: "Évitez les pertes vidéo avec SafeKit, le logiciel de haute disponibilité le plus simple pour la redondance des systèmes de gestion vidéo (VMS). Bénéficiez d'une gestion continue 24h/24 et 7j/7 grâce au clustering sans SAN à 2 nœuds, à la réplication synchrone et au basculement automatique. Compatible avec Milestone XProtect, Genetec, Siemens, Bosch et tous les VMS Windows/Linux. Garantissez une disponibilité maximale (RPO=0) sans matériel complexe."
 category: "use-cases"

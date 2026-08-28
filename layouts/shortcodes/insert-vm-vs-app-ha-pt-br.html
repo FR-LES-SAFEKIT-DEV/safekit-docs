@@ -9,7 +9,6 @@ SafeKit oferece duas abordagens principais para garantir a continuidade do negó
 
 Recurso de Comparação | VM HA com módulo SafeKit Hyper-V ou KVM | Application HA com módulos de aplicação SafeKit  
 ---|---|---  
-Diagrama de Implantação |  |   
 Escopo de Failover | SafeKit em 2 hipervisores: replicação e failover da VM completa. | SafeKit em 2 máquinas virtuais ou físicas: replicação e failover no nível da aplicação.  
 Dados Replicados | Replica mais dados (Aplicação + Sistema Operacional). | Replica apenas os dados da aplicação, resultando em volumes menores de dados.  
 Processo de Recuperação &amp; Velocidade (RTO) | Reinicialização da VM no hipervisor 2 se o hipervisor 1 falhar. O tempo de recuperação depende da reinicialização do sistema operacional. Monitor de VM e mecanismo de failover. | Tempo de recuperação rápido com reinício da aplicação no SO2 se o servidor 1 falhar. Tipicamente cerca de 1 minuto ou menos (baixo RTO). Monitor de aplicação e failover por software.  

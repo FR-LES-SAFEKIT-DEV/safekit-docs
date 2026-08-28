@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: All-in-One Apache Load Balancing & High Availability Software"
-slug: "apache-load-balancing-failover-2"
+title: "SafeKit: All-in-One Apache Load Balancing & High Availability Software - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/apache-load-balancing-failover-2/"
 description: "SafeKit provides a powerful, software-only Apache load balancing and high availability solution. Replace complex NLB hardware with SafeKit’s integrated virtual IP, application monitoring, and automatic failover. Easily deploy an Apache cluster on standard Windows servers today."
 category: "solutions"

@@ -1,6 +1,5 @@
 ---
-title: "Haute disponibilité et redondance pour les systèmes de gestion technique du bâtiment (GTB)"
-slug: "building-management-system-software-bms-redundancy"
+title: "Haute disponibilité et redondance pour les systèmes de gestion technique du bâtiment (GTB) - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/use-cases/building-management-system-software-bms-redundancy/"
 description: "Garantissez une disponibilité à 100 % pour votre bâtiment intelligent grâce à SafeKit. Notre logiciel sans SAN, doté d'une redondance à 2 nœuds, assure une réplication synchrone en temps réel et un basculement automatique pour tout système de gestion technique du bâtiment (GTB), notamment Siemens, Honeywell, Schneider Electric et Johnson Controls. Bénéficiez d'une garantie zéro perte de données (RPO=0) et d'une résilience opérationnelle optimale pour vos systèmes critiques de chauffage, ventilation, climatisation et sécurité sous Windows et Linux."
 category: "use-cases"

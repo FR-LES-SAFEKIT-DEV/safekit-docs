@@ -1,6 +1,5 @@
 ---
-title: "Google GCP High Availability: SafeKit Synchronous Replication & Failover"
-slug: "gcp-high-availability-cluster-synchronous-replication-failover"
+title: "Google GCP High Availability: SafeKit Synchronous Replication & Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
 description: "Deploy a simple Google GCP HA cluster with SafeKit. Our shared-nothing architecture provides synchronous replication, automatic failover, and RPO=0 for Windows & Linux applications without the cost of cloud shared disks."
 category: "solutions"

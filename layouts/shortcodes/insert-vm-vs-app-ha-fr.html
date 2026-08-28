@@ -9,7 +9,6 @@ SafeKit propose deux approches principales pour assurer la continuité d’activ
 
 Critère de comparaison | VM HA avec module SafeKit Hyper-V ou KVM | HA applicative avec modules applicatifs SafeKit  
 ---|---|---  
-Schéma de déploiement |  |   
 Périmètre du basculement | SafeKit dans 2 hyperviseurs : réplication et basculement de la VM complète. | SafeKit sur 2 machines virtuelles ou physiques : réplication et basculement au niveau applicatif.  
 Données répliquées | Réplication d’un volume plus important de données (application + système d’exploitation). | Réplication uniquement des données applicatives, réduisant le volume de données.  
 Processus et vitesse de reprise (RTO) | Redémarrage de la VM sur l’hyperviseur 2 si l’hyperviseur 1 tombe. Le temps de reprise dépend du redémarrage de l’OS. Vérification de la VM et mécanisme de basculement. | Temps de reprise rapide avec redémarrage de l’application sur OS2 si le serveur 1 tombe. Typiquement autour d’une minute ou moins (RTO faible). Vérification applicative et basculement logiciel.  

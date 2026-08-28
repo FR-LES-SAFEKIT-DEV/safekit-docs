@@ -1,6 +1,5 @@
 ---
-title: "Microsoft NLB VMware Alternative: Multicast and Unicast Issues Solved"
-slug: "microsoft-nlb-vmware-multicast-unicast-alternative"
+title: "Microsoft NLB VMware Alternative: Multicast and Unicast Issues Solved - SafeKit HA"
 canonical: "https://safekit.eviden.com/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
 description: "Struggling with Microsoft NLB multicast or unicast in VMware? SafeKit proposes a SANless farm cluster as a simple alternative. Get automatic load balancing and failover on Windows and Linux without static ARP entries, MAC spoofing, or specialized network configuration."
 category: "best-practises"

@@ -1,6 +1,5 @@
 ---
-title: "SafeKit High Availability for Bosch BIS: 2-Node Cluster Without Shared Disk"
-slug: "bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk"
+title: "SafeKit High Availability for Bosch BIS: 2-Node Cluster Without Shared Disk - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Achieve 24/7 uptime for Bosch Building Integration System (BIS) with SafeKit. Our simplest 2-node cluster provides real-time replication and automatic failover without a SAN or shared disk. Cost-effective and easy to deploy. Download the free trial."
 category: "solutions"

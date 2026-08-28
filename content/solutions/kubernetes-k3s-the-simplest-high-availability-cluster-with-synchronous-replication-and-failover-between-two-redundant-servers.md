@@ -1,6 +1,5 @@
 ---
-title: "Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover"
-slug: "kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers"
+title: "Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Achieve K3s high availability on 2 nodes without external storage or etcd quorum. Learn how SafeKit provides zero-data-loss replication and automatic failover."
 category: "solutions"
@@ -83,8 +82,8 @@ SafeKit also provides **Farm Clusters** with native **Network Load Balancing and
 2-Node K3s Cluster | SafeKit PRIM (Primary Node) | SafeKit SECOND (Secondary Node)  
 ---|---|---  
 Workload Execution | K3s master and agent services are active, managing cluster orchestration and running pods. | K3s master and agent services remain active, providing parallel processing and high availability.  
-NFS Storage & PVs |  • Hosts Virtual IP and NFS Port<br>• Manages active exported NFS shares<br>• Stores K3s Persistent Volumes (PVs)  | **Synchronous Mirroring:** SafeKit replicates all persistent volumes in real-time to ensure zero data loss.  
-Configuration Database |  • Hosts Virtual IP and MariaDB Port<br>• Manages active K3s configuration database  | **Database Replication:** The MariaDB database is mirrored synchronously, preserving cluster state for failover.  
+NFS Storage & PVs |  • Hosts Virtual IP and NFS Port<br>• Manages active exported NFS shares<br>• Stores K3s Persistent Volumes (PVs)  | Synchronous Mirroring: SafeKit replicates all persistent volumes in real-time to ensure zero data loss.  
+Configuration Database |  • Hosts Virtual IP and MariaDB Port<br>• Manages active K3s configuration database  | Database Replication: The MariaDB database is mirrored synchronously, preserving cluster state for failover.  
   
 **Automatic Failover Mechanism:** In the event of a Primary node failure, SafeKit automatically migrates the Virtual IPs and storage services to the Secondary node, ensuring uninterrupted service for the K3s cluster.
 
@@ -191,12 +190,12 @@ Beyond simple status icons, the interface provides **one-click failover orchestr
 
 Capability | SafeKit (K3s.safe) | MetalLB + Longhorn (Standard K8s)  
 ---|---|---  
-Architecture | **All-in-One:** Integrated networking, replication, and failover in a single package. | **DIY (Do It Yourself) Stack:** Multiple independent packages required (CNI, CSI, LoadBalancer).  
-Hardware Efficiency | **Pure 2-Node HA:** Full redundancy without a 3rd "witness" or arbiter node. | **3-Node Minimum:** Typically requires odd numbers for Etcd quorum and storage safety.  
-Networking (VIP) | **Native:** Virtual IP managed at the OS level; transparent to K3s. | **Complex:** Requires MetalLB installation with L2 or BGP configuration using dedicated speaker pods which consume CPU/RAM on each node.  
-Storage Requirements | **Byte-Level Synchronous:** Real-time file replication of existing directories; works on standard system disks; byte-level file replication with minimal CPU/Network overhead. | **Block-Level:** Distributed block storage (Longhorn) using dedicated storage pods; higher resource consumption.  
-Failover Intelligence | **Independent Stability:** SafeKit operates outside the container runtime. It monitors the OS and hardware directly, ensuring failover even if the Kubernetes control plane or container engine hangs. | **Circular Dependency:** Failover logic is hosted _inside_ the pods it is meant to protect. If the host OS or K3s engine hangs, the management pods (MetalLB/Longhorn) also freeze, often requiring manual triage to break the "lock."  
-Administration | **Simplified:** Manageable via a single web console; no Kubernetes expert required. | **Specialized:** Requires deep knowledge of YAML, Helm, and K8s internal controllers.  
+Architecture | All-in-One: Integrated networking, replication, and failover in a single package. | DIY (Do It Yourself) Stack: Multiple independent packages required (CNI, CSI, LoadBalancer).  
+Hardware Efficiency | Pure 2-Node HA: Full redundancy without a 3rd "witness" or arbiter node. | 3-Node Minimum: Typically requires odd numbers for Etcd quorum and storage safety.  
+Networking (VIP) | Native: Virtual IP managed at the OS level; transparent to K3s. | Complex: Requires MetalLB installation with L2 or BGP configuration using dedicated speaker pods which consume CPU/RAM on each node.  
+Storage Requirements | Byte-Level Synchronous: Real-time file replication of existing directories; works on standard system disks; byte-level file replication with minimal CPU/Network overhead. | Block-Level: Distributed block storage (Longhorn) using dedicated storage pods; higher resource consumption.  
+Failover Intelligence | Independent Stability: SafeKit operates outside the container runtime. It monitors the OS and hardware directly, ensuring failover even if the Kubernetes control plane or container engine hangs. | Circular Dependency: Failover logic is hosted _inside_ the pods it is meant to protect. If the host OS or K3s engine hangs, the management pods (MetalLB/Longhorn) also freeze, often requiring manual triage to break the "lock."  
+Administration | Simplified: Manageable via a single web console; no Kubernetes expert required. | Specialized: Requires deep knowledge of YAML, Helm, and K8s internal controllers.  
   
 **In summary** , while a standard DIY stack (MetalLB + Longhorn) offers modularity for Kubernetes experts, it creates a **circular dependency** where the storage and networking tools are vulnerable to the same node failures they are designed to manage. **SafeKit** breaks this loop by operating as an independent infrastructure layer; it provides a more robust, hardware-agnostic 2-node HA solution that remains operational even if the Kubernetes engine or host OS hangs. This ensures automated recovery and data integrity without the heavy resource overhead, mandatory three-node quorum, or configuration complexity required by traditional distributed block storage and networking overlays.
 
@@ -208,9 +207,9 @@ While this video demonstrates SafeKit's high availability for Microsoft SQL Serv
 
 ### Video Highlights
 
-  1. 🎬 [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  2. 🎬 [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
-  3. 🎬 [Start and test SQL replication, migration, failover on crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
+  1. 🎬 [2 nodes with SQL Server](<https://youtu.be/mGwEguDnnH0?t=0s>) (0:32)
+  2. 🎬 [Configure the cluster and the mirror.safe module](<https://youtu.be/mGwEguDnnH0?t=32s>) (3:58)
+  3. 🎬 [Start and test SQL replication, migration, failover on crash](<https://youtu.be/mGwEguDnnH0?t=270s>) (4:17)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 

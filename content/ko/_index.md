@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: 올인원 SANless 고가용성(HA) 및 애플리케이션 클러스터링 소프트웨어"
-slug: "high-availability-software-for-application-clustering"
+title: "SafeKit: 올인원 SANless 고가용성(HA) 및 애플리케이션 클러스터링 소프트웨어 - SafeKit HA"
 canonical: "https://safekit.eviden.com/ko/"
 description: "SafeKit은 Windows 및 Linux를 위한 올인원 SANless HA 소프트웨어입니다. 실시간 동기식 복제, 자동 장애 조치(failover), 부하 분산(load balancing) 기능을 하나의 단순하고 비용 효율적인 패키지로 제공받으세요. 지금 30일 무료 체험판을 시작해 보세요."
 category: "home"

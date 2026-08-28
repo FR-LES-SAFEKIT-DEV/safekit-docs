@@ -1,6 +1,5 @@
 ---
-title: "Simple Linux KVM High Availability without Shared Storage"
-slug: "linux-kvm-high-availability-replication-automatic-failover-load-balancing"
+title: "Simple Linux KVM High Availability without Shared Storage - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
 description: "Achieve Linux KVM high availability without a SAN. SafeKit provides synchronous replication and automatic failover for 2-node KVM clusters. Simplify your Linux VM redundancy and lower TCO today."
 category: "solutions"

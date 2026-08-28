@@ -1,6 +1,5 @@
 ---
-title: "SafeKit High Availability for Hanwha Vision: SANless Building Management Redundancy"
-slug: "hanwha-vision-cluster-without-shared-storage-on-a-san"
+title: "SafeKit High Availability for Hanwha Vision: SANless Building Management Redundancy - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
 description: "Ensure 24/7 uptime for Hanwha Vision with SafeKit. Our simplest 2-node SANless cluster provides automatic failover and real-time replication without a SAN. High availability for your Building Management System. Download the free trial."
 category: "solutions"

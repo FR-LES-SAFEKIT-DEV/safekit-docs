@@ -1,6 +1,5 @@
 ---
-title: "The Simplest Milestone XProtect High Availability: 2-Node Synchronous Replication & Failover"
-slug: "milestone-xprotect-corporate-high-availability-synchronous-replication-failover"
+title: "The Simplest Milestone XProtect High Availability: 2-Node Synchronous Replication & Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/"
 description: "The simplest way to implement Milestone XProtect High Availability. SafeKit provides a 2-node SANless cluster with synchronous replication and automatic failover—no AD or specialized skills required."
 category: "solutions"

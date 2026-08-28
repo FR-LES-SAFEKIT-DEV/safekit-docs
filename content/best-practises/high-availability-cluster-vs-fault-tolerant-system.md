@@ -1,6 +1,5 @@
 ---
-title: "HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy"
-slug: "high-availability-cluster-vs-fault-tolerant-system"
+title: "HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy - SafeKit HA"
 canonical: "https://safekit.eviden.com/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
 description: "Compare HA clusters vs. fault tolerant systems. Learn how SafeKit proposes a SANless software HA cluster that protects against both hardware and software failures. Reduce costs by eliminating specialized FT hardware while ensuring zero data loss (RPO 0)."
 category: "best-practises"
@@ -40,13 +39,13 @@ When protecting critical applications against failures, two main approaches exis
 
 Criteria | Software high availability cluster | Fault-tolerant system  
 ---|---|---  
-**Product** | [SafeKit on Windows and Linux](</>) | Fault tolerant products  
-**Hardware / hypervisor** | No dedicated server, no dedicated hypervisor. Works with the standard and free hypervisor of Windows, Hyper-V, included in Windows kernel for servers and PCs. Works with the standard and free hypervisor KVM (Kernel-based Virtual Machine) integrated in mainline Linux kernel. Each [server can be the failover server of the other one for multiple applications](</architectures/active-active-cluster-real-time-replication/>). | Dedicated hardware or dedicated hypervisor. The secondary server is dedicated to the execution of the same application synchronized at the instruction level.  
-**Software failure** | Software failure supported with restart in another OS environment. | Software exception on both servers at the same time on the same OS.  
-**Smooth upgrade/fix of application and OS** | Yes — Smooth upgrade/fix of application and OS possible server by server. N and N+1 versions can coexist. | No — Same application and OS image on both servers.  
-**RTO/RPO** | The recovery time with SafeKit ([RTO](</best-practises/what-is-rpo-and-rto-with-examples/>)) depends on the time to detect and to restart the application (about 1 minute). The data loss with SafeKit ([RPO](</best-practises/what-is-rpo-and-rto-with-examples/>)) is zero as the replication is synchronous. | The recovery time (RTO) of a fault tolerant system is zero. The application is not restarted in case of failure and continues its execution on the secondary server. The data loss (RPO) is also zero.  
-**Flexibility** | Can run on any type of server with standard Windows and Linux OS | Depends on specific hardware or on specific hypervisors  
-**Suited for** | [Software editors which want to add a simple high availability option to their application](</use-cases/application-clustering-software/>) | Environment where hardware failure is the main concern  
+Product | [SafeKit on Windows and Linux](</>) | Fault tolerant products  
+Hardware / hypervisor | No dedicated server, no dedicated hypervisor. Works with the standard and free hypervisor of Windows, Hyper-V, included in Windows kernel for servers and PCs. Works with the standard and free hypervisor KVM (Kernel-based Virtual Machine) integrated in mainline Linux kernel. Each [server can be the failover server of the other one for multiple applications](</architectures/active-active-cluster-real-time-replication/>). | Dedicated hardware or dedicated hypervisor. The secondary server is dedicated to the execution of the same application synchronized at the instruction level.  
+Software failure | Software failure supported with restart in another OS environment. | Software exception on both servers at the same time on the same OS.  
+Smooth upgrade/fix of application and OS | Yes — Smooth upgrade/fix of application and OS possible server by server. N and N+1 versions can coexist. | No — Same application and OS image on both servers.  
+RTO/RPO | The recovery time with SafeKit ([RTO](</best-practises/what-is-rpo-and-rto-with-examples/>)) depends on the time to detect and to restart the application (about 1 minute). The data loss with SafeKit ([RPO](</best-practises/what-is-rpo-and-rto-with-examples/>)) is zero as the replication is synchronous. | The recovery time (RTO) of a fault tolerant system is zero. The application is not restarted in case of failure and continues its execution on the secondary server. The data loss (RPO) is also zero.  
+Flexibility | Can run on any type of server with standard Windows and Linux OS | Depends on specific hardware or on specific hypervisors  
+Suited for | [Software editors which want to add a simple high availability option to their application](</use-cases/application-clustering-software/>) | Environment where hardware failure is the main concern  
   
 **In summary** , software high availability with SafeKit provides a cost-effective, flexible solution that runs on standard hardware and supports rolling upgrades, with near-zero downtime (RTO ~1 minute) and zero data loss. Fault-tolerant systems offer instant failover (RTO = 0) but require dedicated hardware and lack flexibility for independent software updates.
 

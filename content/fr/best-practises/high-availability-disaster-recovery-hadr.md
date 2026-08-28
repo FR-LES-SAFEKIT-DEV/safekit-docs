@@ -1,6 +1,5 @@
 ---
-title: "Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre"
-slug: "high-availability-disaster-recovery-hadr"
+title: "Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-disaster-recovery-hadr/"
 description: "Élaborez une stratégie de haute disponibilité et de reprise après sinistre (HA/DR) robuste en combinant SafeKit pour la réplication synchrone (RPO=0) avec une sauvegarde asynchrone pour la reprise après sinistre hors site. Garantissez la disponibilité des applications et l'intégrité des données 24h/24 et 7j/7 sous Windows et Linux grâce à cette approche à deux niveaux."
 category: "best-practises"
@@ -112,14 +111,14 @@ Pour bâtir une infrastructure véritablement résiliente, vous devez intégrer 
 
 Critères | Réseau rapide (LAN/VLAN) | Réseau lent (WAN)  
 ---|---|---  
-**Objectif principal** | Redondance locale & Haute Disponibilité | Reprise d'activité inter-sites (DR)  
-**Cas d'usage** | Même Data Center ou mode Campus | Data Centers distants ou régions Cloud  
-**Type de réplication** | Synchrone (Temps réel) | Asynchrone / Sauvegarde  
-**RPO (Perte de données)** | Nul (RPO = 0) | Perte de données potentielle (RPO > 0)  
-**Processus de basculement** | Automatique | Manuel (Décision de l'administrateur)  
-**Routage du trafic** | Adresse IP Virtuelle (VIP) | Niveau DNS (dépend du TTL)  
-**Contrainte de latence** | Faible (généralement < 2ms) | Supporte une latence élevée  
-**But de récupération** | Continuité d'activité immédiate | Sécurité & Rétention des données  
+Objectif principal | Redondance locale & Haute Disponibilité | Reprise d'activité inter-sites (DR)  
+Cas d'usage | Même Data Center ou mode Campus | Data Centers distants ou régions Cloud  
+Type de réplication | Synchrone (Temps réel) | Asynchrone / Sauvegarde  
+RPO (Perte de données) | Nul (RPO = 0) | Perte de données potentielle (RPO > 0)  
+Processus de basculement | Automatique | Manuel (Décision de l'administrateur)  
+Routage du trafic | Adresse IP Virtuelle (VIP) | Niveau DNS (dépend du TTL)  
+Contrainte de latence | Faible (généralement < 2ms) | Supporte une latence élevée  
+But de récupération | Continuité d'activité immédiate | Sécurité & Rétention des données  
   
 ## Guide Vidéo : Comment implémenter le HADR avec SafeKit {#videoguide-hadr-safekit}
 
@@ -129,10 +128,10 @@ Découvrez comment combiner la **Haute Disponibilité (HA)** et la **Reprise d'A
 
 ### Points clés de la vidéo
 
-  1. 🎬 [Présentation de l'architecture : HADR SafeKit sur VLAN étendu](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=0s>) (0:56)
-  2. 🎬 [Comprendre le mirroring synchrone et le double acquittement](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=56s>) (1:26)
-  3. 🎬 [Mécanismes de basculement : Gratuitous ARP (GARP) et IP virtuelle](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=142s>) (1:53)
-  4. 🎬 [Conception pour WAN lent : Stratégies HA vs Sauvegarde](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=255s>) (2:27)
+  1. 🎬 [Présentation de l'architecture : HADR SafeKit sur VLAN étendu](<https://youtu.be/3zwEWDCiojQ?t=0s>) (0:56)
+  2. 🎬 [Comprendre le mirroring synchrone et le double acquittement](<https://youtu.be/3zwEWDCiojQ?t=56s>) (1:26)
+  3. 🎬 [Mécanismes de basculement : Gratuitous ARP (GARP) et IP virtuelle](<https://youtu.be/3zwEWDCiojQ?t=142s>) (1:53)
+  4. 🎬 [Conception pour WAN lent : Stratégies HA vs Sauvegarde](<https://youtu.be/3zwEWDCiojQ?t=255s>) (2:27)
 
 
 ### Vidéo SafeKit : Comment mettre en œuvre la haute disponibilité et la reprise après sinistre (HADR) avec SafeKit (7:40)

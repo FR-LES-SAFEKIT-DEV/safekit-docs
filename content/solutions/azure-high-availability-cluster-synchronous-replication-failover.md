@@ -1,6 +1,5 @@
 ---
-title: "Microsoft Azure High Availability: SafeKit Synchronous Replication & Failover"
-slug: "azure-high-availability-cluster-synchronous-replication-failover"
+title: "Microsoft Azure High Availability: SafeKit Synchronous Replication & Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
 description: "Deploy a simple Microsoft Azure HA cluster with SafeKit. Our shared-nothing architecture provides synchronous replication, automatic failover, and RPO=0 for Windows & Linux applications without the cost of cloud shared disks."
 category: "solutions"

@@ -1,6 +1,5 @@
 ---
-title: "SafeKit: Microsoft Azure Load Balancing & Application High Availability Farm Cluster"
-slug: "azure-load-balancing-cluster-failover"
+title: "SafeKit: Microsoft Azure Load Balancing & Application High Availability Farm Cluster - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/azure-load-balancing-cluster-failover/"
 description: "Enhance Azure Load Balancer with SafeKit's intelligent application monitoring. Achieve seamless high availability with deep health checks, automatic self-healing, and failover for mission-critical farm clusters."
 category: "solutions"

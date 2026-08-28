@@ -1,6 +1,5 @@
 ---
-title: "Siemens SIMATIC WinCC SCADA High Availability: 2-Node SANless Cluster"
-slug: "siemens-simatic-wincc-redundancy-high-availability-cluster-active-active"
+title: "Siemens SIMATIC WinCC SCADA High Availability: 2-Node SANless Cluster - SafeKit HA"
 canonical: "https://safekit.eviden.com/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/"
 description: "Build a Siemens SIMATIC WinCC SCADA high availability cluster without a SAN. SafeKit provides 2-node redundancy and failover for WinCC in Hyper-V."
 category: "solutions"

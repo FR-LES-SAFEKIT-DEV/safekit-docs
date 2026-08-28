@@ -1,6 +1,5 @@
 ---
-title: "Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales"
-slug: "business-continuity-software"
+title: "Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-software/"
 description: "Optimisez vos logiciels avec SafeKit. En tant que partenaire OEM, vous pouvez intégrer le basculement automatique et la réplication synchrone directement dans votre application. Offrez à vos clients une disponibilité 24 h/24 et 7 j/7 sous Windows et Linux, sans la complexité des clusters matériels."
 category: "use-cases"

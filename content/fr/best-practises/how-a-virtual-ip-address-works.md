@@ -1,6 +1,5 @@
 ---
-title: "Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ?"
-slug: "how-a-virtual-ip-address-works"
+title: "Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ? - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-a-virtual-ip-address-works/"
 description: "Découvrez comment SafeKit utilise des adresses IP virtuelles (VIP) définies par logiciel pour garantir une disponibilité 24 h/24 et 7 j/7. Apprenez-en davantage sur le basculement automatique via ARP gratuit et découvrez pourquoi cette solution est plus performante que la redirection DNS pour assurer la continuité d'activité sous Windows et Linux."
 category: "best-practises"
@@ -238,11 +237,11 @@ La redirection DNS est une solution incohérente pour une solution de haute disp
 
 Environnement & Cas d'utilisation | Type de Haute Disponibilité | Mécanisme de Redirection | Latence Réseau | Transparence Applicative & Localité de l'IP  
 ---|---|---|---|---  
-**Primaire/Secondaire** (Haute Disponibilité) | Cluster Miroir | ARP Gratuit (GARP) / Reprise d'adresse MAC | **Très faible :** Temps de détection et d'envoi du broadcast GARP | **Transparence Totale :** L'IP virtuelle est locale sur le nœud actif. L'IP source du client est préservée.  
-**Équilibrage de Charge** (Actif/Actif) | Cluster de Ferme | Filtre Réseau au niveau du Noyau / GARP | **Très Faible :** Temps de détection et de reconfiguration des filtres réseau | **Transparence Totale :** L'IP virtuelle est locale sur tous les nœuds. L'IP source du client est préservée.  
-**Même Sous-réseau / LAN Étendu** (VLAN Stretching) | Reprise après Sinistre (datacenters distants) | Aliasing IP Standard / GARP | **Faible :** Dépend du RTT (Round Trip Time) du VLAN étendu | **Transparence Totale :** L'IP virtuelle est locale sur les nœuds. L'IP source du client est préservée.  
-**Sous-réseaux Différents** | Reprise après Sinistre (datacenters distants / Cloud) | Équilibreur de Charge Externe (Load Balancer) | **Modérée :** Latence de basculement plus élevée due aux intervalles de "Health Check" du Load Balancer | **⚠️ Transparence Partielle :** Utilise SNAT/DNAT. L'IP virtuelle n'est **PAS** locale sur les nœuds. L'IP source du client n'est **PAS** préservée. L'application doit supporter ce mode.  
-**Reroutage DNS : Sans VIP** | Reprise après Sinistre (datacenters distants) | Mise à jour de l'enregistrement DNS (Nom / IP physique) | **Élevée/Imprévisible :** Dépend du TTL DNS (Time To Live) et du cache DNS du client. | **⚠️ Peu Fiable :** Le client doit résoudre à nouveau le DNS. Souvent, les clients continuent d'utiliser l'IP obsolète résolue au démarrage et ne sont pas redirigés après un basculement.  
+Primaire/Secondaire (Haute Disponibilité) | Cluster Miroir | ARP Gratuit (GARP) / Reprise d'adresse MAC | Très faible : Temps de détection et d'envoi du broadcast GARP | Transparence Totale : L'IP virtuelle est locale sur le nœud actif. L'IP source du client est préservée.  
+Équilibrage de Charge (Actif/Actif) | Cluster de Ferme | Filtre Réseau au niveau du Noyau / GARP | Très Faible : Temps de détection et de reconfiguration des filtres réseau | Transparence Totale : L'IP virtuelle est locale sur tous les nœuds. L'IP source du client est préservée.  
+Même Sous-réseau / LAN Étendu (VLAN Stretching) | Reprise après Sinistre (datacenters distants) | Aliasing IP Standard / GARP | Faible : Dépend du RTT (Round Trip Time) du VLAN étendu | Transparence Totale : L'IP virtuelle est locale sur les nœuds. L'IP source du client est préservée.  
+Sous-réseaux Différents | Reprise après Sinistre (datacenters distants / Cloud) | Équilibreur de Charge Externe (Load Balancer) | Modérée : Latence de basculement plus élevée due aux intervalles de "Health Check" du Load Balancer | ⚠️ Transparence Partielle : Utilise SNAT/DNAT. L'IP virtuelle n'est **PAS** locale sur les nœuds. L'IP source du client n'est **PAS** préservée. L'application doit supporter ce mode.  
+Reroutage DNS : Sans VIP | Reprise après Sinistre (datacenters distants) | Mise à jour de l'enregistrement DNS (Nom / IP physique) | Élevée/Imprévisible : Dépend du TTL DNS (Time To Live) et du cache DNS du client. | ⚠️ Peu Fiable : Le client doit résoudre à nouveau le DNS. Souvent, les clients continuent d'utiliser l'IP obsolète résolue au démarrage et ne sont pas redirigés après un basculement.  
   
 ## Configuration d'une adresse IP virtuelle pour la répartition de charge et la haute disponibilité {#virtual-ip-configuration-load-balancing-ha}
 

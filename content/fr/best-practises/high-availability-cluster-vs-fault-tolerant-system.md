@@ -1,6 +1,5 @@
 ---
-title: "Cluster haute disponibilité vs. système tolérant aux fautes : choisir la bonne stratégie de redondance"
-slug: "high-availability-cluster-vs-fault-tolerant-system"
+title: "Cluster haute disponibilité vs. système tolérant aux fautes : choisir la bonne stratégie de redondance - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
 description: "Comparez les clusters haute disponibilité (HA) et les systèmes tolérants aux fautes. Découvrez comment SafeKit propose un cluster HA logiciel sans SAN qui protège contre les pannes matérielles et logicielles. Réduisez vos coûts en éliminant le matériel FT spécialisé tout en garantissant zéro perte de données (RPO 0)."
 category: "best-practises"
@@ -40,13 +39,13 @@ Pour protéger les applications critiques contre les défaillances, deux approch
 
 Critère | Cluster logiciel haute disponibilité | Système tolérant aux pannes  
 ---|---|---  
-**Produit** | [SafeKit sur Windows et Linux](</fr/>) | Produits tolérants aux pannes  
-**Matériel / hyperviseur** | Pas de serveur dédié, pas d'hyperviseur dédié. Fonctionne avec l'hyperviseur standard et gratuit de Windows, Hyper-V, inclus dans le noyau Windows pour les serveurs et les PC. Fonctionne avec l'hyperviseur standard et gratuit KVM (Kernel-based Virtual Machine) intégré au noyau Linux. Chaque [serveur peut être le serveur de secours de l'autre pour plusieurs applications](</fr/architectures/active-active-cluster-real-time-replication/>). | Matériel dédié ou hyperviseur dédié. Le serveur secondaire est dédié à l'exécution de la même application synchronisée au niveau des instructions.  
-**Défaillance logicielle** | Défaillance logicielle prise en charge avec redémarrage dans un autre environnement OS. | Exception logicielle sur les deux serveurs en même temps sur le même OS.  
-**Mise à jour progressive de l'application et de l'OS** | Oui — Mise à jour progressive de l'application et de l'OS possible serveur par serveur. Les versions N et N+1 peuvent coexister. | Non — Même image d'application et d'OS sur les deux serveurs.  
-**RTO/RPO** | Le temps de reprise avec SafeKit ([RTO](</fr/best-practises/what-is-rpo-and-rto-with-examples/>)) dépend du temps de détection et de redémarrage de l'application (environ 1 minute). La perte de données avec SafeKit ([RPO](</fr/best-practises/what-is-rpo-and-rto-with-examples/>)) est nulle car la réplication est synchrone. | Le temps de reprise (RTO) d'un système tolérant aux pannes est nul. L'application n'est pas redémarrée en cas de défaillance et poursuit son exécution sur le serveur secondaire. La perte de données (RPO) est également nulle.  
-**Flexibilité** | Peut fonctionner sur tout type de serveur avec un OS standard Windows et Linux | Dépend d'un matériel spécifique ou d'hyperviseurs spécifiques  
-**Adapté pour** | [Les éditeurs de logiciels qui souhaitent ajouter une option simple de haute disponibilité à leur application](</fr/use-cases/application-clustering-software/>) | Environnement où les défaillances matérielles sont la préoccupation principale  
+Produit | [SafeKit sur Windows et Linux](</fr/>) | Produits tolérants aux pannes  
+Matériel / hyperviseur | Pas de serveur dédié, pas d'hyperviseur dédié. Fonctionne avec l'hyperviseur standard et gratuit de Windows, Hyper-V, inclus dans le noyau Windows pour les serveurs et les PC. Fonctionne avec l'hyperviseur standard et gratuit KVM (Kernel-based Virtual Machine) intégré au noyau Linux. Chaque [serveur peut être le serveur de secours de l'autre pour plusieurs applications](</fr/architectures/active-active-cluster-real-time-replication/>). | Matériel dédié ou hyperviseur dédié. Le serveur secondaire est dédié à l'exécution de la même application synchronisée au niveau des instructions.  
+Défaillance logicielle | Défaillance logicielle prise en charge avec redémarrage dans un autre environnement OS. | Exception logicielle sur les deux serveurs en même temps sur le même OS.  
+Mise à jour progressive de l'application et de l'OS | Oui — Mise à jour progressive de l'application et de l'OS possible serveur par serveur. Les versions N et N+1 peuvent coexister. | Non — Même image d'application et d'OS sur les deux serveurs.  
+RTO/RPO | Le temps de reprise avec SafeKit ([RTO](</fr/best-practises/what-is-rpo-and-rto-with-examples/>)) dépend du temps de détection et de redémarrage de l'application (environ 1 minute). La perte de données avec SafeKit ([RPO](</fr/best-practises/what-is-rpo-and-rto-with-examples/>)) est nulle car la réplication est synchrone. | Le temps de reprise (RTO) d'un système tolérant aux pannes est nul. L'application n'est pas redémarrée en cas de défaillance et poursuit son exécution sur le serveur secondaire. La perte de données (RPO) est également nulle.  
+Flexibilité | Peut fonctionner sur tout type de serveur avec un OS standard Windows et Linux | Dépend d'un matériel spécifique ou d'hyperviseurs spécifiques  
+Adapté pour | [Les éditeurs de logiciels qui souhaitent ajouter une option simple de haute disponibilité à leur application](</fr/use-cases/application-clustering-software/>) | Environnement où les défaillances matérielles sont la préoccupation principale  
   
 **En résumé** , la haute disponibilité logicielle avec SafeKit offre une solution économique et flexible qui fonctionne sur du matériel standard et permet les mises à jour progressives, avec un temps d'arrêt quasi nul (RTO ~1 minute) et aucune perte de données. Les systèmes tolérants aux pannes offrent un basculement instantané (RTO = 0) mais nécessitent du matériel dédié et manquent de flexibilité pour les mises à jour logicielles indépendantes.
 

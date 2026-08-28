@@ -1,6 +1,5 @@
 ---
-title: "SafeKit : Logiciel tout-en-un d’équilibrage de charge réseau et de haute disponibilité pour Windows ou Linux"
-slug: "network-load-balancing-cluster"
+title: "SafeKit : Logiciel tout-en-un d’équilibrage de charge réseau et de haute disponibilité pour Windows ou Linux - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/architectures/network-load-balancing-cluster/"
 description: "SafeKit offre un équilibrage de charge réseau (NLB) haute performance et un basculement automatique dans un seul logiciel. Remplacez les équilibreurs de charge matériels coûteux par la gestion d'adresses IP virtuelles au niveau du noyau de SafeKit pour Windows et Linux. Idéal pour l'intégration OEM et la gestion simplifiée des clusters."
 category: "architectures"

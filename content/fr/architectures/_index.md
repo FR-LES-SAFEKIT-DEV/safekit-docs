@@ -1,6 +1,5 @@
 ---
-title: "Architectures à haute disponibilité : mise en miroir, ferme de serveurs et clustering logiciel avancé"
-slug: "architectures"
+title: "Architectures à haute disponibilité : mise en miroir, ferme de serveurs et clustering logiciel avancé - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/architectures/"
 description: "Explorez les architectures à haute disponibilité avec SafeKit. Découvrez les clusters Mirror, Farm et Farm+Mirror pour le basculement d'applications sans SAN et l'équilibrage de charge."
 category: "architectures"

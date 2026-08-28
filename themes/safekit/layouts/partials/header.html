@@ -416,6 +416,9 @@
                                 {{ with $enSite.GetPage "/best-practises/alternative-always-on-sql-server-express-standard-editions" }}
                                 <a href="{{ .RelPermalink }}">Alternative to SQL Server Always On: HA for Express and Standard Editions</a>
                                 {{ end }}
+                                {{ with $enSite.GetPage "/best-practises/how-to-upgrade-an-application-protected-by-safekit" }}
+                                <a href="{{ .RelPermalink }}">Upgrading an Application Protected by SafeKit in an HA Cluster</a>
+                                {{ end }}
                             </div>
                             <div class="mega-column">
                                 <h4 class="mega-column-title">Clustering best practises</h4>

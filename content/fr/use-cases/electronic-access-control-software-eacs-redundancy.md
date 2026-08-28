@@ -1,6 +1,5 @@
 ---
-title: "Haute disponibilité et redondance pour les logiciels de contrôle d'accès électronique (EACS)"
-slug: "electronic-access-control-software-eacs-redundancy"
+title: "Haute disponibilité et redondance pour les logiciels de contrôle d'accès électronique (EACS) - SafeKit HA"
 canonical: "https://safekit.eviden.com/fr/use-cases/electronic-access-control-software-eacs-redundancy/"
 description: "Assurez la sécurité de vos bâtiments 24h/24 et 7j/7 avec SafeKit, le logiciel de haute disponibilité le plus simple pour le contrôle d'accès électronique (EACS). Évitez les blocages système grâce au clustering à 2 nœuds sans SAN, à la réplication synchrone en temps réel et au basculement automatique pour Nedap, TIL Technologies, Siemens, HID et tout système EACS Windows/Linux. Garantissez le maintien des données à zéro (RPO=0) sans SAN."
 category: "use-cases"

@@ -1,6 +1,5 @@
 ---
-title: "Podman High Availability with SafeKit: Install the mirror.safe Module for Failover"
-slug: "safekit-quick-installation-guide-with-podman"
+title: "Podman High Availability with SafeKit: Install the mirror.safe Module for Failover - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-podman/"
 description: "Deploy the mirror.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Podman containers on Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"
