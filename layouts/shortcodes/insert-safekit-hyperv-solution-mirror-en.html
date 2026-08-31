@@ -155,6 +155,8 @@ The **SafeKit web console** provides an intuitive interface to configure high av
   * Enter in `VM_NAME`, the name of the {{ .Get "app" }} virtual machine (VM1).
 
 
+Note: If `VM1` is entered, `D:/Repli-Hyper-V/VM1/` will be replicated and VM1 will be automatically restarted using Hyper-V commands.
+
 The SafeKit cluster includes a dedicated [split-brain checker to resolve network isolation issues](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/ "Technical details on heartbeat and split-brain prevention") without the need for a third witness machine or an additional heartbeat network.
 
 ### How to monitor a SafeKit {{ .Get "app" }} cluster? {#safekit-mirror-cluster-monitoring}
@@ -167,7 +169,7 @@ The **SafeKit management console** offers a unified view of your high availabili
 
 For a 2-node {{ .Get "app" }} cluster, the console clearly displays the roles of each server:
 
-  * **PRIM (Primary):** The active node currently running the application and managing the Virtual IP. It performs writes to the local storage and real-time replication to the secondary node.
+  * **PRIM (Primary):** The active node currently running the VM and the application. It performs writes on the VM files to the local storage and real-time replication to the secondary node.
   * **SECOND (Secondary):** The standby node receiving synchronous byte-level updates. It is ready to take over instantly if the Primary fails.
   * **ALONE State:** Visually alerts you when the cluster is running on a single node (e.g., during maintenance or after a failure), indicating that redundancy is temporarily lost.
   * **Resynchronization Progress:** When a failed node recovers, its status turns orange during background data reintegration, ensuring no downtime during the "return to normal" phase.

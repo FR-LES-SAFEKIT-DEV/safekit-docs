@@ -1,56 +1,13 @@
 {{/* Shortcode: insert-safekit-usage-es — 1 instances in 1 files */}}
  
 
-## Limitaciones de la alta disponibilidad de SafeKit {#safekit-ha-limitations}
+## Limitaciones de Alta Disponibilidad de SafeKit {#safekit-ha-limitations}
 
-### ¿Por qué una replicación de algunos terabytes?
-
-Tiempo de resincronización después de una falla ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
-
-  * Red de 1 Gb/s ≈ 3 horas para 1 terabyte.
-  * Red de 10 Gb/s ≈ 1 hora para 1 terabyte o menos, dependiendo del rendimiento de escritura en disco.
-
-
-#### Alternativa
-
-  * Para un gran volumen de datos, use [almacenamiento compartido externo](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
-  * Más costoso, más complejo.
-
-
-### ¿Por qué una replicación < 1.000.000 de archivos?
-
-  * Rendimiento del tiempo de resincronización después de una falla ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
-  * Tiempo para verificar cada archivo entre ambos nodos.
-
-
-#### Alternativa
-
-  * Ponga los muchos archivos a replicar en un disco duro virtual / máquina virtual.
-  * Solo los archivos que representan el disco duro virtual / máquina virtual se replicarán y resincronizarán en este caso.
-
-
-### ¿Por qué un failover ≤ 32 máquinas virtuales replicadas?
-
-  * Cada máquina virtual se ejecuta en un módulo espejo independiente.
-  * Máximo de 32 módulos espejo ejecutándose en el mismo clúster.
-
-
-#### Alternativa
-
-  * Use un almacenamiento compartido externo y otra solución de clustering para máquinas virtuales.
-  * Más costoso, más complejo.
-
-
-### ¿Por qué una red LAN/VLAN entre sitios remotos?
-
-  * Failover automático de la [dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/) con 2 nodos en la misma subred.
-  * Buen ancho de banda para la resincronización ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) y buena latencia para la [replicación síncrona](/best-practises/synchronous-replication-vs-asynchronous-replication/) (típicamente un tiempo de ida y vuelta inferior a 2 ms).
-
-
-#### Alternativa
-
-  * Use un [balanceador de carga para la dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/) si los 2 nodos están en 2 subredes (compatible con SafeKit, especialmente en la nube).
-  * Use soluciones de respaldo con replicación asíncrona para redes con alta latencia.
-
-
+Límite / Requisito | Motivo e Impacto | Alternativa Recomendada  
+---|---|---  
+Tamaño de replicación: Unos pocos TB |  Tiempo de resincronización tras un fallo ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)): <br>• Red de 1 Gb/s ≈ 3 horas / TB<br>• Red de 10 Gb/s ≈ 1 hora / TB (según el rendimiento de escritura en disco)  |  • Utilizar [almacenamiento compartido externo](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/)(más costoso, más complejo).   
+Número de archivos: < 1.000.000 de archivos |  • Rendimiento del tiempo de resincronización tras un fallo ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).<br>• Tiempo necesario para verificar cada archivo entre ambos nodos.  |  • Colocar los múltiples archivos a replicar dentro de un disco duro virtual / máquina virtual.<br>• En este caso, solo se replicarán y resincronizarán los archivos que representan al disco duro virtual / máquina virtual.   
+Capacidad de conmutación por error (Failover): ≤ 32 VM |  • Cada VM se ejecuta en un módulo espejo (mirror module) independiente.<br>• Máximo de 32 módulos espejo ejecutándose en el mismo cluster.  |  • Utilizar almacenamiento compartido externo y otra solución de clustering de VM (más costoso, más complejo).   
+Arquitectura de red: Red LAN/VLAN entre sedes remotas |  • Conmutación por error automática de la [dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/)con 2 nodos en la misma subred.<br>• Buen ancho de banda para la resincronización ([paso 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) y baja latencia para la [replicación síncrona](/best-practises/synchronous-replication-vs-asynchronous-replication/)(normalmente un tiempo de ida y vuelta inferior a 2 ms).  |  • Utilizar un [balanceador de carga para la dirección IP virtual](/best-practises/how-a-virtual-ip-address-works/)si los 2 nodos están en 2 subredes distintas (soportado por SafeKit, especialmente en entorno cloud).<br>• Utilizar soluciones de copia de seguridad con replicación asíncrona para redes con alta latencia.   
+  
 

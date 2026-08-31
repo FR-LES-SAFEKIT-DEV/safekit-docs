@@ -1,56 +1,13 @@
 {{/* Shortcode: insert-safekit-usage-fr — 2 instances in 2 files */}}
  
 
-## Limitations de la haute disponibilité SafeKit {#safekit-ha-limitations}
+## Limitations de la haute disponibilité de SafeKit {#safekit-ha-limitations}
 
-### Pourquoi une réplication de quelques téraoctets ?
-
-Temps de resynchronisation après une panne ([étape 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster))
-
-  * Réseau 1 Gb/s ≈ 3 heures pour 1 téraoctet.
-  * Réseau 10 Gb/s ≈ 1 heure pour 1 téraoctet ou moins selon les performances d’écriture disque.
-
-
-#### Alternative
-
-  * Pour un volume de données important, utiliser un [stockage partagé externe](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/).
-  * Plus coûteux, plus complexe.
-
-
-### Pourquoi une réplication < 1 000 000 fichiers ?
-
-  * Performance du temps de resynchronisation après une panne ([étape 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).
-  * Temps nécessaire pour vérifier chaque fichier entre les deux nœuds.
-
-
-#### Alternative
-
-  * Regrouper les nombreux fichiers à répliquer dans un disque dur virtuel / une machine virtuelle.
-  * Seuls les fichiers représentant le disque dur virtuel / la machine virtuelle seront répliqués et resynchronisés dans ce cas.
-
-
-### Pourquoi un basculement ≤ 32 VM répliquées ?
-
-  * Chaque VM fonctionne dans un module miroir indépendant.
-  * Maximum de 32 modules miroir exécutés sur le même cluster.
-
-
-#### Alternative
-
-  * Utiliser un stockage partagé externe et une autre solution de clustering de VM.
-  * Plus coûteux, plus complexe.
-
-
-### Pourquoi un réseau LAN/VLAN entre sites distants ?
-
-  * Basculement automatique de l’[adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/) avec 2 nœuds dans le même sous-réseau.
-  * Bonne bande passante pour la resynchronisation ([étape 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) et bonne latence pour la [réplication synchrone](/best-practises/synchronous-replication-vs-asynchronous-replication/) (typiquement un aller-retour inférieur à 2 ms).
-
-
-#### Alternative
-
-  * Utiliser un [load balancer pour l’adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/) si les 2 nœuds sont dans 2 sous-réseaux (pris en charge par SafeKit, notamment dans le cloud).
-  * Utiliser des solutions de sauvegarde avec réplication asynchrone pour un réseau à forte latence.
-
-
+Limite / Prérequis | Raison &amp; Impact | Alternative recommandée  
+---|---|---  
+Taille de réplication : Quelques To |  Temps de resynchronisation après une panne ([étape 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) : <br>• Réseau 1 Gbit/s ≈ 3 heures / To<br>• Réseau 10 Gbit/s ≈ 1 heure / To (selon les performances d'écriture sur disque)  |  • Utiliser un [stockage partagé externe](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/)(plus coûteux, plus complexe).   
+Nombre de fichiers : < 1 000 000 de fichiers |  • Performance du temps de resynchronisation après une panne ([étape 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).<br>• Temps nécessaire pour vérifier chaque fichier entre les deux nœuds.  |  • Placer le grand nombre de fichiers à répliquer dans un disque dur virtuel / une machine virtuelle.<br>• Dans ce cas, seuls les fichiers représentant le disque dur virtuel / la machine virtuelle seront répliqués et resynchronisés.   
+Capacité de basculement : ≤ 32 VM |  • Chaque VM s'exécute dans un module mirror indépendant.<br>• Maximum de 32 modules mirror s'exécutant sur le même cluster.  |  • Utiliser un stockage partagé externe et une autre solution de clustering de VM (plus coûteux, plus complexe).   
+Architecture réseau : Réseau LAN/VLAN entre sites distants |  • Basculement automatique de l'[adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/)avec 2 nœuds dans le même sous-réseau.<br>• Bonne bande passante pour la resynchronisation ([étape 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) et faible latence pour la [réplication synchrone](/best-practises/synchronous-replication-vs-asynchronous-replication/)(généralement un aller-retour inférieur à 2 ms).  |  • Utiliser un [répartiteur de charge pour l'adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/)si les 2 nœuds se trouvent dans 2 sous-réseaux différents (pris en charge par SafeKit, notamment dans le cloud).<br>• Utiliser des solutions de sauvegarde avec réplication asynchrone pour les réseaux à forte latence.   
+  
 
