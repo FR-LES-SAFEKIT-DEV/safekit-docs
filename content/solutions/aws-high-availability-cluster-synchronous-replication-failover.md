@@ -10,12 +10,12 @@ topics: "SafeKit Shared-Nothing HA in AWS: Eliminate Shared Disks with Zero Data
 # Amazon AWS High Availability: SafeKit Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-cloud-en app="AWS" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" %}}
+{{%  insert-safekit-solution-mirror-cloud-en app="AWS" guide="/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

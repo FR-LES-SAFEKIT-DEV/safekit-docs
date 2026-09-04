@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Milestone XProtect, Safe
 # Milestone XProtect High Availability with SafeKit: Install the milestone.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Milestone XProtect" mod="milestone" %}}
+{{%  insert-safekit-mirror-guide-en app="Milestone XProtect" mod="milestone"  %}}
  
 
 ## Overview of the SafeKit / Milestone XProtect solution
@@ -64,28 +64,28 @@ And for the Event cluster, at step 4 during the step by step configuration of mi
 ℹ️ In case of migration of Milestone from version N to version N+1 in a SafeKit cluster, read this article: 🛠️ [Milestone Management Migration with SafeKit](</quick-install/safekit-quick-installation-guide-milestone-migration/>)
 
 
-{{%  insert-safekit-installation-package-windows-en app="Milestone XProtect and SQL" mod="milestone" %}}
+{{%  insert-safekit-installation-package-windows-en app="Milestone XProtect and SQL" mod="milestone"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="Milestone XProtect and SQL" mod="milestone" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="Milestone XProtect and SQL" mod="milestone"  %}}
  
 
 ## Step by step configuration of the SafeKit / Milestone XProtect solution
 
 
-{{%  insert-safekit-82-milestone-configuration-en app="Milestone XProtect and SQL" mod="milestone" %}}
+{{%  insert-safekit-82-milestone-configuration-en app="Milestone XProtect and SQL" mod="milestone"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

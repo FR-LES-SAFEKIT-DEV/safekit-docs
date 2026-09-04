@@ -38,12 +38,12 @@ A distributed enterprise deploys [SafeKit in many branches](</use-cases/business
 ##  Worst use cases of SafeKit high availability 
 
 
-{{%  insert-safekit-usage-en %}}
+{{%  insert-safekit-usage-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

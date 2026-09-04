@@ -50,12 +50,12 @@ Finally, the solution is very simple to configure as only the paths of directori
 ## Shared Nothing Architecture vs Shared Disk Architecture: Pros and Cons
 
 
-{{%  insert-safekit-shared-nothing-vs-shared-disk-table-en %}}
+{{%  insert-safekit-shared-nothing-vs-shared-disk-table-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -30,8 +30,8 @@ Dans un cluster miroir, le logiciel SafeKit est installé sur deux serveurs phys
 Dans un cluster de serveurs en ferme, le logiciel SafeKit est installé sur des serveurs redondants sous Windows ou Linux (sur site ou dans le Cloud). Tous les serveurs sont actifs et exécutent une même application frontale critique. Les clients sont connectés à une [adresse IP virtuelle](</fr/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). Les sessions TCP sont partagées entre tous les serveurs redondants. Si un serveur est en panne, SafeKit reconfigure automatiquement l'équilibrage de charge des sessions TCP entre les serveurs actifs restants. Lorsque le serveur défaillant est redémarré, il est automatiquement réintégré en tant que serveur redondant actif et reçoit de nouvelles sessions TCP.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

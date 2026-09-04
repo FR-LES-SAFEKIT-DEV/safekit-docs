@@ -41,16 +41,16 @@ Et c'est pourquoi, le système doit toujours être disponible pour les agents de
 
 
 
-{{%  insert-safekit-security-solutions-fr app="VMS" %}}
+{{%  insert-safekit-security-solutions-fr app="VMS"  %}}
  
 
 
-{{%  insert-safekit-security-case-fr app="VMS" %}}
+{{%  insert-safekit-security-case-fr app="VMS"  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

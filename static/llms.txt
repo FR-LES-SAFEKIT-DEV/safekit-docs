@@ -7,7 +7,7 @@
 
 - Website: https://safekit-dev.eviden.com
 - Documentation: https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguideen.htm
-- Release Notes: https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.pdf
+- Release Notes: https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.htm
 
 ## Home
 
@@ -228,27 +228,27 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 - [What are RPO and RTO? Definitions, Examples, and HA Strategies](https://safekit-dev.eviden.com/best-practises/what-is-rpo-and-rto-with-examples/)
   Topics: Quick Summary: RPO vs. RTO, How do I calculate RPO and RTO for a High Availability and Business Continuity solution?, How do I determine RPO and RTO for a Backup and Disaster Recovery solution?, How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?, What are the RTO benchmarks for a SafeKit Farm Cluster with Load Balancing?, Comparison tables: RTO vs RPO, High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO, FAQ: Optimizing RPO and RTO for Business Continuity
 
+- [Upgrading an Application Protected by SafeKit in an HA Cluster](https://safekit-dev.eviden.com/best-practises/how-to-upgrade-an-application-protected-by-safekit/)
+  Topics: Upgrading a High Availability Application Protected by SafeKit, VM-Level High Availability, Application-Level High Availability, Choosing the Right Upgrade Strategy, Conclusion
+
 ## Datasheets & White Papers
 
 - [SafeKit High Availability Software White Paper (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/documents/wp-safekit-en.pdf): Product white paper — 10 reasons to choose SafeKit, mirror/farm/active-active/N-1 architectures, integration and deployment
-- [White Paper - High Availability Guide](https://safekit-dev.eviden.com/resources/high-availability-guide/): Landing page for the HA Decision white paper
 - [HA Decision White Paper (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/documents/wp-hadecision-en.pdf): "High Availability (HA) – Choosing a Solution" — airport crisis case study illustrating what to look for when choosing a HA solution
 - [High Availability Overview Datasheet (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/documents/high-availability-overview.pdf)
 - [Nedap AEOS Cluster with SafeKit – Application Note (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf): Step-by-step SafeKit failover cluster setup with Nedap AEOS and SQL Server
 - [EULA (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/documents/eula-en.pdf)
 
-## Contact & Quote
+## Forms for Contact, Quote & Free Trial
 
-- [Get a Quote](https://safekit-dev.eviden.com/get-a-quote-safekit/)
-- [Contact Us](https://safekit-dev.eviden.com/contact-us-for-safekit/)
+- [Contact Us Form](https://safekit.eviden.com/contact-us-for-safekit/)
+- [Get a Quote Form](https://safekit.eviden.com/get-a-quote-safekit/)
+- [One-Month License Key Form](https://safekit.eviden.com/resources/safekit-free-trial-licence-key-high-availability/)
 
 ## Resources
 
 - [SafeKit Resources](https://safekit-dev.eviden.com/resources/)
   Topics: Free Trial, Technical Documentation & Product Information for SafeKit High Availability
-
-- [AI/LLM Resources for SafeKit](https://safekit-dev.eviden.com/resources/ai-llm-resources-for-safekit/)
-  Topics: How to use SafeKit llms.txt in your favorite LLM, Purpose of this page, SafeKit by Eviden, Jump to category, Product Overview, Competitive Positioning, Key Concepts & Educational Content, Use Cases, Edge & OT Solutions, Solutions by OS / Platform, Solutions by Database, Solutions by Web Server, Solutions by Virtualization & Containers, Solutions by Cloud, Quick Installation Guides, Documentation & Training, Free Trial & Contact, Datasheets & White Papers, RFP/RFI & EULA, SafeKit 8.2 – User Guide (split in Markdown files), Release Notes (split in Markdown files), SRB & KB, Training Slides
 
 - [SafeKit Cluster Key: One-Month Trial for Windows and Linux High Availability](https://safekit-dev.eviden.com/resources/high-availability-and-load-balancing-cluster-key/)
   Topics: Receive a free SafeKit one-month license key by e-mail for Windows or Linux
@@ -271,11 +271,11 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 - [SafeKit User's Guide 8.2](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguideen.htm)
   Topics: Overview and Table of Contents, Ch. 1 – Technical Overview, Ch. 2 – Installation, Ch. 3 – Web Console — Configuration & Monitoring, Ch. 4 – Tests (Installation, Mirror, Farm, Checkers), Ch. 5–6 – Mirror and Farm Module Administration, Ch. 7 – Troubleshooting, Ch. 8–9 – SafeKit Support and CLI, Ch. 10 – Advanced Administration (Environment, Services, Firewall, Security, Web Service, Notifications, SNMP, Logs), Ch. 11 – Securing the Web Service (HTTP/HTTPS, User Authentication), Ch. 12 – Cluster.xml Configuration Reference, Ch. 13 – Userconfig.xml (Heartbeat, Farm Topology, Virtual IP, File Replication, Scripts, Checkers), Ch. 14 – Scripts for Application Module Configuration, Ch. 15 – Configuration Examples, Ch. 16–17 – SafeKit in the Cloud and Third-Party Software
 
-- [SafeKit Release Notes 8.2 (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.pdf)
+- [SafeKit Release Notes 8.2 (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.htm)
   Topics: Overview and before starting (supported OS: Windows Server 2019/2022/2025, Windows 11, RHEL 8/9/10, Ubuntu 24.04; Linux packages; minor vs. major upgrade types), Major changes 8.2 — Web Console/Web Service/Logs (new PWA console, browser notifications, state timeline, OpenID auth, log levels, per-script log files), Major changes 8.2 — Replication/Checkers/Module Config (regex ! prefix, anti-ransomware folder, checker action attribute, splitbrain multiple witnesses, time-based attributes), Major changes 8.2 — Templates/Misc/OpenSSL/Apache (Podman template, permanent checker disable, SNMP changes, email agent, OpenSSL table, Apache modules), Major changes in 7.5.x and 7.4 (cloud support, SQLite, Kubernetes template, AWS/Azure/GCP), Restrictions and known problems (antivirus, replication limits, VIP constraints, SK-0071 to SK-0107), Migration instructions (upgrade from 7.4/7.5 to 8.2; minor upgrade 7.5.1 to 7.5.2)
 
-- [SafeKit 8.2 Software Release Bulletin (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/82softwarereleasebulletin.pdf)
+- [SafeKit 8.2 Software Release Bulletin (PDF)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf)
   Topics: Package builds index (Windows and Linux, per-version), release dates, supported OS/CPU per build, fixes and changes by build, known problems
 
-- [SafeKit 8.2 Knowledge Base (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/knowledge-base.pdf)
+- [SafeKit 8.2 Knowledge Base (PDF)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf)
   Topics: SK issue articles indexed by SK ID (SK-0001 to SK-0107): symptoms, root cause, workarounds, remediation commands for replication, checkers, web console, virtual IP, module templates, SELinux, DNS resolution, Hyper-V/KVM

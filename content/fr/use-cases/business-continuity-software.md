@@ -28,8 +28,8 @@ Fournir une solution de continuité d'activité dans une entreprise pour plusieu
 SafeKit propose deux modules ferme et miroir simples pour protéger vos applications critiques contre les pannes. Le déploiement se fait sur des serveurs standards sans avoir besoin de compétences informatiques pour gérer la solution. Il n'y a pas besoin de disque partagé, de SAN répliqué, d'équilibreurs de charge, d'éditions Entreprise des systèmes d'exploitation ou des bases de données.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

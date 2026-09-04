@@ -69,6 +69,63 @@ def extract_language(md_content, filename):
     return "en"
 
 
+# Matches a nested {{ $.Page.RenderString ... }} call found INSIDE an
+# already-loaded shortcode template — either the simple string form
+# (no dynamic args) or the printf-wrapped form used when the nested
+# shortcode needs parameters forwarded from its parent.
+NESTED_RENDERSTRING_PATTERN = re.compile(
+    r'\{\{\s*\$\.Page\.RenderString\s*'
+    r'(?:"((?:[^"\\]|\\.)*)"'
+    r'|\(printf\s+"((?:[^"\\]|\\.)*)"\s*((?:\(\.Get\s+"[^"]+"\)\s*)*)\))'
+    r'\s*\}\}'
+)
+
+
+def resolve_nested_renderstring_calls(template, args):
+    """Resolve {{ $.Page.RenderString ... }} calls found inside an
+    already-loaded shortcode template into plain "{{%  name key="val"  %}}"
+    syntax, so the next expansion pass picks them up normally.
+
+    Since Hugo 0.100, $.Page.RenderString does render shortcodes found in
+    the string it's given — see build_nested_shortcode_call in
+    extract_inserts.py — so a NESTED shortcode (one shortcode calling
+    another) is written as either:
+      {{ $.Page.RenderString "{{%  name  %}}" }}                     (no args)
+      {{ $.Page.RenderString (printf "{{%%  name key=%q  %%}}" (.Get "key")) }}
+
+    Neither form matches expand_file()'s top-level pattern (which only
+    handles a plain quoted-string RenderString argument, or a direct
+    {{%  %}}/{{<  >}} call) — the printf form in particular doesn't even
+    start with a quote, so it was passed through completely untouched.
+
+    The printf form's (.Get "key") arguments can only be resolved here,
+    using the PARENT shortcode's own already-resolved `args` dict (the
+    nested call's own text never carries the actual value, only the key
+    name) — by the time a left-over RenderString call would reach a later
+    top-level pass, that context is gone.
+    """
+    def replacer(m):
+        plain_str, fmt_str, get_args_raw = m.group(1), m.group(2), m.group(3)
+
+        if plain_str is not None:
+            # e.g. "{{%  insert-safekit-usage-en  %}}" — no args, just
+            # unescape and unwrap back to a plain shortcode call.
+            return plain_str.replace('\\"', '"').replace('\\\\', '\\')
+
+        # printf form: unescape, then substitute "%%" -> "%" and each
+        # "%q" slot -> the matching (.Get "key")'s resolved value (in the
+        # order the .Get calls appear), mirroring Go's printf/%q handling.
+        resolved = fmt_str.replace('\\"', '"').replace('\\\\', '\\')
+        resolved = resolved.replace('%%', '\x00PERCENT\x00')
+        for key in re.findall(r'\.Get\s+"([^"]+)"', get_args_raw or ""):
+            val = args.get(key, "")
+            quoted = '"' + val.replace('\\', '\\\\').replace('"', '\\"') + '"'
+            resolved = resolved.replace('%q', quoted, 1)
+        return resolved.replace('\x00PERCENT\x00', '%')
+
+    return NESTED_RENDERSTRING_PATTERN.sub(replacer, template)
+
+
 def expand_shortcode(match, shortcodes_dir):
     """Déplie un shortcode ou le supprime s'il fait partie de EXCLUDED_SHORTCODES."""
     full_match = match.group(0)
@@ -85,7 +142,15 @@ def expand_shortcode(match, shortcodes_dir):
             content = wrapped.group(1)
     else:
         content = content.strip()
-        content = re.sub(r'^[\%"<>\s]+|[\%"<>\s]+$', "", content).strip()
+        # NOTE: "%", "<", ">" are the Hugo shortcode delimiter chars that
+        # can be left over at the edges after the outer regex match; '"'
+        # must NOT be stripped here — when the content ends exactly at a
+        # parameter's closing quote (e.g. a single-param nested call like
+        # `insert-safekit-mirror-en app="Firebird"`, with no trailing
+        # whitespace before the outer %}}), stripping it corrupts the
+        # value into an unterminated quote, so args ends up empty and
+        # every {{ .Get "..." }} in the nested template is left blank.
+        content = re.sub(r'^[\%<>\s]+|[\%<>\s]+$', "", content).strip()
 
     parts = content.split()
     if not parts:
@@ -114,6 +179,10 @@ def expand_shortcode(match, shortcodes_dir):
 
     template = re.sub(r"\{\{/\*.*?\*/\}\}", "", template, flags=re.DOTALL)
     template = re.sub(r"<!--\s*(BEGIN|END)\s+INSERT:.*?-->", "", template)
+
+    # Resolve any nested $.Page.RenderString(...) shortcode calls using
+    # THIS shortcode's own resolved args, before they'd otherwise be lost.
+    template = resolve_nested_renderstring_calls(template, args)
 
     for key, val in args.items():
         template = re.sub(

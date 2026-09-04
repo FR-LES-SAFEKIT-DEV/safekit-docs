@@ -10,16 +10,16 @@ topics: "SafeKit for Siemens Desigo CC: 2-Node SANless Hyper-V Cluster, Table of
 # Siemens Desigo CC High Availability: SANless 2-Node Redundancy
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens Desigo CC" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens Desigo CC"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

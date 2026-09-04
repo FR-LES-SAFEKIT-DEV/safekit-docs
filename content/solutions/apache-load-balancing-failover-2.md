@@ -10,12 +10,12 @@ topics: "The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for 
 # SafeKit: All-in-One Apache Load Balancing & High Availability Software
 
 
-{{%  insert-safekit-solution-farm-2-en app="Apache" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" %}}
+{{%  insert-safekit-solution-farm-2-en app="Apache" guide="/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

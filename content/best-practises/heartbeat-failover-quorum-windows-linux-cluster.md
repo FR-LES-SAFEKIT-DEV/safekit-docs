@@ -10,7 +10,7 @@ topics: "What are the different scenarios in case of network isolation in a clus
 # Heartbeat, Failover and Quorum in Windows and Linux Clusters
 
 
-{{%  insert-safekit-network-isolation-en %}}
+{{%  insert-safekit-network-isolation-en  %}}
  
 
 ## How heartbeats and failover work in a Windows or Linux cluster?
@@ -84,8 +84,8 @@ When the network is reconnected, SafeKit by default chooses the server which was
 Note: Windows can detect a duplicate IP address on one server and remove the virtual IP address on this server. SafeKit has a checker to force a restart in that case.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

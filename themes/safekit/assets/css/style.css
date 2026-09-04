@@ -150,6 +150,9 @@ footer { text-align: center; padding: 2rem 1rem; margin-top: 2rem; border-top: 1
 .sidebar-toggle::after { content: '+'; font-weight: 700; font-size: 0.9rem; color: #999; }
 .sidebar-section.open > .sidebar-toggle::after { content: '-'; color: #0066cc; }
 .sidebar-toggle:hover { color: #0066cc; }
+.sidebar-toggle.no-collapse { cursor: default; }
+.sidebar-toggle.no-collapse::after,
+.sidebar-section.open > .sidebar-toggle.no-collapse::after { content: ''; }
 
 /* ---  Make TOC entries collapsible --- */
 .toc-toggle { float: right; display: inline-block; width: 1rem; font-weight: 700; font-size: 0.75rem; color: #999; cursor: pointer; text-align: center; margin-right: 0.2rem; }
@@ -161,7 +164,6 @@ footer { text-align: center; padding: 2rem 1rem; margin-top: 2rem; border-top: 1
 .userguide-container .doc-container { width: 80%; height: 100%; }
 .userguide-container iframe { width: 100%; height: 100%; border: none; }
 .userguide-container.single-frame .doc-container { width: 100%; }
-
 
 /* ==========================================================================
    6. BOUTONS & ELEMENTS INTERACTIFS (EXEMPTIONS SOULIGNEMENT)

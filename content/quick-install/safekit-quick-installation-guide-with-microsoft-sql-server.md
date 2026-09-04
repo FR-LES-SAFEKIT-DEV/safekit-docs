@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Microsoft SQL Server, Sa
 # Microsoft SQL Server High Availability with SafeKit: Install the sqlserver.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Microsoft SQL Server" mod="sqlserver" %}}
+{{%  insert-safekit-mirror-guide-en app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
 ## Overview of the SafeKit / Microsoft SQL Server solution
@@ -31,28 +31,28 @@ For a detailed overview of the solution, see **💡[The Simplest Microsoft SQL S
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Microsoft SQL Server" mod="sqlserver" %}}
+{{%  insert-safekit-installation-package-windows-en app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="Microsoft SQL Server" mod="sqlserver" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
 ## Step by step configuration of the SafeKit / Microsoft SQL Server solution
 
 
-{{%  insert-safekit-82-configuration-en app="Microsoft SQL Server" mod="sqlserver" %}}
+{{%  insert-safekit-82-configuration-en app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

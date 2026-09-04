@@ -54,12 +54,12 @@ The solution is very simple to configure as only the paths of directories to rep
 ## Comparative tables between data replication techniques
 
 
-{{%  insert-safekit-mirror-comparison-table-en %}}
+{{%  insert-safekit-mirror-comparison-table-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

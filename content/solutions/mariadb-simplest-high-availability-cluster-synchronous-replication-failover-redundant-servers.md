@@ -10,12 +10,12 @@ topics: "How the SANless SafeKit Mirror Cluster Works with MariaDB, Table of Con
 # The Simplest MariaDB High Availability: 2-Node Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-2-en app="MariaDB" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-mariadb/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="MariaDB" guide="/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

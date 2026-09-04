@@ -1,4 +1,6 @@
 {{/* Shortcode: insert-safekit-mirror-comparison-table-en — 2 instances in 2 files */}}
+{{/* Parameters: none */}}
+
  
 
 Choosing the right data replication approach is critical for ensuring business continuity. This comparison highlights the key differentiators of SafeKit's mirror cluster with real-time file replication against traditional alternatives such as database-level replication, disk replication, shared disk solutions, and fault-tolerant systems.
@@ -21,5 +23,4 @@ Feature | SafeKit advantage | Limitation of alternatives
 [RTO / RPO](/best-practises/what-is-rpo-and-rto-with-examples/) | Quick application restart in case of failure: around 1 minute or less. Zero data loss (synchronous replication). | [Full VM replication](/best-practises/vm-ha-vs-application-ha/) (VMware HA, Hyper-V cluster) requires rebooting the entire OS on a new hypervisor, resulting in longer recovery times.  
   
 **In summary** , SafeKit's mirror cluster provides a unified, cost-effective high availability solution that combines synchronous file replication, automatic failover and failback, load balancing, and remote site support — all without requiring dedicated hardware, shared storage, or a third quorum server. This simplicity makes it particularly suited for software editors and organizations needing reliable HA on standard Windows and Linux servers.
-
 

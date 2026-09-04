@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Hyper-V, SafeKit High Av
 # Hyper-V High Availability with SafeKit: Install the hyperv.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Hyper-V" mod="hyperv" %}}
+{{%  insert-safekit-mirror-guide-en app="Hyper-V" mod="hyperv"  %}}
  
 
 ## Overview of the SafeKit / Hyper-V solution
@@ -30,32 +30,32 @@ The solution is described here: **💡[Simple Hyper-V High Availability Without 
 
 
 
-{{%  insert-safekit-siemens-license-en %}}
+{{%  insert-safekit-siemens-license-en  %}}
  
 
 
-{{%  insert-safekit-installation-package-windows-en app="Hyper-V" mod="hyperv" %}}
+{{%  insert-safekit-installation-package-windows-en app="Hyper-V" mod="hyperv"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="Hyper-V" mod="hyperv" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="Hyper-V" mod="hyperv"  %}}
  
 
 ## Step by step configuration of the SafeKit / Hyper-V solution
 
 
-{{%  insert-safekit-82-hyper-v-configuration-en app="Hyper-V" mod="hyperv" %}}
+{{%  insert-safekit-82-hyper-v-configuration-en app="Hyper-V" mod="hyperv"  %}}
  
 
 ## Demonstration of the SafeKit / Hyper-V solution
 
 
-{{%  insert-safekit-hyperv-video-en %}}
+{{%  insert-safekit-hyperv-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -1,5 +1,6 @@
-{{/* Shortcode: insert-safekit-82-milestone-configuration-en — 1 instances in 1 files */}}
+{{/* Shortcode: insert-safekit-82-milestone-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
+
  
 
 ### Prerequisites
@@ -10,9 +11,9 @@
   * IP failover requires both nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported.
 
 
-⚠️ This configuration requires **at least Milestone XProtect 2023 R3**. For previous versions, please 🛠️ [see this article](/quick-install/safekit-quick-installation-guide-old-{{ .Get "mod" }}-configuration/).
+⚠️ This configuration requires **at least Milestone XProtect 2023 R3**. For previous versions, please 🛠️ [see this article](/quick-install/safekit-quick-installation-guide-old-milestone-configuration/).
 
-### 1\. Launch the SafeKit console
+### 1. Launch the SafeKit console
 
   * Launch the web console in a browser on one cluster node by connecting to `http://localhost:9010`.
   * Enter `admin` as user name and the password defined during installation.
@@ -28,7 +29,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Start the SafeKit web console to configure the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 2\. Configure node addresses
+### 2. Configure node addresses
 
   * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
   * Then, click on `Save and apply` to save the configuration.
@@ -44,7 +45,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Enter the nodes of the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-### 3\. Select a module
+### 3. Select a module
 
   * In `New module`, click on the `{{ .Get "mod" }}.safe` module.
 
@@ -57,7 +58,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Choose the module for {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 4\. Configure the module
+### 4. Configure the module
 
   * In `Module startup at boot`, choose an automatic start of the module at boot without delay.
   * In `Macros` / `SERVICES`, enter the service names of your application, in the startup order, separated by commas. See this screenshot for a visual example of [Milestone XProtect services 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
@@ -88,7 +89,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
 
 
-### 5\. Edit scripts (optional)
+### 5. Edit scripts (optional)
 
   * This step is optional and can be skipped in most cases, as the restart scripts are already pre-configured to restart services defined in the previous step.
   * So, click directly on `Next step`.
@@ -96,10 +97,10 @@ For example, if a process name is displayed in `Monitored processes/services`, i
   * Additionally, `start_prim.ps1` checks the startup of each service and stops the module if any service fails to start correctly.
 
 
-![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2025/05/28-module-sqlserver-edit-script-3.png)
+![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2026/09/28-module-edit-script.png)
 
 
-### 6\. Communication encryption (optional)
+### 6. Communication encryption (optional)
 
   * Keep encryption of communication between nodes.
 
@@ -107,7 +108,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Communication encryption of the {{ .Get "app" }} module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
-### 7\. Save and apply
+### 7. Save and apply
 
   * `Save and apply` the configuration and scripts on both nodes.
 
@@ -115,7 +116,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Save and apply the {{ .Get "app" }} module configuration](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8\. Verify successful configuration
+### 8. Verify successful configuration
 
   * Check the `Success` ✅ message on both nodes and click on `Monitor modules`.
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
@@ -124,7 +125,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Check the {{ .Get "app" }} module configuration success](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9\. Start the node with up-to-date data
+### 9. Start the node with up-to-date data
 
   * If node 1 has the up-to-date replicated directories, select it and ⋯ `Force start` ▶ `As primary`.
 
@@ -141,7 +142,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![Start as primary the {{ .Get "app" }} node with the up-to-date data](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-### 10\. Wait for the transition to ALONE (green)
+### 10. Wait for the transition to ALONE (green)
 
   * Node 1 should reach the ALONE (green) state, which means that the virtual IP is set and that the `start_prim` script has been executed on node 1.
 
@@ -159,7 +160,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![The first {{ .Get "app" }} node starts as primary and becomes ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
 
-### 11\. In the desktop of node 1, stop, then register on the vitual IP address, apply the Milestone KB and restart the Milestone Management Server
+### 11. In the desktop of node 1, stop, then register on the vitual IP address, apply the Milestone KB and restart the Milestone Management Server
 
 Execute the following bullets on node 1 according the menu in the image:
 
@@ -171,7 +172,7 @@ Execute the following bullets on node 1 according the menu in the image:
     * `<Failover>...<VirtualAddress>XXX.XXX.XXX.XXX</VirtualAddress>...</Failover>`: replace the `XXX.XXX.XXX.XXX` with the actual virtual IP address.
     * Change `<ClusterMember>false</ClusterMember>` to `true`
     * Set `<ClusterLocalWebserverUri>http://NODE1_FQDN:9010</ClusterLocalWebserverUri>` (or NODE1 hostname if workgroup).
-For more information, see this **[Milestone KB](https://{{ .Get "mod" }}sys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+For more information, see this **[Milestone KB](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
   * **Start Management Server Service**
   * Use the **ALONE** menu of the SafeKit console to enable **Checkers** and **Process/Service Monitoring** ([enable the checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
 
@@ -182,7 +183,7 @@ For more information, see this **[Milestone KB](https://{{ .Get "mod" }}sys.my.s
 ![Register the management server in Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 12\. In the desktop of node 2, register the management server on the vitual IP address
+### 12. In the desktop of node 2, register the management server on the vitual IP address
 
   * Choose **Server Configurator** in the taskbar of node 2 and register it on the virtual IP address (see image).
   * Then **Stop Management Server Service**.
@@ -190,7 +191,7 @@ For more information, see this **[Milestone KB](https://{{ .Get "mod" }}sys.my.s
     * `<Failover>...<VirtualAddress>XXX.XXX.XXX.XXX</VirtualAddress>...</Failover>`: replace the `XXX.XXX.XXX.XXX` with the actual virtual IP address.
     * Change `<ClusterMember>false</ClusterMember>` to `true`
     * Set `<ClusterLocalWebserverUri>http://NODE2_FQDN:9010</ClusterLocalWebserverUri>` (or NODE2 hostname if workgroup).
-For more information, see this **[Milestone KB](https://{{ .Get "mod" }}sys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+For more information, see this **[Milestone KB](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
 
 
 ⚠️ 
@@ -205,7 +206,7 @@ For more information, see this **[Milestone KB](https://{{ .Get "mod" }}sys.my.s
 ![Register the management server with Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 13\. Solve Windows authentication issue on failover {#role}
+### 13. Solve Windows authentication issue on failover {#role}
 
 When you start the Milestone XProtect Management Client, you have to authenticate using one of the following methods. Depending on your choice, specific steps are required to ensure the login works after a SafeKit failover. Reference: [View Login Screenshot 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png).
 
@@ -235,7 +236,7 @@ For "Basic authentication", the user credentials are stored directly in the SQL 
 ![Set roles in the Milestone Management Client](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
 
-### 14\. Start node 2
+### 14. Start node 2
 
   * ⋯ `Start` node 2 with its contextual menu.
   * Wait for the SECOND (green) state.
@@ -251,7 +252,7 @@ For "Basic authentication", the user credentials are stored directly in the SQL 
 ![Start the {{ .Get "app" }} node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-### 15\. Verify that the cluster is operational
+### 15. Verify that the cluster is operational
 
   * Check that the cluster is green/green with {{ .Get "app" }} services running on the PRIM node and not running on the SECOND node.
   * Only changes inside files are replicated in real time in this state.
@@ -267,7 +268,7 @@ For "Basic authentication", the user credentials are stored directly in the SQL 
 ![The {{ .Get "app" }} node 2 is SECOND (green)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-### 16\. Testing
+### 16. Testing
 
   * Stop the PRIM node by scrolling down its contextual menu and clicking `Stop`.
   * Verify that there is a failover on the SECOND node which should become ALONE (green).
@@ -295,7 +296,7 @@ For "Basic authentication", the user credentials are stored directly in the SQL 
 ![Stop the {{ .Get "app" }} module on the PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 17\. Support
+### 17. Support
 
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
@@ -304,6 +305,5 @@ For "Basic authentication", the user credentials are stored directly in the SQL 
 
 
 ![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
-
 
 

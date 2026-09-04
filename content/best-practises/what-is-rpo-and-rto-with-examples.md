@@ -23,18 +23,18 @@ topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO a
 
 ## Table of Contents
 
-  * [How do I calculate RPO and RTO for a High Availability and Business Continuity solution?](<#calculate-rpo-rto-high-availability>)
-  * [How do I determine RPO and RTO for a Backup and Disaster Recovery solution?](<#calculate-rpo-rto-backup-solution>)
-  * [How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?](<#rpo-rto-safekit-mirror-cluster>)
-  * [What are the RTO benchmarks for a SafeKit Farm Cluster with Load Balancing?](<#rpo-rto-safekit-farm-cluster>)
-  * [Comparison tables: RTO vs RPO](<#rpo-vs-rto-comparison>)
-  * [High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO](<#safekit-rpo-rto-video-demos>)
-  * [Frequently Asked Questions about RPO and RTO](<#faq-rpo-rto>)
-  * [SafeKit High Availability Navigation Hub](<#hub>)
+  * [How do I calculate RPO and RTO for a High Availability and Business Continuity solution?](#calculate-rpo-rto-high-availability)
+  * [How do I determine RPO and RTO for a Backup and Disaster Recovery solution?](#calculate-rpo-rto-backup-solution)
+  * [How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?](#rpo-rto-safekit-mirror-cluster)
+  * [What are the RTO benchmarks for a SafeKit Farm Cluster with Load Balancing?](#rpo-rto-safekit-farm-cluster)
+  * [Comparison tables: RTO vs RPO](#rpo-vs-rto-comparison)
+  * [High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO](#safekit-rpo-rto-video-demos)
+  * [Frequently Asked Questions about RPO and RTO](#faq-rpo-rto)
+  * [SafeKit High Availability Navigation Hub](#hub)
 
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}
  
 
 ## How do I calculate RPO and RTO for a High Availability and Business Continuity solution? {#calculate-rpo-rto-high-availability}
@@ -280,8 +280,8 @@ Combining High Availability (HA) with a backup solution is the only way to achie
 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

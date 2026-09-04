@@ -43,8 +43,8 @@ There is no virtual IP address in such a module because restarting a VM on a ser
 And a critical application is installed inside a VM in this architecture.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

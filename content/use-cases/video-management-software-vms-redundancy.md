@@ -42,16 +42,16 @@ The key players in VMS are:
 
 
 
-{{%  insert-safekit-security-solutions-en app="VMS" %}}
+{{%  insert-safekit-security-solutions-en app="VMS"  %}}
  
 
 
-{{%  insert-safekit-security-case-en app="VMS" %}}
+{{%  insert-safekit-security-case-en app="VMS"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -46,16 +46,16 @@ The key players in EACS are:
 
 
 
-{{%  insert-safekit-security-solutions-en app="EACS" %}}
+{{%  insert-safekit-security-solutions-en app="EACS"  %}}
  
 
 
-{{%  insert-safekit-security-case-en app="EACS" %}}
+{{%  insert-safekit-security-case-en app="EACS"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

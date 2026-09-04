@@ -1,13 +1,14 @@
 {{/* Shortcode: insert-safekit-usage-en — 63 instances in 63 files */}}
+{{/* Parameters: none */}}
+
  
 
 ## SafeKit High Availability Limitations {#safekit-ha-limitations}
 
-Limit / Requirement | Reason &amp; Impact | Recommended Alternative  
+Limit / Requirement | Reason & Impact | Recommended Alternative  
 ---|---|---  
-Replication size: A few TBs |  Resynchronization time after failure ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)): <br>• 1 Gb/s network ≈ 3 hours / TB<br>• 10 Gb/s network ≈ 1 hour / TB (depending on disk write performances)  |  • Use [external shared storage](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/)(more expensive, more complex).   
+Replication size: A few TBs |  Resynchronization time after failure ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)): <br>• 1 Gb/s network ≈ 3 hours / TB<br>• 10 Gb/s network ≈ 1 hour / TB (depending on disk write performances)  |  • Use [external shared storage](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/) (more expensive, more complex).   
 File count: < 1,000,000 files |  • Resynchronization time performance after a failure ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).<br>• Time to check each file between both nodes.  |  • Put the many files to replicate in a virtual hard disk / virtual machine.<br>• Only the files representing the virtual hard disk / virtual machine will be replicated and resynchronized in this case.   
 Failover capacity: ≤ 32 VMs |  • Each VM runs in an independent mirror module.<br>• Maximum of 32 mirror modules running on the same cluster.  |  • Use an external shared storage and another VM clustering solution (more expensive, more complex).   
-Network architecture: LAN/VLAN network between remote sites |  • Automatic failover of the [virtual IP address](/best-practises/how-a-virtual-ip-address-works/)with 2 nodes in the same subnet.<br>• Good bandwidth for resynchronization ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) and good latency for [synchronous replication](/best-practises/synchronous-replication-vs-asynchronous-replication/)(typically a round-trip of less than 2ms).  |  • Use a [load balancer for the virtual IP address](/best-practises/how-a-virtual-ip-address-works/)if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).<br>• Use backup solutions with asynchronous replication for high latency network.   
+Network architecture: LAN/VLAN network between remote sites |  • Automatic failover of the [virtual IP address](/best-practises/how-a-virtual-ip-address-works/) with 2 nodes in the same subnet.<br>• Good bandwidth for resynchronization ([step 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) and good latency for [synchronous replication](/best-practises/synchronous-replication-vs-asynchronous-replication/) (typically a round-trip of less than 2ms).  |  • Use a [load balancer for the virtual IP address](/best-practises/how-a-virtual-ip-address-works/) if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).<br>• Use backup solutions with asynchronous replication for high latency network.   
   
-

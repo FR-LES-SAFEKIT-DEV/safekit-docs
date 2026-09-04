@@ -36,8 +36,8 @@ Le [module ferme](</fr/#safekit-farm-cluster>) met en œuvre un load balancing d
 Et vous pouvez combiner les modules.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

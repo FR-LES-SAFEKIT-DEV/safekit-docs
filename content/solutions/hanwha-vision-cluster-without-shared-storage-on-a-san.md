@@ -10,16 +10,16 @@ topics: "SafeKit for Hanwha Vision: 2-Node SANless Hyper-V Cluster, Table of Con
 # SafeKit High Availability for Hanwha Vision: SANless Building Management Redundancy
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Hanwha Vision" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Hanwha Vision"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -53,8 +53,8 @@ Skills | No specific IT skills for deploying SafeKit | High level skills in stor
 **In summary** , SafeKit software clustering is the only approach that combines **all three capabilities** — real-time replication, automatic failover, and network load balancing — in a single, lightweight product. It runs on standard hardware (physical, virtual, or cloud) with standard OS and database editions, requiring no specialized IT skills. In contrast, hardware clustering demands dedicated storage infrastructure and enterprise software licenses, while hardware load balancers require dedicated appliances and network expertise — and neither provides the complete feature set that SafeKit delivers out of the box.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -10,12 +10,12 @@ topics: "SafeKit for KVM: 2-Node SANless KVM Cluster, Table of Contents, How the
 # Simple Linux KVM High Availability without Shared Storage
 
 
-{{%  insert-safekit-kvm-solution-mirror-en app="KVM" %}}
+{{%  insert-safekit-kvm-solution-mirror-en app="KVM"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

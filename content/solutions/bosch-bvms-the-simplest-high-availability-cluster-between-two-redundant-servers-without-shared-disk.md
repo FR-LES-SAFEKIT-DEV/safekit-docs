@@ -10,16 +10,16 @@ topics: "SafeKit for Bosch BVMS: 2-Node SANless Hyper-V Cluster, Table of Conten
 # SafeKit High Availability for Bosch BVMS: SANless Video Management Redundancy
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Bosch BVMS" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Bosch BVMS"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

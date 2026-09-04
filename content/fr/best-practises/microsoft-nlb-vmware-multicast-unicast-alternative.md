@@ -22,12 +22,12 @@ Avec le mode unicast de Microsoft NLB, vous devez configurer l'hôte ESXi / ESX 
 La configuration de l'[adresse IP virtuelle de SafeKit](</fr/best-practises/how-a-virtual-ip-address-works/>) ne nécessite aucune configuration réseau particulière et l'équilibrage de charge réseau peut s'exécuter dans n'importe quel environnement. Une fonctionnalité importante lorsque la solution doit être déployée dans une infrastructure inconnue : switchs ou routeurs inconnus, serveurs physiques ou serveurs virtuels.
 
 
-{{%  insert-safekit-farm-fr app="Windows" %}}
+{{%  insert-safekit-farm-fr app="Windows"  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

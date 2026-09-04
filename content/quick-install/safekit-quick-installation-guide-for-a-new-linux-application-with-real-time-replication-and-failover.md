@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Linux, SafeKit High Avai
 # Linux High Availability with SafeKit: Install the mirror.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Linux" mod="mirror" %}}
+{{%  insert-safekit-mirror-guide-en app="Linux" mod="mirror"  %}}
  
 
 ## Overview of the SafeKit / Linux solution
@@ -26,7 +26,7 @@ The solutions is described here: **💡[The Simplest Linux High Availability: 2-
 
 
 
-{{%  insert-safekit-installation-package-linux-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 Note: the generic **mirror.safe** module that you are going to configure is delivered inside the package.
@@ -34,18 +34,18 @@ Note: the generic **mirror.safe** module that you are going to configure is deli
 ## Step by step configuration of the SafeKit / Linux solution
 
 
-{{%  insert-safekit-82-configuration-en app="Linux" mod="mirror" %}}
+{{%  insert-safekit-82-configuration-en app="Linux" mod="mirror"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en app="Microsoft SQL Server mirror" %}}
+{{%  insert-safekit-hub-en app="Microsoft SQL Server mirror"  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

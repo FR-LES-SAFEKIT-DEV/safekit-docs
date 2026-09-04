@@ -10,7 +10,7 @@ topics: "Quels sont les différents scénarios en cas d'isolement réseau dans u
 # Gestion des pannes de courant et de l'isolation réseau dans un cluster HA
 
 
-{{%  insert-safekit-network-isolation-fr %}}
+{{%  insert-safekit-network-isolation-fr  %}}
  
 
 ## Quels sont les différents scénarios en cas de coupure de courant dans un cluster ?
@@ -54,8 +54,8 @@ Lorsqu'il y a un isolement du réseau, le comportement avec un split-brain check
 Remarque : Si le témoin est en panne ou déconnecté, les deux nœuds passent à WAIT et l'application n'est plus en cours d'exécution. C'est pourquoi vous devez choisir un témoin robuste comme un routeur.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

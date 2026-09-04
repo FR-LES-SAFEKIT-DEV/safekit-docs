@@ -10,16 +10,16 @@ topics: "SafeKit apporte deux solutions pour la redondance et la haute disponibi
 # Haute disponibilité et redondance pour les logiciels de sécurité physique
 
 
-{{%  insert-safekit-security-solutions-fr app="de sécurité physique" %}}
+{{%  insert-safekit-security-solutions-fr app="de sécurité physique"  %}}
  
 
 
-{{%  insert-safekit-security-case-fr app="de sécurité physique" %}}
+{{%  insert-safekit-security-case-fr app="de sécurité physique"  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

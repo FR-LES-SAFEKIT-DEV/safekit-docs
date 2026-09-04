@@ -10,7 +10,7 @@ topics: "What are the different scenarios in case of network isolation in a clus
 # Handling Power Outages and Network Isolation in a HA Cluster
 
 
-{{%  insert-safekit-network-isolation-en %}}
+{{%  insert-safekit-network-isolation-en  %}}
  
 
 ## What are the different scenarios in case of power outage in a cluster?
@@ -52,8 +52,8 @@ When a power outage stops both nodes, the behavior with syncdelta is :
 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

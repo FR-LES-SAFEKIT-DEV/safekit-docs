@@ -10,20 +10,20 @@ topics: "SafeKit for Siemens SiPass: 2-Node SANless Hyper-V Cluster, Table of Co
 # High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens SiPass" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens SiPass"  %}}
  
 
 
-{{%  insert-safekit-siemens-license-en app="Siemens Desigo CC" %}}
+{{%  insert-safekit-siemens-license-en app="Siemens Desigo CC"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -38,12 +38,12 @@ Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/a
 ##  Pires cas d'utilisation de la haute disponibilité SafeKit 
 
 
-{{%  insert-safekit-usage-fr %}}
+{{%  insert-safekit-usage-fr  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

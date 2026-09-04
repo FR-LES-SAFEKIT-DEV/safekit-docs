@@ -1,5 +1,6 @@
 {{/* Shortcode: insert-safekit-82-configuration-en — 15 instances in 15 files */}}
 {{/* Parameters: app, mod */}}
+
  
 
 ### Prerequisites
@@ -10,7 +11,7 @@
   * IP failover requires both nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported (except with 🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud)).
 
 
-### 1\. Launch the SafeKit console
+### 1. Launch the SafeKit console
 
   * Launch the web console in a browser on one cluster node by connecting to `http://localhost:9010`.
   * Enter `admin` as user name and the password defined during installation.
@@ -26,7 +27,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Start the SafeKit web console to configure the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 2\. Configure node addresses
+### 2. Configure node addresses
 
   * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
   * Then, click on `Save and apply` to save the configuration.
@@ -42,7 +43,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Enter the nodes of the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-### 3\. Select a module
+### 3. Select a module
 
   * In `New module`, click on the `{{ .Get "mod" }}.safe` module.
 
@@ -55,7 +56,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Choose the module for {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 4\. Configure the module
+### 4. Configure the module
 
   * In `Module startup at boot`, choose an automatic start of the module at boot without delay.
   * In `Macros` / `SERVICES`, enter the service names of your application, in the startup order, separated by commas. See this screenshot for a visual example of [Milestone XProtect services 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
@@ -75,13 +76,13 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 
 ℹ️ In a cloud deployment, you do not need to configure a virtual IP address in SafeKit. The virtual IP is managed at the 🛠️ [cloud load balancer level](/resources/safekit-user-guide-82/#Cloud).
 
-ℹ️ When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on {{ .Get "app" }}).
+ℹ️ When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on Linux).
 
 
 ![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
 
 
-### 5\. Edit scripts (optional)
+### 5. Edit scripts (optional)
 
   * This step is optional and can be skipped in most cases, as the restart scripts are already pre-configured to restart services defined in the previous step.
   * So, click directly on `Next step`.
@@ -89,10 +90,10 @@ For example, if a process name is displayed in `Monitored processes/services`, i
   * Additionally, `start_prim.ps1` checks the startup of each service and stops the module if any service fails to start correctly.
 
 
-![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2025/05/28-module-sqlserver-edit-script-3.png)
+![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2026/09/28-module-edit-script.png)
 
 
-### 6\. Communication encryption (optional)
+### 6. Communication encryption (optional)
 
   * Keep encryption of communication between nodes.
 
@@ -100,7 +101,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Communication encryption of the {{ .Get "app" }} module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
-### 7\. Save and apply
+### 7. Save and apply
 
   * `Save and apply` the configuration and scripts on both nodes.
 
@@ -108,19 +109,19 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Save and apply the {{ .Get "app" }} module configuration](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8\. Verify successful configuration
+### 8. Verify successful configuration
 
   * Check the `Success` ✅ message on both nodes and click on `Monitor modules`.
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
 
 
-⚠️ On {{ .Get "app" }}, you may get an error at this step if the replicated directories are mount points.🛠️ [See SK-0030 to solve the problem](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+⚠️ On Linux, you may get an error at this step if the replicated directories are mount points.🛠️ [See SK-0030 to solve the problem](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
 
 ![Check the {{ .Get "app" }} module configuration success](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9\. Start the node with up-to-date data
+### 9. Start the node with up-to-date data
 
   * If node 1 has the up-to-date replicated directories, select it and ⋯ `Force start` ▶ `As primary`.
 
@@ -137,7 +138,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![Start as primary the {{ .Get "app" }} node with the up-to-date data](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-### 10\. Wait for the transition to ALONE (green)
+### 10. Wait for the transition to ALONE (green)
 
   * Node 1 should reach the ALONE (green) state, which means that the virtual IP is set and that the `start_prim` script has been executed on node 1.
 
@@ -155,7 +156,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![The first {{ .Get "app" }} node starts as primary and becomes ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
 
-### 11\. Start node 2
+### 11. Start node 2
 
   * ⋯ `Start` node 2 with its contextual menu.
   * Wait for the SECOND (green) state.
@@ -170,7 +171,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![Start the {{ .Get "app" }} node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-### 12\. Verify that the cluster is operational
+### 12. Verify that the cluster is operational
 
   * Check that the cluster is green/green with {{ .Get "app" }} services running on the PRIM node and not running on the SECOND node.
 
@@ -183,11 +184,11 @@ Only changes inside files are replicated in real time in this state.
 ![The {{ .Get "app" }} node 2 is SECOND (green)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-### 13\. Testing
+### 13. Testing
 
   * Stop the PRIM node by scrolling down its contextual menu and clicking `Stop`.
   * Verify that there is a failover on the SECOND node which should become ALONE (green).
-  * And with Microsoft Management Console (MMC) on Windows or with command lines on {{ .Get "app" }}, check the failover of {{ .Get "app" }} services (stopped on node 1 in the `stop_prim` script and started on node 2 in the `start_prim` script).
+  * And with Microsoft Management Console (MMC) on Windows or with command lines on Linux, check the failover of {{ .Get "app" }} services (stopped on node 1 in the `stop_prim` script and started on node 2 in the `start_prim` script).
 
 
 ⚠️ If ALONE (green) is not reached on node2 or if the application is not started, analyze why with the [module log 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) of node 2.
@@ -209,7 +210,7 @@ Only changes inside files are replicated in real time in this state.
 ![Stop the {{ .Get "app" }} module on the PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 14\. Support
+### 14. Support
 
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
@@ -218,6 +219,5 @@ Only changes inside files are replicated in real time in this state.
 
 
 ![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
-
 
 

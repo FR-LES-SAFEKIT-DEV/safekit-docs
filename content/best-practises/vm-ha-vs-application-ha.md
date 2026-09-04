@@ -12,12 +12,12 @@ topics: "VM-Level vs Application-Level High Availability: Choosing the Right Saf
 ## VM-Level vs Application-Level High Availability: Choosing the Right SafeKit Approach
 
 
-{{%  insert-safekit-vm-vs-app-ha-comparison-table-en %}}
+{{%  insert-safekit-vm-vs-app-ha-comparison-table-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

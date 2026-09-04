@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Docker, SafeKit High Ava
 # Docker High Availability with SafeKit: Install the mirror.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Docker" mod="mirror" %}}
+{{%  insert-safekit-mirror-guide-en app="Docker" mod="mirror"  %}}
  
 
 ## Overview of the SafeKit / Docker solution
@@ -26,7 +26,7 @@ The solution is described here: **💡[SafeKit: Docker High Availability & Real-
 
 
 
-{{%  insert-safekit-installation-package-linux-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 ### Example 1 with a Docker compose application
@@ -80,18 +80,18 @@ Populate the volume with some index.html file: **docker cp index.html mynginx:/u
 ## Step by step configuration of the SafeKit / Docker solution
 
 
-{{%  insert-safekit-82-configuration-en app="Docker" mod="mirror" %}}
+{{%  insert-safekit-82-configuration-en app="Docker" mod="mirror"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -53,16 +53,16 @@ The key players in BMS are:
 
 
 
-{{%  insert-safekit-security-solutions-en app="BMS" %}}
+{{%  insert-safekit-security-solutions-en app="BMS"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

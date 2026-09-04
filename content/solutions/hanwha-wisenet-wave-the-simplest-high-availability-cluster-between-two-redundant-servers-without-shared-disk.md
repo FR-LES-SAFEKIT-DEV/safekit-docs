@@ -10,16 +10,16 @@ topics: "SafeKit for Hanwha Wisenet: 2-Node SANless Hyper-V Cluster, Table of Co
 # SafeKit High Availability for Hanwha Wisenet: SANless BMS Redundancy
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Hanwha Wisenet" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Hanwha Wisenet"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

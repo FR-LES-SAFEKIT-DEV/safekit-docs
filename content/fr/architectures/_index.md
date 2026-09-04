@@ -86,8 +86,8 @@ Une fois qu'un module applicatif est configuré et testé avec une application, 
 
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

@@ -10,7 +10,7 @@ topics: "Discover SafeKit in Microsoft Azure, Discover SafeKit in Google GCP, Di
 # Cluster in cloud computing: a generic solution for Amazon AWS, Microsoft Azure, Google GCP and other clouds
 
 
-{{%  insert-safekit-all-cloud-solutions-en %}}
+{{%  insert-safekit-all-cloud-solutions-en  %}}
  
 
 ## Other cloud solutions with Eviden SafeKit
@@ -20,8 +20,8 @@ topics: "Discover SafeKit in Microsoft Azure, Discover SafeKit in Google GCP, Di
 [ Generic Cloud Farm > ](</solutions/cloud-load-balancing-cluster-failover/>)
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -53,8 +53,8 @@ SafeKit offers a free online certification and training program covering high av
 [ Free training and certification  ](<https://training.my.evidian.com/mod/page/view.php?id=712>)
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -28,8 +28,8 @@ Providing a business continuity solution in an Enterprise for multiple applicati
 SafeKit offers two simple farm and mirror modules to protect your critical applications against failures. The deployment is made on standard servers without the need for IT skills to manage the solution. There is no need for shared disk, replicated SAN, load balancers, Entreprise editions of Operating Systems or databases. 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

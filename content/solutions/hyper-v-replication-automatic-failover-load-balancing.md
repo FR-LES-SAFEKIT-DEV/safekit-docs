@@ -10,12 +10,12 @@ topics: "SafeKit for Hyper-V: 2-Node SANless Hyper-V Cluster, Table of Contents,
 # Simple Hyper-V High Availability Without Shared Storage (SAN)
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Hyper-V" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Hyper-V"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

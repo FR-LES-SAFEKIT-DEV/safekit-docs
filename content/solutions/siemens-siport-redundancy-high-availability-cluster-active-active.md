@@ -10,20 +10,20 @@ topics: "SafeKit for Siemens SIPORT: 2-Node SANless Hyper-V Cluster, Table of Co
 # High Availability for Siemens SIPORT Access Control: SANless Redundancy & Failover
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens SIPORT" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens SIPORT"  %}}
  
 
 
-{{%  insert-safekit-siemens-license-en app="Siemens Desigo CC" %}}
+{{%  insert-safekit-siemens-license-en app="Siemens Desigo CC"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

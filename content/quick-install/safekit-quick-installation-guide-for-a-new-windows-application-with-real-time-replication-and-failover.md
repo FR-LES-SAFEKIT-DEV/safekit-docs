@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Windows, SafeKit High Av
 # Windows High Availability with SafeKit: Install the mirror.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Windows" mod="mirror" %}}
+{{%  insert-safekit-mirror-guide-en app="Windows" mod="mirror"  %}}
  
 
 ## Overview of the SafeKit / Windows solution
@@ -25,7 +25,7 @@ The solution is described here: **💡[The Simplest Windows High Availability: 2
 
 
 
-{{%  insert-safekit-installation-package-windows-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-windows-en app="" mod="mirror"  %}}
  
 
 Note: the generic **mirror.safe** module that you are going to configure is delivered inside the package.
@@ -33,18 +33,18 @@ Note: the generic **mirror.safe** module that you are going to configure is deli
 ## Step by step configuration of the SafeKit / Windows solution
 
 
-{{%  insert-safekit-82-configuration-en app="Windows" mod="mirror" %}}
+{{%  insert-safekit-82-configuration-en app="Windows" mod="mirror"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en app="Microsoft SQL Server mirror" %}}
+{{%  insert-safekit-hub-en app="Microsoft SQL Server mirror"  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

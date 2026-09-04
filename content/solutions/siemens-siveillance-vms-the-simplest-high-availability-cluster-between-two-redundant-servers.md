@@ -16,12 +16,12 @@ topics: "SafeKit quick installation guide with Siemens Siveillance VMS and SQL (
 <a class="btn-download" href="/wp-content/uploads/downloads_safekit/version-82/modules_windows/SiveillanceVMS.safe" download="SiveillanceVMS.safe">Siemens Siveillance VMS module ></a> 
 
 
-{{%  insert-safekit-solution-mirror-2-en app="Milestone XProtect" img="/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="Milestone XProtect" guide="/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/" img="/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

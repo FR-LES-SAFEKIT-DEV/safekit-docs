@@ -47,16 +47,16 @@ According this [analyst report](<https://www.linkedin.com/pulse/global-scada-mar
 
 
 
-{{%  insert-safekit-scada-solutions-en app="SCADA" %}}
+{{%  insert-safekit-scada-solutions-en app="SCADA"  %}}
  
 
 
-{{%  insert-safekit-scada-case-en %}}
+{{%  insert-safekit-scada-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

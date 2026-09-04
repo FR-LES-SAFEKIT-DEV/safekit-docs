@@ -32,12 +32,12 @@ While the standard open-source stack (MetalLB + Longhorn) for K3s is powerful fo
 <a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-kubernetes/">⚡ Quick Kubernetes HA cluster installation guide ></a>
 ## Table of Contents {#toc}
 
-  * [How the SafeKit software simply implements a Kubernetes K3s high availability cluster?](<#safekit-mirror-k3s-cluster>)
-  * [How the SafeKit mirror cluster works with Kubernetes K3S?](<#safekit-mirror-cluster>)
-  * [SafeKit High Availability Limitations](<#safekit-ha-limitations>)
-  * [Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn)](<#safekit-k3s-ha-comparison>)
-  * [Video Guide: Configuring a SafeKit Mirror HA cluster](<#videoguide-safekit-mirror-cluster>)
-  * [🔍 SafeKit High Availability Navigation Hub](<#hub>)
+  * [How the SafeKit software simply implements a Kubernetes K3s high availability cluster?](#safekit-mirror-k3s-cluster)
+  * [How the SafeKit mirror cluster works with Kubernetes K3S?](#safekit-mirror-cluster)
+  * [SafeKit High Availability Limitations](#safekit-ha-limitations)
+  * [Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn)](#safekit-k3s-ha-comparison)
+  * [Video Guide: Configuring a SafeKit Mirror HA cluster](#videoguide-safekit-mirror-cluster)
+  * [🔍 SafeKit High Availability Navigation Hub](#hub)
 
 
 ## How the SafeKit software simply implements a Kubernetes K3s high availability cluster? {#safekit-mirror-k3s-cluster}
@@ -91,7 +91,7 @@ Configuration Database |  • Hosts Virtual IP and MariaDB Port<br>• Manages a
 
 ### Step 1: Byte-Level File Replication in a Mirror Cluster
 
-This stage illustrates the high-availability architecture between **Server 1 (PRIM)** and **Server 2 (SECOND)**. Both servers run K3s master and agent components as defined in the [architecture table](<#safekit-k3s-architecture-table>).
+This stage illustrates the high-availability architecture between **Server 1 (PRIM)** and **Server 2 (SECOND)**. Both servers run K3s master and agent components as defined in the [architecture table](#safekit-k3s-architecture-table).
 
 
 ![File replication at byte level in a Kubernetes K3s mirror cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -181,7 +181,7 @@ For a 2-node mirror cluster, the console clearly displays the roles of each serv
 Beyond simple status icons, the interface provides **one-click failover orchestration** , allowing you to manually reassign the primary role for planned maintenance while ensuring continuous availability for user activity.
 
 
-{{%  insert-safekit-usage-en %}}
+{{%  insert-safekit-usage-en  %}}
  
 
 ## Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn) {#safekit-k3s-ha-comparison}
@@ -215,8 +215,8 @@ While this video demonstrates SafeKit's high availability for Microsoft SQL Serv
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

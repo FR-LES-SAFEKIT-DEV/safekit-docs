@@ -10,12 +10,12 @@ topics: "How the SANless SafeKit Mirror Cluster Works with Windows or Linux, Tab
 # SafeKit: Real-Time Byte-Level File Replication & Mirror Cluster Software
 
 
-{{%  insert-safekit-solution-mirror-2-en app="Windows or Linux" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="Windows or Linux" guide="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

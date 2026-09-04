@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Firebird, SafeKit High A
 # Firebird High Availability with SafeKit: Install the firebird.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Firebird" mod="firebird" %}}
+{{%  insert-safekit-mirror-guide-en app="Firebird" mod="firebird"  %}}
  
 
 ## Overview of the SafeKit / Firebird solution
@@ -25,36 +25,36 @@ The solution is described here: **💡[The Simplest Firebird High Availability: 
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Firebird" mod="firebird" %}}
+{{%  insert-safekit-installation-package-windows-en app="Firebird" mod="firebird"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="Firebird" mod="firebird" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="Firebird" mod="firebird"  %}}
  
 
 
-{{%  insert-safekit-installation-package-linux-en app="Firebird" mod="firebird" %}}
+{{%  insert-safekit-installation-package-linux-en app="Firebird" mod="firebird"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-linux-en app="Firebird" mod="firebird" %}}
+{{%  insert-safekit-82-installation-module-linux-en app="Firebird" mod="firebird"  %}}
  
 
 ## Step by step configuration of the SafeKit / Firebird solution
 
 
-{{%  insert-safekit-82-configuration-en app="Firebird" mod="firebird" %}}
+{{%  insert-safekit-82-configuration-en app="Firebird" mod="firebird"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

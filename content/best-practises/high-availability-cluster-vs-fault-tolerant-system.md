@@ -50,8 +50,8 @@ Suited for | [Software editors which want to add a simple high availability opti
 **In summary** , software high availability with SafeKit provides a cost-effective, flexible solution that runs on standard hardware and supports rolling upgrades, with near-zero downtime (RTO ~1 minute) and zero data loss. Fault-tolerant systems offer instant failover (RTO = 0) but require dedicated hardware and lack flexibility for independent software updates.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

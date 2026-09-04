@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for MariaDB, SafeKit High Av
 # MariaDB High Availability with SafeKit: Install the mysql.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="MariaDB" mod="mysql" %}}
+{{%  insert-safekit-mirror-guide-en app="MariaDB" mod="mysql"  %}}
  
 
 ## Overview of the SafeKit / MariaDB solution
@@ -25,36 +25,36 @@ The solution is described here: **💡[The Simplest MariaDB High Availability: 2
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="MariaDB" mod="mysql" %}}
+{{%  insert-safekit-installation-package-windows-en app="MariaDB" mod="mysql"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="MariaDB" mod="mysql" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="MariaDB" mod="mysql"  %}}
  
 
 
-{{%  insert-safekit-installation-package-linux-en app="MariaDB" mod="mysql" %}}
+{{%  insert-safekit-installation-package-linux-en app="MariaDB" mod="mysql"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-linux-en app="MariaDB" mod="mysql" %}}
+{{%  insert-safekit-82-installation-module-linux-en app="MariaDB" mod="mysql"  %}}
  
 
 ## Step by step configuration of the SafeKit / MariaDB solution
 
 
-{{%  insert-safekit-82-configuration-en app="MariaDB" mod="mysql" %}}
+{{%  insert-safekit-82-configuration-en app="MariaDB" mod="mysql"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -1,5 +1,6 @@
-{{/* Shortcode: insert-safekit-82-hyper-v-configuration-en — 1 instances in 1 files */}}
+{{/* Shortcode: insert-safekit-82-hyper-v-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
+
  
 
 ⚠️ Read carefully these items before starting:
@@ -10,7 +11,7 @@
   * SafeKit supports replication of **{{ .Get "app" }} production checkpoints but not standard checkpoints**. Do not use standard checkpoints, otherwise recovery on the secondary node may fail with inconsistent data.
 
 
-### 1\. Prerequisites {#prerequisite}
+### 1. Prerequisites {#prerequisite}
 
 For SafeKit replication, all VM1 virtual machine files (configuration file, virtual hard disk, etc.) must be stored in the same folder, even though this is not the default behavior of Hyper‑V (e.g., D:/Repli-{{ .Get "app" }}/VM1, where VM1 is the name of the virtual machine).
 
@@ -30,7 +31,7 @@ If all the files of VM1 are not in the same folder, use {{ .Get "app" }} manager
 
 ⚠️ Hyper‑V module ({{ .Get "mod" }}.safe) failover may fail if VM migration prerequisites are not met. To detect compatibility issues between Hyper‑V nodes (hardware, network, configuration), see🛠️ [KB SK-0088 in this document](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
-### 2\. Launch the SafeKit console
+### 2. Launch the SafeKit console
 
   * Launch the web console in a browser on one cluster node by connecting to `http://localhost:9010`.
   * Enter `admin` as user name and the password defined during installation.
@@ -46,7 +47,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Start the SafeKit web console to configure the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 3\. Configure node addresses
+### 3. Configure node addresses
 
   * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
   * Then, click on `Save and apply` to save the configuration.
@@ -62,7 +63,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Enter the nodes of the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-### 4\. Select a module
+### 4. Select a module
 
   * In `New module`, click on the `{{ .Get "mod" }}.safe` module.
 
@@ -75,7 +76,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Choose the module for {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 5\. Configure the module
+### 5. Configure the module
 
   * Choose an `Automatic` start of the module at boot without delay.
   * Normally, you have a single `Heartbeat` network on which the replication is made. But, you can define a private network if necessary (by adding a LAN at step 3).
@@ -104,7 +105,7 @@ This will be the case, for example, when switching between primary and secondary
 ![Enter the {{ .Get "app" }} parameters](/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png)
 
 
-### 6\. Custom checker to detect VM malfunction {#vm-checker}
+### 6. Custom checker to detect VM malfunction {#vm-checker}
 
 The custom checker sends heartbeat messages from the host to the VM at regular intervals. It is then the job of the {{ .Get "app" }} Heartbeat Service installed in the VM to send a response to each of these heartbeat messages.
 
@@ -124,12 +125,12 @@ If the {{ .Get "app" }} Heartbeat Service does not respond to the message (VM lo
 ![Enter the {{ .Get "app" }} custom checker parameters](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
 
 
-### 7\. Edit scripts (optional)
+### 7. Edit scripts (optional)
 
   * Do not edit scripts.
 
 
-### 8\. Communication encryption (optional)
+### 8. Communication encryption (optional)
 
   * Keep encryption of communication between nodes.
 
@@ -137,7 +138,7 @@ If the {{ .Get "app" }} Heartbeat Service does not respond to the message (VM lo
 ![Communication encryption of the {{ .Get "app" }} module](/wp-content/uploads/2024/03/07-module-encryption.png)
 
 
-### 9\. Save and apply
+### 9. Save and apply
 
   * `Save and apply` the configuration and scripts on both nodes.
 
@@ -145,7 +146,7 @@ If the {{ .Get "app" }} Heartbeat Service does not respond to the message (VM lo
 ![Save and apply the {{ .Get "app" }} module configuration](/wp-content/uploads/2024/03/08-module-save.png)
 
 
-### 10\. Verify successful configuration
+### 10. Verify successful configuration
 
   * Check the `Success` ✅ message on both nodes and click on `Monitor modules`.
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
@@ -154,7 +155,7 @@ If the {{ .Get "app" }} Heartbeat Service does not respond to the message (VM lo
 ![Check the {{ .Get "app" }} module configuration success](/wp-content/uploads/2024/03/09-module-save-check.png)
 
 
-### 11\. Start the node with up-to-date data
+### 11. Start the node with up-to-date data
 
   * If node 1 has the up-to-date replicated directory for `VM1/`, select it and ⋯ `Force start` ▶ `As primary`.
 
@@ -171,7 +172,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![Start as primary the {{ .Get "app" }} node with the up-to-date data](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-### 12\. Wait for the transition to ALONE (green)
+### 12. Wait for the transition to ALONE (green)
 
   * Node 1 should reach the ALONE (green) state, which means that the `start_prim` script has been executed on node 1.
 
@@ -189,7 +190,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![The first {{ .Get "app" }} node starts as primary and becomes ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
 
-### 13\. Start node 2
+### 13. Start node 2
 
   * ⋯ `Start` node 2 with its contextual menu.
   * Wait for the SECOND (green) state.
@@ -207,7 +208,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![Start the {{ .Get "app" }} node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-### 14\. Verify that the cluster is operational
+### 14. Verify that the cluster is operational
 
   * Check that the cluster is green/green with `VM1` running on the PRIM node and not running on the SECOND node.
 
@@ -218,7 +219,7 @@ Only changes inside files are replicated in real time in this state.
 ![The {{ .Get "app" }} node 2 is SECOND (green)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-### 15\. Testing
+### 15. Testing
 
   * Stop the PRIM node by scrolling down its contextual menu and clicking `Stop`.
   * Verify that there is a failover on the SECOND node which should become ALONE (green).
@@ -244,7 +245,7 @@ If things go wrong, stop node2 and [force the start as primary 🖼️](/wp-cont
 ![Stop the {{ .Get "app" }} module on the PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16\. If necessary, configure a splitbrain checker
+### 16. If necessary, configure a splitbrain checker
 
   * See [What are the different scenarios in case of network isolation in a cluster?](/best-practises/power-outage-and-network-isolation-in-a-cluster/) to know if you need to configure a splitbrain checker.
   * Go to the module configuration and click on `Checkers / Splitbrain` (see image) to edit the splitbrain parameters.
@@ -261,7 +262,7 @@ If things go wrong, stop node2 and [force the start as primary 🖼️](/wp-cont
 ![Enter the {{ .Get "app" }} splitbrain parameters](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
 
 
-### 17\. Automatic restart if a critical service fails inside the VM
+### 17. Automatic restart if a critical service fails inside the VM
 
 If you want an automatic restart or failover when a critical service inside the VM fails, you can configure the Recovery properties of the service (see image).
 
@@ -279,7 +280,7 @@ To test the feature, use Task Manager and kill the process (End task) associated
 ![{{ .Get "app" }} VM critical services failover of {{ .Get "app" }} module](/wp-content/uploads/2023/11/hyperv-critical-service.png)
 
 
-### 18\. Support
+### 18. Support
 
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
@@ -288,6 +289,5 @@ To test the feature, use Task Manager and kill the process (End task) associated
 
 
 ![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
-
 
 

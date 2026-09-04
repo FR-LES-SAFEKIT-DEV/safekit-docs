@@ -1,33 +1,33 @@
 {{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
+
  
 
 ## High Availability Quick Installation Guide for {{ .Get "app" }} {#quick-guide}
 
-This guide explains how to set up a **{{ .Get "mod" }} cluster** for {{ .Get "app" }} using SafeKit, ensuring network load balancing and automatic failover.
+This guide explains how to set up a **farm cluster** for {{ .Get "app" }} using SafeKit, ensuring network load balancing and automatic failover.
 
 For help, you can use [SafeKit AI 🤖](/resources/safekit-support/).
 
-### 1\. Overview
+### 1. Overview
 
-  * **Architecture:** Implements a scalable, multi-node load-balanced {{ .Get "mod" }} with a virtual IP address.
+  * **Architecture:** Implements a scalable, multi-node load-balanced farm with a virtual IP address.
   * **High Availability:** Features automatic health monitoring and seamless failover to **ensure service continuity**.
 
 
-### 2\. Installation
+### 2. Installation
 
   * **Software:** Install the SafeKit engine on all servers.
   * **Module:** Download the pre-configured `{{ .Get "mod" }}.safe` application module.
 
 
-### 3\. Configuration
+### 3. Configuration
 
-  * **Web Console:** Configure the {{ .Get "app" }} {{ .Get "mod" }} cluster.
+  * **Web Console:** Configure the {{ .Get "app" }} farm cluster.
   * **Monitoring:** Start monitoring and protecting the {{ .Get "app" }} application.
 
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-usage-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
  
-
 

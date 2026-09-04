@@ -45,16 +45,16 @@ Les principaux acteurs sur le marché de l'EACS sont :
 
 
 
-{{%  insert-safekit-security-solutions-fr app="EACS" %}}
+{{%  insert-safekit-security-solutions-fr app="EACS"  %}}
  
 
 
-{{%  insert-safekit-security-case-fr app="EACS" %}}
+{{%  insert-safekit-security-case-fr app="EACS"  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

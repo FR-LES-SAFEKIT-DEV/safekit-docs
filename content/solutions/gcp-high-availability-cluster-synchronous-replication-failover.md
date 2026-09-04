@@ -10,12 +10,12 @@ topics: "SafeKit Shared-Nothing HA in GCP: Eliminate Shared Disks with Zero Data
 # Google GCP High Availability: SafeKit Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-cloud-en app="GCP" img="/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/" %}}
+{{%  insert-safekit-solution-mirror-cloud-en app="GCP" guide="/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

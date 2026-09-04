@@ -10,12 +10,12 @@ topics: "SafeKit HA Free Trial & Technical Documentation, 🔍 SafeKit High Avai
 # SafeKit Free Trial: Test Application and VM-Level High Availability
 
 
-{{%  insert-safekit-training-en %}}
+{{%  insert-safekit-training-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

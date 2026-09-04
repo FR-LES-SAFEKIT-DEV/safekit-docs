@@ -10,12 +10,12 @@ topics: "The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for 
 # SafeKit: All-in-One Windows or Linux Network Load Balancing & High Availability Software
 
 
-{{%  insert-safekit-solution-farm-2-en app="Windows/Linux" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" %}}
+{{%  insert-safekit-solution-farm-2-en app="Windows/Linux" guide="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

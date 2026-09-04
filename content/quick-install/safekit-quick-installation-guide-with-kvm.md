@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for KVM, SafeKit High Availa
 # KVM High Availability with SafeKit: Install the kvm.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="KVM" mod="kvm" %}}
+{{%  insert-safekit-mirror-guide-en app="KVM" mod="kvm"  %}}
  
 
 ## Overview of the SafeKit / KVM solution
@@ -30,28 +30,28 @@ The solution is described here: **💡[Simple Linux KVM High Availability withou
 
 
 
-{{%  insert-safekit-installation-package-linux-en app="KVM" mod="kvm" %}}
+{{%  insert-safekit-installation-package-linux-en app="KVM" mod="kvm"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-linux-en app="KVM" mod="kvm" %}}
+{{%  insert-safekit-82-installation-module-linux-en app="KVM" mod="kvm"  %}}
  
 
 ## Step by step configuration of the SafeKit / KVM solution
 
 
-{{%  insert-safekit-82-kvm-configuration-en app="KVM" mod="kvm" %}}
+{{%  insert-safekit-82-kvm-configuration-en app="KVM" mod="kvm"  %}}
  
 
 ## Demonstration of a VM-level high availability solution
 
 
-{{%  insert-safekit-hyperv-video-en %}}
+{{%  insert-safekit-hyperv-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

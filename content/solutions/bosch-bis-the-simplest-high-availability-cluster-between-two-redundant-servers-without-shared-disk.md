@@ -10,16 +10,16 @@ topics: "SafeKit for Bosch BIS: 2-Node SANless Hyper-V Cluster, Table of Content
 # SafeKit High Availability for Bosch BIS: 2-Node Cluster Without Shared Disk
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Bosch BIS" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Bosch BIS"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -10,12 +10,12 @@ topics: "Tutoriels techniques et démos sur le basculement SafeKit, 🔍 Hub de 
 # Démonstrations de haute disponibilité et de basculement SafeKit : Tutoriels vidéo sur le clustering sans SAN
 
 
-{{%  insert-safekit-videos-fr %}}
+{{%  insert-safekit-videos-fr  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

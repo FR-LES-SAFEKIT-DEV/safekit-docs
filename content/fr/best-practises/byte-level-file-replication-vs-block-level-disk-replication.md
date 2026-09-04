@@ -53,7 +53,7 @@ Critère | **Cluster avec réplication de fichiers au niveau octet** | **Cluster
 ---|---|---  
 Produit |  • [SafeKit sous Windows et Linux](/fr/)  |  • Produits de réplication de disques comme [DRBD](https://linbit.com/drbd/)   
 Organisation des données de l'application |  • 0 impact sur l'organisation des données de l'application avec SafeKit.<br>• Il suffit de définir les [répertoires à répliquer en temps réel](/fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Même des répertoires dans le disque système peuvent être répliqués.  |  • Impact sur l'organisation des données de l'application.<br>• Configuration spéciale de l'application pour mettre ses données sur un disque répliqué.<br>• Les données du disque système ne peuvent pas être répliquées.   
-Réplication de données |  • Réplication de fichiers en temps réel synchrone au niveau octet.<br>• Réplication de données temps réel et continue suivant l'activité d'écriture générée par l'application.<br>• Aucune métadonnéen'est répliquée. Seules les données modifiées à l'intérieur des fichiers sont répliquées et pas les fichiers dans leur totalité (réplication de fichiers au niveau octet).<br>• [Réplication synchrone](/fr/best-practises/synchronous-replication-vs-asynchronous-replication/)pour éviter la perte de données en cas de panne.  |  • Réplication de disques au niveau bloc.<br>• Réplique toutes les données modifiées dans le disque répliqué.<br>• Les données applicatives et lesmétadonnéessont répliquées.<br>• Par exemple, l'heure du dernier accès à un fichier est répliquée (l'heure du dernier accès est modifiée chaque fois que le fichier est lu).   
+Réplication de données |  • Réplication de fichiers en temps réel synchrone au niveau octet.<br>• Réplication de données temps réel et continue suivant l'activité d'écriture générée par l'application.<br>• Aucune métadonnée n'est répliquée. Seules les données modifiées à l'intérieur des fichiers sont répliquées et pas les fichiers dans leur totalité (réplication de fichiers au niveau octet).<br>• [Réplication synchrone](/fr/best-practises/synchronous-replication-vs-asynchronous-replication/) pour éviter la perte de données en cas de panne.  |  • Réplication de disques au niveau bloc.<br>• Réplique toutes les données modifiées dans le disque répliqué.<br>• Les données applicatives et les métadonnées sont répliquées.<br>• Par exemple, l'heure du dernier accès à un fichier est répliquée (l'heure du dernier accès est modifiée chaque fois que le fichier est lu).   
 Complexité du déploiement |  • Non - installer un logiciel sur 2 serveurs  |  • Oui - nécessite des compétences informatiques spécifiques pour la configuration du système d'exploitation et du disque répliqué   
 Basculement |  • Redémarrer simplement l'application sur le deuxième serveur  |  • Remonter le système de fichiers du disque répliqué.<br>• Passer la procédure de récupération sur le système de fichiers.<br>• Et enfin redémarrer l'application.   
 Réintégration d'un serveur dans le cluster |  • Réintégration automatique.<br>• Resynchronisation des données sur le serveur secondaire sans arrêter l'application sur le serveur principal.<br>• Pas de basculement d'application tant que les données ne sont pas resynchronisées.  |  • Tous les produits ne sont pas au même niveau de fonctionnalité.   
@@ -61,8 +61,8 @@ Quorum et split brain |  • Application exécutée sur un serveur unique après
 Convient pour |  • Les éditeurs de logiciels qui souhaitent ajouter une [option de haute disponibilité simple pour leur application](/fr/use-cases/application-clustering-software/)  |  • Les entreprises possédant des compétences en informatique dans le clustering   
   
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

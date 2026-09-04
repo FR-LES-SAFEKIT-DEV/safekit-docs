@@ -28,13 +28,13 @@ SafeKit offers a lightweight, **"just-enough" HA solution** tailored for organiz
 <a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-podman/">⚡ Quick HA installation guide for Podman ></a>
 ## Table of Contents {#table-of-contents}
 
-  * [How the SafeKit software simply implements a Podman high availability cluster?](<#how-safekit-implements-podman-ha>)
-  * [How the SafeKit mirror cluster works with Podman?](<#safekit-mirror-cluster>)
-  * [SafeKit High Availability Limitations](<#safekit-ha-limitations>)
-  * [Comparison: SafeKit SANless Cluster vs. Traditional Podman HA](<#safekit-podman-comparison>)
-  * [Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD)](<#safekit-vs-linux-ha-stack>)
-  * [Podman High Availability Summary](<#podman-ha-summary-quick-installation-guide>)
-  * [🔍 SafeKit High Availability Navigation Hub](<#hub>)
+  * [How the SafeKit software simply implements a Podman high availability cluster?](#how-safekit-implements-podman-ha)
+  * [How the SafeKit mirror cluster works with Podman?](#safekit-mirror-cluster)
+  * [SafeKit High Availability Limitations](#safekit-ha-limitations)
+  * [Comparison: SafeKit SANless Cluster vs. Traditional Podman HA](#safekit-podman-comparison)
+  * [Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD)](#safekit-vs-linux-ha-stack)
+  * [Podman High Availability Summary](#podman-ha-summary-quick-installation-guide)
+  * [🔍 SafeKit High Availability Navigation Hub](#hub)
 
 
 ## How the SafeKit software simply implements a Podman high availability cluster? {#how-safekit-implements-podman-ha}
@@ -53,7 +53,7 @@ A **SANless cluster** for Podman is an architecture that provides high availabil
 
 ### Is it possible to set up a Podman cluster without Kubernetes skills?
 
-Yes. This article explains how to 🛠️ [**quickly implement a Podman cluster**](</quick-install/safekit-quick-installation-guide-with-podman/>) without specialized clustering skills or complex Kubernetes orchestration. By using SafeKit’s **automatic restart scripts** to handle the start and stop of Podman applications, you get a robust redundancy solution that is much simpler to deploy and maintain than K8s.
+Yes. This article explains how to [quickly implement a Podman cluster](</quick-install/safekit-quick-installation-guide-with-podman/>) without specialized clustering skills or complex Kubernetes orchestration. By using SafeKit’s **automatic restart scripts** to handle the start and stop of Podman applications, you get a robust redundancy solution that is much simpler to deploy and maintain than K8s.
 
 ### How does SafeKit replication differ from block-level solutions like DRBD for Podman?
 
@@ -64,11 +64,11 @@ Unlike most SANless solutions that use **block-level replication** (such as DRBD
 Yes. **SafeKit** is a highly versatile, generic high-availability software compatible with both **Windows and Linux**. Beyond Podman, SafeKit can be used to implement **real-time replication and automatic failover** for any file directory, service, or database. It supports a wide range of technologies, including **Hyper-V and KVM virtual machines** , **Docker** , **K3s** , and various **Cloud applications**. This makes SafeKit a universal clustering solution for protecting critical workloads across diverse IT environments without requiring specialized hardware.
 
 
-{{%  insert-safekit-mirror-en app="Podman" %}}
+{{%  insert-safekit-mirror-en  %}}
  
 
 
-{{%  insert-safekit-usage-en %}}
+{{%  insert-safekit-usage-en  %}}
  
 
 ## Comparison: SafeKit SANless Cluster vs. Traditional Podman HA {#safekit-podman-comparison}
@@ -100,8 +100,8 @@ Maintenance | Requires high specialized skills to update/troubleshoot individual
 Through **real-time synchronous replication** and an **automatic Virtual IP (VIP) failover** , SafeKit ensures **zero data loss (RPO=0)** and transparent application recovery. It is the ideal solution for organizations requiring robust, **SANless high availability** with minimal configuration and administrative overhead.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

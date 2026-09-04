@@ -10,16 +10,16 @@ topics: "How the SANless SafeKit Mirror Cluster Works with Nedap, Table of Conte
 # The Simplest Nedap High Availability: 2-Node Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-2-en app="Nedap" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-nedap/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="Nedap" guide="/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-security-case-en %}}
+{{%  insert-safekit-security-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

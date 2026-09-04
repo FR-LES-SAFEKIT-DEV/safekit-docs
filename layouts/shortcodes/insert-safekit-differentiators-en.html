@@ -1,4 +1,6 @@
-{{/* Shortcode: insert-safekit-differentiators-en — 1 instances in 1 files */}}
+{{/* Shortcode: insert-safekit-differentiators-en — 1 instance in 1 file */}}
+{{/* Parameters: none */}}
+
  
 
 ## Comparison of SafeKit with Traditional High Availability (HA) Clusters {#safekit-ha-comparison}
@@ -19,13 +21,13 @@ SafeKit | Low | Simplest, generic and software-only. Unsuitable for large data r
 ## Architectural Differentiators: SafeKit Software-Defined vs. Hardware HA Clusters {#ha-arch-diff}
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-software-vs-hardware-table-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-software-vs-hardware-table-en  %}}" }}
  
 
 ## Key Differentiators of the SafeKit Mirror Cluster {#safemirr-diff}
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-mirror-comparison-table-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-comparison-table-en  %}}" }}
  
 
 ## Key Differentiators of the SafeKit Farm Cluster {#safefarm-diff}
@@ -36,9 +38,9 @@ The SafeKit Farm Cluster is a high availability solution specifically designed f
 
 Advantage | Detailed Benefit and Mechanism  
 ---|---  
-[No load balancer or dedicated proxy servers or special multicast Ethernet address](/best-practises/how-a-virtual-ip-address-works/) |  • The solution does not require load balancers or dedicated proxy servers above the farm for implementing load balancing. SafeKit is installed directly on the application servers in the farm. The load balancing is based on a standard virtual IP address/Ethernet MAC address and is working with physical servers or virtual machines on Windows and Linux without special network configuration<br>• This is not the case with network load balancers<br>• This is not the case with dedicated proxies on Linux<br>• This is not the case with a [specific multicast Ethernet address](/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/)on Windows   
-[All clustering features](/architectures/network-load-balancing-cluster/) |  • The solution includes all clustering features: virtual IP address, load balancing on client IP address or on sessions, monitoring of server / network / software failures, automatic application restart with a quick recovery time and a [replication option with a mirror module](/architectures/file-replication-byte-level-with-failover-mirror-cluster/)<br>• This is not the case with other load balancing solutions. They are able to make load balancing but they do not include a full clustering solution with restart scripts and automatic application restart in case of failure. They do not offer a replication option<br>• The cluster configuration is very simple and made by means of 💡[application modules](/solutions/). There is no domain controller or active directory to configure on Windows. The solution works on Windows and Linux   
-[Remote sites and virtual IP address](/best-practises/how-a-virtual-ip-address-works/) |  • If servers are connected to the same IP network through an extended LAN between remote sites, the [virtual IP address](/best-practises/how-a-virtual-ip-address-works/)of SafeKit is working with load balancing at level 2<br>• If servers are connected to different IP networks between remote sites, the virtual IP address can be configured at the level of a load balancer with the help of the SafeKit health check. Thus you can implement load balancing but also all the clustering features of SafeKit, in particular monitoring and automatic recovery of the critical application on application servers   
+[No load balancer or dedicated proxy servers or special multicast Ethernet address](/best-practises/how-a-virtual-ip-address-works/) |  • The solution does not require load balancers or dedicated proxy servers above the farm for implementing load balancing. SafeKit is installed directly on the application servers in the farm. The load balancing is based on a standard virtual IP address/Ethernet MAC address and is working with physical servers or virtual machines on Windows and Linux without special network configuration<br>• This is not the case with network load balancers<br>• This is not the case with dedicated proxies on Linux<br>• This is not the case with a [specific multicast Ethernet address](/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/) on Windows   
+[All clustering features](/architectures/network-load-balancing-cluster/) |  • The solution includes all clustering features: virtual IP address, load balancing on client IP address or on sessions, monitoring of server / network / software failures, automatic application restart with a quick recovery time and a [replication option with a mirror module](/architectures/file-replication-byte-level-with-failover-mirror-cluster/)<br>• This is not the case with other load balancing solutions. They are able to make load balancing but they do not include a full clustering solution with restart scripts and automatic application restart in case of failure. They do not offer a replication option<br>• The cluster configuration is very simple and made by means of 💡 [application modules](/solutions/). There is no domain controller or active directory to configure on Windows. The solution works on Windows and Linux   
+[Remote sites and virtual IP address](/best-practises/how-a-virtual-ip-address-works/) |  • If servers are connected to the same IP network through an extended LAN between remote sites, the [virtual IP address](/best-practises/how-a-virtual-ip-address-works/) of SafeKit is working with load balancing at level 2<br>• If servers are connected to different IP networks between remote sites, the virtual IP address can be configured at the level of a load balancer with the help of the SafeKit health check. Thus you can implement load balancing but also all the clustering features of SafeKit, in particular monitoring and automatic recovery of the critical application on application servers   
 [Uniform high availability solution](/architectures/clustering-software-load-balancing-mirroring/) |  • SafeKit implements a farm cluster with load balancing and failover. But it implements also a [mirror cluster with replication and failover](/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Thus a N-tiers architecture can be made highly available and load balanced with the same solution on Windows and Linux (same installation, configuration, administration with the SafeKit console or with the command line interface). This is unique on the market<br>• This is not the case with an architecture mixing different technologies for load balancing, replication and failover   
   
 **In summary** , the SafeKit Farm Cluster provides a unified, software-based approach to load balancing and high availability that dramatically lowers complexity and cost. By embedding load balancing and failover directly into the application server layer using a standard virtual IP address, it avoids the need for external network hardware (load balancers or proxies) and specialized multicast configurations. This integrated approach, coupled with its ability to combine with the mirror cluster for full N-tiers HA, makes SafeKit a uniquely simple and comprehensive solution for achieving scalable and resilient application delivery across diverse environments. 
@@ -46,7 +48,6 @@ Advantage | Detailed Benefit and Mechanism
 ## VM High Availability: SafeKit's SAN-Less vs. Hyper-V/VMware HA {#safe-vmha-diff}
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-vm-vs-app-ha-comparison-table-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-vm-vs-app-ha-comparison-table-en  %}}" }}
  
-
 

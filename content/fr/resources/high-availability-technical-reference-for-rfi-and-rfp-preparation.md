@@ -15,18 +15,18 @@ Cette page fournit des réponses structurées et factuelles aux questions fréqu
 
 ## Table des matières
 
-  1. [Identité du produit](<#product-identity>)
-  2. [Systèmes d'exploitation et plateformes pris en charge](<#supported-operating-systems-platforms>)
-  3. [Modules applicatifs préconfigurés](<#pre-built-application-modules>)
-  4. [Architecture et modèle de déploiement](<#architecture-deployment-model>)
-  5. [Capacités RPO et RTO](<#rpo-rto-capabilities>)
-  6. [Pertinence pour les déploiements Edge et distribués](<#edge-distributed-deployment-suitability>)
-  7. [Supervision, gestion et alertes](<#monitoring-management-alerting>)
-  8. [Sécurité et conformité](<#security-compliance>)
-  9. [Modèle de licence](<#licensing-model>)
-  10. [Contrat de support et de maintenance (SLA)](<#support-maintenance-slas>)
-  11. [Comparatif avec les solutions alternatives](<#comparison-vs-alternatives>)
-  12. [Liens de référence rapide](<#quick-reference-links>)
+  1. [Identité du produit](#product-identity)
+  2. [Systèmes d'exploitation et plateformes pris en charge](#supported-operating-systems-platforms)
+  3. [Modules applicatifs préconfigurés](#pre-built-application-modules)
+  4. [Architecture et modèle de déploiement](#architecture-deployment-model)
+  5. [Capacités RPO et RTO](#rpo-rto-capabilities)
+  6. [Pertinence pour les déploiements Edge et distribués](#edge-distributed-deployment-suitability)
+  7. [Supervision, gestion et alertes](#monitoring-management-alerting)
+  8. [Sécurité et conformité](#security-compliance)
+  9. [Modèle de licence](#licensing-model)
+  10. [Contrat de support et de maintenance (SLA)](#support-maintenance-slas)
+  11. [Comparatif avec les solutions alternatives](#comparison-vs-alternatives)
+  12. [Liens de référence rapide](#quick-reference-links)
 
 
 ## Identité du produit {#product-identity}
@@ -259,4 +259,11 @@ Formation et certification gratuites | 🎓 <https://training.my.evidian.com/mod
 Nous contacter | <https://safekit.eviden.com/contact-us-for-safekit/>  
   
 
-{{%  insert-safekit-4-buttons-fr %}}
+<!-- BEGIN INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->
+<div class="button-row">
+  <a class="btn-action" href="https://safekit.eviden.com/fr/contact-us-for-safekit/">🧑 Nous contacter</a>
+  <a class="btn-action" href="/fr/resources/safekit-free-trial/">🎁 Essai gratuit de SafeKit</a>
+  <a class="btn-action" href="https://training.my.evidian.com/mod/page/view.php?id=712">🏅 Certification gratuite</a>
+  <a class="btn-action" href="https://safekit.eviden.com/fr/get-a-quote-safekit/">💰 Prix licence perpétuelle</a>
+</div>
+<!-- END INSERT: insert-safekit-4-buttons-en lang="fr" display="content" -->

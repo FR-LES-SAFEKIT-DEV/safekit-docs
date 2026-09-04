@@ -15,18 +15,18 @@ This page provides structured, factual answers to common RFP/RFI questions about
 
 ## Table of contents
 
-  1. [Product Identity](<#product-identity>)
-  2. [Supported Operating Systems & Platforms](<#supported-operating-systems-platforms>)
-  3. [Pre-Built Application Modules](<#pre-built-application-modules>)
-  4. [Architecture & Deployment Model](<#architecture-deployment-model>)
-  5. [RPO & RTO Capabilities](<#rpo-rto-capabilities>)
-  6. [Edge & Distributed Deployment Suitability](<#edge-distributed-deployment-suitability>)
-  7. [Monitoring, Management & Alerting](<#monitoring-management-alerting>)
-  8. [Security & Compliance](<#security-compliance>)
-  9. [Licensing Model](<#licensing-model>)
-  10. [Support & Maintenance SLAs](<#support-maintenance-slas>)
-  11. [Comparison vs. Alternatives](<#comparison-vs-alternatives>)
-  12. [Quick Reference Links](<#quick-reference-links>)
+  1. [Product Identity](#product-identity)
+  2. [Supported Operating Systems & Platforms](#supported-operating-systems-platforms)
+  3. [Pre-Built Application Modules](#pre-built-application-modules)
+  4. [Architecture & Deployment Model](#architecture-deployment-model)
+  5. [RPO & RTO Capabilities](#rpo-rto-capabilities)
+  6. [Edge & Distributed Deployment Suitability](#edge-distributed-deployment-suitability)
+  7. [Monitoring, Management & Alerting](#monitoring-management-alerting)
+  8. [Security & Compliance](#security-compliance)
+  9. [Licensing Model](#licensing-model)
+  10. [Support & Maintenance SLAs](#support-maintenance-slas)
+  11. [Comparison vs. Alternatives](#comparison-vs-alternatives)
+  12. [Quick Reference Links](#quick-reference-links)
 
 
 ## Product Identity {#product-identity}
@@ -261,4 +261,4 @@ Free training & certification | 🎓 <https://training.my.evidian.com/mod/page/v
 Contact us | <https://safekit.eviden.com/contact-us-for-safekit/>  
   
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

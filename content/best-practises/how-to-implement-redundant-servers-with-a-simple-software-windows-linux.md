@@ -30,8 +30,8 @@ In a mirror cluster, the SafeKit software is installed on two physical or virtua
 In a farm cluster, the SafeKit software is installed on redundant servers running Windows or Linux (on premise or in the Cloud). All redundant servers are active and run a same critical front-end application. Clients are connected to a [virtual IP address](</best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). TCP sessions are load balanced between all redundant servers . If one server is down, SafeKit automatically reconfigures load balancing of TCP sessions between the remaining active servers. When the failed server is restarted, it is automatically reintegrated as an active redundant server and receives new TCP sessions.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

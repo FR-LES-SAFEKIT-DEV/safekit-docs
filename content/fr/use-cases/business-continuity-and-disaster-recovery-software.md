@@ -31,8 +31,8 @@ La continuité d'activité et les solutions de sauvegarde répondent à des scé
 Pour en savoir plus : [Combiner la haute disponibilité SafeKit avec des sauvegardes de reprise après sinistre](</fr/best-practises/high-availability-disaster-recovery-hadr/>).
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

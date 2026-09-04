@@ -10,12 +10,12 @@ topics: "SafeKit Technical Failover Tutorials & Demos, 🔍 SafeKit High Availab
 # SafeKit High Availability & Failover Demos: SANless Clustering Video Tutorials
 
 
-{{%  insert-safekit-videos-en %}}
+{{%  insert-safekit-videos-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

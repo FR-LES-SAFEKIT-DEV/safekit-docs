@@ -10,12 +10,12 @@ topics: "Enhance the Cloud Load Balancer with Application-Level Monitoring and S
 # SafeKit: Google GCP Load Balancing & Application High Availability Farm Cluster
 
 
-{{%  insert-safekit-solution-farm-cloud-en app="GCP" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" %}}
+{{%  insert-safekit-solution-farm-cloud-en app="GCP" guide="/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

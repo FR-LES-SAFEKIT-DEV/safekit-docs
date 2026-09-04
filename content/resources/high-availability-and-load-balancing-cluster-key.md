@@ -20,8 +20,8 @@ This license key gives access to all SafeKit features: network load balancing, r
 If you do not have downloaded the SafeKit software, you can access to a [free download of the SafeKit clustering software here](</resources/safekit-free-trial/>).
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

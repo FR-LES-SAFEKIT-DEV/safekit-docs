@@ -10,12 +10,12 @@ topics: "Ressources, Téléchargements et Documentation sur la Haute Disponibili
 # Essai gratuit de SafeKit : testez la haute disponibilité des applications et des machines virtuelles.
 
 
-{{%  insert-safekit-training-fr %}}
+{{%  insert-safekit-training-fr  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

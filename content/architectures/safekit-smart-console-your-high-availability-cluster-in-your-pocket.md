@@ -17,10 +17,10 @@ Whether you are at your desk or on the move, the smartphone-compatible dashboard
 
 ## Table of Contents
 
-  * [How does a SafeKit mirror cluster work with the web console?](<#safekit-mirror-cluster>)
-  * [How does a SafeKit farm cluster work with the web console?](<#safekit-farm-cluster>)
-  * [How to monitor multiple modules and multiple clusters via the web console?](<#multipe-modules-clusters>)
-  * [How to monitor alerts in the console and manage email notifications?](<#safekit-notifications-cluster>)
+  * [How does a SafeKit mirror cluster work with the web console?](#safekit-mirror-cluster)
+  * [How does a SafeKit farm cluster work with the web console?](#safekit-farm-cluster)
+  * [How to monitor multiple modules and multiple clusters via the web console?](#multipe-modules-clusters)
+  * [How to monitor alerts in the console and manage email notifications?](#safekit-notifications-cluster)
 
 
 ## How does a SafeKit mirror cluster work with the web console? {#safekit-mirror-cluster}
@@ -159,8 +159,8 @@ By combining real-time PWA alerts with intelligent email grouping, SafeKit provi
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

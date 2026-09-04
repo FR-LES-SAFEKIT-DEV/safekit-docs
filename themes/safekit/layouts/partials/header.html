@@ -8,7 +8,7 @@
         <div class="nav-menu">
             {{ $currentPage := . }}
             <a href="{{ .Site.Home.RelPermalink }}" class="nav-brand{{ if .IsHome }} active{{ end }}">SafeKit</a>
-            {{ $enSite := index (where site.Sites "Language.Lang" "en") 0 }}
+            {{ $enSite := index (where hugo.Sites "Language.Lang" "en") 0 }}
             {{ $sections := slice "solutions" "use-cases" "architectures" "best-practises" "quick-install" "resources" }}
             {{ $labels := dict "solutions" "Solutions" "use-cases" "Use Cases" "architectures" "Architectures" "best-practises" "Best Practices" "quick-install" "Quick Install" "resources" "Resources" }}
             {{ $currentSection := "" }}

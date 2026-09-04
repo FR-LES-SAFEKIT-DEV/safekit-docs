@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for NGINX, SafeKit High Avai
 # NGINX Network Load Balancing & Failover: Install the SafeKit farm.safe Module
 
 
-{{%  insert-safekit-farm-guide-en app="NGINX" mod="farm" %}}
+{{%  insert-safekit-farm-guide-en app="NGINX" mod="farm"  %}}
  
 
 ## Overview of the SafeKit / NGINX solution
@@ -25,11 +25,11 @@ The solution is described here: **💡[SafeKit: All-in-One NGINX Load Balancing 
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="NGINX" mod="farm" %}}
+{{%  insert-safekit-installation-package-windows-en app="NGINX" mod="farm"  %}}
  
 
 
-{{%  insert-safekit-installation-package-linux-en app="NGINX" mod="farm" %}}
+{{%  insert-safekit-installation-package-linux-en app="NGINX" mod="farm"  %}}
  
 
 Note: the generic **farm.safe** module that you are going to configure is delivered inside the package.
@@ -37,18 +37,18 @@ Note: the generic **farm.safe** module that you are going to configure is delive
 ## Step by step configuration of the SafeKit / NGINX solution
 
 
-{{%  insert-safekit-82-farm-configuration-en app="NGINX" mod="farm" %}}
+{{%  insert-safekit-82-farm-configuration-en app="NGINX" mod="farm"  %}}
  
 
 ## Demonstration of the SafeKit farm solution
 
 
-{{%  insert-safekit-farm-video-en %}}
+{{%  insert-safekit-farm-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -108,8 +108,8 @@ Typical RTO | 1–5 minutes | Under 1 minute (configurable)
 For full technical specifications, sizing constraints, and procurement criteria, see the 📘 [RFP/RFI Technical Reference](</resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>).
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

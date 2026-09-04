@@ -22,12 +22,12 @@ With Microsoft NLB unicast mode, you must configure the ESXi/ESX host to not sen
 The [SafeKit virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) configuration does not require any special network configuration and the network load balancing can run in any environment. An important feature when the solution must be deployed in an unknown infrastructure: unknown switches or routers, physical servers or virtual servers.
 
 
-{{%  insert-safekit-farm-en app="Windows" %}}
+{{%  insert-safekit-farm-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

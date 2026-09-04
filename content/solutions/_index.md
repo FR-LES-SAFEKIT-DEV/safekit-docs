@@ -10,12 +10,12 @@ topics: "SafeKit Application Module Library: Ready-to-Use HA Solutions, 🔍 Saf
 # SafeKit Solutions on Windows and Linux with Application Modules
 
 
-{{%  insert-safekit-modules-en %}}
+{{%  insert-safekit-modules-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

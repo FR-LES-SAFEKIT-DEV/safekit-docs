@@ -1,5 +1,6 @@
 {{/* Shortcode: insert-safekit-82-farm-configuration-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
+
  
 
 ### Prerequisites
@@ -8,7 +9,7 @@
   * Virtual IP load balancing requires nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported (except with 🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud)).
 
 
-### 1\. Launch the SafeKit console
+### 1. Launch the SafeKit console
 
   * Launch the web console in a browser on one cluster node by connecting to `http://localhost:9010`.
   * Enter `admin` as user name and the password defined during installation.
@@ -24,7 +25,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Start the SafeKit web console to configure the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 2\. Configure node addresses
+### 2. Configure node addresses
 
   * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
   * Then, click on `Save and apply` to save the configuration.
@@ -40,7 +41,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Enter the nodes of the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-### 3\. Select a module
+### 3. Select a module
 
   * In `New module`, click on the `{{ .Get "mod" }}.safe` module.
 
@@ -53,7 +54,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Choose the module for {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 4\. Configure the module
+### 4. Configure the module
 
   * In `Module startup at boot`, choose an automatic start of the module at boot without delay.
   * In `Macros` / `SERVICES`, enter the service names of your application, in the startup order, separated by commas.
@@ -62,8 +63,8 @@ You can also run the console in a browser on a workstation external to the clust
 Application clients must be configured with the virtual IP address (or the DNS name associated with the virtual IP address).
   * In `Load balancing rules`, set the service port to load balance (ex.: TCP 9010 in the example).
   * In `Load balancing rules`, set the load balancing rule, `Source address` or `Source port`: 
-    * with the source IP address of the client, the same client will be connected to the same node in the {{ .Get "mod" }} on multiple TCP sessions and retrieve its context on the node.
-    * with the source TCP port of the client, the same client will be connected to different nodes in the {{ .Get "mod" }} on multiple TCP sessions (without retrieving a context).
+    * with the source IP address of the client, the same client will be connected to the same node in the farm on multiple TCP sessions and retrieve its context on the node.
+    * with the source TCP port of the client, the same client will be connected to different nodes in the farm on multiple TCP sessions (without retrieving a context).
   * In `Checkers`, you will be able to configure checkers if needed, such as process monitoring, custom checkers, TCP, ping, or split-brain checkers.  
 For example, if a process name is displayed in `Monitored processes/services`, it will be monitored with a restart action in case of failure. Configuring a wrong process name will cause the module to stop right after its start.
 
@@ -72,13 +73,13 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 
 ℹ️ In a cloud deployment, you do not need to configure a virtual IP address and load balancing rules in SafeKit. The virtual IP and load balancing rules are managed at the 🛠️ [cloud load balancer level](/resources/safekit-user-guide-82/#Cloud).
 
-ℹ️ When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on {{ .Get "app" }}).
+ℹ️ When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on Linux).
 
 
-![Enter the {{ .Get "app" }} {{ .Get "mod" }} module settings](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Enter the {{ .Get "app" }} farm module settings](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
-### 5\. Edit scripts (optional)
+### 5. Edit scripts (optional)
 
   * This step is optional and can be skipped in most cases, as the restart scripts are already pre-configured to restart services defined in the previous step.
   * So, click directly on `Next step`.
@@ -89,7 +90,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
 
 
-### 6\. Communication encryption (optional)
+### 6. Communication encryption (optional)
 
   * Keep encryption of communication between nodes.
 
@@ -97,7 +98,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Communication encryption of the {{ .Get "app" }} module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
-### 7\. Save and apply
+### 7. Save and apply
 
   * `Save and apply` the configuration and scripts on both nodes.
 
@@ -105,7 +106,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Save and apply the {{ .Get "app" }} module configuration](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8\. Verify successful configuration
+### 8. Verify successful configuration
 
   * Check the `Success` ✅ message on both nodes and click on `Monitor modules`.
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
@@ -114,15 +115,15 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Check the {{ .Get "app" }} module configuration success](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9\. Start the {{ .Get "mod" }} cluster on node 1 and node 2
+### 9. Start the farm cluster on node 1 and node 2
 
-  * ⋯ `Start` the {{ .Get "mod" }} cluster as shown in the image.
+  * ⋯ `Start` the farm cluster as shown in the image.
 
 
 ![Start the {{ .Get "app" }} cluster on both nodes](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-### 10\. Wait for the transition to UP (green) / UP (green)
+### 10. Wait for the transition to UP (green) / UP (green)
 
 Node 1 and node 2 should reach the UP (green) state, which means that the `start_both` script has been executed on node 1 and node 2.
 
@@ -139,13 +140,13 @@ Node 1 and node 2 should reach the UP (green) state, which means that the `start
 ![The {{ .Get "app" }} cluster is started](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
 
 
-### 11\. Testing
+### 11. Testing
 
 SafeKit brings a built-in test in the product:
 
-  *     * Configure a rule for TCP port 9010 with a load balancing on source TCP port.
-    * Connect an external workstation outside the {{ .Get "mod" }} nodes.
-    * Start a browser on http://virtual-ip:9010/safekit/mosaic.html.
+  * Configure a rule for TCP port 9010 with a load balancing on source TCP port.
+  * Connect an external workstation outside the farm nodes.
+  * Start a browser on http://virtual-ip:9010/safekit/mosaic.html.
 
 
 You should see a mosaic of colors depending on nodes answering to HTTP requests.
@@ -160,7 +161,7 @@ You should see a mosaic of colors depending on nodes answering to HTTP requests.
 ![Test the virtual IP address of {{ .Get "app" }} with the mosaic](/wp-content/uploads/2024/03/appli-19.png)
 
 
-### 12\. Support
+### 12. Support
 
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
@@ -168,7 +169,6 @@ You should see a mosaic of colors depending on nodes answering to HTTP requests.
 ℹ️ [More information on the support here](/resources/safekit-support/).
 
 
-![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2024/03/32-snapshots-farm.png)
-
+![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
 
 

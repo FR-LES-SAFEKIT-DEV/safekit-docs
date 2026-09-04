@@ -123,8 +123,8 @@ VM-Level HA (hyperv.safe / kvm.safe) | One VM | Managed inside VM | Snapshot, up
 SafeKit provides flexible high availability architectures that adapt to the operational requirements of different applications. Whether you protect a clustered application across two nodes or a single application instance running in a virtual machine, SafeKit enables controlled upgrades, minimizes downtime, and offers reliable recovery options whenever maintenance operations are required.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

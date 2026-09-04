@@ -47,16 +47,16 @@ Selon ce [rapport d'analyste](<https://www.linkedin.com/pulse/global-scada-marke
 
 
 
-{{%  insert-safekit-scada-solutions-fr app="SCADA" %}}
+{{%  insert-safekit-scada-solutions-fr app="SCADA"  %}}
  
 
 
-{{%  insert-safekit-scada-case-fr %}}
+{{%  insert-safekit-scada-case-fr  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

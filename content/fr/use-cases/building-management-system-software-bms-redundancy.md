@@ -53,16 +53,16 @@ Les acteurs clés du BMS sont :
 
 
 
-{{%  insert-safekit-security-solutions-fr app="BMS" %}}
+{{%  insert-safekit-security-solutions-fr app="BMS"  %}}
  
 
 
-{{%  insert-safekit-security-case-fr %}}
+{{%  insert-safekit-security-case-fr  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

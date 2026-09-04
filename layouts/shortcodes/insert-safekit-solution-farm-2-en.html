@@ -1,43 +1,44 @@
 {{/* Shortcode: insert-safekit-solution-farm-2-en — 6 instances in 6 files */}}
 {{/* Parameters: app, guide, img */}}
+
  
 
-## The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for Windows/Linux
+## The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for {{ .Get "app" }}
 
-A SafeKit Farm Cluster for Windows/Linux is a software-defined Network Load Balancing (NLB) solution designed for scalable application environments. It provides integrated **load balancing and failover directly on application servers** , eliminating the need for dedicated hardware load balancers, proxy servers, or complex multicast configurations.
+A SafeKit Farm Cluster for {{ .Get "app" }} is a software-defined Network Load Balancing (NLB) solution designed for scalable application environments. It provides integrated **load balancing and failover directly on application servers** , eliminating the need for dedicated hardware load balancers, proxy servers, or complex multicast configurations.
 
-### What are the advantages of a SafeKit Farm Cluster for Windows/Linux?
+### What are the advantages of a SafeKit Farm Cluster for {{ .Get "app" }}?
 
   * **All-in-One Software:** Combines Virtual IP, load balancing, and automatic failover/failback in a single software package.
   * **No Special Hardware:** Replaces expensive hardware load balancers with a pure software solution for Windows or Linux, manageable by sysadmins rather than network engineers.
-  * **Deep Monitoring &amp; Self-Healing:** Uses application-level "checkers" to monitor specific application processes, detecting crashes even if the server is still running; it then triggers an automatic service restart or a failover if necessary.
-  * **Hybrid Farm &amp; Mirror Capability:** Uniquely allows mixing a Farm cluster (for load balancing of front-ends) with a Mirror cluster (for synchronous data replication of back-ends).
+  * **Deep Monitoring & Self-Healing:** Uses application-level "checkers" to monitor specific application processes, detecting crashes even if the server is still running; it then triggers an automatic service restart or a failover if necessary.
+  * **Hybrid Farm & Mirror Capability:** Uniquely allows mixing a Farm cluster (for load balancing of front-ends) with a Mirror cluster (for synchronous data replication of back-ends).
   * **OEM High Availability:** Enables software vendors to embed native clustering into their applications, providing a "cluster-ready" and software-only product without extra infrastructure.
 
 
-![SafeKit High Availability Windows/Linux Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing]({{ .Get "img" }} "w:512")
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing](/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg "w:512")
 
-**SafeKit Farm NLB Cluster for Windows/Linux**
+**SafeKit Farm NLB Cluster for {{ .Get "app" }}**
 
-<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Quick farm cluster installation guide for Windows/Linux ></a>
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Quick farm cluster installation guide for {{ .Get "app" }} ></a>
 ## Table of Contents {#toc}
 
-  * [How the SafeKit software simply implements a Windows/Linux Network Load Balancing (NLB) cluster?](#safekit-farm-ha-cluster)
-  * [How the SafeKit farm cluster works with Windows/Linux?](#safekit-farm-cluster)
-  * [Comparison: SafeKit Farm Cluster for Windows/Linux vs. Other NLB Clustering Solutions](#safekit-farm-ha-comparison)
+  * [How the SafeKit software simply implements a {{ .Get "app" }} Network Load Balancing (NLB) cluster?](#safekit-farm-ha-cluster)
+  * [How the SafeKit farm cluster works with {{ .Get "app" }}?](#safekit-farm-cluster)
+  * [Comparison: SafeKit Farm Cluster for {{ .Get "app" }} vs. Other NLB Clustering Solutions](#safekit-farm-ha-comparison)
   * [Video Guide: Configuring a SafeKit Farm NLB Cluster](#videoguide-safekit-farm-cluster)
   * [🔍 SafeKit High Availability Navigation Hub](#hub)
 
 
-## How the SafeKit software simply implements a Windows/Linux Network Load Balancing (NLB) cluster? {#safekit-farm-ha-cluster}
+## How the SafeKit software simply implements a {{ .Get "app" }} Network Load Balancing (NLB) cluster? {#safekit-farm-ha-cluster}
 
-### What is the SafeKit Farm NLB solution for Windows/Linux?
+### What is the SafeKit Farm NLB solution for {{ .Get "app" }}?
 
-SafeKit provides network load balancing and high availability to Windows/Linux across two or more servers.
+SafeKit provides network load balancing and high availability to {{ .Get "app" }} across two or more servers.
 
-This article explains how to quickly implement a Windows/Linux cluster without hardware load balancers or specialized networking skills.
+This article explains how to quickly implement a {{ .Get "app" }} cluster without hardware load balancers or specialized networking skills.
 
-The solution works by defining a virtual IP with load balancing rules, the Windows/Linux service names, and health checkers.
+The solution works by defining a virtual IP with load balancing rules, the {{ .Get "app" }} service names, and health checkers.
 
 SafeKit then enables **network load balancing** and **automatic failover** to ensure scalability and continuous service availability.
 
@@ -49,7 +50,7 @@ Instead of requiring a dedicated physical appliance, SafeKit runs directly on st
 
 Software vendors can provide **OEM High Availability** by integrating **SafeKit** directly into their application stack. This partnership allows vendors to deliver a self-contained, **"cluster-ready" and software-only solution** that includes native load balancing and failover capabilities.
 
-### What are the benefits of SafeKit’s software-based load balancing for Windows/Linux?
+### What are the benefits of SafeKit’s software-based load balancing for {{ .Get "app" }}?
 
 SafeKit replaces expensive hardware with a streamlined software approach that offers:
 
@@ -60,35 +61,35 @@ SafeKit replaces expensive hardware with a streamlined software approach that of
 
 ### How does SafeKit application monitoring differ from standard NLB health checks?
 
-Unlike standard NLB hardware that rely on simple **pings** and port checks, SafeKit features **integrated application-level checkers**. While a traditional balancer only confirms if a server is "alive," SafeKit monitors the actual health of specific Windows/Linux processes.
+Unlike standard NLB hardware that rely on simple **pings** and port checks, SafeKit features **integrated application-level checkers**. While a traditional balancer only confirms if a server is "alive," SafeKit monitors the actual health of specific {{ .Get "app" }} processes.
 
 This deep monitoring allows the system to detect "zombie" states—where the server is up but the software has crashed—triggering **automatic service restarts** or traffic redirection that standard NLB solutions cannot perform.
 
-### Is it possible to set up a Windows/Linux farm cluster without clustering skills?
+### Is it possible to set up a {{ .Get "app" }} farm cluster without clustering skills?
 
-Yes. This article explains how to [**quickly implement a Windows/Linux farm cluster**](/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/) without the need for specialized and complex networking skills. By using SafeKit’s **virtual IP** to handle the network load balancing of **Windows/Linux** , you get a robust scalable solution that is significantly simpler to deploy and maintain than traditional NLB solutions.
+Yes. This article explains how to [quickly implement a {{ .Get "app" }} farm cluster]({{ .Get "guide" }}) without the need for specialized and complex networking skills. By using SafeKit’s **virtual IP** to handle the network load balancing of **{{ .Get "app" }}** , you get a robust scalable solution that is significantly simpler to deploy and maintain than traditional NLB solutions.
 
-### Beyond Windows/Linux, which applications and environments can SafeKit protect?
+### Beyond {{ .Get "app" }}, which applications and environments can SafeKit protect?
 
 SafeKit is a versatile high-availability solution **for both Windows and Linux**. It enables mirror clusters with **synchronous real-time replication** and automatic failover for a wide range of critical workloads, including:
 
-  * **Virtual &amp; Physical Environments:** Complete Hyper-V or KVM virtual machines.
+  * **Virtual & Physical Environments:** Complete Hyper-V or KVM virtual machines.
   * **Container Orchestration:** Docker, Podman, and K3s (Kubernetes) environments.
-  * **Data &amp; Services:** Individual file directories, services, and various databases.
+  * **Data & Services:** Individual file directories, services, and various databases.
   * **Cloud Infrastructure:** High availability for Cloud applications.
 
 
 💡 [Explore the full list of supported HA solutions here.](/solutions/)
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-farm-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-farm-en  %}}" }}
  
 
-## Comparison: SafeKit Farm Cluster for Windows/Linux vs. Other NLB Clustering Solutions {#safekit-farm-ha-comparison}
+## Comparison: SafeKit Farm Cluster for {{ .Get "app" }} vs. Other NLB Clustering Solutions {#safekit-farm-ha-comparison}
 
 Feature | SafeKit Farm Cluster (Software) | Hardware Load Balancers  
 ---|---|---  
-Architecture | Kernel-Level Software: Native integration into Windows/Linux OS. | Proprietary Hardware: Dedicated physical appliances.  
+Architecture | Kernel-Level Software: Native integration into {{ .Get "app" }} OS. | Proprietary Hardware: Dedicated physical appliances.  
 Management | System Admins: Managed via a simple web console; no networking degree required. | Network Engineers: Requires specialized skills and CLI certifications.  
 Health Monitoring | Application Checkers: Deep monitoring of specific processes (Apache, Nginx, etc.). | Network Ping: Basic check to see if the server or port is reachable.  
 Self-Healing | Built-in Restart Intelligence: Automatically reboots failed services locally. | Passive Failover: Simply stops sending traffic to the failed node.  
@@ -100,7 +101,6 @@ Cost (TCO) | Low CAPEX/OPEX: Uses existing server resources; no expensive hardwa
 ## Video Guide: Configuring a SafeKit Farm NLB Cluster {#videoguide-safekit-farm-cluster}
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-farm-video-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-farm-video-en  %}}" }}
  
-
 

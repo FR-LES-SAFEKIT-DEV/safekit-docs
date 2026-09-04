@@ -28,20 +28,20 @@ To help you make the right decision when choosing the best architecture for your
 **Comparison of synchronous and asynchronous replication impact on data loss during application failover.**
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}
  
 
 ## Table of Contents
 
-  * [Data Loss or Not on Application Failover with Synchronous or Asynchronous Replication?](<#data-loss-risk-synchronous-vs-asynchronous-failover>)
-  * [How Asynchronous Replication Works?](<#how-asynchronous-replication-works>)
-  * [How Synchronous Replication Works?](<#how-synchronous-replication-works>)
-  * [How Semi-Synchronous Replication Works?](<#how-semi-synchronous-replication-works>)
-  * [Final Verdict: Choosing the Right Replication for High Availability](<#best-practices-synchronous-vs-asynchronous-replication>)
-  * [Comparison Table: Synchronous vs. Asynchronous vs. Semi-Synchronous](<#comparison-synchronous-asynchronous-replication>)
-  * [Video Guide: Configuring Synchronous Real-Time Replication and High Availability](<#videoguide-synchronous-real-time-replication-ha>)
-  * [FAQ: Replication Strategies in High Availability Clusters](<#faq-replication-high-availability>)
-  * [SafeKit High Availability Navigation Hub](<#hub>)
+  * [Data Loss or Not on Application Failover with Synchronous or Asynchronous Replication?](#data-loss-risk-synchronous-vs-asynchronous-failover)
+  * [How Asynchronous Replication Works?](#how-asynchronous-replication-works)
+  * [How Synchronous Replication Works?](#how-synchronous-replication-works)
+  * [How Semi-Synchronous Replication Works?](#how-semi-synchronous-replication-works)
+  * [Final Verdict: Choosing the Right Replication for High Availability](#best-practices-synchronous-vs-asynchronous-replication)
+  * [Comparison Table: Synchronous vs. Asynchronous vs. Semi-Synchronous](#comparison-synchronous-asynchronous-replication)
+  * [Video Guide: Configuring Synchronous Real-Time Replication and High Availability](#videoguide-synchronous-real-time-replication-ha)
+  * [FAQ: Replication Strategies in High Availability Clusters](#faq-replication-high-availability)
+  * [SafeKit High Availability Navigation Hub](#hub)
 
 
 ## How Asynchronous Replication Works? {#how-asynchronous-replication-works}
@@ -88,7 +88,7 @@ Best For | High Availability (Automatic failover) | High Availability (Automatic
 ## Video Guide: Configuring Synchronous Real-Time Replication and High Availability {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 ## FAQ: Replication Strategies in High Availability Clusters {#faq-replication-high-availability}
@@ -132,8 +132,8 @@ You can use a **3-node hybrid architecture** : a 2-node local cluster with synch
 **See for more information:** [SafeKit High Availability and Disaster Recovery (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

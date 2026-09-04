@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Azure, SafeKit High Avai
 # Azure High Availability with SafeKit: Install the mirror.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Azure" mod="mirror" %}}
+{{%  insert-safekit-mirror-guide-en app="Azure" mod="mirror"  %}}
  
 
 ## Overview of the SafeKit / Azure mirror solution
@@ -57,11 +57,11 @@ The network security must be configured to enable communications for the followi
 
 
 
-{{%  insert-safekit-installation-package-windows-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-windows-en app="" mod="mirror"  %}}
  
 
 
-{{%  insert-safekit-installation-package-linux-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 Note: the generic **mirror.safe** module that you are going to configure is delivered inside the package.
@@ -69,18 +69,18 @@ Note: the generic **mirror.safe** module that you are going to configure is deli
 ## Step by step configuration of the SafeKit / Azure mirror solution
 
 
-{{%  insert-safekit-82-configuration-en app="Windows" mod="mirror" %}}
+{{%  insert-safekit-82-configuration-en app="Windows" mod="mirror"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

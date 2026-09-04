@@ -33,20 +33,20 @@ topics: "What is a virtual IP address in a high availability cluster?, Virtual I
 **Virtual IP implementation strategies for Mirror and Farm clusters in SafeKit.**
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}
  
 
 ## Table of Contents
 
-  * [How a Virtual IP Address (VIP) Works in a Same-Subnet Failover (Mirror Cluster)](<#virtual-ip-same-subnet-failover>)
-  * [How a Virtual IP (VIP) Works Across Different Subnets (Mirror Cluster)](<#virtual-ip-different-subnets-failover>)
-  * [How a Load Balanced Virtual IP Works in a Same-Subnet Farm (Farm Cluster)](<#vip-load-balancing-same-subnet>)
-  * [How a Load Balanced Virtual IP Works Across Different Subnets (Farm Cluster)](<#vip-load-balancing-different-subnets>)
-  * [Virtual IP vs. DNS Redirection: Why DNS Failover Often Fails](<#virtual-ip-vs-dns-redirection-failover>)
-  * [Comparison: Virtual IP Implementation, Latency, and Application Transparency](<#vip-vs-dns-comparison>)
-  * [Configuring a Virtual IP Address for Network Loadbalancing and High Availability](<#virtual-ip-configuration-load-balancing-ha>)
-  * [Frequently Asked Questions on Virtual IP (VIP)](<#virtual-ip-faq>)
-  * [🔍 SafeKit High Availability Navigation Hub](<#hub>)
+  * [How a Virtual IP Address (VIP) Works in a Same-Subnet Failover (Mirror Cluster)](#virtual-ip-same-subnet-failover)
+  * [How a Virtual IP (VIP) Works Across Different Subnets (Mirror Cluster)](#virtual-ip-different-subnets-failover)
+  * [How a Load Balanced Virtual IP Works in a Same-Subnet Farm (Farm Cluster)](#vip-load-balancing-same-subnet)
+  * [How a Load Balanced Virtual IP Works Across Different Subnets (Farm Cluster)](#vip-load-balancing-different-subnets)
+  * [Virtual IP vs. DNS Redirection: Why DNS Failover Often Fails](#virtual-ip-vs-dns-redirection-failover)
+  * [Comparison: Virtual IP Implementation, Latency, and Application Transparency](#vip-vs-dns-comparison)
+  * [Configuring a Virtual IP Address for Network Loadbalancing and High Availability](#virtual-ip-configuration-load-balancing-ha)
+  * [Frequently Asked Questions on Virtual IP (VIP)](#virtual-ip-faq)
+  * [🔍 SafeKit High Availability Navigation Hub](#hub)
 
 
 ## How a Virtual IP Address (VIP) Works in a Same-Subnet Failover (Mirror Cluster) {#virtual-ip-same-subnet-failover}
@@ -242,7 +242,7 @@ DNS rerouting: No VIP | Disaster Recovery (remote datacenters) | DNS Record Upda
 ## Configuring a Virtual IP Address for Network Loadbalancing and High Availability {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en %}}
+{{%  insert-safekit-farm-video-en  %}}
  
 
 ## Frequently Asked Questions on Virtual IP (VIP) {#virtual-ip-faq}
@@ -290,8 +290,8 @@ Does using a Virtual IP preserve the client's original IP address?
 Yes. SafeKit avoids Source Network Address Translation (SNAT). Because the VIP is local to the active server, the application receives the **original Client IP** , which is critical for security auditing, session persistence, and regulatory logging.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

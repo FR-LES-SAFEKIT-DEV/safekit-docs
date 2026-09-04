@@ -10,12 +10,12 @@ topics: "How the SANless SafeKit Mirror Cluster Works with Firebird, Table of Co
 # The Simplest Firebird High Availability: 2-Node Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-2-en app="Firebird" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-firebird/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="Firebird" guide="/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

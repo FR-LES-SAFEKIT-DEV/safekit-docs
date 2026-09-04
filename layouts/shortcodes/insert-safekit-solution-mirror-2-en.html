@@ -1,5 +1,6 @@
 {{/* Shortcode: insert-safekit-solution-mirror-2-en — 13 instances in 13 files */}}
 {{/* Parameters: app, guide, img */}}
+
  
 
 ## How the SANless SafeKit Mirror Cluster Works with {{ .Get "app" }} {#safekit-hyperv-tco}
@@ -19,7 +20,7 @@
 By consolidating **High Availability** into a lightweight software layer, SafeKit delivers enterprise-grade **redundancy and business continuity for {{ .Get "app" }}** at a fraction of the cost of traditional clustering suites.
 
 
-![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Real-time replication]({{ .Get "img" }} "w:512")
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Real-time replication](/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg "w:512")
 
 **SafeKit HA Mirror Cluster for {{ .Get "app" }}**
 
@@ -87,15 +88,15 @@ Unlike traditional high-availability solutions, SafeKit is designed to operate w
 
 ### Is it possible to set up a {{ .Get "app" }} mirror cluster without clustering skills?
 
-Yes. This article explains how to [**quickly implement a {{ .Get "app" }} mirror cluster**](/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/) without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s **automated failover scripts** to handle the replication and restart of **{{ .Get "app" }}** , you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional clustering solutions.
+Yes. This article explains how to [quickly implement a {{ .Get "app" }} mirror cluster]({{ .Get "guide" }}) without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s **automated failover scripts** to handle the replication and restart of **{{ .Get "app" }}** , you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional clustering solutions.
 
 ### Beyond {{ .Get "app" }}, which applications and environments can SafeKit protect?
 
 SafeKit is a versatile high-availability solution **for both Windows and Linux**. It enables **synchronous real-time replication** and automatic failover for a wide range of critical workloads, including:
 
-  * **Virtual &amp; Physical Environments:** Complete Hyper-V or KVM virtual machines.
+  * **Virtual & Physical Environments:** Complete Hyper-V or KVM virtual machines.
   * **Container Orchestration:** Docker, Podman, and K3s (Kubernetes) environments.
-  * **Data &amp; Services:** Individual file directories, services, and various databases.
+  * **Data & Services:** Individual file directories, services, and various databases.
   * **Cloud Infrastructure:** High availability for Cloud applications.
 
 
@@ -104,11 +105,11 @@ SafeKit also provides **Farm Clusters** with native **Network Load Balancing and
 💡 [Explore the full list of supported HA solutions here.](/solutions/)
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-mirror-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-en  %}}" }}
  
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-usage-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
  
 
 ## Comparison: SafeKit for {{ .Get "app" }} vs. Other Clustering Solutions {#safekit-mirror-ha-comparison}
@@ -128,7 +129,6 @@ Deployment Complexity | Low (< 30 Minutes) | High (AD, Storage, Quorum) | Medium
 ## Video Guide: Configuring a SafeKit HA mirror cluster {#videoguide-safekit-mirror-cluster}
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-mirror-video-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-video-en  %}}" }}
  
-
 

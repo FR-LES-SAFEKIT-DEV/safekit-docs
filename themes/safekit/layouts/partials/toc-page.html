@@ -1,0 +1,40 @@
+{{/* Shared sidebar+article layout for single.html and list.html.
+     params: .page (page context), .navItems (slice of {Link,Title,Current}),
+     .navTitle (string), .h1 (optional string) */}}
+{{ $page := .page }}
+{{ $navItems := .navItems }}
+{{ $hasNav := gt (len $navItems) 0 }}
+<div class="page-with-toc">
+    {{ if or $page.TableOfContents $hasNav }}
+    <aside class="toc-sidebar">
+        <nav class="toc-nav">
+            {{ if $page.TableOfContents }}
+            <div class="sidebar-section open" id="sidebar-toc">
+                <h3 class="sidebar-toggle no-collapse" data-target="sidebar-toc"><a id="toc-label" href="#">On this page</a></h3>
+                <div class="sidebar-content">
+                    <nav id="TableOfContents"></nav>
+                </div>
+            </div>
+            {{ end }}
+            {{ if $hasNav }}
+            <div class="sidebar-section" id="sidebar-chapters">
+                <h3 class="sidebar-toggle" data-target="sidebar-chapters">{{ .navTitle }}</h3>
+                <div class="sidebar-content">
+                    <ul class="chapter-list">
+                        {{ range $navItems }}
+                        <li{{ if .Current }} class="current"{{ end }}>
+                            <a href="{{ .Link }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+        </nav>
+    </aside>
+    {{ end }}
+    <article{{ if or $page.TableOfContents $hasNav }} class="has-toc"{{ end }}>
+        {{ with .h1 }}<h1>{{ . }}</h1>{{ end }}
+        {{ $page.Content }}
+    </article>
+</div>

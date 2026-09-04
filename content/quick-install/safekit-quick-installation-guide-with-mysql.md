@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for MySQL, SafeKit High Avai
 # MySQL High Availability with SafeKit: Install the mysql.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="MySQL" mod="mysql" %}}
+{{%  insert-safekit-mirror-guide-en app="MySQL" mod="mysql"  %}}
  
 
 ## Overview of the SafeKit / MySQL solution
@@ -25,36 +25,36 @@ The solution is described here: **💡[The Simplest MySQL High Availability: 2-N
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="MySQL" mod="mysql" %}}
+{{%  insert-safekit-installation-package-windows-en app="MySQL" mod="mysql"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="MySQL" mod="mysql" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="MySQL" mod="mysql"  %}}
  
 
 
-{{%  insert-safekit-installation-package-linux-en app="MySQL" mod="mysql" %}}
+{{%  insert-safekit-installation-package-linux-en app="MySQL" mod="mysql"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-linux-en app="MySQL" mod="mysql" %}}
+{{%  insert-safekit-82-installation-module-linux-en app="MySQL" mod="mysql"  %}}
  
 
 ## Step by step configuration of the SafeKit / MySQL Server solution
 
 
-{{%  insert-safekit-82-configuration-en app="MySQL" mod="mysql" %}}
+{{%  insert-safekit-82-configuration-en app="MySQL" mod="mysql"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

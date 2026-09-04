@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Podman, SafeKit High Ava
 # Podman High Availability with SafeKit: Install the mirror.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="Podman" mod="mirror" %}}
+{{%  insert-safekit-mirror-guide-en app="Podman" mod="mirror"  %}}
  
 
 ## Overview of the SafeKit / Podman solution
@@ -25,7 +25,7 @@ The solution is described here: **💡[SafeKit: Podman High Availability & Real-
 
 
 
-{{%  insert-safekit-installation-package-linux-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 ### Example with a simple container image
@@ -73,18 +73,18 @@ On the node in SafeKit PRIM state, add some other html files to the replicated d
 ## Step by step configuration of the SafeKit / Podman solution
 
 
-{{%  insert-safekit-82-configuration-en app="Podman" mod="mirror" %}}
+{{%  insert-safekit-82-configuration-en app="Podman" mod="mirror"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -10,12 +10,12 @@ topics: "Bibliothèque des modules applicatifs SafeKit : solutions HA prêtes à
 # Bibliothèque de modules de haute disponibilité SafeKit : Guides d’installation rapide pour Windows et Linux
 
 
-{{%  insert-safekit-modules-fr %}}
+{{%  insert-safekit-modules-fr  %}}
  
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

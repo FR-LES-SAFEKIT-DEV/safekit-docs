@@ -10,12 +10,12 @@ topics: "How the SANless SafeKit Mirror Cluster Works with Oracle, Table of Cont
 # The Simplest Oracle High Availability: 2-Node Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-2-en app="Oracle" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-oracle/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="Oracle" guide="/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

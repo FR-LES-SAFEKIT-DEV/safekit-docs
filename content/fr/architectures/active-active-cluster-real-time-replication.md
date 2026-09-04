@@ -43,8 +43,8 @@ Il n'y a pas d'adresse IP virtuelle dans un tel module car le redémarrage d'une
 Et une application critique est installée à l'intérieur d'une VM dans cette architecture.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

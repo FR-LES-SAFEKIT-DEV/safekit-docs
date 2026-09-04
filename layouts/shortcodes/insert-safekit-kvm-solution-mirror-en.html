@@ -1,5 +1,6 @@
-{{/* Shortcode: insert-safekit-kvm-solution-mirror-en — 1 instances in 1 files */}}
+{{/* Shortcode: insert-safekit-kvm-solution-mirror-en — 1 instance in 1 file */}}
 {{/* Parameters: app */}}
+
  
 
 ## SafeKit for {{ .Get "app" }}: 2-Node SANless {{ .Get "app" }} Cluster {#safekit-kvm-tco}
@@ -80,15 +81,15 @@ Unlike most high-availability solutions on the market, SafeKit is designed to op
 
 ### Is it possible to set up a {{ .Get "app" }} cluster without SAN or complex clustering skills?
 
-Yes. This article explains how to 🛠️ [**quickly implement a {{ .Get "app" }} cluster**](/quick-install/safekit-quick-installation-guide-with-kvm/) without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s **automated failover scripts** to handle the replication and restart of **{{ .Get "app" }}** virtual machines, you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional enterprise virtualization stacks.
+Yes. This article explains how to [quickly implement a {{ .Get "app" }} cluster](/quick-install/safekit-quick-installation-guide-with-kvm/) without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s **automated failover scripts** to handle the replication and restart of **{{ .Get "app" }}** virtual machines, you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional enterprise virtualization stacks.
 
 ### Beyond {{ .Get "app" }}, which applications and environments can SafeKit protect?
 
 SafeKit is a versatile high-availability solution that extends far beyond standard virtual machine failover. It enables **synchronous real-time replication** and automatic failover for a wide range of critical workloads, including:
 
-  * **Virtual &amp; Physical Environments:** Complete Hyper-V or {{ .Get "app" }} virtual machines.
+  * **Virtual & Physical Environments:** Complete Hyper-V or {{ .Get "app" }} virtual machines.
   * **Container Orchestration:** Docker, Podman, and K3s (Kubernetes) environments.
-  * **Data &amp; Services:** Individual file directories, services, and various databases.
+  * **Data & Services:** Individual file directories, services, and various databases.
   * **Cloud Infrastructure:** High availability for Cloud applications.
 
 
@@ -100,7 +101,7 @@ SafeKit also provides **Farm Clusters** with native **Network Load Balancing and
 
 The following steps are described for one {{ .Get "app" }} virtual machine inside one mirror module. Each replicated virtual machine runs in an independent mirror module (with a maximum of 32 virtual machines) with a primary server that can be either the {{ .Get "app" }} server 1 or the {{ .Get "app" }} server 2.
 
-### 1\. How does real-time replication work for {{ .Get "app" }}?
+### 1. How does real-time replication work for {{ .Get "app" }}?
 
 Server 1 (PRIM) runs the {{ .Get "app" }} VM (virtual machine). SafeKit replicates in real time the VM files (virtual hard disk, VM configuration). Only changes made in the files are replicated across the network.
 
@@ -112,7 +113,7 @@ The replication is [synchronous](/best-practises/synchronous-replication-vs-asyn
 
 You just have to configure the VM directory name in SafeKit. There are no pre-requisites on disk organization. The directory may be located in the system disk.
 
-### 2\. What happens during an automatic {{ .Get "app" }} failover?
+### 2. What happens during an automatic {{ .Get "app" }} failover?
 
 When Server 1 fails, Server 2 takes over. SafeKit restarts the {{ .Get "app" }} VM on Server 2. {{ .Get "app" }} finds the files replicated by SafeKit uptodate on Server 2.  
 The VM continues to run on Server 2 by locally modifying its files that are no longer replicated to Server 1.
@@ -123,7 +124,7 @@ The VM continues to run on Server 2 by locally modifying its files that are no l
 
 The failover time is equal to the fault-detection time (set to 30 seconds by default) plus the VM reboot time.
 
-### 3\. How is data synchronized after a {{ .Get "app" }} failure?
+### 3. How is data synchronized after a {{ .Get "app" }} failure?
 
 Failback involves restarting Server 1 after fixing the problem that caused it to fail. SafeKit automatically resynchronizes the VM files.
 
@@ -133,7 +134,7 @@ Failback involves restarting Server 1 after fixing the problem that caused it to
 
 Failback takes place without disturbing the {{ .Get "app" }} VM, which can continue running on Server 2.
 
-### 4\. How is normal {{ .Get "app" }} operation restored?
+### 4. How is normal {{ .Get "app" }} operation restored?
 
 After reintegration, the VM files are once again in mirror mode, as in step 1. The system is back in high-availability mode, with the {{ .Get "app" }} VM running on Server 2 and SafeKit replicating file updates to Server 1.
 
@@ -155,7 +156,7 @@ The **SafeKit web console** provides an intuitive interface to configure high av
   * Enter in `VM_NAME`, the name of the {{ .Get "app" }} virtual machine (VM1).
 
 
-The SafeKit cluster includes a dedicated [split-brain checker to resolve network isolation issues](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/ "Technical details on heartbeat and split-brain prevention") without the need for a third witness machine or an additional heartbeat network.
+The SafeKit cluster includes a dedicated [split-brain checker to resolve network isolation issues](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") without the need for a third witness machine or an additional heartbeat network.
 
 ### How to monitor a SafeKit {{ .Get "app" }} cluster? {#safekit-mirror-cluster-monitoring}
 
@@ -178,7 +179,7 @@ Beyond simple status icons, the interface provides **one-click failover orchestr
 Note that if you deploy several VMs for replication and failover, you will have multiple PRIM/SECOND widgets. This allows independent failover for each VM and the ability to distribute the load across servers.
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-usage-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
  
 
 ## Comparison: SafeKit for {{ .Get "app" }} vs. Traditional Clustering {#safekit-kvm-ha-comparison}
@@ -216,5 +217,4 @@ In this video, discover how SafeKit implements **high availability for Hyper-V**
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
-
 

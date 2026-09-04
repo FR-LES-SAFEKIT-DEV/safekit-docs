@@ -36,8 +36,8 @@ As a result, network load balancing, real time data mirroring and application fa
 When comparing the SafeKit clustering software with hardware clustering, you do not need shared disk, replicated SAN, load balancers, Enterprise editions of OS or database.
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

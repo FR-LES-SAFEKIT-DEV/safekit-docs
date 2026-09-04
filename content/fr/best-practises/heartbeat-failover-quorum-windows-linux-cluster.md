@@ -10,7 +10,7 @@ topics: "Quels sont les différents scénarios en cas d'isolement réseau dans u
 # Battement de cœur, basculement et quorum dans les clusters Windows et Linux
 
 
-{{%  insert-safekit-network-isolation-fr %}}
+{{%  insert-safekit-network-isolation-fr  %}}
  
 
 ## Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ?
@@ -84,8 +84,8 @@ A la reconnexion du réseau, SafeKit choisit par défaut le serveur qui était P
 Remarque : Windows peut détecter une adresse IP en double sur un serveur et supprimer l'adresse IP virtuelle sur ce serveur. SafeKit dispose d'un checker pour forcer un redémarrage dans ce cas.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

@@ -1,33 +1,33 @@
 {{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
 {{/* Parameters: app, mod */}}
+
  
 
 ## High Availability Quick Installation Guide for {{ .Get "app" }} {#quick-guide}
 
-This guide explains how to set up a **{{ .Get "mod" }} cluster** for {{ .Get "app" }} using SafeKit, ensuring automatic failover and synchronous replication without the need for shared storage. 
+This guide explains how to set up a **mirror cluster** for {{ .Get "app" }} using SafeKit, ensuring automatic failover and synchronous replication without the need for shared storage. 
 
 For help, you can use [SafeKit AI 🤖](/resources/safekit-support/).
 
-### 1\. Overview
+### 1. Overview
 
   * **Architecture:** Uses a two-node system (Primary/Secondary).
   * **Data Protection:** Implements real-time synchronous replication for **zero data loss** (RPO=0).
 
 
-### 2\. Installation
+### 2. Installation
 
   * **Software:** Install the SafeKit engine on both servers.
   * **Module:** Download the pre-configured `{{ .Get "mod" }}.safe` application module.
 
 
-### 3\. Configuration
+### 3. Configuration
 
   * **Web Console:** Configure the specific folders containing the {{ .Get "app" }} files.
   * **Monitoring:** Start monitoring and protecting the {{ .Get "app" }} application.
 
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-usage-en %}}" }}
+{{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
  
-
 

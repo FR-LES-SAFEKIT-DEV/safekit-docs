@@ -50,8 +50,8 @@ Adapté pour | [Les éditeurs de logiciels qui souhaitent ajouter une option sim
 **En résumé** , la haute disponibilité logicielle avec SafeKit offre une solution économique et flexible qui fonctionne sur du matériel standard et permet les mises à jour progressives, avec un temps d'arrêt quasi nul (RTO ~1 minute) et aucune perte de données. Les systèmes tolérants aux pannes offrent un basculement instantané (RTO = 0) mais nécessitent du matériel dédié et manquent de flexibilité pour les mises à jour logicielles indépendantes.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

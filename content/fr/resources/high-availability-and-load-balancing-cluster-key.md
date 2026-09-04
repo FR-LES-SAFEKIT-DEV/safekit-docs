@@ -20,8 +20,8 @@ Cette clé de licence vous permet de tester toutes les fonctionnalités du logic
 Si vous n'avez pas encore téléchargé le produit, vous pouvez accéder au [téléchargement du logiciel de clustering SafeKit ici](</fr/resources/safekit-free-trial/>).
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

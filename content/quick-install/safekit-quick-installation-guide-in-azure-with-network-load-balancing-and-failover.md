@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Azure, SafeKit High Avai
 # Azure Network Load Balancing & Failover: Install the SafeKit farm.safe Module
 
 
-{{%  insert-safekit-farm-guide-en app="Azure" mod="farm" %}}
+{{%  insert-safekit-farm-guide-en app="Azure" mod="farm"  %}}
  
 
 ## Overview of the SafeKit / Azure solution
@@ -56,11 +56,11 @@ The network security must be configured to enable communications for the followi
 
 
 
-{{%  insert-safekit-installation-package-windows-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-windows-en app="" mod="mirror"  %}}
  
 
 
-{{%  insert-safekit-installation-package-linux-en mod="mirror" %}}
+{{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 Note: the generic **farm.safe** module that you are going to configure is delivered inside the package.
@@ -68,18 +68,18 @@ Note: the generic **farm.safe** module that you are going to configure is delive
 ## Step by step configuration of the SafeKit / Azure solution
 
 
-{{%  insert-safekit-82-farm-configuration-en mod="farm" %}}
+{{%  insert-safekit-82-farm-configuration-en app="" mod="farm"  %}}
  
 
 ## Demonstration of the SafeKit farm solution
 
 
-{{%  insert-safekit-farm-video-en %}}
+{{%  insert-safekit-farm-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -20,56 +20,56 @@ By synchronizing data between standard servers, **SafeKit** eliminates the need 
 
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-feature-en %}}
+{{%  insert-safekit-feature-en  %}}
  
 
 
-{{%  insert-safekit-use-cases-en %}}
+{{%  insert-safekit-use-cases-en  %}}
  
 
 
-{{%  insert-safekit-sanless-en %}}
+{{%  insert-safekit-sanless-en  %}}
  
 
 
-{{%  insert-vm-vs-app-ha-en %}}
+{{%  insert-vm-vs-app-ha-en  %}}
  
 
 
-{{%  insert-safekit-usage-en %}}
+{{%  insert-safekit-usage-en  %}}
  
 
 
-{{%  insert-safekit-videos-en %}}
+{{%  insert-safekit-videos-en  %}}
  
 
 
-{{%  insert-safekit-mirror-en app="Windows/Linux" %}}
+{{%  insert-safekit-mirror-en  %}}
  
 
 
-{{%  insert-safekit-farm-en app="Windows/Linux" %}}
+{{%  insert-safekit-farm-en  %}}
  
 
 
-{{%  insert-safekit-differentiators-en %}}
+{{%  insert-safekit-differentiators-en  %}}
  
 
 
-{{%  insert-safekit-training-en %}}
+{{%  insert-safekit-training-en  %}}
  
 
 
-{{%  insert-safekit-modules-en %}}
+{{%  insert-safekit-modules-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

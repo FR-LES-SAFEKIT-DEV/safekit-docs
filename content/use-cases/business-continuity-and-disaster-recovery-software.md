@@ -30,8 +30,8 @@ Business continuity and backup solutions address different failure scenarios and
 Learn more in [Combining SafeKit High Availability with Disaster Recovery Backups](</best-practises/high-availability-disaster-recovery-hadr/>).
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -24,16 +24,16 @@ Consequently, the environment is protected against hardware or software failures
 
 ## Table of Contents
 
-  * [Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN)](<#synchronous-hadr-fast-network>)
-  * [Asynchronous HADR: Disaster Recovery over Slow Networks (WAN)](<#asynchronous-hadr-slow-network>)
-  * [How to Combine HADR and Backup for Total System Resilience](<#hadr-resilience-strategy>)
-  * [Comparison of HADR Architectures: Fast vs. Slow Networks](<#hadr-architectures-comparison>)
-  * [Video Guide: How to Implement HADR with SafeKit](<#videoguide-hadr-safekit>)
-  * [🔍 SafeKit High Availability Navigation Hub](<#hub>)
+  * [Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN)](#synchronous-hadr-fast-network)
+  * [Asynchronous HADR: Disaster Recovery over Slow Networks (WAN)](#asynchronous-hadr-slow-network)
+  * [How to Combine HADR and Backup for Total System Resilience](#hadr-resilience-strategy)
+  * [Comparison of HADR Architectures: Fast vs. Slow Networks](#hadr-architectures-comparison)
+  * [Video Guide: How to Implement HADR with SafeKit](#videoguide-hadr-safekit)
+  * [🔍 SafeKit High Availability Navigation Hub](#hub)
 
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}
  
 
 ## Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN) {#synchronous-hadr-fast-network}
@@ -140,8 +140,8 @@ Learn how to combine **High Availability (HA)** and **Disaster Recovery (DR)** i
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

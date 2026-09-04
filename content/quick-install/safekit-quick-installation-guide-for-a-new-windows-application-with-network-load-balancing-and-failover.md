@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for Windows, SafeKit High Av
 # Windows Network Load Balancing & Failover: Install the SafeKit farm.safe Module
 
 
-{{%  insert-safekit-farm-guide-en app="Windows" mod="farm" %}}
+{{%  insert-safekit-farm-guide-en app="Windows" mod="farm"  %}}
  
 
 ## Overview of the SafeKit / Windows solution
@@ -25,7 +25,7 @@ The solution is described here: **💡[SafeKit: All-in-One Windows Load Balancin
 
 
 
-{{%  insert-safekit-installation-package-windows-en mod="farm" %}}
+{{%  insert-safekit-installation-package-windows-en app="" mod="farm"  %}}
  
 
 Note: the generic **farm.safe** module that you are going to configure is delivered inside the package.
@@ -33,18 +33,18 @@ Note: the generic **farm.safe** module that you are going to configure is delive
 ## Step by step configuration of the SafeKit / Windows solution
 
 
-{{%  insert-safekit-82-farm-configuration-en app="Windows" mod="farm" %}}
+{{%  insert-safekit-82-farm-configuration-en app="Windows" mod="farm"  %}}
  
 
 ## Demonstration of the SafeKit farm solution
 
 
-{{%  insert-safekit-farm-video-en %}}
+{{%  insert-safekit-farm-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

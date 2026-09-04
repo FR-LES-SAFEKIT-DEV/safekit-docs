@@ -1,12 +1,13 @@
-{{/* Shortcode: insert-safekit-82-kvm-configuration-en — 1 instances in 1 files */}}
+{{/* Shortcode: insert-safekit-82-kvm-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
+
  
 
 ⚠️ The {{ .Get "app" }} configuration is presented with a virtual machine named `VM1` and containing the application to restart in case of failure.
 
 ⚠️ You will have to repeat this configuration for all VMs that you want to replicate and to restart.
 
-### 1\. Prerequisites {#prerequisite}
+### 1. Prerequisites {#prerequisite}
 
 The VM1 virtual machine image is in the file `/var/lib/libvirt/images/vm1.qcow2`. Before configuring SafeKit, you must perform the following configuration to place the virtual machine in a vm1-specific directory that will be replicated by SafeKit.
 
@@ -68,7 +69,7 @@ On node 2:
         mkdir -p /var/lib/libvirt/images/vm1/
 
 
-### 2\. Launch the SafeKit console
+### 2. Launch the SafeKit console
 
   * Launch the web console in a browser on one cluster node by connecting to `http://localhost:9010`.
   * Enter `admin` as user name and the password defined during installation.
@@ -84,7 +85,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Start the SafeKit web console to configure the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 3\. Configure node addresses
+### 3. Configure node addresses
 
   * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
   * Then, click on `Save and apply` to save the configuration.
@@ -100,7 +101,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Enter the nodes of the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-### 4\. Select a module
+### 4. Select a module
 
   * In `New module`, click on the `{{ .Get "mod" }}.safe` module.
 
@@ -113,7 +114,7 @@ You can also run the console in a browser on a workstation external to the clust
 ![Choose the module for {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 5\. Configure the module
+### 5. Configure the module
 
   * Choose an `Automatic` start of the module at boot without delay.
   * Normally, you have a single `Heartbeat` network on which the replication is made. But, you can define a private network if necessary (by adding a LAN at step 3).
@@ -129,7 +130,7 @@ We assume that the VM1 files are in `/var/lib/libvirt/image/vm1/` (see [prerequi
 ![Enter the {{ .Get "app" }} parameters](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
 
 
-### 6\. Custom checker to detect VM malfunction
+### 6. Custom checker to detect VM malfunction
 
 The custom checker checks if the VM is running (with the 'virsh domstate' command). If the VM is not running, the custom checker automatically restarts the VM on the same {{ .Get "app" }} node or on the other.
 
@@ -145,12 +146,12 @@ The custom checker checks if the VM is running (with the 'virsh domstate' comman
 ![Enter the {{ .Get "app" }} custom checker parameters](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
 
 
-### 7\. Edit scripts (optional)
+### 7. Edit scripts (optional)
 
   * Do not edit scripts.
 
 
-### 8\. Communication encryption (optional)
+### 8. Communication encryption (optional)
 
   * Keep encryption of communication between nodes.
 
@@ -158,7 +159,7 @@ The custom checker checks if the VM is running (with the 'virsh domstate' comman
 ![Communication encryption of the {{ .Get "app" }} module](/wp-content/uploads/2024/03/07-module-encryption.png)
 
 
-### 9\. Save and apply
+### 9. Save and apply
 
   * `Save and apply` the configuration and scripts on both nodes.
 
@@ -166,7 +167,7 @@ The custom checker checks if the VM is running (with the 'virsh domstate' comman
 ![Save and apply the {{ .Get "app" }} module configuration](/wp-content/uploads/2024/03/08-module-save.png)
 
 
-### 10\. Verify successful configuration
+### 10. Verify successful configuration
 
   * Check the `Success` ✅ message on both nodes and click on `Monitor modules`.
   * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
@@ -175,7 +176,7 @@ The custom checker checks if the VM is running (with the 'virsh domstate' comman
 ![Check the {{ .Get "app" }} module configuration success](/wp-content/uploads/2024/03/09-module-save-check.png)
 
 
-### 11\. Start the node with up-to-date data
+### 11. Start the node with up-to-date data
 
   * If node 1 has the up-to-date replicated directory for `vm1/`, select it and ⋯ `Force start` ▶ `As primary`.
 
@@ -192,7 +193,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![Start as primary the {{ .Get "app" }} node with the up-to-date data](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-### 12\. Wait for the transition to ALONE (green)
+### 12. Wait for the transition to ALONE (green)
 
   * Node 1 should reach the ALONE (green) state, which means that the `start_prim` script has been executed on node 1.
 
@@ -210,7 +211,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![The first {{ .Get "app" }} node starts as primary and becomes ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
 
-### 13\. Start node 2
+### 13. Start node 2
 
   * ⋯ `Start` node 2 with its contextual menu.
   * Wait for the SECOND (green) state.
@@ -226,7 +227,7 @@ When node 2 will be started, all data will be copied from node 1 to node 2.
 ![Start the {{ .Get "app" }} node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-### 14\. Verify that the cluster is operational
+### 14. Verify that the cluster is operational
 
   * Check that the cluster is green/green with `VM1` running on the PRIM node and not running on the SECOND node.
 
@@ -237,7 +238,7 @@ Only changes inside files are replicated in real time in this state.
 ![The {{ .Get "app" }} node 2 is SECOND (green)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-### 15\. Testing
+### 15. Testing
 
   * Stop the PRIM node by scrolling down its contextual menu and clicking `Stop`.
   * Verify that there is a failover on the SECOND node which should become ALONE (green).
@@ -263,7 +264,7 @@ Only changes inside files are replicated in real time in this state.
 ![Stop the {{ .Get "app" }} module on the PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16\. If necessary, configure a splitbrain checker
+### 16. If necessary, configure a splitbrain checker
 
   * See [What are the different scenarios in case of network isolation in a cluster?](/best-practises/power-outage-and-network-isolation-in-a-cluster/) to know if you need to configure a splitbrain checker.
   * Go to the module configuration and click on `Checkers / Splitbrain` (see image) to edit the splitbrain parameters.
@@ -280,7 +281,7 @@ Only changes inside files are replicated in real time in this state.
 ![Enter the {{ .Get "app" }} splitbrain parameters](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
 
 
-### 17\. Replicating snapshots
+### 17. Replicating snapshots
 
 The directory that contains the snapshot xml files is:
     
@@ -320,7 +321,7 @@ Snapshots created on the PRIM node are operationnal on node 2 after failover, bu
 ![Enter the {{ .Get "app" }} parameters](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
 
 
-### 18\. Support
+### 18. Support
 
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
@@ -329,6 +330,5 @@ Snapshots created on the PRIM node are operationnal on node 2 after failover, bu
 
 
 ![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
-
 
 

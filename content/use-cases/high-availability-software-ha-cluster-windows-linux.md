@@ -19,8 +19,8 @@ topics: "30 seconds elevator pitch for SafeKit, 🔍 SafeKit High Availability N
 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

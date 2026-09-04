@@ -10,20 +10,20 @@ topics: "SafeKit for Siemens SIMATIC PCS7: 2-Node SANless Hyper-V Cluster, Table
 # High Availability for Siemens SIMATIC PCS 7: 2-Node SANless Cluster
 
 
-{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens SIMATIC PCS7" %}}
+{{%  insert-safekit-hyperv-solution-mirror-en app="Siemens SIMATIC PCS7"  %}}
  
 
 
-{{%  insert-safekit-siemens-license-en app="Siemens Desigo CC" %}}
+{{%  insert-safekit-siemens-license-en app="Siemens Desigo CC"  %}}
  
 
 
-{{%  insert-safekit-scada-case-en %}}
+{{%  insert-safekit-scada-case-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

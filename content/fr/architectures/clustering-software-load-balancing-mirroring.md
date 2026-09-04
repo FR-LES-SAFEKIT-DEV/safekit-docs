@@ -36,8 +36,8 @@ Ainsi, le load balancing réseau, le mirroring des données en temps réel et le
 Lorsque vous comparez le logiciel de clustering SafeKit avec le clustering matériel, vous n'avez pas besoin de disque partagé, de SAN répliqué, de load balancers, d'éditions entreprise du système d'exploitation ou des base de données.
 
 
-{{%  insert-safekit-hub-fr %}}
+{{%  insert-safekit-hub-fr  %}}
  
 
 
-{{%  insert-safekit-4-buttons-fr %}}
+{{%  insert-safekit-4-buttons-fr  %}}

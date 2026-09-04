@@ -10,12 +10,12 @@ topics: "SafeKit brings two solutions for redundancy and high availability of a 
 # High Availability and Redundancy for Physical Security Software
 
 
-{{%  insert-safekit-security-solutions-en app="physical security" %}}
+{{%  insert-safekit-security-solutions-en app="physical security"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for IIS, SafeKit High Availa
 # IIS Network Load Balancing & Failover: Install the SafeKit iis_farm.safe Module
 
 
-{{%  insert-safekit-farm-guide-en app="IIS" mod="iis_farm" %}}
+{{%  insert-safekit-farm-guide-en app="IIS" mod="iis_farm"  %}}
  
 
 ## Overview of the SafeKit / IIS solution
@@ -25,28 +25,28 @@ The solution is described here: **💡[SafeKit: All-in-One IIS Load Balancing & 
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="IIS" mod="iis_farm" %}}
+{{%  insert-safekit-installation-package-windows-en app="IIS" mod="iis_farm"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="IIS" mod="iis_farm" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="IIS" farm="" mod="iis_farm"  %}}
  
 
 ## Step by step configuration of the SafeKit / IIS solution
 
 
-{{%  insert-safekit-82-farm-configuration-en app="IIS" mod="iis_farm" %}}
+{{%  insert-safekit-82-farm-configuration-en app="IIS" mod="iis_farm"  %}}
  
 
 ## Demonstration of the SafeKit farm solution
 
 
-{{%  insert-safekit-farm-video-en %}}
+{{%  insert-safekit-farm-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en app="Microsoft SQL Server mirror" %}}
+{{%  insert-safekit-hub-en app="Microsoft SQL Server mirror"  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

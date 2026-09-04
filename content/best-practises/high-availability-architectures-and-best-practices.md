@@ -50,12 +50,12 @@ This article explores the best practices in high availability architectures by c
 ## Comparative tables on high availability architectures and best practices
 
 
-{{%  insert-safekit-software-vs-hardware-table-en %}}
+{{%  insert-safekit-software-vs-hardware-table-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

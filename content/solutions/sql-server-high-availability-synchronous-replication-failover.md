@@ -10,12 +10,12 @@ topics: "How the SANless SafeKit Mirror Cluster Works with Microsoft SQL Server,
 # The Simplest Microsoft SQL Server High Availability: 2-Node Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-2-en app="Microsoft SQL Server" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="Microsoft SQL Server" guide="/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

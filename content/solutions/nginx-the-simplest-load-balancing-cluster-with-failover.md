@@ -10,12 +10,12 @@ topics: "The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for 
 # SafeKit: All-in-One NGINX Load Balancing & High Availability Software
 
 
-{{%  insert-safekit-solution-farm-2-en app="NGINX" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" %}}
+{{%  insert-safekit-solution-farm-2-en app="NGINX" guide="/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

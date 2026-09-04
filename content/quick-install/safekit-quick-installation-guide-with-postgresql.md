@@ -10,7 +10,7 @@ topics: "High Availability Quick Installation Guide for PostgreSQL, SafeKit High
 # PostgreSQL High Availability with SafeKit: Install the postgresql.safe Module for Failover
 
 
-{{%  insert-safekit-mirror-guide-en app="PostgreSQL" mod="postgresql.safe" %}}
+{{%  insert-safekit-mirror-guide-en app="PostgreSQL" mod="postgresql.safe"  %}}
  
 
 ## Overview of the SafeKit / PostgreSQL solution
@@ -25,36 +25,36 @@ The solution is described here: **💡[The Simplest PostgreSQL High Availability
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="PostgreSQL" mod="postgresql" %}}
+{{%  insert-safekit-installation-package-windows-en app="PostgreSQL" mod="postgresql"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="PostgreSQL" mod="postgresql" %}}
+{{%  insert-safekit-82-installation-module-windows-en app="PostgreSQL" mod="postgresql"  %}}
  
 
 
-{{%  insert-safekit-installation-package-linux-en app="PostgreSQL" mod="postgresql" %}}
+{{%  insert-safekit-installation-package-linux-en app="PostgreSQL" mod="postgresql"  %}}
  
 
 
-{{%  insert-safekit-82-installation-module-linux-en app="PostgreSQL" mod="postgresql" %}}
+{{%  insert-safekit-82-installation-module-linux-en app="PostgreSQL" mod="postgresql"  %}}
  
 
 ## Step by step configuration of the SafeKit / PostgreSQL solution
 
 
-{{%  insert-safekit-82-configuration-en app="PostgreSQL" mod="postgresql" %}}
+{{%  insert-safekit-82-configuration-en app="PostgreSQL" mod="postgresql"  %}}
  
 
 ## Demonstration of the SafeKit mirror solution
 
 
-{{%  insert-safekit-mirror-video-en %}}
+{{%  insert-safekit-mirror-video-en  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

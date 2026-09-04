@@ -10,12 +10,12 @@ topics: "How the SANless SafeKit Mirror Cluster Works with MySQL, Table of Conte
 # The Simplest MySQL High Availability: 2-Node Synchronous Replication & Failover
 
 
-{{%  insert-safekit-solution-mirror-2-en app="MySQL" img="/wp-content/uploads/2026/02/safekit-mysql-1024.jpg" guide="/quick-install/safekit-quick-installation-guide-with-mysql/" %}}
+{{%  insert-safekit-solution-mirror-2-en app="MySQL" guide="/quick-install/safekit-quick-installation-guide-with-mysql/" img="/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"  %}}
  
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}

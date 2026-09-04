@@ -23,7 +23,7 @@ The SafeKit on-line training is a self-paced, comprehensive resource designed to
     * **Advanced Configuration:** Deep dives into userconfig.xml, heartbeats, replication, and virtual IPs.
   * **Utilize Video Lessons:** Much of the training is delivered via hosted videos. Each video is typically broken down into chapters (e.g., Prerequisites, Installation, Troubleshooting) so you can jump directly to the topic you need.
   * **Obtain different levels of certification through quizzes:** Test your knowledge at the end of modules to earn official recognition of your SafeKit expertise.
-  * **Get SafeKit 8 Training Materials:** Access the [complete resource package](<#training82>) to support your learning.
+  * **Get SafeKit 8 Training Materials:** Access the [complete resource package](#training82) to support your learning.
 
 
 ### SafeKit Video: Free Certification Platform Tutorial (6:11) {#demo-certification}
@@ -181,8 +181,8 @@ Chapters
 
 
 
-{{%  insert-safekit-hub-en %}}
+{{%  insert-safekit-hub-en  %}}
  
 
 
-{{%  insert-safekit-4-buttons-en %}}
+{{%  insert-safekit-4-buttons-en  %}}
