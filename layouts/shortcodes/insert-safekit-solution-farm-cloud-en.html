@@ -1,22 +1,23 @@
 {{/* Shortcode: insert-safekit-solution-farm-cloud-en — 4 instances in 4 files */}}
 {{/* Parameters: app, guide, img */}}
+{{/* Source: content\solutions\aws-load-balancing-cluster-failover.md */}}
 
  
 
-## Enhance the {{ .Get "app" }} Load Balancer with Application-Level Monitoring and Self-Healing
+## Enhance the Cloud Load Balancer with Application-Level Monitoring and Self-Healing
 
-A SafeKit Farm Cluster for {{ .Get "app" }} is a software-defined high availability solution optimized for {{ .Get "app" }} environments. By providing **Deep Monitoring & Self-Healing** directly on application nodes, it ensures that software failures are detected and resolved locally before they impact availability. It integrates seamlessly with **{{ .Get "app" }} Load Balancers** , using intelligent health checks to route traffic only to fully operational nodes.
+A SafeKit Farm Cluster for {{ .Get "app" }} is a software-defined high availability solution optimized for Cloud environments. By providing **Deep Monitoring & Self-Healing** directly on application nodes, it ensures that software failures are detected and resolved locally before they impact availability. It integrates seamlessly with **{{ .Get "app" }} Load Balancers** , using intelligent health checks to route traffic only to fully operational nodes.
 
 ### What are the advantages of a SafeKit Farm Cluster for {{ .Get "app" }} applications?
 
   * **{{ .Get "app" }} Load Balancer Integration:** Automatically provides precise health checks to {{ .Get "app" }} Load Balancers, ensuring traffic is routed based on the actual state of the {{ .Get "app" }} application rather than just server pings.
-  * **Deep Monitoring & Self-Healing:** Detects "zombie" states where a {{ .Get "app" }} instance is "Running" but the application has crashed. SafeKit triggers an automatic service restart locally before notifying the {{ .Get "app" }} Load Balancer to failover.
-  * **Hybrid Farm & Mirror Capability:** Uniquely allows mixing a Farm cluster (for scaling front-ends via {{ .Get "app" }} LB) with a Mirror cluster (for synchronous data replication of back-ends), solving the persistent storage challenge in {{ .Get "app" }}.
+  * **Deep Monitoring & Self-Healing:** Detects "zombie" states where a Cloud instance is "Running" but the application has crashed. SafeKit triggers an automatic service restart locally before notifying the Cloud Load Balancer to failover.
+  * **Hybrid Farm & Mirror Capability:** Uniquely allows mixing a Farm cluster (for scaling front-ends via Cloud LB) with a Mirror cluster (for synchronous data replication of back-ends), solving the persistent storage challenge in {{ .Get "app" }}.
   * **Kubernetes Alternative:** SafeKit provides high availability for both legacy and containerized applications (not designed for Kubernetes) without the operational overhead and complexity of Kubernetes orchestration.
-  * **Uniform Deployment (On-Prem or {{ .Get "app" }}):** Aside from configuring the [Virtual IP within a {{ .Get "app" }} Load Balancer](/best-practises/how-a-virtual-ip-address-works/), the SafeKit deployment process remains identical across on-premises and cloud environments.
+  * **Uniform Deployment (On-Prem or Cloud):** Aside from configuring the [Virtual IP within a Cloud Load Balancer](/best-practises/how-a-virtual-ip-address-works/), the SafeKit deployment process remains identical across on-premises and cloud environments.
 
 
-![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing](/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg "w:512")
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing]({{ .Get "img" }} "w:512")
 
 **SafeKit Farm NLB Cluster for {{ .Get "app" }}**
 
@@ -25,7 +26,7 @@ A SafeKit Farm Cluster for {{ .Get "app" }} is a software-defined high availabil
 
   * [How the SafeKit software simply implements a {{ .Get "app" }} Network Load Balancing (NLB) cluster?](#safekit-farm-ha-cluster)
   * [How the SafeKit farm cluster works with {{ .Get "app" }}?](#safekit-farm-cluster)
-  * [Comparison: SafeKit Farm Cluster On-Premises vs. SafeKit Farm Cluster in the {{ .Get "app" }}](#safekit-farm-ha-comparison)
+  * [Comparison: SafeKit Farm Cluster On-Premises vs. SafeKit Farm Cluster in the Cloud](#safekit-farm-ha-comparison)
   * [Video Guide: Configuring a SafeKit Farm NLB Cluster](#videoguide-safekit-farm-cluster)
   * [🔍 SafeKit High Availability Navigation Hub](#hub)
 
@@ -48,12 +49,12 @@ Unlike standard NLB hardware that rely on simple **pings** and port checks, Safe
 
 This deep monitoring allows the system to detect "zombie" states—where the server is up but the software has crashed—triggering **automatic service restarts** or traffic redirection that standard NLB solutions cannot perform.
 
-### How does SafeKit handle Uniform Deployment and the {{ .Get "app" }} Virtual IP?
+### How does SafeKit handle Uniform Deployment and the Cloud Virtual IP?
 
 SafeKit is a cloud-agnostic solution, ensuring that the deployment process and architecture remain consistent across on-premises servers and all major cloud providers. The primary architectural difference lies in how the **[Virtual IP (VIP)](/best-practises/how-a-virtual-ip-address-works/)** is presented to the network:
 
   * **On-Premises:** SafeKit manages VIP load balancing directly on the application servers using efficient **kernel-level filtering**. Failover is handled by sending **GARP (Gratuitous ARP)** packets to local switches, which reassigns the IP to the active nodes instantaneously.
-  * **In the {{ .Get "app" }}:** Because cloud networks do not support GARP, the Virtual IP is hosted by a **{{ .Get "app" }} Load Balancer**. In this configuration, **SafeKit provides the intelligent health checks** required to determine node status. This enables the Load Balancer to detect active nodes in real-time and route traffic automatically, ensuring seamless failover across Availability Zones.
+  * **In the Cloud:** Because cloud networks do not support GARP, the Virtual IP is hosted by a **Cloud Load Balancer**. In this configuration, **SafeKit provides the intelligent health checks** required to determine node status. This enables the Load Balancer to detect active nodes in real-time and route traffic automatically, ensuring seamless failover across Availability Zones.
 
 
 ### Why choose a unified All-in-One HA solution over fragmented tools?
@@ -73,7 +74,7 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
   * **Virtual & Physical Environments:** Complete Hyper-V or KVM virtual machines.
   * **Container Orchestration:** Docker, Podman, and K3s (Kubernetes) environments.
   * **Data & Services:** Individual file directories, services, and various databases.
-  * **{{ .Get "app" }} Infrastructure:** High availability for {{ .Get "app" }} applications.
+  * **Cloud Infrastructure:** High availability for Cloud applications.
 
 
 💡 [Explore the full list of supported HA solutions here.](/solutions/)
@@ -122,8 +123,8 @@ The **SafeKit farm cluster** is designed for high availability and scalability o
 
   * **Load Balanced Services (Macros tab):** Define the specific application services (e.g., Apache, IIS, Nginx) to be kept active on all nodes.
   * **Heartbeat network(s):** Communication path(s) used to detect if a node has left the farm.
-  * **Virtual IP (Farm VIP):** For on-premises deployment, configure the VIP directly in the SafeKit web console. For cloud deployment, configure the Virtual IP in the {{ .Get "app" }} Load Balancer using SafeKit's health check.
-  * **Load Balancing Rules:** For on-premises deployment, configure the traffic distribution policy based on the source IP address or port in the SafeKit web console. For cloud deployment, configure the policy in the {{ .Get "app" }} Load Balancer.
+  * **Virtual IP (Farm VIP):** For on-premises deployment, configure the VIP directly in the SafeKit web console. For cloud deployment, configure the Virtual IP in the Cloud Load Balancer using SafeKit's health check.
+  * **Load Balancing Rules:** For on-premises deployment, configure the traffic distribution policy based on the source IP address or port in the SafeKit web console. For cloud deployment, configure the policy in the Cloud Load Balancer.
   * **Checkers:** Monitor the application's health and trigger automatic restart if a process failure is detected.
 
 
@@ -136,23 +137,23 @@ The **SafeKit farm cluster** is designed for high availability and scalability o
 Monitoring a farm cluster provides visibility into the **Active-Active** nature of the infrastructure, where all nodes contribute to the application's performance (showing 2 nodes in this example):
 
   * **UP State (50% on 2 nodes):** In a healthy farm, both nodes are in the "UP" (50%) state, meaning they are both actively receiving and processing client requests via the shared Virtual IP.
-  * **Automatic Re-balancing:** If one node fails, the console visually shows the remaining node taking 100% of the traffic. The failover delay depends on the {{ .Get "app" }} load balancer's health check polling interval.
+  * **Automatic Re-balancing:** If one node fails, the console visually shows the remaining node taking 100% of the traffic. The failover delay depends on the Cloud load balancer's health check polling interval.
   * **Node Insertion:** When a repaired node is restarted, it transitions from "STOP" to "UP" and automatically starts receiving its portion of the load without administrator intervention.
   * **No Data Sync:** Note that in a farm cluster, there is no "Orange" resynchronization state, as nodes are expected to be stateless or share a backend database (which can be protected separately in a mirror cluster).
 
 
 Beyond simple status icons, the interface provides one-click node management, allowing you to manually stop or start a node for planned maintenance while the shared Virtual IP automatically redistributes traffic without interrupting user activity.
 
-## Comparison: SafeKit Farm Cluster On-Premises vs. SafeKit Farm Cluster in the {{ .Get "app" }} {#safekit-farm-ha-comparison}
+## Comparison: SafeKit Farm Cluster On-Premises vs. SafeKit Farm Cluster in the Cloud {#safekit-farm-ha-comparison}
 
-**Technical comparison of SafeKit Farm Cluster On-Premises vs. in the {{ .Get "app" }}**
+**Technical comparison of SafeKit Farm Cluster On-Premises vs. in the Cloud**
 
-Feature | SafeKit On-Premises (Physical/VM) | SafeKit in the {{ .Get "app" }} (AWS, Azure, GCP)  
+Feature | SafeKit On-Premises (Physical/VM) | SafeKit in the Cloud  
 ---|---|---  
-Virtual IP (VIP) Management | SafeKit manages the VIP directly via Gratuitous ARP (GARP). | The Virtual IP is hosted by a {{ .Get "app" }} Load Balancer (NLB).  
-Traffic Distribution | Handled by the SafeKit Kernel Filtering Algorithm across local nodes. | Handled by the {{ .Get "app" }} Load Balancer based on SafeKit health status.  
+Virtual IP (VIP) Management | SafeKit manages the VIP directly via Gratuitous ARP (GARP). | The Virtual IP is hosted by a Cloud Load Balancer (NLB).  
+Traffic Distribution | Handled by the SafeKit Kernel Filtering Algorithm across local nodes. | Handled by the Cloud Load Balancer based on SafeKit health status.  
 Health Monitoring | Internal heartbeats monitor node health. | The Load Balancer polls a SafeKit Health Check URL (HTTP 200/404).  
-Deep Monitoring & Self-Healing | SafeKit monitors application processes and executes local restart scripts before failing over. | SafeKit monitors application processes and stops responding to the {{ .Get "app" }} LB health check to trigger failover.  
+Deep Monitoring & Self-Healing | SafeKit monitors application processes and executes local restart scripts before failing over. | SafeKit monitors application processes and stops responding to the Cloud LB health check to trigger failover.  
 Failover Mechanism | VIP is moved instantly between nodes on the local network. | Load Balancer stops routing traffic to the failed node automatically.  
 Infrastructure Requirement | Standard Layer 2 network (same subnet for VIP). | Multi-AZ (Availability Zones) for maximum resilience.  
   

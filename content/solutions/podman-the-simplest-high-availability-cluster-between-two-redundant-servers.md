@@ -64,7 +64,7 @@ Unlike most SANless solutions that use **block-level replication** (such as DRBD
 Yes. **SafeKit** is a highly versatile, generic high-availability software compatible with both **Windows and Linux**. Beyond Podman, SafeKit can be used to implement **real-time replication and automatic failover** for any file directory, service, or database. It supports a wide range of technologies, including **Hyper-V and KVM virtual machines** , **Docker** , **K3s** , and various **Cloud applications**. This makes SafeKit a universal clustering solution for protecting critical workloads across diverse IT environments without requiring specialized hardware.
 
 
-{{%  insert-safekit-mirror-en  %}}
+{{%  insert-safekit-mirror-en app="Podman"  %}}
  
 
 

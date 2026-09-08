@@ -29,7 +29,7 @@ The solution is described here: **💡[SafeKit: All-in-One Apache Load Balancing
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="Apache" farm="" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-en app="Apache" mod="apache_farm"  %}}
  
 
 
@@ -37,7 +37,7 @@ The solution is described here: **💡[SafeKit: All-in-One Apache Load Balancing
  
 
 
-{{%  insert-safekit-82-installation-module-linux-en app="Apache" farm="" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-linux-en app="Apache" mod="apache_farm"  %}}
  
 
 ## Step by step configuration of the SafeKit / Apache solution

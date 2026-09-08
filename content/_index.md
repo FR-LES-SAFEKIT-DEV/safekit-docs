@@ -52,11 +52,11 @@ By synchronizing data between standard servers, **SafeKit** eliminates the need 
  
 
 
-{{%  insert-safekit-mirror-en  %}}
+{{%  insert-safekit-mirror-en app="Windows/Linux"  %}}
  
 
 
-{{%  insert-safekit-farm-en  %}}
+{{%  insert-safekit-farm-en app="Windows/Linux"  %}}
  
 
 

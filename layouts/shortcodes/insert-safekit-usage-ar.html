@@ -1,0 +1,15 @@
+{{/* Shortcode: insert-safekit-usage-ar — 1 instance in 1 file */}}
+{{/* Parameters: none */}}
+{{/* Source: content\ar\_index.md */}}
+
+ 
+
+## قيود High Availability في SafeKit {#safekit-ha-limitations}
+
+الحد / المتطلب | السبب والأثر | البديل الموصى به  
+---|---|---  
+حجم النسخ التماثلي: بضعة تيرابايت (TBs) |  وقت إعادة المزامنة بعد الفشل ([الخطوة 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)): <br>• شبكة 1 جيجابت/ثانية ≈ 3 ساعات / تيرابايت<br>• شبكة 10 جيجابت/ثانية ≈ ساعة واحدة / تيرابايت (حسب أداء كتابة القرص)  |  • استخدام [وحدة تخزين مشتركة خارجية](/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/) (أكثر تكلفة وأكثر تعقيدًا).   
+عدد الملفات: < 1,000,000 ملف |  • أداء وقت إعادة المزامنة بعد الفشل ([الخطوة 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).<br>• الوقت المستغرق لفحص كل ملف بين العقدتين (Nodes).  |  • وضع الملفات الكثيرة المراد نسخها تماثليًا داخل قرص صلب افتراضي / جهاز افتراضي (VM).<br>• في هذه الحالة، سيتم نسخ وإعادة مزامنة الملفات التي تمثل القرص الصلب الافتراضي / الجهاز الافتراضي فقط.   
+سعة التحويل التلقائي عند الفشل (Failover): ≤ 32 جهازًا افتراضيًا (VM) |  • يعمل كل جهاز افتراضي في وحدة مرآة (Mirror Module) مستقلة.<br>• حد أقصى يبلغ 32 وحدة مرآة تعمل على نفس العنقود (Cluster).  |  • استخدام وحدة تخزين مشتركة خارجية وحل آخر لعنقود الأجهزة الافتراضية (أكثر تكلفة وأكثر تعقيدًا).   
+بنية الشبكة: شبكة LAN/VLAN بين المواقع البعيدة |  • التحويل التلقائي لـ [عنوان IP الافتراضي (Virtual IP)](/best-practises/how-a-virtual-ip-address-works/) مع عقدتين في نفس الشبكة الفرعية (Subnet).<br>• عرض نطاق تبادلي (Bandwidth) جيد لإعادة المزامنة ([الخطوة 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) وزمن انتقال (Latency) جيد لـ [النسخ التماثلي المتزامن](/best-practises/synchronous-replication-vs-asynchronous-replication/) (عادةً رحلة ذهاب وإياب أقل من 2 ملي ثانية).  |  • استخدام [موازن أحمال لعنوان IP الافتراضي](/best-practises/how-a-virtual-ip-address-works/) إذا كانت العقدتان في شبكتين فرعيتين (مدعوم بواسطة SafeKit، خاصة في البيئة السحابية).<br>• استخدام حلول النسخ الاحتياطي مع النسخ التماثلي غير المتزامن للشبكات ذات زمن الانتقال العالي.   
+  

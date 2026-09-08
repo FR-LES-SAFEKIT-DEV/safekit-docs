@@ -1,0 +1,54 @@
+{{/* Shortcode: insert-safekit-differentiators-fr — 1 instance in 1 file */}}
+{{/* Parameters: none */}}
+{{/* Source: content\fr\_index.md */}}
+
+ 
+
+## Comparaison de SafeKit avec les clusters de Haute Disponibilité (HA) traditionnels {#safekit-ha-comparison}
+
+Cette comparaison met en évidence les différences fondamentales entre SafeKit et les solutions traditionnelles de haute disponibilité (HA) telles que les clusters de basculement (Failover Clusters), la HA par virtualisation et SQL Always-On. SafeKit est conçu comme une solution logicielle simple pour la redondance applicative générique, contrairement à la complexité élevée et aux exigences de stockage spécifiques (stockage partagé, SAN) des mécanismes HA traditionnels. 
+
+**Comparaison de SafeKit avec les clusters traditionnels de haute disponibilité (HA)**
+
+Solutions | Complexité | Commentaires  
+---|---|---  
+Failover Cluster (Microsoft) | Élevée | Stockage spécifique (stockage partagé, SAN)  
+Virtualisation (VMware HA) | Élevée | Stockage spécifique (stockage partagé, SAN, vSAN)  
+SQL Always-On (Microsoft) | Élevée | Seul SQL est redondant, nécessite SQL Enterprise Edition  
+SafeKit | Faible | Le plus simple, générique et 100 % logiciel. Non adapté à la réplication de gros volumes de données.  
+  
+**En résumé** , SafeKit atteint une haute disponibilité à faible complexité grâce à un mécanisme simple de réplication logicielle qui élimine le besoin d'un matériel dédié coûteux comme un SAN (Storage Area Network). Cela en fait une solution très accessible pour mettre en œuvre rapidement la redondance applicative sans modifications complexes de l'infrastructure. 
+
+## Différences architecturales : SafeKit défini par logiciel vs. Clusters HA Matériels {#ha-arch-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-software-vs-hardware-table-fr  %}}" }}
+ 
+
+## Principaux Éléments Différenciateurs du Cluster Miroir SafeKit {#safemirr-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-comparison-table-fr  %}}" }}
+ 
+
+## Principaux Éléments Différenciateurs du Cluster Farm SafeKit {#safefarm-diff}
+
+Le SafeKit Farm Cluster est une solution de haute disponibilité spécialement conçue pour les environnements applicatifs évolutifs où la répartition de charge et le basculement rapide sont essentiels. Contrairement aux méthodes traditionnelles qui nécessitent des répartiteurs de charge matériels dédiés ou des configurations réseau complexes, SafeKit fournit une solution de clustering intégrée, définie par logiciel, installée directement sur les serveurs d'application. Le tableau ci-dessous détaille les fonctionnalités principales et les avantages uniques du SafeKit Farm Cluster, en mettant l'accent sur la simplification de la répartition de charge réseau et la garantie de disponibilité continue des services sur les plateformes Windows et Linux. 
+
+**Principaux différenciateurs du SafeKit Farm Cluster avec répartition de charge et basculement**
+
+Avantage | Bénéfice détaillé et mécanisme  
+---|---  
+[Pas de répartiteur de charge, de serveurs proxy dédiés ou d'adresse Ethernet multicast spéciale](/best-practises/how-a-virtual-ip-address-works/) |  • La solution ne nécessite ni répartiteurs de charge ni serveurs proxy dédiés au-dessus de la ferme pour mettre en œuvre la répartition de charge. SafeKit est installé directement sur les serveurs d'application de la ferme. La répartition de charge repose sur une adresse IP virtuelle standard / adresse MAC Ethernet et fonctionne avec des serveurs physiques ou des machines virtuelles sous Windows et Linux sans configuration réseau particulière<br>• Ce n'est pas le cas avec les répartiteurs de charge réseau<br>• Ce n'est pas le cas avec les proxies dédiés sous Linux<br>• Ce n'est pas le cas avec une [adresse Ethernet multicast spécifique](/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/) sous Windows   
+[Toutes les fonctionnalités de clustering](/architectures/network-load-balancing-cluster/) |  • La solution inclut toutes les fonctionnalités de clustering : adresse IP virtuelle, répartition de charge sur l'adresse IP du client ou sur les sessions, surveillance des pannes serveur / réseau / logiciel, redémarrage automatique de l'application avec un temps de reprise rapide et une [option de réplication avec un module miroir](/architectures/file-replication-byte-level-with-failover-mirror-cluster/)<br>• Ce n'est pas le cas avec les autres solutions de répartition de charge. Elles sont capables de répartir la charge mais n'incluent pas une solution de clustering complète avec des scripts de redémarrage et un redémarrage automatique de l'application en cas de panne. Elles n'offrent pas d'option de réplication<br>• La configuration du cluster est très simple et se fait au moyen de 💡 [modules applicatifs](/solutions/). Il n'y a pas de contrôleur de domaine ou d'Active Directory à configurer sous Windows. La solution fonctionne sous Windows et Linux   
+[Sites distants et adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/) |  • Si les serveurs sont connectés au même réseau IP via un LAN étendu entre sites distants, l'[adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/) de SafeKit fonctionne avec la répartition de charge au niveau 2<br>• Si les serveurs sont connectés à des réseaux IP différents entre sites distants, l'adresse IP virtuelle peut être configurée au niveau d'un répartiteur de charge à l'aide du health check SafeKit. Ainsi, vous pouvez mettre en œuvre la répartition de charge mais aussi toutes les fonctionnalités de clustering de SafeKit, en particulier la surveillance et la reprise automatique de l'application critique sur les serveurs d'application   
+[Solution de haute disponibilité uniforme](/architectures/clustering-software-load-balancing-mirroring/) |  • SafeKit implémente un cluster ferme avec répartition de charge et basculement. Mais il implémente également un [cluster miroir avec réplication et basculement](/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Ainsi, une architecture N-tiers peut être rendue hautement disponible et à charge répartie avec la même solution sous Windows et Linux (même installation, configuration, administration avec la console SafeKit ou avec l'interface en ligne de commande). C'est unique sur le marché<br>• Ce n'est pas le cas avec une architecture mélangeant différentes technologies pour la répartition de charge, la réplication et le basculement   
+  
+**En résumé** , le SafeKit Farm Cluster offre une approche unifiée et logicielle de la répartition de charge et de la haute disponibilité qui réduit considérablement la complexité et les coûts. En intégrant la répartition de charge et le basculement directement dans la couche des serveurs d'application à l'aide d'une adresse IP virtuelle standard, il évite le recours à du matériel réseau externe (répartiteurs de charge ou proxies) et à des configurations multicast spécialisées. Cette approche intégrée, combinée à sa capacité de se combiner avec le cluster miroir pour une haute disponibilité N-tiers complète, fait de SafeKit une solution d'une simplicité et d'une complétude uniques pour un déploiement applicatif évolutif et résilient dans des environnements variés. 
+
+## Haute Disponibilité VM : SafeKit sans SAN vs. Hyper-V/VMware HA {#safe-vmha-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-vm-vs-app-ha-comparison-table-fr  %}}" }}
+ 
+

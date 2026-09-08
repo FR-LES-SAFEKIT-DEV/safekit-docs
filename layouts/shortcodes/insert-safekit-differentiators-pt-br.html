@@ -1,0 +1,54 @@
+{{/* Shortcode: insert-safekit-differentiators-pt-br — 1 instance in 1 file */}}
+{{/* Parameters: none */}}
+{{/* Source: content\pt-br\_index.md */}}
+
+ 
+
+## Comparação do SafeKit com Clusters de Alta Disponibilidade (HA) Tradicionais {#safekit-ha-comparison}
+
+Esta comparação destaca as diferenças fundamentais entre o SafeKit e as soluções tradicionais de cluster de alta disponibilidade (HA), como Failover Clusters, HA por virtualização e SQL Always-On. O SafeKit é projetado como uma solução de baixa complexidade, exclusivamente em software, para redundância genérica de aplicações, em contraste com a alta complexidade e os requisitos específicos de armazenamento (armazenamento compartilhado, SAN) típicos dos mecanismos HA tradicionais. 
+
+**Comparação do SafeKit com clusters tradicionais de alta disponibilidade (HA)**
+
+Soluções | Complexidade | Comentários  
+---|---|---  
+Failover Cluster (Microsoft) | Alta | Armazenamento específico (armazenamento compartilhado, SAN)  
+Virtualização (VMware HA) | Alta | Armazenamento específico (armazenamento compartilhado, SAN, vSAN)  
+SQL Always-On (Microsoft) | Alta | Apenas o SQL é redundante, requer SQL Enterprise Edition  
+SafeKit | Baixa | O mais simples, genérico e exclusivamente em software. Não adequado para replicação de grandes volumes de dados.  
+  
+**Em resumo** , o SafeKit alcança alta disponibilidade com baixa complexidade por meio de um mecanismo simples de espelhamento baseado em software, que elimina a necessidade de hardware dedicado e caro, como uma SAN (Storage Area Network). Isso o torna uma solução altamente acessível para implementar rapidamente a redundância de aplicações sem alterações complexas na infraestrutura. 
+
+## Diferenciadores Arquitetônicos: SafeKit de Software vs. Clusters HA de Hardware {#ha-arch-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-software-vs-hardware-table-pt-br  %}}" }}
+ 
+
+## Diferenciais Chave do Cluster Mirror SafeKit {#safemirr-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-comparison-table-pt-br  %}}" }}
+ 
+
+## Diferenciais Chave do Cluster Farm SafeKit {#safefarm-diff}
+
+O SafeKit Farm Cluster é uma solução de alta disponibilidade projetada especificamente para ambientes de aplicações escaláveis onde a distribuição de carga e o failover rápido são essenciais. Diferentemente dos métodos tradicionais que exigem balanceadores de carga de hardware dedicados ou configurações de rede complexas, o SafeKit fornece uma solução de clustering integrada e definida por software, instalada diretamente nos servidores de aplicação. A tabela abaixo detalha as funcionalidades principais e as vantagens exclusivas do SafeKit Farm Cluster, focando em como ele simplifica o balanceamento de carga de rede e garante a disponibilidade contínua dos serviços nas plataformas Windows e Linux. 
+
+**Principais diferenciais do SafeKit Farm Cluster com balanceamento de carga e failover**
+
+Vantagem | Benefício detalhado e mecanismo  
+---|---  
+[Sem balanceador de carga, servidores proxy dedicados ou endereço Ethernet multicast especial](/best-practises/how-a-virtual-ip-address-works/) |  • A solução não requer balanceadores de carga ou servidores proxy dedicados acima da farm para implementar o balanceamento de carga. O SafeKit é instalado diretamente nos servidores de aplicação na farm. O balanceamento de carga é baseado em um endereço IP virtual padrão / endereço MAC Ethernet e funciona com servidores físicos ou máquinas virtuais no Windows e Linux sem configuração de rede especial<br>• Isso não acontece com balanceadores de carga de rede<br>• Isso não acontece com proxies dedicados no Linux<br>• Isso não acontece com um [endereço Ethernet multicast específico](/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/) no Windows   
+[Todas as funcionalidades de clustering](/architectures/network-load-balancing-cluster/) |  • A solução inclui todas as funcionalidades de clustering: endereço IP virtual, balanceamento de carga por endereço IP do cliente ou por sessões, monitoramento de falhas de servidor / rede / software, reinício automático da aplicação com tempo de recuperação rápido e uma [opção de replicação com um módulo espelho](/architectures/file-replication-byte-level-with-failover-mirror-cluster/)<br>• Isso não acontece com outras soluções de balanceamento de carga. Elas conseguem fazer balanceamento de carga, mas não incluem uma solução de clustering completa com scripts de reinício e reinício automático da aplicação em caso de falha. Elas não oferecem opção de replicação<br>• A configuração do cluster é muito simples e feita por meio de 💡 [módulos de aplicação](/solutions/). Não há controlador de domínio ou Active Directory para configurar no Windows. A solução funciona no Windows e Linux   
+[Sites remotos e endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/) |  • Se os servidores estão conectados à mesma rede IP através de uma LAN estendida entre sites remotos, o [endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/) do SafeKit funciona com balanceamento de carga no nível 2<br>• Se os servidores estão conectados a redes IP diferentes entre sites remotos, o endereço IP virtual pode ser configurado no nível de um balanceador de carga com a ajuda do health check do SafeKit. Assim, você pode implementar balanceamento de carga, mas também todas as funcionalidades de clustering do SafeKit, em particular o monitoramento e a recuperação automática da aplicação crítica nos servidores de aplicação   
+[Solução uniforme de alta disponibilidade](/architectures/clustering-software-load-balancing-mirroring/) |  • O SafeKit implementa um farm cluster com balanceamento de carga e failover. Mas também implementa um [cluster espelho com replicação e failover](/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Assim, uma arquitetura N-camadas pode ser tornada altamente disponível e com carga balanceada com a mesma solução no Windows e Linux (mesma instalação, configuração, administração com o console SafeKit ou com a interface de linha de comando). Isso é único no mercado<br>• Isso não acontece com uma arquitetura que mistura diferentes tecnologias para balanceamento de carga, replicação e failover   
+  
+**Em resumo** , o SafeKit Farm Cluster oferece uma abordagem unificada e baseada em software para balanceamento de carga e alta disponibilidade que reduz drasticamente a complexidade e o custo. Ao incorporar o balanceamento de carga e o failover diretamente na camada do servidor de aplicação usando um endereço IP virtual padrão, ele evita a necessidade de hardware de rede externo (balanceadores de carga ou proxies) e configurações multicast especializadas. Essa abordagem integrada, combinada com sua capacidade de se combinar com o cluster espelho para HA N-camadas completa, torna o SafeKit uma solução exclusivamente simples e abrangente para alcançar uma entrega de aplicações escalável e resiliente em ambientes diversos. 
+
+## Alta Disponibilidade de VM: SAN-Less do SafeKit vs. Hyper-V/VMware HA {#safe-vmha-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-vm-vs-app-ha-comparison-table-pt-br  %}}" }}
+ 
+

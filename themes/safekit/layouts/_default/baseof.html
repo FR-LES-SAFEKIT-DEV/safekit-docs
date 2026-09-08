@@ -179,6 +179,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 parent = parent.parentElement.closest('li');
             }
+            var tocSidebar = document.querySelector('.toc-sidebar');
+            if (tocSidebar) {
+                var activeTop = active.link.getBoundingClientRect().top;
+                var sidebarTop = tocSidebar.getBoundingClientRect().top;
+                var sidebarBottom = sidebarTop + tocSidebar.clientHeight;
+                if (activeTop < sidebarTop || activeTop > sidebarBottom - active.link.offsetHeight) {
+                    tocSidebar.scrollTop += activeTop - sidebarTop - tocSidebar.clientHeight / 2;
+                }
+            }
         }
     }
     // Throttle with requestAnimationFrame instead of running updateActive()

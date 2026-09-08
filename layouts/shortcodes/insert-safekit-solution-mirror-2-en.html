@@ -1,5 +1,6 @@
 {{/* Shortcode: insert-safekit-solution-mirror-2-en — 13 instances in 13 files */}}
 {{/* Parameters: app, guide, img */}}
+{{/* Source: content\architectures\file-replication-byte-level-with-failover-mirror-cluster.md */}}
 
  
 
@@ -20,7 +21,7 @@
 By consolidating **High Availability** into a lightweight software layer, SafeKit delivers enterprise-grade **redundancy and business continuity for {{ .Get "app" }}** at a fraction of the cost of traditional clustering suites.
 
 
-![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Real-time replication](/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg "w:512")
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Real-time replication]({{ .Get "img" }} "w:512")
 
 **SafeKit HA Mirror Cluster for {{ .Get "app" }}**
 
@@ -105,7 +106,7 @@ SafeKit also provides **Farm Clusters** with native **Network Load Balancing and
 💡 [Explore the full list of supported HA solutions here.](/solutions/)
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-mirror-en  %}}" }}
+{{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-en app=%q  %%}}" (.Get "app")) }}
  
 
 

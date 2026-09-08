@@ -29,7 +29,7 @@ The solution is described here: **💡[SafeKit: All-in-One IIS Load Balancing & 
  
 
 
-{{%  insert-safekit-82-installation-module-windows-en app="IIS" farm="" mod="iis_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-en app="IIS" mod="iis_farm"  %}}
  
 
 ## Step by step configuration of the SafeKit / IIS solution

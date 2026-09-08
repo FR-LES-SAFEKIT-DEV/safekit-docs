@@ -3,7 +3,13 @@ title: "Old SafeKit Milestone Configuration - SafeKit HA"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
 lang: "en"
+topics: "Old step by step configuration of the SafeKit / Milestone XProtect solution"
 ---
+
+# Old SafeKit Milestone Configuration
+
+## Old step by step configuration of the SafeKit / Milestone XProtect solution
+
 
 ![Warning](/wp-content/uploads/2022/07/warning-small.png)
 

@@ -1,5 +1,6 @@
 {{/* Shortcode: insert-safekit-solution-farm-2-en — 6 instances in 6 files */}}
 {{/* Parameters: app, guide, img */}}
+{{/* Source: content\architectures\network-load-balancing-cluster.md */}}
 
  
 
@@ -16,7 +17,7 @@ A SafeKit Farm Cluster for {{ .Get "app" }} is a software-defined Network Load B
   * **OEM High Availability:** Enables software vendors to embed native clustering into their applications, providing a "cluster-ready" and software-only product without extra infrastructure.
 
 
-![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing](/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg "w:512")
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing]({{ .Get "img" }} "w:512")
 
 **SafeKit Farm NLB Cluster for {{ .Get "app" }}**
 
@@ -82,16 +83,16 @@ SafeKit is a versatile high-availability solution **for both Windows and Linux**
 💡 [Explore the full list of supported HA solutions here.](/solutions/)
 
 
-{{ $.Page.RenderString "{{%  insert-safekit-farm-en  %}}" }}
+{{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-en app=%q  %%}}" (.Get "app")) }}
  
 
 ## Comparison: SafeKit Farm Cluster for {{ .Get "app" }} vs. Other NLB Clustering Solutions {#safekit-farm-ha-comparison}
 
 Feature | SafeKit Farm Cluster (Software) | Hardware Load Balancers  
 ---|---|---  
-Architecture | Kernel-Level Software: Native integration into {{ .Get "app" }} OS. | Proprietary Hardware: Dedicated physical appliances.  
+Architecture | Kernel-Level Software: Native integration into Windows and Linux OS. | Proprietary Hardware: Dedicated physical appliances.  
 Management | System Admins: Managed via a simple web console; no networking degree required. | Network Engineers: Requires specialized skills and CLI certifications.  
-Health Monitoring | Application Checkers: Deep monitoring of specific processes (Apache, Nginx, etc.). | Network Ping: Basic check to see if the server or port is reachable.  
+Health Monitoring | Application Checkers: Deep monitoring of specific processes or web services. | Network Ping: Basic check to see if the server or port is reachable.  
 Self-Healing | Built-in Restart Intelligence: Automatically reboots failed services locally. | Passive Failover: Simply stops sending traffic to the failed node.  
 Infrastructure | Agnostic: Works on physical, virtual (VMware, Hyper-V), or Cloud instances. | Rigid: Requires specific physical cabling and network rack space.  
 Cost (TCO) | Low CAPEX/OPEX: Uses existing server resources; no expensive hardware maintenance. | High Investment: High upfront costs plus recurring licensing and power expenses.  

@@ -49,7 +49,7 @@ SafeKit solves:
 
 
 
-{{%  insert-safekit-mirror-en  %}}
+{{%  insert-safekit-mirror-en app="Microsoft SQL Server"  %}}
  
 
 ## Video Guide: Configuring a SafeKit HA mirror cluster for SQL Server {#videoguide-safekit-mirror-cluster}

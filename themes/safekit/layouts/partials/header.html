@@ -168,6 +168,12 @@
                                 {{ with $enSite.GetPage "/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds" }}
                                 <a href="{{ .RelPermalink }}">All cloud solutions</a>
                                 {{ end }}
+                                {{ with $enSite.GetPage "/solutions/cloud-high-availability-cluster-synchronous-replication-failover" }}
+                                <a href="{{ .RelPermalink }}">Cloud (mirror.safe)</a>
+                                {{ end }}
+                                {{ with $enSite.GetPage "/solutions/cloud-load-balancing-cluster-failover" }}
+                                <a href="{{ .RelPermalink }}">Cloud (farm.safe)</a>
+                                {{ end }}
                             </div>
                             <div class="mega-column">
                                 <h4 class="mega-column-title">Physical security (real-time replication and failover)</h4>
@@ -478,35 +484,21 @@
                                 {{ with $enSite.GetPage "/resources/safekit-release-notes-8-2" }}
                                 <a href="{{ .RelPermalink }}">SafeKit release notes</a>
                                 {{ end }}
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf" target="_blank" rel="noopener">SafeKit SRB</a>
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf" target="_blank" rel="noopener">Knowledge Base</a>
                                 {{ with $enSite.GetPage "/resources/ai-llm-resources-for-safekit" }}
                                 <a href="{{ .RelPermalink }}">AI/LLM Resources for SafeKit</a>
                                 {{ end }}
                             </div>
                             <div class="mega-column">
                                 <h4 class="mega-column-title">Product information</h4>
-                                <a href="/wp-content/uploads/documents/high-availability-overview.pdf" target="_blank">Flyer</a>
-                                <a href="/wp-content/uploads/documents/wp-safekit-en.pdf" target="_blank">White Paper - Product</a>
-                                <a href="/wp-content/uploads/documents/wp-hadecision-en.pdf" target="_blank">White Paper - High Availability Guide</a>
+                                <a href="{{ "wp-content/uploads/documents/high-availability-overview.pdf" | relURL }}" target="_blank" rel="noopener">Flyer</a>
+                                <a href="{{ "wp-content/uploads/documents/wp-safekit-en.pdf" | relURL }}" target="_blank" rel="noopener">White Paper - Product</a>
+                                <a href="{{ "wp-content/uploads/documents/wp-hadecision-en.pdf" | relURL }}" target="_blank" rel="noopener">White Paper - High Availability Guide</a>
                                 {{ with $enSite.GetPage "/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation" }}
                                 <a href="{{ .RelPermalink }}">Technical Reference for RFI and RFP</a>
                                 {{ end }}
                             </div>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-                {{ else }}
-                {{ with $enSite.GetPage (printf "/%s" $sectionName) }}
-                <div class="dropdown">
-                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection $sectionName }} active{{ end }}">{{ $label }} ▾</a>
-                    <div class="mega-panel">
-                        <div class="mega-grid">
-                            {{ range .Pages.ByTitle }}
-                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                            {{ end }}
-                        </div>
-                        <div class="mega-footer">
-                            <a href="{{ .RelPermalink }}">View all {{ $label }} →</a>
                         </div>
                     </div>
                 </div>

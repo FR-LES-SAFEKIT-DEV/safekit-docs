@@ -1,0 +1,54 @@
+{{/* Shortcode: insert-safekit-differentiators-zh-hans — 1 instance in 1 file */}}
+{{/* Parameters: none */}}
+{{/* Source: content\zh-hans\_index.md */}}
+
+ 
+
+## SafeKit与传统高可用性（HA）集群的比较 {#safekit-ha-comparison}
+
+本对比突出了 SafeKit 与传统高可用性 (HA) 集群解决方案（如故障转移集群、虚拟化 HA 和 SQL Always-On）之间的根本区别。SafeKit 是一种低复杂度、纯软件的通用应用冗余解决方案，与传统 HA 机制所需的高复杂度和特定存储要求（共享存储、SAN）形成鲜明对比。 
+
+**SafeKit 与传统高可用性 (HA) 集群的对比**
+
+解决方案 | 复杂度 | 说明  
+---|---|---  
+故障转移集群 (Microsoft) | 高 | 需要特定存储（共享存储、SAN）  
+虚拟化 (VMware HA) | 高 | 需要特定存储（共享存储、SAN、vSAN）  
+SQL Always-On (Microsoft) | 高 | 仅 SQL 具有冗余，需要 SQL Enterprise 版本  
+SafeKit | 低 | 最简单、通用且纯软件方案。不适用于大数据量复制。  
+  
+**总结** ，SafeKit 通过简单的软件镜像机制实现低复杂度的高可用性，无需昂贵的专用硬件（如 SAN 存储区域网络）。这使其成为一种高度易用的解决方案，可快速实现应用冗余，无需复杂的基础设施变更。 
+
+## 架构差异：SafeKit 软件定义集群 vs. 硬件 HA 集群 {#ha-arch-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-software-vs-hardware-table-zh-hans  %}}" }}
+ 
+
+## SafeKit 镜像集群的关键区别点 {#safemirr-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-comparison-table-zh-hans  %}}" }}
+ 
+
+## SafeKit Farm 集群的关键区别点 {#safefarm-diff}
+
+SafeKit Farm Cluster 是一种专为可扩展应用环境设计的高可用性解决方案，适用于负载分配和快速故障转移至关重要的场景。与需要专用硬件负载均衡器或复杂网络配置的传统方法不同，SafeKit 提供一种集成的、软件定义的集群解决方案，直接安装在应用服务器上。下表详细介绍了 SafeKit Farm Cluster 的核心功能和独特优势，重点说明其如何简化网络负载均衡并确保 Windows 和 Linux 平台上的服务持续可用。 
+
+**SafeKit Farm Cluster 负载均衡与故障转移的关键差异化优势**
+
+优势 | 详细收益与机制  
+---|---  
+[无需负载均衡器、专用代理服务器或特殊多播以太网地址](/best-practises/how-a-virtual-ip-address-works/) |  • 该解决方案无需在集群上方部署负载均衡器或专用代理服务器即可实现负载均衡。SafeKit 直接安装在集群中的应用服务器上。负载均衡基于标准虚拟 IP 地址/以太网 MAC 地址，可在 Windows 和 Linux 的物理服务器或虚拟机上运行，无需特殊网络配置<br>• 网络负载均衡器无法做到这一点<br>• Linux 上的专用代理无法做到这一点<br>• Windows 上使用 [特殊多播以太网地址](/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/)也无法做到这一点   
+[完整的集群功能](/architectures/network-load-balancing-cluster/) |  • 该解决方案包含所有集群功能：虚拟 IP 地址、基于客户端 IP 地址或会话的负载均衡、服务器/网络/软件故障监控、快速恢复时间的自动应用重启，以及 [镜像模块的复制选项](/architectures/file-replication-byte-level-with-failover-mirror-cluster/)<br>• 其他负载均衡解决方案无法做到这一点。它们能够进行负载均衡，但不包含完整的集群解决方案（含重启脚本和故障时自动应用重启）。它们也不提供复制选项<br>• 集群配置非常简单，通过💡 [应用模块](/solutions/)完成。Windows 上无需配置域控制器或 Active Directory。该解决方案在 Windows 和 Linux 上均可运行   
+[远程站点与虚拟 IP 地址](/best-practises/how-a-virtual-ip-address-works/) |  • 如果服务器通过远程站点之间的扩展局域网连接到同一 IP 网络，SafeKit 的 [虚拟 IP 地址](/best-practises/how-a-virtual-ip-address-works/)可在第 2 层实现负载均衡<br>• 如果服务器连接到远程站点之间不同的 IP 网络，虚拟 IP 地址可以在负载均衡器层面借助 SafeKit 健康检查进行配置。这样您可以实现负载均衡以及 SafeKit 的所有集群功能，特别是对应用服务器上关键应用的监控和自动恢复   
+[统一的高可用性解决方案](/architectures/clustering-software-load-balancing-mirroring/) |  • SafeKit 实现了具有负载均衡和故障转移的集群。同时还实现了 [具有复制和故障转移的镜像集群](/architectures/file-replication-byte-level-with-failover-mirror-cluster/)。<br>• 因此，N 层架构可以使用同一解决方案在 Windows 和 Linux 上实现高可用和负载均衡（相同的安装、配置、管理方式——通过 SafeKit 控制台或命令行界面）。这在市场上是独一无二的<br>• 混合使用不同技术进行负载均衡、复制和故障转移的架构无法做到这一点   
+  
+**总结** ，SafeKit Farm Cluster 提供了一种统一的、基于软件的负载均衡和高可用性方法，大幅降低了复杂性和成本。通过使用标准虚拟 IP 地址将负载均衡和故障转移直接嵌入应用服务器层，避免了对外部网络硬件（负载均衡器或代理）和专用多播配置的需求。这种集成方法，加上其与镜像集群结合实现完整 N 层高可用的能力，使 SafeKit 成为在多样化环境中实现可扩展和弹性应用交付的独特简单而全面的解决方案。 
+
+## VM 高可用性：SafeKit 的无 SAN 与 Hyper-V/VMware HA 比较 {#safe-vmha-diff}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-vm-vs-app-ha-comparison-table-zh-hans  %}}" }}
+ 
+
