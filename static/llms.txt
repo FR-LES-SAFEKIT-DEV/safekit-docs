@@ -6,8 +6,8 @@
 > without shared storage (SAN) or specialized hardware.
 
 - Website: https://safekit-dev.eviden.com
-- Documentation: https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguideen.htm
-- Release Notes: https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.htm
+- Documentation: https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml-github/userguide/safekituserguideen.htm
+- Release Notes: https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekitreleasenoteshtml-github/releasenotes/safekitreleasenotes.htm
 
 ## Home
 
@@ -268,10 +268,10 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 - [SafeKit Support](https://safekit-dev.eviden.com/resources/safekit-support/)
   Topics: Free AI Level 1 Support, Standard Support & Maintenance, Free Certification & Training Program
 
-- [SafeKit User's Guide 8.2](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguideen.htm)
+- [SafeKit User's Guide 8.2](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml-github/userguide/safekituserguideen.htm)
   Topics: Overview and Table of Contents, Ch. 1 – Technical Overview, Ch. 2 – Installation, Ch. 3 – Web Console — Configuration & Monitoring, Ch. 4 – Tests (Installation, Mirror, Farm, Checkers), Ch. 5–6 – Mirror and Farm Module Administration, Ch. 7 – Troubleshooting, Ch. 8–9 – SafeKit Support and CLI, Ch. 10 – Advanced Administration (Environment, Services, Firewall, Security, Web Service, Notifications, SNMP, Logs), Ch. 11 – Securing the Web Service (HTTP/HTTPS, User Authentication), Ch. 12 – Cluster.xml Configuration Reference, Ch. 13 – Userconfig.xml (Heartbeat, Farm Topology, Virtual IP, File Replication, Scripts, Checkers), Ch. 14 – Scripts for Application Module Configuration, Ch. 15 – Configuration Examples, Ch. 16–17 – SafeKit in the Cloud and Third-Party Software
 
-- [SafeKit Release Notes 8.2 (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekit82releasenotes.htm)
+- [SafeKit Release Notes 8.2 (PDF)](https://safekit-dev.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekitreleasenoteshtml-github/releasenotes/safekitreleasenotes.htm)
   Topics: Overview and before starting (supported OS: Windows Server 2019/2022/2025, Windows 11, RHEL 8/9/10, Ubuntu 24.04; Linux packages; minor vs. major upgrade types), Major changes 8.2 — Web Console/Web Service/Logs (new PWA console, browser notifications, state timeline, OpenID auth, log levels, per-script log files), Major changes 8.2 — Replication/Checkers/Module Config (regex ! prefix, anti-ransomware folder, checker action attribute, splitbrain multiple witnesses, time-based attributes), Major changes 8.2 — Templates/Misc/OpenSSL/Apache (Podman template, permanent checker disable, SNMP changes, email agent, OpenSSL table, Apache modules), Major changes in 7.5.x and 7.4 (cloud support, SQLite, Kubernetes template, AWS/Azure/GCP), Restrictions and known problems (antivirus, replication limits, VIP constraints, SK-0071 to SK-0107), Migration instructions (upgrade from 7.4/7.5 to 8.2; minor upgrade 7.5.1 to 7.5.2)
 
 - [SafeKit 8.2 Software Release Bulletin (PDF)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf)

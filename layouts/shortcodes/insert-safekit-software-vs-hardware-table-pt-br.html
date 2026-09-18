@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\pt-br\_index.md */}}
 
- 
+
 
 Escolher a solução de Alta Disponibilidade (High Availability - HA) correta é essencial para garantir a continuidade dos negócios e minimizar o tempo de inatividade. Esta comparação oferece uma análise técnica direta de duas abordagens arquiteturais principais: o clustering via software sem compartilhamento (Shared-Nothing) da SafeKit em contraposição aos métodos tradicionais de HA, que geralmente se baseiam em hardware, discos compartilhados (como uma SAN) e configurações complexas. Essas distinções abrangem a simplicidade de implantação, os métodos de replicação de dados, a velocidade de recuperação (RTO/RPO) e a complexidade operacional. A tabela abaixo detalha as principais diferenças nos tópicos fundamentais de alta disponibilidade.
 
@@ -18,6 +18,6 @@ Tópico | SafeKit (Clustering via software / Abordagem principal) | HA tradicion
 [Replicação de arquivos em nível de byte vs. Replicação de disco em nível de bloco](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/) |  • O SafeKit implementa replicação de arquivos em tempo real em nível de byte e é configurado de forma simples, definindo os diretórios da aplicação a serem replicados, mesmo no disco do sistema.  |  • A replicação de disco em nível de bloco é complexa de configurar e exige a alocação dos dados da aplicação em um disco dedicado.   
 [Heartbeat, Failover e Quorum para evitar 2 nós Masters](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) |  • Para evitar 2 masters (Split-Brain), o SafeKit oferece um verificador simples de split-brain configurado em um roteador.  |  • Para evitar 2 masters, outros clusters exigem uma configuração complexa com uma terceira máquina, um disco de quorum dedicado ou um link de interconexão exclusivo.   
 [Endereço IP Virtual: Primário/Secundário, balanceamento de carga de rede, failover](/best-practises/how-a-virtual-ip-address-works/) |  • Nenhum servidor proxy dedicado ou configuração de rede especial é necessária em um cluster SafeKit para os endereços IP virtuais.  |  • Configurações de rede especiais são necessárias em outros clusters para endereços IP virtuais (nota: o SafeKit oferece um health check adaptado para balanceadores de carga).   
-  
+
 **Em resumo** , a escolha arquitetural entre clustering por software (como o SafeKit) e clustering por hardware (arquiteturas tradicionais com disco compartilhado/SAN) tem um impacto significativo na complexidade da implementação, nos custos operacionais e na eficácia da recuperação após falhas. A principal conclusão desta comparação é a transição para arquiteturas shared-nothing e alta disponibilidade (HA) em nível de aplicação, que priorizam a rápida recuperação das aplicações (baixo RTO) e a flexibilidade de implantação (inclusive entre sites remotos). Isso frequentemente resulta em uma solução mais simples, eficiente e resiliente do que configurações de cluster altamente complexas e dependentes de hardware. Para maximizar a continuidade dos negócios com uma gestão simplificada, é essencial avaliar uma abordagem baseada em software.
 

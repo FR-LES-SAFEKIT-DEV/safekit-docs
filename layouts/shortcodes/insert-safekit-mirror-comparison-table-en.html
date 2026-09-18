@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
 
- 
+
 
 Choosing the right data replication approach is critical for ensuring business continuity. This comparison highlights the key differentiators of SafeKit's mirror cluster with real-time file replication against traditional alternatives such as database-level replication, disk replication, shared disk solutions, and fault-tolerant systems.
 
@@ -22,6 +22,6 @@ Feature | SafeKit advantage | Limitation of alternatives
 [Active/active cluster](/architectures/active-active-cluster-real-time-replication/) | The secondary server is not dedicated. The cluster can run active/active with 2 different mirror modules. | [Fault-tolerant systems](/best-practises/high-availability-cluster-vs-fault-tolerant-system/) dedicate the secondary to execute the same application synchronized at instruction level.  
 [Uniform HA solution](/architectures/clustering-software-load-balancing-mirroring/) | SafeKit implements both mirror cluster (replication + failover) and [farm cluster (load balancing + failover)](/architectures/network-load-balancing-cluster/). A N-tier architecture can be made HA with one solution on Windows and Linux. | Typical architectures mix different technologies for load balancing, replication, and failover — increasing operational complexity.  
 [RTO / RPO](/best-practises/what-is-rpo-and-rto-with-examples/) | Quick application restart in case of failure: around 1 minute or less. Zero data loss (synchronous replication). | [Full VM replication](/best-practises/vm-ha-vs-application-ha/) (VMware HA, Hyper-V cluster) requires rebooting the entire OS on a new hypervisor, resulting in longer recovery times.  
-  
+
 **In summary** , SafeKit's mirror cluster provides a unified, cost-effective high availability solution that combines synchronous file replication, automatic failover and failback, load balancing, and remote site support — all without requiring dedicated hardware, shared storage, or a third quorum server. This simplicity makes it particularly suited for software editors and organizations needing reliable HA on standard Windows and Linux servers.
 

@@ -33,7 +33,7 @@ The solution is described here: **💡[The Simplest Milestone XProtect High Avai
 
 You can implement redundancy of the external SQL Server with 💡 [SafeKit and the sqlserver.safe module](</solutions/sql-server-high-availability-synchronous-replication-failover/>).
 
-In this case on both management nodes, configure the [connection of Milestone Management to SQL](<https://doc.milestonesys.com/en-US/bundle/doc1040_2026r1/page/content/standard_features/sf_mc/sf_maintenance/mc_managingthesqlserver.htm>) with the virtual IP address of the sqlserver.safe module (registry key HKEY_LOCAL_MACHINESOFTWAREVideoOSServerConnectionString).
+In this case on both management nodes, configure the [connection of Milestone Management to SQL](<https://doc.milestonesys.com/en-US/bundle/doc1040_2026r1/page/content/standard_features/sf_mc/sf_maintenance/mc_managingthesqlserver.htm>) with the virtual IP address of the sqlserver.safe module (registry key HKEY_LOCAL_MACHINE > SOFTWARE > VideoOSServerConnectionString).
 
 ℹ️ Note: The Event server can be external to the Management server.
 

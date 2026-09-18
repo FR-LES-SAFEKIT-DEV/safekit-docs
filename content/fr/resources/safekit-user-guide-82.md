@@ -9,10 +9,10 @@ layout: userguide
 
 <div class="userguide-container">
   <div class="index-container">
-    <iframe id="index-frame" name="index" src="/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/indexsafekituserguidefr.htm"></iframe>
+    <iframe id="index-frame" name="index" src="/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml-github/userguide/indexsafekituserguidefr.htm"></iframe>
   </div>
   <div class="doc-container">
-    <iframe id="doc-frame" name="doc" src="/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml/documentation/safekituserguidefr.htm"></iframe>
+    <iframe id="doc-frame" name="doc" src="/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml-github/userguide/safekituserguidefr.htm"></iframe>
   </div>
 </div>
 

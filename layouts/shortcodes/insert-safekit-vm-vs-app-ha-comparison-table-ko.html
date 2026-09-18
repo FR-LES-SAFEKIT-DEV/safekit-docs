@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\ko\_index.md */}}
 
- 
+
 
 고가용성을 구현할 때, **가상 머신(VM) 수준** 에서 보호할지 **애플리케이션 수준** 에서 보호할지가 핵심 결정 사항입니다. VM 수준 HA는 전체 가상 머신을 복제하고 페일오버하여 모든 애플리케이션에 대한 범용 솔루션을 제공합니다. 애플리케이션 수준 HA는 애플리케이션 데이터와 서비스만을 대상으로 하여 더 빠른 복구 시간과 낮은 리소스 사용량을 달성합니다. SafeKit은 **두 가지 접근 방식 모두** 를 유일하게 제공하며, 어느 경우에도 공유 스토리지(SAN)가 필요 없어 인프라와 복구 요구 사항에 가장 적합한 방식을 선택할 수 있습니다.
 
@@ -18,7 +18,7 @@
 구성 | 애플리케이션이 설치된 VM 파일 폴더 위치 정의. 모든 애플리케이션/OS에 대한 범용 솔루션. | 재시작할 서비스, 복제할 애플리케이션 폴더, 페일오버를 위한 가상 IP 주소를 [애플리케이션 모듈](/solutions/)에서 정의. | 시스템 구성에 전문 IT 기술 필요  
 지원 플랫폼 | [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/)와 [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) 지원 (VMware 직접 지원 안 함, VMware 내에서 Hyper-V 또는 KVM 중첩 제외). | 모든 인프라에서 작동: 물리 서버, VMware, Hyper-V, KVM 가상 머신, 클라우드. | VMware vSphere 또는 Microsoft Hyper-V 환경으로 제한  
 IT 기술 | 전문 IT 기술 불필요. 자동 페일오버. | 전문 IT 기술 불필요. 자동 페일오버. | 시스템 구성에 전문 IT 기술 필요  
-  
+
 **요약하면** , SafeKit은 **공유 스토리지 없이 VM 수준과 애플리케이션 수준 고가용성을 모두 제공하는** 유일한 솔루션입니다. 최대 유연성과 가장 빠른 복구 시간(약 1분)을 위해 애플리케이션 수준 HA가 선호되는 접근 방식입니다 — 모든 플랫폼(물리, 가상 또는 클라우드)에서 작동하며 중요한 데이터만 복제합니다. 전체 VM을 보호하는 것이 더 간단한 환경에서는 SafeKit의 Hyper-V/KVM 모듈이 기존 Microsoft Hyper-V 클러스터나 VMware HA에 대한 범용 SAN 불필요 대안을 제공하여 동기식 실시간 복제를 통한 데이터 손실 제로를 보장하면서 공유 스토리지 인프라의 비용과 복잡성을 제거합니다.
 
 SafeKit 솔루션은 구현이 가장 간단하지만 **[수 테라바이트](/ko/#safekit-ha-limitations)의 복제와 [32개 VM](/ko/#safekit-ha-limitations)의 페일오버로 제한**됩니다.

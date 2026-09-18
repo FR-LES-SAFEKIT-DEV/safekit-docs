@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\pt-br\_index.md */}}
 
- 
+
 
 Escolher a abordagem correta de replicação de dados é fundamental para garantir a continuidade dos negócios. Esta comparação destaca os principais diferenciais do cluster espelho SafeKit com replicação de arquivos em tempo real em relação às alternativas tradicionais, como replicação em nível de banco de dados, replicação de disco, soluções de disco compartilhado e sistemas tolerantes a falhas.
 
@@ -22,6 +22,6 @@ Característica | Vantagem SafeKit | Limitação das alternativas
 [Cluster ativo/ativo](/architectures/active-active-cluster-real-time-replication/) | O servidor secundário não é dedicado. O cluster pode operar em modo ativo/ativo com 2 módulos espelho diferentes. | Os [sistemas tolerantes a falhas](/best-practises/high-availability-cluster-vs-fault-tolerant-system/) dedicam o secundário à execução da mesma aplicação sincronizada no nível de instruções.  
 [Solução HA uniforme](/architectures/clustering-software-load-balancing-mirroring/) | O SafeKit implementa tanto o cluster espelho (replicação + failover) quanto o [cluster farm (balanceamento de carga + failover)](/architectures/network-load-balancing-cluster/). Uma arquitetura N-camadas pode ser tornada altamente disponível com uma única solução no Windows e Linux. | Arquiteturas típicas misturam tecnologias diferentes para balanceamento de carga, replicação e failover — aumentando a complexidade operacional.  
 [RTO / RPO](/best-practises/what-is-rpo-and-rto-with-examples/) | Reinício rápido da aplicação em caso de falha: cerca de 1 minuto ou menos. Zero perda de dados (replicação síncrona). | A [replicação completa de VM](/best-practises/vm-ha-vs-application-ha/) (VMware HA, Hyper-V cluster) exige a reinicialização de todo o sistema operacional em um novo hypervisor, resultando em tempos de recuperação mais longos.  
-  
+
 **Em resumo** , o cluster espelho SafeKit oferece uma solução de alta disponibilidade unificada e econômica que combina replicação síncrona de arquivos, failover e failback automáticos, balanceamento de carga e suporte a sites remotos — tudo sem exigir hardware dedicado, armazenamento compartilhado ou um terceiro servidor de quorum. Essa simplicidade o torna particularmente adequado para editores de software e organizações que precisam de HA confiável em servidores Windows e Linux padrão.
 

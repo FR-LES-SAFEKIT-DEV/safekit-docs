@@ -2,7 +2,7 @@
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-kvm.md */}}
 
- 
+
 
 ⚠️ The {{ .Get "app" }} configuration is presented with a virtual machine named `VM1` and containing the application to restart in case of failure.
 
@@ -15,42 +15,42 @@ The VM1 virtual machine image is in the file `/var/lib/libvirt/images/vm1.qcow2`
 On node 1:
 
   * Stop vm1: 
-        
+
         virsh shutdown vm1
 
   * Create a `vm1/` directory: 
-        
+
         mkdir -p /var/lib/libvirt/images/vm1/
 
   * Copy the vm1 image to the new location: 
-        
+
         cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
 
 The original vm1 image can be deleted as soon as tests with the new location are successfull.
   * Edit the vm1 configuration file: 
-        
+
         EDITOR=vi virsh edit vm1
 
 And change the line: 
-        
+
         <source file='/var/lib/libvirt/images/vm1.qcow2'>
 
-  
+
 by : 
-        
+
         <source file='/var/lib/libvirt/images/vm1/vm1.qcow2'>
 
   * Set the [cache option to 'none'](/wp-content/uploads/2022/07/kvm-2.png) in the same file, for data integrity in case of crash: 
-        
+
         <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
 
   * Close the vm1 configuration file
   * Disable [vm1 automatic start](/wp-content/uploads/2022/07/kvm-3.png): 
-        
+
         virsh autostart vm1 --disable
 
   * Create a `vm1.xml` configuration file for vm1: 
-        
+
         virsh dumpxml vm1 > vm1.xml
 
 
@@ -58,15 +58,15 @@ On node 2:
 
   * Copy the `vm1.xml` configuration file from node 1. Note: whenever vm1 configuration is changed on node 1, you must reapply the new configuration on node 2.
   * Create vm1 but do not start it: 
-        
+
         virsh define vm1.xml
 
   * Disable vm1 automatic start: 
-        
+
         virsh autostart vm1 --disable
 
   * Create the directory for the image location: 
-        
+
         mkdir -p /var/lib/libvirt/images/vm1/
 
 
@@ -285,8 +285,8 @@ Only changes inside files are replicated in real time in this state.
 ### 17. Replicating snapshots
 
 The directory that contains the snapshot xml files is:
-    
-    
+
+
     /var/lib/libvirt/qemu/snapshot/%VM_NAME%
 
 where `VM_NAME` is the name of the virtual machine (vm1).
@@ -297,12 +297,12 @@ To replicate it:
 
   * In the module configuration, click on `Advanced Configuration` (see image) to edit `userconfig.xml`.
   * Insert the lines below into the `<rfs>` section of userconfig.xml: 
-        
+
         <replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%" mode="read_only"> </replicated>
 
   * `Save and apply` the new configuration to redeploy the modified userconfig.xml file on both nodes (module must be stopped on both nodes to save and apply).
   * Create snapshots on the PRIM node either through virt-manager or a command line: 
-        
+
         virsh snapshot-create-as vm1 snapshot-name
 
 Note: when creating a snapshot with a command line, you have to refresh the snapshot view into virt-manager.
@@ -311,11 +311,11 @@ Note: when creating a snapshot with a command line, you have to refresh the snap
 Snapshots created on the PRIM node are operationnal on node 2 after failover, but not listed on node 2.
 
   * For importing a snapshot on node 2, you have to run the command: 
-        
+
         virsh snapshot-create --redefine vm1 /var/lib/libvirt/qemu/snapshot/vm1/snapshot-name
 
   * The command line for listing all snapshots of vm1 is: 
-        
+
         virsh snapshot-list vm1
 
 

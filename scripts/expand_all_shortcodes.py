@@ -1,5 +1,6 @@
 import os
 import re
+import shutil
 from datetime import datetime
 from xml.dom import minidom
 from xml.etree import ElementTree as ET
@@ -335,6 +336,52 @@ def generate_sitemap_index(sitemap_urls, output_path):
         f.write(pretty_xml)
 
 
+def copy_documentation_markdown(project_dir, public_dir):
+    """Publish Markdown alternatives for the bundled documentation pages.
+
+    The source markdown files are kept next to the extracted HTML (.htm) files in
+    static/, then expand_all_shortcodes.py copies them into the matching public/
+    index.md pages.
+    """
+    static_dir = Path(project_dir) / "static" / "wp-content" / "uploads" / "downloads_safekit" / "version-82"
+    doc_map = (
+        (
+            static_dir / "safekitreleasenoteshtml-github" / "releasenotes" / "safekit82releasenotes.md",
+            Path(public_dir) / "resources" / "safekit-release-notes-8-2" / "index.md",
+        ),
+        (
+            static_dir / "safekituserguidehtml-github" / "userguide" / "safekituserguideen.md",
+            Path(public_dir) / "resources" / "safekit-user-guide-82" / "index.md",
+        ),
+        (
+            static_dir / "safekituserguidehtml-github" / "userguide" / "safekituserguidefr.md",
+            Path(public_dir) / "fr" / "resources" / "safekit-user-guide-82" / "index.md",
+        ),
+    )
+    for source_path, target_path in doc_map:
+        if not source_path.is_file():
+            if source_path.name == "safekit82releasenotes.md":
+                legacy_candidates = (static_dir / "safekit82releasenotes.md",)
+            elif source_path.name == "safekituserguideen.md":
+                legacy_candidates = (
+                    static_dir / "safekituserguidehtml" / "documentation" / "safekituserguideen.md",
+                )
+            else:
+                legacy_candidates = (
+                    static_dir / "safekituserguidehtml" / "documentation" / "safekituserguidefr.md",
+                )
+            for legacy in legacy_candidates:
+                if legacy.is_file():
+                    source_path = legacy
+                    break
+            else:
+                print(f"[WARN] Markdown source not found: {source_path}")
+                continue
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source_path, target_path)
+        print(f"[DOC] {source_path.name} -> public/{target_path.relative_to(public_dir)}")
+
+
 def process_content_directory():
     if os.path.exists(os.path.join(BASE_DIR, "safekit-hugo")):
         project_dir = os.path.join(BASE_DIR, "safekit-hugo")
@@ -381,6 +428,8 @@ def process_content_directory():
 
                 topics_note = f"{h2_count} H2 trouvés" if h2_count else "aucun H2"
                 print(f"[OK] ({lang}) public/{output_rel_path} ({topics_note})")
+
+    copy_documentation_markdown(project_dir, public_dir)
 
     # Génération dynamique des sitemaps par langue
     index_sitemap_urls = []

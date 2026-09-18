@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\shared-nothing-architecture-vs-shared-disk-architecture.md */}}
 
- 
+
 
 Choosing the right high availability architecture is critical for balancing cost, complexity, and reliability. The two main approaches — **shared nothing** and **shared disk** — differ fundamentally in how they handle data redundancy and failover. A shared nothing architecture like SafeKit replicates data between independent servers with their own local storage, while a shared disk architecture relies on a centralized storage bay (SAN) accessed by multiple servers. The following table compares these two approaches across key criteria.
 
@@ -16,7 +16,7 @@ Failover | Just restart the application on the second server. | Switch the share
 Disaster recovery | Just place the 2 servers in 2 remote sites connected by an extended LAN. | Extra cost with a second bay of disks. Requires specific IT skills to configure mirroring of bays across a SAN.  
 Quorum and split brain | Application runs on a single server after network isolation (split brain). Data coherency is guaranteed. No need for a third machine, quorum disk, or special heartbeat line. [More on heartbeat, failover and quorum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Requires a special quorum disk or a third quorum server to avoid data corruption on split brain.  
 Best suited for | [Software editors wanting to add a simple HA option to their application](/use-cases/application-clustering-software/) | Enterprises with IT skills in clustering and large database applications  
-  
+
 **In summary** , the shared nothing architecture, as implemented by SafeKit, wins on **simplicity** , **cost** , and **deployment speed**. It requires no extra hardware, no specialized IT skills, and no changes to the application's data organization. Failover is straightforward, disaster recovery is built-in, and split brain is handled without additional infrastructure.
 
 The shared disk architecture remains relevant for large enterprises with existing SAN infrastructure and dedicated IT teams managing very large databases. However, for most application high availability needs — especially for software editors, OT/edge environments, and distributed sites — shared nothing with SafeKit is the simpler, more cost-effective choice.

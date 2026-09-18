@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
 
- 
+
 
 Choosing the right High Availability (HA) solution is critical for ensuring business continuity and minimizing downtime. This comparison provides a direct, technical review of two major architectural approaches: SafeKit's software-defined, shared-nothing clustering versus Traditional HA methods that typically rely on hardware, shared disks (like a SAN), and complex configurations. These distinctions cover deployment simplicity, data replication methods, recovery speed (RTO/RPO), and operational complexity. The table below details the core differences across key high availability topics.
 
@@ -18,6 +18,6 @@ Topic | SafeKit (Software Clustering / Primary Approach) | Traditional HA / Hard
 [Byte-level File Replication vs. Block-level Disk Replication](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/) |  • SafeKit implements real-time byte-level file replication and is simply configured with application directories to replicate even in the system disk  |  • Block-level disk replication is complex to configure and requires to put application data in a special disk   
 [Heartbeat, Failover, and Quorum to Avoid 2 Master Nodes](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) |  • To avoid 2 masters, SafeKit proposes a simple split brain checker configured on a router  |  • To avoid 2 masters, other clusters require a complex configuration with a third machine, a special quorum disk, a special interconnect   
 [Virtual IP Address: Primary/Secondary, Network Load Balancing, Failover](/best-practises/how-a-virtual-ip-address-works/) |  • No dedicated proxy servers and no special network configuration are required in a SafeKit cluster for virtual IP addresses  |  • Special network configuration is required in other clusters for virtual IP addresses. Note that SafeKit offers a health check adapted to load balancers   
-  
+
 **In summary** , the architectural choice between software clustering (like SafeKit) and hardware clustering (traditional shared-disk/SAN) significantly impacts deployment complexity, operational costs, and recovery effectiveness. The key takeaway from this comparison is the shift toward shared-nothing, application-level HA which prioritizes rapid application recovery (low RTO) and deployment flexibility (even across remote sites), often resulting in a more streamlined and resilient solution than highly complex, hardware-dependent cluster configurations. For maximum business continuity with simplified management, evaluating a software-based approach is essential.
 

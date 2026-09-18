@@ -2,7 +2,7 @@
 {{/* Parameters: app, guide, img */}}
 {{/* Source: content\fr\architectures\file-replication-byte-level-with-failover-mirror-cluster.md */}}
 
- 
+
 
 ## Fonctionnement du cluster miroir SANless SafeKit avec {{ .Get "app" }} {#safekit-hyperv-tco}
 
@@ -107,7 +107,7 @@ SafeKit propose également des **clusters de type "Farm"** avec des fonctionnali
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-fr app=%q  %%}}" (.Get "app")) }}
- 
+
 
 ## Comparaison : SafeKit pour {{ .Get "app" }} vs Autres Solutions de Clustering {#safekit-mirror-ha-comparison}
 
@@ -120,12 +120,12 @@ Type de Réplication | Synchrone (RPO Zéro) | Synchrone (via SAN) | Dépend des
 Logique de Basculement / Retour de Ressource | Entièrement Automatique | Entièrement Automatique | Souvent Manuelle ou Complexe  
 Dépendance AD/LDAP | Indépendant (Pas d'AD requis) | Requis sur Windows (Active Directory) | Indépendant  
 Complexité du Déploiement | Faible (< 30 Minutes) | Élevée (AD, Stockage, Quorum) | Moyenne (Réplication Uniquement, Pas de Basculement)  
-  
+
 **Pour résumé** , en éliminant le besoin d'un SAN et en simplifiant le déploiement — en supprimant les dépendances telles qu'**Active Directory** et les configurations de **Quorum** spécialisées — SafeKit offre une alternative HA légère et indépendante du matériel. Cela se traduit par un TCO considérablement réduit tout en garantissant que votre environnement {{ .Get "app" }} reste résilient, avec une perte de données nulle et une reprise automatisée.
 
 ## Guide vidéo : Configuration d'un cluster miroir HA SafeKit {#videoguide-safekit-mirror-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-mirror-video-fr  %}}" }}
- 
+
 

@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\pt-pt\_index.md */}}
 
- 
+
 
 ## Limitações de Alta Disponibilidade do SafeKit {#safekit-ha-limitations}
 
@@ -12,4 +12,4 @@ Tamanho da replicação: Alguns TBs |  Tempo de ressincronização após uma fal
 Quantidade de ficheiros: < 1 000 000 de ficheiros |  • Desempenho do tempo de ressincronização após uma falha ([passo 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).<br>• Tempo necessário para verificar cada ficheiro entre ambos os nós.  |  • Colocar os múltiplos ficheiros a replicar dentro de um disco rígido virtual / máquina virtual.<br>• Neste caso, apenas os ficheiros que representam o disco rígido virtual / máquina virtual serão replicados e ressincronizados.   
 Capacidade de failover: ≤ 32 VMs |  • Cada VM é executada num módulo espelho (mirror module) independente.<br>• Máximo de 32 módulos espelho a funcionar no mesmo cluster.  |  • Usar armazenamento partilhado externo e outra solução de cluster de VM (mais dispendioso, mais complexo).   
 Arquitetura de rede: Rede LAN/VLAN entre sites remotos |  • Failover automático do [endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/) com 2 nós na mesma sub-rede.<br>• Boa largura de banda para ressincronização ([passo 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) e baixa latência para [replicação síncrona](/best-practises/synchronous-replication-vs-asynchronous-replication/) (tipicamente um tempo de ida e volta inferior a 2 ms).  |  • Usar um [equilibrador de carga para o endereço IP virtual](/best-practises/how-a-virtual-ip-address-works/) se os 2 nós estiverem em 2 sub-redes diferentes (suportado pelo SafeKit, especialmente na nuvem).<br>• Usar soluções de cópia de segurança com replicação assíncrona para redes com elevada latência.   
-  
+

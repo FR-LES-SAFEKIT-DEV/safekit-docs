@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\zh-hans\_index.md */}}
 
- 
+
 
 在实施高可用性时，一个关键决策是在**虚拟机（VM）级别** 还是在**应用级别** 进行保护。VM级别HA复制并故障转移整个虚拟机，为任何应用提供通用解决方案。应用级别HA仅针对应用数据和服务，从而实现更快的恢复时间和更低的资源使用。SafeKit独特地提供**两种方式** ——在两种情况下均无需共享存储（SAN）——让您可以选择最适合基础设施和恢复需求的方案。
 
@@ -18,7 +18,7 @@
 配置 | 定义安装应用的VM文件夹位置。适用于任何应用/操作系统的通用解决方案。 | 定义要重启的服务、要复制的应用文件夹，以及 [应用模块](/solutions/)中用于故障转移的虚拟IP地址。 | 需要专业IT技能来配置系统  
 支持的平台 | 支持 [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/)和 [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)（不直接支持VMware，除非在VMware中嵌套Hyper-V或KVM）。 | 适用于任何基础设施：物理服务器、VMware、Hyper-V、KVM虚拟机、云。 | 仅限于VMware vSphere或Microsoft Hyper-V环境  
 IT技能 | 无需专业IT技能。自动故障转移。 | 无需专业IT技能。自动故障转移。 | 需要专业IT技能来配置系统  
-  
+
 **总结** ，SafeKit是唯一同时提供**VM级别和应用级别高可用且无需共享存储** 的解决方案。为获得最大灵活性和最快恢复时间（约1分钟），应用级别HA是首选方式——它适用于任何平台（物理、虚拟或云），且仅复制重要数据。对于保护整个VM更简单的环境，SafeKit的Hyper-V/KVM模块提供了传统Microsoft Hyper-V集群或VMware HA的通用无SAN替代方案——消除了共享存储基础设施的成本和复杂性，同时通过同步实时复制保证零数据丢失。
 
 请注意，SafeKit解决方案是最易实施的，但**限于复制 [几个TB的数据](/zh-hans/#safekit-ha-limitations)和故障转移 [32个VM](/zh-hans/#safekit-ha-limitations)**。

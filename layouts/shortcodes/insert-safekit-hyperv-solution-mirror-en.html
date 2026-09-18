@@ -2,7 +2,7 @@
 {{/* Parameters: app */}}
 {{/* Source: content\solutions\siemens-desigo-cc-redundancy-high-availability-cluster-active-active.md */}}
 
- 
+
 
 ## SafeKit for {{ .Get "app" }}: 2-Node SANless Hyper-V Cluster {#safekit-hyperv-tco}
 
@@ -183,7 +183,7 @@ Note that if you deploy several VMs for replication and failover, you will have 
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
- 
+
 
 ## Comparison: SafeKit for {{ .Get "app" }} vs. Native Hyper-V Clustering {#safekit-hyperv-ha-comparison}
 
@@ -195,12 +195,12 @@ Replication Type | Synchronous (Zero RPO) | Synchronous (via SAN) | Asynchronous
 Quorum Requirement | None (Built-in Checker) | 3rd Node / Cloud Witness | None  
 AD Dependency | Independent | Required (Active Directory) | Independent  
 Deployment Complexity | Low (< 30 Minutes) | High (AD, Storage, Quorum) | Medium  
-  
+
 **In summary** , by eliminating the need for a SAN and simplifying the setup—removing dependencies like **Active Directory** and specialized **Quorum** configurations—SafeKit provides a lean, hardware-agnostic alternative. This results in a significantly lower TCO while ensuring that your {{ .Get "app" }} environment remains resilient with zero data loss and automated recovery.
 
 ## Video Guide: Configuring a SafeKit HA cluster for {{ .Get "app" }} {#videoguide-safekit-hyperv-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-hyperv-video-en  %}}" }}
- 
+
 

@@ -2,7 +2,7 @@
 {{/* Parameters: app, guide, img */}}
 {{/* Source: content\solutions\aws-high-availability-cluster-synchronous-replication-failover.md */}}
 
- 
+
 
 ## SafeKit Shared-Nothing HA in {{ .Get "app" }}: Eliminate Shared Disks with Zero Data Loss {#cloud-ha-limitation}
 
@@ -105,11 +105,11 @@ SafeKit also provides **Farm Clusters** with native **Network Load Balancing and
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-en app=%q  %%}}" (.Get "app")) }}
- 
+
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
- 
+
 
 ## Comparison: SafeKit for {{ .Get "app" }} vs. Native Cloud HA/DR Solutions {#safekit-mirror-ha-comparison}
 
@@ -122,7 +122,7 @@ Application Setup | Zero Reconfiguration: Protects applications where they are c
 Replication Scope | Complete: Application data folders (DB + Config + Logs). | Partial: Only data stored on the shared volume. | Total: Replicates the entire virtual machine.  
 VM Localization | Native Multi-AZ: Synchronous replication across Availability Zones within a region. | Provider Dependent: Requires shared storage replicated across Availability Zones. | Regional: Primarily designed for replication between distant geographical regions.  
 Deployment Time | Low: < 30 Minutes (On-prem or Cloud). | High: Days or weeks for cluster configuration. | Medium: Requires setting up DR vaults and policies.  
-  
+
 ### Is High Availability a substitute for Native Cloud VM Replication for DR (Disaster Recovery)? {#ha-vs-backup-ransomware}
 
 **No** , High Availability and backups are complementary, not interchangeable. While **SafeKit** ensures **business continuity** by keeping applications running during a hardware crash, it does not guard against logical errors, accidental deletions, or ransomware attacks. For example, because real-time replication mirrors every change instantly, a ransomware attack on the primary node will be immediately duplicated on the secondary node. To recover from such cyber threats or accidental deletions, you need a dedicated **backup solution** with a robust retention policy. This allows you to "rewind" your environment to a healthy state from before the corruption occurred.
@@ -144,5 +144,4 @@ In this video, discover how SafeKit implements a **mirror HA cluster** without t
   3. 🎬 [Start and test SQL replication, migration, failover on crash](https://youtu.be/mGwEguDnnH0?t=270s) (4:17)
 
 
-&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 

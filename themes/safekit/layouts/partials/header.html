@@ -21,7 +21,7 @@
                 {{ if eq $sectionName "use-cases" }}
                 {{ with $enSite.GetPage "/use-cases" }}
                 <div class="dropdown">
-                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "use-cases" }} active{{ end }}">Use Cases ▾</a>
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "use-cases" }} active{{ end }}">Use Cases</a><button class="dropdown-expand" type="button" aria-label="Show Use Cases submenu" aria-expanded="false">+</button>
                     <div class="mega-panel">
                         <div class="mega-columns">
                             <div class="mega-column">
@@ -74,7 +74,7 @@
                 {{ else if eq $sectionName "solutions" }}
                 {{ with $enSite.GetPage "/solutions" }}
                 <div class="dropdown">
-                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "solutions" }} active{{ end }}">Solutions ▾</a>
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "solutions" }} active{{ end }}">Solutions</a><button class="dropdown-expand" type="button" aria-label="Show Solutions submenu" aria-expanded="false">+</button>
                     <div class="mega-panel">
                         <div class="mega-columns mega-columns-6">
                             <div class="mega-column">
@@ -233,7 +233,7 @@
                 {{ else if eq $sectionName "architectures" }}
                 {{ with $enSite.GetPage "/architectures" }}
                 <div class="dropdown">
-                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "architectures" }} active{{ end }}">Architectures ▾</a>
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "architectures" }} active{{ end }}">Architectures</a><button class="dropdown-expand" type="button" aria-label="Show Architectures submenu" aria-expanded="false">+</button>
                     <div class="mega-panel">
                         <div class="mega-columns">
                             <div class="mega-column">
@@ -267,7 +267,7 @@
                 {{ else if eq $sectionName "quick-install" }}
                 {{ with $enSite.GetPage "/quick-install" }}
                 <div class="dropdown">
-                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "quick-install" }} active{{ end }}">Quick Install ▾</a>
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "quick-install" }} active{{ end }}">Quick Install</a><button class="dropdown-expand" type="button" aria-label="Show Quick Install submenu" aria-expanded="false">+</button>
                     <div class="mega-panel">
                         <div class="mega-columns mega-columns-6">
                             <div class="mega-column">
@@ -381,7 +381,7 @@
                 {{ else if eq $sectionName "best-practises" }}
                 {{ with $enSite.GetPage "/best-practises" }}
                 <div class="dropdown">
-                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "best-practises" }} active{{ end }}">Best Practices ▾</a>
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "best-practises" }} active{{ end }}">Best Practices</a><button class="dropdown-expand" type="button" aria-label="Show Best Practices submenu" aria-expanded="false">+</button>
                     <div class="mega-panel">
                         <div class="mega-columns">
                             <div class="mega-column">
@@ -454,7 +454,7 @@
                 {{ else if eq $sectionName "resources" }}
                 {{ with $enSite.GetPage "/resources" }}
                 <div class="dropdown">
-                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "resources" }} active{{ end }}">Resources ▾</a>
+                    <a href="{{ .RelPermalink }}" class="dropdown-toggle{{ if eq $currentSection "resources" }} active{{ end }}">Resources</a><button class="dropdown-expand" type="button" aria-label="Show Resources submenu" aria-expanded="false">+</button>
                     <div class="mega-panel">
                         <div class="mega-columns">
                             <div class="mega-column">

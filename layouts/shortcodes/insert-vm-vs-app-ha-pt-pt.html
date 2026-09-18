@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\pt-pt\_index.md */}}
 
- 
+
 
 ## Escolher a sua estratégia de Alta Disponibilidade: HA de VM vs. HA de Aplicação {#safekit-ha-redundancy-choices}
 
@@ -19,4 +19,4 @@ Instalação | A aplicação é instalada uma vez numa única VM. | A aplicaçã
 Configuração | Solução genérica para qualquer aplicação/SO em execução na VM. <br>• Não requer conhecimento técnico da aplicação instalada na VM.<br>• É a melhor solução se não souber como a aplicação funciona.<br>• Basta definir a localização dos ficheiros da VM.  | Requer conhecimento técnico da própria aplicação. <br>• Quais os serviços que precisam de ser reiniciados.<br>• As pastas específicas da aplicação que necessitam de replicação em tempo real.<br>• A configuração de um endereço IP virtual para failover.   
 Compatibilidade de Plataforma | Funciona com Windows/Hyper-V e Linux/KVM, mas não é compatível com VMware. | Independente da plataforma; funciona com máquinas físicas ou virtuais, infraestrutura cloud e qualquer hipervisor, incluindo VMware.  
 Ideal Para | Ideal para gerir ambientes complexos com múltiplas aplicações distribuídas por várias VMs através de uma única política de HA. | Ideal para integrar a alta disponibilidade diretamente numa solução de software, independentemente do hardware ou hipervisor subjacente.  
-  
+

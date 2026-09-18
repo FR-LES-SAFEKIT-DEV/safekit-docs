@@ -2,7 +2,7 @@
 {{/* Parameters: app, guide, img */}}
 {{/* Source: content\fr\architectures\network-load-balancing-cluster.md */}}
 
- 
+
 
 ## Le cluster SafeKit Farm : NLB 100 % logiciel et basculement automatique pour {{ .Get "app" }}
 
@@ -84,7 +84,7 @@ SafeKit est une solution de haute disponibilité polyvalente, **à la fois pour 
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-fr app=%q  %%}}" (.Get "app")) }}
- 
+
 
 ## Comparatif : Cluster SafeKit Farm pour {{ .Get "app" }} vs autres solutions de clustering NLB {#safekit-farm-ha-comparison}
 
@@ -96,7 +96,7 @@ Surveillance de l'état (Health) | Contrôleurs applicatifs (Checkers) : Surveil
 Autocorrection (Self-Healing) | Intelligence de redémarrage intégrée : Redémarre automatiquement les services défaillants au niveau local. | Basculement passif : Arrête simplement d'envoyer du trafic vers le nœud défaillant.  
 Infrastructure | Agnostique : Fonctionne sur des instances physiques, virtuelles (VMware, Hyper-V) ou Cloud. | Rigide : Nécessite un câblage physique spécifique et de l'espace en baie réseau.  
 Coût (TCO) | Faible CAPEX/OPEX : Utilise les ressources des serveurs existants ; aucune maintenance matérielle coûteuse. | Investissement élevé : Coûts initiaux importants plus frais récurrents de licence et d'énergie.  
-  
+
 ### Conclusion : Une approche plus intelligente de la répartition de charge réseau et de la haute disponibilité
 
 Le **cluster SafeKit Farm** représente une évolution stratégique, passant d'un réseau traditionnel lourd en matériel à un modèle moderne de **haute disponibilité logicielle (software-defined)**. En intégrant la répartition de charge et l'intelligence d'autocorrection directement dans les serveurs applicatifs, SafeKit élimine le coût et la complexité des équipements matériels intermédiaires externes.
@@ -105,5 +105,5 @@ Le **cluster SafeKit Farm** représente une évolution stratégique, passant d'u
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-farm-video-fr  %}}" }}
- 
+
 

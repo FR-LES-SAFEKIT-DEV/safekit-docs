@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\pt-br\_index.md */}}
 
- 
+
 
 Ao implementar alta disponibilidade, uma decisão fundamental é proteger no nível da **máquina virtual (VM)** ou no nível da **aplicação**. A HA de nível VM replica e faz failover de máquinas virtuais inteiras, fornecendo uma solução genérica para qualquer aplicação. A HA de nível aplicação visa apenas os dados e serviços da aplicação, resultando em tempos de recuperação mais rápidos e menor uso de recursos. O SafeKit oferece de forma única **ambas as abordagens** — sem exigir armazenamento compartilhado (SAN) em nenhum dos casos — permitindo escolher a melhor opção para sua infraestrutura e requisitos de recuperação.
 
@@ -18,7 +18,7 @@ Recuperação de desastres / Sites remotos | Sem necessidade de SAN — replica�
 Configuração | Definir a localização da pasta de arquivos da VM onde a aplicação está instalada. Solução genérica para qualquer aplicação/SO. | Definir serviços a reiniciar, pastas da aplicação a replicar e um endereço IP virtual para failover em um [módulo de aplicação](/solutions/). | Habilidades de TI específicas necessárias para configurar o sistema  
 Plataformas suportadas | Funciona com [Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/) e [KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) (não VMware diretamente, exceto aninhando Hyper-V ou KVM dentro do VMware). | Funciona em qualquer infraestrutura: servidores físicos, máquinas virtuais VMware, Hyper-V, KVM, nuvem. | Limitado a ambientes VMware vSphere ou Microsoft Hyper-V  
 Habilidades de TI | Nenhuma habilidade de TI específica necessária. Failover automático. | Nenhuma habilidade de TI específica necessária. Failover automático. | Habilidades de TI específicas necessárias para configurar o sistema  
-  
+
 **Em resumo** , o SafeKit é a única solução que oferece **alta disponibilidade tanto no nível de VM quanto no nível de aplicação sem armazenamento compartilhado**. Para máxima flexibilidade e tempos de recuperação mais rápidos (cerca de 1 minuto), a HA de nível aplicação é a abordagem preferida — funciona em qualquer plataforma (física, virtual ou nuvem) e replica apenas os dados importantes. Para ambientes onde proteger a VM inteira é mais simples, o módulo Hyper-V/KVM do SafeKit oferece uma alternativa genérica sem SAN ao tradicional Microsoft Hyper-V Cluster ou VMware HA — eliminando o custo e a complexidade da infraestrutura de armazenamento compartilhado enquanto garante zero perda de dados através de replicação síncrona em tempo real.
 
 Note que as soluções SafeKit são as mais simples de implementar, mas são **limitadas à replicação de [alguns terabytes](/pt-br/#safekit-ha-limitations) e ao failover de [32 VMs](/pt-br/#safekit-ha-limitations)**.

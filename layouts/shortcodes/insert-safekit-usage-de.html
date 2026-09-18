@@ -2,7 +2,7 @@
 {{/* Parameters: none */}}
 {{/* Source: content\de\_index.md */}}
 
- 
+
 
 ## SafeKit High Availability Einschränkungen {#safekit-ha-limitations}
 
@@ -12,4 +12,4 @@ Replikationsgröße: Einige TBs |  Resynchronisationszeit nach einem Ausfall ([S
 Anzahl der Dateien: < 1.000.000 Dateien |  • Leistung der Resynchronisationszeit nach einem Ausfall ([Schritt 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)).<br>• Zeit zur Überprüfung jeder Datei zwischen beiden Knoten.  |  • Legen Sie die vielen zu replizierenden Dateien in eine virtuelle Festplatte / virtuelle Maschine.<br>• In diesem Fall werden nur die Dateien repliziert und resynchronisiert, die die virtuelle Festplatte / virtuelle Maschine repräsentieren.   
 Failover-Kapazität: ≤ 32 VMs |  • Jede VM läuft in einem unabhängigen Mirror-Modul.<br>• Maximal 32 Mirror-Module, die auf demselben Cluster laufen.  |  • Verwendung eines externen Shared Storage und einer anderen VM-Cluster-Lösung (teurer, komplexer).   
 Netzwerkarchitektur: LAN/VLAN-Netzwerk zwischen entfernten Standorten |  • Automatisches Failover der [virtuellen IP-Adresse](/best-practises/how-a-virtual-ip-address-works/) mit 2 Knoten im selben Subnetz.<br>• Gute Bandbreite für die Resynchronisation ([Schritt 3](/architectures/file-replication-byte-level-with-failover-mirror-cluster/#safekit-mirror-cluster)) und geringe Latenz für die [synchrone Replikation](/best-practises/synchronous-replication-vs-asynchronous-replication/) (typischerweise eine Paketlaufzeit von weniger als 2 ms).  |  • Verwendung eines [Load Balancers für die virtuelle IP-Adresse](/best-practises/how-a-virtual-ip-address-works/), wenn sich die 2 Knoten in 2 Subnetzen befinden (von SafeKit unterstützt, insbesondere in der Cloud).<br>• Verwendung von Backup-Lösungen mit asynchroner Replikation für Netzwerke mit hoher Latenz.   
-  
+

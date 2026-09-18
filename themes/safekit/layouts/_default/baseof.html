@@ -35,9 +35,11 @@
     </script>
     {{ end }}
 </head>
-<body>
+<body{{ if eq .Layout "userguide" }} class="userguide-page"{{ end }}>
     {{ partial "header.html" . }}
+    {{ if ne .Layout "userguide" }}
     {{ partial "breadcrumb.html" . }}
+    {{ end }}
     <main>
         {{ block "main" . }}{{ end }}
     </main>
@@ -48,6 +50,94 @@
     </a>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    var stickyHeader = document.querySelector('header');
+    function updateStickyHeaderHeight() {
+        document.documentElement.style.setProperty('--sticky-header-height', (stickyHeader ? stickyHeader.offsetHeight : 0) + 'px');
+    }
+    updateStickyHeaderHeight();
+    if (stickyHeader && 'ResizeObserver' in window) {
+        new ResizeObserver(updateStickyHeaderHeight).observe(stickyHeader);
+    }
+
+    document.querySelectorAll('.dropdown-expand').forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+            var navMenu = this.closest('.nav-menu');
+            if (!navMenu || getComputedStyle(navMenu).display === 'none') return;
+            event.preventDefault();
+            var dropdown = this.closest('.dropdown');
+            var isOpen = dropdown.classList.contains('mobile-open');
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                dropdown.style.setProperty('--mega-panel-top', dropdown.querySelector('.dropdown-toggle').getBoundingClientRect().bottom + 'px');
+                dropdown.classList.add('mobile-open');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            var touchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+            var navMenu = this.closest('.nav-menu');
+            var navMenuVisible = navMenu && getComputedStyle(navMenu).display !== 'none';
+            var hamburgerOpen = document.getElementById('nav-toggle')?.checked;
+            var dropdown = this.closest('.dropdown');
+
+            if (!touchDevice || !navMenuVisible || hamburgerOpen || dropdown.classList.contains('mobile-open')) return;
+
+            event.preventDefault();
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            dropdown.style.setProperty('--mega-panel-top', this.getBoundingClientRect().bottom + 'px');
+            dropdown.classList.add('mobile-open');
+            dropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'true');
+        });
+    });
+
+    document.querySelectorAll('.mega-panel').forEach(function(panel) {
+        panel.addEventListener('wheel', function(event) {
+            if (this.closest('.nav-menu') && this.scrollHeight > this.clientHeight) {
+                event.stopPropagation();
+            }
+        }, { passive: true });
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+        var activeElement = document.activeElement;
+        var navMenu = activeElement && activeElement.closest('.nav-menu');
+        var openDropdown = navMenu && navMenu.querySelector('.dropdown.mobile-open');
+        var panel = openDropdown && openDropdown.querySelector('.mega-panel');
+        if (!panel || panel.scrollHeight <= panel.clientHeight) return;
+
+        event.preventDefault();
+        panel.scrollBy({
+            top: event.key === 'ArrowDown' ? 48 : -48,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelectorAll('.lang-current').forEach(function(current) {
+        current.addEventListener('click', function(event) {
+            event.preventDefault();
+            var switcher = this.closest('.lang-switch');
+            switcher.classList.toggle('open');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.lang-switch')) {
+            document.querySelectorAll('.lang-switch.open').forEach(function(switcher) {
+                switcher.classList.remove('open');
+            });
+        }
+    });
+
     // Sidebar section toggle
     document.querySelectorAll('.sidebar-toggle:not(.no-collapse)').forEach(function(h3) {
         h3.addEventListener('click', function() {

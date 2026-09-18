@@ -6,7 +6,7 @@ Website: https://safekit-dev.eviden.com/
 
 ## Local development
 
-Install Hugo Extended `0.128.0`, then run from the repository root:
+Install Hugo Extended `0.165.0`, then run from the repository root:
 
 ```powershell
 hugo server --disableFastRender
