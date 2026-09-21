@@ -1,5 +1,5 @@
 ---
-title: "Oracle High Availability with SafeKit: Install the oracle.safe Module for Failover - SafeKit HA"
+title: "Oracle High Availability with SafeKit: Install the oracle.safe Module for Failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "Deploy the oracle.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Oracle on Windows and Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"

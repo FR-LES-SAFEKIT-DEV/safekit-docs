@@ -1,5 +1,5 @@
 ---
-title: "SafeKit：オールインワンの SANレス高可用性（HA）＆ アプリケーション・クラスタリング・ソフトウェア - SafeKit HA"
+title: "SafeKit：オールインワンの SANレス高可用性（HA）＆ アプリケーション・クラスタリング・ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/"
 description: "SafeKitは、WindowsおよびLinuxに対応したオールインワンのSANレス高可用性（HA）ソフトウェアです。リアルタイムの同期レプリケーション、自動フェイルオーバー、ロードバランシングを、シンプルでコスト効率の高い1つのパッケージで提供します。まずは30日間の無料トライアルをお試しください。"
 category: "home"

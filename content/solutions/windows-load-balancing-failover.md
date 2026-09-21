@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: All-in-One Windows Load Balancing & High Availability Software - SafeKit HA"
+title: "SafeKit: All-in-One Windows Load Balancing & High Availability Software"
 canonical: "https://safekit.eviden.com/solutions/windows-load-balancing-failover/"
 description: "SafeKit provides a powerful, software-only Windows load balancing and high availability solution. Replace complex NLB hardware with SafeKit’s integrated virtual IP, application monitoring, and automatic failover. Easily deploy a SafeKit cluster on standard Windows servers today."
 category: "solutions"

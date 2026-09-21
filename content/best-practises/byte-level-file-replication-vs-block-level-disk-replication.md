@@ -1,5 +1,5 @@
 ---
-title: "Byte-Level File Replication vs. Block-Level Disk Replication for HA - SafeKit HA"
+title: "Byte-Level File Replication vs. Block-Level Disk Replication for HA"
 canonical: "https://safekit.eviden.com/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Compare byte-level file replication vs. block-level disk replication. Learn why SafeKit proposes a SANless architecture that replicates only modified data within files, ensuring zero data loss (RPO 0), faster recovery (RTO), and simple configuration on Windows and Linux."
 category: "best-practises"

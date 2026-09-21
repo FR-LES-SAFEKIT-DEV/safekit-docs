@@ -1,5 +1,5 @@
 ---
-title: "Upgrading an Application Protected by SafeKit in an HA Cluster - SafeKit HA"
+title: "Upgrading an Application Protected by SafeKit in an HA Cluster"
 canonical: "https://safekit.eviden.com/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
 description: "Learn how to safely upgrade applications protected by SafeKit. Compare minor and major upgrades, rolling upgrades, rollback strategies, and VM-based high availability."
 category: "best-practises"

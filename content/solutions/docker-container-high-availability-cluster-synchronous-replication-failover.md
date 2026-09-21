@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Docker High Availability & Real-Time Data Replication Software - SafeKit HA"
+title: "SafeKit: Docker High Availability & Real-Time Data Replication Software"
 canonical: "https://safekit.eviden.com/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit provides a robust Docker high availability solution with integrated synchronous data replication. Implement a stateful container cluster with automatic failover and zero data loss on standard Linux servers. No SAN or shared storage required. Deploy in minutes."
 category: "solutions"

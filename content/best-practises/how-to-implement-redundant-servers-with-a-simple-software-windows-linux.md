@@ -1,5 +1,5 @@
 ---
-title: "How to Implement Redundant Servers with Simple HA Software - SafeKit HA"
+title: "How to Implement Redundant Servers with Simple HA Software"
 canonical: "https://safekit.eviden.com/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "Learn how to implement redundant servers with a simple software-only approach. SafeKit proposes a SANless architecture for Windows and Linux, providing real-time data replication and automatic failover without shared disks or specialized IT skills."
 category: "best-practises"

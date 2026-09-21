@@ -1,5 +1,5 @@
 ---
-title: "High Availability and Redundancy for Building Management Systems (BMS) - SafeKit HA"
+title: "High Availability and Redundancy for Building Management Systems (BMS)"
 canonical: "https://safekit.eviden.com/use-cases/building-management-system-software-bms-redundancy/"
 description: "Ensure 100% uptime for your smart building with SafeKit. Our SANless, 2-node redundancy software provides real-time synchronous replication and automatic failover for any BMS, including Siemens, Honeywell, Schneider Electric, and Johnson Controls. Achieve zero data loss (RPO=0) and operational resilience for critical HVAC and security systems on Windows and Linux."
 category: "use-cases"

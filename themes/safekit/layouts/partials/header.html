@@ -462,7 +462,9 @@
                                 {{ with $enSite.GetPage "/resources/safekit-free-trial" }}
                                 <a href="{{ .RelPermalink }}">SafeKit free trial</a>
                                 {{ end }}
-                                <a href="https://safekit.eviden.com/resources/safekit-free-trial-licence-key-high-availability/">One-month license key</a>
+                                {{ with $enSite.GetPage "/resources/high-availability-and-load-balancing-cluster-key" }}
+                                <a href="{{ .RelPermalink }}">One-month license key</a>
+                                {{ end }}
                                 {{ with $enSite.GetPage "/resources/high-availability-solutions-ha-solutions-videos" }}
                                 <a href="{{ .RelPermalink }}">Demonstrations</a>
                                 {{ end }}

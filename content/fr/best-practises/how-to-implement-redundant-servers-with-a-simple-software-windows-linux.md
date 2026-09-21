@@ -1,5 +1,5 @@
 ---
-title: "Comment implémenter des serveurs redondants avec un logiciel de haute disponibilité simple - SafeKit HA"
+title: "Comment implémenter des serveurs redondants avec un logiciel de haute disponibilité simple"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
 description: "Découvrez comment implémenter des serveurs redondants grâce à une solution logicielle simple. SafeKit propose une architecture sans SAN pour Windows et Linux, assurant la réplication des données en temps réel et le basculement automatique sans disques partagés ni compétences informatiques spécialisées."
 category: "best-practises"

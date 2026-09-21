@@ -1,5 +1,5 @@
 ---
-title: "Cas d'usage de haute disponibilité par secteur d'activité - SafeKit HA"
+title: "Cas d'usage de haute disponibilité par secteur d'activité"
 canonical: "https://safekit.eviden.com/fr/use-cases/"
 description: "Découvrez comment SafeKit offre une haute disponibilité simple et sans SAN pour les secteurs critiques : logiciels OEM, sites distants (edge), VMS, EACS, SCADA, GTB/GTC, contrôle aérien et réseaux métropolitains."
 category: "use-cases"

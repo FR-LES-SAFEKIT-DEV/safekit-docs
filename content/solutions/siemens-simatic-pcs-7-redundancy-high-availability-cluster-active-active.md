@@ -1,5 +1,5 @@
 ---
-title: "High Availability for Siemens SIMATIC PCS 7: 2-Node SANless Cluster - SafeKit HA"
+title: "High Availability for Siemens SIMATIC PCS 7: 2-Node SANless Cluster"
 canonical: "https://safekit.eviden.com/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
 description: "Implement high availability for Siemens SIMATIC PCS 7 without a SAN. SafeKit HA provides synchronous replication, 2-node failover, and zero data loss."
 category: "solutions"

@@ -1,5 +1,5 @@
 ---
-title: "HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy - SafeKit HA"
+title: "HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy"
 canonical: "https://safekit.eviden.com/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
 description: "Compare HA clusters vs. fault tolerant systems. Learn how SafeKit proposes a SANless software HA cluster that protects against both hardware and software failures. Reduce costs by eliminating specialized FT hardware while ensuring zero data loss (RPO 0)."
 category: "best-practises"

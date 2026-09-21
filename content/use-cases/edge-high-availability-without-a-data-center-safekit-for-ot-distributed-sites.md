@@ -1,5 +1,5 @@
 ---
-title: "Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites - SafeKit HA"
+title: "Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites"
 canonical: "https://safekit.eviden.com/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
 description: "Edge sites have no data center — but still need HA. SafeKit turns 2 standard servers into a plug-and-play HA cluster: no SAN, no IT staff, automatic failover."
 category: "use-cases"

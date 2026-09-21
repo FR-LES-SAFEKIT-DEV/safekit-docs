@@ -1,5 +1,5 @@
 ---
-title: "How a Virtual IP Address (VIP) Works in High Availability Clustering? - SafeKit HA"
+title: "How a Virtual IP Address (VIP) Works in High Availability Clustering?"
 canonical: "https://safekit.eviden.com/best-practises/how-a-virtual-ip-address-works/"
 description: "Discover how SafeKit uses software-defined Virtual IP (VIP) addresses to ensure 24/7 uptime. Learn about automated failover via Gratuitous ARP and why it outperforms DNS redirection for business continuity on Windows and Linux."
 category: "best-practises"

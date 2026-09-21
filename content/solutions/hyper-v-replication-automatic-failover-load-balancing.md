@@ -1,5 +1,5 @@
 ---
-title: "Simple Hyper-V High Availability Without Shared Storage (SAN) - SafeKit HA"
+title: "Simple Hyper-V High Availability Without Shared Storage (SAN)"
 canonical: "https://safekit.eviden.com/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "Achieve Hyper-V HA without a SAN. SafeKit offers real-time replication & automatic failover for 2-node clusters. Download your free trial now."
 category: "solutions"

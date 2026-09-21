@@ -1,5 +1,5 @@
 ---
-title: "Référence technique de haute disponibilité pour la préparation des RFI et RFP - SafeKit HA"
+title: "Référence technique de haute disponibilité pour la préparation des RFI et RFP"
 canonical: "https://safekit.eviden.com/fr/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
 description: "Référence technique pour la préparation de RFI et RFP en haute disponibilité et clustering applicatif, basée sur SafeKit."
 category: "resources"

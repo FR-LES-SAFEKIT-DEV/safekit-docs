@@ -1,5 +1,5 @@
 ---
-title: "Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ? - SafeKit HA"
+title: "Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ?"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-a-virtual-ip-address-works/"
 description: "Découvrez comment SafeKit utilise des adresses IP virtuelles (VIP) définies par logiciel pour garantir une disponibilité 24 h/24 et 7 j/7. Apprenez-en davantage sur le basculement automatique via ARP gratuit et découvrez pourquoi cette solution est plus performante que la redirection DNS pour assurer la continuité d'activité sous Windows et Linux."
 category: "best-practises"

@@ -1,5 +1,5 @@
 ---
-title: "Heartbeat, Failover and Quorum in Windows and Linux Clusters - SafeKit HA"
+title: "Heartbeat, Failover and Quorum in Windows and Linux Clusters"
 canonical: "https://safekit.eviden.com/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
 description: "Learn how heartbeats, failover, and quorum work in a cluster. SafeKit proposes a SANless architecture that eliminates the need for a third quorum server or special quorum disk. Achieve high availability on Windows and Linux with a simple split-brain checker."
 category: "best-practises"

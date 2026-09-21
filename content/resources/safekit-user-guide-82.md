@@ -1,5 +1,5 @@
 ---
-title: "SafeKit User's Guide 8.2 - SafeKit HA"
+title: "SafeKit User's Guide 8.2"
 canonical: "https://safekit.eviden.com/resources/safekit-user-guide-82/"
 description: "This document covers all the phases of the SafeKit implementation: architecture, installation, tests, administration & troubleshooting, support, and command line interface."
 category: "resources"

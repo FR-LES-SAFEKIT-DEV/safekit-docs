@@ -1,5 +1,5 @@
 ---
-title: "Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA - SafeKit HA"
+title: "Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
 description: "Comparez les architectures « sans partage » et « avec partage de disque » pour une haute disponibilité. Découvrez comment SafeKit utilise une approche sans partage pour éliminer les coûts SAN, simplifier le basculement et assurer une réplication synchrone sans contraintes matérielles complexes."
 category: "best-practises"

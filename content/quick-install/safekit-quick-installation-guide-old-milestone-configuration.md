@@ -1,5 +1,5 @@
 ---
-title: "Old SafeKit Milestone Configuration - SafeKit HA"
+title: "Old SafeKit Milestone Configuration"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
 lang: "en"

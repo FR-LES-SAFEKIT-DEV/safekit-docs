@@ -1,5 +1,5 @@
 ---
-title: "Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité - SafeKit HA"
+title: "Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité"
 canonical: "https://safekit.eviden.com/fr/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
 description: "Comparez la réplication de fichiers au niveau octet et la réplication de disque au niveau bloc. Découvrez pourquoi SafeKit propose une architecture sans SAN qui réplique uniquement les données modifiées au sein des fichiers, garantissant ainsi l'absence de perte de données (RPO 0), une récupération plus rapide (RTO) et une configuration simplifiée sous Windows et Linux."
 category: "best-practises"

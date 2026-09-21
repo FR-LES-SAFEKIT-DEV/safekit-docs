@@ -1,5 +1,5 @@
 ---
-title: "SafeKit: Podman High Availability & Real-Time Data Replication Software - SafeKit HA"
+title: "SafeKit: Podman High Availability & Real-Time Data Replication Software"
 canonical: "https://safekit.eviden.com/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "SafeKit provides a robust Podman high availability solution with integrated synchronous data replication. Implement a stateful container cluster with automatic failover and zero data loss on standard Linux servers. No SAN or shared storage required. Deploy in minutes."
 category: "solutions"

@@ -1,5 +1,5 @@
 ---
-title: "High Availability Architectures: Mirror, Farm, and Advanced Software Clustering - SafeKit HA"
+title: "High Availability Architectures: Mirror, Farm, and Advanced Software Clustering"
 canonical: "https://safekit.eviden.com/architectures/"
 description: "Explore high availability architectures with SafeKit. Learn about Mirror, Farm, and Farm+Mirror clusters for SANless application failover and load balancing."
 category: "architectures"

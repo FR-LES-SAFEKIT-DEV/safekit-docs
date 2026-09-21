@@ -1,5 +1,5 @@
 ---
-title: "Que sont les RPO et les RTO ? Définitions, exemples et stratégies HA - SafeKit HA"
+title: "Que sont les RPO et les RTO ? Définitions, exemples et stratégies HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/what-is-rpo-and-rto-with-examples/"
 description: "Apprenez les définitions de RPO (Objectif de point de récupération) et de RTO (Objectif de temps de récupération) à l'aide d'exemples concrets. Découvrez comment SafeKit garantit l'absence de perte de données (RPO=0) et un basculement rapide pour assurer la continuité de votre activité 24h/24 et 7j/7."
 category: "best-practises"

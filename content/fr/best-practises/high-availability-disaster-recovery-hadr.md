@@ -1,5 +1,5 @@
 ---
-title: "Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre - SafeKit HA"
+title: "Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-disaster-recovery-hadr/"
 description: "Élaborez une stratégie de haute disponibilité et de reprise après sinistre (HA/DR) robuste en combinant SafeKit pour la réplication synchrone (RPO=0) avec une sauvegarde asynchrone pour la reprise après sinistre hors site. Garantissez la disponibilité des applications et l'intégrité des données 24h/24 et 7j/7 sous Windows et Linux grâce à cette approche à deux niveaux."
 category: "best-practises"

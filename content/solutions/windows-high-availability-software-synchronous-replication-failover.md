@@ -1,5 +1,5 @@
 ---
-title: "The Simplest Windows High Availability: 2-Node Synchronous Replication & Failover - SafeKit HA"
+title: "The Simplest Windows High Availability: 2-Node Synchronous Replication & Failover"
 canonical: "https://safekit.eviden.com/solutions/windows-high-availability-software-synchronous-replication-failover/"
 description: "The simplest way to implement Windows High Availability. SafeKit provides a 2-node SANless cluster with synchronous replication and automatic failover—no AD or specialized skills required."
 category: "solutions"

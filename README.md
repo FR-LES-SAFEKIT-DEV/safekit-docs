@@ -14,7 +14,7 @@ hugo server --disableFastRender
 
 Open http://localhost:1313/ in a browser.
 
-To generate the complete Markdown files in `public/`, run the exporter after the Hugo build:
+To generate the complete Markdown files in `public/` and `resources`, run the exporter after the Hugo build:
 
 ```powershell
 python scripts/expand_all_shortcodes.py
