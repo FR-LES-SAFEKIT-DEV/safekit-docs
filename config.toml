@@ -1,10 +1,10 @@
 # Hugo configuration for SafeKit site
-baseURL = "https://safekit-dev.eviden.com/"
+baseURL = "https://safekit.eviden.com/"
 relativeURLs = true
 locale = "en"
 title = "SafeKit - High Availability Software"
 theme = "safekit"
-googleAnalytics = "G-DDCJJTPNYV"
+googleAnalytics = "G-QFF93L1P94"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -147,7 +147,7 @@ disableKinds = ["taxonomy", "term"]
         languages = ["nl"]
 
 [params]
-  sitemapBaseURL = "https://safekit-dev.eviden.com/"
+  sitemapBaseURL = "https://safekit.eviden.com/"
 
 [outputs]
   home = ["HTML"]

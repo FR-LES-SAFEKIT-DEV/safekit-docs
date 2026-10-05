@@ -3,11 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{ if eq .Kind "404" }}
+        {{/* GitHub Pages serves 404.html at the missing URL (e.g. /abc), so
+            relative links need the site's root as their base. Keep the current
+            hostname: the same build can run on dev and production domains. */}}
+        <script>document.write('<base href="' + location.origin + '{{ strings.TrimSuffix "404.html" (urls.Parse .Permalink).Path }}">');</script>
+        <meta name="robots" content="noindex">
+        {{ end }}
     <title>{{ .Title }} - SafeKit</title>
     {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     <link rel="icon" href="{{ "wp-content/themes/safekit/computer-safekit-icon-svg.svg" | relURL }}" type="image/svg+xml">
     {{ with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ end }}
-    <link rel="alternate" type="text/markdown" href="index.md">
+    {{ if ne .Kind "404" }}<link rel="alternate" type="text/markdown" href="index.md">{{ end }}
 
 {{ $css := resources.Get "css/style.css" | resources.Minify }}
 <style>{{ $css.Content | safeCSS }}</style>

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/resources/high-availability-and-load-bala
 description: "Request your SafeKit cluster key for a one-month trial on Windows and Linux. SafeKit proposes a SANless architecture for simple, all-in-one high availability and application clustering without a SAN."
 category: "resources"
 lang: "en"
-topics: "Receive a free SafeKit one-month license key by e-mail for Windows or Linux, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Receive a free SafeKit one-month license key by email for Windows or Linux, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit Cluster Key: One-Month Trial for Windows and Linux High Availability
@@ -25,6 +25,7 @@ Once you receive the `license.txt` file by email, copy it to the following locat
   <div class="safekit-trial-key-fields">
     <input id="trial-key-email" name="Email" type="email" autocomplete="email" required placeholder="name@example.com">
     <div class="g-recaptcha safekit-trial-key-captcha" data-sitekey="6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R"></div>
+    <p class="safekit-trial-key-privacy">Your privacy is important to us. By submitting this form, you accept the terms in our <a href="https://eviden.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>. Please read it to understand how we ensure your rights are upheld.</p>
     <button type="submit">Get a free trial key</button>
   </div>
   <p id="safekit-trial-key-captcha-error" class="safekit-trial-key-error" hidden>Please confirm that you are not a robot.</p>
@@ -83,6 +84,11 @@ Once you receive the `license.txt` file by email, copy it to the following locat
 
   .safekit-trial-key-captcha {
     flex: 0 0 304px;
+  }
+
+  .safekit-trial-key-privacy {
+    flex: 1 0 100%;
+    margin: 0;
   }
 
   .safekit-trial-key-error {

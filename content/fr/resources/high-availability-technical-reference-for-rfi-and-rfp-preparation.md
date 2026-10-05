@@ -37,7 +37,7 @@ Nom du produit | SafeKit
 Éditeur | Eviden (une entité d'Atos), anciennement Evidian  
 Catégorie de produit | Logiciel de clustering d'applications / Haute disponibilité / Plan de reprise d'activité (PRA)  
 Version actuelle | SafeKit 8.2  
-Site web | [https://safekit.eviden.com](<>)  
+Site web | <https://safekit.eviden.com>  
 Première version | 2000 (plus de 20 ans d'existence en production)  
   
 ## Systèmes d'exploitation et plateformes pris en charge {#supported-operating-systems-platforms}
@@ -249,14 +249,14 @@ _* Sous Linux, il ne faut pas moins de 6 projets open-source distincts — Coros
 
 Ressource | URL  
 ---|---  
-Page d'accueil du produit | [https://safekit.eviden.com](<>)  
+Page d'accueil du produit | <https://safekit.eviden.com>  
 Présentation technique (DOCX avec texte et diagrammes) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-fr.docx](</wp-content/uploads/documents/safekit-technical-overview-fr.docx>)  
 Essai gratuit | [https://safekit.eviden.com/resources/safekit-free-trial/](</resources/safekit-free-trial/>)  
-Demander un devis | <https://safekit.eviden.com/get-a-quote-safekit/>  
+Demander un devis | [https://safekit.eviden.com/safekit-pricing/](</safekit-pricing/>)  
 Portail de support | <https://customercare.evidian.com>  
 Support IA gratuit | [https://safekit.eviden.com/resources/safekit-support/](</resources/safekit-support/>)  
-Formation et certification gratuites | 🎓 <https://training.my.evidian.com/mod/page/view.php?id=712>  
-Nous contacter | <https://safekit.eviden.com/contact-us-for-safekit/>  
+Formation et certification gratuites | 🎓 [https://safekit.eviden.com/resources/safekit-on-line-training/](</resources/safekit-on-line-training/>)  
+Nous contacter | [https://safekit.eviden.com/contact-us-for-safekit/](</contact-us-for-safekit/>)  
   
 
 {{%  insert-safekit-4-buttons-fr  %}}

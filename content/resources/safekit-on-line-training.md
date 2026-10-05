@@ -16,6 +16,7 @@ topics: "How to Access the Training Platform?, Get SafeKit 8 Training Materials,
 The SafeKit on-line training is a self-paced, comprehensive resource designed to help you master high availability and application clustering. You can access the platform through the following steps:
 
   * Navigate to the **👉 🎓[SafeKit On-line Training Platform](<https://training.my.evidian.com/mod/page/view.php?id=712>)**. This serves as your central hub for all learning modules and the free certification program.
+  * **Get your credentials:** If you do not already have an account, click **Contact** in the top menu of the training platform to request your login credentials.
   * The platform is organized into thematic sections, including: 
     * **Architecture & Introduction:** Understand mirror and farm cluster concepts.
     * **Demonstrations:** Access video-based scenarios for SQL Server, Hyper-V, and Apache load balancing.
@@ -30,7 +31,7 @@ The SafeKit on-line training is a self-paced, comprehensive resource designed to
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-### Chapters
+#### Chapters
 
   1. 🎬 [The Training and Certification Platform](<https://youtu.be/ijH4zXtn_3s?t=0s>) (1:41)
   2. 🎬 [What is a SafeKit Training Module?](<https://youtu.be/ijH4zXtn_3s?t=101s>) (1:57)

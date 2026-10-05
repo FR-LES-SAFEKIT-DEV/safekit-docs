@@ -122,6 +122,8 @@ If the {{ .Get "app" }} Heartbeat Service does not respond to the message (VM lo
 
 ℹ️ It’s the same when you want to restore a checkpoint. {{ .Get "app" }} will stop the VM to perform the operation, and the VM checker may react negatively by automatically restarting the VM. To avoid this, [suspend the checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) before proceeding with the operation.
 
+ℹ️ By default, the custom checker allows 50 seconds for the VM to boot before considering it unavailable. If your {{ .Get "app" }} VM requires more time to start, you can increase this delay by adding -InitialGrace to the vmcheck.ps1 custom checker in userconfig.xml. The value is expressed in 5-second increments. For example, -InitialGrace 20 allows a 100-second grace period: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+
 
 ![Enter the {{ .Get "app" }} custom checker parameters](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
 

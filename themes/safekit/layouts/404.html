@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="not-found" aria-labelledby="not-found-title">
+    <p class="not-found-code" aria-hidden="true">404</p>
+    <h1 id="not-found-title">Page not found</h1>
+    <p>The page you're looking for may have moved or no longer exists.</p>
+    <a class="not-found-home" href="{{ .Site.Home.RelPermalink }}">Back to SafeKit home</a>
+</section>
+{{ end }}

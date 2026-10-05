@@ -50,7 +50,7 @@ SafeKit offers a free online certification and training program covering high av
   * 12 videos (~3h40min) covering introduction, demonstrations, installation, advanced configuration and troubleshooting
 
 
-[ Free training and certification  ](<https://training.my.evidian.com/mod/page/view.php?id=712>)
+[ Free training and certification  ](</resources/safekit-on-line-training/>)
 
 
 {{%  insert-safekit-hub-en  %}}

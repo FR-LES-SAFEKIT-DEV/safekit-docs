@@ -1,7 +1,6 @@
 import os
 import re
 import shutil
-from datetime import datetime
 from xml.dom import minidom
 from xml.etree import ElementTree as ET
 import sys
@@ -31,7 +30,17 @@ if BASE_DIR is None:
     print(f"Searched candidates relative to: {SCRIPT_DIR}", file=sys.stderr)
     sys.exit(1)
     
-BASE_URL = "https://safekit-dev.eviden.com"
+def read_public_base_url(project_dir):
+    """Use the public URL configured for Hugo, not the WordPress source URL."""
+    config_path = project_dir / "config.toml"
+    config = config_path.read_text(encoding="utf-8")
+    match = re.search(r'^baseURL\s*=\s*["\'](https?://[^"\']+)["\']', config, re.MULTILINE)
+    if not match:
+        raise ValueError(f"No valid baseURL in {config_path}")
+    return match.group(1).rstrip("/")
+
+
+BASE_URL = read_public_base_url(BASE_DIR)
 
 # Shortcodes à ignorer et supprimer complètement (ainsi que leurs H2)
 EXCLUDED_SHORTCODES = ("insert-safekit-4-buttons", "insert-safekit-hub")
@@ -240,7 +249,7 @@ def rebuild_topics_from_h2(md_content, filename=""):
 
 
 def fix_links(md_content):
-    """Transforme [texte](/chemin/) en [texte](https://safekit-dev.eviden.com/chemin/)"""
+    """Transforme les liens relatifs Markdown vers l'URL publique configurée."""
     def replace_link(match):
         prefix = match.group(1)
         wrapper = match.group(2)
@@ -296,14 +305,11 @@ def expand_file(input_file, output_file, shortcodes_dir):
 
 def generate_language_sitemap(urls, output_path):
     urlset = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
-    today = datetime.now().strftime("%Y-%m-%d")
 
     for url in sorted(urls):
         url_elem = ET.SubElement(urlset, "url")
         loc = ET.SubElement(url_elem, "loc")
         loc.text = url
-        lastmod = ET.SubElement(url_elem, "lastmod")
-        lastmod.text = today
 
     xml_str = ET.tostring(urlset, encoding="utf-8")
     parsed_xml = minidom.parseString(xml_str)
@@ -318,14 +324,11 @@ def generate_sitemap_index(sitemap_urls, output_path):
     sitemapindex = ET.Element(
         "sitemapindex", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     )
-    today = datetime.now().strftime("%Y-%m-%d")
 
     for sitemap_url in sorted(sitemap_urls):
         sitemap_elem = ET.SubElement(sitemapindex, "sitemap")
         loc = ET.SubElement(sitemap_elem, "loc")
         loc.text = sitemap_url
-        lastmod = ET.SubElement(sitemap_elem, "lastmod")
-        lastmod.text = today
 
     xml_str = ET.tostring(sitemapindex, encoding="utf-8")
     parsed_xml = minidom.parseString(xml_str)
