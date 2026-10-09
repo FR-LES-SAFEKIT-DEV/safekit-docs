@@ -218,9 +218,9 @@ See how SafeKit handles a critical failure. This video demonstrates **synchronou
 
 #### Chapters
 
-  1. 🎬 [2 nodes with SQL Server](<https://youtu.be/mGwEguDnnH0?t=0s>) (0:32)
-  2. 🎬 [Configure the cluster and the mirror.safe module](<https://youtu.be/mGwEguDnnH0?t=32s>) (3:58)
-  3. 🎬 [Start and test SQL replication, migration, failover on crash](<https://youtu.be/mGwEguDnnH0?t=270s>) (4:17)
+  1. 🎬 [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
+  2. 🎬 [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  3. 🎬 [Start and test SQL replication, migration, failover on crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
 [Free trial here](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
@@ -232,9 +232,9 @@ Watch how SafeKit manages an Apache web farm to provide both performance scaling
 
 #### Chapters
 
-  1. 🎬 [2 nodes with Apache](<https://youtu.be/1Ww2-cXHNx4?t=0s>) (0:13)
-  2. 🎬 [Configure the cluster and the farm.safe module](<https://youtu.be/1Ww2-cXHNx4?t=13s>) (2:20)
-  3. 🎬 [Start and test network load balancing, failover on crash](<https://youtu.be/1Ww2-cXHNx4?t=153s>) (2:30)
+  1. 🎬 [2 nodes with Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
+  2. 🎬 [Configure the cluster and the farm.safe module](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  3. 🎬 [Start and test network load balancing, failover on crash](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
 
 [Free trial here](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 

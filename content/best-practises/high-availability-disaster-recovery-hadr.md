@@ -129,10 +129,10 @@ Learn how to combine **High Availability (HA)** and **Disaster Recovery (DR)** i
 
 ### Video Highlights
 
-  1. 🎬 [Introduction to SafeKit HADR over Stretched VLANs](<https://youtu.be/g5zcTjiY7T4?t=0s>) (1:06)
-  2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://youtu.be/g5zcTjiY7T4?t=65s>)
-  3. 🎬 [Failover Mechanics: Gratuitous ARP (GARP) & Virtual IP](<https://youtu.be/g5zcTjiY7T4?t=166s>) (2:10)
-  4. 🎬 [Designing for Slow WAN: HA vs. Backup Strategies](<https://youtu.be/g5zcTjiY7T4?t=296s>) (2:45)
+  1. 🎬 [Introduction to SafeKit HADR over Stretched VLANs](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s>) (1:06)
+  2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>)
+  3. 🎬 [Failover Mechanics: Gratuitous ARP (GARP) & Virtual IP](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s>) (2:10)
+  4. 🎬 [Designing for Slow WAN: HA vs. Backup Strategies](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s>) (2:45)
 
 
 ### SafeKit Video: How to implement High Availability and Disaster Recovery (HADR) with SafeKit (7:40)

@@ -25,7 +25,7 @@ Once you receive the `license.txt` file by email, copy it to the following locat
   <div class="safekit-trial-key-fields">
     <input id="trial-key-email" name="Email" type="email" autocomplete="email" required placeholder="name@example.com">
     <div class="g-recaptcha safekit-trial-key-captcha" data-sitekey="6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R"></div>
-    <p class="safekit-trial-key-privacy">Your privacy is important to us. By submitting this form, you accept the terms in our <a href="https://eviden.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>. Please read it to understand how we ensure your rights are upheld.</p>
+    <p class="safekit-trial-key-privacy">Your privacy is important to us. By submitting this form, you accept the terms in our <a href="https://eviden.com/en/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>. Please read it to understand how we ensure your rights are upheld.</p>
     <button type="submit">Get a free trial key</button>
   </div>
   <p id="safekit-trial-key-captcha-error" class="safekit-trial-key-error" hidden>Please confirm that you are not a robot.</p>

@@ -217,9 +217,9 @@ Découvrez comment SafeKit gère une panne critique. Cette vidéo démontre la *
 
 #### Chapitres
 
-  1. 🎬 [Configuration à 2 nœuds avec SQL Server](<https://youtu.be/mGwEguDnnH0?t=0s>) (0:32)
-  2. 🎬 [Configurer le cluster et le module mirror.safe](<https://youtu.be/mGwEguDnnH0?t=32s>) (3:58)
-  3. 🎬 [Démarrage et test de la réplication SQL, migration et failover sur crash](<https://youtu.be/mGwEguDnnH0?t=270s>) (4:17)
+  1. 🎬 [Configuration à 2 nœuds avec SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
+  2. 🎬 [Configurer le cluster et le module mirror.safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  3. 🎬 [Démarrage et test de la réplication SQL, migration et failover sur crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
 [Essai gratuit ici](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
@@ -231,9 +231,9 @@ Découvrez comment SafeKit gère une ferme web Apache pour offrir à la fois une
 
 #### Chapitres
 
-  1. 🎬 [Configuration à 2 nœuds avec Apache](<https://youtu.be/1Ww2-cXHNx4?t=0s>) (0:13)
-  2. 🎬 [Configurer le cluster et le module farm.safe](<https://youtu.be/1Ww2-cXHNx4?t=13s>) (2:20)
-  3. 🎬 [Démarrage et test de l'équilibrage de charge réseau, failover sur crash](<https://youtu.be/1Ww2-cXHNx4?t=153s>) (2:30)
+  1. 🎬 [Configuration à 2 nœuds avec Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
+  2. 🎬 [Configurer le cluster et le module farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  3. 🎬 [Démarrage et test de l'équilibrage de charge réseau, failover sur crash](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
 
 [Essai gratuit ici](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 

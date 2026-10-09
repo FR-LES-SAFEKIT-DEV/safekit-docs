@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/safekit-pricing/"
 description: "Understand the SafeKit licensing model and request a tailored quote for high availability, replication, failover and load balancing on Windows and Linux."
 category: "home"
 lang: "en"
-topics: "Licensing model and pricing, Standard support and maintenance, Information to include in your quote request"
+topics: "Licensing model and pricing, Standard support and maintenance, Request a quote"
 ---
 
 # How SafeKit pricing works

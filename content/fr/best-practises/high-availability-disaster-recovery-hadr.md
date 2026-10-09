@@ -128,10 +128,10 @@ Découvrez comment combiner la **Haute Disponibilité (HA)** et la **Reprise d'A
 
 ### Points clés de la vidéo
 
-  1. 🎬 [Présentation de l'architecture : HADR SafeKit sur VLAN étendu](<https://youtu.be/3zwEWDCiojQ?t=0s>) (0:56)
-  2. 🎬 [Comprendre le mirroring synchrone et le double acquittement](<https://youtu.be/3zwEWDCiojQ?t=56s>) (1:26)
-  3. 🎬 [Mécanismes de basculement : Gratuitous ARP (GARP) et IP virtuelle](<https://youtu.be/3zwEWDCiojQ?t=142s>) (1:53)
-  4. 🎬 [Conception pour WAN lent : Stratégies HA vs Sauvegarde](<https://youtu.be/3zwEWDCiojQ?t=255s>) (2:27)
+  1. 🎬 [Présentation de l'architecture : HADR SafeKit sur VLAN étendu](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=0s>) (0:56)
+  2. 🎬 [Comprendre le mirroring synchrone et le double acquittement](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=56s>) (1:26)
+  3. 🎬 [Mécanismes de basculement : Gratuitous ARP (GARP) et IP virtuelle](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=142s>) (1:53)
+  4. 🎬 [Conception pour WAN lent : Stratégies HA vs Sauvegarde](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=255s>) (2:27)
 
 
 ### Vidéo SafeKit : Comment mettre en œuvre la haute disponibilité et la reprise après sinistre (HADR) avec SafeKit (7:40)

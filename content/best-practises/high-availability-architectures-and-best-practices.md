@@ -23,7 +23,7 @@ The following comparative tables explain in detail the SafeKit high availability
 
 ### What are the high availability architectures?
 
-There are two types of [high availability](<https://www.techtarget.com/searchdatacenter/definition/high-availability>) architectures: those for backend applications such as databases and those for frontend applications such as web services.
+There are two types of [high availability](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) architectures: those for backend applications such as databases and those for frontend applications such as web services.
 
 High availability architectures for backend are based on 2 servers sharing or replicating data with an automatic application failover in the event of hardware of software failures.
 

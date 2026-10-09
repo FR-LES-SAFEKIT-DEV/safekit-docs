@@ -207,9 +207,9 @@ While this video demonstrates SafeKit's high availability for Microsoft SQL Serv
 
 ### Video Highlights
 
-  1. 🎬 [2 nodes with SQL Server](<https://youtu.be/mGwEguDnnH0?t=0s>) (0:32)
-  2. 🎬 [Configure the cluster and the mirror.safe module](<https://youtu.be/mGwEguDnnH0?t=32s>) (3:58)
-  3. 🎬 [Start and test SQL replication, migration, failover on crash](<https://youtu.be/mGwEguDnnH0?t=270s>) (4:17)
+  1. 🎬 [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
+  2. 🎬 [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  3. 🎬 [Start and test SQL replication, migration, failover on crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 

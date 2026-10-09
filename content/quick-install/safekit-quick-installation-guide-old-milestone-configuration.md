@@ -99,7 +99,7 @@ If SQL is on the management server:
 
   * The [SQL system databases](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases>) (like master.mdf and mastlog.ldf) must be located in the same directories on both nodes. The directories must be configured as replicated.
   * SQL must be also installed at the same location in the file system on both nodes because the read-only [SQL resource database](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database>) is located in the binary and is required for the failover. This database does not need to be replicated.
-  * The SQL Milestone databases (.mdf and .ldf) must be located in the same directories on both nodes. The directories must be configured as replicated. Milestone databases are as follows according this [article](<https://doc.milestonesys.com/en-US/bundle/doc1040_2026r1/page/content/standard_features/sf_mc/sf_maintenance/mc_managingthesqlserver.htm>).
+  * The SQL Milestone databases (.mdf and .ldf) must be located in the same directories on both nodes. The directories must be configured as replicated. Milestone databases are as follows according this [article](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>).
 
 
 ![Warning](/wp-content/uploads/2022/07/warning-small.png)

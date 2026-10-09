@@ -23,7 +23,7 @@ Les tableaux comparatifs suivants détaillent l'architecture de haute disponibil
 
 ### Quelles sont les architectures de haute disponibilité ?
 
-Il existe deux types d'[architectures de haute disponibilité](<https://www.techtarget.com/searchdatacenter/definition/high-availability>) : celles pour les applications backend telles que les bases de données et celles pour les applications frontend telles que les services Web.
+Il existe deux types d'[architectures de haute disponibilité](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) : celles pour les applications backend telles que les bases de données et celles pour les applications frontend telles que les services Web.
 
 Les architectures de haute disponibilité pour les backends sont basées sur 2 serveurs partageant ou répliquant des données avec un basculement automatique des applications en cas de pannes matérielles ou logicielles.
 
