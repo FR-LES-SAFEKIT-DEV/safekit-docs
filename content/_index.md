@@ -11,7 +11,7 @@ topics: "What is SafeKit?, 🔍 SafeKit High Availability Navigation Hub, Why Ch
 
 ## What is SafeKit?
 
-**SafeKit** is an **all-in-one high availability software** solution that ensures 100% application uptime by combining real-time **host-based replication** , automatic **failover** , and **load balancing** into a single package.
+**SafeKit** is an **all-in-one high availability software** solution that ensures 100% application uptime by combining real-time **host-based replication** , automatic **failover** , and **load balancing** into a **single package**.
 
 By synchronizing data between standard servers, **SafeKit** eliminates the need for expensive shared storage (SAN) or specialized IT skills, providing a simple, cost-effective way to protect **enterprise databases** (like SQL Server), **critical security systems** (like Milestone XProtect Video Management Software), and **SCADA industrial control software** (like Siemens applications) across both Windows and Linux environments.
 
