@@ -15,7 +15,7 @@ sitemap:
     <p>Testez l'accès à <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a> pour vérifier si ce formulaire fonctionne dans votre environnement.</p>
   </div>
 
-  <form class="contact-safekit-form" action="https://formsubmit.co/bruno.rochat@eviden.com" method="POST">
+  <form class="contact-safekit-form" action="https://formsubmit.co/92abf949923221a3abedf567f2e9248a" method="POST">
     <input type="hidden" name="_subject" value="[safekit.eviden.com] CONTACT_FR / SafeKit High Availability">
     <input type="hidden" name="_next" value="https://safekit.eviden.com/fr/confirmation-safekit/">
     <input type="hidden" name="_template" value="table">
