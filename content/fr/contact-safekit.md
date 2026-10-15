@@ -18,7 +18,7 @@ sitemap:
   <form class="contact-safekit-form" action="https://formsubmit.co/92abf949923221a3abedf567f2e9248a" method="POST">
     <input type="hidden" name="_subject" value="[safekit.eviden.com] CONTACT_FR / SafeKit High Availability">
     <input type="hidden" name="_next" value="https://safekit.eviden.com/fr/confirmation-safekit/">
-    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_template" value="basic">
     <input type="hidden" name="_captcha" value="true">
     <div class="contact-safekit-honeypot" aria-hidden="true">
       <label for="contact-safekit-website">Laissez ce champ vide</label>
