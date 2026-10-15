@@ -44,6 +44,12 @@ BASE_URL = read_public_base_url(BASE_DIR)
 
 # Shortcodes à ignorer et supprimer complètement (ainsi que leurs H2)
 EXCLUDED_SHORTCODES = ("insert-safekit-4-buttons", "insert-safekit-hub")
+EXCLUDED_MARKDOWN_PAGES = {
+    "contact-safekit.md",
+    "confirmation-safekit.md",
+    "fr/contact-safekit.md",
+    "fr/confirmation-safekit.md",
+}
 
 # Pattern générique pour capturer les codes langues (ex: -fr, .en, _zh-hans)
 # en excluant explicitement "-ha"
@@ -407,6 +413,13 @@ def process_content_directory():
             if file.endswith(".md"):
                 input_file = os.path.join(root, file)
                 rel_path = os.path.relpath(input_file, content_dir)
+
+                if Path(rel_path).as_posix() in EXCLUDED_MARKDOWN_PAGES:
+                    stale_output = Path(public_dir) / Path(rel_path).with_suffix("") / "index.md"
+                    if stale_output.exists():
+                        stale_output.unlink()
+                    print(f"[SKIP] Markdown export disabled: {rel_path}")
+                    continue
 
                 # Nettoyage dynamique du suffixe de langue (ex: -fr.md -> .md) en excluant -ha.md
                 clean_rel_path = LANG_FILENAME_PATTERN.sub(".md", rel_path)
