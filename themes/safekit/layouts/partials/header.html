@@ -4,7 +4,6 @@
             <img width="265" height="53"  style="width: 172px; height: auto;" src="{{ "wp-content/uploads/2026/08/logo_eviden_orange-256w.png" | relURL }}" alt="Eviden Logo">
         </a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
         <div class="nav-menu">
             {{ $currentPage := . }}
             <a href="{{ .Site.Home.RelPermalink }}" class="nav-brand{{ if .IsHome }} active{{ end }}">SafeKit</a>
@@ -507,24 +506,67 @@
                 {{ end }}
                 {{ end }}
             {{ end }}
-            <div class="nav-actions">
-                <a href="{{ "safekit-pricing/" | relURL }}" class="btn-quote">Get a Quote</a>
-                <a href="{{ "contact-us-for-safekit/" | relURL }}" class="nav-contact">Contact</a>
-            </div>
         </div>
-        {{ if .IsTranslated }}
-        <div class="lang-switch">
-            <span class="lang-current">{{ .Lang | upper }}</span>
-            <div class="lang-dropdown">
-                {{ $seen := slice }}
-                {{ range .Translations }}
-                {{ if and (ne .RelPermalink $.RelPermalink) (ne .Lang $.Lang) (not (in $seen .Lang)) }}
-                {{ $seen = $seen | append .Lang }}
-                <a href="{{ .RelPermalink }}">{{ .Lang | upper }}</a>
-                {{ end }}
-                {{ end }}
+        <div class="nav-utility" role="group" aria-label="Quick links">
+            <a href="{{ "safekit-pricing/" | relURL }}" class="nav-utility-link nav-pricing" aria-label="Pricing" title="Pricing"><span aria-hidden="true">$</span></a>
+            <a href="{{ "contact-us-for-safekit/" | relURL }}" class="nav-utility-link nav-person" aria-label="Contact" title="Contact"><span aria-hidden="true">👤</span></a>
+            <button class="nav-utility-link nav-search-toggle" id="nav-search-open" type="button" aria-label="Open SafeKit search" title="Search" aria-haspopup="dialog" aria-controls="site-search-dialog"><span aria-hidden="true">🔍</span></button>
+            {{ if .IsTranslated }}
+            <div class="lang-switch">
+                <span class="lang-current">{{ .Lang | upper }}</span>
+                <div class="lang-dropdown">
+                    {{ $seen := slice }}
+                    {{ range .Translations }}
+                    {{ if and (ne .RelPermalink $.RelPermalink) (ne .Lang $.Lang) (not (in $seen .Lang)) }}
+                    {{ $seen = $seen | append .Lang }}
+                    <a href="{{ .RelPermalink }}">{{ .Lang | upper }}</a>
+                    {{ end }}
+                    {{ end }}
+                </div>
             </div>
+            {{ end }}
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span aria-hidden="true">☰</span></label>
         </div>
-        {{ end }}
     </nav>
+    <dialog class="site-search-dialog" id="site-search-dialog" aria-labelledby="site-search-title">
+        <div class="site-search-dialog-header">
+            <h2 id="site-search-title">Search SafeKit</h2>
+            <button class="site-search-close" type="button" aria-label="Close search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="m18 6-12 12M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="site-search-dialog-body">
+            <div class="gcse-search" data-linkTarget="_self"></div>
+        </div>
+    </dialog>
+    <script>
+        (() => {
+            const openButton = document.getElementById("nav-search-open");
+            const dialog = document.getElementById("site-search-dialog");
+            const closeButton = dialog.querySelector(".site-search-close");
+            let searchScriptLoaded = false;
+
+            openButton.addEventListener("click", () => {
+                dialog.showModal();
+                if (searchScriptLoaded) return;
+
+                searchScriptLoaded = true;
+                const script = document.createElement("script");
+                script.async = true;
+                script.src = "https://cse.google.com/cse.js?cx=529850561931c48b7";
+                script.addEventListener("error", () => {
+                    searchScriptLoaded = false;
+                });
+                document.head.appendChild(script);
+            });
+
+            closeButton.addEventListener("click", () => dialog.close());
+            dialog.addEventListener("click", (event) => {
+                if (event.target === dialog) dialog.close();
+            });
+            dialog.addEventListener("close", () => openButton.focus());
+        })();
+    </script>
 </header>
