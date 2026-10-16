@@ -1,8 +1,29 @@
 {{ define "main" }}
+{{ $home := .Site.Home }}
+{{ $localizedHomePaths := slice }}
+{{ range $home.AllTranslations }}
+    {{ if ne .RelPermalink $home.RelPermalink }}
+        {{ $localizedHomePaths = $localizedHomePaths | append .RelPermalink }}
+    {{ end }}
+{{ end }}
 <section class="not-found" aria-labelledby="not-found-title">
     <p class="not-found-code" aria-hidden="true">404</p>
     <h1 id="not-found-title">Page not found</h1>
     <p>The page you're looking for may have moved or no longer exists.</p>
     <a class="not-found-home" href="{{ .Site.Home.RelPermalink }}">Back to SafeKit home</a>
+    <script>
+        (() => {
+            const link = document.querySelector(".not-found-home");
+            const localizedHomePaths = {{ $localizedHomePaths | jsonify | safeJS }};
+            const path = window.location.pathname;
+            const homePath = localizedHomePaths.find((home) =>
+                path === home.replace(/\/$/, "") || path.startsWith(home)
+            );
+            if (link) {
+                if (homePath) link.href = homePath;
+                window.location.replace(link.href);
+            }
+        })();
+    </script>
 </section>
 {{ end }}
