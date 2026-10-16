@@ -19,6 +19,7 @@
 {{ $css := resources.Get "css/style.css" | resources.Minify }}
 <style>{{ $css.Content | safeCSS }}</style>
 
+    {{ if ne .Kind "404" }}
     {{ with .Site.Config.Services.GoogleAnalytics.ID }}
     <script>
       // To deactivate the GA4 script generation, just comment in /config.toml googleAnalytics = "G-DDCJJTPNYV"
@@ -40,6 +41,7 @@
         window.addEventListener('load', __loadGtag);
       }
     </script>
+    {{ end }}
     {{ end }}
 </head>
 <body{{ if eq .Layout "userguide" }} class="userguide-page"{{ end }}>
