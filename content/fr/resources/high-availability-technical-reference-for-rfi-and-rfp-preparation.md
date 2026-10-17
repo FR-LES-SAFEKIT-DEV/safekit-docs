@@ -112,7 +112,7 @@ Exigence / Spécification | Capacité / Valeur SafeKit
 ---|---  
 Méthode de réplication | Réplication de fichiers au niveau de l'octet (et non au niveau du bloc disque)  
 Mode de réplication | Synchrone (zéro perte de données)  
-Exigence réseau | Temps de latence aller-retour (round-trip latency) entre les nœuds < 2 ms recommandé pour la réplication synchrone  
+Exigence réseau | Temps de latence aller-retour (round-trip latency) entre les nœuds < 5ms recommandé pour la réplication synchrone  
 Volume de données recommandé | Quelques téraoctets (impacte le temps de resynchronisation)  
 Nombre de fichiers recommandé | < 1 000 000 de fichiers (impacte le temps de resynchronisation)  
 Vitesse de resynchronisation (1 To) | ~3 heures sur un réseau à 1 Gb/s ; ~1 heure sur un réseau à 10 Gb/s  

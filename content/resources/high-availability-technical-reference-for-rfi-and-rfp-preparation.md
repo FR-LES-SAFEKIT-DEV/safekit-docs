@@ -112,7 +112,7 @@ Requirement / Specification | SafeKit Capability / Value
 ---|---  
 Replication method | Byte-level file replication (not block-level disk)  
 Replication mode | Synchronous (zero data loss)  
-Network requirement | Round-trip latency between nodes < 2 ms recommended for synchronous replication  
+Network requirement | Round-trip latency between nodes < 5ms recommended for synchronous replication  
 Recommended data volume | A few terabytes (resync time)  
 Recommended file count | < 1,000,000 files (resync time)  
 Resync speed (1 TB) | ~3 hours on 1 Gb/s network; ~1 hour on 10 Gb/s network  
