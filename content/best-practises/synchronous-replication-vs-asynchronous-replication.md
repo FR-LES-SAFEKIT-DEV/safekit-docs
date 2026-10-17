@@ -81,7 +81,7 @@ Feature | Synchronous | Semi-Synchronous | Asynchronous
 ---|---|---|---  
 RPO (Potential Data Loss) | Zero | Zero | Not Zero (Data loss: depends on last asynchronous copy)  
 Remote I/O Acknowledgment | After remote disk write | After remote RAM write | Does not wait acknowledgment  
-Performance Impact | Requires a low latency network - Depends on Round Trip Time (typically RTT<2ms) | Requires a low latency network - Depends on Round Trip Time (typically RTT<2ms) | Supports low latency network  
+Performance Impact | Requires a low latency network - Depends on Round Trip Time (typically RTT<5ms) | Requires a low latency network - Depends on Round Trip Time (typically RTT<5ms) | Supports low latency network  
 Distance Limits | Local / Stretched VLAN | Local / Stretched VLAN | Wide Area Network (WAN)  
 Best For | High Availability (Automatic failover) | High Availability (Automatic failover) | Backup Solutions (Manual Failover)  
   

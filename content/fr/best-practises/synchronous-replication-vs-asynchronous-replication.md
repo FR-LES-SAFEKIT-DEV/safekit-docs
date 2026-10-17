@@ -82,7 +82,7 @@ Caractéristique | Synchrone | Semi-synchrone | Asynchrone
 ---|---|---|---  
 RPO (Perte de données potentielle) | Zéro | Zéro | Supérieur à zéro (Perte possible : dépend de la dernière copie)  
 Acquittement des E/S à distance | Après écriture sur le disque distant | Après écriture dans la RAM distante | N'attend pas d'acquittement  
-Impact sur la performance | Nécessite un réseau à faible latence - Dépend du temps de trajet aller-retour (RTT < 2ms typique) | Nécessite un réseau à faible latence - Dépend du temps de trajet aller-retour (RTT < 2ms typique) | Supporte les réseaux à latence élevée  
+Impact sur la performance | Nécessite un réseau à faible latence - Dépend du temps de trajet aller-retour (RTT < 5ms typique) | Nécessite un réseau à faible latence - Dépend du temps de trajet aller-retour (RTT < 5ms typique) | Supporte les réseaux à latence élevée  
 Limites de distance | Local / VLAN étendu (Stretched) | Local / VLAN étendu (Stretched) | Réseau étendu (WAN)  
 Idéal pour | Haute disponibilité (Basculement automatique) | Haute disponibilité (Basculement automatique) | Solutions de sauvegarde (Basculement manuel)  
   

@@ -54,7 +54,7 @@ Une solution SANless telle que SafeKit est essentielle car elle réplique les do
 Le HADR synchrone nécessite un LAN étendu ou un VLAN étendu (stretched VLAN) pour trois raisons critiques :
 
   * **Basculement de l'IP virtuelle :** Un sous-réseau unique est nécessaire pour basculer automatiquement l'[adresse IP virtuelle](</fr/best-practises/how-a-virtual-ip-address-works/>) entre les nœuds.
-  * **Faible latence :** La [réplication synchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) sans perte de données nécessite généralement un temps d'aller-retour réseau (RTT) inférieur à 2 ms.
+  * **Faible latence :** La [réplication synchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) sans perte de données nécessite généralement un temps d'aller-retour réseau (RTT) inférieur à 5ms.
   * **Bande passante élevée :** Une connexion de 1 Gb/s ou plus est requise pour garantir une resynchronisation rapide des données lors d'un retour après défaillance (failback).
 
 
@@ -117,7 +117,7 @@ Type de réplication | Synchrone (Temps réel) | Asynchrone / Sauvegarde
 RPO (Perte de données) | Nul (RPO = 0) | Perte de données potentielle (RPO > 0)  
 Processus de basculement | Automatique | Manuel (Décision de l'administrateur)  
 Routage du trafic | Adresse IP Virtuelle (VIP) | Niveau DNS (dépend du TTL)  
-Contrainte de latence | Faible (généralement < 2ms) | Supporte une latence élevée  
+Contrainte de latence | Faible (généralement < 5ms) | Supporte une latence élevée  
 But de récupération | Continuité d'activité immédiate | Sécurité & Rétention des données  
   
 ## Guide Vidéo : Comment implémenter le HADR avec SafeKit {#videoguide-hadr-safekit}

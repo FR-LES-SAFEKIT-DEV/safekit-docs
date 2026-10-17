@@ -55,7 +55,7 @@ A SANless solution like SafeKit is essential because it replicates data synchron
 Synchronous HADR requires an extended LAN or a stretched VLAN for three critical reasons:
 
   * **Virtual IP Failover:** A single subnet is required to automatically failover the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) between nodes.
-  * **Low Latency:** [Synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) with no data loss typically requires a network round-trip time of less than 2ms.
+  * **Low Latency:** [Synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) with no data loss typically requires a network round-trip time of less than 5ms.
   * **High Bandwidth:** A connection of 1 Gb/s or more is required to ensure rapid data resynchronization during a failback.
 
 
@@ -118,7 +118,7 @@ Replication Type | Synchronous (Real-time) | Asynchronous / Backup
 RPO (Data Loss) | Zero (RPO = 0) | Potential data loss (RPO > 0)  
 Failover Process | Automatic | Manual (Admin decision)  
 Traffic Rerouting | Virtual IP Address (VIP) | DNS Level (TTL dependent)  
-Latency Requirement | Low (typically < 2ms) | Supports high latency  
+Latency Requirement | Low (typically < 5ms) | Supports high latency  
 Primary Recovery Goal | Immediate Business Continuity | Data Safety & Retention  
   
 ## Video Guide: How to Implement HADR with SafeKit {#videoguide-hadr-safekit}

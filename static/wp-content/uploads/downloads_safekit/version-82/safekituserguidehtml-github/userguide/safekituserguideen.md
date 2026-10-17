@@ -993,7 +993,7 @@ Configuring, deploying, and monitoring modules can be done using the SafeKit web
 ---  
 Replication of a few Tera-bytes |  Replication < 1 million files |  Replication <= 32 virtual machines |  1 or 10 G/s LAN or extended LAN  
 **Limitation**  
-Resynchronization after a failure takes too long. On a 1 Gb/s network, 3 Hours for 1 Tera-bytes.  On a 10 Gb/s network, 1 hour or less for 1 Tera-bytes (depends on write disk IO performances). |  Resynchronization after a failure takes too long. Time to check each file between both nodes. |  In full virtual machine replication mode, and with one virtual machine in a mirror module, the limit is 32 modules per cluster. |  [Failover of the virtual IP address](<https://safekit.evidian.com/products/high-availability-software-for-application-clustering/how-a-virtual-ip-address-works/>) is built-in when in the same subnet. A LAN provides adequate bandwidth for resynchronization. A LAN provides adequate latency (typically a round-trip of less than 2ms) for synchronous replication.  
+Resynchronization after a failure takes too long. On a 1 Gb/s network, 3 Hours for 1 Tera-bytes.  On a 10 Gb/s network, 1 hour or less for 1 Tera-bytes (depends on write disk IO performances). |  Resynchronization after a failure takes too long. Time to check each file between both nodes. |  In full virtual machine replication mode, and with one virtual machine in a mirror module, the limit is 32 modules per cluster. |  [Failover of the virtual IP address](<https://safekit.evidian.com/products/high-availability-software-for-application-clustering/how-a-virtual-ip-address-works/>) is built-in when in the same subnet. A LAN provides adequate bandwidth for resynchronization. A LAN provides adequate latency (typically a round-trip of less than 5ms) for synchronous replication.  
 **Alternative**  
 Use shared storage. |  Put files in a virtual hard disk replicated by SafeKit. |  Use another HA solution with shared storage. |  Use backup solutions with asynchronous replication.  
   
@@ -1051,7 +1051,7 @@ There is a significant difference between synchronous replication, as offered by
 
 With synchronous replication, when a disk IO is performed by the application on the primary server inside a replicated file, SafeKit waits for the IO acknowledgement from the local disk and from the secondary server, before sending the IO acknowledgement to the application. This mechanism is essential for recovery of transactional applications.
 
-The latency of a LAN (typically a round-trip of less than 2ms) between the servers is required to implement synchronous data replication, possibly with an extended LAN in two geographically remote computer rooms.
+The latency of a LAN (typically a round-trip of less than 5ms) between the servers is required to implement synchronous data replication, possibly with an extended LAN in two geographically remote computer rooms.
 
 With asynchronous replication implemented by other solutions, the IOs are placed in a log on the primary server but the primary server does not wait for the IO acknowledgments of the secondary server. Thus, all data that has not been copied over the network to the second server is lost in the event of a failure of the first server.
 
