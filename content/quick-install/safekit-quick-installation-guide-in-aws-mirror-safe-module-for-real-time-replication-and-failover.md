@@ -39,10 +39,7 @@ You must configure the Amazon AWS load balancer with:
 For more information, see [the configuration of the Amazon AWS load balancer](<https://aws.amazon.com/elasticloadbalancing/>).
 
 
-![Warning](/wp-content/uploads/2022/07/warning-small.png)
-
-
-Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Amazon AWS load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
+⚠️ Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Amazon AWS load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
 
 ### Configuration of the Amazon AWS network security
 

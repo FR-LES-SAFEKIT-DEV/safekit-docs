@@ -39,10 +39,7 @@ You must configure the Google GCP load balancer with:
 For more information, see [the configuration of the Google GCP load balancer](<https://docs.cloud.google.com/load-balancing/docs/>). 
 
 
-![Warning](/wp-content/uploads/2022/07/warning-small.png)
-
-
-Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Google GCP load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
+⚠️ Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Google GCP load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
 
 ### Configuration of the Google GCP network security
 

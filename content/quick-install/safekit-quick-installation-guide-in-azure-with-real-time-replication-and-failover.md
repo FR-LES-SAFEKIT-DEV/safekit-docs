@@ -39,10 +39,7 @@ You must configure the Microsoft Azure load balancer with:
 For more information, see [the configuration of the Microsoft Azure load balancer](<https://learn.microsoft.com/en-us/azure/load-balancer/>). 
 
 
-![Warning](/wp-content/uploads/2022/07/warning-small.png)
-
-
-Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Microsoft Azure load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
+⚠️ Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Microsoft Azure load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
 
 ### Configuration of the Microsoft Azure network security
 
