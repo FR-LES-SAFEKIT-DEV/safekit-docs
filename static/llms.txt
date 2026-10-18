@@ -6,8 +6,6 @@
 > without shared storage (SAN) or specialized hardware.
 
 - Website: https://safekit.eviden.com
-- Documentation: https://safekit.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml-github/userguide/safekituserguideen.htm
-- Release Notes: https://safekit.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekitreleasenoteshtml-github/releasenotes/safekitreleasenotes.htm
 
 ## Home
 
@@ -147,7 +145,10 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 ## Quick Installation Guides
 
 - [SafeKit High Availability Module Library: Quick Installation Guides for Windows & Linux](https://safekit.eviden.com/quick-install/)
-  Topics: Full index of Quick Installation Guides, one per module: new Windows/Linux apps (mirror & farm), physical security/VMS (Milestone XProtect, Nedap), virtual machines (Hyper-V, KVM), databases (Firebird, MariaDB, SQL Server, MySQL, Oracle, PostgreSQL), web servers (IIS, Apache, NGINX), and cloud platforms (AWS, GCP, Azure, generic cloud — mirror & farm variants). Each guide covers: overview, module installation, step-by-step configuration, demonstration, and SafeKit High Availability Limitations. Also includes Milestone management migration and legacy Milestone configuration guides.
+  Topics:
+  - Catalogue and direct downloads of preconfigured SafeKit .safe modules, organized by application, operating system, and architecture; includes mirror.safe, farm.safe, application-specific modules, and matching installation guides.
+  - Includes new Windows/Linux apps (mirror & farm), physical security/VMS (Milestone XProtect, Nedap), virtual machines (Hyper-V, KVM), databases (Firebird, MariaDB, SQL Server, MySQL, Oracle, PostgreSQL), web servers (IIS, Apache, NGINX), and cloud platforms (AWS, GCP, Azure, generic cloud — mirror & farm variants). 
+  - Each guide covers: overview, module installation, step-by-step configuration, demonstration, and SafeKit High Availability Limitations. 
 
 ## Architectures
 
@@ -258,8 +259,8 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 - [High Availability Technical Reference for RFI and RFP Preparation](https://safekit.eviden.com/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/)
   Topics: Overview, Product Identity, Supported Operating Systems & Platforms, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Edge & Distributed Deployment Suitability, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links
 
-- [SafeKit Free Trial: Test Application and VM-Level High Availability](https://safekit.eviden.com/resources/safekit-free-trial/)
-  Topics: SafeKit HA Free Trial & Technical Documentation
+- [SafeKit Free Trial and Software Downloads: Windows and Linux Installers (Version 8.2)](https://safekit.eviden.com/resources/safekit-free-trial/)
+  Topics: Download SafeKit 8.2 packages: Windows Intel 64-bit EXE installer (includes Microsoft VC++ Redistributable) and MSI installer (without it), Linux Intel 64-bit BIN, and Linux ARM 64-bit BIN; free trial key, quick installation guides, user guide, release notes, support, training, and technical documentation
 
 - [SafeKit High Availability Training: Free Online Certification Program](https://safekit.eviden.com/resources/safekit-on-line-training/)
   Topics: How to Access the Training Platform?, Get SafeKit 8 Training Materials
