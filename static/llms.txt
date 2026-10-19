@@ -144,11 +144,11 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 
 ## Quick Installation Guides
 
-- [SafeKit High Availability Module Library: Quick Installation Guides for Windows & Linux](https://safekit.eviden.com/quick-install/)
+- [SafeKit Application Module Library: Downloadable .safe Modules and Quick Installation Guides for Windows & Linux](https://safekit.eviden.com/quick-install/)
   Topics:
-  - Catalogue and direct downloads of preconfigured SafeKit .safe modules, organized by application, operating system, and architecture; includes mirror.safe, farm.safe, application-specific modules, and matching installation guides.
-  - Includes new Windows/Linux apps (mirror & farm), physical security/VMS (Milestone XProtect, Nedap), virtual machines (Hyper-V, KVM), databases (Firebird, MariaDB, SQL Server, MySQL, Oracle, PostgreSQL), web servers (IIS, Apache, NGINX), and cloud platforms (AWS, GCP, Azure, generic cloud — mirror & farm variants). 
-  - Each guide covers: overview, module installation, step-by-step configuration, demonstration, and SafeKit High Availability Limitations. 
+  - Downloadable preconfigured `.safe` modules, organized by application, operating system, and architecture. `mirror.safe` and `farm.safe` are included in the SafeKit installation package.
+  - Quick Installation Guides for Windows/Linux applications, physical security/VMS, virtual machines, databases, web servers, and cloud platforms.
+  - Each guide covers an overview, installation, configuration steps, a demonstration, and SafeKit HA limitations; the library also includes Milestone migration and legacy configuration guides.
 
 ## Architectures
 

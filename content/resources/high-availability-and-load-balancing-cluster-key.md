@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Cluster Key: One-Month Trial for Windows and Linux High Availability"
+title: "SafeKit One-Month Free Trial Key"
 canonical: "https://safekit.eviden.com/resources/high-availability-and-load-balancing-cluster-key/"
 description: "Request your SafeKit cluster key for a one-month trial on Windows and Linux. SafeKit proposes a SANless architecture for simple, all-in-one high availability and application clustering without a SAN."
 category: "resources"
@@ -7,7 +7,7 @@ lang: "en"
 topics: "Receive a free SafeKit one-month license key by email for Windows or Linux, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit Cluster Key: One-Month Trial for Windows and Linux High Availability
+# SafeKit One-Month Free Trial Key
 
 ## Receive a free SafeKit one-month license key by email for Windows or Linux
 
@@ -15,7 +15,7 @@ This license key gives access to all SafeKit features: network load balancing, r
 
 Once you receive the `license.txt` file by email, copy it to the following location on each node in the cluster:
 
-* On Windows: `C:\safekit\conf\license.txt`
+* On Windows: `C:/safekit/conf/license.txt`
 * On Linux: `/opt/safekit/conf/license.txt`
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -26,7 +26,7 @@ Once you receive the `license.txt` file by email, copy it to the following locat
     <input id="trial-key-email" name="Email" type="email" autocomplete="email" required placeholder="name@example.com">
     <div class="g-recaptcha safekit-trial-key-captcha" data-sitekey="6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R"></div>
     <p class="safekit-trial-key-privacy">Your privacy is important to us. By submitting this form, you accept the terms in our <a href="https://eviden.com/en/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>. Please read it to understand how we ensure your rights are upheld.</p>
-    <button type="submit">Get a free trial key</button>
+    <button type="submit">Get a free trial key ›</button>
   </div>
   <p id="safekit-trial-key-captcha-error" class="safekit-trial-key-error" hidden>Please confirm that you are not a robot.</p>
 </form>

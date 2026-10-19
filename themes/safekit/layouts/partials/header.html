@@ -395,7 +395,7 @@
                                 <a href="{{ .RelPermalink }}">Software clustering vs hardware clustering</a>
                                 {{ end }}
                                 {{ with $enSite.GetPage "/best-practises/vm-ha-vs-application-ha" }}
-                                <a href="{{ .RelPermalink }}">VM HA vs. Application HA: Choose Your Redundancy Level with SafeKit</a>
+                                <a href="{{ .RelPermalink }}">VM HA vs. Application HA</a>
                                 {{ end }}
                                 {{ with $enSite.GetPage "/best-practises/high-availability-disaster-recovery-hadr" }}
                                 <a href="{{ .RelPermalink }}">High Availability and Disaster Recovery (HADR)</a>
@@ -507,19 +507,39 @@
                 {{ end }}
             {{ end }}
         </div>
-        <div class="nav-utility" role="group" aria-label="Quick links">
-            <a href="{{ "safekit-pricing/" | relURL }}" class="nav-utility-link nav-pricing" aria-label="Pricing" title="Pricing"><span aria-hidden="true">$</span></a>
-            <a href="{{ "contact-us-for-safekit/" | relURL }}" class="nav-utility-link nav-person" aria-label="Contact" title="Contact"><span aria-hidden="true">👤</span></a>
-            <button class="nav-utility-link nav-search-toggle" id="nav-search-open" type="button" aria-label="Open SafeKit search" title="Search" aria-haspopup="dialog" aria-controls="site-search-dialog"><span aria-hidden="true">🔍</span></button>
+        {{ $utilityLabels := dict
+            "en" (dict "group" "Quick links" "trialKey" "Free trial key" "pricing" "Pricing" "contact" "Contact" "search" "Search" "searchOpen" "Open SafeKit search" "searchTitle" "Search SafeKit" "searchClose" "Close search")
+            "fr" (dict "group" "Raccourcis" "trialKey" "Clé d’essai gratuite" "pricing" "Tarifs" "contact" "Contact" "search" "Rechercher" "searchOpen" "Ouvrir la recherche SafeKit" "searchTitle" "Rechercher sur SafeKit" "searchClose" "Fermer la recherche")
+            "ja" (dict "group" "クイックリンク" "trialKey" "無料トライアルキー" "pricing" "料金" "contact" "お問い合わせ" "search" "検索" "searchOpen" "SafeKit検索を開く" "searchTitle" "SafeKitを検索" "searchClose" "検索を閉じる")
+            "zh-hans" (dict "group" "快捷链接" "trialKey" "免费试用密钥" "pricing" "价格" "contact" "联系我们" "search" "搜索" "searchOpen" "打开 SafeKit 搜索" "searchTitle" "搜索 SafeKit" "searchClose" "关闭搜索")
+            "ar" (dict "group" "روابط سريعة" "trialKey" "مفتاح النسخة التجريبية المجانية" "pricing" "الأسعار" "contact" "اتصل بنا" "search" "بحث" "searchOpen" "فتح بحث SafeKit" "searchTitle" "البحث في SafeKit" "searchClose" "إغلاق البحث")
+            "de" (dict "group" "Schnellzugriffe" "trialKey" "Kostenloser Testschlüssel" "pricing" "Preise" "contact" "Kontakt" "search" "Suche" "searchOpen" "SafeKit-Suche öffnen" "searchTitle" "SafeKit durchsuchen" "searchClose" "Suche schließen")
+            "es" (dict "group" "Accesos rápidos" "trialKey" "Clave de prueba gratuita" "pricing" "Precios" "contact" "Contacto" "search" "Buscar" "searchOpen" "Abrir la búsqueda de SafeKit" "searchTitle" "Buscar en SafeKit" "searchClose" "Cerrar búsqueda")
+            "it" (dict "group" "Collegamenti rapidi" "trialKey" "Chiave di prova gratuita" "pricing" "Prezzi" "contact" "Contatti" "search" "Cerca" "searchOpen" "Apri la ricerca di SafeKit" "searchTitle" "Cerca in SafeKit" "searchClose" "Chiudi ricerca")
+            "ko" (dict "group" "빠른 링크" "trialKey" "무료 평가판 키" "pricing" "가격" "contact" "문의하기" "search" "검색" "searchOpen" "SafeKit 검색 열기" "searchTitle" "SafeKit 검색" "searchClose" "검색 닫기")
+            "pt-br" (dict "group" "Links rápidos" "trialKey" "Chave de avaliação gratuita" "pricing" "Preços" "contact" "Fale conosco" "search" "Pesquisar" "searchOpen" "Abrir pesquisa do SafeKit" "searchTitle" "Pesquisar SafeKit" "searchClose" "Fechar pesquisa")
+            "pt-pt" (dict "group" "Ligações rápidas" "trialKey" "Chave de avaliação gratuita" "pricing" "Preços" "contact" "Contacto" "search" "Pesquisar" "searchOpen" "Abrir pesquisa do SafeKit" "searchTitle" "Pesquisar SafeKit" "searchClose" "Fechar pesquisa")
+            "nl" (dict "group" "Snelle links" "trialKey" "Gratis proeflicentiesleutel" "pricing" "Prijzen" "contact" "Contact" "search" "Zoeken" "searchOpen" "SafeKit-zoekfunctie openen" "searchTitle" "Zoeken in SafeKit" "searchClose" "Zoeken sluiten")
+        }}
+        {{ $utility := index $utilityLabels .Site.Language.Lang | default (index $utilityLabels "en") }}
+        {{ $languageCodes := dict "en" "EN" "fr" "FR" "ja" "JA" "zh-hans" "ZH" "ar" "AR" "de" "DE" "es" "ES" "it" "IT" "ko" "KO" "pt-br" "BR" "pt-pt" "PT" "nl" "NL" }}
+        {{ $trialLabels := dict "en" "SafeKit free trial" "fr" "Essai gratuit SafeKit" "ja" "SafeKit 無料トライアル" "zh-hans" "SafeKit 免费试用" "ar" "الإصدار التجريبي المجاني من SafeKit" "de" "Kostenlose SafeKit-Testversion" "es" "Prueba gratuita de SafeKit" "it" "Prova gratuita di SafeKit" "ko" "SafeKit 무료 평가판" "pt-br" "Avaliação gratuita do SafeKit" "pt-pt" "Avaliação gratuita do SafeKit" "nl" "Gratis SafeKit-proefversie" }}
+        {{ $trialLabel := index $trialLabels .Site.Language.Lang | default (index $trialLabels "en") }}
+        <div class="nav-utility" role="group" aria-label="{{ index $utility "group" }}">
+            <a href="{{ "resources/safekit-free-trial/" | relLangURL }}" class="nav-utility-link nav-trial" aria-label="{{ $trialLabel }}" title="{{ $trialLabel }}"><span aria-hidden="true">📦</span></a>
+            <a href="{{ "resources/high-availability-and-load-balancing-cluster-key/" | relLangURL }}" class="nav-utility-link nav-trial-key" aria-label="{{ index $utility "trialKey" }}" title="{{ index $utility "trialKey" }}"><span aria-hidden="true">🔑</span></a>
+            <a href="{{ "safekit-pricing/" | relLangURL }}" class="nav-utility-link nav-pricing" aria-label="{{ index $utility "pricing" }}" title="{{ index $utility "pricing" }}"><span aria-hidden="true">💲</span></a>
+            <a href="{{ "contact-us-for-safekit/" | relLangURL }}" class="nav-utility-link nav-person" aria-label="{{ index $utility "contact" }}" title="{{ index $utility "contact" }}"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></a>
+            <button class="nav-utility-link nav-search-toggle" id="nav-search-open" type="button" aria-label="{{ index $utility "searchOpen" }}" title="{{ index $utility "search" }}" aria-haspopup="dialog" aria-controls="site-search-dialog"><span aria-hidden="true">🔍</span></button>
             {{ if .IsTranslated }}
             <div class="lang-switch">
-                <span class="lang-current">{{ .Lang | upper }}</span>
+                <span class="lang-current">{{ index $languageCodes .Lang | default (.Lang | upper) }}</span>
                 <div class="lang-dropdown">
                     {{ $seen := slice }}
                     {{ range .Translations }}
                     {{ if and (ne .RelPermalink $.RelPermalink) (ne .Lang $.Lang) (not (in $seen .Lang)) }}
                     {{ $seen = $seen | append .Lang }}
-                    <a href="{{ .RelPermalink }}">{{ .Lang | upper }}</a>
+                    <a href="{{ .RelPermalink }}">{{ index $languageCodes .Lang | default (.Lang | upper) }}</a>
                     {{ end }}
                     {{ end }}
                 </div>
@@ -530,8 +550,8 @@
     </nav>
     <dialog class="site-search-dialog" id="site-search-dialog" aria-labelledby="site-search-title">
         <div class="site-search-dialog-header">
-            <h2 id="site-search-title">Search SafeKit</h2>
-            <button class="site-search-close" type="button" aria-label="Close search">
+            <h2 id="site-search-title">{{ index $utility "searchTitle" }}</h2>
+            <button class="site-search-close" type="button" aria-label="{{ index $utility "searchClose" }}">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
                     <path d="m18 6-12 12M6 6l12 12"></path>
                 </svg>

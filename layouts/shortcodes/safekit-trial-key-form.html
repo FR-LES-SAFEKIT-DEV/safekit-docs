@@ -1,0 +1,129 @@
+{{- $labels := dict
+  "en" (dict "email" "Email address" "privacyBefore" "Your privacy is important to us. By submitting this form, you accept the terms in our" "privacyLink" "Privacy Policy" "privacyAfter" ". Please read it to understand how we ensure your rights are upheld." "submit" "Get a free trial key ›" "captchaError" "Please confirm that you are not a robot." "resultTitle" "SafeKit trial key request result")
+  "fr" (dict "email" "Adresse e-mail" "privacyBefore" "Votre vie privée est importante pour nous. En envoyant ce formulaire, vous acceptez les conditions de notre" "privacyLink" "politique de confidentialité" "privacyAfter" ". Consultez-la pour comprendre comment nous protégeons vos droits." "submit" "Obtenir une clé d’essai gratuite ›" "captchaError" "Veuillez confirmer que vous n’êtes pas un robot." "resultTitle" "Résultat de la demande de clé d’essai SafeKit")
+  "ar" (dict "email" "عنوان البريد الإلكتروني" "privacyBefore" "خصوصيتك مهمة لنا. عند إرسال هذا النموذج، فإنك توافق على شروط" "privacyLink" "سياسة الخصوصية" "privacyAfter" ". يُرجى قراءتها لمعرفة كيفية حماية حقوقك." "submit" "احصل على مفتاح تجريبي مجاني ›" "captchaError" "يُرجى تأكيد أنك لست روبوتًا." "resultTitle" "نتيجة طلب مفتاح تجربة SafeKit")
+  "de" (dict "email" "E-Mail-Adresse" "privacyBefore" "Der Schutz Ihrer Privatsphäre ist uns wichtig. Mit dem Absenden dieses Formulars akzeptieren Sie die Bedingungen unserer" "privacyLink" "Datenschutzerklärung" "privacyAfter" ". Bitte lesen Sie sie, um zu erfahren, wie wir Ihre Rechte schützen." "submit" "Kostenlosen Testschlüssel anfordern ›" "captchaError" "Bitte bestätigen Sie, dass Sie kein Roboter sind." "resultTitle" "Ergebnis der SafeKit-Testschlüssel-Anfrage")
+  "es" (dict "email" "Dirección de correo electrónico" "privacyBefore" "Su privacidad es importante para nosotros. Al enviar este formulario, acepta las condiciones de nuestra" "privacyLink" "Política de privacidad" "privacyAfter" ". Léala para saber cómo protegemos sus derechos." "submit" "Solicitar clave de prueba gratuita ›" "captchaError" "Confirme que no es un robot." "resultTitle" "Resultado de la solicitud de clave de prueba de SafeKit")
+  "it" (dict "email" "Indirizzo e-mail" "privacyBefore" "La tua privacy è importante per noi. Inviando questo modulo, accetti i termini della nostra" "privacyLink" "Informativa sulla privacy" "privacyAfter" ". Leggila per sapere come tuteliamo i tuoi diritti." "submit" "Richiedi una chiave di prova gratuita ›" "captchaError" "Conferma di non essere un robot." "resultTitle" "Risultato della richiesta della chiave di prova SafeKit")
+  "ja" (dict "email" "メールアドレス" "privacyBefore" "お客様のプライバシーを大切にしています。このフォームを送信すると、当社の" "privacyLink" "プライバシーポリシー" "privacyAfter" "に同意したものとみなされます。お客様の権利をどのように保護するか、ポリシーをご確認ください。" "submit" "無料試用キーを申請 ›" "captchaError" "ロボットではないことを確認してください。" "resultTitle" "SafeKit試用キー申請の結果")
+  "zh-hans" (dict "email" "电子邮箱地址" "privacyBefore" "我们重视您的隐私。提交此表单即表示您接受我们的" "privacyLink" "隐私政策" "privacyAfter" "。请阅读政策，了解我们如何保障您的权利。" "submit" "申请免费试用密钥 ›" "captchaError" "请确认您不是机器人。" "resultTitle" "SafeKit 试用密钥申请结果")
+  "ko" (dict "email" "이메일 주소" "privacyBefore" "고객님의 개인정보 보호는 중요합니다. 이 양식을 제출하면 당사의" "privacyLink" "개인정보 처리방침" "privacyAfter" "에 동의하는 것입니다. 고객님의 권리를 어떻게 보호하는지 확인해 주세요." "submit" "무료 평가판 키 요청 ›" "captchaError" "로봇이 아님을 확인해 주세요." "resultTitle" "SafeKit 평가판 키 요청 결과")
+  "nl" (dict "email" "E-mailadres" "privacyBefore" "Wij vinden uw privacy belangrijk. Door dit formulier te verzenden, gaat u akkoord met de voorwaarden in ons" "privacyLink" "privacybeleid" "privacyAfter" ". Lees dit beleid om te begrijpen hoe we uw rechten beschermen." "submit" "Gratis proeflicentie aanvragen ›" "captchaError" "Bevestig dat u geen robot bent." "resultTitle" "Resultaat van de aanvraag van een SafeKit-proeflicentie")
+  "pt-br" (dict "email" "Endereço de e-mail" "privacyBefore" "Sua privacidade é importante para nós. Ao enviar este formulário, você aceita os termos da nossa" "privacyLink" "Política de Privacidade" "privacyAfter" ". Leia-a para entender como protegemos seus direitos." "submit" "Solicitar chave de avaliação gratuita ›" "captchaError" "Confirme que você não é um robô." "resultTitle" "Resultado da solicitação da chave de avaliação do SafeKit")
+  "pt-pt" (dict "email" "Endereço de e-mail" "privacyBefore" "A sua privacidade é importante para nós. Ao enviar este formulário, aceita os termos da nossa" "privacyLink" "Política de Privacidade" "privacyAfter" ". Leia-a para compreender como protegemos os seus direitos." "submit" "Pedir chave de avaliação gratuita ›" "captchaError" "Confirme que não é um robô." "resultTitle" "Resultado do pedido da chave de avaliação do SafeKit")
+-}}
+{{- $copy := index $labels .Site.Language.Lang | default (index $labels "en") -}}
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<form class="safekit-trial-key-form" action="https://license.my.evidian.com/sek.asp" method="get" target="safekit-trial-key-result-frame" onsubmit="return safekitTrialKeyCaptchaValidated();">
+  <label for="trial-key-email">{{ index $copy "email" }}</label>
+  <div class="safekit-trial-key-fields">
+    <input id="trial-key-email" name="Email" type="email" autocomplete="email" required placeholder="name@example.com">
+    <div class="g-recaptcha safekit-trial-key-captcha" data-sitekey="6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R"></div>
+    <p class="safekit-trial-key-privacy">{{ index $copy "privacyBefore" }} <a href="https://eviden.com/privacy-policy/" target="_blank" rel="noopener">{{ index $copy "privacyLink" }}</a>{{ index $copy "privacyAfter" }}</p>
+    <button type="submit">{{ index $copy "submit" }}</button>
+  </div>
+  <p id="safekit-trial-key-captcha-error" class="safekit-trial-key-error" hidden>{{ index $copy "captchaError" }}</p>
+</form>
+
+<div class="safekit-trial-key-result">
+  <iframe name="safekit-trial-key-result-frame" title="{{ index $copy "resultTitle" }}"></iframe>
+</div>
+
+<script>
+  function safekitTrialKeyCaptchaValidated() {
+    var captchaError = document.getElementById('safekit-trial-key-captcha-error');
+
+    if (typeof grecaptcha === 'undefined' || !grecaptcha.getResponse()) {
+      captchaError.hidden = false;
+      return false;
+    }
+
+    var recaptchaResponses = document.querySelectorAll('.safekit-trial-key-form [name="g-recaptcha-response"]');
+    for (var index = 0; index < recaptchaResponses.length; index++) {
+      recaptchaResponses[index].disabled = true;
+    }
+
+    captchaError.hidden = true;
+    return true;
+  }
+</script>
+
+<style>
+  .safekit-trial-key-form {
+    max-width: 720px;
+    margin: 1.5rem 0;
+  }
+
+  .safekit-trial-key-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .safekit-trial-key-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .safekit-trial-key-fields input {
+    flex: 1 1 260px;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid #b8c2cc;
+    border-radius: 4px;
+    font: inherit;
+  }
+
+  .safekit-trial-key-captcha {
+    flex: 0 0 304px;
+  }
+
+  .safekit-trial-key-privacy {
+    flex: 1 0 100%;
+    margin: 0;
+  }
+
+  .safekit-trial-key-error {
+    margin: 0.75rem 0 0;
+    color: #b00020;
+    font-weight: 700;
+  }
+
+  .safekit-trial-key-error[hidden] {
+    display: none !important;
+  }
+
+  .safekit-trial-key-fields button {
+    min-height: 2.75rem;
+    padding: 0.65rem 1rem;
+    border: 0;
+    border-radius: 4px;
+    background: #005eb8;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .safekit-trial-key-fields button:hover,
+  .safekit-trial-key-fields button:focus {
+    background: #004986;
+  }
+
+  .safekit-trial-key-result {
+    max-width: 920px;
+    margin: 1.5rem 0;
+  }
+
+  .safekit-trial-key-result iframe {
+    width: 100%;
+    min-height: 520px;
+    border: 1px solid #b8c2cc;
+    border-radius: 4px;
+    background: #fff;
+  }
+</style>

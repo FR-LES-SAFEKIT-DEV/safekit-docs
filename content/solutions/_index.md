@@ -1,5 +1,5 @@
 ---
-title: "SafeKit Solutions on Windows and Linux with Application Modules"
+title: "SafeKit Solutions"
 canonical: "https://safekit.eviden.com/solutions/"
 description: "Cluster configuration on Windows and Linux can be very simple if you use the HA modules of the SafeKit high availability software."
 category: "solutions"
@@ -7,7 +7,7 @@ lang: "en"
 topics: "SafeKit Application Module Library: Ready-to-Use HA Solutions, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit Solutions on Windows and Linux with Application Modules
+# SafeKit Solutions
 
 
 {{%  insert-safekit-modules-en  %}}

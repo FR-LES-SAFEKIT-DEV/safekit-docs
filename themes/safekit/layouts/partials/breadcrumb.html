@@ -5,8 +5,17 @@
     <a href="{{ .Site.Home.RelPermalink }}">SafeKit</a>
     {{ if .Parent }}
         {{ if and .Parent (not .Parent.IsHome) }}
+        {{ $parentLink := .Parent.RelPermalink }}
+        {{ $parentTitle := .Parent.Title }}
+        {{ if and (ne .Lang "en") (not .Parent.File) }}
+            {{ $englishSite := index (where hugo.Sites "Language.Lang" "en") 0 }}
+            {{ with $englishSite.GetPage (printf "/%s" .Parent.Section) }}
+                {{ $parentLink = .RelPermalink }}
+                {{ $parentTitle = .Title }}
+            {{ end }}
+        {{ end }}
         <span class="sep">›</span>
-        <a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+        <a href="{{ $parentLink }}">{{ $parentTitle }}</a>
         {{ end }}
     {{ end }}
     <span class="sep">›</span>

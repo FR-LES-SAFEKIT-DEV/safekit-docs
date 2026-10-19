@@ -50,14 +50,13 @@ header { position: sticky; top: 0; z-index: 2000; background: #fff; }
 .dropdown:hover .mega-panel { display: block; }
 
 /* --- Header utility controls --- */
-.nav-utility { display: flex; flex: 0 0 auto; align-items: center; gap: 0.15rem; margin-inline-start: auto; }
-.nav-utility-link { box-sizing: border-box; display: inline-flex; flex: 0 0 2rem; align-items: center; justify-content: center; width: 2rem; height: 2rem; padding: 0; border: 0; background: transparent; color: #fff !important; font-size: 1.1rem; line-height: 1; text-decoration: none; cursor: pointer; }
+.nav-utility { display: flex; flex: 0 0 auto; align-items: center; gap: 0.2rem; margin-inline-start: auto; }
+.nav-utility-link { box-sizing: border-box; display: inline-flex; flex: 0 0 1.75rem; align-items: center; justify-content: center; width: 1.75rem; height: 2rem; padding: 0; border: 0; background: transparent; color: #fff !important; font-size: 1.1rem; line-height: 1; text-decoration: none; cursor: pointer; }
 .nav-utility-link:hover { border-radius: 50%; background: rgba(255, 255, 255, 0.12); text-decoration: none; }
 .nav-pricing { font-size: 1.15rem; font-weight: 600; }
 .nav-person { font-size: 1rem; }
+.nav-person svg { display: block; width: 1rem; height: 1rem; fill: #ff5638; }
 .nav-search-toggle { font-size: 1rem; }
-.nav-person span,
-.nav-search-toggle span { filter: grayscale(1) brightness(0) invert(1); }
 .nav-utility-link:focus-visible,
 .site-search-close:focus-visible { outline: 2px solid #ff5638; outline-offset: 3px; }
 .site-search-close svg { width: 1.35rem; height: 1.35rem; }
@@ -70,8 +69,8 @@ header { position: sticky; top: 0; z-index: 2000; background: #fff; }
 .site-search-dialog .gsc-control-cse { padding: 0; border: 0; background: transparent; }
 .site-search-dialog table.gsc-search-box { margin: 0 0 1rem; }
 
-.lang-switch { position: relative; margin: 0 0.2rem; }
-.lang-current { display: inline-flex; align-items: center; justify-content: center; min-width: 0; height: auto; padding: 0 0.15rem; border: 0; border-radius: 0; background: transparent; color: #fff; font-size: 0.75rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.lang-switch { position: relative; flex: 0 0 1.75rem; width: 1.75rem; height: 2rem; margin: 0; }
+.lang-current { display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 100%; min-width: 0; padding: 0; border: 0; border-radius: 0; background: transparent; color: #fff; font-size: 1.1rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
 .lang-dropdown { display: none; position: absolute; right: 0; top: 100%; background: #fff; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 4px; z-index: 1000; min-width: 60px; }
 .lang-dropdown a { display: block; padding: 0.4rem 0.8rem; font-size: 0.8rem; color: #333; }
 .lang-dropdown a:hover { background: #f0f7ff; text-decoration: none; }
@@ -369,6 +368,7 @@ html[dir="rtl"] .nav-menu {
 }
 
 @media (max-width: 1100px) {
+  .logo img { width: 130px !important; height: auto; }
     html[dir="rtl"] .nav-menu { margin: 0; }
     .nav-menu {
         background: #002f3b;
@@ -381,19 +381,19 @@ html[dir="rtl"] .nav-menu {
     .dropdown-expand,
     .dropdown-expand[aria-expanded="true"] { color: #fff; }
     .nav-contact { margin-right: 0; }
-    .nav-utility { gap: 0.25rem; margin-inline-start: auto; }
-    .nav-utility-link { flex-basis: clamp(2rem, 10vw, 2.75rem); width: clamp(2rem, 10vw, 2.75rem); height: 2.75rem; font-size: 0.95rem; }
+    .nav-utility { gap: 0; margin-inline-start: auto; }
+    .nav-utility-link { flex-basis: clamp(1.75rem, 8vw, 2.4rem); width: clamp(1.75rem, 8vw, 2.4rem); height: 2.75rem; font-size: 0.95rem; }
     .nav-pricing { font-size: 1.05rem; }
     .nav-person,
     .nav-search-toggle { font-size: 0.9rem; }
-    .lang-switch { margin: 0; }
-    .lang-current { min-height: 2.75rem; padding: 0 0.2rem; font-size: clamp(0.58rem, 2.7vw, 0.68rem); }
+    .lang-switch { flex-basis: clamp(1.75rem, 8vw, 2.4rem); width: clamp(1.75rem, 8vw, 2.4rem); height: 2.75rem; margin: 0; }
+    .lang-current { min-height: 0; font-size: 0.95rem; }
   }
 
   @media (max-width: 480px) {
-    .logo img { width: 130px !important; height: auto; }
+    .logo img { width: 112px !important; height: auto; }
   }
 
   @media (max-width: 360px) {
-    .logo img { width: 96px !important; }
+    .logo img { width: 84px !important; }
 }
