@@ -21,7 +21,7 @@ SafeKit est indépendant du matériel et fonctionne avec n'importe quel serveur 
 
 ### Cluster logiciel simple et économique pour un éditeur logiciel
 
-De [nombreux éditeurs de logiciel](</fr/#safekit-use-cases>) ajoutent une option de haute disponibilité logicielle à leur catalogue avec SafeKit. Le produit SafeKit est choisi car c'est un logiciel simple et économique pour mettre en cluster des applications critiques.
+De [nombreux éditeurs de logiciel](</fr/product/#safekit-use-cases>) ajoutent une option de haute disponibilité logicielle à leur catalogue avec SafeKit. Le produit SafeKit est choisi car c'est un logiciel simple et économique pour mettre en cluster des applications critiques.
 
 Si vous êtes éditeur d'un logiciel, vous pouvez profiter de notre offre logicielle OEM pour embarquer la haute disponibilité avec votre application. Le logiciel SafeKit ne nécessite pas de modifier votre application critique.
 
@@ -29,9 +29,9 @@ Si vous êtes éditeur d'un logiciel, vous pouvez profiter de notre offre logici
 
 Le logiciel SafeKit offre deux modules génériques pour réaliser un cluster logiciel : le module miroir et le module ferme.
 
-Le [module miroir](</fr/#safekit-mirror-cluster>) met en œuvre une réplication de données temps réel et continue dans un cluster actif-passif. Il est adapté à des applications manipulant des bases de données.
+Le [module miroir](</fr/product/#safekit-mirror-cluster>) met en œuvre une réplication de données temps réel et continue dans un cluster actif-passif. Il est adapté à des applications manipulant des bases de données.
 
-Le [module ferme](</fr/#safekit-farm-cluster>) met en œuvre un load balancing dans un cluster actif actif. Il est adapté aux applications de type services web.
+Le [module ferme](</fr/product/#safekit-farm-cluster>) met en œuvre un load balancing dans un cluster actif actif. Il est adapté aux applications de type services web.
 
 Et vous pouvez combiner les modules.
 

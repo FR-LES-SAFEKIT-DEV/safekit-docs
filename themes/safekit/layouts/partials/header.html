@@ -14,6 +14,7 @@
             {{ with $currentPage.Section }}{{ $currentSection = . }}{{ end }}
             {{ if not $currentSection }}{{ $currentSection = index (split (strings.TrimPrefix "/" $currentPage.RelPermalink) "/") 0 }}{{ end }}
             {{ if eq $currentSection "docs" }}{{ $currentSection = "resources" }}{{ end }}
+            <a href="{{ "product/" | relLangURL }}" class="nav-brand{{ if eq $currentSection "product" }} active{{ end }}">Product</a>
             {{ range $sections }}
                 {{ $sectionName := . }}
                 {{ $label := index $labels $sectionName }}

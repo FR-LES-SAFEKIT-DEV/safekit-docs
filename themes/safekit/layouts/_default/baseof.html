@@ -10,6 +10,7 @@
         <script>document.write('<base href="' + location.origin + '{{ strings.TrimSuffix "404.html" (urls.Parse .Permalink).Path }}">');</script>
         {{ end }}
             {{ if or (eq .Kind "404") .Params.noindex }}<meta name="robots" content="noindex">{{ end }}
+            {{ with .Params.redirectURL }}<meta http-equiv="refresh" content="0; url={{ . }}">{{ end }}
     <title>{{ .Title }} - SafeKit</title>
     {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     <link rel="icon" href="{{ "wp-content/themes/safekit/computer-safekit-icon-svg.svg" | relURL }}" type="image/svg+xml">
