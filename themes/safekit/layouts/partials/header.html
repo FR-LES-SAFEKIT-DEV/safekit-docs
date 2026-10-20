@@ -524,6 +524,8 @@
         }}
         {{ $utility := index $utilityLabels .Site.Language.Lang | default (index $utilityLabels "en") }}
         {{ $languageCodes := dict "en" "EN" "fr" "FR" "ja" "JA" "zh-hans" "ZH" "ar" "AR" "de" "DE" "es" "ES" "it" "IT" "ko" "KO" "pt-br" "BR" "pt-pt" "PT" "nl" "NL" }}
+        {{ $menuLabels := dict "en" "Open menu" "fr" "Ouvrir le menu" "ja" "メニューを開く" "zh-hans" "打开菜单" "ar" "فتح القائمة" "de" "Menü öffnen" "es" "Abrir menú" "it" "Apri menu" "ko" "메뉴 열기" "pt-br" "Abrir menu" "pt-pt" "Abrir menu" "nl" "Menu openen" }}
+        {{ $menuLabel := index $menuLabels .Site.Language.Lang | default (index $menuLabels "en") }}
         {{ $trialLabels := dict "en" "SafeKit free trial" "fr" "Essai gratuit SafeKit" "ja" "SafeKit 無料トライアル" "zh-hans" "SafeKit 免费试用" "ar" "الإصدار التجريبي المجاني من SafeKit" "de" "Kostenlose SafeKit-Testversion" "es" "Prueba gratuita de SafeKit" "it" "Prova gratuita di SafeKit" "ko" "SafeKit 무료 평가판" "pt-br" "Avaliação gratuita do SafeKit" "pt-pt" "Avaliação gratuita do SafeKit" "nl" "Gratis SafeKit-proefversie" }}
         {{ $trialLabel := index $trialLabels .Site.Language.Lang | default (index $trialLabels "en") }}
         {{ $supportLabels := dict "en" "SafeKit AI support" "fr" "Assistance IA SafeKit" "ja" "SafeKit AIサポート" "zh-hans" "SafeKit AI 支持" "ar" "دعم SafeKit بالذكاء الاصطناعي" "de" "SafeKit AI-Support" "es" "Asistencia de IA de SafeKit" "it" "Supporto IA SafeKit" "ko" "SafeKit AI 지원" "pt-br" "Suporte de IA do SafeKit" "pt-pt" "Suporte de IA SafeKit" "nl" "SafeKit AI-ondersteuning" }}
@@ -549,7 +551,7 @@
                 </div>
             </div>
             {{ end }}
-            <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></label>
+            <label for="nav-toggle" class="nav-toggle-label"><span class="visually-hidden">{{ $menuLabel }}</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></label>
         </div>
     </nav>
     <dialog class="site-search-dialog" id="site-search-dialog" aria-labelledby="site-search-title">

@@ -70,7 +70,7 @@ SafeKit se différencie des clusters traditionnels pour {{ .Get "app" }} grâce 
 
   * **Réplication synchrone avec zéro perte de données :** SafeKit implémente une réplication 100 % synchrone, garantissant une intégrité totale des données pour les applications transactionnelles. En cas de défaillance, il n'y a **aucune perte de données (RPO=0)**. De plus, SafeKit est capable de répliquer non seulement les bases de données de {{ .Get "app" }}, mais aussi **tous les autres dossiers de données** (journaux, fichiers de configuration, etc.), assurant ainsi le miroir complet de tout l'environnement.
   * **Clustering simplifié à 2 nœuds :** Contrairement aux clusters standards qui nécessitent souvent un « témoin » (un 3e nœud, disque ou partage de fichiers) pour maintenir un quorum, SafeKit offre une haute disponibilité complète avec seulement deux serveurs redondants, réduisant ainsi les coûts et la complexité de l'infrastructure.  
-[En savoir plus sur notre mécanisme de heartbeat et de quorum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+[En savoir plus sur notre mécanisme de heartbeat et de quorum](/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **Gestion unifiée :** Les administrateurs peuvent gérer le basculement de {{ .Get "app" }}, la réplication des données et la supervision via une console SafeKit unique. Cela rend la haute disponibilité accessible aux équipes sans expertise spécialisée en administration de cluster.
   * **Modules de surveillance personnalisés (Checkers) :** SafeKit va au-delà de la simple surveillance des services de base ; il **propose des checkers** pour surveiller l'état de santé du processus de {{ .Get "app" }}. Le système est hautement extensible, permettant l'ajout de checkers personnalisés adaptés à votre environnement.
 
@@ -103,7 +103,7 @@ SafeKit est une solution de haute disponibilité polyvalente **compatible à la 
 
 SafeKit propose également des **clusters de type "Farm"** avec des fonctionnalités natives de **répartition de charge réseau et de basculement** (Network Load Balancing and Failover) pour les applications sans état (stateless) telles que les **serveurs Web**.
 
-💡 [Explorez la liste complète des solutions de haute disponibilité supportées ici.](/solutions/)
+💡 [Explorez la liste complète des solutions de haute disponibilité supportées ici.](/fr/solutions/)
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-fr app=%q  %%}}" (.Get "app")) }}

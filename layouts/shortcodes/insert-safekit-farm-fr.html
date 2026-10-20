@@ -14,7 +14,7 @@
 
 Sur la figure précédente, l'application {{ .Get "app" }} s'exécute sur les 3 serveurs (3 est un exemple, cela peut être 2 ou plus). Les utilisateurs sont connectés à une adresse IP virtuelle.
 
-L'[adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/) est configurée localement sur chaque serveur du cluster en mode farm.  
+L'[adresse IP virtuelle](/fr/best-practises/how-a-virtual-ip-address-works/) est configurée localement sur chaque serveur du cluster en mode farm.
 Le trafic entrant vers l'adresse IP virtuelle est reçu par tous les serveurs et réparti entre eux par un filtre réseau situé dans le noyau (kernel) de chaque serveur.
 
 SafeKit détecte les pannes matérielles et logicielles, reconfigure les filtres réseau en cas de défaillance, et propose des scripts de vérification (checkers) et de reprise applicative configurables.

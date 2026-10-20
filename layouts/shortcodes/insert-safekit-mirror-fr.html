@@ -8,13 +8,13 @@
 
 ### Étape 1. Réplication en temps réel {#step1}
 
-Le serveur 1 (PRIM) exécute l'application {{ .Get "app" }}. Les clients sont connectés à une [adresse IP virtuelle](/best-practises/how-a-virtual-ip-address-works/). SafeKit réplique en temps réel via le réseau les modifications apportées à l'intérieur des fichiers.
+Le serveur 1 (PRIM) exécute l'application {{ .Get "app" }}. Les clients sont connectés à une [adresse IP virtuelle](/fr/best-practises/how-a-virtual-ip-address-works/). SafeKit réplique en temps réel via le réseau les modifications apportées à l'intérieur des fichiers.
 
 
 ![Réplication de fichiers au niveau octet dans un cluster miroir {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-La réplication est [synchrone](/best-practises/synchronous-replication-vs-asynchronous-replication/), sans perte de données en cas de panne, contrairement à la réplication asynchrone.
+La réplication est [synchrone](/fr/best-practises/synchronous-replication-vs-asynchronous-replication/), sans perte de données en cas de panne, contrairement à la réplication asynchrone.
 
 Il vous suffit de configurer les noms des répertoires à répliquer dans SafeKit. Il n'y a aucun prérequis sur l'organisation des disques. Les répertoires peuvent être situés sur le disque système.
 
@@ -67,7 +67,7 @@ La **console web SafeKit** offre une interface intuitive pour orchestrer la haut
   * **Checkers (Vérificateurs) :** surveillez l'état de santé de l'application et déclenchez une récupération automatique si une défaillance de processus est détectée.
 
 
-Le cluster SafeKit inclut un vérificateur de split-brain dédié pour résoudre les problèmes d'isolement réseau sans nécessiter de troisième machine témoin (witness) ou de réseau de heartbeat supplémentaire. En savoir plus sur le [heartbeat, le basculement et le quorum dans un cluster](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+Le cluster SafeKit inclut un vérificateur de split-brain dédié pour résoudre les problèmes d'isolement réseau sans nécessiter de troisième machine témoin (witness) ou de réseau de heartbeat supplémentaire. En savoir plus sur le [heartbeat, le basculement et le quorum dans un cluster](/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
 
 ### Comment surveiller un cluster miroir SafeKit pour {{ .Get "app" }} ? {#safekit-mirror-cluster-monitoring}
 

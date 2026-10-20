@@ -22,7 +22,8 @@ header { position: sticky; top: 0; z-index: 2000; background: #fff; }
 .userguide-page header { position: static; }
 .navbar { display: flex; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0.5rem 0.75rem; border-bottom: 2px solid #0066cc; position: relative; }
 .logo { display: flex; align-items: center; }
-.logo img { width: 96px; height: auto; }
+.logo img { width: 150px; height: auto; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .nav-brand { font-size: 0.9rem; font-weight: 500; color: #333; text-decoration: none; padding: 0.75rem 0.8rem; white-space: nowrap; }
 .nav-brand:hover { text-decoration: none; color: #0066cc; background: #f0f7ff; }
 .nav-brand.active { color: #0066cc; }
@@ -230,6 +231,10 @@ article a.btn-download:hover { background: #0052a3; text-decoration: none !impor
     .lang-switch .lang-dropdown { top: 100%; right: 0; max-height: calc(100dvh - 4rem); overflow-y: auto; }
     .button-row { flex-direction: column; }
     .btn-action { text-align: center; }
+}
+
+@media (max-width: 1400px) {
+  .logo img { width: 96px; }
 }
 
 @media (max-width: 860px) {
