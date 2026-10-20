@@ -51,12 +51,10 @@ header { position: sticky; top: 0; z-index: 2000; background: #fff; }
 
 /* --- Header utility controls --- */
 .nav-utility { display: flex; flex: 0 0 auto; align-items: center; gap: 0.2rem; margin-inline-start: auto; }
-.nav-utility-link { box-sizing: border-box; display: inline-flex; flex: 0 0 1.75rem; align-items: center; justify-content: center; width: 1.75rem; height: 2rem; padding: 0; border: 0; background: transparent; color: #fff !important; font-size: 1.1rem; line-height: 1; text-decoration: none; cursor: pointer; }
+.nav-utility-link { box-sizing: border-box; display: inline-flex; flex: 0 0 1.75rem; align-items: center; justify-content: center; width: 1.75rem; height: 2rem; padding: 0; border: 0; background: transparent; color: #fff !important; line-height: 1; text-decoration: none; cursor: pointer; }
 .nav-utility-link:hover { border-radius: 50%; background: rgba(255, 255, 255, 0.12); text-decoration: none; }
-.nav-pricing { font-size: 1.15rem; font-weight: 600; }
-.nav-person { font-size: 1rem; }
-.nav-person svg { display: block; width: 1rem; height: 1rem; fill: #ff5638; }
-.nav-search-toggle { font-size: 1rem; }
+.nav-utility-link svg { display: block; width: 1rem; height: 1rem; }
+.nav-person svg { fill: #fff; }
 .nav-utility-link:focus-visible,
 .site-search-close:focus-visible { outline: 2px solid #ff5638; outline-offset: 3px; }
 .site-search-close svg { width: 1.35rem; height: 1.35rem; }
@@ -382,10 +380,7 @@ html[dir="rtl"] .nav-menu {
     .dropdown-expand[aria-expanded="true"] { color: #fff; }
     .nav-contact { margin-right: 0; }
     .nav-utility { gap: 0; margin-inline-start: auto; }
-    .nav-utility-link { flex-basis: clamp(1.75rem, 8vw, 2.4rem); width: clamp(1.75rem, 8vw, 2.4rem); height: 2.75rem; font-size: 0.95rem; }
-    .nav-pricing { font-size: 1.05rem; }
-    .nav-person,
-    .nav-search-toggle { font-size: 0.9rem; }
+    .nav-utility-link { flex-basis: clamp(1.75rem, 8vw, 2.4rem); width: clamp(1.75rem, 8vw, 2.4rem); height: 2.75rem; }
     .lang-switch { flex-basis: clamp(1.75rem, 8vw, 2.4rem); width: clamp(1.75rem, 8vw, 2.4rem); height: 2.75rem; margin: 0; }
     .lang-current { min-height: 0; font-size: 0.95rem; }
   }

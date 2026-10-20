@@ -1,7 +1,6 @@
 ---
 title: "SafeKit: High Availability Software for Windows and Linux, Without a SAN"
 canonical: "https://safekit.eviden.com/"
-aliases: ["/home/"]
 description: "SafeKit is the all-in-one SANless HA software for Windows & Linux. Get real-time synchronous replication, automatic failover, and load balancing in one simple, cost-effective package. Start your 30-day free trial."
 category: "home"
 lang: "en"
