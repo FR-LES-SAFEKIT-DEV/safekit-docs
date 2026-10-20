@@ -15,7 +15,7 @@ topics: "Support IA de niveau 1 gratuit, Support et Maintenance Standard, Progra
 
   1. Ouvrez un assistant IA tel que Claude, ChatGPT, GitHub Copilot ou tout autre LLM.
   2. Collez le contenu de [llms.txt](</llms.txt>) dans le chat.
-  3. Pour vérifier que le LLM a correctement traité la base de connaissances SafeKit, posez la question : `What is the default value of maxloop in SafeKit?`
+  3. Pour vérifier que le LLM a correctement traité la base de connaissances SafeKit, posez la question : `Quelle est la valeur par défaut de maxloop dans SafeKit ?`
   4. La bonne réponse est `3`.
   5. Vous pouvez ensuite poser des questions telles que : 
      * Questions commerciales et d'avant-vente
