@@ -9,8 +9,13 @@
 
 ## Home
 
-- [SafeKit: All-in-One SANless High Availability & Application Clustering Software](https://safekit.eviden.com/)
-  Topics: What is SafeKit?, Why Choose SafeKit for Simple and Cost-Effective High Availability?, SafeKit Use Cases, Why an All-in-One SANless High Availability Product is Essential?, Choosing Your High Availability Strategy: VM HA vs. Application HA, SafeKit High Availability Limitations, SafeKit Technical Failover Tutorials & Demos, How the SafeKit mirror cluster works with Windows/Linux?, How the SafeKit cluster in farm mode works with Windows/Linux?, Comparison of SafeKit with Traditional High Availability (HA) Clusters, Architectural Differentiators: SafeKit Software-Defined vs. Hardware HA Clusters, Key Differentiators of the SafeKit Mirror Cluster, Key Differentiators of the SafeKit Farm Cluster, VM High Availability: SafeKit's SAN-Less vs. Hyper-V/VMware HA, SafeKit HA Free Trial & Technical Documentation, SafeKit Application Module Library: Ready-to-Use HA Solutions
+- [SafeKit: High Availability Software for Windows and Linux, Without a SAN](https://safekit.eviden.com/)
+  Topics: What SafeKit Does, Choose Your Protection Level, Ready-Made Modules For Your Applications, Customer Use Cases, Simple, Predictable Pricing, Know The Limits Before You Start, SafeKit High Availability Navigation Hub
+
+## Product
+
+- [SafeKit: All-in-One SANless High Availability & Application Clustering Software](https://safekit.eviden.com/product/)
+  Topics: What is SafeKit?, SafeKit High Availability Navigation Hub, Why Choose SafeKit for Simple and Cost-Effective High Availability?, SafeKit Use Cases, Why an All-in-One SANless High Availability Product is Essential?, Choosing Your High Availability Strategy: VM HA vs. Application HA, SafeKit High Availability Limitations, SafeKit Technical Failover Tutorials & Demos, How the SafeKit mirror cluster works with Windows/Linux?, How the SafeKit cluster in farm mode works with Windows/Linux?, Comparison of SafeKit with Traditional High Availability (HA) Clusters, Architectural Differentiators: SafeKit Software-Defined vs. Hardware HA Clusters, Key Differentiators of the SafeKit Mirror Cluster, Key Differentiators of the SafeKit Farm Cluster, VM High Availability: SafeKit's SAN-Less vs. Hyper-V/VMware HA, SafeKit HA Free Trial & Technical Documentation, SafeKit Application Module Library: Ready-to-Use HA Solutions
 
 ## Use Cases
 
@@ -265,7 +270,7 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 - [SafeKit High Availability Training: Free Online Certification Program](https://safekit.eviden.com/resources/safekit-on-line-training/)
   Topics: How to Access the Training Platform?, Get SafeKit 8 Training Materials
 
-- [SafeKit Support](https://safekit.eviden.com/resources/safekit-support/)
+- [SafeKit AI & Support](https://safekit.eviden.com/resources/safekit-support/)
   Topics: Free AI Level 1 Support, Standard Support & Maintenance, Free Certification & Training Program
 
 - [SafeKit User's Guide 8.2](https://safekit.eviden.com/wp-content/uploads/downloads_safekit/version-82/safekituserguidehtml-github/userguide/safekituserguideen.htm)
