@@ -6,12 +6,14 @@
 
   var munchkinId = "247-MBJ-716";
   var formId = 1624;
-  var recaptchaSiteKey = "6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R";
-  var recaptchaLastUserFingerprint = "";
+  var recaptchaSiteKey = "6LfRM6keAAAAACnaog4Sl9nzvzHupd74YADwTAvp";
+    var recaptchaLastUserFingerprint = "";
   var formApi = null;
   var recaptchaApiReady = false;
   var recaptchaReady = false;
   var recaptchaWidgetId = null;
+  var validationLocked = false;
+  var replayingValidatedSubmit = false;
   var submitButton = null;
   var errorElement = document.getElementById("contactMarketoSubmitError");
   var params = new URLSearchParams(window.location.search);
@@ -239,8 +241,6 @@
         },
         "expired-callback": function () {
           recaptchaReady = false;
-          recaptchaLastUserFingerprint = "";
-          if (formApi) formApi.addHiddenFields({ reCAPTCHALastUserFingerprint: "" });
           if (formApi) formApi.submittable(false);
           if (submitButton) submitButton.disabled = true;
         },
@@ -301,24 +301,32 @@
 
     form.onValidate(function (nativeValid) {
       if (!nativeValid) return;
+      if (replayingValidatedSubmit) {
+        replayingValidatedSubmit = false;
+        validationLocked = false;
+        return;
+      }
+      if (validationLocked) return;
       if (!validateBusinessEmail()) return;
       if (!recaptchaReady || recaptchaWidgetId === null || !window.grecaptcha) {
-        form.submittable(false);
         showError("Please complete the reCAPTCHA checkbox before submitting.");
         return;
       }
 
       var recaptchaResponse = window.grecaptcha.getResponse(recaptchaWidgetId);
       if (!recaptchaResponse) {
-        recaptchaReady = false;
-        form.submittable(false);
         showError("Please complete the reCAPTCHA checkbox before submitting.");
         return;
       }
 
+      validationLocked = true;
+      if (submitButton) submitButton.disabled = true;
       clearError();
       recaptchaLastUserFingerprint = recaptchaResponse;
       form.addHiddenFields({ reCAPTCHALastUserFingerprint: recaptchaResponse });
+      form.submittable(true);
+      replayingValidatedSubmit = true;
+      form.submit();
     });
 
     form.onSuccess(function (values, followUpUrl) {
