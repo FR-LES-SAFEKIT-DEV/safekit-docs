@@ -9,9 +9,9 @@
   var recaptchaSiteKey = "6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R";
   var recaptchaLastUserFingerprint = "";
   var formApi = null;
+  var recaptchaApiReady = false;
   var recaptchaReady = false;
-  var validationLocked = false;
-  var replayingValidatedSubmit = false;
+  var recaptchaWidgetId = null;
   var submitButton = null;
   var errorElement = document.getElementById("contactMarketoSubmitError");
   var params = new URLSearchParams(window.location.search);
@@ -217,30 +217,55 @@
     return true;
   }
 
-  function executeRecaptcha() {
-    return new Promise(function (resolve, reject) {
-      if (!window.grecaptcha) {
-        reject(new Error("The reCAPTCHA library is not available."));
-        return;
-      }
-      window.grecaptcha.ready(function () {
-        Promise.all([
-          window.grecaptcha.execute(recaptchaSiteKey, { action: "form" }),
-          window.grecaptcha.execute(recaptchaSiteKey, { action: "form" })
-        ]).then(resolve, reject);
+  function renderRecaptcha() {
+    if (!recaptchaApiReady || !formApi || recaptchaWidgetId !== null || !window.grecaptcha) return;
+
+    var marketoElement = formApi.getFormElem()[0];
+    var buttonRow = marketoElement.querySelector(".mktoButtonRow");
+    var recaptchaContainer = document.createElement("div");
+    recaptchaContainer.id = "contactMarketoRecaptcha";
+    recaptchaContainer.className = "contact-marketo-recaptcha";
+    if (buttonRow) marketoElement.insertBefore(recaptchaContainer, buttonRow);
+    else marketoElement.appendChild(recaptchaContainer);
+
+    try {
+      recaptchaWidgetId = window.grecaptcha.render(recaptchaContainer, {
+        sitekey: recaptchaSiteKey,
+        callback: function () {
+          recaptchaReady = true;
+          if (formApi) formApi.submittable(true);
+          if (submitButton) submitButton.disabled = false;
+          clearError();
+        },
+        "expired-callback": function () {
+          recaptchaReady = false;
+          recaptchaLastUserFingerprint = "";
+          if (formApi) formApi.addHiddenFields({ reCAPTCHALastUserFingerprint: "" });
+          if (formApi) formApi.submittable(false);
+          if (submitButton) submitButton.disabled = true;
+        },
+        "error-callback": function () {
+          recaptchaReady = false;
+          if (formApi) formApi.submittable(false);
+          if (submitButton) submitButton.disabled = true;
+          showError("The security check failed to load. Please reload the page and try again.");
+        }
       });
-    });
+      if (submitButton) submitButton.disabled = true;
+      formApi.submittable(false);
+    } catch (error) {
+      showError("The security check could not be initialized. Please reload the page and try again.");
+      console.error("SafeKit contact reCAPTCHA render failed:", error);
+    }
   }
 
   function loadRecaptcha() {
-    window.grecaptchaListeners_ready = function () {
-      recaptchaReady = true;
-      if (submitButton) submitButton.disabled = false;
-      if (formApi) formApi.submittable(true);
-      clearError();
+    window.contactMarketoRecaptchaLoaded = function () {
+      recaptchaApiReady = true;
+      renderRecaptcha();
     };
     var script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js?render=" + recaptchaSiteKey + "&onload=grecaptchaListeners_ready";
+    script.src = "https://www.google.com/recaptcha/api.js?onload=contactMarketoRecaptchaLoaded&render=explicit";
     script.async = true;
     script.onerror = function () {
       showError("The security check could not be loaded. Please reload the page and try again.");
@@ -269,40 +294,31 @@
     form.vals(Object.assign(configuredValues, initialValues));
     form.addHiddenFields({ lastFormReferrer: document.location.href });
     ["preferredLanguage", "enquiryType", "interestedIn", "SF_Job_Title__c", "customerIndustry", "Salutation"].forEach(hideFieldRow);
-    form.submittable(recaptchaReady);
-    if (submitButton) submitButton.disabled = !recaptchaReady;
+    form.submittable(false);
+    if (submitButton) submitButton.disabled = true;
     translateFormLabels();
+    renderRecaptcha();
 
     form.onValidate(function (nativeValid) {
       if (!nativeValid) return;
-      if (replayingValidatedSubmit) {
-        replayingValidatedSubmit = false;
-        validationLocked = false;
-        return;
-      }
-      if (validationLocked) return;
       if (!validateBusinessEmail()) return;
-      if (!recaptchaReady) {
-        showError("The security check is still loading. Please try again in a moment.");
+      if (!recaptchaReady || recaptchaWidgetId === null || !window.grecaptcha) {
+        form.submittable(false);
+        showError("Please complete the reCAPTCHA checkbox before submitting.");
         return;
       }
 
-      validationLocked = true;
-      if (submitButton) submitButton.disabled = true;
+      var recaptchaResponse = window.grecaptcha.getResponse(recaptchaWidgetId);
+      if (!recaptchaResponse) {
+        recaptchaReady = false;
+        form.submittable(false);
+        showError("Please complete the reCAPTCHA checkbox before submitting.");
+        return;
+      }
+
       clearError();
-      executeRecaptcha().then(function (tokens) {
-        recaptchaLastUserFingerprint = tokens[1];
-        form.addHiddenFields({ reCAPTCHALastUserFingerprint: tokens[0] });
-        form.submittable(true);
-        replayingValidatedSubmit = true;
-        form.submit();
-      }).catch(function (error) {
-        validationLocked = false;
-        form.submittable(true);
-        if (submitButton) submitButton.disabled = false;
-        showError("The security check failed. Please try again.");
-        console.error("SafeKit contact reCAPTCHA failed:", error);
-      });
+      recaptchaLastUserFingerprint = recaptchaResponse;
+      form.addHiddenFields({ reCAPTCHALastUserFingerprint: recaptchaResponse });
     });
 
     form.onSuccess(function (values, followUpUrl) {

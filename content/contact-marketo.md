@@ -54,6 +54,10 @@ sitemap:
   right: auto !important;
 }
 
+.contact-marketo-recaptcha {
+  margin: 1rem 0;
+}
+
 .contact-marketo-error {
   color: #b42318;
   margin: 1rem auto;
