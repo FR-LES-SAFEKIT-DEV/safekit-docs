@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/"
 description: "SafeKit is de alles-in-één SANless-software voor hoge beschikbaarheid op Windows en Linux. Profiteer van realtime synchrone replicatie, automatische failover en load balancing in één eenvoudig, kosteneffectief pakket. Start uw gratis proefperiode van 30 dagen."
 category: "home"
 lang: "nl"
-topics: "Wat SafeKit doet, Kies uw beschermingsniveau, Kant-en-klare modules voor uw toepassingen, Klanttoepassingen, Eenvoudige, voorspelbare prijzen, Ken de beperkingen voordat u begint, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
+topics: "Wat SafeKit doet, Kies uw beschermingsniveau, Kant-en-klare modules voor uw toepassingen, Klanttoepassingen, Eenvoudige, voorspelbare prijzen, Ken de beperkingen voordat u begint, SafeKit-videobibliotheek, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
 # SafeKit: hoge beschikbaarheidssoftware voor Windows en Linux, zonder SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
@@ -78,5 +78,7 @@ SafeKit is ontworpen voor eenvoud, niet voor elke situatie. Het is geschikt voor
 Voor grotere volumes zijn gedeelde opslag of een andere aanpak geschikter.
 
 <a class="btn-download" href="/nl/product/#safekit-ha-limitations">Bekijk alle beperkingen ›</a>
+
+{{%  insert-safekit-videos-table-nl  %}}
 
 {{%  insert-safekit-hub-nl  %}}

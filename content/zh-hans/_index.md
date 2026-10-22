@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/"
 description: "SafeKit 是适用于 Windows 和 Linux 的一体化无 SAN 高可用性软件。通过一个简单、经济的方案实现实时同步复制、自动故障切换和负载均衡。立即开始 30 天免费试用。"
 category: "home"
 lang: "zh-hans"
-topics: "SafeKit 的功能、选择保护级别、适用于应用程序的即用模块、客户应用案例、简单透明的价格、开始前了解限制、🔍 SafeKit 高可用导航中心"
+topics: "SafeKit 的功能、选择保护级别、适用于应用程序的即用模块、客户应用案例、简单透明的价格、开始前了解限制、SafeKit 视频库、🔍 SafeKit 高可用导航中心"
 ---
 
 # SafeKit：适用于 Windows 和 Linux 的无 SAN 高可用性软件 {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
@@ -78,5 +78,7 @@ SafeKit 以简洁为设计目标，并非适用于所有场景。它适合复制
 对于更大的数据量，共享存储或其他方案可能更合适。
 
 <a class="btn-download" href="/zh-hans/product/#safekit-ha-limitations">查看完整限制列表 ›</a>
+
+{{%  insert-safekit-videos-table-zh-hans  %}}
 
 {{%  insert-safekit-hub-zh-hans  %}}

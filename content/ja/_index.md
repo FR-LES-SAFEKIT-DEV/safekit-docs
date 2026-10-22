@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/"
 description: "SafeKitは、WindowsとLinux向けのオールインワンSANレス高可用性ソフトウェアです。リアルタイム同期レプリケーション、自動フェイルオーバー、負荷分散をシンプルで費用対効果の高いパッケージで提供します。30日間の無料トライアルをお試しください。"
 category: "home"
 lang: "ja"
-topics: "SafeKitの機能、保護レベルの選択、アプリケーション向けのすぐに使えるモジュール、導入事例、シンプルで分かりやすい価格、導入前に確認する制限事項、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SafeKitの機能、保護レベルの選択、アプリケーション向けのすぐに使えるモジュール、導入事例、シンプルで分かりやすい価格、導入前に確認する制限事項、SafeKit 動画ライブラリ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # SafeKit：SAN不要のWindows/Linux向け高可用性ソフトウェア {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
@@ -78,5 +78,7 @@ SafeKitはシンプルさを重視しており、すべてのケースに適す�
 大容量の場合は、共有ストレージや別の方式が適しています。
 
 <a class="btn-download" href="/ja/product/#safekit-ha-limitations">制限事項の一覧を見る ›</a>
+
+{{%  insert-safekit-videos-table-ja  %}}
 
 {{%  insert-safekit-hub-ja  %}}

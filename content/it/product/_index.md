@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/product/"
 description: 'SafeKit è il software di alta disponibilità (HA) SANless "all-in-one" per Windows e Linux. Ottieni replica sincrona in tempo reale, failover automatico e bilanciamento del carico in un unico pacchetto semplice ed economico. Inizia la tua prova gratuita di 30 giorni.'
 category: "product"
 lang: "it"
-topics: "Cos'è SafeKit?, 🔍 Hub di Navigazione SafeKit High Availability, Perché scegliere SafeKit per un'alta disponibilità semplice ed economica?, Perché un prodotto di High Availability SANless All-in-One è essenziale?, Scegliere la strategia di alta disponibilità: VM HA vs. Application HA, Limitazioni dell'Alta Disponibilità di SafeKit, Tutorial tecnici e demo sul failover di SafeKit, Confronto di SafeKit con i Cluster di Alta Disponibilità (HA) Tradizionali, SafeKit Risorse, Download e Documentazione sulla High Availability, Prova gratuita e documentazione tecnica di SafeKit HA, Libreria dei moduli applicativi SafeKit: soluzioni HA pronte all’uso"
+topics: "Cos'è SafeKit?, 🔍 Hub di Navigazione SafeKit High Availability, Perché scegliere SafeKit per un'alta disponibilità semplice ed economica?, Perché un prodotto di High Availability SANless All-in-One è essenziale?, Scegliere la strategia di alta disponibilità: VM HA vs. Application HA, Limitazioni dell'Alta Disponibilità di SafeKit, Raccolta di video SafeKit, Confronto di SafeKit con i Cluster di Alta Disponibilità (HA) Tradizionali, SafeKit Risorse, Download e Documentazione sulla High Availability, Prova gratuita e documentazione tecnica di SafeKit HA, Libreria dei moduli applicativi SafeKit: soluzioni HA pronte all’uso"
 ---
 
 # SafeKit: Software All-in-One per High Availability SANless e Application Clustering {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
@@ -34,7 +34,7 @@ SafeKit protegge le applicazioni da:
 
 {{%  insert-safekit-usage-it  %}}
 
-{{%  insert-safekit-videos-it  %}}
+{{%  insert-safekit-videos-table-it  %}}
 
 {{%  insert-safekit-differentiators-it  %}}
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/"
 description: "SafeKit est le logiciel de haute disponibilité SANless tout-en-un pour Windows et Linux. Profitez de la réplication synchrone en temps réel, du basculement automatique et de la répartition de charge dans une solution simple et économique. Commencez votre essai gratuit de 30 jours."
 category: "home"
 lang: "fr"
-topics: "Fonctionnement de SafeKit, Choisir votre niveau de protection, Modules prêts à l'emploi pour vos applications, Cas d’usage clients, Tarifs simples et prévisibles, Connaître les limites avant de commencer, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Fonctionnement de SafeKit, Choisir votre niveau de protection, Modules prêts à l'emploi pour vos applications, Cas d’usage clients, Tarifs simples et prévisibles, Connaître les limites avant de commencer, Bibliothèque de vidéos SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
 # SafeKit : logiciel de haute disponibilité pour Windows et Linux, sans SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
@@ -85,5 +85,7 @@ Pour des volumes plus importants, un stockage partagé ou une autre approche ser
 
 <a class="btn-download" href="/fr/product/#safekit-ha-limitations">Voir la liste complète des limites ›</a>
 
+
+{{%  insert-safekit-videos-table-fr  %}}
 
 {{%  insert-safekit-hub-fr  %}}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/product/"
 description: "SafeKit은 Windows 및 Linux를 위한 올인원 SANless HA 소프트웨어입니다. 실시간 동기식 복제, 자동 장애 조치(failover), 부하 분산(load balancing) 기능을 하나의 단순하고 비용 효율적인 패키지로 제공받으세요. 지금 30일 무료 체험판을 시작해 보세요."
 category: "product"
 lang: "ko"
-topics: "SafeKit이란 무엇인가요?, 🔍 SafeKit 고가용성 탐색 허브, 단순하고 비용 효율적인 고가용성을 위해 SafeKit을 선택해야 하는 이유는 무엇입니까?, 올인원 SANless 고가용성(HA) 제품이 필수적인 이유는 무엇인가요?, 고가용성 전략 선택: VM HA vs. 애플리케이션 HA, SafeKit 고가용성(HA) 제한 사항, SafeKit 기술 장애 조치(Failover) 튜토리얼 및 데모, SafeKit과 기존 고가용성(HA) 클러스터 비교, SafeKit HA 무료 체험판 및 기술 문서, SafeKit 애플리케이션 모듈 라이브러리: 즉시 사용 가능한 HA 솔루션"
+topics: "SafeKit이란 무엇인가요?, 🔍 SafeKit 고가용성 탐색 허브, 단순하고 비용 효율적인 고가용성을 위해 SafeKit을 선택해야 하는 이유는 무엇입니까?, 올인원 SANless 고가용성(HA) 제품이 필수적인 이유는 무엇인가요?, 고가용성 전략 선택: VM HA vs. 애플리케이션 HA, SafeKit 고가용성(HA) 제한 사항, SafeKit 동영상 라이브러리, SafeKit과 기존 고가용성(HA) 클러스터 비교, SafeKit HA 무료 체험판 및 기술 문서, SafeKit 애플리케이션 모듈 라이브러리: 즉시 사용 가능한 HA 솔루션"
 ---
 
 # SafeKit: 올인원 SANless 고가용성(HA) 및 애플리케이션 클러스터링 소프트웨어 {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
@@ -34,7 +34,7 @@ SafeKit은 다음과 같은 문제로부터 애플리케이션을 보호합니�
 
 {{%  insert-safekit-usage-ko  %}}
 
-{{%  insert-safekit-videos-ko  %}}
+{{%  insert-safekit-videos-table-ko  %}}
 
 {{%  insert-safekit-differentiators-ko  %}}
 

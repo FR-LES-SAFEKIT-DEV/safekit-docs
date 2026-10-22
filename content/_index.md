@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/"
 description: "SafeKit is the all-in-one SANless HA software for Windows & Linux. Get real-time synchronous replication, automatic failover, and load balancing in one simple, cost-effective package. Start your 30-day free trial."
 category: "home"
 lang: "en"
-topics: "What SafeKit Does, Choose Your Protection Level, Ready-Made Modules For Your Applications, Customer Use Cases, Simple, Predictable Pricing, Know The Limits Before You Start, 🔍 SafeKit High Availability Navigation Hub"
+topics: "What SafeKit Does, Choose Your Protection Level, Ready-Made Modules For Your Applications, Customer Use Cases, Simple, Predictable Pricing, Know The Limits Before You Start, SafeKit Video Library, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit: High Availability Software for Windows and Linux, Without a SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
@@ -85,5 +85,7 @@ For larger volumes, shared storage or another approach is a better choice.
 
 <a class="btn-download" href="/product/#safekit-ha-limitations">See the full list of limitations ›</a>
 
+
+{{%  insert-safekit-videos-table-en  %}}
 
 {{%  insert-safekit-hub-en  %}}

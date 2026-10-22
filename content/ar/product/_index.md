@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/product/"
 description: "SafeKit هو برنامج متكامل (all-in-one) لتحقيق الـ (HA) بدون شبكة تخزين (SANless) لأنظمة ويندوز ولينكس. احصل على ميزة النسخ المتماثل المتزامن في الوقت الفعلي، وفشل النظام التلقائي (Automatic Failover)، وموازنة الحمل (Load Balancing) في حزمة واحدة بسيطة واقتصادية. ابدأ تجربتك المجانية لمدة 30 يوماً."
 category: "product"
 lang: "ar"
-topics: "ما هو SafeKit؟, 🔍 مركز توجيه SafeKit للتوافر العالي (High Availability), لماذا تختار SafeKit لتحقيق توافر عالي (High Availability) بسيط وفعال من حيث التكلفة؟, لماذا يعد منتج توافر عالي (High Availability) الكل في واحد وبدون شبكة تخزين (SANless) أمراً ضرورياً؟, اختيار إستراتيجية التوافر العالي: ‏HA للآلات الافتراضية مقابل ‏HA للتطبيقات, قيود High Availability في SafeKit, الدروس التعليمية والعروض التقنية لتجاوز الفشل في SafeKit, مقارنة SafeKit بمجموعات التوفر العالي (HA) التقليدية, الإصدار التجريبي المجاني والوثائق التقنية لـ SafeKit HA, مكتبة وحدات تطبيقات SafeKit: حلول جاهزة للاستخدام للتوافر العالي (HA)"
+topics: "ما هو SafeKit؟, 🔍 مركز توجيه SafeKit للتوافر العالي (High Availability), لماذا تختار SafeKit لتحقيق توافر عالي (High Availability) بسيط وفعال من حيث التكلفة؟, لماذا يعد منتج توافر عالي (High Availability) الكل في واحد وبدون شبكة تخزين (SANless) أمراً ضرورياً؟, اختيار إستراتيجية التوافر العالي: ‏HA للآلات الافتراضية مقابل ‏HA للتطبيقات, قيود High Availability في SafeKit, مكتبة فيديوهات SafeKit, مقارنة SafeKit بمجموعات التوفر العالي (HA) التقليدية, الإصدار التجريبي المجاني والوثائق التقنية لـ SafeKit HA, مكتبة وحدات تطبيقات SafeKit: حلول جاهزة للاستخدام للتوافر العالي (HA)"
 ---
 
 # SafeKit: برنامج متكامل للتوافر العالي (SANless) وتجميع التطبيقات (Application Clustering) {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
@@ -34,7 +34,7 @@ topics: "ما هو SafeKit؟, 🔍 مركز توجيه SafeKit للتوافر ا
 
 {{%  insert-safekit-usage-ar  %}}
 
-{{%  insert-safekit-videos-ar  %}}
+{{%  insert-safekit-videos-table-ar  %}}
 
 {{%  insert-safekit-differentiators-ar  %}}
 

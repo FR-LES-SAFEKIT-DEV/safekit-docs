@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/"
 description: "SafeKit은 Windows 및 Linux용 올인원 SAN 없는 고가용성 소프트웨어입니다. 실시간 동기식 복제, 자동 장애 조치 및 부하 분산을 간단하고 경제적인 하나의 패키지로 제공합니다. 30일 무료 평가판을 시작하세요."
 category: "home"
 lang: "ko"
-topics: "SafeKit의 기능, 보호 수준 선택, 애플리케이션용 사전 구성 모듈, 고객 사용 사례, 간단하고 예측 가능한 가격, 시작 전 제한 사항 확인, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "SafeKit의 기능, 보호 수준 선택, 애플리케이션용 사전 구성 모듈, 고객 사용 사례, 간단하고 예측 가능한 가격, 시작 전 제한 사항 확인, SafeKit 동영상 라이브러리, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # SafeKit: SAN 없는 Windows 및 Linux 고가용성 소프트웨어 {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
@@ -78,5 +78,7 @@ SafeKit은 단순성을 위해 설계되었으며 모든 상황에 적합한 것
 더 큰 용량에는 공유 스토리지나 다른 방식이 더 적합합니다.
 
 <a class="btn-download" href="/ko/product/#safekit-ha-limitations">전체 제한 사항 보기 ›</a>
+
+{{%  insert-safekit-videos-table-ko  %}}
 
 {{%  insert-safekit-hub-ko  %}}

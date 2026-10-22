@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/product/"
 description: "SafeKit ist die Komplettlösung für SAN-lose Hochverfügbarkeit unter Windows und Linux. Profitieren Sie von synchroner Echtzeitreplikation, automatischem Failover und Lastverteilung in einem einfachen und kostengünstigen Paket. Starten Sie Ihre 30-tägige kostenlose Testphase."
 category: "product"
 lang: "de"
-topics: "Was ist SafeKit?, 🔍 SafeKit Hochverfügbarkeit Navigation Hub, Warum SafeKit für einfache und kosteneffiziente Hochverfügbarkeit wählen?, Warum ein All-in-One-Produkt für SANlose Hochverfügbarkeit unverzichtbar ist, Wahl Ihrer Hochverfügbarkeitsstrategie: VM HA vs. Application HA, SafeKit High Availability Einschränkungen, SafeKit Technische Failover-Tutorials & Demos, Vergleich von SafeKit mit herkömmlichen Hochverfügbarkeits- (HA-) Clustern, SafeKit HA Kostenlose Testversion & Technische Dokumentation, SafeKit Anwendungsmodul-Bibliothek: sofort einsetzbare HA-Lösungen"
+topics: "Was ist SafeKit?, 🔍 SafeKit Hochverfügbarkeit Navigation Hub, Warum SafeKit für einfache und kosteneffiziente Hochverfügbarkeit wählen?, Warum ein All-in-One-Produkt für SANlose Hochverfügbarkeit unverzichtbar ist, Wahl Ihrer Hochverfügbarkeitsstrategie: VM HA vs. Application HA, SafeKit High Availability Einschränkungen, SafeKit-Videobibliothek, Vergleich von SafeKit mit herkömmlichen Hochverfügbarkeits- (HA-) Clustern, SafeKit HA Kostenlose Testversion & Technische Dokumentation, SafeKit Anwendungsmodul-Bibliothek: sofort einsetzbare HA-Lösungen"
 ---
 
 # SafeKit: All-in-One-Software für SAN-lose Hochverfügbarkeit und Anwendungsclustering {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
@@ -34,7 +34,7 @@ SafeKit schützt Ihre Anwendungen vor:
 
 {{%  insert-safekit-usage-de  %}}
 
-{{%  insert-safekit-videos-de  %}}
+{{%  insert-safekit-videos-table-de  %}}
 
 {{%  insert-safekit-differentiators-de  %}}
 

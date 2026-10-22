@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/"
 description: "SafeKit هو برنامج متكامل للتوافر العالي دون SAN لأنظمة Windows وLinux. استفد من النسخ المتزامن في الوقت الفعلي، والتحويل التلقائي عند التعطل، وموازنة الأحمال ضمن حزمة بسيطة وفعالة من حيث التكلفة. ابدأ تجربتك المجانية لمدة 30 يوماً."
 category: "home"
 lang: "ar"
-topics: "ماذا يقدم SafeKit، اختر مستوى الحماية، وحدات جاهزة لتطبيقاتك، حالات استخدام العملاء، أسعار بسيطة وواضحة، تعرف على الحدود قبل البدء، 🔍 مركز التنقل في SafeKit للتوافر العالي"
+topics: "ماذا يقدم SafeKit، اختر مستوى الحماية، وحدات جاهزة لتطبيقاتك، حالات استخدام العملاء، أسعار بسيطة وواضحة، تعرف على الحدود قبل البدء، مكتبة فيديوهات SafeKit، 🔍 مركز التنقل في SafeKit للتوافر العالي"
 ---
 
 # SafeKit: برنامج التوافر العالي لنظامي Windows وLinux دون SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
@@ -78,5 +78,7 @@ topics: "ماذا يقدم SafeKit، اختر مستوى الحماية، وحد
 للحجوم الأكبر، يكون التخزين المشترك أو نهج آخر خياراً أفضل.
 
 <a class="btn-download" href="/ar/product/#safekit-ha-limitations">اطلع على القائمة الكاملة للحدود ›</a>
+
+{{%  insert-safekit-videos-table-ar  %}}
 
 {{%  insert-safekit-hub-ar  %}}

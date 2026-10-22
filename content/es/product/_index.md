@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/product/"
 description: 'SafeKit es el software de alta disponibilidad (HA) SANless "todo en uno" para Windows y Linux. Obtenga replicación síncrona en tiempo real, failover automático y equilibrio de carga en un paquete sencillo y rentable. Comience su prueba gratuita de 30 días.'
 category: "product"
 lang: "es"
-topics: '¿Qué es SafeKit?, 🔍 Centro de Navegación de Alta Disponibilidad SafeKit, ¿Por qué elegir SafeKit para una alta disponibilidad sencilla y rentable?, ¿Por qué es esencial un producto de alta disponibilidad SANless "todo en uno"?, Elegir su estrategia de alta disponibilidad: HA de VM vs. HA de aplicación, Limitaciones de Alta Disponibilidad de SafeKit, Tutoriales y demos técnicas de failover de SafeKit, Comparación de SafeKit con Clusters de Alta Disponibilidad (HA) Tradicionales, Prueba gratuita de SafeKit HA y documentación técnica, Biblioteca de Módulos de Aplicación SafeKit: Soluciones HA Listas para Usar'
+topics: '¿Qué es SafeKit?, 🔍 Centro de Navegación de Alta Disponibilidad SafeKit, ¿Por qué elegir SafeKit para una alta disponibilidad sencilla y rentable?, ¿Por qué es esencial un producto de alta disponibilidad SANless "todo en uno"?, Elegir su estrategia de alta disponibilidad: HA de VM vs. HA de aplicación, Limitaciones de Alta Disponibilidad de SafeKit, Biblioteca de vídeos de SafeKit, Comparación de SafeKit con Clusters de Alta Disponibilidad (HA) Tradicionales, Prueba gratuita de SafeKit HA y documentación técnica, Biblioteca de Módulos de Aplicación SafeKit: Soluciones HA Listas para Usar'
 ---
 
 # SafeKit: Software de alta disponibilidad SANless y clustering de aplicaciones todo en uno {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
@@ -34,7 +34,7 @@ SafeKit protege sus aplicaciones frente a:
 
 {{%  insert-safekit-usage-es  %}}
 
-{{%  insert-safekit-videos-es  %}}
+{{%  insert-safekit-videos-table-es  %}}
 
 {{%  insert-safekit-differentiators-es  %}}
 

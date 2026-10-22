@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/product/"
 description: "SafeKit est le logiciel de haute disponibilité (HA) « SANless » tout-en-un pour Windows et Linux. Bénéficiez de la réplication synchrone en temps réel, du basculement automatique et de la répartition de charge dans un package simple et économique. Commencez votre essai gratuit de 30 jours."
 category: "product"
 lang: "fr"
-topics: "Qu'est-ce que SafeKit ?, 🔍 Hub de navigation SafeKit Haute Disponibilité, Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ?, Pourquoi un produit de haute disponibilité « SANless » tout-en-un est-il essentiel ?, Choisir sa stratégie de haute disponibilité : HA VM vs HA applicative, Limitations de la haute disponibilité de SafeKit, Tutoriels techniques et démos sur le basculement SafeKit, Comparaison de SafeKit avec les clusters de Haute Disponibilité (HA) traditionnels, Ressources, Téléchargements et Documentation sur la Haute Disponibilité SafeKit, Bibliothèque des modules applicatifs SafeKit : solutions HA prêtes à l’emploi"
+topics: "Qu'est-ce que SafeKit ?, 🔍 Hub de navigation SafeKit Haute Disponibilité, Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ?, Pourquoi un produit de haute disponibilité « SANless » tout-en-un est-il essentiel ?, Choisir sa stratégie de haute disponibilité : HA VM vs HA applicative, Limitations de la haute disponibilité de SafeKit, Bibliothèque de vidéos SafeKit, Comparaison de SafeKit avec les clusters de Haute Disponibilité (HA) traditionnels, Ressources, Téléchargements et Documentation sur la Haute Disponibilité SafeKit, Bibliothèque des modules applicatifs SafeKit : solutions HA prêtes à l’emploi"
 ---
 
 # SafeKit : logiciel tout-en-un de haute disponibilité « SANless » et de clustering d'applications {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
@@ -34,7 +34,7 @@ SafeKit protège vos applications contre :
 
 {{%  insert-safekit-usage-fr  %}}
 
-{{%  insert-safekit-videos-fr  %}}
+{{%  insert-safekit-videos-table-fr  %}}
 
 {{%  insert-safekit-differentiators-fr  %}}
 

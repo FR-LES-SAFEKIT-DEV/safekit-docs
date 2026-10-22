@@ -40,9 +40,9 @@ The SafeKit on-line training is a self-paced, comprehensive resource designed to
 
 [Training and certification platform here](<https://training.my.evidian.com/>)
 
-## Get SafeKit 8 Training Materials {#training82}
+## SafeKit Training Videos {#training82}
 
-Note that this is not the training platform itself, but a repository to download the training materials if needed.
+Note that this is not the <a href="https://training.my.evidian.com/mod/page/view.php?id=712" target="_blank" rel="noopener noreferrer">training platform</a> itself, but a repository to download the training materials if needed.
 
 ### Introduction {#introduction}
 

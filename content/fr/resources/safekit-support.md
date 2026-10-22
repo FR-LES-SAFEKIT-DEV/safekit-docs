@@ -42,7 +42,7 @@ Sous réserve du paiement des frais de Support et de Maintenance correspondants,
 
 ## Programme de Formation et Certification Gratuit {#training}
 
-SafeKit propose un programme de formation et de certification en ligne gratuit couvrant les concepts de haute disponibilité, l'architecture de cluster, l'installation, la configuration et l'administration — pour les modules mirror (miroir) et farm (ferme).
+SafeKit propose un programme de formation et de certification en ligne gratuit via la <a href="https://training.my.evidian.com/mod/page/view.php?id=712" target="_blank" rel="noopener noreferrer">plateforme de formation</a>, couvrant les concepts de haute disponibilité, l'architecture de cluster, l'installation, la configuration et l'administration — pour les modules mirror (miroir) et farm (ferme).
 
   * Modules en ligne à votre rythme, disponibles à tout moment
   * Entièrement gratuit

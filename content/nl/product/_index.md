@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/product/"
 description: "SafeKit is de alles-in-één SANless HA-software voor Windows & Linux. Ontvang realtime synchrone replicatie, automatische failover en load balancing in één eenvoudig, kosteneffectief pakket. Start uw gratis proefperiode van 30 dagen."
 category: "product"
 lang: "nl"
-topics: "Wat is SafeKit?, 🔍 SafeKit High Availability Navigatiehub, Waarom kiezen voor SafeKit voor eenvoudige en kosteneffectieve High Availability?, Waarom een alles-in-één SANless High Availability-product essentieel is, Kies uw strategie voor hoge beschikbaarheid: VM HA vs. Application HA, SafeKit Hoge Beschikbaarheid Beperkingen, SafeKit technische failover-tutorials & demo's, Vergelijking van SafeKit met Traditionele High Availability (HA) Clusters, SafeKit HA gratis proefversie & technische documentatie, SafeKit Applicatiemodulebibliotheek: kant-en-klare HA-oplossingen"
+topics: "Wat is SafeKit?, 🔍 SafeKit High Availability Navigatiehub, Waarom kiezen voor SafeKit voor eenvoudige en kosteneffectieve High Availability?, Waarom een alles-in-één SANless High Availability-product essentieel is, Kies uw strategie voor hoge beschikbaarheid: VM HA vs. Application HA, SafeKit Hoge Beschikbaarheid Beperkingen, SafeKit-videobibliotheek, Vergelijking van SafeKit met Traditionele High Availability (HA) Clusters, SafeKit HA gratis proefversie & technische documentatie, SafeKit Applicatiemodulebibliotheek: kant-en-klare HA-oplossingen"
 ---
 
 # SafeKit: Alles-in-één SANless High Availability & Applicatie-clustering Software {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
@@ -34,7 +34,7 @@ SafeKit beschermt uw applicaties tegen:
 
 {{%  insert-safekit-usage-nl  %}}
 
-{{%  insert-safekit-videos-nl  %}}
+{{%  insert-safekit-videos-table-nl  %}}
 
 {{%  insert-safekit-differentiators-nl  %}}
 
