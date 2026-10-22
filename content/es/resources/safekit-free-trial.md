@@ -7,13 +7,11 @@ lang: "es"
 topics: "Prueba gratuita y documentación técnica de alta disponibilidad de SafeKit, 🔍 Centro de navegación de SafeKit para alta disponibilidad"
 ---
 
-# Prueba gratuita de SafeKit
+# Prueba gratuita de SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-es  %}}
- 
 
 {{%  insert-safekit-hub-es  %}}
- 
 
 {{%  insert-safekit-4-buttons-es  %}}

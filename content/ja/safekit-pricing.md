@@ -7,7 +7,7 @@ lang: "ja"
 topics: "ライセンスモデルと価格、標準サポートと保守、見積もり依頼"
 ---
 
-# SafeKitの価格
+# SafeKitの価格 {#safekit-pricing}
 
 ## ライセンスモデルと価格 {#licensing-model-and-pricing}
 

@@ -7,13 +7,11 @@ lang: "ko"
 topics: "SafeKit 애플리케이션 모듈 라이브러리: 바로 사용할 수 있는 HA 솔루션 및 빠른 설치 가이드, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# SafeKit 빠른 설치 가이드
+# SafeKit 빠른 설치 가이드 {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-ko  %}}
- 
 
-{{%  insert-safekit-hub-kr  %}}
- 
+{{%  insert-safekit-hub-ko  %}}
 
 {{%  insert-safekit-4-buttons-ko  %}}

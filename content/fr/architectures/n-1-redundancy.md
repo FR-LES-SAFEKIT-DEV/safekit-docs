@@ -7,17 +7,17 @@ lang: "fr"
 topics: "Cluster N-1 avec réplication de données et basculement applicatif entre N serveurs actifs et 1 serveur de secours, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Clustering à redondance N-1 : Haute disponibilité pour plusieurs applications avec une seule sauvegarde
+# Clustering à redondance N-1 : Haute disponibilité pour plusieurs applications avec une seule sauvegarde {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
 
-## Cluster N-1 avec réplication de données et basculement applicatif entre N serveurs actifs et 1 serveur de secours
+## Cluster N-1 avec réplication de données et basculement applicatif entre N serveurs actifs et 1 serveur de secours {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 
-### Redondance N-1
+### Redondance N-1 {#n-1-redundancy}
 
 
 ![Cluster SafeKit avec redondance N-1](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-### Comment fonctionne la redondance N-1 ?
+### Comment fonctionne la redondance N-1 ? {#how-the-n-1-redundancy-works}
 
 SafeKit fournit un cluster en redondance N-1 simple avec N applications exécutées sur N serveurs et avec un seul serveur de secours pour le basculement. Dans un cluster SafeKit en redondance N-1, chaque application fonctionne sur ses propres répertoires répliqués.
 
@@ -25,7 +25,7 @@ En cas de panne d'un serveur principal contrairement à un [cluster actif actif]
 
 Cela suppose qu'il n'y ait qu'une seule panne à la fois dans le cluster en redondance N-1. La solution peut prendre en charge plusieurs pannes de serveurs principaux en même temps, mais dans ce cas, le serveur de secours unique devra gérer la charge de travail combinée de tous les serveurs défaillants.
 
-### Comment mettre en place la redondance N-1 ?
+### Comment mettre en place la redondance N-1 ? {#how-to-implement-n-1-redundancy}
 
 Le cluster SafeKit en redondance N-1 se configure simplement en déployant N modules miroirs sur N+1 serveurs.
 
@@ -37,7 +37,5 @@ Notez que :
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

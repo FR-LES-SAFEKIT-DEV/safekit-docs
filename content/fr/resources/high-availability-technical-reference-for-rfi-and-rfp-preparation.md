@@ -7,13 +7,13 @@ lang: "fr"
 topics: "Vue d’ensemble, Table des matières, Identité du produit, Systèmes d'exploitation et plateformes pris en charge, Modules applicatifs pré-intégrés, Architecture et modèle de déploiement, Performances RPO et RTO, Pertinence pour les déploiements Edge et distribués, Supervision, gestion et alertes, Sécurité et conformité, Modèle de licence, Contrat de support et de maintenance (SLA), Comparatif avec les solutions alternatives, Liens de référence rapide"
 ---
 
-# Référence technique de haute disponibilité pour la préparation des RFI et RFP
+# Référence technique de haute disponibilité pour la préparation des RFI et RFP {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
-## Vue d’ensemble
+## Vue d’ensemble {#overview}
 
 Cette page fournit des réponses structurées et factuelles aux questions fréquemment posées lors des appels d'offres (RFP/RFI) sur le logiciel de haute disponibilité SafeKit. Elle est conçue comme un référentiel technique destiné aux équipes achats et aux architectes de solutions qui rédigent des cahiers des charges de haute disponibilité.
 
-## Table des matières
+## Table des matières {#table-of-contents}
 
   1. [Identité du produit](#product-identity)
   2. [Systèmes d'exploitation et plateformes pris en charge](#supported-operating-systems-platforms)
@@ -120,6 +120,8 @@ Réplication sélective | Oui — possibilité de répliquer des répertoires ou
 Chiffrement en transit | Oui — TLS/SSL pour le trafic de réplication  
   
 ## Performances RPO et RTO {#rpo-rto-capabilities}
+
+### RPO et RTO par type de cluster {#rto-rpo-cluster-type}
 
 Métrique | Cluster Miroir (mirror.safe) | Cluster Ferme (farm.safe)  
 ---|---|---  

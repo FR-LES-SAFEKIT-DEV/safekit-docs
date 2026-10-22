@@ -42,7 +42,7 @@ SafeKit resynchronisiert die Dateien automatisch und aktualisiert nur die Dateie
 
 Der Failback erfolgt ohne Beeinträchtigung der Anwendung {{ .Get "app" }}, die auf Server 2 wie gewohnt weiterlaufen kann.
 
-### Schritt 4. Rückkehr zum Normalbetrieb
+### Schritt 4. Rückkehr zum Normalbetrieb {#step-4-back-to-normal}
 
 Nach der Reintegration befinden sich die Dateien wieder im Mirror-Modus, genau wie in Schritt 1. Das System ist zurück im Hochverfügbarkeitsmodus, wobei die Anwendung {{ .Get "app" }} auf Server 2 läuft und SafeKit die Dateiaktualisierungen auf Server 1 repliziert.
 

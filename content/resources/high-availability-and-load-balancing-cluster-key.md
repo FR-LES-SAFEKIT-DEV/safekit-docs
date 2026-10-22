@@ -7,9 +7,9 @@ lang: "en"
 topics: "Receive a free SafeKit one-month license key by email for Windows or Linux, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit One-Month Free Trial Key
+# SafeKit One-Month Free Trial Key {#safekit-one-month-free-trial-key}
 
-## Receive a free SafeKit one-month license key by email for Windows or Linux
+## Receive a free SafeKit one-month license key by email for Windows or Linux {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 
 This license key gives access to all SafeKit features: network load balancing, real-time replication and failover. After, you can replace it with a permanent license key without having to uninstall the product.
 
@@ -134,7 +134,5 @@ Once you receive the `license.txt` file by email, copy it to the following locat
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

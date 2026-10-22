@@ -7,9 +7,9 @@ lang: "ko"
 topics: "Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이메일로 받기, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# SafeKit 1개월 무료 평가판 키
+# SafeKit 1개월 무료 평가판 키 {#safekit-one-month-free-trial-key}
 
-## Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이메일로 받기
+## Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이메일로 받기 {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 
 이 라이선스 키로 네트워크 부하 분산, 실시간 복제, 장애 조치를 포함한 SafeKit의 모든 기능을 사용할 수 있습니다. 평가 기간이 끝난 후에도 제품을 제거하지 않고 영구 라이선스 키로 교체할 수 있습니다.
 
@@ -21,7 +21,6 @@ topics: "Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이�
 {{%  safekit-trial-key-form  %}}
 
 
-{{%  insert-safekit-hub-kr  %}}
- 
+{{%  insert-safekit-hub-ko  %}}
 
 {{%  insert-safekit-4-buttons-ko  %}}

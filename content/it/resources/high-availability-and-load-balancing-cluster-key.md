@@ -7,9 +7,9 @@ lang: "it"
 topics: "Ricevi via e-mail una chiave di licenza SafeKit gratuita di un mese per Windows o Linux, 🔍 Hub di navigazione SafeKit per l'alta affidabilità"
 ---
 
-# Chiave di prova gratuita SafeKit di un mese
+# Chiave di prova gratuita SafeKit di un mese {#safekit-one-month-free-trial-key}
 
-## Ricevi via e-mail una chiave di licenza SafeKit gratuita di un mese per Windows o Linux
+## Ricevi via e-mail una chiave di licenza SafeKit gratuita di un mese per Windows o Linux {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 
 Questa chiave di licenza consente di accedere a tutte le funzionalità di SafeKit: bilanciamento del carico di rete, replica in tempo reale e failover. Al termine della prova, puoi sostituirla con una chiave di licenza permanente senza disinstallare il prodotto.
 
@@ -22,6 +22,5 @@ Quando ricevi il file `license.txt` via e-mail, copialo nel seguente percorso su
 
 
 {{%  insert-safekit-hub-it  %}}
- 
 
 {{%  insert-safekit-4-buttons-it  %}}

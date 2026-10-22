@@ -7,7 +7,7 @@ lang: "fr"
 topics: "Perte de données ou non lors du basculement d'application avec une réplication synchrone ou asynchrone ?, Table des matières, Comment fonctionne la réplication asynchrone ?, Comment fonctionne la réplication synchrone ?, Comment fonctionne la réplication semi-synchrone ?, Verdict final : choisir la bonne réplication pour la haute disponibilité, Tableau comparatif : réplication synchrone vs asynchrone vs semi-synchrone, Configuration de la réplication synchrone en temps réel et de la haute disponibilité, FAQ : Stratégies de réplication dans les clusters de haute disponibilité, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Réplication synchrone vs. asynchrone : comment SafeKit garantit-il l’absence de perte de données ?
+# Réplication synchrone vs. asynchrone : comment SafeKit garantit-il l’absence de perte de données ? {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}
 
 ## Perte de données ou non lors du basculement d'application avec une réplication synchrone ou asynchrone ? {#data-loss-risk-synchronous-vs-asynchronous-failover}
 
@@ -32,7 +32,7 @@ Pour vous aider à prendre la bonne décision et choisir l'architecture la mieux
 {{%  insert-safekit-4-buttons-fr  %}}
  
 
-## Table des matières
+## Table des matières {#table-of-contents}
 
   * [Perte de données ou non lors du basculement applicatif avec réplication synchrone ou asynchrone ?](#data-loss-risk-synchronous-vs-asynchronous-failover)
   * [Comment fonctionne la réplication asynchrone ?](#how-asynchronous-replication-works)
@@ -86,7 +86,7 @@ Impact sur la performance | Nécessite un réseau à faible latence - Dépend du
 Limites de distance | Local / VLAN étendu (Stretched) | Local / VLAN étendu (Stretched) | Réseau étendu (WAN)  
 Idéal pour | Haute disponibilité (Basculement automatique) | Haute disponibilité (Basculement automatique) | Solutions de sauvegarde (Basculement manuel)  
   
-## Configuration de la réplication synchrone en temps réel et de la haute disponibilité {#synchronous-real-time-replication-ha-config}
+## Configuration de la réplication synchrone en temps réel et de la haute disponibilité {#videoguide-synchronous-real-time-replication-ha}
 
 
 {{%  insert-safekit-mirror-video-fr  %}}
@@ -94,7 +94,7 @@ Idéal pour | Haute disponibilité (Basculement automatique) | Haute disponibili
 
 ## FAQ : Stratégies de réplication dans les clusters de haute disponibilité {#faq-replication-high-availability}
 
-### Technologie et mécanismes de réplication
+### Technologie et mécanismes de réplication {#replication-technology--mechanics}
 
 #### SafeKit envoie-t-il le fichier complet sur le réseau à chaque modification ? {#safekit-byte-level-replication-vs-full-file-transfer}
 
@@ -110,7 +110,7 @@ La latence est liée au **temps de trajet aller-retour du réseau (RTT)**. Sur u
 
 * * *
 
-### Stratégie de déploiement : HA vs Sauvegarde
+### Stratégie de déploiement : HA vs Sauvegarde {#deployment-strategy-ha-vs-backup}
 
 #### Quand dois-je choisir la réplication synchrone vs asynchrone ? {#choosing-sync-vs-async}
 
@@ -134,7 +134,5 @@ Vous pouvez utiliser une **architecture hybride à 3 nœuds** : un cluster local
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

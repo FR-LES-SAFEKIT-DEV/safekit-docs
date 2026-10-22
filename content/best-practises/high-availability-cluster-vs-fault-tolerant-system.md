@@ -7,17 +7,17 @@ lang: "en"
 topics: "What is the difference between high availability and fault tolerance?, Pros and cons of high availability and fault tolerance, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy
+# HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
 
-## What is the difference between high availability and fault tolerance?
+## What is the difference between high availability and fault tolerance? {#what-is-the-difference-between-high-availability-and-fault-tolerance}
 
-### Overview
+### Overview {#overview}
 
 This article explores the pros and cons of a high availability cluster versus a fault tolerant system by looking at hardware constraints, software failures, RTO, RPO...
 
 The following comparative tables explain in detail the difference between a fault tolerant system and SafeKit, a software high availability cluster.
 
-### What is high availability?
+### What is high availability? {#what-is-high-availability}
 
 A high availability cluster is based on two servers with restart of the critical application in the event of hardware or software failures. There are 2 types of clusters: hardware clusters and software clusters.
 
@@ -25,13 +25,13 @@ Hardware clusters are based on shared disks resulting in dependencies between se
 
 Software clusters like SafeKit are based on real-time data replication and are hardware-agnostic: they can be deployed on physical or virtual servers or in the cloud.
 
-### What is fault tolerance?
+### What is fault tolerance? {#what-is-fault-tolerance}
 
 A fault tolerant system relies on either specialized hardware or specialized hypervisor to detect a hardware failure and instantly switch to a redundant hardware component without application restart.
 
 Fault-tolerant systems only deal with hardware failures and not software failures, by far the most common reason for system downtime.
 
-## Pros and cons of high availability and fault tolerance
+## Pros and cons of high availability and fault tolerance {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
 When protecting critical applications against failures, two main approaches exist: **software high availability clustering** and **fault-tolerant systems**. Each approach offers different trade-offs in terms of cost, flexibility, recovery time, and hardware requirements. Understanding these differences helps choose the right solution for your specific needs.
 
@@ -51,7 +51,5 @@ Suited for | [Software editors which want to add a simple high availability opti
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

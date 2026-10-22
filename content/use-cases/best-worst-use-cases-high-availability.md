@@ -7,11 +7,11 @@ lang: "en"
 topics: "Best use cases, SafeKit High Availability Limitations, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Best and Worst High Availability Use Cases: A SafeKit Implementation Guide
+# Best and Worst High Availability Use Cases: A SafeKit Implementation Guide {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
 
-## Best use cases
+## Best use cases {#best-use-cases}
 
-### OEM Software
+### OEM Software {#oem-software}
 
 A software publisher uses [SafeKit as an OEM software](</use-cases/application-clustering-software/>) for high availability of its application
 
@@ -19,7 +19,7 @@ A software publisher uses [SafeKit as an OEM software](</use-cases/application-c
 ![Application Clustering Software for a Software Publisher](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:300")
 
 
-### Distributed Enterprise
+### Distributed Enterprise {#distributed-enterprise}
 
 A distributed enterprise deploys [SafeKit in many branches](</use-cases/business-continuity-software/>) without specific IT skills
 
@@ -27,7 +27,7 @@ A distributed enterprise deploys [SafeKit in many branches](</use-cases/business
 ![High Availability Software in a Distributed Enterprise](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
-### Remote Sites
+### Remote Sites {#remote-sites}
 
 [SafeKit is deployed in two remote sites](</best-practises/high-availability-disaster-recovery-hadr/>) without the need for replicated bays of disks through a SAN.
 
@@ -37,11 +37,7 @@ A distributed enterprise deploys [SafeKit in many branches](</use-cases/business
 
 
 {{%  insert-safekit-usage-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

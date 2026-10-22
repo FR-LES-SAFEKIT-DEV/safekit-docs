@@ -6,7 +6,7 @@ lang: "ko"
 category: "home"
 ---
 
-# SafeKit 문의하기
+# SafeKit 문의하기 {#contact-us-for-safekit}
 
 <iframe
   src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"

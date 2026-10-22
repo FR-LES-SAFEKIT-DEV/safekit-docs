@@ -6,7 +6,7 @@
 
 ## Quels sont les différents scénarios en cas d'isolement réseau dans un cluster ? {#isolation}
 
-### Un seul réseau
+### Un seul réseau {#a-single-network}
 
 Lorsqu'il y a un isolement réseau, le comportement par défaut est :
 
@@ -15,7 +15,7 @@ Lorsqu'il y a un isolement réseau, le comportement par défaut est :
   * à la fin, le cluster est PRIM-SECOND (ou SECOND-PRIM selon la détection d'adresse IP virtuelle en double faite par Windows).
 
 
-### Deux réseaux avec un réseau de réplication dédié
+### Deux réseaux avec un réseau de réplication dédié {#two-networks-with-a-dedicated-replication-network}
 
 Lorsqu'il y a un isolement réseau, le comportement avec un réseau de réplication dédié est :
 
@@ -25,7 +25,7 @@ Lorsqu'il y a un isolement réseau, le comportement avec un réseau de réplicat
   * le cluster reste à l'état PRIM/SECOND.
 
 
-### Un seul réseau et un checker split-brain
+### Un seul réseau et un checker split-brain {#a-single-network-and-a-splitbrain-checker}
 
 Lorsqu'il y a un isolement du réseau, le comportement avec un split-brain checker est :
 

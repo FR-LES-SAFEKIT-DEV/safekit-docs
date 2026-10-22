@@ -7,9 +7,9 @@ lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Docker, Table of Contents, How the SafeKit software simply implements a Docker high availability cluster?, How the SafeKit mirror cluster works with Docker?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Docker HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker High Availability Summary, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit: Docker High Availability & Real-Time Data Replication Software
+# SafeKit: Docker High Availability & Real-Time Data Replication Software {#safekit-docker-high-availability--real-time-data-replication-software}
 
-## How the SANless SafeKit Mirror Cluster Works with Docker
+## How the SANless SafeKit Mirror Cluster Works with Docker {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 
 SafeKit offers a lightweight, **"just-enough" HA solution** tailored for organizations that find **Kubernetes** too resource-intensive, complex, or over-engineered for localized or edge-computing container workloads.
 
@@ -44,34 +44,32 @@ By utilizing real-time synchronous replication and an **automatically switched V
 
 ## How the SafeKit software simply implements a Docker high availability cluster? {#how-safekit-implements-docker-ha}
 
-### How can I achieve high availability for Docker on two servers?
+### How can I achieve high availability for Docker on two servers? {#how-can-i-achieve-high-availability-for-docker-on-two-servers}
 
 **SafeKit** provides a high-availability solution for **Docker** between two redundant servers without requiring a shared disk. The system works by configuring **real-time replication** of directories associated with Docker's persistent data. In the event of a failure, SafeKit manages the automatic failover and restarts your containers on the secondary node in seconds.
 
-### How does automatic network failover work for Docker containers?
+### How does automatic network failover work for Docker containers? {#how-does-automatic-network-failover-work-for-docker-containers}
 
 SafeKit implements an **automatically switched Virtual IP (VIP) address**. This VIP serves as a single entry point for client applications. If the primary server fails, SafeKit moves the Virtual IP to the redundant server using **Gratuitous ARP**. This ensures that clients reconnect transparently to the same IP address where the Docker application has been restarted.
 
-### What is a "SANless" cluster for Docker?
+### What is a "SANless" cluster for Docker? {#what-is-a-sanless-cluster-for-docker}
 
 A **SANless cluster** for Docker is an architecture that provides high availability without the need for an expensive Storage Area Network (SAN) or Network Attached Storage (NAS). **SafeKit** uses host-based **synchronous replication** to mirror data between the local disks of two servers. This eliminates shared storage as a single point of failure and ensures a **Recovery Point Objective (RPO) of zero** , meaning no data loss occurs during a failover.
 
-### Is it possible to set up a Docker cluster without Kubernetes skills?
+### Is it possible to set up a Docker cluster without Kubernetes skills? {#is-it-possible-to-set-up-a-docker-cluster-without-kubernetes-skills}
 
 Yes. This article explains how to [quickly implement a Docker cluster](</quick-install/safekit-quick-installation-guide-with-docker/>) without specialized clustering skills or complex Kubernetes orchestration. By using SafeKit’s **automatic restart scripts** to handle the start and stop of Docker applications, you get a robust redundancy solution that is much simpler to deploy and maintain than K8s.
 
-### How does SafeKit replication differ from block-level solutions like DRBD for Docker?
+### How does SafeKit replication differ from block-level solutions like DRBD for Docker? {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}
 
 Unlike most SANless solutions that use **block-level replication** (such as DRBD), **SafeKit** performs **host-based replication at the file level**. This approach is completely transparent for the Docker application because it does not require you to migrate data to a specific, newly created "replicated disk" volume. Instead, you simply configure SafeKit to replicate existing application folders—even those on the **system disk**. This allows you to implement high availability for Docker exactly where it is already installed, without complex disk reconfiguration or application changes.
 
-### Can SafeKit provide high availability for applications beyond Docker?
+### Can SafeKit provide high availability for applications beyond Docker? {#can-safekit-provide-high-availability-for-applications-beyond-docker}
 
 Yes. **SafeKit** is a highly versatile, generic high-availability software compatible with both **Windows and Linux**. Beyond Docker, SafeKit can be used to implement **real-time replication and automatic failover** for any file directory, service, or database. It supports a wide range of technologies, including **Hyper-V and KVM virtual machines** , **Docker** , **K3s** , and various **Cloud applications**. This makes SafeKit a universal clustering solution for protecting critical workloads across diverse IT environments without requiring specialized hardware.
 
 
 {{%  insert-safekit-mirror-en app="Docker"  %}}
- 
-
 
 {{%  insert-safekit-usage-en  %}}
  
@@ -106,7 +104,5 @@ Through **real-time synchronous replication** and an **automatic Virtual IP (VIP
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

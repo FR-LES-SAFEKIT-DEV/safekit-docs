@@ -7,15 +7,15 @@ lang: "en"
 topics: "What are the different scenarios in case of network isolation in a cluster?, What are the different scenarios in case of power outage in a cluster?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Handling Power Outages and Network Isolation in a HA Cluster
+# Handling Power Outages and Network Isolation in a HA Cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
 
 
 {{%  insert-safekit-network-isolation-en  %}}
  
 
-## What are the different scenarios in case of power outage in a cluster?
+## What are the different scenarios in case of power outage in a cluster? {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
 
-### Primary node power outage
+### Primary node power outage {#primary-node-power-outage}
 
 When a power outage stops only the primary node:
 
@@ -24,7 +24,7 @@ When a power outage stops only the primary node:
   * the roles of primary and secondary can be swapped by an adminsitrator if needed.
 
 
-### Secondary node power outage
+### Secondary node power outage {#secondary-node-power-outage}
 
 When a power outage stops only the secondary node:
 
@@ -32,7 +32,7 @@ When a power outage stops only the secondary node:
   * when node 2 is rebooted, it becomes SEDOND after resynchronization of replicated data.
 
 
-### General power outage - case 1
+### General power outage - case 1 {#general-power-outage---case-1}
 
 When a power outage stops both nodes, the default behavior is:
 
@@ -41,7 +41,7 @@ When a power outage stops both nodes, the default behavior is:
   * when node 2 is rebooted, both nodes return to their previous PRIM/SECOND states.
 
 
-### General power outage - case 2
+### General power outage - case 2 {#general-power-outage---case-2}
 
 When a power outage stops both nodes, the behavior with syncdelta is :
 
@@ -53,7 +53,5 @@ When a power outage stops both nodes, the behavior with syncdelta is :
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

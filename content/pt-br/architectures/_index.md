@@ -7,11 +7,11 @@ lang: "pt-br"
 topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os clusters de software com SafeKit?, Como criar clusters de alta disponibilidade com SafeKit?, 🔍 Central de navegação do SafeKit para alta disponibilidade"
 ---
 
-# Arquiteturas SafeKit
+# Arquiteturas SafeKit {#safekit-architectures}
 
-## Quais são as diferentes arquiteturas de alta disponibilidade e os clusters de software com SafeKit?
+## Quais são as diferentes arquiteturas de alta disponibilidade e os clusters de software com SafeKit? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Cluster Mirror
+### Cluster Mirror {#mirror-cluster}
 
 
 ![Cluster Mirror do SafeKit](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os clus
 
 [Mais informações](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Cluster Farm
+### Cluster Farm {#farm-cluster}
 
 
 ![Cluster Farm do SafeKit](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os clus
 
 [Mais informações](</architectures/network-load-balancing-cluster/>)
 
-### Cluster Farm+Mirror
+### Cluster Farm+Mirror {#farmmirror-cluster}
 
 
 ![Cluster Farm+Mirror do SafeKit](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os clus
 
 [Mais informações](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### Cluster ativo/ativo
+### Cluster ativo/ativo {#activeactive-cluster}
 
 
 ![Cluster ativo/ativo do SafeKit com replicação em tempo real](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os clus
 
 [Mais informações](</architectures/active-active-cluster-real-time-replication/>)
 
-### Cluster N-1
+### Cluster N-1 {#n-1-cluster}
 
 
 ![Cluster de redundância N-1 do SafeKit](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os clus
 
 [Mais informações](</architectures/n-1-redundancy/>)
 
-## Como criar clusters de alta disponibilidade com SafeKit?
+## Como criar clusters de alta disponibilidade com SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Usar módulos de alta disponibilidade
+### Usar módulos de alta disponibilidade {#use-high-availability-modules}
 
 Um módulo de alta disponibilidade é uma personalização do SafeKit para uma aplicação. Há dois tipos de módulos: o módulo Mirror, com replicação de dados em tempo real e failover, e o módulo Farm, com balanceamento de carga e failover.
 
@@ -61,7 +61,7 @@ Ao implantar um módulo Mirror em dois servidores, você cria um cluster Mirror.
 
 Vários módulos de aplicação podem ser implantados nos mesmos servidores. Assim, é possível implementar arquiteturas de cluster avançadas, como as apresentadas anteriormente (Farm+Mirror, ativo/ativo, N-1).
 
-### O que é um módulo de aplicação?
+### O que é um módulo de aplicação? {#what-is-an-application-module}
 
 Na prática, um módulo de aplicação é um arquivo “.Safe” (formato zip) que inclui:
 
@@ -76,7 +76,7 @@ Na prática, um módulo de aplicação é um arquivo “.Safe” (formato zip) q
 
 2 - os scripts para iniciar e parar a aplicação.
 
-### Implantação plug and play de módulos de alta disponibilidade
+### Implantação plug and play de módulos de alta disponibilidade {#plug-and-play-deployment-of-high-availability-modules}
 
 Depois de configurado e testado com uma aplicação, o módulo pode ser implantado sem conhecimentos específicos de TI:
 
@@ -87,6 +87,5 @@ Depois de configurado e testado com uma aplicação, o módulo pode ser implanta
 
 
 {{%  insert-safekit-hub-pt-br  %}}
- 
 
 {{%  insert-safekit-4-buttons-pt-br  %}}

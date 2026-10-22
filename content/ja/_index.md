@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SafeKitの機能、保護レベルの選択、アプリケーション向けのすぐに使えるモジュール、導入事例、シンプルで分かりやすい価格、導入前に確認する制限事項、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit：SAN不要のWindows/Linux向け高可用性ソフトウェア
+# SafeKit：SAN不要のWindows/Linux向け高可用性ソフトウェア {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKitは2台の標準サーバーをSAN不要の高可用性クラスターに変え、アプリケーションの稼働を維持します。データをリアルタイムで複製し、1台目に障害が発生すると2台目でアプリケーションを再起動し、修復後のサーバーも自動的にクラスターへ復帰させます。共有ストレージやクラスターの専門知識がなくても、既存のサーバーにインストールできます。
 

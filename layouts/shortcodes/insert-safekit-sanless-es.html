@@ -6,11 +6,11 @@
 
 ## ¿Por qué es esencial un producto de alta disponibilidad SANless "todo en uno"? {#all-in-one-sanless-ha}
 
-En el mundo de la continuidad de negocio, muchas organizaciones creen erróneamente que disponer de una copia de seguridad o de una herramienta de replicación de datos es lo mismo que tener **Alta Disponibilidad (HA)**. En realidad, estas son solo piezas de un rompecabezas mucho más grande. Para garantizar verdaderamente un tiempo de actividad del 100%, se necesita una solución integral que integre cada capa del proceso de failover.
+En el mundo de la continuidad de negocio, muchas organizaciones creen erróneamente que disponer de una copia de seguridad o de una herramienta de replicación de datos es lo mismo que tener **Alta Disponibilidad (HA)**. En realidad, estas son solo piezas de un rompecabezas mucho más grande. La alta disponibilidad real requiere que todas las capas del proceso de conmutación por error trabajen juntas: **replicación**, **detección de fallos**, **conmutación de la IP virtual**, **reinicio** y **retorno automático (failback)**.
 
 A continuación, explicamos por qué un enfoque fragmentado falla y por qué se requiere un producto integrado "todo en uno" como **SafeKit** , que utiliza **replicación basada en host a nivel de archivo**.
 
-### ¿Es suficiente la replicación basada en host por sí sola para la Alta Disponibilidad?
+### ¿Es suficiente la replicación basada en host por sí sola para la Alta Disponibilidad? {#is-host-based-replication-alone-sufficient-for-high-availability}
 
 No. La replicación de datos es simplemente el acto de copiar datos del Servidor A al Servidor B. Aunque es fundamental, la replicación por sí misma no proporciona disponibilidad. Sin los demás componentes de un stack de HA, la replicación es solo una "copia pasiva" que requiere una intervención manual lenta para ser útil:
 
@@ -19,7 +19,7 @@ No. La replicación de datos es simplemente el acto de copiar datos del Servidor
   * No reiniciará los servicios.
 
 
-### Los riesgos ocultos de las soluciones fragmentadas: por qué la alta disponibilidad aislada aumenta los fallos
+### Los riesgos ocultos de las soluciones fragmentadas: por qué la alta disponibilidad aislada aumenta los fallos {#the-hidden-risks-of-fragmented-solutions-why-siloed-ha-increases-failure}
 
 Muchos proveedores le obligan a "ensamblar" varios productos diferentes para lograr la **replicación basada en host** , el **failover** y el **equilibrio de carga**. Esta arquitectura fragmentada es una estrategia peligrosa para sistemas de misión crítica:
 
@@ -29,7 +29,7 @@ Muchos proveedores le obligan a "ensamblar" varios productos diferentes para log
   * **Mantenimiento complejo:** Los sistemas fragmentados requieren conocimientos especializados para cada componente individual, lo que hace que la solución sea más difícil de mantener y significativamente más costosa con el tiempo.
 
 
-### Más allá de los datos, ¿qué componentes específicos se requieren para un verdadero failover SANless?
+### Más allá de los datos, ¿qué componentes específicos se requieren para un verdadero failover SANless? {#beyond-data-what-specific-components-are-required-for-a-true-sanless-failover}
 
 Para automatizar la recuperación y eliminar el tiempo de inactividad, un producto "todo en uno" debe gestionar simultáneamente varias piezas técnicas móviles:
 
@@ -40,7 +40,7 @@ Para automatizar la recuperación y eliminar el tiempo de inactividad, un produc
   * **Failover automático:** La inteligencia necesaria para orquestar todo el movimiento de un servidor a otro sin intervención humana.
 
 
-### ¿Por qué debe estar sincronizado el mecanismo de failover con la replicación basada en host?
+### ¿Por qué debe estar sincronizado el mecanismo de failover con la replicación basada en host? {#why-must-the-failover-mechanism-be-synchronized-with-host-based-replication}
 
 Si su gestor de failover y su replicación de datos son dos productos diferentes, es posible que no estén "sincronizados".
 
@@ -48,7 +48,7 @@ Si su gestor de failover y su replicación de datos son dos productos diferentes
 
 Una **solución de HA SANless todo-en-uno** garantiza que el mecanismo de failover conozca el estado de la replicación. Solo permitirá que la aplicación se inicie en el nodo de respaldo si se garantiza que los datos están actualizados, evitando nodos activos en conflicto y la pérdida de datos.
 
-### ¿Qué sucede cuando se repara el servidor fallido (failback)?
+### ¿Qué sucede cuando se repara el servidor fallido (failback)? {#what-happens-when-the-failed-server-is-repaired-failback}
 
 A menudo ignorado en las guías técnicas y mal ejecutado por las soluciones de HA tradicionales, el failback automático sigue siendo el requisito más crítico para una verdadera resiliencia. Un auténtico producto "todo en uno" gestiona el "Retorno a la Normalidad" con la misma elegancia que el fallo. Cuando el servidor que falló vuelve a estar en línea, sus datos están desactualizados. El software de HA debe:
 
@@ -57,7 +57,7 @@ A menudo ignorado en las guías técnicas y mal ejecutado por las soluciones de 
   3. **Restaurar la redundancia:** Una vez que los datos están replicados (mirrored) de nuevo, el cluster vuelve automáticamente a un estado protegido, listo para el próximo evento.
 
 
-### Replicación a nivel de bloque frente a nivel de archivo: por qué la transparencia es importante
+### Replicación a nivel de bloque frente a nivel de archivo: por qué la transparencia es importante {#block-vs-file-level-replication-why-transparency-matters}
 
 El método técnico utilizado para la **replicación basada en host** influye significativamente en cuánto debe modificar la configuración de su aplicación actual.
 

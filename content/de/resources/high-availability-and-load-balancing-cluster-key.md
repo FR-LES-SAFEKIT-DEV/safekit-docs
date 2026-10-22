@@ -7,9 +7,9 @@ lang: "de"
 topics: "Kostenlosen SafeKit-Einmonats-Lizenzschlüssel per E-Mail für Windows oder Linux erhalten, 🔍 SafeKit-Navigationshub für Hochverfügbarkeit"
 ---
 
-# Kostenloser SafeKit-Testschlüssel für einen Monat
+# Kostenloser SafeKit-Testschlüssel für einen Monat {#safekit-one-month-free-trial-key}
 
-## Erhalten Sie per E-Mail einen kostenlosen SafeKit-Lizenzschlüssel für einen Monat unter Windows oder Linux
+## Erhalten Sie per E-Mail einen kostenlosen SafeKit-Lizenzschlüssel für einen Monat unter Windows oder Linux {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 
 Mit diesem Lizenzschlüssel stehen Ihnen alle SafeKit-Funktionen zur Verfügung: Netzwerk-Lastverteilung, Echtzeitreplikation und Failover. Nach dem Test können Sie ihn durch einen permanenten Lizenzschlüssel ersetzen, ohne das Produkt deinstallieren zu müssen.
 
@@ -22,6 +22,5 @@ Kopieren Sie die per E-Mail erhaltene Datei `license.txt` auf jedem Knoten des C
 
 
 {{%  insert-safekit-hub-de  %}}
- 
 
 {{%  insert-safekit-4-buttons-de  %}}

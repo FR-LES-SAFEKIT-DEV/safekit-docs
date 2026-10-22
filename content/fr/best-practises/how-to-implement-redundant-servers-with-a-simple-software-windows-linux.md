@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Comment mettre en œuvre des serveurs redondants actif/passif avec réplication en temps réel et basculement sur panne ?, Comment mettre en œuvre des serveurs redondants actif/actif avec équilibrage de la charge réseau et basculement sur panne ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Comment implémenter des serveurs redondants avec un logiciel de haute disponibilité simple
+# Comment implémenter des serveurs redondants avec un logiciel de haute disponibilité simple {#how-to-implement-redundant-servers-with-simple-ha-software}
 
-## Comment mettre en œuvre des serveurs redondants actif/passif avec réplication en temps réel et basculement sur panne ?
+## Comment mettre en œuvre des serveurs redondants actif/passif avec réplication en temps réel et basculement sur panne ? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 
-### Le cluster miroir de SafeKit
+### Le cluster miroir de SafeKit {#the-safekit-mirror-cluster}
 
 
 ![Serveurs redondants avec réplication de fichiers temps réel et basculement sur panne](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,9 +19,9 @@ topics: "Comment mettre en œuvre des serveurs redondants actif/passif avec rép
 
 Dans un cluster miroir, le logiciel SafeKit est installé sur deux serveurs physiques ou virtuels exécutant Windows ou Linux (sur site ou dans le Cloud). Le serveur primaire est le serveur actif et exécute une application critique. Le serveur secondaire est un serveur redondant passif et reçoit en temps réel toutes les modifications apportées par l'application à l'intérieur de ses fichiers. Les clients sont connectés à une [ adresse IP virtuelle](</fr/best-practises/how-a-virtual-ip-address-works/#virtual-ip-same-subnet-failover>). Si le serveur actif est en panne, SafeKit redémarre automatiquement l'application critique sur le serveur redondant passif qui devient primaire et commute l'adresse IP virtuelle. Lorsque le serveur défaillant est redémarré, il est automatiquement resynchronisé et devient le serveur redondant passif fonctionnant comme secondaire.
 
-## Comment mettre en œuvre des serveurs redondants actif/actif avec équilibrage de la charge réseau et basculement sur panne ?
+## Comment mettre en œuvre des serveurs redondants actif/actif avec équilibrage de la charge réseau et basculement sur panne ? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### Le cluster ferme de SafeKit
+### Le cluster ferme de SafeKit {#the-safekit-farm-cluster}
 
 
 ![Serveurs redondants avec équilibrage de charge réseau et basculement sur panne](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -31,7 +31,5 @@ Dans un cluster de serveurs en ferme, le logiciel SafeKit est installé sur des 
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

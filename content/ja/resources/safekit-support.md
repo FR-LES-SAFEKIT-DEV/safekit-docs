@@ -7,7 +7,7 @@ lang: "ja"
 topics: "無料AIレベル1サポート, 標準サポートとメンテナンス, 無料の認定・トレーニングプログラム, 🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit AIとサポート
+# SafeKit AIとサポート {#safekit-ai--support}
 
 ## 無料AIレベル1サポート {#ai-support}
 

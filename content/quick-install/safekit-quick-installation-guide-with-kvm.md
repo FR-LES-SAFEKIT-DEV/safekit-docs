@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for KVM, SafeKit High Availability Limitations, Overview of the SafeKit / KVM solution, Installation of the SafeKit / KVM solution on Linux (kvm.safe), Step by step configuration of the SafeKit / KVM solution, Demonstration of a VM-level high availability solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# KVM High Availability with SafeKit: Install the kvm.safe Module for Failover
+# KVM High Availability with SafeKit: Install the kvm.safe Module for Failover {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="KVM" mod="kvm"  %}}
  
 
-## Overview of the SafeKit / KVM solution
+## Overview of the SafeKit / KVM solution {#overview-of-the-safekit--kvm-solution}
 
 The solution is described here: **💡[Simple Linux KVM High Availability without Shared Storage](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
 
-## Installation of the SafeKit / KVM solution on Linux (kvm.safe)
+## Installation of the SafeKit / KVM solution on Linux (kvm.safe) {#installation-of-the-safekit--kvm-solution-on-linux-kvmsafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * KVM installed on 2 Linux nodes.
   * Critical applications installed inside one or more virtual machines.
@@ -31,27 +31,21 @@ The solution is described here: **💡[Simple Linux KVM High Availability withou
 
 
 {{%  insert-safekit-installation-package-linux-en app="KVM" mod="kvm"  %}}
- 
-
 
 {{%  insert-safekit-82-installation-module-linux-en app="KVM" mod="kvm"  %}}
  
 
-## Step by step configuration of the SafeKit / KVM solution
+## Step by step configuration of the SafeKit / KVM solution {#step-by-step-configuration-of-the-safekit--kvm-solution}
 
 
 {{%  insert-safekit-82-kvm-configuration-en app="KVM" mod="kvm"  %}}
  
 
-## Demonstration of a VM-level high availability solution
+## Demonstration of a VM-level high availability solution {#demonstration-of-a-vm-level-high-availability-solution}
 
 
 {{%  insert-safekit-hyperv-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

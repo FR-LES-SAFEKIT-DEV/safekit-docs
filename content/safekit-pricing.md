@@ -7,7 +7,7 @@ lang: "en"
 topics: "Licensing model and pricing, Standard support and maintenance, Request a quote"
 ---
 
-# SafeKit Pricing
+# SafeKit Pricing {#safekit-pricing}
 
 ## Licensing model and pricing {#licensing-model-and-pricing}
 

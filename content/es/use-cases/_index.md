@@ -7,13 +7,11 @@ lang: "es"
 topics: "Casos de uso de SafeKit, 🔍 Centro de navegación de SafeKit para alta disponibilidad"
 ---
 
-# Casos de uso de clientes
+# Casos de uso de clientes {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-es  %}}
- 
 
 {{%  insert-safekit-hub-es  %}}
- 
 
 {{%  insert-safekit-4-buttons-es  %}}

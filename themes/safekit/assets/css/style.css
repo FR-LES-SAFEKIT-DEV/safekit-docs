@@ -22,7 +22,7 @@ header { position: sticky; top: 0; z-index: 2000; background: #fff; }
 .userguide-page header { position: static; }
 .navbar { display: flex; align-items: center; max-width: 1400px; margin: 0 auto; padding: 0.5rem 0.75rem; border-bottom: 2px solid #0066cc; position: relative; }
 .logo { display: flex; align-items: center; }
-.logo img { width: 150px; height: auto; }
+.logo img { width: 96px; height: auto; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .nav-brand { font-size: 0.9rem; font-weight: 500; color: #333; text-decoration: none; padding: 0.75rem 0.8rem; white-space: nowrap; }
 .nav-brand:hover { text-decoration: none; color: #0066cc; background: #f0f7ff; }
@@ -207,7 +207,7 @@ article a.btn-download:hover { background: #0052a3; text-decoration: none !impor
 /* ==========================================================================
    7. MEDIA QUERIES (RESPONSIVE)
    ========================================================================== */
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
     .toc-sidebar { display: none; }
     .page-with-toc { display: block; }
     article table { display: block; max-width: 100%; overflow-x: auto; }
@@ -233,10 +233,15 @@ article a.btn-download:hover { background: #0052a3; text-decoration: none !impor
     .btn-action { text-align: center; }
 }
 
-@media (max-width: 1400px) {
-  .logo img { width: 96px; }
+@media (max-width: 1150px) {
   .nav-menu { align-items: stretch; }
   .nav-brand { width: 100%; padding: 0.6rem 1.5rem; text-align: start; }
+}
+
+@media (min-width: 1151px) {
+  .nav-brand,
+  .dropdown-toggle { padding-inline: 0.55rem; }
+  .dropdown-toggle::after { margin-inline-start: 0.2rem; }
 }
 
 @media (max-width: 860px) {
@@ -248,7 +253,7 @@ article a.btn-download:hover { background: #0052a3; text-decoration: none !impor
    8. TOUCH ACCESSIBILITY ON TOP MENU FOR TABLETS AND SMARTPHONES
    ========================================================================== */
 
-@media (max-width: 1100px) and (hover: none) and (pointer: coarse) {
+@media (max-width: 1150px) and (hover: none) and (pointer: coarse) {
 
     /* 1. Keep each section on the left and place its submenu below it. */
     .dropdown { width: 100%; }
@@ -290,7 +295,7 @@ article a.btn-download:hover { background: #0052a3; text-decoration: none !impor
 header { background: #002f3b; border-radius: 8px 8px 0 0; }
 .navbar {
     max-width: 1800px;
-    padding: 0.85rem 4.5vw;
+    padding: 0.85rem clamp(1rem, 2vw, 2rem);
     border-bottom: 0;
 }
 html[dir="rtl"] .nav-menu {
@@ -373,7 +378,7 @@ html[dir="rtl"] .nav-menu {
     font-weight: 400;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
     html[dir="rtl"] .nav-menu { margin: 0; }
     .nav-menu {
         background: #002f3b;
@@ -392,22 +397,4 @@ html[dir="rtl"] .nav-menu {
     .lang-current { min-height: 0; font-size: 0.95rem; }
   }
 
-  @media (min-width: 1101px) and (max-width: 1400px) {
-    .nav-toggle-label { display: inline-flex; flex: 0 0 2rem; width: 2rem; height: 2.75rem; margin: 0; }
-    .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #002f3b; border-bottom: 2px solid rgba(255, 255, 255, 0.35); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin-left: 0; padding: 0.5rem 0; z-index: 999; }
-    .nav-toggle:checked ~ .nav-menu { display: flex; }
-    .nav-brand,
-    .nav-brand.active,
-    .dropdown-toggle,
-    .dropdown-toggle.active { color: #fff; }
-    .dropdown { display: grid; grid-template-columns: minmax(0, 1fr) auto; width: 100%; }
-    .dropdown-toggle { flex: 1; padding: 0.6rem 1.5rem; }
-    .dropdown-toggle::after { display: none; }
-    .dropdown-expand { display: block; width: 2.75rem; height: 2.75rem; border: 0; background: transparent; color: #fff; font-size: 1.5rem; font-weight: 600; line-height: 1; cursor: pointer; }
-    .dropdown-expand[aria-expanded="true"] { color: #fff; }
-    .dropdown:hover .mega-panel { display: none; }
-    .dropdown.mobile-open .mega-panel { display: block; position: static; width: 100%; grid-column: 1 / -1; max-height: calc(100dvh - var(--mega-panel-top, 4rem) - 1rem); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 0.5rem 1.5rem 5rem; border: 0; border-top: 1px solid #eee; background: #fff; box-shadow: none; }
-    .dropdown.mobile-open .dropdown-expand { font-size: 0; }
-    .dropdown.mobile-open .dropdown-expand::after { content: "−"; font-size: 1.5rem; }
-  }
 

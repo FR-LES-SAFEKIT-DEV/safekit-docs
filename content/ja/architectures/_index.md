@@ -7,11 +7,11 @@ lang: "ja"
 topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラスターにはどのような種類がありますか？、SafeKitで高可用性クラスターを構築する方法、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKitのアーキテクチャ
+# SafeKitのアーキテクチャ {#safekit-architectures}
 
-## SafeKitの高可用性アーキテクチャとソフトウェアクラスターにはどのような種類がありますか？
+## SafeKitの高可用性アーキテクチャとソフトウェアクラスターにはどのような種類がありますか？ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Mirrorクラスター
+### Mirrorクラスター {#mirror-cluster}
 
 
 ![SafeKit Mirrorクラスター](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 [詳細](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Farmクラスター
+### Farmクラスター {#farm-cluster}
 
 
 ![SafeKit Farmクラスター](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 [詳細](</architectures/network-load-balancing-cluster/>)
 
-### Farm+Mirrorクラスター
+### Farm+Mirrorクラスター {#farmmirror-cluster}
 
 
 ![SafeKit Farm+Mirrorクラスター](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 [詳細](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### アクティブ/アクティブクラスター
+### アクティブ/アクティブクラスター {#activeactive-cluster}
 
 
 ![リアルタイムレプリケーションを行うSafeKitアクティブ/アクティブクラスター](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 [詳細](</architectures/active-active-cluster-real-time-replication/>)
 
-### N-1クラスター
+### N-1クラスター {#n-1-cluster}
 
 
 ![SafeKit N-1冗長クラスター](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 [詳細](</architectures/n-1-redundancy/>)
 
-## SafeKitで高可用性クラスターを構築する方法
+## SafeKitで高可用性クラスターを構築する方法 {#how-to-build-high-availability-clusters-with-safekit}
 
-### 高可用性モジュールを使用する
+### 高可用性モジュールを使用する {#use-high-availability-modules}
 
 高可用性モジュールは、アプリケーションに合わせてSafeKitをカスタマイズしたものです。モジュールには2種類あります。リアルタイムデータレプリケーションとフェイルオーバーを行うMirrorモジュールと、負荷分散とフェイルオーバーを行うFarmモジュールです。
 
@@ -61,7 +61,7 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 同じサーバーに複数のアプリケーションモジュールを導入できます。そのため、前述のFarm+Mirror、アクティブ/アクティブ、N-1のような高度なクラスターアーキテクチャを構築できます。
 
-### アプリケーションモジュールとは？
+### アプリケーションモジュールとは？ {#what-is-an-application-module}
 
 アプリケーションモジュールは、通常、次の内容を含む「.Safe」ファイル（zip形式）です。
 
@@ -76,7 +76,7 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 2 - アプリケーションを起動および停止するスクリプト。
 
-### 高可用性モジュールのプラグアンドプレイ導入
+### 高可用性モジュールのプラグアンドプレイ導入 {#plug-and-play-deployment-of-high-availability-modules}
 
 アプリケーションモジュールを設定し、アプリケーションでテストすれば、導入に特別なITスキルは必要ありません。
 
@@ -87,6 +87,5 @@ topics: "SafeKitの高可用性アーキテクチャとソフトウェアクラ�
 
 
 {{%  insert-safekit-hub-ja  %}}
- 
 
 {{%  insert-safekit-4-buttons-ja  %}}

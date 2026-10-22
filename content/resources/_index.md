@@ -7,9 +7,9 @@ lang: "en"
 topics: "Free Trial, Technical Documentation & Product Information for SafeKit High Availability, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit Resources
+# SafeKit Resources {#safekit-resources}
 
-## Free Trial, Technical Documentation & Product Information for SafeKit High Availability
+## Free Trial, Technical Documentation & Product Information for SafeKit High Availability {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
 **SafeKit Resources: Free Trial, Documentation and Product Information**
 
@@ -19,7 +19,5 @@ Free Trial | Technical Documentation | Product Information
   
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

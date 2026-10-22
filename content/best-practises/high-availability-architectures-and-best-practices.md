@@ -7,11 +7,11 @@ lang: "en"
 topics: "What are the high availability architectures and the best practices?, Comparative tables on high availability architectures and best practices, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability Architectures & Software Clustering Best Practices
+# High Availability Architectures & Software Clustering Best Practices {#high-availability-architectures--software-clustering-best-practices}
 
-## What are the high availability architectures and the best practices?
+## What are the high availability architectures and the best practices? {#what-are-the-high-availability-architectures-and-the-best-practices}
 
-### Overview
+### Overview {#overview}
 
 This article explores the different high availability architectures and the best practices by given the pros and cons of each architecture.
 
@@ -21,7 +21,7 @@ This article explores the different high availability architectures and the best
 
 The following comparative tables explain in detail the SafeKit high availability architecture and its best practices (SafeKit is a software high availability product).
 
-### What are the high availability architectures?
+### What are the high availability architectures? {#what-are-the-high-availability-architectures}
 
 There are two types of [high availability](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) architectures: those for backend applications such as databases and those for frontend applications such as web services.
 
@@ -31,7 +31,7 @@ High availability architectures for frontend are based on a farm of servers (2 s
 
 Moreover, you have to choose between high availability at the application level or at the virtual machine level.
 
-### What are the best practices?
+### What are the best practices? {#what-are-the-best-practices}
 
 This article explores the best practices in high availability architectures by comparing:
 
@@ -47,15 +47,11 @@ This article explores the best practices in high availability architectures by c
   * [virtual IP addresses](</best-practises/how-a-virtual-ip-address-works/>).
 
 
-## Comparative tables on high availability architectures and best practices
+## Comparative tables on high availability architectures and best practices {#comparative-tables-on-high-availability-architectures-and-best-practices}
 
 
 {{%  insert-safekit-software-vs-hardware-table-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,15 +7,15 @@ lang: "en"
 topics: "What is video management software (VMS)?, Why a VMS software is critical?, Key players list in VMS, SafeKit brings two solutions for redundancy and high availability of a VMS software, SafeKit, a recognized solution on the security market, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability and Redundancy for Video Management Software (VMS)
+# High Availability and Redundancy for Video Management Software (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
-##  What is video management software (VMS)? 
+##  What is video management software (VMS)? {#what-is-video-management-software-vms}
 
 Video Management Software (VMS) collects and records camera video and provides an interface for operators to view live and recorded video.
 
 Video management software increases life safety, reduces theft and improves security officers efficiency.
 
-##  Why a VMS software is critical? 
+##  Why a VMS software is critical? {#why-a-vms-software-is-critical}
 
 Video Management Software (VMS) records all criminal acts, from theft to murder, and provides a means to track criminals.
 
@@ -23,7 +23,7 @@ The safety of people is directly associated with the proper execution of the VMS
 
 And that's why the system must always be available to security officers who must react immediately to the slightest incident.
 
-##  Key players list in VMS 
+##  Key players list in VMS {#key-players-list-in-vms}
 
 The key players in VMS are:
 
@@ -43,15 +43,9 @@ The key players in VMS are:
 
 
 {{%  insert-safekit-security-solutions-en app="VMS"  %}}
- 
-
 
 {{%  insert-safekit-security-case-en app="VMS"  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

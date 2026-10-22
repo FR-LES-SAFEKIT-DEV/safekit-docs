@@ -7,9 +7,9 @@ lang: "en"
 topics: "SafeKit Clustering Best Practices: HA Architecture, Replication & Redundancy, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability Best Practices
+# High Availability Best Practices {#high-availability-best-practices}
 
-## SafeKit Clustering Best Practices: HA Architecture, Replication & Redundancy
+## SafeKit Clustering Best Practices: HA Architecture, Replication & Redundancy {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
 **Best practices for high availability clustering, replication, and redundancy**
 
@@ -19,7 +19,5 @@ High availability best practises | Replication best practises | Clustering best 
   
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

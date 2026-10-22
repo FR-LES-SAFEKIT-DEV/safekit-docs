@@ -7,9 +7,9 @@ lang: "en"
 topics: "The Edge HA Challenge, What Makes SafeKit the Natural Fit for Edge, Edge & Distributed Deployment Suitability, Why Edge OT Environments Are Different, Ideal Edge Use Cases, Edge vs. Data Center HA: Key Differences, Technical Minimum Requirements, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites
+# Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
 
-## The Edge HA Challenge
+## The Edge HA Challenge {#the-edge-ha-challenge}
 
 Edge sites often have no data center and no HA expertise — yet business continuity is critical. A factory floor, an offshore oil platform, a hospital clinic, a retail store, or a 5G antenna site cannot afford downtime, but cannot justify the cost and complexity of a traditional data center HA cluster.
 
@@ -21,7 +21,7 @@ SafeKit was built for exactly this gap. It keeps edge applications running in fa
 ![SafeKit for Edge](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
 
 
-## What Makes SafeKit the Natural Fit for Edge
+## What Makes SafeKit the Natural Fit for Edge {#what-makes-safekit-the-natural-fit-for-edge}
 
 SafeKit turns two standard edge servers (any brand, physical or virtual) into a plug-and-play HA cluster — no shared storage, no SAN, no special hardware. One lightweight software stack delivers:
 
@@ -34,7 +34,7 @@ SafeKit turns two standard edge servers (any brand, physical or virtual) into a 
 
 There is no SAN to procure, no Windows Server Datacenter license required, no Linux cluster OS expertise needed, and no dedicated cluster hardware. The entire HA stack is a single software package.
 
-## Edge & Distributed Deployment Suitability
+## Edge & Distributed Deployment Suitability {#edge--distributed-deployment-suitability}
 
 SafeKit is specifically designed for edge, branch office, and distributed enterprise scenarios:
 
@@ -50,7 +50,7 @@ Air-gapped / offline networks | No internet dependency; fully self-contained
 OEM/embedded deployment | Silent install, scriptable, embeddable by software publishers  
 Hundreds of distributed clusters | Designed for distributed enterprises managing many branches  
   
-## Why Edge OT Environments Are Different
+## Why Edge OT Environments Are Different {#why-edge-ot-environments-are-different}
 
 OT (Operational Technology) environments — SCADA, BMS, physical security, industrial control — have requirements that differ fundamentally from IT data centers:
 
@@ -64,7 +64,7 @@ OT (Operational Technology) environments — SCADA, BMS, physical security, indu
 
 SafeKit's SANless, two-server, automatic-failover model addresses every one of these constraints directly.
 
-## Ideal Edge Use Cases
+## Ideal Edge Use Cases {#ideal-edge-use-cases}
 
 Any site without a data center — where high availability still matters:
 
@@ -83,7 +83,7 @@ Healthcare | Clinics, remote diagnostic centers | Medical imaging, patient data,
 Retail | Stores, branches, warehouses | Point-of-sale and inventory management  
 Defense | Forward operating bases, field units | Mission-critical command and communications systems  
   
-## Edge vs. Data Center HA: Key Differences
+## Edge vs. Data Center HA: Key Differences {#edge-vs-data-center-ha-key-differences}
 
 Criterion | Data Center HA (WSFC, Pacemaker, VMware HA) | SafeKit Edge HA  
 ---|---|---  
@@ -96,7 +96,7 @@ Deployment scale | Single data center | Hundreds of distributed sites
 License cost | High (Datacenter OS, SAN licenses) | Single affordable software license per cluster  
 Typical RTO | 1–5 minutes | Under 1 minute (configurable)  
   
-## Technical Minimum Requirements
+## Technical Minimum Requirements {#technical-minimum-requirements}
 
   * **Servers:** 2 standard x86 servers or VMs (any hardware brand, physical or virtual) or ARM (Linux only)
   * **OS:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
@@ -109,7 +109,5 @@ For full technical specifications, sizing constraints, and procurement criteria,
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

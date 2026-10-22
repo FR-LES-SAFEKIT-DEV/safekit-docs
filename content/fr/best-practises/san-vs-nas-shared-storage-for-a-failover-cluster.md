@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Comparaison détaillée du stockage partagé SAN et NAS pour le clustering HA
+# Comparaison détaillée du stockage partagé SAN et NAS pour le clustering HA {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
-## Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ?
+## Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
-###  Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité 
+###  Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
 ![Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
@@ -25,7 +25,7 @@ Plusieurs éléments rendent cette architecture complexe à mettre en œuvre :
   * pour éviter un double accès, un disque de quorum doit être configuré.
 
 
-###  Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité 
+###  Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
 ![Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
@@ -38,7 +38,7 @@ Plusieurs éléments rendent cette architecture simple à mettre en œuvre :
   * cependant, il existe toujours la possibilité qu'une double exécution de la même application corrompent ses données dans le stockage partagé lorsque les nœuds sont isolés.
 
 
-###  Réplication en temps réel et basculement avec Eviden SafeKit 
+###  Réplication en temps réel et basculement avec Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}
 
 
 ![Réplication en temps réel et basculement avec SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
@@ -55,7 +55,5 @@ Cependant, si SafeKit doit gérer un stockage partagé :
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

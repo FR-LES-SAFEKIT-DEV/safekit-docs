@@ -6,7 +6,7 @@ lang: "ja"
 category: "home"
 ---
 
-# SafeKitに関するお問い合わせ
+# SafeKitに関するお問い合わせ {#contact-us-for-safekit}
 
 <iframe
   src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"

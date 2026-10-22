@@ -6,7 +6,7 @@ lang: "de"
 category: "home"
 ---
 
-# Kontakt zu SafeKit aufnehmen
+# Kontakt zu SafeKit aufnehmen {#contact-us-for-safekit}
 
 <iframe
   src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"

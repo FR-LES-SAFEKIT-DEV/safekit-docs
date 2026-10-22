@@ -7,16 +7,16 @@ lang: "fr"
 topics: "Smart Console : une haute disponibilité intuitive, mobile et sans erreur, Sommaire, Comment fonctionne un cluster miroir SafeKit avec la console web ?, Comment fonctionne un cluster ferme SafeKit avec la console web ?, Comment superviser plusieurs modules et plusieurs clusters via la console web ?, Comment surveiller les alertes dans la console et gérer les notifications par e-mail ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# SafeKit Smart Console : votre cluster de haute disponibilité à portée de main
+# SafeKit Smart Console : votre cluster de haute disponibilité à portée de main {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
 
-## Smart Console : une haute disponibilité intuitive, mobile et sans erreur
+## Smart Console : une haute disponibilité intuitive, mobile et sans erreur {#smart-console-intuitive-mobile-and-error-free-high-availability}
 
 Redéfinissez la gestion de la haute disponibilité avec une solution conçue pour la **rapidité et la simplicité**. La console web SafeKit se distingue par une **prise en main immédiate** , vous permettant de configurer et de piloter votre infrastructure **sans écrire une ligne de code**.
 
 Que vous soyez à votre bureau ou en déplacement, le tableau de bord compatible smartphone vous donne un contrôle total du cluster du bout des doigts. En simplifiant la gestion des modules miroir et ferme, la console **élimine les erreurs humaines** et garantit un basculement fluide pour vos systèmes les plus critiques.  
 
 
-## Sommaire
+## Sommaire {#table-of-contents}
 
   * [Comment fonctionne un cluster miroir SafeKit avec la console web ?](#safekit-mirror-cluster)
   * [Comment fonctionne un cluster ferme SafeKit avec la console web ?](#safekit-farm-cluster)
@@ -138,7 +138,7 @@ Lors du déploiement de **plusieurs clusters** sur différents serveurs, vous po
 
 ## Comment surveiller les alertes dans la console et gérer les notifications par e-mail ? {#safekit-notifications-cluster}
 
-### Comment recevoir des alertes instantanées lors des changements d’état des modules et des événements critiques ?
+### Comment recevoir des alertes instantanées lors des changements d’état des modules et des événements critiques ? {#how-can-i-receive-instant-alerts-for-module-state-changes-and-critical-events}
 
 La console web SafeKit s’appuie sur les fonctionnalités natives du navigateur pour émettre des **notifications instantanées** à chaque changement d’état d’un module. Les événements critiques sont ainsi immédiatement portés à votre attention, même lorsque la console est ouverte dans un onglet en arrière‑plan.
 
@@ -154,7 +154,7 @@ Ce mécanisme alerte immédiatement les utilisateurs lors d’événements criti
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-### Comment configurer des alertes e‑mail automatiques dans SafeKit ?
+### Comment configurer des alertes e‑mail automatiques dans SafeKit ? {#how-can-i-set-up-automated-email-alerts-in-safekit}
 
 SafeKit consigne automatiquement tous les **événements majeurs du cluster dans les journaux système** , ce qui permet une intégration transparente avec tout outil de supervision du marché. En complément, SafeKit inclut un **agent de notification par e‑mail** dédié, chargé de surveiller ces journaux et d’envoyer les alertes critiques directement dans votre boîte de réception. Les parties prenantes restent ainsi informées, même lorsque la console web n’est pas consultée en continu.
 
@@ -172,7 +172,5 @@ En combinant les alertes temps réel via la PWA avec un regroupement intelligent
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

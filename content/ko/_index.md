@@ -7,7 +7,7 @@ lang: "ko"
 topics: "SafeKit의 기능, 보호 수준 선택, 애플리케이션용 사전 구성 모듈, 고객 사용 사례, 간단하고 예측 가능한 가격, 시작 전 제한 사항 확인, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# SafeKit: SAN 없는 Windows 및 Linux 고가용성 소프트웨어
+# SafeKit: SAN 없는 Windows 및 Linux 고가용성 소프트웨어 {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKit은 표준 서버 두 대를 SAN 없는 고가용성 클러스터로 전환하여 애플리케이션을 계속 실행합니다. 데이터를 실시간으로 복제하고 첫 번째 서버에 장애가 발생하면 두 번째 서버에서 애플리케이션을 다시 시작하며, 수리된 서버도 자동으로 클러스터에 다시 통합합니다. 공유 스토리지나 클러스터 전문 지식 없이 기존 서버에 설치할 수 있습니다.
 
@@ -79,4 +79,4 @@ SafeKit은 단순성을 위해 설계되었으며 모든 상황에 적합한 것
 
 <a class="btn-download" href="/ko/product/#safekit-ha-limitations">전체 제한 사항 보기 ›</a>
 
-{{%  insert-safekit-hub-kr  %}}
+{{%  insert-safekit-hub-ko  %}}

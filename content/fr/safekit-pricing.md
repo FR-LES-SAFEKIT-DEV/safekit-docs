@@ -7,7 +7,7 @@ lang: "fr"
 topics: "Modèle de licence et tarification, Assistance et maintenance standard, Demander un devis"
 ---
 
-# Tarifs SafeKit
+# Tarifs SafeKit {#safekit-pricing}
 
 ## Modèle de licence et tarification {#licensing-model-and-pricing}
 

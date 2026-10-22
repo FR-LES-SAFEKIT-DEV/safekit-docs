@@ -7,15 +7,15 @@ lang: "en"
 topics: "What is a building management system (BMS)?, Why a BMS software is critical?, Key players list in BMS, SafeKit brings two solutions for redundancy and high availability of a BMS software, SafeKit, a recognized solution on the security market, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability and Redundancy for Building Management Systems (BMS)
+# High Availability and Redundancy for Building Management Systems (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
-##  What is a building management system (BMS)? 
+##  What is a building management system (BMS)? {#what-is-a-building-management-system-bms}
 
 A building management system (BMS) brings the automatic centralized control of building's HVAC (heating, ventilation and air conditioning), electrical, lighting...
 
 A building management system increases safety for building residents, reduces energy consumption and reduces operating and maintenance costs.
 
-##  Why a BMS software is critical? 
+##  Why a BMS software is critical? {#why-a-bms-software-is-critical}
 
 A BMS software controls fire system, electrical distribution panels, water consumption, air conditioning systems, lighting control.
 
@@ -23,7 +23,7 @@ Life safety in the building is directly associated to the correct execution of t
 
 And that’s why, the system must be always available for building operators who must react immediately to the slightest incident.
 
-##  Key players list in BMS 
+##  Key players list in BMS {#key-players-list-in-bms}
 
 The key players in BMS are:
 
@@ -54,15 +54,9 @@ The key players in BMS are:
 
 
 {{%  insert-safekit-security-solutions-en app="BMS"  %}}
- 
-
 
 {{%  insert-safekit-security-case-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

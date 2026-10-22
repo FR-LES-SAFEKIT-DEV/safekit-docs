@@ -7,7 +7,7 @@ lang: "ar"
 topics: "نموذج الترخيص والأسعار، الدعم والصيانة القياسيان، طلب عرض سعر"
 ---
 
-# أسعار SafeKit
+# أسعار SafeKit {#safekit-pricing}
 
 ## نموذج الترخيص والأسعار {#licensing-model-and-pricing}
 

@@ -7,13 +7,11 @@ lang: "ko"
 topics: "SafeKit 활용 사례, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# 고객 활용 사례
+# 고객 활용 사례 {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-ko  %}}
- 
 
-{{%  insert-safekit-hub-kr  %}}
- 
+{{%  insert-safekit-hub-ko  %}}
 
 {{%  insert-safekit-4-buttons-ko  %}}

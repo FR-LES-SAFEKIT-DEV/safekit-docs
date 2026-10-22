@@ -7,13 +7,11 @@ lang: "de"
 topics: "SafeKit-Testversion für Hochverfügbarkeit und technische Dokumentation, 🔍 SafeKit-Navigationshub für Hochverfügbarkeit"
 ---
 
-# Kostenlose SafeKit-Testversion
+# Kostenlose SafeKit-Testversion {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-de  %}}
- 
 
 {{%  insert-safekit-hub-de  %}}
- 
 
 {{%  insert-safekit-4-buttons-de  %}}

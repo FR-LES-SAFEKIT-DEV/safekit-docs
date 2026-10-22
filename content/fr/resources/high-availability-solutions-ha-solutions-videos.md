@@ -7,15 +7,11 @@ lang: "fr"
 topics: "Tutoriels techniques et démos sur le basculement SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Démonstrations de haute disponibilité et de basculement SafeKit : Tutoriels vidéo sur le clustering sans SAN
+# Démonstrations de haute disponibilité et de basculement SafeKit : Tutoriels vidéo sur le clustering sans SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}
 
 
 {{%  insert-safekit-videos-fr  %}}
- 
-
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

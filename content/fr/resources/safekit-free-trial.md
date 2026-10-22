@@ -7,15 +7,11 @@ lang: "fr"
 topics: "Ressources, Téléchargements et Documentation sur la Haute Disponibilité SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Essai gratuit de SafeKit
+# Essai gratuit de SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-fr  %}}
- 
-
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

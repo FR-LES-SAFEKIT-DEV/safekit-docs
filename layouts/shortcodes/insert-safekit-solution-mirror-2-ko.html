@@ -1,0 +1,110 @@
+{{/* Shortcode: insert-safekit-solution-mirror-2-ko */}}
+{{/* Parameters: app, guide, img */}}
+
+## {{ .Get "app" }}를 위한 SANless SafeKit 미러 클러스터 작동 방식 {#safekit-hyperv-tco}
+
+**{{ .Get "app" }}용 SafeKit**은 투명한 **고가용성**을 제공하면서 총소유비용(TCO)을 크게 낮춥니다. 기존 클러스터링의 하드웨어 및 운영 부담 없이 가벼운 2노드 HA 대안을 제공합니다.
+
+  * **올인원 비즈니스 연속성:** 가상 IP, 자동 장애 조치 및 복구, 실시간 복제를 하나의 통합 패키지로 제공합니다.
+  * **동기식 복제(데이터 손실 없음):** 장애 시 RPO=0을 보장하여 트랜잭션 애플리케이션의 데이터 무결성을 유지합니다.
+  * **유연한 파일 수준 보호:** 데이터베이스와 관련 폴더를 애플리케이션에 투명하게 복제하며, **시스템 디스크**도 보호합니다.
+  * **간편한 배포(AD/LDAP 불필요):** AD/LDAP 디렉터리 구성이나 관련 인프라 종속성이 필요하지 않습니다.
+  * **HA를 위한 SAN 투자 불필요:** 공유 스토리지 없는 구조와 표준 로컬 디스크를 사용하므로 고가의 SAN과 전문 스토리지 유지 관리가 필요 없습니다.
+  * **효율적인 2노드 구성:** split-brain 방지를 위한 세 번째 witness 노드가 필요 없어 하드웨어, 전력, 랙 공간을 최대 33% 절약합니다.
+  * **하드웨어에 구애받지 않는 이중화:** 서버 브랜드와 내부 스토리지를 자유롭게 선택하고 기존 장비의 수명을 연장합니다.
+  * **예측 가능한 라이선스 비용:** 일회성 영구 라이선스로 예측하기 어려운 연간 가격 인상을 방지합니다.
+
+SafeKit은 가벼운 소프트웨어 계층에 **고가용성**을 통합하여 기존 클러스터링 제품군보다 훨씬 낮은 비용으로 **{{ .Get "app" }}의 이중화와 비즈니스 연속성**을 제공합니다.
+
+![가상 IP, 자동 장애 조치 및 복구, 실시간 복제를 제공하는 {{ .Get "app" }}용 SafeKit HA 클러스터 아키텍처]({{ .Get "img" }} "w:512")
+
+**{{ .Get "app" }}용 SafeKit HA 미러 클러스터**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }} 미러 클러스터 빠른 설치 가이드 ></a>
+## 목차 {#toc}
+
+  * [SafeKit으로 {{ .Get "app" }} SANless HA 클러스터를 구현하는 방법](#safekit-mirror-ha-cluster)
+  * [SafeKit 미러 클러스터와 {{ .Get "app" }}의 작동 방식](#safekit-mirror-cluster)
+  * [다른 클러스터링 솔루션과 비교](#safekit-mirror-ha-comparison)
+  * [동영상: SafeKit HA 미러 클러스터 구성](#videoguide-safekit-mirror-cluster)
+  * [🔍 SafeKit 고가용성 탐색 허브](#hub)
+
+## SafeKit으로 {{ .Get "app" }} SANless HA 클러스터를 구현하는 방법 {#safekit-mirror-ha-cluster}
+
+### {{ .Get "app" }}용 SafeKit Mirror HA 솔루션이란? {#safekit-mirror-ha-solution}
+
+SafeKit은 브랜드에 관계없이 두 서버 간에 {{ .Get "app" }}의 고가용성을 제공합니다. **{{ .Get "app" }} 애플리케이션**의 데이터 폴더, 서비스, 가상 IP 및 검사기를 정의하면 공유 SAN 스토리지나 전문 기술 없이 클러스터를 구성할 수 있습니다. SafeKit이 **실시간 복제**와 **자동 장애 조치**를 수행합니다.
+
+### 여러 도구 대신 통합 HA 솔루션을 선택해야 하는 이유 {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
+
+**SafeKit**은 가상 IP, 자동 장애 조치 및 복구, 실시간 파일 복제를 하나의 엔진에 통합합니다. 별도 제품 간의 취약한 연결을 없애고 관리를 단순화하며 인적 오류를 줄입니다.
+
+### 애플리케이션 수준과 가상 머신(VM) 수준 중 어떤 HA를 선택해야 하나요? {#application-vs-vm-high-availability}
+
+**VM 수준 이중화**(Hyper-V 또는 KVM)는 애플리케이션 지식 없이 VM 전체를 복제합니다. **애플리케이션 수준 이중화**는 지정한 데이터 폴더만 복제하고 전체 OS가 아닌 애플리케이션 서비스를 다시 시작합니다. 하이퍼바이저에 종속되지 않으며 물리, 가상, 클라우드 환경에서 작동합니다.
+
+### 다른 {{ .Get "app" }} 클러스터와 비교한 SafeKit의 장점은 무엇인가요? {#safekit-mirror-ha-advantages}
+
+SafeKit은 **공유 스토리지가 없는 아키텍처**와 간편한 배포를 결합합니다.
+
+  * **데이터 손실 없는 동기식 복제:** 트랜잭션 애플리케이션에서 RPO=0을 달성하고 로그, 구성 파일 및 기타 폴더도 복제합니다.
+  * **간단한 2노드 클러스터:** quorum 유지를 위한 witness 없이 두 대의 서버만 필요합니다. [heartbeat 및 quorum 자세히 알아보기](/ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **통합 관리:** 하나의 SafeKit 콘솔에서 장애 조치, 복제, 모니터링을 관리합니다.
+  * **사용자 지정 검사기:** checker로 {{ .Get "app" }} 프로세스 상태를 모니터링합니다.
+
+### SafeKit은 {{ .Get "app" }}의 TCO를 어떻게 낮추나요? {#safekit-mirror-ha-tco}
+
+  * **스토리지 비용 없음:** 로컬 디스크를 사용하여 고가의 SAN, iSCSI 네트워크, 복잡한 vSAN 구성을 대체합니다.
+  * **Enterprise 에디션 불필요:** Standard 에디션과 무료 에디션에서도 작동합니다.
+  * **서버 두 대만 필요:** quorum 유지를 위한 세 번째 witness가 필요하지 않습니다.
+  * **강제 구독 없음:** 영구 라이선스로 반복 비용과 예측하기 어려운 인상을 방지합니다.
+  * **낮은 운영 비용:** 전문 유지 관리 교육이나 값비싼 외부 컨설팅이 필요 없는 플러그 앤 플레이 방식입니다.
+  * **CPU 독립 라이선스:** 프로세서나 코어 수와 관계없이 라이선스 두 개로 노드 두 개를 보호합니다.
+
+### 클러스터링 경험 없이 {{ .Get "app" }} 미러 클러스터를 설정할 수 있나요? {#mirror-cluster-without-clustering-skills}
+
+네. SafeKit의 **자동 장애 조치 스크립트**가 **{{ .Get "app" }}** 복제와 재시작을 처리하므로 전문 SAN 관리가 필요하지 않습니다. [{{ .Get "app" }} 미러 클러스터 빠르게 구현하기]({{ .Get "guide" }}).
+
+### SafeKit은 {{ .Get "app" }} 외에 어떤 애플리케이션과 환경을 보호하나요? {#supported-applications-and-environments}
+
+SafeKit은 **Windows 및 Linux 고가용성**을 제공하며 다음 환경을 동기식 실시간 복제와 자동 장애 조치로 보호합니다.
+
+  * **가상 및 물리 환경:** 전체 Hyper-V 또는 KVM VM.
+  * **컨테이너:** Docker, Podman, K3s(Kubernetes).
+  * **데이터 및 서비스:** 파일 디렉터리, 서비스, 데이터베이스.
+  * **클라우드 인프라:** 클라우드 애플리케이션.
+
+또한 **웹 서버** 같은 상태 비저장 애플리케이션을 위해 네트워크 부하 분산과 장애 조치를 제공하는 **Farm 클러스터**도 지원합니다.
+
+💡 [지원되는 HA 솔루션 전체 목록 보기.](/ko/solutions/)
+
+{{ $.Page.RenderString (printf "{{%% insert-safekit-mirror-ko app=%q %%}}" (.Get "app")) }}
+
+{{ $.Page.RenderString "{{% insert-safekit-usage-ko %}}" }}
+
+## {{ .Get "app" }}용 SafeKit과 다른 클러스터링 솔루션 비교 {#safekit-mirror-ha-comparison}
+
+기능 | {{ .Get "app" }}용 SafeKit | 공유 스토리지 장애 조치 클러스터 | 데이터베이스 복제
+---|---|---|---
+아키텍처 | SANless(공유 스토리지 없음) | 공유 스토리지(SAN/NAS) | 공유 스토리지 없음
+애플리케이션 재구성 | 불필요 | 필요(공유 디스크로 데이터 이동) | 불필요
+복제 범위 | 전체 애플리케이션(DB, 구성, 로그) | 공유 디스크 데이터 | 데이터베이스 데이터만
+복제 유형 | 동기식(RPO 0) | 동기식(SAN 사용) | 에디션에 따라 다르며 대체로 비동기식
+장애 조치/복구 | 완전 자동 | 완전 자동 | 수동 또는 복잡한 경우가 많음
+AD/LDAP 종속성 | 없음 | Windows에서 필요 | 없음
+배포 복잡도 | 낮음(30분 미만) | 높음(AD, 스토리지, quorum) | 중간(복제만)
+
+**요약:** SafeKit은 SAN을 없애고 **Active Directory** 및 특수한 **quorum** 구성에 대한 의존성을 줄여 배포를 단순화합니다. 낮은 TCO, 데이터 손실 없는 보호, 자동 복구를 제공하는 하드웨어 독립적인 경량 HA 대안입니다.
+
+## 동영상: SafeKit HA 미러 클러스터 구성 {#videoguide-safekit-mirror-cluster}
+
+### SafeKit 동영상: 애플리케이션 수준 클러스터링 (8:47) {#demo-mirror-ha-cluster}
+
+SAN의 복잡성 없이 **HA 미러 클러스터**를 구현하는 방법을 확인하세요. Microsoft SQL Server를 사용한 데모지만 다른 데이터베이스와 애플리케이션에도 동일하게 적용됩니다.
+
+  1. [SQL Server를 사용하는 2노드](https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s) (0:32)
+  2. [클러스터 및 mirror.safe 모듈 구성](https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s) (3:58)
+  3. [SQL 복제, 마이그레이션, 장애 조치 테스트](https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s) (4:17)
+
+  * [Windows 미러 클러스터 구성 가이드](/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/)
+  * [Linux 미러 클러스터 구성 가이드](/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/)

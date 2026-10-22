@@ -1,0 +1,110 @@
+{{/* Shortcode: insert-safekit-solution-mirror-2-ja */}}
+{{/* Parameters: app, guide, img */}}
+
+## {{ .Get "app" }} における SANless SafeKit ミラークラスターの仕組み {#safekit-hyperv-tco}
+
+**{{ .Get "app" }} 向け SafeKit** は、透過的な**高可用性**を実現し、総所有コスト（TCO）を大幅に削減します。従来型クラスタリングのハードウェアおよび運用コストを抑え、2ノードの軽量な HA ソリューションを提供します。
+
+  * **オールインワンの事業継続性：** 仮想 IP、自動フェイルオーバー／フェイルバック、リアルタイムレプリケーションを統合。
+  * **同期レプリケーション（データ損失ゼロ）：** 障害時も RPO=0 を実現し、トランザクションアプリケーションのデータ整合性を確保。
+  * **柔軟なファイルレベル保護：** データベースと関連フォルダーを、アプリケーションに透過的に複製。**システムディスク**上のフォルダーにも対応。
+  * **簡単な導入（AD/LDAP 不要）：** AD/LDAP ディレクトリの構成や関連するインフラ依存が不要。
+  * **HA 用 SAN 投資不要：** shared-nothing アーキテクチャと標準のローカルディスクを使用し、高価な SAN や専門的なストレージ保守を回避。
+  * **2ノードで高効率：** split-brain 防止用の3台目の witness は不要。ハードウェア、電力、ラックスペースを最大33%削減。
+  * **ハードウェアに依存しない冗長化：** サーバーや内部ストレージを自由に選べ、既存機器の利用期間を延長。
+  * **予測可能なライセンス費用：** 一度限りの永続ライセンスで、予測不能な年次値上げを回避。
+
+SafeKit は軽量なソフトウェア層に**高可用性**を統合し、従来のクラスタリング製品より低いコストで **{{ .Get "app" }} の冗長化と事業継続性**を実現します。
+
+![仮想 IP、自動フェイルオーバー／フェイルバック、リアルタイムレプリケーションを備えた {{ .Get "app" }} 向け SafeKit HA クラスター構成]({{ .Get "img" }} "w:512")
+
+**{{ .Get "app" }} 向け SafeKit HA ミラークラスター**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }} ミラークラスターのクイックインストールガイド ></a>
+## 目次 {#toc}
+
+  * [SafeKit で {{ .Get "app" }} の SANless HA クラスターを実装する方法](#safekit-mirror-ha-cluster)
+  * [SafeKit ミラークラスターと {{ .Get "app" }} の連携](#safekit-mirror-cluster)
+  * [他のクラスタリングソリューションとの比較](#safekit-mirror-ha-comparison)
+  * [動画：SafeKit HA ミラークラスターの構成](#videoguide-safekit-mirror-cluster)
+  * [🔍 SafeKit 高可用性ナビゲーションハブ](#hub)
+
+## SafeKit で {{ .Get "app" }} の SANless HA クラスターを実装する方法 {#safekit-mirror-ha-cluster}
+
+### {{ .Get "app" }} 向け SafeKit Mirror HA ソリューションとは？ {#safekit-mirror-ha-solution}
+
+SafeKit はメーカーを問わない2台のサーバー間で {{ .Get "app" }} の高可用性を実現します。**{{ .Get "app" }} アプリケーション**のデータフォルダー、サービス、仮想 IP、監視項目を定義するだけで、共有 SAN ストレージや専門知識なしにクラスターを構成できます。SafeKit が**リアルタイムレプリケーション**と**自動フェイルオーバー**を実行します。
+
+### 分断されたツールではなく、統合 HA ソリューションを選ぶ理由 {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
+
+**SafeKit** は仮想 IP、自動フェイルオーバー／フェイルバック、リアルタイムのファイルレプリケーションを単一エンジンに統合します。製品間の脆弱な連携を避け、管理を一元化し、人的ミスを低減します。
+
+### アプリケーションレベルと仮想マシン（VM）レベル、どちらの HA を選ぶべきですか？ {#application-vs-vm-high-availability}
+
+**VM レベルの冗長化**（Hyper-V または KVM）は VM 全体を複製し、アプリケーションの知識を必要としません。**アプリケーションレベルの冗長化**は必要なデータフォルダーだけを複製し、OS 全体ではなくアプリケーションサービスを再起動します。ハイパーバイザーに依存せず、物理、仮想、クラウド環境で利用できます。
+
+### SafeKit が他の {{ .Get "app" }} クラスターより優れている点 {#safekit-mirror-ha-advantages}
+
+SafeKit は**shared-nothing アーキテクチャ**と簡単な導入を組み合わせています。
+
+  * **データ損失ゼロの同期レプリケーション：** トランザクションアプリケーションで RPO=0 を実現。データベースに加え、ログ、構成ファイルなども複製。
+  * **簡単な2ノードクラスター：** witness を使わず、2台の冗長サーバーでクォーラムを維持。 [heartbeat と quorum の詳細](/ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)。
+  * **一元管理：** 単一の SafeKit コンソールでフェイルオーバー、レプリケーション、監視を管理。
+  * **カスタム監視：** checker を使って {{ .Get "app" }} プロセスの状態を監視。
+
+### SafeKit は {{ .Get "app" }} の TCO をどう削減しますか？ {#safekit-mirror-ha-tco}
+
+  * **ストレージ費用不要：** 高価な SAN、iSCSI ネットワーク、複雑な vSAN 構成の代わりにローカルディスクを使用。
+  * **Enterprise エディション不要：** Standard エディションや無料エディションでも利用可能。
+  * **サーバーは2台のみ：** クォーラム用の3台目の witness は不要。
+  * **強制サブスクリプションなし：** 永続ライセンスで継続課金や予測不能な値上げを回避。
+  * **低い運用コスト：** 専門的な保守トレーニングや高額な外部コンサルティングが不要。
+  * **CPU 数に依存しないライセンス：** CPU やコア数にかかわらず、2ライセンスで2ノードを保護。
+
+### クラスタリングの専門知識なしで {{ .Get "app" }} ミラークラスターを構成できますか？ {#mirror-cluster-without-clustering-skills}
+
+はい。SafeKit の**自動フェイルオーバースクリプト**が **{{ .Get "app" }}** のレプリケーションと再起動を処理します。専門的な SAN 管理も不要です。[{{ .Get "app" }} ミラークラスターをすばやく構成する]({{ .Get "guide" }})。
+
+### SafeKit は {{ .Get "app" }} 以外にどのようなアプリケーションや環境を保護できますか？ {#supported-applications-and-environments}
+
+SafeKit は **Windows と Linux の高可用性**を提供し、以下を同期レプリケーションと自動フェイルオーバーで保護します。
+
+  * **仮想／物理環境：** Hyper-V または KVM の VM 全体。
+  * **コンテナー：** Docker、Podman、K3s (Kubernetes)。
+  * **データとサービス：** ファイルディレクトリ、サービス、各種データベース。
+  * **クラウド：** クラウドアプリケーション。
+
+また、**Web サーバー**などのステートレスアプリケーション向けに、ネットワーク負荷分散とフェイルオーバーを備えた **Farm クラスター**も提供します。
+
+💡 [対応する HA ソリューション一覧](/ja/solutions/)
+
+{{ $.Page.RenderString (printf "{{%% insert-safekit-mirror-ja app=%q %%}}" (.Get "app")) }}
+
+{{ $.Page.RenderString "{{% insert-safekit-usage-ja %}}" }}
+
+## {{ .Get "app" }} 向け SafeKit と他のクラスタリングソリューションの比較 {#safekit-mirror-ha-comparison}
+
+機能 | {{ .Get "app" }} 向け SafeKit | 共有ストレージのフェイルオーバークラスター | データベースレプリケーション
+---|---|---|---
+アーキテクチャ | SANless (shared-nothing) | 共有ストレージ (SAN/NAS) | shared-nothing
+アプリケーション再構成 | 不要 | 必要（共有ディスクへデータを移動） | 不要
+レプリケーション範囲 | アプリケーション全体（DB、構成、ログ） | 共有ディスクのデータ | データベースのみ
+レプリケーション方式 | 同期（RPO ゼロ） | 同期（SAN 経由） | エディションによる（多くは非同期）
+フェイルオーバー／フェイルバック | 完全自動 | 完全自動 | 手動または複雑な場合が多い
+AD/LDAP 依存 | なし | Windows では必要 | なし
+導入の複雑さ | 低（30分未満） | 高（AD、ストレージ、クォーラム） | 中（レプリケーションのみ）
+
+**まとめ：** SafeKit は SAN を不要にし、**Active Directory**や特殊な**クォーラム**構成への依存をなくします。ハードウェアに依存しない軽量な HA を低い TCO で実現し、データ損失ゼロと自動復旧を提供します。
+
+## 動画：SafeKit HA ミラークラスターの構成 {#videoguide-safekit-mirror-cluster}
+
+### SafeKit 動画：アプリケーションレベルのクラスタリング (8:47) {#demo-mirror-ha-cluster}
+
+SAN の複雑さを伴わずに **HA ミラークラスター**を構成する方法を紹介します。動画では Microsoft SQL Server を使用していますが、他のデータベースやアプリケーションにも同じ方法を適用できます。
+
+  1. [SQL Server を使用した2ノード構成](https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s) (0:32)
+  2. [クラスターと mirror.safe モジュールの構成](https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s) (3:58)
+  3. [SQL レプリケーション、移行、フェイルオーバーのテスト](https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s) (4:17)
+
+  * [Windows ミラークラスター構成ガイド](/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/)
+  * [Linux ミラークラスター構成ガイド](/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/)

@@ -7,13 +7,11 @@ lang: "ja"
 topics: "SafeKitアプリケーションモジュールライブラリ：すぐに使えるHAソリューション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKitのソリューション
+# SafeKitのソリューション {#safekit-solutions}
 
 
 {{%  insert-safekit-modules-ja  %}}
- 
 
 {{%  insert-safekit-hub-ja  %}}
- 
 
 {{%  insert-safekit-4-buttons-ja  %}}

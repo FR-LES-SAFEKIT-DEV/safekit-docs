@@ -7,11 +7,11 @@ lang: "en"
 topics: "Byte-level file replication vs block-level disk replication in a high availability cluster, Pros and cons of byte-level file replication vs block-level disk replication, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Byte-Level File Replication vs. Block-Level Disk Replication for HA
+# Byte-Level File Replication vs. Block-Level Disk Replication for HA {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
 
-## Byte-level file replication vs block-level disk replication in a high availability cluster
+## Byte-level file replication vs block-level disk replication in a high availability cluster {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 
-### Overview
+### Overview {#overview}
 
 This article explores the pros and cons of byte-level file replication vs block-level disk replication in a high availability cluster. We are looking at volume of replicated data, impact on application data organization, recovery time, simplicity of implementation.
 
@@ -21,7 +21,7 @@ This article explores the pros and cons of byte-level file replication vs block-
 
 The following comparative tables explain in detail the byte-level file replication implemented by SafeKit, a high availability software product.
 
-### What is byte-level file replication?
+### What is byte-level file replication? {#what-is-byte-level-file-replication}
 
 Byte-level file replication (like with [SafeKit](</>)) means that only modifications inside files are replicated. 
 
@@ -35,7 +35,7 @@ Recovery time (RTO) in the event of a failover is reduced to the application res
 
 Finally, the solution is very simple to configure as only the paths of directories to replicate are configured.
 
-### What is block-level disk replication?
+### What is block-level disk replication? {#what-is-block-level-disk-replication}
 
 Block-level disk replication (like with [DRBD](<https://linbit.com/drbd/>)) means that only modifications inside a disk are replicated.
 
@@ -47,7 +47,7 @@ The recovery time (RTO) increases with the file system recovery procedure on the
 
 Finally, the solution is not easy to configure because skills are required to configure a special disk with a file system. Additionally, application skills are required to configure application data in the replicated disk.
 
-## Pros and cons of byte-level file replication vs block-level disk replication
+## Pros and cons of byte-level file replication vs block-level disk replication {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
 Criteria | **Cluster with byte-level file replication** | **Cluster with block-level disk replication**  
 ---|---|---  
@@ -62,7 +62,5 @@ Suited for |  • [Software editors which want to add a simple high availability
   
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

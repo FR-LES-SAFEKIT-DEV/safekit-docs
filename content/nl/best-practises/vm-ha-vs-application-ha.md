@@ -7,7 +7,7 @@ lang: "nl"
 topics: "De juiste HA-strategie kiezen: VM-HA versus applicatie-HA, 🔍 SafeKit-navigatiehub"
 ---
 
-# VM-HA versus applicatie-HA
+# VM-HA versus applicatie-HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-nl  %}}
 

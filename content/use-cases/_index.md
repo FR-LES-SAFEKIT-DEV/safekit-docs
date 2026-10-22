@@ -7,15 +7,11 @@ lang: "en"
 topics: "SafeKit Use Cases, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Customer Use Cases
+# Customer Use Cases {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

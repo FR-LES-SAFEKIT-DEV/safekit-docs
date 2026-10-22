@@ -6,7 +6,7 @@ lang: "ar"
 category: "home"
 ---
 
-# اتصل بنا بشأن SafeKit
+# اتصل بنا بشأن SafeKit {#contact-us-for-safekit}
 
 <iframe
   src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"

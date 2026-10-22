@@ -7,7 +7,7 @@ lang: "en"
 topics: "Data Loss or Not on Application Failover with Synchronous or Asynchronous Replication?, Table of Contents, How Asynchronous Replication Works?, How Synchronous Replication Works?, How Semi-Synchronous Replication Works?, Final Verdict: Choosing the Right Replication for High Availability, Comparison Table: Synchronous vs. Asynchronous vs. Semi-Synchronous, Video Guide: Configuring Synchronous Real-Time Replication and High Availability, FAQ: Replication Strategies in High Availability Clusters, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Synchronous vs. Asynchronous Replication: How SafeKit Ensures Zero Data Loss?
+# Synchronous vs. Asynchronous Replication: How SafeKit Ensures Zero Data Loss? {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}
 
 ## Data Loss or Not on Application Failover with Synchronous or Asynchronous Replication? {#data-loss-risk-synchronous-vs-asynchronous-failover}
 
@@ -31,7 +31,7 @@ To help you make the right decision when choosing the best architecture for your
 {{%  insert-safekit-4-buttons-en  %}}
  
 
-## Table of Contents
+## Table of Contents {#table-of-contents}
 
   * [Data Loss or Not on Application Failover with Synchronous or Asynchronous Replication?](#data-loss-risk-synchronous-vs-asynchronous-failover)
   * [How Asynchronous Replication Works?](#how-asynchronous-replication-works)
@@ -93,7 +93,7 @@ Best For | High Availability (Automatic failover) | High Availability (Automatic
 
 ## FAQ: Replication Strategies in High Availability Clusters {#faq-replication-high-availability}
 
-### Replication Technology & Mechanics
+### Replication Technology & Mechanics {#replication-technology--mechanics}
 
 #### Does SafeKit send the full file over the network every time it is modified? {#safekit-byte-level-replication-vs-full-file-transfer}
 
@@ -109,7 +109,7 @@ Latency is tied to the **Network Round Trip Time (RTT)**. On a LAN, the impact i
 
 * * *
 
-### Deployment Strategy: HA vs. Backup
+### Deployment Strategy: HA vs. Backup {#deployment-strategy-ha-vs-backup}
 
 #### When must I choose synchronous vs. asynchronous replication? {#choosing-sync-vs-async}
 
@@ -133,7 +133,5 @@ You can use a **3-node hybrid architecture** : a 2-node local cluster with synch
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,15 +7,11 @@ lang: "en"
 topics: "SafeKit brings two solutions for redundancy and high availability of a physical security software, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability and Redundancy for Physical Security Software
+# High Availability and Redundancy for Physical Security Software {#high-availability-and-redundancy-for-physical-security-software}
 
 
 {{%  insert-safekit-security-solutions-en app="physical security"  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

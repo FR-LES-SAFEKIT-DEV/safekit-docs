@@ -7,15 +7,15 @@ lang: "fr"
 topics: "Quels sont les différents scénarios en cas d'isolement réseau dans un cluster ?, Quels sont les différents scénarios en cas de coupure de courant dans un cluster ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Gestion des pannes de courant et de l'isolation réseau dans un cluster HA
+# Gestion des pannes de courant et de l'isolation réseau dans un cluster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
 
 
 {{%  insert-safekit-network-isolation-fr  %}}
  
 
-## Quels sont les différents scénarios en cas de coupure de courant dans un cluster ?
+## Quels sont les différents scénarios en cas de coupure de courant dans un cluster ? {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
 
-### Coupure de courant du nœud primaire
+### Coupure de courant du nœud primaire {#primary-node-power-outage}
 
 Lorsqu'une panne de courant arrête uniquement le nœud primaire :
 
@@ -24,7 +24,7 @@ Lorsqu'une panne de courant arrête uniquement le nœud primaire :
   * les rôles de primaire et de secondaire peuvent être échangés par un administrateur si nécessaire.
 
 
-### Coupure de courant du nœud secondaire
+### Coupure de courant du nœud secondaire {#secondary-node-power-outage}
 
 Lorsqu'une panne de courant arrête uniquement le nœud secondaire :
 
@@ -32,7 +32,7 @@ Lorsqu'une panne de courant arrête uniquement le nœud secondaire :
   * lorsque le nœud 2 est redémarré, il devient SEDOND après resynchronisation des données répliquées.
 
 
-### Coupure de courant générale - cas 1
+### Coupure de courant générale - cas 1 {#general-power-outage---case-1}
 
 Lorsqu'une panne de courant arrête les deux nœuds, le comportement par défaut est :
 
@@ -41,7 +41,7 @@ Lorsqu'une panne de courant arrête les deux nœuds, le comportement par défaut
   * lorsque le nœud 2 est redémarré, les deux nœuds reviennent à leurs états PRIM/SECOND précédents.
 
 
-### Coupure de courant générale - cas 2
+### Coupure de courant générale - cas 2 {#general-power-outage---case-2}
 
 Lorsqu'il y a un isolement du réseau, le comportement avec un split-brain checker est :
 
@@ -55,7 +55,5 @@ Remarque : Si le témoin est en panne ou déconnecté, les deux nœuds passent �
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

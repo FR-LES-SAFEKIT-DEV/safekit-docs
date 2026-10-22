@@ -7,7 +7,7 @@ lang: "fr"
 topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et le RTO pour une solution de Haute Disponibilité et de Continuité d'Activité ?, Comment déterminer le RPO et le RTO pour une solution de Sauvegarde et de Plan de Reprise d'Activité ?, Comment un Cluster Miroir SafeKit atteint-il un RPO zéro et un RTO faible ?, Quels sont les indicateurs RTO pour un Cluster Ferme SafeKit avec équilibrage de charge ?, Tableaux comparatifs : RTO vs RPO, La haute disponibilité en action : démonstrations en temps réel du RPO zéro et du RTO quasi nul, FAQ : Optimiser le RPO et le RTO pour la continuité d'activité, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Que sont les RPO et les RTO ? Définitions, exemples et stratégies HA
+# Que sont les RPO et les RTO ? Définitions, exemples et stratégies HA {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
 
 ## Résumé : RPO vs RTO {#article-summary}
 
@@ -20,7 +20,7 @@ topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et 
 ![Un graphique comparatif du RPO (perte de données maximale admissible) et du RTO (durée maximale d'indisponibilité), illustrant comment SafeKit garantit une perte de données nulle et un redémarrage rapide des applications.](/wp-content/uploads/2026/08/rto-rpo-5-1024-fr-2.jpg "w:512")
 
 
-## Table des matières
+## Table des matières {#table-of-contents}
 
   * [Comment calculer le RPO et le RTO pour une solution de Haute Disponibilité et Continuité d'Activité ?](#calculate-rpo-rto-high-availability)
   * [Comment déterminer le RPO et le RTO pour une solution de Sauvegarde et de Plan de Reprise d'Activité ?](#calculate-rpo-rto-backup-solution)
@@ -215,7 +215,7 @@ Découvrez comment SafeKit gère une panne critique. Cette vidéo démontre la *
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-#### Chapitres
+#### Chapitres {#chapters}
 
   1. 🎬 [Configuration à 2 nœuds avec SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
   2. 🎬 [Configurer le cluster et le module mirror.safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
@@ -229,7 +229,7 @@ Découvrez comment SafeKit gère une ferme web Apache pour offrir à la fois une
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-#### Chapitres
+#### Chapitres {#chapters-1}
 
   1. 🎬 [Configuration à 2 nœuds avec Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   2. 🎬 [Configurer le cluster et le module farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -280,7 +280,5 @@ Associer la haute disponibilité (HA) à une solution de sauvegarde est le seul 
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

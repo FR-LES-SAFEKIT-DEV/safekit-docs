@@ -7,19 +7,13 @@ lang: "en"
 topics: "SafeKit for Bosch BVMS: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Bosch BVMS high availability cluster without shared storage on a SAN?, How the SafeKit Bosch BVMS cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Bosch BVMS vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Bosch BVMS, SafeKit, a recognized solution on the security market, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit High Availability for Bosch BVMS: SANless Video Management Redundancy
+# SafeKit High Availability for Bosch BVMS: SANless Video Management Redundancy {#safekit-high-availability-for-bosch-bvms-sanless-video-management-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-en app="Bosch BVMS"  %}}
- 
-
 
 {{%  insert-safekit-security-case-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,9 +7,9 @@ lang: "en"
 topics: "Eviden SafeKit"
 ---
 
-# Milestone Management Migration with SafeKit
+# Milestone Management Migration with SafeKit {#milestone-management-migration-with-safekit}
 
-## Eviden SafeKit
+## Eviden SafeKit {#eviden-safekit}
 
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,13 +7,11 @@ lang: "ar"
 topics: "حالات استخدام SafeKit، 🔍 مركز التنقل في SafeKit للتوافر العالي"
 ---
 
-# حالات استخدام العملاء
+# حالات استخدام العملاء {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-ar  %}}
- 
 
 {{%  insert-safekit-hub-ar  %}}
- 
 
 {{%  insert-safekit-4-buttons-ar  %}}

@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Quelles sont les différentes architectures de haute disponibilité et les différents clusters logiciels avec SafeKit ?, Comment créer des clusters de haute disponibilité avec SafeKit ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Architectures SafeKit
+# Architectures SafeKit {#safekit-architectures}
 
-## Quelles sont les différentes architectures de haute disponibilité et les différents clusters logiciels avec SafeKit ?
+## Quelles sont les différentes architectures de haute disponibilité et les différents clusters logiciels avec SafeKit ? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Cluster miroir
+### Cluster miroir {#mirror-cluster}
 
 
 ![SafeKit mirror cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "Quelles sont les différentes architectures de haute disponibilité et 
 
 [Plus d'informations](</fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Cluster ferme
+### Cluster ferme {#farm-cluster}
 
 
 ![SafeKit farm cluster](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "Quelles sont les différentes architectures de haute disponibilité et 
 
 [Plus d'informations](</fr/architectures/network-load-balancing-cluster/>)
 
-### Cluster ferme + miroir
+### Cluster ferme + miroir {#farmmirror-cluster}
 
 
 ![SafeKit farm + mirror cluster](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "Quelles sont les différentes architectures de haute disponibilité et 
 
 [Plus d'informations](</fr/architectures/clustering-software-load-balancing-mirroring/>)
 
-### Cluster actif/actif
+### Cluster actif/actif {#activeactive-cluster}
 
 
 ![SafeKit active active cluster with real-time replication](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "Quelles sont les différentes architectures de haute disponibilité et 
 
 [Plus d'informations](</fr/architectures/active-active-cluster-real-time-replication/>)
 
-### Cluster N-1
+### Cluster N-1 {#n-1-cluster}
 
 
 ![SafeKit N-1 redundancy cluster](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "Quelles sont les différentes architectures de haute disponibilité et 
 
 [Plus d'informations](</fr/architectures/n-1-redundancy/>)
 
-## Comment créer des clusters de haute disponibilité avec SafeKit ?
+## Comment créer des clusters de haute disponibilité avec SafeKit ? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Utiliser des modules de haute disponibilité
+### Utiliser des modules de haute disponibilité {#use-high-availability-modules}
 
 Un module de haute disponibilité est une personnalisation de SafeKit pour une application. Il existe deux types de modules : le module miroir avec réplication de données en temps réel et basculement et le module ferme avec équilibrage de charge et basculement.
 
@@ -61,7 +61,7 @@ Si vous déployez un module miroir sur 2 serveurs, alors vous créez un cluster 
 
 Plusieurs modules applicatifs peuvent être déployés sur les mêmes serveurs. Ainsi, des architectures de clustering avancées peuvent être implémentées comme celles présentées précédemment (ferme+miroir, actif/actif, N-1).
 
-### Qu'est-ce qu'un module ?
+### Qu'est-ce qu'un module ? {#what-is-an-application-module}
 
 En pratique, un module applicatif est un fichier « .Safe » (type zip) comprenant :
 
@@ -76,7 +76,7 @@ En pratique, un module applicatif est un fichier « .Safe » (type zip) comprena
 
 2 - les scripts pour démarrer et arrêter l'application.
 
-### Déploiement plug and play de modules de haute disponibilité
+### Déploiement plug and play de modules de haute disponibilité {#plug-and-play-deployment-of-high-availability-modules}
 
 Une fois qu'un module applicatif est configuré et testé avec une application, le déploiement ne nécessite aucune compétence informatique spécifique :
 
@@ -87,7 +87,5 @@ Une fois qu'un module applicatif est configuré et testé avec une application, 
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Azure, SafeKit High Availability Limitations, Overview of the SafeKit / Azure solution, Installation of the SafeKit / Azure solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Azure solution, Demonstration of the SafeKit farm solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Azure Network Load Balancing & Failover: Install the SafeKit farm.safe Module
+# Azure Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-en app="Azure" mod="farm"  %}}
  
 
-## Overview of the SafeKit / Azure solution
+## Overview of the SafeKit / Azure solution {#overview-of-the-safekit--azure-solution}
 
 The solution is described here: **💡[SafeKit: Microsoft Azure Load Balancing & Application High Availability Farm Cluster](</solutions/azure-load-balancing-cluster-failover/>)**.
 
-## Installation of the SafeKit / Azure solution on Windows and Linux (farm.safe)
+## Installation of the SafeKit / Azure solution on Windows and Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
 
-### Configuration of the Microsoft Azure load balancer
+### Configuration of the Microsoft Azure load balancer {#configuration-of-the-microsoft-azure-load-balancer}
 
 The load balancer must be configured with a virtual IP address.  
 And the load balancer must be configured to periodically send health packets to nodes.  
@@ -41,7 +41,7 @@ For more information, see [the configuration of the Microsoft Azure load balance
 
 ⚠️ Do not configure a virtual IP address and load balancing rules at step 4 in the step by step configuration below. The virtual IP address and load balancing rules are already set in the Microsoft Azure load balancer. Setting a virtual IP and load balancing rules at step 4 is useful for on-premise configuration only.
 
-### Configuration of the Microsoft Azure network security
+### Configuration of the Microsoft Azure network security {#configuration-of-the-microsoft-azure-network-security}
 
 The network security must be configured to enable communications for the following protocols and ports:
 
@@ -54,29 +54,23 @@ The network security must be configured to enable communications for the followi
 
 
 {{%  insert-safekit-installation-package-windows-en app="" mod="mirror"  %}}
- 
-
 
 {{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 Note: the generic **farm.safe** module that you are going to configure is delivered inside the package.
 
-## Step by step configuration of the SafeKit / Azure solution
+## Step by step configuration of the SafeKit / Azure solution {#step-by-step-configuration-of-the-safekit--azure-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-en app="" mod="farm"  %}}
  
 
-## Demonstration of the SafeKit farm solution
+## Demonstration of the SafeKit farm solution {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

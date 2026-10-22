@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "免费一级 AI 支持, 标准支持与维护, 免费认证与培训计划, 🔍 SafeKit 高可用导航中心"
 ---
 
-# SafeKit AI 与支持
+# SafeKit AI 与支持 {#safekit-ai--support}
 
 ## 免费一级 AI 支持 {#ai-support}
 

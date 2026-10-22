@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for AWS, SafeKit High Availability Limitations, Overview of the SafeKit / AWS solution, Installation of the SafeKit / AWS solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / AWS solution, Demonstration of the SafeKit farm solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# AWS Network Load Balancing & Failover: Install the SafeKit farm.safe Module
+# AWS Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-en app="AWS" mod="farm"  %}}
  
 
-## Overview of the SafeKit / AWS solution
+## Overview of the SafeKit / AWS solution {#overview-of-the-safekit--aws-solution}
 
 The solution is described here: **💡[SafeKit: Amazon AWS Load Balancing & Application High Availability Farm Cluster](</solutions/aws-load-balancing-cluster-failover/>)**.
 
-## Installation of the SafeKit / AWS solution on Windows and Linux (farm.safe)
+## Installation of the SafeKit / AWS solution on Windows and Linux (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
-### Configuration of the Amazon AWS load balancer
+### Configuration of the Amazon AWS load balancer {#configuration-of-the-amazon-aws-load-balancer}
 
 The load balancer must be configured with a virtual IP address.  
 And the load balancer must be configured to periodically send health packets to nodes.  
@@ -41,7 +41,7 @@ For more information, see [the configuration of the Amazon AWS load balancer](<h
 
 ⚠️ Do not configure a virtual IP address and load balancing rules at step 4 in the step by step configuration below. The virtual IP address and load balancing rules are already set in the Amazon AWS load balancer. Setting a virtual IP and load balancing rules at step 4 is useful for on-premise configuration only.
 
-### Configuration of the Amazon AWS network security
+### Configuration of the Amazon AWS network security {#configuration-of-the-amazon-aws-network-security}
 
 The network security must be configured to enable communications for the following protocols and ports:
 
@@ -54,29 +54,23 @@ The network security must be configured to enable communications for the followi
 
 
 {{%  insert-safekit-installation-package-windows-en app="" mod="mirror"  %}}
- 
-
 
 {{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 Note: the generic **farm.safe** module that you are going to configure is delivered inside the package.
 
-## Step by step configuration of the SafeKit / AWS solution
+## Step by step configuration of the SafeKit / AWS solution {#step-by-step-configuration-of-the-safekit--aws-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-en app="" mod="farm"  %}}
  
 
-## Demonstration of the SafeKit farm solution
+## Demonstration of the SafeKit farm solution {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

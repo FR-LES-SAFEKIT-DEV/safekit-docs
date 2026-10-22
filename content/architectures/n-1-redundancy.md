@@ -7,17 +7,17 @@ lang: "en"
 topics: "High availability with data replication and application failover from N servers to 1, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# N-1 Redundancy Clustering: High Availability for Multiple Applications with One Backup
+# N-1 Redundancy Clustering: High Availability for Multiple Applications with One Backup {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
 
-## High availability with data replication and application failover from N servers to 1
+## High availability with data replication and application failover from N servers to 1 {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 
-### N-1 redundancy
+### N-1 redundancy {#n-1-redundancy}
 
 
 ![SafeKit N-1 redundancy cluster](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-### How the N-1 redundancy works?
+### How the N-1 redundancy works? {#how-the-n-1-redundancy-works}
 
 SafeKit provides a simple N-1 redundancy cluster with N applications running on N servers and with a single backup for failover. In a SafeKit N-1 redundancy cluster, each application works on its own replicated directories.
 
@@ -25,7 +25,7 @@ In case of failure of one primary server unlike the [active-active cluster](</ar
 
 This assumes there is only one failure at a time in the N-1 redundancy cluster. The solution can support multiple primary servers failures at the same time, but in this case the single backup server will have to handle the combined workload of all the failed servers.
 
-### How to implement N-1 redundancy?
+### How to implement N-1 redundancy? {#how-to-implement-n-1-redundancy}
 
 The SafeKit N-1 redundancy cluster is simply configured by deploying N mirror modules on N+1 servers.
 
@@ -37,7 +37,5 @@ Note that:
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

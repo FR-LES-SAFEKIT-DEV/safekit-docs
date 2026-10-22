@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Différence entre un cluster logiciel et un cluster matériel ?, Clustering logiciel vs clustering matériel : avantages et inconvénients, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Clustering logiciel vs. clustering matériel pour la haute disponibilité
+# Clustering logiciel vs. clustering matériel pour la haute disponibilité {#software-clustering-vs-hardware-clustering-for-high-availability}
 
-## Différence entre un cluster logiciel et un cluster matériel ?
+## Différence entre un cluster logiciel et un cluster matériel ? {#difference-between-software-clustering-and-hardware-clustering}
 
-### Aperçu
+### Aperçu {#overview}
 
 Cet article étudie les avantages et les inconvénients d'un cluster logiciel par rapport à un cluster matériel en examinant des fonctionnalités telles que la réplication de données, les disques partagés, l'équilibrage de charge, les prérequis matériels et logiciels, les compétences pour configurer le cluster...
 
@@ -21,7 +21,7 @@ Cet article étudie les avantages et les inconvénients d'un cluster logiciel pa
 
 Les tableaux comparatifs suivants détaillent la différence entre un cluster matériel et SafeKit, un cluster logiciel.
 
-### Qu'est-ce qu'un cluster matériel ?
+### Qu'est-ce qu'un cluster matériel ? {#what-is-hardware-clustering}
 
 Il existe deux types de cluster matériel : le cluster matériel pour des applications backend telles que les bases de données et le cluster matériel pour des applications frontend telles que les services Web.
 
@@ -29,7 +29,7 @@ Le cluster matériel pour un backend (comme avec [Microsoft failover cluster](<h
 
 Le cluster matériel pour un frontend est basé sur des load balancers (comme avec [F5 BIG-IP](<https://www.f5.com/products/big-ip-services/local-traffic-manager>)) en amont d'une ferme de serveurs (2 serveurs ou plus). Les load balancers distribuent les sessions TCP aux serveurs disponibles dans la ferme.
 
-### Qu'est-ce qu'un cluster logiciel ?
+### Qu'est-ce qu'un cluster logiciel ? {#what-is-software-clustering}
 
 Comme pour les clusters matériels, il existe deux types de cluster matériel : le cluster logiciel pour des applications backend telles que les bases de données et le cluster logiciel pour des applications frontend telles que les services Web.
 
@@ -37,7 +37,7 @@ Le cluster logiciel pour un backend (comme avec [SafeKit](</fr/>)) est basé sur
 
 Le cluster logiciel pour un frontend (comme avec SafeKit) est basé sur un load balancing dans une ferme de serveurs (2 serveurs ou plus). Le load balancing est réalisé par logiciel et distribue les sessions TCP aux serveurs disponibles dans la ferme.
 
-## Clustering logiciel vs clustering matériel : avantages et inconvénients
+## Clustering logiciel vs clustering matériel : avantages et inconvénients {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
 La haute disponibilité peut être obtenue par différentes approches de clustering : le **clustering logiciel** , le **clustering matériel** (stockage partagé ou répliqué), ou les **répartiteurs de charge matériels** (appliances réseau dédiées). Chaque approche diffère en termes de fonctionnalités, de matériel requis, de prérequis logiciels et de compétences IT nécessaires au déploiement. SafeKit propose une approche purement logicielle qui combine réplication, basculement et répartition de charge dans un seul produit — éliminant le besoin de matériel dédié ou d'éditions entreprise.
 
@@ -54,7 +54,5 @@ Compétences | Aucune compétence IT spécifique pour déployer SafeKit | Compé
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

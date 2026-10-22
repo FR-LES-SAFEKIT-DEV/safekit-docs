@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Azure, SafeKit High Availability Limitations, Overview of the SafeKit / Azure mirror solution, Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / Azure mirror solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Azure High Availability with SafeKit: Install the mirror.safe Module for Failover
+# Azure High Availability with SafeKit: Install the mirror.safe Module for Failover {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Azure" mod="mirror"  %}}
  
 
-## Overview of the SafeKit / Azure mirror solution
+## Overview of the SafeKit / Azure mirror solution {#overview-of-the-safekit--azure-mirror-solution}
 
 The solution is described here: **💡[Microsoft Azure High Availability: SafeKit Synchronous Replication & Failover](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>)**.
 
-## Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe)
+## Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe) {#installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Configuration of the Microsoft Azure load balancer
+### Configuration of the Microsoft Azure load balancer {#configuration-of-the-microsoft-azure-load-balancer}
 
 The load balancer must be configured if you want to implement a virtual IP address.  
 And the load balancer must be configured to periodically send health packets to nodes.  
@@ -41,7 +41,7 @@ For more information, see [the configuration of the Microsoft Azure load balance
 
 ⚠️ Do not configure a virtual IP address at step 4 in the step by step configuration below. The virtual IP address is already set in the Microsoft Azure load balancer. Setting a virtual IP at step 4 is useful for on-premise configuration only.
 
-### Configuration of the Microsoft Azure network security
+### Configuration of the Microsoft Azure network security {#configuration-of-the-microsoft-azure-network-security}
 
 The network security must be configured to enable communications for the following protocols and ports:
 
@@ -55,29 +55,23 @@ The network security must be configured to enable communications for the followi
 
 
 {{%  insert-safekit-installation-package-windows-en app="" mod="mirror"  %}}
- 
-
 
 {{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
 Note: the generic **mirror.safe** module that you are going to configure is delivered inside the package.
 
-## Step by step configuration of the SafeKit / Azure mirror solution
+## Step by step configuration of the SafeKit / Azure mirror solution {#step-by-step-configuration-of-the-safekit--azure-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-en app="Windows" mod="mirror"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

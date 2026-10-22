@@ -7,9 +7,9 @@ lang: "fr"
 topics: "Réplication synchrone SafeKit pour la haute disponibilité vs. réplication asynchrone de sauvegarde pour la reprise après sinistre, Table des matières, HADR Synchrone : Zéro perte de données sur réseaux rapides (LAN/VLAN), HADR Asynchrone : Reprise d'activité sur réseaux lents (WAN), Comment combiner HADR et sauvegarde pour une résilience totale du système, Comparatif des architectures HADR : Réseaux rapides vs Réseaux lents, Guide Vidéo : Comment implémenter le HADR avec SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre
+# Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre {#combining-safekit-high-availability-with-disaster-recovery-backups}
 
-## Réplication synchrone SafeKit pour la haute disponibilité vs. réplication asynchrone de sauvegarde pour la reprise après sinistre
+## Réplication synchrone SafeKit pour la haute disponibilité vs. réplication asynchrone de sauvegarde pour la reprise après sinistre {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 
 SafeKit offre une **architecture de Haute Disponibilité et de Reprise après Sinistre (HADR)** logicielle et flexible qui élimine le besoin de stockage partagé coûteux. En implémentant une **réplication synchrone** via un VLAN étendu entre le Serveur 1 et le Serveur 2, SafeKit garantit que vos applications critiques restent « en vie » et cohérentes entre deux sites redondants.
 
@@ -21,7 +21,7 @@ Par conséquent, l'environnement est protégé contre les défaillances matérie
 ![Un schéma technique montrant pourquoi la haute disponibilité (SafeKit) et les sauvegardes sont complémentaires : SafeKit gère le basculement matériel/logiciel via la réplication synchrone, tandis que la sauvegarde asynchrone protège contre les ransomwares et les erreurs logiques.](/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg "w:512")
 
 
-## Table des matières
+## Table des matières {#table-of-contents}
 
   * [HADR Synchrone : Zéro perte de données sur réseaux rapides (LAN/VLAN)](#synchronous-hadr-fast-network)
   * [HADR Asynchrone : Reprise d'activité sur réseaux lents (WAN)](#asynchronous-hadr-slow-network)
@@ -122,11 +122,11 @@ But de récupération | Continuité d'activité immédiate | Sécurité & Réten
   
 ## Guide Vidéo : Comment implémenter le HADR avec SafeKit {#videoguide-hadr-safekit}
 
-###  Comment implémenter le HADR avec SafeKit : Réplication synchrone et basculement 
+###  Comment implémenter le HADR avec SafeKit : Réplication synchrone et basculement {#how-to-implement-hadr-with-safekit-synchronous-replication--failover}
 
 Découvrez comment combiner la **Haute Disponibilité (HA)** et la **Reprise d'Activité (DR)** au sein d'une stratégie HADR unique avec SafeKit. Ce guide vidéo détaille l'architecture nécessaire pour garantir une disponibilité applicative de 100 % sans recourir à des disques partagés.
 
-### Points clés de la vidéo
+### Points clés de la vidéo {#video-highlights}
 
   1. 🎬 [Présentation de l'architecture : HADR SafeKit sur VLAN étendu](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=0s>) (0:56)
   2. 🎬 [Comprendre le mirroring synchrone et le double acquittement](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=56s>) (1:26)
@@ -134,13 +134,11 @@ Découvrez comment combiner la **Haute Disponibilité (HA)** et la **Reprise d'A
   4. 🎬 [Conception pour WAN lent : Stratégies HA vs Sauvegarde](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=255s>) (2:27)
 
 
-### Vidéo SafeKit : Comment mettre en œuvre la haute disponibilité et la reprise après sinistre (HADR) avec SafeKit (7:40)
+### Vidéo SafeKit : Comment mettre en œuvre la haute disponibilité et la reprise après sinistre (HADR) avec SafeKit (7:40) {#safekit-video-how-to-implement-high-availability-and-disaster-recovery-hadr-with-safekit-740}
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

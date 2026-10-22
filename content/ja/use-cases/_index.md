@@ -7,13 +7,11 @@ lang: "ja"
 topics: "SafeKitのユースケース、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# お客様のユースケース
+# お客様のユースケース {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-ja  %}}
- 
 
 {{%  insert-safekit-hub-ja  %}}
- 
 
 {{%  insert-safekit-4-buttons-ja  %}}

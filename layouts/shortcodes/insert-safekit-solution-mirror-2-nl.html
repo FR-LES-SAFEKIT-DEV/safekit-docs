@@ -1,0 +1,110 @@
+{{/* Shortcode: insert-safekit-solution-mirror-2-nl */}}
+{{/* Parameters: app, guide, img */}}
+
+## Zo werkt het SANless SafeKit-mirrorcluster met {{ .Get "app" }} {#safekit-hyperv-tco}
+
+**SafeKit voor {{ .Get "app" }}** biedt transparante **hoge beschikbaarheid** en verlaagt de totale eigendomskosten (TCO). Zonder de hardware- en operationele kosten van traditionele clustering is SafeKit een lichtgewicht HA-alternatief met twee nodes.
+
+  * **Alles-in-één bedrijfscontinuïteit:** virtueel IP-adres, automatische failover en failback, en replicatie in realtime in één pakket.
+  * **Synchrone replicatie (geen gegevensverlies):** garandeert RPO=0 en gegevensintegriteit voor transactionele toepassingen bij een storing.
+  * **Flexibele bescherming op bestandsniveau:** transparante hostgebaseerde replicatie van databases en bijbehorende mappen, ook op de **systeemschijf**.
+  * **Eenvoudige implementatie (geen AD/LDAP):** geen AD/LDAP-directoryconfiguratie of bijbehorende infrastructuurafhankelijkheden.
+  * **Geen SAN-investering voor HA:** shared-nothing-architectuur met lokale standaardschijven, zonder dure SAN-hardware of gespecialiseerd opslagbeheer.
+  * **Efficiëntie met twee nodes:** geen derde witness-node nodig tegen split-brain; tot 33% besparing op hardware, energie en rackruimte.
+  * **Hardwareonafhankelijke redundantie:** kies zelf servermerk en interne opslag en verleng de levensduur van bestaande hardware.
+  * **Voorspelbare licentiekosten:** een eenmalige eeuwigdurende licentie, zonder onvoorspelbare jaarlijkse prijsstijgingen.
+
+SafeKit bundelt **hoge beschikbaarheid** in een lichte softwarelaag en levert **redundantie en bedrijfscontinuïteit voor {{ .Get "app" }}** tegen een fractie van de kosten van traditionele clustersuites.
+
+![SafeKit HA-clusterarchitectuur voor {{ .Get "app" }} met virtueel IP, automatische failover en failback en replicatie in realtime]({{ .Get "img" }} "w:512")
+
+**SafeKit HA-mirrorcluster voor {{ .Get "app" }}**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Snelstartgids voor een mirrorcluster voor {{ .Get "app" }} ></a>
+## Inhoudsopgave {#toc}
+
+  * [Hoe implementeert SafeKit een SANless HA-cluster voor {{ .Get "app" }}?](#safekit-mirror-ha-cluster)
+  * [Hoe werkt het SafeKit-mirrorcluster met {{ .Get "app" }}?](#safekit-mirror-cluster)
+  * [Vergelijking met andere clusteroplossingen](#safekit-mirror-ha-comparison)
+  * [Video: een SafeKit HA-mirrorcluster configureren](#videoguide-safekit-mirror-cluster)
+  * [🔍 SafeKit-navigatiecentrum voor hoge beschikbaarheid](#hub)
+
+## Hoe implementeert SafeKit een SANless HA-cluster voor {{ .Get "app" }}? {#safekit-mirror-ha-cluster}
+
+### Wat is de SafeKit Mirror HA-oplossing voor {{ .Get "app" }}? {#safekit-mirror-ha-solution}
+
+SafeKit biedt hoge beschikbaarheid voor {{ .Get "app" }} tussen twee servers van elk merk. Definieer de mappen met **{{ .Get "app" }}-toepassingsgegevens**, services, een virtueel IP-adres en controles. Zo maakt u een cluster zonder gedeelde SAN-opslag of specialistische kennis. SafeKit verzorgt **replicatie in realtime** en **automatische failover**.
+
+### Waarom een geïntegreerde HA-oplossing in plaats van losse tools? {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
+
+**SafeKit** integreert virtueel IP, automatische failover en failback en bestandsreplicatie in realtime in één engine. Dit voorkomt kwetsbare koppelingen tussen losse producten, centraliseert beheer en vermindert menselijke fouten.
+
+### Hoge beschikbaarheid op applicatie- of VM-niveau? {#application-vs-vm-high-availability}
+
+**VM-redundantie** (Hyper-V of KVM) repliceert de volledige VM zonder kennis van de applicatie. **Applicatieredundantie** repliceert specifieke gegevensmappen en start applicatieservices opnieuw in plaats van het hele besturingssysteem. Deze optie is hypervisoronafhankelijk en werkt fysiek, virtueel en in de cloud.
+
+### Welke voordelen biedt SafeKit ten opzichte van andere {{ .Get "app" }}-clusters? {#safekit-mirror-ha-advantages}
+
+SafeKit combineert een **shared-nothing-architectuur** met eenvoudige implementatie:
+
+  * **Synchrone replicatie zonder gegevensverlies:** RPO=0 voor transactionele toepassingen; ook logboeken, configuratie en andere mappen worden gerepliceerd.
+  * **Eenvoudig cluster met twee nodes:** twee redundante servers volstaan; geen witness voor quorum nodig. [Meer over heartbeat en quorum](/nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Centraal beheer:** beheer failover, replicatie en bewaking via één SafeKit-console.
+  * **Aanpasbare controles:** bewaak de status van het {{ .Get "app" }}-proces met configureerbare checkers.
+
+### Hoe verlaagt SafeKit de TCO voor {{ .Get "app" }}? {#safekit-mirror-ha-tco}
+
+  * **Geen opslagkosten:** lokale schijven in plaats van SAN, iSCSI-netwerken of complexe vSAN-configuraties.
+  * **Geen Enterprise-editie nodig:** werkt met standaard- en zelfs gratis edities.
+  * **Slechts twee servers:** geen derde witness-node voor quorum.
+  * **Geen verplichte abonnementen:** eeuwigdurende licentie zonder terugkerende kosten of onvoorspelbare verhogingen.
+  * **Lage operationele kosten:** plug-and-play, zonder gespecialiseerde training of dure externe consultants.
+  * **CPU-onafhankelijke licenties:** twee licenties beschermen twee nodes, ongeacht processors of cores.
+
+### Kan ik een {{ .Get "app" }}-mirrorcluster zonder clusterervaring instellen? {#mirror-cluster-without-clustering-skills}
+
+Ja. De **automatische failoverscripts** van SafeKit verzorgen replicatie en het opnieuw starten van **{{ .Get "app" }}**, zonder specialistisch SAN-beheer. [Implementeer snel een {{ .Get "app" }}-mirrorcluster]({{ .Get "guide" }}).
+
+### Welke toepassingen en omgevingen kan SafeKit nog meer beschermen? {#supported-applications-and-environments}
+
+SafeKit biedt **hoge beschikbaarheid voor Windows en Linux**, met synchrone replicatie in realtime en automatische failover voor:
+
+  * **Virtuele en fysieke omgevingen:** volledige Hyper-V- of KVM-VM's.
+  * **Containers:** Docker, Podman en K3s (Kubernetes).
+  * **Gegevens en services:** bestandsmappen, services en databases.
+  * **Cloudinfrastructuur:** cloudtoepassingen.
+
+SafeKit biedt ook **Farm-clusters** met netwerkloadbalancing en failover voor stateless toepassingen zoals **webservers**.
+
+💡 [Bekijk alle ondersteunde HA-oplossingen.](/nl/solutions/)
+
+{{ $.Page.RenderString (printf "{{%% insert-safekit-mirror-nl app=%q %%}}" (.Get "app")) }}
+
+{{ $.Page.RenderString "{{% insert-safekit-usage-nl %}}" }}
+
+## Vergelijking: SafeKit voor {{ .Get "app" }} en andere clusteroplossingen {#safekit-mirror-ha-comparison}
+
+Kenmerk | SafeKit voor {{ .Get "app" }} | Failovercluster met gedeelde opslag | Databasereplicatie
+---|---|---|---
+Architectuur | SANless (shared-nothing) | Gedeelde opslag (SAN/NAS) | Shared-nothing
+Applicatie aanpassen | Niet nodig | Nodig (gegevens naar gedeelde schijf verplaatsen) | Niet nodig
+Replicatiebereik | Hele applicatie (DB, configuratie, logboeken) | Gegevens op gedeelde schijf | Alleen databasegegevens
+Replicatietype | Synchroon (RPO nul) | Synchroon (via SAN) | Afhankelijk van editie, vaak asynchroon
+Failover/failback | Volledig automatisch | Volledig automatisch | Vaak handmatig of complex
+AD/LDAP-afhankelijkheid | Onafhankelijk | Vereist op Windows | Onafhankelijk
+Implementatiecomplexiteit | Laag (< 30 minuten) | Hoog (AD, opslag, quorum) | Gemiddeld (alleen replicatie)
+
+**Kortom:** SafeKit elimineert de SAN en vereenvoudigt implementatie zonder afhankelijkheid van **Active Directory** of speciale **quorum**-configuraties. Het biedt een lichtgewicht, hardwareonafhankelijk HA-alternatief met lagere TCO, geen gegevensverlies en automatisch herstel.
+
+## Video: een SafeKit HA-mirrorcluster configureren {#videoguide-safekit-mirror-cluster}
+
+### SafeKit-video: clustering op applicatieniveau (8:47) {#demo-mirror-ha-cluster}
+
+Bekijk hoe SafeKit een **HA-mirrorcluster** implementeert zonder SAN-complexiteit. De demonstratie gebruikt Microsoft SQL Server, maar werkt ook voor andere databases en toepassingen.
+
+  1. [Twee nodes met SQL Server](https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s) (0:32)
+  2. [Cluster en mirror.safe-module configureren](https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s) (3:58)
+  3. [SQL-replicatie, migratie en failover testen](https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s) (4:17)
+
+  * [Handleiding voor configuratie van een mirrorcluster op Windows](/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/)
+  * [Handleiding voor configuratie van een mirrorcluster op Linux](/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/)

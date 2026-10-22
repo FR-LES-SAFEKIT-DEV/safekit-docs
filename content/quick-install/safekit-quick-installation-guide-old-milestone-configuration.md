@@ -6,9 +6,9 @@ lang: "en"
 topics: "Old step by step configuration of the SafeKit / Milestone XProtect solution"
 ---
 
-# Old SafeKit Milestone Configuration
+# Old SafeKit Milestone Configuration {#old-safekit-milestone-configuration}
 
-## Old step by step configuration of the SafeKit / Milestone XProtect solution
+## Old step by step configuration of the SafeKit / Milestone XProtect solution {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
 
 
 ![Warning](/wp-content/uploads/2022/07/warning-small.png)
@@ -16,7 +16,7 @@ topics: "Old step by step configuration of the SafeKit / Milestone XProtect solu
 
 Be careful, some specific steps are required to configure on the virtual IP address else the failover is not working.
 
-### 1. Launch the SafeKit console
+### 1. Launch the SafeKit console {#1-launch-the-safekit-console}
 
   * Launch the web console in a browser on one cluster node by connecting to `http://localhost:9010`.
   * Enter `admin` as user name and the password defined during installation.
@@ -40,7 +40,7 @@ To secure the web console, see Securing the SafeKit web console in the User's Gu
 ![Start the SafeKit web console to configure the  cluster](/wp-content/uploads/2023/01/appli-1.png)
 
 
-### 2. Configure node addresses
+### 2. Configure node addresses {#2-configure-node-addresses}
 
   * Enter the node IP addresses.
   * Then, click on `Apply` to save the configuration.
@@ -61,7 +61,7 @@ This operation will place the IP addresses in the `cluster.xml` file on both nod
 ![Enter the nodes of the  cluster](/wp-content/uploads/2023/01/appli-3.png)
 
 
-### 3. Choose the module
+### 3. Choose the module {#3-choose-the-module}
 
   * In the Configuration tab, click on the .safe module.
 
@@ -75,7 +75,7 @@ The console finds xxx.safe in the 'Application_Modules/demo/' directory on the s
 ![Choose the module for ](/wp-content/uploads/2023/01/appli-4.png)
 
 
-### 4. Configure the module
+### 4. Configure the module {#4-configure-the-module}
 
   * Choose an automatic start of the module at boot without delay.
   * Normally, you have a single heartbeat network on which the replication is made. But, you can define a private network if necessary.
@@ -117,7 +117,7 @@ The "Apply" button will report the configuration in the `userconfig.xml`, `start
 ![Enter the  module settings](/wp-content/uploads/2023/01/appli-7-1.png)
 
 
-### 5. Verify successful configuration
+### 5. Verify successful configuration {#5-verify-successful-configuration}
 
   * Check the success message (green) on both nodes and click Next.
 
@@ -125,7 +125,7 @@ The "Apply" button will report the configuration in the `userconfig.xml`, `start
 ![Check the  module configuration success](/wp-content/uploads/2023/01/appli-9-2.png)
 
 
-### 6. Do not start anything and click on the Close button
+### 6. Do not start anything and click on the Close button {#6-do-not-start-anything-and-click-on-the-close-button}
 
 
 ![Warning](/wp-content/uploads/2022/07/warning-small.png)
@@ -178,7 +178,7 @@ We assume at this step that the virtual IP address has been correctly configured
 ![Note](/wp-content/uploads/2022/07/note.png)
 
 
-### 8. Start node 1 as primary in the console, the node with up-to-date data
+### 8. Start node 1 as primary in the console, the node with up-to-date data {#8-start-node-1-as-primary-in-the-console-the-node-with-up-to-date-data}
 
 We assume since Step 7 that node 1 has the up-to-date replicated directories.
 
@@ -200,7 +200,7 @@ It is also assumed that the application is stopped on node 1 so that SafeKit ins
 ![Force the start as primary of the  node with the up-to-date data](/wp-content/uploads/2022/07/appli-11-bis.png)
 
 
-### 9. Wait for the transition to ALONE (green)
+### 9. Wait for the transition to ALONE (green) {#9-wait-for-the-transition-to-alone-green}
 
   * Node 1 should reach the ALONE (green) state, which means that the `start_prim` script has been executed on node 1.
 
@@ -226,7 +226,7 @@ If the cluster is in `WAIT (red) not uptodate - STOP (red) not uptodate` state, 
 ![The first  node starts as primary and becomes ALONE](/wp-content/uploads/2022/07/appli-11-bis-bis.png)
 
 
-### 10. In the desktop of node 1, stop, then register on the vitual IP address and restart the Milestone Management Server
+### 10. In the desktop of node 1, stop, then register on the vitual IP address and restart the Milestone Management Server {#10-in-the-desktop-of-node-1-stop-then-register-on-the-vitual-ip-address-and-restart-the-milestone-management-server}
 
 Execute the following bullets on node 1 according the menu in the image:
 
@@ -257,7 +257,7 @@ Note: To register a version before Milestone 2020 R2, use **Change encryption se
 ![Register the management server in Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 11. In the desktop of node 1 with Milestone Management Client, set the virtual IP address in URLs for services and network
+### 11. In the desktop of node 1 with Milestone Management Client, set the virtual IP address in URLs for services and network {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network}
 
 
 ![Note](/wp-content/uploads/2022/07/note.png)
@@ -339,7 +339,7 @@ This script sets the virtual IP address in 2 internal Milestone files:
     
         "Authority": "http://**< virtual-ip>**/IDP"
 
-### 14. In the desktop of node 2, register the management server on the vitual IP address
+### 14. In the desktop of node 2, register the management server on the vitual IP address {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
   * Choose **Server Configurator** in the taskbar of node 2 and register it on the virtual IP address (see image).
   * Then **Stop Management Server Service**.
@@ -368,7 +368,7 @@ With a version of Milestone before 2022 R3, the registration may have deleted th
 ![Register the management server with Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 15. Start node 2
+### 15. Start node 2 {#15-start-node-2}
 
   * Start node 2 with its contextual menu.
   * Wait for the SECOND (green) state.
@@ -387,7 +387,7 @@ To see the progress of the copy, see the Module Log of node 2 with the verbose o
 ![The first  node starts as primary and becomes ALONE](/wp-content/uploads/2022/07/appli-11.png)
 
 
-### 16. Verify that the cluster is operational
+### 16. Verify that the cluster is operational {#16-verify-that-the-cluster-is-operational}
 
   * Check that the cluster is green/green with services running on the PRIM node and not running on the SECOND node.
 
@@ -404,7 +404,7 @@ Components that are clients of services must be configured with the virtual IP a
 ![The second  node starts as SECOND](/wp-content/uploads/2022/07/appli-12.png)
 
 
-### 17. Configure the virtual IP address in recording servers
+### 17. Configure the virtual IP address in recording servers {#17-configure-the-virtual-ip-address-in-recording-servers}
 
   * Either install the recording servers, specifying the virtual IP address in the installation URL.
   * Or, on the recording servers side, set the virtual IP address in the following fields of 
@@ -418,13 +418,13 @@ Components that are clients of services must be configured with the virtual IP a
   * Connect the Milestone Management Client and the Milestone Smart Client on the virtual IP address.
 
 
-### 18. Management Client and Smart Client are not functioning properly after node switch
+### 18. Management Client and Smart Client are not functioning properly after node switch {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch}
 
 In a clustered XProtect® Management Server setup, Smart Client and Management Client show various issues after a node switch. The issue is related to tokens being generated on different nodes before and after the node switch, and to problems accessing certain certificates needed for token validation. A solution is available (for versions 2022 R3 to 2023 R2, see Milestone KB).
 
 The issue is solved in Milestone 2023 R3.
 
-### 18. Testing
+### 18. Testing {#18-testing}
 
   * Stop the PRIM node by scrolling down its contextual menu and clicking Stop. **Do not use swap for a first test** (see why below).
   * Verify that there is a failover on the SECOND node which should become ALONE (green).

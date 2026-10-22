@@ -7,7 +7,7 @@ lang: "de"
 topics: "Kostenlose KI-Unterstützung der Stufe 1, Standardsupport und Wartung, Kostenloses Zertifizierungs- und Schulungsprogramm, 🔍 SafeKit-Navigationshub für Hochverfügbarkeit"
 ---
 
-# SafeKit AI und Support
+# SafeKit AI und Support {#safekit-ai--support}
 
 ## Kostenlose KI-Unterstützung der Stufe 1 {#ai-support}
 

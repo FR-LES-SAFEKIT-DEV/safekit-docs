@@ -7,7 +7,7 @@ lang: "it"
 topics: "Cosa offre SafeKit, Scegli il livello di protezione, Moduli pronti all'uso per le tue applicazioni, Casi d'uso dei clienti, Prezzi semplici e prevedibili, Conosci i limiti prima di iniziare, 🔍 Hub di navigazione SafeKit per l'alta affidabilità"
 ---
 
-# SafeKit: software di alta affidabilità per Windows e Linux, senza SAN
+# SafeKit: software di alta affidabilità per Windows e Linux, senza SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKit trasforma due server standard in un cluster di alta affidabilità senza SAN che mantiene operative le applicazioni. Replica i dati in tempo reale, riavvia l'applicazione sul secondo server se il primo si guasta e reintegra automaticamente il server riparato. Si installa sui server già in uso, senza storage condiviso né competenze specifiche sui cluster.
 

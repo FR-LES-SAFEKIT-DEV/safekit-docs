@@ -7,7 +7,7 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Nedap, SafeKit High Availability Limitations, Overview of the SafeKit / Nedap solution, Installation of the SafeKit / Nedap solution on Windows (nedap.safe), Step by step configuration of the SafeKit / Nedap solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Nedap High Availability with SafeKit: Install the nedap.safe Module for Failover
+# Nedap High Availability with SafeKit: Install the nedap.safe Module for Failover {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Nedap" mod="nedap"  %}}
@@ -15,13 +15,13 @@ topics: "High Availability Quick Installation Guide for Nedap, SafeKit High Avai
 
 **📘[Configuration of Nedap AOES with SafeKit (PDF)](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)**: all details are in this document.
 
-## Overview of the SafeKit / Nedap solution
+## Overview of the SafeKit / Nedap solution {#overview-of-the-safekit--nedap-solution}
 
 The solution is described here: **💡[The Simplest Nedap High Availability: 2-Node Synchronous Replication & Failover](</solutions/nedap-high-availability-synchronous-replication-failover/>)**.
 
-## Installation of the SafeKit / Nedap solution on Windows (nedap.safe)
+## Installation of the SafeKit / Nedap solution on Windows (nedap.safe) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * You need Nedap AEOS and SQL installed on 2 nodes (virtual machines or physical servers).
   * With SQL Server on the same node as Nedap AEOS, configure the connection of Nedap AEOS to SQL with the virtual IP address and not with the physical IP address of the server. Else the failover will not work. SQL Server can be external, see the note below.
@@ -38,27 +38,21 @@ You can implement redundancy of the external SQL Server with 💡 [SafeKit and t
 
 
 {{%  insert-safekit-installation-package-windows-en app="Nedap AEOS and SQL" mod="nedap"  %}}
- 
-
 
 {{%  insert-safekit-82-installation-module-windows-en app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## Step by step configuration of the SafeKit / Nedap solution
+## Step by step configuration of the SafeKit / Nedap solution {#step-by-step-configuration-of-the-safekit--nedap-solution}
 
 
 {{%  insert-safekit-82-configuration-en app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

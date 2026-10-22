@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Milestone XProtect, SafeKit High Availability Limitations, Overview of the SafeKit / Milestone XProtect solution, Installation of the SafeKit / Milestone XProtect solution on Windows (milestone.safe), Step by step configuration of the SafeKit / Milestone XProtect solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Milestone XProtect High Availability with SafeKit: Install the milestone.safe Module for Failover
+# Milestone XProtect High Availability with SafeKit: Install the milestone.safe Module for Failover {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Milestone XProtect" mod="milestone"  %}}
  
 
-## Overview of the SafeKit / Milestone XProtect solution
+## Overview of the SafeKit / Milestone XProtect solution {#overview-of-the-safekit--milestone-xprotect-solution}
 
 The solution is described here: **💡[The Simplest Milestone XProtect High Availability: 2-Node Synchronous Replication & Failover](</solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/>)**.
 
-## Installation of the SafeKit / Milestone XProtect solution on Windows (milestone.safe)
+## Installation of the SafeKit / Milestone XProtect solution on Windows (milestone.safe) {#installation-of-the-safekit--milestone-xprotect-solution-on-windows-milestonesafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * You need Milestone XProtect Management and SQL installed on 2 nodes (virtual machines or physical servers). SQL Server and Event Srver can be external, see the notes below.
 
@@ -53,7 +53,7 @@ And for the Event cluster, at step 4 during the step by step configuration of mi
   * in the Milestone management client, set the Event Server with the virtual IP address of the **Event cluster** in the [Registered Services](</wp-content/uploads/2022/07/milestone-url-vip.png>).
 
 
-### ℹ️ Recorder redundancy
+### ℹ️ Recorder redundancy {#ℹ-recorder-redundancy}
 
   * Replication of recorders is not suitable for SafeKit due to the volume of data.
   * The solution integrated into Milestone can be used (failover recording server without real-time replication).
@@ -65,27 +65,21 @@ And for the Event cluster, at step 4 during the step by step configuration of mi
 
 
 {{%  insert-safekit-installation-package-windows-en app="Milestone XProtect and SQL" mod="milestone"  %}}
- 
-
 
 {{%  insert-safekit-82-installation-module-windows-en app="Milestone XProtect and SQL" mod="milestone"  %}}
  
 
-## Step by step configuration of the SafeKit / Milestone XProtect solution
+## Step by step configuration of the SafeKit / Milestone XProtect solution {#step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
 
 
 {{%  insert-safekit-82-milestone-configuration-en app="Milestone XProtect and SQL" mod="milestone"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

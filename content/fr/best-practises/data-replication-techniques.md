@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Techniques de réplication de données au niveau base de données, disque ou fichier ?, Tableaux comparatifs entre les techniques de réplication de données, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Techniques de réplication de données pour la haute disponibilité : une comparaison complète
+# Techniques de réplication de données pour la haute disponibilité : une comparaison complète {#data-replication-techniques-for-high-availability-a-complete-comparison}
 
-## Techniques de réplication de données au niveau base de données, disque ou fichier ?
+## Techniques de réplication de données au niveau base de données, disque ou fichier ? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 
-### Aperçu
+### Aperçu {#overview}
 
 Cet article étudie les avantages et les inconvénients des techniques de réplication de données au niveau base de données, disque et fichier pour les clusters de haute disponibilité. Nous étudions le basculement sur panne, le retour après panne, la simplicité de mise en œuvre.
 
@@ -21,7 +21,7 @@ Cet article étudie les avantages et les inconvénients des techniques de répli
 
 Les tableaux comparatifs suivants détaillent les techniques de réplication de données mises en œuvre par SafeKit, un produit logiciel de haute disponibilité.
 
-### Quelle est la technique de réplication des données au niveau base de données ?
+### Quelle est la technique de réplication des données au niveau base de données ? {#what-is-the-data-replication-technique-at-database-level}
 
 C'est la réplication des fichiers journaux entre deux serveurs faite par le système de gestion de la base de données (comme le [journal de SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>)).
 
@@ -31,7 +31,7 @@ Cette technique de réplication des données réplique une base de données mais
 
 Lorsqu'un serveur tombe en panne et perd certains fichiers de la base de données, le retour après panne n'est pas automatique. Un DBA qualifié doit restaurer la base de données sur le serveur défaillant.
 
-### Quelle est la technique de réplication des données au niveau disque ?
+### Quelle est la technique de réplication des données au niveau disque ? {#what-is-the-data-replication-technique-at-disk-level}
 
 C'est la réplication des modifications à l'intérieur des disques entre deux serveurs (comme [DRBD](<https://linbit.com/drbd/>)).
 
@@ -41,7 +41,7 @@ Cette technique de réplication de données peut répliquer des bases de donnée
 
 Des compétences sont requises pour configurer un disque répliqué avec un système de fichiers et pour configurer les données applicatives dans le disque répliqué.
 
-### Quelle est la technique de réplication des données au niveau fichier ?
+### Quelle est la technique de réplication des données au niveau fichier ? {#what-is-the-data-replication-technique-at-file-level}
 
 C'est la réplication des modifications à l'intérieur des fichiers entre deux serveurs (comme [SafeKit](</fr/>) ).
 
@@ -51,15 +51,11 @@ Cette technique de réplication de données peut répliquer des bases de donnée
 
 La solution est très simple à configurer car seuls les chemins des répertoires à répliquer sont configurés.
 
-## Tableaux comparatifs entre les techniques de réplication de données
+## Tableaux comparatifs entre les techniques de réplication de données {#comparative-tables-between-data-replication-techniques}
 
 
 {{%  insert-safekit-mirror-comparison-table-fr  %}}
- 
-
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

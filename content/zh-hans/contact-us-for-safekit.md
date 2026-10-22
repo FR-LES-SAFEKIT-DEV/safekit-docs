@@ -6,7 +6,7 @@ lang: "zh-hans"
 category: "home"
 ---
 
-# 联系我们，咨询 SafeKit
+# 联系我们，咨询 SafeKit {#contact-us-for-safekit}
 
 <iframe
   src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"

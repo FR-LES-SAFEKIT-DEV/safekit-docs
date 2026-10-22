@@ -7,7 +7,7 @@ lang: "pt-pt"
 topics: "Suporte gratuito de IA de nível 1, Suporte e manutenção padrão, Programa gratuito de formação e certificação, 🔍 Centro de navegação do SafeKit para alta disponibilidade"
 ---
 
-# SafeKit AI e suporte
+# SafeKit AI e suporte {#safekit-ai--support}
 
 ## Suporte gratuito de IA de nível 1 {#ai-support}
 

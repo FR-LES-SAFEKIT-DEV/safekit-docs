@@ -7,7 +7,7 @@ lang: "de"
 topics: "Was SafeKit leistet, Wählen Sie Ihr Schutzniveau, Fertige Module für Ihre Anwendungen, Kundenanwendungsfälle, Einfache, planbare Preise, Grenzen vor dem Start kennen, 🔍 SafeKit-Navigationshub für Hochverfügbarkeit"
 ---
 
-# SafeKit: Hochverfügbarkeitssoftware für Windows und Linux ohne SAN
+# SafeKit: Hochverfügbarkeitssoftware für Windows und Linux ohne SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKit verwandelt zwei Standardserver in einen SAN-losen Hochverfügbarkeitscluster, der Ihre Anwendungen am Laufen hält. Die Daten werden in Echtzeit repliziert, die Anwendung bei einem Ausfall des ersten Servers auf dem zweiten neu gestartet und der reparierte Server anschließend automatisch wieder integriert. Die Installation erfolgt auf Ihren vorhandenen Servern, ohne gemeinsamen Speicher und ohne spezielle Clusterkenntnisse.
 

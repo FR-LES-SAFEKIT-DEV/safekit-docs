@@ -7,13 +7,13 @@ lang: "en"
 topics: "Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn?, Table of Contents, How the SafeKit software simply implements a Kubernetes K3s high availability cluster?, How the SafeKit mirror cluster works with Kubernetes K3S?, SafeKit High Availability Limitations, Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn), Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover
+# Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
 
 ## Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn? {#safekit-k3s-ha-introduction}
 
 While the standard open-source stack (MetalLB + Longhorn) for K3s is powerful for large data centers, it introduces excessive complexity for 2-node on-premises sites. **SafeKit** simplifies the K3s environment by replacing standalone networking and storage tools with a single, consolidated HA engine. 
 
-### Why Use SafeKit for 2-Node K3s High Availability (HA)?
+### Why Use SafeKit for 2-Node K3s High Availability (HA)? {#why-use-safekit-for-2-node-k3s-high-availability-ha}
 
   * **True 2-Node High Availability:** SafeKit provides full redundancy with only **2 nodes** , eliminating the 3-node requirement for _etcd_ quorum.
   * **Zero Data Loss (RPO=0):** Replaces high-overhead block storage with **Synchronous Byte-level replication** for local SSD performance.
@@ -42,15 +42,15 @@ While the standard open-source stack (MetalLB + Longhorn) for K3s is powerful fo
 
 ## How the SafeKit software simply implements a Kubernetes K3s high availability cluster? {#safekit-mirror-k3s-cluster}
 
-### How do I implement high availability for a 2-node Kubernetes K3s cluster?
+### How do I implement high availability for a 2-node Kubernetes K3s cluster? {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
 
 You can implement high availability (HA) for a 2-node Kubernetes K3s cluster using the **SafeKit k3s.safe mirror module**. This solution allows you to deploy a redundant environment without the need for external NFS storage, a dedicated external configuration database, or specialized Kubernetes expertise.
 
-### Why use K3s for Edge and IoT computing?
+### Why use K3s for Edge and IoT computing? {#why-use-k3s-for-edge-and-iot-computing}
 
 [K3s](<https://k3s.io/>) is the preferred Kubernetes engine for **IoT and Edge computing** because it is a lightweight, certified distribution designed for resource-constrained environments. It simplifies the operational overhead of standard Kubernetes while maintaining full compatibility.
 
-### What are the key features of the k3s.safe mirror module?
+### What are the key features of the k3s.safe mirror module? {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
 The k3s.safe module provides a comprehensive HA stack for K3s by implementing:
 
@@ -61,7 +61,7 @@ The k3s.safe module provides a comprehensive HA stack for K3s by implementing:
   * **Automated Recovery:** Full support for automatic failover and failback.
 
 
-### Beyond K3s, which applications and environments can SafeKit protect?
+### Beyond K3s, which applications and environments can SafeKit protect? {#beyond-k3s-which-applications-and-environments-can-safekit-protect}
 
 SafeKit is a versatile high-availability solution **for both Windows and Linux** that extends far beyond K3s mirror cluster. It enables **synchronous real-time replication** and automatic failover for a wide range of critical workloads, including:
 
@@ -89,7 +89,7 @@ Configuration Database |  • Hosts Virtual IP and MariaDB Port<br>• Manages a
 
 ## How the SafeKit mirror cluster works with Kubernetes K3S? {#safekit-mirror-cluster}
 
-### Step 1: Byte-Level File Replication in a Mirror Cluster
+### Step 1: Byte-Level File Replication in a Mirror Cluster {#step-1-byte-level-file-replication-in-a-mirror-cluster}
 
 This stage illustrates the high-availability architecture between **Server 1 (PRIM)** and **Server 2 (SECOND)**. Both servers run K3s master and agent components as defined in the [architecture table](#safekit-k3s-architecture-table).
 
@@ -102,7 +102,7 @@ Currently, the **Virtual IP (VIP)** , **NFS persistent storage** , and **MariaDB
 The K3s masters distribute the workload across both nodes (or more) by communicating directly with the K3s agents. External clients connect to the  
 [cluster's Virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) on the PRIM node. Using standard Kubernetes mechanisms, the K3s master relays traffic to pods distributed across the nodes. Similarly, pods access their **persistent volumes (PVs)** on the PRIM server via the Virtual IP and NFS port.
 
-### Step 2: Automatic Failover and Service Continuity
+### Step 2: Automatic Failover and Service Continuity {#step-2-automatic-failover-and-service-continuity}
 
 When **Server 1 (PRIM)** fails, **Server 2 (SECOND)** automatically takes over the cluster operations to ensure continuity.
 
@@ -117,7 +117,7 @@ With the cluster state preserved, the **K3s Master** on Server 2 continues execu
 While Server 1 is offline, MariaDB and NFS services continue to run on Server 2, writing changes only locally.  
 
 
-### Step 3: Failback and Automatic Reintegration
+### Step 3: Failback and Automatic Reintegration {#step-3-failback-and-automatic-reintegration}
 
 **Failback** occurs when Server 1 is restarted after the initial issue has been resolved. SafeKit automatically resynchronizes the MariaDB and NFS files, updating only the data modified on Server 2 during the downtime. This reintegration process is **non-disruptive** ; K3s master and agent components continue to run on Server 2 without interruption. 
 
@@ -132,7 +132,7 @@ SafeKit optimizes recovery time based on how the server was stopped:
   * **System Crash (e.g., Power Failure):** If Server 1 suffered an unclean shutdown, the modification bitmaps are bypassed for safety. SafeKit instead resynchronizes all files with a modification timestamp more recent than the last established synchronization point, ensuring **total data integrity**. 
 
 
-### Step 4: Restoring High Availability and Load Distribution
+### Step 4: Restoring High Availability and Load Distribution {#step-4-restoring-high-availability-and-load-distribution}
 
 Following reintegration, the cluster returns to **full mirror mode** , mirroring the state described in Step 1. The system is once again in a highly available state: **MariaDB** and **NFS services** remain active on Server 2, while SafeKit performs real-time replication of all file updates back to Server 1. 
 
@@ -205,7 +205,7 @@ Administration | Simplified: Manageable via a single web console; no Kubernetes 
 
 While this video demonstrates SafeKit's high availability for Microsoft SQL Server, it provides an excellent overview of how the solution secures K3s environments. SafeKit functions identically for any other database or business-critical application.
 
-### Video Highlights
+### Video Highlights {#video-highlights}
 
   1. 🎬 [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
   2. 🎬 [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
@@ -216,7 +216,5 @@ While this video demonstrates SafeKit's high availability for Microsoft SQL Serv
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Architecture sans partage vs architecture avec disques partagés pour les clusters de haute disponibilité, Architecture sans partage (shared nothing) vs architecture à disque partagé (shared disk) : avantages et inconvénients, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA
+# Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
 
-## Architecture sans partage vs architecture avec disques partagés pour les clusters de haute disponibilité
+## Architecture sans partage vs architecture avec disques partagés pour les clusters de haute disponibilité {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 
-### Aperçu
+### Aperçu {#overview}
 
 Cet article étudie les avantages et les inconvénients de l'architecture sans partage par rapport à l'architecture avec disques partagés pour les clusters de haute disponibilité. On s'intéresse aux contraintes matérielles, à l'impact sur l'organisation des données applicatives, au temps de récupération, à la simplicité de mise en œuvre.
 
@@ -21,7 +21,7 @@ Cet article étudie les avantages et les inconvénients de l'architecture sans p
 
 Les tableaux comparatifs suivants expliquent en détail la différence entre l'architecture avec disques partagés et SafeKit, un produit de clustering logiciel implémentant une architecture sans partage.
 
-### Qu'est-ce qu'une architecture avec disques partagés ?
+### Qu'est-ce qu'une architecture avec disques partagés ? {#what-is-a-shared-disk-architecture}
 
 Une architecture avec disques partagés (comme avec le [failover cluster de Microsoft](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)) est basée sur 2 serveurs partageant un disque avec un basculement automatique des applications en cas de pannes matérielles ou logicielles.
 
@@ -33,7 +33,7 @@ De plus, en cas de basculement, la procédure de récupération du système de f
 
 Enfin, la solution n'est pas facile à configurer car des compétences sont nécessaires pour configurer le matériel spécifique. Des compétences applicatives sont également requises pour configurer les données de l'application dans le disque partagé.
 
-### Qu'est-ce qu'une architecture sans partage ?
+### Qu'est-ce qu'une architecture sans partage ? {#what-is-a-shared-nothing-architecture-}
 
 Une architecture sans partage (comme avec [SafeKit](</fr/>)) est basée sur 2 serveurs répliquant les données en temps réel avec un basculement automatique des applications en cas de pannes matérielles ou logicielles.
 
@@ -47,15 +47,11 @@ Le temps de récupération (RTO) en cas de basculement est réduit au temps de r
 
 Enfin, la solution est très simple à configurer puisque seuls les chemins des répertoires à répliquer sont configurés.
 
-## Architecture sans partage (shared nothing) vs architecture à disque partagé (shared disk) : avantages et inconvénients
+## Architecture sans partage (shared nothing) vs architecture à disque partagé (shared disk) : avantages et inconvénients {#shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons}
 
 
 {{%  insert-safekit-shared-nothing-vs-shared-disk-table-fr  %}}
- 
-
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

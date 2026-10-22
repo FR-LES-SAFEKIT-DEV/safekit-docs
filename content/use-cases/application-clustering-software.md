@@ -7,11 +7,11 @@ lang: "en"
 topics: "The OEM high availability use case, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# OEM High Availability: Embedding SafeKit Clustering into Your Software
+# OEM High Availability: Embedding SafeKit Clustering into Your Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
-## The OEM high availability use case
+## The OEM high availability use case {#the-oem-high-availability-use-case}
 
-### A software-only high availability solution
+### A software-only high availability solution {#a-software-only-high-availability-solution}
 
 SafeKit is independant of the hardware and works with any physical or virtual servers.
 
@@ -19,13 +19,13 @@ SafeKit is independant of the hardware and works with any physical or virtual se
 ![Application clustering software with SafeKit](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
-### Simple and economical application clustering software for a software publisher
+### Simple and economical application clustering software for a software publisher {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
 An increasing number of software publishers are integrating SafeKit as an OEM high availability option in their catalog. SafeKit is chosen because it is a simple and economical application clustering software. 
 
 If you are a software publisher and if you search for an application clustering solution easy to embed with your own software, you can take advantage of our OEM offer. You will be able to bundle SafeKit inside your software offer. And the solution does not require to modify your application.
 
-### Application clustering with real-time replication, load balancing and failover
+### Application clustering with real-time replication, load balancing and failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
 The SafeKit software offers two generic modules for application clustering: the mirror module and the farm module.
 
@@ -37,7 +37,5 @@ And you can combine the modules.
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

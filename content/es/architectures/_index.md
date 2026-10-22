@@ -7,11 +7,11 @@ lang: "es"
 topics: "¿Cuáles son las distintas arquitecturas de alta disponibilidad y los clústeres de software disponibles con SafeKit?, ¿Cómo crear clústeres de alta disponibilidad con SafeKit?, 🔍 Centro de navegación de SafeKit para alta disponibilidad"
 ---
 
-# Arquitecturas de SafeKit
+# Arquitecturas de SafeKit {#safekit-architectures}
 
-## ¿Cuáles son las distintas arquitecturas de alta disponibilidad y los clústeres de software disponibles con SafeKit?
+## ¿Cuáles son las distintas arquitecturas de alta disponibilidad y los clústeres de software disponibles con SafeKit? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Clúster Mirror
+### Clúster Mirror {#mirror-cluster}
 
 
 ![Clúster Mirror de SafeKit](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "¿Cuáles son las distintas arquitecturas de alta disponibilidad y los 
 
 [Más información](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Clúster Farm
+### Clúster Farm {#farm-cluster}
 
 
 ![Clúster Farm de SafeKit](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "¿Cuáles son las distintas arquitecturas de alta disponibilidad y los 
 
 [Más información](</architectures/network-load-balancing-cluster/>)
 
-### Clúster Farm+Mirror
+### Clúster Farm+Mirror {#farmmirror-cluster}
 
 
 ![Clúster Farm+Mirror de SafeKit](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "¿Cuáles son las distintas arquitecturas de alta disponibilidad y los 
 
 [Más información](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### Clúster activo/activo
+### Clúster activo/activo {#activeactive-cluster}
 
 
 ![Clúster activo/activo de SafeKit con replicación en tiempo real](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "¿Cuáles son las distintas arquitecturas de alta disponibilidad y los 
 
 [Más información](</architectures/active-active-cluster-real-time-replication/>)
 
-### Clúster N-1
+### Clúster N-1 {#n-1-cluster}
 
 
 ![Clúster de redundancia N-1 de SafeKit](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "¿Cuáles son las distintas arquitecturas de alta disponibilidad y los 
 
 [Más información](</architectures/n-1-redundancy/>)
 
-## ¿Cómo crear clústeres de alta disponibilidad con SafeKit?
+## ¿Cómo crear clústeres de alta disponibilidad con SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Utilizar módulos de alta disponibilidad
+### Utilizar módulos de alta disponibilidad {#use-high-availability-modules}
 
 Un módulo de alta disponibilidad es una personalización de SafeKit para una aplicación. Hay dos tipos de módulos: el módulo Mirror, con replicación de datos en tiempo real y conmutación por error, y el módulo Farm, con equilibrio de carga y conmutación por error.
 
@@ -61,7 +61,7 @@ Si implementa un módulo Mirror en dos servidores, crea un clúster Mirror; si i
 
 Se pueden implementar varios módulos de aplicación en los mismos servidores. Así, es posible crear arquitecturas de clúster avanzadas como las presentadas anteriormente (Farm+Mirror, activo/activo, N-1).
 
-### ¿Qué es un módulo de aplicación?
+### ¿Qué es un módulo de aplicación? {#what-is-an-application-module}
 
 En la práctica, un módulo de aplicación es un archivo «.Safe» (tipo zip) que incluye:
 
@@ -76,7 +76,7 @@ En la práctica, un módulo de aplicación es un archivo «.Safe» (tipo zip) qu
 
 2 - los scripts para iniciar y detener la aplicación.
 
-### Implementación plug and play de módulos de alta disponibilidad
+### Implementación plug and play de módulos de alta disponibilidad {#plug-and-play-deployment-of-high-availability-modules}
 
 Una vez configurado y probado un módulo de aplicación, su implementación no requiere conocimientos informáticos específicos:
 
@@ -87,6 +87,5 @@ Una vez configurado y probado un módulo de aplicación, su implementación no r
 
 
 {{%  insert-safekit-hub-es  %}}
- 
 
 {{%  insert-safekit-4-buttons-es  %}}

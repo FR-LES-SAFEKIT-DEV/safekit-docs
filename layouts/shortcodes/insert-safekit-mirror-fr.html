@@ -42,7 +42,7 @@ SafeKit resynchronise automatiquement les fichiers, en mettant à jour uniquemen
 
 Le retour après panne se déroule sans perturber l'application {{ .Get "app" }}, qui peut continuer à s'exécuter sur le serveur 2.
 
-### Étape 4. Retour à la normale
+### Étape 4. Retour à la normale {#step-4-back-to-normal}
 
 Après la réintégration, les fichiers repassent en mode miroir, comme à l'étape 1. Le système se retrouve en mode haute disponibilité, avec l'application {{ .Get "app" }} s'exécutant sur le serveur 2 et SafeKit répliquant les mises à jour de fichiers vers le serveur 1.
 

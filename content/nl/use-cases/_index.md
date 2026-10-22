@@ -7,13 +7,11 @@ lang: "nl"
 topics: "SafeKit-toepassingen, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
-# Klanttoepassingen
+# Klanttoepassingen {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-nl  %}}
- 
 
 {{%  insert-safekit-hub-nl  %}}
- 
 
 {{%  insert-safekit-4-buttons-nl  %}}

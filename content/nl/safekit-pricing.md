@@ -7,7 +7,7 @@ lang: "nl"
 topics: "Licentiemodel en prijzen, standaardondersteuning en onderhoud, offerte aanvragen"
 ---
 
-# SafeKit-prijzen
+# SafeKit-prijzen {#safekit-pricing}
 
 ## Licentiemodel en prijzen {#licensing-model-and-pricing}
 

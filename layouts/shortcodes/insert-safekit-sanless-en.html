@@ -6,11 +6,11 @@
 
 ## Why an All-in-One SANless High Availability Product is Essential? {#all-in-one-sanless-ha}
 
-In the world of business continuity, many organizations mistakenly believe that having a backup or a data replication tool is the same as having **High Availability (HA)**. In reality, these are only pieces of a much larger puzzle. To truly guarantee 100% uptime, you need an all-in-one solution that integrates every layer of the failover process. 
+In the world of business continuity, many organizations mistakenly believe that having a backup or a data replication tool is the same as having **High Availability (HA)**. In reality, these are only pieces of a much larger puzzle. True high availability requires every layer of the failover process to work together: **replication**, **failure detection**, **virtual IP switch**, **restart**, and **failback**.
 
 Here is why a fragmented approach fails and why an integrated, all-in-one product like **SafeKit** —utilizing **host-based replication at the file level** —is required. 
 
-### Is host-based replication alone sufficient for High Availability?
+### Is host-based replication alone sufficient for High Availability? {#is-host-based-replication-alone-sufficient-for-high-availability}
 
 No. Data replication is simply the act of copying data from Server A to Server B. While critical, replication by itself does not provide availability. Without the other components of an HA stack, replication is just a "passive copy" that requires manual, time-consuming intervention to become useful:
 
@@ -19,7 +19,7 @@ No. Data replication is simply the act of copying data from Server A to Server B
   * It will not restart the services.
 
 
-### The Hidden Risks of Fragmented Solutions: Why Siloed HA Increases Failure
+### The Hidden Risks of Fragmented Solutions: Why Siloed HA Increases Failure {#the-hidden-risks-of-fragmented-solutions-why-siloed-ha-increases-failure}
 
 Many vendors require you to "bolt together" several different products to achieve **host-based replication** , **failover** , and **load balancing**. This fragmented architecture is a dangerous strategy for mission-critical systems:
 
@@ -29,7 +29,7 @@ Many vendors require you to "bolt together" several different products to achiev
   * **Complex Maintenance:** Fragmented systems require specialized skills for each separate component, making the solution harder to maintain and significantly more expensive over time.
 
 
-### Beyond data, what specific components are required for a true SANless failover?
+### Beyond data, what specific components are required for a true SANless failover? {#beyond-data-what-specific-components-are-required-for-a-true-sanless-failover}
 
 To automate recovery and eliminate downtime, an all-in-one product must manage several technical moving parts simultaneously:
 
@@ -40,7 +40,7 @@ To automate recovery and eliminate downtime, an all-in-one product must manage s
   * **Automatic Failover:** The intelligence to orchestrate the entire move from one server to another without human input.
 
 
-### Why must the failover mechanism be synchronized with host-based replication?
+### Why must the failover mechanism be synchronized with host-based replication? {#why-must-the-failover-mechanism-be-synchronized-with-host-based-replication}
 
 If your failover manager and your data replication are two different products, they may not be "in sync."
 
@@ -48,7 +48,7 @@ If your failover manager and your data replication are two different products, t
 
 An **all-in-one SANless HA solution** ensures that the failover mechanism is aware of the replication state. It will only allow the application to start on the backup node if the data is guaranteed to be up-to-date, preventing conflicting active nodes and data loss.
 
-### What happens when the failed server is repaired (failback)?
+### What happens when the failed server is repaired (failback)? {#what-happens-when-the-failed-server-is-repaired-failback}
 
 Often ignored in technical guides and poorly executed by traditional HA solutions, automatic failback remains the most critical requirement for true resilience. A true all-in-one product handles the "Return to Normal" as elegantly as the failure. When the failed server comes back online, it is behind in data. The HA software must:
 
@@ -57,7 +57,7 @@ Often ignored in technical guides and poorly executed by traditional HA solution
   3. **Restore Redundancy:** Once the data is mirrored again, the cluster automatically returns to a protected state, ready for the next event.
 
 
-### Block vs. File Level Replication: Why Transparency Matters
+### Block vs. File Level Replication: Why Transparency Matters {#block-vs-file-level-replication-why-transparency-matters}
 
 The technical method used for **host-based replication** significantly impacts how much you have to change your existing application setup.
 

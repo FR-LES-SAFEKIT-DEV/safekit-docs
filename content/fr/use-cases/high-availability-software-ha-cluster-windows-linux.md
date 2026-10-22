@@ -7,9 +7,9 @@ lang: "fr"
 topics: "Présentation de SafeKit en 30 secondes, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Logiciel de haute disponibilité : Cluster Windows et Linux avec SafeKit
+# Logiciel de haute disponibilité : Cluster Windows et Linux avec SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## Présentation de SafeKit en 30 secondes
+## Présentation de SafeKit en 30 secondes {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [Vidéo SafeKit : présentation en 30 secondes (0:30)](<https://www.youtube.com/watch?v=KoxNAlWI52U>)
 
@@ -20,7 +20,5 @@ topics: "Présentation de SafeKit en 30 secondes, 🔍 Hub de navigation SafeKit
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

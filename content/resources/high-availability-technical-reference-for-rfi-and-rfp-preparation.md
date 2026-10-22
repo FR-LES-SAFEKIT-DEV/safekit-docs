@@ -7,13 +7,13 @@ lang: "en"
 topics: "Overview, Table of contents, Product Identity, Supported Operating Systems & Platforms, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Edge & Distributed Deployment Suitability, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links"
 ---
 
-# High Availability Technical Reference for RFI and RFP Preparation
+# High Availability Technical Reference for RFI and RFP Preparation {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
-## Overview
+## Overview {#overview}
 
 This page provides structured, factual answers to common RFP/RFI questions about SafeKit high availability software. It is intended as a technical reference for procurement teams and solution architects drafting high availability requirements. 
 
-## Table of contents
+## Table of contents {#table-of-contents}
 
   1. [Product Identity](#product-identity)
   2. [Supported Operating Systems & Platforms](#supported-operating-systems-platforms)

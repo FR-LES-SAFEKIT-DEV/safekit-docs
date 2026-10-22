@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Meilleurs cas d'utilisation de la haute disponibilité SafeKit, Pires cas d'utilisation de la haute disponibilité SafeKit, Limitations de la haute disponibilité de SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Les meilleurs et les pires cas d’usage de la haute disponibilité : guide de mise en œuvre SafeKit
+# Les meilleurs et les pires cas d’usage de la haute disponibilité : guide de mise en œuvre SafeKit {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
 
-##  Meilleurs cas d'utilisation de la haute disponibilité SafeKit 
+##  Meilleurs cas d'utilisation de la haute disponibilité SafeKit {#best-use-cases}
 
-### Logiciel OEM
+### Logiciel OEM {#oem-software}
 
 Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/application-clustering-software/>) pour la haute disponibilité de son application.
 
@@ -19,7 +19,7 @@ Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/a
 ![Logiciel de clustering SafeKit OEM pour la haute disponibilité d'applications critiques](/wp-content/uploads/2023/02/safekit-ha-software.png "w:300")
 
 
-### Entreprise distribuée
+### Entreprise distribuée {#distributed-enterprise}
 
 [Une entreprise distribuée déploie SafeKit](</fr/use-cases/business-continuity-software/>) dans de nombreuses succursales, sans compétence informatique spécifique.
 
@@ -27,7 +27,7 @@ Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/a
 ![Haute disponibilité dans une entreprise distribuée](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
-### Sites distants
+### Sites distants {#remote-sites}
 
 [SafeKit est déployé dans deux sites distants](</fr/best-practises/high-availability-disaster-recovery-hadr/>) sans nécessiter de baies de disques répliqués à travers un SAN.
 
@@ -35,15 +35,8 @@ Un éditeur de logiciel utilise [SafeKit comme un logiciel OEM](</fr/use-cases/a
 ![Plan de continuité d'activité et plan de secours sans SAN répliqué](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
 
-##  Pires cas d'utilisation de la haute disponibilité SafeKit 
-
-
 {{%  insert-safekit-usage-fr  %}}
- 
-
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

@@ -7,15 +7,15 @@ lang: "en"
 topics: "Smart Console: Intuitive, Mobile, and Error-Free High Availability, Table of Contents, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit farm cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit Smart Console: Your High Availability Cluster in Your Pocket
+# SafeKit Smart Console: Your High Availability Cluster in Your Pocket {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
 
-## Smart Console: Intuitive, Mobile, and Error-Free High Availability
+## Smart Console: Intuitive, Mobile, and Error-Free High Availability {#smart-console-intuitive-mobile-and-error-free-high-availability}
 
 Redefine how you manage high availability with a solution built for **speed and simplicity**. The SafeKit Web Console offers a **zero-learning-curve** experience, allowing you to configure and control your infrastructure with **zero-code** requirements.
 
 Whether you are at your desk or on the move, the smartphone-compatible dashboard puts total cluster control at your fingertips. By streamlining the management of mirror and farm modules, the Smart Console **eliminates human error** and ensures a seamless failover process for your most vital systems.
 
-## Table of Contents
+## Table of Contents {#table-of-contents}
 
   * [How does a SafeKit mirror cluster work with the web console?](#safekit-mirror-cluster)
   * [How does a SafeKit farm cluster work with the web console?](#safekit-farm-cluster)
@@ -128,7 +128,7 @@ When deploying **multiple clusters** across several servers, you can either use 
 
 ## How to monitor alerts in the console and manage email notifications? {#safekit-notifications-cluster}
 
-### How can I receive instant alerts for module state changes and critical events?
+### How can I receive instant alerts for module state changes and critical events? {#how-can-i-receive-instant-alerts-for-module-state-changes-and-critical-events}
 
 The SafeKit web console leverages native browser capabilities to emit **instant notifications** whenever a module state change occurs. This ensures critical events are brought to your attention immediately, even when the console is in a background tab.
 
@@ -143,7 +143,7 @@ This mechanism alerts users immediately about critical events, enhancing prompt 
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-### How can I set up automated email alerts in SafeKit?
+### How can I set up automated email alerts in SafeKit? {#how-can-i-set-up-automated-email-alerts-in-safekit}
 
 SafeKit automatically logs all **major cluster events into the system logs** , enabling seamless integration with any monitoring tool on the market. Additionally, it includes a dedicated **Email Notification Agent** designed to monitor these logs and deliver critical alerts directly to your inbox. This ensures that stakeholders remain informed even when the web console is not being actively monitored. 
 
@@ -160,7 +160,5 @@ By combining real-time PWA alerts with intelligent email grouping, SafeKit provi
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

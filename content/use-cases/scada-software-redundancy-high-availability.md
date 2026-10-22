@@ -7,19 +7,19 @@ lang: "en"
 topics: "What is a SCADA system?, Why a SCADA software is critical?, Key players list in SCADA software, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability and Redundancy for SCADA and Industrial Control Systems (ICS)
+# High Availability and Redundancy for SCADA and Industrial Control Systems (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
-##  What is a SCADA system? 
+##  What is a SCADA system? {#what-is-a-scada-system}
 
 SCADA systems make it possible to control industrial processes, to interact directly with devices such as sensors, valves, pumps, motors, through human-machine interface software.
 
-##  Why a SCADA software is critical? 
+##  Why a SCADA software is critical? {#why-a-scada-software-is-critical}
 
 If the SCADA software is down, the production stops.
 
 That’s why, the SCADA software must be always available for operators who must react immediately to the slightest incident.
 
-##  Key players list in SCADA software 
+##  Key players list in SCADA software {#key-players-list-in-scada-software}
 
 According this [analyst report](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>), the key players in SCADA software are:
 
@@ -48,15 +48,9 @@ According this [analyst report](<https://www.linkedin.com/pulse/global-scada-mar
 
 
 {{%  insert-safekit-scada-solutions-en app="SCADA"  %}}
- 
-
 
 {{%  insert-safekit-scada-case-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

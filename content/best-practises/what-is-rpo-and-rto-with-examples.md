@@ -7,7 +7,7 @@ lang: "en"
 topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO and RTO for a High Availability and Business Continuity solution?, How do I determine RPO and RTO for a Backup and Disaster Recovery solution?, How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?, What are the RTO benchmarks for a SafeKit Farm Cluster with Load Balancing?, Comparison tables: RTO vs RPO, High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO, FAQ: Optimizing RPO and RTO for Business Continuity, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# What are RPO and RTO? Definitions, Examples, and HA Strategies
+# What are RPO and RTO? Definitions, Examples, and HA Strategies {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
 
 ## Quick Summary: RPO vs. RTO {#article-summary}
 
@@ -21,7 +21,7 @@ topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO a
 
 **RPO vs. RTO: Comparing Data Loss and Recovery Time in SafeKit**
 
-## Table of Contents
+## Table of Contents {#table-of-contents}
 
   * [How do I calculate RPO and RTO for a High Availability and Business Continuity solution?](#calculate-rpo-rto-high-availability)
   * [How do I determine RPO and RTO for a Backup and Disaster Recovery solution?](#calculate-rpo-rto-backup-solution)
@@ -216,7 +216,7 @@ See how SafeKit handles a critical failure. This video demonstrates **synchronou
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-#### Chapters
+#### Chapters {#chapters}
 
   1. 🎬 [2 nodes with SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
   2. 🎬 [Configure the cluster and the mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
@@ -230,7 +230,7 @@ Watch how SafeKit manages an Apache web farm to provide both performance scaling
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-#### Chapters
+#### Chapters {#chapters-1}
 
   1. 🎬 [2 nodes with Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   2. 🎬 [Configure the cluster and the farm.safe module](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -281,7 +281,5 @@ Combining High Availability (HA) with a backup solution is the only way to achie
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

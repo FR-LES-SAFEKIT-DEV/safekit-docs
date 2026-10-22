@@ -7,11 +7,11 @@ lang: "en"
 topics: "Shared nothing architecture vs shared disk architecture for high availability clusters, Shared Nothing Architecture vs Shared Disk Architecture: Pros and Cons, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Shared Nothing vs. Shared Disk Architecture: Choosing the Best HA Cluster
+# Shared Nothing vs. Shared Disk Architecture: Choosing the Best HA Cluster {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
 
-## Shared nothing architecture vs shared disk architecture for high availability clusters
+## Shared nothing architecture vs shared disk architecture for high availability clusters {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 
-### Overview
+### Overview {#overview}
 
 This article explores the pros and cons of shared nothing architecture vs shared disk architecture for high availability clusters. We are looking at hardware constraints, impact on application data organization, recovery time, simplicity of implementation.
 
@@ -21,7 +21,7 @@ This article explores the pros and cons of shared nothing architecture vs shared
 
 The following comparative tables explain in detail the difference between shared disk architecture and SafeKit, a software clustering product implementing a shared nothing architecture.
 
-### What is a shared disk architecture?
+### What is a shared disk architecture? {#what-is-a-shared-disk-architecture}
 
 A shared disk architecture (like with [Microsoft failover cluster](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)) is based on 2 servers sharing a disk with an automatic application failover in case of hardware of software failures.
 
@@ -33,7 +33,7 @@ Moreover, on failover, the file system recovery procedure must be executed on th
 
 Finally, the solution is not easy to configure because skills are required to configure the specific hardware. Additionally, application skills are required to configure application data in the shared disk.
 
-### What is a shared nothing architecture ?
+### What is a shared nothing architecture ? {#what-is-a-shared-nothing-architecture-}
 
 A shared nothing architecture (like with [SafeKit](</>)) is based on 2 servers replicating data in real-time with an automatic application failover in case of hardware of software failures.
 
@@ -47,15 +47,11 @@ Recovery time (RTO) in the event of a failover is reduced to the application res
 
 Finally, the solution is very simple to configure as only the paths of directories to replicate are configured.
 
-## Shared Nothing Architecture vs Shared Disk Architecture: Pros and Cons
+## Shared Nothing Architecture vs Shared Disk Architecture: Pros and Cons {#shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons}
 
 
 {{%  insert-safekit-shared-nothing-vs-shared-disk-table-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

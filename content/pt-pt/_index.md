@@ -7,7 +7,7 @@ lang: "pt-pt"
 topics: "O que o SafeKit faz, Escolha o seu nível de proteção, Módulos prontos a utilizar para as suas aplicações, Casos de utilização de clientes, Preços simples e previsíveis, Conheça os limites antes de começar, 🔍 Centro de navegação do SafeKit para alta disponibilidade"
 ---
 
-# SafeKit: software de alta disponibilidade para Windows e Linux, sem SAN
+# SafeKit: software de alta disponibilidade para Windows e Linux, sem SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 O SafeKit transforma dois servidores padrão num cluster de alta disponibilidade sem SAN que mantém as suas aplicações em funcionamento. Replica os dados em tempo real, reinicia a aplicação no segundo servidor se o primeiro falhar e reintegra automaticamente o servidor reparado. Instale-o nos servidores que já possui, sem armazenamento partilhado nem conhecimentos especializados de clustering.
 

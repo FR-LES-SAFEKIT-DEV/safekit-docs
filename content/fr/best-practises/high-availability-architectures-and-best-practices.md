@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Quelles sont les architectures de haute disponibilité et les meilleures pratiques ?, Tableaux comparatifs sur les architectures de haute disponibilité et les meilleures pratiques, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Architectures à haute disponibilité et bonnes pratiques de clustering logiciel
+# Architectures à haute disponibilité et bonnes pratiques de clustering logiciel {#high-availability-architectures--software-clustering-best-practices}
 
-## Quelles sont les architectures de haute disponibilité et les meilleures pratiques ?
+## Quelles sont les architectures de haute disponibilité et les meilleures pratiques ? {#what-are-the-high-availability-architectures-and-the-best-practices}
 
-### Aperçu
+### Aperçu {#overview}
 
 Cet article explore les différentes architectures de haute disponibilité et les meilleures pratiques en donnant les avantages et les inconvénients de chaque architecture.
 
@@ -21,7 +21,7 @@ Cet article explore les différentes architectures de haute disponibilité et le
 
 Les tableaux comparatifs suivants détaillent l'architecture de haute disponibilité de SafeKit et ses bonnes pratiques (SafeKit est un produit logiciel de haute disponibilité).
 
-### Quelles sont les architectures de haute disponibilité ?
+### Quelles sont les architectures de haute disponibilité ? {#what-are-the-high-availability-architectures}
 
 Il existe deux types d'[architectures de haute disponibilité](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) : celles pour les applications backend telles que les bases de données et celles pour les applications frontend telles que les services Web.
 
@@ -31,7 +31,7 @@ Les architectures de haute disponibilité pour les frontends sont basées sur un
 
 De plus, il faut choisir entre une haute disponibilité au niveau de l'application ou au niveau de la machine virtuelle.
 
-### Quelles sont les meilleures pratiques ?
+### Quelles sont les meilleures pratiques ? {#what-are-the-best-practices}
 
 Cet article étudie les meilleures pratiques dans les architectures de haute disponibilité en comparant :
 
@@ -47,15 +47,11 @@ Cet article étudie les meilleures pratiques dans les architectures de haute dis
   * [les adresses IP virtuelles](</fr/best-practises/how-a-virtual-ip-address-works/>).
 
 
-## Tableaux comparatifs sur les architectures de haute disponibilité et les meilleures pratiques
+## Tableaux comparatifs sur les architectures de haute disponibilité et les meilleures pratiques {#comparative-tables-on-high-availability-architectures-and-best-practices}
 
 
 {{%  insert-safekit-software-vs-hardware-table-fr  %}}
- 
-
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

@@ -7,11 +7,11 @@ lang: "en"
 topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Data Replication Techniques for High Availability: A Complete Comparison
+# Data Replication Techniques for High Availability: A Complete Comparison {#data-replication-techniques-for-high-availability-a-complete-comparison}
 
-## Data replication techniques at database level, disk level or file level?
+## Data replication techniques at database level, disk level or file level? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 
-### Overview
+### Overview {#overview}
 
 This article explores the pros and cons of data replication techniques at database level, disk level and file level for high availability clusters. We are looking at failover, failback, simplicity of implementation.
 
@@ -21,7 +21,7 @@ This article explores the pros and cons of data replication techniques at databa
 
 The following comparative tables explain in detail the data replication techniques implemented by SafeKit, a high availability software product.
 
-### What is the data replication technique at database level?
+### What is the data replication technique at database level? {#what-is-the-data-replication-technique-at-database-level}
 
 It is the replication of log files between two servers made by the database management system (like the [SQL Server log](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>)).
 
@@ -31,7 +31,7 @@ This data replication technique replicates a database but not the other data of 
 
 When a server crashes and loses some database files, failback is not automatic. A skilled DBA must restore the database on the failed server.
 
-### What is the data replication technique at disk level?
+### What is the data replication technique at disk level? {#what-is-the-data-replication-technique-at-disk-level}
 
 It is the replication of modifications inside disks between two servers (like [DRBD](<https://linbit.com/drbd/>)).
 
@@ -41,7 +41,7 @@ This data replication technique can replicate databases as well as other files. 
 
 Skills are required to configure a replicated disk with a file system and to configure application data in the replicated disk.
 
-### What is the data replication technique at file level?
+### What is the data replication technique at file level? {#what-is-the-data-replication-technique-at-file-level}
 
 It is the replication of modifications inside files between two servers (like [SafeKit](</>)).
 
@@ -51,15 +51,11 @@ This data replication technique can replicate databases as well as other files. 
 
 The solution is very simple to configure as only the paths of directories to replicate are configured.
 
-## Comparative tables between data replication techniques
+## Comparative tables between data replication techniques {#comparative-tables-between-data-replication-techniques}
 
 
 {{%  insert-safekit-mirror-comparison-table-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Réplication de fichiers au niveau octet vs réplication de disques au niveau bloc dans un cluster de haute disponibilité, Avantages et inconvénients de la réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité
+# Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
 
-## Réplication de fichiers au niveau octet vs réplication de disques au niveau bloc dans un cluster de haute disponibilité
+## Réplication de fichiers au niveau octet vs réplication de disques au niveau bloc dans un cluster de haute disponibilité {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 
-### Aperçu
+### Aperçu {#overview}
 
 Cet article étudie les avantages et les inconvénients de la réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc dans un cluster de haute disponibilité. Nous examinons le volume de données répliquées, l'impact sur l'organisation des données applicatives, le temps de récupération, la simplicité de mise en œuvre.
 
@@ -21,7 +21,7 @@ Cet article étudie les avantages et les inconvénients de la réplication de fi
 
 Les tableaux comparatifs suivants détaillent la réplication de fichiers au niveau octet mise en œuvre par SafeKit, un produit logiciel de haute disponibilité.
 
-### Qu'est-ce que la réplication de fichiers au niveau octet ?
+### Qu'est-ce que la réplication de fichiers au niveau octet ? {#what-is-byte-level-file-replication}
 
 La réplication de fichiers au niveau octet (comme avec [SafeKit](</fr/>)) signifie que seules les modifications à l'intérieur des fichiers sont répliquées.
 
@@ -35,7 +35,7 @@ Le temps de récupération (RTO) en cas de basculement est réduit au temps de r
 
 Enfin, la solution est très simple à configurer puisque seuls les chemins des répertoires à répliquer sont configurés.
 
-### Qu'est-ce que la réplication de disques au niveau bloc ?
+### Qu'est-ce que la réplication de disques au niveau bloc ? {#what-is-block-level-disk-replication}
 
 La réplication de disques au niveau bloc (comme avec [DRBD](<https://linbit.com/drbd/>)) signifie que seules les modifications à l'intérieur d'un disque sont répliquées.
 
@@ -47,7 +47,7 @@ Le temps de récupération (RTO) augmente avec la procédure de récupération d
 
 Enfin, la solution n'est pas facile à configurer car des compétences sont nécessaires pour configurer un disque spécial avec un système de fichiers. De plus, des compétences applicatives sont requises pour configurer les données de l'application dans le disque répliqué.
 
-## Avantages et inconvénients de la réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc
+## Avantages et inconvénients de la réplication de fichiers au niveau octet par rapport à la réplication de disques au niveau bloc {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
 Critère | **Cluster avec réplication de fichiers au niveau octet** | **Cluster avec réplication de disques au niveau bloc**  
 ---|---|---  
@@ -62,7 +62,5 @@ Convient pour |  • Les éditeurs de logiciels qui souhaitent ajouter une [opti
   
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

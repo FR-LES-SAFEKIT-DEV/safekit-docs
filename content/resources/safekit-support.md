@@ -7,7 +7,7 @@ lang: "en"
 topics: "Free AI Level 1 Support, Standard Support & Maintenance, Free Certification & Training Program, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit AI & Support
+# SafeKit AI & Support {#safekit-ai--support}
 
 ## Free AI Level 1 Support {#ai-support}
 
@@ -54,7 +54,5 @@ SafeKit offers a free online certification and training program covering high av
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

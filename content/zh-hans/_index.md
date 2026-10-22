@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "SafeKit 的功能、选择保护级别、适用于应用程序的即用模块、客户应用案例、简单透明的价格、开始前了解限制、🔍 SafeKit 高可用导航中心"
 ---
 
-# SafeKit：适用于 Windows 和 Linux 的无 SAN 高可用性软件
+# SafeKit：适用于 Windows 和 Linux 的无 SAN 高可用性软件 {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKit 将两台标准服务器组成无 SAN 高可用集群，保障应用程序持续运行。它实时复制数据；第一台服务器发生故障时，在第二台服务器上重新启动应用程序；故障服务器修复后再自动将其重新加入集群。您可以直接安装在现有服务器上，无需共享存储或集群专业知识。
 

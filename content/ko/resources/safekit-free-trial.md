@@ -7,13 +7,11 @@ lang: "ko"
 topics: "SafeKit 고가용성 무료 평가판 및 기술 문서, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# SafeKit 무료 평가판
+# SafeKit 무료 평가판 {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-ko  %}}
- 
 
-{{%  insert-safekit-hub-kr  %}}
- 
+{{%  insert-safekit-hub-ko  %}}
 
 {{%  insert-safekit-4-buttons-ko  %}}

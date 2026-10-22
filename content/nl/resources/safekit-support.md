@@ -7,7 +7,7 @@ lang: "nl"
 topics: "Gratis AI-ondersteuning op niveau 1, Standaardondersteuning en onderhoud, Gratis certificerings- en trainingsprogramma, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
-# SafeKit AI en ondersteuning
+# SafeKit AI en ondersteuning {#safekit-ai--support}
 
 ## Gratis AI-ondersteuning op niveau 1 {#ai-support}
 

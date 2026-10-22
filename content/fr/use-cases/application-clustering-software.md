@@ -7,11 +7,11 @@ lang: "fr"
 topics: "Le cas d'usage OEM de la haute disponibilité, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Haute disponibilité OEM : Intégration du clustering SafeKit dans votre logiciel
+# Haute disponibilité OEM : Intégration du clustering SafeKit dans votre logiciel {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
-## Le cas d'usage OEM de la haute disponibilité
+## Le cas d'usage OEM de la haute disponibilité {#the-oem-high-availability-use-case}
 
-### Une solution de haute disponibilité purement logiciel
+### Une solution de haute disponibilité purement logiciel {#a-software-only-high-availability-solution}
 
 SafeKit est indépendant du matériel et fonctionne avec n'importe quel serveur physique ou virtuel.
 
@@ -19,13 +19,13 @@ SafeKit est indépendant du matériel et fonctionne avec n'importe quel serveur 
 ![Cluster logiciel pour un éditeur logiciel avec SafeKit en OEM](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
-### Cluster logiciel simple et économique pour un éditeur logiciel
+### Cluster logiciel simple et économique pour un éditeur logiciel {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
 De [nombreux éditeurs de logiciel](</fr/product/#safekit-use-cases>) ajoutent une option de haute disponibilité logicielle à leur catalogue avec SafeKit. Le produit SafeKit est choisi car c'est un logiciel simple et économique pour mettre en cluster des applications critiques.
 
 Si vous êtes éditeur d'un logiciel, vous pouvez profiter de notre offre logicielle OEM pour embarquer la haute disponibilité avec votre application. Le logiciel SafeKit ne nécessite pas de modifier votre application critique.
 
-### Cluster logiciel avec réplication temps réel, partage de charge et reprise sur panne
+### Cluster logiciel avec réplication temps réel, partage de charge et reprise sur panne {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
 Le logiciel SafeKit offre deux modules génériques pour réaliser un cluster logiciel : le module miroir et le module ferme.
 
@@ -37,7 +37,5 @@ Et vous pouvez combiner les modules.
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

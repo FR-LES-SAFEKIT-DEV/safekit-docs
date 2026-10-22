@@ -6,11 +6,11 @@
 
 ## Waarom een alles-in-één SANless High Availability-product essentieel is {#all-in-one-sanless-ha}
 
-In de wereld van bedrijfscontinuïteit geloven veel organisaties ten onrechte dat het hebben van een back-up of een tool voor datareplicatie hetzelfde is als **High Availability (HA)**. In werkelijkheid zijn dit slechts stukjes van een veel grotere puzzel. Om echt 100% uptime te garanderen, heeft u een alles-in-één oplossing nodig die elke laag van het failover-proces integreert.
+In de wereld van bedrijfscontinuïteit geloven veel organisaties ten onrechte dat het hebben van een back-up of een tool voor datareplicatie hetzelfde is als **High Availability (HA)**. In werkelijkheid zijn dit slechts stukjes van een veel grotere puzzel. Echte hoge beschikbaarheid vereist dat elke laag van het failoverproces samenwerkt: **replicatie**, **storingsdetectie**, **overschakeling van het virtuele IP-adres**, **herstart** en **failback**.
 
 Hier leest u waarom een gefragmenteerde aanpak faalt en waarom een geïntegreerd alles-in-één product zoals **SafeKit** — dat gebruikmaakt van **host-gebaseerde replicatie op bestandsniveau** — noodzakelijk is.
 
-### Is alleen host-gebaseerde replicatie voldoende voor High Availability?
+### Is alleen host-gebaseerde replicatie voldoende voor High Availability? {#is-host-based-replication-alone-sufficient-for-high-availability}
 
 Nee. Datareplicatie is simpelweg het kopiëren van gegevens van Server A naar Server B. Hoewel dit essentieel is, biedt replicatie op zichzelf geen beschikbaarheid. Zonder de overige componenten van een HA-stack is replicatie slechts een "passieve kopie" die handmatige, tijdrovende interventie vereist om nuttig te zijn:
 
@@ -19,7 +19,7 @@ Nee. Datareplicatie is simpelweg het kopiëren van gegevens van Server A naar Se
   * Het zal de services niet herstarten.
 
 
-### De verborgen risico's van gefragmenteerde oplossingen: waarom silo-HA de kans op falen vergroot
+### De verborgen risico's van gefragmenteerde oplossingen: waarom silo-HA de kans op falen vergroot {#the-hidden-risks-of-fragmented-solutions-why-siloed-ha-increases-failure}
 
 Veel leveranciers vereisen dat u verschillende producten aan elkaar koppelt om **host-gebaseerde replicatie** , **failover** en **load balancing** te realiseren. Deze gefragmenteerde architectuur is een gevaarlijke strategie voor bedrijfskritische systemen:
 
@@ -29,7 +29,7 @@ Veel leveranciers vereisen dat u verschillende producten aan elkaar koppelt om *
   * **Complex onderhoud:** Gefragmenteerde systemen vereisen gespecialiseerde vaardigheden voor elk afzonderlijk onderdeel, waardoor de oplossing moeilijker te onderhouden is en na verloop van tijd aanzienlijk duurder wordt.
 
 
-### Welke specifieke componenten zijn, naast data, vereist voor een echte SANless failover?
+### Welke specifieke componenten zijn, naast data, vereist voor een echte SANless failover? {#beyond-data-what-specific-components-are-required-for-a-true-sanless-failover}
 
 Om herstel te automatiseren en downtime te elimineren, moet een alles-in-één product verschillende technische onderdelen gelijktijdig beheren:
 
@@ -40,7 +40,7 @@ Om herstel te automatiseren en downtime te elimineren, moet een alles-in-één p
   * **Automatische failover:** De intelligentie om de volledige overgang van de ene server naar de andere te orkestreren zonder menselijke tussenkomst.
 
 
-### Waarom moet het failover-mechanisme gesynchroniseerd zijn met host-gebaseerde replicatie?
+### Waarom moet het failover-mechanisme gesynchroniseerd zijn met host-gebaseerde replicatie? {#why-must-the-failover-mechanism-be-synchronized-with-host-based-replication}
 
 Als uw failover-manager en uw datareplicatie twee verschillende producten zijn, lopen ze mogelijk niet "in de pas".
 
@@ -48,7 +48,7 @@ Als uw failover-manager en uw datareplicatie twee verschillende producten zijn, 
 
 Een **alles-in-één SANless HA-oplossing** garandeert dat het failover-mechanisme op de hoogte is van de replicatiestatus. Het staat het opstarten van de applicatie op de back-upnode alleen toe als de gegevens gegarandeerd up-to-date zijn, waardoor conflicterende actieve nodes en gegevensverlies worden voorkomen.
 
-### Wat gebeurt er als de defecte server is gerepareerd (failback)?
+### Wat gebeurt er als de defecte server is gerepareerd (failback)? {#what-happens-when-the-failed-server-is-repaired-failback}
 
 Automatische failback wordt vaak over het hoofd gezien in technische handleidingen en slecht uitgevoerd door traditionele HA-oplossingen, maar het blijft de meest kritieke vereiste voor echte veerkracht. Een echt alles-in-één product handelt de "terugkeer naar normaal" net zo elegant af als de storing zelf. Wanneer de defecte server weer online komt, loopt deze achter qua gegevens. De HA-software moet dan:
 
@@ -57,7 +57,7 @@ Automatische failback wordt vaak over het hoofd gezien in technische handleiding
   3. **Redundantie herstellen:** Zodra de gegevens weer gespiegeld zijn, keert het cluster automatisch terug naar een beveiligde status, klaar voor een volgende gebeurtenis.
 
 
-### Blok- versus bestandsreplicatie: Waarom transparantie belangrijk is
+### Blok- versus bestandsreplicatie: Waarom transparantie belangrijk is {#block-vs-file-level-replication-why-transparency-matters}
 
 De technische methode die wordt gebruikt voor **host-gebaseerde replicatie** heeft een grote invloed op de mate waarin u uw bestaande applicatieconfiguratie moet aanpassen.
 

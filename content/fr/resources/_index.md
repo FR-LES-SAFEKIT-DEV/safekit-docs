@@ -7,9 +7,9 @@ lang: "fr"
 topics: "Essai gratuit, documentation technique et informations produit pour la haute disponibilité SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Ressources SafeKit
+# Ressources SafeKit {#safekit-resources}
 
-## Essai gratuit, documentation technique et informations produit pour la haute disponibilité SafeKit
+## Essai gratuit, documentation technique et informations produit pour la haute disponibilité SafeKit {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
 **Ressources SafeKit : Essai gratuit, documentation et informations produit**
 
@@ -19,7 +19,5 @@ Essai gratuit | Documentation technique | Informations produit
   
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

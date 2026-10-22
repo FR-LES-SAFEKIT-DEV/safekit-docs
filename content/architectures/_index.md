@@ -7,11 +7,11 @@ lang: "en"
 topics: "What are the different high availability architectures and the different software clusters with SafeKit?, How to build high availability clusters with SafeKit?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit Architectures
+# SafeKit Architectures {#safekit-architectures}
 
-## What are the different high availability architectures and the different software clusters with SafeKit?
+## What are the different high availability architectures and the different software clusters with SafeKit? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Mirror cluster
+### Mirror cluster {#mirror-cluster}
 
 
 ![SafeKit mirror cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "What are the different high availability architectures and the differen
 
 [More information](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Farm cluster
+### Farm cluster {#farm-cluster}
 
 
 ![SafeKit farm cluster](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "What are the different high availability architectures and the differen
 
 [More information](</architectures/network-load-balancing-cluster/>)
 
-### Farm+mirror cluster
+### Farm+mirror cluster {#farmmirror-cluster}
 
 
 ![SafeKit farm + mirror cluster](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "What are the different high availability architectures and the differen
 
 [More information](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### Active/active cluster
+### Active/active cluster {#activeactive-cluster}
 
 
 ![SafeKit active active cluster with real-time replication](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "What are the different high availability architectures and the differen
 
 [More information](</architectures/active-active-cluster-real-time-replication/>)
 
-### N-1 cluster
+### N-1 cluster {#n-1-cluster}
 
 
 ![SafeKit N-1 redundancy cluster](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "What are the different high availability architectures and the differen
 
 [More information](</architectures/n-1-redundancy/>)
 
-## How to build high availability clusters with SafeKit?
+## How to build high availability clusters with SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Use high availability modules
+### Use high availability modules {#use-high-availability-modules}
 
 A high availability module is a customization of SafeKit for an application. There are two types of modules: the mirror module with real-time data replication and failover and the farm module with load balancing and failover.
 
@@ -61,7 +61,7 @@ If you deploy a mirror module on 2 servers, then you create a mirror cluster and
 
 Several application modules can be deployed on the same servers. Thus, advanced clustering architectures can be implemented like those presented previously (farm+mirror, active/active, N-1).
 
-### What is an application module?
+### What is an application module? {#what-is-an-application-module}
 
 In practice, an application module is a “.Safe” file (zip type) including:
 
@@ -76,7 +76,7 @@ In practice, an application module is a “.Safe” file (zip type) including:
 
 2 - the scripts to start and stop the application.
 
-### Plug and play deployment of high availability modules
+### Plug and play deployment of high availability modules {#plug-and-play-deployment-of-high-availability-modules}
 
 Once an application module is configured and tested with an application, deployment requires no specific IT skills:
 
@@ -87,7 +87,5 @@ Once an application module is configured and tested with an application, deploym
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

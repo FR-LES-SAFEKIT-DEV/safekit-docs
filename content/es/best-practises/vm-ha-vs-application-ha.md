@@ -7,7 +7,7 @@ lang: "es"
 topics: "Cómo elegir una estrategia de alta disponibilidad: HA de VM frente a HA de aplicaciones, 🔍 Centro de navegación de SafeKit"
 ---
 
-# HA de VM vs. HA de aplicaciones
+# HA de VM vs. HA de aplicaciones {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-es  %}}
 

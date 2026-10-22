@@ -6,7 +6,7 @@ lang: "nl"
 category: "home"
 ---
 
-# Neem contact met ons op over SafeKit
+# Neem contact met ons op over SafeKit {#contact-us-for-safekit}
 
 <iframe
   src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"

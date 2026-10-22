@@ -7,11 +7,11 @@ lang: "en"
 topics: "How the active active cluster with real-time replication works?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Active-Active Clustering Software with Real-Time Replication & Mutual Failover
+# Active-Active Clustering Software with Real-Time Replication & Mutual Failover {#active-active-clustering-software-with-real-time-replication--mutual-failover}
 
-## How the active active cluster with real-time replication works?
+## How the active active cluster with real-time replication works? {#how-the-active-active-cluster-with-real-time-replication-works}
 
-### Active- active cluster with real-time replication
+### Active- active cluster with real-time replication {#active--active-cluster-with-real-time-replication}
 
 Applications are running on two servers in mutual failover. Each server is backup of the other server. And each application works on its own replicated file directories.
 
@@ -21,7 +21,7 @@ Applications are running on two servers in mutual failover. Each server is backu
 
 If one server fails in an active active cluster, all applications will be active on the same server. After restart of the failed server, applications will return to run on their default primary server.
 
-### How it works?
+### How it works? {#how-it-works}
 
 The SafeKit active active cluster is simply configured by deploying two mirror modules with real-time replication. Each mirror module contains its own configuration of virtual IP address, real-time replicated directories and restart scripts.
 
@@ -32,7 +32,7 @@ Note that:
   * each mirror module will have its own virtual IP address, its own replicated file directories and its own recovery scripts.
 
 
-### Example of an active active cluster
+### Example of an active active cluster {#example-of-an-active-active-cluster}
 
 The 💡 [Hyper-V](</solutions/hyper-v-replication-automatic-failover-load-balancing/>) or 💡 [KVM](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) solution with replication, automatic failover and load balancing of VMs is an example of an active-active cluster with N mirror modules replicating N virtual machines between two physical servers.
 
@@ -44,7 +44,5 @@ And a critical application is installed inside a VM in this architecture.
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

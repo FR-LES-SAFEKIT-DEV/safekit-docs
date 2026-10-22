@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Kubernetes, SafeKit High Availability Limitations, Overview of the SafeKit / Kubernetes solution, Installation and configuration of the SafeKit / Kubernetes solution on Linux (k3s.safe), What are the different scenarios in case of network isolation in a cluster?, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# K3S High Availability with SafeKit: Install the k3s.safe Module for Failover
+# K3S High Availability with SafeKit: Install the k3s.safe Module for Failover {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Kubernetes" mod="k3s"  %}}
  
 
-## Overview of the SafeKit / Kubernetes solution
+## Overview of the SafeKit / Kubernetes solution {#overview-of-the-safekit--kubernetes-solution}
 
 The solution is described here: **💡[Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
-## Installation and configuration of the SafeKit / Kubernetes solution on Linux (k3s.safe)
+## Installation and configuration of the SafeKit / Kubernetes solution on Linux (k3s.safe) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
-### 1. Download packages
+### 1. Download packages {#1-download-packages}
 
   * Download the free version of SafeKit 8.2 on Linux (safekitlinux_xx.bin)
   * Download the k3s.safe Linux module
@@ -37,7 +37,7 @@ Note: the k3sconfig.sh script installs K3S, MariaDB, NFS, SafeKit on 2 Linux Ubu
 
 [ Documentation (pdf) > ](</wp-content/uploads/documents/safekit-k3s-en.pdf>)
 
-### 2. First on both nodes
+### 2. First on both nodes {#2-first-on-both-nodes}
 
 On 2 Linux Ubuntu 24.04 nodes, as root:
 
@@ -58,7 +58,7 @@ The script will:
   * Install SafeKit
 
 
-### 3. On the first node
+### 3. On the first node {#3-on-the-first-node}
 
 Execute on the first node: `./k3sconfig.sh first`
 
@@ -74,7 +74,7 @@ The script will:
   * Display K3S token (to be used during second node installation phase)
 
 
-### 4. On the second node
+### 4. On the second node {#4-on-the-second-node}
 
 Execute on the second node: `./k3sconfig.sh second <token>`
 
@@ -88,7 +88,7 @@ The script will:
   * Start the k3s module
 
 
-### 5. Check that the k3s SafeKit module is running on both nodes
+### 5. Check that the k3s SafeKit module is running on both nodes {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}
 
 Check with this command on both nodes: `/opt/safekit/safekit –H "*" state`
 
@@ -110,7 +110,7 @@ The reply should be similar to the image.
     Success
     
 
-### 6. Start the SafeKit web console to administer the cluster
+### 6. Start the SafeKit web console to administer the cluster {#6-start-the-safekit-web-console-to-administer-the-cluster}
 
   * Connect a browser to the SafeKit web console url `http://server0-IP:9010`.
   * You should see a page similar to the image.
@@ -120,7 +120,7 @@ The reply should be similar to the image.
 ![Kubernetes cluster started in the SafeKit web console](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-### 7. Testing
+### 7. Testing {#7-testing}
 
   * Stop the PRIM node by scrolling down its contextual menu and clicking `Stop`.
   * Verify that there is a failover on the SECOND node which should become ALONE (green).
@@ -153,7 +153,7 @@ If things go wrong, stop node2 and [force the start as primary](</wp-content/upl
 ![Stop the  module on the PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 8. Try the cluster with a Kubernetes application like WordPress
+### 8. Try the cluster with a Kubernetes application like WordPress {#8-try-the-cluster-with-a-kubernetes-application-like-wordpress}
 
 You have the example of a WordPress installation in the image: a web portal with a backend database implemented by pods.
 
@@ -199,7 +199,7 @@ The previous helm command should download the WordPress image from `registry-1.d
   * Execute `helm registry login -u your_user_name docker.io`, then enter your password
 
 
-### 9. Support
+### 9. Support {#9-support}
 
   * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
 
@@ -213,7 +213,7 @@ The previous helm command should download the WordPress image from `registry-1.d
 ![Take the  snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 
-### 10. If necessary, configure a splitbrain checker
+### 10. If necessary, configure a splitbrain checker {#10-if-necessary-configure-a-splitbrain-checker}
 
   * See below ["What are the different scenarios in case of network isolation in a cluster?"](#isolation) to know if you need to configure a splitbrain checker.
   * In the module configuration, click on `Advanced Configuration` (see image) to edit `userconfig.xml`.
@@ -244,15 +244,11 @@ The previous helm command should download the WordPress image from `registry-1.d
 {{%  insert-safekit-network-isolation-en  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

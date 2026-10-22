@@ -7,9 +7,9 @@ lang: "en"
 topics: "Synchronous SafeKit Replication for HA vs. Asynchronous Backup Replication for DR, Table of Contents, Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN), Asynchronous HADR: Disaster Recovery over Slow Networks (WAN), How to Combine HADR and Backup for Total System Resilience, Comparison of HADR Architectures: Fast vs. Slow Networks, Video Guide: How to Implement HADR with SafeKit, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Combining SafeKit High Availability with Disaster Recovery Backups
+# Combining SafeKit High Availability with Disaster Recovery Backups {#combining-safekit-high-availability-with-disaster-recovery-backups}
 
-## Synchronous SafeKit Replication for HA vs. Asynchronous Backup Replication for DR
+## Synchronous SafeKit Replication for HA vs. Asynchronous Backup Replication for DR {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 
 SafeKit provides a flexible, software-based **High Availability and Disaster Recovery (HADR) architecture** that eliminates the need for expensive shared storage. By implementing **synchronous replication** across a stretched VLAN between Server 1 and Server 2, SafeKit ensures that your critical applications remain "live" and consistent between two redundant sites.
 
@@ -22,7 +22,7 @@ Consequently, the environment is protected against hardware or software failures
 
 **HA vs Backup: Combining SafeKit Synchronous Replication with Asynchronous DR**
 
-## Table of Contents
+## Table of Contents {#table-of-contents}
 
   * [Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN)](#synchronous-hadr-fast-network)
   * [Asynchronous HADR: Disaster Recovery over Slow Networks (WAN)](#asynchronous-hadr-slow-network)
@@ -123,11 +123,11 @@ Primary Recovery Goal | Immediate Business Continuity | Data Safety & Retention
   
 ## Video Guide: How to Implement HADR with SafeKit {#videoguide-hadr-safekit}
 
-###  How to Implement HADR with SafeKit: Synchronous Replication & Failover 
+###  How to Implement HADR with SafeKit: Synchronous Replication & Failover {#how-to-implement-hadr-with-safekit-synchronous-replication--failover}
 
 Learn how to combine **High Availability (HA)** and **Disaster Recovery (DR)** into a single HADR strategy using SafeKit. This video guide explores the architecture required for 100% application uptime without the need for shared disks.
 
-### Video Highlights
+### Video Highlights {#video-highlights}
 
   1. 🎬 [Introduction to SafeKit HADR over Stretched VLANs](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s>) (1:06)
   2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>)
@@ -135,13 +135,11 @@ Learn how to combine **High Availability (HA)** and **Disaster Recovery (DR)** i
   4. 🎬 [Designing for Slow WAN: HA vs. Backup Strategies](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s>) (2:45)
 
 
-### SafeKit Video: How to implement High Availability and Disaster Recovery (HADR) with SafeKit (7:40)
+### SafeKit Video: How to implement High Availability and Disaster Recovery (HADR) with SafeKit (7:40) {#safekit-video-how-to-implement-high-availability-and-disaster-recovery-hadr-with-safekit-740}
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

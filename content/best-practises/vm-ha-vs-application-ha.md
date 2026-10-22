@@ -7,12 +7,10 @@ lang: "en"
 topics: "Choosing Your High Availability Strategy: VM HA vs. Application HA, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# VM HA vs. Application HA
+# VM HA vs. Application HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-en  %}}
 
-
 {{%  insert-safekit-hub-en  %}}
- 
 
 {{%  insert-safekit-4-buttons-en  %}}

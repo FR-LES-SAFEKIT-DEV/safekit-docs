@@ -7,13 +7,11 @@ lang: "ar"
 topics: "النسخة التجريبية من SafeKit للتوافر العالي والوثائق التقنية، 🔍 مركز التنقل في SafeKit للتوافر العالي"
 ---
 
-# النسخة التجريبية المجانية من SafeKit
+# النسخة التجريبية المجانية من SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-ar  %}}
- 
 
 {{%  insert-safekit-hub-ar  %}}
- 
 
 {{%  insert-safekit-4-buttons-ar  %}}

@@ -7,13 +7,11 @@ lang: "it"
 topics: "Libreria dei moduli applicativi SafeKit: soluzioni HA pronte all'uso, 🔍 Hub di navigazione SafeKit per la disponibilità elevata"
 ---
 
-# Soluzioni SafeKit
+# Soluzioni SafeKit {#safekit-solutions}
 
 
 {{%  insert-safekit-modules-it  %}}
- 
 
 {{%  insert-safekit-hub-it  %}}
- 
 
 {{%  insert-safekit-4-buttons-it  %}}

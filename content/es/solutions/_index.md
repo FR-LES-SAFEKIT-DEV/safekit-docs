@@ -7,13 +7,11 @@ lang: "es"
 topics: "Biblioteca de módulos de aplicación de SafeKit: soluciones de alta disponibilidad listas para usar, 🔍 Centro de navegación de SafeKit para alta disponibilidad"
 ---
 
-# Soluciones SafeKit
+# Soluciones SafeKit {#safekit-solutions}
 
 
 {{%  insert-safekit-modules-es  %}}
- 
 
 {{%  insert-safekit-hub-es  %}}
- 
 
 {{%  insert-safekit-4-buttons-es  %}}

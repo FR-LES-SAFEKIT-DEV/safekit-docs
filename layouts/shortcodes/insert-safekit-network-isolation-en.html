@@ -6,7 +6,7 @@
 
 ## What are the different scenarios in case of network isolation in a cluster? {#isolation}
 
-### A single network
+### A single network {#a-single-network}
 
 When there is a network isolation, the default behavior is:
 
@@ -15,7 +15,7 @@ When there is a network isolation, the default behavior is:
   * at the end the cluster is PRIM-SECOND (or SECOND-PRIM according the duplicate virtual IP address detection made by Windows).
 
 
-### Two networks with a dedicated replication network
+### Two networks with a dedicated replication network {#two-networks-with-a-dedicated-replication-network}
 
 When there is a network isolation, the behavior with a dedicated replication network is:
 
@@ -25,7 +25,7 @@ When there is a network isolation, the behavior with a dedicated replication net
   * the cluster stays in PRIM/SECOND state.
 
 
-### A single network and a splitbrain checker
+### A single network and a splitbrain checker {#a-single-network-and-a-splitbrain-checker}
 
 When there is a network isolation, the behavior with a split-brain checker is:
 

@@ -7,11 +7,11 @@ lang: "en"
 topics: "Business continuity and disaster recovery software, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Business Continuity and Disaster Recovery Software for 2-Node Clusters with SafeKit
+# Business Continuity and Disaster Recovery Software for 2-Node Clusters with SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
 
-## Business continuity and disaster recovery software
+## Business continuity and disaster recovery software {#business-continuity-and-disaster-recovery-software}
 
-### Reasons to choose the SafeKit software for business continuity and disaster recovery
+### Reasons to choose the SafeKit software for business continuity and disaster recovery {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}
 
 
 ![Simple business continuity and disaster recovery software with SafeKit](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
@@ -19,11 +19,11 @@ topics: "Business continuity and disaster recovery software, 🔍 SafeKit High A
 
 There is no configuration difference when deploying a SafeKit cluster in the same computer room or across remote computer rooms, provided an extended LAN or a stretched VLAN is available between the remote sites.
 
-### How to implement a simple high availability solution between two remote computer rooms?
+### How to implement a simple high availability solution between two remote computer rooms? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
 SafeKit mirror and farm modules can be deployed easily on servers located in remote computer rooms, without any special cluster configuration. This means SafeKit combines business continuity and disaster recovery within a single, simple architecture. SafeKit also manages [split brain](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in the event of network isolation, without requiring a third server or a special quorum disk.
 
-### Business continuity vs backup solutions
+### Business continuity vs backup solutions {#business-continuity-vs-backup-solutions}
 
 Business continuity and backup solutions address different failure scenarios and are complementary rather than interchangeable. Business continuity, provided by SafeKit's high-availability clustering, keeps applications running with minimal interruption in the event of a server or application failure, through real-time replication and automatic failover. Backup solutions protect against a broader loss, such as ransomware attacks or operator errors, and typically rely on offsite copies of data that can be restored afterward, with longer recovery times but without automatic failover.
 
@@ -31,7 +31,5 @@ Learn more in [Combining SafeKit High Availability with Disaster Recovery Backup
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,9 +7,9 @@ lang: "fr"
 topics: "Meilleures pratiques du clustering SafeKit : architecture HA, réplication et redondance, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Meilleures pratiques de haute disponibilité
+# Meilleures pratiques de haute disponibilité {#high-availability-best-practices}
 
-## Meilleures pratiques du clustering SafeKit : architecture HA, réplication et redondance
+## Meilleures pratiques du clustering SafeKit : architecture HA, réplication et redondance {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
 **Bonnes pratiques pour le clustering haute disponibilité, la réplication et la redondance**
 
@@ -19,7 +19,5 @@ Bonnes pratiques haute disponibilité | Bonnes pratiques réplication | Bonnes p
   
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

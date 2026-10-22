@@ -42,7 +42,7 @@ O SafeKit ressincroniza automaticamente os ficheiros, atualizando apenas os fich
 
 O failback ocorre sem interromper a aplicação {{ .Get "app" }}, que pode continuar em execução no Servidor 2.
 
-### Passo 4. Retorno ao normal
+### Passo 4. Retorno ao normal {#step-4-back-to-normal}
 
 Após a reintegração, os ficheiros ficam novamente em modo espelho (mirror), como no passo 1. O sistema regressa ao modo de alta disponibilidade, com a aplicação {{ .Get "app" }} em execução no Servidor 2 e o SafeKit a replicar as atualizações de ficheiros para o Servidor 1.
 

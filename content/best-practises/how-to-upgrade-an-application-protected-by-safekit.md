@@ -7,9 +7,9 @@ lang: "en"
 topics: "Upgrading a High Availability Application Protected by SafeKit, VM-Level High Availability, Application-Level High Availability, Choosing the Right Upgrade Strategy, Conclusion, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Upgrading an Application Protected by SafeKit in an HA Cluster
+# Upgrading an Application Protected by SafeKit in an HA Cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
 
-## Upgrading a High Availability Application Protected by SafeKit
+## Upgrading a High Availability Application Protected by SafeKit {#upgrading-a-high-availability-application-protected-by-safekit}
 
 Keeping business-critical applications up to date is essential for security, performance, and access to new features. When an application is protected by SafeKit, the upgrade procedure depends on the high availability architecture in use.
 
@@ -27,7 +27,7 @@ With SafeKit VM failover solutions such as **hyperv.safe** and **kvm.safe** , th
 
 SafeKit protects the entire VM rather than the application itself, which significantly simplifies maintenance operations.
 
-### Simplified Upgrade Process
+### Simplified Upgrade Process {#simplified-upgrade-process}
 
 Because you are working with a single VM instance of the application, maintenance is handled at the virtualization layer rather than through application-level failover.
 
@@ -42,7 +42,7 @@ The upgrade procedure is straightforward:
 
 Service interruption is limited to the duration normally required by the application's own upgrade procedure.
 
-### Benefits of VM-Level Protection
+### Benefits of VM-Level Protection {#benefits-of-vm-level-protection}
 
   * Only one application instance to maintain.
   * No cluster-aware upgrade procedure.
@@ -101,7 +101,7 @@ A major upgrade changes the format or structure of replicated data. Because data
 
 Because replicated data is modified during the migration, downtime corresponds to the period between the **❌ STOP / ❌ STOP** state and the restart of the first upgraded node as **✅ ALONE**. 
 
-### Why SafeKit Simplifies Application Upgrades
+### Why SafeKit Simplifies Application Upgrades {#why-safekit-simplifies-application-upgrades}
 
 SafeKit minimizes operational risk by allowing administrators to:
 
@@ -111,20 +111,18 @@ SafeKit minimizes operational risk by allowing administrators to:
   * Quickly revert to the previous node if unexpected issues are detected.
 
 
-## Choosing the Right Upgrade Strategy
+## Choosing the Right Upgrade Strategy {#choosing-the-right-upgrade-strategy}
 
 Deployment Model | Application Instances | Replicated Data Impact | Upgrade Approach  
 ---|---|---|---  
 Application-Level HA | Two nodes | Depends on upgrade type | Rolling upgrade with failover  
 VM-Level HA (hyperv.safe / kvm.safe) | One VM | Managed inside VM | Snapshot, upgrade, validate, rollback if required  
   
-## Conclusion
+## Conclusion {#conclusion}
 
 SafeKit provides flexible high availability architectures that adapt to the operational requirements of different applications. Whether you protect a clustered application across two nodes or a single application instance running in a virtual machine, SafeKit enables controlled upgrades, minimizes downtime, and offers reliable recovery options whenever maintenance operations are required.
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

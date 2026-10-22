@@ -6,11 +6,11 @@
 
 ## Por que um Produto de Alta Disponibilidade SANless Tudo-em-Um é Essencial? {#all-in-one-sanless-ha}
 
-No mundo da continuidade de negócios, muitas organizações acreditam erroneamente que ter um backup ou uma ferramenta de replicação de dados é o mesmo que ter **Alta Disponibilidade (HA)**. Na realidade, estas são apenas peças de um quebra-cabeça muito maior. Para garantir verdadeiramente 100% de tempo de atividade (uptime), você precisa de uma solução tudo-em-um que integre cada camada do processo de failover.
+No mundo da continuidade de negócios, muitas organizações acreditam erroneamente que ter um backup ou uma ferramenta de replicação de dados é o mesmo que ter **Alta Disponibilidade (HA)**. Na realidade, estas são apenas peças de um quebra-cabeça muito maior. A alta disponibilidade real exige que todas as camadas do processo de failover trabalhem em conjunto: **replicação**, **detecção de falhas**, **alternância do IP virtual**, **reinicialização** e **failback**.
 
 Aqui está o porquê de uma abordagem fragmentada falhar e por que um produto integrado e tudo-em-um como o **SafeKit** — utilizando **replicação baseada em host no nível de arquivo** — é necessário.
 
-### A replicação baseada em host é suficiente por si só para a Alta Disponibilidade?
+### A replicação baseada em host é suficiente por si só para a Alta Disponibilidade? {#is-host-based-replication-alone-sufficient-for-high-availability}
 
 Não. A replicação de dados é simplesmente o ato de copiar dados do Servidor A para o Servidor B. Embora seja crítica, a replicação por si só não oferece disponibilidade. Sem os outros componentes de uma estrutura de HA, a replicação é apenas uma "cópia passiva" que exige intervenção manual e demorada para se tornar útil:
 
@@ -19,7 +19,7 @@ Não. A replicação de dados é simplesmente o ato de copiar dados do Servidor 
   * Ele não reiniciará os serviços.
 
 
-### Os Riscos Ocultos de Soluções Fragmentadas: Por que a HA em Silos Aumenta as Falhas
+### Os Riscos Ocultos de Soluções Fragmentadas: Por que a HA em Silos Aumenta as Falhas {#the-hidden-risks-of-fragmented-solutions-why-siloed-ha-increases-failure}
 
 Muitos fornecedores exigem que você "junte" vários produtos diferentes para obter **replicação baseada em host** , **failover** e **balanceamento de carga**. Essa arquitetura fragmentada é uma estratégia perigosa para sistemas de missão crítica:
 
@@ -29,7 +29,7 @@ Muitos fornecedores exigem que você "junte" vários produtos diferentes para ob
   * **Manutenção Complexa:** Sistemas fragmentados exigem competências especializadas para cada componente separado, tornando a solução mais difícil de manter e significativamente mais cara ao longo do tempo.
 
 
-### Além dos dados, quais componentes específicos são necessários para um verdadeiro failover SANless?
+### Além dos dados, quais componentes específicos são necessários para um verdadeiro failover SANless? {#beyond-data-what-specific-components-are-required-for-a-true-sanless-failover}
 
 Para automatizar a recuperação e eliminar o tempo de inatividade, um produto tudo-em-um deve gerenciar diversas partes técnicas móveis simultaneamente:
 
@@ -40,7 +40,7 @@ Para automatizar a recuperação e eliminar o tempo de inatividade, um produto t
   * **Failover Automático:** a inteligência para orquestrar toda a migração de um servidor para outro sem a necessidade de intervenção humana.
 
 
-### Por que o mecanismo de failover deve estar sincronizado com a replicação baseada em host?
+### Por que o mecanismo de failover deve estar sincronizado com a replicação baseada em host? {#why-must-the-failover-mechanism-be-synchronized-with-host-based-replication}
 
 Se o seu gerenciador de failover e a sua replicação de dados forem dois produtos diferentes, eles podem não estar "em sincronia".
 
@@ -48,7 +48,7 @@ Se o seu gerenciador de failover e a sua replicação de dados forem dois produt
 
 Uma **solução de HA SANless tudo-em-um** garante que o mecanismo de failover esteja ciente do estado da replicação. Ela só permitirá que a aplicação seja iniciada no nó de backup se houver a garantia de que os dados estão atualizados, evitando nós ativos em conflito e perda de dados.
 
-### O que acontece quando o servidor com falha é reparado (failback)?
+### O que acontece quando o servidor com falha é reparado (failback)? {#what-happens-when-the-failed-server-is-repaired-failback}
 
 Frequentemente ignorado em guias técnicos e mal executado por soluções de HA tradicionais, o failback automático continua sendo o requisito mais crítico para uma verdadeira resiliência. Um verdadeiro produto tudo-em-um lida com o "Retorno ao Normal" de forma tão elegante quanto lida com a falha. Quando o servidor que falhou volta a ficar online, ele está com os dados desatualizados. O software de HA deve:
 
@@ -57,7 +57,7 @@ Frequentemente ignorado em guias técnicos e mal executado por soluções de HA 
   3. **Restaurar a Redundância:** uma vez que os dados estejam espelhados novamente, o cluster retorna automaticamente ao estado protegido, pronto para o próximo evento.
 
 
-### Replicação em Nível de Bloco vs. Nível de Arquivo: Por que a Transparência é Importante
+### Replicação em Nível de Bloco vs. Nível de Arquivo: Por que a Transparência é Importante {#block-vs-file-level-replication-why-transparency-matters}
 
 O método técnico utilizado para a **replicação baseada em host** impacta significativamente o quanto você precisará alterar a configuração da sua aplicação existente.
 

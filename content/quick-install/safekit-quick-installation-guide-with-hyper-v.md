@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Hyper-V, SafeKit High Availability Limitations, Overview of the SafeKit / Hyper-V solution, Installation of the SafeKit / Hyper-V solution on Windows (hyperv.safe), Step by step configuration of the SafeKit / Hyper-V solution, Demonstration of the SafeKit / Hyper-V solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Hyper-V High Availability with SafeKit: Install the hyperv.safe Module for Failover
+# Hyper-V High Availability with SafeKit: Install the hyperv.safe Module for Failover {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Hyper-V" mod="hyperv"  %}}
  
 
-## Overview of the SafeKit / Hyper-V solution
+## Overview of the SafeKit / Hyper-V solution {#overview-of-the-safekit--hyper-v-solution}
 
 The solution is described here: **💡[Simple Hyper-V High Availability Without Shared Storage (SAN)](</solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
 
-## Installation of the SafeKit / Hyper-V solution on Windows (hyperv.safe)
+## Installation of the SafeKit / Hyper-V solution on Windows (hyperv.safe) {#installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * Hyper-V role installed on 2 Windows nodes (embedded for free in all Windows versions including Windows for PC).
   * Critical applications installed inside one or more virtual machines.
@@ -31,31 +31,23 @@ The solution is described here: **💡[Simple Hyper-V High Availability Without 
 
 
 {{%  insert-safekit-siemens-license-en  %}}
- 
-
 
 {{%  insert-safekit-installation-package-windows-en app="Hyper-V" mod="hyperv"  %}}
- 
-
 
 {{%  insert-safekit-82-installation-module-windows-en app="Hyper-V" mod="hyperv"  %}}
  
 
-## Step by step configuration of the SafeKit / Hyper-V solution
+## Step by step configuration of the SafeKit / Hyper-V solution {#step-by-step-configuration-of-the-safekit--hyper-v-solution}
 
 
 {{%  insert-safekit-82-hyper-v-configuration-en app="Hyper-V" mod="hyperv"  %}}
  
 
-## Demonstration of the SafeKit / Hyper-V solution
+## Demonstration of the SafeKit / Hyper-V solution {#demonstration-of-the-safekit--hyper-v-solution}
 
 
 {{%  insert-safekit-hyperv-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

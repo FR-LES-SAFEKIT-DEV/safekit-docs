@@ -7,7 +7,7 @@ lang: "ko"
 topics: "무료 AI 1단계 지원, 표준 지원 및 유지보수, 무료 인증 및 교육 프로그램, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# SafeKit AI 및 지원
+# SafeKit AI 및 지원 {#safekit-ai--support}
 
 ## 무료 AI 1단계 지원 {#ai-support}
 
@@ -53,6 +53,6 @@ SafeKit은 mirror 및 farm 모듈을 대상으로 고가용성 개념, 클러스
 [ 무료 교육 및 인증 ](</resources/safekit-on-line-training/>)
 
 
-{{%  insert-safekit-hub-kr  %}}
+{{%  insert-safekit-hub-ko  %}}
 
 {{%  insert-safekit-4-buttons-ko  %}}

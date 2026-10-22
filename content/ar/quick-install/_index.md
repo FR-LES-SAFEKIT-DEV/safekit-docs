@@ -7,13 +7,11 @@ lang: "ar"
 topics: "مكتبة وحدات SafeKit للتوافر العالي: أدلة تثبيت سريعة، 🔍 مركز التنقل في SafeKit للتوافر العالي"
 ---
 
-# أدلة التثبيت السريع من SafeKit
+# أدلة التثبيت السريع من SafeKit {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-ar  %}}
- 
 
 {{%  insert-safekit-hub-ar  %}}
- 
 
 {{%  insert-safekit-4-buttons-ar  %}}

@@ -7,9 +7,9 @@ lang: "en"
 topics: "30 seconds elevator pitch for SafeKit, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability Software: Windows and Linux Clustering with SafeKit
+# High Availability Software: Windows and Linux Clustering with SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## 30 seconds elevator pitch for SafeKit
+## 30 seconds elevator pitch for SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [SafeKit Video: 30s Pitch (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
@@ -20,7 +20,5 @@ topics: "30 seconds elevator pitch for SafeKit, 🔍 SafeKit High Availability N
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

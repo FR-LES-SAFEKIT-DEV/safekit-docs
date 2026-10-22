@@ -7,10 +7,10 @@ lang: "ko"
 topics: "고가용성 전략 선택: VM HA와 애플리케이션 HA, 🔍 SafeKit 탐색 허브"
 ---
 
-# VM HA vs. 애플리케이션 HA
+# VM HA vs. 애플리케이션 HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-ko  %}}
 
-{{%  insert-safekit-hub-kr  %}}
+{{%  insert-safekit-hub-ko  %}}
 
 {{%  insert-safekit-4-buttons-ko  %}}

@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "许可模式与定价、标准支持与维护、申请报价"
 ---
 
-# SafeKit 定价
+# SafeKit 定价 {#safekit-pricing}
 
 ## 许可模式与定价 {#licensing-model-and-pricing}
 

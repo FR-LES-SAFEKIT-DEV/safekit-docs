@@ -7,11 +7,11 @@ lang: "en"
 topics: "What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison
+# SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
-## What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster?
+## What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
-###  SAN shared storage or NAS iSCSI shared storage for a failover cluster 
+###  SAN shared storage or NAS iSCSI shared storage for a failover cluster {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
 ![SAN shared storage or NAS iSCSI shared storage for a failover cluster](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
@@ -25,7 +25,7 @@ There are several elements that make this architecture complex to implement:
   * to avoid a double access, a quorum disk must be configured.
 
 
-###  NAS SMB shared storage or NAS NFS shared storage for a failover cluster 
+###  NAS SMB shared storage or NAS NFS shared storage for a failover cluster {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
 ![NAS SMB shared storage or NAS NFS shared storage for a failover cluster](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
@@ -38,7 +38,7 @@ There are several elements that make this architecture simple to implement:
   * however, there is still the possibility of a double execution of the same application corrupting its data in the shared storage when nodes are isolated.
 
 
-###  Real-time replication and failover with Eviden SafeKit 
+###  Real-time replication and failover with Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}
 
 
 ![Real-time replication and failover with SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
@@ -55,7 +55,5 @@ However, if SafeKit must manage a shared storage:
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

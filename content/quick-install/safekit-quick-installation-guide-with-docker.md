@@ -7,20 +7,20 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Docker, SafeKit High Availability Limitations, Overview of the SafeKit / Docker solution, Installation of the SafeKit / Docker solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Docker solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Docker High Availability with SafeKit: Install the mirror.safe Module for Failover
+# Docker High Availability with SafeKit: Install the mirror.safe Module for Failover {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Docker" mod="mirror"  %}}
  
 
-## Overview of the SafeKit / Docker solution
+## Overview of the SafeKit / Docker solution {#overview-of-the-safekit--docker-solution}
 
 The solution is described here: **💡[SafeKit: Docker High Availability & Real-Time Data Replication Software](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
-## Installation of the SafeKit / Docker solution on Linux (mirror.safe)
+## Installation of the SafeKit / Docker solution on Linux (mirror.safe) {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * You need the Docker application that you want to restart in SafeKit installed on 2 nodes (virtual machines or physical servers).
 
@@ -29,7 +29,7 @@ The solution is described here: **💡[SafeKit: Docker High Availability & Real-
 {{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
-### Example 1 with a Docker compose application
+### Example 1 with a Docker compose application {#example-1-with-a-docker-compose-application}
 
 With a Docker compose application, you have a **docker-compose.yml** file describing the application and all its containers.
 
@@ -44,7 +44,7 @@ You will get a list of paths as **/var/lib/docker/volumes/ <volume_name>/_data**
     * put respectively in start_prim and stop_prim scripts: **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** and **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
-### Example 2 with a Docker application starting a set of containers
+### Example 2 with a Docker application starting a set of containers {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
 We suppose here a Docker application **myappli** starting a set of containers.
 
@@ -58,7 +58,7 @@ Thus, you will get a list of paths as **/var/lib/docker/volumes/ <volume_name>/_
     * put respectively in start_prim and stop_prim scripts: **/.../myappli start** and **/.../myappli stop**
 
 
-### Example 3 with a simple Docker image
+### Example 3 with a simple Docker image {#example-3-with-a-simple-docker-image}
 
 The configuration is presented on the example of the nginx Docker image (web server).
 
@@ -77,21 +77,17 @@ Populate the volume with some index.html file: **docker cp index.html mynginx:/u
     * after SafeKit configuration, test access to index.html with **http://vitual-ip:9011**
 
 
-## Step by step configuration of the SafeKit / Docker solution
+## Step by step configuration of the SafeKit / Docker solution {#step-by-step-configuration-of-the-safekit--docker-solution}
 
 
 {{%  insert-safekit-82-configuration-en app="Docker" mod="mirror"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

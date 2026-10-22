@@ -7,13 +7,11 @@ lang: "de"
 topics: "SafeKit-Anwendungsfälle, 🔍 SafeKit-Navigationshub für Hochverfügbarkeit"
 ---
 
-# Kundenanwendungsfälle
+# Kundenanwendungsfälle {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-de  %}}
- 
 
 {{%  insert-safekit-hub-de  %}}
- 
 
 {{%  insert-safekit-4-buttons-de  %}}

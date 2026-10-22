@@ -7,15 +7,11 @@ lang: "en"
 topics: "SafeKit Application Module Library: Ready-to-Use HA Solutions, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit Quick Installation Guides
+# SafeKit Quick Installation Guides {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

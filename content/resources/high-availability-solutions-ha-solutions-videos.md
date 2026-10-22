@@ -7,15 +7,11 @@ lang: "en"
 topics: "SafeKit Technical Failover Tutorials & Demos, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit High Availability & Failover Demos: SANless Clustering Video Tutorials
+# SafeKit High Availability & Failover Demos: SANless Clustering Video Tutorials {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}
 
 
 {{%  insert-safekit-videos-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

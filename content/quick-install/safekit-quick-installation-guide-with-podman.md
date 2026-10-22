@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Podman, SafeKit High Availability Limitations, Overview of the SafeKit / Podman solution, Installation of the SafeKit / Podman solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Podman solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Podman High Availability with SafeKit: Install the mirror.safe Module for Failover
+# Podman High Availability with SafeKit: Install the mirror.safe Module for Failover {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Podman" mod="mirror"  %}}
  
 
-## Overview of the SafeKit / Podman solution
+## Overview of the SafeKit / Podman solution {#overview-of-the-safekit--podman-solution}
 
 The solution is described here: **💡[SafeKit: Podman High Availability & Real-Time Data Replication Software](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>)**.
 
-## Installation of the SafeKit / Podman solution on Linux (mirror.safe)
+## Installation of the SafeKit / Podman solution on Linux (mirror.safe) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * You need the Podman application that you want to restart in SafeKit installed on 2 nodes (virtual machines or physical servers).
 
@@ -28,11 +28,11 @@ The solution is described here: **💡[SafeKit: Podman High Availability & Real-
 {{%  insert-safekit-installation-package-linux-en app="" mod="mirror"  %}}
  
 
-### Example with a simple container image
+### Example with a simple container image {#example-with-a-simple-container-image}
 
 In this example, we will show how SafeKit could manage a nginx (web server) container, ie : replication of a directory accessed in the container and restart of the container on another node in case of failure.
 
-#### Prerequisites
+#### Prerequisites {#prerequisites-1}
 
   * Create a replicated directory **on both nodes**  
 Create a directory **/replicated_dir_path** that will be replicated by SafeKit and that will contain html pages served by nginx
@@ -46,7 +46,7 @@ Create a nginx container on both nodes that bind the **/replicated_dir_path** di
         podman container create --name mynginx -v /replicated_dir_path:/usr/share/nginx/html -p 9011:80 nginx
 
 
-#### SafeKit configuration
+#### SafeKit configuration {#safekit-configuration}
 
   * Go to the **step-by-step configuration** section
   * Create and configure a **mirror.safe** module
@@ -57,7 +57,7 @@ Note: You may have to use "podman start --security-opt label=disable mynginx" wi
   * Deploy and start the SafeKit mirror module
 
 
-#### Tests
+#### Tests {#tests}
 
   * Test access to nginx at **http://vitual-ip:9011/index.html**
   * Test replication:  
@@ -70,21 +70,17 @@ On the node in SafeKit PRIM state, add some other html files to the replicated d
   * Test access to **http://vitual-ip:9011/index.html** and to **http://vitual-ip:9011/page.html**
 
 
-## Step by step configuration of the SafeKit / Podman solution
+## Step by step configuration of the SafeKit / Podman solution {#step-by-step-configuration-of-the-safekit--podman-solution}
 
 
 {{%  insert-safekit-82-configuration-en app="Podman" mod="mirror"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

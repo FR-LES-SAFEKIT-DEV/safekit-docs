@@ -7,9 +7,9 @@ lang: "ja"
 topics: "WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る、🔍 SafeKit 高可用性ナビゲーションハブ"
 ---
 
-# SafeKit 1か月無料試用ライセンスキー
+# SafeKit 1か月無料試用ライセンスキー {#safekit-one-month-free-trial-key}
 
-## WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る
+## WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る {#receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux}
 
 このライセンスキーでは、ネットワーク負荷分散、リアルタイムレプリケーション、自動フェイルオーバーなど、SafeKitのすべての機能を利用できます。試用期間終了後も、製品をアンインストールせずに永続ライセンスキーへ切り替えられます。
 
@@ -22,6 +22,5 @@ topics: "WindowsまたはLinux用のSafeKit 1か月無料ライセンスキー�
 
 
 {{%  insert-safekit-hub-ja  %}}
- 
 
 {{%  insert-safekit-4-buttons-ja  %}}

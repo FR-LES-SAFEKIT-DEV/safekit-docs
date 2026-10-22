@@ -7,13 +7,11 @@ lang: "de"
 topics: "SafeKit-Anwendungsmodulbibliothek: sofort einsatzbereite HA-Lösungen, 🔍 SafeKit-Navigationshub für Hochverfügbarkeit"
 ---
 
-# SafeKit-Lösungen
+# SafeKit-Lösungen {#safekit-solutions}
 
 
 {{%  insert-safekit-modules-de  %}}
- 
 
 {{%  insert-safekit-hub-de  %}}
- 
 
 {{%  insert-safekit-4-buttons-de  %}}

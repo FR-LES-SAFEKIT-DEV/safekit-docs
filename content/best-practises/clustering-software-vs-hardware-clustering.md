@@ -7,11 +7,11 @@ lang: "en"
 topics: "Difference between software clustering and hardware clustering?, Software Clustering vs Hardware Clustering: Pros and Cons, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Software Clustering vs. Hardware Clustering for High Availability
+# Software Clustering vs. Hardware Clustering for High Availability {#software-clustering-vs-hardware-clustering-for-high-availability}
 
-## Difference between software clustering and hardware clustering?
+## Difference between software clustering and hardware clustering? {#difference-between-software-clustering-and-hardware-clustering}
 
-### Overview
+### Overview {#overview}
 
 This article explores the pros and cons of software clustering vs hardware clustering by looking at features like data replication, shared disks, load balancing, hardware and software prerequisites, skills to configure the cluster... 
 
@@ -21,7 +21,7 @@ This article explores the pros and cons of software clustering vs hardware clust
 
 The following comparative tables explain in detail the difference between hardware clustering and SafeKit, a software clustering product.
 
-### What is hardware clustering?
+### What is hardware clustering? {#what-is-hardware-clustering}
 
 There are two types of hardware clustering solutions: hardware clustering for backend applications like databases and hardware clustering for frontend applications like web services.
 
@@ -29,7 +29,7 @@ Hardware clustering for backend (like with [Microsoft failover cluster](<https:/
 
 Hardware clustering for frontend is based on load balancers (like with [F5 BIG-IP](<https://www.f5.com/products/big-ip-services/local-traffic-manager>)) in front of a farm of servers (2 servers or more). The load balancers distributes the TCP sessions to the available servers in the farm.
 
-### What is software clustering?
+### What is software clustering? {#what-is-software-clustering}
 
 As with hardware clustering, there are two types of software clustering solutions: software clustering for backend applications like databases and software clustering for frontend applications like web services.
 
@@ -37,7 +37,7 @@ Software clustering for backend (like with [SafeKit](</>)) is based on 2 servers
 
 Software clustering for frontend (like with SafeKit) is based on load balancing in a farm of servers (2 servers or more). The load balancing is made by software and distributes the TCP sessions to the available servers in the farm.
 
-## Software Clustering vs Hardware Clustering: Pros and Cons
+## Software Clustering vs Hardware Clustering: Pros and Cons {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
 High availability can be achieved through different clustering approaches: **software clustering** , **hardware clustering** (shared/replicated storage), or **hardware load balancers** (dedicated network appliances). Each approach differs in features, required hardware, software prerequisites, and IT skills needed for deployment. SafeKit offers a pure software approach that combines replication, failover, and load balancing in a single product — eliminating the need for dedicated hardware or enterprise editions.
 
@@ -54,7 +54,5 @@ Skills | No specific IT skills for deploying SafeKit | High level skills in stor
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,11 +7,11 @@ lang: "nl"
 topics: "Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn er met SafeKit?, Hoe bouwt u clusters met hoge beschikbaarheid met SafeKit?, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
-# SafeKit-architecturen
+# SafeKit-architecturen {#safekit-architectures}
 
-## Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn er met SafeKit?
+## Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn er met SafeKit? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Mirror-cluster
+### Mirror-cluster {#mirror-cluster}
 
 
 ![SafeKit Mirror-cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn 
 
 [Meer informatie](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Farm-cluster
+### Farm-cluster {#farm-cluster}
 
 
 ![SafeKit Farm-cluster](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn 
 
 [Meer informatie](</architectures/network-load-balancing-cluster/>)
 
-### Farm+Mirror-cluster
+### Farm+Mirror-cluster {#farmmirror-cluster}
 
 
 ![SafeKit Farm+Mirror-cluster](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn 
 
 [Meer informatie](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### Active/active-cluster
+### Active/active-cluster {#activeactive-cluster}
 
 
 ![SafeKit active/active-cluster met realtime replicatie](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn 
 
 [Meer informatie](</architectures/active-active-cluster-real-time-replication/>)
 
-### N-1-cluster
+### N-1-cluster {#n-1-cluster}
 
 
 ![SafeKit N-1-redundantiecluster](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "Welke architecturen voor hoge beschikbaarheid en softwareclusters zijn 
 
 [Meer informatie](</architectures/n-1-redundancy/>)
 
-## Hoe bouwt u clusters met hoge beschikbaarheid met SafeKit?
+## Hoe bouwt u clusters met hoge beschikbaarheid met SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Modules voor hoge beschikbaarheid gebruiken
+### Modules voor hoge beschikbaarheid gebruiken {#use-high-availability-modules}
 
 Een module voor hoge beschikbaarheid is een aanpassing van SafeKit voor een applicatie. Er zijn twee typen modules: de Mirror-module met realtime gegevensreplicatie en failover, en de Farm-module met load balancing en failover.
 
@@ -61,7 +61,7 @@ Door een Mirror-module op twee servers te implementeren, maakt u een Mirror-clus
 
 Er kunnen meerdere applicatiemodules op dezelfde servers worden geïmplementeerd. Zo kunnen geavanceerde clusterarchitecturen worden gebouwd, zoals de eerder genoemde varianten (Farm+Mirror, active/active, N-1).
 
-### Wat is een applicatiemodule?
+### Wat is een applicatiemodule? {#what-is-an-application-module}
 
 In de praktijk is een applicatiemodule een “.Safe”-bestand (zip-formaat) met:
 
@@ -76,7 +76,7 @@ In de praktijk is een applicatiemodule een “.Safe”-bestand (zip-formaat) met
 
 2 - scripts om de applicatie te starten en te stoppen.
 
-### Plug-and-play-implementatie van modules voor hoge beschikbaarheid
+### Plug-and-play-implementatie van modules voor hoge beschikbaarheid {#plug-and-play-deployment-of-high-availability-modules}
 
 Zodra een applicatiemodule is geconfigureerd en met een applicatie is getest, vereist de implementatie geen specifieke IT-kennis:
 
@@ -87,6 +87,5 @@ Zodra een applicatiemodule is geconfigureerd en met een applicatie is getest, ve
 
 
 {{%  insert-safekit-hub-nl  %}}
- 
 
 {{%  insert-safekit-4-buttons-nl  %}}

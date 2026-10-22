@@ -7,9 +7,9 @@ lang: "en"
 topics: "SafeKit quick installation guide with Siemens Siveillance VMS and SQL (SiveillanceVMS.safe mirror module), How the SANless SafeKit Mirror Cluster Works with Milestone XProtect, Table of Contents, How the SafeKit software simply implements a SANless Milestone XProtect high availability cluster?, How the SafeKit mirror cluster works with Milestone XProtect?, SafeKit High Availability Limitations, Comparison: SafeKit for Milestone XProtect vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Siemens Siveillance VMS High Availability: 2-Node Shared-Nothing Cluster with SafeKit
+# Siemens Siveillance VMS High Availability: 2-Node Shared-Nothing Cluster with SafeKit {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}
 
-## SafeKit quick installation guide with Siemens Siveillance VMS and SQL (SiveillanceVMS.safe mirror module)
+## SafeKit quick installation guide with Siemens Siveillance VMS and SQL (SiveillanceVMS.safe mirror module) {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 
 **Download the SiveillanceVMS.safe module and go the 💡[Milestone installation](</solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/>) replacing milestone.safe by SiveillanceVMS.safe in the instructions.**
 
@@ -17,11 +17,7 @@ topics: "SafeKit quick installation guide with Siemens Siveillance VMS and SQL (
 
 
 {{%  insert-safekit-solution-mirror-2-en app="Milestone XProtect" guide="/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/" img="/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

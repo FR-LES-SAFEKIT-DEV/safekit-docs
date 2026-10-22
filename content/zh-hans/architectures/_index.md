@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 SafeKit 构建高可用集群？、🔍 SafeKit 高可用导航中心"
 ---
 
-# SafeKit 架构
+# SafeKit 架构 {#safekit-architectures}
 
-## SafeKit 提供哪些高可用架构和软件集群？
+## SafeKit 提供哪些高可用架构和软件集群？ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Mirror 镜像集群
+### Mirror 镜像集群 {#mirror-cluster}
 
 
 ![SafeKit Mirror 镜像集群](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 [了解更多](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Farm 集群
+### Farm 集群 {#farm-cluster}
 
 
 ![SafeKit Farm 集群](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 [了解更多](</architectures/network-load-balancing-cluster/>)
 
-### Farm+Mirror 集群
+### Farm+Mirror 集群 {#farmmirror-cluster}
 
 
 ![SafeKit Farm+Mirror 集群](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 [了解更多](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### Active/active 集群
+### Active/active 集群 {#activeactive-cluster}
 
 
 ![支持实时复制的 SafeKit active/active 集群](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 [了解更多](</architectures/active-active-cluster-real-time-replication/>)
 
-### N-1 集群
+### N-1 集群 {#n-1-cluster}
 
 
 ![SafeKit N-1 冗余集群](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 [了解更多](</architectures/n-1-redundancy/>)
 
-## 如何使用 SafeKit 构建高可用集群？
+## 如何使用 SafeKit 构建高可用集群？ {#how-to-build-high-availability-clusters-with-safekit}
 
-### 使用高可用模块
+### 使用高可用模块 {#use-high-availability-modules}
 
 高可用模块是针对应用程序定制的 SafeKit 配置。模块分为两种：支持实时数据复制和故障切换的 Mirror 模块，以及支持负载均衡和故障切换的 Farm 模块。
 
@@ -61,7 +61,7 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 同一组服务器上可以部署多个应用模块，因此可以实现前面介绍的 Farm+Mirror、active/active 和 N-1 等高级集群架构。
 
-### 什么是应用模块？
+### 什么是应用模块？ {#what-is-an-application-module}
 
 应用模块通常是一个“.Safe”文件（zip 格式），其中包含：
 
@@ -76,7 +76,7 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 2 - 用于启动和停止应用程序的脚本。
 
-### 高可用模块的即插即用部署
+### 高可用模块的即插即用部署 {#plug-and-play-deployment-of-high-availability-modules}
 
 应用模块配置完成并通过应用程序测试后，部署无需专门的 IT 技能：
 
@@ -87,6 +87,5 @@ topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 Sa
 
 
 {{%  insert-safekit-hub-zh-hans  %}}
- 
 
 {{%  insert-safekit-4-buttons-zh-hans  %}}

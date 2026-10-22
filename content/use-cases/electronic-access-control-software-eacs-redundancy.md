@@ -7,15 +7,15 @@ lang: "en"
 topics: "What is an electronic access control system (EACS)?, Why an EACS software is critical?, Key players list in EACS, SafeKit brings two solutions for redundancy and high availability of a EACS software, SafeKit, a recognized solution on the security market, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# High Availability and Redundancy for Electronic Access Control Software (EACS)
+# High Availability and Redundancy for Electronic Access Control Software (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
-##  What is an electronic access control system (EACS)? 
+##  What is an electronic access control system (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
 Electronic access control systems consist of hardware devices that control entry into any private premises.
 
 Theft breaches and break-ins are common crimes in business environments. Electronic access control systems are widely used because of that.
 
-##  Why an EACS software is critical? 
+##  Why an EACS software is critical? {#why-an-eacs-software-is-critical}
 
 EACS software manages hardware devices, and it denies entry to unauthorized users or raises alarms on intrusion by thieves or criminals.
 
@@ -23,7 +23,7 @@ The safety of people is directly associated with the proper execution of the EAC
 
 And that's why the system must always be available to security officers who must react immediately to the slightest incident.
 
-##  Key players list in EACS 
+##  Key players list in EACS {#key-players-list-in-eacs}
 
 The key players in EACS are:
 
@@ -47,15 +47,9 @@ The key players in EACS are:
 
 
 {{%  insert-safekit-security-solutions-en app="EACS"  %}}
- 
-
 
 {{%  insert-safekit-security-case-en app="EACS"  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

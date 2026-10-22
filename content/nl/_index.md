@@ -7,7 +7,7 @@ lang: "nl"
 topics: "Wat SafeKit doet, Kies uw beschermingsniveau, Kant-en-klare modules voor uw toepassingen, Klanttoepassingen, Eenvoudige, voorspelbare prijzen, Ken de beperkingen voordat u begint, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
-# SafeKit: hoge beschikbaarheidssoftware voor Windows en Linux, zonder SAN
+# SafeKit: hoge beschikbaarheidssoftware voor Windows en Linux, zonder SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKit maakt van twee standaardservers een SANless-cluster met hoge beschikbaarheid dat uw toepassingen draaiend houdt. Het repliceert uw gegevens in realtime, start uw toepassing opnieuw op de tweede server als de eerste uitvalt en neemt de gerepareerde server automatisch weer op. U installeert het op uw bestaande servers, zonder gedeelde opslag of specialistische clusterkennis.
 

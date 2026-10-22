@@ -7,7 +7,7 @@ lang: "pt-br"
 topics: "Modelo de licenciamento e preços, suporte e manutenção padrão, solicitar uma cotação"
 ---
 
-# Preços do SafeKit
+# Preços do SafeKit {#safekit-pricing}
 
 ## Modelo de licenciamento e preços {#licensing-model-and-pricing}
 

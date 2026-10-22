@@ -7,13 +7,11 @@ lang: "nl"
 topics: "SafeKit-bibliotheek met applicatiemodules: kant-en-klare HA-oplossingen en snelinstallatiegidsen, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
-# SafeKit-snelinstallatiegidsen
+# SafeKit-snelinstallatiegidsen {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-nl  %}}
- 
 
 {{%  insert-safekit-hub-nl  %}}
- 
 
 {{%  insert-safekit-4-buttons-nl  %}}

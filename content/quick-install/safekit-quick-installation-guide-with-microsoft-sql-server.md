@@ -7,19 +7,19 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Microsoft SQL Server, SafeKit High Availability Limitations, Overview of the SafeKit / Microsoft SQL Server solution, Installation of the SafeKit / Microsoft SQL Server solution on Windows (sqlserver.safe), Step by step configuration of the SafeKit / Microsoft SQL Server solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Microsoft SQL Server High Availability with SafeKit: Install the sqlserver.safe Module for Failover
+# Microsoft SQL Server High Availability with SafeKit: Install the sqlserver.safe Module for Failover {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## Overview of the SafeKit / Microsoft SQL Server solution
+## Overview of the SafeKit / Microsoft SQL Server solution {#overview-of-the-safekit--microsoft-sql-server-solution}
 
 For a detailed overview of the solution, see **💡[The Simplest Microsoft SQL Server High Availability: 2-Node Synchronous Replication & Failover](</solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
 
-## Installation of the SafeKit / Microsoft SQL Server solution on Windows (sqlserver.safe)
+## Installation of the SafeKit / Microsoft SQL Server solution on Windows (sqlserver.safe) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * You need Microsoft SQL Server installed on 2 nodes (virtual machines or physical servers).
   * SafeKit works with all versions of SQL including SQL Express.
@@ -32,27 +32,21 @@ For a detailed overview of the solution, see **💡[The Simplest Microsoft SQL S
 
 
 {{%  insert-safekit-installation-package-windows-en app="Microsoft SQL Server" mod="sqlserver"  %}}
- 
-
 
 {{%  insert-safekit-82-installation-module-windows-en app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## Step by step configuration of the SafeKit / Microsoft SQL Server solution
+## Step by step configuration of the SafeKit / Microsoft SQL Server solution {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-en app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -38,7 +38,7 @@ En regroupant la **Haute Disponibilité** dans une couche logicielle légère, S
 
 ## Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité sans SAN pour {{ .Get "app" }} ? {#safekit-mirror-ha-cluster}
 
-### Qu'est-ce que la solution SafeKit Mirror HA pour {{ .Get "app" }} ?
+### Qu'est-ce que la solution SafeKit Mirror HA pour {{ .Get "app" }} ? {#safekit-mirror-ha-solution}
 
 SafeKit apporte la haute disponibilité à {{ .Get "app" }} entre deux serveurs de n'importe quelle marque.
 
@@ -48,13 +48,13 @@ Le principe de la solution est de définir les dossiers où résident les donné
 
 SafeKit implémente ensuite la **réplication en temps réel** et le **basculement automatique** pour garantir la disponibilité continue du service.
 
-### Pourquoi choisir une solution HA tout-en-un unifiée plutôt que des outils fragmentés ?
+### Pourquoi choisir une solution HA tout-en-un unifiée plutôt que des outils fragmentés ? {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
 
 Contrairement aux solutions « d'appoint » qui combinent des produits distincts pour la réplication et le clustering, **SafeKit** intègre l'**IP virtuelle, le basculement automatique, le retour automatique après panne et la réplication de fichiers en temps réel** au sein d'un seul et unique moteur.
 
 Cela élimine le risque d'un « château de cartes » où les mises à jour de l'OS brisent les liens fragiles entre des outils disparates, offre un point de responsabilité unique pour l'ensemble de la pile HA, et réduit les erreurs humaines en fournissant une interface unique pour la HA de {{ .Get "app" }}.
 
-### Dois-je choisir la haute disponibilité au niveau applicatif ou au niveau de la machine virtuelle (VM) ?
+### Dois-je choisir la haute disponibilité au niveau applicatif ou au niveau de la machine virtuelle (VM) ? {#application-vs-vm-high-availability}
 
 Avec SafeKit, vous disposez de la flexibilité nécessaire pour choisir le modèle de redondance qui correspond à vos besoins.
 
@@ -64,7 +64,7 @@ La **redondance au niveau de la VM** (pour Hyper-V ou KVM) est la plus simple à
 
 Bien que la HA au niveau de la VM soit plus facile à configurer, la HA au niveau applicatif est indépendante de l'hyperviseur et peut s'exécuter sur des environnements physiques, virtuels ou cloud.
 
-### Quels sont les avantages distinctifs de la haute disponibilité SafeKit pour {{ .Get "app" }} par rapport aux concurrents ?
+### Quels sont les avantages distinctifs de la haute disponibilité SafeKit pour {{ .Get "app" }} par rapport aux concurrents ? {#safekit-mirror-ha-advantages}
 
 SafeKit se différencie des clusters traditionnels pour {{ .Get "app" }} grâce à son **architecture sans partage de ressources (shared-nothing)** et son déploiement simplifié. Alors que la plupart des solutions d'entreprise nécessitent un déploiement de réplication complexe ou un stockage SAN coûteux, SafeKit offre :
 
@@ -75,7 +75,7 @@ SafeKit se différencie des clusters traditionnels pour {{ .Get "app" }} grâce 
   * **Modules de surveillance personnalisés (Checkers) :** SafeKit va au-delà de la simple surveillance des services de base ; il **propose des checkers** pour surveiller l'état de santé du processus de {{ .Get "app" }}. Le système est hautement extensible, permettant l'ajout de checkers personnalisés adaptés à votre environnement.
 
 
-### Comment SafeKit réduit-il le TCO (Coût Total de Possession) pour {{ .Get "app" }} par rapport au clustering standard ?
+### Comment SafeKit réduit-il le TCO (Coût Total de Possession) pour {{ .Get "app" }} par rapport au clustering standard ? {#safekit-mirror-ha-tco}
 
 Contrairement aux solutions de haute disponibilité traditionnelles, SafeKit est conçu pour fonctionner avec un **surcoût d'infrastructure minimal** , sans aucun compromis sur la fiabilité. Les principales économies par rapport à un cluster de basculement traditionnel comprennent :
 
@@ -87,11 +87,11 @@ Contrairement aux solutions de haute disponibilité traditionnelles, SafeKit est
   * **Tarification indépendante du processeur :** L'octroi de licences est indépendant du nombre de processeurs ou de cœurs. Avec seulement deux licences pour deux nœuds, vous pouvez protéger {{ .Get "app" }} contre les pannes.
 
 
-### Est-il possible de mettre en place un cluster miroir {{ .Get "app" }} sans compétences en clustering ?
+### Est-il possible de mettre en place un cluster miroir {{ .Get "app" }} sans compétences en clustering ? {#mirror-cluster-without-clustering-skills}
 
 Oui. Cet article explique comment [**implémenter rapidement un cluster miroir {{ .Get "app" }}**]({{ .Get "guide" }}) sans avoir besoin d'une gestion SAN spécialisée ou de compétences complexes en clustering de haute disponibilité (HA). En utilisant les **scripts de basculement automatisés** de SafeKit pour gérer la réplication et le redémarrage de **{{ .Get "app" }}** , vous bénéficiez d'une solution de redondance robuste, nettement plus simple à déployer et à maintenir que les solutions de clustering traditionnelles.
 
-### Au-delà de {{ .Get "app" }}, quels types d'applications et d'environnements SafeKit peut-il protéger ?
+### Au-delà de {{ .Get "app" }}, quels types d'applications et d'environnements SafeKit peut-il protéger ? {#supported-applications-and-environments}
 
 SafeKit est une solution de haute disponibilité polyvalente **compatible à la fois avec Windows et Linux**. Elle permet une **réplication synchrone en temps réel** et un basculement automatique pour un large éventail de charges de travail critiques, notamment :
 

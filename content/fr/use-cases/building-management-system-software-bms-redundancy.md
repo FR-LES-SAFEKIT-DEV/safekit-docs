@@ -7,15 +7,15 @@ lang: "fr"
 topics: "Qu'est-ce qu'un système de gestion des bâtiments (BMS) ?, Pourquoi un logiciel BMS est critique ?, Liste des acteurs clés sur le marché BMS, SafeKit apporte deux solutions pour la redondance et la haute disponibilité des logiciels BMS, SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Haute disponibilité et redondance pour les systèmes de gestion technique du bâtiment (GTB)
+# Haute disponibilité et redondance pour les systèmes de gestion technique du bâtiment (GTB) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
-##  Qu'est-ce qu'un système de gestion des bâtiments (BMS) ? 
+##  Qu'est-ce qu'un système de gestion des bâtiments (BMS) ? {#what-is-a-building-management-system-bms}
 
 Un système de gestion des bâtiments (BMS - Building Management System) apporte le contrôle centralisé automatique du bâtiment: chauffage, ventilation, climatisation, électricité, éclairage...
 
 Un système de gestion des bâtiments augmente la sécurité des résidents du bâtiment, réduit la consommation d'énergie et réduit les coûts d'exploitation et de maintenance.
 
-##  Pourquoi un logiciel BMS est critique ? 
+##  Pourquoi un logiciel BMS est critique ? {#why-a-bms-software-is-critical}
 
 Le logiciel BMS contrôle le système d'incendie, les panneaux de distribution électrique, la consommation d'eau, les systèmes de climatisation, le contrôle de l'éclairage.
 
@@ -23,7 +23,7 @@ La sécurité des personnes dans le bâtiment est directement associée à la bo
 
 Et c'est pourquoi, le système doit être toujours disponible pour les exploitants d'immeubles qui doivent réagir immédiatement au moindre incident.
 
-##  Liste des acteurs clés sur le marché BMS 
+##  Liste des acteurs clés sur le marché BMS {#key-players-list-in-bms}
 
 Les acteurs clés du BMS sont :
 
@@ -54,15 +54,9 @@ Les acteurs clés du BMS sont :
 
 
 {{%  insert-safekit-security-solutions-fr app="BMS"  %}}
- 
-
 
 {{%  insert-safekit-security-case-fr  %}}
- 
-
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

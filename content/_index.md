@@ -7,7 +7,7 @@ lang: "en"
 topics: "What SafeKit Does, Choose Your Protection Level, Ready-Made Modules For Your Applications, Customer Use Cases, Simple, Predictable Pricing, Know The Limits Before You Start, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit: High Availability Software for Windows and Linux, Without a SAN
+# SafeKit: High Availability Software for Windows and Linux, Without a SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKit turns two standard servers into a SANless high availability cluster that keeps your applications running. It replicates your data in real time, restarts your application on the second server if the first one fails, and reintegrates the failed server automatically once it is repaired. You install it on the servers you already have, with no shared storage and no cluster expertise required.
 

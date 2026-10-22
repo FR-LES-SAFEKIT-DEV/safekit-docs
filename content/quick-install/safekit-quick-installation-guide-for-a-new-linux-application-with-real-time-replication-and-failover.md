@@ -7,20 +7,20 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (mirror.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Linux High Availability with SafeKit: Install the mirror.safe Module for Failover
+# Linux High Availability with SafeKit: Install the mirror.safe Module for Failover {#linux-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="Linux" mod="mirror"  %}}
  
 
-## Overview of the SafeKit / Linux solution
+## Overview of the SafeKit / Linux solution {#overview-of-the-safekit--linux-solution}
 
 The solutions is described here: **💡[The Simplest Linux High Availability: 2-Node Synchronous Replication & Failover](</solutions/linux-high-availability-software-synchronous-replication-failover/>).  
 **
 
-## Installation of the SafeKit / Linux solution (mirror.safe)
+## Installation of the SafeKit / Linux solution (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * You need the application that you want to restart in SafeKit installed on 2 nodes (virtual machines or physical servers).
 
@@ -31,21 +31,17 @@ The solutions is described here: **💡[The Simplest Linux High Availability: 2-
 
 Note: the generic **mirror.safe** module that you are going to configure is delivered inside the package.
 
-## Step by step configuration of the SafeKit / Linux solution
+## Step by step configuration of the SafeKit / Linux solution {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 
 {{%  insert-safekit-82-configuration-en app="Linux" mod="mirror"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en app="Microsoft SQL Server mirror"  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

@@ -7,13 +7,11 @@ lang: "ja"
 topics: "SafeKit高可用性無料トライアルと技術ドキュメント、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit無料トライアル
+# SafeKit無料トライアル {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-ja  %}}
- 
 
 {{%  insert-safekit-hub-ja  %}}
- 
 
 {{%  insert-safekit-4-buttons-ja  %}}

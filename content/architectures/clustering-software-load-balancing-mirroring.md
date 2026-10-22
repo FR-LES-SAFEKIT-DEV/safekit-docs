@@ -7,17 +7,17 @@ lang: "en"
 topics: "High availability and scalability of critical web and database applications with the SafeKit clustering software, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# Clustering Software for Farms and Mirrors: High Availability & Load Balancing
+# Clustering Software for Farms and Mirrors: High Availability & Load Balancing {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## High availability and scalability of critical web and database applications with the SafeKit clustering software
+## High availability and scalability of critical web and database applications with the SafeKit clustering software {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
-### Load balancing, mirroring and failover
+### Load balancing, mirroring and failover {#load-balancing-mirroring-and-failover}
 
 
 ![SafeKit clustering with load balancing and mirroring](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-### Example with the SafeKit clustering software
+### Example with the SafeKit clustering software {#example-with-the-safekit-clustering-software}
 
 For example, with the SafeKit clustering software, you can implement IIS load balancing and Microsoft SQL Server mirroring.
 
@@ -27,7 +27,7 @@ Both mirror and farm modules can be deployed on a single cluster of two servers.
 
 With the SafeKit clustering software, there is no difference between a deployment on the same servers or on different servers.
 
-### High availability and scalability solution
+### High availability and scalability solution {#high-availability-and-scalability-solution}
 
 The SafeKit clustering software provides a simple high availability and scalability solution for critical web and database applications.
 
@@ -37,7 +37,5 @@ When comparing the SafeKit clustering software with hardware clustering, you do 
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

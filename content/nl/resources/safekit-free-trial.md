@@ -7,13 +7,11 @@ lang: "nl"
 topics: "Gratis proefversie en technische documentatie voor hoge beschikbaarheid met SafeKit, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
-# Gratis SafeKit-proefversie
+# Gratis SafeKit-proefversie {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-nl  %}}
- 
 
 {{%  insert-safekit-hub-nl  %}}
- 
 
 {{%  insert-safekit-4-buttons-nl  %}}

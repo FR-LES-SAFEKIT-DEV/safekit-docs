@@ -7,11 +7,11 @@ lang: "en"
 topics: "How to Access the Training Platform?, Get SafeKit 8 Training Materials, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# SafeKit High Availability Training: Free Online Certification Program
+# SafeKit High Availability Training: Free Online Certification Program {#safekit-high-availability-training-free-online-certification-program}
 
 ## How to Access the Training Platform? {#certif}
 
-### The SafeKit Training Platform
+### The SafeKit Training Platform {#the-safekit-training-platform}
 
 The SafeKit on-line training is a self-paced, comprehensive resource designed to help you master high availability and application clustering. You can access the platform through the following steps:
 
@@ -31,7 +31,7 @@ The SafeKit on-line training is a self-paced, comprehensive resource designed to
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-#### Chapters
+#### Chapters {#chapters}
 
   1. 🎬 [The Training and Certification Platform](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=0s>) (1:41)
   2. 🎬 [What is a SafeKit Training Module?](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=101s>) (1:57)
@@ -44,7 +44,7 @@ The SafeKit on-line training is a self-paced, comprehensive resource designed to
 
 Note that this is not the training platform itself, but a repository to download the training materials if needed.
 
-### Introduction
+### Introduction {#introduction}
 
   1. Overview: 🎬 [video](<https://www.youtube.com/watch?v=bMRyNq3egLQ>) (9:43) 
      * 🎬 [Introduction](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=0s>) (0:38)
@@ -62,7 +62,7 @@ Note that this is not the training platform itself, but a repository to download
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
 
 
-### Demonstrations
+### Demonstrations {#demonstrations}
 
 Hyper-V cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
@@ -88,7 +88,7 @@ Farm cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-c
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
 
 
-### Installation, Console, CLI
+### Installation, Console, CLI {#installation-console-cli}
 
   3. Install and setup: 🎬 [video](<https://www.youtube.com/watch?v=iP8sd28GBnM>) (14:26) 
      * 🎬 [Overview](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=0s>) (0:47)
@@ -127,7 +127,7 @@ Farm cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-c
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/5-command-line-en.pptx>))
 
 
-### Advanced configuration
+### Advanced configuration {#advanced-configuration}
 
   6. Mirror module: 🎬 [video](<https://www.youtube.com/watch?v=SmWwVUYsx9Q>) (26:52) 
      * 🎬 [Overview](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=0s>) (2:59)
@@ -160,7 +160,7 @@ Farm cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-c
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>))
 
 
-### Troubleshooting
+### Troubleshooting {#troubleshooting}
 
   9. Troubleshooting: 🎬 [video](<https://www.youtube.com/watch?v=H1mxvpC3mP8>) (31:24) 
      * 🎬 [Introduction](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=0s>) (0:58)
@@ -177,7 +177,5 @@ Farm cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-c
 
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

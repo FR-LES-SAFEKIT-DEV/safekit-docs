@@ -7,7 +7,7 @@ lang: "ja"
 topics: "高可用性戦略の選択：VM HA と Application HA、🔍 SafeKit ナビゲーションハブ"
 ---
 
-# VM HA と Application HA
+# VM HA と Application HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-ja  %}}
 

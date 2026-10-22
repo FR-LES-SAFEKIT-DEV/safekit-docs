@@ -7,13 +7,11 @@ lang: "zh-hans"
 topics: "SafeKit 应用模块库：即用型高可用解决方案和快速安装指南，🔍 SafeKit 高可用导航中心"
 ---
 
-# SafeKit 快速安装指南
+# SafeKit 快速安装指南 {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-zh-hans  %}}
- 
 
 {{%  insert-safekit-hub-zh-hans  %}}
- 
 
 {{%  insert-safekit-4-buttons-zh-hans  %}}

@@ -38,7 +38,7 @@ By consolidating **High Availability** into a lightweight software layer, SafeKi
 
 ## How the SafeKit software simply implements a SANless {{ .Get "app" }} high availability cluster? {#safekit-mirror-ha-cluster}
 
-### What is the SafeKit Mirror HA solution for {{ .Get "app" }}?
+### What is the SafeKit Mirror HA solution for {{ .Get "app" }}? {#safekit-mirror-ha-solution}
 
 SafeKit brings high availability to {{ .Get "app" }} between two servers of any brand.
 
@@ -48,13 +48,13 @@ The principle of the solution is to define the folders where the **{{ .Get "app"
 
 SafeKit then implements **real-time replication** and **automatic failover** to ensure continuous service availability.
 
-### Why choose a unified All-in-One HA solution over fragmented tools?
+### Why choose a unified All-in-One HA solution over fragmented tools? {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
 
 Unlike "bolt-on" solutions that combine separate products for replication and clustering, **SafeKit** integrates **Virtual IP, Automatic Failover, Automatic Failback and Real-time File Replication** into a single engine.
 
 This eliminates the "house of cards" risk where OS updates break fragile links between disparate tools, provides a single point of accountability for the entire HA stack, and reduces human error by providing a single interface for {{ .Get "app" }} HA.
 
-### Should I choose high availability at the application level or the virtual machine (VM) level?
+### Should I choose high availability at the application level or the virtual machine (VM) level? {#application-vs-vm-high-availability}
 
 With SafeKit, you have the flexibility to choose the redundancy model that fits your needs.
 
@@ -64,7 +64,7 @@ Alternatively, **application-level redundancy** is more granular; it only replic
 
 While VM-level HA is easier to set up, application-level HA is hypervisor-agnostic and can run across physical, virtual, or cloud environments.
 
-### What are the distinctive advantages of SafeKit {{ .Get "app" }} high availability compared to competitors?
+### What are the distinctive advantages of SafeKit {{ .Get "app" }} high availability compared to competitors? {#safekit-mirror-ha-advantages}
 
 SafeKit differentiates itself from traditional {{ .Get "app" }} clusters through its **shared-nothing architecture** and simplified deployment. While most enterprise solutions require complex replication deployment or expensive SAN storage, SafeKit provides:
 
@@ -75,7 +75,7 @@ SafeKit differentiates itself from traditional {{ .Get "app" }} clusters through
   * **Custom Checkers:** SafeKit goes beyond basic service monitoring; it **offers checkers** to monitor the health of the {{ .Get "app" }} process. The system is highly extensible, allowing for the addition of custom checkers tailored to your environment.
 
 
-### How does SafeKit reduce the TCO (Total Cost of Ownership) for {{ .Get "app" }} compared to standard clustering?
+### How does SafeKit reduce the TCO (Total Cost of Ownership) for {{ .Get "app" }} compared to standard clustering? {#safekit-mirror-ha-tco}
 
 Unlike traditional high-availability solutions, SafeKit is designed to operate with the **absolute minimum infrastructure overhead** , without compromising reliability. Key savings compared to traditional failover cluster include:
 
@@ -87,11 +87,11 @@ Unlike traditional high-availability solutions, SafeKit is designed to operate w
   * **CPU-Independent Pricing:** Licensing is independent of the number of CPUs or cores. With just two licenses for two nodes, you can protect {{ .Get "app" }} against failures.
 
 
-### Is it possible to set up a {{ .Get "app" }} mirror cluster without clustering skills?
+### Is it possible to set up a {{ .Get "app" }} mirror cluster without clustering skills? {#mirror-cluster-without-clustering-skills}
 
 Yes. This article explains how to [quickly implement a {{ .Get "app" }} mirror cluster]({{ .Get "guide" }}) without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s **automated failover scripts** to handle the replication and restart of **{{ .Get "app" }}** , you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional clustering solutions.
 
-### Beyond {{ .Get "app" }}, which applications and environments can SafeKit protect?
+### Beyond {{ .Get "app" }}, which applications and environments can SafeKit protect? {#supported-applications-and-environments}
 
 SafeKit is a versatile high-availability solution **for both Windows and Linux**. It enables **synchronous real-time replication** and automatic failover for a wide range of critical workloads, including:
 
@@ -107,8 +107,6 @@ SafeKit also provides **Farm Clusters** with native **Network Load Balancing and
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-en app=%q  %%}}" (.Get "app")) }}
-
-
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
 

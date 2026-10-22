@@ -7,7 +7,7 @@ lang: "fr"
 topics: "Support IA de niveau 1 gratuit, Support et Maintenance Standard, Programme de Formation et Certification Gratuit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# SafeKit: IA et support
+# SafeKit: IA et support {#safekit-ai--support}
 
 ## Support IA de niveau 1 gratuit {#ai-support}
 
@@ -54,7 +54,5 @@ SafeKit propose un programme de formation et de certification en ligne gratuit c
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

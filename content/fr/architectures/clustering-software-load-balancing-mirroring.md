@@ -7,17 +7,17 @@ lang: "fr"
 topics: "Haute disponibilité et scalabilité des applications web et bases de données critiques avec le logiciel de clustering SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
 ---
 
-# Logiciel de clustering pour fermes et miroirs : haute disponibilité et équilibrage de charge
+# Logiciel de clustering pour fermes et miroirs : haute disponibilité et équilibrage de charge {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## Haute disponibilité et scalabilité des applications web et bases de données critiques avec le logiciel de clustering SafeKit
+## Haute disponibilité et scalabilité des applications web et bases de données critiques avec le logiciel de clustering SafeKit {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
-### Load balancing, mirroring et basculement sur panne
+### Load balancing, mirroring et basculement sur panne {#load-balancing-mirroring-and-failover}
 
 
 ![Logiciel de clustering avec load balancing et mirroring](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-### Exemple avec le logiciel de clustering SafeKit
+### Exemple avec le logiciel de clustering SafeKit {#example-with-the-safekit-clustering-software}
 
 Par exemple, avec le logiciel de clustering SafeKit, vous pouvez implémenter le load balancing IIS et le mirroring de Microsoft SQL Server.
 
@@ -27,7 +27,7 @@ Les modules miroir et ferme peuvent être déployés sur un seul cluster de deux
 
 Avec le logiciel de clustering SafeKit, il n'y a aucune différence entre un déploiement sur les mêmes serveurs ou sur des serveurs différents.
 
-### Solution de haute disponibilité et de scalabilité
+### Solution de haute disponibilité et de scalabilité {#high-availability-and-scalability-solution}
 
 Le logiciel de clustering SafeKit fournit une solution simple de haute disponibilité et de scalabilité pour les applications Web et les bases de données critiques.
 
@@ -37,7 +37,5 @@ Lorsque vous comparez le logiciel de clustering SafeKit avec le clustering maté
 
 
 {{%  insert-safekit-hub-fr  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-fr  %}}

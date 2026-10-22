@@ -7,11 +7,11 @@ lang: "ar"
 topics: "ما بُنى التوافر العالي المختلفة وعناقيد البرامج المختلفة باستخدام SafeKit؟، كيفية إنشاء عناقيد توافر عالٍ باستخدام SafeKit؟، 🔍 مركز التنقل في SafeKit للتوافر العالي"
 ---
 
-# بُنى SafeKit
+# بُنى SafeKit {#safekit-architectures}
 
-## ما بُنى التوافر العالي المختلفة وعناقيد البرامج المختلفة باستخدام SafeKit؟
+## ما بُنى التوافر العالي المختلفة وعناقيد البرامج المختلفة باستخدام SafeKit؟ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### عنقود المرآة
+### عنقود المرآة {#mirror-cluster}
 
 
 ![عنقود SafeKit المرآة](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 [مزيد من المعلومات](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### عنقود المزرعة
+### عنقود المزرعة {#farm-cluster}
 
 
 ![عنقود SafeKit للمزرعة](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 [مزيد من المعلومات](</architectures/network-load-balancing-cluster/>)
 
-### عنقود المزرعة والمرآة
+### عنقود المزرعة والمرآة {#farmmirror-cluster}
 
 
 ![عنقود SafeKit للمزرعة والمرآة](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 [مزيد من المعلومات](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### عنقود نشط/نشط
+### عنقود نشط/نشط {#activeactive-cluster}
 
 
 ![عنقود SafeKit نشط/نشط مع النسخ المتماثل في الوقت الفعلي](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 [مزيد من المعلومات](</architectures/active-active-cluster-real-time-replication/>)
 
-### عنقود N-1
+### عنقود N-1 {#n-1-cluster}
 
 
 ![عنقود SafeKit للتكرار N-1](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 [مزيد من المعلومات](</architectures/n-1-redundancy/>)
 
-## كيفية إنشاء عناقيد توافر عالٍ باستخدام SafeKit؟
+## كيفية إنشاء عناقيد توافر عالٍ باستخدام SafeKit؟ {#how-to-build-high-availability-clusters-with-safekit}
 
-### استخدام وحدات التوافر العالي
+### استخدام وحدات التوافر العالي {#use-high-availability-modules}
 
 وحدة التوافر العالي هي تخصيص لبرنامج SafeKit لتطبيق معين. توجد أنواعان من الوحدات: وحدة المرآة التي توفر نسخ البيانات في الوقت الفعلي والتحويل عند التعطل، ووحدة المزرعة التي توفر موازنة الحمل والتحويل عند التعطل.
 
@@ -61,7 +61,7 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 يمكن نشر عدة وحدات تطبيقات على الخوادم نفسها. وبذلك يمكن تنفيذ بُنى عناقيد متقدمة مثل تلك المعروضة أعلاه (مزرعة+مرآة، نشط/نشط، N-1).
 
-### ما وحدة التطبيق؟
+### ما وحدة التطبيق؟ {#what-is-an-application-module}
 
 عملياً، وحدة التطبيق هي ملف “.Safe” (من نوع zip) يتضمن:
 
@@ -76,7 +76,7 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 2 - البرامج النصية لبدء التطبيق وإيقافه.
 
-### نشر وحدات التوافر العالي بأسلوب التوصيل والتشغيل
+### نشر وحدات التوافر العالي بأسلوب التوصيل والتشغيل {#plug-and-play-deployment-of-high-availability-modules}
 
 بعد إعداد وحدة التطبيق واختبارها مع تطبيق، لا يتطلب النشر مهارات تقنية معلومات خاصة:
 
@@ -87,6 +87,5 @@ topics: "ما بُنى التوافر العالي المختلفة وعناقي
 
 
 {{%  insert-safekit-hub-ar  %}}
- 
 
 {{%  insert-safekit-4-buttons-ar  %}}

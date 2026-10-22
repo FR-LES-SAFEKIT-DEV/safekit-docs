@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "选择高可用性策略：VM HA 与应用程序 HA，🔍 SafeKit 导航中心"
 ---
 
-# VM HA 与应用程序 HA
+# VM HA 与应用程序 HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-zh-hans  %}}
 

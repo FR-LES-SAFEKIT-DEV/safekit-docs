@@ -7,13 +7,11 @@ lang: "zh-hans"
 topics: "SafeKit 应用模块库：开箱即用的高可用性解决方案，🔍 SafeKit 高可用性导航中心"
 ---
 
-# SafeKit 解决方案
+# SafeKit 解决方案 {#safekit-solutions}
 
 
 {{%  insert-safekit-modules-zh-hans  %}}
- 
 
 {{%  insert-safekit-hub-zh-hans  %}}
- 
 
 {{%  insert-safekit-4-buttons-zh-hans  %}}

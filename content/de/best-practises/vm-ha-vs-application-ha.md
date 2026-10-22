@@ -7,7 +7,7 @@ lang: "de"
 topics: "Die passende Hochverfügbarkeitsstrategie wählen: VM-HA vs. Anwendungs-HA, 🔍 SafeKit-Navigationsübersicht"
 ---
 
-# VM-HA vs. Anwendungs-HA
+# VM-HA vs. Anwendungs-HA {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-de  %}}
 

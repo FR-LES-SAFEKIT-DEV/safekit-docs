@@ -7,13 +7,11 @@ lang: "es"
 topics: "Biblioteca de módulos de SafeKit: soluciones HA listas para usar y guías de instalación rápida, 🔍 Centro de navegación de SafeKit para alta disponibilidad"
 ---
 
-# Guías de instalación rápida de SafeKit
+# Guías de instalación rápida de SafeKit {#safekit-quick-installation-guides}
 
 
 {{%  insert-safekit-modules-es  %}}
- 
 
 {{%  insert-safekit-hub-es  %}}
- 
 
 {{%  insert-safekit-4-buttons-es  %}}

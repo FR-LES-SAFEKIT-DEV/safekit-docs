@@ -7,13 +7,11 @@ lang: "zh-hans"
 topics: "SafeKit 应用案例，🔍 SafeKit 高可用性导航中心"
 ---
 
-# 客户应用案例
+# 客户应用案例 {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-zh-hans  %}}
- 
 
 {{%  insert-safekit-hub-zh-hans  %}}
- 
 
 {{%  insert-safekit-4-buttons-zh-hans  %}}

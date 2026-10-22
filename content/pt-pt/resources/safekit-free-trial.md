@@ -7,13 +7,11 @@ lang: "pt-pt"
 topics: "Avaliação gratuita e documentação técnica de alta disponibilidade do SafeKit, 🔍 Centro de navegação do SafeKit para alta disponibilidade"
 ---
 
-# Avaliação gratuita do SafeKit
+# Avaliação gratuita do SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-pt-pt  %}}
- 
 
 {{%  insert-safekit-hub-pt-pt  %}}
- 
 
 {{%  insert-safekit-4-buttons-pt-pt  %}}

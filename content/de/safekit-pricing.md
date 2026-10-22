@@ -7,7 +7,7 @@ lang: "de"
 topics: "Lizenzmodell und Preise, Standard-Support und Wartung, Angebot anfordern"
 ---
 
-# SafeKit-Preise
+# SafeKit-Preise {#safekit-pricing}
 
 ## Lizenzmodell und Preise {#licensing-model-and-pricing}
 

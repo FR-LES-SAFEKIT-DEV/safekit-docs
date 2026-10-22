@@ -7,54 +7,44 @@ lang: "en"
 topics: "High Availability Quick Installation Guide for MariaDB, SafeKit High Availability Limitations, Overview of the SafeKit / MariaDB solution, Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe), Step by step configuration of the SafeKit / MariaDB solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
-# MariaDB High Availability with SafeKit: Install the mysql.safe Module for Failover
+# MariaDB High Availability with SafeKit: Install the mysql.safe Module for Failover {#mariadb-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-en app="MariaDB" mod="mysql"  %}}
  
 
-## Overview of the SafeKit / MariaDB solution
+## Overview of the SafeKit / MariaDB solution {#overview-of-the-safekit--mariadb-solution}
 
 The solution is described here: **💡[The Simplest MariaDB High Availability: 2-Node Synchronous Replication & Failover](</solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>)**.
 
-## Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe)
+## Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe) {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 
-### Prerequisites
+### Prerequisites {#prerequisites}
 
   * You need MariaDB installed on 2 nodes (virtual machines or physical servers).
 
 
 
 {{%  insert-safekit-installation-package-windows-en app="MariaDB" mod="mysql"  %}}
- 
-
 
 {{%  insert-safekit-82-installation-module-windows-en app="MariaDB" mod="mysql"  %}}
- 
-
 
 {{%  insert-safekit-installation-package-linux-en app="MariaDB" mod="mysql"  %}}
- 
-
 
 {{%  insert-safekit-82-installation-module-linux-en app="MariaDB" mod="mysql"  %}}
  
 
-## Step by step configuration of the SafeKit / MariaDB solution
+## Step by step configuration of the SafeKit / MariaDB solution {#step-by-step-configuration-of-the-safekit--mariadb-solution}
 
 
 {{%  insert-safekit-82-configuration-en app="MariaDB" mod="mysql"  %}}
  
 
-## Demonstration of the SafeKit mirror solution
+## Demonstration of the SafeKit mirror solution {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-en  %}}
- 
-
 
 {{%  insert-safekit-hub-en  %}}
- 
-
 
 {{%  insert-safekit-4-buttons-en  %}}

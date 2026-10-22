@@ -7,7 +7,7 @@ lang: "ko"
 topics: "라이선스 모델 및 가격, 표준 지원 및 유지보수, 견적 요청"
 ---
 
-# SafeKit 가격
+# SafeKit 가격 {#safekit-pricing}
 
 ## 라이선스 모델 및 가격 {#licensing-model-and-pricing}
 
