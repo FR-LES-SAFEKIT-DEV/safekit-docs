@@ -162,7 +162,6 @@
 
   function postLead(values, recaptchaResponse) {
     if (!config.postUrl) return Promise.resolve();
-    var enquirySelect = document.getElementById("enquiryType");
     var payload = new URLSearchParams();
     var fields = {
       url: window.location.href,
@@ -187,7 +186,7 @@
       country: fieldValue(values, "Country"),
       purchase_authority: fieldValue(values, "Purchase_Authority__c"),
       opt_in: fieldValue(values, "Opt_in__c"),
-      enquiry_type: enquirySelect && enquirySelect.selectedIndex >= 0 ? enquirySelect.options[enquirySelect.selectedIndex].text : fieldValue(values, "enquiryType"),
+      enquiry_type: fieldValue(values, "enquiryType"),
       enquiry_type_not_translated: fieldValue(values, "enquiryType"),
       enquiry: fieldValue(values, "enquiry"),
       interested_in: fieldValue(values, "interestedIn"),
