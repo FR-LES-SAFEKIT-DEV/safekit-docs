@@ -91,7 +91,7 @@ sitemap:
     form-type="Page Redirect"
     data-content="CONTACT_EN Contact Eviden"
     data-destination="/confirmation-safekit/"
-    data-post-url="https://www.evidian.com/safekit/wp-content/themes/safekit/scripts/marketo-lead-post.php">
+    data-post-url="https://www.evidian.com/wp-content/themes/safekit/scripts/marketo-lead-post.php">
   </form>
 </div>
 <p id="contactMarketoSubmitError" class="contact-marketo-error" role="alert" aria-live="polite" hidden></p>
