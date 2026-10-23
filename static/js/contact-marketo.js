@@ -48,6 +48,8 @@
 
   function browserLanguage() {
     var code = (navigator.language || "en-US").toLowerCase();
+    if (code.indexOf("ar") === 0) return "AR";
+    if (code.indexOf("ko") === 0) return "KO";
     if (code.indexOf("fr") === 0) return "French";
     if (code === "es" || code === "es-es") return "European Spanish";
     if (code.indexOf("es-") === 0) return "Latin American Spanish";
@@ -55,6 +57,7 @@
     if (code.indexOf("it") === 0) return "Italian";
     if (code.indexOf("nl") === 0) return "Dutch";
     if (code === "pt-br") return "Brazilian Portuguese";
+    if (code === "pt" || code === "pt-pt") return "PT-PT";
     if (code === "en-gb") return "English GB";
     return "English US";
   }
@@ -120,11 +123,24 @@
     if (!formApi || typeof languageTranslations === "undefined") return;
     currentTranslations = languageTranslations[currentLanguage()];
     if (!currentTranslations) return;
+    formApi.getFormElem()[0].dir = currentLanguage() === "AR" ? "rtl" : "ltr";
     Object.keys(formApi.vals()).forEach(function (fieldName) {
+      if (fieldName === "preferredLanguage") return;
       var fieldTranslation = currentTranslations[fieldName];
       if (!fieldTranslation) return;
       var label = document.getElementById("Lbl" + fieldName);
       if (label && fieldTranslation.label) label.innerHTML = fieldTranslation.label;
+      if (fieldTranslation.type === "radio" && Array.isArray(fieldTranslation.options)) {
+        Array.prototype.forEach.call(formApi.getFormElem()[0].querySelectorAll('input[type="radio"]'), function (input) {
+          if (input.name !== fieldName) return;
+          var translated = fieldTranslation.options.find(function (item) { return item.value === input.value; });
+          if (!translated) return;
+          Array.prototype.forEach.call(input.labels || [], function (optionLabel) {
+            if (!optionLabel.contains(input)) optionLabel.textContent = translated.text;
+          });
+        });
+        return;
+      }
       if (fieldTranslation.type !== "select" || !Array.isArray(fieldTranslation.options)) return;
       var select = document.getElementById(fieldName);
       if (!select) return;
@@ -185,14 +201,8 @@
       reCAPTCHALastUserFingerprint: recaptchaResponse
     };
     Object.keys(fields).forEach(function (key) { payload.set(key, fields[key]); });
-    var requestDetails = ["POST " + config.postUrl, ""];
-    payload.forEach(function (value, key) {
-      requestDetails.push(key + " = " + value);
-    });
-    window.alert(requestDetails.join("\n"));
     var controller = new AbortController();
     var timeout = window.setTimeout(function () { controller.abort(); }, 10000);
-    var responseReported = false;
     return fetch(config.postUrl, {
       method: "POST",
       credentials: "same-origin",
@@ -200,16 +210,7 @@
       body: payload.toString(),
       signal: controller.signal
     }).then(function (response) {
-      return response.text().then(function (body) {
-        window.clearTimeout(timeout);
-        responseReported = true;
-        window.alert("POST " + config.postUrl + "\nHTTP " + response.status + " " + response.statusText + "\n\n" + (body || "(Reponse vide)"));
-        if (!response.ok) throw new Error("Lead post failed with HTTP " + response.status);
-      });
-    }).catch(function (error) {
-      window.clearTimeout(timeout);
-      if (!responseReported) window.alert("Erreur du POST " + config.postUrl + "\n" + error.message);
-      throw error;
+      if (!response.ok) throw new Error("Lead post failed with HTTP " + response.status);
     }).finally(function () { window.clearTimeout(timeout); });
   }
 
@@ -227,6 +228,14 @@
   }
 
   function applyShortcodeSettings(form) {
+    var languageField = form.getFormElem()[0].querySelector('select[name="preferredLanguage"]');
+    if (languageField) {
+      ["Japanese", "ZH-HANS", "Spanish", "AR", "PT-PT", "KO"].forEach(function (language) {
+        var existing = Array.prototype.find.call(languageField.options, function (option) { return option.value === language; });
+        if (!existing) languageField.add(new Option(language, language));
+        else if (language === "ZH-HANS") existing.text = language;
+      });
+    }
     var values = {
       preferredLanguage: config.preferredLanguage,
       interestedIn: config.interestedIn,
@@ -236,12 +245,15 @@
     if (config.enquiryType) values.enquiryType = config.enquiryType;
     if (config.country) values.Country = config.country;
     form.vals(values);
+    var appliedValues = form.vals();
     var hidden = { lastFormReferrer: document.location.href };
     if (config.myCampaign) hidden.programMemberField01 = config.myCampaign;
     form.addHiddenFields(hidden);
     if (config.display === "none") {
-      ["preferredLanguage", "enquiryType", "interestedIn", "SF_Job_Title__c", "customerIndustry"].forEach(hideFieldRow);
-      if (config.country === "Costa Rica") hideFieldRow("Country");
+      ["preferredLanguage", "enquiryType", "interestedIn", "SF_Job_Title__c", "customerIndustry"].forEach(function (fieldName) {
+        if (values[fieldName] && appliedValues[fieldName] === values[fieldName]) hideFieldRow(fieldName);
+      });
+      if (config.country === "Costa Rica" && appliedValues.Country === config.country) hideFieldRow("Country");
     }
     if (config.display !== "all" && config.display !== "hidden" && config.displaySalutation === "false") hideFieldRow("Salutation");
   }

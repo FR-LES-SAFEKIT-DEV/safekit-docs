@@ -25,6 +25,343 @@ const catchGermanLanguageCodes = (navLang) => {
 };
 
 const languageTranslations = {
+    "ZH-HANS": {
+        "FirstName": { "type": "text", "label": "名字 *", "requiredError": "此字段为必填项" },
+        "LastName": { "type": "text", "label": "姓氏 *", "requiredError": "此字段为必填项" },
+        "Email": { "type": "email", "label": "工作电子邮箱 *", "requiredError": "请输入有效的电子邮箱地址" },
+        "Phone": { "type": "telephone", "label": "工作电话 *", "requiredError": "请输入有效的电话号码" },
+        "Company": { "type": "text", "label": "公司或组织名称 *", "requiredError": "此字段为必填项" },
+        "Country": {
+            "type": "select",
+            "label": "国家或地区 *",
+            "options": [
+                { "value": "", "text": "请选择" },
+                { "value": "Afghanistan", "text": "阿富汗" },
+                { "value": "Aland Islands", "text": "奥兰群岛" },
+                { "value": "Albania", "text": "阿尔巴尼亚" },
+                { "value": "Algeria", "text": "阿尔及利亚" },
+                { "value": "Andorra", "text": "安道尔" },
+                { "value": "Angola", "text": "安哥拉" },
+                { "value": "Anguilla", "text": "安圭拉" },
+                { "value": "Antarctica", "text": "南极洲" },
+                { "value": "Antigua and Barbuda", "text": "安提瓜和巴布达" },
+                { "value": "Argentina", "text": "阿根廷" },
+                { "value": "Armenia", "text": "亚美尼亚" },
+                { "value": "Aruba", "text": "阿鲁巴" },
+                { "value": "Australia", "text": "澳大利亚" },
+                { "value": "Austria", "text": "奥地利" },
+                { "value": "Azerbaijan", "text": "阿塞拜疆" },
+                { "value": "Bahamas", "text": "巴哈马" },
+                { "value": "Bahrain", "text": "巴林" },
+                { "value": "Bangladesh", "text": "孟加拉国" },
+                { "value": "Barbados", "text": "巴巴多斯" },
+                { "value": "BelarusBelarus", "text": "白俄罗斯" },
+                { "value": "Belgium", "text": "比利时" },
+                { "value": "Belize", "text": "伯利兹" },
+                { "value": "Benin", "text": "贝宁" },
+                { "value": "Bermuda", "text": "百慕大" },
+                { "value": "Bhutan", "text": "不丹" },
+                { "value": "Bolivia, Plurinational State of", "text": "玻利维亚" },
+                { "value": "Bonaire, Sint Eustatius and Saba", "text": "博奈尔、圣尤斯特歇斯和萨巴" },
+                { "value": "Bosnia and Herzegovina", "text": "波斯尼亚和黑塞哥维那" },
+                { "value": "Botswana", "text": "博茨瓦纳" },
+                { "value": "Brazil", "text": "巴西" },
+                { "value": "British Indian Ocean Territory", "text": "英属印度洋领地" },
+                { "value": "British Virgin Islands", "text": "英属维尔京群岛" },
+                { "value": "Brunei Darussalam", "text": "文莱" },
+                { "value": "Bulgaria", "text": "保加利亚" },
+                { "value": "Burkina Faso", "text": "布基纳法索" },
+                { "value": "Burundi", "text": "布隆迪" },
+                { "value": "Cambodia", "text": "柬埔寨" },
+                { "value": "Cameroon", "text": "喀麦隆" },
+                { "value": "Canada", "text": "加拿大" },
+                { "value": "Cape Verde", "text": "佛得角" },
+                { "value": "Cayman Islands", "text": "开曼群岛" },
+                { "value": "Central African Republic", "text": "中非共和国" },
+                { "value": "Chad", "text": "乍得" },
+                { "value": "Chile", "text": "智利" },
+                { "value": "China", "text": "中国" },
+                { "value": "Christmas Island", "text": "圣诞岛" },
+                { "value": "Cocos (Keeling) Islands", "text": "科科斯（基林）群岛" },
+                { "value": "Colombia", "text": "哥伦比亚" },
+                { "value": "Comoros", "text": "科摩罗" },
+                { "value": "Congo", "text": "刚果共和国" },
+                { "value": "Congo, the Democratic Republic of the", "text": "刚果民主共和国" },
+                { "value": "Cook Islands", "text": "库克群岛" },
+                { "value": "Costa Rica", "text": "哥斯达黎加" },
+                { "value": "Cote d'Ivoire", "text": "科特迪瓦" },
+                { "value": "Crimea Region", "text": "克里米亚地区" },
+                { "value": "Croatia", "text": "克罗地亚" },
+                { "value": "Cuba", "text": "古巴" },
+                { "value": "Curaçao", "text": "库拉索" },
+                { "value": "Cyprus", "text": "塞浦路斯" },
+                { "value": "Czech Republic", "text": "捷克" },
+                { "value": "Denmark", "text": "丹麦" },
+                { "value": "Djibouti", "text": "吉布提" },
+                { "value": "Dominica", "text": "多米尼克" },
+                { "value": "Dominican Republic", "text": "多米尼加共和国" },
+                { "value": "Ecuador", "text": "厄瓜多尔" },
+                { "value": "Egypt", "text": "埃及" },
+                { "value": "El Salvador", "text": "萨尔瓦多" },
+                { "value": "Equatorial Guinea", "text": "赤道几内亚" },
+                { "value": "Eritrea", "text": "厄立特里亚" },
+                { "value": "Estonia", "text": "爱沙尼亚" },
+                { "value": "Ethiopia", "text": "埃塞俄比亚" },
+                { "value": "Falkland Islands (Malvinas)", "text": "福克兰群岛（马尔维纳斯群岛）" },
+                { "value": "Faroe Islands", "text": "法罗群岛" },
+                { "value": "Fiji", "text": "斐济" },
+                { "value": "Finland", "text": "芬兰" },
+                { "value": "France", "text": "法国" },
+                { "value": "French Guiana", "text": "法属圭亚那" },
+                { "value": "French Polynesia", "text": "法属波利尼西亚" },
+                { "value": "French Southern Territories", "text": "法属南部领地" },
+                { "value": "Gabon", "text": "加蓬" },
+                { "value": "Gambia", "text": "冈比亚" },
+                { "value": "Georgia", "text": "格鲁吉亚" },
+                { "value": "Germany", "text": "德国" },
+                { "value": "Ghana", "text": "加纳" },
+                { "value": "Gibraltar", "text": "直布罗陀" },
+                { "value": "Greece", "text": "希腊" },
+                { "value": "Greenland", "text": "格陵兰" },
+                { "value": "Grenada", "text": "格林纳达" },
+                { "value": "Guadeloupe", "text": "瓜德罗普" },
+                { "value": "Guam", "text": "关岛" },
+                { "value": "Guatemala", "text": "危地马拉" },
+                { "value": "Guernsey", "text": "根西岛" },
+                { "value": "Guinea", "text": "几内亚" },
+                { "value": "Guinea-Bissau", "text": "几内亚比绍" },
+                { "value": "Guyana", "text": "圭亚那" },
+                { "value": "Haiti", "text": "海地" },
+                { "value": "Heard Island and McDonald Islands", "text": "赫德岛和麦克唐纳群岛" },
+                { "value": "Holy See (Vatican City State)", "text": "梵蒂冈" },
+                { "value": "Honduras", "text": "洪都拉斯" },
+                { "value": "Hong Kong S.A.R., China", "text": "中国香港特别行政区" },
+                { "value": "Hungary", "text": "匈牙利" },
+                { "value": "Iceland", "text": "冰岛" },
+                { "value": "India", "text": "印度" },
+                { "value": "Indonesia", "text": "印度尼西亚" },
+                { "value": "Iran, Islamic Republic of", "text": "伊朗" },
+                { "value": "Iraq", "text": "伊拉克" },
+                { "value": "Ireland", "text": "爱尔兰" },
+                { "value": "Isle of Man", "text": "马恩岛" },
+                { "value": "Israel", "text": "以色列" },
+                { "value": "Italy", "text": "意大利" },
+                { "value": "Jamaica", "text": "牙买加" },
+                { "value": "Japan", "text": "日本" },
+                { "value": "Jersey", "text": "泽西岛" },
+                { "value": "Jordan", "text": "约旦" },
+                { "value": "Kazakhstan", "text": "哈萨克斯坦" },
+                { "value": "Kenya", "text": "肯尼亚" },
+                { "value": "Kiribati", "text": "基里巴斯" },
+                { "value": "Korea, Democratic People's Republic of", "text": "朝鲜" },
+                { "value": "Korea, Republic of", "text": "韩国" },
+                { "value": "Kuwait", "text": "科威特" },
+                { "value": "Kyrgyzstan", "text": "吉尔吉斯斯坦" },
+                { "value": "Lao People's Democratic Republic", "text": "老挝" },
+                { "value": "Latvia", "text": "拉脱维亚" },
+                { "value": "Lebanon", "text": "黎巴嫩" },
+                { "value": "Lesotho", "text": "莱索托" },
+                { "value": "Liberia", "text": "利比里亚" },
+                { "value": "Libyan Arab Jamahiriya", "text": "利比亚" },
+                { "value": "Liechtenstein", "text": "列支敦士登" },
+                { "value": "Lithuania", "text": "立陶宛" },
+                { "value": "Luxembourg", "text": "卢森堡" },
+                { "value": "Macao S.A.R., China", "text": "中国澳门特别行政区" },
+                { "value": "Macedonia, the former Yugoslav Republic of", "text": "北马其顿" },
+                { "value": "Madagascar", "text": "马达加斯加" },
+                { "value": "Malawi", "text": "马拉维" },
+                { "value": "Malaysia", "text": "马来西亚" },
+                { "value": "Maldives", "text": "马尔代夫" },
+                { "value": "Mali", "text": "马里" },
+                { "value": "Malta", "text": "马耳他" },
+                { "value": "Marshall Islands", "text": "马绍尔群岛" },
+                { "value": "Martinique", "text": "马提尼克" },
+                { "value": "Mauritania", "text": "毛里塔尼亚" },
+                { "value": "Mauritius", "text": "毛里求斯" },
+                { "value": "Mayotte", "text": "马约特" },
+                { "value": "Mexico", "text": "墨西哥" },
+                { "value": "Micronesia, Federated States of", "text": "密克罗尼西亚联邦" },
+                { "value": "Moldova, Republic of", "text": "摩尔多瓦" },
+                { "value": "Monaco", "text": "摩纳哥" },
+                { "value": "Mongolia", "text": "蒙古" },
+                { "value": "Montenegro", "text": "黑山" },
+                { "value": "Montserrat", "text": "蒙特塞拉特" },
+                { "value": "Morocco", "text": "摩洛哥" },
+                { "value": "Mozambique", "text": "莫桑比克" },
+                { "value": "Myanmar", "text": "缅甸" },
+                { "value": "N.Mariana Islnd", "text": "北马里亚纳群岛" },
+                { "value": "Namibia", "text": "纳米比亚" },
+                { "value": "Nauru", "text": "瑙鲁" },
+                { "value": "Nepal", "text": "尼泊尔" },
+                { "value": "Netherlands", "text": "荷兰" },
+                { "value": "Netherlands Antilles", "text": "荷属安的列斯群岛" },
+                { "value": "New Caledonia", "text": "新喀里多尼亚" },
+                { "value": "New Zealand", "text": "新西兰" },
+                { "value": "Nicaragua", "text": "尼加拉瓜" },
+                { "value": "Niger", "text": "尼日尔" },
+                { "value": "Nigeria", "text": "尼日利亚" },
+                { "value": "Niue", "text": "纽埃" },
+                { "value": "Norfolk Island", "text": "诺福克岛" },
+                { "value": "North Korea", "text": "朝鲜" },
+                { "value": "Norway", "text": "挪威" },
+                { "value": "Oman", "text": "阿曼" },
+                { "value": "Pakistan", "text": "巴基斯坦" },
+                { "value": "Palau", "text": "帕劳" },
+                { "value": "Palestinian Territory, Occupied", "text": "巴勒斯坦被占领土" },
+                { "value": "Panama", "text": "巴拿马" },
+                { "value": "Papua New Guinea", "text": "巴布亚新几内亚" },
+                { "value": "Paraguay", "text": "巴拉圭" },
+                { "value": "Peru", "text": "秘鲁" },
+                { "value": "Philippines", "text": "菲律宾" },
+                { "value": "Pitcairn", "text": "皮特凯恩群岛" },
+                { "value": "Poland", "text": "波兰" },
+                { "value": "Portugal", "text": "葡萄牙" },
+                { "value": "Puerto Rico", "text": "波多黎各" },
+                { "value": "Qatar", "text": "卡塔尔" },
+                { "value": "Reunion", "text": "留尼汪" },
+                { "value": "Romania", "text": "罗马尼亚" },
+                { "value": "Russian Federation", "text": "俄罗斯" },
+                { "value": "Rwanda", "text": "卢旺达" },
+                { "value": "Saint Barthélemy", "text": "圣巴泰勒米" },
+                { "value": "Saint Helena, Ascension and Tristan da Cunha", "text": "圣赫勒拿、阿森松和特里斯坦达库尼亚" },
+                { "value": "Saint Kitts and Nevis", "text": "圣基茨和尼维斯" },
+                { "value": "Saint Lucia", "text": "圣卢西亚" },
+                { "value": "Saint Martin (French part)", "text": "法属圣马丁" },
+                { "value": "Saint Pierre and Miquelon", "text": "圣皮埃尔和密克隆" },
+                { "value": "Saint Vincent and the Grenadines", "text": "圣文森特和格林纳丁斯" },
+                { "value": "Samoa", "text": "萨摩亚" },
+                { "value": "Samoa, American", "text": "美属萨摩亚" },
+                { "value": "San Marino", "text": "圣马力诺" },
+                { "value": "Sao Tome and Principe", "text": "圣多美和普林西比" },
+                { "value": "Saudi Arabia", "text": "沙特阿拉伯" },
+                { "value": "Senegal", "text": "塞内加尔" },
+                { "value": "Serbia", "text": "塞尔维亚" },
+                { "value": "Seychelles", "text": "塞舌尔" },
+                { "value": "Sierra Leone", "text": "塞拉利昂" },
+                { "value": "Singapore", "text": "新加坡" },
+                { "value": "Sint Maarten (Dutch part)", "text": "荷属圣马丁" },
+                { "value": "Slovakia", "text": "斯洛伐克" },
+                { "value": "Slovenia", "text": "斯洛文尼亚" },
+                { "value": "Solomon Islands", "text": "所罗门群岛" },
+                { "value": "Somalia", "text": "索马里" },
+                { "value": "South Africa", "text": "南非" },
+                { "value": "South Georgia and the South Sandwich Islands", "text": "南乔治亚和南桑威奇群岛" },
+                { "value": "South Sudan", "text": "南苏丹" },
+                { "value": "Spain", "text": "西班牙" },
+                { "value": "Sri Lanka", "text": "斯里兰卡" },
+                { "value": "Sudan", "text": "苏丹" },
+                { "value": "Suriname", "text": "苏里南" },
+                { "value": "Svalbard and Jan Mayen", "text": "斯瓦尔巴和扬马延" },
+                { "value": "Swaziland", "text": "斯威士兰" },
+                { "value": "Sweden", "text": "瑞典" },
+                { "value": "Switzerland", "text": "瑞士" },
+                { "value": "Syrian Arab Republic", "text": "叙利亚" },
+                { "value": "Taiwan", "text": "台湾" },
+                { "value": "Tajikistan", "text": "塔吉克斯坦" },
+                { "value": "Tanzania, United Republic of", "text": "坦桑尼亚" },
+                { "value": "Thailand", "text": "泰国" },
+                { "value": "Timor-Leste", "text": "东帝汶" },
+                { "value": "Togo", "text": "多哥" },
+                { "value": "Tokelau", "text": "托克劳" },
+                { "value": "Tonga", "text": "汤加" },
+                { "value": "Trinidad and Tobago", "text": "特立尼达和多巴哥" },
+                { "value": "Tunisia", "text": "突尼斯" },
+                { "value": "Turkey", "text": "土耳其" },
+                { "value": "Turkmenistan", "text": "土库曼斯坦" },
+                { "value": "Turks and Caicos Islands", "text": "特克斯和凯科斯群岛" },
+                { "value": "Tuvalu", "text": "图瓦卢" },
+                { "value": "Uganda", "text": "乌干达" },
+                { "value": "Ukraine", "text": "乌克兰" },
+                { "value": "United Arab Emirates", "text": "阿拉伯联合酋长国" },
+                { "value": "United Kingdom", "text": "英国" },
+                { "value": "United States", "text": "美国" },
+                { "value": "Uruguay", "text": "乌拉圭" },
+                { "value": "US Minor Outl.Isl.", "text": "美国本土外小岛屿" },
+                { "value": "Uzbekistan", "text": "乌兹别克斯坦" },
+                { "value": "Vanuatu", "text": "瓦努阿图" },
+                { "value": "Venezuela, Bolivarian Republic of", "text": "委内瑞拉" },
+                { "value": "Vietnam", "text": "越南" },
+                { "value": "Virgin Islands, British", "text": "英属维尔京群岛" },
+                { "value": "Virgin Islands, US", "text": "美属维尔京群岛" },
+                { "value": "Wallis and Futuna", "text": "瓦利斯和富图纳" },
+                { "value": "Western Sahara", "text": "西撒哈拉" },
+                { "value": "Yemen", "text": "也门" },
+                { "value": "Zambia", "text": "赞比亚" },
+                { "value": "Zimbabwe", "text": "津巴布韦" }
+            ],
+            "requiredError": "请选择国家或地区"
+        },
+        "SF_Job_Title__c": { "type": "text", "label": "职位名称" },
+        "interestedIn": {
+            "type": "select",
+            "label": "您感兴趣的产品 *",
+            "options": [
+                { "value": "", "text": "请选择" },
+                { "value": "IAM solution", "text": "身份与访问管理（IAM）解决方案" },
+                { "value": "SSO Single Sign-on", "text": "单点登录（SSO）" },
+                { "value": "Strong Authentication Management", "text": "强身份验证管理" },
+                { "value": "Identity Governance and Administration", "text": "身份治理与管理" },
+                { "value": "Web Access Manager", "text": "Web 访问管理" },
+                { "value": "Identity As-a-Service", "text": "Orbion（身份即服务）" },
+                { "value": "High Availability", "text": "高可用性（SafeKit）" },
+                { "value": "Identity Analytics Intelligence", "text": "身份智能分析" },
+                { "value": "DirX", "text": "DirX" },
+                { "value": "Other", "text": "其他" }
+            ],
+            "requiredError": "请选择您感兴趣的产品"
+        },
+        "enquiryType": {
+            "type": "select",
+            "label": "咨询类型 *",
+            "options": [
+                { "value": "", "text": "请选择" },
+                { "value": "Product Information", "text": "产品信息" },
+                { "value": "Price Quote", "text": "报价" },
+                { "value": "Demo", "text": "产品演示" },
+                { "value": "Free trial package", "text": "免费试用" },
+                { "value": "Free trial license", "text": "概念验证（POC）" },
+                { "value": "Training & Certification", "text": "培训与认证" },
+                { "value": "New Solution or Services for Your Business", "text": "适合您企业的新解决方案或服务" },
+                { "value": "Product/Customer Support (current Eviden clients only)", "text": "产品与客户支持（仅限现有 Eviden 客户）" },
+                { "value": "Accounting, Billing or Payments", "text": "会计、账单或付款" },
+                { "value": "Job Information", "text": "招聘信息" },
+                { "value": "Press Inquiry", "text": "媒体咨询" },
+                { "value": "Selling to Eviden", "text": "向 Eviden 提供产品或服务" },
+                { "value": "Alliance/Partnership Matters", "text": "联盟与合作事宜" },
+                { "value": "Other", "text": "其他" }
+            ],
+            "requiredError": "请选择咨询类型"
+        },
+        "enquiry": { "type": "text", "label": "咨询内容" },
+        "Opt_in__c": {
+            "type": "radio",
+            "label": "同意接收信息 *",
+            "options": [
+                { "value": "yes", "text": "是" },
+                { "value": "no", "text": "否" }
+            ],
+            "requiredError": "请选择是否同意接收信息"
+        },
+        "PrivacyText": [
+            { "value": "GDPR", "text": "我们重视您的隐私。您所在的国家或地区根据 GDPR 赋予您相关权利。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利，以及如何在您希望时删除您的数据。" },
+            { "value": "DPA", "text": "我们重视您的隐私。您所在的国家或地区根据 DPA 赋予您相关权利。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利，以及如何在您希望时删除您的数据。" },
+            { "value": "CCPA", "text": "我们重视您的隐私。您所在的国家或地区根据 CCPA/CPRA 赋予您相关权利。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利，以及如何在您希望时删除您的数据。" },
+            { "value": "CASL", "text": "我们重视您的隐私。您所在的国家或地区根据 CASL 赋予您相关权利。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利，以及如何在您希望时删除您的数据。" },
+            { "value": "LGDP", "text": "我们重视您的隐私。您所在的国家或地区根据 LGPD 赋予您相关权利。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利，以及如何在您希望时删除您的数据。" },
+            { "value": "POPIA", "text": "我们重视您的隐私。您所在的国家或地区根据 POPIA 赋予您相关权利。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利，以及如何在您希望时删除您的数据。" },
+            { "value": "LFPDPPP", "text": "我们重视您的隐私。您所在的国家或地区根据 LFPDPPP 赋予您相关权利。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利，以及如何在您希望时删除您的数据。" },
+            { "value": "none", "text": "我们重视您的隐私。提交此表单即表示您接受我们隐私政策中的条款。请阅读该政策，了解我们如何保障您的权利。" }
+        ],
+        "OptInText": [
+            { "value": "GDPRandDefault", "text": "*为确保您收到有关 Eviden 活动和产品服务的相关信息，请选择同意接收。您可以随时取消订阅。" },
+            { "value": "CCPA", "text": "在此表单中提供您的信息，即表示您同意我们按照隐私政策向您发送有关 Eviden 活动和产品服务的信息。您可以随时取消订阅。" }
+        ],
+        "Submit": { "type": "submit", "text": "提交" },
+        "ThankYouEmptyDataContent": "感谢您的关注。",
+        "ThankYouDataContent": "感谢您关注",
+        "DownloadLinkText": "您可以在此下载报告。",
+        "ContactTYText": "我们的团队成员将尽快与您联系。"
+    },
     "Japanese": {
         "preferredLanguage" : {
             "type": "select",
@@ -2321,11 +2658,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Identity Governance and Administration",
-                 "text": "Identity Governance and Administration（ID・アクセス管理）"
+                 "text": "アイデンティティのガバナンスと管理"
                 },
                 {
                  "value": "Web Access Manager",
-                 "text": "Web Access Manager"
+                 "text": "Webアクセス管理"
                 },
                 {
                  "value": "Identity As-a-Service",
@@ -2337,7 +2674,7 @@ const languageTranslations = {
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Identity Analytics Intelligence（アイデンティティ分析とインテリジェンス）"
+                 "text": "アイデンティティのインテリジェント分析"
                 },
                 {
                  "value": "DirX",
@@ -2467,7 +2804,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "オプトイン * ",
+            "label": "情報配信への同意 *",
             "options": [
                 {
                     "value": "yes",
@@ -2511,14 +2848,14 @@ const languageTranslations = {
             },
             {
              "value": "none",
-             "text": "あなたのプライバシーは弊社にとって重要です。 このフォームを送信することにより、プライバシーポリシーの条件に同意いただいたことになります。 権利がどのように守られているか、そしてご希望の場合のデータ削除方法を理解していただくためにプライバシーポリシーをお読みください。"
+             "text": "お客様のプライバシーは弊社にとって重要です。このフォームを送信することにより、弊社の<a href='https://eviden.com/privacy-policy/' target='_blank' rel='noopener noreferrer'>プライバシーポリシー</a>の条件に同意したものとみなされます。お客様の権利がどのように守られているかをご理解いただくため、プライバシーポリシーをお読みください。"
             }
            ],
         
         "OptInText" : [
             {
                 "value": "GDPRandDefault",
-                "text": "*Evidianからイベントやオファリングに関連する適切な連絡を確実に受け取れるように、オプトインしてください。いつでもオプトアウトできます。 "
+                "text": "*Evidenからイベントやオファリングに関連する適切な連絡を確実に受け取れるように、オプトインしてください。いつでもオプトアウトできます。 "
             },
             {
                 "value": "CCPA",
@@ -9849,7 +10186,7 @@ const languageTranslations = {
                 },
                 {
                  "value": "Identity As-a-Service",
-                 "text": "Orbion (Identity As-a-Service)"
+                 "text": "Orbion (identité en tant que service)"
                 },
                 {
                  "value": "High Availability",
@@ -9857,7 +10194,7 @@ const languageTranslations = {
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Analyse d'identité &amp; Intelligence"
+                 "text": "Analyse intelligente des identités"
                 },
                 {
                  "value": "DirX",
@@ -9987,7 +10324,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "Opt-in *",
+            "label": "Consentement aux communications *",
             "options": [
                 {
                     "value": "yes", 
@@ -12342,35 +12679,35 @@ const languageTranslations = {
                 },
                 {
                  "value": "IAM solution",
-                 "text": "IAM solution"
+                 "text": "Soluzione di gestione delle identità e degli accessi (IAM)"
                 },
                 {
                  "value": "SSO Single Sign-on",
-                 "text": "SSO Single Sign-on"
+                 "text": "Accesso unico (SSO)"
                 },
                 {
                  "value": "Strong Authentication Management",
-                 "text": "Strong Authentication Management"
+                 "text": "Gestione dell'autenticazione forte"
                 },
                 {
                  "value": "Identity Governance and Administration",
-                 "text": "Identity Governance and Administration"
+                 "text": "Governance e amministrazione delle identità"
                 },
                 {
                  "value": "Web Access Manager",
-                 "text": "Web Access Manager"
+                 "text": "Gestione degli accessi Web"
                 },
                 {
                  "value": "Identity As-a-Service",
-                 "text": "Orbion (Identity As-a-Service)"
+                 "text": "Orbion (identità come servizio)"
                 },
                 {
                  "value": "High Availability",
-                 "text": "High Availability (SafeKit)"
+                 "text": "Alta disponibilità (SafeKit)"
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Identity Analytics Intelligence"
+                 "text": "Analisi intelligente delle identità"
                 },
                 {
                  "value": "DirX",
@@ -12500,7 +12837,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "Opt-in *",
+            "label": "Consenso alle comunicazioni *",
             "options": [
                 {
                     "value": "yes", 
@@ -14832,35 +15169,35 @@ const languageTranslations = {
                 },
                 {
                  "value": "IAM solution",
-                 "text": "IAM solution"
+                 "text": "Identitäts- und Zugriffsmanagement (IAM)"
                 },
                 {
                  "value": "SSO Single Sign-on",
-                 "text": "SSO Single Sign-on"
+                 "text": "Einmalanmeldung (SSO)"
                 },
                 {
                  "value": "Strong Authentication Management",
-                 "text": "Strong Authentication Management"
+                 "text": "Verwaltung starker Authentifizierung"
                 },
                 {
                  "value": "Identity Governance and Administration",
-                 "text": "Identity Governance and Administration"
+                 "text": "Identitätsgovernance und -verwaltung"
                 },
                 {
                  "value": "Web Access Manager",
-                 "text": "Web Access Manager"
+                 "text": "Web-Zugriffsverwaltung"
                 },
                 {
                  "value": "Identity As-a-Service",
-                 "text": "Orbion (Identity As-a-Service)"
+                 "text": "Orbion (Identität als Dienst)"
                 },
                 {
                  "value": "High Availability",
-                 "text": "High Availability (SafeKit)"
+                 "text": "Hochverfügbarkeit (SafeKit)"
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Identity Analytics Intelligence"
+                 "text": "Intelligente Identitätsanalyse"
                 },
                 {
                  "value": "DirX",
@@ -14990,7 +15327,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "Opt-in *",
+            "label": "Einwilligung zum Erhalt von Mitteilungen *",
             "options": [
                 {
                     "value": "yes", 
@@ -17328,7 +17665,7 @@ const languageTranslations = {
         },
         "interestedIn" : {
             "type": "select",
-            "label": "Prodotto *",
+            "label": "Producto *",
             "options": [
                 {
                  "value": "",
@@ -17336,35 +17673,35 @@ const languageTranslations = {
                 },
                 {
                  "value": "IAM solution",
-                 "text": "IAM solution"
+                 "text": "Solución de gestión de identidades y accesos (IAM)"
                 },
                 {
                  "value": "SSO Single Sign-on",
-                 "text": "SSO Single Sign-on"
+                 "text": "Inicio de sesión único (SSO)"
                 },
                 {
                  "value": "Strong Authentication Management",
-                 "text": "Strong Authentication Management"
+                 "text": "Gestión de autenticación fuerte"
                 },
                 {
                  "value": "Identity Governance and Administration",
-                 "text": "Identity Governance and Administration"
+                 "text": "Gobierno y administración de identidades"
                 },
                 {
                  "value": "Web Access Manager",
-                 "text": "Web Access Manager"
+                 "text": "Gestión de acceso web"
                 },
                 {
                  "value": "Identity As-a-Service",
-                 "text": "Orbion (Identity As-a-Service)"
+                 "text": "Orbion (identidad como servicio)"
                 },
                 {
                  "value": "High Availability",
-                 "text": "High Availability (SafeKit)"
+                 "text": "Alta disponibilidad (SafeKit)"
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Identity Analytics Intelligence"
+                 "text": "Análisis inteligente de identidades"
                 },
                 {
                  "value": "DirX",
@@ -17498,7 +17835,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "Opt-in *",
+            "label": "Consentimiento para recibir comunicaciones *",
             "options": [
                 {
                     "value": "yes", 
@@ -19846,35 +20183,35 @@ const languageTranslations = {
                 },
                 {
                  "value": "IAM solution",
-                 "text": "IAM solution"
+                 "text": "Solución de gestión de identidades y accesos (IAM)"
                 },
                 {
                  "value": "SSO Single Sign-on",
-                 "text": "SSO Single Sign-on"
+                 "text": "Inicio de sesión único (SSO)"
                 },
                 {
                  "value": "Strong Authentication Management",
-                 "text": "Strong Authentication Management"
+                 "text": "Gestión de autenticación fuerte"
                 },
                 {
                  "value": "Identity Governance and Administration",
-                 "text": "Identity Governance and Administration"
+                 "text": "Gobierno y administración de identidades"
                 },
                 {
                  "value": "Web Access Manager",
-                 "text": "Web Access Manager"
+                 "text": "Gestión de acceso web"
                 },
                 {
                  "value": "Identity As-a-Service",
-                 "text": "Orbion (Identity As-a-Service)"
+                 "text": "Orbion (identidad como servicio)"
                 },
                 {
                  "value": "High Availability",
-                 "text": "High Availability (SafeKit)"
+                 "text": "Alta disponibilidad (SafeKit)"
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Identity Analytics Intelligence"
+                 "text": "Análisis inteligente de identidades"
                 },
                 {
                  "value": "DirX",
@@ -20000,7 +20337,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "Opt-in *",
+            "label": "Consentimiento para recibir comunicaciones *",
             "options": [
                 {
                     "value": "yes", 
@@ -20044,7 +20381,7 @@ const languageTranslations = {
             },
             {
              "value": "none",
-             "text": "Su privacidad es importante para nosotros. Al enviar este formulario, acepta los términos de nuestra Política de privacidad. Léalo para comprender cómo nos aseguramos de que se respeten sus derechos."
+             "text": "Su privacidad es importante para nosotros. Al enviar este formulario, acepta los términos de nuestra Política de privacidad. Léala para comprender cómo nos aseguramos de que se respeten sus derechos."
             }
            ],
         "OptInText" : [
@@ -22343,35 +22680,35 @@ const languageTranslations = {
                 },
                 {
                  "value": "IAM solution",
-                 "text": "IAM solution"
+                 "text": "Identiteits- en toegangsbeheer (IAM)"
                 },
                 {
                  "value": "SSO Single Sign-on",
-                 "text": "SSO Single Sign-on"
+                 "text": "Eenmalige aanmelding (SSO)"
                 },
                 {
                  "value": "Strong Authentication Management",
-                 "text": "Strong Authentication Management"
+                 "text": "Beheer van sterke authenticatie"
                 },
                 {
                  "value": "Identity Governance and Administration",
-                 "text": "Identity Governance and Administration"
+                 "text": "Identiteitsgovernance en -beheer"
                 },
                 {
                  "value": "Web Access Manager",
-                 "text": "Web Access Manager"
+                 "text": "Webtoegangsbeheer"
                 },
                 {
                  "value": "Identity As-a-Service",
-                 "text": "Orbion (Identity As-a-Service)"
+                 "text": "Orbion (identiteit als dienst)"
                 },
                 {
                  "value": "High Availability",
-                 "text": "High Availability (SafeKit)"
+                 "text": "Hoge beschikbaarheid (SafeKit)"
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Identity Analytics Intelligence"
+                 "text": "Intelligente identiteitsanalyse"
                 },
                 {
                  "value": "DirX",
@@ -22501,7 +22838,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "Opt-in *",
+            "label": "Toestemming voor communicatie *",
             "options": [
                 {
                     "value": "yes", 
@@ -24848,35 +25185,35 @@ const languageTranslations = {
                 },
                 {
                  "value": "IAM solution",
-                 "text": "IAM solution"
+                 "text": "Solução de gestão de identidades e acessos (IAM)"
                 },
                 {
                  "value": "SSO Single Sign-on",
-                 "text": "SSO Single Sign-on"
+                 "text": "Login único (SSO)"
                 },
                 {
                  "value": "Strong Authentication Management",
-                 "text": "Strong Authentication Management"
+                 "text": "Gestão de autenticação forte"
                 },
                 {
                  "value": "Identity Governance and Administration",
-                 "text": "Identity Governance and Administration"
+                 "text": "Governança e administração de identidades"
                 },
                 {
                  "value": "Web Access Manager",
-                 "text": "Web Access Manager"
+                 "text": "Gestão de acesso web"
                 },
                 {
                  "value": "Identity As-a-Service",
-                 "text": "Orbion (Identity As-a-Service)"
+                 "text": "Orbion (identidade como serviço)"
                 },
                 {
                  "value": "High Availability",
-                 "text": "High Availability (SafeKit)"
+                 "text": "Alta disponibilidade (SafeKit)"
                 },
                 {
                  "value": "Identity Analytics Intelligence",
-                 "text": "Identity Analytics Intelligence"
+                 "text": "Análise inteligente de identidades"
                 },
                 {
                  "value": "DirX",
@@ -25006,7 +25343,7 @@ const languageTranslations = {
         },
         "Opt_in__c" : {
             "type": "radio",
-            "label": "Opt-in *",
+            "label": "Consentimento para receber comunicações *",
             "options": [
                 {
                     "value": "yes", 
@@ -25074,3 +25411,296 @@ const languageTranslations = {
    },
     
 };
+
+    languageTranslations["Spanish"] = languageTranslations["European Spanish"];
+
+const additionalFormLanguages = {
+    "AR": {
+        "labels": {
+            "Salutation": "اللقب", "FirstName": "الاسم الأول *", "LastName": "اسم العائلة *",
+            "Email": "البريد الإلكتروني للعمل *", "customerIndustry": "القطاع *", "Phone": "هاتف العمل *",
+            "Company": "اسم الشركة أو المؤسسة *", "Company_Revenue__c": "إيرادات الشركة",
+            "Company_Size__c": "حجم الشركة", "Country": "البلد أو المنطقة *", "State": "الولاية *",
+            "JobFunction__c": "المجال الوظيفي", "SF_Job_Title__c": "المسمى الوظيفي",
+            "interestedIn": "المنتج *", "enquiryType": "نوع الاستفسار *", "enquiry": "الاستفسار",
+            "Purchase_Authority__c": "صلاحية الشراء", "Purchase_Timeline__c": "الإطار الزمني للشراء",
+            "Opt_in__c": "الموافقة على تلقي الرسائل *"
+        },
+        "required": "هذا الحقل مطلوب", "selectRequired": "يرجى اختيار قيمة لهذا الحقل",
+        "emailRequired": "يرجى إدخال عنوان بريد إلكتروني صالح", "phoneRequired": "يرجى إدخال رقم هاتف صالح",
+        "options": {
+            "Salutation": ["السيد", "السيدة المتزوجة", "السيدة", "الآنسة", "لقب محايد", "السيد الصغير", "السير", "الدكتور"],
+            "interestedIn": ["حل إدارة الهوية والوصول (IAM)", "تسجيل الدخول الموحد (SSO)", "إدارة المصادقة القوية", "حوكمة الهويات وإدارتها", "إدارة الوصول إلى الويب", "Orbion (الهوية كخدمة)", "التوافر العالي (SafeKit)", "التحليل الذكي للهويات", "DirX", "أخرى"],
+            "enquiryType": ["معلومات المنتج", "عرض سعر", "عرض توضيحي", "تجربة مجانية", "إثبات المفهوم (POC)", "التدريب والشهادات", "حلول أو خدمات جديدة لشركتك", "دعم المنتجات والعملاء (لعملاء Eviden الحاليين فقط)", "المحاسبة أو الفوترة أو المدفوعات", "معلومات الوظائف", "استفسار صحفي", "توريد منتجات أو خدمات إلى Eviden", "شؤون التحالفات والشراكات", "أخرى"],
+            "Company_Revenue__c": ["أقل من 200 مليون دولار", "من 201 إلى 500 مليون دولار", "من 501 مليون إلى مليار دولار", "أكثر من مليار دولار"],
+            "Company_Size__c": ["أقل من 3,000 موظف", "من 3,001 إلى 5,000 موظف", "من 5,001 إلى 10,000 موظف", "أكثر من 10,001 موظف"],
+            "Purchase_Authority__c": ["نعم", "لا"],
+            "Purchase_Timeline__c": ["أقل من 3 أشهر", "من 3 إلى 6 أشهر", "من 6 إلى 12 شهرًا", "أكثر من 12 شهرًا"],
+            "Opt_in__c": ["نعم", "لا"],
+            "State": [
+                "ألاباما", "ألاسكا", "أريزونا", "أركنساس", "كاليفورنيا", "كولورادو", "كونيتيكت", "ديلاوير", "فلوريدا", "جورجيا",
+                "هاواي", "أيداهو", "إلينوي", "إنديانا", "آيوا", "كانساس", "كنتاكي", "لويزيانا", "مين", "ماريلاند",
+                "ماساتشوستس", "ميشيغان", "مينيسوتا", "ميسيسيبي", "ميزوري", "مونتانا", "نبراسكا", "نيفادا", "نيوهامبشير", "نيوجيرسي",
+                "نيومكسيكو", "نيويورك", "كارولاينا الشمالية", "داكوتا الشمالية", "أوهايو", "أوكلاهوما", "أوريغون", "بنسلفانيا", "رود آيلاند", "كارولاينا الجنوبية",
+                "داكوتا الجنوبية", "تينيسي", "تكساس", "يوتا", "فيرمونت", "فرجينيا", "واشنطن", "فرجينيا الغربية", "ويسكونسن", "وايومنغ"
+            ],
+            "JobFunction__c": [
+                "محاسب أو مراقب مالي", "مدير حسابات", "مساعد", "مدير فرع", "رئيس مجلس الإدارة", "الرئيس التنفيذي للامتثال", "الرئيس التنفيذي للتحول الرقمي", "الرئيس التنفيذي", "الرئيس التنفيذي للشؤون المالية", "الرئيس التنفيذي للمعلومات",
+                "الرئيس التنفيذي للتسويق", "الرئيس التنفيذي للشؤون الطبية", "الرئيس التنفيذي للعمليات", "الرئيس التنفيذي للمشتريات", "الرئيس التنفيذي للمخاطر", "الرئيس التنفيذي للأمن", "الرئيس التنفيذي للتقنية", "المدير التجاري", "مستشار", "تجربة العملاء",
+                "خدمة العملاء", "التحول الرقمي", "المدير العام", "مدير في مجال آخر", "مديرون آخرون", "مدير التوزيع", "المدير المالي", "مدير إدارة الموارد البشرية", "مدير الموارد البشرية", "إدارة تطبيقات تقنية المعلومات",
+                "استشارات تقنية المعلومات", "مدير إدارة تقنية المعلومات", "مدير تقنية المعلومات", "عمليات تقنية المعلومات", "استراتيجية تقنية المعلومات", "تكامل أنظمة تقنية المعلومات", "مناصب إدارية أخرى", "المدير المنتدب", "الشريك المدير", "مدير الاتصالات التسويقية",
+                "مدير التسويق", "عضو مجلس الإدارة", "عضو مجلس الرقابة", "وزير", "وزير دولة", "التمريض", "مدير العمليات", "أخرى", "مساعد شخصي", "رئيس مجلس الإدارة",
+                "رئيس مجلس الرقابة", "الصحافة", "المشتريات", "مدير العلاقات العامة", "مدير العلاقات العامة", "مدير إدارة المبيعات", "مدير المبيعات", "سكرتير", "أمين دولة", "مشرف",
+                "نائب الرئيس", "نائب رئيس مجلس الإدارة", "نائب رئيس مجلس الرقابة"
+            ],
+            "customerIndustry": [
+                "المحاسبة", "شركات الطيران", "الوسائل البديلة لتسوية النزاعات", "الطب البديل", "الرسوم المتحركة", "الملابس والأزياء", "الهندسة المعمارية والتخطيط", "الفنون والحرف", "صناعة السيارات", "الطيران والفضاء",
+                "الخدمات المصرفية", "التقنية الحيوية", "الإعلام الإذاعي والتلفزيوني", "مواد البناء", "مستلزمات ومعدات الأعمال", "أسواق رأس المال", "الصناعات الكيميائية", "المنظمات المدنية والاجتماعية", "الهندسة المدنية", "العقارات التجارية",
+                "أمن الحاسوب والشبكات", "ألعاب الحاسوب", "أجهزة الحاسوب", "شبكات الحاسوب", "برمجيات الحاسوب", "البناء والتشييد", "الإلكترونيات الاستهلاكية", "السلع الاستهلاكية", "خدمات المستهلكين", "مستحضرات التجميل",
+                "منتجات الألبان", "الدفاع والفضاء", "التصميم", "إدارة التعليم", "التعلم الإلكتروني", "تصنيع المعدات الكهربائية والإلكترونية", "الترفيه", "الخدمات البيئية", "خدمات الفعاليات", "الإدارة التنفيذية",
+                "خدمات المرافق", "الزراعة", "الخدمات المالية", "الفنون الجميلة", "صيد الأسماك", "الأغذية والمشروبات", "إنتاج الأغذية", "جمع التبرعات", "الأثاث", "المراهنات والكازينوهات",
+                "الزجاج والسيراميك والخرسانة", "الإدارة الحكومية", "العلاقات الحكومية", "التصميم الجرافيكي", "الصحة والعافية واللياقة البدنية", "التعليم العالي", "المستشفيات والرعاية الصحية", "الضيافة", "الموارد البشرية", "الاستيراد والتصدير",
+                "خدمات الأفراد والأسر", "الأتمتة الصناعية", "خدمات المعلومات", "تقنية المعلومات والخدمات", "التأمين", "الشؤون الدولية", "التجارة الدولية والتنمية", "الإنترنت", "الخدمات المصرفية الاستثمارية", "إدارة الاستثمارات",
+                "القضاء", "إنفاذ القانون", "المحاماة", "الخدمات القانونية", "المؤسسات التشريعية", "الترفيه والسفر والسياحة", "المكتبات", "الخدمات اللوجستية وسلاسل الإمداد", "السلع الفاخرة والمجوهرات", "الآلات",
+                "الاستشارات الإدارية", "النقل البحري", "أبحاث السوق", "التسويق والإعلان", "الهندسة الميكانيكية أو الصناعية", "الإنتاج الإعلامي", "الأجهزة الطبية", "ممارسة الطب", "الرعاية الصحية النفسية", "المؤسسات العسكرية",
+                "التعدين والمعادن", "ألعاب الهواتف المحمولة", "السينما والأفلام", "المتاحف والمؤسسات", "الموسيقى", "تقنية النانو", "الصحف", "إدارة المنظمات غير الربحية", "النفط والطاقة", "الإعلام الإلكتروني",
+                "أخرى", "الاستعانة بمصادر خارجية أو خارج البلاد", "توصيل الطرود والشحنات", "التغليف والحاويات", "الورق ومنتجات الغابات", "الفنون الأدائية", "الصناعات الدوائية", "الأعمال الخيرية", "التصوير الفوتوغرافي", "البلاستيك",
+                "المنظمات السياسية", "التعليم الابتدائي والثانوي", "الطباعة", "التدريب والتوجيه المهني", "تطوير البرامج", "السياسات العامة", "العلاقات العامة والاتصالات", "السلامة العامة", "النشر", "تصنيع السكك الحديدية",
+                "تربية الماشية", "العقارات", "المرافق والخدمات الترفيهية", "المؤسسات الدينية", "الطاقة المتجددة والبيئة", "البحث العلمي", "المطاعم", "تجارة التجزئة", "الأمن والتحقيقات", "أشباه الموصلات",
+                "بناء السفن", "السلع الرياضية", "الرياضة", "التوظيف واستقطاب الكفاءات", "المتاجر الكبرى", "الاتصالات", "المنسوجات", "مراكز الفكر", "التبغ", "الترجمة والتوطين",
+                "النقل والشاحنات والسكك الحديدية", "المرافق العامة", "رأس المال الاستثماري والأسهم الخاصة", "الطب البيطري", "التخزين", "تجارة الجملة", "النبيذ والمشروبات الروحية", "الاتصالات اللاسلكية", "الكتابة والتحرير"
+            ]
+        },
+        "privacy": {
+            "opening": "خصوصيتك مهمة لنا.",
+            "law": "يمنحك بلدك حقوقًا بموجب {law}.",
+            "acceptance": "بإرسال هذا النموذج، فإنك توافق على الشروط الواردة في <a href='https://eviden.com/privacy-policy/' target='_blank' rel='noopener noreferrer'>سياسة الخصوصية</a> الخاصة بنا.",
+            "generic": "يرجى قراءتها لفهم كيف نضمن احترام حقوقك.",
+            "regional": "يرجى قراءتها لفهم كيف نضمن احترام حقوقك وكيف يمكنك حذف بياناتك إذا رغبت في ذلك."
+        },
+        "optInTexts": [
+            "*لضمان تلقي رسائل ذات صلة بفعاليات Eviden ومنتجاتها وخدماتها، يرجى الموافقة على الاشتراك. يمكنك إلغاء الاشتراك في أي وقت.",
+            "بتقديم معلوماتك في هذا النموذج، فإنك توافق على تلقي رسائل من Eviden بشأن فعالياتها ومنتجاتها وخدماتها وفقًا لسياسة الخصوصية الخاصة بنا. يمكنك إلغاء الاشتراك في أي وقت."
+        ],
+        "select": "يرجى الاختيار", "submit": "إرسال",
+        "thanks": "شكرًا لاهتمامك.", "thanksFor": "شكرًا لاهتمامك بـ",
+        "download": "يمكنك تنزيل التقرير هنا.", "contact": "سيتواصل معك أحد أعضاء فريقنا قريبًا."
+    },
+    "PT-PT": {
+        "labels": {
+            "Salutation": "Tratamento", "FirstName": "Nome próprio *", "LastName": "Apelido *",
+            "Email": "Endereço de correio eletrónico profissional *", "customerIndustry": "Setor de atividade *",
+            "Phone": "Telefone profissional *", "Company": "Nome da empresa ou organização *",
+            "Company_Revenue__c": "Volume de negócios da empresa", "Company_Size__c": "Dimensão da empresa",
+            "Country": "País ou região *", "State": "Estado *", "JobFunction__c": "Função profissional",
+            "SF_Job_Title__c": "Cargo", "interestedIn": "Produto *", "enquiryType": "Tipo de pedido *",
+            "enquiry": "Pedido", "Purchase_Authority__c": "Autoridade de compra",
+            "Purchase_Timeline__c": "Prazo de compra", "Opt_in__c": "Consentimento para receber comunicações *"
+        },
+        "required": "Este campo é obrigatório", "selectRequired": "Selecione uma opção neste campo",
+        "emailRequired": "Introduza um endereço de correio eletrónico válido", "phoneRequired": "Introduza um número de telefone válido",
+        "options": {
+            "Salutation": ["Sr.", "Sra. (casada)", "Sra.", "Menina", "Mx.", "Menino", "Sir", "Dr./Dra."],
+            "interestedIn": ["Solução de gestão de identidades e acessos (IAM)", "Autenticação única (SSO)", "Gestão de autenticação forte", "Governação e administração de identidades", "Gestão de acesso Web", "Orbion (identidade como serviço)", "Alta disponibilidade (SafeKit)", "Análise inteligente de identidades", "DirX", "Outro"],
+            "enquiryType": ["Informações sobre o produto", "Pedido de orçamento", "Demonstração", "Avaliação gratuita", "Prova de conceito (POC)", "Formação e certificação", "Novas soluções ou serviços para a sua empresa", "Apoio ao produto ou ao cliente (apenas para clientes atuais da Eviden)", "Contabilidade, faturação ou pagamentos", "Informações sobre emprego", "Contacto de imprensa", "Fornecimento de produtos ou serviços à Eviden", "Questões sobre alianças ou parcerias", "Outro"],
+            "Company_Revenue__c": ["Inferior a 200 milhões de dólares", "De 201 a 500 milhões de dólares", "De 501 milhões a mil milhões de dólares", "Superior a mil milhões de dólares"],
+            "Company_Size__c": ["Menos de 3 000 colaboradores", "De 3 001 a 5 000 colaboradores", "De 5 001 a 10 000 colaboradores", "Mais de 10 001 colaboradores"],
+            "Purchase_Authority__c": ["Sim", "Não"],
+            "Purchase_Timeline__c": ["Menos de 3 meses", "De 3 a 6 meses", "De 6 a 12 meses", "Mais de 12 meses"],
+            "Opt_in__c": ["Sim", "Não"],
+            "State": [
+                "Alabama", "Alasca", "Arizona", "Arcansas", "Califórnia", "Colorado", "Connecticut", "Delaware", "Flórida", "Geórgia",
+                "Havai", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Luisiana", "Maine", "Maryland",
+                "Massachusetts", "Michigan", "Minnesota", "Mississípi", "Missouri", "Montana", "Nebraska", "Nevada", "Nova Hampshire", "Nova Jérsia",
+                "Novo México", "Nova Iorque", "Carolina do Norte", "Dakota do Norte", "Ohio", "Oklahoma", "Oregon", "Pensilvânia", "Rhode Island", "Carolina do Sul",
+                "Dakota do Sul", "Tennessee", "Texas", "Utah", "Vermont", "Virgínia", "Washington", "Virgínia Ocidental", "Wisconsin", "Wyoming"
+            ],
+            "JobFunction__c": [
+                "Contabilista ou responsável de controlo financeiro", "Gestor de conta", "Assistente", "Diretor de sucursal", "Presidente", "Diretor de conformidade", "Diretor de transformação digital", "Diretor executivo", "Diretor financeiro", "Diretor de sistemas de informação",
+                "Diretor de marketing", "Diretor clínico", "Diretor de operações", "Diretor de compras", "Diretor de risco", "Diretor de segurança", "Diretor de tecnologia", "Diretor comercial", "Consultor", "Experiência do cliente",
+                "Apoio ao cliente", "Transformação digital", "Diretor-geral", "Diretor de outra área", "Outros diretores", "Diretor de distribuição", "Diretor financeiro", "Diretor de recursos humanos", "Gestor de recursos humanos", "Gestão de aplicações informáticas",
+                "Consultoria informática", "Diretor de informática", "Gestor de informática", "Operações informáticas", "Estratégia informática", "Integração de sistemas informáticos", "Outras funções de gestão", "Administrador executivo", "Sócio-gerente", "Gestor de comunicação de marketing",
+                "Diretor de marketing", "Membro do conselho de administração", "Membro do conselho fiscal", "Ministro", "Ministro de Estado", "Enfermagem", "Diretor de operações", "Outro", "Assistente pessoal", "Presidente do conselho de administração",
+                "Presidente do conselho fiscal", "Imprensa", "Compras", "Gestor de relações públicas", "Gestor de relações públicas", "Diretor de vendas", "Gestor de vendas", "Secretário", "Secretário de Estado", "Supervisor",
+                "Vice-presidente", "Vice-presidente do conselho de administração", "Vice-presidente do conselho fiscal"
+            ],
+            "customerIndustry": [
+                "Contabilidade", "Companhias aéreas e aviação", "Resolução alternativa de litígios", "Medicina alternativa", "Animação", "Vestuário e moda", "Arquitetura e planeamento", "Artes e artesanato", "Indústria automóvel", "Aviação e indústria aeroespacial",
+                "Banca", "Biotecnologia", "Rádio e televisão", "Materiais de construção", "Material e equipamento empresarial", "Mercados de capitais", "Indústria química", "Organizações cívicas e sociais", "Engenharia civil", "Imobiliário comercial",
+                "Segurança informática e de redes", "Jogos de computador", "Equipamento informático", "Redes informáticas", "Programas informáticos", "Construção", "Eletrónica de consumo", "Bens de consumo", "Serviços ao consumidor", "Cosmética",
+                "Laticínios", "Defesa e espaço", "Design", "Gestão da educação", "Ensino à distância", "Fabrico de equipamentos elétricos e eletrónicos", "Entretenimento", "Serviços ambientais", "Organização de eventos", "Direção executiva",
+                "Gestão de instalações", "Agricultura", "Serviços financeiros", "Belas-artes", "Pesca", "Alimentação e bebidas", "Produção alimentar", "Angariação de fundos", "Mobiliário", "Jogos de fortuna ou azar e casinos",
+                "Vidro, cerâmica e betão", "Administração pública", "Relações governamentais", "Design gráfico", "Saúde, bem-estar e condição física", "Ensino superior", "Hospitais e cuidados de saúde", "Hotelaria", "Recursos humanos", "Importação e exportação",
+                "Serviços a pessoas e famílias", "Automação industrial", "Serviços de informação", "Tecnologias e serviços de informação", "Seguros", "Relações internacionais", "Comércio internacional e desenvolvimento", "Internet", "Banca de investimento", "Gestão de investimentos",
+                "Sistema judicial", "Aplicação da lei", "Advocacia", "Serviços jurídicos", "Órgãos legislativos", "Lazer, viagens e turismo", "Bibliotecas", "Logística e cadeia de abastecimento", "Artigos de luxo e joalharia", "Máquinas e equipamentos",
+                "Consultoria de gestão", "Setor marítimo", "Estudos de mercado", "Marketing e publicidade", "Engenharia mecânica ou industrial", "Produção de conteúdos multimédia", "Dispositivos médicos", "Prática médica", "Cuidados de saúde mental", "Forças armadas",
+                "Mineração e metalurgia", "Jogos para dispositivos móveis", "Cinema", "Museus e instituições", "Música", "Nanotecnologia", "Jornais", "Gestão de organizações sem fins lucrativos", "Petróleo e energia", "Comunicação social em linha",
+                "Outro", "Subcontratação e deslocalização", "Entrega de encomendas e mercadorias", "Embalagens e recipientes", "Papel e produtos florestais", "Artes do espetáculo", "Indústria farmacêutica", "Filantropia", "Fotografia", "Plásticos",
+                "Organizações políticas", "Ensino básico e secundário", "Impressão", "Formação e orientação profissional", "Desenvolvimento de programas", "Políticas públicas", "Relações públicas e comunicação", "Segurança pública", "Edição", "Fabrico de material ferroviário",
+                "Pecuária", "Imobiliário", "Instalações e serviços recreativos", "Instituições religiosas", "Energias renováveis e ambiente", "Investigação", "Restauração", "Comércio a retalho", "Segurança e investigação", "Semicondutores",
+                "Construção naval", "Artigos de desporto", "Desporto", "Recrutamento e seleção", "Supermercados", "Telecomunicações", "Têxteis", "Centros de estudos", "Tabaco", "Tradução e localização",
+                "Transportes rodoviários e ferroviários", "Serviços de utilidade pública", "Capital de risco e capital de investimento", "Veterinária", "Armazenagem", "Comércio por grosso", "Vinhos e bebidas espirituosas", "Comunicações sem fios", "Escrita e edição"
+            ]
+        },
+        "privacy": {
+            "opening": "A sua privacidade é importante para nós.",
+            "law": "O seu país garante-lhe direitos ao abrigo da legislação {law}.",
+            "acceptance": "Ao submeter este formulário, aceita os termos da nossa <a href='https://eviden.com/privacy-policy/' target='_blank' rel='noopener noreferrer'>política de privacidade</a>.",
+            "generic": "Leia-a para compreender como garantimos o respeito pelos seus direitos.",
+            "regional": "Leia-a para compreender como garantimos o respeito pelos seus direitos e como pode eliminar os seus dados, se assim o desejar."
+        },
+        "optInTexts": [
+            "*Para receber comunicações relevantes da Eviden sobre os nossos eventos e ofertas, dê o seu consentimento. Pode cancelar a subscrição a qualquer momento.",
+            "Ao fornecer as suas informações neste formulário, consente receber comunicações da Eviden sobre os nossos eventos e ofertas, de acordo com a nossa política de privacidade. Pode cancelar a subscrição a qualquer momento."
+        ],
+        "select": "Selecione", "submit": "Enviar",
+        "thanks": "Obrigado pelo seu interesse.", "thanksFor": "Obrigado pelo seu interesse em",
+        "download": "Pode descarregar o relatório aqui.", "contact": "Um membro da nossa equipa entrará em contacto consigo em breve."
+    },
+    "KO": {
+        "labels": {
+            "Salutation": "호칭", "FirstName": "이름 *", "LastName": "성 *",
+            "Email": "업무용 이메일 주소 *", "customerIndustry": "업종 *", "Phone": "업무용 전화번호 *",
+            "Company": "회사 또는 기관명 *", "Company_Revenue__c": "회사 매출", "Company_Size__c": "회사 규모",
+            "Country": "국가 또는 지역 *", "State": "주 *", "JobFunction__c": "직무", "SF_Job_Title__c": "직책",
+            "interestedIn": "제품 *", "enquiryType": "문의 유형 *", "enquiry": "문의 내용",
+            "Purchase_Authority__c": "구매 권한", "Purchase_Timeline__c": "구매 예정 시기", "Opt_in__c": "정보 수신 동의 *"
+        },
+        "required": "필수 입력 항목입니다", "selectRequired": "이 항목에서 값을 선택해 주세요",
+        "emailRequired": "올바른 이메일 주소를 입력해 주세요", "phoneRequired": "올바른 전화번호를 입력해 주세요",
+        "options": {
+            "Salutation": ["남성 호칭", "기혼 여성 호칭", "여성 호칭", "미혼 여성 호칭", "성 중립 호칭", "소년 호칭", "경", "박사"],
+            "interestedIn": ["ID 및 접근 관리(IAM) 솔루션", "통합 로그인(SSO)", "강력한 인증 관리", "ID 거버넌스 및 관리", "웹 접근 관리", "Orbion(서비스형 ID)", "고가용성(SafeKit)", "지능형 ID 분석", "DirX", "기타"],
+            "enquiryType": ["제품 정보", "견적", "제품 시연", "무료 평가판", "개념 검증(POC)", "교육 및 인증", "귀사를 위한 새로운 솔루션 또는 서비스", "제품 및 고객 지원(기존 Eviden 고객 전용)", "회계, 청구 또는 결제", "채용 정보", "언론 문의", "Eviden에 제품 또는 서비스 공급", "제휴 및 파트너십 관련 사항", "기타"],
+            "Company_Revenue__c": ["2억 달러 미만", "2억 100만~5억 달러", "5억 100만~10억 달러", "10억 달러 초과"],
+            "Company_Size__c": ["직원 3,000명 미만", "직원 3,001~5,000명", "직원 5,001~10,000명", "직원 10,001명 초과"],
+            "Purchase_Authority__c": ["예", "아니요"],
+            "Purchase_Timeline__c": ["3개월 미만", "3~6개월", "6~12개월", "12개월 초과"],
+            "Opt_in__c": ["예", "아니요"],
+            "State": [
+                "앨라배마", "알래스카", "애리조나", "아칸소", "캘리포니아", "콜로라도", "코네티컷", "델라웨어", "플로리다", "조지아",
+                "하와이", "아이다호", "일리노이", "인디애나", "아이오와", "캔자스", "켄터키", "루이지애나", "메인", "메릴랜드",
+                "매사추세츠", "미시간", "미네소타", "미시시피", "미주리", "몬태나", "네브래스카", "네바다", "뉴햄프셔", "뉴저지",
+                "뉴멕시코", "뉴욕", "노스캐롤라이나", "노스다코타", "오하이오", "오클라호마", "오리건", "펜실베이니아", "로드아일랜드", "사우스캐롤라이나",
+                "사우스다코타", "테네시", "텍사스", "유타", "버몬트", "버지니아", "워싱턴", "웨스트버지니아", "위스콘신", "와이오밍"
+            ],
+            "JobFunction__c": [
+                "회계사 또는 재무 관리 책임자", "고객 담당 관리자", "보조 직원", "지점장", "회장", "최고 준법 책임자", "최고 디지털 책임자", "최고 경영자", "최고 재무 책임자", "최고 정보 책임자",
+                "최고 마케팅 책임자", "최고 의료 책임자", "최고 운영 책임자", "최고 구매 책임자", "최고 위험 관리 책임자", "최고 보안 책임자", "최고 기술 책임자", "영업 총괄 이사", "컨설턴트", "고객 경험",
+                "고객 서비스", "디지털 전환", "총괄 이사", "기타 분야 이사", "기타 이사", "유통 이사", "재무 이사", "인사 이사", "인사 관리자", "IT 애플리케이션 관리",
+                "IT 컨설팅", "IT 이사", "IT 관리자", "IT 운영", "IT 전략", "IT 시스템 통합", "기타 관리직", "대표 이사", "대표 파트너", "마케팅 커뮤니케이션 관리자",
+                "마케팅 이사", "이사회 구성원", "감독 위원회 구성원", "장관", "국무 장관", "간호", "운영 이사", "기타", "개인 비서 또는 보조 직원", "이사회 의장",
+                "감독 위원회 의장", "언론", "구매", "홍보 관리자", "홍보 관리자", "영업 이사", "영업 관리자", "비서", "국무 차관", "감독자",
+                "부회장", "이사회 부의장", "감독 위원회 부의장"
+            ],
+            "customerIndustry": [
+                "회계", "항공 운송", "대체 분쟁 해결", "대체 의학", "애니메이션", "의류 및 패션", "건축 및 계획", "미술 및 공예", "자동차", "항공 및 우주",
+                "은행업", "생명 공학", "방송 매체", "건축 자재", "사무용품 및 기업 장비", "자본 시장", "화학", "시민 및 사회 단체", "토목 공학", "상업용 부동산",
+                "컴퓨터 및 네트워크 보안", "컴퓨터 게임", "컴퓨터 하드웨어", "컴퓨터 네트워크", "컴퓨터 소프트웨어", "건설", "소비자 가전", "소비재", "소비자 서비스", "화장품",
+                "낙농", "국방 및 우주", "디자인", "교육 관리", "온라인 교육", "전기 및 전자 제품 제조", "엔터테인먼트", "환경 서비스", "행사 서비스", "경영진 사무실",
+                "시설 관리 서비스", "농업", "금융 서비스", "순수 미술", "수산업", "식품 및 음료", "식품 생산", "기금 모금", "가구", "도박 및 카지노",
+                "유리, 세라믹 및 콘크리트", "정부 행정", "정부 관계", "그래픽 디자인", "건강, 웰빙 및 피트니스", "고등 교육", "병원 및 의료", "숙박업", "인사", "수출입",
+                "개인 및 가족 서비스", "산업 자동화", "정보 서비스", "정보 기술 및 서비스", "보험", "국제 문제", "국제 무역 및 개발", "인터넷", "투자 은행", "투자 관리",
+                "사법부", "법 집행", "법률 실무", "법률 서비스", "입법 기관", "레저, 여행 및 관광", "도서관", "물류 및 공급망", "명품 및 보석", "기계",
+                "경영 컨설팅", "해운", "시장 조사", "마케팅 및 광고", "기계 또는 산업 공학", "미디어 제작", "의료 기기", "의료 실무", "정신 건강 관리", "군대",
+                "광업 및 금속", "모바일 게임", "영화", "박물관 및 기관", "음악", "나노 기술", "신문", "비영리 단체 관리", "석유 및 에너지", "온라인 미디어",
+                "기타", "외주 및 해외 이전", "소포 및 화물 배송", "포장 및 용기", "종이 및 임산물", "공연 예술", "제약", "자선 사업", "사진", "플라스틱",
+                "정치 단체", "초등 및 중등 교육", "인쇄", "전문 교육 및 코칭", "프로그램 개발", "공공 정책", "홍보 및 커뮤니케이션", "공공 안전", "출판", "철도 차량 제조",
+                "목축업", "부동산", "레크리에이션 시설 및 서비스", "종교 기관", "재생 에너지 및 환경", "연구", "음식점", "소매업", "보안 및 조사", "반도체",
+                "조선업", "스포츠 용품", "스포츠", "인력 공급 및 채용", "슈퍼마켓", "통신", "섬유", "정책 연구소", "담배", "번역 및 현지화",
+                "운송, 화물 및 철도", "공익사업", "벤처 캐피털 및 사모 투자", "수의업", "창고업", "도매업", "와인 및 증류주", "무선 통신", "집필 및 편집"
+            ]
+        },
+        "privacy": {
+            "opening": "저희는 귀하의 개인정보를 소중히 여깁니다.",
+            "law": "귀하의 국가에서는 {law}에 따라 관련 권리를 보장합니다.",
+            "acceptance": "이 양식을 제출하면 당사의 <a href='https://eviden.com/privacy-policy/' target='_blank' rel='noopener noreferrer'>개인정보처리방침</a> 약관에 동의하는 것으로 간주됩니다.",
+            "generic": "귀하의 권리를 어떻게 보호하는지 알아보려면 해당 방침을 읽어 주세요.",
+            "regional": "귀하의 권리를 어떻게 보호하는지, 그리고 원하실 경우 데이터를 삭제하는 방법을 알아보려면 해당 방침을 읽어 주세요."
+        },
+        "optInTexts": [
+            "*Eviden의 행사 및 제품과 서비스에 관한 관련 정보를 받으시려면 수신에 동의해 주세요. 언제든지 수신을 거부할 수 있습니다.",
+            "이 양식에 정보를 제공하면 당사의 개인정보처리방침에 따라 Eviden의 행사 및 제품과 서비스에 관한 정보를 받는 데 동의하게 됩니다. 언제든지 수신을 거부할 수 있습니다."
+        ],
+        "select": "선택해 주세요", "submit": "제출",
+        "thanks": "관심을 가져 주셔서 감사합니다.", "thanksFor": "다음 항목에 관심을 가져 주셔서 감사합니다:",
+        "download": "여기에서 보고서를 다운로드할 수 있습니다.", "contact": "담당자가 곧 연락드리겠습니다."
+    }
+};
+
+const formCountryCodes = {
+    "Aland Islands": "AX", "Antigua and Barbuda": "AG", "BelarusBelarus": "BY",
+    "Bolivia, Plurinational State of": "BO", "Bonaire, Sint Eustatius and Saba": "BQ",
+    "Bosnia and Herzegovina": "BA", "Brunei Darussalam": "BN", "Congo": "CG",
+    "Congo, the Democratic Republic of the": "CD", "Cote d'Ivoire": "CI", "Czech Republic": "CZ",
+    "Falkland Islands (Malvinas)": "FK", "Heard Island and McDonald Islands": "HM",
+    "Holy See (Vatican City State)": "VA", "Hong Kong S.A.R., China": "HK",
+    "Iran, Islamic Republic of": "IR", "Korea, Democratic People's Republic of": "KP",
+    "Korea, Republic of": "KR", "Lao People's Democratic Republic": "LA", "Libyan Arab Jamahiriya": "LY",
+    "Macao S.A.R., China": "MO", "Macedonia, the former Yugoslav Republic of": "MK",
+    "Micronesia, Federated States of": "FM", "Moldova, Republic of": "MD", "Myanmar": "MM",
+    "N.Mariana Islnd": "MP", "Palestinian Territory, Occupied": "PS", "Pitcairn": "PN",
+    "Reunion": "RE", "Russian Federation": "RU", "Saint Barthélemy": "BL",
+    "Saint Helena, Ascension and Tristan da Cunha": "SH", "Saint Kitts and Nevis": "KN",
+    "Saint Lucia": "LC", "Saint Martin (French part)": "MF", "Saint Pierre and Miquelon": "PM",
+    "Saint Vincent and the Grenadines": "VC", "Samoa, American": "AS", "Sao Tome and Principe": "ST",
+    "Sint Maarten (Dutch part)": "SX", "South Georgia and the South Sandwich Islands": "GS",
+    "Svalbard and Jan Mayen": "SJ", "Swaziland": "SZ", "Syrian Arab Republic": "SY",
+    "Tanzania, United Republic of": "TZ", "Trinidad and Tobago": "TT", "Turkey": "TR",
+    "Turks and Caicos Islands": "TC", "US Minor Outl.Isl.": "UM",
+    "Venezuela, Bolivarian Republic of": "VE", "Virgin Islands, British": "VG",
+    "Virgin Islands, US": "VI", "Wallis and Futuna": "WF"
+};
+const englishRegionNames = new Intl.DisplayNames(["en"], { type: "region", fallback: "none" });
+for (const firstLetter of "ABCDEFGHIJKLMNOPQRSTUVWXYZ") {
+    for (const secondLetter of "ABCDEFGHIJKLMNOPQRSTUVWXYZ") {
+        const code = firstLetter + secondLetter;
+        const name = englishRegionNames.of(code);
+        if (name && !formCountryCodes[name]) formCountryCodes[name] = code;
+    }
+}
+
+Object.entries(additionalFormLanguages).forEach(function ([language, translations]) {
+    const localized = JSON.parse(JSON.stringify(languageTranslations["English US"]));
+    Object.entries(translations.labels).forEach(function ([fieldName, label]) {
+        const field = localized[fieldName];
+        field.label = label;
+        if (field.requiredError) {
+            field.requiredError = field.type === "email" ? translations.emailRequired :
+                field.type === "telephone" ? translations.phoneRequired :
+                field.type === "select" || field.type === "radio" ? translations.selectRequired : translations.required;
+        }
+        if (field.options && field.options[0].value === "") field.options[0].text = translations.select;
+    });
+    Object.entries(translations.options || {}).forEach(function ([fieldName, texts]) {
+        const field = localized[fieldName];
+        const labels = field.options[0].value === "" ? [translations.select].concat(texts) : texts;
+        field.options.forEach(function (option, index) { option.text = labels[index]; });
+    });
+    const regionNames = new Intl.DisplayNames([language.toLowerCase()], { type: "region", fallback: "none" });
+    const exceptionalRegions = {
+        "AR": { "Crimea Region": "منطقة القرم", "Netherlands Antilles": "جزر الأنتيل الهولندية" },
+        "PT-PT": { "Crimea Region": "Região da Crimeia", "Netherlands Antilles": "Antilhas Neerlandesas" },
+        "KO": { "Crimea Region": "크림반도 지역", "Netherlands Antilles": "네덜란드령 안틸레스" }
+    };
+    localized.Country.options.forEach(function (option) {
+        if (!option.value) return;
+        const code = formCountryCodes[option.value];
+        option.text = exceptionalRegions[language][option.value] || (code && regionNames.of(code)) || option.text;
+    });
+    localized.PrivacyText.forEach(function (option) {
+        const law = option.value === "CCPA" ? "CCPA/CPRA" : option.value === "LGDP" ? "LGPD" : option.value;
+        option.text = [translations.privacy.opening,
+            option.value === "none" ? "" : translations.privacy.law.replace("{law}", law),
+            translations.privacy.acceptance,
+            option.value === "none" ? translations.privacy.generic : translations.privacy.regional
+        ].filter(Boolean).join(" ");
+    });
+    localized.OptInText.forEach(function (option, index) { option.text = translations.optInTexts[index]; });
+    localized.Submit.text = translations.submit;
+    localized.ThankYouEmptyDataContent = translations.thanks;
+    localized.ThankYouDataContent = translations.thanksFor;
+    localized.DownloadLinkText = translations.download;
+    localized.ContactTYText = translations.contact;
+    languageTranslations[language] = localized;
+});

@@ -37,6 +37,18 @@ sitemap:
   color: #5a5a5a;
 }
 
+.contact-marketo-form form[dir="rtl"],
+.contact-marketo-form form[dir="rtl"] .mktoLabel {
+  text-align: right !important;
+}
+
+.contact-marketo-form form[dir="rtl"] input[type="email"],
+.contact-marketo-form form[dir="rtl"] input[type="tel"],
+.contact-marketo-form form[dir="rtl"] select[name="preferredLanguage"] {
+  direction: ltr;
+  text-align: left;
+}
+
 .contact-marketo-form .mktoButton {
   border: 1px solid #002d3c !important;
   background-color: #fff !important;
@@ -81,8 +93,8 @@ sitemap:
     data-campaign="Global-Evidian-Contact Us-2022"
     data-my-campaign="Contact EN (REQUIRES AN ANSWER)"
     data-display="all"
-    data-preferred-language="English US"
-    data-enquiry-type="Product Information"
+    data-preferred-language="ZH-HANS"
+    data-enquiry-type=""
     data-interested-in="High Availability"
     data-job-title="Not specified"
     data-industry="Other"
@@ -97,6 +109,6 @@ sitemap:
 <p id="contactMarketoSubmitError" class="contact-marketo-error" role="alert" aria-live="polite" hidden></p>
 
 <script src="/js/jquery.min.js"></script>
-<script src="/js/marketo-translations.js"></script>
+<script src="/js/marketo-translations.js?v=20261023-11"></script>
 <script src="https://pages.atos.net/js/forms2/js/forms2.min.js"></script>
-<script src="/js/contact-marketo.js?v=20261023-4"></script>
+<script src="/js/contact-marketo.js?v=20261023-13"></script>
