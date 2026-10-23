@@ -75,7 +75,7 @@ sitemap:
     id="mktoForm_1624"
     class="mktoForm marketo"
     data-form-id="1624"
-    data-recaptcha-site-key="6LfskvwtAAAAAAjcI1f3XrT2z37kLukxdrI_3W_L"
+    data-recaptcha-site-key="6LfknPwtAAAAAGrFSRn97ItGAZvFyCdvQIspy7Y0"
     data-base-url="//pages.atos.net"
     data-customer-id="247-MBJ-716"
     data-campaign="Global-Evidian-Contact Us-2022"
