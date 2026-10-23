@@ -36,11 +36,4 @@ With an active support contract, standard support includes 24/7/365 access to th
 
 **Note:** For VM-level HA, `hyperv.safe` and `kvm.safe` require only two SafeKit licenses for the two hypervisor hosts, regardless of the number of virtual machines replicated and restarted.
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Price%20Quote"
-  title="Request a SafeKit price quote"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="English US" interested-in="High Availability" enquiry-type="Price Quote" destination="/confirmation-safekit/" >}}

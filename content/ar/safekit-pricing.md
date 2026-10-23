@@ -36,11 +36,4 @@ topics: "نموذج الترخيص والأسعار، الدعم والصيان�
 
 **ملاحظة:** للتوافر العالي على مستوى الآلات الافتراضية، لا تتطلب وحدتا `hyperv.safe` و`kvm.safe` سوى ترخيصَي SafeKit لمضيفَي Hypervisor، بغض النظر عن عدد الآلات الافتراضية التي تتم مزامنتها وإعادة تشغيلها.
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Price%20Quote"
-  title="طلب عرض سعر لـ SafeKit"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="AR" interested-in="High Availability" enquiry-type="Price Quote" destination="/ar/confirmation-safekit/" >}}

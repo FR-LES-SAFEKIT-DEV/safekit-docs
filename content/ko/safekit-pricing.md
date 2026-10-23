@@ -36,11 +36,4 @@ SafeKit은 오프라인 라이선스 활성화를 지원하므로 라이선스 �
 
 **참고:** VM 수준 HA에서 `hyperv.safe`와 `kvm.safe`는 복제 및 재시작되는 가상 머신 수와 관계없이 하이퍼바이저 호스트 2대에 대한 SafeKit 라이선스 2개만 필요합니다.
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Price%20Quote"
-  title="SafeKit 견적 요청"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="KO" interested-in="High Availability" enquiry-type="Price Quote" destination="/ko/confirmation-safekit/" >}}

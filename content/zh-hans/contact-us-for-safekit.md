@@ -8,11 +8,4 @@ category: "home"
 
 # 联系我们，咨询 SafeKit {#contact-us-for-safekit}
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"
-  title="联系 Eviden，咨询 SafeKit"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="ZH-HANS" interested-in="High Availability" enquiry-type="" destination="/zh-hans/confirmation-safekit/" >}}

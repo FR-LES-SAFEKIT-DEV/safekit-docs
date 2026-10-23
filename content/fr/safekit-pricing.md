@@ -36,11 +36,4 @@ Dans le cadre d'un contrat de support en vigueur, l'assistance standard comprend
 
 **Remarque :** pour la haute disponibilité au niveau des machines virtuelles, les solutions `hyperv.safe` et `kvm.safe` ne nécessitent que deux licences SafeKit pour les deux hôtes d’hyperviseur, quel que soit le nombre de machines virtuelles répliquées et redémarrées.
 
-<iframe
-  src="https://www.evidian.com/fr/contact-us-for-safekit/?EnquiryTypeId=Price%20Quote"
-  title="Demander un devis SafeKit"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="French" interested-in="High Availability" enquiry-type="Price Quote" destination="/fr/confirmation-safekit/" >}}

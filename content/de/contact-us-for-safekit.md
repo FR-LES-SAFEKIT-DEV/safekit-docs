@@ -8,11 +8,4 @@ category: "home"
 
 # Kontakt zu SafeKit aufnehmen {#contact-us-for-safekit}
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Product%20Information"
-  title="Eviden zu SafeKit kontaktieren"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="German" interested-in="High Availability" enquiry-type="" destination="/de/confirmation-safekit/" >}}

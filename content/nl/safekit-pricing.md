@@ -36,11 +36,4 @@ Met een actief supportcontract omvat standaardondersteuning 24/7/365 toegang tot
 
 **Opmerking:** Voor HA op VM-niveau hebben `hyperv.safe` en `kvm.safe` slechts twee SafeKit-licenties nodig voor de twee hypervisorhosts, ongeacht het aantal gerepliceerde en opnieuw gestarte virtuele machines.
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Price%20Quote"
-  title="Een SafeKit-offerte aanvragen"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="Dutch" interested-in="High Availability" enquiry-type="Price Quote" destination="/nl/confirmation-safekit/" >}}

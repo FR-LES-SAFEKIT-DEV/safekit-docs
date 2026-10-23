@@ -213,19 +213,6 @@
     }).finally(function () { window.clearTimeout(timeout); });
   }
 
-  function validateBusinessEmail() {
-    var email = formApi.vals().Email || "";
-    var emailField = window.jQuery(formApi.getFormElem()).find("#Email");
-    var domain = email.split("@")[1];
-    if (!domain || ["gmail.com", "yahoo.com", "outlook.com"].indexOf(domain.toLowerCase()) !== -1) {
-      formApi.showErrorMessage("Please enter your business email address", emailField);
-      var input = document.getElementById("Email");
-      if (input) input.focus();
-      return false;
-    }
-    return true;
-  }
-
   function applyShortcodeSettings(form) {
     var languageField = form.getFormElem()[0].querySelector('select[name="preferredLanguage"]');
     if (languageField) {
@@ -465,10 +452,6 @@
       showAllFields(form);
       if (!nativeValid) {
         showError("Please complete all required fields and correct the highlighted values before submitting.");
-        return;
-      }
-      if (!validateBusinessEmail()) {
-        form.submittable(false);
         return;
       }
       if (skipRecaptcha) {

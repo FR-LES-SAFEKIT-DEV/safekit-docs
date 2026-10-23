@@ -36,11 +36,4 @@ Con un contrato de soporte activo, el soporte estándar incluye acceso al portal
 
 **Nota:** Para la alta disponibilidad a nivel de máquina virtual, `hyperv.safe` y `kvm.safe` solo requieren dos licencias de SafeKit para los dos hosts del hipervisor, independientemente del número de máquinas virtuales replicadas y reiniciadas.
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Price%20Quote"
-  title="Solicitar un presupuesto de SafeKit"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="Spanish" interested-in="High Availability" enquiry-type="Price Quote" destination="/es/confirmation-safekit/" >}}

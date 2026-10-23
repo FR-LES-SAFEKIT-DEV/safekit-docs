@@ -36,11 +36,4 @@ SafeKitはオフラインでのライセンス認証に対応しているため�
 
 **注:** VMレベルのHAでは、`hyperv.safe` と `kvm.safe` に必要なSafeKitライセンスは2つのハイパーバイザーホスト分の2ライセンスのみです。複製して再起動する仮想マシンの数は問いません。
 
-<iframe
-  src="https://www.evidian.com/contact-us-for-safekit/?EnquiryTypeId=Price%20Quote"
-  title="SafeKitの見積もりを依頼"
-  width="100%"
-  height="1100"
-  style="width: 100%; border: 0;"
-  loading="lazy">
-</iframe>
+{{< contact-marketo-form language="Japanese" interested-in="High Availability" enquiry-type="Price Quote" destination="/ja/confirmation-safekit/" >}}
