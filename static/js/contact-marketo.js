@@ -13,7 +13,7 @@
     myCampaign: formElement.dataset.myCampaign || "",
     display: formElement.dataset.display || "none",
     preferredLanguage: formElement.dataset.preferredLanguage || "English US",
-    enquiryType: params.get("EnquiryTypeId") || params.get("enquiryType") || formElement.dataset.enquiryType || "",
+    enquiryType: formElement.dataset.enquiryType || "",
     interestedIn: formElement.dataset.interestedIn || "",
     jobTitle: formElement.dataset.jobTitle || "",
     industry: formElement.dataset.industry || "",
@@ -21,7 +21,7 @@
     displaySalutation: formElement.dataset.displaySalutation || "true",
     destination: formElement.dataset.destination || "/confirmation-safekit/",
     postUrl: formElement.dataset.postUrl || "",
-    recaptchaSiteKey: "6LfRM6keAAAAACnaog4Sl9nzvzHupd74YADwTAvp"
+    recaptchaSiteKey: formElement.dataset.recaptchaSiteKey || ""
   };
 
   var formApi = null;
@@ -185,8 +185,14 @@
       reCAPTCHALastUserFingerprint: recaptchaResponse
     };
     Object.keys(fields).forEach(function (key) { payload.set(key, fields[key]); });
+    var requestDetails = ["POST " + config.postUrl, ""];
+    payload.forEach(function (value, key) {
+      requestDetails.push(key + " = " + value);
+    });
+    window.alert(requestDetails.join("\n"));
     var controller = new AbortController();
     var timeout = window.setTimeout(function () { controller.abort(); }, 10000);
+    var responseReported = false;
     return fetch(config.postUrl, {
       method: "POST",
       credentials: "same-origin",
@@ -194,7 +200,16 @@
       body: payload.toString(),
       signal: controller.signal
     }).then(function (response) {
-      if (!response.ok) throw new Error("Lead post failed with HTTP " + response.status);
+      return response.text().then(function (body) {
+        window.clearTimeout(timeout);
+        responseReported = true;
+        window.alert("POST " + config.postUrl + "\nHTTP " + response.status + " " + response.statusText + "\n\n" + (body || "(Reponse vide)"));
+        if (!response.ok) throw new Error("Lead post failed with HTTP " + response.status);
+      });
+    }).catch(function (error) {
+      window.clearTimeout(timeout);
+      if (!responseReported) window.alert("Erreur du POST " + config.postUrl + "\n" + error.message);
+      throw error;
     }).finally(function () { window.clearTimeout(timeout); });
   }
 
@@ -229,6 +244,77 @@
       if (config.country === "Costa Rica") hideFieldRow("Country");
     }
     if (config.displaySalutation === "false") hideFieldRow("Salutation");
+  }
+
+  function applyQueryParameters(form) {
+    var groups = Object.create(null);
+    var aliases = {
+      interestedIn: ["Product", "product", "prod"],
+      enquiryType: ["EnquiryTypeId", "InquiryTypeId", "inquiry", "enquiry"]
+    };
+    var controls = form.getFormElem()[0].querySelectorAll("input[name], select[name], textarea[name]");
+    Array.prototype.forEach.call(controls, function (control) {
+      if (/^(button|submit|reset|image|file|password)$/i.test(control.type)) return;
+      if (/^(g-recaptcha-response|reCAPTCHALastUserFingerprint)$/i.test(control.name)) return;
+      if (!groups[control.name]) groups[control.name] = [];
+      groups[control.name].push(control);
+    });
+
+    function normalize(value) {
+      return String(value || "").trim().toLowerCase();
+    }
+
+    function applyField(fieldName) {
+      var keys = [fieldName].concat(aliases[fieldName] || []);
+      var key = keys.find(function (candidate) {
+        return params.has(candidate) && (candidate === fieldName || !groups[candidate]);
+      });
+      if (key === undefined) return;
+      var fields = groups[fieldName];
+      var first = fields[0];
+      var rawValues = params.getAll(key);
+      var value = rawValues[0];
+      var isSelect = first.tagName === "SELECT";
+      var isChoice = first.type === "checkbox" || first.type === "radio";
+      if (isSelect || isChoice) {
+        var options = isSelect ? Array.prototype.slice.call(first.options) : fields;
+        var matchedValues = [];
+        var booleanCheckbox = first.type === "checkbox" && fields.length === 1 && /^(true|false|1|0|yes|no|on|off)$/i.test(value);
+        if (booleanCheckbox) {
+          if (/^(true|1|yes|on)$/i.test(value)) matchedValues.push(first.value);
+        } else {
+          var valid = rawValues.every(function (raw) {
+            var match = options.find(function (option) { return option.value === raw; });
+            if (!match) {
+              match = options.find(function (option) {
+                var label = isSelect ? option.label : Array.prototype.map.call(option.labels || [], function (element) { return element.textContent; }).join(" ");
+                return normalize(label) === normalize(raw);
+              });
+            }
+            if (!match) return false;
+            matchedValues.push(match.value);
+            return true;
+          });
+          if (!valid) return;
+        }
+        value = first.multiple || first.type === "checkbox" && fields.length > 1 ? matchedValues : matchedValues[0] || "";
+      }
+      var update = {};
+      update[fieldName] = value;
+      form.vals(update);
+      fields.forEach(function (field) {
+        field.dispatchEvent(new Event("change", { bubbles: true }));
+        field.dispatchEvent(new Event("input", { bubbles: true }));
+      });
+    }
+
+    if (groups.preferredLanguage) {
+      applyField("preferredLanguage");
+      translateFormLabels();
+    }
+    Object.keys(groups).forEach(function (fieldName) {
+      if (fieldName !== "preferredLanguage") applyField(fieldName);
+    });
   }
 
   var formApi = null;
@@ -294,6 +380,8 @@
     formApi = form;
     submitButton = form.getFormElem()[0].querySelector("button[type='submit']");
     applyShortcodeSettings(form);
+    translateFormLabels();
+    applyQueryParameters(form);
     translateFormLabels();
     form.submittable(false);
     if (submitButton) submitButton.disabled = true;
