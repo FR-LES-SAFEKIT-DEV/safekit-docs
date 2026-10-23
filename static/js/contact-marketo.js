@@ -8,6 +8,7 @@
   var config = {
     baseUrl: formElement.dataset.baseUrl || "//pages.atos.net",
     customerId: formElement.dataset.customerId || "247-MBJ-716",
+    formId: Number(formElement.dataset.formId || "1624"),
     campaign: formElement.dataset.campaign || "",
     myCampaign: formElement.dataset.myCampaign || "",
     display: formElement.dataset.display || "none",
@@ -20,16 +21,17 @@
     displaySalutation: formElement.dataset.displaySalutation || "true",
     destination: formElement.dataset.destination || "/confirmation-safekit/",
     postUrl: formElement.dataset.postUrl || "",
-    recaptchaSiteKey: "6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R"
+    recaptchaSiteKey: "6LfRM6keAAAAACnaog4Sl9nzvzHupd74YADwTAvp"
   };
 
   var formApi = null;
   var submitButton = null;
   var errorElement = document.getElementById("contactMarketoSubmitError");
   var recaptchaApiReady = false;
-  var recaptchaReady = false;
-  var recaptchaWidgetId = null;
   var recaptchaToken = "";
+  var leadPostRecaptchaToken = "";
+  var validationLocked = false;
+  var replayingValidatedSubmit = false;
   var currentTranslations = null;
 
   function showError(message) {
@@ -232,9 +234,8 @@
   var formApi = null;
   var submitButton = null;
   var recaptchaApiReady = false;
-  var recaptchaReady = false;
   var recaptchaWidgetId = null;
-  var recaptchaToken = "";
+  var leadPostRecaptchaToken = "";
   var errorElement = document.getElementById("contactMarketoSubmitError");
 
   function renderRecaptcha() {
@@ -246,24 +247,23 @@
     container.className = "contact-marketo-recaptcha";
     if (buttonRow) marketoElement.insertBefore(container, buttonRow);
     else marketoElement.appendChild(container);
+
     try {
       recaptchaWidgetId = window.grecaptcha.render(container, {
         sitekey: config.recaptchaSiteKey,
         callback: function (token) {
-          recaptchaReady = true;
-          recaptchaToken = token;
+          leadPostRecaptchaToken = token;
           formApi.submittable(true);
           if (submitButton) submitButton.disabled = false;
           clearError();
         },
         "expired-callback": function () {
-          recaptchaReady = false;
-          recaptchaToken = "";
+          leadPostRecaptchaToken = "";
           formApi.submittable(false);
           if (submitButton) submitButton.disabled = true;
         },
         "error-callback": function () {
-          recaptchaReady = false;
+          leadPostRecaptchaToken = "";
           formApi.submittable(false);
           if (submitButton) submitButton.disabled = true;
           showError("The security check failed to load. Please reload the page and try again.");
@@ -306,13 +306,12 @@
         return;
       }
       var token = window.grecaptcha && recaptchaWidgetId !== null ? window.grecaptcha.getResponse(recaptchaWidgetId) : "";
-      if (!recaptchaReady || !token) {
-        recaptchaReady = false;
+      if (!token) {
         form.submittable(false);
         showError("Please complete the reCAPTCHA checkbox before submitting.");
         return;
       }
-      recaptchaToken = token;
+      leadPostRecaptchaToken = token;
       form.addHiddenFields({ reCAPTCHALastUserFingerprint: token });
       form.submittable(true);
       clearError();
@@ -321,7 +320,7 @@
     form.onSuccess(function (values, followUpUrl) {
       var destination = config.destination || followUpUrl;
       if (typeof window.gtag === "function") window.gtag("event", "conversion", { send_to: "AW-978904711/Y3XjCIbkmvsBEIfN49ID" });
-      postLead(values, recaptchaToken).catch(function (error) {
+      postLead(values, leadPostRecaptchaToken).catch(function (error) {
         console.error("SafeKit lead tracking post failed; continuing to confirmation:", error);
       }).finally(function () {
         window.location.assign(destination);
