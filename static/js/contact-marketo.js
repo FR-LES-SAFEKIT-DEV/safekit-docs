@@ -3,19 +3,33 @@
 
   var formElement = document.getElementById("mktoForm_1624");
   if (!formElement || !window.MktoForms2) return;
+  var params = new URLSearchParams(window.location.search);
 
-  var munchkinId = "247-MBJ-716";
-  var formId = 1624;
-  var recaptchaSiteKey = "6LfRM6keAAAAACnaog4Sl9nzvzHupd74YADwTAvp";
-    var recaptchaLastUserFingerprint = "";
-  var formApi = null;
-  var recaptchaApiReady = false;
-  var recaptchaReady = false;
-  var recaptchaWidgetId = null;
-  var validationLocked = false;
-  var replayingValidatedSubmit = false;
-  var submitButton = null;
+  var config = {
+    baseUrl: formElement.dataset.baseUrl || "//pages.atos.net",
+    munchkinId: formElement.dataset.customerId || "247-MBJ-716",
+    formId: Number((formElement.id.match(/\d+/) || ["1624"])[0]),
+    campaign: formElement.dataset.campaign || "",
+    myCampaign: formElement.dataset.myCampaign || "",
+    display: formElement.dataset.display || "none",
+    preferredLanguage: formElement.dataset.preferredLanguage || "English US",
+    enquiryType: formElement.dataset.enquiryType || "",
+    interestedIn: formElement.dataset.interestedIn || "",
+    jobTitle: formElement.dataset.jobTitle || "",
+    industry: formElement.dataset.industry || "",
+    country: formElement.dataset.countryPredefined || "",
+    displaySalutation: formElement.dataset.displaySalutation || "true",
+    destination: formElement.dataset.destination || "/confirmation-safekit/",
+    postUrl: formElement.dataset.postUrl || ""
+  };
+
   var errorElement = document.getElementById("contactMarketoSubmitError");
+  var submitButton = null;
+  var formApi = null;
+  var recaptchaWidgetId = null;
+  var recaptchaReady = false;
+  var recaptchaToken = "";
+  var currentTranslations = null;
   var params = new URLSearchParams(window.location.search);
 
   function showError(message) {
@@ -31,21 +45,16 @@
   }
 
   function browserLanguage() {
-    var browserLanguageCode = navigator.language || "en-US";
-    if (/^fr(?:-|$)/i.test(browserLanguageCode)) return "French";
-    if (/^es-(?:mx|ar|bo|br|cl|co|cr|cu|do|ec|gt|hn|ni|pa|pe|pr|py|sv|uy|ve)/i.test(browserLanguageCode)) return "Latin American Spanish";
-    if (/^es(?:-|$)/i.test(browserLanguageCode)) return "European Spanish";
-    if (/^de(?:-|$)/i.test(browserLanguageCode)) return "German";
-    if (/^it(?:-|$)/i.test(browserLanguageCode)) return "Italian";
-    if (/^nl(?:-|$)/i.test(browserLanguageCode)) return "Dutch";
-    if (/^pt-br$/i.test(browserLanguageCode)) return "Brazilian Portuguese";
-    if (/^en-gb$/i.test(browserLanguageCode)) return "English GB";
+    var code = (navigator.language || "en-US").toLowerCase();
+    if (code.indexOf("fr") === 0) return "French";
+    if (code === "es" || code === "es-es") return "European Spanish";
+    if (code.indexOf("es-") === 0) return "Latin American Spanish";
+    if (code.indexOf("de") === 0) return "German";
+    if (code.indexOf("it") === 0) return "Italian";
+    if (code.indexOf("nl") === 0) return "Dutch";
+    if (code === "pt-br") return "Brazilian Portuguese";
+    if (code === "en-gb") return "English GB";
     return "English US";
-  }
-
-  function currentLanguage() {
-    var values = formApi ? formApi.vals() : {};
-    return values.preferredLanguage || browserLanguage();
   }
 
   function hideFieldRow(fieldName) {
@@ -81,7 +90,7 @@
 
   function translateConsentAndPrivacy(translations, values) {
     var htmlText = document.querySelectorAll(".mktoHtmlText");
-    if (htmlText.length < 2) return;
+    if (!translations || htmlText.length < 2) return;
 
     var policy = privacySettings(values);
     var optInOptions = translations.OptInText;
@@ -98,42 +107,42 @@
       if (privacyOptions[privacyIndex]) htmlText[htmlText.length - 1].innerHTML = privacyOptions[privacyIndex].text;
     }
 
-    var privacyElement = htmlText[htmlText.length - 1];
     var policyUrl = currentLanguage() === "French" ? "https://eviden.com/fr-fr/politique-de-confidentialite/" : "https://eviden.com/privacy-policy/";
-    linkPolicyText(privacyElement, /(Privacy Policy|Politique de confidentialité|Informativa sulla privacy|Datenschutzrichtlinie|Política de privacidad|Privacybeleid|Política de Privacidade)/g, policyUrl);
-    linkPolicyText(privacyElement, policy.pattern, policy.url);
-    if (policy.type === "CCPA") linkPolicyText(privacyElement, policy.pattern2, policy.url2);
+    linkPolicyText(htmlText[htmlText.length - 1], /(Privacy Policy|Politique de confidentialité|Informativa sulla privacy|Datenschutzrichtlinie|Política de privacidad|Privacybeleid|Política de Privacidade)/g, policyUrl);
+    linkPolicyText(htmlText[htmlText.length - 1], policy.pattern, policy.url);
+    if (policy.type === "CCPA") linkPolicyText(htmlText[htmlText.length - 1], policy.pattern2, policy.url2);
+  }
+
+  function currentLanguage() {
+    if (formApi) {
+      var value = formApi.vals().preferredLanguage;
+      if (value) return value;
+    }
+    return browserLanguage();
   }
 
   function translateFormLabels() {
     if (!formApi || typeof languageTranslations === "undefined") return;
-    var translations = languageTranslations[currentLanguage()];
-    if (!translations) return;
+    currentTranslations = languageTranslations[currentLanguage()];
+    if (!currentTranslations) return;
 
     Object.keys(formApi.vals()).forEach(function (fieldName) {
-      var fieldTranslation = translations[fieldName];
+      var fieldTranslation = currentTranslations[fieldName];
       if (!fieldTranslation) return;
-
       var label = document.getElementById("Lbl" + fieldName);
       if (label && fieldTranslation.label) label.innerHTML = fieldTranslation.label;
-
       if (fieldTranslation.type !== "select" || !Array.isArray(fieldTranslation.options)) return;
       var select = document.getElementById(fieldName);
       if (!select) return;
       Array.prototype.forEach.call(select.options, function (option) {
-        var translatedOption = fieldTranslation.options.find(function (item) {
-          return item.value === option.value;
-        });
+        var translatedOption = fieldTranslation.options.find(function (item) { return item.value === option.value; });
         if (translatedOption) option.text = translatedOption.text;
       });
     });
 
-    var submitTranslation = translations.Submit;
-    if (submitTranslation && submitTranslation.text && submitButton) {
-      submitButton.innerHTML = submitTranslation.text;
-    }
-
-    translateConsentAndPrivacy(translations, formApi.vals());
+    var submit = currentTranslations.Submit;
+    if (submit && submit.text && submitButton) submitButton.innerHTML = submit.text;
+    translateConsentAndPrivacy(currentTranslations, formApi.vals());
   }
 
   function fieldValue(values, fieldName) {
@@ -142,20 +151,18 @@
     return value === undefined || value === null || value === "" ? "not defined" : String(value);
   }
 
-  function selectedLabel(fieldName, values) {
-    var select = document.getElementById(fieldName);
-    if (select && select.selectedIndex >= 0) return select.options[select.selectedIndex].text;
-    return fieldValue(values, fieldName);
-  }
-
-  function postLead(values) {
+  function postLead(values, recaptchaResponse) {
+    if (!config.postUrl) return Promise.resolve();
+    var select = document.getElementById("enquiryType");
     var payload = new URLSearchParams();
     var fields = {
       url: window.location.href,
       form_id: formElement.id,
       form_type: formElement.getAttribute("form-type"),
-      form_destination: formElement.getAttribute("data-destination"),
+      form_destination: config.destination,
       form_content: formElement.getAttribute("data-content"),
+      campaign: config.campaign,
+      my_campaign: config.myCampaign,
       preferred_language: fieldValue(values, "preferredLanguage"),
       salutation: fieldValue(values, "Salutation"),
       first_name: fieldValue(values, "FirstName"),
@@ -171,9 +178,8 @@
       country: fieldValue(values, "Country"),
       purchase_authority: fieldValue(values, "Purchase_Authority__c"),
       opt_in: fieldValue(values, "Opt_in__c"),
-      enquiry_type: selectedLabel("enquiryType", values),
+      enquiry_type: select && select.selectedIndex >= 0 ? select.options[select.selectedIndex].text : fieldValue(values, "enquiryType"),
       enquiry_type_not_translated: fieldValue(values, "enquiryType"),
-      my_campaign: formElement.getAttribute("data-my-campaign") || "",
       enquiry: fieldValue(values, "enquiry"),
       interested_in: fieldValue(values, "interestedIn"),
       programMemberField01: fieldValue(values, "programMemberField01"),
@@ -183,16 +189,13 @@
       purchase_timeline: fieldValue(values, "Purchase_Timeline__c"),
       programMemberField05: fieldValue(values, "programMemberField05"),
       programMemberField06: fieldValue(values, "programMemberField06"),
-      reCAPTCHALastUserFingerprint: recaptchaLastUserFingerprint
+      reCAPTCHALastUserFingerprint: recaptchaResponse
     };
-
-    Object.keys(fields).forEach(function (key) {
-      payload.set(key, fields[key]);
-    });
+    Object.keys(fields).forEach(function (key) { payload.set(key, fields[key]); });
 
     var controller = new AbortController();
     var timeout = window.setTimeout(function () { controller.abort(); }, 10000);
-    return fetch(formElement.getAttribute("data-post-url"), {
+    return fetch(config.postUrl, {
       method: "POST",
       credentials: "same-origin",
       headers: { "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8" },
@@ -200,59 +203,105 @@
       signal: controller.signal
     }).then(function (response) {
       if (!response.ok) throw new Error("Lead post failed with HTTP " + response.status);
-    }).finally(function () {
-      window.clearTimeout(timeout);
-    });
+    }).finally(function () { window.clearTimeout(timeout); });
   }
 
-  function validateBusinessEmail() {
-    var values = formApi.vals();
-    var email = values.Email || "";
-    var emailField = window.jQuery(formApi.getFormElem()).find("#Email");
-    var domain = email.split("@")[1];
-    if (!domain || ["gmail.com", "yahoo.com", "outlook.com"].indexOf(domain.toLowerCase()) !== -1) {
-      formApi.showErrorMessage("Please enter your business email address", emailField);
-      var input = document.getElementById("Email");
-      if (input) input.focus();
-      return false;
-    }
-    return true;
+  function showError(message) {
+    if (!errorElement) return;
+    errorElement.textContent = message;
+    errorElement.hidden = false;
   }
+
+  function clearError() {
+    if (!errorElement) return;
+    errorElement.textContent = "";
+    errorElement.hidden = true;
+  }
+
+  function hideFieldRow(fieldName) {
+    var field = document.getElementById(fieldName);
+    var row = field && field.closest(".mktoFormRow");
+    if (row) row.style.display = "none";
+  }
+
+  function applyShortcodeSettings(form) {
+    var initialValues = {};
+    var presetFields = {
+      preferredLanguage: config.preferredLanguage,
+      interestedIn: config.interestedIn,
+      SF_Job_Title__c: config.jobTitle,
+      customerIndustry: config.industry
+    };
+    if (config.enquiryType) presetFields.enquiryType = config.enquiryType;
+    if (config.country) presetFields.Country = config.country;
+    Object.keys(presetFields).forEach(function (field) {
+      if (presetFields[field] !== "") initialValues[field] = presetFields[field];
+    });
+    form.vals(initialValues);
+
+    var hiddenFields = { lastFormReferrer: document.location.href };
+    if (config.myCampaign) hiddenFields.programMemberField01 = config.myCampaign;
+    form.addHiddenFields(hiddenFields);
+
+    if (config.display === "none") {
+      Object.keys(initialValues).forEach(hideFieldRow);
+      if (config.country === "Costa Rica") hideFieldRow("Country");
+    }
+    if (config.displaySalutation === "false") hideFieldRow("Salutation");
+  }
+
+  var config = {
+    baseUrl: formElement.getAttribute("data-base-url") || "//pages.atos.net",
+    customerId: formElement.getAttribute("data-customer-id") || "247-MBJ-716",
+    campaign: formElement.getAttribute("data-campaign") || "",
+    myCampaign: formElement.getAttribute("data-my-campaign") || "",
+    display: formElement.getAttribute("data-display") || "none",
+    preferredLanguage: formElement.getAttribute("data-preferred-language") || "English US",
+    enquiryType: params.get("EnquiryTypeId") || params.get("enquiryType") || formElement.getAttribute("data-enquiry-type") || "",
+    interestedIn: formElement.getAttribute("data-interested-in") || "",
+    jobTitle: formElement.getAttribute("data-job-title") || "",
+    industry: formElement.getAttribute("data-industry") || "",
+    country: formElement.getAttribute("data-country-predefined") || "",
+    displaySalutation: formElement.getAttribute("data-display-salutation") || "true",
+    destination: formElement.getAttribute("data-destination") || "/confirmation-safekit/",
+    postUrl: formElement.getAttribute("data-post-url") || "",
+    recaptchaSiteKey: "6Le7pcMtAAAAAJXkLnMzsIxNUBiAV-wzbuST3H2R"
+  };
 
   function renderRecaptcha() {
     if (!recaptchaApiReady || !formApi || recaptchaWidgetId !== null || !window.grecaptcha) return;
-
     var marketoElement = formApi.getFormElem()[0];
     var buttonRow = marketoElement.querySelector(".mktoButtonRow");
-    var recaptchaContainer = document.createElement("div");
-    recaptchaContainer.id = "contactMarketoRecaptcha";
-    recaptchaContainer.className = "contact-marketo-recaptcha";
-    if (buttonRow) marketoElement.insertBefore(recaptchaContainer, buttonRow);
-    else marketoElement.appendChild(recaptchaContainer);
+    var container = document.createElement("div");
+    container.id = "contactMarketoRecaptcha";
+    container.className = "contact-marketo-recaptcha";
+    if (buttonRow) marketoElement.insertBefore(container, buttonRow);
+    else marketoElement.appendChild(container);
 
     try {
-      recaptchaWidgetId = window.grecaptcha.render(recaptchaContainer, {
-        sitekey: recaptchaSiteKey,
+      recaptchaWidgetId = window.grecaptcha.render(container, {
+        sitekey: config.recaptchaSiteKey,
         callback: function () {
           recaptchaReady = true;
-          if (formApi) formApi.submittable(true);
+          formApi.submittable(true);
           if (submitButton) submitButton.disabled = false;
           clearError();
         },
         "expired-callback": function () {
           recaptchaReady = false;
-          if (formApi) formApi.submittable(false);
+          recaptchaToken = "";
+          formApi.submittable(false);
           if (submitButton) submitButton.disabled = true;
         },
         "error-callback": function () {
           recaptchaReady = false;
-          if (formApi) formApi.submittable(false);
+          formApi.submittable(false);
           if (submitButton) submitButton.disabled = true;
           showError("The security check failed to load. Please reload the page and try again.");
         }
       });
-      if (submitButton) submitButton.disabled = true;
       formApi.submittable(false);
+      if (submitButton) submitButton.disabled = true;
     } catch (error) {
       showError("The security check could not be initialized. Please reload the page and try again.");
       console.error("SafeKit contact reCAPTCHA render failed:", error);
@@ -267,76 +316,56 @@
     var script = document.createElement("script");
     script.src = "https://www.google.com/recaptcha/api.js?onload=contactMarketoRecaptchaLoaded&render=explicit";
     script.async = true;
-    script.onerror = function () {
-      showError("The security check could not be loaded. Please reload the page and try again.");
-    };
+    script.onerror = function () { showError("The security check could not be loaded. Please reload the page and try again."); };
     document.head.appendChild(script);
   }
 
+  var formApi = null;
+  var submitButton = null;
+  var recaptchaApiReady = false;
+  var recaptchaReady = false;
+  var recaptchaWidgetId = null;
+  var recaptchaToken = "";
+  var errorElement = document.getElementById("contactMarketoSubmitError");
   loadRecaptcha();
-
-  var enquiryType = params.get("EnquiryTypeId") || params.get("enquiryType") || "Product Information";
-  var initialValues = { interestedIn: "High Availability" };
-  if (enquiryType) initialValues.enquiryType = enquiryType;
-  var preferredLanguage = params.get("preferredLanguage");
-  if (preferredLanguage) initialValues.preferredLanguage = preferredLanguage;
-
-  window.MktoForms2.loadForm("//pages.atos.net", "247-MBJ-716", 1624, function (form) {
+  window.MktoForms2.loadForm(config.baseUrl, config.customerId, Number((formElement.id.match(/\d+/) || ["1624"])[0]), function (form) {
     formApi = form;
     submitButton = form.getFormElem()[0].querySelector("button[type='submit']");
-    var configuredValues = {
-      preferredLanguage: preferredLanguage || "English US",
-      enquiryType: enquiryType,
-      interestedIn: "High Availability",
-      SF_Job_Title__c: "Not specified",
-      customerIndustry: "Other"
-    };
-    form.vals(Object.assign(configuredValues, initialValues));
-    form.addHiddenFields({ lastFormReferrer: document.location.href });
-    ["preferredLanguage", "enquiryType", "interestedIn", "SF_Job_Title__c", "customerIndustry", "Salutation"].forEach(hideFieldRow);
+    applyShortcodeSettings(form);
+    translateFormLabels();
     form.submittable(false);
     if (submitButton) submitButton.disabled = true;
-    translateFormLabels();
     renderRecaptcha();
 
     form.onValidate(function (nativeValid) {
       if (!nativeValid) return;
-      if (replayingValidatedSubmit) {
-        replayingValidatedSubmit = false;
-        validationLocked = false;
+      if (!validateBusinessEmail()) {
+        form.submittable(false);
         return;
       }
-      if (validationLocked) return;
-      if (!validateBusinessEmail()) return;
       if (!recaptchaReady || recaptchaWidgetId === null || !window.grecaptcha) {
+        form.submittable(false);
         showError("Please complete the reCAPTCHA checkbox before submitting.");
         return;
       }
-
-      var recaptchaResponse = window.grecaptcha.getResponse(recaptchaWidgetId);
-      if (!recaptchaResponse) {
+      recaptchaToken = window.grecaptcha.getResponse(recaptchaWidgetId);
+      if (!recaptchaToken) {
+        recaptchaReady = false;
+        form.submittable(false);
         showError("Please complete the reCAPTCHA checkbox before submitting.");
         return;
       }
-
-      validationLocked = true;
-      if (submitButton) submitButton.disabled = true;
-      clearError();
-      recaptchaLastUserFingerprint = recaptchaResponse;
-      form.addHiddenFields({ reCAPTCHALastUserFingerprint: recaptchaResponse });
+      form.addHiddenFields({ reCAPTCHALastUserFingerprint: recaptchaToken });
       form.submittable(true);
-      replayingValidatedSubmit = true;
-      form.submit();
+      clearError();
     });
 
     form.onSuccess(function (values, followUpUrl) {
-      var destination = formElement.getAttribute("data-destination") || followUpUrl;
+      var destination = config.destination || followUpUrl;
       if (typeof window.gtag === "function") {
-        window.gtag("event", "conversion", {
-          send_to: "AW-978904711/Y3XjCIbkmvsBEIfN49ID"
-        });
+        window.gtag("event", "conversion", { send_to: "AW-978904711/Y3XjCIbkmvsBEIfN49ID" });
       }
-      postLead(values).catch(function (error) {
+      postLead(values, recaptchaToken).catch(function (error) {
         console.error("SafeKit lead tracking post failed; continuing to confirmation:", error);
       }).finally(function () {
         window.location.assign(destination);
@@ -344,6 +373,13 @@
       return false;
     });
 
-    window.jQuery(form.getFormElem()).on("change", ".mktoField", translateFormLabels);
+    if (window.jQuery) window.jQuery(form.getFormElem()).on("change", ".mktoField", translateFormLabels);
+    form.getFormElem().on("focusin", ".mktoErrorMsg", function () {
+      if (typeof languageTranslations === "undefined") return;
+      var translations = languageTranslations[currentLanguage()];
+      var fieldId = this.id.replace("ValidMsg", "");
+      var fieldTranslation = translations && translations[fieldId];
+      if (fieldTranslation && fieldTranslation.requiredError) this.textContent = fieldTranslation.requiredError;
+    });
   });
 })();

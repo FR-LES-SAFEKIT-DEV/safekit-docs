@@ -74,10 +74,22 @@ sitemap:
   <form
     id="mktoForm_1624"
     class="mktoForm marketo"
+    data-base-url="//pages.atos.net"
+    data-customer-id="247-MBJ-716"
+    data-campaign="Global-Evidian-Contact Us-2022"
+    data-my-campaign="Contact EN (REQUIRES AN ANSWER)"
+    data-display="none"
+    data-preferred-language="English US"
+    data-enquiry-type=""
+    data-interested-in="High Availability"
+    data-job-title="Not specified"
+    data-industry="Other"
+    data-country-predefined=""
+    data-display-salutation="false"
     form-type="Page Redirect"
     data-content="CONTACT_EN Contact Eviden"
     data-destination="/confirmation-safekit/"
-    data-post-url="/wp-content/themes/safekit/scripts/marketo-lead-post.php">
+    data-post-url="https://www.evidian.com/p/sm7/marketo-lead-post.php">
   </form>
 </div>
 <p id="contactMarketoSubmitError" class="contact-marketo-error" role="alert" aria-live="polite" hidden></p>
