@@ -6,7 +6,7 @@
 
   var params = new URLSearchParams(window.location.search);
   var config = {
-    baseUrl: formElement.dataset.baseUrl || "//pages.atos.net",
+    baseUrl: formElement.dataset.baseUrl || "https://pages.atos.net",
     customerId: formElement.dataset.customerId || "247-MBJ-716",
     formId: Number(formElement.dataset.formId || "1624"),
     campaign: formElement.dataset.campaign || "",
@@ -243,7 +243,67 @@
       ["preferredLanguage", "enquiryType", "interestedIn", "SF_Job_Title__c", "customerIndustry"].forEach(hideFieldRow);
       if (config.country === "Costa Rica") hideFieldRow("Country");
     }
-    if (config.displaySalutation === "false") hideFieldRow("Salutation");
+    if (config.display !== "all" && config.display !== "hidden" && config.displaySalutation === "false") hideFieldRow("Salutation");
+  }
+
+  function showAllFields(form) {
+    if (config.display !== "all" && config.display !== "hidden") return;
+    var element = form.getFormElem()[0];
+    var panel = element.querySelector(".contact-marketo-hidden-fields");
+    var table = null;
+    if (config.display === "hidden") {
+      if (!panel) {
+        panel = document.createElement("div");
+        panel.className = "contact-marketo-hidden-fields";
+        panel.style.clear = "both";
+        panel.style.color = "#fff";
+        panel.style.padding = "1rem 0";
+        element.appendChild(panel);
+      }
+      panel.replaceChildren();
+      var heading = document.createElement("h3");
+      heading.textContent = "Champs caches (diagnostic, lecture seule)";
+      heading.style.color = "#fff";
+      panel.appendChild(heading);
+      table = document.createElement("table");
+      table.style.width = "100%";
+      table.style.tableLayout = "fixed";
+      table.style.overflowWrap = "anywhere";
+      panel.appendChild(table);
+    }
+    Array.prototype.forEach.call(element.querySelectorAll("input[name], select[name], textarea[name]"), function (field) {
+      if (/^(button|submit|reset|image)$/i.test(field.type)) return;
+      if (field.type === "hidden" || /^(g-recaptcha-response|reCAPTCHALastUserFingerprint)$/i.test(field.name)) {
+        if (!table) return;
+        var row = table.insertRow();
+        var label = document.createElement("th");
+        label.scope = "row";
+        label.style.textAlign = "left";
+        label.textContent = field.name;
+        row.appendChild(label);
+        var valueCell = row.insertCell();
+        valueCell.textContent = field.value || "(vide)";
+        [label, valueCell].forEach(function (cell) {
+          cell.style.setProperty("color", "#002d3c", "important");
+          cell.style.setProperty("background-color", cell === label ? "#e7eef0" : "#fff", "important");
+          cell.style.padding = "8px 10px";
+          cell.style.verticalAlign = "top";
+          cell.style.whiteSpace = "normal";
+          cell.style.overflowWrap = "anywhere";
+        });
+        return;
+      }
+      var parent = field;
+      while (parent && parent !== element) {
+        parent.hidden = false;
+        if (window.getComputedStyle(parent).display === "none") {
+          parent.style.setProperty("display", "block", "important");
+        }
+        parent.style.setProperty("visibility", "visible", "important");
+        parent = parent.parentElement;
+      }
+    });
+    if (panel) panel.hidden = !table || table.rows.length === 0;
   }
 
   function applyQueryParameters(form) {
@@ -323,6 +383,7 @@
   var recaptchaWidgetId = null;
   var leadPostRecaptchaToken = "";
   var errorElement = document.getElementById("contactMarketoSubmitError");
+  var skipRecaptcha = ["localhost", "127.0.0.1", "[::1]"].indexOf(window.location.hostname) !== -1;
 
   function renderRecaptcha() {
     if (!recaptchaApiReady || !formApi || recaptchaWidgetId !== null || !window.grecaptcha) return;
@@ -340,23 +401,19 @@
         callback: function (token) {
           leadPostRecaptchaToken = token;
           formApi.submittable(true);
-          if (submitButton) submitButton.disabled = false;
           clearError();
         },
         "expired-callback": function () {
           leadPostRecaptchaToken = "";
           formApi.submittable(false);
-          if (submitButton) submitButton.disabled = true;
         },
         "error-callback": function () {
           leadPostRecaptchaToken = "";
           formApi.submittable(false);
-          if (submitButton) submitButton.disabled = true;
           showError("The security check failed to load. Please reload the page and try again.");
         }
       });
       formApi.submittable(false);
-      if (submitButton) submitButton.disabled = true;
     } catch (error) {
       showError("The security check could not be initialized. Please reload the page and try again.");
       console.error("SafeKit contact reCAPTCHA render failed:", error);
@@ -375,7 +432,7 @@
     document.head.appendChild(script);
   }
 
-  initializeRecaptcha();
+  if (!skipRecaptcha) initializeRecaptcha();
   window.MktoForms2.loadForm(config.baseUrl, config.customerId, config.formId, function (form) {
     formApi = form;
     submitButton = form.getFormElem()[0].querySelector("button[type='submit']");
@@ -383,14 +440,29 @@
     translateFormLabels();
     applyQueryParameters(form);
     translateFormLabels();
-    form.submittable(false);
-    if (submitButton) submitButton.disabled = true;
+    showAllFields(form);
+    if (config.display === "all" || config.display === "hidden") {
+      form.getFormElem()[0].addEventListener("change", function () { showAllFields(form); });
+      window.MktoForms2.whenRendered(function (renderedForm) {
+        if (renderedForm.getFormElem()[0] === form.getFormElem()[0]) showAllFields(form);
+      });
+    }
+    form.submittable(skipRecaptcha);
     renderRecaptcha();
 
     form.onValidate(function (nativeValid) {
-      if (!nativeValid) return;
+      showAllFields(form);
+      if (!nativeValid) {
+        showError("Please complete all required fields and correct the highlighted values before submitting.");
+        return;
+      }
       if (!validateBusinessEmail()) {
         form.submittable(false);
+        return;
+      }
+      if (skipRecaptcha) {
+        form.submittable(true);
+        clearError();
         return;
       }
       var token = window.grecaptcha && recaptchaWidgetId !== null ? window.grecaptcha.getResponse(recaptchaWidgetId) : "";

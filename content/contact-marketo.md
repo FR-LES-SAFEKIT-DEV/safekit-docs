@@ -76,13 +76,13 @@ sitemap:
     class="mktoForm marketo"
     data-form-id="1624"
     data-recaptcha-site-key="6LfknPwtAAAAAGrFSRn97ItGAZvFyCdvQIspy7Y0"
-    data-base-url="//pages.atos.net"
+    data-base-url="https://pages.atos.net"
     data-customer-id="247-MBJ-716"
     data-campaign="Global-Evidian-Contact Us-2022"
     data-my-campaign="Contact EN (REQUIRES AN ANSWER)"
-    data-display=""
+    data-display="all"
     data-preferred-language="English US"
-    data-enquiry-type=""
+    data-enquiry-type="Product Information"
     data-interested-in="High Availability"
     data-job-title="Not specified"
     data-industry="Other"
@@ -99,4 +99,4 @@ sitemap:
 <script src="/js/jquery.min.js"></script>
 <script src="/js/marketo-translations.js"></script>
 <script src="https://pages.atos.net/js/forms2/js/forms2.min.js"></script>
-<script src="/js/contact-marketo.js"></script>
+<script src="/js/contact-marketo.js?v=20261023-4"></script>
