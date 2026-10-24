@@ -109,14 +109,11 @@
     }
     var privacyOptions = translations.PrivacyText;
     if (Array.isArray(privacyOptions)) {
-      var privacyIndex = privacyOptions.findIndex(function (option) { return option.value === policy.type; });
-      if (privacyIndex < 0) privacyIndex = 0;
-      if (privacyOptions[privacyIndex]) htmlText[htmlText.length - 1].innerHTML = privacyOptions[privacyIndex].text;
+      var privacyText = privacyOptions.find(function (option) { return option.value === "none"; });
+      if (privacyText) htmlText[htmlText.length - 1].innerHTML = privacyText.text;
     }
     var privacyUrl = currentLanguage() === "French" ? "https://eviden.com/fr-fr/politique-de-confidentialite/" : "https://eviden.com/privacy-policy/";
-    addPolicyLink(htmlText[htmlText.length - 1], /(Privacy Policy|Politique de confidentialité|Informativa sulla privacy|Datenschutzrichtlinie|Política de privacidad|Privacybeleid|Política de Privacidade)/g, privacyUrl);
-    addPolicyLink(htmlText[htmlText.length - 1], policy.pattern, policy.url);
-    if (policy.type === "CCPA") addPolicyLink(htmlText[htmlText.length - 1], policy.pattern2, policy.url2);
+    addPolicyLink(htmlText[htmlText.length - 1], /(Privacy Policy|Politique de confidentialité|Informativa sulla privacy|Datenschutzrichtlinie|Política de privacidad|Privacybeleid|Política de Privacidade|隐私政策)/g, privacyUrl);
   }
 
   function translateFormLabels() {
