@@ -406,6 +406,21 @@
     if (buttonRow) marketoElement.insertBefore(container, buttonRow);
     else marketoElement.appendChild(container);
 
+    function alignRecaptcha() {
+      var textBlocks = marketoElement.querySelectorAll(".mktoHtmlText");
+      var privacyText = textBlocks[textBlocks.length - 1];
+      if (!privacyText) return;
+      var textBounds = privacyText.getBoundingClientRect();
+      var containerBounds = container.getBoundingClientRect();
+      var textStyle = window.getComputedStyle(privacyText);
+      var rtl = window.getComputedStyle(marketoElement).direction === "rtl";
+      var offset = rtl ? containerBounds.right - textBounds.right + parseFloat(textStyle.paddingRight || "0") :
+        textBounds.left - containerBounds.left + parseFloat(textStyle.paddingLeft || "0");
+      container.style.paddingInlineStart = Math.max(0, offset) + "px";
+    }
+    alignRecaptcha();
+    if (window.ResizeObserver) new window.ResizeObserver(alignRecaptcha).observe(marketoElement);
+
     try {
       recaptchaWidgetId = window.grecaptcha.render(container, {
         sitekey: config.recaptchaSiteKey,
