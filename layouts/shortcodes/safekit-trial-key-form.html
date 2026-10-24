@@ -13,8 +13,10 @@
   "pt-pt" (dict "email" "Endereço de e-mail" "privacyBefore" "A sua privacidade é importante para nós. Ao enviar este formulário, aceita os termos da nossa" "privacyLink" "Política de Privacidade" "privacyAfter" ". Leia-a para compreender como protegemos os seus direitos." "submit" "Pedir chave de avaliação gratuita ›" "captchaError" "Confirme que não é um robô." "resultTitle" "Resultado do pedido da chave de avaliação do SafeKit")
 -}}
 {{- $copy := index $labels .Site.Language.Lang | default (index $labels "en") -}}
+{{- $captchaLanguages := dict "zh-hans" "zh-CN" "pt-br" "pt-BR" "pt-pt" "pt-PT" -}}
+{{- $captchaLanguage := index $captchaLanguages .Site.Language.Lang | default .Site.Language.Lang -}}
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?hl={{ $captchaLanguage }}" async defer></script>
 
 <form class="safekit-trial-key-form" action="https://license.my.evidian.com/sek.asp" method="get" target="safekit-trial-key-result-frame" onsubmit="return safekitTrialKeyCaptchaValidated();">
   <label for="trial-key-email">{{ index $copy "email" }}</label>
