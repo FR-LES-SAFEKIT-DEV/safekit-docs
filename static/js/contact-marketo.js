@@ -447,18 +447,29 @@
   }
 
   function initializeRecaptcha() {
+    var languageCodes = {
+      "English US": "en", "English GB": "en-GB", "French": "fr", "German": "de",
+      "Italian": "it", "Spanish": "es", "European Spanish": "es", "Latin American Spanish": "es-419",
+      "Dutch": "nl", "Brazilian Portuguese": "pt-BR", "PT-PT": "pt-PT",
+      "Japanese": "ja", "ZH-HANS": "zh-CN", "AR": "ar", "KO": "ko"
+    };
     window.contactMarketoRecaptchaLoaded = function () {
       recaptchaApiReady = true;
       renderRecaptcha();
     };
     var script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js?onload=contactMarketoRecaptchaLoaded&render=explicit";
+    var apiUrl = new URL("https://www.google.com/recaptcha/api.js");
+    apiUrl.search = new URLSearchParams({
+      onload: "contactMarketoRecaptchaLoaded",
+      render: "explicit",
+      hl: languageCodes[currentLanguage()] || "en"
+    }).toString();
+    script.src = apiUrl.toString();
     script.async = true;
     script.onerror = function () { showError("The security check could not be loaded. Please reload the page and try again."); };
     document.head.appendChild(script);
   }
 
-  if (!skipRecaptcha) initializeRecaptcha();
   window.MktoForms2.loadForm(config.baseUrl, config.customerId, config.formId, function (form) {
     formApi = form;
     submitButton = form.getFormElem()[0].querySelector("button[type='submit']");
@@ -474,6 +485,7 @@
       });
     }
     form.submittable(skipRecaptcha);
+    if (!skipRecaptcha) initializeRecaptcha();
     renderRecaptcha();
 
     form.onValidate(function (nativeValid) {
