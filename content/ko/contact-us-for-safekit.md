@@ -8,4 +8,4 @@ category: "home"
 
 # SafeKit 문의하기 {#contact-us-for-safekit}
 
-{{< contact-marketo-form language="KO" interested-in="High Availability" enquiry-type="" destination="/ko/confirmation-safekit/" >}}
+{{< contact-marketo-form language="KO" interested-in="High Availability" enquiry-type="" destination="/ko/confirmation-safekit/" my-campaign="Contact KO (REQUIRES AN ANSWER)" country-predefined="Korea, Republic of" >}}

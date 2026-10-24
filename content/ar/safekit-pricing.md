@@ -36,4 +36,4 @@ topics: "نموذج الترخيص والأسعار، الدعم والصيان�
 
 **ملاحظة:** للتوافر العالي على مستوى الآلات الافتراضية، لا تتطلب وحدتا `hyperv.safe` و`kvm.safe` سوى ترخيصَي SafeKit لمضيفَي Hypervisor، بغض النظر عن عدد الآلات الافتراضية التي تتم مزامنتها وإعادة تشغيلها.
 
-{{< contact-marketo-form language="AR" interested-in="High Availability" enquiry-type="Price Quote" destination="/ar/confirmation-safekit/" >}}
+{{< contact-marketo-form language="AR" interested-in="High Availability" enquiry-type="Price Quote" destination="/ar/confirmation-safekit/" my-campaign="Contact AR (REQUIRES AN ANSWER)" country-predefined="" >}}

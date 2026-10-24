@@ -36,4 +36,4 @@ Com um contrato de suporte ativo, o suporte padrão inclui acesso 24 horas por d
 
 **Nota:** Para HA ao nível da VM, `hyperv.safe` e `kvm.safe` requerem apenas duas licenças SafeKit para os dois anfitriões de hipervisor, independentemente do número de máquinas virtuais replicadas e reiniciadas.
 
-{{< contact-marketo-form language="PT-PT" interested-in="High Availability" enquiry-type="Price Quote" destination="/pt-pt/confirmation-safekit/" >}}
+{{< contact-marketo-form language="PT-PT" interested-in="High Availability" enquiry-type="Price Quote" destination="/pt-pt/confirmation-safekit/" my-campaign="Contact PT (REQUIRES AN ANSWER)" country-predefined="Portugal" >}}

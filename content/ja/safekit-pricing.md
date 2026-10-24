@@ -36,4 +36,4 @@ SafeKitはオフラインでのライセンス認証に対応しているため�
 
 **注:** VMレベルのHAでは、`hyperv.safe` と `kvm.safe` に必要なSafeKitライセンスは2つのハイパーバイザーホスト分の2ライセンスのみです。複製して再起動する仮想マシンの数は問いません。
 
-{{< contact-marketo-form language="Japanese" interested-in="High Availability" enquiry-type="Price Quote" destination="/ja/confirmation-safekit/" >}}
+{{< contact-marketo-form language="Japanese" interested-in="High Availability" enquiry-type="Price Quote" destination="/ja/confirmation-safekit/" my-campaign="Contact JA (REQUIRES AN ANSWER)" country-predefined="Japan" >}}

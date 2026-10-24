@@ -213,6 +213,19 @@
     }).finally(function () { window.clearTimeout(timeout); });
   }
 
+  function validateBusinessEmail() {
+    var email = String(formApi.vals().Email || "").trim();
+    var domain = email.split("@")[1];
+    var emailField = formApi.getFormElem()[0].querySelector('input[name="Email"]');
+    var invalidFormat = emailField && (emailField.validity.typeMismatch || emailField.classList.contains("mktoInvalid"));
+    if (!domain || invalidFormat || ["gmail.com", "yahoo.com", "outlook.com"].indexOf(domain.toLowerCase()) !== -1) {
+      if (emailField) emailField.focus();
+      formApi.showErrorMessage("Please enter your business email address", window.MktoForms2.$(emailField));
+      return false;
+    }
+    return true;
+  }
+
   function applyShortcodeSettings(form) {
     var languageField = form.getFormElem()[0].querySelector('select[name="preferredLanguage"]');
     if (languageField) {
@@ -450,6 +463,10 @@
 
     form.onValidate(function (nativeValid) {
       showAllFields(form);
+      if (!validateBusinessEmail()) {
+        form.submittable(false);
+        return;
+      }
       if (!nativeValid) {
         showError("Please complete all required fields and correct the highlighted values before submitting.");
         return;
