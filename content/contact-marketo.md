@@ -9,4 +9,4 @@ sitemap:
 
 # Contact SafeKit {#contact-marketo}
 
-{{< contact-marketo-form >}}
+{{< contact-marketo-form preferredLanguage="English US" interestedIn="KMS (Cosmian)" enquiryType="" visibleFields="enquiryType" destination="/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
