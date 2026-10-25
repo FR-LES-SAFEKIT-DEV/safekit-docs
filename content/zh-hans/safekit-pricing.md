@@ -36,4 +36,4 @@ SafeKit 支持离线激活许可，因此激活许可密钥时无需连接互联
 
 **注意：**对于虚拟机级高可用，`hyperv.safe` 和 `kvm.safe` 只需为两台虚拟机监控程序主机购买两份 SafeKit 许可，与复制和重启的虚拟机数量无关。
 
-{{< contact-marketo-form language="ZH-HANS" interested-in="High Availability" enquiry-type="Price Quote" destination="/zh-hans/confirmation-safekit/" my-campaign="Contact ZH (REQUIRES AN ANSWER)" country-predefined="China" >}}
+{{< contact-marketo-form preferredLanguage="ZH-HANS" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact ZH (REQUIRES AN ANSWER)" Country="China" >}}

@@ -8,4 +8,4 @@ category: "home"
 
 # Entre em contato conosco sobre a SafeKit {#contact-us-for-safekit}
 
-{{< contact-marketo-form language="Brazilian Portuguese" interested-in="High Availability" enquiry-type="" destination="/pt-br/confirmation-safekit/" my-campaign="Contact PT (REQUIRES AN ANSWER)" country-predefined="Brazil" >}}
+{{< contact-marketo-form preferredLanguage="Brazilian Portuguese" interestedIn="High Availability" enquiryType="" destination="/pt-br/confirmation-safekit/" programMemberField01="Contact PT (REQUIRES AN ANSWER)" Country="Brazil" >}}

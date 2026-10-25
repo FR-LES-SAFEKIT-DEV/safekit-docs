@@ -36,4 +36,4 @@ Mit einem aktiven Supportvertrag umfasst der Standard-Support rund um die Uhr an
 
 **Hinweis:** Für Hochverfügbarkeit auf VM-Ebene benötigen `hyperv.safe` und `kvm.safe` nur zwei SafeKit-Lizenzen für die beiden Hypervisor-Hosts, unabhängig von der Anzahl der replizierten und neu gestarteten virtuellen Maschinen.
 
-{{< contact-marketo-form language="German" interested-in="High Availability" enquiry-type="Price Quote" destination="/de/confirmation-safekit/" my-campaign="Contact DE (REQUIRES AN ANSWER)" country-predefined="Germany" >}}
+{{< contact-marketo-form preferredLanguage="German" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/de/confirmation-safekit/" programMemberField01="Contact DE (REQUIRES AN ANSWER)" Country="Germany" >}}

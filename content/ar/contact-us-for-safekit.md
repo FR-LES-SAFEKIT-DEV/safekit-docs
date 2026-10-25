@@ -8,4 +8,4 @@ category: "home"
 
 # اتصل بنا بشأن SafeKit {#contact-us-for-safekit}
 
-{{< contact-marketo-form language="AR" interested-in="High Availability" enquiry-type="" destination="/ar/confirmation-safekit/" my-campaign="Contact AR (REQUIRES AN ANSWER)" country-predefined="" >}}
+{{< contact-marketo-form preferredLanguage="AR" interestedIn="High Availability" enquiryType="" destination="/ar/confirmation-safekit/" programMemberField01="Contact AR (REQUIRES AN ANSWER)" Country="" >}}

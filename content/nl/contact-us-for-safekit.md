@@ -8,4 +8,4 @@ category: "home"
 
 # Neem contact met ons op over SafeKit {#contact-us-for-safekit}
 
-{{< contact-marketo-form language="Dutch" interested-in="High Availability" enquiry-type="" destination="/nl/confirmation-safekit/" my-campaign="Contact NL (REQUIRES AN ANSWER)" country-predefined="Netherlands" >}}
+{{< contact-marketo-form preferredLanguage="Dutch" interestedIn="High Availability" enquiryType="" destination="/nl/confirmation-safekit/" programMemberField01="Contact NL (REQUIRES AN ANSWER)" Country="Netherlands" >}}

@@ -36,4 +36,4 @@ SafeKit은 오프라인 라이선스 활성화를 지원하므로 라이선스 �
 
 **참고:** VM 수준 HA에서 `hyperv.safe`와 `kvm.safe`는 복제 및 재시작되는 가상 머신 수와 관계없이 하이퍼바이저 호스트 2대에 대한 SafeKit 라이선스 2개만 필요합니다.
 
-{{< contact-marketo-form language="KO" interested-in="High Availability" enquiry-type="Price Quote" destination="/ko/confirmation-safekit/" my-campaign="Contact KO (REQUIRES AN ANSWER)" country-predefined="Korea, Republic of" >}}
+{{< contact-marketo-form preferredLanguage="KO" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/ko/confirmation-safekit/" programMemberField01="Contact KO (REQUIRES AN ANSWER)" Country="Korea, Republic of" >}}

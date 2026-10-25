@@ -6,22 +6,23 @@
 
   var params = new URLSearchParams(window.location.search);
   var config = {
-    baseUrl: formElement.dataset.baseUrl || "https://pages.atos.net",
-    customerId: formElement.dataset.customerId || "247-MBJ-716",
-    formId: Number(formElement.dataset.formId || "1624"),
-    campaign: formElement.dataset.campaign || "",
-    myCampaign: formElement.dataset.myCampaign || "",
-    display: formElement.dataset.display || "none",
-    preferredLanguage: formElement.dataset.preferredLanguage || "English US",
-    enquiryType: formElement.dataset.enquiryType || "",
-    interestedIn: formElement.dataset.interestedIn || "",
-    jobTitle: formElement.dataset.jobTitle || "",
-    industry: formElement.dataset.industry || "",
-    country: formElement.dataset.countryPredefined || "",
-    displaySalutation: formElement.dataset.displaySalutation || "true",
-    destination: formElement.dataset.destination || "/confirmation-safekit/",
-    postUrl: formElement.dataset.postUrl || "",
-    recaptchaSiteKey: formElement.dataset.recaptchaSiteKey || ""
+    baseUrl: formElement.getAttribute("data-baseUrl") || "https://pages.atos.net",
+    customerId: formElement.getAttribute("data-customerId") || "247-MBJ-716",
+    formId: Number(formElement.getAttribute("data-formId") || "1624"),
+    campaign: formElement.getAttribute("data-campaign") || "",
+    myCampaign: formElement.getAttribute("data-programMemberField01") || "",
+    display: formElement.getAttribute("data-display") || "none",
+    visibleFields: (formElement.getAttribute("data-visibleFields") || "").split(",").map(function (fieldName) { return fieldName.trim(); }).filter(Boolean),
+    preferredLanguage: formElement.getAttribute("data-preferredLanguage") || "English US",
+    enquiryType: formElement.getAttribute("data-enquiryType") || "",
+    interestedIn: formElement.getAttribute("data-interestedIn") || "",
+    jobTitle: formElement.getAttribute("data-SF_Job_Title__c") || "",
+    industry: formElement.getAttribute("data-customerIndustry") || "",
+    country: formElement.getAttribute("data-Country") || "",
+    displaySalutation: formElement.getAttribute("data-displaySalutation") || "true",
+    destination: formElement.getAttribute("data-destination") || "/confirmation-safekit/",
+    postUrl: formElement.getAttribute("data-postUrl") || "",
+    recaptchaSiteKey: formElement.getAttribute("data-recaptchaSiteKey") || ""
   };
 
   var formApi = null;
@@ -247,9 +248,9 @@
     form.addHiddenFields(hidden);
     if (config.display === "none") {
       ["preferredLanguage", "enquiryType", "interestedIn", "SF_Job_Title__c", "customerIndustry"].forEach(function (fieldName) {
-        if (values[fieldName] && appliedValues[fieldName] === values[fieldName]) hideFieldRow(fieldName);
+        if (config.visibleFields.indexOf(fieldName) === -1 && values[fieldName] && appliedValues[fieldName] === values[fieldName]) hideFieldRow(fieldName);
       });
-      if (config.country === "Costa Rica" && appliedValues.Country === config.country) hideFieldRow("Country");
+      if (config.visibleFields.indexOf("Country") === -1 && config.country === "Costa Rica" && appliedValues.Country === config.country) hideFieldRow("Country");
     }
     if (config.display !== "all" && config.display !== "hidden" && config.displaySalutation === "false") hideFieldRow("Salutation");
   }

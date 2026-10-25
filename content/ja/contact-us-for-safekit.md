@@ -8,4 +8,4 @@ category: "home"
 
 # SafeKitに関するお問い合わせ {#contact-us-for-safekit}
 
-{{< contact-marketo-form language="Japanese" interested-in="High Availability" enquiry-type="" destination="/ja/confirmation-safekit/" my-campaign="Contact JA (REQUIRES AN ANSWER)" country-predefined="Japan" >}}
+{{< contact-marketo-form preferredLanguage="Japanese" interestedIn="High Availability" enquiryType="" destination="/ja/confirmation-safekit/" programMemberField01="Contact JA (REQUIRES AN ANSWER)" Country="Japan" >}}

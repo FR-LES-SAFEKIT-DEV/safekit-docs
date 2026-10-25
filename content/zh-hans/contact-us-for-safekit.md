@@ -8,4 +8,4 @@ category: "home"
 
 # 联系我们，咨询 SafeKit {#contact-us-for-safekit}
 
-{{< contact-marketo-form language="ZH-HANS" interested-in="High Availability" enquiry-type="" destination="/zh-hans/confirmation-safekit/" my-campaign="Contact ZH (REQUIRES AN ANSWER)" country-predefined="China" >}}
+{{< contact-marketo-form preferredLanguage="ZH-HANS" interestedIn="High Availability" enquiryType="" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact ZH (REQUIRES AN ANSWER)" Country="China" >}}

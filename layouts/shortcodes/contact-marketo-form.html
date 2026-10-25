@@ -80,24 +80,25 @@
   <form
     id="mktoForm_1624"
     class="mktoForm marketo"
-    data-form-id="1624"
-    data-recaptcha-site-key="6LfknPwtAAAAAGrFSRn97ItGAZvFyCdvQIspy7Y0"
-    data-base-url="https://pages.atos.net"
-    data-customer-id="247-MBJ-716"
+    data-formId="1624"
+    data-recaptchaSiteKey="6LfknPwtAAAAAGrFSRn97ItGAZvFyCdvQIspy7Y0"
+    data-baseUrl="https://pages.atos.net"
+    data-customerId="247-MBJ-716"
     data-campaign="Global-Evidian-Contact Us-2022"
-    data-my-campaign="{{ .Get "my-campaign" | default "Contact (REQUIRES AN ANSWER)" }}"
+    data-programMemberField01="{{ .Get "programMemberField01" | default "Contact (REQUIRES AN ANSWER)" }}"
     data-display="{{ .Get "display" | default "none" }}"
-    data-preferred-language="{{ .Get "language" | default "English US" }}"
-    data-enquiry-type="{{ .Get "enquiry-type" | default "" }}"
-    data-interested-in="{{ .Get "interested-in" | default "" }}"
-    data-job-title="Not specified"
-    data-industry="Other"
-    data-country-predefined="{{ .Get "country-predefined" | default "" }}"
-    data-display-salutation="false"
+    data-visibleFields="{{ .Get "visibleFields" | default "" }}"
+    data-preferredLanguage="{{ .Get "preferredLanguage" | default "English US" }}"
+    data-enquiryType="{{ .Get "enquiryType" | default "" }}"
+    data-interestedIn="{{ .Get "interestedIn" | default "" }}"
+    data-SF_Job_Title__c="Not specified"
+    data-customerIndustry="Other"
+    data-Country="{{ .Get "Country" | default "" }}"
+    data-displaySalutation="false"
     form-type="Page Redirect"
     data-content="CONTACT Eviden"
     data-destination="{{ .Get "destination" | default "/confirmation-safekit/" }}"
-    data-post-url="https://www.evidian.com/wp-content/themes/safekit/scripts/marketo-lead-post.php">
+    data-postUrl="https://www.evidian.com/wp-content/themes/safekit/scripts/marketo-lead-post.php">
   </form>
 </div>
 <p id="contactMarketoSubmitError" class="contact-marketo-error" role="alert" aria-live="polite" hidden></p>
@@ -105,4 +106,4 @@
 <script src="/js/jquery.min.js"></script>
 <script src="/js/marketo-translations.js?v=20261023-11"></script>
 <script src="https://pages.atos.net/js/forms2/js/forms2.min.js"></script>
-<script src="/js/contact-marketo.js?v=20261024-4"></script>
+<script src="/js/contact-marketo.js?v=20261025-3"></script>

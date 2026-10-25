@@ -36,4 +36,4 @@ With an active support contract, standard support includes 24/7/365 access to th
 
 **Note:** For VM-level HA, `hyperv.safe` and `kvm.safe` require only two SafeKit licenses for the two hypervisor hosts, regardless of the number of virtual machines replicated and restarted.
 
-{{< contact-marketo-form language="English US" interested-in="High Availability" enquiry-type="Price Quote" destination="/confirmation-safekit/" my-campaign="Contact EN (REQUIRES AN ANSWER)" country-predefined="" >}}
+{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

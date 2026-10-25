@@ -8,4 +8,4 @@ category: "home"
 
 # Contattaci per SafeKit {#contact-us-for-safekit}
 
-{{< contact-marketo-form language="Italian" interested-in="High Availability" enquiry-type="" destination="/it/confirmation-safekit/" my-campaign="Contact IT (REQUIRES AN ANSWER)" country-predefined="Italy" >}}
+{{< contact-marketo-form preferredLanguage="Italian" interestedIn="High Availability" enquiryType="" destination="/it/confirmation-safekit/" programMemberField01="Contact IT (REQUIRES AN ANSWER)" Country="Italy" >}}
