@@ -318,8 +318,8 @@ const languageTranslations = {
                 { "value": "Product Information", "text": "产品信息" },
                 { "value": "Price Quote", "text": "报价" },
                 { "value": "Demo", "text": "产品演示" },
-                { "value": "Free trial package", "text": "免费试用" },
-                { "value": "Free trial license", "text": "概念验证（POC）" },
+                { "value": "Free trial package", "text": "免费试用软件包" },
+                { "value": "Free trial license", "text": "免费试用许可证" },
                 { "value": "Training & Certification", "text": "培训与认证" },
                 { "value": "New Solution or Services for Your Business", "text": "适合您企业的新解决方案或服务" },
                 { "value": "Product/Customer Support (current Eviden clients only)", "text": "产品与客户支持（仅限现有 Eviden 客户）" },
@@ -2709,11 +2709,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "無料トライアル （ダウンロード）"
+                 "text": "無料トライアルパッケージ"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "無料トライアル （ライセンス）"
+                 "text": "無料トライアルライセンス"
                 },
                 {
                  "value": "Training & Certification",
@@ -5218,11 +5218,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Trial"
+                 "text": "Free trial package"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Free trial license"
                 },
                 {
                  "value": "Training & Certification",
@@ -7724,11 +7724,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Trial"
+                 "text": "Free trial package"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Free trial license"
                 },
                 {
                  "value": "Training & Certification",
@@ -10229,11 +10229,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Essai"
+                 "text": "Package d’essai gratuit"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Licence d’essai gratuite"
                 },
                 {
                  "value": "Training & Certification",
@@ -12742,11 +12742,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Prova"
+                 "text": "Pacchetto di prova gratuito"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Licenza di prova gratuita"
                 },
                 {
                  "value": "Training & Certification",
@@ -15232,11 +15232,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Testversion"
+                 "text": "Kostenloses Testpaket"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Kostenlose Testlizenz"
                 },
                 {
                  "value": "Training & Certification",
@@ -17736,11 +17736,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Prueba"
+                 "text": "Paquete de prueba gratuito"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Licencia de prueba gratuita"
                 },
                 {
                  "value": "Training & Certification",
@@ -20246,11 +20246,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Prueba"
+                 "text": "Paquete de prueba gratuito"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Licencia de prueba gratuita"
                 },
                 {
                  "value": "New Solution or Services for Your Business",
@@ -22743,11 +22743,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Proef"
+                 "text": "Gratis proefpakket"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Gratis proeflicentie"
                 },
                 {
                  "value": "Training & Certification",
@@ -25248,11 +25248,11 @@ const languageTranslations = {
                 },
                 {
                  "value": "Free trial package",
-                 "text": "Teste"
+                 "text": "Pacote de avaliação gratuito"
                 },
                 {
                  "value": "Free trial license",
-                 "text": "POC"
+                 "text": "Licença de avaliação gratuita"
                 },
                 {
                  "value": "Training & Certification",
@@ -25431,7 +25431,7 @@ const additionalFormLanguages = {
         "options": {
             "Salutation": ["السيد", "السيدة المتزوجة", "السيدة", "الآنسة", "لقب محايد", "السيد الصغير", "السير", "الدكتور"],
             "interestedIn": ["حل إدارة الهوية والوصول (IAM)", "تسجيل الدخول الموحد (SSO)", "إدارة المصادقة القوية", "حوكمة الهويات وإدارتها", "إدارة الوصول إلى الويب", "Orbion (الهوية كخدمة)", "التوافر العالي (SafeKit)", "التحليل الذكي للهويات", "DirX", "أخرى"],
-            "enquiryType": ["معلومات المنتج", "عرض سعر", "عرض توضيحي", "تجربة مجانية", "إثبات المفهوم (POC)", "التدريب والشهادات", "حلول أو خدمات جديدة لشركتك", "دعم المنتجات والعملاء (لعملاء Eviden الحاليين فقط)", "المحاسبة أو الفوترة أو المدفوعات", "معلومات الوظائف", "استفسار صحفي", "توريد منتجات أو خدمات إلى Eviden", "شؤون التحالفات والشراكات", "أخرى"],
+            "enquiryType": ["معلومات المنتج", "عرض سعر", "عرض توضيحي", "حزمة تجريبية مجانية", "ترخيص تجريبي مجاني", "التدريب والشهادات", "حلول أو خدمات جديدة لشركتك", "دعم المنتجات والعملاء (لعملاء Eviden الحاليين فقط)", "المحاسبة أو الفوترة أو المدفوعات", "معلومات الوظائف", "استفسار صحفي", "توريد منتجات أو خدمات إلى Eviden", "شؤون التحالفات والشراكات", "أخرى"],
             "Company_Revenue__c": ["أقل من 200 مليون دولار", "من 201 إلى 500 مليون دولار", "من 501 مليون إلى مليار دولار", "أكثر من مليار دولار"],
             "Company_Size__c": ["أقل من 3,000 موظف", "من 3,001 إلى 5,000 موظف", "من 5,001 إلى 10,000 موظف", "أكثر من 10,001 موظف"],
             "Purchase_Authority__c": ["نعم", "لا"],
@@ -25502,7 +25502,7 @@ const additionalFormLanguages = {
         "options": {
             "Salutation": ["Sr.", "Sra. (casada)", "Sra.", "Menina", "Mx.", "Menino", "Sir", "Dr./Dra."],
             "interestedIn": ["Solução de gestão de identidades e acessos (IAM)", "Autenticação única (SSO)", "Gestão de autenticação forte", "Governação e administração de identidades", "Gestão de acesso Web", "Orbion (identidade como serviço)", "Alta disponibilidade (SafeKit)", "Análise inteligente de identidades", "DirX", "Outro"],
-            "enquiryType": ["Informações sobre o produto", "Pedido de orçamento", "Demonstração", "Avaliação gratuita", "Prova de conceito (POC)", "Formação e certificação", "Novas soluções ou serviços para a sua empresa", "Apoio ao produto ou ao cliente (apenas para clientes atuais da Eviden)", "Contabilidade, faturação ou pagamentos", "Informações sobre emprego", "Contacto de imprensa", "Fornecimento de produtos ou serviços à Eviden", "Questões sobre alianças ou parcerias", "Outro"],
+            "enquiryType": ["Informações sobre o produto", "Pedido de orçamento", "Demonstração", "Pacote de avaliação gratuito", "Licença de avaliação gratuita", "Formação e certificação", "Novas soluções ou serviços para a sua empresa", "Apoio ao produto ou ao cliente (apenas para clientes atuais da Eviden)", "Contabilidade, faturação ou pagamentos", "Informações sobre emprego", "Contacto de imprensa", "Fornecimento de produtos ou serviços à Eviden", "Questões sobre alianças ou parcerias", "Outro"],
             "Company_Revenue__c": ["Inferior a 200 milhões de dólares", "De 201 a 500 milhões de dólares", "De 501 milhões a mil milhões de dólares", "Superior a mil milhões de dólares"],
             "Company_Size__c": ["Menos de 3 000 colaboradores", "De 3 001 a 5 000 colaboradores", "De 5 001 a 10 000 colaboradores", "Mais de 10 001 colaboradores"],
             "Purchase_Authority__c": ["Sim", "Não"],
@@ -25571,7 +25571,7 @@ const additionalFormLanguages = {
         "options": {
             "Salutation": ["남성 호칭", "기혼 여성 호칭", "여성 호칭", "미혼 여성 호칭", "성 중립 호칭", "소년 호칭", "경", "박사"],
             "interestedIn": ["ID 및 접근 관리(IAM) 솔루션", "통합 로그인(SSO)", "강력한 인증 관리", "ID 거버넌스 및 관리", "웹 접근 관리", "Orbion(서비스형 ID)", "고가용성(SafeKit)", "지능형 ID 분석", "DirX", "기타"],
-            "enquiryType": ["제품 정보", "견적", "제품 시연", "무료 평가판", "개념 검증(POC)", "교육 및 인증", "귀사를 위한 새로운 솔루션 또는 서비스", "제품 및 고객 지원(기존 Eviden 고객 전용)", "회계, 청구 또는 결제", "채용 정보", "언론 문의", "Eviden에 제품 또는 서비스 공급", "제휴 및 파트너십 관련 사항", "기타"],
+            "enquiryType": ["제품 정보", "견적", "제품 시연", "무료 평가판 패키지", "무료 평가판 라이선스", "교육 및 인증", "귀사를 위한 새로운 솔루션 또는 서비스", "제품 및 고객 지원(기존 Eviden 고객 전용)", "회계, 청구 또는 결제", "채용 정보", "언론 문의", "Eviden에 제품 또는 서비스 공급", "제휴 및 파트너십 관련 사항", "기타"],
             "Company_Revenue__c": ["2억 달러 미만", "2억 100만~5억 달러", "5억 100만~10억 달러", "10억 달러 초과"],
             "Company_Size__c": ["직원 3,000명 미만", "직원 3,001~5,000명", "직원 5,001~10,000명", "직원 10,001명 초과"],
             "Purchase_Authority__c": ["예", "아니요"],
