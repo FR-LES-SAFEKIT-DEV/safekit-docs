@@ -225,6 +225,14 @@
   }
 
   function applyShortcodeSettings(form) {
+    var productField = form.getFormElem()[0].querySelector('select[name="interestedIn"]');
+    if (productField) {
+      var existingProduct = Array.prototype.find.call(productField.options, function (option) { return option.value === "KMS (Cosmian)"; });
+      if (!existingProduct) {
+        var otherProduct = Array.prototype.find.call(productField.options, function (option) { return option.value === "Other"; });
+        productField.add(new Option("KMS (Cosmian)", "KMS (Cosmian)"), otherProduct || null);
+      }
+    }
     var languageField = form.getFormElem()[0].querySelector('select[name="preferredLanguage"]');
     if (languageField) {
       ["Japanese", "ZH-HANS", "Spanish", "AR", "PT-PT", "KO"].forEach(function (language) {
