@@ -54,7 +54,7 @@ _** Virtual IPs must be configured at the Cloud load balancer level._
 
 SafeKit includes ready-to-use, pre-configured `.safe` modules. They are organized into two HA strategies: **Application HA** (direct application clustering with mirror or farm modules) and **Virtualization HA** (VM-level clustering with hyperv.safe or kvm.safe).
 
---- | Application HA | VM-level HA  
+ | Application HA | VM-level HA  
 ---|---|---  
 Configuration | It requires a technical understanding of the application itself: which services need to be restarted, the specific application folders that need real-time replication, and the configuration of a virtual IP address for failover. | Generic solution for any application / OS running in the VM. It does not require a technical understanding of the application installed within the VM. It is the best solution if you do not know how the application works. You only need to define the location of the VM files.  
 Ideal for | Ideal for embedding high availability directly into a software solution, independent of the underlying hardware or hypervisor. | Ideal for managing complex environments with multiple applications across several VMs through a single HA policy.  

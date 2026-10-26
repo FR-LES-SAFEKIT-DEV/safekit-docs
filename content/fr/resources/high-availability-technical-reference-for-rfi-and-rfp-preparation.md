@@ -222,6 +222,7 @@ Accusé de réception des incidents | Sous 4 heures ouvrées du Centre de suppor
 Mises à jour et évolutions | Tous les Service Packs, mises à jour (updates) et évolutions majeures (upgrades) sont inclus sans frais supplémentaires  
 Remplacement de clé de licence | Une clé de licence peut être réassignée en cas de changement de nom d'hôte (hostname) sous réserve d'un contrat de support actif. Le transfert de licence est limité au remplacement de serveur au sein du même projet, et soumis à l'accord écrit préalable d'Eviden.  
 Accès à la base de connaissances | Accès complet aux articles de la base de connaissances (KB), à la FAQ et à la documentation en ligne  
+Démarrage/arrêt de l'application sans SafeKit | Oui — Arrêter SafeKit et utiliser un script wrapper pour démarrer ou arrêter l'application. Ce script appelle les scripts de démarrage/arrêt de l'application et configure ou supprime l'adresse IP virtuelle, si nécessaire.  
 Portail de support | <https://customercare.evidian.com>  
   
 ### Ressources gratuites (aucun contrat requis) {#free-resources-no-contract-required}
