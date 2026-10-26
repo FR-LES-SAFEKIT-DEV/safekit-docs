@@ -30,6 +30,8 @@ topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster de haute disponib
 
 ![Schéma comparatif du comportement de l'IP virtuelle (VIP) dans Evidian SafeKit : Clusters Mirror avec IP flottante sur le nœud actif vs Clusters Farm avec répartition de charge réseau sur tous les nœuds.](/wp-content/uploads/2026/01/vip-3-1024-fr.jpg "w:512")
 
+**Stratégies de mise en œuvre des adresses IP virtuelles dans les clusters Mirror et Farm de SafeKit.**
+
   
 
 
