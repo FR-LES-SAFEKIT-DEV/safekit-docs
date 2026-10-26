@@ -1,0 +1,224 @@
+{{/* Shortcode: insert-safekit-82-configuration-fr */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
+
+
+
+### Conditions préalables
+
+  * Application {{ .Get "app" }} installée sur 2 nœuds.
+  * Total des données répliquées limité à quelques téraoctets ; au-delà, le temps de resynchronisation devient important.
+  * Interconnexion minimale de 1 Gbit/s entre les nœuds (10 Gbit/s recommandés pour une resynchronisation plus rapide).
+  * Le basculement IP nécessite les deux nœuds sur le même LAN ou le même LAN étendu (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec 🛠️ [équilibreurs de charge cloud](/resources/safekit-user-guide-82/#Cloud)).
+
+
+### 1. Lancez la console SafeKit
+
+  * Lancez la console Web dans un navigateur sur un nœud de cluster en vous connectant à `http://localhost:9010`.
+  * Entrez `admin` comme nom d'utilisateur et le mot de passe défini lors de l'installation.
+
+
+Vous pouvez également exécuter la console dans un navigateur sur un poste de travail externe au cluster.
+
+⚠️ La configuration de SafeKit se fait sur les deux nœuds depuis un seul navigateur.
+
+ℹ️ Pour sécuriser la console web, voir 🛠️ [11\. Sécuriser le service Web SafeKit](/resources/safekit-user-guide-82/#https) dans le Guide de l'utilisateur.
+
+
+![Démarrez la console Web SafeKit pour configurer le cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 2. Configurer les adresses des nœuds
+
+  * Entrez les adresses des nœuds IP, appuyez sur la touche `Tab key` pour vérifier la connectivité et remplir les noms de nœuds. Si node1 ou node2 a une couleur rouge, vérifiez la connectivité du navigateur aux deux nœuds et vérifiez le pare-feu sur les deux nœuds pour 🛠️ [dépannage](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Ensuite, cliquez sur `Save and apply` pour enregistrer la configuration.
+  * Vérifiez le `Success` ✅ message sur les deux nœuds.
+  * Si la configuration `Failure` ❌ se produit sur un nœud, ouvrez l'accordéon ▼ pour ce nœud et examinez les messages. Notez que vous pouvez utiliser le SafeKit AI 🤖 pour obtenir de l'aide.
+
+
+ℹ️ Si vous le souhaitez, vous pouvez ajouter un nouveau `LAN and nodes` (premier ➕) pour créer un deuxième battement de cœur et un réseau de réplication dédié.
+
+ℹ️ Si vous cliquez sur `Advanced configuration`, le `cluster.xml` Le fichier s'affiche. Ce fichier est automatiquement renseigné par la console et déployé sur les nœuds.
+
+
+![Entrez les nœuds du cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 3. Sélectionnez un module
+
+  * Dans `New module`, cliquez sur le `{{ .Get "mod" }}.safe` modules.
+
+
+ℹ️ Dans le bandeau bleu en haut, 🛜 `node1` représente le nœud de connexion à la console. Ce nœud relaie les requêtes vers `node2` lorsque cela est nécessaire.
+
+ℹ️ La console recherche `xxx.safe` dans le `Application_Modules/generic/` répertoire sur le nœud de connexion (`node1`) si vous y avez placé un module lors de l'installation.
+
+
+![Choisissez le module pour {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. Configurez le module
+
+  * Dans `Module startup at boot`, choisissez un démarrage automatique du module au démarrage sans délai.
+  * Dans `Macros` / `SERVICES`, saisissez les noms de services de votre application, dans l'ordre de démarrage, séparés par des virgules. Voir cette capture d'écran pour un exemple visuel de [Services Milestone XProtect 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
+  * Dans `Heartbeat networks`, vous devez disposer d'un réseau à pulsation unique sur lequel la réplication est effectuée. Si vous avez ajouté un LAN privé à l'étape 2, vous pouvez configurer deux pulsations avec le flux de réplication sur le LAN privé.
+  * Dans `Virtual IP addresses`, saisissez une adresse virtuelle IP. Une adresse virtuelle IP est une adresse IP standard dans le même réseau IP (même sous-réseau) que les adresses IP des deux nœuds.  
+Les clients d'application doivent être configurés avec l'adresse virtuelle IP (ou le nom DNS associé à l'adresse virtuelle IP).  
+L'adresse virtuelle IP est automatiquement commutée en cas de panne.
+  * Dans `Replicated directories`, définissez les chemins des répertoires à répliquer. Vérifiez qu'ils existent sur les deux nœuds et contiennent les données de l'application.  
+La réplication des données et des journaux est essentielle pour une base de données.  
+Vous pouvez créer des répertoires répliqués supplémentaires selon vos besoins.  
+Voir cette capture d'écran pour un exemple visuel de [Réplication Milestone XProtect SQL 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
+  * Dans `Checkers`, vous pourrez configurer des vérificateurs si nécessaire, tels que la surveillance des processus, des vérificateurs personnalisés, TCP, un ping ou des vérificateurs split-brain.  
+Par exemple, si un nom de processus est affiché dans `Monitored processes/services`, il sera surveillé avec une action de redémarrage en cas de panne. La configuration d'un mauvais nom de processus entraînera l'arrêt du module juste après son démarrage.
+
+
+ℹ️ Si vous cliquez sur `Advanced configuration`, le `userconfig.xml` Le fichier s'affiche. Ce fichier est automatiquement renseigné par la console et déployé sur les nœuds avec les scripts de redémarrage.
+
+ℹ️ Dans un déploiement cloud, vous n'avez pas besoin de configurer une adresse virtuelle IP dans SafeKit. Le IP virtuel est géré au 🛠️ [niveau d'équilibrage de charge cloud](/resources/safekit-user-guide-82/#Cloud).
+
+ℹ️ Lorsque vous appliquez la configuration SafeKit, le `startup type` des services est automatiquement réglé sur `Manual` dans les services Windows. Cela garantit que les services ne démarrent pas automatiquement au démarrage du système, mais uniquement au démarrage du module lui-même (il en va de même sur Linux).
+
+
+![Entrez les paramètres du module {{ .Get "app" }}](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+
+
+### 5. Modifier les scripts (facultatif)
+
+  * Cette étape est facultative et peut être ignorée dans la plupart des cas, car les scripts de redémarrage sont déjà préconfigurés pour redémarrer les services définis à l'étape précédente.
+  * Alors cliquez directement sur `Next step`.
+  * `start_prim.ps1` démarre tous les services dans l'ordre spécifié dans le `SERVICES` liste, tandis que `stop_prim.ps1` arrête tous les services dans l'ordre inverse.
+  * De plus, `start_prim.ps1` vérifie le démarrage de chaque service et arrête le module si un service ne démarre pas correctement.
+
+
+![Entrez les paramètres du module {{ .Get "app" }}](/wp-content/uploads/2026/09/28-module-edit-script.png)
+
+
+### 6. Cryptage des communications (facultatif)
+
+  * Conservez le cryptage des communications entre les nœuds.
+
+
+![Cryptage des communications du module {{ .Get "app" }}](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+
+
+### 7. Enregistrez et postulez
+
+  * `Save and apply` la configuration et les scripts sur les deux nœuds.
+
+
+![Enregistrez et appliquez la configuration du module {{ .Get "app" }}](/wp-content/uploads/2025/05/08-module-save-1.png)
+
+
+### 8. Vérifiez la configuration réussie
+
+  * Vérifiez le `Success` ✅ message sur les deux nœuds et cliquez sur `Monitor modules`.
+  * Si la configuration `Failure` ❌ se produit sur un nœud, ouvrez l'accordéon ▼ pour ce nœud et examinez les messages. Notez que vous pouvez utiliser le SafeKit AI 🤖 pour obtenir de l'aide.
+
+
+⚠️ Sur Linux, vous pouvez obtenir une erreur à cette étape si les répertoires répliqués sont des points de montage.🛠️ [Voir SK-0030 pour résoudre le problème](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+
+
+![Vérifiez le succès de la configuration du module {{ .Get "app" }}](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+
+
+### 9. Démarrez le nœud avec des données à jour
+
+  * Si le nœud 1 possède les répertoires répliqués à jour, sélectionnez-le et ⋯ `Force start` ▶ `As primary`.
+
+
+Lorsque le nœud 2 sera démarré, toutes les données seront copiées du nœud 1 vers le nœud 2.
+
+⚠️ Si vous faites le mauvais choix, vous courez le risque de synchroniser des données obsolètes sur les deux nœuds.
+
+⚠️ Il est également supposé que l'application {{ .Get "app" }} est arrêtée sur le nœud 1 afin que SafeKit installe les mécanismes de réplication puis démarre l'application dans le `start_prim` scénario.
+
+⚠️ Utiliser `Start` pour les démarrages ultérieurs : SafeKit conserve le serveur le plus à jour. Démarrage `As primary` est un démarrage particulier du premier coup ou lors d'opérations exceptionnelles.
+
+
+![Démarrer en tant que nœud principal {{ .Get "app" }} avec les données à jour](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 10. Attendez la transition vers ALONE (vert)
+
+  * Le nœud 1 doit atteindre l'état ALONE (vert), ce qui signifie que le IP virtuel est défini et que le `start_prim` Le script a été exécuté sur le nœud 1.
+
+
+⚠️ Si ALONE (vert) n'est pas atteint ou si l'application n'est pas démarrée, analysez pourquoi avec le [journal du module 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) du nœud 1.
+
+  * Cliquez sur le 🔍 **journal** icône de `node1` pour ouvrir le journal du module et rechercher des messages d'erreur tels qu'un vérificateur détectant une erreur et arrêtant le module.
+  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite et des erreurs peuvent être détectées comme un service mal démarré.
+  * Utilisez le SafeKit AI 🤖 pour obtenir de l'aide concernant les messages de journal.
+
+
+⚠️ Si le cluster est en `WAIT (red) not uptodate, STOP (red) not uptodate` état, arrêtez le nœud WAIT et [forcer son démarrage en tant que primaire 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![Le premier nœud {{ .Get "app" }} démarre comme nœud principal et devient ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 11. Démarrer le nœud 2
+
+  * ⋯ `Start` le nœud 2 avec son menu contextuel.
+  * Attendez l'état SECOND (vert).
+
+
+ℹ️ Le nœud 2 reste dans l'état SECOND (orange) lors de la resynchronisation des répertoires répliqués (copie du nœud 1 vers le nœud 2).
+
+  * Cela peut prendre un certain temps en fonction de la taille des fichiers à resynchroniser dans les répertoires répliqués et de la bande passante du réseau.
+  * Pour voir la progression de la copie, consultez le [journal du module 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) et le [ressources de réplication 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) du nœud 2. Utilisez le SafeKit AI 🤖 pour obtenir de l'aide avec les messages de journal.
+
+
+![Démarrez le nœud {{ .Get "app" }} 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 12. Vérifiez que le cluster est opérationnel
+
+  * Vérifiez que le cluster est vert/vert avec les services {{ .Get "app" }} exécutés sur le nœud PRIM et non exécutés sur le nœud SECOND.
+
+
+Seules les modifications contenues dans les fichiers sont répliquées en temps réel dans cet état.
+
+⚠️ Les composants clients des services {{ .Get "app" }} doivent être configurés avec l'adresse virtuelle IP. La configuration peut se faire avec un nom DNS (si un nom DNS a été créé et associé à l'adresse virtuelle IP).
+
+
+![Le nœud {{ .Get "app" }} 2 est SECOND (vert)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 13. Tests
+
+  * Arrêtez le nœud PRIM en faisant défiler son menu contextuel et en cliquant sur `Stop`.
+  * Vérifiez qu'il existe un basculement sur le nœud SECOND qui doit devenir ALONE (vert).
+  * Et avec Microsoft Management Console (MMC) sur Windows ou avec des lignes de commande sur Linux, vérifiez le basculement des services {{ .Get "app" }} (arrêtés sur le nœud 1 dans le `stop_prim` script et démarré sur le nœud 2 dans le `start_prim` scénario).
+
+
+⚠️ Si ALONE (vert) n'est pas atteint sur node2 ou si l'application n'est pas démarrée, analysez pourquoi avec le [journal du module 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) du nœud 2.
+
+  * Cliquez sur le 🔍 **journal** icône de `node2` pour ouvrir le journal du module et rechercher des messages d'erreur tels qu'un vérificateur détectant une erreur et arrêtant le module.
+  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite et des erreurs peuvent être détectées comme un service mal démarré.
+  * Utilisez le SafeKit AI 🤖 pour obtenir de l'aide concernant les messages de journal.
+
+
+⚠️ 
+
+  * Si tout va bien, lancez un démarrage sur node1, qui resynchronisera les répertoires répliqués depuis node2.
+  * Si les choses tournent mal, arrêtez node2 et [forcer le départ en primaire 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) de node1, qui redémarrera avec ses données localement saines au moment de l'arrêt.
+
+
+ℹ️ Retrouvez plus de détails, ainsi que des vidéos, dans le [Formation en ligne SafeKit](/resources/safekit-on-line-training/).
+
+
+![Arrêtez le module {{ .Get "app" }} sur le serveur PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 14. Assistance
+
+  * Pour obtenir de l'aide, prenez 2 SafeKit `Snapshots` (2 fichiers .zip), un pour chaque nœud.
+
+
+ℹ️ [Plus d’informations sur le support ici](/resources/safekit-support/).
+
+
+![Prenez les instantanés {{ .Get "app" }} pour obtenir de l'aide](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

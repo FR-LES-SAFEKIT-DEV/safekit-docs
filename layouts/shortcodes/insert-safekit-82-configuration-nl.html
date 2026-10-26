@@ -1,0 +1,224 @@
+{{/* Shortcode: insert-safekit-82-configuration-nl */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
+
+
+
+### Vereisten
+
+  * {{ .Get "app" }}-applicatie geïnstalleerd op 2 knooppunten.
+  * Het totale aantal gerepliceerde gegevens is beperkt tot een paar terabytes; daarna wordt de hersynchronisatietijd aanzienlijk.
+  * Minimale 1Gb/s-verbinding tussen knooppunten (10Gb/s aanbevolen voor snellere hersynchronisatie).
+  * IP failover vereist beide knooppunten op dezelfde LAN of uitgebreide LAN (L2) - gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloud-loadbalancers](/resources/safekit-user-guide-82/#Cloud)).
+
+
+### 1. Start de SafeKit-console
+
+  * Start de webconsole in een browser op één clusterknooppunt door verbinding te maken met `http://localhost:9010`.
+  * Kom binnen `admin` als gebruikersnaam en het wachtwoord dat tijdens de installatie is gedefinieerd.
+
+
+U kunt de console ook in een browser uitvoeren op een werkstation buiten het cluster.
+
+⚠️ De configuratie van SafeKit gebeurt op beide knooppunten vanuit één browser.
+
+ℹ️ Om de webconsole te beveiligen, zie 🛠️ [11\. Beveiliging van de SafeKit-webservice](/resources/safekit-user-guide-82/#https) in de Gebruikershandleiding.
+
+
+![Start de SafeKit-webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 2. Configureer knooppuntadressen
+
+  * Voer de IP-adressen van het knooppunt in, druk op de `Tab key` om de connectiviteit te controleren en knooppuntnamen in te vullen. Als node1 of node2 een rode kleur heeft, controleer dan de connectiviteit van de browser met beide knooppunten en controleer de firewall op beide knooppunten op 🛠️ [probleemoplossing](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Klik vervolgens op `Save and apply` om de configuratie op te slaan.
+  * Controleer de `Success` ✅ bericht op beide knooppunten.
+  * Als de configuratie `Failure` ❌ voorkomt op één knooppunt, open de ▼ accordeon voor dat knooppunt en bekijk de berichten. Houd er rekening mee dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
+
+
+ℹ️Als je wilt, kun je een nieuwe toevoegen `LAN and nodes` (eerste ➕) om een tweede hartslag en een speciaal replicatienetwerk te creëren.
+
+ℹ️Als je doorklikt `Advanced configuration`, de `cluster.xml` bestand wordt weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten.
+
+
+![Voer de knooppunten van het {{ .Get "app" }}-cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 3. Selecteer een module
+
+  * In `New module`, klik op de `{{ .Get "mod" }}.safe` module.
+
+
+ℹ️In de blauwe banner bovenaan, 🛜 `node1` vertegenwoordigt het consoleverbindingsknooppunt. Dit knooppunt stuurt verzoeken door naar `node2` wanneer nodig.
+
+ℹ️ De console zoekt `xxx.safe` in de `Application_Modules/generic/` directory op het verbindingsknooppunt (`node1`) als u daar tijdens de installatie een module hebt geplaatst.
+
+
+![Kies de module voor {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. Configureer de module
+
+  * In `Module startup at boot`, kies voor een automatische start van de module bij het opstarten zonder vertraging.
+  * In `Macros` / `SERVICES`Voer de servicenamen van uw toepassing in, in de opstartvolgorde, gescheiden door komma's. Zie deze schermafbeelding voor een visueel voorbeeld van [Milestone XProtect-services 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
+  * In `Heartbeat networks`, zou u één hartslagnetwerk moeten hebben waarop de replicatie wordt gemaakt. Als u bij stap 2 een privé LAN heeft toegevoegd, kunt u twee hartslagen configureren met de replicatiestroom op de privé LAN.
+  * In `Virtual IP addresses`, voer een virtueel IP-adres in. Een virtueel IP-adres is een standaard IP-adres in hetzelfde IP-netwerk (hetzelfde subnet) als de IP-adressen van beide knooppunten.  
+Applicatieclients moeten worden geconfigureerd met het virtuele IP-adres (of de DNS-naam die is gekoppeld aan het virtuele IP-adres).  
+Bij een storing wordt het virtuele IP-adres automatisch omgeschakeld.
+  * In `Replicated directories`, stel de paden in van de mappen die u wilt repliceren. Controleer of ze op beide knooppunten aanwezig zijn en de applicatiegegevens bevatten.  
+Gegevens- en logreplicatie zijn essentieel voor een database.  
+U kunt indien nodig extra gerepliceerde mappen maken.  
+Zie deze schermafbeelding voor een visueel voorbeeld van [Mijlpaal XProtect SQL-replicatie 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
+  * In `Checkers`, kunt u indien nodig checkers configureren, zoals procesmonitoring, aangepaste checkers, TCP, ping of split-brain checkers.  
+Als er bijvoorbeeld een procesnaam wordt weergegeven in `Monitored processes/services`, wordt het bewaakt met een herstartactie in geval van een storing. Als u een verkeerde procesnaam configureert, stopt de module direct na het starten.
+
+
+ℹ️Als je doorklikt `Advanced configuration`, de `userconfig.xml` bestand wordt weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten met de herstartscripts.
+
+ℹ️ Bij een cloudimplementatie hoeft u geen virtueel IP-adres te configureren in SafeKit. De virtuele IP wordt beheerd via de 🛠️ [cloud load balancer-niveau](/resources/safekit-user-guide-82/#Cloud).
+
+ℹ️ Wanneer u de SafeKit-configuratie toepast, wordt de `startup type` van services wordt automatisch ingesteld `Manual` in Windows-services. Dit zorgt ervoor dat services niet automatisch starten wanneer het systeem opstart, maar alleen worden gestart wanneer de module zelf wordt gestart (hetzelfde geldt voor Linux).
+
+
+![Voer de {{ .Get "app" }}-module-instellingen in](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+
+
+### 5. Scripts bewerken (optioneel)
+
+  * Deze stap is optioneel en kan in de meeste gevallen worden overgeslagen, omdat de herstartscripts al vooraf zijn geconfigureerd om de services die in de vorige stap zijn gedefinieerd opnieuw te starten.
+  * Klik dus direct door `Next step`.
+  * `start_prim.ps1` start alle services in de volgorde die is opgegeven in de `SERVICES` lijst, terwijl `stop_prim.ps1` stopt alle services in de omgekeerde volgorde.
+  * Bovendien, `start_prim.ps1` controleert het opstarten van elke service en stopt de module als een service niet correct start.
+
+
+![Voer de {{ .Get "app" }}-module-instellingen in](/wp-content/uploads/2026/09/28-module-edit-script.png)
+
+
+### 6. Communicatie-encryptie (optioneel)
+
+  * Behoud de codering van de communicatie tussen knooppunten.
+
+
+![Communicatie-encryptie van de {{ .Get "app" }}-module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+
+
+### 7. Opslaan en toepassen
+
+  * `Save and apply` de configuratie en scripts op beide knooppunten.
+
+
+![Bewaar de {{ .Get "app" }}-moduleconfiguratie en pas deze toe](/wp-content/uploads/2025/05/08-module-save-1.png)
+
+
+### 8. Controleer of de configuratie succesvol is
+
+  * Controleer de `Success` ✅ bericht op beide knooppunten en klik op `Monitor modules`.
+  * Als de configuratie `Failure` ❌ voorkomt op één knooppunt, open de ▼ accordeon voor dat knooppunt en bekijk de berichten. Houd er rekening mee dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
+
+
+⚠️ Op Linux kunt u bij deze stap een foutmelding krijgen als de gerepliceerde mappen koppelpunten zijn.🛠️ [Zie SK-0030 om het probleem op te lossen](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+
+
+![Controleer het succes van de {{ .Get "app" }}-moduleconfiguratie](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+
+
+### 9. Start het knooppunt met actuele gegevens
+
+  * Als knooppunt 1 de bijgewerkte gerepliceerde mappen heeft, selecteert u dit en ⋯ `Force start` ▶ `As primary`.
+
+
+Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar knooppunt 2 gekopieerd.
+
+⚠️ Maak je de verkeerde keuze, dan loop je het risico verouderde data op beide knooppunten te synchroniseren.
+
+⚠️ Er wordt ook aangenomen dat de {{ .Get "app" }}-applicatie wordt gestopt op knooppunt 1, zodat SafeKit de replicatiemechanismen installeert en vervolgens de applicatie start in de `start_prim` schrift.
+
+⚠️Gebruik `Start` voor volgende starts: SafeKit behoudt de meest up-to-date server. Beginnen `As primary` is een bijzondere start-up, de eerste keer of tijdens uitzonderlijke operaties.
+
+
+![Begin als primair knooppunt {{ .Get "app" }} met de actuele gegevens](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 10. Wacht op de overgang naar ALONE (groen)
+
+  * Knooppunt 1 zou de status ALONE (groen) moeten bereiken, wat betekent dat de virtuele IP is ingesteld en dat de `start_prim` script is uitgevoerd op knooppunt 1.
+
+
+⚠️ Als ALONE (groen) niet wordt bereikt of als de applicatie niet wordt gestart, analyseer dan waarom met de [modulelogboek 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) van knooppunt 1.
+
+  * Klik op de 🔍 **loggen** icoon van `node1` om het modulelogboek te openen en te zoeken naar foutmeldingen, zoals een controleur die een fout detecteert en de module stopt.
+  * Klik op `start_prim` in de log: uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals een service die verkeerd is gestart.
+  * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
+
+
+⚠️Als het cluster binnen is `WAIT (red) not uptodate, STOP (red) not uptodate` status, stop het WAIT-knooppunt en [forceer de start als primair 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![Het eerste {{ .Get "app" }}-knooppunt begint als primair en wordt ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 11. Begin knooppunt 2
+
+  * ⋯ `Start` knooppunt 2 met zijn contextueel menu.
+  * Wacht op de status SECOND (groen).
+
+
+ℹ️ Knooppunt 2 blijft in de status SECOND (oranje) terwijl de gerepliceerde mappen opnieuw worden gesynchroniseerd (kopiëren van knooppunt 1 naar knooppunt 2).
+
+  * Dit kan enige tijd duren, afhankelijk van de grootte van de bestanden die opnieuw moeten worden gesynchroniseerd in gerepliceerde mappen en de netwerkbandbreedte.
+  * Om de voortgang van het kopiëren te zien, zie de [modulelogboek 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) en de [replicatiebronnen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) van knooppunt 2. Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
+
+
+![Start het {{ .Get "app" }}-knooppunt 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 12. Controleer of het cluster operationeel is
+
+  * Controleer of het cluster groen/groen is en dat de {{ .Get "app" }}-services worden uitgevoerd op het PRIM-knooppunt en niet op het SECOND-knooppunt.
+
+
+In deze staat worden alleen wijzigingen in bestanden in realtime gerepliceerd.
+
+⚠️ Componenten die clients zijn van {{ .Get "app" }}-services moeten worden geconfigureerd met het virtuele IP-adres. De configuratie kan worden uitgevoerd met een DNS-naam (als er een DNS-naam is aangemaakt en gekoppeld aan het virtuele IP-adres).
+
+
+![Het {{ .Get "app" }}-knooppunt 2 is SECOND (groen)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 13. Testen
+
+  * Stop het PRIM-knooppunt door naar beneden te scrollen in het contextuele menu en te klikken `Stop`.
+  * Controleer of er een failover is op het SECOND-knooppunt, dat ALONE (groen) moet worden.
+  * En met Microsoft Management Console (MMC) op Windows of met opdrachtregels op Linux kunt u de failover van {{ .Get "app" }}-services controleren (gestopt op knooppunt 1 in de `stop_prim` script en begon op knooppunt 2 in het `start_prim` schrift).
+
+
+⚠️ Als ALONE (groen) niet wordt bereikt op node2 of als de applicatie niet is gestart, analyseer dan waarom met de [modulelogboek 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) van knooppunt 2.
+
+  * Klik op de 🔍 **loggen** icoon van `node2` om het modulelogboek te openen en te zoeken naar foutmeldingen, zoals een controleur die een fout detecteert en de module stopt.
+  * Klik op `start_prim` in de log: uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals een service die verkeerd is gestart.
+  * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
+
+
+⚠️ 
+
+  * Als alles in orde is, start u node1, waardoor de gerepliceerde mappen van node2 opnieuw worden gesynchroniseerd.
+  * Als er iets misgaat, stop dan met node2 en [forceer de start als primair 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) van node1, die op het moment van de stop opnieuw zal opstarten met zijn lokaal gezonde gegevens.
+
+
+ℹ️ Vind meer details, samen met video's, in de [SafeKit Onlinetraining](/resources/safekit-on-line-training/).
+
+
+![Stop de {{ .Get "app" }}-module op de PRIM-server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 14. Ondersteuning
+
+  * Om ondersteuning te krijgen, neemt u 2 SafeKit `Snapshots` (2 .zip-bestanden), één voor elk knooppunt.
+
+
+ℹ️ [Meer informatie over de ondersteuning vindt u hier](/resources/safekit-support/).
+
+
+![Neem de {{ .Get "app" }}-snaphots voor ondersteuning](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+
