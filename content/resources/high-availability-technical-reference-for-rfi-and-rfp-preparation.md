@@ -44,7 +44,7 @@ First Release | 2000 (20+ years in production)
 
 Windows OS | Linux OS | Infrastructure & Virtualization | Cloud Platforms  
 ---|---|---|---  
-• Windows Server 2025 (x86-64)<br>• Windows Server 2022 (x86-64)<br>• Windows Server 2019 (x86-64)<br>• Windows 11 Enterprise (x86-64)<br>• Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 9 (x86-64)<br>• Red Hat Enterprise Linux 9 (AArch64)<br>• Red Hat Enterprise Linux 8 (x86-64)<br>• Ubuntu 24.04 LTS (x86-64)  |  • Any edge server of any brand<br>• VMware<br>• Microsoft Hyper-V*<br>• Linux KVM*<br>• Any hypervisor<br>• Docker containers<br>• Podman containers  |  • Amazon Web Services (AWS)**<br>• Microsoft Azure**<br>• Google Cloud Platform (GCP)**<br>• Any IaaS cloud with standard VM instances   
+• Windows Server 2025 (x86-64)<br>• Windows Server 2022 (x86-64)<br>• Windows Server 2019 (x86-64)<br>• Windows 11 Enterprise (x86-64)<br>• Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br>• Red Hat Enterprise Linux 10 (AArch64)<br>• Red Hat Enterprise Linux 9 (x86-64)<br>• Red Hat Enterprise Linux 9 (AArch64)<br>• Red Hat Enterprise Linux 8 (x86-64)<br>• Ubuntu 24.04 LTS (x86-64)  |  • Any edge server of any brand<br>• VMware<br>• Microsoft Hyper-V*<br>• Linux KVM*<br>• Any hypervisor<br>• Docker containers<br>• Podman containers  |  • Amazon Web Services (AWS)\*\*<br>• Microsoft Azure\*\*<br>• Google Cloud Platform (GCP)\*\*<br>• Any IaaS cloud with standard VM instances   
   
 _* SafeKit supports both application-level HA and VM-level HA._
 
@@ -54,7 +54,7 @@ _** Virtual IPs must be configured at the Cloud load balancer level._
 
 SafeKit includes ready-to-use, pre-configured `.safe` modules. They are organized into two HA strategies: **Application HA** (direct application clustering with mirror or farm modules) and **Virtualization HA** (VM-level clustering with hyperv.safe or kvm.safe).
 
-| Application HA | VM-level HA  
+--- | Application HA | VM-level HA  
 ---|---|---  
 Configuration | It requires a technical understanding of the application itself: which services need to be restarted, the specific application folders that need real-time replication, and the configuration of a virtual IP address for failover. | Generic solution for any application / OS running in the VM. It does not require a technical understanding of the application installed within the VM. It is the best solution if you do not know how the application works. You only need to define the location of the VM files.  
 Ideal for | Ideal for embedding high availability directly into a software solution, independent of the underlying hardware or hypervisor. | Ideal for managing complex environments with multiple applications across several VMs through a single HA policy.  
@@ -222,6 +222,7 @@ Incident acknowledgement | Within 4 Support Centre Working Hours
 Updates & upgrades | All Service Packs, Updates, and Upgrades included at no additional charge  
 License key replacement | A licence key can be reassigned on hostname change under an active support contract. Licence transfer is limited to server replacement within the same project, subject to Eviden's prior written acceptance.  
 Knowledge base access | Full access to KB articles, FAQ, and online documentation  
+Application start/stop without SafeKit | Yes — Stop SafeKit and use a wrapper script to start or stop the application. The wrapper script calls the application’s start/stop scripts and configures or removes the virtual IP address, if required. 
 Support portal | <https://customercare.evidian.com>  
   
 ### Free Resources (no contract required) {#free-resources-no-contract-required}
