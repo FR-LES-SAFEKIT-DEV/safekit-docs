@@ -242,7 +242,7 @@ DNS再ルーティング: VIPなし |災害復旧 (リモート データセン�
 ## ネットワーク負荷分散と高可用性のための仮想 IP アドレスの構成 {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ja  %}}
  
 
 ## 仮想 IP (VIP) に関するよくある質問 {#virtual-ip-faq}

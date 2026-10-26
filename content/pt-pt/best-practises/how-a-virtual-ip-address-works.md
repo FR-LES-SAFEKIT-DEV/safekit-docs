@@ -242,7 +242,7 @@ Redireccionamento de DNS: Sem VIP | Recuperação de desastres (datacenters remo
 ## Configurar um endereço IP virtual para balanceamento de carga de rede e alta disponibilidade {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-pt-pt  %}}
  
 
 ## Perguntas frequentes sobre IP virtual (VIP) {#virtual-ip-faq}

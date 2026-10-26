@@ -242,7 +242,7 @@ DNS-omleiding: geen VIP | Noodherstel (externe datacenters) | DNS-recordupdate (
 ## Een virtueel IP-adres configureren voor netwerktaakverdeling en hoge beschikbaarheid {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-nl  %}}
  
 
 ## Veelgestelde vragen over virtueel IP (VIP) {#virtual-ip-faq}

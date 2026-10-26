@@ -242,7 +242,7 @@ Reindirizzamento DNS: nessun VIP | Disaster Recovery (data center remoti) | Aggi
 ## Configurazione di un indirizzo IP virtuale per il bilanciamento del carico di rete e l'alta disponibilità {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-it  %}}
  
 
 ## Domande frequenti sull'IP virtuale (VIP) {#virtual-ip-faq}

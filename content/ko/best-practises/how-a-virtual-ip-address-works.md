@@ -242,7 +242,7 @@ DNS 재라우팅: VIP 없음 | 재해 복구(원격 데이터 센터) | DNS 레�
 ## 네트워크 부하 분산 및 고가용성을 위한 가상 IP 주소 구성 {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ko  %}}
  
 
 ## 가상 IP(VIP)에 대해 자주 묻는 질문 {#virtual-ip-faq}

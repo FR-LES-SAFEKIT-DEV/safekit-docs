@@ -242,7 +242,7 @@ DNS-Umleitung: Kein VIP | Disaster Recovery (Remote-Rechenzentren) | DNS-Eintrag
 ## Konfigurieren einer virtuellen IP-Adresse für Netzwerklastenausgleich und hohe Verfügbarkeit {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-de  %}}
  
 
 ## Häufig gestellte Fragen zu Virtual IP (VIP) {#virtual-ip-faq}

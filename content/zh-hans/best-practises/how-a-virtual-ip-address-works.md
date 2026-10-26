@@ -242,7 +242,7 @@ DNS 重新路由：无 VIP |灾难恢复（远程数据中心） | DNS记录更�
 ## 配置虚拟 IP 地址以实现网络负载平衡和高可用性 {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-zh-hans  %}}
  
 
 ## 有关虚拟 IP (VIP) 的常见问题 {#virtual-ip-faq}

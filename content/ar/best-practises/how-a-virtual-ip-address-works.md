@@ -242,7 +242,7 @@ topics: "ما هو عنوان IP الظاهري في مجموعة عالية ا�
 ## تكوين عنوان IP افتراضي لموازنة تحميل الشبكة والتوافر العالي {#virtual-ip-configuration-load-balancing-ha}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ar  %}}
  
 
 ## الأسئلة المتداولة حول عنوان IP الافتراضي (VIP) {#virtual-ip-faq}
