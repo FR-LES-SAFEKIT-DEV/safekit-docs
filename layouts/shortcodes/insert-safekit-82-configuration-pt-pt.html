@@ -1,4 +1,4 @@
-{{/* Shortcode: insert-safekit-82-configuration-pt-pt */}}
+{{/* Shortcode: insert-safekit-82-configuration-pt-pt */}}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
@@ -14,15 +14,15 @@
 
 ### 1. Inicie a consola SafeKit
 
-  * Inicie a consola web num navegador num nó do cluster conectando-se a `http://localhost:9010`.
-  * Entrar `admin` como o nome de utilizador e a palavra-passe definida durante a instalação.
+  * Inicie a consola web num navegador num nó do cluster, conectando-se ao `http://localhost:9010`.
+  * Introduza `admin` como nome de utilizador e palavra-passe definidos durante a instalação.
 
 
 Também é possível executar a consola num browser numa estação de trabalho externa ao cluster.
 
 ⚠️ A configuração do SafeKit é feita em ambos os nós a partir de um único browser.
 
-ℹ️ Para proteger a consola web, consulte 🛠️ [11\. Proteger o serviço web SafeKit](/resources/safekit-user-guide-82/#https) no Guia do utilizador.
+ℹ️ Para proteger a consola web, consulte 🛠️ [11\. Proteger o serviço web SafeKit](/resources/safekit-user-guide-82/#https) no Manual do utilizador.
 
 
 ![Inicie a consola web SafeKit para configurar o cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,15 +30,15 @@ Também é possível executar a consola num browser numa estação de trabalho e
 
 ### 2.º Configure endereços de nós
 
-  * Introduza os endereços dos nós IP, pressione o botão `Tab key` para verificar a conectividade e preencher os nomes dos nós. Se node1 ou node2 tiver uma cor vermelha, verifique a conectividade do browser com ambos os nós e verifique a firewall em ambos os nós para 🛠️ [solução de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Introduza os endereços dos nós IP, prima `Tab key` para verificar a conectividade e preencher os nomes dos nós. Se node1 ou node2 tiver uma cor vermelha, verifique a conectividade do browser com ambos os nós e verifique a firewall em ambos os nós para 🛠️ [ resolução de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
   * Em seguida, clique em `Save and apply` para guardar a configuração.
-  * Verifique o `Success` ✅ mensagem em ambos os nós.
-  * Se a configuração `Failure` ❌ ocorre num nó, abra o acordeão ▼ desse nó e reveja as mensagens. Note que pode utilizar SafeKit AI 🤖 para obter assistência.
+  * Verifique a mensagem `Success` ✅ em ambos os nós.
+  * Se a configuração `Failure` ❌ ocorrer num nó, abra o acordeão ▼ desse nó e reveja as mensagens. Note que pode utilizar SafeKit AI 🤖 para obter assistência.
 
 
 ℹ️ Se desejar, pode adicionar um novo `LAN and nodes` (primeiro ➕) para criar uma segunda pulsação e uma rede de replicação dedicada.
 
-ℹ️ Se clicar em `Advanced configuration`, o `cluster.xml` ficheiro é exibido. Este ficheiro é preenchido automaticamente pela consola e implementado nos nós.
+ℹ️ Se clicar em `Advanced configuration`, é apresentado o ficheiro `cluster.xml`. Este ficheiro é preenchido automaticamente pela consola e implementado nos nós.
 
 
 ![Introduza os nós do cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
@@ -46,12 +46,12 @@ Também é possível executar a consola num browser numa estação de trabalho e
 
 ### 3.º Selecione um módulo
 
-  * Em `New module`, clique no `{{ .Get "mod" }}.safe` módulo.
+  * Em `New module`, clique no módulo `{{ .Get "mod" }}.safe`.
 
 
 ℹ️ No banner azul na parte superior, 🛜 `node1` representa o nó de ligação da consola. Este nó retransmite pedidos para `node2` quando necessário.
 
-ℹ️ A consola procura `xxx.safe` no `Application_Modules/generic/` diretório no nó de ligação (`node1`) se lá colocou um módulo durante a instalação.
+ℹ️ A consola procura `xxx.safe` no diretório `Application_Modules/generic/` no nó de ligação (`node1`) se tiver colocado lá um módulo durante a instalação.
 
 
 ![Escolha o módulo para {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
@@ -60,24 +60,24 @@ Também é possível executar a consola num browser numa estação de trabalho e
 ### 4.º Configure o módulo
 
   * Em `Module startup at boot`, escolha um arranque automático do módulo no arranque sem demora.
-  * Em `Macros` / `SERVICES`, introduza os nomes dos serviços da sua aplicação, pela ordem de arranque, separados por vírgulas. Veja esta captura de ecrã para um exemplo visual de [Serviços Milestone XProtect 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
-  * Em `Heartbeat networks`, deverá ter uma rede de pulsação única na qual a replicação é feita. Se tiver adicionado um LAN privado no passo 2, pode configurar duas pulsações com o fluxo de replicação no LAN privado.
+  * Em `Macros`/`SERVICES`, introduza os nomes dos serviços da sua aplicação, pela ordem de arranque, separados por vírgulas. Veja esta captura de ecrã para um exemplo visual dos serviços [Milestone XProtect 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
+  * Em `Heartbeat networks`, deve ter uma rede de pulsação única na qual a replicação é feita. Se tiver adicionado um LAN privado no passo 2, pode configurar duas pulsações com o fluxo de replicação no LAN privado.
   * Em `Virtual IP addresses`, introduza um endereço IP virtual. Um endereço IP virtual é um endereço IP padrão na mesma rede IP (mesma sub-rede) que os endereços IP de ambos os nós.  
 Os clientes aplicações devem ser configurados com o endereço IP virtual (ou o nome DNS associado ao endereço IP virtual).  
 O endereço virtual IP é alternado automaticamente em caso de falha.
   * Em `Replicated directories`, defina os caminhos dos diretórios a replicar. Verifique se existem em ambos os nós e se contêm os dados da aplicação.  
 A replicação de dados e de logs é essencial para uma base de dados.  
 Pode criar diretórios replicados adicionais conforme necessário.  
-Veja esta captura de ecrã para um exemplo visual de [Replicação Milestone XProtect SQL 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
-  * Em `Checkers`, poderá configurar verificadores, se necessário, como monitorização de processos, verificadores personalizados, TCP, ping ou verificadores de cérebro dividido.  
+Veja esta captura de ecrã para um exemplo visual da replicação [Milestone XProtect SQL 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
+  * No `Checkers`, poderá configurar verificadores, se necessário, como monitorização de processos, verificadores personalizados, TCP, ping ou verificadores de cérebro dividido.  
 Por exemplo, se um nome de processo for apresentado em `Monitored processes/services`, será monitorizado com uma ação de reinicialização em caso de falha. A configuração de um nome de processo incorreto fará com que o módulo pare logo após o seu início.
 
 
-ℹ️ Se clicar em `Advanced configuration`, o `userconfig.xml` ficheiro é exibido. Este ficheiro é preenchido automaticamente pela consola e implementado nos nós com os scripts de reinicialização.
+ℹ️ Se clicar em `Advanced configuration`, é apresentado o ficheiro `userconfig.xml`. Este ficheiro é preenchido automaticamente pela consola e implementado nos nós com os scripts de reinicialização.
 
-ℹ️ Numa implementação na nuvem, não precisa de configurar um endereço IP virtual em SafeKit. O IP virtual é gerido no 🛠️ [nível do balanceador de carga na nuvem](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Numa implementação na nuvem, não precisa de configurar um endereço IP virtual em SafeKit. O IP virtual é gerido ao nível do balanceador de carga de cloud 🛠️ [](/resources/safekit-user-guide-82/#Cloud).
 
-ℹ️ Ao aplicar a configuração SafeKit, o `startup type` de serviços é automaticamente definido para `Manual` nos serviços Windows. Isto garante que os serviços não são iniciados automaticamente quando o sistema é inicializado, mas, em vez disso, são iniciados apenas quando o próprio módulo é iniciado (o mesmo se aplica ao Linux).
+ℹ️ Quando aplica a configuração SafeKit, o `startup type` dos serviços é automaticamente definido como `Manual` nos serviços Windows. Isto garante que os serviços não são iniciados automaticamente quando o sistema é inicializado, mas, em vez disso, são iniciados apenas quando o próprio módulo é iniciado (o mesmo se aplica ao Linux).
 
 
 ![Introduza as definições do módulo {{ .Get "app" }}](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
@@ -87,8 +87,8 @@ Por exemplo, se um nome de processo for apresentado em `Monitored processes/serv
 
   * Este passo é opcional e pode ser ignorado na maioria dos casos, uma vez que os scripts de reinicialização já estão pré-configurados para reiniciar os serviços definidos no passo anterior.
   * Assim, clique diretamente em `Next step`.
-  * `start_prim.ps1` inicia todos os serviços pela ordem especificada no `SERVICES` lista, enquanto `stop_prim.ps1` interrompe todos os serviços pela ordem inversa.
-  * Além disso, `start_prim.ps1` verifica a inicialização de cada serviço e interrompe o módulo se algum serviço falhar o arranque corretamente.
+  * `start_prim.ps1` inicia todos os serviços pela ordem especificada na lista `SERVICES`, enquanto `stop_prim.ps1` interrompe todos os serviços pela ordem inversa.
+  * Além disso, o `start_prim.ps1` verifica a inicialização de cada serviço e pára o módulo se algum serviço não iniciar corretamente.
 
 
 ![Introduza as definições do módulo {{ .Get "app" }}](/wp-content/uploads/2026/09/28-module-edit-script.png)
@@ -112,11 +112,11 @@ Por exemplo, se um nome de processo for apresentado em `Monitored processes/serv
 
 ### 8. Verifique a configuração bem-sucedida
 
-  * Verifique o `Success` ✅ mensagem em ambos os nós e clique em `Monitor modules`.
-  * Se a configuração `Failure` ❌ ocorre num nó, abra o acordeão ▼ desse nó e reveja as mensagens. Note que pode utilizar SafeKit AI 🤖 para obter assistência.
+  * Verifique a mensagem `Success` ✅ em ambos os nós e clique em `Monitor modules`.
+  * Se a configuração `Failure` ❌ ocorrer num nó, abra o acordeão ▼ desse nó e reveja as mensagens. Note que pode utilizar SafeKit AI 🤖 para obter assistência.
 
 
-⚠️ No Linux, poderá receber um erro neste passo se os diretórios replicados forem pontos de montagem.🛠️ [Consulte SK-0030 para resolver o problema](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+⚠️ Em Linux, poderá receber um erro neste passo se os diretórios replicados forem pontos de montagem.🛠️ [Consulte SK-0030 para resolver o problema](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
 
 ![Verifique o sucesso da configuração do módulo {{ .Get "app" }}](/wp-content/uploads/2025/05/09-module-save-check-1.png)
@@ -131,9 +131,9 @@ Quando o nó 2 for iniciado, todos os dados serão copiados do nó 1 para o nó 
 
 ⚠️ Se fizer a escolha errada, corre o risco de sincronizar dados desatualizados em ambos os nós.
 
-⚠️ Assume-se também que a aplicação {{ .Get "app" }} é parada no nó 1 para que SafeKit instale os mecanismos de replicação e, de seguida, inicie a aplicação no nó 1. `start_prim` guião.
+⚠️ Supõe-se também que a aplicação {{ .Get "app" }} é parada no nó 1 para que SafeKit instale os mecanismos de replicação e depois inicie a aplicação no script `start_prim`.
 
-⚠️ Usar `Start` para arranques subsequentes: SafeKit mantém o servidor mais atualizado. Começando `As primary` é uma inicialização especial à primeira ou durante operações excecionais.
+⚠️ Utilize `Start` para arranques subsequentes: SafeKit mantém o servidor mais atualizado. A inicialização do `As primary` é uma inicialização especial à primeira ou durante operações excecionais.
 
 
 ![Inicie como primário o nó {{ .Get "app" }} com os dados atualizados](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
@@ -141,17 +141,17 @@ Quando o nó 2 for iniciado, todos os dados serão copiados do nó 1 para o nó 
 
 ### 10. Aguarde a transição para ALONE (verde)
 
-  * O nó 1 deve atingir o estado ALONE (verde), o que significa que o IP virtual está configurado e que o `start_prim` script foi executado no nó 1.
+  * O nó 1 deve atingir o estado ALONE (verde), o que significa que o IP virtual está configurado e que o script `start_prim` foi executado no nó 1.
 
 
-⚠️ Se ALONE (verde) não for atingido ou se a aplicação não for iniciada, analise o motivo com o [registo do módulo 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) do nó 1.
+⚠️ Se ALONE (verde) não for atingido ou se a aplicação não for iniciada, analise o porquê com o registo do módulo [ 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) do nó 1.
 
-  * Clique no 🔍 **registo** ícone de `node1` para abrir o registo do módulo e procurar mensagens de erro, como por exemplo um verificador que deteta um erro e para o módulo.
+  * Clique no ícone 🔍 **log** de `node1` para abrir o registo do módulo e procurar mensagens de erro, como um verificador que deteta um erro e interrompe o módulo.
   * Clique em `start_prim` no registo: as mensagens de saída do script são apresentadas à direita e podem ser detetados erros, como um serviço iniciado incorretamente.
   * Utilize SafeKit AI 🤖 para obter assistência com mensagens de registo.
 
 
-⚠️ Se o cluster estiver em `WAIT (red) not uptodate, STOP (red) not uptodate` estado, pare o nó WAIT e [forçar o seu início como primário 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+⚠️ Se o cluster estiver no estado `WAIT (red) not uptodate, STOP (red) not uptodate`, pare o nó WAIT e [ force o seu arranque como primário 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
 
 
 ![O primeiro nó {{ .Get "app" }} começa como primário e passa a ser ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
@@ -159,14 +159,14 @@ Quando o nó 2 for iniciado, todos os dados serão copiados do nó 1 para o nó 
 
 ### 11.º Iniciar nó 2
 
-  * ⋯ `Start` nó 2 com o seu menu contextual.
+  * ⋯ Nó `Start` 2 com o seu menu contextual.
   * Aguarde o estado SECOND (verde).
 
 
 ℹ️ O nó 2 permanece no estado SECOND (laranja) enquanto ressincroniza os diretórios replicados (copia do nó 1 para o nó 2).
 
   * Isto pode demorar um pouco, dependendo do tamanho dos ficheiros a ressincronizar nos diretórios replicados e da largura de banda da rede.
-  * Para ver o progresso da cópia, consulte o [registo do módulo 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) e o [recursos de replicação 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) do nó 2. Utilize SafeKit AI 🤖 para obter assistência com as mensagens de registo.
+  * Para ver o progresso da cópia, consulte o registo do módulo [ 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) e as características de replicação [ 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) do nó 2. Utilize o SafeKit AI 🤖 para obter assistência com as mensagens de registo.
 
 
 ![Inicie o nó {{ .Get "app" }} 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
@@ -187,14 +187,14 @@ Apenas as alterações dentro dos ficheiros são replicadas em tempo real neste 
 
 ### 13.º Teste
 
-  * Pare o nó PRIM fazendo scroll para baixo no seu menu contextual e clicando `Stop`.
+  * Pare o nó PRIM fazendo scroll para baixo no seu menu contextual e clicando em `Stop`.
   * Verifique se existe um failover no nó SECOND que se deve tornar ALONE (verde).
-  * E com o Microsoft Management Console (MMC) no Windows ou com linhas de comando no Linux, verifique o failover dos serviços {{ .Get "app" }} (parado no nó 1 no `stop_prim` script e iniciado no nó 2 no `start_prim` guião).
+  * E com o Microsoft Management Console (MMC) em Windows ou com linhas de comando em Linux, verifique o failover dos serviços {{ .Get "app" }} (interrompido no nó 1 no script `stop_prim` e iniciado no nó 2 no script `start_prim`).
 
 
-⚠️ Se ALONE (verde) não for atingido em node2 ou se a aplicação não for iniciada, analise o porquê com o [registo do módulo 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) do nó 2.
+⚠️ Se ALONE (verde) não for atingido em node2 ou se a aplicação não for iniciada, analise o porquê com o registo do módulo [ 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) do nó 2.
 
-  * Clique no 🔍 **registo** ícone de `node2` para abrir o registo do módulo e procurar mensagens de erro, como por exemplo um verificador que deteta um erro e para o módulo.
+  * Clique no ícone 🔍 **log** de `node2` para abrir o registo do módulo e procurar mensagens de erro, como um verificador que deteta um erro e interrompe o módulo.
   * Clique em `start_prim` no registo: as mensagens de saída do script são apresentadas à direita e podem ser detetados erros, como um serviço iniciado incorretamente.
   * Utilize SafeKit AI 🤖 para obter assistência com mensagens de registo.
 
@@ -202,10 +202,10 @@ Apenas as alterações dentro dos ficheiros são replicadas em tempo real neste 
 ⚠️ 
 
   * Se tudo estiver bem, inicie o node1, que irá voltar a sincronizar os diretórios replicados do node2.
-  * Se as coisas correrem mal, pare node2 e [forçar o arranque como primário 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) de node1, que será reiniciado com os seus dados localmente íntegros no momento da paragem.
+  * Se algo correr mal, pare node2 e [ force o arranque como 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) primário de node1, que será reiniciado com os seus dados localmente íntegros no momento da paragem.
 
 
-ℹ️ Encontre mais detalhes, juntamente com vídeos, no [Formação online SafeKit](/resources/safekit-on-line-training/).
+ℹ️ Encontre mais detalhes, juntamente com vídeos, na Formação Online [SafeKit](/resources/safekit-on-line-training/).
 
 
 ![Pare o módulo {{ .Get "app" }} no servidor PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)

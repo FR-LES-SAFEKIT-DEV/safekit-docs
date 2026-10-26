@@ -1,4 +1,4 @@
-{{/* Shortcode: insert-safekit-82-configuration-ko */}}
+{{/* Shortcode: insert-safekit-82-configuration-ko */}}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
@@ -9,20 +9,20 @@
   * 2개 노드에 설치된 {{ .Get "app" }} 애플리케이션.
   * 총 복제 데이터는 몇 테라바이트로 제한됩니다. 이를 초과하면 재동기화 시간이 상당히 길어집니다.
   * 노드 간 최소 1Gb/s 상호 연결(더 빠른 재동기화를 위해 10Gb/s 권장)
-  * IP 장애 조치에는 동일한 LAN 또는 확장된 LAN(L2)에 두 노드가 모두 필요합니다. 라우팅된 L3 네트워크는 지원되지 않습니다(🛠️ 제외). [클라우드 로드 밸런서](/resources/safekit-user-guide-82/#Cloud)).
+  * IP 장애 조치에는 동일한 LAN 또는 확장된 LAN(L2)에 두 노드가 모두 필요합니다. 라우팅된 L3 네트워크는 지원되지 않습니다(🛠️ [클라우드 로드 밸런서](/resources/safekit-user-guide-82/#Cloud) 제외).
 
 
 ### 1. SafeKit 콘솔을 시작합니다
 
-  * 다음에 연결하여 한 클러스터 노드의 브라우저에서 웹 콘솔을 시작합니다. `http://localhost:9010`.
-  * 입력 `admin` 설치 중에 정의된 사용자 이름과 비밀번호로.
+  * `http://localhost:9010`에 연결하여 한 클러스터 노드의 브라우저에서 웹 콘솔을 시작합니다.
+  * 설치 중에 정의한 사용자 이름과 비밀번호로 `admin`를 입력하십시오.
 
 
 클러스터 외부 워크스테이션의 브라우저에서 콘솔을 실행할 수도 있습니다.
 
 ⚠️ SafeKit의 구성은 단일 브라우저의 두 노드 모두에서 수행됩니다.
 
-ℹ️ 웹 콘솔을 보호하려면 🛠️를 참조하세요. [11\. SafeKit 웹 서비스 보안](/resources/safekit-user-guide-82/#https) 사용자 가이드에서.
+ℹ️ 웹 콘솔을 보호하려면 🛠️ [11\을 참조하세요. 사용자 가이드의 SafeKit 웹 서비스 ](/resources/safekit-user-guide-82/#https) 보안.
 
 
 ![SafeKit 웹 콘솔을 시작하여 {{ .Get "app" }} 클러스터 구성](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,15 +30,15 @@
 
 ### 2. 노드 주소 구성
 
-  * 노드 IP 주소를 입력하고 `Tab key` 연결을 확인하고 노드 이름을 입력합니다. node1 또는 node2가 빨간색인 경우 두 노드에 대한 브라우저의 연결을 확인하고 두 노드의 방화벽을 확인하여 🛠️ [문제 해결](/resources/safekit-user-guide-82/#Troubleshooting).
-  * 그런 다음을 클릭하십시오. `Save and apply` 구성을 저장합니다.
-  * 확인해보세요 `Success` ✅ 두 노드 모두에 메시지가 표시됩니다.
-  * 구성의 경우 `Failure` ❌가 한 노드에서 발생하면 해당 노드에 대한 ▼ 아코디언을 열고 메시지를 검토하세요. SafeKit AI 🤖를 사용하여 도움을 받을 수 있습니다.
+  * 노드 IP 주소를 입력하고 `Tab key`를 눌러 연결을 확인하고 노드 이름을 입력합니다. node1 또는 node2가 빨간색인 경우 두 노드에 대한 브라우저의 연결을 확인하고 두 노드의 방화벽을 확인하여 🛠️ [ 문제 해결](/resources/safekit-user-guide-82/#Troubleshooting)를 확인하세요.
+  * 그런 다음 `Save and apply`를 클릭하여 구성을 저장합니다.
+  * 두 노드 모두에서 `Success` ✅ 메시지를 확인하세요.
+  * 한 노드에서 `Failure` ❌ 구성이 발생하면 해당 노드에 대한 ▼ 아코디언을 열고 메시지를 검토합니다. SafeKit AI 🤖를 사용하여 도움을 받을 수 있습니다.
 
 
-ℹ️ 원하는 경우 새 항목을 추가할 수 있습니다. `LAN and nodes` (첫 번째 ➕) 두 번째 하트비트와 전용 복제 네트워크를 생성합니다.
+ℹ️ 원하는 경우 새 `LAN and nodes`(첫 번째 ➕)를 추가하여 두 번째 하트비트와 전용 복제 네트워크를 생성할 수 있습니다.
 
-ℹ️ 클릭하시면 `Advanced configuration`, `cluster.xml` 파일이 표시됩니다. 이 파일은 콘솔에 의해 자동으로 채워지고 노드에 배포됩니다.
+ℹ️ `Advanced configuration`를 클릭하면 `cluster.xml` 파일이 표시됩니다. 이 파일은 콘솔에 의해 자동으로 채워지고 노드에 배포됩니다.
 
 
 ![{{ .Get "app" }} 클러스터의 노드를 입력하세요.](/wp-content/uploads/2024/03/02-cluster-edit.png)
@@ -46,10 +46,10 @@
 
 ### 3. 모듈 선택
 
-  * 에서 `New module`, `{{ .Get "mod" }}.safe` 모듈.
+  * `New module`에서 `{{ .Get "mod" }}.safe` 모듈을 클릭합니다.
 
 
-ℹ️ 상단 파란색 배너에는 🛜 `node1` 콘솔 연결 노드를 나타냅니다. 이 노드는 요청을 다음으로 전달합니다. `node2` 필요할 때.
+ℹ️ 상단의 파란색 배너에서 🛜 `node1`는 콘솔 연결 노드를 나타냅니다. 이 노드는 필요할 때 `node2`에 요청을 전달합니다.
 
 ℹ️ 콘솔은 다음을 찾습니다. `xxx.safe` 에서 `Application_Modules/generic/` 연결 노드의 디렉터리(`node1`) 설치 중에 모듈을 배치한 경우.
 
@@ -59,25 +59,25 @@
 
 ### 4. 모듈 구성
 
-  * 에서 `Module startup at boot`, 부팅 시 지연 없이 모듈 자동 시작을 선택합니다.
-  * 에서 `Macros` / `SERVICES`, 시작 순서대로 애플리케이션의 서비스 이름을 쉼표로 구분하여 입력합니다. 시각적인 예는 이 스크린샷을 참조하세요. [Milestone XProtect 서비스 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
-  * 에서 `Heartbeat networks`, 복제가 수행되는 단일 하트비트 네트워크가 있어야 합니다. 2단계에서 프라이빗 LAN를 추가한 경우 프라이빗 LAN의 복제 흐름을 사용하여 두 개의 하트비트를 구성할 수 있습니다.
+  * `Module startup at boot`에서는 부팅 시 지연 없이 모듈 자동 시작을 선택합니다.
+  * `Macros` / `SERVICES`에 애플리케이션의 서비스 이름을 시작 순서대로 쉼표로 구분하여 입력합니다. [Milestone XProtect 서비스 🖼️](/wp-content/uploads/2025/05/milestone-services.png)의 시각적 예를 보려면 이 스크린샷을 참조하세요.
+  * `Heartbeat networks`에서는 복제가 수행되는 단일 하트비트 네트워크가 있어야 합니다. 2단계에서 프라이빗 LAN를 추가한 경우 프라이빗 LAN의 복제 흐름을 사용하여 두 개의 하트비트를 구성할 수 있습니다.
   * 에서 `Virtual IP addresses`, 가상 입력 IP 주소. 가상 IP 주소는 표준입니다 IP 같은 주소로 IP 네트워크(동일한 서브넷) IP 두 노드의 주소.  
 애플리케이션 클라이언트는 가상으로 구성되어야 합니다. IP 주소(또는 DNS 가상과 관련된 이름 IP 주소).  
-가상 IP 주소는 장애 발생 시 자동으로 전환됩니다.
-  * 에서 `Replicated directories`, 복제할 디렉터리의 경로를 설정합니다. 두 노드 모두에 존재하고 애플리케이션 데이터를 포함하는지 확인하십시오.  
+가상 IP 장애 발생 시 주소가 자동으로 전환됩니다.
+  * `Replicated directories`에서 복제할 디렉터리의 경로를 설정합니다. 두 노드 모두에 존재하고 애플리케이션 데이터를 포함하는지 확인하십시오.  
 데이터베이스에는 데이터 및 로그 복제가 필수적입니다.  
 필요에 따라 추가 복제 디렉터리를 생성할 수 있습니다.  
-시각적인 예는 이 스크린샷을 참조하세요. [Milestone XProtect SQL 복제 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
-  * 에서 `Checkers`, 필요한 경우 프로세스 모니터링, 사용자 정의 검사기, TCP, 핑 또는 분할 브레인 검사기와 같은 검사기를 구성할 수 있습니다.  
-예를 들어, 프로세스 이름이 표시되는 경우 `Monitored processes/services`, 장애 발생 시 재시작 조치로 모니터링됩니다. 잘못된 프로세스 이름을 구성하면 모듈이 시작 직후 중지됩니다.
+[Milestone XProtect SQL 복제 🖼️](/wp-content/uploads/2025/05/milestone-replication.png)의 시각적 예를 보려면 이 스크린샷을 참조하세요.
+  * `Checkers`에서는 필요한 경우 프로세스 모니터링, 사용자 정의 검사기, TCP, 핑 또는 분할 브레인 검사기와 같은 검사기를 구성할 수 있습니다.  
+예를 들어 `Monitored processes/services`에 프로세스 이름이 표시되어 있으면 장애 발생 시 다시 시작 동작으로 모니터링됩니다. 잘못된 프로세스 이름을 구성하면 모듈이 시작 직후 중지됩니다.
 
 
-ℹ️ 클릭하시면 `Advanced configuration`, `userconfig.xml` 파일이 표시됩니다. 이 파일은 콘솔에 의해 자동으로 채워지고 다시 시작 스크립트를 사용하여 노드에 배포됩니다.
+ℹ️ `Advanced configuration`를 클릭하면 `userconfig.xml` 파일이 표시됩니다. 이 파일은 콘솔에 의해 자동으로 채워지고 다시 시작 스크립트를 사용하여 노드에 배포됩니다.
 
 ℹ️ 클라우드 배포에서는 가상 환경을 구성할 필요가 없습니다. IP 주소 SafeKit. 가상 IP 🛠️에서 관리됩니다 [클라우드 로드 밸런서 수준](/resources/safekit-user-guide-82/#Cloud).
 
-ℹ️ SafeKit 구성을 적용하면 `startup type` 서비스는 다음과 같이 자동으로 설정됩니다. `Manual` Windows 서비스에서. 이렇게 하면 시스템이 부팅될 때 서비스가 자동으로 시작되지 않고 대신 모듈 자체가 시작될 때만 서비스가 시작됩니다(Linux에도 동일하게 적용됨).
+ℹ️신청하시면 SafeKit 구성, `startup type` 서비스는 다음과 같이 자동으로 설정됩니다. `Manual` 안으로 Windows 서비스. 이렇게 하면 시스템이 부팅될 때 서비스가 자동으로 시작되지 않고 대신 모듈 자체가 시작될 때만 서비스가 시작됩니다. Linux).
 
 
 ![{{ .Get "app" }} 모듈 설정을 입력하세요.](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
@@ -86,9 +86,9 @@
 ### 5. 스크립트 편집(선택 사항)
 
   * 이 단계는 선택 사항이며 대부분의 경우 건너뛸 수 있습니다. 이전 단계에서 정의한 서비스를 다시 시작하도록 다시 시작 스크립트가 이미 사전 구성되어 있기 때문입니다.
-  * 그럼 바로 클릭해서 `Next step`.
-  * `start_prim.ps1` 지정된 순서대로 모든 서비스를 시작합니다. `SERVICES` 목록을 작성하는 동안 `stop_prim.ps1` 모든 서비스를 역순으로 중지합니다.
-  * 추가적으로, `start_prim.ps1` 각 서비스의 시작을 확인하고 서비스가 올바르게 시작되지 않으면 모듈을 중지합니다.
+  * 따라서 `Next step`를 직접 클릭하세요.
+  * `start_prim.ps1`는 `SERVICES` 목록에 지정된 순서대로 모든 서비스를 시작하고, `stop_prim.ps1`는 역순으로 모든 서비스를 중지합니다.
+  * 또한 `start_prim.ps1`는 각 서비스의 시작을 확인하고 서비스가 올바르게 시작되지 않으면 모듈을 중지합니다.
 
 
 ![{{ .Get "app" }} 모듈 설정을 입력하세요.](/wp-content/uploads/2026/09/28-module-edit-script.png)
@@ -104,7 +104,7 @@
 
 ### 7. 저장 및 적용
 
-  * `Save and apply` 두 노드 모두의 구성 및 스크립트.
+  * `Save and apply` 두 노드의 구성 및 스크립트.
 
 
 ![{{ .Get "app" }} 모듈 구성 저장 및 적용](/wp-content/uploads/2025/05/08-module-save-1.png)
@@ -112,11 +112,11 @@
 
 ### 8. 성공적인 구성 확인
 
-  * 확인해보세요 `Success` ✅ 두 노드 모두에 메시지를 보내고 클릭하세요. `Monitor modules`.
-  * 구성의 경우 `Failure` ❌가 한 노드에서 발생하면 해당 노드에 대한 ▼ 아코디언을 열고 메시지를 검토하세요. SafeKit AI 🤖를 사용하여 도움을 받을 수 있습니다.
+  * 두 노드 모두에서 `Success` ✅ 메시지를 확인하고 `Monitor modules`를 클릭하세요.
+  * 한 노드에서 `Failure` ❌ 구성이 발생하면 해당 노드에 대한 ▼ 아코디언을 열고 메시지를 검토합니다. SafeKit AI 🤖를 사용하여 도움을 받을 수 있습니다.
 
 
-⚠️ Linux에서 복제된 디렉터리가 마운트 지점인 경우 이 단계에서 오류가 발생할 수 있습니다.🛠️ [문제를 해결하려면 SK-0030을 참조하세요.](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+⚠️ Linux에서 복제된 디렉터리가 마운트 지점인 경우 이 단계에서 오류가 발생할 수 있습니다.🛠️ [](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf) 문제를 해결하려면 SK-0030을 참조하세요.
 
 
 ![{{ .Get "app" }} 모듈 구성 성공 확인](/wp-content/uploads/2025/05/09-module-save-check-1.png)
@@ -124,16 +124,16 @@
 
 ### 9. 최신 데이터로 노드 시작
 
-  * 노드 1에 최신 복제 디렉터리가 있으면 이를 선택하고 ⋯ `Force start` ▶ `As primary`.
+  * 노드 1에 최신 복제 디렉터리가 있으면 이를 선택하고 ⋯ `Force start` ▶ `As primary`를 선택합니다.
 
 
 노드 2가 시작되면 모든 데이터가 노드 1에서 노드 2로 복사됩니다.
 
 ⚠️ 잘못된 선택을 하면 두 노드에서 오래된 데이터가 동기화될 위험이 있습니다.
 
-⚠️ 또한 {{ .Get "app" }} 애플리케이션이 노드 1에서 중지되어 SafeKit가 복제 메커니즘을 설치한 다음 노드 1에서 애플리케이션을 시작한다고 가정합니다. `start_prim` 스크립트.
+⚠️ 또한 {{ .Get "app" }} 애플리케이션이 노드 1에서 중지되어 SafeKit가 복제 메커니즘을 설치한 다음 `start_prim` 스크립트에서 애플리케이션을 시작한다고 가정합니다.
 
-⚠️ 사용 `Start` 후속 시작을 위해: SafeKit는 최신 서버를 유지합니다. 시작 `As primary` 특별한 스타트업이 처음으로 또는 예외적인 운영 중에 있는 경우입니다.
+⚠️ 후속 시작에는 `Start`를 사용하세요. SafeKit는 최신 서버를 유지합니다. `As primary`를 시작하는 것은 처음으로 또는 예외적인 작업 중에 특별한 시작입니다.
 
 
 ![최신 데이터를 사용하여 {{ .Get "app" }} 노드를 기본 노드로 시작합니다.](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
@@ -141,17 +141,17 @@
 
 ### 10. ALONE(녹색)로의 전환을 기다립니다.
 
-  * 노드 1은 ALONE(녹색) 상태에 도달해야 합니다. 이는 가상 IP가 설정되고 `start_prim` 노드 1에서 스크립트가 실행되었습니다.
+  * 노드 1은 ALONE(녹색) 상태에 도달해야 합니다. 이는 가상 IP가 설정되고 `start_prim` 스크립트가 노드 1에서 실행되었음을 의미합니다.
 
 
-⚠️ ALONE(녹색)에 도달하지 않거나, 애플리케이션이 시작되지 않는 경우, 왜 그런지 분석해 보세요. [모듈 로그 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) 노드 1의
+⚠️ ALONE(녹색)에 도달하지 않거나 애플리케이션이 시작되지 않는 경우 노드 1의 [ 모듈 로그🖼️](/wp-content/uploads/2024/03/24-module-log-script.png)를 통해 이유를 분석합니다.
 
   * 🔍를 클릭하세요. **로그** 아이콘 `node1` 모듈 로그를 열고 검사기가 오류를 감지하고 모듈을 중지하는 등의 오류 메시지를 찾습니다.
-  * 클릭하세요 `start_prim` 로그: 스크립트의 출력 메시지가 오른쪽에 표시되며 서비스가 잘못 시작되는 등의 오류가 감지될 수 있습니다.
+  * 로그에서 `start_prim`를 클릭하면 스크립트의 출력 메시지가 오른쪽에 표시되고 서비스가 잘못 시작되는 등의 오류가 감지될 수 있습니다.
   * 로그 메시지에 대한 도움을 받으려면 SafeKit AI 🤖를 사용하세요.
 
 
-⚠️ 클러스터가 `WAIT (red) not uptodate, STOP (red) not uptodate` 상태에서 WAIT 노드를 중지하고 [기본으로 시작하도록 강제 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+⚠️ 클러스터가 `WAIT (red) not uptodate, STOP (red) not uptodate` 상태인 경우 WAIT 노드를 중지하고 [가 기본 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)로 시작하도록 강제합니다.
 
 
 ![첫 번째 {{ .Get "app" }} 노드는 기본 노드로 시작하여 ALONE가 됩니다.](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
@@ -159,14 +159,14 @@
 
 ### 11. 노드 2 시작
 
-  * ⋯ `Start` 상황에 맞는 메뉴가 있는 노드 2.
+  * ⋯ 상황에 맞는 메뉴가 있는 `Start` 노드 2.
   * SECOND(녹색) 상태를 기다립니다.
 
 
 ℹ️ 노드 2는 복제된 디렉터리를 다시 동기화하는 동안(노드 1에서 노드 2로 복사) SECOND(주황색) 상태를 유지합니다.
 
   * 복제된 디렉터리에서 다시 동기화할 파일 크기와 네트워크 대역폭에 따라 시간이 걸릴 수 있습니다.
-  * 복사 진행 상황을 보려면 다음을 참조하세요. [모듈 로그 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) 그리고 [복제 리소스 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) 노드 2의. 로그 메시지에 대한 지원을 받으려면 SafeKit AI 🤖를 사용하세요.
+  * 복사 진행 상황을 보려면 노드 2의 [ 모듈 로그 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) 및 [복제 리소스 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png)를 참조하세요. 로그 메시지에 대한 지원을 받으려면 SafeKit AI 🤖를 사용하세요.
 
 
 ![{{ .Get "app" }} 노드 2를 시작합니다.](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
@@ -187,7 +187,7 @@
 
 ### 13. 테스트
 
-  * 상황에 맞는 메뉴를 아래로 스크롤하고 클릭하여 PRIM 노드를 중지합니다. `Stop`.
+  * 그만해 PRIM 상황에 맞는 메뉴를 아래로 스크롤하고 클릭하여 노드 `Stop`.
   * 장애 조치(failover)가 있는지 확인합니다. SECOND 노드 ALONE (녹색).
   * 그리고 Microsoft Management Console(MMC) 에 Windows 또는 명령줄을 사용하여 Linux, 장애 조치를 확인하세요. {{ .Get "app" }} 서비스(노드 1에서 중지됨) `stop_prim` 스크립트를 실행하고 노드 2에서 시작했습니다. `start_prim` 스크립트).
 
@@ -195,17 +195,17 @@
 ⚠️ 만약에 ALONE (녹색)에 도달하지 않았습니다. node2 또는 응용 프로그램이 시작되지 않으면 이유를 분석하십시오. [모듈 로그 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) 노드 2의
 
   * 🔍를 클릭하세요. **로그** 아이콘 `node2` 모듈 로그를 열고 검사기가 오류를 감지하고 모듈을 중지하는 등의 오류 메시지를 찾습니다.
-  * 클릭하세요 `start_prim` 로그: 스크립트의 출력 메시지가 오른쪽에 표시되며 서비스가 잘못 시작되는 등의 오류가 감지될 수 있습니다.
+  * 로그에서 `start_prim`를 클릭하면 스크립트의 출력 메시지가 오른쪽에 표시되고 서비스가 잘못 시작되는 등의 오류가 감지될 수 있습니다.
   * 로그 메시지에 대한 도움을 받으려면 SafeKit AI 🤖를 사용하세요.
 
 
 ⚠️ 
 
   * 모든 것이 정상이면 node1에서 시작을 시작합니다. 그러면 node2에서 복제된 디렉터리가 다시 동기화됩니다.
-  * 문제가 발생하면 node2를 중지하고 [시작을 기본으로 강제 실행 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) 중지 시 로컬에서 정상 데이터로 다시 시작되는 node1입니다.
+  * 일이 잘못되면 멈춰라 node2 그리고 [시작을 기본으로 강제 실행 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) 의 node1, 중지 시점의 로컬 정상 데이터로 다시 시작됩니다.
 
 
-ℹ️ 동영상과 함께 자세한 내용을 확인하세요. [SafeKit 온라인 교육](/resources/safekit-on-line-training/).
+ℹ️ [SafeKit 온라인 교육](/resources/safekit-on-line-training/)에서 동영상과 함께 자세한 내용을 찾아보세요.
 
 
 ![그만해 {{ .Get "app" }} 모듈 PRIM 서버](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -213,10 +213,10 @@
 
 ### 14. 지원
 
-  * 지원을 받으려면 2 SafeKit를 이용하세요. `Snapshots` (2개의 .zip 파일), 각 노드당 하나씩.
+  * 지원을 받으려면 각 노드당 하나씩 2개의 SafeKit `Snapshots`(2개의 .zip 파일)를 가져가세요.
 
 
-ℹ️ [지원에 대한 자세한 내용은 여기를 참조하세요.](/resources/safekit-support/).
+ℹ️ [지원에 대한 자세한 내용은 여기에서 확인하세요.](/resources/safekit-support/).
 
 
 ![지원을 위해 {{ .Get "app" }} 스냅샷 가져오기](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
