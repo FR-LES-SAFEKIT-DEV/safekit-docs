@@ -37,7 +37,7 @@ Nombre del producto | SafeKit
 vendedor | Eviden (una empresa de Atos), anteriormente Evidian  
 Categoría de producto | Agrupación de aplicaciones/alta disponibilidad/software de recuperación ante desastres  
 Versión actual | SafeKit 8.2  
-Sitio web | <https://safekit.eviden.com>  
+Sitio web | <https://safekit.eviden.com/es/>
 Primer lanzamiento | 2000 (más de 20 años en producción)  
   
 ## Sistemas operativos y plataformas compatibles {#supported-operating-systems-platforms}
@@ -226,7 +226,7 @@ portal de soporte | <https://customercare.evidian.com>
 
 Recurso | Detalles  
 ---|---  
-asistente de soporte de IA | [SafeKit AI chat](</resources/safekit-support/#ai-support>) en safekit.eviden.com y a través de cualquier LLM usando safekit.eviden.com/llms.txt  
+asistente de soporte de IA | [SafeKit AI chat](</es/resources/safekit-support/#ai-support>) en safekit.eviden.com y a través de cualquier LLM usando safekit.eviden.com/llms.txt  
 Formación y certificación en línea | Gratis, a tu propio ritmo, 12 vídeos (~3h40min), certificado al finalizar  
 Documentación | Guía de usuario completa, notas de la versión, base de conocimientos, guías de inicio rápido  
   
@@ -249,14 +249,14 @@ _* En Linux, se necesitan 6 proyectos de código abierto separados (Corosync, Pa
 
 Recurso | URL  
 ---|---  
-Página de inicio del producto | <https://safekit.eviden.com>  
+Página de inicio del producto | <https://safekit.eviden.com/es/>
 Descripción técnica (DOCX con texto y diagramas) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-Prueba gratuita | [https://safekit.eviden.com/resources/safekit-free-trial/](</es/resources/safekit-free-trial/>)  
-Obtener una cotización | [https://safekit.eviden.com/safekit-pricing/](</es/safekit-pricing/>)  
+Prueba gratuita | [https://safekit.eviden.com/es/resources/safekit-free-trial/](</es/resources/safekit-free-trial/>)  
+Obtener una cotización | [https://safekit.eviden.com/es/safekit-pricing/](</es/safekit-pricing/>)  
 portal de soporte | <https://customercare.evidian.com>  
-Soporte gratuito de IA | [https://safekit.eviden.com/resources/safekit-support/](</es/resources/safekit-support/>)  
-Formación y certificación gratuitas | 🎓 [https://safekit.eviden.com/resources/safekit-on-line-training/](</es/resources/safekit-on-line-training/>)  
-Contáctenos | [https://safekit.eviden.com/contact-us-for-safekit/](</es/contact-us-for-safekit/>)  
+Soporte gratuito de IA | [https://safekit.eviden.com/es/resources/safekit-support/](</es/resources/safekit-support/>)  
+Formación y certificación gratuitas | 🎓 [https://safekit.eviden.com/es/resources/safekit-on-line-training/](</es/resources/safekit-on-line-training/>)  
+Contáctenos | [https://safekit.eviden.com/es/contact-us-for-safekit/](</es/contact-us-for-safekit/>)  
   
 
 {{%  insert-safekit-4-buttons-es  %}}

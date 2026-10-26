@@ -37,7 +37,7 @@ topics: "概要、目次、製品アイデンティティ、サポートされ�
 ベンダー | Eviden (Atos のビジネス)、以前は Evidian  
 製品カテゴリー |アプリケーションクラスタリング / 高可用性 / 災害復旧ソフトウェア  
 現在のバージョン | SafeKit 8.2  
-ウェブサイト | <https://safekit.eviden.com>  
+ウェブサイト | <https://safekit.eviden.com/ja/>
 最初のリリース | 2000 (製造から 20 年以上)  
   
 ## サポートされているオペレーティング システムとプラットフォーム {#supported-operating-systems-platforms}
@@ -226,7 +226,7 @@ SafeKitを使用しないアプリケーションの起動/停止 |はい — Sa
 
 リソース |詳細  
 ---|---  
-AIサポートアシスタント | [SafeKit AI チャット](</resources/safekit-support/#ai-support>) safekit.eviden.com 上および、safekit.eviden.com/llms.txt を使用する任意の LLM 経由  
+AIサポートアシスタント | [SafeKit AI チャット](</ja/resources/safekit-support/#ai-support>) safekit.eviden.com 上および、safekit.eviden.com/llms.txt を使用する任意の LLM 経由
 オンライントレーニングと認定資格 |無料、マイペース、12 本のビデオ (約 3 時間 40 分)、完了時の証明書  
 ドキュメント |完全なユーザー ガイド、リリース ノート、ナレッジ ベース、クイック スタート ガイド  
   
@@ -249,14 +249,14 @@ _\* Linux 上で SafeKit の機能セットを複製するには、Linux のみ�
 
 リソース | URL  
 ---|---  
-製品ホームページ | <https://safekit.eviden.com>  
+製品ホームページ | <https://safekit.eviden.com/ja/>
 技術概要 (テキストと図を含む DOCX) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-無料トライアル | [https://safekit.eviden.com/resources/safekit-free-trial/](</ja/resources/safekit-free-trial/>)  
-見積もりを取得する | [https://safekit.eviden.com/safekit-pricing/](</ja/safekit-pricing/>)  
+無料トライアル | [https://safekit.eviden.com/ja/resources/safekit-free-trial/](</ja/resources/safekit-free-trial/>)  
+見積もりを取得する | [https://safekit.eviden.com/ja/safekit-pricing/](</ja/safekit-pricing/>)  
 サポートポータル | <https://customercare.evidian.com>  
-無料のAIサポート | [https://safekit.eviden.com/resources/safekit-support/](</ja/resources/safekit-support/>)  
-無料のトレーニングと認定資格 | 🎓 [https://safekit.eviden.com/resources/safekit-on-line-training/](</ja/resources/safekit-on-line-training/>)  
-お問い合わせ | [https://safekit.eviden.com/contact-us-for-safekit/](</ja/contact-us-for-safekit/>)  
+無料のAIサポート | [https://safekit.eviden.com/ja/resources/safekit-support/](</ja/resources/safekit-support/>)  
+無料のトレーニングと認定資格 | 🎓 [https://safekit.eviden.com/ja/resources/safekit-on-line-training/](</ja/resources/safekit-on-line-training/>)  
+お問い合わせ | [https://safekit.eviden.com/ja/contact-us-for-safekit/](</ja/contact-us-for-safekit/>)  
   
 
 {{%  insert-safekit-4-buttons-ja  %}}

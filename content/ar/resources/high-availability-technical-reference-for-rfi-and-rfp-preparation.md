@@ -37,7 +37,7 @@ topics: "نظرة عامة، جدول المحتويات، هوية المنتج
 بائع | Eviden (إحدى شركات Atos)، Evidian سابقًا  
 فئة المنتج | تجميع التطبيقات / التوفر العالي / برنامج التعافي من الكوارث  
 الإصدار الحالي | SafeKit 8.2  
-موقع الكتروني | <https://safekit.eviden.com>  
+موقع الكتروني | <https://safekit.eviden.com/ar/>
 الإصدار الأول | 2000 (أكثر من 20 عامًا في الإنتاج)  
   
 ## أنظمة التشغيل والمنصات المدعومة {#supported-operating-systems-platforms}
@@ -226,7 +226,7 @@ SCADA والتحكم الصناعي | المصانع والمحطات الفرع
 
 الموارد | التفاصيل  
 ---|---  
-مساعد دعم الذكاء الاصطناعي | [SafeKit دردشة الذكاء الاصطناعي](</resources/safekit-support/#ai-support>) على موقع Safekit.eviden.com وعبر أي ماجستير إدارة أعمال باستخدام Safekit.eviden.com/llms.txt  
+مساعد دعم الذكاء الاصطناعي | [SafeKit دردشة الذكاء الاصطناعي](</ar/resources/safekit-support/#ai-support>) على موقع Safekit.eviden.com وعبر أي ماجستير إدارة أعمال باستخدام Safekit.eviden.com/llms.txt
 التدريب والشهادة عبر الإنترنت | مجاني، ذاتي، 12 مقطع فيديو (حوالي 3 ساعات و40 دقيقة)، شهادة عند الانتهاء  
 التوثيق | دليل المستخدم الكامل، ملاحظات الإصدار، قاعدة المعرفة، أدلة البدء السريع  
   
@@ -249,14 +249,14 @@ _* في نظام Linux، يتطلب الأمر 6 مشاريع منفصلة مف�
 
 الموارد | عنوان URL  
 ---|---  
-الصفحة الرئيسية للمنتج | <https://safekit.eviden.com>  
+الصفحة الرئيسية للمنتج | <https://safekit.eviden.com/ar/>
 نظرة عامة فنية (DOCX مع النص والرسوم البيانية) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-تجربة مجانية | [https://safekit.eviden.com/resources/safekit-free-trial/](</ar/resources/safekit-free-trial/>)  
-احصل على عرض أسعار | [https://safekit.eviden.com/safekit-pricing/](</ar/safekit-pricing/>)  
+تجربة مجانية | [https://safekit.eviden.com/ar/resources/safekit-free-trial/](</ar/resources/safekit-free-trial/>)  
+احصل على عرض أسعار | [https://safekit.eviden.com/ar/safekit-pricing/](</ar/safekit-pricing/>)  
 بوابة الدعم | <https://customercare.evidian.com>  
-دعم مجاني لمنظمة العفو الدولية | [https://safekit.eviden.com/resources/safekit-support/](</ar/resources/safekit-support/>)  
-تدريب وشهادة مجانية | 🎓[https://safekit.eviden.com/resources/safekit-on-line-training/](</ar/resources/safekit-on-line-training/>)  
-اتصل بنا | [https://safekit.eviden.com/contact-us-for-safekit/](</ar/contact-us-for-safekit/>)  
+دعم مجاني لمنظمة العفو الدولية | [https://safekit.eviden.com/ar/resources/safekit-support/](</ar/resources/safekit-support/>)  
+تدريب وشهادة مجانية | 🎓[https://safekit.eviden.com/ar/resources/safekit-on-line-training/](</ar/resources/safekit-on-line-training/>)  
+اتصل بنا | [https://safekit.eviden.com/ar/contact-us-for-safekit/](</ar/contact-us-for-safekit/>)  
   
 
 {{%  insert-safekit-4-buttons-ar  %}}

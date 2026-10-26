@@ -251,12 +251,12 @@ Recurso | URL
 ---|---  
 Página inicial do produto | <https://safekit.eviden.com>  
 Visão geral técnica (DOCX com texto e diagramas) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-Teste grátis | [https://safekit.eviden.com/resources/safekit-free-trial/](</pt-pt/resources/safekit-free-trial/>)  
-Faça uma cotação | [https://safekit.eviden.com/safekit-pricing/](</pt-pt/safekit-pricing/>)  
+Teste grátis | [https://safekit.eviden.com/pt-pt/resources/safekit-free-trial/](</pt-pt/resources/safekit-free-trial/>)  
+Faça uma cotação | [https://safekit.eviden.com/pt-pt/safekit-pricing/](</pt-pt/safekit-pricing/>)  
 Portal de suporte | <https://customercare.evidian.com>  
-Suporte gratuito para IA | [https://safekit.eviden.com/resources/safekit-support/](</pt-pt/resources/safekit-support/>)  
-Formação e certificação gratuitas | 🎓 [https://safekit.eviden.com/resources/safekit-on-line-training/](</pt-pt/resources/safekit-on-line-training/>)  
-Contate-nos | [https://safekit.eviden.com/contact-us-for-safekit/](</pt-pt/contact-us-for-safekit/>)  
+Suporte gratuito para IA | [https://safekit.eviden.com/pt-pt/resources/safekit-support/](</pt-pt/resources/safekit-support/>)  
+Formação e certificação gratuitas | 🎓 [https://safekit.eviden.com/pt-pt/resources/safekit-on-line-training/](</pt-pt/resources/safekit-on-line-training/>)  
+Contate-nos | [https://safekit.eviden.com/pt-pt/contact-us-for-safekit/](</pt-pt/contact-us-for-safekit/>)  
   
 
 {{%  insert-safekit-4-buttons-pt-pt  %}}

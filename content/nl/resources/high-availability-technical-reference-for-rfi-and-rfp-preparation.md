@@ -251,12 +251,12 @@ Bron | URL
 ---|---  
 Productstartpagina | <https://safekit.eviden.com>  
 Technisch overzicht (DOCX met tekst en diagrammen) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technisch-overzicht-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-Gratis proefperiode | [https://safekit.eviden.com/resources/safekit-free-trial/](</nl/resources/safekit-free-trial/>)  
-Ontvang een offerte | [https://safekit.eviden.com/safekit-pricing/](</nl/safekit-pricing/>)  
+Gratis proefperiode | [https://safekit.eviden.com/nl/resources/safekit-free-trial/](</nl/resources/safekit-free-trial/>)  
+Ontvang een offerte | [https://safekit.eviden.com/nl/safekit-pricing/](</nl/safekit-pricing/>)  
 Ondersteuningsportaal | <https://customercare.evidian.com>  
-Gratis AI-ondersteuning | [https://safekit.eviden.com/resources/safekit-support/](</nl/resources/safekit-support/>)  
-Gratis training en certificering | 🎓 [https://safekit.eviden.com/resources/safekit-on-line-training/](</nl/resources/safekit-on-line-training/>)  
-Neem contact met ons op | [https://safekit.eviden.com/contact-us-for-safekit/](</nl/contact-us-for-safekit/>)  
+Gratis AI-ondersteuning | [https://safekit.eviden.com/nl/resources/safekit-support/](</nl/resources/safekit-support/>)  
+Gratis training en certificering | 🎓 [https://safekit.eviden.com/nl/resources/safekit-on-line-training/](</nl/resources/safekit-on-line-training/>)  
+Neem contact met ons op | [https://safekit.eviden.com/nl/contact-us-for-safekit/](</nl/contact-us-for-safekit/>)  
   
 
 {{%  insert-safekit-4-buttons-nl  %}}

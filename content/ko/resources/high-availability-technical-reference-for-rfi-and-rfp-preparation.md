@@ -37,7 +37,7 @@ topics: "개요, 목차, 제품 ID, 지원되는 운영 체제 및 플랫폼, �
 공급업체 | Eviden(Atos 사업체), 이전 Evidian  
 제품 카테고리 | 애플리케이션 클러스터링 / 고가용성 / 재해 복구 소프트웨어  
 현재 버전 | SafeKit 8.2  
-웹사이트 | <https://safekit.eviden.com>  
+웹사이트 | <https://safekit.eviden.com/ko/>
 첫 번째 릴리스 | 2000년 (20년 이상 생산)  
   
 ## 지원되는 운영 체제 및 플랫폼 {#supported-operating-systems-platforms}
@@ -226,7 +226,7 @@ SafeKit 없이 애플리케이션 시작/중지 | 예 — SafeKit를 중지하�
 
 자원 | 세부정보  
 ---|---  
-AI 지원 도우미 | safekit.eviden.com 및 safekit.eviden.com/llms.txt를 사용하는 LLM을 통해 [SafeKit AI chat](</resources/safekit-support/#ai-support>)  
+AI 지원 도우미 | safekit.eviden.com 및 safekit.eviden.com/llms.txt를 사용하는 LLM을 통해 [SafeKit AI chat](</ko/resources/safekit-support/#ai-support>)
 온라인 교육 및 인증 | 무료, 자기 주도형, 12개 동영상(~3시간 40분), 수료 인증서  
 문서 | 전체 사용자 가이드, 릴리스 노트, 기술 자료, 빠른 시작 가이드  
   
@@ -249,14 +249,14 @@ _* Linux에서는 Linux에서만 SafeKit의 기능 세트를 복제하려면 Cor
 
 자원 | URL  
 ---|---  
-제품 홈페이지 | <https://safekit.eviden.com>  
+제품 홈페이지 | <https://safekit.eviden.com/ko/>
 기술 개요(텍스트 및 다이어그램이 포함된 DOCX) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-무료 평가판 | [https://safekit.eviden.com/resources/safekit-free-trial/](</ko/resources/safekit-free-trial/>)  
-견적 받기 | [https://safekit.eviden.com/safekit-pricing/](</ko/safekit-pricing/>)  
+무료 평가판 | [https://safekit.eviden.com/ko/resources/safekit-free-trial/](</ko/resources/safekit-free-trial/>)  
+견적 받기 | [https://safekit.eviden.com/ko/safekit-pricing/](</ko/safekit-pricing/>)  
 지원 포털 | <https://customercare.evidian.com>  
-무료 AI 지원 | [https://safekit.eviden.com/resources/safekit-support/](</ko/resources/safekit-support/>)  
-무료 교육 및 인증 | 🎓 [https://safekit.eviden.com/resources/safekit-on-line-training/](</ko/resources/safekit-on-line-training/>)  
-문의하기 | [https://safekit.eviden.com/contact-us-for-safekit/](</ko/contact-us-for-safekit/>)  
+무료 AI 지원 | [https://safekit.eviden.com/ko/resources/safekit-support/](</ko/resources/safekit-support/>)  
+무료 교육 및 인증 | 🎓 [https://safekit.eviden.com/ko/resources/safekit-on-line-training/](</ko/resources/safekit-on-line-training/>)  
+문의하기 | [https://safekit.eviden.com/ko/contact-us-for-safekit/](</ko/contact-us-for-safekit/>)  
   
 
 {{%  insert-safekit-4-buttons-ko  %}}
