@@ -1,6 +1,6 @@
 ---
 title: "SafeKit を使用した Hyper-V 高可用性: フェールオーバー用の hyperv.safe モジュールをインストールする"
-canonical: https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/ja/ja/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: SafeKit を使用したアクティブ/アクティブ Hyper-V クラスターの hyperv.safe の構成について説明します。 2
   ノードのシェアードナッシング アーキテクチャにより、VM レベルで高可用性を実現します。 SAN
   や共有ストレージのコストをかけずに、自動フェイルオーバーのために複数の VM をノード間で同期的にレプリケートします。
@@ -20,7 +20,7 @@ topics: Hyper-V の高可用性クイック インストール ガイド、SafeK
 
 ## SafeKit / Hyper-V ソリューションの概要 {#overview-of-the-safekit--hyper-v-solution}
 
-解決策はここで説明されています。 **💡[シンプル Hyper-V 共有ストレージ (SAN) を使用しない高可用性](</solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
+解決策はここで説明されています。 **💡[シンプル Hyper-V 共有ストレージ (SAN) を使用しない高可用性](</ja/solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
 
 ## のインストール SafeKit / Hyper-V 解決策 Windows (hyperv.safe) {#installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe}
 

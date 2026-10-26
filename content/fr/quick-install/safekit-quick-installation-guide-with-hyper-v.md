@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité Hyper-V avec SafeKit : installez le module
   hyperv.safe pour le basculement"
-canonical: https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/fr/fr/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: Découvrez la configuration de hyperv.safe pour un cluster Hyper-V
   actif/actif avec SafeKit. Obtenez une haute disponibilité au niveau de la VM
   avec une architecture sans partage à 2 nœuds. Répliquez de manière synchrone
@@ -25,7 +25,7 @@ topics: Guide d'installation rapide haute disponibilité pour Hyper-V,
 
 ## Présentation de la solution SafeKit / Hyper-V {#overview-of-the-safekit--hyper-v-solution}
 
-La solution est décrite ici : **💡[Simple Hyper-V Haute disponibilité sans stockage partagé (SAN)](</solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
+La solution est décrite ici : **💡[Simple Hyper-V Haute disponibilité sans stockage partagé (SAN)](</fr/solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
 
 ## Installation de la solution SafeKit / Hyper-V sur Windows (hyperv.safe) {#installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe}
 
@@ -36,7 +36,7 @@ La solution est décrite ici : **💡[Simple Hyper-V Haute disponibilité sans 
   * Maximum 32 machines virtuelles par hôte Hyper-V.
   * Total des données répliquées limité à quelques téraoctets ; au-delà, le temps de resynchronisation devient important.
   * Interconnexion minimale de 1 Gbit/s entre les nœuds (10 Gbit/s recommandés pour une resynchronisation plus rapide).
-  * Le basculement IP nécessite les deux nœuds sur le même LAN ou le même LAN étendu (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec 🛠️ [équilibrages de charge cloud](</resources/safekit-user-guide-82/#Cloud>)).
+  * Le basculement IP nécessite les deux nœuds sur le même LAN ou le même LAN étendu (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec 🛠️ [équilibrages de charge cloud](</fr/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

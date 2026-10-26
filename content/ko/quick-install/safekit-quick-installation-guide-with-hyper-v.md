@@ -1,6 +1,6 @@
 ---
 title: "SafeKit을 통한 Hyper-V 고가용성: 장애 조치를 위한 hyperv.safe 모듈 설치"
-canonical: https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/ko/ko/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: SafeKit을 사용하여 활성/활성 Hyper-V 클러스터에 대해 hyperv.safe를 구성하는 방법을 알아보세요.
   2노드 비공유 아키텍처를 통해 VM 수준에서 고가용성을 달성합니다. SAN 또는 공유 스토리지 비용 없이 자동 장애 조치를 위해 여러 노드에
   걸쳐 여러 VM을 동기식으로 복제합니다.
@@ -19,7 +19,7 @@ topics: Hyper-V용 고가용성 빠른 설치 안내서, SafeKit 고가용성 �
 
 ## SafeKit/Hyper-V 솔루션 개요 {#overview-of-the-safekit--hyper-v-solution}
 
-솔루션은 여기에 설명되어 있습니다: **💡[SAN(공유 스토리지 없는 단순 Hyper-V 고가용성)](</solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
+솔루션은 여기에 설명되어 있습니다: **💡[SAN(공유 스토리지 없는 단순 Hyper-V 고가용성)](</ko/solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
 
 ## 설치 SafeKit / Hyper-V 솔루션 Windows (하이퍼브.안전) {#installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe}
 
