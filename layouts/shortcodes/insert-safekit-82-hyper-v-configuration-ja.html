@@ -14,12 +14,12 @@
 
 ### 1. 前提条件 {#prerequisite}
 
-SafeKit レプリケーションの場合、これが Hyper‑V のデフォルトの動作ではない場合でも、すべての VM1 仮想マシン ファイル (構成ファイル、仮想ハード ディスクなど) を同じフォルダーに保存する必要があります (たとえば、D:/Repli-{{ .Get "app" }}/VM1、VM1 は仮想マシンの名前です)。
+SafeKit レプリケーションの場合、これが Hyper‑V のデフォルトの動作ではない場合でも、すべての VM1 仮想マシン ファイル (構成ファイル、仮想ハード ディスクなど) を同じフォルダーに保存する必要があります (例: D:/Repli-{{ .Get "app" }}/VM1、ここで VM1 は仮想マシンの名前です)。
 
 VM1 のすべてのファイルが同じフォルダーにない場合は、{{ .Get "app" }} マネージャーを使用します。
 
   * VM1 をフォルダー (たとえば、D:/Repli-{{ .Get "app" }}) にエクスポートします。
-  * このエクスポートによりフォルダーが作成されます D:/Repli-{{ .Get "app" }}/VM1 すべてを含む VM1 ファイル
+  * このエクスポートにより、フォルダー D:/Repli- が作成されます。{{ .Get "app" }}/VM1 すべてを含む VM1 ファイル
   * 削除 VM1 の在庫から {{ .Get "app" }} マネージャー
   * 以前にエクスポートした VM1 を {{ .Get "app" }} マネージャーにインポートします
 
@@ -42,7 +42,7 @@ VM1 のすべてのファイルが同じフォルダーにない場合は、{{ .
 
 ⚠️ SafeKit の設定は、単一のブラウザから両方のノードで実行されます。
 
-ℹ️ Web コンソールを保護するには、🛠️ を参照してください。 [11\。 SafeKit Web サービスのセキュリティ保護](/resources/safekit-user-guide-82/#https) ユーザーズガイドに記載されています。
+ℹ️ Web コンソールを保護するには、🛠️ を参照してください。 [11\\。 SafeKit Web サービスのセキュリティ保護](/resources/safekit-user-guide-82/#https) ユーザーズガイドに記載されています。
 
 
 ![SafeKit Web コンソールを起動して、{{ .Get "app" }} クラスターを構成します。](/wp-content/uploads/2024/03/01-login-large.png)
@@ -122,7 +122,7 @@ VM1 のすべてのファイルが同じフォルダーにない場合は、{{ .
 
 ℹ️ チェックポイントを復元したい場合も同様です。 {{ .Get "app" }} は操作を実行するために VM を停止しますが、VM チェッカーは VM を自動的に再起動することで否定的な反応を示す可能性があります。これを回避するには、 [チェッカーを一時停止します 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) 操作を続行する前に。
 
-ℹ️ デフォルトでは、カスタム チェッカーは、VM が使用不可であるとみなされるまで、VM の起動に 50 秒を許可します。 {{ .Get "app" }} VM の起動にさらに時間が必要な場合は、userconfig.xml の vmcheck.ps1 カスタム チェッカーに -InitialGrace を追加することで、この遅延を増やすことができます。値は 5 秒単位で表されます。たとえば、-InitialGrace 20 では 100 秒の猶予期間が許可されます。 `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+ℹ️ デフォルトでは、カスタム チェッカーは、VM が使用不可であるとみなされるまで、VM の起動に 50 秒を許可します。もしあなたの {{ .Get "app" }} VM の起動にはさらに時間がかかります。次の値を追加すると、この遅延を増やすことができます。InitialGrace に vmcheck.ps1 カスタムチェッカー userconfig.xml。値は 5 秒単位で表されます。たとえば、-InitialGrace 20 では 100 秒の猶予期間が許可されます。 `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
 
 
 ![{{ .Get "app" }} カスタム チェッカー パラメータを入力します](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
@@ -288,7 +288,7 @@ VM 内の重要なサービスに障害が発生したときに自動再起動�
   * サポートを受けるには、SafeKit を 2 つ受け取ります `Snapshots` (2 つの .zip ファイル)、ノードごとに 1 つ。
 
 
-ℹ️ [詳しいサポート情報はこちら](/ja/resources/safekit-support/).
+ℹ️ [詳しいサポート情報はこちら](/resources/safekit-support/).
 
 
 ![サポートのために {{ .Get "app" }} スナップショットを取得します](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

@@ -14,7 +14,7 @@
 
 ### 1. Voraussetzungen {#prerequisite}
 
-Für die SafeKit-Replikation müssen alle Dateien der virtuellen Maschine VM1 (Konfigurationsdatei, virtuelle Festplatte usw.) im selben Ordner gespeichert werden, auch wenn dies nicht das Standardverhalten von Hyper-V ist (z. B. D:/Repli-{{ .Get "app" }}/VM1, wobei VM1 der Name der virtuellen Maschine ist).
+Für die SafeKit-Replikation müssen alle Dateien der virtuellen VM1-Maschine (Konfigurationsdatei, virtuelle Festplatte usw.) im selben Ordner gespeichert werden, auch wenn dies nicht das Standardverhalten von Hyper-V ist (z. B. D:/Repli-{{ .Get "app" }}/VM1, wobei VM1 der Name der virtuellen Maschine ist).
 
 Wenn sich nicht alle Dateien von VM1 im selben Ordner befinden, verwenden Sie den {{ .Get "app" }}-Manager:
 
@@ -42,7 +42,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 
 ⚠️ Die Konfiguration von SafeKit erfolgt auf beiden Knoten über einen einzigen Browser.
 
-ℹ️ Informationen zum Sichern der Webkonsole finden Sie unter 🛠️ [11\. Sicherung des SafeKit-Webdienstes](/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
+ℹ️ Informationen zum Sichern der Webkonsole finden Sie unter 🛠️ [11\\. Sicherung des SafeKit-Webdienstes](/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
 
 
 ![Starten Sie die SafeKit-Webkonsole, um den {{ .Get "app" }}-Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
@@ -122,7 +122,7 @@ Wenn der {{ .Get "app" }} Heartbeat Service nicht auf die Nachricht antwortet (V
 
 ℹ️ Das Gleiche gilt, wenn Sie einen Prüfpunkt wiederherstellen möchten. {{ .Get "app" }} stoppt die VM, um den Vorgang auszuführen, und der VM-Checker reagiert möglicherweise negativ, indem er die VM automatisch neu startet. Um dies zu vermeiden, [Den Checker aussetzen 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) bevor Sie mit der Operation fortfahren.
 
-ℹ️ Standardmäßig lässt der benutzerdefinierte Prüfer 50 Sekunden für den Start der VM zu, bevor er sie als nicht verfügbar betrachtet. Wenn Ihre {{ .Get "app" }}-VM mehr Zeit zum Starten benötigt, können Sie diese Verzögerung erhöhen, indem Sie -InitialGrace zum benutzerdefinierten Prüfer vmcheck.ps1 in userconfig.xml hinzufügen. Der Wert wird in 5-Sekunden-Schritten ausgedrückt. Beispielsweise ermöglicht -InitialGrace 20 eine Kulanzfrist von 100 Sekunden: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+ℹ️ Standardmäßig lässt der benutzerdefinierte Prüfer 50 Sekunden für den Start der VM zu, bevor er sie als nicht verfügbar betrachtet. Wenn Ihre {{ .Get "app" }}-VM mehr Zeit zum Starten benötigt, können Sie diese Verzögerung erhöhen, indem Sie -InitialGrace zum benutzerdefinierten vmcheck.ps1-Prüfer in userconfig.xml hinzufügen. Der Wert wird in 5-Sekunden-Schritten ausgedrückt. Beispielsweise ermöglicht -InitialGrace 20 eine Kulanzfrist von 100 Sekunden: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
 
 
 ![Geben Sie die Parameter des benutzerdefinierten Prüfers {{ .Get "app" }} ein](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
@@ -288,7 +288,7 @@ Um die Funktion zu testen, verwenden Sie den Task-Manager und beenden Sie den Pr
   * Um Unterstützung zu erhalten, nehmen Sie 2 SafeKit `Snapshots` (2 ZIP-Dateien), eine für jeden Knoten.
 
 
-ℹ️ [Weitere Informationen zur Unterstützung finden Sie hier](/de/resources/safekit-support/).
+ℹ️ [Weitere Informationen zur Unterstützung finden Sie hier](/resources/safekit-support/).
 
 
 ![Nehmen Sie zur Unterstützung die {{ .Get "app" }}-Snapshots](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

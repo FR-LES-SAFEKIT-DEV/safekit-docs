@@ -14,7 +14,7 @@
 
 ### 1. Pré-requisitos {#prerequisite}
 
-Para replicação SafeKit, todos os arquivos da máquina virtual VM1 (arquivo de configuração, disco rígido virtual etc.) devem ser armazenados na mesma pasta, mesmo que esse não seja o comportamento padrão do Hyper-V (por exemplo, D:/Repli-{{ .Get "app" }}/VM1, onde VM1 é o nome da máquina virtual).
+Para replicação SafeKit, todos os arquivos da máquina virtual VM1 (arquivo de configuração, disco rígido virtual, etc.) devem ser armazenados na mesma pasta, mesmo que esse não seja o comportamento padrão do Hyper-V (por exemplo, D:/Repli-{{ .Get "app" }}/VM1, onde VM1 é o nome da máquina virtual).
 
 Se todos os arquivos de VM1 não estiverem na mesma pasta, use o gerenciador {{ .Get "app" }}:
 
@@ -42,7 +42,7 @@ Também é possível executar o console em um navegador em uma estação de trab
 
 ⚠️ A configuração do SafeKit é feita em ambos os nós a partir de um único navegador.
 
-ℹ️ Para proteger o console da web, consulte 🛠️ [11\. Protegendo o serviço da web SafeKit](/resources/safekit-user-guide-82/#https) no Guia do usuário.
+ℹ️ Para proteger o console da web, consulte 🛠️ [11\\. Protegendo o serviço da web SafeKit](/resources/safekit-user-guide-82/#https) no Guia do usuário.
 
 
 ![Inicie o console da web SafeKit para configurar o cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
@@ -122,7 +122,7 @@ Se o {{ .Get "app" }} Heartbeat Service não responder à mensagem (VM travada, 
 
 ℹ️ O mesmo acontece quando você deseja restaurar um ponto de verificação. {{ .Get "app" }} interromperá a VM para executar a operação e o verificador de VM poderá reagir negativamente reiniciando automaticamente a VM. Para evitar isso, [suspenda o verificador 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) antes de prosseguir com a operação.
 
-ℹ️ Por padrão, o verificador personalizado permite 50 segundos para a VM inicializar antes de considerá-la indisponível. Se sua VM {{ .Get "app" }} exigir mais tempo para iniciar, você poderá aumentar esse atraso adicionando -InitialGrace ao verificador personalizado vmcheck.ps1 em userconfig.xml. O valor é expresso em incrementos de 5 segundos. Por exemplo, -InitialGrace 20 permite um período de carência de 100 segundos: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+ℹ️ Por padrão, o verificador personalizado permite 50 segundos para a VM inicializar antes de considerá-la indisponível. Se sua VM {{ .Get "app" }} exigir mais tempo para iniciar, você poderá aumentar esse atraso adicionando -InitialGrace ao verificador customizado vmcheck.ps1 em userconfig.xml. O valor é expresso em incrementos de 5 segundos. Por exemplo, -InitialGrace 20 permite um período de carência de 100 segundos: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
 
 
 ![Insira os parâmetros do verificador personalizado {{ .Get "app" }}](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
@@ -288,7 +288,7 @@ Para testar o recurso, use o Gerenciador de Tarefas e elimine o processo (Finali
   * Para obter suporte, leve 2 SafeKit `Snapshots` (2 arquivos .zip), um para cada nó.
 
 
-ℹ️ [Mais informações sobre o suporte aqui](/pt-br/resources/safekit-support/).
+ℹ️ [Mais informações sobre o suporte aqui](/resources/safekit-support/).
 
 
 ![Tire os instantâneos {{ .Get "app" }} para suporte](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

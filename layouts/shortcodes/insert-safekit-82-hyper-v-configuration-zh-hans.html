@@ -42,7 +42,7 @@
 
 ⚠️ SafeKit 的配置是通过单个浏览器在两个节点上完成的。
 
-ℹ️ 要保护 Web 控制台的安全，请参阅 🛠️ [11\.保护 SafeKit Web 服务的安全](/resources/safekit-user-guide-82/#https) 在用户指南中。
+ℹ️ 要保护 Web 控制台的安全，请参阅 🛠️ [11\\.保护 SafeKit Web 服务的安全](/resources/safekit-user-guide-82/#https) 在用户指南中。
 
 
 ![启动 SafeKit Web 控制台来配置 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/01-login-large.png)
@@ -85,7 +85,7 @@
   * 输入 `VM_NAME`，虚拟机的名称 (VM1)。
 
 
-我们假设所有 VM1 文件都在 D:/Repli-{{ .Get "app" }}/VM1 中（请参阅 [先决条件](#prerequisite)）。该目录将被SafeKit实时复制。不要执行部分复制，因为故障转移将不起作用。
+我们假设所有 VM1 文件都位于 D:/Repli-{{ .Get "app" }}/VM1 中（请参阅 [先决条件](#prerequisite)）。该目录将被SafeKit实时复制。不要执行部分复制，因为故障转移将不起作用。
 
 这 `NORMAL_STOP` 和 `FORCE_STOP` 值可以是“`stop`", "`save`“或”`off`":
 
@@ -122,7 +122,7 @@
 
 ℹ️当你想要恢复一个检查点时也是一样的。 {{ .Get "app" }} 将停止 VM 来执行该操作，并且 VM 检查器可能会通过自动重新启动 VM 来做出负面反应。为了避免这种情况， [暂停检查器🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) 在继续操作之前。
 
-ℹ️ 默认情况下，自定义检查器允许虚拟机启动 50 秒，然后才认为其不可用。如果您的 {{ .Get "app" }} VM 需要更多时间来启动，您可以通过将 -InitialGrace 添加到 userconfig.xml 中的 vmcheck.ps1 自定义检查器来增加此延迟。该值以 5 秒增量表示。例如，-InitialGrace 20 允许 100 秒的宽限期： `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+ℹ️ 默认情况下，自定义检查器允许虚拟机启动 50 秒，然后才认为其不可用。如果你的 {{ .Get "app" }} VM 需要更多时间来启动，您可以通过添加 - 来增加此延迟InitialGrace 到 vmcheck.ps1 自定义检查器 userconfig.xml。该值以 5 秒增量表示。例如，-InitialGrace 20 允许 100 秒的宽限期： `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
 
 
 ![输入{{ .Get "app" }}自定义检查器参数](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
@@ -288,7 +288,7 @@
   * 要获得支持，请获取 2 SafeKit `Snapshots` （2 个 .zip 文件），每个节点一个。
 
 
-ℹ️ [有关支持的更多信息请参见此处](/zh-hans/resources/safekit-support/).
+ℹ️ [有关支持的更多信息请参见此处](/resources/safekit-support/).
 
 
 ![拍摄 {{ .Get "app" }} 快照以获取支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

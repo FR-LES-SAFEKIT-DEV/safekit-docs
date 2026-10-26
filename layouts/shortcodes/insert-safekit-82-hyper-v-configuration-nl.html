@@ -19,7 +19,7 @@ Voor SafeKit-replicatie moeten alle VM1-bestanden van de virtuele machine (confi
 Als alle bestanden van VM1 niet in dezelfde map staan, gebruik dan {{ .Get "app" }} manager:
 
   * Exporteer VM1 in een map, bijvoorbeeld in D:/Repli-{{ .Get "app" }}
-  * Met deze export wordt een map D:/Repli-{{ .Get "app" }}/VM1 aangemaakt met daarin alle VM1-bestanden
+  * Met deze export wordt een map D:/Repli-{{ .Get "app" }}/VM1 gemaakt met daarin alle VM1-bestanden
   * Verwijder VM1 uit de inventaris van de {{ .Get "app" }}-manager
   * Importeer VM1, eerder geëxporteerd, in {{ .Get "app" }}-manager
 
@@ -42,7 +42,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation buiten het clu
 
 ⚠️ De configuratie van SafeKit gebeurt op beide knooppunten vanuit één browser.
 
-ℹ️ Om de webconsole te beveiligen, zie 🛠️ [11\. Beveiliging van de SafeKit-webservice](/resources/safekit-user-guide-82/#https) in de Gebruikershandleiding.
+ℹ️ Om de webconsole te beveiligen, zie 🛠️ [11\\. Beveiliging van de SafeKit-webservice](/resources/safekit-user-guide-82/#https) in de Gebruikershandleiding.
 
 
 ![Start de SafeKit-webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
@@ -85,7 +85,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation buiten het clu
   * Kom binnen `VM_NAME`, de naam van de virtuele machine (VM1).
 
 
-We gaan ervan uit dat alle VM1-bestanden zich in D:/Repli-{{ .Get "app" }}/VM1 bevinden (zie [vereisten](#prerequisite)). Deze map wordt in realtime gerepliceerd door SafeKit. Voer geen gedeeltelijke replicatie uit, omdat failover niet werkt.
+We gaan ervan uit dat alle VM1-bestanden in D:/Repli-{{ .Get "app" }}/VM1 staan (zie [vereisten](#prerequisite)). Deze map wordt in realtime gerepliceerd door SafeKit. Voer geen gedeeltelijke replicatie uit, omdat failover niet werkt.
 
 De `NORMAL_STOP` en `FORCE_STOP` waarden kunnen zijn "`stop`", "`save`"of"`off`":
 
@@ -122,7 +122,7 @@ Als de {{ .Get "app" }} Heartbeat Service niet op het bericht reageert (VM is va
 
 ℹ️ Hetzelfde geldt voor het herstellen van een controlepunt. {{ .Get "app" }} stopt de VM om de bewerking uit te voeren, en de VM-checker kan negatief reageren door de VM automatisch opnieuw op te starten. Om dit te voorkomen, [schort de controleur 🖼️ op](/wp-content/uploads/2024/04/safekit-disable-checkers.png) voordat u doorgaat met de operatie.
 
-ℹ️ Standaard laat de aangepaste checker de VM 50 seconden opstarten voordat deze als niet beschikbaar wordt beschouwd. Als uw {{ .Get "app" }}-VM meer tijd nodig heeft om te starten, kunt u deze vertraging vergroten door -InitialGrace toe te voegen aan de aangepaste vmcheck.ps1-controle in userconfig.xml. De waarde wordt uitgedrukt in stappen van 5 seconden. -InitialGrace 20 staat bijvoorbeeld een respijtperiode van 100 seconden toe: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+ℹ️ Standaard laat de aangepaste checker de VM 50 seconden opstarten voordat deze als niet beschikbaar wordt beschouwd. Als uw {{ .Get "app" }} VM meer tijd nodig heeft om te starten, kunt u deze vertraging vergroten door -InitialGrace toe te voegen aan de aangepaste vmcheck.ps1-controle in userconfig.xml. De waarde wordt uitgedrukt in stappen van 5 seconden. -InitialGrace 20 staat bijvoorbeeld een respijtperiode van 100 seconden toe: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
 
 
 ![Voer de aangepaste controleparameters van de {{ .Get "app" }} in](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
@@ -288,7 +288,7 @@ Om de functie te testen, gebruikt u Taakbeheer en beëindigt u het proces (Taak 
   * Om ondersteuning te krijgen, neemt u 2 SafeKit `Snapshots` (2 .zip-bestanden), één voor elk knooppunt.
 
 
-ℹ️ [Meer informatie over de ondersteuning vindt u hier](/nl/resources/safekit-support/).
+ℹ️ [Meer informatie over de ondersteuning vindt u hier](/resources/safekit-support/).
 
 
 ![Neem de {{ .Get "app" }}-snaphots voor ondersteuning](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
