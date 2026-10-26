@@ -214,7 +214,6 @@ Farm Cluster | Network Load Balancing | A few seconds | N/A (Stateless)
 
 See how SafeKit handles a critical failure. This video demonstrates **synchronous replication** ensuring no data is lost (RPO 0) in a SQL database and the **automatic restart** of services on the secondary node (Low RTO).
 
-&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 #### Chapters {#chapters}
 
@@ -227,8 +226,6 @@ See how SafeKit handles a critical failure. This video demonstrates **synchronou
 ### Video: Achieving Near-Zero RTO in a SafeKit Farm Cluster (5:03) {#demo-farm-cluster-rpo-rto}
 
 Watch how SafeKit manages an Apache web farm to provide both performance scaling and instantaneous failover.
-
-&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 #### Chapters {#chapters-1}
 

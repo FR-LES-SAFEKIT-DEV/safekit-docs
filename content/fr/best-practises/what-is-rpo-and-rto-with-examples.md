@@ -19,6 +19,8 @@ topics: "Résumé : RPO vs RTO, Table des matières, Comment calculer le RPO et 
 
 ![Un graphique comparatif du RPO (perte de données maximale admissible) et du RTO (durée maximale d'indisponibilité), illustrant comment SafeKit garantit une perte de données nulle et un redémarrage rapide des applications.](/wp-content/uploads/2026/08/rto-rpo-5-1024-fr-2.jpg "w:512")
 
+**RPO vs. RTO : comparaison de la perte de données et du temps de reprise avec SafeKit.**
+
 
 ## Table des matières {#table-of-contents}
 
