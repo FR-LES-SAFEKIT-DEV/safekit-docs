@@ -88,7 +88,7 @@ Melhor para | Alta disponibilidade (failover automático) | Alta disponibilidade
 ## Guia de vídeo: configurando replicação síncrona em tempo real e alta disponibilidade {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-pt-br  %}}
  
 
 ## Perguntas frequentes: estratégias de replicação em clusters de alta disponibilidade {#faq-replication-high-availability}

@@ -88,7 +88,7 @@ Mejor para | Alta disponibilidad (conmutación por error automática) | Alta dis
 ## Guía de vídeo: Configuración de replicación síncrona en tiempo real y alta disponibilidad {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-es  %}}
  
 
 ## Preguntas frecuentes: estrategias de replicación en clústeres de alta disponibilidad {#faq-replication-high-availability}

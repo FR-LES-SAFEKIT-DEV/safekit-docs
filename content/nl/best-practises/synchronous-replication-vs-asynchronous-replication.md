@@ -88,7 +88,7 @@ Beste voor | Hoge beschikbaarheid (automatische failover) | Hoge beschikbaarheid
 ## Videogids: Synchrone realtime replicatie en hoge beschikbaarheid configureren {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-nl  %}}
  
 
 ## Veelgestelde vragen: replicatiestrategieën in clusters met hoge beschikbaarheid {#faq-replication-high-availability}

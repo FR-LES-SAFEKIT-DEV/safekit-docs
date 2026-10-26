@@ -88,7 +88,7 @@ RPO（潜在数据丢失） |零 |零 |非零（数据丢失：取决于上次�
 ## 视频指南：配置同步实时复制和高可用性 {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-zh-hans  %}}
  
 
 ## 常见问题解答：高可用性集群中的复制策略 {#faq-replication-high-availability}

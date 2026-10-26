@@ -88,7 +88,7 @@ RPO (潜在的なデータ損失) |ゼロ |ゼロ |ゼロではありません (
 ## ビデオ ガイド: 同期リアルタイム レプリケーションと高可用性の構成 {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-ja  %}}
  
 
 ## FAQ: 高可用性クラスターのレプリケーション戦略 {#faq-replication-high-availability}

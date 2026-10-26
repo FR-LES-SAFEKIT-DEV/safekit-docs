@@ -88,7 +88,7 @@ RPO (فقدان البيانات المحتمل) | صفر | صفر | ليس صف
 ## دليل الفيديو: تكوين النسخ المتماثل المتزامن في الوقت الحقيقي والتوفر العالي {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-ar  %}}
  
 
 ## الأسئلة المتداولة: إستراتيجيات النسخ المتماثل في المجموعات ذات التوفر العالي {#faq-replication-high-availability}

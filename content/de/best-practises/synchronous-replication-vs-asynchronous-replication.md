@@ -88,7 +88,7 @@ Am besten für | Hohe Verfügbarkeit (automatisches Failover) | Hohe Verfügbark
 ## Videoanleitung: Konfigurieren der synchronen Echtzeitreplikation und Hochverfügbarkeit {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-de  %}}
  
 
 ## FAQ: Replikationsstrategien in Hochverfügbarkeitsclustern {#faq-replication-high-availability}

@@ -88,7 +88,7 @@ RPO(잠재적 데이터 손실) | 제로 | 제로 | Not Zero(데이터 손실: �
 ## 비디오 가이드: 동기식 실시간 복제 및 고가용성 구성 {#videoguide-synchronous-real-time-replication-ha}
 
 
-{{%  insert-safekit-mirror-video-en  %}}
+{{%  insert-safekit-mirror-video-ko  %}}
  
 
 ## FAQ: 고가용성 클러스터의 복제 전략 {#faq-replication-high-availability}
