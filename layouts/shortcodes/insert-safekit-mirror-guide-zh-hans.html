@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-mirror-guide-zh-hans — 19 instances in 19 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
+
+
+
+## {{ .Get "app" }} 高可用快速安装指南 {#quick-guide}
+
+本指南解释了如何设置 **镜像簇** 对于{{ .Get "app" }}使用SafeKit，确保自动故障转移和同步复制，无需共享存储。 
+
+如需帮助，您可以使用 [SafeKit AI 🤖](/zh-hans/resources/safekit-support/).
+
+### 1. 概述
+
+  * **架构：** 使用双节点系统（主/辅助）。
+  * **数据保护：** 实现实时同步复制 **零数据丢失** （RPO=0）。
+
+
+### 2. 安装
+
+  * **软件：** 在两台服务器上安装 SafeKit 引擎。
+  * **模块：** 下载预先配置好的 `{{ .Get "mod" }}.safe` 应用模块。
+
+
+### 3. 配置
+
+  * **网络控制台：** 配置包含 {{ .Get "app" }} 文件的特定文件夹。
+  * **监控：** 开始监视和保护 {{ .Get "app" }} 应用程序。
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-zh-hans  %}}" }}
+
+

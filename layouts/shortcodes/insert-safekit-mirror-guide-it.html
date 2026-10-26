@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-mirror-guide-it — 19 instances in 19 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
+
+
+
+## Guida all'installazione rapida ad alta disponibilità per {{ .Get "app" }} {#quick-guide}
+
+Questa guida spiega come impostare a **gruppo di specchi** per {{ .Get "app" }} utilizzando SafeKit, garantendo il failover automatico e la replica sincrona senza la necessità di storage condiviso. 
+
+Per aiuto, puoi usare [SafeKit AI🤖](/it/resources/safekit-support/).
+
+### 1. Panoramica
+
+  * **Architettura:** Utilizza un sistema a due nodi (primario/secondario).
+  * **Protezione dei dati:** Implementa la replica sincrona in tempo reale per **perdita di dati pari a zero** (RPO=0).
+
+
+### 2. Installazione
+
+  * **Software:** Installa il motore SafeKit su entrambi i server.
+  * **Modulo:** Scarica il preconfigurato `{{ .Get "mod" }}.safe` modulo applicativo.
+
+
+### 3. Configurazione
+
+  * **Console Web:** Configura le cartelle specifiche contenenti i file {{ .Get "app" }}.
+  * **Monitoraggio:** Inizia a monitorare e proteggere l'applicazione {{ .Get "app" }}.
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-it  %}}" }}
+
+

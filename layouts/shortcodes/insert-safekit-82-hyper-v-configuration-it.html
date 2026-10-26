@@ -1,0 +1,296 @@
+{{/* Shortcode: insert-safekit-82-hyper-v-configuration-it — 1 instance in 1 file */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-hyper-v.md */}}
+
+
+
+⚠️ Leggi attentamente questi articoli prima di iniziare:
+
+  * La configurazione {{ .Get "app" }} viene presentata con una macchina virtuale denominata `VM1`. Leggere attentamente "1. Prerequisiti" per il **organizzazione dei file VM1** , altrimenti il ripristino sul nodo secondario potrebbe non riuscire con dati incoerenti.
+  * Dovrai ripetere questa configurazione per tutte le VM che desideri replicare e riavviare.
+  * Il file system in cui sono archiviati i file VM replicati da SafeKit deve essere NTFS; **ReFS non è supportato**.
+  * SafeKit supporta la replica di **Punti di controllo di produzione {{ .Get "app" }} ma non punti di controllo standard**. Non utilizzare checkpoint standard, altrimenti il ​​ripristino sul nodo secondario potrebbe non riuscire con dati incoerenti.
+
+
+### 1. Prerequisiti {#prerequisite}
+
+Per la replica SafeKit, tutti i file della macchina virtuale VM1 (file di configurazione, disco rigido virtuale, ecc.) devono essere archiviati nella stessa cartella, anche se questo non è il comportamento predefinito di Hyper‑V (ad esempio, D:/Repli-{{ .Get "app" }}/VM1, dove VM1 è il nome della macchina virtuale).
+
+Se tutti i file di VM1 non si trovano nella stessa cartella, utilizzare il gestore {{ .Get "app" }}:
+
+  * Esporta VM1 in una cartella, ad esempio in D:/Repli-{{ .Get "app" }}
+  * Questa esportazione creerà una cartella D:/Repli-{{ .Get "app" }}/VM1 contenente tutti i file VM1
+  * Rimuovi VM1 dall'inventario del gestore {{ .Get "app" }}
+  * Importa VM1, precedentemente esportato, nel gestore {{ .Get "app" }}
+
+
+⚠️ Scatta uno snapshot della tua VM prima di iniziare la procedura.
+
+⚠️ VM1 deve essere creato solo su un singolo nodo. L'unica cosa da creare sull'altro nodo è la directory VM1 (D:/Repli-{{ .Get "app" }}/VM1).
+
+⚠️ Assicurati che i nomi degli switch virtuali a cui fa riferimento la macchina virtuale esistano su entrambi i server {{ .Get "app" }} e corrispondano alla stessa rete fisica.
+
+⚠️ Il failover del modulo Hyper‑V ({{ .Get "mod" }}.safe) potrebbe non riuscire se i prerequisiti per la migrazione della VM non vengono soddisfatti. Per rilevare problemi di compatibilità tra i nodi Hyper‑V (hardware, rete, configurazione), vedere🛠️ [KB SK-0088 in questo documento](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+
+### 2. Avvia la console SafeKit
+
+  * Avvia la console Web in un browser su un nodo del cluster connettendoti a `http://localhost:9010`.
+  * Entra `admin` come nome utente e la password definita durante l'installazione.
+
+
+È inoltre possibile eseguire la console in un browser su una workstation esterna al cluster.
+
+⚠️ La configurazione di SafeKit viene effettuata su entrambi i nodi da un unico browser.
+
+ℹ️ Per proteggere la console web, vedere 🛠️ [11\. Protezione del servizio web SafeKit](/resources/safekit-user-guide-82/#https) nella Guida per l'utente.
+
+
+![Avviare la console Web SafeKit per configurare il cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 3. Configurare gli indirizzi dei nodi
+
+  * Inserire gli indirizzi del nodo IP, premere il `Tab key` per verificare la connettività e inserire i nomi dei nodi. Se il nodo1 o il nodo2 ha un colore rosso, controlla la connettività del browser su entrambi i nodi e controlla il firewall su entrambi i nodi per 🛠️ [risoluzione dei problemi](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Quindi, fare clic su `Save and apply` per salvare la configurazione.
+  * Controlla il `Success` ✅ messaggio su entrambi i nodi.
+  * Se la configurazione `Failure` ❌ si verifica su un nodo, apri la fisarmonica ▼ per quel nodo e rivedi i messaggi. Tieni presente che puoi utilizzare SafeKit AI 🤖 per assistenza.
+
+
+ℹ️ Se vuoi puoi aggiungerne uno nuovo `LAN and nodes` ( primo ➕) per creare un secondo heartbeat e una rete di replica dedicata.
+
+ℹ️ Se clicchi su `Advanced configuration`, il `cluster.xml` viene visualizzato il file. Questo file viene popolato automaticamente dalla console e distribuito sui nodi.
+
+
+![Inserisci i nodi del cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 4. Selezionare un modulo
+
+  * Dentro `New module`, fare clic su `{{ .Get "mod" }}.safe` modulo.
+
+
+ℹ️ Nel banner blu in alto, 🛜 `node1` rappresenta il nodo di connessione della console. Questo nodo inoltra le richieste a `node2` quando richiesto.
+
+ℹ️ La console cerca `xxx.safe` nel `Application_Modules/generic/` directory sul nodo di connessione (`node1`) se hai posizionato un modulo lì durante l'installazione.
+
+
+![Scegli il modulo per {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 5. Configurare il modulo
+
+  * Scegli un `Automatic` avvio del modulo all'avvio senza ritardo.
+  * Normalmente, ne hai uno singolo `Heartbeat` rete su cui viene effettuata la replica. Tuttavia, se necessario, è possibile definire una rete privata (aggiungendo LAN al passaggio 3).
+  * Metti dentro `VM_PATH`, il percorso radice della directory replicata (D:/Repli-{{ .Get "app" }}).
+  * Entra `VM_NAME`, il nome della macchina virtuale (VM1).
+
+
+Supponiamo che tutti i file VM1 siano in D:/Repli-{{ .Get "app" }}/VM1 (vedi [prerequisiti](#prerequisite)). Questa directory verrà replicata in tempo reale da SafeKit. Non eseguire la replica parziale poiché il failover non funzionerà.
+
+IL `NORMAL_STOP` e `FORCE_STOP` i valori possono essere "`stop`", "`save`"o"`off`":
+
+  * "`stop`" arresta la VM quando il modulo viene arrestato.
+  * "`save`" salva lo stato corrente della VM (sospensione) quando il modulo viene arrestato.
+  * "`off`" spegne la VM (spegnimento) quando il modulo viene arrestato.
+
+
+"`stop`" è consigliato perché provoca l'arresto e poi il riavvio della VM quando il modulo viene arrestato e riavviato. Pertanto, se l'applicazione all'interno della VM fallisce, verrà riavviata.
+
+Questo sarà il caso, ad esempio, quando si passa dai ruoli primari a quelli secondari.
+
+ℹ️ Non è necessario configurare un indirizzo IP virtuale. VM1 verrà riavviato sul {{ .Get "app" }} secondario con il suo indirizzo fisico IP e questo indirizzo IP verrà reindirizzato.
+
+ℹ️ Quando applichi la configurazione SafeKit, il `Automatic Start Action` della macchina virtuale è impostato su `Nothing` a {{ .Get "app" }}. Ciò garantisce che la VM non venga avviata automaticamente all'avvio dell'host Hyper‑V, ma venga invece avviata solo all'avvio del modulo stesso.
+
+
+![Immettere i parametri {{ .Get "app" }}](/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png)
+
+
+### 6. Controllo personalizzato per rilevare il malfunzionamento della VM {#vm-checker}
+
+Il controllo personalizzato invia messaggi heartbeat dall'host alla VM a intervalli regolari. È quindi compito del servizio Heartbeat {{ .Get "app" }} installato nella VM inviare una risposta a ciascuno di questi messaggi heartbeat.
+
+Se il servizio Heartbeat {{ .Get "app" }} non risponde al messaggio (VM bloccata, bloccata o cessata di funzionare), il controllo personalizzato esegue un'azione per riavviare la VM sullo stesso nodo {{ .Get "app" }} o sull'altro.
+
+  * Fare clic su `Checkers / Custom` (vedi immagine).
+  * Basta impostare un nome a tua scelta `Resource name` (esempio VM1). `Resource name` identifica la macchina virtuale con un nome di risorsa in SafeKit: `custom.VM1`.
+  * Con `restart` dentro `Action`, la VM viene riavviata sullo stesso nodo {{ .Get "app" }}. Dopo 3 riavvii non riusciti in 24 ore, il modulo SafeKit {{ .Get "mod" }} si arresta sul nodo primario e si verifica un failover della VM sul nodo secondario.
+  * Se imposti `stopstart` dentro `Action`, si verifica un failover diretto sull'altro nodo {{ .Get "app" }} non appena la VM non risponde agli heartbeat.
+
+
+ℹ️ Per manutenzione, se desideri arrestare la macchina virtuale, il controllo personalizzato la riavvierà automaticamente. Per evitarlo, puoi temporaneamente [sospendere la dama 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Oppure puoi rimuoverlo eliminando la riga di configurazione nella console.
+
+ℹ️ È lo stesso quando vuoi ripristinare un checkpoint. {{ .Get "app" }} fermerà la VM per eseguire l'operazione e il controllo VM potrebbe reagire negativamente riavviando automaticamente la VM. Per evitare questo, [sospendere la dama 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) prima di procedere con l'operazione.
+
+ℹ️ Per impostazione predefinita, il controllo personalizzato concede 50 secondi all'avvio della VM prima di considerarla non disponibile. Se la tua VM {{ .Get "app" }} richiede più tempo per l'avvio, puoi aumentare questo ritardo aggiungendo -InitialGrace al controllo personalizzato vmcheck.ps1 in userconfig.xml. Il valore è espresso in incrementi di 5 secondi. Ad esempio, -InitialGrace 20 consente un periodo di grazia di 100 secondi: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+
+
+![Inserisci i parametri del controllo personalizzato {{ .Get "app" }}](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
+
+
+### 7. Modifica script (facoltativo)
+
+  * Non modificare gli script.
+
+
+### 8. Crittografia della comunicazione (opzionale)
+
+  * Mantieni la crittografia della comunicazione tra i nodi.
+
+
+![Crittografia della comunicazione del modulo {{ .Get "app" }}](/wp-content/uploads/2024/03/07-module-encryption.png)
+
+
+### 9. Salva e applica
+
+  * `Save and apply` la configurazione e gli script su entrambi i nodi.
+
+
+![Salvare e applicare la configurazione del modulo {{ .Get "app" }}](/wp-content/uploads/2024/03/08-module-save.png)
+
+
+### 10. Verificare la corretta configurazione
+
+  * Controlla il `Success` ✅ messaggio su entrambi i nodi e clicca su `Monitor modules`.
+  * Se la configurazione `Failure` ❌ si verifica su un nodo, apri la fisarmonica ▼ per quel nodo e rivedi i messaggi. Tieni presente che puoi utilizzare SafeKit AI 🤖 per assistenza.
+
+
+![Verificare la riuscita della configurazione del modulo {{ .Get "app" }}](/wp-content/uploads/2024/03/09-module-save-check.png)
+
+
+### 11. Avviare il nodo con dati aggiornati
+
+  * Se il nodo 1 dispone della directory replicata aggiornata per `VM1/`, selezionalo e ⋯ `Force start` ▶ `As primary`.
+
+
+Quando verrà avviato il nodo 2, tutti i dati verranno copiati dal nodo 1 al nodo 2.
+
+⚠️ Se fai la scelta sbagliata, corri il rischio di sincronizzare dati obsoleti su entrambi i nodi.
+
+⚠️ Si presume anche questo `VM1` viene arrestato sul nodo 1 in modo che SafeKit installi i meccanismi di replica e quindi si avvii `VM1` nel `start_prim` sceneggiatura.
+
+⚠️Utilizzare `Start` per gli avvii successivi: SafeKit mantiene il server più aggiornato. Inizio `As primary` è un avviamento speciale al primo avvio o durante operazioni eccezionali.
+
+
+![Avvia come primario il nodo {{ .Get "app" }} con i dati aggiornati](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 12. Attendi il passaggio a ALONE (verde)
+
+  * Il nodo 1 dovrebbe raggiungere lo stato ALONE (verde), il che significa che `start_prim` lo script è stato eseguito sul nodo 1.
+
+
+⚠️ Se ALONE (verde) non viene raggiunto o se VM1 non viene avviato, analizzare il motivo con [registro del modulo 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) del nodo 1.
+
+  * Fare clic su 🔍 **registro** icona di `node1` per aprire il registro del modulo e cercare messaggi di errore come un controllo che rileva un errore e arresta il modulo.
+  * Fare clic su `start_prim` nel registro: i messaggi di output dello script vengono visualizzati sulla destra e possono essere rilevati errori come VM1 avviato in modo errato.
+  * Utilizza SafeKit AI 🤖 per assistenza con i messaggi di registro.
+
+
+⚠️ Se il cluster è in `WAIT (red) not uptodate, STOP (red) not uptodate` stato, arresta il nodo WAIT e [forzarne l'avvio come primario 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![Il primo nodo {{ .Get "app" }} inizia come primario e diventa ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 13. Avviare il nodo 2
+
+  * ⋯ `Start` nodo 2 con il suo menu contestuale.
+  * Attendi lo stato SECOND (verde).
+
+
+ℹ️ Il nodo 2 rimane nello stato SECOND (arancione) durante la risincronizzazione delle directory replicate (copia dal nodo 1 al nodo 2).
+
+  * Questa operazione potrebbe richiedere del tempo a seconda della dimensione dei file da risincronizzare nelle directory replicate e della larghezza di banda della rete.
+  * Per vedere lo stato di avanzamento della copia, vedere il [registro del modulo 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) e il [risorse per la replica 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) del nodo 2. Utilizzare SafeKit AI 🤖 per assistenza con i messaggi di registro.
+
+
+ℹ️ Quando si utilizzano i dischi di differenziazione {{ .Get "app" }}, solo il disco di differenziazione necessita di risincronizzazione dopo la sincronizzazione iniziale, risparmiando tempo per i dischi rigidi virtuali di grandi dimensioni.
+
+
+![Avviare il nodo {{ .Get "app" }} 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 14. Verificare che il cluster sia operativo
+
+  * Controlla che il cluster sia verde/verde con `VM1` in esecuzione sul nodo PRIM e non in esecuzione sul nodo SECOND.
+
+
+Solo le modifiche all'interno dei file vengono replicate in tempo reale in questo stato.
+
+
+![Il nodo 2 {{ .Get "app" }} è SECOND (verde)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 15. Test
+
+  * Arrestare il nodo PRIM scorrendo verso il basso il menu contestuale e facendo clic `Stop`.
+  * Verificare che sia presente un failover sul nodo SECOND che dovrebbe diventare ALONE (verde).
+  * Verificalo con il manager {{ .Get "app" }} `VM1` è in esecuzione sul nodo 2.
+
+
+⚠️ Se ALONE (verde) non viene raggiunto sul nodo2 o se VM1 non viene avviato, analizza il motivo con il [registro del modulo 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) del nodo 2.
+
+  * Fare clic su 🔍 **registro** icona di `node2` per aprire il registro del modulo e cercare messaggi di errore come un controllo che rileva un errore e arresta il modulo.
+  * Fare clic su `start_prim` nel registro: i messaggi di output dello script vengono visualizzati sulla destra e possono essere rilevati errori come VM1 avviato in modo errato.
+  * Utilizza SafeKit AI 🤖 per assistenza con i messaggi di registro.
+
+
+⚠️ Come il `start_prim` script importa la macchina virtuale sul nodo 2, il failover può fallire a causa di🛠️ [Impostazioni {{ .Get "app" }} (vedere KB SK-0088 in questo documento)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+
+⚠️ Se tutto va bene, avvia un avvio sul nodo1, che risincronizzerà le directory replicate dal nodo2.
+
+Se le cose vanno male, ferma il nodo2 e [forzare l'avvio come primario 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) del nodo1, che si riavvierà con i suoi dati localmente integri al momento dell'arresto.
+
+ℹ️ Nota che hai un 🕒 **[cronologia 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** che può essere utile per capire cosa succede nel cluster.
+
+
+![Arrestare il modulo {{ .Get "app" }} sul server PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 16. Se necessario, configurare un controllo splitbrain
+
+  * Vedi [Quali sono i diversi scenari in caso di isolamento della rete in un cluster?](/best-practises/power-outage-and-network-isolation-in-a-cluster/) per sapere se è necessario configurare un controllo splitbrain.
+  * Vai alla configurazione del modulo e clicca su `Checkers / Splitbrain` (vedi immagine) per modificare i parametri di splitbrain.
+  * `Save and apply` la nuova configurazione per ridistribuirla su entrambi i nodi (il modulo deve essere arrestato su entrambi i nodi per essere salvato e applicato).
+
+
+**Parametri** :
+
+  * `Resource name` identifica il testimone con un nome di risorsa: `splitbrain.witness`. È possibile modificare questo valore per identificare il testimone.
+  * `Witness address` è l'argomento per un ping quando un nodo va da PRIM a ALONE o da SECOND a ALONE. Cambia questo valore con lo IP del testimone (un elemento robusto, tipicamente un router).
+  * Nota: è possibile impostare più IP separati da spazi bianchi. Fare attenzione che gli indirizzi IP devono essere accessibili da un nodo ma non dall'altro in caso di isolamento della rete.
+
+
+![Inserisci i parametri dello splitbrain {{ .Get "app" }}](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+
+
+### 17. Riavvio automatico se un servizio critico fallisce all'interno della VM
+
+Se desideri un riavvio o un failover automatico quando un servizio critico all'interno della VM fallisce, puoi configurare le proprietà di ripristino del servizio (vedi immagine).
+
+Per prima cosa devi configurare il [Controllo personalizzato della VM](#vm-checker) precedentemente descritto.
+
+E poi in Microsoft Service Manager all'interno della VM, seleziona il tuo servizio critico e nella proprietà di ripristino del servizio, devi solo configurare l'arresto della VM quando il servizio critico fallisce.
+
+Per questo, nelle opzioni di ripristino del tuo servizio critico, seleziona "**Esegui un programma** "in caso di errori e nelle opzioni Esegui programma, impostare"**C:/Windows/System32/shutdown.exe** " e in "Parametri della riga di comando", impostare **/s /c "il servizio fallisce"**.
+
+Naturalmente, puoi implementare un ripristino più sottile con i tuoi script. Ma tieni presente che lo spegnimento della VM abiliterà il controllo personalizzato nell'host. Il controllo personalizzato rileverà che l'heartbeat {{ .Get "app" }} non risponde più e riavvierà la VM sullo stesso server {{ .Get "app" }} o effettuerà un failover sull'altro server {{ .Get "app" }} (a seconda della sua configurazione).
+
+Per testare la funzionalità, utilizzare Task Manager e terminare il processo (Termina attività) associato al servizio critico. Un arresto netto del servizio tramite Service Manager o il comando "net stop" non attiva l'azione di ripristino all'interno di Windows Service Manager.
+
+
+![{{ .Get "app" }} Failover dei servizi critici della VM del modulo {{ .Get "app" }}](/wp-content/uploads/2023/11/hyperv-critical-service.png)
+
+
+### 18. Supporto
+
+  * Per ottenere supporto, prendi 2 SafeKit `Snapshots` (2 file .zip), uno per ciascun nodo.
+
+
+ℹ️ [Maggiori informazioni sul supporto qui](/resources/safekit-support/).
+
+
+![Scatta le istantanee di {{ .Get "app" }} per supporto](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

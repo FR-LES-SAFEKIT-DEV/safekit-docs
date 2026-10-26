@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-mirror-guide-ja — 19 instances in 19 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
+
+
+
+## {{ .Get "app" }} の高可用性クイック インストール ガイド {#quick-guide}
+
+このガイドでは、セットアップ方法について説明します。 **ミラークラスタ** のために {{ .Get "app" }} を使用して SafeKit共有ストレージを必要とせずに、自動フェイルオーバーと同期レプリケーションを保証します。 
+
+ヘルプが必要な場合は、次を使用できます [SafeKit AI 🤖](/ja/resources/safekit-support/).
+
+### 1. 概要
+
+  * **アーキテクチャ:** 2ノードシステム(プライマリ/セカンダリ)を採用します。
+  * **データ保護:** リアルタイム同期レプリケーションを実装します。 **データ損失ゼロ** (RPO=0)。
+
+
+### 2. インストール
+
+  * **ソフトウェア:** SafeKit エンジンを両方のサーバーにインストールします。
+  * **モジュール:** 事前設定されたものをダウンロードする `{{ .Get "mod" }}.safe` アプリケーションモジュール。
+
+
+### 3. 構成
+
+  * **ウェブコンソール:** {{ .Get "app" }} ファイルを含む特定のフォルダーを構成します。
+  * **モニタリング:** {{ .Get "app" }} アプリケーションの監視と保護を開始します。
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-ja  %}}" }}
+
+

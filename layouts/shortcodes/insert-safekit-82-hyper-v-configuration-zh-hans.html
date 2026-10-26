@@ -1,0 +1,296 @@
+{{/* Shortcode: insert-safekit-82-hyper-v-configuration-zh-hans — 1 instance in 1 file */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-hyper-v.md */}}
+
+
+
+⚠️ 在开始之前请仔细阅读以下内容：
+
+  * {{ .Get "app" }} 配置提供了一个名为 `VM1`。仔细阅读“1.先决条件” **VM1 文件的组织** ，否则在Secondary节点上恢复可能会失败，数据不一致。
+  * 您必须对要复制并重新启动的所有虚拟机重复此配置。
+  * SafeKit复制的虚拟机文件所在的文件系统必须是NTFS； **不支持ReFS**.
+  * SafeKit 支持复制 **{{ .Get "app" }} 生产检查点，但不是标准检查点**。不要使用标准检查点，否则辅助节点上的恢复可能会因数据不一致而失败。
+
+
+### 1. 前提条件 {#prerequisite}
+
+对于 SafeKit 复制，所有 VM1 虚拟机文件（配置文件、虚拟硬盘等）必须存储在同一文件夹中，即使这不是 Hyper-V 的默认行为（例如，D:/Repli-{{ .Get "app" }}/VM1，其中 VM1 是虚拟机的名称）。
+
+如果VM1的所有文件不在同一个文件夹中，则使用{{ .Get "app" }}管理器：
+
+  * 将 VM1 导出到文件夹中，例如 D:/Repli-{{ .Get "app" }}
+  * 此导出将创建一个文件夹 D:/Repli-{{ .Get "app" }}/VM1 包含所有 VM1 文件
+  * 删除 VM1 从库存中 {{ .Get "app" }} 经理
+  * 将之前导出的 VM1 导入到 {{ .Get "app" }} 管理器中
+
+
+⚠️ 在开始该过程之前拍摄快照或您的虚拟机。
+
+⚠️ VM1 只能在单个节点上创建。在另一个节点上创建的唯一内容是 VM1 目录 (D:/Repli-{{ .Get "app" }}/VM1)。
+
+⚠️ 确保虚拟机引用的虚拟交换机名称存在于两台 {{ .Get "app" }} 服务器上，并且对应于同一物理网络。
+
+⚠️ 如果不满足虚拟机迁移先决条件，Hyper‑V 模块 ({{ .Get "mod" }}.safe) 故障转移可能会失败。要检测 Hyper-V 节点（硬件、网络、配置）之间的兼容性问题，请参阅🛠️ [本文档中的 KB SK-0088](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+
+### 2.启动SafeKit控制台
+
+  * 通过连接到在一个集群节点上的浏览器中启动 Web 控制台 `http://localhost:9010`.
+  * 输入 `admin` 作为安装期间定义的用户名和密码。
+
+
+您还可以在集群外部工作站上的浏览器中运行控制台。
+
+⚠️ SafeKit 的配置是通过单个浏览器在两个节点上完成的。
+
+ℹ️ 要保护 Web 控制台的安全，请参阅 🛠️ [11\.保护 SafeKit Web 服务的安全](/resources/safekit-user-guide-82/#https) 在用户指南中。
+
+
+![启动 SafeKit Web 控制台来配置 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 3.配置节点地址
+
+  * 输入节点IP地址，按 `Tab key` 检查连接性并填写节点名称。如果节点 1 或节点 2 具有红色，请检查浏览器与两个节点的连接，并检查两个节点上的防火墙是否有🛠️ [故障排除](/resources/safekit-user-guide-82/#Troubleshooting).
+  * 然后，单击 `Save and apply` 保存配置。
+  * 检查 `Success` ✅ 两个节点上的消息。
+  * 如果配置 `Failure` ❌ 发生在一个节点上，打开该节点的 ▼ 折叠面板并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+
+
+ℹ️如果你愿意，你可以添加一个新的 `LAN and nodes` （第一个 ➕）创建第二个心跳和专用复制网络。
+
+ℹ️如果你点击 `Advanced configuration`, 的 `cluster.xml` 显示文件。该文件由控制台自动填充并部署在节点上。
+
+
+![输入{{ .Get "app" }}集群的节点](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 4. 选择模块
+
+  * 在 `New module`，单击 `{{ .Get "mod" }}.safe` 模块。
+
+
+ℹ️ 在顶部的蓝色横幅中，🛜 `node1` 代表控制台连接节点。该节点将请求转发到 `node2` 当需要时。
+
+ℹ️ 控制台寻找 `xxx.safe` 在 `Application_Modules/generic/` 连接节点上的目录（`node1`）如果您在安装过程中放置了一个模块。
+
+
+![选择{{ .Get "app" }}的模块](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 5. 配置模块
+
+  * 选择一个 `Automatic` 模块在启动时立即启动。
+  * 通常情况下，您有一个 `Heartbeat` 进行复制的网络。但是，如果需要，您可以定义专用网络（通过在步骤 3 中添加 LAN）。
+  * 放入 `VM_PATH`，复制目录的根路径（D:/Repli-{{ .Get "app" }}）。
+  * 输入 `VM_NAME`，虚拟机的名称 (VM1)。
+
+
+我们假设所有 VM1 文件都在 D:/Repli-{{ .Get "app" }}/VM1 中（请参阅 [先决条件](#prerequisite)）。该目录将被SafeKit实时复制。不要执行部分复制，因为故障转移将不起作用。
+
+这 `NORMAL_STOP` 和 `FORCE_STOP` 值可以是“`stop`", "`save`“或”`off`":
+
+  * "`stop`" 当模块停止时关闭虚拟机。
+  * "`save`" 当模块停止时保存 VM 的当前状态（挂起）。
+  * "`off`" 当模块停止时关闭 VM（关闭电源）。
+
+
+"`stop`建议使用“”，因为当模块停止并重新启动时，它会导致 VM 关闭然后重新启动。因此，如果 VM 内的应用程序出现故障，则会重新启动。
+
+例如，在主要角色和次要角色之间切换时就会出现这种情况。
+
+ℹ️您不需要配置虚拟IP地址。 VM1 将在辅助 {{ .Get "app" }} 上以其物理 IP 地址重新启动，并且该 IP 地址将被重新路由。
+
+ℹ️ 当您应用 SafeKit 配置时， `Automatic Start Action` 虚拟机的设置为 `Nothing` 在{{ .Get "app" }}。这可确保 VM 不会在 Hyper-V 主机启动时自动启动，而是仅在模块本身启动时启动。
+
+
+![输入{{ .Get "app" }}参数](/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png)
+
+
+### 6. 自定义检查器来检测VM故障 {#vm-checker}
+
+自定义检查器定期从主机向 VM 发送心跳消息。然后，VM 中安装的 {{ .Get "app" }} 心跳服务的工作就是发送对每条心跳消息的响应。
+
+如果 {{ .Get "app" }} 心跳服务未响应该消息（VM 锁定、崩溃或停止运行），则自定义检查器将执行操作以在同一 {{ .Get "app" }} 节点或另一个节点上重新启动 VM。
+
+  * 点击 `Checkers / Custom` （见图）。
+  * 只需在其中设置您选择的名称即可 `Resource name` （例如 VM1）。 `Resource name` 标识资源名称为 SafeKit 的虚拟机： `custom.VM1`.
+  * 与 `restart` 在 `Action`，VM 在同一 {{ .Get "app" }} 节点上重新启动。 24 小时内 3 次重启失败后，SafeKit {{ .Get "mod" }} 模块在主节点上停止，并且辅助节点上的虚拟机发生故障转移。
+  * 如果你设置 `stopstart` 在 `Action`，一旦 VM 不响应心跳，就会在另一个 {{ .Get "app" }} 节点上直接进行故障转移。
+
+
+ℹ️为了维护，如果您想停止虚拟机，自定义检查器会自动重新启动它。为了避免这种情况，您可以暂时 [暂停检查器🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)。或者您可以通过删除控制台中的配置行来将其删除。
+
+ℹ️当你想要恢复一个检查点时也是一样的。 {{ .Get "app" }} 将停止 VM 来执行该操作，并且 VM 检查器可能会通过自动重新启动 VM 来做出负面反应。为了避免这种情况， [暂停检查器🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) 在继续操作之前。
+
+ℹ️ 默认情况下，自定义检查器允许虚拟机启动 50 秒，然后才认为其不可用。如果您的 {{ .Get "app" }} VM 需要更多时间来启动，您可以通过将 -InitialGrace 添加到 userconfig.xml 中的 vmcheck.ps1 自定义检查器来增加此延迟。该值以 5 秒增量表示。例如，-InitialGrace 20 允许 100 秒的宽限期： `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+
+
+![输入{{ .Get "app" }}自定义检查器参数](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
+
+
+### 7. 编辑脚本（可选）
+
+  * 不要编辑脚本。
+
+
+### 8.通讯加密（可选）
+
+  * 保持节点之间的通信加密。
+
+
+![{{ .Get "app" }}模块的通信加密](/wp-content/uploads/2024/03/07-module-encryption.png)
+
+
+### 9. 保存并应用
+
+  * `Save and apply` 两个节点上的配置和脚本。
+
+
+![保存并应用 {{ .Get "app" }} 模块配置](/wp-content/uploads/2024/03/08-module-save.png)
+
+
+### 10.验证配置成功
+
+  * 检查 `Success` ✅ 在两个节点上发送消息并点击 `Monitor modules`.
+  * 如果配置 `Failure` ❌ 发生在一个节点上，打开该节点的 ▼ 折叠面板并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+
+
+![检查{{ .Get "app" }}模块配置是否成功](/wp-content/uploads/2024/03/09-module-save-check.png)
+
+
+### 11. 使用最新数据启动节点
+
+  * 如果节点 1 具有最新的复制目录 `VM1/`，选择它并 ⋯ `Force start` ▶ `As primary`.
+
+
+当节点2启动时，所有数据将从节点1复制到节点2。
+
+⚠️ 如果您做出错误的选择，您将面临在两个节点上同步过时数据的风险。
+
+⚠️还假设 `VM1` 在节点 1 上停止，以便 SafeKit 安装复制机制，然后启动 `VM1` 在 `start_prim` 脚本。
+
+⚠️使用 `Start` 对于后续启动：SafeKit 保留最新的服务器。开始 `As primary` 是第一次或特殊操作期间的特殊启动。
+
+
+![使用最新数据作为主节点启动 {{ .Get "app" }}](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 12.等待过渡到ALONE（绿色）
+
+  * 节点 1 应达到 ALONE（绿色）状态，这意味着 `start_prim` 脚本已在节点 1 上执行。
+
+
+⚠️如果未达到ALONE（绿色）或VM1未启动，请分析原因 [模块日志🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) 节点 1 的。
+
+  * 点击🔍 **日志** 的图标 `node1` 打开模块日志并查找错误消息，例如检查器检测到错误并停止模块。
+  * 点击 `start_prim` 日志中：右侧显示脚本的输出信息，可以检测到VM1错误启动等错误。
+  * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
+
+
+⚠️如果集群在 `WAIT (red) not uptodate, STOP (red) not uptodate` 状态，停止 WAIT 节点并 [强制其作为主要启动 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![第一个 {{ .Get "app" }} 节点作为主节点启动并成为 ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 13.启动节点2
+
+  * ⋯ `Start` 节点 2 及其上下文菜单。
+  * 等待 SECOND（绿色）状态。
+
+
+ℹ️ 节点 2 保持 SECOND（橙色）状态，同时重新同步复制的目录（从节点 1 复制到节点 2）。
+
+  * 这可能需要一段时间，具体取决于复制目录中要重新同步的文件大小和网络带宽。
+  * 要查看复制进度，请参阅 [模块日志🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) 和 [复制资源🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) 节点 2 的。使用 SafeKit AI 🤖 获取日志消息帮助。
+
+
+ℹ️使用{{ .Get "app" }}差异磁盘时，初次同步后仅差异磁盘需要重新同步，为大型虚拟硬盘节省时间。
+
+
+![启动{{ .Get "app" }}节点2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 14. 验证集群是否正常运行
+
+  * 检查集群是否为绿色/绿色 `VM1` 运行在PRIM节点上，不在SECOND节点上运行。
+
+
+在此状态下，仅实时复制文件内部的更改。
+
+
+![{{ .Get "app" }} 节点 2 是 SECOND（绿色）](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 15. 测试
+
+  * 通过向下滚动其上下文菜单并单击来停止 PRIM 节点 `Stop`.
+  * 验证 SECOND 节点上是否存在故障转移，该节点应变为 ALONE（绿色）。
+  * 与 {{ .Get "app" }} 经理核实 `VM1` 正在节点 2 上运行。
+
+
+⚠️ 如果在node2上未到达ALONE（绿色）或者VM1未启动，请使用以下命令分析原因 [模块日志🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) 节点 2 的。
+
+  * 点击🔍 **日志** 的图标 `node2` 打开模块日志并查找错误消息，例如检查器检测到错误并停止模块。
+  * 点击 `start_prim` 日志中：右侧显示脚本的输出信息，可以检测到VM1错误启动等错误。
+  * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
+
+
+⚠️ 作为 `start_prim` 脚本导入节点 2 上的虚拟机，故障转移可能会失败，因为🛠️ [{{ .Get "app" }} 设置（请参阅本文档中的 KB SK-0088）](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+
+⚠️ 如果一切正常，请在节点 1 上启动启动，这将重新同步节点 2 中的复制目录。
+
+如果出现问题，停止node2并 [强制启动作为主要🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) Node1 的节点，它将使用停止时的本地健康数据重新启动。
+
+ℹ️ 请注意，您有 🕒 **[时间线🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** 这有助于了解集群中发生的情况。
+
+
+![停止 {{ .Get "app" }} 模块上的 PRIM 服务器](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 16. 如有必要，配置裂脑检查器
+
+  * 参见 [集群中网络隔离的情况有哪些不同的场景？](/best-practises/power-outage-and-network-isolation-in-a-cluster/) 了解是否需要配置裂脑检查器。
+  * 转到模块配置并单击 `Checkers / Splitbrain` （见图）编辑裂脑参数。
+  * `Save and apply` 新配置以在两个节点上重新部署（模块必须在两个节点上停止才能保存和应用）。
+
+
+**参数** :
+
+  * `Resource name` 使用资源名称标识见证人： `splitbrain.witness`。您可以更改此值以识别证人。
+  * `Witness address` 是当节点从 PRIM 到 ALONE 或从 SECOND 到 ALONE 时 ping 的参数。使用见证者（一个强大的元素，通常是路由器）的 IP 更改此值。
+  * 注意：您可以设置多个IP，用空格分隔。请注意，在网络隔离的情况下，IP 地址必须可以从一个节点访问，但不能从另一个节点访问。
+
+
+![输入{{ .Get "app" }} splitbrain参数](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+
+
+### 17. 如果虚拟机内关键服务出现故障，自动重启
+
+如果您希望在虚拟机内的关键服务发生故障时自动重新启动或故障转移，您可以配置该服务的恢复属性（参见图片）。
+
+首先您必须配置 [VM自定义检查器](#vm-checker) 前面已经描述过。
+
+然后在虚拟机内的 Microsoft 服务管理器中，选择关键服务，并在服务的恢复属性中，只需配置关键服务失败时关闭虚拟机即可。
+
+为此，在关键服务的恢复选项中，选择“**运行程序** “失败时并在运行程序选项中设置”**C:/Windows/System32/shutdown.exe** ”并在“命令行参数”中设置 **/s /c“服务失败”**.
+
+当然，您可以使用自己的脚本实现更微妙的恢复。但请注意，关闭虚拟机将启用主机中的自定义检查器。自定义检查器将检测到 {{ .Get "app" }} 心跳不再响应，并将在同一 {{ .Get "app" }} 服务器上重新启动 VM，或在其他 {{ .Get "app" }} 服务器上进行故障转移（取决于其配置）。
+
+要测试该功能，请使用任务管理器并终止与关键服务关联的进程（结束任务）。通过服务管理器或“net stop”命令彻底停止服务不会触发 Windows 服务管理器内的恢复操作。
+
+
+![{{ .Get "app" }} {{ .Get "app" }} 模块的 VM 关键服务故障转移](/wp-content/uploads/2023/11/hyperv-critical-service.png)
+
+
+### 18. 支持
+
+  * 要获得支持，请获取 2 SafeKit `Snapshots` （2 个 .zip 文件），每个节点一个。
+
+
+ℹ️ [有关支持的更多信息请参见此处](/resources/safekit-support/).
+
+
+![拍摄 {{ .Get "app" }} 快照以获取支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

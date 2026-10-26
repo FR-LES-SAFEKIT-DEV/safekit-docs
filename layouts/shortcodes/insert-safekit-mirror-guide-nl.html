@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-mirror-guide-nl — 19 instances in 19 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
+
+
+
+## Snelle installatiehandleiding met hoge beschikbaarheid voor {{ .Get "app" }} {#quick-guide}
+
+In deze handleiding wordt uitgelegd hoe u een **spiegel cluster** voor {{ .Get "app" }} met SafeKit, waardoor automatische failover en synchrone replicatie worden gegarandeerd zonder de noodzaak van gedeelde opslag. 
+
+Voor hulp kunt u gebruiken [SafeKit AI 🤖](/nl/resources/safekit-support/).
+
+### 1. Overzicht
+
+  * **Architectuur:** Maakt gebruik van een systeem met twee knooppunten (primair/secundair).
+  * **Gegevensbescherming:** Implementeert realtime synchrone replicatie voor **nul gegevensverlies** (RPO=0).
+
+
+### 2. Installatie
+
+  * **Software:** Installeer de SafeKit-engine op beide servers.
+  * **module:** Download de vooraf geconfigureerde `{{ .Get "mod" }}.safe` applicatiemodule.
+
+
+### 3. Configuratie
+
+  * **Webconsole:** Configureer de specifieke mappen die de {{ .Get "app" }}-bestanden bevatten.
+  * **Toezicht:** Begin met het monitoren en beschermen van de {{ .Get "app" }}-applicatie.
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-nl  %}}" }}
+
+
