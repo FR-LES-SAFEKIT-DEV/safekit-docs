@@ -29,8 +29,6 @@ The SafeKit on-line training is a self-paced, comprehensive resource designed to
 
 ### SafeKit Video: Free Certification Platform Tutorial (6:11) {#demo-certification}
 
-&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
-
 #### Chapters {#chapters}
 
   1. 🎬 [The Training and Certification Platform](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=0s>) (1:41)
