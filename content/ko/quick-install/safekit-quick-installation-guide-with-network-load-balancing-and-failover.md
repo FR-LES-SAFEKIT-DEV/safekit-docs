@@ -10,7 +10,7 @@ topics: "SafeKit 고가용성 빠른 설치 가이드(Apache용), SafeKit 고가
 # Apache 네트워크 로드 밸런싱 및 페일오버: SafeKit apache_farm.safe 모듈 설치 {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
-{{%  insert-safekit-farm-guide-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-farm-guide-ko app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit/Apache 솔루션 개요 {#overview-of-the-safekit--apache-solution}
@@ -25,25 +25,25 @@ topics: "SafeKit 고가용성 빠른 설치 가이드(Apache용), SafeKit 고가
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-windows-ko app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-ko app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-installation-package-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-linux-ko app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-linux-ko app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit/Apache 솔루션의 단계별 구성 {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
-{{%  insert-safekit-82-farm-configuration-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-farm-configuration-ko app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit 농장 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ko  %}}
 
 {{%  insert-safekit-hub-ko app="Microsoft SQL Server mirror"  %}}
 

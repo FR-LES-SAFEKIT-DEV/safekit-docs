@@ -10,7 +10,7 @@ topics: "Apache向け高可用性クイックインストールガイド、SafeK
 # Apacheネットワーク負荷分散とフェイルオーバー：SafeKit apache_farm.safeモジュールをインストールします {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
-{{%  insert-safekit-farm-guide-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-farm-guide-ja app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit / Apacheソリューションの概要 {#overview-of-the-safekit--apache-solution}
@@ -25,25 +25,25 @@ topics: "Apache向け高可用性クイックインストールガイド、SafeK
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-windows-ja app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-ja app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-installation-package-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-linux-ja app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-linux-ja app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit / Apacheソリューションの段階的な設定 {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
-{{%  insert-safekit-82-farm-configuration-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-farm-configuration-ja app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKitファームソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ja  %}}
 
 {{%  insert-safekit-hub-ja app="Microsoft SQL Server mirror"  %}}
 

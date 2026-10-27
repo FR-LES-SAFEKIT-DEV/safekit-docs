@@ -10,7 +10,7 @@ topics: "Guia de Instalação Rápida de Alta Disponibilidade para Apache, Limit
 # Balanceamento de carga e failover de rede Apache: Instale o módulo SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
-{{%  insert-safekit-farm-guide-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-farm-guide-pt-pt app="Apache" mod="apache_farm"  %}}
  
 
 ## Visão geral da solução SafeKit/Apache {#overview-of-the-safekit--apache-solution}
@@ -25,25 +25,25 @@ A solução está descrita aqui: **💡[SafeKit: Software completo para o balanc
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-windows-pt-pt app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-pt-pt app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-installation-package-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-linux-pt-pt app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-linux-pt-pt app="Apache" mod="apache_farm"  %}}
  
 
 ## Configuração passo a passo da solução SafeKit/Apache {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
-{{%  insert-safekit-82-farm-configuration-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-farm-configuration-pt-pt app="Apache" mod="apache_farm"  %}}
  
 
 ## Demonstração da solução agrícola SafeKit {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-pt-pt  %}}
 
 {{%  insert-safekit-hub-pt-pt app="Microsoft SQL Server mirror"  %}}
 

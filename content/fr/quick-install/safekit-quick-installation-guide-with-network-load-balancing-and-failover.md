@@ -10,7 +10,7 @@ topics: "Guide d'installation rapide de la haute disponibilité pour Apache, lim
 # Équilibrage de charge et basculement du réseau Apache : installez le module SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
-{{%  insert-safekit-farm-guide-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-farm-guide-fr app="Apache" mod="apache_farm"  %}}
  
 
 ## Présentation de la solution SafeKit / Apache {#overview-of-the-safekit--apache-solution}
@@ -25,25 +25,25 @@ La solution est décrite ici : **💡[SafeKit : Logiciel tout-en-un d'équilibra
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-windows-fr app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-fr app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-installation-package-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-linux-fr app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-linux-fr app="Apache" mod="apache_farm"  %}}
  
 
 ## Configuration étape par étape de la solution SafeKit / Apache {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
-{{%  insert-safekit-82-farm-configuration-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-farm-configuration-fr app="Apache" mod="apache_farm"  %}}
  
 
 ## Démonstration de la solution de ferme SafeKit {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-fr  %}}
 
 {{%  insert-safekit-hub-fr app="Microsoft SQL Server mirror"  %}}
 

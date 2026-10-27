@@ -10,7 +10,7 @@ topics: "Snelstartgids voor hoge beschikbaarheid met Apache, beperkingen van Saf
 # Apache netwerkbelastingverdeling en failover: installeer de SafeKit apache_farm.safe-module {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
-{{%  insert-safekit-farm-guide-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-farm-guide-nl app="Apache" mod="apache_farm"  %}}
  
 
 ## Overzicht van de SafeKit / Apache-oplossing {#overview-of-the-safekit--apache-solution}
@@ -25,25 +25,25 @@ De oplossing wordt hier beschreven: **💡[SafeKit: Alles-in-één Apache Load B
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-windows-nl app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-nl app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-installation-package-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-linux-nl app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-linux-nl app="Apache" mod="apache_farm"  %}}
  
 
 ## Stapsgewijze configuratie van de SafeKit / Apache-oplossing {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
-{{%  insert-safekit-82-farm-configuration-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-farm-configuration-nl app="Apache" mod="apache_farm"  %}}
  
 
 ## Demonstratie van de SafeKit-boerderijoplossing {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-nl  %}}
 
 {{%  insert-safekit-hub-nl app="Microsoft SQL Server mirror"  %}}
 

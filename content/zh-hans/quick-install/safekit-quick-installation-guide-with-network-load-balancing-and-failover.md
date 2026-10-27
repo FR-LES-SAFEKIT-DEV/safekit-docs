@@ -10,7 +10,7 @@ topics: "Apache 高可用性快速安装指南、SafeKit 高可用性限制、Sa
 # Apache 网络负载均衡与故障转移：安装 SafeKit apache_farm.safe 模块 {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
-{{%  insert-safekit-farm-guide-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-farm-guide-zh-hans app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit / Apache 解决方案概述 {#overview-of-the-safekit--apache-solution}
@@ -25,25 +25,25 @@ topics: "Apache 高可用性快速安装指南、SafeKit 高可用性限制、Sa
 
 
 
-{{%  insert-safekit-installation-package-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-windows-zh-hans app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-windows-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-windows-zh-hans app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-installation-package-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-installation-package-linux-zh-hans app="Apache" mod="apache_farm"  %}}
 
-{{%  insert-safekit-82-installation-module-linux-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-installation-module-linux-zh-hans app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit / Apache 解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
-{{%  insert-safekit-82-farm-configuration-en app="Apache" mod="apache_farm"  %}}
+{{%  insert-safekit-82-farm-configuration-zh-hans app="Apache" mod="apache_farm"  %}}
  
 
 ## SafeKit农场解决方案演示 {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-zh-hans  %}}
 
 {{%  insert-safekit-hub-zh-hans app="Microsoft SQL Server mirror"  %}}
 
