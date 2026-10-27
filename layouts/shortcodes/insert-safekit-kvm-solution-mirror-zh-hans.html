@@ -1,0 +1,220 @@
+{{/* Shortcode: insert-safekit-kvm-solution-mirror-zh-hans */}}
+{{/* Parameters: app */}}
+{{/* Source: content\solutions\linux-kvm-high-availability-replication-automatic-failover-load-balancing.md */}}
+
+
+
+## SafeKit 用于 {{ .Get "app" }}：2 节点无 SAN {{ .Get "app" }} 集群 {#safekit-kvm-tco}
+
+**SafeKit 代表 {{ .Get "app" }}** 提供无缝连接 **高可用性** 同时显著降低总体拥有成本 (TCO)。通过消除传统集群的硬件和运维开销，SafeKit 提供了一种精简的双节点 HA 方案，可替代复杂的虚拟化堆栈。.
+
+  * **零SAN投资HA:** 利用无共享架构实现完全冗余。它可与标准本地磁盘配合使用，无需昂贵的硬件设备。SAN高可用性通常需要硬件、光纤通道交换机和专用存储维护。.
+  * **与硬件无关的冗余:** 避免厂商锁定。使用任何服务器品牌或内部存储类型构建高可用性集群，延长现有硬件的使用寿命并降低更换成本。.
+  * **简化的 HA 操作:** 无需专门的“集群专家”即可维持正常运行时间。SafeKit 的即插即用模块和统一的 Web 控制台减少了 HA 部署和日常监控所需的人工时。.
+  * **成本可预测的许可:** 与订阅模式不同，SafeKit 通过一次性永久许可提供高可用性。这确保了预算的可预测性，并消除了关键基础设施每年价格上涨的风险。.
+  * **真正的 2 节点 HA 效率:** 大多数高可用性解决方案需要第三个“见证”节点来防止出现 split-brain 错误。SafeKit 提供了一个强大的双节点集群，从一开始就能节省 33% 的硬件、电力和机架空间。.
+
+
+通过整合 **高可用性** SafeKit 集成到一个轻量级软件层中，以远低于传统虚拟化套件的成本，提供企业级冗余和业务连续性。.
+
+
+![SafeKit 高可用性 {{ .Get "app" }} 集群架构](/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg "w:512")
+
+**SafeKit HA 集群，适用于 {{ .Get "app" }}**
+
+<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-kvm/">⚡ 快速 {{ .Get "app" }} HA 集群安装指南 ></a>
+## 目录 {#toc}
+
+  * [如何SafeKit软件只是简单地实现了{{ .Get "app" }}在不共享存储的高可用性集群上SAN?](#safekit-kvm-ha-cluster)
+  * [SafeKit {{ .Get "app" }} 集群的工作原理?](#safekit-kvm-ha-how-it-works)
+  * [SafeKit 高可用性限制](#safekit-ha-limitations)
+  * [比较：SafeKit 与 {{ .Get "app" }} 的聚类与传统聚类](#safekit-kvm-ha-comparison)
+  * [SafeKit 视频指南（适用于 {{ .Get "app" }}）](#videoguide-safekit-kvm-cluster)
+  * [🔍 SafeKit 高可用性导航中心](#hub)
+
+
+## 如何SafeKit软件只是简单地实现了{{ .Get "app" }}在不共享存储的高可用性集群上SAN? {#safekit-kvm-ha-cluster}
+
+### SafeKit HA 的解是什么？{{ .Get "app" }}?
+
+SafeKit 为任意品牌的两台服务器之间的 {{ .Get "app" }} 提供高可用性.
+
+本文解释了如何快速实施{{ .Get "app" }}集群上没有共享存储SAN而且缺乏特定技能.
+
+该解决方案的原理是将关键应用程序放在 {{ .Get "app" }} 下的虚拟机中。SafeKit 实现了 **虚拟机的实时复制和自动故障转移**.
+
+请注意，{{ .Get "app" }} 是所有 Linux 版本中包含的免费虚拟机管理程序。.
+
+### 如何实现多个应用程序的高可用性？{{ .Get "app" }}没有集群SAN?
+
+可以放置多个应用程序 **SafeKit 复制并重启了多台虚拟机**. 您可以使用 SafeKit 控制台在两台服务器之间迁移每个虚拟机，从而平衡负载。 **活跃-活跃簇**.
+
+### 我应该选择应用层高可用性还是虚拟机（VM）层高可用性？?
+
+使用 SafeKit，您可以灵活选择满足您需求的冗余模型。.
+
+**VM级冗余** （对于 {{ .Get "app" }} 或 Hyper-V）实现起来最简单，因为它复制了整个虚拟机，无需了解内部应用程序。.
+
+或者, **应用层冗余** 它的控制更加精细；它只复制特定的数据文件夹并重启应用程序服务，而不是重启整个操作系统。.
+
+虽然 VM 级别的 HA 设置起来更容易，但应用级别的 HA 与虚拟机管理程序无关，可以在物理、虚拟或云环境中运行。.
+
+### 与竞争对手相比，SafeKit 在实现 {{ .Get "app" }} 高可用性方面有哪些独特优势？?
+
+SafeKit 通过其特性与传统的 {{ .Get "app" }} 集群解决方案区分开来。 **无共享架构** 并简化了管理。大多数竞争对手需要复杂的分布式文件系统（例如 Ceph）或中央 SAN 来管理 VM 的故障转移，而 SafeKit 则提供了:
+
+  * **集成实时复制:** 数据同步功能直接内置于解决方案中，确保 {{ .Get "app" }} 虚拟机能够同步镜像，而无需管理单独的存储层，从而避免了额外的开销。.
+  * **简化的2节点聚类:** 与推荐使用 3 节点“见证”仲裁的企业级堆栈不同，SafeKit 仅需两台冗余服务器即可实现完全高可用性。. [了解更多关于我们的 heartbeat 和法定人数机制的信息](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **统一管理:** 管理员可以管理VM通过单一平台实现故障转移、复制和负载均衡SafeKit通过控制台，即使没有专业集群技术能力的团队也能轻松访问。.
+  * **自定义检查器:** SafeKit 不仅限于硬件监控；它还利用了 **自定义检查器** 检测 VM 是否崩溃，并自动触发本地重启或故障转移到冗余节点。该系统还具有高度可扩展性，可以轻松集成新的、用户自定义的、针对特定环境定制的检查器。.
+
+
+### 如何SafeKit减少TCO（总拥有成本）与VMware类型解决方案?
+
+与市面上大多数高可用性解决方案不同，SafeKit 的设计目标是与以下系统协同工作： **绝对最小的硬件开销** , 在不影响安全性和可靠性的前提下，与 VMware 或复杂的开源替代方案相比，主要节省成本包括：:
+
+  * **真正的双节点效率:** 大多数企业级堆栈或开源解决方案需要 3 个节点的“见证”仲裁来防止出现 split-brain 错误，而 SafeKit 仅需 3 个节点即可实现完全高可用性。 **两台冗余服务器**.
+  * **零存储成本:** SafeKit 采用无共享架构，可与本地磁盘配合使用，无需昂贵的 SAN 或 vSAN 硬件和专用存储网络。.
+  * **无强制订阅:** 与现代仅限订阅的模式不同，SafeKit 提供 **永久许可**. 您拥有自己的软件，避免了“订阅陷阱”和不可预测的年度价格上涨。.
+  * **低运营成本 (OPEX):** 作为一种即插即用的解决方案，它无需专门培训或昂贵的外部咨询维护，这与复杂的开源集群工具截然不同。.
+  * **CPU-独立定价:** 许可与 CPU 或核心数量无关。只需两个节点的两个许可证，即可保护多个 {{ .Get "app" }} 虚拟机。.
+
+
+### 是否可以设置一个{{ .Get "app" }}没有集群SAN或复杂的聚类技能?
+
+是的。本文解释了如何操作。 [快速实现 {{ .Get "app" }} 集群](/quick-install/safekit-quick-installation-guide-with-kvm/) 无需专门的 SAN 管理或复杂的 HA 聚类技能。通过使用 SafeKit 的 **自动故障转移脚本** 处理复制和重启 **{{ .Get "app" }}** 使用虚拟机，您可以获得强大的冗余解决方案，其部署和维护比传统的企业虚拟化堆栈要简单得多。.
+
+### 除了 {{ .Get "app" }} 之外，SafeKit 还能保护哪些应用程序和环境？?
+
+SafeKit 是一款功能全面的高可用性解决方案，其功能远超标准虚拟机故障转移。它能够 **同步实时复制** 以及针对各种关键工作负载的自动故障转移，包括:
+
+  * **虚拟环境与物理环境:** 完整的 Hyper-V 或 {{ .Get "app" }} 虚拟机.
+  * **容器编排:** Docker、Podman 和 K3s (Kubernetes) 环境.
+  * **数据与服务:** 单个文件目录、服务和各种数据库.
+  * **云基础设施:** 云应用程序的高可用性.
+
+
+SafeKit 也提供 **农场集群** 本地 **网络负载均衡和故障转移** 对于无状态应用程序，例如 **Web服务器**.
+
+💡 [点击此处查看所有支持的 HA 解决方案列表.](/zh-hans/solutions/)
+
+## SafeKit {{ .Get "app" }} 集群的工作原理? {#safekit-kvm-ha-how-it-works}
+
+以下步骤描述了单个镜像模块内的一个 {{ .Get "app" }} 虚拟机。每个复制的虚拟机都在一个独立的镜像模块中运行（最多 32 个虚拟机），主服务器可以是 {{ .Get "app" }} 服务器 1 或 {{ .Get "app" }} 服务器 2。.
+
+### 1. {{ .Get "app" }} 的实时复制是如何工作的？?
+
+服务器 1 (PRIM) 运行 {{ .Get "app" }} 和 VM（虚拟机）。SafeKit 实时复制 VM 文件（虚拟硬盘，VM 配置）。只有文件更改才会通过网络进行复制。.
+
+
+![在镜像集群 {{ .Get "app" }} 中进行字节级文件复制](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+
+
+复制过程是 [同步](/best-practises/synchronous-replication-vs-asynchronous-replication/) 与异步复制不同，即使发生故障也不会丢失数据。.
+
+你只需要配置一下VM目录名称SafeKit对磁盘组织结构没有任何先决条件。该目录可以位于系统磁盘中。.
+
+### 2. 自动 {{ .Get "app" }} 故障转移期间会发生什么?
+
+当服务器 1 发生故障时，服务器 2 接管。SafeKit 在服务器 2 上重启 {{ .Get "app" }} 和 VM。{{ .Get "app" }} 发现服务器 2 上由 SafeKit 复制的文件已是最新版本。.  
+VM 进程通过本地修改不再复制到服务器 1 的文件，继续在服务器 2 上运行。.
+
+
+![镜像集群中 {{ .Get "app" }} 的故障转移](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
+
+
+故障切换时间等于故障检测时间（默认设置为 30 秒）加上 VM 重启时间.
+
+### 3. {{ .Get "app" }}故障后如何同步数据?
+
+故障恢复是指在修复导致服务器 1 故障的问题后重新启动服务器 1。SafeKit 会自动重新同步 VM 文件。.
+
+
+![镜像 {{ .Get "app" }} 集群中的故障恢复](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
+
+
+故障恢复过程不会影响 {{ .Get "app" }} 和 VM，它们可以在服务器 2 上继续运行。.
+
+### 4. 如何恢复正常的{{ .Get "app" }}操作?
+
+重新集成后，VM 文件再次处于镜像模式，与步骤 1 相同。系统恢复到高可用性模式，{{ .Get "app" }} 和 VM 运行在服务器 2 上，而 SafeKit 将文件更新复制到服务器 1。.
+
+
+![恢复镜像 {{ .Get "app" }} 集群的正常运行](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
+
+
+如果管理员希望 VM 在服务器 1 上运行，可以在适当的时候通过 Web 控制台手动完成，也可以通过配置自动完成。.
+
+### 如何配置 SafeKit {{ .Get "app" }} 集群? {#safekit-mirror-cluster-configure}
+
+
+![SafeKitWeb 控制台：2 节点{{ .Get "app" }}集群仪表板VM复制和自动故障转移。](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png "w:694")
+
+
+这 **SafeKit 网络控制台** 提供直观的界面，用于配置关键应用程序的高可用性。只需几个步骤，即可完成配置。 **SafeKit {{ .Get "app" }} 集群** 为确保业务连续性:
+
+  * 普京 `VM_PATH`, 复制目录（/var/lib/libvirt/images）的根路径，其中包含 {{ .Get "app" }} 和 VM 文件.
+  * 输入 `VM_NAME`, {{ .Get "app" }} 虚拟机的名称 (VM1).
+
+
+SafeKit 集群包含一个专用的 [split-brain 检测器用于解决网络隔离问题](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 无需第三台见证机或额外的 heartbeat 网络.
+
+### 如何监控 SafeKit {{ .Get "app" }} 集群? {#safekit-mirror-cluster-monitoring}
+
+
+![SafeKit Web 控制台：实时监控 2 节点镜像 {{ .Get "app" }} 集群，显示 PRIM 和 SECOND 状态以及活动数据复制。](/wp-content/uploads/2024/03/14-monitoring-prim-second.png "w:604")
+
+
+这 **SafeKit 管理控制台** 它提供高可用性基础架构的统一视图。它允许管理员监控…… **运行状态** 集群和轨道数据实时同步.
+
+对于一个包含 2 个节点的 {{ .Get "app" }} 集群，控制台会清晰地显示每个服务器的角色。:
+
+  * **PRIM（主）:** 当前运行应用程序并管理虚拟 IP 的活动节点。它执行对本地存储的写入操作，并实时复制到辅助节点。.
+  * **SECOND（二级）:** 备用节点接收同步字节级更新。如果主节点发生故障，它随时可以接管。.
+  * **ALONE 州:** 当集群仅在一个节点上运行时（例如，在维护期间或故障后），会发出视觉警报，表明冗余暂时丢失。.
+  * **重新同步进度:** 当故障节点恢复时，其状态会在后台数据重新集成期间变为橙色，从而确保在“恢复正常”阶段不会出现停机时间。.
+
+
+除了简单的状态图标外，该界面还提供 **一键故障转移编排** , 允许您手动重新分配计划维护期间的主要角色，同时确保用户活动的持续可用性.
+
+请注意，如果您部署多个虚拟机用于复制和故障转移，则会有多个 PRIM/SECOND 小部件。这允许每个 VM 独立进行故障转移，并能够将负载分配到各个服务器上。.
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-zh-hans  %}}" }}
+
+
+## 比较：SafeKit 与 {{ .Get "app" }} 的聚类与传统聚类 {#safekit-kvm-ha-comparison}
+
+特征 | SafeKit 代表 {{ .Get "app" }} | 企业（例如，VMware） | 标准开源 {{ .Get "app" }}  
+---|---|---|---  
+建筑学 | 无 SAN（无共享） | 共享存储（SAN/vSAN） | 复合体（Ceph/DRBD）  
+高可用性 | 双节点同步镜 | 3节点最小值（vSAN见证） | 手动或三节点仲裁  
+复制 | 文件字节级 | 磁盘块级 (vSAN) | 可变（文件/块）  
+故障转移逻辑 | 全自动 | 自动（vSphere HA） | 复杂脚本  
+TCO（成本） | 低（永久许可） | 高（年度订阅） | 高 OPEX（维护）  
+需要专业技能 | 标准IT通才 | 专业认证 | 专家工程师 Linux  
+部署时间 | < 30 分钟 | 数小时至数天 | 配置日  
+
+**总之** , SafeKit 到 {{ .Get "app" }} 提供了最简单的路径 **高可用性** 通过移除 SAN 和第三个“见证”节点，大幅降低了 **总拥有成本（TCO）** 与企业级或手动开源解决方案相比.
+
+## 视频指南：配置 SafeKit HA 集群以支持 {{ .Get "app" }} {#videoguide-safekit-kvm-cluster}
+
+为 {{ .Get "app" }} 配置高可用性与 Hyper-V 的配置非常相似。观看 Hyper-V 的这段视频，您将清楚地了解如何配置。 **{{ .Get "app" }}** 采用 SafeKit 的无共享架构.
+
+### SafeKit 视频：使用 Hyper-V 实现虚拟机级集群 (5:15) {#demo-hyperv}
+
+在本视频中，您将了解 SafeKit 是如何实现的。 **Hyper-V 的高可用性** 无需像 SAN 那样复杂。学习配置 **虚拟机复制** 跨两个节点部署，确保关键虚拟化工作负载的无缝故障转移。.
+
+### 视频集锦
+
+  1. 🎬 [架构概述：2 个 Hyper-V 节点和 2 台虚拟机](https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s) (0:49)
+  2. 🎬 [配置集群和 hyperv.safe 模块](https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s) (1:59)
+  3. 🎬 [实时测试：VM 复制、迁移和崩溃时自动故障转移](https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s) (2:26)
+
+
+### 逐步实施:
+
+  * 🛠️ [开始免费试用并按照 Hyper-V 快速安装指南进行操作](/quick-install/safekit-quick-installation-guide-with-hyper-v/)
+
+
+

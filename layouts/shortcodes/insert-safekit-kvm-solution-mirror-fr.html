@@ -1,0 +1,220 @@
+{{/* Shortcode: insert-safekit-kvm-solution-mirror-fr */}}
+{{/* Parameters: app */}}
+{{/* Source: content\solutions\linux-kvm-high-availability-replication-automatic-failover-load-balancing.md */}}
+
+
+
+## SafeKit pour {{ .Get "app" }} : Cluster {{ .Get "app" }} sans SAN à 2 nœuds {#safekit-kvm-tco}
+
+**SafeKit pour {{ .Get "app" }}** assure une continuité **Haute disponibilité** tout en réduisant considérablement le coût total de possession (TCO). En éliminant les coûts matériels et opérationnels liés au clustering traditionnel, SafeKit offre une alternative légère à deux nœuds (HA) aux architectures de virtualisation complexes..
+
+  * **Investissement nul SAN pour HA:** Bénéficiez d'une redondance totale grâce à une architecture sans partage. Compatible avec les disques locaux standard, elle élimine le besoin de matériel SAN coûteux, de commutateurs Fibre Channel et de la maintenance spécialisée du stockage généralement requis pour la haute disponibilité..
+  * **Redondance indépendante du matériel:** Évitez la dépendance vis-à-vis d'un fournisseur unique. Créez votre cluster haute disponibilité en utilisant n'importe quelle marque de serveur ou type de stockage interne, prolongeant ainsi la durée de vie du matériel existant et réduisant les coûts de remplacement..
+  * **Opérations simplifiées HA:** Aucun expert en clustering n'est requis pour garantir la disponibilité. Les modules plug-and-play et la console web unifiée du SafeKit réduisent le temps nécessaire au déploiement et à la surveillance quotidienne du HA..
+  * **Licences à coût prévisible:** Contrairement aux modèles basés sur un système d'abonnement, SafeKit offre une haute disponibilité grâce à une licence perpétuelle unique. Ceci garantit une budgétisation prévisible et élimine le risque de hausses de prix annuelles pour les infrastructures critiques..
+  * **Efficacité réelle à 2 nœuds HA:** La plupart des solutions de haute disponibilité nécessitent un troisième nœud « témoin » pour éviter les erreurs split-brain. SafeKit offre un cluster robuste à 2 nœuds, permettant une économie de 33 % sur le matériel, la consommation d'énergie et l'espace rack dès le premier jour..
+
+
+En consolidant **Haute disponibilité** Dans une couche logicielle légère, SafeKit offre une redondance et une continuité d'activité de niveau entreprise à un coût bien inférieur à celui des suites de virtualisation traditionnelles..
+
+
+![Architecture de cluster haute disponibilité SafeKit {{ .Get "app" }}](/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg "w:512")
+
+**Cluster SafeKit HA pour {{ .Get "app" }}**
+
+<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-kvm/">Guide d'installation rapide du cluster ⚡ {{ .Get "app" }} HA ></a>
+## Table des matières {#toc}
+
+  * [Comment le logiciel SafeKit implémente simplement un cluster haute disponibilité {{ .Get "app" }} sans stockage partagé sur un SAN?](#safekit-kvm-ha-cluster)
+  * [Fonctionnement du groupe de touches SafeKit {{ .Get "app" }}?](#safekit-kvm-ha-how-it-works)
+  * [Limitations de haute disponibilité SafeKit](#safekit-ha-limitations)
+  * [Comparaison : SafeKit pour {{ .Get "app" }} vs. Clustering traditionnel](#safekit-kvm-ha-comparison)
+  * [Guide vidéo SafeKit pour {{ .Get "app" }}](#videoguide-safekit-kvm-cluster)
+  * [Centre de navigation haute disponibilité 🔍 SafeKit](#hub)
+
+
+## Comment le logiciel SafeKit implémente simplement un cluster haute disponibilité {{ .Get "app" }} sans stockage partagé sur un SAN? {#safekit-kvm-ha-cluster}
+
+### Quelle est la solution SafeKit HA pour {{ .Get "app" }} ??
+
+SafeKit assure une haute disponibilité à {{ .Get "app" }} entre deux serveurs de toute marque..
+
+Cet article explique comment implémenter rapidement un cluster {{ .Get "app" }} sans stockage partagé sur un SAN et sans compétences particulières..
+
+Le principe de la solution consiste à placer l'application critique dans une machine virtuelle sous {{ .Get "app" }}. SafeKit implémente **réplication en temps réel et basculement automatique de la machine virtuelle**.
+
+Notez que {{ .Get "app" }} est l'hyperviseur gratuit inclus dans toutes les versions de Linux..
+
+### Comment exécuter plusieurs applications dans un cluster {{ .Get "app" }} à haute disponibilité sans SAN ??
+
+Plusieurs applications peuvent être mises en place **Plusieurs machines virtuelles répliquées et redémarrées par SafeKit**. Vous avez la possibilité de migrer chaque machine virtuelle entre les deux serveurs via la console SafeKit et ainsi d'équilibrer la charge. **cluster actif-actif**.
+
+### Dois-je opter pour une haute disponibilité au niveau de l'application ou au niveau de la machine virtuelle (VM) ??
+
+Avec SafeKit, vous avez la possibilité de choisir le modèle de redondance qui correspond à vos besoins..
+
+**Redondance de niveau VM** (pour {{ .Get "app" }} ou Hyper-V) est la solution la plus simple à mettre en œuvre car elle réplique l'intégralité de la machine virtuelle, sans nécessiter de connaissance de l'application interne..
+
+Alternativement, **redondance au niveau de l'application** est plus granulaire ; elle ne réplique que des dossiers de données spécifiques et redémarre les services d’application plutôt que l’ensemble du système d’exploitation..
+
+Alors queVM-niveauHAest plus facile à configurer, au niveau de l'applicationHAest indépendant de l'hyperviseur et peut s'exécuter dans des environnements physiques, virtuels ou cloud..
+
+### Quels sont les avantages distinctifs du SafeKit pour la haute disponibilité du {{ .Get "app" }} par rapport à ses concurrents ??
+
+SafeKit se distingue des solutions de clustering traditionnelles {{ .Get "app" }} par son **architecture sans partage** et une gestion simplifiée. Alors que la plupart des concurrents nécessitent des systèmes de fichiers distribués complexes (comme Ceph) ou un serveur SAN central pour gérer le basculement VM, SafeKit offre:
+
+  * **Réplication intégrée en temps réel:** La synchronisation des données est intégrée directement à la solution, garantissant ainsi la mise en miroir synchrone des machines virtuelles {{ .Get "app" }} sans la surcharge liée à la gestion d'une couche de stockage séparée..
+  * **Clustering simplifié à 2 nœuds:** Contrairement aux architectures d'entreprise qui recommandent un quorum de 3 nœuds « témoins », SafeKit offre une haute disponibilité complète avec seulement deux serveurs redondants.. [Apprenez-en davantage sur notre heartbeat et notre mécanisme de quorum.](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Gestion unifiée:** Les administrateurs peuvent gérer le basculement, la réplication et l'équilibrage de charge VM via une console SafeKit unique, ce qui la rend accessible aux équipes ne disposant pas d'expertise spécialisée en clustering..
+  * **Vérins personnalisés:** SafeKit va au-delà de la simple surveillance matérielle ; il utilise **dames personnalisées** Le système détecte les pannes d'un VM et déclenche automatiquement un redémarrage local ou un basculement vers le nœud de secours. Hautement extensible, il permet d'intégrer facilement de nouveaux vérificateurs personnalisés, définis par l'utilisateur et adaptés à votre environnement spécifique..
+
+
+### Comment la solution SafeKit permet-elle de réduire le coût total de possession (TCO) par rapport aux solutions de type VMware ??
+
+Contrairement à la plupart des solutions de haute disponibilité du marché, SafeKit est conçu pour fonctionner avec le **surcharge matérielle minimale absolue** , sans compromettre la sécurité ni la fiabilité. Les principaux avantages par rapport à VMware ou à des alternatives open source complexes incluent ::
+
+  * **Véritable efficacité à 2 nœuds:** Alors que la plupart des infrastructures d'entreprise ou des solutions open source nécessitent un quorum de 3 nœuds « témoins » pour éviter les erreurs split-brain, SafeKit assure une haute disponibilité complète avec seulement **deux serveurs redondants**.
+  * **Aucuns frais de stockage:** Le SafeKit utilise une architecture sans partage qui fonctionne avec des disques locaux, éliminant ainsi le besoin de matériel SAN ou vSAN coûteux et de réseaux de stockage spécialisés..
+  * **Pas d'abonnements forcés:** Contrairement aux modèles modernes par abonnement uniquement, SafeKit propose un **licence perpétuelle**. Vous êtes propriétaire de votre logiciel, évitant ainsi le « piège de l'abonnement » et les hausses de prix annuelles imprévisibles..
+  * **Faibles coûts opérationnels (OPEX):** Solution prête à l'emploi, elle ne nécessite aucune formation spécialisée ni recours à des consultants externes coûteux pour la maintenance, contrairement aux outils de clustering open source complexes..
+  * **Tarification indépendante CPU:** La licence est indépendante du nombre de processeurs ou de cœurs. Avec seulement deux licences pour deux nœuds, vous pouvez protéger plusieurs machines virtuelles {{ .Get "app" }}..
+
+
+### Est-il possible de configurer un cluster {{ .Get "app" }} sans SAN ni compétences complexes en matière de clustering ??
+
+Oui. Cet article explique comment [implémenter rapidement un cluster {{ .Get "app" }}](/quick-install/safekit-quick-installation-guide-with-kvm/) sans nécessiter de compétences spécialisées en gestion SAN ni en clustering HA. En utilisant les capacités de SafeKit. **scripts de basculement automatisés** pour gérer la réplication et le redémarrage de **{{ .Get "app" }}** Avec les machines virtuelles, vous bénéficiez d'une solution de redondance robuste, nettement plus simple à déployer et à maintenir que les architectures de virtualisation d'entreprise traditionnelles..
+
+### Au-delà de {{ .Get "app" }}, quelles applications et quels environnements SafeKit peut-il protéger ??
+
+SafeKit est une solution de haute disponibilité polyvalente qui va bien au-delà du basculement standard des machines virtuelles. Elle permet **réplication synchrone en temps réel** et le basculement automatique pour une large gamme de charges de travail critiques, notamment:
+
+  * **Environnements virtuels et physiques:** Machines virtuelles complètes Hyper-V ou {{ .Get "app" }}.
+  * **Orchestration de conteneurs:** Environnements Docker, Podman et K3s (Kubernetes).
+  * **Données et services:** Répertoires de fichiers individuels, services et bases de données diverses.
+  * **Infrastructure cloud:** Haute disponibilité pour les applications cloud.
+
+
+SafeKit fournit également **Groupements agricoles** avec natif **Équilibrage de charge réseau et basculement** pour les applications sans état comme **Serveurs Web**.
+
+💡 [Découvrez ici la liste complète des solutions HA prises en charge..](/fr/solutions/)
+
+## Fonctionnement du groupe de touches SafeKit {{ .Get "app" }}? {#safekit-kvm-ha-how-it-works}
+
+Les étapes suivantes sont décrites pour une machine virtuelle {{ .Get "app" }} au sein d'un module miroir. Chaque machine virtuelle répliquée s'exécute dans un module miroir indépendant (avec un maximum de 32 machines virtuelles) et son serveur principal peut être soit le serveur {{ .Get "app" }} 1, soit le serveur {{ .Get "app" }} 2..
+
+### 1. Comment fonctionne la réplication en temps réel pour {{ .Get "app" }} ??
+
+Le serveur 1 (PRIM) exécute les machines virtuelles {{ .Get "app" }} et VM. SafeKit réplique en temps réel les fichiers VM (disque dur virtuel, configuration VM). Seules les modifications apportées aux fichiers sont répliquées sur le réseau..
+
+
+![Réplication de fichiers au niveau octet dans un cluster miroir {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+
+
+La réplication est [synchrone](/best-practises/synchronous-replication-vs-asynchronous-replication/) sans perte de données en cas de panne, contrairement à la réplication asynchrone.
+
+Il vous suffit de configurer le nom du répertoire VM dans SafeKit. Aucune organisation particulière du disque n'est requise. Le répertoire peut se trouver sur le disque système..
+
+### 2. Que se passe-t-il lors d'un basculement automatique {{ .Get "app" }} ??
+
+En cas de défaillance du serveur 1, le serveur 2 prend le relais. SafeKit redémarre {{ .Get "app" }} et VM sur le serveur 2. {{ .Get "app" }} constate que les fichiers répliqués par SafeKit sont à jour sur le serveur 2..  
+Le VM continue de fonctionner sur le serveur 2 en modifiant localement ses fichiers qui ne sont plus répliqués sur le serveur 1..
+
+
+![Basculement de {{ .Get "app" }} dans un cluster miroir](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
+
+
+Le temps de basculement est égal au temps de détection de panne (fixé à 30 secondes par défaut) plus le temps de redémarrage du VM.
+
+### 3. Comment les données sont-elles synchronisées après une panne {{ .Get "app" }} ??
+
+La restauration du serveur consiste à redémarrer le serveur 1 après avoir résolu le problème à l'origine de la panne. SafeKit resynchronise automatiquement les fichiers VM..
+
+
+![Failback dans un cluster {{ .Get "app" }} miroir](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
+
+
+Le retour en arrière s'effectue sans perturber le serveur {{ .Get "app" }} VM, qui peut continuer à fonctionner sur le serveur 2..
+
+### 4. Comment le fonctionnement normal du {{ .Get "app" }} est-il rétabli ??
+
+Après réintégration, les fichiers VM sont de nouveau en mode miroir, comme à l'étape 1. Le système est de nouveau en mode haute disponibilité, avec les serveurs {{ .Get "app" }} et VM fonctionnant sur le serveur 2 et le serveur SafeKit répliquant les mises à jour de fichiers sur le serveur 1..
+
+
+![Retour au fonctionnement normal dans un groupe de disques miroir {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
+
+
+Si l'administrateur souhaite que le VM s'exécute sur le serveur 1, il peut le faire manuellement via la console web au moment opportun, ou automatiquement via la configuration..
+
+### Comment configurer un cluster SafeKit {{ .Get "app" }}? {#safekit-mirror-cluster-configure}
+
+
+![Console Web SafeKit : tableau de bord du cluster {{ .Get "app" }} à 2 nœuds pour la réplication VM et le basculement automatique.](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png "w:694")
+
+
+Le **Console Web SafeKit** offre une interface intuitive pour configurer la haute disponibilité de vos applications critiques. En quelques étapes seulement, vous pouvez configurer une **Groupe SafeKit {{ .Get "app" }}** pour assurer la continuité des activités:
+
+  * Insérer `VM_PATH`, le chemin racine du répertoire répliqué (/var/lib/libvirt/images) où se trouvent les fichiers {{ .Get "app" }} et VM.
+  * Entrer dans `VM_NAME`, le nom de la machine virtuelle {{ .Get "app" }} (VM1).
+
+
+Le groupe SafeKit comprend un circuit dédié [Vérificateur split-brain pour résoudre les problèmes d'isolation réseau](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") sans avoir besoin d'une troisième machine témoin ni d'un réseau heartbeat supplémentaire.
+
+### Comment surveiller un cluster SafeKit {{ .Get "app" }}? {#safekit-mirror-cluster-monitoring}
+
+
+![Console Web SafeKit : Surveillance en temps réel d’un cluster miroir {{ .Get "app" }} à 2 nœuds affichant les états PRIM et SECOND avec réplication de données active.](/wp-content/uploads/2024/03/14-monitoring-prim-second.png "w:604")
+
+
+Le **Console de gestion SafeKit** offre une vue unifiée de votre infrastructure à haute disponibilité. Elle permet aux administrateurs de surveiller **état opérationnel** du cluster et suivi de la synchronisation des données en temps réel.
+
+Pour un cluster {{ .Get "app" }} à 2 nœuds, la console affiche clairement les rôles de chaque serveur.:
+
+  * **PRIM (Primaire):** Le nœud actif exécute actuellement l'application et gère le nœud virtuel IP. Il effectue des écritures sur le stockage local et une réplication en temps réel vers le nœud secondaire..
+  * **SECOND (Secondaire):** Le nœud de secours reçoit des mises à jour synchrones au niveau octet. Il est prêt à prendre le relais instantanément en cas de défaillance du nœud principal..
+  * **État ALONE:** Vous alerte visuellement lorsque le cluster fonctionne sur un seul nœud (par exemple, pendant une maintenance ou après une panne), indiquant une perte temporaire de redondance..
+  * **Progrès de la resynchronisation:** Lorsqu'un nœud défaillant est rétabli, son état passe à l'orange pendant la réintégration des données en arrière-plan, garantissant ainsi l'absence d'interruption de service pendant la phase de « retour à la normale »..
+
+
+Au-delà des simples icônes d'état, l'interface offre **orchestration de basculement en un clic** , vous permettant de réaffecter manuellement le rôle principal pour la maintenance planifiée tout en assurant une disponibilité continue pour l'activité des utilisateurs.
+
+Notez que si vous déployez plusieurs machines virtuelles pour la réplication et le basculement, vous disposerez de plusieurs widgets PRIM/SECOND. Cela permet un basculement indépendant pour chaque VM et la possibilité de répartir la charge entre les serveurs..
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-fr  %}}" }}
+
+
+## Comparaison : SafeKit pour {{ .Get "app" }} vs. Clustering traditionnel {#safekit-kvm-ha-comparison}
+
+Fonctionnalité | SafeKit pour {{ .Get "app" }} | Entreprise (par exemple, VMware) | {{ .Get "app" }}, logiciel libre standard  
+---|---|---|---  
+Architecture | SANless (sans partage) | Stockage partagé (SAN/vSAN) | Complexe (Ceph/DRBD)  
+Haute disponibilité | Miroir synchrone à 2 nœuds | Minimum de 3 nœuds (témoin vSAN) | Quorum manuel ou à 3 nœuds  
+Réplication | Niveau octet du fichier | Niveau de bloc de disque (vSAN) | Variable (Fichier/Bloc)  
+Logique de basculement | Entièrement automatique | Automatique (vSphere HA) | Scripts complexes  
+TCO (Coût) | Faible (Licence perpétuelle) | Élevée (Abonnements annuels) | Haute OPEX (Maintenance)  
+Expertise requise | Généraliste informatique standard | Certification spécialisée | Ingénieur expert Linux  
+Temps de déploiement | < 30 minutes | De quelques heures à plusieurs jours | Jours de configuration  
+
+**En résumé** , SafeKit pour {{ .Get "app" }} offre le chemin le plus simple vers **Haute disponibilité** en supprimant le besoin d'un SAN et d'un troisième nœud « témoin », en réduisant considérablement le **Coût total de possession (TCO)** par rapport aux solutions open source d'entreprise ou manuelles.
+
+## Guide vidéo : Configuration d’un cluster SafeKit HA pour {{ .Get "app" }} {#videoguide-safekit-kvm-cluster}
+
+La configuration de la haute disponibilité pour le {{ .Get "app" }} est très similaire à celle du Hyper-V. En visionnant cette vidéo sur le Hyper-V, vous comprendrez clairement comment procéder. **{{ .Get "app" }}** avec l'architecture sans partage de SafeKit.
+
+### Vidéo SafeKit : Clustering au niveau de la machine virtuelle avec Hyper-V (5:15) {#demo-hyperv}
+
+Dans cette vidéo, découvrez comment SafeKit implémente **haute disponibilité pour Hyper-V** sans la complexité d'un SAN. Apprenez à le configurer **réplication de machine virtuelle** réparti sur deux nœuds pour assurer une transition transparente pour vos charges de travail virtualisées critiques..
+
+### Vidéos marquantes
+
+  1. 🎬 [Aperçu de l'architecture : 2 nœuds Hyper-V et 2 machines virtuelles](https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s) (0:49)
+  2. 🎬 [Configuration du cluster et des modules hyperv.safe](https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s) (1:59)
+  3. 🎬 [Tests en direct : réplication, migration et basculement automatique en cas de panne de VM](https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s) (2:26)
+
+
+### Mise en œuvre étape par étape:
+
+  * 🛠️ [Démarrez votre essai gratuit et suivez le guide d'installation rapide du Hyper-V](/quick-install/safekit-quick-installation-guide-with-hyper-v/)
+
+
+
