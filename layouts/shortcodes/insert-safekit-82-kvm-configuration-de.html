@@ -1,0 +1,335 @@
+{{/* Shortcode: insert-safekit-82-kvm-configuration-de */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-kvm.md */}}
+
+
+
+⚠️ Die {{ .Get "app" }}-Konfiguration wird mit einer virtuellen Maschine mit dem Namen dargestellt `VM1` und enthält die Anwendung zum Neustarten im Falle eines Fehlers.
+
+⚠️ Sie müssen diese Konfiguration für alle VMs wiederholen, die Sie replizieren und neu starten möchten.
+
+### 1. Voraussetzungen {#prerequisite}
+
+Das Image der virtuellen Maschine VM1 befindet sich in der Datei `/var/lib/libvirt/images/vm1.qcow2`. Bevor Sie SafeKit konfigurieren, müssen Sie die folgende Konfiguration durchführen, um die virtuelle Maschine in einem vm1-spezifischen Verzeichnis zu platzieren, das von SafeKit repliziert wird.
+
+Auf Knoten 1:
+
+  * Stopp vm1: 
+
+        virsh shutdown vm1
+
+  * Erstellen Sie eine `vm1/` Verzeichnis: 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+  * Kopieren Sie das vm1-Image an den neuen Speicherort: 
+
+        cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
+
+Das ursprüngliche vm1-Image kann gelöscht werden, sobald die Tests mit dem neuen Speicherort erfolgreich sind.
+  * Bearbeiten Sie die vm1-Konfigurationsdatei: 
+
+        EDITOR=vi virsh edit vm1
+
+Und ändern Sie die Zeile: 
+
+        <source file='/var/lib/libvirt/images/vm1.qcow2'>
+
+
+von: 
+
+        <source file='/var/lib/libvirt/images/vm1/vm1.qcow2'>
+
+  * Stellen Sie die ein [Cache-Option auf „none“](/wp-content/uploads/2022/07/kvm-2.png) in derselben Datei, für die Datenintegrität im Falle eines Absturzes: 
+
+        <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
+
+  * Schließen Sie die vm1-Konfigurationsdatei
+  * Deaktivieren [vm1 automatischer Start](/wp-content/uploads/2022/07/kvm-3.png): 
+
+        virsh autostart vm1 --disable
+
+  * Erstellen Sie eine `vm1.xml` Konfigurationsdatei für vm1: 
+
+        virsh dumpxml vm1 > vm1.xml
+
+
+Auf Knoten 2:
+
+  * Kopieren Sie die `vm1.xml` Konfigurationsdatei von Knoten 1. Hinweis: Wenn die vm1-Konfiguration auf Knoten 1 geändert wird, müssen Sie die neue Konfiguration auf Knoten 2 erneut anwenden.
+  * Erstellen Sie vm1, aber starten Sie es nicht: 
+
+        virsh define vm1.xml
+
+  * Deaktivieren Sie den automatischen Start von vm1: 
+
+        virsh autostart vm1 --disable
+
+  * Erstellen Sie das Verzeichnis für den Bildspeicherort: 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+
+### 2. Starten Sie die SafeKit-Konsole
+
+  * Starten Sie die Webkonsole in einem Browser auf einem Clusterknoten, indem Sie eine Verbindung zu herstellen `http://localhost:9010`.
+  * Treten Sie ein `admin` B. Benutzername und das bei der Installation festgelegte Passwort.
+
+
+Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb des Clusters ausführen.
+
+⚠️ Die Konfiguration von SafeKit erfolgt auf beiden Knoten über einen einzigen Browser.
+
+ℹ️ Informationen zum Sichern der Webkonsole finden Sie unter 🛠️ [11\. Sicherung des SafeKit-Webdienstes](/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
+
+
+![Starten Sie die SafeKit-Webkonsole, um den {{ .Get "app" }}-Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 3. Knotenadressen konfigurieren
+
+  * Geben Sie die Knotenadressen IP ein und drücken Sie die Taste `Tab key` um die Konnektivität zu prüfen und Knotennamen einzugeben. Wenn entweder node1 oder node2 eine rote Farbe hat, überprüfen Sie die Konnektivität des Browsers zu beiden Knoten und überprüfen Sie die Firewall auf beiden Knoten auf 🛠️ [Fehlerbehebung](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Klicken Sie dann auf `Save and apply` um die Konfiguration zu speichern.
+  * Überprüfen Sie die `Success` ✅-Nachricht auf beiden Knoten.
+  * Wenn die Konfiguration `Failure` Wenn ❌ auf einem Knoten auftritt, öffnen Sie das Akkordeon ▼ für diesen Knoten und überprüfen Sie die Nachrichten. Beachten Sie, dass Sie zur Unterstützung den SafeKit AI 🤖 verwenden können.
+
+
+ℹ️ Wenn Sie möchten, können Sie ein neues hinzufügen `LAN and nodes` (erster ➕), um einen zweiten Heartbeat und ein dediziertes Replikationsnetzwerk zu erstellen.
+
+ℹ️ Wenn Sie auf klicken `Advanced configuration`, die `cluster.xml` Datei wird angezeigt. Diese Datei wird automatisch von der Konsole gefüllt und auf den Knoten bereitgestellt.
+
+
+![Geben Sie die Knoten des {{ .Get "app" }}-Clusters ein](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 4. Wählen Sie ein Modul aus
+
+  * In `New module`, klicken Sie auf `{{ .Get "mod" }}.safe` Modul.
+
+
+ℹ️ Im blauen Banner oben: 🛜 `node1` stellt den Konsolenverbindungsknoten dar. Dieser Knoten leitet Anfragen an weiter `node2` bei Bedarf.
+
+ℹ️ Die Konsole sucht nach `xxx.safe` im `Application_Modules/generic/` Verzeichnis auf dem Verbindungsknoten (`node1`), wenn Sie dort während der Installation ein Modul platziert haben.
+
+
+![Wählen Sie das Modul für {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 5. Konfigurieren Sie das Modul
+
+  * Wählen Sie ein `Automatic` Start des Moduls beim Booten ohne Verzögerung.
+  * Normalerweise haben Sie eine Single `Heartbeat` Netzwerk, auf dem die Replikation erfolgt. Bei Bedarf können Sie jedoch ein privates Netzwerk definieren (durch Hinzufügen eines LAN in Schritt 3).
+  * Einsetzen `VM_PATH`, der Stammpfad des replizierten Verzeichnisses (`/var/lib/libvirt/images`).
+  * Treten Sie ein `VM_NAME`, der Name der virtuellen Maschine (`vm1`).
+
+
+Wir gehen davon aus, dass die VM1-Dateien vorhanden sind `/var/lib/libvirt/image/vm1/` (siehe [Voraussetzungen](#prerequisite)). Dieses Verzeichnis wird von SafeKit in Echtzeit repliziert.
+
+ℹ️ Sie müssen keine virtuelle IP-Adresse konfigurieren. VM1 wird auf dem sekundären {{ .Get "app" }} mit seiner physischen IP-Adresse neu gestartet und diese IP-Adresse wird umgeleitet.
+
+
+![Geben Sie die {{ .Get "app" }}-Parameter ein](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 6. Benutzerdefinierter Prüfer zur Erkennung von VM-Fehlfunktionen
+
+Der benutzerdefinierte Prüfer prüft, ob die VM ausgeführt wird (mit dem Befehl „virsh domstate“). Wenn die VM nicht ausgeführt wird, startet der benutzerdefinierte Prüfer die VM automatisch auf demselben {{ .Get "app" }}-Knoten oder auf einem anderen neu.
+
+  * Klicken Sie auf `Checkers / Custom` (siehe Bild).
+  * `Resource name` identifiziert die virtuelle Maschine mit einem Ressourcennamen in SafeKit: `custom.VM_NAME_check`.
+  * Mit `restart` in `Action`, wird die VM auf demselben {{ .Get "app" }}-Knoten neu gestartet. Nach drei erfolglosen Neustarts innerhalb von 24 Stunden stoppt das SafeKit {{ .Get "mod" }}-Modul auf dem Primärknoten und es findet ein Failover der VM auf dem Sekundärknoten statt.
+  * Wenn Sie einstellen `stopstart` in `Action`, erfolgt ein direktes Failover auf dem anderen {{ .Get "app" }}-Knoten, sobald die VM nicht läuft.
+
+
+ℹ️ Wenn Sie die virtuelle Maschine zu Wartungszwecken stoppen möchten, wird sie vom benutzerdefinierten Prüfer automatisch neu gestartet. Um dies zu vermeiden, können Sie dies vorübergehend tun [Suspendieren Sie den Checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Oder Sie können es entfernen, indem Sie die Konfigurationszeile in der Konsole löschen.
+
+
+![Geben Sie die Parameter des benutzerdefinierten Prüfers {{ .Get "app" }} ein](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
+
+
+### 7. Skripte bearbeiten (optional)
+
+  * Bearbeiten Sie keine Skripte.
+
+
+### 8. Kommunikationsverschlüsselung (optional)
+
+  * Behalten Sie die Verschlüsselung der Kommunikation zwischen Knoten bei.
+
+
+![Kommunikationsverschlüsselung des {{ .Get "app" }}-Moduls](/wp-content/uploads/2024/03/07-module-encryption.png)
+
+
+### 9. Speichern und anwenden
+
+  * `Save and apply` die Konfiguration und Skripte auf beiden Knoten.
+
+
+![Speichern Sie die {{ .Get "app" }}-Modulkonfiguration und wenden Sie sie an](/wp-content/uploads/2024/03/08-module-save.png)
+
+
+### 10. Überprüfen Sie die erfolgreiche Konfiguration
+
+  * Überprüfen Sie die `Success` Geben Sie auf beiden Knoten die Meldung ✅ ein und klicken Sie auf `Monitor modules`.
+  * Wenn die Konfiguration `Failure` Wenn ❌ auf einem Knoten auftritt, öffnen Sie das Akkordeon ▼ für diesen Knoten und überprüfen Sie die Nachrichten. Beachten Sie, dass Sie zur Unterstützung den SafeKit AI 🤖 verwenden können.
+
+
+![Überprüfen Sie den Erfolg der {{ .Get "app" }}-Modulkonfiguration](/wp-content/uploads/2024/03/09-module-save-check.png)
+
+
+### 11. Starten Sie den Knoten mit aktuellen Daten
+
+  * Wenn Knoten 1 über das aktuell replizierte Verzeichnis für verfügt `vm1/`, wähle es aus und ⋯ `Force start` ▶ `As primary`.
+
+
+Wenn Knoten 2 gestartet wird, werden alle Daten von Knoten 1 auf Knoten 2 kopiert.
+
+⚠️ Wenn Sie die falsche Wahl treffen, besteht die Gefahr, dass veraltete Daten auf beiden Knoten synchronisiert werden.
+
+⚠️ Es wird auch davon ausgegangen `VM1` wird auf Knoten 1 gestoppt, sodass SafeKit die Replikationsmechanismen installiert und dann startet `VM1` im `start_prim` Skript.
+
+⚠️ Verwendung `Start` für spätere Starts: SafeKit behält den aktuellsten Server. Beginnt `As primary` ist eine besondere Inbetriebnahme beim ersten Mal oder bei außergewöhnlichen Einsätzen.
+
+
+![Starten Sie als Primärknoten den {{ .Get "app" }}-Knoten mit den aktuellen Daten](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 12. Warten Sie auf den Übergang zu ALONE (grün)
+
+  * Knoten 1 sollte den Zustand ALONE (grün) erreichen, was bedeutet, dass der `start_prim` Das Skript wurde auf Knoten 1 ausgeführt.
+
+
+⚠️ Wenn ALONE (grün) nicht erreicht wird oder wenn VM1 nicht gestartet wird, analysieren Sie mit dem warum [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) von Knoten 1.
+
+  * Klicken Sie auf 🔍 **Protokoll** Symbol von `node1` um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfprogramm einen Fehler erkennt und das Modul stoppt.
+  * Klicken Sie auf `start_prim` im Protokoll: Rechts werden Ausgabemeldungen des Skripts angezeigt und es können Fehler wie z. B. VM1 falsch gestartet erkannt werden.
+  * Verwenden Sie den SafeKit AI 🤖 zur Unterstützung bei Protokollmeldungen.
+
+
+⚠️ Wenn der Cluster vorhanden ist `WAIT (red) not uptodate, STOP (red) not uptodate` Zustand, stoppen Sie den WAIT-Knoten und [Erzwingen Sie den Start als primäres 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![Der erste {{ .Get "app" }}-Knoten startet als primärer Knoten und wird zu ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 13. Starten Sie Knoten 2
+
+  * ⋯ `Start` Knoten 2 mit seinem Kontextmenü.
+  * Warten Sie auf den Status SECOND (grün).
+
+
+ℹ️ 
+
+  * Knoten 2 bleibt im Status SECOND (orange), während die replizierten Verzeichnisse neu synchronisiert werden (Kopieren von Knoten 1 auf Knoten 2).
+  * Dies kann abhängig von der Größe der neu zu synchronisierenden Dateien in replizierten Verzeichnissen und der Netzwerkbandbreite eine Weile dauern.
+  * Informationen zum Fortschritt des Kopiervorgangs finden Sie unter [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) und die [Replikationsressourcen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) von Knoten 2. Verwenden Sie den SafeKit AI 🤖 zur Unterstützung bei Protokollmeldungen.
+
+
+![Starten Sie den {{ .Get "app" }}-Knoten 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 14. Stellen Sie sicher, dass der Cluster betriebsbereit ist
+
+  * Überprüfen Sie, ob der Cluster grün/grün ist `VM1` läuft auf dem Knoten PRIM und läuft nicht auf dem Knoten SECOND.
+
+
+In diesem Zustand werden nur Änderungen innerhalb von Dateien in Echtzeit repliziert.
+
+
+![Der {{ .Get "app" }}-Knoten 2 ist SECOND (grün)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 15. Testen
+
+  * Stoppen Sie den Knoten PRIM, indem Sie im Kontextmenü nach unten scrollen und auf klicken `Stop`.
+  * Stellen Sie sicher, dass auf dem Knoten SECOND ein Failover stattfindet, der zu ALONE (grün) werden sollte.
+  * Überprüfen Sie dies mit {{ .Get "app" }}-Tools `VM1` läuft auf Knoten 2.
+
+
+⚠️ Wenn ALONE (grün) auf node2 nicht erreicht wird oder wenn VM1 nicht gestartet wird, analysieren Sie mit dem, warum [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) von Knoten 2.
+
+  * Klicken Sie auf 🔍 **Protokoll** Symbol von `node2` um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfprogramm einen Fehler erkennt und das Modul stoppt.
+  * Klicken Sie auf `start_prim` im Protokoll: Rechts werden Ausgabemeldungen des Skripts angezeigt und es können Fehler wie z. B. VM1 falsch gestartet erkannt werden.
+  * Verwenden Sie den SafeKit AI 🤖 zur Unterstützung bei Protokollmeldungen.
+
+
+⚠️
+
+  * Wenn alles in Ordnung ist, initiieren Sie einen Start auf node1, wodurch die replizierten Verzeichnisse von node2 neu synchronisiert werden.
+  * Wenn etwas schief geht, stoppen Sie node2 und [Erzwingen Sie den Start als primäres 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) von node1, der zum Zeitpunkt des Stopps mit seinen lokal gesunden Daten neu startet.
+
+
+ℹ️ Beachten Sie, dass Sie einen 🕒 haben **[Zeitleiste 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** Das kann hilfreich sein, um zu verstehen, was im Cluster passiert.
+
+
+![Stoppen Sie das {{ .Get "app" }}-Modul auf dem PRIM-Server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 16. Konfigurieren Sie bei Bedarf einen Splitbrain-Checker
+
+  * Siehe [Welche unterschiedlichen Szenarien gibt es bei Netzwerkisolation in einem Cluster?](/best-practises/power-outage-and-network-isolation-in-a-cluster/) um zu wissen, ob Sie einen Splitbrain-Checker konfigurieren müssen.
+  * Gehen Sie zur Modulkonfiguration und klicken Sie auf `Checkers / Splitbrain` (siehe Bild), um die Splitbrain-Parameter zu bearbeiten.
+  * `Save and apply` die neue Konfiguration, um sie auf beiden Knoten erneut bereitzustellen (das Modul muss auf beiden Knoten gestoppt werden, um es zu speichern und anzuwenden).
+
+
+**Parameter** :
+
+  * `Resource name` identifiziert den Zeugen mit einem Ressourcennamen: `splitbrain.witness`. Sie können diesen Wert ändern, um den Zeugen zu identifizieren.
+  * `Witness address` ist das Argument für einen Ping, wenn ein Knoten von PRIM zu ALONE oder von SECOND zu ALONE wechselt. Ändern Sie diesen Wert mit dem IP des Zeugen (ein robustes Element, normalerweise ein Router).
+  * Hinweis: Sie können mehrere durch Leerzeichen getrennte IPs festlegen. Beachten Sie, dass die IP-Adressen im Falle einer Netzwerkisolation von einem Knoten aus erreichbar sein müssen, vom anderen jedoch nicht.
+
+
+![Geben Sie die Splitbrain-Parameter {{ .Get "app" }} ein](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+
+
+### 17. Snapshots replizieren
+
+Das Verzeichnis, das die Snapshot-XML-Dateien enthält, ist:
+
+
+    /var/lib/libvirt/qemu/snapshot/%VM_NAME%
+
+wo `VM_NAME` ist der Name der virtuellen Maschine (vm1).
+
+Hinweis: Wenn kein Snapshot erstellt wurde, erstellen Sie einen, um das Verzeichnis zu generieren (andernfalls schlägt die SafeKit-Konfiguration fehl).
+
+Um es zu replizieren:
+
+  * Klicken Sie in der Modulkonfiguration auf `Advanced Configuration` (siehe Bild) zum Bearbeiten `userconfig.xml`.
+  * Fügen Sie die folgenden Zeilen in die ein `<rfs>` Abschnitt von userconfig.xml: 
+
+        <replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%" mode="read_only"> </replicated>
+
+  * `Save and apply` die neue Konfiguration, um die geänderte userconfig.xml-Datei auf beiden Knoten erneut bereitzustellen (das Modul muss auf beiden Knoten gestoppt werden, um es zu speichern und anzuwenden).
+  * Erstellen Sie Snapshots auf dem PRIM-Knoten entweder über virt-manager oder eine Befehlszeile: 
+
+        virsh snapshot-create-as vm1 snapshot-name
+
+Hinweis: Wenn Sie einen Snapshot mit einer Befehlszeile erstellen, müssen Sie die Snapshot-Ansicht in virt-manager aktualisieren.
+
+
+Auf dem PRIM-Knoten erstellte Snapshots sind nach dem Failover auf Knoten 2 betriebsbereit, auf Knoten 2 jedoch nicht aufgeführt.
+
+  * Um einen Snapshot auf Knoten 2 zu importieren, müssen Sie den folgenden Befehl ausführen: 
+
+        virsh snapshot-create --redefine vm1 /var/lib/libvirt/qemu/snapshot/vm1/snapshot-name
+
+  * Die Befehlszeile zum Auflisten aller Snapshots von vm1 lautet: 
+
+        virsh snapshot-list vm1
+
+
+![Geben Sie die {{ .Get "app" }}-Parameter ein](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 18. Unterstützung
+
+  * Um Unterstützung zu erhalten, nehmen Sie 2 SafeKit `Snapshots` (2 ZIP-Dateien), eine für jeden Knoten.
+
+
+ℹ️ [Weitere Informationen zur Unterstützung finden Sie hier](/resources/safekit-support/).
+
+
+![Nehmen Sie zur Unterstützung die {{ .Get "app" }}-Snapshots](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

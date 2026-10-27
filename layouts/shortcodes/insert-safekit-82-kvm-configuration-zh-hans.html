@@ -1,0 +1,335 @@
+{{/* Shortcode: insert-safekit-82-kvm-configuration-zh-hans */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-kvm.md */}}
+
+
+
+⚠️ {{ .Get "app" }} 配置提供了一个名为 `VM1` 并包含在发生故障时重新启动的应用程序。
+
+⚠️ 您必须对要复制并重新启动的所有 VM 重复此配置。
+
+### 1.先决条件{#prerequisite}
+
+文件中为VM1虚拟机镜像 `/var/lib/libvirt/images/vm1.qcow2`。配置前 SafeKit，您必须执行以下配置才能将虚拟机置于 vm1- 将复制的特定目录 SafeKit。
+
+在节点 1 上：
+
+  * 停止vm1： 
+
+        virsh shutdown vm1
+
+  * 创建一个 `vm1/` 目录： 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+  * 将 vm1 映像复制到新位置： 
+
+        cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
+
+一旦新位置测试成功，即可删除原始 vm1 图像。
+  * 编辑vm1配置文件： 
+
+        EDITOR=vi virsh edit vm1
+
+并更改行： 
+
+        <source file='/var/lib/libvirt/images/vm1.qcow2'>
+
+
+通过： 
+
+        <source file='/var/lib/libvirt/images/vm1/vm1.qcow2'>
+
+  * 设置 [缓存选项为“无”](/wp-content/uploads/2022/07/kvm-2.png) 在同一个文件中，为了崩溃时的数据完整性： 
+
+        <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
+
+  * 关闭vm1配置文件
+  * 禁用 [vm1自动启动](/wp-content/uploads/2022/07/kvm-3.png): 
+
+        virsh autostart vm1 --disable
+
+  * 创建一个 `vm1.xml` vm1的配置文件： 
+
+        virsh dumpxml vm1 > vm1.xml
+
+
+在节点 2 上：
+
+  * 复制 `vm1.xml` 来自节点 1 的配置文件。 注意：每当节点 1 上更改 vm1 配置时，您必须在节点 2 上重新应用新配置。
+  * 创建 vm1 但不启动它： 
+
+        virsh define vm1.xml
+
+  * 禁用vm1自动启动： 
+
+        virsh autostart vm1 --disable
+
+  * 创建图像位置的目录： 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+
+### 2.启动SafeKit控制台
+
+  * 通过连接到在一个集群节点上的浏览器中启动 Web 控制台 `http://localhost:9010`.
+  * 输入 `admin` 作为安装期间定义的用户名和密码。
+
+
+您还可以在集群外部工作站上的浏览器中运行控制台。
+
+⚠️ SafeKit 的配置是通过单个浏览器在两个节点上完成的。
+
+ℹ️ 要保护 Web 控制台，请参阅 🛠️ [11\. 保护 SafeKit Web 服务](/resources/safekit-user-guide-82/#https) 在用户指南中。
+
+
+![启动 SafeKit Web 控制台来配置 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 3.配置节点地址
+
+  * 输入节点IP地址，按 `Tab key` 检查连接性并填写节点名称。如果 node1 或 node2 为红色，请检查浏览器与两个节点的连接，并检查两个节点上的防火墙是否有 🛠️ [故障排除](/resources/safekit-user-guide-82/#Troubleshooting).
+  * 然后，单击 `Save and apply` 保存配置。
+  * 检查 `Success` 两个节点上的 ✅ 消息。
+  * 如果配置 `Failure` ❌ 发生在一个节点上，打开该节点的 ▼ 折叠面板并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+
+
+ℹ️ 如果需要，您可以添加新的 `LAN and nodes` （第一个 ➕）创建第二个心跳和专用复制网络。
+
+ℹ️ 如果您点击 `Advanced configuration`, 的 `cluster.xml` 显示文件。该文件由控制台自动填充并部署在节点上。
+
+
+![输入{{ .Get "app" }}集群的节点](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 4. 选择模块
+
+  * 在 `New module`，单击 `{{ .Get "mod" }}.safe` 模块。
+
+
+ℹ️ 在顶部的蓝色横幅中，🛜 `node1` 代表控制台连接节点。该节点将请求转发到 `node2` 当需要时。
+
+ℹ️ 控制台寻找 `xxx.safe` 在 `Application_Modules/generic/` 连接节点上的目录（`node1`）如果您在安装过程中放置了一个模块。
+
+
+![选择{{ .Get "app" }}的模块](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 5. 配置模块
+
+  * 选择一个 `Automatic` 模块在启动时立即启动。
+  * 通常情况下，您有一个 `Heartbeat` 进行复制的网络。但是，如果需要，您可以定义专用网络（通过在步骤 3 中添加 LAN）。
+  * 放入 `VM_PATH`，复制目录的根路径（`/var/lib/libvirt/images`).
+  * 输入 `VM_NAME`，虚拟机的名称（`vm1`).
+
+
+我们假设 VM1 文件位于 `/var/lib/libvirt/image/vm1/` （见 [先决条件](#prerequisite)）。该目录将被SafeKit实时复制。
+
+ℹ️ 您不需要配置虚拟IP 地址。 VM1 将在辅助 {{ .Get "app" }} 上以其物理 IP 地址重新启动，并且该 IP 地址将被重新路由。
+
+
+![输入{{ .Get "app" }}参数](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 6. 自定义检查器来检测VM故障
+
+自定义检查器检查虚拟机是否正在运行（使用“virsh domstate”命令）。如果 VM 未运行，自定义检查器会自动在同一 {{ .Get "app" }} 节点或另一个节点上重新启动 VM。
+
+  * 点击 `Checkers / Custom` （见图）。
+  * `Resource name` 标识资源名称为 SafeKit 的虚拟机： `custom.VM_NAME_check`.
+  * 与 `restart` 在 `Action`，VM 在同一 {{ .Get "app" }} 节点上重新启动。 24 小时内 3 次重启失败后，SafeKit {{ .Get "mod" }} 模块在主节点上停止，并且辅助节点上的虚拟机发生故障转移。
+  * 如果你设置 `stopstart` 在 `Action`，一旦 VM 未运行，就会在另一个 {{ .Get "app" }} 节点上直接进行故障转移。
+
+
+ℹ️ 为了维护，如果您想停止虚拟机，自定义检查器将自动重新启动它。为了避免这种情况，您可以暂时 [暂停检查器 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)。或者您可以通过删除控制台中的配置行来将其删除。
+
+
+![输入{{ .Get "app" }}自定义检查器参数](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
+
+
+### 7. 编辑脚本（可选）
+
+  * 不要编辑脚本。
+
+
+### 8.通讯加密（可选）
+
+  * 保持节点之间的通信加密。
+
+
+![{{ .Get "app" }}模块的通信加密](/wp-content/uploads/2024/03/07-module-encryption.png)
+
+
+### 9. 保存并应用
+
+  * `Save and apply` 两个节点上的配置和脚本。
+
+
+![保存并应用 {{ .Get "app" }} 模块配置](/wp-content/uploads/2024/03/08-module-save.png)
+
+
+### 10.验证配置成功
+
+  * 检查 `Success` 两个节点上的 ✅ 消息并单击 `Monitor modules`.
+  * 如果配置 `Failure` ❌ 发生在一个节点上，打开该节点的 ▼ 折叠面板并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+
+
+![检查{{ .Get "app" }}模块配置是否成功](/wp-content/uploads/2024/03/09-module-save-check.png)
+
+
+### 11. 使用最新数据启动节点
+
+  * 如果节点 1 具有最新的复制目录 `vm1/`，选择它并 ⋯ `Force start` ▶ `As primary`.
+
+
+当节点2启动时，所有数据将从节点1复制到节点2。
+
+⚠️ 如果您做出错误的选择，您将面临在两个节点上同步过时数据的风险。
+
+⚠️ 还假设 `VM1` 在节点 1 上停止，以便 SafeKit 安装复制机制，然后启动 `VM1` 在 `start_prim` 脚本。
+
+⚠️用途 `Start` 对于后续启动：SafeKit 保留最新的服务器。开始 `As primary` 是第一次或特殊操作期间的特殊启动。
+
+
+![使用最新数据作为主节点启动 {{ .Get "app" }}](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 12.等待过渡到ALONE（绿色）
+
+  * 节点 1 应达到 ALONE（绿色）状态，这意味着 `start_prim` 脚本已在节点 1 上执行。
+
+
+⚠️ 如果未达到 ALONE（绿色）或 VM1 未启动，请分析原因 [模块日志🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) 节点 1 的。
+
+  * 点击🔍 **日志** 的图标 `node1` 打开模块日志并查找错误消息，例如检查器检测到错误并停止模块。
+  * 点击 `start_prim` 日志中：右侧显示脚本的输出信息，可以检测到VM1错误启动等错误。
+  * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
+
+
+⚠️ 如果集群处于 `WAIT (red) not uptodate, STOP (red) not uptodate` 状态，停止 WAIT 节点并 [强制其作为主要 🖼️ 启动](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![第一个 {{ .Get "app" }} 节点作为主节点启动并成为 ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 13.启动节点2
+
+  * ⋯ `Start` 节点 2 及其上下文菜单。
+  * 等待 SECOND（绿色）状态。
+
+
+ℹ️ 
+
+  * 重新同步复制目录（从节点 1 复制到节点 2）时，节点 2 保持 SECOND（橙色）状态。
+  * 这可能需要一段时间，具体取决于复制目录中要重新同步的文件大小和网络带宽。
+  * 要查看复制进度，请参阅 [模块日志🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) 和 [复制资源 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) 节点 2 的。使用 SafeKit AI 🤖 获取日志消息帮助。
+
+
+![启动{{ .Get "app" }}节点2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 14. 验证集群是否正常运行
+
+  * 检查集群是否为绿色/绿色 `VM1` 运行在PRIM节点上，不在SECOND节点上运行。
+
+
+在此状态下，仅实时复制文件内部的更改。
+
+
+![{{ .Get "app" }} 节点 2 是 SECOND（绿色）](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 15. 测试
+
+  * 通过向下滚动其上下文菜单并单击来停止 PRIM 节点 `Stop`.
+  * 验证 SECOND 节点上是否存在故障转移，该节点应变为 ALONE（绿色）。
+  * 使用 {{ .Get "app" }} 工具检查 `VM1` 正在节点 2 上运行。
+
+
+⚠️ 如果 ALONE （绿色）未达到 node2 或者如果 VM1 没有启动，分析原因 [模块日志🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) 节点 2 的。
+
+  * 点击🔍 **日志** 的图标 `node2` 打开模块日志并查找错误消息，例如检查器检测到错误并停止模块。
+  * 点击 `start_prim` 日志中：右侧显示脚本的输出信息，可以检测到VM1错误启动等错误。
+  * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
+
+
+⚠️
+
+  * 如果一切正常，则启动 node1，这将重新同步 node2 的复制目录。
+  * 如果出现问题，停止 node2 并 [强制启动为主 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) node1，它将以其停止时的本地健康数据重新启动。
+
+
+ℹ️ 请注意，您有 🕒 **[时间线 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** 这有助于了解集群中发生的情况。
+
+
+![停止 {{ .Get "app" }} 模块上的 PRIM 服务器](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 16. 如有必要，配置裂脑检查器
+
+  * 参见 [集群中网络隔离的情况有哪些不同的场景？](/best-practises/power-outage-and-network-isolation-in-a-cluster/) 了解是否需要配置裂脑检查器。
+  * 转到模块配置并单击 `Checkers / Splitbrain` （见图）编辑裂脑参数。
+  * `Save and apply` 新配置以在两个节点上重新部署（模块必须在两个节点上停止才能保存和应用）。
+
+
+**参数** :
+
+  * `Resource name` 使用资源名称标识见证人： `splitbrain.witness`。您可以更改此值以识别证人。
+  * `Witness address` 是当节点从 PRIM 到 ALONE 或从 SECOND 到 ALONE 时 ping 的参数。使用见证者（一个强大的元素，通常是路由器）的 IP 更改此值。
+  * 注意：您可以设置多个IP，用空格分隔。请注意，在网络隔离的情况下，IP 地址必须可以从一个节点访问，但不能从另一个节点访问。
+
+
+![输入{{ .Get "app" }} splitbrain参数](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+
+
+### 17. 复制快照
+
+包含快照 xml 文件的目录是：
+
+
+    /var/lib/libvirt/qemu/snapshot/%VM_NAME%
+
+哪里 `VM_NAME` 是虚拟机的名称 (vm1)。
+
+注意：如果没有创建快照，请创建一个来生成目录（否则SafeKit配置会失败）。
+
+复制它：
+
+  * 在模块配置中，单击 `Advanced Configuration` （见图）进行编辑 `userconfig.xml`.
+  * 将下面的行插入到 `<rfs>` userconfig.xml 部分： 
+
+        <replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%" mode="read_only"> </replicated>
+
+  * `Save and apply` 新配置以在两个节点上重新部署修改后的 userconfig.xml 文件（必须在两个节点上停止模块才能保存和应用）。
+  * 在上创建快照 PRIM 节点要么通过 virt-manager 或命令行： 
+
+        virsh snapshot-create-as vm1 snapshot-name
+
+注意：使用命令行创建快照时，必须将快照视图刷新为virt-manager。
+
+
+在 PRIM 节点上创建的快照在故障转移后可在节点 2 上运行，但不会在节点 2 上列出。
+
+  * 要在节点 2 上导入快照，您必须运行以下命令： 
+
+        virsh snapshot-create --redefine vm1 /var/lib/libvirt/qemu/snapshot/vm1/snapshot-name
+
+  * 列出vm1所有快照的命令行是： 
+
+        virsh snapshot-list vm1
+
+
+![输入{{ .Get "app" }}参数](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 18. 支持
+
+  * 要获得支持，请获取 2 SafeKit `Snapshots` （2 个 .zip 文件），每个节点一个。
+
+
+ℹ️ [有关支持的更多信息请参见此处](/resources/safekit-support/).
+
+
+![拍摄 {{ .Get "app" }} 快照以获取支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

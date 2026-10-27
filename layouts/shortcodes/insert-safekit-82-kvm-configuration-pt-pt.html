@@ -1,0 +1,335 @@
+{{/* Shortcode: insert-safekit-82-kvm-configuration-pt-pt */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-kvm.md */}}
+
+
+
+⚠️ A configuração {{ .Get "app" }} é apresentada com uma máquina virtual denominada `VM1` e contendo a aplicação para reiniciar em caso de falha.
+
+⚠️ Terá de repetir esta configuração para todas as VMs que pretende replicar e reiniciar.
+
+### 1. Pré-requisitos {#prerequisite}
+
+A imagem da máquina virtual VM1 está no ficheiro `/var/lib/libvirt/images/vm1.qcow2`. Antes de configurar SafeKit, deve realizar a seguinte configuração para colocar a máquina virtual num diretório específico de vm1 que será replicado por SafeKit.
+
+No nó 1:
+
+  * Pare vm1: 
+
+        virsh shutdown vm1
+
+  * Crie um `vm1/` diretório: 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+  * Copie a imagem vm1 para o novo local: 
+
+        cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
+
+A imagem vm1 original pode ser eliminada assim que os testes com a nova localização forem bem-sucedidos.
+  * Edite o ficheiro de configuração vm1: 
+
+        EDITOR=vi virsh edit vm1
+
+E mude a linha: 
+
+        <source file='/var/lib/libvirt/images/vm1.qcow2'>
+
+
+por: 
+
+        <source file='/var/lib/libvirt/images/vm1/vm1.qcow2'>
+
+  * Defina o [opção de cache para 'nenhum'](/wp-content/uploads/2022/07/kvm-2.png) no mesmo ficheiro, para integridade dos dados em caso de bloqueio: 
+
+        <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
+
+  * Feche o ficheiro de configuração vm1
+  * Desativar [Arranque automático vm1](/wp-content/uploads/2022/07/kvm-3.png): 
+
+        virsh autostart vm1 --disable
+
+  * Crie um `vm1.xml` ficheiro de configuração para vm1: 
+
+        virsh dumpxml vm1 > vm1.xml
+
+
+No nó 2:
+
+  * Copie o `vm1.xml` ficheiro de configuração do nó 1. Nota: sempre que a configuração vm1 for alterada no nó 1, terá de voltar a aplicar a nova configuração no nó 2.
+  * Crie vm1, mas não o inicie: 
+
+        virsh define vm1.xml
+
+  * Desative o arranque automático vm1: 
+
+        virsh autostart vm1 --disable
+
+  * Crie o diretório para a localização da imagem: 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+
+### 2. Inicie a consola SafeKit
+
+  * Inicie a consola web num navegador num nó do cluster conectando-se a `http://localhost:9010`.
+  * Entrar `admin` como o nome de utilizador e a palavra-passe definida durante a instalação.
+
+
+Também é possível executar a consola num browser numa estação de trabalho externa ao cluster.
+
+⚠️ A configuração do SafeKit é feita em ambos os nós a partir de um único browser.
+
+ℹ️ Para proteger a consola web, consulte 🛠️ [11\. Proteger o serviço web SafeKit](/resources/safekit-user-guide-82/#https) no Guia do utilizador.
+
+
+![Inicie a consola web SafeKit para configurar o cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 3.º Configure endereços de nós
+
+  * Introduza os endereços dos nós IP, pressione o botão `Tab key` para verificar a conectividade e preencher os nomes dos nós. Se node1 ou node2 tiver uma cor vermelha, verifique a conectividade do browser com ambos os nós e verifique a firewall em ambos os nós para 🛠️ [solução de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Em seguida, clique em `Save and apply` para guardar a configuração.
+  * Verifique o `Success` Mensagem ✅ em ambos os nós.
+  * Se a configuração `Failure` ❌ ocorre num nó, abra o acordeão ▼ para esse nó e reveja as mensagens. Note que pode utilizar o SafeKit AI 🤖 para obter assistência.
+
+
+ℹ️ Se desejar, pode adicionar um novo `LAN and nodes` (primeiro ➕) para criar uma segunda pulsação e uma rede de replicação dedicada.
+
+ℹ️ Se clicar em `Advanced configuration`, o `cluster.xml` ficheiro é exibido. Este ficheiro é preenchido automaticamente pela consola e implementado nos nós.
+
+
+![Introduza os nós do cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 4.º Selecione um módulo
+
+  * Em `New module`, clique no `{{ .Get "mod" }}.safe` módulo.
+
+
+ℹ️ No banner azul na parte superior, 🛜 `node1` representa o nó de ligação da consola. Este nó retransmite pedidos para `node2` quando necessário.
+
+ℹ️ A consola procura `xxx.safe` no `Application_Modules/generic/` diretório no nó de ligação (`node1`) se lá colocou um módulo durante a instalação.
+
+
+![Escolha o módulo para {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 5.º Configure o módulo
+
+  * Escolha um `Automatic` início do módulo no arranque sem demora.
+  * Normalmente, tem um único `Heartbeat` rede na qual é feita a replicação. No entanto, pode definir uma rede privada, se necessário (adicionando um LAN no passo 3).
+  * Colocar `VM_PATH`, o caminho raiz do diretório replicado (`/var/lib/libvirt/images`).
+  * Entre `VM_NAME`, o nome da máquina virtual (`vm1`).
+
+
+Assumimos que os ficheiros VM1 estão em `/var/lib/libvirt/image/vm1/` (veja [pré-requisitos](#prerequisite)). Este diretório será replicado em tempo real pelo SafeKit.
+
+ℹ️ Não precisa de configurar um endereço IP virtual. VM1 será reinicializado no {{ .Get "app" }} secundário com o seu endereço físico IP, e este endereço IP será redirecionado.
+
+
+![Introduza os parâmetros {{ .Get "app" }}](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 6. Verificador personalizado para detetar avarias da VM
+
+O verificador personalizado verifica se a VM está em execução (com o comando 'virsh domstate'). Se a VM não estiver em execução, o verificador personalizado reinicia automaticamente a VM no mesmo nó {{ .Get "app" }} ou noutro.
+
+  * Clique em `Checkers / Custom` (ver imagem).
+  * `Resource name` identifica a máquina virtual com um nome de recurso em SafeKit: `custom.VM_NAME_check`.
+  * Com `restart` em `Action`, a VM será reiniciada no mesmo nó {{ .Get "app" }}. Após três reinicializações mal sucedidas em 24 horas, o módulo SafeKit {{ .Get "mod" }} pára no nó primário e existe um failover da VM no nó secundário.
+  * Se definir `stopstart` em `Action`, haverá um failover direto no outro nó {{ .Get "app" }} assim que a VM não estiver a ser executada.
+
+
+ℹ️ Para manutenção, se pretender parar a máquina virtual, o verificador personalizado irá reiniciá-la automaticamente. Para evitar isso, pode temporariamente [suspender o verificador 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Ou pode removê-lo excluindo a linha de configuração na consola.
+
+
+![Introduza os parâmetros do verificador personalizado {{ .Get "app" }}](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
+
+
+### 7.º Edite scripts (opcional)
+
+  * Não edite scripts.
+
+
+### 8. Encriptação de comunicação (opcional)
+
+  * Mantenha a encriptação da comunicação entre os nós.
+
+
+![Encriptação de comunicação do módulo {{ .Get "app" }}](/wp-content/uploads/2024/03/07-module-encryption.png)
+
+
+### 9.º Guarde e aplique
+
+  * `Save and apply` a configuração e os scripts em ambos os nós.
+
+
+![Guarde e aplique a configuração do módulo {{ .Get "app" }}](/wp-content/uploads/2024/03/08-module-save.png)
+
+
+### 10. Verifique a configuração bem-sucedida
+
+  * Verifique o `Success` Mensagem ✅ em ambos os nós e clique em `Monitor modules`.
+  * Se a configuração `Failure` ❌ ocorre num nó, abra o acordeão ▼ para esse nó e reveja as mensagens. Note que pode utilizar o SafeKit AI 🤖 para obter assistência.
+
+
+![Verifique o sucesso da configuração do módulo {{ .Get "app" }}](/wp-content/uploads/2024/03/09-module-save-check.png)
+
+
+### 11. Inicie o nó com os dados atualizados
+
+  * Se o nó 1 tiver o diretório replicado atualizado para `vm1/`, selecione-o e ⋯ `Force start` ▶ `As primary`.
+
+
+Quando o nó 2 for iniciado, todos os dados serão copiados do nó 1 para o nó 2.
+
+⚠️ Se fizer a escolha errada, corre o risco de sincronizar dados desatualizados em ambos os nós.
+
+⚠️ Supõe-se também que `VM1` é interrompido no nó 1 para que o SafeKit instale os mecanismos de replicação e, em seguida, inicie `VM1` no `start_prim` guião.
+
+Utilização ⚠️ `Start` para arranques subsequentes: SafeKit mantém o servidor mais atualizado. Começando `As primary` é uma inicialização especial à primeira ou durante operações excecionais.
+
+
+![Inicie como primário o nó {{ .Get "app" }} com os dados atualizados](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 12. Aguarde a transição para ALONE (verde)
+
+  * O nó 1 deve atingir o estado ALONE (verde), o que significa que o `start_prim` script foi executado no nó 1.
+
+
+⚠️ Se ALONE (verde) não for atingido ou se VM1 não for iniciado, analise o porquê com o [registo do módulo 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) do nó 1.
+
+  * Clique no 🔍 **registo** ícone de `node1` para abrir o registo do módulo e procurar mensagens de erro, como por exemplo um verificador que deteta um erro e para o módulo.
+  * Clique em `start_prim` no registo: as mensagens de saída do script são apresentadas à direita e podem ser detetados erros, como VM1 iniciado incorretamente.
+  * Utilize o SafeKit AI 🤖 para obter assistência com as mensagens de registo.
+
+
+⚠️ Se o cluster estiver em `WAIT (red) not uptodate, STOP (red) not uptodate` estado, pare o nó WAIT e [forçar o seu arranque como 🖼️ primário](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![O primeiro nó {{ .Get "app" }} começa como primário e passa a ser ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 13.º Iniciar nó 2
+
+  * ⋯ `Start` nó 2 com o seu menu contextual.
+  * Aguarde o estado SECOND (verde).
+
+
+ℹ️ 
+
+  * O nó 2 permanece no estado SECOND (laranja) enquanto ressincroniza os diretórios replicados (cópia do nó 1 para o nó 2).
+  * Isto pode demorar um pouco, dependendo do tamanho dos ficheiros a ressincronizar nos diretórios replicados e da largura de banda da rede.
+  * Para ver o progresso da cópia, consulte o [registo do módulo 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) e o [recursos de replicação 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) do nó 2. Utilize o SafeKit AI 🤖 para obter assistência com as mensagens de registo.
+
+
+![Inicie o nó {{ .Get "app" }} 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 14.º Verifique se o cluster está operacional
+
+  * Verifique se o cluster está verde/verde com `VM1` em execução no nó PRIM e não em execução no nó SECOND.
+
+
+Apenas as alterações dentro dos ficheiros são replicadas em tempo real neste estado.
+
+
+![O nó {{ .Get "app" }} 2 é SECOND (verde)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 15.º Teste
+
+  * Pare o nó PRIM fazendo scroll para baixo no seu menu contextual e clicando `Stop`.
+  * Verifique se existe um failover no nó SECOND que se deve tornar ALONE (verde).
+  * Verifique com as ferramentas {{ .Get "app" }} que `VM1` está a ser executado no nó 2.
+
+
+⚠️ Se ALONE (verde) não for atingido em node2 ou se VM1 não for iniciado, analise o porquê com o [registo do módulo 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) do nó 2.
+
+  * Clique no 🔍 **registo** ícone de `node2` para abrir o registo do módulo e procurar mensagens de erro, como por exemplo um verificador que deteta um erro e para o módulo.
+  * Clique em `start_prim` no registo: as mensagens de saída do script são apresentadas à direita e podem ser detetados erros, como VM1 iniciado incorretamente.
+  * Utilize o SafeKit AI 🤖 para obter assistência com as mensagens de registo.
+
+
+⚠️
+
+  * Se tudo estiver bem, inicie o node1, que irá voltar a sincronizar os diretórios replicados do node2.
+  * Se as coisas correrem mal, pare node2 e [forçar o arranque como primário 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) de node1, que será reiniciado com os seus dados localmente íntegros no momento da paragem.
+
+
+ℹ️ Note que tem um 🕒 **[linha do tempo 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** isto pode ser útil para compreender o que acontece no cluster.
+
+
+![Pare o módulo {{ .Get "app" }} no servidor PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 16.Se necessário, configure um verificador splitbrain
+
+  * Veja [Quais são os diferentes cenários em caso de isolamento de rede num cluster?](/best-practises/power-outage-and-network-isolation-in-a-cluster/) para saber se precisa de configurar um verificador splitbrain.
+  * Aceda à configuração do módulo e clique em `Checkers / Splitbrain` (ver imagem) para editar os parâmetros do splitbrain.
+  * `Save and apply` a nova configuração para a reimplantar em ambos os nós (o módulo deve ser interrompido em ambos os nós para guardar e aplicar).
+
+
+**Parâmetros** :
+
+  * `Resource name` identifica a testemunha com um nome de recurso: `splitbrain.witness`. Pode alterar este valor para identificar a testemunha.
+  * `Witness address` é o argumento para um ping quando um nó vai de PRIM para ALONE ou de SECOND para ALONE. Altere este valor com o IP da testemunha (um elemento robusto, normalmente um router).
+  * Nota: pode definir vários IP separados por espaços em branco. Tenha em atenção que os endereços IP devem ser acessíveis a partir de um nó, mas não do outro em caso de isolamento da rede.
+
+
+![Introduza os parâmetros do splitbrain {{ .Get "app" }}](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+
+
+### 17. Replicando instantâneos
+
+O diretório que contém os ficheiros xml do snapshot é:
+
+
+    /var/lib/libvirt/qemu/snapshot/%VM_NAME%
+
+onde `VM_NAME` é o nome da máquina virtual (vm1).
+
+Nota: Se não tiver sido criado nenhum instantâneo, crie um para gerar o diretório (caso contrário, a configuração SafeKit falhará).
+
+Para o replicar:
+
+  * Na configuração do módulo, clique em `Advanced Configuration` (ver imagem) para editar `userconfig.xml`.
+  * Insira as linhas abaixo no `<rfs>` secção de userconfig.xml: 
+
+        <replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%" mode="read_only"> </replicated>
+
+  * `Save and apply` a nova configuração para voltar a implementar o ficheiro userconfig.xml modificado em ambos os nós (o módulo deve ser interrompido em ambos os nós para guardar e aplicar).
+  * Crie capturas instantâneas no nó PRIM através de virt-manager ou de uma linha de comandos: 
+
+        virsh snapshot-create-as vm1 snapshot-name
+
+Nota: ao criar um instantâneo com uma linha de comandos, deve atualizar a visualização do instantâneo em virt-manager.
+
+
+Os instantâneos criados no nó PRIM são operacionais no nó 2 após o failover, mas não são listados no nó 2.
+
+  * Para importar um snapshot no nó 2, é necessário executar o comando: 
+
+        virsh snapshot-create --redefine vm1 /var/lib/libvirt/qemu/snapshot/vm1/snapshot-name
+
+  * A linha de comando para listar todos os instantâneos de vm1 é: 
+
+        virsh snapshot-list vm1
+
+
+![Introduza os parâmetros {{ .Get "app" }}](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 18. Suporte
+
+  * Para obter suporte, leve 2 SafeKit `Snapshots` (2 ficheiros . zip), um para cada nó.
+
+
+ℹ️ [Mais informações sobre o suporte aqui](/resources/safekit-support/).
+
+
+![Tire os instantâneos {{ .Get "app" }} para obter suporte](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

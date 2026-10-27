@@ -1,0 +1,335 @@
+{{/* Shortcode: insert-safekit-82-kvm-configuration-fr */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-kvm.md */}}
+
+
+
+⚠️ La configuration {{ .Get "app" }} est présentée avec une machine virtuelle nommée `VM1` et contenant l'application à redémarrer en cas de panne.
+
+⚠️ Vous devrez répéter cette configuration pour toutes les VM que vous souhaitez répliquer et redémarrer.
+
+### 1. Prérequis {#prerequisite}
+
+L'image de la machine virtuelle VM1 se trouve dans le fichier `/var/lib/libvirt/images/vm1.qcow2`. Avant de configurer SafeKit, vous devez effectuer la configuration suivante pour placer la machine virtuelle dans un répertoire spécifique à vm1 qui sera répliqué par SafeKit.
+
+Sur le nœud 1 :
+
+  * Arrêtez vm1 : 
+
+        virsh shutdown vm1
+
+  * Créer un `vm1/` répertoire : 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+  * Copiez l'image vm1 vers le nouvel emplacement : 
+
+        cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
+
+L'image vm1 originale peut être supprimée dès que les tests avec le nouvel emplacement sont réussis.
+  * Modifiez le fichier de configuration vm1 : 
+
+        EDITOR=vi virsh edit vm1
+
+Et change la ligne : 
+
+        <source file='/var/lib/libvirt/images/vm1.qcow2'>
+
+
+par : 
+
+        <source file='/var/lib/libvirt/images/vm1/vm1.qcow2'>
+
+  * Réglez le [option de cache sur "aucun"](/wp-content/uploads/2022/07/kvm-2.png) dans le même fichier, pour l'intégrité des données en cas de crash : 
+
+        <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
+
+  * Fermez le fichier de configuration vm1
+  * Désactiver [Démarrage automatique vm1](/wp-content/uploads/2022/07/kvm-3.png): 
+
+        virsh autostart vm1 --disable
+
+  * Créer un `vm1.xml` fichier de configuration pour vm1 : 
+
+        virsh dumpxml vm1 > vm1.xml
+
+
+Sur le nœud 2 :
+
+  * Copiez le `vm1.xml` fichier de configuration du nœud 1. Remarque : chaque fois que la configuration vm1 est modifiée sur le nœud 1, vous devez réappliquer la nouvelle configuration sur le nœud 2.
+  * Créez vm1 mais ne le démarrez pas : 
+
+        virsh define vm1.xml
+
+  * Désactivez le démarrage automatique du vm1 : 
+
+        virsh autostart vm1 --disable
+
+  * Créez le répertoire pour l'emplacement de l'image : 
+
+        mkdir -p /var/lib/libvirt/images/vm1/
+
+
+### 2. Lancez la console SafeKit
+
+  * Lancez la console Web dans un navigateur sur un nœud de cluster en vous connectant à `http://localhost:9010`.
+  * Entrez `admin` comme nom d'utilisateur et le mot de passe défini lors de l'installation.
+
+
+Vous pouvez également exécuter la console dans un navigateur sur un poste de travail externe au cluster.
+
+⚠️ La configuration de SafeKit se fait sur les deux nœuds à partir d'un seul navigateur.
+
+ℹ️ Pour sécuriser la console Web, voir 🛠️ [11\. Sécurisation du service Web SafeKit](/resources/safekit-user-guide-82/#https) dans le Guide de l'utilisateur.
+
+
+![Démarrez la console Web SafeKit pour configurer le cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 3. Configurer les adresses des nœuds
+
+  * Entrez les adresses des nœuds IP, appuyez sur la touche `Tab key` pour vérifier la connectivité et remplir les noms de nœuds. Si node1 ou node2 a une couleur rouge, vérifiez la connectivité du navigateur aux deux nœuds et vérifiez le pare-feu sur les deux nœuds pour 🛠️. [dépannage](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Ensuite, cliquez sur `Save and apply` pour enregistrer la configuration.
+  * Vérifiez le `Success` Message ✅ sur les deux nœuds.
+  * Si la configuration `Failure` ❌ se produit sur un nœud, ouvrez l'accordéon ▼ pour ce nœud et examinez les messages. Notez que vous pouvez utiliser le SafeKit AI 🤖 pour obtenir de l'aide.
+
+
+ℹ️ Si vous le souhaitez, vous pouvez ajouter un nouveau `LAN and nodes` (premier ➕) pour créer un deuxième heartbeat et un réseau de réplication dédié.
+
+ℹ️ Si vous cliquez sur `Advanced configuration`, le `cluster.xml` Le fichier s'affiche. Ce fichier est automatiquement renseigné par la console et déployé sur les nœuds.
+
+
+![Entrez les nœuds du cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 4. Sélectionnez un module
+
+  * Dans `New module`, cliquez sur le `{{ .Get "mod" }}.safe` modules.
+
+
+ℹ️ Dans le bandeau bleu en haut, 🛜 `node1` représente le nœud de connexion à la console. Ce nœud relaie les requêtes vers `node2` lorsque cela est nécessaire.
+
+ℹ️ La console recherche `xxx.safe` dans le `Application_Modules/generic/` répertoire sur le nœud de connexion (`node1`) si vous y avez placé un module lors de l'installation.
+
+
+![Choisissez le module pour {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 5. Configurez le module
+
+  * Choisissez un `Automatic` démarrage du module au démarrage sans délai.
+  * Normalement, vous avez un seul `Heartbeat` réseau sur lequel la réplication est effectuée. Mais vous pouvez définir un réseau privé si nécessaire (en ajoutant un LAN à l'étape 3).
+  * Mettre dedans `VM_PATH`, le chemin racine du répertoire répliqué (`/var/lib/libvirt/images`).
+  * Entrez `VM_NAME`, le nom de la machine virtuelle (`vm1`).
+
+
+Nous supposons que les fichiers VM1 sont dans `/var/lib/libvirt/image/vm1/` (voir [conditions préalables](#prerequisite)). Ce répertoire sera répliqué en temps réel par SafeKit.
+
+ℹ️ Vous n'avez pas besoin de configurer une adresse virtuelle IP. VM1 sera redémarré sur le {{ .Get "app" }} secondaire avec son adresse physique IP, et cette adresse IP sera redirigée.
+
+
+![Entrez les paramètres {{ .Get "app" }}](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 6. Vérificateur personnalisé pour détecter un dysfonctionnement de la VM
+
+Le vérificateur personnalisé vérifie si la VM est en cours d'exécution (avec la commande 'virsh domstate'). Si la VM n'est pas en cours d'exécution, le vérificateur personnalisé redémarre automatiquement la VM sur le même nœud {{ .Get "app" }} ou sur l'autre.
+
+  * Cliquez sur `Checkers / Custom` (voir image).
+  * `Resource name` identifie la machine virtuelle avec un nom de ressource dans SafeKit : `custom.VM_NAME_check`.
+  * Avec `restart` dans `Action`, la VM est redémarrée sur le même nœud {{ .Get "app" }}. Après 3 redémarrages infructueux en 24 heures, le module SafeKit {{ .Get "mod" }} s'arrête sur le nœud principal et il y a un basculement de la VM sur le nœud secondaire.
+  * Si vous définissez `stopstart` dans `Action`, il y a un basculement direct sur l'autre nœud {{ .Get "app" }} dès que la VM n'est pas en cours d'exécution.
+
+
+ℹ️ Pour la maintenance, si vous souhaitez arrêter la machine virtuelle, le vérificateur personnalisé la redémarrera automatiquement. Pour éviter cela, vous pouvez temporairement [suspendre le vérificateur 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Ou vous pouvez le supprimer en supprimant la ligne de configuration dans la console.
+
+
+![Entrez les paramètres du vérificateur personnalisé {{ .Get "app" }}](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
+
+
+### 7. Modifier les scripts (facultatif)
+
+  * Ne modifiez pas les scripts.
+
+
+### 8. Cryptage des communications (facultatif)
+
+  * Conservez le cryptage des communications entre les nœuds.
+
+
+![Cryptage des communications du module {{ .Get "app" }}](/wp-content/uploads/2024/03/07-module-encryption.png)
+
+
+### 9. Enregistrez et postulez
+
+  * `Save and apply` la configuration et les scripts sur les deux nœuds.
+
+
+![Enregistrez et appliquez la configuration du module {{ .Get "app" }}](/wp-content/uploads/2024/03/08-module-save.png)
+
+
+### 10. Vérifiez la configuration réussie
+
+  * Vérifiez le `Success` Message ✅ sur les deux nœuds et cliquez sur `Monitor modules`.
+  * Si la configuration `Failure` ❌ se produit sur un nœud, ouvrez l'accordéon ▼ pour ce nœud et examinez les messages. Notez que vous pouvez utiliser le SafeKit AI 🤖 pour obtenir de l'aide.
+
+
+![Vérifiez le succès de la configuration du module {{ .Get "app" }}](/wp-content/uploads/2024/03/09-module-save-check.png)
+
+
+### 11. Démarrez le nœud avec des données à jour
+
+  * Si le nœud 1 possède le répertoire répliqué à jour pour `vm1/`, sélectionnez-le et ⋯ `Force start` ▶ `As primary`.
+
+
+Lorsque le nœud 2 sera démarré, toutes les données seront copiées du nœud 1 vers le nœud 2.
+
+⚠️ Si vous faites le mauvais choix, vous courez le risque de synchroniser des données obsolètes sur les deux nœuds.
+
+⚠️ On suppose également que `VM1` est arrêté sur le nœud 1 afin que SafeKit installe les mécanismes de réplication puis démarre `VM1` dans le `start_prim` scénario.
+
+Utilisation de ⚠️ `Start` pour les démarrages ultérieurs : SafeKit conserve le serveur le plus à jour. Démarrage `As primary` est un démarrage particulier du premier coup ou lors d'opérations exceptionnelles.
+
+
+![Démarrer en tant que nœud principal {{ .Get "app" }} avec les données à jour](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 12. Attendez la transition vers ALONE (vert)
+
+  * Le nœud 1 doit atteindre l'état ALONE (vert), ce qui signifie que le `start_prim` Le script a été exécuté sur le nœud 1.
+
+
+⚠️ Si ALONE (vert) n'est pas atteint ou si VM1 n'est pas démarré, analyser pourquoi avec le [journal des modules 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) du nœud 1.
+
+  * Cliquez sur le 🔍 **journal** icône de `node1` pour ouvrir le journal du module et rechercher des messages d'erreur tels qu'un vérificateur détectant une erreur et arrêtant le module.
+  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite et des erreurs peuvent être détectées telles que VM1 mal démarré.
+  * Utilisez l'IA SafeKit 🤖 pour obtenir de l'aide concernant les messages de journal.
+
+
+⚠️ Si le cluster est dans `WAIT (red) not uptodate, STOP (red) not uptodate` état, arrêtez le nœud WAIT et [forcer son démarrage en tant que 🖼️ principal](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![Le premier nœud {{ .Get "app" }} démarre comme nœud principal et devient ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 13. Démarrer le nœud 2
+
+  * ⋯ `Start` le nœud 2 avec son menu contextuel.
+  * Attendez l'état SECOND (vert).
+
+
+ℹ️ 
+
+  * Le nœud 2 reste dans l'état SECOND (orange) lors de la resynchronisation des répertoires répliqués (copie du nœud 1 vers le nœud 2).
+  * Cela peut prendre un certain temps en fonction de la taille des fichiers à resynchroniser dans les répertoires répliqués et de la bande passante du réseau.
+  * Pour voir la progression de la copie, consultez le [journal des modules 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) et le [ressources de réplication 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) du nœud 2. Utilisez l'IA SafeKit 🤖 pour obtenir de l'aide concernant les messages de journal.
+
+
+![Démarrez le nœud {{ .Get "app" }} 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 14. Vérifiez que le cluster est opérationnel
+
+  * Vérifiez que le cluster est vert/vert avec `VM1` exécuté sur le nœud PRIM et non exécuté sur le nœud SECOND.
+
+
+Seules les modifications contenues dans les fichiers sont répliquées en temps réel dans cet état.
+
+
+![Le nœud {{ .Get "app" }} 2 est SECOND (vert)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 15. Tests
+
+  * Arrêtez le nœud PRIM en faisant défiler son menu contextuel et en cliquant sur `Stop`.
+  * Vérifiez qu'il existe un basculement sur le nœud SECOND qui doit devenir ALONE (vert).
+  * Vérifiez avec les outils {{ .Get "app" }} que `VM1` s'exécute sur le nœud 2.
+
+
+⚠️ Si ALONE (vert) n'est pas atteint sur node2 ou si VM1 n'est pas démarré, analyser pourquoi avec le [journal des modules 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) du nœud 2.
+
+  * Cliquez sur le 🔍 **journal** icône de `node2` pour ouvrir le journal du module et rechercher des messages d'erreur tels qu'un vérificateur détectant une erreur et arrêtant le module.
+  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite et des erreurs peuvent être détectées telles que VM1 mal démarré.
+  * Utilisez l'IA SafeKit 🤖 pour obtenir de l'aide concernant les messages de journal.
+
+
+⚠️
+
+  * Si tout va bien, lancez un démarrage sur node1, qui resynchronisera les répertoires répliqués depuis node2.
+  * Si les choses tournent mal, arrêtez node2 et [forcer le démarrage en tant que 🖼️ primaire](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) de node1, qui redémarrera avec ses données localement saines au moment de l'arrêt.
+
+
+ℹ️ Notez que vous possédez un 🕒 **[chronologie 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** cela peut être utile pour comprendre ce qui se passe dans le cluster.
+
+
+![Arrêtez le module {{ .Get "app" }} sur le serveur PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 16. Si nécessaire, configurez un vérificateur splitbrain
+
+  * Voir [Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ?](/best-practises/power-outage-and-network-isolation-in-a-cluster/) pour savoir si vous devez configurer un vérificateur splitbrain.
+  * Allez dans la configuration du module et cliquez sur `Checkers / Splitbrain` (voir image) pour modifier les paramètres du splitbrain.
+  * `Save and apply` la nouvelle configuration pour la redéployer sur les deux nœuds (le module doit être arrêté sur les deux nœuds pour être enregistré et appliqué).
+
+
+**Paramètres** :
+
+  * `Resource name` identifie le témoin avec un nom de ressource : `splitbrain.witness`. Vous pouvez modifier cette valeur pour identifier le témoin.
+  * `Witness address` est l'argument d'un ping lorsqu'un nœud passe de PRIM à ALONE ou de SECOND à ALONE. Changez cette valeur avec le IP du témoin (un élément robuste, typiquement un routeur).
+  * Remarque : vous pouvez définir plusieurs IP séparées par des espaces blancs. Attention, les adresses IP doivent être accessibles depuis un nœud mais pas depuis l'autre en cas d'isolement du réseau.
+
+
+![Entrez les paramètres du splitbrain {{ .Get "app" }}](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+
+
+### 17. Réplication d'instantanés
+
+Le répertoire qui contient les fichiers XML d'instantané est :
+
+
+    /var/lib/libvirt/qemu/snapshot/%VM_NAME%
+
+où `VM_NAME` est le nom de la machine virtuelle (vm1).
+
+Remarque : Si aucun instantané n'a été créé, créez-en un pour générer le répertoire (sinon la configuration SafeKit échouera).
+
+Pour le répliquer :
+
+  * Dans la configuration du module, cliquez sur `Advanced Configuration` (voir image) à modifier `userconfig.xml`.
+  * Insérez les lignes ci-dessous dans le `<rfs>` section de userconfig.xml : 
+
+        <replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%" mode="read_only"> </replicated>
+
+  * `Save and apply` la nouvelle configuration pour redéployer le fichier userconfig.xml modifié sur les deux nœuds (le module doit être arrêté sur les deux nœuds pour enregistrer et appliquer).
+  * Créez des instantanés sur le nœud PRIM via virt-manager ou une ligne de commande : 
+
+        virsh snapshot-create-as vm1 snapshot-name
+
+Remarque : lors de la création d'un instantané avec une ligne de commande, vous devez actualiser la vue de l'instantané dans virt-manager.
+
+
+Les snapshots créés sur le nœud PRIM sont opérationnels sur le nœud 2 après basculement, mais ne sont pas répertoriés sur le nœud 2.
+
+  * Pour importer un instantané sur le nœud 2, vous devez exécuter la commande : 
+
+        virsh snapshot-create --redefine vm1 /var/lib/libvirt/qemu/snapshot/vm1/snapshot-name
+
+  * La ligne de commande permettant de répertorier tous les instantanés de vm1 est : 
+
+        virsh snapshot-list vm1
+
+
+![Entrez les paramètres {{ .Get "app" }}](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+
+
+### 18. Assistance
+
+  * Pour obtenir de l'aide, prenez 2 SafeKit `Snapshots` (2 fichiers .zip), un pour chaque nœud.
+
+
+ℹ️ [Plus d’informations sur le support ici](/resources/safekit-support/).
+
+
+![Prenez les instantanés {{ .Get "app" }} pour obtenir de l'aide](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+
