@@ -1,90 +1,107 @@
-{{/* Shortcode: insert-safekit-solution-farm-2-ja */}}
+{{/* Shortcode: insert-safekit-solution-farm-2-ja — 6 instances in 6 files */}}
 {{/* Parameters: app, guide, img */}}
+{{/* Source: content\architectures\network-load-balancing-cluster.md */}}
 
-## SafeKit Farm クラスター：ソフトウェアのみの NLB と {{ .Get "app" }} の自動フェイルオーバー {#safekit-farm-cluster-overview}
 
-{{ .Get "app" }} 向け SafeKit Farm クラスターは、拡張性の高いアプリケーション環境向けのソフトウェア定義ネットワーク負荷分散（NLB）ソリューションです。**負荷分散とフェイルオーバーをアプリケーションサーバー上で直接実行**し、専用ハードウェア、プロキシサーバー、複雑なマルチキャスト設定を不要にします。
 
-### {{ .Get "app" }} 向け SafeKit Farm クラスターの利点 {#safekit-farm-cluster-advantages}
+##  SafeKit Farm クラスター： {{ .Get "app" }}向けのソフトウェアのみのNLBと自動フェイルオーバー {#safekit-farm-cluster-overview}
 
-  * **オールインワンソフトウェア：** 仮想 IP、負荷分散、自動フェイルオーバー／フェイルバックを統合。
-  * **専用ハードウェア不要：** 高価なハードウェアロードバランサーの代わりに Windows／Linux のソフトウェアを使用し、システム管理者が運用できます。
-  * **詳細な監視と自己修復：** アプリケーションチェッカーがサーバー稼働中のプロセス障害も検出し、サービス再起動またはフェイルオーバーを実行。
-  * **Farm と Mirror の併用：** フロントエンドの負荷分散を行う Farm と、バックエンドデータを同期複製する Mirror を組み合わせ可能。
-  * **OEM 高可用性：** ソフトウェアベンダーはクラスタリングを組み込み、追加インフラなしのクラスタ対応製品を提供できます。
+A SafeKit Farm クラスター {{ .Get "app" }} は、スケーラブルなアプリケーション環境向けに設計されたソフトウェア定義のネットワーク負荷分散（NLB）ソリューションです。統合された機能を提供します。 **アプリケーションサーバー上で直接ロードバランシングとフェイルオーバーを行う** これにより、専用のハードウェアロードバランサー、プロキシサーバー、または複雑なマルチキャスト構成が不要になります。
 
-![仮想 IP、自動フェイルオーバー／フェイルバック、ネットワーク負荷分散を備えた {{ .Get "app" }} 向け SafeKit HA クラスター構成]({{ .Get "img" }} "w:512")
+###  {{ .Get "app" }} 用の  SafeKit Farm  クラスターの利点は何ですか？ {#safekit-farm-cluster-advantages}
 
-**{{ .Get "app" }} 向け SafeKit Farm NLB クラスター**
+  * **オールインワンソフトウェア：** 仮想を組み合わせる IP単一のソフトウェアパッケージで、負荷分散、自動フェイルオーバー/フェイルバックを実現します。
+  * **特別なハードウェアは不要です。** 高価なハードウェアロードバランサーを、Windowsまたは Linux用の純粋なソフトウェアソリューションに置き換えます。ネットワークエンジニアではなくシステム管理者が管理できます。
+  * **ディープモニタリングと自己修復:** アプリケーションレベルの「チェッカー」を使用して特定のアプリケーションプロセスを監視し、サーバーがまだ実行されている場合でもクラッシュを検出します。その後、必要に応じて自動的なサービス再起動またはフェイルオーバーをトリガーします。
+  * **ハイブリッド Farm ミラーリング機能：** 独自の組み合わせが可能 Farm フロントエンドの負荷分散用のクラスタと、バックエンドの同期データ複製用のミラークラスタ。
+  * **OEM 高可用性:** ソフトウェアベンダーがネイティブクラスタリングをアプリケーションに組み込むことを可能にし、追加のインフラストラクチャなしで「クラスタ対応」のソフトウェアのみの製品を提供します。
 
-<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }} Farm クラスターのクイックインストールガイド ></a>
+
+![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing]({{ .Get "img" }} "w:512")
+
+**SafeKit Farm NLB クラスター ( {{ .Get "app" }}** 用)
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ クイック farm クラスターインストールガイド（ {{ .Get "app" }} ～</a>）
 ## 目次 {#toc}
 
-  * [SafeKit で {{ .Get "app" }} NLB クラスターを実装する方法](#safekit-farm-ha-cluster)
-  * [SafeKit Farm クラスターと {{ .Get "app" }} の連携](#safekit-farm-cluster)
-  * [他の NLB クラスターソリューションとの比較](#safekit-farm-ha-comparison)
-  * [動画：SafeKit Farm NLB クラスターの構成](#videoguide-safekit-farm-cluster)
-  * [🔍 SafeKit 高可用性ナビゲーションハブ](#hub)
+  * [How the SafeKit software simply implements a {{ .Get "app" }} Network Load Balancing (NLB) cluster?](#safekit-farm-ha-cluster)
+  * [How the SafeKit farm cluster works with {{ .Get "app" }}?](#safekit-farm-cluster)
+  * [Comparison: SafeKit Farm Cluster for {{ .Get "app" }} vs. Other NLB Clustering Solutions](#safekit-farm-ha-comparison)
+  * [Video Guide: Configuring a SafeKit Farm NLB Cluster](#videoguide-safekit-farm-cluster)
+  * [🔍 SafeKit High Availability Navigation Hub](#hub)
 
-## SafeKit で {{ .Get "app" }} NLB クラスターを実装する方法 {#safekit-farm-ha-cluster}
 
-### {{ .Get "app" }} 向け SafeKit Farm NLB ソリューションとは？ {#safekit-farm-nlb-solution}
+##  SafeKit ソフトウェアはどのようにして {{ .Get "app" }} ネットワーク負荷分散（NLB）クラスタを簡単に実装するのでしょうか？ {#safekit-farm-ha-cluster}
 
-SafeKit は2台以上のサーバーで {{ .Get "app" }} のネットワーク負荷分散と高可用性を実現します。負荷分散ルールを持つ仮想 IP、{{ .Get "app" }} サービス、ヘルスチェッカーを定義すると、SafeKit が**ネットワーク負荷分散**と**自動フェイルオーバー**を有効にし、拡張性と継続的なサービス可用性を確保します。
+###  {{ .Get "app" }}に対する SafeKit Farm NLBの解は何ですか？ {#safekit-farm-nlb-solution}
 
-### ハードウェアソリューションと比べて SafeKit が負荷分散を簡素化する方法 {#software-load-balancing-vs-hardware}
+SafeKit は、2台以上のサーバー間で {{ .Get "app" }} へのネットワーク負荷分散と高可用性を提供します。
 
-SafeKit は従来の中継型 NLB 機器を**純粋なソフトウェアソリューション**に置き換え、標準の **Windows／Linux アプリケーションサーバー**上で直接動作します。ベンダーは SafeKit をアプリケーションに組み込み、自己完結型のクラスタ対応製品を提供することもできます。
+この記事では、ハードウェアロードバランサーや専門的なネットワークスキルを必要とせずに、 {{ .Get "app" }} クラスタを迅速に実装する方法を説明します。
 
-### ソフトウェアベースの負荷分散の利点 {#software-load-balancing-benefits}
+このソリューションは仮想を定義することで機能します IP 負荷分散ルールにより、 {{ .Get "app" }} サービス名、およびヘルスチェッカー。
 
-  * **高性能：** OS カーネルレベルでトラフィックと仮想 IP (VIP) を処理し、追加のネットワーク機器を不要にします。
-  * **運用の簡素化：** 専門的なネットワーク資格なしで、管理者が統合インターフェースからクラスターを運用できます。
-  * **低い TCO：** 専用ハードウェアの購入費と保守費を削減します。
+SafeKit は、 **ネットワーク負荷分散** と **自動フェイルオーバー** を有効にして、拡張性と継続的なサービス可用性を確保します。
 
-### SafeKit のアプリケーション監視と標準 NLB のヘルスチェックの違い {#application-monitoring-vs-nlb-health-checks}
+###  SafeKit は、ハードウェアソリューションと比較して、どのように負荷分散を簡素化するのでしょうか？ {#software-load-balancing-vs-hardware}
 
-従来の NLB は通常 **ping** やポートのみを確認します。SafeKit は**アプリケーションレベルのチェッカー**で {{ .Get "app" }} のプロセスを監視し、サーバーは稼働していてもソフトウェアが停止している「ゾンビ状態」を検出して、サービスを再起動するかトラフィックを切り替えます。
+SafeKit 従来の「中間業者」NLBハードウェアを置き換えることで管理を簡素化します **純粋なソフトウェアソリューション**。
 
-### クラスタリングの専門知識なしで {{ .Get "app" }} Farm クラスターを設定できますか？ {#farm-cluster-without-clustering-skills}
+専用の物理アプライアンスを必要とせず、 SafeKit は標準の **Windowsまたは Linux** アプリケーションサーバー上で直接動作します。
 
-はい。SafeKit の**仮想 IP**が **{{ .Get "app" }}** のネットワーク負荷分散を処理するため、複雑なネットワーク設定は不要です。[{{ .Get "app" }} Farm クラスターをすばやく構成する]({{ .Get "guide" }})。
+ソフトウェアベンダーは、 **OEM高可用性** 統合することによって **SafeKit** アプリケーション スタックに直接組み込むことができます。このパートナーシップにより、ベンダーは自己完結型の、 **クラスター対応でソフトウェアのみのソリューション** これには、ネイティブのロードバランシング機能とフェイルオーバー機能が含まれます。
 
-### SafeKit は {{ .Get "app" }} 以外にどのようなアプリケーションや環境を保護できますか？ {#supported-applications-and-environments}
+###  SafeKitのソフトウェアベースの負荷分散が {{ .Get "app" }}にもたらすメリットは何ですか？ {#software-load-balancing-benefits}
 
-SafeKit は **Windows と Linux の高可用性**を提供します。Mirror クラスターは同期レプリケーションと自動フェイルオーバーで重要なワークロードを保護します。
+SafeKit は高価なハードウェアを、以下のような機能を提供する合理化されたソフトウェアアプローチに置き換えます。
 
-  * **仮想／物理環境：** Hyper-V または KVM の VM 全体。
-  * **コンテナー：** Docker、Podman、K3s (Kubernetes)。
-  * **データとサービス：** ファイルディレクトリ、サービス、データベース。
-  * **クラウド：** クラウドアプリケーション。
+  * **高性能:** OSカーネルレベルでトラフィックと仮想 IP (VIP)を管理し、追加のネットワーク機器なしで速度を保証します。
+  * **操作の簡便性:** システム管理者は、特別なネットワーク認定資格を必要とせずに、統一されたインターフェイスを介してクラスタを管理できます。
+  * **TCOの削減：** 専用のハードウェアロードバランサーが不要になるため、CAPEXとメンテナンスコストを削減します。
 
-💡 [対応する HA ソリューション一覧](/ja/solutions/)
 
-{{ $.Page.RenderString (printf "{{%% insert-safekit-farm-ja app=%q %%}}" (.Get "app")) }}
+###  SafeKit アプリケーション監視は、標準的なNLBヘルスチェックとどのように異なりますか？ {#application-monitoring-vs-nlb-health-checks}
 
-## SafeKit Farm クラスターと他の NLB ソリューションの比較 {#safekit-farm-ha-comparison}
+シンプルなNLBハードウェアとは異なり、 **ピング** 港湾検査、 SafeKit 特徴 **統合されたアプリケーションレベルのチェッカー**従来のバランサーはサーバーが「稼働中」かどうかのみを確認しますが、 SafeKit 特定の実際の健康状態を監視する {{ .Get "app" }} プロセス。
 
-機能 | SafeKit Farm クラスター（ソフトウェア） | ハードウェアロードバランサー
----|---|---
-アーキテクチャ | Windows／Linux に統合されたカーネルソフトウェア | 専用の物理機器
-管理 | 簡単な Web コンソールをシステム管理者が運用 | 専門知識と CLI 資格を持つネットワークエンジニアが運用
-ヘルス監視 | アプリケーションプロセスや Web サービスのチェッカー | サーバーまたはポートへの基本的な ping
-自己修復 | 障害サービスをローカルで自動再起動 | 障害ノードへのトラフィックを止める受動的フェイルオーバー
-インフラ | 物理、仮想 (VMware、Hyper-V)、クラウド | 専用配線とラックスペースが必要
-コスト (TCO) | 既存サーバーを利用し CAPEX/OPEX を低減 | 高額な初期費用、ライセンス、電力費
+この詳細な監視により、システムは「ゾンビ」状態（サーバーは稼働しているがソフトウェアがクラッシュしている状態）を検出し、 **自動サービス再起動** または、標準的なNLBソリューションでは実行できないトラフィックのリダイレクト。
 
-**まとめ：** **SafeKit Farm クラスター**は、ハードウェア中心のネットワークから現代的な**ソフトウェア定義型高可用性**へ移行します。負荷分散と自己修復をアプリケーションサーバーに統合し、外部機器のコストと複雑さを解消します。
+### クラスタリングのスキルがなくても、 {{ .Get "app" }} farm クラスターをセットアップすることは可能ですか？ {#farm-cluster-without-clustering-skills}
 
-## 動画：SafeKit Farm NLB クラスターの構成 {#videoguide-safekit-farm-cluster}
+はい。この記事では、専門的で複雑なネットワークスキルを必要とせずに、 [quickly implement a {{ .Get "app" }} farm cluster]({{ .Get "guide" }})  を実現する方法を説明します。 SafeKit の  ** 仮想  IP**  を使用して  **{{ .Get "app" }}**  のネットワーク負荷分散を処理することで、従来の NLB ソリューションよりも導入と保守がはるかに簡単な、堅牢で拡張性の高いソリューションが得られます。
 
-### SafeKit 動画：ネットワーク負荷分散と仮想 IP 管理 (5:03) {#demo-farm}
+###  {{ .Get "app" }}を超えて、 SafeKit はどのようなアプリケーションや環境を保護できますか？ {#supported-applications-and-environments}
 
-2ノードクラスターの単一の接続先となる**仮想 IP**の設定方法を紹介します。SafeKit はクライアントトラフィックをノード間で分散し、フェイルオーバー時には即座に転送します。動画では Windows 上の Apache を使用していますが、他のアプリケーションにも適用できます。
+SafeKit 多用途で高可用性のソリューションです **Windows と Linux**ミラークラスターを有効にする **同期リアルタイムレプリケーション** また、以下を含む幅広い重要なワークロードに対する自動フェイルオーバー機能も備えています。
 
-  1. [構成：共有仮想 IP 用の2ノードを準備](https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s) (0:13)
-  2. [設定：farm.safe モジュールと仮想 IP を構成](https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s) (2:20)
-  3. [検証：サーバー障害時のフェイルオーバーと IP 転送をテスト](https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s) (2:30)
+  * **仮想環境と物理環境：** 完全な Hyper-V または KVM 仮想マシン。
+  * **コンテナオーケストレーション:** Docker、Podman、およびK3s（Kubernetes）環境。
+  * **データとサービス:** 個々のファイルディレクトリ、サービス、および各種データベース。
+  * **クラウドインフラストラクチャ：** クラウドアプリケーションの高可用性。
 
-  * [Windows Farm クラスター構成ガイド](/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/)
-  * [Linux Farm クラスター構成ガイド](/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/)
+
+💡 [Explore the full list of supported HA solutions here.](/ja/solutions/)
+
+
+{{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-en app=%q  %%}}" (.Get "app")) }}
+
+
+## 比較： SafeKit Farm クラスタ（ {{ .Get "app" }} 用）とその他のNLBクラスタリングソリューション {#safekit-farm-ha-comparison}
+
+特徴 | SafeKit Farm クラスター（ソフトウェア） ハードウェアロードバランサー  
+---|---|---  
+建築 | カーネルレベルのソフトウェア: Windows および  Linux OS へのネイティブ統合。 専用ハードウェア：専用の物理アプライアンス。  
+管理 システム管理者：シンプルなウェブコンソールで管理できます。ネットワーク関連の学位は不要です。 ネットワークエンジニア：専門的なスキルとCLI認定資格が必要です。  
+健康状態のモニタリング | アプリケーション Checkers: 特定のプロセスまたはWebサービスの詳細な監視。 ネットワークピング：サーバーまたはポートに到達可能かどうかを確認するための基本的なチェック。  
+自己治癒 | 組み込みの再起動機能：障害が発生したサービスをローカルで自動的に再起動します。 パッシブフェイルオーバー：障害が発生したノードへのトラフィックの送信を単純に停止します。  
+インフラストラクチャー | 非依存型: 物理インスタンス、仮想インスタンス (VMware、 Hyper-V)、またはクラウドインスタンスで動作します。 | 固定式：専用の物理的なケーブル配線とネットワークラックのスペースが必要です。  
+コスト（TCO） 設備投資/運用コストが低い：既存のサーバーリソースを使用するため、高額なハードウェアメンテナンスは不要です。 高額な投資：初期費用が高額であることに加え、ライセンス料や電気代などの継続的な費用が発生します。  
+
+**要約すれば** 、 **SafeKit Farm クラスタ** これは、従来のハードウェア中心のネットワークから、現代のネットワークへの戦略的な進化を表しています。 **ソフトウェア定義の高可用性** モデル。負荷分散と自己修復インテリジェンスをアプリケーションサーバーに直接統合することで、 SafeKit 外部の「仲介業者」となるハードウェアのコストと複雑さを排除します。
+
+## ビデオガイド： SafeKit Farm NLB クラスターの設定 {#videoguide-safekit-farm-cluster}
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-farm-video-en  %}}" }}
+
+
