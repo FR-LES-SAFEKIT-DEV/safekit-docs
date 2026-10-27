@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-farm-guide-ja — 9 instances in 9 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
+
+
+
+##  {{ .Get "app" }}の高可用性クイックインストールガイド {#quick-guide}
+
+このガイドでは、 SafeKitを使用して {{ .Get "app" }} 用の **Zfarm クラスタ** をセットアップし、ネットワーク負荷分散と自動フェイルオーバーを確保する方法について説明します。
+
+ヘルプが必要な場合は、 [SafeKit AI 🤖](/resources/safekit-support/) を使用してください。
+
+### 1. 概要
+
+  * **建築：** スケーラブルなマルチノード負荷分散を実装します farm 仮想 IP 住所。
+  * **高可用性:** 自動ヘルスモニタリングとシームレスなフェイルオーバー機能により、サービスの継続性を確保します。 ****
+
+
+### 2. インストール
+
+  * **ソフトウェア:** すべてのサーバーに SafeKit エンジンをインストールします。
+  * **モジュール:** 事前設定済みの `{{ .Get "mod" }}.safe` アプリケーションモジュールをダウンロードします。
+
+
+### 3. 設定
+
+  * **ウェブコンソール:** 設定する {{ .Get "app" }} farm クラスタ。
+  * **監視：** 監視と保護を開始する {{ .Get "app" }} 応用。
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-ja  %}}" }}
+
+

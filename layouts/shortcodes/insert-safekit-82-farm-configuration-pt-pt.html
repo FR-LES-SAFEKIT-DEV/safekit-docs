@@ -1,0 +1,173 @@
+{{/* Shortcode: insert-safekit-82-farm-configuration-pt-pt — 9 instances in 9 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
+
+
+
+### Pré-requisitos
+
+  * Aplicação {{ .Get "app" }}  instalada em 2 nós (ou mais).
+  * O balanceamento de carga virtual  IP  requer nós no mesmo  LAN  ou  LAN (L2) estendido — as redes L3 com encaminhamento não são suportadas (exceto com  🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud)).
+
+
+### 1. Inicie a consola  SafeKit 
+
+  * Inicie a consola web num navegador num nó do cluster conectando-se a  `http://localhost:9010`.
+  * Introduza  `admin` as como nome de utilizador e a palavra-passe definida durante a instalação.
+
+
+Também pode executar a consola num navegador numa estação de trabalho externa ao cluster.
+
+⚠️ A configuração de SafeKit é feito em ambos os nós a partir de um único browser.
+
+ℹ️ Para proteger a consola web, consulte 🛠️ [11\. Securing the SafeKit web service](/resources/safekit-user-guide-82/#https) no Guia do Utilizador.
+
+
+![Inicie a consola web  SafeKit  para configurar o cluster  {{ .Get "app" }} .](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 2. Configurar os endereços dos nós
+
+  * Introduza os endereços dos nós  IP , prima  `Tab key`  para verificar a conectividade e preencha os nomes dos nós. Se  node1  ou  node2  estiver a vermelho, verifique a conectividade do browser com ambos os nós e verifique a firewall em ambos os nós para  🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Em seguida, clique em  `Save and apply`  para guardar a configuração.
+  * Verifique a mensagem  `Success` ✅  em ambos os nós.
+  * Se a configuração  `Failure` ❌  ocorrer num nó, abra o painel ▼ para esse nó e reveja as mensagens. Note que pode utilizar o  SafeKit AI 🤖  para obter ajuda.
+
+
+ℹ️ Se desejar, pode adicionar um novo  `LAN and nodes`  (primeiro  ➕) para criar um segundo heartbeat e uma rede de replicação dedicada.
+
+ℹ️ Se clicar em `Advanced configuration`, o `cluster.xml` O ficheiro é exibido. Este ficheiro é preenchido automaticamente pela consola e implantado nos nós.
+
+
+![Introduza os nós do cluster  {{ .Get "app" }} ](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 3.º Selecione um módulo
+
+  * Em  `New module`, clique no módulo  `{{ .Get "mod" }}.safe` .
+
+
+Na faixa azul na parte superior, ℹ️ ,  🛜 `node1`  representa o nó de ligação da consola. Este nó retransmite pedidos para  `node2`  quando necessário.
+
+ℹ️ A consola procura por `xxx.safe` no `Application_Modules/generic/` diretório no nó de ligação (`node1`) se lá colocou um módulo durante a instalação.
+
+
+![Escolha o módulo para  {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4.º Configure o módulo
+
+  * Em In `Module startup at boot`, selecione a inicialização automática do módulo na inicialização do sistema, sem demora.
+  * Em  `Macros` / `SERVICES`, introduza os nomes dos serviços da sua aplicação, pela ordem de arranque, separados por vírgulas.
+  * Em  `Heartbeat networks`, deve ter uma única rede de pulsação, exceto se tiver adicionado um  LAN  no passo 2.
+  * Em  `Virtual IP addresses`, introduza um endereço virtual  IP . Um endereço virtual  IP  é um endereço  IP  padrão na mesma rede  IP  (mesma sub-rede) que os endereços  IP  de ambos os nós. Os clientes de aplicações devem ser configurados com o endereço virtual  IP  (ou o nome DNS associado ao endereço virtual  IP ).
+  * Em In `Load balancing rules`, defina a porta de serviço para balanceamento de carga (ex.: TCP 9010 no exemplo).
+  * Em  `Load balancing rules`, defina a regra de balanceamento de carga,  `Source address`  ou  `Source port`: 
+    * Com o endereço de origem  IP  do cliente, o mesmo cliente irá ligar-se ao mesmo nó na zona  farm  em múltiplas sessões TCP e recuperar o seu contexto no nó.
+    * Com a porta TCP de origem do cliente, o mesmo cliente irá ligar-se a diferentes nós na  farm  em múltiplas sessões TCP (sem recuperar um contexto).
+  * Em  `Checkers`, poderá configurar verificadores, se necessário, como monitorização de processos, verificadores personalizados, TCP, ping ou verificadores de split-brain. Por exemplo, se for apresentado um nome de processo em  `Monitored processes/services`, será monitorizado com uma ação de reinicialização em caso de falha. A configuração de um nome de processo incorreto fará com que o módulo pare logo após ser iniciado.
+
+
+ℹ️ Se clicar em `Advanced configuration`, o `userconfig.xml` O ficheiro é exibido. Este ficheiro é preenchido automaticamente pela consola e implantado nos nós com os scripts de reinicialização.
+
+ℹ️ Numa implementação na nuvem, não precisa de configurar um ambiente virtual. IP regras de endereço e balanceamento de carga em SafeKitO virtual IP e as regras de balanceamento de carga são geridas no 🛠️ [cloud load balancer level](/resources/safekit-user-guide-82/#Cloud).
+
+ℹ️ Ao aplicar o SafeKit configuração, o `startup type` de serviços é configurado automaticamente para `Manual` nos serviços do Windows. Isto garante que os serviços não são iniciados automaticamente quando o sistema é inicializado, mas sim apenas quando o próprio módulo é iniciado (o mesmo se aplica a Linux).
+
+
+![Introduza as definições do módulo  {{ .Get "app" }} farm ](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+
+
+### 5. Editar scripts (opcional)
+
+  * Este passo é opcional e pode ser ignorado na maioria dos casos, uma vez que os scripts de reinicialização já estão pré-configurados para reiniciar os serviços definidos no passo anterior.
+  * Assim, clique diretamente em  `Next step`.
+  * `start_both.ps1`  inicia todos os serviços pela ordem especificada na lista  `SERVICES` , enquanto  `stop_both.ps1`  interrompe todos os serviços pela ordem inversa.
+  * Além disso, o  `start_both.ps1`  verifica a inicialização de cada serviço e pára o módulo se algum serviço não iniciar corretamente.
+
+
+![Introduza as definições do módulo  {{ .Get "app" }} ](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
+
+
+### 6.º Encriptação de comunicação (opcional)
+
+  * Mantenha a encriptação nas comunicações entre os nós.
+
+
+![Encriptação de comunicação do módulo  {{ .Get "app" }} ](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+
+
+### 7.º Guardar e aplicar
+
+  * `Save and apply`  a configuração e os scripts em ambos os nós.
+
+
+![Guarde e aplique a configuração do módulo  {{ .Get "app" }} .](/wp-content/uploads/2025/05/08-module-save-1.png)
+
+
+### 8.º Verifique se a configuração foi bem-sucedida.
+
+  * Verifique a mensagem  `Success` ✅  em ambos os nós e clique em  `Monitor modules`.
+  * Se a configuração  `Failure` ❌  ocorrer num nó, abra o painel ▼ para esse nó e reveja as mensagens. Note que pode utilizar o  SafeKit AI 🤖  para obter ajuda.
+
+
+![Verifique se a configuração do módulo  {{ .Get "app" }}  foi concluída com sucesso.](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+
+
+### 9. Inicie o cluster  farm  no nó 1 e no nó 2.
+
+  * ⋯ `Start` the farm cluster conforme imagem.
+
+
+![Inicie o cluster  {{ .Get "app" }}  em ambos os nós.](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
+
+
+### 10. Aguarde a transição para CIMA (verde) / CIMA (verde)
+
+Os nós 1 e 2 devem atingir o estado ATIVO (verde), o que significa que o script  `start_both`  foi executado nos nós 1 e 2.
+
+⚠️ Se o indicador UP (verde) não for atingido ou se a aplicação não for iniciada, analise o motivo com o [module log 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) do nó 1 ou do nó 2.
+
+  * Clique no ícone  🔍 **log**  ou  `node1`  ou  `node2`  para abrir o registo do módulo e procurar mensagens de erro, como um verificador que deteta um erro e interrompe o módulo.
+  * Clique em  `start_both`  no registo: as mensagens de saída do script são apresentadas à direita e podem ser detetados erros, como um serviço iniciado incorretamente.
+  * Utilize o  SafeKit AI 🤖  para obter ajuda com as mensagens de registo.
+
+
+ℹ️ Note que tem um 🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** Isto pode ser útil para compreender o que acontece no cluster.
+
+
+![O cluster  {{ .Get "app" }}  foi iniciado.](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
+
+
+### 11. Testes
+
+O SafeKit  inclui um teste integrado no produto:
+
+  * Configure uma regra para a porta TCP 9010 com balanceamento de carga na porta TCP de origem.
+  * Ligue uma estação de trabalho externa fora dos nós  farm .
+  * Inicie um browser em http://virtual-ip:9010/safekit/mosaic.html.
+
+
+Deverá ver um mosaico de cores dependendo dos nós que respondem aos pedidos HTTP.
+
+  * Interrompa um nó UP (verde) fazendo scroll para baixo no menu de contexto e clicando em Parar.
+  * Verifique se não existem mais ligações TCP no nó parado e no endereço virtual  IP .
+
+
+ℹ️ Encontre mais detalhes, juntamente com vídeos, no [SafeKit Online Training](/resources/safekit-on-line-training/).
+
+
+![Teste o endereço virtual  IP  de  {{ .Get "app" }}  com o mosaico.](/wp-content/uploads/2024/03/appli-19.png)
+
+
+### 12. Suporte
+
+  * Para obter suporte, descarregue 2 SafeKit `Snapshots`  (2 ficheiros . zip), um para cada nó.
+
+
+ℹ️ [More information on the support here](/resources/safekit-support/).
+
+
+![Utilize as fotos  {{ .Get "app" }}  para suporte.](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
+
+

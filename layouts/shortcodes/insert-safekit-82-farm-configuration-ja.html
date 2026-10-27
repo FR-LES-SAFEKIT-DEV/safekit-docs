@@ -1,0 +1,173 @@
+{{/* Shortcode: insert-safekit-82-farm-configuration-ja — 9 instances in 9 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
+
+
+
+### 前提条件
+
+  * {{ .Get "app" }} アプリケーションは2ノード（またはそれ以上）にインストールされています。
+  * バーチャル IP ロードバランシングには、同じノードが必要です LAN または延長 LAN （L2）— ルーティングされたL3ネットワークはサポートされていません（ただし、 🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud))
+
+
+### 1.  SafeKit コンソールを起動します
+
+  * クラスタノードの1つで、ブラウザを使用してWebコンソールを起動します。接続先は `http://localhost:9010`です。
+  * ユーザー名として `admin` 、パスワードはインストール時に設定したパスワードを入力してください。
+
+
+クラスター外部のワークステーション上のブラウザでコンソールを実行することもできます。
+
+⚠️  SafeKit の設定は、単一のブラウザから両方のノードで行われます。
+
+ℹ️ Webコンソールを保護するには、 🛠️ [11\. Securing the SafeKit web service](/resources/safekit-user-guide-82/#https) ユーザーガイドを参照してください。
+
+
+![ SafeKit webコンソールを起動して {{ .Get "app" }} クラスターを設定します。](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 2. ノードアドレスを設定する
+
+  * ノードに入る IP アドレス、 `Tab key` 接続性を確認し、ノード名を入力します。 node1 または node2 赤色になっているので、ブラウザと両方のノードの接続を確認し、両方のノードのファイアウォールを確認してください。 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting)。
+  * 次に、 `Save and apply` をクリックして設定を保存します。
+  * 両方のノードで `Success` ✅ メッセージを確認してください。
+  * 構成 `Failure` ❌ が1つのノードで発生した場合は、そのノードの▼アコーディオンを開いてメッセージを確認してください。なお、 SafeKit AI 🤖 を使用するとサポートを受けられます。
+
+
+ℹ️ 必要に応じて、新しい `LAN and nodes` (最初の ➕)を追加して、2番目のハートビートと専用のレプリケーションネットワークを作成できます。
+
+ℹ️ クリックすると `Advanced configuration`、 `cluster.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、ノードにデプロイされます。
+
+
+![ {{ .Get "app" }} クラスターのノードを入力してください](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 3. モジュールを選択します
+
+  *  `New module`で、 `{{ .Get "mod" }}.safe` モジュールをクリックします。
+
+
+ℹ️ 上部の青いバナーには、 🛜 `node1` コンソール接続ノードを表します。このノードはリクエストを中継します。 `node2` 必要に応じて。
+
+ℹ️ コンソールは、インストール中にモジュールをそこに配置した場合、接続ノード（`node1`）の `Application_Modules/generic/` ディレクトリ内で `xxx.safe` を探します。
+
+
+![ {{ .Get "app" }}用のモジュールを選択してください](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. モジュールを設定する
+
+  * In `Module startup at boot`では、起動時にモジュールを遅延なく自動起動するように選択します。
+  *  `Macros` / `SERVICES` には、アプリケーションのサービス名を起動順にカンマで区切って入力してください。
+  *  `Heartbeat networks`では、ステップ2で LAN を追加していない限り、単一のハートビートネットワークが存在するはずです。
+  * で `Virtual IP addresses`仮想空間に入る IP 仮想アドレス。 IP 住所は標準です IP 同じ住所 IP ネットワーク（同じサブネット） IP 両ノードのアドレス。アプリケーションクライアントは仮想アドレスで構成する必要があります。 IP アドレス（または仮想アドレスに関連付けられた DNS 名） IP 住所）。
+  * In `Load balancing rules`では、サービスポートをロードバランシングするように設定します（例：TCP 9010）。
+  *  `Load balancing rules`では、負荷分散ルール `Source address` または `Source port`を設定します。 
+    * クライアントの送信元アドレス IP を使用して、同じクライアントは複数のTCPセッションで farm 内の同じノードに接続し、ノード上のコンテキストを取得します。
+    * クライアントの送信元 TCP ポートを使用すると、同じクライアントが複数の TCP セッションで  farm  内の異なるノードに接続されます (コンテキストを取得せずに)。
+  * In `Checkers`では、必要に応じて、プロセス監視、カスタムチェッカー、TCP、ping、スプリットブレインチェッカーなどのチェッカーを設定できます。たとえば、プロセス名がIn `Monitored processes/services`に表示される場合、そのプロセスは監視され、障害が発生した場合は再起動アクションが実行されます。誤ったプロセス名を設定すると、モジュールは起動直後に停止します。
+
+
+ℹ️ クリックすると `Advanced configuration`、 `userconfig.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、再起動スクリプトとともにノードにデプロイされます。
+
+ℹ️ クラウド展開では、仮想環境を構成する必要はありません。 IP アドレスとロードバランシングルール SafeKit仮想 IP 負荷分散ルールは 🛠️ [cloud load balancer level](/resources/safekit-user-guide-82/#Cloud)。
+
+ℹ️ 構成を適用すると、 SafeKit サービスの `startup type` がWindowsサービスで自動的に `Manual` に設定されます。これにより、システムの起動時にサービスが自動的に開始されるのではなく、モジュール自体が起動されたときにのみサービスが開始されるようになります（ Linuxでも同様です）。
+
+
+![ {{ .Get "app" }} farm モジュール設定を入力してください](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+
+
+### 5. スクリプトの編集（任意）
+
+  * この手順は任意であり、ほとんどの場合省略できます。なぜなら、再起動スクリプトは既に前の手順で定義されたサービスを再起動するように事前設定されているからです。
+  * それでは、 `Next step`を直接クリックしてください。
+  * `start_both.ps1` は `SERVICES` リストで指定された順序で全てのサービスを開始し、 `stop_both.ps1` は逆の順序で全てのサービスを停止します。
+  * さらに、 `start_both.ps1` は各サービスの起動をチェックし、いずれかのサービスが正しく起動しなかった場合はモジュールを停止します。
+
+
+![ {{ .Get "app" }} モジュールの設定を入力してください](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
+
+
+### 6. 通信暗号化（オプション）
+
+  * ノード間の通信は暗号化を維持する。
+
+
+![ {{ .Get "app" }} モジュールの通信暗号化](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+
+
+### 7. 保存して適用する
+
+  * `Save and apply` 両方のノード上の構成とスクリプト。
+
+
+![ {{ .Get "app" }} モジュール構成を保存して適用します](/wp-content/uploads/2025/05/08-module-save-1.png)
+
+
+### 8. 設定が正常に完了したことを確認する
+
+  * 両方のノードで `Success` ✅ メッセージを確認し、 `Monitor modules`をクリックします。
+  * 構成 `Failure` ❌ が1つのノードで発生した場合は、そのノードの▼アコーディオンを開いてメッセージを確認してください。なお、 SafeKit AI 🤖 を使用するとサポートを受けられます。
+
+
+![ {{ .Get "app" }} モジュールの設定が成功したか確認してください。](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+
+
+### 9. ノード1とノード2で farm クラスタを起動します。
+
+  * ⋯ `Start` は、画像に示されている farm クラスターです。
+
+
+![両方のノードで {{ .Get "app" }} クラスターを起動します。](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
+
+
+### 10. UP（緑）/ UP（緑）への遷移を待ちます
+
+ノード1とノード2はUP（緑色）状態になるはずです。これは、 `start_both` スクリプトがノード1とノード2で実行されたことを意味します。
+
+⚠️ UP（緑）に到達しない場合、またはアプリケーションが起動しない場合は、ノード 1 またはノード 2 の  [module log 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png)  を使用して理由を分析します。
+
+  *  🔍 **log** アイコンまたは `node1` または `node2` をクリックしてモジュールログを開き、チェッカーがエラーを検出してモジュールを停止したなどのエラーメッセージを探します。
+  * ログ内の `start_both` をクリックすると、スクリプトの出力メッセージが右側に表示され、サービスが正しく起動されていないなどのエラーを検出できます。
+  * ログメッセージに関するサポートについては、 SafeKit AI 🤖  を使用してください。
+
+
+ℹ️ クラスターで何が起こるかを理解するのに役立つ 🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** があることに注意してください。
+
+
+![ {{ .Get "app" }} クラスターが起動しました](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
+
+
+### 11. テスト
+
+SafeKit は製品にテスト機能を内蔵しています。
+
+  * TCPポート9010に対して、送信元TCPポートでのロードバランシングを行うルールを設定します。
+  *  farm ノードの外部に外部ワークステーションを接続します。
+  * http://virtual-ip:9010/safekit/mosaic.html にアクセスしてブラウザを起動してください。
+
+
+HTTPリクエストに応答するノードに応じて、さまざまな色のモザイクが表示されるはずです。
+
+  * コンテキストメニューをスクロールダウンして「停止」をクリックすると、UP（緑色）ノードが停止します。
+  * 停止したノードと仮想アドレス IP にTCP接続が残っていないことを確認してください。
+
+
+ℹ️ 詳細情報と動画は [SafeKit Online Training](/resources/safekit-on-line-training/)をご覧ください。
+
+
+![ {{ .Get "app" }} の仮想アドレス IP をモザイクでテストする](/wp-content/uploads/2024/03/appli-19.png)
+
+
+### 12. サポート
+
+  * サポートを受けるには、2 SafeKit `Snapshots` （2つの.zipファイル）を、ノードごとに1つずつ入手してください。
+
+
+ℹ️ [More information on the support here](/resources/safekit-support/).
+
+
+![サポートのために {{ .Get "app" }} のスナップショットを撮ってください](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
+
+

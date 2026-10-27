@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-farm-guide-nl — 9 instances in 9 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
+
+
+
+## Snelinstallatiehandleiding voor hoge beschikbaarheid voor  {{ .Get "app" }} {#quick-guide}
+
+Deze handleiding legt uit hoe u een  **farm cluster** for {{ .Get "app" }} using SafeKit configureert, waarbij netwerkbelastingverdeling en automatische failover worden gewaarborgd.
+
+Voor hulp kunt u  [SafeKit AI 🤖](/resources/safekit-support/) gebruiken.
+
+### 1. Overzicht
+
+  * **Architecture:** Implementeert een schaalbare, multi-node load-balanced farm met een virtueel IP adres.
+  * **Hoge beschikbaarheid:** Beschikt over automatische statusbewaking en naadloze failover naar **Zomt servicecontinuïteit te garanderen**.
+
+
+### 2. Installatie
+
+  * **Software:** Installeer de  SafeKit engine op alle servers.
+  * **Module:** Download de voorgeconfigureerde  `{{ .Get "mod" }}.safe` toepassingsmodule.
+
+
+### 3. Configuratie
+
+  * **Webconsole:** Configureer het  {{ .Get "app" }} farm cluster.
+  * **Monitoring:** Start monitoring and protecting the {{ .Get "app" }} application.
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-nl  %}}" }}
+
+

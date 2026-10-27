@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-farm-guide-ar — 9 instances in 9 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
+
+
+
+## دليل التثبيت السريع عالي التوافر لـ  {{ .Get "app" }} {#quick-guide}
+
+يشرح هذا الدليل كيفية إعداد a **farm cluster** for {{ .Get "app" }} using SafeKit، مما يضمن موازنة تحميل الشبكة والتحويل التلقائي في حالة الفشل.
+
+للحصول على المساعدة، يمكنك استخدام  [SafeKit AI 🤖](/resources/safekit-support/).
+
+### 1. نظرة عامة
+
+  * **Architecture:** Implements a scalable, multi-node load-balanced farm  with a virtual IP address.
+  * ** التوافر العالي: **  يتميز بمراقبة الحالة الصحية التلقائية والتحويل السلس إلى  ** لضمان استمرارية الخدمة **.
+
+
+### 2. التركيب
+
+  * **Software:** Install the SafeKit engine on all servers.
+  * **Module:** Download the pre-configured `{{ .Get "mod" }}.safe` application module.
+
+
+### 3. التكوين
+
+  * **Web Console:** Configure the {{ .Get "app" }} farm cluster.
+  * **Monitoring:** Start monitoring and protection the {{ .Get "app" }} application.
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-ar  %}}" }}
+
+

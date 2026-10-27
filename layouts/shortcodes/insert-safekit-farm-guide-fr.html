@@ -1,0 +1,34 @@
+{{/* Shortcode: insert-safekit-farm-guide-fr — 9 instances in 9 files */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
+
+
+
+## Guide d'installation rapide haute disponibilité pour  {{ .Get "app" }} {#quick-guide}
+
+Ce guide explique comment configurer un **farm grappe** pour {{ .Get "app" }} en utilisant SafeKit, assurant l'équilibrage de charge du réseau et le basculement automatique.
+
+Pour obtenir de l'aide, vous pouvez utiliser  [SafeKit AI 🤖](/resources/safekit-support/).
+
+### 1. Aperçu
+
+  * Architecture ** : **  Implémente une architecture  farm  à charge équilibrée multi-nœuds évolutive avec une adresse virtuelle  IP .
+  * **Haute disponibilité :** Fonctionne avec une surveillance automatique de l’état et un basculement transparent pour **assurer la continuité du service**.
+
+
+### 2. Installation
+
+  * **Logiciel:** Installez le SafeKit moteur sur tous les serveurs.
+  * Module ** : ** Télécharger le module d'application préconfiguré  `{{ .Get "mod" }}.safe` .
+
+
+### 3. Configuration
+
+  * Console Web **:** Configurer le cluster  {{ .Get "app" }} farm .
+  * **Surveillance:** Commencez à surveiller et à protéger le {{ .Get "app" }} application.
+
+
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-fr  %}}" }}
+
+
