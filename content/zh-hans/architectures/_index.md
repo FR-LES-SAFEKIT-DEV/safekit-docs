@@ -1,88 +1,88 @@
 ---
-title: "SafeKit 架构"
+title: "SafeKit架构"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/"
-description: "探索 SafeKit 高可用架构，了解 Mirror、Farm 和 Farm+Mirror 集群如何实现无 SAN 的应用故障切换与负载均衡。"
+description: "使用SafeKit探索高可用性架构。了解Mirror 、 Farm和Farm + Mirror集群，实现无 SAN 应用故障转移和负载均衡。"
 category: "architectures"
 lang: "zh-hans"
-topics: "SafeKit 提供哪些高可用架构和软件集群？、如何使用 SafeKit 构建高可用集群？、🔍 SafeKit 高可用导航中心"
+topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何使用SafeKit构建高可用性集群？🔍 SafeKit高可用性导航中心"
 ---
 
-# SafeKit 架构 {#safekit-architectures}
+# SafeKit架构{#safekit-architectures}
 
-## SafeKit 提供哪些高可用架构和软件集群？ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
+## SafeKit和{#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}分别支持哪些不同的高可用性架构和不同的软件集群？
 
-### Mirror 镜像集群 {#mirror-cluster}
-
-
-![SafeKit Mirror 镜像集群](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+### Mirror集群{#mirror-cluster}
 
 
-[了解更多](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
-
-### Farm 集群 {#farm-cluster}
+![ SafeKit mirror集群](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-![SafeKit Farm 集群](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+[更多信息](</zh-hans/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
+
+### `Farm`集群{#farm-cluster}
 
 
-[了解更多](</architectures/network-load-balancing-cluster/>)
-
-### Farm+Mirror 集群 {#farmmirror-cluster}
+![ SafeKit farm集群](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-![SafeKit Farm+Mirror 集群](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+[更多信息](</zh-hans/architectures/network-load-balancing-cluster/>)
+
+### `Farm` + mirror集群{#farmmirror-cluster}
 
 
-[了解更多](</architectures/clustering-software-load-balancing-mirroring/>)
-
-### Active/active 集群 {#activeactive-cluster}
+![ SafeKit farm + mirror集群](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-![支持实时复制的 SafeKit active/active 集群](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+[更多信息](</architectures/clustering-software-load-balancing-mirroring/>)
+
+### 活动/活动集群{#activeactive-cluster}
 
 
-[了解更多](</architectures/active-active-cluster-real-time-replication/>)
-
-### N-1 集群 {#n-1-cluster}
+![ SafeKit具有实时复制功能的双活集群](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-![SafeKit N-1 冗余集群](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
+[更多信息](</architectures/active-active-cluster-real-time-replication/>)
+
+### N-1 簇{#n-1-cluster}
 
 
-[了解更多](</architectures/n-1-redundancy/>)
+![ SafeKit N-1冗余集群](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
-## 如何使用 SafeKit 构建高可用集群？ {#how-to-build-high-availability-clusters-with-safekit}
 
-### 使用高可用模块 {#use-high-availability-modules}
+[更多信息](</architectures/n-1-redundancy/>)
 
-高可用模块是针对应用程序定制的 SafeKit 配置。模块分为两种：支持实时数据复制和故障切换的 Mirror 模块，以及支持负载均衡和故障切换的 Farm 模块。
+## 如何使用SafeKit和{#how-to-build-high-availability-clusters-with-safekit}构建高可用性集群？
 
-在两台服务器上部署 Mirror 模块即可创建 Mirror 集群；在 N 台服务器上部署 Farm 模块即可创建 Farm 集群。
+### 使用高可用性模块{#use-high-availability-modules}
 
-同一组服务器上可以部署多个应用模块，因此可以实现前面介绍的 Farm+Mirror、active/active 和 N-1 等高级集群架构。
+高可用性模块是对SafeKit进行的应用定制。该模块分为两种类型： mirror模块具备实时数据复制和故障转移功能， `farm`模块具备负载均衡和故障转移功能。
+
+如果在 2 台服务器上部署mirror模块，则会创建一个mirror集群；如果在 N 台服务器上部署`farm`模块，则会创建一个`farm`集群。
+
+多个应用程序模块可以部署在同一台服务器上。因此，可以实现如前所述的高级集群架构（ `farm` + mirror ，主动/主动，N-1）。
 
 ### 什么是应用模块？ {#what-is-an-application-module}
 
-应用模块通常是一个“.Safe”文件（zip 格式），其中包含：
+实际上，应用程序模块是一个“.Safe”文件（zip 类型），其中包含：
 
-1 - 配置文件 userconfig.xml，其中包括：
+1 - 配置文件userconfig.xml ，其中包含：
 
-  * 服务器名称或物理 IP 地址，
-  * 集群名称或虚拟 IP 地址，
-  * 需要实时复制的文件目录（适用于 Mirror 模块），
-  * 网络负载均衡条件（适用于 Farm 模块），
+  * 服务器的名称或物理IP地址，
+  * 集群名称或虚拟IP地址
+  * 要实时复制的文件目录（适用于mirror模块），
+  * 网络负载均衡准则（针对`farm`模块）
   * 软件和硬件故障检测器的配置
 
 
-2 - 用于启动和停止应用程序的脚本。
+2 - 启动和停止应用程序的脚本。
 
-### 高可用模块的即插即用部署 {#plug-and-play-deployment-of-high-availability-modules}
+### 即插即用部署高可用性模块{#plug-and-play-deployment-of-high-availability-modules}
 
-应用模块配置完成并通过应用程序测试后，部署无需专门的 IT 技能：
+应用程序模块配置完毕并与应用程序进行测试后，部署无需任何特定的IT技能：
 
-  1. 在两台标准服务器（物理或虚拟）上安装应用程序，
-  2. 在两台服务器上安装 SafeKit 软件，
-  3. 在两台服务器上安装应用模块。
+  1. 在两台标准服务器（物理机或虚拟机）上安装应用程序，
+  2. 在两台服务器上安装SafeKit软件
+  3. 在两台服务器上安装应用程序模块。
 
 
 

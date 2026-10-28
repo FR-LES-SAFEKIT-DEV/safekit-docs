@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/architectures/safekit-smart-console-your-
 description: "Manage SafeKit clusters with ease using our Smart Console. Enjoy zero-code configuration, smartphone compatibility, and real-time PWA notifications. Eliminate human error and ensure high availability at your fingertips. Learn more."
 category: "architectures"
 lang: "en"
-topics: "Smart Console: Intuitive, Mobile, and Error-Free High Availability, Table of Contents, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit farm cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Smart Console: Intuitive, Mobile, and Error-Free High Availability, Table of Contents, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit `farm` cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit Smart Console: Your High Availability Cluster in Your Pocket {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "Smart Console: Intuitive, Mobile, and Error-Free High Availability, Tab
 
 Redefine how you manage high availability with a solution built for **speed and simplicity**. The SafeKit Web Console offers a **zero-learning-curve** experience, allowing you to configure and control your infrastructure with **zero-code** requirements.
 
-Whether you are at your desk or on the move, the smartphone-compatible dashboard puts total cluster control at your fingertips. By streamlining the management of mirror and farm modules, the Smart Console **eliminates human error** and ensures a seamless failover process for your most vital systems.
+Whether you are at your desk or on the move, the smartphone-compatible dashboard puts total cluster control at your fingertips. By streamlining the management of mirror and `farm` modules, the Smart Console **eliminates human error** and ensures a seamless failover process for your most vital systems.
 
 ## Table of Contents {#table-of-contents}
 
   * [How does a SafeKit mirror cluster work with the web console?](#safekit-mirror-cluster)
-  * [How does a SafeKit farm cluster work with the web console?](#safekit-farm-cluster)
+  * [How does a SafeKit `farm` cluster work with the web console?](#safekit-farm-cluster)
   * [How to monitor multiple modules and multiple clusters via the web console?](#multipe-modules-clusters)
   * [How to monitor alerts in the console and manage email notifications?](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ For a 2-node mirror cluster, the console clearly displays the roles of each serv
 
 Beyond simple status icons, the interface provides **one-click failover orchestration** (**`...` menu**), allowing you to manually reassign the primary role for planned maintenance while ensuring continuous availability for user activity.
 
-## How does a SafeKit farm cluster work with the web console? {#safekit-farm-cluster}
+## How does a SafeKit `farm` cluster work with the web console? {#safekit-farm-cluster}
 
-### How to configure a SafeKit farm cluster? {#safekit-farm-cluster-configuration}
+### How to configure a SafeKit `farm` cluster? {#safekit-farm-cluster-configuration}
 
 
 ![SafeKit Web Console: Farm cluster configuration for network load balancing and virtual IP management.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-The **SafeKit farm cluster** is designed for high availability and scalability of services. The configuration focuses on distributing incoming traffic across both nodes simultaneously:
+The **SafeKit `farm` cluster** is designed for high availability and scalability of services. The configuration focuses on distributing incoming traffic across both nodes simultaneously:
 
   * **Load Balanced Services (Macros tab):** Define the specific application services (e.g., Apache, IIS, Nginx) to be kept active on all nodes.
-  * **Heartbeat network(s):** Communication path(s) used to detect if a node has left the farm, triggering an immediate redistribution of the load.
-  * **Virtual IP (Farm VIP):** Unlike a mirror cluster, the Farm VIP is shared between nodes using kernel filtering algorithm to distribute network traffic.
+  * **Heartbeat network(s):** Communication path(s) used to detect if a node has left the `farm`, triggering an immediate redistribution of the load.
+  * **Virtual IP (`Farm` VIP):** Unlike a mirror cluster, the `Farm` VIP is shared between nodes using kernel filtering algorithm to distribute network traffic.
   * **Load Balancing Rules:** Define the traffic distribution policy based on the source IP address or port.
   * **Checkers:** Monitor the application's health and trigger automatic restart if a process failure is detected.
 
 
-### How to monitor a SafeKit farm cluster? {#safekit-farm-cluster-monitoring}
+### How to monitor a SafeKit `farm` cluster? {#safekit-farm-cluster-monitoring}
 
 
 ![SafeKit Console: Monitoring a 2-node Farm cluster showing both nodes in UP state with active load balancing.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-Monitoring a farm cluster provides visibility into the **Active-Active** nature of the infrastructure, where all nodes contribute to the application's performance (showing 2 nodes in this example; scalable to additional nodes):
+Monitoring a `farm` cluster provides visibility into the **Active-Active** nature of the infrastructure, where all nodes contribute to the application's performance (showing 2 nodes in this example; scalable to additional nodes):
 
-  * **UP State (50% on 2 nodes):** In a healthy farm, both nodes are in the "UP" (50%) state, meaning they are both actively receiving and processing client requests via the shared Virtual IP.
+  * **UP State (50% on 2 nodes):** In a healthy `farm`, both nodes are in the "UP" (50%) state, meaning they are both actively receiving and processing client requests via the shared Virtual IP.
   * **Automatic Re-balancing:** If one node fails, the console visually shows the remaining node taking 100% of the traffic. There is no "failover" delay, as the surviving node is already active (aside from a detection time of a few seconds).
   * **Node Insertion:** When a repaired node is restarted, it transitions from "STOP" to "UP" and automatically starts receiving its portion of the load without administrator intervention.
-  * **No Data Sync:** Note that in a farm cluster, there is no "Orange" resynchronization state, as nodes are expected to be stateless or share a backend database (which can be protected separately in a mirror cluster).
+  * **No Data Sync:** Note that in a `farm` cluster, there is no "Orange" resynchronization state, as nodes are expected to be stateless or share a backend database (which can be protected separately in a mirror cluster).
 
 
 Beyond simple status icons, the interface provides one-click node management (**`...` menu**), allowing you to manually stop or start a node for planned maintenance while the shared Virtual IP automatically redistributes traffic without interrupting user activity.

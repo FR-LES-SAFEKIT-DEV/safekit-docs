@@ -1,31 +1,31 @@
 ---
 title: "Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-software/"
-description: "Optimisez vos logiciels avec SafeKit. En tant que partenaire OEM, vous pouvez intégrer le basculement automatique et la réplication synchrone directement dans votre application. Offrez à vos clients une disponibilité 24 h/24 et 7 j/7 sous Windows et Linux, sans la complexité des clusters matériels."
+description: "Sécurisez chaque branche de votre entreprise distribuée avec SafeKit . Déployez un cluster HA standardisé et entièrement logiciel à grande échelle pour garantir une disponibilité 24h/24 et 7j/7 des applications critiques de vos succursales. Windows et Linux ne nécessitent ni stockage partagé, ni SAN complexes, ni expertise informatique sur site."
 category: "use-cases"
 lang: "fr"
-topics: "La continuité d’activité dans une entreprise distribuée, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Continuité des activités dans une entreprise distribuée, 🔍 SafeKit Hub de navigation haute disponibilité"
 ---
 
 # Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
 
-## La continuité d’activité dans une entreprise distribuée {#business-continuity-in-a-distributed-enterprise}
+## Continuité des activités dans une entreprise distribuée {#business-continuity-in-a-distributed-enterprise}
 
 ### Continuité des activités dans une entreprise distribuée {#business-continuity-in-a-distributed-enterprise-1}
 
-Déployer des dizaines de clusters n'est pas compliqué avec SafeKit.
+Déployer des dizaines de clusters n'est pas compliqué avec SafeKit .
 
 
-![Solution logicielle de continuité d'activité dans une entreprise](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+![ Solution logicielle de continuité d'activité en entreprise ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
-### Comment déployer un logiciel de continuité d'activité sans compétences informatiques spécifiques ? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
+### Comment déployer un logiciel de continuité d'activité sans compétences informatiques spécifiques ? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
 
-Fournir une solution de continuité d'activité dans une entreprise pour plusieurs applications sur des serveurs Windows ou Linux pose des problèmes économiques et organisationnels. SafeKit propose un logiciel de continuité d'activité simple et économique pour ce cas.
+La mise en place d'une solution de continuité d'activité en entreprise pour plusieurs applications hébergées sur des serveurs Windows ou Linux pose des problèmes économiques et organisationnels. SafeKit offre une solution logicielle de continuité d'activité simple et économique adaptée à ce cas.
 
-### Le logiciel SafeKit : une solution simple pour la continuité d'activité {#the-safekit-software-a-simple-solution-for-business-continuity}
+### Le logiciel SafeKit : une solution simple pour la continuité des activités {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit propose deux modules ferme et miroir simples pour protéger vos applications critiques contre les pannes. Le déploiement se fait sur des serveurs standards sans avoir besoin de compétences informatiques pour gérer la solution. Il n'y a pas besoin de disque partagé, de SAN répliqué, d'équilibreurs de charge, d'éditions Entreprise des systèmes d'exploitation ou des bases de données.
+SafeKit propose deux modules simples `farm` et mirror pour protéger vos applications critiques contre les pannes. Le déploiement s'effectue sur des serveurs standard et ne requiert aucune compétence informatique pour la gestion de la solution. Aucun disque partagé, SAN répliqué, équilibreur de charge, système d'exploitation ou base de données en édition Entreprise n'est nécessaire. 
 
 
 {{%  insert-safekit-hub-fr  %}}

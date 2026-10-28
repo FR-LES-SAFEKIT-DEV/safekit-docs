@@ -1,16 +1,17 @@
 ---
-title: "SafeKit: All-in-One-Software für Netzwerk-Lastverteilung und Hochverfügbarkeit unter Windows oder Linux"
+title: "SafeKit : All-in-One-Software für Netzwerk-Load-Balancing und Hochverfügbarkeit Windows oder Linux"
 canonical: "https://safekit.eviden.com/de/architectures/network-load-balancing-cluster/"
-description: "SafeKit vereint leistungsstarke Netzwerk-Lastverteilung (NLB) und automatischen Failover in einem Softwarepaket. Ersetzen Sie teure Hardware-Load-Balancer durch die kernelbasierte Verwaltung virtueller IP-Adressen unter Windows und Linux. Ideal für OEM-Integration und vereinfachte Clusterverwaltung."
+description: "SafeKit bietet leistungsstarkes Network Load Balancing (NLB) und automatisches Failover in einem einzigen Softwarepaket. Ersetzen Sie teure Hardware-Balancer durch die Kernel-basierte virtuelle IP-Verwaltung von SafeKit für Windows und Linux . Ideal für die OEM-Integration und vereinfachtes Clustermanagement."
 category: "architectures"
 lang: "de"
-topics: "Der SafeKit-Farm-Cluster: softwarebasiertes NLB und automatischer Failover für Windows/Linux, Inhaltsverzeichnis, Wie implementiert SafeKit einen NLB-Cluster für Windows/Linux?, Wie funktioniert der SafeKit-Farm-Cluster mit Windows/Linux?, Vergleich mit anderen NLB-Clusterlösungen, Videoanleitung: SafeKit-Farm-NLB-Cluster konfigurieren, SafeKit-Navigationsübersicht zur Hochverfügbarkeit"
+topics: "Der SafeKit `Farm` Cluster: Softwarebasiertes NLB und automatisches Failover für Windows / Linux , Inhaltsverzeichnis, Wie implementiert die SafeKit -Software einen Windows / Linux Network Load Balancing (NLB)-Cluster?, Wie funktioniert der SafeKit Cluster im `farm` Modus mit Windows / Linux ?, Vergleich: SafeKit `Farm` Cluster für Windows / Linux vs. andere NLB-Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit `Farm` NLB-Clusters, 🔍 SafeKit Hochverfügbarer Navigationshub"
 ---
 
-# SafeKit: All-in-One-Software für Netzwerk-Lastverteilung und Hochverfügbarkeit unter Windows oder Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# SafeKit : All-in-One Windows oder Linux Netzwerk-Lastverteilungs- und Hochverfügbarkeitssoftware {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
 
-{{% insert-safekit-solution-farm-2-de app="Windows/Linux" guide="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg" %}}
 
-{{% insert-safekit-hub-de %}}
+{{%  insert-safekit-solution-farm-2-de app="Windows/Linux" guide="/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}
 
-{{% insert-safekit-4-buttons-de %}}
+{{%  insert-safekit-hub-de  %}}
+
+{{%  insert-safekit-4-buttons-de  %}}

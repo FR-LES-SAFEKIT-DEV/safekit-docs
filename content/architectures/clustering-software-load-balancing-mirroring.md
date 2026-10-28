@@ -21,9 +21,9 @@ topics: "High availability and scalability of critical web and database applicat
 
 For example, with the SafeKit clustering software, you can implement IIS load balancing and Microsoft SQL Server mirroring.
 
-For that, you have to deploy a farm module for IIS and a mirror module for Microsoft SQL server. Each farm and mirror module is configured with its own virtual IP address and its own restart scripts.
+For that, you have to deploy a `farm` module for IIS and a mirror module for Microsoft SQL server. Each `farm` and mirror module is configured with its own virtual IP address and its own restart scripts.
 
-Both mirror and farm modules can be deployed on a single cluster of two servers. IIS and Microsoft SQL Server will run on these two servers. Or, the two modules can be deployed on two clusters with different servers.
+Both mirror and `farm` modules can be deployed on a single cluster of two servers. IIS and Microsoft SQL Server will run on these two servers. Or, the two modules can be deployed on two clusters with different servers.
 
 With the SafeKit clustering software, there is no difference between a deployment on the same servers or on different servers.
 

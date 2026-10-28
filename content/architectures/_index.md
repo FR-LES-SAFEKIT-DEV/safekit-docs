@@ -19,7 +19,7 @@ topics: "What are the different high availability architectures and the differen
 
 [More information](</architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Farm cluster {#farm-cluster}
+### `Farm` cluster {#farm-cluster}
 
 
 ![SafeKit farm cluster](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "What are the different high availability architectures and the differen
 
 [More information](</architectures/network-load-balancing-cluster/>)
 
-### Farm+mirror cluster {#farmmirror-cluster}
+### `Farm`+mirror cluster {#farmmirror-cluster}
 
 
 ![SafeKit farm + mirror cluster](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ topics: "What are the different high availability architectures and the differen
 
 ### Use high availability modules {#use-high-availability-modules}
 
-A high availability module is a customization of SafeKit for an application. There are two types of modules: the mirror module with real-time data replication and failover and the farm module with load balancing and failover.
+A high availability module is a customization of SafeKit for an application. There are two types of modules: the mirror module with real-time data replication and failover and the `farm` module with load balancing and failover.
 
-If you deploy a mirror module on 2 servers, then you create a mirror cluster and if you deploy a farm module on N servers, then you create a farm cluster.
+If you deploy a mirror module on 2 servers, then you create a mirror cluster and if you deploy a `farm` module on N servers, then you create a `farm` cluster.
 
-Several application modules can be deployed on the same servers. Thus, advanced clustering architectures can be implemented like those presented previously (farm+mirror, active/active, N-1).
+Several application modules can be deployed on the same servers. Thus, advanced clustering architectures can be implemented like those presented previously (`farm`+mirror, active/active, N-1).
 
 ### What is an application module? {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ In practice, an application module is a “.Safe” file (zip type) including:
   * names or physical IP addresses of the servers,
   * name or virtual IP address of the cluster,
   * file directories to replicate in real time (for a mirror module),
-  * network load balancing criteria (for a farm module),
+  * network load balancing criteria (for a `farm` module),
   * configuration of software and hardware failures detectors
 
 
