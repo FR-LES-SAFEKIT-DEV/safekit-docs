@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "通过 SafeKit 的智能应用程序监控增强 Azure 网络负载均衡。farm.safe 模块为 Azure 负载均衡器提供专用运行状况检查，可为关键应用程序实现应用程序级高可用性、自动自愈和故障转移。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Azure 高可用性快速安装指南，SafeKit 高可用性限制，SafeKit / Azure 解决方案概述，在 Windows 和 Linux 上安装 SafeKit / Azure 解决方案 (farm.safe)，SafeKit / Azure 解决方案分步配置，SafeKit farm 解决方案演示，🔍 SafeKit 高可用性导航中心"
+topics: "Azure 高可用性快速安装指南，SafeKit 高可用性限制，SafeKit / Azure 解决方案概述，在 Windows 和 Linux 上安装 SafeKit / Azure 解决方案 (farm.safe)，SafeKit / Azure 解决方案分步配置，SafeKit `farm` 解决方案演示，🔍 SafeKit 高可用性导航中心"
 ---
 
 # Azure 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块 {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Verbeter de netwerktaakverdeling van Azure met de intelligente toepassingsbewaking van SafeKit. De module farm.safe biedt een speciale statuscontrole voor de Azure Load Balancer en maakt naadloze hoge beschikbaarheid op toepassingsniveau, automatisch herstel en failover mogelijk voor bedrijfskritieke toepassingen."
 category: "quick-install"
 lang: "nl"
-topics: "Handleiding voor snelle installatie van hoge beschikbaarheid voor Azure, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Azure-oplossing, Installatie van de SafeKit-/Azure-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit-/Azure-oplossing, Demonstratie van de SafeKit-farmoplossing, 🔍 SafeKit-navigatiecentrum voor hoge beschikbaarheid"
+topics: "Handleiding voor snelle installatie van hoge beschikbaarheid voor Azure, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Azure-oplossing, Installatie van de SafeKit-/Azure-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit-/Azure-oplossing, Demonstratie van de SafeKit-`farm`-oplossing, 🔍 SafeKit-navigatiecentrum voor hoge beschikbaarheid"
 ---
 
 # Netwerktaakverdeling en failover in Azure: de SafeKit-module farm.safe installeren {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}

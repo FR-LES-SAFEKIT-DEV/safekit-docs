@@ -1,0 +1,333 @@
+{{/* Shortcode: insert-safekit-82-milestone-configuration-ar */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-milestone-xprotect-management-server.md */}}
+
+
+
+### المتطلبات الأساسية
+
+  * تطبيق {{ .Get "app" }} مثبّت على 2 عقد.
+  * يقتصر إجمالي البيانات المنسوخة على بضعة تيرابايت - وبعد ذلك، يصبح وقت إعادة المزامنة كبيرًا.
+  * الحد الأدنى من الاتصال البيني 1 جيجابت/ثانية بين العقد (يوصى بسرعة 10 جيجابت/ثانية لإعادة المزامنة بشكل أسرع).
+  * يتطلب تجاوز فشل IP وجود العقدتين على نفس LAN أو LAN ممتدة (L2) — شبكات L3 الموجهة غير مدعومة.
+
+
+⚠️ يتطلب هذا التكوين **Milestone XProtect 2023 R3 على الأقل**. للإصدارات السابقة، يرجى 🛠️ [الاطلاع على هذه المقالة](/quick-install/safekit-quick-installation-guide-old-milestone-configuration/).
+
+
+### 1. قم بتشغيل وحدة التحكم SafeKit
+
+  * قم بتشغيل وحدة تحكم الويب في المتصفح على عقدة نظام مجموعة واحدة عن طريق الاتصال بـ `http://localhost:9010`.
+  * أدخل `admin` كاسم مستخدم وكلمة المرور المحددة أثناء التثبيت.
+
+
+يمكنك أيضًا تشغيل وحدة التحكم في المستعرض على محطة عمل خارجية للمجموعة.
+
+⚠️ يتم تكوين SafeKit على كلا العقدتين من متصفح واحد.
+
+ℹ️ لتأمين وحدة تحكم الويب، راجع 🛠️ [11\. تأمين خدمة الويب SafeKit](/resources/safekit-user-guide-82/#https) في دليل المستخدم.
+
+
+![ابدأ تشغيل وحدة تحكم الويب SafeKit لتكوين مجموعة {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 2. تكوين عناوين العقدة
+
+  * أدخل عناوين IP للعقدة، واضغط على `Tab key` للتحقق من الاتصال وملء أسماء العقد. إذا كان لون node1 أو node2 باللون الأحمر، فتحقق من اتصال المتصفح بكلتا العقدتين وتحقق من جدار الحماية في كلا العقدتين من أجل 🛠️ [استكشاف الأخطاء وإصلاحها](/resources/safekit-user-guide-82/#Troubleshooting).
+  * ثم انقر فوق `Save and apply` لحفظ التكوين.
+  * تحقق من رسالة `Success` ✅ على كلا العقدتين.
+  * إذا حدث التكوين `Failure` ❌ على عقدة واحدة، فافتح الأكورديون ▼ لتلك العقدة وراجع الرسائل. لاحظ أنه يمكنك استخدام SafeKit AI 🤖 للمساعدة.
+
+
+ℹ️ إذا أردت، يمكنك إضافة `LAN and nodes` جديد (الأول ➕) لإنشاء نبضة قلب ثانية وشبكة النسخ المتماثل المخصصة.
+
+ℹ️ إذا نقرت على `Advanced configuration`، يتم عرض الملف `cluster.xml`. تتم تعبئة هذا الملف تلقائيًا بواسطة وحدة التحكم ونشره على العقد.
+
+
+![أدخل العقد الخاصة بمجموعة {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 3. حدد وحدة نمطية
+
+  * في `New module`، انقر فوق وحدة `{{ .Get "mod" }}.safe`.
+
+
+ℹ️ في اللافتة الزرقاء بالأعلى، 🛜 `node1` تمثل عقدة اتصال وحدة التحكم. تقوم هذه العقدة بترحيل الطلبات إلى `node2` عند الحاجة.
+
+ℹ️ تبحث وحدة التحكم عن `xxx.safe` في دليل `Application_Modules/generic/` على عقدة الاتصال (`node1`) إذا قمت بوضع وحدة هناك أثناء التثبيت.
+
+
+![اختر الوحدة النمطية لـ {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. تكوين الوحدة
+
+  * في `Module startup at boot`، اختر البدء التلقائي للوحدة عند التمهيد دون تأخير.
+  * في `Macros` / `SERVICES`، أدخل أسماء الخدمة الخاصة بالتطبيق الخاص بك، في ترتيب بدء التشغيل، مفصولة بفواصل. انظر لقطة الشاشة هذه للحصول على مثال مرئي لخدمات [Milestone XProtect 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
+  * في `Heartbeat networks`، يجب أن يكون لديك شبكة نبضات قلب واحدة يتم إجراء النسخ المتماثل عليها. إذا قمت بإضافة LAN خاص في الخطوة 2، فيمكنك تكوين نبضتي قلب مع تدفق النسخ المتماثل على LAN الخاص.
+  * في `Virtual IP addresses`، أدخل عنوان IP الظاهري. عنوان IP الافتراضي هو عنوان IP قياسي في نفس شبكة IP (نفس الشبكة الفرعية) مثل عناوين IP لكلا العقدتين.  
+يجب تكوين عملاء التطبيق باستخدام عنوان IP الظاهري (أو اسم DNS المرتبط بعنوان IP الظاهري).  
+يتم تبديل عنوان IP الافتراضي تلقائيًا في حالة حدوث فشل.
+  * في `Replicated directories`، قم بتعيين مسارات الدلائل للنسخ المتماثل. تأكد من وجودها في كلا العقدتين وأنها تحتوي على بيانات التطبيق.  
+يعد النسخ المتماثل للبيانات والسجل ضروريًا لقاعدة البيانات.  
+يمكنك إنشاء أدلة منسوخة إضافية كما هو مطلوب.  
+انظر لقطة الشاشة هذه للحصول على مثال مرئي للنسخ المتماثل [Milestone XProtect SQL 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
+  * في `Checkers`، ستتمكن من تكوين أدوات الداما إذا لزم الأمر، مثل مراقبة العملية، أو أدوات الداما المخصصة، أو TCP، أو ping، أو أدوات الداما المنقسمة.  
+على سبيل المثال، إذا تم عرض اسم العملية في `Monitored processes/services`، فسيتم مراقبته بإجراء إعادة التشغيل في حالة الفشل. سيؤدي تكوين اسم عملية خاطئ إلى توقف الوحدة مباشرة بعد بدايتها.
+
+
+⚠️ إذا كان SQL على خادم الإدارة:
+
+  * يجب أن توجد [قواعد بيانات نظام SQL](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases) (مثل master.mdf وmastlog.ldf) في الدلائل نفسها على العقدتين. يجب تكوين الدلائل للنسخ المتماثل.
+  * يجب أيضًا تثبيت SQL في الموقع نفسه في نظام الملفات على العقدتين، لأن [قاعدة بيانات موارد SQL](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database) المخصصة للقراءة فقط توجد ضمن الملفات الثنائية وهي مطلوبة لتجاوز الفشل. لا يلزم نسخ قاعدة البيانات هذه.
+  * يجب أن توجد قواعد بيانات SQL الخاصة بـ Milestone (.mdf و.ldf) في الدلائل نفسها على العقدتين. يجب تكوين الدلائل للنسخ المتماثل. ترد قواعد بيانات Milestone في هذه [المقالة](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html).
+
+
+ℹ️ إذا نقرت على `Advanced configuration`، يتم عرض الملف `userconfig.xml`. تتم تعبئة هذا الملف تلقائيًا بواسطة وحدة التحكم ويتم نشره على العقد باستخدام البرامج النصية لإعادة التشغيل.
+
+ℹ️ عند تطبيق تكوين SafeKit، يتم تعيين `startup type` للخدمات تلقائيًا على `Manual` في خدمات Windows. وهذا يضمن عدم بدء تشغيل الخدمات تلقائيًا عند تشغيل النظام، بل يتم تشغيلها فقط عند بدء تشغيل الوحدة نفسها.
+
+
+![أدخل إعدادات الوحدة {{ .Get "app" }}](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+
+
+### 5. تحرير البرامج النصية (اختياري)
+
+  * هذه الخطوة اختيارية ويمكن تخطيها في معظم الحالات، حيث أن البرامج النصية لإعادة التشغيل تم تكوينها مسبقًا لإعادة تشغيل الخدمات المحددة في الخطوة السابقة.
+  * لذلك، انقر مباشرة على `Next step`.
+  * يبدأ `start_prim.ps1` كافة الخدمات بالترتيب المحدد في القائمة `SERVICES`، ويبدأ `IIS application pools` المستخدمة بواسطة Milestone. يوقف `stop_prim.ps1` كافة الخدمات بالترتيب العكسي.
+  * بالإضافة إلى ذلك، يتحقق `start_prim.ps1` من بدء تشغيل كل خدمة ويوقف الوحدة إذا فشلت أي خدمة في البدء بشكل صحيح.
+
+
+![أدخل إعدادات الوحدة {{ .Get "app" }}](/wp-content/uploads/2026/09/28-module-edit-script.png)
+
+
+### 6. تشفير الاتصالات (اختياري)
+
+  * الحفاظ على تشفير الاتصالات بين العقد.
+
+
+![تشفير الاتصالات لوحدة {{ .Get "app" }}](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+
+
+### 7. احفظ وطبق
+
+  * `Save and apply` التكوين والبرامج النصية على كلا العقدتين.
+
+
+![قم بحفظ وتطبيق تكوين الوحدة النمطية {{ .Get "app" }}](/wp-content/uploads/2025/05/08-module-save-1.png)
+
+
+### 8. التحقق من التكوين الناجح
+
+  * تحقق من رسالة `Success` ✅ على كلا العقدتين وانقر على `Monitor modules`.
+  * إذا حدث التكوين `Failure` ❌ على عقدة واحدة، فافتح الأكورديون ▼ لتلك العقدة وراجع الرسائل. لاحظ أنه يمكنك استخدام SafeKit AI 🤖 للمساعدة.
+
+
+
+
+![تحقق من نجاح تكوين الوحدة النمطية {{ .Get "app" }}](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+
+
+### 9. ابدأ العقدة ببيانات محدثة
+
+  * إذا كانت العقدة 1 تحتوي على أدلة منسوخة محدثة، فحددها ثم ⋯ `Force start` ◀ `As primary`.
+
+
+عند بدء تشغيل العقدة 2، سيتم نسخ جميع البيانات من العقدة 1 إلى العقدة 2.
+
+⚠️ إذا قمت بالاختيار الخاطئ، فإنك تتعرض لخطر مزامنة البيانات القديمة على كلا العقدتين.
+
+⚠️ من المفترض أيضًا أن يتم إيقاف تطبيق {{ .Get "app" }} على العقدة 1 بحيث يقوم SafeKit بتثبيت آليات النسخ المتماثل ثم يبدأ التطبيق في البرنامج النصي `start_prim`.
+
+⚠️ استخدم `Start` لعمليات البدء اللاحقة: يحتفظ SafeKit بأحدث خادم. يعد بدء تشغيل `As primary` بمثابة بدء تشغيل خاص في المرة الأولى أو أثناء العمليات الاستثنائية.
+
+
+![ابدأ كعقدة {{ .Get "app" }} الأساسية بالبيانات المحدثة](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 10. انتظر الانتقال إلى ALONE (الأخضر)
+
+  * يجب أن تصل العقدة 1 إلى حالة ALONE (الخضراء)، مما يعني أنه تم تعيين IP الظاهري وأنه تم تنفيذ البرنامج النصي `start_prim` على العقدة 1.
+
+
+⚠️ إذا لم يتم الوصول إلى ALONE (الأخضر) أو إذا لم يتم تشغيل التطبيق، قم بتحليل السبب باستخدام سجل [module 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) للعقدة 1.
+
+  * انقر فوق أيقونة 🔍 **log** الخاصة بـ `node1` لفتح سجل الوحدة والبحث عن رسائل الخطأ مثل اكتشاف المدقق لخطأ وإيقاف الوحدة.
+  * انقر فوق `start_prim` في السجل: يتم عرض رسائل إخراج البرنامج النصي على اليمين ويمكن اكتشاف الأخطاء مثل بدء تشغيل الخدمة بشكل غير صحيح.
+  * استخدم SafeKit AI 🤖 للمساعدة في رسائل السجل.
+
+
+⚠️ إذا كانت المجموعة في حالة `WAIT (red) not uptodate, STOP (red) not uptodate`، قم بإيقاف العقدة WAIT و[ فرض بدايتها كعقدة أساسية 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![تبدأ العقدة {{ .Get "app" }} الأولى كعقدة أساسية وتصبح ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 11. على سطح مكتب العقدة 1، أوقف Milestone Management Server، ثم سجّله على عنوان IP الافتراضي وطبّق مقالة Milestone KB وأعد تشغيله
+
+نفّذ الخطوات التالية على العقدة 1 وفقًا للقائمة في الصورة:
+
+  * استخدم قائمة **ALONE** في وحدة تحكم SafeKit لتعطيل **Checkers** و**Process/Service Monitoring** لمنع الاكتشافات الخاطئة عند إيقاف Management Server Service ([تعليق أداة التحقق 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
+  * انقر بزر الماوس الأيمن على أيقونة **Milestone Management Server** في شريط المهام.
+  * **Stop Management Server Service**
+  * ثم اختر **Server Configurator...** وسجّل عنوان IP الافتراضي.
+  * **حرّر ServerConfig.xml** على العقدة 1.
+    * انتقل إلى "C:/ProgramData/Milestone/XProtect Management Server" وأنشئ نسخة احتياطية من ملف ServerConfig.xml الأصلي.
+    * افتح ServerConfig.xml بأي محرر نصوص (بصلاحيات المسؤول).
+    * استبدل `XXX.XXX.XXX.XXX` بعنوان IP الافتراضي الفعلي في:
+    * `<Failover>...`
+    * `<VirtualAddress>`
+    * `XXX.XXX.XXX.XXX`
+    * `</VirtualAddress>`
+    * `...</Failover>`
+    * غيّر `<ClusterMember>false</ClusterMember>` إلى `true`
+    * عيّن `http://NODE1_FQDN:9010` (أو اسم مضيف NODE1 في مجموعة عمل) في:
+    * `<ClusterLocalWebserverUri>`
+    * `http://NODE1_FQDN:9010`
+    * `</ClusterLocalWebserverUri>`
+    * لمزيد من المعلومات، راجع **[قاعدة معارف Milestone](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+  * **Start Management Server Service**
+  * استخدم قائمة **ALONE** في وحدة تحكم SafeKit لتمكين **Checkers** و**Process/Service Monitoring** ([تمكين أداة التحقق 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
+
+
+ℹ️ يسجّل هذا الإجراء خادم الإدارة للعقدة 1 في قاعدة بيانات SQL (العاملة على العقدة 1) عبر اتصال بالعنوان الافتراضي.
+
+
+![تسجيل خادم الإدارة في Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+
+
+### 12. على سطح مكتب العقدة 2، سجّل خادم الإدارة على عنوان IP الافتراضي
+
+  * اختر **Server Configurator** في شريط مهام العقدة 2 وسجّله على عنوان IP الافتراضي (انظر الصورة).
+  * ثم **Stop Management Server Service**.
+  * **حرّر ServerConfig.xml** على العقدة 2.
+    * انتقل إلى "C:/ProgramData/Milestone/XProtect Management Server" وأنشئ نسخة احتياطية من ملف ServerConfig.xml الأصلي.
+    * افتح ServerConfig.xml بأي محرر نصوص (بصلاحيات المسؤول).
+    * استبدل `XXX.XXX.XXX.XXX` بعنوان IP الافتراضي الفعلي في:
+    * `<Failover>...`
+    * `<VirtualAddress>`
+    * `XXX.XXX.XXX.XXX`
+    * `</VirtualAddress>`
+    * `...</Failover>`
+    * غيّر `<ClusterMember>false</ClusterMember>` إلى `true`
+    * عيّن `http://NODE2_FQDN:9010` (أو اسم مضيف NODE2 في مجموعة عمل) في:
+    * `<ClusterLocalWebserverUri>`
+    * `http://NODE2_FQDN:9010`
+    * `</ClusterLocalWebserverUri>`
+    * لمزيد من المعلومات، راجع **[قاعدة معارف Milestone](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+
+
+⚠️ انتبه:
+
+  * يجب أن يتمتع حساب المستخدم الذي ينفّذ التسجيل على العقدة 2 بدور المسؤول في Milestone على العقدة 1.
+  * إذا كان المسؤول المحلي على العقدة 2 هو من ينفّذ التسجيل، فيجب إعداد مجموعة Windows المضمنة `BUILTIN/Administrators` في Management Client / Security / Roles في [الخطوة 13](#role). وإلا فلن يعمل التسجيل.
+
+
+ℹ️ يسجّل هذا الإجراء خادم الإدارة للعقدة 2 في قاعدة بيانات SQL (العاملة على العقدة 1) عبر اتصال بالعنوان الافتراضي.
+
+
+![تسجيل خادم الإدارة باستخدام Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+
+
+### 13. حل مشكلة مصادقة Windows عند تجاوز الفشل {#role}
+
+عند بدء Milestone XProtect Management Client، يجب المصادقة باستخدام إحدى الطرق التالية. حسب اختيارك، تلزم خطوات محددة لضمان نجاح تسجيل الدخول بعد تجاوز فشل SafeKit. المرجع: [عرض لقطة شاشة تسجيل الدخول 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png).
+
+#### مصادقة Windows باستخدام Active Directory (AD)
+
+**التكوين:** لا يلزم تكوين خاص.
+
+إذا كانت "Windows authentication" في Milestone مكوّنة باستخدام Active Directory، تُسترجع معلومات المستخدم وكلمة المرور من AD الخارجي. بعد تجاوز الفشل، تتصل العقدة الثانوية بنفس AD، فتعمل المصادقة تلقائيًا.
+
+#### مصادقة Windows في مجموعة عمل
+
+**التكوين:** يجب إضافة المجموعة **BUILTIN/Administrators** في "Security / Roles".
+
+**تحذير:** في مجموعة عمل، يكون للمستخدمين المحليين معرّفات أمان (SIDs) مختلفة على كل عقدة، حتى لو تطابقت الأسماء. المجموعة BUILTIN/Administrators وحدها لها نفس SID على العقدتين.
+
+  * بإضافة هذه المجموعة، يمكنك المصادقة على العقدة الثانوية بأي حساب مسؤول محلي بعد تجاوز الفشل.
+  * دون ذلك، ستفشل مصادقة Windows المحلية على العقدة الثانوية لأن معرّفات SID لن تتطابق.
+
+
+#### المصادقة الأساسية باستخدام قاعدة بيانات SQL
+
+**التكوين:** أنشئ مستخدمًا باستخدام "Basic authentication" (مثل "Admin").
+
+في "Basic authentication"، تُخزّن بيانات اعتماد المستخدم مباشرة في قاعدة بيانات SQL. ولأن SafeKit ينسخ قاعدة بيانات SQL إلى العقدة الثانوية في الوقت الفعلي، يكون هؤلاء المستخدمون متاحين دائمًا فور تجاوز الفشل.
+
+
+![تعيين الأدوار في Milestone Management Client](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
+
+
+### 14. ابدأ العقدة 2
+
+  * ⋯ عقدة `Start` 2 مع القائمة السياقية الخاصة بها.
+  * انتظر حالة SECOND (الخضراء).
+
+
+ℹ️
+
+  * تظل العقدة 2 في الحالة SECOND (البرتقالية) أثناء إعادة مزامنة الدلائل المنسوخة (نسخ من العقدة 1 إلى العقدة 2).
+
+  * قد يستغرق هذا بعض الوقت حسب حجم الملفات المراد إعادة مزامنتها في الدلائل المنسوخة وعرض النطاق الترددي للشبكة.
+  * لمعرفة تقدم النسخة، راجع سجل [module 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) وموارد النسخ المتماثل [ 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) للعقدة 2. استخدم SafeKit AI 🤖 للمساعدة في رسائل السجل.
+
+
+![ابدأ العقدة {{ .Get "app" }} 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 15. التحقق من أن المجموعة جاهزة للعمل
+
+  * تأكد من أن المجموعة باللون الأخضر/الأخضر مع تشغيل خدمات {{ .Get "app" }} على عقدة PRIM وعدم تشغيلها على عقدة SECOND.
+
+
+  * يتم نسخ التغييرات داخل الملفات فقط في الوقت الفعلي في هذه الحالة.
+
+⚠️
+
+  * سجّل **خوادم التسجيل** بعنوان IP الافتراضي.
+  * صِل **Milestone Management Client** و**Milestone Smart Client** بعنوان IP الافتراضي.
+  * يجب تكوين المكونات التي تعد عملاء لخدمات {{ .Get "app" }} باستخدام عنوان IP الافتراضي. يمكن إجراء التكوين باستخدام اسم DNS (إذا تم إنشاء اسم DNS وربطه بعنوان IP الظاهري).
+
+
+![العقدة {{ .Get "app" }} 2 هي SECOND (أخضر)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 16. الاختبار
+
+  * قم بإيقاف عقدة PRIM عن طريق التمرير لأسفل القائمة السياقية والنقر فوق `Stop`.
+  * تحقق من وجود تجاوز فشل في العقدة SECOND والتي يجب أن تصبح ALONE (باللون الأخضر).
+  * ومع وحدة التحكم بالإدارة لـ Microsoft (MMC) على Windows أو باستخدام أسطر الأوامر على Linux، تحقق من تجاوز فشل خدمات {{ .Get "app" }} (توقفت عند العقدة 1 في البرنامج النصي `stop_prim` وبدأت عند العقدة 2 في البرنامج النصي `start_prim`).
+
+
+⚠️ إذا لم يتم الوصول إلى ALONE (الأخضر) على node2 أو إذا لم يتم تشغيل التطبيق، فتحليل السبب باستخدام سجل [module 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) للعقدة 2.
+
+  * انقر فوق أيقونة 🔍 **log** الخاصة بـ `node2` لفتح سجل الوحدة والبحث عن رسائل الخطأ مثل اكتشاف المدقق لخطأ وإيقاف الوحدة.
+  * انقر فوق `start_prim` في السجل: يتم عرض رسائل إخراج البرنامج النصي على اليمين ويمكن اكتشاف الأخطاء مثل بدء تشغيل الخدمة بشكل غير صحيح.
+  * استخدم SafeKit AI 🤖 للمساعدة في رسائل السجل.
+
+
+⚠️
+
+  * إذا كان كل شيء على ما يرام، ابدأ البدء على node1، والذي سيؤدي إلى إعادة مزامنة الدلائل المنسوخة من node2.
+  * إذا ساءت الأمور، قم بإيقاف node2 و[، وفرض البدء كـ 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) الأساسي لـ node1، والذي سيتم إعادة تشغيله ببياناته السليمة محليًا في وقت التوقف.
+
+
+ℹ️ لاحظ أن لديك 🕒 **[خطًا زمنيًا 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** قد يساعدك على فهم ما يحدث في المجموعة.
+
+ℹ️ يمكنك العثور على مزيد من التفاصيل، إلى جانب مقاطع الفيديو، في [تدريب SafeKit عبر الإنترنت](/ar/resources/safekit-on-line-training/).
+
+
+![أوقف وحدة {{ .Get "app" }} على خادم PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 17. الدعم
+
+  * للحصول على الدعم، التقط 2 من SafeKit `Snapshots` (2 من ملفات .zip)، واحدًا لكل عقدة.
+
+
+ℹ️ [مزيد من المعلومات حول الدعم هنا](/ar/resources/safekit-support/).
+
+
+![التقط لقطات {{ .Get "app" }} للحصول على الدعم](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

@@ -1,0 +1,333 @@
+{{/* Shortcode: insert-safekit-82-milestone-configuration-pt-br */}}
+{{/* Parameters: app, mod */}}
+{{/* Source: content\quick-install\safekit-quick-installation-guide-with-milestone-xprotect-management-server.md */}}
+
+
+
+### Pré-requisitos
+
+  * Aplicativo {{ .Get "app" }} instalado em 2 nós.
+  * Total de dados replicados limitado a alguns terabytes — além disso, o tempo de ressincronização torna-se significativo.
+  * Interconexão mínima de 1 Gb/s entre nós (10 Gb/s recomendados para ressincronização mais rápida).
+  * O failover IP requer ambos os nós na mesma LAN ou LAN estendida (L2) — redes L3 roteadas não são suportadas.
+
+
+⚠️ Esta configuração requer **no mínimo Milestone XProtect 2023 R3**. Para versões anteriores, 🛠️ [consulte este artigo](/quick-install/safekit-quick-installation-guide-old-milestone-configuration/).
+
+
+### 1. Inicie o console SafeKit
+
+  * Inicie o console da web em um navegador em um nó do cluster conectando-se ao `http://localhost:9010`.
+  * Digite `admin` como nome de usuário e senha definidos durante a instalação.
+
+
+Também é possível executar o console em um navegador em uma estação de trabalho externa ao cluster.
+
+⚠️ A configuração do SafeKit é feita em ambos os nós a partir de um único navegador.
+
+ℹ️ Para proteger o console da web, consulte 🛠️ [11\. Protegendo o serviço da web SafeKit](/resources/safekit-user-guide-82/#https) no Guia do usuário.
+
+
+![Inicie o console da web SafeKit para configurar o cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 2. Configure endereços de nós
+
+  * Insira os endereços dos nós IP, pressione `Tab key` para verificar a conectividade e preencher os nomes dos nós. Se node1 ou node2 tiver uma cor vermelha, verifique a conectividade do navegador com ambos os nós e verifique o firewall em ambos os nós para 🛠️ [ solução de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Em seguida, clique em `Save and apply` para salvar a configuração.
+  * Verifique a mensagem `Success` ✅ em ambos os nós.
+  * Se a configuração `Failure` ❌ ocorrer em um nó, abra o acordeão ▼ desse nó e revise as mensagens. Observe que você pode usar SafeKit AI 🤖 para obter assistência.
+
+
+ℹ️ Se desejar, você pode adicionar um novo `LAN and nodes` (primeiro ➕) para criar uma segunda pulsação e uma rede de replicação dedicada.
+
+ℹ️ Se você clicar em `Advanced configuration`, o arquivo `cluster.xml` será exibido. Este arquivo é preenchido automaticamente pelo console e implementado nos nós.
+
+
+![Insira os nós do cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 3. Selecione um módulo
+
+  * Em `New module`, clique no módulo `{{ .Get "mod" }}.safe`.
+
+
+ℹ️ No banner azul na parte superior, 🛜 `node1` representa o nó de conexão do console. Este nó retransmite solicitações para `node2` quando necessário.
+
+ℹ️ O console procura `xxx.safe` no diretório `Application_Modules/generic/` no nó de conexão (`node1`) se você colocou um módulo lá durante a instalação.
+
+
+![Escolha o módulo para {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. Configure o módulo
+
+  * Em `Module startup at boot`, escolha um início automático do módulo na inicialização sem demora.
+  * Em `Macros`/`SERVICES`, insira os nomes dos serviços da sua aplicação, na ordem de inicialização, separados por vírgulas. Veja esta captura de tela para obter um exemplo visual dos serviços [Milestone XProtect 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
+  * Em `Heartbeat networks`, você deve ter uma rede de pulsação única na qual a replicação é feita. Se você adicionou um LAN privado na etapa 2, poderá configurar duas pulsações com o fluxo de replicação no LAN privado.
+  * Em `Virtual IP addresses`, insira um endereço IP virtual. Um endereço IP virtual é um endereço IP padrão na mesma rede IP (mesma sub-rede) que os endereços IP de ambos os nós.  
+Os clientes aplicativos devem ser configurados com o endereço IP virtual (ou o nome DNS associado ao endereço IP virtual).  
+O endereço virtual IP é alternado automaticamente em caso de falha.
+  * Em `Replicated directories`, defina os caminhos dos diretórios para replicar. Verifique se eles existem em ambos os nós e contêm os dados do aplicativo.  
+A replicação de dados e logs é essencial para um banco de dados.  
+Você pode criar diretórios replicados adicionais conforme necessário.  
+Veja esta captura de tela para obter um exemplo visual da replicação [Milestone XProtect SQL 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
+  * No `Checkers`, você poderá configurar verificadores, se necessário, como monitoramento de processos, verificadores personalizados, TCP, ping ou verificadores de cérebro dividido.  
+Por exemplo, se um nome de processo for exibido em `Monitored processes/services`, ele será monitorado com uma ação de reinicialização em caso de falha. Configurar um nome de processo incorreto fará com que o módulo pare logo após seu início.
+
+
+⚠️ Se o SQL estiver no servidor de gerenciamento:
+
+  * Os [bancos de dados de sistema SQL](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases) (como master.mdf e mastlog.ldf) devem estar nos mesmos diretórios em ambos os nós. Os diretórios devem ser configurados como replicados.
+  * O SQL também deve ser instalado no mesmo local do sistema de arquivos em ambos os nós, pois o [banco de dados de recursos SQL](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database), somente leitura, fica junto aos binários e é necessário para o failover. Esse banco de dados não precisa ser replicado.
+  * Os bancos de dados SQL do Milestone (.mdf e .ldf) devem estar nos mesmos diretórios em ambos os nós. Os diretórios devem ser configurados como replicados. Os bancos de dados do Milestone estão indicados neste [artigo](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html).
+
+
+ℹ️ Se você clicar em `Advanced configuration`, o arquivo `userconfig.xml` será exibido. Esse arquivo é preenchido automaticamente pelo console e implementado nos nós com os scripts de reinicialização.
+
+ℹ️ Quando você aplica a configuração SafeKit, o `startup type` dos serviços é automaticamente definido como `Manual` nos serviços Windows. Isso garante que os serviços não sejam iniciados automaticamente quando o sistema for inicializado, mas somente quando o próprio módulo for iniciado.
+
+
+![Insira as configurações do módulo {{ .Get "app" }}](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+
+
+### 5. Edite scripts (opcional)
+
+  * Esta etapa é opcional e pode ser ignorada na maioria dos casos, pois os scripts de reinicialização já estão pré-configurados para reiniciar os serviços definidos na etapa anterior.
+  * Então, clique diretamente em `Next step`.
+  * `start_prim.ps1` inicia todos os serviços na ordem especificada na lista `SERVICES` e inicia os `IIS application pools` usados pelo Milestone. `stop_prim.ps1` interrompe todos os serviços na ordem inversa.
+  * Além disso, `start_prim.ps1` verifica a inicialização de cada serviço e interrompe o módulo se algum serviço não iniciar corretamente.
+
+
+![Insira as configurações do módulo {{ .Get "app" }}](/wp-content/uploads/2026/09/28-module-edit-script.png)
+
+
+### 6. Criptografia de comunicação (opcional)
+
+  * Mantenha a criptografia da comunicação entre os nós.
+
+
+![Criptografia de comunicação do módulo {{ .Get "app" }}](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+
+
+### 7. Salve e aplique
+
+  * `Save and apply` a configuração e os scripts em ambos os nós.
+
+
+![Salve e aplique a configuração do módulo {{ .Get "app" }}](/wp-content/uploads/2025/05/08-module-save-1.png)
+
+
+### 8. Verifique a configuração bem-sucedida
+
+  * Verifique a mensagem `Success` ✅ em ambos os nós e clique em `Monitor modules`.
+  * Se a configuração `Failure` ❌ ocorrer em um nó, abra o acordeão ▼ desse nó e revise as mensagens. Observe que você pode usar SafeKit AI 🤖 para obter assistência.
+
+
+
+
+![Verifique o sucesso da configuração do módulo {{ .Get "app" }}](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+
+
+### 9. Inicie o nó com dados atualizados
+
+  * Se o nó 1 tiver diretórios replicados atualizados, selecione-o e ⋯ `Force start` ▶ `As primary`.
+
+
+Quando o nó 2 for iniciado, todos os dados serão copiados do nó 1 para o nó 2.
+
+⚠️ Se você fizer a escolha errada, corre o risco de sincronizar dados desatualizados em ambos os nós.
+
+⚠️ Supõe-se também que a aplicação {{ .Get "app" }} seja parada no nó 1 para que SafeKit instale os mecanismos de replicação e então inicie a aplicação no script `start_prim`.
+
+⚠️ Use `Start` para inicializações subsequentes: SafeKit mantém o servidor mais atualizado. A inicialização do `As primary` é uma inicialização especial na primeira vez ou durante operações excepcionais.
+
+
+![Inicie como primário o nó {{ .Get "app" }} com os dados atualizados](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+
+
+### 10. Aguarde a transição para ALONE (verde)
+
+  * O nó 1 deve atingir o estado ALONE (verde), o que significa que o IP virtual está configurado e que o script `start_prim` foi executado no nó 1.
+
+
+⚠️ Se ALONE (verde) não for alcançado ou se a aplicação não for iniciada, analise o porquê com o log do módulo [ 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) do nó 1.
+
+  * Clique no ícone 🔍 **log** de `node1` para abrir o log do módulo e procurar mensagens de erro, como um verificador detectando um erro e interrompendo o módulo.
+  * Clique em `start_prim` no log: as mensagens de saída do script são exibidas à direita e erros podem ser detectados, como um serviço iniciado incorretamente.
+  * Use SafeKit AI 🤖 para obter assistência com mensagens de log.
+
+
+⚠️ Se o cluster estiver no estado `WAIT (red) not uptodate, STOP (red) not uptodate`, pare o nó WAIT e [ force seu início como primário 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+
+
+![O primeiro nó {{ .Get "app" }} começa como primário e se torna ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+
+
+### 11. Na área de trabalho do nó 1, parar o Milestone Management Server, registrá-lo no IP virtual, aplicar o artigo da Milestone KB e reiniciá-lo
+
+Execute as etapas a seguir no nó 1 de acordo com o menu da imagem:
+
+  * Use o menu **ALONE** da console SafeKit para desativar **Checkers** e **Process/Service Monitoring**, evitando detecções falsas ao parar o Management Server Service ([suspender o verificador 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
+  * Clique com o botão direito no ícone **Milestone Management Server** na barra de tarefas.
+  * **Stop Management Server Service**
+  * Em seguida, escolha **Server Configurator...** e registre o endereço IP virtual.
+  * **Edite o ServerConfig.xml** no nó 1.
+    * Acesse "C:/ProgramData/Milestone/XProtect Management Server" e faça backup do arquivo ServerConfig.xml original.
+    * Abra o ServerConfig.xml com qualquer editor de texto (com direitos de administrador).
+    * Substitua `XXX.XXX.XXX.XXX` pelo endereço IP virtual real em:
+    * `<Failover>...`
+    * `<VirtualAddress>`
+    * `XXX.XXX.XXX.XXX`
+    * `</VirtualAddress>`
+    * `...</Failover>`
+    * Altere `<ClusterMember>false</ClusterMember>` para `true`
+    * Defina `http://NODE1_FQDN:9010` (ou o nome de host de NODE1 em um grupo de trabalho) em:
+    * `<ClusterLocalWebserverUri>`
+    * `http://NODE1_FQDN:9010`
+    * `</ClusterLocalWebserverUri>`
+    * Para mais informações, consulte este **[artigo da base de conhecimento Milestone](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+  * **Start Management Server Service**
+  * Use o menu **ALONE** da console SafeKit para ativar **Checkers** e **Process/Service Monitoring** ([ativar o verificador 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
+
+
+ℹ️ Este procedimento registra o servidor de gerenciamento do nó 1 no banco de dados SQL (executado no nó 1) por meio de uma conexão com o endereço virtual.
+
+
+![Registrar o servidor de gerenciamento no Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+
+
+### 12. Na área de trabalho do nó 2, registrar o servidor de gerenciamento no endereço IP virtual
+
+  * Escolha **Server Configurator** na barra de tarefas do nó 2 e registre-o no endereço IP virtual (veja a imagem).
+  * Em seguida, **Stop Management Server Service**.
+  * **Edite o ServerConfig.xml** no nó 2.
+    * Acesse "C:/ProgramData/Milestone/XProtect Management Server" e faça backup do arquivo ServerConfig.xml original.
+    * Abra o ServerConfig.xml com qualquer editor de texto (com direitos de administrador).
+    * Substitua `XXX.XXX.XXX.XXX` pelo endereço IP virtual real em:
+    * `<Failover>...`
+    * `<VirtualAddress>`
+    * `XXX.XXX.XXX.XXX`
+    * `</VirtualAddress>`
+    * `...</Failover>`
+    * Altere `<ClusterMember>false</ClusterMember>` para `true`
+    * Defina `http://NODE2_FQDN:9010` (ou o nome de host de NODE2 em um grupo de trabalho) em:
+    * `<ClusterLocalWebserverUri>`
+    * `http://NODE2_FQDN:9010`
+    * `</ClusterLocalWebserverUri>`
+    * Para mais informações, consulte este **[artigo da base de conhecimento Milestone](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+
+
+⚠️ Atenção:
+
+  * A conta do usuário que executa o registro no nó 2 deve ter a função de administrador no Milestone do nó 1.
+  * Se o administrador local do nó 2 fizer o registro, o grupo interno do Windows `BUILTIN/Administrators` deve ter sido configurado em Management Client / Security / Roles na [etapa 13](#role). Caso contrário, o registro não funcionará.
+
+
+ℹ️ Este procedimento registra o servidor de gerenciamento do nó 2 no banco de dados SQL (executado no nó 1) por meio de uma conexão com o endereço virtual.
+
+
+![Registrar o servidor de gerenciamento com Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+
+
+### 13. Resolver o problema de autenticação Windows no failover {#role}
+
+Ao iniciar o Milestone XProtect Management Client, você deve se autenticar usando um dos métodos a seguir. Dependendo da escolha, etapas específicas são necessárias para garantir que o login funcione após um failover SafeKit. Referência: [ver captura da tela de login 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png).
+
+#### Autenticação Windows com Active Directory (AD)
+
+**Configuração:** Nenhuma configuração especial é necessária.
+
+Se a "Windows authentication" do Milestone estiver configurada com Active Directory, os dados de usuário e senha serão obtidos do AD externo. Após um failover, o nó secundário se conecta ao mesmo AD, de modo que a autenticação funciona automaticamente.
+
+#### Autenticação Windows em grupo de trabalho
+
+**Configuração:** Você deve adicionar o grupo **BUILTIN/Administrators** em "Security / Roles".
+
+**Aviso:** Em um grupo de trabalho, os usuários locais têm identificadores de segurança (SIDs) diferentes em cada nó, mesmo com nomes idênticos. Apenas o grupo BUILTIN/Administrators tem o mesmo SID nos dois nós.
+
+  * Ao adicionar esse grupo, você pode se autenticar no nó secundário com qualquer conta de administrador local após um failover.
+  * Sem isso, a autenticação Windows local falhará no nó secundário porque os SIDs não corresponderão.
+
+
+#### Autenticação básica com banco de dados SQL
+
+**Configuração:** Crie um usuário com "Basic authentication" (por exemplo, "Admin").
+
+Com "Basic authentication", as credenciais do usuário são armazenadas diretamente no banco de dados SQL. Como o SafeKit replica o banco de dados SQL para o nó secundário em tempo real, esses usuários estão sempre disponíveis imediatamente após um failover.
+
+
+![Definir funções no Milestone Management Client](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
+
+
+### 14. Iniciar nó 2
+
+  * ⋯ Nó `Start` 2 com seu menu contextual.
+  * Aguarde o estado SECOND (verde).
+
+
+ℹ️
+
+  * O nó 2 permanece no estado SECOND (laranja) enquanto ressincroniza os diretórios replicados (copia do nó 1 para o nó 2).
+
+  * Isso pode demorar um pouco, dependendo do tamanho dos arquivos a serem ressincronizados nos diretórios replicados e da largura de banda da rede.
+  * Para ver o progresso da cópia, consulte o log do módulo [ 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) e os recursos de replicação [ 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) do nó 2. Use o SafeKit AI 🤖 para obter assistência com mensagens de log.
+
+
+![Inicie o nó {{ .Get "app" }} 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+
+
+### 15. Verifique se o cluster está operacional
+
+  * Verifique se o cluster está verde/verde com serviços {{ .Get "app" }} em execução no nó PRIM e não em execução no nó SECOND.
+
+
+  * Somente as alterações dentro dos arquivos são replicadas em tempo real neste estado.
+
+⚠️
+
+  * Registre os **servidores de gravação** com o endereço IP virtual.
+  * Conecte o **Milestone Management Client** e o **Milestone Smart Client** ao endereço IP virtual.
+  * Os componentes clientes dos serviços {{ .Get "app" }} devem ser configurados com o endereço virtual IP. A configuração pode ser feita com um nome DNS (caso um nome DNS tenha sido criado e associado ao endereço virtual IP).
+
+
+![O nó {{ .Get "app" }} 2 é SECOND (verde)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+
+
+### 16. Teste
+
+  * Pare o nó PRIM rolando para baixo em seu menu contextual e clicando em `Stop`.
+  * Verifique se há um failover no nó SECOND que deve se tornar ALONE (verde).
+  * E com o Microsoft Management Console (MMC) em Windows ou com linhas de comando em Linux, verifique o failover dos serviços {{ .Get "app" }} (interrompido no nó 1 no script `stop_prim` e iniciado no nó 2 no script `start_prim`).
+
+
+⚠️ Se ALONE (verde) não for alcançado em node2 ou se a aplicação não for iniciada, analise o porquê com o log do módulo [ 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) do nó 2.
+
+  * Clique no ícone 🔍 **log** de `node2` para abrir o log do módulo e procurar mensagens de erro, como um verificador detectando um erro e interrompendo o módulo.
+  * Clique em `start_prim` no log: as mensagens de saída do script são exibidas à direita e erros podem ser detectados, como um serviço iniciado incorretamente.
+  * Use SafeKit AI 🤖 para obter assistência com mensagens de log.
+
+
+⚠️
+
+  * Se tudo estiver bem, inicie node1, que irá ressincronizar os diretórios replicados de node2.
+  * Se algo der errado, pare node2 e [ force o início como 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) primário de node1, que será reiniciado com seus dados localmente íntegros no momento da parada.
+
+
+ℹ️ Você dispõe de uma 🕒 **[linha do tempo 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** que pode ajudar a entender o que acontece no cluster.
+
+ℹ️ Encontre mais detalhes e vídeos no [treinamento online SafeKit](/pt-br/resources/safekit-on-line-training/).
+
+
+![Pare o módulo {{ .Get "app" }} no servidor PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 17. Suporte
+
+  * Para obter suporte, leve 2 SafeKit `Snapshots` (2 arquivos .zip), um para cada nó.
+
+
+ℹ️ [Mais informações sobre suporte aqui](/pt-br/resources/safekit-support/).
+
+
+![Tire os instantâneos {{ .Get "app" }} para suporte](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

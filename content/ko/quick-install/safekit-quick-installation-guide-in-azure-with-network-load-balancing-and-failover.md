@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "SafeKit의 지능형 애플리케이션 모니터링으로 Azure 네트워크 부하 분산을 강화하세요. farm.safe 모듈은 Azure 부하 분산 장치 전용 상태 확인 기능을 제공하여 중요 애플리케이션의 애플리케이션 수준 고가용성, 자동 복구 및 장애 조치를 지원합니다."
 category: "quick-install"
 lang: "ko"
-topics: "Azure 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Azure 솔루션 개요, Windows 및 Linux에 SafeKit / Azure 솔루션 설치(farm.safe), SafeKit / Azure 솔루션 단계별 구성, SafeKit farm 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Azure 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Azure 솔루션 개요, Windows 및 Linux에 SafeKit / Azure 솔루션 설치(farm.safe), SafeKit / Azure 솔루션 단계별 구성, SafeKit `farm` 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # Azure 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치 {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
