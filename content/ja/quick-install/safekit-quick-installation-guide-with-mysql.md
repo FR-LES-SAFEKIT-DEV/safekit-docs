@@ -15,7 +15,7 @@ topics: "MySQLの高可用性クイックインストールガイド、 SafeKit�
 
 ## SafeKit / MySQLソリューションの概要 {#overview-of-the-safekit--mysql-solution}
 
-解決策はここに記載されています: ** 💡 [最もシンプルなMySQL高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/mysql-high-availability-synchronous-replication-failover/>) ** 。
+解決策はここに記載されています: **💡 [最もシンプルなMySQL高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/mysql-high-availability-synchronous-replication-failover/>)** 。
 
 ## SafeKit / MySQLソリューションをWindowsおよびLinux ( mysql.safe )にインストールします。 {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 

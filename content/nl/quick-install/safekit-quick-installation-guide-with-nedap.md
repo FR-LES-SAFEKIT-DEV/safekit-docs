@@ -13,11 +13,11 @@ topics: "Snelstartgids voor High Availability Nedap , Beperkingen van High Avail
 {{%  insert-safekit-mirror-guide-nl app="Nedap" mod="nedap"  %}}
  
 
-** 📘 [ Configuratie van Nedap AOES met SafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) ** : alle details staan in dit document.
+**📘 [ Configuratie van Nedap AOES met SafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)** : alle details staan in dit document.
 
 ## Overzicht van de SafeKit / Nedap -oplossing {#overview-of-the-safekit--nedap-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste Nedap Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: **💡 [ De eenvoudigste Nedap Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/nedap-high-availability-synchronous-replication-failover/>)** .
 
 ## Installatie van de SafeKit / Nedap oplossing op Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 

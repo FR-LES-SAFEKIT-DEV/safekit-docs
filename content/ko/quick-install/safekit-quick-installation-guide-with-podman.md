@@ -15,7 +15,7 @@ topics: "Podman 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 
 ## SafeKit / Podman 솔루션 개요 {#overview-of-the-safekit--podman-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Podman 고가용성 및 실시간 데이터 복제 소프트웨어 ](</ko/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ SafeKit : Podman 고가용성 및 실시간 데이터 복제 소프트웨어 ](</ko/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>)** .
 
 ## SafeKit / Podman 솔루션의 Linux ( mirror.safe ) 및 설치 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 
@@ -34,24 +34,24 @@ topics: "Podman 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 
 #### 필수 조건 {#prerequisites-1}
 
-  * ** 노드 양쪽에 복제된 디렉터리 ** 를 생성합니다.  
-** /replicated_dir_path ** 디렉터리를 생성하고, 이 디렉터리는 SafeKit 에 의해 복제되며, nginx 에서 제공되는 HTML 페이지를 포함하도록 합니다.
-  * 두 노드 ** 모두에 초기 HTML 파일 ** 를 넣어 이 디렉터리를 채우십시오.
+  * **노드 양쪽에 복제된 디렉터리** 를 생성합니다.  
+**/replicated_dir_path** 디렉터리를 생성하고, 이 디렉터리는 SafeKit 에 의해 복제되며, nginx 에서 제공되는 HTML 페이지를 포함하도록 합니다.
+  * 두 노드 **모두에 초기 HTML 파일** 를 넣어 이 디렉터리를 채우십시오.
         
         cp index.html /replicated_dir_path
 
-  * ** 노드와 ** 노드 모두에 컨테이너를 생성합니다.  
-** /replicated_dir_path ** 디렉터리를 **/usr/share/nginx/html** 에 바인딩하는 nginx 컨테이너를 두 노드 모두에 생성합니다. 
+  * **노드와** 노드 모두에 컨테이너를 생성합니다.  
+**/replicated_dir_path** 디렉터리를 **/usr/share/nginx/html** 에 바인딩하는 nginx 컨테이너를 두 노드 모두에 생성합니다. 
         
         podman 컨테이너 생성 --name mynginx -v /replicated_dir_path : /usr/share/nginx/html -p 9011:80 nginx
 
 
 #### SafeKit 구성 {#safekit-configuration}
 
-  * ** 단계별 구성 ** 섹션으로 이동하세요.
+  * **단계별 구성** 섹션으로 이동하세요.
   * **mirror.safe** 모듈을 생성하고 구성합니다.
-  * 장애 발생 시 전환될 가상 IP 주소 ** ** 를 설정합니다.
-  * ** /replicated_dir_path ** 복제 디렉터리로 설정
+  * 장애 발생 시 대체될 **가상 IP 주소를** 설정하십시오.
+  * **/replicated_dir_path** 복제 디렉터리로 설정
   * start_prim 및 stop_prim 스크립트에 각각 **podman start mynginx** 및 **podman stop mynginx** 입력하십시오.  
 참고: SE Linux 사용하는 경우 "podman start --security-opt label=disable mynginx " 명령어를 사용해야 할 수도 있습니다.
   * SafeKit mirror 모듈을 배포하고 시작하십시오.

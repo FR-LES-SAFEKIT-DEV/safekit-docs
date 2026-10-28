@@ -33,9 +33,9 @@ Fehlertolerante Systeme beheben lediglich Hardwarefehler und nicht Softwarefehle
 
 ## Vor- und Nachteile von Hochverfügbarkeit und Fehlertoleranz {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
-Zum Schutz kritischer Anwendungen vor Ausfällen gibt es zwei Hauptansätze: Software-Hochverfügbarkeitscluster ** ** und fehlertolerante Systeme ( ** ** ). Jeder Ansatz bietet unterschiedliche Vor- und Nachteile hinsichtlich Kosten, Flexibilität, Wiederherstellungszeit und Hardwareanforderungen. Das Verständnis dieser Unterschiede hilft Ihnen, die passende Lösung für Ihre spezifischen Bedürfnisse auszuwählen.
+Zum Schutz kritischer Anwendungen vor Ausfällen gibt es zwei Hauptansätze: **hochverfügbare Softwarecluster** und **fehlertolerante Systeme** . Jeder Ansatz bietet unterschiedliche Vor- und Nachteile hinsichtlich Kosten, Flexibilität, Wiederherstellungszeit und Hardwareanforderungen. Das Verständnis dieser Unterschiede hilft Ihnen, die passende Lösung für Ihre spezifischen Bedürfnisse auszuwählen.
 
-** Vergleich von hochverfügbaren Software-Clustern mit fehlertoleranten Systemen **
+**Vergleich von hochverfügbaren Software-Clustern mit fehlertoleranten Systemen**
 
 Kriterien | Software-Hochverfügbarkeitscluster | Fehlertolerantes System  
 ---|---|---  
@@ -47,7 +47,7 @@ RTO/RPO | Die Wiederherstellungszeit mit SafeKit ( [ RTO ](</de/best-practises/w
 Flexibilität | Kann auf jedem Servertyp mit Standard-Betriebssystemen ausgeführt werden Windows und Linux | Abhängig von spezifischer Hardware oder spezifischen Hypervisoren  
 Geeignet für Softwareentwickler | die ihrer Anwendung eine einfache Hochverfügbarkeitsoption hinzufügen möchten [ Umgebungen | in denen Hardwareausfälle das Hauptproblem darstellen ](</de/use-cases/application-clustering-software/>)  
   
-Zusammenfassend bietet die Software SafeKit Hochverfügbarkeit ** mit ** eine kostengünstige und flexible Lösung, die auf Standardhardware läuft und fortlaufende Upgrades mit nahezu null Ausfallzeit (RTO ~1 Minute) und ohne Datenverlust unterstützt. Fehlertolerante Systeme bieten zwar ein sofortiges Failover (RTO = 0), benötigen jedoch dedizierte Hardware und sind für unabhängige Software-Updates weniger flexibel.
+Zusammenfassend bietet die Software SafeKit Hochverfügbarkeit **mit** eine kostengünstige und flexible Lösung, die auf Standardhardware läuft und fortlaufende Upgrades mit nahezu null Ausfallzeit (RTO ~1 Minute) und ohne Datenverlust unterstützt. Fehlertolerante Systeme bieten zwar ein sofortiges Failover (RTO = 0), benötigen jedoch dedizierte Hardware und sind für unabhängige Software-Updates weniger flexibel.
 
 
 {{%  insert-safekit-hub-de  %}}

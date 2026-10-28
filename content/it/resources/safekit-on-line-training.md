@@ -15,16 +15,16 @@ topics: "Come accedere alla piattaforma di formazione?, Ottieni SafeKit 8 materi
 
 Il corso di formazione online SafeKit è una risorsa completa e fruibile in autonomia, progettata per aiutarti a padroneggiare l'alta disponibilità e il clustering delle applicazioni. Puoi accedere alla piattaforma seguendo questi passaggi:
 
-  * Accedi alla piattaforma di formazione online ** 👉 🎓 [ SafeKit ](<https://training.my.evidian.com/mod/page/view.php?id=712>) ** . Questa piattaforma funge da punto di accesso centrale per tutti i moduli di apprendimento e per il programma di certificazione gratuito.
-  * Ottieni le tue credenziali: ** Se non hai ancora un account, clicca su ** ** ** menu in alto della piattaforma di formazione per richiedere le tue credenziali di accesso.
+  * Accedi alla piattaforma di formazione online **👉 🎓 [ SafeKit ](<https://training.my.evidian.com/mod/page/view.php?id=712>)** . Questa piattaforma funge da punto di accesso centrale per tutti i moduli di apprendimento e per il programma di certificazione gratuito.
+  * **Ottieni le tue credenziali:** se non hai ancora un account, clicca su **Contatti** nel menu in alto della piattaforma di formazione per richiedere le tue credenziali di accesso.
   * La piattaforma è organizzata in sezioni tematiche, tra cui: 
-    * Architettura e introduzione ** : ** Comprendere i concetti dei cluster mirror e `farm` .
-    * Dimostrazioni ** : ** Accesso a scenari basati su video per SQL Server , Hyper-V e bilanciamento del carico Apache.
-    * Installazione e configurazione ** : ** Scopri come installare il pacchetto e configurarlo tramite la console di gestione web o la CLI.
-    * Configurazione avanzata ** : ** Approfondimenti su userconfig.xml , heartbeat, replica e IP virtuali.
-  * ** Utilizza le lezioni video: ** Gran parte della formazione viene erogata tramite video ospitati. Ogni video è in genere suddiviso in capitoli (ad esempio, Prerequisiti, Installazione, Risoluzione dei problemi) in modo da poter passare direttamente all'argomento di cui si ha bisogno.
-  * Ottieni diversi livelli di certificazione tramite quiz: ** Metti ** prova le tue conoscenze al termine dei moduli per ottenere il riconoscimento ufficiale della tua competenza SafeKit .
-  * Ottieni ** SafeKit 8 Materiali di formazione: ** Accedi al pacchetto completo di risorse [ ](#training82) per supportare il tuo apprendimento.
+    * Architettura e introduzione **:** Comprendere i concetti dei cluster mirror e `farm` .
+    * Dimostrazioni **:** Accesso a scenari basati su video per SQL Server , Hyper-V e bilanciamento del carico Apache.
+    * Installazione e configurazione **:** Scopri come installare il pacchetto e configurarlo tramite la console di gestione web o la CLI.
+    * Configurazione avanzata **:** Approfondimenti su userconfig.xml , heartbeat, replica e IP virtuali.
+  * **Utilizza le lezioni video:** Gran parte della formazione viene erogata tramite video ospitati. Ogni video è in genere suddiviso in capitoli (ad esempio, Prerequisiti, Installazione, Risoluzione dei problemi) in modo da poter passare direttamente all'argomento di cui si ha bisogno.
+  * Ottieni diversi livelli di certificazione tramite quiz: **Metti** prova le tue conoscenze al termine dei moduli per ottenere il riconoscimento ufficiale della tua competenza SafeKit .
+  * Ottieni **SafeKit 8 Materiali di formazione:** Accedi al pacchetto completo di risorse [ ](#training82) per supportare il tuo apprendimento.
 
 
 ### Video SafeKit : Tutorial sulla piattaforma di certificazione gratuita (6:11) {#demo-certification}

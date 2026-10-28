@@ -166,7 +166,7 @@ Milestone 2022 R3 以降、この手順は不要となり、次のステップ�
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        「権限」: " http://** < virtual-ip> ** /IDP
+        「権限」: " http://**< virtual-ip>** /IDP
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,9 +230,9 @@ Milestone 2022 R3 以降、この手順は不要となり、次のステップ�
 
 画像に示されているメニューに従って、ノード1で以下の手順を実行してください。
 
-  * タスクバーにある** Milestone Management Server **アイコンを右クリックします。
+  * タスクバーにある**Milestone Management Server**アイコンを右クリックします。
   * **管理サーバーサービスを停止します**
-  * 次に、 ** Server Configurator... **を選択し、仮想 IP アドレスを登録します。
+  * 次に、 **Server Configurator...**を選択し、仮想 IP アドレスを登録します。
   * **管理サーバーサービスを開始します**
 
 
@@ -251,7 +251,7 @@ Milestone 2022 R3 バージョンより前は、登録時に内部Milestoneフ�
 ![注記](/wp-content/uploads/2022/07/note.png)
 
 
-注: Milestone 2020 R2 より前のバージョンを登録するには、 **暗号化設定の変更... **を使用してください。
+注: Milestone 2020 R2 より前のバージョンを登録するには、 **暗号化設定の変更...**を使用してください。
 
 
 ![管理サーバーをMilestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)に登録します
@@ -267,12 +267,12 @@ Milestone 2022 R3以降、この手順は不要となり、「サーバーコン
 
 画像によると：
 
-  1. ノード 1 で** Milestone XProtect **の管理クライアントを開始します。
+  1. ノード 1 で**Milestone XProtect**の管理クライアントを開始します。
   2. **ツール**メニューで、 **登録済みサービス**を選択します。 
      * **登録済みサービスの追加/削除**ウィンドウで、リストからサービスを選択し、 **編集**をクリックします。
      * **登録済みサービス**の編集ウィンドウで、サービスの URL アドレスを、仮想 IP アドレスを含む同じ URL アドレスに変更します。
      * ウィンドウに表示されているすべてのサービスについて、これらの手順を繰り返してください。
-  3. 同じウィンドウで、 ** Network **をクリックします。 
+  3. 同じウィンドウで、 **Network**をクリックします。 
      * **ネットワーク構成**ウィンドウで、サーバーの URL アドレスを、仮想 IP アドレスを含む同じ URL アドレスに変更します。
 
 
@@ -289,10 +289,10 @@ Milestone " Windows認証 " が Active Directory で構成されている場合�
 
 Milestone XProtect管理クライアントを起動すると、「 Windows認証」または「基本認証」 ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) [ 。
 
-** Milestone XProtect管理クライアント**を開き、 **セキュリティ/ロール**を開きます（画像を参照）。
+**Milestone XProtect管理クライアント**を開き、 **セキュリティ/ロール**を開きます（画像を参照）。
 
-  * Windowsグループを** BUILTIN\Administrators **に設定します。これにより、セカンダリの管理者ユーザーは、「 Windows認証」を使用してセカンダリのMilestoneに接続できるようになります。
-  * フェイルオーバー後にセカンダリノードで確実に再認証を行うため、「基本認証」を使用するユーザー（図中の** Admin ** ）を作成してください。「基本認証」の場合、ユーザー名とパスワードはSQLデータベースに保存され、フェイルオーバー後にセカンダリノードで取得されます。
+  * Windowsグループを**BUILTIN\Administrators**に設定します。これにより、セカンダリの管理者ユーザーは、「 Windows認証」を使用してセカンダリのMilestoneに接続できるようになります。
+  * フェイルオーバー後にセカンダリノードで確実に再認証を行うため、「基本認証」を使用するユーザー（図中の**Admin** ）を作成してください。「基本認証」の場合、ユーザー名とパスワードはSQLデータベースに保存され、フェイルオーバー後にセカンダリノードで取得されます。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,11 +337,11 @@ Milestone 2022 R3 以降、この手順は不要となり、次のステップ�
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        「権限」: " http://** < virtual-ip> ** /IDP
+        「権限」: " http://**< virtual-ip>** /IDP
 
 ### 14. ノード2のデスクトップで、仮想IPアドレスに管理サーバーを登録します。 {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * ノード2のタスクバーで** Server Configurator **を選択し、仮想IPアドレスに登録します（画像を参照）。
+  * ノード2のタスクバーで**Server Configurator**を選択し、仮想IPアドレスに登録します（画像を参照）。
   * 次に、 **管理サーバーサービス**を停止します。
 
 
@@ -426,7 +426,7 @@ Milestone 2022 R3 以降、この手順は不要となり、次のステップ�
 
 ### 18.テスト {#18-testing}
 
-  * PRIM ノードを停止するに** **理由は下記を参照)。
+  * PRIMノードを停止するには、コンテキストメニューをスクロールして「停止」をクリックします。**最初のテストではスワップを使用しないでください**（理由は下記参照）。
   * 2番目のノードでフェイルオーバーが発生し、そのノードが単独状態（緑色）になることを確認してください。
   * また、 Microsoft管理コンソール（MMC）を使用して、サービスのフェイルオーバーを確認します（ `stop_prim`スクリプトでノード1で停止し、 `start_prim`スクリプトでノード2で開始）。
 

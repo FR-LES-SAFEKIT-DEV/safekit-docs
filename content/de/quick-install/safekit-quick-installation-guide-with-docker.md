@@ -37,25 +37,25 @@ Bei einer Docker -Compose-Anwendung haben Sie eine **docker-compose.yml** Datei,
   * Führen Sie auf einem Server für jedes Volume in docker-compose.yml folgenden Befehl aus: **docker volume inspect volume_name**  
 Es wird **host directories of the docker volumes** zurückgegeben (diese Pfade sind in docker-compose.yml nicht angegeben).  
 Sie erhalten eine Liste von Pfaden im Format **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Gehen Sie zum Abschnitt „Schritt-für-Schritt-Konfiguration ** ** “ und 
+  * Gehen Sie zum Abschnitt **mit der schrittweisen Konfiguration** und 
     * Setzen Sie das **mirror.safe** -Modul ein.
-    * Legen Sie eine virtuelle IP-Adresse ** ** fest, die im Fehlerfall umgeschaltet wird.
+    * Legen Sie eine **virtuelle IP-Adresse** fest, die im Fehlerfall umgeschaltet wird.
     * die Liste festlegen **/var/lib/docker/volumes/ <volume_name>/_data** als **replizierte Verzeichnisse**
     * Fügen Sie jeweils in die Skripte start_prim und stop_prim ein: **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** und **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
 ### Beispiel 2 mit einer Docker -Anwendung, die eine Reihe von Containern startet {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
-Wir nehmen hier an, dass eine Docker Anwendung ** myappli ** eine Reihe von Containern startet.
+Wir nehmen hier an, dass eine Docker Anwendung **myappli** eine Reihe von Containern startet.
 
-  * Installieren Sie zunächst auf beiden Servern ** myappli ** ohne es zu starten.
+  * Installieren Sie zunächst auf beiden Servern **myappli** ohne es zu starten.
   * Auf einem Server die von myapply verwendeten Volumes auflisten: **ls /var/lib/docker/volumes**  
 Sie erhalten somit eine Liste von Pfaden im Format **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Gehen Sie zum Abschnitt „Schritt-für-Schritt-Konfiguration ** ** “ und 
+  * Gehen Sie zum Abschnitt **mit der schrittweisen Konfiguration** und 
     * Setzen Sie das **mirror.safe** -Modul ein.
-    * Legen Sie eine virtuelle IP-Adresse ** ** fest, die im Fehlerfall umgeschaltet wird.
+    * Legen Sie eine **virtuelle IP-Adresse** fest, die im Fehlerfall umgeschaltet wird.
     * die Liste festlegen **/var/lib/docker/volumes/ <volume_name>/_data** als **replizierte Verzeichnisse**
-    * Fügen Sie in den Skripten start_prim und stop_prim jeweils Folgendes ein: ** /.../myappli start ** und ** /.../myappli stop **
+    * Fügen Sie in den Skripten start_prim und stop_prim jeweils Folgendes ein: **/.../myappli start** und **/.../myappli stop**
 
 
 ### Beispiel 3 mit einem einfachen Docker Bild {#example-3-with-a-simple-docker-image}
@@ -69,12 +69,12 @@ Ermitteln Sie den Verzeichnispfad, in dem das Volume auf dem Host gespeichert is
   * Docker -Containererstellung  
 Erstellen Sie auf beiden Servern einen Docker-Container namens nginx , der an das vorherige Volume **docker container create --name mynginx -v replicated_vol:/usr/share/nginx/html -p 9011:80 nginx** gebunden ist.  
 Füllen Sie das Volume mit einer index.html -Datei: **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
-  * Gehen Sie zum Abschnitt „Schritt-für-Schritt-Konfiguration ** ** “ und 
+  * Gehen Sie zum Abschnitt **mit der schrittweisen Konfiguration** und 
     * Setzen Sie das **mirror.safe** -Modul ein.
-    * Legen Sie eine virtuelle IP-Adresse ** ** fest, die im Fehlerfall umgeschaltet wird.
+    * Legen Sie eine **virtuelle IP-Adresse** fest, die im Fehlerfall umgeschaltet wird.
     * **/var/lib/docker/storage/replicated_vol/_data** als repliziertes Verzeichnis festlegen
     * Fügen Sie jeweils in die Skripte start_prim und stop_prim ein: **docker start mynginx** und **docker stop mynginx**
-    * Nach der Konfiguration SafeKit testen Sie den Zugriff auf index.html mit ** http://vitual-ip:9011**
+    * Nach der Konfiguration SafeKit testen Sie den Zugriff auf index.html mit **http://vitual-ip:9011**
 
 
 ## Schrittweise Konfiguration der Lösung SafeKit / Docker {#step-by-step-configuration-of-the-safekit--docker-solution}

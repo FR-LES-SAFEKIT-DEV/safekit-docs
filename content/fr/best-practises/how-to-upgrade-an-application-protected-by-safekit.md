@@ -15,8 +15,8 @@ Il est essentiel de maintenir à jour les applications critiques pour l'entrepri
 
 Il existe deux modèles de déploiement courants :
 
-  * Machine virtuelle ** Haute disponibilité ** , où l'application s'exécute dans une machine virtuelle protégée gérée par SafeKit .
-  * ** Haute disponibilité au niveau de l'application ** , où l'application est installée sur deux serveurs.
+  * Machine virtuelle **Haute disponibilité** , où l'application s'exécute dans une machine virtuelle protégée gérée par SafeKit .
+  * **Haute disponibilité au niveau de l'application** , où l'application est installée sur deux serveurs.
 
 
 Chaque modèle propose des mécanismes de mise à niveau et des stratégies de restauration différents.
@@ -61,45 +61,45 @@ Dans un cluster SafeKit traditionnel, l'application est installée sur deux nœu
 
 Une mise à jour mineure modifie uniquement les fichiers binaires de l'application tout en préservant la compatibilité totale des données répliquées entre les versions. Le format des données répliquées restant inchangé, SafeKit prend en charge une mise à niveau progressive avec un temps d'arrêt minimal. 
 
-  1. Le cluster fonctionne initialement selon une configuration ** ✅ PRIM (nœud 1) / ✅ SECOND (nœud 2) ** . L'application s'exécute sur le nœud PRIM et les données répliquées sont synchronisées en continu avec le nœud SECOND. 
-  2. Arrêtez le module SafeKit sur le deuxième nœud ( ** ❌ ARRÊT (nœud 2) ** ), mettez à jour l'application, puis redémarrez le module. Pendant cette opération, l'application continue de fonctionner sur le nœud ** ✅ SEUL (nœud 1) ** et aucune interruption de service ne se produit. 
-  3. Après le redémarrage, le nœud mis à niveau rejoint le cluster en tant que ** ✅ SECOND (nœud 2) ** et resynchronise les données répliquées. 
-  4. Arrêtez le nœud PRIM ( ** ❌ ARRÊT (nœud 1) ** ). SafeKit effectue automatiquement un basculement et le nœud mis à niveau devient ** ✅ SEUL (nœud 2) ** . L'application redémarre sur ce nœud. L'indisponibilité est limitée à la durée du basculement et du redémarrage de l'application. 
+  1. Le cluster fonctionne initialement selon une configuration **✅ PRIM (nœud 1) / ✅ SECOND (nœud 2)** . L'application s'exécute sur le nœud PRIM et les données répliquées sont synchronisées en continu avec le nœud SECOND. 
+  2. Arrêtez le module SafeKit sur le deuxième nœud ( **❌ ARRÊT (nœud 2)** ), mettez à jour l'application, puis redémarrez le module. Pendant cette opération, l'application continue de fonctionner sur le nœud **✅ SEUL (nœud 1)** et aucune interruption de service ne se produit. 
+  3. Après le redémarrage, le nœud mis à niveau rejoint le cluster en tant que **✅ SECOND (nœud 2)** et resynchronise les données répliquées. 
+  4. Arrêtez le nœud PRIM ( **❌ ARRÊT (nœud 1)** ). SafeKit effectue automatiquement un basculement et le nœud mis à niveau devient **✅ SEUL (nœud 2)** . L'application redémarre sur ce nœud. L'indisponibilité est limitée à la durée du basculement et du redémarrage de l'application. 
   5. Si l'application mise à niveau fonctionne correctement dans l'état ALONE, mettez à niveau le nœud restant (nœud 1) et redémarrez son module SafeKit . 
-  6. Après resynchronisation, le cluster retrouve sa configuration normale ** ✅ SECOND (nœud 1) / ✅ PRIM (nœud 2) ** . Les rôles d'origine peuvent être rétablis manuellement via la console d'administration SafeKit ou automatiquement via la configuration SafeKit . 
+  6. Après resynchronisation, le cluster retrouve sa configuration normale **✅ SECOND (nœud 1) / ✅ PRIM (nœud 2)** . Les rôles d'origine peuvent être rétablis manuellement via la console d'administration SafeKit ou automatiquement via la configuration SafeKit . 
 
 
-Procédure de restauration ** **
+**procédure de restauration**
 
-  * À l'étape 5, arrêtez le nœud ** ✅ ALONE (nœud 2) ** .
-  * Forcer le nœud d'origine (nœud 1) à démarrer en tant que nœud principal ** SEUL (nœud 1) ** avec la version précédente de l'application.
+  * À l'étape 5, arrêtez le nœud **✅ ALONE (nœud 2)** .
+  * Forcer le nœud d'origine (nœud 1) à démarrer en tant que nœud principal **SEUL (nœud 1)** avec la version précédente de l'application.
   * Réinstallez la version précédente sur le nœud mis à niveau (nœud 2).
-  * Retour à une configuration ** ✅ PRIM (nœud 1) / ✅ SECOND (nœud 2) ** normale.
+  * Retour à une configuration **✅ PRIM (nœud 1) / ✅ SECOND (nœud 2)** normale.
 
 
-La mise à niveau complète est effectuée avec un temps d'arrêt limité à la transition de ** ✅ PRIM / ✅ SECOND ** à ** ❌ STOP / ✅ ALONE ** . 
+La mise à niveau complète est effectuée avec un temps d'arrêt limité à la transition de **✅ PRIM / ✅ SECOND** à **❌ STOP / ✅ ALONE** . 
 
 ### Mise à jour majeure de l'application {#app-level-ha-major}
 
 Une mise à jour majeure modifie le format ou la structure des données répliquées. Les données générées par la nouvelle version n'étant plus compatibles avec l'ancienne, une mise à jour progressive est impossible. 
 
-  1. Le cluster fonctionne initialement dans une configuration ** ✅ PRIM (nœud 1) / ✅ SECOND (nœud 2) ** . 
-  2. Arrêtez le DEUXIÈME nœud, puis le nœud PRIM. Le cluster passe à ** ❌ STOP (nœud 1) / ❌ STOP (nœud 2) ** . 
-  3. Mettez à jour l'ancien nœud PRIM et redémarrez-le. Le nœud démarre seul sous la forme ** ✅ SEUL (nœud 1) ** avec la nouvelle version de l'application. 
+  1. Le cluster fonctionne initialement dans une configuration **✅ PRIM (nœud 1) / ✅ SECOND (nœud 2)** . 
+  2. Arrêtez le DEUXIÈME nœud, puis le nœud PRIM. Le cluster passe à **❌ STOP (nœud 1) / ❌ STOP (nœud 2)** . 
+  3. Mettez à jour l'ancien nœud PRIM et redémarrez-le. Le nœud démarre seul sous la forme **✅ SEUL (nœud 1)** avec la nouvelle version de l'application. 
   4. Validez l'application mise à jour et vérifiez qu'elle fonctionne correctement. 
   5. Si la validation réussit, mettez à niveau le nœud restant et redémarrez son module SafeKit . 
-  6. Le nœud mis à niveau devient ** ✅ SECOND (nœud 2) ** , resynchronise les données de l'application et le cluster revient à une configuration normale ** ✅ PRIM (nœud 1) / ✅ SECOND (nœud 2) ** . 
+  6. Le nœud mis à niveau devient **✅ SECOND (nœud 2)** , resynchronise les données de l'application et le cluster revient à une configuration normale **✅ PRIM (nœud 1) / ✅ SECOND (nœud 2)** . 
 
 
-Procédure de restauration ** **
+**procédure de restauration**
 
-  * À l'étape 5, arrêtez le nœud ** ✅ ALONE (nœud 1) ** mis à niveau.
-  * Forcer le nœud non mis à niveau à démarrer en tant que nœud principal ** ✅ SEUL (nœud 2) ** .
+  * À l'étape 5, arrêtez le nœud **✅ ALONE (nœud 1)** mis à niveau.
+  * Forcer le nœud non mis à niveau à démarrer en tant que nœud principal **✅ SEUL (nœud 2)** .
   * Réinstallez la version précédente de l'application sur le nœud mis à niveau.
-  * Restaurez la configuration d'origine ** ✅ SECOND (nœud 1) / ✅ PRIM (nœud 2) ** .
+  * Restaurez la configuration d'origine **✅ SECOND (nœud 1) / ✅ PRIM (nœud 2)** .
 
 
-Étant donné que les données répliquées sont modifiées pendant la migration, le temps d'arrêt correspond à la période entre l'état ** ❌ STOP / ❌ STOP ** et le redémarrage du premier nœud mis à niveau en tant que ** ✅ ALONE ** . 
+Étant donné que les données répliquées sont modifiées pendant la migration, le temps d'arrêt correspond à la période entre l'état **❌ STOP / ❌ STOP** et le redémarrage du premier nœud mis à niveau en tant que **✅ ALONE** . 
 
 ### Pourquoi SafeKit simplifie les mises à jour d'applications {#why-safekit-simplifies-application-upgrades}
 

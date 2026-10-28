@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ O
 
 ## نظرة عامة على حل SafeKit / Oracle {#overview-of-the-safekit--oracle-solution}
 
-الحل موضح هنا: ** 💡 [ أبسط Oracle التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
+الحل موضح هنا: **💡 [ أبسط Oracle التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/oracle-high-availability-synchronous-replication-failover/>)** .
 
 ## تثبيت حل SafeKit / Oracle على Windows و Linux ( oracle.safe ) و {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

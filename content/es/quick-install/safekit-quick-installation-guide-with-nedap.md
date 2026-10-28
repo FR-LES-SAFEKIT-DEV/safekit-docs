@@ -13,11 +13,11 @@ topics: "Guía de instalación rápida de alta disponibilidad para Nedap , Limit
 {{%  insert-safekit-mirror-guide-es app="Nedap" mod="nedap"  %}}
  
 
-** 📘 [ Configuración de Nedap AOES con SafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) ** : todos los detalles están en este documento.
+**📘 [ Configuración de Nedap AOES con SafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)** : todos los detalles están en este documento.
 
 ## Descripción general de la solución SafeKit / Nedap {#overview-of-the-safekit--nedap-solution}
 
-La solución se describe aquí: ** 💡 [ La más sencilla Nedap Alta disponibilidad: replicación síncrona de 2 nodos y conmutación por error ](</es/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+La solución se describe aquí: **💡 [ La más sencilla Nedap Alta disponibilidad: replicación síncrona de 2 nodos y conmutación por error ](</es/solutions/nedap-high-availability-synchronous-replication-failover/>)** .
 
 ## Instalación de la solución SafeKit / Nedap en Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 

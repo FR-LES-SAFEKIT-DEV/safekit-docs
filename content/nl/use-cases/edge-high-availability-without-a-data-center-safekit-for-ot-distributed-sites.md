@@ -25,11 +25,11 @@ SafeKit is precies voor deze behoefte ontwikkeld. Het zorgt ervoor dat edge-appl
 
 SafeKit transformeert twee standaard edge-servers (van elk merk, fysiek of virtueel) in een plug-and-play HA-cluster — zonder gedeelde opslag, SAN of speciale hardware. Eén lichtgewicht softwarepakket biedt:
 
-  * ** Realtime synchrone bestandsreplicatie ** — gegevens worden byte-niveau naar de standby-server gespiegeld op het moment van schrijven
-  * ** Automatische failover ** — als de primaire server uitvalt, neemt de standby-server het binnen enkele seconden over zonder menselijke tussenkomst.
-  * ** Optionele netwerkbelastingverdeling ** — voor actieve-actieve implementaties waarbij beide servers de werklast delen
-  * ** Webconsole ** — beheer via de browser, op afstand toegankelijk via HTTPS, vereist geen expertise ter plaatse
-  * ** Stille, scriptbare installatie ** — geschikt voor OEM-integratie en massale uitrol over honderden gedistribueerde locaties
+  * **Realtime synchrone bestandsreplicatie** — gegevens worden byte-niveau naar de standby-server gespiegeld op het moment van schrijven
+  * **Automatische failover** — als de primaire server uitvalt, neemt de standby-server het binnen enkele seconden over zonder menselijke tussenkomst.
+  * **Optionele netwerkbelastingverdeling** — voor actieve-actieve implementaties waarbij beide servers de werklast delen
+  * **Webconsole** — beheer via de browser, op afstand toegankelijk via HTTPS, vereist geen expertise ter plaatse
+  * **Stille, scriptbare installatie** — geschikt voor OEM-integratie en massale uitrol over honderden gedistribueerde locaties
 
 
 Er hoeft geen SAN aangeschaft te worden, er is geen Windows Server Datacenter-licentie vereist, geen expertise in Linux clusterbesturingssysteem nodig en geen speciale clusterhardware. De volledige HA-stack is één softwarepakket.
@@ -54,12 +54,12 @@ Honderden gedistribueerde clusters | Ontworpen voor gedistribueerde onderneminge
 
 OT-omgevingen (Operational Technology) — SCADA, BMS, fysieke beveiliging, industriële besturing — hebben eisen die fundamenteel verschillen van die van IT-datacenters:
 
-  * ** Geen IT-personeel ter plaatse. ** Een onderstation, een afgelegen pompstation of een schip heeft geen systeembeheerder. HA moet zelfbeherend zijn.
-  * ** Netwerken zonder internetverbinding of met beperkte bandbreedte. ** Veel OT-locaties hebben geen internettoegang en een beperkte WAN-bandbreedte. HA-software moet volledig offline kunnen werken.
-  * ** 24/7 beschikbaarheid, geen tolerantie voor complexiteit. ** Het stilleggen van een productielijn, het uitvallen van videobewaking of het onderbreken van toegangscontrole kost veel meer dan de HA-software zelf.
-  * ** Lange levensduur van apparatuur. ** OT-servers kunnen 10-15 jaar meegaan. De HA-oplossing moet stabiel en onderhoudsarm zijn en geen constante updates vereisen.
-  * ** Alleen standaard x86-hardware. ** Geen budget of rechtvaardiging voor SAN of dedicated clusterknooppunten op een externe industriële locatie.
-  * ** Onverdraagzaamheid voor complexiteit op besturingssysteemniveau. ** Pacemaker, Corosync of WSFC vereisen clusterexpertise die OT-operators simpelweg niet hebben en ook niet nodig zouden moeten hebben.
+  * **Geen IT-personeel ter plaatse.** Een onderstation, een afgelegen pompstation of een schip heeft geen systeembeheerder. HA moet zelfbeherend zijn.
+  * **Netwerken zonder internetverbinding of met beperkte bandbreedte.** Veel OT-locaties hebben geen internettoegang en een beperkte WAN-bandbreedte. HA-software moet volledig offline kunnen werken.
+  * **24/7 beschikbaarheid, geen tolerantie voor complexiteit.** Het stilleggen van een productielijn, het uitvallen van videobewaking of het onderbreken van toegangscontrole kost veel meer dan de HA-software zelf.
+  * **Lange levensduur van apparatuur.** OT-servers kunnen 10-15 jaar meegaan. De HA-oplossing moet stabiel en onderhoudsarm zijn en geen constante updates vereisen.
+  * **Alleen standaard x86-hardware.** Geen budget of rechtvaardiging voor SAN of dedicated clusterknooppunten op een externe industriële locatie.
+  * **Onverdraagzaamheid voor complexiteit op besturingssysteemniveau.** Pacemaker, Corosync of WSFC vereisen clusterexpertise die OT-operators simpelweg niet hebben en ook niet nodig zouden moeten hebben.
 
 
 Het SAN-loze model met twee servers en automatische failover van SafeKit pakt al deze beperkingen direct aan.
@@ -98,11 +98,11 @@ Typische RTO | 1–5 minuten | Minder dan 1 minuut (configureerbaar)
   
 ## Technische minimumvereisten {#technical-minimum-requirements}
 
-  * ** Servers: ** 2 standaard x86-servers of VM's (elk hardwaremerk, fysiek of virtueel) of ARM (alleen Linux )
-  * ** OS: ** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * ** Netwerk: ** 1 Gbps LAN voor replicatie; een speciaal heartbeat-netwerk wordt aanbevolen.
-  * ** Opslag: ** Alleen lokale schijven — geen SAN, geen NAS, geen gedeelde opslag van welke aard dan ook.
-  * ** Geen speciale OS-editie vereist. ** — Windows Server Standard is voldoende; geen Datacenter-licentie vereist.
+  * **Servers:** 2 standaard x86-servers of VM's (elk hardwaremerk, fysiek of virtueel) of ARM (alleen Linux )
+  * **OS:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
+  * **Netwerk:** 1 Gbps LAN voor replicatie; een speciaal heartbeat-netwerk wordt aanbevolen.
+  * **Opslag:** Alleen lokale schijven — geen SAN, geen NAS, geen gedeelde opslag van welke aard dan ook.
+  * **Geen speciale OS-editie vereist.** — Windows Server Standard is voldoende; geen Datacenter-licentie vereist.
 
 
 Voor volledige technische specificaties, afmetingsbeperkingen en inkoopcriteria, zie de technische referentie 📘 [ RFP/RFI ](</nl/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) .

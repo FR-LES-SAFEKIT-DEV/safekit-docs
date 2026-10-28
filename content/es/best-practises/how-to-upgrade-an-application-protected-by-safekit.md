@@ -15,8 +15,8 @@ Mantener actualizadas las aplicaciones críticas para el negocio es fundamental 
 
 Existen dos modelos de despliegue comunes:
 
-  * Alta disponibilidad de la máquina virtual ** ** , donde la aplicación se ejecuta dentro de una máquina virtual protegida administrada por SafeKit .
-  * ** Alta disponibilidad a nivel de aplicación ** , donde la aplicación está instalada en dos servidores.
+  * **Alta disponibilidad de máquina virtual** , donde la aplicación se ejecuta dentro de una máquina virtual protegida administrada por SafeKit .
+  * **Alta disponibilidad a nivel de aplicación** , donde la aplicación está instalada en dos servidores.
 
 
 Cada modelo ofrece diferentes mecanismos de actualización y estrategias de reversión.
@@ -61,45 +61,45 @@ En un clúster SafeKit tradicional, la aplicación se instala en dos nodos: el n
 
 Una actualización menor modifica únicamente los binarios de la aplicación, manteniendo la compatibilidad total de los datos replicados entre versiones. Dado que el formato de los datos replicados no cambia, SafeKit admite una actualización progresiva con un tiempo de inactividad mínimo. 
 
-  1. El clúster se ejecuta inicialmente en una configuración ** ✅ PRIM (nodo 1) / ✅ SEGUNDO (nodo 2). La aplicación se ejecuta en el nodo ** y los datos replicados se sincronizan continuamente con el nodo SEGUNDO. 
-  2. Detenga el módulo SafeKit en el SEGUNDO nodo ( ** ❌ STOP (nodo 2) ** ), actualice la aplicación y reinicie el módulo. Durante esta operación, la aplicación continúa ejecutándose en el ** ✅ ALONE (nodo 1) ** y no se produce ninguna interrupción del servicio. 
-  3. Después del reinicio, el nodo actualizado se reincorpora al clúster como ** ✅ SEGUNDO (nodo 2) ** y resincroniza los datos replicados. 
-  4. Detenga el nodo PRIM ( ** ❌ STOP (nodo 1) ** ). SafeKit realiza automáticamente una conmutación por error y el nodo actualizado se convierte en ** ✅ ALONE (nodo 2) ** . La aplicación se reinicia en este nodo. El tiempo de inactividad se limita al tiempo de conmutación por error y reinicio de la aplicación. 
+  1. El clúster se ejecuta inicialmente en una configuración **✅ PRIM (nodo 1) / ✅ SEGUNDO (nodo 2). La aplicación se ejecuta en el nodo** y los datos replicados se sincronizan continuamente con el nodo SEGUNDO. 
+  2. Detenga el módulo SafeKit en el SEGUNDO nodo ( **❌ STOP (nodo 2)** ), actualice la aplicación y reinicie el módulo. Durante esta operación, la aplicación continúa ejecutándose en el **✅ ALONE (nodo 1)** y no se produce ninguna interrupción del servicio. 
+  3. Después del reinicio, el nodo actualizado se reincorpora al clúster como **✅ SEGUNDO (nodo 2)** y resincroniza los datos replicados. 
+  4. Detenga el nodo PRIM ( **❌ STOP (nodo 1)** ). SafeKit realiza automáticamente una conmutación por error y el nodo actualizado se convierte en **✅ ALONE (nodo 2)** . La aplicación se reinicia en este nodo. El tiempo de inactividad se limita al tiempo de conmutación por error y reinicio de la aplicación. 
   5. Si la aplicación actualizada funciona correctamente en el estado ALONE, actualice el nodo restante (nodo 1) y reinicie su módulo SafeKit . 
-  6. Tras la resincronización, el clúster vuelve a una configuración normal ** ✅ SEGUNDO (nodo 1) / ✅ PRINCIPAL (nodo 2) ** . Los roles originales se pueden restaurar manualmente mediante la consola de administración SafeKit o automáticamente a través de la configuración SafeKit . 
+  6. Tras la resincronización, el clúster vuelve a una configuración normal **✅ SEGUNDO (nodo 1) / ✅ PRINCIPAL (nodo 2)** . Los roles originales se pueden restaurar manualmente mediante la consola de administración SafeKit o automáticamente a través de la configuración SafeKit . 
 
 
-Procedimiento de reversión ** **
+**Procedimiento de reversión**
 
-  * En el paso 5, detenga el nodo ** ✅ SOLO (nodo 2) ** .
-  * Obliga al nodo original (nodo 1) a iniciarse como primario ** SOLO (nodo 1) ** con la versión anterior de la aplicación.
+  * En el paso 5, detenga el nodo **✅ SOLO (nodo 2)** .
+  * Obliga al nodo original (nodo 1) a iniciarse como primario **SOLO (nodo 1)** con la versión anterior de la aplicación.
   * Reinstale la versión anterior en el nodo actualizado (nodo 2).
-  * Regrese a una configuración normal ** ✅ PRIM (nodo 1) / ✅ SECOND (nodo 2) ** .
+  * Regrese a una configuración normal **✅ PRIM (nodo 1) / ✅ SECOND (nodo 2)** .
 
 
-La actualización completa se realiza con un tiempo de inactividad limitado a la transición de ** ✅ PRIM / ✅ SECOND ** a ** ❌ STOP / ✅ ALONE ** . 
+La actualización completa se realiza con un tiempo de inactividad limitado a la transición de **✅ PRIM / ✅ SECOND** a **❌ STOP / ✅ ALONE** . 
 
 ### Actualización importante de la aplicación {#app-level-ha-major}
 
 Una actualización importante modifica el formato o la estructura de los datos replicados. Dado que los datos generados por la nueva versión ya no son compatibles con la anterior, no es posible realizar una actualización progresiva. 
 
-  1. El clúster se ejecuta inicialmente en una configuración ** ✅ PRIM (nodo 1) / ✅ SEGUNDO (nodo 2) ** . 
-  2. Detenga el SEGUNDO nodo y luego el nodo PRIM. El clúster pasa a ** ❌ STOP (nodo 1) / ❌ STOP (nodo 2) ** . 
-  3. Actualiza el nodo PRIM anterior y reinícialo. El nodo se inicia solo como ** ✅ SOLO (nodo 1) ** con la nueva versión de la aplicación. 
+  1. El clúster se ejecuta inicialmente en una configuración **✅ PRIM (nodo 1) / ✅ SEGUNDO (nodo 2)** . 
+  2. Detenga el SEGUNDO nodo y luego el nodo PRIM. El clúster pasa a **❌ STOP (nodo 1) / ❌ STOP (nodo 2)** . 
+  3. Actualiza el nodo PRIM anterior y reinícialo. El nodo se inicia solo como **✅ SOLO (nodo 1)** con la nueva versión de la aplicación. 
   4. Valide la aplicación actualizada y verifique que funcione correctamente. 
   5. Si la validación es exitosa, actualice el nodo restante y reinicie su módulo SafeKit . 
-  6. El nodo actualizado se convierte en ** ✅ SEGUNDO (nodo 2) ** , resincroniza los datos de la aplicación y el clúster vuelve a una configuración normal ** ✅ PRIM (nodo 1) / ✅ SEGUNDO (nodo 2) ** . 
+  6. El nodo actualizado se convierte en **✅ SEGUNDO (nodo 2)** , resincroniza los datos de la aplicación y el clúster vuelve a una configuración normal **✅ PRIM (nodo 1) / ✅ SEGUNDO (nodo 2)** . 
 
 
-Procedimiento de reversión ** **
+**Procedimiento de reversión**
 
-  * En el paso 5, detenga el nodo ** ✅ ALONE (nodo 1) ** actualizado.
-  * Obligar al nodo no actualizado a iniciarse como primario ** ✅ SOLO (nodo 2) ** .
+  * En el paso 5, detenga el nodo **✅ ALONE (nodo 1)** actualizado.
+  * Obligar al nodo no actualizado a iniciarse como primario **✅ SOLO (nodo 2)** .
   * Reinstale la versión anterior de la aplicación en el nodo actualizado.
-  * Restaurar la configuración original ** ✅ SEGUNDO (nodo 1) / ✅ PRIMARIO (nodo 2) ** .
+  * Restaurar la configuración original **✅ SEGUNDO (nodo 1) / ✅ PRIMARIO (nodo 2)** .
 
 
-Debido a que los datos replicados se modifican durante la migración, el tiempo de inactividad corresponde al período entre el estado ** ❌ STOP / ❌ STOP ** y el reinicio del primer nodo actualizado como ** ✅ ALONE ** . 
+Debido a que los datos replicados se modifican durante la migración, el tiempo de inactividad corresponde al período entre el estado **❌ STOP / ❌ STOP** y el reinicio del primer nodo actualizado como **✅ ALONE** . 
 
 ### Por qué SafeKit simplifica las actualizaciones de aplicaciones {#why-safekit-simplifies-application-upgrades}
 

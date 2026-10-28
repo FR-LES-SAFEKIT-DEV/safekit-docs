@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide haute disponibilité pour IIS et SafeKit li
 
 ## Présentation de la solution SafeKit / IIS {#overview-of-the-safekit--iis-solution}
 
-La solution est décrite ici : ** 💡 [ SafeKit : Logiciel tout-en-un IIS équilibrage de charge et de haute disponibilité ](</fr/solutions/iis-load-balancing-failover/>) ** .
+La solution est décrite ici : **💡 [ SafeKit : Logiciel tout-en-un IIS équilibrage de charge et de haute disponibilité ](</fr/solutions/iis-load-balancing-failover/>)** .
 
 ## Installation de la solution SafeKit / IIS sur Windows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

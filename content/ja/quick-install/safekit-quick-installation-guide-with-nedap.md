@@ -13,11 +13,11 @@ topics: "Nedapの高可用性クイックインストールガイド、 SafeKit�
 {{%  insert-safekit-mirror-guide-ja app="Nedap" mod="nedap"  %}}
  
 
-** 📘 [ Nedap AOES とSafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) **の構成: すべての詳細はこのドキュメントに記載されています。
+**📘 [ Nedap AOES とSafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)**の構成: すべての詳細はこのドキュメントに記載されています。
 
 ## SafeKit / Nedapソリューションの概要 {#overview-of-the-safekit--nedap-solution}
 
-解決策はここに記載されています: ** 💡 [最もシンプルなNedap高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
+解決策はここに記載されています: **💡 [最もシンプルなNedap高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/nedap-high-availability-synchronous-replication-failover/>)** 。
 
 ## SafeKit / NedapソリューションをWindows ( nedap.safe )にインストールします。 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 

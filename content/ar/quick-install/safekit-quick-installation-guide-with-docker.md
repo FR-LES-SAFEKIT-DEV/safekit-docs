@@ -37,25 +37,25 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ D
   * على خادم واحد، لكل وحدة تخزين في docker-compose.yml ، قم بتشغيل هذا الأمر: **docker volume inspect volume_name**  
 سوف يعيد **host directories of the docker volumes** (هذه المسارات غير موجودة في docker-compose.yml ).  
 ستحصل على قائمة بالمسارات على النحو التالي: **/var/lib/docker/volumes/ <volume_name>/_data**
-  * انتقل إلى قسم ** الخاص بتكوين ** خطوة بخطوة و 
+  * انتقل إلى قسم **الخاص بتكوين** خطوة بخطوة و 
     * قم بنشر وحدة **mirror.safe**
-    * قم بتعيين عنوان IP افتراضي ** ** سيتم التبديل إليه في حالة الفشل.
-    * قم بتعيين قائمة **/var/lib/docker/volumes/ <volume_name>/_data** كدليل ** المنسوخ **
+    * قم بتعيين **عنوان IP افتراضي** سيتم التبديل إليه في حالة الفشل
+    * قم بتعيين قائمة **/var/lib/docker/volumes/ <volume_name>/_data** كدليل **المنسوخ**
     * ضع على التوالي في البرامج النصية start_prim و stop_prim : **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** و **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
 ### مثال 2 مع تطبيق Docker يبدأ مجموعة من الحاويات {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
-نفترض هنا تطبيق Docker ** myappli ** يبدأ مجموعة من الحاويات.
+نفترض هنا تطبيق Docker **myappli** يبدأ مجموعة من الحاويات.
 
-  * أولاً، على كلا الخادمين، قم بتثبيت ** myappli ** دون تشغيلها
+  * أولاً، على كلا الخادمين، قم بتثبيت **myappli** دون تشغيلها
   * على أحد الخوادم، اعرض قائمة وحدات التخزين المستخدمة بواسطة myapply : **ls /var/lib/docker/volumes**  
 وبالتالي، ستحصل على قائمة بالمسارات على النحو التالي: **/var/lib/docker/volumes/ <volume_name>/_data**
-  * انتقل إلى قسم ** الخاص بتكوين ** خطوة بخطوة و 
+  * انتقل إلى قسم **الخاص بتكوين** خطوة بخطوة و 
     * قم بنشر وحدة **mirror.safe**
-    * قم بتعيين عنوان IP افتراضي ** ** سيتم التبديل إليه في حالة الفشل.
-    * قم بتعيين قائمة **/var/lib/docker/volumes/ <volume_name>/_data** كدليل ** المنسوخ **
-    * ضع على التوالي في البرامج النصية start_prim و stop_prim ما يلي: ** /.../myappli بدء ** و ** و /.../myappli إيقاف **
+    * قم بتعيين **عنوان IP افتراضي** سيتم التبديل إليه في حالة الفشل
+    * قم بتعيين قائمة **/var/lib/docker/volumes/ <volume_name>/_data** كدليل **المنسوخ**
+    * ضع على التوالي في البرامج النصية start_prim و stop_prim ما يلي: **/.../myappli بدء** و **و /.../myappli إيقاف**
 
 
 ### مثال 3 مع صورة بسيطة Docker {#example-3-with-a-simple-docker-image}
@@ -69,12 +69,12 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ D
   * إنشاء حاوية Docker  
 على كلا الخادمين، أنشئ حاوية Docker باسم nginx مرتبطة بوحدة التخزين السابقة: **docker container create --name mynginx -v replicated_vol:/usr/share/nginx/html -p 9011:80 nginx**  
 قم بتعبئة وحدة التخزين بملف index.html : **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
-  * انتقل إلى قسم ** الخاص بتكوين ** خطوة بخطوة و 
+  * انتقل إلى قسم **الخاص بتكوين** خطوة بخطوة و 
     * قم بنشر وحدة **mirror.safe**
-    * قم بتعيين عنوان IP افتراضي ** ** سيتم التبديل إليه في حالة الفشل.
+    * قم بتعيين **عنوان IP افتراضي** سيتم التبديل إليه في حالة الفشل
     * قم بتعيين **/var/lib/docker/storage/replicated_vol/_data** كدليل مُكرر
     * ضع على التوالي في البرامج النصية start_prim و stop_prim : **docker start mynginx** و **docker stop mynginx**
-    * بعد تهيئة SafeKit ، اختبر الوصول إلى index.html باستخدام ** و http://vitual-ip:9011**
+    * بعد تهيئة SafeKit ، اختبر الوصول إلى index.html باستخدام **و http://vitual-ip:9011**
 
 
 ## خطوات تكوين حل SafeKit / Docker {#step-by-step-configuration-of-the-safekit--docker-solution}

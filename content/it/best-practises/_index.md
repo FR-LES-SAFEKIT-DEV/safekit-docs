@@ -11,7 +11,7 @@ topics: "SafeKit Procedure ottimali per il clustering: architettura HA, replica 
 
 ## SafeKit Procedure ottimali per il clustering: architettura HA, replica e ridondanza {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
-** Procedure consigliate per clustering, replica e ridondanza ad alta disponibilità **
+**Procedure consigliate per clustering, replica e ridondanza ad alta disponibilità**
 
 Procedure consigliate per l'alta disponibilità | Procedure consigliate per la replica | Procedure consigliate per il clustering  
 ---|---|---  

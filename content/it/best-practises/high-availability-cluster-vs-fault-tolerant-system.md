@@ -33,9 +33,9 @@ I sistemi a tolleranza di errore gestiscono solo i guasti hardware e non quelli 
 
 ## Vantaggi e svantaggi dell'alta disponibilità e della tolleranza ai guasti {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
-Quando si tratta di proteggere le applicazioni critiche dai guasti, esistono due approcci principali: il clustering ad alta disponibilità software ** ) e i sistemi a tolleranza di errore ** ** e ** ). Ciascun approccio offre diversi compromessi in termini di costi, flessibilità, tempi di ripristino e requisiti hardware. Comprendere queste differenze aiuta a scegliere la soluzione più adatta alle proprie esigenze specifiche.
+Quando si tratta di proteggere le applicazioni critiche dai guasti, esistono due approcci principali: il clustering ad alta disponibilità software **) e i sistemi a tolleranza di errore** **e** ). Ciascun approccio offre diversi compromessi in termini di costi, flessibilità, tempi di ripristino e requisiti hardware. Comprendere queste differenze aiuta a scegliere la soluzione più adatta alle proprie esigenze specifiche.
 
-** Confronto tra clustering ad alta disponibilità software e sistemi tolleranti ai guasti **
+**Confronto tra clustering ad alta disponibilità software e sistemi tolleranti ai guasti**
 
 Criteri | Cluster software ad alta disponibilità | Sistema tollerante ai guasti  
 ---|---|---  
@@ -47,7 +47,7 @@ RTO/RPO | Il tempo di ripristino con SafeKit ( [ RTO ](</it/best-practises/what-
 Flessibilità | Può essere eseguito su qualsiasi tipo di server con sistema operativo standard Windows e Linux | Dipende da hardware specifico o da hypervisor specifici  
 Adatto per | [ Editor di software che desiderano aggiungere una semplice opzione di alta disponibilità alla propria applicazione ](</it/use-cases/application-clustering-software/>) | Ambiente in cui il guasto hardware è la principale preoccupazione  
   
-In sintesi, ** , l'alta disponibilità del software con ** SafeKit offre una soluzione flessibile ed economica che funziona su hardware standard e supporta aggiornamenti progressivi, con tempi di inattività quasi nulli (RTO ~1 minuto) e nessuna perdita di dati. I sistemi a tolleranza di errore offrono un failover istantaneo (RTO = 0) ma richiedono hardware dedicato e mancano di flessibilità per aggiornamenti software indipendenti.
+In sintesi, **, l'alta disponibilità del software con** SafeKit offre una soluzione flessibile ed economica che funziona su hardware standard e supporta aggiornamenti progressivi, con tempi di inattività quasi nulli (RTO ~1 minuto) e nessuna perdita di dati. I sistemi a tolleranza di errore offrono un failover istantaneo (RTO = 0) ma richiedono hardware dedicato e mancano di flessibilità per aggiornamenti software indipendenti.
 
 
 {{%  insert-safekit-hub-it  %}}

@@ -37,25 +37,25 @@ Docker 구성 애플리케이션의 경우, 애플리케이션과 모든 컨테�
   * 한 서버에서 docker-compose.yml 의 각 볼륨에 대해 다음 명령을 실행하십시오: **docker volume inspect volume_name**  
 그러면 **host directories of the docker volumes** 가 반환됩니다( docker-compose.yml 에는 이러한 경로가 제공되지 않습니다).  
 경로 목록은 **/var/lib/docker/volumes/ <volume_name>/_data** 형식으로 표시됩니다.
-  * ** 단계별 구성 ** 섹션으로 이동하십시오. 
+  * **단계별 구성** 섹션으로 이동하십시오. 
     * **mirror.safe** 모듈을 배포합니다.
-    * 장애 발생 시 전환될 가상 IP 주소 ** ** 를 설정합니다.
-    * **/var/lib/docker/volumes/ <volume_name>/_data** 목록을 ** 로 설정하고 복제된 디렉터리 ** 를 지정합니다.
+    * 장애 발생 시 전환될 **가상 IP 주소를** 설정합니다.
+    * **/var/lib/docker/volumes/ <volume_name>/_data** 목록을 **로 설정하고 복제된 디렉터리** 를 지정합니다.
     * start_prim 및 stop_prim 스크립트에 각각 **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** 및 **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop** 넣으세요.
 
 
 ### 예제 2: Docker 애플리케이션이 컨테이너 세트를 시작하는 예 {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
-여기서는 Docker 애플리케이션, ** myappli ** 일련의 컨테이너를 시작한다고 가정합니다.
+여기서는 Docker 애플리케이션, **myappli** 일련의 컨테이너를 시작한다고 가정합니다.
 
-  * 먼저 두 서버 모두에 ** myappli ** 설치하되 실행하지 마십시오.
+  * 먼저 두 서버 모두에 **myappli** 설치하되 실행하지 마십시오.
   * 한 서버에서 myapply : **ls /var/lib/docker/volumes** 가 사용하는 볼륨 목록을 표시합니다.  
 따라서 **/var/lib/docker/volumes/ <volume_name>/_data** 와 같은 경로 목록을 얻게 됩니다.
-  * ** 단계별 구성 ** 섹션으로 이동하십시오. 
+  * **단계별 구성** 섹션으로 이동하십시오. 
     * **mirror.safe** 모듈을 배포합니다.
-    * 장애 발생 시 전환될 가상 IP 주소 ** ** 를 설정합니다.
-    * **/var/lib/docker/volumes/ <volume_name>/_data** 목록을 ** 로 설정하고 복제된 디렉터리 ** 를 지정합니다.
-    * start_prim 및 stop_prim 스크립트에 각각 다음을 입력하십시오: ** /.../myappli 시작 ** 및 ** /.../myappli 중지 **
+    * 장애 발생 시 전환될 **가상 IP 주소를** 설정합니다.
+    * **/var/lib/docker/volumes/ <volume_name>/_data** 목록을 **로 설정하고 복제된 디렉터리** 를 지정합니다.
+    * start_prim 및 stop_prim 스크립트에 각각 다음을 입력하십시오: **/.../myappli 시작** 및 **/.../myappli 중지**
 
 
 ### 간단한 Docker 이미지 사용한 예제 3 {#example-3-with-a-simple-docker-image}
@@ -69,12 +69,12 @@ Docker 구성 애플리케이션의 경우, 애플리케이션과 모든 컨테�
   * Docker 컨테이너 생성  
 두 서버 모두에서 이전 볼륨인 **docker container create --name mynginx -v replicated_vol:/usr/share/nginx/html -p 9011:80 nginx** 에 바인딩되는 nginx Docker 컨테이너를 생성합니다.  
 볼륨에 index.html 파일 몇 개를 채워 넣으세요: **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
-  * ** 단계별 구성 ** 섹션으로 이동하십시오. 
+  * **단계별 구성** 섹션으로 이동하십시오. 
     * **mirror.safe** 모듈을 배포합니다.
-    * 장애 발생 시 전환될 가상 IP 주소 ** ** 를 설정합니다.
+    * 장애 발생 시 전환될 **가상 IP 주소를** 설정합니다.
     * **/var/lib/docker/storage/replicated_vol/_data** 복제 디렉터리로 설정합니다.
     * start_prim 및 stop_prim 스크립트에 각각 **docker start mynginx** 및 **docker stop mynginx** 넣으세요.
-    * SafeKit 구성 후, ** http://vitual-ip:9011** 사용하여 index.html 에 대한 접근을 테스트합니다.
+    * SafeKit 구성 후, **http://vitual-ip:9011** 사용하여 index.html 에 대한 접근을 테스트합니다.
 
 
 ## SafeKit / Docker 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--docker-solution}

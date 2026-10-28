@@ -166,7 +166,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "权限": " http://** < virtual-ip> ** /IDP "
+        "权限": " http://**< virtual-ip>** /IDP "
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,9 +230,9 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 
 根据图中所示的菜单，在节点 1 上执行以下步骤：
 
-  * 右键单击任务栏中的** Milestone管理服务器**图标。
+  * 右键单击任务栏中的**Milestone管理服务器**图标。
   * **停止管理服务器服务**
-  * 然后选择**服务器配置器... **并注册虚拟 IP 地址。
+  * 然后选择**服务器配置器...**并注册虚拟 IP 地址。
   * **启动管理服务器服务**
 
 
@@ -251,7 +251,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![注](/wp-content/uploads/2022/07/note.png)
 
 
-注意：要注册Milestone 2020 R2 之前的版本，请使用**更改加密设置... **
+注意：要注册Milestone 2020 R2 之前的版本，请使用**更改加密设置...**
 
 
 ![在Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)中注册管理服务器
@@ -267,9 +267,9 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 
 根据图片所示：
 
-  1. 在节点 1 上启动** Milestone XProtect管理客户端** 。
+  1. 在节点 1 上启动**Milestone XProtect管理客户端** 。
   2. 在**工具**菜单中，选择**注册服务** 。 
-     * 在**添加/删除**注册服务”窗口中，选择列表中的一项服务，然后单击“ ** ** 。
+     * 在**添加/删除**注册服务”窗口中，选择列表中的一项服务，然后单击“ **** 。
      * 在**编辑已注册服务**窗口中，将服务的 URL 地址更改为与原 URL 地址相同但包含虚拟 IP 地址的地址。
      * 对窗口中列出的所有服务重复这些步骤。
   3. 在同一窗口中，单击**网络** 。 
@@ -289,10 +289,10 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 
 启动Milestone XProtect管理客户端时，必须使用“ Windows身份验证”或“基本身份验证”进行身份验证（ [点击此处查看屏幕截图](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) ）。
 
-打开** Milestone XProtect管理客户端** ，然后在**安全/角色**中打开（参见图片）
+打开**Milestone XProtect管理客户端** ，然后在**安全/角色**中打开（参见图片）
 
-  * 将Windows组** BUILTIN\Administrators **设置为 。这样，辅助服务器上的管理员用户将能够使用“ Windows身份验证”连接到辅助服务器上的Milestone 。
-  * 创建一个使用“基本身份验证”的用户（图中为** Admin ** ），以确保在故障转移后能够在备用节点上重新进行身份验证。对于“基本身份验证”，用户名/密码存储在 SQL 数据库中，故障转移后将在备用节点上检索。
+  * 将Windows组**BUILTIN\Administrators**设置为 。这样，辅助服务器上的管理员用户将能够使用“ Windows身份验证”连接到辅助服务器上的Milestone 。
+  * 创建一个使用“基本身份验证”的用户（图中为**Admin** ），以确保在故障转移后能够在备用节点上重新进行身份验证。对于“基本身份验证”，用户名/密码存储在 SQL 数据库中，故障转移后将在备用节点上检索。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,7 +337,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "权限": " http://** < virtual-ip> ** /IDP "
+        "权限": " http://**< virtual-ip>** /IDP "
 
 ### 14. 在节点 2 的桌面上，注册管理服务器到虚拟 IP 地址 {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
@@ -426,7 +426,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 
 ### 18. 测试 {#18-testing}
 
-  * 向下滚动 PRIM 节点的上下文菜单并单击“停止”来停止该** **原因见下文）。
+  * 向下滚动 PRIM 节点的上下文菜单并单击“停止”来停止该****原因见下文）。
   * 确认第二个节点上是否存在故障转移，该节点应变为单独运行（绿色）。
   * 使用Microsoft管理控制台 (MMC) 检查服务的故障转移（在`stop_prim`脚本中在节点 1 上停止，在`start_prim`脚本中在节点 2 上启动）。
 

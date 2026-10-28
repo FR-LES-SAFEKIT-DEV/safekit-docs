@@ -15,7 +15,7 @@ topics: "IIS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 �
 
 ## SafeKit / IIS 솔루션 개요 {#overview-of-the-safekit--iis-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : 올인원 IIS 로드 밸런싱 및 고가용성 소프트웨어 ](</ko/solutions/iis-load-balancing-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ SafeKit : 올인원 IIS 로드 밸런싱 및 고가용성 소프트웨어 ](</ko/solutions/iis-load-balancing-failover/>)** .
 
 ## SafeKit / IIS 솔루션의 Windows ( iis_farm.safe ) 및 설치 {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

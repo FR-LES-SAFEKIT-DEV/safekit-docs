@@ -11,7 +11,7 @@ topics: "SafeKit高可用性、🔍 SafeKit高可用性ナビゲーションハ�
 
 ## SafeKit高可用性の無料トライアル、技術文書、製品情報 {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
-** SafeKitリソース: 無料トライアル、ドキュメント、製品情報**
+**SafeKitリソース: 無料トライアル、ドキュメント、製品情報**
 
 無料トライアル|技術資料|製品情報  
 ---|---|---  

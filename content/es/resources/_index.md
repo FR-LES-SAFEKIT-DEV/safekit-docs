@@ -11,7 +11,7 @@ topics: "Prueba gratuita, documentación técnica e información del producto pa
 
 ## Prueba gratuita, documentación técnica e información del producto para SafeKit de alta disponibilidad {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
-** SafeKit Recursos: Prueba gratuita, documentación e información del producto **
+**SafeKit Recursos: Prueba gratuita, documentación e información del producto**
 
 Prueba gratuita | Documentación técnica | Información del producto  
 ---|---|---  

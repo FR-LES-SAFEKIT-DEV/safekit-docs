@@ -15,8 +15,8 @@ Het up-to-date houden van bedrijfskritieke applicaties is essentieel voor de bev
 
 Er zijn twee gangbare implementatiemodellen:
 
-  * ** Virtuele machine Hoge Beschikbaarheid ** , waarbij de applicatie draait binnen een beveiligde virtuele machine die wordt beheerd door SafeKit .
-  * ** Hoge beschikbaarheid op applicatieniveau ** , waarbij de applicatie op twee servers is geïnstalleerd.
+  * **Virtuele machine Hoge Beschikbaarheid** , waarbij de applicatie draait binnen een beveiligde virtuele machine die wordt beheerd door SafeKit .
+  * **Hoge beschikbaarheid op applicatieniveau** , waarbij de applicatie op twee servers is geïnstalleerd.
 
 
 Elk model biedt verschillende upgrade-mechanismen en terugdraai-strategieën.
@@ -61,45 +61,45 @@ In een traditioneel SafeKit cluster is de applicatie geïnstalleerd op twee knoo
 
 Een kleine upgrade wijzigt alleen de binaire bestanden van de applicatie, terwijl de gerepliceerde gegevens volledig compatibel blijven tussen versies. Omdat het formaat van de gerepliceerde gegevens niet verandert, ondersteunt SafeKit een rolling upgrade met minimale downtime. 
 
-  1. Het cluster draait aanvankelijk in een ** ✅ PRIM (node 1) / ✅ SECOND (node 2) ** -configuratie. De applicatie draait op de PRIM-node en gerepliceerde data wordt continu gesynchroniseerd met de SECOND-node. 
-  2. Stop de SafeKit module op het TWEEDE knooppunt ( ** ❌ STOP (knooppunt 2) ** ), voer een upgrade uit van de applicatie en herstart de module. Tijdens deze bewerking blijft de applicatie gewoon draaien op de ** ✅ ALONE (knooppunt 1) ** en treedt er geen serviceonderbreking op. 
-  3. Na de herstart voegt het geüpgrade knooppunt zich weer bij het cluster als ** ✅ SECOND (knooppunt 2) ** en synchroniseert het de gerepliceerde gegevens opnieuw. 
-  4. Stop het PRIM-knooppunt ( ** ❌ STOP (knooppunt 1) ** ). SafeKit voert automatisch een failover uit en het geüpgrade knooppunt wordt ** ✅ ALONE (knooppunt 2) ** . De applicatie wordt op dit knooppunt opnieuw opgestart. De downtime is beperkt tot de failover en de tijd die nodig is voor het opnieuw opstarten van de applicatie. 
+  1. Het cluster draait aanvankelijk in een **✅ PRIM (node 1) / ✅ SECOND (node 2)** -configuratie. De applicatie draait op de PRIM-node en gerepliceerde data wordt continu gesynchroniseerd met de SECOND-node. 
+  2. Stop de SafeKit module op het TWEEDE knooppunt ( **❌ STOP (knooppunt 2)** ), voer een upgrade uit van de applicatie en herstart de module. Tijdens deze bewerking blijft de applicatie gewoon draaien op de **✅ ALONE (knooppunt 1)** en treedt er geen serviceonderbreking op. 
+  3. Na de herstart voegt het geüpgrade knooppunt zich weer bij het cluster als **✅ SECOND (knooppunt 2)** en synchroniseert het de gerepliceerde gegevens opnieuw. 
+  4. Stop het PRIM-knooppunt ( **❌ STOP (knooppunt 1)** ). SafeKit voert automatisch een failover uit en het geüpgrade knooppunt wordt **✅ ALONE (knooppunt 2)** . De applicatie wordt op dit knooppunt opnieuw opgestart. De downtime is beperkt tot de failover en de tijd die nodig is voor het opnieuw opstarten van de applicatie. 
   5. Als de bijgewerkte applicatie correct werkt in de ALONE-status, moet u het resterende knooppunt (knooppunt 1) upgraden en de SafeKit -module opnieuw starten. 
-  6. Na de resynchronisatie keert het cluster terug naar een normale ** ✅ SECOND (node 1) / ✅ PRIM (node 2) ** -configuratie. De oorspronkelijke rollen kunnen handmatig worden hersteld via de SafeKit -beheerconsole of automatisch via de SafeKit -configuratie. 
+  6. Na de resynchronisatie keert het cluster terug naar een normale **✅ SECOND (node 1) / ✅ PRIM (node 2)** -configuratie. De oorspronkelijke rollen kunnen handmatig worden hersteld via de SafeKit -beheerconsole of automatisch via de SafeKit -configuratie. 
 
 
-** Terugdraaiprocedure **
+**Terugdraaiprocedure**
 
-  * Stop bij stap 5 de ** ✅ ALONE (node 2) ** node.
-  * Dwing het oorspronkelijke knooppunt (knooppunt 1) om te starten als primaire ** ALONE (knooppunt 1) ** met de vorige applicatieversie.
+  * Stop bij stap 5 de **✅ ALONE (node 2)** node.
+  * Dwing het oorspronkelijke knooppunt (knooppunt 1) om te starten als primaire **ALONE (knooppunt 1)** met de vorige applicatieversie.
   * Installeer de vorige versie opnieuw op het geüpgrade knooppunt (knooppunt 2).
-  * Keer terug naar een normale ** ✅ PRIM (knooppunt 1) / ✅ SECOND (knooppunt 2) ** -configuratie.
+  * Keer terug naar een normale **✅ PRIM (knooppunt 1) / ✅ SECOND (knooppunt 2)** -configuratie.
 
 
-De volledige upgrade wordt uitgevoerd met een downtime die beperkt is tot de overgang van ** ✅ PRIM / ✅ SECOND ** naar ** ❌ STOP / ✅ ALONE ** . 
+De volledige upgrade wordt uitgevoerd met een downtime die beperkt is tot de overgang van **✅ PRIM / ✅ SECOND** naar **❌ STOP / ✅ ALONE** . 
 
 ### Belangrijke applicatie-upgrade {#app-level-ha-major}
 
 Een grote upgrade wijzigt de opmaak of structuur van gerepliceerde gegevens. Omdat de door de nieuwe versie gegenereerde gegevens niet langer compatibel zijn met de oude, kan een gefaseerde upgrade niet worden uitgevoerd. 
 
-  1. Het cluster draait aanvankelijk in een ** ✅ PRIM (node 1) / ✅ SECOND (node 2) ** -configuratie. 
-  2. Stop eerst het TWEEDE knooppunt en daarna het PRIM-knooppunt. Het cluster gaat over naar ** ❌ STOP (knooppunt 1) / ❌ STOP (knooppunt 2) ** . 
-  3. Upgrade het voormalige PRIM-knooppunt en herstart het. Het knooppunt start zelfstandig op als ** ✅ ALONE (knooppunt 1) ** met de nieuwe applicatieversie. 
+  1. Het cluster draait aanvankelijk in een **✅ PRIM (node 1) / ✅ SECOND (node 2)** -configuratie. 
+  2. Stop eerst het TWEEDE knooppunt en daarna het PRIM-knooppunt. Het cluster gaat over naar **❌ STOP (knooppunt 1) / ❌ STOP (knooppunt 2)** . 
+  3. Upgrade het voormalige PRIM-knooppunt en herstart het. Het knooppunt start zelfstandig op als **✅ ALONE (knooppunt 1)** met de nieuwe applicatieversie. 
   4. Valideer de bijgewerkte applicatie en controleer of deze correct werkt. 
   5. Als de validatie succesvol is, moet u het resterende knooppunt upgraden en de SafeKit -module opnieuw opstarten. 
-  6. Het geüpgrade knooppunt wordt ** ✅ SECOND (knooppunt 2) ** , synchroniseert de applicatiegegevens opnieuw en het cluster keert terug naar een normale ** ✅ PRIM (knooppunt 1) / ✅ SECOND (knooppunt 2) ** -configuratie. 
+  6. Het geüpgrade knooppunt wordt **✅ SECOND (knooppunt 2)** , synchroniseert de applicatiegegevens opnieuw en het cluster keert terug naar een normale **✅ PRIM (knooppunt 1) / ✅ SECOND (knooppunt 2)** -configuratie. 
 
 
-** Terugdraaiprocedure **
+**Terugdraaiprocedure**
 
-  * Stop bij stap 5 de geüpgrade ** ✅ ALONE (node 1) ** node.
-  * Dwing het niet-geüpgrade knooppunt om als primair te starten ** ✅ ALONE (knooppunt 2) ** .
+  * Stop bij stap 5 de geüpgrade **✅ ALONE (node 1)** node.
+  * Dwing het niet-geüpgrade knooppunt om als primair te starten **✅ ALONE (knooppunt 2)** .
   * Installeer de vorige applicatieversie opnieuw op het geüpgrade knooppunt.
-  * Herstel de oorspronkelijke ** ✅ SECOND (node 1) / ✅ PRIM (node 2) ** -configuratie.
+  * Herstel de oorspronkelijke **✅ SECOND (node 1) / ✅ PRIM (node 2)** -configuratie.
 
 
-Omdat gerepliceerde gegevens tijdens de migratie worden gewijzigd, komt de downtime overeen met de periode tussen de status ** ❌ STOP / ❌ STOP ** en de herstart van het eerste geüpgrade knooppunt als ** ✅ ALONE ** . 
+Omdat gerepliceerde gegevens tijdens de migratie worden gewijzigd, komt de downtime overeen met de periode tussen de status **❌ STOP / ❌ STOP** en de herstart van het eerste geüpgrade knooppunt als **✅ ALONE** . 
 
 ### Waarom SafeKit applicatie-upgrades vereenvoudigt {#why-safekit-simplifies-application-upgrades}
 

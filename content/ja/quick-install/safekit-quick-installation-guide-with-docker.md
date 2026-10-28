@@ -39,23 +39,23 @@ Docker構成アプリケーションでは、アプリケーションとその�
 **/var/lib/docker/volumes/ <volume_name>/_data**のようなパスのリストが取得されます
   * **ステップバイステップ構成**セクションに移動して、 
     * **mirror.safe**モジュールをデプロイする
-    * 障害発生時に切り替えられる仮想IPアドレス** **を設定します。
+    * 障害発生時に切り替えられる**仮想IPアドレス**を設定します。
     * **/var/lib/docker/volumes/ <volume_name>/_data**のリストを**複製ディレクトリ**に設定します
     * start_primおよびstop_primスクリプトにそれぞれ**/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start**および**/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**を配置します。
 
 
 ### 例2では、 Dockerアプリケーションがコンテナセットを起動します。 {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
-ここでは、 Dockerアプリケーション** myappli **がコンテナのセットを起動すると仮定します。
+ここでは、 Dockerアプリケーション**myappli**がコンテナのセットを起動すると仮定します。
 
-  * まず、両方のサーバーで、 ** myappli **起動せずにインストールします。
+  * まず、両方のサーバーで、 **myappli**起動せずにインストールします。
   * あるサーバー上で、 myapplyが使用しているボリュームの一覧を表示します: **ls /var/lib/docker/volumes**  
 したがって、 **/var/lib/docker/volumes/ <volume_name>/_data**のようなパスのリストが得られます。
   * **ステップバイステップ構成**セクションに移動して、 
     * **mirror.safe**モジュールをデプロイする
-    * 障害発生時に切り替えられる仮想IPアドレス** **を設定します。
+    * 障害発生時に切り替えられる**仮想IPアドレス**を設定します。
     * **/var/lib/docker/volumes/ <volume_name>/_data**のリストを**複製ディレクトリ**に設定します
-    * start_primおよびstop_primスクリプトにそれぞれ以下を記述します: ** /.../myappli開始**および** /.../myappli停止**
+    * start_primおよびstop_primスクリプトにそれぞれ以下を記述します: **/.../myappli開始**および**/.../myappli停止**
 
 
 ### 単純なDockerイメージを使用した例3 {#example-3-with-a-simple-docker-image}
@@ -71,7 +71,7 @@ Docker構成アプリケーションでは、アプリケーションとその�
 ボリュームにindex.htmlファイルをいくつか配置します: **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
   * **ステップバイステップ構成**セクションに移動して、 
     * **mirror.safe**モジュールをデプロイする
-    * 障害発生時に切り替えられる仮想IPアドレス** **を設定します。
+    * 障害発生時に切り替えられる**仮想IPアドレス**を設定します。
     * **/var/lib/docker/storage/replicated_vol/_data**レプリケートされたディレクトリとして設定する
     * start_primおよびstop_primスクリプトにそれぞれ**docker start mynginx**および**docker stop mynginx**を配置します。
     * SafeKit設定後、 **とhttp://vitual-ip:9011**を使用してindex.htmlへのアクセスをテストします。

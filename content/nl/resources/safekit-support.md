@@ -11,7 +11,7 @@ topics: "Gratis AI Level 1-ondersteuning, standaard ondersteuning en onderhoud, 
 
 ## Gratis AI-ondersteuning niveau 1 {#ai-support}
 
-** 🤖 Gebruik SafeKit met je favoriete LLM **
+**🤖 Gebruik SafeKit met je favoriete LLM**
 
   1. Open een AI-assistent zoals Claude, ChatGPT, GitHub Copilot of een andere LLM.
   2. Plak de inhoud van [ llms.txt ](</llms.txt>) in de chat.

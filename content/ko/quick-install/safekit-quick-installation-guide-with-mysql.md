@@ -15,7 +15,7 @@ topics: "MySQL 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
 
 ## SafeKit / MySQL 솔루션 개요 {#overview-of-the-safekit--mysql-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 MySQL 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/mysql-high-availability-synchronous-replication-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ 가장 간단한 MySQL 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/mysql-high-availability-synchronous-replication-failover/>)** .
 
 ## SafeKit / MySQL 솔루션의 Windows 및 Linux ( mysql.safe ) 및 설치 {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 

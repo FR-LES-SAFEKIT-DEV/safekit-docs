@@ -166,7 +166,7 @@ Dieses Skript legt die virtuelle IP-Adresse in 2 internen Milestone -Dateien fes
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autorität": " http://** < virtual-ip> ** /IDP "
+        "Autorität": " http://**< virtual-ip>** /IDP "
 
 
 ![ Warnung ](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,10 +230,10 @@ Befindet sich der Cluster im Zustand `WAIT (red) not uptodate - STOP (red) not u
 
 Führen Sie die folgenden Schritte auf Knoten 1 gemäß dem Menü im Bild aus:
 
-  * Klicken Sie mit der rechten Maustaste auf das Symbol ** Milestone Management Server ** in der Taskleiste.
-  * ** Management-Server-Dienst stoppen **
-  * Wählen Sie anschließend ** Server Configurator... ** und registrieren Sie die virtuelle IP-Adresse.
-  * ** Start Management Server Service **
+  * Klicken Sie mit der rechten Maustaste auf das Symbol **Milestone Management Server** in der Taskleiste.
+  * **Management-Server-Dienst stoppen**
+  * Wählen Sie anschließend **Server Configurator...** und registrieren Sie die virtuelle IP-Adresse.
+  * **Start Management Server Service**
 
 
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
@@ -251,7 +251,7 @@ Vor Version Milestone 2022 R3 wurde bei der Registrierung möglicherweise die Ko
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
 
 
-Hinweis: Um eine Version vor Milestone 2020 R2 zu registrieren, verwenden Sie ** Verschlüsselungseinstellungen ändern... **
+Hinweis: Um eine Version vor Milestone 2020 R2 zu registrieren, verwenden Sie **Verschlüsselungseinstellungen ändern...**
 
 
 ![ Registrieren Sie den Management-Server in Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
@@ -267,13 +267,13 @@ Seit Milestone 2022 R3 ist dieser Schritt nicht mehr erforderlich und wird autom
 
 Dem Bild zufolge:
 
-  1. Starten Sie den Management-Client ** Milestone XProtect ** auf Knoten 1.
-  2. Im Menü ** Tools ** wählen Sie ** Registered Services ** . 
-     * Im Fenster ** Hinzufügen/Entfernen registrierter Dienste ** wählen Sie einen Dienst in der Liste aus und klicken Sie auf ** Bearbeiten ** .
-     * Ändern Sie im Fenster ** Registrierten Dienst bearbeiten ** die URL-Adresse des Dienstes in eine URL-Adresse, die dieselbe ist, aber die virtuelle IP-Adresse enthält.
+  1. Starten Sie den Management-Client **Milestone XProtect** auf Knoten 1.
+  2. Im Menü **Tools** wählen Sie **Registered Services** . 
+     * Im Fenster **Hinzufügen/Entfernen registrierter Dienste** wählen Sie einen Dienst in der Liste aus und klicken Sie auf **Bearbeiten** .
+     * Ändern Sie im Fenster **Registrierten Dienst bearbeiten** die URL-Adresse des Dienstes in eine URL-Adresse, die dieselbe ist, aber die virtuelle IP-Adresse enthält.
      * Wiederholen Sie diese Schritte für alle im Fenster aufgeführten Dienste.
-  3. Klicken Sie im selben Fenster auf ** Network ** . 
-     * Ändern Sie im Fenster ** Netzwerkkonfiguration ** die URL-Adresse des Servers in eine URL-Adresse, die dieselbe ist, aber die virtuelle IP-Adresse enthält.
+  3. Klicken Sie im selben Fenster auf **Network** . 
+     * Ändern Sie im Fenster **Netzwerkkonfiguration** die URL-Adresse des Servers in eine URL-Adresse, die dieselbe ist, aber die virtuelle IP-Adresse enthält.
 
 
 ![ Legen Sie die virtuelle IP-Adresse in den URLs und im Milestone Management Client ](/wp-content/uploads/2022/07/milestone-url-vip.png) fest.
@@ -289,10 +289,10 @@ Wenn Milestone " Windows -Authentifizierung mit einem Active Directory konfiguri
 
 Beim Start des Milestone XProtect Management-Clients müssen Sie sich entweder mit der " Windows -Authentifizierung" oder der "Basisauthentifizierung" ( [ klicken Sie hier, um den Screenshot zu sehen ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) ) authentifizieren.
 
-Öffnen Sie den Management-Client ** Milestone XProtect ** anschließend in ** Sicherheit / Rollen ** (siehe Abbildung).
+Öffnen Sie den Management-Client **Milestone XProtect** anschließend in **Sicherheit / Rollen** (siehe Abbildung).
 
-  * Setzen Sie die Gruppe Windows ** BUILTIN\Administrators ** . Dadurch kann sich ein Administratorbenutzer auf dem sekundären System mit der Authentifizierung " Windows " mit Milestone auf dem sekundären System verbinden.
-  * Erstellen Sie einen Benutzer mit „Basisauthentifizierung“ ( ** Admin ** im Bild), um die erneute Authentifizierung auf dem sekundären Knoten nach einem Failover sicherzustellen. Bei der „Basisauthentifizierung“ werden Benutzername und Passwort in der SQL-Datenbank gespeichert und nach einem Failover auf dem sekundären Knoten abgerufen.
+  * Setzen Sie die Gruppe Windows **BUILTIN\Administrators** . Dadurch kann sich ein Administratorbenutzer auf dem sekundären System mit der Authentifizierung " Windows " mit Milestone auf dem sekundären System verbinden.
+  * Erstellen Sie einen Benutzer mit „Basisauthentifizierung“ ( **Admin** im Bild), um die erneute Authentifizierung auf dem sekundären Knoten nach einem Failover sicherzustellen. Bei der „Basisauthentifizierung“ werden Benutzername und Passwort in der SQL-Datenbank gespeichert und nach einem Failover auf dem sekundären Knoten abgerufen.
 
 
 ![ Warnung ](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,12 +337,12 @@ Dieses Skript legt die virtuelle IP-Adresse in 2 internen Milestone -Dateien fes
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autorität": " http://** < virtual-ip> ** /IDP "
+        "Autorität": " http://**< virtual-ip>** /IDP "
 
 ### 14. Registrieren Sie auf dem Desktop von Knoten 2 den Management-Server unter der virtuellen IP-Adresse {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * Wählen Sie in der Taskleiste von Knoten 2 ** Serverkonfigurator ** und registrieren Sie ihn auf der virtuellen IP-Adresse (siehe Abbildung).
-  * Dann ** Stop Management Server Service ** .
+  * Wählen Sie in der Taskleiste von Knoten 2 **Serverkonfigurator** und registrieren Sie ihn auf der virtuellen IP-Adresse (siehe Abbildung).
+  * Dann **Stop Management Server Service** .
 
 
 ![ Warnung ](/wp-content/uploads/2022/07/warning-small.png)
@@ -426,7 +426,7 @@ Das Problem ist in Milestone 2023 R3 behoben.
 
 ### 18. Testen {#18-testing}
 
-  * Den PRIM-Knoten stoppen, indem Sie im Kontextmenü nach unten scrollen und auf „Stoppen“ klicken. ** Verwenden Sie für den ersten Test keinen Swap-Speicher ** ) (siehe unten).
+  * Den PRIM-Knoten stoppen, indem Sie im Kontextmenü nach unten scrollen und auf „Stoppen“ klicken. **Verwenden Sie für den ersten Test keinen Swap-Speicher** ) (siehe unten).
   * Überprüfen Sie, ob auf dem ZWEITEN Knoten ein Failover erfolgt ist, der dadurch ALLEIN (grün) werden sollte.
   * Überprüfen Sie mit Microsoft Management Console (MMC) das Failover der Dienste (die auf Knoten 1 im Skript `stop_prim` gestoppt und auf Knoten 2 im Skript `start_prim` gestartet wurden).
 

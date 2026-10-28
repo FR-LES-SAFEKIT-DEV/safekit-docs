@@ -25,11 +25,11 @@ SafeKit wurde genau für diese Lücke entwickelt. Es hält Edge-Anwendungen in F
 
 SafeKit verwandelt zwei Standard-Edge-Server (beliebige Marke, physisch oder virtuell) in einen sofort einsatzbereiten HA-Cluster – ohne gemeinsam genutzten Speicher, ohne SAN, ohne spezielle Hardware. Ein schlanker Software-Stack ermöglicht Folgendes:
 
-  * ** Echtzeit-synchrone Dateireplikation ** – Daten werden beim Schreiben byte-basiert auf den Standby-Server gespiegelt
-  * Automatisches Failover ** ** – wenn der primäre Server ausfällt, übernimmt der Standby-Server innerhalb von Sekunden ohne menschliches Eingreifen.
-  * ** Optionaler Netzwerk-Lastausgleich ** — für Aktiv-Aktiv-Bereitstellungen, bei denen sich beide Server die Arbeitslast teilen
-  * ** Webkonsole ** – browserbasierte Verwaltung, Fernzugriff über HTTPS, keine Vor-Ort-Kenntnisse erforderlich
-  * ** Stille, skriptfähige Installation ** – geeignet für OEM-Einbettung und Massenbereitstellung an Hunderten von verteilten Standorten
+  * **Echtzeit-synchrone Dateireplikation** – Daten werden beim Schreiben byte-basiert auf den Standby-Server gespiegelt
+  * **Automatisches Failover** – wenn der primäre Server ausfällt, übernimmt der Standby-Server innerhalb von Sekunden ohne menschliches Eingreifen.
+  * **Optionaler Netzwerk-Lastausgleich** — für Aktiv-Aktiv-Bereitstellungen, bei denen sich beide Server die Arbeitslast teilen
+  * **Webkonsole** – browserbasierte Verwaltung, Fernzugriff über HTTPS, keine Vor-Ort-Kenntnisse erforderlich
+  * **Stille, skriptfähige Installation** – geeignet für OEM-Einbettung und Massenbereitstellung an Hunderten von verteilten Standorten
 
 
 Es muss kein SAN beschafft werden, es wird keine Server-Datacenter-Lizenz Windows benötigt, keine Expertise im Cluster-Betriebssystem Linux ist erforderlich und es wird keine dedizierte Cluster-Hardware benötigt. Der gesamte HA-Stack besteht aus einem einzigen Softwarepaket.
@@ -54,12 +54,12 @@ Hunderte verteilte Cluster | Entwickelt für verteilte Unternehmen mit vielen Ni
 
 OT-Umgebungen (Operational Technology) – SCADA, BMS, physische Sicherheit, industrielle Steuerung – haben Anforderungen, die sich grundlegend von denen von IT-Rechenzentren unterscheiden:
 
-  * ** Kein IT-Personal vor Ort. ** Ein Umspannwerk, eine abgelegene Pumpstation oder ein Schiff hat keinen Systemadministrator. HA muss selbstverwaltend sein.
-  * ** Abgeschottete oder eingeschränkte Netzwerke. ** Viele OT-Standorte haben keinen Internetzugang und nur begrenzte WAN-Bandbreite. HA-Software muss vollständig offline funktionieren.
-  * ** 24/7-Verfügbarkeit, null Toleranz für Komplexität. ** Der Stillstand einer Produktionslinie, der Ausfall der Videoüberwachung oder die Unterbrechung der Zutrittskontrolle verursachen weitaus höhere Kosten als die HA-Software selbst.
-  * Lange Lebensdauer der Geräte. ** OT-Server können 10–15 Jahre lang betrieben werden. Die HA-Lösung muss stabil und wartungsarm sein und ** keine ständigen Updates erfordern.
-  * ** Nur Standard-x86-Hardware. ** Kein Budget oder keine Rechtfertigung für SAN oder dedizierte Clusterknoten an einem entfernten Industriestandort.
-  * ** Intoleranz gegenüber Komplexität auf Betriebssystemebene. ** Pacemaker, Corosync oder WSFC erfordern Cluster-Expertise, über die OT-Betreiber schlichtweg nicht verfügen und die sie auch nicht benötigen sollten.
+  * **Kein IT-Personal vor Ort.** Ein Umspannwerk, eine abgelegene Pumpstation oder ein Schiff hat keinen Systemadministrator. HA muss selbstverwaltend sein.
+  * **Abgeschottete oder eingeschränkte Netzwerke.** Viele OT-Standorte haben keinen Internetzugang und nur begrenzte WAN-Bandbreite. HA-Software muss vollständig offline funktionieren.
+  * **24/7-Verfügbarkeit, null Toleranz für Komplexität.** Der Stillstand einer Produktionslinie, der Ausfall der Videoüberwachung oder die Unterbrechung der Zutrittskontrolle verursachen weitaus höhere Kosten als die HA-Software selbst.
+  * Lange Lebensdauer der Geräte. **OT-Server können 10–15 Jahre lang betrieben werden. Die HA-Lösung muss stabil und wartungsarm sein und** keine ständigen Updates erfordern.
+  * **Nur Standard-x86-Hardware.** Kein Budget oder keine Rechtfertigung für SAN oder dedizierte Clusterknoten an einem entfernten Industriestandort.
+  * **Intoleranz gegenüber Komplexität auf Betriebssystemebene.** Pacemaker, Corosync oder WSFC erfordern Cluster-Expertise, über die OT-Betreiber schlichtweg nicht verfügen und die sie auch nicht benötigen sollten.
 
 
 Das SAN-lose Zwei-Server-Modell mit automatischem Failover von SafeKit geht direkt auf jede dieser Einschränkungen ein.
@@ -98,11 +98,11 @@ Typische RTO | 1–5 Minuten | Unter 1 Minute (konfigurierbar)
   
 ## Technische Mindestanforderungen {#technical-minimum-requirements}
 
-  * ** Server: ** 2 Standard-x86-Server oder VMs (beliebige Hardwaremarke, physisch oder virtuell) oder ARM (nur Linux )
-  * ** OS: ** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * ** -Netzwerk: ** 1-Gbit/s-LAN für Replikation; dediziertes Heartbeat-Netzwerk empfohlen
-  * ** Speicher: ** Nur lokale Festplatten – kein SAN, kein NAS, kein gemeinsam genutzter Speicher jeglicher Art
-  * ** Keine spezielle Betriebssystemversion erforderlich. ** – Windows Server Standard ist ausreichend; keine Datacenter-Lizenz erforderlich.
+  * **Server:** 2 Standard-x86-Server oder VMs (beliebige Hardwaremarke, physisch oder virtuell) oder ARM (nur Linux )
+  * **OS:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
+  * **-Netzwerk:** 1-Gbit/s-LAN für Replikation; dediziertes Heartbeat-Netzwerk empfohlen
+  * **Speicher:** Nur lokale Festplatten – kein SAN, kein NAS, kein gemeinsam genutzter Speicher jeglicher Art
+  * **Keine spezielle Betriebssystemversion erforderlich.** – Windows Server Standard ist ausreichend; keine Datacenter-Lizenz erforderlich.
 
 
 Die vollständigen technischen Spezifikationen, Größenbeschränkungen und Beschaffungskriterien finden Sie in der 📘 [ RFP/RFI Technical Reference ](</de/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) .

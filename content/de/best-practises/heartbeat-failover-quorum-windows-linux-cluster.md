@@ -17,7 +17,7 @@ topics: "Welche Szenarien gibt es bei Netzwerkisolation in einem Cluster? Wie fu
 
 ### Was ist ein Herzschlag? {#what-is-a-heartbeat}
 
-Der grundlegende Mechanismus zur Synchronisierung zweier Server und zur Erkennung von Serverausfällen ist der Heartbeat ** ** , der den Datenfluss in einem von zwei Servern gemeinsam genutzten Netzwerk überwacht.
+Der grundlegende Mechanismus zur Synchronisierung zweier Server und zur Erkennung von Serverausfällen ist der **Heartbeat** , der den Datenfluss in einem Netzwerk überwacht, das von zwei Servern gemeinsam genutzt wird.
 
 Die Software SafeKit unterstützt so viele Heartbeats, wie es Netzwerke gibt, die von zwei Servern gemeinsam genutzt werden. 
 

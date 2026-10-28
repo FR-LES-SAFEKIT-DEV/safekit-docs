@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Kubernetes ,
 
 ## Übersicht der SafeKit / Kubernetes -Lösung {#overview-of-the-safekit--kubernetes-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ Kubernetes K3s Hochverfügbarkeit: Synchrone 2-Knoten-Replikation & Failover ](</de/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+Die Lösung wird hier beschrieben: **💡 [ Kubernetes K3s Hochverfügbarkeit: Synchrone 2-Knoten-Replikation & Failover ](</de/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## Installation und Konfiguration der SafeKit / Kubernetes Lösung auf Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -230,7 +230,7 @@ Der vorherige Helm-Befehl sollte das WordPress-Image von `registry-1.docker.io` 
   * `Save and apply` die neue Konfiguration zum erneuten Bereitstellen der geänderten Datei userconfig.xml auf beiden Knoten (das Modul muss auf beiden Knoten gestoppt werden, um zu speichern und anzuwenden).
 
 
-** Parameter ** :
+**Parameter** :
 
   * `ident="witness"` identifiziert den Zeugen mit dem Ressourcennamen: `splitbrain.witness` . Sie können diesen Wert ändern, um den Zeugen zu identifizieren.
   * `exec="ping"` verweist auf den auszuführenden Ping-Code. Ändern Sie diesen Wert nicht.

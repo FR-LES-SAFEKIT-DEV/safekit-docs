@@ -15,8 +15,8 @@ Mantenere aggiornate le applicazioni critiche per l'azienda è essenziale per la
 
 Esistono due modelli di implementazione comuni:
 
-  * ** Macchina virtuale ad alta disponibilità ** , dove l'applicazione viene eseguita all'interno di una macchina virtuale protetta gestita da SafeKit .
-  * ** Alta disponibilità a livello di applicazione ** , dove l'applicazione è installata su due server.
+  * **Macchina virtuale ad alta disponibilità** , dove l'applicazione viene eseguita all'interno di una macchina virtuale protetta gestita da SafeKit .
+  * **Alta disponibilità a livello di applicazione** , dove l'applicazione è installata su due server.
 
 
 Ciascun modello offre meccanismi di aggiornamento e strategie di ripristino differenti.
@@ -61,45 +61,45 @@ In un cluster SafeKit tradizionale, l'applicazione è installata su due nodi: no
 
 Un aggiornamento minore modifica solo i file binari dell'applicazione, mantenendo la piena compatibilità dei dati replicati tra le diverse versioni. Poiché il formato dei dati replicati non cambia, SafeKit supporta un aggiornamento progressivo con tempi di inattività minimi. 
 
-  1. Il cluster inizialmente funziona con una configurazione ** ✅ PRIM (nodo 1) / ✅ SECOND (nodo 2) ** . L'applicazione viene eseguita sul nodo PRIM e i dati replicati vengono continuamente sincronizzati con il nodo SECOND. 
-  2. Arrestare il modulo SafeKit sul SECONDO nodo ( ** ❌ STOP (nodo 2) ** ), aggiornare l'applicazione e riavviare il modulo. Durante questa operazione, l'applicazione continua a essere eseguita su ** ✅ DA SOLO (nodo 1) ** e non si verifica alcuna interruzione del servizio. 
-  3. Dopo il riavvio, il nodo aggiornato si riunisce al cluster come ** ✅ SECONDO (nodo 2) ** e risincronizza i dati replicati. 
-  4. Arresta il nodo PRIM ( ** ❌ STOP (nodo 1) ** ). SafeKit esegue automaticamente un failover e il nodo aggiornato diventa ** ✅ ALONE (nodo 2) ** . L'applicazione viene riavviata su questo nodo. Il tempo di inattività è limitato al tempo di failover e di riavvio dell'applicazione. 
+  1. Il cluster inizialmente funziona con una configurazione **✅ PRIM (nodo 1) / ✅ SECOND (nodo 2)** . L'applicazione viene eseguita sul nodo PRIM e i dati replicati vengono continuamente sincronizzati con il nodo SECOND. 
+  2. Arrestare il modulo SafeKit sul SECONDO nodo ( **❌ STOP (nodo 2)** ), aggiornare l'applicazione e riavviare il modulo. Durante questa operazione, l'applicazione continua a essere eseguita su **✅ DA SOLO (nodo 1)** e non si verifica alcuna interruzione del servizio. 
+  3. Dopo il riavvio, il nodo aggiornato si riunisce al cluster come **✅ SECONDO (nodo 2)** e risincronizza i dati replicati. 
+  4. Arresta il nodo PRIM ( **❌ STOP (nodo 1)** ). SafeKit esegue automaticamente un failover e il nodo aggiornato diventa **✅ ALONE (nodo 2)** . L'applicazione viene riavviata su questo nodo. Il tempo di inattività è limitato al tempo di failover e di riavvio dell'applicazione. 
   5. Se l'applicazione aggiornata funziona correttamente nello stato ALONE, aggiornare il nodo rimanente (nodo 1) e riavviare il relativo modulo SafeKit . 
-  6. Dopo la risincronizzazione, il cluster ritorna a una normale configurazione ** ✅ SECOND (nodo 1) / ✅ PRIM (nodo 2) ** . I ruoli originali possono essere ripristinati manualmente tramite la console di amministrazione SafeKit oppure automaticamente tramite la configurazione SafeKit . 
+  6. Dopo la risincronizzazione, il cluster ritorna a una normale configurazione **✅ SECOND (nodo 1) / ✅ PRIM (nodo 2)** . I ruoli originali possono essere ripristinati manualmente tramite la console di amministrazione SafeKit oppure automaticamente tramite la configurazione SafeKit . 
 
 
-Procedura di rollback ** **
+**Procedura di rollback**
 
-  * Al passaggio 5, arresta il nodo ** ✅ ALONE (nodo 2) ** .
-  * Forza il nodo originale (nodo 1) ad avviarsi come primario ** ALONE (nodo 1) ** con la versione precedente dell'applicazione.
+  * Al passaggio 5, arresta il nodo **✅ ALONE (nodo 2)** .
+  * Forza il nodo originale (nodo 1) ad avviarsi come primario **ALONE (nodo 1)** con la versione precedente dell'applicazione.
   * Reinstallare la versione precedente sul nodo aggiornato (nodo 2).
-  * Ritorno alla normale configurazione ** ✅ PRIM (nodo 1) / ✅ SECOND (nodo 2) ** .
+  * Ritorno alla normale configurazione **✅ PRIM (nodo 1) / ✅ SECOND (nodo 2)** .
 
 
-L'aggiornamento completo viene eseguito con tempi di inattività limitati alla transizione da ** ✅ PRIM / ✅ SECOND ** a ** ❌ STOP / ✅ ALONE ** . 
+L'aggiornamento completo viene eseguito con tempi di inattività limitati alla transizione da **✅ PRIM / ✅ SECOND** a **❌ STOP / ✅ ALONE** . 
 
 ### Aggiornamento principale dell'applicazione {#app-level-ha-major}
 
 Un aggiornamento importante modifica il formato o la struttura dei dati replicati. Poiché i dati generati dalla nuova versione non sono più compatibili con la precedente, non è possibile eseguire un aggiornamento progressivo. 
 
-  1. Il cluster inizialmente funziona con una configurazione ** ✅ PRIM (nodo 1) / ✅ SECOND (nodo 2) ** . 
-  2. Arresta il SECONDO nodo e poi il nodo PRIM. Il cluster passa a ** ❌ STOP (nodo 1) / ❌ STOP (nodo 2) ** . 
-  3. Aggiorna il precedente nodo PRIM e riavvialo. Il nodo si avvia da solo come ** ✅ DA SOLO (nodo 1) ** con la nuova versione dell'applicazione. 
+  1. Il cluster inizialmente funziona con una configurazione **✅ PRIM (nodo 1) / ✅ SECOND (nodo 2)** . 
+  2. Arresta il SECONDO nodo e poi il nodo PRIM. Il cluster passa a **❌ STOP (nodo 1) / ❌ STOP (nodo 2)** . 
+  3. Aggiorna il precedente nodo PRIM e riavvialo. Il nodo si avvia da solo come **✅ DA SOLO (nodo 1)** con la nuova versione dell'applicazione. 
   4. Convalidare l'applicazione aggiornata e verificare che funzioni correttamente. 
   5. Se la convalida ha esito positivo, aggiornare il nodo rimanente e riavviare il relativo modulo SafeKit . 
-  6. Il nodo aggiornato diventa ** ✅ SECOND (nodo 2) ** , risincronizza i dati dell'applicazione e il cluster ritorna a una normale configurazione ** ✅ PRIM (nodo 1) / ✅ SECOND (nodo 2) ** . 
+  6. Il nodo aggiornato diventa **✅ SECOND (nodo 2)** , risincronizza i dati dell'applicazione e il cluster ritorna a una normale configurazione **✅ PRIM (nodo 1) / ✅ SECOND (nodo 2)** . 
 
 
-Procedura di rollback ** **
+**Procedura di rollback**
 
-  * Al passaggio 5, arrestare il nodo ** ✅ ALONE (nodo 1) ** aggiornato.
-  * Forza il nodo non aggiornato ad avviarsi come primario ** ✅ DA SOLO (nodo 2) ** .
+  * Al passaggio 5, arrestare il nodo **✅ ALONE (nodo 1)** aggiornato.
+  * Forza il nodo non aggiornato ad avviarsi come primario **✅ DA SOLO (nodo 2)** .
   * Reinstallare la versione precedente dell'applicazione sul nodo aggiornato.
-  * Ripristina la configurazione originale ** ✅ SECONDO (nodo 1) / ✅ PRIMO (nodo 2) ** .
+  * Ripristina la configurazione originale **✅ SECONDO (nodo 1) / ✅ PRIMO (nodo 2)** .
 
 
-Poiché i dati replicati vengono modificati durante la migrazione, il tempo di inattività corrisponde al periodo tra lo stato ** ❌ STOP / ❌ STOP ** e il riavvio del primo nodo aggiornato come ** ✅ ALONE ** . 
+Poiché i dati replicati vengono modificati durante la migrazione, il tempo di inattività corrisponde al periodo tra lo stato **❌ STOP / ❌ STOP** e il riavvio del primo nodo aggiornato come **✅ ALONE** . 
 
 ### Perché SafeKit semplifica gli aggiornamenti delle applicazioni {#why-safekit-simplifies-application-upgrades}
 

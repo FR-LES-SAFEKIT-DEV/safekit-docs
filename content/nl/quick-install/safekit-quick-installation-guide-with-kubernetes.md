@@ -15,7 +15,7 @@ topics: "Snelstartgids voor hoge beschikbaarheid voor Kubernetes , Beperkingen v
 
 ## Overzicht van de SafeKit / Kubernetes -oplossing {#overview-of-the-safekit--kubernetes-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover ](</nl/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+De oplossing wordt hier beschreven: **💡 [ Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover ](</nl/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## Installatie en configuratie van de SafeKit / Kubernetes oplossing op Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -230,7 +230,7 @@ Het vorige helm-commando zou de WordPress-image moeten downloaden van `registry-
   * `Save and apply` de nieuwe configuratie om het gewijzigde userconfig.xml -bestand op beide knooppunten opnieuw te implementeren (de module moet op beide knooppunten gestopt zijn om op te slaan en toe te passen).
 
 
-** Parameters ** :
+**Parameters** :
 
   * `ident="witness"` identificeert de witness met een resourcenaam: `splitbrain.witness` . U kunt deze waarde wijzigen om de witness te identificeren.
   * `exec="ping"` verwijst naar de uit te voeren pingcode. Wijzig deze waarde niet.

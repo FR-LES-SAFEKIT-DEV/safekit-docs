@@ -15,7 +15,7 @@ topics: "云端高可用性快速安装指南， SafeKit高可用性限制， Sa
 
 ## SafeKit / 云mirror解决方案概述 {#overview-of-the-safekit--cloud-mirror-solution}
 
-解决方案描述如下： ** 💡 [云无关高可用性： SafeKit同步复制和故障转移](</zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** 。
+解决方案描述如下： **💡 [云无关高可用性： SafeKit同步复制和故障转移](</zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)** 。
 
 ## 在Windows和Linux ( mirror.safe )上安装SafeKit / Cloud mirror解决方案 {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability MariaDB , Beperkingen van High Ava
 
 ## Overzicht van de SafeKit / MariaDB -oplossing {#overview-of-the-safekit--mariadb-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste MariaDB Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** .
+De oplossing wordt hier beschreven: **💡 [ De eenvoudigste MariaDB Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>)** .
 
 ## Installatie van de SafeKit / MariaDB oplossing op Windows en Linux ( mysql.safe ) {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 

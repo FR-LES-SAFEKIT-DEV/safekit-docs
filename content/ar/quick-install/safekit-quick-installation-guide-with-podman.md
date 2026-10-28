@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ P
 
 ## نظرة عامة على حل SafeKit / Podman {#overview-of-the-safekit--podman-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : Podman برنامج عالي التوافر ونسخ البيانات في الوقت الحقيقي ](</ar/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+الحل موضح هنا: **💡 [ SafeKit : Podman برنامج عالي التوافر ونسخ البيانات في الوقت الحقيقي ](</ar/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>)** .
 
 ## تثبيت حل SafeKit / Podman على Linux ( mirror.safe ) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 
@@ -34,24 +34,24 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ P
 
 #### المتطلبات الأساسية {#prerequisites-1}
 
-  * أنشئ مجلدًا مُكررًا ** على كلا العقدتين **  
-أنشئ مجلدًا ** /replicated_dir_path ** سيتم نسخه بواسطة SafeKit وسيحتوي على صفحات HTML يتم عرضها بواسطة nginx
-  * قم بتعبئة هذا المجلد بملف HTML أولي ** على كلا العقدتين **
+  * أنشئ مجلدًا مُكررًا **على كلا العقدتين**  
+أنشئ مجلدًا **/replicated_dir_path** سيتم نسخه بواسطة SafeKit وسيحتوي على صفحات HTML يتم عرضها بواسطة nginx
+  * قم بتعبئة هذا المجلد بملف HTML أولي **على كلا العقدتين**
         
         cp index.html /replicated_dir_path
 
-  * أنشئ حاوية ** على كلا العقدتين **  
-قم بإنشاء حاوية nginx على كلا العقدتين بحيث تربط الدليل ** /replicated_dir_path ** بالدليل **/usr/share/nginx/html** : 
+  * أنشئ حاوية **على كلا العقدتين**  
+قم بإنشاء حاوية nginx على كلا العقدتين بحيث تربط الدليل **/replicated_dir_path** بالدليل **/usr/share/nginx/html** : 
         
         إنشاء حاوية Podman باسم mynginx وإصدار /replicated_dir_path ، وعنوان IP /usr/share/nginx/html ، وعنوان IP 9011:80، nginx
 
 
 #### تكوين SafeKit تكوين {#safekit-configuration}
 
-  * انتقل إلى قسم ** الخاص بتكوين ** خطوة بخطوة
+  * انتقل إلى قسم **الخاص بتكوين** خطوة بخطوة
   * قم بإنشاء وتكوين وحدة **mirror.safe**
-  * قم بتعيين عنوان IP افتراضي ** ** سيتم التبديل إليه في حالة الفشل.
-  * قم بتعيين ** /replicated_dir_path ** كدليل مُكرر
+  * قم بتعيين **عنوان IP افتراضي** سيتم التبديل إليه في حالة حدوث عطل
+  * قم بتعيين **/replicated_dir_path** كدليل مُكرر
   * ضع على التوالي في البرامج النصية start_prim و stop_prim : **podman start mynginx** و **podman stop mynginx**  
 ملاحظة: قد تحتاج إلى استخدام "podman start --security-opt label=disable mynginx " مع SE Linux .
   * قم بنشر وتشغيل وحدة SafeKit mirror

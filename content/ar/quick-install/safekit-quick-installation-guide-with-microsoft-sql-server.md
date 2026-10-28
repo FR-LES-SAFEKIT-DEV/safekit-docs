@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ M
 
 ## نظرة عامة على حلول SafeKit / Microsoft SQL Server {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-للحصول على نظرة عامة مفصلة عن الحل، انظر ** 💡 [ الأبسط Microsoft SQL Server التوافر العالي: النسخ المتماثل المتزامن ثنائي العقدة والتحويل التلقائي ](</ar/solutions/sql-server-high-availability-synchronous-replication-failover/>) ** .
+للحصول على نظرة عامة مفصلة عن الحل، انظر **💡 [ الأبسط Microsoft SQL Server التوافر العالي: النسخ المتماثل المتزامن ثنائي العقدة والتحويل التلقائي ](</ar/solutions/sql-server-high-availability-synchronous-replication-failover/>)** .
 
 ## تثبيت حل SafeKit / Microsoft SQL Server على Windows ( sqlserver.safe ) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 

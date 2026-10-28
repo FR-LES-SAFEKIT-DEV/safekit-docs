@@ -11,7 +11,7 @@ topics: "Kostenloser KI-Support (Level 1), Standard-Support und -Wartung, kosten
 
 ## Kostenloser KI-Support der Stufe 1 {#ai-support}
 
-** 🤖 Verwende SafeKit mit deinem bevorzugten LLM **
+**🤖 Verwende SafeKit mit deinem bevorzugten LLM**
 
   1. Öffnen Sie einen KI-Assistenten wie Claude, ChatGPT, GitHub Copilot oder einen anderen LLM.
   2. Füge den Inhalt von [ llms.txt ](</llms.txt>) in den Chat ein.

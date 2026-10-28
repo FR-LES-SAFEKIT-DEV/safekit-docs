@@ -166,7 +166,7 @@ Este script establece la dirección IP virtual en 2 archivos internos Milestone 
     C:\Archivos de programa\ Milestone \ Servidor de administración XProtect \ IIS \IDP\appsettings.json
     
     
-        "Autoridad": " http://** < virtual-ip> ** /IDP "
+        "Autoridad": " http://**< virtual-ip>** /IDP "
 
 
 Advertencia ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,10 +230,10 @@ Si el clúster se encuentra en estado `WAIT (red) not uptodate - STOP (red) not 
 
 Ejecute los siguientes puntos en el nodo 1 según el menú de la imagen:
 
-  * Haga clic con el botón derecho en el icono del servidor de administración ** Milestone ** en la barra de tareas.
-  * ** Detener el servicio del servidor de administración **
-  * Luego, seleccione el configurador del servidor ** ... ** y registre la dirección IP virtual.
-  * ** Iniciar el servicio del servidor de administración **
+  * Haga clic con el botón derecho en el icono del servidor de administración **Milestone** en la barra de tareas.
+  * **Detener el servicio del servidor de administración**
+  * Luego, seleccione el configurador del servidor **...** y registre la dirección IP virtual.
+  * **Iniciar el servicio del servidor de administración**
 
 
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
@@ -251,7 +251,7 @@ Antes de la versión Milestone 2022 R3, el registro puede haber eliminado la con
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
 
 
-Nota: Para registrar una versión anterior a Milestone 2020 R2, utilice ** Cambiar configuración de cifrado... **
+Nota: Para registrar una versión anterior a Milestone 2020 R2, utilice **Cambiar configuración de cifrado...**
 
 
 ![ Registre el servidor de administración en Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
@@ -267,13 +267,13 @@ Desde Milestone 2022 R3, este paso no es útil y se ha realizado automáticament
 
 Según la imagen:
 
-  1. Inicie el cliente de administración ** Milestone XProtect ** en el nodo 1.
-  2. En el menú Herramientas ** ** , seleccione Servicios registrados ** ** . 
-     * En la ventana ** Agregar/Eliminar servicios registrados ** , seleccione un servicio en la lista y haga clic en ** Editar ** .
-     * En la ventana ** Editar servicio registrado ** , cambie la dirección URL del servicio por la misma dirección URL pero que contenga la dirección IP virtual.
+  1. Inicie el cliente de administración **Milestone XProtect** en el nodo 1.
+  2. En el menú **Herramientas** , seleccione **Servicios registrados** . 
+     * En la ventana **Agregar/Eliminar servicios registrados** , seleccione un servicio en la lista y haga clic en **Editar** .
+     * En la ventana **Editar servicio registrado** , cambie la dirección URL del servicio por la misma dirección URL pero que contenga la dirección IP virtual.
      * Repita estos pasos para todos los servicios que aparecen en la ventana.
-  3. En la misma ventana, haga clic en Red ** ** . 
-     * En la ventana de configuración de red ** ** , cambie la dirección URL del servidor por la misma dirección URL pero que contenga la dirección IP virtual.
+  3. En la misma ventana, haga clic en **Red** . 
+     * En la ventana **de Configuración de red** , cambie la dirección URL del servidor por una igual pero que contenga la dirección IP virtual.
 
 
 ![ Configure la dirección IP virtual en las URL y en el cliente de administración Milestone ](/wp-content/uploads/2022/07/milestone-url-vip.png)
@@ -289,10 +289,10 @@ Si la autenticación Milestone " Windows " se ha configurado con un Active Direc
 
 Cuando inicie el cliente de administración Milestone XProtect , deberá autenticarse con "autenticación Windows " o "autenticación básica" ( [ haga clic aquí para ver la captura de pantalla ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) ).
 
-Abra el cliente de administración ** Milestone XProtect ** y en ** Seguridad / Roles ** (ver imagen)
+Abra el cliente de administración **Milestone XProtect** y en **Seguridad / Roles** (ver imagen)
 
-  * Configure el grupo Windows ** BUILTIN\Administrators ** . De esta forma, un usuario administrador en el servidor secundario podrá conectarse a Milestone en el servidor secundario con la autenticación " Windows ".
-  * Cree un usuario con autenticación básica ( ** Admin ** en la imagen) para garantizar la autenticación en el nodo secundario tras una conmutación por error. Con la autenticación básica, el usuario y la contraseña se almacenan en la base de datos SQL y se recuperarán en el nodo secundario tras la conmutación por error.
+  * Configure el grupo Windows **BUILTIN\Administrators** . De esta forma, un usuario administrador en el servidor secundario podrá conectarse a Milestone en el servidor secundario con la autenticación " Windows ".
+  * Cree un usuario con autenticación básica ( **Admin** en la imagen) para garantizar la autenticación en el nodo secundario tras una conmutación por error. Con la autenticación básica, el usuario y la contraseña se almacenan en la base de datos SQL y se recuperarán en el nodo secundario tras la conmutación por error.
 
 
 Advertencia ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,12 +337,12 @@ Este script establece la dirección IP virtual en 2 archivos internos Milestone 
     C:\Archivos de programa\ Milestone \ Servidor de administración XProtect \ IIS \IDP\appsettings.json
     
     
-        "Autoridad": " http://** < virtual-ip> ** /IDP "
+        "Autoridad": " http://**< virtual-ip>** /IDP "
 
 ### 14. En el escritorio del nodo 2, registre el servidor de administración en la dirección IP virtual {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * Seleccione el configurador del servidor ** ** en la barra de tareas del nodo 2 y regístrelo en la dirección IP virtual (vea la imagen).
-  * Luego, detenga el servicio del servidor de administración ** ** .
+  * Seleccione **Configurador de servidor** en la barra de tareas del nodo 2 y regístrelo en la dirección IP virtual (vea la imagen).
+  * Luego, **detenga el servicio del servidor de administración** .
 
 
 Advertencia ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -426,7 +426,7 @@ El problema se solucionó en Milestone 2023 R3.
 
 ### 18. Prueba {#18-testing}
 
-  * Detenga el nodo PRIM desplazándose hacia abajo en su menú contextual y haciendo clic en Detener. ** No utilice la función de intercambio para una primera prueba ** (vea el motivo a continuación).
+  * Detenga el nodo PRIM desplazándose hacia abajo en su menú contextual y haciendo clic en Detener. **No utilice la función de intercambio para una primera prueba** (vea el motivo a continuación).
   * Verifique que haya una conmutación por error en el SEGUNDO nodo, que debería quedar SOLO (verde).
   * Y con la consola de administración (MMC) Microsoft , compruebe la conmutación por error de los servicios (detenidos en el nodo 1 en el script `stop_prim` e iniciados en el nodo 2 en el script `start_prim` ).
 

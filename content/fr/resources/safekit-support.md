@@ -11,7 +11,7 @@ topics: "Assistance IA de niveau 1 gratuite, assistance et maintenance standard,
 
 ## Assistance gratuite en IA de niveau 1 {#ai-support}
 
-** 🤖 Utilisez SafeKit avec votre LLM préféré **
+**🤖 Utilisez SafeKit avec votre LLM préféré**
 
   1. Ouvrez un assistant IA tel que Claude, ChatGPT, GitHub Copilot ou tout autre LLM.
   2. Collez le contenu de [ llms.txt ](</llms.txt>) dans la conversation.

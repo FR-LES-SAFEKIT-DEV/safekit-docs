@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability GCP , Beperkingen van High Availab
 
 ## Overzicht van de SafeKit / GCP mirror oplossing {#overview-of-the-safekit--gcp-mirror-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ Google GCP Hoge beschikbaarheid: SafeKit Synchrone replicatie en failover ](</nl/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: **💡 [ Google GCP Hoge beschikbaarheid: SafeKit Synchrone replicatie en failover ](</nl/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)** .
 
 ## Installatie van de SafeKit / GCP mirror oplossing op Windows en Linux ( mirror.safe ) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

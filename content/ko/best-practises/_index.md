@@ -11,7 +11,7 @@ topics: "SafeKit 클러스터링 모범 사례: 고가용성 아키텍처, 복�
 
 ## SafeKit 클러스터링 모범 사례: 고가용성 아키텍처, 복제 및 이중화 {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
-** 고가용성 클러스터링, 복제 및 이중화를 위한 모범 사례 **
+**고가용성 클러스터링, 복제 및 이중화를 위한 모범 사례**
 
 고가용성 모범 사례 | 복제 모범 사례 | 클러스터링 모범 사례  
 ---|---|---  

@@ -37,25 +37,25 @@ Bij een Docker compose-applicatie heb je een **docker-compose.yml** -bestand dat
   * Voer op één server voor elk volume in docker-compose.yml de volgende opdracht uit: **docker volume inspect volume_name**  
 Het zal **host directories of the docker volumes** retourneren (deze paden worden niet gegeven in docker-compose.yml ).  
 Je krijgt een lijst met paden als **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Ga naar het gedeelte ** stapsgewijze configuratie ** ' en 
+  * Ga naar het gedeelte **stapsgewijze configuratie** ' en 
     * implementeer de **mirror.safe** -module
-    * Stel een virtueel IP-adres in ** ** , waarnaar wordt overgeschakeld in geval van een storing.
-    * stel de lijst van **/var/lib/docker/volumes/ <volume_name>/_data** in als ** gerepliceerde mappen **
+    * Stel een **virtueel IP-adres** in dat wordt overgeschakeld in geval van een storing.
+    * stel de lijst van **/var/lib/docker/volumes/ <volume_name>/_data** in als **gerepliceerde mappen**
     * Plaats respectievelijk in de scripts start_prim en stop_prim : **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** en **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
 ### Voorbeeld 2 met een Docker -applicatie die een set containers start. {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
-We gaan er hier van uit dat een applicatie met de Docker ** myappli ** een reeks containers start.
+We gaan er hier van uit dat een applicatie met de Docker **myappli** een reeks containers start.
 
-  * Installeer eerst op beide servers ** myappli ** zonder ze te starten.
+  * Installeer eerst op beide servers **myappli** zonder ze te starten.
   * Op één server worden de volumes weergegeven die worden gebruikt door myapply : **ls /var/lib/docker/volumes**  
 Je krijgt dus een lijst met paden zoals **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Ga naar het gedeelte ** stapsgewijze configuratie ** ' en 
+  * Ga naar het gedeelte **stapsgewijze configuratie** ' en 
     * implementeer de **mirror.safe** -module
-    * Stel een virtueel IP-adres in ** ** , waarnaar wordt overgeschakeld in geval van een storing.
-    * stel de lijst van **/var/lib/docker/volumes/ <volume_name>/_data** in als ** gerepliceerde mappen **
-    * Voeg respectievelijk in de scripts start_prim en stop_prim het volgende toe: ** /.../myappli start, ** en ** /.../myappli stop **
+    * Stel een **virtueel IP-adres** in dat wordt overgeschakeld in geval van een storing.
+    * stel de lijst van **/var/lib/docker/volumes/ <volume_name>/_data** in als **gerepliceerde mappen**
+    * Voeg respectievelijk in de scripts start_prim en stop_prim het volgende toe: **/.../myappli start,** en **/.../myappli stop**
 
 
 ### Voorbeeld 3 met een eenvoudige Docker afbeelding {#example-3-with-a-simple-docker-image}
@@ -69,12 +69,12 @@ Vraag het directorypad op waar het volume op de host is opgeslagen: **docker vol
   * Docker containercreatie  
 Maak op beide servers een Docker-container met de naam nginx aan die zich koppelt aan het eerder genoemde volume: **docker container create --name mynginx -v replicated_vol:/usr/share/nginx/html -p 9011:80 nginx**  
 Vul het volume met een of ander index.html -bestand: **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
-  * Ga naar het gedeelte ** stapsgewijze configuratie ** ' en 
+  * Ga naar het gedeelte **stapsgewijze configuratie** ' en 
     * implementeer de **mirror.safe** -module
-    * Stel een virtueel IP-adres in ** ** , waarnaar wordt overgeschakeld in geval van een storing.
+    * Stel een **virtueel IP-adres** in dat wordt overgeschakeld in geval van een storing.
     * Stel **/var/lib/docker/storage/replicated_vol/_data** in als een gerepliceerde map.
     * Plaats respectievelijk in de scripts start_prim en stop_prim : **docker start mynginx** en **docker stop mynginx**
-    * Test na de configuratie SafeKit de toegang tot index.html met ** http://vitual-ip:9011**
+    * Test na de configuratie SafeKit de toegang tot index.html met **http://vitual-ip:9011**
 
 
 ## Stapsgewijze configuratie van de SafeKit / Docker -oplossing {#step-by-step-configuration-of-the-safekit--docker-solution}

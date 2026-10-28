@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ M
 
 ## نظرة عامة على حل SafeKit / MySQL {#overview-of-the-safekit--mysql-solution}
 
-الحل موضح هنا: ** 💡 [ أبسط MySQL التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/mysql-high-availability-synchronous-replication-failover/>) ** .
+الحل موضح هنا: **💡 [ أبسط MySQL التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/mysql-high-availability-synchronous-replication-failover/>)** .
 
 ## تثبيت حل SafeKit / MySQL على Windows و Linux ( mysql.safe ) و {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 

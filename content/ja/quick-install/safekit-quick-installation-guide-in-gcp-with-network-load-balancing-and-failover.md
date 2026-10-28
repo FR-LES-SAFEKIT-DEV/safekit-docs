@@ -15,7 +15,7 @@ topics: "GCPの高可用性クイックインストールガイド、 SafeKitの
 
 ## SafeKit / GCPソリューションの概要 {#overview-of-the-safekit--gcp-solution}
 
-ソリューションはここに記載されています: ** 💡 [ SafeKit : Google GCPロードバランシングとアプリケーションの高可用性`Farm`クラスター](</ja/solutions/gcp-load-balancing-cluster-failover/>) ** 。
+ソリューションはここに記載されています: **💡 [ SafeKit : Google GCPロードバランシングとアプリケーションの高可用性`Farm`クラスター](</ja/solutions/gcp-load-balancing-cluster-failover/>)** 。
 
 ## SafeKit / GCPソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 

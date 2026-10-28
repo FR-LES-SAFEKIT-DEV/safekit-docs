@@ -11,7 +11,7 @@ topics: "免费试用、技术文档和产品信息，适用于SafeKit高可用�
 
 ## SafeKit高可用性的免费试用、技术文档和产品信息 {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
-** SafeKit资源：免费试用、文档和产品信息**
+**SafeKit资源：免费试用、文档和产品信息**
 
 免费试用|技术文档|产品信息  
 ---|---|---  

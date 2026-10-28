@@ -15,7 +15,7 @@ topics: "Guida rapida all'installazione dell'alta disponibilità per AWS , Limit
 
 ## Panoramica della soluzione SafeKit / AWS mirror {#overview-of-the-safekit--aws-mirror-solution}
 
-La soluzione è descritta qui: ** 💡 [ Amazon AWS Alta disponibilità: SafeKit Replica sincrona e failover ](</it/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** .
+La soluzione è descritta qui: **💡 [ Amazon AWS Alta disponibilità: SafeKit Replica sincrona e failover ](</it/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)** .
 
 ## Installazione della soluzione SafeKit / AWS mirror su Windows e Linux ( mirror.safe ) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

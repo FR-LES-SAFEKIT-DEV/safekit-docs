@@ -15,16 +15,16 @@ topics: "Wie greife ich auf die Trainingsplattform zu?, SafeKit 8 Trainingsmater
 
 Das Online-Training SafeKit ist ein umfassendes, selbstgesteuertes Angebot, das Ihnen hilft, Hochverfügbarkeit und Anwendungsclustering zu beherrschen. Sie können über die folgenden Schritte auf die Plattform zugreifen:
 
-  * Navigieren Sie zur Online-Schulungsplattform ** 👉 🎓 [ SafeKit ](<https://training.my.evidian.com/mod/page/view.php?id=712>) ** . Diese dient als zentrale Anlaufstelle für alle Lernmodule und das kostenlose Zertifizierungsprogramm.
-  * ** Zugangsdaten anfordern: ** Falls Sie noch kein Konto haben, klicken Sie im oberen Menü der Trainingsplattform auf ** . Kontaktieren Sie ** , um Ihre Zugangsdaten anzufordern.
+  * Navigieren Sie zur Online-Schulungsplattform **👉 🎓 [ SafeKit ](<https://training.my.evidian.com/mod/page/view.php?id=712>)** . Diese dient als zentrale Anlaufstelle für alle Lernmodule und das kostenlose Zertifizierungsprogramm.
+  * **Zugangsdaten anfordern:** Falls Sie noch kein Konto haben, klicken Sie im oberen Menü der Trainingsplattform auf **. Kontaktieren Sie** , um Ihre Zugangsdaten anzufordern.
   * Die Plattform ist in thematische Bereiche unterteilt, darunter: 
-    * ** Architektur & Einführung: ** Verständnis der Clusterkonzepte mirror und `farm` .
-    * ** Demonstrationen: ** Zugriff auf videobasierte Szenarien für SQL Server , Hyper-V und Apache Load Balancing.
-    * ** Installation & Einrichtung: ** Erfahren Sie, wie Sie das Paket installieren und über die Web-Verwaltungskonsole oder die CLI konfigurieren.
-    * Erweiterte Konfiguration ** : Detaillierte Informationen zu ** , userconfig.xml , Replikation und virtuellen IPs.
-  * ** Video-Lektionen nutzen: ** Ein Großteil der Schulung wird über gehostete Videos vermittelt. Jedes Video ist in der Regel in Kapitel unterteilt (z. B. Voraussetzungen, Installation, Fehlerbehebung), sodass Sie direkt zum gewünschten Thema springen können.
-  * ** Erhalten Sie verschiedene Zertifizierungsstufen durch Quizze: ** Testen Sie Ihr Wissen am Ende der Module, um eine offizielle Anerkennung Ihrer SafeKit Expertise zu erhalten.
-  * ** Holen Sie sich SafeKit 8 Schulungsmaterialien: ** Greifen Sie auf das [ komplette Ressourcenpaket ](#training82) zu, um Ihr Lernen zu unterstützen.
+    * **Architektur & Einführung:** Verständnis der Clusterkonzepte mirror und `farm` .
+    * **Demonstrationen:** Zugriff auf videobasierte Szenarien für SQL Server , Hyper-V und Apache Load Balancing.
+    * **Installation & Einrichtung:** Erfahren Sie, wie Sie das Paket installieren und über die Web-Verwaltungskonsole oder die CLI konfigurieren.
+    * Erweiterte Konfiguration **: Detaillierte Informationen zu** , userconfig.xml , Replikation und virtuellen IPs.
+  * **Video-Lektionen nutzen:** Ein Großteil der Schulung wird über gehostete Videos vermittelt. Jedes Video ist in der Regel in Kapitel unterteilt (z. B. Voraussetzungen, Installation, Fehlerbehebung), sodass Sie direkt zum gewünschten Thema springen können.
+  * **Erhalten Sie verschiedene Zertifizierungsstufen durch Quizze:** Testen Sie Ihr Wissen am Ende der Module, um eine offizielle Anerkennung Ihrer SafeKit Expertise zu erhalten.
+  * **Holen Sie sich SafeKit 8 Schulungsmaterialien:** Greifen Sie auf das [ komplette Ressourcenpaket ](#training82) zu, um Ihr Lernen zu unterstützen.
 
 
 ### SafeKit Video: Tutorial zur kostenlosen Zertifizierungsplattform (6:11) {#demo-certification}

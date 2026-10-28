@@ -52,7 +52,7 @@ _ Os IPs virtuais ** devem ser configurados no nível do balanceador de carga na
 
 ## Módulos de aplicação pré-construídos {#pre-built-application-modules}
 
-O pacote SafeKit inclui módulos `.safe` prontos para uso e pré-configurados. Eles estão organizados em duas estratégias de alta disponibilidade (HA): ** HA de aplicação), ** (clusterização direta de aplicações com módulos mirror ou `farm` ) e ** (HA de virtualização) ** (clusterização em nível de máquina virtual com hyperv.safe ou kvm.safe ).
+O pacote SafeKit inclui módulos `.safe` prontos para uso e pré-configurados. Eles estão organizados em duas estratégias de alta disponibilidade (HA): **HA de aplicação),** (clusterização direta de aplicações com módulos mirror ou `farm` ) e **(HA de virtualização)** (clusterização em nível de máquina virtual com hyperv.safe ou kvm.safe ).
 
  | Alta disponibilidade de aplicativos | Alta disponibilidade em nível de VM  
 ---|---|---  

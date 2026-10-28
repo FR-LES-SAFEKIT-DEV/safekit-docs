@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Firebird , E
 
 ## Übersicht der SafeKit / Firebird -Lösung {#overview-of-the-safekit--firebird-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste Firebird Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</de/solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
+Die Lösung wird hier beschrieben: **💡 [ Die einfachste Firebird Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</de/solutions/firebird-high-availability-synchronous-replication-failover/>)** .
 
 ## Installation der SafeKit / Firebird Lösung auf Windows und Linux ( firebird.safe ) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 

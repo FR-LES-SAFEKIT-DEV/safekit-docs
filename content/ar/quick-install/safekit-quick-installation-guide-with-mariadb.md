@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ M
 
 ## نظرة عامة على حل SafeKit / MariaDB {#overview-of-the-safekit--mariadb-solution}
 
-الحل موضح هنا: ** 💡 [ أبسط MariaDB التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** .
+الحل موضح هنا: **💡 [ أبسط MariaDB التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>)** .
 
 ## تثبيت حل SafeKit / MariaDB على Windows و Linux ( mysql.safe ) و {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 

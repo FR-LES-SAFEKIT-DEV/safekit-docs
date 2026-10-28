@@ -37,25 +37,25 @@ Con un'applicazione composta Docker , si dispone di un file **docker-compose.yml
   * Su un server, per ogni volume in docker-compose.yml , eseguire questo comando: **docker volume inspect volume_name**  
 Restituirà **host directories of the docker volumes** (questi percorsi non sono forniti in docker-compose.yml ).  
 Riceverai un elenco di percorsi come **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Vai alla sezione di configurazione passo passo ** ** e 
+  * Vai alla sezione **di configurazione passo passo** e 
     * distribuire il modulo **mirror.safe**
-    * Imposta un indirizzo IP virtuale ** e un indirizzo IP virtuale ** che verranno commutati in caso di errore.
-    * imposta l'elenco di **/var/lib/docker/volumes/ <volume_name>/_data** come ** directory replicate **
+    * Imposta un indirizzo IP virtuale **e un indirizzo IP virtuale** che verranno commutati in caso di errore.
+    * imposta l'elenco di **/var/lib/docker/volumes/ <volume_name>/_data** come **directory replicate**
     * inserire rispettivamente negli script start_prim e stop_prim : **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** e **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
 ### Esempio 2 con un'applicazione Docker che avvia un set di container {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
-Supponiamo qui che un'applicazione Docker ** myappli ** avviino un insieme di container.
+Supponiamo qui che un'applicazione Docker **myappli** avviino un insieme di container.
 
-  * Innanzitutto, su entrambi i server, installa ** myappli ** senza avviarlo
+  * Innanzitutto, su entrambi i server, installa **myappli** senza avviarlo
   * Su un server, elenca i volumi utilizzati da myapply : **ls /var/lib/docker/volumes**  
 Pertanto, otterrai un elenco di percorsi come **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Vai alla sezione di configurazione passo passo ** ** e 
+  * Vai alla sezione **di configurazione passo passo** e 
     * distribuire il modulo **mirror.safe**
-    * Imposta un indirizzo IP virtuale ** e un indirizzo IP virtuale ** che verranno commutati in caso di errore.
-    * imposta l'elenco di **/var/lib/docker/volumes/ <volume_name>/_data** come ** directory replicate **
-    * inserire rispettivamente negli script start_prim e stop_prim : ** /.../myappli avviare ** e ** /.../myappli arrestare **
+    * Imposta un indirizzo IP virtuale **e un indirizzo IP virtuale** che verranno commutati in caso di errore.
+    * imposta l'elenco di **/var/lib/docker/volumes/ <volume_name>/_data** come **directory replicate**
+    * inserire rispettivamente negli script start_prim e stop_prim : **/.../myappli avviare** e **/.../myappli arrestare**
 
 
 ### Esempio 3 con una semplice immagine Docker {#example-3-with-a-simple-docker-image}
@@ -69,12 +69,12 @@ Ottieni il percorso della directory in cui è memorizzato il volume sull'host: *
   * Creazione del contenitore Docker  
 Su entrambi i server, creare un container Docker nginx che si colleghi al volume precedente: **docker container create --name mynginx -v replicated_vol:/usr/share/nginx/html -p 9011:80 nginx**  
 Popola il volume con alcuni file index.html : **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
-  * Vai alla sezione di configurazione passo passo ** ** e 
+  * Vai alla sezione **di configurazione passo passo** e 
     * distribuire il modulo **mirror.safe**
-    * Imposta un indirizzo IP virtuale ** e un indirizzo IP virtuale ** che verranno commutati in caso di errore.
+    * Imposta un indirizzo IP virtuale **e un indirizzo IP virtuale** che verranno commutati in caso di errore.
     * Imposta **/var/lib/docker/storage/replicated_vol/_data** come directory replicata.
     * inserire rispettivamente negli script start_prim e stop_prim : **docker start mynginx** e **docker stop mynginx**
-    * Dopo la configurazione SafeKit , testare l'accesso a index.html con ** http://vitual-ip:9011**
+    * Dopo la configurazione SafeKit , testare l'accesso a index.html con **http://vitual-ip:9011**
 
 
 ## Configurazione passo passo della soluzione SafeKit / Docker {#step-by-step-configuration-of-the-safekit--docker-solution}

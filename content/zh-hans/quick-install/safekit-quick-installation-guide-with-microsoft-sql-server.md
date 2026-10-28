@@ -15,7 +15,7 @@ topics: "Microsoft 、 SQL Server 、 SafeKit高可用性快速安装指南；�
 
 ## SafeKit / Microsoft SQL Server解决方案概述 {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-有关解决方案的详细概述，请参阅** 💡 [最简单的Microsoft SQL Server高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/sql-server-high-availability-synchronous-replication-failover/>) ** 。
+有关解决方案的详细概述，请参阅**💡 [最简单的Microsoft SQL Server高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/sql-server-high-availability-synchronous-replication-failover/>)** 。
 
 ## 在Windows ( sqlserver.safe )上安装SafeKit / Microsoft SQL Server解决方案 {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 

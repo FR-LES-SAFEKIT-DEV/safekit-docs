@@ -15,7 +15,7 @@ topics: "AWSの高可用性クイックインストールガイド、 SafeKitの
 
 ## SafeKit / AWS mirrorソリューションの概要 {#overview-of-the-safekit--aws-mirror-solution}
 
-ソリューションはここに記載されています: ** 💡 [ Amazon AWS高可用性: SafeKit同期レプリケーションとフェイルオーバー](</ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** 。
+ソリューションはここに記載されています: **💡 [ Amazon AWS高可用性: SafeKit同期レプリケーションとフェイルオーバー](</ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)** 。
 
 ## SafeKit / AWS mirrorソリューションをWindowsおよびLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

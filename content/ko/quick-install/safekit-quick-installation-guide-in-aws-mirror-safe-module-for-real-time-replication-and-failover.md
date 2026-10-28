@@ -15,7 +15,7 @@ topics: "AWS , SafeKit 고가용성 빠른 설치 가이드, 고가용성 제한
 
 ## SafeKit / AWS mirror 솔루션 개요 {#overview-of-the-safekit--aws-mirror-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ Amazon AWS 고가용성: SafeKit 동기 복제 및 장애 조치 ](</ko/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ Amazon AWS 고가용성: SafeKit 동기 복제 및 장애 조치 ](</ko/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)** .
 
 ## 설치 SafeKit / AWS mirror 솔루션 Windows 그리고 Linux (mirror.safe) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

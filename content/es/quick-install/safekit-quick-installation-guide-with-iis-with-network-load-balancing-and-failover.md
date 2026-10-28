@@ -15,7 +15,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para IIS , Limitac
 
 ## Descripción general de la solución SafeKit / IIS {#overview-of-the-safekit--iis-solution}
 
-La solución se describe aquí: ** 💡 [ SafeKit : Todo en uno IIS Software de equilibrio de carga y alta disponibilidad ](</es/solutions/iis-load-balancing-failover/>) ** .
+La solución se describe aquí: **💡 [ SafeKit : Todo en uno IIS Software de equilibrio de carga y alta disponibilidad ](</es/solutions/iis-load-balancing-failover/>)** .
 
 ## Instalación de la solución SafeKit / IIS en Windows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

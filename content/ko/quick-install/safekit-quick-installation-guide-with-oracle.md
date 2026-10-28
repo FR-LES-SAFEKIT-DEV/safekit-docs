@@ -15,7 +15,7 @@ topics: "Oracle 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 
 ## SafeKit / Oracle 솔루션 개요 {#overview-of-the-safekit--oracle-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 Oracle 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ 가장 간단한 Oracle 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/oracle-high-availability-synchronous-replication-failover/>)** .
 
 ## SafeKit / Oracle 솔루션의 Windows 및 Linux ( oracle.safe ) 및 설치 {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

@@ -15,7 +15,7 @@ topics: "GCP 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 �
 
 ## SafeKit / GCP 솔루션 개요 {#overview-of-the-safekit--gcp-solution}
 
-해결책은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Google GCP 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</ko/solutions/gcp-load-balancing-cluster-failover/>) ** .
+해결책은 여기에 설명되어 있습니다: **💡 [ SafeKit : Google GCP 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</ko/solutions/gcp-load-balancing-cluster-failover/>)** .
 
 ## SafeKit / GCP 솔루션의 Windows 및 Linux ( farm.safe ) 및 설치 {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 

@@ -33,9 +33,9 @@ Los sistemas tolerantes a fallos solo gestionan fallos de hardware y no fallos d
 
 ## Ventajas e inconvenientes de la alta disponibilidad y la tolerancia a fallos {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
-Para proteger las aplicaciones críticas contra fallos, existen dos enfoques principales: la agrupación en clústeres de alta disponibilidad por software ** y ** y ** ) y los sistemas tolerantes a fallos ** ). Cada enfoque presenta diferentes ventajas y desventajas en términos de coste, flexibilidad, tiempo de recuperación y requisitos de hardware. Comprender estas diferencias ayuda a elegir la solución adecuada para sus necesidades específicas.
+Para proteger las aplicaciones críticas contra fallos, existen dos enfoques principales: la agrupación en clústeres de alta disponibilidad por software **y** y **) y los sistemas tolerantes a fallos** ). Cada enfoque presenta diferentes ventajas y desventajas en términos de coste, flexibilidad, tiempo de recuperación y requisitos de hardware. Comprender estas diferencias ayuda a elegir la solución adecuada para sus necesidades específicas.
 
-** Comparación de clústeres de alta disponibilidad de software frente a sistemas tolerantes a fallos **
+**Comparación de clústeres de alta disponibilidad de software frente a sistemas tolerantes a fallos**
 
 Criterios | Clúster de alta disponibilidad de software | Sistema tolerante a fallos  
 ---|---|---  
@@ -47,7 +47,7 @@ RTO/RPO | El tiempo de recuperación con SafeKit ( [ RTO ](</es/best-practises/w
 Flexibilidad | Puede ejecutarse en cualquier tipo de servidor con sistema operativo estándar Windows y Linux | Depende de hardware específico o de hipervisores específicos  
 Adecuado para | [ Editores de software que desean agregar una opción simple de alta disponibilidad a su aplicación ](</es/use-cases/application-clustering-software/>) | Entorno donde la falla de hardware es la principal preocupación  
   
-En resumen, ** alta disponibilidad SafeKit ** una solución rentable y flexible que se ejecuta en hardware estándar y admite actualizaciones progresivas, con un tiempo de inactividad casi nulo (RTO ~1 minuto) y sin pérdida de datos. Los sistemas tolerantes a fallos ofrecen conmutación por error instantánea (RTO = 0), pero requieren hardware dedicado y carecen de flexibilidad para actualizaciones de software independientes.
+En resumen, **alta disponibilidad SafeKit** una solución rentable y flexible que se ejecuta en hardware estándar y admite actualizaciones progresivas, con un tiempo de inactividad casi nulo (RTO ~1 minuto) y sin pérdida de datos. Los sistemas tolerantes a fallos ofrecen conmutación por error instantánea (RTO = 0), pero requieren hardware dedicado y carecen de flexibilidad para actualizaciones de software independientes.
 
 
 {{%  insert-safekit-hub-es  %}}

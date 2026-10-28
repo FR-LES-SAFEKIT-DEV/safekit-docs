@@ -15,7 +15,7 @@ topics: "AWSの高可用性クイックインストールガイド、 SafeKitの
 
 ## SafeKit / AWSソリューションの概要 {#overview-of-the-safekit--aws-solution}
 
-ソリューションはここに記載されています: ** 💡 [ SafeKit : Amazon AWSロードバランシングとアプリケーションの高可用性`Farm`クラスター](</ja/solutions/aws-load-balancing-cluster-failover/>) ** 。
+ソリューションはここに記載されています: **💡 [ SafeKit : Amazon AWSロードバランシングとアプリケーションの高可用性`Farm`クラスター](</ja/solutions/aws-load-balancing-cluster-failover/>)** 。
 
 ## SafeKit / AWSソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

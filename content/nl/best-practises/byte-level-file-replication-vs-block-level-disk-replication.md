@@ -49,7 +49,7 @@ Tot slot is de oplossing niet eenvoudig te configureren, omdat er expertise nodi
 
 ## Voordelen en nadelen van bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
-Criteria | ** Cluster met bestandsreplicatie op byte-niveau ** | ** Cluster met schijfreplicatie op blokniveau **  
+Criteria | **Cluster met bestandsreplicatie op byte-niveau** | **Cluster met schijfreplicatie op blokniveau**  
 ---|---|---  
 Product | • [ SafeKit op Windows en Linux ](/) | • Schijfreplicatieproducten als [ DRBD ](https://linbit.com/drbd/)   
 Organisatie van applicatiegegevens | • Geen impact op de organisatie van applicatiegegevens met SafeKit . <br> • [ Definieer alleen mappen die in realtime moeten worden gerepliceerd. ](/nl/architectures/file-replication-byte-level-with-failover-mirror-cluster/) <br> • Zelfs mappen binnen de systeemschijf kunnen worden gerepliceerd. | • Impact op de organisatie van applicatiegegevens. <br> • Speciale configuratie van de applicatie om de gegevens op een gerepliceerde schijf te plaatsen. <br> • Gegevens op de systeemschijf kunnen niet worden gerepliceerd.   

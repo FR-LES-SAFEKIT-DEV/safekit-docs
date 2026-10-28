@@ -15,7 +15,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 
 ## SafeKit / Kubernetes 솔루션 개요 {#overview-of-the-safekit--kubernetes-solution}
 
-여기에 솔루션이 설명되어 있습니다: ** 💡 [ Kubernetes K3s 고가용성: 2노드 동기 복제 및 페일오버 ](</ko/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+여기에 솔루션이 설명되어 있습니다: **💡 [ Kubernetes K3s 고가용성: 2노드 동기 복제 및 페일오버 ](</ko/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## Linux ( k3s.safe ) 및 에 SafeKit / Kubernetes 솔루션의 설치 및 구성 {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -230,7 +230,7 @@ WordPress는 자동으로 고가용성을 제공합니다.
   * `Save and apply` 수정된 userconfig.xml 파일을 두 노드 모두에 재배포하기 위한 새 구성입니다(저장 및 적용하려면 두 노드 모두에서 모듈을 중지해야 합니다).
 
 
-** 매개변수 ** :
+**매개변수** :
 
   * `ident="witness"` 리소스 이름( `splitbrain.witness` 을 사용하여 증인을 식별합니다. 이 값을 변경하여 증인을 식별할 수 있습니다.
   * `exec="ping"` 실행할 핑 코드를 참조합니다. 이 값을 변경하지 마십시오.

@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ I
 
 ## نظرة عامة على حل SafeKit / IIS {#overview-of-the-safekit--iis-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : برنامج موازنة الأحمال والتوافر العالي المتكامل IIS ](</ar/solutions/iis-load-balancing-failover/>) ** .
+الحل موضح هنا: **💡 [ SafeKit : برنامج موازنة الأحمال والتوافر العالي المتكامل IIS ](</ar/solutions/iis-load-balancing-failover/>)** .
 
 ## تثبيت حل SafeKit / IIS على Windows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

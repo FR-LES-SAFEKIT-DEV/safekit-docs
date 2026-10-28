@@ -25,11 +25,11 @@ SafeKit è stato creato proprio per colmare questa lacuna. Consente alle applica
 
 SafeKit trasforma due server edge standard (di qualsiasi marca, fisici o virtuali) in un cluster HA plug-and-play, senza storage condiviso, SAN o hardware speciale. Un unico stack software leggero offre:
 
-  * ** Replica sincrona dei file in tempo reale ** — i dati vengono replicati a livello di byte sul server di standby al momento della scrittura
-  * ** Failover automatico ** : se il server primario si guasta, il server di standby subentra senza intervento umano, entro pochi secondi
-  * ** Bilanciamento del carico di rete opzionale ** — per implementazioni attivo-attivo in cui entrambi i server condividono il carico di lavoro
-  * Console web ** ** : gestione basata su browser, accessibile da remoto tramite HTTPS, senza necessità di competenze in loco.
-  * ** Installazione silenziosa e programmabile ** — adatta per l'integrazione OEM e la distribuzione di massa su centinaia di siti distribuiti
+  * **Replica sincrona dei file in tempo reale** — i dati vengono replicati a livello di byte sul server di standby al momento della scrittura
+  * **Failover automatico** : se il server primario si guasta, il server di standby subentra senza intervento umano, entro pochi secondi
+  * **Bilanciamento del carico di rete opzionale** — per implementazioni attivo-attivo in cui entrambi i server condividono il carico di lavoro
+  * **Console web** : gestione basata su browser, accessibile da remoto tramite HTTPS, senza necessità di competenze in loco.
+  * **Installazione silenziosa e programmabile** — adatta per l'integrazione OEM e la distribuzione di massa su centinaia di siti distribuiti
 
 
 Non è necessario acquistare una SAN, non è richiesta alcuna licenza Windows Server Datacenter, non è necessaria alcuna competenza specifica sul sistema operativo del cluster Linux e non è richiesto hardware dedicato per il cluster. L'intero stack HA è costituito da un singolo pacchetto software.
@@ -54,12 +54,12 @@ Centinaia di cluster distribuiti | Progettati per aziende distribuite che gestis
 
 Gli ambienti OT (Operational Technology) — SCADA, BMS, sicurezza fisica, controllo industriale — hanno requisiti che differiscono fondamentalmente da quelli dei data center IT:
 
-  * ** Nessun personale IT in loco. ** Una sottostazione, una stazione di pompaggio remota o una nave non hanno un amministratore di sistema. L'alta disponibilità deve essere autogestita.
-  * ** Reti isolate o con accesso limitato. ** Molti siti OT non hanno accesso a Internet e dispongono di larghezza di banda WAN limitata. Il software HA deve funzionare completamente offline.
-  * ** Disponibilità 24 ore su 24, 7 giorni su 7, tolleranza zero per la complessità. ** Arrestare una linea di produzione, perdere la videosorveglianza o interrompere il controllo degli accessi costa molto di più del software HA stesso.
-  * Cicli di vita lunghi per le apparecchiature ** . I server OT ** possono funzionare per 10-15 anni. La soluzione HA deve essere stabile, richiedere poca manutenzione e non necessitare di aggiornamenti costanti.
-  * ** Solo hardware x86 standard. ** Nessun budget o giustificazione per SAN o nodi cluster dedicati in un sito industriale remoto.
-  * ** Intolleranza per la complessità a livello di sistema operativo. ** Pacemaker, Corosync o WSFC richiedono competenze sui cluster che gli operatori OT semplicemente non hanno e non dovrebbero necessitare.
+  * **Nessun personale IT in loco.** Una sottostazione, una stazione di pompaggio remota o una nave non hanno un amministratore di sistema. L'alta disponibilità deve essere autogestita.
+  * **Reti isolate o con accesso limitato.** Molti siti OT non hanno accesso a Internet e dispongono di larghezza di banda WAN limitata. Il software HA deve funzionare completamente offline.
+  * **Disponibilità 24 ore su 24, 7 giorni su 7, tolleranza zero per la complessità.** Arrestare una linea di produzione, perdere la videosorveglianza o interrompere il controllo degli accessi costa molto di più del software HA stesso.
+  * Cicli di vita lunghi per le apparecchiature **. I server OT** possono funzionare per 10-15 anni. La soluzione HA deve essere stabile, richiedere poca manutenzione e non necessitare di aggiornamenti costanti.
+  * **Solo hardware x86 standard.** Nessun budget o giustificazione per SAN o nodi cluster dedicati in un sito industriale remoto.
+  * **Intolleranza per la complessità a livello di sistema operativo.** Pacemaker, Corosync o WSFC richiedono competenze sui cluster che gli operatori OT semplicemente non hanno e non dovrebbero necessitare.
 
 
 Il modello SANless a due server e con failover automatico di SafeKit affronta direttamente ognuno di questi vincoli.
@@ -98,11 +98,11 @@ RTO tipico | 1–5 minuti | Meno di 1 minuto (configurabile)
   
 ## Requisiti tecnici minimi {#technical-minimum-requirements}
 
-  * Server ** : ** 2 server x86 standard o VM (qualsiasi marca hardware, fisica o virtuale) o ARM (solo Linux )
-  * ** OS: ** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * Rete ** : LAN ** da 1 Gbps per la replica; si consiglia una rete heartbeat dedicata.
-  * ** Archiviazione: ** Solo dischi locali — nessuna SAN, nessun NAS, nessuna archiviazione condivisa di alcun tipo
-  * ** Nessuna edizione speciale del sistema operativo ** — Windows Server Standard è sufficiente; non è richiesta alcuna licenza Datacenter
+  * Server **:** 2 server x86 standard o VM (qualsiasi marca hardware, fisica o virtuale) o ARM (solo Linux )
+  * **OS:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
+  * Rete **: LAN** da 1 Gbps per la replica; si consiglia una rete heartbeat dedicata.
+  * **Archiviazione:** Solo dischi locali — nessuna SAN, nessun NAS, nessuna archiviazione condivisa di alcun tipo
+  * **Nessuna edizione speciale del sistema operativo** — Windows Server Standard è sufficiente; non è richiesta alcuna licenza Datacenter
 
 
 Per le specifiche tecniche complete, i vincoli dimensionali e i criteri di approvvigionamento, consultare il documento di riferimento tecnico RFP/RFI [ ](</it/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) ).

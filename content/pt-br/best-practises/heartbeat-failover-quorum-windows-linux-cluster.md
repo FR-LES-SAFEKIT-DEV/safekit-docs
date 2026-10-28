@@ -17,7 +17,7 @@ topics: "Quais são os diferentes cenários em caso de isolamento de rede em um 
 
 ### O que é um batimento cardíaco? {#what-is-a-heartbeat}
 
-O mecanismo básico para sincronizar dois servidores e detectar falhas em um servidor é o sinal de pulsação ** ** , que monitora o fluxo de dados em uma rede compartilhada por um par de servidores.
+O mecanismo básico para sincronizar dois servidores e detectar falhas em um servidor é o **heartbeat** , que consiste no monitoramento do fluxo de dados em uma rede compartilhada por um par de servidores.
 
 O software SafeKit suporta tantos pulsos cardíacos quantas forem as redes compartilhadas por dois servidores. 
 

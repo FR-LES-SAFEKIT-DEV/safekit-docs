@@ -15,7 +15,7 @@ topics: "MariaDBの高可用性クイックインストールガイド、 SafeKi
 
 ## SafeKit / MariaDBソリューションの概要 {#overview-of-the-safekit--mariadb-solution}
 
-解決策はここに記載されています: ** 💡 [最もシンプルなMariaDB高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** 。
+解決策はここに記載されています: **💡 [最もシンプルなMariaDB高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>)** 。
 
 ## SafeKit / MariaDBソリューションをWindowsおよびLinux ( mysql.safe )にインストールします。 {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 

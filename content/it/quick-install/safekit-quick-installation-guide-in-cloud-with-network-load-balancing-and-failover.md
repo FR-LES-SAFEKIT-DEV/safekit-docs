@@ -15,7 +15,7 @@ topics: "Guida rapida all'installazione dell'alta disponibilità per il cloud, L
 
 ## Panoramica della soluzione SafeKit / Cloud {#overview-of-the-safekit--cloud-solution}
 
-La soluzione è descritta qui: ** 💡 [ SafeKit : Bilanciamento del carico cloud e alta disponibilità delle applicazioni Cluster `Farm` ](</it/solutions/cloud-load-balancing-cluster-failover/>) ** .
+La soluzione è descritta qui: **💡 [ SafeKit : Bilanciamento del carico cloud e alta disponibilità delle applicazioni Cluster `Farm` ](</it/solutions/cloud-load-balancing-cluster-failover/>)** .
 
 ## Installazione della soluzione SafeKit / Cloud su Windows e Linux ( farm.safe ) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 

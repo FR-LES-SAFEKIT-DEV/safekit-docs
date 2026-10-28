@@ -15,8 +15,8 @@ Manter os aplicativos críticos para os negócios atualizados é essencial para 
 
 Existem dois modelos de implantação comuns:
 
-  * Alta disponibilidade da máquina virtual ** ** , onde o aplicativo é executado dentro de uma máquina virtual protegida gerenciada por SafeKit .
-  * ** Alta disponibilidade em nível de aplicação ** , onde a aplicação está instalada em dois servidores.
+  * Alta disponibilidade da máquina virtual **** , onde o aplicativo é executado dentro de uma máquina virtual protegida gerenciada por SafeKit .
+  * **Alta disponibilidade em nível de aplicação** , onde a aplicação está instalada em dois servidores.
 
 
 Cada modelo oferece diferentes mecanismos de atualização e estratégias de reversão.
@@ -61,45 +61,45 @@ Em um cluster SafeKit tradicional, o aplicativo é instalado em dois nós: nó 1
 
 Uma atualização menor modifica apenas os binários do aplicativo, mantendo os dados replicados totalmente compatíveis entre as versões. Como o formato dos dados replicados não muda, SafeKit suporta uma atualização gradual com tempo de inatividade mínimo. 
 
-  1. Inicialmente, o cluster é executado em uma configuração ** ✅ PRIM (nó 1) / ✅ SECOND (nó 2) ** . O aplicativo é executado no nó PRIM e os dados replicados são continuamente sincronizados com o nó SECOND. 
-  2. Pare o módulo SafeKit no SEGUNDO nó ( ** ❌ STOP (nó 2) ** ), atualize o aplicativo e reinicie o módulo. Durante esta operação, o aplicativo continua a ser executado no ** ✅ SOZINHO (nó 1) ** e nenhuma interrupção de serviço ocorre. 
-  3. Após a reinicialização, o nó atualizado se junta novamente ao cluster como ** ✅ SECOND (nó 2) ** e resincroniza os dados replicados. 
-  4. Pare o nó PRIM ( ** ❌ STOP (nó 1) ** ). SafeKit realiza automaticamente um failover e o nó atualizado torna-se ** ✅ ALONE (nó 2) ** . O aplicativo é reiniciado neste nó. O tempo de inatividade é limitado ao tempo de failover e reinicialização do aplicativo. 
+  1. Inicialmente, o cluster é executado em uma configuração **✅ PRIM (nó 1) / ✅ SECOND (nó 2)** . O aplicativo é executado no nó PRIM e os dados replicados são continuamente sincronizados com o nó SECOND. 
+  2. Pare o módulo SafeKit no SEGUNDO nó ( **❌ STOP (nó 2)** ), atualize o aplicativo e reinicie o módulo. Durante esta operação, o aplicativo continua a ser executado no **✅ SOZINHO (nó 1)** e nenhuma interrupção de serviço ocorre. 
+  3. Após a reinicialização, o nó atualizado se junta novamente ao cluster como **✅ SECOND (nó 2)** e resincroniza os dados replicados. 
+  4. Pare o nó PRIM ( **❌ STOP (nó 1)** ). SafeKit realiza automaticamente um failover e o nó atualizado torna-se **✅ ALONE (nó 2)** . O aplicativo é reiniciado neste nó. O tempo de inatividade é limitado ao tempo de failover e reinicialização do aplicativo. 
   5. Se o aplicativo atualizado funcionar corretamente no estado ALONE, atualize o nó restante (nó 1) e reinicie seu módulo SafeKit . 
-  6. Após a resincronização, o cluster retorna à configuração normal ** ✅ SECOND (nó 1) / ✅ PRIM (nó 2) ** . As funções originais podem ser restauradas manualmente usando o Console de Administração SafeKit ou automaticamente por meio da configuração SafeKit . 
+  6. Após a resincronização, o cluster retorna à configuração normal **✅ SECOND (nó 1) / ✅ PRIM (nó 2)** . As funções originais podem ser restauradas manualmente usando o Console de Administração SafeKit ou automaticamente por meio da configuração SafeKit . 
 
 
-** Procedimento de reversão **
+**Procedimento de reversão**
 
-  * Na etapa 5, pare o nó ** ✅ SOZINHO (nó 2) ** .
-  * Forçar o nó original (nó 1) a iniciar como primário ** SOZINHO (nó 1) ** com a versão anterior do aplicativo.
+  * Na etapa 5, pare o nó **✅ SOZINHO (nó 2)** .
+  * Forçar o nó original (nó 1) a iniciar como primário **SOZINHO (nó 1)** com a versão anterior do aplicativo.
   * Reinstale a versão anterior no nó atualizado (nó 2).
-  * Retornar a uma configuração normal ** ✅ PRIM (nó 1) / ✅ SECOND (nó 2) ** .
+  * Retornar a uma configuração normal **✅ PRIM (nó 1) / ✅ SECOND (nó 2)** .
 
 
-A atualização completa é realizada com tempo de inatividade limitado à transição de ** ✅ PRIM / ✅ SECOND ** para ** ❌ STOP / ✅ ALONE ** . 
+A atualização completa é realizada com tempo de inatividade limitado à transição de **✅ PRIM / ✅ SECOND** para **❌ STOP / ✅ ALONE** . 
 
 ### Atualização importante do aplicativo {#app-level-ha-major}
 
 Uma atualização importante altera o formato ou a estrutura dos dados replicados. Como os dados gerados pela nova versão não são mais compatíveis com a versão antiga, uma atualização gradual não pode ser realizada. 
 
-  1. Inicialmente, o cluster é executado em uma configuração ** ✅ PRIM (nó 1) / ✅ SECOND (nó 2) ** . 
-  2. Pare o SEGUNDO nó e depois o nó PRIM. O cluster transita para ** ❌ STOP (nó 1) / ❌ STOP (nó 2) ** . 
-  3. Atualize o nó PRIM anterior e reinicie-o. O nó inicia sozinho como ** ✅ ALONE (nó 1) ** com a nova versão do aplicativo. 
+  1. Inicialmente, o cluster é executado em uma configuração **✅ PRIM (nó 1) / ✅ SECOND (nó 2)** . 
+  2. Pare o SEGUNDO nó e depois o nó PRIM. O cluster transita para **❌ STOP (nó 1) / ❌ STOP (nó 2)** . 
+  3. Atualize o nó PRIM anterior e reinicie-o. O nó inicia sozinho como **✅ ALONE (nó 1)** com a nova versão do aplicativo. 
   4. Valide o aplicativo atualizado e verifique se ele funciona corretamente. 
   5. Se a validação for bem-sucedida, atualize o nó restante e reinicie o módulo SafeKit . 
-  6. O nó atualizado torna-se ** ✅ SECOND (nó 2) ** , resincroniza os dados do aplicativo e o cluster retorna a uma configuração normal ** ✅ PRIM (nó 1) / ✅ SECOND (nó 2) ** . 
+  6. O nó atualizado torna-se **✅ SECOND (nó 2)** , resincroniza os dados do aplicativo e o cluster retorna a uma configuração normal **✅ PRIM (nó 1) / ✅ SECOND (nó 2)** . 
 
 
-** Procedimento de reversão **
+**Procedimento de reversão**
 
-  * Na etapa 5, pare o nó ** ✅ ALONE (nó 1) ** atualizado.
-  * Forçar o nó não atualizado a iniciar como primário ** ✅ SOZINHO (nó 2) ** .
+  * Na etapa 5, pare o nó **✅ ALONE (nó 1)** atualizado.
+  * Forçar o nó não atualizado a iniciar como primário **✅ SOZINHO (nó 2)** .
   * Reinstale a versão anterior do aplicativo no nó atualizado.
-  * Restaurar a configuração original ** ✅ SECOND (nó 1) / ✅ PRIM (nó 2) ** .
+  * Restaurar a configuração original **✅ SECOND (nó 1) / ✅ PRIM (nó 2)** .
 
 
-Como os dados replicados são modificados durante a migração, o tempo de inatividade corresponde ao período entre o estado ** ❌ STOP / ❌ STOP ** e a reinicialização do primeiro nó atualizado como ** ✅ ALONE ** . 
+Como os dados replicados são modificados durante a migração, o tempo de inatividade corresponde ao período entre o estado **❌ STOP / ❌ STOP** e a reinicialização do primeiro nó atualizado como **✅ ALONE** . 
 
 ### Por que SafeKit simplifica as atualizações de aplicativos {#why-safekit-simplifies-application-upgrades}
 

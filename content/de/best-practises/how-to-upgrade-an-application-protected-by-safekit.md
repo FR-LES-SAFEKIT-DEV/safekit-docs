@@ -15,8 +15,8 @@ Die Aktualisierung geschäftskritischer Anwendungen ist unerlässlich für Siche
 
 Es gibt zwei gängige Bereitstellungsmodelle:
 
-  * ** Virtuelle Maschine Hochverfügbarkeit ** , wobei die Anwendung in einer geschützten virtuellen Maschine ausgeführt wird, die von SafeKit verwaltet wird.
-  * ** Anwendungsweite Hochverfügbarkeit ** , wobei die Anwendung auf zwei Servern installiert ist.
+  * **Virtuelle Maschine Hochverfügbarkeit** , wobei die Anwendung in einer geschützten virtuellen Maschine ausgeführt wird, die von SafeKit verwaltet wird.
+  * **Anwendungsweite Hochverfügbarkeit** , wobei die Anwendung auf zwei Servern installiert ist.
 
 
 Jedes Modell bietet unterschiedliche Upgrade-Mechanismen und Rollback-Strategien.
@@ -61,45 +61,45 @@ In einem herkömmlichen SafeKit Cluster wird die Anwendung auf zwei Knoten insta
 
 Ein kleineres Upgrade ändert lediglich die Anwendungsdateien, während die replizierten Daten zwischen den Versionen vollständig kompatibel bleiben. Da sich das Format der replizierten Daten nicht ändert, unterstützt SafeKit ein rollierendes Upgrade mit minimaler Ausfallzeit. 
 
-  1. Der Cluster läuft anfänglich in einer ** ✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2) ** -Konfiguration. Die Anwendung läuft auf dem PRIM-Knoten, und replizierte Daten werden kontinuierlich mit dem SECOND-Knoten synchronisiert. 
-  2. Stoppen Sie das Modul SafeKit auf dem zweiten Knoten ( ** ❌ STOP (Knoten 2) ** ), aktualisieren Sie die Anwendung und starten Sie das Modul neu. Währenddessen läuft die Anwendung auf dem ** ✅ ALONE (Knoten 1) ** weiter, und es kommt zu keiner Dienstunterbrechung. 
-  3. Nach dem Neustart tritt der aktualisierte Knoten dem Cluster als ** ✅ SECOND (Knoten 2) ** wieder bei und synchronisiert die replizierten Daten neu. 
-  4. Der primäre Knoten ( ** ❌ STOP (Knoten 1) ** ) wird gestoppt. SafeKit führt automatisch ein Failover durch, und der aktualisierte Knoten wird zu ** ✅ ALONE (Knoten 2) ** . Die Anwendung wird auf diesem Knoten neu gestartet. Die Ausfallzeit ist auf die Dauer des Failovers und des Neustarts der Anwendung begrenzt. 
+  1. Der Cluster läuft anfänglich in einer **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** -Konfiguration. Die Anwendung läuft auf dem PRIM-Knoten, und replizierte Daten werden kontinuierlich mit dem SECOND-Knoten synchronisiert. 
+  2. Stoppen Sie das Modul SafeKit auf dem zweiten Knoten ( **❌ STOP (Knoten 2)** ), aktualisieren Sie die Anwendung und starten Sie das Modul neu. Währenddessen läuft die Anwendung auf dem **✅ ALONE (Knoten 1)** weiter, und es kommt zu keiner Dienstunterbrechung. 
+  3. Nach dem Neustart tritt der aktualisierte Knoten dem Cluster als **✅ SECOND (Knoten 2)** wieder bei und synchronisiert die replizierten Daten neu. 
+  4. Der primäre Knoten ( **❌ STOP (Knoten 1)** ) wird gestoppt. SafeKit führt automatisch ein Failover durch, und der aktualisierte Knoten wird zu **✅ ALONE (Knoten 2)** . Die Anwendung wird auf diesem Knoten neu gestartet. Die Ausfallzeit ist auf die Dauer des Failovers und des Neustarts der Anwendung begrenzt. 
   5. Wenn die aktualisierte Anwendung im ALONE-Zustand korrekt funktioniert, aktualisieren Sie den verbleibenden Knoten (Knoten 1) und starten Sie dessen SafeKit Modul neu. 
-  6. Nach der Resynchronisierung kehrt der Cluster zu seiner normalen ** ✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2) ** -Konfiguration zurück. Die ursprünglichen Rollen können entweder manuell über die SafeKit -Administrationskonsole oder automatisch über die SafeKit Konfiguration wiederhergestellt werden. 
+  6. Nach der Resynchronisierung kehrt der Cluster zu seiner normalen **✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2)** -Konfiguration zurück. Die ursprünglichen Rollen können entweder manuell über die SafeKit -Administrationskonsole oder automatisch über die SafeKit Konfiguration wiederhergestellt werden. 
 
 
-** Rollback-Prozedur **
+**Rollback-Prozedur**
 
-  * In Schritt 5 den Knoten ** ✅ ALONE (Knoten 2) ** stoppen.
-  * Erzwinge, dass der ursprüngliche Knoten (Knoten 1) als primärer Knoten ** ALONE (Knoten 1) ** mit der vorherigen Anwendungsversion startet.
+  * In Schritt 5 den Knoten **✅ ALONE (Knoten 2)** stoppen.
+  * Erzwinge, dass der ursprüngliche Knoten (Knoten 1) als primärer Knoten **ALONE (Knoten 1)** mit der vorherigen Anwendungsversion startet.
   * Installieren Sie die vorherige Version auf dem aktualisierten Knoten (Knoten 2) neu.
-  * Rückkehr zu einer normalen ** ✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2) ** Konfiguration.
+  * Rückkehr zu einer normalen **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** Konfiguration.
 
 
-Das vollständige Upgrade wird mit einer Ausfallzeit durchgeführt, die auf den Übergang von ** ✅ PRIM / ✅ SECOND ** zu ** ❌ STOP / ✅ ALONE ** beschränkt ist. 
+Das vollständige Upgrade wird mit einer Ausfallzeit durchgeführt, die auf den Übergang von **✅ PRIM / ✅ SECOND** zu **❌ STOP / ✅ ALONE** beschränkt ist. 
 
 ### Wichtiges Anwendungs-Upgrade {#app-level-ha-major}
 
 Ein größeres Upgrade ändert das Format oder die Struktur der replizierten Daten. Da die von der neuen Version generierten Daten nicht mehr mit der alten Version kompatibel sind, kann kein rollierendes Upgrade durchgeführt werden. 
 
-  1. Der Cluster läuft anfänglich in einer ** ✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2) ** Konfiguration. 
-  2. Stoppen Sie zuerst den zweiten Knoten und dann den primären Knoten. Der Cluster wechselt zu ** ❌ STOP (Knoten 1) / ❌ STOP (Knoten 2) ** . 
-  3. Aktualisieren Sie den vorherigen PRIM-Knoten und starten Sie ihn neu. Der Knoten startet allein als ** ✅ ALONE (Knoten 1) ** mit der neuen Anwendungsversion. 
+  1. Der Cluster läuft anfänglich in einer **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** Konfiguration. 
+  2. Stoppen Sie zuerst den zweiten Knoten und dann den primären Knoten. Der Cluster wechselt zu **❌ STOP (Knoten 1) / ❌ STOP (Knoten 2)** . 
+  3. Aktualisieren Sie den vorherigen PRIM-Knoten und starten Sie ihn neu. Der Knoten startet allein als **✅ ALONE (Knoten 1)** mit der neuen Anwendungsversion. 
   4. Überprüfen Sie die aktualisierte Anwendung und stellen Sie sicher, dass sie ordnungsgemäß funktioniert. 
   5. Wenn die Validierung erfolgreich ist, aktualisieren Sie den verbleibenden Knoten und starten Sie dessen SafeKit -Modul neu. 
-  6. Der aktualisierte Knoten wird zu ** ✅ SECOND (Knoten 2) ** , resynchronisiert die Anwendungsdaten, und der Cluster kehrt zu einer normalen ** ✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2) ** Konfiguration zurück. 
+  6. Der aktualisierte Knoten wird zu **✅ SECOND (Knoten 2)** , resynchronisiert die Anwendungsdaten, und der Cluster kehrt zu einer normalen **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** Konfiguration zurück. 
 
 
-** Rollback-Prozedur **
+**Rollback-Prozedur**
 
-  * In Schritt 5 wird der aktualisierte Knoten ** ✅ ALONE (Knoten 1) ** gestoppt.
-  * Erzwinge, dass der nicht aktualisierte Knoten als primärer Knoten ** ✅ ALLEIN (Knoten 2) ** startet.
+  * In Schritt 5 wird der aktualisierte Knoten **✅ ALONE (Knoten 1)** gestoppt.
+  * Erzwinge, dass der nicht aktualisierte Knoten als primärer Knoten **✅ ALLEIN (Knoten 2)** startet.
   * Installieren Sie die vorherige Anwendungsversion auf dem aktualisierten Knoten neu.
-  * Stellen Sie die ursprüngliche ** ✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2) ** Konfiguration wieder her.
+  * Stellen Sie die ursprüngliche **✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2)** Konfiguration wieder her.
 
 
-Da replizierte Daten während der Migration verändert werden, entspricht die Ausfallzeit dem Zeitraum zwischen dem Zustand ** ❌ STOP / ❌ STOP ** und dem Neustart des ersten aktualisierten Knotens als ** ✅ ALONE ** . 
+Da replizierte Daten während der Migration verändert werden, entspricht die Ausfallzeit dem Zeitraum zwischen dem Zustand **❌ STOP / ❌ STOP** und dem Neustart des ersten aktualisierten Knotens als **✅ ALONE** . 
 
 ### Warum SafeKit Anwendungs-Upgrades vereinfacht {#why-safekit-simplifies-application-upgrades}
 

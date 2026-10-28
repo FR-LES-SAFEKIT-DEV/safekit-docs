@@ -33,9 +33,9 @@ Sistemas tolerantes a falhas lidam apenas com falhas de hardware e não com falh
 
 ## Prós e contras da alta disponibilidade e tolerância a falhas {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
-Ao proteger aplicações críticas contra falhas, existem duas abordagens principais: clustering de alta disponibilidade por software ** e sistemas tolerantes a falhas ** ** e ** ). Cada abordagem oferece diferentes vantagens e desvantagens em termos de custo, flexibilidade, tempo de recuperação e requisitos de hardware. Compreender essas diferenças ajuda a escolher a solução certa para as suas necessidades específicas.
+Ao proteger aplicações críticas contra falhas, existem duas abordagens principais: clustering de alta disponibilidade por software **e sistemas tolerantes a falhas** **e** ). Cada abordagem oferece diferentes vantagens e desvantagens em termos de custo, flexibilidade, tempo de recuperação e requisitos de hardware. Compreender essas diferenças ajuda a escolher a solução certa para as suas necessidades específicas.
 
-Comparação de clusters ** alta disponibilidade de software versus sistemas tolerantes a falhas **
+Comparação de clusters **alta disponibilidade de software versus sistemas tolerantes a falhas**
 
 Critérios | Cluster de alta disponibilidade de software | Sistema tolerante a falhas  
 ---|---|---  
@@ -47,7 +47,7 @@ RTO/RPO | O tempo de recuperação com SafeKit ( [ RTO ](</pt-pt/best-practises/
 Flexibilidade: | Pode ser executado em qualquer tipo de servidor com sistemas operacionais padrão. Windows e Linux | Depende de hardware específico ou de hipervisores específicos.  
 Indicado para: | [ Editores de software que desejam adicionar uma opção simples de alta disponibilidade ao seu aplicativo ](</pt-pt/use-cases/application-clustering-software/>) | Ambientes onde a falha de hardware é a principal preocupação  
   
-Em resumo, a alta disponibilidade de software com ** SafeKit ** uma solução flexível e econômica que funciona em hardware padrão e suporta atualizações contínuas, com tempo de inatividade próximo de zero (RTO ~1 minuto) e zero perda de dados. Sistemas tolerantes a falhas oferecem failover instantâneo (RTO = 0), mas exigem hardware dedicado e carecem de flexibilidade para atualizações de software independentes.
+Em resumo, a alta disponibilidade de software com **SafeKit** uma solução flexível e econômica que funciona em hardware padrão e suporta atualizações contínuas, com tempo de inatividade próximo de zero (RTO ~1 minuto) e zero perda de dados. Sistemas tolerantes a falhas oferecem failover instantâneo (RTO = 0), mas exigem hardware dedicado e carecem de flexibilidade para atualizações de software independentes.
 
 
 {{%  insert-safekit-hub-pt-pt  %}}

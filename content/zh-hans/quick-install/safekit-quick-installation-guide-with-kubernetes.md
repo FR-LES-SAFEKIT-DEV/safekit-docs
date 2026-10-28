@@ -15,7 +15,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
 
 ## SafeKit / Kubernetes解决方案概述 {#overview-of-the-safekit--kubernetes-solution}
 
-解决方案如下： ** 💡 [ Kubernetes K3s 高可用性：双节点同步复制和故障转移](</zh-hans/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+解决方案如下： **💡 [ Kubernetes K3s 高可用性：双节点同步复制和故障转移](</zh-hans/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## 在Linux ( k3s.safe )上安装和配置SafeKit / Kubernetes解决方案 {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 

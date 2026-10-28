@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 
 ## نظرة عامة على حل SafeKit / Cloud {#overview-of-the-safekit--cloud-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : موازنة تحميل السحابة وتوافر التطبيقات العالي `Farm` Cluster ](</ar/solutions/cloud-load-balancing-cluster-failover/>) ** .
+الحل موضح هنا: **💡 [ SafeKit : موازنة تحميل السحابة وتوافر التطبيقات العالي `Farm` Cluster ](</ar/solutions/cloud-load-balancing-cluster-failover/>)** .
 
 ## تثبيت حل SafeKit / السحابي على Windows و Linux ( farm.safe ) و {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 

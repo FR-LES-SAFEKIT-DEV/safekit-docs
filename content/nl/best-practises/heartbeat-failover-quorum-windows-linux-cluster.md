@@ -17,7 +17,7 @@ topics: "Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster
 
 ### Wat is een hartslag? {#what-is-a-heartbeat}
 
-Het basismechanisme voor het synchroniseren van twee servers en het detecteren van serverstoringen is de ** heartbeat ** , die de gegevensstroom bewaakt op een netwerk dat door twee servers wordt gedeeld.
+Het basismechanisme voor het synchroniseren van twee servers en het detecteren van serverstoringen is de **heartbeat** , die de gegevensstroom bewaakt op een netwerk dat door twee servers wordt gedeeld.
 
 De SafeKit -software ondersteunt evenveel heartbeats als er netwerken zijn die door twee servers worden gedeeld. 
 

@@ -15,7 +15,7 @@ topics: "Podmanの高可用性クイックインストールガイド、 SafeKit
 
 ## SafeKit / Podmanソリューションの概要 {#overview-of-the-safekit--podman-solution}
 
-ソリューションはここに記載されています: ** 💡 [ SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア](</ja/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 。
+ソリューションはここに記載されています: **💡 [ SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア](</ja/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>)** 。
 
 ## SafeKit / PodmanソリューションをLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 
@@ -35,13 +35,13 @@ topics: "Podmanの高可用性クイックインストールガイド、 SafeKit
 #### 前提条件 {#prerequisites-1}
 
   * 両方のノード**上に複製ディレクトリ**を作成します。  
-** /replicated_dir_path **というディレクトリを作成します。このディレクトリはSafeKitによって複製され、 nginxによって提供される HTML ページが含まれます。
+**/replicated_dir_path**というディレクトリを作成します。このディレクトリはSafeKitによって複製され、 nginxによって提供される HTML ページが含まれます。
   * 両方のノード**に、このディレクトリに初期 HTML ファイル**を配置します。
         
         cp index.html /replicated_dir_path
 
   * 両方のノード**上にコンテナ**を作成します。  
-** /replicated_dir_path **ディレクトリを**/usr/share/nginx/html**にバインドするnginxコンテナを両方のノードに作成します。 
+**/replicated_dir_path**ディレクトリを**/usr/share/nginx/html**にバインドするnginxコンテナを両方のノードに作成します。 
         
         podman container create --name mynginx -v /replicated_dir_path : /usr/share/nginx/html -p 9011:80 nginx
 
@@ -50,8 +50,8 @@ topics: "Podmanの高可用性クイックインストールガイド、 SafeKit
 
   * **ステップバイステップ設定**セクションへ移動してください。
   * **mirror.safe**モジュールを作成および構成する
-  * 障害発生時に切り替えられる仮想IPアドレス** **を設定します。
-  * ** /replicated_dir_path **複製ディレクトリとして設定する
+  * 障害発生時に切り替えられる**仮想IPアドレス**を設定します。
+  * **/replicated_dir_path**複製ディレクトリとして設定する
   * start_primおよびstop_primスクリプトにそれぞれ**podman start mynginx**および**podman stop mynginx**記述します。  
 注: SE Linuxを使用する場合は、「podman start --security-opt label=disable mynginx 」を使用する必要がある場合があります。
   * SafeKit mirrorモジュールをデプロイして起動します。

@@ -15,7 +15,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
 
 ## SafeKit / Kubernetesソリューションの概要 {#overview-of-the-safekit--kubernetes-solution}
 
-解決策はここに記載されています: ** 💡 [ Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー](</ja/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+解決策はここに記載されています: **💡 [ Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー](</ja/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## SafeKit / KubernetesソリューションをLinux ( k3s.safe )にインストールおよび構成する {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 

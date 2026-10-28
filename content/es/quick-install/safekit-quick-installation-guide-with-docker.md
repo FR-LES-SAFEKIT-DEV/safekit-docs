@@ -37,25 +37,25 @@ Con una aplicación compuesta Docker , dispone de un archivo **docker-compose.ym
   * En un servidor, para cada volumen en docker-compose.yml , ejecute este comando: **docker volume inspect volume_name**  
 Devolverá el **host directories of the docker volumes** (estas rutas no se proporcionan en docker-compose.yml ).  
 Obtendrás una lista de rutas como **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Vaya a la sección de configuración paso a paso ** ** y 
+  * Vaya a la sección **de configuración paso a paso** y 
     * Despliegue el módulo **mirror.safe**
-    * Se establece una dirección IP virtual ** ** que se conmutará en caso de fallo.
-    * Establezca la lista de **/var/lib/docker/volumes/ <volume_name>/_data** como directorios replicados ** **
+    * Establezca una **dirección IP virtual** que se cambiará en caso de fallo.
+    * Establezca la lista de **/var/lib/docker/volumes/ <volume_name>/_data** como **directorios replicados.**
     * Coloque respectivamente en los scripts start_prim y stop_prim : **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** y **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
 ### Ejemplo 2 con una aplicación Docker que inicia un conjunto de contenedores {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
-Suponemos aquí que una aplicación Docker ** myappli ** inicia un conjunto de contenedores.
+Suponemos aquí que una aplicación Docker **myappli** inicia un conjunto de contenedores.
 
-  * Primero, en ambos servidores, instale ** myappli ** sin iniciarlo.
+  * Primero, en ambos servidores, instale **myappli** sin iniciarlo.
   * En un servidor, enumere los volúmenes utilizados por myapply : **ls /var/lib/docker/volumes**  
 De esta forma, obtendrá una lista de rutas como **/var/lib/docker/volumes/ <volume_name>/_data**
-  * Vaya a la sección de configuración paso a paso ** ** y 
+  * Vaya a la sección **de configuración paso a paso** y 
     * Despliegue el módulo **mirror.safe**
-    * Se establece una dirección IP virtual ** ** que se conmutará en caso de fallo.
-    * Establezca la lista de **/var/lib/docker/volumes/ <volume_name>/_data** como directorios replicados ** **
-    * Coloque respectivamente en los scripts start_prim y stop_prim : ** /.../myappli iniciar ** y ** /.../myappli detener **
+    * Establezca una **dirección IP virtual** que se cambiará en caso de fallo.
+    * Establezca la lista de **/var/lib/docker/volumes/ <volume_name>/_data** como **directorios replicados.**
+    * Coloque respectivamente en los scripts start_prim y stop_prim : **/.../myappli iniciar** y **/.../myappli detener**
 
 
 ### Ejemplo 3 con una imagen simple Docker {#example-3-with-a-simple-docker-image}
@@ -69,12 +69,12 @@ Obtenga la ruta del directorio donde se almacena el volumen en el host: **docker
   * Creación de contenedores Docker  
 En ambos servidores, cree un contenedor Docker nginx que se vincule al volumen anterior: **docker container create --name mynginx -v replicated_vol:/usr/share/nginx/html -p 9011:80 nginx**  
 Rellene el volumen con algún archivo index.html : **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
-  * Vaya a la sección de configuración paso a paso ** ** y 
+  * Vaya a la sección **de configuración paso a paso** y 
     * Despliegue el módulo **mirror.safe**
-    * Se establece una dirección IP virtual ** ** que se conmutará en caso de fallo.
+    * Establezca una **dirección IP virtual** que se cambiará en caso de fallo.
     * establecer **/var/lib/docker/storage/replicated_vol/_data** como un directorio replicado
     * Coloque respectivamente en los scripts start_prim y stop_prim : **docker start mynginx** y **docker stop mynginx**
-    * Después de configurar SafeKit , pruebe el acceso a index.html con ** http://vitual-ip:9011**
+    * Después de configurar SafeKit , pruebe el acceso a index.html con **http://vitual-ip:9011**
 
 
 ## Configuración paso a paso de la solución SafeKit / Docker {#step-by-step-configuration-of-the-safekit--docker-solution}

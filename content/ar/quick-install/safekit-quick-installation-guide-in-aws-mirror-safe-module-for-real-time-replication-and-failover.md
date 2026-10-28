@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ A
 
 ## نظرة عامة على حلول SafeKit / AWS mirror {#overview-of-the-safekit--aws-mirror-solution}
 
-الحل موضح هنا: ** 💡 [ Amazon AWS التوافر العالي: SafeKit النسخ المتزامن والتحويل التلقائي ](</ar/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** .
+الحل موضح هنا: **💡 [ Amazon AWS التوافر العالي: SafeKit النسخ المتزامن والتحويل التلقائي ](</ar/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)** .
 
 ## تثبيت حل SafeKit / AWS mirror على Windows و Linux ( mirror.safe ) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

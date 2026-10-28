@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für MySQL , Eins
 
 ## Übersicht der SafeKit / MySQL -Lösung {#overview-of-the-safekit--mysql-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste MySQL Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</de/solutions/mysql-high-availability-synchronous-replication-failover/>) ** .
+Die Lösung wird hier beschrieben: **💡 [ Die einfachste MySQL Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</de/solutions/mysql-high-availability-synchronous-replication-failover/>)** .
 
 ## Installation der SafeKit / MySQL Lösung auf Windows und Linux ( mysql.safe ) {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 

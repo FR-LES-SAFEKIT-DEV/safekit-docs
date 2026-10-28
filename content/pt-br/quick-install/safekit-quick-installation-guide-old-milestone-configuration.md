@@ -166,7 +166,7 @@ Este script define o endereço IP virtual em 2 arquivos internos Milestone :
     C:\Arquivos de Programas\ Milestone \ Servidor de Gerenciamento XProtect \ IIS \IDP\appsettings.json
     
     
-        "Autoridade": " http://** < virtual-ip> ** /IDP "
+        "Autoridade": " http://**< virtual-ip>** /IDP "
 
 
 ![ Aviso ](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,10 +230,10 @@ Se o cluster estiver no estado `WAIT (red) not uptodate - STOP (red) not uptodat
 
 Execute os seguintes passos no nó 1 de acordo com o menu na imagem:
 
-  * Clique com o botão direito do mouse no ícone do Servidor de Gerenciamento ** Milestone ** na barra de tarefas.
-  * ** Parar o serviço do servidor de gerenciamento **
-  * Em seguida, selecione o Configurador de Servidor ** ... ** e registre o endereço IP virtual.
-  * ** Iniciar o serviço do servidor de gerenciamento **
+  * Clique com o botão direito do mouse no ícone do Servidor de Gerenciamento **Milestone** na barra de tarefas.
+  * **Parar o serviço do servidor de gerenciamento**
+  * Em seguida, selecione o Configurador de Servidor **...** e registre o endereço IP virtual.
+  * **Iniciar o serviço do servidor de gerenciamento**
 
 
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
@@ -251,7 +251,7 @@ Antes da versão Milestone 2022 R3, o registro pode ter excluído a configuraç�
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
 
 
-Nota: Para registrar uma versão anterior Milestone 2020 R2, use ** Alterar configurações de criptografia... **
+Nota: Para registrar uma versão anterior Milestone 2020 R2, use **Alterar configurações de criptografia...**
 
 
 ![ Registre o servidor de gerenciamento em Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
@@ -267,13 +267,13 @@ A partir da versão Milestone 2022 R3, esta etapa não é mais necessária e foi
 
 Conforme a imagem:
 
-  1. Inicie o cliente de gerenciamento ** Milestone XProtect ** no nó 1.
-  2. No menu ** Tools ** , selecione ** Registered Services ** . 
-     * Na janela ** Adicionar/Remover Serviços Registrados ** , selecione um serviço na lista e clique em ** Editar ** .
-     * Na janela Editar Serviço Registrado ** ** , altere o endereço URL do serviço para o mesmo endereço URL, mas contendo o endereço IP virtual.
+  1. Inicie o cliente de gerenciamento **Milestone XProtect** no nó 1.
+  2. No menu **Tools** , selecione **Registered Services** . 
+     * Na janela **Adicionar/Remover Serviços Registrados** , selecione um serviço na lista e clique em **Editar** .
+     * Na janela Editar Serviço Registrado **** , altere o endereço URL do serviço para o mesmo endereço URL, mas contendo o endereço IP virtual.
      * Repita esses passos para todos os serviços listados na janela.
-  3. Na mesma janela, clique em ** Network ** . 
-     * Na janela de Configuração de Rede ** ** , altere o endereço URL do servidor para o mesmo endereço URL, mas contendo o endereço IP virtual.
+  3. Na mesma janela, clique em **Network** . 
+     * Na janela de Configuração de Rede **** , altere o endereço URL do servidor para o mesmo endereço URL, mas contendo o endereço IP virtual.
 
 
 ![ Defina o endereço IP virtual nos URLs e no cliente de gerenciamento Milestone ](/wp-content/uploads/2022/07/milestone-url-vip.png)
@@ -289,10 +289,10 @@ Se a autenticação Milestone " Windows " tiver sido configurada com um Active D
 
 Ao iniciar o cliente de gerenciamento Milestone XProtect , você precisa se autenticar com "autenticação Windows " ou "autenticação básica" ( [ clique aqui para ver a captura de tela ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) ).
 
-Abra o cliente de gerenciamento ** Milestone XProtect e ** em ** Segurança/Funções ** (veja a imagem).
+Abra o cliente de gerenciamento **Milestone XProtect e** em **Segurança/Funções** (veja a imagem).
 
-  * Defina o grupo Windows ** BUILTIN\Administrators ** . Dessa forma, um usuário administrador no servidor secundário poderá se conectar ao Milestone no servidor secundário com a autenticação " Windows ".
-  * Crie um usuário com autenticação básica ( ** Admin ** na imagem) para garantir a reautenticação no nó secundário após uma falha. Para autenticação básica, o usuário e a senha são armazenados no banco de dados SQL e serão recuperados no nó secundário após uma falha.
+  * Defina o grupo Windows **BUILTIN\Administrators** . Dessa forma, um usuário administrador no servidor secundário poderá se conectar ao Milestone no servidor secundário com a autenticação " Windows ".
+  * Crie um usuário com autenticação básica ( **Admin** na imagem) para garantir a reautenticação no nó secundário após uma falha. Para autenticação básica, o usuário e a senha são armazenados no banco de dados SQL e serão recuperados no nó secundário após uma falha.
 
 
 ![ Aviso ](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,12 +337,12 @@ Este script define o endereço IP virtual em 2 arquivos internos Milestone :
     C:\Arquivos de Programas\ Milestone \ Servidor de Gerenciamento XProtect \ IIS \IDP\appsettings.json
     
     
-        "Autoridade": " http://** < virtual-ip> ** /IDP "
+        "Autoridade": " http://**< virtual-ip>** /IDP "
 
 ### 14. Na área de trabalho do nó 2, registre o servidor de gerenciamento no endereço IP virtual {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * Selecione o Configurador de Servidor ** ** na barra de tarefas do nó 2 e registre-o no endereço IP virtual (veja a imagem).
-  * Em seguida, ** Pare o serviço do servidor de gerenciamento ** .
+  * Selecione o Configurador de Servidor **** na barra de tarefas do nó 2 e registre-o no endereço IP virtual (veja a imagem).
+  * Em seguida, **Pare o serviço do servidor de gerenciamento** .
 
 
 ![ Aviso ](/wp-content/uploads/2022/07/warning-small.png)
@@ -426,7 +426,7 @@ O problema foi resolvido na Milestone 2023 R3.
 
 ### 18. Testando {#18-testing}
 
-  * Pare o nó PRIM rolando para baixo no menu de contexto e clicando em Parar. ** Não use swap para um primeiro teste ** (veja o motivo abaixo).
+  * Pare o nó PRIM rolando para baixo no menu de contexto e clicando em Parar. **Não use swap para um primeiro teste** (veja o motivo abaixo).
   * Verifique se há um failover no SEGUNDO nó, que deve ficar SOZINHO (verde).
   * E com o Console de Gerenciamento (MMC) Microsoft , verifique o failover dos serviços (parados no nó 1 no script `stop_prim` e iniciados no nó 2 no script `start_prim` ).
 

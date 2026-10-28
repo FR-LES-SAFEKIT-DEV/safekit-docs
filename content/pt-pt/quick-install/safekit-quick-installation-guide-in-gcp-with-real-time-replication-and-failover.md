@@ -15,7 +15,7 @@ topics: "Guia de Instalação Rápida de Alta Disponibilidade para GCP , Limita�
 
 ## Visão geral da solução SafeKit / GCP mirror {#overview-of-the-safekit--gcp-mirror-solution}
 
-A solução é descrita aqui: ** 💡 [ Google GCP Alta disponibilidade: SafeKit Replicação síncrona e failover ](</pt-pt/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** .
+A solução é descrita aqui: **💡 [ Google GCP Alta disponibilidade: SafeKit Replicação síncrona e failover ](</pt-pt/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)** .
 
 ## Instalação da solução SafeKit / GCP mirror em Windows e Linux ( mirror.safe ) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

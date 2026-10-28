@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability Oracle , Beperkingen van High Avai
 
 ## Overzicht van de SafeKit / Oracle -oplossing {#overview-of-the-safekit--oracle-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste Oracle Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: **💡 [ De eenvoudigste Oracle Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/oracle-high-availability-synchronous-replication-failover/>)** .
 
 ## Installatie van de SafeKit / Oracle oplossing op Windows en Linux ( oracle.safe ) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

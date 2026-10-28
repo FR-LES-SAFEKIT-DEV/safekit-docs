@@ -11,7 +11,7 @@ topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지 보수, 무료 인�
 
 ## 무료 AI 레벨 1 지원 {#ai-support}
 
-** 🤖 좋아하는 LLM과 함께 SafeKit 사용하세요 **
+**🤖 좋아하는 LLM과 함께 SafeKit 사용하세요**
 
   1. Claude, ChatGPT, GitHub Copilot 또는 기타 LLM과 같은 AI 비서를 엽니다.
   2. [ llms.txt ](</llms.txt>) 의 내용을 채팅창에 붙여넣으세요.

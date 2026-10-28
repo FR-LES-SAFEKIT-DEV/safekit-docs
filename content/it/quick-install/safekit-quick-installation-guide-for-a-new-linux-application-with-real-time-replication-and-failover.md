@@ -29,7 +29,7 @@ La soluzione è descritta qui: **💡[La più semplice alta disponibilità su Li
  
 
 Nota: il modulo generico **mirror.safe** che configurerete è fornito all'interno del pacchetto.
-
+Nota: il modulo generico **mirror.safe** che andrai a configurare è incluso nel pacchetto.
 ## Configurazione passo passo della soluzione SafeKit / Linux {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 

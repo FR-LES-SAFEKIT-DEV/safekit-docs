@@ -15,16 +15,16 @@ topics: "Hoe krijg ik toegang tot het trainingsplatform? Download de trainingsma
 
 De online training SafeKit is een uitgebreide, zelfstudiecursus die is ontworpen om u te helpen bij het beheersen van hoge beschikbaarheid en applicatieclustering. U kunt toegang krijgen tot het platform via de volgende stappen:
 
-  * Ga naar het online trainingsplatform ** 👉 🎓 [ SafeKit ](<https://training.my.evidian.com/mod/page/view.php?id=712>) ** . Dit is uw centrale hub voor alle leermodules en het gratis certificeringsprogramma.
-  * ** Vraag uw inloggegevens aan: ** Als u nog geen account heeft, klik dan op ** Neem contact op met ** in het bovenste menu van het trainingsplatform om uw inloggegevens aan te vragen.
+  * Ga naar het online trainingsplatform **👉 🎓 [ SafeKit ](<https://training.my.evidian.com/mod/page/view.php?id=712>)** . Dit is uw centrale hub voor alle leermodules en het gratis certificeringsprogramma.
+  * **Vraag uw inloggegevens aan:** Als u nog geen account heeft, klik dan op **Neem contact op met** in het bovenste menu van het trainingsplatform om uw inloggegevens aan te vragen.
   * Het platform is onderverdeeld in thematische secties, waaronder: 
-    * Architectuur en introductie ** : ** Begrijp de clusterconcepten van mirror en `farm` .
-    * ** -demonstraties: ** Bekijk video-gebaseerde scenario's voor SQL Server , Hyper-V en Apache load balancing.
-    * Installatie en configuratie ** ** : Leer hoe u het pakket installeert en configureert via de webbeheerconsole of de CLI.
-    * Geavanceerde configuratie ** : ** gaat dieper in op userconfig.xml , heartbeats, replicatie en virtuele IP-adressen.
-  * ** Gebruik videolessen: ** Een groot deel van de training wordt aangeboden via gehoste video's. Elke video is doorgaans onderverdeeld in hoofdstukken (bijv. Vereisten, Installatie, Probleemoplossing), zodat u direct naar het onderwerp kunt gaan dat u nodig hebt.
-  * ** Behaal verschillende certificeringsniveaus via quizzen: ** Test je kennis aan het einde van de modules om officiële erkenning te krijgen voor je SafeKit expertise.
-  * ** Download SafeKit 8 trainingsmaterialen: ** Krijg toegang tot het complete bronnenpakket [ ](#training82) ter ondersteuning van uw leerproces.
+    * Architectuur en introductie **:** Begrijp de clusterconcepten van mirror en `farm` .
+    * **-demonstraties:** Bekijk video-gebaseerde scenario's voor SQL Server , Hyper-V en Apache load balancing.
+    * **Installatie en configuratie:** Leer hoe u het pakket installeert en configureert via de webbeheerconsole of de CLI.
+    * Geavanceerde configuratie **:** gaat dieper in op userconfig.xml , heartbeats, replicatie en virtuele IP-adressen.
+  * **Gebruik videolessen:** Een groot deel van de training wordt aangeboden via gehoste video's. Elke video is doorgaans onderverdeeld in hoofdstukken (bijv. Vereisten, Installatie, Probleemoplossing), zodat u direct naar het onderwerp kunt gaan dat u nodig hebt.
+  * **Behaal verschillende certificeringsniveaus via quizzen:** Test je kennis aan het einde van de modules om officiële erkenning te krijgen voor je SafeKit expertise.
+  * **Download SafeKit 8 trainingsmaterialen:** Krijg toegang tot het complete bronnenpakket [ ](#training82) ter ondersteuning van uw leerproces.
 
 
 ### SafeKit Video: Handleiding voor het gratis certificeringsplatform (6:11) {#demo-certification}

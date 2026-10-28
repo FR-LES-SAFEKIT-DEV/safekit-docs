@@ -11,7 +11,7 @@ topics: "免费人工智能一级支持、标准支持与维护、免费认证�
 
 ## 免费AI一级支持 {#ai-support}
 
-** 🤖 将SafeKit与您最喜欢的 LLM **一起使用
+**🤖 将SafeKit与您最喜欢的 LLM**一起使用
 
   1. 打开 Claude、ChatGPT、GitHub Copilot 或任何其他 LLM 等 AI 助手。
   2. 将[ llms.txt ](</llms.txt>)的内容粘贴到聊天窗口中。

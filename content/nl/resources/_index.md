@@ -11,7 +11,7 @@ topics: "Gratis proefversie, technische documentatie en productinformatie voor S
 
 ## Gratis proefversie, technische documentatie en productinformatie voor SafeKit High Availability {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
-** SafeKit Bronnen: Gratis proefversie, documentatie en productinformatie **
+**SafeKit Bronnen: Gratis proefversie, documentatie en productinformatie**
 
 Gratis proefversie | Technische documentatie | Productinformatie  
 ---|---|---  

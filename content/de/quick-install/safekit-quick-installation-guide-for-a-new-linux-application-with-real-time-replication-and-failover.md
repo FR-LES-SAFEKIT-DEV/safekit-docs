@@ -29,7 +29,7 @@ Die Lösung wird hier beschrieben: **💡[Die einfachste Linux-Hochverfügbarkei
  
 
 Hinweis: Das generische Modul **mirror.safe**, das Sie konfigurieren werden, ist im Paket enthalten.
-
+Hinweis: Das generische **mirror.safe** -Modul, das Sie konfigurieren werden, ist im Paket enthalten.
 ## Schrittweise Konfiguration der SafeKit-/Linux-Lösung {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 

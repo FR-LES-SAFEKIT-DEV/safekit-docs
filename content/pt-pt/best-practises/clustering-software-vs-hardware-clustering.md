@@ -39,9 +39,9 @@ O agrupamento de software para o frontend (como no caso do SafeKit ) baseia-se n
 
 ## Clustering por software versus clustering por hardware: vantagens e desvantagens {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
-A alta disponibilidade pode ser alcançada por meio de diferentes abordagens de clusterização: clusterização por software ** ** clusterização por hardware ** ), clusterização por hardware ( ** - armazenamento compartilhado/replicado) ou balanceadores de carga por hardware ( ** ) e balanceadores de carga ( ** - dispositivos de rede dedicados). Cada abordagem difere em recursos, hardware necessário, pré-requisitos de software e habilidades de TI necessárias para a implementação. SafeKit oferece uma abordagem puramente por software que combina replicação, failover e balanceamento de carga em um único produto, eliminando a necessidade de hardware dedicado ou edições corporativas.
+A alta disponibilidade pode ser alcançada por meio de diferentes abordagens de clusterização: clusterização por software **** clusterização por hardware **), clusterização por hardware (** - armazenamento compartilhado/replicado) ou balanceadores de carga por hardware ( **) e balanceadores de carga (** - dispositivos de rede dedicados). Cada abordagem difere em recursos, hardware necessário, pré-requisitos de software e habilidades de TI necessárias para a implementação. SafeKit oferece uma abordagem puramente por software que combina replicação, failover e balanceamento de carga em um único produto, eliminando a necessidade de hardware dedicado ou edições corporativas.
 
-Tabela ** : Comparação de clustering de software ( SafeKit ) versus clustering de hardware versus balanceadores de carga de hardware em relação aos principais critérios de implantação **
+Tabela **: Comparação de clustering de software ( SafeKit ) versus clustering de hardware versus balanceadores de carga de hardware em relação aos principais critérios de implantação**
 
 Critérios | [ SafeKit ](</>) Clustering de Software | Clustering de Hardware | Balanceadores de Carga de Hardware  
 ---|---|---|---  
@@ -50,7 +50,7 @@ Hardware: | Servidores físicos padrão, servidores virtuais ou nuvem | Armazena
 Software | Edições padrão de Windows , Linux e bancos de dados (incluindo sistemas operacionais para PC e edições gratuitas de bancos de dados) | Edições corporativas de sistemas operacionais e bancos de dados | Firmware em balanceadores de carga  
 Habilidades | Sem habilidades específicas de TI para implantação SafeKit | Habilidades avançadas em armazenamento e SO | Habilidades avançadas em redes  
   
-Em resumo ** o cluster de software ** , ** , SafeKit é a única abordagem que combina todas as três funcionalidades ** — replicação em tempo real, failover automático e balanceamento de carga de rede — em um único produto leve. Ele é executado em hardware padrão (físico, virtual ou em nuvem) com sistemas operacionais e bancos de dados padrão, não exigindo habilidades de TI especializadas. Em contraste, o cluster de hardware exige infraestrutura de armazenamento dedicada e licenças de software corporativas, enquanto os balanceadores de carga de hardware exigem dispositivos dedicados e conhecimento de rede — e nenhum deles oferece o conjunto completo de recursos que SafeKit oferece pronto para uso.
+Em resumo **o cluster de software** , **, SafeKit é a única abordagem que combina todas as três funcionalidades** — replicação em tempo real, failover automático e balanceamento de carga de rede — em um único produto leve. Ele é executado em hardware padrão (físico, virtual ou em nuvem) com sistemas operacionais e bancos de dados padrão, não exigindo habilidades de TI especializadas. Em contraste, o cluster de hardware exige infraestrutura de armazenamento dedicada e licenças de software corporativas, enquanto os balanceadores de carga de hardware exigem dispositivos dedicados e conhecimento de rede — e nenhum deles oferece o conjunto completo de recursos que SafeKit oferece pronto para uso.
 
 
 {{%  insert-safekit-hub-pt-pt  %}}

@@ -15,7 +15,7 @@ topics: "Snelstartgids voor hoge beschikbaarheid in de cloud, Beperkingen van ho
 
 ## Overzicht van de SafeKit / Cloud-oplossing {#overview-of-the-safekit--cloud-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Cloud Load Balancing & Application High Availability `Farm` Cluster ](</nl/solutions/cloud-load-balancing-cluster-failover/>) ** .
+De oplossing wordt hier beschreven: **💡 [ SafeKit : Cloud Load Balancing & Application High Availability `Farm` Cluster ](</nl/solutions/cloud-load-balancing-cluster-failover/>)** .
 
 ## Installatie van de SafeKit / Cloud-oplossing op Windows en Linux ( farm.safe ) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 

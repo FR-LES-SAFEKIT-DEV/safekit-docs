@@ -29,7 +29,7 @@ topics: "Linux 向け高可用性クイックインストールガイド, SafeKi
  
 
 注: 設定する汎用の **mirror.safe** モジュールは、パッケージに含まれています。
-
+注：設定する汎用モジュール**mirror.safe**は、パッケージ内に同梱されています。
 ## SafeKit / Linux ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 

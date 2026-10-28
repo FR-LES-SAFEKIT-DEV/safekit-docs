@@ -39,9 +39,9 @@ La agrupación de software para el frontend (como con SafeKit ) se basa en el ba
 
 ## Agrupación por software frente a agrupación por hardware: ventajas e inconvenientes {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
-La alta disponibilidad se puede lograr mediante diferentes enfoques de clúster: ** ** software ** , clúster ** ** almacenamiento compartido/replicado) o balanceadores de carga de hardware ** (dispositivos de red dedicados). Cada enfoque difiere en características, hardware requerido, requisitos de software y habilidades de TI necesarias para la implementación. SafeKit ofrece un enfoque puramente de software que combina replicación, conmutación por error y balanceo de carga en un solo producto, eliminando la necesidad de hardware dedicado o ediciones empresariales.
+La alta disponibilidad se puede lograr mediante diferentes enfoques de agrupación en clústeres: **agrupación por software** , **agrupación por hardware** (almacenamiento compartido/replicado) o **balanceadores de carga por hardware** (dispositivos de red dedicados). Cada enfoque difiere en características, hardware requerido, requisitos de software y habilidades de TI necesarias para su implementación. SafeKit ofrece un enfoque puramente por software que combina replicación, conmutación por error y balanceo de carga en un solo producto, eliminando la necesidad de hardware dedicado o ediciones empresariales.
 
-Tabla ** : Comparación de la agrupación por software ( SafeKit ) frente a la agrupación por hardware frente a los balanceadores de carga de hardware en función de los criterios clave de implementación **
+Tabla **: Comparación de la agrupación por software ( SafeKit ) frente a la agrupación por hardware frente a los balanceadores de carga de hardware en función de los criterios clave de implementación**
 
 Criterios | [ SafeKit ](</>) Agrupación por software | Agrupación por hardware | Balanceadores de carga de hardware  
 ---|---|---|---  
@@ -50,7 +50,7 @@ Hardware | Servidores físicos estándar, servidores virtuales o en la nube | Al
 Software | Ediciones estándar de Windows , Linux y bases de datos (incluso sistemas operativos para PC y ediciones gratuitas de bases de datos) | Ediciones empresariales de sistemas operativos y bases de datos | Firmware en balanceadores de carga  
 Habilidades | No se requieren habilidades informáticas específicas para la implementación. SafeKit | Habilidades de alto nivel en almacenamiento y sistemas operativos. | Habilidades de alto nivel en redes.  
   
-** En resumen, el clúster de software ** y SafeKit es el único enfoque que combina las tres capacidades ** ** en tiempo real, conmutación por error automática y equilibrio de carga de red— en un único producto ligero. Se ejecuta en hardware estándar (físico, virtual o en la nube) con ediciones estándar de sistema operativo y base de datos, sin requerir conocimientos de TI especializados. Por el contrario, el clúster de hardware exige infraestructura de almacenamiento dedicada y licencias de software empresarial, mientras que los balanceadores de carga de hardware requieren dispositivos dedicados y experiencia en redes, y ninguno proporciona el conjunto completo de funciones que SafeKit ofrece de forma inmediata.
+**En resumen** , el software de agrupación en clústeres SafeKit es la única solución que combina **las tres capacidades** —replicación en tiempo real, conmutación por error automática y balanceo de carga de red— en un único producto ligero. Se ejecuta en hardware estándar (físico, virtual o en la nube) con sistemas operativos y bases de datos estándar, sin necesidad de conocimientos informáticos especializados. En cambio, la agrupación en clústeres de hardware exige infraestructura de almacenamiento dedicada y licencias de software empresarial, mientras que los balanceadores de carga de hardware requieren dispositivos específicos y experiencia en redes; ninguno de ellos ofrece el conjunto completo de funciones que SafeKit proporciona de forma inmediata.
 
 
 {{%  insert-safekit-hub-es  %}}

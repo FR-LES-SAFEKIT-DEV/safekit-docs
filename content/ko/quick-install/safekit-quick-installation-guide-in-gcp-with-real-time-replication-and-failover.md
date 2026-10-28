@@ -15,7 +15,7 @@ topics: "GCP , SafeKit 고가용성 빠른 설치 가이드, 고가용성 제한
 
 ## SafeKit / GCP mirror 솔루션 개요 {#overview-of-the-safekit--gcp-mirror-solution}
 
-해결책은 여기에 설명되어 있습니다: ** 💡 [ Google GCP 고가용성: SafeKit 동기식 복제 및 장애 조치 ](</ko/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** .
+해결책은 여기에 설명되어 있습니다: **💡 [ Google GCP 고가용성: SafeKit 동기식 복제 및 장애 조치 ](</ko/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)** .
 
 ## 설치 SafeKit / GCP mirror 솔루션 Windows 그리고 Linux (mirror.safe) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

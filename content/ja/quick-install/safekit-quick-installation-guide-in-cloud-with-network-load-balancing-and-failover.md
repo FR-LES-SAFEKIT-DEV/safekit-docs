@@ -15,7 +15,7 @@ topics: "クラウド向け高可用性クイックインストールガイド�
 
 ## SafeKitの概要 / クラウドソリューション {#overview-of-the-safekit--cloud-solution}
 
-ソリューションはここに記載されています: ** 💡 [ SafeKit : クラウド負荷分散とアプリケーションの高可用性`Farm`クラスター](</ja/solutions/cloud-load-balancing-cluster-failover/>) ** 。
+ソリューションはここに記載されています: **💡 [ SafeKit : クラウド負荷分散とアプリケーションの高可用性`Farm`クラスター](</ja/solutions/cloud-load-balancing-cluster-failover/>)** 。
 
 ## SafeKit / クラウド ソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 

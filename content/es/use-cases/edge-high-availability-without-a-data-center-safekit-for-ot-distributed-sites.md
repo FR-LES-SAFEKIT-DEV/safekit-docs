@@ -25,11 +25,11 @@ SafeKit se diseñó precisamente para cubrir esta necesidad. Mantiene las aplica
 
 SafeKit convierte dos servidores perimetrales estándar (de cualquier marca, físicos o virtuales) en un clúster HA plug-and-play, sin almacenamiento compartido, sin SAN ni hardware especial. Una pila de software ligera ofrece:
 
-  * ** Replicación síncrona de archivos en tiempo real ** : los datos se replican byte a byte en el servidor de respaldo en el momento de la escritura.
-  * ** Conmutación por error automática ** : si el servidor principal falla, el servidor de respaldo toma el control sin intervención humana, en cuestión de segundos.
-  * ** Equilibrio de carga de red opcional ** : para implementaciones activo-activo donde ambos servidores comparten la carga de trabajo
-  * Consola web ** ** : gestión basada en navegador, accesible remotamente a través de HTTPS, sin necesidad de experiencia in situ.
-  * ** Instalación silenciosa y programable ** : adecuada para la integración OEM y el despliegue masivo en cientos de sitios distribuidos.
+  * **Replicación síncrona de archivos en tiempo real** : los datos se replican byte a byte en el servidor de respaldo en el momento de la escritura.
+  * **Conmutación por error automática** : si el servidor principal falla, el servidor de respaldo toma el control sin intervención humana, en cuestión de segundos.
+  * **Equilibrio de carga de red opcional** : para implementaciones activo-activo donde ambos servidores comparten la carga de trabajo
+  * **Consola web** : gestión basada en navegador, accesible de forma remota a través de HTTPS, sin necesidad de conocimientos técnicos in situ.
+  * **Instalación silenciosa y programable** : adecuada para la integración OEM y el despliegue masivo en cientos de sitios distribuidos.
 
 
 No es necesario adquirir una SAN, ni licencia de centro de datos para el servidor Windows , ni conocimientos técnicos sobre el sistema operativo del clúster Linux , ni hardware de clúster dedicado. Toda la infraestructura de alta disponibilidad (HA) es un único paquete de software.
@@ -54,12 +54,12 @@ Cientos de clústeres distribuidos | Diseñado para empresas distribuidas que ge
 
 Los entornos de OT (Tecnología Operativa) —SCADA, BMS, seguridad física, control industrial— tienen requisitos que difieren fundamentalmente de los centros de datos de TI:
 
-  * ** No hay personal de TI en el sitio. ** Una subestación, una estación de bombeo remota o un barco no tiene administrador de sistemas. HA debe ser autogestionable.
-  * ** Redes aisladas o con recursos limitados. ** Muchos sitios OT no tienen acceso a internet y su ancho de banda WAN es limitado. El software HA debe funcionar completamente sin conexión.
-  * ** Disponibilidad 24/7, tolerancia cero a la complejidad. ** Detener una línea de producción, perder la videovigilancia o interrumpir el control de acceso cuesta mucho más que el propio software HA.
-  * ** Ciclos de vida prolongados de los equipos. ** Los servidores OT pueden funcionar entre 10 y 15 años. La solución HA debe ser estable, requerir poco mantenimiento y no necesitar actualizaciones constantes.
-  * ** Solo hardware x86 estándar. ** No hay presupuesto ni justificación para SAN o nodos de clúster dedicados en un sitio industrial remoto.
-  * ** Intolerancia a la complejidad a nivel del sistema operativo. ** Pacemaker, Corosync o WSFC requieren conocimientos especializados en clústeres que los operadores de OT simplemente no tienen y no deberían necesitar.
+  * **No hay personal de TI en el sitio.** Una subestación, una estación de bombeo remota o un barco no tiene administrador de sistemas. HA debe ser autogestionable.
+  * **Redes aisladas o con recursos limitados.** Muchos sitios OT no tienen acceso a internet y su ancho de banda WAN es limitado. El software HA debe funcionar completamente sin conexión.
+  * **Disponibilidad 24/7, tolerancia cero a la complejidad.** Detener una línea de producción, perder la videovigilancia o interrumpir el control de acceso cuesta mucho más que el propio software HA.
+  * **Ciclos de vida prolongados de los equipos.** Los servidores OT pueden funcionar entre 10 y 15 años. La solución HA debe ser estable, requerir poco mantenimiento y no necesitar actualizaciones constantes.
+  * **Solo hardware x86 estándar.** No hay presupuesto ni justificación para SAN o nodos de clúster dedicados en un sitio industrial remoto.
+  * **Intolerancia a la complejidad a nivel del sistema operativo.** Pacemaker, Corosync o WSFC requieren conocimientos especializados en clústeres que los operadores de OT simplemente no tienen y no deberían necesitar.
 
 
 El modelo de SafeKit , sin SAN, con dos servidores y conmutación por error automática, aborda directamente cada una de estas limitaciones.
@@ -98,11 +98,11 @@ Tiempo de espera típico (RTO) | (1–5 minutos) | (menos de 1 minuto, configura
   
 ## Requisitos técnicos mínimos {#technical-minimum-requirements}
 
-  * Servidores ** : ** 2 servidores x86 estándar o máquinas virtuales (de cualquier marca de hardware, físico o virtual) o ARM (solo Linux )
-  * Sistema operativo ** : ** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * Red ** : LAN de 1 Gbps ** para replicación; se recomienda una red de latido dedicada.
-  * Almacenamiento ** : Solo discos locales ** ; no se admiten SAN, NAS ni almacenamiento compartido de ningún tipo.
-  * ** No se requiere edición especial del sistema operativo. ** — Windows Server Standard es suficiente; no se requiere licencia de Datacenter.
+  * Servidores **:** 2 servidores x86 estándar o máquinas virtuales (de cualquier marca de hardware, físico o virtual) o ARM (solo Linux )
+  * Sistema operativo **:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
+  * Red **: LAN de 1 Gbps** para replicación; se recomienda una red de latido dedicada.
+  * Almacenamiento **: Solo discos locales** ; no se admiten SAN, NAS ni almacenamiento compartido de ningún tipo.
+  * **No se requiere edición especial del sistema operativo.** — Windows Server Standard es suficiente; no se requiere licencia de Datacenter.
 
 
 Para conocer las especificaciones técnicas completas, las restricciones de tamaño y los criterios de adquisición, consulte la referencia técnica de RFP/RFI [ 📘 ](</es/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) .

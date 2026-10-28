@@ -11,7 +11,7 @@ topics: "SafeKit Bonnes pratiques de clustering : architecture haute disponibil
 
 ## SafeKit Bonnes pratiques de clustering : architecture haute disponibilité, réplication et redondance {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
-** Bonnes pratiques pour le clustering haute disponibilité, la réplication et la redondance **
+**Bonnes pratiques pour le clustering haute disponibilité, la réplication et la redondance**
 
 Meilleures pratiques de haute disponibilité | Meilleures pratiques de réplication | Meilleures pratiques de clustering  
 ---|---|---  

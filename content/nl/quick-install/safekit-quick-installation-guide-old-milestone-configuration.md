@@ -166,7 +166,7 @@ Dit script stelt het virtuele IP-adres in op 2 interne Milestone -bestanden:
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autoriteit": " http://** < virtual-ip> ** /IDP
+        "Autoriteit": " http://**< virtual-ip>** /IDP
 
 
 ![ Waarschuwing ](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,10 +230,10 @@ Als het cluster zich in de status `WAIT (red) not uptodate - STOP (red) not upto
 
 Voer de volgende stappen uit op knooppunt 1 volgens het menu in de afbeelding:
 
-  * Klik met de rechtermuisknop op het pictogram ** Milestone Management Server ** in de taakbalk.
-  * ** Stop Management Server Service **
-  * Kies vervolgens ** Server Configurator... ** en registreer het virtuele IP-adres.
-  * ** Start Management Server Service **
+  * Klik met de rechtermuisknop op het pictogram **Milestone Management Server** in de taakbalk.
+  * **Stop Management Server Service**
+  * Kies vervolgens **Server Configurator...** en registreer het virtuele IP-adres.
+  * **Start Management Server Service**
 
 
 ![ Opmerking ](/wp-content/uploads/2022/07/note.png)
@@ -251,7 +251,7 @@ Vóór versie Milestone 2022 R3 kan de registratie de configuratie van het virtu
 ![ Opmerking ](/wp-content/uploads/2022/07/note.png)
 
 
-Opmerking: Om een versie van vóór Milestone 2020 R2 te registreren, gebruikt u ** Wijzig de versleutelingsinstellingen... **
+Opmerking: Om een versie van vóór Milestone 2020 R2 te registreren, gebruikt u **Wijzig de versleutelingsinstellingen...**
 
 
 ![ Registreer de beheerserver in Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
@@ -267,13 +267,13 @@ Sinds Milestone 2022 R3 is deze stap niet meer nodig en wordt deze automatisch u
 
 Volgens de afbeelding:
 
-  1. Start ** Milestone XProtect Management Client ** op knooppunt 1.
-  2. In het menu ** Tools ** selecteert u ** Registered Services ** . 
-     * In het venster ** Geregistreerde services toevoegen/verwijderen ** selecteert u een service in de lijst en klikt u op ** Bewerken ** .
-     * Wijzig in het venster ** de geregistreerde service ** en vervang het URL-adres door hetzelfde URL-adres, maar dan met het virtuele IP-adres erin.
+  1. Start **Milestone XProtect Management Client** op knooppunt 1.
+  2. In het menu **Tools** selecteert u **Registered Services** . 
+     * In het venster **Geregistreerde services toevoegen/verwijderen** selecteert u een service in de lijst en klikt u op **Bewerken** .
+     * Wijzig in het venster **de geregistreerde service** en vervang het URL-adres door hetzelfde URL-adres, maar dan met het virtuele IP-adres erin.
      * Herhaal deze stappen voor alle services die in het venster worden weergegeven.
-  3. Klik in hetzelfde venster op ** Netwerk ** . 
-     * Wijzig in het venster Netwerkconfiguratie ** ** het URL-adres van de server naar hetzelfde URL-adres, maar dan met het virtuele IP-adres erin.
+  3. Klik in hetzelfde venster op **Netwerk** . 
+     * Wijzig in het venster **Netwerkconfiguratie** het URL-adres van de server naar hetzelfde URL-adres, maar dan met het virtuele IP-adres erin.
 
 
 ![ Stel het virtuele IP-adres in de URL's en in de Milestone Management Client ](/wp-content/uploads/2022/07/milestone-url-vip.png)
@@ -289,10 +289,10 @@ Als Milestone " Windows -authenticatie" is geconfigureerd met Active Directory, 
 
 Wanneer u de Milestone XProtect Management Client start, moet u zich authenticeren met " Windows authenticatie" of "Basisauthenticatie" ( [ klik hier om de schermafbeelding te bekijken ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) ).
 
-Open ** Milestone XProtect Management Client ** en in ** Beveiliging / Rollen ** (zie afbeelding)
+Open **Milestone XProtect Management Client** en in **Beveiliging / Rollen** (zie afbeelding)
 
-  * Stel de groep Windows in op ** BUILTIN\Administrators ** . Hierdoor kan een beheerder op de secundaire server verbinding maken met Milestone op de secundaire server met " Windows -authenticatie".
-  * Maak een gebruiker aan met "Basisverificatie" ( ** Admin ** in de afbeelding) om ervoor te zorgen dat er na een failover opnieuw wordt geverifieerd op het secundaire knooppunt. Bij "Basisverificatie" worden de gebruikersnaam en het wachtwoord opgeslagen in de SQL-database en worden deze na een failover op het secundaire knooppunt opgehaald.
+  * Stel de groep Windows in op **BUILTIN\Administrators** . Hierdoor kan een beheerder op de secundaire server verbinding maken met Milestone op de secundaire server met " Windows -authenticatie".
+  * Maak een gebruiker aan met "Basisverificatie" ( **Admin** in de afbeelding) om ervoor te zorgen dat er na een failover opnieuw wordt geverifieerd op het secundaire knooppunt. Bij "Basisverificatie" worden de gebruikersnaam en het wachtwoord opgeslagen in de SQL-database en worden deze na een failover op het secundaire knooppunt opgehaald.
 
 
 ![ Waarschuwing ](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,12 +337,12 @@ Dit script stelt het virtuele IP-adres in op 2 interne Milestone -bestanden:
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autoriteit": " http://** < virtual-ip> ** /IDP
+        "Autoriteit": " http://**< virtual-ip>** /IDP
 
 ### 14. Registreer op het bureaublad van knooppunt 2 de beheerserver op het virtuele IP-adres {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * Selecteer ** Server Configurator ** in de taakbalk van knooppunt 2 en registreer deze op het virtuele IP-adres (zie afbeelding).
-  * Stop vervolgens de beheerserverservice ** en stop de beheerserverservice ** .
+  * Selecteer **Server Configurator** in de taakbalk van knooppunt 2 en registreer deze op het virtuele IP-adres (zie afbeelding).
+  * Stop vervolgens de beheerserverservice **en stop de beheerserverservice** .
 
 
 ![ Waarschuwing ](/wp-content/uploads/2022/07/warning-small.png)
@@ -426,7 +426,7 @@ Het probleem is opgelost in Milestone 2023 R3.
 
 ### 18. Testen van {#18-testing}
 
-  * Stop het PRIM-knooppunt door in het contextmenu naar beneden te scrollen en op 'Stop' te klikken. ** Gebruik geen swap voor een eerste test ** (zie hieronder waarom).
+  * Stop het PRIM-knooppunt door in het contextmenu naar beneden te scrollen en op 'Stop' te klikken. **Gebruik geen swap voor een eerste test** (zie hieronder waarom).
   * Controleer of er een failover plaatsvindt op het TWEEDE knooppunt, dat ALONE (groen) moet worden.
   * Controleer vervolgens met Microsoft Management Console (MMC) de failover van services (gestopt op knooppunt 1 in het `stop_prim` -script en gestart op knooppunt 2 in het `start_prim` -script).
 

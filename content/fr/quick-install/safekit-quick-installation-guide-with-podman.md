@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide haute disponibilité pour Podman et SafeKit
 
 ## Présentation de la solution SafeKit / Podman {#overview-of-the-safekit--podman-solution}
 
-La solution est décrite ici : ** 💡 [ SafeKit : Podman Logiciel de réplication de données haute disponibilité et en temps réel ](</fr/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+La solution est décrite ici : **💡 [ SafeKit : Podman Logiciel de réplication de données haute disponibilité et en temps réel ](</fr/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>)** .
 
 ## Installation de la solution SafeKit / Podman sur Linux ( mirror.safe ) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 
@@ -34,24 +34,24 @@ Dans cet exemple, nous allons montrer comment SafeKit pourrait gérer un contene
 
 #### Prérequis {#prerequisites-1}
 
-  * Créez un répertoire répliqué ** sur les deux nœuds **  
-Créez un répertoire ** /replicated_dir_path ** qui sera répliqué par SafeKit et qui contiendra les pages HTML servies par nginx
-  * Remplissez ce répertoire avec un fichier HTML initial ** sur les deux nœuds **
+  * Créez un répertoire répliqué **sur les deux nœuds**  
+Créez un répertoire **/replicated_dir_path** qui sera répliqué par SafeKit et qui contiendra les pages HTML servies par nginx
+  * Remplissez ce répertoire avec un fichier HTML initial **sur les deux nœuds**
         
         cp index.html /replicated_dir_path
 
-  * Créez un conteneur ** sur les deux nœuds **  
-Créez un conteneur nginx sur les deux nœuds qui lie le répertoire ** /replicated_dir_path ** à **/usr/share/nginx/html** : 
+  * Créez un conteneur **sur les deux nœuds**  
+Créez un conteneur nginx sur les deux nœuds qui lie le répertoire **/replicated_dir_path** à **/usr/share/nginx/html** : 
         
         podman container create --name mynginx -v /replicated_dir_path : /usr/share/nginx/html -p 9011:80 nginx
 
 
 #### Configuration SafeKit {#safekit-configuration}
 
-  * Accédez à la section de configuration étape par étape ** **
+  * Accédez à la section **de configuration étape par étape**
   * Créer et configurer un module **mirror.safe**
-  * Configurez une adresse IP virtuelle ** ** qui sera utilisée en cas de panne.
-  * Définir ** /replicated_dir_path ** comme répertoire répliqué
+  * Définissez une **adresse IP virtuelle** qui sera basculée en cas de panne.
+  * Définir **/replicated_dir_path** comme répertoire répliqué
   * Insérez respectivement dans les scripts start_prim et stop_prim : **podman start mynginx** et **podman stop mynginx**  
 Remarque : Vous devrez peut-être utiliser « podman start --security-opt label=disable mynginx » avec SE Linux .
   * Déployez et démarrez le module SafeKit mirror

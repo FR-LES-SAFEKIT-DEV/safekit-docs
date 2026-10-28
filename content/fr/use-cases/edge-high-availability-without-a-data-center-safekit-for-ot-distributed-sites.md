@@ -25,11 +25,11 @@ SafeKit a été conçu précisément pour combler ce manque. Il assure le foncti
 
 SafeKit transforme deux serveurs périphériques standard (toutes marques, physiques ou virtuels) en un cluster HA prêt à l'emploi : aucun stockage partagé, aucun SAN, aucun matériel spécifique. Une seule pile logicielle légère offre :
 
-  * ** Réplication de fichiers synchrone en temps réel ; ** — les données sont dupliquées octet par octet sur le serveur de secours lors de l’écriture.
-  * ** Basculement automatique ** — En cas de défaillance du serveur principal, le serveur de secours prend le relais automatiquement en quelques secondes.
-  * ** Équilibrage de charge réseau optionnel ** — pour les déploiements actifs-actifs où les deux serveurs partagent la charge de travail
-  * Console Web ** ; ** : gestion via navigateur, accessible à distance par HTTPS, ne nécessitant aucune expertise sur site.
-  * ** Installation silencieuse et scriptable ; ** — convient à l’intégration OEM et au déploiement massif sur des centaines de sites distribués.
+  * **Réplication de fichiers synchrone en temps réel ;** — les données sont dupliquées octet par octet sur le serveur de secours lors de l’écriture.
+  * **Basculement automatique** — En cas de défaillance du serveur principal, le serveur de secours prend le relais automatiquement en quelques secondes.
+  * **Équilibrage de charge réseau optionnel** — pour les déploiements actifs-actifs où les deux serveurs partagent la charge de travail
+  * Console Web **;** : gestion via navigateur, accessible à distance par HTTPS, ne nécessitant aucune expertise sur site.
+  * **Installation silencieuse et scriptable ;** — convient à l’intégration OEM et au déploiement massif sur des centaines de sites distribués.
 
 
 Aucun SAN à acquérir, aucune licence Windows Server Datacenter requise, aucune expertise en système d'exploitation de cluster Linux nécessaire, et aucun matériel de cluster dédié. L'ensemble de la pile HA est un progiciel unique.
@@ -54,12 +54,12 @@ Des centaines de clusters distribués | Conçus pour les entreprises distribuée
 
 Les environnements OT (technologies opérationnelles) — SCADA, BMS, sécurité physique, contrôle industriel — ont des exigences fondamentalement différentes de celles des centres de données IT :
 
-  * ** Aucun personnel informatique sur site. ** Une sous-station, une station de pompage distante ou un navire ne dispose pas d'administrateur système. La haute disponibilité doit être autogérée.
-  * ** Réseaux isolés ou à bande passante limitée. ** De nombreux sites OT n'ont pas d'accès à Internet et disposent d'une bande passante WAN limitée. Le logiciel HA doit fonctionner entièrement hors ligne.
-  * ** Disponibilité 24h/24 et 7j/7, tolérance zéro pour la complexité. ** L'arrêt d'une chaîne de production, la perte d'un système de vidéosurveillance ou l'interruption du contrôle d'accès coûtent bien plus cher que le logiciel de haute disponibilité lui-même.
-  * ** Longue durée de vie des équipements. ** Les serveurs OT peuvent fonctionner pendant 10 à 15 ans. La solution de haute disponibilité doit être stable, nécessiter peu de maintenance et ne pas exiger de mises à jour constantes.
-  * ** Matériel x86 standard uniquement. ** Aucun budget ni justification pour un SAN ou des nœuds de cluster dédiés sur un site industriel distant.
-  * ** Intolérance à la complexité au niveau du système d'exploitation. ** Pacemaker, Corosync ou WSFC nécessitent une expertise en cluster que les opérateurs OT ne possèdent tout simplement pas et ne devraient pas avoir besoin.
+  * **Aucun personnel informatique sur site.** Une sous-station, une station de pompage distante ou un navire ne dispose pas d'administrateur système. La haute disponibilité doit être autogérée.
+  * **Réseaux isolés ou à bande passante limitée.** De nombreux sites OT n'ont pas d'accès à Internet et disposent d'une bande passante WAN limitée. Le logiciel HA doit fonctionner entièrement hors ligne.
+  * **Disponibilité 24h/24 et 7j/7, tolérance zéro pour la complexité.** L'arrêt d'une chaîne de production, la perte d'un système de vidéosurveillance ou l'interruption du contrôle d'accès coûtent bien plus cher que le logiciel de haute disponibilité lui-même.
+  * **Longue durée de vie des équipements.** Les serveurs OT peuvent fonctionner pendant 10 à 15 ans. La solution de haute disponibilité doit être stable, nécessiter peu de maintenance et ne pas exiger de mises à jour constantes.
+  * **Matériel x86 standard uniquement.** Aucun budget ni justification pour un SAN ou des nœuds de cluster dédiés sur un site industriel distant.
+  * **Intolérance à la complexité au niveau du système d'exploitation.** Pacemaker, Corosync ou WSFC nécessitent une expertise en cluster que les opérateurs OT ne possèdent tout simplement pas et ne devraient pas avoir besoin.
 
 
 Le modèle sans SAN, à deux serveurs et à basculement automatique de SafeKit répond directement à chacune de ces contraintes.
@@ -98,11 +98,11 @@ RTO typique | 1 à 5 minutes | Moins d'une minute (configurable)
   
 ## Exigences techniques minimales {#technical-minimum-requirements}
 
-  * Serveurs ** : ** 2 serveurs x86 standard ou VM (toute marque de matériel, physique ou virtuel) ou ARM ( Linux uniquement)
-  * Système d'exploitation ** : ** Windows Server 2019/2022/2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * Réseau ** : LAN 1 Gbit/s ** pour la réplication ; réseau de pulsation dédié recommandé
-  * Stockage ** : Disques locaux uniquement — ni SAN, ni NAS, ni aucun stockage partagé **
-  * ** Aucune édition spéciale du système d'exploitation. ** — Windows Serveur Standard suffit ; aucune licence Datacenter n'est requise.
+  * Serveurs **:** 2 serveurs x86 standard ou VM (toute marque de matériel, physique ou virtuel) ou ARM ( Linux uniquement)
+  * Système d'exploitation **:** Windows Server 2019/2022/2025, Windows 11, RHEL 8/9, Ubuntu 24.04
+  * Réseau **: LAN 1 Gbit/s** pour la réplication ; réseau de pulsation dédié recommandé
+  * Stockage **: Disques locaux uniquement — ni SAN, ni NAS, ni aucun stockage partagé**
+  * **Aucune édition spéciale du système d'exploitation.** — Windows Serveur Standard suffit ; aucune licence Datacenter n'est requise.
 
 
 Pour les spécifications techniques complètes, les contraintes de dimensionnement et les critères d'approvisionnement, voir la référence technique 📘 [ RFP/RFI ](</fr/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) .

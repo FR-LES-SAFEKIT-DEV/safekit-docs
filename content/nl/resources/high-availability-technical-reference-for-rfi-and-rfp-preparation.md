@@ -52,7 +52,7 @@ _ * SafeKit ondersteunt zowel HA op applicatieniveau als HA op VM-niveau._
 
 ## Voorgeïnstalleerde applicatiemodules {#pre-built-application-modules}
 
-SafeKit bevat kant-en-klare, voorgeconfigureerde `.safe` -modules. Deze zijn georganiseerd in twee HA-strategieën: ** Applicatie-HA ** (directe applicatieclustering met mirror of `farm` modules) en ** Virtualisatie-HA ** (clustering op VM-niveau met hyperv.safe of kvm.safe ).
+SafeKit bevat kant-en-klare, voorgeconfigureerde `.safe` -modules. Deze zijn georganiseerd in twee HA-strategieën: **Applicatie-HA** (directe applicatieclustering met mirror of `farm` modules) en **Virtualisatie-HA** (clustering op VM-niveau met hyperv.safe of kvm.safe ).
 
  | Toepassings-HA | HA op VM-niveau  
 ---|---|---  

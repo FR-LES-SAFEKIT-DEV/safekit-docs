@@ -15,7 +15,7 @@ topics: "Guida rapida all'installazione dell'alta disponibilità per MySQL , Lim
 
 ## Panoramica della soluzione SafeKit / MySQL {#overview-of-the-safekit--mysql-solution}
 
-La soluzione è descritta qui: ** 💡 [ La più semplice MySQL Alta disponibilità: replica sincrona a 2 nodi e failover ](</it/solutions/mysql-high-availability-synchronous-replication-failover/>) ** .
+La soluzione è descritta qui: **💡 [ La più semplice MySQL Alta disponibilità: replica sincrona a 2 nodi e failover ](</it/solutions/mysql-high-availability-synchronous-replication-failover/>)** .
 
 ## Installazione della soluzione SafeKit / MySQL su Windows e Linux ( mysql.safe ) {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 

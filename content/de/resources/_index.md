@@ -11,7 +11,7 @@ topics: "Kostenlose Testversion, technische Dokumentation und Produktinformation
 
 ## Kostenlose Testversion, technische Dokumentation und Produktinformationen für SafeKit High Availability {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
-** SafeKit Ressourcen: Kostenlose Testversion, Dokumentation und Produktinformationen **
+**SafeKit Ressourcen: Kostenlose Testversion, Dokumentation und Produktinformationen**
 
 Kostenlose Testversion | Technische Dokumentation | Produktinformationen  
 ---|---|---  

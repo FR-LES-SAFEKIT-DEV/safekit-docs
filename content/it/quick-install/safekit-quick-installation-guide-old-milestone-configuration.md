@@ -166,7 +166,7 @@ Questo script imposta l'indirizzo IP virtuale in 2 file interni Milestone :
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autorità": " http://** < virtual-ip> ** /IDP "
+        "Autorità": " http://**< virtual-ip>** /IDP "
 
 
 Avviso ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,10 +230,10 @@ Se il cluster si trova nello stato `WAIT (red) not uptodate - STOP (red) not upt
 
 Eseguire i seguenti punti elenco sul nodo 1 secondo il menu mostrato nell'immagine:
 
-  * Fai clic con il pulsante destro del mouse sull'icona del server di gestione ** Milestone ** nella barra delle applicazioni.
-  * ** Arresta il servizio del server di gestione **
-  * Quindi selezionare ** Server Configurator... ** e registrare l'indirizzo IP virtuale.
-  * ** Avvia il servizio del server di gestione **
+  * Fai clic con il pulsante destro del mouse sull'icona del server di gestione **Milestone** nella barra delle applicazioni.
+  * **Arresta il servizio del server di gestione**
+  * Quindi selezionare **Server Configurator...** e registrare l'indirizzo IP virtuale.
+  * **Avvia il servizio del server di gestione**
 
 
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
@@ -251,7 +251,7 @@ Prima della versione Milestone 2022 R3, la registrazione potrebbe aver eliminato
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
 
 
-Nota: per registrare una versione precedente Milestone 2020 R2, utilizzare ** Modifica le impostazioni di crittografia... **
+Nota: per registrare una versione precedente Milestone 2020 R2, utilizzare **Modifica le impostazioni di crittografia...**
 
 
 ![ Registra il server di gestione in Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
@@ -267,13 +267,13 @@ Dalla Milestone 2022 R3, questo passaggio non è utile ed è stato eseguito auto
 
 Secondo l'immagine:
 
-  1. Avviare ** Milestone XProtect Client di gestione ** sul nodo 1.
-  2. Nel menu Strumenti ** ** , selezionare Servizi registrati ** ** . 
-     * Nella finestra Aggiungi/Rimuovi servizi ** ** seleziona un servizio nell'elenco e fai clic su ** **
-     * Nella finestra ** Modifica servizio registrato ** , sostituire l'indirizzo URL del servizio con lo stesso indirizzo URL, ma contenente l'indirizzo IP virtuale.
+  1. Avviare **Milestone XProtect Client di gestione** sul nodo 1.
+  2. Nel menu **Strumenti** , selezionare **Servizi registrati** . 
+     * Nella finestra **Aggiungi/Rimuovi servizi registrati** , seleziona un servizio dall'elenco e fai clic su **Modifica** .
+     * Nella finestra **Modifica servizio registrato** , sostituire l'indirizzo URL del servizio con lo stesso indirizzo URL, ma contenente l'indirizzo IP virtuale.
      * Ripeti questi passaggi per tutti i servizi elencati nella finestra.
-  3. Nella stessa finestra, fare clic su ** Rete ** . 
-     * Nella finestra di configurazione di rete ** ** , sostituire l'indirizzo URL del server con lo stesso indirizzo URL, ma contenente l'indirizzo IP virtuale.
+  3. Nella stessa finestra, fare clic su **Rete** . 
+     * Nella finestra **Configurazione di rete** , sostituire l'indirizzo URL del server con lo stesso indirizzo URL, ma contenente l'indirizzo IP virtuale.
 
 
 ![ Imposta l'indirizzo IP virtuale negli URL e nel client di gestione Milestone ](/wp-content/uploads/2022/07/milestone-url-vip.png)
@@ -289,10 +289,10 @@ Se l'autenticazione Milestone " Windows " è stata configurata con un Active Dir
 
 Quando si avvia il client di gestione Milestone XProtect , è necessario autenticarsi con "autenticazione Windows " o "autenticazione di base" ( [ clicca qui per vedere lo screenshot ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) ).
 
-Aprire ** Milestone XProtect Client di gestione ** e in ** Sicurezza / Ruoli ** (vedi immagine)
+Aprire **Milestone XProtect Client di gestione** e in **Sicurezza / Ruoli** (vedi immagine)
 
-  * Impostare il gruppo Windows ** BUILTIN\Administrators ** . In questo modo, un utente amministratore sul server secondario sarà in grado di connettersi a Milestone sul server secondario con l'autenticazione " Windows ".
-  * Creare un utente con "autenticazione di base" ( ** Admin ** nell'immagine) per essere sicuri di riautenticarsi sul nodo secondario dopo un failover. Per l'"autenticazione di base", nome utente e password vengono memorizzati nel database SQL e recuperati sul nodo secondario dopo un failover.
+  * Impostare il gruppo Windows **BUILTIN\Administrators** . In questo modo, un utente amministratore sul server secondario sarà in grado di connettersi a Milestone sul server secondario con l'autenticazione " Windows ".
+  * Creare un utente con "autenticazione di base" ( **Admin** nell'immagine) per essere sicuri di riautenticarsi sul nodo secondario dopo un failover. Per l'"autenticazione di base", nome utente e password vengono memorizzati nel database SQL e recuperati sul nodo secondario dopo un failover.
 
 
 Avviso ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,12 +337,12 @@ Questo script imposta l'indirizzo IP virtuale in 2 file interni Milestone :
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autorità": " http://** < virtual-ip> ** /IDP "
+        "Autorità": " http://**< virtual-ip>** /IDP "
 
 ### 14. Sul desktop del nodo 2, registrare il server di gestione sull'indirizzo IP virtuale {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * Selezionare ** Server Configurator ** nella barra delle applicazioni del nodo 2 e registrarlo sull'indirizzo IP virtuale (vedere l'immagine).
-  * Quindi ** Arresta il servizio del server di gestione ** .
+  * Selezionare **Server Configurator** nella barra delle applicazioni del nodo 2 e registrarlo sull'indirizzo IP virtuale (vedere l'immagine).
+  * Quindi **Arresta il servizio del server di gestione** .
 
 
 Avviso ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -426,7 +426,7 @@ Il problema è stato risolto nella Milestone 2023 R3.
 
 ### 18. Test di {#18-testing}
 
-  * Arresta il nodo PRIM scorrendo verso il basso il suo menu contestuale e facendo clic su Arresta. ** Non utilizzare lo scambio per un primo test ** (vedi il motivo di seguito).
+  * Arresta il nodo PRIM scorrendo verso il basso il suo menu contestuale e facendo clic su Arresta. **Non utilizzare lo scambio per un primo test** (vedi il motivo di seguito).
   * Verificare che sia presente un failover sul SECONDO nodo, che dovrebbe diventare SOLO (verde).
   * E tramite la console di gestione Microsoft (MMC), verificare il failover dei servizi (arrestati sul nodo 1 nello script `stop_prim` e avviati sul nodo 2 nello script `start_prim` ).
 

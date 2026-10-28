@@ -15,7 +15,7 @@ topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용
 
 ## SafeKit / 클라우드 mirror 솔루션 개요 {#overview-of-the-safekit--cloud-mirror-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ 클라우드에 구애받지 않는 고가용성: SafeKit 동기식 복제 및 장애 조치 ](</ko/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ 클라우드에 구애받지 않는 고가용성: SafeKit 동기식 복제 및 장애 조치 ](</ko/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)** .
 
 ## Windows 및 ( mirror.safe ) 및 Linux 에 SafeKit / 클라우드 mirror 솔루션 설치 {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

@@ -11,7 +11,7 @@ topics: "SafeKit Clustering Best Practices: HA-Architektur, Replikation & Redund
 
 ## SafeKit Clustering Best Practices: HA-Architektur, Replikation & Redundanz {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
-** Bewährte Verfahren für hochverfügbares Clustering, Replikation und Redundanz **
+**Bewährte Verfahren für hochverfügbares Clustering, Replikation und Redundanz**
 
 Best Practices für Hochverfügbarkeit | Best Practices für Replikation | Best Practices für Clustering  
 ---|---|---  

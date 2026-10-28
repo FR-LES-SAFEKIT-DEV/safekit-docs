@@ -15,7 +15,7 @@ topics: "IISの高可用性クイックインストールガイド、 SafeKitの
 
 ## SafeKit / IISソリューションの概要 {#overview-of-the-safekit--iis-solution}
 
-ソリューションはここに記載されています: ** 💡 [ SafeKit : オールインワンIISロードバランシングおよび高可用性ソフトウェア](</ja/solutions/iis-load-balancing-failover/>) ** 。
+ソリューションはここに記載されています: **💡 [ SafeKit : オールインワンIISロードバランシングおよび高可用性ソフトウェア](</ja/solutions/iis-load-balancing-failover/>)** 。
 
 ## SafeKit / IISソリューションをWindows ( iis_farm.safe )にインストールします。 {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

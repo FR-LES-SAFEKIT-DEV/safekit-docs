@@ -29,7 +29,7 @@ topics: "Linux용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제
  
 
 참고: 구성하게 될 범용 **mirror.safe** 모듈은 패키지에 포함되어 제공됩니다.
-
+참고: 구성할 범용 **mirror.safe** 모듈은 패키지 안에 포함되어 있습니다.
 ## SafeKit / Linux 솔루션 단계별 구성 {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 

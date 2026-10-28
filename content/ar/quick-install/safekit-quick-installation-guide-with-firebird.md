@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ F
 
 ## نظرة عامة على حل SafeKit / Firebird {#overview-of-the-safekit--firebird-solution}
 
-الحل موضح هنا: ** 💡 [ أبسط Firebird التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
+الحل موضح هنا: **💡 [ أبسط Firebird التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/firebird-high-availability-synchronous-replication-failover/>)** .
 
 ## تثبيت حل SafeKit / Firebird على Windows و Linux ( firebird.safe ) و {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 

@@ -166,7 +166,7 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "권한": " http://** < virtual-ip> ** /IDP
+        "권한": " http://**< virtual-ip>** /IDP
 
 
 ![ 경고 ](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,10 +230,10 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
 
 이미지에 표시된 메뉴에 따라 노드 1에서 다음 항목들을 실행하십시오.
 
-  * 작업 표시줄에 있는 ** Milestone 관리 서버 ** 아이콘을 마우스 오른쪽 버튼으로 클릭합니다.
-  * ** 관리 서버 서비스 중지 **
-  * 그런 다음 ** 서버 구성기... ** 선택하고 가상 IP 주소를 등록하십시오.
-  * ** 관리 서버 서비스 시작 **
+  * 작업 표시줄에 있는 **Milestone 관리 서버** 아이콘을 마우스 오른쪽 버튼으로 클릭합니다.
+  * **관리 서버 서비스 중지**
+  * 그런 다음 **서버 구성기...** 선택하고 가상 IP 주소를 등록하십시오.
+  * **관리 서버 서비스 시작**
 
 
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
@@ -251,7 +251,7 @@ Milestone 2022 R3 이전 버전에서는 등록 과정에서 내부 Milestone �
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
 
 
-참고: Milestone 2020 R2 이전 버전을 등록하려면 ** 암호화 설정 변경... ** 사용하십시오.
+참고: Milestone 2020 R2 이전 버전을 등록하려면 **암호화 설정 변경...** 사용하십시오.
 
 
 ![ 관리 서버를 Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png) 에 등록합니다.
@@ -267,13 +267,13 @@ Milestone 2022 R3 버전부터는 이 단계가 더 이상 필요하지 않으�
 
 이미지에 따르면:
 
-  1. 노드 1에서 ** Milestone XProtect 관리 클라이언트 ** 를 시작합니다.
-  2. ** Tools ** 메뉴에서 ** Registered Services ** 선택합니다. 
-     * ** 등록된 서비스 추가/제거 ** 창에서 목록에서 서비스를 선택하고 ** 편집 ** 클릭합니다.
-     * ** 등록된 서비스 ** 편집 창에서 서비스의 URL 주소를 동일한 URL 주소이되 가상 IP 주소를 포함하도록 변경합니다.
+  1. 노드 1에서 **Milestone XProtect 관리 클라이언트** 를 시작합니다.
+  2. **Tools** 메뉴에서 **Registered Services** 선택합니다. 
+     * **등록된 서비스 추가/제거** 창에서 목록에서 서비스를 선택하고 **편집** 클릭합니다.
+     * **등록된 서비스** 편집 창에서 서비스의 URL 주소를 동일한 URL 주소이되 가상 IP 주소를 포함하도록 변경합니다.
      * 창에 나열된 모든 서비스에 대해 이 단계를 반복하십시오.
-  3. 같은 창에서 ** 네트워크 ** 를 클릭합니다. 
-     * ** 네트워크 구성 ** 창에서 서버의 URL 주소를 동일한 URL 주소이되 가상 IP 주소를 포함하도록 변경하십시오.
+  3. 같은 창에서 **네트워크** 를 클릭합니다. 
+     * **네트워크 구성** 창에서 서버의 URL 주소를 동일한 URL 주소이되 가상 IP 주소를 포함하도록 변경하십시오.
 
 
 ![ URL 및 Milestone 관리 클라이언트 ](/wp-content/uploads/2022/07/milestone-url-vip.png) 에 가상 IP 주소를 설정합니다.
@@ -289,10 +289,10 @@ Active Directory를 사용하여 Milestone " Windows 인증"이 구성된 경우
 
 Milestone XProtect 관리 클라이언트를 시작할 때 " Windows 인증" 또는 "기본 인증"( [ 스크린샷을 보려면 여기를 클릭하세요, ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) )을 사용하여 인증해야 합니다.
 
-** Milestone XProtect 관리 클라이언트, ** 열고 ** 보안/역할, ** 를 엽니다(이미지 참조).
+**Milestone XProtect 관리 클라이언트,** 열고 **보안/역할,** 를 엽니다(이미지 참조).
 
-  * Windows 그룹을 ** BUILTIN\Administrators ** 로 설정하십시오. 이렇게 하면 보조 서버의 관리자 사용자가 " Windows 인증"을 사용하여 보조 서버의 Milestone 에 연결할 수 있습니다.
-  * 장애 조치 후 보조 노드에서 재인증이 이루어지도록 "기본 인증"을 사용하는 사용자(이미지의 ** 관리자 ** )를 생성하십시오. "기본 인증"의 경우 사용자/암호가 SQL 데이터베이스에 저장되며 장애 조치 후 보조 노드에서 검색됩니다.
+  * Windows 그룹을 **BUILTIN\Administrators** 로 설정하십시오. 이렇게 하면 보조 서버의 관리자 사용자가 " Windows 인증"을 사용하여 보조 서버의 Milestone 에 연결할 수 있습니다.
+  * 장애 조치 후 보조 노드에서 재인증이 이루어지도록 "기본 인증"을 사용하는 사용자(이미지의 **관리자** )를 생성하십시오. "기본 인증"의 경우 사용자/암호가 SQL 데이터베이스에 저장되며 장애 조치 후 보조 노드에서 검색됩니다.
 
 
 ![ 경고 ](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,12 +337,12 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "권한": " http://** < virtual-ip> ** /IDP
+        "권한": " http://**< virtual-ip>** /IDP
 
 ### 14. 노드 2의 데스크톱에서 가상 IP 주소 에 관리 서버를 등록합니다. {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * 노드 2의 작업 표시줄에서 ** 서버 구성기 ** 선택하고 가상 IP 주소에 등록합니다(이미지 참조).
-  * 그런 다음 ** 관리 서버 서비스 ** 중지합니다.
+  * 노드 2의 작업 표시줄에서 **서버 구성기** 선택하고 가상 IP 주소에 등록합니다(이미지 참조).
+  * 그런 다음 **관리 서버 서비스** 중지합니다.
 
 
 ![ 경고 ](/wp-content/uploads/2022/07/warning-small.png)
@@ -426,7 +426,7 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
 
 ### 18. 테스트 {#18-testing}
 
-  * PRIM 노드의 컨텍스트 메뉴를 아래로 스크롤하여 '중지'를 클릭하면 노드가 중지됩니다. ** 첫 번째 테스트에서는 스왑 기능을 사용하지 마십시오. ** (이유는 아래 참조).
+  * PRIM 노드의 컨텍스트 메뉴를 아래로 스크롤하여 '중지'를 클릭하면 노드가 중지됩니다. **첫 번째 테스트에서는 스왑 기능을 사용하지 마십시오.** (이유는 아래 참조).
   * 두 번째 노드에서 페일오버가 제대로 수행되어 해당 노드가 단독 상태(녹색)가 되는지 확인하십시오.
   * 또한 Microsoft 관리 콘솔(MMC)을 사용하여 서비스 페일오버를 확인하십시오( `stop_prim` 스크립트에서 노드 1에서 중지되고 `start_prim` 스크립트에서 노드 2에서 시작됨).
 

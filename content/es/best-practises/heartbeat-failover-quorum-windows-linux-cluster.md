@@ -17,7 +17,7 @@ topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red e
 
 ### ¿Qué es un latido cardíaco? {#what-is-a-heartbeat}
 
-El mecanismo básico para sincronizar dos servidores y detectar fallos en los servidores es el latido ** ** , que es un flujo de datos de monitorización en una red compartida por un par de servidores.
+El mecanismo básico para sincronizar dos servidores y detectar fallos en los mismos es el **latido (heartbeat)** , que consiste en un flujo de datos de monitorización en una red compartida por un par de servidores.
 
 El software SafeKit admite tantos latidos como redes compartidas por dos servidores. 
 

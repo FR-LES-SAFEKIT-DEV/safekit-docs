@@ -15,7 +15,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para AWS , limitac
 
 ## Descripción general de la solución SafeKit / AWS {#overview-of-the-safekit--aws-solution}
 
-La solución se describe aquí: ** 💡 [ SafeKit : Amazon AWS Balanceo de carga y alta disponibilidad de aplicaciones `Farm` Clúster ](</es/solutions/aws-load-balancing-cluster-failover/>) ** .
+La solución se describe aquí: **💡 [ SafeKit : Amazon AWS Balanceo de carga y alta disponibilidad de aplicaciones `Farm` Clúster ](</es/solutions/aws-load-balancing-cluster-failover/>)** .
 
 ## Instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

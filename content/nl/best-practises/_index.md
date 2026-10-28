@@ -11,7 +11,7 @@ topics: "SafeKit Clustering Best Practices: HA-architectuur, replicatie en redun
 
 ## SafeKit Clustering Best Practices: HA-architectuur, replicatie en redundantie {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
-** Beste werkwijzen voor clustering, replicatie en redundantie met hoge beschikbaarheid **
+**Beste werkwijzen voor clustering, replicatie en redundantie met hoge beschikbaarheid**
 
 Best practices voor hoge beschikbaarheid | Best practices voor replicatie | Best practices voor clustering  
 ---|---|---  

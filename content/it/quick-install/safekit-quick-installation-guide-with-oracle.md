@@ -15,7 +15,7 @@ topics: "Guida rapida all'installazione dell'alta disponibilità per Oracle , Li
 
 ## Panoramica della soluzione SafeKit / Oracle {#overview-of-the-safekit--oracle-solution}
 
-La soluzione è descritta qui: ** 💡 [ La più semplice Oracle Alta disponibilità: replica sincrona a 2 nodi e failover ](</it/solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
+La soluzione è descritta qui: **💡 [ La più semplice Oracle Alta disponibilità: replica sincrona a 2 nodi e failover ](</it/solutions/oracle-high-availability-synchronous-replication-failover/>)** .
 
 ## Installazione della soluzione SafeKit / Oracle su Windows e Linux ( oracle.safe ) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

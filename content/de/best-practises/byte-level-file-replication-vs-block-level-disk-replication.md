@@ -49,7 +49,7 @@ Schließlich ist die Lösung nicht einfach zu konfigurieren, da Fachkenntnisse e
 
 ## Vor- und Nachteile der Byte-Level-Dateireplikation im Vergleich zur Block-Level-Festplattenreplikation {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
-Kriterien | ** Cluster mit Byte-Level-Dateireplikation ** | ** Cluster mit Block-Level-Festplattenreplikation **  
+Kriterien | **Cluster mit Byte-Level-Dateireplikation** | **Cluster mit Block-Level-Festplattenreplikation**  
 ---|---|---  
 Produkt | • [ SafeKit auf Windows und Linux ](/) | • Festplattenreplikationsprodukte als [ DRBD ](https://linbit.com/drbd/)   
 Organisation der Anwendungsdaten |  • 0 Auswirkungen auf die Anwendungsdatenorganisation mit SafeKit.<br>• [Definieren Sie einfach die Verzeichnisse, die in Echtzeit repliziert werden sollen.](/de/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Sogar Verzeichnisse innerhalb der Systemfestplatte können repliziert werden.  |  • Auswirkungen auf die Organisation der Anwendungsdaten.<br>• Spezielle Konfiguration der Anwendung, um ihre Daten auf einer replizierten Festplatte zu speichern.<br>• Die Daten auf der Systemfestplatte können nicht repliziert werden.   

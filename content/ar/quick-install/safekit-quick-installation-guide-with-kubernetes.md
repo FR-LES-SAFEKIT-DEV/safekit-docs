@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ K
 
 ## نظرة عامة على حل SafeKit / Kubernetes {#overview-of-the-safekit--kubernetes-solution}
 
-الحل موضح هنا: ** 💡 [ Kubernetes التوافر العالي لـ K3s: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل على عقدتين ](</ar/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+الحل موضح هنا: **💡 [ Kubernetes التوافر العالي لـ K3s: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل على عقدتين ](</ar/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## تثبيت وتكوين حل SafeKit / Kubernetes على Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -230,7 +230,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ K
   * `Save and apply` التكوين الجديد لإعادة نشر ملف userconfig.xml المعدل على كلا العقدتين (يجب إيقاف الوحدة النمطية على كلا العقدتين للحفظ والتطبيق).
 
 
-معلمات ** ** :
+**حدود** :
 
   * يُعرّف `ident="witness"` الشاهد باسم المورد: `splitbrain.witness` . يمكنك تغيير هذه القيمة لتعريف الشاهد.
   * يشير `exec="ping"` إلى رمز اختبار الاتصال المراد تنفيذه. لا تقم بتغيير هذه القيمة.

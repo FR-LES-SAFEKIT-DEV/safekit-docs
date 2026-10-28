@@ -166,7 +166,7 @@ Ce script configure l'adresse IP virtuelle dans 2 fichiers internes Milestone :
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autorité : " http://** < virtual-ip> ** /IDP "
+        "Autorité : " http://**< virtual-ip>** /IDP "
 
 
 Avertissement ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -230,10 +230,10 @@ Si le cluster est dans l'état `WAIT (red) not uptodate - STOP (red) not uptodat
 
 Exécutez les actions suivantes sur le nœud 1 conformément au menu de l'image :
 
-  * Cliquez avec le bouton droit sur l'icône ** Milestone Serveur de gestion ** dans la barre des tâches.
-  * ** Arrêter le service du serveur de gestion **
-  * Choisissez ensuite le configurateur de serveur ** ... ** et enregistrez l'adresse IP virtuelle.
-  * ** Démarrer le service du serveur de gestion **
+  * Cliquez avec le bouton droit sur l'icône **Milestone Serveur de gestion** dans la barre des tâches.
+  * **Arrêter le service du serveur de gestion**
+  * Choisissez ensuite le configurateur de serveur **...** et enregistrez l'adresse IP virtuelle.
+  * **Démarrer le service du serveur de gestion**
 
 
 Note ![ ](/wp-content/uploads/2022/07/note.png)
@@ -251,7 +251,7 @@ Avant la version Milestone 2022 R3, l'enregistrement peut avoir supprimé la con
 Note ![ ](/wp-content/uploads/2022/07/note.png)
 
 
-Remarque : Pour enregistrer une version antérieure à Milestone 2020 R2, utilisez ** Modifier les paramètres de chiffrement… **
+Remarque : Pour enregistrer une version antérieure à Milestone 2020 R2, utilisez **Modifier les paramètres de chiffrement…**
 
 
 ![ Enregistrez le serveur de gestion dans Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
@@ -267,13 +267,13 @@ Depuis Milestone 2022 R3, cette étape est inutile et est désormais effectuée 
 
 D'après l'image :
 
-  1. Démarrer le client de gestion ** Milestone XProtect ** sur le nœud 1.
-  2. Dans le menu ** Tools ** , sélectionnez ** Registered Services ** . 
-     * Dans la fenêtre ** Ajouter/Supprimer des services enregistrés ** , sélectionnez un service dans la liste et cliquez sur ** Modifier ** .
-     * Dans la fenêtre ** Modifier le service enregistré ** , modifiez l'adresse URL du service avec la même adresse URL mais contenant l'adresse IP virtuelle.
+  1. Démarrer le client de gestion **Milestone XProtect** sur le nœud 1.
+  2. Dans le menu **Tools** , sélectionnez **Registered Services** . 
+     * Dans la fenêtre **Ajouter/Supprimer des services enregistrés** , sélectionnez un service dans la liste et cliquez sur **Modifier** .
+     * Dans la fenêtre **Modifier le service enregistré** , modifiez l'adresse URL du service avec la même adresse URL mais contenant l'adresse IP virtuelle.
      * Répétez ces étapes pour tous les services affichés dans la fenêtre.
-  3. Dans la même fenêtre, cliquez sur ** Réseau ** . 
-     * Dans la fenêtre de configuration réseau ** ** , modifiez l'adresse URL du serveur avec la même adresse URL mais contenant l'adresse IP virtuelle.
+  3. Dans la même fenêtre, cliquez sur **Réseau** . 
+     * Dans la fenêtre **de configuration réseau** , modifiez l'adresse URL du serveur en utilisant la même adresse URL mais contenant l'adresse IP virtuelle.
 
 
 ![ Configurez l'adresse IP virtuelle dans les URL et dans le client de gestion Milestone ](/wp-content/uploads/2022/07/milestone-url-vip.png)
@@ -289,10 +289,10 @@ Si l'authentification Milestone « Windows » a été configurée avec un Active
 
 Lorsque vous démarrez le client de gestion Milestone XProtect , vous devez vous authentifier soit avec « l'authentification Windows », soit avec « l'authentification de base » ( [ cliquez ici pour voir la capture d'écran ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) ).
 
-Ouvrez ** Milestone XProtect Client de gestion ** et dans ** Sécurité / Rôles ** (voir image)
+Ouvrez **Milestone XProtect Client de gestion** et dans **Sécurité / Rôles** (voir image)
 
-  * Configurez le groupe Windows ** BUILTIN\Administrators ** . Ainsi, un utilisateur administrateur sur le serveur secondaire pourra se connecter à Milestone sur le serveur secondaire avec l'authentification « Windows ».
-  * Créez un utilisateur avec une authentification de base ( ** Admin ** sur l'image) afin de garantir une réauthentification sur le nœud secondaire après un basculement. Pour l'authentification de base, l'identifiant et le mot de passe sont stockés dans la base de données SQL et seront récupérés sur le nœud secondaire après un basculement.
+  * Configurez le groupe Windows **BUILTIN\Administrators** . Ainsi, un utilisateur administrateur sur le serveur secondaire pourra se connecter à Milestone sur le serveur secondaire avec l'authentification « Windows ».
+  * Créez un utilisateur avec une authentification de base ( **Admin** sur l'image) afin de garantir une réauthentification sur le nœud secondaire après un basculement. Pour l'authentification de base, l'identifiant et le mot de passe sont stockés dans la base de données SQL et seront récupérés sur le nœud secondaire après un basculement.
 
 
 Avertissement ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -337,12 +337,12 @@ Ce script configure l'adresse IP virtuelle dans 2 fichiers internes Milestone :
     C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
     
     
-        "Autorité : " http://** < virtual-ip> ** /IDP "
+        "Autorité : " http://**< virtual-ip>** /IDP "
 
 ### 14. Sur le poste de travail du nœud 2, enregistrez le serveur de gestion sur l'adresse IP virtuelle {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * Choisissez ** Server Configurator ** dans la barre des tâches du nœud 2 et enregistrez-le sur l'adresse IP virtuelle (voir image).
-  * Puis ** Arrêter le service du serveur de gestion ** .
+  * Choisissez **Server Configurator** dans la barre des tâches du nœud 2 et enregistrez-le sur l'adresse IP virtuelle (voir image).
+  * Puis **Arrêter le service du serveur de gestion** .
 
 
 Avertissement ![ ](/wp-content/uploads/2022/07/warning-small.png)
@@ -426,7 +426,7 @@ Le problème est résolu dans Milestone 2023 R3.
 
 ### 18. Test de {#18-testing}
 
-  * Arrêtez le nœud PRIM en faisant défiler son menu contextuel vers le bas et en cliquant sur Arrêter. ** N'utilisez pas l'échange pour un premier test ** (voir pourquoi ci-dessous).
+  * Arrêtez le nœud PRIM en faisant défiler son menu contextuel vers le bas et en cliquant sur Arrêter. **N'utilisez pas l'échange pour un premier test** (voir pourquoi ci-dessous).
   * Vérifiez qu'il y a bien un basculement sur le DEUXIÈME nœud, qui devrait devenir SEUL (vert).
   * Et avec la console de gestion Microsoft (MMC), vérifiez le basculement des services (arrêtés sur le nœud 1 dans le script `stop_prim` et démarrés sur le nœud 2 dans le script `start_prim` ).
 

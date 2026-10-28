@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für IIS , Einsch
 
 ## Übersicht der SafeKit / IIS -Lösung {#overview-of-the-safekit--iis-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ SafeKit : All-in-One IIS Load Balancing & High Availability Software ](</de/solutions/iis-load-balancing-failover/>) ** .
+Die Lösung wird hier beschrieben: **💡 [ SafeKit : All-in-One IIS Load Balancing & High Availability Software ](</de/solutions/iis-load-balancing-failover/>)** .
 
 ## Installation der SafeKit / IIS Lösung auf Windows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

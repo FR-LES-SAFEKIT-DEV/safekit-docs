@@ -13,11 +13,11 @@ topics: "Nedap 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
 {{%  insert-safekit-mirror-guide-ko app="Nedap" mod="nedap"  %}}
  
 
-** 📘 [ Nedap AOES와 SafeKit 의 구성(PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) ** : 모든 세부 정보는 이 문서에 있습니다.
+**📘 [ Nedap AOES와 SafeKit 의 구성(PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)** : 모든 세부 정보는 이 문서에 있습니다.
 
 ## SafeKit / Nedap 솔루션 개요 {#overview-of-the-safekit--nedap-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 Nedap 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ 가장 간단한 Nedap 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/nedap-high-availability-synchronous-replication-failover/>)** .
 
 ## SafeKit / Nedap 솔루션의 Windows ( nedap.safe ) 및 설치 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 

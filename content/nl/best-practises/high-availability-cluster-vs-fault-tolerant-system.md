@@ -33,9 +33,9 @@ Fouttolerante systemen behandelen alleen hardwarefouten en geen softwarefouten, 
 
 ## Voordelen en nadelen van hoge beschikbaarheid en fouttolerantie {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
-Bij het beschermen van kritieke applicaties tegen storingen bestaan er twee belangrijke benaderingen: ** software high availability clustering ** en ** fouttolerante systemen ** . Elke benadering biedt verschillende afwegingen op het gebied van kosten, flexibiliteit, hersteltijd en hardwarevereisten. Inzicht in deze verschillen helpt bij het kiezen van de juiste oplossing voor uw specifieke behoeften.
+Bij het beschermen van kritieke applicaties tegen storingen bestaan er twee belangrijke benaderingen: **software high availability clustering** en **fouttolerante systemen** . Elke benadering biedt verschillende afwegingen op het gebied van kosten, flexibiliteit, hersteltijd en hardwarevereisten. Inzicht in deze verschillen helpt bij het kiezen van de juiste oplossing voor uw specifieke behoeften.
 
-** Vergelijking van software high availability clustering versus fouttolerante systemen **
+**Vergelijking van software high availability clustering versus fouttolerante systemen**
 
 Criteria | Software high availability cluster | Fouttolerant systeem  
 ---|---|---  
@@ -47,7 +47,7 @@ RTO/RPO | De hersteltijd met SafeKit ( [ RTO ](</nl/best-practises/what-is-rpo-a
 Flexibiliteit | Kan op elk type server met een standaard besturingssysteem draaien. Windows en Linux | Is afhankelijk van specifieke hardware of hypervisors.  
 Geschikt voor | [ Softwareontwikkelaars die een eenvoudige optie voor hoge beschikbaarheid aan hun applicatie willen toevoegen ](</nl/use-cases/application-clustering-software/>) | Omgevingen waar hardwarestoringen de grootste zorg zijn  
   
-Samenvattend biedt ** , SafeKit ** een kosteneffectieve en flexibele oplossing die draait op standaard hardware en rolling upgrades ondersteunt, met vrijwel geen downtime (RTO ~1 minuut) en geen dataverlies. Fouttolerante systemen bieden directe failover (RTO = 0), maar vereisen speciale hardware en missen de flexibiliteit voor onafhankelijke software-updates.
+Samenvattend biedt **, SafeKit** een kosteneffectieve en flexibele oplossing die draait op standaard hardware en rolling upgrades ondersteunt, met vrijwel geen downtime (RTO ~1 minuut) en geen dataverlies. Fouttolerante systemen bieden directe failover (RTO = 0), maar vereisen speciale hardware en missen de flexibiliteit voor onafhankelijke software-updates.
 
 
 {{%  insert-safekit-hub-nl  %}}

@@ -11,7 +11,7 @@ topics: "Essai gratuit, documentation technique et informations produit pour Saf
 
 ## Essai gratuit, documentation technique et informations produit pour SafeKit Haute disponibilité {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
-** SafeKit Ressources : Essai gratuit, documentation et informations produit **
+**SafeKit Ressources : Essai gratuit, documentation et informations produit**
 
 Essai gratuit | Documentation technique | Informations produit  
 ---|---|---  

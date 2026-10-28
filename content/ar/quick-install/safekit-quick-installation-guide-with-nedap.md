@@ -13,11 +13,11 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ N
 {{%  insert-safekit-mirror-guide-ar app="Nedap" mod="nedap"  %}}
  
 
-** 📘 [ تكوين Nedap AOES مع SafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) ** : جميع التفاصيل موجودة في هذا المستند.
+**📘 [ تكوين Nedap AOES مع SafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)** : جميع التفاصيل موجودة في هذا المستند.
 
 ## نظرة عامة على حل SafeKit / Nedap {#overview-of-the-safekit--nedap-solution}
 
-الحل موضح هنا: ** 💡 [ أبسط Nedap التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+الحل موضح هنا: **💡 [ أبسط Nedap التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/nedap-high-availability-synchronous-replication-failover/>)** .
 
 ## تثبيت حل SafeKit / Nedap على Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 

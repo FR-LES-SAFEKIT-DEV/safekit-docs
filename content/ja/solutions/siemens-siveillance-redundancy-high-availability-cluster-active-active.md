@@ -16,7 +16,7 @@ topics: "Siemens Siveillance 用SafeKit : 2 ノード SAN レス Hyper-V クラ�
 ### 注記 {#notes}
 
   * Siveillance VMSと録画サーバーについては、 SafeKitではなく、統合フェイルオーバーメカニズムを使用してください。レコーダーは、両方の物理サーバーのホストレベルで実行することも、両方の物理サーバー上の2つの仮想マシンで実行することもできます（ SafeKitでは複製されません）。
-  * ** 💡 [ Siemens Siveillance VMS ](</ja/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) **には、アプリケーション レベルで別のソリューションがあり、あらゆるインフラストラクチャ (物理サーバー、VMware を含むあらゆるハイパーバイザー、 ** ** ...) で動作します。
+  * **💡 [ Siemens Siveillance VMS ](</ja/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)**には、アプリケーション レベルで別のソリューションがあり、あらゆるインフラストラクチャ (物理サーバー、 **VMware**を含むあらゆるハイパーバイザーなど) で動作します。
 
 
 

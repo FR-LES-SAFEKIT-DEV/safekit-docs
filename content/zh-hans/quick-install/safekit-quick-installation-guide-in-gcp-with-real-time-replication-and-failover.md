@@ -15,7 +15,7 @@ topics: "GCP 、 SafeKit高可用性快速安装指南； SafeKit / GCP mirror�
 
 ## SafeKit / GCP mirror解决方案概述 {#overview-of-the-safekit--gcp-mirror-solution}
 
-解决方案描述如下： ** 💡 [ Google GCP高可用性： SafeKit同步复制和故障转移](</zh-hans/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** 。
+解决方案描述如下： **💡 [ Google GCP高可用性： SafeKit同步复制和故障转移](</zh-hans/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)** 。
 
 ## 在Windows和Linux ( mirror.safe )上安装SafeKit / GCP mirror解决方案 {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

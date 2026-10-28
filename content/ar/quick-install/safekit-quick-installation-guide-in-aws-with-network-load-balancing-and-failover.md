@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ A
 
 ## نظرة عامة على حل SafeKit / AWS {#overview-of-the-safekit--aws-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : Amazon AWS موازنة الأحمال والتوافر العالي للتطبيقات `Farm` Cluster ](</ar/solutions/aws-load-balancing-cluster-failover/>) ** .
+الحل موضح هنا: **💡 [ SafeKit : Amazon AWS موازنة الأحمال والتوافر العالي للتطبيقات `Farm` Cluster ](</ar/solutions/aws-load-balancing-cluster-failover/>)** .
 
 ## تثبيت حل SafeKit / AWS على Windows و Linux ( farm.safe ) و {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

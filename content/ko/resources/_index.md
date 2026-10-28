@@ -11,7 +11,7 @@ topics: "SafeKit 고가용성, 🔍 SafeKit 고가용성 내비게이션 허브 
 
 ## SafeKit 고가용성 제품 무료 체험, 기술 문서 및 제품 정보 {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
-** SafeKit 리소스: 무료 체험, 문서 및 제품 정보 **
+**SafeKit 리소스: 무료 체험, 문서 및 제품 정보**
 
 무료 체험판 | 기술 문서 | 제품 정보  
 ---|---|---  

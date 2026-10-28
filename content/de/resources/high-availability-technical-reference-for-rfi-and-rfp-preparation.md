@@ -52,7 +52,7 @@ _ Virtuelle IPs ** müssen auf Ebene des Cloud-Load-Balancers konfiguriert werde
 
 ## Vorkonfigurierte Anwendungsmodule {#pre-built-application-modules}
 
-SafeKit enthält sofort einsatzbereite, vorkonfigurierte `.safe` -Module. Diese sind in zwei HA-Strategien unterteilt: ** Application HA ** (direktes Anwendungsclustering mit den Modulen mirror oder `farm` ) und ** Virtualization HA ** (Clustering auf VM-Ebene mit den hyperv.safe oder kvm.safe ).
+SafeKit enthält sofort einsatzbereite, vorkonfigurierte `.safe` -Module. Diese sind in zwei HA-Strategien unterteilt: **Application HA** (direktes Anwendungsclustering mit den Modulen mirror oder `farm` ) und **Virtualization HA** (Clustering auf VM-Ebene mit den hyperv.safe oder kvm.safe ).
 
  | Anwendungs-HA | VM-Level-HA  
 ---|---|---  

@@ -49,7 +49,7 @@ topics: "고가용성 클러스터에서 바이트 수준 파일 복제와 블�
 
 ## 바이트 수준 파일 복제와 블록 수준 디스크 복제의 장단점 {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
-기준 | ** 바이트 수준 파일 복제 클러스터 ** | ** 블록 수준 디스크 복제 클러스터 **  
+기준 | **바이트 수준 파일 복제 클러스터** | **블록 수준 디스크 복제 클러스터**  
 ---|---|---  
 제품 | • [ SafeKit Windows 및 Linux ](/) | 에 적용됩니다. • 디스크 복제 제품(예: [ DRBD ](https://linbit.com/drbd/)   
 애플리케이션 데이터 구성 | • SafeKit 사용해도 애플리케이션 데이터 구성에 영향 없음. <br> • [ 실시간 복제할 디렉터리만 정의하면 됨. ](/ko/architectures/file-replication-byte-level-with-failover-mirror-cluster/) <br> • 시스템 디스크 내부의 디렉터리도 복제 가능. | • 애플리케이션 데이터 구성에 영향 있음. <br> • 복제 디스크에 데이터를 저장하도록 애플리케이션을 특별히 구성해야 함. <br> • 시스템 디스크의 데이터는 복제할 수 없음.   

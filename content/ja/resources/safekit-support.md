@@ -11,7 +11,7 @@ topics: "無料のAIレベル1サポート、標準サポートとメンテナ�
 
 ## 無料AIレベル1サポート {#ai-support}
 
-** 🤖 お気に入りの LLM と一緒にSafeKitを使用してください**
+**🤖 お気に入りの LLM と一緒にSafeKitを使用してください**
 
   1. Claude、ChatGPT、GitHub Copilot、またはその他のLLMなどのAIアシスタントを起動します。
   2. [ llms.txt ](</llms.txt>)の内容をチャットに貼り付けてください。

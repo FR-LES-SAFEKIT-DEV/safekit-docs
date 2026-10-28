@@ -39,9 +39,9 @@ Softwareclustering voor de frontend (zoals met SafeKit ) is gebaseerd op load ba
 
 ## Softwareclustering versus hardwareclustering: voor- en nadelen {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
-Hoge beschikbaarheid kan worden bereikt via verschillende clusteringbenaderingen: ** softwareclustering ** , ** hardwareclustering ** (gedeelde/gerepliceerde opslag) of ** hardware load balancers ** (speciale netwerkapparaten). Elke benadering verschilt in functionaliteit, benodigde hardware, softwarevereisten en IT-vaardigheden die nodig zijn voor de implementatie. SafeKit biedt een volledig softwarematige aanpak die replicatie, failover en load balancing combineert in één product, waardoor er geen behoefte is aan speciale hardware of enterprise-edities.
+Hoge beschikbaarheid kan worden bereikt via verschillende clusteringbenaderingen: **softwareclustering** , **hardwareclustering** (gedeelde/gerepliceerde opslag) of **hardware load balancers** (speciale netwerkapparaten). Elke benadering verschilt in functionaliteit, benodigde hardware, softwarevereisten en IT-vaardigheden die nodig zijn voor de implementatie. SafeKit biedt een volledig softwarematige aanpak die replicatie, failover en load balancing combineert in één product, waardoor er geen behoefte is aan speciale hardware of enterprise-edities.
 
-Tabel ** : Vergelijking van softwareclustering ( SafeKit ) versus hardwareclustering versus hardware load balancers op basis van belangrijke implementatiecriteria **
+Tabel **: Vergelijking van softwareclustering ( SafeKit ) versus hardwareclustering versus hardware load balancers op basis van belangrijke implementatiecriteria**
 
 Criteria | [ SafeKit ](</>) Softwareclustering | Hardwareclustering | Hardware loadbalancers  
 ---|---|---|---  
@@ -50,7 +50,7 @@ Hardware | Standaard fysieke servers, virtuele servers of cloud | Dedicated stor
 Software | Standaardversies van Windows , Linux en databases (zelfs besturingssystemen voor pc's en gratis versies van databases) | Enterprise-versies van besturingssystemen en databases | Firmware in loadbalancers  
 Vaardigheden | Geen specifieke IT-vaardigheden vereist voor implementatie SafeKit | Uitstekende vaardigheden op het gebied van opslag en besturingssystemen | Uitstekende netwerkvaardigheden  
   
-** is softwareclustering de enige aanpak ** alle drie de mogelijkheden – realtime ** , automatische ** en netwerkbelastingverdeling – combineert in één lichtgewicht product. Het draait op standaard hardware SafeKit fysiek, virtueel of in de cloud) met standaard besturingssystemen en databaseversies, en vereist geen specialistische IT-vaardigheden. Hardwareclustering vereist daarentegen een dedicated opslaginfrastructuur en bedrijfssoftwarelicenties, terwijl hardware load balancers dedicated apparaten en netwerkexpertise vereisen. Geen van beide biedt de complete functionaliteit die SafeKit direct uit de doos levert.
+**is softwareclustering de enige aanpak** alle drie de mogelijkheden – realtime **, automatische** en netwerkbelastingverdeling – combineert in één lichtgewicht product. Het draait op standaard hardware SafeKit fysiek, virtueel of in de cloud) met standaard besturingssystemen en databaseversies, en vereist geen specialistische IT-vaardigheden. Hardwareclustering vereist daarentegen een dedicated opslaginfrastructuur en bedrijfssoftwarelicenties, terwijl hardware load balancers dedicated apparaten en netwerkexpertise vereisen. Geen van beide biedt de complete functionaliteit die SafeKit direct uit de doos levert.
 
 
 {{%  insert-safekit-hub-nl  %}}

@@ -15,7 +15,7 @@ topics: "Guia de Instalação Rápida de Alta Disponibilidade para Kubernetes , 
 
 ## Visão geral da solução SafeKit / Kubernetes {#overview-of-the-safekit--kubernetes-solution}
 
-A solução é descrita aqui: ** 💡 [ Kubernetes Alta disponibilidade do K3s: Replicação síncrona e failover de 2 nós ](</pt-pt/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+A solução é descrita aqui: **💡 [ Kubernetes Alta disponibilidade do K3s: Replicação síncrona e failover de 2 nós ](</pt-pt/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>)**
 
 ## Instalação e configuração da solução SafeKit / Kubernetes em Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -230,7 +230,7 @@ Nota ![ ](/wp-content/uploads/2022/07/note.png)
   * `Save and apply` a nova configuração para reimplantar o arquivo userconfig.xml modificado em ambos os nós (o módulo deve ser interrompido em ambos os nós para salvar e aplicar).
 
 
-Parâmetros ** ** :
+Parâmetros **** :
 
   * `ident="witness"` identifica a testemunha com o nome de recurso: `splitbrain.witness` . Você pode alterar esse valor para identificar a testemunha.
   * `exec="ping"` refere-se ao código ping a ser executado. Não altere este valor.

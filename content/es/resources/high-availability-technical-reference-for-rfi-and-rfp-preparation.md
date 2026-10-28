@@ -52,7 +52,7 @@ _ Las direcciones IP virtuales ** deben configurarse a nivel del balanceador de 
 
 ## Módulos de aplicación preconfigurados {#pre-built-application-modules}
 
-SafeKit incluye módulos `.safe` preconfigurados y listos para usar. Están organizados en dos estrategias HA: ** HA de aplicaciones ** (agrupación directa de aplicaciones con los módulos mirror o `farm` ) y ** HA de virtualización ** (agrupación a nivel de máquina virtual con los módulos hyperv.safe o kvm.safe ).
+SafeKit incluye módulos `.safe` preconfigurados y listos para usar. Están organizados en dos estrategias HA: **HA de aplicaciones** (agrupación directa de aplicaciones con los módulos mirror o `farm` ) y **HA de virtualización** (agrupación a nivel de máquina virtual con los módulos hyperv.safe o kvm.safe ).
 
  Alta disponibilidad de la aplicación | Alta disponibilidad a nivel de máquina virtual |  
 ---|---|---  

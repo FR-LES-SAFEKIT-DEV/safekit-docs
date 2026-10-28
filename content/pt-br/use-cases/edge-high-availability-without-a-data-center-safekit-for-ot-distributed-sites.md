@@ -25,11 +25,11 @@ SafeKit foi desenvolvido exatamente para preencher essa lacuna. Ele mantém apli
 
 SafeKit transforma dois servidores de borda padrão (de qualquer marca, físicos ou virtuais) em um cluster de alta disponibilidade plug-and-play — sem armazenamento compartilhado, sem SAN, sem hardware especial. Uma única pilha de software leve oferece:
 
-  * ** Replicação de arquivos síncrona em tempo real ** — os dados são espelhados em nível de byte para o servidor de espera no momento da gravação
-  * ** Failover automático ** — se o servidor primário falhar, o servidor de espera assume o controle sem intervenção humana, em segundos
-  * ** Balanceamento de carga de rede opcional ** — para implantações ativo-ativo onde ambos os servidores compartilham a carga de trabalho
-  * Console web ** ** — gerenciamento baseado em navegador, acessível remotamente via HTTPS, sem necessidade de conhecimento técnico no local.
-  * ** Instalação silenciosa e programável ** — adequado para incorporação OEM e implantação em massa em centenas de locais distribuídos
+  * **Replicação de arquivos síncrona em tempo real** — os dados são espelhados em nível de byte para o servidor de espera no momento da gravação
+  * **Failover automático** — se o servidor primário falhar, o servidor de espera assume o controle sem intervenção humana, em segundos
+  * **Balanceamento de carga de rede opcional** — para implantações ativo-ativo onde ambos os servidores compartilham a carga de trabalho
+  * Console web **** — gerenciamento baseado em navegador, acessível remotamente via HTTPS, sem necessidade de conhecimento técnico no local.
+  * **Instalação silenciosa e programável** — adequado para incorporação OEM e implantação em massa em centenas de locais distribuídos
 
 
 Não há necessidade de adquirir SAN, de usar uma licença de datacenter do servidor Windows , de ter conhecimento do sistema operacional do cluster Linux ou de usar hardware dedicado para o cluster. Toda a pilha de alta disponibilidade (HA) é um único pacote de software.
@@ -54,12 +54,12 @@ Centenas de clusters distribuídos | Projetados para empresas distribuídas que 
 
 Os ambientes de TO (Tecnologia Operacional) — SCADA, BMS, segurança física, controle industrial — têm requisitos que diferem fundamentalmente dos centros de dados de TI:
 
-  * ** Sem equipe de TI no local. ** Uma subestação, uma estação de bombeamento remota ou um navio não possui administrador de sistemas. A alta disponibilidade deve ser autogerenciável.
-  * ** Redes isoladas ou com recursos limitados. ** Muitos sites de OT não têm acesso à internet e possuem largura de banda WAN limitada. O software de alta disponibilidade (HA) deve funcionar completamente offline.
-  * ** Disponibilidade 24 horas por dia, 7 dias por semana, tolerância zero para complexidade. ** Interromper uma linha de produção, perder a vigilância por vídeo ou interromper o controle de acesso custa muito mais do que o próprio software de alta disponibilidade.
-  * ** Longos ciclos de vida dos equipamentos. ** Os servidores OT podem funcionar por 10 a 15 anos. A solução de alta disponibilidade (HA) deve ser estável, de baixa manutenção e não exigir atualizações constantes.
-  * ** Somente hardware x86 padrão. ** Sem orçamento ou justificativa para SAN ou nós de cluster dedicados em um local industrial remoto.
-  * ** Intolerância à complexidade do sistema operacional. ** Pacemaker, Corosync ou WSFC exigem conhecimento especializado em clusters que os operadores de OT simplesmente não possuem e não deveriam precisar.
+  * **Sem equipe de TI no local.** Uma subestação, uma estação de bombeamento remota ou um navio não possui administrador de sistemas. A alta disponibilidade deve ser autogerenciável.
+  * **Redes isoladas ou com recursos limitados.** Muitos sites de OT não têm acesso à internet e possuem largura de banda WAN limitada. O software de alta disponibilidade (HA) deve funcionar completamente offline.
+  * **Disponibilidade 24 horas por dia, 7 dias por semana, tolerância zero para complexidade.** Interromper uma linha de produção, perder a vigilância por vídeo ou interromper o controle de acesso custa muito mais do que o próprio software de alta disponibilidade.
+  * **Longos ciclos de vida dos equipamentos.** Os servidores OT podem funcionar por 10 a 15 anos. A solução de alta disponibilidade (HA) deve ser estável, de baixa manutenção e não exigir atualizações constantes.
+  * **Somente hardware x86 padrão.** Sem orçamento ou justificativa para SAN ou nós de cluster dedicados em um local industrial remoto.
+  * **Intolerância à complexidade do sistema operacional.** Pacemaker, Corosync ou WSFC exigem conhecimento especializado em clusters que os operadores de OT simplesmente não possuem e não deveriam precisar.
 
 
 O modelo de failover automático, com dois servidores e sem SAN, do SafeKit , aborda cada uma dessas restrições diretamente.
@@ -98,11 +98,11 @@ Tempo de recuperação típico (RTO) | 1–5 minutos; | Menos de 1 minuto (confi
   
 ## Requisitos técnicos mínimos {#technical-minimum-requirements}
 
-  * Servidores ** : ** 2 servidores x86 padrão ou VMs (qualquer marca de hardware, físico ou virtual) ou ARM (somente Linux )
-  * ** SO: ** Windows Servidor 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * Rede ** : LAN de 1 Gbps ** para replicação; recomenda-se uma rede dedicada para pulsação.
-  * Armazenamento ** : ** Somente discos locais — sem SAN, sem NAS, sem armazenamento compartilhado de qualquer tipo.
-  * ** Sem edição especial do SO. ** — Windows O Server Standard é suficiente; não é necessária licença Datacenter.
+  * Servidores **:** 2 servidores x86 padrão ou VMs (qualquer marca de hardware, físico ou virtual) ou ARM (somente Linux )
+  * **SO:** Windows Servidor 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
+  * Rede **: LAN de 1 Gbps** para replicação; recomenda-se uma rede dedicada para pulsação.
+  * Armazenamento **:** Somente discos locais — sem SAN, sem NAS, sem armazenamento compartilhado de qualquer tipo.
+  * **Sem edição especial do SO.** — Windows O Server Standard é suficiente; não é necessária licença Datacenter.
 
 
 Para obter as especificações técnicas completas, restrições de tamanho e critérios de aquisição, consulte a Referência Técnica da RFP/RFI 📘 [ ](</pt-br/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) .

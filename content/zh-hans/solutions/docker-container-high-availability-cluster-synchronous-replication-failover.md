@@ -11,18 +11,18 @@ topics: "无 SAN 集群SafeKit Mirror如何与Docker协同工作？目录； Saf
 
 ## 无 SAN 的SafeKit Mirror集群如何与Docker协同工作 {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 
-SafeKit提供轻量级的** “恰到好处”的高可用性解决方案**专为那些发现** Kubernetes **资源消耗过高、过于复杂或过度设计，无法满足本地化或边缘计算容器工作负载需求的组织而设计。
+SafeKit提供轻量级的**“恰到好处”的高可用性解决方案**专为那些发现**Kubernetes**资源消耗过高、过于复杂或过度设计，无法满足本地化或边缘计算容器工作负载需求的组织而设计。
 
-** SafeKit **为Docker和**在Linux上提供了一个精简的、一体化的双节点**高可用性集群。它为复杂的“自己动手”（DIY） Linux高可用性堆栈提供了一个无缝集成的替代方案，消除了手动配置** Corosync **用于节点成员）、 ** Pacemaker ** （用于资源编排）和** DRBD **用于块级复制）的技术负担。
+**SafeKit**为Docker和**在Linux上提供了一个精简的、一体化的双节点**高可用性集群。它为复杂的“自己动手”（DIY） Linux高可用性堆栈提供了一个无缝集成的替代方案，消除了手动配置**Corosync**用于节点成员）、 **Pacemaker** （用于资源编排）和**DRBD**用于块级复制）的技术负担。
 
-通过利用实时同步复制和自动切换的虚拟 IP 地址SafeKit **了一个强大的** SAN 集群**无需昂贵的共享存储。 **架构确保了透明的客户端重连、快速的自动故障转移，并为容器**应用程序**零数据丢失保证 (RPO=0)。
+通过利用实时同步复制和自动切换的虚拟 IP 地址SafeKit **了一个强大的** SAN 集群**无需昂贵的共享存储。**架构确保了透明的客户端重连、快速的自动故障转移，并为容器**应用程序**零数据丢失保证 (RPO=0)。
 
-  * ✅ ** Kubernetes替代方案： **为容器提供高可用性，而无需 K8s 网络（入口/负载均衡器）和编排的开销。
-  * ✅ **简化架构： **用单个软件包取代 Corosync/Pacemaker/DRBD 堆栈。
-  * ✅ **无需共享存储： **无 SAN 架构，使用本地磁盘和字节级复制。
-  * ✅ **自动虚拟 IP (VIP) 故障转移： **确保在切换期间透明地重新连接客户端。
-  * ✅ **同步数据复制： **保证节点间零数据丢失 (RPO=0)。
-  * ✅ **自动故障转移和故障恢复： **在冗余节点上快速重启应用程序，无需手动脚本。
+  * ✅ **Kubernetes替代方案：**为容器提供高可用性，而无需 K8s 网络（入口/负载均衡器）和编排的开销。
+  * ✅ **简化架构：**用单个软件包取代 Corosync/Pacemaker/DRBD 堆栈。
+  * ✅ **无需共享存储：**无 SAN 架构，使用本地磁盘和字节级复制。
+  * ✅ **自动虚拟 IP (VIP) 故障转移：**确保在切换期间透明地重新连接客户端。
+  * ✅ **同步数据复制：**保证节点间零数据丢失 (RPO=0)。
+  * ✅ **自动故障转移和故障恢复：**在冗余节点上快速重启应用程序，无需手动脚本。
 
 
 ![ SafeKit高可用性集群架构，为Docker提供虚拟 IP、自动故障转移、自动故障恢复和实时复制功能](/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg "w:512")
@@ -46,7 +46,7 @@ SafeKit提供轻量级的** “恰到好处”的高可用性解决方案**专�
 
 ### 如何在两台服务器上实现Docker和的高可用性？ {#how-can-i-achieve-high-availability-for-docker-on-two-servers}
 
-** SafeKit **为两台冗余服务器之间的** Docker **提供高可用性解决方案，无需共享磁盘。该系统通过配置**对与Docker持久数据关联的目录进行实时复制**来实现。一旦发生故障， SafeKit将管理自动故障转移，并在几秒钟内将容器重启到备用节点上。
+**SafeKit**为两台冗余服务器之间的**Docker**提供高可用性解决方案，无需共享磁盘。该系统通过配置**对与Docker持久数据关联的目录进行实时复制**来实现。一旦发生故障， SafeKit将管理自动故障转移，并在几秒钟内将容器重启到备用节点上。
 
 ### Docker容器容器的自动网络故障转移是如何工作的？ {#how-does-automatic-network-failover-work-for-docker-containers}
 
@@ -54,7 +54,7 @@ SafeKit实现了**自动切换的虚拟 IP (VIP) 地址** 。此 VIP 作为客�
 
 ### 什么是Docker的“无 SAN”集群？ {#what-is-a-sanless-cluster-for-docker}
 
-一个无需昂贵存储区域网络 (SAN) 或网络附加存储 (NAS) 的** SAN **架构Docker可实现高可用性。 **架构使用基于主机的**复制技术SafeKit在两台服务器的本地磁盘之间mirror数据。 **消除了共享存储的单点故障风险，并确保**点目标 (RPO) 为零， **意味着在**转移期间不会发生数据丢失。
+一个无需昂贵存储区域网络 (SAN) 或网络附加存储 (NAS) 的**SAN**架构Docker可实现高可用性。 **架构使用基于主机的**复制技术SafeKit在两台服务器的本地磁盘之间mirror数据。 **消除了共享存储的单点故障风险，并确保**点目标 (RPO) 为零， **意味着在**转移期间不会发生数据丢失。
 
 ### 是否有可能在不具备Kubernetes技能的情况下搭建Docker集群？ {#is-it-possible-to-set-up-a-docker-cluster-without-kubernetes-skills}
 
@@ -62,7 +62,7 @@ SafeKit实现了**自动切换的虚拟 IP (VIP) 地址** 。此 VIP 作为客�
 
 ### SafeKit复制与Docker块级解决方案（例如 DRBD）有何不同？ {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}
 
-与大多数使用块级复制（例如 DRBD）的** SAN 解决方案不同， ** ** SafeKit执行基于主机**文件级复制。这种方法对应用程序完全透明**因为它不需要将数据迁移到新创建的特定“复制磁盘”卷。相反，您只需配置SafeKit以复制现有的应用程序文件夹——即使是位于Docker系统磁盘**上**文件夹。这样**您就可以在应用程序已安装的位置实现高可用性，而无需进行复杂的Docker重新配置或更改应用程序。
+与大多数使用块级复制（例如 DRBD）的**SAN 解决方案不同，** **SafeKit执行基于主机**文件级复制。这种方法对应用程序完全透明**因为它不需要将数据迁移到新创建的特定“复制磁盘”卷。相反，您只需配置SafeKit以复制现有的应用程序文件夹——即使是位于Docker系统磁盘**上**文件夹。这样**您就可以在应用程序已安装的位置实现高可用性，而无需进行复杂的Docker重新配置或更改应用程序。
 
 ### SafeKit能否为Docker及之后的应用提供高可用性？ {#can-safekit-provide-high-availability-for-applications-beyond-docker}
 
@@ -78,7 +78,7 @@ SafeKit实现了**自动切换的虚拟 IP (VIP) 地址** 。此 VIP 作为客�
 
 特性|传统 HA（K8s / 共享存储） | SafeKit （无 SAN Mirror ）  
 ---|---|---  
-存储架构|需要昂贵的** SAN 或 NAS； ** （共享磁盘）； |无共享架构：仅使用本地磁盘。  
+存储架构|需要昂贵的**SAN 或 NAS；** （共享磁盘）； |无共享架构：仅使用本地磁盘。  
 复制类型|通常为块级复制（配置复杂） |字节级文件复制（透明）  
 数据一致性|取决于外部存储可靠性|同步复制 (RPO = 0)  
 网络配置|复杂（负载均衡器、入口等） |自动虚拟 IP (VIP) 故障转移  
@@ -100,7 +100,7 @@ SafeKit实现了**自动切换的虚拟 IP (VIP) 地址** 。此 VIP 作为客�
 
 **SafeKit** 提供了一种简单的 **用于 2 节点高可用性集群 Docker** 提供轻便 **Kubernetes 选择** 针对关键任务型工作负载。通过替换复杂的 **Corosync、Pacemaker 和 DRBD** 堆， SafeKit 无需昂贵的 **SAN/NAS** 共享存储。
 
-通过实时同步** ** **虚拟 IP (VIP) **转移，确保**数据丢失 (RPO=0) 和透明的应用恢复。对于需要强大、 ** SAN 的高可用性SafeKit **和管理开销**的组织而言，它是理想的解决方案。
+通过实时同步**** **虚拟 IP (VIP)**转移，确保**数据丢失 (RPO=0) 和透明的应用恢复。对于需要强大、** SAN 的高可用性SafeKit **和管理开销**的组织而言，它是理想的解决方案。
 
 
 {{%  insert-safekit-hub-zh-hans  %}}

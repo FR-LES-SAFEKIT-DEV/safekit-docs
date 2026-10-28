@@ -17,7 +17,7 @@ topics: "Quali sono i diversi scenari in caso di isolamento di rete in un cluste
 
 ### Cos'è un battito cardiaco? {#what-is-a-heartbeat}
 
-Il meccanismo di base per sincronizzare due server e rilevare i guasti dei server è il heartbeat ** ** , che consiste in un flusso di dati di monitoraggio su una rete condivisa da una coppia di server.
+Il meccanismo di base per sincronizzare due server e rilevare i guasti dei server è l' **heartbeat** , che consiste in un flusso di dati di monitoraggio su una rete condivisa da una coppia di server.
 
 Il software SafeKit supporta un numero di heartbeat pari al numero di reti condivise da due server. 
 

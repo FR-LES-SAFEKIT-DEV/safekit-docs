@@ -49,7 +49,7 @@ Infine, la soluzione non è facile da configurare perché richiede competenze sp
 
 ## Vantaggi e svantaggi della replica di file a livello di byte rispetto alla replica di disco a livello di blocco {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
-Criteri | ** Cluster con replica di file a livello di byte ** | ** Cluster con replica di disco a livello di blocco **  
+Criteri | **Cluster con replica di file a livello di byte** | **Cluster con replica di disco a livello di blocco**  
 ---|---|---  
 Prodotto | • [ SafeKit su Windows e Linux ](/) | • Prodotti di replica dei dischi come [ DRBD ](https://linbit.com/drbd/)   
 Organizzazione dei dati dell'applicazione | • Nessun impatto sull'organizzazione dei dati dell'applicazione con SafeKit . <br> • [ Definisci solo le directory da replicare in tempo reale ](/it/architectures/file-replication-byte-level-with-failover-mirror-cluster/) . <br> • Anche le directory all'interno del disco di sistema possono essere replicate. | • Impatto sull'organizzazione dei dati dell'applicazione. <br> • Configurazione speciale dell'applicazione per inserire i suoi dati in un disco replicato. <br> • I dati nel disco di sistema non possono essere replicati.   

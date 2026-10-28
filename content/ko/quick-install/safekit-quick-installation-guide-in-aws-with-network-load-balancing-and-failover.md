@@ -15,7 +15,7 @@ topics: "AWS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 �
 
 ## SafeKit / AWS 솔루션 개요 {#overview-of-the-safekit--aws-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Amazon AWS 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</ko/solutions/aws-load-balancing-cluster-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: **💡 [ SafeKit : Amazon AWS 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</ko/solutions/aws-load-balancing-cluster-failover/>)** .
 
 ## SafeKit / AWS 솔루션의 Windows 및 Linux ( farm.safe ) 및 설치 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

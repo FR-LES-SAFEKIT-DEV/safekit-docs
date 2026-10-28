@@ -15,7 +15,7 @@ topics: "MariaDB 、 SafeKit高可用性快速安装指南； SafeKit / MariaDB�
 
 ## SafeKit / MariaDB解决方案概述 {#overview-of-the-safekit--mariadb-solution}
 
-解决方案描述如下： ** 💡 [最简单的MariaDB高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** 。
+解决方案描述如下： **💡 [最简单的MariaDB高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>)** 。
 
 ## 在Windows和Linux ( mysql.safe )上安装SafeKit / MariaDB解决方案 {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 

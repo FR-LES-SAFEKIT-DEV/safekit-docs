@@ -29,7 +29,7 @@ topics: "دليل التثبيت السريع للتوافر العالي على
  
 
 ملاحظة: الوحدة العامة **mirror.safe** التي ستقوم بتهيئتها مرفقة ضمن الحزمة.
-
+ملاحظة: يتم تسليم وحدة **mirror.safe** العامة التي ستقوم بتكوينها داخل الحزمة.
 ## التهيئة خطوة بخطوة لحل SafeKit / Linux {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 

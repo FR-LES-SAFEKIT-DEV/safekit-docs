@@ -16,7 +16,7 @@ topics: "SafeKit适用于 Siemens Siveillance：2 节点无 SAN Hyper-V 集群�
 ### 备注 {#notes}
 
   * 对于 Siveillance VMS 和录制服务器，请使用集成故障转移机制，而不是SafeKit 。录制器可以在两台物理服务器上的主机级别执行，也可以在两台物理服务器上的两个虚拟机中执行（ SafeKit不会复制）。
-  * 针对** 💡 [ Siemens Siveillance VMS ](</zh-hans/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) **还有另一种解决方案，可以在任何基础架构（物理服务器、任何虚拟机管理程序，包括** VMware ** ...）中运行。
+  * 针对**💡 [ Siemens Siveillance VMS ](</zh-hans/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)**还有另一种解决方案，可以在任何基础架构（物理服务器、任何虚拟机管理程序，包括**VMware** ...）中运行。
 
 
 

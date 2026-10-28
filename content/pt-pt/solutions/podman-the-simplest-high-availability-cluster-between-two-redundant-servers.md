@@ -11,19 +11,19 @@ topics: "Como o cluster SafeKit Mirror sem SAN funciona com Podman , Sumário, C
 
 ## Como o cluster SafeKit Mirror sem SAN funciona com Podman {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 
-SafeKit oferece uma solução de alta disponibilidade leve e "suficiente" ** ** ideal para organizações que consideram ** Kubernetes ** muito intensivas em recursos, complexas ou superdimensionadas para cargas de trabalho de contêineres em computação de borda ou local. ** SafeKit ** fornecem um cluster de alta disponibilidade simplificado e completo de 2 nós ** para Podman ** em Linux . Serve como uma alternativa integrada e perfeita à complexa pilha de alta disponibilidade (HA) "faça você mesmo" (DIY) Linux , eliminando o fardo técnico de configurar manualmente ** Corosync ** para associação de nós, ** Pacemaker ** para orquestração de recursos e ** DRBD ** para replicação em nível de bloco. Ao utilizar replicação síncrona em tempo real e um endereço IP virtual comutado automaticamente ** , ** SafeKit cria um cluster robusto ** sem SAN ** que elimina a necessidade de armazenamento compartilhado caro. Essa arquitetura garante reconexão transparente do cliente, failover automático rápido e garantia de zero perda de dados ( ** =0) para aplicações ** .
+SafeKit oferece uma solução de alta disponibilidade leve e "suficiente" **** ideal para organizações que consideram **Kubernetes** muito intensivas em recursos, complexas ou superdimensionadas para cargas de trabalho de contêineres em computação de borda ou local. **SafeKit** fornecem um cluster de alta disponibilidade simplificado e completo de 2 nós **para Podman** em Linux . Serve como uma alternativa integrada e perfeita à complexa pilha de alta disponibilidade (HA) "faça você mesmo" (DIY) Linux , eliminando o fardo técnico de configurar manualmente **Corosync** para associação de nós, **Pacemaker** para orquestração de recursos e **DRBD** para replicação em nível de bloco. Ao utilizar replicação síncrona em tempo real e um endereço IP virtual comutado automaticamente **,** SafeKit cria um cluster robusto **sem SAN** que elimina a necessidade de armazenamento compartilhado caro. Essa arquitetura garante reconexão transparente do cliente, failover automático rápido e garantia de zero perda de dados ( **=0) para aplicações** .
 
-  * ✅ ** Kubernetes Alternativa: ** Alta disponibilidade para contêineres sem a sobrecarga da rede K8s (Ingress/Load Balancers) e orquestração.
-  * ✅ Arquitetura simplificada ** : ** substitui o conjunto de software Corosync/Pacemaker/DRBD por um único pacote.
-  * ✅ ** Sem necessidade de armazenamento compartilhado: ** Arquitetura sem SAN usando discos locais e replicação em nível de byte.
-  * ✅ ** Failover automático de IP virtual (VIP): ** Garante a reconexão transparente do cliente durante uma troca.
-  * ✅ Replicação de dados síncrona ** : ** Garantia de zero perda de dados (RPO=0) entre nós.
-  * ✅ ** Failover e Failback automatizados: ** Reinicialização rápida do aplicativo no nó redundante sem scripts manuais.
+  * ✅ **Kubernetes Alternativa:** Alta disponibilidade para contêineres sem a sobrecarga da rede K8s (Ingress/Load Balancers) e orquestração.
+  * ✅ Arquitetura simplificada **:** substitui o conjunto de software Corosync/Pacemaker/DRBD por um único pacote.
+  * ✅ **Sem necessidade de armazenamento compartilhado:** Arquitetura sem SAN usando discos locais e replicação em nível de byte.
+  * ✅ **Failover automático de IP virtual (VIP):** Garante a reconexão transparente do cliente durante uma troca.
+  * ✅ Replicação de dados síncrona **:** Garantia de zero perda de dados (RPO=0) entre nós.
+  * ✅ **Failover e Failback automatizados:** Reinicialização rápida do aplicativo no nó redundante sem scripts manuais.
 
 
 ![ SafeKit Arquitetura de cluster de alta disponibilidade para Podman , fornecendo IP virtual, failover automático, failback automático e replicação em tempo real. ](/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg "w:512")
 
-** Uma solução de alta disponibilidade (HA) para contêineres Podman usando a arquitetura SANless do SafeKit . **
+**Uma solução de alta disponibilidade (HA) para contêineres Podman usando a arquitetura SANless do SafeKit .**
 
 <a class="btn-quick-install" href="/pt-pt/quick-install/safekit-quick-installation-guide-with-podman/"> ⚡ Guia rápido de instalação de alta disponibilidade para Podman > </a>
 ## Índice {#table-of-contents}
@@ -41,27 +41,27 @@ SafeKit oferece uma solução de alta disponibilidade leve e "suficiente" ** ** 
 
 ### Como posso obter alta disponibilidade para Podman em dois servidores? {#how-can-i-achieve-high-availability-for-podman-on-two-servers}
 
-** SafeKit ** oferece uma solução ** alta disponibilidade para ** Podman ** entre dois servidores redundantes sem a necessidade de um disco compartilhado. O sistema funciona configurando a replicação em tempo real ** de diretórios associados aos dados persistentes de Podman . Em caso de falha, SafeKit gerencia o failover automático e reinicia seus contêineres no nó secundário em segundos.
+**SafeKit** oferece uma solução **alta disponibilidade para** Podman **entre dois servidores redundantes sem a necessidade de um disco compartilhado. O sistema funciona configurando a replicação em tempo real** de diretórios associados aos dados persistentes de Podman . Em caso de falha, SafeKit gerencia o failover automático e reinicia seus contêineres no nó secundário em segundos.
 
 ### Como funciona o failover automático de rede para contêineres Podman ? {#how-does-automatic-network-failover-work-for-podman-containers}
 
-SafeKit implementa um endereço IP virtual (VIP) ** com ** automática. Este VIP serve como um ponto de entrada único para aplicações cliente. Se o servidor primário falhar, SafeKit move o IP virtual para o servidor redundante usando ** ** gratuito. Isso garante que os clientes se reconectem de forma transparente ao mesmo endereço IP onde a aplicação Podman foi reiniciada.
+SafeKit implementa um endereço IP virtual (VIP) **com** automática. Este VIP serve como um ponto de entrada único para aplicações cliente. Se o servidor primário falhar, SafeKit move o IP virtual para o servidor redundante usando **** gratuito. Isso garante que os clientes se reconectem de forma transparente ao mesmo endereço IP onde a aplicação Podman foi reiniciada.
 
 ### O que é um cluster "sem SAN" para Podman ? {#what-is-a-sanless-cluster-for-podman}
 
-Um cluster ** sem SAN ** para Podman é uma arquitetura que oferece alta disponibilidade sem a necessidade de uma Rede de Área de Armazenamento (SAN) ou Armazenamento Conectado à Rede (NAS) dispendiosos. ** SafeKit ** utiliza replicação síncrona baseada em host ** para mirror dados entre os discos locais de dois servidores. Isso elimina o armazenamento compartilhado como um ponto único de falha e garante um Objetivo de Ponto de Recuperação (RPO ** ** ** que significa que não ocorre perda de dados durante uma falha.
+Um cluster **sem SAN** para Podman é uma arquitetura que oferece alta disponibilidade sem a necessidade de uma Rede de Área de Armazenamento (SAN) ou Armazenamento Conectado à Rede (NAS) dispendiosos. **SafeKit** utiliza replicação síncrona baseada em host **para mirror dados entre os discos locais de dois servidores. Isso elimina o armazenamento compartilhado como um ponto único de falha e garante um Objetivo de Ponto de Recuperação (RPO** **** que significa que não ocorre perda de dados durante uma falha.
 
 ### É possível configurar um cluster Podman sem as habilidades Kubernetes ? {#is-it-possible-to-set-up-a-podman-cluster-without-kubernetes-skills}
 
-Sim. Este artigo explica como implementar rapidamente um cluster [ sem habilidades especializadas em clustering ou orquestração Kubernetes ](</pt-pt/quick-install/safekit-quick-installation-guide-with-podman/>) Ao usar os scripts de reinicialização automática SafeKit do ** para lidar com a inicialização e Podman parada de aplicativos ** , você obtém uma solução de redundância robusta que é muito mais simples de implantar e manter do que Podman Kubernetes.
+Sim. Este artigo explica como implementar rapidamente um cluster [ sem habilidades especializadas em clustering ou orquestração Kubernetes ](</pt-pt/quick-install/safekit-quick-installation-guide-with-podman/>) Ao usar os scripts de reinicialização automática SafeKit do **para lidar com a inicialização e Podman parada de aplicativos** , você obtém uma solução de redundância robusta que é muito mais simples de implantar e manter do que Podman Kubernetes.
 
 ### Como a replicação de SafeKit difere de soluções em nível de bloco como DRBD para Podman ? {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-podman}
 
-Ao contrário da maioria das soluções ** SAN que usam replicação em nível de bloco (como o DRBD ** , ** ** replicação baseada em ** no nível de arquivo ** Essa abordagem é completamente transparente para o Podman SafeKit pois não exige a migração de dados para um volume de "disco replicado" específico e recém-criado. Em vez disso, basta configurar SafeKit para replicar as pastas de aplicativos existentes — mesmo aquelas no disco do sistema ** Isso permite implementar alta disponibilidade para Podman ** onde ele já está instalado, sem reconfiguração complexa de disco ou alterações no aplicativo.
+Ao contrário da maioria das soluções **SAN que usam replicação em nível de bloco (como o DRBD** , **** replicação baseada em **no nível de arquivo** Essa abordagem é completamente transparente para o Podman SafeKit pois não exige a migração de dados para um volume de "disco replicado" específico e recém-criado. Em vez disso, basta configurar SafeKit para replicar as pastas de aplicativos existentes — mesmo aquelas no disco do sistema **Isso permite implementar alta disponibilidade para Podman** onde ele já está instalado, sem reconfiguração complexa de disco ou alterações no aplicativo.
 
 ### SafeKit pode fornecer alta disponibilidade para aplicações além Podman ? {#can-safekit-provide-high-availability-for-applications-beyond-podman}
 
-Sim. ** SafeKit ** é um software de alta disponibilidade genérico e altamente versátil, compatível com ** Windows e Linux ** . Além de Podman , SafeKit pode ser usado para implementar replicação em tempo real ** e failover automático ** para qualquer diretório de arquivos, serviço ou banco de dados. Ele suporta uma ampla gama de tecnologias, incluindo máquinas virtuais Hyper-V e KVM ** ** ), ** Docker ** ), K3s ** ** e vários aplicativos em nuvem ** ** . Isso torna SafeKit uma solução de cluster universal para proteger cargas de trabalho críticas em diversos ambientes de TI sem a necessidade de hardware especializado.
+Sim. **SafeKit** é um software de alta disponibilidade genérico e altamente versátil, compatível com **Windows e Linux** . Além de Podman , SafeKit pode ser usado para implementar replicação em tempo real **e failover automático** para qualquer diretório de arquivos, serviço ou banco de dados. Ele suporta uma ampla gama de tecnologias, incluindo máquinas virtuais Hyper-V e KVM **** ), **Docker** ), K3s **** e vários aplicativos em nuvem **** . Isso torna SafeKit uma solução de cluster universal para proteger cargas de trabalho críticas em diversos ambientes de TI sem a necessidade de hardware especializado.
 
 
 {{%  insert-safekit-mirror-pt-pt app="Podman"  %}}
@@ -73,7 +73,7 @@ Sim. ** SafeKit ** é um software de alta disponibilidade genérico e altamente 
 
 Funcionalidade | HA tradicional (K8s / Armazenamento compartilhado) | SafeKit (Sem SAN Mirror )  
 ---|---|---  
-Arquitetura de armazenamento | Requer SAN ou NAS caros ** ** (Disco compartilhado) | Sem compartilhamento: Usa apenas discos locais  
+Arquitetura de armazenamento | Requer SAN ou NAS caros **** (Disco compartilhado) | Sem compartilhamento: Usa apenas discos locais  
 Tipo de replicação | Geralmente em nível de bloco (complexo de configurar) | Replicação de arquivo em nível de byte (transparente)  
 A consistência dos dados | depende da confiabilidade do armazenamento externo ( | ). Replicação síncrona (RPO = 0).  
 Configuração de rede | Complexa (balanceadores de carga, entrada, etc.) | Failover automático de IP virtual (VIP)  
@@ -93,9 +93,9 @@ A manutenção | requer habilidades altamente especializadas para atualizar/solu
   
 ## Resumo de Alta Disponibilidade Podman {#podman-ha-summary-quick-installation-guide}
 
-** SafeKit ** fornece um cluster HA simples de 2 nós para ** Podman ** , oferecendo uma alternativa leve ** Kubernetes ** para cargas de trabalho de missão crítica. Ao substituir a complexa pilha ** Corosync, Pacemaker e DRBD ** , SafeKit elimina a necessidade de armazenamento compartilhado SAN/NAS ** ** .
+**SafeKit** fornece um cluster HA simples de 2 nós para **Podman** , oferecendo uma alternativa leve **Kubernetes** para cargas de trabalho de missão crítica. Ao substituir a complexa pilha **Corosync, Pacemaker e DRBD** , SafeKit elimina a necessidade de armazenamento compartilhado SAN/NAS **** .
 
-Por meio ** ** do failover automático de IP Virtual (VIP) ** , SafeKit ** ** ** perda de dados (RPO=0) ** e recuperação transparente de aplicativos. É a solução ideal para organizações que exigem alta disponibilidade robusta e sem SAN ** com configuração e sobrecarga administrativa mínimas.
+Por meio **** do failover automático de IP Virtual (VIP) **, SafeKit** **** perda de dados (RPO=0) **e recuperação transparente de aplicativos. É a solução ideal para organizações que exigem alta disponibilidade robusta e sem SAN** com configuração e sobrecarga administrativa mínimas.
 
 
 {{%  insert-safekit-hub-pt-pt  %}}

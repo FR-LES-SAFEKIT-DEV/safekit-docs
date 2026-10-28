@@ -39,9 +39,9 @@ Die Software-Clusterung für das Frontend (wie bei SafeKit ) basiert auf dem Las
 
 ## Software-Clustering vs. Hardware-Clustering: Vor- und Nachteile {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
-Hohe Verfügbarkeit lässt sich durch verschiedene Clustering-Ansätze erreichen: Software-Clustering ** Hardware-Clustering ** , ** ** mit gemeinsam genutztem/repliziertem Speicher) oder Hardware-Load-Balancer ( ** ** mit dedizierten Netzwerkgeräten). Jeder Ansatz unterscheidet sich hinsichtlich Funktionen, benötigter Hardware, Softwarevoraussetzungen und erforderlichem IT-Know-how für die Implementierung. SafeKit bietet einen reinen Softwareansatz, der Replikation, Failover und Load Balancing in einem einzigen Produkt vereint – wodurch dedizierte Hardware oder Enterprise-Editionen überflüssig werden.
+Hohe Verfügbarkeit lässt sich durch verschiedene Clustering-Ansätze erreichen: **Software-Clustering** , **Hardware-Clustering** (gemeinsam genutzter/replizierter Speicher) oder **Hardware-Load-Balancer** (dedizierte Netzwerkgeräte). Jeder Ansatz unterscheidet sich hinsichtlich Funktionen, benötigter Hardware, Softwarevoraussetzungen und des erforderlichen IT-Know-hows für die Implementierung. SafeKit bietet einen rein softwarebasierten Ansatz, der Replikation, Failover und Load Balancing in einem einzigen Produkt vereint – wodurch dedizierte Hardware oder Enterprise-Editionen überflüssig werden.
 
-Tabelle ** : Vergleich von Software-Clustering ( SafeKit ) vs. Hardware-Clustering vs. Hardware-Load-Balancern anhand wichtiger Bereitstellungskriterien **
+Tabelle **: Vergleich von Software-Clustering ( SafeKit ) vs. Hardware-Clustering vs. Hardware-Load-Balancern anhand wichtiger Bereitstellungskriterien**
 
 Kriterien | [ SafeKit ](</>) Software-Clustering | Hardware-Clustering | Hardware-Load-Balancer  
 ---|---|---|---  
@@ -50,7 +50,7 @@ Hardware | Standard-Server (physisch oder virtuell) oder Cloud | Dedizierter Spe
 Software | Standard-Editionen von Windows , Linux und Datenbanken (einschließlich Betriebssystem für PCs und kostenloser Datenbankversionen) | Enterprise-Editionen von Betriebssystemen und Datenbanken | Firmware in Load Balancern  
 Fähigkeiten | Keine spezifischen IT-Kenntnisse für die Bereitstellung SafeKit | Umfassende Kenntnisse in Speicher und Betriebssystemen | Umfassende Kenntnisse im Netzwerkbereich  
   
-Zusammenfassend ** ** sagen, dass Software-Clustering die einzige Methode ist SafeKit die alle drei Funktionen – ** , automatisches Failover und ** – in einem einzigen, ressourcenschonenden Produkt vereint. Es läuft auf Standardhardware (physisch, virtuell oder in der Cloud) mit Standardbetriebssystemen und Datenbanken und erfordert keine speziellen IT-Kenntnisse. Hardware-Clustering hingegen benötigt eine dedizierte Speicherinfrastruktur und Softwarelizenzen für Unternehmenssoftware, während Hardware-Load-Balancer spezielle Appliances und Netzwerkexpertise erfordern – und keines von beiden bietet den vollen Funktionsumfang, den SafeKit standardmäßig bietet.
+**Zusammenfassend lässt** sich sagen, dass die Software-Clusterung SafeKit als einziger Ansatz **alle drei Funktionen** – Echtzeitreplikation, automatisches Failover und Netzwerklastverteilung – in einem einzigen, ressourcenschonenden Produkt vereint. Sie läuft auf Standardhardware (physisch, virtuell oder in der Cloud) mit Standardbetriebssystemen und Datenbanken und erfordert keine speziellen IT-Kenntnisse. Hardware-Clustering hingegen benötigt eine dedizierte Speicherinfrastruktur und Softwarelizenzen für Unternehmen, während Hardware-Load-Balancer spezielle Appliances und Netzwerkexpertise voraussetzen – und keines von beiden bietet den vollen Funktionsumfang von SafeKit .
 
 
 {{%  insert-safekit-hub-de  %}}

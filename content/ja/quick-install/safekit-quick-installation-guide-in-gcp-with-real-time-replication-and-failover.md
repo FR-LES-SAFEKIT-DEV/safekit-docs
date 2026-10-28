@@ -15,7 +15,7 @@ topics: "GCPの高可用性クイックインストールガイド、 SafeKitの
 
 ## SafeKit / GCP mirrorソリューションの概要 {#overview-of-the-safekit--gcp-mirror-solution}
 
-ソリューションはここに記載されています: ** 💡 [ Google GCP高可用性: SafeKit同期レプリケーションとフェイルオーバー](</ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** 。
+ソリューションはここに記載されています: **💡 [ Google GCP高可用性: SafeKit同期レプリケーションとフェイルオーバー](</ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)** 。
 
 ## SafeKit / GCP mirrorソリューションをWindowsおよびLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

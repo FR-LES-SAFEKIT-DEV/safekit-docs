@@ -13,11 +13,11 @@ topics: "Nedap 、 SafeKit高可用性快速安装指南； SafeKit / Nedap解�
 {{%  insert-safekit-mirror-guide-zh-hans app="Nedap" mod="nedap"  %}}
  
 
-** 📘 [ Nedap AOES 与SafeKit的配置（PDF） ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) ** ：所有详细信息均在此文档中。
+**📘 [ Nedap AOES 与SafeKit的配置（PDF） ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)** ：所有详细信息均在此文档中。
 
 ## SafeKit / Nedap解决方案概述 {#overview-of-the-safekit--nedap-solution}
 
-解决方案描述如下： ** 💡 [最简单的Nedap高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
+解决方案描述如下： **💡 [最简单的Nedap高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/nedap-high-availability-synchronous-replication-failover/>)** 。
 
 ## 在Windows ( nedap.safe )上安装SafeKit / Nedap解决方案 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 

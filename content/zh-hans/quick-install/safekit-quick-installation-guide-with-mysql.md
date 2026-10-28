@@ -15,7 +15,7 @@ topics: "MySQL 、 SafeKit高可用性快速安装指南； SafeKit / MySQL高�
 
 ## SafeKit / MySQL解决方案概述 {#overview-of-the-safekit--mysql-solution}
 
-解决方案描述如下： ** 💡 [最简单的MySQL高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/mysql-high-availability-synchronous-replication-failover/>) ** 。
+解决方案描述如下： **💡 [最简单的MySQL高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/mysql-high-availability-synchronous-replication-failover/>)** 。
 
 ## 在Windows和Linux ( mysql.safe )上安装SafeKit / MySQL解决方案 {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 
