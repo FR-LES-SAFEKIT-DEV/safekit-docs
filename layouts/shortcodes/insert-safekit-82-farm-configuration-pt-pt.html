@@ -7,7 +7,7 @@
 ### Pré-requisitos
 
   * Aplicação {{ .Get "app" }} instalada em 2 nós (ou mais).
-  * O balanceamento de carga por IP virtual exige que os nós estejam na mesma LAN ou numa LAN alargada (L2) — as redes L3 encaminhadas não são suportadas (exceto com 🛠️ [balanceadores de carga na nuvem](/resources/safekit-user-guide-82/#Cloud)).
+  * O balanceamento de carga por IP virtual exige que os nós estejam na mesma LAN ou numa LAN alargada (L2) — as redes L3 encaminhadas não são suportadas (exceto com 🛠️ [balanceadores de carga na nuvem](/pt-pt/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. Iniciar a consola SafeKit
@@ -20,7 +20,7 @@ Também pode utilizar a consola num navegador numa estação de trabalho externa
 
 ⚠️ A configuração do SafeKit é efetuada nos dois nós a partir de um único navegador.
 
-ℹ️ Para proteger a consola Web, consulte 🛠️ [11\. Proteger o serviço Web SafeKit](/resources/safekit-user-guide-82/#https) no Manual do utilizador.
+ℹ️ Para proteger a consola Web, consulte 🛠️ [11\. Proteger o serviço Web SafeKit](/pt-pt/resources/safekit-user-guide-82/#https) no Manual do utilizador.
 
 
 ![Inicie a consola Web SafeKit para configurar o cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
@@ -28,7 +28,7 @@ Também pode utilizar a consola num navegador numa estação de trabalho externa
 
 ### 2. Configurar os endereços dos nós
 
-  * Introduza os endereços IP dos nós, prima `Tab key` para verificar a conectividade e indique os nomes dos nós. Se node1 ou node2 aparecer a vermelho, verifique a ligação do navegador a ambos os nós e as firewalls dos dois; consulte a 🛠️ [resolução de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Introduza os endereços IP dos nós, prima `Tab key` para verificar a conectividade e indique os nomes dos nós. Se node1 ou node2 aparecer a vermelho, verifique a ligação do navegador a ambos os nós e as firewalls dos dois; consulte a 🛠️ [resolução de problemas](/pt-pt/resources/safekit-user-guide-82/#Troubleshooting).
   * Em seguida, clique em `Save and apply` para guardar a configuração.
   * Confirme que a mensagem `Success` ✅ aparece nos dois nós.
   * Se ocorrer `Failure` ❌ num nó, abra o painel ▼ desse nó e reveja as mensagens. Também pode utilizar o SafeKit AI 🤖 para obter ajuda.
@@ -70,7 +70,7 @@ Também pode utilizar a consola num navegador numa estação de trabalho externa
 
 ℹ️ Ao clicar em `Advanced configuration`, é apresentado o ficheiro `userconfig.xml`. A consola preenche-o automaticamente e implementa-o nos nós juntamente com os scripts de reinício.
 
-ℹ️ Numa implementação na nuvem, não é necessário configurar um endereço IP virtual nem regras de balanceamento de carga no SafeKit. O IP virtual e as regras são geridos ao nível do 🛠️ [balanceador de carga na nuvem](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Numa implementação na nuvem, não é necessário configurar um endereço IP virtual nem regras de balanceamento de carga no SafeKit. O IP virtual e as regras são geridos ao nível do 🛠️ [balanceador de carga na nuvem](/pt-pt/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Ao aplicar a configuração do SafeKit, o `startup type` dos serviços é automaticamente definido como `Manual` nos serviços do Windows. Assim, os serviços não arrancam automaticamente com o sistema, mas apenas quando o próprio módulo é iniciado (o mesmo se aplica ao Linux).
 

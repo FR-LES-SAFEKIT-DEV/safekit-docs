@@ -15,7 +15,7 @@ topics: "KVM 高可用快速安装指南，SafeKit 高可用性限制，SafeKit 
 
 ## SafeKit / KVM 解决方案概述 {#overview-of-the-safekit--kvm-solution}
 
-解决方案详见：**💡[无需共享存储的简单 Linux KVM 高可用方案](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
+解决方案详见：**💡[无需共享存储的简单 Linux KVM 高可用方案](</zh-hans/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
 
 ## 在 Linux 上安装 SafeKit / KVM 解决方案 (kvm.safe) {#installation-of-the-safekit--kvm-solution-on-linux-kvmsafe}
 
@@ -26,7 +26,7 @@ topics: "KVM 高可用快速安装指南，SafeKit 高可用性限制，SafeKit 
   * 每台 KVM 主机最多支持 32 台虚拟机。
   * 总复制数据限制为几 TB — 除此之外，重新同步时间变得很重要。
   * 节点之间至少 1Gb/s 互连（建议使用 10Gb/s 以加快重新同步速度）。
-  * IP 故障转移要求两个节点位于同一 LAN 或扩展 LAN (L2) 上；不支持路由的 L3 网络（使用 🛠️ [云负载均衡器](</resources/safekit-user-guide-82/#Cloud>) 时除外）。
+  * IP 故障转移要求两个节点位于同一 LAN 或扩展 LAN (L2) 上；不支持路由的 L3 网络（使用 🛠️ [云负载均衡器](</zh-hans/resources/safekit-user-guide-82/#Cloud>) 时除外）。
 
 
 

@@ -15,7 +15,7 @@ topics: "Guida rapida all'installazione dell'alta disponibilità per Firebird , 
 
 ## Panoramica della soluzione SafeKit / Firebird {#overview-of-the-safekit--firebird-solution}
 
-La soluzione è descritta qui: ** 💡 [ La più semplice Firebird Alta disponibilità: replica sincrona a 2 nodi e failover ](</solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
+La soluzione è descritta qui: ** 💡 [ La più semplice Firebird Alta disponibilità: replica sincrona a 2 nodi e failover ](</it/solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installazione della soluzione SafeKit / Firebird su Windows e Linux ( firebird.safe ) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 

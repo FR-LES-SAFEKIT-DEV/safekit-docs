@@ -22,7 +22,7 @@
 
 **SafeKit HA 클러스터({{ .Get "app" }}용)**
 
-<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-kvm/">⚡, {{ .Get "app" }}, HA 클러스터 설치 가이드 ></a>
+<a class="btn-quick-install" href="/ko/quick-install/safekit-quick-installation-guide-with-kvm/">⚡, {{ .Get "app" }}, HA 클러스터 설치 가이드 ></a>
 ## 목차 {#toc}
 
   * [어떻게SafeKit소프트웨어는 단순히 구현하는 것입니다.{{ .Get "app" }}공유 스토리지가 없는 고가용성 클러스터SAN?](#safekit-kvm-ha-cluster)
@@ -64,7 +64,7 @@ VM 레벨의 HA는 설정이 더 간편하지만, 애플리케이션 레벨의 H
 SafeKit는 다음과 같은 특징을 통해 기존 {{ .Get "app" }} 클러스터링 솔루션과 차별화됩니다. **공유 자원이 없는 아키텍처** 또한 관리가 간소화됩니다. 대부분의 경쟁 제품은 복잡한 분산 파일 시스템(Ceph와 같은)이나 중앙 집중식 SAN를 사용하여 VM 장애 조치를 관리해야 하는 반면, SafeKit는 다음과 같은 기능을 제공합니다.:
 
   * **통합 실시간 복제:** 데이터 동기화 기능이 솔루션에 직접 내장되어 있어 별도의 스토리지 계층을 관리하는 오버헤드 없이 {{ .Get "app" }} 가상 머신이 동기적으로 미러링됩니다..
-  * **간소화된 2노드 클러스터링:** 일반적으로 3개의 노드로 구성된 "위트니스" 쿼럼을 권장하는 엔터프라이즈 스택과 달리, SafeKit는 단 두 개의 이중화 서버만으로 완벽한 고가용성을 제공합니다.. [heartbeat 및 쿼럼 메커니즘에 대해 자세히 알아보세요.](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **간소화된 2노드 클러스터링:** 일반적으로 3개의 노드로 구성된 "위트니스" 쿼럼을 권장하는 엔터프라이즈 스택과 달리, SafeKit는 단 두 개의 이중화 서버만으로 완벽한 고가용성을 제공합니다.. [heartbeat 및 쿼럼 메커니즘에 대해 자세히 알아보세요.](/ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **통합 관리:** 관리자는 관리할 수 있습니다.VM단일 인터페이스를 통한 장애 조치, 복제 및 로드 밸런싱SafeKit콘솔을 통해 클러스터링에 대한 전문적인 지식이 없는 팀도 접근할 수 있습니다..
   * **커스텀 체커:** SafeKit는 하드웨어 모니터링을 넘어 다양한 기능을 활용합니다. **커스텀 체커** VM 노드의 충돌 여부를 감지하여 로컬 재시작 또는 이중화 노드로의 페일오버를 자동으로 트리거합니다. 또한 이 시스템은 확장성이 뛰어나 사용자의 특정 환경에 맞춘 새로운 사용자 정의 검사기를 쉽게 통합할 수 있습니다..
 
@@ -82,7 +82,7 @@ SafeKit는 다음과 같은 특징을 통해 기존 {{ .Get "app" }} 클러스�
 
 ### 설정하는 것이 가능할까요?{{ .Get "app" }}클러스터 없이SAN또는 복잡한 클러스터링 기술?
 
-네. 이 글에서는 그 방법을 설명합니다. [{{ .Get "app" }} 클러스터를 신속하게 구현합니다.](/quick-install/safekit-quick-installation-guide-with-kvm/) 전문적인 SAN 관리나 복잡한 HA 클러스터링 기술 없이도 SafeKit를 사용하여 **자동 장애 조치 스크립트** 복제 및 재시작을 처리하기 위해 **{{ .Get "app" }}** 가상 머신을 사용하면 기존 엔터프라이즈 가상화 스택보다 배포 및 유지 관리가 훨씬 간편한 강력한 이중화 솔루션을 얻을 수 있습니다..
+네. 이 글에서는 그 방법을 설명합니다. [{{ .Get "app" }} 클러스터를 신속하게 구현합니다.](/ko/quick-install/safekit-quick-installation-guide-with-kvm/) 전문적인 SAN 관리나 복잡한 HA 클러스터링 기술 없이도 SafeKit를 사용하여 **자동 장애 조치 스크립트** 복제 및 재시작을 처리하기 위해 **{{ .Get "app" }}** 가상 머신을 사용하면 기존 엔터프라이즈 가상화 스택보다 배포 및 유지 관리가 훨씬 간편한 강력한 이중화 솔루션을 얻을 수 있습니다..
 
 ### {{ .Get "app" }} 외에 SafeKit는 어떤 애플리케이션과 환경을 보호할 수 있나요??
 
@@ -110,7 +110,7 @@ SafeKit는 또한 제공합니다 **농장 클러스터** 네이티브와 함께
 ![미러링 클러스터 {{ .Get "app" }}에서 바이트 수준의 파일 복제](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-복제는 [동기식](/best-practises/synchronous-replication-vs-asynchronous-replication/) 비동기 복제와 달리 장애 발생 시 데이터 손실이 없습니다..
+복제는 [동기식](/ko/best-practises/synchronous-replication-vs-asynchronous-replication/) 비동기 복제와 달리 장애 발생 시 데이터 손실이 없습니다..
 
 설정만 하면 됩니다.VM디렉토리 이름SafeKit디스크 구성에 대한 사전 요구 사항은 없습니다. 디렉터리는 시스템 디스크에 위치할 수 있습니다..
 
@@ -157,7 +157,7 @@ VM는 서버 1로 복제되지 않는 파일을 로컬에서 수정하여 서버
   * 입력하세요 `VM_NAME`, {{ .Get "app" }} 가상 머신의 이름(VM1).
 
 
-SafeKit 클러스터에는 전용 기능이 포함되어 있습니다. [split-brain 검사기를 사용하여 네트워크 격리 문제를 해결하세요.](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 제3의 증인 기기나 추가적인 heartbeat 네트워크 없이도.
+SafeKit 클러스터에는 전용 기능이 포함되어 있습니다. [split-brain 검사기를 사용하여 네트워크 격리 문제를 해결하세요.](</ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 제3의 증인 기기나 추가적인 heartbeat 네트워크 없이도.
 
 ### SafeKit 및 {{ .Get "app" }} 클러스터를 모니터링하는 방법? {#safekit-mirror-cluster-monitoring}
 
@@ -214,7 +214,7 @@ TCO (비용) | 낮은 가격 (영구 라이선스) | 높은 (연간 구독료) |
 
 ### 단계별 구현:
 
-  * 🛠️ [무료 체험을 시작하고 Hyper-V 빠른 설치 가이드를 따르세요.](/quick-install/safekit-quick-installation-guide-with-hyper-v/)
+  * 🛠️ [무료 체험을 시작하고 Hyper-V 빠른 설치 가이드를 따르세요.](/ko/quick-install/safekit-quick-installation-guide-with-hyper-v/)
 
 
 

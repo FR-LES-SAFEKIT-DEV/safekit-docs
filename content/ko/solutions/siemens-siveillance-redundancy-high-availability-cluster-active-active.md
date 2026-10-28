@@ -16,7 +16,7 @@ topics: "Siemens Siveillance용 SafeKit : 2노드 SAN리스 Hyper-V 클러스터
 ### 참고 사항 {#notes}
 
   * 감시 VMS 및 녹화 서버의 경우 SafeKit 대신 통합 장애 조치 메커니즘을 사용하십시오. 녹화기는 두 물리적 서버 모두에서 호스트 수준으로 실행하거나 두 물리적 서버의 가상 머신 2개에서 실행할 수 있습니다( SafeKit 에 의해 복제되지 않음).
-  * ** 💡 [ Siemens Siveillance VMS ](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 와 같은 문제에 대한 또 다른 해결책이 애플리케이션 수준에서 존재하며, 이는 모든 인프라(물리적 서버, 모든 하이퍼바이저( ** VMware ** 등 포함))에서 작동할 수 있습니다.
+  * ** 💡 [ Siemens Siveillance VMS ](</ko/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 와 같은 문제에 대한 또 다른 해결책이 애플리케이션 수준에서 존재하며, 이는 모든 인프라(물리적 서버, 모든 하이퍼바이저( ** VMware ** 등 포함))에서 작동할 수 있습니다.
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "SafeKit을 통한 Hyper-V 고가용성: 장애 조치를 위한 hyperv.safe 모듈 설치"
-canonical: https://safekit.eviden.com/ko/ko/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: SafeKit을 사용하여 활성/활성 Hyper-V 클러스터에 대해 hyperv.safe를 구성하는 방법을 알아보세요.
   2노드 비공유 아키텍처를 통해 VM 수준에서 고가용성을 달성합니다. SAN 또는 공유 스토리지 비용 없이 자동 장애 조치를 위해 여러 노드에
   걸쳐 여러 VM을 동기식으로 복제합니다.
@@ -30,7 +30,7 @@ topics: Hyper-V용 고가용성 빠른 설치 안내서, SafeKit 고가용성 �
   * Hyper-V 호스트당 최대 32개의 가상 머신.
   * 총 복제 데이터는 몇 테라바이트로 제한됩니다. 이를 초과하면 재동기화 시간이 상당히 길어집니다.
   * 노드 간 최소 1Gb/s 상호 연결(더 빠른 재동기화를 위해 10Gb/s 권장)
-  * IP 장애 조치에는 동일한 LAN 또는 확장된 LAN(L2)에 두 노드가 모두 필요합니다. 라우팅된 L3 네트워크는 지원되지 않습니다(🛠️ [클라우드 로드 밸런서](</resources/safekit-user-guide-82/#Cloud>) 제외).
+  * IP 장애 조치에는 동일한 LAN 또는 확장된 LAN(L2)에 두 노드가 모두 필요합니다. 라우팅된 L3 네트워크는 지원되지 않습니다(🛠️ [클라우드 로드 밸런서](</ko/resources/safekit-user-guide-82/#Cloud>) 제외).
 
 
 

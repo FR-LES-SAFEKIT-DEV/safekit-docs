@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 
 ## نظرة عامة على حل SafeKit / Cloud mirror {#overview-of-the-safekit--cloud-mirror-solution}
 
-الحل موضح هنا: ** 💡 [ توافر عالٍ مستقل عن السحابة: SafeKit النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل ](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
+الحل موضح هنا: ** 💡 [ توافر عالٍ مستقل عن السحابة: SafeKit النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل ](</ar/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
 
 ## تثبيت حل SafeKit / Cloud mirror على Windows و Linux ( mirror.safe ) و {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

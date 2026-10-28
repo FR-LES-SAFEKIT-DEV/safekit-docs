@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ K
 
 ## نظرة عامة على حل SafeKit / Kubernetes {#overview-of-the-safekit--kubernetes-solution}
 
-الحل موضح هنا: ** 💡 [ Kubernetes التوافر العالي لـ K3s: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل على عقدتين ](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+الحل موضح هنا: ** 💡 [ Kubernetes التوافر العالي لـ K3s: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل على عقدتين ](</ar/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## تثبيت وتكوين حل SafeKit / Kubernetes على Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -147,7 +147,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ K
 ![ ملاحظة ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ للمزيد من المعلومات حول الاختبارات، راجع دليل المستخدم. ](</resources/safekit-user-guide-82/#tests>)
+🛠️ [ للمزيد من المعلومات حول الاختبارات، راجع دليل المستخدم. ](</ar/resources/safekit-user-guide-82/#tests>)
 
 
 ![ أوقف الوحدة النمطية على خادم PRIM ](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -207,7 +207,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ K
 ![ ملاحظة ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ استكشاف الأخطاء وإصلاحها في دليل المستخدم. ](</resources/safekit-user-guide-82/#Troubleshooting>)
+🛠️ [ استكشاف الأخطاء وإصلاحها في دليل المستخدم. ](</ar/resources/safekit-user-guide-82/#Troubleshooting>)
 
 
 ![ التقط لقطات شاشة للدعم ](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

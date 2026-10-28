@@ -129,7 +129,7 @@ Während Echtzeit-Replikationslösungen wie [SafeKit](</de/>) eine kontinuierlic
 
 Sie können eine **3-Knoten-Hybridarchitektur** verwenden: einen lokalen 2-Knoten-Cluster mit synchroner Replikation für HA und eine dritte Remote-Kopie über eine Backup-Lösung mit asynchroner Replikation für Disaster Recovery.
 
-**Weitere Informationen finden Sie unter:** [SafeKit Hochverfügbarkeit und Notfallwiederherstellung (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**Weitere Informationen finden Sie unter:** [SafeKit Hochverfügbarkeit und Notfallwiederherstellung (HADR)](</de/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-de  %}}

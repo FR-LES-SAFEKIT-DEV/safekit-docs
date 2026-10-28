@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ D
 
 ## نظرة عامة على حل SafeKit / Docker {#overview-of-the-safekit--docker-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : Docker برنامج عالي التوافر ونسخ البيانات في الوقت الفعلي ](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+الحل موضح هنا: ** 💡 [ SafeKit : Docker برنامج عالي التوافر ونسخ البيانات في الوقت الفعلي ](</ar/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## تثبيت حل SafeKit / Docker على Linux ( mirror.safe ) {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}

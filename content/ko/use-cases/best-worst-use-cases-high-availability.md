@@ -21,7 +21,7 @@ topics: "최적 사용 사례, SafeKit 고가용성 제한 사항, 🔍 SafeKit 
 
 ### 분산형 엔터프라이즈 {#distributed-enterprise}
 
-분산형 기업은 특정 IT 기술 없이도 여러 지점에 [ SafeKit 합니다 ](</use-cases/business-continuity-software/>)
+분산형 기업은 특정 IT 기술 없이도 여러 지점에 [ SafeKit 합니다 ](</ko/use-cases/business-continuity-software/>)
 
 
 ![ 분산 엔터프라이즈 환경에서의 고가용성 소프트웨어 ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
@@ -29,7 +29,7 @@ topics: "최적 사용 사례, SafeKit 고가용성 제한 사항, 🔍 SafeKit 
 
 ### 원격 사이트 {#remote-sites}
 
-[ SafeKit 는 SAN을 통한 디스크 복제 베이 없이 두 개의 원격 사이트 ](</best-practises/high-availability-disaster-recovery-hadr/>) 에 배포됩니다.
+[ SafeKit 는 SAN을 통한 디스크 복제 베이 없이 두 개의 원격 사이트 ](</ko/best-practises/high-availability-disaster-recovery-hadr/>) 에 배포됩니다.
 
 
 ![ 복제된 SAN 없이 비즈니스 연속성 및 재해 복구 ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")

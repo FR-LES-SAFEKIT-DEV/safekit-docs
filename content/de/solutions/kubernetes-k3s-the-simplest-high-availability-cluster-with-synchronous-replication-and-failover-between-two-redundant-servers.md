@@ -160,7 +160,7 @@ Die Webkonsole ** SafeKit ** bietet eine intuitive Benutzeroberfläche zur Orche
   * ** -Prüfer: ** Überwachen den Zustand der Anwendung und lösen eine automatische Wiederherstellung aus, wenn ein Prozessfehler erkannt wird.
 
 
-Der Cluster SafeKit verfügt über einen dedizierten Split-Brain-Checker ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) [
+Der Cluster SafeKit verfügt über einen dedizierten Split-Brain-Checker ](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) [
 
 ### Wie überwacht man einen SafeKit mirror Cluster? {#safekit-mirror-cluster-monitoring}
 

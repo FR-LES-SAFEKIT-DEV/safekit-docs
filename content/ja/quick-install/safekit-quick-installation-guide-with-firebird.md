@@ -15,7 +15,7 @@ topics: "Firebirdの高可用性クイックインストールガイド、 SafeK
 
 ## SafeKit / Firebirdソリューションの概要 {#overview-of-the-safekit--firebird-solution}
 
-解決策はここに記載されています: ** 💡 [最もシンプルなFirebird高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/firebird-high-availability-synchronous-replication-failover/>) ** 。
+解決策はここに記載されています: ** 💡 [最もシンプルなFirebird高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/firebird-high-availability-synchronous-replication-failover/>) ** 。
 
 ## SafeKit / FirebirdソリューションをWindowsおよびLinux ( firebird.safe )にインストールします。 {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 

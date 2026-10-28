@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability AWS , Beperkingen van High Availab
 
 ## Overzicht van de SafeKit / AWS -oplossing {#overview-of-the-safekit--aws-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Amazon AWS Load Balancing & Application High Availability `Farm` Cluster ](</solutions/aws-load-balancing-cluster-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Amazon AWS Load Balancing & Application High Availability `Farm` Cluster ](</nl/solutions/aws-load-balancing-cluster-failover/>) ** .
 
 ## Installatie van de SafeKit / AWS oplossing op Windows en Linux ( farm.safe ) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

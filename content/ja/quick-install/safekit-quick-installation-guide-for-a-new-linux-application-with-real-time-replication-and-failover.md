@@ -15,7 +15,7 @@ topics: "Linux 向け高可用性クイックインストールガイド, SafeKi
 
 ## SafeKit / Linux ソリューションの概要 {#overview-of-the-safekit--linux-solution}
 
-ソリューションの説明はこちらです: **💡[最もシンプルな Linux 高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/linux-high-availability-software-synchronous-replication-failover/>)**。
+ソリューションの説明はこちらです: **💡[最もシンプルな Linux 高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/linux-high-availability-software-synchronous-replication-failover/>)**。
 
 ## SafeKit / Linux ソリューションのインストール (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 

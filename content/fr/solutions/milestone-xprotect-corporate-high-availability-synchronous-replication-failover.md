@@ -23,7 +23,7 @@ SafeKit est la meilleure solution parce qu’elle est entièrement logicielle et
 
 ### La solution privilégiée par Siemens {#solution-preferred-by-siemens}
 
-SafeKit est disponible sur le [marketplace Siemens](https://www.siemens.com/en-us/products/atos-safekit/) avec sa 💡 [suite Siveillance](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (vidéo et contrôle d’accès), ainsi qu’avec son logiciel SCADA : 💡 [Desigo CC](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (gestion des bâtiments), 💡 [SIMATIC WinCC](/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/) et 💡 [SIMATIC PCS 7](/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/).
+SafeKit est disponible sur le [marketplace Siemens](https://www.siemens.com/en-us/products/atos-safekit/) avec sa 💡 [suite Siveillance](/fr/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (vidéo et contrôle d’accès), ainsi qu’avec son logiciel SCADA : 💡 [Desigo CC](/fr/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (gestion des bâtiments), 💡 [SIMATIC WinCC](/fr/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/) et 💡 [SIMATIC PCS 7](/fr/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/).
 
 Siemens déploie SafeKit en Australie, en France, aux Pays-Bas, au Qatar, en Suisse, aux Émirats arabes unis, au Royaume-Uni et aux États-Unis.
 
@@ -31,7 +31,7 @@ Siemens déploie SafeKit en Australie, en France, aux Pays-Bas, au Qatar, en Sui
 
 Nedap, acteur majeur du contrôle d’accès physique, recommande SafeKit pour la redondance et la haute disponibilité de son application AEOS.
 
-La [solution Nedap/SafeKit](/solutions/nedap-high-availability-synchronous-replication-failover/) est disponible avec un essai gratuit et un guide d’installation rapide.
+La [solution Nedap/SafeKit](/fr/solutions/nedap-high-availability-synchronous-replication-failover/) est disponible avec un essai gratuit et un guide d’installation rapide.
 
 ### TIL Technologies a choisi SafeKit {#til-technologies-has-chosen-safekit}
 

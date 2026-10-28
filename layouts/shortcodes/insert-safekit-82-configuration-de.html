@@ -9,7 +9,7 @@
   * {{ .Get "app" }}-Anwendung auf 2 Knoten installiert.
   * Die gesamten replizierten Daten sind auf einige Terabyte begrenzt – darüber hinaus wird die Zeit für die Neusynchronisierung erheblich.
   * Mindestens 1 Gbit/s Verbindung zwischen Knoten (10 Gbit/s empfohlen für eine schnellere Neusynchronisierung).
-  * IP-Failover erfordert beide Knoten auf demselben LAN oder erweiterten LAN (L2) – geroutete L3-Netzwerke werden nicht unterstützt (außer mit 🛠️ [cloud-Lastausgleichsmodulen](/resources/safekit-user-guide-82/#Cloud)).
+  * IP-Failover erfordert beide Knoten auf demselben LAN oder erweiterten LAN (L2) – geroutete L3-Netzwerke werden nicht unterstützt (außer mit 🛠️ [cloud-Lastausgleichsmodulen](/de/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. Starten Sie die SafeKit-Konsole
@@ -22,7 +22,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 
 ⚠️ Die Konfiguration von SafeKit erfolgt auf beiden Knoten über einen einzigen Browser.
 
-ℹ️ Informationen zum Sichern der Webkonsole finden Sie unter 🛠️ [11\. Sichern des SafeKit-Webdienstes](/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
+ℹ️ Informationen zum Sichern der Webkonsole finden Sie unter 🛠️ [11\. Sichern des SafeKit-Webdienstes](/de/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
 
 
 ![Starten Sie die SafeKit-Webkonsole, um den {{ .Get "app" }}-Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,7 +30,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 
 ### 2. Knotenadressen konfigurieren
 
-  * Geben Sie die Knotenadressen IP ein, drücken Sie `Tab key`, um die Konnektivität zu überprüfen und Knotennamen einzugeben. Wenn entweder node1 oder node2 eine rote Farbe hat, überprüfen Sie die Konnektivität des Browsers zu beiden Knoten und überprüfen Sie die Firewall auf beiden Knoten auf 🛠️ [Fehlerbehebung](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Geben Sie die Knotenadressen IP ein, drücken Sie `Tab key`, um die Konnektivität zu überprüfen und Knotennamen einzugeben. Wenn entweder node1 oder node2 eine rote Farbe hat, überprüfen Sie die Konnektivität des Browsers zu beiden Knoten und überprüfen Sie die Firewall auf beiden Knoten auf 🛠️ [Fehlerbehebung](/de/resources/safekit-user-guide-82/#Troubleshooting).
   * Klicken Sie dann auf `Save and apply`, um die Konfiguration zu speichern.
   * Überprüfen Sie die `Success` ✅-Meldung auf beiden Knoten.
   * Wenn die Konfiguration `Failure` ❌ auf einem Knoten auftritt, öffnen Sie das Akkordeon ▼ für diesen Knoten und überprüfen Sie die Meldungen. Beachten Sie, dass Sie als Hilfe den SafeKit AI 🤖 verwenden können.
@@ -75,7 +75,7 @@ Wenn beispielsweise ein Prozessname in `Monitored processes/services` angezeigt 
 
 ℹ️ Wenn Sie auf `Advanced configuration` klicken, wird die `userconfig.xml`-Datei angezeigt. Diese Datei wird automatisch von der Konsole gefüllt und mit den Neustartskripten auf den Knoten bereitgestellt.
 
-ℹ️ Bei einer Cloud-Bereitstellung müssen Sie keine virtuelle Konfiguration konfigurieren IP Adresse in SafeKit. Das Virtuelle IP wird am 🛠️ verwaltet [Cloud-Load-Balancer-Ebene](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Bei einer Cloud-Bereitstellung müssen Sie keine virtuelle Konfiguration konfigurieren IP Adresse in SafeKit. Das Virtuelle IP wird am 🛠️ verwaltet [Cloud-Load-Balancer-Ebene](/de/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Wenn Sie die SafeKit-Konfiguration anwenden, wird der `startup type` der Dienste automatisch auf `Manual` in Windows-Diensten gesetzt. Dadurch wird sichergestellt, dass Dienste nicht automatisch beim Systemstart gestartet werden, sondern erst beim Start des Moduls selbst (dasselbe gilt für Linux).
 
@@ -205,7 +205,7 @@ In diesem Zustand werden nur Änderungen innerhalb von Dateien in Echtzeit repli
   * Wenn etwas schief geht, stoppen Sie node2 und [. Erzwingen Sie den Start als primäres 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) von node1, das zum Zeitpunkt des Stopps mit seinen lokal gesunden Daten neu startet.
 
 
-ℹ️ Weitere Details und Videos finden Sie im [SafeKit Online Training](/resources/safekit-on-line-training/).
+ℹ️ Weitere Details und Videos finden Sie im [SafeKit Online Training](/de/resources/safekit-on-line-training/).
 
 
 ![Stoppen Sie das {{ .Get "app" }}-Modul auf dem PRIM-Server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -216,7 +216,7 @@ In diesem Zustand werden nur Änderungen innerhalb von Dateien in Echtzeit repli
   * Um Unterstützung zu erhalten, nehmen Sie 2 SafeKit `Snapshots` (2 .zip-Dateien), eine für jeden Knoten.
 
 
-ℹ️ [Weitere Informationen zum Support hier](/resources/safekit-support/).
+ℹ️ [Weitere Informationen zum Support hier](/de/resources/safekit-support/).
 
 
 ![Nehmen Sie zur Unterstützung die {{ .Get "app" }}-Snapshots](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

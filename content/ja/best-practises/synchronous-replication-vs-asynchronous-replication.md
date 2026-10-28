@@ -129,7 +129,7 @@ RPO (潜在的なデータ損失) |ゼロ |ゼロ |ゼロではありません (
 
 **3 ノード ハイブリッド アーキテクチャ** を使用できます。つまり、HA 用の同期レプリケーションを備えた 2 ノード ローカル クラスターと、災害復旧用の非同期レプリケーションを備えたバックアップ ソリューションを介した 3 番目のリモート コピーです。
 
-**詳細については、次を参照してください。** [SafeKit 高可用性および災害復旧 (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**詳細については、次を参照してください。** [SafeKit 高可用性および災害復旧 (HADR)](</ja/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-ja  %}}

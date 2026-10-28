@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide de la haute disponibilité pour Windows, Li
 
 ## Présentation de la solution SafeKit / Windows {#overview-of-the-safekit--windows-solution}
 
-La solution est décrite ici : **💡[SafeKit : logiciel tout-en-un de répartition de charge et de haute disponibilité pour Windows](</solutions/windows-load-balancing-failover/>)**.
+La solution est décrite ici : **💡[SafeKit : logiciel tout-en-un de répartition de charge et de haute disponibilité pour Windows](</fr/solutions/windows-load-balancing-failover/>)**.
 
 ## Installation de la solution SafeKit / Windows (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

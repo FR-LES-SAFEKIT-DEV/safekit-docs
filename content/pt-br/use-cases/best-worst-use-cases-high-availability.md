@@ -21,7 +21,7 @@ Uma editora de software utiliza [ SafeKit como software OEM ](</pt-br/use-cases/
 
 ### Empresa Distribuída {#distributed-enterprise}
 
-Uma empresa distribuída implementa [ SafeKit em várias filiais ](</use-cases/business-continuity-software/>) sem habilidades específicas de TI.
+Uma empresa distribuída implementa [ SafeKit em várias filiais ](</pt-br/use-cases/business-continuity-software/>) sem habilidades específicas de TI.
 
 
 ![ Software de Alta Disponibilidade em uma Empresa Distribuída ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
@@ -29,7 +29,7 @@ Uma empresa distribuída implementa [ SafeKit em várias filiais ](</use-cases/b
 
 ### Sites remotos {#remote-sites}
 
-[ SafeKit é implantado em dois locais remotos ](</best-practises/high-availability-disaster-recovery-hadr/>) sem a necessidade de compartimentos de discos replicados por meio de uma SAN.
+[ SafeKit é implantado em dois locais remotos ](</pt-br/best-practises/high-availability-disaster-recovery-hadr/>) sem a necessidade de compartimentos de discos replicados por meio de uma SAN.
 
 
 ![ Continuidade de Negócios e Recuperação de Desastres sem SAN replicada ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")

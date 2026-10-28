@@ -15,7 +15,7 @@ topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용
 
 ## SafeKit 개요 / 클라우드 솔루션 {#overview-of-the-safekit--cloud-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : 클라우드 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</solutions/cloud-load-balancing-cluster-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : 클라우드 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</ko/solutions/cloud-load-balancing-cluster-failover/>) ** .
 
 ## SafeKit / 클라우드 솔루션 설치( Windows 및 Linux ( farm.safe ) 및 ) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 

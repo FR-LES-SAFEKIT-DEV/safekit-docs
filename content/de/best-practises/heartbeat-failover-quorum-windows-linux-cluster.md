@@ -65,7 +65,7 @@ Leider erhöhen diese neuen Quorum-Geräte die Kosten und die Komplexität der g
 
 ### SafeKit Split-Brain-Prüfer {#safekit-split-brain-checker}
 
-Dank der Hochverfügbarkeitssoftware SafeKit benötigt das Quorum in einem Windows oder Linux Cluster weder einen dritten Quorumserver noch eine Quorum-Festplatte. Ein einfacher Split-Brain-Checker ](</resources/safekit-user-guide-82/#check_splitbrain>) [ genügt, um die doppelte Ausführung einer Anwendung zu verhindern.
+Dank der Hochverfügbarkeitssoftware SafeKit benötigt das Quorum in einem Windows oder Linux Cluster weder einen dritten Quorumserver noch eine Quorum-Festplatte. Ein einfacher Split-Brain-Checker ](</de/resources/safekit-user-guide-82/#check_splitbrain>) [ genügt, um die doppelte Ausführung einer Anwendung zu verhindern.
 
 Bei Ausfall aller Heartbeats zwischen den Servern wählt der Split-Brain-Checker einen Server als primären Server aus. Der andere Server wechselt in den Wartezustand, bis er wieder Heartbeats vom anderen Server empfängt. Anschließend kehrt er zum sekundären Server zurück, nachdem er die replizierten Daten vom primären Server synchronisiert hat.
 

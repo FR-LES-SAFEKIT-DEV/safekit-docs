@@ -7,7 +7,7 @@
 ### Voraussetzungen
 
   * Die Anwendung {{ .Get "app" }} ist auf mindestens zwei Knoten installiert.
-  * Für den virtuellen IP-Lastausgleich müssen sich die Knoten im selben LAN oder in einem erweiterten LAN (L2) befinden — geroutete L3-Netzwerke werden nicht unterstützt (außer mit 🛠️ [Cloud-Load-Balancern](/resources/safekit-user-guide-82/#Cloud)).
+  * Für den virtuellen IP-Lastausgleich müssen sich die Knoten im selben LAN oder in einem erweiterten LAN (L2) befinden — geroutete L3-Netzwerke werden nicht unterstützt (außer mit 🛠️ [Cloud-Load-Balancern](/de/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. SafeKit-Konsole starten
@@ -20,7 +20,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 
 ⚠️ Die SafeKit-Konfiguration erfolgt auf beiden Knoten über einen einzigen Browser.
 
-ℹ️ Informationen zum Absichern der Webkonsole finden Sie im Benutzerhandbuch unter 🛠️ [11\. SafeKit-Webdienst absichern](/resources/safekit-user-guide-82/#https).
+ℹ️ Informationen zum Absichern der Webkonsole finden Sie im Benutzerhandbuch unter 🛠️ [11\. SafeKit-Webdienst absichern](/de/resources/safekit-user-guide-82/#https).
 
 
 ![SafeKit-Webkonsole starten, um den {{ .Get "app" }}-Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
@@ -28,7 +28,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 
 ### 2. Knotenadressen konfigurieren
 
-  * Geben Sie die IP-Adressen der Knoten ein, drücken Sie `Tab key`, um die Verbindung zu prüfen, und geben Sie die Knotennamen ein. Wenn node1 oder node2 rot angezeigt wird, prüfen Sie die Verbindung des Browsers zu beiden Knoten und die Firewalls auf beiden Knoten; weitere Hinweise finden Sie unter 🛠️ [Fehlerbehebung](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Geben Sie die IP-Adressen der Knoten ein, drücken Sie `Tab key`, um die Verbindung zu prüfen, und geben Sie die Knotennamen ein. Wenn node1 oder node2 rot angezeigt wird, prüfen Sie die Verbindung des Browsers zu beiden Knoten und die Firewalls auf beiden Knoten; weitere Hinweise finden Sie unter 🛠️ [Fehlerbehebung](/de/resources/safekit-user-guide-82/#Troubleshooting).
   * Klicken Sie anschließend auf `Save and apply`, um die Konfiguration zu speichern.
   * Prüfen Sie die Meldung `Success` ✅ auf beiden Knoten.
   * Tritt bei der Konfiguration auf einem Knoten `Failure` ❌ auf, öffnen Sie das ▼-Akkordeon dieses Knotens und prüfen Sie die Meldungen. Bei Bedarf können Sie SafeKit AI 🤖 um Hilfe bitten.
@@ -70,7 +70,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 
 ℹ️ Wenn Sie auf `Advanced configuration` klicken, wird die Datei `userconfig.xml` angezeigt. Die Konsole füllt diese Datei automatisch aus und stellt sie zusammen mit den Neustartskripten auf den Knoten bereit.
 
-ℹ️ Bei einer Cloud-Bereitstellung müssen Sie keine virtuelle IP-Adresse und keine Lastverteilungsregeln in SafeKit konfigurieren. Die virtuelle IP-Adresse und die Lastverteilungsregeln werden auf Ebene des 🛠️ [Cloud-Load-Balancers](/resources/safekit-user-guide-82/#Cloud) verwaltet.
+ℹ️ Bei einer Cloud-Bereitstellung müssen Sie keine virtuelle IP-Adresse und keine Lastverteilungsregeln in SafeKit konfigurieren. Die virtuelle IP-Adresse und die Lastverteilungsregeln werden auf Ebene des 🛠️ [Cloud-Load-Balancers](/de/resources/safekit-user-guide-82/#Cloud) verwaltet.
 
 ℹ️ Beim Anwenden der SafeKit-Konfiguration wird der `startup type` der Dienste in den Windows-Diensten automatisch auf `Manual` gesetzt. So werden die Dienste beim Systemstart nicht automatisch, sondern erst beim Start des Moduls gestartet (dies gilt auch für Linux).
 

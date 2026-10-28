@@ -31,7 +31,7 @@ topics: "Milestone XProtect 고가용성 빠른 설치 가이드, SafeKit 고가
   * SERVICES 매크로에서 MSSQLServer를 제거합니다.
 
 
-외부 SQL Server의 이중화를 위해 **💡[SafeKit 및 sqlserver.safe 모듈](</solutions/sql-server-high-availability-synchronous-replication-failover/>)**을 사용할 수 있습니다.
+외부 SQL Server의 이중화를 위해 **💡[SafeKit 및 sqlserver.safe 모듈](</ko/solutions/sql-server-high-availability-synchronous-replication-failover/>)**을 사용할 수 있습니다.
 
 이 경우 두 Management 노드에서 sqlserver.safe 모듈의 가상 IP 주소를 사용하여 [Milestone Management와 SQL 간 연결](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>)을 구성합니다(레지스트리 키 HKEY_LOCAL_MACHINE > SOFTWARE > VideoOSServerConnectionString).
 
@@ -61,7 +61,7 @@ Event 클러스터의 경우 milestone.safe 단계별 구성 4단계에서 다�
   * 각 카메라의 스트림을 [Vega / RMF](<https://vega25.com/>) 솔루션을 사용해 두 Recorder로 보낼 수도 있습니다.
 
 
-ℹ️ SafeKit 클러스터에서 Milestone을 버전 N에서 N+1로 마이그레이션하는 경우 이 문서를 참조하세요: 🛠️ [SafeKit을 사용한 Milestone Management 마이그레이션](</quick-install/safekit-quick-installation-guide-milestone-migration/>)
+ℹ️ SafeKit 클러스터에서 Milestone을 버전 N에서 N+1로 마이그레이션하는 경우 이 문서를 참조하세요: 🛠️ [SafeKit을 사용한 Milestone Management 마이그레이션](</ko/quick-install/safekit-quick-installation-guide-milestone-migration/>)
 
 
 {{%  insert-safekit-installation-package-windows-ko app="Milestone XProtect and SQL" mod="milestone"  %}}

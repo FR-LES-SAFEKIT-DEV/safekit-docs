@@ -15,7 +15,7 @@ topics: "Snelle installatiehandleiding met hoge beschikbaarheid voor KVM, SafeKi
 
 ## Overzicht van de SafeKit / KVM-oplossing {#overview-of-the-safekit--kvm-solution}
 
-De oplossing wordt hier beschreven: **💡[Eenvoudige hoge beschikbaarheid voor Linux KVM zonder gedeelde opslag](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
+De oplossing wordt hier beschreven: **💡[Eenvoudige hoge beschikbaarheid voor Linux KVM zonder gedeelde opslag](</nl/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
 
 ## Installatie van de SafeKit / KVM-oplossing op Linux (kvm.safe) {#installation-of-the-safekit--kvm-solution-on-linux-kvmsafe}
 
@@ -26,7 +26,7 @@ De oplossing wordt hier beschreven: **💡[Eenvoudige hoge beschikbaarheid voor 
   * Maximaal 32 virtuele machines per KVM-host.
   * Het totale aantal gerepliceerde gegevens is beperkt tot een paar terabytes; daarna wordt de hersynchronisatietijd aanzienlijk.
   * Minimale 1Gb/s-verbinding tussen knooppunten (10Gb/s aanbevolen voor snellere hersynchronisatie).
-  * IP-failover vereist dat beide knooppunten zich op hetzelfde LAN of uitgebreide LAN (L2) bevinden. Gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloudloadbalancers](</resources/safekit-user-guide-82/#Cloud>)).
+  * IP-failover vereist dat beide knooppunten zich op hetzelfde LAN of uitgebreide LAN (L2) bevinden. Gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloudloadbalancers](</nl/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

@@ -9,7 +9,7 @@
   * {{ .Get "app" }} 应用程序安装在 2 个节点上。
   * 总复制数据限制为几 TB — 除此之外，重新同步时间变得很重要。
   * 节点之间至少 1Gb/s 互连（建议使用 10Gb/s 以加快重新同步速度）。
-  * IP 故障转移需要同一 LAN 或扩展 LAN (L2) 上的两个节点 — 不支持路由 L3 网络（🛠️ [ 云负载均衡器 ](/resources/safekit-user-guide-82/#Cloud) 除外）。
+  * IP 故障转移需要同一 LAN 或扩展 LAN (L2) 上的两个节点 — 不支持路由 L3 网络（🛠️ [ 云负载均衡器 ](/zh-hans/resources/safekit-user-guide-82/#Cloud) 除外）。
 
 
 ### 1.启动SafeKit控制台
@@ -22,7 +22,7 @@
 
 ⚠️ SafeKit 的配置是通过单个浏览器在两个节点上完成的。
 
-ℹ️ 要保护 Web 控制台，请参阅🛠️ [11\。用户指南中的保护 SafeKit Web 服务](/resources/safekit-user-guide-82/#https)。
+ℹ️ 要保护 Web 控制台，请参阅🛠️ [11\。用户指南中的保护 SafeKit Web 服务](/zh-hans/resources/safekit-user-guide-82/#https)。
 
 
 ![启动 SafeKit Web 控制台来配置 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,7 +30,7 @@
 
 ### 2.配置节点地址
 
-  * 输入节点IP地址，按`Tab key`检查连通性并填写节点名称。如果 node1 或 node2 为红色，请检查浏览器与两个节点的连接，并检查两个节点上的防火墙是否有 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting)。
+  * 输入节点IP地址，按`Tab key`检查连通性并填写节点名称。如果 node1 或 node2 为红色，请检查浏览器与两个节点的连接，并检查两个节点上的防火墙是否有 🛠️ [troubleshooting](/zh-hans/resources/safekit-user-guide-82/#Troubleshooting)。
   * 然后，单击“`Save and apply`”保存配置。
   * 检查两个节点上的 `Success` ✅ 消息。
   * 如果配置 `Failure` ❌ 发生在一个节点上，请打开该节点的 ▼ 折叠面板并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
@@ -75,7 +75,7 @@
 
 ℹ️如果点击`Advanced configuration`，则会显示`userconfig.xml`文件。该文件由控制台自动填充，并使用重新启动脚本部署在节点上。
 
-ℹ️ 在云部署中，您不需要配置虚拟 IP 地址在 SafeKit。虚拟的 IP 由 🛠️ 管理 [云负载均衡器级别](/resources/safekit-user-guide-82/#Cloud)。
+ℹ️ 在云部署中，您不需要配置虚拟 IP 地址在 SafeKit。虚拟的 IP 由 🛠️ 管理 [云负载均衡器级别](/zh-hans/resources/safekit-user-guide-82/#Cloud)。
 
 ℹ️ 当您涂抹 SafeKit 配置，将 `startup type` 服务的数量自动设置为 `Manual` 在 Windows 服务。这可以确保服务不会在系统启动时自动启动，而是仅在模块本身启动时启动（这同样适用于 Linux）。
 
@@ -205,7 +205,7 @@
   * 如果出现问题，请停止 node2 和 [强制启动作为主要🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) 的 node1，它将使用停止时的本地健康数据重新启动。
 
 
-ℹ️ 在 [SafeKit 在线培训](/resources/safekit-on-line-training/) 中查找更多详细信息和视频。
+ℹ️ 在 [SafeKit 在线培训](/zh-hans/resources/safekit-on-line-training/) 中查找更多详细信息和视频。
 
 
 ![停止 {{ .Get "app" }} 模块上的 PRIM 服务器](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -216,7 +216,7 @@
   * 要获得支持，请获取 2 个 SafeKit `Snapshots`（2 个 .zip 文件），每个节点一个。
 
 
-ℹ️ [ 有关支持的更多信息请参见此处 ](/resources/safekit-support/)。
+ℹ️ [ 有关支持的更多信息请参见此处 ](/zh-hans/resources/safekit-support/)。
 
 
 ![拍摄 {{ .Get "app" }} 快照以获取支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

@@ -15,7 +15,7 @@ topics: "Docker 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 
 ## SafeKit / Docker 솔루션 개요 {#overview-of-the-safekit--docker-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Docker 고가용성 및 실시간 데이터 복제 소프트웨어 ](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Docker 고가용성 및 실시간 데이터 복제 소프트웨어 ](</ko/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## SafeKit / Docker 솔루션의 Linux ( mirror.safe ) 및 설치 {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}

@@ -160,7 +160,7 @@ Kubernetes K3s クラスターで通常動作に戻る![ mirror ](/wp-content/up
   * **チェッカー: **アプリケーションの状態を監視し、プロセス障害が検出された場合は自動復旧をトリガーします。
 
 
-の SafeKit クラスターには、3 台目の監視マシンや追加のハートビート ネットワークを必要とせずにネットワーク分離の問題を解決するための専用のスプリットブレイン チェッカーが含まれています。詳細については、 [クラスターにおけるハートビート、フェイルオーバー、クォーラム](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
+の SafeKit クラスターには、3 台目の監視マシンや追加のハートビート ネットワークを必要とせずにネットワーク分離の問題を解決するための専用のスプリットブレイン チェッカーが含まれています。詳細については、 [クラスターにおけるハートビート、フェイルオーバー、クォーラム](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
 ### SafeKit mirrorクラスターを監視する方法は？ {#safekit-mirror-cluster-monitoring}
 

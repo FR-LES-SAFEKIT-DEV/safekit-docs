@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability MySQL , Beperkingen van High Avail
 
 ## Overzicht van de SafeKit / MySQL -oplossing {#overview-of-the-safekit--mysql-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste MySQL Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</solutions/mysql-high-availability-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste MySQL Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/mysql-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installatie van de SafeKit / MySQL oplossing op Windows en Linux ( mysql.safe ) {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 

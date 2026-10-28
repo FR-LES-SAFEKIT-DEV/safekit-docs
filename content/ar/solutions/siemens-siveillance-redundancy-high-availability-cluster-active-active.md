@@ -16,7 +16,7 @@ topics: "SafeKit لـ Siemens Siveillance: مجموعة Hyper-V ثنائية ا�
 ### ملاحظات {#notes}
 
   * بالنسبة لنظام إدارة الفيديو Siveillance وخوادم التسجيل، استخدم آلية تجاوز الفشل المدمجة وليس SafeKit . يمكن تشغيل المسجلات على مستوى المضيف على كلا الخادمين الفعليين، أو في جهازين افتراضيين على كلا الخادمين الفعليين (لا يتم نسخها بواسطة SafeKit ).
-  * يوجد حل آخر لـ ** 💡 [ Siemens Siveillance VMS ](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** على مستوى التطبيق والذي يمكن أن يعمل في أي بنية تحتية (الخوادم الفعلية، أي برنامج إدارة الأجهزة الافتراضية بما في ذلك ** VMware ** ...).
+  * يوجد حل آخر لـ ** 💡 [ Siemens Siveillance VMS ](</ar/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** على مستوى التطبيق والذي يمكن أن يعمل في أي بنية تحتية (الخوادم الفعلية، أي برنامج إدارة الأجهزة الافتراضية بما في ذلك ** VMware ** ...).
 
 
 

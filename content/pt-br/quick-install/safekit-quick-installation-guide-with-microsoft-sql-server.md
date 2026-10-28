@@ -15,7 +15,7 @@ topics: "Guia de Instalação Rápida de Alta Disponibilidade para Microsoft , S
 
 ## Visão geral da solução SafeKit / Microsoft SQL Server {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-Para uma visão geral detalhada da solução, consulte ** 💡 [ O mais simples Microsoft SQL Server Alta disponibilidade: replicação síncrona de 2 nós e failover ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) ** .
+Para uma visão geral detalhada da solução, consulte ** 💡 [ O mais simples Microsoft SQL Server Alta disponibilidade: replicação síncrona de 2 nós e failover ](</pt-br/solutions/sql-server-high-availability-synchronous-replication-failover/>) ** .
 
 ## Instalação da solução SafeKit / Microsoft SQL Server em Windows ( sqlserver.safe ) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 

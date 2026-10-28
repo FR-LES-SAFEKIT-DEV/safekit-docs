@@ -8,13 +8,13 @@
 
 ### Stap 1. Realtime replicatie {#step1}
 
-Server 1 (PRIM) voert de {{ .Get "app" }}-applicatie uit. Clients zijn verbonden met een [virtueel IP-adres](/best-practises/how-a-virtual-ip-address-works/). SafeKit repliceert wijzigingen in bestanden in realtime via het netwerk.
+Server 1 (PRIM) voert de {{ .Get "app" }}-applicatie uit. Clients zijn verbonden met een [virtueel IP-adres](/nl/best-practises/how-a-virtual-ip-address-works/). SafeKit repliceert wijzigingen in bestanden in realtime via het netwerk.
 
 
 ![Bestandsreplicatie op byte-niveau in een mirror {{ .Get "app" }}-cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-De replicatie is [synchroon](/best-practises/synchronous-replication-vs-asynchronous-replication/), wat in tegenstelling tot asynchrone replicatie zorgt voor nul dataverlies bij uitval.
+De replicatie is [synchroon](/nl/best-practises/synchronous-replication-vs-asynchronous-replication/), wat in tegenstelling tot asynchrone replicatie zorgt voor nul dataverlies bij uitval.
 
 U hoeft alleen maar de namen van de te dupliceren mappen in SafeKit te configureren. Er zijn geen vereisten voor de schijfindeling. Mappen mogen zich gewoon op de systeemschijf bevinden.
 
@@ -67,7 +67,7 @@ De **SafeKit webconsole** biedt een intuïtieve interface om hoge beschikbaarhei
   * **Checkers:** Monitor de status van de applicatie en activeer automatisch herstel zodra er een procesfout wordt gedetecteerd.
 
 
-Het SafeKit-cluster bevat een ingebouwde split-brain checker om netwerklokalisatieproblemen op te lossen zonder dat er een derde 'witness machine' (getuige) of een extra heartbeat-netwerk nodig is. Lees meer over [heartbeat, failover en quorum in een cluster](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+Het SafeKit-cluster bevat een ingebouwde split-brain checker om netwerklokalisatieproblemen op te lossen zonder dat er een derde 'witness machine' (getuige) of een extra heartbeat-netwerk nodig is. Lees meer over [heartbeat, failover en quorum in een cluster](/nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
 
 ### Hoe monitort u een SafeKit mirror-cluster voor {{ .Get "app" }}? {#safekit-mirror-cluster-monitoring}
 

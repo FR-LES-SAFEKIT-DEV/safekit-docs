@@ -15,7 +15,7 @@ topics: "Windows 高可用性快速安装指南, SafeKit 高可用性限制, Saf
 
 ## SafeKit / Windows 解决方案概述 {#overview-of-the-safekit--windows-solution}
 
-解决方案的说明见此处：**💡[SafeKit：一体化 Windows 负载均衡与高可用性软件](</solutions/windows-load-balancing-failover/>)**。
+解决方案的说明见此处：**💡[SafeKit：一体化 Windows 负载均衡与高可用性软件](</zh-hans/solutions/windows-load-balancing-failover/>)**。
 
 ## SafeKit / Windows 解决方案的安装 (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

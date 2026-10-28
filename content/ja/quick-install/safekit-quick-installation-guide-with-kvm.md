@@ -15,7 +15,7 @@ topics: "KVMの高可用性クイックインストールガイド、SafeKit高�
 
 ## SafeKit / KVM ソリューションの概要 {#overview-of-the-safekit--kvm-solution}
 
-解決策の詳細はこちら：**💡[共有ストレージを使用しないシンプルなLinux KVM高可用性](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
+解決策の詳細はこちら：**💡[共有ストレージを使用しないシンプルなLinux KVM高可用性](</ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
 
 ## Linux 上に SafeKit / KVM ソリューションをインストール (kvm.safe) {#installation-of-the-safekit--kvm-solution-on-linux-kvmsafe}
 
@@ -26,7 +26,7 @@ topics: "KVMの高可用性クイックインストールガイド、SafeKit高�
   * KVM ホストあたり最大 32 台の仮想マシンをサポートします。
   * 複製されるデータの合計は数テラバイトに制限されており、これを超えると再同期にかかる時間が大幅に長くなります。
   * ノード間の相互接続は最低 1Gb/秒 (再同期を高速化するには 10Gb/秒を推奨)。
-  * IP フェイルオーバーには、両方のノードが同じ LAN または拡張 LAN (L2) 上にある必要があります。ルーティングされた L3 ネットワークはサポートされません（🛠️ [クラウドロードバランサー](</resources/safekit-user-guide-82/#Cloud>)を使用する場合を除く）。
+  * IP フェイルオーバーには、両方のノードが同じ LAN または拡張 LAN (L2) 上にある必要があります。ルーティングされた L3 ネットワークはサポートされません（🛠️ [クラウドロードバランサー](</ja/resources/safekit-user-guide-82/#Cloud>)を使用する場合を除く）。
 
 
 

@@ -23,7 +23,7 @@ SafeKit è la soluzione migliore perché è esclusivamente software e completame
 
 ### La soluzione preferita da Siemens {#solution-preferred-by-siemens}
 
-SafeKit è disponibile nel [marketplace Siemens](https://www.siemens.com/en-us/products/atos-safekit/) con la suite 💡 [Siveillance](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (video e controllo degli accessi) e con il software SCADA: 💡 [Desigo CC](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (gestione degli edifici), 💡 [SIMATIC WinCC](/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/) e 💡 [SIMATIC PCS 7](/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/).
+SafeKit è disponibile nel [marketplace Siemens](https://www.siemens.com/en-us/products/atos-safekit/) con la suite 💡 [Siveillance](/it/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (video e controllo degli accessi) e con il software SCADA: 💡 [Desigo CC](/it/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (gestione degli edifici), 💡 [SIMATIC WinCC](/it/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/) e 💡 [SIMATIC PCS 7](/it/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/).
 
 Siemens installa SafeKit in Australia, Francia, Paesi Bassi, Qatar, Svizzera, Emirati Arabi Uniti, Regno Unito e Stati Uniti.
 
@@ -31,7 +31,7 @@ Siemens installa SafeKit in Australia, Francia, Paesi Bassi, Qatar, Svizzera, Em
 
 Nedap, importante azienda nel controllo degli accessi fisici, consiglia SafeKit per la ridondanza e l’alta disponibilità della sua applicazione AEOS.
 
-La [soluzione Nedap/SafeKit](/solutions/nedap-high-availability-synchronous-replication-failover/) è disponibile con una prova gratuita e una guida rapida all’installazione.
+La [soluzione Nedap/SafeKit](/it/solutions/nedap-high-availability-synchronous-replication-failover/) è disponibile con una prova gratuita e una guida rapida all’installazione.
 
 ### TIL Technologies ha scelto SafeKit {#til-technologies-has-chosen-safekit}
 

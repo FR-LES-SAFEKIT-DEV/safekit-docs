@@ -21,7 +21,7 @@ topics: "أفضل حالات الاستخدام، قيود التوافر الع
 
 ### المؤسسة الموزعة {#distributed-enterprise}
 
-تقوم مؤسسة موزعة بنشر [ SafeKit في العديد من الفروع ](</use-cases/business-continuity-software/>) دون مهارات تقنية معلومات محددة
+تقوم مؤسسة موزعة بنشر [ SafeKit في العديد من الفروع ](</ar/use-cases/business-continuity-software/>) دون مهارات تقنية معلومات محددة
 
 
 ![ برمجيات عالية التوافر في مؤسسة موزعة ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
@@ -29,7 +29,7 @@ topics: "أفضل حالات الاستخدام، قيود التوافر الع
 
 ### المواقع البعيدة {#remote-sites}
 
-يتم نشر [ SafeKit في موقعين بعيدين ](</best-practises/high-availability-disaster-recovery-hadr/>) دون الحاجة إلى فتحات أقراص مكررة من خلال SAN.
+يتم نشر [ SafeKit في موقعين بعيدين ](</ar/best-practises/high-availability-disaster-recovery-hadr/>) دون الحاجة إلى فتحات أقراص مكررة من خلال SAN.
 
 
 ![ استمرارية الأعمال والتعافي من الكوارث بدون شبكة تخزين مكررة ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")

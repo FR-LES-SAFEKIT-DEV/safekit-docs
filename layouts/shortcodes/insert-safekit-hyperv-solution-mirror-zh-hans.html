@@ -22,7 +22,7 @@
 
 **{{ .Get "app" }} 的 SafeKit HA 集群**
 
-<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ 快速Hyper-V HA集群安装指南></a>
+<a class="btn-quick-install" href="/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ 快速Hyper-V HA集群安装指南></a>
 ## 目录 {#toc}
 
   * [SafeKit软件如何在SAN上无需共享存储的情况下简单地实现{{ .Get "app" }}高可用性集群？](#safekit-hyperv-ha-cluster)
@@ -64,7 +64,7 @@ SafeKit 为任意品牌的两台服务器之间的 {{ .Get "app" }} 带来了高
 SafeKit 与传统 Hyper-V 集群解决方案的区别在于 **无共享架构** 并简化管理。虽然大多数竞争对手需要中央 SAN 或 vSAN 来管理虚拟机故障转移，但 SafeKit 提供：
 
   * **集成实时复制：** 数据同步直接内置于解决方案中，确保 {{ .Get "app" }} 虚拟机同步镜像，而无需管理单独存储层的开销。
-  * **简化的 2 节点集群：** 与推荐 3 节点“见证”仲裁的企业堆栈不同，SafeKit 只需两台冗余服务器即可提供完全的高可用性。 [详细了解我们的心跳和仲裁机制](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **简化的 2 节点集群：** 与推荐 3 节点“见证”仲裁的企业堆栈不同，SafeKit 只需两台冗余服务器即可提供完全的高可用性。 [详细了解我们的心跳和仲裁机制](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **统一管理：** 管理员可以通过单个 SafeKit 控制台管理虚拟机故障转移、复制和负载平衡，无需专门的集群专业知识的团队也可以使用它。
   * **自定义跳棋：** SafeKit 超越硬件监控；它利用 **定制西洋棋** 检测虚拟机是否崩溃，自动触发本地重启或故障转移到冗余节点。该系统还具有高度可扩展性，可以轻松集成针对您的特定环境定制的新的、用户定义的自定义检查器。
 
@@ -82,7 +82,7 @@ SafeKit 与传统 Hyper-V 集群解决方案的区别在于 **无共享架构** 
 
 ### 是否可以在没有 SAN 或复杂集群技能的情况下设置 {{ .Get "app" }} 集群？
 
-是的。本文解释了如何 [快速实现Hyper-V集群](/quick-install/safekit-quick-installation-guide-with-hyper-v/) 无需专门的 SAN 管理或复杂的 HA 集群技能。通过使用 SafeKit **自动故障转移脚本** 处理复制和重新启动 **{{ .Get "app" }}** 虚拟机，您将获得强大的冗余解决方案，该解决方案的部署和维护比传统的企业虚拟化堆栈要简单得多。
+是的。本文解释了如何 [快速实现Hyper-V集群](/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/) 无需专门的 SAN 管理或复杂的 HA 集群技能。通过使用 SafeKit **自动故障转移脚本** 处理复制和重新启动 **{{ .Get "app" }}** 虚拟机，您将获得强大的冗余解决方案，该解决方案的部署和维护比传统的企业虚拟化堆栈要简单得多。
 
 ### 除了 {{ .Get "app" }} 之外，SafeKit 还可以保护哪些应用程序和环境？
 
@@ -110,7 +110,7 @@ SafeKit 还提供 **农场集群** 与本地人 **网络负载平衡和故障转
 ![镜像 {{ .Get "app" }} 集群中字节级文件复制](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-复制是 [同步](/best-practises/synchronous-replication-vs-asynchronous-replication/) 与异步复制相反，失败时不会丢失数据。
+复制是 [同步](/zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/) 与异步复制相反，失败时不会丢失数据。
 
 您只需在 SafeKit 中配置虚拟机目录名称即可。磁盘组织没有先决条件。该目录可能位于系统盘中。
 
@@ -159,7 +159,7 @@ VM 通过在本地修改不再复制到服务器 1 的文件来继续在服务�
 
 注：如果 `VM1` 已输入， `D:/Repli-Hyper-V/VM1/` 将被复制，并且 VM1 将使用 Hyper-V 命令自动重新启动。
 
-SafeKit 集群包括一个专用的 [裂脑检查器解决网络隔离问题](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 无需第三台见证机或额外的心跳网络。
+SafeKit 集群包括一个专用的 [裂脑检查器解决网络隔离问题](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 无需第三台见证机或额外的心跳网络。
 
 ### 如何监控SafeKit {{ .Get "app" }}集群？ {#safekit-mirror-cluster-monitoring}
 

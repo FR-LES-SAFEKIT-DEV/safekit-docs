@@ -15,7 +15,7 @@ topics: "Guia de Instalação Rápida de Alta Disponibilidade para Nuvem, Limita
 
 ## Visão geral da solução SafeKit / Cloud mirror {#overview-of-the-safekit--cloud-mirror-solution}
 
-A solução é descrita aqui: ** 💡 [ Alta disponibilidade independente de nuvem: SafeKit Replicação síncrona e failover ](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
+A solução é descrita aqui: ** 💡 [ Alta disponibilidade independente de nuvem: SafeKit Replicação síncrona e failover ](</pt-pt/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
 
 ## Instalação da solução SafeKit / Cloud mirror em Windows e Linux ( mirror.safe ) {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

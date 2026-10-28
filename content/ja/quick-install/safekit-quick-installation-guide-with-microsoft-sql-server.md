@@ -15,7 +15,7 @@ topics: "Microsoft 、 SQL Server 、 SafeKitの高可用性クイックイン�
 
 ## SafeKit / Microsoft SQL Serverソリューションの概要 {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-ソリューションの詳細な概要については、 ** 💡 [最もシンプルなMicrosoft SQL Server高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/sql-server-high-availability-synchronous-replication-failover/>) **を参照してください。
+ソリューションの詳細な概要については、 ** 💡 [最もシンプルなMicrosoft SQL Server高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/sql-server-high-availability-synchronous-replication-failover/>) **を参照してください。
 
 ## SafeKit / Microsoft SQL ServerソリューションをWindows ( sqlserver.safe )にインストールします。 {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 

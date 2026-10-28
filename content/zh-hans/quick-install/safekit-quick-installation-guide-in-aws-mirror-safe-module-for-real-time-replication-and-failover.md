@@ -15,7 +15,7 @@ topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS mirror�
 
 ## SafeKit / AWS mirror解决方案概述 {#overview-of-the-safekit--aws-mirror-solution}
 
-解决方案描述如下： ** 💡 [ Amazon AWS高可用性： SafeKit同步复制和故障转移](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** 。
+解决方案描述如下： ** 💡 [ Amazon AWS高可用性： SafeKit同步复制和故障转移](</zh-hans/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
 ## 在Windows和Linux ( mirror.safe )上安装SafeKit / AWS mirror解决方案 {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

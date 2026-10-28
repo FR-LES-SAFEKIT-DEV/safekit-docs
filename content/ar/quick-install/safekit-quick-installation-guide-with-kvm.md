@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع عالي التوافر لـ KVM،
 
 ## نظرة عامة على حل SafeKit / KVM {#overview-of-the-safekit--kvm-solution}
 
-الحل موضح هنا: **💡[توفر عالٍ بسيط لـ Linux KVM دون تخزين مشترك](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
+الحل موضح هنا: **💡[توفر عالٍ بسيط لـ Linux KVM دون تخزين مشترك](</ar/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
 
 ## تثبيت حل SafeKit / KVM على Linux (kvm.safe) {#installation-of-the-safekit--kvm-solution-on-linux-kvmsafe}
 
@@ -26,7 +26,7 @@ topics: "دليل التثبيت السريع عالي التوافر لـ KVM،
   * حد أقصى 32 آلة افتراضية لكل مضيف KVM.
   * يقتصر إجمالي البيانات المنسوخة على بضعة تيرابايت - وبعد ذلك، يصبح وقت إعادة المزامنة كبيرًا.
   * الحد الأدنى من الاتصال البيني 1 جيجابت/ثانية بين العقد (يوصى بسرعة 10 جيجابت/ثانية لإعادة المزامنة بشكل أسرع).
-  * يتطلب تجاوز عنوان IP أن تكون العقدتان على شبكة LAN نفسها أو LAN موسعة (L2) — لا تُدعم شبكات L3 الموجّهة (إلا باستخدام 🛠️ [موازنات التحميل السحابية](</resources/safekit-user-guide-82/#Cloud>)).
+  * يتطلب تجاوز عنوان IP أن تكون العقدتان على شبكة LAN نفسها أو LAN موسعة (L2) — لا تُدعم شبكات L3 الموجّهة (إلا باستخدام 🛠️ [موازنات التحميل السحابية](</ar/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

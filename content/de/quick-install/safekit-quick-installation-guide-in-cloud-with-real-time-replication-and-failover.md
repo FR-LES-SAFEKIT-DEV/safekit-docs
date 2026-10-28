@@ -13,7 +13,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in der Cloud, Ein
 
 ## Überblick über die SafeKit-/Cloud-mirror-Lösung {#overview-of-the-safekit--cloud-mirror-solution}
 
-Die Lösung wird hier beschrieben: **💡[Cloud-unabhängige Hochverfügbarkeit: synchrone Replikation und Failover mit SafeKit](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[Cloud-unabhängige Hochverfügbarkeit: synchrone Replikation und Failover mit SafeKit](</de/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation der SafeKit-/Cloud-mirror-Lösung unter Windows und Linux (mirror.safe) {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

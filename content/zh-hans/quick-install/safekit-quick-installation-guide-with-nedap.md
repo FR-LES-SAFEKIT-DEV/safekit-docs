@@ -17,7 +17,7 @@ topics: "Nedap 、 SafeKit高可用性快速安装指南； SafeKit / Nedap解�
 
 ## SafeKit / Nedap解决方案概述 {#overview-of-the-safekit--nedap-solution}
 
-解决方案描述如下： ** 💡 [最简单的Nedap高可用性：2 节点同步复制和故障转移](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
+解决方案描述如下： ** 💡 [最简单的Nedap高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
 
 ## 在Windows ( nedap.safe )上安装SafeKit / Nedap解决方案 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
@@ -34,7 +34,7 @@ topics: "Nedap 、 SafeKit高可用性快速安装指南； SafeKit / Nedap解�
   * 从 SERVICES 宏中移除 MSSQLServer。
 
 
-您可以使用[ SafeKit和sqlserver.safe ](</solutions/sql-server-high-availability-synchronous-replication-failover/>)来实现外部SQL Server的冗余。在这种情况下，请将Nedap AEOS 与 SQL 的连接配置为使用sqlserver.safe模块的虚拟 IP 地址。
+您可以使用[ SafeKit和sqlserver.safe ](</zh-hans/solutions/sql-server-high-availability-synchronous-replication-failover/>)来实现外部SQL Server的冗余。在这种情况下，请将Nedap AEOS 与 SQL 的连接配置为使用sqlserver.safe模块的虚拟 IP 地址。
 
 
 {{%  insert-safekit-installation-package-windows-zh-hans app="Nedap AEOS and SQL" mod="nedap"  %}}

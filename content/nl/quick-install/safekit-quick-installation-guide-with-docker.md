@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability Docker , Beperkingen van High Avai
 
 ## Overzicht van de SafeKit / Docker -oplossing {#overview-of-the-safekit--docker-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Docker Software voor hoge beschikbaarheid en realtime datareplicatie ](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Docker Software voor hoge beschikbaarheid en realtime datareplicatie ](</nl/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## Installatie van de SafeKit / Docker oplossing op Linux ( mirror.safe ) {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}

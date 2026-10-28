@@ -9,7 +9,7 @@
   * Aplicação {{ .Get "app" }} instalada em 2 nós.
   * Total de dados replicados limitado a alguns terabytes — além disso, o tempo de ressincronização torna-se significativo.
   * Interligação mínima de 1 Gb/s entre nós (recomenda-se 10 Gb/s para uma ressincronização mais rápida).
-  * O failover IP requer ambos os nós no mesmo LAN ou LAN estendido (L2) — redes L3 não suportadas com encaminhamento (exceto com 🛠️ [balanceadores de carga na nuvem](/resources/safekit-user-guide-82/#Cloud)).
+  * O failover IP requer ambos os nós no mesmo LAN ou LAN estendido (L2) — redes L3 não suportadas com encaminhamento (exceto com 🛠️ [balanceadores de carga na nuvem](/pt-pt/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. Inicie a consola SafeKit
@@ -22,7 +22,7 @@ Também é possível executar a consola num browser numa estação de trabalho e
 
 ⚠️ A configuração do SafeKit é feita em ambos os nós a partir de um único browser.
 
-ℹ️ Para proteger a consola web, consulte 🛠️ [11\. Proteger o serviço web SafeKit](/resources/safekit-user-guide-82/#https) no Manual do utilizador.
+ℹ️ Para proteger a consola web, consulte 🛠️ [11\. Proteger o serviço web SafeKit](/pt-pt/resources/safekit-user-guide-82/#https) no Manual do utilizador.
 
 
 ![Inicie a consola web SafeKit para configurar o cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,7 +30,7 @@ Também é possível executar a consola num browser numa estação de trabalho e
 
 ### 2.º Configure endereços de nós
 
-  * Introduza os endereços dos nós IP, prima `Tab key` para verificar a conectividade e preencher os nomes dos nós. Se node1 ou node2 tiver uma cor vermelha, verifique a conectividade do browser com ambos os nós e verifique a firewall em ambos os nós para 🛠️ [ resolução de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Introduza os endereços dos nós IP, prima `Tab key` para verificar a conectividade e preencher os nomes dos nós. Se node1 ou node2 tiver uma cor vermelha, verifique a conectividade do browser com ambos os nós e verifique a firewall em ambos os nós para 🛠️ [ resolução de problemas](/pt-pt/resources/safekit-user-guide-82/#Troubleshooting).
   * Em seguida, clique em `Save and apply` para guardar a configuração.
   * Verifique a mensagem `Success` ✅ em ambos os nós.
   * Se a configuração `Failure` ❌ ocorrer num nó, abra o acordeão ▼ desse nó e reveja as mensagens. Note que pode utilizar SafeKit AI 🤖 para obter assistência.
@@ -75,7 +75,7 @@ Por exemplo, se um nome de processo for apresentado em `Monitored processes/serv
 
 ℹ️ Se clicar em `Advanced configuration`, é apresentado o ficheiro `userconfig.xml`. Este ficheiro é preenchido automaticamente pela consola e implementado nos nós com os scripts de reinicialização.
 
-ℹ️ Numa implementação na nuvem, não precisa de configurar um endereço IP virtual em SafeKit. O IP virtual é gerido ao nível do balanceador de carga de cloud 🛠️ [](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Numa implementação na nuvem, não precisa de configurar um endereço IP virtual em SafeKit. O IP virtual é gerido ao nível do balanceador de carga de cloud 🛠️ [](/pt-pt/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Quando aplica a configuração SafeKit, o `startup type` dos serviços é automaticamente definido como `Manual` nos serviços Windows. Isto garante que os serviços não são iniciados automaticamente quando o sistema é inicializado, mas, em vez disso, são iniciados apenas quando o próprio módulo é iniciado (o mesmo se aplica ao Linux).
 
@@ -205,7 +205,7 @@ Apenas as alterações dentro dos ficheiros são replicadas em tempo real neste 
   * Se algo correr mal, pare node2 e [ force o arranque como 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) primário de node1, que será reiniciado com os seus dados localmente íntegros no momento da paragem.
 
 
-ℹ️ Encontre mais detalhes, juntamente com vídeos, na Formação Online [SafeKit](/resources/safekit-on-line-training/).
+ℹ️ Encontre mais detalhes, juntamente com vídeos, na Formação Online [SafeKit](/pt-pt/resources/safekit-on-line-training/).
 
 
 ![Pare o módulo {{ .Get "app" }} no servidor PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -216,7 +216,7 @@ Apenas as alterações dentro dos ficheiros são replicadas em tempo real neste 
   * Para obter suporte, leve 2 SafeKit `Snapshots` (2 ficheiros . zip), um para cada nó.
 
 
-ℹ️ [Mais informações sobre o suporte aqui](/resources/safekit-support/).
+ℹ️ [Mais informações sobre o suporte aqui](/pt-pt/resources/safekit-support/).
 
 
 ![Tire os instantâneos {{ .Get "app" }} para obter suporte](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

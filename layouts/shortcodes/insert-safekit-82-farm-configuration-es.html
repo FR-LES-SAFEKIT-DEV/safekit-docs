@@ -7,7 +7,7 @@
 ### Requisitos previos
 
   * Aplicación {{ .Get "app" }} instalada en 2 nodos (o más).
-  * El balanceo de carga de IP virtual requiere que los nodos estén en la misma LAN o en una LAN extendida (L2); las redes L3 enrutadas no son compatibles (excepto con 🛠️ [balanceadores de carga en la nube](/resources/safekit-user-guide-82/#Cloud)).
+  * El balanceo de carga de IP virtual requiere que los nodos estén en la misma LAN o en una LAN extendida (L2); las redes L3 enrutadas no son compatibles (excepto con 🛠️ [balanceadores de carga en la nube](/es/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. Iniciar la consola SafeKit
@@ -20,7 +20,7 @@ También puede ejecutar la consola en un navegador de una estación de trabajo e
 
 ⚠️ La configuración de SafeKit se realiza en ambos nodos desde un único navegador.
 
-ℹ️ Para proteger la consola web, consulte 🛠️ [11\. Protección del servicio web de SafeKit](/resources/safekit-user-guide-82/#https) en la Guía del usuario.
+ℹ️ Para proteger la consola web, consulte 🛠️ [11\. Protección del servicio web de SafeKit](/es/resources/safekit-user-guide-82/#https) en la Guía del usuario.
 
 
 ![Inicie la consola web de SafeKit para configurar el clúster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
@@ -28,7 +28,7 @@ También puede ejecutar la consola en un navegador de una estación de trabajo e
 
 ### 2. Configurar las direcciones de los nodos
 
-  * Introduzca las direcciones IP de los nodos, pulse `Tab key` para comprobar la conectividad y complete los nombres de los nodos. Si node1 o node2 aparece en rojo, compruebe la conectividad del navegador con ambos nodos y los firewalls de ambos; consulte 🛠️ [solución de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Introduzca las direcciones IP de los nodos, pulse `Tab key` para comprobar la conectividad y complete los nombres de los nodos. Si node1 o node2 aparece en rojo, compruebe la conectividad del navegador con ambos nodos y los firewalls de ambos; consulte 🛠️ [solución de problemas](/es/resources/safekit-user-guide-82/#Troubleshooting).
   * A continuación, haga clic en `Save and apply` para guardar la configuración.
   * Compruebe que aparezca el mensaje `Success` ✅ en ambos nodos.
   * Si se produce `Failure` ❌ en un nodo, abra el acordeón ▼ de ese nodo y revise los mensajes. Puede usar SafeKit AI 🤖 para obtener ayuda.
@@ -70,7 +70,7 @@ También puede ejecutar la consola en un navegador de una estación de trabajo e
 
 ℹ️ Al hacer clic en `Advanced configuration`, se muestra el archivo `userconfig.xml`. La consola rellena automáticamente este archivo y lo implementa en los nodos junto con los scripts de reinicio.
 
-ℹ️ En una implementación en la nube, no es necesario configurar una dirección IP virtual ni reglas de balanceo de carga en SafeKit. La IP virtual y las reglas de balanceo de carga se administran en el 🛠️ [nivel del balanceador de carga en la nube](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ En una implementación en la nube, no es necesario configurar una dirección IP virtual ni reglas de balanceo de carga en SafeKit. La IP virtual y las reglas de balanceo de carga se administran en el 🛠️ [nivel del balanceador de carga en la nube](/es/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Al aplicar la configuración de SafeKit, el `startup type` de los servicios se establece automáticamente en `Manual` en los servicios de Windows. Así, los servicios no se inician automáticamente al arrancar el sistema, sino únicamente cuando se inicia el módulo (lo mismo se aplica a Linux).
 

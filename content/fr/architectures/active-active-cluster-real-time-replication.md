@@ -34,7 +34,7 @@ Noter que:
 
 ### Exemple de cluster actif actif {#example-of-an-active-active-cluster}
 
-Les solutions 💡 [Hyper-V](</solutions/hyper-v-replication-automatic-failover-load-balancing/>) ou 💡 [KVM](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) avec réplication, basculement automatique et équilibrage de charge des VMs est un exemple de cluster actif-actif avec N modules miroirs répliquant N machines virtuelles entre deux serveurs physiques.
+Les solutions 💡 [Hyper-V](</fr/solutions/hyper-v-replication-automatic-failover-load-balancing/>) ou 💡 [KVM](</fr/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) avec réplication, basculement automatique et équilibrage de charge des VMs est un exemple de cluster actif-actif avec N modules miroirs répliquant N machines virtuelles entre deux serveurs physiques.
 
 Dans cette configuration, un module miroir réplique une machine virtuelle complète et redémarre la machine virtuelle en cas de panne.
 

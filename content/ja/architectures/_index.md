@@ -33,7 +33,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 ![ SafeKit 、 farm + mirrorクラスター](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-[詳細情報](</architectures/clustering-software-load-balancing-mirroring/>)
+[詳細情報](</ja/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### アクティブ/アクティブ クラスター {#activeactive-cluster}
 
@@ -41,7 +41,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 ![ SafeKitリアルタイムレプリケーションを備えたアクティブアクティブクラスタ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[詳細情報](</architectures/active-active-cluster-real-time-replication/>)
+[詳細情報](</ja/architectures/active-active-cluster-real-time-replication/>)
 
 ### N-1 クラスター {#n-1-cluster}
 
@@ -49,7 +49,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 ![ SafeKit N-1冗長クラスタ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[詳細情報](</architectures/n-1-redundancy/>)
+[詳細情報](</ja/architectures/n-1-redundancy/>)
 
 ## SafeKitとを使用して高可用性クラスタを構築する方法 {#how-to-build-high-availability-clusters-with-safekit}
 

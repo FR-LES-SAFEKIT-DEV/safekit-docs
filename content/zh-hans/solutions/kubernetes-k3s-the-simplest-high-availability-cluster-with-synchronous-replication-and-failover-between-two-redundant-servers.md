@@ -160,7 +160,7 @@ SafeKit根据服务器停止的方式优化恢复时间：
   * **检查器： **监控应用程序的运行状况，并在检测到进程故障时触发自动恢复。
 
 
-SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或额外的心跳网络即可解决网络隔离问题。了解更多关于[集群的心跳、故障转移和仲裁机制，请参阅](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)集群。
+SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或额外的心跳网络即可解决网络隔离问题。了解更多关于[集群的心跳、故障转移和仲裁机制，请参阅](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)集群。
 
 ### 如何监控SafeKit mirror集群？ {#safekit-mirror-cluster-monitoring}
 

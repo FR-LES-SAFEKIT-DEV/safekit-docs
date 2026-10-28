@@ -15,7 +15,7 @@ topics: "Podmanの高可用性クイックインストールガイド、 SafeKit
 
 ## SafeKit / Podmanソリューションの概要 {#overview-of-the-safekit--podman-solution}
 
-ソリューションはここに記載されています: ** 💡 [ SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 。
+ソリューションはここに記載されています: ** 💡 [ SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア](</ja/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 。
 
 ## SafeKit / PodmanソリューションをLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 

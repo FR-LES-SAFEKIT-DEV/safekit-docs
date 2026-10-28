@@ -23,7 +23,7 @@ SafeKit은 순수 소프트웨어이며 하드웨어에 완전히 구애받지 �
 
 ### Siemens가 선호하는 솔루션 {#solution-preferred-by-siemens}
 
-SafeKit은 [Siemens 마켓플레이스](https://www.siemens.com/en-us/products/atos-safekit/)에서 💡 [Siveillance 제품군](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (비디오 및 출입 통제) 및 SCADA 소프트웨어와 함께 제공됩니다. SCADA 소프트웨어에는 💡 [Desigo CC](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (빌딩 관리), 💡 [SIMATIC WinCC](/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/), 💡 [SIMATIC PCS 7](/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/)이 포함됩니다.
+SafeKit은 [Siemens 마켓플레이스](https://www.siemens.com/en-us/products/atos-safekit/)에서 💡 [Siveillance 제품군](/ko/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (비디오 및 출입 통제) 및 SCADA 소프트웨어와 함께 제공됩니다. SCADA 소프트웨어에는 💡 [Desigo CC](/ko/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (빌딩 관리), 💡 [SIMATIC WinCC](/ko/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/), 💡 [SIMATIC PCS 7](/ko/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/)이 포함됩니다.
 
 Siemens는 호주, 프랑스, 네덜란드, 카타르, 스위스, 아랍에미리트, 영국, 미국에 SafeKit을 배포합니다.
 
@@ -31,7 +31,7 @@ Siemens는 호주, 프랑스, 네덜란드, 카타르, 스위스, 아랍에미�
 
 물리적 출입 통제 분야의 주요 기업인 Nedap은 AEOS 애플리케이션의 중복성과 고가용성을 위해 SafeKit을 권장합니다.
 
-[Nedap/SafeKit 솔루션](/solutions/nedap-high-availability-synchronous-replication-failover/)은 무료 체험판 및 빠른 설치 가이드와 함께 제공됩니다.
+[Nedap/SafeKit 솔루션](/ko/solutions/nedap-high-availability-synchronous-replication-failover/)은 무료 체험판 및 빠른 설치 가이드와 함께 제공됩니다.
 
 ### TIL Technologies가 SafeKit을 선택했습니다 {#til-technologies-has-chosen-safekit}
 

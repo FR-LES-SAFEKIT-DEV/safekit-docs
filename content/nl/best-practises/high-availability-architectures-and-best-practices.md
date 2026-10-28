@@ -36,9 +36,9 @@ Bovendien moet je kiezen tussen hoge beschikbaarheid op applicatieniveau of op h
 Dit artikel onderzoekt de beste werkwijzen voor architecturen met hoge beschikbaarheid door de volgende zaken te vergelijken:
 
   * [ software versus hardware clustering ](</nl/best-practises/clustering-software-vs-hardware-clustering/>) ,
-  * [ deelt niets versus gedeelde schijfarchitectuur ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
+  * [ deelt niets versus gedeelde schijfarchitectuur ](</nl/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
   * [ applicatie versus hoge beschikbaarheid van virtuele machine ](</nl/best-practises/vm-ha-vs-application-ha/>) ,
-  * [ hoge beschikbaarheid versus fouttolerantie ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ hoge beschikbaarheid versus fouttolerantie ](</nl/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
   * [ synchrone versus asynchrone replicatie ](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
   * [ bestand versus schijfreplicatie ](</nl/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
   * [ datareplicatietechnieken ](</nl/best-practises/data-replication-techniques/>) ,

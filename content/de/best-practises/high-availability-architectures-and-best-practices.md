@@ -36,9 +36,9 @@ Darüber hinaus müssen Sie sich zwischen Hochverfügbarkeit auf Anwendungsebene
 Dieser Artikel untersucht die Best Practices für Hochverfügbarkeitsarchitekturen durch einen Vergleich:
 
   * [ Software- vs. Hardware-Clustering ](</de/best-practises/clustering-software-vs-hardware-clustering/>) ,
-  * [ Shared-Nothing-Architektur vs. Shared-Disk-Architektur ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
+  * [ Shared-Nothing-Architektur vs. Shared-Disk-Architektur ](</de/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
   * [ -Anwendung vs. Hochverfügbarkeit der virtuellen Maschine ](</de/best-practises/vm-ha-vs-application-ha/>) ,
-  * [ Hochverfügbarkeit vs. Fehlertoleranz ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ Hochverfügbarkeit vs. Fehlertoleranz ](</de/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
   * [ synchrone vs. asynchrone Replikation ](</de/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
   * [ Datei vs. Festplattenreplikation ](</de/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
   * [ Datenreplikationstechniken ](</de/best-practises/data-replication-techniques/>) ,

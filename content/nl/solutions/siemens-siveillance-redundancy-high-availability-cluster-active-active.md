@@ -16,7 +16,7 @@ topics: "SafeKit voor Siemens Siveillance: 2-knoops SAN-loos Hyper-V-cluster, In
 ### Notities {#notes}
 
   * Voor Siveillance VMS en de opnameservers gebruikt u het geïntegreerde failovermechanisme en niet SafeKit . Opnameprogramma's kunnen op hostniveau op beide fysieke servers worden uitgevoerd, of in twee virtuele machines op beide fysieke servers (niet gerepliceerd door SafeKit ).
-  * Er bestaat nog een andere oplossing voor ** 💡 [ Siemens Siveillance VMS ](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** op applicatieniveau die in elke infrastructuur kan werken (fysieke servers, elke hypervisor inclusief ** VMware ** ...).
+  * Er bestaat nog een andere oplossing voor ** 💡 [ Siemens Siveillance VMS ](</nl/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** op applicatieniveau die in elke infrastructuur kan werken (fysieke servers, elke hypervisor inclusief ** VMware ** ...).
 
 
 

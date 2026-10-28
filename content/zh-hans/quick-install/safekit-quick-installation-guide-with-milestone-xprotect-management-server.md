@@ -31,7 +31,7 @@ topics: "Milestone XProtect 高可用性快速安装指南、SafeKit 高可用�
   * 从 SERVICES 宏中删除 MSSQLServer。
 
 
-您可以使用 **💡[SafeKit 和 sqlserver.safe 模块](</solutions/sql-server-high-availability-synchronous-replication-failover/>)**实现外部 SQL Server 的冗余。
+您可以使用 **💡[SafeKit 和 sqlserver.safe 模块](</zh-hans/solutions/sql-server-high-availability-synchronous-replication-failover/>)**实现外部 SQL Server 的冗余。
 
 在这种情况下，请在两个 Management 节点上使用 sqlserver.safe 模块的虚拟 IP 地址配置 [Milestone Management 与 SQL 的连接](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>)（注册表项 HKEY_LOCAL_MACHINE > SOFTWARE > VideoOSServerConnectionString）。
 
@@ -61,7 +61,7 @@ topics: "Milestone XProtect 高可用性快速安装指南、SafeKit 高可用�
   * 还可以通过 [Vega / RMF](<https://vega25.com/>) 解决方案将每个摄像机的流发送到两个 Recorder。
 
 
-ℹ️ 如果要在 SafeKit 集群中将 Milestone 从版本 N 迁移到版本 N+1，请阅读本文：🛠️ [使用 SafeKit 迁移 Milestone Management](</quick-install/safekit-quick-installation-guide-milestone-migration/>)
+ℹ️ 如果要在 SafeKit 集群中将 Milestone 从版本 N 迁移到版本 N+1，请阅读本文：🛠️ [使用 SafeKit 迁移 Milestone Management](</zh-hans/quick-install/safekit-quick-installation-guide-milestone-migration/>)
 
 
 {{%  insert-safekit-installation-package-windows-zh-hans app="Milestone XProtect and SQL" mod="milestone"  %}}

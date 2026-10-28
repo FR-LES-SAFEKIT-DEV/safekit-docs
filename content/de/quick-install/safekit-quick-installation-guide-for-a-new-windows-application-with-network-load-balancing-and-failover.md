@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Ei
 
 ## Überblick über die SafeKit-/Windows-Lösung {#overview-of-the-safekit--windows-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One-Windows-Lastausgleichs- und Hochverfügbarkeitssoftware](</solutions/windows-load-balancing-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One-Windows-Lastausgleichs- und Hochverfügbarkeitssoftware](</de/solutions/windows-load-balancing-failover/>)**.
 
 ## Installation der SafeKit-/Windows-Lösung (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

@@ -15,7 +15,7 @@ topics: "Linux 高可用性快速安装指南, SafeKit 高可用性限制, SafeK
 
 ## SafeKit / Linux 解决方案概述 {#overview-of-the-safekit--linux-solution}
 
-解决方案的说明见此处：**💡[SafeKit：一体化 Linux 负载均衡与高可用性软件](</solutions/linux-load-balancing-failover/>)**。
+解决方案的说明见此处：**💡[SafeKit：一体化 Linux 负载均衡与高可用性软件](</zh-hans/solutions/linux-load-balancing-failover/>)**。
 
 ## SafeKit / Linux 解决方案的安装 (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
 

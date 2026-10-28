@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide haute disponibilité pour Oracle et SafeKit
 
 ## Présentation de la solution SafeKit / Oracle {#overview-of-the-safekit--oracle-solution}
 
-La solution est décrite ici : ** 💡 [ Le plus simple Oracle Haute disponibilité : Réplication synchrone à 2 nœuds et basculement ](</solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
+La solution est décrite ici : ** 💡 [ Le plus simple Oracle Haute disponibilité : Réplication synchrone à 2 nœuds et basculement ](</fr/solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installation de la solution SafeKit / Oracle sur Windows et Linux ( oracle.safe ) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

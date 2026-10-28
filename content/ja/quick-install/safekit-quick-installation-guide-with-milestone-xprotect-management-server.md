@@ -31,7 +31,7 @@ topics: "Milestone XProtect 高可用性クイックインストールガイド�
   * SERVICES マクロから MSSQLServer を削除します。
 
 
-外部 SQL Server の冗長化には、**💡[SafeKit と sqlserver.safe モジュール](</solutions/sql-server-high-availability-synchronous-replication-failover/>)**を使用できます。
+外部 SQL Server の冗長化には、**💡[SafeKit と sqlserver.safe モジュール](</ja/solutions/sql-server-high-availability-synchronous-replication-failover/>)**を使用できます。
 
 この場合、両方の Management ノードで、sqlserver.safe モジュールの仮想 IP アドレスを使用して [Milestone Management から SQL への接続](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>)を設定します (レジストリキー HKEY_LOCAL_MACHINE > SOFTWARE > VideoOSServerConnectionString)。
 
@@ -61,7 +61,7 @@ Event クラスターでは、milestone.safe のステップごとの設定の�
   * 各カメラのストリームを [Vega / RMF](<https://vega25.com/>) ソリューションで 2 台の Recorder に送信することもできます。
 
 
-ℹ️ SafeKit クラスターで Milestone をバージョン N から N+1 に移行する場合は、この記事をお読みください: 🛠️ [SafeKit を使用した Milestone Management の移行](</quick-install/safekit-quick-installation-guide-milestone-migration/>)
+ℹ️ SafeKit クラスターで Milestone をバージョン N から N+1 に移行する場合は、この記事をお読みください: 🛠️ [SafeKit を使用した Milestone Management の移行](</ja/quick-install/safekit-quick-installation-guide-milestone-migration/>)
 
 
 {{%  insert-safekit-installation-package-windows-ja app="Milestone XProtect and SQL" mod="milestone"  %}}

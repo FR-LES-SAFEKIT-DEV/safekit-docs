@@ -15,7 +15,7 @@ topics: "Guia de instalação rápida de alta disponibilidade para Linux, Limita
 
 ## Visão geral da solução SafeKit / Linux {#overview-of-the-safekit--linux-solution}
 
-A solução é descrita aqui: **💡[SafeKit: software completo de balanceamento de carga e alta disponibilidade para Linux](</solutions/linux-load-balancing-failover/>)**.
+A solução é descrita aqui: **💡[SafeKit: software completo de balanceamento de carga e alta disponibilidade para Linux](</pt-br/solutions/linux-load-balancing-failover/>)**.
 
 ## Instalação da solução SafeKit / Linux (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
 

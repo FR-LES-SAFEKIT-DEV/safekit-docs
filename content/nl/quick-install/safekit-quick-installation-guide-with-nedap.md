@@ -17,7 +17,7 @@ topics: "Snelstartgids voor High Availability Nedap , Beperkingen van High Avail
 
 ## Overzicht van de SafeKit / Nedap -oplossing {#overview-of-the-safekit--nedap-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste Nedap Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste Nedap Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installatie van de SafeKit / Nedap oplossing op Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
@@ -34,7 +34,7 @@ De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste Nedap Hoge beschik
   * Verwijder MSSQLServer uit de SERVICES-macro.
 
 
-U kunt redundantie van de externe SQL Server implementeren met 💡 [ SafeKit en de sqlserver.safe -module ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) . Configureer in dit geval de verbinding van Nedap AEOS met SQL met het virtuele IP-adres van de sqlserver.safe -module.
+U kunt redundantie van de externe SQL Server implementeren met 💡 [ SafeKit en de sqlserver.safe -module ](</nl/solutions/sql-server-high-availability-synchronous-replication-failover/>) . Configureer in dit geval de verbinding van Nedap AEOS met SQL met het virtuele IP-adres van de sqlserver.safe -module.
 
 
 {{%  insert-safekit-installation-package-windows-nl app="Nedap AEOS and SQL" mod="nedap"  %}}

@@ -17,7 +17,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Nedap , Eins
 
 ## Übersicht der SafeKit / Nedap -Lösung {#overview-of-the-safekit--nedap-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste Nedap Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste Nedap Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</de/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installation der SafeKit / Nedap Lösung auf Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
@@ -34,7 +34,7 @@ Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste Nedap Hochverfügbar
   * Entfernen Sie MSSQLServer aus dem MAKEL SERVICES.
 
 
-Sie können die Redundanz des externen SQL Server mit den Modulen [ SafeKit und sqlserver.safe sowie ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) realisieren. Konfigurieren Sie in diesem Fall die Verbindung des AEOS Nedap zu SQL mit der virtuellen IP-Adresse des Moduls sqlserver.safe .
+Sie können die Redundanz des externen SQL Server mit den Modulen [ SafeKit und sqlserver.safe sowie ](</de/solutions/sql-server-high-availability-synchronous-replication-failover/>) realisieren. Konfigurieren Sie in diesem Fall die Verbindung des AEOS Nedap zu SQL mit der virtuellen IP-Adresse des Moduls sqlserver.safe .
 
 
 {{%  insert-safekit-installation-package-windows-de app="Nedap AEOS and SQL" mod="nedap"  %}}

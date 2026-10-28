@@ -15,7 +15,7 @@ topics: "Podman 、 SafeKit高可用性快速安装指南； SafeKit / Podman解
 
 ## SafeKit / Podman解决方案概述 {#overview-of-the-safekit--podman-solution}
 
-解决方案描述如下： ** 💡 [ SafeKit : Podman高可用性和实时数据复制软件](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 。
+解决方案描述如下： ** 💡 [ SafeKit : Podman高可用性和实时数据复制软件](</zh-hans/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 。
 
 ## 在Linux ( mirror.safe )上安装SafeKit / Podman解决方案 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 

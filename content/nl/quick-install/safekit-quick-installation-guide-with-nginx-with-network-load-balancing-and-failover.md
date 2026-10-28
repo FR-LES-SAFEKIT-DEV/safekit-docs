@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability met NGINX, Beperkingen van High Av
 
 ## Overzicht van de SafeKit / NGINX-oplossing {#overview-of-the-safekit--nginx-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Alles-in-één NGINX-software voor load balancing en hoge beschikbaarheid ](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Alles-in-één NGINX-software voor load balancing en hoge beschikbaarheid ](</nl/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
 
 ## Installatie van de SafeKit / NGINX-oplossing op Windows en Linux ( farm.safe ) {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 

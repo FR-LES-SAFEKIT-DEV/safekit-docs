@@ -21,7 +21,7 @@ Software de agrupación de aplicaciones ![ para un editor de software ](/wp-cont
 
 ### Empresa distribuida {#distributed-enterprise}
 
-Una empresa distribuida implementa [ SafeKit en muchas sucursales ](</use-cases/business-continuity-software/>) sin conocimientos informáticos específicos.
+Una empresa distribuida implementa [ SafeKit en muchas sucursales ](</es/use-cases/business-continuity-software/>) sin conocimientos informáticos específicos.
 
 
 Software de alta disponibilidad ![ en una empresa distribuida ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
@@ -29,7 +29,7 @@ Software de alta disponibilidad ![ en una empresa distribuida ](/wp-content/uplo
 
 ### Sitios remotos {#remote-sites}
 
-[ SafeKit se implementa en dos sitios remotos ](</best-practises/high-availability-disaster-recovery-hadr/>) sin necesidad de bahías de discos replicadas a través de una SAN.
+[ SafeKit se implementa en dos sitios remotos ](</es/best-practises/high-availability-disaster-recovery-hadr/>) sin necesidad de bahías de discos replicadas a través de una SAN.
 
 
 ![ Continuidad del negocio y recuperación ante desastres sin una SAN replicada ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")

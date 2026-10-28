@@ -36,9 +36,9 @@ topics: "고가용성 아키텍처와 모범 사례는 무엇인가요?, 고가�
 이 글에서는 고가용성 아키텍처의 모범 사례를 비교 분석합니다.
 
   * [ 소프트웨어 vs 하드웨어 클러스터링 ](</ko/best-practises/clustering-software-vs-hardware-clustering/>) ,
-  * [ 공유 디스크 아키텍처와 ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) 공유 디스크 아키텍처 비교
+  * [ 공유 디스크 아키텍처와 ](</ko/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) 공유 디스크 아키텍처 비교
   * [ 애플리케이션과 가상 머신 고가용성 ](</ko/best-practises/vm-ha-vs-application-ha/>) ,
-  * [ 고가용성 vs 내결함성 ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ 고가용성 vs 내결함성 ](</ko/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
   * [ 동기식 복제 vs 비동기식 복제 ](</ko/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
   * [ 파일 vs 디스크 복제 ](</ko/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
   * [ 데이터 복제 기술 ](</ko/best-practises/data-replication-techniques/>) ,

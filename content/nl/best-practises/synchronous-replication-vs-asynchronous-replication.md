@@ -129,7 +129,7 @@ Hoewel realtime replicatieoplossingen zoals [SafeKit](</nl/>) continue bedrijfsc
 
 U kunt een **hybride architectuur met drie knooppunten** gebruiken: een lokaal cluster met twee knooppunten met synchrone replicatie voor HA, en een derde externe kopie via een back-upoplossing met asynchrone replicatie voor noodherstel.
 
-**Zie voor meer informatie:** [SafeKit Hoge beschikbaarheid en noodherstel (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**Zie voor meer informatie:** [SafeKit Hoge beschikbaarheid en noodherstel (HADR)](</nl/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-nl  %}}

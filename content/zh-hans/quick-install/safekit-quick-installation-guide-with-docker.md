@@ -15,7 +15,7 @@ topics: "Docker 、 SafeKit高可用性快速安装指南； SafeKit / Docker解
 
 ## SafeKit / Docker解决方案概述 {#overview-of-the-safekit--docker-solution}
 
-解决方案如下： ** 💡 [ SafeKit : Docker高可用性和实时数据复制软件](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+解决方案如下： ** 💡 [ SafeKit : Docker高可用性和实时数据复制软件](</zh-hans/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## 在Linux ( mirror.safe )上安装SafeKit / Docker解决方案 {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}

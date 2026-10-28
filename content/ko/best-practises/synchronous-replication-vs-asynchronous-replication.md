@@ -129,7 +129,7 @@ RPO(잠재적 데이터 손실) | 제로 | 제로 | Not Zero(데이터 손실: �
 
 **3노드 하이브리드 아키텍처**를 사용할 수 있습니다. 즉, HA용 동기 복제가 포함된 2노드 로컬 클러스터와 재해 복구용 비동기 복제가 포함된 백업 솔루션을 통한 세 번째 원격 복사를 사용할 수 있습니다.
 
-**자세한 내용은 다음을 참조하세요.** [SafeKit 고가용성 및 재해 복구(HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**자세한 내용은 다음을 참조하세요.** [SafeKit 고가용성 및 재해 복구(HADR)](</ko/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-ko  %}}

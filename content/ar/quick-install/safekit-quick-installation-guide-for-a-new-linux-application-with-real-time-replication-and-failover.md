@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي على
 
 ## نظرة عامة على حل SafeKit / Linux {#overview-of-the-safekit--linux-solution}
 
-يوصف الحل هنا: **💡[أبسط حل للتوافر العالي على Linux: نسخ متماثل متزامن بين عقدتين وتحويل عند الفشل](</solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
+يوصف الحل هنا: **💡[أبسط حل للتوافر العالي على Linux: نسخ متماثل متزامن بين عقدتين وتحويل عند الفشل](</ar/solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
 
 ## تثبيت حل SafeKit / Linux (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 

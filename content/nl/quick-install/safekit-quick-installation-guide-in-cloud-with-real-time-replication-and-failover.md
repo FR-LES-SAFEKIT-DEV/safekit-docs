@@ -15,7 +15,7 @@ topics: "Snelstartgids voor hoge beschikbaarheid in de cloud, beperkingen van de
 
 ## Overzicht van de SafeKit / Cloud mirror -oplossing {#overview-of-the-safekit--cloud-mirror-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ Cloud-agnostische hoge beschikbaarheid: SafeKit Synchrone replicatie en failover ](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ Cloud-agnostische hoge beschikbaarheid: SafeKit Synchrone replicatie en failover ](</nl/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
 
 ## Installatie van de SafeKit / Cloud mirror oplossing op Windows en Linux ( mirror.safe ) {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

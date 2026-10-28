@@ -1,6 +1,6 @@
 ---
 title: "التوفر العالي لـ Hyper-V مع SafeKit: قم بتثبيت وحدة Hyperv.safe لتجاوز الفشل"
-canonical: https://safekit.eviden.com/ar/ar/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: تعرف على تكوين Hyperv.safe لمجموعة Hyper-V النشطة/النشيطة باستخدام
   SafeKit. حقق التوفر العالي على مستوى الأجهزة الافتراضية (VM) من خلال بنية
   ثنائية العقدة لا شيء مشترك. نسخ العديد من الأجهزة الافتراضية بشكل متزامن عبر
@@ -32,7 +32,7 @@ topics: دليل التثبيت السريع للتوافر العالي لـ Hy
   * الحد الأقصى 32 جهازًا افتراضيًا لكل مضيف Hyper-V.
   * يقتصر إجمالي البيانات المنسوخة على بضعة تيرابايت - وبعد ذلك، يصبح وقت إعادة المزامنة كبيرًا.
   * الحد الأدنى من الاتصال البيني 1 جيجابت/ثانية بين العقد (يوصى بسرعة 10 جيجابت/ثانية لإعادة المزامنة بشكل أسرع).
-  * يتطلب تجاوز فشل IP كلتا العقدتين على نفس LAN أو LAN الموسعة (L2) - شبكات L3 الموجهة غير مدعومة (باستثناء 🛠️ [موازنات التحميل السحابي](</resources/safekit-user-guide-82/#Cloud>)).
+  * يتطلب تجاوز فشل IP كلتا العقدتين على نفس LAN أو LAN الموسعة (L2) - شبكات L3 الموجهة غير مدعومة (باستثناء 🛠️ [موازنات التحميل السحابي](</ar/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

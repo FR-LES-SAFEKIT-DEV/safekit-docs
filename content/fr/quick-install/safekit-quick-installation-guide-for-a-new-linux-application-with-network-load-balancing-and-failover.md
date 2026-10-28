@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide de la haute disponibilité pour Linux, Limi
 
 ## Présentation de la solution SafeKit / Linux {#overview-of-the-safekit--linux-solution}
 
-La solution est décrite ici : **💡[SafeKit : logiciel tout-en-un de répartition de charge et de haute disponibilité pour Linux](</solutions/linux-load-balancing-failover/>)**.
+La solution est décrite ici : **💡[SafeKit : logiciel tout-en-un de répartition de charge et de haute disponibilité pour Linux](</fr/solutions/linux-load-balancing-failover/>)**.
 
 ## Installation de la solution SafeKit / Linux (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
 

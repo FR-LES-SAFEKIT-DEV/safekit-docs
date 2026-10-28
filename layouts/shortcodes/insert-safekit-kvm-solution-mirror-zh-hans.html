@@ -22,7 +22,7 @@
 
 **SafeKit HA 集群，适用于 {{ .Get "app" }}**
 
-<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-kvm/">⚡ 快速 {{ .Get "app" }} HA 集群安装指南 ></a>
+<a class="btn-quick-install" href="/zh-hans/quick-install/safekit-quick-installation-guide-with-kvm/">⚡ 快速 {{ .Get "app" }} HA 集群安装指南 ></a>
 ## 目录 {#toc}
 
   * [如何SafeKit软件只是简单地实现了{{ .Get "app" }}在不共享存储的高可用性集群上SAN?](#safekit-kvm-ha-cluster)
@@ -64,7 +64,7 @@ SafeKit 为任意品牌的两台服务器之间的 {{ .Get "app" }} 提供高可
 SafeKit 通过其特性与传统的 {{ .Get "app" }} 集群解决方案区分开来。 **无共享架构** 并简化了管理。大多数竞争对手需要复杂的分布式文件系统（例如 Ceph）或中央 SAN 来管理 VM 的故障转移，而 SafeKit 则提供了:
 
   * **集成实时复制:** 数据同步功能直接内置于解决方案中，确保 {{ .Get "app" }} 虚拟机能够同步镜像，而无需管理单独的存储层，从而避免了额外的开销。.
-  * **简化的2节点聚类:** 与推荐使用 3 节点“见证”仲裁的企业级堆栈不同，SafeKit 仅需两台冗余服务器即可实现完全高可用性。. [了解更多关于我们的 heartbeat 和法定人数机制的信息](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **简化的2节点聚类:** 与推荐使用 3 节点“见证”仲裁的企业级堆栈不同，SafeKit 仅需两台冗余服务器即可实现完全高可用性。. [了解更多关于我们的 heartbeat 和法定人数机制的信息](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **统一管理:** 管理员可以管理VM通过单一平台实现故障转移、复制和负载均衡SafeKit通过控制台，即使没有专业集群技术能力的团队也能轻松访问。.
   * **自定义检查器:** SafeKit 不仅限于硬件监控；它还利用了 **自定义检查器** 检测 VM 是否崩溃，并自动触发本地重启或故障转移到冗余节点。该系统还具有高度可扩展性，可以轻松集成新的、用户自定义的、针对特定环境定制的检查器。.
 
@@ -82,7 +82,7 @@ SafeKit 通过其特性与传统的 {{ .Get "app" }} 集群解决方案区分开
 
 ### 是否可以设置一个{{ .Get "app" }}没有集群SAN或复杂的聚类技能?
 
-是的。本文解释了如何操作。 [快速实现 {{ .Get "app" }} 集群](/quick-install/safekit-quick-installation-guide-with-kvm/) 无需专门的 SAN 管理或复杂的 HA 聚类技能。通过使用 SafeKit 的 **自动故障转移脚本** 处理复制和重启 **{{ .Get "app" }}** 使用虚拟机，您可以获得强大的冗余解决方案，其部署和维护比传统的企业虚拟化堆栈要简单得多。.
+是的。本文解释了如何操作。 [快速实现 {{ .Get "app" }} 集群](/zh-hans/quick-install/safekit-quick-installation-guide-with-kvm/) 无需专门的 SAN 管理或复杂的 HA 聚类技能。通过使用 SafeKit 的 **自动故障转移脚本** 处理复制和重启 **{{ .Get "app" }}** 使用虚拟机，您可以获得强大的冗余解决方案，其部署和维护比传统的企业虚拟化堆栈要简单得多。.
 
 ### 除了 {{ .Get "app" }} 之外，SafeKit 还能保护哪些应用程序和环境？?
 
@@ -110,7 +110,7 @@ SafeKit 也提供 **农场集群** 本地 **网络负载均衡和故障转移** 
 ![在镜像集群 {{ .Get "app" }} 中进行字节级文件复制](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-复制过程是 [同步](/best-practises/synchronous-replication-vs-asynchronous-replication/) 与异步复制不同，即使发生故障也不会丢失数据。.
+复制过程是 [同步](/zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/) 与异步复制不同，即使发生故障也不会丢失数据。.
 
 你只需要配置一下VM目录名称SafeKit对磁盘组织结构没有任何先决条件。该目录可以位于系统磁盘中。.
 
@@ -157,7 +157,7 @@ VM 进程通过本地修改不再复制到服务器 1 的文件，继续在服�
   * 输入 `VM_NAME`, {{ .Get "app" }} 虚拟机的名称 (VM1).
 
 
-SafeKit 集群包含一个专用的 [split-brain 检测器用于解决网络隔离问题](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 无需第三台见证机或额外的 heartbeat 网络.
+SafeKit 集群包含一个专用的 [split-brain 检测器用于解决网络隔离问题](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 无需第三台见证机或额外的 heartbeat 网络.
 
 ### 如何监控 SafeKit {{ .Get "app" }} 集群? {#safekit-mirror-cluster-monitoring}
 
@@ -214,7 +214,7 @@ TCO（成本） | 低（永久许可） | 高（年度订阅） | 高 OPEX（维
 
 ### 逐步实施:
 
-  * 🛠️ [开始免费试用并按照 Hyper-V 快速安装指南进行操作](/quick-install/safekit-quick-installation-guide-with-hyper-v/)
+  * 🛠️ [开始免费试用并按照 Hyper-V 快速安装指南进行操作](/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/)
 
 
 

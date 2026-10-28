@@ -129,7 +129,7 @@ Sebbene le soluzioni di replica in tempo reale come [SafeKit](</it/>) forniscano
 
 È possibile utilizzare un'**architettura ibrida a 3 nodi**: un cluster locale a 2 nodi con replica sincrona per HA e una terza copia remota tramite una soluzione di backup con replica asincrona per Disaster Recovery.
 
-**Per ulteriori informazioni vedere:** [SafeKit Alta disponibilità e ripristino di emergenza (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**Per ulteriori informazioni vedere:** [SafeKit Alta disponibilità e ripristino di emergenza (HADR)](</it/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-it  %}}

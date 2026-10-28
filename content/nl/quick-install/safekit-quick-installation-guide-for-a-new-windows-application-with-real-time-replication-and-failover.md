@@ -15,7 +15,7 @@ topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Windows, Bep
 
 ## Overzicht van de SafeKit-/Windows-oplossing {#overview-of-the-safekit--windows-solution}
 
-De oplossing wordt hier beschreven: **💡[De eenvoudigste hoge beschikbaarheid op Windows: synchrone replicatie met 2 nodes en failover](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+De oplossing wordt hier beschreven: **💡[De eenvoudigste hoge beschikbaarheid op Windows: synchrone replicatie met 2 nodes en failover](</nl/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## Installatie op de SafeKit-/Windows-oplossingen (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

@@ -33,7 +33,7 @@ topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何�
 ![ SafeKit farm + mirror集群](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-[更多信息](</architectures/clustering-software-load-balancing-mirroring/>)
+[更多信息](</zh-hans/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### 活动/活动集群 {#activeactive-cluster}
 
@@ -41,7 +41,7 @@ topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何�
 ![ SafeKit具有实时复制功能的双活集群](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[更多信息](</architectures/active-active-cluster-real-time-replication/>)
+[更多信息](</zh-hans/architectures/active-active-cluster-real-time-replication/>)
 
 ### N-1 簇 {#n-1-cluster}
 
@@ -49,7 +49,7 @@ topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何�
 ![ SafeKit N-1冗余集群](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[更多信息](</architectures/n-1-redundancy/>)
+[更多信息](</zh-hans/architectures/n-1-redundancy/>)
 
 ## 如何使用SafeKit和构建高可用性集群？ {#how-to-build-high-availability-clusters-with-safekit}
 

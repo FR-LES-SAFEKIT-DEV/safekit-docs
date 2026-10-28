@@ -21,13 +21,13 @@ Es gibt keinen Konfigurationsunterschied, wenn ein SafeKit Cluster im selben Com
 
 ### Wie lässt sich eine einfache Hochverfügbarkeitslösung zwischen zwei entfernten Serverräumen implementieren? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-Die Module SafeKit mirror und `farm` lassen sich ohne spezielle Clusterkonfiguration problemlos auf Servern in entfernten Rechenzentren einsetzen. Dadurch vereint SafeKit Geschäftskontinuität und Notfallwiederherstellung in einer einzigen, einfachen Architektur. SafeKit verwaltet zudem im Falle einer Netzwerkisolation die Split-Brain-Situation [ ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) , ohne dass ein dritter Server oder eine spezielle Quorum-Festplatte erforderlich ist.
+Die Module SafeKit mirror und `farm` lassen sich ohne spezielle Clusterkonfiguration problemlos auf Servern in entfernten Rechenzentren einsetzen. Dadurch vereint SafeKit Geschäftskontinuität und Notfallwiederherstellung in einer einzigen, einfachen Architektur. SafeKit verwaltet zudem im Falle einer Netzwerkisolation die Split-Brain-Situation [ ](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) , ohne dass ein dritter Server oder eine spezielle Quorum-Festplatte erforderlich ist.
 
 ### Geschäftskontinuität vs. Backup-Lösungen {#business-continuity-vs-backup-solutions}
 
 Business-Continuity- und Backup-Lösungen decken unterschiedliche Ausfallszenarien ab und ergänzen sich, anstatt austauschbar zu sein. Business Continuity, bereitgestellt durch das Hochverfügbarkeits-Clustering von SafeKit , gewährleistet den unterbrechungsfreien Betrieb von Anwendungen im Falle eines Server- oder Anwendungsausfalls durch Echtzeitreplikation und automatisches Failover. Backup-Lösungen schützen vor umfassenderen Datenverlusten, wie beispielsweise Ransomware-Angriffen oder Bedienungsfehlern. Sie basieren typischerweise auf externen Datenkopien, die später wiederhergestellt werden können, benötigen jedoch längere Wiederherstellungszeiten und bieten kein automatisches Failover.
 
-Mehr dazu erfahren Sie in [ Kombination von SafeKit Hochverfügbarkeit mit Disaster-Recovery-Backups ](</best-practises/high-availability-disaster-recovery-hadr/>) .
+Mehr dazu erfahren Sie in [ Kombination von SafeKit Hochverfügbarkeit mit Disaster-Recovery-Backups ](</de/best-practises/high-availability-disaster-recovery-hadr/>) .
 
 
 {{%  insert-safekit-hub-de  %}}

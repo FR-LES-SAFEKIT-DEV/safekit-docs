@@ -15,7 +15,7 @@ topics: "Podman 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 
 ## SafeKit / Podman 솔루션 개요 {#overview-of-the-safekit--podman-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Podman 고가용성 및 실시간 데이터 복제 소프트웨어 ](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Podman 고가용성 및 실시간 데이터 복제 소프트웨어 ](</ko/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
 
 ## SafeKit / Podman 솔루션의 Linux ( mirror.safe ) 및 설치 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 

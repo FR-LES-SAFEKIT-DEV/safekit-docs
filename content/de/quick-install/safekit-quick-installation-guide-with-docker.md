@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Docker , Ein
 
 ## Übersicht der SafeKit / Docker -Lösung {#overview-of-the-safekit--docker-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ SafeKit : Docker Hochverfügbarkeits- und Echtzeit-Datenreplikationssoftware ](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+Die Lösung wird hier beschrieben: ** 💡 [ SafeKit : Docker Hochverfügbarkeits- und Echtzeit-Datenreplikationssoftware ](</de/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## Installation der SafeKit / Docker Lösung auf Linux ( mirror.safe ) {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}

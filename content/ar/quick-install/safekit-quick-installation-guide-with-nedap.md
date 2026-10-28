@@ -17,7 +17,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ N
 
 ## نظرة عامة على حل SafeKit / Nedap {#overview-of-the-safekit--nedap-solution}
 
-الحل موضح هنا: ** 💡 [ أبسط Nedap التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+الحل موضح هنا: ** 💡 [ أبسط Nedap التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
 
 ## تثبيت حل SafeKit / Nedap على Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
@@ -34,7 +34,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ N
   * قم بإزالة MSSQLServer من ماكرو SERVICES.
 
 
-يمكنك تطبيق خاصية التكرار لوحدة SQL Server الخارجية باستخدام وحدات [ SafeKit و sqlserver.safe ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) . في هذه الحالة، قم بتهيئة اتصال وحدة Nedap AEOS بقاعدة بيانات SQL باستخدام عنوان IP الظاهري لوحدة sqlserver.safe .
+يمكنك تطبيق خاصية التكرار لوحدة SQL Server الخارجية باستخدام وحدات [ SafeKit و sqlserver.safe ](</ar/solutions/sql-server-high-availability-synchronous-replication-failover/>) . في هذه الحالة، قم بتهيئة اتصال وحدة Nedap AEOS بقاعدة بيانات SQL باستخدام عنوان IP الظاهري لوحدة sqlserver.safe .
 
 
 {{%  insert-safekit-installation-package-windows-ar app="Nedap AEOS and SQL" mod="nedap"  %}}

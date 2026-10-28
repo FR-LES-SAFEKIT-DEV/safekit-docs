@@ -15,7 +15,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para la nube, limi
 
 ## Descripción general de la solución en la nube SafeKit / {#overview-of-the-safekit--cloud-solution}
 
-La solución se describe aquí: ** 💡 [ SafeKit : Balanceo de carga en la nube y alta disponibilidad de aplicaciones Clúster `Farm` ](</solutions/cloud-load-balancing-cluster-failover/>) ** .
+La solución se describe aquí: ** 💡 [ SafeKit : Balanceo de carga en la nube y alta disponibilidad de aplicaciones Clúster `Farm` ](</es/solutions/cloud-load-balancing-cluster-failover/>) ** .
 
 ## Instalación de la solución SafeKit / Nube en Windows y Linux ( farm.safe ) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 

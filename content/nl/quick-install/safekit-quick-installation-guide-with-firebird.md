@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability Firebird , Beperkingen van High Av
 
 ## Overzicht van de SafeKit / Firebird -oplossing {#overview-of-the-safekit--firebird-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste Firebird Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ De eenvoudigste Firebird Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installatie van de SafeKit / Firebird oplossing op Windows en Linux ( firebird.safe ) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 

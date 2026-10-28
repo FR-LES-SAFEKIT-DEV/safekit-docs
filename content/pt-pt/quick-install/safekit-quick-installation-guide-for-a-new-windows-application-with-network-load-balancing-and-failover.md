@@ -15,7 +15,7 @@ topics: "Guia de instalação rápida de elevada disponibilidade para Windows, L
 
 ## Descrição geral da solução SafeKit / Windows {#overview-of-the-safekit--windows-solution}
 
-A solução é descrita aqui: **💡[SafeKit: software completo de balanceamento de carga e elevada disponibilidade para Windows](</solutions/windows-load-balancing-failover/>)**.
+A solução é descrita aqui: **💡[SafeKit: software completo de balanceamento de carga e elevada disponibilidade para Windows](</pt-pt/solutions/windows-load-balancing-failover/>)**.
 
 ## Instalação da solução SafeKit / Windows (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

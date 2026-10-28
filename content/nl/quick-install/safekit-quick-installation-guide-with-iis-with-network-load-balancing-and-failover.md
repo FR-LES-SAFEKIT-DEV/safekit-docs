@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability IIS , Beperkingen van High Availab
 
 ## Overzicht van de SafeKit / IIS -oplossing {#overview-of-the-safekit--iis-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Alles-in-één IIS Software voor load balancing en hoge beschikbaarheid ](</solutions/iis-load-balancing-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Alles-in-één IIS Software voor load balancing en hoge beschikbaarheid ](</nl/solutions/iis-load-balancing-failover/>) ** .
 
 ## Installatie van de SafeKit / IIS oplossing op Windows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

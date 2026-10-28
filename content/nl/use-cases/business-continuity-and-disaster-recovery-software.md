@@ -21,13 +21,13 @@ Er is geen configuratieverschil bij het implementeren van een SafeKit -cluster i
 
 ### Hoe implementeer ik een eenvoudige oplossing voor hoge beschikbaarheid tussen twee externe computerruimtes? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-De modules SafeKit mirror en `farm` kunnen eenvoudig worden geïmplementeerd op servers in externe computerruimtes, zonder speciale clusterconfiguratie. Dit betekent dat SafeKit bedrijfscontinuïteit en noodherstel combineert in één eenvoudige architectuur. SafeKit beheert bovendien [ ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in geval van netwerkisolatie, zonder dat een derde server of een speciale quorumschijf nodig is.
+De modules SafeKit mirror en `farm` kunnen eenvoudig worden geïmplementeerd op servers in externe computerruimtes, zonder speciale clusterconfiguratie. Dit betekent dat SafeKit bedrijfscontinuïteit en noodherstel combineert in één eenvoudige architectuur. SafeKit beheert bovendien [ ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in geval van netwerkisolatie, zonder dat een derde server of een speciale quorumschijf nodig is.
 
 ### Bedrijfscontinuïteit versus back-upoplossingen {#business-continuity-vs-backup-solutions}
 
 Oplossingen voor bedrijfscontinuïteit en back-up behandelen verschillende faalscenario's en zijn complementair in plaats van uitwisselbaar. Bedrijfscontinuïteit, mogelijk gemaakt door de high-availability clustering van SafeKit , zorgt ervoor dat applicaties met minimale onderbrekingen blijven draaien in geval van een server- of applicatiestoring, dankzij realtime replicatie en automatische failover. Back-upoplossingen beschermen tegen een breder verlies, zoals ransomware-aanvallen of bedieningsfouten, en maken doorgaans gebruik van externe kopieën van gegevens die achteraf kunnen worden hersteld, met langere hersteltijden maar zonder automatische failover.
 
-Lees meer in [ De combinatie van SafeKit hoge beschikbaarheid met noodherstelback-ups ](</best-practises/high-availability-disaster-recovery-hadr/>) .
+Lees meer in [ De combinatie van SafeKit hoge beschikbaarheid met noodherstelback-ups ](</nl/best-practises/high-availability-disaster-recovery-hadr/>) .
 
 
 {{%  insert-safekit-hub-nl  %}}

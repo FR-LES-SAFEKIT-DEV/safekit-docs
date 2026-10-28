@@ -33,7 +33,7 @@ topics: "Wat zijn de verschillende architecturen voor hoge beschikbaarheid en de
 ![ farm SafeKit + mirror cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-[ Meer informatie ](</architectures/clustering-software-load-balancing-mirroring/>)
+[ Meer informatie ](</nl/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### Actief/actief cluster {#activeactive-cluster}
 
@@ -41,7 +41,7 @@ topics: "Wat zijn de verschillende architecturen voor hoge beschikbaarheid en de
 ![ SafeKit actief actief cluster met realtime replicatie ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[ Meer informatie ](</architectures/active-active-cluster-real-time-replication/>)
+[ Meer informatie ](</nl/architectures/active-active-cluster-real-time-replication/>)
 
 ### N-1 cluster {#n-1-cluster}
 
@@ -49,7 +49,7 @@ topics: "Wat zijn de verschillende architecturen voor hoge beschikbaarheid en de
 ![ SafeKit N-1 redundantiecluster ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[ Meer informatie ](</architectures/n-1-redundancy/>)
+[ Meer informatie ](</nl/architectures/n-1-redundancy/>)
 
 ## Hoe bouw je clusters met hoge beschikbaarheid met SafeKit ? {#how-to-build-high-availability-clusters-with-safekit}
 

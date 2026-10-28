@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Kubernetes ,
 
 ## Übersicht der SafeKit / Kubernetes -Lösung {#overview-of-the-safekit--kubernetes-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ Kubernetes K3s Hochverfügbarkeit: Synchrone 2-Knoten-Replikation & Failover ](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+Die Lösung wird hier beschrieben: ** 💡 [ Kubernetes K3s Hochverfügbarkeit: Synchrone 2-Knoten-Replikation & Failover ](</de/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## Installation und Konfiguration der SafeKit / Kubernetes Lösung auf Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -147,7 +147,7 @@ Falls etwas schiefgeht, stoppen Sie Knoten 2 und erzwingen Sie [ den Start von K
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ Weitere Informationen zu den Tests finden Sie im Benutzerhandbuch. ](</resources/safekit-user-guide-82/#tests>)
+🛠️ [ Weitere Informationen zu den Tests finden Sie im Benutzerhandbuch. ](</de/resources/safekit-user-guide-82/#tests>)
 
 
 ![ Stoppen Sie das Modul auf dem PRIM-Server ](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -207,7 +207,7 @@ Der vorherige Helm-Befehl sollte das WordPress-Image von `registry-1.docker.io` 
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ Fehlerbehebung im Benutzerhandbuch. ](</resources/safekit-user-guide-82/#Troubleshooting>)
+🛠️ [ Fehlerbehebung im Benutzerhandbuch. ](</de/resources/safekit-user-guide-82/#Troubleshooting>)
 
 
 ![ Nehmen Sie die Schnappschüsse zur Unterstützung ](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

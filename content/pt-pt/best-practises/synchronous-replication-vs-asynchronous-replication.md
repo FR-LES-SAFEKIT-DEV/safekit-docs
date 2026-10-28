@@ -129,7 +129,7 @@ Embora as soluções de replicação em tempo real, como o [SafeKit](</pt-pt/>),
 
 Pode utilizar uma **arquitetura híbrida de 3 nós**: um cluster local de 2 nós com replicação síncrona para HA e uma terceira cópia remota através de uma solução de cópia de segurança com replicação assíncrona para recuperação de desastres.
 
-**Consulte para mais informações:** [SafeKit Alta disponibilidade e recuperação de desastres (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**Consulte para mais informações:** [SafeKit Alta disponibilidade e recuperação de desastres (HADR)](</pt-pt/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-pt-pt  %}}

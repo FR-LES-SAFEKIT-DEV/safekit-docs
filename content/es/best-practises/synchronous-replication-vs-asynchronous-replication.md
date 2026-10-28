@@ -129,7 +129,7 @@ Si bien las soluciones de replicación en tiempo real como [SafeKit](</es/>) bri
 
 Puede utilizar una **arquitectura híbrida de 3 nodos**: un clúster local de 2 nodos con replicación sincrónica para HA y una tercera copia remota a través de una solución de respaldo con replicación asincrónica para recuperación ante desastres.
 
-**Consulte para obtener más información:** [SafeKit Alta disponibilidad y recuperación ante desastres (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**Consulte para obtener más información:** [SafeKit Alta disponibilidad y recuperación ante desastres (HADR)](</es/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-es  %}}

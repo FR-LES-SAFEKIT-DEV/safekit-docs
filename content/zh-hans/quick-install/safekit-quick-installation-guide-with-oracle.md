@@ -15,7 +15,7 @@ topics: "Oracle 、 SafeKit高可用性快速安装指南； SafeKit / Oracle高
 
 ## SafeKit / Oracle解决方案概述 {#overview-of-the-safekit--oracle-solution}
 
-解决方案描述如下： ** 💡 [最简单的Oracle高可用性：2 节点同步复制和故障转移](</solutions/oracle-high-availability-synchronous-replication-failover/>) ** 。
+解决方案描述如下： ** 💡 [最简单的Oracle高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/oracle-high-availability-synchronous-replication-failover/>) ** 。
 
 ## 在Windows和Linux ( oracle.safe )上安装SafeKit / Oracle解决方案 {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

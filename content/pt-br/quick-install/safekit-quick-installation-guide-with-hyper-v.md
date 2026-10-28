@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidade do Hyper-V com SafeKit: instale o módulo
   hyperv.safe para failover"
-canonical: https://safekit.eviden.com/pt-br/pt-br/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: Saiba mais sobre como configurar o hyperv.safe para um cluster
   Hyper-V ativo/ativo com SafeKit. Obtenha alta disponibilidade no nível da VM
   com uma arquitetura de 2 nós sem compartilhamento. Replique de forma síncrona
@@ -35,7 +35,7 @@ A solução é descrita aqui: **💡[Simples Hyper-V Alta disponibilidade sem ar
   * Máximo de 32 máquinas virtuais por host Hyper-V.
   * Total de dados replicados limitado a alguns terabytes — além disso, o tempo de ressincronização torna-se significativo.
   * Interconexão mínima de 1 Gb/s entre nós (10 Gb/s recomendados para ressincronização mais rápida).
-  * O failover IP requer ambos os nós no mesmo LAN ou LAN estendido (L2) — redes L3 roteadas não suportadas (exceto com 🛠️ [cloud load balancers](</resources/safekit-user-guide-82/#Cloud>)).
+  * O failover IP requer ambos os nós no mesmo LAN ou LAN estendido (L2) — redes L3 roteadas não suportadas (exceto com 🛠️ [cloud load balancers](</pt-br/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

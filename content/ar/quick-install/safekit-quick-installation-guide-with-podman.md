@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ P
 
 ## نظرة عامة على حل SafeKit / Podman {#overview-of-the-safekit--podman-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : Podman برنامج عالي التوافر ونسخ البيانات في الوقت الحقيقي ](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+الحل موضح هنا: ** 💡 [ SafeKit : Podman برنامج عالي التوافر ونسخ البيانات في الوقت الحقيقي ](</ar/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
 
 ## تثبيت حل SafeKit / Podman على Linux ( mirror.safe ) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 

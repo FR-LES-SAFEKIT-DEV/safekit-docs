@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability AWS , Beperkingen van High Availab
 
 ## Overzicht van de SafeKit / AWS mirror oplossing {#overview-of-the-safekit--aws-mirror-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ Amazon AWS Hoge beschikbaarheid: SafeKit Synchrone replicatie en failover ](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ Amazon AWS Hoge beschikbaarheid: SafeKit Synchrone replicatie en failover ](</nl/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** .
 
 ## Installatie van de SafeKit / AWS mirror oplossing op Windows en Linux ( mirror.safe ) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

@@ -15,7 +15,7 @@ topics: "Firebird 、 SafeKit高可用性快速安装指南； SafeKit / Firebir
 
 ## SafeKit / Firebird解决方案概述 {#overview-of-the-safekit--firebird-solution}
 
-解决方案描述如下： ** 💡 [最简单的Firebird高可用性：2 节点同步复制和故障转移](</solutions/firebird-high-availability-synchronous-replication-failover/>) ** 。
+解决方案描述如下： ** 💡 [最简单的Firebird高可用性：2 节点同步复制和故障转移](</zh-hans/solutions/firebird-high-availability-synchronous-replication-failover/>) ** 。
 
 ## 在Windows和Linux ( firebird.safe )上安装SafeKit / Firebird解决方案 {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 

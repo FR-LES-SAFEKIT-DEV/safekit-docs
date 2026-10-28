@@ -8,13 +8,13 @@
 
 ### ステップ 1. リアルタイムレプリケーション {#step1}
 
-サーバー1（PRIM）が {{ .Get "app" }} アプリケーションを実行します。クライアントは [仮想IPアドレス](/best-practises/how-a-virtual-ip-address-works/) に接続されます。SafeKitは、ファイル内に行われた変更をネットワーク経由でリアルタイムに複製します。
+サーバー1（PRIM）が {{ .Get "app" }} アプリケーションを実行します。クライアントは [仮想IPアドレス](/ja/best-practises/how-a-virtual-ip-address-works/) に接続されます。SafeKitは、ファイル内に行われた変更をネットワーク経由でリアルタイムに複製します。
 
 
 ![ミラー {{ .Get "app" }} クラスターにおけるバイトレベルでのファイルレプリケーション](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-このレプリケーションは [同期（synchronous）方式](/best-practises/synchronous-replication-vs-asynchronous-replication/) であり、非同期レプリケーションとは異なり、障害発生時にデータが失われることはありません。
+このレプリケーションは [同期（synchronous）方式](/ja/best-practises/synchronous-replication-vs-asynchronous-replication/) であり、非同期レプリケーションとは異なり、障害発生時にデータが失われることはありません。
 
 SafeKitで複製するディレクトリ名を構成するだけで機能します。ディスク構成に関する前提条件はありません。ディレクトリはシステムディスク内に配置することも可能です。
 
@@ -67,7 +67,7 @@ SafeKitはファイルを自動的に再同期し、サーバー1が停止して
   * **チェッカー（監視機能）：** アプリケーションの健全性を監視し、プロセスの障害が検出された場合に自動復旧をトリガーします。
 
 
-SafeKitクラスターには専用のスプリットブレインチェッカーが組み込まれているため、3台目のウィットネスマシン（監視サーバー）や追加のハートビートネットワークを必要とせずに、ネットワークの分断（孤立）問題を解決できます。詳細については、[クラスターにおけるハートビート、フェイルオーバー、およびクォーラム](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)をご覧ください。
+SafeKitクラスターには専用のスプリットブレインチェッカーが組み込まれているため、3台目のウィットネスマシン（監視サーバー）や追加のハートビートネットワークを必要とせずに、ネットワークの分断（孤立）問題を解決できます。詳細については、[クラスターにおけるハートビート、フェイルオーバー、およびクォーラム](/ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)をご覧ください。
 
 ### {{ .Get "app" }}のSafeKitミラークラスターを監視する方法は？ {#safekit-mirror-cluster-monitoring}
 

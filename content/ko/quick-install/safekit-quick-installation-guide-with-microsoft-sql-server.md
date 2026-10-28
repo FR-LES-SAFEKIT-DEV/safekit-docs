@@ -15,7 +15,7 @@ topics: "Microsoft , SQL Server , SafeKit 고가용성 빠른 설치 가이드, 
 
 ## SafeKit / Microsoft SQL Server 솔루션 개요 {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-솔루션에 대한 자세한 개요는 ** 💡 [ 가장 간단한 Microsoft SQL Server 고가용성: 2노드 동기 복제 및 장애 조치 ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) ** 를 참조하십시오.
+솔루션에 대한 자세한 개요는 ** 💡 [ 가장 간단한 Microsoft SQL Server 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/sql-server-high-availability-synchronous-replication-failover/>) ** 를 참조하십시오.
 
 ## Windows ( sqlserver.safe ) 및 에 SafeKit / Microsoft SQL Server 솔루션 설치 {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 

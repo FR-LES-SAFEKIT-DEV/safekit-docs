@@ -16,7 +16,7 @@ topics: "SafeKit für Siemens Siveillance: 2-Knoten-Hyper-V-Cluster ohne SAN, In
 ### Notizen {#notes}
 
   * Verwenden Sie für Siveillance VMS und die Aufzeichnungsserver den integrierten Failover-Mechanismus und nicht SafeKit . Die Aufzeichnung kann auf Hostebene auf beiden physischen Servern oder in zwei virtuellen Maschinen auf beiden physischen Servern ausgeführt werden (nicht repliziert durch SafeKit ).
-  * Für ** 💡 [ Siemens Siveillance VMS ](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** gibt es eine weitere Lösung auf Anwendungsebene, die in jeder Infrastruktur funktionieren kann (physische Server, jeder Hypervisor einschließlich ** VMware ** ...).
+  * Für ** 💡 [ Siemens Siveillance VMS ](</de/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** gibt es eine weitere Lösung auf Anwendungsebene, die in jeder Infrastruktur funktionieren kann (physische Server, jeder Hypervisor einschließlich ** VMware ** ...).
 
 
 

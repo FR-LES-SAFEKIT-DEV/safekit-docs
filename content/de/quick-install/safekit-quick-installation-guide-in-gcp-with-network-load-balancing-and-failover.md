@@ -13,7 +13,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in GCP, Einschrä
 
 ## Überblick über die SafeKit-/GCP-Lösung {#overview-of-the-safekit--gcp-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: Google GCP-Lastausgleich und Anwendungs-Hochverfügbarkeit mit einem `Farm`-Cluster](</solutions/gcp-load-balancing-cluster-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[SafeKit: Google GCP-Lastausgleich und Anwendungs-Hochverfügbarkeit mit einem `Farm`-Cluster](</de/solutions/gcp-load-balancing-cluster-failover/>)**.
 
 ## Installation der SafeKit-/GCP-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 

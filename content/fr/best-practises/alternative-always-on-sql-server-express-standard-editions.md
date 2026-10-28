@@ -21,7 +21,7 @@ La solution est indépendante de l'édition Microsoft SQL Server et fonctionne a
 
 SafeKit est un produit générique. Vous pouvez répliquer plus que les données et les journaux du serveur SQL. Si votre application est basée sur SQL Server avec des dossiers spécifiques contenant votre configuration ou d'autres fichiers, vous pouvez les répliquer de la même manière. Et vous pouvez redémarrer vos propres services en plus des services du serveur SQL.
 
-[Guide d'installation de SafeKit avec Microsoft SQL Server et les éditions express et standard](</quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
+[Guide d'installation de SafeKit avec Microsoft SQL Server et les éditions express et standard](</fr/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
 
 ### Sans Microsoft failover cluster {#without-microsoft-failover-cluster}
 

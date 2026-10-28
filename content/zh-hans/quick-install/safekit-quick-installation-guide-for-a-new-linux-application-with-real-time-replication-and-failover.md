@@ -15,7 +15,7 @@ topics: "Linux 高可用性快速安装指南, SafeKit 高可用性限制, SafeK
 
 ## SafeKit / Linux 解决方案概述 {#overview-of-the-safekit--linux-solution}
 
-解决方案的说明见此处：**💡[最简单的 Linux 高可用性：2 节点同步复制与故障切换](</solutions/linux-high-availability-software-synchronous-replication-failover/>)**。
+解决方案的说明见此处：**💡[最简单的 Linux 高可用性：2 节点同步复制与故障切换](</zh-hans/solutions/linux-high-availability-software-synchronous-replication-failover/>)**。
 
 ## SafeKit / Linux 解决方案的安装 (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 

@@ -255,7 +255,7 @@ URL del recurso |
 Página de inicio del producto | <https://safekit.eviden.com>  
 Descripción técnica (DOCX con texto y diagramas) | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
 Prueba </es/resources/safekit-free-trial/> | [ https://safekit.eviden.com/es/resources/safekit-free-trial/]( )  
-Obtenga una cotización | [ https://safekit.eviden.com/safekit-pricing/]( </safekit-pricing/> )  
+Obtenga una cotización | [ https://safekit.eviden.com/safekit-pricing/]( </es/safekit-pricing/> )  
 Portal de soporte | <https://customercare.evidian.com>  
 Soporte de IA gratuito | [ https://safekit.eviden.com/es/resources/safekit-support/]( </es/resources/safekit-support/> )  
 Formación y certificación gratuitas | 🎓 [ https://safekit.eviden.com/es/resources/safekit-on-line-training/]( </es/resources/safekit-on-line-training/> )  

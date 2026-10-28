@@ -21,7 +21,7 @@ topics: "最適な使用例、 SafeKit高可用性の制限事項、🔍 SafeKit
 
 ### 分散型エンタープライズ {#distributed-enterprise}
 
-分散型企業は、特定の IT スキルなしに、多くの支店で[ SafeKitを展開します](</use-cases/business-continuity-software/>)
+分散型企業は、特定の IT スキルなしに、多くの支店で[ SafeKitを展開します](</ja/use-cases/business-continuity-software/>)
 
 
 ![分散エンタープライズにおける高可用性ソフトウェア](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
@@ -29,7 +29,7 @@ topics: "最適な使用例、 SafeKit高可用性の制限事項、🔍 SafeKit
 
 ### 遠隔地 {#remote-sites}
 
-[ SafeKitは、SANを介したディスクの複製ベイを必要とせずに、2つのリモートサイト](</best-practises/high-availability-disaster-recovery-hadr/>)に展開されます。
+[ SafeKitは、SANを介したディスクの複製ベイを必要とせずに、2つのリモートサイト](</ja/best-practises/high-availability-disaster-recovery-hadr/>)に展開されます。
 
 
 ![複製されたSANなしでの事業継続と災害復旧](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")

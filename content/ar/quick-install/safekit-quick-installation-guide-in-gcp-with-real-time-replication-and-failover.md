@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ G
 
 ## نظرة عامة على حلول SafeKit / GCP mirror {#overview-of-the-safekit--gcp-mirror-solution}
 
-الحل موضح هنا: ** 💡 [ Google GCP التوافر العالي: SafeKit النسخ المتزامن والتحويل التلقائي ](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** .
+الحل موضح هنا: ** 💡 [ Google GCP التوافر العالي: SafeKit النسخ المتزامن والتحويل التلقائي ](</ar/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** .
 
 ## تثبيت حل SafeKit / GCP mirror على Windows و Linux ( mirror.safe ) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

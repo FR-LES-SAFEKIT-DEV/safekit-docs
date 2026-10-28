@@ -33,7 +33,7 @@ topics: "¿Cuáles son las diferentes arquitecturas de alta disponibilidad y los
 Clúster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-[ Más información ](</architectures/clustering-software-load-balancing-mirroring/>)
+[ Más información ](</es/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### Clúster activo/activo {#activeactive-cluster}
 
@@ -41,7 +41,7 @@ Clúster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mir
 ![ SafeKit clúster activo activo con replicación en tiempo real ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[ Más información ](</architectures/active-active-cluster-real-time-replication/>)
+[ Más información ](</es/architectures/active-active-cluster-real-time-replication/>)
 
 ### Clúster N-1 {#n-1-cluster}
 
@@ -49,7 +49,7 @@ Clúster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mir
 ![ SafeKit Clúster de redundancia N-1 ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[ Más información ](</architectures/n-1-redundancy/>)
+[ Más información ](</es/architectures/n-1-redundancy/>)
 
 ## ¿Cómo crear clústeres de alta disponibilidad con SafeKit ? {#how-to-build-high-availability-clusters-with-safekit}
 

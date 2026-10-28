@@ -15,7 +15,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
 
 ## SafeKit / Kubernetesソリューションの概要 {#overview-of-the-safekit--kubernetes-solution}
 
-解決策はここに記載されています: ** 💡 [ Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+解決策はここに記載されています: ** 💡 [ Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー](</ja/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## SafeKit / KubernetesソリューションをLinux ( k3s.safe )にインストールおよび構成する {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -147,7 +147,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
 ![注記](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [テストに関する詳細はユーザーガイドをご覧ください](</resources/safekit-user-guide-82/#tests>)
+🛠️ [テストに関する詳細はユーザーガイドをご覧ください](</ja/resources/safekit-user-guide-82/#tests>)
 
 
 ![ PRIMサーバー上のモジュールを停止します](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -207,7 +207,7 @@ WordPressは自動的に高可用性を実現します。
 ![注記](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [トラブルシューティングについては、ユーザーガイドをご覧ください](</resources/safekit-user-guide-82/#Troubleshooting>)
+🛠️ [トラブルシューティングについては、ユーザーガイドをご覧ください](</ja/resources/safekit-user-guide-82/#Troubleshooting>)
 
 
 ![サポートのためにスナップショットを撮ってください](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

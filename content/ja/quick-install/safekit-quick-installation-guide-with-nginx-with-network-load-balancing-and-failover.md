@@ -15,7 +15,7 @@ topics: "NGINX の高可用性クイックインストールガイド、 SafeKit
 
 ## SafeKit / NGINX ソリューションの概要 {#overview-of-the-safekit--nginx-solution}
 
-ソリューションはここに記載されています: ** 💡 [ SafeKit : オールインワン NGINX ロードバランシングおよび高可用性ソフトウェア](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** 。
+ソリューションはここに記載されています: ** 💡 [ SafeKit : オールインワン NGINX ロードバランシングおよび高可用性ソフトウェア](</ja/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** 。
 
 ## SafeKit / NGINX ソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 

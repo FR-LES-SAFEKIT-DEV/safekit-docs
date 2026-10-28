@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability GCP , Beperkingen van High Availab
 
 ## Overzicht van de SafeKit / GCP -oplossing {#overview-of-the-safekit--gcp-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Google GCP Load Balancing & Application High Availability `Farm` Cluster ](</solutions/gcp-load-balancing-cluster-failover/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Google GCP Load Balancing & Application High Availability `Farm` Cluster ](</nl/solutions/gcp-load-balancing-cluster-failover/>) ** .
 
 ## Installatie van de SafeKit / GCP oplossing op Windows en Linux ( farm.safe ) {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 

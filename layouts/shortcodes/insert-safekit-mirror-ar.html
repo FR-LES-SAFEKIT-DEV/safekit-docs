@@ -42,13 +42,13 @@
 
 ### الخطوة 1. النسخ المتماثل في الوقت الفعلي (Real-time replication) {#step1}
 
-يقوم الخادم 1 (PRIM) بتشغيل تطبيق {{ .Get "app" }}. ويتصل العملاء بـ [عنوان IP افتراضي](/best-practises/how-a-virtual-ip-address-works/). يقوم SafeKit بنسخ التعديلات التي تتم داخل الملفات عبر الشبكة بشكل متماثل وفي الوقت الفعلي.
+يقوم الخادم 1 (PRIM) بتشغيل تطبيق {{ .Get "app" }}. ويتصل العملاء بـ [عنوان IP افتراضي](/ar/best-practises/how-a-virtual-ip-address-works/). يقوم SafeKit بنسخ التعديلات التي تتم داخل الملفات عبر الشبكة بشكل متماثل وفي الوقت الفعلي.
 
 
 ![النسخ المتماثل للملفات على مستوى البايت في عنقودية مرآة {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-هذا النسخ المتماثل يكون [متزامناً (Synchronous)](/best-practises/synchronous-replication-vs-asynchronous-replication/) دون أي فقدان للبيانات عند حدوث فشل، على عكس النسخ المتماثل غير المتزامن.
+هذا النسخ المتماثل يكون [متزامناً (Synchronous)](/ar/best-practises/synchronous-replication-vs-asynchronous-replication/) دون أي فقدان للبيانات عند حدوث فشل، على عكس النسخ المتماثل غير المتزامن.
 
 كل ما عليك فعله هو تكوين أسماء الأدلة (Directories) المراد نسخها متماثلاً في SafeKit. لا توجد أي متطلبات مسبقة لتنظيم القرص، حيث يمكن أن تقع هذه الأدلة داخل قرص النظام نفسه.
 
@@ -85,5 +85,5 @@
   * **أدوات الفحص (Checkers):** راقب سلامة وحالة التطبيق وفعّل الاسترداد التلقائي في حال تم اكتشاف فشل في إحدى العمليات (Processes).
 
 
-تتضمن عنقودية SafeKit أداة فحص مخصصة لمنع انقسام الدماغ (Split-brain checker) لحل مشكلات عزل الشبكة دون الحاجة إلى جهاز شاهد ثالث (Witness Machine) أو شبكة نبضات قلب إضافية. تعرف على المزيد حول [نبضات القلب، والنقل عند الفشل، والنصاب القانوني (Quorum) في العنقودية](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+تتضمن عنقودية SafeKit أداة فحص مخصصة لمنع انقسام الدماغ (Split-brain checker) لحل مشكلات عزل الشبكة دون الحاجة إلى جهاز شاهد ثالث (Witness Machine) أو شبكة نبضات قلب إضافية. تعرف على المزيد حول [نبضات القلب، والنقل عند الفشل، والنصاب القانوني (Quorum) في العنقودية](/ar/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
 

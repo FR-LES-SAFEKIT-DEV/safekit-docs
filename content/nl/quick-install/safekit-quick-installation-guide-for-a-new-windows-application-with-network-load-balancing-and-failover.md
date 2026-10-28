@@ -15,7 +15,7 @@ topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Windows, Bep
 
 ## Overzicht van de SafeKit-/Windows-oplossing {#overview-of-the-safekit--windows-solution}
 
-De oplossing wordt hier beschreven: **💡[SafeKit: alles-in-éénsoftware voor loadbalancing en hoge beschikbaarheid op Windows](</solutions/windows-load-balancing-failover/>)**.
+De oplossing wordt hier beschreven: **💡[SafeKit: alles-in-éénsoftware voor loadbalancing en hoge beschikbaarheid op Windows](</nl/solutions/windows-load-balancing-failover/>)**.
 
 ## Installatie van de SafeKit-/Windows-oplossing (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

@@ -15,7 +15,7 @@ topics: "Guida rapida all'installazione dell'alta disponibilità per GCP , Limit
 
 ## Panoramica della soluzione SafeKit / GCP {#overview-of-the-safekit--gcp-solution}
 
-La soluzione è descritta qui: ** 💡 [ SafeKit : Google GCP Bilanciamento del carico e alta disponibilità delle applicazioni Cluster `Farm` ](</solutions/gcp-load-balancing-cluster-failover/>) ** .
+La soluzione è descritta qui: ** 💡 [ SafeKit : Google GCP Bilanciamento del carico e alta disponibilità delle applicazioni Cluster `Farm` ](</it/solutions/gcp-load-balancing-cluster-failover/>) ** .
 
 ## Installazione della soluzione SafeKit / GCP su Windows e Linux ( farm.safe ) {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 

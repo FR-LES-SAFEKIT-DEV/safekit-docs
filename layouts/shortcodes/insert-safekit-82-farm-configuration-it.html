@@ -7,7 +7,7 @@
 ### Prerequisiti
 
   * Applicazione {{ .Get "app" }} installata su 2 nodi (o più).
-  * Il bilanciamento del carico IP virtuale richiede nodi sulla stessa LAN o su una LAN estesa (L2) — le reti L3 instradate non sono supportate (tranne con i 🛠️ [bilanciatori di carico cloud](/resources/safekit-user-guide-82/#Cloud)).
+  * Il bilanciamento del carico IP virtuale richiede nodi sulla stessa LAN o su una LAN estesa (L2) — le reti L3 instradate non sono supportate (tranne con i 🛠️ [bilanciatori di carico cloud](/it/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. Avviare la console SafeKit
@@ -20,7 +20,7 @@
 
 ⚠️ La configurazione di SafeKit viene eseguita su entrambi i nodi da un unico browser.
 
-ℹ️ Per proteggere la console Web, consultare 🛠️ [11\. Protezione del servizio Web SafeKit](/resources/safekit-user-guide-82/#https) nella Guida per l’utente.
+ℹ️ Per proteggere la console Web, consultare 🛠️ [11\. Protezione del servizio Web SafeKit](/it/resources/safekit-user-guide-82/#https) nella Guida per l’utente.
 
 
 ![Avviare la console Web SafeKit per configurare il cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
@@ -28,7 +28,7 @@
 
 ### 2. Configurare gli indirizzi dei nodi
 
-  * Inserire gli indirizzi IP dei nodi, premere `Tab key` per verificare la connettività e immettere i nomi dei nodi. Se node1 o node2 è rosso, verificare la connettività del browser a entrambi i nodi e i firewall di entrambi; consultare la 🛠️ [risoluzione dei problemi](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Inserire gli indirizzi IP dei nodi, premere `Tab key` per verificare la connettività e immettere i nomi dei nodi. Se node1 o node2 è rosso, verificare la connettività del browser a entrambi i nodi e i firewall di entrambi; consultare la 🛠️ [risoluzione dei problemi](/it/resources/safekit-user-guide-82/#Troubleshooting).
   * Fare clic su `Save and apply` per salvare la configurazione.
   * Verificare che il messaggio `Success` ✅ compaia su entrambi i nodi.
   * Se su un nodo si verifica `Failure` ❌, aprire il relativo pannello a fisarmonica ▼ e controllare i messaggi. È possibile chiedere assistenza a SafeKit AI 🤖.
@@ -70,7 +70,7 @@
 
 ℹ️ Facendo clic su `Advanced configuration`, viene visualizzato il file `userconfig.xml`. La console compila automaticamente il file e lo distribuisce sui nodi insieme agli script di riavvio.
 
-ℹ️ In una distribuzione cloud non è necessario configurare un indirizzo IP virtuale né le regole di bilanciamento del carico in SafeKit. L’IP virtuale e le regole di bilanciamento sono gestite a livello del 🛠️ [bilanciatore di carico cloud](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ In una distribuzione cloud non è necessario configurare un indirizzo IP virtuale né le regole di bilanciamento del carico in SafeKit. L’IP virtuale e le regole di bilanciamento sono gestite a livello del 🛠️ [bilanciatore di carico cloud](/it/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Quando si applica la configurazione SafeKit, il `startup type` dei servizi Windows viene impostato automaticamente su `Manual`. In questo modo i servizi non si avviano automaticamente all’avvio del sistema, ma solo quando viene avviato il modulo (lo stesso vale per Linux).
 

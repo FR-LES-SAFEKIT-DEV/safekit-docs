@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي على
 
 ## نظرة عامة على حل SafeKit / Windows {#overview-of-the-safekit--windows-solution}
 
-يوصف الحل هنا: **💡[أبسط حل للتوافر العالي على Windows: نسخ متماثل متزامن بين عقدتين وتحويل عند الفشل](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+يوصف الحل هنا: **💡[أبسط حل للتوافر العالي على Windows: نسخ متماثل متزامن بين عقدتين وتحويل عند الفشل](</ar/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## التثبيت على حلول SafeKit / Windows (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

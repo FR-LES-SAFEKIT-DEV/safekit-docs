@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad de Hyper-V con SafeKit: instale el módulo
   hyperv.safe para conmutación por error"
-canonical: https://safekit.eviden.com/es/es/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: Obtenga información sobre cómo configurar hyperv.safe para un
   clúster Hyper-V activo/activo con SafeKit. Logre alta disponibilidad a nivel
   de VM con una arquitectura de 2 nodos sin compartir. Replica sincrónicamente
@@ -36,7 +36,7 @@ La solución se describe aquí: **💡[Simple Hyper-V Alta disponibilidad sin al
   * Máximo 32 máquinas virtuales por host Hyper-V.
   * El total de datos replicados se limita a unos pocos terabytes; más allá de esto, el tiempo de resincronización se vuelve significativo.
   * Interconexión mínima de 1 Gb/s entre nodos (se recomiendan 10 Gb/s para una resincronización más rápida).
-  * La conmutación por error de IP requiere ambos nodos en el mismo LAN o LAN extendido (L2); no se admiten redes L3 enrutadas (excepto con 🛠️ [equilibradores de carga en la nube](</resources/safekit-user-guide-82/#Cloud>)).
+  * La conmutación por error de IP requiere ambos nodos en el mismo LAN o LAN extendido (L2); no se admiten redes L3 enrutadas (excepto con 🛠️ [equilibradores de carga en la nube](</es/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

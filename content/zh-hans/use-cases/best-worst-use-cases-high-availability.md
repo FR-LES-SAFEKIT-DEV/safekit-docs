@@ -21,7 +21,7 @@ topics: "最佳用例、 SafeKit高可用性限制、🔍 SafeKit高可用性导
 
 ### 分布式企业 {#distributed-enterprise}
 
-分布式企业在多个分支机构[部署了](</use-cases/business-continuity-software/>) SafeKit ，但缺乏特定的 IT 技能。
+分布式企业在多个分支机构[部署了](</zh-hans/use-cases/business-continuity-software/>) SafeKit ，但缺乏特定的 IT 技能。
 
 
 ![分布式企业中的高可用性软件](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
@@ -29,7 +29,7 @@ topics: "最佳用例、 SafeKit高可用性限制、🔍 SafeKit高可用性导
 
 ### 远程站点 {#remote-sites}
 
-[ SafeKit部署在两个远程站点](</best-practises/high-availability-disaster-recovery-hadr/>)中，无需通过 SAN 使用复制的磁盘槽。
+[ SafeKit部署在两个远程站点](</zh-hans/best-practises/high-availability-disaster-recovery-hadr/>)中，无需通过 SAN 使用复制的磁盘槽。
 
 
 ![无需复制 SAN 的业务连续性和灾难恢复](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")

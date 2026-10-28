@@ -15,7 +15,7 @@ topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Linux, Beper
 
 ## Overzicht van de SafeKit-/Linux-oplossing {#overview-of-the-safekit--linux-solution}
 
-De oplossing wordt hier beschreven: **💡[SafeKit: alles-in-éénsoftware voor loadbalancing en hoge beschikbaarheid op Linux](</solutions/linux-load-balancing-failover/>)**.
+De oplossing wordt hier beschreven: **💡[SafeKit: alles-in-éénsoftware voor loadbalancing en hoge beschikbaarheid op Linux](</nl/solutions/linux-load-balancing-failover/>)**.
 
 ## Installatie van de SafeKit-/Linux-oplossing (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
 

@@ -40,7 +40,7 @@ La consola web ** SafeKit ** proporciona una interfaz intuitiva para orquestar l
   * Comprobadores ** : ** Supervisan el estado de la aplicación y activan la recuperación automática si se detecta un fallo en el proceso.
 
 
-El clúster SafeKit incluye un verificador de división de cerebro dedicado para resolver problemas de aislamiento de red sin necesidad de una tercera máquina testigo ni una red de latidos adicional. Obtenga más información sobre la función de latidos, la conmutación por error y el quórum [ en un clúster ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) .
+El clúster SafeKit incluye un verificador de división de cerebro dedicado para resolver problemas de aislamiento de red sin necesidad de una tercera máquina testigo ni una red de latidos adicional. Obtenga más información sobre la función de latidos, la conmutación por error y el quórum [ en un clúster ](</es/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) .
 
 ### ¿Cómo supervisar un clúster SafeKit mirror ? {#safekit-mirror-cluster-monitoring}
 

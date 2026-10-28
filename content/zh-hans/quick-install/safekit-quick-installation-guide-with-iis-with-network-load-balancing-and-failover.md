@@ -15,7 +15,7 @@ topics: "IIS 、 SafeKit高可用性快速安装指南； SafeKit / IIS解决方
 
 ## SafeKit / IIS解决方案概述 {#overview-of-the-safekit--iis-solution}
 
-解决方案描述如下： ** 💡 [ SafeKit : 一体化IIS负载均衡和高可用性软件](</solutions/iis-load-balancing-failover/>) ** 。
+解决方案描述如下： ** 💡 [ SafeKit : 一体化IIS负载均衡和高可用性软件](</zh-hans/solutions/iis-load-balancing-failover/>) ** 。
 
 ## 在Windows ( iis_farm.safe )上安装SafeKit / IIS解决方案 {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 

@@ -22,7 +22,7 @@
 
 **{{ .Get "app" }} 用の SafeKit HA クラスター**
 
-<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Hyper-V HA クラスターのクイック インストール ガイド ></a>
+<a class="btn-quick-install" href="/ja/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Hyper-V HA クラスターのクイック インストール ガイド ></a>
 ## 目次 {#toc}
 
   * [SafeKit ソフトウェアは、SAN 上の共有ストレージを使用せずに、どのようにして {{ .Get "app" }} 高可用性クラスターを実装するのでしょうか?](#safekit-hyperv-ha-cluster)
@@ -64,7 +64,7 @@ VM レベルの HA はセットアップが簡単ですが、アプリケーシ�
 SafeKit は、次の点で従来の Hyper-V クラスタリング ソリューションとは異なります。 **シェアードナッシングアーキテクチャ** そして管理の簡素化。ほとんどの競合他社は VM フェイルオーバーを管理するために中央の SAN または vSAN を必要としますが、SafeKit は以下を提供します。
 
   * **統合されたリアルタイム レプリケーション:** データ同期はソリューションに直接組み込まれており、別のストレージ レイヤーを管理するオーバーヘッドなしで、{{ .Get "app" }} 仮想マシンが同期的にミラーリングされます。
-  * **簡素化された 2 ノード クラスタリング:** 3 ノードの「監視」クォーラムを推奨するエンタープライズ スタックとは異なり、SafeKit はわずか 2 台の冗長サーバーで完全な高可用性を実現します。 [ハートビートとクォーラムのメカニズムの詳細をご覧ください](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **簡素化された 2 ノード クラスタリング:** 3 ノードの「監視」クォーラムを推奨するエンタープライズ スタックとは異なり、SafeKit はわずか 2 台の冗長サーバーで完全な高可用性を実現します。 [ハートビートとクォーラムのメカニズムの詳細をご覧ください](/ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **統合管理:** 管理者は単一の SafeKit コンソールを通じて VM のフェイルオーバー、レプリケーション、負荷分散を管理できるため、クラスタリングの専門知識を持たないチームでもこのコンソールにアクセスできるようになります。
   * **カスタム チェッカー:** SafeKit はハードウェアの監視を超えています。それは利用します **カスタムチェッカー** VM がクラッシュしたかどうかを検出し、ローカルの再起動または冗長ノードへのフェイルオーバーを自動的にトリガーします。このシステムは拡張性も高く、特定の環境に合わせてカスタマイズされた新しいユーザー定義のカスタム チェッカーを簡単に統合できます。
 
@@ -82,7 +82,7 @@ SafeKit は、次の点で従来の Hyper-V クラスタリング ソリュー�
 
 ### SAN や複雑なクラスタリングのスキルがなくても、{{ .Get "app" }} クラスターをセットアップすることは可能ですか?
 
-はい。この記事ではその方法について説明します [Hyper-V クラスターを迅速に実装する](/quick-install/safekit-quick-installation-guide-with-hyper-v/) 特殊な SAN 管理や複雑な HA クラスタリングのスキルは必要ありません。 SafeKit を使用することで **自動フェイルオーバースクリプト** レプリケーションと再起動を処理するため **{{ .Get "app" }}** 仮想マシンを使用すると、従来のエンタープライズ仮想化スタックよりも導入と保守が大幅に簡単な堅牢な冗長ソリューションが得られます。
+はい。この記事ではその方法について説明します [Hyper-V クラスターを迅速に実装する](/ja/quick-install/safekit-quick-installation-guide-with-hyper-v/) 特殊な SAN 管理や複雑な HA クラスタリングのスキルは必要ありません。 SafeKit を使用することで **自動フェイルオーバースクリプト** レプリケーションと再起動を処理するため **{{ .Get "app" }}** 仮想マシンを使用すると、従来のエンタープライズ仮想化スタックよりも導入と保守が大幅に簡単な堅牢な冗長ソリューションが得られます。
 
 ### {{ .Get "app" }} 以外に、SafeKit はどのアプリケーションと環境を保護できますか?
 
@@ -110,7 +110,7 @@ SafeKit は次の機能も提供します **ファームクラスター** ネイ
 ![ミラー {{ .Get "app" }} クラスター内のバイト レベルでのファイル レプリケーション](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-レプリケーションは [同期](/best-practises/synchronous-replication-vs-asynchronous-replication/) 非同期レプリケーションとは異なり、障害時にデータが失われることはありません。
+レプリケーションは [同期](/ja/best-practises/synchronous-replication-vs-asynchronous-replication/) 非同期レプリケーションとは異なり、障害時にデータが失われることはありません。
 
 SafeKit で VM ディレクトリ名を設定するだけです。ディスク構成に関する前提条件はありません。ディレクトリはシステム ディスク内にある場合があります。
 
@@ -159,7 +159,7 @@ VM は、サーバー 1 にレプリケートされなくなったファイル�
 
 注: `VM1` が入力され、 `D:/Repli-Hyper-V/VM1/` がレプリケートされ、Hyper-V コマンドを使用して VM1 が自動的に再起動されます。
 
-SafeKit クラスターには専用の [ネットワーク分離の問題を解決するスプリット ブレイン チェッカー](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 3 台目の監視マシンや追加のハートビート ネットワークは必要ありません。
+SafeKit クラスターには専用の [ネットワーク分離の問題を解決するスプリット ブレイン チェッカー](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") 3 台目の監視マシンや追加のハートビート ネットワークは必要ありません。
 
 ### SafeKit {{ .Get "app" }} クラスターを監視するにはどうすればよいですか? {#safekit-mirror-cluster-monitoring}
 

@@ -33,7 +33,7 @@ topics: "SafeKit 사용한 다양한 고가용성 아키텍처 및 소프트웨�
 ![ SafeKit farm mirror 클러스터 ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-[ 추가 정보 ](</architectures/clustering-software-load-balancing-mirroring/>)
+[ 추가 정보 ](</ko/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### 활성/활성 클러스터 {#activeactive-cluster}
 
@@ -41,7 +41,7 @@ topics: "SafeKit 사용한 다양한 고가용성 아키텍처 및 소프트웨�
 ![ SafeKit 실시간 복제 기능이 있는 액티브 클러스터 ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[ 추가 정보 ](</architectures/active-active-cluster-real-time-replication/>)
+[ 추가 정보 ](</ko/architectures/active-active-cluster-real-time-replication/>)
 
 ### N-1 클러스터 {#n-1-cluster}
 
@@ -49,7 +49,7 @@ topics: "SafeKit 사용한 다양한 고가용성 아키텍처 및 소프트웨�
 ![ SafeKit N-1 중복 클러스터 ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[ 추가 정보 ](</architectures/n-1-redundancy/>)
+[ 추가 정보 ](</ko/architectures/n-1-redundancy/>)
 
 ## SafeKit 및 를 사용하여 고가용성 클러스터를 구축하는 방법은 무엇입니까? {#how-to-build-high-availability-clusters-with-safekit}
 

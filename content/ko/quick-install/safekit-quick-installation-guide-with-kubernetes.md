@@ -15,7 +15,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 
 ## SafeKit / Kubernetes 솔루션 개요 {#overview-of-the-safekit--kubernetes-solution}
 
-여기에 솔루션이 설명되어 있습니다: ** 💡 [ Kubernetes K3s 고가용성: 2노드 동기 복제 및 페일오버 ](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+여기에 솔루션이 설명되어 있습니다: ** 💡 [ Kubernetes K3s 고가용성: 2노드 동기 복제 및 페일오버 ](</ko/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## Linux ( k3s.safe ) 및 에 SafeKit / Kubernetes 솔루션의 설치 및 구성 {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -147,7 +147,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ 테스트에 대한 자세한 내용은 사용자 설명서를 참조하세요. ](</resources/safekit-user-guide-82/#tests>)
+🛠️ [ 테스트에 대한 자세한 내용은 사용자 설명서를 참조하세요. ](</ko/resources/safekit-user-guide-82/#tests>)
 
 
 ![ PRIM 서버에서 모듈을 중지합니다 ](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -207,7 +207,7 @@ WordPress는 자동으로 고가용성을 제공합니다.
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ 문제 해결은 사용자 설명서를 참조하세요. ](</resources/safekit-user-guide-82/#Troubleshooting>)
+🛠️ [ 문제 해결은 사용자 설명서를 참조하세요. ](</ko/resources/safekit-user-guide-82/#Troubleshooting>)
 
 
 ![ 지원을 위해 스냅샷을 찍으세요 ](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

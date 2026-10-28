@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Microsoft , 
 
 ## Übersicht der SafeKit / Microsoft SQL Server {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-Einen detaillierten Überblick über die Lösung finden Sie unter ** 💡 [ Die einfachste Lösung Microsoft SQL Server Hochverfügbarkeit: Synchrone Replikation und Failover mit 2 Knoten ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) ** .
+Einen detaillierten Überblick über die Lösung finden Sie unter ** 💡 [ Die einfachste Lösung Microsoft SQL Server Hochverfügbarkeit: Synchrone Replikation und Failover mit 2 Knoten ](</de/solutions/sql-server-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installation der SafeKit / Microsoft SQL Server Lösung auf Windows ( sqlserver.safe ) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 

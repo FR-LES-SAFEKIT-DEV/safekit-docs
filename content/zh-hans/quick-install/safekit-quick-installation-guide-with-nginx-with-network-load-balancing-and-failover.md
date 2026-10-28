@@ -15,7 +15,7 @@ topics: "NGINX 高可用性快速安装指南， SafeKit高可用性限制， Sa
 
 ## SafeKit / NGINX 解决方案概述 {#overview-of-the-safekit--nginx-solution}
 
-解决方案描述如下： ** 💡 [ SafeKit : 一体化 NGINX 负载均衡和高可用性软件](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** 。
+解决方案描述如下： ** 💡 [ SafeKit : 一体化 NGINX 负载均衡和高可用性软件](</zh-hans/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** 。
 
 ## 在Windows和Linux ( farm.safe )上安装SafeKit / NGINX 解决方案 {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 

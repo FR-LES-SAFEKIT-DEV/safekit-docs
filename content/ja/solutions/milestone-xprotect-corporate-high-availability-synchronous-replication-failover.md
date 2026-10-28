@@ -23,7 +23,7 @@ SafeKit は純粋なソフトウェアであり、ハードウェアに完全に
 
 ### Siemens が優先するソリューション {#solution-preferred-by-siemens}
 
-SafeKit は [Siemens Marketplace](https://www.siemens.com/en-us/products/atos-safekit/) で、💡 [Siveillance スイート](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)（ビデオおよびアクセス制御）や、SCADA ソフトウェアの 💡 [Desigo CC](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)（ビル管理）、💡 [SIMATIC WinCC](/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/)、💡 [SIMATIC PCS 7](/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/) とともに利用できます。
+SafeKit は [Siemens Marketplace](https://www.siemens.com/en-us/products/atos-safekit/) で、💡 [Siveillance スイート](/ja/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)（ビデオおよびアクセス制御）や、SCADA ソフトウェアの 💡 [Desigo CC](/ja/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)（ビル管理）、💡 [SIMATIC WinCC](/ja/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/)、💡 [SIMATIC PCS 7](/ja/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/) とともに利用できます。
 
 Siemens はオーストラリア、フランス、オランダ、カタール、スイス、アラブ首長国連邦、英国、米国で SafeKit を導入しています。
 
@@ -31,7 +31,7 @@ Siemens はオーストラリア、フランス、オランダ、カタール、
 
 物理アクセス制御の主要企業である Nedap は、AEOS アプリケーションの冗長化と高可用性に SafeKit を推奨しています。
 
-[Nedap/SafeKit ソリューション](/solutions/nedap-high-availability-synchronous-replication-failover/)は、無料トライアルとクイックインストールガイドを利用できます。
+[Nedap/SafeKit ソリューション](/ja/solutions/nedap-high-availability-synchronous-replication-failover/)は、無料トライアルとクイックインストールガイドを利用できます。
 
 ### TIL Technologies が SafeKit を選択 {#til-technologies-has-chosen-safekit}
 

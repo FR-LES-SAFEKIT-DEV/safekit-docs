@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Ei
 
 ## Überblick über die SafeKit-/Windows-Lösung {#overview-of-the-safekit--windows-solution}
 
-Die Lösung wird hier beschrieben: **💡[Die einfachste Windows-Hochverfügbarkeit: Synchrone 2-Knoten-Replikation und Failover](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+Die Lösung wird hier beschrieben: **💡[Die einfachste Windows-Hochverfügbarkeit: Synchrone 2-Knoten-Replikation und Failover](</de/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## Installation der SafeKit-/Windows-Lösungen (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

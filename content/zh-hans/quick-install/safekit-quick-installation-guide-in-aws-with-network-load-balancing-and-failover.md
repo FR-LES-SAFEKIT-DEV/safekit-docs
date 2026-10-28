@@ -15,7 +15,7 @@ topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS高可用
 
 ## SafeKit / AWS解决方案概述 {#overview-of-the-safekit--aws-solution}
 
-解决方案描述如下： ** 💡 [ SafeKit : Amazon AWS负载均衡和应用程序高可用性`Farm`集群](</solutions/aws-load-balancing-cluster-failover/>) ** 。
+解决方案描述如下： ** 💡 [ SafeKit : Amazon AWS负载均衡和应用程序高可用性`Farm`集群](</zh-hans/solutions/aws-load-balancing-cluster-failover/>) ** 。
 
 ## 在Windows和Linux ( farm.safe )上安装SafeKit / AWS解决方案 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

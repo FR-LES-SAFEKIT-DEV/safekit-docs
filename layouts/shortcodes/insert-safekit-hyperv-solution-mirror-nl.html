@@ -22,7 +22,7 @@ Door te consolideren **Hoge beschikbaarheid** In een lichtgewicht softwarelaag l
 
 **SafeKit HA-cluster voor {{ .Get "app" }}**
 
-<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Snelle installatiehandleiding voor Hyper-V HA-cluster ></a>
+<a class="btn-quick-install" href="/nl/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Snelle installatiehandleiding voor Hyper-V HA-cluster ></a>
 ## Inhoudsopgave {#toc}
 
   * [Hoe implementeert de SafeKit-software eenvoudig een {{ .Get "app" }}-cluster met hoge beschikbaarheid zonder gedeelde opslag op een SAN?](#safekit-hyperv-ha-cluster)
@@ -64,7 +64,7 @@ Hoewel HA op VM-niveau eenvoudiger in te stellen is, is HA op applicatieniveau h
 SafeKit onderscheidt zich van traditionele Hyper-V-clusteroplossingen door zijn **architectuur die niets deelt** en vereenvoudigd beheer. Terwijl de meeste concurrenten een centraal SAN of vSAN nodig hebben om VM-failover te beheren, biedt SafeKit:
 
   * **Geïntegreerde realtime replicatie:** Gegevenssynchronisatie is rechtstreeks in de oplossing ingebouwd en zorgt ervoor dat virtuele {{ .Get "app" }}-machines synchroon worden gespiegeld zonder de overhead van het beheer van een afzonderlijke opslaglaag.
-  * **Vereenvoudigde clustering met 2 knooppunten:** In tegenstelling tot enterprise-stacks die een 'witness'-quorum van 3 knooppunten aanbevelen, levert SafeKit volledige hoge beschikbaarheid met slechts twee redundante servers. [Lees meer over ons hartslag- en quorummechanisme](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Vereenvoudigde clustering met 2 knooppunten:** In tegenstelling tot enterprise-stacks die een 'witness'-quorum van 3 knooppunten aanbevelen, levert SafeKit volledige hoge beschikbaarheid met slechts twee redundante servers. [Lees meer over ons hartslag- en quorummechanisme](/nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **Uniform beheer:** Beheerders kunnen VM-failover, replicatie en taakverdeling beheren via één enkele SafeKit-console, waardoor deze toegankelijk wordt voor teams zonder gespecialiseerde clusterexpertise.
   * **Aangepaste dammen:** SafeKit gaat verder dan hardwaremonitoring; het gebruikt **aangepaste controleurs** om te detecteren of een VM is gecrasht, waardoor automatisch een lokale herstart of een failover naar het redundante knooppunt wordt geactiveerd. Het systeem is ook zeer uitbreidbaar, waardoor de eenvoudige integratie van nieuwe, door de gebruiker gedefinieerde aangepaste controleurs mogelijk is, afgestemd op uw specifieke omgeving.
 
@@ -82,7 +82,7 @@ In tegenstelling tot de meeste oplossingen met hoge beschikbaarheid op de markt,
 
 ### Is het mogelijk om een ​​{{ .Get "app" }}-cluster op te zetten zonder SAN of complexe clustervaardigheden?
 
-Ja. In dit artikel wordt uitgelegd hoe [implementeer snel een Hyper-V-cluster](/quick-install/safekit-quick-installation-guide-with-hyper-v/) zonder de noodzaak van gespecialiseerd SAN-beheer of complexe HA-clustervaardigheden. Door gebruik te maken van SafeKit’s **geautomatiseerde failover-scripts** om de replicatie af te handelen en opnieuw op te starten **{{ .Get "app" }}** virtuele machines krijgt u een robuuste redundantieoplossing die aanzienlijk eenvoudiger te implementeren en te onderhouden is dan traditionele enterprise virtualisatiestacks.
+Ja. In dit artikel wordt uitgelegd hoe [implementeer snel een Hyper-V-cluster](/nl/quick-install/safekit-quick-installation-guide-with-hyper-v/) zonder de noodzaak van gespecialiseerd SAN-beheer of complexe HA-clustervaardigheden. Door gebruik te maken van SafeKit’s **geautomatiseerde failover-scripts** om de replicatie af te handelen en opnieuw op te starten **{{ .Get "app" }}** virtuele machines krijgt u een robuuste redundantieoplossing die aanzienlijk eenvoudiger te implementeren en te onderhouden is dan traditionele enterprise virtualisatiestacks.
 
 ### Welke applicaties en omgevingen kan SafeKit behalve {{ .Get "app" }} beschermen?
 
@@ -110,7 +110,7 @@ Server 1 (PRIM) voert de {{ .Get "app" }} VM (virtuele machine) uit. SafeKit rep
 ![Bestandsreplicatie op byteniveau in een mirror {{ .Get "app" }}-cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-De replicatie is [synchroon](/best-practises/synchronous-replication-vs-asynchronous-replication/) zonder gegevensverlies bij storingen, in tegenstelling tot asynchrone replicatie.
+De replicatie is [synchroon](/nl/best-practises/synchronous-replication-vs-asynchronous-replication/) zonder gegevensverlies bij storingen, in tegenstelling tot asynchrone replicatie.
 
 U hoeft alleen maar de naam van de VM-directory in SafeKit te configureren. Er zijn geen vereisten voor schijforganisatie. De map bevindt zich mogelijk op de systeemschijf.
 
@@ -159,7 +159,7 @@ De **SafeKit-webconsole** biedt een intuïtieve interface om de hoge beschikbaar
 
 Opmerking: als `VM1` is ingevoerd, `D:/Repli-Hyper-V/VM1/` wordt gerepliceerd en VM1 wordt automatisch opnieuw opgestart met behulp van Hyper-V-opdrachten.
 
-Het SafeKit-cluster bevat een speciaal [split-brain checker om problemen met netwerkisolatie op te lossen](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") zonder de noodzaak van een derde getuigenmachine of een extra hartslagnetwerk.
+Het SafeKit-cluster bevat een speciaal [split-brain checker om problemen met netwerkisolatie op te lossen](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") zonder de noodzaak van een derde getuigenmachine of een extra hartslagnetwerk.
 
 ### Hoe kan ik een SafeKit {{ .Get "app" }}-cluster monitoren? {#safekit-mirror-cluster-monitoring}
 

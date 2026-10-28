@@ -259,7 +259,7 @@ _* の上 Linux再現するには、Corosync、Pacemaker、DRBD、Keepalived、S
 サポートポータル| <https://customercare.evidian.com>  
 無料AIサポート| [ https://safekit.eviden.com/ja/resources/safekit-support/]( </ja/resources/safekit-support/> )  
 無料トレーニング＆認定| 🎓 [ https://safekit.eviden.com/ja/resources/safekit-on-line-training/]( </ja/resources/safekit-on-line-training/> )  
-お問い合わせください| [ https://safekit.eviden.com/contact-us-for-safekit/]( </contact-us-for-safekit/>  
+お問い合わせください| [ https://safekit.eviden.com/contact-us-for-safekit/]( </ja/contact-us-for-safekit/>  
   
 
 {{%  insert-safekit-4-buttons-ja  %}}

@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي على
 
 ## نظرة عامة على حل SafeKit / Windows {#overview-of-the-safekit--windows-solution}
 
-يوصف الحل هنا: **💡[SafeKit: برنامج متكامل لموازنة التحميل والتوافر العالي على Windows](</solutions/windows-load-balancing-failover/>)**.
+يوصف الحل هنا: **💡[SafeKit: برنامج متكامل لموازنة التحميل والتوافر العالي على Windows](</ar/solutions/windows-load-balancing-failover/>)**.
 
 ## تثبيت حل SafeKit / Windows (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

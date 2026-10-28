@@ -160,7 +160,7 @@ La console web ** SafeKit ** offre un'interfaccia intuitiva per orchestrare l'al
   * ** Checkers: ** Monitora lo stato di salute dell'applicazione e attiva il ripristino automatico se viene rilevato un errore di processo.
 
 
-Il cluster SafeKit include un verificatore di split-brain dedicato per risolvere i problemi di isolamento di rete senza la necessità di una terza macchina witness o di una rete heartbeat aggiuntiva. Per ulteriori informazioni su heartbeat, failover e quorum in un cluster ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) , consultare la documentazione [ .
+Il cluster SafeKit include un verificatore di split-brain dedicato per risolvere i problemi di isolamento di rete senza la necessità di una terza macchina witness o di una rete heartbeat aggiuntiva. Per ulteriori informazioni su heartbeat, failover e quorum in un cluster ](</it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) , consultare la documentazione [ .
 
 ### Come monitorare un cluster SafeKit mirror {#safekit-mirror-cluster-monitoring}
 

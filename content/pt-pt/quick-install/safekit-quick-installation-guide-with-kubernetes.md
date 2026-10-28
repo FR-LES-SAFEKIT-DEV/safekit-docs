@@ -15,7 +15,7 @@ topics: "Guia de Instalação Rápida de Alta Disponibilidade para Kubernetes , 
 
 ## Visão geral da solução SafeKit / Kubernetes {#overview-of-the-safekit--kubernetes-solution}
 
-A solução é descrita aqui: ** 💡 [ Kubernetes Alta disponibilidade do K3s: Replicação síncrona e failover de 2 nós ](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+A solução é descrita aqui: ** 💡 [ Kubernetes Alta disponibilidade do K3s: Replicação síncrona e failover de 2 nós ](</pt-pt/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## Instalação e configuração da solução SafeKit / Kubernetes em Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -147,7 +147,7 @@ Se algo der errado, pare o nó 2 e force o início do nó 1 como primário ](</w
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ Mais informações sobre testes no Guia do Usuário. ](</resources/safekit-user-guide-82/#tests>)
+🛠️ [ Mais informações sobre testes no Guia do Usuário. ](</pt-pt/resources/safekit-user-guide-82/#tests>)
 
 
 ![ Pare o módulo no servidor PRIM ](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -207,7 +207,7 @@ O comando Helm anterior deve baixar a imagem do WordPress de `registry-1.docker.
 Nota ![ ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ Solução de problemas do [ no Guia do Usuário. ](</resources/safekit-user-guide-82/#Troubleshooting>)
+🛠️ Solução de problemas do [ no Guia do Usuário. ](</pt-pt/resources/safekit-user-guide-82/#Troubleshooting>)
 
 
 ![ Tire as fotos para suporte ](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

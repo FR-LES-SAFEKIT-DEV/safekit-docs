@@ -9,7 +9,7 @@
   * Application {{ .Get "app" }} installée sur 2 nœuds.
   * Total des données répliquées limité à quelques téraoctets ; au-delà, le temps de resynchronisation devient important.
   * Interconnexion minimale de 1 Gbit/s entre les nœuds (10 Gbit/s recommandés pour une resynchronisation plus rapide).
-  * Le basculement IP nécessite les deux nœuds sur le même LAN ou le même LAN étendu (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec les équilibreurs de charge cloud 🛠️ [](/resources/safekit-user-guide-82/#Cloud)).
+  * Le basculement IP nécessite les deux nœuds sur le même LAN ou le même LAN étendu (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec les équilibreurs de charge cloud 🛠️ [](/fr/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. Lancez la console SafeKit
@@ -22,7 +22,7 @@ Vous pouvez également exécuter la console dans un navigateur sur un poste de t
 
 ⚠️ La configuration de SafeKit se fait sur les deux nœuds depuis un seul navigateur.
 
-ℹ️ Pour sécuriser la console web, voir 🛠️ [11\. Sécurisation du service Web SafeKit](/resources/safekit-user-guide-82/#https) dans le Guide de l'utilisateur.
+ℹ️ Pour sécuriser la console web, voir 🛠️ [11\. Sécurisation du service Web SafeKit](/fr/resources/safekit-user-guide-82/#https) dans le Guide de l'utilisateur.
 
 
 ![Démarrez la console Web SafeKit pour configurer le cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,7 +30,7 @@ Vous pouvez également exécuter la console dans un navigateur sur un poste de t
 
 ### 2. Configurer les adresses des nœuds
 
-  * Entrez les adresses des nœuds IP, appuyez sur `Tab key` pour vérifier la connectivité et remplir les noms des nœuds. Si node1 ou node2 a une couleur rouge, vérifiez la connectivité du navigateur aux deux nœuds et vérifiez le pare-feu sur les deux nœuds pour 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Entrez les adresses des nœuds IP, appuyez sur `Tab key` pour vérifier la connectivité et remplir les noms des nœuds. Si node1 ou node2 a une couleur rouge, vérifiez la connectivité du navigateur aux deux nœuds et vérifiez le pare-feu sur les deux nœuds pour 🛠️ [troubleshooting](/fr/resources/safekit-user-guide-82/#Troubleshooting).
   * Cliquez ensuite sur `Save and apply` pour enregistrer la configuration.
   * Vérifiez le message `Success` ✅ sur les deux nœuds.
   * Si la configuration `Failure` ❌ se produit sur un nœud, ouvrez l'accordéon ▼ pour ce nœud et consultez les messages. Notez que vous pouvez utiliser le SafeKit AI 🤖 pour obtenir de l'aide.
@@ -75,7 +75,7 @@ Par exemple, si un nom de processus est affiché dans `Monitored processes/servi
 
 ℹ️ Si vous cliquez sur `Advanced configuration`, le fichier `userconfig.xml` s'affiche. Ce fichier est automatiquement renseigné par la console et déployé sur les nœuds avec les scripts de redémarrage.
 
-ℹ️ Dans un déploiement cloud, vous n'avez pas besoin de configurer une adresse virtuelle IP dans SafeKit. Le IP virtuel est géré au niveau de l'équilibreur de charge cloud 🛠️ [](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Dans un déploiement cloud, vous n'avez pas besoin de configurer une adresse virtuelle IP dans SafeKit. Le IP virtuel est géré au niveau de l'équilibreur de charge cloud 🛠️ [](/fr/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Lorsque vous appliquez la configuration SafeKit, le `startup type` des services est automatiquement défini sur `Manual` dans les services Windows. Cela garantit que les services ne démarrent pas automatiquement au démarrage du système, mais uniquement au démarrage du module lui-même (il en va de même sur Linux).
 
@@ -205,7 +205,7 @@ Seules les modifications contenues dans les fichiers sont répliquées en temps 
   * Si les choses tournent mal, arrêtez node2 et [forcez le démarrage en tant que principal 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) de node1, qui redémarrera avec ses données localement saines au moment de l'arrêt.
 
 
-ℹ️ Trouvez plus de détails, ainsi que des vidéos, dans la formation en ligne [SafeKit](/resources/safekit-on-line-training/).
+ℹ️ Trouvez plus de détails, ainsi que des vidéos, dans la formation en ligne [SafeKit](/fr/resources/safekit-on-line-training/).
 
 
 ![Arrêtez le module {{ .Get "app" }} sur le serveur PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -216,7 +216,7 @@ Seules les modifications contenues dans les fichiers sont répliquées en temps 
   * Pour obtenir de l'aide, prenez 2 SafeKit `Snapshots` (2 fichiers .zip), un pour chaque nœud.
 
 
-ℹ️ [Plus d'informations sur le support ici](/resources/safekit-support/).
+ℹ️ [Plus d'informations sur le support ici](/fr/resources/safekit-support/).
 
 
 ![Prenez les instantanés {{ .Get "app" }} pour obtenir de l'aide](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

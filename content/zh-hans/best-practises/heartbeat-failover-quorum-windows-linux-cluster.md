@@ -65,7 +65,7 @@ SafeKit软件支持与两台服务器共享的网络数量一样多的心跳信�
 
 ### SafeKit裂脑检测器 {#safekit-split-brain-checker}
 
-借助SafeKit高可用性软件， Windows或Linux集群内的仲裁无需第三台仲裁服务器，也无需仲裁磁盘。一个简单的脑裂检测](</resources/safekit-user-guide-82/#check_splitbrain>) [避免应用程序的重复执行。
+借助SafeKit高可用性软件， Windows或Linux集群内的仲裁无需第三台仲裁服务器，也无需仲裁磁盘。一个简单的脑裂检测](</zh-hans/resources/safekit-user-guide-82/#check_splitbrain>) [避免应用程序的重复执行。
 
 当服务器间所有心跳信号丢失时，脑裂检测器会选择一台服务器作为主服务器。另一台服务器进入等待状态，直到再次收到主服务器的心跳信号。之后，在从主服务器同步复制数据后，它将重新成为辅助服务器。
 

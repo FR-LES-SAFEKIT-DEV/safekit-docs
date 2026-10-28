@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide haute disponibilité pour Firebird et SafeK
 
 ## Présentation de la solution SafeKit / Firebird {#overview-of-the-safekit--firebird-solution}
 
-La solution est décrite ici : ** 💡 [ Le plus simple Firebird Haute disponibilité : Réplication synchrone à 2 nœuds et basculement ](</solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
+La solution est décrite ici : ** 💡 [ Le plus simple Firebird Haute disponibilité : Réplication synchrone à 2 nœuds et basculement ](</fr/solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installation de la solution SafeKit / Firebird sur Windows et Linux ( firebird.safe ) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 

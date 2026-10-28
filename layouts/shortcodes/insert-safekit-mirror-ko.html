@@ -8,13 +8,13 @@
 
 ### 단계 1. 실시간 복제 {#step1}
 
-서버 1(PRIM)이 {{ .Get "app" }} 애플리케이션을 실행합니다. 클라이언트는 [가상 IP 주소](/best-practises/how-a-virtual-ip-address-works/)에 연결됩니다. SafeKit은 네트워크를 통해 파일 내부의 변경 사항을 실시간으로 복제합니다.
+서버 1(PRIM)이 {{ .Get "app" }} 애플리케이션을 실행합니다. 클라이언트는 [가상 IP 주소](/ko/best-practises/how-a-virtual-ip-address-works/)에 연결됩니다. SafeKit은 네트워크를 통해 파일 내부의 변경 사항을 실시간으로 복제합니다.
 
 
 ![미러 {{ .Get "app" }} 클러스터의 바이트 단위 파일 복제](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-이 복제 방식은 비동기 복제와 달리 장애 발생 시 데이터 손실이 없는 [동기식(synchronous)](/best-practises/synchronous-replication-vs-asynchronous-replication/) 복제입니다.
+이 복제 방식은 비동기 복제와 달리 장애 발생 시 데이터 손실이 없는 [동기식(synchronous)](/ko/best-practises/synchronous-replication-vs-asynchronous-replication/) 복제입니다.
 
 SafeKit에서 복제할 디렉터리 이름만 구성하면 됩니다. 디스크 구조에 대한 사전 요구사항은 없습니다. 디렉터리는 시스템 디스크에 위치할 수도 있습니다.
 
@@ -67,7 +67,7 @@ SafeKit은 서버 1이 정지된 동안 서버 2에서 수정된 파일만 업�
   * **체커 (Checkers):** 애플리케이션의 상태를 모니터링하고 프로세스 실패가 감지되면 자동 복구를 트리거합니다.
 
 
-SafeKit 클러스터에는 제3의 감시(witness) 장비나 추가 하트비트 네트워크 없이도 네트워크 격리 문제를 해결할 수 있는 전용 스플릿 브레인(split-brain) 체커가 포함되어 있습니다. [클러스터의 하트비트, 장애 조치 및 쿼럼](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)에 대해 자세히 알아보세요.
+SafeKit 클러스터에는 제3의 감시(witness) 장비나 추가 하트비트 네트워크 없이도 네트워크 격리 문제를 해결할 수 있는 전용 스플릿 브레인(split-brain) 체커가 포함되어 있습니다. [클러스터의 하트비트, 장애 조치 및 쿼럼](/ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)에 대해 자세히 알아보세요.
 
 ### {{ .Get "app" }}을 위한 SafeKit 미러 클러스터 모니터링 방법은 무엇인가요? {#safekit-mirror-cluster-monitoring}
 

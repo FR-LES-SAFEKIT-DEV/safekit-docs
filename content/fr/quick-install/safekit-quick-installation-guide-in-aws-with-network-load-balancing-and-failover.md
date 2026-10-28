@@ -13,7 +13,7 @@ topics: "Guide d’installation rapide de la haute disponibilité pour AWS, Limi
 
 ## Présentation de la solution SafeKit / AWS {#overview-of-the-safekit--aws-solution}
 
-La solution est décrite ici : **💡[SafeKit : équilibrage de charge Amazon AWS et haute disponibilité applicative avec un cluster `Farm`](</solutions/aws-load-balancing-cluster-failover/>)**.
+La solution est décrite ici : **💡[SafeKit : équilibrage de charge Amazon AWS et haute disponibilité applicative avec un cluster `Farm`](</fr/solutions/aws-load-balancing-cluster-failover/>)**.
 
 ## Installation de la solution SafeKit / AWS sous Windows et Linux (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

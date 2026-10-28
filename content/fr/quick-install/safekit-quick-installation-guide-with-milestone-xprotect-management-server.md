@@ -31,7 +31,7 @@ La solution est décrite ici : **💡[La haute disponibilité Milestone XProtec
   * supprimez MSSQLServer de la macro SERVICES.
 
 
-Vous pouvez assurer la redondance du SQL Server externe avec **💡[SafeKit et le module sqlserver.safe](</solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
+Vous pouvez assurer la redondance du SQL Server externe avec **💡[SafeKit et le module sqlserver.safe](</fr/solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
 
 Dans ce cas, sur les deux nœuds Management, configurez la [connexion de Milestone Management à SQL](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>) avec l'adresse IP virtuelle du module sqlserver.safe (clé de registre HKEY_LOCAL_MACHINE > SOFTWARE > VideoOSServerConnectionString).
 
@@ -61,7 +61,7 @@ Et pour le cluster Event, à l'étape 4 de la configuration pas à pas de milest
   * Le flux de chaque caméra peut aussi être envoyé à deux enregistreurs avec la solution [Vega / RMF](<https://vega25.com/>).
 
 
-ℹ️ En cas de migration de Milestone de la version N vers la version N+1 dans un cluster SafeKit, lisez cet article : 🛠️ [Migration de Milestone Management avec SafeKit](</quick-install/safekit-quick-installation-guide-milestone-migration/>)
+ℹ️ En cas de migration de Milestone de la version N vers la version N+1 dans un cluster SafeKit, lisez cet article : 🛠️ [Migration de Milestone Management avec SafeKit](</fr/quick-install/safekit-quick-installation-guide-milestone-migration/>)
 
 
 {{%  insert-safekit-installation-package-windows-fr app="Milestone XProtect and SQL" mod="milestone"  %}}

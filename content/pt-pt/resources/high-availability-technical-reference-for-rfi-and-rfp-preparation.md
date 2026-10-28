@@ -255,11 +255,11 @@ URL do recurso |
 Página inicial do produto | <https://safekit.eviden.com>  
 Visão geral técnica (DOCX com texto e diagramas) | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
 Teste </pt-pt/resources/safekit-free-trial/> | [ https://safekit.eviden.com/pt-pt/resources/safekit-free-trial/]( )  
-Solicite um orçamento | [ https://safekit.eviden.com/safekit-pricing/]( </safekit-pricing/> )  
+Solicite um orçamento | [ https://safekit.eviden.com/safekit-pricing/]( </pt-pt/safekit-pricing/> )  
 Portal de suporte | <https://customercare.evidian.com>  
 Suporte gratuito de IA | [ https://safekit.eviden.com/pt-pt/resources/safekit-support/]( </pt-pt/resources/safekit-support/> )  
 Treinamento e certificação gratuitos | 🎓 [ https://safekit.eviden.com/pt-pt/resources/safekit-on-line-training/]( </pt-pt/resources/safekit-on-line-training/> )  
-Entre em contato conosco | [ https://safekit.eviden.com/contact-us-for-safekit/]( </contact-us-for-safekit/> )  
+Entre em contato conosco | [ https://safekit.eviden.com/contact-us-for-safekit/]( </pt-pt/contact-us-for-safekit/> )  
   
 
 {{%  insert-safekit-4-buttons-pt-pt  %}}

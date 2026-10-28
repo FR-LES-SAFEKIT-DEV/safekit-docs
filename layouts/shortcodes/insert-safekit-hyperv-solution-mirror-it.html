@@ -22,7 +22,7 @@ Consolidando **Alta disponibilità** in un livello software leggero, SafeKit off
 
 **Cluster HA SafeKit per {{ .Get "app" }}**
 
-<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Guida rapida all'installazione del cluster HA Hyper-V ></a>
+<a class="btn-quick-install" href="/it/quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Guida rapida all'installazione del cluster HA Hyper-V ></a>
 ## Sommario {#toc}
 
   * [In che modo il software SafeKit implementa semplicemente un cluster ad alta disponibilità {{ .Get "app" }} senza archiviazione condivisa su una SAN?](#safekit-hyperv-ha-cluster)
@@ -64,7 +64,7 @@ Mentre l'HA a livello di VM è più semplice da configurare, l'HA a livello di a
 SafeKit si differenzia dalle tradizionali soluzioni di clustering Hyper-V grazie alla sua **architettura del nulla-condiviso** e gestione semplificata. Mentre la maggior parte dei concorrenti richiede una SAN o vSAN centrale per gestire il failover delle VM, SafeKit fornisce:
 
   * **Replica integrata in tempo reale:** La sincronizzazione dei dati è integrata direttamente nella soluzione, garantendo il mirroring sincrono delle macchine virtuali {{ .Get "app" }} senza il sovraccarico della gestione di un livello di storage separato.
-  * **Clustering semplificato a 2 nodi:** A differenza degli stack aziendali che consigliano un quorum "testimone" di 3 nodi, SafeKit offre disponibilità elevata completa con soli due server ridondanti. [Scopri di più sul nostro meccanismo di heartbeat e quorum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Clustering semplificato a 2 nodi:** A differenza degli stack aziendali che consigliano un quorum "testimone" di 3 nodi, SafeKit offre disponibilità elevata completa con soli due server ridondanti. [Scopri di più sul nostro meccanismo di heartbeat e quorum](/it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **Gestione unificata:** Gli amministratori possono gestire il failover, la replica e il bilanciamento del carico delle VM tramite un'unica console SafeKit, rendendola accessibile ai team senza competenze specializzate in clustering.
   * **Dama personalizzata:** SafeKit va oltre il monitoraggio dell'hardware; utilizza **pedine personalizzate** per rilevare se una VM si è bloccata, attivando automaticamente un riavvio locale o un failover sul nodo ridondante. Il sistema è anche altamente estensibile, consentendo la facile integrazione di nuovi controllori personalizzati definiti dall'utente e adattati al proprio ambiente specifico.
 
@@ -82,7 +82,7 @@ A differenza della maggior parte delle soluzioni ad alta disponibilità sul merc
 
 ### È possibile configurare un cluster {{ .Get "app" }} senza SAN o competenze di clustering complesse?
 
-Sì. Questo articolo spiega come farlo [implementare rapidamente un cluster Hyper-V](/quick-install/safekit-quick-installation-guide-with-hyper-v/) senza la necessità di una gestione SAN specializzata o di complesse competenze di clustering HA. Utilizzando SafeKit **script di failover automatizzati** per gestire la replica e il riavvio di **{{ .Get "app" }}** macchine virtuali, ottieni una solida soluzione di ridondanza molto più semplice da implementare e gestire rispetto ai tradizionali stack di virtualizzazione aziendale.
+Sì. Questo articolo spiega come farlo [implementare rapidamente un cluster Hyper-V](/it/quick-install/safekit-quick-installation-guide-with-hyper-v/) senza la necessità di una gestione SAN specializzata o di complesse competenze di clustering HA. Utilizzando SafeKit **script di failover automatizzati** per gestire la replica e il riavvio di **{{ .Get "app" }}** macchine virtuali, ottieni una solida soluzione di ridondanza molto più semplice da implementare e gestire rispetto ai tradizionali stack di virtualizzazione aziendale.
 
 ### Oltre a {{ .Get "app" }}, quali applicazioni e ambienti può proteggere SafeKit?
 
@@ -110,7 +110,7 @@ Il server 1 (PRIM) esegue la VM {{ .Get "app" }} (macchina virtuale). SafeKit re
 ![Replica dei file a livello di byte in un cluster {{ .Get "app" }} mirror](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-La replica è [sincrono](/best-practises/synchronous-replication-vs-asynchronous-replication/) senza perdita di dati in caso di guasto contrariamente alla replica asincrona.
+La replica è [sincrono](/it/best-practises/synchronous-replication-vs-asynchronous-replication/) senza perdita di dati in caso di guasto contrariamente alla replica asincrona.
 
 Devi solo configurare il nome della directory della VM in SafeKit. Non sono previsti prerequisiti per l'organizzazione del disco. La directory potrebbe trovarsi nel disco di sistema.
 
@@ -159,7 +159,7 @@ IL **Console web SafeKit** fornisce un'interfaccia intuitiva per configurare l'e
 
 Nota: se `VM1` è inserito, `D:/Repli-Hyper-V/VM1/` verrà replicato e la VM1 verrà riavviata automaticamente utilizzando i comandi Hyper-V.
 
-Il cluster SafeKit include un file dedicato [strumento di controllo split-brain per risolvere i problemi di isolamento della rete](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") senza la necessità di una terza macchina testimone o di una rete heartbeat aggiuntiva.
+Il cluster SafeKit include un file dedicato [strumento di controllo split-brain per risolvere i problemi di isolamento della rete](</it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") senza la necessità di una terza macchina testimone o di una rete heartbeat aggiuntiva.
 
 ### Come monitorare un cluster SafeKit {{ .Get "app" }}? {#safekit-mirror-cluster-monitoring}
 

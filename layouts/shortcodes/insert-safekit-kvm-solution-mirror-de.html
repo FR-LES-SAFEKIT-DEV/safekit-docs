@@ -22,7 +22,7 @@ Durch Konsolidierung **Hochverfügbarkeit** Durch die Integration in eine schlan
 
 **SafeKit HA Cluster für {{ .Get "app" }}**
 
-<a class="btn-quick-install" href="/quick-install/safekit-quick-installation-guide-with-kvm/">⚡ Schnellinstallationsanleitung für {{ .Get "app" }} und HA Cluster ></a>
+<a class="btn-quick-install" href="/de/quick-install/safekit-quick-installation-guide-with-kvm/">⚡ Schnellinstallationsanleitung für {{ .Get "app" }} und HA Cluster ></a>
 ## Inhaltsverzeichnis {#toc}
 
   * [Wie die SafeKit-Software auf einfache Weise einen hochverfügbaren {{ .Get "app" }}-Cluster ohne gemeinsam genutzten Speicher auf einem SAN implementiert?](#safekit-kvm-ha-cluster)
@@ -64,7 +64,7 @@ Während die VM-Ebene HA einfacher einzurichten ist, ist die Anwendungsebene HA 
 SafeKit unterscheidet sich von herkömmlichen {{ .Get "app" }}-Clustering-Lösungen durch seine **Shared-Nothing-Architektur** und vereinfachte Verwaltung. Während die meisten Wettbewerber komplexe verteilte Dateisysteme (wie Ceph) oder ein zentrales SAN zur Verwaltung des VM-Failover benötigen, bietet SafeKit Folgendes::
 
   * **Integrierte Echtzeitreplikation:** Die Datensynchronisierung ist direkt in die Lösung integriert und gewährleistet so, dass virtuelle Maschinen des Typs {{ .Get "app" }} synchron gespiegelt werden, ohne dass der Aufwand für die Verwaltung einer separaten Speicherschicht entsteht..
-  * **Vereinfachtes 2-Knoten-Clustering:** Im Gegensatz zu Enterprise-Stacks, die ein Quorum aus drei Knoten („Zeugen“) empfehlen, bietet SafeKit volle Hochverfügbarkeit mit nur zwei redundanten Servern.. [Erfahren Sie mehr über unsere heartbeat-Nummer und den Quorum-Mechanismus.](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Vereinfachtes 2-Knoten-Clustering:** Im Gegensatz zu Enterprise-Stacks, die ein Quorum aus drei Knoten („Zeugen“) empfehlen, bietet SafeKit volle Hochverfügbarkeit mit nur zwei redundanten Servern.. [Erfahren Sie mehr über unsere heartbeat-Nummer und den Quorum-Mechanismus.](/de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **Einheitliches Management:** Administratoren können Failover, Replikation und Lastverteilung von VM über eine einzige SafeKit-Konsole verwalten, wodurch die Funktion auch für Teams ohne spezielle Clustering-Kenntnisse zugänglich ist..
   * **Benutzerdefinierte Schachbrettmuster:** SafeKit geht über die Hardwareüberwachung hinaus; es nutzt **benutzerdefinierte Schachbrettmuster** Das System erkennt, ob ein VM-Knoten abgestürzt ist, und löst automatisch einen lokalen Neustart oder ein Failover auf den redundanten Knoten aus. Es ist zudem hochgradig erweiterbar und ermöglicht die einfache Integration neuer, benutzerdefinierter Prüfmechanismen, die auf Ihre spezifische Umgebung zugeschnitten sind..
 
@@ -82,7 +82,7 @@ Im Gegensatz zu den meisten Hochverfügbarkeitslösungen auf dem Markt ist SafeK
 
 ### Ist es möglich, einen {{ .Get "app" }}-Cluster ohne SAN oder komplexe Clustering-Kenntnisse einzurichten??
 
-Ja. Dieser Artikel erklärt, wie das geht. [schnell einen {{ .Get "app" }}-Cluster implementieren](/quick-install/safekit-quick-installation-guide-with-kvm/) ohne die Notwendigkeit einer spezialisierten SAN-Verwaltung oder komplexer HA-Clustering-Kenntnisse. Durch die Verwendung von SafeKit **automatisierte Failover-Skripte** um die Replikation und den Neustart von **{{ .Get "app" }}** Mit virtuellen Maschinen erhalten Sie eine robuste Redundanzlösung, die deutlich einfacher zu implementieren und zu warten ist als herkömmliche Virtualisierungslösungen für Unternehmen..
+Ja. Dieser Artikel erklärt, wie das geht. [schnell einen {{ .Get "app" }}-Cluster implementieren](/de/quick-install/safekit-quick-installation-guide-with-kvm/) ohne die Notwendigkeit einer spezialisierten SAN-Verwaltung oder komplexer HA-Clustering-Kenntnisse. Durch die Verwendung von SafeKit **automatisierte Failover-Skripte** um die Replikation und den Neustart von **{{ .Get "app" }}** Mit virtuellen Maschinen erhalten Sie eine robuste Redundanzlösung, die deutlich einfacher zu implementieren und zu warten ist als herkömmliche Virtualisierungslösungen für Unternehmen..
 
 ### Darüber hinaus{{ .Get "app" }}welche Anwendungen und Umgebungen könnenSafeKitschützen?
 
@@ -110,7 +110,7 @@ Server 1 (PRIM) betreibt die virtuelle Maschine {{ .Get "app" }} VM. SafeKit rep
 ![Dateireplikation auf Byte-Ebene in einem Spiegelcluster {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-Die Replikation ist [synchron](/best-practises/synchronous-replication-vs-asynchronous-replication/) im Gegensatz zur asynchronen Replikation ohne Datenverlust bei einem Fehler..
+Die Replikation ist [synchron](/de/best-practises/synchronous-replication-vs-asynchronous-replication/) im Gegensatz zur asynchronen Replikation ohne Datenverlust bei einem Fehler..
 
 Sie müssen lediglich den Verzeichnisnamen VM in SafeKit konfigurieren. Es gibt keine Voraussetzungen hinsichtlich der Festplattenorganisation. Das Verzeichnis kann sich auf der Systemfestplatte befinden..
 
@@ -157,7 +157,7 @@ Der **SafeKit Webkonsole** bietet eine intuitive Benutzeroberfläche zur Konfigu
   * Geben Sie ein `VM_NAME`, der Name der virtuellen Maschine {{ .Get "app" }} (VM1).
 
 
-Das SafeKit-Cluster enthält einen dedizierten [split-brain-Prüfer zur Behebung von Netzwerkisolationsproblemen](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") ohne die Notwendigkeit eines dritten Zeugenrechners oder eines zusätzlichen heartbeat-Netzwerks.
+Das SafeKit-Cluster enthält einen dedizierten [split-brain-Prüfer zur Behebung von Netzwerkisolationsproblemen](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/> "Technical details on heartbeat and split-brain prevention") ohne die Notwendigkeit eines dritten Zeugenrechners oder eines zusätzlichen heartbeat-Netzwerks.
 
 ### Wie man einen SafeKit {{ .Get "app" }}-Cluster überwacht? {#safekit-mirror-cluster-monitoring}
 
@@ -214,7 +214,7 @@ In diesem Video erfahren Sie, wie SafeKit implementiert **Hohe Verfügbarkeit f�
 
 ### Schrittweise Umsetzung:
 
-  * 🛠️ [Starten Sie Ihre kostenlose Testversion und folgen Sie der Schnellinstallationsanleitung für Hyper-V.](/quick-install/safekit-quick-installation-guide-with-hyper-v/)
+  * 🛠️ [Starten Sie Ihre kostenlose Testversion und folgen Sie der Schnellinstallationsanleitung für Hyper-V.](/de/quick-install/safekit-quick-installation-guide-with-hyper-v/)
 
 
 

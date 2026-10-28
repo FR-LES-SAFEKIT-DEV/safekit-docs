@@ -65,7 +65,7 @@ Infelizmente, esses novos dispositivos de quorum aumentam o custo e a complexida
 
 ### Verificador de cérebro dividido SafeKit {#safekit-split-brain-checker}
 
-Com o software de alta disponibilidade SafeKit , o quorum dentro de um cluster Windows ou Linux não requer um terceiro servidor de quorum nem um disco de quorum. Um verificador de split-brain simples [ ](</resources/safekit-user-guide-82/#check_splitbrain>) é suficiente para evitar a execução dupla de um aplicativo.
+Com o software de alta disponibilidade SafeKit , o quorum dentro de um cluster Windows ou Linux não requer um terceiro servidor de quorum nem um disco de quorum. Um verificador de split-brain simples [ ](</pt-pt/resources/safekit-user-guide-82/#check_splitbrain>) é suficiente para evitar a execução dupla de um aplicativo.
 
 Na perda de todos os sinais de pulsação entre os servidores, o verificador de "split brain" seleciona apenas um servidor para se tornar o primário. O outro servidor entra no estado de ESPERA até receber novamente os sinais de pulsação do outro servidor. Em seguida, ele retorna ao estado secundário após ter sincronizado os dados replicados do servidor primário.
 

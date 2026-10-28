@@ -15,7 +15,7 @@ topics: "NGINX 고가용성 빠른 설치 가이드( SafeKit , 고가용성 제�
 
 ## SafeKit / NGINX 솔루션 개요 {#overview-of-the-safekit--nginx-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : 올인원 NGINX 로드 밸런싱 및 고가용성 소프트웨어 ](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : 올인원 NGINX 로드 밸런싱 및 고가용성 소프트웨어 ](</ko/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
 
 ## Windows 및 Linux ( farm.safe ) 및 에 SafeKit /NGINX 솔루션 설치 {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 

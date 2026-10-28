@@ -13,7 +13,7 @@ topics: "Guide d’installation rapide de la haute disponibilité pour Cloud, Li
 
 ## Présentation de la solution SafeKit / Cloud mirror {#overview-of-the-safekit--cloud-mirror-solution}
 
-La solution est décrite ici : **💡[Haute disponibilité indépendante du Cloud : réplication synchrone et basculement avec SafeKit](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)**.
+La solution est décrite ici : **💡[Haute disponibilité indépendante du Cloud : réplication synchrone et basculement avec SafeKit](</fr/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation de la solution SafeKit / Cloud mirror sous Windows et Linux (mirror.safe) {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

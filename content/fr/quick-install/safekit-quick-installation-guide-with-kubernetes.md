@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide haute disponibilité pour Kubernetes et Saf
 
 ## Présentation de la solution SafeKit / Kubernetes {#overview-of-the-safekit--kubernetes-solution}
 
-La solution est décrite ici : ** 💡 [ Kubernetes Haute disponibilité K3s : Réplication synchrone et basculement sur 2 nœuds ](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+La solution est décrite ici : ** 💡 [ Kubernetes Haute disponibilité K3s : Réplication synchrone et basculement sur 2 nœuds ](</fr/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## Installation et configuration de la solution SafeKit / Kubernetes sur Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 

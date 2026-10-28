@@ -15,7 +15,7 @@ topics: "Windows 向け高可用性クイックインストールガイド, Safe
 
 ## SafeKit / Windows ソリューションの概要 {#overview-of-the-safekit--windows-solution}
 
-ソリューションの説明はこちらです: **💡[最もシンプルな Windows 高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+ソリューションの説明はこちらです: **💡[最もシンプルな Windows 高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## SafeKit / Windows ソリューションへのインストール (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

@@ -45,7 +45,7 @@ Des compétences sont requises pour configurer un disque répliqué avec un syst
 
 C'est la réplication des modifications à l'intérieur des fichiers entre deux serveurs (comme [SafeKit](</fr/>) ).
 
-Pour un basculement automatique, la [réplication synchrone](</best-practises/synchronous-replication-vs-asynchronous-replication/>) est requise pour avoir 0 perte de données.
+Pour un basculement automatique, la [réplication synchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) est requise pour avoir 0 perte de données.
 
 Cette technique de réplication de données peut répliquer des bases de données ainsi que d'autres fichiers. Il n'y a pas d'impact sur l'organisation des données d'une application. Par exemple, si une application a ses données sur le disque système, la réplication de fichiers en temps réel fonctionne.
 

@@ -65,7 +65,7 @@ SafeKit se distingue de los clústeres {{ .Get "app" }} tradicionales por su **a
 
   * **Replicación síncrona sin pérdida de datos:** SafeKit replica de forma 100 % síncrona y preserva la integridad de los datos transaccionales. Si se produce un fallo, hay **cero pérdida de datos (RPO=0)**. Además de las bases de datos de {{ .Get "app" }}, replica **cualquier otra carpeta de datos** (registros, archivos de configuración, etc.) para reflejar todo el entorno.
   * **Clustering simplificado de 2 nodos:** Los clústeres estándar suelen requerir un «testigo» (un tercer nodo, disco o recurso compartido) para mantener el cuórum. SafeKit ofrece alta disponibilidad completa con solo dos servidores redundantes, reduciendo costes y complejidad.  
-[Más información sobre el mecanismo de heartbeat y cuórum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+[Más información sobre el mecanismo de heartbeat y cuórum](/es/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
   * **Administración unificada:** Los administradores pueden gestionar la conmutación por error, la replicación y la supervisión de {{ .Get "app" }} desde una sola consola SafeKit, sin conocimientos especializados de administración de clústeres.
   * **Comprobadores personalizados:** SafeKit va más allá de la supervisión básica de servicios y **ofrece comprobadores** del estado del proceso de {{ .Get "app" }}. El sistema es extensible y permite añadir comprobadores adaptados a cada entorno.
 

@@ -259,7 +259,7 @@ Obtenez un devis | </safekit-pricing/> [ https://safekit.eviden.com/safekit-pric
 Portail d'assistance | <https://customercare.evidian.com>  
 Assistance IA gratuite | [ https://safekit.eviden.com/fr/resources/safekit-support/]( </fr/resources/safekit-support/> )  
 Formation et certification gratuites | 🎓 [ https://safekit.eviden.com/fr/resources/safekit-on-line-training/]( </fr/resources/safekit-on-line-training/> )  
-Contactez-nous | [ https://safekit.eviden.com/contact-us-for-safekit/]( </contact-us-for-safekit/> )  
+Contactez-nous | [ https://safekit.eviden.com/contact-us-for-safekit/]( </fr/contact-us-for-safekit/> )  
   
 
 {{%  insert-safekit-4-buttons-fr  %}}

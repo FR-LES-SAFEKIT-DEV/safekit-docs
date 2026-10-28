@@ -15,7 +15,7 @@ topics: "Dockerの高可用性クイックインストールガイド、 SafeKit
 
 ## SafeKit / Dockerソリューションの概要 {#overview-of-the-safekit--docker-solution}
 
-ソリューションの説明はこちらです: ** 💡 [ SafeKit : Docker高可用性およびリアルタイムデータレプリケーションソフトウェア](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+ソリューションの説明はこちらです: ** 💡 [ SafeKit : Docker高可用性およびリアルタイムデータレプリケーションソフトウェア](</ja/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## SafeKit / DockerソリューションをLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}

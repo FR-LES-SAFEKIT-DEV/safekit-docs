@@ -15,7 +15,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para NGINX, limita
 
 ## Descripción general de la solución SafeKit / NGINX {#overview-of-the-safekit--nginx-solution}
 
-La solución se describe aquí: ** 💡 [ SafeKit : Software de equilibrio de carga y alta disponibilidad NGINX todo en uno ](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
+La solución se describe aquí: ** 💡 [ SafeKit : Software de equilibrio de carga y alta disponibilidad NGINX todo en uno ](</es/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
 
 ## Instalación de la solución SafeKit / NGINX en Windows y Linux ( farm.safe ) {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 

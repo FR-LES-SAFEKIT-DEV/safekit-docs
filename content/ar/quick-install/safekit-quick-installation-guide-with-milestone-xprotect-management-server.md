@@ -31,7 +31,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ M
   * أزل MSSQLServer من الماكرو SERVICES.
 
 
-يمكنك تنفيذ التكرار الاحتياطي لـ SQL Server الخارجي باستخدام **💡[SafeKit ووحدة sqlserver.safe](</solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
+يمكنك تنفيذ التكرار الاحتياطي لـ SQL Server الخارجي باستخدام **💡[SafeKit ووحدة sqlserver.safe](</ar/solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
 
 في هذه الحالة، على عقدتي الإدارة، اضبط [اتصال Milestone Management بـ SQL](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>) باستخدام عنوان IP الافتراضي لوحدة sqlserver.safe (مفتاح السجل HKEY_LOCAL_MACHINE > SOFTWARE > VideoOSServerConnectionString).
 
@@ -61,7 +61,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ M
   * يمكن أيضاً إرسال البث من كل كاميرا إلى جهازي Recorder باستخدام حل [Vega / RMF](<https://vega25.com/>).
 
 
-ℹ️ عند ترحيل Milestone من الإصدار N إلى الإصدار N+1 في مجموعة SafeKit، اقرأ هذا المقال: 🛠️ [ترحيل Milestone Management باستخدام SafeKit](</quick-install/safekit-quick-installation-guide-milestone-migration/>)
+ℹ️ عند ترحيل Milestone من الإصدار N إلى الإصدار N+1 في مجموعة SafeKit، اقرأ هذا المقال: 🛠️ [ترحيل Milestone Management باستخدام SafeKit](</ar/quick-install/safekit-quick-installation-guide-milestone-migration/>)
 
 
 {{%  insert-safekit-installation-package-windows-ar app="Milestone XProtect and SQL" mod="milestone"  %}}

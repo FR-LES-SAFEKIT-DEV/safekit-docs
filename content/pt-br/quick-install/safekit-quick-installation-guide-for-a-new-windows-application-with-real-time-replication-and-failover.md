@@ -15,7 +15,7 @@ topics: "Guia de instalação rápida de alta disponibilidade para Windows, Limi
 
 ## Visão geral da solução SafeKit / Windows {#overview-of-the-safekit--windows-solution}
 
-A solução é descrita aqui: **💡[A alta disponibilidade mais simples no Windows: replicação síncrona de 2 nós e failover](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+A solução é descrita aqui: **💡[A alta disponibilidade mais simples no Windows: replicação síncrona de 2 nós e failover](</pt-br/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## Instalação nas soluções SafeKit / Windows (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

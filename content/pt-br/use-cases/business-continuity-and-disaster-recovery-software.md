@@ -21,13 +21,13 @@ Não há diferença de configuração ao implantar um cluster SafeKit na mesma s
 
 ### Como implementar uma solução simples de alta disponibilidade entre duas salas de computadores remotas? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-Os módulos SafeKit mirror e `farm` podem ser facilmente implementados em servidores localizados em salas de computadores remotas, sem qualquer configuração especial de cluster. Isso significa que SafeKit combina continuidade de negócios e recuperação de desastres em uma única arquitetura simples. SafeKit também gerencia o cenário de "split brain" (split brain) [ ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) em caso de isolamento de rede, sem a necessidade de um terceiro servidor ou um disco de quorum especial.
+Os módulos SafeKit mirror e `farm` podem ser facilmente implementados em servidores localizados em salas de computadores remotas, sem qualquer configuração especial de cluster. Isso significa que SafeKit combina continuidade de negócios e recuperação de desastres em uma única arquitetura simples. SafeKit também gerencia o cenário de "split brain" (split brain) [ ](</pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) em caso de isolamento de rede, sem a necessidade de um terceiro servidor ou um disco de quorum especial.
 
 ### Continuidade de negócios versus soluções de backup {#business-continuity-vs-backup-solutions}
 
 As soluções de continuidade de negócios e backup abordam diferentes cenários de falha e são complementares, não intercambiáveis. A continuidade de negócios, fornecida pelo cluster de alta disponibilidade do SafeKit , mantém os aplicativos em execução com interrupção mínima em caso de falha de servidor ou aplicativo, por meio de replicação em tempo real e failover automático. As soluções de backup protegem contra perdas mais amplas, como ataques de ransomware ou erros de operação, e normalmente dependem de cópias de dados externas que podem ser restauradas posteriormente, com tempos de recuperação mais longos, mas sem failover automático.
 
-Saiba mais em [ Combinando SafeKit Alta disponibilidade com backups de recuperação de desastres ](</best-practises/high-availability-disaster-recovery-hadr/>) .
+Saiba mais em [ Combinando SafeKit Alta disponibilidade com backups de recuperação de desastres ](</pt-br/best-practises/high-availability-disaster-recovery-hadr/>) .
 
 
 {{%  insert-safekit-hub-pt-br  %}}

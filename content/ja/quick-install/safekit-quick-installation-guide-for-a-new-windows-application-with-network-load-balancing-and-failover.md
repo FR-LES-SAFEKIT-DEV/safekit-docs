@@ -15,7 +15,7 @@ topics: "Windows 向け高可用性クイックインストールガイド, Safe
 
 ## SafeKit / Windows ソリューションの概要 {#overview-of-the-safekit--windows-solution}
 
-ソリューションの説明はこちらです: **💡[SafeKit: オールインワンの Windows ロードバランシング & 高可用性ソフトウェア](</solutions/windows-load-balancing-failover/>)**。
+ソリューションの説明はこちらです: **💡[SafeKit: オールインワンの Windows ロードバランシング & 高可用性ソフトウェア](</ja/solutions/windows-load-balancing-failover/>)**。
 
 ## SafeKit / Windows ソリューションのインストール (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

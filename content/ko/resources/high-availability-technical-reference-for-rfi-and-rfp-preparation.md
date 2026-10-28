@@ -259,7 +259,7 @@ OEM 내장형 | 예 | 아니요 | 아니요 | 아니요
 지원 포털 | <https://customercare.evidian.com>  
 무료 AI 지원 | [ https://safekit.eviden.com/ko/resources/safekit-support/]( </ko/resources/safekit-support/> )  
 무료 교육 및 인증 | 🎓 [ https://safekit.eviden.com/ko/resources/safekit-on-line-training/]( </ko/resources/safekit-on-line-training/> )  
-문의하기 | [ https://safekit.eviden.com/contact-us-for-safekit/]( </contact-us-for-safekit/>  
+문의하기 | [ https://safekit.eviden.com/contact-us-for-safekit/]( </ko/contact-us-for-safekit/>  
   
 
 {{%  insert-safekit-4-buttons-ko  %}}

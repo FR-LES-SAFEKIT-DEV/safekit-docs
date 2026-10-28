@@ -36,9 +36,9 @@ topics: "什么是高可用性架构和最佳实践？高可用性架构和最�
 本文通过比较以下几点，探讨了高可用性架构的最佳实践：
 
   * [软件集群与硬件集群](</zh-hans/best-practises/clustering-software-vs-hardware-clustering/>) ，
-  * [无共享架构与共享磁盘架构](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ，
+  * [无共享架构与共享磁盘架构](</zh-hans/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ，
   * [应用程序与虚拟机高可用性](</zh-hans/best-practises/vm-ha-vs-application-ha/>) ，
-  * [高可用性与容错性](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ，
+  * [高可用性与容错性](</zh-hans/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ，
   * [同步复制与异步复制](</zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/>) ，
   * [文件与磁盘复制](</zh-hans/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ，
   * [数据复制技术](</zh-hans/best-practises/data-replication-techniques/>) ，

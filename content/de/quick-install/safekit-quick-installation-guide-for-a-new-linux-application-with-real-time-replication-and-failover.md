@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Linux, Eins
 
 ## Überblick über die SafeKit-/Linux-Lösung {#overview-of-the-safekit--linux-solution}
 
-Die Lösung wird hier beschrieben: **💡[Die einfachste Linux-Hochverfügbarkeit: Synchrone 2-Knoten-Replikation und Failover](</solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[Die einfachste Linux-Hochverfügbarkeit: Synchrone 2-Knoten-Replikation und Failover](</de/solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
 
 ## Installation der SafeKit-/Linux-Lösung (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 

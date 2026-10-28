@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ G
 
 ## نظرة عامة على حل SafeKit / GCP {#overview-of-the-safekit--gcp-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : Google GCP موازنة الأحمال وتوافر التطبيقات العالي `Farm` مجموعة ](</solutions/gcp-load-balancing-cluster-failover/>) ** .
+الحل موضح هنا: ** 💡 [ SafeKit : Google GCP موازنة الأحمال وتوافر التطبيقات العالي `Farm` مجموعة ](</ar/solutions/gcp-load-balancing-cluster-failover/>) ** .
 
 ## تثبيت حل SafeKit / GCP على Windows و Linux ( farm.safe ) و {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 

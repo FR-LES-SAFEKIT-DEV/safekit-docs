@@ -15,7 +15,7 @@ topics: "Snelstartgids voor hoge beschikbaarheid voor Kubernetes , Beperkingen v
 
 ## Overzicht van de SafeKit / Kubernetes -oplossing {#overview-of-the-safekit--kubernetes-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover ](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+De oplossing wordt hier beschreven: ** 💡 [ Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover ](</nl/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## Installatie en configuratie van de SafeKit / Kubernetes oplossing op Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -147,7 +147,7 @@ Als er iets misgaat, stop dan node2 en [ forceer de start als primaire ](</wp-co
 ![ Opmerking ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [ Meer informatie over tests vindt u in de gebruikershandleiding. ](</resources/safekit-user-guide-82/#tests>)
+🛠️ [ Meer informatie over tests vindt u in de gebruikershandleiding. ](</nl/resources/safekit-user-guide-82/#tests>)
 
 
 ![ Stop de module op de PRIM-server ](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -207,7 +207,7 @@ Het vorige helm-commando zou de WordPress-image moeten downloaden van `registry-
 ![ Opmerking ](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ Probleemoplossing voor [ in de gebruikershandleiding. ](</resources/safekit-user-guide-82/#Troubleshooting>)
+🛠️ Probleemoplossing voor [ in de gebruikershandleiding. ](</nl/resources/safekit-user-guide-82/#Troubleshooting>)
 
 
 ![ Maak de screenshots ter ondersteuning ](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

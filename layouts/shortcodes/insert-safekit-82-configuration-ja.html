@@ -9,7 +9,7 @@
   * {{ .Get "app" }} アプリケーションは 2 つのノードにインストールされます。
   * 複製されるデータの合計は数テラバイトに制限されており、これを超えると再同期にかかる時間が大幅に長くなります。
   * ノード間の相互接続は最低 1Gb/秒 (再同期を高速化するには 10Gb/秒を推奨)。
-  * IP フェイルオーバーには、同じ LAN または拡張 LAN (L2) 上の両方のノードが必要です。ルーティングされた L3 ネットワークはサポートされていません (🛠️ [クラウド ロード バランサー ](/resources/safekit-user-guide-82/#Cloud) を除く)。
+  * IP フェイルオーバーには、同じ LAN または拡張 LAN (L2) 上の両方のノードが必要です。ルーティングされた L3 ネットワークはサポートされていません (🛠️ [クラウド ロード バランサー ](/ja/resources/safekit-user-guide-82/#Cloud) を除く)。
 
 
 ### 1. SafeKit コンソールを起動します
@@ -22,7 +22,7 @@
 
 ⚠️ SafeKit の設定は、単一のブラウザから両方のノードで実行されます。
 
-ℹ️ Web コンソールを保護するには、🛠️ [11\ を参照してください。ユーザーズガイドのSafeKit Webサービス](/resources/safekit-user-guide-82/#https)のセキュリティ保護。
+ℹ️ Web コンソールを保護するには、🛠️ [11\ を参照してください。ユーザーズガイドのSafeKit Webサービス](/ja/resources/safekit-user-guide-82/#https)のセキュリティ保護。
 
 
 ![SafeKit Web コンソールを起動して、{{ .Get "app" }} クラスターを構成します。](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,7 +30,7 @@
 
 ### 2. ノードアドレスを設定する
 
-  * ノード IP アドレスを入力し、`Tab key` を押して接続を確認し、ノード名を入力します。 node1 または node2 の色が赤色の場合は、両方のノードへのブラウザーの接続を確認し、🛠️ [トラブルシューティング ](/resources/safekit-user-guide-82/#Troubleshooting) について両方のノードのファイアウォールを確認してください。
+  * ノード IP アドレスを入力し、`Tab key` を押して接続を確認し、ノード名を入力します。 node1 または node2 の色が赤色の場合は、両方のノードへのブラウザーの接続を確認し、🛠️ [トラブルシューティング ](/ja/resources/safekit-user-guide-82/#Troubleshooting) について両方のノードのファイアウォールを確認してください。
   * 次に、`Save and apply` をクリックして構成を保存します。
   * 両方のノードで `Success` ✅ メッセージを確認します。
   * 構成 `Failure` ❌ が 1 つのノードで発生する場合は、そのノードの ▼ アコーディオンを開いてメッセージを確認します。 SafeKit AI 🤖 を使用できることに注意してください。
@@ -75,7 +75,7 @@
 
 ℹ️ `Advanced configuration`をクリックすると、`userconfig.xml`ファイルが表示されます。このファイルはコンソールによって自動的に設定され、再起動スクリプトを使用してノードにデプロイされます。
 
-ℹ️ クラウド展開では、仮想環境を構成する必要はありません。 IP の住所 SafeKit。仮想 IP 🛠️で管理されています [クラウドロードバランサーのレベル](/resources/safekit-user-guide-82/#Cloud)。
+ℹ️ クラウド展開では、仮想環境を構成する必要はありません。 IP の住所 SafeKit。仮想 IP 🛠️で管理されています [クラウドロードバランサーのレベル](/ja/resources/safekit-user-guide-82/#Cloud)。
 
 ℹ️ を適用すると、 SafeKit 構成、 `startup type` のサービスが自動的に設定されます `Manual` で Windows サービス。これにより、サービスはシステムの起動時に自動的に開始されず、モジュール自体が開始された場合にのみ開始されます (同じことが当てはまります)。 Linux）。
 
@@ -205,7 +205,7 @@
   * 物事がうまくいかない場合は、停止してください node2 そして [プライマリとして強制的に開始します 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) の node1、停止時にローカルに正常なデータを使用して再起動します。
 
 
-ℹ️ 詳細については、動画とともにご覧ください。 [SafeKit オンライントレーニング](/resources/safekit-on-line-training/)。
+ℹ️ 詳細については、動画とともにご覧ください。 [SafeKit オンライントレーニング](/ja/resources/safekit-on-line-training/)。
 
 
 ![やめてください {{ .Get "app" }} 上のモジュール PRIM サーバー](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -216,7 +216,7 @@
   * サポートを受けるには、ノードごとに 1 つずつ、SafeKit `Snapshots` (2 つの .zip ファイル) を取得します。
 
 
-ℹ️ [サポートの詳細についてはこちら](/resources/safekit-support/)。
+ℹ️ [サポートの詳細についてはこちら](/ja/resources/safekit-support/)。
 
 
 ![サポートのために {{ .Get "app" }} スナップショットを取得します](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

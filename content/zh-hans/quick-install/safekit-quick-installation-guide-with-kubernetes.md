@@ -15,7 +15,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
 
 ## SafeKit / Kubernetes解决方案概述 {#overview-of-the-safekit--kubernetes-solution}
 
-解决方案如下： ** 💡 [ Kubernetes K3s 高可用性：双节点同步复制和故障转移](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
+解决方案如下： ** 💡 [ Kubernetes K3s 高可用性：双节点同步复制和故障转移](</zh-hans/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
 ## 在Linux ( k3s.safe )上安装和配置SafeKit / Kubernetes解决方案 {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
@@ -147,7 +147,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
 ![注](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [更多测试信息请参阅用户指南。 ](</resources/safekit-user-guide-82/#tests>)
+🛠️ [更多测试信息请参阅用户指南。 ](</zh-hans/resources/safekit-user-guide-82/#tests>)
 
 
 ![停止 PRIM 服务器上的模块](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -207,7 +207,7 @@ WordPress 具有自动高可用性：
 ![注](/wp-content/uploads/2022/07/note.png)
 
 
-🛠️ [故障排除，请参阅用户指南](</resources/safekit-user-guide-82/#Troubleshooting>)
+🛠️ [故障排除，请参阅用户指南](</zh-hans/resources/safekit-user-guide-82/#Troubleshooting>)
 
 
 ![拍摄快照以供支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

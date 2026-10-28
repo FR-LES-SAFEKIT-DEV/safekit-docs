@@ -1,7 +1,7 @@
 ---
 title: "Hyper-V hoge beschikbaarheid met SafeKit: Installeer de
   hyperv.safe-module voor failover"
-canonical: https://safekit.eviden.com/nl/nl/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: Lees meer over het configureren van hyperv.safe voor een
   actief/actief Hyper-V-cluster met SafeKit. Bereik hoge beschikbaarheid op
   VM-niveau met een gedeelde-niets-architectuur met twee knooppunten. Repliceer
@@ -36,7 +36,7 @@ De oplossing wordt hier beschreven: **💡[Eenvoudig Hyper-V Hoge beschikbaarhei
   * Maximaal 32 virtuele machines per Hyper-V-host.
   * Het totale aantal gerepliceerde gegevens is beperkt tot een paar terabytes; daarna wordt de hersynchronisatietijd aanzienlijk.
   * Minimale 1Gb/s-verbinding tussen knooppunten (10Gb/s aanbevolen voor snellere hersynchronisatie).
-  * IP failover vereist beide knooppunten op dezelfde LAN of uitgebreide LAN (L2) - gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloud load balancers](</resources/safekit-user-guide-82/#Cloud>)).
+  * IP failover vereist beide knooppunten op dezelfde LAN of uitgebreide LAN (L2) - gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloud load balancers](</nl/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

@@ -23,7 +23,7 @@ SafeKit هو الحل الأفضل لأنه برمجية خالصة ومستقل
 
 ### الحل المفضل لدى Siemens {#solution-preferred-by-siemens}
 
-يتوفر SafeKit في [سوق Siemens](https://www.siemens.com/en-us/products/atos-safekit/) مع مجموعة 💡 [Siveillance](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (الفيديو والتحكم في الدخول)، ومع برمجيات SCADA: 💡 [Desigo CC](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (إدارة المباني)، و💡 [SIMATIC WinCC](/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/)، و💡 [SIMATIC PCS 7](/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/).
+يتوفر SafeKit في [سوق Siemens](https://www.siemens.com/en-us/products/atos-safekit/) مع مجموعة 💡 [Siveillance](/ar/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/) (الفيديو والتحكم في الدخول)، ومع برمجيات SCADA: 💡 [Desigo CC](/ar/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/) (إدارة المباني)، و💡 [SIMATIC WinCC](/ar/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/)، و💡 [SIMATIC PCS 7](/ar/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/).
 
 تنشر Siemens SafeKit في أستراليا وفرنسا وهولندا وقطر وسويسرا والإمارات العربية المتحدة والمملكة المتحدة والولايات المتحدة.
 
@@ -31,7 +31,7 @@ SafeKit هو الحل الأفضل لأنه برمجية خالصة ومستقل
 
 توصي Nedap، وهي شركة رائدة في مجال التحكم المادي في الدخول، باستخدام SafeKit للتكرار والتوافر العالي لتطبيق AEOS.
 
-يتوفر [حل Nedap/SafeKit](/solutions/nedap-high-availability-synchronous-replication-failover/) مع نسخة تجريبية مجانية ودليل تثبيت سريع.
+يتوفر [حل Nedap/SafeKit](/ar/solutions/nedap-high-availability-synchronous-replication-failover/) مع نسخة تجريبية مجانية ودليل تثبيت سريع.
 
 ### اختارت TIL Technologies SafeKit {#til-technologies-has-chosen-safekit}
 

@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Oracle , Ein
 
 ## Übersicht der SafeKit / Oracle -Lösung {#overview-of-the-safekit--oracle-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste Oracle Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
+Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste Oracle Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</de/solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installation der SafeKit / Oracle Lösung auf Windows und Linux ( oracle.safe ) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability Podman , Beperkingen van High Avai
 
 ## Overzicht van de SafeKit / Podman -oplossing {#overview-of-the-safekit--podman-solution}
 
-De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Podman Software voor hoge beschikbaarheid en realtime datareplicatie ](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+De oplossing wordt hier beschreven: ** 💡 [ SafeKit : Podman Software voor hoge beschikbaarheid en realtime datareplicatie ](</nl/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
 
 ## Installatie van de SafeKit / Podman oplossing op Linux ( mirror.safe ) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 

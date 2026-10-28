@@ -15,7 +15,7 @@ topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Linux, Beper
 
 ## Overzicht van de SafeKit-/Linux-oplossing {#overview-of-the-safekit--linux-solution}
 
-De oplossing wordt hier beschreven: **💡[De eenvoudigste hoge beschikbaarheid op Linux: synchrone replicatie met 2 nodes en failover](</solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
+De oplossing wordt hier beschreven: **💡[De eenvoudigste hoge beschikbaarheid op Linux: synchrone replicatie met 2 nodes en failover](</nl/solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
 
 ## Installatie van de SafeKit-/Linux-oplossing (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 

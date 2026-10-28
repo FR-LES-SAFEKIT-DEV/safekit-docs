@@ -21,13 +21,13 @@ No existe ninguna diferencia de configuración al implementar un clúster SafeKi
 
 ### ¿Cómo implementar una solución sencilla de alta disponibilidad entre dos salas de servidores remotas? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-Los módulos SafeKit mirror y `farm` se pueden implementar fácilmente en servidores ubicados en salas de servidores remotas, sin necesidad de una configuración de clúster especial. Esto significa que SafeKit combina la continuidad del negocio y la recuperación ante desastres en una arquitectura única y sencilla. SafeKit también gestiona la configuración de clúster dividido [ ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) en caso de aislamiento de la red, sin requerir un tercer servidor ni un disco de quórum especial.
+Los módulos SafeKit mirror y `farm` se pueden implementar fácilmente en servidores ubicados en salas de servidores remotas, sin necesidad de una configuración de clúster especial. Esto significa que SafeKit combina la continuidad del negocio y la recuperación ante desastres en una arquitectura única y sencilla. SafeKit también gestiona la configuración de clúster dividido [ ](</es/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) en caso de aislamiento de la red, sin requerir un tercer servidor ni un disco de quórum especial.
 
 ### Continuidad del negocio frente a soluciones de respaldo {#business-continuity-vs-backup-solutions}
 
 Las soluciones de continuidad del negocio y de copia de seguridad abordan distintos escenarios de fallo y son complementarias, no intercambiables. La continuidad del negocio, proporcionada por el clúster de alta disponibilidad de SafeKit , mantiene las aplicaciones en funcionamiento con una interrupción mínima en caso de fallo del servidor o de la aplicación, mediante replicación en tiempo real y conmutación por error automática. Las soluciones de copia de seguridad protegen contra pérdidas más amplias, como ataques de ransomware o errores del operador, y suelen basarse en copias de datos externas que se pueden restaurar posteriormente, con tiempos de recuperación más largos pero sin conmutación por error automática.
 
-Obtenga más información en [ Combinando SafeKit Alta disponibilidad con copias de seguridad de recuperación ante desastres ](</best-practises/high-availability-disaster-recovery-hadr/>) .
+Obtenga más información en [ Combinando SafeKit Alta disponibilidad con copias de seguridad de recuperación ante desastres ](</es/best-practises/high-availability-disaster-recovery-hadr/>) .
 
 
 {{%  insert-safekit-hub-es  %}}

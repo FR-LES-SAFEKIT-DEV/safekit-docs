@@ -1,6 +1,6 @@
 ---
 title: 使用 SafeKit 实现 Hyper-V 高可用性：安装 hyperv.safe 模块进行故障转移
-canonical: https://safekit.eviden.com/zh-hans/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: 了解如何使用 SafeKit 为主动/主动 Hyper-V 集群配置 hyperv.safe。通过 2
   节点无共享架构实现虚拟机级别的高可用性。跨节点同步复制多个虚拟机以实现自动故障转移，无需 SAN 或共享存储成本。
 category: quick-install
@@ -29,7 +29,7 @@ topics: Hyper-V 高可用性快速安装指南、SafeKit 高可用性限制、Sa
   * 每个 Hyper-V 主机最多 32 个虚拟机。
   * 总复制数据限制为几 TB — 除此之外，重新同步时间变得很重要。
   * 节点之间至少 1Gb/s 互连（建议使用 10Gb/s 以加快重新同步速度）。
-  * IP 故障转移需要同一 LAN 或扩展 LAN (L2) 上的两个节点 — 不支持路由 L3 网络（🛠️ [云负载均衡器](</resources/safekit-user-guide-82/#Cloud>) 除外）。
+  * IP 故障转移需要同一 LAN 或扩展 LAN (L2) 上的两个节点 — 不支持路由 L3 网络（🛠️ [云负载均衡器](</zh-hans/resources/safekit-user-guide-82/#Cloud>) 除外）。
 
 
 

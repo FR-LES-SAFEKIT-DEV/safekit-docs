@@ -8,13 +8,13 @@
 
 ### 步骤 1. 实时复制 {#step1}
 
-服务器 1 (PRIM) 运行 {{ .Get "app" }} 应用程序。客户端连接到一个 [虚拟 IP 地址](/best-practises/how-a-virtual-ip-address-works/)。SafeKit 通过网络实时复制文件内部所做的修改。
+服务器 1 (PRIM) 运行 {{ .Get "app" }} 应用程序。客户端连接到一个 [虚拟 IP 地址](/zh-hans/best-practises/how-a-virtual-ip-address-works/)。SafeKit 通过网络实时复制文件内部所做的修改。
 
 
 ![镜像 {{ .Get "app" }} 集群中字节级的文件复制](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-与异步复制不同，该复制是 [同步的](/best-practises/synchronous-replication-vs-asynchronous-replication/)，在发生故障时不会丢失数据。
+与异步复制不同，该复制是 [同步的](/zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/)，在发生故障时不会丢失数据。
 
 您只需在 SafeKit 中配置需要复制的目录名称即可。对磁盘布局没有任何预备条件。目录可以位于系统盘中。
 
@@ -67,7 +67,7 @@ SafeKit 会自动重新同步文件，仅更新在服务器 1 停机期间在服
   * **检查器（Checkers）：** 监控应用程序的健康状况，并在检测到进程故障时触发自动恢复。
 
 
-SafeKit 集群包含一个专用的脑裂检查器（split-brain checker），用于解决网络隔离问题，而不需要第三台见证服务器（witness machine）或额外的心跳网络。了解更多关于 [集群中的心跳、故障转移和仲裁（quorum）](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)的信息。
+SafeKit 集群包含一个专用的脑裂检查器（split-brain checker），用于解决网络隔离问题，而不需要第三台见证服务器（witness machine）或额外的心跳网络。了解更多关于 [集群中的心跳、故障转移和仲裁（quorum）](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)的信息。
 
 ### 如何监控 {{ .Get "app" }} 的 SafeKit 镜像集群？ {#safekit-mirror-cluster-monitoring}
 

@@ -21,13 +21,13 @@ Non vi è alcuna differenza di configurazione quando si implementa un cluster Sa
 
 ### Come implementare una semplice soluzione di alta disponibilità tra due sale server remote? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-I moduli SafeKit mirror e `farm` possono essere facilmente implementati su server situati in sale server remote, senza alcuna configurazione cluster speciale. Ciò significa che SafeKit combina la continuità operativa e il ripristino di emergenza in un'unica architettura semplice. SafeKit gestisce anche [ ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in caso di isolamento di rete, senza richiedere un terzo server o un disco di quorum speciale.
+I moduli SafeKit mirror e `farm` possono essere facilmente implementati su server situati in sale server remote, senza alcuna configurazione cluster speciale. Ciò significa che SafeKit combina la continuità operativa e il ripristino di emergenza in un'unica architettura semplice. SafeKit gestisce anche [ ](</it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in caso di isolamento di rete, senza richiedere un terzo server o un disco di quorum speciale.
 
 ### Soluzioni di continuità operativa vs soluzioni di backup {#business-continuity-vs-backup-solutions}
 
 Le soluzioni di continuità operativa e di backup affrontano diversi scenari di errore e sono complementari, non intercambiabili. La continuità operativa, fornita dal clustering ad alta disponibilità di SafeKit , mantiene le applicazioni in esecuzione con interruzioni minime in caso di guasto di un server o di un'applicazione, tramite replica in tempo reale e failover automatico. Le soluzioni di backup proteggono da perdite più ampie, come attacchi ransomware o errori dell'operatore, e in genere si basano su copie di dati remote che possono essere ripristinate in seguito, con tempi di ripristino più lunghi ma senza failover automatico.
 
-Scopri di più in [ Combinazione di SafeKit Alta disponibilità con backup di ripristino di emergenza ](</best-practises/high-availability-disaster-recovery-hadr/>) .
+Scopri di più in [ Combinazione di SafeKit Alta disponibilità con backup di ripristino di emergenza ](</it/best-practises/high-availability-disaster-recovery-hadr/>) .
 
 
 {{%  insert-safekit-hub-it  %}}

@@ -13,7 +13,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in AWS, Einschrä
 
 ## Überblick über die SafeKit-/AWS-Lösung {#overview-of-the-safekit--aws-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: Amazon AWS-Lastausgleich und Anwendungs-Hochverfügbarkeit mit einem `Farm`-Cluster](</solutions/aws-load-balancing-cluster-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[SafeKit: Amazon AWS-Lastausgleich und Anwendungs-Hochverfügbarkeit mit einem `Farm`-Cluster](</de/solutions/aws-load-balancing-cluster-failover/>)**.
 
 ## Installation der SafeKit-/AWS-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 

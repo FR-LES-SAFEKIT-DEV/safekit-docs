@@ -36,9 +36,9 @@ topics: "高可用性アーキテクチャとそのベストプラクティス�
 この記事では、高可用性アーキテクチャにおけるベストプラクティスを、以下の点を比較することで探究します。
 
   * [ソフトウェア対ハードウェアクラスタリング](</ja/best-practises/clustering-software-vs-hardware-clustering/>) 、
-  * [共有なし vs 共有ディスクアーキテクチャ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) 、
+  * [共有なし vs 共有ディスクアーキテクチャ](</ja/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) 、
   * [アプリケーションと仮想マシンの高可用性](</ja/best-practises/vm-ha-vs-application-ha/>) 、
-  * [高可用性 vs フォールトトレランス](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) 、
+  * [高可用性 vs フォールトトレランス](</ja/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) 、
   * [同期レプリケーションと非同期レプリケーション](</ja/best-practises/synchronous-replication-vs-asynchronous-replication/>) 、
   * [ファイル対ディスク複製](</ja/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) 、
   * [データ複製技術](</ja/best-practises/data-replication-techniques/>) 、

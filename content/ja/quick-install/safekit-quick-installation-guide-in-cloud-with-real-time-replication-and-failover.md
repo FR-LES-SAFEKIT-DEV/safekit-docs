@@ -15,7 +15,7 @@ topics: "クラウド向け高可用性クイックインストールガイド�
 
 ## SafeKit / クラウドmirrorソリューションの概要 {#overview-of-the-safekit--cloud-mirror-solution}
 
-ソリューションはここに記載されています: ** 💡 [クラウド非依存の高可用性: SafeKit同期レプリケーションとフェイルオーバー](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** 。
+ソリューションはここに記載されています: ** 💡 [クラウド非依存の高可用性: SafeKit同期レプリケーションとフェイルオーバー](</ja/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
 ## SafeKit / Cloud mirrorソリューションをWindowsおよびLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 

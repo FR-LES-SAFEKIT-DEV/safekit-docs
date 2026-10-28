@@ -65,7 +65,7 @@ Helaas brengen deze nieuwe quorumapparaten extra kosten en complexiteit met zich
 
 ### SafeKit split brain checker {#safekit-split-brain-checker}
 
-Met de SafeKit -software voor hoge beschikbaarheid is er binnen een Windows of Linux cluster geen derde quorumserver en geen quorumschijf nodig voor het quorum. Een eenvoudige split-brain checker ](</resources/safekit-user-guide-82/#check_splitbrain>) [ voldoende om te voorkomen dat een applicatie dubbel wordt uitgevoerd.
+Met de SafeKit -software voor hoge beschikbaarheid is er binnen een Windows of Linux cluster geen derde quorumserver en geen quorumschijf nodig voor het quorum. Een eenvoudige split-brain checker ](</nl/resources/safekit-user-guide-82/#check_splitbrain>) [ voldoende om te voorkomen dat een applicatie dubbel wordt uitgevoerd.
 
 Bij het uitvallen van alle heartbeats tussen de servers selecteert de split-brain checker slechts één server als primaire server. De andere server gaat naar de wachtstand (WAIT) totdat deze de heartbeats van de primaire server weer ontvangt. Vervolgens keert deze terug naar de secundaire status nadat de gerepliceerde gegevens van de primaire server zijn gesynchroniseerd.
 

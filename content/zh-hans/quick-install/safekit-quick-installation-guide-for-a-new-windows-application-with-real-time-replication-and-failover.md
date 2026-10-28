@@ -15,7 +15,7 @@ topics: "Windows 高可用性快速安装指南, SafeKit 高可用性限制, Saf
 
 ## SafeKit / Windows 解决方案概述 {#overview-of-the-safekit--windows-solution}
 
-解决方案的说明见此处：**💡[最简单的 Windows 高可用性：2 节点同步复制与故障切换](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+解决方案的说明见此处：**💡[最简单的 Windows 高可用性：2 节点同步复制与故障切换](</zh-hans/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## 在 SafeKit / Windows 解决方案上的安装 (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

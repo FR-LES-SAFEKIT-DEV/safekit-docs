@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability voor Microsoft SQL Server , Beperk
 
 ## Overzicht van de SafeKit / Microsoft SQL Server oplossing {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-Voor een gedetailleerd overzicht van de oplossing, zie ** 💡 [ De eenvoudigste Microsoft SQL Server Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) ** .
+Voor een gedetailleerd overzicht van de oplossing, zie ** 💡 [ De eenvoudigste Microsoft SQL Server Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten ](</nl/solutions/sql-server-high-availability-synchronous-replication-failover/>) ** .
 
 ## Installatie van de SafeKit / Microsoft SQL Server oplossing op Windows ( sqlserver.safe ) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 

@@ -87,7 +87,7 @@ SafeKit实现了**自动切换的虚拟 IP (VIP) 地址** 。此 VIP 作为客�
 建筑学 | 模块化：需要管理 3 个以上不同的工具和内核模块。 | 一体化：用于复制和故障转移的单一集成软件。  
 复制级别 | 块级（DRBD）：复制整个分区/磁盘卷。 | 字节级（SafeKit）：仅复制特定文件中的已修改数据。  
 配置难度|复杂：需要具备命令行界面 (CLI) 专业知识，才能手动设置排序约束（虚拟 IP、挂载点）、应用程序恢复脚本和仲裁/隔离规则。配置难度|简单：直观的 Web 控制台和即用型应用程序模块。  
-隔离（STONITH） |为防止数据损坏而必需：STONITH（Shoot The Other Node In The Head， [ |额外硬件的智能脑裂修复](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)  
+隔离（STONITH） |为防止数据损坏而必需：STONITH（Shoot The Other Node In The Head， [ |额外硬件的智能脑裂修复](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)  
 故障恢复过程 | 手动/技术：重新同步过程中存在数据发散或“脑裂”的风险。 | 自动且透明：后台重新同步，并具有安全故障恢复功能。  
 维护 | 需要高度专业技能才能更新/排除各个组件的故障。 | 普通系统管理员可通过网页控制面板轻松维护。  
   

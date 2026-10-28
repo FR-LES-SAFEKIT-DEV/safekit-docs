@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع لـ NGINX مع خاصية الت�
 
 ## نظرة عامة على حل SafeKit / NGINX {#overview-of-the-safekit--nginx-solution}
 
-الحل موضح هنا: ** 💡 [ SafeKit : برنامج موازنة الأحمال والتوافر العالي الشامل لـ NGINX ](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
+الحل موضح هنا: ** 💡 [ SafeKit : برنامج موازنة الأحمال والتوافر العالي الشامل لـ NGINX ](</ar/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
 
 ## تثبيت حل SafeKit / NGINX على Windows و Linux ( farm.safe ) و {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 

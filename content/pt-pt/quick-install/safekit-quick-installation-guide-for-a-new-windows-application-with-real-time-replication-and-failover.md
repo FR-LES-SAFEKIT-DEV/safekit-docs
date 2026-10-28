@@ -15,7 +15,7 @@ topics: "Guia de instalação rápida de elevada disponibilidade para Windows, L
 
 ## Descrição geral da solução SafeKit / Windows {#overview-of-the-safekit--windows-solution}
 
-A solução é descrita aqui: **💡[A elevada disponibilidade mais simples em Windows: replicação síncrona de 2 nós e failover](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+A solução é descrita aqui: **💡[A elevada disponibilidade mais simples em Windows: replicação síncrona de 2 nós e failover](</pt-pt/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## Instalação nas soluções SafeKit / Windows (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

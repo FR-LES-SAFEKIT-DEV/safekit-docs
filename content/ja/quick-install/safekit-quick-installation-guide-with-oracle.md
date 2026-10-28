@@ -15,7 +15,7 @@ topics: "Oracleの高可用性クイックインストールガイド、 SafeKit
 
 ## SafeKit / Oracleソリューションの概要 {#overview-of-the-safekit--oracle-solution}
 
-解決策はここに記載されています: ** 💡 [最もシンプルなOracle高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/oracle-high-availability-synchronous-replication-failover/>) ** 。
+解決策はここに記載されています: ** 💡 [最もシンプルなOracle高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/oracle-high-availability-synchronous-replication-failover/>) ** 。
 
 ## SafeKit / OracleソリューションをWindowsおよびLinux ( oracle.safe )にインストールします。 {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 

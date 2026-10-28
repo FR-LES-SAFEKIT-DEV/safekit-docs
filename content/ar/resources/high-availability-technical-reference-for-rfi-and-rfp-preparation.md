@@ -255,11 +255,11 @@ OEM قابل للتضمين | نعم | لا | لا | لا
 الصفحة الرئيسية للمنتج | <https://safekit.eviden.com>  
 نظرة عامة فنية (ملف DOCX يحتوي على نصوص ورسومات توضيحية) | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
 تجربة </ar/resources/safekit-free-trial/> | [ https://safekit.eviden.com/ar/resources/safekit-free-trial/]( )  
-احصل على عرض سعر | [ https://safekit.eviden.com/safekit-pricing/]( </safekit-pricing/> )  
+احصل على عرض سعر | [ https://safekit.eviden.com/safekit-pricing/]( </ar/safekit-pricing/> )  
 بوابة الدعم | <https://customercare.evidian.com>  
 دعم الذكاء الاصطناعي المجاني | [ https://safekit.eviden.com/ar/resources/safekit-support/]( </ar/resources/safekit-support/> )  
 تدريب وشهادة مجانية | 🎓 [ https://safekit.eviden.com/ar/resources/safekit-on-line-training/]( </ar/resources/safekit-on-line-training/> )  
-تواصل معنا | [ https://safekit.eviden.com/contact-us-for-safekit/]( </contact-us-for-safekit/>  
+تواصل معنا | [ https://safekit.eviden.com/contact-us-for-safekit/]( </ar/contact-us-for-safekit/>  
   
 
 {{%  insert-safekit-4-buttons-ar  %}}

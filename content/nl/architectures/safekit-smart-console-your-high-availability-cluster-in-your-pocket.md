@@ -40,7 +40,7 @@ De webconsole ** SafeKit ** biedt een intuïtieve interface voor het orkestreren
   * ** Checkers: ** Bewaak de status van de applicatie en activeer automatisch herstel als een procesfout wordt gedetecteerd.
 
 
-Het SafeKit cluster bevat een speciale split-brain-checker om problemen met netwerkisolatie op te lossen zonder dat een derde witness-machine of een extra heartbeat-netwerk nodig is. Lees meer over de heartbeat, failover en quorum [ in een ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) -cluster.
+Het SafeKit cluster bevat een speciale split-brain-checker om problemen met netwerkisolatie op te lossen zonder dat een derde witness-machine of een extra heartbeat-netwerk nodig is. Lees meer over de heartbeat, failover en quorum [ in een ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) -cluster.
 
 ### Hoe kan ik een SafeKit mirror -cluster monitoren? {#safekit-mirror-cluster-monitoring}
 

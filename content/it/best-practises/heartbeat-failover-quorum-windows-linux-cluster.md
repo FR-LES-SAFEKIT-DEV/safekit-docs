@@ -65,7 +65,7 @@ Purtroppo, questi nuovi dispositivi di quorum aggiungono costi e complessità al
 
 ### SafeKit controllore cervello diviso {#safekit-split-brain-checker}
 
-Con il software di alta disponibilità SafeKit , il quorum all'interno di un cluster Windows o Linux non richiede un terzo server di quorum né un disco di quorum. Un semplice ](</resources/safekit-user-guide-82/#check_splitbrain>) [ sufficiente per evitare la doppia esecuzione di un'applicazione.
+Con il software di alta disponibilità SafeKit , il quorum all'interno di un cluster Windows o Linux non richiede un terzo server di quorum né un disco di quorum. Un semplice ](</it/resources/safekit-user-guide-82/#check_splitbrain>) [ sufficiente per evitare la doppia esecuzione di un'applicazione.
 
 In caso di perdita di tutti i segnali di heartbeat tra i server, il sistema di verifica dello split-brain seleziona un solo server come primario. L'altro server passa allo stato WAIT finché non riceve nuovamente i segnali di heartbeat dal server primario. A quel punto, torna allo stato secondario dopo aver sincronizzato i dati replicati dal server primario.
 

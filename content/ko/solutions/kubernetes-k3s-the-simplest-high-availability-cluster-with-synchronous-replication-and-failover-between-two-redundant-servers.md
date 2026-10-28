@@ -160,7 +160,7 @@ SafeKit 서버가 중지된 방식에 따라 복구 시간을 최적화합니다
   * ** 검사기: ** 애플리케이션의 상태를 모니터링하고 프로세스 오류가 감지되면 자동 복구를 실행합니다.
 
 
-SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네트워크 없이도 네트워크 격리 문제를 해결할 수 있는 전용 스플릿 브레인 검사기가 포함되어 있습니다. 클러스터 ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) 의 하트비트, 페일오버 및 쿼럼에 대한 자세한 내용은 [ 참조하십시오.
+SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네트워크 없이도 네트워크 격리 문제를 해결할 수 있는 전용 스플릿 브레인 검사기가 포함되어 있습니다. 클러스터 ](</ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) 의 하트비트, 페일오버 및 쿼럼에 대한 자세한 내용은 [ 참조하십시오.
 
 ### SafeKit mirror 를 모니터링하는 방법은 무엇입니까? {#safekit-mirror-cluster-monitoring}
 

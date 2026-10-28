@@ -129,7 +129,7 @@ RPO（潜在数据丢失） |零 |零 |非零（数据丢失：取决于上次�
 
 您可以使用 **3 节点混合架构**：具有用于 HA 的同步复制的 2 节点本地集群，以及通过具有用于灾难恢复的异步复制的备份解决方案的第三个远程副本。
 
-**更多信息请参见：** [SafeKit 高可用性和灾难恢复 (HADR)](</best-practises/high-availability-disaster-recovery-hadr/>)
+**更多信息请参见：** [SafeKit 高可用性和灾难恢复 (HADR)](</zh-hans/best-practises/high-availability-disaster-recovery-hadr/>)
 
 
 {{%  insert-safekit-hub-zh-hans  %}}

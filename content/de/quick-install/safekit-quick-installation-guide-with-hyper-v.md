@@ -1,7 +1,7 @@
 ---
 title: "Hyper-V-Hochverfügbarkeit mit SafeKit: Installieren Sie das
   hyperv.safe-Modul für Failover"
-canonical: https://safekit.eviden.com/de/de/quick-install/safekit-quick-installation-guide-with-hyper-v/
+canonical: https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-hyper-v/
 description: Erfahren Sie mehr über die Konfiguration von hyperv.safe für einen
   Aktiv/Aktiv-Hyper-V-Cluster mit SafeKit. Erreichen Sie hohe Verfügbarkeit auf
   VM-Ebene mit einer Shared-Nothing-Architektur mit zwei Knoten. Replizieren Sie
@@ -36,7 +36,7 @@ Die Lösung wird hier beschrieben: **💡[Einfache Hyper-V Hochverfügbarkeit oh
   * Maximal 32 virtuelle Maschinen pro Hyper-V-Host.
   * Die gesamten replizierten Daten sind auf einige Terabyte begrenzt – darüber hinaus wird die Zeit für die Neusynchronisierung erheblich.
   * Mindestens 1 Gbit/s Verbindung zwischen Knoten (10 Gbit/s empfohlen für eine schnellere Neusynchronisierung).
-  * IP-Failover erfordert beide Knoten auf demselben LAN oder erweiterten LAN (L2) – geroutete L3-Netzwerke werden nicht unterstützt (außer mit 🛠️ [Cloud Load Balancers](</resources/safekit-user-guide-82/#Cloud>)).
+  * IP-Failover erfordert beide Knoten auf demselben LAN oder erweiterten LAN (L2) – geroutete L3-Netzwerke werden nicht unterstützt (außer mit 🛠️ [Cloud Load Balancers](</de/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

@@ -9,7 +9,7 @@
   * {{ .Get "app" }}-applicatie geïnstalleerd op 2 knooppunten.
   * Het totale aantal gerepliceerde gegevens is beperkt tot een paar terabytes; daarna wordt de hersynchronisatietijd aanzienlijk.
   * Minimale 1Gb/s-verbinding tussen knooppunten (10Gb/s aanbevolen voor snellere hersynchronisatie).
-  * IP failover vereist beide knooppunten op dezelfde LAN of uitgebreide LAN (L2) - gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud)).
+  * IP failover vereist beide knooppunten op dezelfde LAN of uitgebreide LAN (L2) - gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloud load balancers](/nl/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. Start de SafeKit-console
@@ -22,7 +22,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation buiten het clu
 
 ⚠️ De configuratie van SafeKit gebeurt op beide knooppunten vanuit één browser.
 
-ℹ️ Om de webconsole te beveiligen, zie 🛠️ [11\. De SafeKit-webservice](/resources/safekit-user-guide-82/#https) beveiligen in de gebruikershandleiding.
+ℹ️ Om de webconsole te beveiligen, zie 🛠️ [11\. De SafeKit-webservice](/nl/resources/safekit-user-guide-82/#https) beveiligen in de gebruikershandleiding.
 
 
 ![Start de SafeKit-webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
@@ -30,7 +30,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation buiten het clu
 
 ### 2. Configureer knooppuntadressen
 
-  * Voer de IP-adressen van het knooppunt in, druk op `Tab key` om de connectiviteit te controleren en de knooppuntnamen in te vullen. Als node1 of node2 een rode kleur heeft, controleer dan de connectiviteit van de browser met beide knooppunten en controleer de firewall op beide knooppunten op 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Voer de IP-adressen van het knooppunt in, druk op `Tab key` om de connectiviteit te controleren en de knooppuntnamen in te vullen. Als node1 of node2 een rode kleur heeft, controleer dan de connectiviteit van de browser met beide knooppunten en controleer de firewall op beide knooppunten op 🛠️ [troubleshooting](/nl/resources/safekit-user-guide-82/#Troubleshooting).
   * Klik vervolgens op `Save and apply` om de configuratie op te slaan.
   * Controleer het `Success` ✅ bericht op beide knooppunten.
   * Als de configuratie `Failure` ❌ op één knooppunt voorkomt, open dan de ▼ accordeon voor dat knooppunt en bekijk de berichten. Houd er rekening mee dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
@@ -75,7 +75,7 @@ Als er bijvoorbeeld een procesnaam wordt weergegeven in `Monitored processes/ser
 
 ℹ️ Als u op `Advanced configuration` klikt, wordt het `userconfig.xml`-bestand weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten met de herstartscripts.
 
-ℹ️ Bij een cloudimplementatie hoeft u geen virtueel IP-adres te configureren in SafeKit. De virtuele IP wordt beheerd op het 🛠️ [cloud load balancer-niveau](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Bij een cloudimplementatie hoeft u geen virtueel IP-adres te configureren in SafeKit. De virtuele IP wordt beheerd op het 🛠️ [cloud load balancer-niveau](/nl/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Wanneer u de SafeKit-configuratie toepast, wordt de `startup type` van services automatisch ingesteld op `Manual` in Windows-services. Dit zorgt ervoor dat services niet automatisch starten wanneer het systeem opstart, maar alleen worden gestart wanneer de module zelf wordt gestart (hetzelfde geldt voor Linux).
 
@@ -205,7 +205,7 @@ In deze staat worden alleen wijzigingen in bestanden in realtime gerepliceerd.
   * Als er iets misgaat, stop dan node2 en [force de start als primaire 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) van node1, die opnieuw zal opstarten met de lokaal gezonde gegevens op het moment van de stop.
 
 
-ℹ️ Vind meer details, samen met video's, in de [SafeKit Online Training](/resources/safekit-on-line-training/).
+ℹ️ Vind meer details, samen met video's, in de [SafeKit Online Training](/nl/resources/safekit-on-line-training/).
 
 
 ![Stop de {{ .Get "app" }}-module op de PRIM-server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
@@ -216,7 +216,7 @@ In deze staat worden alleen wijzigingen in bestanden in realtime gerepliceerd.
   * Om ondersteuning te krijgen, neemt u 2 SafeKit `Snapshots` (2 .zip-bestanden), één voor elk knooppunt.
 
 
-ℹ️ [Meer informatie over de ondersteuning hier](/resources/safekit-support/).
+ℹ️ [Meer informatie over de ondersteuning hier](/nl/resources/safekit-support/).
 
 
 ![Neem de {{ .Get "app" }}-snaphots voor ondersteuning](/wp-content/uploads/2024/03/30-snapshots-mirror.png)

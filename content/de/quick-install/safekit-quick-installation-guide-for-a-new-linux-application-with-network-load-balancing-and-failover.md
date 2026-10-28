@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Linux, Eins
 
 ## Überblick über die SafeKit-/Linux-Lösung {#overview-of-the-safekit--linux-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One-Linux-Lastausgleichs- und Hochverfügbarkeitssoftware](</solutions/linux-load-balancing-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One-Linux-Lastausgleichs- und Hochverfügbarkeitssoftware](</de/solutions/linux-load-balancing-failover/>)**.
 
 ## Installation der SafeKit-/Linux-Lösung (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
 

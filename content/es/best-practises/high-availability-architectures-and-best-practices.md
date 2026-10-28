@@ -36,9 +36,9 @@ Además, hay que elegir entre alta disponibilidad a nivel de aplicación o a niv
 Este artículo explora las mejores prácticas en arquitecturas de alta disponibilidad mediante la comparación de:
 
   * [ agrupamiento por software frente a clúster por hardware ](</es/best-practises/clustering-software-vs-hardware-clustering/>) ,
-  * Arquitectura de disco compartido [ sin recursos compartidos frente a arquitectura de disco compartido ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
+  * Arquitectura de disco compartido [ sin recursos compartidos frente a arquitectura de disco compartido ](</es/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
   * Aplicación [ frente a alta disponibilidad de máquina virtual ](</es/best-practises/vm-ha-vs-application-ha/>) ,
-  * [ alta disponibilidad frente a tolerancia a fallos ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ alta disponibilidad frente a tolerancia a fallos ](</es/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
   * [ replicación síncrona frente a asíncrona ](</es/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
   * [ replicación de archivos frente a replicación de disco ](</es/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
   * Técnicas de replicación de datos [ ](</es/best-practises/data-replication-techniques/>) ,

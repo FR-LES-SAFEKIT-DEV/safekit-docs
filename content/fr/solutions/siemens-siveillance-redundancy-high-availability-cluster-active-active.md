@@ -16,7 +16,7 @@ topics: "SafeKit pour Siemens Siveillance : Cluster Hyper-V sans SAN à 2 nœud
 ### Notes {#notes}
 
   * Pour Siveillance VMS et les serveurs d'enregistrement, utilisez le mécanisme de basculement intégré et non SafeKit . Les enregistreurs peuvent être exécutés au niveau de l'hôte sur les deux serveurs physiques, ou dans 2 machines virtuelles sur les deux serveurs physiques (non répliquées par SafeKit ).
-  * Une autre solution existe pour ** 💡 [ Siemens Siveillance VMS ](</solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** au niveau de l'application qui peut fonctionner dans n'importe quelle infrastructure (serveurs physiques, tout hyperviseur, y compris ** VMware ** ...).
+  * Une autre solution existe pour ** 💡 [ Siemens Siveillance VMS ](</fr/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** au niveau de l'application qui peut fonctionner dans n'importe quelle infrastructure (serveurs physiques, tout hyperviseur, y compris ** VMware ** ...).
 
 
 

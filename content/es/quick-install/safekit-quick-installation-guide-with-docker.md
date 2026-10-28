@@ -15,7 +15,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para Docker , Limi
 
 ## Descripción general de la solución SafeKit / Docker {#overview-of-the-safekit--docker-solution}
 
-La solución se describe aquí: ** 💡 [ SafeKit : Docker Software de replicación de datos en tiempo real y alta disponibilidad ](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
+La solución se describe aquí: ** 💡 [ SafeKit : Docker Software de replicación de datos en tiempo real y alta disponibilidad ](</es/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
 ## Instalación de la solución SafeKit / Docker en Linux ( mirror.safe ) {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}

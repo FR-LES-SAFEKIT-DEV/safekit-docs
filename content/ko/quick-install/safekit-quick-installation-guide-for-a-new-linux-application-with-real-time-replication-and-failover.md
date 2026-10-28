@@ -15,7 +15,7 @@ topics: "Linux용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제
 
 ## SafeKit / Linux 솔루션 개요 {#overview-of-the-safekit--linux-solution}
 
-솔루션은 여기에서 설명합니다: **💡[가장 간단한 Linux 고가용성: 2노드 동기식 복제 및 페일오버](</solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
+솔루션은 여기에서 설명합니다: **💡[가장 간단한 Linux 고가용성: 2노드 동기식 복제 및 페일오버](</ko/solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
 
 ## SafeKit / Linux 솔루션 설치 (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 

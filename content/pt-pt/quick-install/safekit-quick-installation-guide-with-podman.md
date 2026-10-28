@@ -15,7 +15,7 @@ topics: "Guia de Instalação Rápida de Alta Disponibilidade para Podman , Limi
 
 ## Visão geral da solução SafeKit / Podman {#overview-of-the-safekit--podman-solution}
 
-A solução é descrita aqui: ** 💡 [ SafeKit : Podman Software de replicação de dados de alta disponibilidade e em tempo real ](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+A solução é descrita aqui: ** 💡 [ SafeKit : Podman Software de replicação de dados de alta disponibilidade e em tempo real ](</pt-pt/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
 
 ## Instalação da solução SafeKit / Podman em Linux ( mirror.safe ) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 

@@ -255,7 +255,7 @@ OEM 嵌入式| | | |否
 产品首页| <https://safekit.eviden.com>  
 技术概述（包含文本和图表的 DOCX 文件） | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
 免费试用| [ https://safekit.eviden.com/zh-hans/resources/safekit-free-trial/]( </zh-hans/resources/safekit-free-trial/> )  
-获取报价| [ https://safekit.eviden.com/safekit-pricing/]( </safekit-pricing/> )  
+获取报价| [ https://safekit.eviden.com/safekit-pricing/]( </zh-hans/safekit-pricing/> )  
 支持门户| <https://customercare.evidian.com>  
 免费AI支持| [ https://safekit.eviden.com/zh-hans/resources/safekit-support/]( </zh-hans/resources/safekit-support/> )  
 免费培训和认证| 🎓 [ https://safekit.eviden.com/zh-hans/resources/safekit-on-line-training/]( </zh-hans/resources/safekit-on-line-training/> )  

@@ -36,9 +36,9 @@ topics: "ما هي بنى التوافر العالي وأفضل الممارس�
 تستكشف هذه المقالة أفضل الممارسات في بنى التوافر العالي من خلال المقارنة بين:
 
   * [ تجميع البرامج مقابل تجميع الأجهزة ](</ar/best-practises/clustering-software-vs-hardware-clustering/>) ،
-  * [ لا تشارك أي بيانات مقابل بنية القرص المشترك ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ،
+  * [ لا تشارك أي بيانات مقابل بنية القرص المشترك ](</ar/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ،
   * تطبيق [ مقابل التوافر العالي للآلة الافتراضية ](</ar/best-practises/vm-ha-vs-application-ha/>) ،
-  * [ التوافر العالي مقابل تحمل الأعطال ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ،
+  * [ التوافر العالي مقابل تحمل الأعطال ](</ar/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ،
   * [ النسخ المتزامن مقابل النسخ غير المتزامن ](</ar/best-practises/synchronous-replication-vs-asynchronous-replication/>) ،
   * [ نسخ الملفات مقابل نسخ الأقراص ](</ar/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ،
   * تقنيات نسخ البيانات [ ](</ar/best-practises/data-replication-techniques/>)

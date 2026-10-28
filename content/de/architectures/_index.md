@@ -33,7 +33,7 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 ![ farm SafeKit + mirror Cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-[ Weitere Informationen ](</architectures/clustering-software-load-balancing-mirroring/>)
+[ Weitere Informationen ](</de/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### Aktiv/Aktiv-Cluster {#activeactive-cluster}
 
@@ -41,7 +41,7 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 ![ SafeKit aktiver aktiver Cluster mit Echtzeitreplikation ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[ Weitere Informationen ](</architectures/active-active-cluster-real-time-replication/>)
+[ Weitere Informationen ](</de/architectures/active-active-cluster-real-time-replication/>)
 
 ### N-1 Cluster {#n-1-cluster}
 
@@ -49,7 +49,7 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 ![ SafeKit N-1 Redundanzcluster ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[ Weitere Informationen ](</architectures/n-1-redundancy/>)
+[ Weitere Informationen ](</de/architectures/n-1-redundancy/>)
 
 ## Wie baut man Hochverfügbarkeitscluster mit SafeKit ? {#how-to-build-high-availability-clusters-with-safekit}
 

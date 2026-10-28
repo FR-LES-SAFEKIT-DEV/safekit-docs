@@ -31,7 +31,7 @@ De oplossing wordt hier beschreven: **💡[De eenvoudigste hoge beschikbaarheid 
   * verwijder MSSQLServer uit de macro SERVICES.
 
 
-U kunt de externe SQL Server redundant uitvoeren met **💡[SafeKit en de sqlserver.safe-module](</solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
+U kunt de externe SQL Server redundant uitvoeren met **💡[SafeKit en de sqlserver.safe-module](</nl/solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
 
 Configureer in dat geval op beide Management-knooppunten de [verbinding van Milestone Management met SQL](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>) met het virtuele IP-adres van de sqlserver.safe-module (registersleutel HKEY_LOCAL_MACHINE > SOFTWARE > VideoOSServerConnectionString).
 
@@ -61,7 +61,7 @@ Verwijder voor het Event-cluster bij stap 4 van de stapsgewijze configuratie van
   * De stream van elke camera kan ook met de oplossing [Vega / RMF](<https://vega25.com/>) naar twee recorders worden gestuurd.
 
 
-ℹ️ Lees bij een migratie van Milestone van versie N naar versie N+1 in een SafeKit-cluster dit artikel: 🛠️ [Milestone Management migreren met SafeKit](</quick-install/safekit-quick-installation-guide-milestone-migration/>)
+ℹ️ Lees bij een migratie van Milestone van versie N naar versie N+1 in een SafeKit-cluster dit artikel: 🛠️ [Milestone Management migreren met SafeKit](</nl/quick-install/safekit-quick-installation-guide-milestone-migration/>)
 
 
 {{%  insert-safekit-installation-package-windows-nl app="Milestone XProtect and SQL" mod="milestone"  %}}

@@ -17,7 +17,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para Nedap , Limit
 
 ## Descripción general de la solución SafeKit / Nedap {#overview-of-the-safekit--nedap-solution}
 
-La solución se describe aquí: ** 💡 [ La más sencilla Nedap Alta disponibilidad: replicación síncrona de 2 nodos y conmutación por error ](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+La solución se describe aquí: ** 💡 [ La más sencilla Nedap Alta disponibilidad: replicación síncrona de 2 nodos y conmutación por error ](</es/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
 
 ## Instalación de la solución SafeKit / Nedap en Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
@@ -34,7 +34,7 @@ La solución se describe aquí: ** 💡 [ La más sencilla Nedap Alta disponibil
   * Elimine MSSQLServer de la macro SERVICES.
 
 
-Puede implementar redundancia del SQL Server externo con 💡 [ SafeKit y el módulo sqlserver.safe ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) . En este caso, configure la conexión de Nedap AEOS a SQL con la dirección IP virtual del módulo sqlserver.safe .
+Puede implementar redundancia del SQL Server externo con 💡 [ SafeKit y el módulo sqlserver.safe ](</es/solutions/sql-server-high-availability-synchronous-replication-failover/>) . En este caso, configure la conexión de Nedap AEOS a SQL con la dirección IP virtual del módulo sqlserver.safe .
 
 
 {{%  insert-safekit-installation-package-windows-es app="Nedap AEOS and SQL" mod="nedap"  %}}

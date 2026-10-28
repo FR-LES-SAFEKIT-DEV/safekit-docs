@@ -7,7 +7,7 @@
 ### 前提条件
 
   * {{ .Get "app" }} 应用程序已安装在 2 个或更多节点上。
-  * 虚拟 IP 负载均衡要求节点位于同一 LAN 或扩展 LAN (L2) 上 — 不支持路由的 L3 网络（🛠️ [云负载均衡器](/resources/safekit-user-guide-82/#Cloud)除外）。
+  * 虚拟 IP 负载均衡要求节点位于同一 LAN 或扩展 LAN (L2) 上 — 不支持路由的 L3 网络（🛠️ [云负载均衡器](/zh-hans/resources/safekit-user-guide-82/#Cloud)除外）。
 
 
 ### 1. 启动 SafeKit 控制台
@@ -20,7 +20,7 @@
 
 ⚠️ 通过一个浏览器即可在两个节点上配置 SafeKit。
 
-ℹ️ 要保护 Web 控制台，请参阅《用户指南》中的 🛠️ [11\. 保护 SafeKit Web 服务](/resources/safekit-user-guide-82/#https)。
+ℹ️ 要保护 Web 控制台，请参阅《用户指南》中的 🛠️ [11\. 保护 SafeKit Web 服务](/zh-hans/resources/safekit-user-guide-82/#https)。
 
 
 ![启动 SafeKit Web 控制台以配置 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/01-login-large.png)
@@ -28,7 +28,7 @@
 
 ### 2. 配置节点地址
 
-  * 输入节点 IP 地址，按 `Tab key` 检查连接，然后填写节点名称。如果 node1 或 node2 显示为红色，请检查浏览器与两个节点的连接以及两个节点上的防火墙；请参阅 🛠️ [故障排除](/resources/safekit-user-guide-82/#Troubleshooting)。
+  * 输入节点 IP 地址，按 `Tab key` 检查连接，然后填写节点名称。如果 node1 或 node2 显示为红色，请检查浏览器与两个节点的连接以及两个节点上的防火墙；请参阅 🛠️ [故障排除](/zh-hans/resources/safekit-user-guide-82/#Troubleshooting)。
   * 然后，单击 `Save and apply` 保存配置。
   * 确认两个节点上都显示 `Success` ✅ 消息。
   * 如果某个节点出现配置 `Failure` ❌，请展开该节点的 ▼ 折叠面板并查看消息。也可以使用 SafeKit AI 🤖 获取帮助。
@@ -70,7 +70,7 @@
 
 ℹ️ 单击 `Advanced configuration` 后会显示 `userconfig.xml` 文件。控制台会自动填充此文件，并将其与重启脚本一起部署到节点。
 
-ℹ️ 在云部署中，无需在 SafeKit 中配置虚拟 IP 地址或负载均衡规则。虚拟 IP 和负载均衡规则由 🛠️ [云负载均衡器](/resources/safekit-user-guide-82/#Cloud)管理。
+ℹ️ 在云部署中，无需在 SafeKit 中配置虚拟 IP 地址或负载均衡规则。虚拟 IP 和负载均衡规则由 🛠️ [云负载均衡器](/zh-hans/resources/safekit-user-guide-82/#Cloud)管理。
 
 ℹ️ 应用 SafeKit 配置时，Windows 服务的 `startup type` 会自动设置为 `Manual`。因此，服务不会在系统启动时自动启动，而只会在模块启动时启动（Linux 也适用）。
 

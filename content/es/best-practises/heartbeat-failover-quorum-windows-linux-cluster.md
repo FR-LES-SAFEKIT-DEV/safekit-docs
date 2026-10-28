@@ -65,7 +65,7 @@ Lamentablemente, estos nuevos dispositivos de quórum añaden coste y complejida
 
 ### SafeKit comprobador de cerebro dividido {#safekit-split-brain-checker}
 
-Con el software de alta disponibilidad SafeKit , el quórum dentro de un clúster Windows o Linux no requiere un tercer servidor de quórum ni un disco de quórum. Un simple comprobador ](</resources/safekit-user-guide-82/#check_splitbrain>) [ suficiente para evitar la doble ejecución de una aplicación.
+Con el software de alta disponibilidad SafeKit , el quórum dentro de un clúster Windows o Linux no requiere un tercer servidor de quórum ni un disco de quórum. Un simple comprobador ](</es/resources/safekit-user-guide-82/#check_splitbrain>) [ suficiente para evitar la doble ejecución de una aplicación.
 
 Tras la pérdida de la señal de latido entre los servidores, el verificador de división de cerebro selecciona un único servidor como principal. El otro servidor entra en estado de espera hasta que vuelve a recibir la señal del servidor principal. Una vez sincronizados los datos replicados del servidor principal, regresa al estado secundario.
 

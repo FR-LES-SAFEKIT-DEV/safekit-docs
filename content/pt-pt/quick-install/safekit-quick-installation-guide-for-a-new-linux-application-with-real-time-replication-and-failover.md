@@ -15,7 +15,7 @@ topics: "Guia de instalação rápida de elevada disponibilidade para Linux, Lim
 
 ## Descrição geral da solução SafeKit / Linux {#overview-of-the-safekit--linux-solution}
 
-A solução é descrita aqui: **💡[A elevada disponibilidade mais simples em Linux: replicação síncrona de 2 nós e failover](</solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
+A solução é descrita aqui: **💡[A elevada disponibilidade mais simples em Linux: replicação síncrona de 2 nós e failover](</pt-pt/solutions/linux-high-availability-software-synchronous-replication-failover/>)**.
 
 ## Instalação da solução SafeKit / Linux (mirror.safe) {#installation-of-the-safekit--linux-solution-mirrorsafe}
 

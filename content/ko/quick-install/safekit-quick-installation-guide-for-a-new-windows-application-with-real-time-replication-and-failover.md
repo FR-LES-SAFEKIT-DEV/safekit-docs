@@ -15,7 +15,7 @@ topics: "Windows용 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 
 ## SafeKit / Windows 솔루션 개요 {#overview-of-the-safekit--windows-solution}
 
-솔루션은 여기에서 설명합니다: **💡[가장 간단한 Windows 고가용성: 2노드 동기식 복제 및 페일오버](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+솔루션은 여기에서 설명합니다: **💡[가장 간단한 Windows 고가용성: 2노드 동기식 복제 및 페일오버](</ko/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## SafeKit / Windows 솔루션에 설치 (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

@@ -15,7 +15,7 @@ topics: "Guia de instalação rápida de alta disponibilidade para KVM, Limitaç
 
 ## Visão geral da solução SafeKit / KVM {#overview-of-the-safekit--kvm-solution}
 
-A solução é descrita aqui: **💡[Alta disponibilidade simples de KVM em Linux sem armazenamento partilhado](</solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
+A solução é descrita aqui: **💡[Alta disponibilidade simples de KVM em Linux sem armazenamento partilhado](</pt-pt/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)**
 
 ## Instalação da solução SafeKit / KVM no Linux (kvm.safe) {#installation-of-the-safekit--kvm-solution-on-linux-kvmsafe}
 
@@ -26,7 +26,7 @@ A solução é descrita aqui: **💡[Alta disponibilidade simples de KVM em Linu
   * Máximo de 32 máquinas virtuais por host KVM.
   * Total de dados replicados limitado a alguns terabytes — além disso, o tempo de ressincronização torna-se significativo.
   * Interligação mínima de 1 Gb/s entre nós (recomenda-se 10 Gb/s para uma ressincronização mais rápida).
-  * O failover de IP requer que ambos os nós estejam na mesma LAN ou numa LAN estendida (L2); redes L3 encaminhadas não são suportadas (exceto com 🛠️ [balanceadores de carga na nuvem](</resources/safekit-user-guide-82/#Cloud>)).
+  * O failover de IP requer que ambos os nós estejam na mesma LAN ou numa LAN estendida (L2); redes L3 encaminhadas não são suportadas (exceto com 🛠️ [balanceadores de carga na nuvem](</pt-pt/resources/safekit-user-guide-82/#Cloud>)).
 
 
 

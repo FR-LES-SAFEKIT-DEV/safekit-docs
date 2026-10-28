@@ -7,7 +7,7 @@
 ### Vereisten
 
   * De toepassing {{ .Get "app" }} is geïnstalleerd op 2 of meer knooppunten.
-  * Voor load balancing met een virtueel IP-adres moeten de knooppunten zich op hetzelfde LAN of een uitgebreid LAN (L2) bevinden — gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloudloadbalancers](/resources/safekit-user-guide-82/#Cloud)).
+  * Voor load balancing met een virtueel IP-adres moeten de knooppunten zich op hetzelfde LAN of een uitgebreid LAN (L2) bevinden — gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloudloadbalancers](/nl/resources/safekit-user-guide-82/#Cloud)).
 
 
 ### 1. De SafeKit-console starten
@@ -20,7 +20,7 @@ U kunt de console ook in een browser op een werkstation buiten het cluster gebru
 
 ⚠️ De SafeKit-configuratie wordt op beide knooppunten vanuit één browser uitgevoerd.
 
-ℹ️ Zie 🛠️ [11\. De SafeKit-webservice beveiligen](/resources/safekit-user-guide-82/#https) in de gebruikershandleiding om de webconsole te beveiligen.
+ℹ️ Zie 🛠️ [11\. De SafeKit-webservice beveiligen](/nl/resources/safekit-user-guide-82/#https) in de gebruikershandleiding om de webconsole te beveiligen.
 
 
 ![Start de SafeKit-webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
@@ -28,7 +28,7 @@ U kunt de console ook in een browser op een werkstation buiten het cluster gebru
 
 ### 2. De knooppuntadressen configureren
 
-  * Voer de IP-adressen van de knooppunten in, druk op `Tab key` om de verbinding te controleren en vul de knooppuntnamen in. Als node1 of node2 rood wordt weergegeven, controleer dan de browserverbinding met beide knooppunten en de firewalls op beide knooppunten; raadpleeg 🛠️ [probleemoplossing](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Voer de IP-adressen van de knooppunten in, druk op `Tab key` om de verbinding te controleren en vul de knooppuntnamen in. Als node1 of node2 rood wordt weergegeven, controleer dan de browserverbinding met beide knooppunten en de firewalls op beide knooppunten; raadpleeg 🛠️ [probleemoplossing](/nl/resources/safekit-user-guide-82/#Troubleshooting).
   * Klik vervolgens op `Save and apply` om de configuratie op te slaan.
   * Controleer of de melding `Success` ✅ op beide knooppunten verschijnt.
   * Als `Failure` ❌ optreedt op een knooppunt, open dan het ▼-menu van dat knooppunt en bekijk de meldingen. U kunt SafeKit AI 🤖 om hulp vragen.
@@ -70,7 +70,7 @@ U kunt de console ook in een browser op een werkstation buiten het cluster gebru
 
 ℹ️ Klik op `Advanced configuration` om het bestand `userconfig.xml` weer te geven. De console vult dit bestand automatisch in en implementeert het samen met de herstartscripts op de knooppunten.
 
-ℹ️ Bij een cloudimplementatie hoeft u geen virtueel IP-adres of load-balancingregels in SafeKit te configureren. Het virtuele IP-adres en de load-balancingregels worden beheerd op het niveau van de 🛠️ [cloudloadbalancer](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Bij een cloudimplementatie hoeft u geen virtueel IP-adres of load-balancingregels in SafeKit te configureren. Het virtuele IP-adres en de load-balancingregels worden beheerd op het niveau van de 🛠️ [cloudloadbalancer](/nl/resources/safekit-user-guide-82/#Cloud).
 
 ℹ️ Wanneer u de SafeKit-configuratie toepast, wordt het `startup type` van services in Windows-services automatisch ingesteld op `Manual`. Hierdoor starten services niet automatisch wanneer het systeem opstart, maar alleen wanneer de module zelf wordt gestart (dit geldt ook voor Linux).
 

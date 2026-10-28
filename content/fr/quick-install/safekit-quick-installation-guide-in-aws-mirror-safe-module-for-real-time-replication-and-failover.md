@@ -13,7 +13,7 @@ topics: "Guide d’installation rapide de la haute disponibilité pour AWS, Limi
 
 ## Présentation de la solution SafeKit / AWS mirror {#overview-of-the-safekit--aws-mirror-solution}
 
-La solution est décrite ici : **💡[Haute disponibilité Amazon AWS : réplication synchrone et basculement avec SafeKit](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>)**.
+La solution est décrite ici : **💡[Haute disponibilité Amazon AWS : réplication synchrone et basculement avec SafeKit](</fr/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation de la solution SafeKit / AWS mirror sous Windows et Linux (mirror.safe) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

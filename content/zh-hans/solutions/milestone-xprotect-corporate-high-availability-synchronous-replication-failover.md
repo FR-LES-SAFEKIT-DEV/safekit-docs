@@ -23,7 +23,7 @@ SafeKit 是最佳解决方案，因为它完全基于软件，且与硬件完全
 
 ### Siemens 首选的解决方案 {#solution-preferred-by-siemens}
 
-SafeKit 可在 [Siemens Marketplace](https://www.siemens.com/en-us/products/atos-safekit/) 中使用，适用于 💡 [Siveillance 套件](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)（视频和门禁控制）以及 SCADA 软件：💡 [Desigo CC](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)（楼宇管理）、💡 [SIMATIC WinCC](/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/) 和 💡 [SIMATIC PCS 7](/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/)。
+SafeKit 可在 [Siemens Marketplace](https://www.siemens.com/en-us/products/atos-safekit/) 中使用，适用于 💡 [Siveillance 套件](/zh-hans/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)（视频和门禁控制）以及 SCADA 软件：💡 [Desigo CC](/zh-hans/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)（楼宇管理）、💡 [SIMATIC WinCC](/zh-hans/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/) 和 💡 [SIMATIC PCS 7](/zh-hans/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/)。
 
 Siemens 在澳大利亚、法国、荷兰、卡塔尔、瑞士、阿联酋、英国和美国部署 SafeKit。
 
@@ -31,7 +31,7 @@ Siemens 在澳大利亚、法国、荷兰、卡塔尔、瑞士、阿联酋、英
 
 作为实体门禁控制领域的重要企业，Nedap 推荐使用 SafeKit 为其 AEOS 应用实现冗余和高可用性。
 
-[Nedap/SafeKit 解决方案](/solutions/nedap-high-availability-synchronous-replication-failover/)提供免费试用和快速安装指南。
+[Nedap/SafeKit 解决方案](/zh-hans/solutions/nedap-high-availability-synchronous-replication-failover/)提供免费试用和快速安装指南。
 
 ### TIL Technologies 选择了 SafeKit {#til-technologies-has-chosen-safekit}
 

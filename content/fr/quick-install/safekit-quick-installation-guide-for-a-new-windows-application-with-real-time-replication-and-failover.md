@@ -15,7 +15,7 @@ topics: "Guide d'installation rapide de la haute disponibilité pour Windows, Li
 
 ## Présentation de la solution SafeKit / Windows {#overview-of-the-safekit--windows-solution}
 
-La solution est décrite ici : **💡[La haute disponibilité Windows la plus simple : réplication synchrone à 2 nœuds et reprise sur panne](</solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+La solution est décrite ici : **💡[La haute disponibilité Windows la plus simple : réplication synchrone à 2 nœuds et reprise sur panne](</fr/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
 ## Installation sur les solutions SafeKit / Windows (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 

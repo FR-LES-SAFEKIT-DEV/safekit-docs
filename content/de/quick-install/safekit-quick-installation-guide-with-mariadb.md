@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für MariaDB , Ei
 
 ## Übersicht der SafeKit / MariaDB -Lösung {#overview-of-the-safekit--mariadb-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste MariaDB Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** .
+Die Lösung wird hier beschrieben: ** 💡 [ Die einfachste MariaDB Hochverfügbarkeit: 2-Knoten-Synchronreplikation & Failover ](</de/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** .
 
 ## Installation der SafeKit / MariaDB Lösung auf Windows und Linux ( mysql.safe ) {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 

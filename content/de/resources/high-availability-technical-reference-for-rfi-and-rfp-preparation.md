@@ -259,7 +259,7 @@ Angebot anfordern </safekit-pricing/> | [ https://safekit.eviden.com/safekit-pri
 Supportportal | <https://customercare.evidian.com>  
 Kostenlose KI-Unterstützung | [ https://safekit.eviden.com/de/resources/safekit-support/]( </de/resources/safekit-support/>  
 Kostenlose Schulung & Zertifizierung | 🎓 [ https://safekit.eviden.com/de/resources/safekit-on-line-training/]( </de/resources/safekit-on-line-training/> )  
-Kontaktieren Sie uns | [ https://safekit.eviden.com/contact-us-for-safekit/]( </contact-us-for-safekit/>  
+Kontaktieren Sie uns | [ https://safekit.eviden.com/contact-us-for-safekit/]( </de/contact-us-for-safekit/>  
   
 
 {{%  insert-safekit-4-buttons-de  %}}

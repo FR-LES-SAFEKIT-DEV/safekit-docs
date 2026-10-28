@@ -17,7 +17,7 @@ topics: "Nedapの高可用性クイックインストールガイド、 SafeKit�
 
 ## SafeKit / Nedapソリューションの概要 {#overview-of-the-safekit--nedap-solution}
 
-解決策はここに記載されています: ** 💡 [最もシンプルなNedap高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
+解決策はここに記載されています: ** 💡 [最もシンプルなNedap高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
 
 ## SafeKit / NedapソリューションをWindows ( nedap.safe )にインストールします。 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
@@ -34,7 +34,7 @@ topics: "Nedapの高可用性クイックインストールガイド、 SafeKit�
   * SERVICESマクロからMSSQLServerを削除します。
 
 
-外部モジュールSQL Serverの冗長性は、💡 [ SafeKitおよびsqlserver.safeモジュール](</solutions/sql-server-high-availability-synchronous-replication-failover/>)を使用して実装できます。この場合、 Nedap AEOS と SQL の接続を、 sqlserver.safeモジュールの仮想 IP アドレスで構成してください。
+外部モジュールSQL Serverの冗長性は、💡 [ SafeKitおよびsqlserver.safeモジュール](</ja/solutions/sql-server-high-availability-synchronous-replication-failover/>)を使用して実装できます。この場合、 Nedap AEOS と SQL の接続を、 sqlserver.safeモジュールの仮想 IP アドレスで構成してください。
 
 
 {{%  insert-safekit-installation-package-windows-ja app="Nedap AEOS and SQL" mod="nedap"  %}}

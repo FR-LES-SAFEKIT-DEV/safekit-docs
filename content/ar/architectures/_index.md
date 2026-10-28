@@ -33,7 +33,7 @@ topics: "ما هي بنى التوافر العالي المختلفة ومجم�
 ![ farm SafeKit + mirror cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-[ مزيد من المعلومات ](</architectures/clustering-software-load-balancing-mirroring/>)
+[ مزيد من المعلومات ](</ar/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### مجموعة نشطة/نشطة {#activeactive-cluster}
 
@@ -41,7 +41,7 @@ topics: "ما هي بنى التوافر العالي المختلفة ومجم�
 ![ SafeKit مجموعة نشطة نشطة مع نسخ متماثل في الوقت الحقيقي ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[ مزيد من المعلومات ](</architectures/active-active-cluster-real-time-replication/>)
+[ مزيد من المعلومات ](</ar/architectures/active-active-cluster-real-time-replication/>)
 
 ### مجموعة N-1 {#n-1-cluster}
 
@@ -49,7 +49,7 @@ topics: "ما هي بنى التوافر العالي المختلفة ومجم�
 ![ SafeKit مجموعة تكرار N-1 ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[ مزيد من المعلومات ](</architectures/n-1-redundancy/>)
+[ مزيد من المعلومات ](</ar/architectures/n-1-redundancy/>)
 
 ## كيفية إنشاء مجموعات عالية التوافر باستخدام SafeKit ؟ {#how-to-build-high-availability-clusters-with-safekit}
 

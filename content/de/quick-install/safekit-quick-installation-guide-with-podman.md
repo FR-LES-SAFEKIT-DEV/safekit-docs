@@ -15,7 +15,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Podman , Ein
 
 ## Übersicht der SafeKit / Podman -Lösung {#overview-of-the-safekit--podman-solution}
 
-Die Lösung wird hier beschrieben: ** 💡 [ SafeKit : Podman Hochverfügbarkeits- und Echtzeit-Datenreplikationssoftware ](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
+Die Lösung wird hier beschrieben: ** 💡 [ SafeKit : Podman Hochverfügbarkeits- und Echtzeit-Datenreplikationssoftware ](</de/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
 
 ## Installation der SafeKit / Podman Lösung auf Linux ( mirror.safe ) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 

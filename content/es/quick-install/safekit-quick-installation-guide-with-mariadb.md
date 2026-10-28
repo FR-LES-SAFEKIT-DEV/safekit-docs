@@ -15,7 +15,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para MariaDB , lim
 
 ## Descripción general de la solución SafeKit / MariaDB {#overview-of-the-safekit--mariadb-solution}
 
-La solución se describe aquí: ** 💡 [ La más sencilla MariaDB Alta disponibilidad: replicación síncrona de 2 nodos y conmutación por error ](</solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** .
+La solución se describe aquí: ** 💡 [ La más sencilla MariaDB Alta disponibilidad: replicación síncrona de 2 nodos y conmutación por error ](</es/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** .
 
 ## Instalación de la solución SafeKit / MariaDB en Windows y Linux ( mysql.safe ) {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 

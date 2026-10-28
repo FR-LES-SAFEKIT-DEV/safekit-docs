@@ -15,7 +15,7 @@ topics: "Windows용 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 
 ## SafeKit / Windows 솔루션 개요 {#overview-of-the-safekit--windows-solution}
 
-솔루션은 여기에서 설명합니다: **💡[SafeKit: 올인원 Windows 로드 밸런싱 및 고가용성 소프트웨어](</solutions/windows-load-balancing-failover/>)**.
+솔루션은 여기에서 설명합니다: **💡[SafeKit: 올인원 Windows 로드 밸런싱 및 고가용성 소프트웨어](</ko/solutions/windows-load-balancing-failover/>)**.
 
 ## SafeKit / Windows 솔루션 설치 (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 

@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي على
 
 ## نظرة عامة على حل SafeKit / Linux {#overview-of-the-safekit--linux-solution}
 
-يوصف الحل هنا: **💡[SafeKit: برنامج متكامل لموازنة التحميل والتوافر العالي على Linux](</solutions/linux-load-balancing-failover/>)**.
+يوصف الحل هنا: **💡[SafeKit: برنامج متكامل لموازنة التحميل والتوافر العالي على Linux](</ar/solutions/linux-load-balancing-failover/>)**.
 
 ## تثبيت حل SafeKit / Linux (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
 

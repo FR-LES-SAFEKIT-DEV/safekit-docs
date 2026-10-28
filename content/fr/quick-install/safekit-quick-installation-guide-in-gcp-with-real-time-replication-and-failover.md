@@ -13,7 +13,7 @@ topics: "Guide d’installation rapide de la haute disponibilité pour GCP, Limi
 
 ## Présentation de la solution SafeKit / GCP mirror {#overview-of-the-safekit--gcp-mirror-solution}
 
-La solution est décrite ici : **💡[Haute disponibilité Google GCP : réplication synchrone et basculement avec SafeKit](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)**.
+La solution est décrite ici : **💡[Haute disponibilité Google GCP : réplication synchrone et basculement avec SafeKit](</fr/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation de la solution SafeKit / GCP mirror sous Windows et Linux (mirror.safe) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

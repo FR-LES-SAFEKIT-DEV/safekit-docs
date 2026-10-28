@@ -17,7 +17,7 @@ topics: "Nedap 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
 
 ## SafeKit / Nedap 솔루션 개요 {#overview-of-the-safekit--nedap-solution}
 
-솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 Nedap 고가용성: 2노드 동기 복제 및 장애 조치 ](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
+솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 Nedap 고가용성: 2노드 동기 복제 및 장애 조치 ](</ko/solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
 
 ## SafeKit / Nedap 솔루션의 Windows ( nedap.safe ) 및 설치 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
@@ -34,7 +34,7 @@ topics: "Nedap 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
   * SERVICES 매크로에서 MSSQLServer를 제거합니다.
 
 
-외부 SQL Server 모듈의 이중화는 💡 [ SafeKit 및 sqlserver.safe ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) 모듈을 사용하여 구현할 수 있습니다. 이 경우 Nedap AEOS와 SQL 간의 연결을 sqlserver.safe 모듈의 가상 IP 주소로 구성하십시오.
+외부 SQL Server 모듈의 이중화는 💡 [ SafeKit 및 sqlserver.safe ](</ko/solutions/sql-server-high-availability-synchronous-replication-failover/>) 모듈을 사용하여 구현할 수 있습니다. 이 경우 Nedap AEOS와 SQL 간의 연결을 sqlserver.safe 모듈의 가상 IP 주소로 구성하십시오.
 
 
 {{%  insert-safekit-installation-package-windows-ko app="Nedap AEOS and SQL" mod="nedap"  %}}

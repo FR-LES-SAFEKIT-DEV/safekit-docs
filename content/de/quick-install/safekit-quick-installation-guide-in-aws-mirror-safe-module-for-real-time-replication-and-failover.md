@@ -13,7 +13,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in AWS, Einschrä
 
 ## Überblick über die SafeKit-/AWS-mirror-Lösung {#overview-of-the-safekit--aws-mirror-solution}
 
-Die Lösung wird hier beschrieben: **💡[Amazon AWS-Hochverfügbarkeit: synchrone Replikation und Failover mit SafeKit](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[Amazon AWS-Hochverfügbarkeit: synchrone Replikation und Failover mit SafeKit](</de/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation der SafeKit-/AWS-mirror-Lösung unter Windows und Linux (mirror.safe) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 

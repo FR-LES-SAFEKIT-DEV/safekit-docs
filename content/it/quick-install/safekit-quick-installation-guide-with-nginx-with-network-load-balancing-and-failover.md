@@ -15,7 +15,7 @@ topics: "Guida rapida all'installazione dell'alta disponibilità per NGINX, Limi
 
 ## Panoramica della soluzione SafeKit / NGINX {#overview-of-the-safekit--nginx-solution}
 
-La soluzione è descritta qui: ** 💡 [ SafeKit : Software NGINX All-in-One per bilanciamento del carico e alta disponibilità ](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
+La soluzione è descritta qui: ** 💡 [ SafeKit : Software NGINX All-in-One per bilanciamento del carico e alta disponibilità ](</it/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
 
 ## Installazione della soluzione SafeKit / NGINX su Windows e Linux ( farm.safe ) {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 

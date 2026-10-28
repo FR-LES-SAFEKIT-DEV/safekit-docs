@@ -13,7 +13,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in GCP, Einschrä
 
 ## Überblick über die SafeKit-/GCP-mirror-Lösung {#overview-of-the-safekit--gcp-mirror-solution}
 
-Die Lösung wird hier beschrieben: **💡[Google GCP-Hochverfügbarkeit: synchrone Replikation und Failover mit SafeKit](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[Google GCP-Hochverfügbarkeit: synchrone Replikation und Failover mit SafeKit](</de/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)**.
 
 ## Installation der SafeKit-/GCP-mirror-Lösung unter Windows und Linux (mirror.safe) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 

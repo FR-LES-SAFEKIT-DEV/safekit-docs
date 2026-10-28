@@ -21,7 +21,7 @@ Een software-uitgever gebruikt [ SafeKit als OEM-software ](</nl/use-cases/appli
 
 ### Gedistribueerde onderneming {#distributed-enterprise}
 
-Een gedistribueerde onderneming implementeert [ SafeKit in veel vestigingen ](</use-cases/business-continuity-software/>) zonder specifieke IT-vaardigheden.
+Een gedistribueerde onderneming implementeert [ SafeKit in veel vestigingen ](</nl/use-cases/business-continuity-software/>) zonder specifieke IT-vaardigheden.
 
 
 ![ Software met hoge beschikbaarheid in een gedistribueerde onderneming ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
@@ -29,7 +29,7 @@ Een gedistribueerde onderneming implementeert [ SafeKit in veel vestigingen ](</
 
 ### Externe locaties {#remote-sites}
 
-[ SafeKit wordt ingezet op twee externe locaties ](</best-practises/high-availability-disaster-recovery-hadr/>) zonder dat er gerepliceerde schijfposities via een SAN nodig zijn.
+[ SafeKit wordt ingezet op twee externe locaties ](</nl/best-practises/high-availability-disaster-recovery-hadr/>) zonder dat er gerepliceerde schijfposities via een SAN nodig zijn.
 
 
 ![ Bedrijfscontinuïteit en noodherstel zonder een gerepliceerde SAN ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")

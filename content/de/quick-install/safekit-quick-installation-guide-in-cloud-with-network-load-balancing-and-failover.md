@@ -13,7 +13,7 @@ topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in der Cloud, Ein
 
 ## Überblick über die SafeKit-/Cloud-Lösung {#overview-of-the-safekit--cloud-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: Cloud-Lastausgleich und Anwendungs-Hochverfügbarkeit mit einem `Farm`-Cluster](</solutions/cloud-load-balancing-cluster-failover/>)**.
+Die Lösung wird hier beschrieben: **💡[SafeKit: Cloud-Lastausgleich und Anwendungs-Hochverfügbarkeit mit einem `Farm`-Cluster](</de/solutions/cloud-load-balancing-cluster-failover/>)**.
 
 ## Installation der SafeKit-/Cloud-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 
