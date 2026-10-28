@@ -495,9 +495,9 @@
                             </div>
                             <div class="mega-column">
                                 <h4 class="mega-column-title">Product information</h4>
-                                <a href="{{ "wp-content/uploads/documents/high-availability-overview.pdf" | relURL }}" target="_blank" rel="noopener">Flyer</a>
-                                <a href="{{ "wp-content/uploads/documents/wp-safekit-en.pdf" | relURL }}" target="_blank" rel="noopener">White Paper - Product</a>
-                                <a href="{{ "wp-content/uploads/documents/wp-hadecision-en.pdf" | relURL }}" target="_blank" rel="noopener">White Paper - High Availability Guide</a>
+                                <a href="{{ (cond (eq .Site.Language.Lang "fr") "wp-content/uploads/documents/high-availability-overview-fr.pdf" "wp-content/uploads/documents/high-availability-overview.pdf") | relURL }}" target="_blank" rel="noopener">Datasheet</a>
+                                <a href="{{ (cond (eq .Site.Language.Lang "fr") "wp-content/uploads/documents/wp-safekit-fr.pdf" "wp-content/uploads/documents/wp-safekit-en.pdf") | relURL }}" target="_blank" rel="noopener">White Paper - Product</a>
+                                <a href="{{ (cond (eq .Site.Language.Lang "fr") "wp-content/uploads/documents/wp-hadecision-fr.pdf" "wp-content/uploads/documents/wp-hadecision-en.pdf") | relURL }}" target="_blank" rel="noopener">White Paper - High Availability Guide</a>
                                 {{ with or ($localSite.GetPage "/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation") ($enSite.GetPage "/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation") }}
                                 <a href="{{ .RelPermalink }}">Technical Reference for RFI and RFP</a>
                                 {{ end }}
