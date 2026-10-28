@@ -1,0 +1,39 @@
+{{/* Shortcode: insert-safekit-network-isolation-ko — 3 instances in 3 files */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+
+
+
+## 클러스터에서 네트워크 격리가 발생하면 어떤 시나리오가 있나요? {#isolation}
+
+### 단일 네트워크 {#a-single-network}
+
+네트워크 격리가 발생하면 기본 동작은 다음과 같습니다.
+
+  * 각 노드의 하트비트가 손실되므로 각 노드는 ALONE으로 전환되고 자신의 가상 IP 주소로 애플리케이션을 실행합니다(애플리케이션이 이중으로 실행되어 각자의 로컬 데이터를 수정함).
+  * 격리가 해소되면 ALONE 노드 하나가 강제로 중지되고 다른 노드에서 데이터를 다시 동기화합니다.
+  * 최종적으로 클러스터는 PRIM-SECOND가 됩니다(Windows의 중복 가상 IP 주소 감지 결과에 따라 SECOND-PRIM이 될 수도 있음).
+
+
+### 전용 복제 네트워크가 있는 두 개의 네트워크 {#two-networks-with-a-dedicated-replication-network}
+
+네트워크 격리가 발생할 때 전용 복제 네트워크를 사용하는 경우의 동작은 다음과 같습니다.
+
+  * 사설 네트워크에 전용 복제 네트워크를 구현합니다.
+  * 운영 네트워크의 하트비트가 손실됩니다(격리된 네트워크).
+  * 복제 네트워크의 하트비트는 정상 작동합니다(격리되지 않은 네트워크).
+  * 클러스터는 PRIM/SECOND 상태를 유지합니다.
+
+
+### 단일 네트워크와 스플릿 브레인 검사기 {#a-single-network-and-a-splitbrain-checker}
+
+네트워크 격리가 발생할 때 스플릿 브레인 검사기를 사용하는 경우의 동작은 다음과 같습니다.
+
+  * 감시자(일반적으로 라우터)의 IP 주소로 스플릿 브레인 검사기를 구성합니다.
+  * 서버가 PRIM에서 ALONE 또는 SECOND에서 ALONE으로 전환될 때 스플릿 브레인 검사기가 작동합니다.
+  * 네트워크 격리가 발생하면 두 노드는 ALONE으로 전환하기 전에 IP 주소를 테스트합니다.
+  * IP 주소에 접근할 수 있는 노드는 ALONE으로, 다른 노드는 WAIT로 전환됩니다.
+  * 격리가 해소되면 WAIT 노드가 데이터를 다시 동기화하고 SECOND가 됩니다.
+
+
+참고: 감시자가 중단되거나 연결이 끊어지면 두 노드 모두 WAIT로 전환되고 애플리케이션은 더 이상 실행되지 않습니다. 따라서 라우터처럼 안정적인 감시자를 선택해야 합니다.

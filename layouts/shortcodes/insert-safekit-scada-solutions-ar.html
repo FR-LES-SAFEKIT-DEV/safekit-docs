@@ -1,0 +1,32 @@
+{{/* Shortcode: insert-safekit-scada-solutions-ar — 1 instance in 1 file */}}
+{{/* Parameters: app */}}
+{{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
+
+
+
+## يقدم SafeKit حلّين للتكرار والتوافر العالي لبرمجيات {{ .Get "app" }} {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
+
+### التكرار والتوافر العالي على مستوى التطبيق {#redundancy-and-high-availability-at-the-application-level}
+
+في هذا النوع من الحلول، تُنسخ بيانات التطبيق فقط نسخاً متماثلاً. ولا يُعاد تشغيل سوى التطبيق عند حدوث عطل.
+
+
+![التكرار على مستوى التطبيق لبرمجيات {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+
+
+مع هذا الحل، يجب كتابة نصوص برمجية لإعادة تشغيل التطبيق. هذا الحل مستقل عن المنصة ويعمل مع التطبيقات داخل الأجهزة الفعلية والأجهزة الافتراضية وفي السحابة. ويدعم أي برنامج مراقبة أجهزة افتراضية (VMware، Hyper-V...).
+
+  * حل لتطبيق جديد (يجب كتابة نصوص إعادة التشغيل): 💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/)، 💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### التكرار والتوافر العالي على مستوى الجهاز الافتراضي {#redundancy-and-high-availability-at-the-virtual-machine-level}
+
+في هذا النوع من الحلول، توضع برمجيات {{ .Get "app" }} داخل جهاز افتراضي. ويُنسخ الجهاز الافتراضي (VM) بأكمله نسخاً متماثلاً ويُعاد تشغيله (التطبيق + OS).
+
+
+![التكرار على مستوى الجهاز الافتراضي لبرمجيات {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+
+
+ميزة هذا الحل هي عدم الحاجة إلى كتابة نصوص إعادة تشغيل لكل تطبيق. هذا الحل عام لأي برمجيات {{ .Get "app" }}. ويعمل مع Windows/Hyper-V وLinux/KVM، ولكن ليس مع VMware. وهو حل نشط/نشط تُنسخ فيه عدة أجهزة افتراضية نسخاً متماثلاً ويُعاد تشغيلها بين عقدتين.
+
+  * حل لتطبيق جديد (لا حاجة إلى كتابة نص إعادة تشغيل): 💡 [Windows/Hyper-V](/ar/solutions/hyper-v-replication-automatic-failover-load-balancing/)، 💡 [Linux/KVM](/ar/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)

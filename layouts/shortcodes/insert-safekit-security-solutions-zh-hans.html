@@ -1,0 +1,44 @@
+{{/* Shortcode: insert-safekit-security-solutions-zh-hans — 4 instances in 4 files */}}
+{{/* Parameters: app */}}
+{{/* Source: content\use-cases\physical-security-software-redundancy.md */}}
+
+
+
+## SafeKit 为 {{ .Get "app" }} 软件的冗余和高可用性提供两种解决方案 {#safekit-security-solutions}
+
+### 应用程序级别的冗余和高可用性 {#redundancy-and-high-availability-at-the-application-level}
+
+在此类解决方案中，仅复制应用程序数据。发生故障时，也仅重新启动应用程序。
+
+
+![{{ .Get "app" }} 软件在应用程序级别的冗余](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+
+
+此解决方案需要对应用程序有技术层面的了解。您需要定义要重新启动的服务、指定要复制的应用程序文件夹，并配置用于故障转移的虚拟 IP 地址。但此解决方案与平台无关，适用于物理机、虚拟机和云中的应用程序。支持任何虚拟机监控程序（VMware、Hyper-V...）。
+
+### 示例 {#examples}
+
+  * 视频管理：💡 [Milestone (Management, SQL, Log, Event)/SafeKit](/zh-hans/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
+  * 视频管理：💡 [Genetec (SQL)/SafeKit](/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
+  * 门禁控制：💡 [Nedap (AEOS, SQL)/SafeKit](/solutions/nedap-high-availability-synchronous-replication-failover/)
+  * 新应用程序（定义要重新启动的服务、要复制的应用程序文件夹和用于故障转移的虚拟 IP 地址）：💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/)、💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### 虚拟机级别的冗余和高可用性 {#redundancy-and-high-availability-at-the-virtual-machine-level}
+
+在此类解决方案中，{{ .Get "app" }} 软件放置在虚拟机内。整个虚拟机（VM）都将被复制并重新启动（应用程序 + OS）。
+
+
+![{{ .Get "app" }} 软件在虚拟机级别的冗余](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+
+
+此解决方案的优势是不需要对应用程序有技术层面的了解；只需定义安装该应用程序的 VM 文件的位置即可。此解决方案通用于任何 {{ .Get "app" }} 软件。不过，它仅支持 Windows/Hyper-V 和 Linux/KVM，不支持 VMware。这是一种双活解决方案，在两个节点之间复制并重新启动多个虚拟机。
+
+### 示例 {#examples-1}
+
+  * 楼宇管理：💡 [Siemens Desigo CC/SafeKit](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
+  * 视频管理和门禁控制：💡 [Siemens Siveillance 套件/SafeKit](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+  * 新应用程序（定义安装该应用程序的 VM 文件所在文件夹的位置）：💡 [Windows/Hyper-V](/zh-hans/solutions/hyper-v-replication-automatic-failover-load-balancing/)、💡 [Linux/KVM](/zh-hans/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+
+更多关于 [VM HA 与应用程序 HA](/zh-hans/best-practises/vm-ha-vs-application-ha/) 的比较

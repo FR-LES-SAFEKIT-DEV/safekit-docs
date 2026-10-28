@@ -16,7 +16,7 @@ Dans ce type de solution, seules les données applicatives sont répliquées. Et
 
 Avec cette solution, des scripts de reprise doivent être écrits pour redémarrer l'application. Cette solution est indépendante de la plate-forme et fonctionne avec des applications à l'intérieur de machines physiques, de machines virtuelles, dans le Cloud. Tout hyperviseur est supporté (VMware, Hyper-V...).
 
-  * Solution pour une nouvelle application (scripts de reprise à écrire): 💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+  * Solution pour une nouvelle application (scripts de reprise à écrire) : 💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
 ### Redondance et haute disponibilité au niveau machine virtuelle {#redundancy-and-high-availability-at-the-virtual-machine-level}
@@ -27,8 +27,7 @@ Dans ce type de solution, le logiciel {{ .Get "app" }} est placé dans une machi
 ![Redondance au niveau machine virtuelle pour un logiciel {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
 
 
-L'avantage de cette solution est qu'il n'y a pas de scripts de reprise à écrire par application. Cette solution est générique pour tous les logiciels {{ .Get "app" }}. Elle fonctionne avec les hyperviseurs Windows/Hyper-V et Linux/KVM mais pas avec VMware. Il s'agit d'une solution active/active avec plusieurs machines virtuelles répliquées et redémarrées entre deux nœuds.
+L'avantage de cette solution est qu'il n'y a pas de scripts de reprise à écrire par application. Cette solution est générique pour tous les logiciels {{ .Get "app" }}. Elle fonctionne avec Windows/Hyper-V et Linux/KVM mais pas avec VMware. Il s'agit d'une solution active/active avec plusieurs machines virtuelles répliquées et redémarrées entre deux nœuds.
 
-  * Solutions pour une nouvelle application (pas de script de reprise à écrire) : 💡 [Windows/Hyper-V](/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
-
+  * Solution pour une nouvelle application (pas de script de reprise à écrire) : 💡 [Windows/Hyper-V](/fr/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/fr/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
 

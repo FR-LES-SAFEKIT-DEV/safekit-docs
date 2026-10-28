@@ -1,0 +1,39 @@
+{{/* Shortcode: insert-safekit-network-isolation-nl — 3 instances in 3 files */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+
+
+
+## Welke scenario's zijn er bij netwerkisolatie in een cluster? {#isolation}
+
+### Eén netwerk {#a-single-network}
+
+Bij netwerkisolatie is het standaardgedrag als volgt:
+
+  * doordat de heartbeats voor elke node verloren gaan, gaat elke node naar ALONE en voert de applicatie uit met zijn virtuele IP-adres (dubbele uitvoering van de applicatie die haar lokale gegevens wijzigt),
+  * wanneer de isolatie is verholpen, wordt één ALONE-node gedwongen te stoppen en zijn gegevens opnieuw te synchroniseren vanaf de andere node,
+  * uiteindelijk staat het cluster in PRIM-SECOND (of SECOND-PRIM, afhankelijk van de detectie van het dubbele virtuele IP-adres door Windows).
+
+
+### Twee netwerken met een speciaal replicatienetwerk {#two-networks-with-a-dedicated-replication-network}
+
+Bij netwerkisolatie is het gedrag met een speciaal replicatienetwerk als volgt:
+
+  * een speciaal replicatienetwerk wordt op een privénetwerk ingericht,
+  * de heartbeats op het productienetwerk gaan verloren (geïsoleerd netwerk),
+  * de heartbeats op het replicatienetwerk werken (niet-geïsoleerd netwerk),
+  * het cluster blijft in de toestand PRIM/SECOND.
+
+
+### Eén netwerk en een split-braincontrole {#a-single-network-and-a-splitbrain-checker}
+
+Bij netwerkisolatie is het gedrag met een split-braincontrole als volgt:
+
+  * er is een split-braincontrole ingesteld met het IP-adres van een getuige (doorgaans een router),
+  * de split-braincontrole treedt in werking wanneer een server van PRIM naar ALONE of van SECOND naar ALONE gaat,
+  * bij netwerkisolatie testen beide nodes het IP-adres voordat ze naar ALONE gaan,
+  * de node die het IP-adres kan bereiken gaat naar ALONE, de andere naar WAIT,
+  * wanneer de isolatie is verholpen, synchroniseert de WAIT-node zijn gegevens opnieuw en wordt SECOND.
+
+
+Opmerking: Als de getuige is uitgevallen of niet verbonden is, gaan beide nodes naar WAIT en wordt de applicatie niet meer uitgevoerd. Daarom moet u een betrouwbare getuige kiezen, zoals een router.

@@ -1,0 +1,39 @@
+{{/* Shortcode: insert-safekit-network-isolation-es — 3 instances in 3 files */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+
+
+
+## ¿Cuáles son los distintos escenarios en caso de aislamiento de red en un clúster? {#isolation}
+
+### Una sola red {#a-single-network}
+
+Cuando se produce un aislamiento de red, el comportamiento predeterminado es el siguiente:
+
+  * al perderse los latidos de cada nodo, cada uno pasa a ALONE y ejecuta la aplicación con su dirección IP virtual (doble ejecución de la aplicación que modifica sus datos locales),
+  * al solucionarse el aislamiento, se fuerza a un nodo ALONE a detenerse y a resincronizar sus datos desde el otro nodo,
+  * al final, el clúster queda en PRIM-SECOND (o SECOND-PRIM según la detección de dirección IP virtual duplicada realizada por Windows).
+
+
+### Dos redes con una red de replicación dedicada {#two-networks-with-a-dedicated-replication-network}
+
+Cuando se produce un aislamiento de red, el comportamiento con una red de replicación dedicada es el siguiente:
+
+  * se implementa una red de replicación dedicada en una red privada,
+  * se pierden los latidos en la red de producción (red aislada),
+  * los latidos de la red de replicación funcionan (red no aislada),
+  * el clúster permanece en el estado PRIM/SECOND.
+
+
+### Una sola red y un comprobador de split-brain {#a-single-network-and-a-splitbrain-checker}
+
+Cuando se produce un aislamiento de red, el comportamiento con un comprobador de split-brain es el siguiente:
+
+  * se ha configurado un comprobador de split-brain con la dirección IP de un testigo (normalmente un router),
+  * el comprobador actúa cuando un servidor pasa de PRIM a ALONE o de SECOND a ALONE,
+  * en caso de aislamiento de red, antes de pasar a ALONE, ambos nodos comprueban la dirección IP,
+  * el nodo que puede acceder a la dirección IP pasa a ALONE y el otro pasa a WAIT,
+  * al solucionarse el aislamiento, el nodo WAIT resincroniza sus datos y pasa a SECOND.
+
+
+Nota: Si el testigo está caído o desconectado, ambos nodos pasan a WAIT y la aplicación deja de ejecutarse. Por eso debe elegir un testigo robusto, como un router.

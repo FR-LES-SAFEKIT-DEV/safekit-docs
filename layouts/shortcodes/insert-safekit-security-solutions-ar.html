@@ -1,0 +1,44 @@
+{{/* Shortcode: insert-safekit-security-solutions-ar — 4 instances in 4 files */}}
+{{/* Parameters: app */}}
+{{/* Source: content\use-cases\physical-security-software-redundancy.md */}}
+
+
+
+## يقدم SafeKit حلّين للتكرار والتوافر العالي لبرمجيات {{ .Get "app" }} {#safekit-security-solutions}
+
+### التكرار والتوافر العالي على مستوى التطبيق {#redundancy-and-high-availability-at-the-application-level}
+
+في هذا النوع من الحلول، تُنسخ بيانات التطبيق فقط نسخاً متماثلاً. ولا يُعاد تشغيل سوى التطبيق عند حدوث عطل.
+
+
+![التكرار على مستوى التطبيق لبرمجيات {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+
+
+يتطلب هذا الحل فهماً تقنياً للتطبيق. يجب تحديد الخدمات المراد إعادة تشغيلها، ومجلدات التطبيق المراد نسخها نسخاً متماثلاً، وضبط عنوان IP افتراضي لتجاوز الفشل. لكن هذا الحل مستقل عن المنصة ويعمل مع التطبيقات داخل الأجهزة الفعلية والأجهزة الافتراضية وفي السحابة. ويدعم أي برنامج مراقبة أجهزة افتراضية (VMware، Hyper-V...).
+
+### أمثلة {#examples}
+
+  * إدارة الفيديو: 💡 [Milestone (Management, SQL, Log, Event)/SafeKit](/ar/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
+  * إدارة الفيديو: 💡 [Genetec (SQL)/SafeKit](/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
+  * التحكم في الدخول: 💡 [Nedap (AEOS, SQL)/SafeKit](/solutions/nedap-high-availability-synchronous-replication-failover/)
+  * تطبيق جديد (تحديد الخدمات المراد إعادة تشغيلها، ومجلدات التطبيق المراد نسخها نسخاً متماثلاً، وعنوان IP افتراضي لتجاوز الفشل): 💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/)، 💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### التكرار والتوافر العالي على مستوى الجهاز الافتراضي {#redundancy-and-high-availability-at-the-virtual-machine-level}
+
+في هذا النوع من الحلول، توضع برمجيات {{ .Get "app" }} داخل جهاز افتراضي. ويُنسخ الجهاز الافتراضي (VM) بأكمله نسخاً متماثلاً ويُعاد تشغيله (التطبيق + OS).
+
+
+![التكرار على مستوى الجهاز الافتراضي لبرمجيات {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+
+
+ميزة هذا الحل أنه لا يتطلب فهماً تقنياً للتطبيق؛ يكفي تحديد موقع ملفات VM التي ثُبّت فيها التطبيق. هذا الحل عام لأي برمجيات {{ .Get "app" }}. لكنه يعمل فقط مع Windows/Hyper-V وLinux/KVM، وليس مع VMware. وهو حل نشط/نشط تُنسخ فيه عدة أجهزة افتراضية نسخاً متماثلاً ويُعاد تشغيلها بين عقدتين.
+
+### أمثلة {#examples-1}
+
+  * إدارة المباني: 💡 [Siemens Desigo CC/SafeKit](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
+  * إدارة الفيديو والتحكم في الدخول: 💡 [حزمة Siemens Siveillance/SafeKit](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+  * تطبيق جديد (تحديد موقع مجلد ملفات VM التي ثُبّت فيها التطبيق): 💡 [Windows/Hyper-V](/ar/solutions/hyper-v-replication-automatic-failover-load-balancing/)، 💡 [Linux/KVM](/ar/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+
+مزيد من المقارنة بين [التوافر العالي للأجهزة الافتراضية والتوافر العالي للتطبيقات](/ar/best-practises/vm-ha-vs-application-ha/)

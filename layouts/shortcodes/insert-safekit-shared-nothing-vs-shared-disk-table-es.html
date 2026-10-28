@@ -1,0 +1,22 @@
+{{/* Shortcode: insert-safekit-shared-nothing-vs-shared-disk-table-es — 1 instance in 1 file */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\shared-nothing-architecture-vs-shared-disk-architecture.md */}}
+
+
+
+Elegir la arquitectura de alta disponibilidad adecuada es fundamental para equilibrar coste, complejidad y fiabilidad. Los dos enfoques principales — **sin recursos compartidos** y **disco compartido** — difieren fundamentalmente en cómo gestionan la redundancia de datos y la conmutación por error. Una arquitectura sin recursos compartidos como SafeKit replica datos entre servidores independientes con su propio almacenamiento local, mientras que una arquitectura de disco compartido depende de una cabina de almacenamiento centralizada (SAN) a la que acceden varios servidores. La siguiente tabla compara ambos enfoques según criterios clave.
+
+Criterio | Arquitectura sin recursos compartidos | Arquitectura de disco compartido
+---|---|---
+Producto | [SafeKit en Windows y Linux](/es/) | Herramientas de clustering para disco compartido
+Hardware adicional | No — utiliza los discos internos de los servidores | Sí — coste adicional de una cabina de discos compartida (SAN)
+Organización de los datos de la aplicación | Ningún impacto en la organización de los datos de la aplicación. [Solo hay que definir los directorios que se replicarán en tiempo real](/es/architectures/file-replication-byte-level-with-failover-mirror-cluster/). Incluso pueden replicarse directorios del disco del sistema. | Requiere una configuración especial de la aplicación para colocar sus datos en un disco compartido. Los datos del disco del sistema no se pueden recuperar.
+Complejidad de implementación | No — instalar un software en 2 servidores | Sí — requiere conocimientos específicos de IT para configurar el OS y el disco compartido
+Conmutación por error | Solo hay que reiniciar la aplicación en el segundo servidor. | Cambiar el disco compartido. Volver a montar el sistema de archivos. Ejecutar el procedimiento de recuperación del sistema de archivos. Después, reiniciar la aplicación.
+Recuperación ante desastres | Solo hay que colocar los 2 servidores en 2 ubicaciones remotas conectadas por una LAN extendida. | Coste adicional de una segunda cabina de discos. Requiere conocimientos específicos de IT para configurar la replicación en espejo entre cabinas a través de una SAN.
+Cuórum y split brain | La aplicación se ejecuta en un solo servidor tras el aislamiento de red (split brain). Se garantiza la coherencia de los datos. No se necesita una tercera máquina, un disco de cuórum ni una línea especial de latidos. [Más sobre latidos, conmutación por error y cuórum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Requiere un disco de cuórum especial o un tercer servidor de cuórum para evitar la corrupción de datos en caso de split brain.
+Más adecuado para | [Editores de software que desean añadir una opción HA sencilla a su aplicación](/use-cases/application-clustering-software/) | Empresas con conocimientos de IT en clustering y aplicaciones de grandes bases de datos
+
+**En resumen**, la arquitectura sin recursos compartidos, tal como la implementa SafeKit, gana en **simplicidad**, **coste** y **velocidad de implementación**. No requiere hardware adicional, conocimientos especializados de IT ni cambios en la organización de los datos de la aplicación. La conmutación por error es sencilla, la recuperación ante desastres está integrada y el split brain se gestiona sin infraestructura adicional.
+
+La arquitectura de disco compartido sigue siendo pertinente para grandes empresas con infraestructura SAN existente y equipos de IT dedicados que gestionan bases de datos muy grandes. Sin embargo, para la mayoría de las necesidades de alta disponibilidad de aplicaciones — especialmente para editores de software, entornos OT/edge y ubicaciones distribuidas — la arquitectura sin recursos compartidos con SafeKit es la opción más sencilla y rentable.

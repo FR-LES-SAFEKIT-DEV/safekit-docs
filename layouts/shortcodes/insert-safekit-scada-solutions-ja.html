@@ -1,0 +1,32 @@
+{{/* Shortcode: insert-safekit-scada-solutions-ja — 1 instance in 1 file */}}
+{{/* Parameters: app */}}
+{{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
+
+
+
+## SafeKit は {{ .Get "app" }} ソフトウェアの冗長化と高可用性のために 2 つのソリューションを提供します {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
+
+### アプリケーションレベルの冗長化と高可用性 {#redundancy-and-high-availability-at-the-application-level}
+
+この方式では、アプリケーションデータのみをレプリケーションします。障害時に再起動するのもアプリケーションのみです。
+
+
+![{{ .Get "app" }} ソフトウェアのアプリケーションレベルの冗長化](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+
+
+このソリューションでは、アプリケーションを再起動するためのスクリプトを作成する必要があります。プラットフォームに依存せず、物理マシン、仮想マシン、クラウド内のアプリケーションで動作します。どのハイパーバイザーにも対応します（VMware、Hyper-V...）。
+
+  * 新しいアプリケーション向けのソリューション（再起動スクリプトの作成が必要）：💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/)、💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### 仮想マシンレベルの冗長化と高可用性 {#redundancy-and-high-availability-at-the-virtual-machine-level}
+
+この方式では、{{ .Get "app" }} ソフトウェアを仮想マシン内に配置します。仮想マシン（VM）全体をレプリケーションし、再起動します（アプリケーション + OS）。
+
+
+![{{ .Get "app" }} ソフトウェアの仮想マシンレベルの冗長化](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+
+
+このソリューションの利点は、アプリケーションごとに再起動スクリプトを作成する必要がないことです。どの {{ .Get "app" }} ソフトウェアにも汎用的に適用できます。Windows/Hyper-V と Linux/KVM で動作しますが、VMware では動作しません。複数の仮想マシンを 2 つのノード間でレプリケーションし再起動する、アクティブ/アクティブのソリューションです。
+
+  * 新しいアプリケーション向けのソリューション（再起動スクリプトの作成が不要）：💡 [Windows/Hyper-V](/ja/solutions/hyper-v-replication-automatic-failover-load-balancing/)、💡 [Linux/KVM](/ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)

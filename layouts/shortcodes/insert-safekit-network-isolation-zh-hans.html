@@ -1,0 +1,39 @@
+{{/* Shortcode: insert-safekit-network-isolation-zh-hans — 3 instances in 3 files */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+
+
+
+## 集群发生网络隔离时有哪些不同场景？ {#isolation}
+
+### 单个网络 {#a-single-network}
+
+发生网络隔离时，默认行为如下：
+
+  * 由于每个节点都丢失了心跳，每个节点都会进入 ALONE 状态，并使用自己的虚拟 IP 地址运行应用程序（应用程序双重运行，各自修改本地数据），
+  * 隔离修复后，一个 ALONE 节点会被强制停止，并从另一个节点重新同步数据，
+  * 最终集群处于 PRIM-SECOND 状态（也可能是 SECOND-PRIM，取决于 Windows 对重复虚拟 IP 地址的检测）。
+
+
+### 两个网络，其中一个为专用复制网络 {#two-networks-with-a-dedicated-replication-network}
+
+发生网络隔离时，使用专用复制网络的行为如下：
+
+  * 在私有网络上部署专用复制网络，
+  * 生产网络上的心跳丢失（网络已隔离），
+  * 复制网络上的心跳正常工作（网络未隔离），
+  * 集群保持 PRIM/SECOND 状态。
+
+
+### 单个网络和脑裂检查器 {#a-single-network-and-a-splitbrain-checker}
+
+发生网络隔离时，使用脑裂检查器的行为如下：
+
+  * 已使用见证设备（通常为路由器）的 IP 地址配置脑裂检查器，
+  * 当服务器从 PRIM 转为 ALONE 或从 SECOND 转为 ALONE 时，脑裂检查器开始工作，
+  * 网络隔离时，两个节点在进入 ALONE 状态前都会测试该 IP 地址，
+  * 能够访问该 IP 地址的节点进入 ALONE 状态，另一个进入 WAIT 状态，
+  * 隔离修复后，WAIT 节点重新同步数据并进入 SECOND 状态。
+
+
+注意：如果见证设备宕机或断开连接，两个节点都会进入 WAIT 状态，应用程序将不再运行。因此，必须选择可靠的见证设备，例如路由器。

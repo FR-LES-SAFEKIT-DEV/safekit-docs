@@ -1,0 +1,39 @@
+{{/* Shortcode: insert-safekit-network-isolation-pt-pt — 3 instances in 3 files */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+
+
+
+## Quais são os diferentes cenários em caso de isolamento de rede num cluster? {#isolation}
+
+### Uma única rede {#a-single-network}
+
+Quando ocorre um isolamento de rede, o comportamento predefinido é:
+
+  * como se perdem os heartbeats de cada nó, cada nó passa para ALONE e executa a aplicação com o seu endereço IP virtual (execução dupla da aplicação, modificando os seus dados locais),
+  * quando o isolamento é resolvido, um nó ALONE é forçado a parar e a ressincronizar os seus dados a partir do outro nó,
+  * no final, o cluster fica em PRIM-SECOND (ou SECOND-PRIM, consoante a deteção de endereço IP virtual duplicado efetuada pelo Windows).
+
+
+### Duas redes com uma rede de replicação dedicada {#two-networks-with-a-dedicated-replication-network}
+
+Quando ocorre um isolamento de rede, o comportamento com uma rede de replicação dedicada é:
+
+  * é implementada uma rede de replicação dedicada numa rede privada,
+  * os heartbeats na rede de produção perdem-se (rede isolada),
+  * os heartbeats na rede de replicação funcionam (rede não isolada),
+  * o cluster mantém-se no estado PRIM/SECOND.
+
+
+### Uma única rede e um verificador de split-brain {#a-single-network-and-a-splitbrain-checker}
+
+Quando ocorre um isolamento de rede, o comportamento com um verificador de split-brain é:
+
+  * foi configurado um verificador de split-brain com o endereço IP de uma testemunha (normalmente um router),
+  * o verificador de split-brain atua quando um servidor passa de PRIM para ALONE ou de SECOND para ALONE,
+  * em caso de isolamento de rede, antes de passarem para ALONE, ambos os nós testam o endereço IP,
+  * o nó que consegue aceder ao endereço IP passa para ALONE e o outro passa para WAIT,
+  * quando o isolamento é resolvido, o nó WAIT ressincroniza os seus dados e passa a SECOND.
+
+
+Nota: Se a testemunha estiver inativa ou desligada, ambos os nós passam para WAIT e a aplicação deixa de ser executada. Por isso, deve escolher uma testemunha robusta, como um router.

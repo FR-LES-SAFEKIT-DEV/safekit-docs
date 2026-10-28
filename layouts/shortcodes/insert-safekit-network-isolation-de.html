@@ -1,0 +1,39 @@
+{{/* Shortcode: insert-safekit-network-isolation-de — 3 instances in 3 files */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+
+
+
+## Welche Szenarien gibt es bei einer Netzwerkisolation in einem Cluster? {#isolation}
+
+### Ein einziges Netzwerk {#a-single-network}
+
+Bei einer Netzwerkisolation ist das Standardverhalten wie folgt:
+
+  * Da die Heartbeats für jeden Knoten ausbleiben, wechselt jeder Knoten zu ALONE und führt die Anwendung mit seiner virtuellen IP-Adresse aus (doppelte Ausführung der Anwendung, die ihre lokalen Daten verändert),
+  * nach Behebung der Isolation wird ein ALONE-Knoten gezwungen, anzuhalten und seine Daten vom anderen Knoten neu zu synchronisieren,
+  * am Ende befindet sich der Cluster im Zustand PRIM-SECOND (oder SECOND-PRIM, abhängig von der Erkennung der doppelten virtuellen IP-Adresse durch Windows).
+
+
+### Zwei Netzwerke mit einem dedizierten Replikationsnetzwerk {#two-networks-with-a-dedicated-replication-network}
+
+Bei einer Netzwerkisolation verhält sich ein Cluster mit dediziertem Replikationsnetzwerk wie folgt:
+
+  * Ein dediziertes Replikationsnetzwerk wird in einem privaten Netzwerk eingerichtet,
+  * die Heartbeats im Produktionsnetzwerk gehen verloren (isoliertes Netzwerk),
+  * die Heartbeats im Replikationsnetzwerk funktionieren (nicht isoliertes Netzwerk),
+  * der Cluster bleibt im Zustand PRIM/SECOND.
+
+
+### Ein einziges Netzwerk und eine Split-Brain-Prüfung {#a-single-network-and-a-splitbrain-checker}
+
+Bei einer Netzwerkisolation ist das Verhalten mit einer Split-Brain-Prüfung wie folgt:
+
+  * Eine Split-Brain-Prüfung wurde mit der IP-Adresse eines Zeugen konfiguriert (typischerweise ein Router),
+  * die Split-Brain-Prüfung wird aktiv, wenn ein Server von PRIM zu ALONE oder von SECOND zu ALONE wechselt,
+  * bei einer Netzwerkisolation prüfen beide Knoten die IP-Adresse, bevor sie zu ALONE wechseln,
+  * der Knoten, der die IP-Adresse erreichen kann, wechselt zu ALONE, der andere zu WAIT,
+  * nach Behebung der Isolation synchronisiert der WAIT-Knoten seine Daten neu und wird SECOND.
+
+
+Hinweis: Wenn der Zeuge ausgefallen oder getrennt ist, wechseln beide Knoten zu WAIT und die Anwendung läuft nicht mehr. Deshalb müssen Sie einen zuverlässigen Zeugen wie einen Router wählen.

@@ -1,0 +1,32 @@
+{{/* Shortcode: insert-safekit-scada-solutions-es — 1 instance in 1 file */}}
+{{/* Parameters: app */}}
+{{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
+
+
+
+## SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software {{ .Get "app" }} {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
+
+### Redundancia y alta disponibilidad a nivel de aplicación {#redundancy-and-high-availability-at-the-application-level}
+
+En este tipo de solución, solo se replican los datos de la aplicación. Y solo se reinicia la aplicación en caso de fallo.
+
+
+![Redundancia a nivel de aplicación para un software {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+
+
+Con esta solución, hay que escribir scripts de reinicio para reiniciar la aplicación. Esta solución es independiente de la plataforma y funciona con aplicaciones en máquinas físicas, máquinas virtuales y en la nube. Se admite cualquier hipervisor (VMware, Hyper-V...).
+
+  * Solución para una aplicación nueva (hay que escribir scripts de reinicio): 💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### Redundancia y alta disponibilidad a nivel de máquina virtual {#redundancy-and-high-availability-at-the-virtual-machine-level}
+
+En este tipo de solución, el software {{ .Get "app" }} se instala en una máquina virtual. Se replica y reinicia toda la máquina virtual (VM) (aplicación + OS).
+
+
+![Redundancia a nivel de máquina virtual para un software {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+
+
+La ventaja de esta solución es que no hay que escribir scripts de reinicio por aplicación. Esta solución es genérica para cualquier software {{ .Get "app" }}. Funciona con Windows/Hyper-V y Linux/KVM, pero no con VMware. Es una solución activo/activo con varias máquinas virtuales replicadas y reiniciadas entre dos nodos.
+
+  * Solución para una aplicación nueva (sin scripts de reinicio que escribir): 💡 [Windows/Hyper-V](/es/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/es/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)

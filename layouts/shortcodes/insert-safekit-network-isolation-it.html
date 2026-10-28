@@ -1,0 +1,39 @@
+{{/* Shortcode: insert-safekit-network-isolation-it — 3 instances in 3 files */}}
+{{/* Parameters: none */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+
+
+
+## Quali sono i diversi scenari in caso di isolamento di rete in un cluster? {#isolation}
+
+### Una sola rete {#a-single-network}
+
+In caso di isolamento di rete, il comportamento predefinito è il seguente:
+
+  * poiché si perdono gli heartbeat di ciascun nodo, ogni nodo passa ad ALONE ed esegue l'applicazione con il proprio indirizzo IP virtuale (doppia esecuzione dell'applicazione che modifica i propri dati locali),
+  * quando l'isolamento viene risolto, un nodo ALONE viene forzato ad arrestarsi e a risincronizzare i propri dati dall'altro nodo,
+  * alla fine il cluster è PRIM-SECOND (o SECOND-PRIM in base al rilevamento dell'indirizzo IP virtuale duplicato effettuato da Windows).
+
+
+### Due reti con una rete di replica dedicata {#two-networks-with-a-dedicated-replication-network}
+
+In caso di isolamento di rete, il comportamento con una rete di replica dedicata è il seguente:
+
+  * viene implementata una rete di replica dedicata su una rete privata,
+  * gli heartbeat sulla rete di produzione vengono persi (rete isolata),
+  * gli heartbeat sulla rete di replica funzionano (rete non isolata),
+  * il cluster rimane nello stato PRIM/SECOND.
+
+
+### Una sola rete e un controllo split-brain {#a-single-network-and-a-splitbrain-checker}
+
+In caso di isolamento di rete, il comportamento con un controllo split-brain è il seguente:
+
+  * è stato configurato un controllo split-brain con l'indirizzo IP di un testimone (in genere un router),
+  * il controllo split-brain interviene quando un server passa da PRIM ad ALONE o da SECOND ad ALONE,
+  * in caso di isolamento di rete, prima di passare ad ALONE entrambi i nodi verificano l'indirizzo IP,
+  * il nodo che può accedere all'indirizzo IP passa ad ALONE, l'altro passa a WAIT,
+  * quando l'isolamento viene risolto, il nodo WAIT risincronizza i propri dati e diventa SECOND.
+
+
+Nota: Se il testimone è guasto o disconnesso, entrambi i nodi passano a WAIT e l'applicazione non è più in esecuzione. Per questo occorre scegliere un testimone affidabile come un router.

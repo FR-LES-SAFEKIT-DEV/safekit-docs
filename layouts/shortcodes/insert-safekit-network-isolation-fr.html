@@ -30,11 +30,10 @@ Lorsqu'il y a un isolement réseau, le comportement avec un réseau de réplicat
 Lorsqu'il y a un isolement du réseau, le comportement avec un split-brain checker est :
 
   * un split-brain checker a été configuré avec l'adresse IP d'un témoin (typiquement un routeur),
-  * le split-brain agit lorsqu'un serveur passe de PRIM à ALONE ou de SECOND à ALONE,
+  * le checker split-brain agit lorsqu'un serveur passe de PRIM à ALONE ou de SECOND à ALONE,
   * en cas d'isolement du réseau, avant de passer en ALONE, les deux nœuds testent l'adresse IP,
   * le nœud qui peut accéder à l'adresse IP passe à ALONE, l'autre passe à WAIT,
   * lorsque l'isolement est réparé, le nœud WAIT resynchronise ses données et devient SECOND.
 
 
 Remarque : Si le témoin est en panne ou déconnecté, les deux nœuds passent à WAIT et l'application n'est plus en cours d'exécution. C'est pourquoi vous devez choisir un témoin robuste comme un routeur.
-

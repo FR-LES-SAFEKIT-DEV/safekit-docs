@@ -1,0 +1,44 @@
+{{/* Shortcode: insert-safekit-security-solutions-pt-pt — 4 instances in 4 files */}}
+{{/* Parameters: app */}}
+{{/* Source: content\use-cases\physical-security-software-redundancy.md */}}
+
+
+
+## O SafeKit oferece duas soluções para redundância e alta disponibilidade de um software {{ .Get "app" }} {#safekit-security-solutions}
+
+### Redundância e alta disponibilidade ao nível da aplicação {#redundancy-and-high-availability-at-the-application-level}
+
+Neste tipo de solução, apenas os dados da aplicação são replicados. E apenas a aplicação é reiniciada em caso de falha.
+
+
+![Redundância ao nível da aplicação para um software {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+
+
+Esta solução exige uma compreensão técnica da aplicação. É necessário definir quais os serviços a reiniciar, especificar as pastas da aplicação a replicar e configurar um endereço IP virtual para a comutação por falha. Mas a solução é independente da plataforma e funciona com aplicações em máquinas físicas, máquinas virtuais e na nuvem. É suportado qualquer hipervisor (VMware, Hyper-V...).
+
+### Exemplos {#examples}
+
+  * Gestão de vídeo: 💡 [Milestone (Management, SQL, Log, Event)/SafeKit](/pt-pt/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
+  * Gestão de vídeo: 💡 [Genetec (SQL)/SafeKit](/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
+  * Controlo de acessos: 💡 [Nedap (AEOS, SQL)/SafeKit](/solutions/nedap-high-availability-synchronous-replication-failover/)
+  * Nova aplicação (definir serviços a reiniciar, pastas da aplicação a replicar e um endereço IP virtual para a comutação por falha): 💡 [Windows](/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+
+### Redundância e alta disponibilidade ao nível da máquina virtual {#redundancy-and-high-availability-at-the-virtual-machine-level}
+
+Neste tipo de solução, o software {{ .Get "app" }} é colocado numa máquina virtual. A máquina virtual (VM) completa é replicada e reiniciada (aplicação + OS).
+
+
+![Redundância ao nível da máquina virtual para um software {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+
+
+A vantagem desta solução é que não exige uma compreensão técnica da aplicação; basta definir a localização dos ficheiros da VM onde a aplicação está instalada. A solução é genérica para qualquer software {{ .Get "app" }}. No entanto, funciona apenas com Windows/Hyper-V e Linux/KVM, mas não com VMware. É uma solução ativo/ativo com várias máquinas virtuais replicadas e reiniciadas entre dois nós.
+
+### Exemplos {#examples-1}
+
+  * Gestão de edifícios: 💡 [Siemens Desigo CC/SafeKit](/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
+  * Gestão de vídeo e controlo de acessos: 💡 [Suite Siemens Siveillance/SafeKit](/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+  * Nova aplicação (definir a localização da pasta de ficheiros da VM onde a aplicação está instalada): 💡 [Windows/Hyper-V](/pt-pt/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/pt-pt/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+
+Mais comparações entre [HA de VM e HA de aplicação](/pt-pt/best-practises/vm-ha-vs-application-ha/)
