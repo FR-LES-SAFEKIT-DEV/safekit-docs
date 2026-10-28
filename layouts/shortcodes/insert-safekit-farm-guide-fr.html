@@ -4,31 +4,30 @@
 
 
 
-## Guide d'installation rapide haute disponibilité pour  {{ .Get "app" }} {#quick-guide}
+## Guide d'installation rapide de haute disponibilité pour {{ .Get "app" }} {#quick-guide}
 
-Ce guide explique comment configurer un **farm grappe** pour {{ .Get "app" }} en utilisant SafeKit, assurant l'équilibrage de charge du réseau et le basculement automatique.
+Ce guide explique comment configurer avec SafeKit un cluster **`farm`** pour {{ .Get "app" }}, avec équilibrage de charge réseau et basculement automatique.
 
-Pour obtenir de l'aide, vous pouvez utiliser  [SafeKit AI 🤖](/resources/safekit-support/).
+Pour obtenir de l'aide, utilisez [SafeKit AI 🤖](/resources/safekit-support/).
 
 ### 1. Aperçu
 
-  * Architecture ** : **  Implémente une architecture  farm  à charge équilibrée multi-nœuds évolutive avec une adresse virtuelle  IP .
-  * **Haute disponibilité :** Fonctionne avec une surveillance automatique de l’état et un basculement transparent pour **assurer la continuité du service**.
+  * **Architecture :** Met en œuvre une solution `farm` évolutive à équilibrage de charge sur plusieurs nœuds, avec une adresse IP virtuelle.
+  * **Haute disponibilité :** Assure une surveillance automatique de l'état et un basculement transparent **pour garantir la continuité du service**.
 
 
 ### 2. Installation
 
-  * **Logiciel:** Installez le SafeKit moteur sur tous les serveurs.
-  * Module ** : ** Télécharger le module d'application préconfiguré  `{{ .Get "mod" }}.safe` .
+  * **Logiciel :** Installez le moteur SafeKit sur tous les serveurs.
+  * **Module :** Téléchargez le module d'application préconfiguré `{{ .Get "mod" }}.safe`.
 
 
 ### 3. Configuration
 
-  * Console Web **:** Configurer le cluster  {{ .Get "app" }} farm .
-  * **Surveillance:** Commencez à surveiller et à protéger le {{ .Get "app" }} application.
+  * **Console Web :** Configurez le cluster `farm` de {{ .Get "app" }}.
+  * **Surveillance :** Commencez à surveiller et à protéger l'application {{ .Get "app" }}.
 
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-fr  %}}" }}
-
 

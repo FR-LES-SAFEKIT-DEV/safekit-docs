@@ -4,31 +4,30 @@
 
 
 
-## دليل التثبيت السريع عالي التوافر لـ  {{ .Get "app" }} {#quick-guide}
+## دليل التثبيت السريع للتوافر العالي لـ {{ .Get "app" }} {#quick-guide}
 
-يشرح هذا الدليل كيفية إعداد a **farm cluster** for {{ .Get "app" }} using SafeKit، مما يضمن موازنة تحميل الشبكة والتحويل التلقائي في حالة الفشل.
+يشرح هذا الدليل كيفية إعداد مجموعة **`farm`** لـ {{ .Get "app" }} باستخدام SafeKit، بما يضمن موازنة تحميل الشبكة والتحويل التلقائي عند التعطل.
 
-للحصول على المساعدة، يمكنك استخدام  [SafeKit AI 🤖](/resources/safekit-support/).
+للحصول على المساعدة، يمكنك استخدام [SafeKit AI 🤖](/resources/safekit-support/).
 
 ### 1. نظرة عامة
 
-  * **Architecture:** Implements a scalable, multi-node load-balanced farm  with a virtual IP address.
-  * ** التوافر العالي: **  يتميز بمراقبة الحالة الصحية التلقائية والتحويل السلس إلى  ** لضمان استمرارية الخدمة **.
+  * **البنية:** تنفيذ مجموعة `farm` قابلة للتوسع ومتوازنة التحميل ومتعددة العقد، مع عنوان IP افتراضي.
+  * **التوافر العالي:** مراقبة تلقائية للحالة الصحية وتحويل سلس عند التعطل **لضمان استمرارية الخدمة**.
 
 
-### 2. التركيب
+### 2. التثبيت
 
-  * **Software:** Install the SafeKit engine on all servers.
-  * **Module:** Download the pre-configured `{{ .Get "mod" }}.safe` application module.
+  * **البرنامج:** تثبيت محرك SafeKit على جميع الخوادم.
+  * **الوحدة:** تنزيل وحدة التطبيق المهيأة مسبقًا `{{ .Get "mod" }}.safe`.
 
 
 ### 3. التكوين
 
-  * **Web Console:** Configure the {{ .Get "app" }} farm cluster.
-  * **Monitoring:** Start monitoring and protection the {{ .Get "app" }} application.
+  * **وحدة تحكم الويب:** تكوين مجموعة `farm` الخاصة بـ {{ .Get "app" }}.
+  * **المراقبة:** بدء مراقبة تطبيق {{ .Get "app" }} وحمايته.
 
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-ar  %}}" }}
-
 

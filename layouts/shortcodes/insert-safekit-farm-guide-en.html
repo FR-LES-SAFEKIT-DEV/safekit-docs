@@ -6,13 +6,13 @@
 
 ## High Availability Quick Installation Guide for {{ .Get "app" }} {#quick-guide}
 
-This guide explains how to set up a **farm cluster** for {{ .Get "app" }} using SafeKit, ensuring network load balancing and automatic failover.
+This guide explains how to set up a **`farm` cluster** for {{ .Get "app" }} using SafeKit, ensuring network load balancing and automatic failover.
 
 For help, you can use [SafeKit AI 🤖](/resources/safekit-support/).
 
 ### 1. Overview
 
-  * **Architecture:** Implements a scalable, multi-node load-balanced farm with a virtual IP address.
+  * **Architecture:** Implements a scalable, multi-node load-balanced `farm` with a virtual IP address.
   * **High Availability:** Features automatic health monitoring and seamless failover to **ensure service continuity**.
 
 
@@ -24,11 +24,10 @@ For help, you can use [SafeKit AI 🤖](/resources/safekit-support/).
 
 ### 3. Configuration
 
-  * **Web Console:** Configure the {{ .Get "app" }} farm cluster.
+  * **Web Console:** Configure the {{ .Get "app" }} `farm` cluster.
   * **Monitoring:** Start monitoring and protecting the {{ .Get "app" }} application.
 
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-en  %}}" }}
-
 

@@ -4,170 +4,168 @@
 
 
 
-### Voorwaarden
+### Vereisten
 
-  * {{ .Get "app" }} -applicatie geïnstalleerd op 2 (of meer) knooppunten.
-  * Voor load balancing van Virtual IP  zijn knooppunten op hetzelfde  LAN - of uitgebreide  LAN (L2)-netwerk vereist — gerouteerde L3-netwerken worden niet ondersteund (behalve met  🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud)).
-
-
-### 1. Start de  SafeKit console
-
-  * Start de webconsole in een browser op een van de clusterknooppunten door verbinding te maken met  `http://localhost:9010`.
-  * Voer de gebruikersnaam  `admin` as en het wachtwoord in dat tijdens de installatie is ingesteld.
+  * De toepassing {{ .Get "app" }} is geïnstalleerd op 2 of meer knooppunten.
+  * Voor load balancing met een virtueel IP-adres moeten de knooppunten zich op hetzelfde LAN of een uitgebreid LAN (L2) bevinden — gerouteerde L3-netwerken worden niet ondersteund (behalve met 🛠️ [cloudloadbalancers](/resources/safekit-user-guide-82/#Cloud)).
 
 
-Je kunt de console ook in een browser uitvoeren op een werkstation buiten het cluster.
+### 1. De SafeKit-console starten
 
-⚠️ De configuratie van SafeKit Dit wordt op beide knooppunten vanuit één browser gedaan.
-
-ℹ️ Om de webconsole te beveiligen, zie 🛠️ [11\. Securing the SafeKit web service](/resources/safekit-user-guide-82/#https) in de gebruikershandleiding.
-
-
-![Start de  SafeKit web-console om het  {{ .Get "app" }} -cluster te configureren.](/wp-content/uploads/2024/03/01-login-large.png)
+  * Start de webconsole in een browser op een clusterknooppunt door verbinding te maken met `http://localhost:9010`.
+  * Voer `admin` in als gebruikersnaam en het wachtwoord dat tijdens de installatie is ingesteld.
 
 
-### 2. Configureer de knooppuntadressen
+U kunt de console ook in een browser op een werkstation buiten het cluster gebruiken.
 
-  * Voer de knooppuntadressen  IP  in, druk op  `Tab key`  om de connectiviteit te controleren en vul de knooppuntnamen in. Als  node1  of  node2  rood gekleurd is, controleer dan de connectiviteit van de browser met beide knooppunten en controleer de firewall op beide knooppunten voor  🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
-  * Klik vervolgens op  `Save and apply`  om de configuratie op te slaan.
-  * Controleer het  `Success` ✅ -bericht op beide knooppunten.
-  * Als de configuratie  `Failure` ❌  op een knooppunt voorkomt, open dan het accordeonmenu ▼ voor dat knooppunt en bekijk de berichten. Houd er rekening mee dat u  SafeKit AI 🤖  kunt gebruiken voor hulp.
+⚠️ De SafeKit-configuratie wordt op beide knooppunten vanuit één browser uitgevoerd.
 
-
-ℹ️ Als je wilt, kun je een nieuwe toevoegen. `LAN and nodes` ( Eerst ➕) om een tweede heartbeat en een speciaal replicatienetwerk te creëren.
-
-ℹ️ Als u klikt op `Advanced configuration`, de `cluster.xml` Het bestand wordt weergegeven. Dit bestand wordt automatisch door de console gevuld en op de knooppunten geïmplementeerd.
+ℹ️ Zie 🛠️ [11\. De SafeKit-webservice beveiligen](/resources/safekit-user-guide-82/#https) in de gebruikershandleiding om de webconsole te beveiligen.
 
 
-![Ga naar de knooppunten van het  {{ .Get "app" }} -cluster.](/wp-content/uploads/2024/03/02-cluster-edit.png)
+![Start de SafeKit-webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 3. Selecteer een module
+### 2. De knooppuntadressen configureren
 
-  * In `New module` klikt u op de  `{{ .Get "mod" }}.safe` -module.
-
-
-ℹ️ In de blauwe banner bovenaan, 🛜 `node1` Dit vertegenwoordigt het consoleverbindingsknooppunt. Dit knooppunt stuurt verzoeken door naar `node2` indien nodig.
-
-ℹ️ De console zoekt naar `xxx.safe` in de `Application_Modules/generic/` map op het verbindingsknooppunt (`node1`) als u daar tijdens de installatie een module hebt geplaatst.
+  * Voer de IP-adressen van de knooppunten in, druk op `Tab key` om de verbinding te controleren en vul de knooppuntnamen in. Als node1 of node2 rood wordt weergegeven, controleer dan de browserverbinding met beide knooppunten en de firewalls op beide knooppunten; raadpleeg 🛠️ [probleemoplossing](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Klik vervolgens op `Save and apply` om de configuratie op te slaan.
+  * Controleer of de melding `Success` ✅ op beide knooppunten verschijnt.
+  * Als `Failure` ❌ optreedt op een knooppunt, open dan het ▼-menu van dat knooppunt en bekijk de meldingen. U kunt SafeKit AI 🤖 om hulp vragen.
 
 
-![Kies de module voor  {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+ℹ️ U kunt desgewenst een nieuwe `LAN and nodes` (de eerste ➕) toevoegen voor een tweede heartbeat en een speciaal replicatienetwerk.
+
+ℹ️ Klik op `Advanced configuration` om het bestand `cluster.xml` weer te geven. De console vult dit bestand automatisch in en implementeert het op de knooppunten.
 
 
-### 4. Configureer de module
-
-  * In `Module startup at boot` kunt u ervoor kiezen om de module automatisch en zonder vertraging te laten starten bij het opstarten.
-  * Voer in  `Macros` / `SERVICES` de servicenamen van uw applicatie in, in de volgorde waarin ze worden opgestart, gescheiden door komma's.
-  * In `Heartbeat networks` zou je één heartbeat-netwerk moeten hebben, tenzij je bij stap 2 een  LAN  hebt toegevoegd.
-  * Voer in  `Virtual IP addresses` een virtueel  IP -adres in. Een virtueel  IP -adres is een standaard  IP -adres in hetzelfde  IP -netwerk (hetzelfde subnet) als de  IP -adressen van beide knooppunten. Applicatieclients moeten worden geconfigureerd met het virtuele  IP -adres (of de DNS-naam die is gekoppeld aan het virtuele  IP -adres).
-  * Stel in  `Load balancing rules` de servicepoort in op load balancing (bijv. TCP 9010 in het voorbeeld).
-  * Stel in  `Load balancing rules` de taakverdelingsregel in,  `Source address`  of  `Source port`: 
-    * Met het bronadres van de client ( IP ) zal dezelfde client via meerdere TCP-sessies verbonden zijn met hetzelfde knooppunt ( farm ) en zijn context op het knooppunt ophalen.
-    * Met de bron-TCP-poort van de client zal dezelfde client via meerdere TCP-sessies (zonder context op te halen) verbonden zijn met verschillende knooppunten in de  farm .
-  * In `Checkers` kunt u indien nodig controlemechanismen configureren, zoals procesbewaking, aangepaste controlemechanismen, TCP-, ping- of split-brain-controlemechanismen. Als bijvoorbeeld een procesnaam wordt weergegeven in `Monitored processes/services`, wordt deze bewaakt en wordt er een herstartactie uitgevoerd in geval van een storing. Het configureren van een onjuiste procesnaam zorgt ervoor dat de module direct na het opstarten stopt.
+![Voer de knooppunten van het {{ .Get "app" }}-cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-ℹ️ Als u klikt op `Advanced configuration`, de `userconfig.xml` Het bestand wordt weergegeven. Dit bestand wordt automatisch door de console gevuld en met de herstartscripts op de knooppunten geïmplementeerd.
+### 3. Een module selecteren
 
-ℹ️ Bij een cloudimplementatie hoeft u geen virtuele machine te configureren. IP adres- en load balancing-regels in SafeKitDe virtuele IP en de regels voor taakverdeling worden beheerd op het niveau van de 🛠️ [cloud load balancer level](/resources/safekit-user-guide-82/#Cloud).
-
-ℹ️ Wanneer je de SafeKit configuratie, de `startup type` de services worden automatisch ingesteld op `Manual` in Windows-services. Dit zorgt ervoor dat services niet automatisch starten wanneer het systeem opstart, maar pas worden gestart wanneer de module zelf wordt gestart (hetzelfde geldt voor Linux).
+  * Klik onder `New module` op de module `{{ .Get "mod" }}.safe`.
 
 
-![Voer de  {{ .Get "app" }} farm -module-instellingen in](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+ℹ️ In de blauwe banner bovenaan staat 🛜 `node1` voor het knooppunt waarmee de console is verbonden. Dit knooppunt stuurt verzoeken zo nodig door naar `node2`.
+
+ℹ️ De console zoekt naar `xxx.safe` in de map `Application_Modules/generic/` op het verbindingsknooppunt (`node1`) als u daar tijdens de installatie een module hebt geplaatst.
+
+
+![Selecteer de module voor {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. De module configureren
+
+  * Kies bij `Module startup at boot` voor automatisch starten van de module zonder vertraging bij het opstarten van het systeem.
+  * Voer bij `Macros` / `SERVICES` de servicenamen van de toepassing in, in de opstartvolgorde en gescheiden door komma’s.
+  * Bij `Heartbeat networks` hoort één heartbeatnetwerk te staan, tenzij u in stap 2 een LAN hebt toegevoegd.
+  * Voer bij `Virtual IP addresses` een virtueel IP-adres in. Dit is een standaard-IP-adres in hetzelfde IP-netwerk (hetzelfde subnet) als de IP-adressen van beide knooppunten. Applicatieclients moeten worden geconfigureerd met het virtuele IP-adres (of de bijbehorende DNS-naam).
+  * Stel bij `Load balancing rules` de servicepoort in die u wilt verdelen (bijvoorbeeld TCP 9010).
+  * Stel bij `Load balancing rules` de load-balancingregel `Source address` of `Source port` in:
+    * Met het bron-IP-adres van de client wordt dezelfde client bij meerdere TCP-sessies verbonden met hetzelfde knooppunt in de `farm` en wordt de context op dat knooppunt opgehaald.
+    * Met de TCP-bronpoort van de client wordt dezelfde client bij meerdere TCP-sessies verbonden met verschillende knooppunten in de `farm` (zonder context op te halen).
+  * Bij `Checkers` kunt u zo nodig controles configureren, zoals procesbewaking, aangepaste controles, TCP-, ping- of split-brain-controles. Als bijvoorbeeld een procesnaam wordt weergegeven bij `Monitored processes/services`, wordt deze bewaakt en bij een storing opnieuw gestart. Een onjuiste procesnaam zorgt ervoor dat de module direct na het opstarten stopt.
+
+
+ℹ️ Klik op `Advanced configuration` om het bestand `userconfig.xml` weer te geven. De console vult dit bestand automatisch in en implementeert het samen met de herstartscripts op de knooppunten.
+
+ℹ️ Bij een cloudimplementatie hoeft u geen virtueel IP-adres of load-balancingregels in SafeKit te configureren. Het virtuele IP-adres en de load-balancingregels worden beheerd op het niveau van de 🛠️ [cloudloadbalancer](/resources/safekit-user-guide-82/#Cloud).
+
+ℹ️ Wanneer u de SafeKit-configuratie toepast, wordt het `startup type` van services in Windows-services automatisch ingesteld op `Manual`. Hierdoor starten services niet automatisch wanneer het systeem opstart, maar alleen wanneer de module zelf wordt gestart (dit geldt ook voor Linux).
+
+
+![Voer de instellingen van de {{ .Get "app" }}-module `farm` in](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Scripts bewerken (optioneel)
 
-  * Deze stap is optioneel en kan in de meeste gevallen worden overgeslagen, aangezien de herstartscripts al zijn geconfigureerd om de in de vorige stap gedefinieerde services opnieuw op te starten.
-  * Klik dus direct op  `Next step`.
-  * `start_both.ps1`  start alle services in de volgorde die is opgegeven in de  `SERVICES` -lijst, terwijl  `stop_both.ps1`  alle services in omgekeerde volgorde stopt.
-  * Daarnaast controleert  `start_both.ps1`  de opstart van elke service en stopt de module als een service niet correct opstart.
+  * Deze stap is optioneel en kan meestal worden overgeslagen, omdat de herstartscripts al zijn ingesteld om de services uit de vorige stap opnieuw te starten.
+  * Klik direct op `Next step`.
+  * `start_both.ps1` start alle services in de volgorde van de lijst `SERVICES`; `stop_both.ps1` stopt ze in omgekeerde volgorde.
+  * Bovendien controleert `start_both.ps1` of elke service start en stopt het de module als een service niet correct start.
 
 
-![Voer de  {{ .Get "app" }} -module-instellingen in](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
+![Voer de instellingen van de {{ .Get "app" }}-module in](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
 
 
-### 6. Communicatieversleuteling (optioneel)
+### 6. Communicatie versleutelen (optioneel)
 
-  * Behoud de versleuteling van de communicatie tussen de knooppunten.
+  * Houd de communicatie tussen de knooppunten versleuteld.
 
 
-![Communicatieversleuteling van de  {{ .Get "app" }} -module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+![Communicatieversleuteling van de {{ .Get "app" }}-module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
 ### 7. Opslaan en toepassen
 
-  * `Save and apply` de configuratie en scripts op beide knooppunten.
+  * Gebruik `Save and apply` om de configuratie en scripts op beide knooppunten toe te passen.
 
 
-![Sla de  {{ .Get "app" }} module-configuratie op en pas deze toe.](/wp-content/uploads/2025/05/08-module-save-1.png)
+![De configuratie van de {{ .Get "app" }}-module opslaan en toepassen](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8. Controleer of de configuratie succesvol is verlopen.
+### 8. Controleren of de configuratie is geslaagd
 
-  * Controleer het bericht  `Success` ✅  op beide knooppunten en klik op  `Monitor modules`.
-  * Als de configuratie  `Failure` ❌  op een knooppunt voorkomt, open dan het accordeonmenu ▼ voor dat knooppunt en bekijk de berichten. Houd er rekening mee dat u  SafeKit AI 🤖  kunt gebruiken voor hulp.
-
-
-![Controleer of de configuratie van de  {{ .Get "app" }} -module succesvol is.](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+  * Controleer de melding `Success` ✅ op beide knooppunten en klik op `Monitor modules`.
+  * Als `Failure` ❌ optreedt op een knooppunt, open dan het ▼-menu van dat knooppunt en bekijk de meldingen. U kunt SafeKit AI 🤖 om hulp vragen.
 
 
-### 9. Start het  farm -cluster op knooppunt 1 en knooppunt 2.
-
-  * ⋯ `Start` the farm cluster zoals weergegeven in de afbeelding.
+![Controleren of de configuratie van de {{ .Get "app" }}-module is geslaagd](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-![Start de  {{ .Get "app" }} -cluster op beide knooppunten.](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
+### 9. Het `farm`-cluster starten op knooppunt 1 en 2
+
+  * Klik op ⋯ `Start` om het `farm`-cluster te starten, zoals weergegeven in de afbeelding.
 
 
-### 10. Wacht tot de overgang naar OMHOOG (groen) / OMHOOG (groen)
-
-Knooppunt 1 en knooppunt 2 moeten de UP (groene) status bereiken, wat betekent dat het  `start_both` script op knooppunt 1 en knooppunt 2 is uitgevoerd.
-
-⚠️ Als de status 'UP' (groen) niet wordt bereikt of als de applicatie niet start, analyseer dan waarom met de [module log 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) van knooppunt 1 of knooppunt 2.
-
-  * Klik op het  🔍 **log** icon of  `node1` or `node2`  om het modulelogboek te openen en te zoeken naar foutmeldingen, zoals een controle die een fout detecteert en de module stopt.
-  * Klik op  `start_both`  in het logboek: de uitvoerberichten van het script worden aan de rechterkant weergegeven en fouten kunnen worden opgespoord, zoals een service die onjuist is gestart.
-  * Gebruik de  SafeKit AI 🤖  voor hulp bij logberichten.
+![Het {{ .Get "app" }}-cluster op beide knooppunten starten](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-ℹ️ Merk op dat u een  🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)**  hebt, wat nuttig kan zijn om te begrijpen wat er in het cluster gebeurt.
+### 10. Wachten tot beide knooppunten de status UP (groen) hebben
+
+Knooppunt 1 en knooppunt 2 moeten de status UP (groen) bereiken. Dit betekent dat het script `start_both` op beide knooppunten is uitgevoerd.
+
+⚠️ Als UP (groen) niet wordt bereikt of de toepassing niet start, onderzoek dan de oorzaak met het [modulelogboek 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) van knooppunt 1 of 2.
+
+  * Klik op het pictogram 🔍 **log** van `node1` of `node2` om het modulelogboek te openen en foutmeldingen te zoeken, bijvoorbeeld wanneer een controle een fout detecteert en de module stopt.
+  * Klik in het logboek op `start_both`: de uitvoer van het script wordt rechts weergegeven, zodat fouten zoals een onjuist gestarte service zichtbaar zijn.
+  * Gebruik SafeKit AI 🤖 voor hulp bij logboekmeldingen.
 
 
-![De  {{ .Get "app" }} -cluster is gestart](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
+ℹ️ De 🕒 **[tijdlijn 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** kan helpen te begrijpen wat er in het cluster gebeurt.
+
+
+![Het {{ .Get "app" }}-cluster is gestart](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
 
 
 ### 11. Testen
 
-De SafeKit  heeft een ingebouwde testfunctie in het product:
+SafeKit bevat een ingebouwde test:
 
-  * Configureer een regel voor TCP-poort 9010 met load balancing op de bron-TCP-poort.
-  * Sluit een extern werkstation aan buiten de  farm -nodes.
+  * Configureer een regel voor TCP-poort 9010 met load balancing op basis van de TCP-bronpoort.
+  * Verbind een extern werkstation dat zich buiten de `farm`-knooppunten bevindt.
   * Open een browser op http://virtual-ip:9010/safekit/mosaic.html.
 
 
-Je zou een mozaïek van kleuren moeten zien, afhankelijk van de knooppunten die reageren op HTTP-verzoeken.
+U ziet een mozaïek van kleuren, afhankelijk van welke knooppunten op HTTP-verzoeken reageren.
 
-  * Stop een UP (groene) node door in het contextmenu naar beneden te scrollen en op Stop te klikken.
-  * Controleer of er geen TCP-verbindingen meer actief zijn op het gestopte knooppunt en op het virtuele  IP -adres.
-
-
-ℹ️ Meer informatie, inclusief video's, vindt u in de [SafeKit Online Training](/resources/safekit-on-line-training/).
+  * Stop een knooppunt met status UP (groen) door omlaag te scrollen in het contextmenu en op Stop te klikken.
+  * Controleer of er geen TCP-verbindingen meer zijn op het gestopte knooppunt of het virtuele IP-adres.
 
 
-![Test het virtuele adres  IP  van  {{ .Get "app" }}  met de mozaïek](/wp-content/uploads/2024/03/appli-19.png)
+ℹ️ Meer informatie en video’s vindt u in de [SafeKit Online Training](/nl/resources/safekit-on-line-training/).
+
+
+![Het virtuele IP-adres van {{ .Get "app" }} testen met het mozaïek](/wp-content/uploads/2024/03/appli-19.png)
 
 
 ### 12. Ondersteuning
 
-  * Om ondersteuning te krijgen, downloadt u 2 SafeKit `Snapshots`  (2 .zip-bestanden), één voor elke node.
+  * Maak voor ondersteuning 2 SafeKit-`Snapshots` (2 .zip-bestanden), één voor elk knooppunt.
 
 
-ℹ️ [More information on the support here](/resources/safekit-support/).
+ℹ️ [Meer informatie over ondersteuning vindt u hier](/nl/resources/safekit-support/).
 
 
-![Maak de  {{ .Get "app" }} snapshots ter ondersteuning](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
-
-
+![Snapshots van {{ .Get "app" }} maken voor ondersteuning](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)

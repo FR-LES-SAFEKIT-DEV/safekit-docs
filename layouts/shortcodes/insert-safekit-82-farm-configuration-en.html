@@ -64,8 +64,8 @@ You can also run the console in a browser on a workstation external to the clust
 Application clients must be configured with the virtual IP address (or the DNS name associated with the virtual IP address).
   * In `Load balancing rules`, set the service port to load balance (ex.: TCP 9010 in the example).
   * In `Load balancing rules`, set the load balancing rule, `Source address` or `Source port`: 
-    * with the source IP address of the client, the same client will be connected to the same node in the farm on multiple TCP sessions and retrieve its context on the node.
-    * with the source TCP port of the client, the same client will be connected to different nodes in the farm on multiple TCP sessions (without retrieving a context).
+    * with the source IP address of the client, the same client will be connected to the same node in the `farm` on multiple TCP sessions and retrieve its context on the node.
+    * with the source TCP port of the client, the same client will be connected to different nodes in the `farm` on multiple TCP sessions (without retrieving a context).
   * In `Checkers`, you will be able to configure checkers if needed, such as process monitoring, custom checkers, TCP, ping, or split-brain checkers.  
 For example, if a process name is displayed in `Monitored processes/services`, it will be monitored with a restart action in case of failure. Configuring a wrong process name will cause the module to stop right after its start.
 
@@ -77,7 +77,7 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ℹ️ When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on Linux).
 
 
-![Enter the {{ .Get "app" }} farm module settings](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Enter the {{ .Get "app" }} `farm` module settings](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Edit scripts (optional)
@@ -116,9 +116,9 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 ![Check the {{ .Get "app" }} module configuration success](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Start the farm cluster on node 1 and node 2
+### 9. Start the `farm` cluster on node 1 and node 2
 
-  * ⋯ `Start` the farm cluster as shown in the image.
+  * ⋯ `Start` the `farm` cluster as shown in the image.
 
 
 ![Start the {{ .Get "app" }} cluster on both nodes](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
@@ -146,7 +146,7 @@ Node 1 and node 2 should reach the UP (green) state, which means that the `start
 SafeKit brings a built-in test in the product:
 
   * Configure a rule for TCP port 9010 with a load balancing on source TCP port.
-  * Connect an external workstation outside the farm nodes.
+  * Connect an external workstation outside the `farm` nodes.
   * Start a browser on http://virtual-ip:9010/safekit/mosaic.html.
 
 
@@ -171,5 +171,4 @@ You should see a mosaic of colors depending on nodes answering to HTTP requests.
 
 
 ![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
-
 

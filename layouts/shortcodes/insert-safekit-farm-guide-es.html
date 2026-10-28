@@ -4,31 +4,30 @@
 
 
 
-## Guía de instalación rápida de alta disponibilidad para  {{ .Get "app" }} {#quick-guide}
+## Guía de instalación rápida de alta disponibilidad para {{ .Get "app" }} {#quick-guide}
 
-Esta guía explica cómo configurar un **farm grupo** para {{ .Get "app" }} usando SafeKit, garantizando el equilibrio de carga de la red y la conmutación por error automática.
+Esta guía explica cómo configurar con SafeKit un clúster **`farm`** para {{ .Get "app" }}, con equilibrio de carga de red y conmutación por error automática.
 
-Para obtener ayuda, puede usar  [SafeKit AI 🤖](/resources/safekit-support/).
+Para obtener ayuda, puede usar [SafeKit AI 🤖](/resources/safekit-support/).
 
 ### 1. Descripción general
 
-  * Arquitectura **: **  Implementa una  farm  escalable, con balanceo de carga de múltiples nodos y una  IP  virtual.
-  * **Alta disponibilidad:** Cuenta con monitoreo automático del estado y conmutación por error sin interrupciones para **garantizar la continuidad del servicio**.
+  * **Arquitectura:** Implementa una solución `farm` escalable y equilibrada entre varios nodos, con una dirección IP virtual.
+  * **Alta disponibilidad:** Incluye supervisión automática del estado y conmutación por error sin interrupciones **para garantizar la continuidad del servicio**.
 
 
 ### 2. Instalación
 
-  * **Software:** Instale el motor  SafeKit  en todos los servidores.
-  * **Módulo:** Descargue el módulo de aplicación preconfigurado `{{ .Get "mod" }}.safe` .
+  * **Software:** Instale el motor de SafeKit en todos los servidores.
+  * **Módulo:** Descargue el módulo de aplicación preconfigurado `{{ .Get "mod" }}.safe`.
 
 
 ### 3. Configuración
 
-  * Consola web **:** Configurar el clúster  {{ .Get "app" }} farm .
-  * **Monitoreo:** Comience a monitorear y proteger la {{ .Get "app" }} aplicación.
+  * **Consola web:** Configure el clúster `farm` de {{ .Get "app" }}.
+  * **Supervisión:** Inicie la supervisión y protección de la aplicación {{ .Get "app" }}.
 
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-es  %}}" }}
-
 

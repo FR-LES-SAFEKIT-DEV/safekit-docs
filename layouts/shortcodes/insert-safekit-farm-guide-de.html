@@ -4,31 +4,30 @@
 
 
 
-## Schnellinstallationsanleitung für hohe Verfügbarkeit für  {{ .Get "app" }} {#quick-guide}
+## Schnellinstallationsanleitung für hohe Verfügbarkeit für {{ .Get "app" }} {#quick-guide}
 
-Dieser Leitfaden erklärt, wie man einen A **farm cluster** for {{ .Get "app" }} using SafeKit einrichtet und dabei einen Lastausgleich im Netzwerk sowie ein automatisches Failover gewährleistet.
+Diese Anleitung erklärt, wie Sie mit SafeKit einen **`farm`-Cluster** für {{ .Get "app" }} einrichten und so Netzwerklastverteilung und automatisches Failover sicherstellen.
 
-Hilfe erhalten Sie unter  [SafeKit AI 🤖](/resources/safekit-support/).
+Hilfe erhalten Sie über [SafeKit AI 🤖](/resources/safekit-support/).
 
 ### 1. Überblick
 
-  * **Architektur:** Implementiert eine skalierbare, auf mehrere Knoten verteilte Lastverteilung farm  mit einer virtuellen IP Adresse.
-  * **Hohe Verfügbarkeit:** Verfügt über automatische Zustandsüberwachung und nahtloses Failover auf **Gewährleistet die Kontinuität des Dienstes**.
+  * **Architektur:** Eine skalierbare, lastverteilte `farm` mit mehreren Knoten und virtueller IP-Adresse.
+  * **Hohe Verfügbarkeit:** Automatische Zustandsüberwachung und nahtloses Failover **gewährleisten die Dienstkontinuität**.
 
 
 ### 2. Installation
 
-  * **Software:** Install the SafeKit engine on all servers.
-  * **Modul:** Laden Sie das vorkonfigurierte  `{{ .Get "mod" }}.safe` Anwendungsmodul herunter.
+  * **Software:** Installieren Sie die SafeKit-Engine auf allen Servern.
+  * **Modul:** Laden Sie das vorkonfigurierte Anwendungsmodul `{{ .Get "mod" }}.safe` herunter.
 
 
 ### 3. Konfiguration
 
-  * **Webkonsole:** Konfigurieren Sie den  {{ .Get "app" }} farm Cluster.
-  * **Monitoring:** Starten Sie die Überwachung und den Schutz der  {{ .Get "app" }} Anwendung.
+  * **Webkonsole:** Konfigurieren Sie den `farm`-Cluster für {{ .Get "app" }}.
+  * **Überwachung:** Starten Sie die Überwachung und den Schutz der Anwendung {{ .Get "app" }}.
 
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-de  %}}" }}
-
 

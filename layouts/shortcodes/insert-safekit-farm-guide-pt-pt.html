@@ -4,31 +4,30 @@
 
 
 
-## Guia de instalação rápida de alta disponibilidade para  {{ .Get "app" }} {#quick-guide}
+## Guia de instalação rápida de alta disponibilidade para {{ .Get "app" }} {#quick-guide}
 
-Este guia explica como configurar um **farm aglomeração** para {{ .Get "app" }} usando SafeKit, garantindo o balanceamento de carga da rede e o failover automático.
+Este guia explica como configurar, com o SafeKit, um cluster **`farm`** para {{ .Get "app" }}, garantindo o balanceamento de carga da rede e o failover automático.
 
-Para obter ajuda, pode utilizar  [SafeKit AI 🤖](/resources/safekit-support/).
+Para obter ajuda, utilize [SafeKit AI 🤖](/resources/safekit-support/).
 
 ### 1. Visão geral
 
-  * Arquitetura **: **  Implementa um balanceamento de carga escalável e multi-nó  farm  com um endereço virtual  IP .
-  * **Alta disponibilidade:** Oferece monitorização automática de integridade e failover contínuo para **garantir a continuidade do serviço**.
+  * **Arquitetura:** Implementa uma solução `farm` escalável, com balanceamento de carga em vários nós e um endereço IP virtual.
+  * **Alta disponibilidade:** Oferece monitorização automática do estado e failover contínuo **para garantir a continuidade do serviço**.
 
 
 ### 2. Instalação
 
-  * **Software:** Instale o SafeKit motor em todos os servidores.
-  * **Módulo:** Descarregue o módulo de aplicação pré-configurado `{{ .Get "mod" }}.safe` .
+  * **Software:** Instale o motor SafeKit em todos os servidores.
+  * **Módulo:** Transfira o módulo de aplicação pré-configurado `{{ .Get "mod" }}.safe`.
 
 
 ### 3. Configuração
 
-  * Consola Web **: **  Configurar o cluster  {{ .Get "app" }} farm .
-  * **Monitorização:** Iniciar a monitorização e proteção da aplicação  {{ .Get "app" }} .
+  * **Consola Web:** Configure o cluster `farm` de {{ .Get "app" }}.
+  * **Monitorização:** Inicie a monitorização e a proteção da aplicação {{ .Get "app" }}.
 
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-usage-pt-pt  %}}" }}
-
 

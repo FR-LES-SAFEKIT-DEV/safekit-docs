@@ -6,168 +6,166 @@
 
 ### Prérequis
 
-  * Application {{ .Get "app" }}  installée sur 2 nœuds (ou plus).
-  * L'équilibrage de charge Virtual IP  nécessite des nœuds sur le même LAN  ou étendu LAN (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec 🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud)).
+  * Application {{ .Get "app" }} installée sur 2 nœuds (ou plus).
+  * L’équilibrage de charge par IP virtuelle nécessite des nœuds sur le même LAN ou sur un LAN étendu (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec des 🛠️ [répartiteurs de charge cloud](/fr/resources/safekit-user-guide-82/#Cloud)).
 
 
-### 1. Lancez la console  SafeKit 
+### 1. Lancer la console SafeKit
 
-  * Lancez la console Web dans un navigateur sur un nœud du cluster en vous connectant à  `http://localhost:9010`.
-  * Entrez  `admin`  comme nom d'utilisateur et le mot de passe défini lors de l'installation.
-
-
-Vous pouvez également exécuter la console dans un navigateur sur un poste de travail externe au cluster.
-
-La configuration de ⚠️  ( SafeKit ) est effectuée sur les deux nœuds à partir d'un seul navigateur.
-
-ℹ️ Pour sécuriser la console Web, voir 🛠️ [11\. Securing the SafeKit web service](/resources/safekit-user-guide-82/#https) dans le Guide de l'utilisateur.
+  * Lancez la console Web dans un navigateur sur un nœud du cluster en vous connectant à `http://localhost:9010`.
+  * Saisissez `admin` comme nom d’utilisateur et le mot de passe défini pendant l’installation.
 
 
-![Démarrez la console web  SafeKit  pour configurer le cluster  {{ .Get "app" }} .](/wp-content/uploads/2024/03/01-login-large.png)
+Vous pouvez également utiliser la console dans un navigateur sur un poste de travail externe au cluster.
+
+⚠️ La configuration de SafeKit s’effectue sur les deux nœuds à partir d’un seul navigateur.
+
+ℹ️ Pour sécuriser la console Web, consultez 🛠️ [11\. Sécuriser le service Web SafeKit](/fr/resources/safekit-user-guide-82/#https) dans le Guide de l’utilisateur.
+
+
+![Lancer la console Web SafeKit pour configurer le cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/01-login-large.png)
 
 
 ### 2. Configurer les adresses des nœuds
 
-  * Saisissez les adresses des nœuds  IP , appuyez sur  `Tab key`  pour vérifier la connectivité et renseignez les noms des nœuds. Si  node1  ou  node2  est rouge, vérifiez la connectivité du navigateur aux deux nœuds et vérifiez le pare-feu sur les deux nœuds pour  🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
-  * Cliquez ensuite sur  `Save and apply`  pour enregistrer la configuration.
-  * Vérifiez le message  `Success` ✅  sur les deux nœuds.
-  * Si la configuration  `Failure` ❌  se produit sur un nœud, ouvrez le panneau d'accordéon ▼ correspondant et consultez les messages. Notez que vous pouvez utiliser  SafeKit AI 🤖  pour obtenir de l'aide.
+  * Saisissez les adresses IP des nœuds, appuyez sur `Tab key` pour vérifier la connectivité, puis renseignez les noms des nœuds. Si node1 ou node2 apparaît en rouge, vérifiez la connexion du navigateur aux deux nœuds ainsi que leurs pare-feu, et consultez 🛠️ [le dépannage](/fr/resources/safekit-user-guide-82/#Troubleshooting).
+  * Cliquez ensuite sur `Save and apply` pour enregistrer la configuration.
+  * Vérifiez que le message `Success` ✅ apparaît sur les deux nœuds.
+  * Si `Failure` ❌ survient sur un nœud, ouvrez le panneau accordéon ▼ de ce nœud et examinez les messages. SafeKit AI 🤖 peut également vous aider.
 
 
-ℹ️ Si vous le souhaitez, vous pouvez ajouter un nouveau `LAN and nodes`  (premier ➕) pour créer un deuxième battement de cœur et un réseau de réplication dédié.
+ℹ️ Si nécessaire, vous pouvez ajouter un nouveau `LAN and nodes` (le premier ➕) pour créer un deuxième battement de cœur et un réseau de réplication dédié.
 
-ℹ️ Si vous cliquez sur `Advanced configuration`, le `cluster.xml` Le fichier s'affiche. Ce fichier est automatiquement rempli par la console et déployé sur les nœuds.
-
-
-![Saisissez les nœuds du cluster  {{ .Get "app" }} ](/wp-content/uploads/2024/03/02-cluster-edit.png)
+ℹ️ Lorsque vous cliquez sur `Advanced configuration`, le fichier `cluster.xml` s’affiche. La console le renseigne automatiquement et le déploie sur les nœuds.
 
 
-### 3. Sélectionnez un module
-
-  * Dans `New module`, cliquez sur le module `{{ .Get "mod" }}.safe` .
+![Saisir les nœuds du cluster {{ .Get "app" }}](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-ℹ️ Dans la bannière bleue en haut,  🛜 `node1`  représente le nœud de connexion à la console. Ce nœud relaie les requêtes vers  `node2`  si nécessaire.
+### 3. Sélectionner un module
 
-ℹ️ La console recherche `xxx.safe` dans le `Application_Modules/generic/` répertoire sur le nœud de connexion (`node1`) si vous avez placé un module à cet endroit lors de l'installation.
+  * Dans `New module`, cliquez sur le module `{{ .Get "mod" }}.safe`.
 
 
-![Choisissez le module pour  {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+ℹ️ Dans la bannière bleue en haut, 🛜 `node1` représente le nœud auquel la console est connectée. Il relaie les requêtes vers `node2` si nécessaire.
+
+ℹ️ La console recherche `xxx.safe` dans le répertoire `Application_Modules/generic/` du nœud de connexion (`node1`) si vous y avez placé un module lors de l’installation.
+
+
+![Choisir le module pour {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
 ### 4. Configurer le module
 
-  * Dans In `Module startup at boot`, choisissez un démarrage automatique du module au démarrage sans délai.
-  * Dans  `Macros` / `SERVICES`, entrez les noms de service de votre application, dans l'ordre de démarrage, séparés par des virgules.
-  * Dans  `Heartbeat networks`, vous devriez avoir un seul réseau de battements de cœur, sauf si vous avez ajouté un  LAN  à l'étape 2.
-  * Dans  `Virtual IP addresses`, saisissez une adresse virtuelle  IP . Une adresse virtuelle  IP  est une adresse standard  IP  appartenant au même réseau  IP  (même sous-réseau) que les adresses  IP  des deux nœuds. Les clients d'application doivent être configurés avec l'adresse virtuelle  IP  (ou le nom DNS associé à l'adresse virtuelle  IP ).
-  * Dans  `Load balancing rules`, configurez le port de service pour l'équilibrage de charge (ex : TCP 9010 dans l'exemple).
-  * Dans  `Load balancing rules`, définissez la règle d'équilibrage de charge, `Source address`  ou `Source port` : 
-    * avec l'adresse source IP  du client, le même client sera connecté au même nœud dans le farm  sur plusieurs sessions TCP et récupérera son contexte sur le nœud.
-    * avec le port TCP source du client, le même client sera connecté à différents nœuds dans le  farm  sur plusieurs sessions TCP (sans récupérer de contexte).
-  * Dans  `Checkers`, vous pourrez configurer des mécanismes de vérification si nécessaire, tels que la surveillance des processus, des vérifications personnalisées, TCP, ping ou la détection de split-brain. Par exemple, si un nom de processus est affiché dans  `Monitored processes/services`, il sera surveillé et redémarré en cas d'échec. Configurer un nom de processus incorrect entraînera l'arrêt immédiat du module après son démarrage.
+  * Dans `Module startup at boot`, choisissez le démarrage automatique du module sans délai au démarrage du système.
+  * Dans `Macros` / `SERVICES`, saisissez les noms des services de l’application dans leur ordre de démarrage, séparés par des virgules.
+  * Dans `Heartbeat networks`, vous devez avoir un seul réseau de battement de cœur, sauf si vous avez ajouté un LAN à l’étape 2.
+  * Dans `Virtual IP addresses`, saisissez une adresse IP virtuelle. Il s’agit d’une adresse IP standard appartenant au même réseau IP (même sous-réseau) que les adresses IP des deux nœuds. Les clients de l’application doivent être configurés avec cette adresse IP virtuelle (ou le nom DNS qui lui est associé).
+  * Dans `Load balancing rules`, définissez le port de service à répartir (par exemple, TCP 9010).
+  * Dans `Load balancing rules`, définissez la règle d’équilibrage de charge `Source address` ou `Source port` :
+    * Avec l’adresse IP source du client, celui-ci sera connecté au même nœud de la `farm` lors de plusieurs sessions TCP et retrouvera son contexte sur ce nœud.
+    * Avec le port TCP source du client, celui-ci sera connecté à différents nœuds de la `farm` lors de plusieurs sessions TCP (sans retrouver de contexte).
+  * Dans `Checkers`, vous pouvez configurer des vérifications si nécessaire : surveillance de processus, vérifications personnalisées, TCP, ping ou détection de split-brain. Par exemple, si un nom de processus apparaît dans `Monitored processes/services`, il sera surveillé et redémarré en cas de panne. Un nom de processus incorrect provoquera l’arrêt du module juste après son démarrage.
 
 
-ℹ️ Si vous cliquez sur `Advanced configuration`, le `userconfig.xml` Le fichier s'affiche. Ce fichier est automatiquement rempli par la console et déployé sur les nœuds contenant les scripts de redémarrage.
+ℹ️ Lorsque vous cliquez sur `Advanced configuration`, le fichier `userconfig.xml` s’affiche. La console le renseigne automatiquement et le déploie sur les nœuds avec les scripts de redémarrage.
 
-ℹ️ Dans un déploiement cloud, vous n'avez pas besoin de configurer un serveur virtuel. IP Règles d'adressage et d'équilibrage de charge dans SafeKitLe virtuel IP et les règles d'équilibrage de charge sont gérées au niveau du 🛠️ [cloud load balancer level](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ Dans un déploiement cloud, il n’est pas nécessaire de configurer une adresse IP virtuelle ni des règles d’équilibrage de charge dans SafeKit. L’IP virtuelle et les règles d’équilibrage de charge sont gérées au niveau du 🛠️ [répartiteur de charge cloud](/fr/resources/safekit-user-guide-82/#Cloud).
 
-ℹ️ Lorsque vous appliquez le SafeKit configuration, la `startup type` le service est automatiquement configuré pour `Manual` dans les services Windows. Cela garantit que les services ne démarrent pas automatiquement au démarrage du système, mais uniquement lorsque le module lui-même est lancé (le même principe s'applique à Linux).
+ℹ️ Lorsque vous appliquez la configuration SafeKit, le `startup type` des services est automatiquement défini sur `Manual` dans les services Windows. Ainsi, les services ne démarrent pas automatiquement au démarrage du système, mais uniquement au lancement du module (même principe sous Linux).
 
 
-![Saisissez les paramètres du module  {{ .Get "app" }} farm ](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Saisir les paramètres du module `farm` de {{ .Get "app" }}](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Modifier les scripts (facultatif)
 
-  * Cette étape est facultative et peut être ignorée dans la plupart des cas, car les scripts de redémarrage sont déjà préconfigurés pour redémarrer les services définis à l'étape précédente.
-  * Cliquez donc directement sur  `Next step`.
-  * `start_both.ps1`  démarre tous les services dans l'ordre spécifié dans la liste  `SERVICES` , tandis que  `stop_both.ps1`  arrête tous les services dans l'ordre inverse.
-  * De plus,  `start_both.ps1`  vérifie le démarrage de chaque service et arrête le module si un service ne démarre pas correctement.
+  * Cette étape est facultative et peut généralement être ignorée, car les scripts de redémarrage sont déjà configurés pour redémarrer les services définis à l’étape précédente.
+  * Cliquez directement sur `Next step`.
+  * `start_both.ps1` démarre tous les services dans l’ordre indiqué dans la liste `SERVICES`, tandis que `stop_both.ps1` les arrête dans l’ordre inverse.
+  * De plus, `start_both.ps1` vérifie le démarrage de chaque service et arrête le module si un service ne démarre pas correctement.
 
 
-![Saisissez les paramètres du module  {{ .Get "app" }} ](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
+![Saisir les paramètres du module {{ .Get "app" }}](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
 
 
 ### 6. Chiffrement des communications (facultatif)
 
-  * Maintenir le chiffrement des communications entre les nœuds.
+  * Maintenez le chiffrement des communications entre les nœuds.
 
 
-![Cryptage des communications du module  {{ .Get "app" }} ](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+![Chiffrement des communications du module {{ .Get "app" }}](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
 ### 7. Enregistrer et appliquer
 
-  * `Save and apply`  la configuration et les scripts sur les deux nœuds.
+  * Utilisez `Save and apply` pour appliquer la configuration et les scripts sur les deux nœuds.
 
 
-![Enregistrez et appliquez la configuration du module  {{ .Get "app" }} ](/wp-content/uploads/2025/05/08-module-save-1.png)
+![Enregistrer et appliquer la configuration du module {{ .Get "app" }}](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8. Vérifier la configuration réussie
+### 8. Vérifier la réussite de la configuration
 
-  * Vérifiez le message  `Success` ✅  sur les deux nœuds et cliquez sur  `Monitor modules`.
-  * Si la configuration  `Failure` ❌  se produit sur un nœud, ouvrez le panneau d'accordéon ▼ correspondant et consultez les messages. Notez que vous pouvez utiliser  SafeKit AI 🤖  pour obtenir de l'aide.
-
-
-![Vérifiez la réussite de la configuration du module  {{ .Get "app" }} ](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+  * Vérifiez le message `Success` ✅ sur les deux nœuds, puis cliquez sur `Monitor modules`.
+  * Si `Failure` ❌ survient sur un nœud, ouvrez le panneau accordéon ▼ de ce nœud et examinez les messages. SafeKit AI 🤖 peut également vous aider.
 
 
-### 9. Démarrez le cluster  farm  sur le nœud 1 et le nœud 2.
-
-  * ⋯ `Start` le farm cluster comme indiqué sur l'image.
+![Vérifier la réussite de la configuration du module {{ .Get "app" }}](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-![Démarrez le cluster  {{ .Get "app" }}  sur les deux nœuds.](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
+### 9. Démarrer le cluster `farm` sur les nœuds 1 et 2
+
+  * Cliquez sur ⋯ `Start` pour démarrer le cluster `farm`, comme indiqué sur l’image.
 
 
-### 10. Attendez la transition vers le haut (vert) / haut (vert)
-
-Les nœuds 1 et 2 devraient atteindre l'état UP (vert), ce qui signifie que le script  `start_both`  a été exécuté sur les nœuds 1 et 2.
-
-⚠️ Si UP (vert) n'est pas atteint ou si l'application n'est pas démarrée, analysez pourquoi avec le  [module log 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png)  du nœud 1 ou du nœud 2.
-
-  * Cliquez sur l'icône  🔍 **log**  de  `node1`  ou  `node2`  pour ouvrir le journal du module et rechercher des messages d'erreur tels qu'un vérificateur détectant une erreur et arrêtant le module.
-  * Cliquez sur  `start_both`  dans le journal : les messages de sortie du script s’affichent à droite et des erreurs peuvent être détectées, comme un service mal démarré.
-  * Utilisez  SafeKit AI 🤖  pour obtenir de l'aide concernant les messages de journalisation.
+![Démarrer le cluster {{ .Get "app" }} sur les deux nœuds](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-ℹ️ Notez que vous avez un  🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)**  qui peut être utile pour comprendre ce qui se passe dans le cluster.
+### 10. Attendre que les deux nœuds passent à l’état UP (vert)
+
+Les nœuds 1 et 2 doivent atteindre l’état UP (vert), ce qui signifie que le script `start_both` a été exécuté sur chacun d’eux.
+
+⚠️ Si l’état UP (vert) n’est pas atteint ou si l’application ne démarre pas, recherchez la cause dans le [journal du module 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) du nœud 1 ou du nœud 2.
+
+  * Cliquez sur l’icône 🔍 **log** de `node1` ou `node2` pour ouvrir le journal du module et rechercher des erreurs, par exemple un vérificateur qui détecte une erreur et arrête le module.
+  * Cliquez sur `start_both` dans le journal : les sorties du script s’affichent à droite et permettent de détecter des erreurs, comme un service mal démarré.
+  * Utilisez SafeKit AI 🤖 pour obtenir de l’aide concernant les messages du journal.
 
 
-![Le cluster  {{ .Get "app" }}  est démarré.](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
+ℹ️ La 🕒 **[chronologie 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** peut vous aider à comprendre les événements du cluster.
+
+
+![Le cluster {{ .Get "app" }} est démarré](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
 
 
 ### 11. Tests
 
-SafeKit  intègre un test dans le produit :
+SafeKit intègre un test au produit :
 
-  * Configurez une règle pour le port TCP 9010 avec un équilibrage de charge sur le port TCP source.
-  * Connectez un poste de travail externe en dehors des nœuds  farm .
-  * Ouvrez un navigateur sur http://virtual-ip:9010/safekit/mosaic.html.
-
-
-Vous devriez voir une mosaïque de couleurs en fonction des nœuds répondant aux requêtes HTTP.
-
-  * Arrêtez un nœud UP (vert) en faisant défiler son menu contextuel vers le bas et en cliquant sur Arrêter.
-  * Vérifiez qu'il n'y a plus de connexions TCP sur le nœud arrêté et sur l'adresse virtuelle IP .
+  * Configurez une règle pour le port TCP 9010 avec un équilibrage de charge selon le port TCP source.
+  * Connectez un poste de travail externe, hors des nœuds de la `farm`.
+  * Ouvrez un navigateur à l’adresse http://virtual-ip:9010/safekit/mosaic.html.
 
 
-ℹ️ Retrouvez plus de détails, ainsi que des vidéos, dans le  [SafeKit Online Training](/resources/safekit-on-line-training/).
+Une mosaïque de couleurs doit apparaître, selon les nœuds qui répondent aux requêtes HTTP.
+
+  * Arrêtez un nœud UP (vert) en faisant défiler son menu contextuel vers le bas et en cliquant sur Stop.
+  * Vérifiez qu’il n’y a plus de connexions TCP sur le nœud arrêté ni sur l’adresse IP virtuelle.
 
 
-![Testez l'adresse virtuelle  IP  de  {{ .Get "app" }}  avec la mosaïque](/wp-content/uploads/2024/03/appli-19.png)
+ℹ️ Retrouvez plus de détails et des vidéos dans la [formation en ligne SafeKit](/fr/resources/safekit-on-line-training/).
 
 
-### 12. Soutien
-
-  * Pour obtenir de l'aide, prenez 2 SafeKit `Snapshots`  (2 fichiers .zip), un pour chaque nœud.
+![Tester l’adresse IP virtuelle de {{ .Get "app" }} avec la mosaïque](/wp-content/uploads/2024/03/appli-19.png)
 
 
-ℹ️ [More information on the support here](/resources/safekit-support/).
+### 12. Assistance
+
+  * Pour obtenir de l’assistance, prenez 2 SafeKit `Snapshots` (2 fichiers .zip), un pour chaque nœud.
 
 
-![Prenez les captures d'écran  {{ .Get "app" }}  pour obtenir de l'aide](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
+ℹ️ [Plus d’informations sur l’assistance ici](/fr/resources/safekit-support/).
 
 
+![Prendre les instantanés de {{ .Get "app" }} pour l’assistance](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
