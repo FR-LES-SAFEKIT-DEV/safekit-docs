@@ -46,7 +46,14 @@
     {{ end }}
 </head>
 <body{{ if eq .Layout "userguide" }} class="userguide-page"{{ end }}>
-    {{ partial "header.html" . }}
+    {{ $header := partial "header.html" . }}
+    {{ with index hugo.Data.menu .Site.Language.Lang }}
+    {{ range $source, $label := . }}
+    {{ $header = replace $header (printf ">%s<" $source) (printf ">%s<" $label) }}
+    {{ $header = replace $header (printf `aria-label="%s"` $source) (printf `aria-label="%s"` $label) }}
+    {{ end }}
+    {{ end }}
+    {{ $header | safeHTML }}
     {{ if ne .Layout "userguide" }}
     {{ partial "breadcrumb.html" . }}
     {{ end }}
