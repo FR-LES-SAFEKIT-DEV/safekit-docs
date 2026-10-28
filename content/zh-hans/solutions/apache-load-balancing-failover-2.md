@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/apache-load-balancing-f
 description: "SafeKit 提供功能强大的纯软件 Apache 负载均衡和高可用性解决方案。SafeKit 集成了虚拟 IP、应用监控和自动故障转移功能，可替代复杂的 NLB 硬件。现在即可在标准 Windows 服务器上轻松部署 Apache 集群。"
 category: "solutions"
 lang: "zh-hans"
-topics: "SafeKit Farm 集群：纯软件 NLB 和 Apache 自动故障转移，目录，SafeKit 软件如何轻松实现 Apache 网络负载均衡 (NLB) 集群？，SafeKit 集群在 Farm 模式下如何与 Apache 协同工作？，比较：SafeKit Farm 集群（适用于 Apache）与其他 NLB 集群解决方案，视频指南：配置 SafeKit Farm NLB 集群，🔍 SafeKit 高可用性导航中心"
+topics: "SafeKit Farm 集群：面向 Apache 的纯软件 NLB 与自动故障转移，目录，SafeKit 软件如何简单地实现 Apache 网络负载均衡（NLB）集群？，SafeKit 集群在场（Farm）模式下是如何与 Apache 协同工作的？，比较：面向 Apache 的 SafeKit Farm 集群与其他 NLB 集群解决方案，视频指南：配置 SafeKit Farm NLB 集群，🔍 SafeKit 高可用性导航中心"
 ---
 
 # SafeKit：一体化 Apache 负载均衡和高可用性软件 {#safekit-all-in-one-apache-load-balancing--high-availability-software}

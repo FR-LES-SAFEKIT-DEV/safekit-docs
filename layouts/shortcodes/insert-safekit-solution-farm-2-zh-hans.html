@@ -4,104 +4,102 @@
 
 
 
-##  SafeKit Farm 集群：仅软件NLB和 {{ .Get "app" }}的自动故障转移 {#safekit-farm-cluster-overview}
+## SafeKit `Farm` 集群：面向 {{ .Get "app" }} 的纯软件 NLB 与自动故障转移 {#safekit-farm-cluster-overview}
 
-一个 SafeKit Farm 集群 {{ .Get "app" }} 是一款软件定义的网络负载均衡 (NLB) 解决方案，专为可扩展的应用环境而设计。它提供集成式服务。 **应用服务器上的负载均衡和故障转移** 这样就无需专用硬件负载均衡器、代理服务器或复杂的组播配置。
+面向 {{ .Get "app" }} 的 SafeKit `Farm` 集群是一种软件定义的网络负载均衡（NLB）解决方案，专为可扩展的应用环境设计。它可在**应用服务器上直接实现负载均衡和故障转移**，因此无需专用硬件负载均衡器、代理服务器或复杂的组播配置。
 
-### 对于  {{ .Get "app" }} 而言，a SafeKit Farm Cluster 有哪些优势？ {#safekit-farm-cluster-advantages}
+### 面向 {{ .Get "app" }} 的 SafeKit `Farm` 集群有哪些优势？ {#safekit-farm-cluster-advantages}
 
-  * **一体化软件：** 将虚拟 IP、负载均衡和自动故障转移/故障恢复功能集成在一个软件包中。
-  * **无需特殊硬件：** 用适用于 Windows 的纯软件解决方案取代昂贵的硬件负载均衡器，或 Linux，可由系统管理员而不是网络工程师管理。
-  * **深度监控和自我修复：** 使用应用程序级别的“检查器”来监控特定的应用程序进程，即使服务器仍在运行也能检测到崩溃；然后，如果需要，它会触发自动服务重启或故障转移。
-  * **Hybrid Farm &镜像功能：** 独特地允许将 Farm 集群（用于前端负载均衡）与镜像集群（用于后端同步数据复制）混合使用。
-  * **OEM 高可用性：** 使软件供应商能够将原生集群嵌入到他们的应用程序中，提供“集群就绪”的纯软件产品，而无需额外的基础设施。
+  * **一体化软件：** 在一个软件包中集成虚拟 IP、负载均衡以及自动故障转移和故障恢复功能。
+  * **无需特殊硬件：** 以适用于 Windows 或 Linux 的纯软件解决方案取代昂贵的硬件负载均衡器，可由系统管理员而非网络工程师管理。
+  * **深度监控与自我修复：** 使用应用程序级“检查器”监控特定应用进程，即使服务器仍在运行也能检测到进程崩溃；必要时自动重启服务或触发故障转移。
+  * **`Farm` 与 Mirror 混合功能：** 可将用于前端负载均衡的 `Farm` 集群与用于后端同步数据复制的 Mirror 集群组合使用。
+  * **OEM 高可用性：** 使软件供应商能够在应用中嵌入原生集群功能，无需额外基础设施即可提供“支持集群”的纯软件产品。
 
 
-![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing]({{ .Get "img" }} "w:512")
+![SafeKit 高可用性集群架构，为 {{ .Get "app" }} 提供虚拟 IP、自动故障转移、自动故障恢复和网络负载均衡]({{ .Get "img" }} "w:512")
 
-**SafeKit Farm NLB 集群，适用于  {{ .Get "app" }}**
+**面向 {{ .Get "app" }} 的 SafeKit `Farm` NLB 集群**
 
-<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ 快的 farm 集群安装指南 {{ .Get "app" }} ></a>
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }} <code>farm</code> 集群快速安装指南 &gt;</a>
 ## 目录 {#toc}
 
-  * [How the SafeKit software simply implements a {{ .Get "app" }} Network Load Balancing (NLB) cluster?](#safekit-farm-ha-cluster)
-  * [How the SafeKit farm cluster works with {{ .Get "app" }}?](#safekit-farm-cluster)
-  * [Comparison: SafeKit Farm Cluster for {{ .Get "app" }} vs. Other NLB Clustering Solutions](#safekit-farm-ha-comparison)
-  * [Video Guide: Configuring a SafeKit Farm NLB Cluster](#videoguide-safekit-farm-cluster)
-  * [🔍 SafeKit High Availability Navigation Hub](#hub)
+  * [SafeKit 软件如何简单地实现 {{ .Get "app" }} 网络负载均衡（NLB）集群？](#safekit-farm-ha-cluster)
+  * [SafeKit `farm` 集群如何与 {{ .Get "app" }} 配合工作？](#safekit-farm-cluster)
+  * [比较：面向 {{ .Get "app" }} 的 SafeKit `Farm` 集群与其他 NLB 集群解决方案](#safekit-farm-ha-comparison)
+  * [视频指南：配置 SafeKit `Farm` NLB 集群](#videoguide-safekit-farm-cluster)
+  * [🔍 SafeKit 高可用导航中心](#hub)
 
 
-##  SafeKit 软件如何简单地实现 {{ .Get "app" }} 网络负载均衡（NLB）集群？ {#safekit-farm-ha-cluster}
+## SafeKit 软件如何简单地实现 {{ .Get "app" }} 网络负载均衡（NLB）集群？ {#safekit-farm-ha-cluster}
 
-###  {{ .Get "app" }} 的  SafeKit Farm NLB 解是什么？ {#safekit-farm-nlb-solution}
+### 面向 {{ .Get "app" }} 的 SafeKit `Farm` NLB 解决方案是什么？ {#safekit-farm-nlb-solution}
 
-SafeKit  为  {{ .Get "app" }}  提供跨两台或多台服务器的网络负载均衡和高可用性。
+SafeKit 可在两台或更多服务器之间为 {{ .Get "app" }} 提供网络负载均衡和高可用性。
 
-本文介绍了如何在没有硬件负载均衡器或专业网络技能的情况下快速实现 a {{ .Get "app" }} cluster。
+本文介绍如何在无需硬件负载均衡器或专业网络技能的情况下，快速实现 {{ .Get "app" }} 集群。
 
-该解决方案通过定义一个虚拟的  IP ，并设置负载均衡规则、 {{ .Get "app" }}  服务名称和健康检查器来实现。
+该解决方案通过定义虚拟 IP、负载均衡规则、{{ .Get "app" }} 服务名称和运行状况检查器来实现。
 
-SafeKit 然后启用 **网络负载均衡** 和 **自动故障转移** 确保可扩展性和持续的服务可用性。
+随后，SafeKit 启用**网络负载均衡**和**自动故障转移**，确保可扩展性和服务持续可用。
 
-### 与硬件解决方案相比， SafeKit 如何简化负载均衡？ {#software-load-balancing-vs-hardware}
+### 与硬件解决方案相比，SafeKit 如何简化负载均衡？ {#software-load-balancing-vs-hardware}
 
-SafeKit 通过用一种设备取代传统的“中间人”NLB硬件，简化了管理。 **纯软件解决方案**。
+SafeKit 以**纯软件解决方案**取代传统充当“中间环节”的 NLB 硬件，从而简化管理。
 
- SafeKit  无需专用物理设备，可直接在标准  **Windows 或  Linux**  应用服务器上运行。
+SafeKit 无需专用物理设备，可直接运行在标准 **Windows 或 Linux** 应用服务器上。
 
-软件供应商可以提供 **OEM高可用性** 通过整合 **SafeKit** 直接集成到他们的应用堆栈中。这种合作关系使供应商能够交付一个独立的、 **“集群就绪”且纯软件的解决方案** 其中包括原生负载均衡和故障转移功能。
+软件供应商可通过将 **SafeKit** 直接集成到应用程序栈中，提供 **OEM 高可用性**。借助这种合作模式，供应商能够交付自包含的**“支持集群”的纯软件解决方案**，并具备原生负载均衡和故障转移功能。
 
-###  SafeKit 的软件负载均衡对  {{ .Get "app" }} 有什么好处？ {#software-load-balancing-benefits}
+### SafeKit 的软件负载均衡为 {{ .Get "app" }} 带来哪些好处？ {#software-load-balancing-benefits}
 
-SafeKit 采用精简的软件方案取代了昂贵的硬件，该方案具有以下优势：
+SafeKit 以精简的软件方案取代昂贵硬件，并提供以下优势：
 
-  * **高性能：** 在操作系统内核级别管理流量和虚拟 IP (VIP)，无需额外的网络设备即可确保速度。
-  * **操作简便性：** 允许系统管理员通过统一的界面管理集群，而无需专门的网络认证。
-  * **降低总体拥有成本：** 通过消除对专用硬件负载均衡器的需求，降低资本支出和维护成本。
-
-
-### 如何 SafeKit 应用监控与标准的NLB健康检查有何不同？ {#application-monitoring-vs-nlb-health-checks}
-
-与依赖简单电路的标准 NLB 硬件不同，后者采用的是简单的电路设计。 **ping** 以及端口检查， SafeKit 特征 **集成应用级检查器**传统的负载均衡器仅确认服务器是否“存活”， SafeKit 监测特定动物的实际健康状况 {{ .Get "app" }} 过程。
-
-这种深度监控使系统能够检测到“僵尸”状态——即服务器仍在运行但软件已崩溃——从而触发警报。 **自动服务重启** 或者实现标准 NLB 解决方案无法执行的流量重定向。
-
-### 无需集群技术即可搭建 a {{ .Get "app" }} farm  集群吗？ {#farm-cluster-without-clustering-skills}
-
-是的。本文解释了如何在无需专业复杂网络技能的情况下实现  [quickly implement a {{ .Get "app" }} farm cluster]({{ .Get "guide" }}) 。通过使用  SafeKit 的  **virtual IP**  来处理  **{{ .Get "app" }}**  的网络负载均衡，您可以获得一个强大且可扩展的解决方案，该方案的部署和维护比传统的 NLB 解决方案要简单得多。
-
-### 除了 {{ .Get "app" }}之外， SafeKit 还能保护哪些应用程序和环境？ {#supported-applications-and-environments}
-
-SafeKit  是一款功能全面的高可用性解决方案  **，适用于 Windows 和  Linux**。它支持镜像集群，具备  ** 同步实时复制 **  和自动故障转移功能，可应对各种关键工作负载，包括：
-
-  * **虚拟和物理环境：** 完整 Hyper-V 或 KVM 虚拟机。
-  * **容器编排：** Docker、Podman和K3s（Kubernetes）环境。
-  * **数据和服务：** 单个文件目录、服务和各种数据库。
-  * **云基础设施：** 云应用程序的高可用性。
+  * **高性能：** 在操作系统内核级别管理流量和虚拟 IP（VIP），无需额外网络设备即可实现快速处理。
+  * **运维简便：** 系统管理员可通过统一界面管理集群，无需专门的网络认证资质。
+  * **降低总体拥有成本：** 无需专用硬件负载均衡器，从而降低资本支出和维护成本。
 
 
-💡 [Explore the full list of supported HA solutions here.](/zh-hans/solutions/)
+### SafeKit 应用监控与标准 NLB 运行状况检查有何不同？ {#application-monitoring-vs-nlb-health-checks}
+
+标准 NLB 硬件依赖简单的 **ping** 和端口检查，而 SafeKit 则提供**集成式应用程序级检查器**。传统负载均衡器只能确认服务器是否“存活”，SafeKit 则会监控特定 {{ .Get "app" }} 进程的实际运行状态。
+
+这种深度监控能够检测“僵尸”状态——服务器仍在运行，但软件已经崩溃——并触发**自动重启服务**或重定向流量，而标准 NLB 解决方案无法执行这些操作。
+
+### 没有集群技术经验也能设置 {{ .Get "app" }} `farm` 集群吗？ {#farm-cluster-without-clustering-skills}
+
+可以。本文介绍如何在无需专业复杂网络技能的情况下，[快速实现 {{ .Get "app" }} `farm` 集群]({{ .Get "guide" }})。使用 SafeKit 的**虚拟 IP**为 **{{ .Get "app" }}** 实现网络负载均衡，即可获得可靠且可扩展的解决方案，其部署和维护都比传统 NLB 方案简单得多。
+
+### 除了 {{ .Get "app" }}，SafeKit 还能保护哪些应用和环境？ {#supported-applications-and-environments}
+
+SafeKit 是适用于 **Windows 和 Linux** 的多用途高可用性解决方案。它可通过支持**同步实时复制**的 Mirror 集群和自动故障转移，保护各类关键工作负载，包括：
+
+  * **虚拟和物理环境：** 完整的 Hyper-V 或 KVM 虚拟机。
+  * **容器编排：** Docker、Podman 和 K3s（Kubernetes）环境。
+  * **数据和服务：** 单个文件目录、服务及各种数据库。
+  * **云基础设施：** 为云应用提供高可用性。
+
+
+💡 [在此查看支持的高可用性解决方案完整列表。](/zh-hans/solutions/)
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-zh-hans app=%q  %%}}" (.Get "app")) }}
 
 
-## 比较： SafeKit Farm Cluster for  {{ .Get "app" }}  与其他 NLB 集群解决方案 {#safekit-farm-ha-comparison}
+## 比较：面向 {{ .Get "app" }} 的 SafeKit `Farm` 集群与其他 NLB 集群解决方案 {#safekit-farm-ha-comparison}
 
-特征 | SafeKit Farm 集群（软件） 硬件负载均衡器  
----|---|---  
-建筑学 | 内核级软件：原生集成到 Windows 和  Linux OS 中。 | 专用硬件：专用物理设备。  
-管理 系统管理员：通过简单的 Web 控制台进行管理；无需网络学位。 网络工程师：需要专业技能和 CLI 认证。  
-健康监测 | Application Checkers：对特定进程或 Web 服务进行深度监控。 | 网络 ping：基本检查服务器或端口是否可达。  
-自我疗愈 | 内置重启智能：自动在本地重启故障服务。 被动故障转移：仅停止向故障节点发送流量。  
-基础设施 | 平台无关：可在物理、虚拟（VMware、 Hyper-V）或云实例上运行。 | 刚性：需要特定的物理布线和网络机架空间。  
-成本（总拥有成本） | 低资本支出/运营支出：利用现有服务器资源；无需昂贵的硬件维护。 | 高额投资：前期投入成本高，加上经常性的许可费和电力费用。  
+特性 | SafeKit `Farm` 集群（软件） | 硬件负载均衡器
+---|---|---
+架构 | 内核级软件：原生集成到 Windows 和 Linux 操作系统中。 | 专有硬件：专用物理设备。
+管理 | 系统管理员：通过简单的 Web 控制台管理；无需网络专业学历。 | 网络工程师：需要专业技能和 CLI 认证。
+运行状况监控 | 应用程序检查器：深度监控特定进程或 Web 服务。 | 网络 Ping：基本检查服务器或端口是否可访问。
+自我修复 | 内置智能重启：在本地自动重启发生故障的服务。 | 被动故障转移：仅停止向故障节点发送流量。
+基础设施 | 不受平台限制：可在物理、虚拟（VMware、Hyper-V）或云实例上运行。 | 灵活性有限：需要特定物理布线和网络机架空间。
+成本（总体拥有成本） | 低 CAPEX/OPEX：利用现有服务器资源，无需昂贵的硬件维护。 | 投资较高：前期成本高，并需持续支付许可和电力费用。
 
-**总之** ， 这 **SafeKit Farm 簇** 代表着从传统的、硬件密集型网络向现代网络的战略演变。 **软件定义高可用性** 该模型通过将负载均衡和自愈智能直接集成到应用服务器中， SafeKit 省去了外部“中间商”硬件的成本和复杂性。
+**总而言之，** **SafeKit `Farm` 集群**代表着从传统硬件密集型网络向现代**软件定义高可用性**模式的战略性演进。SafeKit 将负载均衡和自我修复能力直接集成到应用服务器中，省去了外部“中间环节”硬件的成本和复杂性。
 
-## 视频指南：配置 a SafeKit Farm NLB 集群 {#videoguide-safekit-farm-cluster}
+## 视频指南：配置 SafeKit `Farm` NLB 集群 {#videoguide-safekit-farm-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-farm-video-zh-hans  %}}" }}
-
-

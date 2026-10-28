@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/apache-load-balancing-failov
 description: "يوفر SafeKit حلاً قوياً لموازنة أحمال Apache وضمان التوافر العالي، وهو حل برمجي بالكامل. استبدل أجهزة موازنة الأحمال المعقدة بميزة SafeKit المتكاملة التي تشمل عنوان IP افتراضي، ومراقبة التطبيقات، والتحويل التلقائي في حالة الأعطال. يمكنك بسهولة نشر مجموعة Apache على خوادم Windows القياسية اليوم."
 category: "solutions"
 lang: "ar"
-topics: "مجموعة SafeKit Farm: موازنة تحميل الشبكة البرمجية فقط والتحويل التلقائي في حالة الفشل لـ Apache، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة موازنة تحميل الشبكة (NLB) لـ Apache؟، كيف تعمل مجموعة SafeKit في وضع المزرعة مع Apache؟، مقارنة: مجموعة SafeKit Farm لـ Apache مقابل حلول تجميع NLB الأخرى، دليل فيديو: تكوين مجموعة SafeKit Farm NLB، 🔍 مركز تنقل التوافر العالي لـ SafeKit"
+topics: "مجموعة SafeKit Farm: موازنة تحميل الشبكة البرمجية فقط والتحويل التلقائي عند الفشل لـ Apache، جدول المحتويات، كيف يطبّق برنامج SafeKit ببساطة مجموعة موازنة تحميل الشبكة (NLB) لـ Apache؟، كيف تعمل مجموعة SafeKit بأسلوب المزرعة (farm mode) مع Apache؟، مقارنة مجموعة SafeKit Farm لـ Apache بحلول تجميع NLB الأخرى، دليل فيديو: تكوين مجموعة SafeKit Farm لموازنة تحميل الشبكة، 🔍 مركز توجيه SafeKit للتوافر العالي (High Availability)"
 ---
 
 # SafeKit: برنامج متكامل لموازنة الأحمال وتوفير التوافر العالي لخادم أباتشي {#safekit-all-in-one-apache-load-balancing--high-availability-software}

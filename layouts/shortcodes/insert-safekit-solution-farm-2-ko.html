@@ -4,104 +4,102 @@
 
 
 
-##  SafeKit Farm 클러스터:  {{ .Get "app" }}용 소프트웨어 전용 NLB 및 자동 페일오버 {#safekit-farm-cluster-overview}
+## SafeKit `Farm` 클러스터: {{ .Get "app" }}용 소프트웨어 전용 NLB 및 자동 페일오버 {#safekit-farm-cluster-overview}
 
-에이 SafeKit Farm 클러스터용 {{ .Get "app" }} 확장 가능한 애플리케이션 환경을 위해 설계된 소프트웨어 정의 네트워크 로드 밸런싱(NLB) 솔루션입니다. 통합된 기능을 제공합니다. **애플리케이션 서버에서 직접 로드 밸런싱 및 장애 조치를 수행합니다.** 따라서 전용 하드웨어 로드 밸런서, 프록시 서버 또는 복잡한 멀티캐스트 구성이 필요하지 않습니다.
+{{ .Get "app" }}용 SafeKit `Farm` 클러스터는 확장 가능한 애플리케이션 환경을 위해 설계된 소프트웨어 정의 네트워크 로드 밸런싱(NLB) 솔루션입니다. **애플리케이션 서버에서 직접 로드 밸런싱과 페일오버를 수행**하므로 전용 하드웨어 로드 밸런서, 프록시 서버 또는 복잡한 멀티캐스트 구성이 필요하지 않습니다.
 
-###  SafeKit Farm 클러스터를  {{ .Get "app" }}에 사용하는 장점은 무엇인가요? {#safekit-farm-cluster-advantages}
+### {{ .Get "app" }}용 SafeKit `Farm` 클러스터의 장점은 무엇인가요? {#safekit-farm-cluster-advantages}
 
-  * **올인원 소프트웨어:** 가상을 결합합니다 IP로드 밸런싱 및 자동 장애 조치/복구 기능을 단일 소프트웨어 패키지에 담았습니다.
-  * **특수 하드웨어 불필요:** 고가의 하드웨어 로드 밸런싱 장치를 Windows용 순수 소프트웨어 솔루션으로 대체하여 네트워크 엔지니어가 아닌 시스템 관리자가 관리할 수 있습니다. 또는 Linux
-  * **심층 모니터링 및 자가 복구: ** 애플리케이션 수준의 "체커"를 사용하여 특정 애플리케이션 프로세스를 모니터링하고 서버가 실행 중인 경우에도 충돌을 감지합니다. 필요한 경우 자동 서비스 재시작 또는 장애 조치를 트리거합니다.
-  * **잡종 Farm 및 미러링 기능:** 독특하게도 혼합을 허용합니다. Farm 프런트엔드의 로드 밸런싱을 위한 클러스터와 백엔드의 동기식 데이터 복제를 위한 미러 클러스터를 구성합니다.
-  * **OEM 고가용성: ** 는 소프트웨어 공급업체가 애플리케이션에 네이티브 클러스터링을 내장할 수 있도록 지원하여 추가 인프라 없이 "클러스터 지원" 소프트웨어 전용 제품을 제공합니다.
+  * **올인원 소프트웨어:** 가상 IP, 로드 밸런싱, 자동 페일오버 및 페일백을 하나의 소프트웨어 패키지에 결합합니다.
+  * **특수 하드웨어 불필요:** 값비싼 하드웨어 로드 밸런서를 Windows 또는 Linux용 순수 소프트웨어 솔루션으로 대체하여 네트워크 엔지니어가 아닌 시스템 관리자가 관리할 수 있습니다.
+  * **심층 모니터링 및 자가 복구:** 애플리케이션 수준의 "체커"를 사용해 특정 애플리케이션 프로세스를 모니터링하고, 서버가 계속 실행 중이어도 충돌을 감지합니다. 필요한 경우 서비스 자동 재시작 또는 페일오버를 실행합니다.
+  * **하이브리드 `Farm` 및 Mirror 기능:** 프런트엔드의 로드 밸런싱을 위한 `Farm` 클러스터와 백엔드 데이터의 동기식 복제를 위한 Mirror 클러스터를 함께 사용할 수 있습니다.
+  * **OEM 고가용성:** 소프트웨어 공급업체가 애플리케이션에 기본 클러스터링 기능을 내장하여 추가 인프라 없이 "클러스터 지원" 소프트웨어 제품을 제공할 수 있습니다.
 
 
-![SafeKit High Availability {{ .Get "app" }} Cluster Architecture providing Virtual IP, Automatic Failover, Automatic Failback, and Network Load Balancing]({{ .Get "img" }} "w:512")
+![가상 IP, 자동 페일오버, 자동 페일백 및 네트워크 로드 밸런싱을 제공하는 {{ .Get "app" }}용 SafeKit 고가용성 클러스터 아키텍처]({{ .Get "img" }} "w:512")
 
-**SafeKit Farm NLB 클러스터( {{ .Get "app" }}**용)
+**{{ .Get "app" }}용 SafeKit `Farm` NLB 클러스터**
 
-<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Quick farm 클러스터 설치 가이드( {{ .Get "app" }} ></a>)
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }}용 <code>farm</code> 클러스터 빠른 설치 가이드 &gt;</a>
 ## 목차 {#toc}
 
-  * [How the SafeKit software simply implements a {{ .Get "app" }} Network Load Balancing (NLB) cluster?](#safekit-farm-ha-cluster)
-  * [How the SafeKit farm cluster works with {{ .Get "app" }}?](#safekit-farm-cluster)
-  * [Comparison: SafeKit Farm Cluster for {{ .Get "app" }} vs. Other NLB Clustering Solutions](#safekit-farm-ha-comparison)
-  * [Video Guide: Configuring a SafeKit Farm NLB Cluster](#videoguide-safekit-farm-cluster)
-  * [🔍 SafeKit High Availability Navigation Hub](#hub)
+  * [SafeKit 소프트웨어는 {{ .Get "app" }} 네트워크 로드 밸런싱(NLB) 클러스터를 어떻게 간단히 구현하나요?](#safekit-farm-ha-cluster)
+  * [SafeKit `farm` 클러스터는 {{ .Get "app" }}에서 어떻게 작동하나요?](#safekit-farm-cluster)
+  * [비교: {{ .Get "app" }}용 SafeKit `Farm` 클러스터와 다른 NLB 클러스터링 솔루션](#safekit-farm-ha-comparison)
+  * [동영상 가이드: SafeKit `Farm` NLB 클러스터 구성](#videoguide-safekit-farm-cluster)
+  * [🔍 SafeKit 고가용성 탐색 허브](#hub)
 
 
-##  SafeKit  소프트웨어는 어떻게 간단하게  {{ .Get "app" }}  네트워크 로드 밸런싱(NLB) 클러스터를 구현할까요? {#safekit-farm-ha-cluster}
+## SafeKit 소프트웨어는 {{ .Get "app" }} 네트워크 로드 밸런싱(NLB) 클러스터를 어떻게 간단히 구현하나요? {#safekit-farm-ha-cluster}
 
-###  SafeKit Farm NLB는  {{ .Get "app" }}에 대한 해법인가요? {#safekit-farm-nlb-solution}
+### {{ .Get "app" }}용 SafeKit `Farm` NLB 솔루션이란 무엇인가요? {#safekit-farm-nlb-solution}
 
-SafeKit 는 두 개 이상의 서버에 걸쳐  {{ .Get "app" }} 에 네트워크 로드 밸런싱 및 고가용성을 제공합니다.
+SafeKit은 두 대 이상의 서버에서 {{ .Get "app" }}의 네트워크 로드 밸런싱과 고가용성을 제공합니다.
 
-이 문서에서는 하드웨어 로드 밸런서나 전문적인 네트워킹 기술 없이 a {{ .Get "app" }}  클러스터를 신속하게 구현하는 방법을 설명합니다.
+이 문서에서는 하드웨어 로드 밸런서나 전문 네트워킹 기술 없이 {{ .Get "app" }} 클러스터를 빠르게 구현하는 방법을 설명합니다.
 
-이 솔루션은 로드 밸런싱 규칙,  {{ .Get "app" }}  서비스 이름 및 상태 검사기를 포함하는 가상  IP 를 정의함으로써 작동합니다.
+이 솔루션은 로드 밸런싱 규칙, {{ .Get "app" }} 서비스 이름 및 상태 검사기를 포함한 가상 IP를 정의해 작동합니다.
 
-그런 다음 SafeKit 는  ** 네트워크 로드 밸런싱, **  및  ** 자동 페일오버, ** 를 활성화하여 확장성과 지속적인 서비스 가용성을 보장합니다.
+그런 다음 SafeKit은 **네트워크 로드 밸런싱**과 **자동 페일오버**를 활성화하여 확장성과 지속적인 서비스 가용성을 보장합니다.
 
-###  SafeKit 는 하드웨어 솔루션에 비해 로드 밸런싱을 어떻게 간소화합니까? {#software-load-balancing-vs-hardware}
+### SafeKit은 하드웨어 솔루션과 비교해 로드 밸런싱을 어떻게 간소화하나요? {#software-load-balancing-vs-hardware}
 
-SafeKit 기존의 "중간 매개체" NLB 하드웨어를 대체하여 관리를 간소화합니다. **순수 소프트웨어 솔루션**.
+SafeKit은 기존의 "중간자" 역할을 하는 NLB 하드웨어를 **순수 소프트웨어 솔루션**으로 대체해 관리를 간소화합니다.
 
-별도의 물리적 장치가 필요한 대신,  SafeKit 는 표준  **Windows 또는  Linux**  애플리케이션 서버에서 직접 실행됩니다.
+별도의 물리적 장비를 설치하는 대신 SafeKit은 표준 **Windows 또는 Linux** 애플리케이션 서버에서 직접 실행됩니다.
 
-소프트웨어 공급업체는 다음과 같은 것을 제공할 수 있습니다. **OEM 고가용성** 통합함으로써 **SafeKit** 이러한 파트너십을 통해 공급업체는 자체 포함형 솔루션을 고객의 애플리케이션 스택에 직접 통합할 수 있습니다. **클러스터 환경에 최적화된 소프트웨어 전용 솔루션** 여기에는 기본 로드 밸런싱 및 장애 조치 기능이 포함됩니다.
+소프트웨어 공급업체는 **SafeKit**을 애플리케이션 스택에 직접 통합하여 **OEM 고가용성**을 제공할 수 있습니다. 이를 통해 기본 로드 밸런싱 및 페일오버 기능을 갖춘 독립형 **"클러스터 지원" 소프트웨어 솔루션**을 제공할 수 있습니다.
 
-###  SafeKit의 소프트웨어 기반 로드 밸런싱이  {{ .Get "app" }}에 제공하는 이점은 무엇입니까? {#software-load-balancing-benefits}
+### SafeKit의 소프트웨어 기반 로드 밸런싱은 {{ .Get "app" }}에 어떤 이점을 제공하나요? {#software-load-balancing-benefits}
 
-SafeKit 는 값비싼 하드웨어를 간소화된 소프트웨어 방식으로 대체하여 다음과 같은 이점을 제공합니다.
+SafeKit은 값비싼 하드웨어를 다음과 같은 이점을 제공하는 간소화된 소프트웨어 방식으로 대체합니다.
 
-  * **고성능:** 트래픽 및 가상 환경을 관리합니다. IP (VIP) 기능을 OS 커널 수준에서 구현하여 추가 네트워크 장비 없이도 속도를 보장합니다.
-  * **운영의 간편성:** 시스템 관리자가 특수 네트워킹 자격증 없이도 통합 인터페이스를 통해 클러스터를 관리할 수 있도록 합니다.
-  * **낮은 총소유비용(TCO): ** 전용 하드웨어 로드 밸런서가 필요 없어 자본 지출(CAPEX) 및 유지 관리 비용을 절감합니다.
+  * **높은 성능:** OS 커널 수준에서 트래픽과 가상 IP(VIP)를 관리하므로 추가 네트워크 장비 없이도 빠르게 처리합니다.
+  * **간편한 운영:** 시스템 관리자는 전문 네트워크 자격증 없이 통합 인터페이스에서 클러스터를 관리할 수 있습니다.
+  * **낮은 총소유비용(TCO):** 전용 하드웨어 로드 밸런서가 필요하지 않아 자본 지출과 유지 관리 비용을 줄입니다.
 
 
-###  SafeKit  애플리케이션 모니터링은 표준 NLB 상태 점검과 어떻게 다른가요? {#application-monitoring-vs-nlb-health-checks}
+### SafeKit 애플리케이션 모니터링은 표준 NLB 상태 검사와 어떻게 다른가요? {#application-monitoring-vs-nlb-health-checks}
 
-단순한 방식에 의존하는 기존 NLB 하드웨어와는 달리 **핑** 그리고 항만 점검, SafeKit 특징 **통합 애플리케이션 수준 검사기**기존의 로드 밸런싱 도구는 서버가 "활성" 상태인지 여부만 확인하는 반면, SafeKit 특정 대상의 실제 건강 상태를 모니터링합니다. {{ .Get "app" }} 프로세스.
+간단한 **ping** 및 포트 검사에 의존하는 표준 NLB 하드웨어와 달리 SafeKit에는 **통합 애플리케이션 수준 체커**가 있습니다. 기존 로드 밸런서는 서버가 "정상 작동" 중인지 여부만 확인하지만, SafeKit은 특정 {{ .Get "app" }} 프로세스의 실제 상태를 모니터링합니다.
 
-이러한 심층 모니터링을 통해 시스템은 서버는 실행 중이지만 소프트웨어가 충돌한 "좀비" 상태를 감지하여 조치를 취할 수 있습니다. **자동 서비스 재시작** 또는 표준 NLB 솔루션으로는 수행할 수 없는 트래픽 리디렉션을 수행할 수도 있습니다.
+이 심층 모니터링을 통해 서버는 작동 중이지만 소프트웨어가 중단된 "좀비" 상태를 감지하고 **서비스를 자동으로 다시 시작**하거나 트래픽을 다른 곳으로 전달할 수 있습니다. 표준 NLB 솔루션으로는 이러한 조치를 수행할 수 없습니다.
 
-### 클러스터링 기술 없이  {{ .Get "app" }} farm  클러스터를 설정하는 것이 가능할까요? {#farm-cluster-without-clustering-skills}
+### 클러스터링 기술 없이 {{ .Get "app" }} `farm` 클러스터를 설정할 수 있나요? {#farm-cluster-without-clustering-skills}
 
-네. 이 글에서는 전문적이고 복잡한 네트워킹 기술 없이도  [quickly implement a {{ .Get "app" }} farm cluster]({{ .Get "guide" }}) 를 구현하는 방법을 설명합니다.  SafeKit의  **가상  IP** 를 사용하여  **{{ .Get "app" }}** 의 네트워크 로드 밸런싱을 처리함으로써, 기존 NLB 솔루션보다 배포 및 유지 관리가 훨씬 간편한 강력하고 확장 가능한 솔루션을 얻을 수 있습니다.
+예. 이 문서에서는 전문적이고 복잡한 네트워킹 기술 없이 [{{ .Get "app" }} `farm` 클러스터를 빠르게 구현하는 방법]({{ .Get "guide" }})을 설명합니다. SafeKit의 **가상 IP**로 **{{ .Get "app" }}**의 네트워크 로드 밸런싱을 처리하면 기존 NLB 솔루션보다 배포와 유지 관리가 훨씬 간편하고 확장성이 뛰어난 견고한 솔루션을 이용할 수 있습니다.
 
-### 그 너머에 {{ .Get "app" }}어떤 애플리케이션과 환경이 가능한지 SafeKit 보호하다? {#supported-applications-and-environments}
+### {{ .Get "app" }} 외에 SafeKit이 보호할 수 있는 애플리케이션과 환경은 무엇인가요? {#supported-applications-and-environments}
 
-SafeKit 다목적 고가용성 솔루션입니다. **Windows와 Linux**이를 통해 미러 클러스터를 구성할 수 있습니다. **동기식 실시간 복제** 또한 다음과 같은 다양한 중요 워크로드에 대한 자동 장애 조치 기능을 제공합니다.
+SafeKit은 **Windows와 Linux 모두**를 위한 다목적 고가용성 솔루션입니다. **동기식 실시간 복제**를 지원하는 Mirror 클러스터와 자동 페일오버를 통해 다음과 같은 다양한 중요 워크로드를 보호할 수 있습니다.
 
-  * **가상 및 물리적 환경:** 완전한 Hyper-V 또는 KVM 가상 머신.
+  * **가상 및 물리 환경:** 완전한 Hyper-V 또는 KVM 가상 머신.
   * **컨테이너 오케스트레이션:** Docker, Podman 및 K3s(Kubernetes) 환경.
   * **데이터 및 서비스:** 개별 파일 디렉터리, 서비스 및 다양한 데이터베이스.
-  * **클라우드 인프라: ** 클라우드 애플리케이션을 위한 고가용성.
+  * **클라우드 인프라:** 클라우드 애플리케이션을 위한 고가용성.
 
 
-💡 [Explore the full list of supported HA solutions here.](/ko/solutions/)
+💡 [지원되는 고가용성 솔루션의 전체 목록을 확인하세요.](/ko/solutions/)
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-ko app=%q  %%}}" (.Get "app")) }}
 
 
-## 비교:  SafeKit Farm Cluster( {{ .Get "app" }} 용)와 기타 NLB 클러스터링 솔루션 {#safekit-farm-ha-comparison}
+## 비교: {{ .Get "app" }}용 SafeKit `Farm` 클러스터와 다른 NLB 클러스터링 솔루션 {#safekit-farm-ha-comparison}
 
-특징 | SafeKit Farm 클러스터(소프트웨어) 하드웨어 로드 밸런싱  
----|---|---  
-건축학 커널 수준 소프트웨어: Windows에 기본적으로 통합됨 Linux OS. | 전용 하드웨어: 전용 물리적 장치.  
-관리 시스템 관리자: 간단한 웹 콘솔을 통해 관리 가능; 네트워크 관련 학위는 필요하지 않습니다. 네트워크 엔지니어: 전문적인 기술과 CLI 자격증이 필요합니다.  
-건강 모니터링 | 애플리케이션 Checkers: 특정 프로세스 또는 웹 서비스에 대한 심층 모니터링. 네트워크 핑: 서버 또는 포트에 연결 가능한지 확인하는 기본적인 검사입니다.  
-자가 치유 | 내장된 재시작 인텔리전스: 실패한 서비스를 자동으로 로컬에서 재시작합니다. 수동 페일오버: 장애가 발생한 노드로 트래픽 전송을 단순히 중단합니다.  
-하부 구조 | 플랫폼에 구애받지 않음: 물리적, 가상(VMware,  Hyper-V) 또는 클라우드 인스턴스에서 작동합니다. | 고정형: 특정 물리적 케이블 연결 및 네트워크 랙 공간이 필요합니다.  
-비용(총소유비용) | 낮은 CAPEX/OPEX: 기존 서버 리소스를 사용하므로 값비싼 하드웨어 유지 보수가 필요 없습니다. 높은 투자 비용: 초기 투자 비용이 높을 뿐만 아니라, 라이선스 및 전력 비용도 지속적으로 발생합니다.  
+기능 | SafeKit `Farm` 클러스터(소프트웨어) | 하드웨어 로드 밸런서
+---|---|---
+아키텍처 | 커널 수준 소프트웨어: Windows 및 Linux OS에 기본 통합. | 독점 하드웨어: 전용 물리 장비.
+관리 | 시스템 관리자: 간단한 웹 콘솔로 관리하며 네트워킹 학위가 필요하지 않습니다. | 네트워크 엔지니어: 전문 기술과 CLI 자격증이 필요합니다.
+상태 모니터링 | 애플리케이션 체커: 특정 프로세스 또는 웹 서비스를 심층 모니터링합니다. | 네트워크 ping: 서버나 포트에 연결할 수 있는지 확인하는 기본 검사입니다.
+자가 복구 | 내장된 재시작 기능: 장애가 발생한 서비스를 로컬에서 자동으로 다시 시작합니다. | 수동 페일오버: 장애 노드로 트래픽을 보내지 않을 뿐입니다.
+인프라 | 플랫폼 독립적: 물리, 가상(VMware, Hyper-V) 또는 클라우드 인스턴스에서 작동합니다. | 유연성이 낮음: 특정 물리적 케이블 연결과 네트워크 랙 공간이 필요합니다.
+비용(TCO) | 낮은 CAPEX/OPEX: 기존 서버 리소스를 사용하므로 값비싼 하드웨어 유지 관리가 필요하지 않습니다. | 높은 투자 비용: 높은 초기 비용에 라이선스 및 전력 비용이 계속 추가됩니다.
 
-**요약하자면** , 그 **SafeKit Farm 무리** 이는 기존의 하드웨어 중심 네트워킹에서 현대적인 네트워킹으로의 전략적 진화를 나타냅니다. **소프트웨어 정의 고가용성** 이 모델은 부하 분산 및 자가 복구 기능을 애플리케이션 서버에 직접 통합함으로써, SafeKit 외부 "중간 장치" 하드웨어의 비용과 복잡성을 제거합니다.
+**요약하면**, **SafeKit `Farm` 클러스터**는 하드웨어 의존도가 높은 기존 네트워킹에서 현대적인 **소프트웨어 정의 고가용성** 모델로의 전략적 발전을 의미합니다. 로드 밸런싱과 자가 복구 기능을 애플리케이션 서버에 직접 통합하여 외부 "중간자" 하드웨어의 비용과 복잡성을 없앱니다.
 
-## 동영상 가이드: a SafeKit Farm NLB 클러스터 구성하기 {#videoguide-safekit-farm-cluster}
+## 동영상 가이드: SafeKit `Farm` NLB 클러스터 구성 {#videoguide-safekit-farm-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-farm-video-ko  %}}" }}
-
-
