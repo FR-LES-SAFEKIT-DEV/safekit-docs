@@ -1,0 +1,136 @@
+{{/* Shortcode: insert-safekit-solution-mirror-cloud-nl — 4 instances in 4 files */}}
+{{/* Parameters: app, guide, img */}}
+{{/* Source: content\solutions\aws-high-availability-cluster-synchronous-replication-failover.md */}}
+
+
+
+## SafeKit Shared-Nothing-HA in {{ .Get "app" }}: gedeelde disks elimineren zonder gegevensverlies {#cloud-ha-limitation}
+
+Hoewel grote **cloudproviders** native redundantie bieden, blijft er vaak een aanzienlijke kloof tussen gegevensreplicatie en echte hoge beschikbaarheid. Cloudgebruikers moeten momenteel kiezen uit twee suboptimale opties: native **asynchrone replicatie**, waarvoor handmatige failover nodig is en die gegevensverlies kan veroorzaken, of **gedeelde clouddisks**, die niet beschikken over de automatische failovermechanismen voor naadloze bedrijfscontinuïteit.
+
+### SafeKit: het lichtgewicht alles-in-één alternatief voor complexe {{ .Get "app" }}-clusters {#safekit-cloud-mirror}
+
+  * **Alles-in-één {{ .Get "app" }}-cluster met 2 knooppunten:** SafeKit biedt een volledige oplossing met native Multi-AZ-mogelijkheden (Availability Zone), virtueel IP, automatische failover en failback en synchrone bestandsreplicatie in realtime in één geïntegreerd softwarepakket.
+  * **Geen gegevensverlies (RPO=0):** Anders dan native cloud-VM-replicatie voor DR (Disaster Recovery) gebruikt SafeKit **synchrone replicatie op bestandsniveau** om gegevensintegriteit voor transactionele toepassingen te waarborgen en gegevensverlies bij storingen te voorkomen.
+  * **Architectuur zonder gedeelde opslag:** SafeKit maakt gedeelde clouddisks en de bijbehorende problemen met schijfvergrendeling overbodig. **Lokale disks zorgen voor maximale snelheid en minimale kosten.** Traditionele clusters wachten soms tot de cloudprovider de opslagvergrendeling van een defect knooppunt vrijgeeft; SafeKit gebruikt onafhankelijke, gesynchroniseerde mappen op de lokale disks van elk knooppunt voor onmiddellijke failover.
+  * **Geen herconfiguratie van applicaties:** SafeKit repliceert bestanden transparant en beschermt applicaties en gegevens op hun huidige locatie, ook op de systeemdisk, zonder migratie naar speciale gedeelde clouddisks.
+  * **Alternatief voor Kubernetes:** SafeKit biedt hoge beschikbaarheid voor oudere en gecontaineriseerde applicaties (niet ontworpen voor Kubernetes), zonder de operationele overhead en complexiteit van Kubernetes-orchestratie.
+  * **Uniforme implementatie (on-premises of cloud):** Met uitzondering van de configuratie van het [virtuele IP in een Cloud Load Balancer](/nl/best-practises/how-a-virtual-ip-address-works/) is het implementatieproces van SafeKit hetzelfde in on-premises- en cloudomgevingen.
+
+Door **hoge beschikbaarheid** samen te brengen in een lichte softwarelaag levert SafeKit redundantie op bedrijfsniveau en bedrijfscontinuïteit in de cloud tegen een fractie van de kosten van traditionele clustersuites.
+
+![Architectuur van het SafeKit-cluster met hoge beschikbaarheid voor {{ .Get "app" }}, met virtueel IP, automatische failover en failback en synchrone bestandsreplicatie in realtime]({{ .Get "img" }} "w:512")
+
+**SafeKit HA-Mirror-cluster voor {{ .Get "app" }}**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Snelle installatiehandleiding voor een Mirror-cluster voor {{ .Get "app" }} &gt;</a>
+## Inhoudsopgave {#toc}
+
+  * [Hoe implementeert de SafeKit-software eenvoudig een cluster met hoge beschikbaarheid voor {{ .Get "app" }} zonder gedeelde opslag?](#safekit-mirror-ha-cluster)
+  * [Hoe werkt het SafeKit mirror-cluster met {{ .Get "app" }}?](#safekit-mirror-cluster)
+  * [SafeKit High Availability Limitations](#safekit-ha-limitations)
+  * [Vergelijking: SafeKit voor {{ .Get "app" }} versus native cloud-HA/DR-oplossingen](#safekit-mirror-ha-comparison)
+  * [Videogids: configuratie van een SafeKit HA-Mirror-cluster](#videoguide-safekit-mirror-cluster)
+  * [🔍 SafeKit High Availability Navigatiehub](#hub)
+
+
+## Hoe implementeert de SafeKit-software eenvoudig een cluster met hoge beschikbaarheid voor {{ .Get "app" }} zonder gedeelde opslag? {#safekit-mirror-ha-cluster}
+
+### Wat is de SafeKit Mirror-HA-oplossing voor {{ .Get "app" }}?
+
+SafeKit zorgt voor hoge beschikbaarheid voor {{ .Get "app" }} tussen twee virtuele machines in twee Availability Zones (AZ).
+
+Dit artikel beschrijft hoe u snel een {{ .Get "app" }}-cluster implementeert, zonder gedeelde clouddisks of gespecialiseerde kennis.
+
+Het principe is om de mappen met toepassingsgegevens van {{ .Get "app" }}, de services, een virtueel IP en controleprogramma's vast te leggen.
+
+Vervolgens voert SafeKit **replicatie in realtime** en **automatische failover** uit om de service continu beschikbaar te houden.
+
+### Waarom kiezen voor een uniforme alles-in-één HA-oplossing in plaats van losse tools?
+
+In tegenstelling tot achteraf samengestelde oplossingen met aparte producten voor replicatie en clustering, integreert **SafeKit** **virtueel IP, automatische failover en failback en synchrone bestandsreplicatie in realtime** in één engine.
+
+Zo wordt het risico van een 'kaartenhuis' vermeden, waarbij updates kwetsbare koppelingen tussen losse tools verbreken. Ook is er één aanspreekpunt voor de volledige HA-stack en vermindert één interface voor **HA van {{ .Get "app" }}-applicaties** menselijke fouten.
+
+### Hoe zorgt SafeKit voor uniforme implementatie en het virtuele IP in de cloud?
+
+SafeKit is cloudonafhankelijk: de implementatie en architectuur zijn gelijk op on-premises servers en bij alle grote cloudproviders. Het enige architectuurverschil is hoe het **[virtuele IP](/nl/best-practises/how-a-virtual-ip-address-works/)** aan het netwerk wordt aangeboden:
+
+  * **On-premises:** SafeKit beheert het VIP rechtstreeks door **GARP-pakketten (Gratuitous ARP)** naar lokale switches te sturen en het IP direct tussen knooppunten te verplaatsen.
+  * **In de cloud:** Cloudnetwerken ondersteunen geen GARP; daarom wordt het virtuele IP gehost door een **Cloud Load Balancer**. **SafeKit levert de health probe** om het primaire knooppunt vast te stellen. De Load Balancer detecteert het actieve knooppunt in realtime en leidt verkeer er automatisch naartoe, met naadloze failover tussen Availability Zones.
+
+### Welke onderscheidende voordelen biedt SafeKit voor hoge beschikbaarheid van {{ .Get "app" }} ten opzichte van concurrenten?
+
+SafeKit onderscheidt zich van traditionele {{ .Get "app" }}-clusters door de **architectuur zonder gedeelde opslag** en eenvoudige implementatie. Veel enterpriseoplossingen vereisen ingewikkeld beheer van gedeelde clouddisks; SafeKit biedt:
+
+  * **Synchrone replicatie zonder gegevensverlies:** SafeKit repliceert 100% synchroon en waarborgt de integriteit van transactionele gegevens. Bij storingen is er **geen gegevensverlies (RPO=0)**. SafeKit repliceert niet alleen de databases van {{ .Get "app" }}, maar ook **alle andere gegevensmappen** (logboeken, configuratiebestanden enz.) voor een volledige spiegeling van de omgeving.
+  * **Eenvoudiger clusteren met 2 knooppunten:** Standaardclusters hebben vaak een 'witness' (derde knooppunt, disk of bestandsdeling) nodig om quorum te behouden. SafeKit levert volledige hoge beschikbaarheid met slechts twee redundante servers en verlaagt kosten en complexiteit.  
+[Meer informatie over heartbeat en quorum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Uniform beheer:** Beheerders beheren failover, gegevensreplicatie en bewaking van {{ .Get "app" }} vanuit één SafeKit-console. Specialistische kennis van clusterbeheer is niet nodig.
+  * **Aangepaste controleprogramma's:** SafeKit gaat verder dan basisbewaking van services en **biedt controleprogramma's** voor de gezondheid van het {{ .Get "app" }}-proces. Het uitbreidbare systeem ondersteunt controles op maat van uw omgeving.
+
+### Hoe verlaagt SafeKit de totale eigendomskosten (TCO) voor {{ .Get "app" }} ten opzichte van standaardclustering?
+
+SafeKit is ontworpen om betrouwbaar te werken met **een absoluut minimum aan infrastructuur**. De belangrijkste besparingen ten opzichte van traditionele failoverclusters:
+
+  * **Geen kosten voor gedeelde clouddisks:** SafeKit gebruikt lokale disks en een architectuur zonder gedeelde opslag.
+  * **Geen Enterprise Edition nodig:** Voor native databasereplicatie kan een dure Enterprise-licentie nodig zijn. SafeKit **heeft geen Enterprise Edition nodig** en werkt met de Standard- en zelfs de **gratis editie**, tegen een fractie van de kosten.
+  * **Echte efficiëntie met 2 knooppunten:** SafeKit biedt volledige hoge beschikbaarheid met slechts **twee redundante servers**, zonder de witness die standaardclusters vaak nodig hebben.
+  * **Geen verplichte abonnementen:** SafeKit biedt een **eeuwigdurende licentie**. U bent eigenaar van de software en vermijdt abonnementsafhankelijkheid en onvoorspelbare jaarlijkse prijsstijgingen.
+  * **Lage operationele uitgaven (OPEX):** De direct inzetbare oplossing vereist geen specialistische training of dure externe consultants voor onderhoud, anders dan complexe open-source clusteringtools.
+  * **CPU-onafhankelijke prijzen:** De licentie is niet afhankelijk van het aantal CPU's of cores. Met twee licenties voor twee knooppunten beschermt u uw {{ .Get "app" }}-applicatie tegen storingen.
+
+### Kan een {{ .Get "app" }} Mirror-cluster worden opgezet zonder clusteringkennis?
+
+Ja. Dit artikel legt uit hoe u snel een {{ .Get "app" }} Mirror-cluster [implementeert]({{ .Get "guide" }}), zonder ingewikkelde HA-clusteringkennis. De **automatische failoverscripts** van SafeKit verzorgen replicatie en het opnieuw starten van de **{{ .Get "app" }}-applicatie**. Zo krijgt u een robuuste redundantieoplossing die veel eenvoudiger te implementeren en onderhouden is dan traditionele clusters.
+
+### Welke toepassingen en omgevingen kan SafeKit naast {{ .Get "app" }} beschermen?
+
+SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **op Windows en Linux**, die veel verder gaat dan {{ .Get "app" }} Mirror-clusters. Het biedt **synchrone replicatie in realtime** en automatische failover voor uiteenlopende kritieke workloads:
+
+  * **Virtuele en fysieke omgevingen:** volledige Hyper-V- of KVM-VM's.
+  * **Containerorkestratie:** Docker-, Podman- en K3s-(Kubernetes-)omgevingen.
+  * **Gegevens en services:** afzonderlijke bestandsmappen, services en verschillende databases.
+  * **Cloudinfrastructuur:** hoge beschikbaarheid voor cloudtoepassingen.
+
+SafeKit biedt ook `Farm`-clusters met native **Network Load Balancing en failover** voor stateless toepassingen zoals **webservers**.
+
+💡 [Bekijk hier de volledige lijst met ondersteunde HA-oplossingen.](/nl/solutions/)
+
+
+{{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-nl app=%q  %%}}" (.Get "app")) }}
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-nl  %}}" }}
+
+
+## Vergelijking: SafeKit voor {{ .Get "app" }} versus native cloud-HA/DR-oplossingen {#safekit-mirror-ha-comparison}
+
+Functie | SafeKit voor {{ .Get "app" }} | Native gedeelde clouddisk | Native cloud-VM-replicatie voor DR  
+---|---|---|---  
+Architectuur | Zonder gedeelde opslag: lokale disks voor maximale snelheid en minimale kosten. | Gedeelde opslag: afhankelijk van cloudbeheerde disks. | Blokniveau: repliceert volledige VM-disks naar een passieve regio.  
+Gegevensintegriteit (RPO) | Nul (RPO=0): synchrone replicatie op bestandsniveau. | Nul: synchroon schrijven naar een gedeelde disk. | Niet nul: asynchrone replicatie veroorzaakt gegevensvertraging.  
+Failover-/failbacklogica | Volledig automatisch: geïntegreerde bewaking en herstart. | Vereist een failovertool van derden die gedeelde clouddisks ondersteunt. | Handmatig: activering van een noodherstelplan vereist.  
+Applicatie-inrichting | Geen herconfiguratie: beschermt applicaties op hun huidige locatie. | Herconfiguratie: applicatiegegevens moeten naar een specifieke gedeelde disk worden verplaatst. | Geen: legt het besturingssysteem en de applicatie ongewijzigd vast.  
+Replicatiebereik | Volledig: gegevensmappen van de applicatie (DB, configuratie en logboeken). | Gedeeltelijk: alleen gegevens op het gedeelde volume. | Totaal: repliceert de volledige virtuele machine.  
+VM-locatie | Native Multi-AZ: synchrone replicatie tussen Availability Zones in één regio. | Providerafhankelijk: gedeelde opslag moet tussen Availability Zones worden gerepliceerd. | Regionaal: vooral bedoeld voor replicatie tussen ver uit elkaar liggende regio's.  
+Implementatietijd | Kort: minder dan 30 minuten (on-premises of cloud). | Lang: dagen of weken voor clusterconfiguratie. | Gemiddeld: configuratie van DR-kluizen en -beleidsregels vereist.  
+
+### Is hoge beschikbaarheid een vervanging voor native cloud-VM-replicatie voor DR? {#ha-vs-backup-ransomware}
+
+**Nee.** Hoge beschikbaarheid en back-ups vullen elkaar aan en zijn niet uitwisselbaar. **SafeKit** waarborgt **bedrijfscontinuïteit** door applicaties bij hardwarestoringen actief te houden, maar beschermt niet tegen logische fouten, onbedoelde verwijderingen of ransomware. Omdat realtime replicatie elke wijziging direct kopieert, wordt een ransomware-aanval op het primaire knooppunt onmiddellijk ook naar het secundaire knooppunt gekopieerd. Voor herstel na dergelijke bedreigingen of onbedoelde verwijdering is een aparte **back-upoplossing** met een robuust bewaarbeleid nodig, zodat u kunt terugkeren naar een toestand van vóór de beschadiging.
+
+### Conclusie
+
+Met een **architectuur zonder gedeelde opslag** elimineert SafeKit de complexiteit en kosten van door de cloud beheerde gedeelde disks. In tegenstelling tot traditionele clustering is het een **infrastructuuronafhankelijke** oplossing waarvoor geen applicatieherconfiguratie of gegevensmigratie nodig is. Met native Multi-AZ en een implementatietijd van minder dan 30 minuten blijft uw {{ .Get "app" }}-omgeving veerkrachtig, met **nul gegevensverlies (RPO=0)** en volledig automatisch herstel.
+
+## Videogids: configuratie van een SafeKit HA-Mirror-cluster {#videoguide-safekit-mirror-cluster}
+
+### SafeKit-video: clustering op applicatieniveau (8:47) {#demo-mirror-ha-cluster}
+
+Deze video laat zien hoe SafeKit een **Mirror-HA-cluster** implementeert zonder de complexiteit van clustering met gedeelde clouddisks. De demonstratie gebruikt Microsoft SQL Server, maar de oplossing werkt hetzelfde voor andere databases en toepassingen. Let op: het virtuele IP in deze video is ingesteld voor een on-premises oplossing, niet voor een Cloud Load Balancer met SafeKit-healthprobes.
+
+### Hoogtepunten van de video
+
+  1. 🎬 [2 knooppunten met SQL Server](https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s) (0:32)
+  2. 🎬 [Het cluster en de mirror.safe-module configureren](https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s) (3:58)
+  3. 🎬 [SQL-replicatie starten en testen, migratie en failover bij een crash](https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s) (4:17)

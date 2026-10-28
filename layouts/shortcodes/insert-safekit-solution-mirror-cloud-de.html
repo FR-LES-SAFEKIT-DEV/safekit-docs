@@ -1,0 +1,136 @@
+{{/* Shortcode: insert-safekit-solution-mirror-cloud-de — 4 instances in 4 files */}}
+{{/* Parameters: app, guide, img */}}
+{{/* Source: content\solutions\aws-high-availability-cluster-synchronous-replication-failover.md */}}
+
+
+
+## SafeKit Shared-Nothing-HA in {{ .Get "app" }}: Gemeinsame Datenträger ohne Datenverlust vermeiden {#cloud-ha-limitation}
+
+Obwohl große **Cloud-Anbieter** native Redundanz bieten, bleibt häufig eine erhebliche Lücke zwischen Datenreplikation und echter Hochverfügbarkeit. Cloud-Nutzer müssen derzeit zwischen zwei suboptimalen Lösungen wählen: nativer **asynchroner Replikation**, die manuelles Failover erfordert und Datenverlust riskiert, oder **Cloud-Shared-Disks**, denen die automatischen Failover-Mechanismen für eine nahtlose Geschäftskontinuität fehlen.
+
+### SafeKit: Die leichtgewichtige All-in-one-Alternative zu komplexen {{ .Get "app" }}-Clustern {#safekit-cloud-mirror}
+
+  * **All-in-one-{{ .Get "app" }}-Cluster mit zwei Knoten:** SafeKit ist eine vollständige Lösung mit nativer Multi-AZ-Fähigkeit (Availability Zone), virtueller IP, automatischem Failover und Failback sowie synchroner Dateireplikation in Echtzeit in einem integrierten Softwarepaket.
+  * **Kein Datenverlust (RPO=0):** Anders als native Cloud-VM-Replikation für DR (Disaster Recovery) nutzt SafeKit **synchrone Replikation auf Dateiebene**, um die Datenintegrität transaktionsorientierter Anwendungen sicherzustellen und Datenverlust bei einem Ausfall auszuschließen.
+  * **Shared-Nothing-Architektur:** SafeKit macht Cloud-Shared-Disks und die damit verbundenen Probleme durch „Disk-Locking“ überflüssig. **Lokale Datenträger ermöglichen maximale Geschwindigkeit und minimale Kosten.** Während herkömmliche Cluster oft warten müssen, bis der Cloud-Anbieter eine Speichersperre eines ausgefallenen Knotens freigibt, verwendet SafeKit unabhängige, synchronisierte Ordner auf den lokalen Datenträgern jedes Knotens und ermöglicht so sofortiges Failover.
+  * **Keine Neukonfiguration der Anwendungen:** SafeKit repliziert transparent auf Dateiebene. Anwendungen und Daten können am Installationsort – auch auf dem Systemdatenträger – geschützt werden, ohne sie auf dedizierte Cloud-Shared-Disks zu migrieren.
+  * **Kubernetes-Alternative:** SafeKit bietet Hochverfügbarkeit für ältere und containerisierte Anwendungen (nicht für Kubernetes konzipiert), ohne den Betriebsaufwand und die Komplexität der Kubernetes-Orchestrierung.
+  * **Einheitliche Bereitstellung (On-Premises oder Cloud):** Abgesehen von der Konfiguration der [virtuellen IP in einem Cloud Load Balancer](/de/best-practises/how-a-virtual-ip-address-works/) bleibt der SafeKit-Bereitstellungsprozess in lokalen und Cloud-Umgebungen identisch.
+
+Durch die Bündelung von **Hochverfügbarkeit** in einer leichtgewichtigen Softwareebene bietet SafeKit Redundanz auf Enterprise-Niveau und Geschäftskontinuität in der Cloud – zu einem Bruchteil der Kosten traditioneller Clustersuiten.
+
+![SafeKit-Hochverfügbarkeitsarchitektur für den {{ .Get "app" }}-Cluster mit virtueller IP, automatischem Failover, Failback und synchroner Dateireplikation in Echtzeit]({{ .Get "img" }} "w:512")
+
+**SafeKit-HA-Mirror-Cluster für {{ .Get "app" }}**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Schnellinstallationsanleitung für den Mirror-Cluster für {{ .Get "app" }} &gt;</a>
+## Inhaltsverzeichnis {#toc}
+
+  * [Wie implementiert die SafeKit-Software einfach einen Shared-Nothing-Hochverfügbarkeitscluster in {{ .Get "app" }}?](#safekit-mirror-ha-cluster)
+  * [Wie funktioniert das SafeKit-Mirror-Cluster mit {{ .Get "app" }}?](#safekit-mirror-cluster)
+  * [SafeKit High Availability Limitations](#safekit-ha-limitations)
+  * [Vergleich: SafeKit für {{ .Get "app" }} vs. native Cloud-HA/DR-Lösungen](#safekit-mirror-ha-comparison)
+  * [Videoanleitung: Konfiguration eines SafeKit-HA-Mirror-Clusters](#videoguide-safekit-mirror-cluster)
+  * [🔍 SafeKit Hochverfügbarkeit Navigation Hub](#hub)
+
+
+## Wie implementiert die SafeKit-Software einfach einen Shared-Nothing-Hochverfügbarkeitscluster in {{ .Get "app" }}? {#safekit-mirror-ha-cluster}
+
+### Was ist die SafeKit-Mirror-HA-Lösung für {{ .Get "app" }}?
+
+SafeKit ermöglicht Hochverfügbarkeit für {{ .Get "app" }} zwischen zwei virtuellen Maschinen in zwei Availability Zones (AZ).
+
+Dieser Artikel erläutert die schnelle Einrichtung eines {{ .Get "app" }}-Clusters ohne Cloud-Shared-Disks und ohne besondere Fachkenntnisse.
+
+Dazu werden die Ordner mit den Anwendungsdaten von {{ .Get "app" }}, die Dienste, eine virtuelle IP und Prüfer festgelegt.
+
+SafeKit sorgt anschließend mit **Echtzeitreplikation** und **automatischem Failover** für kontinuierliche Verfügbarkeit der Dienste.
+
+### Warum eine einheitliche All-in-one-HA-Lösung statt fragmentierter Tools wählen?
+
+Im Gegensatz zu nachträglich kombinierten Lösungen mit separaten Produkten für Replikation und Clustering integriert **SafeKit** **virtuelle IP, automatisches Failover, automatisches Failback und synchrone Echtzeit-Dateireplikation** in einer einzigen Engine.
+
+Dadurch wird das „Kartenhaus“-Risiko vermieden, bei dem Updates fragile Verbindungen zwischen verschiedenen Tools unterbrechen. Außerdem gibt es einen zentralen Ansprechpartner für den gesamten HA-Stack und weniger menschliche Fehler durch eine einzige Oberfläche für die **Hochverfügbarkeit von {{ .Get "app" }}-Anwendungen**.
+
+### Wie gewährleistet SafeKit eine einheitliche Bereitstellung und die Cloud-Virtual-IP?
+
+SafeKit ist cloudunabhängig: Bereitstellungsprozess und Architektur bleiben auf lokalen Servern und bei allen großen Cloud-Anbietern gleich. Der einzige Architekturunterschied betrifft die Bereitstellung der **[virtuellen IP](/de/best-practises/how-a-virtual-ip-address-works/)** im Netzwerk:
+
+  * **On-Premises:** SafeKit verwaltet den VIP direkt, indem es **GARP-Pakete (Gratuitous ARP)** an lokale Switches sendet und die IP sofort zwischen den Knoten verschiebt.
+  * **In der Cloud:** Cloud-Netzwerke unterstützen kein GARP; daher wird die virtuelle IP von einem **Cloud Load Balancer** bereitgestellt. **SafeKit stellt den Health Probe bereit**, der den primären Knoten ermittelt. So erkennt der Load Balancer den aktiven Knoten in Echtzeit und leitet den Datenverkehr automatisch dorthin, mit nahtlosem Failover zwischen Availability Zones.
+
+### Welche besonderen Vorteile bietet SafeKit für die Hochverfügbarkeit von {{ .Get "app" }} gegenüber Mitbewerbern?
+
+SafeKit unterscheidet sich von herkömmlichen {{ .Get "app" }}-Clustern durch seine **Shared-Nothing-Architektur** und einfache Bereitstellung. Während die meisten Enterprise-Lösungen eine komplexe Verwaltung von Cloud-Shared-Disks erfordern, bietet SafeKit:
+
+  * **Synchrone Replikation ohne Datenverlust:** SafeKit repliziert zu 100 % synchron und gewährleistet die Datenintegrität transaktionsorientierter Anwendungen. Bei einem Ausfall gibt es **keinen Datenverlust (RPO=0)**. Neben den Datenbanken von {{ .Get "app" }} können auch **beliebige andere Datenordner** (Protokolle, Konfigurationsdateien usw.) repliziert werden, sodass die gesamte Umgebung gespiegelt ist.
+  * **Vereinfachtes Clustering mit zwei Knoten:** Während Standardcluster oft einen „Witness“ (dritten Knoten, Datenträger oder eine Dateifreigabe) für das Quorum benötigen, bietet SafeKit volle Hochverfügbarkeit mit nur zwei redundanten Servern und reduziert Infrastrukturkosten sowie Komplexität.  
+[Mehr über Heartbeat und Quorum erfahren](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Einheitliche Verwaltung:** Administratoren verwalten Failover, Datenreplikation und Überwachung der {{ .Get "app" }}-Anwendung über eine einzige SafeKit-Konsole. Das macht Hochverfügbarkeit auch ohne spezielle Cluster-Administrator-Kenntnisse zugänglich.
+  * **Benutzerdefinierte Prüfer:** SafeKit überwacht nicht nur einfache Dienste, sondern bietet **Prüfer** für den Zustand des {{ .Get "app" }}-Anwendungsprozesses. Das erweiterbare System ermöglicht maßgeschneiderte Prüfer für Ihre Umgebung.
+
+### Wie senkt SafeKit die Gesamtbetriebskosten (TCO) für {{ .Get "app" }} gegenüber herkömmlichem Clustering?
+
+SafeKit ist so ausgelegt, dass es **mit minimalem Infrastrukturaufwand** zuverlässig arbeitet. Die wichtigsten Einsparungen gegenüber herkömmlichen Failover-Clustern:
+
+  * **Keine Kosten für Cloud-Shared-Disks:** SafeKit verwendet eine Shared-Nothing-Architektur mit lokalen Datenträgern.
+  * **Keine Enterprise Edition nötig:** Native Datenbank-Replikationsmechanismen können teure Enterprise-Lizenzen erfordern. SafeKit **benötigt keine Enterprise Edition** und funktioniert mit der Standard- und sogar der **kostenlosen Edition** – für Hochverfügbarkeit zu einem Bruchteil der Kosten.
+  * **Effizienz mit zwei Knoten:** Anders als Cluster, die für das Quorum häufig einen „Witness“ (dritten Knoten, Datenträger oder eine Dateifreigabe) benötigen, bietet SafeKit volle Hochverfügbarkeit mit nur **zwei redundanten Servern**.
+  * **Keine erzwungenen Abonnements:** SafeKit bietet eine **unbefristete Lizenz**. Sie besitzen Ihre Software und vermeiden Abonnementzwang und unvorhersehbare jährliche Preiserhöhungen.
+  * **Geringe Betriebskosten (OPEX):** Die sofort einsatzbereite Lösung erfordert weder spezielle Schulungen noch teure externe Wartungsberatung – anders als komplexe Open-Source-Clustering-Tools.
+  * **CPU-unabhängige Preise:** Die Lizenzkosten hängen nicht von CPUs oder Kernen ab. Mit zwei Lizenzen für zwei Knoten können Sie Ihre {{ .Get "app" }}-Anwendung vor Ausfällen schützen.
+
+### Lässt sich ein {{ .Get "app" }}-Mirror-Cluster ohne Clustering-Kenntnisse einrichten?
+
+Ja. Dieser Artikel zeigt, wie Sie einen {{ .Get "app" }}-Mirror-Cluster [schnell einrichten]({{ .Get "guide" }}), ohne komplexe HA-Clustering-Kenntnisse. Mit den **automatisierten Failover-Skripten** von SafeKit für Replikation und Neustart der **{{ .Get "app" }}-Anwendung** erhalten Sie eine robuste Redundanzlösung, die wesentlich einfacher bereitzustellen und zu warten ist als herkömmliche Cluster.
+
+### Welche Anwendungen und Umgebungen kann SafeKit neben {{ .Get "app" }} schützen?
+
+SafeKit ist eine vielseitige Hochverfügbarkeitslösung **für Windows und Linux**, die weit über {{ .Get "app" }}-Mirror-Cluster hinausgeht. Sie ermöglicht **synchrone Echtzeitreplikation** und automatisches Failover für viele kritische Workloads:
+
+  * **Virtuelle und physische Umgebungen:** vollständige Hyper-V- oder KVM-VMs.
+  * **Container-Orchestrierung:** Docker-, Podman- und K3s-(Kubernetes-)Umgebungen.
+  * **Daten und Dienste:** einzelne Dateiordner, Dienste und verschiedene Datenbanken.
+  * **Cloud-Infrastruktur:** Hochverfügbarkeit für Cloud-Anwendungen.
+
+SafeKit bietet auch `Farm`-Cluster mit nativem **Network Load Balancing und Failover** für zustandslose Anwendungen wie **Webserver**.
+
+💡 [Hier finden Sie die vollständige Liste der unterstützten HA-Lösungen.](/de/solutions/)
+
+
+{{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-de app=%q  %%}}" (.Get "app")) }}
+
+{{ $.Page.RenderString "{{%  insert-safekit-usage-de  %}}" }}
+
+
+## Vergleich: SafeKit für {{ .Get "app" }} vs. native Cloud-HA/DR-Lösungen {#safekit-mirror-ha-comparison}
+
+Funktion | SafeKit für {{ .Get "app" }} | Native Cloud-Shared-Disk | Native Cloud-VM-Replikation für DR (Disaster Recovery)  
+---|---|---|---  
+Architektur | Shared-Nothing: lokale Datenträger für maximale Geschwindigkeit und minimale Kosten. | Shared Storage: abhängig von cloudverwalteten Datenträgern. | Blockebene: repliziert vollständige VM-Datenträger in eine passive Region.  
+Datenintegrität (RPO) | Null (RPO=0): synchrone Replikation auf Dateiebene. | Null: synchrones Schreiben auf eine Shared Disk. | Nicht null: asynchrone Replikation mit Datenverzögerung.  
+Failover-/Failback-Logik | Vollautomatisch: integrierte Überwachung und Neustart. | Erfordert ein Drittanbieter-Failover-Tool für Cloud-Shared-Disks. | Manuell: Aktivierung eines Notfallwiederherstellungsplans erforderlich.  
+Anwendungseinrichtung | Keine Neukonfiguration: schützt Anwendungen am aktuellen Installationsort. | Neukonfiguration: Anwendungsdaten müssen auf eine bestimmte Shared Disk migriert werden. | Keine: erfasst Betriebssystem und Anwendung unverändert.  
+Replikationsumfang | Vollständig: Anwendungsdatenordner (DB, Konfiguration und Protokolle). | Teilweise: nur Daten auf dem Shared Volume. | Gesamt: repliziert die gesamte virtuelle Maschine.  
+VM-Standort | Natives Multi-AZ: synchrone Replikation zwischen Availability Zones einer Region. | Anbieterabhängig: erfordert zwischen Availability Zones replizierten Shared Storage. | Regional: hauptsächlich für Replikation über große geografische Entfernungen ausgelegt.  
+Bereitstellungszeit | Niedrig: unter 30 Minuten (On-Premises oder Cloud). | Hoch: Tage oder Wochen für die Clusterkonfiguration. | Mittel: DR-Tresore und -Richtlinien müssen eingerichtet werden.  
+
+### Ist Hochverfügbarkeit ein Ersatz für native Cloud-VM-Replikation zur Notfallwiederherstellung? {#ha-vs-backup-ransomware}
+
+**Nein.** Hochverfügbarkeit und Backups ergänzen sich, sie sind nicht austauschbar. **SafeKit** sichert die **Geschäftskontinuität**, indem Anwendungen bei Hardwareausfällen weiterlaufen; vor logischen Fehlern, versehentlichem Löschen oder Ransomware schützt es nicht. Da die Echtzeitreplikation jede Änderung sofort spiegelt, wird ein Ransomware-Angriff auf dem primären Knoten unmittelbar auf den sekundären übertragen. Für die Wiederherstellung nach solchen Bedrohungen oder versehentlichem Löschen benötigen Sie eine eigene **Backup-Lösung** mit einer robusten Aufbewahrungsrichtlinie. So können Sie die Umgebung auf einen Zustand vor der Beschädigung zurücksetzen.
+
+### Fazit
+
+Mit einer **Shared-Nothing-Architektur** beseitigt SafeKit die Komplexität und Kosten cloudverwalteter Shared-Disks. Anders als herkömmliches Clustering ist es eine **infrastrukturunabhängige** Lösung, die weder Anwendungskonfiguration noch Datenmigration erfordert. Mit nativem **Multi-AZ** und einer Bereitstellungszeit von unter 30 Minuten bleibt Ihre {{ .Get "app" }}-Umgebung mit **keinem Datenverlust (RPO=0)** und vollständig automatisierter Wiederherstellung zuverlässig.
+
+## Videoanleitung: Konfiguration eines SafeKit-HA-Mirror-Clusters {#videoguide-safekit-mirror-cluster}
+
+### SafeKit-Video: Clustering auf Anwendungsebene (8:47) {#demo-mirror-ha-cluster}
+
+Dieses Video zeigt, wie SafeKit einen **Mirror-HA-Cluster** ohne die Komplexität des Clusterings mit Cloud-Shared-Disks umsetzt. Die Demonstration verwendet Microsoft SQL Server; die Lösung funktioniert genauso mit anderen Datenbanken und Anwendungen. Beachten Sie: Die virtuelle IP ist im Video für eine lokale Lösung konfiguriert, nicht für einen Cloud Load Balancer mit SafeKit-Health-Probes.
+
+### Video-Highlights
+
+  1. 🎬 [Zwei Knoten mit SQL Server](https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s) (0:32)
+  2. 🎬 [Cluster und mirror.safe-Modul konfigurieren](https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s) (3:58)
+  3. 🎬 [SQL-Replikation starten und testen, Migration und Failover bei einem Absturz](https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s) (4:17)

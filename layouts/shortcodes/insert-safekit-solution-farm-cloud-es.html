@@ -1,0 +1,174 @@
+{{/* Shortcode: insert-safekit-solution-farm-cloud-es — 4 instances in 4 files */}}
+{{/* Parameters: app, guide, img */}}
+{{/* Source: content\solutions\aws-load-balancing-cluster-failover.md */}}
+
+
+
+## Mejore el balanceador de carga en la nube con supervisión a nivel de aplicación y autorrecuperación
+
+Un clúster `Farm` de SafeKit para {{ .Get "app" }} es una solución de alta disponibilidad definida por software y optimizada para entornos en la nube. Al proporcionar **supervisión profunda y autorrecuperación** directamente en los nodos de aplicación, detecta y resuelve localmente los fallos de software antes de que afecten a la disponibilidad. Se integra fácilmente con los **balanceadores de carga de {{ .Get "app" }}** y utiliza comprobaciones inteligentes para dirigir el tráfico solo a nodos plenamente operativos.
+
+### ¿Qué ventajas ofrece un clúster `Farm` de SafeKit para las aplicaciones {{ .Get "app" }}?
+
+  * **Integración con el balanceador de carga de {{ .Get "app" }}:** Proporciona automáticamente comprobaciones precisas para los balanceadores de carga de {{ .Get "app" }} y dirige el tráfico según el estado real de la aplicación {{ .Get "app" }}, no solo según pings al servidor.
+  * **Supervisión profunda y autorrecuperación:** Detecta estados «zombi» en los que una instancia en la nube aparece como «Running», aunque la aplicación se haya bloqueado. SafeKit reinicia el servicio localmente de forma automática antes de notificar el failover al balanceador de carga en la nube.
+  * **Capacidad híbrida `Farm` y Mirror:** Permite combinar un clúster `Farm` (para escalar los front-ends mediante un balanceador en la nube) con un clúster Mirror (para replicar síncronamente los datos de los back-ends), resolviendo así el reto del almacenamiento persistente en {{ .Get "app" }}.
+  * **Alternativa a Kubernetes:** SafeKit ofrece alta disponibilidad para aplicaciones heredadas y contenerizadas (no está diseñado para Kubernetes) sin la carga operativa ni la complejidad de su orquestación.
+  * **Implementación uniforme (local o en la nube):** Salvo por la configuración de la [IP virtual en un balanceador de carga en la nube](/es/best-practises/how-a-virtual-ip-address-works/), el proceso de implementación de SafeKit es idéntico en entornos locales y en la nube.
+
+
+![Arquitectura de alta disponibilidad de SafeKit para el clúster {{ .Get "app" }}, con IP virtual, failover y failback automáticos y equilibrio de carga de red]({{ .Get "img" }} "w:512")
+
+**Clúster NLB `Farm` de SafeKit para {{ .Get "app" }}**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Guía de instalación rápida del clúster <code>farm</code> para {{ .Get "app" }} &gt;</a>
+## Índice {#toc}
+
+  * [¿Cómo implementa fácilmente el software SafeKit un clúster NLB para {{ .Get "app" }}?](#safekit-farm-ha-cluster)
+  * [¿Cómo funciona el clúster `farm` de SafeKit con {{ .Get "app" }}?](#safekit-farm-cluster)
+  * [Comparación: clúster `Farm` de SafeKit local y clúster `Farm` de SafeKit en la nube](#safekit-farm-ha-comparison)
+  * [Guía en vídeo: configuración de un clúster NLB `Farm` de SafeKit](#videoguide-safekit-farm-cluster)
+  * [🔍 Centro de navegación de alta disponibilidad de SafeKit](#hub)
+
+
+## ¿Cómo implementa fácilmente el software SafeKit un clúster de equilibrio de carga de red (NLB) para {{ .Get "app" }}? {#safekit-farm-ha-cluster}
+
+### ¿Cuál es la solución NLB `Farm` de SafeKit para {{ .Get "app" }}?
+
+SafeKit proporciona equilibrio de carga de red y alta disponibilidad para {{ .Get "app" }} en dos o más nodos.
+
+Este artículo explica cómo implementar rápidamente un clúster de {{ .Get "app" }} sin conocimientos especializados de alta disponibilidad (HA).
+
+La solución integra las **comprobaciones de estado de la aplicación** de SafeKit con una IP virtual definida en el balanceador de carga de {{ .Get "app" }}. Al configurar nombres de servicios y comprobadores de aplicaciones específicos, SafeKit garantiza que el balanceador solo dirija el tráfico a aplicaciones operativas y en buen estado.
+
+SafeKit habilita el **equilibrio de carga de red y el failover automático**, ofreciendo escalabilidad fluida y disponibilidad continua para las aplicaciones críticas.
+
+### ¿En qué se diferencia la supervisión de aplicaciones de SafeKit de las comprobaciones NLB estándar?
+
+A diferencia del hardware NLB estándar, que se basa en simples **pings** y comprobaciones de puertos, SafeKit incorpora **comprobadores integrados a nivel de aplicación**. Un balanceador tradicional solo confirma que el servidor está «activo»; SafeKit supervisa el estado real de aplicaciones {{ .Get "app" }} específicas.
+
+Esta supervisión profunda detecta estados «zombi» en los que el servidor funciona, pero el software se ha bloqueado, y activa **reinicios automáticos del servicio** o el desvío del tráfico, funciones que las soluciones NLB estándar no pueden realizar.
+
+### ¿Cómo gestiona SafeKit la implementación uniforme y la IP virtual en la nube?
+
+SafeKit es independiente de la nube y mantiene un proceso de implementación y una arquitectura uniformes en servidores locales y en los principales proveedores de nube. La diferencia arquitectónica principal está en cómo se presenta la **[IP virtual (VIP)](/es/best-practises/how-a-virtual-ip-address-works/)** a la red:
+
+  * **Local:** SafeKit gestiona directamente el equilibrio de carga de VIP en los servidores de aplicaciones mediante **filtrado a nivel del kernel**. El failover se realiza enviando paquetes **GARP (Gratuitous ARP)** a los switches locales, que reasignan al instante la IP a los nodos activos.
+  * **En la nube:** Como las redes en la nube no admiten GARP, la IP virtual se aloja en un **balanceador de carga en la nube**. En esta configuración, **SafeKit proporciona las comprobaciones inteligentes** necesarias para determinar el estado de los nodos. Así, el balanceador detecta los nodos activos en tiempo real y dirige el tráfico automáticamente, con failover fluido entre zonas de disponibilidad.
+
+
+### ¿Por qué elegir una solución HA integral en lugar de herramientas fragmentadas?
+
+A diferencia de las soluciones añadidas que combinan productos independientes para la agrupación en clústeres, **SafeKit** integra **IP virtual, equilibrio de carga de red, failover automático, failback automático y replicación síncrona de archivos en tiempo real** en un único motor.
+
+Así se evita el riesgo de un «castillo de naipes» en el que las actualizaciones rompen conexiones frágiles entre herramientas distintas. También ofrece un único responsable para toda la pila HA y reduce los errores humanos al proporcionar una interfaz única para la **alta disponibilidad de las aplicaciones {{ .Get "app" }}**.
+
+### ¿Se puede configurar un clúster `farm` de {{ .Get "app" }} sin conocimientos de clustering?
+
+Sí. Este artículo explica cómo [implementar rápidamente un clúster `farm` de {{ .Get "app" }}]({{ .Get "guide" }}) sin conocimientos especializados y complejos de clustering. Las comprobaciones de SafeKit gestionan el equilibrio de carga de IP virtual, la supervisión y el reinicio de la aplicación. El resultado es una solución sólida y escalable, mucho más sencilla de implementar y mantener que las soluciones NLB tradicionales.
+
+### Además de {{ .Get "app" }}, ¿qué aplicaciones y entornos puede proteger SafeKit?
+
+SafeKit es una solución versátil de alta disponibilidad **para Windows y Linux** que va mucho más allá de los clústeres `farm` de {{ .Get "app" }}. Permite clústeres Mirror con **replicación síncrona en tiempo real** y failover automático para numerosas cargas de trabajo críticas, entre ellas:
+
+  * **Entornos virtuales y físicos:** máquinas virtuales Hyper-V o KVM completas.
+  * **Orquestación de contenedores:** entornos Docker, Podman y K3s (Kubernetes).
+  * **Datos y servicios:** directorios de archivos, servicios y varias bases de datos.
+  * **Infraestructura en la nube:** alta disponibilidad para aplicaciones en la nube.
+
+
+💡 [Consulte aquí la lista completa de soluciones de alta disponibilidad compatibles.](/es/solutions/)
+
+## ¿Cómo funciona el clúster `farm` de SafeKit con {{ .Get "app" }}? {#safekit-farm-cluster}
+
+### ¿Cómo funciona el equilibrio de carga de red (NLB) para {{ .Get "app" }}?
+
+  * **Implementación Multi-AZ:** Los nodos se distribuyen en varias zonas de disponibilidad para maximizar la resistencia ante interrupciones del centro de datos.
+  * **Redundancia activa-activa:** La aplicación crítica {{ .Get "app" }} se ejecuta simultáneamente en todos los nodos del `farm`.
+  * **Enrutamiento inteligente del tráfico:** Los usuarios se conectan mediante una [dirección IP virtual](/es/best-practises/how-a-virtual-ip-address-works/) gestionada por el balanceador de carga de {{ .Get "app" }}.
+  * **Supervisión del estado en tiempo real:** El balanceador usa la URL de comprobación de SafeKit. SafeKit devuelve **HTTP 200 OK** cuando un nodo está sano y **HTTP 404** (o agota el tiempo de espera) cuando falla; así, el balanceador dirige automáticamente el tráfico solo a los nodos operativos.
+
+
+### ¿Cómo funciona la alta disponibilidad (HA) para {{ .Get "app" }}?
+
+  * **Comprobación avanzada de aplicaciones:** SafeKit supervisa continuamente {{ .Get "app" }} mediante comprobadores de procesos integrados y scripts personalizables.
+  * **Autorrecuperación:** Si se produce un fallo de software, SafeKit intenta reiniciar la aplicación localmente mediante scripts de reinicio preconfigurados.
+  * **Failover fluido:** Si falla el reinicio local, SafeKit deja de responder a las comprobaciones de estado y el balanceador activa inmediatamente el failover a los nodos restantes en buen estado.
+  * **Mantenimiento simplificado:** Cada nodo incluye un conector de consola web SafeKit, que permite excluir manualmente nodos del clúster con un solo clic para tareas de mantenimiento de hardware o software.
+
+
+![Diagrama de un clúster `farm` de SafeKit para {{ .Get "app" }} con redundancia Multi-AZ: un balanceador usa comprobaciones HTTP para dirigir el tráfico entre nodos activos y gestionar el failover automático.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
+
+**Arquitectura NLB y HA de SafeKit para {{ .Get "app" }}**
+
+### ¿Cómo configurar la regla del balanceador: la aplicación {{ .Get "app" }} tiene estado o no tiene estado? {#stateful-stateless}
+
+La configuración del balanceador depende de si la aplicación tiene estado o no:
+
+#### Configuración con estado (afinidad de sesión)
+
+Para una aplicación {{ .Get "app" }} **con estado**, se necesita afinidad de sesión (persistencia). Así, un cliente permanece conectado al mismo nodo durante varias sesiones TCP y conserva su contexto de aplicación. En este caso, la regla del balanceador se basa en la **dirección IP del cliente**. Cada cliente queda asociado a un nodo, mientras el tráfico de clientes distintos se distribuye entre los nodos del `farm`.
+
+#### Configuración sin estado (sin afinidad)
+
+En cambio, una aplicación {{ .Get "app" }} **sin estado** no necesita afinidad de sesión. Como no se guarda contexto local en el nodo entre sesiones, un cliente puede distribuirse entre nodos distintos en cada nueva sesión TCP. En este caso, la regla se basa en la **identidad de la sesión TCP**. Es la distribución más eficiente del tráfico en el `farm`, pero solo sirve para servicios sin dependencia de sesión.
+
+### ¿Cómo configurar un clúster `farm` de SafeKit en {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
+
+
+![Consola web de SafeKit: configuración del clúster `Farm` para el equilibrio de carga de red y la gestión de IP virtual.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+
+
+El **clúster `farm` de SafeKit** está diseñado para ofrecer alta disponibilidad y escalabilidad de servicios. La configuración distribuye el tráfico entrante simultáneamente entre ambos nodos:
+
+  * **Servicios con equilibrio de carga (pestaña Macros):** Defina los servicios de aplicación (por ejemplo, Apache, IIS y Nginx) que deben permanecer activos en todos los nodos.
+  * **Red(es) de heartbeat:** Ruta(s) de comunicación que detectan si un nodo ha abandonado el `farm`.
+  * **IP virtual (`Farm` VIP):** En una implementación local, configure la VIP en la consola web de SafeKit. En la nube, configure la IP virtual en el balanceador de carga en la nube mediante la comprobación de SafeKit.
+  * **Reglas de equilibrio de carga:** En local, configure en la consola de SafeKit la distribución según la IP de origen o el puerto. En la nube, configure la regla en el balanceador de carga.
+  * **Comprobadores:** Supervisan el estado de la aplicación y activan el reinicio automático si detectan un fallo de proceso.
+
+
+### ¿Cómo supervisar un clúster `farm` de SafeKit en {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
+
+
+![Consola SafeKit: supervisión de un clúster `Farm` de 2 nodos; ambos están en estado UP y el equilibrio de carga está activo.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+
+
+La supervisión de un clúster `farm` muestra la naturaleza **activa-activa** de la infraestructura, en la que todos los nodos contribuyen al rendimiento de la aplicación (aquí se muestran 2 nodos):
+
+  * **Estado UP (50 % en 2 nodos):** En un `farm` saludable, ambos nodos están en estado «UP» (50 %) y reciben y procesan activamente solicitudes de clientes a través de la IP virtual compartida.
+  * **Reequilibrio automático:** Si falla un nodo, la consola muestra que el restante asume el 100 % del tráfico. El retraso del failover depende del intervalo de comprobación del balanceador de carga en la nube.
+  * **Incorporación de nodos:** Al reiniciar un nodo reparado, pasa de «STOP» a «UP» y vuelve a recibir automáticamente su parte del tráfico, sin intervención del administrador.
+  * **Sin sincronización de datos:** En un clúster `farm` no existe un estado naranja de resincronización. Se espera que los nodos no tengan estado o compartan una base de datos de back-end, que puede protegerse aparte en un clúster Mirror.
+
+
+Además de los simples iconos de estado, la interfaz permite gestionar nodos con un clic: puede detener o iniciar un nodo para un mantenimiento planificado mientras la IP virtual compartida redistribuye automáticamente el tráfico sin interrumpir a los usuarios.
+
+## Comparación: clúster `Farm` de SafeKit local y clúster `Farm` de SafeKit en la nube {#safekit-farm-ha-comparison}
+
+**Comparación técnica del clúster `Farm` de SafeKit local y en la nube**
+
+Característica | SafeKit local (físico/VM) | SafeKit en la nube
+---|---|---
+Gestión de IP virtual (VIP) | SafeKit gestiona la VIP directamente mediante Gratuitous ARP (GARP). | La IP virtual se aloja en un balanceador de carga en la nube (NLB).
+Distribución del tráfico | El algoritmo de filtrado del kernel de SafeKit la gestiona entre los nodos locales. | El balanceador en la nube la gestiona según el estado de SafeKit.
+Supervisión del estado | Los heartbeats internos supervisan el estado de los nodos. | El balanceador consulta una URL de comprobación de SafeKit (HTTP 200/404).
+Supervisión profunda y autorrecuperación | SafeKit supervisa procesos y ejecuta scripts locales de reinicio antes del failover. | SafeKit supervisa procesos y deja de responder a la comprobación del balanceador en la nube para activar el failover.
+Mecanismo de failover | La VIP se mueve al instante entre nodos de la red local. | El balanceador deja automáticamente de dirigir tráfico al nodo que ha fallado.
+Requisitos de infraestructura | Red Layer 2 estándar (misma subred para la VIP). | Multi-AZ (zonas de disponibilidad) para máxima resistencia.
+
+**En resumen**, tanto en local como en la nube, SafeKit mantiene las aplicaciones críticas resilientes, escalables y fáciles de administrar mediante una interfaz unificada. Para los editores de software, la **naturaleza exclusivamente de software de SafeKit** es la opción ideal para añadir alta disponibilidad a su catálogo. A diferencia de soluciones dependientes del hardware o de una nube concreta, SafeKit es 100 % independiente y ofrece una experiencia HA uniforme en instalaciones locales, entornos virtualizados y nubes públicas.
+
+## Guía en vídeo: configuración de un clúster NLB `Farm` de SafeKit {#videoguide-safekit-farm-cluster}
+
+### Vídeo de SafeKit: equilibrio de carga de red y gestión de IP virtual (5:03) {#demo-farm}
+
+Este vídeo muestra una **implementación local de SafeKit**. La configuración es muy similar a una **implementación en la nube**; la diferencia principal es el ajuste de IP virtual, que se sustituye por un balanceador de carga en la nube.
+
+Aprenda a implementar una **dirección IP virtual** como punto único de entrada para un clúster de 2 nodos. SafeKit simplifica el **equilibrio de carga de red** al gestionar automáticamente la IP virtual, distribuir el tráfico de clientes entre los nodos y redirigirlo al instante durante un failover.
+
+### Momentos destacados del vídeo
+
+  1. 🎬 [Arquitectura: preparación de 2 nodos para una IP virtual compartida](https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s) (0:13)
+  2. 🎬 [Configuración: configuración del módulo farm.safe y la dirección IP virtual](https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s) (2:20)
+  3. 🎬 [Validación: prueba de failover y redirección de IP virtual tras un fallo del servidor](https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s) (2:30)
