@@ -1,53 +1,57 @@
 ---
-title: "بنى التوافر العالي وأفضل ممارسات تجميع البرامج"
+title: "أفضل الممارسات في مجال بنى التوافر العالي وتجميع البرمجيات"
 canonical: "https://safekit.eviden.com/ar/best-practises/high-availability-architectures-and-best-practices/"
-description: "استكشف بنى التوافر العالي (HA) وأفضل الممارسات لتجميع التطبيقات. ينفذ SafeKit مجموعات Mirror وFarm دون أقراص مشتركة، ويمنع فقدان البيانات ويوفر تحويلاً تلقائياً عند الفشل للتطبيقات المهمة."
+description: "استكشف بنى التوافر العالي (HA) وأفضل الممارسات لتجميع التطبيقات. تعرّف على كيفية تنفيذ برنامج SafeKit لمجموعات mirror و farm بدون أقراص مشتركة، مما يضمن عدم فقدان البيانات والتحويل التلقائي في حالة الفشل للتطبيقات الحيوية."
 category: "best-practises"
 lang: "ar"
-topics: "ما بنى التوافر العالي وأفضل الممارسات, جداول مقارنة لبنى التوافر العالي وأفضل الممارسات, مركز التنقل للتوافر العالي من SafeKit"
+topics: "ما هي بنى التوافر العالي وأفضل الممارسات؟، جداول مقارنة حول بنى التوافر العالي وأفضل الممارسات، 🔍 SafeKit مركز التنقل للتوافر العالي"
 ---
 
-# بنى التوافر العالي وأفضل ممارسات تجميع البرامج {#high-availability-architectures--software-clustering-best-practices}
+# أفضل الممارسات في مجال بنى التوافر العالي وتجميع البرمجيات {#high-availability-architectures--software-clustering-best-practices}
 
-## ما بنى التوافر العالي وأفضل الممارسات؟ {#what-are-the-high-availability-architectures-and-the-best-practices}
+## ما هي بنى التوافر العالي وأفضل الممارسات؟ {#what-are-the-high-availability-architectures-and-the-best-practices}
 
 ### نظرة عامة {#overview}
 
-تستعرض هذه المقالة بنى التوافر العالي المختلفة وأفضل الممارسات، مع مقارنة مزايا كل بنية وعيوبها.
+تستكشف هذه المقالة مختلف بنى التوافر العالي وأفضل الممارسات من خلال عرض مزايا وعيوب كل بنية.
 
-![بنى التوافر العالي وأفضل الممارسات](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-تشرح جداول المقارنة التالية بالتفصيل بنية التوافر العالي في SafeKit وأفضل ممارساتها. SafeKit منتج برمجي للتوافر العالي.
+![ بنى التوافر العالي وأفضل الممارسات ](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-### ما بنى التوافر العالي؟ {#what-are-the-high-availability-architectures}
 
-هناك نوعان من [بنى التوافر العالي](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>): بنى لتطبيقات الأنظمة الخلفية مثل قواعد البيانات، وبنى لتطبيقات الواجهات الأمامية مثل خدمات الويب.
+توضح الجداول المقارنة التالية بالتفصيل بنية التوافر العالي SafeKit وأفضل ممارساتها ( SafeKit هو منتج برمجيات للتوافر العالي).
 
-تعتمد بنى الأنظمة الخلفية على خادمين يتشاركان البيانات أو ينسخانها، مع تحويل تلقائي للتطبيق عند حدوث أعطال في الأجهزة أو البرامج.
+### ما هي بنى التوافر العالي؟ {#what-are-the-high-availability-architectures}
 
-تعتمد بنى الواجهات الأمامية على مزرعة من خادمين أو أكثر. وتوزع موازنة الحمل، سواء كانت مادية أو برمجية، جلسات TCP على الخوادم المتاحة.
+يوجد نوعان من بنى [ عالية التوافر ](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) : تلك الخاصة بتطبيقات الواجهة الخلفية مثل قواعد البيانات وتلك الخاصة بتطبيقات الواجهة الأمامية مثل خدمات الويب.
 
-كما يجب الاختيار بين التوافر العالي على مستوى التطبيق أو على مستوى الآلة الافتراضية.
+تعتمد بنى التوافر العالي للخوادم الخلفية على خادمين يتشاركان البيانات أو ينسخانها مع تجاوز تلقائي للتطبيق في حالة حدوث أعطال في الأجهزة أو البرامج.
 
-### ما أفضل الممارسات؟ {#what-are-the-best-practices}
+تعتمد بنى التوافر العالي للواجهة الأمامية على `farm` من الخوادم (خادمين أو أكثر). ويتم تحقيق موازنة الأحمال بواسطة مكونات مادية أو برمجية، حيث يتم توزيع جلسات TCP على الخوادم المتاحة في farm .
 
-تستعرض هذه المقالة أفضل ممارسات بنى التوافر العالي من خلال مقارنة:
+علاوة على ذلك، عليك الاختيار بين التوافر العالي على مستوى التطبيق أو على مستوى الجهاز الظاهري.
 
-  * [التجميع البرمجي والتجميع المادي](</ar/best-practises/clustering-software-vs-hardware-clustering/>),
-  * [بنية دون تخزين مشترك وبنية القرص المشترك](</ar/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>),
-  * [التوافر العالي للتطبيق والآلة الافتراضية](</ar/best-practises/vm-ha-vs-application-ha/>),
-  * [التوافر العالي وتحمل الأعطال](</ar/best-practises/high-availability-cluster-vs-fault-tolerant-system/>),
-  * [النسخ المتماثل المتزامن وغير المتزامن](</ar/best-practises/synchronous-replication-vs-asynchronous-replication/>),
-  * [نسخ الملفات والأقراص](</ar/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
-  * [تقنيات نسخ البيانات](</ar/best-practises/data-replication-techniques/>),
-  * [RPO وRTO مع أمثلة](</ar/best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [انقسام الدماغ والنصاب](</ar/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
-  * [عناوين IP الافتراضية](</ar/best-practises/how-a-virtual-ip-address-works/>).
+### ما هي أفضل الممارسات؟ {#what-are-the-best-practices}
 
-## جداول مقارنة لبنى التوافر العالي وأفضل الممارسات {#comparative-tables-on-high-availability-architectures-and-best-practices}
+تستكشف هذه المقالة أفضل الممارسات في بنى التوافر العالي من خلال المقارنة بين:
 
-{{% insert-safekit-software-vs-hardware-table-ar %}}
+  * [ تجميع البرامج مقابل تجميع الأجهزة ](</ar/best-practises/clustering-software-vs-hardware-clustering/>) ،
+  * [ لا تشارك أي بيانات مقابل بنية القرص المشترك ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ،
+  * تطبيق [ مقابل التوافر العالي للآلة الافتراضية ](</ar/best-practises/vm-ha-vs-application-ha/>) ،
+  * [ التوافر العالي مقابل تحمل الأعطال ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ،
+  * [ النسخ المتزامن مقابل النسخ غير المتزامن ](</ar/best-practises/synchronous-replication-vs-asynchronous-replication/>) ،
+  * [ نسخ الملفات مقابل نسخ الأقراص ](</ar/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ،
+  * تقنيات نسخ البيانات [ ](</ar/best-practises/data-replication-techniques/>)
+  * [ RPO و RTO مع أمثلة ](</ar/best-practises/what-is-rpo-and-rto-with-examples/>) ،
+  * [ انقسام الدماغ والنصاب ](</ar/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) ،
+  * عناوين IP الافتراضية [ ](</ar/best-practises/how-a-virtual-ip-address-works/>) .
 
-{{% insert-safekit-hub-ar %}}
 
-{{% insert-safekit-4-buttons-ar %}}
+## جداول مقارنة حول بنى التوافر العالي وأفضل الممارسات {#comparative-tables-on-high-availability-architectures-and-best-practices}
+
+
+{{%  insert-safekit-software-vs-hardware-table-ar  %}}
+
+{{%  insert-safekit-hub-ar  %}}
+
+{{%  insert-safekit-4-buttons-ar  %}}

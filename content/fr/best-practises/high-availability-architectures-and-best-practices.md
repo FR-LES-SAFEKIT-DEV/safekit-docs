@@ -1,53 +1,53 @@
 ---
 title: "Architectures à haute disponibilité et bonnes pratiques de clustering logiciel"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-architectures-and-best-practices/"
-description: "Explorez les architectures à haute disponibilité (HA) et les bonnes pratiques de clustering d'applications. Découvrez comment le logiciel SafeKit met en œuvre des clusters miroirs et des fermes de serveurs sans disques partagés, garantissant ainsi l'absence de perte de données et un basculement automatique pour les applications critiques."
+description: "Explorez les architectures à haute disponibilité (HA) et les bonnes pratiques pour le clustering d'applications. Découvrez comment le logiciel SafeKit implémente les clusters mirror et farm sans disques partagés, garantissant ainsi l'absence de perte de données et un basculement automatique pour les applications critiques."
 category: "best-practises"
 lang: "fr"
-topics: "Quelles sont les architectures de haute disponibilité et les meilleures pratiques ?, Tableaux comparatifs sur les architectures de haute disponibilité et les meilleures pratiques, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Quelles sont les architectures à haute disponibilité et les bonnes pratiques ? Tableaux comparatifs des architectures à haute disponibilité et des bonnes pratiques. 🔍 SafeKit Centre de navigation haute disponibilité"
 ---
 
 # Architectures à haute disponibilité et bonnes pratiques de clustering logiciel {#high-availability-architectures--software-clustering-best-practices}
 
-## Quelles sont les architectures de haute disponibilité et les meilleures pratiques ? {#what-are-the-high-availability-architectures-and-the-best-practices}
+## Quelles sont les architectures à haute disponibilité et les meilleures pratiques ? {#what-are-the-high-availability-architectures-and-the-best-practices}
 
 ### Aperçu {#overview}
 
-Cet article explore les différentes architectures de haute disponibilité et les meilleures pratiques en donnant les avantages et les inconvénients de chaque architecture.
+Cet article explore les différentes architectures de haute disponibilité et les meilleures pratiques en présentant les avantages et les inconvénients de chaque architecture.
 
 
-![Différentes architectures de haute disponibilité et meilleures pratiques](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
+![ Architectures à haute disponibilité et bonnes pratiques ](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
 
-Les tableaux comparatifs suivants détaillent l'architecture de haute disponibilité de SafeKit et ses bonnes pratiques (SafeKit est un produit logiciel de haute disponibilité).
+Les tableaux comparatifs suivants expliquent en détail l'architecture de haute disponibilité SafeKit et ses meilleures pratiques ( SafeKit est un produit logiciel de haute disponibilité).
 
-### Quelles sont les architectures de haute disponibilité ? {#what-are-the-high-availability-architectures}
+### Quelles sont les architectures à haute disponibilité ? {#what-are-the-high-availability-architectures}
 
-Il existe deux types d'[architectures de haute disponibilité](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) : celles pour les applications backend telles que les bases de données et celles pour les applications frontend telles que les services Web.
+Il existe deux types d'architectures à haute disponibilité [ ](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) : celles destinées aux applications backend telles que les bases de données et celles destinées aux applications frontend telles que les services web.
 
-Les architectures de haute disponibilité pour les backends sont basées sur 2 serveurs partageant ou répliquant des données avec un basculement automatique des applications en cas de pannes matérielles ou logicielles.
+Les architectures à haute disponibilité pour le backend sont basées sur 2 serveurs partageant ou répliquant les données avec un basculement automatique de l'application en cas de panne matérielle ou logicielle.
 
-Les architectures de haute disponibilité pour les frontends sont basées sur une ferme de serveurs (2 serveurs ou plus). L'équilibrage de charge est fait par matériel ou logiciel et distribue les sessions TCP aux serveurs disponibles dans la ferme.
+Les architectures à haute disponibilité pour le frontend sont basées sur un ensemble de serveurs `farm` (2 serveurs ou plus). L'équilibrage de charge est assuré par du matériel ou du logiciel et répartit les sessions TCP entre les serveurs disponibles de l'ensemble farm .
 
-De plus, il faut choisir entre une haute disponibilité au niveau de l'application ou au niveau de la machine virtuelle.
+De plus, vous devez choisir entre une haute disponibilité au niveau de l'application ou au niveau de la machine virtuelle.
 
-### Quelles sont les meilleures pratiques ? {#what-are-the-best-practices}
+### Quelles sont les meilleures pratiques ? {#what-are-the-best-practices}
 
-Cet article étudie les meilleures pratiques dans les architectures de haute disponibilité en comparant :
+Cet article explore les meilleures pratiques en matière d'architectures à haute disponibilité en comparant :
 
-  * [le clustering logiciel vs matériel](</fr/best-practises/clustering-software-vs-hardware-clustering/>),
-  * [l'architecture sans partage vs avec disque partagé](</fr/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>),
-  * [la HA aun niveau application vs machine virtuelle](</fr/best-practises/vm-ha-vs-application-ha/>),
-  * [la haute disponibilité vs la tolérance aux fautes](</fr/best-practises/high-availability-cluster-vs-fault-tolerant-system/>),
-  * [la réplication synchrone vs asynchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>),
-  * [la réplication de fichiers vs disques](</fr/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
-  * [les tecnhiques de réplication des données](</fr/best-practises/data-replication-techniques/>),
-  * [le RPO et le RTO avec des exemples](</fr/best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [le split brain et le quorum](</fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
-  * [les adresses IP virtuelles](</fr/best-practises/how-a-virtual-ip-address-works/>).
+  * [ logiciel vs clustering matériel ](</fr/best-practises/clustering-software-vs-hardware-clustering/>) ,
+  * [ architecture sans partage de disque vs ](</fr/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) : architecture à disque partagé.
+  * Application [ vs haute disponibilité de la machine virtuelle ](</fr/best-practises/vm-ha-vs-application-ha/>) ,
+  * [ haute disponibilité vs tolérance aux pannes ](</fr/best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ réplication synchrone vs asynchrone ](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
+  * Réplication de fichier [ vs réplication de disque ](</fr/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
+  * Techniques de réplication des données [ ](</fr/best-practises/data-replication-techniques/>) ,
+  * [ RPO et RTO avec exemples ](</fr/best-practises/what-is-rpo-and-rto-with-examples/>) ,
+  * [ cerveau divisé et quorum ](</fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) ,
+  * Adresses IP virtuelles [ ](</fr/best-practises/how-a-virtual-ip-address-works/>) .
 
 
-## Tableaux comparatifs sur les architectures de haute disponibilité et les meilleures pratiques {#comparative-tables-on-high-availability-architectures-and-best-practices}
+## Tableaux comparatifs des architectures à haute disponibilité et des meilleures pratiques {#comparative-tables-on-high-availability-architectures-and-best-practices}
 
 
 {{%  insert-safekit-software-vs-hardware-table-fr  %}}

@@ -42,7 +42,7 @@ Subject to payment of the related Support and Maintenance Fees, the End User is 
 
 ## Free Certification & Training Program {#training}
 
-SafeKit offers a free online certification and training program covering high availability concepts, cluster architecture, installation, configuration, and administration — for both mirror and farm modules.
+SafeKit offers a free online certification and training program covering high availability concepts, cluster architecture, installation, configuration, and administration — for both mirror and `farm` modules.
 
   * Self-paced online modules, available anytime
   * Completely free of charge

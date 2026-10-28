@@ -1,36 +1,36 @@
 ---
-title: "Wie funktioniert eine virtuelle IP-Adresse (VIP) beim Hochverfügbarkeits-Clustering?"
+title: "Wie funktioniert eine virtuelle IP-Adresse (VIP) in einem Hochverfügbarkeitscluster?"
 canonical: "https://safekit.eviden.com/de/best-practises/how-a-virtual-ip-address-works/"
-description: "Entdecken Sie, wie SafeKit softwaredefinierte virtuelle IP-Adressen (VIP) verwendet, um eine Verfügbarkeit rund um die Uhr sicherzustellen. Erfahren Sie mehr über automatisiertes Failover über Gratuitous ARP und warum es die DNS-Umleitung für die Geschäftskontinuität unter Windows und Linux übertrifft."
+description: "Erfahren Sie, wie SafeKit softwaredefinierte virtuelle IP-Adressen (VIP) nutzt, um eine unterbrechungsfreie Verfügbarkeit (24/7) zu gewährleisten. Lernen Sie das automatische Failover mittels Gratuitous ARP kennen und erfahren Sie, warum es die DNS-Umleitung für die Geschäftskontinuität auf Windows und Linux übertrifft."
 category: "best-practises"
 lang: "de"
-topics: "Was ist eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster?, Virtuelle IP-Implementierung in SafeKit, Inhaltsverzeichnis, Wie eine virtuelle IP-Adresse (VIP) in einem Failover im gleichen Subnetz funktioniert (Spiegelcluster), Wie eine virtuelle IP (VIP) in verschiedenen Subnetzen funktioniert (Spiegelcluster), Wie eine virtuelle IP mit Lastausgleich in einer Farm mit demselben Subnetz funktioniert (Farmcluster), Wie eine virtuelle IP mit Lastausgleich in verschiedenen Subnetzen funktioniert (Farmcluster), Virtuelle IP vs. DNS-Umleitung: Warum DNS-Failover oft fehlschlägt, Vergleich: Implementierung virtueller IP, Latenz und Anwendungstransparenz, Konfigurieren einer virtuellen IP-Adresse für Netzwerklastenausgleich und hohe Verfügbarkeit, häufig gestellte Fragen zu virtueller IP (VIP), 🔍 SafeKit High Availability Navigation Hub"
+topics: "Was ist eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster?, Implementierung virtueller IPs in SafeKit , Inhaltsverzeichnis, Funktionsweise einer virtuellen IP-Adresse (VIP) bei Failover im selben Subnetz (Cluster Mirror ), Funktionsweise einer virtuellen IP (VIP) über verschiedene Subnetze hinweg (Cluster Mirror ), Funktionsweise einer lastverteilten virtuellen IP im selben Subnetz `Farm` (Cluster `Farm` ), Funktionsweise einer lastverteilten virtuellen IP über verschiedene Subnetze hinweg (Cluster `Farm` ), Virtuelle IP vs. DNS-Umleitung: Warum DNS-Failover oft fehlschlägt, Vergleich: Implementierung virtueller IPs, Latenz und Anwendungstransparenz, Konfiguration einer virtuellen IP-Adresse für Netzwerklastverteilung und Hochverfügbarkeit, Häufig gestellte Fragen zu virtuellen IPs (VIPs), 🔍 Navigationszentrale für Hochverfügbarkeit SafeKit"
 ---
 
-# Wie funktioniert eine virtuelle IP-Adresse (VIP) beim Hochverfügbarkeits-Clustering? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# Wie funktioniert eine virtuelle IP-Adresse (VIP) in einem Hochverfügbarkeitscluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
 
 ## Was ist eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster? {#virtual-ip-definition}
 
-  * **Definition:** Eine **virtuelle IP-Adresse (VIP)** ist eine bewegliche Netzwerkadresse, die beim [Hochverfügbarkeits-Clustering](</de/>) den kontinuierlichen Zugriff auf Anwendungen sicherstellt. Im Gegensatz zu einer gewöhnlichen IP-Adresse ist sie nicht an eine bestimmte physische Netzwerkschnittstelle gebunden. Stattdessen wechselt sie zwischen den Clusterknoten und bietet Clients einen einzigen, dauerhaften Zugangspunkt.
-  * **Keine Hardware erforderlich:** SafeKit verwaltet das VIP auf Softwareebene mithilfe von **Gratuitous ARP (GARP)**, wodurch die Notwendigkeit externer Load Balancer in Umgebungen mit demselben Subnetz entfällt.
-  * **Anwendungstransparenz:** Durch die Bindung an eine lokale VIP bemerken Anwendungen keine Failover-Ereignisse, wodurch Client-Quell-IPs und vorhandene Sicherheitskonfigurationen erhalten bleiben.
-  * **Notfallwiederherstellung:** Die Verwendung eines **erweiterten LAN** ermöglicht die Verwendung derselben VIP in entfernten Rechenzentren und vereinfacht so das Site-to-Site-Failover im Vergleich zu komplexen DNS-Umleitungen und TTL-Caching-Verzögerungen.
+  * Definition ** : Eine virtuelle IP-Adresse (VIP) ** ist eine dynamische Netzwerkadresse ** die in hochverfügbaren [ verwendet wird ** um einen kontinuierlichen Anwendungszugriff zu gewährleisten. Im Gegensatz zu Standard-IPs ist eine VIP nicht an eine bestimmte physische Hardware-Schnittstelle gebunden, sondern wechselt zwischen den Clusterknoten ](</>) um einen einzigen, permanenten Zugriffspunkt für Clients bereitzustellen.
+  * ** Keine Hardware erforderlich: ** SafeKit verwaltet die VIP auf Softwareebene mittels ** Gratuitous ARP (GARP) ** , wodurch die Notwendigkeit externer Load Balancer in Umgebungen mit demselben Subnetz entfällt.
+  * ** Anwendungstransparenz: ** Durch die Bindung an eine lokale VIP bleiben Anwendungen von Failover-Ereignissen unbeeindruckt, wodurch die Quell-IPs der Clients und bestehende Sicherheitskonfigurationen erhalten bleiben.
+  * ** Disaster Recovery: ** Die Verwendung eines erweiterten LANs ** ermöglicht die Nutzung derselben VIP über entfernte Rechenzentren hinweg und vereinfacht so das Site-to-Site ** Failover im Vergleich zu komplexen DNS-Umleitungen und TTL-Caching-Verzögerungen.
 
 
 ## Virtuelle IP-Implementierung in SafeKit {#safekit-vip-implementation}
 
-  * **Spiegelcluster:** Verfügt über eine Floating-IP, die nur auf dem Primärserver aktiv ist, um Echtzeitreplikation und Failover zu ermöglichen.
-  * **Farmcluster:** Ermöglicht den Netzwerklastausgleich durch gleichzeitige Aufrechterhaltung des VIP auf allen Knoten.
+  * ** Mirror Cluster: ** Verfügt über eine Floating IP, die nur auf dem primären Server aktiv ist, um Echtzeitreplikation und Failover zu ermöglichen.
+  * ** `Farm` Cluster: ** Ermöglicht den Netzwerk-Lastausgleich durch gleichzeitige Aufrechterhaltung der VIP auf allen Knoten.
 
 
-**Hauptvorteil:** Durch die Verwendung von **Gratuitous ARP (Address Resolution Protocol)** oder **MAC Address Takeover** ermöglicht der VIP einen nahtlosen Anwendungs-Failover ohne manuelle Neukonfiguration des Clients und gewährleistet so die Geschäftskontinuität rund um die Uhr.
+** : Durch die Nutzung ** ** ARP (Address Resolution Protocol) oder MAC Address ** ermöglicht ** VIP ein nahtloses Anwendungs-Failover ohne manuelle Client-Neukonfiguration und gewährleistet ** die Geschäftskontinuität rund um die Uhr.
 
-  * **Cloud und Multi-Subnetz:** Wird über externe Load-Balancer-Zustandsprüfungen (AWS, Azure, GCP) verwaltet, um den Datenverkehr über verschiedene Subnetze umzuleiten.
+  * ** Cloud & Multi-Subnet: ** Verwaltet über externe Load Balancer-Integritätsprüfungen ( AWS , Azure , GCP ), um den Datenverkehr über verschiedene Subnetze umzuleiten.
 
 
-![Vergleichsdiagramm des Verhaltens virtueller IP (VIP) in Evidian SafeKit: Spiegelcluster mit einer Floating-IP auf dem aktiven Knoten im Vergleich zu Farmclustern mit Netzwerklastausgleich über alle Knoten.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
+![ Vergleichsdiagramm des Verhaltens virtueller IPs (VIPs) in Evidian SafeKit : Mirror Cluster mit einer Floating IP auf dem aktiven Knoten vs. Farm Cluster mit Netzwerklastausgleich über alle Knoten. ](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-**Virtuelle IP-Implementierungsstrategien für Mirror- und Farm-Cluster in SafeKit.**
+Strategien zur Implementierung virtueller IP-Adressen für ** Cluster Mirror und `Farm` in SafeKit . **
 
 
 {{%  insert-safekit-4-buttons-de  %}}
@@ -38,256 +38,256 @@ topics: "Was ist eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster?,
 
 ## Inhaltsverzeichnis {#table-of-contents}
 
-  * [Wie eine virtuelle IP-Adresse (VIP) in einem Failover im selben Subnetz (Spiegelcluster) funktioniert](#virtual-ip-same-subnet-failover)
-  * [Wie eine virtuelle IP (VIP) über verschiedene Subnetze hinweg funktioniert (Spiegelcluster)](#virtual-ip-different-subnets-failover)
-  * [So funktioniert eine virtuelle IP mit Lastenausgleich in einer Farm mit demselben Subnetz (Farmcluster)](#vip-load-balancing-same-subnet)
-  * [Wie eine virtuelle IP mit Lastenausgleich über verschiedene Subnetze hinweg funktioniert (Farmcluster)](#vip-load-balancing-different-subnets)
-  * [Virtuelle IP vs. DNS-Umleitung: Warum DNS-Failover oft fehlschlägt](#virtual-ip-vs-dns-redirection-failover)
-  * [Vergleich: Virtuelle IP-Implementierung, Latenz und Anwendungstransparenz](#vip-vs-dns-comparison)
-  * [Konfigurieren einer virtuellen IP-Adresse für Netzwerklastenausgleich und hohe Verfügbarkeit](#virtual-ip-configuration-load-balancing-ha)
-  * [Häufig gestellte Fragen zu Virtual IP (VIP)](#virtual-ip-faq)
-  * [🔍 SafeKit Hochverfügbarkeits-Navigations-Hub](#hub)
+  * [ Funktionsweise einer virtuellen IP-Adresse (VIP) bei einem Failover im selben Subnetz ( Mirror -Cluster) ](#virtual-ip-same-subnet-failover)
+  * [ Funktionsweise einer virtuellen IP-Adresse (VIP) über verschiedene Subnetze hinweg ( Mirror Cluster) ](#virtual-ip-different-subnets-failover)
+  * [ Funktionsweise einer lastverteilten virtuellen IP in einem Cluster desselben Subnetzes `Farm` ( `Farm` -Cluster) ](#vip-load-balancing-same-subnet)
+  * [ Funktionsweise einer lastverteilten virtuellen IP-Adresse über verschiedene Subnetze hinweg ( `Farm` -Cluster) ](#vip-load-balancing-different-subnets)
+  * Virtuelle IP- ](#virtual-ip-vs-dns-redirection-failover) vs. DNS-Umleitung: Warum DNS-Failover oft fehlschlägt [
+  * [ Vergleich: Virtuelle IP-Implementierung, Latenz und Anwendungstransparenz ](#vip-vs-dns-comparison)
+  * [ Konfigurieren einer virtuellen IP-Adresse für Netzwerklastausgleich und Hochverfügbarkeit ](#virtual-ip-configuration-load-balancing-ha)
+  * [ Häufig gestellte Fragen zu virtuellen IPs (VIP) ](#virtual-ip-faq)
+  * [ 🔍 SafeKit Hochverfügbarer Navigationshub ](#hub)
 
 
-## So funktioniert eine virtuelle IP-Adresse (VIP) in einem Failover im selben Subnetz (Spiegelcluster) {#virtual-ip-same-subnet-failover}
+## Funktionsweise einer virtuellen IP-Adresse (VIP) bei einem Failover im selben Subnetz ( Mirror -Cluster) {#virtual-ip-same-subnet-failover}
 
-### Automatisiertes Failover und Netzwerkumleitung in einem lokalen Subnetz {#automated-failover--network-rerouting-in-a-local-subnet}
+### Automatisierte Ausfallsicherung und Netzwerkumleitung in einem lokalen Subnetz {#automated-failover--network-rerouting-in-a-local-subnet}
 
-Für Unternehmen, die eine nahtlose Geschäftskontinuität innerhalb einer lokalen Infrastruktur benötigen, bietet **SafeKit Software-Defined High Availability for Local Network Clusters** eine robuste, automatisierte Lösung für die Verwaltung virtueller IP-Adressen und Anwendungs-Failover in Echtzeit. 
+Für Organisationen, die eine nahtlose Geschäftskontinuität innerhalb einer lokalen Infrastruktur benötigen, bietet ** SafeKit Software-Defined High Availability for Local Network Clusters ** eine robuste, automatisierte Lösung für die Verwaltung virtueller IP-Adressen und das Echtzeit-Anwendungs-Failover. 
 
-### Lokaler Spiegelcluster: Nahtloser 2-Knoten-Windows- oder Linux-Failover {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
-
-
-![SafeKit Virtual IP (VIP)-Failover-Mechanismus zwischen zwei Servern im selben Subnetz](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
-
- SafeKit VIP-Aliasing und MAC-Adresszuordnung In einem standardmäßigen **SafeKit-Spiegelcluster**, in dem sich beide Knoten im selben lokalen Subnetz befinden, wird hohe Verfügbarkeit durch eine **softwaredefinierte virtuelle IP (VIP)** erreicht. Im Gegensatz zu hardwarebasierten Lösungen verwaltet SafeKit diese VIP direkt im Netzwerk-Stack des Betriebssystems. Dieser VIP fungiert als dauerhafter logischer Einstiegspunkt für Clients, der über **IP-Aliasing** über den eindeutigen physischen IP-Adressen von Server 1 und Server 2 liegt. 
-
-#### Erweitertes IP-Aliasing und mehrere VIP-Unterstützung von SafeKit {#safekits-advanced-ip-aliasing--multiple-vip-support}
-
-Ein wesentlicher Vorteil der **SafeKit-Lösung** ist ihre Flexibilität bei der Verwaltung von Netzwerkidentitäten. Die VIP ist eine dritte IP-Adresse, die zwischen den Knoten „schwebt“. Insbesondere ist SafeKit in der Lage, **mehrere virtuelle IP-Adressen** innerhalb eines einzigen Clusters zu verwalten. Diese können derselben primären Ethernet-Karte zugewiesen oder auf verschiedene physische Karten verteilt werden, was komplexe Konfigurationen ermöglicht, bei denen verschiedene Dienste an bestimmte virtuelle Identitäten gebunden sind. 
-
-#### Der Failover-Mechanismus: Gratuitous ARP (GARP) {#the-failover-mechanism-gratuitous-arp-garp}
-
-SafeKit stellt sicher, dass bei einem Hardwareausfall kein manueller Eingriff erforderlich ist. Im Normalbetrieb wird die VIP der **MAC-Adresse von Server 1 (mac1)** zugeordnet. Wenn SafeKit einen Heartbeat-Fehler auf Server 1 erkennt, führt es eine zweistufige Wiederherstellung durch: 
-
-  * **Anwendungswiederherstellung:** SafeKit startet die kritischen Anwendungsdienste auf Server 2 automatisch neu.
-  * **Netzwerkumleitung:** SafeKit sendet sofort eine **Gratuitous ARP (GARP)**-Nachricht. Dadurch werden die ARP-Caches aller Netzwerk-Switches und verbundenen Clients zwangsweise aktualisiert und der VIP der **MAC-Adresse von Server 2 (mac2)** neu zugeordnet.
+### Lokaler Mirror Cluster: Nahtloses 2-Knoten-Failover Windows oder Linux {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
 
 
-#### Remote-Rechenzentren und erweiterte VLANs {#remote-data-centers--extended-vlans}
+![ SafeKit Virtueller IP-Failover-Mechanismus (VIP) zwischen zwei Servern im selben Subnetz ](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-Obwohl er typischerweise für lokale Cluster verwendet wird, ist der Same-Subnet-Algorithmus von **SafeKit** die bevorzugte Wahl für **Disaster Recovery (DR)** an Remote-Standorten, die über ein **erweitertes LAN oder Stretched VLAN** verbunden sind. Diese „gestreckte“ Architektur ermöglicht Ihnen die Verwaltung eines einzelnen Subnetzes über geografische Entfernungen hinweg, was Ihre Netzwerktopologie erheblich vereinfacht und den Overhead komplexer Routing-Protokolle vermeidet. 
+ VIP SafeKit Aliasing und MAC ** Adresszuordnung in einem Standardcluster SafeKit in dem mirror beide Knoten im selben lokalen Subnetz befinden, wird Hochverfügbarkeit durch eine ** virtuelle IP-Adresse (VIP) erreicht. Im Gegensatz zu hardwarebasierten Lösungen SafeKit diese ** direkt im Netzwerk-Stack ** Betriebssystems. Die VIP dient als persistenter logischer Einstiegspunkt für Clients und basiert auf den eindeutigen physischen IP-Adressen von Server 1 und Server 2 mittels IP ** ** . 
 
-> **⚠️ Hinweis:** Layer-2-Umleitung über Gratuitous ARP ist das **transparenteste Lösung** für Bewerbungen. Im Gegensatz zur Layer-3-Umleitung mit einem Load Balancer wird dies vermieden **Quell-/Ziel-IP-Übersetzung (SNAT/DNAT)**. Die Anwendung empfängt Datenverkehr direkt mit der ursprünglichen Client-IP und die virtuelle IP wird lokal konfiguriert. **Viele Anwendungen bevorzugen** Sehen Sie sich die virtuelle IP lokal an und empfangen Sie die ursprüngliche Client-IP direkt. Ohne diese Transparenz würden sie **funktioniert möglicherweise nicht wie erwartet** aufgrund komplexer Netzwerkübersetzungen.
+#### Erweiterte IP-Aliasierung und Unterstützung mehrerer VIPs durch SafeKit {#safekits-advanced-ip-aliasing--multiple-vip-support}
 
-## Wie eine virtuelle IP (VIP) über verschiedene Subnetze hinweg funktioniert (Spiegelcluster) {#virtual-ip-different-subnets-failover}
+Ein wesentlicher Vorteil der Lösung ** SafeKit ** ist ihre Flexibilität bei der Verwaltung von Netzwerkidentitäten. Die VIP ist eine dritte IP-Adresse, die zwischen den Knoten „fließt“. SafeKit kann insbesondere mehrere virtuelle IP-Adressen ** ** innerhalb eines einzelnen Clusters verwalten. Diese können derselben primären Ethernet-Karte zugewiesen oder auf verschiedene physische Karten verteilt werden, wodurch komplexe Konfigurationen möglich sind, bei denen verschiedene Dienste an spezifische virtuelle Identitäten gebunden sind. 
 
-### Cloud-fähige Verkehrsorchestrierung über Load Balancer-Integration {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
+#### Der Ausfallmechanismus: Gratuitous ARP (GARP) {#the-failover-mechanism-gratuitous-arp-garp}
 
-Durch die Nutzung der externen Netzwerkinfrastruktur lässt sich **SafeKit Software-Defined High Availability for Multi-AZ and Cloud Clusters** nahtlos in einen **Network Load Balancer** integrieren, um den Datenverkehr-Failover über separate Subnetze und Verfügbarkeitszonen hinweg zu orchestrieren. 
+SafeKit gewährleistet, dass bei einem Hardwareausfall kein manueller Eingriff erforderlich SafeKit ** ** -Fehler auf Server 1 erkennt, führt es eine zweistufige Wiederherstellung durch: 
 
-### Subnetzübergreifende Spiegelcluster: Windows- und Linux-Implementierung {#cross-subnet-mirror-clusters-windows--linux-implementation}
-
-
-![Diagramm eines virtuellen IP-Failovers mit einem Load Balancer über zwei verschiedene Subnetze](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
-
- Multi-Subnetz-Datenverkehrsrouting über Load Balancer-Zustandsprüfungen Wenn sich Clusterknoten in **verschiedenen Subnetzen** befinden, ist ein standardmäßiges ARP-basiertes Failover nicht möglich. In diesem Szenario wird die **Virtual IP (VIP)** auf einem **Load Balancer (LB)** gehostet und nicht auf der Ethernet-Karte des Servers. Der Load Balancer fungiert als Gateway und leitet den Datenverkehr basierend auf der Echtzeitverfügbarkeit an die physischen IP-Adressen der primären und sekundären Knoten weiter. 
-
-#### Dynamisches Routing über SafeKit Health Checks {#dynamic-routing-via-safekit-health-checks}
-
-SafeKit verwaltet die Verkehrssteuerung, indem es auf jedem Knoten eine dedizierte **Health Check-URL** bereitstellt. Der Load Balancer fragt diese URLs ab, um den Clusterstatus zu ermitteln: 
-
-  * **Primärer Knoten (PRIM):** Die Gesundheitsprüfung gibt `HTTP 200 OK` zurück. Der Load Balancer leitet den gesamten Verkehr hierher.
-  * **Sekundärer Knoten (SECOND):** Die Gesundheitsprüfung gibt `HTTP 404 NOT FOUND` zurück. Der Load Balancer sendet keinen Datenverkehr an diesen Knoten.
-
-Während eines **Failover-Ereignisses** schaltet SafeKit die Antworten der Integritätsprüfung sofort um und veranlasst so den Load Balancer, den Client-Datenverkehr an den neuen Primärserver umzuleiten. 
-
-> **⚠️ Hinweis:** SafeKit stellt die Integritätsprüfungslogik bereit; Der physische oder virtuelle Load Balancer muss von Ihrer Netzwerkinfrastruktur bereitgestellt werden.
-
-#### Cloud-Integration: AWS, Azure und GCP {#cloud-integration-aws-azure-and-gcp}
-
-Dieses „Load Balancer + Health Check“-Modell ist der Industriestandard für **Cloud High Availability**. Es ist wichtig für die Implementierung von SafeKit in Umgebungen wie: 
-
-  * 💡 [**Amazon AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) (AWS Network Load Balancer)
-  * 💡 [**Microsoft Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) (Azure Load Balancer)
-  * 💡 [**Google Cloud (GCP)**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
+  * ** Anwendungswiederherstellung: ** SafeKit startet die kritischen Anwendungsdienste auf Server 2 automatisch neu.
+  * Netzwerk-Routing: ** ** sendet sofort eine Gratuitous-ARP-Nachricht (GARP) ** ** . Dadurch werden die ARP-Caches aller Netzwerk-Switches und verbundenen Clients aktualisiert und die VIP auf SafeKit MAC-Adresse (mac2) von Server 2 ( ** ) ** umgeleitet.
 
 
-#### Überlegungen zum Netzwerk: Load Balancer vs. Extended LAN {#network-considerations-load-balancer-vs-extended-lan}
+#### Remote-Rechenzentren & Erweiterte VLANs {#remote-data-centers--extended-vlans}
 
-Wenn ein Load Balancer nicht gewünscht ist, wenden Sie sich an Ihr Netzwerkteam bezüglich der Implementierung eines **Extended LAN (VLAN-Stretching)** zwischen Subnetzen. Dadurch können Sie zum einfacheren VIP-Modell „Same Subnet“ zurückkehren. 
+Der Same-Subnet-Algorithmus ** SafeKit wird zwar typischerweise für lokale Cluster verwendet, ist aber die bevorzugte Wahl für die Notfallwiederherstellung (DR) ** über entfernte Standorte, die über ein erweitertes LAN ** ** ein gestrecktes VLAN ** verbunden sind. Diese „gestreckte“ Architektur ermöglicht die Aufrechterhaltung eines einzigen Subnetzes über geografische Entfernungen hinweg, ** die Netzwerktopologie erheblich vereinfacht und der Overhead komplexer Routing-Protokolle vermieden wird. 
 
-> **⚠️ Hinweis:** Wenn Sie sich für einen Load Balancer entscheiden, stellen Sie sicher, dass Ihre Anwendung mit **Source/Destination IP Translation (SNAT/DNAT)** kompatibel ist. Bei einem Load Balancer verliert die Anwendung möglicherweise den Überblick über die Identität des ursprünglichen Benutzers oder kann nicht gestartet werden, da sie die direkt auf ihrer eigenen Netzwerkschnittstelle konfigurierte virtuelle IP nicht mehr sieht.
+> ** ⚠️ Hinweis: ** Layer-2 ** ** Anwendungen. Im Gegensatz zum Layer-3-Rerouting mit einem Load Balancer vermeidet es ** Quell-/Ziel-IP-Übersetzung (SNAT/DNAT). ** Die Anwendung empfängt den Datenverkehr direkt mit der ursprünglichen Client-IP, und die virtuelle IP wird lokal konfiguriert. ** Viele Anwendungen bevorzugen es ** ** die virtuelle IP lokal zu sehen und die ursprüngliche Client-IP direkt zu empfangen. Ohne diese Transparenz funktionieren sie aufgrund komplexer Netzwerkübersetzungen möglicherweise nicht wie erwartet. **
 
-## So funktioniert eine virtuelle IP mit Lastenausgleich in einer Farm mit demselben Subnetz (Farmcluster) {#vip-load-balancing-same-subnet}
+## Wie eine virtuelle IP-Adresse (VIP) über verschiedene Subnetze hinweg funktioniert ( Mirror -Cluster) {#virtual-ip-different-subnets-failover}
 
-### Skalierbare Leistung: Lastausgleich und Redundanz auf Kernel-Ebene {#scalable-performance-kernel-level-load-balancing--redundancy}
+### Cloudfähige Verkehrsorchestrierung über Load-Balancer-Integration {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
 
-Für Umgebungen mit hohem Datenverkehr wird im **Architecture Guide: Scalable High Availability with Multi-Node Farm Clusters** erklärt, wie SafeKit Arbeitslasten auf mehrere aktive Server verteilt und gleichzeitig die vollständige Redundanz aufrechterhält. 
+Durch die Nutzung externer Netzwerkinfrastruktur integriert sich ** SafeKit Software-Defined High Availability for Multi-AZ and Cloud Clusters ** nahtlos in einen ** Network Load Balancer ** um das Traffic-Failover über separate Subnetze und Verfügbarkeitszonen hinweg zu orchestrieren. 
 
-### Farm-Cluster-Architektur: Lastverteilung über Windows- oder Linux-Knoten hinweg {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### Subnetzübergreifende Mirror -Cluster: Windows & Linux Implementierung {#cross-subnet-mirror-clusters-windows--linux-implementation}
 
 
-![Diagramm einer virtuellen IP (VIP) mit Lastausgleich innerhalb eines Farmclusters im gleichen Subnetz](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
+![ Diagramm eines virtuellen IP-Failovers mit einem Load Balancer über zwei verschiedene Subnetze ](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
- Verteilte Datenverkehrsverarbeitung über Kernel-Filterung In einem **Lastausgleichs-Farmcluster** wird eine virtuelle IP-Adresse (VIP) verwendet, um Client-Anfragen gleichzeitig auf mehrere Server zu verteilen. Während dieses Beispiel zwei Knoten umfasst, lässt sich die Architektur skalieren, um größere Serverfarmen zu unterstützen. In einer Konfiguration mit demselben Subnetz wird der VIP über IP-Aliasing auf der Ethernet-Karte **jedes Servers** im Cluster konfiguriert. 
+ Multi-Subnet-Traffic-Routing über Load-Balancer-Integritätsprüfungen, wenn sich Clusterknoten in **verschiedene Subnetze** Ein standardmäßiges ARP-basiertes Failover ist nicht möglich. In diesem Szenario ist die **Virtuelle IP (VIP)** wird gehostet auf einem **Load Balancer (LB)** Anstelle der Ethernet-Karte des Servers fungiert der Load Balancer als Gateway und leitet den Datenverkehr basierend auf der Echtzeitverfügbarkeit an die physischen IP-Adressen der primären und sekundären Knoten weiter. 
 
-#### Verkehrsverteilung: Der Kernel-Level-Filter {#traffic-distribution-the-kernel-level-filter}
+#### Dynamisches Routing über SafeKit Integritätsprüfungen {#dynamic-routing-via-safekit-health-checks}
 
-Im Gegensatz zu einem einfachen Failover-Cluster verwaltet ein Farm-Cluster den Datenverkehr über einen speziellen **Filter auf Kernel-Ebene**. Der Prozess funktioniert wie folgt: 
+SafeKit steuert den Datenverkehr, indem es auf jedem Knoten eine dedizierte Health-Check-URL ** ** bereitstellt. Der Load Balancer fragt diese URLs ab, um den Clusterstatus zu ermitteln. 
 
-  * **ARP-Zuordnung:** In den ARP-Caches der Clients ist der VIP zunächst einer einzelnen Hardwareadresse zugeordnet (z. B. `mac1` von Server 1).
-  * **Paketaufteilung:** Wenn Server 1 den Datenverkehr empfängt, analysiert der SafeKit-Kernelfilter die Identität der eingehenden Pakete (basierend auf **Client-IP** oder **TCP-Port**).
-  * **Lastverteilung:** Der Filter bestimmt, welche Pakete lokal verarbeitet und welche zur Verarbeitung an andere Knoten (z. B. Server 2) umgeleitet werden sollen, um eine ausgewogene Arbeitslast sicherzustellen.
+  * Primärer Knoten (PRIM): ** ** Der Integritätscheck liefert `HTTP 200 OK` . Der Load Balancer leitet den gesamten Datenverkehr hierher.
+  * ** Sekundärer Knoten (SECOND): ** Die Zustandsprüfung gibt `HTTP 404 NOT FOUND` zurück. Der Load Balancer sendet keinen Datenverkehr an diesen Knoten.
+
+Während eines Failover-Ereignisses ** schaltet ** die Health-Check-Antworten sofort um SafeKit veranlasst den Load Balancer, den Client-Datenverkehr auf den neuen primären Server umzuleiten. 
+
+> ** ⚠️ Hinweis: ** SafeKit stellt die Logik für die Zustandsprüfung bereit; der physische oder virtuelle Load Balancer muss von Ihrer Netzwerkinfrastruktur bereitgestellt werden.
+
+#### Cloud-Integration: AWS , Azure , {#cloud-integration-aws-azure-and-gcp} und GCP
+
+Dieses „Load Balancer + Health Check“-Modell ist der Industriestandard für ** Cloud High Availability ** . Es ist unerlässlich für die Implementierung SafeKit in Umgebungen wie: 
+
+  * 💡 [ ** Amazon AWS ** ](</de/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ( AWS Network Load Balancer)
+  * 💡 [ ** Microsoft Azure ** ](</de/solutions/azure-high-availability-cluster-synchronous-replication-failover/>) ( Azure Load Balancer)
+  * 💡 [ ** Google Cloud ( GCP ) ** ](</de/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
+
+
+#### Netzwerküberlegungen: Load Balancer vs. erweitertes LAN {#network-considerations-load-balancer-vs-extended-lan}
+
+Wenn kein Load Balancer gewünscht ist, wenden Sie sich an Ihr Netzwerkteam bezüglich der Implementierung eines erweiterten LANs (VLAN-Stretching) ** (VLAN-Stretching) ** zwischen Subnetzen. Dadurch können Sie zum einfacheren VIP-Modell „Gleiches Subnetz“ zurückkehren. 
+
+> ** ⚠️ Hinweis: ** Wenn Sie einen Load Balancer verwenden, stellen Sie sicher, dass Ihre Anwendung mit der Quell-/Ziel-IP-Übersetzung (SNAT/DNAT) ** ** kompatibel ist. Mit einem Load Balancer kann die Anwendung die Identität des ursprünglichen Benutzers verlieren oder nicht starten, da sie die direkt auf ihrer Netzwerkschnittstelle konfigurierte virtuelle IP nicht mehr erkennt.
+
+## Funktionsweise einer lastverteilten virtuellen IP in einem Cluster desselben Subnetzes `Farm` ( `Farm` -Cluster) {#vip-load-balancing-same-subnet}
+
+### Skalierbare Leistung: Lastverteilung und Redundanz auf Kernel-Ebene {#scalable-performance-kernel-level-load-balancing--redundancy}
+
+Für Umgebungen mit hohem Datenverkehr erklärt der Architekturleitfaden ** : Skalierbare Hochverfügbarkeit mit Multi-Node `Farm` Clustern ** wie SafeKit die Arbeitslasten auf mehrere aktive Server verteilt und gleichzeitig die vollständige Redundanz aufrechterhält. 
+
+### `Farm` -Clusterarchitektur: Lastverteilung über die Knoten Windows oder Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+
+
+![ Diagramm einer lastverteilten virtuellen IP (VIP) innerhalb eines Clusters im selben Subnetz farm ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
+
+ Verteilte Datenverkehrsverarbeitung mittels Kernelfilterung: In einem Load-Balancing-Cluster ** `farm` , ** ) wird eine virtuelle IP-Adresse (VIP) verwendet, um Client-Anfragen gleichzeitig auf mehrere Server zu verteilen. Dieses Beispiel umfasst zwei Knoten, die Architektur ist jedoch skalierbar und unterstützt größere Serverfarmen. In einer Konfiguration im selben Subnetz wird die VIP auf der Ethernet-Karte von ** auf jedem Server ** im Cluster per IP-Aliasing konfiguriert. 
+
+#### Verkehrsverteilung: Der Kernel-Filter {#traffic-distribution-the-kernel-level-filter}
+
+Im Gegensatz zu einem einfachen Failover-Cluster verwaltet ein `farm` Cluster den Datenverkehr über einen spezialisierten Kernel-Filter ** ** . Der Prozess funktioniert wie folgt: 
+
+  * ** ARP-Mapping: ** In den ARP-Caches der Clients ist die VIP zunächst einer einzelnen Hardwareadresse zugeordnet (z. B. `mac1` von Server 1).
+  * ** Paketaufteilung: ** Wenn Server 1 den Datenverkehr empfängt, analysiert der SafeKit Kernelfilter die Identität der eingehenden Pakete (basierend auf ** Client-IP ** oder ** TCP-Port ** ).
+  * ** Lastverteilung: ** Der Filter bestimmt, welche Pakete lokal verarbeitet und welche zur Verarbeitung an andere Knoten (z. B. Server 2) weitergeleitet werden sollen, um eine ausgewogene Arbeitslast zu gewährleisten.
 
 
 #### Failover und Umleitung mit Gratuitous ARP {#failover-and-rerouting-with-gratuitous-arp}
 
-Wenn der Primärknoten (Server 1) ausfällt, behält der Cluster die Verfügbarkeit über **Gratuitous ARP (GARP)** bei. SafeKit sendet eine GARP-Nachricht, um die Client-ARP-Caches mit `mac2` von Server 2 zu aktualisieren. Dadurch wird sichergestellt, dass Clients auch bei einem Ausfall des primären „Einstiegspunkts“ sofort zu den verbleibenden Knoten in der Farm umgeleitet werden. 
+Fällt der primäre Knoten (Server 1) aus, gewährleistet der Cluster die Verfügbarkeit über Gratuitous ARP (GARP) ** ** . SafeKit sendet eine GARP-Nachricht, um die ARP-Caches der Clients mit `mac2` von Server 2 zu aktualisieren. Dadurch wird sichergestellt, dass Clients auch bei Ausfall des primären „Einstiegspunkts“ sofort zu den verbleibenden Knoten in farm umgeleitet werden. 
 
 #### Bereitstellung an entfernten Standorten {#deployment-in-remote-sites}
 
-Für Organisationen, die über **entfernte Rechenzentren** operieren, bleibt dieser Lastausgleichsalgorithmus funktionsfähig, sofern die Standorte über ein **erweitertes LAN oder VLAN** verbunden sind. Dadurch wird eine virtuelle Umgebung mit demselben Subnetz erstellt, was die effizienteste Konfiguration für geografisch verteilte Farmcluster darstellt. 
+Für Organisationen, die über mehrere entfernte Rechenzentren ** ** verteilt sind, bleibt dieser Lastausgleichsalgorithmus funktionsfähig, sofern die Standorte über ein erweitertes LAN ** oder VLAN ** verbunden sind. Dadurch entsteht eine virtuelle Umgebung im selben Subnetz, die die effizienteste Konfiguration für geografisch verteilte Cluster `farm` darstellt. 
 
-## Wie eine virtuelle IP mit Lastenausgleich über verschiedene Subnetze hinweg funktioniert (Farmcluster) {#vip-load-balancing-different-subnets}
+## Wie eine lastverteilte virtuelle IP-Adresse über verschiedene Subnetze hinweg funktioniert ( `Farm` -Cluster) {#vip-load-balancing-different-subnets}
 
-### Multizonen-Skalierung: Orchestrierung des Datenverkehrs über Cloud-Subnetze hinweg {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
+### Multi-Zone-Skalierung: Orchestrierung des Datenverkehrs über Cloud-Subnetze hinweg {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-Der **Architecture Guide: Scaling Farm Clusters in Multi-Zone and Cloud Environments** bietet die Blaupause für die Verteilung von Anwendungs-Workloads über separate Verfügbarkeitszonen und Subnetze. 
+Der Architekturleitfaden ** : Skalierung `Farm` -Clustern in Multi-Zone- und Cloud-Umgebungen. ** bietet die Blaupause für die Verteilung von Anwendungsworkloads über separate Verfügbarkeitszonen und Subnetze. 
 
-### Subnetzübergreifende Farmcluster: Windows- und Linux-Skalierbarkeit mit mehreren Knoten {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### Subnetzübergreifende `Farm` -Cluster: Multi-Node Windows & Linux Skalierbarkeit {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
-![Diagramm eines Farmclusters mit Lastenausgleich, der in zwei verschiedenen Subnetzen betrieben wird](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
+Diagramm eines lastverteilten Clusters ![ , der über zwei verschiedene Subnetze ( farm ) betrieben wird ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
- Globale Datenverkehrsverteilung über externen Lastausgleich Wenn Farmknoten über **verschiedene Subnetze** verteilt sind (üblich bei Multi-AZ-Cloud-Bereitstellungen), wird die **Virtuelle IP (VIP)** von einem externen **Load Balancer (LB)** verwaltet. Der LB hält den VIP und leitet eingehenden Datenverkehr an die physischen IP-Adressen der Server in ihren jeweiligen Subnetzen weiter. 
+ Globale Verkehrsverteilung über externen Lastausgleich: Wenn `farm` -Knoten auf ** verschiedene Subnetze ** verteilt sind (üblich in Multi-AZ-Cloud-Bereitstellungen), wird die virtuelle IP-Adresse (VIP) ** ** von einem externen Load Balancer (LB) ** ** verwaltet. Der LB verwaltet die VIP und leitet eingehenden Datenverkehr an die physischen IP-Adressen der Server in ihren jeweiligen Subnetzen weiter. 
 
 #### Intelligente Verkehrsrouting- und Lastverteilungsregeln {#intelligent-traffic-routing--load-balancing-rules}
 
-Der Load Balancer verteilt Clientanfragen basierend auf zwei Hauptfaktoren: 
+Der Load Balancer verteilt Clientanfragen anhand zweier Hauptfaktoren: 
 
-  * **Verteilungsregeln:** Der Datenverkehr wird nach Sitzungsaffinität oder Lastausgleichsalgorithmen aufgeteilt (z. B. Analyse der **Client-IP-Adresse** oder des **Client-TCP-Ports**).
-  * **Knotenverfügbarkeit:** Datenverkehr wird nur an fehlerfreie Knoten weitergeleitet, wie durch die SafeKit-Gesundheitsprüfung ermittelt.
-
-
-> **⚠️ Hinweis:** SafeKit stellt die Integritätsprüfungslogik bereit; Der physische oder virtuelle Load Balancer muss von Ihrer Netzwerkinfrastruktur bereitgestellt werden.
-
-#### SafeKit Health Check-Mechanismus {#safekit-health-check-mechanism}
-
-SafeKit stellt auf jedem Server in der Farm eine **Health Check-URL** in Echtzeit bereit, um dem Load Balancer seinen Betriebsstatus mitzuteilen: 
-
-  * **Knoten UP:** Die Gesundheitsprüfung gibt `HTTP 200 OK` zurück. Der Load Balancer bezieht diesen Server in die aktive Rotation ein.
-  * **Knoten AUSFALL/Failover:** Wenn ein Server oder eine Anwendung ausfällt, gibt SafeKit `HTTP 404 NOT FOUND` zurück (oder der Dienst wird nicht mehr erreichbar). Der Load Balancer stoppt sofort das Senden von Datenverkehr an den ausgefallenen Knoten.
+  * Verteilungsregeln für ** : Der Datenverkehr ** wird nach Sitzungsaffinität oder Lastverteilungsalgorithmen aufgeteilt (z. B. Analyse ** ** ** ** .
+  * Verfügbarkeit des Knotens ** : Der Datenverkehr ** wird nur an fehlerfreie Knoten weitergeleitet, wie durch die Integritätsprüfung SafeKit ermittelt.
 
 
-#### Cloud-Bereitstellungsstandards: AWS, Azure und GCP {#cloud-deployment-standards-aws-azure-and-gcp}
+> ** ⚠️ Hinweis: ** SafeKit stellt die Logik für die Zustandsprüfung bereit; der physische oder virtuelle Load Balancer muss von Ihrer Netzwerkinfrastruktur bereitgestellt werden.
 
-Diese Architektur ist das grundlegende Modell für **Cloud Farm-Cluster** und stellt sicher, dass die verbleibenden Knoten weiterhin die Last bewältigen, wenn ein ganzes Subnetz oder eine ganze Zone offline geht. Dies wird nativ unterstützt von: 
+#### SafeKit Gesundheitsprüfungsmechanismus {#safekit-health-check-mechanism}
 
-  * 💡 [**Amazon AWS**](</solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer)
-  * 💡 [**Microsoft Azure**](</solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer)
-  * 💡 [**Google Cloud (GCP)**](</solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
+SafeKit stellt auf jedem Server in `farm` eine Echtzeit-Zustandsprüfungs-URL ** Health Check URL ** ) bereit, um dessen Betriebsstatus an den Load Balancer zu übermitteln: 
+
+  * Knoten ** UP: ** . Die Zustandsprüfung liefert `HTTP 200 OK` . Der Load Balancer hat diesen Server in die aktive Rotation aufgenommen.
+  * ** Knoten ausgefallen/Failover: ** Wenn ein Server oder eine Anwendung ausfällt, gibt SafeKit `HTTP 404 NOT FOUND` zurück (oder der Dienst ist nicht mehr erreichbar). Der Load Balancer stoppt sofort die Weiterleitung von Datenverkehr an den ausgefallenen Knoten.
+
+
+#### Cloud-Bereitstellungsstandards: AWS , Azure und GCP {#cloud-deployment-standards-aws-azure-and-gcp}
+
+Diese Architektur bildet das grundlegende Modell für ** Cloud-Cluster `Farm` ** ) und stellt sicher, dass die verbleibenden Knoten die Last weiterhin bewältigen, falls ein gesamtes Subnetz oder eine Zone ausfällt. Dies wird nativ unterstützt von: 
+
+  * 💡 [ ** Amazon AWS ** ](</de/solutions/aws-load-balancing-cluster-failover/>) ( AWS Network Load Balancer)
+  * 💡 [ ** Microsoft Azure ** ](</de/solutions/azure-load-balancing-cluster-failover/>) ( Azure Load Balancer)
+  * 💡 [ ** Google Cloud ( GCP ) ** ](</de/solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
 
 
 ## Virtuelle IP vs. DNS-Umleitung: Warum DNS-Failover oft fehlschlägt {#virtual-ip-vs-dns-redirection-failover}
 
-### Die DNS-Verbreitungsfalle: Warum VIPs die DNS-Umleitung übertreffen {#the-dns-propagation-trap-why-vips-outperform-dns-redirection}
+### Die DNS-Propagationsfalle: Warum VIPs die DNS-Umleitung übertreffen {#the-dns-propagation-trap-why-vips-outperform-dns-redirection}
 
-Wenn man sich beim Failover auf DNS verlässt, entsteht in Hochverfügbarkeitsarchitekturen oft ein **falsches Sicherheitsgefühl**. Während die Änderung eines DNS-Eintrags so, dass er auf einen Backup-Server verweist, wie ein unkomplizierter Wiederherstellungspfad erscheint, bringt sie eine kritische Variable mit sich: **unvorhersehbare Latenz**. Da die DNS-basierte Umleitung auf ein unkontrolliertes Ökosystem zwischengeschalteter rekursiver Resolver angewiesen ist, um die Änderung zu bestätigen und zu verbreiten, ist sie grundsätzlich nicht mit den „Null-Ausfallzeit“-Anforderungen moderner Unternehmensdienste vereinbar. 
+Die Verwendung von DNS für Failover erzeugt in ** oft ein ** Sicherheitsgefühl. Obwohl die Änderung eines DNS-Eintrags, um auf einen Backup-Server zu verweisen, wie ein einfacher Wiederherstellungsweg erscheint, führt sie zu einer kritischen Variable: ** Latenz ** Da die DNS-basierte Umleitung auf einem unkontrollierten Ökosystem zwischengeschalteter rekursiver Resolver beruht, die die Änderung bestätigen und weitergeben müssen, ist sie grundlegend unvereinbar mit den Anforderungen an unterbrechungsfreie Verfügbarkeit moderner Unternehmensdienste. 
 
-### Das technische Szenario: DNS-Auflösung und der „steckengebliebene“ Client {#the-technical-scenario-dns-resolution-and-the-stuck-client}
+### Das technische Szenario: DNS-Auflösung und der „feststeckende“ Client {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
-In einem Standard-Netzwerk-Setup fungiert ein **virtueller Name** (der DNS-Name) als für Menschen lesbarer Einstiegspunkt für Benutzer. Damit Daten jedoch über das Netzwerk übertragen werden können, muss dieser Name in eine bestimmte **physische IP**-Adresse aufgelöst werden. 
+In einer Standardnetzwerkkonfiguration dient der virtuelle Name ** ** (der DNS-Name) als lesbarer Einstiegspunkt für Benutzer. Damit Daten jedoch über das Netzwerk übertragen werden können, muss dieser Name in eine spezifische physische IP-Adresse ** ** aufgelöst werden. 
 
-![Diagramm, das die DNS-Namensauflösung zur physischen IP 1 in einem Hochverfügbarkeitscluster zeigt](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
+![ Diagramm zur DNS-Namensauflösung zur physischen IP-Adresse 1 in einem Hochverfügbarkeitscluster ](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
- DNS-Auflösung und „steckengebliebene“ Clients auf physischer IP 1 in einem Hochverfügbarkeitscluster
+ DNS-Auflösung und „feststeckende“ Clients auf der physischen IP-Adresse 1 in einem Hochverfügbarkeitscluster
 
-#### Aktueller Status: Auflösung zu physischer IP 1 {#current-state-resolution-to-physical-ip-1}
+#### Aktueller Status: Auflösung der physischen IP-Adresse 1 {#current-state-resolution-to-physical-ip-1}
 
-Zunächst fragen **Client 1** und **Client 2** das DNS-System nach dem virtuellen Namen ab. Das System gibt **Physische IP 1** zurück. Die Clients stellen dann eine direkte Netzwerkverbindung (Socket) zu dieser spezifischen Hardwareadresse her. 
+Zunächst fragen Client 1 ( ** ** und Client 2 ** ** den virtuellen Namen beim DNS-System ab. Das System liefert die physische IP-Adresse ** und die Adresse ** . Anschließend stellen die Clients eine direkte Netzwerkverbindung (Socket) zu dieser spezifischen Hardwareadresse her. 
 
-#### Die Failover-Herausforderung: Umleitung auf physische IP 2 {#the-failover-challenge-rerouting-to-physical-ip-2}
+#### Die Failover-Herausforderung: Umleitung auf die physische IP-Adresse 2 {#the-failover-challenge-rerouting-to-physical-ip-2}
 
-Wenn der Server an der physischen IP 1 ausfällt, aktualisiert ein Administrator den DNS-Eintrag so, dass er auf **Physische IP 2** verweist. Um die Clients erfolgreich umzuleiten, muss eine „perfekte“ Reihenfolge eintreten: 
+Wenn der Server unter der physischen IP-Adresse 1 ausfällt, aktualisiert ein Administrator den DNS-Eintrag, sodass er auf die physische IP-Adresse 2 ** ** verweist. Für eine erfolgreiche Umleitung der Clients muss eine exakte Abfolge von Schritten eingehalten werden: 
 
-  * Die **Time to Live (TTL)** muss auf allen zwischengeschalteten ISPs und Unternehmensresolvern ablaufen.
+  * Die Gültigkeitsdauer (TTL) ** ** muss auf allen zwischengeschalteten ISP- und Unternehmensresolvern ablaufen.
   * Der lokale DNS-Cache auf Client 1 und Client 2 muss geleert werden.
-  * Die Anwendung muss ihren vorhandenen Socket schließen und eine _neue_ DNS-Suche starten.
+  * Die Anwendung muss ihre bestehende Socket-Verbindung schließen und eine _neue_ DNS-Abfrage initiieren.
 
-Wenn einer dieser Schritte versäumt wird, bleiben **Client 1 und Client 2 „stecken“** und versuchen, mit der toten physischen IP 1 zu kommunizieren, was trotz der Aktualisierung der DNS-Einträge zu Dienstausfallzeiten führt. 
+Wird einer dieser Schritte ausgelassen, bleiben Client 1 und Client 2 im Zustand ** "festgefahren" ** versuchen, mit der nicht mehr existierenden physischen IP-Adresse 1 zu kommunizieren, was trotz der Aktualisierung der DNS-Einträge zu einem Ausfall des Dienstes führt. 
 
 ### Die zwei „Black Boxes“ der DNS-Umleitung {#the-two-black-boxes-of-dns-redirection}
 
-  * **Rekursives Caching:** Viele Internetdienstanbieter (ISPs) und DNS-Resolver von Unternehmen ignorieren niedrige TTL-Einstellungen, um den Datenverkehr zu reduzieren, und speichern die „alte“ physische IP 1 oft für Minuten oder sogar Stunden über den angeforderten Ablauf hinaus im Cache.
-  * **Anwendungspersistenz:** Moderne Anwendungen (z. B. Java-basierte Microservices oder Webbrowser) führen beim Start oft nur einmal eine DNS-Suche durch. Auch wenn der DNS-Eintrag auf die physische IP 2 aktualisiert wird, verwendet die Anwendung weiterhin die ursprünglich in ihrem internen Speicher gespeicherte IP.
+  * ** Rekursives Caching: ** Viele Internetdienstanbieter (ISPs) und Firmen-DNS-Resolver ignorieren niedrige TTL-Einstellungen, um den Datenverkehr zu reduzieren, und speichern die "alte" physische IP 1 oft minuten- oder sogar stundenlang über das angeforderte Ablaufdatum hinaus.
+  * ** Anwendungspersistenz: ** Moderne Anwendungen (wie Java-basierte Microservices oder Webbrowser) führen oft nur einmal beim Start eine DNS-Abfrage durch. Selbst wenn der DNS-Eintrag auf die physische IP-Adresse 2 aktualisiert wird, verwendet die Anwendung weiterhin die im internen Speicher gespeicherte ursprüngliche IP-Adresse.
 
 
-### Fazit {#conclusion}
+### Schlussfolgerung {#conclusion}
 
-Die DNS-Umleitung ist eine inkonsistente Lösung für eine Hochverfügbarkeitslösung. Für ein sofortiges Failover innerhalb einer lokalen oder regionalen Umgebung ist eine softwaredefinierte **Virtuelle IP (VIP)** die einzige Möglichkeit, eine garantierte Persistenz ohne Ausfallzeiten sicherzustellen. 
+DNS-Umleitung ist für Hochverfügbarkeit keine zuverlässige Lösung. Für ein sofortiges Failover innerhalb einer lokalen oder regionalen Umgebung ist eine softwaredefinierte virtuelle IP-Adresse (VIP) ** ** die einzige Möglichkeit, eine unterbrechungsfreie Verfügbarkeit zu gewährleisten. 
 
 ## Vergleich: Virtuelle IP-Implementierung, Latenz und Anwendungstransparenz {#vip-vs-dns-comparison}
 
-**Technischer Vergleich von Virtual IP (VIP)-Umleitungsmethoden mit DNS-Umleitung für Hochverfügbarkeit und Notfallwiederherstellung.**
+** Technischer Vergleich von Virtual-IP-Umleitungsmethoden (VIP) und DNS-Umleitung für Hochverfügbarkeit und Notfallwiederherstellung. **
 
-Umgebung und Anwendungsfall | Hochverfügbarkeitstyp | Umleitungsmechanismus | Netzwerklatenz | Anwendungstransparenz und IP-Lokalität  
+Umgebung & Anwendungsfall | Hochverfügbarkeitstyp | Umleitungsmechanismus | Netzwerklatenz | Anwendungstransparenz & IP-Lokalität  
 ---|---|---|---|---  
-Primär/Backup (Hochverfügbarkeit) | Spiegelcluster | Unentgeltliche ARP/MAC-Übernahme | Sehr niedrig: Zeit zum Erkennen und Senden von Broadcast-GARP | Volle Transparenz: Virtuelle IP ist lokal auf dem aktiven Knoten. Die Client-IP bleibt erhalten.  
-Lastausgleich (Aktiv/Aktiv) | Farm-Cluster | Netzwerkfilter auf Kernel-Ebene / GARP | Sehr gering: Zeit zum Erkennen und Neukonfigurieren von Netzwerkfiltern | Volle Transparenz: Virtuelle IP ist auf allen Knoten lokal. Die Client-IP bleibt erhalten.  
-Gleiches Subnetz / erweitertes LAN (VLAN-Stretching) | Disaster Recovery (Remote-Rechenzentren) | Standard-IP-Aliasing / GARP | Niedrig: Hängt von der gestreckten VLAN-RTT (Round Trip Time) ab. | Volle Transparenz: Virtuelle IP ist lokal auf den Knoten. Die Client-IP bleibt erhalten.  
-Verschiedene Subnetze | Disaster Recovery (Remote-Rechenzentren / Cloud) | Externer Load Balancer | Moderat: Höhere Failover-Latenz aufgrund der Load Balancer-Integritätsprüfungsintervalle | ⚠️ Teiltransparenz: Verwendet SNAT/DNAT. Virtuelle IP ist auf den Knoten **NICHT** lokal. Die Client-IP bleibt **NICHT** erhalten. Die Anwendung muss dies unterstützen.  
-DNS-Umleitung: Kein VIP | Disaster Recovery (Remote-Rechenzentren) | DNS-Eintragsaktualisierung (Name / physische IP) | Hoch/Unvorhersehbar: Abhängig von DNS TTL (Time To Live) und Client-DNS-Caching. | ⚠️ Unzuverlässig: Der Client muss DNS neu auflösen. In den meisten Fällen verwenden Clients weiterhin die veraltete IP, die beim Start aufgelöst wurde, und werden nach einem Failover nicht umgeleitet.  
+Primär/Backup (Hochverfügbarkeit) | Mirror Cluster | Gratuitous ARP / MAC Takeover | Sehr niedrig: Zeit zum Erkennen und Senden von Broadcast-GARP | Volle Transparenz: Virtuelle IP ist lokal auf dem aktiven Knoten. Client-IP bleibt erhalten.  
+Lastverteilung (Aktiv/Aktiv) | `Farm` Cluster | Netzwerkfilter auf Kernel-Ebene / GARP | Sehr niedrig: Zeit zum Erkennen und Rekonfigurieren von Netzwerkfiltern | Volle Transparenz: Virtuelle IP ist auf allen Knoten lokal. Client-IP bleibt erhalten.  
+Gleiches Subnetz / Erweitertes LAN (VLAN-Stretching) | Disaster Recovery (Remote-Rechenzentren) | Standard-IP-Aliasing / GARP | Niedrig: Abhängig von der Round-Trip-Time (RTT) des gestreckten VLANs | Volle Transparenz: Die virtuelle IP ist lokal auf den Knoten. Die Client-IP bleibt erhalten.  
+Unterschiedliche Subnetze | Disaster Recovery (Remote-Rechenzentren/Cloud) | Externer Load Balancer | Mittel: Höhere Failover-Latenz aufgrund der Integritätsprüfungsintervalle des Load Balancers | ⚠️ Teilweise Transparenz: Verwendet SNAT/DNAT. Die virtuelle IP ist ** NICHT ** lokal auf den Knoten. Die Client-IP wird ** NICHT ** beibehalten. Die Anwendung muss dies unterstützen.  
+DNS-Umleitung: Keine VIP | Notfallwiederherstellung (Remote-Rechenzentren) | DNS-Eintragsaktualisierung (Name/physische IP) | Hoch/Unvorhersehbar: Abhängig von der DNS-Gültigkeitsdauer (TTL) und dem Client-DNS-Caching. | ⚠️ Unzuverlässig: Client muss DNS neu auflösen. Meistens verwenden Clients weiterhin die beim Start aufgelöste, veraltete IP-Adresse und werden nach einem Failover nicht umgeleitet.  
   
-## Konfigurieren einer virtuellen IP-Adresse für Netzwerklastenausgleich und hohe Verfügbarkeit {#virtual-ip-configuration-load-balancing-ha}
+## Konfigurieren einer virtuellen IP-Adresse für Netzwerklastausgleich und Hochverfügbarkeit {#virtual-ip-configuration-load-balancing-ha}
 
 
 {{%  insert-safekit-farm-video-de  %}}
  
 
-## Häufig gestellte Fragen zu Virtual IP (VIP) {#virtual-ip-faq}
+## Häufig gestellte Fragen zur virtuellen IP-Adresse (VIP) {#virtual-ip-faq}
 
-### Virtuelle IP (VIP) und Netzwerk {#virtual-ip-vip--networking}
+### Virtuelle IP (VIP) & Netzwerk {#virtual-ip-vip--networking}
 
-Was ist eine virtuelle IP (VIP) und wie unterscheidet sie sich von einer physischen IP?
+Was ist eine virtuelle IP-Adresse (VIP) und wie unterscheidet sie sich von einer physischen IP-Adresse?
 
-Während eine **physische IP-Adresse** an eine bestimmte Netzwerkschnittstelle gebunden ist, ist eine **Virtuelle IP (VIP)** eine „schwebende“ Adresse unabhängig von der Hardware. In einem SafeKit-Cluster fungiert der VIP als dauerhafter Einstiegspunkt; Wenn der primäre Server ausfällt, migriert der VIP automatisch auf einen fehlerfreien sekundären Knoten, sodass keine Neukonfiguration des Clients erforderlich ist.
+Während eine physische IP-Adresse ** ** an eine bestimmte Netzwerkschnittstelle gebunden ist, ist eine virtuelle IP-Adresse (VIP) vom Typ ** ( ** ) eine „schwebende“ Adresse, die unabhängig von der Hardware ist. In einem Cluster SafeKit fungiert die VIP als permanenter Einstiegspunkt; fällt der primäre Server aus, migriert die VIP automatisch zu einem fehlerfreien sekundären Knoten, wodurch eine Neukonfiguration der Clients sichergestellt wird.
 
-Benötige ich einen Hardware-Load-Balancer, um eine virtuelle IP zu verwenden?
+Benötige ich einen Hardware-Loadbalancer, um eine virtuelle IP-Adresse zu verwenden?
 
-Nein. **SafeKit Hochverfügbarkeitssoftware** verwaltet die virtuelle IP auf Softwareebene. In Architekturen mit demselben Subnetz nutzt es **IP-Aliasing** und **Gratuitous ARP (GARP)**, um den Datenverkehr umzuleiten. Dadurch entfallen die Kosten und die Komplexität externer Hardware-Load-Balancer oder dedizierter Proxyserver.
+Nein. Die Hochverfügbarkeitssoftware ** SafeKit ** verwaltet die virtuelle IP-Adresse auf Softwareebene. In Architekturen innerhalb desselben Subnetzes nutzt sie IP-Aliasing ** ** und ** ARP (GARP) ** zur Umleitung des Datenverkehrs. Dadurch entfallen die Kosten und die Komplexität externer Hardware-Loadbalancer oder dedizierter Proxy-Server.
 
-Was ist Gratuitous ARP (GARP) und warum wird es verwendet?
+Was ist Gratuitous ARP (GARP) und wozu wird es verwendet?
 
-**Gratuitous ARP (GARP)** ist ein Netzwerk-Broadcast, der die ARP-Tabellen von Netzwerk-Switches und Routern aktualisiert. Während eines Failovers sendet der neue Primärserver ein GARP-Paket, um bekannt zu geben, dass die **virtuelle IP** nun seiner MAC-Adresse zugeordnet ist, wodurch eine sofortige Umleitung des Datenverkehrs über die Netzwerkstruktur erzwungen wird.
+** Gratuitous ARP (GARP) ** ist ein Netzwerk-Broadcast, der die ARP-Tabellen von Netzwerk-Switches und Routern aktualisiert. Im Falle eines Failovers sendet der neue primäre Server ein GARP-Paket, um bekannt zu geben, dass die virtuelle IP-Adresse ** ** nun seiner MAC-Adresse zugeordnet ist. Dies erzwingt eine sofortige Umleitung des Datenverkehrs im Netzwerk.
 
-Kann ich einen DNS-Namen mit einer virtuellen IP verknüpfen?
+Kann ich einen DNS-Namen mit einer virtuellen IP-Adresse verknüpfen?
 
-**Ja.** Sie können einem VIP einen DNS-Namen zuordnen, indem Sie einen Standard-A-Eintrag erstellen. Der Hauptvorteil besteht darin, dass die Umleitung auf **VIP-Ebene** (über ARP oder Netzwerkumleitung) und **nicht auf DNS-Ebene** verwaltet wird. Dadurch wird **Anwendungstransparenz** gewährleistet, indem Verzögerungen im Zusammenhang mit der DNS-Weitergabe und dem TTL-Ablauf vermieden werden.
+** Ja. ** Sie können einen DNS-Namen mit einer virtuellen IP-Adresse (VIP) verknüpfen ** indem Sie einen Standard-A-Record erstellen. Der Hauptvorteil besteht darin ** dass die Umleitung auf VIP-Ebene (über ARP oder Netzwerkumleitung) und nicht auf DNS-Ebene ** . ** Dadurch wird die Anwendungstransparenz gewährleistet ** da Verzögerungen durch DNS-Propagation und TTL-Ablauf vermieden werden. **
 
-### Cloud- und erweiterte Architekturen {#cloud--advanced-architectures}
+### Cloud & Erweiterte Architekturen {#cloud--advanced-architectures}
 
-Wie funktioniert eine virtuelle IP in der Cloud (AWS, Azure, GCP)?
+Wie funktioniert eine virtuelle IP in der Cloud ( AWS , Azure , GCP )?
 
-In Cloud-Umgebungen, in denen Layer 2 (ARP) eingeschränkt ist, lässt sich SafeKit in **Cloud Load Balancer** (AWS ELB, Azure LB oder Google GCLB) integrieren. SafeKit stellt eine **Health Check-URL** bereit, die die Plattform überwacht, um den Datenverkehr mithilfe von SNAT/DNAT an den aktiven Knoten weiterzuleiten.
+In Cloud-Umgebungen mit eingeschränkter Layer-2-Funktionalität (ARP) integriert sich SafeKit in Cloud Load Balancer ( ** ) oder Cloud Load Balancer ( ** ) ( AWS ELB, Azure LB oder Google GCLB). SafeKit stellt eine Health-Check-URL ** ** , die von der Plattform überwacht wird, um den Datenverkehr mithilfe von SNAT/DNAT an den aktiven Knoten weiterzuleiten.
 
-Ist ein erweitertes LAN besser als ein Load Balancer für die Notfallwiederherstellung?
+Ist ein erweitertes LAN für die Notfallwiederherstellung besser geeignet als ein Load Balancer?
 
-**Ja**. Für entfernte Rechenzentren ist ein **Erweitertes LAN (Stretched VLAN)** oft besser, da es die **Anwendungstransparenz** über alle Standorte hinweg aufrechterhält. Durch die Beibehaltung **der gleichen virtuellen IP** kommunizieren die Anwendung und ihre Clients weiterhin über dieselbe Identität, wodurch der Übergang zwischen Rechenzentren völlig nahtlos erfolgt.
+** Ja ** . Für entfernte Rechenzentren ist ein erweitertes LAN (Stretched VLAN) ** oft überlegen ** da es die Anwendungstransparenz ** über ** ** ** Anwendung und ihre Clients weiterhin mit derselben Identität, wodurch der Übergang zwischen Rechenzentren nahtlos erfolgt.
 
-Welche Einschränkungen gibt es bei der DNS-Umleitung im Vergleich zu virtueller IP?
+Welche Einschränkungen bestehen bei DNS-Rerouting im Vergleich zu virtuellen IP-Adressen?
 
-**DNS-Umleitung** wird durch **TTL (Time to Live)** und clientseitiges Caching begrenzt, was die Wiederherstellung um Stunden verzögern kann. Ein großer Nachteil besteht darin, dass **Clients, die ihren DNS-Namen nicht erneut auflösen, beim Versuch, eine Verbindung zum ausgefallenen Server herzustellen, stecken bleiben**. Im Gegensatz dazu bietet eine **virtuelle IP** ein sofortiges Layer-2-Failover, das den gesamten Datenverkehr sofort umleitet und so die Konnektivität unabhängig vom clientseitigen DNS-Cache-Status gewährleistet.
+Die DNS-Umleitung ** ** ist durch die Gültigkeitsdauer (TTL, ** , TTL (Time to Live, ** )) und clientseitiges Caching eingeschränkt, was die Wiederherstellung um Stunden verzögern kann. Ein wesentlicher Nachteil besteht darin, dass Clients ** , die ihren DNS-Namen nicht erneut auflösen, in der Situation verharren ** und versuchen, eine Verbindung zum ausgefallenen Server herzustellen. Im Gegensatz dazu bietet eine virtuelle IP ** ** ein sofortiges Layer-2-Failover, das den gesamten Datenverkehr umgehend umleitet und so die Konnektivität unabhängig vom Status des clientseitigen DNS-Caches gewährleistet.
 
-### Transparenz und Sicherheit {#transparency--security}
+### Transparenz & Sicherheit {#transparency--security}
 
-Warum ist eine lokale virtuelle IP für die Anwendungstransparenz wichtig?
+Warum ist eine lokale virtuelle IP-Adresse für die Anwendungstransparenz wichtig?
 
-Eine lokale **Virtuelle IP (VIP)** gewährleistet **Anwendungstransparenz**, indem sie der Software ermöglicht, sich an eine dauerhafte VIP zu binden. SafeKit übernimmt die Umleitung auf **Kernel-Ebene**, sodass die Anwendung im Gegensatz zu DNAT-Lösungen, bei denen sich die gebundene IP ändert, nichts von Cluster-Failovers weiß.
+Eine lokale virtuelle IP-Adresse (VIP) ** ** gewährleistet die Anwendungstransparenz ** ** , indem sie der Software die Bindung an eine persistente VIP ermöglicht. SafeKit übernimmt die Umleitung auf Kernel-Ebene ** ** , sodass die Anwendung im Gegensatz zu DNAT-Lösungen, bei denen sich die gebundene IP-Adresse ändert, keine Auswirkungen von Cluster-Failovern bemerkt.
 
-Behält die Verwendung einer virtuellen IP die ursprüngliche IP-Adresse des Clients bei?
+Bleibt die ursprüngliche IP-Adresse des Clients bei der Verwendung einer virtuellen IP-Adresse erhalten?
 
-Ja. SafeKit vermeidet Source Network Address Translation (SNAT). Da sich die VIP lokal auf dem aktiven Server befindet, erhält die Anwendung die **ursprüngliche Client-IP**, die für Sicherheitsüberwachung, Sitzungspersistenz und behördliche Protokollierung von entscheidender Bedeutung ist.
+Ja. SafeKit umgeht die Quell-Netzwerkadressübersetzung (SNAT). Da die virtuelle IP-Adresse (VIP) lokal auf dem aktiven Server liegt, empfängt die Anwendung die ursprüngliche Client-IP-Adresse ** ** , was für Sicherheitsüberprüfungen, Sitzungspersistenz und die Einhaltung gesetzlicher Vorschriften entscheidend ist.
 
 
 {{%  insert-safekit-hub-de  %}}

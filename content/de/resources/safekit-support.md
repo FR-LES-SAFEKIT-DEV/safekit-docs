@@ -1,56 +1,56 @@
 ---
-title: "SafeKit AI und Support"
+title: "SafeKit KI & Support"
 canonical: "https://safekit.eviden.com/de/resources/safekit-support/"
-description: "SafeKit bietet drei Supportkanäle: vertraglichen Standardsupport mit einer rund um die Uhr möglichen Störungsmeldung, kostenlose KI-gestützte Unterstützung über SafeKit AI sowie ein kostenloses Online-Zertifizierungs- und Schulungsprogramm."
+description: "SafeKit bietet drei Supportkanäle: standardmäßigen Vertragssupport mit 24/7-Störungsmeldung, kostenlose KI-gestützte Unterstützung über SafeKit AI und ein kostenloses Online-Zertifizierungs- und Schulungsprogramm."
 category: "resources"
 lang: "de"
-topics: "Kostenlose KI-Unterstützung der Stufe 1, Standardsupport und Wartung, Kostenloses Zertifizierungs- und Schulungsprogramm, 🔍 SafeKit-Navigationshub für Hochverfügbarkeit"
+topics: "Kostenloser KI-Support (Level 1), Standard-Support und -Wartung, kostenloses Zertifizierungs- und Schulungsprogramm, 🔍 SafeKit Hochverfügbarer Navigationshub"
 ---
 
-# SafeKit AI und Support {#safekit-ai--support}
+# SafeKit KI & Unterstützung {#safekit-ai--support}
 
-## Kostenlose KI-Unterstützung der Stufe 1 {#ai-support}
+## Kostenloser KI-Support der Stufe 1 {#ai-support}
 
-**🤖 SafeKit mit Ihrem bevorzugten LLM verwenden**
+** 🤖 Verwende SafeKit mit deinem bevorzugten LLM **
 
-  1. Öffnen Sie einen KI-Assistenten wie Claude, ChatGPT, GitHub Copilot oder ein anderes LLM.
-  2. Fügen Sie den Inhalt von [llms.txt](</llms.txt>) in den Chat ein.
-  3. Um zu prüfen, ob das LLM die SafeKit-Wissensdatenbank korrekt verarbeitet hat, fragen Sie: `Was ist der Standardwert von maxloop in SafeKit?`
-  4. Die richtige Antwort lautet `3`.
-  5. Anschließend können Sie beispielsweise folgende Fragen stellen:
-     * Vertriebs- und Pre-Sales-Fragen
-     * Schritt-für-Schritt-Anleitungen zur Installation
+  1. Öffnen Sie einen KI-Assistenten wie Claude, ChatGPT, GitHub Copilot oder einen anderen LLM.
+  2. Füge den Inhalt von [ llms.txt ](</llms.txt>) in den Chat ein.
+  3. Um zu überprüfen, ob das LLM die Wissensbasis SafeKit korrekt verarbeitet hat, fragen Sie: `What is the default value of maxloop in SafeKit?`
+  4. Die richtige Antwort lautet `3` .
+  5. Sie können dann Fragen stellen wie: 
+     * Fragen zu Vertrieb und Vorverkauf
+     * Schritt-für-Schritt-Installationsanleitung
      * Unterstützung bei Konfiguration und Einrichtung
      * Technische Fehlerbehebung
-     * Protokollanalyse
+     * Log-Analyse
 
 
-## Standardsupport und Wartung {#standard-support}
+## Standard Support & Maintenance {#standard-support}
 
-Vorbehaltlich der Zahlung der entsprechenden Support- und Wartungsgebühren hat der Endnutzer Anspruch auf folgende Remote-Leistungen:
+Vorbehaltlich der Zahlung der entsprechenden Support- und Wartungsgebühren hat der Endnutzer Anspruch auf folgende Fernwartungsdienste:
 
-  * Website-Zugang für bis zu vier benannte technische Ansprechpartner zum Europäischen Support Center rund um die Uhr an 365 Tagen im Jahr, um Störungen zu melden oder Unterstützung anzufordern.
-  * Online-Support durch das Support Center von Montag bis Freitag, 9:00 bis 17:00 Uhr (Ortszeit des europäischen Callcenters).
-  * Zugang für bis zu vier benannte technische Ansprechpartner zu einer Wissensdatenbank, FAQ und weiteren Online-Informationsangeboten.
-  * Nach Eingang einer Störungsmeldung bestätigt Eviden den Eingang innerhalb von vier Support-Center-Arbeitsstunden.
-  * Bereitstellung von Service Packs, Updates und Upgrades für das lizenzierte Produkt ohne zusätzliche Kosten.
-  * Anspruch auf neue Lizenzschlüssel ohne zusätzliche Kosten, wenn sich die Hostnamen der lizenzierten Server ändern.
-  * Anmeldung erforderlich.
+  * Webzugriff für bis zu vier benannte technische Ansprechpartner an das europäische Supportzentrum, 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr, zum Zweck der Meldung eines Vorfalls oder der Anforderung von Unterstützung.
+  * Online-Support durch das Support-Center von 9:00 bis 17:00 Uhr, europäische Ortszeit, Montag bis Freitag.
+  * Zugang für bis zu vier benannte technische Ansprechpartner zu einer Wissensdatenbank, FAQs und anderen Online-Informationseinrichtungen.
+  * Nach Eingang einer Meldung bestätigt Eviden den Empfang innerhalb von vier Arbeitszeiten des Support-Centers.
+  * Lieferung von Service Packs, Updates und Upgrades für das lizenzierte Produkt ohne zusätzliche Kosten.
+  * Recht auf kostenlose Neubeschaffung von Lizenzschlüsseln im Falle einer Änderung der Hostnamen der lizenzierten Server.
+  * Anmeldung erforderlich
 
 
-[ Support kontaktieren ](<https://customercare.evidian.com/>)
+[ Call Desk ](<https://customercare.evidian.com/>)
 
 ## Kostenloses Zertifizierungs- und Schulungsprogramm {#training}
 
-SafeKit bietet ein kostenloses Online-Zertifizierungs- und Schulungsprogramm zu Hochverfügbarkeitskonzepten, Clusterarchitektur, Installation, Konfiguration und Administration für die Module mirror und farm.
+SafeKit bietet ein kostenloses Online-Zertifizierungs- und Schulungsprogramm an, das Hochverfügbarkeitskonzepte, Clusterarchitektur, Installation, Konfiguration und Administration abdeckt – sowohl für das Modul mirror als auch für das Modul `farm` .
 
-  * Selbstgesteuerte Online-Module, jederzeit verfügbar
-  * Vollständig kostenlos
-  * Zertifikat nach Abschluss
-  * 12 Videos (ca. 3 Std. 40 Min.) zu Einführung, Demonstrationen, Installation, erweiterter Konfiguration und Fehlerbehebung
+  * Online-Module im Selbststudium, jederzeit verfügbar
+  * Völlig kostenlos
+  * Zertifikat wird nach Abschluss verliehen
+  * 12 Videos (ca. 3 Stunden 40 Minuten) mit Einführung, Demonstrationen, Installation, erweiterter Konfiguration und Fehlerbehebung
 
 
-[ Kostenlose Schulung und Zertifizierung ](</resources/safekit-on-line-training/>)
+[ Kostenlose Schulung und Zertifizierung ](</de/resources/safekit-on-line-training/>)
 
 
 {{%  insert-safekit-hub-de  %}}

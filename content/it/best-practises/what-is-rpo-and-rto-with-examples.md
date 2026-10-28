@@ -1,279 +1,279 @@
 ---
-title: "Cosa sono RPO e RTO? Definizioni, esempi e strategie HA"
+title: "Che cosa sono RPO e RTO? Definizioni, esempi e strategie di alta disponibilità."
 canonical: "https://safekit.eviden.com/it/best-practises/what-is-rpo-and-rto-with-examples/"
-description: "Impara le definizioni di RPO (Recovery Point Objective) e RTO (Recovery Time Objective) con esempi chiari. Scopri come SafeKit ottiene una perdita di dati pari a zero (RPO=0) e un failover rapido per garantire la continuità aziendale 24 ore su 24, 7 giorni su 7."
+description: "Apprendete le definizioni di RPO (Recovery Point Objective) e RTO (Recovery Time Objective) con esempi chiari. Scoprite come SafeKit raggiunge l'assenza di perdita di dati (RPO=0) e il failover rapido per garantire la continuità operativa 24 ore su 24, 7 giorni su 7."
 category: "best-practises"
 lang: "it"
-topics: "Breve riepilogo: RPO e RTO, Sommario, Come posso calcolare RPO e RTO per una soluzione ad alta disponibilità e continuità aziendale?, Come posso determinare RPO e RTO per una soluzione di backup e ripristino di emergenza?, In che modo un cluster mirror SafeKit raggiunge un RPO pari a zero e un RTO basso?, Quali sono i benchmark RTO per un cluster farm SafeKit con bilanciamento del carico?, Tabelle di confronto: RTO e RPO, Alta disponibilità in azione: in tempo reale Demo di RPO zero e RTO quasi zero, Domande frequenti: ottimizzazione di RPO e RTO per la continuità aziendale, 🔍 Hub di navigazione ad alta disponibilità SafeKit"
+topics: "Riepilogo rapido: RPO vs. RTO, Indice, Come si calcolano RPO e RTO per una soluzione di alta disponibilità e continuità operativa?, Come si determinano RPO e RTO per una soluzione di backup e ripristino di emergenza?, Come fa un cluster SafeKit Mirror a raggiungere RPO zero e RTO basso?, Quali sono i benchmark RTO per un cluster SafeKit `Farm` con bilanciamento del carico?, Tabelle di confronto: RTO vs RPO, Alta disponibilità in azione: demo in tempo reale di RPO zero e RTO quasi zero, FAQ: ottimizzazione di RPO e RTO per la continuità operativa, 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
 ---
 
-# Cosa sono RPO e RTO? Definizioni, esempi e strategie HA {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
+# Che cosa sono RPO e RTO? Definizioni, esempi e strategie di alta disponibilità {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
 
-## Breve riepilogo: RPO e RTO {#article-summary}
+## Riepilogo rapido: RPO vs. RTO {#article-summary}
 
-  * **RPO (Recovery Point Objective):** Misura la **perdita di dati**. Definisce la durata massima dei file che devono essere ripristinati affinché le operazioni possano riprendere.
-  * **RTO (Recovery Time Objective):** misura i **tempi di inattività**. È l'intervallo di tempo entro il quale un processo aziendale deve essere ripristinato.
-  * **La differenza fondamentale:** RPO riguarda **archiviazione/backup**, mentre RTO riguarda la **velocità di ripristino/failover**.
-  * **Funzionalità SafeKit:** Fornisce **0 RPO** (nessuna perdita di dati) e **RTO basso** (riavvio rapido) tramite replica sincrona e failover automatico.
+  * ** RPO (Recovery Point Objective): ** Misura la perdita di dati ** ** . Definisce l'età massima dei file che devono essere recuperati affinché le operazioni possano riprendere.
+  * ** RTO (Recovery Time Objective): ** Misura il tempo di inattività ** ** . È la durata di tempo entro la quale un processo aziendale deve essere ripristinato.
+  * ** La differenza chiave: ** RPO riguarda ** archiviazione/backup ** , mentre RTO riguarda la velocità di ripristino/failover ** ** .
+  * ** SafeKit Capacità: ** Offre ** 0 RPO ** (nessuna perdita di dati) e ** basso RTO ** (riavvio rapido) tramite replica sincrona e failover automatico.
 
 
-![Un grafico comparativo di RPO (Recovery Point Objective) e RTO (Recovery Time Objective), che illustra come SafeKit ottiene zero perdite di dati e un rapido riavvio delle applicazioni.](/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg "w:512")
+![ Un grafico comparativo di RPO (Recovery Point Objective) e RTO (Recovery Time Objective), che illustra come SafeKit raggiunga zero perdita di dati e un riavvio rapido dell'applicazione. ](/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg "w:512")
 
-**RPO e RTO: confronto tra perdita di dati e tempi di ripristino in SafeKit**
+** RPO vs. RTO: Confronto tra perdita di dati e tempo di ripristino in SafeKit **
 
-## Sommario {#table-of-contents}
+## Indice {#table-of-contents}
 
-  * [Come posso calcolare RPO e RTO per una soluzione ad alta disponibilità e continuità aziendale?](#calculate-rpo-rto-high-availability)
-  * [Come posso determinare RPO e RTO per una soluzione di backup e ripristino di emergenza?](#calculate-rpo-rto-backup-solution)
-  * [Come fa un mirror cluster SafeKit a raggiungere un RPO pari a zero e un RTO basso?](#rpo-rto-safekit-mirror-cluster)
-  * [Quali sono i parametri di riferimento RTO per un cluster farm SafeKit con bilanciamento del carico?](#rpo-rto-safekit-farm-cluster)
-  * [Tabelle di confronto: RTO vs RPO](#rpo-vs-rto-comparison)
-  * [Elevata disponibilità in azione: demo in tempo reale di RPO zero e RTO quasi zero](#safekit-rpo-rto-video-demos)
-  * [Domande frequenti su RPO e RTO](#faq-rpo-rto)
-  * [SafeKit Hub di navigazione ad alta disponibilità](#hub)
+  * [ Come si calcolano RPO e RTO per una soluzione di alta disponibilità e continuità operativa? ](#calculate-rpo-rto-high-availability)
+  * [ Come si determinano RPO e RTO per una soluzione di backup e ripristino di emergenza? ](#calculate-rpo-rto-backup-solution)
+  * [ Come fa un cluster SafeKit Mirror a raggiungere RPO zero e RTO basso? ](#rpo-rto-safekit-mirror-cluster)
+  * [ Quali sono i benchmark RTO per un cluster SafeKit `Farm` con bilanciamento del carico? ](#rpo-rto-safekit-farm-cluster)
+  * [ Tabelle comparative: RTO vs RPO ](#rpo-vs-rto-comparison)
+  * [ Alta disponibilità in azione: dimostrazioni in tempo reale di RPO zero e RTO quasi zero ](#safekit-rpo-rto-video-demos)
+  * [ Domande frequenti su RPO e RTO ](#faq-rpo-rto)
+  * [ SafeKit Hub di navigazione ad alta disponibilità ](#hub)
 
 
 
 {{%  insert-safekit-4-buttons-it  %}}
  
 
-## Come posso calcolare RPO e RTO per una soluzione ad alta disponibilità e continuità aziendale? {#calculate-rpo-rto-high-availability}
+## Come si calcolano RPO e RTO per una soluzione di alta disponibilità e continuità operativa? {#calculate-rpo-rto-high-availability}
 
-### Cos'è l'alta disponibilità? {#what-is-high-availability}
+### Che cos'è l'alta disponibilità? {#what-is-high-availability}
 
-**Alta disponibilità (HA)** è un'architettura tecnica progettata per garantire che un sistema rimanga operativo e accessibile per una percentuale di tempo specificata (ad esempio, 99,99%).
-
-
-![Logo del software ad alta disponibilità SafeKit che rappresenta il clustering SANless e la replica sincrona](/wp-content/uploads/2026/01/safekit-icon-512x512-1.png "w:128")
+** Alta disponibilità (HA) ** è un'architettura tecnica progettata per garantire che un sistema rimanga operativo e accessibile per una percentuale di tempo specificata (ad esempio, 99,99%).
 
 
-Per raggiungere gli obiettivi RPO e RTO definiti in un **Piano di continuità aziendale**, l'alta disponibilità viene generalmente implementata attraverso due architetture principali:
+![ SafeKit logo del software ad alta disponibilità che rappresenta il clustering senza SAN e la replica sincrona ](/wp-content/uploads/2026/01/safekit-icon-512x512-1.png "w:128")
 
-  * **Sistema di dischi condivisi su SAN:** un cluster tradizionale in cui 2 nodi sono collegati a una Storage Area Network (SAN) centrale. Se un nodo fallisce, l'altro assume l'accesso ai dati condivisi.
-  * **Replica sincrona senza SAN:** ​​una moderna architettura "shared-nothing", implementata dal software [SafeKit](</> "SafeKit High Availability Software"), in cui i dati vengono replicati in tempo reale tra i dischi locali di 2 nodi indipendenti, eliminando la necessità di una SAN.
+
+Per raggiungere gli obiettivi RPO e RTO definiti in un piano di continuità operativa ** ** , l'alta disponibilità viene in genere implementata attraverso due architetture principali:
+
+  * Sistema di dischi condivisi ** su SAN: ** Un cluster tradizionale in cui 2 nodi sono collegati a una Storage Area Network (SAN) centrale. Se un nodo si guasta, l'altro subentra nell'accesso ai dati condivisi.
+  * Replica sincrona senza SAN: ** Una moderna architettura "shared-nothing" implementata dal software [ SafeKit ](</> "SafeKit High Availability Software") , ** cui i dati vengono replicati in tempo reale tra dischi locali di 2 nodi indipendenti, eliminando la necessità di una SAN.
 
 
 ### Qual è l'RPO di una soluzione ad alta disponibilità? {#what-is-rpo-high-availability}
 
-**RPO (Recovery Point Objective)** definisce il volume massimo tollerabile di perdita di dati misurato nel tempo. Per una vera **soluzione ad alta disponibilità**, l'RPO target è **zero**.
+** RPO (Recovery Point Objective) ** definisce il volume massimo tollerabile di perdita di dati misurato nel tempo. Per una vera soluzione ad alta disponibilità ** ** , l'RPO target è ** zero ** .
 
-Quando si implementa un cluster ad alta disponibilità con failover automatico, un **RPO pari a zero** garantisce il riavvio dell'applicazione senza perdita di dati.
+Quando si implementa un cluster ad alta disponibilità con failover automatico, un RPO pari a zero ** e un RPO pari a zero ** garantiscono il riavvio dell'applicazione senza perdita di dati.
 
-  * **Sistema di dischi condivisi su SAN:** ​​poiché entrambi i nodi accedono agli **esatti stessi blocchi fisici di dati**, non vi è alcun "delta" o ritardo tra i nodi, garantendo la totale coerenza dei dati durante un failover.
-  * **Replica sincrona basata su software:** un approccio SANless in cui ogni operazione di "scrittura" viene replicata in tempo reale sulla rete. L'applicazione riceve un **riconoscimento di scrittura** solo dopo che i dati sono stati archiviati in modo sicuro su entrambi i nodi. Questo processo sincrono di "doppia scrittura" garantisce **nessuna perdita di dati** anche in caso di guasto del server primario.
+  * Sistema ** dischi condivisi ** su SAN: ** Poiché entrambi i nodi accedono agli stessi blocchi di dati fisici ** , non vi è alcun "delta" o ritardo tra i nodi, garantendo la totale coerenza dei dati durante un failover.
+  * ** Replica sincrona basata su software: ** Un approccio SANless in cui ogni operazione di "scrittura" viene replicata in tempo reale sulla rete. L'applicazione riceve una ** conferma di scrittura ** solo dopo che i dati sono stati archiviati in modo sicuro su entrambi i nodi. Questo processo sincrono di "doppia scrittura" garantisce ** zero perdita di dati ** anche in caso di guasto del server primario.
 
 
 ### Qual è l'RTO di una soluzione ad alta disponibilità? {#what-is-rto-high-availability}
 
-**RTO (Recovery Time Objective)** rappresenta la durata massima tollerabile del tempo di inattività dopo un'interruzione del servizio. Nel contesto dell'**alta disponibilità**, l'RTO dovrebbe essere minimo per garantire l'accesso continuo alle applicazioni critiche.
+** RTO (Recovery Time Objective) ** rappresenta la durata massima tollerabile del tempo di inattività dopo un'interruzione del servizio. Nel contesto di ** alta disponibilità ** , l'RTO dovrebbe essere minimo per garantire l'accesso continuo alle applicazioni critiche.
 
-Per ottenere un RTO basso, una soluzione ad alta disponibilità utilizza il **failover automatico** per rilevare guasti hardware o software e riavviare immediatamente l'applicazione. In un tipico cluster ad alta disponibilità, l'**RTO è di circa un minuto**, calcolato come:
+Per ottenere un RTO basso, una soluzione ad alta disponibilità utilizza il failover automatico ** ** per rilevare guasti hardware o software e riavviare immediatamente l'applicazione. In un tipico cluster ad alta disponibilità, l'RTO ** è di circa un minuto ** , calcolato come:
 
-  * **Tempo di rilevamento errore:** l'intervallo richiesto dal sistema per identificare la perdita di battito cardiaco di un nodo o di un'applicazione.
-  * **Tempo di riavvio automatico:** il tempo necessario per l'inizializzazione dei servizi applicativi sul nodo sopravvissuto.
-
-
-## Come posso determinare RPO e RTO per una soluzione di backup e ripristino di emergenza? {#calculate-rpo-rto-backup-solution}
-
-### Cos'è una soluzione di backup? {#what-is-backup}
-
-Una **Soluzione di backup** è una strategia di protezione dei dati progettata per creare copie periodiche dei dati su un dispositivo di archiviazione secondario o sul cloud. A differenza dell'elevata disponibilità, il backup si concentra sulla **conservazione dei dati a lungo termine** e sul ripristino dalla corruzione dei dati o da disastri a livello di sito.
+  * ** Tempo di rilevamento del guasto: ** L'intervallo necessario al sistema per identificare una perdita di heartbeat di un nodo o di un'applicazione.
+  * Tempo di riavvio automatico ** : ** Il tempo necessario per l'inizializzazione dei servizi dell'applicazione sul nodo rimanente.
 
 
-![Icona della soluzione di backup che rappresenta un'architettura di backup per la conservazione dei dati a lungo termine](/wp-content/uploads/2026/01/backup-icon.png "w:128")
+## Come si determinano RPO e RTO per una soluzione di backup e ripristino di emergenza? {#calculate-rpo-rto-backup-solution}
+
+### Che cos'è una soluzione di backup? {#what-is-backup}
+
+Una soluzione di backup ** ** è una strategia di protezione dei dati progettata per creare copie periodiche dei dati su un dispositivo di archiviazione secondario o sul cloud. A differenza dell'alta disponibilità, il backup si concentra sulla conservazione dei dati a lungo termine ** ** e sul ripristino da danneggiamento dei dati o disastri a livello di sito.
 
 
-Per soddisfare gli obiettivi RPO e RTO definiti in un **Piano di ripristino di emergenza**, il backup viene in genere implementato attraverso due metodi principali:
+![ Icona della soluzione di backup che rappresenta un'architettura di backup per la conservazione dei dati a lungo termine ](/wp-content/uploads/2026/01/backup-icon.png "w:128")
 
-  * **Istantanee pianificate:** un processo in cui vengono acquisite copie di dati temporizzate a intervalli fissi (ad esempio, quotidianamente). Ciò definisce l'**RPO**, poiché tutti i dati modificati tra l'ultimo snapshot e l'errore vengono persi.
-  * **Recupero offsite o cloud:** un'architettura in cui i dati vengono archiviati in una posizione fisica separata. Sebbene ciò garantisca la sopravvivenza dei dati, si traduce in un **RTO più elevato** perché i dati devono essere trasferiti e ripristinati prima che l'applicazione possa riavviarsi.
+
+Per soddisfare gli obiettivi RPO e RTO definiti in un piano di ripristino di emergenza ** ** , il backup viene in genere implementato tramite due metodi principali:
+
+  * ** Snapshot pianificati: ** Un processo in cui vengono create copie puntuali dei dati a intervalli fissi (ad esempio, giornalieri). Questo definisce l'RPO ** ** , poiché tutti i dati modificati tra l'ultimo snapshot e il guasto vengono persi.
+  * ** Ripristino remoto o nel cloud: ** Un'architettura in cui i dati vengono archiviati in una posizione fisica separata. Sebbene ciò garantisca ** ** i dati devono essere trasferiti e ripristinati prima che l'applicazione possa essere riavviata.
 
 
 ### Qual è l'RPO di una soluzione di backup? {#what-is-rpo-backup}
 
-**RPO (Recovery Point Objective)** in un contesto di backup definisce l'età dei file che devono essere ripristinati dallo spazio di archiviazione affinché le normali operazioni possano riprendere. A differenza dell'elevata disponibilità, una **soluzione di backup** comporta in genere un RPO diverso da zero, che rappresenta il tempo trascorso dal completamento corretto dell'ultimo backup. 
+** RPO (Recovery Point Objective) ** in un contesto di backup definisce l'età dei file che devono essere ripristinati dalla memoria per la ripresa delle normali operazioni. A differenza dell'alta disponibilità, una soluzione di backup ** ** di solito prevede un RPO diverso da zero, che rappresenta il tempo trascorso dall'ultimo backup completato con successo. 
 
-La quantità di perdita di dati in una strategia di backup è determinata dalla **frequenza di backup**. A seconda dell'architettura, questo RPO può variare da minuti a 24 ore: 
+La quantità di dati persi in una strategia di backup è determinata dalla frequenza di backup ** ** . A seconda dell'architettura, questo RPO può variare da pochi minuti a 24 ore: 
 
-  * **Istantanee incrementali:** un metodo in cui solo i blocchi di dati modificati vengono salvati a intervalli prestabiliti. Se viene eseguito un backup ogni 4 ore, l'**RPO massimo è 4 ore**, il che significa che tutti i dati creati tra l'ultimo snapshot e il crash del sistema verranno persi in modo permanente. 
-  * **Backup completi giornalieri:** un approccio tradizionale in cui viene eseguita una copia completa dei dati una volta al giorno (solitamente durante la notte). Ciò si traduce in un **RPO 24 ore**, che può essere accettabile per i dati non critici ma spesso non è sufficiente per i database transazionali. 
+  * ** Snapshot incrementali: ** Un metodo in cui vengono salvati solo i blocchi di dati modificati a intervalli prestabiliti. Se viene eseguito un backup ogni 4 ore, l' ** massimo è ** 4 ore, il che significa che tutti i dati creati tra l'ultimo snapshot e il crash del sistema vengono persi definitivamente. 
+  * ** Backup completi giornalieri: ** Un approccio tradizionale in cui viene creata una copia completa dei dati una volta al giorno (di solito durante la notte). Ciò si traduce in un RPO ** ** che può essere accettabile per dati non critici ma è spesso insufficiente per i database transazionali. 
 
 
 ### Qual è l'RTO di una soluzione di backup? {#what-is-rto-backup}
 
-**RTO (Recovery Time Objective)** in una strategia di backup è la durata del tempo necessario per ripristinare i dati da un supporto di backup e riportare l'applicazione a uno stato operativo. A differenza dell'elevata disponibilità, l'**RTO per il backup** è significativamente più lungo perché prevede processi di ripristino manuali o basati su script. 
+Il tempo di ** (RTO - Recovery Time Objective) ** in una strategia di backup rappresenta la durata del tempo necessario per ripristinare i dati da un supporto di backup e riportare l'applicazione a uno stato operativo. A differenza dell'alta disponibilità, il tempo di ripristino (RTO) ** per il backup ** è significativamente più lungo perché implica processi di ripristino manuali o tramite script. 
 
-Per una soluzione di backup, l'**RTO può variare da diverse ore a giorni**, a seconda del volume di dati e dell'architettura di ripristino. Il tempo di inattività totale viene calcolato come: 
+Per una soluzione di backup, l'RTO (Recovery Time ** può variare da diverse ore a giorni, a ** del volume dei dati e dell'architettura di ripristino. Il tempo di inattività totale viene calcolato come segue: 
 
-  * **Tempo di trasferimento dati:** il tempo necessario per spostare i dati dallo spazio di archiviazione di backup (dischi locali, nastri o cloud) al server di produzione. 
-  * **Tempo di riconfigurazione del sistema:** l'intervallo necessario per inserire i dati nell'applicazione, ricostruire gli indici e verificare l'integrità dei dati prima che gli utenti possano accedere nuovamente. 
-
-
-## In che modo un mirror cluster SafeKit raggiunge un RPO pari a zero e un RTO basso? {#rpo-rto-safekit-mirror-cluster}
-
-### Cos'è il cluster di specchi SafeKit? {#what-is-safekit-mirror-cluster}
-
-Il **SafeKit Mirror Cluster** è una soluzione ad alta disponibilità basata su software che implementa un'architettura "shared-nothing". A differenza dei cluster tradizionali che richiedono una SAN costosa, SafeKit utilizza le risorse locali di due server standard per creare un ambiente altamente resiliente.
+  * ** Tempo di trasferimento dati: ** Il tempo necessario per spostare i dati dall'archivio di backup (dischi locali, nastri o cloud) al server di produzione. 
+  * Tempo di riconfigurazione del sistema ** : ** L'intervallo necessario per importare i dati nell'applicazione, ricostruire gli indici e verificare l'integrità dei dati prima che gli utenti possano accedere nuovamente. 
 
 
-![Architettura SafeKit Mirror Cluster che mostra la replica dei file a livello di byte in tempo reale tra i nodi primari e secondari](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+## Come fa un cluster SafeKit Mirror a raggiungere RPO zero e RTO basso? {#rpo-rto-safekit-mirror-cluster}
+
+### Che cos'è il cluster SafeKit Mirror ? {#what-is-safekit-mirror-cluster}
+
+Il cluster ** SafeKit Mirror ** è una soluzione di alta disponibilità basata su software che implementa un'architettura "shared-nothing". A differenza dei cluster tradizionali che richiedono una SAN costosa, SafeKit utilizza le risorse locali di due server standard per creare un ambiente altamente resiliente.
 
 
-Per garantire la massima operatività e protezione dei dati nell'ambito del **Piano di continuità aziendale**, il mirror cluster SafeKit funziona attraverso due meccanismi integrati:
-
-  * **Replica sincrona in tempo reale:** SafeKit esegue il mirroring dei dati attraverso la rete tra i dischi locali dei nodi primari e secondari. Ciò garantisce che l'RPO sia pari a zero, poiché ogni byte di dati viene protetto su entrambi i server prima che una transazione venga finalizzata.
-  * **Failover automatico dell'IP e dell'applicazione:** Se il nodo primario si guasta, SafeKit rileva automaticamente la perdita di heartbeat e ristabilisce l'applicazione e il relativo indirizzo IP virtuale sul nodo secondario. Ciò si traduce in un RTO di circa un minuto, garantendo una continuità del servizio senza interruzioni.
+![ SafeKit Mirror Architettura del cluster che mostra la replica dei file a livello di byte in tempo reale tra nodi primari e secondari ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-### Qual è l'RPO di un cluster di mirror SafeKit? {#rpo-safekit-example}
+Per garantire la massima operatività e protezione dei dati nell'ambito del piano di continuità aziendale ** ** , il cluster SafeKit mirror opera tramite due meccanismi integrati:
 
-L'**RPO di un cluster mirror SafeKit è zero** perché la replica dei dati tra i nodi è [sincrona e in tempo reale](</best-practises/synchronous-replication-vs-asynchronous-replication/> "Synchronous vs Asynchronous Replication").
-
-Questa garanzia di perdita di dati pari a zero si ottiene attraverso un processo di **riconoscimento di scrittura**: una scrittura su disco viene confermata all'applicazione solo dopo che è stata scritta con successo sui dischi locali sia del nodo primario che di quello secondario.
-
-Al contrario, con la **replica asincrona**, l'RPO è maggiore di zero. Poiché è presente un ritardo tra la scrittura primaria e l'aggiornamento secondario, un errore comporterà la perdita di dati durante il failover sul server secondario. Per la **continuità aziendale** mission-critical, la replica sincrona è l'unico modo per garantire che l'applicazione venga riavviata con il 100% di integrità dei dati.
-
-### Qual è l'RTO di un cluster di mirror SafeKit? {#what-is-rto-safekit}
-
-In una configurazione standard, l'**RTO di un mirror cluster SafeKit è di circa un minuto**. SafeKit offre la flessibilità necessaria per implementare l'alta disponibilità a **livello di applicazione** o a **livello di VM**, ciascuno dei quali incide sui tempi di ripristino in modo diverso: 
-
-  * **HA a livello di applicazione:** questo è l'approccio SafeKit ottimizzato in cui il software monitora servizi applicativi specifici. 
-    * **Errore hardware:** RTO = _timeout heartbeat_ (predefinito 30 secondi) + _tempo di riavvio dell'applicazione_.
-    * **Errore software:** RTO = _ora di arresto dell'applicazione_ \+ _ora di riavvio dell'applicazione_.
-    * **Vantaggio principale:** poiché il sistema operativo è già in esecuzione sul nodo secondario, non vi è alcun ritardo nell'avvio del sistema operativo, con conseguente ripristino più rapido possibile per la **continuità aziendale**.
-  * **HA a livello di VM:** In questo scenario, SafeKit protegge l'intero ambiente della macchina virtuale. 
-    * **Ripristino da errori:** RTO = _rilevamento errori_ \+ **Ora di riavvio del sistema operativo** \+ _ora di riavvio dell'applicazione_.
-    * **Compromesso tecnico:** L'RTO è naturalmente più lungo (diversi minuti) perché il nodo secondario deve eseguire un avvio a freddo completo del sistema operativo prima ancora che l'applicazione possa iniziare l'inizializzazione.
+  * ** Replica sincrona in tempo reale: ** SafeKit replica i dati attraverso la rete tra i dischi locali dei nodi primario e secondario. Ciò garantisce che l'RPO sia pari a zero, poiché ogni byte di dati è protetto su entrambi i server prima che una transazione venga finalizzata.
+  * ** Failover automatico di IP e applicazioni: ** Se il nodo primario si guasta, SafeKit rileva automaticamente la perdita del heartbeat e ristabilisce l'applicazione e il suo indirizzo IP virtuale sul nodo secondario. Ciò si traduce in un RTO di circa un minuto, garantendo la continuità del servizio senza interruzioni.
 
 
-Utilizzando l'**alta disponibilità a livello di applicazione**, SafeKit elimina la "penalità di riavvio" inerente alla virtualizzazione standard, garantendo che il tuo **Piano di continuità aziendale** raggiunga il minor tempo di inattività possibile. 
+### Qual è l'RPO di un cluster SafeKit Mirror ? {#rpo-safekit-example}
 
-## Quali sono i parametri di riferimento RTO per un cluster farm SafeKit con bilanciamento del carico? {#rpo-rto-safekit-farm-cluster}
+L'RPO ** di un cluster SafeKit mirror è zero ** perché la replica dei dati tra i nodi è [ sincrona e in tempo reale ](</it/best-practises/synchronous-replication-vs-asynchronous-replication/> "Synchronous vs Asynchronous Replication") .
 
-### Cos'è il cluster agricolo SafeKit? {#what-is-safekit-farm-cluster}
+Questa garanzia di zero perdita di dati è ottenuta tramite un processo di conferma di scrittura ** ** : una scrittura su disco viene confermata all'applicazione solo dopo essere stata scritta correttamente sui dischi locali sia del nodo primario che di quello secondario.
 
-Il **SafeKit Farm Cluster** è una soluzione ad alta disponibilità basata su software progettata per applicazioni stateless (come server Web) che richiedono sia **scalabilità** che **ridondanza**. A differenza di un cluster mirror incentrato sulla replica dei dati, un cluster farm distribuisce il traffico in entrata su più nodi attivi.
+Al contrario, con la replica asincrona ** ** , l'RPO è maggiore di zero. Poiché esiste un ritardo tra la scrittura primaria e l'aggiornamento secondario, un errore comporterà la perdita di dati durante il failover al server secondario. Per la Business Continuity ** mission- ** , la replica sincrona è l'unico modo per garantire che l'applicazione si riavvii con un'integrità dei dati del 100%.
 
+### Qual è l'RTO di un cluster SafeKit Mirror ? {#what-is-rto-safekit}
 
-![Architettura SafeKit Farm Cluster che dimostra il bilanciamento del carico di rete e il failover per applicazioni stateless](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+In una configurazione standard, l' ** di un cluster è di circa un minuto. Offre la flessibilità di implementare l'alta disponibilità a livello di ** o a livello ** ** ** , SafeKit mirror SafeKit influisce in modo diverso sul tempo di ** : 
 
-
-Per mantenere la **continuità aziendale** per ambienti a traffico elevato, il cluster farm SafeKit opera attraverso due meccanismi principali:
-
-  * **Bilanciamento del carico di rete:** SafeKit utilizza un indirizzo IP virtuale per distribuire il traffico di rete in entrata su una "farm" di più server attivi. Ciò garantisce che nessun singolo server venga sopraffatto e massimizza le prestazioni dell'applicazione.
-  * **Rilevamento e riconfigurazione automatici dei guasti:** Se un nodo della farm si guasta, SafeKit rileva l'errore tramite heartbeat e ridistribuisce immediatamente il traffico tra i restanti nodi integri. Ciò fornisce un RTO prossimo allo zero per il servizio complessivo, poiché altri nodi sono già attivi e pronti ad assorbire il carico.
-
-
-### Qual è l'RPO di un cluster agricolo SafeKit? {#what-is-rpo-safekit-farm}
-
-L'**RPO (Recovery Point Objective)** per un **SafeKit Farm Cluster** è generalmente considerato **Non applicabile (N/A)**. Questo perché un cluster farm è progettato specificamente per **applicazioni senza stato** in cui i dati non vengono archiviati localmente sui nodi. 
-
-Poiché un cluster farm si concentra sul **bilanciamento del carico di rete** anziché sulla sincronizzazione dei dati, non esiste alcuna replica dei dati tra i nodi all'interno del cluster stesso. In un tipico **Piano di continuità aziendale** che coinvolge un'architettura agricola: 
-
-  * **Operazioni stateless:** tutti i nodi della farm sono identici e non contengono dati persistenti; pertanto, non vi è alcuna "perdita di dati" da misurare durante un guasto del nodo. 
-  * **Archiviazione dati esterna:** se l'applicazione richiede la persistenza dei dati, in genere viene gestita da un backend separato **SafeKit Mirror Cluster** dove l'RPO sarebbe quindi pari a zero. 
+  * ** HA a livello di applicazione: ** Questo è l'approccio SafeKit ottimizzato in cui il software monitora servizi applicativi specifici. 
+    * Errore hardware ** : RTO ** = _timeout heartbeat_ (predefinito 30s) + _tempo di riavvio dell'applicazione_.
+    * Errore software ** : ** RTO = _tempo di arresto dell'applicazione_ + _tempo di riavvio dell'applicazione_.
+    * ** Vantaggio chiave: ** Poiché il sistema operativo è già in esecuzione sul nodo secondario, non vi è alcun ritardo di avvio del sistema operativo, con conseguente ripristino più rapido possibile per ** Business Continuity ** .
+  * ** HA a livello di VM: ** In questo scenario, SafeKit protegge l'intero ambiente della macchina virtuale. 
+    * ** Ripristino da errore: ** RTO = _rilevamento errore_ \+ ** Tempo di riavvio del sistema operativo ** \+ _tempo di riavvio dell'applicazione_.
+    * ** Compromesso tecnico: ** L'RTO è naturalmente più lungo (diversi minuti) perché il nodo secondario deve eseguire un avvio a freddo completo del sistema operativo prima che l'applicazione possa anche solo iniziare l'inizializzazione.
 
 
-### Qual è l'RTO di un cluster agricolo SafeKit? {#rto-example-safekit-farm-cluster}
+Grazie all'utilizzo dell'alta disponibilità a livello di applicazione ** ** , SafeKit elimina la "penalità di riavvio" intrinseca alla virtualizzazione standard, garantendo che il tuo piano di continuità aziendale ** ** raggiunga il tempo di inattività più basso possibile. 
 
-In un'architettura farm, l'**RTO è ridotto a pochi secondi** perché in genere tutti i nodi sono attivi contemporaneamente. Il tempo di ripristino è determinato dalla velocità con cui il cluster riconfigura la distribuzione del traffico:
+## Quali sono i benchmark RTO per un cluster SafeKit `Farm` con bilanciamento del carico? {#rpo-rto-safekit-farm-cluster}
 
-  * **Guasto hardware:** L'RTO è uguale al _timeout di rilevamento guasto_ tra i canali di monitoraggio (l'impostazione predefinita è pochi secondi). Una volta rilevata la perdita di heartbeat, i **filtri di bilanciamento del carico IP virtuale** vengono riconfigurati automaticamente per reindirizzare il traffico ai restanti nodi integri.
-  * **Errore software o riavvio pianificato:** l'RTO viene calcolato come il _tempo di arresto dell'applicazione_ più il _tempo di riavvio dell'applicazione_ su quel nodo specifico, durante il quale gli altri nodi della farm continuano a gestire tutto il traffico in entrata.
+### Che cos'è il cluster SafeKit `Farm` ? {#what-is-safekit-farm-cluster}
+
+Il cluster ** SafeKit `Farm` ** è una soluzione di alta disponibilità basata su software, progettata per applicazioni stateless (come i server web) che richiedono sia la scalabilità ** ** che la ridondanza ** ** . A differenza di un cluster mirror che si concentra sulla replica dei dati, un cluster `farm` distribuisce il traffico in entrata su più nodi attivi.
 
 
-Questo meccanismo "attivo-attivo" garantisce che per i servizi stateless l'impatto sulla **continuità aziendale** sia quasi impercettibile per l'utente finale, poiché non è necessario inizializzare il servizio su un nuovo nodo standby.
+![ SafeKit Farm Architettura del cluster che dimostra il bilanciamento del carico di rete e il failover per applicazioni stateless ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
-## Tabelle di confronto: RTO vs RPO {#rpo-vs-rto-comparison}
 
-**Definizione semantica: RTO vs. RPO**
+Per mantenere la continuità operativa ** ** in ambienti ad alto traffico, il cluster SafeKit `farm` opera attraverso due meccanismi principali:
 
-Metrico | Acronimo | Definizione | Area di messa a fuoco  
+  * Bilanciamento del carico di rete ** : ** SafeKit utilizza un indirizzo IP virtuale per distribuire il traffico di rete in entrata su un " `farm` " di più server attivi. Ciò garantisce che nessun singolo server venga sovraccaricato e massimizza le prestazioni dell'applicazione.
+  * ** Rilevamento automatico dei guasti e riconfigurazione: ** Se un nodo in `farm` si guasta, SafeKit rileva il guasto tramite heartbeat e ridistribuisce immediatamente il traffico tra i nodi rimanenti funzionanti. Ciò garantisce un RTO (Return to Operation) prossimo allo zero per l'intero servizio, poiché gli altri nodi sono già attivi e pronti ad assorbire il carico.
+
+
+### Qual è l'RPO di un cluster SafeKit `Farm` ? {#what-is-rpo-safekit-farm}
+
+L'RPO (Recovery Point Objective) ** ** per un cluster ** SafeKit `Farm` ** è generalmente considerato ** Non applicabile (N/A) ** . Questo perché un cluster `farm` è specificamente progettato per applicazioni stateless ** ** in cui i dati non vengono memorizzati localmente sui nodi. 
+
+Poiché un cluster `farm` si concentra sul bilanciamento `farm` carico di rete ** piuttosto che ** sincronizzazione dei dati, non vi è replica dei dati tra i nodi all'interno del cluster stesso. In un tipico piano di continuità operativa ** che coinvolge un'architettura ** : 
+
+  * Operazioni senza stato ** : ** Tutti i nodi in `farm` sono identici e non contengono dati persistenti; pertanto, non vi è alcuna "perdita di dati" da misurare durante un guasto di un nodo. 
+  * ** Archiviazione dati esterna: ** Se l'applicazione richiede la persistenza dei dati, questa viene solitamente gestita da un backend separato ** SafeKit Mirror Cluster ** dove l'RPO sarebbe quindi zero. 
+
+
+### Qual è l'RTO di un cluster SafeKit `Farm` ? {#rto-example-safekit-farm-cluster}
+
+In un'architettura `farm` , il RTO ** si riduce a pochi secondi ** perché tutti i nodi sono in genere attivi simultaneamente. Il tempo di ripristino è determinato dalla velocità con cui il cluster riconfigura la distribuzione del traffico:
+
+  * Guasto hardware ** : ** L'RTO è uguale al _timeout di rilevamento del guasto_ su tutti i canali di monitoraggio (il valore predefinito è di pochi secondi). Una volta rilevata la perdita del battito cardiaco, i filtri di bilanciamento del carico IP virtuale ** ** vengono riconfigurati automaticamente per reindirizzare il traffico ai nodi rimanenti funzionanti.
+  * Errore software o riavvio pianificato ** : ** L'RTO viene calcolato come il _tempo di arresto dell'applicazione_ più il _tempo di riavvio dell'applicazione_ su quel nodo specifico, durante il quale gli altri nodi in `farm` continuano a gestire tutto il traffico in entrata.
+
+
+Questo meccanismo "Active-Active" garantisce che per i servizi stateless, l'impatto della continuità operativa ** ** sia pressoché impercettibile per l'utente finale, poiché non è necessario inizializzare il servizio su un nuovo nodo di standby.
+
+## Tabelle comparative: RTO vs RPO {#rpo-vs-rto-comparison}
+
+Definizione semantica ** : RTO vs. RPO **
+
+Metrica | Acronimo | Definizione | Area di interesse  
 ---|---|---|---  
-Obiettivo del tempo di recupero | RTO | La durata di tempo prevista per ripristinare un processo aziendale dopo un errore. | Disponibilità/Tempi di inattività  
-Obiettivo del punto di ripristino | RPO | La durata massima dei file che devono essere ripristinati dal backup affinché le operazioni possano riprendere. | Perdita/integrità dei dati  
+Obiettivo tempo di ripristino | RTO | Durata obiettivo del tempo per ripristinare un processo aziendale dopo un guasto. | Disponibilità / Tempo di inattività  
+Obiettivo del punto di ripristino | RPO | L'età massima dei file che devono essere ripristinati dal backup affinché le operazioni possano riprendere. | Perdita/integrità dei dati  
   
-**Disponibilità elevata (HA) rispetto al backup standard**
+** Alta disponibilità (HA) rispetto al backup standard **
 
-Caratteristica | Soluzioni di backup | Alta disponibilità (SafeKit)  
+Funzionalità | Soluzioni di backup | Alta disponibilità ( SafeKit )  
 ---|---|---  
-Automazione del recupero | Intervento manuale | Failover automatico  
-Obiettivo RTO | Ore a Giorni | Da secondi a ~1 minuto  
-Obiettivo RPO | > 0 (Ultimo punto di backup) | 0 (replica sincrona)  
+Automazione del ripristino | Intervento manuale | Failover automatico  
+Tempo di ripristino target (RTO) | Ore in giorni | Secondi in circa 1 minuto  
+RPO di destinazione | > 0 (Ultimo punto di backup) | 0 (Replica sincrona)  
   
-**Benchmark RTO e RPO per i cluster SafeKit**
+Benchmark RTO e RPO ** per i cluster SafeKit **
 
-Architettura | Caso d'uso | RTO (disponibilità) | RPO (perdita di dati)  
+Architettura | Caso d'uso | RTO (Disponibilità) | RPO (Perdita di dati)  
 ---|---|---|---  
-Gruppo di specchi | Replica in tempo reale | ~1 minuto (battito cardiaco + riavvio) | 0 (nessuna perdita di dati)  
-Gruppo agricolo | Bilanciamento del carico di rete | Pochi secondi | N/D (apolide)  
+Cluster Mirror Replica in tempo reale | | ~1 min (Heartbeat + Riavvio) | 0 (Nessuna perdita di dati)  
+Cluster `Farm` Bilanciamento del carico di rete | | Alcuni secondi | N/D (Stateless)  
   
-## Elevata disponibilità in azione: demo in tempo reale di RPO zero e RTO quasi zero {#safekit-rpo-rto-video-demos}
+## Alta disponibilità in azione: dimostrazioni in tempo reale di RPO zero e RTO quasi zero {#safekit-rpo-rto-video-demos}
 
-### Video: raggiungimento di RPO zero e RTO basso in un cluster di mirror SafeKit (8:47) {#demo-mirror-cluster-rpo-rto}
+### Video: Raggiungere RPO zero e RTO basso in un cluster SafeKit Mirror (8:47) {#demo-mirror-cluster-rpo-rto}
 
-Scopri come SafeKit gestisce un guasto critico. Questo video dimostra la **replica sincrona** che garantisce che non vengano persi dati (RPO 0) in un database SQL e il **riavvio automatico** dei servizi sul nodo secondario (RTO basso).
+Scopri ** SafeKit gestisce un errore critico. Questo video dimostra la replica sincrona ** ** garantisce l'assenza di perdita di dati (RPO 0) in un database SQL e il riavvio automatico ** dei servizi sul nodo secondario (RTO basso).
 
 
 #### Capitoli {#chapters}
 
-  1. 🎬 [2 nodi con SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  2. 🎬 [Configura il cluster e il modulo mirror.safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
-  3. 🎬 [Avvia e testa la replica SQL, la migrazione e il failover in caso di crash](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
+  1. 🎬 [ 2 nodi con SQL Server ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
+  2. 🎬 [ Configura il cluster e il modulo mirror.safe ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  3. 🎬 [ Avvia e testa la replica SQL, la migrazione, il failover in caso di arresto anomalo ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
-[Prova gratuita qui](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
+[ Prova gratuita qui ](</it/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
-### Video: raggiungimento di un RTO vicino allo zero in un cluster di aziende agricole SafeKit (5:03) {#demo-farm-cluster-rpo-rto}
+### Video: Raggiungere un RTO quasi nullo in un cluster SafeKit `Farm` (5:03) {#demo-farm-cluster-rpo-rto}
 
-Guarda come SafeKit gestisce una web farm Apache per fornire scalabilità delle prestazioni e failover istantaneo.
+Guarda come SafeKit gestisce un server web Apache `farm` per fornire sia scalabilità delle prestazioni che failover istantaneo.
 
 #### Capitoli {#chapters-1}
 
-  1. 🎬 Nodi [2 con Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  2. 🎬 [Configura il cluster e il modulo farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
-  3. 🎬 [Avvia e testa il bilanciamento del carico di rete, failover in caso di arresto anomalo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
+  1. 🎬 [ 2 nodi con Apache ](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
+  2. 🎬 [ Configura il cluster e il modulo farm.safe ](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  3. 🎬 [ Avvia e testa il bilanciamento del carico di rete, failover in caso di arresto anomalo ](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
 
-[Prova gratuita qui](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
+[ Prova gratuita qui ](</it/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 
-## Domande frequenti: ottimizzazione di RPO e RTO per la continuità aziendale {#faq-rpo-rto}
+## FAQ: Ottimizzazione di RPO e RTO per la continuità operativa {#faq-rpo-rto}
 
 ### RPO e RTO possono essere pari a zero? {#can-rpo-rto-be-zero}
 
-**Sì.** Raggiungere un **RPO pari a zero** significa nessuna perdita di dati, cosa possibile attraverso il mirroring sincrono dei dati. Un **RTO prossimo allo zero** si ottiene tramite un software di failover automatizzato come SafeKit, che rileva gli errori e riavvia le applicazioni su un nodo secondario in pochi secondi o minuti.
+** Sì. ** Raggiungere un ** RPO zero ** significa nessuna perdita di dati, possibile tramite mirroring sincrono dei dati. Un ** RTO quasi zero ** si ottiene tramite software di failover automatico come SafeKit , che rileva i guasti e riavvia le applicazioni su un nodo secondario in pochi secondi o minuti.
 
-### Cos’è più importante: RPO o RTO? {#importance-rpo-vs-rto}
+### Cosa è più importante: RPO o RTO? {#importance-rpo-vs-rto}
 
-Nessuno dei due è intrinsecamente più importante; svolgono ruoli diversi. **RPO (Recovery Point Objective)** si concentra sulla perdita di dati: quanti dati puoi permetterti di perdere. **RTO (Recovery Time Objective)** si concentra sui tempi di inattività: quanto velocemente devi tornare online. Per le applicazioni mission-critical, entrambi devono essere ridotti al minimo.
+Nessuno dei due è intrinsecamente più importante; svolgono ruoli diversi. ** RPO (Recovery Point Objective) ** si concentra sulla perdita di dati, ovvero sulla quantità di dati che ci si può permettere di perdere. ** RTO (Recovery Time Objective) ** si concentra sul tempo di inattività, ovvero sulla rapidità con cui è necessario tornare online. Per le applicazioni mission-critical, entrambi devono essere ridotti al minimo.
 
-### Qual è la differenza in RPO e RTO tra SafeKit a livello di applicazione e a livello di VM? {#safekit-application-vs-vm-level}
+### Qual è la differenza tra RPO e RTO tra SafeKit a livello di applicazione e a livello di macchina virtuale? {#safekit-application-vs-vm-level}
 
-Sebbene entrambi garantiscano un **RPO pari a 0** tramite replica sincrona, differiscono nel tempo di ripristino:
+Sebbene entrambi garantiscano un RPO ** di 0 ** tramite replica sincrona, differiscono nel tempo di ripristino:
 
-  * **Livello applicazione:** RTO più veloce (circa 1 minuto) perché solo i servizi applicativi si riavviano su un sistema operativo già in esecuzione. Rileva inoltre arresti anomali specifici di software/processi.
-  * **Livello VM:** RTO più elevato perché l'intera macchina virtuale deve essere riavviata sull'host secondario. Sebbene sia indipendente dall'applicazione, manca di un monitoraggio granulare dei processi applicativi stessi.
-
-
-### Qual è la differenza tra le soluzioni HA e quelle di backup in termini di RTO? {#ha-vs-backup-rto}
-
-L'elevata disponibilità (HA) offre in genere un RTO molto inferiore (da secondi a minuti) perché gestisce automaticamente gli errori locali. Il ripristino di emergenza con soluzioni di backup (DR) solitamente ha un RTO più elevato (da ore a giorni) perché prevede il ripristino di dati e servizi in un sito geograficamente distante dopo una grave catastrofe.
-
-### Come posso ottenere il miglior RPO e RTO tra siti remoti? {#rpo-rto-between-remote-sites}
-
-Il raggiungimento di un **RPO pari a zero** e un **RTO prossimo allo zero** su siti remoti richiede una combinazione di **replica sincrona** e una **LAN estesa (VLAN estesa)**:
-
-  * **LAN estesa/VLAN estesa:** Estendendo la stessa sottorete (Livello 2) su due data center, puoi spostare un'applicazione dal Sito A al Sito B senza modificarne l'indirizzo IP, evitando complessi aggiornamenti DNS.
-  * **La soluzione SafeKit:** SafeKit sfrutta questa funzionalità fornendo un **IP virtuale definito dal software (VIP)** che fluttua tra i siti. Reindirizza istantaneamente il traffico al sito secondario utilizzando Gratuitous ARP (GARP).
+  * Livello applicazione ** : ** RTO più veloce (circa 1 min) perché solo i servizi dell'applicazione si riavviano su un sistema operativo già in esecuzione. Rileva anche arresti anomali specifici di software/processi.
+  * Livello VM ** : ** RTO più elevato perché l'intera macchina virtuale deve essere riavviata sull'host secondario. Pur essendo indipendente dall'applicazione, manca di un monitoraggio granulare dei processi dell'applicazione stessa.
 
 
-Ciò fornisce un **RPO = 0** (mirroring in tempo reale) e un **RTO minimo** (failover in circa 1 minuto) senza intervento umano.
+### Qual è la differenza tra soluzioni HA e di backup in termini di RTO? {#ha-vs-backup-rto}
 
-### Perché la combinazione di alta disponibilità e backup è essenziale per ottimizzare RPO e RTO? {#combining-ha-and-backup-for-rpo-rto}
+L'alta disponibilità (HA) offre in genere un RTO (Recovery Time Objective) molto più basso (da secondi a minuti) perché gestisce automaticamente i guasti locali. Il ripristino di emergenza con soluzioni di backup (DR) di solito ha un RTO più alto (da ore a giorni) perché prevede il ripristino di dati e servizi in un sito geograficamente distante dopo una grave catastrofe.
 
-Combinare l'alta disponibilità (HA) con una soluzione di backup è l'unico modo per ottenere una strategia di ripristino "migliore di entrambi i mondi". Sebbene vengano spesso discussi insieme, risolvono diverse parti dell'equazione RPO/RTO:
+### Come posso ottenere i migliori valori di RPO e RTO tra siti remoti? {#rpo-rto-between-remote-sites}
 
-  * **Elevata disponibilità (tramite SafeKit):** Ottimizza per RTO e RPO prossimi allo zero in caso di guasti hardware o software. Utilizzando la replica sincrona in tempo reale, il server secondario è sempre aggiornato. Se il primario fallisce, il servizio si riavvia immediatamente sul secondario senza perdita di dati.
-  * **Soluzioni di backup:** Proteggi dai problemi di integrità dei dati (come ransomware o cancellazione accidentale). Poiché HA replica le modifiche istantaneamente, replicherà "fedelmente" un virus o un record di database eliminato sul server di standby. Un backup consente di "tornare indietro nel tempo" a un punto precedente al verificarsi del danneggiamento.
-  * **L'approccio ibrido:** per la massima resilienza, le organizzazioni utilizzano un'**architettura ibrida a 3 nodi**. Ciò include un cluster locale a 2 nodi con replica sincrona per HA immediato e una terza copia remota (asincrona) per Disaster Recovery. Questa difesa a più livelli garantisce la disponibilità di una copia "attiva" per il ripristino immediato e di una copia "storica" ​​per la sicurezza dei dati.
+Raggiungere un **zero RPO** E **RTO quasi zero** attraverso siti remoti richiede una combinazione di **replica sincrona** e un **LAN estesa (VLAN estesa)** :
+
+  * ** LAN estesa / VLAN estesa: ** Estendendo la stessa sottorete (Layer 2) su due data center, è possibile spostare un'applicazione dal Sito A al Sito B senza modificarne l'indirizzo IP, evitando complessi aggiornamenti DNS.
+  * La soluzione ** SafeKit : ** SafeKit sfrutta questo fornendo un indirizzo IP virtuale (VIP) definito dal software ** ** che fluttua tra i siti. Reindirizza istantaneamente il traffico al sito secondario utilizzando Gratuitous ARP (GARP).
+
+
+Ciò garantisce un RPO ** = 0 ** (mirroring in tempo reale) e un RTO minimo ** ** (failover in circa 1 minuto) senza intervento umano.
+
+### Perché combinare Alta Disponibilità e Backup è essenziale per ottimizzare RPO e RTO? {#combining-ha-and-backup-for-rpo-rto}
+
+Combinare l'alta disponibilità (HA) con una soluzione di backup è l'unico modo per ottenere una strategia di ripristino che offra il meglio di entrambi i mondi. Sebbene vengano spesso discusse insieme, risolvono aspetti diversi dell'equazione RPO/RTO:
+
+  * Alta disponibilità ** (tramite SafeKit ): ** Ottimizza per un RTO prossimo allo zero e un RPO pari a zero in caso di guasti hardware o software. Grazie alla replica sincrona in tempo reale, il server secondario è sempre aggiornato. In caso di guasto del server primario, il servizio si riavvia immediatamente sul server secondario senza perdita di dati.
+  * Soluzioni di backup ** : ** Protezione contro i problemi di integrità dei dati (come ransomware o cancellazione accidentale). Poiché l'alta disponibilità (HA) replica le modifiche istantaneamente, replicherà "fedelmente" un virus o un record di database eliminato sul server di standby. Un backup consente di "tornare indietro nel tempo" a un punto precedente al verificarsi del danneggiamento.
+  * ** L'approccio ibrido: ** Per la massima resilienza, le organizzazioni utilizzano un'architettura ibrida a 3 nodi ** ** . Questa include un cluster locale a 2 nodi con replica sincrona per l'alta disponibilità immediata e una terza copia remota (asincrona) per il ripristino di emergenza. Questa difesa a più livelli garantisce di avere una copia "live" per il ripristino immediato e una copia "storica" per la sicurezza dei dati.
 
 
 

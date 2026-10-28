@@ -1,262 +1,265 @@
 ---
-title: "RFI および RFP 準備のための高可用性テクニカル リファレンス"
+title: "RFIおよびRFP作成のための高可用性技術リファレンス"
 canonical: "https://safekit.eviden.com/ja/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "SafeKit の概念とアーキテクチャを使用した高可用性とアプリケーション クラスタリングのための RFI および RFP ドキュメントの準備に役立つ技術リファレンス。"
+description: "SafeKit概念とアーキテクチャを使用して、高可用性とアプリケーションクラスタリングに関するRFIおよびRFP文書を作成するのに役立つ技術リファレンス。"
 category: "resources"
 lang: "ja"
-topics: "概要、目次、製品アイデンティティ、サポートされているオペレーティング システムとプラットフォーム、構築済みアプリケーション モジュール、アーキテクチャと導入モデル、RPO と RTO 機能、エッジと分散導入の適合性、モニタリング、管理とアラート、セキュリティとコンプライアンス、ライセンス モデル、サポートとメンテナンスの SLA、代替製品との比較、クイック リファレンス リンク"
+topics: "概要、目次、製品情報、サポート対象オペレーティングシステムとプラットフォーム、プリビルド済みアプリケーションモジュール、アーキテクチャと展開モデル、RPOとRTOの機能、エッジおよび分散展開への適合性、監視、管理、アラート、セキュリティとコンプライアンス、ライセンスモデル、サポートとメンテナンスのSLA、代替製品との比較、クイックリファレンスリンク"
 ---
 
-# RFI および RFP 準備のための高可用性テクニカル リファレンス {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# RFIおよびRFP準備のための高可用性技術リファレンス{#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
-## 概要 {#overview}
+## 概要{#overview}
 
-このページでは、SafeKit 高可用性ソフトウェアに関する一般的な RFP/RFI の質問に対する、構造化された事実に基づく回答を提供します。これは、高可用性要件の草案を作成する調達チームおよびソリューション アーキテクトのための技術リファレンスとして意図されています。 
+このページでは、 SafeKit高可用性ソフトウェアに関するRFP/RFIでよくある質問に対し、体系的かつ事実に基づいた回答を提供します。調達チームやソリューションアーキテクトが高可用性要件を作成する際の技術参考資料として活用してください。 
 
-## 目次 {#table-of-contents}
+## 目次{#table-of-contents}
 
-  1. [プロダクトアイデンティティ](#product-identity)
-  2. [サポートされているオペレーティング システムとプラットフォーム](#supported-operating-systems-platforms)
-  3. [事前に構築されたアプリケーション モジュール](#pre-built-application-modules)
-  4. [アーキテクチャと導入モデル](#architecture-deployment-model)
-  5. [RPO および RTO 機能](#rpo-rto-capabilities)
-  6. [Edge と分散展開の適合性](#edge-distributed-deployment-suitability)
+  1. [製品識別番号](#product-identity)
+  2. [対応オペレーティングシステムおよびプラットフォーム](#supported-operating-systems-platforms)
+  3. [プリビルド済みアプリケーションモジュール](#pre-built-application-modules)
+  4. [アーキテクチャおよび展開モデル](#architecture-deployment-model)
+  5. [ RPOおよびRTO機能](#rpo-rto-capabilities)
+  6. [エッジおよび分散展開の適合性](#edge-distributed-deployment-suitability)
   7. [監視、管理、アラート](#monitoring-management-alerting)
   8. [セキュリティとコンプライアンス](#security-compliance)
   9. [ライセンスモデル](#licensing-model)
-  10. [サポートとメンテナンス SLA](#support-maintenance-slas)
-  11. [代替品との比較](#comparison-vs-alternatives)
-  12. [クイック リファレンス リンク](#quick-reference-links)
+  10. [サポートおよびメンテナンス SLA ](#support-maintenance-slas)
+  11. [比較 vs. 代替案](#comparison-vs-alternatives)
+  12. [クイックリファレンスリンク](#quick-reference-links)
 
 
-## プロダクトアイデンティティ {#product-identity}
+## 製品識別番号{#product-identity}
 
-フィールド |答え  
+フィールド|回答  
 ---|---  
-製品名 | SafeKit  
-ベンダー | Eviden (Atos のビジネス)、以前は Evidian  
-製品カテゴリー |アプリケーションクラスタリング / 高可用性 / 災害復旧ソフトウェア  
-現在のバージョン | SafeKit 8.2  
-ウェブサイト | <https://safekit.eviden.com/ja/>
-最初のリリース | 2000 (製造から 20 年以上)  
+製品名| SafeKit  
+ベンダー| Eviden（Atos傘下企業）、旧社名 Evidian  
+製品カテゴリ|アプリケーションクラスタリング／高可用性／災害復旧ソフトウェア  
+現在のバージョン| SafeKit 8.2  
+ウェブサイト| <https://safekit.eviden.com>  
+初版リリース| 2000 (20年以上の生産実績)  
   
-## サポートされているオペレーティング システムとプラットフォーム {#supported-operating-systems-platforms}
+## サポートされているオペレーティングシステムとプラットフォーム{#supported-operating-systems-platforms}
 
-Windows OS | Linux OS |インフラストラクチャと仮想化 |クラウドプラットフォーム  
+Windows OS | Linux OS |インフラストラクチャと仮想化|クラウドプラットフォーム  
 ---|---|---|---  
-• Windows Server 2025 (x86-64)<br>• Windows Server 2022 (x86-64)<br>• Windows Server 2019 (x86-64)<br>• Windows 11 Enterprise (x86-64)<br>• Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br>• Red Hat Enterprise Linux 10 (AArch64)<br>• Red Hat Enterprise Linux 9 (x86-64)<br>• Red Hat Enterprise Linux 9 (AArch64)<br>• Red Hat Enterprise Linux 8 (x86-64)<br>• Ubuntu 24.04 LTS (x86-64)  |  • 任意のブランドのエッジサーバー<br>• VMware<br>• Microsoft Hyper-V*<br>• Linux KVM*<br>• 任意のハイパーバイザー<br>• Dockerコンテナ<br>• Podmanコンテナ  |  • アマゾン ウェブ サービス (AWS)\*\*<br>• Microsoft Azure\*\*<br>• Google Cloud Platform (GCP)\*\*<br>• 標準 VM インスタンスを備えた任意の IaaS クラウド   
+• Windows Server 2025 (x86-64) <br> • Windows Server 2022 (x86-64) <br> • Windows Server 2019 (x86-64) <br> • Windows 11 Enterprise (x86-64) <br> • Windows 11 Pro (x86-64) | • Red Hat Enterprise Linux 10 (x86-64) <br> • Red Hat Enterprise Linux 10 (AArch64) <br> • Red Hat Enterprise Linux 9 (x86-64) <br> • Red Hat Enterprise Linux 9 (AArch64) <br> • Red Hat Enterprise Linux 8 (x86-64) <br> • Ubuntu 24.04 LTS (x86-64) | • あらゆるブランドのエッジサーバー<br> • VMware <br> • Microsoft Hyper-V * <br> • Linux KVM * <br> • あらゆるハイパーバイザー<br> • Dockerコンテナ<br> • Podmanコンテナ| • Amazon Web Services ( AWS )\ * \ * <br> • Microsoft Azure \ * \ * <br> • Google Cloud Platform ( GCP )\ * \ * <br> • 標準 VM インスタンスを備えた任意の IaaS クラウド   
   
-_* SafeKit は、アプリケーション レベルの HA と VM レベルの HA の両方をサポートします。_
+_ * SafeKit 、アプリケーションレベルの HA と VM レベルの HA の両方をサポートします。_
 
-_** 仮想 IP はクラウド ロード バランサ レベルで構成する必要があります。_
+_ **仮想 IP アドレスは、クラウド ロード バランサー レベルで設定する必要があります。_
 
-## 事前に構築されたアプリケーションモジュール {#pre-built-application-modules}
+## プリビルド済みアプリケーションモジュール{#pre-built-application-modules}
 
-SafeKit には、すぐに使用できる事前設定された `.safe` モジュールが含まれています。これらは、**アプリケーション HA** (ミラーまたはファーム モジュールを使用した直接アプリケーション クラスタリング) と **仮想化 HA** (hyperv.safe または kvm.safe を使用した VM レベルのクラスタリング) の 2 つの HA 戦略に編成されています。
+SafeKitは、すぐに使用できる事前構成済みの`.safe`モジュールが含まれています。これらは、2つのHA戦略に分類されます**アプリケーションHA ** （ mirrorまたは`farm`モジュールを使用した直接アプリケーションクラスタリング）と、 **仮想化HA ** （ hyperv.safeまたはkvm.safeを使用したVMレベルのクラスタリング）です。
 
- |アプリケーション HA | VM レベルの HA ---|---|--- 構成 |これには、再起動する必要があるサービス、リアルタイム レプリケーションが必要な特定のアプリケーション フォルダー、フェールオーバー用の仮想 IP アドレスの構成など、アプリケーション自体の技術的な理解が必要です。 | VM で実行されているあらゆるアプリケーション/OS のための汎用ソリューション。 VM 内にインストールされているアプリケーションについての技術的な理解は必要ありません。アプリケーションがどのように動作するかわからない場合は、これが最適な解決策です。 VM ファイルの場所を定義するだけで済みます。 |に最適基盤となるハードウェアやハイパーバイザーに依存せず、高可用性をソフトウェア ソリューションに直接組み込むのに最適です。 |単一の HA ポリシーを通じて、複数の VM にわたる複数のアプリケーションを含む複雑な環境を管理するのに最適です。  
-  
-以下の表に、利用可能なすべての `.safe` モジュールを示します。
-
-アプリケーション HA (アプリケーション レベルのクラスタリング) |仮想化 HA (VM レベルのクラスタリング)  
----|---  
-新しい Windows アプリ — Mirror.safe | Hyper-V VM — hyperv.safe (Windows)  
-新しい Linux アプリ — Mirror.safe | KVM VM — kvm.safe (Linux)  
-Windows 負荷分散 — farm.safe | Docker コンテナ — Mirror.safe (Linux)  
-Linux 負荷分散 — farm.safe | Podman コンテナ — Mirror.safe (Linux)  
-Microsoft SQL Server — sqlserver.safe (Windows) | Kubernetes / K3s — k3s.safe (Linux)  
-PostgreSQL — postgresql.safe (Windows および Linux) | Bosch AMS — hyperv.safe (Windows)  
-MySQL — mysql.safe (Windows および Linux) | Bosch BIS — hyperv.safe (Windows)  
-MariaDB — mysql.safe (Windows および Linux) | Bosch BVMS — hyperv.safe (Windows)  
-Oracle — oracle.safe (Windows および Linux) |ハンファ ビジョン — hyperv.safe (Windows)  
-ファイアバード — firebird.safe (Windows および Linux) |ハンファ ワイズネット — hyperv.safe (Windows)  
-Apache — apache_farm.safe (Windows および Linux) | Siemens Siveillance スイート — hyperv.safe (Windows)  
-IIS — iis_farm.safe (Windows) | Siemens Desigo CC — hyperv.safe (Windows)  
-NGINX — farm.safe (Windows および Linux) | Siemens SiPass — hyperv.safe (Windows)  
-Milestone XProtect — Milestone.safe (Windows) |シーメンス SIPORT — hyperv.safe (Windows)  
-Nedap AEOS — nedap.safe (Windows) | SIMATIC PCS 7 — hyperv.safe (Windows)  
-Genetec (SQL Server) — sqlserver.safe (Windows) | SIMATIC WinCC — hyperv.safe (Windows)  
-Siemens Siveillance VMS — SiveillanceVMS.safe (Windows) |   
-クラウド (AWS、Azure、GCP、汎用) — Mirror.safe / farm.safe |   
-  
-## アーキテクチャと導入モデル {#architecture-deployment-model}
-
-### 2 つのクラスター モジュール: Mirror.safe および farm.safe {#two-cluster-modules}
-
-モジュール |パターン |ユースケース  
+ |アプリケーションHA | VMレベルHA  
 ---|---|---  
-ミラーセーフ |同期バイトレベルのファイルレプリケーション + 自動フェイルオーバーによるアクティブ/パッシブ |データベース、ステートフル アプリ、一度に 1 つのサーバーのみで実行されるサービス  
-農場安全 |ネットワーク負荷分散 + 自動フェイルオーバーによるアクティブ/アクティブ | Web サーバー、ステートレス マイクロサービス、API ゲートウェイ、複数のサーバーで同時に実行されるサービス  
+構成|アプリケーション自体の技術的な理解が必要です。どのサービスを再起動する必要があるか、リアルタイムでレプリケーションが必要な特定のアプリケーションフォルダ、フェイルオーバー用の仮想 IP アドレスの構成などです。 | VM で実行されている任意のアプリケーション / OS 用の汎用ソリューションです。VM 内にインストールされているアプリケーションの技術的な理解は必要ありません。アプリケーションの動作方法がわからない場合に最適なソリューションです。VM ファイルの場所を定義するだけで済みます。  
+理想的な | 基盤となるハードウェアやハイパーバイザーに依存せず、ソフトウェアソリューションに高可用性を直接組み込むのに最適です。 | 複数の仮想マシンにまたがる複数のアプリケーションを含む複雑な環境を、単一のHAポリシーで管理するのに最適です。  
   
-### クラスターのインフラストラクチャとアーキテクチャ {#cluster-infrastructure-architecture}
+以下の表は、利用可能なすべての`.safe`モジュールの一覧です。
 
-要件/仕様 | SafeKit 能力 / 価値  
+アプリケーションHA（アプリケーションレベルのクラスタリング） |仮想化HA（VMレベルのクラスタリング）  
 ---|---  
-共有ストレージは必要ですか? |いいえ — SAN レスの「シェアードナッシング」アーキテクチャ。ローカルディスクのみを使用します。  
-Active Directory (AD) が前提条件ですか? |いいえ - Windows ドメインまたは Active Directory は必要ありません。ワークグループは完全にサポートされています。  
-クラスターサイズ | 2 ノード (ミラー) または 2 ノード以上 (ファーム)  
-仮想IP（VIP） | Gratuitous ARP (アプリケーション レベルの HA) 経由でアクティブ ノードに自動的に移行するソフトウェア定義の VIP。 VM レベルの HA の場合、VM 内の物理 IP は透過的に再ルーティングされます。VIP は必要ありません。ノード間に LAN、VLAN、またはストレッチ VLAN が必要です。  
-3ノードハイブリッドアーキテクチャ | SafeKit は、HA レイヤー、つまり同期レプリケーション (RPO=0) と自動フェイルオーバーを備えた LAN またはストレッチ VLAN 上の 2 ノードのミラー クラスターをカバーします。サードパーティのバックアップ ソリューションがアーキテクチャを完成させます。つまり、ポイントインタイム リカバリとランサムウェア保護のための WAN 経由の非同期レプリケーションを備えた 3 番目のリモート ノードです。  
-高可用性の役割 | SafeKit は同期レプリケーションを使用して、ハードウェアまたはソフトウェア障害時のデータ損失ゼロの即時フェイルオーバーを保証します。ただし、両方のノードに同時にデータを書き込むため、論理エラー、データの劣化、または誤った削除がスタンバイ ノードにリアルタイムで忠実に複製されます。  
-バックアップの役割 |バックアップ ソリューション (SafeKit では実装されていません) は、非同期レプリケーションによるポイントインタイム リカバリを提供します。 HA ではブロックできないデータ整合性の脅威 (ランサムウェアや人的エラーなど) から保護します。データをロールバックすると本質的にデータ損失が発生するため、自動フェイルオーバーはサポートされていません。  
-クラスターあたりの最大同時モジュール数 | 32 — この制限は、2 ノード クラスターで同時に管理される SafeKit モジュールの最大数をカバーしており、通常、各モジュールが別の VM を複製して再起動する VM レベルの HA で使用されます。各モジュールはいずれかのノードでプライマリとして独立して実行できるため、両方のサーバー間でワークロードを分散できます。注: すべての VM の合計データ量は、フェイルオーバーまたはノードの再起動後の再同期時間に直接影響します。  
-エージェントベースですか、それともエージェントレスですか? |エージェントベース — 各ノードにインストールされる軽量のソフトウェア  
-アプリケーションに依存しない? |はい - あらゆる Windows サービスまたは Linux デーモンを保護します。 30以上のアプリケーション向けに事前構築されたモジュール  
+新しいWindowsアプリ — mirror.safe | Hyper-V VM — hyperv.safe ( Windows )  
+新しいLinuxアプリ — mirror.safe | KVM VM — kvm.safe ( Linux )  
+Windowsロードバランシング — farm.safe | Dockerコンテナ — mirror.safe ( Linux )  
+Linuxロードバランシング — farm.safe | Podmanコンテナ — mirror.safe ( Linux )  
+Microsoft SQL Server — sqlserver.safe ( Windows ) | Kubernetes / K3s — k3s.safe ( Linux )  
+PostgreSQL — postgresql.safe ( WindowsおよびLinux ) | Bosch AMS — hyperv.safe ( Windows )  
+MySQL — mysql.safe ( Windows & Linux ) |ボッシュ BIS — hyperv.safe ( Windows )  
+MariaDB — mysql.safe ( Windows & Linux ) |ボッシュ BVMS — hyperv.safe ( Windows )  
+Oracle — oracle.safe ( Windows & Linux ) |ハンファビジョン — hyperv.safe ( Windows )  
+Firebird — firebird.safe ( Windows & Linux ) | Hanwha Wisenet — hyperv.safe ( Windows )  
+Apache — apache_farm.safe ( WindowsおよびLinux ) | Siemens Siveillance スイート — hyperv.safe ( Windows )  
+IIS — iis_farm.safe ( Windows ) | Siemens Desigo CC — hyperv.safe ( Windows )  
+NGINX — farm.safe ( WindowsおよびLinux ) | Siemens SiPass — hyperv.safe ( Windows )  
+Milestone XProtect — milestone.safe ( Windows ) |シーメンス SIPORT — hyperv.safe ( Windows )  
+Nedap AEOS — nedap.safe ( Windows ) | SIMATIC PCS 7 — hyperv.safe ( Windows )  
+ジェネテック ( SQL Server ) — sqlserver.safe ( Windows ) | SIMATIC WinCC — hyperv.safe ( Windows )  
+シーメンス Siveillance VMS — SiveillanceVMS.safe ( Windows ) |   
+クラウド（ AWS 、 Azure 、 GCP 、汎用）— mirror.safe / farm.safe |   
   
-### レプリケーションとデータ保護 {#replication-data-protection}
+## アーキテクチャと展開モデル{#architecture-deployment-model}
 
-要件/仕様 | SafeKit 能力 / 価値  
----|---  
-レプリケーション方法 |バイトレベルのファイルレプリケーション (ブロックレベルのディスクではない)  
-レプリケーションモード |同期 (データ損失ゼロ)  
-ネットワーク要件 |同期レプリケーションではノード間の往復遅延が 5ms 未満を推奨  
-推奨データ量 |数テラバイト (再同期時間)  
-推奨ファイル数 | < 1,000,000 ファイル (再同期時間)  
-再同期速度 (1 TB) | 1 Gb/s ネットワークで最大 3 時間。 10 Gb/秒ネットワークで約 1 時間  
-選択的レプリケーション |はい - 特定のディレクトリ/ファイルを複製します  
-転送中の暗号化 |はい — レプリケーション トラフィック用の TLS/SSL  
-  
-## RPO および RTO 機能 {#rpo-rto-capabilities}
+### 2つのクラスタモジュール： mirror.safeとfarm.safe {#two-cluster-modules}
 
-### クラスタータイプ別の RPO と RTO {#rto-rpo-cluster-type}
-
-メトリック |ミラークラスター (mirror.safe) |ファームクラスター (farm.safe)  
+モジュール|パターン|ユースケース  
 ---|---|---  
-RPO (目標復旧時点) | 0 (データ損失ゼロ) — 同期レプリケーション。両方のノードが確認した後にのみ書き込みが承認されます | N/A (ステートレス; データはバックエンドミラーによって処理されます)  
-RTO (目標復旧時間) | ~1 分 — ハートビート タイムアウト (デフォルト 30 秒) + アプリケーションの再起動時間 |数秒 - トラフィックは生き残ったアクティブなノードに即座に再分散されます  
-レプリケーションの種類 |同期、リアルタイム、バイトレベルのファイル複製 |該当なし  
-フェイルオーバートリガー |ハートビートの喪失、プロセスのクラッシュ、チェッカーの障害時に自動で実行 |ハートビートの喪失、プロセスのクラッシュ、チェッカーの障害時に自動で実行  
-手動介入が必要ですか? |いいえ - 完全に自動のフェイルオーバーとフェイルバック |いいえ - 完全に自動のフェイルオーバーとフェイルバック  
+mirror.safe |アクティブ/パッシブ構成、同期バイトレベルファイルレプリケーション+自動フェイルオーバー|データベース、ステートフルアプリケーション、一度に1台のサーバーでのみ実行されるサービス  
+farm.safe |ネットワーク負荷分散と自動フェイルオーバーを備えたアクティブ/アクティブ構成| Webサーバー、ステートレスマイクロサービス、APIゲートウェイ、複数のサーバーで同時に実行されるサービス  
   
-### RTO の内訳 (ミラー - アプリケーション レベルの HA) {#rto-breakdown-mirror-application-level-ha}
+### クラスターインフラストラクチャとアーキテクチャ{#cluster-infrastructure-architecture}
 
-障害の種類 | RTO の計算  
+要件／仕様| SafeKit機能／価値  
 ---|---  
-ハードウェア障害 |ハートビート タイムアウト (デフォルト 30 秒) + アプリケーションの再起動時間  
-ソフトウェア/プロセスのクラッシュ |アプリケーションの停止時間 + アプリケーションの再起動時間  
-OSレベルのクラッシュ |ハートビート タイムアウト + OS がセカンダリですでに実行中 → 再起動ペナルティなし  
+共有ストレージが必要ですか？ |いいえ — SANレスの「共有なし」アーキテクチャ。ローカルディスクのみを使用します。  
+Active Directory (AD) の前提条件はありますか？ | — Windowsや Active Directory は必要ありません。ワークグループは完全にサポートされています。  
+クラスタサイズ| 2ノード ( mirror ) または 2ノード以上 ( `farm` )  
+仮想IP（VIP） | 、Gratuitous ARP（アプリケーションレベルのHA）を介してアクティブノードに自動的に移行するソフトウェア定義のVIPです。VMレベルのHAでは、VM内の物理IPが透過的に再ルーティングされるため、VIPは不要です。ノード間にLAN、VLAN、または拡張VLANが必要です。  
+3ノードハイブリッドアーキテクチャ| SafeKitはHAレイヤーをカバーします。これは、同期レプリケーション（RPO=0）と自動フェイルオーバーを備えた、LANまたは拡張VLAN上の2ノードmirrorクラスタです。サードパーティ製のバックアップソリューションがアーキテクチャを完成させます。これは、ポイントインタイムリカバリとランサムウェア対策のために、WANを介した非同期レプリケーションを備えた3番目のリモートノードです。  
+高可用性の役割： | SafeKit同期レプリケーションを使用して、ハードウェアまたはソフトウェア障害発生時にデータ損失ゼロで瞬時のフェイルオーバーを保証します。さらに、両方のノードに同時にデータを書き込むため、論理エラー、データ劣化、または誤削除をスタンバイノードにリアルタイムで忠実にレプリケートします。  
+バックアップの役割|バックアップソリューション（ SafeKitでは実装されていません）は、非同期レプリケーションによる特定時点への復旧を提供します。HA ではブロックできないデータ整合性の脅威（ランサムウェアや人為的ミスなど）からデータを保護します。データのロールバックは必然的にデータ損失を伴うため、自動フェイルオーバーはサポートされていません。  
+クラスタあたりの同時実行モジュールの最大数| 32 — この制限は、2 ノード クラスタで同時に管理できるモジュールの最大数SafeKitを対象としており、通常は、各モジュールが異なる VM を複製して再起動する VM レベルの HA で使用されます。各モジュールは、どちらのノードでもプライマリとして独立して実行できるため、両方のサーバーにワークロードを分散できます。注: すべての VM の合計データ量は、フェイルオーバーまたはノードの再起動後の再同期時間に直接影響します。  
+エージェントベースかエージェントレスか？ |エージェントベース — 各ノードに軽量ソフトウェアをインストール  
+アプリケーションに依存しない？ |はい — あらゆるWindowsサービスまたはLinuxデーモンを保護します。30 種類以上のアプリケーション向けに事前構築済みのモジュールが用意されています。  
   
-### RTO の内訳 (ミラー - VM レベルの HA) {#rto-breakdown-mirror-vm-level-ha}
+### レプリケーションとデータ保護{#replication-data-protection}
 
-障害の種類 | RTO の計算  
+要件／仕様| SafeKit機能／価値  
 ---|---  
-あらゆる失敗 |障害検出 + OS の完全再起動 + アプリケーションの再起動 (通常は数分)  
+レプリケーション方式|バイトレベルファイルレプリケーション（ブロックレベルディスクではない）  
+レプリケーションモード： |　同期（データ損失ゼロ）  
+ネットワーク要件|同期レプリケーションの場合、ノード間の往復遅延は5ms未満を推奨します  
+推奨データ容量|数テラバイト（再同期時間）  
+推奨ファイル数： |ファイル未満（再同期時間）  
+再同期速度（1 TB）： |　1 Gb/s ネットワークで約3時間、10 Gb/s ネットワークで約1時間  
+選択的レプリケーション|はい — 特定のディレクトリ/ファイルをレプリケートします  
+転送中の暗号化|はい — レプリケーション トラフィックに TLS/SSL を使用  
   
-## エッジおよび分散展開の適合性 {#edge-distributed-deployment-suitability}
+## RPOおよびRTO機能{#rpo-rto-capabilities}
 
-SafeKit は、エッジ、ブランチ オフィス、分散エンタープライズ シナリオ向けに特別に設計されています。
+### クラスタータイプ別RPOおよびRTO {#rto-rpo-cluster-type}
 
-エッジ要件 | SafeKit 答え  
----|---  
-オンサイトに専任の IT スタッフがいない |はい - 自動フェイルオーバー、手動介入なし  
-SAN/NAS インフラストラクチャがない |はい - SANレス、ローカルディスクのみ  
-リモート管理 |はい - Web コンソール管理  
-ハードウェアの設置面積が小さい |はい - 2 台の標準サーバーまたは VM、特別なハードウェアなし  
-ファイアウォール/NAT の背後で動作します |はい - 構成可能なポート、HTTPS ベースのコンソール  
-マルチサイトの災害復旧 |はい — ストレッチ VLAN を介して 2 つの地理的サイト間でミラーリングします  
-OEM/組み込み導入 |はい - サイレント インストール、スクリプト可能、ソフトウェア発行者による埋め込み可能  
-数百の分散クラスター |はい — 多くの支店を持つ分散型企業向けに設計されています  
-  
-理想的なエッジの使用例: データセンターのないあらゆるサイト — 高可用性が依然として重要な場所:
-
-垂直 |典型的なエッジサイト |クリティカルなアプリケーション  
+メトリック| Mirrorクラスター ( mirror.safe ) | `Farm`クラスター ( farm.safe )  
 ---|---|---  
-物理的なセキュリティと監視 |建物、キャンパス、空港 | VMS — マイルストーン、ゼネテック、ハンファ、シーメンス シベイランス  
-ビル管理（BMS） |オフィスビル、病院、工場 |シーメンス デシゴ CC、ボッシュ BIS/BVMS  
-電子アクセス制御 (EACS) |安全な施設、キャンパス | Siemens SiPass、Nedap、Bosch AMS  
-SCADA と産業用制御 |工場、変電所、浄水場 | Windows または Linux 上で実行される SCADA、DCS、または HMI ソフトウェア  
-航空交通管制 (ATC) |空港、管制塔 | ATC管理およびレーダーシステム  
-オペレーション コントロール センター (OCC) |地下鉄、鉄道、交通ハブ |鉄道信号と駅管理  
-海事 |船舶、軍艦 |ナビゲーション、貨物、船内管理システム  
-石油とガス |オフショアプラットフォーム、リモートリグ |プロセス制御および安全システム  
-電気通信 | 5Gアンテナサイト、MECノード |マルチアクセス エッジ コンピューティング (MEC) サーバー  
-ヘルスケア |クリニック、遠隔診断センター |医療画像、患者データ、遠隔診断  
-小売 |店舗、支店、倉庫 | POSおよび在庫管理  
-守備 |前線作戦基地、野戦部隊 |ミッションクリティカルなコマンドおよび通信システム  
+RPO (リカバリポイント目標) | 0 (データ損失ゼロ) — 同期レプリケーション。書き込みは両方のノードが確認した後にのみ承認されます| N/A (ステートレス。データはバックエンドによって処理されますmirror )  
+RTO（リカバリ時間目標） |約1分 — ハートビートタイムアウト（デフォルト30秒）＋アプリケーション再起動時間|数秒 — トラフィックは直ちに稼働中のアクティブノードに再分配されます  
+レプリケーションタイプ|同期、リアルタイム、バイトレベルファイルレプリケーション|該当なし  
+フェイルオーバー トリガー|ハートビートの喪失、プロセスのクラッシュ、またはチェッカーの障害時に自動的に実行されます|ハートビートの喪失、プロセスのクラッシュ、またはチェッカーの障害時に自動的に実行されます  
+手動介入が必要ですか? |いいえ — 完全自動フェイルオーバーとフェイルバック|いいえ — 完全自動フェイルオーバーとフェイルバック  
   
-## 監視、管理、アラート {#monitoring-management-alerting}
+### RTO内訳（ Mirror — アプリケーションレベルのHA） {#rto-breakdown-mirror-application-level-ha}
 
-能力 |詳細  
+障害タイプ| RTO 計算  
 ---|---  
-Webコンソール | Web アプリまたはプログレッシブ Web アプリ (PWA)。クラスターノードの構成、監視、管理  
-モバイル通知 |状態変化のブラウザプッシュ通知  
-州のタイムライン |モジュールの状態とイベントの視覚的なタイムライン  
-電子メール通知 |アラート用の組み込み電子メールエージェント  
-CLI管理 |スクリプト作成と自動化のための完全なコマンドライン インターフェイス  
-ログ管理 |モジュールごと、スクリプトごとのログ ファイル。サポート用のデバッグスナップショット  
-サードパーティ監視の統合 | SafeKit は、すべての主要なクラスター イベントを Windows イベント ログまたは Linux Syslog に自動的に記録するため、カスタム開発を行わずに、あらゆる監視プラットフォームでこれらのイベントを収集し、標準のアラート ルール (Nagios、Zabbix、Splunk、SIEM ソリューションなど) でアラームを生成できるようになります。  
+ハードウェア障害|ハートビートタイムアウト（デフォルト30秒）+アプリケーション再起動時間  
+ソフトウェア/プロセスクラッシュ|アプリケーション停止時間 + アプリケーション再起動時間  
+OSレベルのクラッシュ|ハートビートタイムアウト + セカンダリで既にOSが実行中 → 再起動によるペナルティなし  
   
-## セキュリティとコンプライアンス {#security-compliance}
+### RTO内訳（ Mirror — VMレベルHA） {#rto-breakdown-mirror-vm-level-ha}
 
-特徴 |詳細  
+障害タイプ| RTO 計算  
 ---|---  
-HTTPSコンソールアクセス |はい - Web コンソールの TLS 証明書  
-ユーザー認証 |ローカルアカウント、LDAP、PKI/証明書ベース、OpenID Connect  
-ユーザーの役割 |管理者、制御、監視の役割に対する構成可能なアクセス ポリシー  
-暗号化 | TCP 用の TLS/SSL (レプリケーション、Web コンソール、分散コマンド) および UDP 用の AES-128-CBC + SHA256 対称暗号化 (ハートビート、safeadmin 内部プロトコル)。 openSSLライブラリに基づく暗号化。 ApacheをベースとしたWebサービス。  
-ウイルス対策の互換性 |文書化された除外パス  
-主権 |欧州企業として、Eviden (Atos Group) は、Windows および Linux 向けの独自の主権的事業継続性および災害復旧製品を SafeKit で提供しています。NIS2 の事業継続性および災害復旧要件に沿って、米国のベンダーに依存せず、データとフェイルオーバー インフラストラクチャを完全にオンプレミスに維持します。  
+あらゆる障害|障害検出 + OS の完全再起動 + アプリケーションの再起動 (通常数分)  
   
-## ライセンスモデル {#licensing-model}
+## エッジおよび分散型展開の適合性{#edge-distributed-deployment-suitability}
 
-アスペクト |詳細  
+SafeKitは、エッジ、ブランチオフィス、および分散型エンタープライズのシナリオ向けに特別に設計されています。
+
+エッジ要件| SafeKit回答  
 ---|---  
-ライセンスの種類 |ホスト名に基づく永久ライセンス (1 回限りの購入)  
-ライセンスの範囲 |サーバー (ノード) ごと  
-ライセンスのアクティベーション |オフラインアクティベーションがサポートされています。ライセンス キーをアクティベートするためにインターネット アクセスは必要ありません。  
-無料トライアル |はい — フル機能の無料トライアルが利用可能  
-1か月間の無料ライセンス |概念実証に利用可能  
+常駐のITスタッフはいません|はい、自動フェイルオーバーで、手動による介入は不要です。  
+SAN/NASインフラストラクチャなし|はい — SANレス、ローカルディスクのみ  
+リモート管理|はい — Webコンソール管理  
+ハードウェアのフットプリントが低い|はい — 標準サーバーまたはVM 2台、特別なハードウェアは不要  
+ファイアウォール/NATの背後でも動作します|はい — 設定可能なポート、HTTPSベースのコンソール  
+マルチサイト災害復旧|はい — 2 つの地理的なサイト間での拡張 VLAN を介したmirror  
+OEM/組み込み展開|はい — サイレントインストール、スクリプト対応、ソフトウェアパブリッシャーによる組み込み対応  
+数百の分散クラスター|はい — 多くの支店を持つ分散型企業向けに設計されています  
   
-## サポートとメンテナンスの SLA {#support-maintenance-slas}
+Ideal Edgeのユースケース：データセンターを持たないあらゆるサイト（高可用性が依然として重要な場合）：
 
-### 標準サポートとメンテナンス (アクティブなメンテナンス契約に含まれます) {#standard-support-maintenance-included-with-active-maintenance-contract}
+垂直型|標準エッジサイト|重要アプリケーション  
+---|---|---  
+物理セキュリティと監視|建物、キャンパス、空港| VMS — Milestone 、Genetec、Hanwha、Siemens Siveillance  
+ビル管理システム（BMS） |オフィスビル、病院、工場| Siemens Desigo CC、Bosch BIS/BVMS  
+電子アクセス制御（EACS） |セキュア施設、キャンパス| Siemens SiPass、 Nedap 、Bosch AMS  
+SCADAおよび産業制御|工場、変電所、浄水場| WindowsまたはLinux上で動作するあらゆるSCADA、DCS、またはHMIソフトウェア  
+航空交通管制（ATC） |空港、管制塔| ATC管理およびレーダーシステム  
+運行管理センター（OCC） |地下鉄、鉄道、交通ハブ|鉄道信号および駅管理  
+海事|船舶、海軍艦艇|航行、貨物および船上管理システム  
+石油・ガス|洋上プラットフォーム、遠隔掘削装置|プロセス制御および安全システム  
+電気通信| 5Gアンテナサイト、MECノード|マルチアクセスエッジコンピューティング（MEC）サーバー  
+医療|クリニック、遠隔診断センター|医用画像処理、患者データ、遠隔診断  
+小売業|店舗、支店、倉庫|販売時点情報管理および在庫管理  
+防衛|前線作戦基地、野戦部隊|任務遂行に不可欠な指揮通信システム  
+  
+## 監視、管理、アラート{#monitoring-management-alerting}
 
-サービス |詳細  
+機能|詳細  
 ---|---  
-サポートポータルへのアクセス |最大 4 人の指名技術担当者が対応する 24 時間年中無休の Web ポータル  
-ライブサポート時間 |ヨーロッパ サポート センター、月曜～金曜 午前 9 時～午後 5 時  
-インシデントの確認 |サポートセンターの営業時間4時間以内  
-アップデートとアップグレード |すべてのサービス パック、アップデート、アップグレードが追加料金なしで含まれています  
-ライセンスキーの交換 |有効なサポート契約に基づいてホスト名を変更すると、ライセンス キーを再割り当てできます。ライセンスの譲渡は、Eviden の事前の書面による承諾を条件として、同じプロジェクト内のサーバーの交換に限定されます。  
-ナレッジベースへのアクセス | KB 記事、FAQ、オンライン ドキュメントへの完全なアクセス  
-SafeKitを使用しないアプリケーションの起動/停止 |はい — SafeKit を停止し、ラッパー スクリプトを使用してアプリケーションを開始または停止します。ラッパー スクリプトは、アプリケーションの開始/停止スクリプトを呼び出し、必要に応じて仮想 IP アドレスを構成または削除します。 
-サポートポータル | <https://customercare.evidian.com>  
+Webコンソール| WebアプリまたはプログレッシブWebアプリ（PWA）；クラスタノードの設定、監視、および管理  
+モバイル通知|状態変化に関するブラウザプッシュ通知  
+状態タイムライン|モジュールの状態とイベントの視覚的なタイムライン  
+メール通知|アラート用の組み込みメールエージェント  
+CLI管理|スクリプト作成と自動化のための完全なコマンドラインインターフェース  
+ログ管理|モジュールごと、スクリプトごとのログファイル。サポート用のデバッグスナップショット。  
+サードパーティ監視統合| SafeKit 、すべての主要なクラスタイベントをWindowsイベントログまたはLinux Syslog に自動的に記録し、カスタム開発なしで、Nagios、Zabbix、Splunk、SIEM ソリューションなどの監視プラットフォームがこれらのイベントを収集し、標準のアラートルールを使用してアラームを発生させることを可能にします。  
   
-### 無料のリソース (契約は必要ありません) {#free-resources-no-contract-required}
+## セキュリティとコンプライアンス{#security-compliance}
 
-リソース |詳細  
+機能|詳細  
 ---|---  
-AIサポートアシスタント | [SafeKit AI チャット](</ja/resources/safekit-support/#ai-support>) safekit.eviden.com 上および、safekit.eviden.com/llms.txt を使用する任意の LLM 経由
-オンライントレーニングと認定資格 |無料、マイペース、12 本のビデオ (約 3 時間 40 分)、完了時の証明書  
-ドキュメント |完全なユーザー ガイド、リリース ノート、ナレッジ ベース、クイック スタート ガイド  
+HTTPSコンソールアクセス|はい — Webコンソール用のTLS証明書  
+ユーザー認証|ローカルアカウント、LDAP、PKI/証明書ベース、OpenID Connect  
+ユーザーロール|管理者、制御、監視ロールに対する設定可能なアクセス ポリシー  
+TCP（レプリケーション、Webコンソール、分散コマンド）にはTLS/SSL | UDP（ハートビート、safeadmin内部プロトコル）にはAES-128-CBC + SHA256対称暗号化を使用。暗号化はOpenSSLライブラリに基づいています。WebサービスはApacheベースです。  
+ウイルス対策ソフトとの互換性|文書化された除外パス  
+主権|欧州企業である Eviden (Atos Group) は、 SafeKitにより、 WindowsおよびLinux向けの独自の主権型事業継続および災害復旧製品を提供します。これにより、NIS2 事業継続および災害復旧要件に準拠し、米国ベンダーへの依存をなくし、データとフェイルオーバーインフラストラクチャを完全にオンプレミスに維持します。  
   
-## 比較と代替品 {#comparison-vs-alternatives}
+## ライセンスモデル{#licensing-model}
 
-基準 | SafeKit | Microsoft フェイルオーバー クラスター (WSFC) | VMware HA |オープンソース*  
+アスペクト|の詳細  
+---|---  
+ライセンスの種類： |　ホスト名に基づく永久ライセンス（一括購入）  
+ライセンス範囲|サーバー（ノード）ごと  
+ライセンス認証|オフライン認証に対応しています。ライセンスキーの認証にインターネット接続は不要です。  
+無料トライアル|はい — フル機能の無料トライアルが利用可能です  
+概念実証用に1ヶ月間の無料ライセンス|利用可能です  
+  
+## サポートおよびメンテナンスSLA {#support-maintenance-slas}
+
+### 標準サポートおよびメンテナンス（有効なメンテナンス契約に含まれます） {#standard-support-maintenance-included-with-active-maintenance-contract}
+
+サービス|詳細  
+---|---  
+サポートポータルアクセス|最大4名の技術担当者が24時間365日利用可能なWebポータル  
+ライブサポート受付時間：午前9時～午後5時|ヨーロッパサポートセンター、月曜日～金曜日）  
+インシデント確認|サポートセンターの営業時間内4時間以内  
+アップデートとアップグレード|すべてのサービスパック、アップデート、アップグレードが追加料金なしで含まれています  
+ライセンスキーの交換|有効なサポート契約に基づき、ホスト名の変更時にライセンスキーを再割り当てできます。ライセンスの譲渡は、同一プロジェクト内でのサーバー交換に限定され、Evidenの事前の書面による承認が必要です。  
+ナレッジベースへのアクセス|ナレッジベース記事、FAQ、オンラインドキュメントへのフルアクセス  
+アプリケーションの開始/停止 SafeKit | はい、停止 SafeKit そして、ラッパースクリプトを使用してアプリケーションを起動または停止します。ラッパースクリプトは、アプリケーションの起動/停止スクリプトを呼び出し、必要に応じて仮想IPアドレスを設定または削除します。 
+サポートポータル| <https://customercare.evidian.com>  
+  
+### 無料リソース（契約不要） {#free-resources-no-contract-required}
+
+リソース|詳細  
+---|---  
+AIサポートアシスタント | [SafeKit AIチャット](</ja/resources/safekit-support/#ai-support>) safekit.eviden.com および safekit.eviden.com を使用するあらゆる LLM を通じて。llms.txt  
+オンライン研修＆認定|無料、自分のペースで学習可能、動画12本（約3時間40分）、修了証発行  
+ドキュメント|完全なユーザーガイド、リリースノート、ナレッジベース、クイックスタートガイド  
+  
+## 比較 vs. 代替案{#comparison-vs-alternatives}
+
+基準| SafeKit | Microsoftフェイルオーバー クラスタ (WSFC) | VMware HA |オープンソース*  
 ---|---|---|---|---  
-共有ストレージ (SAN/vSAN) が必要 |いいえ |はい |はい |いいえ  
-Windowsのサポート |はい |はい |はい |いいえ  
-Linuxのサポート |はい |いいえ |はい |はい  
-エッジ/ブランチ展開 |素晴らしい |複雑な |複雑な |複雑な  
-OEM組み込み可能 |はい |いいえ |いいえ |いいえ  
-コスト |ノードごとの永続的 | Windowsサーバー + SAN | vSphere エンタープライズ + SAN |高度な統合サービス  
-セットアップの複雑さ |プラグアンドプレイ |高 (AD、SAN、証人) |高 (vCenter、共有ストレージ) |高 (断片化した製品)  
-保守性 |単一製品、Web コンソール |高 (AD、SAN の専門知識が必要) |高 (vCenter への依存) |高 (別の製品を保守する必要があります)  
+共有ストレージ（SAN/vSAN）が必要|いいえ|はい|はい|いいえ  
+Windows サポート | はい | はい | はい | いいえ  
+Linux サポート | はい | いいえ | はい | はい  
+エッジ/ブランチ展開|優秀|複雑|複雑|複雑  
+OEM 組み込み可能|はい|いいえ|いいえ|いいえ  
+コスト|ノードごとの永続ライセンス| Windowsサーバー + SAN | vSphere Enterprise + SAN |高レベル統合サービス  
+セットアップの複雑さ|プラグアンドプレイ|高 (AD、SAN、witness) |高 (vCenter、共有ストレージ) |高 (断片化された製品)  
+保守性|単一製品、Webコンソール|高（AD、SANの専門知識が必要） |高（vCenterへの依存） |高（保守が必要な製品が複数）  
   
-_\* Linux 上で SafeKit の機能セットを複製するには、Linux のみで 6 つの個別のオープンソース プロジェクト (Corosync、Pacemaker、DRBD、Keepalived、STONITH、HAProxy) が必要です。 SafeKit は、Windows と Linux の両方で同じ機能を 1 つの製品で提供します。_
+_* の上 Linux再現するには、Corosync、Pacemaker、DRBD、Keepalived、STONITH、HAProxy の 6 つの独立したオープンソース プロジェクトが必要となる。 SafeKitの機能セット Linux のみ。 SafeKit 単一製品で同じ機能を提供し、 Windows そして Linux._
 
-## クイックリファレンスリンク {#quick-reference-links}
+## クイックリファレンスリンク{#quick-reference-links}
 
-リソース | URL  
+リソース| URL  
 ---|---  
-製品ホームページ | <https://safekit.eviden.com/ja/>
-技術概要 (テキストと図を含む DOCX) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
-無料トライアル | [https://safekit.eviden.com/ja/resources/safekit-free-trial/](</ja/resources/safekit-free-trial/>)  
-見積もりを取得する | [https://safekit.eviden.com/ja/safekit-pricing/](</ja/safekit-pricing/>)  
-サポートポータル | <https://customercare.evidian.com>  
-無料のAIサポート | [https://safekit.eviden.com/ja/resources/safekit-support/](</ja/resources/safekit-support/>)  
-無料のトレーニングと認定資格 | 🎓 [https://safekit.eviden.com/ja/resources/safekit-on-line-training/](</ja/resources/safekit-on-line-training/>)  
-お問い合わせ | [https://safekit.eviden.com/ja/contact-us-for-safekit/](</ja/contact-us-for-safekit/>)  
+製品ホームページ| <https://safekit.eviden.com>  
+技術概要（テキストと図を含むDOCXファイル） | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
+無料トライアル| [ https://safekit.eviden.com/ja/resources/safekit-free-trial/]( </ja/resources/safekit-free-trial/> )  
+見積もり</safekit-pricing/>取得する| [ https://safekit.eviden.com/safekit-pricing/]( )  
+サポートポータル| <https://customercare.evidian.com>  
+無料AIサポート| [ https://safekit.eviden.com/ja/resources/safekit-support/]( </ja/resources/safekit-support/> )  
+無料トレーニング＆認定| 🎓 [ https://safekit.eviden.com/ja/resources/safekit-on-line-training/]( </ja/resources/safekit-on-line-training/> )  
+お問い合わせください| [ https://safekit.eviden.com/contact-us-for-safekit/]( </contact-us-for-safekit/>  
   
 
 {{%  insert-safekit-4-buttons-ja  %}}

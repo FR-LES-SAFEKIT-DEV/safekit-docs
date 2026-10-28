@@ -1,53 +1,57 @@
 ---
 title: "高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス"
 canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-architectures-and-best-practices/"
-description: "アプリケーションクラスタリングにおける高可用性（HA）アーキテクチャとベストプラクティスを紹介します。SafeKit は共有ディスクなしで Mirror／Farm クラスターを実装し、データ損失を防ぎ、重要なアプリケーションの自動フェイルオーバーを実現します。"
+description: "アプリケーションクラスタリングの高可用性（HA）アーキテクチャとベストプラクティスについて学びましょう。 SafeKit ソフトウェア実装 mirror そして farm 共有ディスクを使用しないクラスターにより、データ損失ゼロと重要なアプリケーション向けの自動フェイルオーバーを実現します。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性アーキテクチャとベストプラクティスとは, 高可用性アーキテクチャとベストプラクティスの比較表, SafeKit 高可用性ナビゲーションハブ"
+topics: "高可用性アーキテクチャとそのベストプラクティスとは？、高可用性アーキテクチャとベストプラクティスの比較表、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス {#high-availability-architectures--software-clustering-best-practices}
+# 高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス{#high-availability-architectures--software-clustering-best-practices}
 
-## 高可用性アーキテクチャとベストプラクティスとは？ {#what-are-the-high-availability-architectures-and-the-best-practices}
+## 高可用性アーキテクチャとそのベストプラクティス{#what-are-the-high-availability-architectures-and-the-best-practices}は何ですか？
 
-### 概要 {#overview}
+### 概要{#overview}
 
-この記事では、さまざまな高可用性アーキテクチャとベストプラクティスを取り上げ、それぞれの長所と短所を比較します。
+この記事では、さまざまな高可用性アーキテクチャとそのベストプラクティスについて、それぞれのアーキテクチャの長所と短所を挙げながら解説します。
+
 
 ![高可用性アーキテクチャとベストプラクティス](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-以下の比較表では、高可用性ソフトウェア SafeKit のアーキテクチャとベストプラクティスを詳しく説明します。
 
-### 高可用性アーキテクチャにはどのような種類がありますか？ {#what-are-the-high-availability-architectures}
+以下の比較表では、 SafeKit高可用性アーキテクチャとそのベストプラクティスについて詳しく説明しています（ SafeKitはソフトウェアの高可用性製品です）。
 
-[高可用性アーキテクチャ](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>)には、データベースなどのバックエンドアプリケーション向けと、Web サービスなどのフロントエンドアプリケーション向けの2種類があります。
+### 高可用性アーキテクチャ{#what-are-the-high-availability-architectures}は何ですか？
 
-バックエンド向けアーキテクチャでは、2台のサーバーがデータを共有または複製し、ハードウェアまたはソフトウェアの障害時にアプリケーションを自動フェイルオーバーします。
+高可用性](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) [は、データベースなどのバックエンドアプリケーション向けのものと、Webサービスなどのフロントエンドアプリケーション向けのものの2種類があります。
 
-フロントエンド向けアーキテクチャでは、2台以上のサーバーでファームを構成します。ハードウェアまたはソフトウェアによる負荷分散で、TCP セッションを利用可能なサーバーに振り分けます。
+バックエンドの高可用性アーキテクチャは、2台のサーバーがデータを共有または複製し、ハードウェアまたはソフトウェアの障害が発生した場合にアプリケーションが自動的にフェイルオーバーする仕組みに基づいています。
 
-また、アプリケーションレベルと仮想マシンレベルのどちらで高可用性を実現するかを選択します。
+フロントエンドの高可用性アーキテクチャは、 `farm`台のサーバー (2 台以上のサーバー) をベースとしています。負荷分散はハードウェアまたはソフトウェアによって行われ、TCP セッションをfarm内の利用可能なサーバーに分散します。
 
-### ベストプラクティスには何がありますか？ {#what-are-the-best-practices}
+さらに、アプリケーションレベルでの高可用性と仮想マシンレベルでの高可用性のどちらかを選択する必要があります。
 
-この記事では、高可用性アーキテクチャのベストプラクティスを次の項目で比較します。
+### {#what-are-the-best-practices}プラクティスは何ですか？
 
-  * [ソフトウェアクラスタリングとハードウェアクラスタリング](</ja/best-practises/clustering-software-vs-hardware-clustering/>),
-  * [shared-nothing と shared-disk アーキテクチャ](</ja/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>),
-  * [アプリケーション HA と VM HA](</ja/best-practises/vm-ha-vs-application-ha/>),
-  * [高可用性とフォールトトレランス](</ja/best-practises/high-availability-cluster-vs-fault-tolerant-system/>),
-  * [同期レプリケーションと非同期レプリケーション](</ja/best-practises/synchronous-replication-vs-asynchronous-replication/>),
-  * [ファイルレプリケーションとディスクレプリケーション](</ja/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
-  * [データレプリケーション技術](</ja/best-practises/data-replication-techniques/>),
-  * [RPO と RTO の例](</ja/best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [スプリットブレインとクォーラム](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
-  * [仮想 IP アドレス](</ja/best-practises/how-a-virtual-ip-address-works/>).
+この記事では、高可用性アーキテクチャにおけるベストプラクティスを、以下の点を比較することで探究します。
 
-## 高可用性アーキテクチャとベストプラクティスの比較表 {#comparative-tables-on-high-availability-architectures-and-best-practices}
+  * [ソフトウェア対ハードウェアクラスタリング](</ja/best-practises/clustering-software-vs-hardware-clustering/>) 、
+  * [共有なし vs 共有ディスクアーキテクチャ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) 、
+  * [アプリケーションと仮想マシンの高可用性](</ja/best-practises/vm-ha-vs-application-ha/>) 、
+  * [高可用性 vs フォールトトレランス](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) 、
+  * [同期レプリケーションと非同期レプリケーション](</ja/best-practises/synchronous-replication-vs-asynchronous-replication/>) 、
+  * [ファイル対ディスク複製](</ja/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) 、
+  * [データ複製技術](</ja/best-practises/data-replication-techniques/>) 、
+  * [ RPOとRTOの例](</ja/best-practises/what-is-rpo-and-rto-with-examples/>) 、
+  * [スプリットブレインとクォーラム](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) 、
+  * [仮想 IP アドレスは](</ja/best-practises/how-a-virtual-ip-address-works/>) 。
 
-{{% insert-safekit-software-vs-hardware-table-ja %}}
 
-{{% insert-safekit-hub-ja %}}
+## 高可用性アーキテクチャとベストプラクティスに関する比較表{#comparative-tables-on-high-availability-architectures-and-best-practices}
 
-{{% insert-safekit-4-buttons-ja %}}
+
+{{%  insert-safekit-software-vs-hardware-table-ja  %}}
+
+{{%  insert-safekit-hub-ja  %}}
+
+{{%  insert-safekit-4-buttons-ja  %}}

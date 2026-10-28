@@ -1,53 +1,57 @@
 ---
-title: "Arquitecturas de alta disponibilidad y buenas prácticas de clustering de software"
+title: "Arquitecturas de alta disponibilidad y mejores prácticas para la agrupación de software"
 canonical: "https://safekit.eviden.com/es/best-practises/high-availability-architectures-and-best-practices/"
-description: "Explore las arquitecturas de alta disponibilidad (HA) y las buenas prácticas para clústeres de aplicaciones. Descubra cómo SafeKit implementa clústeres Mirror y Farm sin discos compartidos, evitando la pérdida de datos y ofreciendo conmutación automática por error para aplicaciones críticas."
+description: "Explore las arquitecturas de alta disponibilidad (HA) y las mejores prácticas para la agrupación de aplicaciones. Descubra cómo el software SafeKit implementa los clústeres mirror y farm sin discos compartidos, lo que garantiza la ausencia de pérdida de datos y la conmutación por error automática para aplicaciones críticas."
 category: "best-practises"
 lang: "es"
-topics: "Cuáles son las arquitecturas de alta disponibilidad y las buenas prácticas, Tablas comparativas de arquitecturas de alta disponibilidad y buenas prácticas, Centro de navegación de alta disponibilidad SafeKit"
+topics: "¿Cuáles son las arquitecturas de alta disponibilidad y las mejores prácticas?, Tablas comparativas sobre arquitecturas de alta disponibilidad y mejores prácticas, 🔍 SafeKit Centro de navegación de alta disponibilidad"
 ---
 
-# Arquitecturas de alta disponibilidad y buenas prácticas de clustering de software {#high-availability-architectures--software-clustering-best-practices}
+# Arquitecturas de alta disponibilidad y mejores prácticas de agrupación de software {#high-availability-architectures--software-clustering-best-practices}
 
-## ¿Cuáles son las arquitecturas de alta disponibilidad y las buenas prácticas? {#what-are-the-high-availability-architectures-and-the-best-practices}
+## ¿Cuáles son las arquitecturas de alta disponibilidad y las mejores prácticas? {#what-are-the-high-availability-architectures-and-the-best-practices}
 
 ### Descripción general {#overview}
 
-Este artículo presenta distintas arquitecturas de alta disponibilidad y buenas prácticas, y compara las ventajas y desventajas de cada una.
+Este artículo explora las diferentes arquitecturas de alta disponibilidad y las mejores prácticas, presentando las ventajas y desventajas de cada una.
 
-![Arquitecturas de alta disponibilidad y buenas prácticas](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-Las siguientes tablas comparativas detallan la arquitectura de alta disponibilidad de SafeKit y sus buenas prácticas. SafeKit es un producto de software para alta disponibilidad.
+Arquitecturas de alta disponibilidad y mejores prácticas ![ ](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-### ¿Cuáles son las arquitecturas de alta disponibilidad? {#what-are-the-high-availability-architectures}
 
-Hay dos tipos de [arquitecturas de alta disponibilidad](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>): las destinadas a aplicaciones de back-end, como las bases de datos, y las destinadas a aplicaciones de front-end, como los servicios web.
+Las siguientes tablas comparativas explican en detalle la arquitectura de alta disponibilidad SafeKit y sus mejores prácticas ( SafeKit es un producto de software de alta disponibilidad).
 
-Las arquitecturas de back-end se basan en dos servidores que comparten o replican datos y realizan una conmutación automática de la aplicación ante fallos de hardware o software.
+### ¿Qué son las arquitecturas de alta disponibilidad? {#what-are-the-high-availability-architectures}
 
-Las arquitecturas de front-end se basan en una granja de dos o más servidores. El equilibrio de carga, por hardware o software, distribuye las sesiones TCP entre los servidores disponibles.
+Hay dos tipos de arquitecturas de alta disponibilidad [ ](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) : las destinadas a aplicaciones de backend, como bases de datos, y las destinadas a aplicaciones de frontend, como servicios web.
 
-También hay que elegir entre alta disponibilidad a nivel de aplicación y a nivel de máquina virtual.
+Las arquitecturas de alta disponibilidad para el backend se basan en dos servidores que comparten o replican datos, con una conmutación por error automática de la aplicación en caso de fallos de hardware o software.
 
-### ¿Cuáles son las buenas prácticas? {#what-are-the-best-practices}
+Las arquitecturas de alta disponibilidad para el frontend se basan en un `farm` de servidores (2 servidores o más). El balanceo de carga se realiza mediante hardware o software y distribuye las sesiones TCP a los servidores disponibles en el farm .
 
-Este artículo analiza las buenas prácticas de las arquitecturas de alta disponibilidad mediante la comparación de:
+Además, hay que elegir entre alta disponibilidad a nivel de aplicación o a nivel de máquina virtual.
 
-  * [clustering de software y hardware](</es/best-practises/clustering-software-vs-hardware-clustering/>),
-  * [arquitectura sin recursos compartidos y con disco compartido](</es/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>),
-  * [alta disponibilidad de aplicación y de máquina virtual](</es/best-practises/vm-ha-vs-application-ha/>),
-  * [alta disponibilidad y tolerancia a fallos](</es/best-practises/high-availability-cluster-vs-fault-tolerant-system/>),
-  * [replicación síncrona y asíncrona](</es/best-practises/synchronous-replication-vs-asynchronous-replication/>),
-  * [replicación de archivos y de discos](</es/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
-  * [técnicas de replicación de datos](</es/best-practises/data-replication-techniques/>),
-  * [RPO y RTO con ejemplos](</es/best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [split-brain y quórum](</es/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
-  * [direcciones IP virtuales](</es/best-practises/how-a-virtual-ip-address-works/>).
+### ¿Cuáles son las mejores prácticas? {#what-are-the-best-practices}
 
-## Tablas comparativas de arquitecturas de alta disponibilidad y buenas prácticas {#comparative-tables-on-high-availability-architectures-and-best-practices}
+Este artículo explora las mejores prácticas en arquitecturas de alta disponibilidad mediante la comparación de:
 
-{{% insert-safekit-software-vs-hardware-table-es %}}
+  * [ agrupamiento por software frente a clúster por hardware ](</es/best-practises/clustering-software-vs-hardware-clustering/>) ,
+  * Arquitectura de disco compartido [ sin recursos compartidos frente a arquitectura de disco compartido ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
+  * Aplicación [ frente a alta disponibilidad de máquina virtual ](</es/best-practises/vm-ha-vs-application-ha/>) ,
+  * [ alta disponibilidad frente a tolerancia a fallos ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ replicación síncrona frente a asíncrona ](</es/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
+  * [ replicación de archivos frente a replicación de disco ](</es/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
+  * Técnicas de replicación de datos [ ](</es/best-practises/data-replication-techniques/>) ,
+  * [ RPO y RTO con ejemplos ](</es/best-practises/what-is-rpo-and-rto-with-examples/>) ,
+  * [ cerebro dividido y quórum ](</es/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) ,
+  * Direcciones IP virtuales [ ](</es/best-practises/how-a-virtual-ip-address-works/>) .
 
-{{% insert-safekit-hub-es %}}
 
-{{% insert-safekit-4-buttons-es %}}
+## Tablas comparativas sobre arquitecturas de alta disponibilidad y mejores prácticas {#comparative-tables-on-high-availability-architectures-and-best-practices}
+
+
+{{%  insert-safekit-software-vs-hardware-table-es  %}}
+
+{{%  insert-safekit-hub-es  %}}
+
+{{%  insert-safekit-4-buttons-es  %}}

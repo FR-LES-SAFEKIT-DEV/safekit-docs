@@ -1,56 +1,56 @@
 ---
-title: "SafeKit: IA et support"
+title: "SafeKit IA et assistance"
 canonical: "https://safekit.eviden.com/fr/resources/safekit-support/"
-description: "SafeKit propose trois canaux de support : un support contractuel standard avec signalement d'incidents 24h/24 et 7j/7, une assistance gratuite basée sur l'intelligence artificielle via SafeKit AI, et un programme gratuit de formation et de certification en ligne."
+description: "SafeKit propose trois canaux d'assistance : une assistance contractuelle standard avec signalement des incidents 24h/24 et 7j/7, une assistance gratuite basée sur l'IA via SafeKit AI et un programme gratuit de certification et de formation en ligne."
 category: "resources"
 lang: "fr"
-topics: "Support IA de niveau 1 gratuit, Support et Maintenance Standard, Programme de Formation et Certification Gratuit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Assistance IA de niveau 1 gratuite, assistance et maintenance standard, programme de certification et de formation gratuit, 🔍 Centre de navigation haute disponibilité SafeKit"
 ---
 
-# SafeKit: IA et support {#safekit-ai--support}
+# SafeKit IA et support {#safekit-ai--support}
 
-## Support IA de niveau 1 gratuit {#ai-support}
+## Assistance gratuite en IA de niveau 1 {#ai-support}
 
-**🤖 Utiliser SafeKit avec votre LLM préféré**
+** 🤖 Utilisez SafeKit avec votre LLM préféré **
 
   1. Ouvrez un assistant IA tel que Claude, ChatGPT, GitHub Copilot ou tout autre LLM.
-  2. Collez le contenu de [llms.txt](</llms.txt>) dans le chat.
-  3. Pour vérifier que le LLM a correctement traité la base de connaissances SafeKit, posez la question : `Quelle est la valeur par défaut de maxloop dans SafeKit ?`
-  4. La bonne réponse est `3`.
-  5. Vous pouvez ensuite poser des questions telles que : 
-     * Questions commerciales et d'avant-vente
+  2. Collez le contenu de [ llms.txt ](</llms.txt>) dans la conversation.
+  3. Pour vérifier que le LLM a correctement traité la base de connaissances SafeKit , demandez : `What is the default value of maxloop in SafeKit?`
+  4. La bonne réponse est `3` .
+  5. Vous pouvez ensuite poser des questions telles que : 
+     * Questions relatives aux ventes et aux avant-ventes
      * Guide d'installation étape par étape
-     * Assistance à la configuration et au paramétrage
+     * Assistance à la configuration et à l'installation
      * Dépannage technique
-     * Analyse des journaux (logs)
+     * Analyse des journaux
 
 
-## Support et Maintenance Standard {#standard-support}
+## Assistance et maintenance standard {#standard-support}
 
-Sous réserve du paiement des frais de Support et de Maintenance correspondants, l'Utilisateur Final a droit aux services à distance suivants :
+Sous réserve du paiement des frais de support et de maintenance correspondants, l'utilisateur final a droit aux services à distance suivants :
 
-  * Accès via le site web, pour un maximum de quatre contacts techniques désignés, au Centre de Support Européen, 24 heures sur 24, 7 jours sur 7 et 365 jours par an, afin de signaler un incident ou de demander une assistance.
-  * Support en ligne du Centre de Support de 9h00 à 17h00 (heure locale du centre d'appels européen), du lundi au vendredi.
-  * Accès, pour un maximum de quatre contacts techniques désignés, à une base de connaissances, une FAQ et d'autres outils d'information en ligne.
-  * Après le signalement d'un incident, Eviden en accuse réception dans un délai de quatre heures ouvrées du Centre de Support.
-  * Fourniture de Service Packs, de mises à jour (Updates) et de mises à niveau (Upgrades) pour le Produit Sous Licence sans frais supplémentaires.
-  * Droit d'obtenir de nouvelles clés de licence sans frais supplémentaires en cas de changement de nom d'hôte (hostname) des serveurs sous licence.
-  * Authentification nécessaire.
+  * Accès au site Web pour un maximum de quatre contacts techniques désignés auprès du Centre de support européen, 24 heures sur 24, 7 jours sur 7, 365 jours par an, afin de signaler un incident ou de demander de l'aide.
+  * Assistance en ligne du Centre d'assistance de 9h00 à 17h00, heure locale du Centre d'appels européen, du lundi au vendredi.
+  * Accès pour un maximum de quatre contacts techniques désignés à une base de connaissances, une FAQ et d'autres ressources d'information en ligne.
+  * Après le signalement d'un incident, Eviden accuse réception dans un délai de quatre heures ouvrables du centre d'assistance.
+  * Livraison des packs de services, des mises à jour et des mises à niveau du produit sous licence sans frais supplémentaires.
+  * Droit d'obtenir de nouvelles clés de licence sans frais supplémentaires en cas de changement des noms d'hôte des serveurs sous licence.
+  * Connexion requise
 
 
-[ Centre d'appels  ](<https://customercare.evidian.com/>)
+[ Service d'appels ](<https://customercare.evidian.com/>)
 
-## Programme de Formation et Certification Gratuit {#training}
+## Programme de certification et de formation gratuit {#training}
 
-SafeKit propose un programme de formation et de certification en ligne gratuit via la <a href="https://training.my.evidian.com/mod/page/view.php?id=712" target="_blank" rel="noopener noreferrer">plateforme de formation</a>, couvrant les concepts de haute disponibilité, l'architecture de cluster, l'installation, la configuration et l'administration — pour les modules mirror (miroir) et farm (ferme).
+SafeKit propose un programme de certification et de formation en ligne gratuit couvrant les concepts de haute disponibilité, l'architecture de cluster, l'installation, la configuration et l'administration — pour les modules mirror et `farm` .
 
   * Modules en ligne à votre rythme, disponibles à tout moment
   * Entièrement gratuit
-  * Certificat délivré à la fin du programme
-  * 12 vidéos (~3h40) couvrant l'introduction, les démonstrations, l'installation, la configuration avancée et le dépannage
+  * Certificat délivré à la fin des travaux
+  * 12 vidéos (~3h40min) couvrant l'introduction, les démonstrations, l'installation, la configuration avancée et le dépannage
 
 
-[ Formation et certification gratuite  ](</resources/safekit-on-line-training/>)
+Formation et certification gratuites [ ](</fr/resources/safekit-on-line-training/>)
 
 
 {{%  insert-safekit-hub-fr  %}}

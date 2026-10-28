@@ -1,53 +1,57 @@
 ---
-title: "Hochverfügbarkeitsarchitekturen und Best Practices für Software-Cluster"
+title: "Hochverfügbarkeitsarchitekturen und Best Practices für Software-Clustering"
 canonical: "https://safekit.eviden.com/de/best-practises/high-availability-architectures-and-best-practices/"
-description: "Entdecken Sie Hochverfügbarkeitsarchitekturen (HA) und Best Practices für Anwendungscluster. Erfahren Sie, wie SafeKit Mirror- und Farm-Cluster ohne gemeinsam genutzte Datenträger implementiert und so Datenverlust verhindert und automatischer Failover für kritische Anwendungen ermöglicht wird."
+description: "Entdecken Sie Hochverfügbarkeitsarchitekturen (HA) und Best Practices für Anwendungsclustering. Erfahren Sie, wie SafeKit -Software mirror und farm -Cluster ohne gemeinsam genutzte Festplatten implementiert und so Datenverlustfreiheit und automatisches Failover für kritische Anwendungen gewährleistet."
 category: "best-practises"
 lang: "de"
-topics: "Welche Hochverfügbarkeitsarchitekturen und Best Practices gibt es?, Vergleichstabellen zu Hochverfügbarkeitsarchitekturen und Best Practices, SafeKit-Navigationsübersicht zur Hochverfügbarkeit"
+topics: "Welche Architekturen für Hochverfügbarkeit gibt es und welche Best Practices gelten? Vergleichstabellen zu Architekturen für Hochverfügbarkeit und Best Practices, 🔍 SafeKit Navigationszentrale für Hochverfügbarkeit"
 ---
 
-# Hochverfügbarkeitsarchitekturen und Best Practices für Software-Cluster {#high-availability-architectures--software-clustering-best-practices}
+# Hochverfügbarkeitsarchitekturen und Best Practices für Software-Clustering {#high-availability-architectures--software-clustering-best-practices}
 
-## Welche Hochverfügbarkeitsarchitekturen und Best Practices gibt es? {#what-are-the-high-availability-architectures-and-the-best-practices}
+## Welche Architekturen für Hochverfügbarkeit gibt es und welche Best Practices werden angewendet? {#what-are-the-high-availability-architectures-and-the-best-practices}
 
-### Überblick {#overview}
+### Übersicht {#overview}
 
-Dieser Artikel stellt verschiedene Hochverfügbarkeitsarchitekturen und Best Practices vor und vergleicht ihre jeweiligen Vor- und Nachteile.
+Dieser Artikel untersucht die verschiedenen Hochverfügbarkeitsarchitekturen und die besten Vorgehensweisen, indem er die Vor- und Nachteile jeder Architektur aufzeigt.
 
-![Hochverfügbarkeitsarchitekturen und Best Practices](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-Die folgenden Vergleichstabellen erläutern die SafeKit-Hochverfügbarkeitsarchitektur und ihre Best Practices. SafeKit ist eine Software für Hochverfügbarkeit.
+![ Hochverfügbarkeitsarchitekturen und Best Practices ](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-### Welche Hochverfügbarkeitsarchitekturen gibt es? {#what-are-the-high-availability-architectures}
 
-Es gibt zwei Arten von [Hochverfügbarkeitsarchitekturen](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>): für Backend-Anwendungen wie Datenbanken und für Frontend-Anwendungen wie Webdienste.
+Die folgenden Vergleichstabellen erläutern detailliert die Hochverfügbarkeitsarchitektur SafeKit und ihre Best Practices ( SafeKit ist ein Software-Hochverfügbarkeitsprodukt).
 
-Backend-Architekturen basieren auf zwei Servern, die Daten gemeinsam nutzen oder replizieren und bei Hardware- oder Softwarefehlern automatisch einen Anwendungs-Failover ausführen.
+### Welche Architekturen gibt es für hohe Verfügbarkeit? {#what-are-the-high-availability-architectures}
 
-Frontend-Architekturen basieren auf einer Serverfarm mit mindestens zwei Servern. Hardware- oder Software-Load-Balancing verteilt TCP-Sitzungen auf die verfügbaren Server.
+Es gibt zwei Arten von [ ](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) : solche für Backend-Anwendungen wie Datenbanken und solche für Frontend-Anwendungen wie Webdienste.
 
-Außerdem muss zwischen Hochverfügbarkeit auf Anwendungs- und auf virtueller Maschinenebene gewählt werden.
+Hochverfügbarkeitsarchitekturen für das Backend basieren auf zwei Servern, die Daten gemeinsam nutzen oder replizieren, wobei im Falle von Hardware- oder Softwarefehlern ein automatisches Anwendungs-Failover erfolgt.
 
-### Welche Best Practices gibt es? {#what-are-the-best-practices}
+Hochverfügbarkeitsarchitekturen für das Frontend basieren auf einer Serveranzahl von `farm` (mindestens zwei Server). Der Lastausgleich erfolgt hardware- oder softwareseitig und verteilt die TCP-Sitzungen auf die verfügbaren Server in farm .
 
-Dieser Artikel vergleicht Best Practices für Hochverfügbarkeitsarchitekturen in folgenden Bereichen:
+Darüber hinaus müssen Sie sich zwischen Hochverfügbarkeit auf Anwendungsebene oder auf Ebene der virtuellen Maschine entscheiden.
 
-  * [Software- und Hardware-Clustering](</de/best-practises/clustering-software-vs-hardware-clustering/>),
-  * [Shared-Nothing- und Shared-Disk-Architektur](</de/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>),
-  * [Hochverfügbarkeit auf Anwendungs- und VM-Ebene](</de/best-practises/vm-ha-vs-application-ha/>),
-  * [Hochverfügbarkeit und Fehlertoleranz](</de/best-practises/high-availability-cluster-vs-fault-tolerant-system/>),
-  * [synchrone und asynchrone Replikation](</de/best-practises/synchronous-replication-vs-asynchronous-replication/>),
-  * [Datei- und Festplattenreplikation](</de/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
-  * [Datenreplikationstechniken](</de/best-practises/data-replication-techniques/>),
-  * [RPO und RTO anhand von Beispielen](</de/best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [Split-Brain und Quorum](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
-  * [virtuelle IP-Adressen](</de/best-practises/how-a-virtual-ip-address-works/>).
+### Was sind die besten Vorgehensweisen? {#what-are-the-best-practices}
+
+Dieser Artikel untersucht die Best Practices für Hochverfügbarkeitsarchitekturen durch einen Vergleich:
+
+  * [ Software- vs. Hardware-Clustering ](</de/best-practises/clustering-software-vs-hardware-clustering/>) ,
+  * [ Shared-Nothing-Architektur vs. Shared-Disk-Architektur ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
+  * [ -Anwendung vs. Hochverfügbarkeit der virtuellen Maschine ](</de/best-practises/vm-ha-vs-application-ha/>) ,
+  * [ Hochverfügbarkeit vs. Fehlertoleranz ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ synchrone vs. asynchrone Replikation ](</de/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
+  * [ Datei vs. Festplattenreplikation ](</de/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
+  * [ Datenreplikationstechniken ](</de/best-practises/data-replication-techniques/>) ,
+  * [ RPO und RTO mit Beispielen ](</de/best-practises/what-is-rpo-and-rto-with-examples/>) ,
+  * [ split brain ans quorum ](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) ,
+  * [ virtuelle IP-Adressen ](</de/best-practises/how-a-virtual-ip-address-works/>) .
+
 
 ## Vergleichstabellen zu Hochverfügbarkeitsarchitekturen und Best Practices {#comparative-tables-on-high-availability-architectures-and-best-practices}
 
-{{% insert-safekit-software-vs-hardware-table-de %}}
 
-{{% insert-safekit-hub-de %}}
+{{%  insert-safekit-software-vs-hardware-table-de  %}}
 
-{{% insert-safekit-4-buttons-de %}}
+{{%  insert-safekit-hub-de  %}}
+
+{{%  insert-safekit-4-buttons-de  %}}

@@ -1,53 +1,57 @@
 ---
-title: "Architecturen voor hoge beschikbaarheid en best practices voor softwareclustering"
+title: "Architecturen met hoge beschikbaarheid en best practices voor softwareclustering"
 canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-architectures-and-best-practices/"
-description: "Ontdek architecturen voor hoge beschikbaarheid (HA) en best practices voor applicatieclusters. SafeKit implementeert Mirror- en Farm-clusters zonder gedeelde schijven, voorkomt gegevensverlies en biedt automatische failover voor kritieke toepassingen."
+description: "Ontdek high availability (HA)-architecturen en best practices voor applicatieclustering. Leer hoe SafeKit software mirror en farm clusters implementeert zonder gedeelde schijven, waardoor er geen gegevensverlies optreedt en automatische failover mogelijk is voor kritieke applicaties."
 category: "best-practises"
 lang: "nl"
-topics: "Welke architecturen en best practices zijn er voor hoge beschikbaarheid?, Vergelijkingstabellen van architecturen en best practices voor hoge beschikbaarheid, SafeKit-navigatiecentrum voor hoge beschikbaarheid"
+topics: "Wat zijn de architecturen voor hoge beschikbaarheid en de beste werkwijzen? Vergelijkende tabellen over architecturen voor hoge beschikbaarheid en de beste werkwijzen. 🔍 SafeKit Navigatiecentrum voor hoge beschikbaarheid"
 ---
 
 # Architecturen voor hoge beschikbaarheid en best practices voor softwareclustering {#high-availability-architectures--software-clustering-best-practices}
 
-## Welke architecturen en best practices zijn er voor hoge beschikbaarheid? {#what-are-the-high-availability-architectures-and-the-best-practices}
+## Wat zijn de architecturen voor hoge beschikbaarheid en de beste werkwijzen? {#what-are-the-high-availability-architectures-and-the-best-practices}
 
 ### Overzicht {#overview}
 
-Dit artikel bespreekt verschillende architecturen voor hoge beschikbaarheid en de bijbehorende best practices, met een vergelijking van de voor- en nadelen.
+Dit artikel onderzoekt de verschillende architecturen voor hoge beschikbaarheid en de beste werkwijzen door de voor- en nadelen van elke architectuur te bespreken.
 
-![Architecturen voor hoge beschikbaarheid en best practices](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-De volgende vergelijkingstabellen geven uitleg over de SafeKit-architectuur voor hoge beschikbaarheid en de bijbehorende best practices. SafeKit is software voor hoge beschikbaarheid.
+![ Architecturen en best practices voor hoge beschikbaarheid ](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
-### Welke architecturen voor hoge beschikbaarheid zijn er? {#what-are-the-high-availability-architectures}
 
-Er zijn twee soorten [architecturen voor hoge beschikbaarheid](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>): voor backendtoepassingen zoals databases en voor frontendtoepassingen zoals webservices.
+De volgende vergelijkende tabellen geven een gedetailleerde uitleg van de SafeKit -architectuur voor hoge beschikbaarheid en de bijbehorende best practices ( SafeKit is een softwareproduct voor hoge beschikbaarheid).
 
-Backendarchitecturen zijn gebaseerd op twee servers die gegevens delen of repliceren en bij hardware- of softwarestoringen automatisch de applicatie laten overschakelen.
+### Wat zijn de architecturen voor hoge beschikbaarheid? {#what-are-the-high-availability-architectures}
 
-Frontendarchitecturen gebruiken een serverfarm van minimaal twee servers. Hardware- of softwarematige load balancing verdeelt TCP-sessies over de beschikbare servers.
+Er zijn twee typen [ high availability ](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) -architecturen: die voor backend-applicaties zoals databases en die voor frontend-applicaties zoals webservices.
 
-Daarnaast moet u kiezen tussen hoge beschikbaarheid op applicatie- of virtueel-machineniveau.
+Architecturen met hoge beschikbaarheid voor de backend zijn gebaseerd op twee servers die gegevens delen of repliceren, met een automatische failover van de applicatie in geval van hardware- of softwarefouten.
 
-### Wat zijn de best practices? {#what-are-the-best-practices}
+Hoogbeschikbare frontend-architecturen zijn gebaseerd op een `farm` van servers (2 servers of meer). De load balancing wordt uitgevoerd door hardware of software en verdeelt de TCP-sessies over de beschikbare servers in de farm .
 
-Dit artikel vergelijkt best practices voor architecturen met hoge beschikbaarheid op de volgende gebieden:
+Bovendien moet je kiezen tussen hoge beschikbaarheid op applicatieniveau of op het niveau van de virtuele machine.
 
-  * [software- en hardwareclustering](</nl/best-practises/clustering-software-vs-hardware-clustering/>),
-  * [shared-nothing- en shared-disk-architectuur](</nl/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>),
-  * [hoge beschikbaarheid op applicatie- en VM-niveau](</nl/best-practises/vm-ha-vs-application-ha/>),
-  * [hoge beschikbaarheid en fouttolerantie](</nl/best-practises/high-availability-cluster-vs-fault-tolerant-system/>),
-  * [synchrone en asynchrone replicatie](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>),
-  * [bestands- en schijfreplicatie](</nl/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
-  * [technieken voor gegevensreplicatie](</nl/best-practises/data-replication-techniques/>),
-  * [RPO en RTO met voorbeelden](</nl/best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [split-brain en quorum](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
-  * [virtuele IP-adressen](</nl/best-practises/how-a-virtual-ip-address-works/>).
+### Wat zijn de beste werkwijzen? {#what-are-the-best-practices}
 
-## Vergelijkingstabellen van architecturen en best practices voor hoge beschikbaarheid {#comparative-tables-on-high-availability-architectures-and-best-practices}
+Dit artikel onderzoekt de beste werkwijzen voor architecturen met hoge beschikbaarheid door de volgende zaken te vergelijken:
 
-{{% insert-safekit-software-vs-hardware-table-nl %}}
+  * [ software versus hardware clustering ](</nl/best-practises/clustering-software-vs-hardware-clustering/>) ,
+  * [ deelt niets versus gedeelde schijfarchitectuur ](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>) ,
+  * [ applicatie versus hoge beschikbaarheid van virtuele machine ](</nl/best-practises/vm-ha-vs-application-ha/>) ,
+  * [ hoge beschikbaarheid versus fouttolerantie ](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>) ,
+  * [ synchrone versus asynchrone replicatie ](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>) ,
+  * [ bestand versus schijfreplicatie ](</nl/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) ,
+  * [ datareplicatietechnieken ](</nl/best-practises/data-replication-techniques/>) ,
+  * [ RPO en RTO met voorbeelden ](</nl/best-practises/what-is-rpo-and-rto-with-examples/>) ,
+  * [ split brain ans quorum ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) ,
+  * [ virtuele IP-adressen ](</nl/best-practises/how-a-virtual-ip-address-works/>) .
 
-{{% insert-safekit-hub-nl %}}
 
-{{% insert-safekit-4-buttons-nl %}}
+## Vergelijkende tabellen over architecturen met hoge beschikbaarheid en best practices {#comparative-tables-on-high-availability-architectures-and-best-practices}
+
+
+{{%  insert-safekit-software-vs-hardware-table-nl  %}}
+
+{{%  insert-safekit-hub-nl  %}}
+
+{{%  insert-safekit-4-buttons-nl  %}}
