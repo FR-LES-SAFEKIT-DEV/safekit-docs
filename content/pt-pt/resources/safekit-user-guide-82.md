@@ -20,16 +20,16 @@ layout: userguide
   const docFrame = document.getElementById('doc-frame');
   const docBaseSrc = docFrame.getAttribute('src');
 
-  função carregarDocumentoComHash() {
+  function loadDocumentWithHash() {
     const hash = window.location.hash;
     docFrame.src = docBaseSrc + hash;
   }
 
-  função enhanceFrame(frameName) {
+  function enhanceFrame(frameName) {
     const frame = document.getElementById(frameName);
-    se (!frame) retornar;
+    if (!frame) return;
     frame.addEventListener('load', () => {
-      const doc = frame.contentDocument | | frame.contentWindow.document;
+      const doc = frame.contentDocument || frame.contentWindow.document;
       const meta = doc.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1, user-scalable=yes';
@@ -37,20 +37,20 @@ layout: userguide
     });
   }
 
-  função handleClickMessage(evento) {
-    se (event.data.type === "hashClicked") {
-      se (history.pushState) {
-        window.history.pushState("", "Título", window.location.href.split('#') [ 0] + event.data.toc);
+  function handleClickMessage(event) {
+    if (event.data.type === "hashClicked") {
+      if (history.pushState) {
+        window.history.pushState("", "Title", window.location.href.split('#')[0] + event.data.toc);
       }
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    carregarDocumentoComHash();
-    aprimorarFrame('index-frame');
-    aprimorarFrame('doc-frame');
-    janela.adicionarOuvinteDeEventos("mensagem", manipularMensagemDeClique);
+    loadDocumentWithHash();
+    enhanceFrame('index-frame');
+    enhanceFrame('doc-frame');
+    window.addEventListener("message", handleClickMessage);
   });
 
-  janela.adicionarOuvinteDeEvento('hashchange', carregarDocumentoComHash);
+  window.addEventListener('hashchange', loadDocumentWithHash);
 </script>

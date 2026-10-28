@@ -29,7 +29,7 @@ layout: userguide
     const frame = document.getElementById(frameName);
     if (!frame) return;
     frame.addEventListener('load', () => {
-      const doc = frame.contentDocument | | frame.contentWindow.document;
+      const doc = frame.contentDocument || frame.contentWindow.document;
       const meta = doc.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1, user-scalable=yes';
@@ -40,7 +40,7 @@ layout: userguide
   function handleClickMessage(event) {
     if (event.data.type === "hashClicked") {
       if (history.pushState) {
-        window.history.pushState("", "Title", window.location.href.split('#') [ 0] + event.data.toc);
+        window.history.pushState("", "Title", window.location.href.split('#')[0] + event.data.toc);
       }
     }
   }

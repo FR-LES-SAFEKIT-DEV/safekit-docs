@@ -22,33 +22,33 @@ layout: userguide
 
   function loadDocumentWithHash() {
     const hash = window.location.hash;
-    docFrame.src = docBaseSrc + 哈希；
+    docFrame.src = docBaseSrc + hash;
   }
 
   function enhanceFrame(frameName) {
     const frame = document.getElementById(frameName);
-    如果 (!frame) 返回；
+    if (!frame) return;
     frame.addEventListener('load', () => {
-      const doc = frame.contentDocument | | frame.contentWindow.document;
+      const doc = frame.contentDocument || frame.contentWindow.document;
       const meta = doc.createElement('meta');
-      meta.name = '视口';
+      meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1, user-scalable=yes';
       doc.head.appendChild(meta);
     });
   }
 
   function handleClickMessage(event) {
-    如果 (event.data.type === "hashClicked") {
-      如果 (history.pushState) {
-        window.history.pushState("", "标题", window.location.href.split('#') [ 0] + event.data.toc);
+    if (event.data.type === "hashClicked") {
+      if (history.pushState) {
+        window.history.pushState("", "Title", window.location.href.split('#')[0] + event.data.toc);
       }
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
     loadDocumentWithHash();
-    增强帧('index-frame');
-    增强框架('doc-frame');
+    enhanceFrame('index-frame');
+    enhanceFrame('doc-frame');
     window.addEventListener("message", handleClickMessage);
   });
 

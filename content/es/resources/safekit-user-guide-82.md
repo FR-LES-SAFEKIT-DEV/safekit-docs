@@ -20,16 +20,16 @@ layout: userguide
   const docFrame = document.getElementById('doc-frame');
   const docBaseSrc = docFrame.getAttribute('src');
 
-  función cargarDocumentoConHash() {
+  function loadDocumentWithHash() {
     const hash = window.location.hash;
     docFrame.src = docBaseSrc + hash;
   }
 
-  función enhanceFrame(frameName) {
+  function enhanceFrame(frameName) {
     const frame = document.getElementById(frameName);
-    si (!frame) regresar;
+    if (!frame) return;
     frame.addEventListener('load', () => {
-      const doc = frame.contentDocument | | frame.contentWindow.document;
+      const doc = frame.contentDocument || frame.contentWindow.document;
       const meta = doc.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1, user-scalable=yes';
@@ -37,19 +37,19 @@ layout: userguide
     });
   }
 
-  función handleClickMessage(evento) {
-    si (event.data.type === "hashClicked") {
-      si (history.pushState) {
-        window.history.pushState("", "Título", window.location.href.split('#') [ 0] + event.data.toc);
+  function handleClickMessage(event) {
+    if (event.data.type === "hashClicked") {
+      if (history.pushState) {
+        window.history.pushState("", "Title", window.location.href.split('#')[0] + event.data.toc);
       }
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    cargarDocumentoConHash();
-    mejorarFrame('index-frame');
-    mejorarFrame('doc-frame');
-    window.addEventListener("mensaje", handleClickMessage);
+    loadDocumentWithHash();
+    enhanceFrame('index-frame');
+    enhanceFrame('doc-frame');
+    window.addEventListener("message", handleClickMessage);
   });
 
   window.addEventListener('hashchange', loadDocumentWithHash);

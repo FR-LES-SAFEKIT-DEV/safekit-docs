@@ -20,16 +20,16 @@ layout: userguide
   const docFrame = document.getElementById('doc-frame');
   const docBaseSrc = docFrame.getAttribute('src');
 
-  funzione loadDocumentWithHash() {
+  function loadDocumentWithHash() {
     const hash = window.location.hash;
     docFrame.src = docBaseSrc + hash;
   }
 
-  funzione enhanceFrame(frameName) {
+  function enhanceFrame(frameName) {
     const frame = document.getElementById(frameName);
-    se (!frame) restituisci;
+    if (!frame) return;
     frame.addEventListener('load', () => {
-      const doc = frame.contentDocument | | frame.contentWindow.document;
+      const doc = frame.contentDocument || frame.contentWindow.document;
       const meta = doc.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1, user-scalable=yes';
@@ -37,10 +37,10 @@ layout: userguide
     });
   }
 
-  funzione handleClickMessage(evento) {
-    se (event.data.type === "hashClicked") {
-      se (history.pushState) {
-        window.history.pushState("", "Titolo", window.location.href.split('#') [ 0] + event.data.toc);
+  function handleClickMessage(event) {
+    if (event.data.type === "hashClicked") {
+      if (history.pushState) {
+        window.history.pushState("", "Title", window.location.href.split('#')[0] + event.data.toc);
       }
     }
   }

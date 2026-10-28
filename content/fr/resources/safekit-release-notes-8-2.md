@@ -20,37 +20,37 @@ layout: userguide
   const docFrame = document.getElementById('doc-frame');
   const docBaseSrc = docFrame.getAttribute('src');
 
-  fonction chargerDocumentAvecHash() {
+  function loadDocumentWithHash() {
     const hash = window.location.hash;
-    docFrame.src = docBaseSrc + hachage ;
+    docFrame.src = docBaseSrc + hash;
   }
 
-  fonction améliorerFrame(nom_du_cadre) {
+  function enhanceFrame(frameName) {
     const frame = document.getElementById(frameName);
-    si (!frame) retourner;
+    if (!frame) return;
     frame.addEventListener('load', () => {
-      const doc = frame.contentDocument | | frame.contentWindow.document;
+      const doc = frame.contentDocument || frame.contentWindow.document;
       const meta = doc.createElement('meta');
       meta.name = 'viewport';
-      meta.content = 'width=largeur-de-l'appareil, échelle-initiale=1, mise-à-l'échelle-utilisateur=oui';
+      meta.content = 'width=device-width, initial-scale=1, user-scalable=yes';
       doc.head.appendChild(meta);
     });
   }
 
-  fonction handleClickMessage(événement) {
-    si (event.data.type === "hashClicked") {
-      si (history.pushState) {
-        window.history.pushState("", "Titre", window.location.href.split('#') [ 0] + event.data.toc);
+  function handleClickMessage(event) {
+    if (event.data.type === "hashClicked") {
+      if (history.pushState) {
+        window.history.pushState("", "Title", window.location.href.split('#')[0] + event.data.toc);
       }
     }
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    chargerDocumentAvecHash();
-    améliorerFrame('index-frame');
-    améliorerFrame('doc-frame');
-    fenêtre.addEventListener("message", handleClickMessage);
+    loadDocumentWithHash();
+    enhanceFrame('index-frame');
+    enhanceFrame('doc-frame');
+    window.addEventListener("message", handleClickMessage);
   });
 
-  fenêtre.addEventListener('hashchange', loadDocumentWithHash);
+  window.addEventListener('hashchange', loadDocumentWithHash);
 </script>
