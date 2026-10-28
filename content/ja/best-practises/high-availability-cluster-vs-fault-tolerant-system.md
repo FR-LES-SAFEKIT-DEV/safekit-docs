@@ -7,11 +7,11 @@ lang: "ja"
 topics: "高可用性とフォールトトレランスの違いは何ですか？、高可用性とフォールトトレランスのメリットとデメリット、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# HAクラスタとフォールトトレラントシステム：適切な冗長化戦略の選択{#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
+# HAクラスタとフォールトトレラントシステム：適切な冗長化戦略の選択 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
 
-## 高可用性とフォールトトレランスの違いは何ですか{#what-is-the-difference-between-high-availability-and-fault-tolerance}
+## 高可用性とフォールトトレランスの違いは何ですか {#what-is-the-difference-between-high-availability-and-fault-tolerance}
 
-### 概要{#overview}
+### 概要 {#overview}
 
 この記事では、ハードウェアの制約、ソフトウェア障害、RTO、RPOなどを考慮して、高可用性クラスタとフォールトトレラントシステムの長所と短所を探ります。
 
@@ -25,13 +25,13 @@ topics: "高可用性とフォールトトレランスの違いは何ですか�
 
 SafeKitのようなソフトウェアクラスタは、リアルタイムのデータレプリケーションに基づいており、ハードウェアに依存しません。物理サーバー、仮想サーバー、またはクラウドに展開できます。
 
-### フォールトトレランス{#what-is-fault-tolerance}は何ですか？
+### フォールトトレランスは何ですか？ {#what-is-fault-tolerance}
 
 フォールトトレラントシステムは、専用ハードウェアまたは専用ハイパーバイザーのいずれかに依存してハードウェア障害を検出し、アプリケーションを再起動することなく冗長なハードウェアコンポーネントに即座に切り替えます。
 
 耐障害性システムはハードウェア障害のみに対応し、システム停止の最も一般的な原因であるソフトウェア障害には対応しません。
 
-## 高可用性と耐障害性のメリットとデメリット{#pros-and-cons-of-high-availability-and-fault-tolerance}
+## 高可用性と耐障害性のメリットとデメリット {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
 重要なアプリケーションを障害から保護するには、主に2つのアプローチがあります。 **高可用性クラスタリング** **トレラントシステム** 。それぞれのアプローチは、コスト、柔軟性、復旧時間、ハードウェア要件に関して異なるトレードオフを提供します。これらの違いを理解することで、特定のニーズに最適なソリューションを選択できます。
 

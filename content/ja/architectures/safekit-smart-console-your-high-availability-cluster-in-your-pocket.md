@@ -7,15 +7,15 @@ lang: "ja"
 topics: "スマートコンソール：直感的でモバイル対応、エラーフリーの高可用性、目次、 SafeKit mirrorクラスタは Web コンソールとどのように連携しますか？、 SafeKit `farm`クラスタは Web コンソールとどのように連携しますか？、Web コンソールで複数のモジュールと複数のクラスタを監視する方法、コンソールでアラートを監視し、メール通知を管理する方法、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# SafeKitスマートコンソール：ポケットに収まる高可用性クラスタ{#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKitスマートコンソール：ポケットに収まる高可用性クラスタ {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
 
-## スマートコンソール：直感的でモバイル対応、エラーのない高可用性{#smart-console-intuitive-mobile-and-error-free-high-availability}
+## スマートコンソール：直感的でモバイル対応、エラーのない高可用性 {#smart-console-intuitive-mobile-and-error-free-high-availability}
 
 **とシンプルさを追求して構築されたソリューションで**高可用性の管理方法を再定義しましょう**コンソールSafeKit 、学習曲線**ゼロの**を提供し、コード不要**インフラストラクチャを構成および制御できます。
 
 デスクにいても移動中でも、スマートフォン対応のダッシュボードにより、クラスターを完全に制御できます。 mirror そして `farm` モジュール、スマートコンソール **人的ミスを排除する** そして、最も重要なシステムに対して、シームレスなフェイルオーバープロセスを保証します。
 
-## 目次{#table-of-contents}
+## 目次 {#table-of-contents}
 
   * SafeKitクラスターはウェブコンソールとどのように連携しますか？ [ mirror ](#safekit-mirror-cluster)
   * SafeKitクラスターはウェブコンソールとどのように連携しますか？ [ `farm` ](#safekit-farm-cluster)
@@ -95,7 +95,7 @@ topics: "スマートコンソール：直感的でモバイル対応、エラ�
 
 ## ウェブコンソール経由で複数のモジュールと複数のクラスタを監視する方法は？ {#multipe-modules-clusters}
 
-### 単一クラスタ内での複数モジュール可視化{#safekit-multi-module}
+### 単一クラスタ内での複数モジュール可視化 {#safekit-multi-module}
 
 
 ![ SafeKit Webコンソール：同じ2ノードクラスター上に4つのHyper-Vモジュールがデプロイされています。 ](/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg "w:966")
@@ -114,7 +114,7 @@ topics: "スマートコンソール：直感的でモバイル対応、エラ�
 
 このきめ細かな可視性により、高密度環境であっても、複製されたすべてのワークロードを完全に制御し、即座に把握することができます。 
 
-### マルチクラスター可視化{#safekit-multi-cluster}
+### マルチクラスター可視化 {#safekit-multi-cluster}
 
 
 ![ SafeKit Webコンソール：8台のサーバーに4つのクラスターがデプロイされています。 ](/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg "w:966")

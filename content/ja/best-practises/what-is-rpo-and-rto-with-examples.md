@@ -7,9 +7,9 @@ lang: "ja"
 topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリューションのRPOとRTOの計算方法、バックアップおよび災害復旧ソリューションのRPOとRTOの決定方法、 SafeKit MirrorクラスタがゼロRPOと低RTOを実現する方法、負荷分散を備えたSafeKit `Farm`クラスタのRTOベンチマーク、比較表：RTOとRPO、高可用性の実践：ゼロRPOとほぼゼロRTOのリアルタイムデモ、FAQ：事業継続のためのRPOとRTOの最適化、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# RPOとRTOとは？定義、例、およびHA戦略{#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
+# RPOとRTOとは？定義、例、およびHA戦略 {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
 
-## 簡単な要約：RPOとRTOの{#article-summary}
+## 簡単な要約：RPOとRTOの {#article-summary}
 
   * ** RPO（リカバリポイント目標）： ** **損失を測定します**は、操作を再開するためにリカバリする必要のあるファイルの最大経過時間を定義します。
   * ** RTO（復旧時間目標）： ** **ダウンタイム**を測定します。これは、ビジネスプロセスを復旧しなければならない期間です。
@@ -21,7 +21,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
 
 ** RPOとRTOの比較： SafeKit **データ損失と復旧時間の比較
 
-## 目次{#table-of-contents}
+## 目次 {#table-of-contents}
 
   * [高可用性および事業継続性ソリューションのRPOとRTOはどのように計算すればよいですか？ ](#calculate-rpo-rto-high-availability)
   * [バックアップおよび災害復旧ソリューションのRPOとRTOはどのように決定すればよいですか？ ](#calculate-rpo-rto-backup-solution)
@@ -37,7 +37,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
 {{%  insert-safekit-4-buttons-ja  %}}
  
 
-## 高可用性および事業継続性ソリューションのRPOとRTOはどのように計算すればよいです{#calculate-rpo-rto-high-availability} ？
+## 高可用性および事業継続性ソリューションのRPOとRTOはどのように計算すればよいです？ {#calculate-rpo-rto-high-availability}
 
 ### 高可用性とは何ですか？ {#what-is-high-availability}
 
@@ -53,7 +53,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
   * ** SANレス同期レプリケーション: **ソフトウェア[ SafeKitによって実装された最新の「共有なし」アーキテクチャで](</> "SafeKit High Availability Software") SAN の必要性を排除し、2 つの独立したノードのローカルディスク間でリアルタイムにデータを複製します。
 
 
-### 高可用性ソリューションのRPOとは何ですか{#what-is-rpo-high-availability}
+### 高可用性ソリューションのRPOとは何ですか {#what-is-rpo-high-availability}
 
 ** RPO (リカバリポイント目標) **時間で測定される許容可能な最大データ損失量を定義します。真の**高可用性ソリューション**の場合、目標 RPO は**ゼロ**です。
 
@@ -63,7 +63,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
   * **ソフトウェアベースの同期レプリケーション: **すべての「書き込み」操作がネットワーク全体にリアルタイムでミラーリングされるSANレス方式です。アプリケーションは、データが両方のノードに安全に保存された後にのみ書き込み確認を受け取ります。 **この同期「ダブルライト」プロセスにより**プライマリサーバーが故障した場合でも、データ損失がゼロであることが保証されます。 ** **
 
 
-### 高可用性ソリューションのRTOとは何ですか{#what-is-rto-high-availability}
+### 高可用性ソリューションのRTOとは何ですか {#what-is-rto-high-availability}
 
 ** RTO（復旧時間目標） ** ** **コンテキストでは、重要なアプリケーションへの継続的なアクセスを確保するために、RTOは最小限に抑える必要があります。
 
@@ -73,7 +73,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
   * **自動再起動時間: **稼働中のノードでアプリケーションサービスが初期化されるのに必要な時間。
 
 
-## バックアップおよび災害復旧ソリューションのRPOとRTOはどのように決定すればよいです{#calculate-rpo-rto-backup-solution} ？
+## バックアップおよび災害復旧ソリューションのRPOとRTOはどのように決定すればよいです？ {#calculate-rpo-rto-backup-solution}
 
 ### バックアップソリューションとは何ですか？ {#what-is-backup}
 
@@ -89,7 +89,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
   * **オフサイトまたはクラウドリカバリ: **データが別の物理的な場所に保存されるアーキテクチャ。これによりデータの生存は保証されますが、アプリケーションを再起動する前にデータを転送して復元する必要があるため、 ** RTO が高くなります**
 
 
-### バックアップソリューションのRPOとは何ですか{#what-is-rpo-backup}
+### バックアップソリューションのRPOとは何ですか {#what-is-rpo-backup}
 
 バックアップのコンテキストにおける RPO (リカバリポイント目標) ** **通常の運用を再開するためにストレージからリカバリする必要のあるファイルの経過時間を定義します。高可用性とは異なり、 **ソリューションで**通常、最後のバックアップが正常に完了してから経過した時間を表すゼロ以外の RPO が使用されます。 
 
@@ -99,7 +99,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
   * **日次フルバックアップ: **従来の方法では、データの完全なコピーが 1 日 1 回 (通常は夜間) 作成されます。これにより、 ** 24 時間 RPO **が実現されます。これは重要度の低いデータには許容できるかもしれませんが、トランザクション データベースには不十分な場合が多いです。 
 
 
-### バックアップソリューションのRTOとは{#what-is-rto-backup}ですか？
+### バックアップソリューションのRTOとはですか？ {#what-is-rto-backup}
 
 バックアップ戦略における目標復旧時間（ ** ）と** 、バックアップ媒体からデータを復元し、アプリケーションを動作可能な状態に戻すのにかかる時間のことです。高可用性とは異なり、 ** ** RTOは手動またはスクリプトによる復元プロセスが含まれるため、大幅に長くなります。 
 
@@ -208,14 +208,14 @@ SafeKitの**はmirrorノード間のデータ複製が同期かつ[であるた�
 Mirrorクラスター|リアルタイムレプリケーション|約1分 (ハートビート + 再起動) | 0 (データ損失なし)  
 `Farm`クラスタ|ネットワーク負荷分散|数秒|該当なし (ステートレス)  
   
-## 高可用性の実践：RPOゼロとRTOほぼゼロのリアルタイムデモ{#safekit-rpo-rto-video-demos}
+## 高可用性の実践：RPOゼロとRTOほぼゼロのリアルタイムデモ {#safekit-rpo-rto-video-demos}
 
 ### 動画： SafeKit Mirrorクラスターでゼロ RPO と低 RTO を実現する (8:47) {#demo-mirror-cluster-rpo-rto}
 
 SafeKit重大な障害にどのように対処するかをご覧ください。このビデオでは** **レプリケーションにより SQL データベースでデータが失われないこと (RPO 0) と、 **セカンダリ ノード上のサービスが自動的に再起動**れること (低 RTO) を実演しています。
 
 
-#### 章{#chapters}
+#### 章 {#chapters}
 
   1. 🎬 [ 2 ノードとSQL Server ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
   2. 🎬 [クラスターとmirror.safeモジュール](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>)を設定します (3:58)
@@ -227,7 +227,7 @@ SafeKit重大な障害にどのように対処するかをご覧ください。�
 
 SafeKit Apache Web サイト`farm`を管理し、パフォーマンスのスケーリングと瞬時のフェイルオーバーの両方を実現する方法をご覧ください。
 
-#### 章{#chapters-1}
+#### 章 {#chapters-1}
 
   1. 🎬 [ 2 ノード、Apache ](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>)と共に (0:13)
   2. 🎬 [クラスターとfarm.safeモジュール](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>)を設定します (2:20)
@@ -235,9 +235,9 @@ SafeKit Apache Web サイト`farm`を管理し、パフォーマンスのスケ�
 
 [無料トライアルはこちら](</ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 
-## FAQ：事業継続のためのRPOとRTOの最適化{#faq-rpo-rto}
+## FAQ：事業継続のためのRPOとRTOの最適化 {#faq-rpo-rto}
 
-### RPOとRTOは{#can-rpo-rto-be-zero}にできますか？
+### RPOとRTOはにできますか？ {#can-rpo-rto-be-zero}
 
 **はい。** 達成する **ゼロRPO** これはデータ損失がないことを意味します。これは同期データミラーリングによって可能になります。 **ほぼゼロRTO** 自動フェイルオーバーソフトウェアによって実現される SafeKitこれは、障害を検知し、数秒から数分以内にセカンダリノードでアプリケーションを再起動する。
 
@@ -253,11 +253,11 @@ SafeKit Apache Web サイト`farm`を管理し、パフォーマンスのスケ�
   * ** VMレベル： **　セカンダリホスト上で仮想マシン全体を再起動する必要があるため、RTOが高くなります。アプリケーションに依存しない一方で、アプリケーションプロセス自体の詳細な監視はできません。
 
 
-### RTOの観点から、HAとバックアップソリューションの違いは何ですか{#ha-vs-backup-rto}
+### RTOの観点から、HAとバックアップソリューションの違いは何ですか {#ha-vs-backup-rto}
 
 高可用性（HA）は、ローカル障害を自動的に処理するため、通常、RTO（復旧目標時間）がはるかに短く（数秒から数分）、バックアップソリューションを用いた災害復旧（DR）は、大規模な災害発生後に地理的に離れた場所でデータやサービスを復旧する必要があるため、通常、RTOが長くなります（数時間から数日）。
 
-### リモートサイト間で最適なRPOとRTOを実現するにはどうすればよいです{#rpo-rto-between-remote-sites} ？
+### リモートサイト間で最適なRPOとRTOを実現するにはどうすればよいです？ {#rpo-rto-between-remote-sites}
 
 リモートサイト間でゼロ**とほぼゼロ** **実現するには** **レプリケーション**拡張LAN（ ** VLAN） **組み合わせが必要です。
 
@@ -267,7 +267,7 @@ SafeKit Apache Web サイト`farm`を管理し、パフォーマンスのスケ�
 
 これにより、 ** RPO = 0 ** (リアルタイムミラーリング) および**最小 RTO ** (約 1 分でのフェイルオーバー) が人手を介さずに実現されます。
 
-### RPOとRTOを最適化するために、高可用性とバックアップを組み合わせることが不可欠なのはなぜですか{#combining-ha-and-backup-for-rpo-rto}
+### RPOとRTOを最適化するために、高可用性とバックアップを組み合わせることが不可欠なのはなぜですか {#combining-ha-and-backup-for-rpo-rto}
 
 高可用性（HA）とバックアップソリューションを組み合わせることが、両方の利点を兼ね備えた復旧戦略を実現する唯一の方法です。これらはしばしば一緒に議論されますが、RPO/RTO方程式の異なる部分を解決するものです。
 

@@ -7,19 +7,19 @@ lang: "ja"
 topics: "Podmanの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Podmanソリューションの概要、 Linux ( mirror.safe ) へのSafeKit / Podmanソリューションのインストール、 SafeKit / Podmanソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# Podman高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください{#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Podman高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Podman" mod="mirror"  %}}
  
 
-## SafeKit / Podmanソリューションの概要{#overview-of-the-safekit--podman-solution}
+## SafeKit / Podmanソリューションの概要 {#overview-of-the-safekit--podman-solution}
 
 ソリューションはここに記載されています: ** 💡 [ SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** 。
 
-## SafeKit / PodmanソリューションをLinux ( mirror.safe ) {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}にインストールします。
+## SafeKit / PodmanソリューションをLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * SafeKitで再起動したいPodmanアプリケーションが、2つのノード（仮想マシンまたは物理サーバー）にインストールされている必要があります。
 
@@ -28,11 +28,11 @@ topics: "Podmanの高可用性クイックインストールガイド、 SafeKit
 {{%  insert-safekit-installation-package-linux-ja app="" mod="mirror"  %}}
  
 
-### シンプルなコンテナイメージ{#example-with-a-simple-container-image}の例
+### シンプルなコンテナイメージの例 {#example-with-a-simple-container-image}
 
 この例では、 SafeKit nginx (Web サーバー) コンテナをどのように管理できるかを示します。具体的には、コンテナ内でアクセスされるディレクトリの複製と、障害発生時の別のノードでのコンテナの再起動について説明します。
 
-#### 前提条件{#prerequisites-1}
+#### 前提条件 {#prerequisites-1}
 
   * 両方のノード**上に複製ディレクトリ**を作成します。  
 ** /replicated_dir_path **というディレクトリを作成します。このディレクトリはSafeKitによって複製され、 nginxによって提供される HTML ページが含まれます。
@@ -46,7 +46,7 @@ topics: "Podmanの高可用性クイックインストールガイド、 SafeKit
         podman container create --name mynginx -v /replicated_dir_path : /usr/share/nginx/html -p 9011:80 nginx
 
 
-#### SafeKit設定{#safekit-configuration}
+#### SafeKit設定 {#safekit-configuration}
 
   * **ステップバイステップ設定**セクションへ移動してください。
   * **mirror.safe**モジュールを作成および構成する
@@ -57,7 +57,7 @@ topics: "Podmanの高可用性クイックインストールガイド、 SafeKit
   * SafeKit mirrorモジュールをデプロイして起動します。
 
 
-#### テスト{#tests}
+#### テスト {#tests}
 
   * **http://vitual-ip:9011/index.html**でnginxへのアクセスをテストします。
   * 再現性をテストする：  
@@ -70,13 +70,13 @@ SafeKit PRIM状態のノードで、複製ディレクトリに他のHTMLファ�
   * **http://vitual-ip:9011/index.html**および**http://vitual-ip:9011/page.html**へのアクセスをテストします。
 
 
-## SafeKit / Podmanソリューション{#step-by-step-configuration-of-the-safekit--podman-solution}の段階的な構成
+## SafeKit / Podmanソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--podman-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Podman" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

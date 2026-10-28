@@ -44,7 +44,7 @@ Je krijgt een lijst met paden als **/var/lib/docker/volumes/ <volume_name>/_data
     * Plaats respectievelijk in de scripts start_prim en stop_prim : **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** en **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
-### Voorbeeld 2 met een Docker -applicatie die een set containers {#example-2-with-a-docker-application-starting-a-set-of-containers} start.
+### Voorbeeld 2 met een Docker -applicatie die een set containers start. {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
 We gaan er hier van uit dat een applicatie met de Docker ** myappli ** een reeks containers start.
 

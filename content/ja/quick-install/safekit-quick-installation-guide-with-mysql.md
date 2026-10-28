@@ -7,19 +7,19 @@ lang: "ja"
 topics: "MySQLの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / MySQLソリューションの概要、 SafeKitおよびMySQL ( mysql.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / MySQLサーバーソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# MySQL高可用性とSafeKit : フェイルオーバーのためにmysql.safeモジュールをインストールしてください{#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# MySQL高可用性とSafeKit : フェイルオーバーのためにmysql.safeモジュールをインストールしてください {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit / MySQLソリューションの概要{#overview-of-the-safekit--mysql-solution}
+## SafeKit / MySQLソリューションの概要 {#overview-of-the-safekit--mysql-solution}
 
 解決策はここに記載されています: ** 💡 [最もシンプルなMySQL高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/mysql-high-availability-synchronous-replication-failover/>) ** 。
 
-## SafeKit / MySQLソリューションをWindowsおよびLinux ( mysql.safe ) {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}にインストールします。
+## SafeKit / MySQLソリューションをWindowsおよびLinux ( mysql.safe )にインストールします。 {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * MySQL 2つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
 
@@ -34,13 +34,13 @@ topics: "MySQLの高可用性クイックインストールガイド、 SafeKit�
 {{%  insert-safekit-82-installation-module-linux-ja app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit / MySQLサーバーソリューション{#step-by-step-configuration-of-the-safekit--mysql-server-solution}の段階的な構成
+## SafeKit / MySQLサーバーソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--mysql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

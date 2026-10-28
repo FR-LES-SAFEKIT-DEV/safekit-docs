@@ -7,19 +7,19 @@ lang: "zh-hans"
 topics: "GCP 、 SafeKit高可用性快速安装指南； SafeKit / GCP mirror解决方案概述；在Windows和Linux ( mirror.safe ) 上安装SafeKit / GCP 、 mirror解决方案； SafeKit / GCP mirror解决方案分步配置； SafeKit mirror解决方案演示；🔍 SafeKit高可用性导航中心"
 ---
 
-# GCP高可用性（与SafeKit配合使用）：安装mirror.safe模块以实现故障转移{#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# GCP高可用性（与SafeKit配合使用）：安装mirror.safe模块以实现故障转移 {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="GCP" mod="mirror"  %}}
  
 
-## SafeKit / GCP mirror解决方案概述{#overview-of-the-safekit--gcp-mirror-solution}
+## SafeKit / GCP mirror解决方案概述 {#overview-of-the-safekit--gcp-mirror-solution}
 
 解决方案描述如下： ** 💡 [ Google GCP高可用性： SafeKit同步复制和故障转移](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
-## 在Windows和Linux ( mirror.safe ) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}上安装SafeKit / GCP mirror解决方案
+## 在Windows和Linux ( mirror.safe )上安装SafeKit / GCP mirror解决方案 {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Google GCP负载均衡器{#configuration-of-the-google-gcp-load-balancer}的配置
+### Google GCP负载均衡器的配置 {#configuration-of-the-google-gcp-load-balancer}
 
 如果要实现虚拟 IP 地址，则必须配置负载均衡器。  
 负载均衡器必须配置为定期向节点发送健康数据包。  
@@ -41,7 +41,7 @@ topics: "GCP 、 SafeKit高可用性快速安装指南； SafeKit / GCP mirror�
 
 ⚠️ 请勿在以下步骤配置的第 4 步配置虚拟 IP 地址。虚拟 IP 地址已在 Google GCP负载均衡器中设置。在第 4 步设置虚拟 IP 地址仅适用于本地部署配置。
 
-### Google GCP网络安全{#configuration-of-the-google-gcp-network-security}的配置
+### Google GCP网络安全的配置 {#configuration-of-the-google-gcp-network-security}
 
 必须配置网络安全，以启用以下协议和端口的通信：
 
@@ -61,13 +61,13 @@ topics: "GCP 、 SafeKit高可用性快速安装指南； SafeKit / GCP mirror�
 
 注意：您将要配置的通用**mirror.safe**模块包含在软件包中。
 
-## SafeKit / GCP mirror解决方案{#step-by-step-configuration-of-the-safekit--gcp-mirror-solution}的逐步配置
+## SafeKit / GCP mirror解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--gcp-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-zh-hans app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}解决方案的演示
+## SafeKit mirror解决方案的演示 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-zh-hans  %}}

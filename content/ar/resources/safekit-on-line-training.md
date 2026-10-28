@@ -158,7 +158,7 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>) )
 
 
-### استكشاف أخطاء {#troubleshooting} وإصلاحها
+### استكشاف أخطاء وإصلاحها {#troubleshooting}
 
   9. استكشاف الأخطاء وإصلاحها: 🎬 فيديو [ ( ](<https://www.youtube.com/watch?v=H1mxvpC3mP8>) ) 
      * 🎬 [ مقدمة ](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=0s>) (0:58)

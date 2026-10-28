@@ -7,7 +7,7 @@ lang: "ko"
 topics: "Firebird 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Firebird 솔루션 개요, SafeKit 및 Firebird ( firebird.safe )에 Windows / Linux 솔루션 설치, SafeKit / Firebird 솔루션 단계별 구성, SafeKit 및 mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# Firebird 고가용성 SafeKit 포함): 장애 조치용 firebird.safe 모듈 설치 {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover} 포함)
+# Firebird 고가용성 SafeKit 포함): 장애 조치용 firebird.safe 모듈 설치 포함) {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Firebird" mod="firebird"  %}}
@@ -17,7 +17,7 @@ topics: "Firebird 고가용성 빠른 설치 가이드, SafeKit 고가용성 제
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 Firebird 고가용성: 2노드 동기 복제 및 장애 조치 ](</solutions/firebird-high-availability-synchronous-replication-failover/>) ** .
 
-## SafeKit / Firebird 솔루션의 Windows 및 Linux ( firebird.safe ) 및 {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe} 설치
+## SafeKit / Firebird 솔루션의 Windows 및 Linux ( firebird.safe ) 및 설치 {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -34,13 +34,13 @@ topics: "Firebird 고가용성 빠른 설치 가이드, SafeKit 고가용성 제
 {{%  insert-safekit-82-installation-module-linux-ko app="Firebird" mod="firebird"  %}}
  
 
-## SafeKit / Firebird 솔루션 {#step-by-step-configuration-of-the-safekit--firebird-solution} 의 단계별 구성
+## SafeKit / Firebird 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--firebird-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Firebird" mod="firebird"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

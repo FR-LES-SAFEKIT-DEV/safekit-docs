@@ -9,7 +9,7 @@ topics: "SAN이 없는 SafeKit Mirror 클러스터가 Podman 와 연동되는 �
 
 # SafeKit : Podman 고가용성 및 실시간 데이터 복제 소프트웨어 {#safekit-podman-high-availability--real-time-data-replication-software}
 
-## SAN이 없는 SafeKit Mirror 클러스터가 Podman {#how-the-sanless-safekit-mirror-cluster-works-with-podman} 와 함께 작동하는 방법
+## SAN이 없는 SafeKit Mirror 클러스터가 Podman 와 함께 작동하는 방법 {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 
 SafeKit 가벼운 무게를 제공합니다. **"딱 필요한 만큼"의 HA 솔루션** 다음과 같은 조직을 위해 맞춤 제작되었습니다. **Kubernetes** 로컬 또는 엣지 컴퓨팅 컨테이너 워크로드에는 리소스 집약적이거나, 복잡하거나, 과도하게 설계되었습니다.**SafeKit** 간소화된 올인원 2노드 솔루션을 제공합니다. **고가용성 클러스터용 Podman** ~에 Linux이는 복잡한 "DIY(Do It Yourself)" 방식에 대한 매끄럽고 통합된 대안 역할을 합니다. Linux HA 스택 - 수동 구성의 기술적 부담을 없애줍니다 **코로싱크** 노드 멤버십의 경우, **맥박 조정 장치** 리소스 오케스트레이션을 위해, **DRBD** 블록 수준 복제를 위해 실시간 동기 복제 및 **자동으로 전환되는 가상 IP 주소** , SafeKit 견고한 것을 만들어냅니다 **SANless 클러스터** 이는 값비싼 공유 스토리지에 대한 필요성을 없애줍니다. 이 아키텍처는 투명한 클라이언트 재연결, 신속한 자동 장애 조치 및 보안을 보장합니다. **데이터 손실 제로 보장(RPO=0)** 컨테이너화된 애플리케이션의 경우.
 
@@ -47,7 +47,7 @@ SafeKit 가벼운 무게를 제공합니다. **"딱 필요한 만큼"의 HA 솔�
 
 SafeKit ** 자동 전환 가상 IP(VIP) 주소 ** 구현합니다. 이 VIP는 클라이언트 애플리케이션의 단일 진입점 역할을 합니다. 기본 서버에 장애가 발생하면 SafeKit ** Gratuitous ARP ** 를 사용하여 가상 IP를 이중화 서버로 이동합니다. 이를 통해 클라이언트는 Podman 애플리케이션이 재시작된 동일한 IP 주소로 투명하게 다시 연결할 수 있습니다.
 
-### Podman {#what-is-a-sanless-cluster-for-podman} 에 대한 "SANless" 클러스터란 무엇입니까?
+### Podman 에 대한 "SANless" 클러스터란 무엇입니까? {#what-is-a-sanless-cluster-for-podman}
 
 SAN이 없는 클러스터 ** ** 고가의 SAN(Storage Area Network)이나 NAS(Network Attached Storage) 없이도 고가용성을 제공하는 아키텍처입니다. Podman 클러스터는 호스트 기반 동기 복제 ** ** SafeKit ** ** mirror 를 통해 두 서버의 로컬 디스크 간에 데이터를 복제합니다. 이를 통해 공유 스토리지를 단일 장애 지점으로 만들지 않고 ** (Recovery Point Objective)를 0으로 보장하여 ** 조치 중에도 데이터 손실이 발생하지 않도록 합니다.
 
@@ -55,7 +55,7 @@ SAN이 없는 클러스터 ** ** 고가의 SAN(Storage Area Network)이나 NAS(N
 
 네. 이 문서에서는 전문적인 클러스터링 기술이나 복잡한 Kubernetes 없이도 클러스터 Podman 신속하게 구축하는 방법을 설명합니다 SafeKit 애플리케이션의 시작과 중지 Podman 처리 ** ** 재시작 스크립트 ](</ko/quick-install/safekit-quick-installation-guide-with-podman/>) 활용하면 [ 보다 훨씬 간편하게 배포 및 유지 관리할 수 있는 강력한 이중화 솔루션을 얻을 수 있습니다.
 
-### SafeKit 복제는 {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-podman} Podman 에 대한 DRBD와 같은 블록 수준 솔루션과 어떻게 다릅니까?
+### SafeKit 복제는 Podman 에 대한 DRBD와 같은 블록 수준 솔루션과 어떻게 다릅니까? {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-podman}
 
 DRBD와 같은 대부분의 SANless 솔루션이 블록 수준 복제 ** ** ** SafeKit ** ** 복제를 수행합니다 ** 이 방식은 특정 "복제 디스크" 볼륨으로 데이터를 마이그레이션할 필요가 없으므로 Podman 에 완전히 투명합니다. 대신 기존 애플리케이션 폴더 ** 시스템 디스크에 있는 폴더 포함) Podman 복제하도록 구성하기만 하면 됩니다. 이를 통해 SafeKit 디스크 재구성이나 애플리케이션 ** 없이 이미 설치된 위치에서 고가용성을 구현할 수 있습니다.
 

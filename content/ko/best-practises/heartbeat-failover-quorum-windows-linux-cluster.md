@@ -61,7 +61,7 @@ SafeKit 소프트웨어는 두 서버가 공유하는 네트워크 수만큼 하
 
 하지만 이러한 새로운 쿼럼 장치는 전체 클러스터링 아키텍처에 비용과 복잡성을 추가합니다.
 
-## SafeKit 스플릿 브레인 체커 {#simple-cluster-quorum-with-the-safekit-split-brain-checker} 를 사용한 간단한 클러스터 쿼럼
+## SafeKit 스플릿 브레인 체커 를 사용한 간단한 클러스터 쿼럼 {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
 
 ### SafeKit 분할뇌 검사기 {#safekit-split-brain-checker}
 

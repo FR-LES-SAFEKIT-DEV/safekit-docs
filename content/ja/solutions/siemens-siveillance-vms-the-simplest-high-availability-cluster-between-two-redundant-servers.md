@@ -7,7 +7,7 @@ lang: "ja"
 topics: "Siemens Siveillance VMS および SQL ( SiveillanceVMS.safe mirrorモジュール) を使用したSafeKitクイックインストールガイド、SAN レスSafeKit MirrorクラスタがMilestone XProtectとどのように連携するか、目次、 SafeKitソフトウェアが SAN レスMilestone XProtect高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがMilestone XProtectとどのように連携するか、 SafeKit高可用性の制限、比較: SafeKitとMilestone XProtectと他のクラスタリング ソリューション、ビデオ ガイド: 構成SafeKit HA mirrorクラスター、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# Siemens Siveillance VMS 高可用性: SafeKit {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}を使用した 2 ノード共有なしクラスタ
+# Siemens Siveillance VMS 高可用性: SafeKitを使用した 2 ノード共有なしクラスタ {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}
 
 ## SafeKitクイックインストールガイド（Siemens Siveillance VMS および SQL 付き）（ SiveillanceVMS.safe mirrorモジュール） {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

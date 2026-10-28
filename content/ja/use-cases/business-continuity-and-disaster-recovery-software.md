@@ -7,11 +7,11 @@ lang: "ja"
 topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}を搭載した 2 ノード クラスタ向け事業継続および災害復旧ソフトウェア
+# SafeKitを搭載した 2 ノード クラスタ向け事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
 
-## 事業継続および災害復旧ソフトウェア{#business-continuity-and-disaster-recovery-software}
+## 事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software}
 
-### ビジネス継続性と災害復旧のためのソフトウェアとしてSafeKit {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}選ぶ理由
+### ビジネス継続性と災害復旧のためのソフトウェアとしてSafeKit選ぶ理由 {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}
 
 
 ![シンプルな事業継続および災害復旧ソフトウェアSafeKit ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")付き）
@@ -19,11 +19,11 @@ topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit高�
 
 拡張LANまたはストレッチVLANがリモートサイト間で利用可能であれば、 SafeKitクラスタを同じコンピュータルーム内に展開する場合でも、リモートコンピュータルーム間で展開する場合でも、構成に違いはありません。
 
-### 2つの遠隔コンピュータ室間でシンプルな高可用性ソリューションを実装するにはどうすればよいでしょう{#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms} ？
+### 2つの遠隔コンピュータ室間でシンプルな高可用性ソリューションを実装するにはどうすればよいでしょう？ {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
 SafeKit mirror 、および`farm`モジュールは、特別なクラスタ構成を必要とせずに、遠隔地のコンピュータ室に設置されたサーバーに容易に展開できます。つまり、 SafeKit 、単一のシンプルなアーキテクチャ内で事業継続性と災害復旧を統合します。また、 SafeKit 、ネットワークが隔離された場合に、3台目のサーバーや特別なクォーラムディスクを必要とせずに、 [スプリットブレイン](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)を管理します。
 
-### 事業継続性 vs バックアップソリューション{#business-continuity-vs-backup-solutions}
+### 事業継続性 vs バックアップソリューション {#business-continuity-vs-backup-solutions}
 
 事業継続ソリューションとバックアップソリューションは、異なる障害シナリオに対応しており、互換性があるのではなく補完的な関係にあります。事業継続ソリューションは、 SafeKit高可用性クラスタリングにより、リアルタイムレプリケーションと自動フェイルオーバーを通じて、サーバーまたはアプリケーションの障害発生時にもアプリケーションの中断を最小限に抑えながらアプリケーションの実行を維持します。バックアップソリューションは、ランサムウェア攻撃やオペレーターのミスなど、より広範囲な損失から保護するもので、通常はオフサイトのデータコピーに依存しており、復旧時間は長くなりますが、自動フェイルオーバー機能はありません。
 

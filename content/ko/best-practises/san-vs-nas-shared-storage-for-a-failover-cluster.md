@@ -38,7 +38,7 @@ topics: "장애 조치 클러스터를 위한 SAN과 NAS 공유 스토리지 중
   * 하지만 노드가 격리된 경우 동일한 애플리케이션이 두 번 실행되어 공유 스토리지의 데이터가 손상될 가능성이 여전히 존재합니다.
 
 
-###  Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit} 사용한 실시간 복제 및 장애 조치
+###  Eviden SafeKit 사용한 실시간 복제 및 장애 조치 {#real-time-replication-and-failover-with-eviden-safekit}
 
 
 ![ 실시간 복제 및 장애 조치 SafeKit ](/wp-content/uploads/2023/03/no-shared-storage.png "w:200") 포함)

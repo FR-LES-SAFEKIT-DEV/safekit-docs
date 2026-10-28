@@ -7,19 +7,19 @@ lang: "ko"
 topics: "GCP , SafeKit 고가용성 빠른 설치 가이드, 고가용성 제한 사항, SafeKit / GCP mirror 솔루션 개요, SafeKit 및 Linux ( mirror.safe )에 Windows / GCP 및 mirror 솔루션 설치, SafeKit / GCP mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# GCP 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover} 포함)
+# GCP 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 포함) {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="GCP" mod="mirror"  %}}
  
 
-## SafeKit / GCP {#overview-of-the-safekit--gcp-mirror-solution} mirror 솔루션 개요
+## SafeKit / GCP mirror 솔루션 개요 {#overview-of-the-safekit--gcp-mirror-solution}
 
 해결책은 여기에 설명되어 있습니다: ** 💡 [ Google GCP 고가용성: SafeKit 동기식 복제 및 장애 조치 ](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** .
 
 ## 설치 SafeKit / GCP mirror 솔루션 Windows 그리고 Linux (mirror.safe) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Google GCP 로드 밸런서 {#configuration-of-the-google-gcp-load-balancer} 의 구성
+### Google GCP 로드 밸런서 의 구성 {#configuration-of-the-google-gcp-load-balancer}
 
 가상 IP 주소를 구현하려면 로드 밸런서를 구성해야 합니다.  
 또한 로드 밸런서는 노드에 주기적으로 상태 패킷을 전송하도록 구성되어야 합니다.  
@@ -41,7 +41,7 @@ Google GCP 로드 밸런서를 다음과 같이 구성해야 합니다.
 
 ⚠️ 아래 단계별 구성의 4단계에서 가상 IP 주소를 설정하지 마십시오. Google GCP 로드 밸런서에 가상 IP 주소가 이미 설정되어 있습니다. 4단계에서 가상 IP 주소를 설정하는 것은 온프레미스 구성에만 유용합니다.
 
-### Google GCP 네트워크 보안 {#configuration-of-the-google-gcp-network-security} 구성
+### Google GCP 네트워크 보안 구성 {#configuration-of-the-google-gcp-network-security}
 
 네트워크 보안은 다음 프로토콜 및 포트에 대한 통신을 허용하도록 구성해야 합니다.
 
@@ -61,13 +61,13 @@ Google GCP 로드 밸런서를 다음과 같이 구성해야 합니다.
 
 참고: 구성할 범용 **mirror.safe** 모듈은 패키지 안에 포함되어 있습니다.
 
-## SafeKit / GCP mirror 솔루션 {#step-by-step-configuration-of-the-safekit--gcp-mirror-solution} 의 단계별 구성
+## SafeKit / GCP mirror 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--gcp-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

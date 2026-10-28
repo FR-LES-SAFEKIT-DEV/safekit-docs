@@ -7,19 +7,19 @@ lang: "ja"
 topics: "SCADAシステムとは？、SCADAソフトウェアが重要な理由、SCADAソフトウェアの主要プレーヤー一覧、 SafeKitはSCADAソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供、 SafeKit SCADA市場で定評のあるソリューション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SCADAおよび産業制御システム（ICS）の高可用性と冗長性{#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# SCADAおよび産業制御システム（ICS）の高可用性と冗長性 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
-##  {#what-is-a-scada-system}システムとは何ですか？
+##  システムとは何ですか？ {#what-is-a-scada-system}
 
 SCADAシステムは、産業プロセスを制御し、ヒューマンマシンインターフェースソフトウェアを介して、センサー、バルブ、ポンプ、モーターなどの機器と直接やり取りすることを可能にします。
 
-##  SCADAソフトウェアが重要な理由と{#why-a-scada-software-is-critical} ？
+##  SCADAソフトウェアが重要な理由と？ {#why-a-scada-software-is-critical}
 
 SCADAソフトウェアがダウンすると、生産が停止する。
 
 そのため、SCADAソフトウェアは、些細な事故にも即座に対応しなければならないオペレーターが常に利用できる状態にしておく必要がある。
 
-##  SCADAソフトウェアの主要プレーヤー一覧{#key-players-list-in-scada-software}
+##  SCADAソフトウェアの主要プレーヤー一覧 {#key-players-list-in-scada-software}
 
 [アナリストレポート](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>)によると、SCADAソフトウェアの主要プレーヤーは以下のとおりです。
 

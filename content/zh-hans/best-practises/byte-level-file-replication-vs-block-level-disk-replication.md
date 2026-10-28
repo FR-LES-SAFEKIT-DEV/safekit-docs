@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "高可用性集群中字节级文件复制与块级磁盘复制的比较，字节级文件复制与块级磁盘复制的优缺点，🔍 SafeKit高可用性导航中心"
 ---
 
-# 字节级文件复制与块级磁盘复制在高可用性方面的比较{#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# 字节级文件复制与块级磁盘复制在高可用性方面的比较 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
 
-## 高可用性集群中字节级文件复制与块级磁盘复制的比较{#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
+## 高可用性集群中字节级文件复制与块级磁盘复制的比较 {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 
-### 概述{#overview}
+### 概述 {#overview}
 
 本文探讨了高可用性集群中字节级文件复制与块级磁盘复制的优缺点。我们将考察复制数据量、对应用程序数据组织的影响、恢复时间以及实现的简易性。
 
@@ -47,7 +47,7 @@ topics: "高可用性集群中字节级文件复制与块级磁盘复制的比�
 
 最后，该解决方案配置起来并不容易，因为需要一定的技能才能在专用磁盘上配置文件系统。此外，还需要一定的应用技能才能在复制磁盘上配置应用程序数据。
 
-## 字节级文件复制与块级磁盘复制的优缺点{#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
+## 字节级文件复制与块级磁盘复制的优缺点 {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
 标准| **字节级文件复制集群** | **块级磁盘复制集群**  
 ---|---|---  

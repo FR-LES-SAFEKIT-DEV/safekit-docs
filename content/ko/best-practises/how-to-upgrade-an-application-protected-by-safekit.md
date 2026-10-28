@@ -7,9 +7,9 @@ lang: "ko"
 topics: "SafeKit 로 보호되는 고가용성 애플리케이션 업그레이드, VM 수준 고가용성, 애플리케이션 수준 고가용성, 올바른 업그레이드 전략 선택, 결론, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# HA 클러스터 {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster} 에서 SafeKit 로 보호되는 애플리케이션 업그레이드
+# HA 클러스터 에서 SafeKit 로 보호되는 애플리케이션 업그레이드 {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
 
-## SafeKit {#upgrading-a-high-availability-application-protected-by-safekit} 로 보호되는 고가용성 애플리케이션 업그레이드
+## SafeKit 로 보호되는 고가용성 애플리케이션 업그레이드 {#upgrading-a-high-availability-application-protected-by-safekit}
 
 비즈니스 핵심 애플리케이션을 최신 상태로 유지하는 것은 보안, 성능 및 새로운 기능 접근성을 위해 필수적입니다. 애플리케이션이 SafeKit 로 보호되는 경우, 업그레이드 절차는 사용 중인 고가용성 아키텍처에 따라 달라집니다.
 

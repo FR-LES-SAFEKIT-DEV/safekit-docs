@@ -88,7 +88,7 @@ Het script zal:
   * Start de k3s-module
 
 
-### 5. Controleer of de k3s SafeKit module op beide knooppunten {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes} actief is.
+### 5. Controleer of de k3s SafeKit module op beide knooppunten actief is. {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}
 
 Controleer dit op beide knooppunten met het volgende commando: `/opt/safekit/safekit –H "*" state`
 
@@ -110,7 +110,7 @@ Het antwoord moet overeenkomen met de afbeelding.
     Succes
     
 
-### 6. Start de webconsole SafeKit om het cluster {#6-start-the-safekit-web-console-to-administer-the-cluster} te beheren.
+### 6. Start de webconsole SafeKit om het cluster te beheren. {#6-start-the-safekit-web-console-to-administer-the-cluster}
 
   * Verbind een browser met de webconsole-URL `http://server0-IP:9010` SafeKit .
   * Je zou een pagina moeten zien die lijkt op de afbeelding.

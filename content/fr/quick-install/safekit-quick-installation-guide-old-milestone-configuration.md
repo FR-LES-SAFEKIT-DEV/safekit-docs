@@ -117,7 +117,7 @@ Le bouton « Appliquer » affichera la configuration dans les fichiers `userco
 ![ Entrez les paramètres du module ](/wp-content/uploads/2023/01/appli-7-1.png)
 
 
-### 5. Vérifiez que la configuration {#5-verify-successful-configuration} a réussi.
+### 5. Vérifiez que la configuration a réussi. {#5-verify-successful-configuration}
 
   * Vérifiez le message de réussite (vert) sur les deux nœuds et cliquez sur Suivant.
 

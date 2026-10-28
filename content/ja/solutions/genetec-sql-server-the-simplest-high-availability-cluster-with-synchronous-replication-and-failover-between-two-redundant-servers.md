@@ -7,7 +7,7 @@ lang: "ja"
 topics: "Genetec SQL と SAN レスSafeKit Mirrorクラスタの連携方法、目次、 SafeKitソフトウェアが SAN レス Genetec SQL 高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタが Genetec SQL とどのように連携するか、 SafeKit高可用性の制限事項、比較: Genetec SQL 用SafeKitと他のクラスタリング ソリューション、ビデオ ガイド: SafeKit HA mirrorクラスタの構成、セキュリティ マーケットで認められたソリューションであるSafeKit 、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# Genetec SQLの最もシンプルな高可用性：2ノード同期レプリケーションとフェイルオーバー{#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}
+# Genetec SQLの最もシンプルな高可用性：2ノード同期レプリケーションとフェイルオーバー {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Genetec SQL" guide="/ja/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"  %}}

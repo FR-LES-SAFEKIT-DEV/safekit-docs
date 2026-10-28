@@ -7,17 +7,17 @@ lang: "zh-hans"
 topics: "借助SafeKit集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性，🔍 SafeKit高可用性导航中心"
 ---
 
-# 面向农场和镜像的集群软件：高可用性和负载均衡{#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# 面向农场和镜像的集群软件：高可用性和负载均衡 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## 借助SafeKit集群软件{#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software} ，实现关键 Web 和数据库应用程序的高可用性和可扩展性。
+## 借助SafeKit集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性。 {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
-### 负载均衡、镜像和故障转移{#load-balancing-mirroring-and-failover}
+### 负载均衡、镜像和故障转移 {#load-balancing-mirroring-and-failover}
 
 
 ![ SafeKit集群，具备负载均衡和镜像功能](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-### 以SafeKit聚类软件{#example-with-the-safekit-clustering-software}为例
+### 以SafeKit聚类软件为例 {#example-with-the-safekit-clustering-software}
 
 例如，使用SafeKit集群软件，您可以实现IIS负载均衡和Microsoft SQL Server镜像。
 
@@ -27,7 +27,7 @@ topics: "借助SafeKit集群软件，实现关键 Web 和数据库应用程序�
 
 使用SafeKit集群软件，部署在同一台服务器上还是部署在不同服务器上没有任何区别。
 
-### 高可用性和可扩展性解决方案{#high-availability-and-scalability-solution}
+### 高可用性和可扩展性解决方案 {#high-availability-and-scalability-solution}
 
 SafeKit集群软件为关键的 Web 和数据库应用程序提供了一种简单、高可用性和可扩展性的解决方案。
 

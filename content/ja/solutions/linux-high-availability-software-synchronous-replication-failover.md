@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SANレスSafeKit MirrorクラスタがLinuxとどのように連携するか、目次、 SafeKitソフトウェアがSANレスLinux高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがLinuxとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとLinuxと他のクラスタリングソリューション、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 最もシンプルな高可用性Linux : 2ノード同期レプリケーションとフェイルオーバー{#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
+# 最もシンプルな高可用性Linux : 2ノード同期レプリケーションとフェイルオーバー {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Linux" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

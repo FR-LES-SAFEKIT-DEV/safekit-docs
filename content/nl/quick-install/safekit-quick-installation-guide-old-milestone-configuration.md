@@ -117,7 +117,7 @@ De knop "Toepassen" zal de configuratie in de bestanden `userconfig.xml` , `star
 ![ Voer de module-instellingen ](/wp-content/uploads/2023/01/appli-7-1.png)
 
 
-### 5. Controleer of de configuratie {#5-verify-successful-configuration} succesvol is verlopen.
+### 5. Controleer of de configuratie succesvol is verlopen. {#5-verify-successful-configuration}
 
   * Controleer het succesbericht (groen) op beide knooppunten en klik op Volgende.
 
@@ -279,7 +279,7 @@ Volgens de afbeelding:
 ![ Stel het virtuele IP-adres in de URL's en in de Milestone Management Client ](/wp-content/uploads/2022/07/milestone-url-vip.png)
 
 
-### 12. Stel op het bureaublad van knooppunt 1 met Milestone Management Client de beheerdersrollen in om een correcte failover {#role} te garanderen.
+### 12. Stel op het bureaublad van knooppunt 1 met Milestone Management Client de beheerdersrollen in om een correcte failover te garanderen. {#role}
 
 
 ![ Opmerking ](/wp-content/uploads/2022/07/note.png)
@@ -308,7 +308,7 @@ Dat komt doordat de groep BUILTIN\Administrators dezelfde SID heeft op beide kno
 ![ Stel rollen in in de Milestone Management Client ](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
 
-### 13. Ga naar het bureaublad van knooppunt 2 en stel het virtuele IP-adres in de interne bestanden Milestone {#milestone-files-2} in.
+### 13. Ga naar het bureaublad van knooppunt 2 en stel het virtuele IP-adres in de interne bestanden Milestone in. {#milestone-files-2}
 
 
 ![ Opmerking ](/wp-content/uploads/2022/07/note.png)

@@ -7,13 +7,13 @@ lang: "ja"
 topics: "概要、目次、製品情報、サポート対象オペレーティングシステムとプラットフォーム、プリビルド済みアプリケーションモジュール、アーキテクチャと展開モデル、RPOとRTOの機能、エッジおよび分散展開への適合性、監視、管理、アラート、セキュリティとコンプライアンス、ライセンスモデル、サポートとメンテナンスのSLA、代替製品との比較、クイックリファレンスリンク"
 ---
 
-# RFIおよびRFP準備のための高可用性技術リファレンス{#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# RFIおよびRFP準備のための高可用性技術リファレンス {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
-## 概要{#overview}
+## 概要 {#overview}
 
 このページでは、 SafeKit高可用性ソフトウェアに関するRFP/RFIでよくある質問に対し、体系的かつ事実に基づいた回答を提供します。調達チームやソリューションアーキテクトが高可用性要件を作成する際の技術参考資料として活用してください。 
 
-## 目次{#table-of-contents}
+## 目次 {#table-of-contents}
 
   1. [製品識別番号](#product-identity)
   2. [対応オペレーティングシステムおよびプラットフォーム](#supported-operating-systems-platforms)
@@ -29,7 +29,7 @@ topics: "概要、目次、製品情報、サポート対象オペレーティ�
   12. [クイックリファレンスリンク](#quick-reference-links)
 
 
-## 製品識別番号{#product-identity}
+## 製品識別番号 {#product-identity}
 
 フィールド|回答  
 ---|---  
@@ -40,7 +40,7 @@ topics: "概要、目次、製品情報、サポート対象オペレーティ�
 ウェブサイト| <https://safekit.eviden.com>  
 初版リリース| 2000 (20年以上の生産実績)  
   
-## サポートされているオペレーティングシステムとプラットフォーム{#supported-operating-systems-platforms}
+## サポートされているオペレーティングシステムとプラットフォーム {#supported-operating-systems-platforms}
 
 Windows OS | Linux OS |インフラストラクチャと仮想化|クラウドプラットフォーム  
 ---|---|---|---  
@@ -50,7 +50,7 @@ _ * SafeKit 、アプリケーションレベルの HA と VM レベルの HA �
 
 _ **仮想 IP アドレスは、クラウド ロード バランサー レベルで設定する必要があります。_
 
-## プリビルド済みアプリケーションモジュール{#pre-built-application-modules}
+## プリビルド済みアプリケーションモジュール {#pre-built-application-modules}
 
 SafeKitは、すぐに使用できる事前構成済みの`.safe`モジュールが含まれています。これらは、2つのHA戦略に分類されます**アプリケーションHA ** （ mirrorまたは`farm`モジュールを使用した直接アプリケーションクラスタリング）と、 **仮想化HA ** （ hyperv.safeまたはkvm.safeを使用したVMレベルのクラスタリング）です。
 
@@ -82,7 +82,7 @@ Nedap AEOS — nedap.safe ( Windows ) | SIMATIC PCS 7 — hyperv.safe ( Windows 
 シーメンス Siveillance VMS — SiveillanceVMS.safe ( Windows ) |   
 クラウド（ AWS 、 Azure 、 GCP 、汎用）— mirror.safe / farm.safe |   
   
-## アーキテクチャと展開モデル{#architecture-deployment-model}
+## アーキテクチャと展開モデル {#architecture-deployment-model}
 
 ### 2つのクラスタモジュール： mirror.safeとfarm.safe {#two-cluster-modules}
 
@@ -91,7 +91,7 @@ Nedap AEOS — nedap.safe ( Windows ) | SIMATIC PCS 7 — hyperv.safe ( Windows 
 mirror.safe |アクティブ/パッシブ構成、同期バイトレベルファイルレプリケーション+自動フェイルオーバー|データベース、ステートフルアプリケーション、一度に1台のサーバーでのみ実行されるサービス  
 farm.safe |ネットワーク負荷分散と自動フェイルオーバーを備えたアクティブ/アクティブ構成| Webサーバー、ステートレスマイクロサービス、APIゲートウェイ、複数のサーバーで同時に実行されるサービス  
   
-### クラスターインフラストラクチャとアーキテクチャ{#cluster-infrastructure-architecture}
+### クラスターインフラストラクチャとアーキテクチャ {#cluster-infrastructure-architecture}
 
 要件／仕様| SafeKit機能／価値  
 ---|---  
@@ -106,7 +106,7 @@ Active Directory (AD) の前提条件はありますか？ | — Windowsや Acti
 エージェントベースかエージェントレスか？ |エージェントベース — 各ノードに軽量ソフトウェアをインストール  
 アプリケーションに依存しない？ |はい — あらゆるWindowsサービスまたはLinuxデーモンを保護します。30 種類以上のアプリケーション向けに事前構築済みのモジュールが用意されています。  
   
-### レプリケーションとデータ保護{#replication-data-protection}
+### レプリケーションとデータ保護 {#replication-data-protection}
 
 要件／仕様| SafeKit機能／価値  
 ---|---  
@@ -119,7 +119,7 @@ Active Directory (AD) の前提条件はありますか？ | — Windowsや Acti
 選択的レプリケーション|はい — 特定のディレクトリ/ファイルをレプリケートします  
 転送中の暗号化|はい — レプリケーション トラフィックに TLS/SSL を使用  
   
-## RPOおよびRTO機能{#rpo-rto-capabilities}
+## RPOおよびRTO機能 {#rpo-rto-capabilities}
 
 ### クラスタータイプ別RPOおよびRTO {#rto-rpo-cluster-type}
 
@@ -145,7 +145,7 @@ OSレベルのクラッシュ|ハートビートタイムアウト + セカン�
 ---|---  
 あらゆる障害|障害検出 + OS の完全再起動 + アプリケーションの再起動 (通常数分)  
   
-## エッジおよび分散型展開の適合性{#edge-distributed-deployment-suitability}
+## エッジおよび分散型展開の適合性 {#edge-distributed-deployment-suitability}
 
 SafeKitは、エッジ、ブランチオフィス、および分散型エンタープライズのシナリオ向けに特別に設計されています。
 
@@ -177,7 +177,7 @@ SCADAおよび産業制御|工場、変電所、浄水場| WindowsまたはLinux
 小売業|店舗、支店、倉庫|販売時点情報管理および在庫管理  
 防衛|前線作戦基地、野戦部隊|任務遂行に不可欠な指揮通信システム  
   
-## 監視、管理、アラート{#monitoring-management-alerting}
+## 監視、管理、アラート {#monitoring-management-alerting}
 
 機能|詳細  
 ---|---  
@@ -189,7 +189,7 @@ CLI管理|スクリプト作成と自動化のための完全なコマンドラ�
 ログ管理|モジュールごと、スクリプトごとのログファイル。サポート用のデバッグスナップショット。  
 サードパーティ監視統合| SafeKit 、すべての主要なクラスタイベントをWindowsイベントログまたはLinux Syslog に自動的に記録し、カスタム開発なしで、Nagios、Zabbix、Splunk、SIEM ソリューションなどの監視プラットフォームがこれらのイベントを収集し、標準のアラートルールを使用してアラームを発生させることを可能にします。  
   
-## セキュリティとコンプライアンス{#security-compliance}
+## セキュリティとコンプライアンス {#security-compliance}
 
 機能|詳細  
 ---|---  
@@ -200,7 +200,7 @@ TCP（レプリケーション、Webコンソール、分散コマンド）に�
 ウイルス対策ソフトとの互換性|文書化された除外パス  
 主権|欧州企業である Eviden (Atos Group) は、 SafeKitにより、 WindowsおよびLinux向けの独自の主権型事業継続および災害復旧製品を提供します。これにより、NIS2 事業継続および災害復旧要件に準拠し、米国ベンダーへの依存をなくし、データとフェイルオーバーインフラストラクチャを完全にオンプレミスに維持します。  
   
-## ライセンスモデル{#licensing-model}
+## ライセンスモデル {#licensing-model}
 
 アスペクト|の詳細  
 ---|---  
@@ -233,7 +233,7 @@ AIサポートアシスタント | [SafeKit AIチャット](</ja/resources/safek
 オンライン研修＆認定|無料、自分のペースで学習可能、動画12本（約3時間40分）、修了証発行  
 ドキュメント|完全なユーザーガイド、リリースノート、ナレッジベース、クイックスタートガイド  
   
-## 比較 vs. 代替案{#comparison-vs-alternatives}
+## 比較 vs. 代替案 {#comparison-vs-alternatives}
 
 基準| SafeKit | Microsoftフェイルオーバー クラスタ (WSFC) | VMware HA |オープンソース*  
 ---|---|---|---|---  
@@ -248,7 +248,7 @@ OEM 組み込み可能|はい|いいえ|いいえ|いいえ
   
 _* の上 Linux再現するには、Corosync、Pacemaker、DRBD、Keepalived、STONITH、HAProxy の 6 つの独立したオープンソース プロジェクトが必要となる。 SafeKitの機能セット Linux のみ。 SafeKit 単一製品で同じ機能を提供し、 Windows そして Linux._
 
-## クイックリファレンスリンク{#quick-reference-links}
+## クイックリファレンスリンク {#quick-reference-links}
 
 リソース| URL  
 ---|---  

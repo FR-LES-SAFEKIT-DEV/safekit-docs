@@ -8,7 +8,7 @@ topics: "SafeKit / Milestone XProtect 솔루션의 이전 단계별 구성"
 
 # 이전 SafeKit Milestone 구성 {#old-safekit-milestone-configuration}
 
-## SafeKit / Milestone XProtect 솔루션 {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution} 의 이전 단계별 구성
+## SafeKit / Milestone XProtect 솔루션 의 이전 단계별 구성 {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
 
 
 ![ 경고 ](/wp-content/uploads/2022/07/warning-small.png)
@@ -16,7 +16,7 @@ topics: "SafeKit / Milestone XProtect 솔루션의 이전 단계별 구성"
 
 주의하세요. 가상 IP 주소를 구성하려면 몇 가지 특정 단계를 거쳐야 합니다. 그렇지 않으면 페일오버가 작동하지 않습니다.
 
-### 1. SafeKit 콘솔 {#1-launch-the-safekit-console} 를 실행합니다.
+### 1. SafeKit 콘솔 를 실행합니다. {#1-launch-the-safekit-console}
 
   * 클러스터 노드 중 하나의 브라우저에서 `http://localhost:9010` 에 연결하여 웹 콘솔을 실행합니다.
   * 사용자 이름에는 `admin` 입력하고, 비밀번호는 설치 중에 설정한 것으로 입력하십시오.
@@ -40,7 +40,7 @@ SafeKit 의 설정은 단일 브라우저를 통해 두 노드 모두에서 수�
 ![ 클러스터를 구성하려면 SafeKit 웹 콘솔을 시작하십시오 ](/wp-content/uploads/2023/01/appli-1.png)
 
 
-### 2. 노드 주소 {#2-configure-node-addresses} 를 구성합니다.
+### 2. 노드 주소 를 구성합니다. {#2-configure-node-addresses}
 
   * 노드의 IP 주소를 입력하십시오.
   * 그런 다음 `Apply` 클릭하여 설정을 저장하십시오.
@@ -61,7 +61,7 @@ SafeKit 의 설정은 단일 브라우저를 통해 두 노드 모두에서 수�
 ![ 클러스터의 노드를 입력하십시오 ](/wp-content/uploads/2023/01/appli-3.png)
 
 
-### 3. 모듈 {#3-choose-the-module} 를 선택하세요.
+### 3. 모듈 를 선택하세요. {#3-choose-the-module}
 
   * 구성 탭에서 .safe 모듈을 클릭합니다.
 
@@ -75,7 +75,7 @@ SafeKit 의 설정은 단일 브라우저를 통해 두 노드 모두에서 수�
 ![ 모듈을 선택하세요. ](/wp-content/uploads/2023/01/appli-4.png)
 
 
-### 4. 모듈 {#4-configure-the-module} 를 구성합니다.
+### 4. 모듈 를 구성합니다. {#4-configure-the-module}
 
   * 부팅 시 지연 없이 모듈이 자동으로 시작되도록 선택하십시오.
   * 일반적으로 복제가 이루어지는 단일 하트비트 네트워크가 있습니다. 하지만 필요한 경우 사설 네트워크를 정의할 수도 있습니다.
@@ -125,7 +125,7 @@ SQL이 관리 서버에 있는 경우:
 ![ 모듈 구성 성공 여부 확인 ](/wp-content/uploads/2023/01/appli-9-2.png)
 
 
-### 6. 아무것도 시작하지 말고 닫기 버튼 {#6-do-not-start-anything-and-click-on-the-close-button} )을 클릭하십시오.
+### 6. 아무것도 시작하지 말고 닫기 버튼 )을 클릭하십시오. {#6-do-not-start-anything-and-click-on-the-close-button}
 
 
 ![ 경고 ](/wp-content/uploads/2022/07/warning-small.png)
@@ -137,7 +137,7 @@ SQL이 관리 서버에 있는 경우:
 ![ 최신 데이터가 있는 노드를 선택하세요 ](/wp-content/uploads/2023/01/appli-10-1.png)
 
 
-### 7. 노드 1의 데스크톱으로 이동하여 내부 파일 Milestone {#milestone-files} 에 가상 IP 주소를 설정합니다.
+### 7. 노드 1의 데스크톱으로 이동하여 내부 파일 Milestone 에 가상 IP 주소를 설정합니다. {#milestone-files}
 
 
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
@@ -178,7 +178,7 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
 
 
-### 8. 콘솔에서 최신 데이터가 있는 노드인 노드 1 {#8-start-node-1-as-primary-in-the-console-the-node-with-up-to-date-data} 을 기본 노드로 시작합니다.
+### 8. 콘솔에서 최신 데이터가 있는 노드인 노드 1 을 기본 노드로 시작합니다. {#8-start-node-1-as-primary-in-the-console-the-node-with-up-to-date-data}
 
 7단계에서 노드 1에 최신 복제 디렉터리가 있다고 가정합니다.
 
@@ -226,7 +226,7 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
 ![ 첫 번째 노드는 기본 노드로 시작하여 ALONE ](/wp-content/uploads/2022/07/appli-11-bis-bis.png) 가 됩니다.
 
 
-### 10. 노드 1의 데스크톱에서 Milestone 관리 서버와 {#10-in-the-desktop-of-node-1-stop-then-register-on-the-vitual-ip-address-and-restart-the-milestone-management-server} 관리 서버를 중지한 다음 가상 IP 주소에 등록하고 재시작합니다.
+### 10. 노드 1의 데스크톱에서 Milestone 관리 서버와 관리 서버를 중지한 다음 가상 IP 주소에 등록하고 재시작합니다. {#10-in-the-desktop-of-node-1-stop-then-register-on-the-vitual-ip-address-and-restart-the-milestone-management-server}
 
 이미지에 표시된 메뉴에 따라 노드 1에서 다음 항목들을 실행하십시오.
 
@@ -257,7 +257,7 @@ Milestone 2022 R3 이전 버전에서는 등록 과정에서 내부 Milestone �
 ![ 관리 서버를 Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png) 에 등록합니다.
 
 
-### 11. Milestone 관리 클라이언트가 설치된 노드 1의 데스크톱에서 서비스 및 네트워크의 URL에 가상 IP 주소 {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network} 설정합니다.
+### 11. Milestone 관리 클라이언트가 설치된 노드 1의 데스크톱에서 서비스 및 네트워크의 URL에 가상 IP 주소 설정합니다. {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network}
 
 
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
@@ -279,7 +279,7 @@ Milestone 2022 R3 버전부터는 이 단계가 더 이상 필요하지 않으�
 ![ URL 및 Milestone 관리 클라이언트 ](/wp-content/uploads/2022/07/milestone-url-vip.png) 에 가상 IP 주소를 설정합니다.
 
 
-### 12. Milestone 관리 클라이언트가 설치된 노드 1의 데스크톱에서 관리자 역할을 설정하여 {#role} 장애 조치가 올바르게 수행되도록 합니다.
+### 12. Milestone 관리 클라이언트가 설치된 노드 1의 데스크톱에서 관리자 역할을 설정하여 장애 조치가 올바르게 수행되도록 합니다. {#role}
 
 
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
@@ -308,7 +308,7 @@ BUILTIN\Administrators 그룹을 설정하면 로컬 관리자 Windows 를 사�
 ![ 관리 클라이언트 Milestone 에서 역할 설정 ](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
 
-### 13. 노드 2의 데스크톱으로 이동하여 내부 파일 Milestone {#milestone-files-2} 에서 가상 IP 주소를 설정합니다.
+### 13. 노드 2의 데스크톱으로 이동하여 내부 파일 Milestone 에서 가상 IP 주소를 설정합니다. {#milestone-files-2}
 
 
 ![ 참고 ](/wp-content/uploads/2022/07/note.png)
@@ -339,7 +339,7 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
     
         "권한": " http://** < virtual-ip> ** /IDP
 
-### 14. 노드 2의 데스크톱에서 가상 IP 주소 {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address} 에 관리 서버를 등록합니다.
+### 14. 노드 2의 데스크톱에서 가상 IP 주소 에 관리 서버를 등록합니다. {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
   * 노드 2의 작업 표시줄에서 ** 서버 구성기 ** 선택하고 가상 IP 주소에 등록합니다(이미지 참조).
   * 그런 다음 ** 관리 서버 서비스 ** 중지합니다.
@@ -368,7 +368,7 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
 ![ 관리 서버를 Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png) 에 등록합니다.
 
 
-### 15. 노드 2 {#15-start-node-2} 시작
+### 15. 노드 2 시작 {#15-start-node-2}
 
   * 컨텍스트 메뉴를 사용하여 노드 2를 시작합니다.
   * 두 번째 (녹색) 상태가 될 때까지 기다리세요.
@@ -404,7 +404,7 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
 ![ 두 번째 노드는 SECOND ](/wp-content/uploads/2022/07/appli-12.png) 로 시작합니다.
 
 
-### 17. 녹화 서버에 가상 IP 주소 {#17-configure-the-virtual-ip-address-in-recording-servers} 구성하십시오.
+### 17. 녹화 서버에 가상 IP 주소 구성하십시오. {#17-configure-the-virtual-ip-address-in-recording-servers}
 
   * 녹화 서버를 설치할 때 설치 URL에 가상 IP 주소를 지정하십시오.
   * 또는 녹화 서버 측에서 다음 필드에 가상 IP 주소를 설정하십시오. 
@@ -418,13 +418,13 @@ Milestone 2022 R3 버전부터는 이 단계가 필요 없으며 다음 단계�
   * Milestone 관리 클라이언트와 Milestone 스마트 클라이언트를 가상 IP 주소에 연결합니다.
 
 
-### 18. 노드 전환 {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch} 후 관리 클라이언트와 스마트 클라이언트가 제대로 작동하지 않습니다.
+### 18. 노드 전환 후 관리 클라이언트와 스마트 클라이언트가 제대로 작동하지 않습니다. {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch}
 
 클러스터링된 XProtect ® 관리 서버 구성에서 노드 전환 후 스마트 클라이언트와 관리 클라이언트에서 여러 가지 문제가 발생합니다. 이 문제는 노드 전환 전후에 서로 다른 노드에서 토큰이 생성되는 것과 토큰 유효성 검사에 필요한 특정 인증서에 접근하는 데 문제가 있는 것과 관련이 있습니다. 해결 방법이 제공됩니다(2022 R3~2023 R2 버전의 경우 Milestone 기술 자료를 참조하십시오).
 
 이 문제는 Milestone 2023 R3 버전에서 해결되었습니다.
 
-### 18. {#18-testing} 테스트
+### 18. 테스트 {#18-testing}
 
   * PRIM 노드의 컨텍스트 메뉴를 아래로 스크롤하여 '중지'를 클릭하면 노드가 중지됩니다. ** 첫 번째 테스트에서는 스왑 기능을 사용하지 마십시오. ** (이유는 아래 참조).
   * 두 번째 노드에서 페일오버가 제대로 수행되어 해당 노드가 단독 상태(녹색)가 되는지 확인하십시오.

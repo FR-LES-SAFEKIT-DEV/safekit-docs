@@ -7,11 +7,11 @@ lang: "ja"
 topics: "フェイルオーバークラスタの場合、SANとNASの共有ストレージのどちらが最もシンプルなソリューションですか？、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# フェイルオーバークラスタリングにおけるSANとNASの共有ストレージ：詳細な比較{#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# フェイルオーバークラスタリングにおけるSANとNASの共有ストレージ：詳細な比較 {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
-## フェイルオーバークラスタ{#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster} 、SANとNASの共有ストレージのどちらが最もシンプルな解決策でしょうか？
+## フェイルオーバークラスタ、SANとNASの共有ストレージのどちらが最もシンプルな解決策でしょうか？ {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
-###  フェールオーバークラスタ用のSAN共有ストレージまたはNAS iSCSI共有ストレージ{#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
+###  フェールオーバークラスタ用のSAN共有ストレージまたはNAS iSCSI共有ストレージ {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
 ![フェールオーバークラスタ用のSAN共有ストレージまたはNAS iSCSI共有ストレージ](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
@@ -25,7 +25,7 @@ topics: "フェイルオーバークラスタの場合、SANとNASの共有ス�
   * 二重アクセスを回避するためには、クォーラムディスクを設定する必要があります。
 
 
-###  フェイルオーバークラスタ用のNAS SMB共有ストレージまたはNAS NFS共有ストレージ{#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
+###  フェイルオーバークラスタ用のNAS SMB共有ストレージまたはNAS NFS共有ストレージ {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
 ![フェイルオーバークラスタ用のNAS SMB共有ストレージまたはNAS NFS共有ストレージ](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
@@ -38,7 +38,7 @@ topics: "フェイルオーバークラスタの場合、SANとNASの共有ス�
   * しかし、ノードが分離されている場合、同じアプリケーションが二重に実行され、共有ストレージ内のデータが破損する可能性は依然として存在する。
 
 
-###  Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}によるリアルタイムのレプリケーションとフェイルオーバー
+###  Eviden SafeKitによるリアルタイムのレプリケーションとフェイルオーバー {#real-time-replication-and-failover-with-eviden-safekit}
 
 
 ![ ](/wp-content/uploads/2023/03/no-shared-storage.png "w:200") SafeKit使用したリアルタイムレプリケーションとフェイルオーバー

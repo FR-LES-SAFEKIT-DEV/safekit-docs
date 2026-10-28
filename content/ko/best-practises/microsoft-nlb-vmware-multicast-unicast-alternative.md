@@ -17,7 +17,7 @@ VMware 네트워크 로드 밸런싱(NLB) 멀티캐스트 모드 구성에 대�
 
 Microsoft NLB 유니캐스트 모드를 사용하려면 ESXi/ESX 호스트에서 가상 머신이 켜져 있을 때 RARP 패킷을 보내지 않도록 구성해야 합니다. 따라서 [ Microsoft NLB는 VMware ](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>) 에서 유니캐스트 모드로 제대로 작동하지 않습니다.
 
-## SafeKit {#alternative-with-safekit} 사용한 대안
+## SafeKit 사용한 대안 {#alternative-with-safekit}
 
 [ SafeKit ](</ko/best-practises/how-a-virtual-ip-address-works/>) 와 같은 가상 IP 주소 구성은 특별한 네트워크 설정이 필요하지 않으며, 네트워크 로드 밸런싱은 어떤 환경에서도 실행될 수 있습니다. 이는 솔루션을 알 수 없는 인프라(알 수 없는 스위치나 라우터, 물리적 서버 또는 가상 서버)에 배포해야 할 때 중요한 특징입니다.
 

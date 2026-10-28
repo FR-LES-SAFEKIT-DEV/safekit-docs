@@ -7,19 +7,19 @@ lang: "ja"
 topics: "Microsoft 、 SQL Server 、 SafeKitの高可用性クイックインストールガイド、高可用性の制限事項、 SafeKit / Microsoft SQL Serverソリューションの概要、 Windows ( sqlserver.safe ) へのSafeKit / Microsoft 、 SQL Serverソリューションのインストール、 SafeKit / Microsoft 、 SQL Serverソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# Microsoft SQL Server SafeKitによる高可用性：フェイルオーバーのためにsqlserver.safeモジュールをインストールしてください{#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
+# Microsoft SQL Server SafeKitによる高可用性：フェイルオーバーのためにsqlserver.safeモジュールをインストールしてください {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## SafeKit / Microsoft SQL Serverソリューションの概要{#overview-of-the-safekit--microsoft-sql-server-solution}
+## SafeKit / Microsoft SQL Serverソリューションの概要 {#overview-of-the-safekit--microsoft-sql-server-solution}
 
 ソリューションの詳細な概要については、 ** 💡 [最もシンプルなMicrosoft SQL Server高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/sql-server-high-availability-synchronous-replication-failover/>) **を参照してください。
 
-## SafeKit / Microsoft SQL ServerソリューションをWindows ( sqlserver.safe ) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}にインストールします。
+## SafeKit / Microsoft SQL ServerソリューションをWindows ( sqlserver.safe )にインストールします。 {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * Microsoft SQL Server 2つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
   * SafeKit 、SQL Expressを含むすべてのバージョンのSQLに対応しています。
@@ -36,13 +36,13 @@ topics: "Microsoft 、 SQL Server 、 SafeKitの高可用性クイックイン�
 {{%  insert-safekit-82-installation-module-windows-ja app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## SafeKit / Microsoft SQL Serverソリューション{#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}の段階的な構成
+## SafeKit / Microsoft SQL Serverソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

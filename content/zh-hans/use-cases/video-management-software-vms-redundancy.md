@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "什么是视频管理软件 (VMS)？为什么 VMS 软件至关重要？VMS 领域的主要厂商有哪些？ SafeKit提供两种 VMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 SafeKit高可用性导航中心"
 ---
 
-# 视频管理软件 (VMS) 的高可用性和冗余{#high-availability-and-redundancy-for-video-management-software-vms}
+# 视频管理软件 (VMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-video-management-software-vms}
 
-##  {#what-is-video-management-software-vms}是视频管理软件（VMS）？
+##  是视频管理软件（VMS）？ {#what-is-video-management-software-vms}
 
 视频管理软件（VMS）收集和记录摄像机视频，并为操作员提供查看实时和录制视频的界面。
 
@@ -23,7 +23,7 @@ topics: "什么是视频管理软件 (VMS)？为什么 VMS 软件至关重要？
 
 因此，该系统必须始终可供安保人员使用，以便他们对任何轻微事件都能立即做出反应。
 
-##  VMS {#key-players-list-in-vms}中的关键参与者列表
+##  VMS中的关键参与者列表 {#key-players-list-in-vms}
 
 VMS的关键参与者包括：
 

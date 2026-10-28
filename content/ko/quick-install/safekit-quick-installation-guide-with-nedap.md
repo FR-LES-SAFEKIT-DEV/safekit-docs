@@ -7,7 +7,7 @@ lang: "ko"
 topics: "Nedap 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Nedap 솔루션 개요, Windows ( nedap.safe )에 SafeKit / Nedap 솔루션 설치, SafeKit / Nedap 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# Nedap 고가용성 SafeKit 포함): 장애 조치용 nedap.safe 모듈 설치 {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover} 포함)
+# Nedap 고가용성 SafeKit 포함): 장애 조치용 nedap.safe 모듈 설치 포함) {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Nedap" mod="nedap"  %}}
@@ -19,7 +19,7 @@ topics: "Nedap 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 Nedap 고가용성: 2노드 동기 복제 및 장애 조치 ](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** .
 
-## SafeKit / Nedap 솔루션의 Windows ( nedap.safe ) 및 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe} 설치
+## SafeKit / Nedap 솔루션의 Windows ( nedap.safe ) 및 설치 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -42,13 +42,13 @@ topics: "Nedap 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
 {{%  insert-safekit-82-installation-module-windows-ko app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit / Nedap 솔루션 {#step-by-step-configuration-of-the-safekit--nedap-solution} 의 단계별 구성
+## SafeKit / Nedap 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--nedap-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

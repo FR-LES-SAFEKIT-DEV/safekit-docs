@@ -7,7 +7,7 @@ lang: "ja"
 topics: "クラスタ内でネットワークが分離した場合のさまざまなシナリオは何ですか？、クラスタ内で停電が発生した場合のさまざまなシナリオは何ですか？、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# HAクラスタにおける停電とネットワーク分離への対処{#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# HAクラスタにおける停電とネットワーク分離への対処 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
 
 
 {{%  insert-safekit-network-isolation-ja  %}}
@@ -15,7 +15,7 @@ topics: "クラスタ内でネットワークが分離した場合のさまざ�
 
 ## クラスター内で停電が発生した場合、どのようなシナリオが考えられますか？ {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
 
-### プライマリノードの電源障害{#primary-node-power-outage}
+### プライマリノードの電源障害 {#primary-node-power-outage}
 
 停電によりプライマリノードのみが停止した場合：
 
@@ -24,7 +24,7 @@ topics: "クラスタ内でネットワークが分離した場合のさまざ�
   * 必要に応じて、管理者はプライマリとセカンダリの役割を入れ替えることができます。
 
 
-### 二次ノードの電源障害{#secondary-node-power-outage}
+### 二次ノードの電源障害 {#secondary-node-power-outage}
 
 停電によってセカンダリノードのみが停止する場合：
 

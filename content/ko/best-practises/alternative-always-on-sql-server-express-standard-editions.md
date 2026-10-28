@@ -11,7 +11,7 @@ topics: "Express 및 Standard 에디션용 Always On SQL Server 대체 방법, S
 
 ## 익스프레스 및 스탠다드 에디션용 Always On SQL Server 대체품 {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 
-### Microsoft SQL Server {#the-solution-for-microsoft-sql-server} 에 대한 해결책
+### Microsoft SQL Server 에 대한 해결책 {#the-solution-for-microsoft-sql-server}
 
 SafeKit 동기식 실시간 데이터 복제 및 자동 장애 조치를 통해 두 개의 이중화 노드 간에 Microsoft SQL Server 에 고가용성을 제공합니다.
 
@@ -52,7 +52,7 @@ SafeKit 다음을 해결합니다:
 {{%  insert-safekit-mirror-ko app="Microsoft SQL Server"  %}}
  
 
-## 비디오 가이드: SafeKit mirror {#videoguide-safekit-mirror-cluster} SQL Server HA 클러스터 구성
+## 비디오 가이드: SafeKit mirror SQL Server HA 클러스터 구성 {#videoguide-safekit-mirror-cluster}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

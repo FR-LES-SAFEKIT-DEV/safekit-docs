@@ -44,7 +44,7 @@ Sie erhalten eine Liste von Pfaden im Format **/var/lib/docker/volumes/ <volume_
     * Fügen Sie jeweils in die Skripte start_prim und stop_prim ein: **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** und **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
-### Beispiel 2 mit einer Docker -Anwendung, die eine Reihe von Containern {#example-2-with-a-docker-application-starting-a-set-of-containers} startet
+### Beispiel 2 mit einer Docker -Anwendung, die eine Reihe von Containern startet {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
 Wir nehmen hier an, dass eine Docker Anwendung ** myappli ** eine Reihe von Containern startet.
 

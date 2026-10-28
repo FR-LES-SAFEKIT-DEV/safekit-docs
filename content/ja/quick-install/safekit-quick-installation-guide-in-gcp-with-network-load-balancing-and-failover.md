@@ -7,19 +7,19 @@ lang: "ja"
 topics: "GCPの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / GCPソリューションの概要、 SafeKitおよびGCP ( farm.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / GCPソリューションのステップバイステップ構成、 SafeKit `farm`ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# GCPネットワーク負荷分散とフェイルオーバー: SafeKit farm.safeモジュール{#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}をインストールします
+# GCPネットワーク負荷分散とフェイルオーバー: SafeKit farm.safeモジュールをインストールします {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ja app="GCP" mod="farm"  %}}
  
 
-## SafeKit / GCPソリューションの概要{#overview-of-the-safekit--gcp-solution}
+## SafeKit / GCPソリューションの概要 {#overview-of-the-safekit--gcp-solution}
 
 ソリューションはここに記載されています: ** 💡 [ SafeKit : Google GCPロードバランシングとアプリケーションの高可用性`Farm`クラスター](</solutions/gcp-load-balancing-cluster-failover/>) ** 。
 
-## SafeKit / GCPソリューションをWindowsおよびLinux ( farm.safe ) {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}にインストールします。
+## SafeKit / GCPソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 
-### Google GCPロードバランサー{#configuration-of-the-google-gcp-load-balancer}の設定
+### Google GCPロードバランサーの設定 {#configuration-of-the-google-gcp-load-balancer}
 
 ロードバランサーには仮想IPアドレスを設定する必要があります。  
 また、ロードバランサーは、ノードに対して定期的にヘルスチェックパケットを送信するように設定する必要があります。  
@@ -60,13 +60,13 @@ Google GCPロードバランサーを以下のように設定する必要があ�
 
 注：設定する汎用モジュール**farm.safe**は、パッケージ内に同梱されています。
 
-## SafeKit / GCPソリューション{#step-by-step-configuration-of-the-safekit--gcp-solution}の段階的な構成
+## SafeKit / GCPソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--gcp-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ja app="" mod="farm"  %}}
  
 
-## SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}のソリューションのデモンストレーション
+## SafeKit `farm`のソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

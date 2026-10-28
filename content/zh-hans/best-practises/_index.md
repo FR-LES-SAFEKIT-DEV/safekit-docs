@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "SafeKit集群最佳实践：高可用性架构、复制和冗余，🔍 SafeKit高可用性导航中心"
 ---
 
-# 高可用性最佳实践{#high-availability-best-practices}
+# 高可用性最佳实践 {#high-availability-best-practices}
 
-## SafeKit集群最佳实践：高可用性架构、复制和冗余{#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
+## SafeKit集群最佳实践：高可用性架构、复制和冗余 {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
 **高可用性集群、复制和冗余的最佳实践**
 

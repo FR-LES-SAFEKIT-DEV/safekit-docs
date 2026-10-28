@@ -7,19 +7,19 @@ lang: "ja"
 topics: "GCPの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / GCP mirrorソリューションの概要、 SafeKitおよびLinux ( mirror.safe ) へのWindows / GCP mirrorソリューションのインストール、 SafeKit / GCP mirrorソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモンストレーション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# GCP高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください{#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# GCP高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="GCP" mod="mirror"  %}}
  
 
-## SafeKit / GCP mirrorソリューションの概要{#overview-of-the-safekit--gcp-mirror-solution}
+## SafeKit / GCP mirrorソリューションの概要 {#overview-of-the-safekit--gcp-mirror-solution}
 
 ソリューションはここに記載されています: ** 💡 [ Google GCP高可用性: SafeKit同期レプリケーションとフェイルオーバー](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
-## SafeKit / GCP mirrorソリューションをWindowsおよびLinux ( mirror.safe ) {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}にインストールします。
+## SafeKit / GCP mirrorソリューションをWindowsおよびLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Google GCPロードバランサー{#configuration-of-the-google-gcp-load-balancer}の設定
+### Google GCPロードバランサーの設定 {#configuration-of-the-google-gcp-load-balancer}
 
 仮想IPアドレスを実装する場合は、ロードバランサーを設定する必要があります。  
 また、ロードバランサーは、ノードに対して定期的にヘルスチェックパケットを送信するように設定する必要があります。  
@@ -61,13 +61,13 @@ Google GCPロードバランサーを以下のように設定する必要があ�
 
 注：設定する汎用モジュール**mirror.safe**は、パッケージ内に同梱されています。
 
-## SafeKit / GCP mirrorソリューション{#step-by-step-configuration-of-the-safekit--gcp-mirror-solution}の段階的な構成
+## SafeKit / GCP mirrorソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--gcp-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

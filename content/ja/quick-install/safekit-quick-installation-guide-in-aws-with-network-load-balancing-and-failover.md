@@ -7,19 +7,19 @@ lang: "ja"
 topics: "AWSの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / AWSソリューションの概要、 SafeKitおよびAWS ( farm.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / AWSソリューションのステップバイステップ構成、 SafeKit `farm`ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# AWSネットワーク負荷分散とフェイルオーバー: SafeKit farm.safeモジュール{#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}をインストールします
+# AWSネットワーク負荷分散とフェイルオーバー: SafeKit farm.safeモジュールをインストールします {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ja app="AWS" mod="farm"  %}}
  
 
-## SafeKit / AWSソリューションの概要{#overview-of-the-safekit--aws-solution}
+## SafeKit / AWSソリューションの概要 {#overview-of-the-safekit--aws-solution}
 
 ソリューションはここに記載されています: ** 💡 [ SafeKit : Amazon AWSロードバランシングとアプリケーションの高可用性`Farm`クラスター](</solutions/aws-load-balancing-cluster-failover/>) ** 。
 
-## SafeKit / AWSソリューションをWindowsおよびLinux ( farm.safe ) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}にインストールします。
+## SafeKit / AWSソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
-### Amazon AWSロードバランサー{#configuration-of-the-amazon-aws-load-balancer}の設定
+### Amazon AWSロードバランサーの設定 {#configuration-of-the-amazon-aws-load-balancer}
 
 ロードバランサーには仮想IPアドレスを設定する必要があります。  
 また、ロードバランサーは、ノードに対して定期的にヘルスチェックパケットを送信するように設定する必要があります。  
@@ -41,7 +41,7 @@ Amazon AWSロードバランサーを以下のように設定する必要があ�
 
 ⚠️ 下記の手順設定のステップ4では、仮想IPアドレスとロードバランシングルールを設定しないでください。仮想IPアドレスとロードバランシングルールは、Amazon AWSロードバランサーに既に設定されています。ステップ4で仮想IPアドレスとロードバランシングルールを設定するのは、オンプレミス環境での設定にのみ有効です。
 
-### Amazon AWSネットワークセキュリティ{#configuration-of-the-amazon-aws-network-security}の設定
+### Amazon AWSネットワークセキュリティの設定 {#configuration-of-the-amazon-aws-network-security}
 
 ネットワークセキュリティは、以下のプロトコルとポートでの通信を有効にするように構成する必要があります。
 
@@ -60,13 +60,13 @@ Amazon AWSロードバランサーを以下のように設定する必要があ�
 
 注：設定する汎用モジュール**farm.safe**は、パッケージ内に同梱されています。
 
-## SafeKit / AWSソリューション{#step-by-step-configuration-of-the-safekit--aws-solution}の段階的な構成
+## SafeKit / AWSソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--aws-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ja app="" mod="farm"  %}}
  
 
-## SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}のソリューションのデモンストレーション
+## SafeKit `farm`のソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

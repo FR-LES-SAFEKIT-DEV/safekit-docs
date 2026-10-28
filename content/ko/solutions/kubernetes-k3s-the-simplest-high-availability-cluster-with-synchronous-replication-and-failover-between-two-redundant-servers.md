@@ -42,15 +42,15 @@ K3s용 표준 오픈 소스 스택(MetalLB + Longhorn)은 대규모 데이터 �
 
 ## SafeKit 소프트웨어는 Kubernetes K3s 고가용성 클러스터를 어떻게 간단하게 구현합니까? {#safekit-mirror-k3s-cluster}
 
-### 2노드 Kubernetes K3s 클러스터 {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster} )에서 고가용성을 구현하려면 어떻게 해야 합니까?
+### 2노드 Kubernetes K3s 클러스터 )에서 고가용성을 구현하려면 어떻게 해야 합니까? {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
 
 **SafeKit k3s.safe mirror module** 를 사용하면 2노드 Kubernetes K3s 클러스터에 고가용성(HA)을 구현할 수 있습니다. 이 솔루션을 사용하면 외부 NFS 스토리지, 전용 외부 구성 데이터베이스 또는 Kubernetes 관련 전문 지식 없이도 이중화된 환경을 배포할 수 있습니다.
 
-### 엣지 컴퓨팅 및 IoT 컴퓨팅에 K3s를 사용하는 이유는 무엇 {#why-use-k3s-for-edge-and-iot-computing} ?
+### 엣지 컴퓨팅 및 IoT 컴퓨팅에 K3s를 사용하는 이유는 무엇 ? {#why-use-k3s-for-edge-and-iot-computing}
 
 [ K3s ](<https://k3s.io/>) 는 리소스가 제한된 환경에 맞게 설계된 경량의 인증된 배포판이기 때문에 ** IoT 및 엣지 컴퓨팅 ** 에 권장되는 Kubernetes 엔진입니다. 표준 Kubernetes 의 운영 오버헤드를 간소화하면서도 완벽한 호환성을 유지합니다.
 
-### k3s.safe mirror {#what-are-the-key-features-of-the-k3ssafe-mirror-module} 의 주요 특징은 무엇입니까?
+### k3s.safe mirror 의 주요 특징은 무엇입니까? {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
 k3s.safe 모듈은 다음을 구현하여 K3에 대한 포괄적인 고가용성(HA) 스택을 제공합니다.
 
@@ -89,7 +89,7 @@ NFS 스토리지 및 PV | • 가상 IP 및 NFS 포트 호스트 <br> • 활성
 
 ## SafeKit mirror 클러스터는 Kubernetes K3S와 어떻게 작동합니까? {#safekit-mirror-cluster}
 
-### 1단계: Mirror 클러스터 {#step-1-byte-level-file-replication-in-a-mirror-cluster} 에서의 바이트 수준 파일 복제
+### 1단계: Mirror 클러스터 에서의 바이트 수준 파일 복제 {#step-1-byte-level-file-replication-in-a-mirror-cluster}
 
 이 단계는 ** 서버 1(PRIM) ** 와 ** 서버 2(SECOND) ** 간의 고가용성 아키텍처를 보여줍니다. 두 서버 모두 [ 아키텍처 표 ](#safekit-k3s-architecture-table) 에 정의된 대로 K3s 마스터 및 에이전트 구성 요소를 실행합니다.
 
@@ -145,7 +145,7 @@ SafeKit 서버가 중지된 방식에 따라 복구 시간을 최적화합니다
 
 관리자가 MariaDB 및 NFS 서비스를 서버 1에서 실행하도록 선호하는 경우(원래의 PRIM 역할 복원), 웹 콘솔을 통해 편리한 시간에 수동으로 또는 구성 설정을 통해 자동화하여 ** ** 전환을 실행할 수 있습니다. 
 
-### SafeKit Mirror {#safekit-mirror-cluster-configure} 를 구성하는 방법은 무엇입니까?
+### SafeKit Mirror 를 구성하는 방법은 무엇입니까? {#safekit-mirror-cluster-configure}
 
 
 ![ SafeKit 웹 콘솔: mirror 클러스터의 하트비트 네트워크, 가상 IP 설정 및 실시간 디렉터리 복제를 보여주는 고가용성 구성 대시보드입니다. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
@@ -162,7 +162,7 @@ SafeKit 서버가 중지된 방식에 따라 복구 시간을 최적화합니다
 
 SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네트워크 없이도 네트워크 격리 문제를 해결할 수 있는 전용 스플릿 브레인 검사기가 포함되어 있습니다. 클러스터 ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) 의 하트비트, 페일오버 및 쿼럼에 대한 자세한 내용은 [ 참조하십시오.
 
-### SafeKit mirror {#safekit-mirror-cluster-monitoring} 를 모니터링하는 방법은 무엇입니까?
+### SafeKit mirror 를 모니터링하는 방법은 무엇입니까? {#safekit-mirror-cluster-monitoring}
 
 
 ![ SafeKit 웹 콘솔: 활성 데이터 복제가 진행 중인 2노드 클러스터 mirror 의 PRIM 및 SECOND 상태를 실시간으로 모니터링합니다. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
@@ -199,7 +199,7 @@ SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네�
   
 요약 ** , 표준 DIY 스택 SafeKit MetalLB + Longhorn) ** Kubernetes 에게 모듈성을 제공하지만, 스토리지 및 네트워킹 도구가 관리하도록 설계된 노드 장애에 ** 순환 종속성을 초래합니다. 이러한 문제를 해결하기 ** 독립적인 인프라 ** 으로 작동하는 더욱 강력하고 하드웨어에 구애받지 ** 2노드 고가용성(HA) 솔루션을 제공합니다. 이 솔루션은 엔진이나 호스트 운영 체제 Kubernetes 멈추더라도 계속 작동합니다. 이를 통해 기존 분산 블록 스토리지 및 네트워킹 오버레이에서 요구되는 과도한 리소스 오버헤드, 필수적인 3노드 쿼럼, 복잡한 구성 없이도 자동 복구 및 데이터 무결성을 보장합니다.
 
-## 비디오 가이드: SafeKit mirror , {#videoguide-safekit-mirror-cluster} HA 클러스터 구성
+## 비디오 가이드: SafeKit mirror , HA 클러스터 구성 {#videoguide-safekit-mirror-cluster}
 
 ### SafeKit 비디오: 애플리케이션 수준 클러스터링 (8:47) {#demo-mirror-ha-cluster}
 

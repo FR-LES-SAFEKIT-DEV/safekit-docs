@@ -7,19 +7,19 @@ lang: "ja"
 topics: "Kubernetesの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Kubernetesソリューションの概要、 Linux ( k3s.safe ) 上でのSafeKit / Kubernetesソリューションのインストールと構成、クラスタでネットワークが分離した場合のさまざまなシナリオとは？、 SafeKit mirrorソリューションのデモンストレーション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKitを使用した K3S 高可用性: {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}フェイルオーバー用にk3s.safeモジュールをインストールします
+# SafeKitを使用した K3S 高可用性:フェイルオーバー用にk3s.safeモジュールをインストールします {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Kubernetes" mod="k3s"  %}}
  
 
-## SafeKit / Kubernetesソリューションの概要{#overview-of-the-safekit--kubernetes-solution}
+## SafeKit / Kubernetesソリューションの概要 {#overview-of-the-safekit--kubernetes-solution}
 
 解決策はここに記載されています: ** 💡 [ Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
-## SafeKit / KubernetesソリューションをLinux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}にインストールおよび構成する
+## SafeKit / KubernetesソリューションをLinux ( k3s.safe )にインストールおよび構成する {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
-### 1. パッケージ{#1-download-packages}をダウンロードします
+### 1. パッケージをダウンロードします {#1-download-packages}
 
   * LinuxからSafeKit 8.2 の無料版をダウンロードしてください (safekitlinux_xx.bin)
   * k3s.safe Linuxモジュールをダウンロードしてください。
@@ -37,7 +37,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
 
 [ドキュメント (pdf) > ](</wp-content/uploads/documents/safekit-k3s-en.pdf>)
 
-### 2. 両方のノードで最初に{#2-first-on-both-nodes}
+### 2. 両方のノードで最初に {#2-first-on-both-nodes}
 
 2台のLinux Ubuntu 24.04ノードで、rootユーザーとして：
 
@@ -58,7 +58,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
   * SafeKitをインストール
 
 
-### 3. 最初のノード{#3-on-the-first-node}で
+### 3. 最初のノードで {#3-on-the-first-node}
 
 最初のノードで実行: `./k3sconfig.sh first`
 
@@ -74,7 +74,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
   * K3Sトークンを表示する（第2ノードインストールフェーズで使用）
 
 
-### 4. 2番目のノード{#4-on-the-second-node}で
+### 4. 2番目のノードで {#4-on-the-second-node}
 
 2番目のノードで実行: `./k3sconfig.sh second <token>`
 
@@ -88,7 +88,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
   * k3sモジュールを起動します
 
 
-### 5. k3s SafeKitモジュールが両方のノード{#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}で実行されていることを確認します。
+### 5. k3s SafeKitモジュールが両方のノードで実行されていることを確認します。 {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}
 
 両方のノードでこのコマンドを確認してください: `/opt/safekit/safekit –H "*" state`
 
@@ -110,7 +110,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
     成功
     
 
-### 6. SafeKit Webコンソールを起動して、クラスタ{#6-start-the-safekit-web-console-to-administer-the-cluster}を管理します。
+### 6. SafeKit Webコンソールを起動して、クラスタを管理します。 {#6-start-the-safekit-web-console-to-administer-the-cluster}
 
   * ブラウザをSafeKitウェブコンソールURL `http://server0-IP:9010`に接続します。
   * 画像のようなページが表示されるはずです。
@@ -120,7 +120,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
 ![ KubernetesクラスターがSafeKit Web コンソール](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)で起動しました
 
 
-### 7. {#7-testing}テスト
+### 7.テスト {#7-testing}
 
   * PRIMノードを停止するには、コンテキストメニューをスクロールダウンして`Stop`をクリックします。
   * 2番目のノードでフェイルオーバーが発生し、そのノードが単独状態（緑色）になることを確認してください。
@@ -153,7 +153,7 @@ topics: "Kubernetesの高可用性クイックインストールガイド、 Saf
 ![ PRIMサーバー上のモジュールを停止します](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 8. WordPress {#8-try-the-cluster-with-a-kubernetes-application-like-wordpress}のようなKubernetesアプリケーションでクラスターを試してください。
+### 8. WordPressのようなKubernetesアプリケーションでクラスターを試してください。 {#8-try-the-cluster-with-a-kubernetes-application-like-wordpress}
 
 画像にはWordPressのインストール例が示されています。これは、Podによって実装されたバックエンドデータベースを備えたWebポータルです。
 
@@ -199,7 +199,7 @@ WordPressは自動的に高可用性を実現します。
   * `helm registry login -u your_user_name docker.io`を実行し、パスワードを入力してください。
 
 
-### 9. {#9-support}をサポートする
+### 9.をサポートする {#9-support}
 
   * サポートを受けるには、 SafeKit `Snapshots` （2つの.zipファイル）を、各ノードごとに1つずつ用意してください。
 
@@ -213,7 +213,7 @@ WordPressは自動的に高可用性を実現します。
 ![サポートのためにスナップショットを撮ってください](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 
-### 10. 必要に応じて、スプリットブレインチェッカー{#10-if-necessary-configure-a-splitbrain-checker}を設定します。
+### 10. 必要に応じて、スプリットブレインチェッカーを設定します。 {#10-if-necessary-configure-a-splitbrain-checker}
 
   * スプリットブレインチェッカーを設定する必要があるかどうかを知るには、以下の[ 「クラスタでネットワークが分離した場合のさまざまなシナリオは何ですか？」 ](#isolation)を参照してください。
   * モジュール設定で、 `Advanced Configuration` （画像参照）をクリックして、 `userconfig.xml`編集します。
@@ -244,7 +244,7 @@ WordPressは自動的に高可用性を実現します。
 {{%  insert-safekit-network-isolation-ja  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

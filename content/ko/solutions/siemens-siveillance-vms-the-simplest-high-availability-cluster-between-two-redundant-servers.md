@@ -7,7 +7,7 @@ lang: "ko"
 topics: "지멘스 감시 VMS 및 SQL을 사용한 SafeKit 빠른 설치 가이드( SiveillanceVMS.safe mirror 모듈), SAN이 없는 SafeKit Mirror 클러스터가 Milestone , XProtect 와 연동되는 방식, 목차, SafeKit 소프트웨어로 SAN이 없는 Milestone XProtect 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit mirror 클러스터가 Milestone , XProtect 와 연동되는 방식, SafeKit 고가용성 제한 사항, 비교: SafeKit Milestone XProtect 용)와 다른 클러스터링 솔루션 비교, 비디오 가이드: 구성 SafeKit HA mirror 클러스터, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# 지멘스 감시 VMS 고가용성: SafeKit {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit} 사용하는 2노드 공유 없음 클러스터
+# 지멘스 감시 VMS 고가용성: SafeKit 사용하는 2노드 공유 없음 클러스터 {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}
 
 ## SafeKit Siemens Siveillance VMS 및 SQL 빠른 설치 가이드( SiveillanceVMS.safe mirror 모듈) {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

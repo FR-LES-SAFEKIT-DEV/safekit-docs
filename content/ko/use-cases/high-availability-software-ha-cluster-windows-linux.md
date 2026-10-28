@@ -7,9 +7,9 @@ lang: "ko"
 topics: "SafeKit 및 🔍 SafeKit 고가용성 내비게이션 허브에 대한 30초 엘리베이터 피치"
 ---
 
-# 고가용성 소프트웨어: Windows 및 Linux 클러스터링 SafeKit 및 {#high-availability-software-windows-and-linux-clustering-with-safekit} 포함)
+# 고가용성 소프트웨어: Windows 및 Linux 클러스터링 SafeKit 및 포함) {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## SafeKit {#30-seconds-elevator-pitch-for-safekit} 에 대한 30초 엘리베이터 피치
+## SafeKit 에 대한 30초 엘리베이터 피치 {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [ SafeKit 비디오: 30초 피치 (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 

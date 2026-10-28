@@ -7,19 +7,19 @@ lang: "ja"
 topics: "Firebirdの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Firebirdソリューションの概要、 SafeKitおよびFirebird ( firebird.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / Firebirdソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# Firebird高可用性とSafeKit : フェイルオーバーのためにfirebird.safeモジュールをインストールしてください{#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
+# Firebird高可用性とSafeKit : フェイルオーバーのためにfirebird.safeモジュールをインストールしてください {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Firebird" mod="firebird"  %}}
  
 
-## SafeKit / Firebirdソリューションの概要{#overview-of-the-safekit--firebird-solution}
+## SafeKit / Firebirdソリューションの概要 {#overview-of-the-safekit--firebird-solution}
 
 解決策はここに記載されています: ** 💡 [最もシンプルなFirebird高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/firebird-high-availability-synchronous-replication-failover/>) ** 。
 
-## SafeKit / FirebirdソリューションをWindowsおよびLinux ( firebird.safe ) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}にインストールします。
+## SafeKit / FirebirdソリューションをWindowsおよびLinux ( firebird.safe )にインストールします。 {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * Firebird 2つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
 
@@ -34,13 +34,13 @@ topics: "Firebirdの高可用性クイックインストールガイド、 SafeK
 {{%  insert-safekit-82-installation-module-linux-ja app="Firebird" mod="firebird"  %}}
  
 
-## SafeKit / Firebirdソリューション{#step-by-step-configuration-of-the-safekit--firebird-solution}の段階的な構成
+## SafeKit / Firebirdソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--firebird-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Firebird" mod="firebird"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

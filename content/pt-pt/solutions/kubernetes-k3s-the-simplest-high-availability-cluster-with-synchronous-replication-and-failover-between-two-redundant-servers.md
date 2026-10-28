@@ -50,7 +50,7 @@ Você pode implementar alta disponibilidade (HA) para um cluster K3s de 2 nós K
 
 [ K3s ](<https://k3s.io/>) é o mecanismo Kubernetes preferido para IoT e computação de borda ** ** por ser uma distribuição leve e certificada, projetada para ambientes com recursos limitados. Ele simplifica a sobrecarga operacional do Kubernetes padrão, mantendo total compatibilidade.
 
-### Quais são as principais características dos módulos k3s.safe mirror {#what-are-the-key-features-of-the-k3ssafe-mirror-module} ?
+### Quais são as principais características dos módulos k3s.safe mirror ? {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
 O módulo k3s.safe fornece uma pilha de alta disponibilidade abrangente para K3s, implementando:
 

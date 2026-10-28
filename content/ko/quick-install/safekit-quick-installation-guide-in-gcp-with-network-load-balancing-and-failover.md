@@ -7,7 +7,7 @@ lang: "ko"
 topics: "GCP 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / GCP 솔루션 개요, SafeKit 및 GCP ( farm.safe )에 Windows / Linux 솔루션 설치, SafeKit / GCP 솔루션 단계별 구성, SafeKit 및 `farm` 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# GCP 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module} 모듈을 설치하십시오.
+# GCP 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe 모듈을 설치하십시오. {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ko app="GCP" mod="farm"  %}}
@@ -17,9 +17,9 @@ topics: "GCP 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 �
 
 해결책은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Google GCP 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</solutions/gcp-load-balancing-cluster-failover/>) ** .
 
-## SafeKit / GCP 솔루션의 Windows 및 Linux ( farm.safe ) 및 {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe} 설치
+## SafeKit / GCP 솔루션의 Windows 및 Linux ( farm.safe ) 및 설치 {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 
-### Google GCP 로드 밸런서 {#configuration-of-the-google-gcp-load-balancer} 의 구성
+### Google GCP 로드 밸런서 의 구성 {#configuration-of-the-google-gcp-load-balancer}
 
 로드 밸런서는 가상 IP 주소로 구성되어야 합니다.  
 또한 로드 밸런서는 노드에 주기적으로 상태 패킷을 전송하도록 구성되어야 합니다.  
@@ -41,7 +41,7 @@ Google GCP 로드 밸런서를 다음과 같이 구성해야 합니다.
 
 ⚠️ 아래 단계별 구성의 4단계에서 가상 IP 주소 및 로드 밸런싱 규칙을 설정하지 마십시오. Google GCP 로드 밸런서에는 이미 가상 IP 주소와 로드 밸런싱 규칙이 설정되어 있습니다. 4단계에서 가상 IP 주소와 로드 밸런싱 규칙을 설정하는 것은 온프레미스 구성에만 유용합니다.
 
-### Google GCP 네트워크 보안 {#configuration-of-the-google-gcp-network-security} 구성
+### Google GCP 네트워크 보안 구성 {#configuration-of-the-google-gcp-network-security}
 
 네트워크 보안은 다음 프로토콜 및 포트에 대한 통신을 허용하도록 구성해야 합니다.
 
@@ -60,13 +60,13 @@ Google GCP 로드 밸런서를 다음과 같이 구성해야 합니다.
 
 참고: 구성할 범용 **farm.safe** 모듈은 패키지 안에 포함되어 있습니다.
 
-## SafeKit / GCP 솔루션 {#step-by-step-configuration-of-the-safekit--gcp-solution} 의 단계별 구성
+## SafeKit / GCP 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--gcp-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ko app="" mod="farm"  %}}
  
 
-## SafeKit `farm` 솔루션 {#demonstration-of-the-safekit-farm-solution} 시연
+## SafeKit `farm` 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ko  %}}

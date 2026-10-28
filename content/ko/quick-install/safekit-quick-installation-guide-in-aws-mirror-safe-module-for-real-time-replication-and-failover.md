@@ -7,19 +7,19 @@ lang: "ko"
 topics: "AWS , SafeKit 고가용성 빠른 설치 가이드, 고가용성 제한 사항, SafeKit / AWS mirror 솔루션 개요, SafeKit 및 Linux ( mirror.safe )에 Windows / AWS 및 mirror 솔루션 설치, SafeKit / AWS mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# AWS 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover} 포함)
+# AWS 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 포함) {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="AWS" mod="mirror"  %}}
  
 
-## SafeKit / AWS {#overview-of-the-safekit--aws-mirror-solution} mirror 솔루션 개요
+## SafeKit / AWS mirror 솔루션 개요 {#overview-of-the-safekit--aws-mirror-solution}
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ Amazon AWS 고가용성: SafeKit 동기 복제 및 장애 조치 ](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** .
 
 ## 설치 SafeKit / AWS mirror 솔루션 Windows 그리고 Linux (mirror.safe) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Amazon AWS 로드 밸런서 {#configuration-of-the-amazon-aws-load-balancer} 의 구성
+### Amazon AWS 로드 밸런서 의 구성 {#configuration-of-the-amazon-aws-load-balancer}
 
 가상 IP 주소를 사용하려면 로드 밸런서를 구성해야 합니다.  
 또한 로드 밸런서는 노드에 주기적으로 상태 패킷을 전송하도록 구성되어야 합니다.  
@@ -61,13 +61,13 @@ Amazon AWS 로드 밸런서를 다음과 같이 구성해야 합니다.
 
 참고: 구성할 범용 **mirror.safe** 모듈은 패키지 안에 포함되어 있습니다.
 
-## SafeKit / AWS mirror 솔루션 {#step-by-step-configuration-of-the-safekit--aws-mirror-solution} 의 단계별 구성
+## SafeKit / AWS mirror 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--aws-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

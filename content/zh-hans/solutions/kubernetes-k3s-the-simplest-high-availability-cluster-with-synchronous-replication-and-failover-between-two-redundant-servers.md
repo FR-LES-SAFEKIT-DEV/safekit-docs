@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "简化 K3s 高可用性：为何选择SafeKit而非 MetalLB 和 Longhorn？，目录， SafeKit软件如何简化实现Kubernetes K3s 高可用性集群？， SafeKit mirror集群如何与Kubernetes K3S 协同工作？， SafeKit高可用性限制，对比： SafeKit与标准 K3s 堆栈（MetalLB 和 Longhorn），视频指南：配置SafeKit和mirror高可用性集群，🔍 SafeKit高可用性导航中心"
 ---
 
-# Kubernetes K3s 高可用性：2 节点同步复制和故障转移{#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
+# Kubernetes K3s 高可用性：2 节点同步复制和故障转移 {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
 
 ## 简化 K3s HA：为什么选择SafeKit而不是 MetalLB 和 Longhorn？ {#safekit-k3s-ha-introduction}
 
@@ -30,7 +30,7 @@ topics: "简化 K3s 高可用性：为何选择SafeKit而非 MetalLB 和 Longhor
 
 
 <a class="btn-quick-install" href="/zh-hans/quick-install/safekit-quick-installation-guide-with-kubernetes/"> ⚡ Kubernetes高可用性集群快速安装指南 > </a>
-## 目录{#toc}
+## 目录 {#toc}
 
   * [软件如何简单实现Kubernetes K3s 高可用性集群](#safekit-mirror-k3s-cluster) SafeKit
   * [集群如何与SafeKit mirror集群以及Kubernetes K3S 协同工作？ ](#safekit-mirror-cluster)
@@ -42,15 +42,15 @@ topics: "简化 K3s 高可用性：为何选择SafeKit而非 MetalLB 和 Longhor
 
 ## SafeKit软件如何简单地实现Kubernetes K3s 高可用性集群？ {#safekit-mirror-k3s-cluster}
 
-### 如何为包含两个节点的 K3s 集群Kubernetes {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}实现高可用性？
+### 如何为包含两个节点的 K3s 集群Kubernetes实现高可用性？ {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
 
 您可以使用**SafeKit k3s.safe mirror module**为 2 节点Kubernetes K3s 集群实现高可用性 (HA)。此解决方案允许您部署冗余环境，而无需外部 NFS 存储、专用外部配置数据库或专业的Kubernetes知识。
 
-### 为什么使用 K3s 进行边缘计算和物{#why-use-k3s-for-edge-and-iot-computing}计算？
+### 为什么使用 K3s 进行边缘计算和物计算？ {#why-use-k3s-for-edge-and-iot-computing}
 
 [ K3s ](<https://k3s.io/>)是Kubernetes首选引擎，适用于**物联网和边缘计算**因为它是一个轻量级的认证发行版，专为资源受限环境而设计。它在保持完全兼容性的同时，简化了标准Kubernetes的运维开销。
 
-### k3s.safe mirror {#what-are-the-key-features-of-the-k3ssafe-mirror-module}的主要特性是什么？
+### k3s.safe mirror的主要特性是什么？ {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
 k3s.safe模块通过实现以下功能，为 K3s 提供了一个全面的高可用性 (HA) 协议栈：
 
@@ -89,7 +89,7 @@ NFS 存储和 PV | • 托管虚拟 IP 和 NFS 端口<br> • 管理活动导出
 
 ## SafeKit mirror集群如何与Kubernetes K3S 协同工作？ {#safekit-mirror-cluster}
 
-### 步骤 1： Mirror集群{#step-1-byte-level-file-replication-in-a-mirror-cluster}中的字节级文件复制
+### 步骤 1： Mirror集群中的字节级文件复制 {#step-1-byte-level-file-replication-in-a-mirror-cluster}
 
 此阶段展示了**服务器 1（主服务器） **和**服务器 2（辅助服务器） **之间的高可用性架构。两台服务器均运行 K3s 主组件和代理组件，如[架构表](#safekit-k3s-architecture-table)中所定义。
 
@@ -102,7 +102,7 @@ NFS 存储和 PV | • 托管虚拟 IP 和 NFS 端口<br> • 管理活动导出
 K3s 主节点通过与 K3s 代理直接通信，将工作负载分配到两个（或多个）节点上。外部客户端连接到这些节点。  
 [集群的虚拟 IP 地址为](</zh-hans/best-practises/how-a-virtual-ip-address-works/>)位于 PRIM 节点上。K3s 主节点使用标准的Kubernetes机制将流量转发到分布在各个节点上的 Pod。同样，Pod 通过虚拟 IP 和 NFS 端口访问其位于 PRIM 服务器上的持久卷 (PV) ** ** 。
 
-### 步骤 2：自动故障转移和服务连续性{#step-2-automatic-failover-and-service-continuity}
+### 步骤 2：自动故障转移和服务连续性 {#step-2-automatic-failover-and-service-continuity}
 
 当**服务器 1（主服务器） **发生故障时， **服务器 2（辅助服务器） **会自动接管集群操作，以确保连续性。
 
@@ -117,7 +117,7 @@ SafeKit检测到故障后，立即将集群的虚拟 IP 地址** （即**迁移�
 当服务器 1 离线时， MariaDB和 NFS 服务继续在服务器 2 上运行，仅将更改写入本地。  
 
 
-### 步骤 3：故障恢复和自动重新集成{#step-3-failback-and-automatic-reintegration}
+### 步骤 3：故障恢复和自动重新集成 {#step-3-failback-and-automatic-reintegration}
 
 当初始问题解决后服务器 1 重启时，会发生故障** **故障恢复SafeKit会自动重新同步MariaDB和 NFS 文件，仅更新服务器 2 在停机期间修改的数据。此重新集成过程**不会中断** ；K3s 主节点和代理组件在服务器 2 上继续运行，不会中断。 
 
@@ -132,7 +132,7 @@ SafeKit根据服务器停止的方式优化恢复时间：
   * **系统崩溃（例如，断电）： **如果服务器 1 发生非正常关机，为了安全起见，修改位图将被绕过SafeKit改为重新同步所有修改时间戳比上次建立的同步点**的文件，以确保**数据的完全完整性。 
 
 
-### 步骤 4：恢复高可用性和负载均衡{#step-4-restoring-high-availability-and-load-distribution}
+### 步骤 4：恢复高可用性和负载均衡 {#step-4-restoring-high-availability-and-load-distribution}
 
 重新集成后，集群恢复到**完全模式mirror ** ，与步骤 1 中描述的状态相同。系统再次处于高可用状态： ** MariaDB **和** NFS 服务**在服务器 2 上保持活动状态，而SafeKit将所有文件更新实时复制到服务器 1。 
 
@@ -145,7 +145,7 @@ SafeKit根据服务器停止的方式优化恢复时间：
 
 如果管理员希望MariaDB和 NFS 服务在服务器 1 上运行（恢复原始 PRIM 角色），则可以在方便的时候通过 Web 控制台手动触发** **切换，或者通过配置设置自动触发。 
 
-### 如何配置SafeKit Mirror {#safekit-mirror-cluster-configure}集群？
+### 如何配置SafeKit Mirror集群？ {#safekit-mirror-cluster-configure}
 
 
 ![ SafeKit Web 控制台：高可用性配置仪表板，显示mirror集群的心跳网络、虚拟 IP 设置和实时目录复制](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
@@ -162,7 +162,7 @@ SafeKit根据服务器停止的方式优化恢复时间：
 
 SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或额外的心跳网络即可解决网络隔离问题。了解更多关于[集群的心跳、故障转移和仲裁机制，请参阅](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)集群。
 
-### 如何监控SafeKit mirror {#safekit-mirror-cluster-monitoring}集群？
+### 如何监控SafeKit mirror集群？ {#safekit-mirror-cluster-monitoring}
 
 
 ![ SafeKit Web 控制台：实时监控双节点mirror集群，显示 PRIM 和 SECOND 状态以及活动数据复制情况](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
@@ -199,13 +199,13 @@ SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或�
   
 ** **虽然标准的 DIY 协议栈（MetalLB + Longhorn）为Kubernetes提供了模块化特性，但它却造成了循环依赖**导致存储和网络工具容易受到它们原本旨在管理的节点故障的影响。为了打破这种循环** **方案以独立基础设施层的形式运行；它提供了一个更稳健、与硬件无关的双节点高可用性解决方案，即使引擎或Kubernetes操作系统挂起**也能保持运行。这确保了自动恢复和数据完整性SafeKit而无需传统分布式块存储和网络叠加层所需的大量资源开销、强制性的三节点仲裁或复杂的配置。
 
-## 视频指南：配置SafeKit HA mirror {#videoguide-safekit-mirror-cluster}集群
+## 视频指南：配置SafeKit HA mirror集群 {#videoguide-safekit-mirror-cluster}
 
 ### SafeKit视频：应用层集群（8:47） {#demo-mirror-ha-cluster}
 
 这段视频演示了 SafeKit的高可用性 Microsoft SQL Server它对解决方案如何保护 K3s 环境进行了很好的概述。 SafeKit 对于任何其他数据库或业务关键型应用程序，其功能完全相同。
 
-### 视频集锦{#video-highlights}
+### 视频集锦 {#video-highlights}
 
   1. 🎬 [ 2 个节点，包含SQL Server和](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
   2. 🎬 [配置集群和mirror.safe模块](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)

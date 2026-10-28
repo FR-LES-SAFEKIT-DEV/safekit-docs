@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SANレスSafeKit MirrorクラスタがMariaDBとどのように連携するか、目次、 SafeKitソフトウェアがSANレスMariaDB高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがMariaDBとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとMariaDBと他のクラスタリングソリューション、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 最もシンプルな高可用性MariaDB : 2ノード同期レプリケーションとフェイルオーバー{#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
+# 最もシンプルな高可用性MariaDB : 2ノード同期レプリケーションとフェイルオーバー {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="MariaDB" guide="/ja/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

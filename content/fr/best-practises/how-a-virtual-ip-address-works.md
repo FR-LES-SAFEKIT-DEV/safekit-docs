@@ -104,7 +104,7 @@ Lors d'un événement de basculement ** ** , SafeKit inverse instantanément les
 
 > ** ⚠️ Remarque : ** SafeKit fournit la logique de contrôle d’intégrité ; l’équilibreur de charge physique ou virtuel doit être fourni par votre infrastructure réseau.
 
-#### Intégration au cloud : AWS , Azure , {#cloud-integration-aws-azure-and-gcp} et GCP
+#### Intégration au cloud : AWS , Azure , et GCP {#cloud-integration-aws-azure-and-gcp}
 
 Ce modèle « Équilibreur de charge + Contrôle d'intégrité » est la norme du secteur pour la haute disponibilité du cloud ** ** . Il est essentiel pour la mise en œuvre de SafeKit dans des environnements tels que : 
 

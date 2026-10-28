@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "分布式企业中的业务连续性，🔍 SafeKit高可用性导航中心"
 ---
 
-# 面向多分支机构分布式企业的标准化高可用性{#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# 面向多分支机构分布式企业的标准化高可用性 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
 
-## 分布式企业中的业务连续性{#business-continuity-in-a-distributed-enterprise}
+## 分布式企业中的业务连续性 {#business-continuity-in-a-distributed-enterprise}
 
-### 分布式企业中的业务连续性{#business-continuity-in-a-distributed-enterprise-1}
+### 分布式企业中的业务连续性 {#business-continuity-in-a-distributed-enterprise-1}
 
 使用SafeKit部署数十个集群并不复杂。
 
@@ -23,7 +23,7 @@ topics: "分布式企业中的业务连续性，🔍 SafeKit高可用性导航�
 
 为企业中的多个应用程序提供业务连续性解决方案 Windows 或者 Linux 服务器会带来经济和组织方面的问题。 SafeKit 针对这种情况，我们提供了一种简单经济的业务连续性软件。
 
-### SafeKit软件：一个简单的业务连续性解决方案{#the-safekit-software-a-simple-solution-for-business-continuity}
+### SafeKit软件：一个简单的业务连续性解决方案 {#the-safekit-software-a-simple-solution-for-business-continuity}
 
 SafeKit提供两个简易的模块`farm`和mirror ，用于保护您的关键应用程序免受故障影响。该方案部署在标准服务器上，无需 IT 专业人员即可管理。无需共享磁盘、复制 SAN、负载均衡器、企业版操作系统或数据库。 
 

@@ -9,7 +9,7 @@ topics: "エッジHAの課題、 SafeKitがエッジに最適な理由、エッ�
 
 # データセンター不要のエッジ高可用性：OTおよび分散サイト向けSafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
 
-## Edge HAチャレンジ{#the-edge-ha-challenge}
+## Edge HAチャレンジ {#the-edge-ha-challenge}
 
 エッジサイトにはデータセンターがなく、高可用性（HA）に関する専門知識も不足していることが多いが、事業継続性は極めて重要である。工場、海上石油プラットフォーム、病院の診療所、小売店、5Gアンテナサイトなどは、ダウンタイムを許容できない一方で、従来のデータセンターのHAクラスタを構築するコストと複雑さを正当化することもできない。
 
@@ -21,7 +21,7 @@ SafeKitまさにこのニーズに応えるために開発されました。工�
 Edge 用![ SafeKit ](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
 
 
-## SafeKitがEdge {#what-makes-safekit-the-natural-fit-for-edge}に最適な理由
+## SafeKitがEdgeに最適な理由 {#what-makes-safekit-the-natural-fit-for-edge}
 
 SafeKit 、2台の標準的なエッジサーバー（メーカー不問、物理サーバーでも仮想サーバーでも可）をプラグアンドプレイのHAクラスタに変換します。共有ストレージ、SAN、特別なハードウェアは不要です。軽量なソフトウェアスタック1つで以下の機能を実現します。
 
@@ -34,7 +34,7 @@ SafeKit 、2台の標準的なエッジサーバー（メーカー不問、物�
 
 SANの調達は不要で、 Windowsサーバーデータセンターライセンスも不要、 LinuxクラスタOSの専門知識も不要、専用のクラスタハードウェアも不要です。HAスタック全体が単一のソフトウェアパッケージで実現します。
 
-## エッジおよび分散型展開の適合性{#edge--distributed-deployment-suitability}
+## エッジおよび分散型展開の適合性 {#edge--distributed-deployment-suitability}
 
 SafeKitは、エッジ、ブランチオフィス、および分散型エンタープライズのシナリオ向けに特別に設計されています。
 
@@ -50,7 +50,7 @@ SAN/NASインフラストラクチャなし| SANレスアーキテクチャ、�
 OEM/組み込み展開|サイレントインストール、スクリプト対応、ソフトウェアパブリッシャーによる組み込み対応  
 数百の分散クラスター|多数の支店を管理する分散型企業向けに設計されています  
   
-## エッジOT環境が異なる理由{#why-edge-ot-environments-are-different}
+## エッジOT環境が異なる理由 {#why-edge-ot-environments-are-different}
 
 OT（運用技術）環境（SCADA、BMS、物理セキュリティ、産業制御など）は、ITデータセンターとは根本的に異なる要件を持っています。
 
@@ -64,7 +64,7 @@ OT（運用技術）環境（SCADA、BMS、物理セキュリティ、産業制�
 
 SafeKitのSANレス、2サーバー構成、自動フェイルオーバーモデルは、これらの制約すべてに直接的に対応しています。
 
-## Ideal Edgeのユースケース{#ideal-edge-use-cases}
+## Ideal Edgeのユースケース {#ideal-edge-use-cases}
 
 データセンターを持たないサイトであっても、高い可用性が依然として重要となる場合：
 
@@ -83,7 +83,7 @@ SCADAおよび産業制御|工場、変電所、浄水場| WindowsまたはLinux
 小売業|店舗、支店、倉庫|販売時点情報管理および在庫管理  
 防衛|前線作戦基地、野戦部隊|任務遂行に不可欠な指揮通信システム  
   
-## エッジHAとデータセンターHA：主な違い{#edge-vs-data-center-ha-key-differences}
+## エッジHAとデータセンターHA：主な違い {#edge-vs-data-center-ha-key-differences}
 
 基準|データセンター HA (WSFC、Pacemaker、VMware HA) | SafeKitエッジ HA  
 ---|---|---  
@@ -96,7 +96,7 @@ OSに関する専門知識| WindowsデータセンターまたはLinuxクラス�
 ライセンス費用|高 (データセンターOS、SANライセンス) |クラスターごとに手頃な価格のソフトウェアライセンス1つ  
 標準RTO | 1～5分| 1分未満（設定可能）  
   
-## 技術的な最小要件{#technical-minimum-requirements}
+## 技術的な最小要件 {#technical-minimum-requirements}
 
   * **サーバー: ** 2 台の標準 x86 サーバーまたは VM (ハードウェアのブランドは問わず、物理環境または仮想環境)、または ARM ( Linuxのみ)
   * ** OS: ** Windows Server 2019 / 2022 / 2025、 Windows 11、RHEL 8/9、Ubuntu 24.04

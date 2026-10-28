@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "什么是高可用性架构和最佳实践？高可用性架构和最佳实践对比表，🔍 SafeKit高可用性导航中心"
 ---
 
-# 高可用性架构和软件集群最佳实践{#high-availability-architectures--software-clustering-best-practices}
+# 高可用性架构和软件集群最佳实践 {#high-availability-architectures--software-clustering-best-practices}
 
-## 什么是高可用性架构和最佳实践{#what-are-the-high-availability-architectures-and-the-best-practices}
+## 什么是高可用性架构和最佳实践 {#what-are-the-high-availability-architectures-and-the-best-practices}
 
-### 概述{#overview}
+### 概述 {#overview}
 
 本文探讨了不同的高可用性架构，并分析了每种架构的优缺点，提出了最佳实践。
 
@@ -47,7 +47,7 @@ topics: "什么是高可用性架构和最佳实践？高可用性架构和最�
   * [虚拟 IP 地址](</zh-hans/best-practises/how-a-virtual-ip-address-works/>) 。
 
 
-## 高可用性架构和最佳实践对比表{#comparative-tables-on-high-availability-architectures-and-best-practices}
+## 高可用性架构和最佳实践对比表 {#comparative-tables-on-high-availability-architectures-and-best-practices}
 
 
 {{%  insert-safekit-software-vs-hardware-table-zh-hans  %}}

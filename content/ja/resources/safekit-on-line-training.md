@@ -7,11 +7,11 @@ lang: "ja"
 topics: "トレーニングプラットフォームへのアクセス方法、 SafeKit 8 トレーニング資料の入手、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit高可用性トレーニング：無料オンライン認定プログラム{#safekit-high-availability-training-free-online-certification-program}
+# SafeKit高可用性トレーニング：無料オンライン認定プログラム {#safekit-high-availability-training-free-online-certification-program}
 
 ## トレーニングプラットフォームへのアクセス方法？ {#certif}
 
-### SafeKitトレーニングプラットフォーム{#the-safekit-training-platform}
+### SafeKitトレーニングプラットフォーム {#the-safekit-training-platform}
 
 SafeKitオンライン研修は、高可用性とアプリケーションクラスタリングを習得できるよう設計された、自己学習型の包括的なリソースです。以下の手順でプラットフォームにアクセスできます。
 
@@ -29,7 +29,7 @@ SafeKitオンライン研修は、高可用性とアプリケーションクラ�
 
 ### SafeKit動画: 無料認定プラットフォームチュートリアル (6:11) {#demo-certification}
 
-#### 章{#chapters}
+#### 章 {#chapters}
 
   1. 🎬 [トレーニングおよび認定プラットフォーム](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=0s>) (1:41)
   2. 🎬 [トレーニングモジュールとは何ですか？ SafeKit ](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=101s>) (1:57)
@@ -38,11 +38,11 @@ SafeKitオンライン研修は、高可用性とアプリケーションクラ�
 
 [トレーニングおよび認定プラットフォームはこちら](<https://training.my.evidian.com/>)
 
-## SafeKitトレーニングビデオ{#training82}
+## SafeKitトレーニングビデオ {#training82}
 
 これは<a href="https://training.my.evidian.com/mod/page/view.php?id=712" target="_blank" rel="noopener noreferrer">トレーニングプラットフォーム</a>そのものではなく、必要に応じてトレーニング資料をダウンロードするためのリポジトリであることに注意してください。
 
-### はじめに{#introduction}
+### はじめに {#introduction}
 
   1. 概要: 🎬 [動画](<https://www.youtube.com/watch?v=bMRyNq3egLQ>) (9:43) 
      * 🎬 [紹介](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=0s>) (0:38)
@@ -60,7 +60,7 @@ SafeKitオンライン研修は、高可用性とアプリケーションクラ�
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
-### デモ{#demonstrations}
+### デモ {#demonstrations}
 
 Hyper-V クラスターのデモ: 🎬 [動画](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
@@ -125,7 +125,7 @@ SQL Serverクラスターのデモンストレーション: 🎬 [ビデオ](<ht
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/5-command-line-en.pptx>) )
 
 
-### 詳細設定{#advanced-configuration}
+### 詳細設定 {#advanced-configuration}
 
   6. Mirrorモジュール：🎬 [ビデオ](<https://www.youtube.com/watch?v=SmWwVUYsx9Q>) （26:52） 
      * 🎬 [概要](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=0s>) (2:59)
@@ -158,7 +158,7 @@ SQL Serverクラスターのデモンストレーション: 🎬 [ビデオ](<ht
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>) )
 
 
-### {#troubleshooting}トラブルシューティング
+### トラブルシューティング {#troubleshooting}
 
   9. トラブルシューティング: 🎬 [動画](<https://www.youtube.com/watch?v=H1mxvpC3mP8>) (31:24) 
      * 🎬 [紹介](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=0s>) (0:58)

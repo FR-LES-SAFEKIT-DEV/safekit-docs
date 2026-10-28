@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "免费人工智能一级支持、标准支持与维护、免费认证与培训计划、🔍 SafeKit高可用性导航中心"
 ---
 
-# SafeKit AI & 支持{#safekit-ai--support}
+# SafeKit AI & 支持 {#safekit-ai--support}
 
-## 免费AI一级支持{#ai-support}
+## 免费AI一级支持 {#ai-support}
 
 ** 🤖 将SafeKit与您最喜欢的 LLM **一起使用
 
@@ -25,7 +25,7 @@ topics: "免费人工智能一级支持、标准支持与维护、免费认证�
      * 日志分析
 
 
-## 标准支持与维护{#standard-support}
+## 标准支持与维护 {#standard-support}
 
 在支付相关支持和维护费用的前提下，最终用户有权享受以下远程服务：
 
@@ -40,7 +40,7 @@ topics: "免费人工智能一级支持、标准支持与维护、免费认证�
 
 [呼叫中心](<https://customercare.evidian.com/>)
 
-## 免费认证和培训计划{#training}
+## 免费认证和培训计划 {#training}
 
 SafeKit提供免费的在线认证和培训计划，涵盖高可用性概念、集群架构、安装、配置和管理——适用于mirror和`farm`模块。
 

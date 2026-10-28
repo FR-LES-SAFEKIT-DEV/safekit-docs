@@ -21,7 +21,7 @@ SafeKit 바로 이러한 격차를 해소하기 위해 개발되었습니다. �
 Edge용 ![ ](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg) SafeKit
 
 
-## SafeKit Edge {#what-makes-safekit-the-natural-fit-for-edge} 에 완벽하게 어울리는 이유는 무엇일까요?
+## SafeKit Edge 에 완벽하게 어울리는 이유는 무엇일까요? {#what-makes-safekit-the-natural-fit-for-edge}
 
 SafeKit 표준 엣지 서버 두 대(브랜드, 물리적 또는 가상 서버 불문)를 플러그 앤 플레이 방식의 고가용성(HA) 클러스터로 구성해 줍니다. 공유 스토리지, SAN, 특수 하드웨어가 필요하지 않습니다. 하나의 경량 소프트웨어 스택으로 다음과 같은 기능을 제공합니다.
 

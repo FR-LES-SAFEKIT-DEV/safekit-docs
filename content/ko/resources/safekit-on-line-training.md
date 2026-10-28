@@ -158,7 +158,7 @@ SQL Server 클러스터 시연: 🎬 [ 비디오 ](<https://www.youtube.com/watc
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>) )
 
 
-### {#troubleshooting} 문제 해결
+### 문제 해결 {#troubleshooting}
 
   9. 문제 해결: 🎬 [ 비디오 ](<https://www.youtube.com/watch?v=H1mxvpC3mP8>) (31:24) 
      * 🎬 [ 소개 ](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=0s>) (0:58)

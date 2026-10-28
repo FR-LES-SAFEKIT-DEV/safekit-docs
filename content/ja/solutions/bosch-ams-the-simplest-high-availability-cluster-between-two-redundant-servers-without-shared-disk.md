@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SafeKit for Bosch AMS: 2ノードSANレスHyper-Vクラスタ、目次、 SafeKitソフトウェアがSAN上の共有ストレージなしでBosch AMS高可用性クラスタをどのように簡単に実装するか、 SafeKit Bosch AMSクラスタの仕組み、 SafeKit高可用性の制限、比較: SafeKit for Bosch AMSとネイティブHyper-Vクラスタリング、ビデオガイド: SafeKit Bosch AMS用HAクラスタの構成、 SafeKit 、セキュリティ市場で認められたソリューション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit Bosch AMS向け高可用性：SANレス冗長性とフェイルオーバー{#safekit-high-availability-for-bosch-ams-sanless-redundancy-and-failover}
+# SafeKit Bosch AMS向け高可用性：SANレス冗長性とフェイルオーバー {#safekit-high-availability-for-bosch-ams-sanless-redundancy-and-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Bosch AMS"  %}}

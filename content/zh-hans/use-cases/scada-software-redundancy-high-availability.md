@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "什么是SCADA系统？为什么SCADA软件至关重要？SCADA软件主要厂商名单； SafeKit提供两种SCADA软件冗余和高可用性解决方案； SafeKit是SCADA市场上公认的解决方案；🔍 SafeKit高可用性导航中心"
 ---
 
-# SCADA 和工业控制系统 (ICS) 的高可用性和冗余性{#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# SCADA 和工业控制系统 (ICS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
-##  {#what-is-a-scada-system}是SCADA系统？
+##  是SCADA系统？ {#what-is-a-scada-system}
 
 SCADA 系统能够控制工业过程，并通过人机界面软件直接与传感器、阀门、泵、电机等设备进行交互。
 
@@ -19,7 +19,7 @@ SCADA 系统能够控制工业过程，并通过人机界面软件直接与传�
 
 因此，SCADA 软件必须始终可供操作人员使用，以便他们对任何轻微的事件都能立即做出反应。
 
-##  SCADA软件{#key-players-list-in-scada-software}的关键参与者列表
+##  SCADA软件的关键参与者列表 {#key-players-list-in-scada-software}
 
 根据这份[分析报告](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>) ，SCADA 软件的主要参与者有：
 

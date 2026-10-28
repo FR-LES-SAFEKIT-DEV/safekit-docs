@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SafeKit for Bosch BVMS: 2ノードSANレスHyper-Vクラスタ、目次、 SafeKitソフトウェアがSAN上の共有ストレージなしでBosch BVMS高可用性クラスタをどのように簡単に実装するか、 SafeKit Bosch BVMSクラスタの仕組み、 SafeKit高可用性の制限、比較: SafeKit for Bosch BVMSとネイティブHyper-Vクラスタリング、ビデオガイド: SafeKit Bosch BVMS用HAクラスタの構成、 SafeKit 、セキュリティ市場で認められたソリューション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit Bosch BVMS向け高可用性：SANレスビデオ管理冗長性{#safekit-high-availability-for-bosch-bvms-sanless-video-management-redundancy}
+# SafeKit Bosch BVMS向け高可用性：SANレスビデオ管理冗長性 {#safekit-high-availability-for-bosch-bvms-sanless-video-management-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Bosch BVMS"  %}}

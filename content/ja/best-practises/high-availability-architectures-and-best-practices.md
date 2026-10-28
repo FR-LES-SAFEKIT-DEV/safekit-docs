@@ -7,11 +7,11 @@ lang: "ja"
 topics: "高可用性アーキテクチャとそのベストプラクティスとは？、高可用性アーキテクチャとベストプラクティスの比較表、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス{#high-availability-architectures--software-clustering-best-practices}
+# 高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス {#high-availability-architectures--software-clustering-best-practices}
 
-## 高可用性アーキテクチャとそのベストプラクティス{#what-are-the-high-availability-architectures-and-the-best-practices}は何ですか？
+## 高可用性アーキテクチャとそのベストプラクティスは何ですか？ {#what-are-the-high-availability-architectures-and-the-best-practices}
 
-### 概要{#overview}
+### 概要 {#overview}
 
 この記事では、さまざまな高可用性アーキテクチャとそのベストプラクティスについて、それぞれのアーキテクチャの長所と短所を挙げながら解説します。
 
@@ -21,7 +21,7 @@ topics: "高可用性アーキテクチャとそのベストプラクティス�
 
 以下の比較表では、 SafeKit高可用性アーキテクチャとそのベストプラクティスについて詳しく説明しています（ SafeKitはソフトウェアの高可用性製品です）。
 
-### 高可用性アーキテクチャ{#what-are-the-high-availability-architectures}は何ですか？
+### 高可用性アーキテクチャは何ですか？ {#what-are-the-high-availability-architectures}
 
 高可用性](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) [は、データベースなどのバックエンドアプリケーション向けのものと、Webサービスなどのフロントエンドアプリケーション向けのものの2種類があります。
 
@@ -31,7 +31,7 @@ topics: "高可用性アーキテクチャとそのベストプラクティス�
 
 さらに、アプリケーションレベルでの高可用性と仮想マシンレベルでの高可用性のどちらかを選択する必要があります。
 
-### {#what-are-the-best-practices}プラクティスは何ですか？
+### プラクティスは何ですか？ {#what-are-the-best-practices}
 
 この記事では、高可用性アーキテクチャにおけるベストプラクティスを、以下の点を比較することで探究します。
 
@@ -47,7 +47,7 @@ topics: "高可用性アーキテクチャとそのベストプラクティス�
   * [仮想 IP アドレスは](</ja/best-practises/how-a-virtual-ip-address-works/>) 。
 
 
-## 高可用性アーキテクチャとベストプラクティスに関する比較表{#comparative-tables-on-high-availability-architectures-and-best-practices}
+## 高可用性アーキテクチャとベストプラクティスに関する比較表 {#comparative-tables-on-high-availability-architectures-and-best-practices}
 
 
 {{%  insert-safekit-software-vs-hardware-table-ja  %}}

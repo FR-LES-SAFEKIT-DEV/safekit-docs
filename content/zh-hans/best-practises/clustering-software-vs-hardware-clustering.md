@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "软件集群和硬件集群的区别？软件集群 vs 硬件集群：优缺点，🔍 SafeKit高可用性导航中心"
 ---
 
-# 软件集群与硬件集群在高可用性方面的比较{#software-clustering-vs-hardware-clustering-for-high-availability}
+# 软件集群与硬件集群在高可用性方面的比较 {#software-clustering-vs-hardware-clustering-for-high-availability}
 
 ## 软件集群和硬件集群有什么区别？ {#difference-between-software-clustering-and-hardware-clustering}
 
-### 概述{#overview}
+### 概述 {#overview}
 
 本文探讨了软件集群与硬件集群的优缺点，分析了数据复制、共享磁盘、负载均衡、硬件和软件先决条件、集群配置技能等特性…… 
 
@@ -37,7 +37,7 @@ topics: "软件集群和硬件集群的区别？软件集群 vs 硬件集群：�
 
 前端软件集群（例如SafeKit ）基于服务器集群`farm` （2 台或更多服务器）内的负载均衡。负载均衡由软件实现，并将 TCP 会话分配到farm中的可用服务器。
 
-## 软件集群与硬件集群：优缺点分析{#software-clustering-vs-hardware-clustering-pros-and-cons}
+## 软件集群与硬件集群：优缺点分析 {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
 可以通过不同的集群方法实现高可用性： **软件集群** , **硬件集群** （共享/复制存储），或 **硬件负载均衡器** （专用网络设备）。每种方案在功能、所需硬件、软件先决条件以及部署所需的IT技能方面都各不相同。 SafeKit 提供纯软件方法，将复制、故障转移和负载均衡结合在一个产品中，无需专用硬件或企业版。
 

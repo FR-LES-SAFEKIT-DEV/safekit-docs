@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "如何实现具有实时复制和故障转移的主备冗余服务器？如何实现具有网络负载均衡和故障转移的主备冗余服务器？🔍 SafeKit高可用性导航中心"
 ---
 
-# 如何使用简易高可用性软件{#how-to-implement-redundant-servers-with-simple-ha-software}实现冗余服务器
+# 如何使用简易高可用性软件实现冗余服务器 {#how-to-implement-redundant-servers-with-simple-ha-software}
 
 ## 如何实现具有实时复制和故障转移功能的主备冗余服务器？ {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 
-### SafeKit mirror集群{#the-safekit-mirror-cluster}
+### SafeKit mirror集群 {#the-safekit-mirror-cluster}
 
 
 ![冗余服务器，具备实时文件复制和故障转移功能](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -21,7 +21,7 @@ topics: "如何实现具有实时复制和故障转移的主备冗余服务器�
 
 ## 如何实现具有网络负载均衡和故障转移的双活冗余服务器？ {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### SafeKit `farm`集群{#the-safekit-farm-cluster}
+### SafeKit `farm`集群 {#the-safekit-farm-cluster}
 
 
 ![冗余服务器，具备网络负载均衡和故障转移功能](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")

@@ -61,7 +61,7 @@ Bei diesem Vorgang werden die IP-Adressen auf beiden Knoten in der Datei `cluste
 ![ Geben Sie die Knoten des Clusters ](/wp-content/uploads/2023/01/appli-3.png)
 
 
-### 3. Wählen Sie das Modul {#3-choose-the-module} aus.
+### 3. Wählen Sie das Modul aus. {#3-choose-the-module}
 
   * Klicken Sie im Konfigurationsmenü auf das Modul .safe.
 
@@ -137,7 +137,7 @@ Starten Sie nichts und klicken Sie nicht auf die Schaltfläche „Schließen“,
 ![ Wählen Sie den Knoten mit den aktuellen Daten aus ](/wp-content/uploads/2023/01/appli-10-1.png)
 
 
-### 7. Gehen Sie zum Desktop von Knoten 1 und legen Sie die virtuelle IP-Adresse in den internen Dateien Milestone {#milestone-files} fest.
+### 7. Gehen Sie zum Desktop von Knoten 1 und legen Sie die virtuelle IP-Adresse in den internen Dateien Milestone fest. {#milestone-files}
 
 
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
@@ -257,7 +257,7 @@ Hinweis: Um eine Version vor Milestone 2020 R2 zu registrieren, verwenden Sie **
 ![ Registrieren Sie den Management-Server in Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 11. Legen Sie auf dem Desktop von Knoten 1 mit dem Management-Client Milestone die virtuelle IP-Adresse in den URLs für Dienste und Netzwerk {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network} fest.
+### 11. Legen Sie auf dem Desktop von Knoten 1 mit dem Management-Client Milestone die virtuelle IP-Adresse in den URLs für Dienste und Netzwerk fest. {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network}
 
 
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
@@ -279,7 +279,7 @@ Dem Bild zufolge:
 ![ Legen Sie die virtuelle IP-Adresse in den URLs und im Milestone Management Client ](/wp-content/uploads/2022/07/milestone-url-vip.png) fest.
 
 
-### 12. Konfigurieren Sie auf dem Desktop von Knoten 1 mit dem Management-Client Milestone die Administratorrollen so, dass ein korrektes Failover {#role} gewährleistet ist.
+### 12. Konfigurieren Sie auf dem Desktop von Knoten 1 mit dem Management-Client Milestone die Administratorrollen so, dass ein korrektes Failover gewährleistet ist. {#role}
 
 
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
@@ -308,7 +308,7 @@ Das liegt daran, dass die Gruppe „BUILTIN\Administrators“ auf beiden Knoten 
 ![ Rollen im Management-Client Milestone festlegen ](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
 
-### 13. Gehen Sie zum Desktop von Knoten 2 und legen Sie die virtuelle IP-Adresse in den internen Dateien Milestone {#milestone-files-2} fest.
+### 13. Gehen Sie zum Desktop von Knoten 2 und legen Sie die virtuelle IP-Adresse in den internen Dateien Milestone fest. {#milestone-files-2}
 
 
 ![ Hinweis ](/wp-content/uploads/2022/07/note.png)
@@ -418,7 +418,7 @@ Komponenten, die Dienste nutzen, müssen mit der virtuellen IP-Adresse konfiguri
   * Verbinden Sie den Milestone Management Client und den Milestone Smart Client auf der virtuellen IP-Adresse.
 
 
-### 18. Management Client und Smart Client funktionieren nach dem Knotenwechsel {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch} nicht ordnungsgemäß.
+### 18. Management Client und Smart Client funktionieren nach dem Knotenwechsel nicht ordnungsgemäß. {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch}
 
 In einer Clusterumgebung mit XProtect Management Servern treten nach einem Knotenwechsel verschiedene Probleme mit Smart Client und Management Client auf. Diese Probleme hängen damit zusammen, dass Token vor und nach dem Knotenwechsel auf unterschiedlichen Knoten generiert werden und dass der Zugriff auf bestimmte, für die Tokenvalidierung benötigte Zertifikate erschwert ist. Eine Lösung ist verfügbar (für die Versionen 2022 R3 bis 2023 R2, siehe Milestone Knowledge Base).
 

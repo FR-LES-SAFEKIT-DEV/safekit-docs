@@ -9,7 +9,7 @@ topics: "Upgrade einer durch SafeKit geschützten Hochverfügbarkeitsanwendung, 
 
 # Aktualisierung einer durch SafeKit geschützten Anwendung in einem HA-Cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
 
-## Aktualisierung einer durch SafeKit {#upgrading-a-high-availability-application-protected-by-safekit} geschützten Hochverfügbarkeitsanwendung
+## Aktualisierung einer durch SafeKit geschützten Hochverfügbarkeitsanwendung {#upgrading-a-high-availability-application-protected-by-safekit}
 
 Die Aktualisierung geschäftskritischer Anwendungen ist unerlässlich für Sicherheit, Leistung und den Zugriff auf neue Funktionen. Wenn eine Anwendung durch SafeKit geschützt ist, hängt das Upgrade-Verfahren von der verwendeten Hochverfügbarkeitsarchitektur ab.
 

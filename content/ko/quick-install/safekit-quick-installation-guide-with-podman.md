@@ -7,7 +7,7 @@ lang: "ko"
 topics: "Podman 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Podman 솔루션 개요, Linux ( mirror.safe )에 SafeKit / Podman 솔루션 설치, SafeKit / Podman 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# Podman 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover} 포함)
+# Podman 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 포함) {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Podman" mod="mirror"  %}}
@@ -17,7 +17,7 @@ topics: "Podman 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Podman 고가용성 및 실시간 데이터 복제 소프트웨어 ](</solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/>) ** .
 
-## SafeKit / Podman 솔루션의 Linux ( mirror.safe ) 및 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe} 설치
+## SafeKit / Podman 솔루션의 Linux ( mirror.safe ) 및 설치 {#installation-of-the-safekit--podman-solution-on-linux-mirrorsafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -28,7 +28,7 @@ topics: "Podman 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 {{%  insert-safekit-installation-package-linux-ko app="" mod="mirror"  %}}
  
 
-### 간단한 컨테이너 이미지 {#example-with-a-simple-container-image} 사용한 예시
+### 간단한 컨테이너 이미지 사용한 예시 {#example-with-a-simple-container-image}
 
 이 예제에서는 SafeKit nginx (웹 서버) 컨테이너를 관리하는 방법, 즉 컨테이너에서 접근하는 디렉터리의 복제 및 장애 발생 시 다른 노드에서 컨테이너를 재시작하는 방법을 보여줍니다.
 
@@ -70,13 +70,13 @@ SafeKit PRIM 상태의 노드에서 복제된 디렉터리에 다른 HTML 파일
   * **http://vitual-ip:9011/index.html** 및 **http://vitual-ip:9011/page.html** 에 대한 테스트 액세스
 
 
-## SafeKit / Podman 솔루션 {#step-by-step-configuration-of-the-safekit--podman-solution} 의 단계별 구성
+## SafeKit / Podman 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--podman-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Podman" mod="mirror"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

@@ -7,11 +7,11 @@ lang: "ja"
 topics: "高可用性クラスタにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較、バイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションのメリットとデメリット、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# HAにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較{#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# HAにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
 
-## 高可用性クラスタにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較{#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
+## 高可用性クラスタにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較 {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 
-### 概要{#overview}
+### 概要 {#overview}
 
 この記事では、高可用性クラスタにおけるバイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所について考察します。具体的には、レプリケートされるデータ量、アプリケーションデータ構成への影響、復旧時間、実装の容易さなどを検討します。
 
@@ -35,7 +35,7 @@ topics: "高可用性クラスタにおけるバイトレベルファイルレ�
 
 最後に、このソリューションは設定が非常に簡単で、複製するディレクトリのパスを設定するだけで済みます。
 
-### ブロックレベルのディスクレプリケーションとは何ですか{#what-is-block-level-disk-replication}
+### ブロックレベルのディスクレプリケーションとは何ですか {#what-is-block-level-disk-replication}
 
 ブロックレベルのディスクレプリケーション（ [ DRBD ](<https://linbit.com/drbd/>)など）とは、ディスク内部の変更のみがレプリケートされることを意味します。
 
@@ -47,7 +47,7 @@ topics: "高可用性クラスタにおけるバイトレベルファイルレ�
 
 最後に、このソリューションは設定が容易ではありません。ファイルシステムを備えた特殊なディスクを設定するには専門的なスキルが必要であり、さらに、複製されたディスクにアプリケーションデータを設定するにはアプリケーションに関するスキルも必要となるからです。
 
-## バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所{#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
+## バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所 {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
 基準| **バイトレベルのファイルレプリケーションを備えたクラスタ** | **ブロックレベルのディスクレプリケーションを備えたクラスタ**  
 ---|---|---  

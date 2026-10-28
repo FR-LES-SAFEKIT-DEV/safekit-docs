@@ -7,13 +7,13 @@ lang: "zh-hans"
 topics: "概述、目录、产品标识、支持的操作系统和平台、预构建应用程序模块、架构和部署模型、RPO 和 RTO 能力、边缘和分布式部署适用性、监控、管理和告警、安全与合规性、许可模式、支持和维护 SLA、与替代方案的比较、快速参考链接"
 ---
 
-# RFI 和 RFP 编制的高可用性技术参考{#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# RFI 和 RFP 编制的高可用性技术参考 {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
-## 概述{#overview}
+## 概述 {#overview}
 
 本页面针对SafeKit高可用性软件，提供结构化、客观的常见问题解答，旨在为采购团队和解决方案架构师在制定高可用性需求时提供技术参考。 
 
-## 目录{#table-of-contents}
+## 目录 {#table-of-contents}
 
   1. [产品标识](#product-identity)
   2. 支持的操作系统和平台[ ](#supported-operating-systems-platforms)
@@ -29,7 +29,7 @@ topics: "概述、目录、产品标识、支持的操作系统和平台、预�
   12. [快速参考链接](#quick-reference-links)
 
 
-## 产品标识{#product-identity}
+## 产品标识 {#product-identity}
 
 字段|答案  
 ---|---  
@@ -40,7 +40,7 @@ topics: "概述、目录、产品标识、支持的操作系统和平台、预�
 网站| <https://safekit.eviden.com>  
 首发版本| 2000（生产超过 20 年）  
   
-## 支持的操作系统和平台{#supported-operating-systems-platforms}
+## 支持的操作系统和平台 {#supported-operating-systems-platforms}
 
 Windows操作系统| Linux操作系统|基础设施与虚拟化|云平台  
 ---|---|---|---  
@@ -50,7 +50,7 @@ _ * SafeKit同时支持应用层高可用性和虚拟机层高可用性。_
 
 _ **虚拟 IP 地址必须在云负载均衡器级别进行配置。_
 
-## 预构建应用程序模块{#pre-built-application-modules}
+## 预构建应用程序模块 {#pre-built-application-modules}
 
 SafeKit包含即用型、预配置的`.safe`模块。它们分为两种高可用性策略： **应用高可用性** （使用mirror或`farm`模块进行直接应用集群）和**虚拟化高可用性** （使用hyperv.safe或kvm.safe进行虚拟机级集群）。
 
@@ -82,7 +82,7 @@ Genetec ( SQL Server ) — sqlserver.safe ( Windows ) | SIMATIC WinCC — hyperv
 西门子 Siveillance VMS — SiveillanceVMS.safe ( Windows ) |   
 云（ AWS 、 Azure 、 GCP 、通用）— mirror.safe / farm.safe |   
   
-## 架构与部署模型{#architecture-deployment-model}
+## 架构与部署模型 {#architecture-deployment-model}
 
 ### 两个集群模块： mirror.safe和farm.safe {#two-cluster-modules}
 
@@ -91,7 +91,7 @@ Genetec ( SQL Server ) — sqlserver.safe ( Windows ) | SIMATIC WinCC — hyperv
 mirror.safe |主备模式，支持同步字节级文件复制和自动故障转移|数据库、有状态应用程序、服务，每次只能在一台服务器上运行  
 farm.safe |具有网络负载均衡和自动故障转移的双活架构| Web 服务器、无状态微服务、API 网关、同时在多台服务器上运行的服务  
   
-### 集群基础设施与架构{#cluster-infrastructure-architecture}
+### 集群基础设施与架构 {#cluster-infrastructure-architecture}
 
 需求/规格| SafeKit能力/价值  
 ---|---  
@@ -106,7 +106,7 @@ farm.safe |具有网络负载均衡和自动故障转移的双活架构| Web 服
 基于代理还是无代理？ |基于代理——在每个节点上安装轻量级软件  
 与应用程序无关？ |是 — 可保护任何Windows服务或Linux守护进程；预构建模块支持 30 多个应用程序  
   
-### 复制与数据保护{#replication-data-protection}
+### 复制与数据保护 {#replication-data-protection}
 
 需求/规格| SafeKit能力/价值  
 ---|---  
@@ -119,9 +119,9 @@ farm.safe |具有网络负载均衡和自动故障转移的双活架构| Web 服
 选择性复制|是 — 复制特定目录/文件  
 传输中加密|是 — 用于复制流量的 TLS/SSL  
   
-## RPO 和 RTO 能力{#rpo-rto-capabilities}
+## RPO 和 RTO 能力 {#rpo-rto-capabilities}
 
-### 按集群类型{#rto-rpo-cluster-type}的 RPO 和 RTO
+### 按集群类型的 RPO 和 RTO {#rto-rpo-cluster-type}
 
 指标| Mirror集群 ( mirror.safe ) | `Farm`集群 ( farm.safe )  
 ---|---|---  
@@ -145,7 +145,7 @@ RPO（恢复点目标） | 0（零数据丢失）— 同步复制；仅在两个
 ---|---  
 任何故障|故障检测 + 完全操作系统重启 + 应用程序重启（通常需要几分钟）  
   
-## 边缘和分布式部署适用性{#edge-distributed-deployment-suitability}
+## 边缘和分布式部署适用性 {#edge-distributed-deployment-suitability}
 
 SafeKit专为边缘、分支机构和分布式企业场景而设计。
 
@@ -177,7 +177,7 @@ SCADA 和工业控制|工厂、变电站、水厂|任何运行在Windows或Linux
 零售|门店、分店、仓库|销售点和库存管理  
 国防部|前沿作战基地、野战部队|关键任务指挥和通信系统  
   
-## 监控、管理和警报{#monitoring-management-alerting}
+## 监控、管理和警报 {#monitoring-management-alerting}
 
 功能|详情  
 ---|---  
@@ -189,7 +189,7 @@ CLI 管理|用于脚本编写和自动化的完整命令行界面
 日志管理|每个模块、每个脚本的日志文件；用于支持的调试快照  
 第三方监控集成| SafeKit会自动将所有主要集群事件记录到Windows事件日志或Linux系统日志中，使任何监控平台（包括 Nagios、Zabbix、Splunk 和 SIEM 解决方案）都能收集这些事件并使用标准警报规则发出警报，而无需任何自定义开发。  
   
-## 安全与合规{#security-compliance}
+## 安全与合规 {#security-compliance}
 
 功能|详情  
 ---|---  
@@ -200,7 +200,7 @@ TCP 使用 TLS/SSL | （用于复制、Web 控制台、分布式命令），UDP 
 防病毒兼容性|已记录的排除路径  
 作为一家欧洲公司，Eviden（Atos 集团）提供| ， SafeKit是一款独特的自主业务连续性和灾难恢复产品，适用于Windows和Linux将数据和故障转移基础设施完全保留在本地，无需依赖美国供应商，符合 NIS2 业务连续性和灾难恢复要求。  
   
-## 许可模式{#licensing-model}
+## 许可模式 {#licensing-model}
 
 方面|详情  
 ---|---  
@@ -210,7 +210,7 @@ TCP 使用 TLS/SSL | （用于复制、Web 控制台、分布式命令），UDP 
 免费试用|是 — 提供功能齐全的免费试用版  
 免费一个月许可证|可用于概念验证  
   
-## 支持与维护服务级别协议{#support-maintenance-slas}
+## 支持与维护服务级别协议 {#support-maintenance-slas}
 
 ### 标准支持与维护（包含在有效维护合同内） {#standard-support-maintenance-included-with-active-maintenance-contract}
 
@@ -233,7 +233,7 @@ AI 支持助手| [ SafeKit AI 聊天](</zh-hans/resources/safekit-support/#ai-su
 在线培训及认证|免费，自主学习，共 12 个视频（约 3 小时 40 分钟），完成课程后颁发证书  
 文档|完整用户指南、发行说明、知识库、快速入门指南  
   
-## 与替代方案{#comparison-vs-alternatives}的比较
+## 与替代方案的比较 {#comparison-vs-alternatives}
 
 标准| SafeKit | Microsoft故障转移集群 (WSFC) | VMware HA |开源*  
 ---|---|---|---|---  
@@ -248,7 +248,7 @@ OEM 嵌入式| | | |否
   
 在*上，需要 6 个独立的开源项目——Corosync、Pacemaker、DRBD、Keepalived、STONITH 和 HAProxy——才能在Linux上复制SafeKit的功能集。而SafeKit Linux一个产品中实现了相同的功能，同时适用于Windows和Linux 。
 
-## 快速参考链接{#quick-reference-links}
+## 快速参考链接 {#quick-reference-links}
 
 资源| URL  
 ---|---  

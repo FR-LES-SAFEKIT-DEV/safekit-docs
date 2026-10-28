@@ -7,19 +7,19 @@ lang: "zh-hans"
 topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kubernetes解决方案概述； SafeKit / Kubernetes解决方案在Linux ( k3s.safe ) 上的安装和配置；集群中网络隔离的不同场景； SafeKit和mirror解决方案演示；🔍 SafeKit高可用性导航中心"
 ---
 
-# 使用SafeKit的 K3S 高可用性：安装k3s.safe模块以实现故障转移{#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
+# 使用SafeKit的 K3S 高可用性：安装k3s.safe模块以实现故障转移 {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Kubernetes" mod="k3s"  %}}
  
 
-## SafeKit / Kubernetes解决方案概述{#overview-of-the-safekit--kubernetes-solution}
+## SafeKit / Kubernetes解决方案概述 {#overview-of-the-safekit--kubernetes-solution}
 
 解决方案如下： ** 💡 [ Kubernetes K3s 高可用性：双节点同步复制和故障转移](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
-## 在Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}上安装和配置SafeKit / Kubernetes解决方案
+## 在Linux ( k3s.safe )上安装和配置SafeKit / Kubernetes解决方案 {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
-### 1. 下载软件包{#1-download-packages}
+### 1. 下载软件包 {#1-download-packages}
 
   * 在Linux上下载免费版SafeKit 8.2 (safekitlinux_xx.bin)
   * 下载k3s.safe Linux模块
@@ -37,7 +37,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
 
 [文档（pdf）> ](</wp-content/uploads/documents/safekit-k3s-en.pdf>)
 
-### 2. 首先在两个节点{#2-first-on-both-nodes}上
+### 2. 首先在两个节点上 {#2-first-on-both-nodes}
 
 在 2 个Linux Ubuntu 24.04 节点上，以 root 用户身份：
 
@@ -58,7 +58,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
   * 安装SafeKit
 
 
-### 3. 在第一个节点{#3-on-the-first-node}
+### 3. 在第一个节点 {#3-on-the-first-node}
 
 在第一个节点上执行： `./k3sconfig.sh first`
 
@@ -74,7 +74,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
   * 显示 K3S 令牌（用于第二个节点安装阶段）
 
 
-### 4. 在第二个节点{#4-on-the-second-node}
+### 4. 在第二个节点 {#4-on-the-second-node}
 
 在第二个节点上执行： `./k3sconfig.sh second <token>`
 
@@ -88,7 +88,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
   * 启动 k3s 模块
 
 
-### 5. 检查 k3s SafeKit模块是否在两个节点{#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}上都运行。
+### 5. 检查 k3s SafeKit模块是否在两个节点上都运行。 {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}
 
 在两个节点上使用以下命令进行检查： `/opt/safekit/safekit –H "*" state`
 
@@ -110,7 +110,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
     成功
     
 
-### 6. 启动SafeKit Web 控制台以管理集群{#6-start-the-safekit-web-console-to-administer-the-cluster}
+### 6. 启动SafeKit Web 控制台以管理集群 {#6-start-the-safekit-web-console-to-administer-the-cluster}
 
   * 将浏览器连接到SafeKit Web 控制台 URL `http://server0-IP:9010` 。
   * 你应该会看到一个与图片类似的页面。
@@ -120,7 +120,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
 ![ Kubernetes集群已在SafeKit Web 控制台](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)中启动
 
 
-### 7. 测试{#7-testing}
+### 7. 测试 {#7-testing}
 
   * 通过向下滚动其上下文菜单并单击`Stop`来停止 PRIM 节点。
   * 确认第二个节点上是否存在故障转移，该节点应变为单独运行（绿色）。
@@ -153,7 +153,7 @@ topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kuber
 ![停止 PRIM 服务器上的模块](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 8. 使用类似 WordPress Kubernetes {#8-try-the-cluster-with-a-kubernetes-application-like-wordpress}应用程序测试集群。
+### 8. 使用类似 WordPress Kubernetes应用程序测试集群。 {#8-try-the-cluster-with-a-kubernetes-application-like-wordpress}
 
 图片中展示了一个 WordPress 安装示例：一个通过 pod 实现后端数据库的 Web 门户。
 
@@ -199,7 +199,7 @@ WordPress 具有自动高可用性：
   * 执行`helm registry login -u your_user_name docker.io` ，然后输入您的密码
 
 
-### 9. 支持{#9-support}
+### 9. 支持 {#9-support}
 
   * 要获得支持，请下载 2 个SafeKit `Snapshots` （2 个 .zip 文件），每个节点一个。
 
@@ -213,7 +213,7 @@ WordPress 具有自动高可用性：
 ![拍摄快照以供支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 
-### 10. 如有必要，配置脑裂检测器{#10-if-necessary-configure-a-splitbrain-checker}
+### 10. 如有必要，配置脑裂检测器 {#10-if-necessary-configure-a-splitbrain-checker}
 
   * 请参阅下文[ “集群中网络隔离的不同场景有哪些？” ](#isolation)了解是否需要配置脑裂检测器。
   * 在模块配置中，单击`Advanced Configuration` （见图）以编辑`userconfig.xml` 。
@@ -244,7 +244,7 @@ WordPress 具有自动高可用性：
 {{%  insert-safekit-network-isolation-zh-hans  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}解决方案的演示
+## SafeKit mirror解决方案的演示 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-zh-hans  %}}

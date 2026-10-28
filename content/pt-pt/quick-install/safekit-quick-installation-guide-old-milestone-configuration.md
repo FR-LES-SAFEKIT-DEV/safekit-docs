@@ -117,7 +117,7 @@ O botão "Aplicar" exibirá a configuração nos arquivos `userconfig.xml` , `st
 ![ Insira as configurações do módulo ](/wp-content/uploads/2023/01/appli-7-1.png)
 
 
-### 5. Verifique se a configuração {#5-verify-successful-configuration} foi bem-sucedida.
+### 5. Verifique se a configuração foi bem-sucedida. {#5-verify-successful-configuration}
 
   * Verifique a mensagem de sucesso (verde) em ambos os nós e clique em Avançar.
 

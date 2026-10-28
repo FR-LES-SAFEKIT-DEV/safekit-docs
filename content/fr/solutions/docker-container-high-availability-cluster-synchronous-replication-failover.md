@@ -48,7 +48,7 @@ Architecture de cluster haute disponibilité ![ SafeKit pour Docker offrant une 
 
 ** SafeKit ** offre une solution de haute disponibilité pour ** Docker ** entre deux serveurs redondants, sans nécessiter de disque partagé. Le système fonctionne en configurant la réplication en temps réel ** ** des répertoires associés aux données persistantes Docker . En cas de panne, SafeKit gère le basculement automatique et redémarre vos conteneurs sur le nœud secondaire en quelques secondes.
 
-### Comment fonctionne le basculement réseau automatique pour les conteneurs Docker {#how-does-automatic-network-failover-work-for-docker-containers} ?
+### Comment fonctionne le basculement réseau automatique pour les conteneurs Docker? {#how-does-automatic-network-failover-work-for-docker-containers}
 
 SafeKit implémente une adresse IP virtuelle (VIP) à commutation automatique ** ** ). Cette VIP sert de point d'entrée unique pour les applications clientes. En cas de défaillance du serveur principal, SafeKit transfère l'adresse IP virtuelle vers le serveur de secours via ** (ARP gratuit ** ). Ceci garantit que les clients se reconnectent de manière transparente à la même adresse IP sur laquelle l'application Docker a été redémarrée.
 
@@ -60,7 +60,7 @@ Un cluster sans SAN ** ** pour Docker est une architecture qui assure une haute 
 
 Oui. Cet article explique comment [ rapidement un cluster sans compétences spécialisées en clustering ni Kubernetes complexe. SafeKit utilisant les scripts ** ** automatique pour gérer le démarrage et l'arrêt des Docker , vous obtenez une solution de redondance robuste ](</fr/quick-install/safekit-quick-installation-guide-with-docker/>) beaucoup Docker simple à déployer et à maintenir que Kubernetes.
 
-### En quoi la réplication SafeKit diffère-t-elle des solutions au niveau bloc comme DRBD pour Docker {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker} ?
+### En quoi la réplication SafeKit diffère-t-elle des solutions au niveau bloc comme DRBD pour Docker? {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}
 
 Contrairement à la ** Docker solutions SafeKit SAN qui utilisent ** réplication au niveau bloc (comme DRBD) ** la réplication basée sur l' ** s'effectue au niveau fichier ** Cette approche est totalement transparente pour l'application ** car elle ne nécessite aucune migration de données vers un volume de « disque répliqué » dédié. Il suffit de SafeKit la réplication des dossiers d'application existants, même ceux situés sur le disque système ** Vous pouvez ainsi garantir une haute disponibilité pour ** Docker à son emplacement d'installation actuel, sans reconfiguration complexe du disque ni modification de l'application.
 

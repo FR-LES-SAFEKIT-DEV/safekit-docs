@@ -7,11 +7,11 @@ lang: "ja"
 topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざまなソフトウェアクラスタとは何ですか?、 SafeKitで高可用性クラスタを構築する方法?、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKitアーキテクチャ{#safekit-architectures}
+# SafeKitアーキテクチャ {#safekit-architectures}
 
-## SafeKitと{#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}には、どのような異なる高可用性アーキテクチャと異なるソフトウェアクラスタがありますか？
+## SafeKitとには、どのような異なる高可用性アーキテクチャと異なるソフトウェアクラスタがありますか？ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Mirrorクラスター{#mirror-cluster}
+### Mirrorクラスター {#mirror-cluster}
 
 
 ![ SafeKit mirror ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
@@ -19,7 +19,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 [詳細情報](</ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### `Farm`クラスター{#farm-cluster}
+### `Farm`クラスター {#farm-cluster}
 
 
 ![ SafeKit farm ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 [詳細情報](</ja/architectures/network-load-balancing-cluster/>)
 
-### `Farm` + mirrorクラスター{#farmmirror-cluster}
+### `Farm` + mirrorクラスター {#farmmirror-cluster}
 
 
 ![ SafeKit 、 farm + mirrorクラスター](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -35,7 +35,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 [詳細情報](</architectures/clustering-software-load-balancing-mirroring/>)
 
-### アクティブ/アクティブ クラスター{#activeactive-cluster}
+### アクティブ/アクティブ クラスター {#activeactive-cluster}
 
 
 ![ SafeKitリアルタイムレプリケーションを備えたアクティブアクティブクラスタ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
@@ -43,7 +43,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 [詳細情報](</architectures/active-active-cluster-real-time-replication/>)
 
-### N-1 クラスター{#n-1-cluster}
+### N-1 クラスター {#n-1-cluster}
 
 
 ![ SafeKit N-1冗長クラスタ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
@@ -51,9 +51,9 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 [詳細情報](</architectures/n-1-redundancy/>)
 
-## SafeKitと{#how-to-build-high-availability-clusters-with-safekit}を使用して高可用性クラスタを構築する方法
+## SafeKitとを使用して高可用性クラスタを構築する方法 {#how-to-build-high-availability-clusters-with-safekit}
 
-### 高可用性モジュール{#use-high-availability-modules}を使用する
+### 高可用性モジュールを使用する {#use-high-availability-modules}
 
 高可用性モジュールは、アプリケーション向けにSafeKitをカスタマイズしたものです。モジュールには2種類あり、リアルタイムデータレプリケーションとフェイルオーバー機能を備えたmirrorモジュールと、ロードバランシングとフェイルオーバー機能を備えた`farm`モジュールがあります。
 
@@ -76,7 +76,7 @@ mirrorモジュールを2台のサーバーにデプロイすると、 mirrorク
 
 2 - アプリケーションを起動および停止するためのスクリプト。
 
-### 高可用性モジュールのプラグアンドプレイ展開{#plug-and-play-deployment-of-high-availability-modules}
+### 高可用性モジュールのプラグアンドプレイ展開 {#plug-and-play-deployment-of-high-availability-modules}
 
 アプリケーションモジュールが構成され、アプリケーションとのテストが完了すれば、展開には特別なITスキルは必要ありません。
 

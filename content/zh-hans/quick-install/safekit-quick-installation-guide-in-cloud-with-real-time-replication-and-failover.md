@@ -7,19 +7,19 @@ lang: "zh-hans"
 topics: "云端高可用性快速安装指南， SafeKit高可用性限制， SafeKit / 云端mirror解决方案概述，在Windows和Linux ( mirror.safe ) 上安装SafeKit / 云端mirror解决方案， SafeKit / 云端mirror解决方案分步配置， SafeKit和mirror解决方案演示，🔍 SafeKit高可用性导航中心"
 ---
 
-# 使用SafeKit实现云高可用性：安装mirror.safe模块以实现故障转移{#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# 使用SafeKit实现云高可用性：安装mirror.safe模块以实现故障转移 {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Cloud" mod="mirror"  %}}
  
 
-## SafeKit / 云mirror解决方案概述{#overview-of-the-safekit--cloud-mirror-solution}
+## SafeKit / 云mirror解决方案概述 {#overview-of-the-safekit--cloud-mirror-solution}
 
 解决方案描述如下： ** 💡 [云无关高可用性： SafeKit同步复制和故障转移](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
-## 在Windows和Linux ( mirror.safe ) {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}上安装SafeKit / Cloud mirror解决方案
+## 在Windows和Linux ( mirror.safe )上安装SafeKit / Cloud mirror解决方案 {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### 云负载均衡器{#configuration-of-the-cloud-load-balancer}的配置
+### 云负载均衡器的配置 {#configuration-of-the-cloud-load-balancer}
 
 如果要实现虚拟 IP 地址，则必须配置负载均衡器。  
 负载均衡器必须配置为定期向节点发送健康数据包。  
@@ -38,7 +38,7 @@ topics: "云端高可用性快速安装指南， SafeKit高可用性限制， Sa
 
 ⚠️ 请勿在以下步骤配置的第 4 步配置虚拟 IP 地址。云负载均衡器中已设置虚拟 IP 地址。在第 4 步设置虚拟 IP 地址仅适用于本地配置。
 
-### 云网络安全配置{#configuration-of-the-cloud-network-security}
+### 云网络安全配置 {#configuration-of-the-cloud-network-security}
 
 必须配置网络安全，以启用以下协议和端口的通信：
 
@@ -58,13 +58,13 @@ topics: "云端高可用性快速安装指南， SafeKit高可用性限制， Sa
 
 注意：您将要配置的通用**mirror.safe**模块包含在软件包中。
 
-## SafeKit / 云mirror解决方案{#step-by-step-configuration-of-the-safekit--cloud-mirror-solution}的逐步配置
+## SafeKit / 云mirror解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--cloud-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-zh-hans app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}解决方案的演示
+## SafeKit mirror解决方案的演示 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-zh-hans  %}}

@@ -7,7 +7,7 @@ lang: "ja"
 topics: "K3s HA の簡素化: MetalLB と Longhorn ではなくSafeKit選択する理由、目次、 SafeKitソフトウェアがKubernetes K3s 高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがKubernetes K3S とどのように連携するか、 SafeKit高可用性の制限、比較: SafeKitと標準 K3s スタック (MetalLB と Longhorn)、ビデオ ガイド: SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー{#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
+# Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
 
 ## K3s HAの簡素化：MetalLBやLonghornではなくSafeKitを選ぶ理由とは？ {#safekit-k3s-ha-introduction}
 
@@ -30,7 +30,7 @@ K3s向けの標準的なオープンソーススタック（MetalLB + Longhorn�
 
 
 <a class="btn-quick-install" href="/ja/quick-install/safekit-quick-installation-guide-with-kubernetes/"> ⚡ Kubernetes HAクラスタのクイックインストールガイド > </a>
-## 目次{#toc}
+## 目次 {#toc}
 
   * [ソフトウェアSafeKitどのようにしてKubernetes高可用性クラスタを簡単に実装するのでしょうか？ ](#safekit-mirror-k3s-cluster)
   * [ SafeKit mirrorクラスターは、 Kubernetes K3S とどのように連携しますか? ](#safekit-mirror-cluster)
@@ -42,15 +42,15 @@ K3s向けの標準的なオープンソーススタック（MetalLB + Longhorn�
 
 ## SafeKitソフトウェアはどのようにしてKubernetes K3s高可用性クラスタを簡単に実装するのでしょうか？ {#safekit-mirror-k3s-cluster}
 
-### 2ノードのK3sクラスタKubernetes {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}で高可用性を実装するにはどうすればよいですか？
+### 2ノードのK3sクラスタKubernetesで高可用性を実装するにはどうすればよいですか？ {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
 
 **SafeKit k3s.safe mirror module**を使用すると、2 ノードのKubernetes K3s クラスタの高可用性 (HA) を実装できます。このソリューションにより、外部 NFS ストレージ、専用の外部構成データベース、またはKubernetesに関する専門知識を必要とせずに、冗長環境をデプロイできます。
 
-### エッジ{#why-use-k3s-for-edge-and-iot-computing}ィングとIoTコンピューティングにK3sを使用する理由とは？
+### エッジィングとIoTコンピューティングにK3sを使用する理由とは？ {#why-use-k3s-for-edge-and-iot-computing}
 
 [ K3s ](<https://k3s.io/>)は** **最適なKubernetesエンジンです。標準のKubernetesの運用上のオーバーヘッドを簡素化しつつ、完全な互換性を維持します。
 
-### k3s.safe mirror {#what-are-the-key-features-of-the-k3ssafe-mirror-module}の主な特徴は何ですか？
+### k3s.safe mirrorの主な特徴は何ですか？ {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
 k3s.safeモジュールは、以下の機能を実装することで、K3s向けの包括的なHAスタックを提供します。
 
@@ -89,7 +89,7 @@ NFS ストレージと PV | • 仮想 IP と NFS ポートをホストします
 
 ## SafeKit mirrorクラスターは、 Kubernetes K3S とどのように連携しますか? {#safekit-mirror-cluster}
 
-### ステップ 1: Mirrorクラスターでのバイトレベルのファイルレプリケーション{#step-1-byte-level-file-replication-in-a-mirror-cluster}
+### ステップ 1: Mirrorクラスターでのバイトレベルのファイルレプリケーション {#step-1-byte-level-file-replication-in-a-mirror-cluster}
 
 このステージでは、 **サーバー 1 (PRIM) **と**サーバー 2 (SECOND) **間の高可用性アーキテクチャを示します。両方のサーバーは、 [アーキテクチャ テーブル](#safekit-k3s-architecture-table)で定義されている K3s マスターおよびエージェント コンポーネントを実行します。
 
@@ -102,7 +102,7 @@ NFS ストレージと PV | • 仮想 IP と NFS ポートをホストします
 K3sマスターは、K3sエージェントと直接通信することで、ワークロードを両方のノード（またはそれ以上）に分散します。外部クライアントは、  
 [クラスターの仮想 IP アドレスは PRIM ノード上の](</ja/best-practises/how-a-virtual-ip-address-works/>) 。標準のKubernetesメカニズムを使用して、K3s マスターはノード全体に分散されたポッドにトラフィックを中継します。同様に、ポッドは仮想 IP と NFS ポートを介して PRIM サーバー上の**永続ボリューム (PV) **にアクセスします。
 
-### ステップ2：自動フェイルオーバーとサービス継続性{#step-2-automatic-failover-and-service-continuity}
+### ステップ2：自動フェイルオーバーとサービス継続性 {#step-2-automatic-failover-and-service-continuity}
 
 **サーバー 1 (PRIM) **が故障した場合、 **サーバー 2 (SECOND) **自動的にクラスタ操作を引き継ぎ、継続性を確保します。
 
@@ -117,7 +117,7 @@ SafeKit障害を検知し、直ちにクラスタの仮想 IP アドレス** ** 
 サーバー1がオフラインの間も、 MariaDBとNFSサービスはサーバー2上で引き続き実行され、変更内容はローカルにのみ書き込まれます。  
 
 
-### ステップ3：フェイルバックと自動再統合{#step-3-failback-and-automatic-reintegration}
+### ステップ3：フェイルバックと自動再統合 {#step-3-failback-and-automatic-reintegration}
 
 **フェイルバック** この問題が発生するのは、最初の問題が解決された後にサーバー1が再起動された場合です。 SafeKit 自動的に再同期します MariaDB NFS ファイルでは、ダウンタイム中にサーバー 2 で変更されたデータのみを更新します。この再統合プロセスは **非破壊的** K3sのマスターおよびエージェントコンポーネントは、サーバー2上で中断なく引き続き稼働しています。 
 
@@ -132,7 +132,7 @@ SafeKit 、サーバーの停止方法に基づいて復旧時間を最適化し
   * **システムクラッシュ（例：停電）：** サーバー1が正常にシャットダウンされなかった場合、安全のため変更ビットマップはバイパスされます。 SafeKit 代わりに、最後に確立された同期ポイントよりも新しい変更タイムスタンプを持つすべてのファイルを再同期し、 **データの完全性**. 
 
 
-### ステップ4：高可用性と負荷分散の復元{#step-4-restoring-high-availability-and-load-distribution}
+### ステップ4：高可用性と負荷分散の復元 {#step-4-restoring-high-availability-and-load-distribution}
 
 再統合後、クラスタ**ステップ 1 で説明した状態を反映して、完全mirrorモードに戻ります**システムは再び高可用性状態になります** 2 では NFS サービス** **アクティブになり、すべてのSafeKit更新のリアルタイムレプリケーションが Server MariaDBに**されます。 
 
@@ -199,13 +199,13 @@ Kubernetes K3s クラスターで通常動作に戻る![ mirror ](/wp-content/up
   
 要約** ** 、標準的な DIY スタック (MetalLB + Longhorn) はKubernetes家向けにモジュール性を提供します** 、ストレージSafeKitネットワーク ツールが管理するように設計されているノード障害に対して脆弱になる**循環**関係を生み出します。このループは**独立したインフラストラクチャ レイヤーとして動作することで解消されます。 Kubernetesまたはホスト OS がハングしても動作し続ける、より堅牢でハードウェアに依存しない 2 ノード HA ソリューションを提供します。これにより、従来の分散ブロック ストレージおよびネットワーク オーバーレイに必要な、リソースのオーバーヘッドが大きい、必須の 3 ノード クォーラム、または構成の複雑さなしに、自動復旧とデータの整合性が確保されます。
 
-## ビデオガイド： SafeKit HA mirrorクラスタ{#videoguide-safekit-mirror-cluster}の構成
+## ビデオガイド： SafeKit HA mirrorクラスタの構成 {#videoguide-safekit-mirror-cluster}
 
 ### SafeKit動画: アプリケーションレベルのクラスタリング (8:47) {#demo-mirror-ha-cluster}
 
 このビデオでは、 SafeKitの可用性が高い Microsoft SQL Serverこれは、ソリューションがK3s環境をどのように保護するかについて、優れた概要を提供します。 SafeKit 他のデータベースや業務上重要なアプリケーションでも同様に機能します。
 
-### 動画ハイライト{#video-highlights}
+### 動画ハイライト {#video-highlights}
 
   1. 🎬 [ 2 ノードとSQL Server ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
   2. 🎬 [クラスターとmirror.safeモジュール](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>)を設定します (3:58)

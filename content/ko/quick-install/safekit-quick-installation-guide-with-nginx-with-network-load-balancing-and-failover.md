@@ -7,7 +7,7 @@ lang: "ko"
 topics: "NGINX 고가용성 빠른 설치 가이드( SafeKit , 고가용성 제한 사항, SafeKit /NGINX 솔루션 개요, Windows 및 Linux ( farm.safe )에 SafeKit /NGINX 솔루션 설치, SafeKit /NGINX 솔루션 단계별 구성, SafeKit `farm` 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# NGINX 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module} 모듈 설치
+# NGINX 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe 모듈 설치 {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ko app="NGINX" mod="farm"  %}}
@@ -17,7 +17,7 @@ topics: "NGINX 고가용성 빠른 설치 가이드( SafeKit , 고가용성 제�
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : 올인원 NGINX 로드 밸런싱 및 고가용성 소프트웨어 ](</solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>) ** .
 
-## Windows 및 Linux ( farm.safe ) 및 {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe} 에 SafeKit /NGINX 솔루션 설치
+## Windows 및 Linux ( farm.safe ) 및 에 SafeKit /NGINX 솔루션 설치 {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -32,13 +32,13 @@ topics: "NGINX 고가용성 빠른 설치 가이드( SafeKit , 고가용성 제�
 
 참고: 구성할 범용 **farm.safe** 모듈은 패키지 안에 포함되어 있습니다.
 
-## SafeKit / NGINX 솔루션 {#step-by-step-configuration-of-the-safekit--nginx-solution} 의 단계별 구성
+## SafeKit / NGINX 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--nginx-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ko app="NGINX" mod="farm"  %}}
  
 
-## SafeKit `farm` 솔루션 {#demonstration-of-the-safekit-farm-solution} 시연
+## SafeKit `farm` 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ko  %}}

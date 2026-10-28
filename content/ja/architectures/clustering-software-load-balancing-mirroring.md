@@ -7,17 +7,17 @@ lang: "ja"
 topics: "SafeKitクラスタリングソフトウェア、🔍 SafeKit高可用性ナビゲーションハブによる、重要なWebアプリケーションおよびデータベースアプリケーションの高可用性と拡張性"
 ---
 
-# ファームとミラー向けのクラスタリングソフトウェア：高可用性と負荷分散{#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# ファームとミラー向けのクラスタリングソフトウェア：高可用性と負荷分散 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## SafeKitクラスタリングソフトウェア{#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}による、重要なWebアプリケーションおよびデータベースアプリケーションの高可用性と拡張性
+## SafeKitクラスタリングソフトウェアによる、重要なWebアプリケーションおよびデータベースアプリケーションの高可用性と拡張性 {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
-### ロードバランシング、ミラーリング、フェイルオーバー{#load-balancing-mirroring-and-failover}
+### ロードバランシング、ミラーリング、フェイルオーバー {#load-balancing-mirroring-and-failover}
 
 
 ![ SafeKit負荷分散とミラーリングによるクラスタリング](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-### SafeKitクラスタリングソフトウェア{#example-with-the-safekit-clustering-software}を使用した例
+### SafeKitクラスタリングソフトウェアを使用した例 {#example-with-the-safekit-clustering-software}
 
 例えば、 SafeKitクラスタリングソフトウェアを使用すると、 IISロードバランシングとMicrosoftおよびSQL Serverミラーリングを実装できます。
 
@@ -27,7 +27,7 @@ topics: "SafeKitクラスタリングソフトウェア、🔍 SafeKit高可用�
 
 SafeKitクラスタリングソフトウェアでは、同一サーバー上での展開と異なるサーバー上での展開に違いはありません。
 
-### 高可用性と拡張性ソリューション{#high-availability-and-scalability-solution}
+### 高可用性と拡張性ソリューション {#high-availability-and-scalability-solution}
 
 SafeKitクラスタリングソフトウェアは、重要なWebアプリケーションおよびデータベースアプリケーション向けに、シンプルで高可用性と拡張性に優れたソリューションを提供します。
 

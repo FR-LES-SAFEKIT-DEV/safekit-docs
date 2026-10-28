@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "什么是楼宇管理系统 (BMS)？为什么 BMS 软件至关重要？BMS 主要厂商有哪些？ SafeKit提供两种 BMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 SafeKit高可用性导航中心"
 ---
 
-# 楼宇管理系统 (BMS) 的高可用性和冗余性{#high-availability-and-redundancy-for-building-management-systems-bms}
+# 楼宇管理系统 (BMS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-building-management-systems-bms}
 
-##  {#what-is-a-building-management-system-bms}是楼宇管理系统（BMS）？
+##  是楼宇管理系统（BMS）？ {#what-is-a-building-management-system-bms}
 
 楼宇管理系统（BMS）可实现对建筑物的暖通空调（HVAC）、电气、照明等设备的自动集中控制……
 
@@ -23,7 +23,7 @@ topics: "什么是楼宇管理系统 (BMS)？为什么 BMS 软件至关重要？
 
 因此，该系统必须始终可供楼宇运营人员使用，以便他们对任何轻微事件都能立即做出反应。
 
-##  BMS {#key-players-list-in-bms}中的关键参与者列表
+##  BMS中的关键参与者列表 {#key-players-list-in-bms}
 
 BMS的关键参与者包括：
 

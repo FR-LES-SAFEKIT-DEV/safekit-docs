@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SafeKit `Farm`クラスタ: Linuxのソフトウェアのみの NLB と自動フェイルオーバー、目次、 SafeKitソフトウェアがLinuxネットワーク負荷分散 (NLB) クラスタをどのように簡単に実装するか、 `farm`モードのSafeKitクラスタがLinuxとどのように連携するか、比較: SafeKit用のLinux `Farm`クラスタと他の NLB クラスタリング ソリューション、ビデオ ガイド: SafeKit `Farm` NLB クラスタの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# SafeKit : オールインワンLinuxロードバランシング＆高可用性ソフトウェア{#safekit-all-in-one-linux-load-balancing--high-availability-software}
+# SafeKit : オールインワンLinuxロードバランシング＆高可用性ソフトウェア {#safekit-all-in-one-linux-load-balancing--high-availability-software}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="Linux" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

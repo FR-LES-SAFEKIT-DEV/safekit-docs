@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "实时复制的活/活集群如何工作？🔍 SafeKit高可用性导航中心"
 ---
 
-# 具备实时复制和相互故障转移功能的双活集群软件{#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# 具备实时复制和相互故障转移功能的双活集群软件 {#active-active-clustering-software-with-real-time-replication--mutual-failover}
 
 ## 实时复制的活/活集群是如何工作的？ {#how-the-active-active-cluster-with-real-time-replication-works}
 
-### 具有实时复制功能的双活集群{#active--active-cluster-with-real-time-replication}
+### 具有实时复制功能的双活集群 {#active--active-cluster-with-real-time-replication}
 
 应用程序运行在两台服务器上，并相互进行故障转移。每台服务器都是另一台服务器的备份。每个应用程序都使用各自独立的复制文件目录。
 
@@ -32,7 +32,7 @@ SafeKit主动-主动集群的配置非常简单，只需部署两个支持实时
   * 每个mirror模块都将拥有自己的虚拟 IP 地址、自己的复制文件目录和自己的恢复脚本。
 
 
-### 活跃活跃集群{#example-of-an-active-active-cluster}的示例
+### 活跃活跃集群的示例 {#example-of-an-active-active-cluster}
 
 💡 [ Hyper-V ](</zh-hans/solutions/hyper-v-replication-automatic-failover-load-balancing/>)或 💡 [ KVM ](</zh-hans/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)解决方案具有复制、自动故障转移和虚拟机负载均衡功能，是一个具有 N 个mirror模块的主动-主动集群的示例，该集群在两个物理服务器之间复制 N 个虚拟机。
 

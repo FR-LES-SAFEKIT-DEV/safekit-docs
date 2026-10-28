@@ -7,7 +7,7 @@ lang: "ko"
 topics: "Docker 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Docker 솔루션 개요, Linux ( mirror.safe )에 SafeKit / Docker 솔루션 설치, SafeKit / Docker 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# Docker 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover} 포함)
+# Docker 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 포함) {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Docker" mod="mirror"  %}}
@@ -18,7 +18,7 @@ topics: "Docker 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Docker 고가용성 및 실시간 데이터 복제 소프트웨어 ](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
-## SafeKit / Docker 솔루션의 Linux ( mirror.safe ) 및 {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe} 설치
+## SafeKit / Docker 솔루션의 Linux ( mirror.safe ) 및 설치 {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -44,7 +44,7 @@ Docker 구성 애플리케이션의 경우, 애플리케이션과 모든 컨테�
     * start_prim 및 stop_prim 스크립트에 각각 **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** 및 **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop** 넣으세요.
 
 
-### 예제 2: Docker 애플리케이션이 {#example-2-with-a-docker-application-starting-a-set-of-containers} 컨테이너 세트를 시작하는 예
+### 예제 2: Docker 애플리케이션이 컨테이너 세트를 시작하는 예 {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
 여기서는 Docker 애플리케이션, ** myappli ** 일련의 컨테이너를 시작한다고 가정합니다.
 
@@ -58,7 +58,7 @@ Docker 구성 애플리케이션의 경우, 애플리케이션과 모든 컨테�
     * start_prim 및 stop_prim 스크립트에 각각 다음을 입력하십시오: ** /.../myappli 시작 ** 및 ** /.../myappli 중지 **
 
 
-### 간단한 Docker 이미지 {#example-3-with-a-simple-docker-image} 사용한 예제 3
+### 간단한 Docker 이미지 사용한 예제 3 {#example-3-with-a-simple-docker-image}
 
 구성 방법은 nginx Docker 이미지(웹 서버)를 예로 들어 설명합니다.
 
@@ -77,13 +77,13 @@ Docker 구성 애플리케이션의 경우, 애플리케이션과 모든 컨테�
     * SafeKit 구성 후, ** http://vitual-ip:9011** 사용하여 index.html 에 대한 접근을 테스트합니다.
 
 
-## SafeKit / Docker 솔루션 {#step-by-step-configuration-of-the-safekit--docker-solution} 의 단계별 구성
+## SafeKit / Docker 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--docker-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Docker" mod="mirror"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

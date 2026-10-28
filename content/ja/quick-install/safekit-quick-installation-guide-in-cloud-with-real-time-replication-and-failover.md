@@ -7,19 +7,19 @@ lang: "ja"
 topics: "クラウド向け高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / クラウドmirrorソリューションの概要、 SafeKitおよびLinux ( mirror.safe ) へのWindows / クラウドmirrorソリューションのインストール、 SafeKit / クラウドmirrorソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKitを使用したクラウド高可用性: {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}フェイルオーバー用にmirror.safeモジュールをインストールしてください
+# SafeKitを使用したクラウド高可用性:フェイルオーバー用にmirror.safeモジュールをインストールしてください {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Cloud" mod="mirror"  %}}
  
 
-## SafeKit / クラウドmirrorソリューション{#overview-of-the-safekit--cloud-mirror-solution}の概要
+## SafeKit / クラウドmirrorソリューションの概要 {#overview-of-the-safekit--cloud-mirror-solution}
 
 ソリューションはここに記載されています: ** 💡 [クラウド非依存の高可用性: SafeKit同期レプリケーションとフェイルオーバー](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
-## SafeKit / Cloud mirrorソリューションをWindowsおよびLinux ( mirror.safe ) {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}にインストールします。
+## SafeKit / Cloud mirrorソリューションをWindowsおよびLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### クラウドロードバランサー{#configuration-of-the-cloud-load-balancer}の設定
+### クラウドロードバランサーの設定 {#configuration-of-the-cloud-load-balancer}
 
 仮想IPアドレスを実装する場合は、ロードバランサーを設定する必要があります。  
 また、ロードバランサーは、ノードに対して定期的にヘルスチェックパケットを送信するように設定する必要があります。  
@@ -38,7 +38,7 @@ topics: "クラウド向け高可用性クイックインストールガイド�
 
 ⚠️ 下記の手順設定のステップ4では、仮想IPアドレスを設定しないでください。仮想IPアドレスは既にクラウドロードバランサーに設定されています。ステップ4で仮想IPを設定するのは、オンプレミス環境での設定にのみ有効です。
 
-### クラウドネットワークセキュリティの設定{#configuration-of-the-cloud-network-security}
+### クラウドネットワークセキュリティの設定 {#configuration-of-the-cloud-network-security}
 
 ネットワークセキュリティは、以下のプロトコルとポートでの通信を有効にするように構成する必要があります。
 
@@ -58,13 +58,13 @@ topics: "クラウド向け高可用性クイックインストールガイド�
 
 注：設定する汎用モジュール**mirror.safe**は、パッケージ内に同梱されています。
 
-## SafeKit / Cloud mirrorソリューション{#step-by-step-configuration-of-the-safekit--cloud-mirror-solution}の段階的な構成
+## SafeKit / Cloud mirrorソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--cloud-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

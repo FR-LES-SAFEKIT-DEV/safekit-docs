@@ -7,19 +7,19 @@ lang: "ja"
 topics: "AWSの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / AWS mirrorソリューションの概要、 SafeKitおよびLinux ( mirror.safe ) へのWindows / AWS mirrorソリューションのインストール、 SafeKit / AWS mirrorソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモンストレーション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# AWS高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください{#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# AWS高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="AWS" mod="mirror"  %}}
  
 
-## SafeKit / AWS mirrorソリューションの概要{#overview-of-the-safekit--aws-mirror-solution}
+## SafeKit / AWS mirrorソリューションの概要 {#overview-of-the-safekit--aws-mirror-solution}
 
 ソリューションはここに記載されています: ** 💡 [ Amazon AWS高可用性: SafeKit同期レプリケーションとフェイルオーバー](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
-## SafeKit / AWS mirrorソリューションをWindowsおよびLinux ( mirror.safe ) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}にインストールします。
+## SafeKit / AWS mirrorソリューションをWindowsおよびLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Amazon AWSロードバランサー{#configuration-of-the-amazon-aws-load-balancer}の設定
+### Amazon AWSロードバランサーの設定 {#configuration-of-the-amazon-aws-load-balancer}
 
 仮想IPアドレスを使用する場合は、ロードバランサーを設定する必要があります。  
 また、ロードバランサーは、ノードに対して定期的にヘルスチェックパケットを送信するように設定する必要があります。  
@@ -41,7 +41,7 @@ Amazon AWSロードバランサーを以下のように設定する必要があ�
 
 ⚠️ 下記の手順設定のステップ4では、仮想IPアドレスを設定しないでください。仮想IPアドレスは、Amazon AWSロードバランサーに既に設定されています。ステップ4で仮想IPアドレスを設定するのは、オンプレミス環境での設定にのみ有効です。
 
-### Amazon AWSネットワークセキュリティ{#configuration-of-the-amazon-aws-network-security}の設定
+### Amazon AWSネットワークセキュリティの設定 {#configuration-of-the-amazon-aws-network-security}
 
 ネットワークセキュリティは、以下のプロトコルとポートでの通信を有効にするように構成する必要があります。
 
@@ -61,13 +61,13 @@ Amazon AWSロードバランサーを以下のように設定する必要があ�
 
 注：設定する汎用モジュール**mirror.safe**は、パッケージ内に同梱されています。
 
-## SafeKit / AWS mirrorソリューション{#step-by-step-configuration-of-the-safekit--aws-mirror-solution}の段階的な構成
+## SafeKit / AWS mirrorソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--aws-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

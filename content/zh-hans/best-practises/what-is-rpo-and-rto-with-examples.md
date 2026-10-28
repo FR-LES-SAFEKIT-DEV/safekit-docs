@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务连续性解决方案的 RPO 和 RTO？、如何确定备份和灾难恢复解决方案的 RPO 和 RTO？、 SafeKit Mirror集群如何实现零 RPO 和低 RTO？、具有负载均衡的SafeKit `Farm`集群的 RTO 基准是什么？、对比表：RTO 与 RPO、高可用性实战：零 RPO 和近零 RTO 的实时演示、常见问题解答：优化 RPO 和 RTO 以实现业务连续性、🔍 SafeKit高可用性导航中心"
 ---
 
-# 什么是 RPO 和 RTO？定义、示例和高可用性策略{#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
+# 什么是 RPO 和 RTO？定义、示例和高可用性策略 {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
 
 ## 快速总结：RPO 与 RTO {#article-summary}
 
@@ -21,7 +21,7 @@ topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务
 
 ** RPO 与 RTO：比较SafeKit **中的数据丢失和恢复时间
 
-## 目录{#table-of-contents}
+## 目录 {#table-of-contents}
 
   * 如何计算高可用性和业务连续性解决方案的恢复点目标[ RPO) 和恢复时间目标](#calculate-rpo-rto-high-availability) RTO)？
   * ](#calculate-rpo-rto-backup-solution)确定备份和灾难恢复解决方案的[和 RTO？
@@ -37,7 +37,7 @@ topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务
 {{%  insert-safekit-4-buttons-zh-hans  %}}
  
 
-## {#calculate-rpo-rto-high-availability}计算高可用性和业务连续性解决方案的 RPO 和 RTO？
+## 计算高可用性和业务连续性解决方案的 RPO 和 RTO？ {#calculate-rpo-rto-high-availability}
 
 ### 什么是高可用性？ {#what-is-high-availability}
 
@@ -125,7 +125,7 @@ topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务
   * **自动 IP 和应用故障转移： **如果主节点发生故障， SafeKit会自动检测心跳丢失，并在备用节点上重新建立应用及其虚拟 IP 地址。这可实现约一分钟的恢复时间目标 (RTO)，从而确保服务的无缝连续性。
 
 
-### SafeKit Mirror {#rpo-safekit-example}的 RPO 分别是多少？
+### SafeKit Mirror的 RPO 分别是多少？ {#rpo-safekit-example}
 
 SafeKit的 RPO ** **因为节点之间的数据复制是[的mirror并且](</zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/> "Synchronous vs Asynchronous Replication")实时的。
 
@@ -133,7 +133,7 @@ SafeKit的 RPO ** **因为节点之间的数据复制是[的mirror并且](</zh-h
 
 相比之下，对于异步复制**和** ，恢复点目标 (RPO) 大于零。由于主服务器写入和辅助服务器更新之间存在延迟，因此在故障转移到辅助服务器期间，一旦发生故障，就会造成数据丢失。对于关键业务连续性应用** ** ，同步复制是确保应用程序重启后数据完整性达到 100% 的唯一方法。
 
-### SafeKit Mirror {#what-is-rto-safekit}的 RTO 是多少？
+### SafeKit Mirror的 RTO 是多少？ {#what-is-rto-safekit}
 
 在标准配置中，集群的恢复时间目标** RTO SafeKit约为一分钟。 **提供了在**层** **机层实现高可用性的灵活性mirror **两种SafeKit对恢复时间的影响各不相同： 
 
@@ -148,7 +148,7 @@ SafeKit的 RPO ** **因为节点之间的数据复制是[的mirror并且](</zh-h
 
 通过利用**应用级高可用性** 、 SafeKit ，消除了标准虚拟化中固有的“重启惩罚”，确保您的**业务连续性计划**实现尽可能低的停机时间。 
 
-## 具有负载均衡功能的SafeKit `Farm` {#rpo-rto-safekit-farm-cluster}集群的 RTO 基准是什么？
+## 具有负载均衡功能的SafeKit `Farm`集群的 RTO 基准是什么？ {#rpo-rto-safekit-farm-cluster}
 
 ### SafeKit `Farm`集群是什么？ {#what-is-safekit-farm-cluster}
 
@@ -164,7 +164,7 @@ SafeKit的 RPO ** **因为节点之间的数据复制是[的mirror并且](</zh-h
   * **自动故障检测与重配置：如果**中的一个节点发生故障， SafeKit会通过心跳机制检测`farm`该故障，并立即将流量重新分配到其余健康节点。由于其他节点已处于活动状态并准备好承担负载，因此这使得整个服务的恢复时间目标 (RTO) 接近于零。
 
 
-### SafeKit `Farm` {#what-is-rpo-safekit-farm}的 RPO 分别是多少？
+### SafeKit `Farm`的 RPO 分别是多少？ {#what-is-rpo-safekit-farm}
 
 对于** ** `Farm` SafeKit ** ，其恢复点目标 (RPO) **通常被认为**不适用 (N/A) ** 。这是因为`farm`集群专为**无状态应用程序**而设计，这些应用程序的数据不存储在节点本地。 
 
@@ -174,7 +174,7 @@ SafeKit的 RPO ** **因为节点之间的数据复制是[的mirror并且](</zh-h
   * **外部数据存储： **如果应用程序需要数据持久性，则通常由单独的后端** SafeKit Mirror集群**处理，此时 RPO 将为零。 
 
 
-### SafeKit `Farm` {#rto-example-safekit-farm-cluster}的 RTO 是多少？
+### SafeKit `Farm`的 RTO 是多少？ {#rto-example-safekit-farm-cluster}
 
 在`farm`架构中，由于所有节点通常同时处于活动状态， ** RTO 会缩短至仅几秒** 。恢复时间取决于集群重新配置其流量分配的速度：
 
@@ -208,14 +208,14 @@ SafeKit的 RPO ** **因为节点之间的数据复制是[的mirror并且](</zh-h
 Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失）  
 `Farm`集群|网络负载均衡|几秒钟|不适用（无状态）  
   
-## 高可用性实战：零 RPO 和近零 RTO 的实时演示{#safekit-rpo-rto-video-demos}
+## 高可用性实战：零 RPO 和近零 RTO 的实时演示 {#safekit-rpo-rto-video-demos}
 
 ### 视频：在SafeKit Mirror集群中实现零 RPO 和低 RTO (8:47) {#demo-mirror-cluster-rpo-rto}
 
 了解SafeKit如何处理严重故障。本视频演示了**同步复制**如何确保 SQL 数据库中的数据不丢失（RPO 0），以及**如何自动重启辅助节点上的**服务（低 RTO）。
 
 
-#### 章节{#chapters}
+#### 章节 {#chapters}
 
   1. 🎬 [ 2 个节点，包含SQL Server和](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
   2. 🎬 [配置集群和mirror.safe模块](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
@@ -227,7 +227,7 @@ Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失�
 
 观看SafeKit如何管理 Apache Web `farm` ，以提供性能扩展和即时故障转移。
 
-#### 章节{#chapters-1}
+#### 章节 {#chapters-1}
 
   1. 🎬 [ 2 个节点，Apache ](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   2. 🎬 [配置集群和farm.safe模块](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -235,7 +235,7 @@ Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失�
 
 [免费试用链接](</zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/>)
 
-## 常见问题解答：优化 RPO 和 RTO 以实现业务连续性{#faq-rpo-rto}
+## 常见问题解答：优化 RPO 和 RTO 以实现业务连续性 {#faq-rpo-rto}
 
 ### RPO 和 RTO 可以为零吗？ {#can-rpo-rto-be-zero}
 
@@ -245,7 +245,7 @@ Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失�
 
 两者本身**孰轻孰重之分，它们各自扮演着不同的角色。 **点目标 (RPO) 侧重于数据丢失——即您可以承受的数据丢失量。 **时间目标 (RTO) **于停机时间——即您必须多快恢复在线。对于关键任务型应用而言，两者都必须尽可能缩短。
 
-### 应用层和虚拟机层（VM）的SafeKit与{#safekit-application-vs-vm-level}的 RPO 和 RTO 有何区别？
+### 应用层和虚拟机层（VM）的SafeKit与的 RPO 和 RTO 有何区别？ {#safekit-application-vs-vm-level}
 
 虽然两者都通过同步复制确保**为 0， **它们的恢复时间有所不同：
 
@@ -253,7 +253,7 @@ Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失�
   * **虚拟机级别： **更高的恢复时间目标 (RTO)，因为整个虚拟机必须在辅助主机上重启。虽然它与应用程序无关，但缺乏对应用程序进程本身的细粒度监控。
 
 
-### HA 解决方案和备份解决方案在 RTO 方面有什么区别{#ha-vs-backup-rto}
+### HA 解决方案和备份解决方案在 RTO 方面有什么区别 {#ha-vs-backup-rto}
 
 高可用性 (HA) 通常能提供更短的恢复时间目标 (RTO)（几秒到几分钟），因为它能自动处理本地故障。而灾难恢复 (DR) 的备份解决方案通常需要更长的 RTO（几小时到几天），因为它需要在重大灾难发生后，从地理位置遥远的站点恢复数据和服务。
 
@@ -267,7 +267,7 @@ Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失�
 
 这样，无需人工干预即可实现** RPO = 0 ** （实时镜像）和**最小 RTO ** （大约 1 分钟内发生故障转移）。
 
-### 为什么将高可用性和备份相结合对于优化恢复点目标 (RPO) 和恢复时间{#combining-ha-and-backup-for-rpo-rto} (RTO) 至关重要？
+### 为什么将高可用性和备份相结合对于优化恢复点目标 (RPO) 和恢复时间(RTO) 至关重要？ {#combining-ha-and-backup-for-rpo-rto}
 
 将高可用性 (HA) 与备份解决方案相结合，是实现“两全其美”恢复策略的唯一途径。虽然它们经常被放在一起讨论，但它们解决的是 RPO/RTO 等式中的不同部分：
 

@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "升级受SafeKit保护的高可用性应用程序、虚拟机级高可用性、应用程序级高可用性、选择合适的升级策略、结论、🔍 SafeKit高可用性导航中心"
 ---
 
-# 升级高可用性集群{#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}中受SafeKit保护的应用程序
+# 升级高可用性集群中受SafeKit保护的应用程序 {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
 
-## 升级受SafeKit {#upgrading-a-high-availability-application-protected-by-safekit}保护的高可用性应用程序
+## 升级受SafeKit保护的高可用性应用程序 {#upgrading-a-high-availability-application-protected-by-safekit}
 
 保持业务关键型应用程序的更新对于安全性、性能和新功能的获取至关重要。当应用程序受SafeKit保护时，升级过程取决于所使用的高可用性架构。
 
@@ -21,13 +21,13 @@ topics: "升级受SafeKit保护的高可用性应用程序、虚拟机级高可�
 
 每款机型都提供不同的升级机制和回滚策略。
 
-## 虚拟机级高可用性{#vm-level-ha}
+## 虚拟机级高可用性 {#vm-level-ha}
 
 使用SafeKit VM 故障转移解决方案（例如**hyperv.safe**和**kvm.safe** ，应用程序只需在虚拟机内安装一次。
 
 SafeKit保护的是整个虚拟机而不是应用程序本身，这大大简化了维护操作。
 
-### 简化升级流程{#simplified-upgrade-process}
+### 简化升级流程 {#simplified-upgrade-process}
 
 因为您使用的是应用程序的单个虚拟机实例，所以维护是在虚拟化层处理的，而不是通过应用程序级别的故障转移处理的。
 
@@ -42,7 +42,7 @@ SafeKit保护的是整个虚拟机而不是应用程序本身，这大大简化�
 
 服务中断时间仅限于应用程序自身升级过程通常所需的时间。
 
-### 虚拟机级保护的优势{#benefits-of-vm-level-protection}
+### 虚拟机级保护的优势 {#benefits-of-vm-level-protection}
 
   * 只需维护一个应用程序实例。
   * 没有集群感知升级程序。
@@ -53,11 +53,11 @@ SafeKit保护的是整个虚拟机而不是应用程序本身，这大大简化�
 
 对于无法实现或难以实现应用程序集群的打包应用程序和商用现成软件而言，这种方法尤其具有吸引力。
 
-## 应用层高可用性{#app-level-ha}
+## 应用层高可用性 {#app-level-ha}
 
 在传统中 SafeKit 集群中，该应用程序安装在两个节点上：节点 1 和节点 2。 SafeKit 同步这些节点之间的应用程序数据，并在需要时自动处理故障转移。
 
-### 应用程序小版本升级{#app-level-ha-minor}
+### 应用程序小版本升级 {#app-level-ha-minor}
 
 小版本升级仅修改应用程序二进制文件，同时保持复制数据在不同版本之间完全兼容。由于复制数据格式不变， SafeKit支持滚动升级，最大限度地减少停机时间。 
 
@@ -79,7 +79,7 @@ SafeKit保护的是整个虚拟机而不是应用程序本身，这大大简化�
 
 整个升级过程的停机时间仅限于从** ✅ PRIM / ✅ SECOND **过渡到** ❌ STOP / ✅ ALONE ** 。 
 
-### 主要应用升级{#app-level-ha-major}
+### 主要应用升级 {#app-level-ha-major}
 
 重大升级会改变复制数据的格式或结构。由于新版本生成的数据与旧版本不再兼容，因此无法执行滚动升级。 
 
@@ -101,7 +101,7 @@ SafeKit保护的是整个虚拟机而不是应用程序本身，这大大简化�
 
 由于复制的数据在迁移过程中被修改，因此停机时间对应于** ❌ STOP / ❌ STOP **状态与第一个升级节点作为** ✅ ALONE **重新启动之间的时间段。 
 
-### 为什么SafeKit能简化应用程序升级{#why-safekit-simplifies-application-upgrades}
+### 为什么SafeKit能简化应用程序升级 {#why-safekit-simplifies-application-upgrades}
 
 SafeKit通过允许管理员执行以下操作来最大限度地降低操作风险：
 
@@ -111,14 +111,14 @@ SafeKit通过允许管理员执行以下操作来最大限度地降低操作风�
   * 如果检测到意外问题，请快速回滚到上一个节点。
 
 
-## 选择合适的升级策略{#choosing-the-right-upgrade-strategy}
+## 选择合适的升级策略 {#choosing-the-right-upgrade-strategy}
 
 部署模型|应用实例|复制数据影响|升级方法  
 ---|---|---|---  
 应用层高可用性|双节点|取决于升级类型|带故障转移的滚动升级  
 虚拟机级高可用性 ( hyperv.safe / kvm.safe ) |单个虚拟机|在虚拟机内部管理|快照、升级、验证、必要时回滚  
   
-## 结论{#conclusion}
+## 结论 {#conclusion}
 
 SafeKit提供灵活的高可用性架构，可适应不同应用程序的运行需求。无论您是保护跨两个节点的集群应用程序，还是保护运行在虚拟机中的单个应用程序实例， SafeKit都能实现受控升级，最大限度地减少停机时间，并在需要维护操作时提供可靠的恢复选项。
 

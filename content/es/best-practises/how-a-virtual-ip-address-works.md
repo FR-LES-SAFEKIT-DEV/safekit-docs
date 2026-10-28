@@ -104,7 +104,7 @@ Durante un evento de conmutación por error ** , ** SafeKit cambian instantánea
 
 > ** ⚠️ Nota: ** SafeKit proporciona la lógica de comprobación de estado; el balanceador de carga físico o virtual debe ser proporcionado por su infraestructura de red.
 
-#### Integración en la nube: AWS , Azure , {#cloud-integration-aws-azure-and-gcp} y GCP
+#### Integración en la nube: AWS , Azure , y GCP {#cloud-integration-aws-azure-and-gcp}
 
 Este modelo "Balanceador de carga + Verificación de estado" es el estándar de la industria para la alta disponibilidad en la nube ** ** . Es esencial para implementar SafeKit en entornos como: 
 

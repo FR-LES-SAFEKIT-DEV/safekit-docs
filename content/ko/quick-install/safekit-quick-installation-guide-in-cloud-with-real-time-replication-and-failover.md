@@ -7,19 +7,19 @@ lang: "ko"
 topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / 클라우드 mirror 솔루션 개요, SafeKit 및 Linux ( mirror.safe )에 Windows / 클라우드 mirror 솔루션 설치, SafeKit / 클라우드 mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# SafeKit 사용한 클라우드 고가용성: 장애 조치용 {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover} 위해 mirror.safe 모듈을 설치하세요.
+# SafeKit 사용한 클라우드 고가용성: 장애 조치용 위해 mirror.safe 모듈을 설치하세요. {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Cloud" mod="mirror"  %}}
  
 
-## SafeKit / 클라우드 mirror 솔루션 {#overview-of-the-safekit--cloud-mirror-solution} 개요
+## SafeKit / 클라우드 mirror 솔루션 개요 {#overview-of-the-safekit--cloud-mirror-solution}
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ 클라우드에 구애받지 않는 고가용성: SafeKit 동기식 복제 및 장애 조치 ](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>) ** .
 
-## Windows 및 {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe} ( mirror.safe ) 및 Linux 에 SafeKit / 클라우드 mirror 솔루션 설치
+## Windows 및 ( mirror.safe ) 및 Linux 에 SafeKit / 클라우드 mirror 솔루션 설치 {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### 클라우드 로드 밸런서 {#configuration-of-the-cloud-load-balancer} 구성
+### 클라우드 로드 밸런서 구성 {#configuration-of-the-cloud-load-balancer}
 
 가상 IP 주소를 구현하려면 로드 밸런서를 구성해야 합니다.  
 또한 로드 밸런서는 노드에 주기적으로 상태 패킷을 전송하도록 구성되어야 합니다.  
@@ -58,13 +58,13 @@ topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용
 
 참고: 구성할 범용 **mirror.safe** 모듈은 패키지 안에 포함되어 있습니다.
 
-## SafeKit / 클라우드 mirror 솔루션 {#step-by-step-configuration-of-the-safekit--cloud-mirror-solution} 의 단계별 구성
+## SafeKit / 클라우드 mirror 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--cloud-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

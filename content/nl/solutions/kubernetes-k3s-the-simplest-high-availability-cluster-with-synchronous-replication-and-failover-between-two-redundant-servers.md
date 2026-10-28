@@ -42,7 +42,7 @@ Architectuurdiagram ![ SafeKit voor een K3s-architectuur met 2 knooppunten en ho
 
 ## Hoe implementeert de SafeKit -software eenvoudig een Kubernetes K3s high availability-cluster? {#safekit-mirror-k3s-cluster}
 
-### Hoe implementeer ik hoge beschikbaarheid voor een K3S-cluster met 2 knooppunten Kubernetes {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster} )?
+### Hoe implementeer ik hoge beschikbaarheid voor een K3S-cluster met 2 knooppunten Kubernetes )? {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
 
 U kunt hoge beschikbaarheid (HA) implementeren voor een 2-knoops Kubernetes K3s-cluster met behulp van de **SafeKit k3s.safe mirror module** . Deze oplossing stelt u in staat een redundante omgeving te implementeren zonder dat u externe NFS-opslag, een speciale externe configuratiedatabase of specialistische Kubernetes -expertise nodig hebt.
 

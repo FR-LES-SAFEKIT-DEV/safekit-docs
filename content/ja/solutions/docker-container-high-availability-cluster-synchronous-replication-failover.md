@@ -7,9 +7,9 @@ lang: "ja"
 topics: "SANレスSafeKit MirrorクラスタがDockerとどのように連携するか、目次、 SafeKitソフトウェアがDocker高可用性クラスタをどのように実装するか、 SafeKit mirrorクラスタがDockerとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKit SANレスクラスタと従来のDocker HA、比較： SafeKitとオープンソースLinux HA（Pacemaker/Corosync/DRBD）、 Docker高可用性の概要、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit : Docker高可用性およびリアルタイムデータレプリケーションソフトウェア{#safekit-docker-high-availability--real-time-data-replication-software}
+# SafeKit : Docker高可用性およびリアルタイムデータレプリケーションソフトウェア {#safekit-docker-high-availability--real-time-data-replication-software}
 
-## SANレスのSafeKit MirrorクラスタがDocker {#how-the-sanless-safekit-mirror-cluster-works-with-docker}とどのように連携するか
+## SANレスのSafeKit MirrorクラスタがDockerとどのように連携するか {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 
 SafeKit 、軽量で** 「必要最低限」の HA ソリューションを**提供しますKubernetesこれは、ローカルまたはエッジ コンピューティングのコンテナ ワークロードに対して、リソースを過剰に消費したり、複雑すぎたり、過剰設計になっていると感じる組織向けに** **れています。
 
@@ -31,7 +31,7 @@ SafeKit 、軽量で** 「必要最低限」の HA ソリューションを**提
 
 
 <a class="btn-quick-install" href="/ja/quick-install/safekit-quick-installation-guide-with-docker/"> ⚡ Docker > </a>のクイック HA インストール ガイド
-## 目次{#table-of-contents}
+## 目次 {#table-of-contents}
 
   * [ SafeKitソフトウェアはどのようにしてDocker高可用性クラスタを簡単に実装するのか？ ](#how-safekit-implements-docker-ha)
   * [ SafeKit mirrorクラスターはDockerとどのように連携しますか？ ](#safekit-mirror-cluster)
@@ -60,7 +60,7 @@ SafeKit ** **実装します。この VIP は、クライアント アプリケ�
 
 はい。この記事ではSafeKit特別なクラスタリングスキルや複雑なKubernetesレーション](</ja/quick-install/safekit-quick-installation-guide-with-docker/>)必要とせずに、 Docker [迅速に実装する方法を説明します。アプリケーションの起動と停止を処理するために、 **再起動スクリプトを使用することで** Dockerよりもはるかに簡単にデプロイおよび保守できる堅牢な冗長ソリューションを実現できます。
 
-### SafeKitレプリケーションは、 {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}やDockerのDRBDのようなブロックレベルのソリューションとどのように異なりますか？
+### SafeKitレプリケーションは、やDockerのDRBDのようなブロックレベルのソリューションとどのように異なりますか？ {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}
 
 ブロックレベルのレプリケーションを使用するほとんどの SAN レス ソリューション (DRBD など) とは異なり、 ** ** SafeKit **ファイル レベルで**ベースのレプリケーションを実行します**このアプローチは**特定の新しく作成された「 Dockerディスク」ボリュームにデータを移行する必要がないため、アプリケーションにとって完全に透過的です。代わりに、既存のアプリケーション フォルダー**システム ディスク上のフォルダーも含む**をレプリケートするように構成するだけですSafeKitこれにより、複雑Dockerディスク再構成やアプリケーションの変更なしに、既にインストールされている場所に正確に高可用性を実装できます。
 
@@ -96,7 +96,7 @@ SafeKit ** **実装します。この VIP は、クライアント アプリケ�
 フェイルバックプロセス|手動/技術: 再同期中にデータ不整合または「スプリットブレイン」が発生するリスクがあります。 |自動および透過: 安全なフェイルバックによるバックグラウンドでの再同期。  
 メンテナンス | 個々のコンポーネントの更新やトラブルシューティングには、高度な専門スキルが必要です。 | ウェブダッシュボードを通じて、一般的なシステム管理者が容易に管理できます。  
   
-## Docker高可用性概要{#docker-ha-summary-quick-installation-guide}
+## Docker高可用性概要 {#docker-ha-summary-quick-installation-guide}
 
 ** SafeKit ** ** Docker **手段Kubernetes提供する、シンプルな** 2 ノード HA クラスタを提供します。 ** ** 、Pacemaker、および**スタックを置き換えることで、高価なSafeKit SAN ** **ストレージの必要性を排除します。
 

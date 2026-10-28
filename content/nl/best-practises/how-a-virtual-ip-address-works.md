@@ -104,7 +104,7 @@ Tijdens een failover-gebeurtenis ** schakelt ** , SafeKit onmiddellijk de health
 
 > ** ⚠️ Opmerking: ** SafeKit verzorgt de logica voor de gezondheidscontrole; de fysieke of virtuele load balancer moet door uw netwerkinfrastructuur worden geleverd.
 
-#### Cloudintegratie: AWS , Azure , {#cloud-integration-aws-azure-and-gcp} en GCP
+#### Cloudintegratie: AWS , Azure , en GCP {#cloud-integration-aws-azure-and-gcp}
 
 Dit "Load Balancer + Health Check"-model is de industriestandaard voor ** Cloud High Availability ** . Het is essentieel voor de implementatie van SafeKit in omgevingen zoals: 
 

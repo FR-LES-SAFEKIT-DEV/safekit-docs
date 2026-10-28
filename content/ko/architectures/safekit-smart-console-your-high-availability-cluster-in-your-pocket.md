@@ -23,9 +23,9 @@ topics: "스마트 콘솔: 직관적이고 모바일 친화적이며 오류 없�
   * 콘솔에서 알림을 모니터링 ](#safekit-notifications-cluster) 이메일 알림을 관리하는 방법은 [ 인가요?
 
 
-## SafeKit mirror {#safekit-mirror-cluster} 는 웹 콘솔과 어떻게 연동되나요?
+## SafeKit mirror 는 웹 콘솔과 어떻게 연동되나요? {#safekit-mirror-cluster}
 
-### SafeKit Mirror {#safekit-mirror-cluster-configure} 를 구성하는 방법은 무엇입니까?
+### SafeKit Mirror 를 구성하는 방법은 무엇입니까? {#safekit-mirror-cluster-configure}
 
 
 ![ SafeKit 웹 콘솔: mirror 클러스터의 하트비트 네트워크, 가상 IP 설정 및 실시간 디렉터리 복제를 보여주는 고가용성 구성 대시보드입니다. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
@@ -42,7 +42,7 @@ topics: "스마트 콘솔: 직관적이고 모바일 친화적이며 오류 없�
 
 SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네트워크 없이도 네트워크 격리 문제를 해결할 수 있는 전용 스플릿 브레인 검사기가 포함되어 있습니다. 클러스터 ](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) 의 하트비트, 페일오버 및 쿼럼에 대한 자세한 내용은 [ 참조하십시오.
 
-### SafeKit mirror {#safekit-mirror-cluster-monitoring} 를 모니터링하는 방법은 무엇입니까?
+### SafeKit mirror 를 모니터링하는 방법은 무엇입니까? {#safekit-mirror-cluster-monitoring}
 
 
 ![ SafeKit 웹 콘솔: 활성 데이터 복제가 진행 중인 2노드 클러스터 mirror 의 PRIM 및 SECOND 상태를 실시간으로 모니터링합니다. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
@@ -60,9 +60,9 @@ SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네�
 
 단순한 상태 아이콘을 넘어, 인터페이스는 다음과 같은 기능을 제공합니다. **원클릭 페일오버 오케스트레이션** (**`...` 메뉴**이를 통해 계획된 유지 보수를 위해 기본 역할을 수동으로 재할당하는 동시에 사용자 활동에 대한 지속적인 가용성을 보장할 수 있습니다.
 
-## SafeKit `farm` {#safekit-farm-cluster} 는 웹 콘솔과 어떻게 연동되나요?
+## SafeKit `farm` 는 웹 콘솔과 어떻게 연동되나요? {#safekit-farm-cluster}
 
-### SafeKit `farm` {#safekit-farm-cluster-configuration} 를 구성하는 방법은 무엇입니까?
+### SafeKit `farm` 를 구성하는 방법은 무엇입니까? {#safekit-farm-cluster-configuration}
 
 
 ![ SafeKit 웹 콘솔: 네트워크 로드 밸런싱 및 가상 IP 관리를 위한 클러스터 구성. Farm ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
@@ -77,7 +77,7 @@ SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네�
   * ** 검사기: ** 애플리케이션의 상태를 모니터링하고 프로세스 오류가 감지되면 자동 재시작을 실행합니다.
 
 
-### SafeKit `farm` {#safekit-farm-cluster-monitoring} 를 모니터링하는 방법은 무엇입니까?
+### SafeKit `farm` 를 모니터링하는 방법은 무엇입니까? {#safekit-farm-cluster-monitoring}
 
 
 ![ SafeKit 콘솔: 2개 노드로 구성된 Farm 클러스터를 모니터링 중입니다. 두 노드 모두 UP 상태이며 활성 로드 밸런싱이 적용되고 있습니다. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
@@ -143,7 +143,7 @@ SafeKit 웹 콘솔은 브라우저의 기본 기능을 활용하여 모듈 상�
 
 &amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
-### SafeKit {#how-can-i-set-up-automated-email-alerts-in-safekit} 에서 자동 이메일 알림을 설정하는 방법은 무엇인가요?
+### SafeKit 에서 자동 이메일 알림을 설정하는 방법은 무엇인가요? {#how-can-i-set-up-automated-email-alerts-in-safekit}
 
 SafeKit 모든 ** 주요 클러스터 이벤트를 시스템 로그 ** 에 자동으로 기록하여 시중의 모든 모니터링 도구와 원활하게 통합할 수 있도록 합니다. 또한, 이러한 로그를 모니터링하고 중요한 알림을 사용자의 이메일 수신함으로 직접 전달하는 전용 ** 이메일 알림 에이전트 ** 가 포함되어 있습니다. 이를 통해 웹 콘솔을 적극적으로 모니터링하지 않는 경우에도 이해 관계자들이 최신 정보를 얻을 수 있습니다. 
 

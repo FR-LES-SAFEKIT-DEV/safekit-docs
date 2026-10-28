@@ -7,17 +7,17 @@ lang: "ja"
 topics: "データレプリケーションとN台のサーバーから1台のサーバーへのアプリケーションフェイルオーバーによる高可用性、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# N-1冗長クラスタリング：1つのバックアップで複数のアプリケーションの高可用性を実現{#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
+# N-1冗長クラスタリング：1つのバックアップで複数のアプリケーションの高可用性を実現 {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
 
 ## データレプリケーションとアプリケーションフェイルオーバーによる高可用性（N台のサーバーから1台のサーバーへ） {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 
-### N-1冗長性{#n-1-redundancy}
+### N-1冗長性 {#n-1-redundancy}
 
 
 ![ SafeKit N-1冗長クラスタ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-### N-1冗長性{#how-the-n-1-redundancy-works}どのように機能するのか？
+### N-1冗長性どのように機能するのか？ {#how-the-n-1-redundancy-works}
 
 SafeKit N 台のサーバー上で N 個のアプリケーションが実行され、フェイルオーバー用のバックアップが 1 つあるシンプルな N-1 冗長クラスタを提供します。 SafeKit N-1冗長クラスタでは、各アプリケーションはそれぞれ独自の複製されたディレクトリ上で動作します。
 
@@ -25,7 +25,7 @@ SafeKit N 台のサーバー上で N 個のアプリケーションが実行さ�
 
 これは、N-1冗長クラスタにおいて同時に発生する障害が1つだけであることを前提としています。このソリューションは、複数のプライマリサーバーの同時障害にも対応できますが、その場合、単一のバックアップサーバーが、障害が発生したすべてのサーバーの負荷をまとめて処理する必要があります。
 
-### N-1冗長性を実装するにはどうすればよいでしょ{#how-to-implement-n-1-redundancy}か？
+### N-1冗長性を実装するにはどうすればよいでしょか？ {#how-to-implement-n-1-redundancy}
 
 SafeKit N-1冗長クラスタは、N+1台のサーバーにN個のmirrorモジュールをデプロイするだけで簡単に構成できます。
 

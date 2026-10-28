@@ -7,7 +7,7 @@ lang: "ko"
 topics: "Oracle 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Oracle 솔루션 개요, SafeKit 및 Oracle ( oracle.safe )에 Windows / Linux 솔루션 설치, SafeKit / Oracle 솔루션 단계별 구성, SafeKit 및 mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# Oracle 고가용성 SafeKit 포함): 장애 조치용 oracle.safe 모듈 설치 {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover} 포함)
+# Oracle 고가용성 SafeKit 포함): 장애 조치용 oracle.safe 모듈 설치 포함) {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Oracle" mod="oracle"  %}}
@@ -17,7 +17,7 @@ topics: "Oracle 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 Oracle 고가용성: 2노드 동기 복제 및 장애 조치 ](</solutions/oracle-high-availability-synchronous-replication-failover/>) ** .
 
-## SafeKit / Oracle 솔루션의 Windows 및 Linux ( oracle.safe ) 및 {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe} 설치
+## SafeKit / Oracle 솔루션의 Windows 및 Linux ( oracle.safe ) 및 설치 {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -34,13 +34,13 @@ topics: "Oracle 고가용성 빠른 설치 가이드, SafeKit 고가용성 제�
 {{%  insert-safekit-82-installation-module-linux-ko app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit / Oracle 솔루션 {#step-by-step-configuration-of-the-safekit--oracle-solution} 의 단계별 구성
+## SafeKit / Oracle 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--oracle-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

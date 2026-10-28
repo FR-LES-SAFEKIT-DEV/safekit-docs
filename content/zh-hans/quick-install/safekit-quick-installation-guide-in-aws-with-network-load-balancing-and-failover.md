@@ -7,19 +7,19 @@ lang: "zh-hans"
 topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS高可用性限制； SafeKit / AWS解决方案概述；在Windows和Linux ( farm.safe ) 上安装SafeKit / AWS解决方案的逐步配置； SafeKit和`farm`解决方案演示；🔍 SafeKit高可用性导航中心"
 ---
 
-# AWS网络负载均衡和故障转移：安装SafeKit farm.safe模块{#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}模块
+# AWS网络负载均衡和故障转移：安装SafeKit farm.safe模块模块 {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="AWS" mod="farm"  %}}
  
 
-## SafeKit / AWS解决方案概述{#overview-of-the-safekit--aws-solution}
+## SafeKit / AWS解决方案概述 {#overview-of-the-safekit--aws-solution}
 
 解决方案描述如下： ** 💡 [ SafeKit : Amazon AWS负载均衡和应用程序高可用性`Farm`集群](</solutions/aws-load-balancing-cluster-failover/>) ** 。
 
-## 在Windows和Linux ( farm.safe ) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}上安装SafeKit / AWS解决方案
+## 在Windows和Linux ( farm.safe )上安装SafeKit / AWS解决方案 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
-### Amazon AWS负载均衡器{#configuration-of-the-amazon-aws-load-balancer}的配置
+### Amazon AWS负载均衡器的配置 {#configuration-of-the-amazon-aws-load-balancer}
 
 负载均衡器必须配置虚拟 IP 地址。  
 负载均衡器必须配置为定期向节点发送健康数据包。  
@@ -41,7 +41,7 @@ topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS高可用
 
 ⚠️ 请勿在以下步骤配置的第 4 步配置虚拟 IP 地址和负载均衡规则。Amazon AWS负载均衡器中已设置了虚拟 IP 地址和负载均衡规则。在第 4 步设置虚拟 IP 地址和负载均衡规则仅适用于本地部署配置。
 
-### Amazon AWS网络安全{#configuration-of-the-amazon-aws-network-security}的配置
+### Amazon AWS网络安全的配置 {#configuration-of-the-amazon-aws-network-security}
 
 必须配置网络安全，以启用以下协议和端口的通信：
 
@@ -60,13 +60,13 @@ topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS高可用
 
 注意：您将要配置的通用**farm.safe**模块包含在软件包中。
 
-## SafeKit / AWS解决方案{#step-by-step-configuration-of-the-safekit--aws-solution}的逐步配置
+## SafeKit / AWS解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--aws-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-zh-hans app="" mod="farm"  %}}
  
 
-## SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}解决方案的演示
+## SafeKit `farm`解决方案的演示 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-zh-hans  %}}

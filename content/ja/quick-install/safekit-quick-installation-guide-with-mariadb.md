@@ -7,19 +7,19 @@ lang: "ja"
 topics: "MariaDBの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / MariaDBソリューションの概要、 SafeKitおよびMariaDB ( mysql.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / MariaDBソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# MariaDB高可用性とSafeKit : フェイルオーバーのためにmysql.safeモジュールをインストールしてください{#mariadb-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# MariaDB高可用性とSafeKit : フェイルオーバーのためにmysql.safeモジュールをインストールしてください {#mariadb-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="MariaDB" mod="mysql"  %}}
  
 
-## SafeKit / MariaDBソリューションの概要{#overview-of-the-safekit--mariadb-solution}
+## SafeKit / MariaDBソリューションの概要 {#overview-of-the-safekit--mariadb-solution}
 
 解決策はここに記載されています: ** 💡 [最もシンプルなMariaDB高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/>) ** 。
 
-## SafeKit / MariaDBソリューションをWindowsおよびLinux ( mysql.safe ) {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}にインストールします。
+## SafeKit / MariaDBソリューションをWindowsおよびLinux ( mysql.safe )にインストールします。 {#installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * MariaDB 2つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
 
@@ -34,13 +34,13 @@ topics: "MariaDBの高可用性クイックインストールガイド、 SafeKi
 {{%  insert-safekit-82-installation-module-linux-ja app="MariaDB" mod="mysql"  %}}
  
 
-## SafeKit / MariaDBソリューション{#step-by-step-configuration-of-the-safekit--mariadb-solution}の段階的な構成
+## SafeKit / MariaDBソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--mariadb-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="MariaDB" mod="mysql"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

@@ -7,9 +7,9 @@ lang: "ja"
 topics: "SafeKit高可用性、🔍 SafeKit高可用性ナビゲーションハブの無料トライアル、技術ドキュメント、製品情報"
 ---
 
-# SafeKitリソース{#safekit-resources}
+# SafeKitリソース {#safekit-resources}
 
-## SafeKit高可用性{#free-trial-technical-documentation--product-information-for-safekit-high-availability}の無料トライアル、技術文書、製品情報
+## SafeKit高可用性の無料トライアル、技術文書、製品情報 {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
 ** SafeKitリソース: 無料トライアル、ドキュメント、製品情報**
 

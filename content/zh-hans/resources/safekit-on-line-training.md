@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "如何访问培训平台？获取SafeKit 8 培训资料，🔍 SafeKit高可用性导航中心"
 ---
 
-# SafeKit高可用性培训：免费在线认证课程{#safekit-high-availability-training-free-online-certification-program}
+# SafeKit高可用性培训：免费在线认证课程 {#safekit-high-availability-training-free-online-certification-program}
 
 ## 如何访问培训平台？ {#certif}
 
-### SafeKit训练平台{#the-safekit-training-platform}
+### SafeKit训练平台 {#the-safekit-training-platform}
 
 SafeKit在线培训是一个自定进度、内容全面的学习资源，旨在帮助您掌握高可用性和应用程序集群技术。您可以通过以下步骤访问该平台：
 
@@ -29,7 +29,7 @@ SafeKit在线培训是一个自定进度、内容全面的学习资源，旨在�
 
 ### SafeKit视频：免费认证平台教程 (6:11) {#demo-certification}
 
-#### 章节{#chapters}
+#### 章节 {#chapters}
 
   1. 🎬 [培训与认证平台](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=0s>) (1:41)
   2. 🎬 [什么是SafeKit培训模块？ ](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=101s>) (1:57)
@@ -38,11 +38,11 @@ SafeKit在线培训是一个自定进度、内容全面的学习资源，旨在�
 
 [培训和认证平台在此](<https://training.my.evidian.com/>)
 
-## SafeKit培训视频{#training82}
+## SafeKit培训视频 {#training82}
 
 请注意，这不是<a href="https://training.my.evidian.com/mod/page/view.php?id=712" target="_blank" rel="noopener noreferrer">培训平台</a>本身，而是一个用于在需要时下载培训材料的存储库。
 
-### 引言{#introduction}
+### 引言 {#introduction}
 
   1. 概述：🎬 [视频](<https://www.youtube.com/watch?v=bMRyNq3egLQ>) (9:43) 
      * 🎬 [简介](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=0s>) (0:38)
@@ -60,7 +60,7 @@ SafeKit在线培训是一个自定进度、内容全面的学习资源，旨在�
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
-### 演示{#demonstrations}
+### 演示 {#demonstrations}
 
 Hyper-V 集群演示：🎬 [视频](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
@@ -125,7 +125,7 @@ SQL Server集群演示：🎬 [视频](<https://www.youtube.com/watch?v=mGwEguDn
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/5-command-line-en.pptx>) )
 
 
-### 高级配置{#advanced-configuration}
+### 高级配置 {#advanced-configuration}
 
   6. Mirror模块：🎬 [视频](<https://www.youtube.com/watch?v=SmWwVUYsx9Q>) (26:52) 
      * 🎬 [概述](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=0s>) (2:59)
@@ -158,7 +158,7 @@ SQL Server集群演示：🎬 [视频](<https://www.youtube.com/watch?v=mGwEguDn
      * ( [ pptx ](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>) )
 
 
-### 故障排除{#troubleshooting}
+### 故障排除 {#troubleshooting}
 
   9. 故障排除：🎬 [视频](<https://www.youtube.com/watch?v=H1mxvpC3mP8>) (31:24) 
      * 🎬 [简介](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=0s>) (0:58)

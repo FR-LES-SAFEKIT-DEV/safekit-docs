@@ -7,11 +7,11 @@ lang: "ja"
 topics: "高可用性クラスタにおける共有なしアーキテクチャと共有ディスクアーキテクチャの比較、共有なしアーキテクチャと共有ディスクアーキテクチャ：長所と短所、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 共有ディスクなしアーキテクチャと共有ディスクアーキテクチャ：最適なHAクラスタの選択{#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
+# 共有ディスクなしアーキテクチャと共有ディスクアーキテクチャ：最適なHAクラスタの選択 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
 
-## 高可用性クラスタにおける共有ディスクアーキテクチャと共有ディスクアーキテクチャの比較{#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
+## 高可用性クラスタにおける共有ディスクアーキテクチャと共有ディスクアーキテクチャの比較 {#shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters}
 
-### 概要{#overview}
+### 概要 {#overview}
 
 この記事では、高可用性クラスタにおける共有ディスクなしアーキテクチャと共有ディスクアーキテクチャの長所と短所について考察します。具体的には、ハードウェアの制約、アプリケーションデータの構成への影響、復旧時間、実装の容易さなどを検討します。
 
@@ -21,7 +21,7 @@ topics: "高可用性クラスタにおける共有なしアーキテクチャ�
 
 以下の比較表は、共有ディスクアーキテクチャと、共有ディスクを一切使用しないアーキテクチャを実装したソフトウェアクラスタリング製品であるSafeKitとの違いを詳細に説明しています。
 
-### 共有ディスクアーキテクチャ{#what-is-a-shared-disk-architecture}は何ですか？
+### 共有ディスクアーキテクチャは何ですか？ {#what-is-a-shared-disk-architecture}
 
 共有ディスクアーキテクチャ（ [ Microsoftフェイルオーバークラスタ、 ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)など）は、2台のサーバーがディスクを共有し、ハードウェアまたはソフトウェアの障害が発生した場合にアプリケーションが自動的にフェイルオーバーする仕組みに基づいています。
 
@@ -47,7 +47,7 @@ topics: "高可用性クラスタにおける共有なしアーキテクチャ�
 
 最後に、このソリューションは設定が非常に簡単で、複製するディレクトリのパスを設定するだけで済みます。
 
-## 共有ディスクアーキテクチャと共有ディスクアーキテクチャ：長所と短所{#shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons}
+## 共有ディスクアーキテクチャと共有ディスクアーキテクチャ：長所と短所 {#shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons}
 
 
 {{%  insert-safekit-shared-nothing-vs-shared-disk-table-ja  %}}

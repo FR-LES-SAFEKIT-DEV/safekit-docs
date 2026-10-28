@@ -7,19 +7,19 @@ lang: "zh-hans"
 topics: "IIS 、 SafeKit高可用性快速安装指南； SafeKit / IIS解决方案概述；在Windows ( iis_farm.safe ) 上安装SafeKit / IIS解决方案； SafeKit / IIS解决方案分步配置； SafeKit `farm`解决方案演示；🔍 SafeKit高可用性导航中心"
 ---
 
-# IIS网络负载均衡和故障转移：安装SafeKit iis_farm.safe模块{#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}模块
+# IIS网络负载均衡和故障转移：安装SafeKit iis_farm.safe模块模块 {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="IIS" mod="iis_farm"  %}}
  
 
-## SafeKit / IIS解决方案概述{#overview-of-the-safekit--iis-solution}
+## SafeKit / IIS解决方案概述 {#overview-of-the-safekit--iis-solution}
 
 解决方案描述如下： ** 💡 [ SafeKit : 一体化IIS负载均衡和高可用性软件](</solutions/iis-load-balancing-failover/>) ** 。
 
-## 在Windows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}上安装SafeKit / IIS解决方案
+## 在Windows ( iis_farm.safe )上安装SafeKit / IIS解决方案 {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 
-### 先决条件{#prerequisites}
+### 先决条件 {#prerequisites}
 
   * 您需要在 2 个或更多节点（虚拟机或物理服务器）上安装IIS 。
 
@@ -30,13 +30,13 @@ topics: "IIS 、 SafeKit高可用性快速安装指南； SafeKit / IIS解决方
 {{%  insert-safekit-82-installation-module-windows-zh-hans app="IIS" mod="iis_farm"  %}}
  
 
-## SafeKit / IIS解决方案{#step-by-step-configuration-of-the-safekit--iis-solution}的逐步配置
+## SafeKit / IIS解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--iis-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-zh-hans app="IIS" mod="iis_farm"  %}}
  
 
-## SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}解决方案的演示
+## SafeKit `farm`解决方案的演示 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-zh-hans  %}}

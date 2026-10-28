@@ -9,7 +9,7 @@ topics: "SafeKit 、🔍 SafeKit高可用性ナビゲーションハブの30秒�
 
 # 高可用性ソフトウェア: WindowsとLinuxクラスタリングとSafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## SafeKit {#30-seconds-elevator-pitch-for-safekit}の30秒エレベーターピッチ
+## SafeKitの30秒エレベーターピッチ {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [ SafeKit動画: 30秒ピッチ (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 

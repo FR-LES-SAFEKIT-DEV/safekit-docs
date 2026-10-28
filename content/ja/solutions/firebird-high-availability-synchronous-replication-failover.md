@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SANレスSafeKit MirrorクラスタがFirebirdとどのように連携するか、目次、 SafeKitソフトウェアがSANレスFirebird高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがFirebirdとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとFirebirdと他のクラスタリングソリューション、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 最もシンプルな高可用性Firebird : 2ノード同期レプリケーションとフェイルオーバー{#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}
+# 最もシンプルな高可用性Firebird : 2ノード同期レプリケーションとフェイルオーバー {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Firebird" guide="/ja/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

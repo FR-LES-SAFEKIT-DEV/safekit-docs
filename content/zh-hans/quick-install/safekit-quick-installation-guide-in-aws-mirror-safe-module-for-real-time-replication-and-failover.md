@@ -7,19 +7,19 @@ lang: "zh-hans"
 topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS mirror解决方案概述；在Windows和Linux ( mirror.safe ) 上安装SafeKit / AWS 、 mirror解决方案； SafeKit / AWS mirror解决方案分步配置； SafeKit mirror解决方案演示；🔍 SafeKit高可用性导航中心"
 ---
 
-# AWS高可用性（与SafeKit配合使用）：安装mirror.safe模块以实现故障转移{#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# AWS高可用性（与SafeKit配合使用）：安装mirror.safe模块以实现故障转移 {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="AWS" mod="mirror"  %}}
  
 
-## SafeKit / AWS mirror解决方案概述{#overview-of-the-safekit--aws-mirror-solution}
+## SafeKit / AWS mirror解决方案概述 {#overview-of-the-safekit--aws-mirror-solution}
 
 解决方案描述如下： ** 💡 [ Amazon AWS高可用性： SafeKit同步复制和故障转移](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ** 。
 
-## 在Windows和Linux ( mirror.safe ) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}上安装SafeKit / AWS mirror解决方案
+## 在Windows和Linux ( mirror.safe )上安装SafeKit / AWS mirror解决方案 {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Amazon AWS负载均衡器{#configuration-of-the-amazon-aws-load-balancer}的配置
+### Amazon AWS负载均衡器的配置 {#configuration-of-the-amazon-aws-load-balancer}
 
 如果想要使用虚拟IP地址，则必须配置负载均衡器。  
 负载均衡器必须配置为定期向节点发送健康数据包。  
@@ -41,7 +41,7 @@ topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS mirror�
 
 ⚠️ 请勿在以下步骤配置的第 4 步配置虚拟 IP 地址。Amazon AWS负载均衡器中已设置了虚拟 IP 地址。在第 4 步设置虚拟 IP 地址仅适用于本地部署配置。
 
-### Amazon AWS网络安全{#configuration-of-the-amazon-aws-network-security}的配置
+### Amazon AWS网络安全的配置 {#configuration-of-the-amazon-aws-network-security}
 
 必须配置网络安全，以启用以下协议和端口的通信：
 
@@ -61,13 +61,13 @@ topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS mirror�
 
 注意：您将要配置的通用**mirror.safe**模块包含在软件包中。
 
-## SafeKit / AWS mirror解决方案{#step-by-step-configuration-of-the-safekit--aws-mirror-solution}的逐步配置
+## SafeKit / AWS mirror解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--aws-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-zh-hans app="Windows" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}解决方案的演示
+## SafeKit mirror解决方案的演示 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-zh-hans  %}}

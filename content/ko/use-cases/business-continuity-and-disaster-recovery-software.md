@@ -7,7 +7,7 @@ lang: "ko"
 topics: "비즈니스 연속성 및 재해 복구 소프트웨어, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# SafeKit 및 {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit} 사용하는 2노드 클러스터용 비즈니스 연속성 및 재해 복구 소프트웨어
+# SafeKit 및 사용하는 2노드 클러스터용 비즈니스 연속성 및 재해 복구 소프트웨어 {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
 
 ## 비즈니스 연속성 및 재해 복구 소프트웨어 {#business-continuity-and-disaster-recovery-software}
 

@@ -19,7 +19,7 @@ Die Lösung wird hier beschrieben: ** 💡 [ Kubernetes K3s Hochverfügbarkeit: 
 
 ## Installation und Konfiguration der SafeKit / Kubernetes Lösung auf Linux ( k3s.safe ) {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
-### 1. Laden Sie die Pakete {#1-download-packages} herunter.
+### 1. Laden Sie die Pakete herunter. {#1-download-packages}
 
   * Laden Sie die kostenlose Version von SafeKit 8.2 auf Linux (safekitlinux_xx.bin) herunter.
   * Laden Sie das Modul k3s.safe Linux herunter.
@@ -88,7 +88,7 @@ Das Skript wird:
   * Starten Sie das k3s-Modul
 
 
-### 5. Überprüfen Sie, ob das k3s-Modul SafeKit auf beiden Knoten {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes} ausgeführt wird.
+### 5. Überprüfen Sie, ob das k3s-Modul SafeKit auf beiden Knoten ausgeführt wird. {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}
 
 Führen Sie auf beiden Knoten folgenden Befehl aus: `/opt/safekit/safekit –H "*" state`
 
@@ -110,7 +110,7 @@ Die Antwort sollte dem Bild ähneln.
     Erfolg
     
 
-### 6. Starten Sie die Webkonsole SafeKit , um den Cluster {#6-start-the-safekit-web-console-to-administer-the-cluster} zu verwalten.
+### 6. Starten Sie die Webkonsole SafeKit , um den Cluster zu verwalten. {#6-start-the-safekit-web-console-to-administer-the-cluster}
 
   * Stellen Sie eine Verbindung zwischen einem Browser und der Webkonsolen-URL SafeKit `http://server0-IP:9010` her.
   * Sie sollten eine Seite sehen, die dem Bild ähnelt.

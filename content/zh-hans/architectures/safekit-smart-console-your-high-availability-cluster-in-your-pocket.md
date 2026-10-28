@@ -7,15 +7,15 @@ lang: "zh-hans"
 topics: "智能控制台：直观、移动化、无故障的高可用性，目录， SafeKit mirror集群如何与 Web 控制台协同工作？， SafeKit `farm`集群如何与 Web 控制台协同工作？，如何通过 Web 控制台监控多个模块和多个集群？，如何在控制台中监控告警并管理电子邮件通知？，🔍 SafeKit高可用性导航中心"
 ---
 
-# SafeKit智能控制台：您的高可用性集群尽在掌握{#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKit智能控制台：您的高可用性集群尽在掌握 {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
 
-## 智能控制台：直观、移动化、无故障的高可用性{#smart-console-intuitive-mobile-and-error-free-high-availability}
+## 智能控制台：直观、移动化、无故障的高可用性 {#smart-console-intuitive-mobile-and-error-free-high-availability}
 
 重新定义您管理高可用性的方式**采用专**速度和简易性**打造的解决方案。Web SafeKit提供零学习** ** ，让您无需编写**代码即可配置和控制您的基础架构。
 
 无论您身处办公桌前还是外出途中，这款兼容智能手机的控制面板都能让您轻松掌控整个** 。智能控制台通过简化mirror和`farm`模块的管理，消除了人为错误**并确保关键系统实现无缝故障转移。
 
-## 目录{#table-of-contents}
+## 目录 {#table-of-contents}
 
   * [集群如何与 Web 控制台配合使用](#safekit-mirror-cluster) SafeKit mirror
   * [集群如何与 Web 控制台配合使用](#safekit-farm-cluster) SafeKit `farm`
@@ -25,7 +25,7 @@ topics: "智能控制台：直观、移动化、无故障的高可用性，目�
 
 ## SafeKit mirror集群如何与 Web 控制台配合使用？ {#safekit-mirror-cluster}
 
-### 如何配置SafeKit Mirror {#safekit-mirror-cluster-configure}集群？
+### 如何配置SafeKit Mirror集群？ {#safekit-mirror-cluster-configure}
 
 
 ![ SafeKit Web 控制台：高可用性配置仪表板，显示mirror集群的心跳网络、虚拟 IP 设置和实时目录复制](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
@@ -42,7 +42,7 @@ topics: "智能控制台：直观、移动化、无故障的高可用性，目�
 
 SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或额外的心跳网络即可解决网络隔离问题。了解更多关于[集群的心跳、故障转移和仲裁机制，请参阅](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)集群。
 
-### 如何监控SafeKit mirror {#safekit-mirror-cluster-monitoring}集群？
+### 如何监控SafeKit mirror集群？ {#safekit-mirror-cluster-monitoring}
 
 
 ![ SafeKit Web 控制台：实时监控双节点mirror集群，显示 PRIM 和 SECOND 状态以及活动数据复制情况](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
@@ -62,7 +62,7 @@ SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或�
 
 ## SafeKit `farm`集群如何与 Web 控制台配合使用？ {#safekit-farm-cluster}
 
-### 如何配置SafeKit `farm` {#safekit-farm-cluster-configuration}集群？
+### 如何配置SafeKit `farm`集群？ {#safekit-farm-cluster-configuration}
 
 
 ![SafeKit Web 控制台： Farm 用于网络负载均衡和虚拟IP管理的集群配置。](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
@@ -77,7 +77,7 @@ SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或�
   * **检查器： **监控应用程序的运行状况，如果检测到进程故障，则触发自动重启。
 
 
-### 如何监控SafeKit `farm` {#safekit-farm-cluster-monitoring}集群？
+### 如何监控SafeKit `farm`集群？ {#safekit-farm-cluster-monitoring}
 
 
 ![SafeKit 控制台：监控一个双节点服务器 Farm 集群显示两个节点均处于运行状态，并启用了负载均衡。](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
@@ -95,7 +95,7 @@ SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或�
 
 ## 如何通过 Web 控制台监控多个模块和多个集群？ {#multipe-modules-clusters}
 
-### 单个集群内的多模块可视化{#safekit-multi-module}
+### 单个集群内的多模块可视化 {#safekit-multi-module}
 
 
 ![SafeKit Web 控制台：在同一个 2 节点集群上部署了 4 个 Hyper-V 模块。](/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg "w:966")
@@ -114,7 +114,7 @@ SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或�
 
 这种精细的可视性确保即使在高密度环境中，您也能对每个复制的工作负载保持完全的控制和即时的了解。 
 
-### 多聚类可视化{#safekit-multi-cluster}
+### 多聚类可视化 {#safekit-multi-cluster}
 
 
 ![ SafeKit Web 控制台：4 个集群部署在 8 台服务器上](/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg "w:966")
@@ -143,7 +143,7 @@ SafeKit Web 控制台利用浏览器原生功能，在模块状态发生变化�
 
 <br /> 
 
-### 如何在SafeKit {#how-can-i-set-up-automated-email-alerts-in-safekit}中设置自动电子邮件提醒？
+### 如何在SafeKit中设置自动电子邮件提醒？ {#how-can-i-set-up-automated-email-alerts-in-safekit}
 
 SafeKit会自动将所有**重大集群事件记录到系统日志**中，从而实现与市面上任何监控工具的无缝集成。此外，它还包含一个专用的**电子邮件通知代理** ，用于监控这些日志并将关键警报直接发送到您的收件箱。这确保即使在未主动监控 Web 控制台的情况下，相关人员也能及时了解最新情况。 
 

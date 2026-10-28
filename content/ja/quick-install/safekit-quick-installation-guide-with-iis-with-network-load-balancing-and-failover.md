@@ -7,19 +7,19 @@ lang: "ja"
 topics: "IISの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / IISソリューションの概要、 Windows ( iis_farm.safe ) へのSafeKit / IISソリューションのインストール、 SafeKit / IISソリューションのステップバイステップ構成、 SafeKit `farm`ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# IISネットワーク負荷分散とフェイルオーバー: SafeKit iis_farm.safeモジュール{#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}をインストールします
+# IISネットワーク負荷分散とフェイルオーバー: SafeKit iis_farm.safeモジュールをインストールします {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ja app="IIS" mod="iis_farm"  %}}
  
 
-## SafeKit / IISソリューションの概要{#overview-of-the-safekit--iis-solution}
+## SafeKit / IISソリューションの概要 {#overview-of-the-safekit--iis-solution}
 
 ソリューションはここに記載されています: ** 💡 [ SafeKit : オールインワンIISロードバランシングおよび高可用性ソフトウェア](</solutions/iis-load-balancing-failover/>) ** 。
 
-## SafeKit / IISソリューションをWindows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}にインストールします。
+## SafeKit / IISソリューションをWindows ( iis_farm.safe )にインストールします。 {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * IISは、2つ以上のノード（仮想マシンまたは物理サーバー）にインストールされている必要があります。
 
@@ -30,13 +30,13 @@ topics: "IISの高可用性クイックインストールガイド、 SafeKitの
 {{%  insert-safekit-82-installation-module-windows-ja app="IIS" mod="iis_farm"  %}}
  
 
-## SafeKit / IISソリューション{#step-by-step-configuration-of-the-safekit--iis-solution}の段階的な構成
+## SafeKit / IISソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--iis-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ja app="IIS" mod="iis_farm"  %}}
  
 
-## SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}のソリューションのデモンストレーション
+## SafeKit `farm`のソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

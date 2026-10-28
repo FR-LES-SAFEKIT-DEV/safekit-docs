@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SafeKitシェアードナッシング HA のAWS : シェアードディスクを排除し、データ損失をゼロにする、目次、 SafeKitソフトウェアがシェアードナッシングのAWS高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがAWSとどのように連携するか、 SafeKit高可用性の制限、比較: SafeKitとAWSとネイティブ クラウド HA/DR ソリューション、ビデオ ガイド: SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# Amazon AWS高可用性: SafeKit同期レプリケーションとフェイルオーバー{#amazon-aws-high-availability-safekit-synchronous-replication--failover}
+# Amazon AWS高可用性: SafeKit同期レプリケーションとフェイルオーバー {#amazon-aws-high-availability-safekit-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ja app="AWS" guide="/ja/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}

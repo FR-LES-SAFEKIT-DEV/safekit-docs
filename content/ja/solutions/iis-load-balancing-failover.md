@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SafeKit `Farm`クラスタ: IISのソフトウェアのみの NLB と自動フェイルオーバー、目次、 SafeKitソフトウェアがIISネットワーク負荷分散 (NLB) クラスタをどのように簡単に実装するか、 `farm`モードのSafeKitクラスタがIISとどのように連携するか、比較: SafeKit用のIIS `Farm`クラスタと他の NLB クラスタリング ソリューション、ビデオ ガイド: SafeKit `Farm` NLB クラスタの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# SafeKit : オールインワンIISロードバランシング＆高可用性ソフトウェア{#safekit-all-in-one-iis-load-balancing--high-availability-software}
+# SafeKit : オールインワンIISロードバランシング＆高可用性ソフトウェア {#safekit-all-in-one-iis-load-balancing--high-availability-software}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="IIS" guide="/ja/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

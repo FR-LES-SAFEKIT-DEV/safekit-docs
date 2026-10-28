@@ -125,7 +125,7 @@ topics: "요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 �
   * ** 자동 IP 및 애플리케이션 페일오버: ** 기본 노드에 장애가 발생하면 SafeKit 하트비트 손실을 자동으로 감지하고 보조 노드에서 애플리케이션과 가상 IP 주소를 다시 설정합니다. 이로 인해 RTO가 약 1분으로 단축되어 끊김 없는 서비스 연속성이 제공됩니다.
 
 
-### SafeKit Mirror {#rpo-safekit-example} 의 RPO는 무엇입니까?
+### SafeKit Mirror 의 RPO는 무엇입니까? {#rpo-safekit-example}
 
 SafeKit 의 ** mirror 노드 간 데이터 복제가 [ 및 실시간 ](</ko/best-practises/synchronous-replication-vs-asynchronous-replication/> "Synchronous vs Asynchronous Replication") 때문에 ** 입니다.
 
@@ -133,7 +133,7 @@ SafeKit 의 ** mirror 노드 간 데이터 복제가 [ 및 실시간 ](</ko/best
 
 반면, 비동기 복제 ** ** )의 경우 RPO(복구 목표 시점)는 0보다 큽니다. 기본 서버 쓰기와 보조 서버 업데이트 사이에 지연이 발생하므로, 장애 발생 시 보조 서버로의 페일오버 과정에서 데이터 손실이 발생합니다. 미션 크리티컬한 비즈니스 연속성 ** ** 을 위해서는 동기 복제만이 애플리케이션이 100% 데이터 무결성을 유지하며 재시작될 수 있도록 보장하는 유일한 방법입니다.
 
-### SafeKit Mirror {#what-is-rto-safekit} 의 RTO는 얼마입니까?
+### SafeKit Mirror 의 RTO는 얼마입니까? {#what-is-rto-safekit}
 
 표준 구성에서 ** SafeKit 클러스터의 RTO는 약 1분입니다. ** SafeKit 애플리케이션 수준 ** ** mirror VM 수준 ** ** )에서 고가용성을 구현할 수 있는 유연성을 제공하며, 각 수준은 복구 시간에 서로 다른 영향을 미칩니다. 
 
@@ -148,7 +148,7 @@ SafeKit 의 ** mirror 노드 간 데이터 복제가 [ 및 실시간 ](</ko/best
 
 ** 애플리케이션 수준의 고가용성 ** 활용함으로써 SafeKit 표준 가상화에 내재된 "재부팅 페널티"를 제거하여 ** 비즈니스 연속성 계획 ** 의 가동 중지 시간을 최소화합니다. 
 
-## 로드 밸런싱이 적용된 SafeKit `Farm` {#rpo-rto-safekit-farm-cluster} 클러스터의 RTO 벤치마크는 무엇인가요?
+## 로드 밸런싱이 적용된 SafeKit `Farm` 클러스터의 RTO 벤치마크는 무엇인가요? {#rpo-rto-safekit-farm-cluster}
 
 ### SafeKit `Farm` 클러스터란 무엇입니까? {#what-is-safekit-farm-cluster}
 
@@ -164,7 +164,7 @@ SafeKit 의 ** mirror 노드 간 데이터 복제가 [ 및 실시간 ](</ko/best
   * ** 자동 장애 감지 및 재구성: ** `farm` 네트워크의 노드 중 하나에 장애가 발생하면 SafeKit 하트비트를 통해 장애를 감지하고 즉시 나머지 정상 노드들로 트래픽을 재분배합니다. 이를 통해 다른 노드들이 이미 활성화되어 부하를 흡수할 준비가 되어 있으므로 전체 서비스의 RTO(복구 시간 목표)를 거의 0에 가깝게 낮출 수 있습니다.
 
 
-### SafeKit `Farm` {#what-is-rpo-safekit-farm} 의 RPO는 무엇입니까?
+### SafeKit `Farm` 의 RPO는 무엇입니까? {#what-is-rpo-safekit-farm}
 
 클러스터 ** ** SafeKit `Farm` 대한 ** RPO(복구 시점 목표) ** 일반적으로 ** 해당 없음(N/A)으로 간주됩니다. 이는 클러스터 ** `farm` 데이터가 노드에 로컬로 저장되지 않는 ** 상태 비저장 애플리케이션 ** 을 위해 특별히 설계되었기 때문입니다. 
 
@@ -174,7 +174,7 @@ SafeKit 의 ** mirror 노드 간 데이터 복제가 [ 및 실시간 ](</ko/best
   * ** 외부 데이터 저장소: ** 애플리케이션에 데이터 영구 저장이 필요한 경우 일반적으로 별도의 백엔드 ** SafeKit Mirror 클러스터 ** 에서 처리되며, 이 경우 RPO는 0이 됩니다. 
 
 
-### SafeKit `Farm` {#rto-example-safekit-farm-cluster} 의 RTO는 얼마입니까?
+### SafeKit `Farm` 의 RTO는 얼마입니까? {#rto-example-safekit-farm-cluster}
 
 `farm` 아키텍처에서 모든 노드가 일반적으로 동시에 활성화되므로 ** RTO는 단 몇 초 ** 로 단축됩니다. 복구 시간은 클러스터가 트래픽 분배를 재구성하는 속도에 따라 결정됩니다.
 
@@ -245,7 +245,7 @@ SafeKit Apache 웹 서버 `farm` 관리하여 성능 확장성과 즉각적인 �
 
 어느 쪽이 본질적으로 더 중요하다고 할 수는 없습니다. 각각 다른 역할을 수행합니다. ** RPO(복구 시점 목표)를, ** 데이터 손실, 즉 허용 가능한 데이터 손실량에 초점을 맞춥니다. ** 는 RTO(복구 시간 목표)를, ** 는 다운타임, 즉 시스템을 얼마나 빨리 다시 온라인 상태로 복구해야 하는지에 초점을 맞춥니다. 미션 크리티컬 애플리케이션의 경우, 두 가지 모두 최소화해야 합니다.
 
-### 애플리케이션 레벨과 VM 레벨에서 SafeKit 와 {#safekit-application-vs-vm-level} 의 RPO 및 RTO 차이점은 무엇인가요?
+### 애플리케이션 레벨과 VM 레벨에서 SafeKit 와 의 RPO 및 RTO 차이점은 무엇인가요? {#safekit-application-vs-vm-level}
 
 두 방식 모두 동기 복제를 통해 ** RPO 0 ** 를 보장하지만 복구 시간에서 차이가 있습니다.
 
@@ -267,7 +267,7 @@ SafeKit Apache 웹 서버 `farm` 관리하여 성능 확장성과 즉각적인 �
 
 이를 통해 사람의 개입 없이 ** RPO = 0 ** (실시간 미러링) 및 ** 최소 RTO ** (약 1분 내 장애 조치)를 제공합니다.
 
-### RPO 및 RTO 최적화를 위해 고가용성과 백업을 결합하는 것이 필수적인 이유는 무엇 {#combining-ha-and-backup-for-rpo-rto} ?
+### RPO 및 RTO 최적화를 위해 고가용성과 백업을 결합하는 것이 필수적인 이유는 무엇 ? {#combining-ha-and-backup-for-rpo-rto}
 
 고가용성(HA)과 백업 솔루션을 결합하는 것이야말로 "두 가지 장점을 모두 갖춘" 복구 전략을 구현하는 유일한 방법입니다. 이 두 가지는 종종 함께 논의되지만, RPO/RTO 문제를 해결하는 데 있어 서로 다른 역할을 합니다.
 

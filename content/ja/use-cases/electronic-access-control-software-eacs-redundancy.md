@@ -7,9 +7,9 @@ lang: "ja"
 topics: "電子アクセス制御システム（EACS）とは？、EACSソフトウェアが重要な理由、EACSの主要プレーヤー一覧、 SafeKitはEACSソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供、 SafeKitセキュリティ市場で定評のあるソリューション、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性{#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
+# 電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
-##  電子アクセス制御システム（ {#what-is-an-electronic-access-control-system-eacs} ）とは何ですか？
+##  電子アクセス制御システム（ ）とは何ですか？ {#what-is-an-electronic-access-control-system-eacs}
 
 電子アクセス制御システムは、私有地への入退室を制御するハードウェア機器で構成されています。
 
@@ -23,7 +23,7 @@ EACSソフトウェアはハードウェアデバイスを管理し、不正ユ�
 
 だからこそ、些細な出来事にも即座に対応しなければならない警備員が、常にこのシステムを利用できる状態にしておく必要があるのです。
 
-##  EACS {#key-players-list-in-eacs}の主要プレーヤー一覧
+##  EACSの主要プレーヤー一覧 {#key-players-list-in-eacs}
 
 EACSの主要プレーヤーは以下のとおりです。
 

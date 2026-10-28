@@ -7,7 +7,7 @@ lang: "ja"
 topics: "Siemens SIPORT 用SafeKit : 2 ノード SAN レス Hyper-V クラスタ、目次、 SafeKitソフトウェアが SAN 上の共有ストレージなしで Siemens SIPORT 高可用性クラスタを簡単に実装する方法、 SafeKit Siemens SIPORT クラスタの仕組み、 SafeKit高可用性の制限、比較: Siemens SIPORT 用SafeKitとネイティブ Hyper-V クラスタリング、ビデオ ガイド: Siemens SIPORT 用SafeKit HA クラスタの構成、 SafeKit 、セキュリティ市場で認められたソリューション、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# Siemens SIPORTアクセス制御の高可用性：SANレス冗長性とフェイルオーバー{#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
+# Siemens SIPORTアクセス制御の高可用性：SANレス冗長性とフェイルオーバー {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens SIPORT"  %}}

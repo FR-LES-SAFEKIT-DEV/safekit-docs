@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "免费试用、技术文档和产品信息，适用于SafeKit高可用性导航中心和 🔍 SafeKit高可用性导航中心"
 ---
 
-# SafeKit资源{#safekit-resources}
+# SafeKit资源 {#safekit-resources}
 
-## SafeKit高可用性{#free-trial-technical-documentation--product-information-for-safekit-high-availability}的免费试用、技术文档和产品信息
+## SafeKit高可用性的免费试用、技术文档和产品信息 {#free-trial-technical-documentation--product-information-for-safekit-high-availability}
 
 ** SafeKit资源：免费试用、文档和产品信息**
 

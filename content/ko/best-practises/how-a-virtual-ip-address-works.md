@@ -17,7 +17,7 @@ topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, S
   * ** 재해 복구: ** 확장 LAN ** 를 사용하면 ** 통해 원격 데이터 센터 전체에서 동일한 VIP를 사용할 수 있으므로 복잡한 DNS 재라우팅 및 TTL 캐싱 지연에 비해 사이트 간 장애 조치가 간소화됩니다.
 
 
-## SafeKit {#safekit-vip-implementation} 의 가상 IP 구현
+## SafeKit 의 가상 IP 구현 {#safekit-vip-implementation}
 
   * ** Mirror 클러스터: ** 실시간 복제 및 장애 조치를 용이하게 하기 위해 기본 서버에서만 활성화되는 플로팅 IP를 제공합니다.
   * ** `Farm` 클러스터: ** 모든 노드에서 VIP를 동시에 유지하여 네트워크 로드 밸런싱을 가능하게 합니다.
@@ -51,7 +51,7 @@ Evidian에서 가상 IP(VIP) 동작 비교 다이어그램 SafeKit ![ ): 활성 
 
 ## 동일 서브넷 장애 조치 환경에서 가상 IP 주소(VIP) 작동 방식 ( Mirror 클러스터) {#virtual-ip-same-subnet-failover}
 
-### 로컬 서브넷 {#automated-failover--network-rerouting-in-a-local-subnet} 에서의 자동 장애 조치 및 네트워크 재라우팅
+### 로컬 서브넷 에서의 자동 장애 조치 및 네트워크 재라우팅 {#automated-failover--network-rerouting-in-a-local-subnet}
 
 로컬 인프라 내에서 원활한 비즈니스 연속성이 필요한 조직을 위해 ** , SafeKit ** 로컬 네트워크 클러스터용 소프트웨어 정의 고가용성을 제공하며, 가상 IP 주소 관리 및 실시간 애플리케이션 장애 조치를 위한 강력하고 자동화된 솔루션을 제공합니다. 
 
@@ -119,13 +119,13 @@ SafeKit 각 노드에 전용 상태 확인 URL인 ** ** 제공하여 트래픽 �
 
 > ** ** 참고: 로드 밸런싱을 선택할 경우 애플리케이션이 ** 소스/대상 IP 변환(SNAT/DNAT) ** 과 호환되는지 확인하십시오. 로드 밸런싱을 사용하면 애플리케이션이 원래 사용자의 ID를 추적하지 못하거나 자체 네트워크 인터페이스에 직접 구성된 가상 IP를 더 이상 인식하지 못하여 시작되지 않을 수 있습니다.
 
-## 동일 서브넷 `Farm` ( `Farm` 클러스터) {#vip-load-balancing-same-subnet} 에서 로드 밸런싱된 가상 IP가 작동하는 방식
+## 동일 서브넷 `Farm` ( `Farm` 클러스터) 에서 로드 밸런싱된 가상 IP가 작동하는 방식 {#vip-load-balancing-same-subnet}
 
 ### 확장 가능한 성능: 커널 수준 로드 밸런싱 및 이중화 {#scalable-performance-kernel-level-load-balancing--redundancy}
 
 트래픽이 많은 환경의 경우, ** 아키텍처 가이드: 멀티노드 `Farm` 클러스터를 사용한 확장 가능한 고가용성 ** SafeKit 완전한 이중화를 유지하면서 여러 활성 서버에 워크로드를 분산하는 방법을 설명합니다. 
 
-### `Farm` 클러스터 아키텍처: Windows 또는 Linux 노드와 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes} 노드 간의 로드 밸런싱
+### `Farm` 클러스터 아키텍처: Windows 또는 Linux 노드와 노드 간의 로드 밸런싱 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 동일 서브넷 내 로드 밸런싱 가상 IP(VIP)의 다이어그램 ![ farm 클러스터 ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
@@ -141,7 +141,7 @@ SafeKit 각 노드에 전용 상태 확인 URL인 ** ** 제공하여 트래픽 �
   * ** 부하 분산: ** 필터는 어떤 패킷을 로컬에서 처리해야 하고 어떤 패킷을 다른 노드(예: 서버 2)로 리디렉션하여 처리해야 하는지 결정하여 균형 잡힌 작업 부하를 보장합니다.
 
 
-#### Gratuitous ARP {#failover-and-rerouting-with-gratuitous-arp} 사용한 페일오버 및 재라우팅
+#### Gratuitous ARP 사용한 페일오버 및 재라우팅 {#failover-and-rerouting-with-gratuitous-arp}
 
 기본 노드(서버 1)에 장애가 발생하면 클러스터는 ** GARP(Gratuitous ARP) 및 ** 통해 가용성을 유지합니다. SafeKit GARP 메시지를 브로드캐스트하여 클라이언트의 ARP 캐시를 서버 2의 `mac2` 정보로 업데이트합니다. 이를 통해 기본 "진입점"에 장애가 발생하더라도 클라이언트는 farm 에 지정된 다른 노드로 즉시 재라우팅됩니다. 
 
@@ -203,11 +203,11 @@ SafeKit `farm` 에 있는 모든 서버에 실시간 ** 상태 확인 URL ** 제
 
  고가용성 클러스터에서 물리적 IP 1에 대한 DNS 확인 및 "멈춤" 현상
 
-#### 현재 상태: 물리적 IP 1 {#current-state-resolution-to-physical-ip-1} 로 해결됨
+#### 현재 상태: 물리적 IP 1 로 해결됨 {#current-state-resolution-to-physical-ip-1}
 
 처음에 클라이언트 1( ** ** 과 클라이언트 2 ** ** 는 DNS 시스템에 가상 이름을 질의합니다. 시스템은 물리적 IP 주소 1 ** ** 반환합니다. 그러면 클라이언트들은 해당 하드웨어 주소에 직접 네트워크 연결(소켓)을 설정합니다. 
 
-#### 장애 조치 과제: 물리적 IP 2 {#the-failover-challenge-rerouting-to-physical-ip-2} 로 재라우팅
+#### 장애 조치 과제: 물리적 IP 2 로 재라우팅 {#the-failover-challenge-rerouting-to-physical-ip-2}
 
 물리적 IP 1의 서버에 장애가 발생하면 관리자는 DNS 레코드를 물리적 IP 2인 ** ** 를 가리키도록 업데이트합니다. 클라이언트를 성공적으로 재라우팅하려면 "완벽한" 순서로 진행되어야 합니다. 
 
@@ -245,7 +245,7 @@ DNS 재라우팅: VIP 없음 | 재해 복구(원격 데이터 센터) | DNS 레�
 {{%  insert-safekit-farm-video-ko  %}}
  
 
-## 가상 IP(VIP) {#virtual-ip-faq} 관련 자주 묻는 질문
+## 가상 IP(VIP) 관련 자주 묻는 질문 {#virtual-ip-faq}
 
 ### 가상 IP(VIP) 및 네트워킹 {#virtual-ip-vip--networking}
 

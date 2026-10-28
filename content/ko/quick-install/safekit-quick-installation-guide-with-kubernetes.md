@@ -7,7 +7,7 @@ lang: "ko"
 topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Kubernetes 솔루션 개요, Linux ( k3s.safe )에 SafeKit / Kubernetes 솔루션 설치 및 구성, 클러스터에서 네트워크 격리 시 다양한 시나리오, SafeKit mirror 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# K3S 고가용성 SafeKit 사용): 장애 조치 {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover} 위한 k3s.safe 모듈 설치
+# K3S 고가용성 SafeKit 사용): 장애 조치 위한 k3s.safe 모듈 설치 {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Kubernetes" mod="k3s"  %}}
@@ -17,9 +17,9 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 
 여기에 솔루션이 설명되어 있습니다: ** 💡 [ Kubernetes K3s 고가용성: 2노드 동기 복제 및 페일오버 ](</solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/>) **
 
-## Linux ( k3s.safe ) 및 {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe} 에 SafeKit / Kubernetes 솔루션의 설치 및 구성
+## Linux ( k3s.safe ) 및 에 SafeKit / Kubernetes 솔루션의 설치 및 구성 {#installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe}
 
-### 1. {#1-download-packages} 패키지를 다운로드하세요.
+### 1. 패키지를 다운로드하세요. {#1-download-packages}
 
   * SafeKit 8.2의 무료 버전을 Linux (safekitlinux_xx.bin)에서 다운로드하세요.
   * k3s.safe Linux 모듈을 다운로드하세요
@@ -58,7 +58,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
   * SafeKit 설치하세요
 
 
-### 3. 첫 번째 노드 {#3-on-the-first-node} 에서
+### 3. 첫 번째 노드 에서 {#3-on-the-first-node}
 
 첫 번째 노드에서 실행: `./k3sconfig.sh first`
 
@@ -74,7 +74,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
   * K3S 토큰을 표시합니다(두 번째 노드 설치 단계에서 사용됨).
 
 
-### 4. 두 번째 노드 {#4-on-the-second-node} 에서
+### 4. 두 번째 노드 에서 {#4-on-the-second-node}
 
 두 번째 노드에서 실행: `./k3sconfig.sh second <token>`
 
@@ -88,7 +88,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
   * k3s 모듈을 시작하세요
 
 
-### 5. k3s SafeKit 모듈이 두 노드 {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes} 모두에서 실행 중인지 확인하십시오.
+### 5. k3s SafeKit 모듈이 두 노드 모두에서 실행 중인지 확인하십시오. {#5-check-that-the-k3s-safekit-module-is-running-on-both-nodes}
 
 다음 명령어를 사용하여 두 노드 모두에서 확인하십시오: `/opt/safekit/safekit –H "*" state`
 
@@ -110,7 +110,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
     성공
     
 
-### 6. 클러스터 {#6-start-the-safekit-web-console-to-administer-the-cluster} 를 관리하려면 SafeKit 웹 콘솔을 시작하십시오.
+### 6. 클러스터 를 관리하려면 SafeKit 웹 콘솔을 시작하십시오. {#6-start-the-safekit-web-console-to-administer-the-cluster}
 
   * 브라우저를 SafeKit 웹 콘솔 URL `http://server0-IP:9010` 에 연결하세요.
   * 이미지와 유사한 페이지가 표시될 것입니다.
@@ -120,7 +120,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 ![ Kubernetes 클러스터가 SafeKit 웹 콘솔 ](/wp-content/uploads/2024/03/14-monitoring-prim-second.png) 에서 시작되었습니다.
 
 
-### 7. {#7-testing} 테스트
+### 7. 테스트 {#7-testing}
 
   * PRIM 노드의 컨텍스트 메뉴를 아래로 스크롤하여 `Stop` 클릭하면 PRIM 노드가 중지됩니다.
   * 두 번째 노드에서 페일오버가 제대로 수행되어 해당 노드가 단독 상태(녹색)가 되는지 확인하십시오.
@@ -153,7 +153,7 @@ topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 �
 ![ PRIM 서버에서 모듈을 중지합니다 ](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 8. WordPress {#8-try-the-cluster-with-a-kubernetes-application-like-wordpress} 와 같은 Kubernetes 애플리케이션으로 클러스터를 테스트해 보세요.
+### 8. WordPress 와 같은 Kubernetes 애플리케이션으로 클러스터를 테스트해 보세요. {#8-try-the-cluster-with-a-kubernetes-application-like-wordpress}
 
 이미지에는 WordPress 설치 예시가 나와 있습니다. Pods를 사용하여 구현된 백엔드 데이터베이스를 갖춘 웹 포털입니다.
 
@@ -199,7 +199,7 @@ WordPress는 자동으로 고가용성을 제공합니다.
   * `helm registry login -u your_user_name docker.io` 실행한 다음 비밀번호를 입력하십시오.
 
 
-### 9. {#9-support} 지원
+### 9. 지원 {#9-support}
 
   * 지원을 받으려면 노드당 하나씩, 총 2개의 SafeKit `Snapshots` (2개의 .zip 파일)를 다운로드하십시오.
 
@@ -213,7 +213,7 @@ WordPress는 자동으로 고가용성을 제공합니다.
 ![ 지원을 위해 스냅샷을 찍으세요 ](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 
-### 10. 필요한 경우, 스플릿브레인 체커 {#10-if-necessary-configure-a-splitbrain-checker} 구성하십시오.
+### 10. 필요한 경우, 스플릿브레인 체커 구성하십시오. {#10-if-necessary-configure-a-splitbrain-checker}
 
   * 아래의 [ "클러스터에서 네트워크 격리가 발생할 경우 어떤 시나리오가 있나요?" ](#isolation) 참조하여 스플릿브레인 체커를 구성해야 하는지 확인하십시오.
   * 모듈 구성에서 `Advanced Configuration` (이미지 참조)를 클릭하여 `userconfig.xml` 편집합니다.
@@ -244,7 +244,7 @@ WordPress는 자동으로 고가용성을 제공합니다.
 {{%  insert-safekit-network-isolation-ko  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

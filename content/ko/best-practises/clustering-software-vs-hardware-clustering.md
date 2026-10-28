@@ -9,7 +9,7 @@ topics: "소프트웨어 클러스터링과 하드웨어 클러스터링의 차�
 
 # 고가용성을 위한 소프트웨어 클러스터링 vs. 하드웨어 클러스터링 {#software-clustering-vs-hardware-clustering-for-high-availability}
 
-## 소프트웨어 클러스터링과 하드웨어 클러스터링의 차이점은 무엇 {#difference-between-software-clustering-and-hardware-clustering} ?
+## 소프트웨어 클러스터링과 하드웨어 클러스터링의 차이점은 무엇 ? {#difference-between-software-clustering-and-hardware-clustering}
 
 ### 개요 {#overview}
 

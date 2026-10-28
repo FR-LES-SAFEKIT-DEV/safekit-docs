@@ -7,7 +7,7 @@ lang: "ja"
 topics: "SafeKit 、物理セキュリティソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供します。🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 物理セキュリティソフトウェアの高可用性と冗長性{#high-availability-and-redundancy-for-physical-security-software}
+# 物理セキュリティソフトウェアの高可用性と冗長性 {#high-availability-and-redundancy-for-physical-security-software}
 
 
 {{%  insert-safekit-security-solutions-ja app="physical security"  %}}

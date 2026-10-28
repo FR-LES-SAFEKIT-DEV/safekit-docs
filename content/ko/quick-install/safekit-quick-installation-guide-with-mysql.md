@@ -7,7 +7,7 @@ lang: "ko"
 topics: "MySQL 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / MySQL 솔루션 개요, SafeKit Linux mysql.safe Windows MySQL , SafeKit / MySQL 서버 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# MySQL 고가용성 SafeKit 포함): 장애 조치용 mysql.safe 모듈 설치 {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover} 포함)
+# MySQL 고가용성 SafeKit 포함): 장애 조치용 mysql.safe 모듈 설치 포함) {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ko app="MySQL" mod="mysql"  %}}
@@ -17,7 +17,7 @@ topics: "MySQL 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ 가장 간단한 MySQL 고가용성: 2노드 동기 복제 및 장애 조치 ](</solutions/mysql-high-availability-synchronous-replication-failover/>) ** .
 
-## SafeKit / MySQL 솔루션의 Windows 및 Linux ( mysql.safe ) 및 {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe} 설치
+## SafeKit / MySQL 솔루션의 Windows 및 Linux ( mysql.safe ) 및 설치 {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -34,13 +34,13 @@ topics: "MySQL 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한
 {{%  insert-safekit-82-installation-module-linux-ko app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit / MySQL 서버 솔루션 {#step-by-step-configuration-of-the-safekit--mysql-server-solution} 의 단계별 구성
+## SafeKit / MySQL 서버 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--mysql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

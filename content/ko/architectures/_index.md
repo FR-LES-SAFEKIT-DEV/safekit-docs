@@ -9,7 +9,7 @@ topics: "SafeKit 사용한 다양한 고가용성 아키텍처 및 소프트웨�
 
 # SafeKit 아키텍처 {#safekit-architectures}
 
-## {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit} SafeKit 사용할 수 있는 다양한 고가용성 아키텍처와 소프트웨어 클러스터는 무엇입니까?
+## SafeKit 사용할 수 있는 다양한 고가용성 아키텍처와 소프트웨어 클러스터는 무엇입니까? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
 ### Mirror 클러스터 {#mirror-cluster}
 
@@ -51,9 +51,9 @@ topics: "SafeKit 사용한 다양한 고가용성 아키텍처 및 소프트웨�
 
 [ 추가 정보 ](</architectures/n-1-redundancy/>)
 
-## SafeKit 및 {#how-to-build-high-availability-clusters-with-safekit} 를 사용하여 고가용성 클러스터를 구축하는 방법은 무엇입니까?
+## SafeKit 및 를 사용하여 고가용성 클러스터를 구축하는 방법은 무엇입니까? {#how-to-build-high-availability-clusters-with-safekit}
 
-### 고가용성 모듈 {#use-high-availability-modules} 를 사용하십시오.
+### 고가용성 모듈 를 사용하십시오. {#use-high-availability-modules}
 
 고가용성 모듈은 애플리케이션에 맞게 SafeKit 를 사용자 정의한 것입니다. 모듈에는 두 가지 유형이 있습니다. 실시간 데이터 복제 및 장애 조치 기능을 갖춘 mirror 모듈과 로드 밸런싱 및 장애 조치 기능을 갖춘 `farm` 모듈입니다.
 
@@ -76,7 +76,7 @@ mirror 모듈을 2개의 서버에 배포하면 mirror 클러스터가 생성되
 
 2 - 애플리케이션을 시작하고 중지하는 스크립트.
 
-### 고가용성 모듈 {#plug-and-play-deployment-of-high-availability-modules} 의 플러그 앤 플레이 배포
+### 고가용성 모듈 의 플러그 앤 플레이 배포 {#plug-and-play-deployment-of-high-availability-modules}
 
 애플리케이션 모듈이 애플리케이션과 함께 구성 및 테스트되면 배포에 특별한 IT 기술이 필요하지 않습니다.
 

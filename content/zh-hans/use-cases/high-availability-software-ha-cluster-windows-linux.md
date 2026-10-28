@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "30 秒电梯演讲，介绍SafeKit和 🔍 SafeKit高可用性导航中心"
 ---
 
-# 高可用性软件： Windows和Linux与SafeKit和{#high-availability-software-windows-and-linux-clustering-with-safekit}集群
+# 高可用性软件： Windows和Linux与SafeKit和集群 {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
 ## 30秒电梯演讲稿，介绍SafeKit {#30-seconds-elevator-pitch-for-safekit}
 

@@ -7,7 +7,7 @@ lang: "ko"
 topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit /클라우드 솔루션 개요, Windows 및 Linux ( farm.safe )에 SafeKit /클라우드 솔루션 설치, SafeKit /클라우드 솔루션 단계별 구성, SafeKit `farm` 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# 클라우드 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module} 모듈을 설치하세요.
+# 클라우드 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe 모듈을 설치하세요. {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ko app="Cloud" mod="farm"  %}}
@@ -17,9 +17,9 @@ topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : 클라우드 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</solutions/cloud-load-balancing-cluster-failover/>) ** .
 
-## SafeKit / 클라우드 솔루션 설치( Windows 및 Linux ( farm.safe ) 및 {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe} )
+## SafeKit / 클라우드 솔루션 설치( Windows 및 Linux ( farm.safe ) 및 ) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 
-### 클라우드 로드 밸런서 {#configuration-of-the-cloud-load-balancer} 구성
+### 클라우드 로드 밸런서 구성 {#configuration-of-the-cloud-load-balancer}
 
 로드 밸런서는 가상 IP 주소로 구성되어야 합니다.  
 또한 로드 밸런서는 노드에 주기적으로 상태 패킷을 전송하도록 구성되어야 합니다.  
@@ -57,13 +57,13 @@ topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용
 
 참고: 구성할 범용 **farm.safe** 모듈은 패키지 안에 포함되어 있습니다.
 
-## SafeKit / 클라우드 솔루션 {#step-by-step-configuration-of-the-safekit--cloud-solution} 의 단계별 구성
+## SafeKit / 클라우드 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--cloud-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ko app="" mod="farm"  %}}
  
 
-## SafeKit `farm` 솔루션 {#demonstration-of-the-safekit-farm-solution} 시연
+## SafeKit `farm` 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ko  %}}

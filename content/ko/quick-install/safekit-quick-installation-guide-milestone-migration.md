@@ -7,9 +7,9 @@ lang: "ko"
 topics: "증거 SafeKit"
 ---
 
-# Milestone 관리 마이그레이션( SafeKit {#milestone-management-migration-with-safekit} 포함)
+# Milestone 관리 마이그레이션( SafeKit 포함) {#milestone-management-migration-with-safekit}
 
-## SafeKit {#eviden-safekit} 확인하세요
+## SafeKit 확인하세요 {#eviden-safekit}
 
 
 {{%  insert-safekit-4-buttons-ko  %}}

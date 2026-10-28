@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "集群中发生网络隔离时有哪些不同的场景？集群中发生断电时有哪些不同的场景？🔍 SafeKit高可用性导航中心"
 ---
 
-# HA集群中断电和网络隔离的处理{#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# HA集群中断电和网络隔离的处理 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
 
 
 {{%  insert-safekit-network-isolation-zh-hans  %}}
@@ -15,7 +15,7 @@ topics: "集群中发生网络隔离时有哪些不同的场景？集群中发�
 
 ## 集群断电时有哪些不同的场景？ {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
 
-### 主节点断电{#primary-node-power-outage}
+### 主节点断电 {#primary-node-power-outage}
 
 当断电仅导致主节点停止运行时：
 
@@ -24,7 +24,7 @@ topics: "集群中发生网络隔离时有哪些不同的场景？集群中发�
   * 如有需要，管理员可以互换主管理员和副管理员的角色。
 
 
-### 辅助节点断电{#secondary-node-power-outage}
+### 辅助节点断电 {#secondary-node-power-outage}
 
 当断电时，只有备用节点停止运行：
 

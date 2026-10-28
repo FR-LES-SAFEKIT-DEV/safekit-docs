@@ -7,13 +7,13 @@ lang: "ja"
 topics: "SafeKit Microsoft Azureで発見、 SafeKitを Google GCPで発見、 SafeKit Amazon AWSで発見、Eviden を使用したその他のクラウド ソリューションSafeKit 、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
-# クラウドコンピューティングにおけるクラスター：Amazon AWS 、 Microsoft Azure 、Google GCPおよびその他のクラウド{#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}向けの汎用ソリューション
+# クラウドコンピューティングにおけるクラスター：Amazon AWS 、 Microsoft Azure 、Google GCPおよびその他のクラウド向けの汎用ソリューション {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
 
 
 {{%  insert-safekit-all-cloud-solutions-ja  %}}
  
 
-## Eviden SafeKit {#other-cloud-solutions-with-eviden-safekit}を使用したその他のクラウドソリューション
+## Eviden SafeKitを使用したその他のクラウドソリューション {#other-cloud-solutions-with-eviden-safekit}
 
 [汎用クラウドMirror > ](</ja/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 

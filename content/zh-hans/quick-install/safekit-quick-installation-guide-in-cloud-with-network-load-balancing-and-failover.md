@@ -7,19 +7,19 @@ lang: "zh-hans"
 topics: "云端高可用性快速安装指南， SafeKit高可用性限制， SafeKit / 云解决方案概述，在Windows和Linux ( farm.safe ) 上安装SafeKit / 云解决方案， SafeKit / 云解决方案分步配置， SafeKit和`farm`解决方案演示，🔍 SafeKit高可用性导航中心"
 ---
 
-# 云网络负载均衡与故障转移：安装SafeKit farm.safe模块{#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}模块
+# 云网络负载均衡与故障转移：安装SafeKit farm.safe模块模块 {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="Cloud" mod="farm"  %}}
  
 
-## SafeKit / 云解决方案{#overview-of-the-safekit--cloud-solution}概述
+## SafeKit / 云解决方案概述 {#overview-of-the-safekit--cloud-solution}
 
 解决方案描述如下： ** 💡 [ SafeKit ：云负载均衡和应用程序高可用性`Farm`集群](</solutions/cloud-load-balancing-cluster-failover/>) ** 。
 
-## 在Windows和Linux ( farm.safe ) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}上安装SafeKit / 云解决方案
+## 在Windows和Linux ( farm.safe )上安装SafeKit / 云解决方案 {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 
-### 云负载均衡器{#configuration-of-the-cloud-load-balancer}的配置
+### 云负载均衡器的配置 {#configuration-of-the-cloud-load-balancer}
 
 负载均衡器必须配置虚拟 IP 地址。  
 负载均衡器必须配置为定期向节点发送健康数据包。  
@@ -38,7 +38,7 @@ topics: "云端高可用性快速安装指南， SafeKit高可用性限制， Sa
 
 ⚠️ 请勿在以下步骤配置的第 4 步配置虚拟 IP 地址和负载均衡规则。云负载均衡器中已设置好虚拟 IP 地址和负载均衡规则。在第 4 步设置虚拟 IP 地址和负载均衡规则仅适用于本地部署配置。
 
-### 云网络安全配置{#configuration-of-the-cloud-network-security}
+### 云网络安全配置 {#configuration-of-the-cloud-network-security}
 
 必须配置网络安全，以启用以下协议和端口的通信：
 
@@ -57,13 +57,13 @@ topics: "云端高可用性快速安装指南， SafeKit高可用性限制， Sa
 
 注意：您将要配置的通用**farm.safe**模块包含在软件包中。
 
-## SafeKit / 云解决方案{#step-by-step-configuration-of-the-safekit--cloud-solution}的逐步配置
+## SafeKit / 云解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--cloud-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-zh-hans app="" mod="farm"  %}}
  
 
-## SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}解决方案的演示
+## SafeKit `farm`解决方案的演示 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-zh-hans  %}}

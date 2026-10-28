@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "Nedap 、 SafeKit高可用性快速安装指南； SafeKit / Nedap解决方案概述；在Windows ( nedap.safe ) 上安装SafeKit / Nedap解决方案； SafeKit / Nedap解决方案分步配置； SafeKit mirror解决方案演示；🔍 SafeKit高可用性导航中心"
 ---
 
-# Nedap高可用性（与SafeKit配合使用）：安装nedap.safe模块以实现故障转移{#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
+# Nedap高可用性（与SafeKit配合使用）：安装nedap.safe模块以实现故障转移 {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Nedap" mod="nedap"  %}}
@@ -15,13 +15,13 @@ topics: "Nedap 、 SafeKit高可用性快速安装指南； SafeKit / Nedap解�
 
 ** 📘 [ Nedap AOES 与SafeKit的配置（PDF） ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) ** ：所有详细信息均在此文档中。
 
-## SafeKit / Nedap解决方案概述{#overview-of-the-safekit--nedap-solution}
+## SafeKit / Nedap解决方案概述 {#overview-of-the-safekit--nedap-solution}
 
 解决方案描述如下： ** 💡 [最简单的Nedap高可用性：2 节点同步复制和故障转移](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
 
-## 在Windows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}上安装SafeKit / Nedap解决方案
+## 在Windows ( nedap.safe )上安装SafeKit / Nedap解决方案 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
-### 先决条件{#prerequisites}
+### 先决条件 {#prerequisites}
 
   * 您需要在 2 个节点（虚拟机或物理服务器）上安装Nedap AEOS 和 SQL。
   * 和 SQL Server 在与上述相同的节点上 Nedap AEOS，配置连接 Nedap 使用虚拟 IP 地址而不是服务器的物理 IP 地址将 AEOS 连接到 SQL。否则，故障转移将无法正常工作。 SQL Server 可以是外部的，请参见下面的注释。
@@ -42,13 +42,13 @@ topics: "Nedap 、 SafeKit高可用性快速安装指南； SafeKit / Nedap解�
 {{%  insert-safekit-82-installation-module-windows-zh-hans app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit / Nedap解决方案{#step-by-step-configuration-of-the-safekit--nedap-solution}的逐步配置
+## SafeKit / Nedap解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--nedap-solution}
 
 
 {{%  insert-safekit-82-configuration-zh-hans app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}解决方案的演示
+## SafeKit mirror解决方案的演示 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-zh-hans  %}}

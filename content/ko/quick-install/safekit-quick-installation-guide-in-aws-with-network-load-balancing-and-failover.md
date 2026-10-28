@@ -7,7 +7,7 @@ lang: "ko"
 topics: "AWS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / AWS 솔루션 개요, SafeKit 및 AWS ( farm.safe )에 Windows / Linux 솔루션 설치, SafeKit / AWS 솔루션 단계별 구성, SafeKit 및 `farm` 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
-# AWS 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module} 모듈을 설치하십시오.
+# AWS 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe 모듈을 설치하십시오. {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ko app="AWS" mod="farm"  %}}
@@ -17,9 +17,9 @@ topics: "AWS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 �
 
 솔루션은 여기에 설명되어 있습니다: ** 💡 [ SafeKit : Amazon AWS 로드 밸런싱 및 애플리케이션 고가용성 `Farm` 클러스터 ](</solutions/aws-load-balancing-cluster-failover/>) ** .
 
-## SafeKit / AWS 솔루션의 Windows 및 Linux ( farm.safe ) 및 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe} 설치
+## SafeKit / AWS 솔루션의 Windows 및 Linux ( farm.safe ) 및 설치 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
-### Amazon AWS 로드 밸런서 {#configuration-of-the-amazon-aws-load-balancer} 의 구성
+### Amazon AWS 로드 밸런서 의 구성 {#configuration-of-the-amazon-aws-load-balancer}
 
 로드 밸런서는 가상 IP 주소로 구성되어야 합니다.  
 또한 로드 밸런서는 노드에 주기적으로 상태 패킷을 전송하도록 구성되어야 합니다.  
@@ -60,13 +60,13 @@ Amazon AWS 로드 밸런서를 다음과 같이 구성해야 합니다.
 
 참고: 구성할 범용 **farm.safe** 모듈은 패키지 안에 포함되어 있습니다.
 
-## SafeKit / AWS 솔루션 {#step-by-step-configuration-of-the-safekit--aws-solution} 의 단계별 구성
+## SafeKit / AWS 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--aws-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ko app="" mod="farm"  %}}
  
 
-## SafeKit `farm` 솔루션 {#demonstration-of-the-safekit-farm-solution} 시연
+## SafeKit `farm` 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ko  %}}

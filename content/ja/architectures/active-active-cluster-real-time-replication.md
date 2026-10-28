@@ -7,11 +7,11 @@ lang: "ja"
 topics: "リアルタイムレプリケーションを備えたアクティブ/アクティブクラスタの仕組みは？、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# リアルタイムレプリケーションと相互フェイルオーバーを備えたアクティブ/アクティブクラスタリングソフトウェア{#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# リアルタイムレプリケーションと相互フェイルオーバーを備えたアクティブ/アクティブクラスタリングソフトウェア {#active-active-clustering-software-with-real-time-replication--mutual-failover}
 
 ## リアルタイムレプリケーションを備えたアクティブ/アクティブクラスタはどのように動作するのですか？ {#how-the-active-active-cluster-with-real-time-replication-works}
 
-### リアルタイムレプリケーションを備えたアクティブ/アクティブクラスタ{#active--active-cluster-with-real-time-replication}
+### リアルタイムレプリケーションを備えたアクティブ/アクティブクラスタ {#active--active-cluster-with-real-time-replication}
 
 アプリケーションは、相互フェイルオーバー構成の2台のサーバー上で稼働しています。各サーバーは、もう一方のサーバーのバックアップとして機能します。また、各アプリケーションは、それぞれ複製されたファイルディレクトリ上で動作します。
 
@@ -32,7 +32,7 @@ SafeKitアクティブアクティブクラスタは、リアルタイムレプ�
   * 各mirrorモジュールは、それぞれ独自の仮想IPアドレス、独自の複製ファイルディレクトリ、および独自の復旧スクリプトを持ちます。
 
 
-### アクティブなクラスターの例{#example-of-an-active-active-cluster}
+### アクティブなクラスターの例 {#example-of-an-active-active-cluster}
 
 💡 [ Hyper-V ](</ja/solutions/hyper-v-replication-automatic-failover-load-balancing/>)または 💡 [ KVM ](</ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)ソリューションは、仮想マシンのレプリケーション、自動フェイルオーバー、ロードバランシングを備えており、2 台の物理サーバー間で N 台の仮想マシンを複製する N mirrorモジュールを備えたアクティブ/アクティブ クラスターの一例です。
 

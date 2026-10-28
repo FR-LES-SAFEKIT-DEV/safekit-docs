@@ -7,7 +7,7 @@ lang: "ja"
 topics: "Nedapの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Nedapソリューションの概要、 Windows ( nedap.safe ) へのSafeKit / Nedapソリューションのインストール、 SafeKit / Nedapソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# Nedap高可用性とSafeKit : フェイルオーバーのためにnedap.safeモジュールをインストールしてください{#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
+# Nedap高可用性とSafeKit : フェイルオーバーのためにnedap.safeモジュールをインストールしてください {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Nedap" mod="nedap"  %}}
@@ -15,13 +15,13 @@ topics: "Nedapの高可用性クイックインストールガイド、 SafeKit�
 
 ** 📘 [ Nedap AOES とSafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>) **の構成: すべての詳細はこのドキュメントに記載されています。
 
-## SafeKit / Nedapソリューションの概要{#overview-of-the-safekit--nedap-solution}
+## SafeKit / Nedapソリューションの概要 {#overview-of-the-safekit--nedap-solution}
 
 解決策はここに記載されています: ** 💡 [最もシンプルなNedap高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/nedap-high-availability-synchronous-replication-failover/>) ** 。
 
-## SafeKit / NedapソリューションをWindows ( nedap.safe ) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}にインストールします。
+## SafeKit / NedapソリューションをWindows ( nedap.safe )にインストールします。 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * 2つのノード（仮想マシンまたは物理サーバー）に、 Nedap AEOSとSQLがインストールされている必要があります。
   * と SQL Server 同じノードで Nedap AEOS、接続を構成する Nedap AEOSからSQLへの接続には、サーバーの物理IPアドレスではなく、仮想IPアドレスを使用してください。そうしないと、フェイルオーバーが機能しません。 SQL Server 外部の場合もあります。下記の注記を参照してください。
@@ -42,13 +42,13 @@ topics: "Nedapの高可用性クイックインストールガイド、 SafeKit�
 {{%  insert-safekit-82-installation-module-windows-ja app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit / Nedapソリューション{#step-by-step-configuration-of-the-safekit--nedap-solution}の段階的な構成
+## SafeKit / Nedapソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--nedap-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

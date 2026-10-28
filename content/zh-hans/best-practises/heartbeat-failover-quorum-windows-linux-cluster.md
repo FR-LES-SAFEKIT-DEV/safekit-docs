@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "集群中网络隔离的不同场景有哪些？ Windows或Linux集群中的心跳和故障转移机制如何运作？当服务器位于两个远程机房时，如何解决脑裂问题并实现仲裁？使用SafeKit脑裂检测器实现简单集群仲裁？🔍 SafeKit高可用性导航中心"
 ---
 
-# Windows和Linux集群中的心跳、故障转移和仲裁{#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# Windows和Linux集群中的心跳、故障转移和仲裁 {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
 
 
 {{%  insert-safekit-network-isolation-zh-hans  %}}
@@ -23,13 +23,13 @@ SafeKit软件支持与两台服务器共享的网络数量一样多的心跳信�
 
 心跳机制用于实现Windows和Linux集群。它与SafeKit mirror集群集成，并支持实时文件复制和故障转移。
 
-### SafeKit心跳{#safekit-heartbeats}
+### SafeKit心跳 {#safekit-heartbeats}
 
 在正常运行中，两台服务器通过心跳通道交换其状态（PRIM、SECOND、资源状态），并同步其应用程序的启动和停止过程。
 
 具体来说，在计划故障转移的情况下，停止应用程序的脚本会先在主服务器上执行，然后再在备用服务器上执行启动脚本。因此，备用服务器上的复制数据处于安全状态，相当于应用程序已安全停止。
 
-### 心跳完全消失{#loss-of-all-heartbeats}
+### 心跳完全消失 {#loss-of-all-heartbeats}
 
 当一台服务器上的所有心跳信号丢失时，该服务器会认为另一台服务器已宕机，并转入 ALONE 状态。
 
@@ -37,33 +37,33 @@ SafeKit软件支持与两台服务器共享的网络数量一样多的心跳信�
 
 虽然并非强制性的，但为了将网络故障情况与服务器故障情况分开，最好在两个不同的网络上设置两个心跳通道来同步两个服务器。
 
-## 服务器位于两个远程机房时，会出现脑裂问题和法定人数限制{#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
+## 服务器位于两个远程机房时，会出现脑裂问题和法定人数限制 {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
 
 
 ![心跳、故障转移和仲裁在Windows或Linux集群中](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
 
 
-### 远程计算机房{#remote-computer-rooms}
+### 远程计算机房 {#remote-computer-rooms}
 
 一个用于保护关键应用程序的高可用性集群可以由位于两个地理位置相距较远的机房中的两台服务器来实现。
 
 因此，该解决方案支持了房间爆满的灾难。
 
-### 裂脑{#split-brain}
+### 裂脑 {#split-brain}
 
 如果两个计算机房之间网络隔离，所有心跳信号都会丢失，从而导致脑裂问题。
 
 两台服务器都启动了关键应用程序。
 
-### 解决方案的复杂度{#complexity-of-solutions}
+### 解决方案的复杂度 {#complexity-of-solutions}
 
 为了解决脑裂问题，通常使用第三个仲裁服务器或专用仲裁磁盘来实现仲裁，以避免出现双主服务器。 
 
 不幸的是，这些新的仲裁设备增加了整体集群架构的成本和复杂性。
 
-## 使用SafeKit裂脑检测器{#simple-cluster-quorum-with-the-safekit-split-brain-checker}的简单集群法定人数
+## 使用SafeKit裂脑检测器的简单集群法定人数 {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
 
-### SafeKit裂脑检测器{#safekit-split-brain-checker}
+### SafeKit裂脑检测器 {#safekit-split-brain-checker}
 
 借助SafeKit高可用性软件， Windows或Linux集群内的仲裁无需第三台仲裁服务器，也无需仲裁磁盘。一个简单的脑裂检测](</resources/safekit-user-guide-82/#check_splitbrain>) [避免应用程序的重复执行。
 

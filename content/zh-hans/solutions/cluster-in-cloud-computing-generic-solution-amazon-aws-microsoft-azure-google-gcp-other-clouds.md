@@ -7,13 +7,13 @@ lang: "zh-hans"
 topics: "在Microsoft Azure中探索SafeKit ，在 Google GCP中探索SafeKit ，在 Amazon AWS中探索SafeKit ，以及 Eviden 的其他云解决方案SafeKit ，🔍 SafeKit高可用性导航中心"
 ---
 
-# 云计算集群：适用于 Amazon AWS 、 Microsoft Azure 、Google GCP和其他云平台{#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}的通用解决方案
+# 云计算集群：适用于 Amazon AWS 、 Microsoft Azure 、Google GCP和其他云平台的通用解决方案 {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
 
 
 {{%  insert-safekit-all-cloud-solutions-zh-hans  %}}
  
 
-## Eviden SafeKit {#other-cloud-solutions-with-eviden-safekit}的其他云解决方案
+## Eviden SafeKit的其他云解决方案 {#other-cloud-solutions-with-eviden-safekit}
 
 [通用云Mirror > ](</zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 

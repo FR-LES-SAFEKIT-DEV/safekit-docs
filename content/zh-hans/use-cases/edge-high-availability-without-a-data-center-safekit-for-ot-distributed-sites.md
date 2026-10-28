@@ -9,7 +9,7 @@ topics: "边缘高可用性挑战， SafeKit为何是边缘的理想之选，边
 
 # 无需数据中心的边缘高可用性：适用于 OT 和分布式站点的SafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
 
-## Edge HA挑战赛{#the-edge-ha-challenge}
+## Edge HA挑战赛 {#the-edge-ha-challenge}
 
 边缘站点通常没有数据中心，也没有高可用性方面的专业知识——然而，业务连续性至关重要。工厂车间、海上石油平台、医院诊所、零售商店或 5G 天线站点都无法承受停机，但又无法承担传统数据中心高可用性集群的成本和复杂性。
 
@@ -21,7 +21,7 @@ SafeKit正是为弥补这一空白而打造的。它只需两台标准服务器�
 ![ SafeKit适用于 Edge ](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
 
 
-## 是什么让SafeKit与 Edge {#what-makes-safekit-the-natural-fit-for-edge}完美契合？
+## 是什么让SafeKit与 Edge完美契合？ {#what-makes-safekit-the-natural-fit-for-edge}
 
 SafeKit可将两台标准边缘服务器（任何品牌，物理或虚拟）转换为即插即用的高可用性集群——无需共享存储、无需 SAN、无需特殊硬件。一套轻量级软件即可实现：
 
@@ -34,7 +34,7 @@ SafeKit可将两台标准边缘服务器（任何品牌，物理或虚拟）转�
 
 无需采购SAN，无需Windows服务器数据中心许可证，无需Linux集群操作系统专业知识，也无需专用集群硬件。整个高可用性堆栈就是一个单独的软件包。
 
-## 边缘和分布式部署适用性{#edge--distributed-deployment-suitability}
+## 边缘和分布式部署适用性 {#edge--distributed-deployment-suitability}
 
 SafeKit专为边缘计算、分支机构和分布式企业场景而设计：
 
@@ -50,7 +50,7 @@ SafeKit专为边缘计算、分支机构和分布式企业场景而设计：
 OEM/嵌入式部署|静默安装，可编写脚本，可由软件发行商嵌入  
 数百个分布式集群|专为管理众多分支机构的分布式企业而设计  
   
-## 为什么边缘 OT 环境有所不同{#why-edge-ot-environments-are-different}
+## 为什么边缘 OT 环境有所不同 {#why-edge-ot-environments-are-different}
 
 运营技术 (OT) 环境——例如 SCADA、BMS、物理安全、工业控制——其要求与 IT 数据中心有着根本的不同：
 
@@ -64,7 +64,7 @@ OEM/嵌入式部署|静默安装，可编写脚本，可由软件发行商嵌入
 
 SafeKit的无 SAN、双服务器、自动故障转移模型直接解决了所有这些限制。
 
-## 理想边缘用例{#ideal-edge-use-cases}
+## 理想边缘用例 {#ideal-edge-use-cases}
 
 任何没有数据中心的站点——但高可用性仍然至关重要：
 
@@ -83,7 +83,7 @@ SCADA 和工业控制|工厂、变电站、水厂|任何运行在Windows或Linux
 零售|门店、分店、仓库|销售点和库存管理  
 国防部|前沿作战基地、野战部队|关键任务指挥和通信系统  
   
-## 边缘高可用性与数据中心高可用性：主要区别{#edge-vs-data-center-ha-key-differences}
+## 边缘高可用性与数据中心高可用性：主要区别 {#edge-vs-data-center-ha-key-differences}
 
 标准|数据中心高可用性（WSFC、Pacemaker、VMware 高可用性） | SafeKit边缘高可用性  
 ---|---|---  
@@ -96,7 +96,7 @@ SCADA 和工业控制|工厂、变电站、水厂|任何运行在Windows或Linux
 许可费用|高（数据中心操作系统、SAN 许可） |每个集群一个经济实惠的软件许可  
 典型 RTO | 1–5 分钟|小于 1 分钟（可配置）  
   
-## 技术最低要求{#technical-minimum-requirements}
+## 技术最低要求 {#technical-minimum-requirements}
 
   * **服务器： ** 2 台标准 x86 服务器或虚拟机（任何硬件品牌，物理或虚拟）或 ARM（仅限Linux ）
   * **操作系统： ** Windows服务器 2019 / 2022 / 2025， Windows 11，RHEL 8/9，Ubuntu 24.04

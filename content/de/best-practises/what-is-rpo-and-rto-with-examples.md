@@ -245,7 +245,7 @@ Sehen Sie, wie SafeKit einen Apache-Webserver `farm` verwaltet, um sowohl Leistu
 
 Keines der beiden ist per se wichtiger; sie erfüllen unterschiedliche Funktionen. ** RPO (Recovery Point Objective) ** konzentrieren sich auf den Datenverlust – wie viele Daten Sie maximal verlieren dürfen. ** RTO (Recovery Time Objective) ** konzentrieren sich auf die Ausfallzeit – wie schnell Sie wieder online sein müssen. Für unternehmenskritische Anwendungen müssen beide Werte minimiert werden.
 
-### Worin besteht der Unterschied zwischen RPO und RTO zwischen SafeKit auf Anwendungsebene und {#safekit-application-vs-vm-level} ?
+### Worin besteht der Unterschied zwischen RPO und RTO zwischen SafeKit auf Anwendungsebene und ? {#safekit-application-vs-vm-level}
 
 Beide gewährleisten zwar durch synchrone Replikation einen RPO-Wert von 0 ** = 0 ** , unterscheiden sich aber in der Wiederherstellungszeit:
 

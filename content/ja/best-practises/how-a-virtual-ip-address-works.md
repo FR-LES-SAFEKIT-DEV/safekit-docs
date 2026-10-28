@@ -17,7 +17,7 @@ topics: "高可用性クラスタにおける仮想IPアドレスとは？、 Sa
   * **ディザスターリカバリー: **拡張 LAN **を使用すると**リモートデータセンター間で同じ VIP を使用できるため、複雑な DNS 再ルーティングや TTL キャッシュの遅延と比較して、サイト間のフェイルオーバーが簡素化されます。
 
 
-## SafeKit {#safekit-vip-implementation}における仮想IPの実装
+## SafeKitにおける仮想IPの実装 {#safekit-vip-implementation}
 
   * ** Mirrorクラスター: ** 、リアルタイムのレプリケーションとフェイルオーバーを容易にするために、プライマリ サーバーでのみアクティブなフローティング IP を備えています。
   * ** `Farm`クラスター: **すべてのノード間で VIP を同時に維持することにより、ネットワーク負荷分散を有効にします。
@@ -36,7 +36,7 @@ SafeKit内のMirrorおよび`Farm`クラスタに対する**仮想 IP 実装戦�
 {{%  insert-safekit-4-buttons-ja  %}}
  
 
-## 目次{#table-of-contents}
+## 目次 {#table-of-contents}
 
   * [同一サブネットフェイルオーバー（ Mirrorクラスタ）における仮想IPアドレス（VIP）の仕組み](#virtual-ip-same-subnet-failover)
   * [仮想IP (VIP) が異なるサブネット間でどのように機能するか ( Mirrorクラスタ) ](#virtual-ip-different-subnets-failover)
@@ -51,18 +51,18 @@ SafeKit内のMirrorおよび`Farm`クラスタに対する**仮想 IP 実装戦�
 
 ## 同一サブネットフェイルオーバーにおける仮想IPアドレス（VIP）の仕組み（ Mirrorクラスタ） {#virtual-ip-same-subnet-failover}
 
-### ローカルサブネット{#automated-failover--network-rerouting-in-a-local-subnet}における自動フェイルオーバーとネットワーク再ルーティング
+### ローカルサブネットにおける自動フェイルオーバーとネットワーク再ルーティング {#automated-failover--network-rerouting-in-a-local-subnet}
 
 ローカルインフラストラクチャ内でシームレスなビジネス継続性を必要とする組織向けに、 ** SafeKitローカルネットワーククラスタ向けソフトウェア定義型高可用性、 ** 、仮想IPアドレスの管理とリアルタイムのアプリケーションフェイルオーバーのための堅牢で自動化されたソリューションを提供します。 
 
-### ローカルMirrorクラスター: シームレスな 2 ノードWindowsまたはLinuxフェイルオーバー{#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
+### ローカルMirrorクラスター: シームレスな 2 ノードWindowsまたはLinuxフェイルオーバー {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
 
 
 ![ SafeKit同一サブネット内の2台のサーバー間の仮想IP（VIP）フェイルオーバーメカニズム](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
  SafeKit VIP エイリアシングと MAC アドレス マッピング 標準的な** SafeKit mirrorクラスタ**では、両方のノードが同じローカル サブネットに存在するため、高可用性は**ソフトウェア定義の仮想 IP (VIP) **によって実現されます。ハードウェア ベースのソリューションとは異なり、 SafeKitこの VIP は OS ネットワーク スタック内で直接管理されます。この VIP は、クライアントの永続的な論理エントリ ポイントとして機能し、 ** IP エイリアシング**を介してサーバー 1 とサーバー 2 の固有の物理 IP アドレスの上にレイヤー化されます。 
 
-#### SafeKitの高度な IP エイリアシングと複数の VIP のサポート{#safekits-advanced-ip-aliasing--multiple-vip-support}
+#### SafeKitの高度な IP エイリアシングと複数の VIP のサポート {#safekits-advanced-ip-aliasing--multiple-vip-support}
 
 ** SafeKitソリューション**の重要な利点は、ネットワーク ID の管理における柔軟性です。VIP は、ノード間で「フローティング」する第 3 の IP アドレスです。特に、 SafeKit 、単一のクラスタ内で複数の仮想 IP アドレス** **できます。これらは、同じプライマリ Ethernet カードに割り当てることも、異なる物理カードに分散させることもできるため、異なるサービスを特定の仮想 ID にバインドする複雑な構成が可能になります。 
 
@@ -82,18 +82,18 @@ SafeKit ハードウェア障害発生時に手動介入が一切ないことを
 
 ## 仮想IP（VIP）が異なるサブネット間でどのように機能するか（ Mirrorクラスタ） {#virtual-ip-different-subnets-failover}
 
-### ロードバランサー統合によるクラウド対応トラフィックオーケストレーション{#cloud-ready-traffic-orchestration-via-load-balancer-integration}
+### ロードバランサー統合によるクラウド対応トラフィックオーケストレーション {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
 
 外部ネットワークインフラストラクチャを活用することで、マルチAZおよびクラウドクラスタ向けのソフトウェア定義型高可用性** SafeKitは、ネットワークロードバランサー** **とシームレスに統合され**別々のサブネットと可用性ゾーン間でトラフィックのフェイルオーバーをオーケストレーションします。 
 
-### クロスサブネットMirrorクラスタ: WindowsおよびLinuxの実装{#cross-subnet-mirror-clusters-windows--linux-implementation}
+### クロスサブネットMirrorクラスタ: WindowsおよびLinuxの実装 {#cross-subnet-mirror-clusters-windows--linux-implementation}
 
 
 ![ 2つの異なるサブネット間でロードバランサーを使用した仮想IPフェイルオーバーの図](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
  ロードバランサーのヘルスチェックによるマルチサブネットトラフィックルーティング クラスタノード**異なる**に存在する場合、標準のARPベースのフェイルオーバーは不可能です。このシナリオでは、 ** IP (VIP) はサーバーのイーサネットカードではなく** ** (LB) 上でホストされます。ロードバランサー**ゲートウェイとして機能し、リアルタイムの可用性に基づいてプライマリノードとセカンダリノードの物理IPアドレスにトラフィックをルーティングします。 
 
-#### SafeKitヘルスチェックによる動的ルーティング{#dynamic-routing-via-safekit-health-checks}
+#### SafeKitヘルスチェックによる動的ルーティング {#dynamic-routing-via-safekit-health-checks}
 
 SafeKit 、各ノードに専用のヘルスチェック URL ** **を提供することで、トラフィックのルーティングを管理します。ロードバランサーはこれらの URL にクエリを実行してクラスタの状態を判断します。 
 
@@ -113,26 +113,26 @@ SafeKit 、各ノードに専用のヘルスチェック URL ** **を提供す�
   * 💡 [ ** Google Cloud ( GCP ) ** ](</ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) (Google Cloud Load Balancing)
 
 
-#### ネットワークに関する考慮事項：ロードバランサーと拡張LANの{#network-considerations-load-balancer-vs-extended-lan}
+#### ネットワークに関する考慮事項：ロードバランサーと拡張LANの {#network-considerations-load-balancer-vs-extended-lan}
 
 ロードバランサーが不要な場合は、サブネット間で** LAN（VLAN ** ）を実装することについてネットワークチームにご相談ください。これにより、よりシンプルな「同一サブネット」VIPモデルに戻すことができます。 
 
 > ** ⚠️ 注意: **ロードバランサーを選択する場合は、アプリケーションが**ソース/宛先 IP 変換 (SNAT/DNAT) **と互換性があることを確認してください。ロードバランサーを使用すると、アプリケーションは元のユーザーの ID を追跡できなくなったり、自身のネットワーク インターフェイスに直接構成された仮想 IP を認識できなくなったために起動に失敗したりする可能性があります。
 
-## 同一サブネット`Farm` （ `Farm`クラスタ） {#vip-load-balancing-same-subnet}におけるロードバランスされた仮想IPの動作
+## 同一サブネット`Farm` （ `Farm`クラスタ）におけるロードバランスされた仮想IPの動作 {#vip-load-balancing-same-subnet}
 
-### スケーラブルなパフォーマンス：カーネルレベルの負荷分散と冗長性{#scalable-performance-kernel-level-load-balancing--redundancy}
+### スケーラブルなパフォーマンス：カーネルレベルの負荷分散と冗長性 {#scalable-performance-kernel-level-load-balancing--redundancy}
 
 トラフィック量の多い環境向けには、 **アーキテクチャガイド：マルチノード`Farm`クラスタによるスケーラブルな高可用性**で、 SafeKit完全な冗長性を維持しながら、ワークロードを複数のアクティブサーバーに分散する方法を説明しています。 
 
-### `Farm`クラスタアーキテクチャ: WindowsまたはLinuxノード間での負荷分散{#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### `Farm`クラスタアーキテクチャ: WindowsまたはLinuxノード間での負荷分散 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 ![同一サブネット内の負荷分散型仮想IP（VIP）クラスタの図farm ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
  カーネルフィルタリングによる分散トラフィック処理 負荷**クラスタでは、 `farm` IP（VIP）アドレス**使用して、クライアント要求を複数のサーバーに同時に分散します。この例では2つのノードを使用していますが、このアーキテクチャはより大規模なサーバーファームをサポートするように拡張できます。同一サブネット構成では、IPエイリアシングを使用して**クラスタ内のすべてのサーバーの**カードにVIPが構成されます。 
 
-#### トラフィック分散：カーネルレベルフィルタ{#traffic-distribution-the-kernel-level-filter}
+#### トラフィック分散：カーネルレベルフィルタ {#traffic-distribution-the-kernel-level-filter}
 
 単純なフェイルオーバークラスタとは異なり、 `farm`クラスタは、特殊な**カーネルレベルフィルタ**を介してトラフィックを管理します。そのプロセスは次のとおりです。 
 
@@ -141,28 +141,28 @@ SafeKit 、各ノードに専用のヘルスチェック URL ** **を提供す�
   * **負荷分散: **フィルタは、どのパケットをローカルで処理し、どのパケットを他のノード (サーバー 2 など) にリダイレクトして処理するかを決定し、ワークロードのバランスを確保します。
 
 
-#### 無償ARPによるフェイルオーバーと再ルーティング{#failover-and-rerouting-with-gratuitous-arp}
+#### 無償ARPによるフェイルオーバーと再ルーティング {#failover-and-rerouting-with-gratuitous-arp}
 
 プライマリノード（サーバー1）が故障した場合、クラスターは可用性を維持します。 **無償ARP（GARP）**. SafeKit クライアントのARPキャッシュを更新するためにGARPメッセージをブロードキャストします。 `mac2` サーバー 2 の。これにより、プライマリ「エントリ ポイント」が失敗した場合でも、クライアントはすぐにサーバー 2 の残りのノードに再ルーティングされます。 farm. 
 
-#### 遠隔地への展開{#deployment-in-remote-sites}
+#### 遠隔地への展開 {#deployment-in-remote-sites}
 
 **リモートデータセンター**にまたがって運用している組織の場合、サイトが**拡張 LAN または VLAN **を介してリンクされていれば、この負荷分散アルゴリズムは引き続き機能します。これにより、仮想的な「同一サブネット」環境が作成され、地理的に分散した`farm`クラスターにとって最も効率的な構成となります。 
 
 ## 異なるサブネット間でロードバランスされた仮想IPがどのように機能するか（ `Farm`クラスタ） {#vip-load-balancing-different-subnets}
 
-### マルチゾーンスケーリング：クラウドサブネット間でのトラフィックのオーケストレーション{#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
+### マルチゾーンスケーリング：クラウドサブネット間でのトラフィックのオーケストレーション {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
 **アーキテクチャガイド：マルチゾーンおよびクラウド環境における`Farm`クラスタのスケーリング**アプリケーションワークロードを個別の可用性ゾーンとサブネットに分散するための設計図を提供します。 
 
-### クロスサブネット`Farm`クラスタ: マルチノードWindowsおよびLinuxスケーラビリティ{#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### クロスサブネット`Farm`クラスタ: マルチノードWindowsおよびLinuxスケーラビリティ {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 ![ 2つの異なるサブネットにまたがって動作する負荷分散型クラスタの図farm ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
  外部ロードバランシングによるグローバルなトラフィック分散`farm`ノードが**異なるサブネット**に分散されている場合 (マルチ AZ クラウド展開で一般的)、 **仮想 IP (VIP) **は外部の**ロードバランサー (LB) **によって管理されます。LB は VIP を保持し、受信トラフィックをそれぞれのサブネットにあるサーバーの物理 IP アドレスに転送します。 
 
-#### インテリジェントなトラフィックルーティングと負荷分散ルール{#intelligent-traffic-routing--load-balancing-rules}
+#### インテリジェントなトラフィックルーティングと負荷分散ルール {#intelligent-traffic-routing--load-balancing-rules}
 
 ロードバランサーは、主に次の2つの要素に基づいてクライアントからのリクエストを分散します。 
 
@@ -172,7 +172,7 @@ SafeKit 、各ノードに専用のヘルスチェック URL ** **を提供す�
 
 > ** ⚠️ 注: ** SafeKitはヘルスチェックロジックを提供します。物理または仮想ロードバランサーは、ネットワークインフラストラクチャによって提供される必要があります。
 
-#### SafeKitヘルスチェックメカニズム{#safekit-health-check-mechanism}
+#### SafeKitヘルスチェックメカニズム {#safekit-health-check-mechanism}
 
 SafeKit 、 `farm`内のすべてのサーバーにリアルタイムの**ヘルスチェック URL **を提供し、その運用状況をロードバランサーに伝達します。 
 
@@ -189,13 +189,13 @@ SafeKit 、 `farm`内のすべてのサーバーにリアルタイムの**ヘル
   * 💡 [ ** Google Cloud ( GCP ) ** ](</ja/solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing)
 
 
-## 仮想IPとDNSリダイレクト：DNSフェイルオーバーが失敗する理由{#virtual-ip-vs-dns-redirection-failover}
+## 仮想IPとDNSリダイレクト：DNSフェイルオーバーが失敗する理由 {#virtual-ip-vs-dns-redirection-failover}
 
-### DNS伝播の落とし穴：VIPがDNSリダイレクトよりも優れている理由{#the-dns-propagation-trap-why-vips-outperform-dns-redirection}
+### DNS伝播の落とし穴：VIPがDNSリダイレクトよりも優れている理由 {#the-dns-propagation-trap-why-vips-outperform-dns-redirection}
 
 フェイルオーバーに DNS を利用すると、高可用性アーキテクチャにおいて** **安心感が生じることがよくあります。DNS レコードを変更してバックアップ サーバーを指すようにすることは、一見簡単な復旧方法のように思えますが、 **不可能な遅延**重大な変数が存在します。DNS ベースのリダイレクトは、変更を認識して伝播するために、制御不能な中間再帰リゾルバのエコシステムに依存しているため、現代のエンタープライズ サービスの「ダウンタイムゼロ」要件とは根本的に相容れません。 
 
-### 技術的なシナリオ：DNS解決と「停止」したクライアント{#the-technical-scenario-dns-resolution-and-the-stuck-client}
+### 技術的なシナリオ：DNS解決と「停止」したクライアント {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
 標準的なネットワーク構成では、仮想名** （DNS名） ** **ユーザーにとって人間が読みやすいエントリポイントとして機能します。しかし、データがネットワークを介して送信されるためには、その名前が特定の物理IPアドレス**に解決される必要があります。 
 
@@ -203,11 +203,11 @@ SafeKit 、 `farm`内のすべてのサーバーにリアルタイムの**ヘル
 
  高可用性クラスタにおける物理IP 1上のDNS解決と「スタック」したクライアント
 
-#### 現在の状態: 物理IP 1 {#current-state-resolution-to-physical-ip-1}への解決
+#### 現在の状態: 物理IP 1への解決 {#current-state-resolution-to-physical-ip-1}
 
 まず、 **クライアント 1 **と**クライアント 2 **は、DNS システムに仮想名を問い合わせます。システムは**物理 IP 1 **を返します。その後、クライアントはその特定のハードウェア アドレスへの直接ネットワーク接続 (ソケット) を確立します。 
 
-#### フェイルオーバーの課題：物理IP 2 {#the-failover-challenge-rerouting-to-physical-ip-2}への再ルーティング
+#### フェイルオーバーの課題：物理IP 2への再ルーティング {#the-failover-challenge-rerouting-to-physical-ip-2}
 
 物理IP 1のサーバーが故障した場合、管理者はDNSレコードを更新して** **指すようにします。クライアントのルーティングを正常に行うには、以下の「完璧な」手順が必要です。 
 
@@ -223,11 +223,11 @@ SafeKit 、 `farm`内のすべてのサーバーにリアルタイムの**ヘル
   * **アプリケーションの永続性: **最新のアプリケーション (Java ベースのマイクロサービスや Web ブラウザなど) は、起動時に DNS ルックアップを一度だけ実行することがよくあります。DNS レコードが物理 IP 2 に更新された場合でも、アプリケーションは内部メモリに保存されている初期 IP を引き続き使用します。
 
 
-### 結論{#conclusion}
+### 結論 {#conclusion}
 
 DNSリダイレクトは、高可用性ソリューションとしては一貫性に欠ける解決策です。ローカル環境またはリージョン環境内で瞬時にフェイルオーバーを実現するには、ソフトウェア定義の** IP（VIP）を使用することが、ダウン**ゼロの永続性を保証する唯一の方法です。 
 
-## 比較：仮想IPの実装、レイテンシ、およびアプリケーションの透過性{#vip-vs-dns-comparison}
+## 比較：仮想IPの実装、レイテンシ、およびアプリケーションの透過性 {#vip-vs-dns-comparison}
 
 **高可用性および災害復旧のための仮想IP（VIP）リダイレクト方式とDNSリルーティング方式の技術比較**
 
@@ -239,15 +239,15 @@ DNSリダイレクトは、高可用性ソリューションとしては一貫�
 異なるサブネット|ディザスターリカバリー (リモートデータセンター / クラウド) |外部ロードバランサー|中程度: ロードバランサーのヘルスチェック間隔により、フェイルオーバーのレイテンシが高くなります| ⚠️ 部分的な透過性: SNAT/DNAT を使用します。仮想 IP は**ノード上でローカルではありません**クライアント IP は**保持されません**アプリケーションがこれをサポートする必要があります。  
 DNS 再ルーティング: VIP なし|ディザスターリカバリー (リモートデータセンター) | DNS レコード更新 (名前 / 物理 IP) |高/予測不能: DNS TTL (Time To Live) とクライアント DNS キャッシュに依存します。 | ⚠️ 信頼性が低い: クライアントは DNS を再解決する必要があります。ほとんどの場合、クライアントは起動時に解決された古い IP を引き続き使用し、フェイルオーバー後に再ルーティングされません。  
   
-## ネットワーク負荷分散と高可用性のための仮想IPアドレスの設定{#virtual-ip-configuration-load-balancing-ha}
+## ネットワーク負荷分散と高可用性のための仮想IPアドレスの設定 {#virtual-ip-configuration-load-balancing-ha}
 
 
 {{%  insert-safekit-farm-video-ja  %}}
  
 
-## 仮想IP（VIP）に関するよくある質問{#virtual-ip-faq}
+## 仮想IP（VIP）に関するよくある質問 {#virtual-ip-faq}
 
-### 仮想IP（VIP）とネットワーク{#virtual-ip-vip--networking}
+### 仮想IP（VIP）とネットワーク {#virtual-ip-vip--networking}
 
 仮想IP（VIP）とは何ですか？また、物理IPとはどのように異なりますか？
 
@@ -265,7 +265,7 @@ Gratuitous ARP（GARP）とは何ですか？また、なぜ使用されるの�
 
 **はい。 **標準の A レコードを作成することで、DNS 名を VIP に関連付けることができます。主な利点は、リダイレクトが** VIP レベル** (ARP またはネットワークリダイレクト経由) で管理され、 ** DNS レベルでは管理されないことです。 **これにより、DNS 伝播や TTL の期限切れに伴う遅延を回避することで、 **アプリケーションの透過性が確保されます。 **
 
-### クラウドと高度なアーキテクチャ{#cloud--advanced-architectures}
+### クラウドと高度なアーキテクチャ {#cloud--advanced-architectures}
 
 クラウドにおける仮想IP（ AWS 、 Azure 、 GCP ）はどのように機能しますか？
 
@@ -279,7 +279,7 @@ DNSルーティングと仮想IPアドレスの制限事項は何ですか？
 
 DNS のリルーティング** ** TTL (Time to Live) **クライアント側の**によって制限され、復旧に数時間かかる場合があります。大きな欠点は、DNS 名を再解決しない**が**障害が発生したサーバーへの接続を試みたまま停止してしまうことです。これに対し、 ** IP は、クライアント側** DNS キャッシュの状態に関係なく接続を確保するため、すべてのトラフィックを即座にリルーティングする瞬時のレイヤ 2 フェイルオーバーを提供します。
 
-### 透明性とセキュリティ{#transparency--security}
+### 透明性とセキュリティ {#transparency--security}
 
 アプリケーションの透過性にとって、ローカル仮想IPアドレスが重要なのはなぜですか？
 

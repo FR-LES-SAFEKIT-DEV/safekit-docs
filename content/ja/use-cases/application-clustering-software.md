@@ -7,11 +7,11 @@ lang: "ja"
 topics: "OEM向け高可用性ユースケース、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# OEM高可用性： SafeKitクラスタリングをソフトウェアに組み込む{#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# OEM高可用性： SafeKitクラスタリングをソフトウェアに組み込む {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
-## OEM高可用性ユースケース{#the-oem-high-availability-use-case}
+## OEM高可用性ユースケース {#the-oem-high-availability-use-case}
 
-### ソフトウェアのみの高可用性ソリューション{#a-software-only-high-availability-solution}
+### ソフトウェアのみの高可用性ソリューション {#a-software-only-high-availability-solution}
 
 SafeKitはハードウェアに依存せず、物理サーバーでも仮想サーバーでも動作します。
 
@@ -19,13 +19,13 @@ SafeKitはハードウェアに依存せず、物理サーバーでも仮想サ�
 ![アプリケーションクラスタリングソフトウェア（ SafeKit ](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")を含む）
 
 
-### ソフトウェア出版社向けのシンプルで経済的なアプリケーションクラスタリングソフトウェア{#simple-and-economical-application-clustering-software-for-a-software-publisher}
+### ソフトウェア出版社向けのシンプルで経済的なアプリケーションクラスタリングソフトウェア {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
 ソフトウェアパブリッシャーの数は増加しており、 SafeKit カタログに掲載されているOEM向け高可用性オプションとして。 SafeKit シンプルで経済的なアプリケーションクラスタリングソフトウェアであるため、選ばれました。 
 
 ソフトウェアパブリッシャーで、自社ソフトウェアに簡単に組み込めるアプリケーションクラスタリングソリューションをお探しなら、弊社のOEMサービスをご活用ください。 SafeKit 貴社のソフトウェア製品群に統合されています。また、このソリューションはアプリケーションの変更を必要としません。
 
-### リアルタイムレプリケーション、ロードバランシング、フェイルオーバーを備えたアプリケーションクラスタリング{#application-clustering-with-real-time-replication-load-balancing-and-failover}
+### リアルタイムレプリケーション、ロードバランシング、フェイルオーバーを備えたアプリケーションクラスタリング {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
 SafeKitソフトウェアは、アプリケーションクラスタリングのための汎用モジュールとして、 mirrorモジュールと`farm`モジュールの2つを提供します。
 

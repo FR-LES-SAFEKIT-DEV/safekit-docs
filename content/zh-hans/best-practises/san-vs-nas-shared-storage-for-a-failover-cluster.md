@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "对于故障转移集群，SAN 和 NAS 共享存储哪个方案最简单？🔍 SafeKit高可用性导航中心"
 ---
 
-# SAN 与 NAS 共享存储故障转移集群对比：详细比较{#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN 与 NAS 共享存储故障转移集群对比：详细比较 {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
 ## 对于故障转移集群，SAN 和 NAS 共享存储哪个方案最简单？ {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
-###  用于故障转移集群{#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}的 SAN 共享存储或 NAS iSCSI 共享存储
+###  用于故障转移集群的 SAN 共享存储或 NAS iSCSI 共享存储 {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
 ![ SAN 共享存储或 NAS iSCSI 共享存储，用于故障转移集群](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
@@ -25,7 +25,7 @@ topics: "对于故障转移集群，SAN 和 NAS 共享存储哪个方案最简�
   * 为避免重复访问，必须配置仲裁磁盘。
 
 
-###  用于故障转移集群{#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}的 NAS SMB 共享存储或 NAS NFS 共享存储
+###  用于故障转移集群的 NAS SMB 共享存储或 NAS NFS 共享存储 {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
 ![ NAS SMB 共享存储或 NAS NFS 共享存储，用于故障转移集群](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
@@ -38,7 +38,7 @@ topics: "对于故障转移集群，SAN 和 NAS 共享存储哪个方案最简�
   * 然而，当节点隔离时，仍然存在同一个应用程序重复执行两次，从而损坏共享存储中的数据的可能性。
 
 
-###  使用 Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}进行实时复制和故障转移
+###  使用 Eviden SafeKit进行实时复制和故障转移 {#real-time-replication-and-failover-with-eviden-safekit}
 
 
 ![实时复制和故障转移，配合SafeKit ](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")

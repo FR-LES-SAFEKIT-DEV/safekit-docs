@@ -7,11 +7,11 @@ lang: "zh-hans"
 topics: "高可用性和容错性有什么区别？高可用性和容错性的优缺点是什么？🔍 SafeKit高可用性导航中心"
 ---
 
-# 高可用性集群与容错系统：选择合适的冗余策略{#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
+# 高可用性集群与容错系统：选择合适的冗余策略 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}
 
-## 高可用性和容错性有什么区别{#what-is-the-difference-between-high-availability-and-fault-tolerance}
+## 高可用性和容错性有什么区别 {#what-is-the-difference-between-high-availability-and-fault-tolerance}
 
-### 概述{#overview}
+### 概述 {#overview}
 
 本文通过分析硬件限制、软件故障、恢复时间目标 (RTO)、恢复点目标 (RPO) 等因素，探讨了高可用性集群与容错系统的优缺点。
 
@@ -25,13 +25,13 @@ topics: "高可用性和容错性有什么区别？高可用性和容错性的�
 
 像SafeKit这样的软件集群基于实时数据复制，并且与硬件无关：它们可以部署在物理服务器、虚拟服务器或云端。
 
-### 什么是{#what-is-fault-tolerance} ？
+### 什么是？ {#what-is-fault-tolerance}
 
 容错系统依靠专用硬件或专用虚拟机管理程序来检测硬件故障，并立即切换到冗余硬件组件，而无需重新启动应用程序。
 
 容错系统只能处理硬件故障，而无法处理软件故障，而软件故障才是系统停机的最常见原因。
 
-## 高可用性和容错性的优缺点{#pros-and-cons-of-high-availability-and-fault-tolerance}
+## 高可用性和容错性的优缺点 {#pros-and-cons-of-high-availability-and-fault-tolerance}
 
 在保护关键应用程序免受故障**时，主要有两种方法**软件高可用性集群** **系统。每种方法在成本、灵活性、恢复时间和硬件要求方面各有优劣。了解这些差异有助于您根据自身需求选择合适的解决方案。
 

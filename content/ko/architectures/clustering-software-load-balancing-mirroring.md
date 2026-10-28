@@ -9,7 +9,7 @@ topics: "SafeKit 클러스터링 소프트웨어로 핵심 웹 및 데이터베�
 
 # 팜 및 미러 서버를 위한 클러스터링 소프트웨어: 고가용성 및 로드 밸런싱 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## SafeKit 클러스터링 소프트웨어와 {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software} 사용하여 핵심 웹 및 데이터베이스 애플리케이션의 고가용성과 확장성을 확보하세요.
+## SafeKit 클러스터링 소프트웨어와 사용하여 핵심 웹 및 데이터베이스 애플리케이션의 고가용성과 확장성을 확보하세요. {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
 ### 로드 밸런싱, 미러링 및 페일오버 {#load-balancing-mirroring-and-failover}
 
@@ -17,7 +17,7 @@ topics: "SafeKit 클러스터링 소프트웨어로 핵심 웹 및 데이터베�
 ![ SafeKit 클러스터링(로드 밸런싱 및 미러링 포함) ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-### SafeKit 클러스터링 소프트웨어 {#example-with-the-safekit-clustering-software} 를 사용한 예시
+### SafeKit 클러스터링 소프트웨어 를 사용한 예시 {#example-with-the-safekit-clustering-software}
 
 예를 들어, SafeKit 클러스터링 소프트웨어를 사용하면 IIS 로드 밸런싱과 Microsoft 및 SQL Server 미러링을 구현할 수 있습니다.
 

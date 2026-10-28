@@ -7,9 +7,9 @@ lang: "ja"
 topics: "SANレスSafeKit MirrorクラスタがPodmanとどのように連携するか、目次、 SafeKitソフトウェアがPodman高可用性クラスタをどのように実装するか、 SafeKit mirrorクラスタがPodmanとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKit SANレスクラスタと従来のPodman HA、比較： SafeKitとオープンソースLinux HA（Pacemaker/Corosync/DRBD）、 Podman高可用性の概要、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア{#safekit-podman-high-availability--real-time-data-replication-software}
+# SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア {#safekit-podman-high-availability--real-time-data-replication-software}
 
-## SANレスのSafeKit MirrorクラスタがPodman {#how-the-sanless-safekit-mirror-cluster-works-with-podman}とどのように連携するか
+## SANレスのSafeKit MirrorクラスタがPodmanとどのように連携するか {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 
 SafeKit 軽量で、 **「必要最低限」のHAソリューション** 組織向けに特化して **Kubernetes** ローカル環境やエッジコンピューティングのコンテナワークロードには、リソース消費量が多すぎたり、複雑すぎたり、過剰設計だったりする。**SafeKit** 合理化されたオールインワンの2ノードを提供します **高可用性クラスタ Podman** の上 Linuxこれは、複雑な「DIY」（Do It Yourself）に代わる、シームレスで統合された選択肢として機能します。 Linux HAスタック - 手動設定の技術的負担を排除 **コロシンク** ノードメンバーシップの場合、 **ペースメーカー** リソースオーケストレーションのため、そして **DRBD** ブロックレベルのレプリケーションの場合。リアルタイム同期レプリケーションと **自動的に切り替わった仮想IPアドレス** , SafeKit 堅牢な **SANレスクラスタ** 高価な共有ストレージの必要性を排除します。このアーキテクチャは、透過的なクライアント再接続、迅速な自動フェイルオーバー、および **データ損失ゼロ保証（RPO=0）** コンテナ化されたアプリケーション向け。
 
@@ -26,7 +26,7 @@ SafeKit 軽量で、 **「必要最低限」のHAソリューション** 組織�
 ** SafeKitの SAN レス アーキテクチャを使用したPodmanコンテナ向けの高可用性 (HA) ソリューション。 **
 
 <a class="btn-quick-install" href="/ja/quick-install/safekit-quick-installation-guide-with-podman/"> ⚡ Podman > </a>のクイック HA インストール ガイド
-## 目次{#table-of-contents}
+## 目次 {#table-of-contents}
 
   * [ SafeKitソフトウェアはどのようにしてPodman高可用性クラスタを簡単に実装するのか？ ](#how-safekit-implements-podman-ha)
   * [ SafeKit mirrorクラスターはPodmanとどのように連携しますか？ ](#safekit-mirror-cluster)
@@ -55,7 +55,7 @@ SafeKit ** **実装します。この VIP は、クライアント アプリケ�
 
 はい。この記事ではSafeKit特別なクラスタリングスキルや複雑なKubernetesレーション](</ja/quick-install/safekit-quick-installation-guide-with-podman/>)必要とせずに、 Podman [迅速に実装する方法を説明します。アプリケーションの起動と停止を処理するために、 **再起動スクリプトを使用することで** Podmanよりもはるかに簡単にデプロイおよび保守できる堅牢な冗長ソリューションを実現できます。
 
-### SafeKitレプリケーションは、 {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-podman}やPodmanのDRBDのようなブロックレベルのソリューションとどのように異なりますか？
+### SafeKitレプリケーションは、やPodmanのDRBDのようなブロックレベルのソリューションとどのように異なりますか？ {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-podman}
 
 ブロックレベルのレプリケーションを使用するほとんどの SAN レス ソリューション (DRBD など) とは異なり、 ** ** SafeKit **ファイル レベルで**ベースのレプリケーションを実行します**このアプローチは**特定の新しく作成された「 Podmanディスク」ボリュームにデータを移行する必要がないため、アプリケーションにとって完全に透過的です。代わりに、既存のアプリケーション フォルダー**システム ディスク上のフォルダーも含む**をレプリケートするように構成するだけですSafeKitこれにより、複雑Podmanディスク再構成やアプリケーションの変更なしに、既にインストールされている場所に正確に高可用性を実装できます。
 
@@ -91,7 +91,7 @@ SafeKit ** **実装します。この VIP は、クライアント アプリケ�
 フェイルバックプロセス|手動/技術: 再同期中にデータ不整合または「スプリットブレイン」が発生するリスクがあります。 |自動および透過: 安全なフェイルバックによるバックグラウンドでの再同期。  
 メンテナンス | 個々のコンポーネントの更新やトラブルシューティングには、高度な専門スキルが必要です。 | ウェブダッシュボードを通じて、一般的なシステム管理者が容易に管理できます。  
   
-## Podman高可用性概要{#podman-ha-summary-quick-installation-guide}
+## Podman高可用性概要 {#podman-ha-summary-quick-installation-guide}
 
 ** SafeKit ** ** Podman **手段Kubernetes提供する、シンプルな** 2 ノード HA クラスタを提供します。 ** ** 、Pacemaker、および**スタックを置き換えることで、高価なSafeKit SAN ** **ストレージの必要性を排除します。
 

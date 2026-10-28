@@ -7,9 +7,9 @@ lang: "ko"
 topics: "고가용성(HA)을 위한 동기식 SafeKit 복제와 재해 복구(DR)를 위한 비동기식 백업 복제 비교, 목차, 동기식 HADR: 고속 네트워크(LAN/VLAN)에서의 데이터 손실 제로, 비동기식 HADR: 저속 네트워크(WAN)에서의 재해 복구, 완벽한 시스템 복원력을 위한 HADR과 백업 결합 방법, HADR 아키텍처 비교: 고속 네트워크 vs. 저속 네트워크, 비디오 가이드: SafeKit 이용한 HADR 구현 방법, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
-# SafeKit 고가용성과 재해 복구 백업 {#combining-safekit-high-availability-with-disaster-recovery-backups} 결합
+# SafeKit 고가용성과 재해 복구 백업 결합 {#combining-safekit-high-availability-with-disaster-recovery-backups}
 
-## 고가용성을 위한 동기식 복제 SafeKit 와 재해 복구를 위한 비동기식 백업 복제 {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr} 비교
+## 고가용성을 위한 동기식 복제 SafeKit 와 재해 복구를 위한 비동기식 백업 복제 비교 {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 
 SafeKit 값비싼 공유 스토리지가 필요 없는 유연한 소프트웨어 기반 ** 고가용성 및 재해 복구(HADR) 아키텍처 ** 제공합니다. 서버 1과 서버 2 간의 확장된 VLAN을 통해 ** 동기 복제 ** 구현함으로써 SafeKit 두 개의 이중화 사이트 간에 중요 애플리케이션이 항상 "활성" 상태를 유지하고 일관성을 보장합니다.
 
@@ -121,7 +121,7 @@ RPO(데이터 손실) | 0(RPO = 0) | 잠재적 데이터 손실(RPO > 0)
 지연 시간 요구 사항 | 낮음(일반적으로 < 5ms) | 높은 지연 시간 지원  
 주요 복구 목표 | 즉각적인 비즈니스 연속성 | 데이터 안전 및 보존  
   
-## 비디오 가이드: SafeKit {#videoguide-hadr-safekit} 사용한 HADR 구현 방법
+## 비디오 가이드: SafeKit 사용한 HADR 구현 방법 {#videoguide-hadr-safekit}
 
 ###  SafeKit 사용한 HADR 구현 방법: 동기 복제 및 장애 조치 {#how-to-implement-hadr-with-safekit-synchronous-replication--failover}
 

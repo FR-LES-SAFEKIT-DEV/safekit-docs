@@ -7,19 +7,19 @@ lang: "ja"
 topics: "Oracleの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Oracleソリューションの概要、 SafeKitおよびOracle ( oracle.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / Oracleソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# Oracle高可用性とSafeKit : フェイルオーバーのためにoracle.safeモジュールをインストールしてください{#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
+# Oracle高可用性とSafeKit : フェイルオーバーのためにoracle.safeモジュールをインストールしてください {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit / Oracleソリューションの概要{#overview-of-the-safekit--oracle-solution}
+## SafeKit / Oracleソリューションの概要 {#overview-of-the-safekit--oracle-solution}
 
 解決策はここに記載されています: ** 💡 [最もシンプルなOracle高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</solutions/oracle-high-availability-synchronous-replication-failover/>) ** 。
 
-## SafeKit / OracleソリューションをWindowsおよびLinux ( oracle.safe ) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}にインストールします。
+## SafeKit / OracleソリューションをWindowsおよびLinux ( oracle.safe )にインストールします。 {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * Oracle 2つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
 
@@ -34,13 +34,13 @@ topics: "Oracleの高可用性クイックインストールガイド、 SafeKit
 {{%  insert-safekit-82-installation-module-linux-ja app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit / Oracleソリューション{#step-by-step-configuration-of-the-safekit--oracle-solution}の段階的な構成
+## SafeKit / Oracleソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--oracle-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

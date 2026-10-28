@@ -7,15 +7,15 @@ lang: "ja"
 topics: "ビル管理システム（BMS）とは何か？、BMSソフトウェアが重要な理由、BMSの主要プレーヤー一覧 SafeKit BMSソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供します。 SafeKitセキュリティ市場で認知されているソリューション、🔍 SafeKit 高可用性ナビゲーションハブ"
 ---
 
-# ビル管理システム（BMS）の高可用性と冗長性{#high-availability-and-redundancy-for-building-management-systems-bms}
+# ビル管理システム（BMS）の高可用性と冗長性 {#high-availability-and-redundancy-for-building-management-systems-bms}
 
-##  ビル管理システム（BMS） {#what-is-a-building-management-system-bms}は何ですか？
+##  ビル管理システム（BMS）は何ですか？ {#what-is-a-building-management-system-bms}
 
 ビル管理システム（BMS）は、建物の空調設備（暖房、換気、冷房）、電気設備、照明設備などを自動で一元的に制御します。
 
 ビル管理システムは、建物居住者の安全性を高め、エネルギー消費量を削減し、運用・保守コストを削減します。
 
-##  BMSソフトウェアが重要な理由と{#why-a-bms-software-is-critical} ？
+##  BMSソフトウェアが重要な理由と？ {#why-a-bms-software-is-critical}
 
 BMSソフトウェアは、火災報知システム、配電盤、水使用量、空調システム、照明制御などを制御します。
 
@@ -23,7 +23,7 @@ BMSソフトウェアは、火災報知システム、配電盤、水使用量�
 
 だからこそ、些細な事故にも即座に対応しなければならない建物管理者にとって、システムは常に利用可能な状態である必要があるのです。
 
-##  BMSの主要プレーヤー一覧{#key-players-list-in-bms}
+##  BMSの主要プレーヤー一覧 {#key-players-list-in-bms}
 
 BMSの主要プレーヤーは以下のとおりです。
 

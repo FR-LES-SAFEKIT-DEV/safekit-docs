@@ -8,7 +8,7 @@ topics: "SafeKit / Milestone XProtect解决方案的旧版逐步配置方法"
 
 # 旧配置SafeKit Milestone {#old-safekit-milestone-configuration}
 
-## SafeKit / Milestone XProtect解决方案{#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}的旧版逐步配置
+## SafeKit / Milestone XProtect解决方案的旧版逐步配置 {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
@@ -16,7 +16,7 @@ topics: "SafeKit / Milestone XProtect解决方案的旧版逐步配置方法"
 
 请注意，虚拟 IP 地址的配置需要一些特定的步骤，否则故障转移将无法正常工作。
 
-### 1. 启动SafeKit控制台{#1-launch-the-safekit-console}
+### 1. 启动SafeKit控制台 {#1-launch-the-safekit-console}
 
   * 在集群的一个节点上，通过连接到`http://localhost:9010` ，在浏览器中启动 Web 控制台。
   * 输入用户名`admin`和安装过程中定义的密码。
@@ -40,7 +40,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 启动![ ](/wp-content/uploads/2023/01/appli-1.png)控制台以配置集群SafeKit
 
 
-### 2. 配置节点地址{#2-configure-node-addresses}
+### 2. 配置节点地址 {#2-configure-node-addresses}
 
   * 输入节点IP地址。
   * 然后，点击`Apply`保存配置。
@@ -61,7 +61,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![输入集群](/wp-content/uploads/2023/01/appli-3.png)的节点
 
 
-### 3. 选择模块{#3-choose-the-module}
+### 3. 选择模块 {#3-choose-the-module}
 
   * 在“配置”选项卡中，单击 .safe 模块。
 
@@ -75,7 +75,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![选择](/wp-content/uploads/2023/01/appli-4.png)的模块
 
 
-### 4. 配置模块{#4-configure-the-module}
+### 4. 配置模块 {#4-configure-the-module}
 
   * 选择在启动时自动启动该模块，无需延迟。
   * 通常情况下，复制操作会在同一个心跳网络上进行。但如有必要，您也可以定义一个私有网络。
@@ -117,7 +117,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![输入模块设置](/wp-content/uploads/2023/01/appli-7-1.png)
 
 
-### 5. 验证配置是否成功{#5-verify-successful-configuration}
+### 5. 验证配置是否成功 {#5-verify-successful-configuration}
 
   * 检查两个节点上的成功消息（绿色），然后单击“下一步”。
 
@@ -125,7 +125,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![检查模块配置是否成功](/wp-content/uploads/2023/01/appli-9-2.png)
 
 
-### 6. 不要启动任何程序，然后单击“关闭”按钮{#6-do-not-start-anything-and-click-on-the-close-button}
+### 6. 不要启动任何程序，然后单击“关闭”按钮 {#6-do-not-start-anything-and-click-on-the-close-button}
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
@@ -137,7 +137,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![选择具有最新数据的节点](/wp-content/uploads/2023/01/appli-10-1.png)
 
 
-### 7. 转到节点 1 的桌面，并在内部文件Milestone {#milestone-files}中设置虚拟 IP 地址。
+### 7. 转到节点 1 的桌面，并在内部文件Milestone中设置虚拟 IP 地址。 {#milestone-files}
 
 
 ![注](/wp-content/uploads/2022/07/note.png)
@@ -178,7 +178,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![注](/wp-content/uploads/2022/07/note.png)
 
 
-### 8. 在控制台中将节点 1 设置为主节点，该节点拥有最新的数据{#8-start-node-1-as-primary-in-the-console-the-node-with-up-to-date-data}
+### 8. 在控制台中将节点 1 设置为主节点，该节点拥有最新的数据 {#8-start-node-1-as-primary-in-the-console-the-node-with-up-to-date-data}
 
 从步骤 7 开始，我们假设节点 1 具有最新的复制目录。
 
@@ -226,7 +226,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![第一个节点最初是主节点，后来变为独立节点](/wp-content/uploads/2022/07/appli-11-bis-bis.png)
 
 
-### 10. 在节点 1 的桌面上，停止并注册虚拟 IP 地址，然后重启Milestone管理服务器{#10-in-the-desktop-of-node-1-stop-then-register-on-the-vitual-ip-address-and-restart-the-milestone-management-server}
+### 10. 在节点 1 的桌面上，停止并注册虚拟 IP 地址，然后重启Milestone管理服务器 {#10-in-the-desktop-of-node-1-stop-then-register-on-the-vitual-ip-address-and-restart-the-milestone-management-server}
 
 根据图中所示的菜单，在节点 1 上执行以下步骤：
 
@@ -257,7 +257,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![在Milestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)中注册管理服务器
 
 
-### 11. 在节点 1 的桌面上，使用Milestone管理客户端，在服务和网络{#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network}的 URL 中设置虚拟 IP 地址。
+### 11. 在节点 1 的桌面上，使用Milestone管理客户端，在服务和网络的 URL 中设置虚拟 IP 地址。 {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network}
 
 
 ![注](/wp-content/uploads/2022/07/note.png)
@@ -279,7 +279,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![在 URL 和Milestone管理客户端中设置虚拟 IP 地址](/wp-content/uploads/2022/07/milestone-url-vip.png)
 
 
-### 12. 在节点 1 的桌面上，使用Milestone管理客户端，设置管理员角色以确保正确的故障转移{#role}
+### 12. 在节点 1 的桌面上，使用Milestone管理客户端，设置管理员角色以确保正确的故障转移 {#role}
 
 
 ![注](/wp-content/uploads/2022/07/note.png)
@@ -308,7 +308,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![在Milestone管理客户端中设置角色](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
 
-### 13. 转到节点 2 的桌面，并在内部文件Milestone {#milestone-files-2}中设置虚拟 IP 地址。
+### 13. 转到节点 2 的桌面，并在内部文件Milestone中设置虚拟 IP 地址。 {#milestone-files-2}
 
 
 ![注](/wp-content/uploads/2022/07/note.png)
@@ -339,7 +339,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
     
         "权限": " http://** < virtual-ip> ** /IDP "
 
-### 14. 在节点 2 的桌面上，注册管理服务器到虚拟 IP 地址{#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
+### 14. 在节点 2 的桌面上，注册管理服务器到虚拟 IP 地址 {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
   * 在节点 2 的任务栏中选择**服务器配置器** ，并将其注册到虚拟 IP 地址（参见图片）。
   * 然后**停止管理服务器服务** 。
@@ -387,7 +387,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![第一个节点最初是主节点，后来变为独立节点](/wp-content/uploads/2022/07/appli-11.png)
 
 
-### 16. 验证集群是否运行正常{#16-verify-that-the-cluster-is-operational}
+### 16. 验证集群是否运行正常 {#16-verify-that-the-cluster-is-operational}
 
   * 检查集群状态是否为绿色/绿色，并且服务在主节点上运行，而不是在第二个节点上运行。
 
@@ -404,7 +404,7 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
 ![第二个节点以 SECOND ](/wp-content/uploads/2022/07/appli-12.png)开头
 
 
-### 17. 在录像服务器{#17-configure-the-virtual-ip-address-in-recording-servers}中配置虚拟 IP 地址
+### 17. 在录像服务器中配置虚拟 IP 地址 {#17-configure-the-virtual-ip-address-in-recording-servers}
 
   * 或者，您可以安装录制服务器，并在安装 URL 中指定虚拟 IP 地址。
   * 或者，在录制服务器端，在以下字段中设置虚拟 IP 地址： 
@@ -418,13 +418,13 @@ SafeKit的配置可以在两个节点上通过同一个浏览器完成。
   * 将Milestone管理客户端和Milestone智能客户端连接到虚拟 IP 地址。
 
 
-### 18. 节点切换后，管理客户端和智能客户端无法正常工作{#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch}
+### 18. 节点切换后，管理客户端和智能客户端无法正常工作 {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch}
 
 在集群式XProtect管理服务器设置中，节点切换后智能客户端和管理客户端会出现各种问题。该问题与节点切换前后在不同节点上生成的令牌有关，也与访问令牌验证所需的某些证书有关。已有解决方案（适用于 2022 R3 至 2023 R2 版本，请参阅Milestone知识库）。
 
 该问题已在Milestone 2023 R3 中解决。
 
-### 18. 测试{#18-testing}
+### 18. 测试 {#18-testing}
 
   * 向下滚动 PRIM 节点的上下文菜单并单击“停止”来停止该** **原因见下文）。
   * 确认第二个节点上是否存在故障转移，该节点应变为单独运行（绿色）。

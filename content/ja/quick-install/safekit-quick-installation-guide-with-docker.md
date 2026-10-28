@@ -7,20 +7,20 @@ lang: "ja"
 topics: "Dockerの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Dockerソリューションの概要、 Linux ( mirror.safe ) へのSafeKit / Dockerソリューションのインストール、 SafeKit / Dockerソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# Docker高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください{#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Docker高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Docker" mod="mirror"  %}}
  
 
-## SafeKit / Dockerソリューションの概要{#overview-of-the-safekit--docker-solution}
+## SafeKit / Dockerソリューションの概要 {#overview-of-the-safekit--docker-solution}
 
 ソリューションの説明はこちらです: ** 💡 [ SafeKit : Docker高可用性およびリアルタイムデータレプリケーションソフトウェア](</solutions/docker-container-high-availability-cluster-synchronous-replication-failover/>)  
 **.
 
-## SafeKit / DockerソリューションをLinux ( mirror.safe ) {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}にインストールします。
+## SafeKit / DockerソリューションをLinux ( mirror.safe )にインストールします。 {#installation-of-the-safekit--docker-solution-on-linux-mirrorsafe}
 
-### 前提条件{#prerequisites}
+### 前提条件 {#prerequisites}
 
   * SafeKitで再起動したいDockerアプリケーションが、2つのノード（仮想マシンまたは物理サーバー）にインストールされている必要があります。
 
@@ -29,7 +29,7 @@ topics: "Dockerの高可用性クイックインストールガイド、 SafeKit
 {{%  insert-safekit-installation-package-linux-ja app="" mod="mirror"  %}}
  
 
-### 例1： Docker構成アプリケーション{#example-1-with-a-docker-compose-application}
+### 例1： Docker構成アプリケーション {#example-1-with-a-docker-compose-application}
 
 Docker構成アプリケーションでは、アプリケーションとそのすべてのコンテナを記述する**docker-compose.yml**ファイルがあります。
 
@@ -44,7 +44,7 @@ Docker構成アプリケーションでは、アプリケーションとその�
     * start_primおよびstop_primスクリプトにそれぞれ**/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start**および**/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**を配置します。
 
 
-### 例2では、 Dockerアプリケーションがコンテナセット{#example-2-with-a-docker-application-starting-a-set-of-containers}を起動します。
+### 例2では、 Dockerアプリケーションがコンテナセットを起動します。 {#example-2-with-a-docker-application-starting-a-set-of-containers}
 
 ここでは、 Dockerアプリケーション** myappli **がコンテナのセットを起動すると仮定します。
 
@@ -58,7 +58,7 @@ Docker構成アプリケーションでは、アプリケーションとその�
     * start_primおよびstop_primスクリプトにそれぞれ以下を記述します: ** /.../myappli開始**および** /.../myappli停止**
 
 
-### 単純なDockerイメージ{#example-3-with-a-simple-docker-image}を使用した例3
+### 単純なDockerイメージを使用した例3 {#example-3-with-a-simple-docker-image}
 
 設定は、 nginx Dockerイメージ（Webサーバー）を例として示します。
 
@@ -77,13 +77,13 @@ Docker構成アプリケーションでは、アプリケーションとその�
     * SafeKit設定後、 **とhttp://vitual-ip:9011**を使用してindex.htmlへのアクセスをテストします。
 
 
-## SafeKit / Dockerソリューション{#step-by-step-configuration-of-the-safekit--docker-solution}の段階的な構成
+## SafeKit / Dockerソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--docker-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Docker" mod="mirror"  %}}
  
 
-## SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}のソリューションのデモンストレーション
+## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

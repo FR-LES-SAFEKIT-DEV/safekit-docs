@@ -7,9 +7,9 @@ lang: "ja"
 topics: "SafeKitクラスタリングのベストプラクティス: HA アーキテクチャ、レプリケーションと冗長性、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# 高可用性のベストプラクティス{#high-availability-best-practices}
+# 高可用性のベストプラクティス {#high-availability-best-practices}
 
-## SafeKitクラスタリングのベストプラクティス：HAアーキテクチャ、レプリケーション、冗長性{#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
+## SafeKitクラスタリングのベストプラクティス：HAアーキテクチャ、レプリケーション、冗長性 {#safekit-clustering-best-practices-ha-architecture-replication--redundancy}
 
 **高可用性クラスタリング、レプリケーション、冗長性に関するベストプラクティス**
 

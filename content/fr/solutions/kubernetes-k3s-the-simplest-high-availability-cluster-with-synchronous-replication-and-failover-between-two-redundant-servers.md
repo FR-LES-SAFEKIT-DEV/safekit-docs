@@ -42,7 +42,7 @@ Schéma d'architecture ![ SafeKit pour une architecture K3s à haute disponibili
 
 ## Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité K3s Kubernetes ? {#safekit-mirror-k3s-cluster}
 
-### Comment implémenter une haute disponibilité pour un cluster K3s à 2 nœuds Kubernetes {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster} ?
+### Comment implémenter une haute disponibilité pour un cluster K3s à 2 nœuds Kubernetes? {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
 
 Vous pouvez implémenter une haute disponibilité (HA) pour un cluster K3s Kubernetes à 2 nœuds à l'aide de **SafeKit k3s.safe mirror module** . Cette solution vous permet de déployer un environnement redondant sans avoir besoin de stockage NFS externe, d'une base de données de configuration externe dédiée ni d'expertise spécialisée Kubernetes .
 
@@ -50,7 +50,7 @@ Vous pouvez implémenter une haute disponibilité (HA) pour un cluster K3s Kuber
 
 [ K3s ](<https://k3s.io/>) est le moteur Kubernetes privilégié pour ** IoT et Edge computing ** car il s'agit d'une distribution légère et certifiée, conçue pour les environnements aux ressources limitées. Elle simplifie la charge opérationnelle du moteur Kubernetes standard tout en conservant une compatibilité totale.
 
-### Quelles sont les principales caractéristiques des modules k3s.safe mirror {#what-are-the-key-features-of-the-k3ssafe-mirror-module} ?
+### Quelles sont les principales caractéristiques des modules k3s.safe mirror? {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
 Le module k3s.safe fournit une pile HA complète pour K3s en implémentant :
 

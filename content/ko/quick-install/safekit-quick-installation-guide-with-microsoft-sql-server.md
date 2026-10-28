@@ -13,11 +13,11 @@ topics: "Microsoft , SQL Server , SafeKit 고가용성 빠른 설치 가이드, 
 {{%  insert-safekit-mirror-guide-ko app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## SafeKit / Microsoft {#overview-of-the-safekit--microsoft-sql-server-solution} SQL Server 솔루션 개요
+## SafeKit / Microsoft SQL Server 솔루션 개요 {#overview-of-the-safekit--microsoft-sql-server-solution}
 
 솔루션에 대한 자세한 개요는 ** 💡 [ 가장 간단한 Microsoft SQL Server 고가용성: 2노드 동기 복제 및 장애 조치 ](</solutions/sql-server-high-availability-synchronous-replication-failover/>) ** 를 참조하십시오.
 
-## Windows ( sqlserver.safe ) 및 {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe} 에 SafeKit / Microsoft SQL Server 솔루션 설치
+## Windows ( sqlserver.safe ) 및 에 SafeKit / Microsoft SQL Server 솔루션 설치 {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 
 ### 필수 조건 {#prerequisites}
 
@@ -36,13 +36,13 @@ topics: "Microsoft , SQL Server , SafeKit 고가용성 빠른 설치 가이드, 
 {{%  insert-safekit-82-installation-module-windows-ko app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## SafeKit / Microsoft SQL Server 솔루션 {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution} 의 단계별 구성
+## SafeKit / Microsoft SQL Server 솔루션 의 단계별 구성 {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-ko app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## SafeKit mirror 솔루션 {#demonstration-of-the-safekit-mirror-solution} 시연
+## SafeKit mirror 솔루션 시연 {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ko  %}}

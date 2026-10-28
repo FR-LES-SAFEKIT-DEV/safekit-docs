@@ -104,7 +104,7 @@ Während eines Failover-Ereignisses ** schaltet ** die Health-Check-Antworten so
 
 > ** ⚠️ Hinweis: ** SafeKit stellt die Logik für die Zustandsprüfung bereit; der physische oder virtuelle Load Balancer muss von Ihrer Netzwerkinfrastruktur bereitgestellt werden.
 
-#### Cloud-Integration: AWS , Azure , {#cloud-integration-aws-azure-and-gcp} und GCP
+#### Cloud-Integration: AWS , Azure , und GCP {#cloud-integration-aws-azure-and-gcp}
 
 Dieses „Load Balancer + Health Check“-Modell ist der Industriestandard für ** Cloud High Availability ** . Es ist unerlässlich für die Implementierung SafeKit in Umgebungen wie: 
 

@@ -7,9 +7,9 @@ lang: "zh-hans"
 topics: "什么是电子门禁系统 (EACS)？为什么 EACS 软件至关重要？EACS 领域的主要参与者有哪些？ SafeKit提供两种 EACS 软件冗余和高可用性解决方案， SafeKit是安全市场上公认的解决方案，🔍 SafeKit高可用性导航中心"
 ---
 
-# 电子门禁控制软件 (EACS) 的高可用性和冗余性{#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
+# 电子门禁控制软件 (EACS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
-##  什么是电子门禁系统（ {#what-is-an-electronic-access-control-system-eacs} ）？
+##  什么是电子门禁系统（ ）？ {#what-is-an-electronic-access-control-system-eacs}
 
 电子门禁系统由控制进出任何私人场所的硬件设备组成。
 
@@ -23,7 +23,7 @@ EACS 软件管理硬件设备，并拒绝未经授权的用户访问，或在窃
 
 因此，该系统必须始终可供安保人员使用，以便他们对任何轻微事件都能立即做出反应。
 
-##  EACS {#key-players-list-in-eacs}中的关键参与者名单
+##  EACS中的关键参与者名单 {#key-players-list-in-eacs}
 
 EACS 的主要参与者包括：
 
