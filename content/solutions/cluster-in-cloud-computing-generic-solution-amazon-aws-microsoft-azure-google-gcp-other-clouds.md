@@ -17,7 +17,7 @@ topics: "Discover SafeKit in Microsoft Azure, Discover SafeKit in Google GCP, Di
 
 [ Generic Cloud Mirror > ](</solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ Generic Cloud Farm > ](</solutions/cloud-load-balancing-cluster-failover/>)
+[ Generic Cloud `Farm` > ](</solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-en  %}}
