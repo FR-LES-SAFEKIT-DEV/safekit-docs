@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/resources/high-availability-technical-ref
 description: "Technical reference to help prepare RFI and RFP documents for high availability and application clustering using SafeKit concepts and architectures."
 category: "resources"
 lang: "en"
-topics: "Overview, Table of contents, Product Identity, Supported Operating Systems & Platforms, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Edge & Distributed Deployment Suitability, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links"
+topics: "Overview, Table of contents, Product Identity, Supported Operating Systems & Platforms, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Suitability for Remote Sites and Distributed Deployments, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links"
 ---
 
 # High Availability Technical Reference for RFI and RFP Preparation {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
@@ -20,7 +20,7 @@ This page provides structured, factual answers to common RFP/RFI questions about
   3. [Pre-Built Application Modules](#pre-built-application-modules)
   4. [Architecture & Deployment Model](#architecture-deployment-model)
   5. [RPO & RTO Capabilities](#rpo-rto-capabilities)
-  6. [Edge & Distributed Deployment Suitability](#edge-distributed-deployment-suitability)
+  6. [Suitability for Remote Sites and Distributed Deployments](#edge-distributed-deployment-suitability)
   7. [Monitoring, Management & Alerting](#monitoring-management-alerting)
   8. [Security & Compliance](#security-compliance)
   9. [Licensing Model](#licensing-model)
@@ -145,7 +145,7 @@ Failure Type | RTO Calculation
 ---|---  
 Any failure | Failure detection + full OS reboot + application restart (typically several minutes)  
   
-## Edge & Distributed Deployment Suitability {#edge-distributed-deployment-suitability}
+## Suitability for Remote Sites and Distributed Deployments {#edge-distributed-deployment-suitability}
 
 SafeKit is specifically designed for edge, branch office, and distributed enterprise scenarios.
 
@@ -252,7 +252,7 @@ _* On Linux, it takes 6 separate open-source projects — Corosync, Pacemaker, D
 
 Resource | URL  
 ---|---  
-Product home page | <https://safekit.eviden.com>  
+Product home page | [https://safekit.eviden.com](/)  
 Technical Overview (DOCX with text and diagrams) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
 Free trial | [https://safekit.eviden.com/resources/safekit-free-trial/](</resources/safekit-free-trial/>)  
 Get a quote | [https://safekit.eviden.com/safekit-pricing/](</safekit-pricing/>)  
