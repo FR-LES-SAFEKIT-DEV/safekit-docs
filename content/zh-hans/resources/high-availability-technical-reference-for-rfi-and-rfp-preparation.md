@@ -250,15 +250,15 @@ OEM 嵌入式| | | |否
 
 ## 快速参考链接 {#quick-reference-links}
 
-资源 | URL
----|---
-产品首页 | <https://safekit.eviden.com/zh-hans/>
-技术概述（包含文本和图表的 DOCX 文件） | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
-免费试用 | <https://safekit.eviden.com/zh-hans/resources/safekit-free-trial/>
-获取报价 | <https://safekit.eviden.com/zh-hans/safekit-pricing/>
-支持门户 | <https://customercare.evidian.com>
-免费AI支持 | <https://safekit.eviden.com/zh-hans/resources/safekit-support/>
-免费培训和认证 | ?? <https://safekit.eviden.com/zh-hans/resources/safekit-on-line-training/>
-联系我们 | <https://safekit.eviden.com/zh-hans/contact-us-for-safekit/>
+资源 | URL  
+---|---  
+产品首页 | [https://safekit.eviden.com/zh-hans/](/zh-hans/)  
+技术概述（包含文字和图表的 DOCX 文件） | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](/wp-content/uploads/documents/safekit-technical-overview-en.docx)  
+免费试用 | [https://safekit.eviden.com/resources/safekit-free-trial/](/resources/safekit-free-trial/)  
+获取报价 | [https://safekit.eviden.com/safekit-pricing/](/safekit-pricing/)  
+支持门户 | <https://customercare.evidian.com>  
+免费人工智能支持 | [https://safekit.eviden.com/resources/safekit-support/](/resources/safekit-support/)  
+免费培训和认证 | [https://safekit.eviden.com/resources/safekit-on-line-training/](/resources/safekit-on-line-training/)  
+联系我们 | [https://safekit.eviden.com/contact-us-for-safekit/](/contact-us-for-safekit/)  
 
 {{%  insert-safekit-4-buttons-zh-hans  %}}

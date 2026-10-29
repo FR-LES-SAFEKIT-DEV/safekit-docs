@@ -250,15 +250,15 @@ _ Sur * , il faut six projets open source distincts — Corosync, Pacemaker, DRB
 
 ## Liens de référence rapide {#quick-reference-links}
 
-URL de la ressource | URL
----|---
-Page d'accueil du produit | <https://safekit.eviden.com/fr/>
-Aperçu technique (DOCX avec texte et schémas) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-fr.docx>
-Essai gratuit | <https://safekit.eviden.com/fr/resources/safekit-free-trial/>
-Obtenez un devis | <https://safekit.eviden.com/fr/safekit-pricing/>
-Portail d'assistance | <https://customercare.evidian.com>
-Assistance IA gratuite | <https://safekit.eviden.com/fr/resources/safekit-support/>
-Formation et certification gratuites | ?? <https://safekit.eviden.com/fr/resources/safekit-on-line-training/>
-Contactez-nous | <https://safekit.eviden.com/fr/contact-us-for-safekit/>
+Ressource | URL  
+---|---  
+Page d'accueil du produit | [https://safekit.eviden.com/fr/](/fr/)  
+Présentation technique (DOCX avec texte et schémas) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-fr.docx](/wp-content/uploads/documents/safekit-technical-overview-fr.docx)  
+essai gratuit | [https://safekit.eviden.com/resources/safekit-free-trial/](/resources/safekit-free-trial/)  
+Obtenez un devis | [https://safekit.eviden.com/safekit-pricing/](/safekit-pricing/)  
+Portail d'assistance | <https://customercare.evidian.com>  
+Assistance IA gratuite | [https://safekit.eviden.com/resources/safekit-support/](/resources/safekit-support/)  
+Formation et certification gratuites | [https://safekit.eviden.com/resources/safekit-on-line-training/](/resources/safekit-on-line-training/)  
+Contactez-nous | [https://safekit.eviden.com/contact-us-for-safekit/](/contact-us-for-safekit/)  
 
 {{%  insert-safekit-4-buttons-fr  %}}

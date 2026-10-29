@@ -253,12 +253,12 @@ _* On Linux, it takes 6 separate open-source projects — Corosync, Pacemaker, D
 Resource | URL  
 ---|---  
 Product home page | <https://safekit.eviden.com>  
-Technical Overview (DOCX with text and diagrams) | 📘 [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
+Technical Overview (DOCX with text and diagrams) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
 Free trial | [https://safekit.eviden.com/resources/safekit-free-trial/](</resources/safekit-free-trial/>)  
 Get a quote | [https://safekit.eviden.com/safekit-pricing/](</safekit-pricing/>)  
 Support portal | <https://customercare.evidian.com>  
 Free AI support | [https://safekit.eviden.com/resources/safekit-support/](</resources/safekit-support/>)  
-Free training & certification | 🎓 [https://safekit.eviden.com/resources/safekit-on-line-training/](</resources/safekit-on-line-training/>)  
+Free training & certification | [https://safekit.eviden.com/resources/safekit-on-line-training/](</resources/safekit-on-line-training/>)  
 Contact us | [https://safekit.eviden.com/contact-us-for-safekit/](</contact-us-for-safekit/>)  
   
 

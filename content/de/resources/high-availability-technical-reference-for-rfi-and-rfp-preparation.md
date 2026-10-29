@@ -250,15 +250,15 @@ Für * sind sechs separate Open-Source Linux Projekte – Corosync, Pacemaker, D
 
 ## Schnellreferenzlinks {#quick-reference-links}
 
-Ressourcen-URL | URL
----|---
-Produkt-Startseite | <https://safekit.eviden.com/de/>
-Technische Übersicht (DOCX mit Text und Diagrammen) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
-Kostenlose Testversion | <https://safekit.eviden.com/de/resources/safekit-free-trial/>
-Angebot anfordern </safekit-pricing/> | <https://safekit.eviden.com/de/safekit-pricing/>
-Supportportal | <https://customercare.evidian.com>
-Kostenlose KI-Unterstützung | <https://safekit.eviden.com/de/resources/safekit-support/>
-Kostenlose Schulung & Zertifizierung | ?? <https://safekit.eviden.com/de/resources/safekit-on-line-training/>
-Kontaktieren Sie uns | <https://safekit.eviden.com/de/contact-us-for-safekit/>
+Ressource | URL  
+---|---  
+Produkt-Startseite | [https://safekit.eviden.com/de/](/de/)  
+Technischer Überblick (DOCX mit Text und Diagrammen) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](/wp-content/uploads/documents/safekit-technical-overview-en.docx)  
+Kostenlose Testversion | [https://safekit.eviden.com/resources/safekit-free-trial/](/resources/safekit-free-trial/)  
+Angebot anfordern | [https://safekit.eviden.com/safekit-pricing/](/safekit-pricing/)  
+Supportportal | <https://customercare.evidian.com>  
+Kostenloser KI-Support | [https://safekit.eviden.com/resources/safekit-support/](/resources/safekit-support/)  
+Kostenlose Schulung & Zertifizierung | [https://safekit.eviden.com/resources/safekit-on-line-training/](/resources/safekit-on-line-training/)  
+Kontaktieren Sie uns | [https://safekit.eviden.com/contact-us-for-safekit/](/contact-us-for-safekit/)  
 
 {{%  insert-safekit-4-buttons-de  %}}

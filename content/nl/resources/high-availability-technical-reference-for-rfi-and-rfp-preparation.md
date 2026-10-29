@@ -250,15 +250,15 @@ _ * Op Linux zijn 6 afzonderlijke open-sourceprojecten nodig — Corosync, Pacem
 
 ## Snel naslaglinks {#quick-reference-links}
 
-Resource | URL
----|---
-Product startpagina | <https://safekit.eviden.com/nl/>
-Technisch overzicht (DOCX met tekst en diagrammen) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
-Gratis proefversie | <https://safekit.eviden.com/nl/resources/safekit-free-trial/>
-Vraag een offerte aan | <https://safekit.eviden.com/nl/safekit-pricing/>
-Ondersteuningsportaal | <https://customercare.evidian.com>
-Gratis AI-ondersteuning | <https://safekit.eviden.com/nl/resources/safekit-support/>
-Gratis training en certificering | ?? <https://safekit.eviden.com/nl/resources/safekit-on-line-training/>
-Neem contact met ons op | <https://safekit.eviden.com/nl/contact-us-for-safekit/>
+Bron | URL  
+---|---  
+Startpagina van het product | [https://safekit.eviden.com/nl/](/nl/)  
+Technisch overzicht (DOCX met tekst en diagrammen) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](/wp-content/uploads/documents/safekit-technical-overview-en.docx)  
+Gratis proefperiode | [https://safekit.eviden.com/resources/safekit-free-trial/](/resources/safekit-free-trial/)  
+Vraag een offerte aan | [https://safekit.eviden.com/safekit-pricing/](/safekit-pricing/)  
+Ondersteuningsportaal | <https://customercare.evidian.com>  
+Gratis AI-ondersteuning | [https://safekit.eviden.com/resources/safekit-support/](/resources/safekit-support/)  
+Gratis training en certificering | [https://safekit.eviden.com/resources/safekit-on-line-training/](/resources/safekit-on-line-training/)  
+Neem contact met ons op | [https://safekit.eviden.com/contact-us-for-safekit/](/contact-us-for-safekit/)  
 
 {{%  insert-safekit-4-buttons-nl  %}}

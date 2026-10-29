@@ -250,15 +250,15 @@ _ * Su Linux , sono necessari 6 progetti open-source separati — Corosync, Pace
 
 ## Collegamenti di riferimento rapido {#quick-reference-links}
 
-URL della risorsa | URL
----|---
-Pagina iniziale del prodotto | <https://safekit.eviden.com/it/>
-Panoramica tecnica (DOCX con testo e diagrammi) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
-Prova gratuita | <https://safekit.eviden.com/it/resources/safekit-free-trial/>
-Richiedi un preventivo | <https://safekit.eviden.com/it/safekit-pricing/>
-Portale di supporto | <https://customercare.evidian.com>
-Supporto AI gratuito | <https://safekit.eviden.com/it/resources/safekit-support/>
-Formazione e certificazione gratuite | ?? <https://safekit.eviden.com/it/resources/safekit-on-line-training/>
-Contattaci | <https://safekit.eviden.com/it/contact-us-for-safekit/>
+Risorsa | URL  
+---|---  
+Pagina iniziale del prodotto | [https://safekit.eviden.com/it/](/it/)  
+Panoramica tecnica (DOCX con testo e diagrammi) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](/wp-content/uploads/documents/safekit-technical-overview-en.docx)  
+Prova gratuita | [https://safekit.eviden.com/resources/safekit-free-trial/](/resources/safekit-free-trial/)  
+Richiedi un preventivo | [https://safekit.eviden.com/safekit-pricing/](/safekit-pricing/)  
+Portale di supporto | <https://customercare.evidian.com>  
+Supporto AI gratuito | [https://safekit.eviden.com/resources/safekit-support/](/resources/safekit-support/)  
+Formazione e certificazione gratuite | [https://safekit.eviden.com/resources/safekit-on-line-training/](/resources/safekit-on-line-training/)  
+Contattaci | [https://safekit.eviden.com/contact-us-for-safekit/](/contact-us-for-safekit/)  
 
 {{%  insert-safekit-4-buttons-it  %}}

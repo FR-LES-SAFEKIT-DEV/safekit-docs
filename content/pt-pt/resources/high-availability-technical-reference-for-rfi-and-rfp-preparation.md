@@ -250,15 +250,15 @@ _ No * , são necessários 6 projetos de código aberto distintos — Corosync, 
 
 ## Links de referência rápida {#quick-reference-links}
 
-URL do recurso | URL
----|---
-Página inicial do produto | <https://safekit.eviden.com/pt-pt/>
-Visão geral técnica (DOCX com texto e diagramas) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
-Teste </pt-pt/resources/safekit-free-trial/> | <https://safekit.eviden.com/pt-pt/resources/safekit-free-trial/>
-Solicite um orçamento | <https://safekit.eviden.com/pt-pt/safekit-pricing/>
-Portal de suporte | <https://customercare.evidian.com>
-Suporte gratuito de IA | <https://safekit.eviden.com/pt-pt/resources/safekit-support/>
-Treinamento e certificação gratuitos | ?? <https://safekit.eviden.com/pt-pt/resources/safekit-on-line-training/>
-Entre em contato conosco | <https://safekit.eviden.com/pt-pt/contact-us-for-safekit/>
+Recurso | URL  
+---|---  
+Página inicial do produto | [https://safekit.eviden.com/pt-pt/](/pt-pt/)  
+Visão geral técnica (DOCX com texto e diagramas) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](/wp-content/uploads/documents/safekit-technical-overview-en.docx)  
+Teste grátis | [https://safekit.eviden.com/resources/safekit-free-trial/](/resources/safekit-free-trial/)  
+Solicite um orçamento | [https://safekit.eviden.com/safekit-pricing/](/safekit-pricing/)  
+Portal de suporte | <https://customercare.evidian.com>  
+Suporte gratuito de IA | [https://safekit.eviden.com/resources/safekit-support/](/resources/safekit-support/)  
+Treinamento e certificação gratuitos | [https://safekit.eviden.com/resources/safekit-on-line-training/](/resources/safekit-on-line-training/)  
+Contate-nos | [https://safekit.eviden.com/contact-us-for-safekit/](/contact-us-for-safekit/)  
 
 {{%  insert-safekit-4-buttons-pt-pt  %}}
