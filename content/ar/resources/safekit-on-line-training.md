@@ -105,7 +105,7 @@ Farm عرض توضيحي للمجموعة: 🎬 [فيديو](<https://www.youtub
      * 🎬 [مراقبة الوحدات](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [نظرة عامة على وحدة التحكم في المراقبة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [كيف mirror هل تعمل الوحدة في وحدة التحكم؟](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [كيف `farm` هل تعمل الوحدة في وحدة التحكم؟](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [كيف farm هل تعمل الوحدة في وحدة التحكم؟](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [توضح الوحدة الجدول الزمني](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [سجلات الوحدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [موارد الوحدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)

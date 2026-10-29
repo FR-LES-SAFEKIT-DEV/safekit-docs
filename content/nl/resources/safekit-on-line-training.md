@@ -105,7 +105,7 @@ Farm clusterdemonstratie: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXH
      * 🎬 [Monitoringmodules](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Overzicht van de monitoringconsole](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [Hoe een mirror Werkt de module in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [Hoe een `farm` Werkt de module in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [Hoe een farm Werkt de module in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [Tijdlijn van modulestatussen](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [Modulelogboeken](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [Modulebronnen](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)

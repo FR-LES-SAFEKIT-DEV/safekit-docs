@@ -105,7 +105,7 @@ Farm Démonstration du cluster : 🎬 [vidéo](<https://www.youtube.com/watch?v
      * 🎬 [Surveillance des modules](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Vue d'ensemble de la console de surveillance](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [Comment un mirror Le module fonctionne-t-il dans la console ?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [Comment un `farm` Le module fonctionne-t-il dans la console ?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [Comment un farm Le module fonctionne-t-il dans la console ?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [Chronologie des états du module](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [Journaux des modules](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [Ressources du module](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)

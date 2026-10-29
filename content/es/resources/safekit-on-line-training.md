@@ -105,7 +105,7 @@ Farm Demostración del clúster: 🎬 [video](<https://www.youtube.com/watch?v=1
      * 🎬 [Monitoreo de módulos](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Descripción general de la consola de monitorización](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [Cómo un mirror ¿El módulo funciona en la consola?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [Cómo un `farm` ¿El módulo funciona en la consola?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [Cómo un farm ¿El módulo funciona en la consola?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [Cronograma de estados del módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [Registros de módulos](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [Recursos del módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)

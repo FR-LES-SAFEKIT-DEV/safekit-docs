@@ -105,7 +105,7 @@ Farm 클러스터 데모: 🎬 [동영상](<https://www.youtube.com/watch?v=1Ww2
      * 🎬 [모듈 모니터링](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [모니터링 콘솔 개요](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [어떻게 mirror 모듈이 콘솔에서 작동하나요?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [어떻게 `farm` 모듈이 콘솔에서 작동하나요?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [어떻게 farm 모듈이 콘솔에서 작동하나요?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [모듈 상태 타임라인](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [모듈 로그](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [모듈 리소스](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)

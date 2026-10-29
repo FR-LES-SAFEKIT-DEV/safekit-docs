@@ -105,7 +105,7 @@ Farm クラスターのデモンストレーション: 🎬 [ビデオ](<https:/
      * 🎬 [モジュール監視](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [監視コンソールの概要](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [どのように mirror モジュールはコンソールで動作しますか？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [どのように `farm` モジュールはコンソールで動作しますか？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [どのように farm モジュールはコンソールで動作しますか？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [モジュールの状態のタイムライン](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [モジュールログ](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [モジュールリソース](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)
