@@ -48,9 +48,9 @@ Crie um contêiner nginx em ambos os nós que vincule o diretório **/replicated
 
 #### Configuração SafeKit {#safekit-configuration}
 
-  * Acesse a seção de configuração passo a passo ****
+  * Acesse a seção **de configuração passo a passo.**
   * Criar e configurar um módulo **mirror.safe**
-  * Configure um endereço IP virtual **** , que será alternado em caso de falha.
+  * Configure um **endereço IP virtual** que será alternado em caso de falha.
   * Defina **/replicated_dir_path** como um diretório replicado.
   * Insira respectivamente nos scripts start_prim e stop_prim : **podman start mynginx** e **podman stop mynginx**  
 Nota: Pode ser necessário usar "podman start --security-opt label=disable mynginx " com SE Linux .

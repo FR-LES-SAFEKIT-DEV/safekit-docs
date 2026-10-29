@@ -29,7 +29,7 @@ topics: "Linux 高可用性快速安装指南, SafeKit 高可用性限制, SafeK
  
 
 注意：您将要配置的通用 **mirror.safe** 模块已包含在安装包中。
-
+注意：您将要配置的通用**mirror.safe**模块包含在软件包中。
 ## SafeKit / Linux 解决方案的分步配置 {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 

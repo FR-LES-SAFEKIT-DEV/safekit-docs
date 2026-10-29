@@ -13,7 +13,7 @@ topics: "Replicação síncrona SafeKit para alta disponibilidade vs. Replicaç�
 
 SafeKit oferece uma arquitetura flexível **Alta Disponibilidade e Recuperação de Desastres (HADR) baseada** software **que elimina a necessidade de armazenamento compartilhado dispendioso. Ao implementar a replicação síncrona** em uma VLAN estendida entre o Servidor 1 e o Servidor 2, SafeKit garante que seus aplicativos críticos permaneçam ativos e consistentes entre dois sites redundantes.
 
-Para lidar com as limitações de WANs de baixa largura de banda, SafeKit foi projetado para ser usado em conjunto com as soluções de backup e recuperação **** . Isso permite que as organizações mantenham disponibilidade 24 horas por dia, 7 dias por semana, por meio de failover automático, ao mesmo tempo que protegem os dados históricos para recuperação de desastres fora do local.
+Para lidar com as limitações de WANs de baixa largura de banda, SafeKit foi projetado para ser usado em conjunto com **soluções de backup e recuperação** . Isso permite que as organizações mantenham disponibilidade 24 horas por dia, 7 dias por semana, por meio de failover automático, ao mesmo tempo que protegem os dados históricos para recuperação de desastres fora do local.
 
 Consequentemente, o ambiente fica protegido contra falhas de hardware ou software por meio do SafeKit e protegido contra erros lógicos e ameaças cibernéticas como ransomware por meio da solução de backup.
 
@@ -67,7 +67,7 @@ O HADR síncrono requer uma LAN estendida ou uma VLAN estendida por três motivo
 ![ Arquitetura HADR que separa Alta Disponibilidade de Recuperação de Desastres ](/wp-content/uploads/2023/03/hadr-slow-network-1.png "w:256")
 
 
-Para implementar HADR em uma rede lenta (WAN), a arquitetura normalmente separa a Alta Disponibilidade ( **** da Recuperação de Desastres **e da Recuperação de Desastres** . Nesse cenário, dois nós são implantados no site primário para redundância local, enquanto uma estratégia separada de backup ou replicação assíncrona é usada para proteger os dados em um site remoto distante.
+Para implementar HADR em uma rede lenta (WAN), a arquitetura normalmente separa **a Alta Disponibilidade** da **Recuperação de Desastres** . Nesse cenário, dois nós são implantados no site principal para redundância local, enquanto uma estratégia separada de backup ou replicação assíncrona é usada para proteger os dados em um site remoto distante.
 
 ### Qual é a melhor solução HADR para conexões de baixa largura de banda? {#sanless-ha-with-remote-dr}
 
@@ -77,7 +77,7 @@ A solução ideal envolve a implementação **SafeKit** no site primário para a
 
 Como a replicação assíncrona em uma rede lenta envolve potencial perda de dados (RPO > 0), o processo de failover para um site de recuperação de desastres é normalmente manual e gerenciado por um administrador:
 
-  * Restauração de dados **: Os backups** são restaurados em servidores secundários no site de recuperação de desastres. Soluções modernas como o Veeam **** são frequentemente usadas para restaurar máquinas virtuais (VMs) rapidamente, reduzindo o tempo de recuperação.
+  * **Restauração de dados:** Os backups são restaurados em servidores secundários no site de recuperação de desastres. Soluções modernas como **o Veeam** são frequentemente usadas para restaurar máquinas virtuais (VMs) rapidamente, reduzindo o tempo de recuperação.
   * Redirecionamento de DNS **: O tráfego** é redirecionado para o site de recuperação de desastres (DR) no nível do DNS. O tempo de recuperação depende dos tempos limite (TTL) do cache DNS, e alguns aplicativos cliente podem precisar ser reiniciados para obter o novo endereço IP.
   * Decisão manual **:** Um administrador deve verificar a integridade dos dados no site remoto antes de autorizar a mudança para o centro de dados secundário.
 
@@ -94,18 +94,18 @@ Como a replicação assíncrona em uma rede lenta envolve potencial perda de dad
 ![ Ícone da estratégia de backup de dados ](/wp-content/uploads/2026/01/backup-icon.png "w:64")
 
 
-Embora ambos sejam essenciais para **proteção de dados, as soluções** **** diferentes. **Alta Disponibilidade** , com tecnologia SafeKit , fornece um mecanismo de failover "ao vivo" para manter os aplicativos acessíveis durante interrupções do servidor ou falhas de hardware. Por outro lado, uma solução de Backup **atua como um arquivo "histórico". Enquanto a** garante 99,99% de disponibilidade do sistema replicando dados em tempo real, o backup concentra-se na integridade dos dados, fornecendo os pontos de restauração necessários para recuperação de erros lógicos, exclusões acidentais ou ataques de ransomware.
+Embora ambas sejam cruciais para a proteção de dados, as soluções de **Alta Disponibilidade (HA)** e **de Backup** visam riscos diferentes. **A Alta Disponibilidade** , com tecnologia SafeKit , fornece um mecanismo de failover "ao vivo" para manter os aplicativos acessíveis durante interrupções de servidor ou falhas de hardware. Por outro lado, uma **solução de Backup** atua como um arquivo "histórico". Enquanto a HA garante 99,99% de disponibilidade do sistema replicando dados em tempo real, o backup se concentra na integridade dos dados, fornecendo os pontos de restauração necessários para recuperação de erros lógicos, exclusões acidentais ou ataques de ransomware.
 
 ### A alta disponibilidade substitui uma estratégia de backup? {#ha-vs-backup-ransomware}
 
-Não, alta disponibilidade e backups são complementares, não intercambiáveis. Embora **SafeKit** garanta a continuidade dos negócios **** ao manter os aplicativos em execução durante uma falha de hardware, ele não protege contra erros lógicos, exclusões acidentais ou ataques de ransomware. Por exemplo, como a replicação em tempo real espelha instantaneamente cada alteração, um ataque de ransomware no nó primário será imediatamente duplicado no nó secundário. Para se recuperar de tais ameaças cibernéticas ou exclusões acidentais, você precisa de uma solução de backup **** dedicada com uma política de retenção robusta. Isso permite que você "retorne" seu ambiente a um estado íntegro anterior à ocorrência da corrupção.
+Não, alta disponibilidade e backups são complementares, não intercambiáveis. Embora **SafeKit** garanta **a continuidade dos negócios** , mantendo os aplicativos em execução durante uma falha de hardware, ele não protege contra erros lógicos, exclusões acidentais ou ataques de ransomware. Por exemplo, como a replicação em tempo real espelha instantaneamente cada alteração, um ataque de ransomware no nó primário será imediatamente duplicado no nó secundário. Para se recuperar de tais ameaças cibernéticas ou exclusões acidentais, você precisa de uma **solução de backup** dedicada com uma política de retenção robusta. Isso permite que você "retorne" seu ambiente a um estado íntegro anterior à ocorrência da corrupção.
 
 ### Otimizando RTO e RPO: A sinergia entre alta disponibilidade e backup {#ha-backup-rpo-rto}
 
 Para construir uma infraestrutura verdadeiramente resiliente, é preciso integrar alta disponibilidade e backup em uma estratégia unificada. Essas duas tecnologias abordam diferentes dimensões da equação [ RTO (Recovery Time Objective) e ](</pt-pt/best-practises/what-is-rpo-and-rto-with-examples/>) (Recovery Point Objective): 
 
   * Alta disponibilidade **(via SafeKit ):** Alvos **Recuperação instantânea** . Ao manter um mirror ativo e síncrono do seu ambiente, SafeKit alcança RTO e RPO próximos de zero. Se um servidor falhar, o aplicativo é retomado imediatamente no nó secundário, garantindo que não haja interrupção de serviço ou perda de dados durante a transição.
-  * Soluções de backup **: Destino** Resiliência de dados **** . Enquanto a alta disponibilidade (HA) mantém o serviço "ativo", o backup cria um histórico "imutável". Ele serve como plano B para quando os dados ativos são comprometidos, permitindo restaurar uma versão limpa do banco de dados a partir de um ponto específico no tempo, anterior à ocorrência de um vírus ou exclusão acidental.
+  * **Soluções de Backup:** Foque na **Resiliência de Dados** . Enquanto a Alta Disponibilidade (HA) mantém o serviço "ativo", o backup cria um histórico "imutável". Ele serve como plano B para quando os dados ativos são comprometidos, permitindo restaurar uma versão íntegra do banco de dados a partir de um ponto específico no tempo, anterior à ocorrência de um vírus ou exclusão acidental.
 
 
 ## Comparação de arquiteturas HADR: redes rápidas vs. lentas {#hadr-architectures-comparison}
@@ -125,7 +125,7 @@ Objetivo Primário de Recuperação | Continuidade Imediata dos Negócios; | Seg
 
 ###  Como implementar HADR com SafeKit : Replicação síncrona e failover {#how-to-implement-hadr-with-safekit-synchronous-replication--failover}
 
-Aprenda como combinar a Alta Disponibilidade (HA) **SafeKit** **** em vídeo explora a arquitetura necessária para 100% de disponibilidade da aplicação sem a necessidade de discos compartilhados.
+Aprenda como combinar **Alta Disponibilidade (HA)** e **Recuperação de Desastres (DR)** em uma única estratégia HADR usando SafeKit . Este guia em vídeo explora a arquitetura necessária para 100% de disponibilidade de aplicativos sem a necessidade de discos compartilhados.
 
 ### Vídeo em destaque {#video-highlights}
 

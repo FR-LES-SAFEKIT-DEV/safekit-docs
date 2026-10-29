@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+            
+            
+    <title>Haute disponibilité Azure : réplication en temps réel et basculement avec SafeKit - SafeKit</title>
+    <meta name="description" content="Déployez le module mirror.safe de SafeKit dans Azure pour activer la réplication synchrone en temps réel et le basculement automatique sous Windows et Linux. Ce guide explique comment configurer un cluster à deux nœuds sans stockage partagé pour les applications critiques.">
+    <link rel="icon" href="../../../wp-content/themes/safekit/computer-safekit-icon-svg.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">
+    <link rel="alternate" type="text/markdown" href="index.md">
+
+
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;color:#333;line-height:1.6}main{max-width:1400px;margin:0 auto;padding:1.5rem}a{color:#06c;text-decoration:none}a:hover{text-decoration:underline}.not-found{max-width:680px;margin:4rem auto 6rem;padding:3rem 2rem;text-align:center;background:#f5f9ff;border:1px solid #dae8f8;border-radius:16px}.not-found-code{color:#06c;font-size:clamp(5rem,16vw,9rem);font-weight:800;line-height:1}.not-found h1{margin:1rem 0;font-size:clamp(1.6rem,4vw,2.3rem)}.not-found p:not(.not-found-code){color:#555;margin-bottom:2rem}.not-found-home{display:inline-block;padding:.8rem 1.4rem;border-radius:6px;background:#06c;color:#fff;font-weight:600}.not-found-home:hover{background:#0052a3;color:#fff;text-decoration:none}header{position:sticky;top:0;z-index:2000;background:#fff}.userguide-page header{position:static}.navbar{display:flex;align-items:center;max-width:1400px;margin:0 auto;padding:.5rem .75rem;border-bottom:2px solid #06c;position:relative}.logo{display:flex;align-items:center}.logo img{width:96px;height:auto}.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.nav-brand{font-size:.9rem;font-weight:500;color:#333;text-decoration:none;padding:.75rem .8rem;white-space:nowrap}.nav-brand:hover{text-decoration:none;color:#06c;background:#f0f7ff}.nav-brand.active{color:#06c}.nav-toggle{display:none}.nav-toggle-label{display:none;box-sizing:border-box;align-items:center;justify-content:center;width:2rem;height:2rem;padding:0;color:#fff;line-height:1;cursor:pointer}.nav-toggle-label svg{display:block;width:1.25rem;height:1.25rem}.nav-menu{display:flex;align-items:center;justify-content:center;gap:0;flex:1;margin-left:1.5rem}.dropdown{position:static}.dropdown-toggle{display:block;padding:.75rem .8rem;color:#333;font-size:.9rem;font-weight:500;white-space:nowrap}.dropdown-expand{display:none}.dropdown-toggle:hover,.dropdown-toggle.active{color:#06c;text-decoration:none;background:#f0f7ff}.mega-panel{display:none;position:absolute;top:calc(100% - 1px);left:0;right:0;background:#fff;border:1px solid #ddd;border-top:2px solid #06c;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:1000;padding:1rem 1.5rem}.mega-panel::before{content:'';position:absolute;top:-32px;left:0;right:0;height:32px}.mega-columns{display:flex;gap:2rem}.mega-column{flex:1}.mega-column-title{font-size:.85rem;font-weight:600;color:#333;padding-bottom:.4rem;border-bottom:2px solid #06c;margin-bottom:.75rem}.mega-column a{display:block;padding:.35rem .5rem;color:#333;font-size:.85rem;border-radius:3px}.mega-column a:hover{background:#f0f7ff;color:#06c;text-decoration:none}.mega-column-subtitle{font-size:.8rem;font-weight:600;color:#333;padding-bottom:.35rem;border-bottom:2px solid #06c;margin-top:1rem;margin-bottom:.5rem}.mega-columns-6{gap:1.2rem}.mega-columns-6 .mega-column-title,.mega-columns-6 .mega-column-subtitle{font-size:.78rem}.mega-columns-6 a{font-size:.8rem;padding:.25rem .4rem}.dropdown:hover .mega-panel{display:block}.nav-utility{display:flex;flex:none;align-items:center;gap:.2rem;margin-inline-start:auto}.nav-utility-link{box-sizing:border-box;display:inline-flex;flex:0 0 1.75rem;align-items:center;justify-content:center;width:1.75rem;height:2rem;padding:0;border:0;background:0 0;color:#fff!important;line-height:1;text-decoration:none;cursor:pointer}.nav-utility-link:hover{border-radius:50%;background:rgba(255,255,255,.12);text-decoration:none}.nav-utility-link svg{display:block;width:1rem;height:1rem}.nav-person svg{fill:#fff}.nav-utility-link:focus-visible,.site-search-close:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.site-search-close svg{width:1.35rem;height:1.35rem}.site-search-dialog{width:min(44rem,calc(100vw - 2rem));max-height:min(82vh,48rem);padding:0;border:0;border-top:4px solid #ff5638;background:#fff;color:#172d39;box-shadow:0 18px 60px rgba(0,0,0,.3)}.site-search-dialog::backdrop{background:rgba(0,24,32,.72)}.site-search-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid #d8e0e2}.site-search-dialog-header h2{margin:0;color:#002f3b;font-size:1.15rem}.site-search-close{display:grid;place-items:center;width:2.5rem;height:2.5rem;padding:0;border:1px solid #c7d1d4;background:#fff;color:#243b43;cursor:pointer}.site-search-dialog-body{max-height:calc(82vh - 4rem);overflow:auto;padding:1rem 1.25rem 1.5rem}.site-search-dialog .gsc-control-cse{padding:0;border:0;background:0 0}.site-search-dialog table.gsc-search-box{margin:0 0 1rem}.lang-switch{position:relative;flex:0 0 1.75rem;width:1.75rem;height:2rem;margin:0}.lang-current{display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;min-width:0;padding:0;border:0;border-radius:0;background:0 0;color:#fff;font-size:1.1rem;font-weight:600;white-space:nowrap;cursor:pointer}.lang-dropdown{display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #ddd;box-shadow:0 4px 8px rgba(0,0,0,.1);border-radius:4px;z-index:1000;min-width:60px}.lang-dropdown a{display:block;padding:.4rem .8rem;font-size:.8rem;color:#333}.lang-dropdown a:hover{background:#f0f7ff;text-decoration:none}.lang-switch:hover .lang-dropdown{display:block}.lang-switch.open .lang-dropdown{display:block}.breadcrumb{width:100%;max-width:none;margin:0;padding:.7rem max(1.5rem,calc((100% - 1400px)/2 + 1.5rem))1.3rem;background:#002f3b;color:#fff;font-size:.8rem}.breadcrumb a{color:#fff;text-decoration:underline;text-underline-offset:2px}.breadcrumb a:hover{color:#fff;text-decoration-thickness:2px}.breadcrumb .sep{margin:0 .45rem;color:rgba(255,255,255,.72)}.breadcrumb .current{color:#fff;font-weight:600}.page-with-toc{display:flex;gap:2rem;align-items:flex-start}.toc-sidebar{position:sticky;top:4.5rem;width:220px;flex-shrink:0;max-height:calc(100vh - 5.5rem);overflow-y:auto}.toc-nav{border-right:2px solid #e8e8e8;padding-right:1rem}.toc-nav h3{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#999;margin-bottom:.5rem}.toc-nav ul{list-style:none;padding:0;margin:0}.toc-nav li{margin:0}.toc-nav a{display:block;padding:.25rem 0;font-size:.82rem;color:#555;line-height:1.4;border-left:2px solid transparent;padding-left:.5rem;margin-left:-1px;text-decoration:none}.toc-nav a:hover{color:#06c;text-decoration:none;border-left-color:#06c}#TableOfContents a{display:block;text-decoration:none}#TableOfContents a img{max-width:14px;max-height:14px;vertical-align:middle;margin:0 2px}#TableOfContents>ul>li>ul{display:none;padding-left:1.1rem;margin-top:.2rem;border-left:1px solid #e0e0e0}#TableOfContents>ul>li.toc-open>ul{display:block}#TableOfContents>ul>li>ul a{font-size:.74rem;color:#777;padding:.15rem 0}#TableOfContents>ul>li.has-children>a{display:flex;align-items:baseline;justify-content:space-between}#TableOfContents>ul>li.has-children>a::after{content:'+';font-weight:700;font-size:.9rem;color:#999;margin-left:.4rem;flex-shrink:0}#TableOfContents>ul>li.has-children.toc-open>a::after{content:'-';color:#06c}#TableOfContents a.toc-active{color:#06c;font-weight:600}#TableOfContents>ul>li>ul a.toc-active{color:#06c;font-weight:600}article.has-toc{flex:1;min-width:0}article h1,article h2,article h3,article h4{scroll-margin-top:5rem}article h1{font-size:2rem;font-weight:700;color:#1a1a1a;margin:1.5rem 0 1rem;line-height:1.25;border-bottom:2px solid #06c;padding-bottom:.4rem}article h2{font-size:1.5rem;font-weight:600;color:#222;margin:2rem 0 .75rem;line-height:1.3;border-left:4px solid #06c;padding-left:.6rem}article h3{font-size:1.2rem;font-weight:600;color:#333;margin:1.5rem 0 .5rem}article h4{font-size:1.05rem;font-weight:600;color:#444;margin:1.25rem 0 .5rem}article p{margin:.75rem 0;line-height:1.7;color:#444}article ul,article ol{margin:.75rem 0 .75rem 1.5rem;line-height:1.7}article ul{list-style:disc}article ol{list-style:decimal}article li{margin:.3rem 0;color:#444}article li::marker{color:#06c}article a{text-decoration:underline;text-underline-offset:2px}article a:hover{text-decoration-thickness:2px}article blockquote{border-left:4px solid #06c;margin:1rem 0;padding:.5rem 1rem;background:#f8fbff;color:#555;font-style:italic}article code{background:#f1f3f5;padding:.15em .4em;border-radius:3px;font-size:.9em;color:#24292e;border:1px solid #e1e4e8}article .farm-term{font:inherit;color:inherit}article pre{background:#f4f4f8;color:#333;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0;border:1px solid #e0e0e0}article pre code{background:0 0;color:inherit;padding:0}article hr{border:none;border-top:1px solid #e0e0e0;margin:2rem 0}article strong{color:#1a1a1a}article img{max-width:100%;height:auto}article img.inline-icon{display:inline;vertical-align:middle;margin:0 .1em}table{border-collapse:collapse;width:100%;margin:1em 0}th,td{border:1px solid #ccc;padding:.5em .75em;text-align:left;vertical-align:top}th{background-color:#f5f5f5;font-weight:700}tr:nth-child(even){background-color:#fafafa}footer{text-align:center;padding:2rem 1rem;margin-top:2rem;border-top:1px solid #eee;color:#4a4a4a;font-size:.85rem}.sidebar-section{margin-bottom:1rem}.sidebar-section .sidebar-content{display:none}.sidebar-section.open .sidebar-content{display:block}.sidebar-toggle{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#999;margin-bottom:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none}.sidebar-toggle::after{content:'+';font-weight:700;font-size:.9rem;color:#999}.sidebar-section.open>.sidebar-toggle::after{content:'-';color:#06c}.sidebar-toggle:hover{color:#06c}.sidebar-toggle.no-collapse{cursor:default}.sidebar-toggle.no-collapse::after,.sidebar-section.open>.sidebar-toggle.no-collapse::after{content:''}.toc-toggle{float:right;display:inline-block;width:1rem;font-weight:700;font-size:.75rem;color:#999;cursor:pointer;text-align:center;margin-right:.2rem}.toc-toggle:hover{color:#06c}.userguide-container{display:flex;height:85vh;width:100%;gap:0}.userguide-container .index-container{width:20%;height:100%}.userguide-container .doc-container{width:80%;height:100%}.userguide-container iframe{width:100%;height:100%;border:none}.userguide-container.single-frame .doc-container{width:100%}.button-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0}.btn-action,article a.btn-action{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.9rem;text-decoration:none!important;white-space:nowrap;transition:background .2s}.btn-action:hover,article a.btn-action:hover{background:#0052a3;text-decoration:none!important}.btn-quick-install,article a.btn-quick-install{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.95rem;text-decoration:none!important;margin:1rem 0;transition:background .2s}.btn-quick-install:hover,article a.btn-quick-install:hover{background:#0052a3;text-decoration:none!important}.btn-download,article a.btn-download{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.9rem;text-decoration:none!important;white-space:nowrap;transition:background .2s;margin:.3rem 0}.btn-download:hover,article a.btn-download:hover{background:#0052a3;text-decoration:none!important}.chat-fab{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;align-items:center;gap:.25rem;z-index:9999;text-decoration:none!important;transition:transform .2s}.chat-fab:hover{transform:scale(1.08);text-decoration:none!important}.chat-fab img{width:64px;height:64px}.chat-fab-label{background:#1a73e8;color:#fff;font-size:.75rem;font-weight:600;padding:.2rem .6rem;border-radius:4px;white-space:nowrap}@media(max-width:1150px){.toc-sidebar{display:none}.page-with-toc{display:block}article table{display:block;max-width:100%;overflow-x:auto}.nav-toggle-label{display:inline-flex;flex:0 0 2rem;width:2rem;height:2.75rem;margin:0}.nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid #06c;box-shadow:0 4px 12px rgba(0,0,0,.1);margin-left:0;padding:.5rem 0;z-index:999}.nav-toggle:checked~.nav-menu{display:flex}.dropdown{display:flex;flex-wrap:wrap;align-items:center}.dropdown{display:grid;grid-template-columns:minmax(0,1fr)auto;width:100%}.dropdown-toggle{flex:1;padding:.6rem 1.5rem}.dropdown-expand{display:block;width:2.75rem;height:2.75rem;border:0;background:0 0;color:#06c;font-size:1.5rem;font-weight:600;line-height:1;cursor:pointer}.dropdown-expand[aria-expanded=true]{color:#333}.mega-panel{position:static;box-shadow:none;border:none;border-top:1px solid #eee;padding:.5rem 1.5rem}.dropdown:hover .mega-panel{display:none}.dropdown.mobile-open .mega-panel{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;width:100%!important;min-height:0;grid-column:1/-1;background:#fff;max-height:calc(100dvh - var(--mega-panel-top,4rem) - 1rem);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:5rem!important;box-sizing:border-box}.dropdown.mobile-open .dropdown-expand{font-size:0}.dropdown.mobile-open .dropdown-expand::after{content:"−";font-size:1.5rem}.mega-columns{flex-direction:column;gap:1rem}.site-search-dialog{width:calc(100vw - 1.25rem);max-height:88vh}.site-search-dialog-body{max-height:calc(88vh - 4rem);padding:.75rem}.lang-switch{position:relative;margin-left:.75rem;padding:0}.lang-switch .lang-dropdown{top:100%;right:0;max-height:calc(100dvh - 4rem);overflow-y:auto}.button-row{flex-direction:column}.btn-action{text-align:center}}@media(max-width:1150px){.nav-menu{align-items:stretch}.nav-brand{width:100%;padding:.6rem 1.5rem;text-align:start}}@media(min-width:1151px){.nav-brand,.dropdown-toggle{padding-inline:.55rem}.dropdown-toggle::after{margin-inline-start:.2rem}}@media(max-width:860px){.userguide-container .index-container{display:none}.userguide-container .doc-container{width:100%}}@media(max-width:1150px) and (hover:none) and (pointer:coarse){.dropdown{width:100%}.dropdown.mobile-open .mega-panel{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;left:0!important;right:0!important;width:100%!important;grid-column:1/-1;background-color:#fff!important;z-index:9999!important;box-shadow:0 8px 24px rgba(0,0,0,.15)!important;max-height:calc(100dvh - var(--mega-panel-top,4rem) - 1rem);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:1.5rem 1.25rem 5rem!important;box-sizing:border-box!important}.dropdown.mobile-open .dropdown-expand{font-size:0}.dropdown.mobile-open .dropdown-expand::after{content:"−";font-size:1.5rem}.mega-panel .mega-column,.mega-panel ul{padding-left:.5rem}}header{background:#002f3b;border-radius:8px 8px 0 0}.navbar{max-width:1800px;padding:.85rem clamp(1rem,2vw,2rem);border-bottom:0}html[dir=rtl] .nav-menu{margin-left:0;margin-right:2rem}.logo img{filter:brightness(0)invert(1)}.nav-brand,.dropdown-toggle,.nav-actions>a:not(.btn-quote){color:#fff}.nav-brand.active,.dropdown-toggle.active{color:#fff;background:0 0;border-bottom:1px solid #ff5638}.nav-brand:hover,.dropdown-toggle:hover{color:#fff;background:0 0}.nav-actions>a.nav-contact{color:#fff;font-size:.9rem;font-weight:500;padding:.75rem .8rem;margin-right:1rem;white-space:nowrap;text-decoration:none}.nav-actions>a.nav-contact:hover{color:#fff;background:0 0;text-decoration:none}.dropdown-toggle::after{content:"";display:inline-block;width:.42rem;height:.42rem;margin-block-end:.18rem;margin-inline-start:.45rem;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg)}.nav-actions{gap:.5rem;display:none}.nav-contact-mobile{display:none}.nav-pricing-desktop{display:inline-flex;align-items:center;justify-content:center;margin-inline-end:.5rem;white-space:nowrap}.nav-pricing-mobile{display:none}.nav-pricing-desktop,.nav-pricing-mobile{box-sizing:border-box;width:3.25rem;height:3.25rem;padding:0}.btn-quote.nav-pricing-desktop,.btn-quote.nav-pricing-mobile{padding:0;background:0 0;color:#fff!important}.btn-quote.nav-pricing-desktop:hover,.btn-quote.nav-pricing-mobile:hover{background:rgba(255,255,255,.12);color:#fff!important}.nav-pricing-desktop span,.nav-pricing-mobile span{font-size:1.5rem;font-weight:600;line-height:1}.nav-pricing-desktop:focus-visible,.nav-pricing-mobile:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.nav-contact-desktop{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:3.25rem;height:3.25rem;margin-inline:.25rem .5rem;color:#fff!important;text-decoration:none}.nav-contact-desktop svg{width:1.35rem;height:1.35rem}.nav-contact-desktop:hover{background:rgba(255,255,255,.12);color:#fff!important}.nav-contact-desktop:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.btn-quote{background:#fff;color:#002f3b!important;border-radius:0;padding:.8rem 1.5rem;font-size:1rem;font-weight:500}.btn-quote:hover{background:#f2f5f6;color:#002f3b!important}.lang-switch{margin-left:0}.lang-current{color:#fff;border-color:rgba(255,255,255,.8);border-radius:0;font-size:1rem;font-weight:400}@media(max-width:1150px){html[dir=rtl] .nav-menu{margin:0}.nav-menu{background:#002f3b;border-bottom-color:rgba(255,255,255,.35)}.dropdown-toggle::after{display:none}.dropdown-toggle,.dropdown-toggle.active,.nav-brand.active{color:#fff}.dropdown-expand,.dropdown-expand[aria-expanded=true]{color:#fff}.nav-contact{margin-right:0}.nav-utility{gap:0;margin-inline-start:auto}.nav-utility-link{flex-basis:clamp(1.75rem,8vw,2.4rem);width:clamp(1.75rem,8vw,2.4rem);height:2.75rem}.lang-switch{flex-basis:clamp(1.75rem,8vw,2.4rem);width:clamp(1.75rem,8vw,2.4rem);height:2.75rem;margin:0}.lang-current{min-height:0;font-size:.95rem}}</style>
+
+    
+    
+    <script>
+      
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QFF93L1P94');
+
+      function __loadGtag() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-QFF93L1P94";
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(__loadGtag, { timeout: 3000 });
+      } else {
+        window.addEventListener('load', __loadGtag);
+      }
+    </script>
+    
+    
+</head>
+<body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <header>
+    <nav class="navbar">
+        <a href="https://eviden.com" class="logo" target="_blank" rel="noopener">
+            <img width="265" height="53" src="../../../wp-content/uploads/2026/08/logo_eviden_orange-256w.png" alt="Eviden Logo">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="nav-menu">
+            
+            <a href="../../../fr/" class="nav-brand">SafeKit</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            <a href="../../../fr/product/" class="nav-brand">Produit</a>
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../fr/solutions/" class="dropdown-toggle">Solutions</a><button class="dropdown-expand" type="button" aria-label="Afficher le sous-menu Solutions" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Nouvelle application (réplication et basculement en temps réel)</h4>
+                                
+                                <a href="../../../fr/solutions/windows-high-availability-software-synchronous-replication-failover/">Windows (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/linux-high-availability-software-synchronous-replication-failover/">Linux (mirror.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Nouvelle application (équilibrage de charge réseau et basculement)</h4>
+                                
+                                <a href="../../../fr/solutions/windows-load-balancing-failover/">Windows (farm.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/linux-load-balancing-failover/">Linux (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Réplication et basculement en temps réel complets des machines virtuelles ou des conteneurs</h4>
+                                
+                                <a href="../../../fr/solutions/hyper-v-replication-automatic-failover-load-balancing/">Hyper-V ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/">KVM ( kvm.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/">Docker (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/">Podman (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/">Kubernetes (k3s.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Base de données (réplication en temps réel et basculement)</h4>
+                                
+                                <a href="../../../fr/solutions/sql-server-high-availability-synchronous-replication-failover/">Microsoft SQL Server (sqlserver.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/postgresql-high-availability-synchronous-replication-failover/">PostgreSQL (postgresql.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/oracle-high-availability-synchronous-replication-failover/">Oracle (oracle.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/mysql-high-availability-synchronous-replication-failover/">MySQL (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/">MariaDB (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/firebird-high-availability-synchronous-replication-failover/">Firebird (firebird.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Web (équilibrage de charge réseau et basculement)</h4>
+                                
+                                <a href="../../../fr/solutions/apache-load-balancing-failover-2/">Apache ( apache_farm.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/iis-load-balancing-failover/">IIS (iis_farm.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/">NGINX ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                
+                                <a href="../../../fr/solutions/aws-high-availability-cluster-synchronous-replication-failover/">AWS (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/aws-load-balancing-cluster-failover/">AWS (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                
+                                <a href="../../../fr/solutions/gcp-high-availability-cluster-synchronous-replication-failover/">GCP (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/gcp-load-balancing-cluster-failover/">GCP (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                
+                                <a href="../../../fr/solutions/azure-high-availability-cluster-synchronous-replication-failover/">Azure (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/azure-load-balancing-cluster-failover/">Azure (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Autres nuages</h4>
+                                
+                                <a href="../../../fr/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/">Toutes les solutions cloud</a>
+                                
+                                
+                                <a href="../../../fr/solutions/cloud-high-availability-cluster-synchronous-replication-failover/">Nuage ( mirror.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/cloud-load-balancing-cluster-failover/">Nuage ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Sécurité physique (réplication en temps réel et basculement)</h4>
+                                
+                                <a href="../../../fr/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/">Milestone XProtect (milestone.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/nedap-high-availability-synchronous-replication-failover/">Nedap (nedap.safe)</a>
+                                
+                                
+                                <a href="../../../fr/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/">Genetec SQL Server ( sqlserver.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Bosch AMS ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Bosch BIS ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Bosch BVMS ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/">Vision Hanwha ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Hanwha Wisenet ( hyperv.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Siemens (réplication et basculement en temps réel)</h4>
+                                
+                                <a href="../../../fr/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/">Suite Siemens Siveillance ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/">Siemens Desigo CC ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/">Siemens Siveillance VMS ( SiveillanceVMS.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">Siemens SiPass ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/">Siemens SIPORT ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/">Siemens SIMATIC PCS 7 ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/">Siemens SIMATIC WinCC ( hyperv.safe )</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../fr/use-cases/" class="dropdown-toggle">Cas d&#x27;utilisation</a><button class="dropdown-expand" type="button" aria-label="Sous-menu Afficher les cas d&#x27;utilisation" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">SafeKit</h4>
+                                
+                                <a href="../../../fr/use-cases/high-availability-software-ha-cluster-windows-linux/">Argumentaire d&#x27;ascenseur</a>
+                                
+                                <a href="../../../fr/use-cases/">Cas d&#x27;utilisation client</a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Cas d&#x27;utilisation</h4>
+                                
+                                <a href="../../../fr/use-cases/best-worst-use-cases-high-availability/">Meilleurs/pires cas d&#x27;utilisation</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/application-clustering-software/">Cas d&#x27;utilisation OEM pour un éditeur de logiciels</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/">Edge HA</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/business-continuity-software/">Cas d&#x27;utilisation d&#x27;une entreprise distribuée</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/business-continuity-and-disaster-recovery-software/">Sites distants et cas d&#x27;utilisation de reprise après sinistre</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Haute disponibilité sur le marché de la sécurité physique</h4>
+                                
+                                <a href="../../../fr/use-cases/physical-security-software-redundancy/">Logiciel de sécurité physique</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/video-management-software-vms-redundancy/">Logiciel de gestion vidéo (VMS)</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/electronic-access-control-software-eacs-redundancy/">Logiciel de contrôle d&#x27;accès électronique (EACS)</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/building-management-system-software-bms-redundancy/">Logiciel de système de gestion de bâtiment (BMS)</a>
+                                
+                                
+                                <a href="../../../fr/use-cases/scada-software-redundancy-high-availability/">Logiciel SCADA</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../fr/architectures/" class="dropdown-toggle">Architectures</a><button class="dropdown-expand" type="button" aria-label="Sous-menu Afficher les architectures" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Architectures de base</h4>
+                                
+                                <a href="../../../fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/">Cluster Mirror</a>
+                                
+                                
+                                <a href="../../../fr/architectures/network-load-balancing-cluster/">Cluster Farm</a>
+                                
+                                
+                                <a href="../../../fr/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/">Console SafeKit</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Architectures avancées</h4>
+                                
+                                <a href="../../../fr/architectures/clustering-software-load-balancing-mirroring/">Cluster Farm + Mirror</a>
+                                
+                                
+                                <a href="../../../fr/architectures/active-active-cluster-real-time-replication/">Cluster actif avec réplication</a>
+                                
+                                
+                                <a href="../../../fr/architectures/n-1-redundancy/">Groupe N-1</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../fr/best-practises/" class="dropdown-toggle">Meilleures pratiques</a><button class="dropdown-expand" type="button" aria-label="Afficher le sous-menu des meilleures pratiques" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Meilleures pratiques en matière de haute disponibilité</h4>
+                                
+                                <a href="../../../fr/best-practises/high-availability-architectures-and-best-practices/">Architectures à haute disponibilité et bonnes pratiques de clustering logiciel</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/">Architecture sans partage vs. architecture à disque partagé : choisir le meilleur cluster HA</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/clustering-software-vs-hardware-clustering/">Clustering logiciel vs clustering matériel</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/vm-ha-vs-application-ha/">Haute disponibilité des machines virtuelles vs. Haute disponibilité des applications</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/high-availability-disaster-recovery-hadr/">Haute disponibilité et reprise après sinistre (HADR)</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/high-availability-cluster-vs-fault-tolerant-system/">Cluster haute disponibilité vs. système tolérant aux pannes : choisir la bonne stratégie de redondance</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/">Comment implémenter des serveurs redondants avec un logiciel de haute disponibilité simple</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Meilleures pratiques de réplication</h4>
+                                
+                                <a href="../../../fr/best-practises/data-replication-techniques/">Techniques de réplication de données pour la haute disponibilité : une comparaison complète</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/synchronous-replication-vs-asynchronous-replication/">Réplication synchrone vs. asynchrone : comment SafeKit garantit-il l’absence de perte de données ?</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/byte-level-file-replication-vs-block-level-disk-replication/">Réplication de fichiers au niveau octet vs. réplication de disque au niveau bloc pour la haute disponibilité</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/alternative-always-on-sql-server-express-standard-editions/">Alternative à SQL Server Always On : HA pour les éditions Express et Standard</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/how-to-upgrade-an-application-protected-by-safekit/">Mise à niveau d&#x27;une application protégée par SafeKit dans un cluster HA</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Meilleures pratiques de regroupement</h4>
+                                
+                                <a href="../../../fr/best-practises/how-a-virtual-ip-address-works/">Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ?</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/power-outage-and-network-isolation-in-a-cluster/">Gestion des pannes de courant et de l&#x27;isolation du réseau dans un cluster HA</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/">Rythme cardiaque, basculement et quorum dans un cluster</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/">Comparaison détaillée du stockage partagé SAN et NAS pour le clustering de basculement</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/what-is-rpo-and-rto-with-examples/">Que sont les RPO et les RTO ? Définitions, exemples et stratégies HA</a>
+                                
+                                
+                                <a href="../../../fr/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/">Équilibrage de charge réseau Microsoft NLB vs SafeKit</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../fr/quick-install/" class="dropdown-toggle active">Installation rapide</a><button class="dropdown-expand" type="button" aria-label="Afficher le sous-menu Installation rapide" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Nouvelle application (réplication et basculement en temps réel)</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/">Windows (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/">Linux (mirror.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Nouvelle application (équilibrage de charge réseau et basculement)</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/">Windows (farm.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/">Linux (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Machine virtuelle complète ou conteneur</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-hyper-v/">Hyper-V ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-kvm/">KVM ( kvm.safe )</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-docker/">Docker (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-podman/">Podman (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-kubernetes/">Kubernetes (k3s.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Base de données (réplication en temps réel et basculement)</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/">Microsoft SQL Server (sqlserver.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-postgresql/">PostgreSQL (postgresql.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-oracle/">Oracle (oracle.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-mysql/">MySQL (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-mariadb/">MariaDB (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-firebird/">Firebird (firebird.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Web (équilibrage de charge réseau et basculement)</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/">Apache ( apache_farm.safe )</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/">IIS (iis_farm.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/">NGINX ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/">AWS (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/">AWS (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/">GCP (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/">GCP (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">Azure (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/">Azure (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Autres nuages</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/">Nuage ( mirror.safe )</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/">Nuage ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Sécurité physique</h4>
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/">Milestone XProtect (milestone.safe)</a>
+                                
+                                
+                                <a href="../../../fr/quick-install/safekit-quick-installation-guide-with-nedap/">Nedap (nedap.safe)</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../fr/resources/" class="dropdown-toggle">Ressources</a><button class="dropdown-expand" type="button" aria-label="Afficher le sous-menu Ressources" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Essai gratuit</h4>
+                                
+                                <a href="../../../fr/resources/safekit-free-trial/">Essai gratuit de SafeKit</a>
+                                
+                                
+                                <a href="../../../fr/resources/high-availability-and-load-balancing-cluster-key/">Clé de licence d&#x27;un mois</a>
+                                
+                                
+                                <a href="../../../fr/resources/high-availability-solutions-ha-solutions-videos/">Démonstrations</a>
+                                
+                                
+                                <a href="../../../fr/resources/safekit-support/">Soutien</a>
+                                
+                                
+                                <a href="../../../fr/resources/safekit-on-line-training/">Formation et certification gratuites</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Documentation technique</h4>
+                                
+                                <a href="../../../fr/quick-install/">Guides d&#x27;installation rapide SafeKit</a>
+                                
+                                
+                                <a href="../../../fr/resources/safekit-user-guide-82/">Guide d&#x27;utilisation du SafeKit</a>
+                                
+                                
+                                <a href="../../../fr/resources/safekit-release-notes-8-2/">Notes de version de SafeKit</a>
+                                
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf" target="_blank" rel="noopener">SafeKit SRB</a>
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf" target="_blank" rel="noopener">Base de connaissances</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Informations sur le produit</h4>
+                                <a href="../../../wp-content/uploads/documents/high-availability-overview-fr.pdf" target="_blank" rel="noopener">Fiche technique</a>
+                                <a href="../../../wp-content/uploads/documents/wp-safekit-fr.pdf" target="_blank" rel="noopener">Livre blanc - Produit</a>
+                                <a href="../../../wp-content/uploads/documents/wp-hadecision-fr.pdf" target="_blank" rel="noopener">Livre blanc - Guide de la haute disponibilité</a>
+                                
+                                <a href="../../../fr/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/">Référence technique pour les demandes d&#x27;informations et les appels d&#x27;offres</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-utility" role="group" aria-label="Raccourcis">
+            <a href="../../../fr/resources/safekit-free-trial/" class="nav-utility-link nav-trial" aria-label="Essai gratuit SafeKit" title="Essai gratuit SafeKit"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+            <a href="../../../fr/resources/high-availability-and-load-balancing-cluster-key/" class="nav-utility-link nav-trial-key" aria-label="Clé d’essai gratuite" title="Clé d’essai gratuite"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="12" width="11.5" height="9" rx="2.5" fill="none" stroke="#fff" stroke-width="2.25"/><path d="M11 12V7a5 5 0 0 1 10 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.25"/></svg></a>
+            <a href="../../../fr/safekit-pricing/" class="nav-utility-link nav-pricing" aria-label="Tarifs" title="Tarifs"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2v20M16 6.5c-.8-.9-2-1.5-3.8-1.5-2.3 0-3.8 1.1-3.8 2.9 0 1.6 1.2 2.5 3.5 3l1.8.4c2 .4 3.1 1.2 3.1 2.8 0 1.9-1.7 3-4.3 3-2 0-3.6-.7-4.7-1.9" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/></svg></a>
+            <a href="../../../fr/contact-us-for-safekit/" class="nav-utility-link nav-person" aria-label="Contact" title="Contact"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></a>
+            <a href="../../../fr/resources/safekit-support/" class="nav-utility-link nav-support" aria-label="Assistance IA SafeKit" title="Assistance IA SafeKit"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v2M9 3h6" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/><rect x="4" y="6" width="16" height="15" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="9" cy="12" r="1.25" fill="#fff"/><circle cx="15" cy="12" r="1.25" fill="#fff"/><path d="M9 17h6M2 11v4m20-4v4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/></svg></a>
+            <button class="nav-utility-link nav-search-toggle" id="nav-search-open" type="button" aria-label="Ouvrir la recherche SafeKit" title="Rechercher" aria-haspopup="dialog" aria-controls="site-search-dialog"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#fff" stroke-width="2.5"/><path d="m15.5 15.5 5 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/></svg></button>
+            
+            <div class="lang-switch">
+                <span class="lang-current">FR</span>
+                <div class="lang-dropdown">
+                    
+                    
+                    
+                    
+                    <a href="../../../quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">EN</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">JA</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../zh-hans/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">ZH</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../ar/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">AR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../de/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">DE</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../es/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">ES</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../it/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">IT</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../ko/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">KO</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../pt-br/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">BR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../pt-pt/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">PT</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../nl/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">NL</a>
+                    
+                    
+                </div>
+            </div>
+            
+            <label for="nav-toggle" class="nav-toggle-label"><span class="visually-hidden">Ouvrir le menu</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></label>
+        </div>
+    </nav>
+    <dialog class="site-search-dialog" id="site-search-dialog" aria-labelledby="site-search-title">
+        <div class="site-search-dialog-header">
+            <h2 id="site-search-title">Rechercher sur SafeKit</h2>
+            <button class="site-search-close" type="button" aria-label="Fermer la recherche">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="m18 6-12 12M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="site-search-dialog-body">
+            <div class="gcse-search" data-linkTarget="_self"></div>
+        </div>
+    </dialog>
+    <script>
+        (() => {
+            const openButton = document.getElementById("nav-search-open");
+            const dialog = document.getElementById("site-search-dialog");
+            const closeButton = dialog.querySelector(".site-search-close");
+            let searchScriptLoaded = false;
+
+            openButton.addEventListener("click", () => {
+                dialog.showModal();
+                if (searchScriptLoaded) return;
+
+                searchScriptLoaded = true;
+                const script = document.createElement("script");
+                script.async = true;
+                script.src = "https://cse.google.com/cse.js?cx=529850561931c48b7";
+                script.addEventListener("error", () => {
+                    searchScriptLoaded = false;
+                });
+                document.head.appendChild(script);
+            });
+
+            closeButton.addEventListener("click", () => dialog.close());
+            dialog.addEventListener("click", (event) => {
+                if (event.target === dialog) dialog.close();
+            });
+            dialog.addEventListener("close", () => openButton.focus());
+        })();
+    </script>
+</header>
+
+    
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+
+    <a href="../../../fr/">SafeKit</a>
+    
+        
+        
+        
+        
+        <span class="sep">›</span>
+        <a href="../../../fr/quick-install/">Guides d’installation rapide SafeKit</a>
+        
+    
+    <span class="sep">›</span>
+    <span class="current">Haute disponibilité Azure : réplication en temps réel et basculement avec SafeKit</span>
+
+</nav>
+
+    
+    <main>
+        
+
+
+
+
+
+<div class="page-with-toc">
+    
+    <aside class="toc-sidebar">
+        <nav class="toc-nav">
+            
+            <div class="sidebar-section open" id="sidebar-toc">
+                <h3 class="sidebar-toggle no-collapse" data-target="sidebar-toc"><a id="toc-label" href="#">On this page</a></h3>
+                <div class="sidebar-content">
+                    <nav id="TableOfContents"></nav>
+                </div>
+            </div>
+            
+            
+        </nav>
+    </aside>
+    
+    <article class="has-toc">
+        
+        <h1 id="azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover">Haute disponibilité Azure avec SafeKit : installer le module mirror.safe pour le basculement</h1>
+<h2 id="quick-guide">Guide d&rsquo;installation rapide haute disponibilité pour Azure</h2>
+<p>Ce guide explique comment configurer un <strong>cluster miroir</strong> pour Azure à l&rsquo;aide de SafeKit, garantissant un basculement automatique et une réplication synchrone sans avoir besoin de stockage partagé.</p>
+<p>Pour obtenir de l&rsquo;aide, vous pouvez utiliser <a href="../../../fr/resources/safekit-support/">SafeKit IA 🤖</a>.</p>
+<h3 id="1-aperçu">1. Aperçu</h3>
+<ul>
+<li><strong>Architecture :</strong> Utilise un système à deux nœuds (Primaire/Secondaire).</li>
+<li><strong>Protection des données :</strong> Implémente une réplication synchrone en temps réel pour <strong>zéro perte de données</strong> (RPO=0).</li>
+</ul>
+<h3 id="2installation">2.Installation</h3>
+<ul>
+<li><strong>Logiciel :</strong> Installez le moteur SafeKit sur les deux serveurs.</li>
+<li><strong>Module :</strong> Téléchargez le préconfiguré <code>mirror.safe</code> module applicatif.</li>
+</ul>
+<h3 id="3configuration">3.Configuration</h3>
+<ul>
+<li><strong>Console Web :</strong> Configurez les dossiers spécifiques contenant les fichiers Azure.</li>
+<li><strong>Surveillance :</strong> Commencez à surveiller et à protéger l’application Azure.</li>
+</ul>
+<h2 id="safekit-ha-limitations">Limites de la haute disponibilité SafeKit</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Limite / Exigence</th>
+					<th>Raison &amp; Impact</th>
+					<th>Alternative recommandée</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Taille de réplication : Quelques To</td>
+					<td>Temps de resynchronisation après une panne (<a href="../../../architectures/file-replication-byte-level-with-failover-mirror-cluster/product/#safekit-mirror-cluster">étape 3</a>) : <br>• Réseau 1 Gb/s ≈ 3 heures / To<br>• Réseau 10 Gb/s ≈ 1 heure / To (selon les performances d&rsquo;écriture sur disque)</td>
+					<td>• Utiliser un <a href="../../../fr/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/">stockage partagé externe</a> (plus coûteux, plus complexe).</td>
+			</tr>
+			<tr>
+					<td>Nombre de fichiers : &lt; 1 000 000 fichiers</td>
+					<td>• Performances du temps de resynchronisation après une panne (<a href="../../../architectures/file-replication-byte-level-with-failover-mirror-cluster/product/#safekit-mirror-cluster">étape 3</a>).<br>• Temps nécessaire pour vérifier chaque fichier entre les deux nœuds.</td>
+					<td>• Placer le grand nombre de fichiers à répliquer dans un disque dur virtuel / une machine virtuelle.<br>• Seuls les fichiers représentant le disque dur virtuel / la machine virtuelle seront répliqués et resynchronisés dans ce cas.</td>
+			</tr>
+			<tr>
+					<td>Capacité de basculement : ≤ 32 VM</td>
+					<td>• Chaque VM s&rsquo;exécute dans un module miroir indépendant.<br>• Maximum de 32 modules miroirs s&rsquo;exécutant sur le même cluster.</td>
+					<td>• Utiliser un stockage partagé externe et une autre solution de clustering de VM (plus coûteux, plus complexe).</td>
+			</tr>
+			<tr>
+					<td>Architecture réseau : réseau LAN/VLAN entre sites distants</td>
+					<td>• Basculement automatique de l&rsquo;<a href="../../../fr/best-practises/how-a-virtual-ip-address-works/">adresse IP virtuelle</a> avec 2 nœuds dans le même sous-réseau.<br>• Bonne bande passante pour la resynchronisation (<a href="../../../architectures/file-replication-byte-level-with-failover-mirror-cluster/product/#safekit-mirror-cluster">étape 3</a>).<br>•  Faible latence pour la <a href="../../../fr/best-practises/synchronous-replication-vs-asynchronous-replication/">réplication synchrone</a> : typiquement &lt; 5 ms de RTT ; les valeurs supérieures doivent être validées en fonction du taux d&rsquo;écriture de l&rsquo;application.</td>
+					<td>• Utiliser un <a href="../../../fr/best-practises/how-a-virtual-ip-address-works/">répartiteur de charge pour l&rsquo;adresse IP virtuelle</a> si les 2 nœuds se trouvent dans 2 sous-réseaux (pris en charge par SafeKit, notamment dans le cloud).<br>• Utiliser des solutions de sauvegarde avec réplication asynchrone pour les réseaux à forte latence.</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="overview-of-the-safekit--azure-mirror-solution">Présentation de la solution SafeKit / Azure mirror</h2>
+<p>La solution est décrite ici : <strong>💡<a href="../../../fr/solutions/azure-high-availability-cluster-synchronous-replication-failover/">Haute disponibilité Microsoft Azure : réplication synchrone et basculement avec SafeKit</a></strong>.</p>
+<h2 id="installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe">Installation de la solution SafeKit / Azure mirror sous Windows et Linux (mirror.safe)</h2>
+<h3 id="configuration-of-the-microsoft-azure-load-balancer">Configuration de l’équilibreur de charge Microsoft Azure</h3>
+<p>L’équilibreur de charge doit être configuré si vous souhaitez mettre en œuvre une adresse IP virtuelle.
+Il doit également envoyer périodiquement des paquets de contrôle d’intégrité aux nœuds.
+Pour cela, SafeKit fournit un contrôle d’intégrité exécuté sur les nœuds qui :</p>
+<ul>
+<li>renvoie OK lorsque l’état du module mirror est PRIM (vert) ou ALONE (vert)</li>
+<li>renvoie NOT FOUND dans tous les autres états</li>
+</ul>
+<p>Vous devez configurer l’équilibreur de charge Microsoft Azure avec :</p>
+<ul>
+<li>le protocole HTTP</li>
+<li>le port 9010, le port du serveur Web SafeKit</li>
+<li>l’URL /var/modules/mirror/ready.txt (si mirror est le nom du module que vous déploierez ensuite)</li>
+</ul>
+<p>Pour plus d’informations, consultez <a href="https://learn.microsoft.com/en-us/azure/load-balancer/" target="_blank" rel="noopener">la configuration de l’équilibreur de charge Microsoft Azure</a>.</p>
+<p>⚠️ Ne configurez pas d’adresse IP virtuelle à l’étape 4 de la configuration détaillée ci-dessous. L’adresse IP virtuelle est déjà définie dans l’équilibreur de charge Microsoft Azure. La définition d’une adresse IP virtuelle à l’étape 4 est utile uniquement pour une configuration sur site.</p>
+<h3 id="configuration-of-the-microsoft-azure-network-security">Configuration de la sécurité réseau Microsoft Azure</h3>
+<p>La sécurité réseau doit être configurée pour autoriser les communications via les protocoles et ports suivants :</p>
+<ul>
+<li>UDP - 4800 pour le service safeadmin (entre les nœuds SafeKit)</li>
+<li>UDP - 8888 pour le heartbeat du module (entre les nœuds SafeKit)</li>
+<li>TCP – 5600 pour la réplication de fichiers en temps réel du module (entre les nœuds SafeKit)</li>
+<li>TCP – 9010 pour le contrôle d’intégrité de l’équilibreur de charge et la console Web SafeKit en mode http</li>
+<li>TCP – 9001 pour configurer le mode https de la console</li>
+<li>TCP – 9453 pour la console Web SafeKit en mode https</li>
+</ul>
+<h3 id="installation-du-package-sur-windows">Installation du package sur Windows</h3>
+<ul>
+<li>Téléchargez et installez la version gratuite de SafeKit sur 2 nœuds Windows.<br>
+Remarque : la version gratuite inclut toutes les fonctionnalités de SafeKit. À la fin de la période d&rsquo;essai, vous pouvez activer les clés de licence permanentes sans désinstaller le package.</li>
+<li>Une fois l&rsquo;installation du package terminée, sélectionnez <strong>Set console credentials and firewall rules now</strong> et configurez un mot de passe pour le <strong>admin</strong> utilisateur de la console SafeKit.<br>
+<strong>Définissez le même mot de passe sur tous les nœuds.</strong></li>
+<li>Exclure des analyses antivirus <strong>C:/safekit/</strong> (le répertoire d&rsquo;installation par défaut) et <strong>tous les dossiers répliqués</strong> que vous allez définir.<br>
+Les antivirus peuvent être confrontés à des problèmes de détection avec SafeKit en raison de son intégration étroite avec le système d&rsquo;exploitation, de ses mécanismes IP virtuels, de sa réplication en temps réel et du redémarrage des services critiques.</li>
+</ul>
+<p><a class="btn-download" href="../../../fr/resources/safekit-free-trial/">Télécharger SafeKit (Windows) &gt;</a></p>
+<h3 id="installation-du-package-sur-linux">Installation du package sur Linux</h3>
+<ul>
+<li>Installez la version gratuite de SafeKit sur 2 nœuds Linux. Remarque : l&rsquo;essai gratuit inclut toutes les fonctionnalités de SafeKit. À la fin de la période d&rsquo;essai, vous pouvez activer les clés de licence permanentes sans désinstaller le package.</li>
+<li>Après le téléchargement du package safekit_xx.bin, exécutez-le pour extraire le script rpm et safekitinstall, puis exécutez le <strong>safekitinstall</strong> scénario</li>
+<li>Réponse <strong>oui</strong> à la configuration automatique du pare-feu</li>
+<li>Définir le mot de passe pour la console Web et l&rsquo;utilisateur par défaut <strong>admin</strong>. <strong>Définissez le même mot de passe sur tous les nœuds.</strong></li>
+</ul>
+<p><a class="btn-download" href="../../../fr/resources/safekit-free-trial/">Télécharger SafeKit (Linux) &gt;</a></p>
+<p>Remarque : le module générique <strong>mirror.safe</strong> que vous allez configurer est inclus dans le package.</p>
+<h2 id="step-by-step-configuration-of-the-safekit--azure-mirror-solution">Configuration étape par étape de la solution SafeKit / Azure mirror</h2>
+<h3 id="conditions-préalables">Conditions préalables</h3>
+<ul>
+<li>Application Windows installée sur 2 nœuds.</li>
+<li>Total des données répliquées limité à quelques téraoctets ; au-delà, le temps de resynchronisation devient important.</li>
+<li>Interconnexion minimale de 1 Gbit/s entre les nœuds (10 Gbit/s recommandés pour une resynchronisation plus rapide).</li>
+<li>Le basculement IP nécessite les deux nœuds sur le même LAN ou le même LAN étendu (L2) — les réseaux L3 routés ne sont pas pris en charge (sauf avec les équilibreurs de charge cloud 🛠️ <a href="../../../fr/resources/safekit-user-guide-82/#Cloud"></a>).</li>
+</ul>
+<h3 id="1-lancez-la-console-safekit">1. Lancez la console SafeKit</h3>
+<ul>
+<li>Lancez la console Web dans un navigateur sur un nœud de cluster en vous connectant à <code>http://localhost:9010</code>.</li>
+<li>Saisissez <code>admin</code> comme nom d&rsquo;utilisateur et le mot de passe défini lors de l&rsquo;installation.</li>
+</ul>
+<p>Vous pouvez également exécuter la console dans un navigateur sur un poste de travail externe au cluster.</p>
+<p>⚠️ La configuration de SafeKit se fait sur les deux nœuds depuis un seul navigateur.</p>
+<p>ℹ️ Pour sécuriser la console web, voir 🛠️ <a href="../../../fr/resources/safekit-user-guide-82/#https">11. Sécurisation du service Web SafeKit</a> dans le Guide de l&rsquo;utilisateur.</p>
+<p><img src="../../../wp-content/uploads/2024/03/01-login-large.png"
+     srcset="../../../wp-content/uploads/2024/03/01-login-large_hu_9b6c568558fc5956.png 323w, ../../../wp-content/uploads/2024/03/01-login-large.png 647w"
+     sizes="(max-width: 647px) 100vw, 647px"
+     width="647" height="479"
+     alt="Démarrez la console Web SafeKit pour configurer le cluster Windows" loading="lazy" decoding="async"></p>
+<h3 id="2-configurer-les-adresses-des-nœuds">2. Configurer les adresses des nœuds</h3>
+<ul>
+<li>Entrez les adresses des nœuds IP, appuyez sur <code>Tab key</code> pour vérifier la connectivité et remplir les noms des nœuds. Si node1 ou node2 a une couleur rouge, vérifiez la connectivité du navigateur aux deux nœuds et vérifiez le pare-feu sur les deux nœuds pour 🛠️ <a href="../../../fr/resources/safekit-user-guide-82/#Troubleshooting">troubleshooting</a>.</li>
+<li>Cliquez ensuite sur <code>Save and apply</code> pour enregistrer la configuration.</li>
+<li>Vérifiez le message <code>Success</code> ✅ sur les deux nœuds.</li>
+<li>Si la configuration <code>Failure</code> ❌ se produit sur un nœud, ouvrez l&rsquo;accordéon ▼ pour ce nœud et consultez les messages. Notez que vous pouvez utiliser le SafeKit AI 🤖 pour obtenir de l&rsquo;aide.</li>
+</ul>
+<p>ℹ️ Si vous le souhaitez, vous pouvez ajouter un nouveau <code>LAN and nodes</code> (premier ➕) pour créer un deuxième heartbeat et un réseau de réplication dédié.</p>
+<p>ℹ️ Si vous cliquez sur <code>Advanced configuration</code>, le fichier <code>cluster.xml</code> s&rsquo;affiche. Ce fichier est automatiquement renseigné par la console et déployé sur les nœuds.</p>
+<p><img src="../../../wp-content/uploads/2024/03/02-cluster-edit.png"
+     srcset="../../../wp-content/uploads/2024/03/02-cluster-edit_hu_d8b67959b9683d9e.png 378w, ../../../wp-content/uploads/2024/03/02-cluster-edit.png 757w"
+     sizes="(max-width: 757px) 100vw, 757px"
+     width="757" height="690"
+     alt="Entrez les nœuds du cluster Windows" loading="lazy" decoding="async"></p>
+<h3 id="3-sélectionnez-un-module">3. Sélectionnez un module</h3>
+<ul>
+<li>Dans <code>New module</code>, cliquez sur le module <code>mirror.safe</code>.</li>
+</ul>
+<p>ℹ️ Dans le bandeau bleu en haut, 🛜 <code>node1</code> représente le nœud de connexion de la console. Ce nœud relaie les requêtes vers <code>node2</code> lorsque cela est nécessaire.</p>
+<p>ℹ️ La console recherche <code>xxx.safe</code> dans le répertoire <code>Application_Modules/generic/</code> sur le nœud de connexion (<code>node1</code>) si vous y avez placé un module lors de l&rsquo;installation.</p>
+<p><img src="../../../wp-content/uploads/2024/03/04-module-new.png"
+     srcset="../../../wp-content/uploads/2024/03/04-module-new_hu_24d19f406f7922bd.png 377w, ../../../wp-content/uploads/2024/03/04-module-new.png 755w"
+     sizes="(max-width: 755px) 100vw, 755px"
+     width="755" height="686"
+     alt="Choisissez le module pour Windows" loading="lazy" decoding="async"></p>
+<h3 id="4-configurez-le-module">4. Configurez le module</h3>
+<ul>
+<li>Dans <code>Module startup at boot</code>, choisissez un démarrage automatique du module au démarrage sans délai.</li>
+<li>Dans <code>Macros</code> / <code>SERVICES</code>, saisissez les noms de services de votre application, dans l&rsquo;ordre de démarrage, séparés par des virgules. Voir cette capture d&rsquo;écran pour un exemple visuel des services <a href="../../../wp-content/uploads/2025/05/milestone-services.png">Milestone XProtect 🖼️</a>.</li>
+<li>Dans <code>Heartbeat networks</code>, vous devez disposer d&rsquo;un réseau à pulsation unique sur lequel la réplication est effectuée. Si vous avez ajouté un LAN privé à l&rsquo;étape 2, vous pouvez configurer deux pulsations avec le flux de réplication sur le LAN privé.</li>
+<li>Dans <code>Virtual IP addresses</code>, entrez une adresse virtuelle IP. Une adresse virtuelle IP est une adresse IP standard dans le même réseau IP (même sous-réseau) que les adresses IP des deux nœuds.<br>
+Les clients d&rsquo;application doivent être configurés avec l&rsquo;adresse virtuelle IP (ou le nom DNS associé à l&rsquo;adresse virtuelle IP).<br>
+L&rsquo;adresse virtuelle IP est automatiquement commutée en cas de panne.</li>
+<li>Dans <code>Replicated directories</code>, définissez les chemins des répertoires à répliquer. Vérifiez qu&rsquo;ils existent sur les deux nœuds et contiennent les données de l&rsquo;application.<br>
+La réplication des données et des journaux est essentielle pour une base de données.<br>
+Vous pouvez créer des répertoires répliqués supplémentaires selon vos besoins.<br>
+Voir cette capture d&rsquo;écran pour un exemple visuel de réplication <a href="../../../wp-content/uploads/2025/05/milestone-replication.png">Milestone XProtect SQL 🖼️</a>.</li>
+<li>Dans <code>Checkers</code>, vous pourrez configurer des vérificateurs si nécessaire, tels que la surveillance des processus, des vérificateurs personnalisés, TCP, un ping ou des vérificateurs split-brain.<br>
+Par exemple, si un nom de processus est affiché dans <code>Monitored processes/services</code>, il sera surveillé avec une action de redémarrage en cas d&rsquo;échec. La configuration d&rsquo;un mauvais nom de processus entraînera l&rsquo;arrêt du module juste après son démarrage.</li>
+</ul>
+<p>ℹ️ Si vous cliquez sur <code>Advanced configuration</code>, le fichier <code>userconfig.xml</code> s&rsquo;affiche. Ce fichier est automatiquement renseigné par la console et déployé sur les nœuds avec les scripts de redémarrage.</p>
+<p>ℹ️ Dans un déploiement cloud, vous n&rsquo;avez pas besoin de configurer une adresse virtuelle IP dans SafeKit. Le IP virtuel est géré au niveau de l&rsquo;équilibreur de charge cloud 🛠️ <a href="../../../fr/resources/safekit-user-guide-82/#Cloud"></a>.</p>
+<p>ℹ️ Lorsque vous appliquez la configuration SafeKit, le <code>startup type</code> des services est automatiquement défini sur <code>Manual</code> dans les services Windows. Cela garantit que les services ne démarrent pas automatiquement au démarrage du système, mais uniquement au démarrage du module lui-même (il en va de même sur Linux).</p>
+<p><img src="../../../wp-content/uploads/2025/05/05-module-mirror-edit-config-3_hu_add894234af1076f.png"
+     srcset="../../../wp-content/uploads/2025/05/05-module-mirror-edit-config-3_hu_4df584a05ca38a06.png 450w, ../../../wp-content/uploads/2025/05/05-module-mirror-edit-config-3_hu_add894234af1076f.png 900w, ../../../wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png 1112w"
+     sizes="(max-width: 900px) 100vw, 900px"
+     width="900" height="486"
+     alt="Entrez les paramètres du module Windows" loading="lazy" decoding="async"></p>
+<h3 id="5-modifier-les-scripts-facultatif">5. Modifier les scripts (facultatif)</h3>
+<ul>
+<li>Cette étape est facultative et peut être ignorée dans la plupart des cas, car les scripts de redémarrage sont déjà préconfigurés pour redémarrer les services définis à l&rsquo;étape précédente.</li>
+<li>Alors, cliquez directement sur <code>Next step</code>.</li>
+<li><code>start_prim.ps1</code> démarre tous les services dans l&rsquo;ordre spécifié dans la liste <code>SERVICES</code>, tandis que <code>stop_prim.ps1</code> arrête tous les services dans l&rsquo;ordre inverse.</li>
+<li>De plus, <code>start_prim.ps1</code> vérifie le démarrage de chaque service et arrête le module si un service ne démarre pas correctement.</li>
+</ul>
+<p><img src="../../../wp-content/uploads/2026/09/28-module-edit-script_hu_9c236546e477ab3b.png"
+     srcset="../../../wp-content/uploads/2026/09/28-module-edit-script_hu_7d894735ff2c9894.png 450w, ../../../wp-content/uploads/2026/09/28-module-edit-script_hu_9c236546e477ab3b.png 900w, ../../../wp-content/uploads/2026/09/28-module-edit-script.png 1102w"
+     sizes="(max-width: 900px) 100vw, 900px"
+     width="900" height="390"
+     alt="Entrez les paramètres du module Windows" loading="lazy" decoding="async"></p>
+<h3 id="6-cryptage-des-communications-facultatif">6. Cryptage des communications (facultatif)</h3>
+<ul>
+<li>Conservez le cryptage des communications entre les nœuds.</li>
+</ul>
+<p><img src="../../../wp-content/uploads/2025/05/07-module-encryption-1_hu_4cef59927714af6f.png"
+     srcset="../../../wp-content/uploads/2025/05/07-module-encryption-1_hu_93daeae5b536cc94.png 450w, ../../../wp-content/uploads/2025/05/07-module-encryption-1_hu_4cef59927714af6f.png 900w, ../../../wp-content/uploads/2025/05/07-module-encryption-1.png 1106w"
+     sizes="(max-width: 900px) 100vw, 900px"
+     width="900" height="304"
+     alt="Cryptage des communications du module Windows" loading="lazy" decoding="async"></p>
+<h3 id="7-enregistrez-et-postulez">7. Enregistrez et postulez</h3>
+<ul>
+<li><code>Save and apply</code> la configuration et les scripts sur les deux nœuds.</li>
+</ul>
+<p><img src="../../../wp-content/uploads/2025/05/08-module-save-1_hu_a68921270c56793.png"
+     srcset="../../../wp-content/uploads/2025/05/08-module-save-1_hu_2140aae792401dd9.png 450w, ../../../wp-content/uploads/2025/05/08-module-save-1_hu_a68921270c56793.png 900w, ../../../wp-content/uploads/2025/05/08-module-save-1.png 1106w"
+     sizes="(max-width: 900px) 100vw, 900px"
+     width="900" height="334"
+     alt="Enregistrez et appliquez la configuration du module Windows" loading="lazy" decoding="async"></p>
+<h3 id="8-vérifiez-la-configuration-réussie">8. Vérifiez la configuration réussie</h3>
+<ul>
+<li>Vérifiez le message <code>Success</code> ✅ sur les deux nœuds et cliquez sur <code>Monitor modules</code>.</li>
+<li>Si la configuration <code>Failure</code> ❌ se produit sur un nœud, ouvrez l&rsquo;accordéon ▼ pour ce nœud et consultez les messages. Notez que vous pouvez utiliser le SafeKit AI 🤖 pour obtenir de l&rsquo;aide.</li>
+</ul>
+<p>⚠️ Sur Linux, vous pouvez obtenir une erreur à cette étape si les répertoires répliqués sont des points de montage.🛠️ <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf" target="_blank" rel="noopener">Voir SK-0030 pour résoudre le problème</a>.</p>
+<p><img src="../../../wp-content/uploads/2025/05/09-module-save-check-1_hu_8c03d845d5b93797.png"
+     srcset="../../../wp-content/uploads/2025/05/09-module-save-check-1_hu_8cc968552f03bb86.png 450w, ../../../wp-content/uploads/2025/05/09-module-save-check-1_hu_8c03d845d5b93797.png 900w, ../../../wp-content/uploads/2025/05/09-module-save-check-1.png 1111w"
+     sizes="(max-width: 900px) 100vw, 900px"
+     width="900" height="352"
+     alt="Vérifiez le succès de la configuration du module Windows" loading="lazy" decoding="async"></p>
+<h3 id="9-démarrez-le-nœud-avec-des-données-à-jour">9. Démarrez le nœud avec des données à jour</h3>
+<ul>
+<li>Si le nœud 1 possède les répertoires répliqués à jour, sélectionnez-le et ⋯ <code>Force start</code> ▶ <code>As primary</code>.</li>
+</ul>
+<p>Lorsque le nœud 2 sera démarré, toutes les données seront copiées du nœud 1 vers le nœud 2.</p>
+<p>⚠️ Si vous faites le mauvais choix, vous courez le risque de synchroniser des données obsolètes sur les deux nœuds.</p>
+<p>⚠️ Il est également supposé que l&rsquo;application Windows est arrêtée sur le nœud 1 afin que SafeKit installe les mécanismes de réplication puis démarre l&rsquo;application dans le script <code>start_prim</code>.</p>
+<p>⚠️ Utilisez <code>Start</code> pour les démarrages ultérieurs : SafeKit conserve le serveur le plus à jour. Le démarrage du <code>As primary</code> est un démarrage particulier dès la première fois ou lors d&rsquo;opérations exceptionnelles.</p>
+<p><img src="../../../wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png"
+     srcset="../../../wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim_hu_2a0f74aa0fd306f5.png 362w, ../../../wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png 725w"
+     sizes="(max-width: 725px) 100vw, 725px"
+     width="725" height="568"
+     alt="Démarrer en tant que nœud principal Windows avec les données à jour" loading="lazy" decoding="async"></p>
+<h3 id="10-attendez-la-transition-vers-alone-vert">10. Attendez la transition vers ALONE (vert)</h3>
+<ul>
+<li>Le nœud 1 doit atteindre l&rsquo;état ALONE (vert), ce qui signifie que le IP virtuel est défini et que le script <code>start_prim</code> a été exécuté sur le nœud 1.</li>
+</ul>
+<p>⚠️ Si ALONE (vert) n&rsquo;est pas atteint ou si l&rsquo;application n&rsquo;est pas démarrée, analysez pourquoi avec le log du module <a href="../../../wp-content/uploads/2024/03/24-module-log-script.png"> 🖼️</a> du nœud 1.</p>
+<ul>
+<li>Cliquez sur l&rsquo;icône 🔍 <strong>log</strong> de <code>node1</code> pour ouvrir le journal du module et rechercher des messages d&rsquo;erreur tels qu&rsquo;un vérificateur détectant une erreur et arrêtant le module.</li>
+<li>Cliquez sur <code>start_prim</code> dans le log : les messages de sortie du script s&rsquo;affichent à droite et des erreurs peuvent être détectées comme par exemple un service mal démarré.</li>
+<li>Utilisez le SafeKit AI 🤖 pour obtenir de l&rsquo;aide concernant les messages de journal.</li>
+</ul>
+<p>⚠️ Si le cluster est dans l&rsquo;état <code>WAIT (red) not uptodate, STOP (red) not uptodate</code>, arrêtez le nœud WAIT et <a href="../../../wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png">forcez son démarrage en tant que principal 🖼️</a>.</p>
+<p><img src="../../../wp-content/uploads/2024/03/12-monitoring-alone-stop.png"
+     srcset="../../../wp-content/uploads/2024/03/12-monitoring-alone-stop_hu_9fc1c0a09aa93f9.png 312w, ../../../wp-content/uploads/2024/03/12-monitoring-alone-stop.png 624w"
+     sizes="(max-width: 624px) 100vw, 624px"
+     width="624" height="455"
+     alt="Le premier nœud Windows démarre comme nœud principal et devient ALONE" loading="lazy" decoding="async"></p>
+<h3 id="11-démarrer-le-nœud-2">11. Démarrer le nœud 2</h3>
+<ul>
+<li>⋯ <code>Start</code> nœud 2 avec son menu contextuel.</li>
+<li>Attendez l&rsquo;état SECOND (vert).</li>
+</ul>
+<p>ℹ️ Le nœud 2 reste dans l&rsquo;état SECOND (orange) lors de la resynchronisation des répertoires répliqués (copie du nœud 1 vers le nœud 2).</p>
+<ul>
+<li>Cela peut prendre un certain temps en fonction de la taille des fichiers à resynchroniser dans les répertoires répliqués et de la bande passante du réseau.</li>
+<li>Pour voir la progression de la copie, consultez le journal du module <a href="../../../wp-content/uploads/2024/03/27-module-log-reintegration.png"> 🖼️</a> et les ressources de réplication <a href="../../../wp-content/uploads/2024/03/26-replication-resources-reintegration.png"> 🖼️</a> du nœud 2. Utilisez le SafeKit AI 🤖 pour obtenir de l&rsquo;aide sur les messages du journal.</li>
+</ul>
+<p><img src="../../../wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png"
+     srcset="../../../wp-content/uploads/2024/03/13-monitoring-alone-stop-start_hu_d073757dc81c5af.png 310w, ../../../wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png 620w"
+     sizes="(max-width: 620px) 100vw, 620px"
+     width="620" height="686"
+     alt="Démarrez le nœud Windows 2" loading="lazy" decoding="async"></p>
+<h3 id="12-vérifiez-que-le-cluster-est-opérationnel">12. Vérifiez que le cluster est opérationnel</h3>
+<ul>
+<li>Vérifiez que le cluster est vert/vert avec les services Windows exécutés sur le nœud PRIM et non exécutés sur le nœud SECOND.</li>
+</ul>
+<p>Seules les modifications contenues dans les fichiers sont répliquées en temps réel dans cet état.</p>
+<p>⚠️ Les composants clients des services Windows doivent être configurés avec l&rsquo;adresse virtuelle IP. La configuration peut se faire avec un nom DNS (si un nom DNS a été créé et associé à l&rsquo;adresse virtuelle IP).</p>
+<p><img src="../../../wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+     srcset="../../../wp-content/uploads/2024/03/14-monitoring-prim-second_hu_42bdec1c8fd1a6f.png 302w, ../../../wp-content/uploads/2024/03/14-monitoring-prim-second.png 604w"
+     sizes="(max-width: 604px) 100vw, 604px"
+     width="604" height="498"
+     alt="Le nœud Windows 2 est SECOND (vert)" loading="lazy" decoding="async"></p>
+<h3 id="13-tests">13. Tests</h3>
+<ul>
+<li>Arrêtez le nœud PRIM en faisant défiler son menu contextuel et en cliquant sur <code>Stop</code>.</li>
+<li>Vérifiez qu&rsquo;il existe un basculement sur le nœud SECOND qui doit devenir ALONE (vert).</li>
+<li>Et avec Microsoft Management Console (MMC) sur Windows ou avec des lignes de commande sur Linux, vérifiez le basculement des services Windows (arrêtés sur le nœud 1 dans le script <code>stop_prim</code> et démarrés sur le nœud 2 dans le script <code>start_prim</code>).</li>
+</ul>
+<p>⚠️ Si ALONE (vert) n&rsquo;est pas atteint sur node2 ou si l&rsquo;application n&rsquo;est pas démarrée, analysez pourquoi avec le log du module <a href="../../../wp-content/uploads/2024/03/38-module-log-script-second.png"> 🖼️</a> du nœud 2.</p>
+<ul>
+<li>Cliquez sur l&rsquo;icône 🔍 <strong>log</strong> de <code>node2</code> pour ouvrir le journal du module et rechercher des messages d&rsquo;erreur tels qu&rsquo;un vérificateur détectant une erreur et arrêtant le module.</li>
+<li>Cliquez sur <code>start_prim</code> dans le log : les messages de sortie du script s&rsquo;affichent à droite et des erreurs peuvent être détectées comme par exemple un service mal démarré.</li>
+<li>Utilisez le SafeKit AI 🤖 pour obtenir de l&rsquo;aide concernant les messages de journal.</li>
+</ul>
+<p>⚠️</p>
+<ul>
+<li>Si tout va bien, lancez un démarrage sur node1, qui resynchronisera les répertoires répliqués depuis node2.</li>
+<li>Si les choses tournent mal, arrêtez node2 et <a href="../../../wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png">forcez le démarrage en tant que principal 🖼️</a> de node1, qui redémarrera avec ses données localement saines au moment de l&rsquo;arrêt.</li>
+</ul>
+<p>ℹ️ Trouvez plus de détails, ainsi que des vidéos, dans la formation en ligne <a href="../../../fr/resources/safekit-on-line-training/">SafeKit</a>.</p>
+<p><img src="../../../wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png"
+     srcset="../../../wp-content/uploads/2024/03/16-monitoring-prim-second-stop_hu_b3fb4d2ee2f93433.png 303w, ../../../wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png 607w"
+     sizes="(max-width: 607px) 100vw, 607px"
+     width="607" height="586"
+     alt="Arrêtez le module Windows sur le serveur PRIM" loading="lazy" decoding="async"></p>
+<h3 id="14-assistance">14. Assistance</h3>
+<ul>
+<li>Pour obtenir de l&rsquo;aide, prenez 2 SafeKit <code>Snapshots</code> (2 fichiers .zip), un pour chaque nœud.</li>
+</ul>
+<p>ℹ️ <a href="../../../fr/resources/safekit-support/">Plus d&rsquo;informations sur le support ici</a>.</p>
+<p><img src="../../../wp-content/uploads/2024/03/30-snapshots-mirror.png"
+     srcset="../../../wp-content/uploads/2024/03/30-snapshots-mirror_hu_543b1502bfe55067.png 303w, ../../../wp-content/uploads/2024/03/30-snapshots-mirror.png 607w"
+     sizes="(max-width: 607px) 100vw, 607px"
+     width="607" height="443"
+     alt="Prenez les instantanés Windows pour obtenir de l&rsquo;aide" loading="lazy" decoding="async"></p>
+<h2 id="demonstration-of-the-safekit-mirror-solution">Démonstration de la solution mirror SafeKit</h2>
+<h3 id="demo-mirror-ha-cluster">Vidéo SafeKit : Clustering au niveau applicatif (8:47)</h3>
+<p>Dans cette vidéo, découvrez comment SafeKit implémente un <strong>cluster HA miroir</strong> sans la complexité d&rsquo;un SAN. Bien que cette démonstration utilise Microsoft SQL Server, la solution fonctionne de manière identique pour d&rsquo;autres bases de données et applications.</p>
+<h3 id="chapitres">Chapitres</h3>
+<ol>
+<li>🎬 <a href="https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=0s" target="_blank" rel="noopener">2 nœuds avec SQL Server</a> (0:32)</li>
+<li>🎬 <a href="https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=32s" target="_blank" rel="noopener">Configurer le cluster et le module mirror.safe</a> (3:58)</li>
+<li>🎬 <a href="https://www.youtube.com/watch?v=mGwEguDnnH0&amp;t=270s" target="_blank" rel="noopener">Démarrer et tester la réplication SQL, la migration, le basculement sur panne</a> (4:17)</li>
+</ol>
+<h3 id="mise-en-œuvre-étape-par-étape">Mise en œuvre étape par étape</h3>
+<ul>
+<li>🛠️ <a href="../../../fr/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/">Lire le guide de configuration d&rsquo;un cluster miroir sur Windows</a></li>
+<li>🛠️ <a href="../../../fr/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/">Lire le guide de configuration d&rsquo;un cluster miroir sur Linux</a></li>
+</ul>
+<h2 id="hub">🔍 SafeKit Hub de navigation haute disponibilité</h2>
+<p>** Explorez SafeKit : Fonctionnalités, vidéos techniques, documentation et essai gratuit **</p>
+<table>
+	<thead>
+			<tr>
+					<th>Type de ressource</th>
+					<th>Description</th>
+					<th>Lien direct</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Caractéristiques principales</td>
+					<td>Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ?</td>
+					<td><a href="../../../fr/" title="Discover SafeKit features for simple and cost-effective high availability"> Découvrez pourquoi choisir SafeKit pour une haute disponibilité </a></td>
+			</tr>
+			<tr>
+					<td>Cas d&rsquo;utilisation</td>
+					<td>Découvrez comment SafeKit garantit la haute disponibilité des infrastructures critiques</td>
+					<td><a href="../../../fr/use-cases/" title="Explore SafeKit high availability use cases"> Voir tous les cas d&rsquo;utilisation (logiciels OEM, serveurs Edge, SCADA, etc.) </a></td>
+			</tr>
+			<tr>
+					<td>Modèle de déploiement</td>
+					<td>disponibilité tout-en-un sans SAN : Clustering logiciel sans partage</td>
+					<td><a href="../../../fr/product/#all-in-one-sanless-ha" title="Learn about all-in-one SANless high availability with shared-nothing software clustering"> Voir SafeKit disponibilité tout-en-un sans SAN </a></td>
+			</tr>
+			<tr>
+					<td>Stratégies de haute disponibilité</td>
+					<td>SafeKit : Haute disponibilité de l’infrastructure (VM) vs. Haute disponibilité applicative</td>
+					<td><a href="../../../fr/product/#safekit-ha-redundancy-choices" title="Compare VM-level redundancy with SafeKit application-level high availability strategies"> Voir SafeKit Haute disponibilité et redondance : VM vs. niveau applicatif </a></td>
+			</tr>
+			<tr>
+					<td>Spécifications techniques</td>
+					<td>Limitations techniques pour SafeKit Clustering</td>
+					<td><a href="../../../fr/product/#safekit-ha-limitations" title="Technical requirements and limitations for SafeKit application clustering"> Voir SafeKit Limitations de haute disponibilité </a></td>
+			</tr>
+			<tr>
+					<td>Vidéos</td>
+					<td>SafeKit : Démonstrations de configuration haute disponibilité et de basculement</td>
+					<td><a href="../../../fr/resources/high-availability-solutions-ha-solutions-videos/" title="Step-by-step videos on SafeKit high availability, from installation to automated failover"> Voir SafeKit Tutoriels de basculement </a></td>
+			</tr>
+			<tr>
+					<td>Architecture</td>
+					<td>Fonctionnement du cluster SafeKit <code>Mirror</code> (Réplication en temps réel et basculement)</td>
+					<td><a href="../../../fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/" title="See technical architecture and failover mechanism of SafeKit `Mirror` Cluster"> Voir SafeKit <code>Mirror</code> Cluster : Réplication en temps réel et basculement </a></td>
+			</tr>
+			<tr>
+					<td>Architecture</td>
+					<td>Fonctionnement du cluster SafeKit <span class="notranslate farm-term" translate="no"> Farm </span> (Équilibrage de charge réseau et basculement)</td>
+					<td><a href="../../../fr/architectures/network-load-balancing-cluster/" title="Technical overview of SafeKit Farm Cluster architecture with network load balancing"> Voir SafeKit <span class="notranslate farm-term" translate="no"> Farm </span> Cluster : Équilibrage de charge réseau et basculement </a></td>
+			</tr>
+			<tr>
+					<td>Avantages concurrentiels</td>
+					<td>Comparaison : SafeKit vs. Clusters haute disponibilité (HA) traditionnels</td>
+					<td><a href="../../../fr/product/#safekit-ha-comparison" title="Detailed comparison of SafeKit software vs traditional hardware-based HA clusters"> Voir SafeKit Comparaison avec les clusters HA traditionnels </a></td>
+			</tr>
+			<tr>
+					<td>Ressources techniques</td>
+					<td>SafeKit Haute disponibilité : documentation, téléchargements et essai</td>
+					<td><a href="../../../fr/resources/safekit-free-trial/" title="Access SafeKit free trial, technical documentation, and high availability white papers"> Voir SafeKit Essai gratuit et documentation technique HA </a></td>
+			</tr>
+			<tr>
+					<td>Solutions préconfigurées</td>
+					<td>SafeKit Bibliothèque de modules d&rsquo;application : Solutions HA prêtes à l&rsquo;emploi</td>
+					<td><a href="../../../fr/quick-install/" title="Browse the library of pre-configured SafeKit modules for automated application failover"> Voir SafeKit Modules d&rsquo;application haute disponibilité </a></td>
+			</tr>
+	</tbody>
+</table>
+<div class="button-row">
+  <a class="btn-action" href="../../../fr/contact-us-for-safekit/">Nous contacter ›</a>
+  <a class="btn-action" href="../../../fr/resources/safekit-free-trial/">Essai gratuit de SafeKit ›</a>
+  <a class="btn-action" href="../../../fr/resources/safekit-on-line-training/">Certification gratuite ›</a>
+  <a class="btn-action" href="../../../fr/safekit-pricing/">Prix licence perpétuelle ›</a>
+</div>
+
+    </article>
+</div>
+
+
+
+    </main>
+    <footer>
+    <p>&copy; Eviden, all rights reserved | <a href="https://eviden.com/en/privacy-policy" target="_blank" rel="noopener">Eviden privacy</a> | <a href="https://eviden.com/en/terms-and-conditions" target="_blank" rel="noopener">Eviden terms and conditions</a> | <a href="https://eviden.com" target="_blank" rel="noopener">Eviden</a>
+</footer>
+
+    <a href="../../../resources/safekit-support/" class="chat-fab" title="Ask SafeKit AI">
+        <img src="../../../wp-content/themes/safekit/chat-robot-1.svg" alt="SafeKit AI Chat">
+        <span class="chat-fab-label">SafeKit AI</span>
+    </a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var stickyHeader = document.querySelector('header');
+    function updateStickyHeaderHeight() {
+        document.documentElement.style.setProperty('--sticky-header-height', (stickyHeader ? stickyHeader.offsetHeight : 0) + 'px');
+    }
+    updateStickyHeaderHeight();
+    if (stickyHeader && 'ResizeObserver' in window) {
+        new ResizeObserver(updateStickyHeaderHeight).observe(stickyHeader);
+    }
+
+    document.querySelectorAll('.dropdown-expand').forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+            var navMenu = this.closest('.nav-menu');
+            if (!navMenu || getComputedStyle(navMenu).display === 'none') return;
+            event.preventDefault();
+            var dropdown = this.closest('.dropdown');
+            var isOpen = dropdown.classList.contains('mobile-open');
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                dropdown.style.setProperty('--mega-panel-top', dropdown.querySelector('.dropdown-toggle').getBoundingClientRect().bottom + 'px');
+                dropdown.classList.add('mobile-open');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            var touchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+            var navMenu = this.closest('.nav-menu');
+            var navMenuVisible = navMenu && getComputedStyle(navMenu).display !== 'none';
+            var hamburgerOpen = document.getElementById('nav-toggle')?.checked;
+            var dropdown = this.closest('.dropdown');
+
+            if (!touchDevice || !navMenuVisible || hamburgerOpen || dropdown.classList.contains('mobile-open')) return;
+
+            event.preventDefault();
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            dropdown.style.setProperty('--mega-panel-top', this.getBoundingClientRect().bottom + 'px');
+            dropdown.classList.add('mobile-open');
+            dropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'true');
+        });
+    });
+
+    document.querySelectorAll('.mega-panel').forEach(function(panel) {
+        panel.addEventListener('wheel', function(event) {
+            if (this.closest('.nav-menu') && this.scrollHeight > this.clientHeight) {
+                event.stopPropagation();
+            }
+        }, { passive: true });
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+        var activeElement = document.activeElement;
+        var navMenu = activeElement && activeElement.closest('.nav-menu');
+        var openDropdown = navMenu && navMenu.querySelector('.dropdown.mobile-open');
+        var panel = openDropdown && openDropdown.querySelector('.mega-panel');
+        if (!panel || panel.scrollHeight <= panel.clientHeight) return;
+
+        event.preventDefault();
+        panel.scrollBy({
+            top: event.key === 'ArrowDown' ? 48 : -48,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelectorAll('.lang-current').forEach(function(current) {
+        current.addEventListener('click', function(event) {
+            event.preventDefault();
+            var switcher = this.closest('.lang-switch');
+            switcher.classList.toggle('open');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.lang-switch')) {
+            document.querySelectorAll('.lang-switch.open').forEach(function(switcher) {
+                switcher.classList.remove('open');
+            });
+        }
+    });
+
+    
+    document.querySelectorAll('.sidebar-toggle:not(.no-collapse)').forEach(function(h3) {
+        h3.addEventListener('click', function() {
+            var section = document.getElementById(this.dataset.target);
+            if (section) section.classList.toggle('open');
+        });
+    });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (function buildToc() {
+        var article = document.querySelector('article');
+        var toc = document.getElementById('TableOfContents');
+        if (!article) return;
+
+        
+        
+        var tocLabel = document.getElementById('toc-label');
+        var h1 = article.querySelector('h1');
+        if (tocLabel && h1 && h1.textContent.trim()) {
+            tocLabel.textContent = h1.textContent.trim();
+            if (h1.id) {
+                tocLabel.href = '#' + h1.id;
+            }
+        }
+
+        if (!toc) return;
+
+        
+        
+        
+        var headings = article.querySelectorAll('h2, h3, h4');
+        if (headings.length === 0) return;
+
+        var root = document.createElement('ul');
+        var stack = [{ ul: root, level: 0 }];
+
+        headings.forEach(function(h) {
+            var level = parseInt(h.tagName[1]);
+            var id = h.id;
+            if (!id) return;
+
+            while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+                stack.pop();
+            }
+
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#' + id;
+            a.textContent = h.textContent;
+            li.appendChild(a);
+
+            var parentUl = stack[stack.length - 1].ul;
+            parentUl.appendChild(li);
+
+            var childUl = document.createElement('ul');
+            li.appendChild(childUl);
+            stack.push({ ul: childUl, level: level });
+        });
+
+        root.querySelectorAll('ul:empty').forEach(function(u) { u.remove(); });
+        toc.appendChild(root);
+    })();
+
+    
+    document.querySelectorAll('#TableOfContents li').forEach(function(li) {
+        var sub = li.querySelector('ul');
+        if (sub) {
+            li.classList.add('toc-has-children');
+            sub.style.display = 'none';
+            var toggle = document.createElement('span');
+            toggle.className = 'toc-toggle';
+            toggle.textContent = '+';
+            li.querySelector('a').appendChild(toggle);
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                li.classList.toggle('toc-open');
+                sub.style.display = li.classList.contains('toc-open') ? 'block' : 'none';
+                toggle.textContent = li.classList.contains('toc-open') ? '-' : '+';
+            });
+        }
+    });
+
+    
+    var tocLinks = document.querySelectorAll('#TableOfContents a');
+    var headings = [];
+    tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href');
+        if (id && id.startsWith('#')) {
+            var el = document.getElementById(id.substring(1));
+            if (el) headings.push({ el: el, link: link });
+        }
+    });
+
+    function updateActive() {
+        var scrollPos = window.scrollY + 100;
+        var active = null;
+        for (var i = 0; i < headings.length; i++) {
+            if (headings[i].el.offsetTop <= scrollPos) {
+                active = headings[i];
+            }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('toc-active'); });
+        document.querySelectorAll('#TableOfContents .toc-has-children.toc-open').forEach(function(li) {
+            li.classList.remove('toc-open');
+            var sub = li.querySelector('ul');
+            if (sub) sub.style.display = 'none';
+            var tog = li.querySelector('.toc-toggle');
+            if (tog) tog.textContent = '+';
+        });
+        if (active) {
+            active.link.classList.add('toc-active');
+            var parent = active.link.closest('li');
+            while (parent) {
+                if (parent.classList.contains('toc-has-children')) {
+                    parent.classList.add('toc-open');
+                    var sub = parent.querySelector('ul');
+                    if (sub) sub.style.display = 'block';
+                    var tog = parent.querySelector('.toc-toggle');
+                    if (tog) tog.textContent = '-';
+                }
+                parent = parent.parentElement.closest('li');
+            }
+            var tocSidebar = document.querySelector('.toc-sidebar');
+            if (tocSidebar) {
+                var activeTop = active.link.getBoundingClientRect().top;
+                var sidebarTop = tocSidebar.getBoundingClientRect().top;
+                var sidebarBottom = sidebarTop + tocSidebar.clientHeight;
+                if (activeTop < sidebarTop || activeTop > sidebarBottom - active.link.offsetHeight) {
+                    tocSidebar.scrollTop += activeTop - sidebarTop - tocSidebar.clientHeight / 2;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    var tocRAFPending = false;
+    function onScroll() {
+        if (tocRAFPending) return;
+        tocRAFPending = true;
+        requestAnimationFrame(function () {
+            updateActive();
+            tocRAFPending = false;
+        });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateActive();
+});
+</script>
+</body>
+</html>

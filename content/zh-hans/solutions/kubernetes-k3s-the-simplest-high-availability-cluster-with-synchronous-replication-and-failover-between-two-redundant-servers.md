@@ -100,7 +100,7 @@ NFS 存储和 PV | • 托管虚拟 IP 和 NFS 端口<br> • 管理活动导出
 目前，虚拟 IP (VIP) **、NFS 持久存储** 、NFS 持久存储**、NFS 持久存储**以及虚拟 IP、NFS 持久存储**[持久存储MariaDB和 NFS 持久存储**仅在服务器 1 (PRIM) 上处于活动状态。两个节点上的 K3s 主组件通过虚拟 IP 和 NFS **存储MariaDB端口访问集群状态，从而实现数据同步。NFS 持久MariaDB SafeKit实现了 NFS 持久** ](</zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/>)同步复制，确保在发生故障时实现零数据丢失 (RPO = 0)。
 
 K3s 主节点通过与 K3s 代理直接通信，将工作负载分配到两个（或多个）节点上。外部客户端连接到这些节点。  
-[集群的虚拟 IP 地址为](</zh-hans/best-practises/how-a-virtual-ip-address-works/>)位于 PRIM 节点上。K3s 主节点使用标准的Kubernetes机制将流量转发到分布在各个节点上的 Pod。同样，Pod 通过虚拟 IP 和 NFS 端口访问其位于 PRIM 服务器上的持久卷 (PV) **** 。
+[集群在 PRIM 节点上的虚拟 IP 地址](</zh-hans/best-practises/how-a-virtual-ip-address-works/>)主节点使用标准的Kubernetes机制将流量转发到分布在各个节点上的 Pod。同样，Pod 通过虚拟 IP 和 NFS 端口访问其在 PRIM 服务器上的**持久卷 (PV)** 。
 
 ### 步骤 2：自动故障转移和服务连续性 {#step-2-automatic-failover-and-service-continuity}
 
@@ -112,7 +112,7 @@ K3s 主节点通过与 K3s 代理直接通信，将工作负载分配到两个�
 
 SafeKit检测到故障后，立即将集群的虚拟 IP 地址**（即**迁移到服务器 2。然后，它将本地的 NFS 服务**MariaDB**和**（即** ）提升为活动状态。由于在步骤 1 中执行了同步复制，服务器 2 上的所有MariaDB和 NFS 持久卷 (PV) 文件均已是最新状态，从而确保零数据丢失。
 
-在集群状态保持不变的情况下，服务器 2 上的 K3s Master ****继续执行。它检测到服务器 1 代理的故障，并自动将受影响的 Pod 重新调度到剩余的活动 K3s 代理上。总故障转移时间 (RTO) 是故障检测间隔（默认值：30 秒）加上 K3s 组件在备用节点上初始化所需时间的总和。
+在集群状态保持不变的情况下，服务器 2 上的**K3s Master**继续执行。它检测到服务器 1 代理的故障，并自动将受影响的 Pod 重新调度到剩余的活动 K3s 代理上。总故障转移时间 (RTO) 是故障检测间隔（默认值：30 秒）加上 K3s 组件在备用节点上初始化所需时间的总和。
 
 当服务器 1 离线时， MariaDB和 NFS 服务继续在服务器 2 上运行，仅将更改写入本地。  
 
@@ -143,7 +143,7 @@ SafeKit根据服务器停止的方式优化恢复时间：
 
 这 **K3s 主控** 和 **K3s代理** 服务器 1 上的进程会自动重启。 Kubernetes 调度器现在识别出服务器 1 为健康节点，可以开始重新调度 pod，将工作负载分配到两台服务器上。 
 
-如果管理员希望MariaDB和 NFS 服务在服务器 1 上运行（恢复原始 PRIM 角色），则可以在方便的时候通过 Web 控制台手动触发****切换，或者通过配置设置自动触发。 
+如果管理员希望MariaDB和 NFS 服务在服务器 1 上运行（恢复原始 PRIM 角色），则可以在方便的时候通过 Web 控制台手动触发切换，或者通过配置设置自动**触发切换**。 
 
 ### 如何配置SafeKit Mirror集群？ {#safekit-mirror-cluster-configure}
 

@@ -39,7 +39,7 @@ O agrupamento de software para o frontend (como no caso do SafeKit ) baseia-se n
 
 ## Clustering por software versus clustering por hardware: vantagens e desvantagens {#software-clustering-vs-hardware-clustering-pros-and-cons}
 
-A alta disponibilidade pode ser alcançada por meio de diferentes abordagens de clusterização: clusterização por software **** clusterização por hardware **), clusterização por hardware (** - armazenamento compartilhado/replicado) ou balanceadores de carga por hardware ( **) e balanceadores de carga (** - dispositivos de rede dedicados). Cada abordagem difere em recursos, hardware necessário, pré-requisitos de software e habilidades de TI necessárias para a implementação. SafeKit oferece uma abordagem puramente por software que combina replicação, failover e balanceamento de carga em um único produto, eliminando a necessidade de hardware dedicado ou edições corporativas.
+A alta disponibilidade pode ser alcançada por meio de diferentes abordagens de clusterização: **clusterização por software** , **clusterização por hardware** (armazenamento compartilhado/replicado) ou **balanceadores de carga por hardware** (dispositivos de rede dedicados). Cada abordagem difere em recursos, hardware necessário, pré-requisitos de software e habilidades de TI necessárias para a implementação. SafeKit oferece uma abordagem puramente por software que combina replicação, failover e balanceamento de carga em um único produto — eliminando a necessidade de hardware dedicado ou edições corporativas.
 
 Tabela **: Comparação de clustering de software ( SafeKit ) versus clustering de hardware versus balanceadores de carga de hardware em relação aos principais critérios de implantação**
 

@@ -39,7 +39,7 @@ topics: "Docker 、 SafeKit高可用性快速安装指南； SafeKit / Docker解
 您将获得一个路径列表，格式为**/var/lib/docker/volumes/ <volume_name>/_data**
   * 转到**分步配置**部分， 
     * 部署**mirror.safe**模块
-    * 设置虚拟 IP 地址**** ，以便在发生故障时切换。
+    * 设置一个**虚拟 IP 地址**，以便在发生故障时进行切换。
     * 将**/var/lib/docker/volumes/ <volume_name>/_data**的列表设置为**复制目录**
     * 分别放入start_prim和stop_prim脚本中： **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start**和**/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
@@ -53,7 +53,7 @@ topics: "Docker 、 SafeKit高可用性快速安装指南； SafeKit / Docker解
 因此，您将获得一个路径列表，格式为**/var/lib/docker/volumes/ <volume_name>/_data**
   * 转到**分步配置**部分， 
     * 部署**mirror.safe**模块
-    * 设置虚拟 IP 地址**** ，以便在发生故障时切换。
+    * 设置一个**虚拟 IP 地址**，以便在发生故障时进行切换。
     * 将**/var/lib/docker/volumes/ <volume_name>/_data**的列表设置为**复制目录**
     * 分别在start_prim和stop_prim脚本中： **/.../myappli start**和**/.../myappli stop**
 
@@ -71,7 +71,7 @@ topics: "Docker 、 SafeKit高可用性快速安装指南； SafeKit / Docker解
 将index.html文件填充到卷中： **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
   * 转到**分步配置**部分， 
     * 部署**mirror.safe**模块
-    * 设置虚拟 IP 地址**** ，以便在发生故障时切换。
+    * 设置一个**虚拟 IP 地址**，以便在发生故障时进行切换。
     * 将**/var/lib/docker/storage/replicated_vol/_data**设置为复制目录
     * 分别放入start_prim和stop_prim脚本中： **docker start mynginx**和**docker stop mynginx**
     * 配置SafeKit后，使用**和http://vitual-ip:9011**测试对index.html的访问。

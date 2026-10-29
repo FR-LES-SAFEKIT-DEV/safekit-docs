@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+            
+            
+    <title>HAクラスタとフォールトトレラントシステム：適切な冗長化戦略の選択 - SafeKit</title>
+    <meta name="description" content="HAクラスタとフォールトトレラントシステムを比較します。 SafeKit ハードウェア障害とソフトウェア障害の両方から保護するSANレスソフトウェアHAクラスタを提案します。専用のFTハードウェアを排除することでコストを削減しつつ、データ損失ゼロ（RPO 0）を実現します。">
+    <link rel="icon" href="../../../wp-content/themes/safekit/computer-safekit-icon-svg.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://safekit.eviden.com/ja/best-practises/high-availability-cluster-vs-fault-tolerant-system/">
+    <link rel="alternate" type="text/markdown" href="index.md">
+
+
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;color:#333;line-height:1.6}main{max-width:1400px;margin:0 auto;padding:1.5rem}a{color:#06c;text-decoration:none}a:hover{text-decoration:underline}.not-found{max-width:680px;margin:4rem auto 6rem;padding:3rem 2rem;text-align:center;background:#f5f9ff;border:1px solid #dae8f8;border-radius:16px}.not-found-code{color:#06c;font-size:clamp(5rem,16vw,9rem);font-weight:800;line-height:1}.not-found h1{margin:1rem 0;font-size:clamp(1.6rem,4vw,2.3rem)}.not-found p:not(.not-found-code){color:#555;margin-bottom:2rem}.not-found-home{display:inline-block;padding:.8rem 1.4rem;border-radius:6px;background:#06c;color:#fff;font-weight:600}.not-found-home:hover{background:#0052a3;color:#fff;text-decoration:none}header{position:sticky;top:0;z-index:2000;background:#fff}.userguide-page header{position:static}.navbar{display:flex;align-items:center;max-width:1400px;margin:0 auto;padding:.5rem .75rem;border-bottom:2px solid #06c;position:relative}.logo{display:flex;align-items:center}.logo img{width:96px;height:auto}.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.nav-brand{font-size:.9rem;font-weight:500;color:#333;text-decoration:none;padding:.75rem .8rem;white-space:nowrap}.nav-brand:hover{text-decoration:none;color:#06c;background:#f0f7ff}.nav-brand.active{color:#06c}.nav-toggle{display:none}.nav-toggle-label{display:none;box-sizing:border-box;align-items:center;justify-content:center;width:2rem;height:2rem;padding:0;color:#fff;line-height:1;cursor:pointer}.nav-toggle-label svg{display:block;width:1.25rem;height:1.25rem}.nav-menu{display:flex;align-items:center;justify-content:center;gap:0;flex:1;margin-left:1.5rem}.dropdown{position:static}.dropdown-toggle{display:block;padding:.75rem .8rem;color:#333;font-size:.9rem;font-weight:500;white-space:nowrap}.dropdown-expand{display:none}.dropdown-toggle:hover,.dropdown-toggle.active{color:#06c;text-decoration:none;background:#f0f7ff}.mega-panel{display:none;position:absolute;top:calc(100% - 1px);left:0;right:0;background:#fff;border:1px solid #ddd;border-top:2px solid #06c;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:1000;padding:1rem 1.5rem}.mega-panel::before{content:'';position:absolute;top:-32px;left:0;right:0;height:32px}.mega-columns{display:flex;gap:2rem}.mega-column{flex:1}.mega-column-title{font-size:.85rem;font-weight:600;color:#333;padding-bottom:.4rem;border-bottom:2px solid #06c;margin-bottom:.75rem}.mega-column a{display:block;padding:.35rem .5rem;color:#333;font-size:.85rem;border-radius:3px}.mega-column a:hover{background:#f0f7ff;color:#06c;text-decoration:none}.mega-column-subtitle{font-size:.8rem;font-weight:600;color:#333;padding-bottom:.35rem;border-bottom:2px solid #06c;margin-top:1rem;margin-bottom:.5rem}.mega-columns-6{gap:1.2rem}.mega-columns-6 .mega-column-title,.mega-columns-6 .mega-column-subtitle{font-size:.78rem}.mega-columns-6 a{font-size:.8rem;padding:.25rem .4rem}.dropdown:hover .mega-panel{display:block}.nav-utility{display:flex;flex:none;align-items:center;gap:.2rem;margin-inline-start:auto}.nav-utility-link{box-sizing:border-box;display:inline-flex;flex:0 0 1.75rem;align-items:center;justify-content:center;width:1.75rem;height:2rem;padding:0;border:0;background:0 0;color:#fff!important;line-height:1;text-decoration:none;cursor:pointer}.nav-utility-link:hover{border-radius:50%;background:rgba(255,255,255,.12);text-decoration:none}.nav-utility-link svg{display:block;width:1rem;height:1rem}.nav-person svg{fill:#fff}.nav-utility-link:focus-visible,.site-search-close:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.site-search-close svg{width:1.35rem;height:1.35rem}.site-search-dialog{width:min(44rem,calc(100vw - 2rem));max-height:min(82vh,48rem);padding:0;border:0;border-top:4px solid #ff5638;background:#fff;color:#172d39;box-shadow:0 18px 60px rgba(0,0,0,.3)}.site-search-dialog::backdrop{background:rgba(0,24,32,.72)}.site-search-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid #d8e0e2}.site-search-dialog-header h2{margin:0;color:#002f3b;font-size:1.15rem}.site-search-close{display:grid;place-items:center;width:2.5rem;height:2.5rem;padding:0;border:1px solid #c7d1d4;background:#fff;color:#243b43;cursor:pointer}.site-search-dialog-body{max-height:calc(82vh - 4rem);overflow:auto;padding:1rem 1.25rem 1.5rem}.site-search-dialog .gsc-control-cse{padding:0;border:0;background:0 0}.site-search-dialog table.gsc-search-box{margin:0 0 1rem}.lang-switch{position:relative;flex:0 0 1.75rem;width:1.75rem;height:2rem;margin:0}.lang-current{display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;min-width:0;padding:0;border:0;border-radius:0;background:0 0;color:#fff;font-size:1.1rem;font-weight:600;white-space:nowrap;cursor:pointer}.lang-dropdown{display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #ddd;box-shadow:0 4px 8px rgba(0,0,0,.1);border-radius:4px;z-index:1000;min-width:60px}.lang-dropdown a{display:block;padding:.4rem .8rem;font-size:.8rem;color:#333}.lang-dropdown a:hover{background:#f0f7ff;text-decoration:none}.lang-switch:hover .lang-dropdown{display:block}.lang-switch.open .lang-dropdown{display:block}.breadcrumb{width:100%;max-width:none;margin:0;padding:.7rem max(1.5rem,calc((100% - 1400px)/2 + 1.5rem))1.3rem;background:#002f3b;color:#fff;font-size:.8rem}.breadcrumb a{color:#fff;text-decoration:underline;text-underline-offset:2px}.breadcrumb a:hover{color:#fff;text-decoration-thickness:2px}.breadcrumb .sep{margin:0 .45rem;color:rgba(255,255,255,.72)}.breadcrumb .current{color:#fff;font-weight:600}.page-with-toc{display:flex;gap:2rem;align-items:flex-start}.toc-sidebar{position:sticky;top:4.5rem;width:220px;flex-shrink:0;max-height:calc(100vh - 5.5rem);overflow-y:auto}.toc-nav{border-right:2px solid #e8e8e8;padding-right:1rem}.toc-nav h3{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#999;margin-bottom:.5rem}.toc-nav ul{list-style:none;padding:0;margin:0}.toc-nav li{margin:0}.toc-nav a{display:block;padding:.25rem 0;font-size:.82rem;color:#555;line-height:1.4;border-left:2px solid transparent;padding-left:.5rem;margin-left:-1px;text-decoration:none}.toc-nav a:hover{color:#06c;text-decoration:none;border-left-color:#06c}#TableOfContents a{display:block;text-decoration:none}#TableOfContents a img{max-width:14px;max-height:14px;vertical-align:middle;margin:0 2px}#TableOfContents>ul>li>ul{display:none;padding-left:1.1rem;margin-top:.2rem;border-left:1px solid #e0e0e0}#TableOfContents>ul>li.toc-open>ul{display:block}#TableOfContents>ul>li>ul a{font-size:.74rem;color:#777;padding:.15rem 0}#TableOfContents>ul>li.has-children>a{display:flex;align-items:baseline;justify-content:space-between}#TableOfContents>ul>li.has-children>a::after{content:'+';font-weight:700;font-size:.9rem;color:#999;margin-left:.4rem;flex-shrink:0}#TableOfContents>ul>li.has-children.toc-open>a::after{content:'-';color:#06c}#TableOfContents a.toc-active{color:#06c;font-weight:600}#TableOfContents>ul>li>ul a.toc-active{color:#06c;font-weight:600}article.has-toc{flex:1;min-width:0}article h1,article h2,article h3,article h4{scroll-margin-top:5rem}article h1{font-size:2rem;font-weight:700;color:#1a1a1a;margin:1.5rem 0 1rem;line-height:1.25;border-bottom:2px solid #06c;padding-bottom:.4rem}article h2{font-size:1.5rem;font-weight:600;color:#222;margin:2rem 0 .75rem;line-height:1.3;border-left:4px solid #06c;padding-left:.6rem}article h3{font-size:1.2rem;font-weight:600;color:#333;margin:1.5rem 0 .5rem}article h4{font-size:1.05rem;font-weight:600;color:#444;margin:1.25rem 0 .5rem}article p{margin:.75rem 0;line-height:1.7;color:#444}article ul,article ol{margin:.75rem 0 .75rem 1.5rem;line-height:1.7}article ul{list-style:disc}article ol{list-style:decimal}article li{margin:.3rem 0;color:#444}article li::marker{color:#06c}article a{text-decoration:underline;text-underline-offset:2px}article a:hover{text-decoration-thickness:2px}article blockquote{border-left:4px solid #06c;margin:1rem 0;padding:.5rem 1rem;background:#f8fbff;color:#555;font-style:italic}article code{background:#f1f3f5;padding:.15em .4em;border-radius:3px;font-size:.9em;color:#24292e;border:1px solid #e1e4e8}article .farm-term{font:inherit;color:inherit}article pre{background:#f4f4f8;color:#333;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0;border:1px solid #e0e0e0}article pre code{background:0 0;color:inherit;padding:0}article hr{border:none;border-top:1px solid #e0e0e0;margin:2rem 0}article strong{color:#1a1a1a}article img{max-width:100%;height:auto}article img.inline-icon{display:inline;vertical-align:middle;margin:0 .1em}table{border-collapse:collapse;width:100%;margin:1em 0}th,td{border:1px solid #ccc;padding:.5em .75em;text-align:left;vertical-align:top}th{background-color:#f5f5f5;font-weight:700}tr:nth-child(even){background-color:#fafafa}footer{text-align:center;padding:2rem 1rem;margin-top:2rem;border-top:1px solid #eee;color:#4a4a4a;font-size:.85rem}.sidebar-section{margin-bottom:1rem}.sidebar-section .sidebar-content{display:none}.sidebar-section.open .sidebar-content{display:block}.sidebar-toggle{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#999;margin-bottom:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none}.sidebar-toggle::after{content:'+';font-weight:700;font-size:.9rem;color:#999}.sidebar-section.open>.sidebar-toggle::after{content:'-';color:#06c}.sidebar-toggle:hover{color:#06c}.sidebar-toggle.no-collapse{cursor:default}.sidebar-toggle.no-collapse::after,.sidebar-section.open>.sidebar-toggle.no-collapse::after{content:''}.toc-toggle{float:right;display:inline-block;width:1rem;font-weight:700;font-size:.75rem;color:#999;cursor:pointer;text-align:center;margin-right:.2rem}.toc-toggle:hover{color:#06c}.userguide-container{display:flex;height:85vh;width:100%;gap:0}.userguide-container .index-container{width:20%;height:100%}.userguide-container .doc-container{width:80%;height:100%}.userguide-container iframe{width:100%;height:100%;border:none}.userguide-container.single-frame .doc-container{width:100%}.button-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0}.btn-action,article a.btn-action{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.9rem;text-decoration:none!important;white-space:nowrap;transition:background .2s}.btn-action:hover,article a.btn-action:hover{background:#0052a3;text-decoration:none!important}.btn-quick-install,article a.btn-quick-install{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.95rem;text-decoration:none!important;margin:1rem 0;transition:background .2s}.btn-quick-install:hover,article a.btn-quick-install:hover{background:#0052a3;text-decoration:none!important}.btn-download,article a.btn-download{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.9rem;text-decoration:none!important;white-space:nowrap;transition:background .2s;margin:.3rem 0}.btn-download:hover,article a.btn-download:hover{background:#0052a3;text-decoration:none!important}.chat-fab{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;align-items:center;gap:.25rem;z-index:9999;text-decoration:none!important;transition:transform .2s}.chat-fab:hover{transform:scale(1.08);text-decoration:none!important}.chat-fab img{width:64px;height:64px}.chat-fab-label{background:#1a73e8;color:#fff;font-size:.75rem;font-weight:600;padding:.2rem .6rem;border-radius:4px;white-space:nowrap}@media(max-width:1150px){.toc-sidebar{display:none}.page-with-toc{display:block}article table{display:block;max-width:100%;overflow-x:auto}.nav-toggle-label{display:inline-flex;flex:0 0 2rem;width:2rem;height:2.75rem;margin:0}.nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid #06c;box-shadow:0 4px 12px rgba(0,0,0,.1);margin-left:0;padding:.5rem 0;z-index:999}.nav-toggle:checked~.nav-menu{display:flex}.dropdown{display:flex;flex-wrap:wrap;align-items:center}.dropdown{display:grid;grid-template-columns:minmax(0,1fr)auto;width:100%}.dropdown-toggle{flex:1;padding:.6rem 1.5rem}.dropdown-expand{display:block;width:2.75rem;height:2.75rem;border:0;background:0 0;color:#06c;font-size:1.5rem;font-weight:600;line-height:1;cursor:pointer}.dropdown-expand[aria-expanded=true]{color:#333}.mega-panel{position:static;box-shadow:none;border:none;border-top:1px solid #eee;padding:.5rem 1.5rem}.dropdown:hover .mega-panel{display:none}.dropdown.mobile-open .mega-panel{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;width:100%!important;min-height:0;grid-column:1/-1;background:#fff;max-height:calc(100dvh - var(--mega-panel-top,4rem) - 1rem);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:5rem!important;box-sizing:border-box}.dropdown.mobile-open .dropdown-expand{font-size:0}.dropdown.mobile-open .dropdown-expand::after{content:"−";font-size:1.5rem}.mega-columns{flex-direction:column;gap:1rem}.site-search-dialog{width:calc(100vw - 1.25rem);max-height:88vh}.site-search-dialog-body{max-height:calc(88vh - 4rem);padding:.75rem}.lang-switch{position:relative;margin-left:.75rem;padding:0}.lang-switch .lang-dropdown{top:100%;right:0;max-height:calc(100dvh - 4rem);overflow-y:auto}.button-row{flex-direction:column}.btn-action{text-align:center}}@media(max-width:1150px){.nav-menu{align-items:stretch}.nav-brand{width:100%;padding:.6rem 1.5rem;text-align:start}}@media(min-width:1151px){.nav-brand,.dropdown-toggle{padding-inline:.55rem}.dropdown-toggle::after{margin-inline-start:.2rem}}@media(max-width:860px){.userguide-container .index-container{display:none}.userguide-container .doc-container{width:100%}}@media(max-width:1150px) and (hover:none) and (pointer:coarse){.dropdown{width:100%}.dropdown.mobile-open .mega-panel{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;left:0!important;right:0!important;width:100%!important;grid-column:1/-1;background-color:#fff!important;z-index:9999!important;box-shadow:0 8px 24px rgba(0,0,0,.15)!important;max-height:calc(100dvh - var(--mega-panel-top,4rem) - 1rem);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:1.5rem 1.25rem 5rem!important;box-sizing:border-box!important}.dropdown.mobile-open .dropdown-expand{font-size:0}.dropdown.mobile-open .dropdown-expand::after{content:"−";font-size:1.5rem}.mega-panel .mega-column,.mega-panel ul{padding-left:.5rem}}header{background:#002f3b;border-radius:8px 8px 0 0}.navbar{max-width:1800px;padding:.85rem clamp(1rem,2vw,2rem);border-bottom:0}html[dir=rtl] .nav-menu{margin-left:0;margin-right:2rem}.logo img{filter:brightness(0)invert(1)}.nav-brand,.dropdown-toggle,.nav-actions>a:not(.btn-quote){color:#fff}.nav-brand.active,.dropdown-toggle.active{color:#fff;background:0 0;border-bottom:1px solid #ff5638}.nav-brand:hover,.dropdown-toggle:hover{color:#fff;background:0 0}.nav-actions>a.nav-contact{color:#fff;font-size:.9rem;font-weight:500;padding:.75rem .8rem;margin-right:1rem;white-space:nowrap;text-decoration:none}.nav-actions>a.nav-contact:hover{color:#fff;background:0 0;text-decoration:none}.dropdown-toggle::after{content:"";display:inline-block;width:.42rem;height:.42rem;margin-block-end:.18rem;margin-inline-start:.45rem;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg)}.nav-actions{gap:.5rem;display:none}.nav-contact-mobile{display:none}.nav-pricing-desktop{display:inline-flex;align-items:center;justify-content:center;margin-inline-end:.5rem;white-space:nowrap}.nav-pricing-mobile{display:none}.nav-pricing-desktop,.nav-pricing-mobile{box-sizing:border-box;width:3.25rem;height:3.25rem;padding:0}.btn-quote.nav-pricing-desktop,.btn-quote.nav-pricing-mobile{padding:0;background:0 0;color:#fff!important}.btn-quote.nav-pricing-desktop:hover,.btn-quote.nav-pricing-mobile:hover{background:rgba(255,255,255,.12);color:#fff!important}.nav-pricing-desktop span,.nav-pricing-mobile span{font-size:1.5rem;font-weight:600;line-height:1}.nav-pricing-desktop:focus-visible,.nav-pricing-mobile:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.nav-contact-desktop{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:3.25rem;height:3.25rem;margin-inline:.25rem .5rem;color:#fff!important;text-decoration:none}.nav-contact-desktop svg{width:1.35rem;height:1.35rem}.nav-contact-desktop:hover{background:rgba(255,255,255,.12);color:#fff!important}.nav-contact-desktop:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.btn-quote{background:#fff;color:#002f3b!important;border-radius:0;padding:.8rem 1.5rem;font-size:1rem;font-weight:500}.btn-quote:hover{background:#f2f5f6;color:#002f3b!important}.lang-switch{margin-left:0}.lang-current{color:#fff;border-color:rgba(255,255,255,.8);border-radius:0;font-size:1rem;font-weight:400}@media(max-width:1150px){html[dir=rtl] .nav-menu{margin:0}.nav-menu{background:#002f3b;border-bottom-color:rgba(255,255,255,.35)}.dropdown-toggle::after{display:none}.dropdown-toggle,.dropdown-toggle.active,.nav-brand.active{color:#fff}.dropdown-expand,.dropdown-expand[aria-expanded=true]{color:#fff}.nav-contact{margin-right:0}.nav-utility{gap:0;margin-inline-start:auto}.nav-utility-link{flex-basis:clamp(1.75rem,8vw,2.4rem);width:clamp(1.75rem,8vw,2.4rem);height:2.75rem}.lang-switch{flex-basis:clamp(1.75rem,8vw,2.4rem);width:clamp(1.75rem,8vw,2.4rem);height:2.75rem;margin:0}.lang-current{min-height:0;font-size:.95rem}}</style>
+
+    
+    
+    <script>
+      
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QFF93L1P94');
+
+      function __loadGtag() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-QFF93L1P94";
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(__loadGtag, { timeout: 3000 });
+      } else {
+        window.addEventListener('load', __loadGtag);
+      }
+    </script>
+    
+    
+</head>
+<body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <header>
+    <nav class="navbar">
+        <a href="https://eviden.com" class="logo" target="_blank" rel="noopener">
+            <img width="265" height="53" src="../../../wp-content/uploads/2026/08/logo_eviden_orange-256w.png" alt="Eviden Logo">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="nav-menu">
+            
+            <a href="../../../ja/" class="nav-brand">SafeKit</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            <a href="../../../ja/product/" class="nav-brand">製品</a>
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../ja/solutions/" class="dropdown-toggle">ソリューション</a><button class="dropdown-expand" type="button" aria-label="ソリューションを表示するサブメニュー" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">新規アプリケーション（リアルタイムレプリケーションとフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/solutions/windows-high-availability-software-synchronous-replication-failover/">Windows (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/linux-high-availability-software-synchronous-replication-failover/">Linux (mirror.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">新規アプリケーション（ネットワーク負荷分散およびフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/solutions/windows-load-balancing-failover/">Windows (farm.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/linux-load-balancing-failover/">Linux (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">フルVMまたはコンテナのリアルタイムレプリケーションとフェイルオーバー</h4>
+                                
+                                <a href="../../../ja/solutions/hyper-v-replication-automatic-failover-load-balancing/">Hyper-V ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/">KVM ( kvm.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/">Docker (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/">Podman (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/">Kubernetes (k3s.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">データベース（リアルタイムレプリケーションとフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/solutions/sql-server-high-availability-synchronous-replication-failover/">Microsoft SQL Server (sqlserver.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/postgresql-high-availability-synchronous-replication-failover/">PostgreSQL (postgresql.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/oracle-high-availability-synchronous-replication-failover/">Oracle (oracle.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/mysql-high-availability-synchronous-replication-failover/">MySQL (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/">MariaDB (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/firebird-high-availability-synchronous-replication-failover/">Firebird (firebird.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">ウェブ（ネットワーク負荷分散とフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/solutions/apache-load-balancing-failover-2/">Apache ( apache_farm.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/iis-load-balancing-failover/">IIS (iis_farm.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/">NGINX ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                
+                                <a href="../../../ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/">AWS (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/aws-load-balancing-cluster-failover/">AWS (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                
+                                <a href="../../../ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/">GCP (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/gcp-load-balancing-cluster-failover/">GCP (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                
+                                <a href="../../../ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/">Azure (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/azure-load-balancing-cluster-failover/">Azure (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">その他の雲</h4>
+                                
+                                <a href="../../../ja/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/">すべてのクラウドソリューション</a>
+                                
+                                
+                                <a href="../../../ja/solutions/cloud-high-availability-cluster-synchronous-replication-failover/">クラウド ( mirror.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/cloud-load-balancing-cluster-failover/">クラウド ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">物理セキュリティ（リアルタイムレプリケーションとフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/">Milestone XProtect (milestone.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/nedap-high-availability-synchronous-replication-failover/">Nedap (nedap.safe)</a>
+                                
+                                
+                                <a href="../../../ja/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/">ゼネテックSQL Server ( sqlserver.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">ボッシュAMS（ hyperv.safe ）</a>
+                                
+                                
+                                <a href="../../../ja/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">ボッシュ BIS ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">ボッシュ BVMS ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/">ハンファビジョン（ hyperv.safe ）</a>
+                                
+                                
+                                <a href="../../../ja/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">ハンファワイズネット（ hyperv.safe ）</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">シーメンス（リアルタイムレプリケーションとフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/">シーメンス監視スイート（ hyperv.safe ）</a>
+                                
+                                
+                                <a href="../../../ja/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/">シーメンス Desigo CC ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/">シーメンス Siveillance VMS ( SiveillanceVMS.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">シーメンス SiPass ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/">シーメンス SIPORT ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/">シーメンス SIMATIC PCS 7 ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/">シーメンス SIMATIC WinCC ( hyperv.safe )</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../ja/use-cases/" class="dropdown-toggle">ユースケース</a><button class="dropdown-expand" type="button" aria-label="ユースケースを表示するサブメニュー" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">SafeKit</h4>
+                                
+                                <a href="../../../ja/use-cases/high-availability-software-ha-cluster-windows-linux/">エレベーターピッチ</a>
+                                
+                                <a href="../../../ja/use-cases/">顧客利用事例</a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">ユースケース</h4>
+                                
+                                <a href="../../../ja/use-cases/best-worst-use-cases-high-availability/">最適な使用例／最悪の使用例</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/application-clustering-software/">ソフトウェアパブリッシャー向けのOEMユースケース</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/">Edge HA</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/business-continuity-software/">分散型エンタープライズのユースケース</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/business-continuity-and-disaster-recovery-software/">遠隔地サイトおよび災害復旧のユースケース</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">物理セキュリティ市場における高可用性</h4>
+                                
+                                <a href="../../../ja/use-cases/physical-security-software-redundancy/">物理セキュリティソフトウェア</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/video-management-software-vms-redundancy/">ビデオ管理ソフトウェア（VMS）</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/electronic-access-control-software-eacs-redundancy/">電子アクセス制御ソフトウェア（EACS）</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/building-management-system-software-bms-redundancy/">ビル管理システムソフトウェア（BMS）</a>
+                                
+                                
+                                <a href="../../../ja/use-cases/scada-software-redundancy-high-availability/">SCADAソフトウェア</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../ja/architectures/" class="dropdown-toggle">アーキテクチャ</a><button class="dropdown-expand" type="button" aria-label="アーキテクチャサブメニューを表示" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">基本的なアーキテクチャ</h4>
+                                
+                                <a href="../../../ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/">Mirrorクラスター</a>
+                                
+                                
+                                <a href="../../../ja/architectures/network-load-balancing-cluster/">Farmクラスター</a>
+                                
+                                
+                                <a href="../../../ja/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/">SafeKitコンソール</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">先進的なアーキテクチャ</h4>
+                                
+                                <a href="../../../ja/architectures/clustering-software-load-balancing-mirroring/">Farm + Mirrorクラスター</a>
+                                
+                                
+                                <a href="../../../ja/architectures/active-active-cluster-real-time-replication/">レプリケーション機能を備えたアクティブクラスター</a>
+                                
+                                
+                                <a href="../../../ja/architectures/n-1-redundancy/">N-1クラスター</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../ja/best-practises/" class="dropdown-toggle active">ベストプラクティス</a><button class="dropdown-expand" type="button" aria-label="ベストプラクティスサブメニューを表示" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">高可用性のベストプラクティス</h4>
+                                
+                                <a href="../../../ja/best-practises/high-availability-architectures-and-best-practices/">高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/">共有ディスクなしアーキテクチャと共有ディスクアーキテクチャ：最適なHAクラスタの選択</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/clustering-software-vs-hardware-clustering/">ソフトウェアクラスタリングとハードウェアクラスタリングの比較</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/vm-ha-vs-application-ha/">VM HAとアプリケーション HAの比較</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/high-availability-disaster-recovery-hadr/">高可用性および災害復旧（HADR）</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/high-availability-cluster-vs-fault-tolerant-system/">HAクラスタとフォールトトレラントシステム：適切な冗長化戦略の選択</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/">シンプルなHAソフトウェアで冗長サーバーを実装する方法</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">レプリケーションのベストプラクティス</h4>
+                                
+                                <a href="../../../ja/best-practises/data-replication-techniques/">高可用性を実現するデータレプリケーション技術：徹底比較</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/synchronous-replication-vs-asynchronous-replication/">同期レプリケーションと非同期レプリケーション： SafeKitどのようにしてデータ損失ゼロを保証するのか？</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/byte-level-file-replication-vs-block-level-disk-replication/">HAにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/alternative-always-on-sql-server-express-standard-editions/">SQL Serverの代替案：Express および Standard エディション向けの常時稼働 HA</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/how-to-upgrade-an-application-protected-by-safekit/">HAクラスタでSafeKitによって保護されているアプリケーションをアップグレードする</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">クラスタリングのベストプラクティス</h4>
+                                
+                                <a href="../../../ja/best-practises/how-a-virtual-ip-address-works/">高可用性クラスタリングにおける仮想IPアドレス（VIP）の仕組みとは？</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/power-outage-and-network-isolation-in-a-cluster/">HAクラスタにおける停電とネットワーク分離への対処</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/">クラスターにおけるハートビート、フェイルオーバー、クォーラム</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/">フェイルオーバークラスタリングにおけるSANとNASの共有ストレージ：詳細な比較</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/what-is-rpo-and-rto-with-examples/">RPOとRTOとは？定義、例、およびHA戦略</a>
+                                
+                                
+                                <a href="../../../ja/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/">Microsoft NLB とSafeKitネットワーク負荷分散の比較</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../ja/quick-install/" class="dropdown-toggle">クイックインストール</a><button class="dropdown-expand" type="button" aria-label="クイックインストールサブメニューを表示" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">新規アプリケーション（リアルタイムレプリケーションとフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/">Windows (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/">Linux (mirror.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">新規アプリケーション（ネットワーク負荷分散およびフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/">Windows (farm.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/">Linux (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">完全なVMまたはコンテナ</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-hyper-v/">Hyper-V ( hyperv.safe )</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-kvm/">KVM ( kvm.safe )</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-docker/">Docker (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-podman/">Podman (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-kubernetes/">Kubernetes (k3s.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">データベース（リアルタイムレプリケーションとフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/">Microsoft SQL Server (sqlserver.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-postgresql/">PostgreSQL (postgresql.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-oracle/">Oracle (oracle.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-mysql/">MySQL (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-mariadb/">MariaDB (mysql.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-firebird/">Firebird (firebird.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">ウェブ（ネットワーク負荷分散とフェイルオーバー）</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/">Apache ( apache_farm.safe )</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/">IIS (iis_farm.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/">NGINX ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/">AWS (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/">AWS (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/">GCP (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/">GCP (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">Azure (mirror.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/">Azure (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">その他の雲</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/">クラウド ( mirror.safe )</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/">クラウド ( farm.safe )</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">物理的なセキュリティ</h4>
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/">Milestone XProtect (milestone.safe)</a>
+                                
+                                
+                                <a href="../../../ja/quick-install/safekit-quick-installation-guide-with-nedap/">Nedap (nedap.safe)</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../../ja/resources/" class="dropdown-toggle">リソース</a><button class="dropdown-expand" type="button" aria-label="リソースの表示サブメニュー" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">無料トライアル</h4>
+                                
+                                <a href="../../../ja/resources/safekit-free-trial/">SafeKit無料トライアル</a>
+                                
+                                
+                                <a href="../../../ja/resources/high-availability-and-load-balancing-cluster-key/">1ヶ月ライセンスキー</a>
+                                
+                                
+                                <a href="../../../ja/resources/high-availability-solutions-ha-solutions-videos/">実演</a>
+                                
+                                
+                                <a href="../../../ja/resources/safekit-support/">サポート</a>
+                                
+                                
+                                <a href="../../../ja/resources/safekit-on-line-training/">無料トレーニングと認定</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">技術文書</h4>
+                                
+                                <a href="../../../ja/quick-install/">SafeKitクイックインストールガイド</a>
+                                
+                                
+                                <a href="../../../ja/resources/safekit-user-guide-82/">SafeKitユーザーガイド</a>
+                                
+                                
+                                <a href="../../../ja/resources/safekit-release-notes-8-2/">SafeKitリリースノート</a>
+                                
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf" target="_blank" rel="noopener">SafeKit SRB</a>
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf" target="_blank" rel="noopener">知識ベース</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">製品情報</h4>
+                                <a href="../../../wp-content/uploads/documents/high-availability-overview.pdf" target="_blank" rel="noopener">データシート</a>
+                                <a href="../../../wp-content/uploads/documents/wp-safekit-en.pdf" target="_blank" rel="noopener">ホワイトペーパー - 製品</a>
+                                <a href="../../../wp-content/uploads/documents/wp-hadecision-en.pdf" target="_blank" rel="noopener">ホワイトペーパー - 高可用性ガイド</a>
+                                
+                                <a href="../../../ja/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/">RFIおよびRFPに関する技術リファレンス</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-utility" role="group" aria-label="クイックリンク">
+            <a href="../../../ja/resources/safekit-free-trial/" class="nav-utility-link nav-trial" aria-label="SafeKit 無料トライアル" title="SafeKit 無料トライアル"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+            <a href="../../../ja/resources/high-availability-and-load-balancing-cluster-key/" class="nav-utility-link nav-trial-key" aria-label="無料トライアルキー" title="無料トライアルキー"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="12" width="11.5" height="9" rx="2.5" fill="none" stroke="#fff" stroke-width="2.25"/><path d="M11 12V7a5 5 0 0 1 10 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.25"/></svg></a>
+            <a href="../../../ja/safekit-pricing/" class="nav-utility-link nav-pricing" aria-label="料金" title="料金"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2v20M16 6.5c-.8-.9-2-1.5-3.8-1.5-2.3 0-3.8 1.1-3.8 2.9 0 1.6 1.2 2.5 3.5 3l1.8.4c2 .4 3.1 1.2 3.1 2.8 0 1.9-1.7 3-4.3 3-2 0-3.6-.7-4.7-1.9" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/></svg></a>
+            <a href="../../../ja/contact-us-for-safekit/" class="nav-utility-link nav-person" aria-label="お問い合わせ" title="お問い合わせ"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></a>
+            <a href="../../../ja/resources/safekit-support/" class="nav-utility-link nav-support" aria-label="SafeKit AIサポート" title="SafeKit AIサポート"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v2M9 3h6" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/><rect x="4" y="6" width="16" height="15" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="9" cy="12" r="1.25" fill="#fff"/><circle cx="15" cy="12" r="1.25" fill="#fff"/><path d="M9 17h6M2 11v4m20-4v4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/></svg></a>
+            <button class="nav-utility-link nav-search-toggle" id="nav-search-open" type="button" aria-label="SafeKit検索を開く" title="検索" aria-haspopup="dialog" aria-controls="site-search-dialog"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#fff" stroke-width="2.5"/><path d="m15.5 15.5 5 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/></svg></button>
+            
+            <div class="lang-switch">
+                <span class="lang-current">JA</span>
+                <div class="lang-dropdown">
+                    
+                    
+                    
+                    
+                    <a href="../../../best-practises/high-availability-cluster-vs-fault-tolerant-system/">EN</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../fr/best-practises/high-availability-cluster-vs-fault-tolerant-system/">FR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../zh-hans/best-practises/high-availability-cluster-vs-fault-tolerant-system/">ZH</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../ar/best-practises/high-availability-cluster-vs-fault-tolerant-system/">AR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../de/best-practises/high-availability-cluster-vs-fault-tolerant-system/">DE</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../es/best-practises/high-availability-cluster-vs-fault-tolerant-system/">ES</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../it/best-practises/high-availability-cluster-vs-fault-tolerant-system/">IT</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../ko/best-practises/high-availability-cluster-vs-fault-tolerant-system/">KO</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../pt-br/best-practises/high-availability-cluster-vs-fault-tolerant-system/">BR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../pt-pt/best-practises/high-availability-cluster-vs-fault-tolerant-system/">PT</a>
+                    
+                    
+                    
+                    
+                    <a href="../../../nl/best-practises/high-availability-cluster-vs-fault-tolerant-system/">NL</a>
+                    
+                    
+                </div>
+            </div>
+            
+            <label for="nav-toggle" class="nav-toggle-label"><span class="visually-hidden">メニューを開く</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></label>
+        </div>
+    </nav>
+    <dialog class="site-search-dialog" id="site-search-dialog" aria-labelledby="site-search-title">
+        <div class="site-search-dialog-header">
+            <h2 id="site-search-title">SafeKitを検索</h2>
+            <button class="site-search-close" type="button" aria-label="検索を閉じる">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="m18 6-12 12M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="site-search-dialog-body">
+            <div class="gcse-search" data-linkTarget="_self"></div>
+        </div>
+    </dialog>
+    <script>
+        (() => {
+            const openButton = document.getElementById("nav-search-open");
+            const dialog = document.getElementById("site-search-dialog");
+            const closeButton = dialog.querySelector(".site-search-close");
+            let searchScriptLoaded = false;
+
+            openButton.addEventListener("click", () => {
+                dialog.showModal();
+                if (searchScriptLoaded) return;
+
+                searchScriptLoaded = true;
+                const script = document.createElement("script");
+                script.async = true;
+                script.src = "https://cse.google.com/cse.js?cx=529850561931c48b7";
+                script.addEventListener("error", () => {
+                    searchScriptLoaded = false;
+                });
+                document.head.appendChild(script);
+            });
+
+            closeButton.addEventListener("click", () => dialog.close());
+            dialog.addEventListener("click", (event) => {
+                if (event.target === dialog) dialog.close();
+            });
+            dialog.addEventListener("close", () => openButton.focus());
+        })();
+    </script>
+</header>
+
+    
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+
+    <a href="../../../ja/">SafeKit</a>
+    
+        
+        
+        
+        
+        <span class="sep">›</span>
+        <a href="../../../ja/best-practises/">高可用性に関するベストプラクティス</a>
+        
+    
+    <span class="sep">›</span>
+    <span class="current">HAクラスタとフォールトトレラントシステム：適切な冗長化戦略の選択</span>
+
+</nav>
+
+    
+    <main>
+        
+
+
+
+
+
+<div class="page-with-toc">
+    
+    <aside class="toc-sidebar">
+        <nav class="toc-nav">
+            
+            <div class="sidebar-section open" id="sidebar-toc">
+                <h3 class="sidebar-toggle no-collapse" data-target="sidebar-toc"><a id="toc-label" href="#">On this page</a></h3>
+                <div class="sidebar-content">
+                    <nav id="TableOfContents"></nav>
+                </div>
+            </div>
+            
+            
+        </nav>
+    </aside>
+    
+    <article class="has-toc">
+        
+        <h1 id="ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy">HAクラスタとフォールトトレラントシステム：適切な冗長化戦略の選択</h1>
+<h2 id="what-is-the-difference-between-high-availability-and-fault-tolerance">高可用性とフォールトトレランスの違いは何ですか</h2>
+<h3 id="overview">概要</h3>
+<p>この記事では、ハードウェアの制約、ソフトウェア障害、RTO、RPOなどを考慮して、高可用性クラスタとフォールトトレラントシステムの長所と短所を探ります。</p>
+<p>以下の比較表は、フォールトトレラントシステムとソフトウェア高可用性クラスタであるSafeKitとの違いを詳細に説明しています。</p>
+<h3 id="what-is-high-availability">高可用性とは何ですか？</h3>
+<p>高可用性クラスタは、ハードウェアまたはソフトウェアの障害発生時に重要なアプリケーションを再起動できる2台のサーバーをベースとしています。クラスタには、ハードウェアクラスタとソフトウェアクラスタの2種類があります。</p>
+<p>ハードウェアクラスタは共有ディスクに基づいて構築されるため、サーバー間およびサーバーと共有ディスクアレイへの接続間に依存関係が生じる。</p>
+<p>SafeKitのようなソフトウェアクラスタは、リアルタイムのデータレプリケーションに基づいており、ハードウェアに依存しません。物理サーバー、仮想サーバー、またはクラウドに展開できます。</p>
+<h3 id="what-is-fault-tolerance">フォールトトレランスは何ですか？</h3>
+<p>フォールトトレラントシステムは、専用ハードウェアまたは専用ハイパーバイザーのいずれかに依存してハードウェア障害を検出し、アプリケーションを再起動することなく冗長なハードウェアコンポーネントに即座に切り替えます。</p>
+<p>耐障害性システムはハードウェア障害のみに対応し、システム停止の最も一般的な原因であるソフトウェア障害には対応しません。</p>
+<h2 id="pros-and-cons-of-high-availability-and-fault-tolerance">高可用性と耐障害性のメリットとデメリット</h2>
+<p>重要なアプリケーションを障害から保護するには、主に2つのアプローチがあります。 <strong>高可用性クラスタリング</strong> <strong>トレラントシステム</strong> 。それぞれのアプローチは、コスト、柔軟性、復旧時間、ハードウェア要件に関して異なるトレードオフを提供します。これらの違いを理解することで、特定のニーズに最適なソリューションを選択できます。</p>
+<p><strong>ソフトウェア高可用性クラスタリングとフォールトトレラントシステムの比較</strong></p>
+<table>
+	<thead>
+			<tr>
+					<th>基準</th>
+					<th>ソフトウェア高可用性クラスタ</th>
+					<th>フォールトトレラントシステム</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>製品</td>
+					<td><a href="../../../"> SafeKitは、 WindowsおよびLinux </a></td>
+					<td>の耐障害性製品です。</td>
+			</tr>
+			<tr>
+					<td>ハードウェア / ハイパーバイザー</td>
+					<td>専用サーバーも専用ハイパーバイザーもありません。 Windowsサーバーおよび PC 用カーネルに含まれる標準の無料ハイパーバイザー Hyper-V で動作します。 Windowsメインラインカーネルに統合された標準の無料ハイパーバイザー KVM (カーネルベース仮想マシン) で動作します。 Linux各サーバーは<a href="../../../ja/architectures/active-active-cluster-real-time-replication/">複数のアプリケーションに対して他のサーバーのフェイルオーバー サーバーになることができます。 </a>専用ハードウェアまたは専用ハイパーバイザー。セカンダリ サーバーは</td>
+					<td>命令レベルで同期された同じアプリケーションの実行専用です。</td>
+			</tr>
+			<tr>
+					<td>ソフトウェア障害</td>
+					<td>別のOS環境での再起動でサポートされるソフトウェア障害。</td>
+					<td>同じOS上で両方のサーバーで同時にソフトウェア例外が発生。</td>
+			</tr>
+			<tr>
+					<td>アプリケーションと OS のスムーズなアップグレード/修正</td>
+					<td>はい — サーバーごとにアプリケーションと OS のスムーズなアップグレード/修正が可能です。N および N+1 バージョンが共存できます。</td>
+					<td>いいえ — 両方のサーバーで同じアプリケーションと OS イメージが使用されています。</td>
+			</tr>
+			<tr>
+					<td>RTO/RPO</td>
+					<td>回復時間 SafeKit (<a href="../../../ja/best-practises/what-is-rpo-and-rto-with-examples/">RTO</a>検出とアプリケーションの再起動にかかる時間（約1分）によってデータ損失は異なります。 SafeKit (<a href="../../../ja/best-practises/what-is-rpo-and-rto-with-examples/">RPO</a>）は、レプリケーションが同期的に行われるためゼロになります。</td>
+					<td>フォールトトレラントシステムの復旧時間（RTO）はゼロです。障害発生時にアプリケーションは再起動されず、セカンダリサーバー上で実行が継続されます。データ損失（RPO）もゼロです。</td>
+			</tr>
+			<tr>
+					<td>柔軟性</td>
+					<td>標準のWindowsおよびLinux OS を搭載したあらゆる種類のサーバーで実行可能</td>
+					<td>特定のハードウェアまたは特定のハイパーバイザーに依存します</td>
+			</tr>
+			<tr>
+					<td><a href="../../../ja/use-cases/application-clustering-software/">アプリケーションにシンプルな高可用性オプションを追加したいソフトウェアエディター向け</a></td>
+					<td>ハードウェア障害が主な懸念事項となる環境向け</td>
+					<td></td>
+			</tr>
+	</tbody>
+</table>
+<p>要約すると、 <strong>SafeKit</strong>ソフトウェアの高可用性は、標準ハードウェア上で動作し、ローリングアップグレードをサポートする、コスト効率が高く柔軟なソリューションを提供します。ダウンタイムはほぼゼロ (RTO 約 1 分) で、データ損失もゼロです。フォールトトレラントシステムは瞬時のフェイルオーバー (RTO = 0) を提供しますが、専用ハードウェアが必要で、独立したソフトウェアアップデートの柔軟性に欠けます。</p>
+<h2 id="hub">🔍 SafeKit高可用性ナビゲーションハブ</h2>
+<p>** SafeKitの詳細：機能、技術ビデオ、ドキュメント、無料トライアル**</p>
+<table>
+	<thead>
+			<tr>
+					<th>リソースタイプ</th>
+					<th>説明</th>
+					<th>ダイレクトリンク</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>主な特長</td>
+					<td>シンプルでコスト効率の高い高可用性を実現するなら、 SafeKitを選ぶ理由とは？</td>
+					<td><a href="../../../ja/" title="Discover SafeKit features for simple and cost-effective high availability">高可用性を実現するなら、 SafeKitを選ぶ理由をご覧ください</a></td>
+			</tr>
+			<tr>
+					<td>ユースケース</td>
+					<td>SafeKit重要インフラストラクチャの高可用性をどのように確保するかをご覧ください</td>
+					<td><a href="../../../ja/use-cases/" title="Explore SafeKit high availability use cases">すべてのユースケースを見る（OEM ソフトウェア、エッジ サーバー、SCADA など） </a></td>
+			</tr>
+			<tr>
+					<td>デプロイメントモデル</td>
+					<td>オールインワン SANレス HA: シェアードナッシング ソフトウェアクラスタリング</td>
+					<td><a href="../../../ja/product/#all-in-one-sanless-ha" title="Learn about all-in-one SANless high availability with shared-nothing software clustering">参照SafeKitオールインワン SANレス HA </a></td>
+			</tr>
+			<tr>
+					<td>HA戦略</td>
+					<td>SafeKit : インフラストラクチャ (VM) とアプリケーションレベルの高可用性</td>
+					<td><a href="../../../ja/product/#safekit-ha-redundancy-choices" title="Compare VM-level redundancy with SafeKit application-level high availability strategies"> SafeKit HAと冗長性: VMとアプリケーションレベル</a>を参照</td>
+			</tr>
+			<tr>
+					<td>技術仕様</td>
+					<td>SafeKitクラスタリングの技術的制限事項</td>
+					<td><a href="../../../ja/product/#safekit-ha-limitations" title="Technical requirements and limitations for SafeKit application clustering"> SafeKit可用性の制限事項を参照</a></td>
+			</tr>
+			<tr>
+					<td>ビデオ</td>
+					<td>SafeKit : 高可用性構成とフェイルオーバーのデモ</td>
+					<td><a href="../../../ja/resources/high-availability-solutions-ha-solutions-videos/" title="Step-by-step videos on SafeKit high availability, from installation to automated failover">参照SafeKitフェイルオーバーチュートリアル</a></td>
+			</tr>
+			<tr>
+					<td>アーキテクチャ</td>
+					<td>クラスターSafeKit動作原理 (リアルタイムレプリケーションとフェイルオーバー) <code>Mirror</code></td>
+					<td><a href="../../../ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/" title="See technical architecture and failover mechanism of SafeKit `Mirror` Cluster">クラスター: リアルタイムレプリケーションとフェイルオーバーを参照SafeKit <code>Mirror</code> </a></td>
+			</tr>
+			<tr>
+					<td>アーキテクチャ</td>
+					<td>クラスター</td>
+					<td>動作原理 (ネットワーク負荷分散とフェイルオーバー) SafeKit <span class="notranslate farm-term" translate="no"> Farm </span> <a href="../../../ja/architectures/network-load-balancing-cluster/" title="Technical overview of SafeKit Farm Cluster architecture with network load balancing"> </span>クラスター: ネットワーク負荷分散とフェイルオーバーを参照SafeKit <span class="notranslate farm-term" translate="no"> Farm </a></td>
+			</tr>
+			<tr>
+					<td>競争上の優位性</td>
+					<td>比較: SafeKitと従来の高可用性 (HA) クラスタ</td>
+					<td><a href="../../../ja/product/#safekit-ha-comparison" title="Detailed comparison of SafeKit software vs traditional hardware-based HA clusters">を参照SafeKitと従来の HA クラスタの比較</a></td>
+			</tr>
+			<tr>
+					<td>技術リソース</td>
+					<td>SafeKit高可用性: ドキュメント、ダウンロード、トライアル</td>
+					<td><a href="../../../ja/resources/safekit-free-trial/" title="Access SafeKit free trial, technical documentation, and high availability white papers">参照SafeKit HA 無料トライアルと技術ドキュメント</a></td>
+			</tr>
+			<tr>
+					<td>事前構成済みソリューション</td>
+					<td>SafeKitアプリケーションモジュールライブラリ: すぐに使用できる HA ソリューション</td>
+					<td><a href="../../../ja/quick-install/" title="Browse the library of pre-configured SafeKit modules for automated application failover"> SafeKit高可用性アプリケーションモジュールを参照</a></td>
+			</tr>
+	</tbody>
+</table>
+<div class="button-row">
+  <a class="btn-action" href="../../../ja/contact-us-for-safekit/">お問い合わせ ›</a>
+  <a class="btn-action" href="../../../ja/resources/safekit-free-trial/">評価版のダウンロード ›</a>
+  <a class="btn-action" href="../../../ja/resources/safekit-on-line-training/">無料認定 ›</a>
+  <a class="btn-action" href="../../../ja/safekit-pricing/">永久ライセンス費用 ›</a>
+</div>
+    </article>
+</div>
+
+
+
+    </main>
+    <footer>
+    <p>&copy; Eviden, all rights reserved | <a href="https://eviden.com/en/privacy-policy" target="_blank" rel="noopener">Eviden privacy</a> | <a href="https://eviden.com/en/terms-and-conditions" target="_blank" rel="noopener">Eviden terms and conditions</a> | <a href="https://eviden.com" target="_blank" rel="noopener">Eviden</a>
+</footer>
+
+    <a href="../../../resources/safekit-support/" class="chat-fab" title="Ask SafeKit AI">
+        <img src="../../../wp-content/themes/safekit/chat-robot-1.svg" alt="SafeKit AI Chat">
+        <span class="chat-fab-label">SafeKit AI</span>
+    </a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var stickyHeader = document.querySelector('header');
+    function updateStickyHeaderHeight() {
+        document.documentElement.style.setProperty('--sticky-header-height', (stickyHeader ? stickyHeader.offsetHeight : 0) + 'px');
+    }
+    updateStickyHeaderHeight();
+    if (stickyHeader && 'ResizeObserver' in window) {
+        new ResizeObserver(updateStickyHeaderHeight).observe(stickyHeader);
+    }
+
+    document.querySelectorAll('.dropdown-expand').forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+            var navMenu = this.closest('.nav-menu');
+            if (!navMenu || getComputedStyle(navMenu).display === 'none') return;
+            event.preventDefault();
+            var dropdown = this.closest('.dropdown');
+            var isOpen = dropdown.classList.contains('mobile-open');
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                dropdown.style.setProperty('--mega-panel-top', dropdown.querySelector('.dropdown-toggle').getBoundingClientRect().bottom + 'px');
+                dropdown.classList.add('mobile-open');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            var touchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+            var navMenu = this.closest('.nav-menu');
+            var navMenuVisible = navMenu && getComputedStyle(navMenu).display !== 'none';
+            var hamburgerOpen = document.getElementById('nav-toggle')?.checked;
+            var dropdown = this.closest('.dropdown');
+
+            if (!touchDevice || !navMenuVisible || hamburgerOpen || dropdown.classList.contains('mobile-open')) return;
+
+            event.preventDefault();
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            dropdown.style.setProperty('--mega-panel-top', this.getBoundingClientRect().bottom + 'px');
+            dropdown.classList.add('mobile-open');
+            dropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'true');
+        });
+    });
+
+    document.querySelectorAll('.mega-panel').forEach(function(panel) {
+        panel.addEventListener('wheel', function(event) {
+            if (this.closest('.nav-menu') && this.scrollHeight > this.clientHeight) {
+                event.stopPropagation();
+            }
+        }, { passive: true });
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+        var activeElement = document.activeElement;
+        var navMenu = activeElement && activeElement.closest('.nav-menu');
+        var openDropdown = navMenu && navMenu.querySelector('.dropdown.mobile-open');
+        var panel = openDropdown && openDropdown.querySelector('.mega-panel');
+        if (!panel || panel.scrollHeight <= panel.clientHeight) return;
+
+        event.preventDefault();
+        panel.scrollBy({
+            top: event.key === 'ArrowDown' ? 48 : -48,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelectorAll('.lang-current').forEach(function(current) {
+        current.addEventListener('click', function(event) {
+            event.preventDefault();
+            var switcher = this.closest('.lang-switch');
+            switcher.classList.toggle('open');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.lang-switch')) {
+            document.querySelectorAll('.lang-switch.open').forEach(function(switcher) {
+                switcher.classList.remove('open');
+            });
+        }
+    });
+
+    
+    document.querySelectorAll('.sidebar-toggle:not(.no-collapse)').forEach(function(h3) {
+        h3.addEventListener('click', function() {
+            var section = document.getElementById(this.dataset.target);
+            if (section) section.classList.toggle('open');
+        });
+    });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (function buildToc() {
+        var article = document.querySelector('article');
+        var toc = document.getElementById('TableOfContents');
+        if (!article) return;
+
+        
+        
+        var tocLabel = document.getElementById('toc-label');
+        var h1 = article.querySelector('h1');
+        if (tocLabel && h1 && h1.textContent.trim()) {
+            tocLabel.textContent = h1.textContent.trim();
+            if (h1.id) {
+                tocLabel.href = '#' + h1.id;
+            }
+        }
+
+        if (!toc) return;
+
+        
+        
+        
+        var headings = article.querySelectorAll('h2, h3, h4');
+        if (headings.length === 0) return;
+
+        var root = document.createElement('ul');
+        var stack = [{ ul: root, level: 0 }];
+
+        headings.forEach(function(h) {
+            var level = parseInt(h.tagName[1]);
+            var id = h.id;
+            if (!id) return;
+
+            while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+                stack.pop();
+            }
+
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#' + id;
+            a.textContent = h.textContent;
+            li.appendChild(a);
+
+            var parentUl = stack[stack.length - 1].ul;
+            parentUl.appendChild(li);
+
+            var childUl = document.createElement('ul');
+            li.appendChild(childUl);
+            stack.push({ ul: childUl, level: level });
+        });
+
+        root.querySelectorAll('ul:empty').forEach(function(u) { u.remove(); });
+        toc.appendChild(root);
+    })();
+
+    
+    document.querySelectorAll('#TableOfContents li').forEach(function(li) {
+        var sub = li.querySelector('ul');
+        if (sub) {
+            li.classList.add('toc-has-children');
+            sub.style.display = 'none';
+            var toggle = document.createElement('span');
+            toggle.className = 'toc-toggle';
+            toggle.textContent = '+';
+            li.querySelector('a').appendChild(toggle);
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                li.classList.toggle('toc-open');
+                sub.style.display = li.classList.contains('toc-open') ? 'block' : 'none';
+                toggle.textContent = li.classList.contains('toc-open') ? '-' : '+';
+            });
+        }
+    });
+
+    
+    var tocLinks = document.querySelectorAll('#TableOfContents a');
+    var headings = [];
+    tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href');
+        if (id && id.startsWith('#')) {
+            var el = document.getElementById(id.substring(1));
+            if (el) headings.push({ el: el, link: link });
+        }
+    });
+
+    function updateActive() {
+        var scrollPos = window.scrollY + 100;
+        var active = null;
+        for (var i = 0; i < headings.length; i++) {
+            if (headings[i].el.offsetTop <= scrollPos) {
+                active = headings[i];
+            }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('toc-active'); });
+        document.querySelectorAll('#TableOfContents .toc-has-children.toc-open').forEach(function(li) {
+            li.classList.remove('toc-open');
+            var sub = li.querySelector('ul');
+            if (sub) sub.style.display = 'none';
+            var tog = li.querySelector('.toc-toggle');
+            if (tog) tog.textContent = '+';
+        });
+        if (active) {
+            active.link.classList.add('toc-active');
+            var parent = active.link.closest('li');
+            while (parent) {
+                if (parent.classList.contains('toc-has-children')) {
+                    parent.classList.add('toc-open');
+                    var sub = parent.querySelector('ul');
+                    if (sub) sub.style.display = 'block';
+                    var tog = parent.querySelector('.toc-toggle');
+                    if (tog) tog.textContent = '-';
+                }
+                parent = parent.parentElement.closest('li');
+            }
+            var tocSidebar = document.querySelector('.toc-sidebar');
+            if (tocSidebar) {
+                var activeTop = active.link.getBoundingClientRect().top;
+                var sidebarTop = tocSidebar.getBoundingClientRect().top;
+                var sidebarBottom = sidebarTop + tocSidebar.clientHeight;
+                if (activeTop < sidebarTop || activeTop > sidebarBottom - active.link.offsetHeight) {
+                    tocSidebar.scrollTop += activeTop - sidebarTop - tocSidebar.clientHeight / 2;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    var tocRAFPending = false;
+    function onScroll() {
+        if (tocRAFPending) return;
+        tocRAFPending = true;
+        requestAnimationFrame(function () {
+            updateActive();
+            tocRAFPending = false;
+        });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateActive();
+});
+</script>
+</body>
+</html>

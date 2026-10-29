@@ -141,6 +141,7 @@ article code {
   color: #24292e; 
   border: 1px solid #e1e4e8;
 }
+article .farm-term { font: inherit; color: inherit; }
 article pre { background: #f4f4f8; color: #333; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; border: 1px solid #e0e0e0; }
 article pre code { background: none; color: inherit; padding: 0; }
 article hr { border: none; border-top: 1px solid #e0e0e0; margin: 2rem 0; }
@@ -396,5 +397,4 @@ html[dir="rtl"] .nav-menu {
     .lang-switch { flex-basis: clamp(1.75rem, 8vw, 2.4rem); width: clamp(1.75rem, 8vw, 2.4rem); height: 2.75rem; margin: 0; }
     .lang-current { min-height: 0; font-size: 0.95rem; }
   }
-
 

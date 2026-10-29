@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+            
+            
+    <title>High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster - SafeKit</title>
+    <meta name="description" content="Ensure 24/7 uptime for Siemens SiPass access control. SafeKit provides simple SANless high availability with real-time replication and automatic failover on two standard servers. No SAN or specialized IT skills required. Download the free trial.">
+    <link rel="icon" href="../../wp-content/themes/safekit/computer-safekit-icon-svg.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://safekit.eviden.com/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">
+    <link rel="alternate" type="text/markdown" href="index.md">
+
+
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;color:#333;line-height:1.6}main{max-width:1400px;margin:0 auto;padding:1.5rem}a{color:#06c;text-decoration:none}a:hover{text-decoration:underline}.not-found{max-width:680px;margin:4rem auto 6rem;padding:3rem 2rem;text-align:center;background:#f5f9ff;border:1px solid #dae8f8;border-radius:16px}.not-found-code{color:#06c;font-size:clamp(5rem,16vw,9rem);font-weight:800;line-height:1}.not-found h1{margin:1rem 0;font-size:clamp(1.6rem,4vw,2.3rem)}.not-found p:not(.not-found-code){color:#555;margin-bottom:2rem}.not-found-home{display:inline-block;padding:.8rem 1.4rem;border-radius:6px;background:#06c;color:#fff;font-weight:600}.not-found-home:hover{background:#0052a3;color:#fff;text-decoration:none}header{position:sticky;top:0;z-index:2000;background:#fff}.userguide-page header{position:static}.navbar{display:flex;align-items:center;max-width:1400px;margin:0 auto;padding:.5rem .75rem;border-bottom:2px solid #06c;position:relative}.logo{display:flex;align-items:center}.logo img{width:96px;height:auto}.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.nav-brand{font-size:.9rem;font-weight:500;color:#333;text-decoration:none;padding:.75rem .8rem;white-space:nowrap}.nav-brand:hover{text-decoration:none;color:#06c;background:#f0f7ff}.nav-brand.active{color:#06c}.nav-toggle{display:none}.nav-toggle-label{display:none;box-sizing:border-box;align-items:center;justify-content:center;width:2rem;height:2rem;padding:0;color:#fff;line-height:1;cursor:pointer}.nav-toggle-label svg{display:block;width:1.25rem;height:1.25rem}.nav-menu{display:flex;align-items:center;justify-content:center;gap:0;flex:1;margin-left:1.5rem}.dropdown{position:static}.dropdown-toggle{display:block;padding:.75rem .8rem;color:#333;font-size:.9rem;font-weight:500;white-space:nowrap}.dropdown-expand{display:none}.dropdown-toggle:hover,.dropdown-toggle.active{color:#06c;text-decoration:none;background:#f0f7ff}.mega-panel{display:none;position:absolute;top:calc(100% - 1px);left:0;right:0;background:#fff;border:1px solid #ddd;border-top:2px solid #06c;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:1000;padding:1rem 1.5rem}.mega-panel::before{content:'';position:absolute;top:-32px;left:0;right:0;height:32px}.mega-columns{display:flex;gap:2rem}.mega-column{flex:1}.mega-column-title{font-size:.85rem;font-weight:600;color:#333;padding-bottom:.4rem;border-bottom:2px solid #06c;margin-bottom:.75rem}.mega-column a{display:block;padding:.35rem .5rem;color:#333;font-size:.85rem;border-radius:3px}.mega-column a:hover{background:#f0f7ff;color:#06c;text-decoration:none}.mega-column-subtitle{font-size:.8rem;font-weight:600;color:#333;padding-bottom:.35rem;border-bottom:2px solid #06c;margin-top:1rem;margin-bottom:.5rem}.mega-columns-6{gap:1.2rem}.mega-columns-6 .mega-column-title,.mega-columns-6 .mega-column-subtitle{font-size:.78rem}.mega-columns-6 a{font-size:.8rem;padding:.25rem .4rem}.dropdown:hover .mega-panel{display:block}.nav-utility{display:flex;flex:none;align-items:center;gap:.2rem;margin-inline-start:auto}.nav-utility-link{box-sizing:border-box;display:inline-flex;flex:0 0 1.75rem;align-items:center;justify-content:center;width:1.75rem;height:2rem;padding:0;border:0;background:0 0;color:#fff!important;line-height:1;text-decoration:none;cursor:pointer}.nav-utility-link:hover{border-radius:50%;background:rgba(255,255,255,.12);text-decoration:none}.nav-utility-link svg{display:block;width:1rem;height:1rem}.nav-person svg{fill:#fff}.nav-utility-link:focus-visible,.site-search-close:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.site-search-close svg{width:1.35rem;height:1.35rem}.site-search-dialog{width:min(44rem,calc(100vw - 2rem));max-height:min(82vh,48rem);padding:0;border:0;border-top:4px solid #ff5638;background:#fff;color:#172d39;box-shadow:0 18px 60px rgba(0,0,0,.3)}.site-search-dialog::backdrop{background:rgba(0,24,32,.72)}.site-search-dialog-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid #d8e0e2}.site-search-dialog-header h2{margin:0;color:#002f3b;font-size:1.15rem}.site-search-close{display:grid;place-items:center;width:2.5rem;height:2.5rem;padding:0;border:1px solid #c7d1d4;background:#fff;color:#243b43;cursor:pointer}.site-search-dialog-body{max-height:calc(82vh - 4rem);overflow:auto;padding:1rem 1.25rem 1.5rem}.site-search-dialog .gsc-control-cse{padding:0;border:0;background:0 0}.site-search-dialog table.gsc-search-box{margin:0 0 1rem}.lang-switch{position:relative;flex:0 0 1.75rem;width:1.75rem;height:2rem;margin:0}.lang-current{display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;min-width:0;padding:0;border:0;border-radius:0;background:0 0;color:#fff;font-size:1.1rem;font-weight:600;white-space:nowrap;cursor:pointer}.lang-dropdown{display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #ddd;box-shadow:0 4px 8px rgba(0,0,0,.1);border-radius:4px;z-index:1000;min-width:60px}.lang-dropdown a{display:block;padding:.4rem .8rem;font-size:.8rem;color:#333}.lang-dropdown a:hover{background:#f0f7ff;text-decoration:none}.lang-switch:hover .lang-dropdown{display:block}.lang-switch.open .lang-dropdown{display:block}.breadcrumb{width:100%;max-width:none;margin:0;padding:.7rem max(1.5rem,calc((100% - 1400px)/2 + 1.5rem))1.3rem;background:#002f3b;color:#fff;font-size:.8rem}.breadcrumb a{color:#fff;text-decoration:underline;text-underline-offset:2px}.breadcrumb a:hover{color:#fff;text-decoration-thickness:2px}.breadcrumb .sep{margin:0 .45rem;color:rgba(255,255,255,.72)}.breadcrumb .current{color:#fff;font-weight:600}.page-with-toc{display:flex;gap:2rem;align-items:flex-start}.toc-sidebar{position:sticky;top:4.5rem;width:220px;flex-shrink:0;max-height:calc(100vh - 5.5rem);overflow-y:auto}.toc-nav{border-right:2px solid #e8e8e8;padding-right:1rem}.toc-nav h3{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#999;margin-bottom:.5rem}.toc-nav ul{list-style:none;padding:0;margin:0}.toc-nav li{margin:0}.toc-nav a{display:block;padding:.25rem 0;font-size:.82rem;color:#555;line-height:1.4;border-left:2px solid transparent;padding-left:.5rem;margin-left:-1px;text-decoration:none}.toc-nav a:hover{color:#06c;text-decoration:none;border-left-color:#06c}#TableOfContents a{display:block;text-decoration:none}#TableOfContents a img{max-width:14px;max-height:14px;vertical-align:middle;margin:0 2px}#TableOfContents>ul>li>ul{display:none;padding-left:1.1rem;margin-top:.2rem;border-left:1px solid #e0e0e0}#TableOfContents>ul>li.toc-open>ul{display:block}#TableOfContents>ul>li>ul a{font-size:.74rem;color:#777;padding:.15rem 0}#TableOfContents>ul>li.has-children>a{display:flex;align-items:baseline;justify-content:space-between}#TableOfContents>ul>li.has-children>a::after{content:'+';font-weight:700;font-size:.9rem;color:#999;margin-left:.4rem;flex-shrink:0}#TableOfContents>ul>li.has-children.toc-open>a::after{content:'-';color:#06c}#TableOfContents a.toc-active{color:#06c;font-weight:600}#TableOfContents>ul>li>ul a.toc-active{color:#06c;font-weight:600}article.has-toc{flex:1;min-width:0}article h1,article h2,article h3,article h4{scroll-margin-top:5rem}article h1{font-size:2rem;font-weight:700;color:#1a1a1a;margin:1.5rem 0 1rem;line-height:1.25;border-bottom:2px solid #06c;padding-bottom:.4rem}article h2{font-size:1.5rem;font-weight:600;color:#222;margin:2rem 0 .75rem;line-height:1.3;border-left:4px solid #06c;padding-left:.6rem}article h3{font-size:1.2rem;font-weight:600;color:#333;margin:1.5rem 0 .5rem}article h4{font-size:1.05rem;font-weight:600;color:#444;margin:1.25rem 0 .5rem}article p{margin:.75rem 0;line-height:1.7;color:#444}article ul,article ol{margin:.75rem 0 .75rem 1.5rem;line-height:1.7}article ul{list-style:disc}article ol{list-style:decimal}article li{margin:.3rem 0;color:#444}article li::marker{color:#06c}article a{text-decoration:underline;text-underline-offset:2px}article a:hover{text-decoration-thickness:2px}article blockquote{border-left:4px solid #06c;margin:1rem 0;padding:.5rem 1rem;background:#f8fbff;color:#555;font-style:italic}article code{background:#f1f3f5;padding:.15em .4em;border-radius:3px;font-size:.9em;color:#24292e;border:1px solid #e1e4e8}article .farm-term{font:inherit;color:inherit}article pre{background:#f4f4f8;color:#333;padding:1rem;border-radius:6px;overflow-x:auto;margin:1rem 0;border:1px solid #e0e0e0}article pre code{background:0 0;color:inherit;padding:0}article hr{border:none;border-top:1px solid #e0e0e0;margin:2rem 0}article strong{color:#1a1a1a}article img{max-width:100%;height:auto}article img.inline-icon{display:inline;vertical-align:middle;margin:0 .1em}table{border-collapse:collapse;width:100%;margin:1em 0}th,td{border:1px solid #ccc;padding:.5em .75em;text-align:left;vertical-align:top}th{background-color:#f5f5f5;font-weight:700}tr:nth-child(even){background-color:#fafafa}footer{text-align:center;padding:2rem 1rem;margin-top:2rem;border-top:1px solid #eee;color:#4a4a4a;font-size:.85rem}.sidebar-section{margin-bottom:1rem}.sidebar-section .sidebar-content{display:none}.sidebar-section.open .sidebar-content{display:block}.sidebar-toggle{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#999;margin-bottom:.5rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;user-select:none}.sidebar-toggle::after{content:'+';font-weight:700;font-size:.9rem;color:#999}.sidebar-section.open>.sidebar-toggle::after{content:'-';color:#06c}.sidebar-toggle:hover{color:#06c}.sidebar-toggle.no-collapse{cursor:default}.sidebar-toggle.no-collapse::after,.sidebar-section.open>.sidebar-toggle.no-collapse::after{content:''}.toc-toggle{float:right;display:inline-block;width:1rem;font-weight:700;font-size:.75rem;color:#999;cursor:pointer;text-align:center;margin-right:.2rem}.toc-toggle:hover{color:#06c}.userguide-container{display:flex;height:85vh;width:100%;gap:0}.userguide-container .index-container{width:20%;height:100%}.userguide-container .doc-container{width:80%;height:100%}.userguide-container iframe{width:100%;height:100%;border:none}.userguide-container.single-frame .doc-container{width:100%}.button-row{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0}.btn-action,article a.btn-action{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.9rem;text-decoration:none!important;white-space:nowrap;transition:background .2s}.btn-action:hover,article a.btn-action:hover{background:#0052a3;text-decoration:none!important}.btn-quick-install,article a.btn-quick-install{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.95rem;text-decoration:none!important;margin:1rem 0;transition:background .2s}.btn-quick-install:hover,article a.btn-quick-install:hover{background:#0052a3;text-decoration:none!important}.btn-download,article a.btn-download{display:inline-block;padding:.6rem 1.2rem;background:#06c;color:#fff!important;border-radius:5px;font-weight:600;font-size:.9rem;text-decoration:none!important;white-space:nowrap;transition:background .2s;margin:.3rem 0}.btn-download:hover,article a.btn-download:hover{background:#0052a3;text-decoration:none!important}.chat-fab{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;align-items:center;gap:.25rem;z-index:9999;text-decoration:none!important;transition:transform .2s}.chat-fab:hover{transform:scale(1.08);text-decoration:none!important}.chat-fab img{width:64px;height:64px}.chat-fab-label{background:#1a73e8;color:#fff;font-size:.75rem;font-weight:600;padding:.2rem .6rem;border-radius:4px;white-space:nowrap}@media(max-width:1150px){.toc-sidebar{display:none}.page-with-toc{display:block}article table{display:block;max-width:100%;overflow-x:auto}.nav-toggle-label{display:inline-flex;flex:0 0 2rem;width:2rem;height:2.75rem;margin:0}.nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid #06c;box-shadow:0 4px 12px rgba(0,0,0,.1);margin-left:0;padding:.5rem 0;z-index:999}.nav-toggle:checked~.nav-menu{display:flex}.dropdown{display:flex;flex-wrap:wrap;align-items:center}.dropdown{display:grid;grid-template-columns:minmax(0,1fr)auto;width:100%}.dropdown-toggle{flex:1;padding:.6rem 1.5rem}.dropdown-expand{display:block;width:2.75rem;height:2.75rem;border:0;background:0 0;color:#06c;font-size:1.5rem;font-weight:600;line-height:1;cursor:pointer}.dropdown-expand[aria-expanded=true]{color:#333}.mega-panel{position:static;box-shadow:none;border:none;border-top:1px solid #eee;padding:.5rem 1.5rem}.dropdown:hover .mega-panel{display:none}.dropdown.mobile-open .mega-panel{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;width:100%!important;min-height:0;grid-column:1/-1;background:#fff;max-height:calc(100dvh - var(--mega-panel-top,4rem) - 1rem);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-bottom:5rem!important;box-sizing:border-box}.dropdown.mobile-open .dropdown-expand{font-size:0}.dropdown.mobile-open .dropdown-expand::after{content:"−";font-size:1.5rem}.mega-columns{flex-direction:column;gap:1rem}.site-search-dialog{width:calc(100vw - 1.25rem);max-height:88vh}.site-search-dialog-body{max-height:calc(88vh - 4rem);padding:.75rem}.lang-switch{position:relative;margin-left:.75rem;padding:0}.lang-switch .lang-dropdown{top:100%;right:0;max-height:calc(100dvh - 4rem);overflow-y:auto}.button-row{flex-direction:column}.btn-action{text-align:center}}@media(max-width:1150px){.nav-menu{align-items:stretch}.nav-brand{width:100%;padding:.6rem 1.5rem;text-align:start}}@media(min-width:1151px){.nav-brand,.dropdown-toggle{padding-inline:.55rem}.dropdown-toggle::after{margin-inline-start:.2rem}}@media(max-width:860px){.userguide-container .index-container{display:none}.userguide-container .doc-container{width:100%}}@media(max-width:1150px) and (hover:none) and (pointer:coarse){.dropdown{width:100%}.dropdown.mobile-open .mega-panel{display:block!important;visibility:visible!important;opacity:1!important;position:static!important;left:0!important;right:0!important;width:100%!important;grid-column:1/-1;background-color:#fff!important;z-index:9999!important;box-shadow:0 8px 24px rgba(0,0,0,.15)!important;max-height:calc(100dvh - var(--mega-panel-top,4rem) - 1rem);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:1.5rem 1.25rem 5rem!important;box-sizing:border-box!important}.dropdown.mobile-open .dropdown-expand{font-size:0}.dropdown.mobile-open .dropdown-expand::after{content:"−";font-size:1.5rem}.mega-panel .mega-column,.mega-panel ul{padding-left:.5rem}}header{background:#002f3b;border-radius:8px 8px 0 0}.navbar{max-width:1800px;padding:.85rem clamp(1rem,2vw,2rem);border-bottom:0}html[dir=rtl] .nav-menu{margin-left:0;margin-right:2rem}.logo img{filter:brightness(0)invert(1)}.nav-brand,.dropdown-toggle,.nav-actions>a:not(.btn-quote){color:#fff}.nav-brand.active,.dropdown-toggle.active{color:#fff;background:0 0;border-bottom:1px solid #ff5638}.nav-brand:hover,.dropdown-toggle:hover{color:#fff;background:0 0}.nav-actions>a.nav-contact{color:#fff;font-size:.9rem;font-weight:500;padding:.75rem .8rem;margin-right:1rem;white-space:nowrap;text-decoration:none}.nav-actions>a.nav-contact:hover{color:#fff;background:0 0;text-decoration:none}.dropdown-toggle::after{content:"";display:inline-block;width:.42rem;height:.42rem;margin-block-end:.18rem;margin-inline-start:.45rem;border-right:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg)}.nav-actions{gap:.5rem;display:none}.nav-contact-mobile{display:none}.nav-pricing-desktop{display:inline-flex;align-items:center;justify-content:center;margin-inline-end:.5rem;white-space:nowrap}.nav-pricing-mobile{display:none}.nav-pricing-desktop,.nav-pricing-mobile{box-sizing:border-box;width:3.25rem;height:3.25rem;padding:0}.btn-quote.nav-pricing-desktop,.btn-quote.nav-pricing-mobile{padding:0;background:0 0;color:#fff!important}.btn-quote.nav-pricing-desktop:hover,.btn-quote.nav-pricing-mobile:hover{background:rgba(255,255,255,.12);color:#fff!important}.nav-pricing-desktop span,.nav-pricing-mobile span{font-size:1.5rem;font-weight:600;line-height:1}.nav-pricing-desktop:focus-visible,.nav-pricing-mobile:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.nav-contact-desktop{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;width:3.25rem;height:3.25rem;margin-inline:.25rem .5rem;color:#fff!important;text-decoration:none}.nav-contact-desktop svg{width:1.35rem;height:1.35rem}.nav-contact-desktop:hover{background:rgba(255,255,255,.12);color:#fff!important}.nav-contact-desktop:focus-visible{outline:2px solid #ff5638;outline-offset:3px}.btn-quote{background:#fff;color:#002f3b!important;border-radius:0;padding:.8rem 1.5rem;font-size:1rem;font-weight:500}.btn-quote:hover{background:#f2f5f6;color:#002f3b!important}.lang-switch{margin-left:0}.lang-current{color:#fff;border-color:rgba(255,255,255,.8);border-radius:0;font-size:1rem;font-weight:400}@media(max-width:1150px){html[dir=rtl] .nav-menu{margin:0}.nav-menu{background:#002f3b;border-bottom-color:rgba(255,255,255,.35)}.dropdown-toggle::after{display:none}.dropdown-toggle,.dropdown-toggle.active,.nav-brand.active{color:#fff}.dropdown-expand,.dropdown-expand[aria-expanded=true]{color:#fff}.nav-contact{margin-right:0}.nav-utility{gap:0;margin-inline-start:auto}.nav-utility-link{flex-basis:clamp(1.75rem,8vw,2.4rem);width:clamp(1.75rem,8vw,2.4rem);height:2.75rem}.lang-switch{flex-basis:clamp(1.75rem,8vw,2.4rem);width:clamp(1.75rem,8vw,2.4rem);height:2.75rem;margin:0}.lang-current{min-height:0;font-size:.95rem}}</style>
+
+    
+    
+    <script>
+      
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QFF93L1P94');
+
+      function __loadGtag() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-QFF93L1P94";
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(__loadGtag, { timeout: 3000 });
+      } else {
+        window.addEventListener('load', __loadGtag);
+      }
+    </script>
+    
+    
+</head>
+<body>
+    
+    
+    <header>
+    <nav class="navbar">
+        <a href="https://eviden.com" class="logo" target="_blank" rel="noopener">
+            <img width="265" height="53" src="../../wp-content/uploads/2026/08/logo_eviden_orange-256w.png" alt="Eviden Logo">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="nav-menu">
+            
+            <a href="../../" class="nav-brand">SafeKit</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            <a href="../../product/" class="nav-brand">Product</a>
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../solutions/" class="dropdown-toggle active">Solutions</a><button class="dropdown-expand" type="button" aria-label="Show Solutions submenu" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">New application (real-time replication and failover)</h4>
+                                
+                                <a href="../../solutions/windows-high-availability-software-synchronous-replication-failover/">Windows (mirror.safe)</a>
+                                
+                                
+                                <a href="../../solutions/linux-high-availability-software-synchronous-replication-failover/">Linux (mirror.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">New application (network load balancing and failover)</h4>
+                                
+                                <a href="../../solutions/windows-load-balancing-failover/">Windows (farm.safe)</a>
+                                
+                                
+                                <a href="../../solutions/linux-load-balancing-failover/">Linux (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Full VM or container real-time replication and failover</h4>
+                                
+                                <a href="../../solutions/hyper-v-replication-automatic-failover-load-balancing/">Hyper-V (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/">KVM (kvm.safe)</a>
+                                
+                                
+                                <a href="../../solutions/docker-container-high-availability-cluster-synchronous-replication-failover/">Docker (mirror.safe)</a>
+                                
+                                
+                                <a href="../../solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/">Podman (mirror.safe)</a>
+                                
+                                
+                                <a href="../../solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/">Kubernetes (k3s.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Database (real-time replication and failover)</h4>
+                                
+                                <a href="../../solutions/sql-server-high-availability-synchronous-replication-failover/">Microsoft SQL Server (sqlserver.safe)</a>
+                                
+                                
+                                <a href="../../solutions/postgresql-high-availability-synchronous-replication-failover/">PostgreSQL (postgresql.safe)</a>
+                                
+                                
+                                <a href="../../solutions/oracle-high-availability-synchronous-replication-failover/">Oracle (oracle.safe)</a>
+                                
+                                
+                                <a href="../../solutions/mysql-high-availability-synchronous-replication-failover/">MySQL (mysql.safe)</a>
+                                
+                                
+                                <a href="../../solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/">MariaDB (mysql.safe)</a>
+                                
+                                
+                                <a href="../../solutions/firebird-high-availability-synchronous-replication-failover/">Firebird (firebird.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Web (network load balancing and failover)</h4>
+                                
+                                <a href="../../solutions/apache-load-balancing-failover-2/">Apache (apache_farm.safe)</a>
+                                
+                                
+                                <a href="../../solutions/iis-load-balancing-failover/">IIS (iis_farm.safe)</a>
+                                
+                                
+                                <a href="../../solutions/nginx-the-simplest-load-balancing-cluster-with-failover/">NGINX (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                
+                                <a href="../../solutions/aws-high-availability-cluster-synchronous-replication-failover/">AWS (mirror.safe)</a>
+                                
+                                
+                                <a href="../../solutions/aws-load-balancing-cluster-failover/">AWS (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                
+                                <a href="../../solutions/gcp-high-availability-cluster-synchronous-replication-failover/">GCP (mirror.safe)</a>
+                                
+                                
+                                <a href="../../solutions/gcp-load-balancing-cluster-failover/">GCP (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                
+                                <a href="../../solutions/azure-high-availability-cluster-synchronous-replication-failover/">Azure (mirror.safe)</a>
+                                
+                                
+                                <a href="../../solutions/azure-load-balancing-cluster-failover/">Azure (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Other clouds</h4>
+                                
+                                <a href="../../solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/">All cloud solutions</a>
+                                
+                                
+                                <a href="../../solutions/cloud-high-availability-cluster-synchronous-replication-failover/">Cloud (mirror.safe)</a>
+                                
+                                
+                                <a href="../../solutions/cloud-load-balancing-cluster-failover/">Cloud (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Physical security (real-time replication and failover)</h4>
+                                
+                                <a href="../../solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/">Milestone XProtect (milestone.safe)</a>
+                                
+                                
+                                <a href="../../solutions/nedap-high-availability-synchronous-replication-failover/">Nedap (nedap.safe)</a>
+                                
+                                
+                                <a href="../../solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/">Genetec SQL Server (sqlserver.safe)</a>
+                                
+                                
+                                <a href="../../solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Bosch AMS (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Bosch BIS (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Bosch BVMS (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/">Hanwha Vision (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/">Hanwha Wisenet (hyperv.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Siemens (real-time replication and failover)</h4>
+                                
+                                <a href="../../solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/">Siemens Siveillance suite (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/">Siemens Desigo CC (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/">Siemens Siveillance VMS (SiveillanceVMS.safe)</a>
+                                
+                                
+                                <a href="../../solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">Siemens SiPass (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/siemens-siport-redundancy-high-availability-cluster-active-active/">Siemens SIPORT (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/">Siemens SIMATIC PCS 7 (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/">Siemens SIMATIC WinCC (hyperv.safe)</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../use-cases/" class="dropdown-toggle">Use Cases</a><button class="dropdown-expand" type="button" aria-label="Show Use Cases submenu" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">SafeKit</h4>
+                                
+                                <a href="../../use-cases/high-availability-software-ha-cluster-windows-linux/">Elevator pitch</a>
+                                
+                                <a href="../../use-cases/">Customer use cases</a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Use cases</h4>
+                                
+                                <a href="../../use-cases/best-worst-use-cases-high-availability/">Best/Worst Use Cases</a>
+                                
+                                
+                                <a href="../../use-cases/application-clustering-software/">OEM use case for a software publisher</a>
+                                
+                                
+                                <a href="../../use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/">Edge HA</a>
+                                
+                                
+                                <a href="../../use-cases/business-continuity-software/">Distributed Enterprise use case</a>
+                                
+                                
+                                <a href="../../use-cases/business-continuity-and-disaster-recovery-software/">Remote sites and disaster recovery use case</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">High Availability in Physical Security Market</h4>
+                                
+                                <a href="../../use-cases/physical-security-software-redundancy/">Physical Security Software</a>
+                                
+                                
+                                <a href="../../use-cases/video-management-software-vms-redundancy/">Video Management Software (VMS)</a>
+                                
+                                
+                                <a href="../../use-cases/electronic-access-control-software-eacs-redundancy/">Electronic Access Control Software (EACS)</a>
+                                
+                                
+                                <a href="../../use-cases/building-management-system-software-bms-redundancy/">Building Management System Software (BMS)</a>
+                                
+                                
+                                <a href="../../use-cases/scada-software-redundancy-high-availability/">SCADA Software</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../architectures/" class="dropdown-toggle">Architectures</a><button class="dropdown-expand" type="button" aria-label="Show Architectures submenu" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Basic architectures</h4>
+                                
+                                <a href="../../architectures/file-replication-byte-level-with-failover-mirror-cluster/">Mirror Cluster</a>
+                                
+                                
+                                <a href="../../architectures/network-load-balancing-cluster/">Farm Cluster</a>
+                                
+                                
+                                <a href="../../architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/">SafeKit Console</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Advanced architectures</h4>
+                                
+                                <a href="../../architectures/clustering-software-load-balancing-mirroring/">Farm+Mirror Cluster</a>
+                                
+                                
+                                <a href="../../architectures/active-active-cluster-real-time-replication/">Active Active Cluster with Replication</a>
+                                
+                                
+                                <a href="../../architectures/n-1-redundancy/">N-1 Cluster</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../best-practises/" class="dropdown-toggle">Best Practices</a><button class="dropdown-expand" type="button" aria-label="Show Best Practices submenu" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">High availability best practises</h4>
+                                
+                                <a href="../../best-practises/high-availability-architectures-and-best-practices/">High Availability Architectures & Software Clustering Best Practices</a>
+                                
+                                
+                                <a href="../../best-practises/shared-nothing-architecture-vs-shared-disk-architecture/">Shared Nothing vs. Shared Disk Architecture: Choosing the Best HA Cluster</a>
+                                
+                                
+                                <a href="../../best-practises/clustering-software-vs-hardware-clustering/">Software clustering vs hardware clustering</a>
+                                
+                                
+                                <a href="../../best-practises/vm-ha-vs-application-ha/">VM HA vs. Application HA</a>
+                                
+                                
+                                <a href="../../best-practises/high-availability-disaster-recovery-hadr/">High Availability and Disaster Recovery (HADR)</a>
+                                
+                                
+                                <a href="../../best-practises/high-availability-cluster-vs-fault-tolerant-system/">HA Cluster vs. Fault Tolerant System: Choosing the Right Redundancy Strategy</a>
+                                
+                                
+                                <a href="../../best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/">How to Implement Redundant Servers with Simple HA Software</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Replication best practises</h4>
+                                
+                                <a href="../../best-practises/data-replication-techniques/">Data Replication Techniques for High Availability: A Complete Comparison</a>
+                                
+                                
+                                <a href="../../best-practises/synchronous-replication-vs-asynchronous-replication/">Synchronous vs. Asynchronous Replication: How SafeKit Ensures Zero Data Loss?</a>
+                                
+                                
+                                <a href="../../best-practises/byte-level-file-replication-vs-block-level-disk-replication/">Byte-Level File Replication vs. Block-Level Disk Replication for HA</a>
+                                
+                                
+                                <a href="../../best-practises/alternative-always-on-sql-server-express-standard-editions/">Alternative to SQL Server Always On: HA for Express and Standard Editions</a>
+                                
+                                
+                                <a href="../../best-practises/how-to-upgrade-an-application-protected-by-safekit/">Upgrading an Application Protected by SafeKit in an HA Cluster</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Clustering best practises</h4>
+                                
+                                <a href="../../best-practises/how-a-virtual-ip-address-works/">How a Virtual IP Address (VIP) Works in High Availability Clustering?</a>
+                                
+                                
+                                <a href="../../best-practises/power-outage-and-network-isolation-in-a-cluster/">Handling Power Outages and Network Isolation in a HA Cluster</a>
+                                
+                                
+                                <a href="../../best-practises/heartbeat-failover-quorum-windows-linux-cluster/">Heartbeat, failover and quorum in a cluster</a>
+                                
+                                
+                                <a href="../../best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/">SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison</a>
+                                
+                                
+                                <a href="../../best-practises/what-is-rpo-and-rto-with-examples/">What are RPO and RTO? Definitions, Examples, and HA Strategies</a>
+                                
+                                
+                                <a href="../../best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/">Microsoft NLB vs SafeKit network load balancing</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../quick-install/" class="dropdown-toggle">Quick Install</a><button class="dropdown-expand" type="button" aria-label="Show Quick Install submenu" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns mega-columns-6">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">New application (real-time replication and failover)</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/">Windows (mirror.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/">Linux (mirror.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">New application (network load balancing and failover)</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/">Windows (farm.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/">Linux (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Full VM or container</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-hyper-v/">Hyper-V (hyperv.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-kvm/">KVM (kvm.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-docker/">Docker (mirror.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-podman/">Podman (mirror.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-kubernetes/">Kubernetes (k3s.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Database (real-time replication and failover)</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/">Microsoft SQL Server (sqlserver.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-postgresql/">PostgreSQL (postgresql.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-oracle/">Oracle (oracle.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-mysql/">MySQL (mysql.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-mariadb/">MariaDB (mysql.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-firebird/">Firebird (firebird.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Web (network load balancing and failover)</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/">Apache (apache_farm.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/">IIS (iis_farm.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/">NGINX (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Amazon AWS</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/">AWS (mirror.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/">AWS (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Google GCP</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/">GCP (mirror.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/">GCP (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Microsoft Azure</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/">Azure (mirror.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/">Azure (farm.safe)</a>
+                                
+                                <h4 class="mega-column-subtitle">Other clouds</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/">Cloud (mirror.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/">Cloud (farm.safe)</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Physical security</h4>
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/">Milestone XProtect (milestone.safe)</a>
+                                
+                                
+                                <a href="../../quick-install/safekit-quick-installation-guide-with-nedap/">Nedap (nedap.safe)</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+                
+                
+                
+                
+                <div class="dropdown">
+                    <a href="../../resources/" class="dropdown-toggle">Resources</a><button class="dropdown-expand" type="button" aria-label="Show Resources submenu" aria-expanded="false">+</button>
+                    <div class="mega-panel">
+                        <div class="mega-columns">
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Free trial</h4>
+                                
+                                <a href="../../resources/safekit-free-trial/">SafeKit free trial</a>
+                                
+                                
+                                <a href="../../resources/high-availability-and-load-balancing-cluster-key/">One-month license key</a>
+                                
+                                
+                                <a href="../../resources/high-availability-solutions-ha-solutions-videos/">Demonstrations</a>
+                                
+                                
+                                <a href="../../resources/safekit-support/">Support</a>
+                                
+                                
+                                <a href="../../resources/safekit-on-line-training/">Free Training & Certification</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Technical documentations</h4>
+                                
+                                <a href="../../quick-install/">SafeKit quick installation guides</a>
+                                
+                                
+                                <a href="../../resources/safekit-user-guide-82/">SafeKit user's guide</a>
+                                
+                                
+                                <a href="../../resources/safekit-release-notes-8-2/">SafeKit release notes</a>
+                                
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf" target="_blank" rel="noopener">SafeKit SRB</a>
+                                <a href="https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf" target="_blank" rel="noopener">Knowledge Base</a>
+                                
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Product information</h4>
+                                <a href="../../wp-content/uploads/documents/high-availability-overview.pdf" target="_blank" rel="noopener">Datasheet</a>
+                                <a href="../../wp-content/uploads/documents/wp-safekit-en.pdf" target="_blank" rel="noopener">White Paper - Product</a>
+                                <a href="../../wp-content/uploads/documents/wp-hadecision-en.pdf" target="_blank" rel="noopener">White Paper - High Availability Guide</a>
+                                
+                                <a href="../../resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/">Technical Reference for RFI and RFP</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="nav-utility" role="group" aria-label="Quick links">
+            <a href="../../resources/safekit-free-trial/" class="nav-utility-link nav-trial" aria-label="SafeKit free trial" title="SafeKit free trial"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg></a>
+            <a href="../../resources/high-availability-and-load-balancing-cluster-key/" class="nav-utility-link nav-trial-key" aria-label="Free trial key" title="Free trial key"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="12" width="11.5" height="9" rx="2.5" fill="none" stroke="#fff" stroke-width="2.25"/><path d="M11 12V7a5 5 0 0 1 10 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.25"/></svg></a>
+            <a href="../../safekit-pricing/" class="nav-utility-link nav-pricing" aria-label="Pricing" title="Pricing"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2v20M16 6.5c-.8-.9-2-1.5-3.8-1.5-2.3 0-3.8 1.1-3.8 2.9 0 1.6 1.2 2.5 3.5 3l1.8.4c2 .4 3.1 1.2 3.1 2.8 0 1.9-1.7 3-4.3 3-2 0-3.6-.7-4.7-1.9" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/></svg></a>
+            <a href="../../contact-us-for-safekit/" class="nav-utility-link nav-person" aria-label="Contact" title="Contact"><svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></a>
+            <a href="../../resources/safekit-support/" class="nav-utility-link nav-support" aria-label="SafeKit AI support" title="SafeKit AI support"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v2M9 3h6" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/><rect x="4" y="6" width="16" height="15" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="9" cy="12" r="1.25" fill="#fff"/><circle cx="15" cy="12" r="1.25" fill="#fff"/><path d="M9 17h6M2 11v4m20-4v4" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/></svg></a>
+            <button class="nav-utility-link nav-search-toggle" id="nav-search-open" type="button" aria-label="Open SafeKit search" title="Search" aria-haspopup="dialog" aria-controls="site-search-dialog"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="#fff" stroke-width="2.5"/><path d="m15.5 15.5 5 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/></svg></button>
+            
+            <div class="lang-switch">
+                <span class="lang-current">EN</span>
+                <div class="lang-dropdown">
+                    
+                    
+                    
+                    
+                    <a href="../../fr/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">FR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../ja/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">JA</a>
+                    
+                    
+                    
+                    
+                    <a href="../../zh-hans/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">ZH</a>
+                    
+                    
+                    
+                    
+                    <a href="../../ar/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">AR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../de/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">DE</a>
+                    
+                    
+                    
+                    
+                    <a href="../../es/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">ES</a>
+                    
+                    
+                    
+                    
+                    <a href="../../it/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">IT</a>
+                    
+                    
+                    
+                    
+                    <a href="../../ko/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">KO</a>
+                    
+                    
+                    
+                    
+                    <a href="../../pt-br/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">BR</a>
+                    
+                    
+                    
+                    
+                    <a href="../../pt-pt/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">PT</a>
+                    
+                    
+                    
+                    
+                    <a href="../../nl/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/">NL</a>
+                    
+                    
+                </div>
+            </div>
+            
+            <label for="nav-toggle" class="nav-toggle-label"><span class="visually-hidden">Open menu</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/></svg></label>
+        </div>
+    </nav>
+    <dialog class="site-search-dialog" id="site-search-dialog" aria-labelledby="site-search-title">
+        <div class="site-search-dialog-header">
+            <h2 id="site-search-title">Search SafeKit</h2>
+            <button class="site-search-close" type="button" aria-label="Close search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="m18 6-12 12M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="site-search-dialog-body">
+            <div class="gcse-search" data-linkTarget="_self"></div>
+        </div>
+    </dialog>
+    <script>
+        (() => {
+            const openButton = document.getElementById("nav-search-open");
+            const dialog = document.getElementById("site-search-dialog");
+            const closeButton = dialog.querySelector(".site-search-close");
+            let searchScriptLoaded = false;
+
+            openButton.addEventListener("click", () => {
+                dialog.showModal();
+                if (searchScriptLoaded) return;
+
+                searchScriptLoaded = true;
+                const script = document.createElement("script");
+                script.async = true;
+                script.src = "https://cse.google.com/cse.js?cx=529850561931c48b7";
+                script.addEventListener("error", () => {
+                    searchScriptLoaded = false;
+                });
+                document.head.appendChild(script);
+            });
+
+            closeButton.addEventListener("click", () => dialog.close());
+            dialog.addEventListener("click", (event) => {
+                if (event.target === dialog) dialog.close();
+            });
+            dialog.addEventListener("close", () => openButton.focus());
+        })();
+    </script>
+</header>
+
+    
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+
+    <a href="../../">SafeKit</a>
+    
+        
+        
+        
+        
+        <span class="sep">›</span>
+        <a href="../../solutions/">SafeKit Solutions</a>
+        
+    
+    <span class="sep">›</span>
+    <span class="current">High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster</span>
+
+</nav>
+
+    
+    <main>
+        
+
+
+
+
+
+<div class="page-with-toc">
+    
+    <aside class="toc-sidebar">
+        <nav class="toc-nav">
+            
+            <div class="sidebar-section open" id="sidebar-toc">
+                <h3 class="sidebar-toggle no-collapse" data-target="sidebar-toc"><a id="toc-label" href="#">On this page</a></h3>
+                <div class="sidebar-content">
+                    <nav id="TableOfContents"></nav>
+                </div>
+            </div>
+            
+            
+        </nav>
+    </aside>
+    
+    <article class="has-toc">
+        
+        <h1 id="high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster">High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster</h1>
+<h2 id="safekit-hyperv-tco">SafeKit for Siemens SiPass: 2-Node SANless Hyper-V Cluster</h2>
+<p><strong>SafeKit for Siemens SiPass</strong> delivers seamless <strong>High Availability</strong> while significantly reducing TCO (Total Cost of Ownership). By eliminating the hardware and operational overhead of traditional clustering, SafeKit offers a lean, 2-node HA alternative to complex virtualization stacks.</p>
+<ul>
+<li><strong>Zero SAN Investment for HA:</strong> Achieve full redundancy using shared-nothing architecture. It works with standard local disks, removing the need for expensive SAN hardware, fiber channel switches, and specialized storage maintenance usually required for High Availability.</li>
+<li><strong>Hardware-Agnostic Redundancy:</strong> Avoid vendor lock-in. Build your High Availability cluster using any server brand or internal storage type, extending the lifecycle of existing hardware and lowering replacement costs.</li>
+<li><strong>Simplified HA Operations:</strong> No specialized &ldquo;clustering expert&rdquo; is required to maintain uptime. SafeKit’s plug-and-play modules and unified web console reduce the man-hours needed for HA deployment and daily monitoring.</li>
+<li><strong>Cost-Predictable Licensing:</strong> Unlike subscription-heavy models, SafeKit provides High Availability via a one-time perpetual license. This ensures predictable budgeting and eliminates the risk of annual price hikes for critical infrastructure.</li>
+<li><strong>True 2-Node HA Efficiency:</strong> Most High Availability solutions require a third &ldquo;witness&rdquo; node to prevent split-brain. SafeKit delivers a robust 2-node cluster, saving 33% on hardware, power, and rack space from day one.</li>
+</ul>
+<p>By consolidating <strong>High Availability</strong> into a lightweight software layer, SafeKit delivers enterprise-grade redundancy and business continuity at a fraction of the cost of traditional virtualization suites.</p>
+<p><img src="../../wp-content/uploads/2026/01/safekit-vm-repli-720-720_hu_7ccf0528cb2c6fda.jpg"
+     srcset="../../wp-content/uploads/2026/01/safekit-vm-repli-720-720_hu_fbd81fa8d02c02a3.jpg 256w, ../../wp-content/uploads/2026/01/safekit-vm-repli-720-720_hu_7ccf0528cb2c6fda.jpg 512w, ../../wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg 720w"
+     sizes="(max-width: 512px) 100vw, 512px"
+     width="512" height="512"
+     alt="SafeKit High Availability Siemens SiPass Cluster Architecture" loading="lazy" decoding="async"></p>
+<p><strong>SafeKit HA Cluster for Siemens SiPass</strong></p>
+<p><a class="btn-quick-install" href="../../quick-install/safekit-quick-installation-guide-with-hyper-v/">⚡ Quick Hyper-V HA cluster installation guide &gt;</a></p>
+<h2 id="toc">Table of Contents</h2>
+<ul>
+<li><a href="#safekit-hyperv-ha-cluster">How the SafeKit software simply implements a Siemens SiPass high availability cluster without shared storage on a SAN?</a></li>
+<li><a href="#safekit-hyperv-ha-how-it-works">How the SafeKit Siemens SiPass cluster works?</a></li>
+<li><a href="#safekit-ha-limitations">SafeKit High Availability Limitations</a></li>
+<li><a href="#safekit-hyperv-ha-comparison">Comparison: SafeKit for Siemens SiPass vs. Native Hyper-V Clustering</a></li>
+<li><a href="#videoguide-safekit-hyperv-cluster">SafeKit video guide for Siemens SiPass</a></li>
+<li><a href="#hub">🔍 SafeKit High Availability Navigation Hub</a></li>
+</ul>
+<h2 id="safekit-hyperv-ha-cluster">How the SafeKit software simply implements a Siemens SiPass high availability cluster without shared storage on a SAN?</h2>
+<h3 id="what-is-the-safekit-ha-solution-for-siemens-sipass">What is the SafeKit HA solution for Siemens SiPass?</h3>
+<p>SafeKit brings high availability to Siemens SiPass between two servers of any brand.</p>
+<p>This article explains how to implement quickly a Siemens SiPass cluster without shared storage on a SAN and without specific skills.</p>
+<p>The principle of the solution is to put the critical application in a virtual machine under Hyper-V. SafeKit implements <strong>real-time replication and automatic failover of the virtual machine</strong>.</p>
+<p>Note that Hyper-V is the free hypervisor included in all Windows versions (even Windows for PC).</p>
+<h3 id="how-can-i-run-multiple-applications-in-a-high-availability-siemens-sipass-cluster-without-a-san">How can I run multiple applications in a high-availability Siemens SiPass cluster without a SAN?</h3>
+<p>Several applications can be put in <strong>several virtual machines replicated and restarted by SafeKit</strong>. You have the possibility to migrate each virtual machine between both servers with the SafeKit console and thus balance the load in an <strong>active-active cluster</strong>.</p>
+<h3 id="should-i-choose-high-availability-at-the-application-level-or-the-virtual-machine-vm-level">Should I choose high availability at the application level or the virtual machine (VM) level?</h3>
+<p>With SafeKit, you have the flexibility to choose the redundancy model that fits your needs.</p>
+<p><strong>VM-level redundancy</strong> (for Hyper-V or KVM) is the simplest to implement as it replicates the entire virtual machine, requiring no knowledge of the internal application.</p>
+<p>Alternatively, <strong>application-level redundancy</strong> is more granular; it only replicates specific data folders and restarts the application services rather than the entire OS.</p>
+<p>While VM-level HA is easier to set up, application-level HA is hypervisor-agnostic and can run across physical, virtual, or cloud environments.</p>
+<h3 id="what-are-the-distinctive-advantages-of-safekit-for-hyper-v-high-availability-compared-to-competitors">What are the distinctive advantages of SafeKit for Hyper-V high availability compared to competitors?</h3>
+<p>SafeKit differentiates itself from traditional Hyper-V clustering solutions through its <strong>shared-nothing architecture</strong> and simplified management. While most competitors require a central SAN or vSAN to manage VM failover, SafeKit provides:</p>
+<ul>
+<li><strong>Integrated Real-Time Replication:</strong> Data synchronization is built directly into the solution, ensuring that Siemens SiPass virtual machines are mirrored synchronously without the overhead of managing a separate storage layer.</li>
+<li><strong>Simplified 2-Node Clustering:</strong> Unlike enterprise stacks that recommend a 3-node &ldquo;witness&rdquo; quorum, SafeKit delivers full high availability with just two redundant servers. <a href="../../best-practises/heartbeat-failover-quorum-windows-linux-cluster/">Learn more about our heartbeat and quorum mechanism</a>.</li>
+<li><strong>Unified Management:</strong> Administrators can manage VM failover, replication, and load balancing through a single SafeKit console , making it accessible to teams without specialized clustering expertise.</li>
+<li><strong>Custom Checkers:</strong> SafeKit goes beyond hardware monitoring; it utilizes <strong>custom checkers</strong> to detect if a VM has crashed, automatically triggering a local restart or a failover to the redundant node. The system is also highly extensible, allowing for the easy integration of new, user-defined custom checkers tailored to your specific environment.</li>
+</ul>
+<h3 id="how-does-safekit-reduce-the-tco-total-cost-of-ownership-compared-to-vmware-type-solutions">How does SafeKit reduce the TCO (Total Cost of Ownership) compared to VMware-type solutions?</h3>
+<p>Unlike most high-availability solutions on the market, SafeKit is designed to operate with the <strong>absolute minimum hardware overhead</strong> , without compromising security or reliability. Key savings compared to VMware or complex open-source alternatives include:</p>
+<ul>
+<li><strong>True 2-Node Efficiency:</strong> While most enterprise stacks or open-source solutions require a 3-node &ldquo;witness&rdquo; quorum to prevent split-brain, SafeKit delivers full high availability with just <strong>two redundant servers</strong>.</li>
+<li><strong>Zero Storage Costs:</strong> SafeKit uses a shared-nothing architecture that works with local disks, removing the need for expensive SAN or vSAN hardware and specialized storage networking.</li>
+<li><strong>No Forced Subscriptions:</strong> Unlike modern subscription-only models, SafeKit offers a <strong>perpetual license</strong>. You own your software, avoiding the &ldquo;subscription trap&rdquo; and unpredictable annual price hikes.</li>
+<li><strong>Low Operational Expense (OPEX):</strong> As a plug-and-play solution, it requires no specialized training or expensive external consultancy for maintenance, unlike complex open-source clustering tools.</li>
+<li><strong>CPU-Independent Pricing:</strong> Licensing is independent of the number of CPUs or cores. With just two licenses for two nodes, you can protect multiple Hyper-V virtual machines.</li>
+</ul>
+<h3 id="is-it-possible-to-set-up-a-siemens-sipass-cluster-without-san-or-complex-clustering-skills">Is it possible to set up a Siemens SiPass cluster without SAN or complex clustering skills?</h3>
+<p>Yes. This article explains how to <a href="../../quick-install/safekit-quick-installation-guide-with-hyper-v/">quickly implement a Hyper-V cluster</a> without the need for specialized SAN management or complex HA clustering skills. By using SafeKit’s <strong>automated failover scripts</strong> to handle the replication and restart of <strong>Siemens SiPass</strong> virtual machines, you get a robust redundancy solution that is significantly simpler to deploy and maintain than traditional enterprise virtualization stacks.</p>
+<h3 id="beyond-siemens-sipass-which-applications-and-environments-can-safekit-protect">Beyond Siemens SiPass, which applications and environments can SafeKit protect?</h3>
+<p>SafeKit is a versatile high-availability solution that extends far beyond standard virtual machine failover. It enables <strong>synchronous real-time replication</strong> and automatic failover for a wide range of critical workloads, including:</p>
+<ul>
+<li><strong>Virtual &amp; Physical Environments:</strong> Complete Hyper-V or KVM virtual machines.</li>
+<li><strong>Container Orchestration:</strong> Docker, Podman, and K3s (Kubernetes) environments.</li>
+<li><strong>Data &amp; Services:</strong> Individual file directories, services, and various databases.</li>
+<li><strong>Cloud Infrastructure:</strong> High availability for Cloud applications.</li>
+</ul>
+<p>SafeKit also provides <strong>Farm Clusters</strong> with native <strong>Network Load Balancing and Failover</strong> for stateless applications like <strong>Web Servers</strong>.</p>
+<p>💡 <a href="../../solutions/">Explore the full list of supported HA solutions here.</a></p>
+<h2 id="safekit-hyperv-ha-how-it-works">How the SafeKit Siemens SiPass cluster works?</h2>
+<p>The following steps are described for one Siemens SiPass virtual machine inside one mirror module. Each replicated virtual machine runs in an independent mirror module (with a maximum of 32 virtual machines) with a primary server that can be either the Hyper-V server 1 or the Hyper-V server 2.</p>
+<h3 id="1-how-does-real-time-replication-work-for-siemens-sipass">1. How does real-time replication work for Siemens SiPass?</h3>
+<p>Server 1 (PRIM) runs the Siemens SiPass VM (virtual machine). SafeKit replicates in real time the VM files (virtual hard disk, VM configuration). Only changes made in the files are replicated across the network.</p>
+<p><img src="../../wp-content/uploads/2023/02/safekit-prim-second-300_hu_22e4451c4ec3432a.png"
+     srcset="../../wp-content/uploads/2023/02/safekit-prim-second-300_hu_452d41397c15fc01.png 150w, ../../wp-content/uploads/2023/02/safekit-prim-second-300_hu_22e4451c4ec3432a.png 300w, ../../wp-content/uploads/2023/02/safekit-prim-second-300_hu_f953256978028ff2.png 600w, ../../wp-content/uploads/2023/02/safekit-prim-second-300.png 1483w"
+     sizes="(max-width: 300px) 100vw, 300px"
+     width="300" height="120"
+     alt="File replication at byte level in a mirror Siemens SiPass cluster" loading="lazy" decoding="async"></p>
+<p>The replication is <a href="../../best-practises/synchronous-replication-vs-asynchronous-replication/">synchronous</a> with no data loss on failure contrary to asynchronous replication.</p>
+<p>You just have to configure the VM directory name in SafeKit. There are no pre-requisites on disk organization. The directory may be located in the system disk.</p>
+<h3 id="2-what-happens-during-an-automatic-siemens-sipass-failover">2. What happens during an automatic Siemens SiPass failover?</h3>
+<p>When Server 1 fails, Server 2 takes over. SafeKit restarts the Siemens SiPass VM on Server 2. Hyper-V finds the files replicated by SafeKit uptodate on Server 2.<br>
+The VM continues to run on Server 2 by locally modifying its files that are no longer replicated to Server 1.</p>
+<p><img src="../../wp-content/uploads/2023/02/safekit-stop-alone-300_hu_238f07372a871a93.png"
+     srcset="../../wp-content/uploads/2023/02/safekit-stop-alone-300_hu_4a35d63f8c6c480c.png 150w, ../../wp-content/uploads/2023/02/safekit-stop-alone-300_hu_238f07372a871a93.png 300w, ../../wp-content/uploads/2023/02/safekit-stop-alone-300_hu_a7fcf5d9975e76a5.png 600w, ../../wp-content/uploads/2023/02/safekit-stop-alone-300.png 1456w"
+     sizes="(max-width: 300px) 100vw, 300px"
+     width="300" height="122"
+     alt="Failover of Siemens SiPass in a mirror cluster" loading="lazy" decoding="async"></p>
+<p>The failover time is equal to the fault-detection time (set to 30 seconds by default) plus the VM reboot time.</p>
+<h3 id="3-how-is-data-synchronized-after-a-siemens-sipass-failure">3. How is data synchronized after a Siemens SiPass failure?</h3>
+<p>Failback involves restarting Server 1 after fixing the problem that caused it to fail. SafeKit automatically resynchronizes the VM files.</p>
+<p><img src="../../wp-content/uploads/2023/02/safekit-resynchro-alone-300_hu_77791f3b46b91361.png"
+     srcset="../../wp-content/uploads/2023/02/safekit-resynchro-alone-300_hu_129d83052c7ee5a1.png 150w, ../../wp-content/uploads/2023/02/safekit-resynchro-alone-300_hu_77791f3b46b91361.png 300w, ../../wp-content/uploads/2023/02/safekit-resynchro-alone-300_hu_fc476e3544bd7131.png 600w, ../../wp-content/uploads/2023/02/safekit-resynchro-alone-300.png 1480w"
+     sizes="(max-width: 300px) 100vw, 300px"
+     width="300" height="121"
+     alt="Failback in a mirror Siemens SiPass cluster" loading="lazy" decoding="async"></p>
+<p>Failback takes place without disturbing the Siemens SiPass VM, which can continue running on Server 2.</p>
+<h3 id="4-how-is-normal-siemens-sipass-operation-restored">4. How is normal Siemens SiPass operation restored?</h3>
+<p>After reintegration, the VM files are once again in mirror mode, as in step 1. The system is back in high-availability mode, with the Siemens SiPass VM running on Server 2 and SafeKit replicating file updates to Server 1.</p>
+<p><img src="../../wp-content/uploads/2023/02/safekit-second-prim-300_hu_4974a44a60702634.png"
+     srcset="../../wp-content/uploads/2023/02/safekit-second-prim-300_hu_a376ba3bdecf5365.png 150w, ../../wp-content/uploads/2023/02/safekit-second-prim-300_hu_4974a44a60702634.png 300w, ../../wp-content/uploads/2023/02/safekit-second-prim-300_hu_2ed9e2c74d974a52.png 600w, ../../wp-content/uploads/2023/02/safekit-second-prim-300.png 1423w"
+     sizes="(max-width: 300px) 100vw, 300px"
+     width="300" height="125"
+     alt="Return to normal operation in a mirror Siemens SiPass cluster" loading="lazy" decoding="async"></p>
+<p>If the administrator wishes the VM to run on Server 1, this can be done manually through the web console at an appropriate time, or automatically through configuration.</p>
+<h3 id="safekit-mirror-cluster-configure">How to configure a SafeKit Siemens SiPass Cluster?</h3>
+<p><img src="../../wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png"
+     srcset="../../wp-content/uploads/2024/03/19-module-hyperv-edit-config-1_hu_c3d166881f2db8dd.png 347w, ../../wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png 694w"
+     sizes="(max-width: 694px) 100vw, 694px"
+     width="694" height="720"
+     alt="SafeKit Web Console: 2-node Siemens SiPass cluster dashboard for VM replication and automatic failover." loading="lazy" decoding="async"></p>
+<p>The <strong>SafeKit web console</strong> provides an intuitive interface to configure high availability of your critical applications. In just a few steps, you can configure a <strong>SafeKit Siemens SiPass cluster</strong> to ensure business continuity:</p>
+<ul>
+<li>Put in <code>VM_PATH</code>, the root path of the replicated directory (D:/Repli-Hyper-V) where the Siemens SiPass VM files reside.</li>
+<li>Enter in <code>VM_NAME</code>, the name of the Siemens SiPass virtual machine (VM1).</li>
+</ul>
+<p>Note: If <code>VM1</code> is entered, <code>D:/Repli-Hyper-V/VM1/</code> will be replicated and VM1 will be automatically restarted using Hyper-V commands.</p>
+<p>The SafeKit cluster includes a dedicated <a href="../../best-practises/heartbeat-failover-quorum-windows-linux-cluster/" title="Technical details on heartbeat and split-brain prevention">split-brain checker to resolve network isolation issues</a> without the need for a third witness machine or an additional heartbeat network.</p>
+<h3 id="safekit-mirror-cluster-monitoring">How to monitor a SafeKit Siemens SiPass cluster?</h3>
+<p><img src="../../wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+     srcset="../../wp-content/uploads/2024/03/14-monitoring-prim-second_hu_42bdec1c8fd1a6f.png 302w, ../../wp-content/uploads/2024/03/14-monitoring-prim-second.png 604w"
+     sizes="(max-width: 604px) 100vw, 604px"
+     width="604" height="498"
+     alt="SafeKit Web Console: Real-time monitoring of a 2-node mirror Siemens SiPass cluster showing PRIM and SECOND states with active data replication." loading="lazy" decoding="async"></p>
+<p>The <strong>SafeKit management console</strong> offers a unified view of your high availability infrastructure. It allows administrators to monitor the <strong>operational state</strong> of the cluster and track data synchronization in real-time.</p>
+<p>For a 2-node Siemens SiPass cluster, the console clearly displays the roles of each server:</p>
+<ul>
+<li><strong>PRIM (Primary):</strong> The active node currently running the VM and the application. It performs writes on the VM files to the local storage and real-time replication to the secondary node.</li>
+<li><strong>SECOND (Secondary):</strong> The standby node receiving synchronous byte-level updates. It is ready to take over instantly if the Primary fails.</li>
+<li><strong>ALONE State:</strong> Visually alerts you when the cluster is running on a single node (e.g., during maintenance or after a failure), indicating that redundancy is temporarily lost.</li>
+<li><strong>Resynchronization Progress:</strong> When a failed node recovers, its status turns orange during background data reintegration, ensuring no downtime during the &ldquo;return to normal&rdquo; phase.</li>
+</ul>
+<p>Beyond simple status icons, the interface provides <strong>one-click failover orchestration</strong> , allowing you to manually reassign the primary role for planned maintenance while ensuring continuous availability for user activity.</p>
+<p>Note that if you deploy several VMs for replication and failover, you will have multiple PRIM/SECOND widgets. This allows independent failover for each VM and the ability to distribute the load across servers.</p>
+<h2 id="safekit-ha-limitations">SafeKit High Availability Limitations</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Limit / Requirement</th>
+					<th>Reason &amp; Impact</th>
+					<th>Recommended Alternative</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Replication size: A few TBs</td>
+					<td>Resynchronization time after failure (<a href="../../architectures/file-replication-byte-level-with-failover-mirror-cluster/product/#safekit-mirror-cluster">step 3</a>): <br>• 1 Gb/s network ≈ 3 hours / TB<br>• 10 Gb/s network ≈ 1 hour / TB (depending on disk write performances)</td>
+					<td>• Use <a href="../../best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/">external shared storage</a> (more expensive, more complex).</td>
+			</tr>
+			<tr>
+					<td>File count: &lt; 1,000,000 files</td>
+					<td>• Resynchronization time performance after a failure (<a href="../../architectures/file-replication-byte-level-with-failover-mirror-cluster/product/#safekit-mirror-cluster">step 3</a>).<br>• Time to check each file between both nodes.</td>
+					<td>• Put the many files to replicate in a virtual hard disk / virtual machine.<br>• Only the files representing the virtual hard disk / virtual machine will be replicated and resynchronized in this case.</td>
+			</tr>
+			<tr>
+					<td>Failover capacity: ≤ 32 VMs</td>
+					<td>• Each VM runs in an independent mirror module.<br>• Maximum of 32 mirror modules running on the same cluster.</td>
+					<td>• Use an external shared storage and another VM clustering solution (more expensive, more complex).</td>
+			</tr>
+			<tr>
+					<td>Network architecture: LAN/VLAN network between remote sites</td>
+					<td>• Automatic failover of the <a href="../../best-practises/how-a-virtual-ip-address-works/">virtual IP address</a> with 2 nodes in the same subnet.<br>• Good bandwidth for resynchronization (<a href="../../architectures/file-replication-byte-level-with-failover-mirror-cluster/product/#safekit-mirror-cluster">step 3</a>).<br>•  Low latency for <a href="../../best-practises/synchronous-replication-vs-asynchronous-replication/">synchronous replication</a>: typically &lt; 5 ms RTT; higher values should be validated against the application&rsquo;s write rate.</td>
+					<td>• Use a <a href="../../best-practises/how-a-virtual-ip-address-works/">load balancer for the virtual IP address</a> if the 2 nodes are in 2 subnets (supported by SafeKit, especially in the cloud).<br>• Use backup solutions with asynchronous replication for high latency network.</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="safekit-hyperv-ha-comparison">Comparison: SafeKit for Siemens SiPass vs. Native Hyper-V Clustering</h2>
+<table>
+	<thead>
+			<tr>
+					<th>Feature</th>
+					<th>SafeKit for Siemens SiPass</th>
+					<th>MS Failover Clustering</th>
+					<th>Hyper-V Replica</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Architecture</td>
+					<td>SANless (Shared-Nothing)</td>
+					<td>Shared Storage (SAN/S2D)</td>
+					<td>Shared-Nothing</td>
+			</tr>
+			<tr>
+					<td>Failover Logic</td>
+					<td>Fully Automatic</td>
+					<td>Fully Automatic</td>
+					<td>Manual Intervention (not a HA solution)</td>
+			</tr>
+			<tr>
+					<td>Replication Type</td>
+					<td>Synchronous (Zero RPO)</td>
+					<td>Synchronous (via SAN)</td>
+					<td>Asynchronous (Data Loss)</td>
+			</tr>
+			<tr>
+					<td>Quorum Requirement</td>
+					<td>None (Built-in Checker)</td>
+					<td>3rd Node / Cloud Witness</td>
+					<td>None</td>
+			</tr>
+			<tr>
+					<td>AD Dependency</td>
+					<td>Independent</td>
+					<td>Required (Active Directory)</td>
+					<td>Independent</td>
+			</tr>
+			<tr>
+					<td>Deployment Complexity</td>
+					<td>Low (&lt; 30 Minutes)</td>
+					<td>High (AD, Storage, Quorum)</td>
+					<td>Medium</td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>In summary</strong> , by eliminating the need for a SAN and simplifying the setup—removing dependencies like <strong>Active Directory</strong> and specialized <strong>Quorum</strong> configurations—SafeKit provides a lean, hardware-agnostic alternative. This results in a significantly lower TCO while ensuring that your Siemens SiPass environment remains resilient with zero data loss and automated recovery.</p>
+<h2 id="videoguide-safekit-hyperv-cluster">Video Guide: Configuring a SafeKit HA cluster for Siemens SiPass</h2>
+<h3 id="demo-hyperv">SafeKit Video: Virtual Machine-Level Clustering with Hyper-V (5:15)</h3>
+<p>In this video, discover how SafeKit implements <strong>high availability for Hyper-V</strong> without the complexity of a SAN. Learn to configure <strong>virtual machine replication</strong> across two nodes to ensure seamless failover for your critical virtualized workloads. Although this demonstration uses Hyper-V on Windows, the solution works identically with KVM on Linux.</p>
+<h3 id="chapters">Chapters</h3>
+<ol>
+<li>🎬 <a href="https://www.youtube.com/watch?v=H18s_-_CpmU&amp;t=0s" target="_blank" rel="noopener">Architecture overview: 2 Hyper-V nodes and 2 virtual machines</a> (0:49)</li>
+<li>🎬 <a href="https://www.youtube.com/watch?v=H18s_-_CpmU&amp;t=49s" target="_blank" rel="noopener">Configuring the cluster and the hyperv.safe modules</a> (1:59)</li>
+<li>🎬 <a href="https://www.youtube.com/watch?v=H18s_-_CpmU&amp;t=168s" target="_blank" rel="noopener">Live testing: VM replication, migration, and automatic failover on crash</a> (2:26)</li>
+</ol>
+<h3 id="step-by-step-implementation">Step-by-Step Implementation</h3>
+<ul>
+<li>🛠️ <a href="../../quick-install/safekit-quick-installation-guide-with-hyper-v/">Read the guide to set up a mirrored Hyper-V cluster on Windows.</a></li>
+<li>🛠️ <a href="../../quick-install/safekit-quick-installation-guide-with-kvm/">Read the guide to set up a mirrored KVM cluster on Linux.</a></li>
+</ul>
+<h3 id="about-products-under-siemens-lms-licensing">About products under Siemens LMS licensing</h3>
+<ul>
+<li>To avoid the broken Siemens license on failover, the dongle containing the Siemens key can be put in a USB over IP device (like DIGI AnywhereUSB).</li>
+<li>The dongle can also be put in an external PC with the <a href="https://sid.siemens.com/r/A6V10426066/16779394955__2.6_en-US_16791369099" target="_blank" rel="noopener">LMS license server</a> on the PC.</li>
+<li>In recent versions of the Siemens licensing system, the license key can be put in the Trusted Platform Module of the VM.</li>
+</ul>
+<h2 id="safekit-a-recognized-solution-on-the-security-market">SafeKit, a recognized solution on the security market</h2>
+<h3 id="milestone-has-chosen-safekit">Milestone has chosen SafeKit</h3>
+<p>SafeKit is deployed in 30+ countries with the video management software of Milestone.</p>
+<p><a href="https://www.milestonesys.com/products/xprotect-management-server-failover/" target="_blank" rel="noopener">SafeKit is validated by Milestone</a> for redundancy and high availability of the management server.</p>
+<p>SafeKit is the best solution because it is purely software, completely hardware-agnostic.</p>
+<h3 id="solution-preferred-by-siemens">Solution preferred by Siemens</h3>
+<p>SafeKit is available in the <a href="https://www.siemens.com/en-us/products/atos-safekit/" target="_blank" rel="noopener">Siemens marketplace</a> with its 💡 <a href="../../solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/">Siveillance suite</a> (video and access control) and with its SCADA software: 💡 <a href="../../solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/">Desigo CC</a> (building management), 💡 <a href="../../solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/">SIMATIC WinCC</a>, 💡 <a href="../../solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/">SIMATIC PCS 7</a>.</p>
+<p>SafeKit is deployed by Siemens in Australia, France, the Netherlands, Qatar, Switzerland, the UAE, the UK, the US.</p>
+<h3 id="safekit-recommended-by-nedap">SafeKit recommended by Nedap</h3>
+<p>Nedap, a key player in physical access control, recommends SafeKit for redundancy and high availability of its AEOS application.</p>
+<p>The 💡 <a href="../../solutions/nedap-high-availability-synchronous-replication-failover/">Nedap/SafeKit solution</a> is available with a free trial and a quick installation guide.</p>
+<h3 id="til-technologies-has-chosen-safekit">TIL Technologies has chosen SafeKit</h3>
+<p>SafeKit is deployed in 100+ customer sites by TIL Technologies for access control and building management.</p>
+<p>SafeKit is the <a href="https://www.til-technologies.fr/en_GB/products/microsesame" target="_blank" rel="noopener">high availability option of MICROSESAME</a>.</p>
+<h3 id="innovation-award-in-video-management-software">Innovation award in Video Management Software</h3>
+<p>Readers of Benchmark Magazine (specialized in physical security systems for resellers &amp; SI) have voted for <a href="https://benchmarkmagazine.com/evidian-safekit-redundancy-and-high-availability/" target="_blank" rel="noopener">SafeKit as an innovation in Video Management Software</a>.</p>
+<p>This award shows the importance of redundancy in security offerings.</p>
+<h2 id="hub">🔍 SafeKit High Availability Navigation Hub</h2>
+<p><strong>Explore SafeKit: Features, technical videos, documentation, and free trial</strong></p>
+<table>
+	<thead>
+			<tr>
+					<th>Resource Type</th>
+					<th>Description</th>
+					<th>Direct Link</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Key Features</td>
+					<td>Why Choose SafeKit for Simple and Cost-Effective High Availability?</td>
+					<td><a href="../../" title="Discover SafeKit features for simple and cost-effective high availability">See Why Choose SafeKit for High Availability</a></td>
+			</tr>
+			<tr>
+					<td>Use Cases</td>
+					<td>Explore How SafeKit Ensures the High Availability of Critical Infrastructure</td>
+					<td><a href="../../use-cases/" title="Explore SafeKit high availability use cases">See All Use Cases (OEM Software, Edge Servers, SCADA, and more)</a></td>
+			</tr>
+			<tr>
+					<td>Deployment Model</td>
+					<td>All-in-One SANless HA: Shared-Nothing Software Clustering</td>
+					<td><a href="../../product/#all-in-one-sanless-ha" title="Learn about all-in-one SANless high availability with shared-nothing software clustering">See SafeKit All-in-One SANless HA</a></td>
+			</tr>
+			<tr>
+					<td>HA Strategies</td>
+					<td>SafeKit: Infrastructure (VM) vs. Application-Level High Availability</td>
+					<td><a href="../../product/#safekit-ha-redundancy-choices" title="Compare VM-level redundancy with SafeKit application-level high availability strategies">See SafeKit HA &amp; Redundancy: VM vs. Application Level</a></td>
+			</tr>
+			<tr>
+					<td>Technical Specifications</td>
+					<td>Technical Limitations for SafeKit Clustering</td>
+					<td><a href="../../product/#safekit-ha-limitations" title="Technical requirements and limitations for SafeKit application clustering">See SafeKit High Availability Limitations</a></td>
+			</tr>
+			<tr>
+					<td>Videos</td>
+					<td>SafeKit: High Availability Configuration &amp; Failover Demos</td>
+					<td><a href="../../resources/high-availability-solutions-ha-solutions-videos/" title="Step-by-step videos on SafeKit high availability, from installation to automated failover">See SafeKit Failover Tutorials</a></td>
+			</tr>
+			<tr>
+					<td>Architecture</td>
+					<td>How the SafeKit <code>Mirror</code> Cluster works (Real-Time Replication &amp; Failover)</td>
+					<td><a href="../../architectures/file-replication-byte-level-with-failover-mirror-cluster/" title="See technical architecture and failover mechanism of SafeKit `Mirror` Cluster">See SafeKit <code>Mirror</code> Cluster: Real-Time Replication &amp; Failover</a></td>
+			</tr>
+			<tr>
+					<td>Architecture</td>
+					<td>How the SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster works (Network Load Balancing &amp; Failover)</td>
+					<td><a href="../../architectures/network-load-balancing-cluster/" title="Technical overview of SafeKit Farm Cluster architecture with network load balancing">See SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster: Network Load Balancing &amp; Failover</a></td>
+			</tr>
+			<tr>
+					<td>Competitive Advantages</td>
+					<td>Comparison: SafeKit vs. Traditional High Availability (HA) Clusters</td>
+					<td><a href="../../product/#safekit-ha-comparison" title="Detailed comparison of SafeKit software vs traditional hardware-based HA clusters">See SafeKit vs. Traditional HA Cluster Comparison</a></td>
+			</tr>
+			<tr>
+					<td>Technical Resources</td>
+					<td>SafeKit High Availability: Documentation, Downloads &amp; Trial</td>
+					<td><a href="../../resources/safekit-free-trial/" title="Access SafeKit free trial, technical documentation, and high availability white papers">See SafeKit HA Free Trial &amp; Technical Documentation</a></td>
+			</tr>
+			<tr>
+					<td>Pre-configured Solutions</td>
+					<td>SafeKit Application Module Library: Ready-to-Use HA Solutions</td>
+					<td><a href="../../quick-install/" title="Browse the library of pre-configured SafeKit modules for automated application failover">See SafeKit High Availability Application Modules</a></td>
+			</tr>
+	</tbody>
+</table>
+<div class="button-row">
+  <a class="btn-action" href="../../contact-us-for-safekit/">Contact us ›</a>
+  <a class="btn-action" href="../../resources/safekit-free-trial/">SafeKit free trial ›</a>
+  <a class="btn-action" href="../../resources/safekit-on-line-training/">Free certification ›</a>
+  <a class="btn-action" href="../../safekit-pricing/">Perpetual license cost ›</a>
+</div>
+    </article>
+</div>
+
+
+
+    </main>
+    <footer>
+    <p>&copy; Eviden, all rights reserved | <a href="https://eviden.com/en/privacy-policy" target="_blank" rel="noopener">Eviden privacy</a> | <a href="https://eviden.com/en/terms-and-conditions" target="_blank" rel="noopener">Eviden terms and conditions</a> | <a href="https://eviden.com" target="_blank" rel="noopener">Eviden</a>
+</footer>
+
+    <a href="../../resources/safekit-support/" class="chat-fab" title="Ask SafeKit AI">
+        <img src="../../wp-content/themes/safekit/chat-robot-1.svg" alt="SafeKit AI Chat">
+        <span class="chat-fab-label">SafeKit AI</span>
+    </a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var stickyHeader = document.querySelector('header');
+    function updateStickyHeaderHeight() {
+        document.documentElement.style.setProperty('--sticky-header-height', (stickyHeader ? stickyHeader.offsetHeight : 0) + 'px');
+    }
+    updateStickyHeaderHeight();
+    if (stickyHeader && 'ResizeObserver' in window) {
+        new ResizeObserver(updateStickyHeaderHeight).observe(stickyHeader);
+    }
+
+    document.querySelectorAll('.dropdown-expand').forEach(function(toggle) {
+        toggle.addEventListener('click', function(event) {
+            var navMenu = this.closest('.nav-menu');
+            if (!navMenu || getComputedStyle(navMenu).display === 'none') return;
+            event.preventDefault();
+            var dropdown = this.closest('.dropdown');
+            var isOpen = dropdown.classList.contains('mobile-open');
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                dropdown.style.setProperty('--mega-panel-top', dropdown.querySelector('.dropdown-toggle').getBoundingClientRect().bottom + 'px');
+                dropdown.classList.add('mobile-open');
+                this.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            var touchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+            var navMenu = this.closest('.nav-menu');
+            var navMenuVisible = navMenu && getComputedStyle(navMenu).display !== 'none';
+            var hamburgerOpen = document.getElementById('nav-toggle')?.checked;
+            var dropdown = this.closest('.dropdown');
+
+            if (!touchDevice || !navMenuVisible || hamburgerOpen || dropdown.classList.contains('mobile-open')) return;
+
+            event.preventDefault();
+            document.querySelectorAll('.dropdown.mobile-open').forEach(function(openDropdown) {
+                openDropdown.classList.remove('mobile-open');
+                openDropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'false');
+            });
+            dropdown.style.setProperty('--mega-panel-top', this.getBoundingClientRect().bottom + 'px');
+            dropdown.classList.add('mobile-open');
+            dropdown.querySelector('.dropdown-expand').setAttribute('aria-expanded', 'true');
+        });
+    });
+
+    document.querySelectorAll('.mega-panel').forEach(function(panel) {
+        panel.addEventListener('wheel', function(event) {
+            if (this.closest('.nav-menu') && this.scrollHeight > this.clientHeight) {
+                event.stopPropagation();
+            }
+        }, { passive: true });
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+        var activeElement = document.activeElement;
+        var navMenu = activeElement && activeElement.closest('.nav-menu');
+        var openDropdown = navMenu && navMenu.querySelector('.dropdown.mobile-open');
+        var panel = openDropdown && openDropdown.querySelector('.mega-panel');
+        if (!panel || panel.scrollHeight <= panel.clientHeight) return;
+
+        event.preventDefault();
+        panel.scrollBy({
+            top: event.key === 'ArrowDown' ? 48 : -48,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelectorAll('.lang-current').forEach(function(current) {
+        current.addEventListener('click', function(event) {
+            event.preventDefault();
+            var switcher = this.closest('.lang-switch');
+            switcher.classList.toggle('open');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.lang-switch')) {
+            document.querySelectorAll('.lang-switch.open').forEach(function(switcher) {
+                switcher.classList.remove('open');
+            });
+        }
+    });
+
+    
+    document.querySelectorAll('.sidebar-toggle:not(.no-collapse)').forEach(function(h3) {
+        h3.addEventListener('click', function() {
+            var section = document.getElementById(this.dataset.target);
+            if (section) section.classList.toggle('open');
+        });
+    });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    (function buildToc() {
+        var article = document.querySelector('article');
+        var toc = document.getElementById('TableOfContents');
+        if (!article) return;
+
+        
+        
+        var tocLabel = document.getElementById('toc-label');
+        var h1 = article.querySelector('h1');
+        if (tocLabel && h1 && h1.textContent.trim()) {
+            tocLabel.textContent = h1.textContent.trim();
+            if (h1.id) {
+                tocLabel.href = '#' + h1.id;
+            }
+        }
+
+        if (!toc) return;
+
+        
+        
+        
+        var headings = article.querySelectorAll('h2, h3, h4');
+        if (headings.length === 0) return;
+
+        var root = document.createElement('ul');
+        var stack = [{ ul: root, level: 0 }];
+
+        headings.forEach(function(h) {
+            var level = parseInt(h.tagName[1]);
+            var id = h.id;
+            if (!id) return;
+
+            while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+                stack.pop();
+            }
+
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#' + id;
+            a.textContent = h.textContent;
+            li.appendChild(a);
+
+            var parentUl = stack[stack.length - 1].ul;
+            parentUl.appendChild(li);
+
+            var childUl = document.createElement('ul');
+            li.appendChild(childUl);
+            stack.push({ ul: childUl, level: level });
+        });
+
+        root.querySelectorAll('ul:empty').forEach(function(u) { u.remove(); });
+        toc.appendChild(root);
+    })();
+
+    
+    document.querySelectorAll('#TableOfContents li').forEach(function(li) {
+        var sub = li.querySelector('ul');
+        if (sub) {
+            li.classList.add('toc-has-children');
+            sub.style.display = 'none';
+            var toggle = document.createElement('span');
+            toggle.className = 'toc-toggle';
+            toggle.textContent = '+';
+            li.querySelector('a').appendChild(toggle);
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                li.classList.toggle('toc-open');
+                sub.style.display = li.classList.contains('toc-open') ? 'block' : 'none';
+                toggle.textContent = li.classList.contains('toc-open') ? '-' : '+';
+            });
+        }
+    });
+
+    
+    var tocLinks = document.querySelectorAll('#TableOfContents a');
+    var headings = [];
+    tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href');
+        if (id && id.startsWith('#')) {
+            var el = document.getElementById(id.substring(1));
+            if (el) headings.push({ el: el, link: link });
+        }
+    });
+
+    function updateActive() {
+        var scrollPos = window.scrollY + 100;
+        var active = null;
+        for (var i = 0; i < headings.length; i++) {
+            if (headings[i].el.offsetTop <= scrollPos) {
+                active = headings[i];
+            }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('toc-active'); });
+        document.querySelectorAll('#TableOfContents .toc-has-children.toc-open').forEach(function(li) {
+            li.classList.remove('toc-open');
+            var sub = li.querySelector('ul');
+            if (sub) sub.style.display = 'none';
+            var tog = li.querySelector('.toc-toggle');
+            if (tog) tog.textContent = '+';
+        });
+        if (active) {
+            active.link.classList.add('toc-active');
+            var parent = active.link.closest('li');
+            while (parent) {
+                if (parent.classList.contains('toc-has-children')) {
+                    parent.classList.add('toc-open');
+                    var sub = parent.querySelector('ul');
+                    if (sub) sub.style.display = 'block';
+                    var tog = parent.querySelector('.toc-toggle');
+                    if (tog) tog.textContent = '-';
+                }
+                parent = parent.parentElement.closest('li');
+            }
+            var tocSidebar = document.querySelector('.toc-sidebar');
+            if (tocSidebar) {
+                var activeTop = active.link.getBoundingClientRect().top;
+                var sidebarTop = tocSidebar.getBoundingClientRect().top;
+                var sidebarBottom = sidebarTop + tocSidebar.clientHeight;
+                if (activeTop < sidebarTop || activeTop > sidebarBottom - active.link.offsetHeight) {
+                    tocSidebar.scrollTop += activeTop - sidebarTop - tocSidebar.clientHeight / 2;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    var tocRAFPending = false;
+    function onScroll() {
+        if (tocRAFPending) return;
+        tocRAFPending = true;
+        requestAnimationFrame(function () {
+            updateActive();
+            tocRAFPending = false;
+        });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateActive();
+});
+</script>
+</body>
+</html>

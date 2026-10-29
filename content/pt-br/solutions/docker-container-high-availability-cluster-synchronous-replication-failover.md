@@ -11,11 +11,11 @@ topics: "Como o cluster SafeKit Mirror sem SAN funciona com Docker , Sumário, C
 
 ## Como o cluster SafeKit Mirror sem SAN funciona com Docker {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 
-SafeKit oferece uma solução de alta disponibilidade (HA) leve e "suficiente" **** adaptada para organizações que consideram **Kubernetes** muito intensiva em recursos, complexa ou com excesso de engenharia para cargas de trabalho de contêineres em computação localizada ou de borda.
+SafeKit oferece uma **solução de alta disponibilidade (HA) leve e "suficiente",** ideal para organizações que consideram **Kubernetes** muito complexo, com uso intensivo de recursos ou excessivamente robusto para cargas de trabalho de contêineres em computação localizada ou de borda.
 
 **SafeKit** fornece um cluster de alta disponibilidade **simplificado e completo de 2 nós para Docker** em Linux . Ele serve como uma alternativa integrada e transparente à complexa pilha de alta disponibilidade Linux "faça você mesmo" (DIY) — eliminando o ônus técnico de configurar manualmente **Corosync** para associação de nós, **Pacemaker** para orquestração de recursos e **DRBD** para replicação em nível de bloco.
 
-Ao utilizar replicação **** tempo real e um endereço IP virtual **automaticamente, cria-se um cluster** robusto que elimina a necessidade SafeKit armazenamento compartilhado dispendioso. Essa arquitetura garante reconexão transparente do cliente, **automático rápido e garantia de zero perda de dados (RPO=0) para aplicações** .
+Ao utilizar replicação síncrona em tempo real e um **endereço IP virtual comutado automaticamente** , SafeKit cria um **cluster robusto sem SAN** que elimina a necessidade de armazenamento compartilhado dispendioso. Essa arquitetura garante reconexão transparente do cliente, failover automático rápido e **garantia de zero perda de dados (RPO=0)** para aplicações em contêineres.
 
   * ✅ **Kubernetes Alternativa:** Alta disponibilidade para contêineres sem a sobrecarga da rede K8s (Ingress/Load Balancers) e orquestração.
   * ✅ Arquitetura simplificada **:** substitui o conjunto de software Corosync/Pacemaker/DRBD por um único pacote.
@@ -50,11 +50,11 @@ Ao utilizar replicação **** tempo real e um endereço IP virtual **automaticam
 
 ### Como funciona o failover automático de rede para contêineres Docker ? {#how-does-automatic-network-failover-work-for-docker-containers}
 
-SafeKit implementa um endereço IP virtual (VIP) **com** automática. Este VIP serve como um ponto de entrada único para aplicações cliente. Se o servidor primário falhar, SafeKit move o IP virtual para o servidor redundante usando **** gratuito. Isso garante que os clientes se reconectem de forma transparente ao mesmo endereço IP onde a aplicação Docker foi reiniciada.
+SafeKit implementa um **endereço IP Virtual (VIP) com comutação automática** . Este VIP serve como um ponto de entrada único para aplicações cliente. Se o servidor primário falhar, SafeKit move o IP Virtual para o servidor redundante usando **ARP Gratuito** . Isso garante que os clientes se reconectem de forma transparente ao mesmo endereço IP onde a aplicação Docker foi reiniciada.
 
 ### O que é um cluster "sem SAN" para Docker ? {#what-is-a-sanless-cluster-for-docker}
 
-Um cluster **sem SAN** para Docker é uma arquitetura que oferece alta disponibilidade sem a necessidade de uma Rede de Área de Armazenamento (SAN) ou Armazenamento Conectado à Rede (NAS) dispendiosos. **SafeKit** utiliza replicação síncrona baseada em host **para mirror dados entre os discos locais de dois servidores. Isso elimina o armazenamento compartilhado como um ponto único de falha e garante um Objetivo de Ponto de Recuperação (RPO** **** que significa que não ocorre perda de dados durante uma falha.
+Um **cluster sem SAN** para Docker é uma arquitetura que oferece alta disponibilidade sem a necessidade de uma Rede de Área de Armazenamento (SAN) ou Armazenamento Conectado à Rede (NAS) dispendiosos. **SafeKit** utiliza **replicação síncrona** baseada em host para dados mirror entre os discos locais de dois servidores. Isso elimina o armazenamento compartilhado como um ponto único de falha e garante um **Objetivo de Ponto de Recuperação (RPO) de zero** , o que significa que não ocorre perda de dados durante uma falha.
 
 ### É possível configurar um cluster Docker sem as habilidades Kubernetes ? {#is-it-possible-to-set-up-a-docker-cluster-without-kubernetes-skills}
 
@@ -62,11 +62,11 @@ Sim. Este artigo explica como implementar rapidamente um cluster [ sem habilidad
 
 ### Como a replicação de SafeKit difere de soluções em nível de bloco como DRBD para Docker ? {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}
 
-Ao contrário da maioria das soluções **SAN que usam replicação em nível de bloco (como o DRBD** , **** replicação baseada em **no nível de arquivo** Essa abordagem é completamente transparente para o Docker SafeKit pois não exige a migração de dados para um volume de "disco replicado" específico e recém-criado. Em vez disso, basta configurar SafeKit para replicar as pastas de aplicativos existentes — mesmo aquelas no disco do sistema **Isso permite implementar alta disponibilidade para Docker** onde ele já está instalado, sem reconfiguração complexa de disco ou alterações no aplicativo.
+Ao contrário da maioria das soluções SANless que usam **replicação em nível de bloco** (como o DRBD), **SafeKit** realiza **replicação baseada em host no nível de arquivo** . Essa abordagem é completamente transparente para o aplicativo Docker , pois não exige a migração de dados para um volume de "disco replicado" específico e recém-criado. Em vez disso, basta configurar SafeKit para replicar as pastas de aplicativos existentes — mesmo aquelas no **disco do sistema** . Isso permite implementar alta disponibilidade para o Docker exatamente onde ele já está instalado, sem reconfiguração complexa de disco ou alterações no aplicativo.
 
 ### SafeKit pode fornecer alta disponibilidade para aplicações além Docker ? {#can-safekit-provide-high-availability-for-applications-beyond-docker}
 
-Sim. **SafeKit** é um software de alta disponibilidade genérico e altamente versátil, compatível com **Windows e Linux** . Além de Docker , SafeKit pode ser usado para implementar replicação em tempo real **e failover automático** para qualquer diretório de arquivos, serviço ou banco de dados. Ele suporta uma ampla gama de tecnologias, incluindo máquinas virtuais Hyper-V e KVM **** ), **Docker** ), K3s **** e vários aplicativos em nuvem **** . Isso torna SafeKit uma solução de cluster universal para proteger cargas de trabalho críticas em diversos ambientes de TI sem a necessidade de hardware especializado.
+Sim. **SafeKit** é um software de alta disponibilidade genérico e altamente versátil, compatível com **Windows e Linux** . Além Docker , SafeKit pode ser usado para implementar **replicação em tempo real e failover automático** para qualquer diretório de arquivos, serviço ou banco de dados. Ele suporta uma ampla gama de tecnologias, incluindo **máquinas virtuais Hyper-V e KVM** , **Docker** , **K3s** e vários **aplicativos em nuvem** . Isso torna SafeKit uma solução de cluster universal para proteger cargas de trabalho críticas em diversos ambientes de TI, sem a necessidade de hardware especializado.
 
 
 {{%  insert-safekit-mirror-pt-br app="Docker"  %}}
@@ -78,7 +78,7 @@ Sim. **SafeKit** é um software de alta disponibilidade genérico e altamente ve
 
 Funcionalidade | HA tradicional (K8s / Armazenamento compartilhado) | SafeKit (Sem SAN Mirror )  
 ---|---|---  
-Arquitetura de armazenamento | Requer SAN ou NAS caros **** (Disco compartilhado) | Sem compartilhamento: Usa apenas discos locais  
+Arquitetura de armazenamento | Requer **SAN ou NAS** caros (disco compartilhado). | Sem compartilhamento: Usa apenas discos locais.  
 Tipo de replicação | Geralmente em nível de bloco (complexo de configurar) | Replicação de arquivo em nível de byte (transparente)  
 A consistência dos dados | depende da confiabilidade do armazenamento externo ( | ). Replicação síncrona (RPO = 0).  
 Configuração de rede | Complexa (balanceadores de carga, entrada, etc.) | Failover automático de IP virtual (VIP)  
@@ -98,9 +98,9 @@ A manutenção | requer habilidades altamente especializadas para atualizar/solu
   
 ## Resumo de Alta Disponibilidade Docker {#docker-ha-summary-quick-installation-guide}
 
-**SafeKit** fornece um cluster HA simples de 2 nós para **Docker** , oferecendo uma alternativa leve **Kubernetes** para cargas de trabalho de missão crítica. Ao substituir a complexa pilha **Corosync, Pacemaker e DRBD** , SafeKit elimina a necessidade de armazenamento compartilhado SAN/NAS **** .
+**SafeKit** oferece um **cluster HA simples de 2 nós para Docker** , proporcionando uma **alternativa leve Kubernetes** para cargas de trabalho de missão crítica. Ao substituir a complexa pilha **Corosync, Pacemaker e DRBD** , SafeKit elimina a necessidade de armazenamento compartilhado **SAN/NAS** dispendioso.
 
-Por meio **** do failover automático de IP Virtual (VIP) **, SafeKit** **** perda de dados (RPO=0) **e recuperação transparente de aplicativos. É a solução ideal para organizações que exigem alta disponibilidade robusta e sem SAN** com configuração e sobrecarga administrativa mínimas.
+Por meio **de replicação síncrona em tempo real** e **failover automático de IP virtual (VIP)** , SafeKit garante **zero perda de dados (RPO=0)** e recuperação transparente de aplicações. É a solução ideal para organizações que necessitam **de alta disponibilidade robusta e sem SAN** , com configuração e administração mínimas.
 
 
 {{%  insert-safekit-hub-pt-br  %}}

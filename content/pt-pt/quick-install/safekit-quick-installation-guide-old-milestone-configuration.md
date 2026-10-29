@@ -270,10 +270,10 @@ Conforme a imagem:
   1. Inicie o cliente de gerenciamento **Milestone XProtect** no nó 1.
   2. No menu **Tools** , selecione **Registered Services** . 
      * Na janela **Adicionar/Remover Serviços Registrados** , selecione um serviço na lista e clique em **Editar** .
-     * Na janela Editar Serviço Registrado **** , altere o endereço URL do serviço para o mesmo endereço URL, mas contendo o endereço IP virtual.
+     * Na janela **Editar Serviço Registrado** , altere o endereço URL do serviço para o mesmo endereço URL, mas contendo o endereço IP virtual.
      * Repita esses passos para todos os serviços listados na janela.
   3. Na mesma janela, clique em **Network** . 
-     * Na janela de Configuração de Rede **** , altere o endereço URL do servidor para o mesmo endereço URL, mas contendo o endereço IP virtual.
+     * Na janela **de Configuração de Rede** , altere o endereço URL do servidor para o mesmo endereço URL, mas contendo o endereço IP virtual.
 
 
 ![ Defina o endereço IP virtual nos URLs e no cliente de gerenciamento Milestone ](/wp-content/uploads/2022/07/milestone-url-vip.png)
@@ -341,7 +341,7 @@ Este script define o endereço IP virtual em 2 arquivos internos Milestone :
 
 ### 14. Na área de trabalho do nó 2, registre o servidor de gerenciamento no endereço IP virtual {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
 
-  * Selecione o Configurador de Servidor **** na barra de tarefas do nó 2 e registre-o no endereço IP virtual (veja a imagem).
+  * Selecione **"Server Configurator"** na barra de tarefas do nó 2 e registre-o no endereço IP virtual (veja a imagem).
   * Em seguida, **Pare o serviço do servidor de gerenciamento** .
 
 

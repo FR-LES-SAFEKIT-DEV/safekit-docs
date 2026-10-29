@@ -50,7 +50,7 @@ topics: "Podman 、 SafeKit高可用性快速安装指南； SafeKit / Podman解
 
   * 请前往**分步配置**部分。
   * 创建并配置**mirror.safe**模块
-  * 设置虚拟 IP 地址**** ，以便在发生故障时切换。
+  * 设置一个**虚拟 IP 地址**，以便在发生故障时进行切换。
   * 将**/replicated_dir_path**设置为复制目录
   * 分别将start_prim和stop_prim脚本中的代码填入： **podman start mynginx**和**podman stop mynginx**  
 注意：您可能需要使用“podman start --security-opt label=disable mynginx ”和 SE Linux 。

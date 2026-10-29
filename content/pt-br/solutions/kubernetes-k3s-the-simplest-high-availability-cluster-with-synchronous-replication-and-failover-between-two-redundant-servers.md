@@ -17,9 +17,9 @@ Embora a pilha de código aberto padrão (MetalLB + Longhorn) para K3s seja pode
 
   * **Alta disponibilidade verdadeira de 2 nós:** SafeKit fornece redundância total com apenas **2 nós** , eliminando o requisito de 3 nós para o quorum _etcd_.
   * **Perda de Dados Zero (RPO=0):** Substitui o armazenamento em bloco de alta sobrecarga por **Replicação síncrona em nível de byte** para desempenho de SSD local.
-  * Proteção flexível em nível de arquivo: **** SafeKit realiza replicação baseada em host em nível de arquivo, o que é completamente transparente para o aplicativo. Protege não apenas bancos de dados, mas também todas as pastas e dados associados. Você pode replicar pastas existentes exatamente onde elas estão instaladas, mesmo no disco do sistema **** .
-  * **IP Virtual Integrado (VIP):** Gerencia nativamente o IP do cluster no nível do kernel, eliminando a necessidade de configurações separadas do MetalLB. ****
-  * **Failover e Failback Automáticos:** Aciona uma transição imediata para o nó secundário em caso de falha; assim que o nó primário estiver íntegro, SafeKit executa a ressincronização automática de dados **** sem intervenção manual.
+  * **Proteção flexível em nível de arquivo:** SafeKit realiza replicação baseada em host em nível de arquivo, o que é completamente transparente para o aplicativo. Ele protege não apenas bancos de dados, mas também todas as pastas e dados associados. Você pode replicar pastas existentes exatamente onde elas estão instaladas, inclusive no **disco do sistema** .
+  * **IP Virtual Integrado (VIP):** Gerencia nativamente o IP do cluster no nível do kernel, eliminando a necessidade de configurações separadas **do MetalLB** .
+  * **Failover e Failback automáticos:** Aciona uma transição imediata para o nó secundário em caso de falha; assim que o nó primário estiver íntegro, SafeKit executa **a ressincronização automática de dados** sem intervenção manual.
   * **Ultrabaixo Overhead:** SafeKit opera sem a sobrecarga de gerenciamento pesada de pods de armazenamento (CSI/Longhorn) e pods de rede (CNI/MetalLB) exigida pelas stacks padrão, liberando RAM e CPU críticas para seus aplicativos.
   * **Amigável para generalistas de TI:** Substitui a complexa infraestrutura **YAML** para redes e armazenamento por uma **GUI web simples** e scripts de implantação automatizados, permitindo que você se concentre apenas em seus aplicativos.
 
@@ -48,7 +48,7 @@ Você pode implementar alta disponibilidade (HA) para um cluster K3s de 2 nós K
 
 ### Por que usar K3s para computação de borda e IoT? {#why-use-k3s-for-edge-and-iot-computing}
 
-[ K3s ](<https://k3s.io/>) é o mecanismo Kubernetes preferido para IoT e computação de borda **** por ser uma distribuição leve e certificada, projetada para ambientes com recursos limitados. Ele simplifica a sobrecarga operacional do Kubernetes padrão, mantendo total compatibilidade.
+[ K3s ](<https://k3s.io/>) é o mecanismo Kubernetes preferido para **IoT e computação de borda** por ser uma distribuição leve e certificada, projetada para ambientes com recursos limitados. Ele simplifica a sobrecarga operacional do Kubernetes padrão, mantendo total compatibilidade.
 
 ### Quais são as principais características dos módulos k3s.safe mirror ? {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
@@ -71,7 +71,7 @@ SafeKit é uma solução versátil de alta disponibilidade **para Windows e Linu
   * Infraestrutura de nuvem **: Alta disponibilidade para aplicações em nuvem** .
 
 
-SafeKit também fornece clusters **`Farm`** com balanceamento de carga de rede e failover de rede nativos **** para aplicações sem estado, como servidores web **** .
+SafeKit também fornece **clusters `Farm`** com **balanceamento de carga de rede nativo e failover** para aplicações sem estado, como **servidores web** .
 
 💡 [ Explore a lista completa de soluções de alta disponibilidade (HA) compatíveis aqui. ](</pt-br/solutions/>)
 
@@ -97,7 +97,7 @@ Esta etapa ilustra a arquitetura de alta disponibilidade entre o Servidor 1 (PRI
 Replicação de arquivos ![ em nível de byte em um cluster K3s Kubernetes mirror ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-Atualmente, o IP Virtual (VIP) **, o armazenamento persistente NFS** , e **servidores** MariaDB **** ativos apenas no Servidor 1 (PRIM). Os componentes mestre do K3s em ambos os nós sincronizam-se entre si acessando o estado do cluster por meio do IP Virtual e da porta MariaDB . SafeKit implementa a replicação síncrona [ de arquivos NFS persistentes ](</pt-br/best-practises/synchronous-replication-vs-asynchronous-replication/>) e MariaDB , garantindo **zero perda de dados (RPO = 0)** em caso de falha.
+Atualmente, o **IP Virtual (VIP)** , **o armazenamento persistente NFS** e **MariaDB** estão ativos apenas no Servidor 1 (PRIM). Os componentes mestre do K3s em ambos os nós sincronizam-se entre si acessando o estado do cluster por meio do IP Virtual e da porta MariaDB . O SafeKit implementa a replicação síncrona [ de arquivos MariaDB ](</pt-br/best-practises/synchronous-replication-vs-asynchronous-replication/>) garantindo **zero perda de dados (RPO = 0)** em caso de falha.
 
 Os servidores mestres do K3s distribuem a carga de trabalho entre os dois nós (ou mais) comunicando-se diretamente com os agentes do K3s. Clientes externos se conectam ao  
 O endereço IP virtual do cluster [ ](</pt-br/best-practises/how-a-virtual-ip-address-works/>) no nó PRIM. Usando mecanismos padrão Kubernetes , o mestre K3s retransmite o tráfego para os pods distribuídos pelos nós. Da mesma forma, os pods acessam seus volumes persistentes (PVs) **no servidor PRIM por meio do IP virtual e** porta NFS.
@@ -112,7 +112,7 @@ Failover ![ em um cluster K3S Kubernetes mirror ](/wp-content/uploads/2023/02/sa
 
 SafeKit detecta a falha e migra imediatamente o endereço IP virtual **do cluster para o Servidor 2. Em seguida** promove os serviços NFS locais **MariaDB** **e** para o estado ativo. Devido à replicação síncrona realizada na Etapa 1, todos os bancos de dados MariaDB e arquivos de Volume Persistente (PV) NFS já estão atualizados no Servidor 2, garantindo zero perda de dados.
 
-Com o estado do cluster preservado, o K3s **** Servidor 2 continua a execução. Ele detecta a perda do agente do Servidor 1 e reprograma automaticamente os pods afetados para os agentes K3s ativos restantes. O tempo total de failover (RTO) é a soma do intervalo de detecção de falhas (padrão: 30 segundos) e o tempo necessário para os componentes do K3s inicializarem no nó secundário.
+Com o estado do cluster preservado, o **K3s Master** no Servidor 2 continua a execução. Ele detecta a perda do agente do Servidor 1 e reprograma automaticamente os pods afetados para os agentes K3s ativos restantes. O tempo total de failover (RTO) é a soma do intervalo de detecção de falhas (padrão: 30 segundos) e o tempo necessário para os componentes do K3s inicializarem no nó secundário.
 
 Enquanto o Servidor 1 estiver offline, os serviços MariaDB e NFS continuarão em execução no Servidor 2, gravando as alterações apenas localmente.  
 
@@ -128,22 +128,22 @@ O failback **ocorre quando** Servidor 1 é reiniciado após a resolução do pro
 
 SafeKit otimiza o tempo de recuperação com base em como o servidor foi interrompido: 
 
-  * Desligamento limpo **:** Se SafeKit foi interrompido intencionalmente no Servidor 1, somente as zonas modificadas específicas dentro dos arquivos são ressincronizadas usando os bitmaps de rastreamento de modificação **** . Isso garante uma reintegração ultrarrápida. 
+  * **Encerramento limpo:** Se SafeKit foi interrompido intencionalmente no Servidor 1, apenas as zonas modificadas específicas dentro dos arquivos são ressincronizadas usando **bitmaps de rastreamento de modificações** . Isso garante uma reintegração ultrarrápida. 
   * **Falha do sistema (ex.: queda de energia):** Se o Servidor 1 sofreu um desligamento incorreto, os bitmaps de modificação são ignorados por segurança. SafeKit em vez disso, ressincroniza todos os arquivos com um carimbo de data/hora de modificação mais recente do que o último ponto de sincronização estabelecido, garantindo **integridade total dos dados** . 
 
 
 ### Etapa 4: Restaurando a Alta Disponibilidade e a Distribuição de Carga {#step-4-restoring-high-availability-and-load-distribution}
 
-Após a reintegração, o cluster retorna ao modo **completo mirror** , espelhando o estado descrito na Etapa 1. O sistema está novamente em um estado de alta disponibilidade: os serviços NFS **MariaDB** e **** permanecem ativos no Servidor 2, enquanto SafeKit realiza a replicação em tempo real de todas as atualizações de arquivos de volta para o Servidor 1. 
+Após a reintegração, o cluster retorna ao **modo mirror completo** , espelhando o estado descrito na Etapa 1. O sistema está novamente em um estado de alta disponibilidade: os serviços **MariaDB** e **NFS** permanecem ativos no Servidor 2, enquanto SafeKit realiza a replicação em tempo real de todas as atualizações de arquivos de volta para o Servidor 1. 
 
 
 ![ Retorno à operação normal em um cluster Kubernetes K3s mirror ](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
  
 
-O Master K3s **e** Agente **** reiniciados automaticamente no Servidor 1. O agendador Kubernetes agora reconhece o Servidor 1 como um nó íntegro e pode começar a reprogramar os pods para distribuir a carga de trabalho entre os dois servidores. 
+O **K3s Master** e **o K3s Agent** são reiniciados automaticamente no Servidor 1. O agendador Kubernetes agora reconhece o Servidor 1 como um nó íntegro e pode começar a reagendar os pods para distribuir a carga de trabalho entre os dois servidores. 
 
-Se o administrador preferir que os serviços MariaDB e NFS sejam executados no Servidor 1 (restaurando a função PRIM original), uma troca **** pode ser acionada manualmente por meio do console da web em um momento conveniente ou automatizada por meio das configurações. 
+Se o administrador preferir que os serviços MariaDB e NFS sejam executados no Servidor 1 (restaurando a função PRIM original), a **troca** pode ser acionada manualmente por meio do console da web em um momento conveniente ou automatizada por meio das configurações. 
 
 ### Como configurar um cluster SafeKit Mirror ? {#safekit-mirror-cluster-configure}
 
@@ -168,7 +168,7 @@ O cluster SafeKit inclui um verificador de split-brain dedicado para resolver pr
 Console Web ![ SafeKit : Monitoramento em tempo real de um cluster mirror de 2 nós, mostrando os estados PRIM e SECOND com replicação de dados ativa. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
 
 
-O console de gerenciamento **SafeKit** oferece uma visão unificada da sua infraestrutura de alta disponibilidade. Ele permite que os administradores monitorem o estado operacional **** do cluster e acompanhem a sincronização de dados em tempo real.
+O **console de gerenciamento SafeKit** oferece uma visão unificada da sua infraestrutura de alta disponibilidade. Ele permite que os administradores monitorem o **estado operacional** do cluster e acompanhem a sincronização de dados em tempo real.
 
 Para um cluster mirror de 2 nós, o console exibe claramente as funções de cada servidor:
 
@@ -178,7 +178,7 @@ Para um cluster mirror de 2 nós, o console exibe claramente as funções de cad
   * Progresso da ressincronização **:** Quando um nó com falha se recupera, seu status fica laranja durante a reintegração de dados em segundo plano, garantindo que não haja tempo de inatividade durante a fase de "retorno ao normal".
 
 
-Além de ícones de status simples, a interface oferece orquestração de failover com um clique **** permitindo que você reatribua manualmente a função primária para manutenção planejada, garantindo a disponibilidade contínua para a atividade do usuário.
+Além dos simples ícones de status, a interface oferece **orquestração de failover com um clique** , permitindo que você reatribua manualmente a função principal para manutenção planejada, garantindo a disponibilidade contínua para a atividade do usuário.
 
 
 {{%  insert-safekit-usage-pt-br  %}}
@@ -197,7 +197,7 @@ Requisitos de armazenamento | Síncrono em nível de byte: Replicação de arqui
 Inteligência de Failover | Estabilidade Independente: SafeKit opera fora do ambiente de execução do contêiner. Ele monitora o sistema operacional e o hardware diretamente, garantindo o failover mesmo se o plano de controle Kubernetes ou o mecanismo do contêiner travarem. | Dependência Circular: A lógica de failover é hospedada _dentro_ dos pods que ela deve proteger. Se o sistema operacional do host ou o mecanismo K3s travar, os pods de gerenciamento (MetalLB/Longhorn) também congelam, muitas vezes exigindo triagem manual para quebrar o "bloqueio".  
 Administração | : gerenciável por meio de um único console web; não requer conhecimento Kubernetes . | especializada: requer conhecimento profundo de YAML, Helm e controladores internos do Kubernetes.  
   
-Em resumo **embora uma pilha DIY padrão SafeKit MetalLB + Longhorn) ofereça modularidade para Kubernetes , ela cria uma dependência circular onde as ferramentas de armazenamento e rede ficam** às mesmas falhas de nó que foram projetadas para gerenciar. A **** quebra esse ciclo operando como uma camada de infraestrutura independente; ela fornece uma solução de alta disponibilidade (HA **de 2 nós mais robusta e agnóstica ao hardware, que permanece operacional mesmo se o mecanismo ou** sistema operacional do Kubernetes travarem. Isso garante recuperação automatizada e integridade de dados sem a sobrecarga de recursos, o quórum obrigatório de três nós ou a complexidade de configuração exigida pelos overlays tradicionais de armazenamento em bloco distribuído e rede.
+**Em resumo** , embora uma pilha DIY padrão (MetalLB + Longhorn) ofereça modularidade para especialistas em Kubernetes , ela cria uma **dependência circular** onde as ferramentas de armazenamento e rede ficam vulneráveis às mesmas falhas de nó que foram projetadas para gerenciar. **SafeKit** quebra esse ciclo operando como uma camada de infraestrutura independente; ele fornece uma solução de alta disponibilidade (HA) de 2 nós mais robusta e agnóstica ao hardware, que permanece operacional mesmo se o mecanismo Kubernetes ou o sistema operacional do host travarem. Isso garante recuperação automatizada e integridade de dados sem a sobrecarga de recursos, o quórum obrigatório de três nós ou a complexidade de configuração exigida pelos overlays tradicionais de armazenamento em bloco distribuído e rede.
 
 ## Guia em vídeo: Configurando um cluster HA SafeKit mirror {#videoguide-safekit-mirror-cluster}
 

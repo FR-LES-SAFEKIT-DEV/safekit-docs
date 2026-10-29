@@ -28,7 +28,7 @@ SafeKit transforma dois servidores de borda padrão (de qualquer marca, físicos
   * **Replicação de arquivos síncrona em tempo real** — os dados são espelhados em nível de byte para o servidor de espera no momento da gravação
   * **Failover automático** — se o servidor primário falhar, o servidor de espera assume o controle sem intervenção humana, em segundos
   * **Balanceamento de carga de rede opcional** — para implantações ativo-ativo onde ambos os servidores compartilham a carga de trabalho
-  * Console web **** — gerenciamento baseado em navegador, acessível remotamente via HTTPS, sem necessidade de conhecimento técnico no local.
+  * **Console web** — gerenciamento baseado em navegador, acessível remotamente via HTTPS, sem necessidade de conhecimento técnico no local.
   * **Instalação silenciosa e programável** — adequado para incorporação OEM e implantação em massa em centenas de locais distribuídos
 
 

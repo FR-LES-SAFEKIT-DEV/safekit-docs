@@ -230,7 +230,7 @@ Nota ![ ](/wp-content/uploads/2022/07/note.png)
   * `Save and apply` a nova configuração para reimplantar o arquivo userconfig.xml modificado em ambos os nós (o módulo deve ser interrompido em ambos os nós para salvar e aplicar).
 
 
-Parâmetros **** :
+**Parâmetros** :
 
   * `ident="witness"` identifica a testemunha com o nome de recurso: `splitbrain.witness` . Você pode alterar esse valor para identificar a testemunha.
   * `exec="ping"` refere-se ao código ping a ser executado. Não altere este valor.

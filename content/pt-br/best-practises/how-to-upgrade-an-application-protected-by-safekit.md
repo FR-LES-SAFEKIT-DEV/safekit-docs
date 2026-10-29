@@ -15,7 +15,7 @@ Manter os aplicativos críticos para os negócios atualizados é essencial para 
 
 Existem dois modelos de implantação comuns:
 
-  * Alta disponibilidade da máquina virtual **** , onde o aplicativo é executado dentro de uma máquina virtual protegida gerenciada por SafeKit .
+  * **Alta disponibilidade de máquina virtual** , onde o aplicativo é executado dentro de uma máquina virtual protegida e gerenciada por SafeKit .
   * **Alta disponibilidade em nível de aplicação** , onde a aplicação está instalada em dois servidores.
 
 

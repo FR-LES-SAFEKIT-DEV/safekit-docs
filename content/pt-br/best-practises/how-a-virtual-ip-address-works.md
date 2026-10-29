@@ -23,7 +23,7 @@ topics: "O que é um endereço IP virtual em um cluster de alta disponibilidade?
   * Clusters **`Farm` :** Permite o balanceamento de carga da rede, mantendo o VIP em todos os nós simultaneamente.
 
 
-Benefício principal **:** Ao utilizar o **ARP gratuito (Address Resolution Protocol),** ou **** MAC Address Takeover, o VIP permite a transição perfeita de aplicações sem reconfiguração manual do cliente, garantindo a continuidade dos negócios 24 horas por dia, 7 dias por semana.
+**Principal benefício:** Ao utilizar **o ARP (Address Resolution Protocol) gratuito** ou **a tomada de endereço MAC** , o VIP permite a transição perfeita de aplicações em caso de falha, sem necessidade de reconfiguração manual do cliente, garantindo a continuidade dos negócios 24 horas por dia, 7 dias por semana.
 
   * **Nuvem e Multi-Sub-rede:** Gerenciado por meio de verificações de integridade do balanceador de carga externo ( AWS , Azure , GCP ) para redirecionar o tráfego entre diferentes sub-redes.
 
@@ -60,7 +60,7 @@ Para organizações que necessitam de continuidade de negócios perfeita em uma 
 
 ![ SafeKit Mecanismo de failover de IP virtual (VIP) entre dois servidores na mesma sub-rede ](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
- Em um cluster padrão SafeKit **SafeKit mirror onde ambos os nós residem na mesma sub-rede local,** alta disponibilidade é alcançada por meio de um IP Virtual (VIP) definido por software **. Ao contrário das soluções baseadas em hardware, SafeKit** esse VIP diretamente na pilha de rede do sistema operacional. Esse VIP atua como um ponto de entrada lógico persistente para os clientes, sobreposto aos endereços IP físicos exclusivos do Servidor 1 e do Servidor 2 por meio do alias de IP **** . 
+ Em um **cluster SafeKit mirror** SafeKit , onde ambos os nós residem na mesma sub-rede local, a alta disponibilidade é alcançada por meio de um **IP Virtual (VIP) definido por software** . Ao contrário das soluções baseadas em hardware, SafeKit gerencia esse VIP diretamente na pilha de rede do sistema operacional. Esse VIP atua como um ponto de entrada lógico persistente para os clientes, sobreposto aos endereços IP físicos exclusivos do Servidor 1 e do Servidor 2 por meio **de alias de IP** . 
 
 #### SafeKit : Aliasing IP avançado e suporte a múltiplos VIPs {#safekits-advanced-ip-aliasing--multiple-vip-support}
 
@@ -68,10 +68,10 @@ Uma **principais vantagens da solução** SafeKit **é a sua flexibilidade na ge
 
 #### Mecanismo de Failover: ARP Gratuito (GARP) {#the-failover-mechanism-gratuitous-arp-garp}
 
-SafeKit garante zero intervenção manual durante uma falha de hardware. Em SafeKit **** falha de heartbeat no Servidor 1, ele executará uma recuperação em duas etapas: 
+SafeKit garante zero intervenção manual durante uma falha de hardware. Em condições normais de operação, o VIP é mapeado para **o endereço MAC do Servidor 1 (mac1)** . Se SafeKit detectar uma falha de heartbeat no Servidor 1, ele executará uma recuperação em duas etapas: 
 
   * Recuperação de Aplicativos **:** SafeKit reinicia automaticamente os serviços de aplicativos críticos no Servidor 2.
-  * **Reencaminhamento de Rede:** SafeKit transmite instantaneamente uma mensagem **ARP Gratuito (GARP)** . Isso força a atualização dos caches ARP de todos os switches de rede e clientes conectados, remapeando o VIP para o endereço MAC (mac2) do Servidor 2 **** .
+  * **Redirecionamento de rede:** SafeKit transmite instantaneamente uma mensagem **ARP gratuita (GARP)** . Isso força a atualização dos caches ARP de todos os switches de rede e clientes conectados, remapeando o VIP para **o endereço MAC do Servidor 2 (mac2)** .
 
 
 #### Data Centers remotos e VLANs estendidas {#remote-data-centers--extended-vlans}
@@ -91,7 +91,7 @@ Ao aproveitar a infraestrutura de rede externa, **SafeKit Software-Defined High 
 
 Diagrama ![ de um failover de IP virtual usando um balanceador de carga em duas sub-redes diferentes ](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
- Roteamento de tráfego em múltiplas sub-redes via verificações de integridade do balanceador de carga. Quando os nós do cluster residem em sub-redes diferentes **** **), o failover padrão baseado em ARP não é possível. Nesse cenário, o IP virtual (VIP)** **) é hospedado em um balanceador de carga (LB)** ) em vez da placa Ethernet do servidor. O balanceador de carga atua como gateway, direcionando o tráfego para os endereços IP físicos dos nós primário e secundário com base na disponibilidade em tempo real. 
+ Roteamento de tráfego em múltiplas sub-redes via verificações de integridade do balanceador de carga. Quando os nós do cluster residem em **sub-redes diferentes** , o failover padrão baseado em ARP não é possível. Nesse cenário, o **IP virtual (VIP)** é hospedado em um **balanceador de carga (LB)** em vez da placa Ethernet do servidor. O balanceador de carga atua como gateway, direcionando o tráfego para os endereços IP físicos dos nós primário e secundário com base na disponibilidade em tempo real. 
 
 #### Roteamento dinâmico via SafeKit Verificações de integridade {#dynamic-routing-via-safekit-health-checks}
 
@@ -106,7 +106,7 @@ Durante um evento de failover **,** SafeKit alternam instantaneamente as respost
 
 #### Integração com a nuvem: AWS , Azure e GCP {#cloud-integration-aws-azure-and-gcp}
 
-Este modelo "Balanceador de Carga + Verificação de Saúde" é o padrão da indústria para Alta Disponibilidade em Nuvem **** . É essencial para a implementação SafeKit em ambientes como: 
+Este modelo "Balanceador de Carga + Verificação de Saúde" é o padrão da indústria para **Alta Disponibilidade na Nuvem** . É essencial para implementar SafeKit em ambientes como: 
 
   * 💡 [ **Amazon AWS** ](</pt-br/solutions/aws-high-availability-cluster-synchronous-replication-failover/>) ( AWS Balanceador de Carga de Rede)
   * 💡 [ **Microsoft Azure** ](</pt-br/solutions/azure-high-availability-cluster-synchronous-replication-failover/>) ( Balanceador de Carga Azure )
@@ -115,7 +115,7 @@ Este modelo "Balanceador de Carga + Verificação de Saúde" é o padrão da ind
 
 #### Considerações de rede: balanceador de carga vs. LAN estendida {#network-considerations-load-balancer-vs-extended-lan}
 
-Caso não deseje utilizar um balanceador de carga, consulte sua equipe de rede sobre a implementação de uma LAN estendida (VLAN stretching) **** entre sub-redes. Isso permite que você retorne ao modelo VIP mais simples de "mesma sub-rede". 
+Caso não deseje utilizar um balanceador de carga, consulte sua equipe de rede sobre a implementação de uma **LAN estendida (VLAN stretching)** entre sub-redes. Isso permite que você retorne ao modelo VIP mais simples de "mesma sub-rede". 
 
 > **⚠️ Observação:** Ao optar por um balanceador de carga, verifique se seu aplicativo é compatível com **Tradução de IP de origem/destino (SNAT/DNAT)** . Com um balanceador de carga, o aplicativo pode perder o controle da identidade do usuário original ou não iniciar, pois não consegue mais visualizar o IP virtual configurado diretamente em sua própria interface de rede.
 
@@ -134,20 +134,20 @@ Diagrama ![ de um IP Virtual (VIP) com balanceamento de carga dentro de um clust
 
 #### Distribuição de tráfego: o filtro de nível de kernel {#traffic-distribution-the-kernel-level-filter}
 
-Ao contrário de um cluster de failover simples, um cluster `farm` gerencia o tráfego por meio de um filtro especializado em nível de kernel, o **** . O processo funciona da seguinte maneira: 
+Ao contrário de um cluster de failover simples, um cluster `farm` gerencia o tráfego por meio de um **filtro especializado em nível de kernel** . O processo funciona da seguinte maneira: 
 
   * Mapeamento ARP **:** Nos caches ARP dos clientes, o VIP é inicialmente associado a um único endereço de hardware (por exemplo, `mac1` do Servidor 1).
-  * Divisão de Pacotes **:** Quando o Servidor 1 recebe o tráfego, o filtro de kernel SafeKit analisa a identidade dos pacotes recebidos (com base no IP do Cliente **ou na Porta TCP** **** .
+  * **Divisão de pacotes:** Quando o servidor 1 recebe o tráfego, o filtro de kernel SafeKit analisa a identidade dos pacotes recebidos (com base no **endereço IP do cliente** ou **na porta TCP** ).
   * Compartilhamento de carga **:** O filtro determina quais pacotes devem ser processados localmente e quais devem ser redirecionados para outros nós (por exemplo, Servidor 2) para processamento, garantindo uma carga de trabalho equilibrada.
 
 
 #### Failover e redirecionamento com ARP gratuito {#failover-and-rerouting-with-gratuitous-arp}
 
-Se o nó primário (Servidor 1) falhar, o cluster mantém a disponibilidade através do ARP Gratuito (GARP) **** . SafeKit transmite uma mensagem GARP para atualizar os caches ARP dos clientes com `mac2` do Servidor 2. Isso garante que, mesmo que o "ponto de entrada" primário falhe, os clientes sejam imediatamente redirecionados para os nós sobreviventes em farm . 
+Se o nó primário (Servidor 1) falhar, o cluster mantém a disponibilidade por meio **do ARP Gratuito (GARP)** . SafeKit transmite uma mensagem GARP para atualizar os caches ARP dos clientes com `mac2` do Servidor 2. Isso garante que, mesmo que o "ponto de entrada" primário falhe, os clientes sejam imediatamente redirecionados para os nós sobreviventes no farm . 
 
 #### Implantação em locais remotos {#deployment-in-remote-sites}
 
-Para organizações que operam em data centers remotos **** , este algoritmo de balanceamento de carga permanece funcional, desde que os sites estejam conectados por meio de uma LAN ou VLAN estendida **** . Isso cria um ambiente virtual de "mesma sub-rede", que é a configuração mais eficiente para clusters geograficamente distribuídos `farm` . 
+Para organizações que operam em **data centers remotos** , esse algoritmo de balanceamento de carga permanece funcional, desde que os sites estejam conectados por meio de uma **LAN ou VLAN estendida** . Isso cria um ambiente virtual de "mesma sub-rede", que é a configuração mais eficiente para clusters `farm` geograficamente distribuídos. 
 
 ## Como um IP virtual com balanceamento de carga funciona em diferentes sub-redes (cluster `Farm` ) {#vip-load-balancing-different-subnets}
 
@@ -160,7 +160,7 @@ O Guia **Arquitetura** : Dimensionamento de Clusters `Farm` em Ambientes Multizo
 
 Diagrama ![ de um cluster farm com balanceamento de carga operando em duas sub-redes diferentes ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
- Distribuição Global de Tráfego via Balanceamento de Carga Externo Quando os nós `farm` estão distribuídos em diferentes sub **** comum em implantações de nuvem Multi-AZ), o IP Virtual (VIP **** gerenciado por um balanceador de carga (LB) **** . O LB armazena o VIP e direciona o tráfego de entrada para os endereços IP físicos dos servidores localizados em suas respectivas sub-redes. 
+ Distribuição global de tráfego via balanceamento de carga externo. Quando os nós `farm` estão distribuídos em **diferentes sub-redes** (comum em implantações de nuvem Multi-AZ), o **IP virtual (VIP)** é gerenciado por um **balanceador de carga (LB)** externo. O LB armazena o VIP e direciona o tráfego de entrada para os endereços IP físicos dos servidores localizados em suas respectivas sub-redes. 
 
 #### Regras inteligentes de roteamento de tráfego e balanceamento de carga {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -174,7 +174,7 @@ O balanceador de carga distribui as solicitações do cliente com base em dois f
 
 #### Mecanismo de verificação de integridade SafeKit {#safekit-health-check-mechanism}
 
-SafeKit fornece um URL de verificação de integridade **** tempo real em cada servidor `farm` para comunicar seu status operacional ao balanceador de carga: 
+SafeKit fornece um **URL de verificação de integridade** em tempo real em cada servidor do `farm` para comunicar seu status operacional ao balanceador de carga: 
 
   * Nó **ATIVO:** . A verificação de integridade retornou `HTTP 200 OK` . O balanceador de carga incluiu este servidor na rotação ativa.
   * **Nó INATIVO/Failover:** Se um servidor ou aplicativo falhar, SafeKit retorna `HTTP 404 NOT FOUND` (ou o serviço fica inacessível). O balanceador de carga para imediatamente de enviar tráfego para o nó com falha.
@@ -197,7 +197,7 @@ Confiar no DNS para **muitas vezes cria uma falsa sensação de segurança em ar
 
 ### Cenário técnico: Resolução de DNS e o cliente "travado" {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
-Em uma configuração de rede **** o Nome DNS) atua como o ponto de entrada legível para humanos. No entanto, para que os dados trafeguem pela rede, esse nome deve ser resolvido para um endereço IP físico **** . 
+Em uma configuração de rede padrão, um **Nome Virtual** (o Nome DNS) atua como o ponto de entrada legível para os usuários. No entanto, para que os dados trafeguem pela rede, esse nome deve ser resolvido para um endereço **IP físico** específico. 
 
 Diagrama ![ mostrando a resolução de nomes DNS para o IP físico 1 em um cluster de alta disponibilidade ](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
@@ -205,13 +205,13 @@ Diagrama ![ mostrando a resolução de nomes DNS para o IP físico 1 em um clust
 
 #### Estado atual: Resolução para IP físico 1 {#current-state-resolution-to-physical-ip-1}
 
-Inicialmente, o Cliente 1 ( **** e o Cliente 2 **** consultam o sistema DNS para obter o Nome Virtual. O sistema retorna o IP Físico 1 **) correspondente ao endereço IP físico 1** ). Em seguida, os clientes estabelecem uma conexão de rede direta (socket) com esse endereço de hardware específico. 
+Inicialmente, **o Cliente 1** e **o Cliente 2** consultam o sistema DNS para obter o Nome Virtual. O sistema retorna **o IP Físico 1.** Os clientes então estabelecem uma conexão de rede direta (socket) com esse endereço de hardware específico. 
 
 #### O Desafio do Failover: Redirecionamento para o IP Físico 2 {#the-failover-challenge-rerouting-to-physical-ip-2}
 
 Se o servidor no endereço IP físico 1 falhar, um administrador atualiza o registro DNS para apontar para o endereço IP físico 2 **) e para o endereço IP físico 2** ). Para redirecionar os clientes com sucesso, uma sequência "perfeita" deve ocorrer: 
 
-  * O tempo de vida (TTL) **** deve expirar em todos os resolvedores intermediários de ISPs e corporativos.
+  * O **tempo de vida (TTL)** deve expirar em todos os servidores intermediários de ISPs e servidores corporativos.
   * O cache DNS local, tanto no Cliente 1 quanto no Cliente 2, deve ser limpo.
   * O aplicativo deve fechar seu socket existente e iniciar uma _nova_ consulta DNS.
 
@@ -220,12 +220,12 @@ Se alguma dessas etapas for omitida, o Cliente 1 e o Cliente 2 **) permanecerão
 ### As duas "caixas pretas" do redirecionamento de DNS {#the-two-black-boxes-of-dns-redirection}
 
   * Cache recursivo **:** Muitos provedores de serviços de Internet (ISPs) e resolvedores DNS corporativos ignoram configurações de TTL baixas para reduzir o tráfego, frequentemente armazenando em cache o IP físico "antigo" 1 por minutos ou até horas além do tempo de expiração solicitado.
-  * Persistência de aplicação **** Aplicações modernas (como microsserviços baseados em Java ou navegadores web) geralmente realizam uma consulta DNS apenas uma vez na inicialização. Mesmo que o registro DNS seja atualizado para o IP físico 2, a aplicação continua a usar o IP inicial armazenado em sua memória interna.
+  * **Persistência de aplicação:** Aplicações modernas (como microsserviços baseados em Java ou navegadores web) geralmente realizam uma consulta DNS apenas uma vez na inicialização. Mesmo que o registro DNS seja atualizado para o IP físico 2, a aplicação continua a usar o IP inicial armazenado em sua memória interna.
 
 
 ### Conclusão {#conclusion}
 
-O redirecionamento de DNS é uma solução inconsistente para alta disponibilidade. Para failover instantâneo em um ambiente local ou regional, um IP virtual (VIP) definido por software **** ) é a única maneira de garantir persistência sem tempo de inatividade. 
+O redirecionamento de DNS é uma solução inconsistente para alta disponibilidade. Para failover instantâneo em um ambiente local ou regional, um **IP virtual definido por software (VIP)** é a única maneira de garantir persistência sem tempo de inatividade. 
 
 ## Comparação: Implementação de IP Virtual, Latência e Transparência de Aplicativos {#vip-vs-dns-comparison}
 
@@ -251,7 +251,7 @@ Redirecionamento de DNS: Sem VIP | Recuperação de desastres (datacenters remot
 
 O que é um IP Virtual (VIP) e como ele difere de um IP físico?
 
-Enquanto um endereço IP físico **** está vinculado a uma interface de rede específica, um endereço IP virtual (VIP) **** é um endereço "flutuante" independente do hardware. Em um cluster SafeKit , o VIP atua como um ponto de entrada persistente; se o servidor primário falhar, o VIP migra automaticamente para um nó secundário íntegro, garantindo a reconfiguração do cliente sem necessidade de alterações.
+Enquanto um **endereço IP físico** está vinculado a uma interface de rede específica, um **IP Virtual (VIP)** é um endereço "flutuante" independente do hardware. Em um cluster SafeKit , o VIP atua como um ponto de entrada persistente; se o servidor primário falhar, o VIP migra automaticamente para um nó secundário íntegro, garantindo a reconfiguração do cliente sem necessidade de alterações.
 
 Preciso de um balanceador de carga de hardware para usar um IP virtual?
 
@@ -259,11 +259,11 @@ O software de alta disponibilidade **SafeKit gerencia o IP virtual em nível** s
 
 O que é ARP Gratuito (GARP) e por que ele é usado?
 
-**ARP Gratuito (GARP)** é uma transmissão de rede que atualiza as tabelas ARP de switches e roteadores de rede. Durante uma falha de rede (failover), o novo servidor primário envia um pacote GARP para anunciar que o IP virtual **** agora está mapeado para o seu endereço MAC, forçando o redirecionamento imediato do tráfego pela rede.
+**O ARP gratuito (GARP)** é uma transmissão de rede que atualiza as tabelas ARP de switches e roteadores de rede. Durante uma falha de rede (failover), o novo servidor primário envia um pacote GARP para anunciar que o **IP virtual** agora está mapeado para o seu endereço MAC, forçando o redirecionamento imediato do tráfego pela rede.
 
 Posso associar um nome DNS a um IP virtual?
 
-**** Você pode associar um nome DNS a um VIP criando um registro A padrão. O principal benefício é que o **é gerenciado no nível do VIP (via ARP ou redirecionamento de rede) e não no nível do DNS.** **a transparência do** **** atrasos associados à propagação do DNS e ao vencimento do TTL.
+**Sim.** Você pode associar um nome DNS a um VIP criando um registro A padrão. A principal vantagem é que o redirecionamento é gerenciado no **nível do VIP** (via ARP ou redirecionamento de rede) e **não no nível do DNS** . Isso garante **a transparência da aplicação** , evitando atrasos associados à propagação do DNS e ao vencimento do TTL.
 
 ### Nuvem e Arquiteturas Avançadas {#cloud--advanced-architectures}
 
@@ -277,7 +277,7 @@ Uma LAN estendida é melhor que um balanceador de carga para recuperação de de
 
 Quais são as limitações do redirecionamento de DNS em comparação com o IP virtual?
 
-O redirecionamento de DNS **** é limitado pelo **TTL (Tempo de Vida)** e pelo cache do lado do cliente, o que pode atrasar a recuperação por horas. Uma grande desvantagem é que **clientes que não resolvem novamente seu nome DNS permanecem presos** tentando se conectar ao servidor com falha. Em contraste, um **IP Virtual** fornece failover instantâneo de Camada 2 que redireciona todo o tráfego imediatamente, garantindo a conectividade independentemente do status do cache DNS do lado do cliente.
+**O redirecionamento de DNS** é limitado pelo **TTL (Time to Live)** e pelo cache do lado do cliente, o que pode atrasar a recuperação por horas. Uma grande desvantagem é que **os clientes que não resolvem novamente seus nomes de DNS permanecem presos,** tentando se conectar ao servidor com falha. Em contraste, um **IP virtual** fornece failover instantâneo de Camada 2 que redireciona todo o tráfego imediatamente, garantindo a conectividade independentemente do status do cache de DNS do lado do cliente.
 
 ### Transparência e Segurança {#transparency--security}
 
@@ -287,7 +287,7 @@ Um morador local **IP Virtual (VIP)** garante **transparência do aplicativo** p
 
 O uso de um IP virtual preserva o endereço IP original do cliente?
 
-Sim. SafeKit evita a Tradução de Endereço de Rede de Origem (SNAT). Como o VIP é local ao servidor ativo, o aplicativo recebe o IP original do cliente **** , o que é fundamental para auditoria de segurança, persistência de sessão e registro regulatório.
+Sim. SafeKit evita a Tradução de Endereço de Rede de Origem (SNAT). Como o VIP é local ao servidor ativo, o aplicativo recebe o **IP original do cliente** , o que é fundamental para auditoria de segurança, persistência de sessão e registro regulatório.
 
 
 {{%  insert-safekit-hub-pt-br  %}}

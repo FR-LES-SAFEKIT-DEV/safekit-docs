@@ -39,8 +39,8 @@ Ele retornará o **host directories of the docker volumes** (esses caminhos não
 Você receberá uma lista de caminhos como **/var/lib/docker/volumes/ <volume_name>/_data**
   * Acesse a seção de configuração passo a passo **e** . 
     * Implante o módulo **mirror.safe**
-    * Defina um endereço IP virtual **** , que será alternado em caso de falha.
-    * Defina a lista de diretórios replicados **/var/lib/docker/volumes/ <volume_name>/_data** como ****
+    * Defina um **endereço IP virtual** que será alternado em caso de falha.
+    * Defina a lista de **diretórios replicados** **/var/lib/docker/volumes/ <volume_name>/_data**
     * Insira respectivamente nos scripts start_prim e stop_prim : **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi start** e **/usr/local/bin/docker-compose -f docker-compose.yml --no-ansi stop**
 
 
@@ -53,8 +53,8 @@ Supomos aqui uma aplicação Docker **myappli** que inicia um conjunto de contê
 Assim, você obterá uma lista de caminhos como **/var/lib/docker/volumes/ <volume_name>/_data**
   * Acesse a seção de configuração passo a passo **e** . 
     * Implante o módulo **mirror.safe**
-    * Defina um endereço IP virtual **** , que será alternado em caso de falha.
-    * Defina a lista de diretórios replicados **/var/lib/docker/volumes/ <volume_name>/_data** como ****
+    * Defina um **endereço IP virtual** que será alternado em caso de falha.
+    * Defina a lista de **diretórios replicados** **/var/lib/docker/volumes/ <volume_name>/_data**
     * Insira respectivamente nos scripts start_prim e stop_prim : **/.../myappli iniciar** e **/.../myappli parar**
 
 
@@ -71,7 +71,7 @@ Em ambos os servidores, crie um contêiner Docker nginx que se vincule ao volume
 Preencha o volume com algum arquivo index.html : **docker cp index.html mynginx:/usr/share/nginx/html/index.html**
   * Acesse a seção de configuração passo a passo **e** . 
     * Implante o módulo **mirror.safe**
-    * Defina um endereço IP virtual **** , que será alternado em caso de falha.
+    * Defina um **endereço IP virtual** que será alternado em caso de falha.
     * Defina **/var/lib/docker/storage/replicated_vol/_data** como um diretório replicado.
     * Insira respectivamente nos scripts start_prim e stop_prim : **docker start mynginx** e **docker stop mynginx**
     * Após a configuração de SafeKit , teste o acesso a index.html com **http://vitual-ip:9011**
