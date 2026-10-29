@@ -250,16 +250,15 @@ _* の上 Linux再現するには、Corosync、Pacemaker、DRBD、Keepalived、S
 
 ## クイックリファレンスリンク {#quick-reference-links}
 
-リソース| URL  
----|---  
-製品ホームページ| <https://safekit.eviden.com>  
-技術概要（テキストと図を含むDOCXファイル） | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
-無料トライアル| [ https://safekit.eviden.com/ja/resources/safekit-free-trial/]( </ja/resources/safekit-free-trial/> )  
-見積もり</safekit-pricing/>取得する| [ https://safekit.eviden.com/safekit-pricing/]( )  
-サポートポータル| <https://customercare.evidian.com>  
-無料AIサポート| [ https://safekit.eviden.com/ja/resources/safekit-support/]( </ja/resources/safekit-support/> )  
-無料トレーニング＆認定| 🎓 [ https://safekit.eviden.com/ja/resources/safekit-on-line-training/]( </ja/resources/safekit-on-line-training/> )  
-お問い合わせください| [ https://safekit.eviden.com/contact-us-for-safekit/]( </ja/contact-us-for-safekit/>  
-  
+リソース | URL
+---|---
+製品ホームページ | <https://safekit.eviden.com/ja/>
+技術概要（テキストと図を含むDOCXファイル） | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
+無料トライアル | <https://safekit.eviden.com/ja/resources/safekit-free-trial/>
+見積もり</safekit-pricing/>取得する | <https://safekit.eviden.com/ja/safekit-pricing/>
+サポートポータル | <https://customercare.evidian.com>
+無料AIサポート | <https://safekit.eviden.com/ja/resources/safekit-support/>
+無料トレーニング＆認定 | ?? <https://safekit.eviden.com/ja/resources/safekit-on-line-training/>
+お問い合わせください | <https://safekit.eviden.com/ja/contact-us-for-safekit/>
 
 {{%  insert-safekit-4-buttons-ja  %}}

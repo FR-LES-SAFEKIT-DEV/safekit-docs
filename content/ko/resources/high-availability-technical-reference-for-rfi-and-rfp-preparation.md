@@ -250,16 +250,15 @@ OEM 내장형 | 예 | 아니요 | 아니요 | 아니요
 
 ## 빠른 참조 링크 {#quick-reference-links}
 
-리소스 | URL  
----|---  
-제품 홈페이지 | <https://safekit.eviden.com>  
-기술 개요 (텍스트 및 다이어그램이 포함된 DOCX 파일) | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
-무료 체험판 | </ko/resources/safekit-free-trial/> [ https://safekit.eviden.com/ko/resources/safekit-free-trial/](  
-견적 받기 | </safekit-pricing/> [ https://safekit.eviden.com/safekit-pricing/]( )  
-지원 포털 | <https://customercare.evidian.com>  
-무료 AI 지원 | [ https://safekit.eviden.com/ko/resources/safekit-support/]( </ko/resources/safekit-support/> )  
-무료 교육 및 인증 | 🎓 [ https://safekit.eviden.com/ko/resources/safekit-on-line-training/]( </ko/resources/safekit-on-line-training/> )  
-문의하기 | [ https://safekit.eviden.com/contact-us-for-safekit/]( </ko/contact-us-for-safekit/>  
-  
+리소스 | URL
+---|---
+제품 홈페이지 | <https://safekit.eviden.com/ko/>
+기술 개요 (텍스트 및 다이어그램이 포함된 DOCX 파일) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
+무료 체험판 | <https://safekit.eviden.com/ko/resources/safekit-free-trial/>
+견적 받기 | <https://safekit.eviden.com/ko/safekit-pricing/>
+지원 포털 | <https://customercare.evidian.com>
+무료 AI 지원 | <https://safekit.eviden.com/ko/resources/safekit-support/>
+무료 교육 및 인증 | ?? <https://safekit.eviden.com/ko/resources/safekit-on-line-training/>
+문의하기 | <https://safekit.eviden.com/ko/contact-us-for-safekit/>
 
 {{%  insert-safekit-4-buttons-ko  %}}

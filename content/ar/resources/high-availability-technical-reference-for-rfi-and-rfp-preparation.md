@@ -250,16 +250,15 @@ OEM قابل للتضمين | نعم | لا | لا | لا
 
 ## روابط مرجعية سريعة {#quick-reference-links}
 
-رابط المورد |  
----|---  
-الصفحة الرئيسية للمنتج | <https://safekit.eviden.com>  
-نظرة عامة فنية (ملف DOCX يحتوي على نصوص ورسومات توضيحية) | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
-تجربة </ar/resources/safekit-free-trial/> | [ https://safekit.eviden.com/ar/resources/safekit-free-trial/]( )  
-احصل على عرض سعر | [ https://safekit.eviden.com/safekit-pricing/]( </ar/safekit-pricing/> )  
-بوابة الدعم | <https://customercare.evidian.com>  
-دعم الذكاء الاصطناعي المجاني | [ https://safekit.eviden.com/ar/resources/safekit-support/]( </ar/resources/safekit-support/> )  
-تدريب وشهادة مجانية | 🎓 [ https://safekit.eviden.com/ar/resources/safekit-on-line-training/]( </ar/resources/safekit-on-line-training/> )  
-تواصل معنا | [ https://safekit.eviden.com/contact-us-for-safekit/]( </ar/contact-us-for-safekit/>  
-  
+رابط المورد | URL
+---|---
+الصفحة الرئيسية للمنتج | <https://safekit.eviden.com/ar/>
+نظرة عامة فنية (ملف DOCX يحتوي على نصوص ورسومات توضيحية) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
+تجربة </ar/resources/safekit-free-trial/> | <https://safekit.eviden.com/ar/resources/safekit-free-trial/>
+احصل على عرض سعر | <https://safekit.eviden.com/ar/safekit-pricing/>
+بوابة الدعم | <https://customercare.evidian.com>
+دعم الذكاء الاصطناعي المجاني | <https://safekit.eviden.com/ar/resources/safekit-support/>
+تدريب وشهادة مجانية | ?? <https://safekit.eviden.com/ar/resources/safekit-on-line-training/>
+تواصل معنا | <https://safekit.eviden.com/ar/contact-us-for-safekit/>
 
 {{%  insert-safekit-4-buttons-ar  %}}

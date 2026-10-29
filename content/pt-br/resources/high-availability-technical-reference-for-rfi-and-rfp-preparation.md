@@ -250,16 +250,15 @@ _ No * , são necessários 6 projetos de código aberto distintos — Linux , Pa
 
 ## Links de referência rápida {#quick-reference-links}
 
-URL do recurso |  
----|---  
-Página inicial do produto | <https://safekit.eviden.com>  
-Visão geral técnica (DOCX com texto e diagramas) | 📘 [ https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx]( </wp-content/uploads/documents/safekit-technical-overview-en.docx> )  
-Teste </pt-br/resources/safekit-free-trial/> | [ https://safekit.eviden.com/pt-br/resources/safekit-free-trial/]( )  
-Solicite um orçamento | [ https://safekit.eviden.com/safekit-pricing/]( </pt-br/safekit-pricing/> )  
-Portal de suporte | <https://customercare.evidian.com>  
-Suporte gratuito de IA | [ https://safekit.eviden.com/pt-br/resources/safekit-support/]( </pt-br/resources/safekit-support/> )  
-Treinamento e certificação gratuitos | 🎓 [ https://safekit.eviden.com/pt-br/resources/safekit-on-line-training/]( </pt-br/resources/safekit-on-line-training/> )  
-Entre em contato conosco | [ https://safekit.eviden.com/contact-us-for-safekit/]( </pt-br/contact-us-for-safekit/> )  
-  
+URL do recurso | URL
+---|---
+Página inicial do produto | <https://safekit.eviden.com/pt-br/>
+Visão geral técnica (DOCX com texto e diagramas) | ?? <https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx>
+Teste </pt-br/resources/safekit-free-trial/> | <https://safekit.eviden.com/pt-br/resources/safekit-free-trial/>
+Solicite um orçamento | <https://safekit.eviden.com/pt-br/safekit-pricing/>
+Portal de suporte | <https://customercare.evidian.com>
+Suporte gratuito de IA | <https://safekit.eviden.com/pt-br/resources/safekit-support/>
+Treinamento e certificação gratuitos | ?? <https://safekit.eviden.com/pt-br/resources/safekit-on-line-training/>
+Entre em contato conosco | <https://safekit.eviden.com/pt-br/contact-us-for-safekit/>
 
 {{%  insert-safekit-4-buttons-pt-br  %}}
