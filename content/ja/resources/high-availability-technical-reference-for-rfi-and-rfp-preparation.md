@@ -37,7 +37,7 @@ topics: "概要、目次、製品情報、サポート対象オペレーティ�
 ベンダー | エビデン（アトス傘下企業）、旧社名エビディアン  
 製品カテゴリー | アプリケーションクラスタリング／高可用性／災害復旧ソフトウェア  
 現在のバージョン | SafeKit 8.2  
-Webサイト | <https://safekit.eviden.com/ja>  
+Webサイト | [https://safekit.eviden.com/ja](/ja/)  
 初回リリース | 2000年（20年以上の制作期間）  
   
 ## 対応OSおよびプラットフォーム {#supported-operating-systems-platforms}

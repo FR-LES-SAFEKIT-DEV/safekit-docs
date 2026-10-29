@@ -37,7 +37,7 @@ Productnaam | SafeKit
 Leverancier | Eviden (een Atos-bedrijf), voorheen Evidian  
 Productcategorie | Applicatieclustering / Hoge beschikbaarheid / Software voor noodherstel  
 Huidige versie | SafeKit 8.2  
-Website | <https://safekit.eviden.com/nl>  
+Website | [https://safekit.eviden.com/nl](/nl/)  
 Eerste release | 2000 (meer dan 20 jaar in productie)  
   
 ## Ondersteunde besturingssystemen en platformen {#supported-operating-systems-platforms}

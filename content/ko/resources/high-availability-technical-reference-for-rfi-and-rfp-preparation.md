@@ -37,7 +37,7 @@ topics: "개요, 목차, 제품 정보, 지원 운영 체제 및 플랫폼, 사�
 공급업체 | Eviden(Atos 계열사), 이전 명칭은 Evidian  
 제품 카테고리 | 애플리케이션 클러스터링/고가용성/재해 복구 소프트웨어  
 현재 버전 | SafeKit 8.2  
-웹사이트 | <https://safekit.eviden.com/ko>  
+웹사이트 | [https://safekit.eviden.com/ko](/ko/)  
 첫 번째 릴리스 | 2000년 (20년 이상 생산)  
   
 ## 지원되는 운영 체제 및 플랫폼 {#supported-operating-systems-platforms}

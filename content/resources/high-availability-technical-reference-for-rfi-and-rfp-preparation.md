@@ -37,7 +37,7 @@ Product Name | SafeKit
 Vendor | Eviden (an Atos business), formerly Evidian  
 Product Category | Application clustering / High availability / Disaster recovery software  
 Current Version | SafeKit 8.2  
-Website | <https://safekit.eviden.com>  
+Website | [https://safekit.eviden.com](/)  
 First Release | 2000 (20+ years in production)  
   
 ## Supported Operating Systems & Platforms {#supported-operating-systems-platforms}

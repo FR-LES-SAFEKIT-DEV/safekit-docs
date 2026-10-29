@@ -37,7 +37,7 @@ topics: "概述、目录、产品标识、支持的操作系统和平台、预�
 小贩 | Eviden（Atos旗下公司），前身为Evidian  
 产品类别 | 应用集群/高可用性/灾难恢复软件  
 当前版本 | SafeKit 8.2  
-网站 | <https://safekit.eviden.com/zh-hans>  
+网站 | [https://safekit.eviden.com/zh-hans](/zh-hans/)  
 首发版 | 2000（生产超过20年）  
   
 ## 支持的操作系统和平台 {#supported-operating-systems-platforms}
