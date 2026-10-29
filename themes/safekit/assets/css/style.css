@@ -126,6 +126,9 @@ article a {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+article a:visited {
+  color: #663399;
+}
 article a:hover {
   text-decoration-thickness: 2px;
 }
@@ -397,4 +400,3 @@ html[dir="rtl"] .nav-menu {
     .lang-switch { flex-basis: clamp(1.75rem, 8vw, 2.4rem); width: clamp(1.75rem, 8vw, 2.4rem); height: 2.75rem; margin: 0; }
     .lang-current { min-height: 0; font-size: 0.95rem; }
   }
-
