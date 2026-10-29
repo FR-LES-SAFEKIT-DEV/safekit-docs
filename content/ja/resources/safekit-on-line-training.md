@@ -1,10 +1,10 @@
 ---
-title: "SafeKit高可用性トレーニング：無料オンライン認定プログラム"
+title: "SafeKit 高可用性トレーニング：無料オンライン認定プログラム"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-on-line-training/"
-description: "無料トレーニングでSafeKit SANless HAをマスターしましょう。ソフトウェアのインストール、Webコンソール管理、CLIについて解説します。高度な設定とトラブルシューティングを習得し、24時間365日の高可用性を確保しましょう。公式認定資格をオンラインで取得できます。"
+description: "マスター SafeKit 無料トレーニングでSANレスHAを習得しましょう。ソフトウェアのインストール、Webコンソール管理、CLIについて解説します。高度な設定とトラブルシューティングを学び、24時間365日の高可用性を確保しましょう。公式認定資格をオンラインで取得できます。"
 category: "resources"
 lang: "ja"
-topics: "トレーニングプラットフォームへのアクセス方法、SafeKit 8 トレーニング資料の入手方法、🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "トレーニングプラットフォームへのアクセス方法、 SafeKit 8つのトレーニング資料、🔍 SafeKit 高可用性ナビゲーションハブ"
 ---
 
 # SafeKit 高可用性トレーニング：無料オンライン認定プログラム {#safekit-high-availability-training-free-online-certification-program}
@@ -18,7 +18,7 @@ topics: "トレーニングプラットフォームへのアクセス方法、Sa
   * へ移動 **👉 🎓[SafeKit オンライン研修プラットフォーム](<https://training.my.evidian.com/mod/page/view.php?id=712>)**これは、すべての学習モジュールと無料の認定プログラムへの中心的なハブとして機能します。
   * **認証情報を取得してください：** アカウントをお持ちでない場合は、こちらをクリックしてください。 **接触** トレーニングプラットフォームの上部メニューからログイン認証情報をリクエストしてください。
   * プラットフォームは、以下のようなテーマ別のセクションに分かれています。 
-    * **アーキテクチャと概要：** 理解する mirror そして farm クラスターの概念。
+    * **アーキテクチャと概要：** 理解する mirror そして farm cluster 概念。
     * **実演：** 動画ベースのシナリオにアクセスする SQL ServerHyper-V、およびApacheロードバランシング。
     * **インストールとセットアップ：** パッケージのインストール方法と、Web管理コンソールまたはCLIを使用した設定方法を学びましょう。
     * **詳細設定:** 深く掘り下げて userconfig.xmlハートビート、レプリケーション、仮想IPなど。
@@ -49,39 +49,39 @@ topics: "トレーニングプラットフォームへのアクセス方法、Sa
      * 🎬 [実証 SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
      * 🎬 [冗長性と高可用性ソリューションの例](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=139s>) (2:00)
      * 🎬 [SafeKit さまざまな国で販売されています Milestone](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=259s>) (0:49)
-     * 🎬 [仮想マシンまたはアプリケーションクラスタの2つのソリューションから選択してください。](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
+     * 🎬 [仮想マシンまたはアプリケーションの2つのソリューションから選択してください。 cluster](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
      * 🎬 [際立った利点](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>))
   2. コンテスト: 🎬 [ビデオ](<https://www.youtube.com/watch?v=DKra6YVLGZk>) (13:21) 
      * 🎬 [導入](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
-     * 🎬 [仮想マシンのクラスタ](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
-     * 🎬 [Mirror クラスタ](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Farm クラスタ](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [Cluster 仮想マシンの](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
+     * 🎬 [Mirror cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
+     * 🎬 [Farm cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
 
 
 ### デモンストレーション {#demonstrations}
 
-Hyper-Vクラスターのデモ：🎬 [ビデオ](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
+Hyper-V cluster 実演: 🎬 [ビデオ](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
   * 🎬 [Hyper-Vノード2台と仮想マシン2台](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s>) (0:49)
-  * 🎬 [クラスターと2つの hyperv.safe モジュール](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
+  * 🎬 [設定する cluster そして２つ hyperv.safe モジュール](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
   * 🎬 [VMのレプリケーション、移行、クラッシュ時のフェイルオーバーを開始してテストする](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>))
 
 
-SQL Server クラスターのデモンストレーション: 🎬 [ビデオ](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
+SQL Server cluster 実演: 🎬 [ビデオ](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
 
   * 🎬 [2つのノード SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  * 🎬 [クラスターと mirror.safe モジュール](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  * 🎬 [設定する cluster そして mirror.safeモジュール](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   * 🎬 [SQLレプリケーション、移行、クラッシュ時のフェイルオーバーを開始してテストする](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
 
 
-Farm クラスターのデモンストレーション: 🎬 [ビデオ](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Farm cluster 実演: 🎬 [ビデオ](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [Apacheを搭載した2つのノード](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  * 🎬 [クラスターと farm.safe モジュール](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  * 🎬 [設定する cluster そして farm.safeモジュール](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
   * 🎬 [ネットワーク負荷分散を開始してテストし、クラッシュ時のフェイルオーバーを実行します。](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
 
@@ -97,7 +97,7 @@ Farm クラスターのデモンストレーション: 🎬 [ビデオ](<https:/
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/3-install-setup-en.pptx>))
   4. ウェブコンソール: 🎬 [ビデオ](<https://www.youtube.com/watch?v=UPZK61eE5uA>) (34:02) 
      * 🎬 [概要](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=0s>) (1:40)
-     * 🎬 [クラスターの構成](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
+     * 🎬 [構成 cluster](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
      * 🎬 [新しいモジュールの設定](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=290s>) (8:38) 
        * 🎬 [モジュール構成の概要](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=294s>) (02:03)
        * 🎬 [モジュール構成を編集する](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=417s>) (03:44)
@@ -115,7 +115,7 @@ Farm クラスターのデモンストレーション: 🎬 [ビデオ](<https:/
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/4-web-console-en.pptx>))
   5. コマンドライン: 🎬 [ビデオ](<https://www.youtube.com/watch?v=QWMCdI2PF0s>) (15:52) 
      * 🎬 [概要](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=0s>) (1:14)
-     * 🎬 [設定する SafeKit クラスタ](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
+     * 🎬 [設定する SafeKit cluster](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
      * 🎬 [設定する SafeKit モジュール](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=271s>) (8:16) 
        * 🎬 [提示されたシナリオ](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=274s>) (0:30)
        * 🎬 [ノード1にインストールして設定します。](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=304s>) (3:40)

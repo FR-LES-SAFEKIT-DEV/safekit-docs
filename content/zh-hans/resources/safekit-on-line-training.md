@@ -1,10 +1,10 @@
 ---
 title: "SafeKit 高可用性培训：免费在线认证课程"
 canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-on-line-training/"
-description: "通过我们的免费培训，掌握 SafeKit 无 SAN 高可用性解决方案。培训内容涵盖软件安装、Web 控制台管理和命令行界面 (CLI)。学习高级配置和故障排除技巧，确保 24/7 全天候高可用性。在线获取官方认证。"
+description: "掌握 SafeKit 通过我们的免费培训，轻松实现无SAN高可用性。培训内容涵盖软件安装、Web控制台管理和命令行界面（CLI）。学习高级配置和故障排除技巧，确保全天候高可用性。在线获取官方认证。"
 category: "resources"
 lang: "zh-hans"
-topics: "如何访问培训平台？获取 SafeKit 8 培训资料，🔍 SafeKit 高可用性导航中心"
+topics: "如何访问培训平台？ SafeKit 8 份培训资料，🔍 SafeKit 高可用性导航中心"
 ---
 
 # SafeKit 高可用性培训：免费在线认证课程 {#safekit-high-availability-training-free-online-certification-program}
@@ -18,7 +18,7 @@ topics: "如何访问培训平台？获取 SafeKit 8 培训资料，🔍 SafeKit
   * 导航至 **👉 🎓[SafeKit 在线培训平台](<https://training.my.evidian.com/mod/page/view.php?id=712>)**这里是您所有学习模块和免费认证计划的中心枢纽。
   * **获取您的凭证：** 如果您还没有帐户，请点击 **接触** 在培训平台的顶部菜单中申请您的登录凭据。
   * 该平台按主题分为多个版块，包括： 
-    * **建筑与介绍：** 理解 mirror 和 farm 集群概念。
+    * **建筑与介绍：** 理解 mirror 和 farm cluster 概念。
     * **示威游行：** 访问基于视频的场景 SQL ServerHyper-V 和 Apache 负载均衡。
     * **安装与设置：** 了解如何通过 Web 管理控制台或 CLI 安装和配置软件包。
     * **高级配置：** 深入探讨 userconfig.xml心跳、复制和虚拟 IP。
@@ -49,39 +49,39 @@ topics: "如何访问培训平台？获取 SafeKit 8 培训资料，🔍 SafeKit
      * 🎬 [演示 SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
      * 🎬 [冗余和高可用性解决方案示例](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=139s>) (2:00)
      * 🎬 [SafeKit 在许多不同国家销售 Milestone](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=259s>) (0:49)
-     * 🎬 [在两种解决方案中选择：虚拟机或应用集群](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
+     * 🎬 [在两种解决方案中选择：虚拟机或应用程序 cluster](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
      * 🎬 [独特优势](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>))
   2. 比赛：🎬 [视频](<https://www.youtube.com/watch?v=DKra6YVLGZk>) (13:21) 
      * 🎬 [介绍](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
-     * 🎬 [虚拟机集群](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
-     * 🎬 [Mirror 簇](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Farm 簇](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [Cluster 虚拟机](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
+     * 🎬 [Mirror cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
+     * 🎬 [Farm cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
 
 
 ### 示威游行 {#demonstrations}
 
-Hyper-V 集群演示：🎬 [视频](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
+Hyper-V cluster 演示：🎬 [视频](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
   * 🎬 [2 个 Hyper-V 节点和 2 台虚拟机](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s>) (0:49)
-  * 🎬 [配置集群和两个 hyperv.safe 模块](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
+  * 🎬 [配置 cluster 和两个 hyperv.safe 模块](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
   * 🎬 [启动并测试虚拟机复制、迁移和崩溃故障转移功能](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>))
 
 
-SQL Server 集群演示：🎬 [视频](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
+SQL Server cluster 演示：🎬 [视频](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
 
   * 🎬 [2 个节点 SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  * 🎬 [配置集群和 mirror.safe 模块](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  * 🎬 [配置 cluster 以及 mirror.safe 模块](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   * 🎬 [启动并测试 SQL 复制、迁移和崩溃故障转移功能](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
 
 
-Farm 集群演示：🎬 [视频](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Farm cluster 演示：🎬 [视频](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 个运行 Apache 的节点](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  * 🎬 [配置集群和 farm.safe 模块](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  * 🎬 [配置 cluster 以及 farm.safe 模块](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
   * 🎬 [启动并测试网络负载均衡和崩溃故障转移](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
 
@@ -97,7 +97,7 @@ Farm 集群演示：🎬 [视频](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/3-install-setup-en.pptx>))
   4. Web 控制台：🎬 [视频](<https://www.youtube.com/watch?v=UPZK61eE5uA>) (34:02) 
      * 🎬 [概述](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=0s>) (1:40)
-     * 🎬 [集群配置](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
+     * 🎬 [配置 cluster](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
      * 🎬 [配置新模块](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=290s>) (8:38) 
        * 🎬 [模块配置概述](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=294s>) (02:03)
        * 🎬 [编辑模块配置](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=417s>) (03:44)
@@ -115,7 +115,7 @@ Farm 集群演示：🎬 [视频](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/4-web-console-en.pptx>))
   5. 命令行：🎬 [视频](<https://www.youtube.com/watch?v=QWMCdI2PF0s>) (15:52) 
      * 🎬 [概述](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=0s>) (1:14)
-     * 🎬 [配置 SafeKit 簇](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
+     * 🎬 [配置 SafeKit cluster](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
      * 🎬 [配置 SafeKit 模块](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=271s>) (8:16) 
        * 🎬 [所呈现的情景](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=274s>) (0:30)
        * 🎬 [在节点 1 上安装和配置](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=304s>) (3:40)

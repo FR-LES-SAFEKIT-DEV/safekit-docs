@@ -1,10 +1,10 @@
 ---
 title: "SafeKit 고가용성 교육: 무료 온라인 인증 프로그램"
 canonical: "https://safekit.eviden.com/ko/resources/safekit-on-line-training/"
-description: "SafeKit SANless HA 마스터 교육을 무료로 받으세요. 소프트웨어 설치, 웹 콘솔 관리 및 CLI를 다룹니다. 24시간 연중무휴 고가용성을 보장하기 위한 고급 구성 및 문제 해결 방법을 배우세요. 온라인으로 공식 인증서를 받으세요."
+description: "주인 SafeKit 무료 교육을 통해 SAN 없는 고가용성(HA) 환경을 구축하세요. 소프트웨어 설치, 웹 콘솔 관리 및 CLI 사용법을 배우실 수 있습니다. 24시간 연중무휴 고가용성을 보장하기 위한 고급 구성 및 문제 해결 방법을 익히고, 온라인으로 공식 인증서를 취득하세요."
 category: "resources"
 lang: "ko"
-topics: "교육 플랫폼에 접속하는 방법은 무엇인가요?, SafeKit 8 교육 자료를 받으세요, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "교육 플랫폼에 접속하는 방법은 무엇인가요? SafeKit 8가지 교육 자료, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
 # SafeKit 고가용성 교육: 무료 온라인 인증 프로그램 {#safekit-high-availability-training-free-online-certification-program}
@@ -18,7 +18,7 @@ topics: "교육 플랫폼에 접속하는 방법은 무엇인가요?, SafeKit 8 
   * 다음으로 이동하세요 **👉 🎓[SafeKit 온라인 교육 플랫폼](<https://training.my.evidian.com/mod/page/view.php?id=712>)**이곳은 모든 학습 모듈과 무료 자격증 프로그램을 위한 중심 허브 역할을 합니다.
   * **자격 증명을 받으세요:** 아직 계정이 없으시면 클릭하세요. **연락하다** 교육 플랫폼 상단 메뉴에서 로그인 자격 증명을 요청하세요.
   * 이 플랫폼은 다음과 같은 주제별 섹션으로 구성되어 있습니다. 
-    * **건축 및 소개:** 이해하다 mirror 그리고 farm 클러스터 개념.
+    * **건축 및 소개:** 이해하다 mirror 그리고 farm cluster 개념.
     * **시연:** 동영상 기반 시나리오에 액세스하세요 SQL ServerHyper-V 및 Apache 로드 밸런싱.
     * **설치 및 설정:** 패키지를 설치하고 웹 관리 콘솔 또는 CLI를 통해 구성하는 방법을 알아보세요.
     * **고급 구성:** 심층 분석 userconfig.xml하트비트, 복제 및 가상 IP.
@@ -49,39 +49,39 @@ topics: "교육 플랫폼에 접속하는 방법은 무엇인가요?, SafeKit 8 
      * 🎬 [시연 SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
      * 🎬 [이중화 및 고가용성 솔루션의 예시](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=139s>) (2:00)
      * 🎬 [SafeKit 여러 나라에서 판매되고 있습니다. Milestone](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=259s>) (0:49)
-     * 🎬 [가상 머신 또는 애플리케이션 클러스터 두 가지 솔루션 중에서 선택하십시오.](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
+     * 🎬 [두 가지 솔루션 중 하나를 선택하세요: 가상 머신 또는 애플리케이션 cluster](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
      * 🎬 [뚜렷한 장점](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>))
   2. 대회: 🎬 [동영상](<https://www.youtube.com/watch?v=DKra6YVLGZk>) (13:21) 
      * 🎬 [소개](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
-     * 🎬 [가상 머신 클러스터](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
-     * 🎬 [Mirror 무리](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Farm 무리](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [Cluster 가상 머신](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
+     * 🎬 [Mirror cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
+     * 🎬 [Farm cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
 
 
 ### 시연 {#demonstrations}
 
-Hyper-V 클러스터 데모: 🎬 [동영상](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
+하이퍼-V cluster 시연: 🎬 [동영상](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
   * 🎬 [Hyper-V 노드 2개와 가상 머신 2개](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s>) (0:49)
-  * 🎬 [클러스터와 두 개를 구성합니다. hyperv.safe 모듈](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
+  * 🎬 [구성 cluster 그리고 두 개 hyperv.safe 모듈](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
   * 🎬 [가상 머신 복제, 마이그레이션 및 충돌 시 장애 조치 기능을 시작하고 테스트합니다.](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>))
 
 
-SQL Server 클러스터 데모: 🎬 [동영상](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
+SQL Server cluster 시연: 🎬 [동영상](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
 
   * 🎬 [2개의 노드 SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  * 🎬 [클러스터를 구성하고 mirror.safe 기준 치수](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  * 🎬 [구성 cluster 그리고 mirror.safe 모듈](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   * 🎬 [SQL 복제, 마이그레이션, 장애 조치 시작 및 테스트](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
 
 
-Farm 클러스터 데모: 🎬 [동영상](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Farm cluster 시연: 🎬 [동영상](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [Apache가 설치된 노드 2개](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  * 🎬 [클러스터를 구성하고 farm.safe 기준 치수](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  * 🎬 [구성 cluster 그리고 farm.safe 모듈](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
   * 🎬 [네트워크 로드 밸런싱 및 장애 발생 시 페일오버를 시작하고 테스트합니다.](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
 
@@ -97,7 +97,7 @@ Farm 클러스터 데모: 🎬 [동영상](<https://www.youtube.com/watch?v=1Ww2
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/3-install-setup-en.pptx>))
   4. 웹 콘솔: 🎬 [동영상](<https://www.youtube.com/watch?v=UPZK61eE5uA>) (34:02) 
      * 🎬 [개요](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=0s>) (1:40)
-     * 🎬 [클러스터 구성](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
+     * 🎬 [구성 cluster](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
      * 🎬 [새 모듈 구성](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=290s>) (8:38) 
        * 🎬 [모듈 구성 개요](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=294s>) (02:03)
        * 🎬 [모듈 구성 편집](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=417s>) (03:44)
@@ -115,7 +115,7 @@ Farm 클러스터 데모: 🎬 [동영상](<https://www.youtube.com/watch?v=1Ww2
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/4-web-console-en.pptx>))
   5. 명령줄: 🎬 [동영상](<https://www.youtube.com/watch?v=QWMCdI2PF0s>) (15:52) 
      * 🎬 [개요](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=0s>) (1:14)
-     * 🎬 [구성 SafeKit 무리](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
+     * 🎬 [구성 SafeKit cluster](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
      * 🎬 [구성하기 SafeKit 기준 치수](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=271s>) (8:16) 
        * 🎬 [제시된 시나리오](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=274s>) (0:30)
        * 🎬 [노드 1에 설치 및 구성](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=304s>) (3:40)

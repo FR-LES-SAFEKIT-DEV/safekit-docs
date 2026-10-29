@@ -1,10 +1,10 @@
 ---
-title: "Formazione SafeKit sull'alta disponibilità: programma di certificazione online gratuito"
+title: "SafeKit Formazione sull'alta disponibilità: programma di certificazione online gratuito"
 canonical: "https://safekit.eviden.com/it/resources/safekit-on-line-training/"
-description: "Padroneggia SafeKit SANless HA con il nostro corso di formazione gratuito. Il corso copre l'installazione del software, la gestione tramite console web e la CLI. Impara la configurazione avanzata e la risoluzione dei problemi per garantire un'elevata disponibilità 24 ore su 24, 7 giorni su 7. Ottieni la tua certificazione ufficiale online."
+description: "Maestro SafeKit Alta disponibilità senza SAN con la nostra formazione gratuita. Il corso copre l'installazione del software, la gestione tramite console web e la CLI. Impara la configurazione avanzata e la risoluzione dei problemi per garantire un'alta disponibilità 24 ore su 24, 7 giorni su 7. Ottieni la tua certificazione ufficiale online."
 category: "resources"
 lang: "it"
-topics: "Come accedere alla piattaforma di formazione?, Ottieni i materiali di formazione di SafeKit 8, 🔍 Hub di navigazione per l'alta disponibilità di SafeKit"
+topics: "Come accedere alla piattaforma di formazione?, Ottieni SafeKit 8 Materiali di formazione, 🔍 SafeKit Hub di navigazione ad alta disponibilità"
 ---
 
 # SafeKit Formazione sull'alta disponibilità: programma di certificazione online gratuito {#safekit-high-availability-training-free-online-certification-program}
@@ -18,7 +18,7 @@ IL SafeKit La formazione online è una risorsa completa e fruibile in autonomia,
   * Navigare verso **👉 🎓[SafeKit Piattaforma di formazione online](<https://training.my.evidian.com/mod/page/view.php?id=712>)**Questa piattaforma funge da punto di accesso centrale per tutti i moduli di apprendimento e per il programma di certificazione gratuito.
   * **Ottieni le tue credenziali:** Se non hai ancora un account, clicca qui **Contatto** nel menu in alto della piattaforma di formazione per richiedere le tue credenziali di accesso.
   * La piattaforma è organizzata in sezioni tematiche, tra cui: 
-    * **Architettura e introduzione:** Capire mirror E farm concetti di cluster.
+    * **Architettura e introduzione:** Capire mirror E farm cluster debiti.
     * **Dimostrazioni:** Accedi a scenari basati su video per SQL Server, Hyper-V e bilanciamento del carico Apache.
     * **Installazione e configurazione:** Scopri come installare il pacchetto e configurarlo tramite la console di gestione web o la CLI.
     * **Configurazione avanzata:** Approfondimenti su userconfig.xml, heartbeat, replica e IP virtuali.
@@ -49,39 +49,39 @@ Nota che questo non è il <a href="https://training.my.evidian.com/mod/page/view
      * 🎬 [Dimostrazione di SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
      * 🎬 [Esempi di soluzioni di ridondanza e alta disponibilità](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=139s>) (2:00)
      * 🎬 [SafeKit venduto in molti paesi diversi con Milestone](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=259s>) (0:49)
-     * 🎬 [Scegli tra 2 soluzioni: macchina virtuale o cluster di applicazioni.](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
+     * 🎬 [Scegli tra 2 soluzioni: macchina virtuale o applicazione cluster](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
      * 🎬 [Vantaggi distintivi](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>))
   2. Competizione: 🎬 [video](<https://www.youtube.com/watch?v=DKra6YVLGZk>) (13:21) 
      * 🎬 [Introduzione](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [Cluster di macchine virtuali](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
-     * 🎬 [Mirror grappolo](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Farm grappolo](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [Mirror cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
+     * 🎬 [Farm cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
 
 
 ### Dimostrazioni {#demonstrations}
 
-Dimostrazione del cluster Hyper-V: 🎬 [video](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
+Hyper-V cluster dimostrazione: 🎬 [video](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
   * 🎬 [2 nodi Hyper-V e 2 macchine virtuali](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s>) (0:49)
-  * 🎬 [Configura il cluster e due hyperv.safe moduli](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
+  * 🎬 [Configurare il cluster e due hyperv.safe moduli](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
   * 🎬 [Avviare e testare la replica, la migrazione e il failover delle macchine virtuali in caso di arresto anomalo.](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>))
 
 
-SQL Server Dimostrazione del cluster: 🎬 [video](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
+SQL Server cluster dimostrazione: 🎬 [video](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
 
   * 🎬 [2 nodi con SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  * 🎬 [Configurare il cluster e il mirror.safe modulo](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  * 🎬 [Configurare il cluster e il mirrormodulo .safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   * 🎬 [Avviare e testare la replica SQL, la migrazione e il failover in caso di arresto anomalo.](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
 
 
-Farm Dimostrazione del cluster: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Farm cluster dimostrazione: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 nodi con Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  * 🎬 [Configurare il cluster e il farm.safe modulo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  * 🎬 [Configurare il cluster e il farmmodulo .safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
   * 🎬 [Avviare e testare il bilanciamento del carico di rete e il failover in caso di arresto anomalo.](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
 
@@ -115,7 +115,7 @@ Farm Dimostrazione del cluster: 🎬 [video](<https://www.youtube.com/watch?v=1W
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/4-web-console-en.pptx>))
   5. Riga di comando: 🎬 [video](<https://www.youtube.com/watch?v=QWMCdI2PF0s>) (15:52) 
      * 🎬 [Panoramica](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=0s>) (1:14)
-     * 🎬 [Configurare il SafeKit grappolo](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
+     * 🎬 [Configurare il SafeKit cluster](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
      * 🎬 [Configura un SafeKit modulo](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=271s>) (8:16) 
        * 🎬 [Scenario presentato](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=274s>) (0:30)
        * 🎬 [Installazione e configurazione sul nodo 1](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=304s>) (3:40)

@@ -1,10 +1,10 @@
 ---
-title: "برنامج التدريب على التوافر العالي من SafeKit: برنامج شهادة مجاني عبر الإنترنت"
+title: "SafeKit التدريب على التوافر العالي: برنامج شهادة مجاني عبر الإنترنت"
 canonical: "https://safekit.eviden.com/ar/resources/safekit-on-line-training/"
-description: "أتقن تقنية SafeKit SANless HA من خلال تدريبنا المجاني. يشمل التدريب تثبيت البرامج، وإدارة وحدة التحكم عبر الويب، وواجهة سطر الأوامر. تعلّم الإعدادات المتقدمة واستكشاف الأخطاء وإصلاحها لضمان توافر عالٍ على مدار الساعة. احصل على شهادتك الرسمية عبر الإنترنت."
+description: "يتقن SafeKit تدريب مجاني على التوافر العالي بدون شبكة تخزين (SAN). يشمل التدريب تثبيت البرامج، وإدارة وحدة التحكم عبر الويب، وواجهة سطر الأوامر (CLI). تعلّم الإعدادات المتقدمة واستكشاف الأخطاء وإصلاحها لضمان توافر عالٍ على مدار الساعة. احصل على شهادتك الرسمية عبر الإنترنت."
 category: "resources"
 lang: "ar"
-topics: "كيفية الوصول إلى منصة التدريب؟، احصل على مواد تدريب SafeKit 8، 🔍 مركز التنقل عالي التوفر لـ SafeKit"
+topics: "كيفية الوصول إلى منصة التدريب؟ SafeKit ٨ مواد تدريبية، 🔍 SafeKit مركز الملاحة عالي التوافر"
 ---
 
 # SafeKit التدريب على التوافر العالي: برنامج شهادة مجاني عبر الإنترنت {#safekit-high-availability-training-free-online-certification-program}
@@ -16,9 +16,9 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
 ال SafeKit التدريب عبر الإنترنت هو مورد شامل ومرن مصمم لمساعدتك على إتقان تقنيات التوافر العالي وتجميع التطبيقات. يمكنك الوصول إلى المنصة من خلال الخطوات التالية:
 
   * انتقل إلى **👉 🎓[SafeKit منصة التدريب عبر الإنترنت](<https://training.my.evidian.com/mod/page/view.php?id=712>)**هذا بمثابة مركزك الرئيسي لجميع وحدات التعلم وبرنامج الشهادات المجاني.
-  * **احصل على أوراق اعتمادك:** إذا لم يكن لديك حساب بالفعل، فانقر هنا **اتصال** في القائمة العلوية لمنصة التدريب، اطلب بيانات اعتماد تسجيل الدخول الخاصة بك.
+  * **احصل على أوراق اعتمادك:** إذا لم يكن لديك حساب بالفعل، فانقر هنا **اتصال** في القائمة العلوية لمنصة التدريب، اطلب بيانات تسجيل الدخول الخاصة بك.
   * تم تنظيم المنصة في أقسام موضوعية، تشمل ما يلي: 
-    * **الهندسة المعمارية والمقدمة:** يفهم mirror و farm مفاهيم التجميع.
+    * **الهندسة المعمارية والمقدمة:** يفهم mirror و farm cluster مفاهيم.
     * **العروض التوضيحية:** الوصول إلى سيناريوهات قائمة على الفيديو لـ SQL Server، Hyper-V، وموازنة الأحمال مع Apache.
     * **التثبيت والإعداد:** تعرّف على كيفية تثبيت الحزمة وتكوينها من خلال وحدة تحكم إدارة الويب أو واجهة سطر الأوامر (CLI).
     * **الإعدادات المتقدمة:** غوص عميق في userconfig.xml، نبضات القلب، والنسخ المتماثل، وعناوين IP الافتراضية.
@@ -49,39 +49,39 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
      * 🎬 [عرض توضيحي لـ SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
      * 🎬 [أمثلة على حلول التكرار والتوافر العالي](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=139s>) (2:00)
      * 🎬 [SafeKit تُباع في العديد من البلدان المختلفة مع Milestone](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=259s>) (0:49)
-     * 🎬 [اختر بين حلين: جهاز افتراضي أو مجموعة تطبيقات](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
+     * 🎬 [اختر بين حلين: جهاز افتراضي أو تطبيق cluster](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
      * 🎬 [مزايا مميزة](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
      * ([عرض تقديمي بصيغة pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>))
   2. المنافسة: 🎬 [فيديو](<https://www.youtube.com/watch?v=DKra6YVLGZk>) (13:21) 
      * 🎬 [مقدمة](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
-     * 🎬 [مجموعة من الأجهزة الافتراضية](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
-     * 🎬 [Mirror تَجَمَّع](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Farm تَجَمَّع](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [Cluster من الآلات الافتراضية](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
+     * 🎬 [Mirror cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
+     * 🎬 [Farm cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ([عرض تقديمي بصيغة pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
 
 
 ### عروض توضيحية {#demonstrations}
 
-عرض توضيحي لمجموعة Hyper-V: 🎬 [فيديو](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
+هايبر-في cluster عرض توضيحي: 🎬 [فيديو](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
   * 🎬 [عقدتان من نوع Hyper-V وجهازان افتراضيان](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s>) (0:49)
-  * 🎬 [قم بتهيئة المجموعة واثنين hyperv.safe الوحدات](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
+  * 🎬 [قم بتكوين cluster واثنان hyperv.safe الوحدات](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
   * 🎬 [ابدأ واختبر نسخ الأجهزة الافتراضية، وترحيلها، والتحويل التلقائي في حالة التعطل.](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>))
 
 
-SQL Server عرض توضيحي للمجموعة: 🎬 [فيديو](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
+SQL Server cluster عرض توضيحي: 🎬 [فيديو](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
 
   * 🎬 [عقدتان مع SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  * 🎬 [قم بتهيئة المجموعة و mirror.safe وحدة نمطية](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  * 🎬 [قم بتكوين cluster و mirrorوحدة .safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   * 🎬 [ابدأ واختبر نسخ SQL، والترحيل، والتحويل التلقائي في حالة التعطل](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
 
 
-Farm عرض توضيحي للمجموعة: 🎬 [فيديو](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Farm cluster عرض توضيحي: 🎬 [فيديو](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [عقدتان مع أباتشي](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  * 🎬 [قم بتهيئة المجموعة و farm.safe وحدة نمطية](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  * 🎬 [قم بتكوين cluster و farmوحدة .safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
   * 🎬 [ابدأ واختبر موازنة أحمال الشبكة، وقم بالتحويل التلقائي في حالة حدوث عطل.](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
 
@@ -97,7 +97,7 @@ Farm عرض توضيحي للمجموعة: 🎬 [فيديو](<https://www.youtub
      * ([عرض تقديمي بصيغة pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/3-install-setup-en.pptx>))
   4. وحدة تحكم الويب: 🎬 [فيديو](<https://www.youtube.com/watch?v=UPZK61eE5uA>) (34:02) 
      * 🎬 [ملخص](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=0s>) (1:40)
-     * 🎬 [تكوين المجموعة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
+     * 🎬 [تكوين cluster](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
      * 🎬 [تهيئة وحدة نمطية جديدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=290s>) (8:38) 
        * 🎬 [نظرة عامة على تكوين الوحدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=294s>) (02:03)
        * 🎬 [تحرير تكوين الوحدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=417s>) (03:44)
@@ -115,7 +115,7 @@ Farm عرض توضيحي للمجموعة: 🎬 [فيديو](<https://www.youtub
      * ([عرض تقديمي بصيغة pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/4-web-console-en.pptx>))
   5. سطر الأوامر: 🎬 [فيديو](<https://www.youtube.com/watch?v=QWMCdI2PF0s>) (15:52) 
      * 🎬 [ملخص](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=0s>) (1:14)
-     * 🎬 [قم بتكوين SafeKit تَجَمَّع](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
+     * 🎬 [قم بتكوين SafeKit cluster](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
      * 🎬 [قم بتكوين SafeKit وحدة نمطية](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=271s>) (8:16) 
        * 🎬 [السيناريو المعروض](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=274s>) (0:30)
        * 🎬 [قم بالتثبيت والتكوين على العقدة 1](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=304s>) (3:40)
@@ -140,7 +140,7 @@ Farm عرض توضيحي للمجموعة: 🎬 [فيديو](<https://www.youtub
   7. Farm الوحدة: 🎬 [فيديو](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [ملخص](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
      * 🎬 [نظرة عامة على userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [Farm دقات القلب (&lt;farm&gt;)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [Farm نبضات القلب (&lt;farm&gt;)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
      * 🎬 [عنوان IP افتراضي وقواعد موازنة الأحمال (&lt;vip&gt;)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [start_both / stop_both البرامج النصية](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
      * 🎬 [Farm التحولات بين الدول](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)

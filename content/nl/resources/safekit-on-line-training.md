@@ -1,10 +1,10 @@
 ---
-title: "SafeKit High Availability-training: gratis online certificeringsprogramma"
+title: "SafeKit Training voor hoge beschikbaarheid: gratis online certificeringsprogramma"
 canonical: "https://safekit.eviden.com/nl/resources/safekit-on-line-training/"
-description: "Beheers SafeKit SANless HA met onze gratis training. De training behandelt software-installatie, beheer via de webconsole en de CLI. Leer geavanceerde configuratie- en probleemoplossingstechnieken om 24/7 hoge beschikbaarheid te garanderen. Behaal uw officiële certificering online."
+description: "Meester SafeKit SANless HA met onze gratis training. Behandelt software-installatie, beheer via de webconsole en de CLI. Leer geavanceerde configuratie- en probleemoplossingstechnieken om 24/7 hoge beschikbaarheid te garanderen. Behaal uw officiële certificering online."
 category: "resources"
 lang: "nl"
-topics: "Hoe krijg ik toegang tot het trainingsplatform? Download het SafeKit 8-trainingsmateriaal. 🔍 SafeKit High Availability-navigatiehub"
+topics: "Hoe krijg ik toegang tot het trainingsplatform? SafeKit 8 trainingsmaterialen, 🔍 SafeKit Navigatiehub met hoge beschikbaarheid"
 ---
 
 # SafeKit Training voor hoge beschikbaarheid: gratis online certificeringsprogramma {#safekit-high-availability-training-free-online-certification-program}
@@ -18,7 +18,7 @@ De SafeKit De online training is een uitgebreide, zelfstudiebron die is ontworpe
   * Navigeer naar de **👉 🎓[SafeKit Online trainingsplatform](<https://training.my.evidian.com/mod/page/view.php?id=712>)**Dit dient als uw centrale hub voor alle leermodules en het gratis certificeringsprogramma.
   * **Vraag je inloggegevens aan:** Als je nog geen account hebt, klik dan hier. **Contact** Ga naar het bovenste menu van het trainingsplatform om uw inloggegevens aan te vragen.
   * Het platform is onderverdeeld in thematische secties, waaronder: 
-    * **Architectuur en introductie:** Begrijpen mirror En farm clusterconcepten.
+    * **Architectuur en introductie:** Begrijpen mirror En farm cluster concepten.
     * **Demonstraties:** Bekijk videoscenario's voor SQL Server, Hyper-V en Apache load balancing.
     * **Installatie en configuratie:** Leer hoe u het pakket installeert en configureert via de webbeheerconsole of de CLI.
     * **Geavanceerde configuratie:** Diepgaande analyses van userconfig.xml, hartslagen, replicatie en virtuele IP-adressen.
@@ -49,7 +49,7 @@ Merk op dat dit niet de <a href="https://training.my.evidian.com/mod/page/view.p
      * 🎬 [Demonstratie van SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
      * 🎬 [Voorbeelden van oplossingen voor redundantie en hoge beschikbaarheid.](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=139s>) (2:00)
      * 🎬 [SafeKit verkocht in veel verschillende landen met Milestone](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=259s>) (0:49)
-     * 🎬 [Kies uit 2 oplossingen: virtuele machine of applicatiecluster.](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
+     * 🎬 [Kies uit 2 oplossingen: virtuele machine of applicatie. cluster](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
      * 🎬 [Unieke voordelen](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>))
   2. Wedstrijd: 🎬 [video](<https://www.youtube.com/watch?v=DKra6YVLGZk>) (13:21) 
@@ -62,27 +62,27 @@ Merk op dat dit niet de <a href="https://training.my.evidian.com/mod/page/view.p
 
 ### Demonstraties {#demonstrations}
 
-Hyper-V clusterdemonstratie: 🎬 [video](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
+Hyper-V cluster demonstratie: 🎬 [video](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
   * 🎬 [2 Hyper-V-nodes en 2 virtuele machines](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s>) (0:49)
-  * 🎬 [Configureer het cluster en twee hyperv.safe modules](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
+  * 🎬 [Configureer de cluster en twee hyperv.safe modules](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
   * 🎬 [Start en test VM-replicatie, -migratie en failover bij een crash.](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>))
 
 
-SQL Server clusterdemonstratie: 🎬 [video](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
+SQL Server cluster demonstratie: 🎬 [video](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
 
   * 🎬 [2 knooppunten met SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  * 🎬 [Configureer het cluster en de mirror.safe module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  * 🎬 [Configureer de cluster en de mirror.veilige module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
   * 🎬 [Start en test SQL-replicatie, -migratie en failover bij een crash.](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
 
 
-Farm clusterdemonstratie: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Farm cluster demonstratie: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 nodes met Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  * 🎬 [Configureer het cluster en de farm.safe module](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
-  * 🎬 [Start en test netwerkbelastingverdeling, failover bij crash](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
+  * 🎬 [Configureer de cluster en de farm.veilige module](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  * 🎬 [Start en test netwerkbelastingverdeling en failover bij een netwerkcrash.](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
 
 
@@ -97,12 +97,12 @@ Farm clusterdemonstratie: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXH
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/3-install-setup-en.pptx>))
   4. Webconsole: 🎬 [video](<https://www.youtube.com/watch?v=UPZK61eE5uA>) (34:02) 
      * 🎬 [Overzicht](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=0s>) (1:40)
-     * 🎬 [Configuratie van het cluster](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
+     * 🎬 [Configuratie van de cluster](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
      * 🎬 [Configuratie van een nieuwe module](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=290s>) (8:38) 
        * 🎬 [Overzicht van de moduleconfiguratie](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=294s>) (02:03)
        * 🎬 [Moduleconfiguratie bewerken](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=417s>) (03:44)
        * 🎬 [Overige configuratiestappen](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=641s>) (02:47)
-     * 🎬 [Monitoringmodules](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
+     * 🎬 [Modules monitoring](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Overzicht van de monitoringconsole](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [Hoe een mirror Werkt de module in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
        * 🎬 [Hoe een farm Werkt de module in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
