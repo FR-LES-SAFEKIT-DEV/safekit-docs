@@ -18,7 +18,7 @@ The SafeKit on-line training is a self-paced, comprehensive resource designed to
   * Navigate to the **👉 🎓[SafeKit On-line Training Platform](<https://training.my.evidian.com/mod/page/view.php?id=712>)**. This serves as your central hub for all learning modules and the free certification program.
   * **Get your credentials:** If you do not already have an account, click **Contact** in the top menu of the training platform to request your login credentials.
   * The platform is organized into thematic sections, including: 
-    * **Architecture & Introduction:** Understand mirror and `farm` cluster concepts.
+    * **Architecture & Introduction:** Understand mirror and farm cluster concepts.
     * **Demonstrations:** Access video-based scenarios for SQL Server, Hyper-V, and Apache load balancing.
     * **Installation & Setup:** Learn how to install the package and configure through the web management console or the CLI.
     * **Advanced Configuration:** Deep dives into userconfig.xml, heartbeats, replication, and virtual IPs.
@@ -56,7 +56,7 @@ Note that this is not the <a href="https://training.my.evidian.com/mod/page/view
      * 🎬 [Introduction](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [Cluster of virtual machines](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
      * 🎬 [Mirror cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [`Farm` cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [Farm cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
 
 
@@ -78,7 +78,7 @@ SQL Server cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=
   * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
 
 
-`Farm` cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Farm cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 nodes with Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   * 🎬 [Configure the cluster and the farm.safe module](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -130,30 +130,30 @@ SQL Server cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=
   6. Mirror module: 🎬 [video](<https://www.youtube.com/watch?v=SmWwVUYsx9Q>) (26:52) 
      * 🎬 [Overview](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=0s>) (2:59)
      * 🎬 [Overview of userconfig.xml](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=179s>) (0:38)
-     * 🎬 [Heartbeats (<hearbeat>)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=217s>) (1:15)
-     * 🎬 [Virtual IP address (<vip>)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=292s>) (4:51)
-     * 🎬 [Real-time file replication (<rfs>)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=583s>) (2:35)
+     * 🎬 [Heartbeats (&lt;hearbeat&gt;)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=217s>) (1:15)
+     * 🎬 [Virtual IP address (&lt;vip&gt;)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=292s>) (4:51)
+     * 🎬 [Real-time file replication (&lt;rfs&gt;)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=583s>) (2:35)
      * 🎬 [How real-time file replication works?](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=738s>) (3:47)
      * 🎬 [start_prim / stop_prim scripts](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
      * 🎬 [Mirror state transitions](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>))
-  7. `Farm` module: 🎬 [video](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
+  7. Farm module: 🎬 [video](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [Overview](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
      * 🎬 [Overview of userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [`Farm` heartbeats (<`farm`>)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
-     * 🎬 [Virtual IP address and load balancing rules (<vip>)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
+     * 🎬 [Farm heartbeats (&lt;farm&gt;)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [Virtual IP address and load balancing rules (&lt;vip&gt;)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [start_both / stop_both scripts](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
-     * 🎬 [`Farm` state transitions](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
+     * 🎬 [Farm state transitions](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>))
 
 
   8. Checkers: 🎬 [video](<https://www.youtube.com/watch?v=Ru-YyPmIQa0>) (20:34) 
      * 🎬 [Overview](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=0s>) (4:08)
-     * 🎬 [Process and service monitoring checker (<errd>)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=248s>) (2:50)
-     * 🎬 [Network interface and virtual IP checkers (<intf> and <ip>)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=418s>) (1:13)
-     * 🎬 [Custom checker based on a user script (<custom>)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=491s>) (2:27)
-     * 🎬 [Split brain checker in case of network isolation (<splitbrain>)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=638s>) (2:16)
-     * 🎬 [<tcp>, <ping>, <module> checkers](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=774s>) (3:44)
+     * 🎬 [Process and service monitoring checker (&lt;errd&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=248s>) (2:50)
+     * 🎬 [Network interface and virtual IP checkers (&lt;intf&gt; and &lt;ip&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=418s>) (1:13)
+     * 🎬 [Custom checker based on a user script (&lt;custom&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=491s>) (2:27)
+     * 🎬 [Split brain checker in case of network isolation (&lt;splitbrain&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=638s>) (2:16)
+     * 🎬 [&lt;tcp&gt;, &lt;ping&gt;, &lt;module&gt; checkers](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=774s>) (3:44)
      * 🎬 [Module state transitions with checkers](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=998s>) (3:55)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>))
 
@@ -168,7 +168,7 @@ SQL Server cluster demonstration: 🎬 [video](<https://www.youtube.com/watch?v=
      * 🎬 [Web console issues](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>) (1:14)
      * 🎬 [Command line issues](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>) (0:59)
      * 🎬 [Mirror issues](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
-     * 🎬 [`Farm` issues](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
+     * 🎬 [Farm issues](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
      * 🎬 [Checker issues](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
      * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>))
 
