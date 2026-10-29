@@ -14,7 +14,7 @@ topics: "Quelles sont les différentes architectures de haute disponibilité et 
 ### Cluster Mirror {#mirror-cluster}
 
 
-Cluster ![ SafeKit mirror ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+![ SafeKit mirror cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 [ Plus d'informations ](</fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
@@ -22,7 +22,7 @@ Cluster ![ SafeKit mirror ](/wp-content/uploads/2023/02/safekit-prim-second-300.
 ### Cluster <span class="notranslate farm-term" translate="no">Farm</span> {#farm-cluster}
 
 
-Cluster ![ SafeKit farm ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+![ SafeKit farm cluster ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
 [ Plus d'informations ](</fr/architectures/network-load-balancing-cluster/>)
@@ -30,7 +30,7 @@ Cluster ![ SafeKit farm ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "
 ### Cluster <span class="notranslate farm-term" translate="no">Farm</span> + mirror {#farmmirror-cluster}
 
 
-Cluster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+![ SafeKit farm + mirror cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
 [ Plus d'informations ](</fr/architectures/clustering-software-load-balancing-mirroring/>)
@@ -46,7 +46,7 @@ Cluster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mirr
 ### Cluster N-1 {#n-1-cluster}
 
 
-Cluster de redondance N-1 ![ SafeKit ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
+![ SafeKit cluster de redondance N-1 ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
 [ Plus d'informations ](</fr/architectures/n-1-redundancy/>)

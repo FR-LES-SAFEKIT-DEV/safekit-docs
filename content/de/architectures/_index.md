@@ -14,7 +14,7 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 ### Mirror Cluster {#mirror-cluster}
 
 
-![ ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300") SafeKit Cluster mirror
+![SafeKit Cluster mirror](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 [ Weitere Informationen ](</de/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
@@ -22,7 +22,7 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 ### <span class="notranslate farm-term" translate="no">Farm</span> Cluster {#farm-cluster}
 
 
-![ ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300") SafeKit Cluster farm
+![SafeKit Cluster farm](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
 [ Weitere Informationen ](</de/architectures/network-load-balancing-cluster/>)

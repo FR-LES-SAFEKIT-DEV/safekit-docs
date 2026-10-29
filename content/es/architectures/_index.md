@@ -14,7 +14,7 @@ topics: "¿Cuáles son las diferentes arquitecturas de alta disponibilidad y los
 ### Clúster Mirror {#mirror-cluster}
 
 
-](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300") ![ SafeKit mirror
+![Clúster mirror SafeKit](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 [ Más información ](</es/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
@@ -22,7 +22,7 @@ topics: "¿Cuáles son las diferentes arquitecturas de alta disponibilidad y los
 ### Clúster <span class="notranslate farm-term" translate="no">Farm</span> {#farm-cluster}
 
 
-](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300") ![ SafeKit farm
+![Clúster farm SafeKit](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
 [ Más información ](</es/architectures/network-load-balancing-cluster/>)
@@ -30,7 +30,7 @@ topics: "¿Cuáles son las diferentes arquitecturas de alta disponibilidad y los
 ### Clúster <span class="notranslate farm-term" translate="no">Farm</span> + mirror {#farmmirror-cluster}
 
 
-Clúster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+![Clúster farm + mirror SafeKit](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
 [ Más información ](</es/architectures/clustering-software-load-balancing-mirroring/>)
