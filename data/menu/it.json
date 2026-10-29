@@ -6,7 +6,7 @@
   "Customer use cases": "Casi d&#x27;uso dei clienti",
   "Use cases": "Casi d&#x27;uso",
   "Best/Worst Use Cases": "Casi d&#x27;uso migliori/peggiori",
-  "OEM use case for a software publisher": "Caso d&#x27;uso OEM per un produttore di software",
+  "OEM use case for a software publisher": "Caso d&#x27;uso OEM per un editore di software",
   "Edge HA": "Edge HA",
   "Distributed Enterprise use case": "Caso d&#x27;uso di un&#x27;impresa distribuita",
   "Remote sites and disaster recovery use case": "Siti remoti e caso d&#x27;uso per il ripristino di emergenza",
@@ -91,7 +91,7 @@
   "SafeKit free trial": "SafeKit prova gratuita",
   "One-month license key": "Chiave di licenza valida per un mese",
   "Demonstrations": "Manifestazioni",
-  "Support": "Supporto",
+  "Support": "Supporto tecnico",
   "Free Training & Certification": "Formazione e certificazione gratuite",
   "Technical documentations": "Documentazione tecnica",
   "SafeKit quick installation guides": "Guide rapide all&#x27;installazione SafeKit",
@@ -101,8 +101,8 @@
   "Knowledge Base": "Base di conoscenza",
   "AI/LLM Resources for SafeKit": "Risorse AI/LLM per SafeKit",
   "Product information": "Informazioni sul prodotto",
+  "Datasheet": "Scheda tecnica",
   "White Paper - Product": "Carta bianca - Prodotto",
   "White Paper - High Availability Guide": "White Paper - Guida all&#x27;alta disponibilità",
-  "Technical Reference for RFI and RFP": "Riferimento tecnico per RFI e RFP",
-  "Datasheet": "Scheda tecnica"
+  "Technical Reference for RFI and RFP": "Riferimento tecnico per RFI e RFP"
 }

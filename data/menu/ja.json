@@ -91,7 +91,7 @@
   "SafeKit free trial": "SafeKit無料トライアル",
   "One-month license key": "1ヶ月ライセンスキー",
   "Demonstrations": "実演",
-  "Support": "サポート",
+  "Support": "テクニカルサポート",
   "Free Training & Certification": "無料トレーニングと認定",
   "Technical documentations": "技術文書",
   "SafeKit quick installation guides": "SafeKitクイックインストールガイド",
@@ -101,8 +101,8 @@
   "Knowledge Base": "知識ベース",
   "AI/LLM Resources for SafeKit": "SafeKit向けのAI/LLMリソース",
   "Product information": "製品情報",
+  "Datasheet": "データシート",
   "White Paper - Product": "ホワイトペーパー - 製品",
   "White Paper - High Availability Guide": "ホワイトペーパー - 高可用性ガイド",
-  "Technical Reference for RFI and RFP": "RFIおよびRFPに関する技術リファレンス",
-  "Datasheet": "データシート"
+  "Technical Reference for RFI and RFP": "RFIおよびRFPに関する技術リファレンス"
 }

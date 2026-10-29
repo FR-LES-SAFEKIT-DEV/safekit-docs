@@ -24,7 +24,7 @@
   "Hyper-V (hyperv.safe)": "하이퍼-V( hyperv.safe )",
   "KVM (kvm.safe)": "KVM( kvm.safe )",
   "Database (real-time replication and failover)": "데이터베이스(실시간 복제 및 장애 조치)",
-  "Web (network load balancing and failover)": "웹(네트워크 부하 분산 및 장애 조치)",
+  "Web (network load balancing and failover)": "웹(네트워크 로드 밸런싱 및 장애 조치)",
   "Apache (apache_farm.safe)": "아파치( apache_farm.safe )",
   "NGINX (farm.safe)": "NGINX ( farm.safe )",
   "Amazon AWS": "아마존 AWS",
@@ -91,7 +91,7 @@
   "SafeKit free trial": "SafeKit 무료 체험",
   "One-month license key": "한 달 라이선스 키",
   "Demonstrations": "시연",
-  "Support": "지원하다",
+  "Support": "기술 지원",
   "Free Training & Certification": "무료 교육 및 인증",
   "Technical documentations": "기술 문서",
   "SafeKit quick installation guides": "SafeKit 빠른 설치 가이드",
@@ -101,8 +101,8 @@
   "Knowledge Base": "지식 기반",
   "AI/LLM Resources for SafeKit": "SafeKit 용 AI/LLM 자료",
   "Product information": "제품 정보",
+  "Datasheet": "데이터시트",
   "White Paper - Product": "백서 - 제품",
   "White Paper - High Availability Guide": "백서 - 고가용성 가이드",
-  "Technical Reference for RFI and RFP": "RFI 및 RFP에 대한 기술 참고 자료",
-  "Datasheet": "데이터시트"
+  "Technical Reference for RFI and RFP": "RFI 및 RFP에 대한 기술 참고 자료"
 }
