@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "이 가이드에서는 iis_farm.safe 모듈을 Windows 에 배포하여 IIS 네트워크 로드 밸런싱 및 자동 페일오버를 구현하는 방법을 설명합니다. 또한 외부 하드웨어 로드 밸런서나 복잡한 구성 없이 가상 IP를 사용하여 웹 서비스 및 애플리케이션을 위한 고가용성 클러스터를 구축하는 방법도 안내합니다."
 category: "quick-install"
 lang: "ko"
-topics: "IIS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / IIS 솔루션 개요, Windows ( iis_farm.safe )에 SafeKit / IIS 솔루션 설치, SafeKit / IIS 솔루션 단계별 구성, SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "IIS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / IIS 솔루션 개요, Windows ( iis_farm.safe )에 SafeKit / IIS 솔루션 설치, SafeKit / IIS 솔루션 단계별 구성, SafeKit farm 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
 # IIS 네트워크 로드 밸런싱 및 페일오버: SafeKit iis_farm.safe 모듈을 설치하십시오. {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}

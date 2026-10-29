@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/what-is-rpo-and-rto-wit
 description: "RPO（リカバリポイント目標）とRTO（リカバリ時間目標）の定義を明確な例とともに学びましょう。 SafeKit データ損失ゼロ（RPO=0）と迅速なフェイルオーバーを実現し、24時間365日の事業継続性を確保します。"
 category: "best-practises"
 lang: "ja"
-topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリューションのRPOとRTOの計算方法、バックアップおよび災害復旧ソリューションのRPOとRTOの決定方法、 SafeKit MirrorクラスタがゼロRPOと低RTOを実現する方法、負荷分散を備えたSafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスタのRTOベンチマーク、比較表：RTOとRPO、高可用性の実践：ゼロRPOとほぼゼロRTOのリアルタイムデモ、FAQ：事業継続のためのRPOとRTOの最適化、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリューションのRPOとRTOの計算方法、バックアップおよび災害復旧ソリューションのRPOとRTOの決定方法、 SafeKit MirrorクラスタがゼロRPOと低RTOを実現する方法、負荷分散を備えたSafeKit FarmクラスタのRTOベンチマーク、比較表：RTOとRPO、高可用性の実践：ゼロRPOとほぼゼロRTOのリアルタイムデモ、FAQ：事業継続のためのRPOとRTOの最適化、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # RPOとRTOとは？定義、例、およびHA戦略 {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}

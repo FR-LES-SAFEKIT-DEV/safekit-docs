@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/safekit-smart-console-yo
 description: "当社のスマートコンソールを使えば、 SafeKitクラスタを簡単に管理できます。コード不要の設定、スマートフォンとの互換性、リアルタイムのPWA通知など、便利な機能が満載です。人的ミスを排除し、高い可用性をすぐに実現できます。詳細はこちらをご覧ください。"
 category: "architectures"
 lang: "ja"
-topics: "スマートコンソール：直感的でモバイル対応、エラーフリーの高可用性、目次、 SafeKit mirrorクラスタは Web コンソールとどのように連携しますか？、 SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスタは Web コンソールとどのように連携しますか？、Web コンソールで複数のモジュールと複数のクラスタを監視する方法、コンソールでアラートを監視し、メール通知を管理する方法、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "スマートコンソール：直感的でモバイル対応、エラーフリーの高可用性、目次、 SafeKit mirrorクラスタは Web コンソールとどのように連携しますか？、 SafeKit farmクラスタは Web コンソールとどのように連携しますか？、Web コンソールで複数のモジュールと複数のクラスタを監視する方法、コンソールでアラートを監視し、メール通知を管理する方法、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
 # SafeKitスマートコンソール：ポケットに収まる高可用性クラスタ {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

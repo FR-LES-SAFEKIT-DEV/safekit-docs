@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "عزّز موازنة تحميل الشبكة في Azure بمراقبة التطبيقات الذكية من SafeKit. توفر وحدة farm.safe فحصًا مخصصًا للحالة لموازن تحميل Azure، ما يتيح التوافر العالي على مستوى التطبيق والإصلاح الذاتي وتجاوز الفشل تلقائيًا للتطبيقات الحيوية."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي في Azure، قيود التوافر العالي في SafeKit، نظرة عامة على حل SafeKit / Azure، تثبيت حل SafeKit / Azure على Windows وLinux (farm.safe)، التكوين خطوة بخطوة لحل SafeKit / Azure، عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span>، 🔍 مركز التنقل للتوافر العالي في SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي في Azure، قيود التوافر العالي في SafeKit، نظرة عامة على حل SafeKit / Azure، تثبيت حل SafeKit / Azure على Windows وLinux (farm.safe)، التكوين خطوة بخطوة لحل SafeKit / Azure، عرض توضيحي لحل SafeKit farm، 🔍 مركز التنقل للتوافر العالي في SafeKit"
 ---
 
 # موازنة تحميل الشبكة وتجاوز الفشل في Azure: تثبيت وحدة SafeKit farm.safe {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}

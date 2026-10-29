@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/how-a-virtual-ip-addres
 description: "SafeKitソフトウェア定義の仮想 IP (VIP) アドレスを使用して 24 時間 365 日の稼働時間をどのように確保しているかをご覧ください。Gratuitous ARP による自動フェイルオーバーについて、またWindowsおよびLinuxにおける業務継続性において、Gratuitous ARP が DNS リダイレクトよりも優れている理由について学びましょう。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性クラスタにおける仮想IPアドレスとは？、 SafeKitにおける仮想IPの実装、目次、同一サブネットフェイルオーバーにおける仮想IPアドレス（VIP）の動作（ Mirrorクラスタ）、異なるサブネット間における仮想IP（VIP）の動作（ Mirrorクラスタ）、同一サブネット<span class="notranslate farm-term" translate="no">Farm</span>における負荷分散型仮想IPの動作（ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ）、異なるサブネット間における負荷分散型仮想IPの動作（ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ）、仮想IPとDNSリダイレクト：DNSフェイルオーバーが失敗する理由、比較：仮想IPの実装、レイテンシ、およびアプリケーションの透過性、ネットワーク負荷分散と高可用性のための仮想IPアドレスの構成、仮想IP（VIP）に関するよくある質問、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "高可用性クラスタにおける仮想IPアドレスとは？、 SafeKitにおける仮想IPの実装、目次、同一サブネットフェイルオーバーにおける仮想IPアドレス（VIP）の動作（ Mirrorクラスタ）、異なるサブネット間における仮想IP（VIP）の動作（ Mirrorクラスタ）、同一サブネットFarmにおける負荷分散型仮想IPの動作（ Farmクラスタ）、異なるサブネット間における負荷分散型仮想IPの動作（ Farmクラスタ）、仮想IPとDNSリダイレクト：DNSフェイルオーバーが失敗する理由、比較：仮想IPの実装、レイテンシ、およびアプリケーションの透過性、ネットワーク負荷分散と高可用性のための仮想IPアドレスの構成、仮想IP（VIP）に関するよくある質問、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # 高可用性クラスタリングにおける仮想IPアドレス（VIP）の仕組みとは？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}

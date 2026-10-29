@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "クラウドネットワークの負荷分散を強化する SafeKitのインテリジェントなアプリケーション監視。 farm.safe このモジュールは、クラウドロードバランサー専用のヘルスチェック機能を提供し、アプリケーションレベルでのシームレスな高可用性を実現します。ミッションクリティカルなアプリケーションの自動的な自己修復とフェイルオーバーを可能にします。"
 category: "quick-install"
 lang: "ja"
-topics: "クラウド向け高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / クラウドソリューションの概要、 SafeKitおよびLinux ( farm.safe ) へのWindows / クラウドソリューションのインストール、 SafeKit / クラウドソリューションのステップバイステップ構成、 SafeKit <span class="notranslate farm-term" translate="no">farm</span>ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "クラウド向け高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / クラウドソリューションの概要、 SafeKitおよびLinux ( farm.safe ) へのWindows / クラウドソリューションのインストール、 SafeKit / クラウドソリューションのステップバイステップ構成、 SafeKit farmソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # クラウドネットワークの負荷分散とフェイルオーバー: SafeKit farm.safeモジュールをインストールします {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

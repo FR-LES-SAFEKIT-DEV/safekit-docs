@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "SafeKit 모듈의 지능형 애플리케이션 모니터링으로 클라우드 네트워크 로드 밸런싱 성능을 향상시키세요. farm.safe 모듈은 클라우드 로드 밸런서에 대한 전용 상태 점검 기능을 제공하여 애플리케이션 수준에서 원활한 고가용성(HA)을 구현합니다. 미션 크리티컬 애플리케이션을 위한 자동 복구 및 페일오버를 실현하세요."
 category: "quick-install"
 lang: "ko"
-topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit /클라우드 솔루션 개요, Windows 및 Linux ( farm.safe )에 SafeKit /클라우드 솔루션 설치, SafeKit /클라우드 솔루션 단계별 구성, SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit /클라우드 솔루션 개요, Windows 및 Linux ( farm.safe )에 SafeKit /클라우드 솔루션 설치, SafeKit /클라우드 솔루션 단계별 구성, SafeKit farm 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # 클라우드 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe 모듈을 설치하세요. {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

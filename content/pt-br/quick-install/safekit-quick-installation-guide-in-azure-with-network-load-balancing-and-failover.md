@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-install
 description: "Aprimore o balanceamento de carga de rede do Azure com o monitoramento inteligente de aplicações do SafeKit. O módulo farm.safe oferece uma verificação de integridade dedicada para o balanceador de carga do Azure, permitindo alta disponibilidade no nível da aplicação, autorrecuperação e failover automático para aplicações críticas."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de instalação rápida de alta disponibilidade para Azure, Limitações de alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Azure, Instalação da solução SafeKit / Azure no Windows e Linux (farm.safe), Configuração passo a passo da solução SafeKit / Azure, Demonstração da solução <span class="notranslate farm-term" translate="no">farm</span> do SafeKit, 🔍 Central de navegação de alta disponibilidade do SafeKit"
+topics: "Guia de instalação rápida de alta disponibilidade para Azure, Limitações de alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Azure, Instalação da solução SafeKit / Azure no Windows e Linux (farm.safe), Configuração passo a passo da solução SafeKit / Azure, Demonstração da solução farm do SafeKit, 🔍 Central de navegação de alta disponibilidade do SafeKit"
 ---
 
 # Balanceamento de carga de rede e failover no Azure: instalar o módulo farm.safe do SafeKit {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}

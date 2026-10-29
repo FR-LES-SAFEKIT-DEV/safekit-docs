@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Optimice el balanceo de carga de red AWS con la monitorización inteligente de aplicaciones de SafeKit . El módulo farm.safe realiza una comprobación de estado específica para el balanceador de carga AWS , lo que permite una alta disponibilidad sin interrupciones a nivel de aplicación. Consiga la recuperación automática y la conmutación por error para aplicaciones de misión crítica."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para AWS , limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit / AWS , instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ), configuración paso a paso de la solución SafeKit / AWS , demostración de la solución SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para AWS , limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit / AWS , instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ), configuración paso a paso de la solución SafeKit / AWS , demostración de la solución SafeKit farm , 🔍 Centro de navegación de alta disponibilidad SafeKit"
 ---
 
 # Balanceo de carga y conmutación por error de red AWS : Instale el módulo SafeKit farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}

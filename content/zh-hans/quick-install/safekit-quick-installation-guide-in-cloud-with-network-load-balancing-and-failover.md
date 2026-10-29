@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "通过以下方式增强云网络负载均衡 SafeKit的智能应用监控。 farm.safe 该模块为云负载均衡器提供专门的健康检查，从而在应用层实现无缝高可用性。为关键业务应用实现自动自愈和故障转移。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "云端高可用性快速安装指南， SafeKit高可用性限制， SafeKit / 云解决方案概述，在Windows和Linux ( farm.safe ) 上安装SafeKit / 云解决方案， SafeKit / 云解决方案分步配置， SafeKit和<span class="notranslate farm-term" translate="no">farm</span>解决方案演示，🔍 SafeKit高可用性导航中心"
+topics: "云端高可用性快速安装指南， SafeKit高可用性限制， SafeKit / 云解决方案概述，在Windows和Linux ( farm.safe ) 上安装SafeKit / 云解决方案， SafeKit / 云解决方案分步配置， SafeKit和farm解决方案演示，🔍 SafeKit高可用性导航中心"
 ---
 
 # 云网络负载均衡与故障转移：安装SafeKit farm.safe模块模块 {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

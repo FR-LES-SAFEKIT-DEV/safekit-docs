@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "تعرّف على كيفية نشر وحدة farm.safe على Windows و Linux لموازنة أحمال شبكة NGINX والتحويل التلقائي في حالة الأعطال. يُوضح لك هذا الدليل كيفية إنشاء مجموعة عالية التوفر لخدمات الويب والتطبيقات باستخدام عنوان IP افتراضي، دون الحاجة إلى موازنات أحمال خارجية أو إعدادات معقدة."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع لـ NGINX مع خاصية التوافر العالي، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / NGINX، تثبيت حل SafeKit / NGINX على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / NGINX، عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع لـ NGINX مع خاصية التوافر العالي، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / NGINX، تثبيت حل SafeKit / NGINX على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / NGINX، عرض توضيحي لحل SafeKit farm ، 🔍 مركز التنقل للتوافر العالي SafeKit"
 ---
 
 # موازنة أحمال الشبكة والتحويل التلقائي في حالة الفشل لـ NGINX: قم بتثبيت الوحدات النمطية SafeKit farm.safe {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}

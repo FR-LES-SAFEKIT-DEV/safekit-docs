@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Verbeter de load balancing van cloudnetwerken met de intelligente applicatiebewaking van SafeKit . De farm.safe module biedt een speciale statuscontrole voor de cloud load balancer, waardoor naadloze HA op applicatieniveau mogelijk is. Realiseer automatisch zelfherstel en failover voor bedrijfskritieke applicaties."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor hoge beschikbaarheid in de cloud, Beperkingen van hoge beschikbaarheid voor SafeKit , Overzicht van de SafeKit /cloudoplossing, Installatie van de SafeKit /cloudoplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit /cloudoplossing, Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> -oplossing, 🔍 SafeKit Navigatiehub voor hoge beschikbaarheid"
+topics: "Snelstartgids voor hoge beschikbaarheid in de cloud, Beperkingen van hoge beschikbaarheid voor SafeKit , Overzicht van de SafeKit /cloudoplossing, Installatie van de SafeKit /cloudoplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit /cloudoplossing, Demonstratie van de SafeKit farm -oplossing, 🔍 SafeKit Navigatiehub voor hoge beschikbaarheid"
 ---
 
 # Loadbalancing en failover voor cloudnetwerken: installeer de SafeKit farm.safe modules {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

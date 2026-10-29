@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "حسّن موازنة أحمال شبكة السحابة باستخدام نظام مراقبة التطبيقات الذكي SafeKit . توفر وحدة farm.safe فحصًا صحيًا مخصصًا لموازن أحمال السحابة، مما يتيح توافرًا عاليًا سلسًا على مستوى التطبيق. حقق الإصلاح الذاتي التلقائي والتحويل التلقائي في حالة الأعطال للتطبيقات بالغة الأهمية."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / السحابة، تثبيت حل SafeKit / السحابة على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / السحابة، عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / السحابة، تثبيت حل SafeKit / السحابة على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / السحابة، عرض توضيحي لحل SafeKit farm ، 🔍 مركز التنقل للتوافر العالي SafeKit"
 ---
 
 # موازنة أحمال الشبكة السحابية والتحويل التلقائي في حالة الأعطال: قم بتثبيت الوحدات النمطية SafeKit farm.safe {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

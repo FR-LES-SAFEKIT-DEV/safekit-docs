@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/microsoft-nlb-vmware-mu
 description: "هل تواجه صعوبة في استخدام خاصية البث المتعدد أو البث الأحادي مع موازنة الأحمال (NLB) في بيئة VMware مع Microsoft ؟ يقترح SafeKit مجموعة farm بدون شبكة تخزين (SAN) كبديل بسيط. احصل على موازنة أحمال تلقائية وتجاوز الأعطال على Windows و Linux بدون الحاجة إلى إدخالات ARP ثابتة أو انتحال عناوين MAC أو تكوين شبكة متخصص."
 category: "best-practises"
 lang: "ar"
-topics: "وضع البث المتعدد لـ NLB لـ Microsoft ، وضع البث الأحادي لـ NLB Microsoft ، بديل مع SafeKit ، كيف تعمل مجموعة SafeKit في وضع <span class="notranslate farm-term" translate="no">farm</span> مع Windows ؟، 🔍 مركز التنقل عالي التوفر SafeKit"
+topics: "وضع البث المتعدد لـ NLB لـ Microsoft ، وضع البث الأحادي لـ NLB Microsoft ، بديل مع SafeKit ، كيف تعمل مجموعة SafeKit في وضع farm مع Windows ؟، 🔍 مركز التنقل عالي التوفر SafeKit"
 ---
 
 # Microsoft بديل VMware لموازنة تحميل الشبكة: تم حل مشكلات البث المتعدد والبث الأحادي {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

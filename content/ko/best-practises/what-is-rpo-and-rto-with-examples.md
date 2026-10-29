@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/what-is-rpo-and-rto-wit
 description: "명확한 예시를 통해 RPO(복구 시점 목표)와 RTO(복구 시간 목표)의 정의를 알아보세요. SafeKit 어떻게 데이터 손실 제로(RPO=0)와 신속한 페일오버를 달성하여 24시간 연중무휴 비즈니스 연속성을 보장하는지 살펴보세요."
 category: "best-practises"
 lang: "ko"
-topics: "요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 솔루션의 RPO 및 RTO 계산 방법, 백업 및 재해 복구 솔루션의 RPO 및 RTO 결정 방법, SafeKit Mirror 클러스터는 어떻게 0 RPO 및 낮은 RTO를 달성합니까?, 로드 밸런싱이 적용된 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터의 RTO 벤치마크는 무엇입니까?, 비교표: RTO vs. RPO, 실제 고가용성: 0 RPO 및 거의 0에 가까운 RTO 실시간 데모, FAQ: 비즈니스 연속성을 위한 RPO 및 RTO 최적화, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 솔루션의 RPO 및 RTO 계산 방법, 백업 및 재해 복구 솔루션의 RPO 및 RTO 결정 방법, SafeKit Mirror 클러스터는 어떻게 0 RPO 및 낮은 RTO를 달성합니까?, 로드 밸런싱이 적용된 SafeKit Farm 클러스터의 RTO 벤치마크는 무엇입니까?, 비교표: RTO vs. RPO, 실제 고가용성: 0 RPO 및 거의 0에 가까운 RTO 실시간 데모, FAQ: 비즈니스 연속성을 위한 RPO 및 RTO 최적화, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # RPO와 RTO란 무엇일까요? 정의, 예시 및 고가용성 {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}

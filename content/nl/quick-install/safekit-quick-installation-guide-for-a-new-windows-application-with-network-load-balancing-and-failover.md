@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Leer hoe u de module farm.safe implementeert voor netwerkloadbalancing en automatische failover op Windows. Deze handleiding laat zien hoe u met een virtueel IP-adres een maximaal beschikbare cluster bouwt voor webservices en applicaties, zonder externe hardwareloadbalancers of complexe configuratie."
 category: "quick-install"
 lang: "nl"
-topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Windows, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Windows-oplossing, Installatie van de SafeKit-/Windows-oplossing (farm.safe), Stapsgewijze configuratie van de SafeKit-/Windows-oplossing, Demonstratie van de SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-oplossing, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
+topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Windows, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Windows-oplossing, Installatie van de SafeKit-/Windows-oplossing (farm.safe), Stapsgewijze configuratie van de SafeKit-/Windows-oplossing, Demonstratie van de SafeKit-farm-oplossing, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
 # Netwerkloadbalancing en failover op Windows: installeer de SafeKit-module farm.safe {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}

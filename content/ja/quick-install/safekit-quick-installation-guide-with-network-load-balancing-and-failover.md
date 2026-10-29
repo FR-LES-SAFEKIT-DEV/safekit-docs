@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "WindowsおよびLinux上でApacheネットワーク負荷分散と自動フェイルオーバーを実現するために、apache_farm.safeモジュールをデプロイする方法を学びましょう。このガイドでは、外部ハードウェア負荷分散装置や複雑な設定を必要とせずに、仮想IPを使用してWebサービスやアプリケーション向けの高可用性クラスタを構築する方法を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Apache向け高可用性クイックインストールガイド、SafeKit高可用性の制限事項、SafeKit/Apacheソリューションの概要、WindowsおよびLinuxへのSafeKit/Apacheソリューションのインストール（apache_farm.safe）、SafeKit/Apacheソリューションのステップバイステップ構成、SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "Apache向け高可用性クイックインストールガイド、SafeKit高可用性の制限事項、SafeKit/Apacheソリューションの概要、WindowsおよびLinuxへのSafeKit/Apacheソリューションのインストール（apache_farm.safe）、SafeKit/Apacheソリューションのステップバイステップ構成、SafeKit farm ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # Apacheネットワーク負荷分散とフェイルオーバー：SafeKit apache_farm.safeモジュールをインストールします {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

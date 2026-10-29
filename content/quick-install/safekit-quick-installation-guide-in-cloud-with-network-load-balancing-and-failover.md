@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Enhance Cloud Network Load Balancing with SafeKit's intelligent application monitoring. The farm.safe module provides a dedicated health check for the Cloud load balancer, enabling seamless HA at the application level. Achieve automatic self-healing and failover for mission-critical applications."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Cloud, SafeKit High Availability Limitations, Overview of the SafeKit / Cloud solution, Installation of the SafeKit / Cloud solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Cloud solution, Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution, 🔍 SafeKit High Availability Navigation Hub"
+topics: "High Availability Quick Installation Guide for Cloud, SafeKit High Availability Limitations, Overview of the SafeKit / Cloud solution, Installation of the SafeKit / Cloud solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Cloud solution, Demonstration of the SafeKit farm solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # Cloud Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

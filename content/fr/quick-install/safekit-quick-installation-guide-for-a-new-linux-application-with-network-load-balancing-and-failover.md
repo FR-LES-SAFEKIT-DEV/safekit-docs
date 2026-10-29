@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Découvrez comment déployer le module farm.safe pour la répartition de charge réseau et la reprise automatique sur panne sous Linux. Ce guide vous montre comment construire un cluster hautement disponible pour des services web et des applications avec une IP virtuelle, sans répartiteur de charge matériel externe ni configuration complexe."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d'installation rapide de la haute disponibilité pour Linux, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Linux, Installation de la solution SafeKit / Linux (farm.safe), Configuration pas à pas de la solution SafeKit / Linux, Démonstration de la solution SafeKit <span class="notranslate farm-term" translate="no">farm</span>, 🔍 Portail de navigation SafeKit haute disponibilité"
+topics: "Guide d'installation rapide de la haute disponibilité pour Linux, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Linux, Installation de la solution SafeKit / Linux (farm.safe), Configuration pas à pas de la solution SafeKit / Linux, Démonstration de la solution SafeKit farm, 🔍 Portail de navigation SafeKit haute disponibilité"
 ---
 
 # Répartition de charge réseau et reprise sur panne sous Linux : installer le module SafeKit farm.safe {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

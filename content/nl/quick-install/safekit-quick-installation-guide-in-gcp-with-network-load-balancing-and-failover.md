@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Verbeter de load balancing van GCP -netwerk met de intelligente applicatiebewaking van SafeKit . De farm.safe module biedt een speciale statuscontrole voor de load balancer GCP , waardoor naadloze HA op applicatieniveau mogelijk is. Realiseer automatisch zelfherstel en failover voor bedrijfskritische applicaties."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor High Availability GCP , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / GCP -oplossing, Installatie van de SafeKit / GCP -oplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit / GCP -oplossing, Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> -oplossing, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Snelstartgids voor High Availability GCP , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / GCP -oplossing, Installatie van de SafeKit / GCP -oplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit / GCP -oplossing, Demonstratie van de SafeKit farm -oplossing, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # GCP Netwerktaakverdeling en failover: Installeer de SafeKit farm.safe module {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}

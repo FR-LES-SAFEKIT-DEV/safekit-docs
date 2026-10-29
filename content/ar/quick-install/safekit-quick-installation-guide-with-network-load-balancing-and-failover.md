@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "تعرّف على كيفية نشر وحدة apache_farm.safe على نظامي التشغيل ويندوز ولينكس لموازنة أحمال شبكة أباتشي والتحويل التلقائي في حالة الأعطال. يُوضح لك هذا الدليل كيفية إنشاء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP افتراضي، دون الحاجة إلى موازنات أحمال خارجية أو إعدادات معقدة."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع لتوافر Apache العالي، قيود التوافر العالي لـ SafeKit، نظرة عامة على حل SafeKit / Apache، تثبيت حل SafeKit / Apache على نظامي التشغيل Windows وLinux (apache_farm.safe)، تهيئة حل SafeKit / Apache خطوة بخطوة، عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span>، 🔍 مركز التنقل للتوافر العالي لـ SafeKit"
+topics: "دليل التثبيت السريع لتوافر Apache العالي، قيود التوافر العالي لـ SafeKit، نظرة عامة على حل SafeKit / Apache، تثبيت حل SafeKit / Apache على نظامي التشغيل Windows وLinux (apache_farm.safe)، تهيئة حل SafeKit / Apache خطوة بخطوة، عرض توضيحي لحل SafeKit farm، 🔍 مركز التنقل للتوافر العالي لـ SafeKit"
 ---
 
 # موازنة الأحمال والتحويل التلقائي في شبكة أباتشي: قم بتثبيت وحدة SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

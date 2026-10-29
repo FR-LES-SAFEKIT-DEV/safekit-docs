@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/cloud-load-balancing-cluster
 description: "Verbeter uw cloud load balancer met de intelligente applicatiebewaking van SafeKit . Realiseer naadloze hoge beschikbaarheid met grondige gezondheidscontroles, automatisch zelfherstel en failover voor bedrijfskritieke farm clusters."
 category: "solutions"
 lang: "nl"
-topics: "Verbeter de cloud load balancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een cloudnetwerk load balancing (NLB)-cluster?, Hoe werkt het SafeKit <span class="notranslate farm-term" translate="no">farm</span> -cluster met de cloud?, Vergelijking: SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster on-premises versus SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster in de cloud, Videohandleiding: Een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB-cluster configureren, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Verbeter de cloud load balancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een cloudnetwerk load balancing (NLB)-cluster?, Hoe werkt het SafeKit farm -cluster met de cloud?, Vergelijking: SafeKit Farm cluster on-premises versus SafeKit Farm cluster in de cloud, Videohandleiding: Een SafeKit Farm NLB-cluster configureren, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit : Cloud Load Balancing & Application High Availability <span class="notranslate farm-term" translate="no">Farm</span> Cluster {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}

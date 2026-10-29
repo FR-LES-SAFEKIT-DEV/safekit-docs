@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Learn how to deploy the apache_farm.safe module on Windows and Linux for Apache Network Load Balancing and automatic failover. This guide shows you how to build a highly available cluster for web services and applications using a virtual IP, without the need for external hardware load balancers or complex configuration."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Apache, SafeKit High Availability Limitations, Overview of the SafeKit / Apache solution, Installation of the SafeKit / Apache solution on Windows and Linux (apache_farm.safe), Step by step configuration of the SafeKit / Apache solution, Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution, 🔍 SafeKit High Availability Navigation Hub"
+topics: "High Availability Quick Installation Guide for Apache, SafeKit High Availability Limitations, Overview of the SafeKit / Apache solution, Installation of the SafeKit / Apache solution on Windows and Linux (apache_farm.safe), Step by step configuration of the SafeKit / Apache solution, Demonstration of the SafeKit farm solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # Apache Network Load Balancing & Failover: Install the SafeKit apache_farm.safe Module {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

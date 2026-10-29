@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "حسّن موازنة أحمال الشبكة GCP باستخدام ميزة مراقبة التطبيقات الذكية في SafeKit . توفر وحدة farm.safe فحصًا صحيًا مخصصًا لموازن الأحمال GCP ، مما يتيح توافرًا عاليًا سلسًا على مستوى التطبيق. حقق خاصية الإصلاح الذاتي التلقائي والتحويل التلقائي في حالة الأعطال للتطبيقات بالغة الأهمية."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ GCP و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / GCP ، تثبيت حل SafeKit / GCP على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / GCP ، عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ GCP و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / GCP ، تثبيت حل SafeKit / GCP على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / GCP ، عرض توضيحي لحل SafeKit farm ، 🔍 مركز التنقل للتوافر العالي SafeKit"
 ---
 
 # موازنة أحمال الشبكة والتحويل التلقائي في حالة الفشل GCP : قم بتثبيت الوحدات النمطية SafeKit farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}

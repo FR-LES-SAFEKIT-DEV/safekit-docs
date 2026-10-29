@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installati
 description: "Migliora il bilanciamento del carico della rete cloud con il monitoraggio intelligente delle applicazioni di SafeKit . Il modulo farm.safe fornisce un controllo di integrità dedicato per il bilanciatore di carico cloud, consentendo un'alta disponibilità senza interruzioni a livello di applicazione. Ottieni funzionalità di autoriparazione e failover automatici per le applicazioni mission-critical."
 category: "quick-install"
 lang: "it"
-topics: "Guida rapida all'installazione dell'alta disponibilità per il cloud, Limitazioni dell'alta disponibilità SafeKit , Panoramica della soluzione SafeKit / Cloud, Installazione della soluzione SafeKit / Cloud su Windows e Linux ( farm.safe ), Configurazione passo passo della soluzione SafeKit / Cloud, Dimostrazione della soluzione SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Hub di navigazione per l'alta disponibilità di SafeKit"
+topics: "Guida rapida all'installazione dell'alta disponibilità per il cloud, Limitazioni dell'alta disponibilità SafeKit , Panoramica della soluzione SafeKit / Cloud, Installazione della soluzione SafeKit / Cloud su Windows e Linux ( farm.safe ), Configurazione passo passo della soluzione SafeKit / Cloud, Dimostrazione della soluzione SafeKit farm , 🔍 Hub di navigazione per l'alta disponibilità di SafeKit"
 ---
 
 # Bilanciamento del carico e failover della rete cloud: installare il modulo SafeKit farm.safe {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

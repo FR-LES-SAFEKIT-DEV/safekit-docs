@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Aprenda a implementar el módulo iis_farm.safe en Windows para el balanceo de carga de red y la conmutación por error automática IIS . Esta guía le muestra cómo crear un clúster de alta disponibilidad para servicios web y aplicaciones mediante una IP virtual, sin necesidad de balanceadores de carga de hardware externos ni configuraciones complejas."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para IIS , Limitaciones de alta disponibilidad SafeKit , Descripción general de la solución SafeKit / IIS , Instalación de la solución SafeKit / IIS en Windows ( iis_farm.safe ), Configuración paso a paso de la solución SafeKit / IIS , Demostración de la solución SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para IIS , Limitaciones de alta disponibilidad SafeKit , Descripción general de la solución SafeKit / IIS , Instalación de la solución SafeKit / IIS en Windows ( iis_farm.safe ), Configuración paso a paso de la solución SafeKit / IIS , Demostración de la solución SafeKit farm , 🔍 Centro de navegación de alta disponibilidad SafeKit"
 ---
 
 # Balanceo de carga y conmutación por error de red IIS : Instale el módulo SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}

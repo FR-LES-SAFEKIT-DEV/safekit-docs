@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/aws-load-balancing-clus
 description: "利用SafeKit的智能应用监控功能增强AWS负载均衡器。通过深度健康检查、自动自愈和故障转移，为关键任务型farm集群实现无缝高可用性。"
 category: "solutions"
 lang: "zh-hans"
-topics: "利用应用级监控和自愈功能增强云负载均衡器，目录， SafeKit软件如何轻松实现AWS网络负载均衡 (NLB) 集群？， SafeKit <span class="notranslate farm-term" translate="no">farm</span>集群如何与AWS协同工作？，对比：本地SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群与云端部署的SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群，视频指南：配置SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB 集群，🔍 SafeKit高可用性导航中心"
+topics: "利用应用级监控和自愈功能增强云负载均衡器，目录， SafeKit软件如何轻松实现AWS网络负载均衡 (NLB) 集群？， SafeKit farm集群如何与AWS协同工作？，对比：本地SafeKit Farm集群与云端部署的SafeKit Farm集群，视频指南：配置SafeKit Farm NLB 集群，🔍 SafeKit高可用性导航中心"
 ---
 
 # SafeKit ：Amazon AWS负载均衡和应用高可用性<span class="notranslate farm-term" translate="no">Farm</span>集群 {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}

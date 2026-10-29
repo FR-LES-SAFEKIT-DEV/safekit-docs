@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "Windows에서 네트워크 로드 밸런싱과 자동 페일오버를 위해 farm.safe 모듈을 배포하는 방법을 알아봅니다. 이 가이드는 외부 하드웨어 로드 밸런서나 복잡한 구성 없이 가상 IP를 사용하여 웹 서비스와 애플리케이션을 위한 고가용성 클러스터를 구축하는 방법을 보여 줍니다."
 category: "quick-install"
 lang: "ko"
-topics: "Windows용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Windows 솔루션 개요, SafeKit / Windows 솔루션 설치 (farm.safe), SafeKit / Windows 솔루션 단계별 구성, SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Windows용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Windows 솔루션 개요, SafeKit / Windows 솔루션 설치 (farm.safe), SafeKit / Windows 솔루션 단계별 구성, SafeKit farm 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # Windows 네트워크 로드 밸런싱 및 페일오버: SafeKit farm.safe 모듈 설치 {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}

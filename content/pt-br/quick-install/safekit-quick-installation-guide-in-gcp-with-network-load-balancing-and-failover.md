@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-install
 description: "Aprimore o balanceamento de carga de rede GCP com o monitoramento inteligente de aplicações do SafeKit . O módulo farm.safe oferece uma verificação de integridade dedicada para o balanceador de carga GCP , permitindo alta disponibilidade (HA) perfeita no nível da aplicação. Obtenha autorrecuperação e failover automáticos para aplicações de missão crítica."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para GCP , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / GCP , Instalação da solução SafeKit / GCP em Windows e Linux ( farm.safe ), Configuração passo a passo da solução SafeKit / GCP , Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para GCP , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / GCP , Instalação da solução SafeKit / GCP em Windows e Linux ( farm.safe ), Configuração passo a passo da solução SafeKit / GCP , Demonstração da solução SafeKit farm , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
 ---
 
 # Balanceamento de carga e failover de rede GCP : Instale o módulo SafeKit farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}

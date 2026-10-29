@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "了解如何部署 farm.safe 模块，以在 Linux 上实现网络负载均衡和自动故障切换。本指南介绍如何使用虚拟 IP 为 Web 服务和应用程序构建高可用性集群，无需外部硬件负载均衡器，也无需复杂的配置。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Linux 高可用性快速安装指南, SafeKit 高可用性限制, SafeKit / Linux 解决方案概述, SafeKit / Linux 解决方案的安装 (farm.safe), SafeKit / Linux 解决方案的分步配置, SafeKit <span class="notranslate farm-term" translate="no">farm</span> 解决方案演示, 🔍 SafeKit 高可用性导航中心"
+topics: "Linux 高可用性快速安装指南, SafeKit 高可用性限制, SafeKit / Linux 解决方案概述, SafeKit / Linux 解决方案的安装 (farm.safe), SafeKit / Linux 解决方案的分步配置, SafeKit farm 解决方案演示, 🔍 SafeKit 高可用性导航中心"
 ---
 
 # Linux 网络负载均衡与故障切换：安装 SafeKit farm.safe 模块 {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

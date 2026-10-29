@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/architectures/safekit-smart-console-yo
 description: "Beheer SafeKit -clusters eenvoudig met onze Smart Console. Profiteer van configuratie zonder code, compatibiliteit met smartphones en realtime PWA-meldingen. Elimineer menselijke fouten en garandeer hoge beschikbaarheid binnen handbereik. Lees meer."
 category: "architectures"
 lang: "nl"
-topics: "Smart Console: Intuïtieve, mobiele en foutloze hoge beschikbaarheid, Inhoudsopgave, Hoe werkt een SafeKit mirror -cluster met de webconsole?, Hoe werkt een SafeKit <span class="notranslate farm-term" translate="no">farm</span> -cluster met de webconsole?, Hoe kan ik meerdere modules en meerdere clusters bewaken via de webconsole?, Hoe kan ik waarschuwingen in de console bewaken en e-mailmeldingen beheren?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Smart Console: Intuïtieve, mobiele en foutloze hoge beschikbaarheid, Inhoudsopgave, Hoe werkt een SafeKit mirror -cluster met de webconsole?, Hoe werkt een SafeKit farm -cluster met de webconsole?, Hoe kan ik meerdere modules en meerdere clusters bewaken via de webconsole?, Hoe kan ik waarschuwingen in de console bewaken en e-mailmeldingen beheren?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit Smart Console: Uw High Availability Cluster in uw zak {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

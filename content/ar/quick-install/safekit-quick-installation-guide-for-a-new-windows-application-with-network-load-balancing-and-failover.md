@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "تعرّف على كيفية نشر وحدة farm.safe لموازنة تحميل الشبكة والتحويل التلقائي عند الفشل على Windows. يوضح هذا الدليل كيفية بناء عنقود عالي التوافر لخدمات الويب والتطبيقات باستخدام عنوان IP افتراضي، دون الحاجة إلى موازنات تحميل عتادية خارجية أو إعدادات معقدة."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي على Windows, قيود التوافر العالي في SafeKit, نظرة عامة على حل SafeKit / Windows, تثبيت حل SafeKit / Windows (farm.safe), التهيئة خطوة بخطوة لحل SafeKit / Windows, عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span>, 🔍 مركز التنقل للتوافر العالي في SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي على Windows, قيود التوافر العالي في SafeKit, نظرة عامة على حل SafeKit / Windows, تثبيت حل SafeKit / Windows (farm.safe), التهيئة خطوة بخطوة لحل SafeKit / Windows, عرض توضيحي لحل SafeKit farm, 🔍 مركز التنقل للتوافر العالي في SafeKit"
 ---
 
 # موازنة تحميل الشبكة والتحويل عند الفشل على Windows: تثبيت وحدة SafeKit farm.safe {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/windows-load-balancing-failover
 description: "SafeKit provides a powerful, software-only Windows load balancing and high availability solution. Replace complex NLB hardware with SafeKit’s integrated virtual IP, application monitoring, and automatic failover. Easily deploy a SafeKit cluster on standard Windows servers today."
 category: "solutions"
 lang: "en"
-topics: "The SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster: Software-Only NLB and Automatic Failover for Windows, Table of Contents, How the SafeKit software simply implements a Windows Network Load Balancing (NLB) cluster?, How the SafeKit cluster in <span class="notranslate farm-term" translate="no">farm</span> mode works with Windows?, Comparison: SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster for Windows vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB Cluster, 🔍 SafeKit High Availability Navigation Hub"
+topics: "The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for Windows, Table of Contents, How the SafeKit software simply implements a Windows Network Load Balancing (NLB) cluster?, How the SafeKit cluster in farm mode works with Windows?, Comparison: SafeKit Farm Cluster for Windows vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit Farm NLB Cluster, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit: All-in-One Windows Load Balancing & High Availability Software {#safekit-all-in-one-windows-load-balancing--high-availability-software}

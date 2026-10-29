@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Découvrez comment déployer le module farm.safe sur Windows et Linux pour l'équilibrage de charge réseau NGINX et le basculement automatique. Ce guide vous montre comment créer un cluster à haute disponibilité pour les services web et les applications utilisant une adresse IP virtuelle, sans avoir recours à des équilibreurs de charge matériels externes ni à une configuration complexe."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d'installation rapide haute disponibilité pour NGINX, limitations de haute disponibilité SafeKit , présentation de la solution SafeKit / NGINX, installation de la solution SafeKit / NGINX sur Windows et Linux ( farm.safe ), configuration pas à pas de la solution SafeKit / NGINX, démonstration des solutions SafeKit <span class="notranslate farm-term" translate="no">farm</span> , hub de navigation haute disponibilité SafeKit"
+topics: "Guide d'installation rapide haute disponibilité pour NGINX, limitations de haute disponibilité SafeKit , présentation de la solution SafeKit / NGINX, installation de la solution SafeKit / NGINX sur Windows et Linux ( farm.safe ), configuration pas à pas de la solution SafeKit / NGINX, démonstration des solutions SafeKit farm , hub de navigation haute disponibilité SafeKit"
 ---
 
 # Équilibrage de charge et basculement du réseau NGINX : Installez les modules SafeKit farm.safe {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}

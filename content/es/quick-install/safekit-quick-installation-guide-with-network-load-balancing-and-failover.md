@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Aprende a implementar el módulo apache_farm.safe en Windows y Linux para el balanceo de carga de red y la conmutación por error automática de Apache. Esta guía te muestra cómo crear un clúster de alta disponibilidad para servicios web y aplicaciones mediante una IP virtual, sin necesidad de balanceadores de carga de hardware externos ni configuraciones complejas."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para Apache, Limitaciones de alta disponibilidad de SafeKit, Descripción general de la solución SafeKit/Apache, Instalación de la solución SafeKit/Apache en Windows y Linux (apache_farm.safe), Configuración paso a paso de la solución SafeKit/Apache, Demostración de la solución <span class="notranslate farm-term" translate="no">farm</span> de SafeKit, 🔍 Centro de navegación de alta disponibilidad de SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para Apache, Limitaciones de alta disponibilidad de SafeKit, Descripción general de la solución SafeKit/Apache, Instalación de la solución SafeKit/Apache en Windows y Linux (apache_farm.safe), Configuración paso a paso de la solución SafeKit/Apache, Demostración de la solución farm de SafeKit, 🔍 Centro de navegación de alta disponibilidad de SafeKit"
 ---
 
 # Balanceo de carga y conmutación por error de red Apache: Instale el módulo SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

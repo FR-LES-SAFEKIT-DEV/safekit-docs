@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Erweitern Sie den AWS-Netzwerklastausgleich um die intelligente Anwendungsüberwachung von SafeKit. Das Modul farm.safe stellt eine dedizierte Integritätsprüfung für den AWS-Load-Balancer bereit und ermöglicht nahtlose Hochverfügbarkeit auf Anwendungsebene. Erzielen Sie automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in AWS, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit-/AWS-Lösung, Installation der SafeKit-/AWS-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit-/AWS-Lösung, Demonstration der SafeKit-Lösung <span class="notranslate farm-term" translate="no">farm</span>, 🔍 SafeKit-Navigationszentrale für Hochverfügbarkeit"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in AWS, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit-/AWS-Lösung, Installation der SafeKit-/AWS-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit-/AWS-Lösung, Demonstration der SafeKit-Lösung farm, 🔍 SafeKit-Navigationszentrale für Hochverfügbarkeit"
 ---
 
 # AWS-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/microsoft-nlb-vmware-mu
 description: "VMware 環境でMicrosoft NLB のマルチキャストまたはユニキャストに問題がありますか？ SafeKitシンプルな代替手段として SAN レスのfarmクラスタを提案します。静的 ARP エントリ、MAC スプーフィング、または特別なネットワーク構成なしで、 WindowsおよびLinuxで自動ロードバランシングとフェイルオーバーを実現します。"
 category: "best-practises"
 lang: "ja"
-topics: "Microsoft NLB マルチキャスト モード、 Microsoft NLB ユニキャスト モード、 SafeKitとの代替、 <span class="notranslate farm-term" translate="no">farm</span>モードのSafeKitクラスタはWindowsとどのように連携しますか?、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "Microsoft NLB マルチキャスト モード、 Microsoft NLB ユニキャスト モード、 SafeKitとの代替、 farmモードのSafeKitクラスタはWindowsとどのように連携しますか?、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
 # Microsoft NLB VMware 代替案: マルチキャストとユニキャストの問題が解決されました {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/architectures/safekit-smart-console-yo
 description: "Gestiona fácilmente los clústeres SafeKit con nuestra Smart Console. Disfruta de configuración sin código, compatibilidad con smartphones y notificaciones PWA en tiempo real. Elimina los errores humanos y garantiza una alta disponibilidad al alcance de tu mano. Más información."
 category: "architectures"
 lang: "es"
-topics: "Consola inteligente: Intuitiva, móvil y de alta disponibilidad sin errores, Tabla de contenido, ¿Cómo funciona un clúster SafeKit mirror con la consola web?, ¿Cómo funciona un clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> con la consola web?, ¿Cómo supervisar varios módulos y varios clústeres a través de la consola web?, ¿Cómo supervisar las alertas en la consola y gestionar las notificaciones por correo electrónico?, 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Consola inteligente: Intuitiva, móvil y de alta disponibilidad sin errores, Tabla de contenido, ¿Cómo funciona un clúster SafeKit mirror con la consola web?, ¿Cómo funciona un clúster SafeKit farm con la consola web?, ¿Cómo supervisar varios módulos y varios clústeres a través de la consola web?, ¿Cómo supervisar las alertas en la consola y gestionar las notificaciones por correo electrónico?, 🔍 Centro de navegación de alta disponibilidad SafeKit"
 ---
 
 # Consola inteligente SafeKit : Su clúster de alta disponibilidad en su bolsillo {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

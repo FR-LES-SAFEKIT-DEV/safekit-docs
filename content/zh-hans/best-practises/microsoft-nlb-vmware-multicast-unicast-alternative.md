@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/microsoft-nlb-vmwa
 description: "在 VMware 中为Microsoft NLB 多播或单播功能而苦恼？ SafeKit提供了一种无需 SAN 的farm集群作为简单替代方案。无需静态 ARP 条目、MAC 地址欺骗或特殊网络配置，即可在Windows和Linux上实现自动负载均衡和故障转移。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "Microsoft NLB 多播模式， Microsoft NLB 单播模式， SafeKit的替代方案， SafeKit集群在<span class="notranslate farm-term" translate="no">farm</span>模式下如何与Windows协同工作？🔍 SafeKit高可用性导航中心"
+topics: "Microsoft NLB 多播模式， Microsoft NLB 单播模式， SafeKit的替代方案， SafeKit集群在farm模式下如何与Windows协同工作？🔍 SafeKit高可用性导航中心"
 ---
 
 # Microsoft NLB VMware替代方案：多播和单播问题已解决 {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

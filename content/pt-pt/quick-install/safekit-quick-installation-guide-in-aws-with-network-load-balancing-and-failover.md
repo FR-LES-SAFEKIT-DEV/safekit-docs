@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-install
 description: "Aprimore o balanceamento de carga de rede AWS com o monitoramento inteligente de aplicações do SafeKit . O módulo farm.safe oferece uma verificação de integridade dedicada para o balanceador de carga AWS , permitindo alta disponibilidade (HA) perfeita no nível da aplicação. Obtenha autorrecuperação e failover automáticos para aplicações de missão crítica."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para AWS , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / AWS , Instalação da solução SafeKit / AWS em Windows e Linux ( farm.safe ), Configuração passo a passo da solução SafeKit / AWS , Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para AWS , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / AWS , Instalação da solução SafeKit / AWS em Windows e Linux ( farm.safe ), Configuração passo a passo da solução SafeKit / AWS , Demonstração da solução SafeKit farm , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
 ---
 
 # Balanceamento de carga e failover de rede AWS : Instale o módulo SafeKit farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-a-virtual-ip-a
 description: "了解SafeKit如何使用软件定义的虚拟 IP (VIP) 地址来确保 24/7 全天候正常运行。了解通过免费 ARP 实现的自动故障转移，以及为什么它在Windows和Linux上比 DNS 重定向更能保证业务连续性。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚拟 IP 实现，目录，虚拟 IP 地址 (VIP) 如何在同子网故障转移中工作（ Mirror集群），虚拟 IP 地址 (VIP) 如何在不同子网中工作（ Mirror集群），负载均衡虚拟 IP 如何在同子网<span class="notranslate farm-term" translate="no">Farm</span>中工作（ <span class="notranslate farm-term" translate="no">Farm</span>集群），负载均衡虚拟 IP 如何在不同子网中工作（ <span class="notranslate farm-term" translate="no">Farm</span>集群），虚拟 IP 与 DNS 重定向：为什么 DNS 故障转移经常失败，比较：虚拟 IP 实现、延迟和应用程序透明性，配置虚拟 IP 地址以实现网络负载均衡和高可用性，关于虚拟 IP (VIP) 的常见问题，🔍 SafeKit高可用性导航中心"
+topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚拟 IP 实现，目录，虚拟 IP 地址 (VIP) 如何在同子网故障转移中工作（ Mirror集群），虚拟 IP 地址 (VIP) 如何在不同子网中工作（ Mirror集群），负载均衡虚拟 IP 如何在同子网Farm中工作（ Farm集群），负载均衡虚拟 IP 如何在不同子网中工作（ Farm集群），虚拟 IP 与 DNS 重定向：为什么 DNS 故障转移经常失败，比较：虚拟 IP 实现、延迟和应用程序透明性，配置虚拟 IP 地址以实现网络负载均衡和高可用性，关于虚拟 IP (VIP) 的常见问题，🔍 SafeKit高可用性导航中心"
 ---
 
 # 虚拟 IP 地址 (VIP) 在高可用性集群中如何工作？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}

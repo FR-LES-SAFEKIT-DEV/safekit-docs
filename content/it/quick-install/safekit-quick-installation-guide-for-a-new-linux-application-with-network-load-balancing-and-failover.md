@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installati
 description: "Scopri come distribuire il modulo farm.safe per il bilanciamento del carico di rete e il failover automatico su Linux. Questa guida mostra come creare un cluster ad alta disponibilità per servizi web e applicazioni tramite un IP virtuale, senza bilanciatori di carico hardware esterni né configurazioni complesse."
 category: "quick-install"
 lang: "it"
-topics: "Guida all'installazione rapida dell'alta disponibilità per Linux, Limitazioni dell'alta disponibilità di SafeKit, Panoramica della soluzione SafeKit / Linux, Installazione della soluzione SafeKit / Linux (farm.safe), Configurazione passo passo della soluzione SafeKit / Linux, Dimostrazione della soluzione SafeKit <span class="notranslate farm-term" translate="no">farm</span>, 🔍 Hub di navigazione SafeKit per l'alta disponibilità"
+topics: "Guida all'installazione rapida dell'alta disponibilità per Linux, Limitazioni dell'alta disponibilità di SafeKit, Panoramica della soluzione SafeKit / Linux, Installazione della soluzione SafeKit / Linux (farm.safe), Configurazione passo passo della soluzione SafeKit / Linux, Dimostrazione della soluzione SafeKit farm, 🔍 Hub di navigazione SafeKit per l'alta disponibilità"
 ---
 
 # Bilanciamento del carico di rete e failover su Linux: installare il modulo SafeKit farm.safe {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/architectures/safekit-smart-console
 description: "Gerencie clusters SafeKit com facilidade usando nosso Smart Console. Desfrute de configuração sem código, compatibilidade com smartphones e notificações PWA em tempo real. Elimine erros humanos e garanta alta disponibilidade na ponta dos seus dedos. Saiba mais."
 category: "architectures"
 lang: "pt-pt"
-topics: "Smart Console: Alta Disponibilidade Intuitiva, Móvel e Livre de Erros, Sumário, Como um cluster SafeKit mirror funciona com o console web?, Como um cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> funciona com o console web?, Como monitorar múltiplos módulos e múltiplos clusters através do console web?, Como monitorar alertas no console e gerenciar notificações por e-mail?, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Smart Console: Alta Disponibilidade Intuitiva, Móvel e Livre de Erros, Sumário, Como um cluster SafeKit mirror funciona com o console web?, Como um cluster SafeKit farm funciona com o console web?, Como monitorar múltiplos módulos e múltiplos clusters através do console web?, Como monitorar alertas no console e gerenciar notificações por e-mail?, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
 ---
 
 # Console inteligente SafeKit : Seu cluster de alta disponibilidade no seu bolso {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

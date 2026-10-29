@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/aws-load-balancing-cluster-f
 description: "Verbeter de load balancer AWS met de intelligente applicatiebewaking van SafeKit . Realiseer naadloze hoge beschikbaarheid met grondige gezondheidscontroles, automatisch zelfherstel en failover voor bedrijfskritieke farm clusters."
 category: "solutions"
 lang: "nl"
-topics: "Verbeter de cloud load balancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een AWS Network Load Balancing (NLB)-cluster?, Hoe werkt het SafeKit <span class="notranslate farm-term" translate="no">farm</span> cluster samen met AWS ?, Vergelijking: SafeKit <span class="notranslate farm-term" translate="no">Farm</span> -cluster on-premises versus SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster in de cloud, Videohandleiding: Een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB-cluster configureren, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Verbeter de cloud load balancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een AWS Network Load Balancing (NLB)-cluster?, Hoe werkt het SafeKit farm cluster samen met AWS ?, Vergelijking: SafeKit Farm -cluster on-premises versus SafeKit Farm cluster in de cloud, Videohandleiding: Een SafeKit Farm NLB-cluster configureren, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit : Amazon AWS Load Balancing & Application High Availability <span class="notranslate farm-term" translate="no">Farm</span> Cluster {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}

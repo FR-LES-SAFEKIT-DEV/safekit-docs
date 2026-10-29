@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "Linux のネットワークロードバランシングと自動フェイルオーバーのために farm.safe モジュールを導入する方法を説明します。このガイドでは、外部のハードウェアロードバランサーや複雑な設定なしで、仮想 IP を使って Web サービスやアプリケーション向けの高可用性クラスターを構築する方法を紹介します。"
 category: "quick-install"
 lang: "ja"
-topics: "Linux 向け高可用性クイックインストールガイド, SafeKit 高可用性の制限事項, SafeKit / Linux ソリューションの概要, SafeKit / Linux ソリューションのインストール (farm.safe), SafeKit / Linux ソリューションのステップバイステップ設定, SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモ, 🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "Linux 向け高可用性クイックインストールガイド, SafeKit 高可用性の制限事項, SafeKit / Linux ソリューションの概要, SafeKit / Linux ソリューションのインストール (farm.safe), SafeKit / Linux ソリューションのステップバイステップ設定, SafeKit farm ソリューションのデモ, 🔍 SafeKit 高可用性ナビゲーションハブ"
 ---
 
 # Linux のネットワークロードバランシングとフェイルオーバー: SafeKit farm.safe モジュールのインストール {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/architectures/safekit-smart-conso
 description: "使用我们的智能控制台轻松管理SafeKit集群。享受零代码配置、智能手机兼容性和实时 PWA 通知。消除人为错误，确保高可用性，一切尽在掌握。了解更多。"
 category: "architectures"
 lang: "zh-hans"
-topics: "智能控制台：直观、移动化、无故障的高可用性，目录， SafeKit mirror集群如何与 Web 控制台协同工作？， SafeKit <span class="notranslate farm-term" translate="no">farm</span>集群如何与 Web 控制台协同工作？，如何通过 Web 控制台监控多个模块和多个集群？，如何在控制台中监控告警并管理电子邮件通知？，🔍 SafeKit高可用性导航中心"
+topics: "智能控制台：直观、移动化、无故障的高可用性，目录， SafeKit mirror集群如何与 Web 控制台协同工作？， SafeKit farm集群如何与 Web 控制台协同工作？，如何通过 Web 控制台监控多个模块和多个集群？，如何在控制台中监控告警并管理电子邮件通知？，🔍 SafeKit高可用性导航中心"
 ---
 
 # SafeKit智能控制台：您的高可用性集群尽在掌握 {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
