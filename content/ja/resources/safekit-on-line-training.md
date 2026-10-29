@@ -18,7 +18,7 @@ SafeKitのオンライン研修は、高可用性とアプリケーションク�
   * **👉 🎓 [SafeKit オンライン トレーニング プラットフォーム](<https://training.my.evidian.com/mod/page/view.php?id=712>)**にアクセスしてください。ここは、すべての学習モジュールと無料の認定プログラムへの中心的なハブとなります。
   * **認証情報を取得してください：**アカウントをお持ちでない場合は、トレーニングプラットフォームの上部メニューにある**「お問い合わせ」**をクリックして、ログイン認証情報をリクエストしてください。
   * プラットフォームは、以下のようなテーマ別のセクションに分かれています。 
-    * **アーキテクチャと概要：**ミラーリングとファームクラスターの概念を理解する。
+    * **アーキテクチャと概要：**ミラーリングと<span class="notranslate farm-term" translate="no">farm</span>クラスターの概念を理解する。
     * **デモンストレーション：** SQL Server、Hyper-V、Apacheのロードバランシングに関するビデオベースのシナリオをご覧ください。
     * **インストールとセットアップ：** Web管理コンソールまたはCLIを使用してパッケージをインストールし、設定する方法を学びます。
     * **高度な設定：** userconfig.xml 、ハートビート、レプリケーション、仮想IPアドレスに関する詳細な解説。
@@ -56,7 +56,7 @@ SafeKitのオンライン研修は、高可用性とアプリケーションク�
      * 🎬[はじめに](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>)(4:10)
      * 🎬[仮想マシンのクラスタ](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>)(1:20)
      * 🎬[ミラークラスター](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>)(6:04)
-     * 🎬[農場群](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>)(1:46)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>群](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>)(1:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
@@ -78,7 +78,7 @@ SQL Serverクラスタのデモ：🎬[ビデオ](<https://www.youtube.com/watch
   * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) )
 
 
-農場クラスターの実演：🎬[動画](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>)（5:03）
+<span class="notranslate farm-term" translate="no">Farm</span>クラスターの実演：🎬[動画](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>)（5:03）
 
   * 🎬 [Apache を使用した 2 つのノード](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>)(0:13)
   * 🎬[クラスターとfarm.safeモジュールの設定](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>)(2:20)
@@ -105,7 +105,7 @@ SQL Serverクラスタのデモ：🎬[ビデオ](<https://www.youtube.com/watch
      * 🎬[モジュールの監視](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>)(10:40) 
        * 🎬[モニタリングコンソールの概要](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>)(01:59)
        * 🎬[コンソールでミラーモジュールはどのように動作するのか？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) （02:52）
-       * 🎬[コンソールでファームモジュールはどのように動作するのか？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) （01:43）
+       * 🎬[コンソールで<span class="notranslate farm-term" translate="no">farm</span>モジュールはどのように動作するのか？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) （01:43）
        * 🎬[モジュールの状態タイムライン](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>)(00:55)
        * 🎬[モジュールログ](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>)(02:16)
        * 🎬[モジュールリソース](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>)(00:52)
@@ -137,13 +137,13 @@ SQL Serverクラスタのデモ：🎬[ビデオ](<https://www.youtube.com/watch
      * 🎬 [start_prim / stop_prim スクリプト](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>)(3:01)
      * 🎬[ミラー状態遷移](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>)(7:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) )
-  7. 農場モジュール：🎬[動画](<https://www.youtube.com/watch?v=tFYXIa_KRHc>)（16:16） 
+  7. <span class="notranslate farm-term" translate="no">Farm</span>モジュール：🎬[動画](<https://www.youtube.com/watch?v=tFYXIa_KRHc>)（16:16） 
      * 🎬[概要](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>)（2:05）
      * 🎬 [userconfig.xmlの概要](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>)(0:36)
-     * 🎬[農場の鼓動（ &lt;farm&gt; ）](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) （0:34）
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>鼓動（ &lt;farm&gt; ）](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) （0:34）
      * 🎬[仮想IPアドレスとロードバランシングルール（ &lt;vip&gt; ）](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) （6:03）
      * 🎬 [start_both / stop_both スクリプト](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>)(2:37)
-     * 🎬[農場の状態変化](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>)(4:21)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>状態変化](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>)(4:21)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) )
 
 
@@ -168,7 +168,7 @@ SQL Serverクラスタのデモ：🎬[ビデオ](<https://www.youtube.com/watch
      * 🎬 [Webコンソールの問題](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>)(1:14)
      * 🎬[コマンドラインの問題](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>)(0:59)
      * 🎬[ミラーの問題](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>)(5:33)
-     * 🎬[農業問題](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>)(3:54)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>問題](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>)(3:54)
      * 🎬[チェッカーの問題](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>)(4:22)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) )
 

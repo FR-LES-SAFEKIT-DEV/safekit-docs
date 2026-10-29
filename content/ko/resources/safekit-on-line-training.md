@@ -18,7 +18,7 @@ SafeKit 온라인 교육은 고가용성 및 애플리케이션 클러스터링�
   * **[SafeKit 온라인 교육 플랫폼(](<https://training.my.evidian.com/mod/page/view.php?id=712>) 👉 🎓)** 으로 이동하세요. 이 플랫폼은 모든 학습 모듈과 무료 자격증 프로그램을 위한 중심 허브 역할을 합니다.
   * **로그인 정보를 받으세요:** 계정이 없으신 경우, 교육 플랫폼 상단 메뉴의 **&#39;문의하기&#39;를** 클릭하여 로그인 정보를 요청하세요.
   * 이 플랫폼은 다음과 같은 주제별 섹션으로 구성되어 있습니다. 
-    * **아키텍처 및 소개:** 미러 클러스터와 팜 클러스터 개념을 이해합니다.
+    * **아키텍처 및 소개:** 미러 클러스터와 <span class="notranslate farm-term" translate="no">farm</span> 클러스터 개념을 이해합니다.
     * **데모:** SQL Server, Hyper-V 및 Apache 로드 밸런싱에 대한 비디오 기반 시나리오를 시청하세요.
     * **설치 및 설정:** 웹 관리 콘솔 또는 CLI를 통해 패키지를 설치하고 구성하는 방법을 알아보세요.
     * **고급 구성:** userconfig.xml , 하트비트, 복제 및 가상 IP에 대한 심층 분석.
@@ -36,7 +36,7 @@ SafeKit 온라인 교육은 고가용성 및 애플리케이션 클러스터링�
   3. 🎬 [SafeKit 인증서를 받는 방법은?](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=218s>) (1:40)
   4. 🎬 [LinkedIn에 자격증을 공유하세요](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=318s>) (0:53)
 
-[교육 및 인증 플랫폼입니다.](<https://training.my.evidian.com/>)
+[여기는 교육 및 인증 플랫폼입니다.](<https://training.my.evidian.com/>)
 
 ## SafeKit 교육 영상 {#training82}
 
@@ -56,7 +56,7 @@ SafeKit 온라인 교육은 고가용성 및 애플리케이션 클러스터링�
      * 🎬 [소개](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [가상 머신 클러스터](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
      * 🎬 [미러 클러스터](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [농장 클러스터](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span> 클러스터](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
@@ -78,7 +78,7 @@ SQL Server 클러스터 데모: 🎬 [비디오](<https://www.youtube.com/watch?
   * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) )
 
 
-농장 클러스터 시연: 🎬 [비디오](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+<span class="notranslate farm-term" translate="no">Farm</span> 클러스터 시연: 🎬 [비디오](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [Apache를 사용하는 2개 노드](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   * 🎬 [클러스터 및 farm.safe 모듈 구성](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -105,7 +105,7 @@ SQL Server 클러스터 데모: 🎬 [비디오](<https://www.youtube.com/watch?
      * 🎬 [모듈 모니터링](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [모니터링 콘솔 개요](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [콘솔에서 미러 모듈은 어떻게 작동하나요?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [콘솔에서 농장 모듈은 어떻게 작동하나요?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [콘솔에서 <span class="notranslate farm-term" translate="no">farm</span> 모듈은 어떻게 작동하나요?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [모듈 상태 타임라인](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [모듈 로그](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [모듈 리소스](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)
@@ -137,13 +137,13 @@ SQL Server 클러스터 데모: 🎬 [비디오](<https://www.youtube.com/watch?
      * 🎬 [start_prim / stop_prim 스크립트](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
      * 🎬 [미러 상태 전환](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) )
-  7. 농장 모듈: 🎬 [비디오](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
+  7. <span class="notranslate farm-term" translate="no">Farm</span> 모듈: 🎬 [비디오](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [개요](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
      * 🎬 [userconfig.xml 개요](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [농장의 심장 박동 ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span> 심장 박동 ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
      * 🎬 [가상 IP 주소 및 로드 밸런싱 규칙( &lt;vip&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [start_both / stop_both 스크립트](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
-     * 🎬 [농촌 지역 전환](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span> 지역 전환](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) )
 
 
@@ -168,7 +168,7 @@ SQL Server 클러스터 데모: 🎬 [비디오](<https://www.youtube.com/watch?
      * 🎬 [웹 콘솔 문제](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>) (1:14)
      * 🎬 [명령줄 문제](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>) (0:59)
      * 🎬 [미러 문제](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
-     * 🎬 [농장 문제](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span> 문제](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
      * 🎬 [체커 문제](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) )
 

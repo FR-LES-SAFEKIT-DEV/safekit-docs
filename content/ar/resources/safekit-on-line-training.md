@@ -18,7 +18,7 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
   * انتقل إلى **[منصة التدريب الإلكتروني SafeKit](<https://training.my.evidian.com/mod/page/view.php?id=712>) 👉 🎓** . فهي بمثابة مركزك الرئيسي لجميع وحدات التعلم وبرنامج الشهادات المجاني.
   * **احصل على بيانات اعتمادك:** إذا لم يكن لديك حساب بالفعل، فانقر فوق **&quot;اتصل بنا&quot;** في القائمة العلوية لمنصة التدريب لطلب بيانات اعتماد تسجيل الدخول الخاصة بك.
   * تم تنظيم المنصة في أقسام موضوعية، تشمل ما يلي: 
-    * **الهندسة المعمارية والمقدمة:** فهم مفاهيم المرآة ومجموعة المزارع.
+    * **الهندسة المعمارية والمقدمة:** فهم مفاهيم المرآة ومجموعة <span class="notranslate farm-term" translate="no">farm</span> .
     * **العروض التوضيحية:** الوصول إلى سيناريوهات قائمة على الفيديو لـ SQL Server و Hyper-V و Apache لموازنة الأحمال.
     * **التثبيت والإعداد:** تعرف على كيفية تثبيت الحزمة وتكوينها من خلال وحدة تحكم إدارة الويب أو واجهة سطر الأوامر.
     * **التكوين المتقدم:** نظرة متعمقة على userconfig.xml ، ونبضات القلب، والنسخ المتماثل، وعناوين IP الافتراضية.
@@ -56,7 +56,7 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
      * 🎬 [مقدمة](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [مجموعة من الأجهزة الافتراضية](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
      * 🎬 [مجموعة المرايا](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [مجموعة المزارع](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [مجموعة <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
@@ -78,7 +78,7 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
   * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) )
 
 
-عرض توضيحي لمجموعة المزارع: 🎬 [فيديو](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+عرض توضيحي لمجموعة <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [فيديو](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [عقدتان مع أباتشي](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   * 🎬 [قم بتهيئة المجموعة ووحدة farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -105,7 +105,7 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
      * 🎬 [مراقبة الوحدات](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [نظرة عامة على وحدة التحكم في المراقبة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [كيف تعمل وحدة المرآة في وحدة التحكم؟](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [كيف تعمل وحدة المزرعة في وحدة التحكم؟](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [كيف تعمل وحدة <span class="notranslate farm-term" translate="no">farm</span> في وحدة التحكم؟](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [الجدول الزمني لحالات الوحدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [سجلات الوحدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [موارد الوحدة](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)
@@ -137,13 +137,13 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
      * 🎬 [نصوص بدء التشغيل / إيقاف التشغيل](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
      * 🎬 [انتقالات حالة المرآة](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) )
-  7. وحدة المزرعة: 🎬 [فيديو](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
+  7. وحدة <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [فيديو](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [نظرة عامة](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
      * 🎬 [نظرة عامة على userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [دقات قلب المزرعة ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [دقات قلب <span class="notranslate farm-term" translate="no">Farm</span> ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
      * 🎬 [عنوان IP الظاهري وقواعد موازنة الأحمال ( &lt;vip&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [بدء تشغيل كلا البرنامجين / إيقاف تشغيل كلا البرنامجين](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
-     * 🎬 [تحولات الولايات الزراعية](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
+     * 🎬 [تحولات الولايات <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) )
 
 
@@ -168,7 +168,7 @@ topics: "كيفية الوصول إلى منصة التدريب؟، احصل ع�
      * 🎬 [مشاكل وحدة تحكم الويب](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>) (1:14)
      * 🎬 [مشاكل سطر الأوامر](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>) (0:59)
      * 🎬 [مشاكل المرآة](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
-     * 🎬 [قضايا المزارع](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
+     * 🎬 [قضايا <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
      * 🎬 [مشاكل المدقق](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) )
 

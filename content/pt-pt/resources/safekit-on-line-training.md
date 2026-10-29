@@ -16,9 +16,9 @@ topics: "Como acessar a plataforma de treinamento?, Obtenha os materiais de trei
 O treinamento online do SafeKit é um recurso abrangente e autodidático, projetado para ajudá-lo a dominar alta disponibilidade e clustering de aplicativos. Você pode acessar a plataforma seguindo os passos abaixo:
 
   * Acesse a **👉 🎓 [Plataforma de Treinamento Online SafeKit](<https://training.my.evidian.com/mod/page/view.php?id=712>)** . Ela serve como seu centro de informações para todos os módulos de aprendizado e para o programa de certificação gratuito.
-  * **Obtenha suas credenciais:** Se você ainda não possui uma conta, clique em **Contato** no menu superior da plataforma de treinamento para solicitar suas credenciais de acesso.
+  * **Obtenha suas credenciais:** Se você ainda não possui uma conta, clique em **Contato** no menu superior da plataforma de treinamento para solicitar suas credenciais de login.
   * A plataforma está organizada em seções temáticas, incluindo: 
-    * **Arquitetura e Introdução:** Compreender os conceitos de clusters espelhados e de fazendas agrícolas.
+    * **Arquitetura e Introdução:** Compreender os conceitos de clusters espelhados e <span class="notranslate farm-term" translate="no">farm</span> .
     * **Demonstrações:** Acesse cenários em vídeo para balanceamento de carga do SQL Server, Hyper-V e Apache.
     * **Instalação e configuração:** Aprenda como instalar o pacote e configurá-lo através do console de gerenciamento web ou da CLI.
     * **Configuração Avançada:** Análise detalhada do userconfig.xml , heartbeats, replicação e IPs virtuais.
@@ -56,7 +56,7 @@ Note que esta não é a <a href="https://training.my.evidian.com/mod/page/view.p
      * 🎬 [Introdução](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [Cluster de máquinas virtuais](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
      * 🎬 [Aglomerado de espelhos](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Aglomerado agrícola](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [Aglomerado <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
@@ -78,7 +78,7 @@ Demonstração de cluster do SQL Server: 🎬 [vídeo](<https://www.youtube.com/
   * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) )
 
 
-Demonstração de agrupamento agrícola: 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Demonstração de agrupamento <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 nós com Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   * 🎬 [Configurar o cluster e o módulo farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -105,7 +105,7 @@ Demonstração de agrupamento agrícola: 🎬 [vídeo](<https://www.youtube.com/
      * 🎬 [Monitoramento de módulos](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Visão geral do console de monitoramento](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [Como funciona um módulo de espelhamento no console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [Como funciona um módulo de fazenda no console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [Como funciona um módulo <span class="notranslate farm-term" translate="no">farm</span> no console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [Linha do tempo dos estados do módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [Registros do módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [Recursos do módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)
@@ -137,13 +137,13 @@ Demonstração de agrupamento agrícola: 🎬 [vídeo](<https://www.youtube.com/
      * 🎬 [scripts start_prim / stop_prim](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
      * 🎬 [Transições de estado espelhado](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) )
-  7. Módulo Fazenda: 🎬 [vídeo](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
+  7. Módulo <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [vídeo](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [Visão geral](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
      * 🎬 [Visão geral do userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [Batimentos cardíacos da fazenda ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [Batimentos cardíacos <span class="notranslate farm-term" translate="no">Farm</span> ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
      * 🎬 [Endereço IP virtual e regras de balanceamento de carga ( &lt;vip&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [scripts start_both / stop_both](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
-     * 🎬 [Transições de estado agrícola](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
+     * 🎬 [Transições de estado <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) )
 
 
@@ -168,7 +168,7 @@ Demonstração de agrupamento agrícola: 🎬 [vídeo](<https://www.youtube.com/
      * 🎬 [Problemas com o console da Web](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>) (1:14)
      * 🎬 [Problemas na linha de comando](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>) (0:59)
      * 🎬 [Problemas com o espelho](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
-     * 🎬 [Problemas na fazenda](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
+     * 🎬 [Problemas <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
      * 🎬 [Problemas com o verificador](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) )
 

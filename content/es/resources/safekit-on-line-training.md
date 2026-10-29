@@ -18,7 +18,7 @@ La formación en línea de SafeKit es un recurso integral y a su propio ritmo, d
   * Acceda a la **[plataforma de formación en línea SafeKit](<https://training.my.evidian.com/mod/page/view.php?id=712>)** . Esta plataforma es su centro de acceso a todos los módulos de aprendizaje y al programa de certificación gratuito.
   * **Obtén tus credenciales:** Si aún no tienes una cuenta, haz clic en **Contacto** en el menú superior de la plataforma de formación para solicitar tus credenciales de acceso.
   * La plataforma está organizada en secciones temáticas, que incluyen: 
-    * **Arquitectura e introducción:** Comprender los conceptos de clúster de espejos y granjas.
+    * **Arquitectura e introducción:** Comprender los conceptos de clúster de espejos y <span class="notranslate farm-term" translate="no">farm</span> .
     * **Demostraciones:** Acceda a escenarios basados en vídeo para SQL Server, Hyper-V y el balanceo de carga de Apache.
     * **Instalación y configuración:** Aprenda cómo instalar el paquete y configurarlo a través de la consola de administración web o la interfaz de línea de comandos (CLI).
     * **Configuración avanzada:** Análisis en profundidad de userconfig.xml , señales de latido, replicación e IP virtuales.
@@ -56,7 +56,7 @@ Tenga en cuenta que esta no es la <a href="https://training.my.evidian.com/mod/p
      * 🎬 [Introducción](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [Clúster de máquinas virtuales](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
      * 🎬 [Grupo de espejos](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Granja en grupo](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span> en grupo](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
@@ -78,7 +78,7 @@ Demostración de clúster de SQL Server: 🎬 [vídeo](<https://www.youtube.com/
   * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) )
 
 
-Demostración de un grupo de granjas: 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Demostración de un grupo <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 nodos con Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   * 🎬 [Configurar el clúster y el módulo farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -105,7 +105,7 @@ Demostración de un grupo de granjas: 🎬 [vídeo](<https://www.youtube.com/wat
      * 🎬 [Monitoreo de módulos](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Descripción general de la consola de monitorización](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [¿Cómo funciona un módulo espejo en la consola?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [¿Cómo funciona un módulo de granja en la consola?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [¿Cómo funciona un módulo <span class="notranslate farm-term" translate="no">farm</span> en la consola?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [Cronología de los estados del módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [Registros del módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [Recursos del módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)
@@ -137,13 +137,13 @@ Demostración de un grupo de granjas: 🎬 [vídeo](<https://www.youtube.com/wat
      * 🎬 [Scripts start_prim / stop_prim](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
      * 🎬 [Transiciones de estado espejo](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) )
-  7. Módulo agrícola: 🎬 [vídeo](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
+  7. Módulo <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [vídeo](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [Resumen](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
      * 🎬 [Descripción general de userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [Latidos de la granja ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [Latidos <span class="notranslate farm-term" translate="no">Farm</span> ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
      * 🎬 [Dirección IP virtual y reglas de equilibrio de carga ( &lt;vip&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [Scripts start_both / stop_both](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
-     * 🎬 [Transiciones de estado en la granja](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
+     * 🎬 [Transiciones de estado <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) )
 
 
@@ -168,7 +168,7 @@ Demostración de un grupo de granjas: 🎬 [vídeo](<https://www.youtube.com/wat
      * 🎬 [Problemas con la consola web](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>) (1:14)
      * 🎬 [Problemas con la línea de comandos](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>) (0:59)
      * 🎬 [Problemas con el espejo](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
-     * 🎬 [Problemas en la granja](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
+     * 🎬 [Problemas <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
      * 🎬 [Problemas del verificador](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) )
 

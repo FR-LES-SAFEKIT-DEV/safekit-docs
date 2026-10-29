@@ -18,7 +18,7 @@ De online training van SafeKit is een uitgebreide, zelfstudiecursus die is ontwo
   * Ga naar het **👉 🎓 [SafeKit online trainingsplatform](<https://training.my.evidian.com/mod/page/view.php?id=712>)** . Dit is uw centrale punt voor alle leermodules en het gratis certificeringsprogramma.
   * **Vraag je inloggegevens aan:** Als je nog geen account hebt, klik dan op **&#39;Contact&#39;** in het bovenste menu van het trainingsplatform om je inloggegevens aan te vragen.
   * Het platform is onderverdeeld in thematische secties, waaronder: 
-    * **Architectuur en introductie:** Inzicht in de concepten van spiegel- en farmclusters.
+    * **Architectuur en introductie:** Inzicht in de concepten van spiegel- en <span class="notranslate farm-term" translate="no">farm</span> .
     * **Demonstraties:** Bekijk video&#39;s met scenario&#39;s voor SQL Server, Hyper-V en Apache load balancing.
     * **Installatie en configuratie:** Leer hoe u het pakket installeert en configureert via de webbeheerconsole of de CLI.
     * **Geavanceerde configuratie:** Een diepgaande analyse van userconfig.xml , heartbeats, replicatie en virtuele IP-adressen.
@@ -56,7 +56,7 @@ Let op: dit is niet het <a href="https://training.my.evidian.com/mod/page/view.p
      * 🎬 [Inleiding](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [Cluster van virtuele machines](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
      * 🎬 [Spiegelcluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Boerderijcluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
@@ -78,7 +78,7 @@ SQL Server-clusterdemonstratie: 🎬 [video](<https://www.youtube.com/watch?v=mG
   * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) )
 
 
-Demonstratie van een boerderijcluster: 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Demonstratie van <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [video](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 knooppunten met Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
   * 🎬 [Configureer het cluster en de farm.safe -module](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
@@ -105,7 +105,7 @@ Demonstratie van een boerderijcluster: 🎬 [video](<https://www.youtube.com/wat
      * 🎬 [Modulebewaking](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Overzicht van de monitoringconsole](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
        * 🎬 [Hoe werkt een spiegelmodule in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [Hoe werkt een farmmodule in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [Hoe werkt een <span class="notranslate farm-term" translate="no">farm</span> in de console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [Tijdlijn van de modulestatus](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [Modulelogboeken](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [Modulebronnen](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)
@@ -137,13 +137,13 @@ Demonstratie van een boerderijcluster: 🎬 [video](<https://www.youtube.com/wat
      * 🎬 [start_prim / stop_prim scripts](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
      * 🎬 [Spiegeltoestandovergangen](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) )
-  7. Boerderijmodule: 🎬 [video](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
+  7. <span class="notranslate farm-term" translate="no">Farm</span> : 🎬 [video](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [Overzicht](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
      * 🎬 [Overzicht van userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [Hartslagen van de boerderij ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [Hartslagen <span class="notranslate farm-term" translate="no">Farm</span> ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
      * 🎬 [Virtueel IP-adres en load balancing-regels ( &lt;vip&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [start_both / stop_both scripts](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
-     * 🎬 [Overgangen naar landbouwstaten](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
+     * 🎬 [Overgangen naar <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) )
 
 
@@ -168,8 +168,8 @@ Demonstratie van een boerderijcluster: 🎬 [video](<https://www.youtube.com/wat
      * 🎬 [Problemen met de webconsole](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>) (1:14)
      * 🎬 [Problemen met de opdrachtregel](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>) (0:59)
      * 🎬 [Problemen met de spiegel](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
-     * 🎬 [Problemen op de boerderij](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
-     * 🎬 [Problemen met de checker](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
+     * 🎬 [Problemen <span class="notranslate farm-term" translate="no">Farm</span>](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
+     * 🎬 [Controleproblemen](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
      * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) )
 
 

@@ -18,7 +18,7 @@ SafeKit 在线培训是一个自定进度、内容全面的学习资源，旨在
   * 前往**👉 🎓 [SafeKit 在线培训平台](<https://training.my.evidian.com/mod/page/view.php?id=712>)**。这里汇集了所有学习模块和免费认证项目。
   * **获取您的登录凭证：**如果您还没有账号，请点击培训平台顶部菜单中的**“联系我们”**来申请您的登录凭证。
   * 该平台按主题分为多个版块，包括： 
-    * **架构与介绍：**理解镜像集群和农场集群的概念。
+    * **架构与介绍：**理解镜像集群和<span class="notranslate farm-term" translate="no">farm</span>集群的概念。
     * **演示：**访问 SQL Server、Hyper-V 和 Apache 负载均衡的视频演示场景。
     * **安装与设置：**了解如何通过 Web 管理控制台或 CLI 安装和配置软件包。
     * **高级配置：**深入了解userconfig.xml 、心跳、复制和虚拟 IP。
@@ -56,7 +56,7 @@ SafeKit 在线培训是一个自定进度、内容全面的学习资源，旨在
      * 🎬[引言](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>)(4:10)
      * 🎬[虚拟机集群](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>)(1:20)
      * 🎬[镜像集群](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>)(6:04)
-     * 🎬[农场集群](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>)(1:46)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>集群](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>)(1:46)
      * （ [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) ）
 
 
@@ -78,7 +78,7 @@ SQL Server 集群演示：🎬[视频](<https://www.youtube.com/watch?v=mGwEguDn
   * （ [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) ）
 
 
-农场集群演示：🎬[视频](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>)(5:03)
+<span class="notranslate farm-term" translate="no">Farm</span>集群演示：🎬[视频](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>)(5:03)
 
   * 🎬 [2 个 Apache 节点](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>)(0:13)
   * 🎬[配置集群和farm.safe模块](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>)(2:20)
@@ -105,7 +105,7 @@ SQL Server 集群演示：🎬[视频](<https://www.youtube.com/watch?v=mGwEguDn
      * 🎬[模块监控](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>)(10:40) 
        * 🎬[监控控制台概览](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>)(01:59)
        * 🎬[控制台中的镜像模块是如何工作的？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) （02:52）
-       * 🎬[控制台中的农场模块是如何工作的？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) （01:43）
+       * 🎬[控制台中的<span class="notranslate farm-term" translate="no">farm</span>模块是如何工作的？](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) （01:43）
        * 🎬[模块状态时间线](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>)(00:55)
        * 🎬[模块日志](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>)（02:16）
        * 🎬[模块资源](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>)(00:52)
@@ -137,13 +137,13 @@ SQL Server 集群演示：🎬[视频](<https://www.youtube.com/watch?v=mGwEguDn
      * 🎬 [start_prim / stop_prim 脚本](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>)(3:01)
      * 🎬[镜像状态转换](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>)(7:46)
      * （ [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) ）
-  7. 农场模块：🎬[视频](<https://www.youtube.com/watch?v=tFYXIa_KRHc>)(16:16) 
+  7. <span class="notranslate farm-term" translate="no">Farm</span>模块：🎬[视频](<https://www.youtube.com/watch?v=tFYXIa_KRHc>)(16:16) 
      * 🎬[概述](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>)(2:05)
      * 🎬 [userconfig.xml概览](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>)(0:36)
-     * 🎬[农场心跳 ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>心跳 ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
      * 🎬[虚拟 IP 地址和负载均衡规则 ( &lt;vip&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
      * 🎬 [start_both / stop_both 脚本](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>)(2:37)
-     * 🎬[农场状态转变](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>)(4:21)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>状态转变](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>)(4:21)
      * （ [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) ）
 
 
@@ -168,7 +168,7 @@ SQL Server 集群演示：🎬[视频](<https://www.youtube.com/watch?v=mGwEguDn
      * 🎬 [Web 控制台问题](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>)(1:14)
      * 🎬[命令行问题](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>)(0:59)
      * 🎬[镜子问题](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>)(5:33)
-     * 🎬[农场问题](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>)(3:54)
+     * 🎬 [<span class="notranslate farm-term" translate="no">Farm</span>问题](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>)(3:54)
      * 🎬[检查器问题](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>)(4:22)
      * （ [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) ）
 
