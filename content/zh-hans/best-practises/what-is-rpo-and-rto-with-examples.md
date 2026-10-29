@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/what-is-rpo-and-rt
 description: "通过清晰的示例了解 RPO（恢复点目标）和 RTO（恢复时间目标）的定义。探索SafeKit如何实现零数据丢失 (RPO=0) 和快速故障转移，从而确保全天候业务连续性。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务连续性解决方案的 RPO 和 RTO？、如何确定备份和灾难恢复解决方案的 RPO 和 RTO？、 SafeKit Mirror集群如何实现零 RPO 和低 RTO？、具有负载均衡的SafeKit `Farm`集群的 RTO 基准是什么？、对比表：RTO 与 RPO、高可用性实战：零 RPO 和近零 RTO 的实时演示、常见问题解答：优化 RPO 和 RTO 以实现业务连续性、🔍 SafeKit高可用性导航中心"
+topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务连续性解决方案的 RPO 和 RTO？、如何确定备份和灾难恢复解决方案的 RPO 和 RTO？、 SafeKit Mirror集群如何实现零 RPO 和低 RTO？、具有负载均衡的SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群的 RTO 基准是什么？、对比表：RTO 与 RPO、高可用性实战：零 RPO 和近零 RTO 的实时演示、常见问题解答：优化 RPO 和 RTO 以实现业务连续性、🔍 SafeKit高可用性导航中心"
 ---
 
 # 什么是 RPO 和 RTO？定义、示例和高可用性策略 {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
@@ -26,7 +26,7 @@ topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务
   * 如何计算高可用性和业务连续性解决方案的恢复点目标[ RPO) 和恢复时间目标](#calculate-rpo-rto-high-availability) RTO)？
   * ](#calculate-rpo-rto-backup-solution)确定备份和灾难恢复解决方案的[和 RTO？
   * [如何实现SafeKit Mirror集群的零 RPO 和低 RTO？ ](#rpo-rto-safekit-mirror-cluster)
-  * [启用负载均衡的SafeKit `Farm`集群的 RTO 基准是什么？ ](#rpo-rto-safekit-farm-cluster)
+  * [启用负载均衡的SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群的 RTO 基准是什么？ ](#rpo-rto-safekit-farm-cluster)
   * [对比表：RTO 与 RPO ](#rpo-vs-rto-comparison)
   * [高可用性实战：零 RPO 和近零 RTO 实时演示](#safekit-rpo-rto-video-demos)
   * 关于 RPO 和 RTO ](#faq-rpo-rto)常见问题[
@@ -148,38 +148,38 @@ topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务
 
 通过利用**应用级高可用性** 、 SafeKit ，消除了标准虚拟化中固有的“重启惩罚”，确保您的**业务连续性计划**实现尽可能低的停机时间。 
 
-## 具有负载均衡功能的SafeKit `Farm`集群的 RTO 基准是什么？ {#rpo-rto-safekit-farm-cluster}
+## 具有负载均衡功能的SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群的 RTO 基准是什么？ {#rpo-rto-safekit-farm-cluster}
 
-### SafeKit `Farm`集群是什么？ {#what-is-safekit-farm-cluster}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群是什么？ {#what-is-safekit-farm-cluster}
 
-**SafeKit `Farm`集群**是一种基于软件的高可用性解决方案，专为需要**可扩展性**可扩展性和**冗余性**无状态应用程序（例如 Web 服务器）而设计。与专注于数据复制的mirror集群不同， `farm`集群将传入流量分布到多个活动节点上。
+**SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群**是一种基于软件的高可用性解决方案，专为需要**可扩展性**可扩展性和**冗余性**无状态应用程序（例如 Web 服务器）而设计。与专注于数据复制的mirror集群不同， <span class="notranslate farm-term" translate="no">farm</span>集群将传入流量分布到多个活动节点上。
 
 
 ![ SafeKit Farm集群架构演示了无状态应用程序的网络负载均衡和故障转移](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-为了在高流量环境下维持**业务连续性** ， SafeKit `farm`集群通过两种核心机制运行：
+为了在高流量环境下维持**业务连续性** ， SafeKit <span class="notranslate farm-term" translate="no">farm</span>集群通过两种核心机制运行：
 
-  * **网络负载均衡：** SafeKit使用虚拟 IP 地址将传入的网络流量分配到多个活动服务器（ `farm` ）上。这确保了单个服务器不会过载，并最大限度地提高了应用程序的性能。
-  * **自动故障检测与重配置：如果**中的一个节点发生故障， SafeKit会通过心跳机制检测`farm`该故障，并立即将流量重新分配到其余健康节点。由于其他节点已处于活动状态并准备好承担负载，因此这使得整个服务的恢复时间目标 (RTO) 接近于零。
+  * **网络负载均衡：** SafeKit使用虚拟 IP 地址将传入的网络流量分配到多个活动服务器（ <span class="notranslate farm-term" translate="no">farm</span> ）上。这确保了单个服务器不会过载，并最大限度地提高了应用程序的性能。
+  * **自动故障检测与重配置：如果**中的一个节点发生故障， SafeKit会通过心跳机制检测<span class="notranslate farm-term" translate="no">farm</span>该故障，并立即将流量重新分配到其余健康节点。由于其他节点已处于活动状态并准备好承担负载，因此这使得整个服务的恢复时间目标 (RTO) 接近于零。
 
 
-### SafeKit `Farm`的 RPO 分别是多少？ {#what-is-rpo-safekit-farm}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span>的 RPO 分别是多少？ {#what-is-rpo-safekit-farm}
 
-对于**SafeKit `Farm`集群，****其恢复点目标 (RPO)**通常被认为**不适用 (N/A)** 。这是因为`farm`集群专为**无状态应用程序**而设计，这类应用程序的数据不存储在节点本地。 
+对于**SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群，****其恢复点目标 (RPO)**通常被认为**不适用 (N/A)** 。这是因为<span class="notranslate farm-term" translate="no">farm</span>集群专为**无状态应用程序**而设计，这类应用程序的数据不存储在节点本地。 
 
-由于`farm`集群侧重于**网络负载均衡**而非数据同步，因此集群内部节点之间不存在数据复制。在一个典型的**业务连续性计划**中，涉及`farm`架构： 
+由于<span class="notranslate farm-term" translate="no">farm</span>集群侧重于**网络负载均衡**而非数据同步，因此集群内部节点之间不存在数据复制。在一个典型的**业务连续性计划**中，涉及<span class="notranslate farm-term" translate="no">farm</span>架构： 
 
-  * **无状态操作：** `farm`中的所有节点都是相同的，并且不保存持久数据；因此，在节点故障期间不会出现“数据丢失”的情况。 
+  * **无状态操作：** <span class="notranslate farm-term" translate="no">farm</span>中的所有节点都是相同的，并且不保存持久数据；因此，在节点故障期间不会出现“数据丢失”的情况。 
   * **外部数据存储：**如果应用程序需要数据持久性，则通常由单独的后端**SafeKit Mirror集群**处理，此时 RPO 将为零。 
 
 
-### SafeKit `Farm`的 RTO 是多少？ {#rto-example-safekit-farm-cluster}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span>的 RTO 是多少？ {#rto-example-safekit-farm-cluster}
 
-在`farm`架构中，由于所有节点通常同时处于活动状态， **RTO 会缩短至仅几秒** 。恢复时间取决于集群重新配置其流量分配的速度：
+在<span class="notranslate farm-term" translate="no">farm</span>架构中，由于所有节点通常同时处于活动状态， **RTO 会缩短至仅几秒** 。恢复时间取决于集群重新配置其流量分配的速度：
 
   * **硬件故障：**恢复时间超时 (RTO) 等于监控通道的故障检测超时时间（默认值为几秒）。一旦检测到心跳丢失， **虚拟 IP 负载均衡过滤器**将自动重新配置，以将流量重定向到其余健康节点。
-  * **软件故障或计划重启：** RTO 的计算方法是在该特定节点上应用停止时间加上应用重启时间，在此期间， `farm`中的其他节点将继续处理所有传入流量。
+  * **软件故障或计划重启：** RTO 的计算方法是在该特定节点上应用停止时间加上应用重启时间，在此期间， <span class="notranslate farm-term" translate="no">farm</span>中的其他节点将继续处理所有传入流量。
 
 
 这种“主动-主动”机制确保对于无状态服务， **业务连续性**影响对最终用户几乎是不可察觉的，因为无需在新备用节点上初始化服务。
@@ -206,7 +206,7 @@ topics: "快速概要：RPO 与 RTO、目录、如何计算高可用性和业务
 架构|用例| RTO（可用性） | RPO（数据丢失）  
 ---|---|---|---  
 Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失）  
-`Farm`集群|网络负载均衡|几秒钟|不适用（无状态）  
+<span class="notranslate farm-term" translate="no">Farm</span>集群|网络负载均衡|几秒钟|不适用（无状态）  
   
 ## 高可用性实战：零 RPO 和近零 RTO 的实时演示 {#safekit-rpo-rto-video-demos}
 
@@ -223,9 +223,9 @@ Mirror集群|实时复制| ~1 分钟（心跳 + 重启） | 0（无数据丢失�
 
 [免费试用链接](</zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
-### 视频：在SafeKit `Farm`集群中实现近零 RTO (5:03) {#demo-farm-cluster-rpo-rto}
+### 视频：在SafeKit <span class="notranslate farm-term" translate="no">Farm</span>集群中实现近零 RTO (5:03) {#demo-farm-cluster-rpo-rto}
 
-观看SafeKit如何管理 Apache Web `farm` ，以提供性能扩展和即时故障转移。
+观看SafeKit如何管理 Apache Web <span class="notranslate farm-term" translate="no">farm</span> ，以提供性能扩展和即时故障转移。
 
 #### 章节 {#chapters-1}
 

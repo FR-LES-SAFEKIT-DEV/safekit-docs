@@ -25,7 +25,7 @@ Proporcionar una solución de continuidad de negocio en una empresa para múltip
 
 ### El software SafeKit : una solución sencilla para la continuidad del negocio {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit ofrece dos módulos sencillos `farm` y mirror , para proteger sus aplicaciones críticas contra fallos. La implementación se realiza en servidores estándar sin necesidad de conocimientos de TI para su gestión. No se requieren discos compartidos, SAN replicada, balanceadores de carga, ediciones Enterprise de sistemas operativos ni bases de datos. 
+SafeKit ofrece dos módulos sencillos <span class="notranslate farm-term" translate="no">farm</span> y mirror , para proteger sus aplicaciones críticas contra fallos. La implementación se realiza en servidores estándar sin necesidad de conocimientos de TI para su gestión. No se requieren discos compartidos, SAN replicada, balanceadores de carga, ediciones Enterprise de sistemas operativos ni bases de datos. 
 
 
 {{%  insert-safekit-hub-es  %}}

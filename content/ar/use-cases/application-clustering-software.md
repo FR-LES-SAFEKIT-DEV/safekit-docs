@@ -27,11 +27,11 @@ SafeKit مستقل عن الأجهزة ويعمل مع أي خوادم فعلي�
 
 ### تجميع التطبيقات مع النسخ المتماثل في الوقت الفعلي، وموازنة الأحمال، والتعافي من الأعطال {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-يقدم برنامج SafeKit وحدتين عامتين لتجميع التطبيقات: وحدة mirror ووحدة `farm` .
+يقدم برنامج SafeKit وحدتين عامتين لتجميع التطبيقات: وحدة mirror ووحدة <span class="notranslate farm-term" translate="no">farm</span> .
 
 تُنفّذ الوحدات [ mirror ](/ar/product/#safekit-mirror-cluster) خاصية النسخ المتماثل للملفات في الوقت الفعلي وخاصية تجاوز الأعطال في التطبيقات. وهي مناسبة للتطبيقات التي تحتوي على قاعدة بيانات.
 
-تُنفّذ الوحدات [ `farm` ](/ar/product/#safekit-farm-cluster) موازنة أحمال الشبكة وتجاوز الأعطال في التطبيقات. وهي مناسبة للتطبيقات التي تستخدم خدمات الويب.
+تُنفّذ الوحدات [ <span class="notranslate farm-term" translate="no">farm</span> ](/ar/product/#safekit-farm-cluster) موازنة أحمال الشبكة وتجاوز الأعطال في التطبيقات. وهي مناسبة للتطبيقات التي تستخدم خدمات الويب.
 
 ويمكنك دمج الوحدات.
 

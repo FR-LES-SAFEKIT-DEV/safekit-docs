@@ -21,7 +21,7 @@ topics: "برنامج استمرارية الأعمال والتعافي من ا
 
 ### كيفية تطبيق حل بسيط عالي التوافر بين غرفتي حاسوب بعيدتين؟ {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-يمكن نشر وحدات SafeKit و mirror و `farm` بسهولة على الخوادم الموجودة في غرف حاسوب بعيدة، دون الحاجة إلى أي تكوين خاص للمجموعة. وهذا يعني أن SafeKit يجمع بين استمرارية الأعمال والتعافي من الكوارث ضمن بنية واحدة بسيطة. كما يدير SafeKit وحدة [ ذات الدماغ المنقسم ووحدة ](</ar/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) في حالة عزل الشبكة، دون الحاجة إلى خادم ثالث أو قرص نصاب خاص.
+يمكن نشر وحدات SafeKit و mirror و <span class="notranslate farm-term" translate="no">farm</span> بسهولة على الخوادم الموجودة في غرف حاسوب بعيدة، دون الحاجة إلى أي تكوين خاص للمجموعة. وهذا يعني أن SafeKit يجمع بين استمرارية الأعمال والتعافي من الكوارث ضمن بنية واحدة بسيطة. كما يدير SafeKit وحدة [ ذات الدماغ المنقسم ووحدة ](</ar/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) في حالة عزل الشبكة، دون الحاجة إلى خادم ثالث أو قرص نصاب خاص.
 
 ### استمرارية الأعمال مقابل حلول النسخ الاحتياطي {#business-continuity-vs-backup-solutions}
 

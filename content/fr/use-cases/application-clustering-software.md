@@ -27,11 +27,11 @@ Si vous êtes éditeur de logiciels et recherchez une solution de clustering d'a
 
 ### Clustering d'applications avec réplication en temps réel, répartition de charge et basculement {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-Le logiciel SafeKit propose deux modules génériques pour le clustering d'applications : le module mirror et le module `farm` .
+Le logiciel SafeKit propose deux modules génériques pour le clustering d'applications : le module mirror et le module <span class="notranslate farm-term" translate="no">farm</span> .
 
 Le module [ mirror ](/fr/product/#safekit-mirror-cluster) assure la réplication de fichiers en temps réel et le basculement d'applications. Il est adapté aux applications disposant d'une base de données.
 
-Le module [ `farm` ](/fr/product/#safekit-farm-cluster) assure l'équilibrage de charge réseau et le basculement d'applications. Il est adapté aux applications utilisant des services web.
+Le module [ <span class="notranslate farm-term" translate="no">farm</span> ](/fr/product/#safekit-farm-cluster) assure l'équilibrage de charge réseau et le basculement d'applications. Il est adapté aux applications utilisant des services web.
 
 Et vous pouvez combiner les modules.
 

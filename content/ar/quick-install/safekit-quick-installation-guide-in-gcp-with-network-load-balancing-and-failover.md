@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "حسّن موازنة أحمال الشبكة GCP باستخدام ميزة مراقبة التطبيقات الذكية في SafeKit . توفر وحدة farm.safe فحصًا صحيًا مخصصًا لموازن الأحمال GCP ، مما يتيح توافرًا عاليًا سلسًا على مستوى التطبيق. حقق خاصية الإصلاح الذاتي التلقائي والتحويل التلقائي في حالة الأعطال للتطبيقات بالغة الأهمية."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ GCP و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / GCP ، تثبيت حل SafeKit / GCP على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / GCP ، عرض توضيحي لحل SafeKit `farm` ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ GCP و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / GCP ، تثبيت حل SafeKit / GCP على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / GCP ، عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> ، 🔍 مركز التنقل للتوافر العالي SafeKit"
 ---
 
 # موازنة أحمال الشبكة والتحويل التلقائي في حالة الفشل GCP : قم بتثبيت الوحدات النمطية SafeKit farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ G
 
 ## نظرة عامة على حل SafeKit / GCP {#overview-of-the-safekit--gcp-solution}
 
-الحل موضح هنا: **💡 [ SafeKit : Google GCP موازنة الأحمال وتوافر التطبيقات العالي `Farm` مجموعة ](</ar/solutions/gcp-load-balancing-cluster-failover/>)** .
+الحل موضح هنا: **💡 [ SafeKit : Google GCP موازنة الأحمال وتوافر التطبيقات العالي <span class="notranslate farm-term" translate="no">Farm</span> مجموعة ](</ar/solutions/gcp-load-balancing-cluster-failover/>)** .
 
 ## تثبيت حل SafeKit / GCP على Windows و Linux ( farm.safe ) و {#installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe}
 
@@ -25,7 +25,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ G
 ويجب تهيئة موازن الأحمال لإرسال حزم بيانات الصحة بشكل دوري إلى العقد.  
 لذلك، يوفر SafeKit فحصًا صحيًا يتم تشغيله داخل العقد، والذي
 
-  * يعود OK عندما تكون حالة وحدة `farm` هي UP (خضراء)
+  * يعود OK عندما تكون حالة وحدة <span class="notranslate farm-term" translate="no">farm</span> هي UP (خضراء)
   * لم يتم العثور على نتائج في جميع الولايات الأخرى
 
 
@@ -33,7 +33,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ G
 
   * بروتوكول HTTP
   * المنفذ 9010، منفذ خادم الويب SafeKit
-  * عنوان URL /var/modules/farm/ready.txt (إذا كان `farm` هو اسم الوحدة التي ستقوم بنشرها لاحقًا)
+  * عنوان URL /var/modules/farm/ready.txt (إذا كان <span class="notranslate farm-term" translate="no">farm</span> هو اسم الوحدة التي ستقوم بنشرها لاحقًا)
 
 
 للمزيد من المعلومات، راجع [ تكوين موازن التحميل ](<https://docs.cloud.google.com/load-balancing/docs/>) من Google GCP .
@@ -46,7 +46,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ G
 يجب تهيئة أمان الشبكة لتمكين الاتصالات للبروتوكولات والمنافذ التالية:
 
   * UDP - 4800 لخدمة safeadmin (بين عقد SafeKit )
-  * UDP - 4803 لنبضات القلب داخل وحدة `farm` (بين عقد SafeKit )
+  * UDP - 4803 لنبضات القلب داخل وحدة <span class="notranslate farm-term" translate="no">farm</span> (بين عقد SafeKit )
   * يُستخدم المنفذ 9010 في بروتوكول TCP لفحص حالة موازن الأحمال، ولتشغيل وحدة تحكم الويب SafeKit في وضع HTTP.
   * TCP – 9001 لتكوين وضع HTTPS لوحدة التحكم
   * TCP – 9453 لوحدة تحكم الويب SafeKit التي تعمل في وضع HTTPS
@@ -66,7 +66,7 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ G
 {{%  insert-safekit-82-farm-configuration-ar app="" mod="farm"  %}}
  
 
-## عرض توضيحي لحل SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ar  %}}

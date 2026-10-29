@@ -21,7 +21,7 @@ Er is geen configuratieverschil bij het implementeren van een SafeKit -cluster i
 
 ### Hoe implementeer ik een eenvoudige oplossing voor hoge beschikbaarheid tussen twee externe computerruimtes? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-De modules SafeKit mirror en `farm` kunnen eenvoudig worden geïmplementeerd op servers in externe computerruimtes, zonder speciale clusterconfiguratie. Dit betekent dat SafeKit bedrijfscontinuïteit en noodherstel combineert in één eenvoudige architectuur. SafeKit beheert bovendien [ ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in geval van netwerkisolatie, zonder dat een derde server of een speciale quorumschijf nodig is.
+De modules SafeKit mirror en <span class="notranslate farm-term" translate="no">farm</span> kunnen eenvoudig worden geïmplementeerd op servers in externe computerruimtes, zonder speciale clusterconfiguratie. Dit betekent dat SafeKit bedrijfscontinuïteit en noodherstel combineert in één eenvoudige architectuur. SafeKit beheert bovendien [ ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in geval van netwerkisolatie, zonder dat een derde server of een speciale quorumschijf nodig is.
 
 ### Bedrijfscontinuïteit versus back-upoplossingen {#business-continuity-vs-backup-solutions}
 

@@ -63,8 +63,8 @@ Também pode utilizar a consola num navegador numa estação de trabalho externa
   * Em `Virtual IP addresses`, introduza um endereço IP virtual. Trata-se de um endereço IP normal na mesma rede IP (sub-rede) que os endereços IP dos dois nós. Os clientes da aplicação devem ser configurados com o endereço IP virtual (ou o nome DNS associado).
   * Em `Load balancing rules`, defina a porta de serviço a equilibrar (por exemplo, TCP 9010).
   * Em `Load balancing rules`, defina a regra de balanceamento de carga `Source address` ou `Source port`:
-    * Com o endereço IP de origem do cliente, o mesmo cliente será ligado ao mesmo nó na `farm` em várias sessões TCP e recuperará o seu contexto nesse nó.
-    * Com a porta TCP de origem do cliente, o mesmo cliente será ligado a nós diferentes na `farm` em várias sessões TCP (sem recuperar um contexto).
+    * Com o endereço IP de origem do cliente, o mesmo cliente será ligado ao mesmo nó na <span class="notranslate farm-term" translate="no">farm</span> em várias sessões TCP e recuperará o seu contexto nesse nó.
+    * Com a porta TCP de origem do cliente, o mesmo cliente será ligado a nós diferentes na <span class="notranslate farm-term" translate="no">farm</span> em várias sessões TCP (sem recuperar um contexto).
   * Em `Checkers`, pode configurar verificações, se necessário, como monitorização de processos, verificações personalizadas, TCP, ping ou verificações de split-brain. Por exemplo, se for apresentado um nome de processo em `Monitored processes/services`, este será monitorizado e reiniciado em caso de falha. Um nome de processo incorreto fará com que o módulo pare imediatamente após o arranque.
 
 
@@ -75,7 +75,7 @@ Também pode utilizar a consola num navegador numa estação de trabalho externa
 ℹ️ Ao aplicar a configuração do SafeKit, o `startup type` dos serviços é automaticamente definido como `Manual` nos serviços do Windows. Assim, os serviços não arrancam automaticamente com o sistema, mas apenas quando o próprio módulo é iniciado (o mesmo se aplica ao Linux).
 
 
-![Introduza as definições do módulo `farm` de {{ .Get "app" }}](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Introduza as definições do módulo <span class="notranslate farm-term" translate="no">farm</span> de {{ .Get "app" }}](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Editar scripts (opcional)
@@ -114,9 +114,9 @@ Também pode utilizar a consola num navegador numa estação de trabalho externa
 ![Verifique se a configuração do módulo {{ .Get "app" }} foi bem-sucedida](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Iniciar o cluster `farm` nos nós 1 e 2
+### 9. Iniciar o cluster <span class="notranslate farm-term" translate="no">farm</span> nos nós 1 e 2
 
-  * Clique em ⋯ `Start` para iniciar o cluster `farm`, conforme apresentado na imagem.
+  * Clique em ⋯ `Start` para iniciar o cluster <span class="notranslate farm-term" translate="no">farm</span>, conforme apresentado na imagem.
 
 
 ![Inicie o cluster {{ .Get "app" }} nos dois nós](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
@@ -144,7 +144,7 @@ Os nós 1 e 2 deverão atingir o estado UP (verde), o que significa que o script
 O SafeKit inclui um teste integrado no produto:
 
   * Configure uma regra para a porta TCP 9010 com balanceamento de carga pela porta TCP de origem.
-  * Ligue uma estação de trabalho externa, fora dos nós da `farm`.
+  * Ligue uma estação de trabalho externa, fora dos nós da <span class="notranslate farm-term" translate="no">farm</span>.
   * Abra um navegador em http://virtual-ip:9010/safekit/mosaic.html.
 
 

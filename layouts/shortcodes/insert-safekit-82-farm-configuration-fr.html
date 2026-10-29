@@ -63,8 +63,8 @@ Vous pouvez également utiliser la console dans un navigateur sur un poste de tr
   * Dans `Virtual IP addresses`, saisissez une adresse IP virtuelle. Il s’agit d’une adresse IP standard appartenant au même réseau IP (même sous-réseau) que les adresses IP des deux nœuds. Les clients de l’application doivent être configurés avec cette adresse IP virtuelle (ou le nom DNS qui lui est associé).
   * Dans `Load balancing rules`, définissez le port de service à répartir (par exemple, TCP 9010).
   * Dans `Load balancing rules`, définissez la règle d’équilibrage de charge `Source address` ou `Source port` :
-    * Avec l’adresse IP source du client, celui-ci sera connecté au même nœud de la `farm` lors de plusieurs sessions TCP et retrouvera son contexte sur ce nœud.
-    * Avec le port TCP source du client, celui-ci sera connecté à différents nœuds de la `farm` lors de plusieurs sessions TCP (sans retrouver de contexte).
+    * Avec l’adresse IP source du client, celui-ci sera connecté au même nœud de la <span class="notranslate farm-term" translate="no">farm</span> lors de plusieurs sessions TCP et retrouvera son contexte sur ce nœud.
+    * Avec le port TCP source du client, celui-ci sera connecté à différents nœuds de la <span class="notranslate farm-term" translate="no">farm</span> lors de plusieurs sessions TCP (sans retrouver de contexte).
   * Dans `Checkers`, vous pouvez configurer des vérifications si nécessaire : surveillance de processus, vérifications personnalisées, TCP, ping ou détection de split-brain. Par exemple, si un nom de processus apparaît dans `Monitored processes/services`, il sera surveillé et redémarré en cas de panne. Un nom de processus incorrect provoquera l’arrêt du module juste après son démarrage.
 
 
@@ -75,7 +75,7 @@ Vous pouvez également utiliser la console dans un navigateur sur un poste de tr
 ℹ️ Lorsque vous appliquez la configuration SafeKit, le `startup type` des services est automatiquement défini sur `Manual` dans les services Windows. Ainsi, les services ne démarrent pas automatiquement au démarrage du système, mais uniquement au lancement du module (même principe sous Linux).
 
 
-![Saisir les paramètres du module `farm` de {{ .Get "app" }}](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Saisir les paramètres du module <span class="notranslate farm-term" translate="no">farm</span> de {{ .Get "app" }}](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Modifier les scripts (facultatif)
@@ -114,9 +114,9 @@ Vous pouvez également utiliser la console dans un navigateur sur un poste de tr
 ![Vérifier la réussite de la configuration du module {{ .Get "app" }}](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Démarrer le cluster `farm` sur les nœuds 1 et 2
+### 9. Démarrer le cluster <span class="notranslate farm-term" translate="no">farm</span> sur les nœuds 1 et 2
 
-  * Cliquez sur ⋯ `Start` pour démarrer le cluster `farm`, comme indiqué sur l’image.
+  * Cliquez sur ⋯ `Start` pour démarrer le cluster <span class="notranslate farm-term" translate="no">farm</span>, comme indiqué sur l’image.
 
 
 ![Démarrer le cluster {{ .Get "app" }} sur les deux nœuds](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
@@ -144,7 +144,7 @@ Les nœuds 1 et 2 doivent atteindre l’état UP (vert), ce qui signifie que le 
 SafeKit intègre un test au produit :
 
   * Configurez une règle pour le port TCP 9010 avec un équilibrage de charge selon le port TCP source.
-  * Connectez un poste de travail externe, hors des nœuds de la `farm`.
+  * Connectez un poste de travail externe, hors des nœuds de la <span class="notranslate farm-term" translate="no">farm</span>.
   * Ouvrez un navigateur à l’adresse http://virtual-ip:9010/safekit/mosaic.html.
 
 

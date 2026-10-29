@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/what-is-rpo-and-rto-wit
 description: "RPO（リカバリポイント目標）とRTO（リカバリ時間目標）の定義を明確な例とともに学びましょう。 SafeKit データ損失ゼロ（RPO=0）と迅速なフェイルオーバーを実現し、24時間365日の事業継続性を確保します。"
 category: "best-practises"
 lang: "ja"
-topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリューションのRPOとRTOの計算方法、バックアップおよび災害復旧ソリューションのRPOとRTOの決定方法、 SafeKit MirrorクラスタがゼロRPOと低RTOを実現する方法、負荷分散を備えたSafeKit `Farm`クラスタのRTOベンチマーク、比較表：RTOとRPO、高可用性の実践：ゼロRPOとほぼゼロRTOのリアルタイムデモ、FAQ：事業継続のためのRPOとRTOの最適化、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリューションのRPOとRTOの計算方法、バックアップおよび災害復旧ソリューションのRPOとRTOの決定方法、 SafeKit MirrorクラスタがゼロRPOと低RTOを実現する方法、負荷分散を備えたSafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスタのRTOベンチマーク、比較表：RTOとRPO、高可用性の実践：ゼロRPOとほぼゼロRTOのリアルタイムデモ、FAQ：事業継続のためのRPOとRTOの最適化、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # RPOとRTOとは？定義、例、およびHA戦略 {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
@@ -26,7 +26,7 @@ topics: "概要：RPOとRTO、目次、高可用性および事業継続ソリ�
   * [高可用性および事業継続性ソリューションのRPOとRTOはどのように計算すればよいですか？ ](#calculate-rpo-rto-high-availability)
   * [バックアップおよび災害復旧ソリューションのRPOとRTOはどのように決定すればよいですか？ ](#calculate-rpo-rto-backup-solution)
   * [ SafeKit Mirrorクラスターはどのようにして RPO ゼロと RTO 低レベルを実現しているのでしょうか？ ](#rpo-rto-safekit-mirror-cluster)
-  * [ロードバランシングを備えたSafeKit `Farm`クラスターの RTO ベンチマークは何ですか? ](#rpo-rto-safekit-farm-cluster)
+  * [ロードバランシングを備えたSafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスターの RTO ベンチマークは何ですか? ](#rpo-rto-safekit-farm-cluster)
   * [比較表：RTO 対 RPO ](#rpo-vs-rto-comparison)
   * [高可用性の実践：ゼロRPOとほぼゼロRTOのリアルタイムデモ](#safekit-rpo-rto-video-demos)
   * [ RPOとRTOに関するよくある質問](#faq-rpo-rto)
@@ -148,38 +148,38 @@ SafeKitの**はmirrorノード間のデータ複製が同期かつ[であるた�
 
 **アプリケーションレベルの高可用性**活用することで、 SafeKit標準的な仮想化に内在する「再起動ペナルティ」を排除し、 **ビジネス継続計画**が可能な限り低いダウンタイムを実現することを保証します。 
 
-## ロードバランシングを備えたSafeKit `Farm`クラスターの RTO ベンチマークは何ですか? {#rpo-rto-safekit-farm-cluster}
+## ロードバランシングを備えたSafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスターの RTO ベンチマークは何ですか? {#rpo-rto-safekit-farm-cluster}
 
-### SafeKit `Farm`クラスターとは何ですか？ {#what-is-safekit-farm-cluster}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスターとは何ですか？ {#what-is-safekit-farm-cluster}
 
-**SafeKit `Farm`クラスタ**は、スケーラビリティ**と冗長性**の両方を必要とするステートレス アプリケーション (Web サーバーなど) 向けに設計された**ソフトウェア ベースの高可用性ソリューションです。データ レプリケーションに重点を置く**クラスタとは異なり、 mirrorクラスタ`farm`受信トラフィックを複数のアクティブ ノードに分散します。
+**SafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスタ**は、スケーラビリティ**と冗長性**の両方を必要とするステートレス アプリケーション (Web サーバーなど) 向けに設計された**ソフトウェア ベースの高可用性ソリューションです。データ レプリケーションに重点を置く**クラスタとは異なり、 mirrorクラスタ<span class="notranslate farm-term" translate="no">farm</span>受信トラフィックを複数のアクティブ ノードに分散します。
 
 
 ![ SafeKit Farmステートレスアプリケーションのネットワーク負荷分散とフェイルオーバーを示すクラスタアーキテクチャ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-高トラフィック環境における**事業継続性**を維持するため、 SafeKit `farm`クラスターは、以下の 2 つのコア メカニズムを通じて動作します。
+高トラフィック環境における**事業継続性**を維持するため、 SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスターは、以下の 2 つのコア メカニズムを通じて動作します。
 
-  * **ネットワーク負荷分散:** SafeKit仮想 IP アドレスを使用して、受信ネットワーク トラフィックを複数のアクティブ サーバーに分散します。これにより`farm`単一のサーバーが過負荷になることを防ぎ、アプリケーションのパフォーマンスを最大化します。
-  * **自動障害検出および再構成:** `farm`内のノードのいずれかが故障した場合、 SafeKitハートビートによって障害を検出し、残りの正常なノード間でトラフィックを即座に再分配します。これにより、他のノードが既に稼働しており負荷を吸収する準備ができているため、サービス全体の RTO をほぼゼロに抑えることができます。
+  * **ネットワーク負荷分散:** SafeKit仮想 IP アドレスを使用して、受信ネットワーク トラフィックを複数のアクティブ サーバーに分散します。これにより<span class="notranslate farm-term" translate="no">farm</span>単一のサーバーが過負荷になることを防ぎ、アプリケーションのパフォーマンスを最大化します。
+  * **自動障害検出および再構成:** <span class="notranslate farm-term" translate="no">farm</span>内のノードのいずれかが故障した場合、 SafeKitハートビートによって障害を検出し、残りの正常なノード間でトラフィックを即座に再分配します。これにより、他のノードが既に稼働しており負荷を吸収する準備ができているため、サービス全体の RTO をほぼゼロに抑えることができます。
 
 
-### SafeKit `Farm`クラスターの RPO はどれくらいですか? {#what-is-rpo-safekit-farm}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスターの RPO はどれくらいですか? {#what-is-rpo-safekit-farm}
 
-**RPO**リカバリ ポイント 目標) **SafeKit一般的に適用** (N/A **と**れます。これは`Farm`クラスター`farm`データ**ノードにローカルに保存されない**アプリケーション向けに特別に設計されているためです。 
+**RPO**リカバリ ポイント 目標) **SafeKit一般的に適用** (N/A **と**れます。これは<span class="notranslate farm-term" translate="no">Farm</span>クラスター<span class="notranslate farm-term" translate="no">farm</span>データ**ノードにローカルに保存されない**アプリケーション向けに特別に設計されているためです。 
 
-以来 `farm` クラスターは、 **ネットワーク負荷分散** データ同期ではなく、クラスタ内のノード間でのデータ複製は行われません。 **事業継続計画** を含む `farm` 建築： 
+以来 <span class="notranslate farm-term" translate="no">farm</span> クラスターは、 **ネットワーク負荷分散** データ同期ではなく、クラスタ内のノード間でのデータ複製は行われません。 **事業継続計画** を含む <span class="notranslate farm-term" translate="no">farm</span> 建築： 
 
-  * **ステートレス操作:** `farm`内のすべてのノードは同一であり、永続的なデータを保持しません。したがって、ノード障害発生時に測定すべき「データ損失」はありません。 
+  * **ステートレス操作:** <span class="notranslate farm-term" translate="no">farm</span>内のすべてのノードは同一であり、永続的なデータを保持しません。したがって、ノード障害発生時に測定すべき「データ損失」はありません。 
   * **外部データストレージ:**アプリケーションがデータの永続性を必要とする場合、通常は別のバックMirror **によって処理されSafeKitその場合 RPO**ゼロになります。 
 
 
-### SafeKit `Farm`クラスターの RTO はどれくらいですか? {#rto-example-safekit-farm-cluster}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスターの RTO はどれくらいですか? {#rto-example-safekit-farm-cluster}
 
-では `farm` 建築、 **RTOはわずか数秒に短縮されます** 全てのノードが通常同時にアクティブであるため、復旧時間はクラスタがトラフィック分散を再構成する速度によって決まります。
+では <span class="notranslate farm-term" translate="no">farm</span> 建築、 **RTOはわずか数秒に短縮されます** 全てのノードが通常同時にアクティブであるため、復旧時間はクラスタがトラフィック分散を再構成する速度によって決まります。
 
   * **ハードウェア障害:** RTO は、監視チャネル全体の障害検出タイムアウト (デフォルトは数秒) と同じです。ハートビートの喪失が検出されると、 **仮想 IP ロードバランシングフィルタ**が自動的に再構成され、トラフィックが残りの正常なノードにリダイレクトされます。
-  * **ソフトウェア障害または計画された再起動:** RTO は、その特定のノードでのアプリケーション停止時間 + アプリケーション再起動時間として計算され、その間、 `farm`内の他のノードはすべての受信トラフィックの処理を継続します。
+  * **ソフトウェア障害または計画された再起動:** RTO は、その特定のノードでのアプリケーション停止時間 + アプリケーション再起動時間として計算され、その間、 <span class="notranslate farm-term" translate="no">farm</span>内の他のノードはすべての受信トラフィックの処理を継続します。
 
 
 この「アクティブ/アクティブ」メカニズムにより、ステートレスサービスの場合、新しいスタンバイノードでサービスを初期化する必要がないため、 **ユーザーにとってビジネス継続性**の影響はほとんど感じられません。
@@ -206,7 +206,7 @@ SafeKitの**はmirrorノード間のデータ複製が同期かつ[であるた�
 アーキテクチャ|ユースケース| RTO（可用性） | RPO（データ損失）  
 ---|---|---|---  
 Mirrorクラスター|リアルタイムレプリケーション|約1分 (ハートビート + 再起動) | 0 (データ損失なし)  
-`Farm`クラスタ|ネットワーク負荷分散|数秒|該当なし (ステートレス)  
+<span class="notranslate farm-term" translate="no">Farm</span>クラスタ|ネットワーク負荷分散|数秒|該当なし (ステートレス)  
   
 ## 高可用性の実践：RPOゼロとRTOほぼゼロのリアルタイムデモ {#safekit-rpo-rto-video-demos}
 
@@ -223,9 +223,9 @@ SafeKit重大な障害にどのように対処するかをご覧ください。�
 
 [無料トライアルはこちら](</ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
-### 動画： SafeKit `Farm`クラスターでほぼゼロの RTO を達成する (5:03) {#demo-farm-cluster-rpo-rto}
+### 動画： SafeKit <span class="notranslate farm-term" translate="no">Farm</span>クラスターでほぼゼロの RTO を達成する (5:03) {#demo-farm-cluster-rpo-rto}
 
-SafeKit Apache Web サイト`farm`を管理し、パフォーマンスのスケーリングと瞬時のフェイルオーバーの両方を実現する方法をご覧ください。
+SafeKit Apache Web サイト<span class="notranslate farm-term" translate="no">farm</span>を管理し、パフォーマンスのスケーリングと瞬時のフェイルオーバーの両方を実現する方法をご覧ください。
 
 #### 章 {#chapters-1}
 

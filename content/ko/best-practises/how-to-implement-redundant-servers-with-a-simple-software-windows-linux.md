@@ -21,13 +21,13 @@ mirror 클러스터에서 SafeKit 소프트웨어는 Windows 또는 Linux 실행
 
 ## 네트워크 로드 밸런싱 및 페일오버를 갖춘 액티브/액티브 이중화 서버를 구현하는 방법은 무엇입니까? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### SafeKit `farm` 클러스터 {#the-safekit-farm-cluster}
+### SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터 {#the-safekit-farm-cluster}
 
 
 ![ 네트워크 로드 밸런싱 및 장애 조치 기능을 갖춘 이중화 서버 ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-`farm` 클러스터에서 SafeKit 소프트웨어는 Windows 또는 Linux 실행하는 이중화 서버(온프레미스 또는 클라우드)에 설치됩니다. 모든 이중화 서버는 활성 상태이며 동일한 핵심 프런트엔드 애플리케이션을 실행합니다. 클라이언트는 [ 가상 IP 주소인 ](</ko/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) 에 연결됩니다. TCP 세션은 모든 이중화 서버 간에 로드 밸런싱됩니다. 서버 중 하나가 다운되면 SafeKit 나머지 활성 서버 간에 TCP 세션의 로드 밸런싱을 자동으로 재구성합니다. 장애가 발생한 서버가 재시작되면 자동으로 활성 이중화 서버로 다시 통합되어 새로운 TCP 세션을 수신합니다.
+<span class="notranslate farm-term" translate="no">farm</span> 클러스터에서 SafeKit 소프트웨어는 Windows 또는 Linux 실행하는 이중화 서버(온프레미스 또는 클라우드)에 설치됩니다. 모든 이중화 서버는 활성 상태이며 동일한 핵심 프런트엔드 애플리케이션을 실행합니다. 클라이언트는 [ 가상 IP 주소인 ](</ko/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) 에 연결됩니다. TCP 세션은 모든 이중화 서버 간에 로드 밸런싱됩니다. 서버 중 하나가 다운되면 SafeKit 나머지 활성 서버 간에 TCP 세션의 로드 밸런싱을 자동으로 재구성합니다. 장애가 발생한 서버가 재시작되면 자동으로 활성 이중화 서버로 다시 통합되어 새로운 TCP 세션을 수신합니다.
 
 
 {{%  insert-safekit-hub-ko  %}}

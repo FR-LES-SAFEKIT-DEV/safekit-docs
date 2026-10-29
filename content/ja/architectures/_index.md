@@ -19,7 +19,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 [詳細情報](</ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### `Farm`クラスター {#farm-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span>クラスター {#farm-cluster}
 
 
 ![ SafeKit farm ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 [詳細情報](</ja/architectures/network-load-balancing-cluster/>)
 
-### `Farm` + mirrorクラスター {#farmmirror-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> + mirrorクラスター {#farmmirror-cluster}
 
 
 ![ SafeKit 、 farm + mirrorクラスター](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 
 ### 高可用性モジュールを使用する {#use-high-availability-modules}
 
-高可用性モジュールは、アプリケーション向けにSafeKitをカスタマイズしたものです。モジュールには2種類あり、リアルタイムデータレプリケーションとフェイルオーバー機能を備えたmirrorモジュールと、ロードバランシングとフェイルオーバー機能を備えた`farm`モジュールがあります。
+高可用性モジュールは、アプリケーション向けにSafeKitをカスタマイズしたものです。モジュールには2種類あり、リアルタイムデータレプリケーションとフェイルオーバー機能を備えたmirrorモジュールと、ロードバランシングとフェイルオーバー機能を備えた<span class="notranslate farm-term" translate="no">farm</span>モジュールがあります。
 
-mirrorモジュールを2台のサーバーにデプロイすると、 mirrorクラスターが作成され、 `farm`モジュールをN台のサーバーにデプロイすると、 `farm`クラスターが作成されます。
+mirrorモジュールを2台のサーバーにデプロイすると、 mirrorクラスターが作成され、 <span class="notranslate farm-term" translate="no">farm</span>モジュールをN台のサーバーにデプロイすると、 <span class="notranslate farm-term" translate="no">farm</span>クラスターが作成されます。
 
-複数のアプリケーションモジュールを同じサーバー上にデプロイできます。そのため、前述のような高度なクラスタリングアーキテクチャ（ `farm` + mirror 、アクティブ/アクティブ、N-1）を実装できます。
+複数のアプリケーションモジュールを同じサーバー上にデプロイできます。そのため、前述のような高度なクラスタリングアーキテクチャ（ <span class="notranslate farm-term" translate="no">farm</span> + mirror 、アクティブ/アクティブ、N-1）を実装できます。
 
 ### アプリケーションモジュールとは何ですか？ {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ mirrorモジュールを2台のサーバーにデプロイすると、 mirrorク
   * サーバーの名前または物理IPアドレス、
   * クラスターの名前または仮想IPアドレス、
   * リアルタイムで複製するファイルディレクトリ（ mirrorモジュール用）、
-  * ネットワーク負荷分散基準（ `farm`モジュール用）
+  * ネットワーク負荷分散基準（ <span class="notranslate farm-term" translate="no">farm</span>モジュール用）
   * ソフトウェアおよびハードウェア障害検出器の構成
 
 

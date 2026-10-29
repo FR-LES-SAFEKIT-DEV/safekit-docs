@@ -27,11 +27,11 @@ Se sei uno sviluppatore di software e cerchi una soluzione di clustering per app
 
 ### Clustering di applicazioni con replica in tempo reale, bilanciamento del carico e failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-Il software SafeKit offre due moduli generici per il clustering delle applicazioni: il modulo mirror e il modulo `farm` .
+Il software SafeKit offre due moduli generici per il clustering delle applicazioni: il modulo mirror e il modulo <span class="notranslate farm-term" translate="no">farm</span> .
 
 Il modulo [ mirror ](/it/product/#safekit-mirror-cluster) implementa la replica dei file in tempo reale e il failover delle applicazioni. È adatto per applicazioni con un database.
 
-Il modulo [ `farm` ](/it/product/#safekit-farm-cluster) implementa il bilanciamento del carico di rete e il failover delle applicazioni. È adatto per applicazioni con servizi web.
+Il modulo [ <span class="notranslate farm-term" translate="no">farm</span> ](/it/product/#safekit-farm-cluster) implementa il bilanciamento del carico di rete e il failover delle applicazioni. È adatto per applicazioni con servizi web.
 
 E si possono combinare i moduli.
 

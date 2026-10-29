@@ -27,11 +27,11 @@ SafeKit与硬件无关，可与任何物理或虚拟服务器配合使用。
 
 ### 应用集群具备实时复制、负载均衡和故障转移功能 {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-SafeKit软件提供两个用于应用程序集群的通用模块： mirror模块和`farm`模块。
+SafeKit软件提供两个用于应用程序集群的通用模块： mirror模块和<span class="notranslate farm-term" translate="no">farm</span>模块。
 
 [ mirror ](/zh-hans/product/#safekit-mirror-cluster)模块实现了实时文件复制和应用程序故障转移功能，适用于带有数据库的应用程序。
 
-[ `farm` ](/zh-hans/product/#safekit-farm-cluster)模块实现了网络负载均衡和应用故障转移功能，适用于具有 Web 服务的应用。
+[ <span class="notranslate farm-term" translate="no">farm</span> ](/zh-hans/product/#safekit-farm-cluster)模块实现了网络负载均衡和应用故障转移功能，适用于具有 Web 服务的应用。
 
 而且你可以将这些模块组合起来使用。
 

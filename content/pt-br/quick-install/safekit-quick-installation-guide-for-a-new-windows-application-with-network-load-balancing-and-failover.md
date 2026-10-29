@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-install
 description: "Saiba como implantar o módulo farm.safe para balanceamento de carga de rede e failover automático no Windows. Este guia mostra como criar um cluster de alta disponibilidade para serviços web e aplicações usando um IP virtual, sem balanceadores de carga de hardware externos nem configuração complexa."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de instalação rápida de alta disponibilidade para Windows, Limitações da alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Windows, Instalação da solução SafeKit / Windows (farm.safe), Configuração passo a passo da solução SafeKit / Windows, Demonstração da solução SafeKit `farm`, 🔍 Hub de navegação de alta disponibilidade do SafeKit"
+topics: "Guia de instalação rápida de alta disponibilidade para Windows, Limitações da alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Windows, Instalação da solução SafeKit / Windows (farm.safe), Configuração passo a passo da solução SafeKit / Windows, Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span>, 🔍 Hub de navegação de alta disponibilidade do SafeKit"
 ---
 
 # Balanceamento de carga de rede e failover no Windows: instale o módulo farm.safe do SafeKit {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -21,7 +21,7 @@ A solução é descrita aqui: **💡[SafeKit: software completo de balanceamento
 
 ### Pré-requisitos {#prerequisites}
 
-  * Você precisa ter a aplicação que deseja colocar em uma `farm` instalada em 2 ou mais nós (máquinas virtuais ou servidores físicos).
+  * Você precisa ter a aplicação que deseja colocar em uma <span class="notranslate farm-term" translate="no">farm</span> instalada em 2 ou mais nós (máquinas virtuais ou servidores físicos).
 
 
 
@@ -36,7 +36,7 @@ Observação: o módulo genérico **farm.safe** que você vai configurar é forn
 {{%  insert-safekit-82-farm-configuration-pt-br app="Windows" mod="farm"  %}}
  
 
-## Demonstração da solução SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-pt-br  %}}

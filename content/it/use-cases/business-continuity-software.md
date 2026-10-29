@@ -25,7 +25,7 @@ Fornire una soluzione di continuità operativa in un'azienda per più applicazio
 
 ### Il software SafeKit : una soluzione semplice per la continuità aziendale {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit offre due semplici moduli `farm` e mirror , per proteggere le applicazioni critiche dai guasti. L'installazione avviene su server standard senza la necessità di competenze IT per la gestione della soluzione. Non sono necessari dischi condivisi, SAN replicate, bilanciatori di carico, edizioni Enterprise di sistemi operativi o database. 
+SafeKit offre due semplici moduli <span class="notranslate farm-term" translate="no">farm</span> e mirror , per proteggere le applicazioni critiche dai guasti. L'installazione avviene su server standard senza la necessità di competenze IT per la gestione della soluzione. Non sono necessari dischi condivisi, SAN replicate, bilanciatori di carico, edizioni Enterprise di sistemi operativi o database. 
 
 
 {{%  insert-safekit-hub-it  %}}

@@ -21,13 +21,13 @@ In een mirror cluster is de SafeKit -software geïnstalleerd op twee fysieke of 
 
 ## Hoe implementeer ik actieve/actieve redundante servers met netwerkbelastingverdeling en failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### De cluster SafeKit `farm` {#the-safekit-farm-cluster}
+### De cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
 
 
 ![ Redundante servers met netwerkbelastingverdeling en failover ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-In een `farm` cluster is de SafeKit -software geïnstalleerd op redundante servers waarop Windows of Linux draait (on-premise of in de cloud). Alle redundante servers zijn actief en draaien dezelfde kritieke front-endapplicatie. Clients maken verbinding met een virtueel IP-adres [ ](</nl/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . TCP-sessies worden verdeeld over alle redundante servers. Als een server uitvalt, herconfigureert SafeKit automatisch de load balancing van TCP-sessies over de resterende actieve servers. Wanneer de uitgevallen server opnieuw wordt opgestart, wordt deze automatisch opnieuw geïntegreerd als een actieve redundante server en ontvangt deze nieuwe TCP-sessies.
+In een <span class="notranslate farm-term" translate="no">farm</span> cluster is de SafeKit -software geïnstalleerd op redundante servers waarop Windows of Linux draait (on-premise of in de cloud). Alle redundante servers zijn actief en draaien dezelfde kritieke front-endapplicatie. Clients maken verbinding met een virtueel IP-adres [ ](</nl/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . TCP-sessies worden verdeeld over alle redundante servers. Als een server uitvalt, herconfigureert SafeKit automatisch de load balancing van TCP-sessies over de resterende actieve servers. Wanneer de uitgevallen server opnieuw wordt opgestart, wordt deze automatisch opnieuw geïntegreerd als een actieve redundante server en ontvangt deze nieuwe TCP-sessies.
 
 
 {{%  insert-safekit-hub-nl  %}}

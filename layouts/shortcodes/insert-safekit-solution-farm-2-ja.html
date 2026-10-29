@@ -4,36 +4,36 @@
 
 
 
-## SafeKit `Farm` クラスター：{{ .Get "app" }} 向けソフトウェアのみの NLB と自動フェイルオーバー {#safekit-farm-cluster-overview}
+## SafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスター：{{ .Get "app" }} 向けソフトウェアのみの NLB と自動フェイルオーバー {#safekit-farm-cluster-overview}
 
-{{ .Get "app" }} 向けの SafeKit `Farm` クラスターは、拡張性の高いアプリケーション環境向けに設計されたソフトウェア定義のネットワーク負荷分散（NLB）ソリューションです。**アプリケーションサーバー上で直接、負荷分散とフェイルオーバーを実行**するため、専用ハードウェアのロードバランサー、プロキシサーバー、複雑なマルチキャスト構成が不要になります。
+{{ .Get "app" }} 向けの SafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターは、拡張性の高いアプリケーション環境向けに設計されたソフトウェア定義のネットワーク負荷分散（NLB）ソリューションです。**アプリケーションサーバー上で直接、負荷分散とフェイルオーバーを実行**するため、専用ハードウェアのロードバランサー、プロキシサーバー、複雑なマルチキャスト構成が不要になります。
 
-### {{ .Get "app" }} 向け SafeKit `Farm` クラスターの利点は何ですか？ {#safekit-farm-cluster-advantages}
+### {{ .Get "app" }} 向け SafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターの利点は何ですか？ {#safekit-farm-cluster-advantages}
 
   * **オールインワンのソフトウェア：** 仮想 IP、負荷分散、自動フェイルオーバー／フェイルバックを単一のソフトウェアパッケージに統合します。
   * **専用ハードウェア不要：** 高価なハードウェアロードバランサーを Windows または Linux 向けの純粋なソフトウェアソリューションに置き換えます。ネットワークエンジニアではなく、システム管理者が管理できます。
   * **詳細な監視と自己修復：** アプリケーションレベルの「チェッカー」で特定のアプリケーションプロセスを監視し、サーバーが稼働中でもプロセスのクラッシュを検出します。必要に応じてサービスの自動再起動またはフェイルオーバーを実行します。
-  * **`Farm` と Mirror のハイブリッド構成：** フロントエンドの負荷分散に使う `Farm` クラスターと、バックエンドのデータを同期レプリケーションする Mirror クラスターを組み合わせられます。
+  * **<span class="notranslate farm-term" translate="no">Farm</span> と Mirror のハイブリッド構成：** フロントエンドの負荷分散に使う <span class="notranslate farm-term" translate="no">Farm</span> クラスターと、バックエンドのデータを同期レプリケーションする Mirror クラスターを組み合わせられます。
   * **OEM 向け高可用性：** ソフトウェアベンダーがネイティブのクラスタリング機能をアプリケーションに組み込み、追加のインフラストラクチャなしで「クラスター対応」のソフトウェア製品を提供できます。
 
 
 ![仮想 IP、自動フェイルオーバー、自動フェイルバック、ネットワーク負荷分散を提供する、{{ .Get "app" }} 向け SafeKit 高可用性クラスターのアーキテクチャ]({{ .Get "img" }} "w:512")
 
-**{{ .Get "app" }} 向け SafeKit `Farm` NLB クラスター**
+**{{ .Get "app" }} 向け SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB クラスター**
 
 <a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }} 向けクラスターのクイックインストールガイド &gt;</a>
 ## 目次 {#toc}
 
   * [SafeKit ソフトウェアで {{ .Get "app" }} のネットワーク負荷分散（NLB）クラスターを簡単に実装する方法](#safekit-farm-ha-cluster)
-  * [SafeKit `farm` クラスターと {{ .Get "app" }} の連携方法](#safekit-farm-cluster)
-  * [比較：{{ .Get "app" }} 向け SafeKit `Farm` クラスターとその他の NLB クラスタリングソリューション](#safekit-farm-ha-comparison)
-  * [ビデオガイド：SafeKit `Farm` NLB クラスターの構成](#videoguide-safekit-farm-cluster)
+  * [SafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスターと {{ .Get "app" }} の連携方法](#safekit-farm-cluster)
+  * [比較：{{ .Get "app" }} 向け SafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターとその他の NLB クラスタリングソリューション](#safekit-farm-ha-comparison)
+  * [ビデオガイド：SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB クラスターの構成](#videoguide-safekit-farm-cluster)
   * [🔍 SafeKit 高可用性ナビゲーションハブ](#hub)
 
 
 ## SafeKit ソフトウェアで {{ .Get "app" }} のネットワーク負荷分散（NLB）クラスターを簡単に実装する方法 {#safekit-farm-ha-cluster}
 
-### {{ .Get "app" }} 向け SafeKit `Farm` NLB ソリューションとは何ですか？ {#safekit-farm-nlb-solution}
+### {{ .Get "app" }} 向け SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB ソリューションとは何ですか？ {#safekit-farm-nlb-solution}
 
 SafeKit は、2 台以上のサーバー間で {{ .Get "app" }} のネットワーク負荷分散と高可用性を実現します。
 
@@ -66,9 +66,9 @@ SafeKit は高価なハードウェアを、次の利点を備えた効率的な
 
 この詳細な監視により、サーバーは稼働しているもののソフトウェアがクラッシュしている「ゾンビ」状態を検出し、**サービスを自動的に再起動**したり、標準的な NLB ソリューションではできないトラフィックのリダイレクトを行ったりできます。
 
-### クラスタリングの知識がなくても {{ .Get "app" }} の `farm` クラスターを設定できますか？ {#farm-cluster-without-clustering-skills}
+### クラスタリングの知識がなくても {{ .Get "app" }} の <span class="notranslate farm-term" translate="no">farm</span> クラスターを設定できますか？ {#farm-cluster-without-clustering-skills}
 
-はい。この記事では、専門的で複雑なネットワーク知識がなくても、[{{ .Get "app" }} の `farm` クラスターをすばやく実装する方法]({{ .Get "guide" }})を説明します。SafeKit の **仮想 IP** で **{{ .Get "app" }}** のネットワーク負荷分散を行うことで、従来の NLB ソリューションよりもはるかに簡単に導入・保守できる、堅牢で拡張性の高いソリューションを利用できます。
+はい。この記事では、専門的で複雑なネットワーク知識がなくても、[{{ .Get "app" }} の <span class="notranslate farm-term" translate="no">farm</span> クラスターをすばやく実装する方法]({{ .Get "guide" }})を説明します。SafeKit の **仮想 IP** で **{{ .Get "app" }}** のネットワーク負荷分散を行うことで、従来の NLB ソリューションよりもはるかに簡単に導入・保守できる、堅牢で拡張性の高いソリューションを利用できます。
 
 ### {{ .Get "app" }} 以外に、SafeKit が保護できるアプリケーションや環境は何ですか？ {#supported-applications-and-environments}
 
@@ -86,9 +86,9 @@ SafeKit は、**Windows と Linux の両方**に対応する多用途の高可�
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-ja app=%q  %%}}" (.Get "app")) }}
 
 
-## 比較：{{ .Get "app" }} 向け SafeKit `Farm` クラスターとその他の NLB クラスタリングソリューション {#safekit-farm-ha-comparison}
+## 比較：{{ .Get "app" }} 向け SafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターとその他の NLB クラスタリングソリューション {#safekit-farm-ha-comparison}
 
-項目 | SafeKit `Farm` クラスター（ソフトウェア） | ハードウェアロードバランサー
+項目 | SafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスター（ソフトウェア） | ハードウェアロードバランサー
 ---|---|---
 アーキテクチャ | カーネルレベルのソフトウェア：Windows と Linux OS にネイティブ統合。 | 独自ハードウェア：専用の物理アプライアンス。
 管理 | システム管理者：シンプルな Web コンソールで管理でき、ネットワークの学位は不要です。 | ネットワークエンジニア：専門知識と CLI 認定資格が必要です。
@@ -97,9 +97,9 @@ SafeKit は、**Windows と Linux の両方**に対応する多用途の高可�
 インフラストラクチャ | プラットフォーム非依存：物理、仮想（VMware、Hyper-V）、またはクラウドのインスタンスで動作します。 | 柔軟性に制限：特定の物理配線とネットワークラックのスペースが必要です。
 コスト（TCO） | CAPEX/OPEX を低減：既存のサーバーリソースを利用し、高価なハードウェア保守も不要です。 | 高額な投資：初期費用に加え、ライセンス料と電気代が継続的に発生します。
 
-**まとめると、** **SafeKit `Farm` クラスター**は、従来のハードウェア依存型ネットワークから、最新の**ソフトウェア定義型高可用性**モデルへの戦略的な進化を示します。負荷分散と自己修復機能をアプリケーションサーバーに直接統合することで、SafeKit は外部の「中間装置」となるハードウェアのコストと複雑さを解消します。
+**まとめると、** **SafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスター**は、従来のハードウェア依存型ネットワークから、最新の**ソフトウェア定義型高可用性**モデルへの戦略的な進化を示します。負荷分散と自己修復機能をアプリケーションサーバーに直接統合することで、SafeKit は外部の「中間装置」となるハードウェアのコストと複雑さを解消します。
 
-## ビデオガイド：SafeKit `Farm` NLB クラスターの構成 {#videoguide-safekit-farm-cluster}
+## ビデオガイド：SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB クラスターの構成 {#videoguide-safekit-farm-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-farm-video-ja  %}}" }}

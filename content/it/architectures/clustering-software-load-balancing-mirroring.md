@@ -21,9 +21,9 @@ topics: "Elevata disponibilità e scalabilità delle applicazioni web e di datab
 
 Ad esempio, con il software di clustering SafeKit , è possibile implementare il bilanciamento del carico IIS e il mirroring Microsoft SQL Server .
 
-A tale scopo, è necessario distribuire un modulo `farm` per IIS e un modulo mirror per il server SQL Microsoft . Ciascun modulo `farm` e mirror è configurato con il proprio indirizzo IP virtuale e i propri script di riavvio.
+A tale scopo, è necessario distribuire un modulo <span class="notranslate farm-term" translate="no">farm</span> per IIS e un modulo mirror per il server SQL Microsoft . Ciascun modulo <span class="notranslate farm-term" translate="no">farm</span> e mirror è configurato con il proprio indirizzo IP virtuale e i propri script di riavvio.
 
-Entrambi i moduli mirror e `farm` possono essere distribuiti su un singolo cluster di due server. IIS , Microsoft e SQL Server verranno eseguiti su questi due server. In alternativa, i due moduli possono essere distribuiti su due cluster con server diversi.
+Entrambi i moduli mirror e <span class="notranslate farm-term" translate="no">farm</span> possono essere distribuiti su un singolo cluster di due server. IIS , Microsoft e SQL Server verranno eseguiti su questi due server. In alternativa, i due moduli possono essere distribuiti su due cluster con server diversi.
 
 Con il software di clustering SafeKit , non c'è alcuna differenza tra un'implementazione sugli stessi server o su server diversi.
 

@@ -4,36 +4,36 @@
 
 
 
-## Le cluster `Farm` SafeKit : équilibrage de charge réseau logiciel et basculement automatique pour {{ .Get "app" }} {#safekit-farm-cluster-overview}
+## Le cluster <span class="notranslate farm-term" translate="no">Farm</span> SafeKit : équilibrage de charge réseau logiciel et basculement automatique pour {{ .Get "app" }} {#safekit-farm-cluster-overview}
 
-Le cluster `Farm` SafeKit pour {{ .Get "app" }} est une solution logicielle d'équilibrage de charge réseau (NLB), conçue pour les environnements applicatifs évolutifs. Il intègre **l'équilibrage de charge et le basculement directement sur les serveurs d'application**, sans nécessiter d'équilibreurs de charge matériels dédiés, de serveurs proxy ni de configurations multicast complexes.
+Le cluster <span class="notranslate farm-term" translate="no">Farm</span> SafeKit pour {{ .Get "app" }} est une solution logicielle d'équilibrage de charge réseau (NLB), conçue pour les environnements applicatifs évolutifs. Il intègre **l'équilibrage de charge et le basculement directement sur les serveurs d'application**, sans nécessiter d'équilibreurs de charge matériels dédiés, de serveurs proxy ni de configurations multicast complexes.
 
-### Quels sont les avantages d'un cluster `Farm` SafeKit pour {{ .Get "app" }} ? {#safekit-farm-cluster-advantages}
+### Quels sont les avantages d'un cluster <span class="notranslate farm-term" translate="no">Farm</span> SafeKit pour {{ .Get "app" }} ? {#safekit-farm-cluster-advantages}
 
   * **Une solution logicielle tout-en-un :** réunit l'adresse IP virtuelle, l'équilibrage de charge ainsi que le basculement et le retour automatique dans un seul logiciel.
   * **Aucun matériel spécifique :** remplace les coûteux équilibreurs de charge matériels par une solution entièrement logicielle pour Windows ou Linux, administrable par les administrateurs système sans expertise réseau spécialisée.
   * **Surveillance approfondie et autorétablissement :** s'appuie sur des vérificateurs au niveau applicatif pour surveiller des processus précis et détecter leurs défaillances, même si le serveur fonctionne encore ; le système déclenche alors le redémarrage du service ou un basculement, si nécessaire.
-  * **Association des fonctions `Farm` et Mirror :** permet de combiner un cluster `Farm` (pour équilibrer la charge des serveurs frontaux) et un cluster Mirror (pour répliquer les données des serveurs principaux de façon synchrone).
+  * **Association des fonctions <span class="notranslate farm-term" translate="no">Farm</span> et Mirror :** permet de combiner un cluster <span class="notranslate farm-term" translate="no">Farm</span> (pour équilibrer la charge des serveurs frontaux) et un cluster Mirror (pour répliquer les données des serveurs principaux de façon synchrone).
   * **Haute disponibilité OEM :** permet aux éditeurs de logiciels d'intégrer le clustering natif à leurs applications et de proposer un produit prêt pour le clustering, entièrement logiciel et sans infrastructure supplémentaire.
 
 
 ![Architecture d'un cluster SafeKit à haute disponibilité pour {{ .Get "app" }}, avec adresse IP virtuelle, basculement et retour automatiques et équilibrage de charge réseau]({{ .Get "img" }} "w:512")
 
-**Cluster NLB `Farm` SafeKit pour {{ .Get "app" }}**
+**Cluster NLB <span class="notranslate farm-term" translate="no">Farm</span> SafeKit pour {{ .Get "app" }}**
 
 <a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Guide d'installation rapide du cluster pour {{ .Get "app" }} &gt;</a>
 ## Table des matières {#toc}
 
   * [Comment le logiciel SafeKit met-il simplement en œuvre un cluster NLB pour {{ .Get "app" }} ?](#safekit-farm-ha-cluster)
-  * [Comment fonctionne le cluster `farm` SafeKit avec {{ .Get "app" }} ?](#safekit-farm-cluster)
-  * [Comparaison du cluster `Farm` SafeKit pour {{ .Get "app" }} avec les autres solutions de clustering NLB](#safekit-farm-ha-comparison)
-  * [Guide vidéo : configurer un cluster NLB `Farm` SafeKit](#videoguide-safekit-farm-cluster)
+  * [Comment fonctionne le cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit avec {{ .Get "app" }} ?](#safekit-farm-cluster)
+  * [Comparaison du cluster <span class="notranslate farm-term" translate="no">Farm</span> SafeKit pour {{ .Get "app" }} avec les autres solutions de clustering NLB](#safekit-farm-ha-comparison)
+  * [Guide vidéo : configurer un cluster NLB <span class="notranslate farm-term" translate="no">Farm</span> SafeKit](#videoguide-safekit-farm-cluster)
   * [🔍 Centre de ressources SafeKit sur la haute disponibilité](#hub)
 
 
 ## Comment le logiciel SafeKit met-il simplement en œuvre un cluster d'équilibrage de charge réseau (NLB) pour {{ .Get "app" }} ? {#safekit-farm-ha-cluster}
 
-### Quelle est la solution NLB `Farm` SafeKit pour {{ .Get "app" }} ? {#safekit-farm-nlb-solution}
+### Quelle est la solution NLB <span class="notranslate farm-term" translate="no">Farm</span> SafeKit pour {{ .Get "app" }} ? {#safekit-farm-nlb-solution}
 
 SafeKit assure l'équilibrage de charge réseau et la haute disponibilité de {{ .Get "app" }} sur deux serveurs ou plus.
 
@@ -66,9 +66,9 @@ Contrairement aux équipements NLB classiques, qui se limitent à de simples **t
 
 Cette surveillance approfondie détecte les situations de blocage où le serveur fonctionne encore, mais où le logiciel a planté. Le système peut alors **redémarrer automatiquement le service** ou rediriger le trafic, ce que les solutions NLB classiques ne permettent pas.
 
-### Peut-on configurer un cluster `farm` pour {{ .Get "app" }} sans expertise en clustering ? {#farm-cluster-without-clustering-skills}
+### Peut-on configurer un cluster <span class="notranslate farm-term" translate="no">farm</span> pour {{ .Get "app" }} sans expertise en clustering ? {#farm-cluster-without-clustering-skills}
 
-Oui. Cet article explique comment [mettre rapidement en place un cluster `farm` pour {{ .Get "app" }}]({{ .Get "guide" }}) sans expertise réseau spécialisée. En s'appuyant sur l'**adresse IP virtuelle** de SafeKit pour équilibrer la charge de **{{ .Get "app" }}**, vous obtenez une solution robuste et évolutive, plus simple à déployer et à administrer que les solutions NLB traditionnelles.
+Oui. Cet article explique comment [mettre rapidement en place un cluster <span class="notranslate farm-term" translate="no">farm</span> pour {{ .Get "app" }}]({{ .Get "guide" }}) sans expertise réseau spécialisée. En s'appuyant sur l'**adresse IP virtuelle** de SafeKit pour équilibrer la charge de **{{ .Get "app" }}**, vous obtenez une solution robuste et évolutive, plus simple à déployer et à administrer que les solutions NLB traditionnelles.
 
 ### Au-delà de {{ .Get "app" }}, quelles applications et quels environnements SafeKit peut-il protéger ? {#supported-applications-and-environments}
 
@@ -86,9 +86,9 @@ SafeKit est une solution de haute disponibilité polyvalente **pour Windows et L
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-fr app=%q  %%}}" (.Get "app")) }}
 
 
-## Comparaison du cluster `Farm` SafeKit pour {{ .Get "app" }} avec les autres solutions de clustering NLB {#safekit-farm-ha-comparison}
+## Comparaison du cluster <span class="notranslate farm-term" translate="no">Farm</span> SafeKit pour {{ .Get "app" }} avec les autres solutions de clustering NLB {#safekit-farm-ha-comparison}
 
-Fonctionnalité | Cluster `Farm` SafeKit (logiciel) | Équilibreurs de charge matériels
+Fonctionnalité | Cluster <span class="notranslate farm-term" translate="no">Farm</span> SafeKit (logiciel) | Équilibreurs de charge matériels
 ---|---|---
 Architecture | Logiciel au niveau du noyau : intégration native à Windows et Linux. | Matériel propriétaire : équipements physiques dédiés.
 Administration | Administrateurs système : gestion depuis une console Web simple, sans expertise réseau spécialisée. | Ingénieurs réseau : compétences spécialisées et certifications en ligne de commande requises.
@@ -97,9 +97,9 @@ Autorétablissement | Redémarrage intelligent intégré : relance automatiqueme
 Infrastructure | Indépendant de l'infrastructure : fonctionne sur des serveurs physiques, des machines virtuelles (VMware, Hyper-V) ou des instances cloud. | Contraignante : nécessite un câblage physique spécifique et de l'espace en baie réseau.
 Coût total de possession | Faibles dépenses d'investissement et d'exploitation (CAPEX/OPEX) : utilise les ressources des serveurs existants, sans maintenance matérielle coûteuse. | Investissement élevé : coûts initiaux importants, licences et dépenses d'énergie récurrentes.
 
-**En résumé**, le **cluster `Farm` SafeKit** marque une évolution stratégique : les réseaux traditionnels fortement dépendants du matériel cèdent la place à un modèle moderne de **haute disponibilité définie par logiciel**. En intégrant l'équilibrage de charge et l'autorétablissement directement aux serveurs d'application, SafeKit élimine les coûts et la complexité des équipements intermédiaires externes.
+**En résumé**, le **cluster <span class="notranslate farm-term" translate="no">Farm</span> SafeKit** marque une évolution stratégique : les réseaux traditionnels fortement dépendants du matériel cèdent la place à un modèle moderne de **haute disponibilité définie par logiciel**. En intégrant l'équilibrage de charge et l'autorétablissement directement aux serveurs d'application, SafeKit élimine les coûts et la complexité des équipements intermédiaires externes.
 
-## Guide vidéo : configurer un cluster NLB `Farm` SafeKit {#videoguide-safekit-farm-cluster}
+## Guide vidéo : configurer un cluster NLB <span class="notranslate farm-term" translate="no">Farm</span> SafeKit {#videoguide-safekit-farm-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-farm-video-fr  %}}" }}

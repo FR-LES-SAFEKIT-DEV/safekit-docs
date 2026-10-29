@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Verbeter de load balancing van AWS -netwerk met de intelligente applicatiebewaking van SafeKit . De farm.safe module biedt een speciale statuscontrole voor de load balancer AWS , waardoor naadloze HA op applicatieniveau mogelijk is. Realiseer automatisch zelfherstel en failover voor bedrijfskritische applicaties."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor High Availability AWS , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / AWS -oplossing, Installatie van de SafeKit / AWS -oplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit / AWS -oplossing, Demonstratie van de SafeKit `farm` -oplossing, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Snelstartgids voor High Availability AWS , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / AWS -oplossing, Installatie van de SafeKit / AWS -oplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit / AWS -oplossing, Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> -oplossing, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # AWS Netwerktaakverdeling en failover: Installeer de SafeKit farm.safe module {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -15,7 +15,7 @@ topics: "Snelstartgids voor High Availability AWS , Beperkingen van High Availab
 
 ## Overzicht van de SafeKit / AWS -oplossing {#overview-of-the-safekit--aws-solution}
 
-De oplossing wordt hier beschreven: **💡 [ SafeKit : Amazon AWS Load Balancing & Application High Availability `Farm` Cluster ](</nl/solutions/aws-load-balancing-cluster-failover/>)** .
+De oplossing wordt hier beschreven: **💡 [ SafeKit : Amazon AWS Load Balancing & Application High Availability <span class="notranslate farm-term" translate="no">Farm</span> Cluster ](</nl/solutions/aws-load-balancing-cluster-failover/>)** .
 
 ## Installatie van de SafeKit / AWS oplossing op Windows en Linux ( farm.safe ) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
@@ -25,7 +25,7 @@ De load balancer moet geconfigureerd worden met een virtueel IP-adres.
 De load balancer moet zo geconfigureerd zijn dat deze periodiek statusupdates naar de nodes stuurt.  
 Daarvoor biedt SafeKit een gezondheidscontrole die binnen de knooppunten wordt uitgevoerd en die
 
-  * Geeft OK terug wanneer de status van de `farm` -module UP (groen) is.
+  * Geeft OK terug wanneer de status van de <span class="notranslate farm-term" translate="no">farm</span> -module UP (groen) is.
   * retourneert 'NIET GEVONDEN' in alle andere staten.
 
 
@@ -33,7 +33,7 @@ U moet de Amazon AWS load balancer als volgt configureren:
 
   * HTTP-protocol
   * poort 9010, de poort van de SafeKit -webserver
-  * URL /var/modules/farm/ready.txt (als `farm` de modulenaam is die u later gaat implementeren)
+  * URL /var/modules/farm/ready.txt (als <span class="notranslate farm-term" translate="no">farm</span> de modulenaam is die u later gaat implementeren)
 
 
 Voor meer informatie, zie [ de configuratie van de Amazon load balancer AWS ](<https://aws.amazon.com/elasticloadbalancing/>) .
@@ -46,7 +46,7 @@ Voor meer informatie, zie [ de configuratie van de Amazon load balancer AWS ](<h
 De netwerkbeveiliging moet zodanig geconfigureerd zijn dat communicatie voor de volgende protocollen en poorten mogelijk is:
 
   * UDP-poort 4800 voor de safeadmin-service (tussen SafeKit -nodes)
-  * UDP - 4803 voor de heartbeat binnen de `farm` -module (tussen SafeKit -nodes)
+  * UDP - 4803 voor de heartbeat binnen de <span class="notranslate farm-term" translate="no">farm</span> -module (tussen SafeKit -nodes)
   * TCP-poort 9010 voor de statuscontrole van de loadbalancer en voor de SafeKit webconsole die in de http-modus draait.
   * TCP – 9001 om de https-modus voor de console te configureren
   * TCP-poort 9453 voor de SafeKit -webconsole die in HTTPS-modus draait.
@@ -66,7 +66,7 @@ Let op: de generieke **farm.safe** -module die u gaat configureren, is in het pa
 {{%  insert-safekit-82-farm-configuration-nl app="" mod="farm"  %}}
  
 
-## Demonstratie van de SafeKit `farm` oplossing {#demonstration-of-the-safekit-farm-solution}
+## Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> oplossing {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-nl  %}}

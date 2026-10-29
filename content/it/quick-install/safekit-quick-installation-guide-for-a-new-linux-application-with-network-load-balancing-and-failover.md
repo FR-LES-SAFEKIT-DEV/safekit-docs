@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installati
 description: "Scopri come distribuire il modulo farm.safe per il bilanciamento del carico di rete e il failover automatico su Linux. Questa guida mostra come creare un cluster ad alta disponibilità per servizi web e applicazioni tramite un IP virtuale, senza bilanciatori di carico hardware esterni né configurazioni complesse."
 category: "quick-install"
 lang: "it"
-topics: "Guida all'installazione rapida dell'alta disponibilità per Linux, Limitazioni dell'alta disponibilità di SafeKit, Panoramica della soluzione SafeKit / Linux, Installazione della soluzione SafeKit / Linux (farm.safe), Configurazione passo passo della soluzione SafeKit / Linux, Dimostrazione della soluzione SafeKit `farm`, 🔍 Hub di navigazione SafeKit per l'alta disponibilità"
+topics: "Guida all'installazione rapida dell'alta disponibilità per Linux, Limitazioni dell'alta disponibilità di SafeKit, Panoramica della soluzione SafeKit / Linux, Installazione della soluzione SafeKit / Linux (farm.safe), Configurazione passo passo della soluzione SafeKit / Linux, Dimostrazione della soluzione SafeKit <span class="notranslate farm-term" translate="no">farm</span>, 🔍 Hub di navigazione SafeKit per l'alta disponibilità"
 ---
 
 # Bilanciamento del carico di rete e failover su Linux: installare il modulo SafeKit farm.safe {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -21,7 +21,7 @@ La soluzione è descritta qui: **💡[SafeKit: software all-in-one per bilanciam
 
 ### Prerequisiti {#prerequisites}
 
-  * È necessario che l'applicazione da inserire in una `farm` sia installata su 2 o più nodi (macchine virtuali o server fisici).
+  * È necessario che l'applicazione da inserire in una <span class="notranslate farm-term" translate="no">farm</span> sia installata su 2 o più nodi (macchine virtuali o server fisici).
 
 
 
@@ -36,7 +36,7 @@ Nota: il modulo generico **farm.safe** che configurerete è fornito all'interno 
 {{%  insert-safekit-82-farm-configuration-it app="Linux" mod="farm"  %}}
  
 
-## Dimostrazione della soluzione SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## Dimostrazione della soluzione SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-it  %}}

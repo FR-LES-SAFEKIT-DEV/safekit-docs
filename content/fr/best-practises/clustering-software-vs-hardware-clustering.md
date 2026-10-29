@@ -27,7 +27,7 @@ Il existe deux types de solutions de clustering matériel : le clustering maté
 
 Le clustering matériel pour le backend (comme avec le cluster de basculement [ Microsoft ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) ) est basé sur 2 serveurs partageant un disque avec un basculement automatique de l'application en cas de panne.
 
-Le clustering matériel pour le frontend repose sur des équilibreurs de charge (comme le F5 BIG-IP [ ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) placés devant un ensemble de serveurs `farm` (deux serveurs ou plus). Ces équilibreurs de charge répartissent les sessions TCP entre les serveurs disponibles du farm .
+Le clustering matériel pour le frontend repose sur des équilibreurs de charge (comme le F5 BIG-IP [ ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) placés devant un ensemble de serveurs <span class="notranslate farm-term" translate="no">farm</span> (deux serveurs ou plus). Ces équilibreurs de charge répartissent les sessions TCP entre les serveurs disponibles du farm .
 
 ### Qu'est-ce que le clustering logiciel ? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ Comme pour le clustering matériel, il existe deux types de solutions de cluster
 
 Le clustering logiciel pour le backend (comme avec [ SafeKit ](</>) ) est basé sur 2 serveurs répliquant les données en temps réel avec un basculement automatique de l'application en cas de panne.
 
-Le clustering logiciel pour le frontend (comme avec SafeKit ) repose sur l'équilibrage de charge au sein d'un ensemble de serveurs `farm` (2 serveurs ou plus). Cet équilibrage est effectué par logiciel et répartit les sessions TCP entre les serveurs disponibles de l'ensemble farm .
+Le clustering logiciel pour le frontend (comme avec SafeKit ) repose sur l'équilibrage de charge au sein d'un ensemble de serveurs <span class="notranslate farm-term" translate="no">farm</span> (2 serveurs ou plus). Cet équilibrage est effectué par logiciel et répartit les sessions TCP entre les serveurs disponibles de l'ensemble farm .
 
 ## Clustering logiciel vs clustering matériel : avantages et inconvénients {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

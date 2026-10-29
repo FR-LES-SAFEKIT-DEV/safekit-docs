@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Leer hoe u de farm.safe -module implementeert op Windows en Linux voor NGINX-netwerkbelastingverdeling en automatische failover. Deze handleiding laat u zien hoe u een zeer beschikbaar cluster voor webservices en applicaties bouwt met behulp van een virtueel IP-adres, zonder dat u externe hardwarematige belastingverdelers of complexe configuratie nodig hebt."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor High Availability met NGINX, Beperkingen van High Availability SafeKit , Overzicht van de SafeKit /NGINX-oplossing, Installatie van de SafeKit /NGINX-oplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit /NGINX-oplossing, Demonstratie van de SafeKit `farm` -oplossing, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Snelstartgids voor High Availability met NGINX, Beperkingen van High Availability SafeKit , Overzicht van de SafeKit /NGINX-oplossing, Installatie van de SafeKit /NGINX-oplossing op Windows en Linux ( farm.safe ), Stapsgewijze configuratie van de SafeKit /NGINX-oplossing, Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> -oplossing, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # NGINX netwerkbelastingverdeling en failover: installeer de SafeKit farm.safe module {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -38,7 +38,7 @@ Let op: de generieke **farm.safe** -module die u gaat configureren, is in het pa
 {{%  insert-safekit-82-farm-configuration-nl app="NGINX" mod="farm"  %}}
  
 
-## Demonstratie van de SafeKit `farm` oplossing {#demonstration-of-the-safekit-farm-solution}
+## Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> oplossing {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-nl  %}}

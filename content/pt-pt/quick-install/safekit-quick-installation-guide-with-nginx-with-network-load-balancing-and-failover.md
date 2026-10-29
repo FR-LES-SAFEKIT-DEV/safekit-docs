@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-install
 description: "Aprenda como implantar o módulo farm.safe em Windows e Linux para balanceamento de carga de rede e failover automático do NGINX. Este guia mostra como criar um cluster de alta disponibilidade para serviços e aplicações web usando um IP virtual, sem a necessidade de balanceadores de carga de hardware externos ou configurações complexas."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para NGINX, Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / NGINX, Instalação da solução SafeKit / NGINX no Windows e Linux ( farm.safe ), Configuração passo a passo da solução SafeKit / NGINX, Demonstração da solução SafeKit `farm` , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para NGINX, Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / NGINX, Instalação da solução SafeKit / NGINX no Windows e Linux ( farm.safe ), Configuração passo a passo da solução SafeKit / NGINX, Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
 ---
 
 # Balanceamento de carga e failover de rede NGINX: Instale o módulo SafeKit farm.safe {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -38,7 +38,7 @@ Observação: o módulo genérico **farm.safe** que você irá configurar está 
 {{%  insert-safekit-82-farm-configuration-pt-pt app="NGINX" mod="farm"  %}}
  
 
-## Demonstração da solução SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-pt-pt  %}}

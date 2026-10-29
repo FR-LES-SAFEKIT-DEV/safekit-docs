@@ -17,7 +17,7 @@ topics: "اكتشف SafeKit في Microsoft Azure ، واكتشف SafeKit في Go
 
 [ سحابة عامة Mirror > ](</ar/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ سحابة عامة `Farm` > ](</ar/solutions/cloud-load-balancing-cluster-failover/>)
+[ سحابة عامة <span class="notranslate farm-term" translate="no">Farm</span> > ](</ar/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-ar  %}}

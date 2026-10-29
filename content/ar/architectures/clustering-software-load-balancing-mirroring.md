@@ -21,9 +21,9 @@ topics: "توفر برامج التجميع SafeKit إمكانية عالية ل
 
 على سبيل المثال، باستخدام برنامج التجميع SafeKit ، يمكنك تنفيذ موازنة التحميل IIS والنسخ المتطابق Microsoft SQL Server .
 
-لذلك، عليك تثبيت وحدة `farm` لخادم SQL IIS ووحدة mirror لخادم SQL Microsoft . يتم تكوين كل وحدة من وحدات `farm` و mirror بعنوان IP افتراضي خاص بها ونصوص إعادة تشغيل خاصة بها.
+لذلك، عليك تثبيت وحدة <span class="notranslate farm-term" translate="no">farm</span> لخادم SQL IIS ووحدة mirror لخادم SQL Microsoft . يتم تكوين كل وحدة من وحدات <span class="notranslate farm-term" translate="no">farm</span> و mirror بعنوان IP افتراضي خاص بها ونصوص إعادة تشغيل خاصة بها.
 
-يمكن نشر كل من وحدتي mirror و `farm` على مجموعة واحدة من خادمين. ستعمل وحدات IIS و Microsoft SQL Server على هذين الخادمين. أو يمكن نشر الوحدتين على مجموعتين مختلفتين من الخوادم.
+يمكن نشر كل من وحدتي mirror و <span class="notranslate farm-term" translate="no">farm</span> على مجموعة واحدة من خادمين. ستعمل وحدات IIS و Microsoft SQL Server على هذين الخادمين. أو يمكن نشر الوحدتين على مجموعتين مختلفتين من الخوادم.
 
 باستخدام برنامج التجميع SafeKit ، لا يوجد فرق بين النشر على نفس الخوادم أو على خوادم مختلفة.
 

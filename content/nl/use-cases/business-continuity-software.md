@@ -25,7 +25,7 @@ Het implementeren van een bedrijfscontinuïteitsoplossing voor meerdere applicat
 
 ### De SafeKit -software: een eenvoudige oplossing voor bedrijfscontinuïteit {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit biedt twee eenvoudige modules `farm` en mirror , om uw kritieke applicaties te beschermen tegen storingen. De implementatie vindt plaats op standaardservers zonder dat IT-kennis nodig is om de oplossing te beheren. Er is geen behoefte aan gedeelde schijven, gerepliceerde SAN, load balancers, Enterprise-edities van besturingssystemen of databases. 
+SafeKit biedt twee eenvoudige modules <span class="notranslate farm-term" translate="no">farm</span> en mirror , om uw kritieke applicaties te beschermen tegen storingen. De implementatie vindt plaats op standaardservers zonder dat IT-kennis nodig is om de oplossing te beheren. Er is geen behoefte aan gedeelde schijven, gerepliceerde SAN, load balancers, Enterprise-edities van besturingssystemen of databases. 
 
 
 {{%  insert-safekit-hub-nl  %}}

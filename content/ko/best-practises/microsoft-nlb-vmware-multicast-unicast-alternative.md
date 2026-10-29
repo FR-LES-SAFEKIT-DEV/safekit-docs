@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/microsoft-nlb-vmware-mu
 description: "VMware 환경에서 Microsoft NLB 멀티캐스트 또는 유니캐스트에 문제가 있으신가요? SafeKit SAN이 필요 없는 farm 클러스터를 간단한 대안으로 제시합니다. 정적 ARP 항목, MAC 스푸핑 또는 특수 네트워크 구성 없이 Windows 및 Linux 에서 자동 로드 밸런싱 및 페일오버를 구현하세요."
 category: "best-practises"
 lang: "ko"
-topics: "Microsoft NLB 멀티캐스트 모드, Microsoft NLB 유니캐스트 모드, SafeKit 사용한 대안, `farm` 모드에서 SafeKit 클러스터는 Windows 와 어떻게 연동되나요?, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "Microsoft NLB 멀티캐스트 모드, Microsoft NLB 유니캐스트 모드, SafeKit 사용한 대안, <span class="notranslate farm-term" translate="no">farm</span> 모드에서 SafeKit 클러스터는 Windows 와 어떻게 연동되나요?, 🔍 SafeKit 고가용성 내비게이션 허브"
 ---
 
 # Microsoft NLB VMware 대안: 멀티캐스트 및 유니캐스트 문제 해결 {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

@@ -27,7 +27,7 @@ Es gibt zwei Arten von Hardware-Clustering-Lösungen: Hardware-Clustering für B
 
 Hardware-Clustering für Backend (wie beim Failover-Cluster [ Microsoft ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) ) basiert darauf, dass sich 2 Server eine Festplatte teilen, wobei im Fehlerfall ein automatisches Anwendungs-Failover erfolgt.
 
-Das Hardware-Clustering für das Frontend basiert auf Load Balancern (wie beim F5 BIG-IP [ ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) vor einem Serververbund ( `farm` , mindestens zwei Server). Die Load Balancer verteilen die TCP-Sitzungen auf die verfügbaren Server im Verbund farm ).
+Das Hardware-Clustering für das Frontend basiert auf Load Balancern (wie beim F5 BIG-IP [ ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) vor einem Serververbund ( <span class="notranslate farm-term" translate="no">farm</span> , mindestens zwei Server). Die Load Balancer verteilen die TCP-Sitzungen auf die verfügbaren Server im Verbund farm ).
 
 ### Was ist Software-Clustering? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ Wie beim Hardware-Clustering gibt es auch beim Software-Clustering zwei Arten vo
 
 Die Softwareclusterung für das Backend (wie bei [ SafeKit ](</>) ) basiert auf 2 Servern, die Daten in Echtzeit replizieren, mit einem automatischen Anwendungs-Failover im Fehlerfall.
 
-Die Software-Clusterung für das Frontend (wie bei SafeKit ) basiert auf dem Lastausgleich in einem Servercluster `farm` (mindestens zwei Server). Der Lastausgleich erfolgt softwareseitig und verteilt die TCP-Sitzungen auf die verfügbaren Server im Cluster farm .
+Die Software-Clusterung für das Frontend (wie bei SafeKit ) basiert auf dem Lastausgleich in einem Servercluster <span class="notranslate farm-term" translate="no">farm</span> (mindestens zwei Server). Der Lastausgleich erfolgt softwareseitig und verteilt die TCP-Sitzungen auf die verfügbaren Server im Cluster farm .
 
 ## Software-Clustering vs. Hardware-Clustering: Vor- und Nachteile {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

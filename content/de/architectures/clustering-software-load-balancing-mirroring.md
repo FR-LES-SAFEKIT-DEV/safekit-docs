@@ -21,9 +21,9 @@ topics: "Hohe Verfügbarkeit und Skalierbarkeit kritischer Web- und Datenbankanw
 
 Mit der Clustering-Software SafeKit können Sie beispielsweise den Lastausgleich IIS und die Spiegelung Microsoft SQL Server implementieren.
 
-Dazu müssen Sie ein `farm` -Modul für den SQL-Server IIS und ein mirror -Modul für den SQL-Server Microsoft bereitstellen. Jedes `farm` und mirror -Modul ist mit einer eigenen virtuellen IP-Adresse und eigenen Neustartskripten konfiguriert.
+Dazu müssen Sie ein <span class="notranslate farm-term" translate="no">farm</span> -Modul für den SQL-Server IIS und ein mirror -Modul für den SQL-Server Microsoft bereitstellen. Jedes <span class="notranslate farm-term" translate="no">farm</span> und mirror -Modul ist mit einer eigenen virtuellen IP-Adresse und eigenen Neustartskripten konfiguriert.
 
-Die Module mirror und `farm` können beide auf einem Cluster aus zwei Servern bereitgestellt werden. IIS , Microsoft und SQL Server laufen dann auf diesen beiden Servern. Alternativ können die beiden Module auch auf zwei Clustern mit unterschiedlichen Servern bereitgestellt werden.
+Die Module mirror und <span class="notranslate farm-term" translate="no">farm</span> können beide auf einem Cluster aus zwei Servern bereitgestellt werden. IIS , Microsoft und SQL Server laufen dann auf diesen beiden Servern. Alternativ können die beiden Module auch auf zwei Clustern mit unterschiedlichen Servern bereitgestellt werden.
 
 Bei der Clustering-Software SafeKit gibt es keinen Unterschied zwischen einer Bereitstellung auf denselben Servern oder auf verschiedenen Servern.
 

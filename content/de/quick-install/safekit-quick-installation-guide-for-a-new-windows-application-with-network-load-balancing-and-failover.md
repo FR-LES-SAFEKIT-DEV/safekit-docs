@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Erfahren Sie, wie Sie das Modul farm.safe für Netzwerklastausgleich und automatisches Failover unter Windows bereitstellen. Diese Anleitung zeigt, wie Sie mit einer virtuellen IP-Adresse einen hochverfügbaren Cluster für Webdienste und Anwendungen aufbauen – ohne externe Hardware-Load-Balancer und ohne komplexe Konfiguration."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit-/Windows-Lösung, Installation der SafeKit-/Windows-Lösung (farm.safe), Schrittweise Konfiguration der SafeKit-/Windows-Lösung, Demonstration der SafeKit-`farm`-Lösung, 🔍 SafeKit-Navigationszentrale für Hochverfügbarkeit"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit-/Windows-Lösung, Installation der SafeKit-/Windows-Lösung (farm.safe), Schrittweise Konfiguration der SafeKit-/Windows-Lösung, Demonstration der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Lösung, 🔍 SafeKit-Navigationszentrale für Hochverfügbarkeit"
 ---
 
 # Windows-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -21,7 +21,7 @@ Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One-Windows-Lastausgle
 
 ### Voraussetzungen {#prerequisites}
 
-  * Die Anwendung, die Sie in einer `farm` betreiben möchten, muss auf mindestens 2 Knoten (virtuelle Maschinen oder physische Server) installiert sein.
+  * Die Anwendung, die Sie in einer <span class="notranslate farm-term" translate="no">farm</span> betreiben möchten, muss auf mindestens 2 Knoten (virtuelle Maschinen oder physische Server) installiert sein.
 
 
 
@@ -36,7 +36,7 @@ Hinweis: Das generische Modul **farm.safe**, das Sie konfigurieren werden, ist i
 {{%  insert-safekit-82-farm-configuration-de app="Windows" mod="farm"  %}}
  
 
-## Demonstration der SafeKit-`farm`-Lösung {#demonstration-of-the-safekit-farm-solution}
+## Demonstration der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Lösung {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-de  %}}

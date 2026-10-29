@@ -25,7 +25,7 @@ Windows 또는 Linux 서버에서 실행되는 여러 애플리케이션에 대�
 
 ### SafeKit 소프트웨어: 비즈니스 연속성을 위한 간단한 솔루션 {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit 핵심 애플리케이션을 장애로부터 보호하는 두 가지 간단한 모듈 `farm` 및 mirror 을 제공합니다. 이 솔루션은 표준 서버에 배포되므로 IT 전문가가 아니어도 관리할 수 있습니다. 공유 디스크, 복제된 SAN, 로드 밸런서, 엔터프라이즈급 운영 체제 또는 데이터베이스가 필요하지 않습니다. 
+SafeKit 핵심 애플리케이션을 장애로부터 보호하는 두 가지 간단한 모듈 <span class="notranslate farm-term" translate="no">farm</span> 및 mirror 을 제공합니다. 이 솔루션은 표준 서버에 배포되므로 IT 전문가가 아니어도 관리할 수 있습니다. 공유 디스크, 복제된 SAN, 로드 밸런서, 엔터프라이즈급 운영 체제 또는 데이터베이스가 필요하지 않습니다. 
 
 
 {{%  insert-safekit-hub-ko  %}}

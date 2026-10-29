@@ -21,13 +21,13 @@ Em um cluster mirror , o software SafeKit é instalado em dois servidores físic
 
 ## Como implementar servidores redundantes ativos/ativos com balanceamento de carga de rede e failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### O cluster SafeKit `farm` {#the-safekit-farm-cluster}
+### O cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
 
 
 Servidores redundantes ![ com balanceamento de carga de rede e failover ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-Em um cluster `farm` , o software SafeKit é instalado em servidores redundantes que executam Windows ou Linux (localmente ou na nuvem). Todos os servidores redundantes estão ativos e executam a mesma aplicação crítica de front-end. Os clientes se conectam a um endereço IP virtual [ . As sessões TCP são balanceadas entre todos os servidores redundantes. Se um servidor falhar, ](</pt-br/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) SafeKit reconfigura automaticamente o balanceamento de carga das sessões TCP entre os servidores ativos restantes. Quando o servidor com falha é reiniciado, ele é reintegrado automaticamente como um servidor redundante ativo e recebe novas sessões TCP.
+Em um cluster <span class="notranslate farm-term" translate="no">farm</span> , o software SafeKit é instalado em servidores redundantes que executam Windows ou Linux (localmente ou na nuvem). Todos os servidores redundantes estão ativos e executam a mesma aplicação crítica de front-end. Os clientes se conectam a um endereço IP virtual [ . As sessões TCP são balanceadas entre todos os servidores redundantes. Se um servidor falhar, ](</pt-br/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) SafeKit reconfigura automaticamente o balanceamento de carga das sessões TCP entre os servidores ativos restantes. Quando o servidor com falha é reiniciado, ele é reintegrado automaticamente como um servidor redundante ativo e recebe novas sessões TCP.
 
 
 {{%  insert-safekit-hub-pt-br  %}}

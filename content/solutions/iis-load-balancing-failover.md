@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/iis-load-balancing-failover/"
 description: "SafeKit provides a powerful, software-only IIS load balancing and high availability solution. Replace complex NLB hardware with SafeKit’s integrated virtual IP, application monitoring, and automatic failover. Easily deploy an IIS cluster on standard Windows servers today."
 category: "solutions"
 lang: "en"
-topics: "The SafeKit `Farm` Cluster: Software-Only NLB and Automatic Failover for IIS, Table of Contents, How the SafeKit software simply implements a IIS Network Load Balancing (NLB) cluster?, How the SafeKit cluster in `farm` mode works with IIS?, Comparison: SafeKit `Farm` Cluster for IIS vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit `Farm` NLB Cluster, 🔍 SafeKit High Availability Navigation Hub"
+topics: "The SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster: Software-Only NLB and Automatic Failover for IIS, Table of Contents, How the SafeKit software simply implements a IIS Network Load Balancing (NLB) cluster?, How the SafeKit cluster in <span class="notranslate farm-term" translate="no">farm</span> mode works with IIS?, Comparison: SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster for IIS vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB Cluster, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit: All-in-One IIS Load Balancing & High Availability Software {#safekit-all-in-one-iis-load-balancing--high-availability-software}

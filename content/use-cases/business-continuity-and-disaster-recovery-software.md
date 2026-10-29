@@ -21,7 +21,7 @@ There is no configuration difference when deploying a SafeKit cluster in the sam
 
 ### How to implement a simple high availability solution between two remote computer rooms? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-SafeKit mirror and `farm` modules can be deployed easily on servers located in remote computer rooms, without any special cluster configuration. This means SafeKit combines business continuity and disaster recovery within a single, simple architecture. SafeKit also manages [split brain](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in the event of network isolation, without requiring a third server or a special quorum disk.
+SafeKit mirror and <span class="notranslate farm-term" translate="no">farm</span> modules can be deployed easily on servers located in remote computer rooms, without any special cluster configuration. This means SafeKit combines business continuity and disaster recovery within a single, simple architecture. SafeKit also manages [split brain](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in the event of network isolation, without requiring a third server or a special quorum disk.
 
 ### Business continuity vs backup solutions {#business-continuity-vs-backup-solutions}
 

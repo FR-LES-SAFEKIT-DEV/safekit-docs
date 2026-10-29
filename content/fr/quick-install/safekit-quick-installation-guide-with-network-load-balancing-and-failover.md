@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Découvrez comment déployer le module apache_farm.safe sous Windows et Linux pour l'équilibrage de charge réseau et le basculement automatique d'Apache. Ce guide vous montre comment créer un cluster à haute disponibilité pour vos services web et applications à l'aide d'une adresse IP virtuelle, sans avoir recours à des équilibreurs de charge matériels externes ni à une configuration complexe."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d'installation rapide de la haute disponibilité pour Apache, limitations de la haute disponibilité SafeKit, présentation de la solution SafeKit/Apache, installation de la solution SafeKit/Apache sous Windows et Linux (apache_farm.safe), configuration pas à pas de la solution SafeKit/Apache, démonstration de la solution SafeKit `farm`, 🔍 Centre de navigation de la haute disponibilité SafeKit"
+topics: "Guide d'installation rapide de la haute disponibilité pour Apache, limitations de la haute disponibilité SafeKit, présentation de la solution SafeKit/Apache, installation de la solution SafeKit/Apache sous Windows et Linux (apache_farm.safe), configuration pas à pas de la solution SafeKit/Apache, démonstration de la solution SafeKit <span class="notranslate farm-term" translate="no">farm</span>, 🔍 Centre de navigation de la haute disponibilité SafeKit"
 ---
 
 # Équilibrage de charge et basculement du réseau Apache : installez le module SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
@@ -40,7 +40,7 @@ La solution est décrite ici : **💡[SafeKit : Logiciel tout-en-un d'équilibra
 {{%  insert-safekit-82-farm-configuration-fr app="Apache" mod="apache_farm"  %}}
  
 
-## Démonstration de la solution SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## Démonstration de la solution SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-fr  %}}

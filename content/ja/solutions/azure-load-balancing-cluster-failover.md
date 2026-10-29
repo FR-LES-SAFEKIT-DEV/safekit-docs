@@ -7,7 +7,7 @@ lang: "ja"
 topics: "アプリケーションレベルの監視と自己修復でクラウドロードバランサーを強化, 目次, SafeKitソフトウェアはAzureネットワーク負荷分散（NLB）クラスターをどのように簡単に実装しますか？, SafeKit farm クラスターはAzureでどのように動作しますか？, 比較：オンプレミスのSafeKit Farm クラスターとクラウドのSafeKit Farm クラスター, ビデオガイド：SafeKit Farm NLBクラスターの構成, 🔍 SafeKit 高可用性ナビゲーションハブ"
 ---
 
-# SafeKit: Microsoft Azure のロードバランシングと`Farm`クラスターによるアプリケーション高可用性 {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: Microsoft Azure のロードバランシングと<span class="notranslate farm-term" translate="no">Farm</span>クラスターによるアプリケーション高可用性 {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
 
 {{%  insert-safekit-solution-farm-cloud-ja app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}
 

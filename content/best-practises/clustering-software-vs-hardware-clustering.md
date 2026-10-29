@@ -27,7 +27,7 @@ There are two types of hardware clustering solutions: hardware clustering for ba
 
 Hardware clustering for backend (like with [Microsoft failover cluster](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)) is based on 2 servers sharing a disk with an automatic application failover in case of failure.
 
-Hardware clustering for frontend is based on load balancers (like with [F5 BIG-IP](<https://www.f5.com/products/big-ip-services/local-traffic-manager>)) in front of a `farm` of servers (2 servers or more). The load balancers distributes the TCP sessions to the available servers in the farm.
+Hardware clustering for frontend is based on load balancers (like with [F5 BIG-IP](<https://www.f5.com/products/big-ip-services/local-traffic-manager>)) in front of a <span class="notranslate farm-term" translate="no">farm</span> of servers (2 servers or more). The load balancers distributes the TCP sessions to the available servers in the farm.
 
 ### What is software clustering? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ As with hardware clustering, there are two types of software clustering solution
 
 Software clustering for backend (like with [SafeKit](</>)) is based on 2 servers replicating in real-time data with an automatic application failover in case of failures.
 
-Software clustering for frontend (like with SafeKit) is based on load balancing in a `farm` of servers (2 servers or more). The load balancing is made by software and distributes the TCP sessions to the available servers in the farm.
+Software clustering for frontend (like with SafeKit) is based on load balancing in a <span class="notranslate farm-term" translate="no">farm</span> of servers (2 servers or more). The load balancing is made by software and distributes the TCP sessions to the available servers in the farm.
 
 ## Software Clustering vs Hardware Clustering: Pros and Cons {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

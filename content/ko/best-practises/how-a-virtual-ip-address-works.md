@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/how-a-virtual-ip-addres
 description: "SafeKit 가 소프트웨어 정의 가상 IP(VIP) 주소를 사용하여 연중무휴 24시간 가동을 보장하는 방법을 알아보세요. Gratuitous ARP를 통한 자동 장애 조치와 Windows 및 Linux 서버에서 비즈니스 연속성을 위해 DNS 리디렉션보다 우수한 성능을 제공하는 이유를 확인해 보세요."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, SafeKit 클러스터의 가상 IP 구현, 목차, 동일 서브넷 장애 조치에서 가상 IP 주소(VIP) 작동 방식( Mirror 클러스터), 서로 다른 서브넷에서 가상 IP(VIP) 작동 방식( Mirror 클러스터), 동일 서브넷 `Farm` 클러스터에서 로드 밸런싱된 가상 IP 작동 방식( `Farm` 클러스터), 서로 다른 서브넷에서 로드 밸런싱된 가상 IP 작동 방식( `Farm` 클러스터), 가상 IP와 DNS 리디렉션 비교: DNS 장애 조치가 자주 실패하는 이유, 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 네트워크 로드 밸런싱 및 고가용성을 위한 가상 IP 주소 구성, 가상 IP(VIP) 관련 자주 묻는 질문, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, SafeKit 클러스터의 가상 IP 구현, 목차, 동일 서브넷 장애 조치에서 가상 IP 주소(VIP) 작동 방식( Mirror 클러스터), 서로 다른 서브넷에서 가상 IP(VIP) 작동 방식( Mirror 클러스터), 동일 서브넷 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터에서 로드 밸런싱된 가상 IP 작동 방식( <span class="notranslate farm-term" translate="no">Farm</span> 클러스터), 서로 다른 서브넷에서 로드 밸런싱된 가상 IP 작동 방식( <span class="notranslate farm-term" translate="no">Farm</span> 클러스터), 가상 IP와 DNS 리디렉션 비교: DNS 장애 조치가 자주 실패하는 이유, 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 네트워크 로드 밸런싱 및 고가용성을 위한 가상 IP 주소 구성, 가상 IP(VIP) 관련 자주 묻는 질문, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # 고가용성 클러스터링에서 가상 IP 주소(VIP)는 어떻게 작동합니까? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -20,7 +20,7 @@ topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, S
 ## SafeKit 의 가상 IP 구현 {#safekit-vip-implementation}
 
   * **Mirror 클러스터:** 실시간 복제 및 장애 조치를 용이하게 하기 위해 기본 서버에서만 활성화되는 플로팅 IP를 제공합니다.
-  * **`Farm` 클러스터:** 모든 노드에서 VIP를 동시에 유지하여 네트워크 로드 밸런싱을 가능하게 합니다.
+  * **<span class="notranslate farm-term" translate="no">Farm</span> 클러스터:** 모든 노드에서 VIP를 동시에 유지하여 네트워크 로드 밸런싱을 가능하게 합니다.
 
 
 **주요 이점:** **ARP(주소 확인 프로토콜)** 또는 **MAC 주소 탈취** 를 활용함으로써 VIP는 수동 클라이언트 재구성 없이 원활한 애플리케이션 장애 조치를 지원하여 연중무휴 24시간 비즈니스 연속성을 보장합니다.
@@ -30,7 +30,7 @@ topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, S
 
 Evidian에서 가상 IP(VIP) 동작 비교 다이어그램 SafeKit ![ ): 활성 노드에 플로팅 IP가 표시되는 클러스터 Mirror 와 모든 노드에 걸쳐 네트워크 로드 밸런싱이 표시되는 클러스터( Farm ](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512") 비교.
 
-**가상 IP 구현 전략 Mirror 그리고 `Farm` 클러스터 SafeKit.**
+**가상 IP 구현 전략 Mirror 그리고 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 SafeKit.**
 
 
 {{%  insert-safekit-4-buttons-ko  %}}
@@ -40,8 +40,8 @@ Evidian에서 가상 IP(VIP) 동작 비교 다이어그램 SafeKit ![ ): 활성 
 
   * 동일 서브넷 장애 조치(클러스터)에서 가상 IP 주소(VIP) 작동 방식( [ )( Mirror ) ](#virtual-ip-same-subnet-failover)
   * [ 서로 다른 서브넷에서 가상 IP(VIP)가 작동하는 방식 ( Mirror 클러스터) ](#virtual-ip-different-subnets-failover)
-  * 동일 서브넷에서 로드 밸런싱된 가상 IP의 작동 방식 [ `Farm` 클러스터, `Farm` 클러스터)( ](#vip-load-balancing-same-subnet) )
-  * [ 서로 다른 서브넷에서 로드 밸런싱된 가상 IP가 작동하는 방식 ( `Farm` 클러스터) ](#vip-load-balancing-different-subnets)
+  * 동일 서브넷에서 로드 밸런싱된 가상 IP의 작동 방식 [ <span class="notranslate farm-term" translate="no">Farm</span> 클러스터, <span class="notranslate farm-term" translate="no">Farm</span> 클러스터)( ](#vip-load-balancing-same-subnet) )
+  * [ 서로 다른 서브넷에서 로드 밸런싱된 가상 IP가 작동하는 방식 ( <span class="notranslate farm-term" translate="no">Farm</span> 클러스터) ](#vip-load-balancing-different-subnets)
   * [ 가상 IP와 DNS 리디렉션: DNS 페일오버가 자주 실패하는 이유 ](#virtual-ip-vs-dns-redirection-failover)
   * [ 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성 ](#vip-vs-dns-comparison)
   * [ 네트워크 부하 분산 및 고가용성을 위한 가상 IP 주소 구성 ](#virtual-ip-configuration-load-balancing-ha)
@@ -119,22 +119,22 @@ SafeKit 각 노드에 전용 **상태 확인 URL을** 제공하여 트래픽 스
 
 **⚠️ 주의:** 로드 밸런서를 선택할 경우, 애플리케이션이 **소스/대상 IP 변환(SNAT/DNAT)** 과 호환되는지 확인하십시오. 로드 밸런서를 사용하면 애플리케이션이 원래 사용자의 ID를 추적하지 못하거나, 자체 네트워크 인터페이스에 직접 구성된 가상 IP를 더 이상 인식하지 못하여 시작되지 않을 수 있습니다.
 
-## 동일 서브넷 `Farm` ( `Farm` 클러스터) 에서 로드 밸런싱된 가상 IP가 작동하는 방식 {#vip-load-balancing-same-subnet}
+## 동일 서브넷 <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> 클러스터) 에서 로드 밸런싱된 가상 IP가 작동하는 방식 {#vip-load-balancing-same-subnet}
 
 ### 확장 가능한 성능: 커널 수준 로드 밸런싱 및 이중화 {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-트래픽이 많은 환경의 경우, **아키텍처 가이드: 멀티노드 `Farm` 클러스터를 사용한 확장 가능한 고가용성** SafeKit 완전한 이중화를 유지하면서 여러 활성 서버에 워크로드를 분산하는 방법을 설명합니다. 
+트래픽이 많은 환경의 경우, **아키텍처 가이드: 멀티노드 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터를 사용한 확장 가능한 고가용성** SafeKit 완전한 이중화를 유지하면서 여러 활성 서버에 워크로드를 분산하는 방법을 설명합니다. 
 
-### `Farm` 클러스터 아키텍처: Windows 또는 Linux 노드와 노드 간의 로드 밸런싱 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 아키텍처: Windows 또는 Linux 노드와 노드 간의 로드 밸런싱 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 동일 서브넷 내 로드 밸런싱 가상 IP(VIP)의 다이어그램 ![ farm 클러스터 ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
- 커널 필터링을 통한 분산 트래픽 처리: **로드 밸런싱 클러스터인 `farm`** 에서는 가상 IP(VIP) 주소를 사용하여 클라이언트 요청을 여러 서버에 동시에 분산합니다. 이 예제에서는 두 개의 노드를 사용하지만, 이 아키텍처는 더 큰 서버 팜을 지원하도록 확장 가능합니다. 동일 서브넷 구성에서 VIP는 IP 별칭을 통해 클러스터의 **모든 서버** 의 이더넷 카드에 구성됩니다. 
+ 커널 필터링을 통한 분산 트래픽 처리: **로드 밸런싱 클러스터인 <span class="notranslate farm-term" translate="no">farm</span>** 에서는 가상 IP(VIP) 주소를 사용하여 클라이언트 요청을 여러 서버에 동시에 분산합니다. 이 예제에서는 두 개의 노드를 사용하지만, 이 아키텍처는 더 큰 서버 팜을 지원하도록 확장 가능합니다. 동일 서브넷 구성에서 VIP는 IP 별칭을 통해 클러스터의 **모든 서버** 의 이더넷 카드에 구성됩니다. 
 
 #### 트래픽 분배: 커널 레벨 필터 {#traffic-distribution-the-kernel-level-filter}
 
-단순한 장애 조치 클러스터와 달리 `farm` 클러스터는 특수한 **커널 수준 필터** 를 통해 트래픽을 관리합니다. 작동 방식은 다음과 같습니다. 
+단순한 장애 조치 클러스터와 달리 <span class="notranslate farm-term" translate="no">farm</span> 클러스터는 특수한 **커널 수준 필터** 를 통해 트래픽을 관리합니다. 작동 방식은 다음과 같습니다. 
 
   * **ARP 매핑:** 클라이언트의 ARP 캐시에서 VIP는 처음에 단일 하드웨어 주소(예: 서버 1의 `mac1` )와 연결됩니다.
   * **패킷 분할:** 서버 1이 트래픽을 수신하면 SafeKit 커널 필터는 수신 패킷의 신원을 분석합니다( **클라이언트 IP** 또는 **TCP 포트** 기준).
@@ -147,20 +147,20 @@ SafeKit 각 노드에 전용 **상태 확인 URL을** 제공하여 트래픽 스
 
 #### 원격 사이트 배포 {#deployment-in-remote-sites}
 
-**원격 데이터 센터** 에서 운영되는 조직의 경우, 사이트가 **확장 LAN 또는** VLAN을 통해 연결되어 있으면 이 로드 밸런싱 알고리즘이 계속 작동합니다. 이렇게 하면 가상 "동일 서브넷" 환경이 생성되며, 이는 지리적으로 분산된 `farm` 클러스터에 가장 효율적인 구성입니다. 
+**원격 데이터 센터** 에서 운영되는 조직의 경우, 사이트가 **확장 LAN 또는** VLAN을 통해 연결되어 있으면 이 로드 밸런싱 알고리즘이 계속 작동합니다. 이렇게 하면 가상 "동일 서브넷" 환경이 생성되며, 이는 지리적으로 분산된 <span class="notranslate farm-term" translate="no">farm</span> 클러스터에 가장 효율적인 구성입니다. 
 
-## 서로 다른 서브넷에서 로드 밸런싱된 가상 IP가 작동하는 방식 ( `Farm` 클러스터) {#vip-load-balancing-different-subnets}
+## 서로 다른 서브넷에서 로드 밸런싱된 가상 IP가 작동하는 방식 ( <span class="notranslate farm-term" translate="no">Farm</span> 클러스터) {#vip-load-balancing-different-subnets}
 
 ### 다중 영역 확장: 클라우드 서브넷 간 트래픽 오케스트레이션 {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-**아키텍처 가이드: 다중 영역 및 클라우드 환경에서 `Farm` 클러스터 확장** 애플리케이션 워크로드를 서로 다른 가용 영역 및 서브넷에 분산하기 위한 청사진을 제공합니다. 
+**아키텍처 가이드: 다중 영역 및 클라우드 환경에서 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 확장** 애플리케이션 워크로드를 서로 다른 가용 영역 및 서브넷에 분산하기 위한 청사진을 제공합니다. 
 
-### 교차 서브넷 `Farm` 클러스터: 다중 노드 Windows 및 Linux 확장성 {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### 교차 서브넷 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터: 다중 노드 Windows 및 Linux 확장성 {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 두 개의 서로 다른 서브넷에서 작동하는 로드 밸런싱 클러스터의 다이어그램 ![ farm , ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
- `farm` 노드가 **서로 다른 서브넷** 에 분산되어 있는 경우(다중 가용 영역 클라우드 배포에서 일반적임), **가상 IP(VIP)** 외부 **로드 밸런서(LB)** 에 의해 관리됩니다. LB는 VIP를 보유하고 들어오는 트래픽을 각 서브넷에 있는 서버의 물리적 IP 주소로 전달합니다. 
+ <span class="notranslate farm-term" translate="no">farm</span> 노드가 **서로 다른 서브넷** 에 분산되어 있는 경우(다중 가용 영역 클라우드 배포에서 일반적임), **가상 IP(VIP)** 외부 **로드 밸런서(LB)** 에 의해 관리됩니다. LB는 VIP를 보유하고 들어오는 트래픽을 각 서브넷에 있는 서버의 물리적 IP 주소로 전달합니다. 
 
 #### 지능형 트래픽 라우팅 및 로드 밸런싱 규칙 {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -174,7 +174,7 @@ SafeKit 각 노드에 전용 **상태 확인 URL을** 제공하여 트래픽 스
 
 #### SafeKit 건강 점검 메커니즘 {#safekit-health-check-mechanism}
 
-SafeKit `farm` 에 있는 모든 서버에 실시간 **상태 확인 URL** 제공하여 로드 밸런서에 운영 상태를 전달합니다. 
+SafeKit <span class="notranslate farm-term" translate="no">farm</span> 에 있는 모든 서버에 실시간 **상태 확인 URL** 제공하여 로드 밸런서에 운영 상태를 전달합니다. 
 
   * **노드가 작동 중입니다:** 상태 확인 결과 `HTTP 200 OK` 반환되었습니다. 로드 밸런서가 이 서버를 활성 로테이션에 포함시켰습니다.
   * **노드 다운/페일오버:** 서버 또는 애플리케이션에 장애가 발생하면 SafeKit `HTTP 404 NOT FOUND` 반환하거나 서비스에 연결할 수 없게 됩니다. 로드 밸런서는 장애가 발생한 노드로의 트래픽 전송을 즉시 중단합니다.
@@ -182,7 +182,7 @@ SafeKit `farm` 에 있는 모든 서버에 실시간 **상태 확인 URL** 제�
 
 #### 클라우드 배포 표준: AWS , Azure , GCP , {#cloud-deployment-standards-aws-azure-and-gcp}
 
-이 아키텍처는 **클라우드 `Farm` 클러스터,** 의 기본 모델로서, 전체 서브넷 또는 영역이 오프라인 상태가 되더라도 나머지 노드가 계속해서 부하를 처리할 수 있도록 보장합니다. 이는 다음에서 기본적으로 지원됩니다. 
+이 아키텍처는 **클라우드 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터,** 의 기본 모델로서, 전체 서브넷 또는 영역이 오프라인 상태가 되더라도 나머지 노드가 계속해서 부하를 처리할 수 있도록 보장합니다. 이는 다음에서 기본적으로 지원됩니다. 
 
   * 💡 [ **Amazon AWS** ](</ko/solutions/aws-load-balancing-cluster-failover/>) ( AWS 네트워크 로드 밸런서)
   * 💡 [ **Microsoft Azure** ](</ko/solutions/azure-load-balancing-cluster-failover/>) ( Azure 로드 밸런서)
@@ -234,7 +234,7 @@ DNS 리디렉션은 고가용성 솔루션에 적합하지 않은 해결책입�
 환경 및 사용 사례 | 고가용성 유형 | 리디렉션 메커니즘 | 네트워크 지연 시간 | 애플리케이션 투명성 및 IP 지역성  
 ---|---|---|---|---  
 기본/백업(고가용성) | Mirror 클러스터 | 무상 ARP/MAC 테이크오버 | 매우 낮음: GARP 감지 및 브로드캐스트 전송 시간 | 완전 투명성: 가상 IP는 활성 노드의 로컬 IP입니다. 클라이언트 IP는 유지됩니다.  
-로드 밸런싱(액티브/액티브) | `Farm` 클러스터 | 커널 레벨 네트워크 필터/GARP | 매우 낮음: 네트워크 필터 감지 및 재구성 시간 | 완전 투명성: 가상 IP는 모든 노드에서 로컬입니다. 클라이언트 IP는 유지됩니다.  
+로드 밸런싱(액티브/액티브) | <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 | 커널 레벨 네트워크 필터/GARP | 매우 낮음: 네트워크 필터 감지 및 재구성 시간 | 완전 투명성: 가상 IP는 모든 노드에서 로컬입니다. 클라이언트 IP는 유지됩니다.  
 동일 서브넷/확장 LAN(VLAN 확장) | 재해 복구(원격 데이터 센터) | 표준 IP 별칭/GARP | 낮음: 확장된 VLAN의 RTT(왕복 시간)에 따라 다름 | 완전 투명성: 가상 IP는 노드에서 로컬입니다. 클라이언트 IP는 유지됩니다.  
 다른 서브넷 | 재해 복구(원격 데이터 센터/클라우드) | 외부 로드 밸런서 | 보통: 로드 밸런서 상태 확인 간격으로 인해 장애 조치 지연 시간이 더 길어질 수 있음 | ⚠️ 부분 투명성: SNAT/DNAT를 사용합니다. 가상 IP는 노드에서 로컬로 **가 아닌** 입니다. 클라이언트 IP는 **가 아닌** 로 유지됩니다. 애플리케이션에서 이를 지원해야 합니다.  
 DNS 재라우팅: VIP 없음 | 재해 복구(원격 데이터 센터) | DNS 레코드 업데이트(이름/물리적 IP) | 높음/예측 불가능: DNS TTL(Time To Live) 및 클라이언트 DNS 캐싱에 따라 다름. | ⚠️ 불안정: 클라이언트가 DNS를 다시 확인해야 합니다. 대부분의 경우 클라이언트는 시작 시 확인된 오래된 IP를 계속 사용하며 장애 조치 후에도 재라우팅되지 않습니다.  

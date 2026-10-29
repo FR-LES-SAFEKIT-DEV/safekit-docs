@@ -6,34 +6,34 @@
 
 ## Den Cloud Load Balancer mit Überwachung auf Anwendungsebene und Selbstheilung erweitern
 
-Ein SafeKit-`Farm`-Cluster für {{ .Get "app" }} ist eine softwaredefinierte Hochverfügbarkeitslösung, die für Cloud-Umgebungen optimiert ist. Durch **umfassende Überwachung und Selbstheilung** direkt auf den Anwendungsservern werden Softwarefehler erkannt und lokal behoben, bevor sie die Verfügbarkeit beeinträchtigen. Die Lösung lässt sich nahtlos in **{{ .Get "app" }} Load Balancer** integrieren und leitet den Datenverkehr mithilfe intelligenter Zustandsprüfungen ausschließlich an voll funktionsfähige Knoten weiter.
+Ein SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster für {{ .Get "app" }} ist eine softwaredefinierte Hochverfügbarkeitslösung, die für Cloud-Umgebungen optimiert ist. Durch **umfassende Überwachung und Selbstheilung** direkt auf den Anwendungsservern werden Softwarefehler erkannt und lokal behoben, bevor sie die Verfügbarkeit beeinträchtigen. Die Lösung lässt sich nahtlos in **{{ .Get "app" }} Load Balancer** integrieren und leitet den Datenverkehr mithilfe intelligenter Zustandsprüfungen ausschließlich an voll funktionsfähige Knoten weiter.
 
-### Welche Vorteile bietet ein SafeKit-`Farm`-Cluster für {{ .Get "app" }}-Anwendungen?
+### Welche Vorteile bietet ein SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster für {{ .Get "app" }}-Anwendungen?
 
   * **Integration mit {{ .Get "app" }} Load Balancern:** Stellt automatisch präzise Zustandsprüfungen für {{ .Get "app" }} Load Balancer bereit. So wird der Datenverkehr anhand des tatsächlichen Zustands der {{ .Get "app" }}-Anwendung und nicht nur anhand einfacher Server-Pings weitergeleitet.
   * **Umfassende Überwachung und Selbstheilung:** Erkennt „Zombie“-Zustände, in denen eine Cloud-Instanz zwar „Running“ ist, die Anwendung jedoch abgestürzt ist. SafeKit startet den Dienst lokal automatisch neu, bevor der Cloud Load Balancer über das Failover informiert wird.
-  * **Kombination von `Farm` und Mirror:** Ermöglicht auf einzigartige Weise die Kombination eines `Farm`-Clusters (zum Skalieren der Frontends über einen Cloud-LB) mit einem Mirror-Cluster (zur synchronen Datenreplikation der Backends) und löst so die Herausforderung des persistenten Speichers in {{ .Get "app" }}.
+  * **Kombination von <span class="notranslate farm-term" translate="no">Farm</span> und Mirror:** Ermöglicht auf einzigartige Weise die Kombination eines <span class="notranslate farm-term" translate="no">Farm</span>-Clusters (zum Skalieren der Frontends über einen Cloud-LB) mit einem Mirror-Cluster (zur synchronen Datenreplikation der Backends) und löst so die Herausforderung des persistenten Speichers in {{ .Get "app" }}.
   * **Kubernetes-Alternative:** SafeKit bietet Hochverfügbarkeit für ältere und containerisierte Anwendungen (nicht für Kubernetes konzipiert), ohne den Betriebsaufwand und die Komplexität der Kubernetes-Orchestrierung.
   * **Einheitliche Bereitstellung (On-Premises oder Cloud):** Abgesehen von der Konfiguration der [virtuellen IP-Adresse in einem Cloud Load Balancer](/de/best-practises/how-a-virtual-ip-address-works/) bleibt der SafeKit-Bereitstellungsprozess in On-Premises- und Cloud-Umgebungen identisch.
 
 
 ![SafeKit-Hochverfügbarkeitsarchitektur für den {{ .Get "app" }}-Cluster mit virtueller IP-Adresse, automatischem Failover, automatischem Failback und Network Load Balancing]({{ .Get "img" }} "w:512")
 
-**SafeKit-`Farm`-NLB-Cluster für {{ .Get "app" }}**
+**SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-Cluster für {{ .Get "app" }}**
 
 <a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Schnellinstallationsanleitung für den <code>farm</code>-Cluster für {{ .Get "app" }} &gt;</a>
 ## Inhaltsverzeichnis {#toc}
 
   * [Wie implementiert die SafeKit-Software einfach einen Network-Load-Balancing-Cluster (NLB) für {{ .Get "app" }}?](#safekit-farm-ha-cluster)
-  * [Wie funktioniert der SafeKit-`farm`-Cluster mit {{ .Get "app" }}?](#safekit-farm-cluster)
-  * [Vergleich: SafeKit-`Farm`-Cluster On-Premises und SafeKit-`Farm`-Cluster in der Cloud](#safekit-farm-ha-comparison)
-  * [Videoanleitung: Konfiguration eines SafeKit-`Farm`-NLB-Clusters](#videoguide-safekit-farm-cluster)
+  * [Wie funktioniert der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Cluster mit {{ .Get "app" }}?](#safekit-farm-cluster)
+  * [Vergleich: SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster On-Premises und SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster in der Cloud](#safekit-farm-ha-comparison)
+  * [Videoanleitung: Konfiguration eines SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-Clusters](#videoguide-safekit-farm-cluster)
   * [🔍 SafeKit-Navigationszentrum für Hochverfügbarkeit](#hub)
 
 
 ## Wie implementiert die SafeKit-Software einfach einen Network-Load-Balancing-Cluster (NLB) für {{ .Get "app" }}? {#safekit-farm-ha-cluster}
 
-### Was ist die SafeKit-`Farm`-NLB-Lösung für {{ .Get "app" }}?
+### Was ist die SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-Lösung für {{ .Get "app" }}?
 
 SafeKit bietet Network Load Balancing und Hochverfügbarkeit für {{ .Get "app" }} über zwei oder mehr Knoten.
 
@@ -63,13 +63,13 @@ Im Gegensatz zu nachträglich kombinierten Lösungen, die separate Clusterproduk
 
 Damit wird das Risiko eines „Kartenhauses“ vermieden, bei dem Updates fragile Verbindungen zwischen verschiedenen Tools unterbrechen. Außerdem gibt es einen zentralen Ansprechpartner für den gesamten HA-Stack und weniger menschliche Fehler, da eine einzige Oberfläche für die **Hochverfügbarkeit von {{ .Get "app" }}-Anwendungen** bereitsteht.
 
-### Lässt sich ein {{ .Get "app" }}-`farm`-Cluster ohne Clustering-Kenntnisse einrichten?
+### Lässt sich ein {{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-Cluster ohne Clustering-Kenntnisse einrichten?
 
-Ja. Dieser Artikel erläutert, wie sich ein {{ .Get "app" }}-`farm`-Cluster [schnell einrichten lässt]({{ .Get "guide" }}), ohne spezielle und komplexe Clustering-Kenntnisse zu benötigen. SafeKit übernimmt mit Zustandsprüfungen den VIP-Lastausgleich sowie Überwachung und Neustart von Anwendungen. So erhalten Sie eine robuste, skalierbare Lösung, die deutlich einfacher bereitzustellen und zu warten ist als herkömmliche NLB-Clusterlösungen.
+Ja. Dieser Artikel erläutert, wie sich ein {{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-Cluster [schnell einrichten lässt]({{ .Get "guide" }}), ohne spezielle und komplexe Clustering-Kenntnisse zu benötigen. SafeKit übernimmt mit Zustandsprüfungen den VIP-Lastausgleich sowie Überwachung und Neustart von Anwendungen. So erhalten Sie eine robuste, skalierbare Lösung, die deutlich einfacher bereitzustellen und zu warten ist als herkömmliche NLB-Clusterlösungen.
 
 ### Welche Anwendungen und Umgebungen kann SafeKit neben {{ .Get "app" }} schützen?
 
-SafeKit ist eine vielseitige Hochverfügbarkeitslösung **für Windows und Linux**, die weit über {{ .Get "app" }}-`farm`-Cluster hinausgeht. Sie ermöglicht Mirror-Cluster mit **synchroner Echtzeitreplikation** und automatischem Failover für zahlreiche kritische Workloads, darunter:
+SafeKit ist eine vielseitige Hochverfügbarkeitslösung **für Windows und Linux**, die weit über {{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-Cluster hinausgeht. Sie ermöglicht Mirror-Cluster mit **synchroner Echtzeitreplikation** und automatischem Failover für zahlreiche kritische Workloads, darunter:
 
   * **Virtuelle und physische Umgebungen:** vollständige virtuelle Hyper-V- oder KVM-Maschinen.
   * **Container-Orchestrierung:** Docker-, Podman- und K3s- (Kubernetes-)Umgebungen.
@@ -79,12 +79,12 @@ SafeKit ist eine vielseitige Hochverfügbarkeitslösung **für Windows und Linux
 
 💡 [Hier finden Sie die vollständige Liste der unterstützten HA-Lösungen.](/de/solutions/)
 
-## Wie funktioniert der SafeKit-`farm`-Cluster mit {{ .Get "app" }}? {#safekit-farm-cluster}
+## Wie funktioniert der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Cluster mit {{ .Get "app" }}? {#safekit-farm-cluster}
 
 ### Wie funktioniert Network Load Balancing (NLB) für {{ .Get "app" }}?
 
   * **Multi-AZ-Bereitstellung:** Die Knoten sind auf mehrere Availability Zones verteilt, um maximale Ausfallsicherheit bei Rechenzentrumsausfällen zu gewährleisten.
-  * **Aktiv-Aktiv-Redundanz:** Die kritische {{ .Get "app" }}-Anwendung läuft gleichzeitig auf allen Knoten im `farm`.
+  * **Aktiv-Aktiv-Redundanz:** Die kritische {{ .Get "app" }}-Anwendung läuft gleichzeitig auf allen Knoten im <span class="notranslate farm-term" translate="no">farm</span>.
   * **Intelligente Datenverkehrssteuerung:** Benutzer verbinden sich über eine vom {{ .Get "app" }}-Load-Balancer verwaltete [virtuelle IP-Adresse](/de/best-practises/how-a-virtual-ip-address-works/).
   * **Echtzeitüberwachung des Zustands:** Der Load Balancer verwendet die SafeKit-URL zur Zustandsprüfung. Bei einem fehlerfreien Knoten gibt SafeKit **HTTP 200 OK** zurück, bei einem Fehler **HTTP 404** (oder einen Timeout). So kann der Load Balancer den Datenverkehr automatisch nur an betriebsbereite Knoten weiterleiten.
 
@@ -97,7 +97,7 @@ SafeKit ist eine vielseitige Hochverfügbarkeitslösung **für Windows und Linux
   * **Vereinfachte Wartung:** Jeder Knoten umfasst einen SafeKit-Webkonsolen-Connector mit einer Ein-Klick-Oberfläche, über die Knoten für Hardware- oder Softwarewartungen manuell aus dem Cluster genommen werden können.
 
 
-![Diagramm eines SafeKit-`farm`-Clusters für {{ .Get "app" }} mit Multi-AZ-Redundanz. Ein Load Balancer verwendet HTTP-Zustandsprüfungen, um den Datenverkehr zwischen aktiven Knoten zu verteilen und automatisches Failover zu ermöglichen.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
+![Diagramm eines SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Clusters für {{ .Get "app" }} mit Multi-AZ-Redundanz. Ein Load Balancer verwendet HTTP-Zustandsprüfungen, um den Datenverkehr zwischen aktiven Knoten zu verteilen und automatisches Failover zu ermöglichen.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
 
 **SafeKit-NLB- und HA-Architektur für {{ .Get "app" }}**
 
@@ -107,46 +107,46 @@ Die Konfiguration des Load Balancers hängt davon ab, ob Ihre Anwendung zustands
 
 #### Zustandsbehaftete Konfiguration (Sitzungsaffinität)
 
-Für eine **zustandsbehaftete** {{ .Get "app" }}-Anwendung ist Sitzungsaffinität (Persistenz) erforderlich. Dadurch bleibt ein bestimmter Client über mehrere TCP-Sitzungen hinweg mit demselben Knoten verbunden und sein Anwendungskontext erhalten. In diesem Fall wird die Load-Balancer-Regel anhand der **Client-IP-Adresse** festgelegt. Während ein einzelner Client also an einen Knoten gebunden ist, wird der Datenverkehr verschiedener Clients auf die Knoten im `farm` verteilt.
+Für eine **zustandsbehaftete** {{ .Get "app" }}-Anwendung ist Sitzungsaffinität (Persistenz) erforderlich. Dadurch bleibt ein bestimmter Client über mehrere TCP-Sitzungen hinweg mit demselben Knoten verbunden und sein Anwendungskontext erhalten. In diesem Fall wird die Load-Balancer-Regel anhand der **Client-IP-Adresse** festgelegt. Während ein einzelner Client also an einen Knoten gebunden ist, wird der Datenverkehr verschiedener Clients auf die Knoten im <span class="notranslate farm-term" translate="no">farm</span> verteilt.
 
 #### Zustandslose Konfiguration (ohne Affinität)
 
-Bei einer **zustandslosen** {{ .Get "app" }}-Anwendung ist dagegen keine Sitzungsaffinität erforderlich. Da zwischen Sitzungen kein lokaler Kontext auf dem Knoten gespeichert wird, kann ein einzelner Client für jede neue TCP-Sitzung auf unterschiedliche Knoten verteilt werden. In diesem Fall basiert die Load-Balancer-Regel auf der **TCP-Sitzungsidentität**. Das verteilt den Datenverkehr besonders effizient über das `farm`, gilt jedoch nur für Dienste ohne Sitzungsabhängigkeit.
+Bei einer **zustandslosen** {{ .Get "app" }}-Anwendung ist dagegen keine Sitzungsaffinität erforderlich. Da zwischen Sitzungen kein lokaler Kontext auf dem Knoten gespeichert wird, kann ein einzelner Client für jede neue TCP-Sitzung auf unterschiedliche Knoten verteilt werden. In diesem Fall basiert die Load-Balancer-Regel auf der **TCP-Sitzungsidentität**. Das verteilt den Datenverkehr besonders effizient über das <span class="notranslate farm-term" translate="no">farm</span>, gilt jedoch nur für Dienste ohne Sitzungsabhängigkeit.
 
-### Wie wird ein SafeKit-`farm`-Cluster in {{ .Get "app" }} konfiguriert? {#safekit-farm-cluster-configuration}
-
-
-![SafeKit-Webkonsole: Konfiguration eines `Farm`-Clusters für Network Load Balancing und die Verwaltung virtueller IP-Adressen.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+### Wie wird ein SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Cluster in {{ .Get "app" }} konfiguriert? {#safekit-farm-cluster-configuration}
 
 
-Der **SafeKit-`farm`-Cluster** ist auf Hochverfügbarkeit und Skalierbarkeit von Diensten ausgelegt. Die Konfiguration verteilt den eingehenden Datenverkehr gleichzeitig auf beide Knoten:
+![SafeKit-Webkonsole: Konfiguration eines <span class="notranslate farm-term" translate="no">Farm</span>-Clusters für Network Load Balancing und die Verwaltung virtueller IP-Adressen.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+
+
+Der **SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Cluster** ist auf Hochverfügbarkeit und Skalierbarkeit von Diensten ausgelegt. Die Konfiguration verteilt den eingehenden Datenverkehr gleichzeitig auf beide Knoten:
 
   * **Dienste mit Lastausgleich (Registerkarte „Macros“):** Legen Sie die Anwendungsdienste (z. B. Apache, IIS, Nginx) fest, die auf allen Knoten aktiv bleiben sollen.
-  * **Heartbeat-Netzwerk(e):** Kommunikationspfad(e), über die erkannt wird, ob ein Knoten das `farm` verlassen hat.
-  * **Virtuelle IP-Adresse (`Farm`-VIP):** Konfigurieren Sie bei On-Premises-Bereitstellung den VIP direkt in der SafeKit-Webkonsole. In der Cloud wird die virtuelle IP-Adresse im Cloud Load Balancer konfiguriert, der die SafeKit-Zustandsprüfung verwendet.
+  * **Heartbeat-Netzwerk(e):** Kommunikationspfad(e), über die erkannt wird, ob ein Knoten das <span class="notranslate farm-term" translate="no">farm</span> verlassen hat.
+  * **Virtuelle IP-Adresse (<span class="notranslate farm-term" translate="no">Farm</span>-VIP):** Konfigurieren Sie bei On-Premises-Bereitstellung den VIP direkt in der SafeKit-Webkonsole. In der Cloud wird die virtuelle IP-Adresse im Cloud Load Balancer konfiguriert, der die SafeKit-Zustandsprüfung verwendet.
   * **Lastausgleichsregeln:** Konfigurieren Sie On-Premises die Verteilung anhand der Quell-IP-Adresse oder des Ports in der SafeKit-Webkonsole. In der Cloud wird die Regel im Cloud Load Balancer festgelegt.
   * **Prüfer:** Überwachen Sie den Anwendungszustand und lösen Sie bei einem erkannten Prozessfehler einen automatischen Neustart aus.
 
 
-### Wie wird ein SafeKit-`farm`-Cluster in {{ .Get "app" }} überwacht? {#safekit-farm-cluster-monitoring}
+### Wie wird ein SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Cluster in {{ .Get "app" }} überwacht? {#safekit-farm-cluster-monitoring}
 
 
-![SafeKit-Konsole: Überwachung eines 2-Knoten-`Farm`-Clusters. Beide Knoten sind im Zustand UP und der Lastausgleich ist aktiv.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+![SafeKit-Konsole: Überwachung eines 2-Knoten-<span class="notranslate farm-term" translate="no">Farm</span>-Clusters. Beide Knoten sind im Zustand UP und der Lastausgleich ist aktiv.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-Die Überwachung eines `farm`-Clusters macht den **Aktiv-Aktiv**-Betrieb sichtbar, bei dem alle Knoten zur Anwendungsleistung beitragen (hier am Beispiel von 2 Knoten):
+Die Überwachung eines <span class="notranslate farm-term" translate="no">farm</span>-Clusters macht den **Aktiv-Aktiv**-Betrieb sichtbar, bei dem alle Knoten zur Anwendungsleistung beitragen (hier am Beispiel von 2 Knoten):
 
-  * **Zustand UP (50 % auf 2 Knoten):** In einem fehlerfreien `farm` befinden sich beide Knoten im Zustand „UP“ (50 %). Beide empfangen und verarbeiten aktiv Clientanfragen über die gemeinsame virtuelle IP-Adresse.
+  * **Zustand UP (50 % auf 2 Knoten):** In einem fehlerfreien <span class="notranslate farm-term" translate="no">farm</span> befinden sich beide Knoten im Zustand „UP“ (50 %). Beide empfangen und verarbeiten aktiv Clientanfragen über die gemeinsame virtuelle IP-Adresse.
   * **Automatischer Lastausgleich:** Fällt ein Knoten aus, zeigt die Konsole, dass der verbleibende Knoten 100 % des Datenverkehrs übernimmt. Die Failover-Verzögerung hängt vom Prüfintervall des Cloud Load Balancers ab.
   * **Knoten hinzufügen:** Wird ein reparierter Knoten neu gestartet, wechselt er von „STOP“ zu „UP“ und erhält ohne Eingriff eines Administrators automatisch wieder seinen Anteil am Datenverkehr.
-  * **Keine Datensynchronisierung:** In einem `farm`-Cluster gibt es keinen orangefarbenen Resynchronisierungszustand. Die Knoten sind zustandslos oder verwenden eine gemeinsame Backend-Datenbank, die separat in einem Mirror-Cluster geschützt werden kann.
+  * **Keine Datensynchronisierung:** In einem <span class="notranslate farm-term" translate="no">farm</span>-Cluster gibt es keinen orangefarbenen Resynchronisierungszustand. Die Knoten sind zustandslos oder verwenden eine gemeinsame Backend-Datenbank, die separat in einem Mirror-Cluster geschützt werden kann.
 
 
 Über einfache Statussymbole hinaus ermöglicht die Oberfläche die Ein-Klick-Verwaltung von Knoten. So lässt sich ein Knoten für geplante Wartungsarbeiten manuell stoppen oder starten, während die gemeinsame virtuelle IP-Adresse den Datenverkehr ohne Unterbrechung für Benutzer automatisch umverteilt.
 
-## Vergleich: SafeKit-`Farm`-Cluster On-Premises und SafeKit-`Farm`-Cluster in der Cloud {#safekit-farm-ha-comparison}
+## Vergleich: SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster On-Premises und SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster in der Cloud {#safekit-farm-ha-comparison}
 
-**Technischer Vergleich von SafeKit-`Farm`-Clustern On-Premises und in der Cloud**
+**Technischer Vergleich von SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Clustern On-Premises und in der Cloud**
 
 Merkmal | SafeKit On-Premises (physisch/VM) | SafeKit in der Cloud
 ---|---|---
@@ -159,7 +159,7 @@ Infrastrukturanforderung | Standardmäßiges Layer-2-Netzwerk (gleiches Subnetz 
 
 **Zusammenfassend** sorgt SafeKit unabhängig davon, ob lokal oder in der Cloud bereitgestellt, dafür, dass geschäftskritische Anwendungen mit einer einheitlichen Oberfläche ausfallsicher, skalierbar und einfach zu verwalten bleiben. Für Softwareanbieter ist die **softwarebasierte Lösung von SafeKit** die ideale Möglichkeit, ihrem Produktangebot eine Hochverfügbarkeitsoption hinzuzufügen. Anders als hardwareabhängige oder cloudgebundene Lösungen ist SafeKit zu 100 % unabhängig und ermöglicht ein einheitliches HA-Erlebnis – lokal, in virtualisierten Umgebungen oder in öffentlichen Clouds.
 
-## Videoanleitung: Konfiguration eines SafeKit-`Farm`-NLB-Clusters {#videoguide-safekit-farm-cluster}
+## Videoanleitung: Konfiguration eines SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-Clusters {#videoguide-safekit-farm-cluster}
 
 ### SafeKit-Video: Network Load Balancing und Verwaltung virtueller IP-Adressen (5:03) {#demo-farm}
 

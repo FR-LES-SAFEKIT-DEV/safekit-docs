@@ -71,7 +71,7 @@ SafeKit es una solución versátil de alta disponibilidad **para Windows y Linux
   * **Infraestructura en la nube:** Alta disponibilidad para aplicaciones en la nube.
 
 
-SafeKit también proporciona **`Farm` Clusters** con **equilibrio de carga de red y conmutación por error nativos** para aplicaciones sin estado como **Servidores web** .
+SafeKit también proporciona **<span class="notranslate farm-term" translate="no">Farm</span> Clusters** con **equilibrio de carga de red y conmutación por error nativos** para aplicaciones sin estado como **Servidores web** .
 
 💡 [ Explore la lista completa de soluciones HA compatibles aquí. ](</es/solutions/>)
 

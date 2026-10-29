@@ -21,13 +21,13 @@ In un cluster mirror , il software SafeKit è installato su due server fisici o 
 
 ## Come implementare server ridondanti attivo/attivo con bilanciamento del carico di rete e failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### Il cluster SafeKit `farm` {#the-safekit-farm-cluster}
+### Il cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
 
 
 ![ Server ridondanti con bilanciamento del carico di rete e failover ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-In un cluster `farm` , il software SafeKit è installato su server ridondanti che eseguono Windows o Linux (in locale o nel cloud). Tutti i server ridondanti sono attivi ed eseguono la stessa applicazione front-end critica. I client sono connessi a un indirizzo IP virtuale [ , ](</it/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . Le sessioni TCP vengono bilanciate tra tutti i server ridondanti. Se un server non è disponibile, SafeKit riconfigura automaticamente il bilanciamento del carico delle sessioni TCP tra i server attivi rimanenti. Quando il server guasto viene riavviato, viene automaticamente reintegrato come server ridondante attivo e riceve nuove sessioni TCP.
+In un cluster <span class="notranslate farm-term" translate="no">farm</span> , il software SafeKit è installato su server ridondanti che eseguono Windows o Linux (in locale o nel cloud). Tutti i server ridondanti sono attivi ed eseguono la stessa applicazione front-end critica. I client sono connessi a un indirizzo IP virtuale [ , ](</it/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . Le sessioni TCP vengono bilanciate tra tutti i server ridondanti. Se un server non è disponibile, SafeKit riconfigura automaticamente il bilanciamento del carico delle sessioni TCP tra i server attivi rimanenti. Quando il server guasto viene riavviato, viene automaticamente reintegrato come server ridondante attivo e riceve nuove sessioni TCP.
 
 
 {{%  insert-safekit-hub-it  %}}

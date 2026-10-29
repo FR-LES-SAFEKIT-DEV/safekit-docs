@@ -21,7 +21,7 @@ topics: "业务连续性和灾难恢复软件，🔍 SafeKit高可用性导航�
 
 ### 在两个远程机房之间实现简单的高可用性解决方案？ {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-SafeKit mirror和`farm`模块可以轻松部署在位于远程机房的服务器上，无需任何特殊的集群配置。这意味着SafeKit将业务连续性和灾难恢复功能集成在一个简单易用的架构中。此外， SafeKit还能在网络隔离的情况下管理[ ](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)的脑裂问题，而无需第三台服务器或专用仲裁磁盘。
+SafeKit mirror和<span class="notranslate farm-term" translate="no">farm</span>模块可以轻松部署在位于远程机房的服务器上，无需任何特殊的集群配置。这意味着SafeKit将业务连续性和灾难恢复功能集成在一个简单易用的架构中。此外， SafeKit还能在网络隔离的情况下管理[ ](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)的脑裂问题，而无需第三台服务器或专用仲裁磁盘。
 
 ### 业务连续性与备份解决方案 {#business-continuity-vs-backup-solutions}
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/what-is-rpo-and-rto-with-e
 description: "Learn the definitions of RPO (Recovery Point Objective) and RTO (Recovery Time Objective) with clear examples. Discover how SafeKit achieves zero data loss (RPO=0) and rapid failover to ensure 24/7 business continuity."
 category: "best-practises"
 lang: "en"
-topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO and RTO for a High Availability and Business Continuity solution?, How do I determine RPO and RTO for a Backup and Disaster Recovery solution?, How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?, What are the RTO benchmarks for a SafeKit `Farm` Cluster with Load Balancing?, Comparison tables: RTO vs RPO, High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO, FAQ: Optimizing RPO and RTO for Business Continuity, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO and RTO for a High Availability and Business Continuity solution?, How do I determine RPO and RTO for a Backup and Disaster Recovery solution?, How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?, What are the RTO benchmarks for a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster with Load Balancing?, Comparison tables: RTO vs RPO, High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO, FAQ: Optimizing RPO and RTO for Business Continuity, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # What are RPO and RTO? Definitions, Examples, and HA Strategies {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
@@ -26,7 +26,7 @@ topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO a
   * [How do I calculate RPO and RTO for a High Availability and Business Continuity solution?](#calculate-rpo-rto-high-availability)
   * [How do I determine RPO and RTO for a Backup and Disaster Recovery solution?](#calculate-rpo-rto-backup-solution)
   * [How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?](#rpo-rto-safekit-mirror-cluster)
-  * [What are the RTO benchmarks for a SafeKit `Farm` Cluster with Load Balancing?](#rpo-rto-safekit-farm-cluster)
+  * [What are the RTO benchmarks for a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster with Load Balancing?](#rpo-rto-safekit-farm-cluster)
   * [Comparison tables: RTO vs RPO](#rpo-vs-rto-comparison)
   * [High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO](#safekit-rpo-rto-video-demos)
   * [Frequently Asked Questions about RPO and RTO](#faq-rpo-rto)
@@ -148,38 +148,38 @@ In a standard configuration, the **RTO of a SafeKit mirror cluster is approximat
 
 By utilizing **application-level high availability** , SafeKit eliminates the "reboot penalty" inherent in standard virtualization, ensuring your **Business Continuity Plan** achieves the lowest possible downtime. 
 
-## What are the RTO benchmarks for a SafeKit `Farm` Cluster with Load Balancing? {#rpo-rto-safekit-farm-cluster}
+## What are the RTO benchmarks for a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster with Load Balancing? {#rpo-rto-safekit-farm-cluster}
 
-### What is the SafeKit `Farm` Cluster? {#what-is-safekit-farm-cluster}
+### What is the SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster? {#what-is-safekit-farm-cluster}
 
-The **SafeKit `Farm` Cluster** is a software-based high availability solution designed for stateless applications (like web servers) that require both **scalability** and **redundancy**. Unlike a mirror cluster that focuses on data replication, a `farm` cluster distributes incoming traffic across multiple active nodes.
+The **SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster** is a software-based high availability solution designed for stateless applications (like web servers) that require both **scalability** and **redundancy**. Unlike a mirror cluster that focuses on data replication, a <span class="notranslate farm-term" translate="no">farm</span> cluster distributes incoming traffic across multiple active nodes.
 
 
 ![SafeKit Farm Cluster architecture demonstrating network load balancing and failover for stateless applications](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-To maintain **Business Continuity** for high-traffic environments, the SafeKit `farm` cluster operates through two core mechanisms:
+To maintain **Business Continuity** for high-traffic environments, the SafeKit <span class="notranslate farm-term" translate="no">farm</span> cluster operates through two core mechanisms:
 
-  * **Network Load Balancing:** SafeKit uses a virtual IP address to distribute incoming network traffic across a "`farm`" of multiple active servers. This ensures that no single server is overwhelmed and maximizes the performance of the application.
-  * **Automatic Fault Detection and Reconfiguration:** If one node in the `farm` fails, SafeKit detects the failure via heartbeats and immediately redistributes its traffic among the remaining healthy nodes. This provides a near-zero RTO for the overall service, as other nodes are already active and ready to absorb the load.
+  * **Network Load Balancing:** SafeKit uses a virtual IP address to distribute incoming network traffic across a "<span class="notranslate farm-term" translate="no">farm</span>" of multiple active servers. This ensures that no single server is overwhelmed and maximizes the performance of the application.
+  * **Automatic Fault Detection and Reconfiguration:** If one node in the <span class="notranslate farm-term" translate="no">farm</span> fails, SafeKit detects the failure via heartbeats and immediately redistributes its traffic among the remaining healthy nodes. This provides a near-zero RTO for the overall service, as other nodes are already active and ready to absorb the load.
 
 
-### What is the RPO of a SafeKit `Farm` Cluster? {#what-is-rpo-safekit-farm}
+### What is the RPO of a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster? {#what-is-rpo-safekit-farm}
 
-The **RPO (Recovery Point Objective)** for a **SafeKit `Farm` Cluster** is generally considered **Not Applicable (N/A)**. This is because a `farm` cluster is specifically designed for **stateless applications** where data is not stored locally on the nodes. 
+The **RPO (Recovery Point Objective)** for a **SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster** is generally considered **Not Applicable (N/A)**. This is because a <span class="notranslate farm-term" translate="no">farm</span> cluster is specifically designed for **stateless applications** where data is not stored locally on the nodes. 
 
-Since a `farm` cluster focuses on **network load balancing** rather than data synchronization, there is no data replication between the nodes within the cluster itself. In a typical **Business Continuity Plan** involving a `farm` architecture: 
+Since a <span class="notranslate farm-term" translate="no">farm</span> cluster focuses on **network load balancing** rather than data synchronization, there is no data replication between the nodes within the cluster itself. In a typical **Business Continuity Plan** involving a <span class="notranslate farm-term" translate="no">farm</span> architecture: 
 
-  * **Stateless Operations:** All nodes in the `farm` are identical and do not hold persistent data; therefore, there is no "data loss" to measure during a node failure. 
+  * **Stateless Operations:** All nodes in the <span class="notranslate farm-term" translate="no">farm</span> are identical and do not hold persistent data; therefore, there is no "data loss" to measure during a node failure. 
   * **External Data Storage:** If the application requires data persistence, it is usually handled by a separate backend **SafeKit Mirror Cluster** where the RPO would then be zero. 
 
 
-### What is the RTO of a SafeKit `Farm` Cluster? {#rto-example-safekit-farm-cluster}
+### What is the RTO of a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster? {#rto-example-safekit-farm-cluster}
 
-In a `farm` architecture, the **RTO is reduced to just a few seconds** because all nodes are typically active simultaneously. The recovery time is determined by the speed at which the cluster reconfigures its traffic distribution:
+In a <span class="notranslate farm-term" translate="no">farm</span> architecture, the **RTO is reduced to just a few seconds** because all nodes are typically active simultaneously. The recovery time is determined by the speed at which the cluster reconfigures its traffic distribution:
 
   * **Hardware Failure:** The RTO is equal to the _failure detection timeout_ across monitoring channels (default is a few seconds). Once the heartbeat loss is detected, the **virtual IP load-balancing filters** are automatically reconfigured to redirect traffic to the remaining healthy nodes.
-  * **Software Failure or Planned Restart:** The RTO is calculated as the _application stop time_ plus the _application restart time_ on that specific node, during which the other nodes in the `farm` continue to handle all incoming traffic.
+  * **Software Failure or Planned Restart:** The RTO is calculated as the _application stop time_ plus the _application restart time_ on that specific node, during which the other nodes in the <span class="notranslate farm-term" translate="no">farm</span> continue to handle all incoming traffic.
 
 
 This "Active-Active" mechanism ensures that for stateless services, the **Business Continuity** impact is nearly imperceptible to the end-user, as there is no need to initialize the service on a new standby node.
@@ -206,7 +206,7 @@ Target RPO | > 0 (Last backup point) | 0 (Synchronous replication)
 Architecture | Use Case | RTO (Availability) | RPO (Data Loss)  
 ---|---|---|---  
 Mirror Cluster | Real-time replication | ~1 min (Heartbeat + Restart) | 0 (No Data Loss)  
-`Farm` Cluster | Network Load Balancing | A few seconds | N/A (Stateless)  
+<span class="notranslate farm-term" translate="no">Farm</span> Cluster | Network Load Balancing | A few seconds | N/A (Stateless)  
   
 ## High Availability in Action: Real-Time Demos of Zero RPO and Near-Zero RTO {#safekit-rpo-rto-video-demos}
 
@@ -223,9 +223,9 @@ See how SafeKit handles a critical failure. This video demonstrates **synchronou
 
 [Free trial here](</quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
-### Video: Achieving Near-Zero RTO in a SafeKit `Farm` Cluster (5:03) {#demo-farm-cluster-rpo-rto}
+### Video: Achieving Near-Zero RTO in a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster (5:03) {#demo-farm-cluster-rpo-rto}
 
-Watch how SafeKit manages an Apache web `farm` to provide both performance scaling and instantaneous failover.
+Watch how SafeKit manages an Apache web <span class="notranslate farm-term" translate="no">farm</span> to provide both performance scaling and instantaneous failover.
 
 #### Chapters {#chapters-1}
 

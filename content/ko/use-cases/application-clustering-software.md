@@ -27,11 +27,11 @@ SafeKit 는 하드웨어에 구애받지 않고 모든 물리적 또는 가상 �
 
 ### 실시간 복제, 로드 밸런싱 및 장애 조치를 지원하는 애플리케이션 클러스터링 {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-SafeKit 소프트웨어는 애플리케이션 클러스터링을 위한 두 가지 범용 모듈, 즉 mirror 모듈과 `farm` 모듈을 제공합니다.
+SafeKit 소프트웨어는 애플리케이션 클러스터링을 위한 두 가지 범용 모듈, 즉 mirror 모듈과 <span class="notranslate farm-term" translate="no">farm</span> 모듈을 제공합니다.
 
 [ mirror ](/ko/product/#safekit-mirror-cluster) 모듈은 실시간 파일 복제 및 애플리케이션 장애 조치를 구현합니다. 데이터베이스를 사용하는 애플리케이션에 적합합니다.
 
-[ `farm` ](/ko/product/#safekit-farm-cluster) 모듈은 네트워크 로드 밸런싱 및 애플리케이션 장애 조치를 구현합니다. 웹 서비스를 사용하는 애플리케이션에 적합합니다.
+[ <span class="notranslate farm-term" translate="no">farm</span> ](/ko/product/#safekit-farm-cluster) 모듈은 네트워크 로드 밸런싱 및 애플리케이션 장애 조치를 구현합니다. 웹 서비스를 사용하는 애플리케이션에 적합합니다.
 
 그리고 모듈들을 조합할 수도 있습니다.
 

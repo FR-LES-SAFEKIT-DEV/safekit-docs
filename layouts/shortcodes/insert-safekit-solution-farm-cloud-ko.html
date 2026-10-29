@@ -6,34 +6,34 @@
 
 ## 애플리케이션 수준 모니터링 및 자체 복구로 클라우드 로드 밸런서 강화
 
-{{ .Get "app" }}용 SafeKit `Farm` 클러스터는 클라우드 환경에 최적화된 소프트웨어 정의 고가용성 솔루션입니다. 애플리케이션 노드에서 **심층 모니터링 및 자체 복구**를 직접 수행하여 가용성에 영향을 주기 전에 소프트웨어 장애를 감지하고 로컬에서 해결합니다. **{{ .Get "app" }} 로드 밸런서**와 원활하게 통합되며, 지능형 상태 확인을 통해 완전히 작동하는 노드에만 트래픽을 전달합니다.
+{{ .Get "app" }}용 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터는 클라우드 환경에 최적화된 소프트웨어 정의 고가용성 솔루션입니다. 애플리케이션 노드에서 **심층 모니터링 및 자체 복구**를 직접 수행하여 가용성에 영향을 주기 전에 소프트웨어 장애를 감지하고 로컬에서 해결합니다. **{{ .Get "app" }} 로드 밸런서**와 원활하게 통합되며, 지능형 상태 확인을 통해 완전히 작동하는 노드에만 트래픽을 전달합니다.
 
-### {{ .Get "app" }} 애플리케이션용 SafeKit `Farm` 클러스터의 장점은 무엇인가요?
+### {{ .Get "app" }} 애플리케이션용 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터의 장점은 무엇인가요?
 
   * **{{ .Get "app" }} 로드 밸런서 통합:** {{ .Get "app" }} 로드 밸런서에 정확한 상태 확인을 자동으로 제공하여, 서버 ping만이 아니라 {{ .Get "app" }} 애플리케이션의 실제 상태를 기준으로 트래픽을 전달합니다.
   * **심층 모니터링 및 자체 복구:** 클라우드 인스턴스는 "Running"으로 표시되지만 애플리케이션은 중단된 "좀비" 상태를 감지합니다. SafeKit은 클라우드 로드 밸런서에 페일오버를 알리기 전에 서비스를 로컬에서 자동으로 다시 시작합니다.
-  * **`Farm` 및 Mirror 하이브리드 기능:** `Farm` 클러스터(클라우드 LB를 통해 프런트엔드를 확장)와 Mirror 클러스터(백엔드 데이터를 동기식으로 복제)를 조합하여 {{ .Get "app" }}의 영구 스토리지 문제를 해결합니다.
+  * **<span class="notranslate farm-term" translate="no">Farm</span> 및 Mirror 하이브리드 기능:** <span class="notranslate farm-term" translate="no">Farm</span> 클러스터(클라우드 LB를 통해 프런트엔드를 확장)와 Mirror 클러스터(백엔드 데이터를 동기식으로 복제)를 조합하여 {{ .Get "app" }}의 영구 스토리지 문제를 해결합니다.
   * **Kubernetes 대안:** SafeKit은 Kubernetes 오케스트레이션의 운영 부담과 복잡성 없이 레거시 및 컨테이너화된 애플리케이션에 고가용성을 제공합니다(Kubernetes용으로 설계된 것은 아님).
   * **일관된 배포(온프레미스 또는 클라우드):** [클라우드 로드 밸런서의 가상 IP 구성](/ko/best-practises/how-a-virtual-ip-address-works/)을 제외하면 SafeKit 배포 절차는 온프레미스와 클라우드 환경에서 동일합니다.
 
 
 ![가상 IP, 자동 페일오버, 자동 페일백 및 네트워크 부하 분산을 제공하는 {{ .Get "app" }}용 SafeKit 고가용성 클러스터 아키텍처]({{ .Get "img" }} "w:512")
 
-**{{ .Get "app" }}용 SafeKit `Farm` NLB 클러스터**
+**{{ .Get "app" }}용 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB 클러스터**
 
 <a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }}용 <code>farm</code> 클러스터 빠른 설치 가이드 &gt;</a>
 ## 목차 {#toc}
 
   * [SafeKit 소프트웨어는 {{ .Get "app" }} 네트워크 부하 분산(NLB) 클러스터를 어떻게 간단히 구현하나요?](#safekit-farm-ha-cluster)
-  * [SafeKit `farm` 클러스터는 {{ .Get "app" }}에서 어떻게 작동하나요?](#safekit-farm-cluster)
-  * [비교: 온프레미스 SafeKit `Farm` 클러스터와 클라우드 SafeKit `Farm` 클러스터](#safekit-farm-ha-comparison)
-  * [동영상 가이드: SafeKit `Farm` NLB 클러스터 구성](#videoguide-safekit-farm-cluster)
+  * [SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터는 {{ .Get "app" }}에서 어떻게 작동하나요?](#safekit-farm-cluster)
+  * [비교: 온프레미스 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터와 클라우드 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터](#safekit-farm-ha-comparison)
+  * [동영상 가이드: SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB 클러스터 구성](#videoguide-safekit-farm-cluster)
   * [🔍 SafeKit 고가용성 탐색 허브](#hub)
 
 
 ## SafeKit 소프트웨어는 {{ .Get "app" }} 네트워크 부하 분산(NLB) 클러스터를 어떻게 간단히 구현하나요? {#safekit-farm-ha-cluster}
 
-### {{ .Get "app" }}용 SafeKit `Farm` NLB 솔루션이란 무엇인가요?
+### {{ .Get "app" }}용 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB 솔루션이란 무엇인가요?
 
 SafeKit은 두 개 이상의 노드에서 {{ .Get "app" }} 네트워크 부하 분산과 고가용성을 제공합니다.
 
@@ -63,13 +63,13 @@ SafeKit은 클라우드에 종속되지 않으며 온프레미스 서버와 주�
 
 따라서 업데이트가 서로 다른 도구 간의 취약한 연결을 깨뜨리는 "모래성" 위험을 없애고 HA 스택 전체의 책임을 단일화합니다. 또한 {{ .Get "app" }} 애플리케이션 **고가용성**을 단일 인터페이스에서 제공하여 인적 오류를 줄입니다.
 
-### 클러스터링 기술이 없어도 {{ .Get "app" }} `farm` 클러스터를 설정할 수 있나요?
+### 클러스터링 기술이 없어도 {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 클러스터를 설정할 수 있나요?
 
-예. 이 문서에서는 전문적이고 복잡한 클러스터링 기술 없이 {{ .Get "app" }} `farm` 클러스터를 [빠르게 구현하는 방법]({{ .Get "guide" }})을 설명합니다. SafeKit 상태 확인으로 가상 IP 부하 분산, 애플리케이션 모니터링 및 재시작을 처리하므로 기존 NLB 클러스터 솔루션보다 배포와 유지 관리가 훨씬 쉬운 견고하고 확장 가능한 솔루션을 제공합니다.
+예. 이 문서에서는 전문적이고 복잡한 클러스터링 기술 없이 {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 클러스터를 [빠르게 구현하는 방법]({{ .Get "guide" }})을 설명합니다. SafeKit 상태 확인으로 가상 IP 부하 분산, 애플리케이션 모니터링 및 재시작을 처리하므로 기존 NLB 클러스터 솔루션보다 배포와 유지 관리가 훨씬 쉬운 견고하고 확장 가능한 솔루션을 제공합니다.
 
 ### {{ .Get "app" }} 외에 SafeKit은 어떤 애플리케이션과 환경을 보호할 수 있나요?
 
-SafeKit은 **Windows와 Linux 모두**를 지원하는 유연한 고가용성 솔루션으로 {{ .Get "app" }} `farm` 클러스터에 국한되지 않습니다. **동기식 실시간 복제**와 자동 페일오버를 제공하는 Mirror 클러스터를 통해 다음과 같은 다양한 중요 워크로드를 보호합니다.
+SafeKit은 **Windows와 Linux 모두**를 지원하는 유연한 고가용성 솔루션으로 {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 클러스터에 국한되지 않습니다. **동기식 실시간 복제**와 자동 페일오버를 제공하는 Mirror 클러스터를 통해 다음과 같은 다양한 중요 워크로드를 보호합니다.
 
   * **가상 및 물리 환경:** 전체 Hyper-V 또는 KVM 가상 머신.
   * **컨테이너 오케스트레이션:** Docker, Podman 및 K3s(Kubernetes) 환경.
@@ -79,12 +79,12 @@ SafeKit은 **Windows와 Linux 모두**를 지원하는 유연한 고가용성 �
 
 💡 [지원되는 HA 솔루션 전체 목록을 확인하세요.](/ko/solutions/)
 
-## SafeKit `farm` 클러스터는 {{ .Get "app" }}에서 어떻게 작동하나요? {#safekit-farm-cluster}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터는 {{ .Get "app" }}에서 어떻게 작동하나요? {#safekit-farm-cluster}
 
 ### {{ .Get "app" }} 네트워크 부하 분산(NLB)은 어떻게 작동하나요?
 
   * **Multi-AZ 배포:** 데이터 센터 장애에 대한 복원력을 극대화하기 위해 노드를 여러 가용 영역에 분산합니다.
-  * **액티브-액티브 이중화:** 중요한 {{ .Get "app" }} 애플리케이션이 `farm`의 모든 노드에서 동시에 실행됩니다.
+  * **액티브-액티브 이중화:** 중요한 {{ .Get "app" }} 애플리케이션이 <span class="notranslate farm-term" translate="no">farm</span>의 모든 노드에서 동시에 실행됩니다.
   * **지능형 트래픽 라우팅:** 사용자는 {{ .Get "app" }} 로드 밸런서가 관리하는 [가상 IP 주소](/ko/best-practises/how-a-virtual-ip-address-works/)로 연결합니다.
   * **실시간 상태 모니터링:** 로드 밸런서는 SafeKit 상태 확인 URL을 사용합니다. 노드가 정상이면 SafeKit은 **HTTP 200 OK**, 장애 시에는 **HTTP 404**(또는 시간 초과)를 반환하여 작동 중인 노드에만 트래픽을 자동으로 전달합니다.
 
@@ -97,7 +97,7 @@ SafeKit은 **Windows와 Linux 모두**를 지원하는 유연한 고가용성 �
   * **간소화된 유지 관리:** 각 노드에는 SafeKit 웹 콘솔 커넥터가 포함되어 있어 하드웨어 또는 소프트웨어 유지 관리를 위해 노드를 클러스터에서 수동으로 제외하는 원클릭 인터페이스를 제공합니다.
 
 
-![Multi-AZ 이중화를 갖춘 {{ .Get "app" }}용 SafeKit `farm` 클러스터 다이어그램. 로드 밸런서는 HTTP 상태 확인으로 활성 노드 사이에 트래픽을 전달하고 자동 페일오버를 처리합니다.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
+![Multi-AZ 이중화를 갖춘 {{ .Get "app" }}용 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터 다이어그램. 로드 밸런서는 HTTP 상태 확인으로 활성 노드 사이에 트래픽을 전달하고 자동 페일오버를 처리합니다.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
 
 **{{ .Get "app" }}용 SafeKit NLB 및 HA 아키텍처**
 
@@ -107,46 +107,46 @@ SafeKit은 **Windows와 Linux 모두**를 지원하는 유연한 고가용성 �
 
 #### 상태 저장 구성(세션 고정)
 
-**상태 저장** {{ .Get "app" }} 애플리케이션에는 세션 고정(지속성)이 필요합니다. 이를 통해 특정 클라이언트가 여러 TCP 세션 동안 같은 노드에 연결되어 애플리케이션 컨텍스트를 유지합니다. 이때 로드 밸런서 규칙은 **클라이언트 IP 주소**를 기준으로 합니다. 개별 클라이언트는 특정 노드에 고정되고, 서로 다른 클라이언트의 트래픽은 `farm`의 여러 노드에 분산됩니다.
+**상태 저장** {{ .Get "app" }} 애플리케이션에는 세션 고정(지속성)이 필요합니다. 이를 통해 특정 클라이언트가 여러 TCP 세션 동안 같은 노드에 연결되어 애플리케이션 컨텍스트를 유지합니다. 이때 로드 밸런서 규칙은 **클라이언트 IP 주소**를 기준으로 합니다. 개별 클라이언트는 특정 노드에 고정되고, 서로 다른 클라이언트의 트래픽은 <span class="notranslate farm-term" translate="no">farm</span>의 여러 노드에 분산됩니다.
 
 #### 상태 비저장 구성(고정 없음)
 
-반대로 **상태 비저장** {{ .Get "app" }} 애플리케이션에는 세션 고정이 필요하지 않습니다. 세션 사이에 노드에 로컬 컨텍스트를 저장하지 않으므로 새 TCP 세션마다 하나의 클라이언트를 서로 다른 노드로 분산할 수 있습니다. 이 경우 규칙은 **TCP 세션 ID**를 기준으로 합니다. `farm` 전체에 트래픽을 가장 효율적으로 분산하지만 세션 종속성이 없는 서비스에만 적용됩니다.
+반대로 **상태 비저장** {{ .Get "app" }} 애플리케이션에는 세션 고정이 필요하지 않습니다. 세션 사이에 노드에 로컬 컨텍스트를 저장하지 않으므로 새 TCP 세션마다 하나의 클라이언트를 서로 다른 노드로 분산할 수 있습니다. 이 경우 규칙은 **TCP 세션 ID**를 기준으로 합니다. <span class="notranslate farm-term" translate="no">farm</span> 전체에 트래픽을 가장 효율적으로 분산하지만 세션 종속성이 없는 서비스에만 적용됩니다.
 
-### {{ .Get "app" }}에서 SafeKit `farm` 클러스터를 구성하는 방법 {#safekit-farm-cluster-configuration}
-
-
-![SafeKit 웹 콘솔: 네트워크 부하 분산 및 가상 IP 관리를 위한 `Farm` 클러스터 구성.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+### {{ .Get "app" }}에서 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터를 구성하는 방법 {#safekit-farm-cluster-configuration}
 
 
-SafeKit **`farm` 클러스터**는 서비스의 고가용성과 확장성을 위해 설계되었습니다. 구성은 두 노드에 들어오는 트래픽을 동시에 분산하는 데 중점을 둡니다.
+![SafeKit 웹 콘솔: 네트워크 부하 분산 및 가상 IP 관리를 위한 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 구성.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+
+
+SafeKit **<span class="notranslate farm-term" translate="no">farm</span> 클러스터**는 서비스의 고가용성과 확장성을 위해 설계되었습니다. 구성은 두 노드에 들어오는 트래픽을 동시에 분산하는 데 중점을 둡니다.
 
   * **부하 분산 서비스(Macros 탭):** 모든 노드에서 활성 상태를 유지할 애플리케이션 서비스(예: Apache, IIS, Nginx)를 정의합니다.
-  * **하트비트 네트워크:** 노드가 `farm`을 떠났는지 감지하는 통신 경로입니다.
-  * **가상 IP(`Farm` VIP):** 온프레미스 배포에서는 SafeKit 웹 콘솔에서 VIP를 직접 구성합니다. 클라우드 배포에서는 SafeKit 상태 확인을 사용하는 클라우드 로드 밸런서에 가상 IP를 구성합니다.
+  * **하트비트 네트워크:** 노드가 <span class="notranslate farm-term" translate="no">farm</span>을 떠났는지 감지하는 통신 경로입니다.
+  * **가상 IP(<span class="notranslate farm-term" translate="no">Farm</span> VIP):** 온프레미스 배포에서는 SafeKit 웹 콘솔에서 VIP를 직접 구성합니다. 클라우드 배포에서는 SafeKit 상태 확인을 사용하는 클라우드 로드 밸런서에 가상 IP를 구성합니다.
   * **부하 분산 규칙:** 온프레미스에서는 SafeKit 웹 콘솔에서 원본 IP 주소 또는 포트 기준으로 트래픽 분산 정책을 구성합니다. 클라우드에서는 클라우드 로드 밸런서에서 정책을 구성합니다.
   * **검사기:** 애플리케이션 상태를 모니터링하고 프로세스 장애가 감지되면 자동 재시작을 실행합니다.
 
 
-### {{ .Get "app" }}에서 SafeKit `farm` 클러스터를 모니터링하는 방법 {#safekit-farm-cluster-monitoring}
+### {{ .Get "app" }}에서 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터를 모니터링하는 방법 {#safekit-farm-cluster-monitoring}
 
 
-![SafeKit 콘솔: 두 노드가 모두 UP 상태이고 부하 분산이 활성화된 2노드 `Farm` 클러스터 모니터링.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+![SafeKit 콘솔: 두 노드가 모두 UP 상태이고 부하 분산이 활성화된 2노드 <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 모니터링.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-`farm` 클러스터 모니터링을 통해 모든 노드가 애플리케이션 성능에 기여하는 **액티브-액티브** 인프라를 확인할 수 있습니다(이 예에서는 2개 노드를 표시).
+<span class="notranslate farm-term" translate="no">farm</span> 클러스터 모니터링을 통해 모든 노드가 애플리케이션 성능에 기여하는 **액티브-액티브** 인프라를 확인할 수 있습니다(이 예에서는 2개 노드를 표시).
 
-  * **UP 상태(2개 노드에서 50%):** 정상적인 `farm`에서는 두 노드 모두 "UP"(50%) 상태이며 공유 가상 IP를 통해 클라이언트 요청을 활발하게 수신하고 처리합니다.
+  * **UP 상태(2개 노드에서 50%):** 정상적인 <span class="notranslate farm-term" translate="no">farm</span>에서는 두 노드 모두 "UP"(50%) 상태이며 공유 가상 IP를 통해 클라이언트 요청을 활발하게 수신하고 처리합니다.
   * **자동 재분배:** 한 노드에 장애가 발생하면 남은 노드가 트래픽의 100%를 처리하는 모습이 콘솔에 표시됩니다. 페일오버 지연은 클라우드 로드 밸런서의 상태 확인 폴링 간격에 따라 달라집니다.
   * **노드 추가:** 복구된 노드를 다시 시작하면 "STOP"에서 "UP"으로 전환되고 관리자의 개입 없이 트래픽 일부를 자동으로 받기 시작합니다.
-  * **데이터 동기화 없음:** `farm` 클러스터에는 "Orange" 재동기화 상태가 없습니다. 노드는 상태 비저장이거나 백엔드 데이터베이스를 공유하는 것으로 간주하며, 해당 데이터베이스는 Mirror 클러스터에서 별도로 보호할 수 있습니다.
+  * **데이터 동기화 없음:** <span class="notranslate farm-term" translate="no">farm</span> 클러스터에는 "Orange" 재동기화 상태가 없습니다. 노드는 상태 비저장이거나 백엔드 데이터베이스를 공유하는 것으로 간주하며, 해당 데이터베이스는 Mirror 클러스터에서 별도로 보호할 수 있습니다.
 
 
 단순 상태 아이콘 외에도 인터페이스에서 원클릭 노드 관리를 제공합니다. 계획된 유지 관리를 위해 노드를 수동으로 중지하거나 시작해도 공유 가상 IP가 사용자 활동을 중단하지 않고 트래픽을 자동으로 재분배합니다.
 
-## 비교: 온프레미스 SafeKit `Farm` 클러스터와 클라우드 SafeKit `Farm` 클러스터 {#safekit-farm-ha-comparison}
+## 비교: 온프레미스 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터와 클라우드 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 {#safekit-farm-ha-comparison}
 
-**온프레미스 및 클라우드 SafeKit `Farm` 클러스터 기술 비교**
+**온프레미스 및 클라우드 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 기술 비교**
 
 기능 | SafeKit 온프레미스(물리/VM) | SafeKit 클라우드
 ---|---|---
@@ -159,7 +159,7 @@ SafeKit **`farm` 클러스터**는 서비스의 고가용성과 확장성을 위
 
 **요약하면**, 온프레미스와 클라우드 어디서나 SafeKit은 단일 통합 인터페이스를 통해 중요 애플리케이션의 복원력과 확장성을 보장하고 관리를 간소화합니다. 소프트웨어 공급업체에게 **소프트웨어만으로 작동하는 SafeKit**은 제품 카탈로그에 고가용성 옵션을 추가하기에 최적의 선택입니다. 하드웨어 종속 또는 특정 클라우드 전용 솔루션과 달리 SafeKit은 100% 독립적이며 온프레미스, 가상화 환경, 퍼블릭 클라우드 전반에 일관된 HA 경험을 제공합니다.
 
-## 동영상 가이드: SafeKit `Farm` NLB 클러스터 구성 {#videoguide-safekit-farm-cluster}
+## 동영상 가이드: SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB 클러스터 구성 {#videoguide-safekit-farm-cluster}
 
 ### SafeKit 동영상: 네트워크 부하 분산 및 가상 IP 관리(5:03) {#demo-farm}
 

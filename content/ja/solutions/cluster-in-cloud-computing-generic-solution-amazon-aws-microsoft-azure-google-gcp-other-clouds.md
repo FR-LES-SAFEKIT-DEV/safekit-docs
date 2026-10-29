@@ -17,7 +17,7 @@ topics: "SafeKit Microsoft Azureで発見、 SafeKitを Google GCPで発見、 S
 
 [汎用クラウドMirror > ](</ja/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[汎用クラウド`Farm` > ](</ja/solutions/cloud-load-balancing-cluster-failover/>)
+[汎用クラウド<span class="notranslate farm-term" translate="no">Farm</span> > ](</ja/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-ja  %}}

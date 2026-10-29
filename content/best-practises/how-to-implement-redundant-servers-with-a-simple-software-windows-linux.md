@@ -21,13 +21,13 @@ In a mirror cluster, the SafeKit software is installed on two physical or virtua
 
 ## How to implement active/active redundant servers with network load balancing and failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### The SafeKit `farm` cluster {#the-safekit-farm-cluster}
+### The SafeKit <span class="notranslate farm-term" translate="no">farm</span> cluster {#the-safekit-farm-cluster}
 
 
 ![Redundant servers with network load balancing and failover](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-In a `farm` cluster, the SafeKit software is installed on redundant servers running Windows or Linux (on premise or in the Cloud). All redundant servers are active and run a same critical front-end application. Clients are connected to a [virtual IP address](</best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). TCP sessions are load balanced between all redundant servers . If one server is down, SafeKit automatically reconfigures load balancing of TCP sessions between the remaining active servers. When the failed server is restarted, it is automatically reintegrated as an active redundant server and receives new TCP sessions.
+In a <span class="notranslate farm-term" translate="no">farm</span> cluster, the SafeKit software is installed on redundant servers running Windows or Linux (on premise or in the Cloud). All redundant servers are active and run a same critical front-end application. Clients are connected to a [virtual IP address](</best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). TCP sessions are load balanced between all redundant servers . If one server is down, SafeKit automatically reconfigures load balancing of TCP sessions between the remaining active servers. When the failed server is restarted, it is automatically reintegrated as an active redundant server and receives new TCP sessions.
 
 
 {{%  insert-safekit-hub-en  %}}

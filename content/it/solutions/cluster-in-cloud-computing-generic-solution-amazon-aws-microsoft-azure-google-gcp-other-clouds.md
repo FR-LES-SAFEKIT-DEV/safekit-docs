@@ -17,7 +17,7 @@ topics: "Scopri SafeKit in Microsoft Azure , Scopri SafeKit in Google GCP , Scop
 
 [ Cloud generico Mirror > ](</it/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ Cloud generico `Farm` > ](</it/solutions/cloud-load-balancing-cluster-failover/>)
+[ Cloud generico <span class="notranslate farm-term" translate="no">Farm</span> > ](</it/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-it  %}}

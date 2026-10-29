@@ -27,7 +27,7 @@ There are two types of [high availability](<https://www.techtarget.com/it-infras
 
 High availability architectures for backend are based on 2 servers sharing or replicating data with an automatic application failover in the event of hardware of software failures.
 
-High availability architectures for frontend are based on a `farm` of servers (2 servers or more). The load balancing is made by hardware or software and distributes the TCP sessions to the available servers in the farm.
+High availability architectures for frontend are based on a <span class="notranslate farm-term" translate="no">farm</span> of servers (2 servers or more). The load balancing is made by hardware or software and distributes the TCP sessions to the available servers in the farm.
 
 Moreover, you have to choose between high availability at the application level or at the virtual machine level.
 

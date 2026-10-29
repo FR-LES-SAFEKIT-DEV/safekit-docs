@@ -21,9 +21,9 @@ topics: "借助SafeKit集群软件，实现关键 Web 和数据库应用程序�
 
 例如，使用SafeKit集群软件，您可以实现IIS负载均衡和Microsoft SQL Server镜像。
 
-为此，您需要为IIS SQL 服务器部署`farm`模块，为Microsoft SQL 服务器部署mirror模块。每个`farm`和mirror模块都配置有自己的虚拟 IP 地址和重启脚本。
+为此，您需要为IIS SQL 服务器部署<span class="notranslate farm-term" translate="no">farm</span>模块，为Microsoft SQL 服务器部署mirror模块。每个<span class="notranslate farm-term" translate="no">farm</span>和mirror模块都配置有自己的虚拟 IP 地址和重启脚本。
 
-两个都 mirror 和 `farm` 模块可以部署在由两台服务器组成的单个集群上。 IIS 和 Microsoft SQL Server 将在这两台服务器上运行。或者，这两个模块可以部署在两个不同的集群上，每个集群使用不同的服务器。
+两个都 mirror 和 <span class="notranslate farm-term" translate="no">farm</span> 模块可以部署在由两台服务器组成的单个集群上。 IIS 和 Microsoft SQL Server 将在这两台服务器上运行。或者，这两个模块可以部署在两个不同的集群上，每个集群使用不同的服务器。
 
 使用SafeKit集群软件，部署在同一台服务器上还是部署在不同服务器上没有任何区别。
 

@@ -4,36 +4,36 @@
 
 
 
-## Het SafeKit-`Farm`-cluster: uitsluitend softwarematige NLB en automatische failover voor {{ .Get "app" }} {#safekit-farm-cluster-overview}
+## Het SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster: uitsluitend softwarematige NLB en automatische failover voor {{ .Get "app" }} {#safekit-farm-cluster-overview}
 
-Een SafeKit-`Farm`-cluster voor {{ .Get "app" }} is een softwaregedefinieerde oplossing voor Network Load Balancing (NLB), ontworpen voor schaalbare applicatieomgevingen. De oplossing biedt geïntegreerde **load balancing en failover rechtstreeks op applicatieservers**, zodat speciale hardwarematige load balancers, proxyservers en complexe multicastconfiguraties overbodig zijn.
+Een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster voor {{ .Get "app" }} is een softwaregedefinieerde oplossing voor Network Load Balancing (NLB), ontworpen voor schaalbare applicatieomgevingen. De oplossing biedt geïntegreerde **load balancing en failover rechtstreeks op applicatieservers**, zodat speciale hardwarematige load balancers, proxyservers en complexe multicastconfiguraties overbodig zijn.
 
-### Wat zijn de voordelen van een SafeKit-`Farm`-cluster voor {{ .Get "app" }}? {#safekit-farm-cluster-advantages}
+### Wat zijn de voordelen van een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster voor {{ .Get "app" }}? {#safekit-farm-cluster-advantages}
 
   * **Alles-in-één-software:** Combineert een virtueel IP-adres, load balancing en automatische failover/failback in één softwarepakket.
   * **Geen speciale hardware:** Vervangt dure hardwarematige load balancers door een volledig softwarematige oplossing voor Windows of Linux, die door systeembeheerders in plaats van netwerkengineers kan worden beheerd.
   * **Diepgaande bewaking en zelfherstel:** Gebruikt checkers op applicatieniveau om specifieke applicatieprocessen te bewaken en crashes te detecteren, zelfs als de server nog actief is. Zo nodig wordt vervolgens automatisch de service opnieuw gestart of failover geactiveerd.
-  * **Hybride `Farm`- en Mirror-functionaliteit:** Maakt het mogelijk een `Farm`-cluster (voor load balancing van front-ends) te combineren met een Mirror-cluster (voor synchrone gegevensreplicatie van back-ends).
+  * **Hybride <span class="notranslate farm-term" translate="no">Farm</span>- en Mirror-functionaliteit:** Maakt het mogelijk een <span class="notranslate farm-term" translate="no">Farm</span>-cluster (voor load balancing van front-ends) te combineren met een Mirror-cluster (voor synchrone gegevensreplicatie van back-ends).
   * **Hoge beschikbaarheid voor OEM's:** Hiermee kunnen softwareleveranciers native clustering in hun applicaties integreren en zonder extra infrastructuur een softwarematig product leveren dat klaar is voor clustering.
 
 
 ![SafeKit-clusterarchitectuur voor hoge beschikbaarheid van {{ .Get "app" }}, met virtueel IP-adres, automatische failover en failback en Network Load Balancing]({{ .Get "img" }} "w:512")
 
-**SafeKit-`Farm`-NLB-cluster voor {{ .Get "app" }}**
+**SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-cluster voor {{ .Get "app" }}**
 
 <a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Snelstartgids voor de clusterinstallatie van {{ .Get "app" }} &gt;</a>
 ## Inhoudsopgave {#toc}
 
   * [Hoe implementeert de SafeKit-software eenvoudig een Network-Load-Balancing-cluster (NLB) voor {{ .Get "app" }}?](#safekit-farm-ha-cluster)
-  * [Hoe werkt het SafeKit-`farm`-cluster met {{ .Get "app" }}?](#safekit-farm-cluster)
-  * [Vergelijking: SafeKit-`Farm`-cluster voor {{ .Get "app" }} versus andere NLB-clusteroplossingen](#safekit-farm-ha-comparison)
-  * [Videogids: een SafeKit-`Farm`-NLB-cluster configureren](#videoguide-safekit-farm-cluster)
+  * [Hoe werkt het SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-cluster met {{ .Get "app" }}?](#safekit-farm-cluster)
+  * [Vergelijking: SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster voor {{ .Get "app" }} versus andere NLB-clusteroplossingen](#safekit-farm-ha-comparison)
+  * [Videogids: een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-cluster configureren](#videoguide-safekit-farm-cluster)
   * [🔍 SafeKit-navigatiecentrum voor hoge beschikbaarheid](#hub)
 
 
 ## Hoe implementeert de SafeKit-software eenvoudig een Network-Load-Balancing-cluster (NLB) voor {{ .Get "app" }}? {#safekit-farm-ha-cluster}
 
-### Wat is de SafeKit-`Farm`-NLB-oplossing voor {{ .Get "app" }}? {#safekit-farm-nlb-solution}
+### Wat is de SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-oplossing voor {{ .Get "app" }}? {#safekit-farm-nlb-solution}
 
 SafeKit biedt netwerkbelastingverdeling en hoge beschikbaarheid voor {{ .Get "app" }} op twee of meer servers.
 
@@ -66,9 +66,9 @@ Standaard NLB-hardware is afhankelijk van eenvoudige **pings** en poortcontroles
 
 Dankzij deze diepgaande bewaking kan het systeem 'zombie'-toestanden detecteren — de server draait dan nog, maar de software is vastgelopen — en **services automatisch opnieuw starten** of verkeer omleiden, iets wat standaard NLB-oplossingen niet kunnen.
 
-### Is het mogelijk een {{ .Get "app" }}-`farm`-cluster in te stellen zonder clusteringkennis? {#farm-cluster-without-clustering-skills}
+### Is het mogelijk een {{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-cluster in te stellen zonder clusteringkennis? {#farm-cluster-without-clustering-skills}
 
-Ja. Dit artikel legt uit hoe u [snel een {{ .Get "app" }}-`farm`-cluster implementeert]({{ .Get "guide" }}) zonder gespecialiseerde en complexe netwerkvaardigheden. Met het **virtuele IP-adres** van SafeKit voor load balancing van **{{ .Get "app" }}** krijgt u een robuuste, schaalbare oplossing die aanzienlijk eenvoudiger te implementeren en te onderhouden is dan traditionele NLB-oplossingen.
+Ja. Dit artikel legt uit hoe u [snel een {{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-cluster implementeert]({{ .Get "guide" }}) zonder gespecialiseerde en complexe netwerkvaardigheden. Met het **virtuele IP-adres** van SafeKit voor load balancing van **{{ .Get "app" }}** krijgt u een robuuste, schaalbare oplossing die aanzienlijk eenvoudiger te implementeren en te onderhouden is dan traditionele NLB-oplossingen.
 
 ### Welke toepassingen en omgevingen kan SafeKit naast {{ .Get "app" }} beschermen? {#supported-applications-and-environments}
 
@@ -86,9 +86,9 @@ SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **voor zowel Wind
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-farm-nl app=%q  %%}}" (.Get "app")) }}
 
 
-## Vergelijking: SafeKit-`Farm`-cluster voor {{ .Get "app" }} versus andere NLB-clusteroplossingen {#safekit-farm-ha-comparison}
+## Vergelijking: SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster voor {{ .Get "app" }} versus andere NLB-clusteroplossingen {#safekit-farm-ha-comparison}
 
-Kenmerk | SafeKit-`Farm`-cluster (software) | Hardwarematige load balancers
+Kenmerk | SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster (software) | Hardwarematige load balancers
 ---|---|---
 Architectuur | Software op kernelniveau: native integratie in Windows en Linux. | Eigen hardware: speciale fysieke apparaten.
 Beheer | Systeembeheerders: beheer via een eenvoudige webconsole; geen netwerkopleiding vereist. | Netwerkengineers: gespecialiseerde vaardigheden en CLI-certificeringen vereist.
@@ -97,9 +97,9 @@ Zelfherstel | Ingebouwde herstartintelligentie: start uitgevallen services autom
 Infrastructuur | Platformonafhankelijk: werkt op fysieke, virtuele (VMware, Hyper-V) of cloudinstanties. | Star: vereist specifieke fysieke bekabeling en ruimte in een netwerkrek.
 Kosten (TCO) | Lage CAPEX/OPEX: gebruikt bestaande serverbronnen en vereist geen duur hardwareonderhoud. | Hoge investering: hoge aanschafkosten plus terugkerende licentie- en energiekosten.
 
-**Samengevat** vormt het **SafeKit-`Farm`-cluster** een strategische evolutie van traditionele, hardware-intensieve netwerken naar een modern model van **softwaregedefinieerde hoge beschikbaarheid**. Door load balancing en zelfherstellende intelligentie rechtstreeks in applicatieservers te integreren, elimineert SafeKit de kosten en complexiteit van externe hardware die als tussenpersoon fungeert.
+**Samengevat** vormt het **SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster** een strategische evolutie van traditionele, hardware-intensieve netwerken naar een modern model van **softwaregedefinieerde hoge beschikbaarheid**. Door load balancing en zelfherstellende intelligentie rechtstreeks in applicatieservers te integreren, elimineert SafeKit de kosten en complexiteit van externe hardware die als tussenpersoon fungeert.
 
-## Videogids: een SafeKit-`Farm`-NLB-cluster configureren {#videoguide-safekit-farm-cluster}
+## Videogids: een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-cluster configureren {#videoguide-safekit-farm-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-farm-video-nl  %}}" }}

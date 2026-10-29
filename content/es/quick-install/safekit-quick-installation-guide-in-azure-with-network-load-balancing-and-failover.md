@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Mejore el equilibrio de carga de red de Azure con la supervisión inteligente de aplicaciones de SafeKit. El módulo farm.safe proporciona una comprobación de estado dedicada para el equilibrador de carga de Azure y permite alta disponibilidad a nivel de aplicación, autorrecuperación y conmutación por error automática para aplicaciones críticas."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para Azure, Limitaciones de alta disponibilidad de SafeKit, Descripción general de la solución SafeKit / Azure, Instalación de la solución SafeKit / Azure en Windows y Linux (farm.safe), Configuración paso a paso de la solución SafeKit / Azure, Demostración de la solución `farm` de SafeKit, 🔍 Centro de navegación de alta disponibilidad de SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para Azure, Limitaciones de alta disponibilidad de SafeKit, Descripción general de la solución SafeKit / Azure, Instalación de la solución SafeKit / Azure en Windows y Linux (farm.safe), Configuración paso a paso de la solución SafeKit / Azure, Demostración de la solución <span class="notranslate farm-term" translate="no">farm</span> de SafeKit, 🔍 Centro de navegación de alta disponibilidad de SafeKit"
 ---
 
 # Equilibrio de carga de red y conmutación por error en Azure: instalar el módulo farm.safe de SafeKit {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -13,7 +13,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para Azure, Limita
 
 ## Descripción general de la solución SafeKit / Azure {#overview-of-the-safekit--azure-solution}
 
-La solución se describe aquí: **💡[SafeKit: equilibrio de carga de Microsoft Azure y alta disponibilidad de aplicaciones con un clúster `Farm`](</es/solutions/azure-load-balancing-cluster-failover/>)**.
+La solución se describe aquí: **💡[SafeKit: equilibrio de carga de Microsoft Azure y alta disponibilidad de aplicaciones con un clúster <span class="notranslate farm-term" translate="no">Farm</span>](</es/solutions/azure-load-balancing-cluster-failover/>)**.
 
 ## Instalación de la solución SafeKit / Azure en Windows y Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
 
@@ -23,14 +23,14 @@ El equilibrador de carga debe configurarse con una dirección IP virtual.
 Además, debe enviar periódicamente paquetes de comprobación de estado a los nodos.
 Para ello, SafeKit proporciona una comprobación de estado que se ejecuta en los nodos y que:
 
-  * devuelve OK cuando el estado del módulo `farm` es UP (verde)
+  * devuelve OK cuando el estado del módulo <span class="notranslate farm-term" translate="no">farm</span> es UP (verde)
   * devuelve NOT FOUND en todos los demás estados
 
 Debe configurar el equilibrador de carga de Microsoft Azure con:
 
   * protocolo HTTP
   * puerto 9010, el puerto del servidor web de SafeKit
-  * URL /var/modules/farm/ready.txt (si `farm` es el nombre del módulo que implementará posteriormente)
+  * URL /var/modules/farm/ready.txt (si <span class="notranslate farm-term" translate="no">farm</span> es el nombre del módulo que implementará posteriormente)
 
 Para obtener más información, consulte [la configuración del equilibrador de carga de Microsoft Azure](<https://learn.microsoft.com/en-us/azure/load-balancer/>).
 
@@ -41,7 +41,7 @@ Para obtener más información, consulte [la configuración del equilibrador de 
 Debe configurarse la seguridad de red para permitir las comunicaciones mediante los siguientes protocolos y puertos:
 
   * UDP - 4800 para el servicio safeadmin (entre nodos SafeKit)
-  * UDP - 4803 para los latidos dentro del módulo `farm` (entre nodos SafeKit)
+  * UDP - 4803 para los latidos dentro del módulo <span class="notranslate farm-term" translate="no">farm</span> (entre nodos SafeKit)
   * TCP – 9010 para la comprobación de estado del equilibrador de carga y la consola web de SafeKit en modo http
   * TCP – 9001 para configurar el modo https de la consola
   * TCP – 9453 para la consola web de SafeKit en modo https
@@ -56,7 +56,7 @@ Nota: el módulo genérico **farm.safe** que va a configurar se incluye en el pa
 
 {{%  insert-safekit-82-farm-configuration-es app="" mod="farm"  %}}
 
-## Demostración de la solución `farm` de SafeKit {#demonstration-of-the-safekit-farm-solution}
+## Demostración de la solución <span class="notranslate farm-term" translate="no">farm</span> de SafeKit {#demonstration-of-the-safekit-farm-solution}
 
 {{%  insert-safekit-farm-video-es  %}}
 

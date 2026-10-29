@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/network-load-balancing-c
 description: "يُقدّم SafeKit موازنة تحميل الشبكة عالية الأداء (NLB) والتحويل التلقائي في حالة الأعطال ضمن حزمة برمجية واحدة. استبدل موازنات الأجهزة باهظة الثمن ببرنامج SafeKit الذي يُوفّر إدارة عناوين IP الافتراضية على مستوى النواة لبرامج Windows و Linux . يُعدّ هذا البرنامج مثاليًا للتكامل مع مُصنّعي المعدات الأصلية (OEM) وإدارة المجموعات المُبسّطة."
 category: "architectures"
 lang: "ar"
-topics: "مجموعة SafeKit `Farm` : موازنة تحميل الشبكة (NLB) البرمجية فقط والتحويل التلقائي في حالة الفشل لـ Windows / Linux ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة موازنة تحميل الشبكة (NLB) Windows / Linux ؟، كيف تعمل مجموعة SafeKit في وضع `farm` مع Windows / Linux ؟، مقارنة: مجموعة SafeKit `Farm` لـ Windows / Linux مقابل حلول تجميع NLB الأخرى، دليل فيديو: تكوين NLB SafeKit `Farm` مجموعة، 🔍 SafeKit مركز الملاحة عالي التوفر"
+topics: "مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> : موازنة تحميل الشبكة (NLB) البرمجية فقط والتحويل التلقائي في حالة الفشل لـ Windows / Linux ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة موازنة تحميل الشبكة (NLB) Windows / Linux ؟، كيف تعمل مجموعة SafeKit في وضع <span class="notranslate farm-term" translate="no">farm</span> مع Windows / Linux ؟، مقارنة: مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> لـ Windows / Linux مقابل حلول تجميع NLB الأخرى، دليل فيديو: تكوين NLB SafeKit <span class="notranslate farm-term" translate="no">Farm</span> مجموعة، 🔍 SafeKit مركز الملاحة عالي التوفر"
 ---
 
 # SafeKit : برنامج متكامل لموازنة أحمال الشبكة وتوفير التوافر العالي Windows أو Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}

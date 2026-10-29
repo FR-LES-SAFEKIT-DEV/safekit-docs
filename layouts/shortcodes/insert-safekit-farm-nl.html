@@ -4,9 +4,9 @@
 
 
 
-## Hoe werkt het SafeKit-cluster in de modus `farm` met {{ .Get "app" }}? {#safekit-farm-cluster}
+## Hoe werkt het SafeKit-cluster in de modus <span class="notranslate farm-term" translate="no">farm</span> met {{ .Get "app" }}? {#safekit-farm-cluster}
 
-### Virtueel IP-adres in een cluster in de modus `farm` {#virtual-ip-address-farm}
+### Virtueel IP-adres in een cluster in de modus <span class="notranslate farm-term" translate="no">farm</span> {#virtual-ip-address-farm}
 
 
 ![Hoe het SafeKit-cluster netwerkloadbalancing en failover voor {{ .Get "app" }} implementeert in de modus farm](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -14,7 +14,7 @@
 
 In de vorige afbeelding draait de applicatie {{ .Get "app" }} op 3 servers (3 is een voorbeeld, dit kunnen er 2 of meer zijn). Gebruikers zijn verbonden met een virtueel IP-adres.
 
-Het [virtuele IP-adres](/nl/best-practises/how-a-virtual-ip-address-works/) is lokaal geconfigureerd op elke server in het cluster in de modus `farm`.\
+Het [virtuele IP-adres](/nl/best-practises/how-a-virtual-ip-address-works/) is lokaal geconfigureerd op elke server in het cluster in de modus <span class="notranslate farm-term" translate="no">farm</span>.\
 Alle servers ontvangen het inkomende verkeer naar het virtuele IP-adres. Een netwerkfilter in de kernel van elke server verdeelt het verkeer over de servers.
 
 SafeKit detecteert hardware- en softwarefouten, herconfigureert netwerkfilters bij een storing en biedt configureerbare applicatiecheckers en herstelscripts.
@@ -25,41 +25,41 @@ Het algoritme voor netwerkloadbalancing in het netwerkfilter is gebaseerd op de 
 
 Zodra een pakket door het filter op een server is geaccepteerd, gebruikt de {{ .Get "app" }}-applicatie die op het verzoek van de client reageert alleen de CPU en het geheugen van die server. De uitgaande berichten worden rechtstreeks van de applicatieserver naar de client verzonden.
 
-Als een server uitvalt, herconfigureert het `farm`-heartbeatprotocol de filters in het netwerkloadbalancingcluster om het verkeer opnieuw te verdelen over de resterende beschikbare servers.
+Als een server uitvalt, herconfigureert het <span class="notranslate farm-term" translate="no">farm</span>-heartbeatprotocol de filters in het netwerkloadbalancingcluster om het verkeer opnieuw te verdelen over de resterende beschikbare servers.
 
 ### Stateful- of statelessapplicaties {#stateful-stateless}
 
-Bij een stateful {{ .Get "app" }}-applicatie is er sprake van sessie-affiniteit. Dezelfde client moet via meerdere TCP-sessies met dezelfde server verbonden zijn om zijn context op de server op te halen. In dit geval is de SafeKit-loadbalancingregel geconfigureerd op basis van het IP-adres van de client. Hierdoor is dezelfde client via meerdere TCP-sessies altijd met dezelfde server verbonden. Verschillende clients worden verdeeld over verschillende servers in de `farm`.
+Bij een stateful {{ .Get "app" }}-applicatie is er sprake van sessie-affiniteit. Dezelfde client moet via meerdere TCP-sessies met dezelfde server verbonden zijn om zijn context op de server op te halen. In dit geval is de SafeKit-loadbalancingregel geconfigureerd op basis van het IP-adres van de client. Hierdoor is dezelfde client via meerdere TCP-sessies altijd met dezelfde server verbonden. Verschillende clients worden verdeeld over verschillende servers in de <span class="notranslate farm-term" translate="no">farm</span>.
 
-Bij een stateless {{ .Get "app" }}-applicatie is er geen sprake van sessie-affiniteit. Dezelfde client kan via meerdere TCP-sessies met verschillende servers in de `farm` verbonden zijn. Er wordt van de ene sessie naar de andere geen context lokaal op een server opgeslagen. In dit geval is de SafeKit-loadbalancingregel geconfigureerd op basis van de identiteit van de TCP-clientsessie. Deze configuratie is het meest geschikt voor het verdelen van sessies over de servers, maar vereist een TCP-dienst zonder sessie-affiniteit.
+Bij een stateless {{ .Get "app" }}-applicatie is er geen sprake van sessie-affiniteit. Dezelfde client kan via meerdere TCP-sessies met verschillende servers in de <span class="notranslate farm-term" translate="no">farm</span> verbonden zijn. Er wordt van de ene sessie naar de andere geen context lokaal op een server opgeslagen. In dit geval is de SafeKit-loadbalancingregel geconfigureerd op basis van de identiteit van de TCP-clientsessie. Deze configuratie is het meest geschikt voor het verdelen van sessies over de servers, maar vereist een TCP-dienst zonder sessie-affiniteit.
 
-### Hoe configureert u een SafeKit-cluster in de modus `farm` voor {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
+### Hoe configureert u een SafeKit-cluster in de modus <span class="notranslate farm-term" translate="no">farm</span> voor {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
 
 
 ![SafeKit-webconsole: clusterconfiguratie voor netwerkloadbalancing van {{ .Get "app" }} en beheer van het virtuele IP-adres in de modus farm.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-Het **SafeKit-cluster in de modus `farm`** is ontworpen voor hoge beschikbaarheid en schaalbaarheid van diensten. De configuratie is gericht op het gelijktijdig verdelen van inkomend verkeer over beide knooppunten:
+Het **SafeKit-cluster in de modus <span class="notranslate farm-term" translate="no">farm</span>** is ontworpen voor hoge beschikbaarheid en schaalbaarheid van diensten. De configuratie is gericht op het gelijktijdig verdelen van inkomend verkeer over beide knooppunten:
 
   * **Loadbalanced services (tabblad Macros):** Definieer de specifieke applicatiediensten (bijv. Apache, IIS, Nginx) die op alle knooppunten actief moeten blijven.
-  * **Heartbeat-netwerk(en):** Communicatiepaden die worden gebruikt om te detecteren of een knooppunt de `farm` heeft verlaten, waardoor de belasting onmiddellijk opnieuw wordt verdeeld.
-  * **Virtueel IP (`Farm` VIP):** In tegenstelling tot een `Mirror`-cluster wordt de `Farm` VIP tussen knooppunten gedeeld met een kernelfilteralgoritme om netwerkverkeer te verdelen.
+  * **Heartbeat-netwerk(en):** Communicatiepaden die worden gebruikt om te detecteren of een knooppunt de <span class="notranslate farm-term" translate="no">farm</span> heeft verlaten, waardoor de belasting onmiddellijk opnieuw wordt verdeeld.
+  * **Virtueel IP (<span class="notranslate farm-term" translate="no">Farm</span> VIP):** In tegenstelling tot een `Mirror`-cluster wordt de <span class="notranslate farm-term" translate="no">Farm</span> VIP tussen knooppunten gedeeld met een kernelfilteralgoritme om netwerkverkeer te verdelen.
   * **Loadbalancingregels:** Definieer het beleid voor verkeersdistributie op basis van het bron-IP-adres of de poort.
   * **Checkers:** Bewaak de gezondheid van de applicatie en start automatisch een proces opnieuw als een storing wordt gedetecteerd.
 
 
-### Hoe bewaakt u een SafeKit-cluster in de modus `farm` voor {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
+### Hoe bewaakt u een SafeKit-cluster in de modus <span class="notranslate farm-term" translate="no">farm</span> voor {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
 
 
 ![SafeKit-console: bewaking van een cluster met 2 knooppunten in de modus farm, waarin beide {{ .Get "app" }}-knooppunten de status UP hebben en loadbalancing actief is.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-Het bewaken van een cluster in de modus `farm` biedt inzicht in het **Active-Active**-karakter van de infrastructuur, waarin alle knooppunten bijdragen aan de prestaties van de applicatie (in dit voorbeeld zijn 2 knooppunten weergegeven):
+Het bewaken van een cluster in de modus <span class="notranslate farm-term" translate="no">farm</span> biedt inzicht in het **Active-Active**-karakter van de infrastructuur, waarin alle knooppunten bijdragen aan de prestaties van de applicatie (in dit voorbeeld zijn 2 knooppunten weergegeven):
 
-  * **UP-status (50% op 2 knooppunten):** In een gezonde `farm` hebben beide knooppunten de status "UP" (50%). Dat betekent dat ze beide actief clientverzoeken ontvangen en verwerken via het gedeelde virtuele IP-adres.
+  * **UP-status (50% op 2 knooppunten):** In een gezonde <span class="notranslate farm-term" translate="no">farm</span> hebben beide knooppunten de status "UP" (50%). Dat betekent dat ze beide actief clientverzoeken ontvangen en verwerken via het gedeelde virtuele IP-adres.
   * **Automatische herverdeling:** Als één knooppunt uitvalt, laat de console zien dat het resterende knooppunt 100% van het verkeer overneemt. Er is geen failoververtraging, aangezien het overlevende knooppunt al actief is (afgezien van enkele seconden detectietijd).
   * **Een knooppunt toevoegen:** Wanneer een hersteld knooppunt opnieuw wordt opgestart, gaat het over van "STOP" naar "UP" en begint het automatisch zijn deel van de belasting te ontvangen zonder tussenkomst van de beheerder.
-  * **Geen gegevenssynchronisatie:** In een cluster in de modus `farm` is er geen "oranje" hersynchronisatiestatus, aangezien de knooppunten stateless horen te zijn of een backenddatabase delen (die afzonderlijk kan worden beveiligd in een `Mirror`-cluster).
+  * **Geen gegevenssynchronisatie:** In een cluster in de modus <span class="notranslate farm-term" translate="no">farm</span> is er geen "oranje" hersynchronisatiestatus, aangezien de knooppunten stateless horen te zijn of een backenddatabase delen (die afzonderlijk kan worden beveiligd in een `Mirror`-cluster).
 
 
 Naast eenvoudige statuspictogrammen biedt de interface knooppuntbeheer met één klik. U kunt een knooppunt handmatig stoppen of starten voor gepland onderhoud, terwijl het gedeelde virtuele IP-adres het verkeer automatisch herverdeelt zonder de activiteit van gebruikers te onderbreken.

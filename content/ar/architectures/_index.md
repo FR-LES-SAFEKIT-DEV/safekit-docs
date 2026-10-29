@@ -19,7 +19,7 @@ topics: "ما هي بنى التوافر العالي المختلفة ومجم�
 
 [ مزيد من المعلومات ](</ar/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### مجموعة `Farm` مجموعة {#farm-cluster}
+### مجموعة <span class="notranslate farm-term" translate="no">Farm</span> مجموعة {#farm-cluster}
 
 
 ![ SafeKit farm cluster ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "ما هي بنى التوافر العالي المختلفة ومجم�
 
 [ مزيد من المعلومات ](</ar/architectures/network-load-balancing-cluster/>)
 
-### `Farm` + mirror مجموعة {#farmmirror-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> + mirror مجموعة {#farmmirror-cluster}
 
 
 ![ farm SafeKit + mirror cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ topics: "ما هي بنى التوافر العالي المختلفة ومجم�
 
 ### استخدم وحدات التوافر العالي {#use-high-availability-modules}
 
-وحدة التوافر العالي هي تخصيص لوحدة SafeKit لتطبيق معين. يوجد نوعان من الوحدات: وحدة mirror التي تتميز بنسخ البيانات في الوقت الفعلي والتحويل التلقائي في حالة الأعطال، ووحدة `farm` التي تتميز بموازنة الأحمال والتحويل التلقائي في حالة الأعطال.
+وحدة التوافر العالي هي تخصيص لوحدة SafeKit لتطبيق معين. يوجد نوعان من الوحدات: وحدة mirror التي تتميز بنسخ البيانات في الوقت الفعلي والتحويل التلقائي في حالة الأعطال، ووحدة <span class="notranslate farm-term" translate="no">farm</span> التي تتميز بموازنة الأحمال والتحويل التلقائي في حالة الأعطال.
 
-إذا قمت بنشر وحدة mirror على خادمين، فستقوم بإنشاء مجموعة mirror ، وإذا قمت بنشر وحدة `farm` على N خادم، فستقوم بإنشاء مجموعة `farm` .
+إذا قمت بنشر وحدة mirror على خادمين، فستقوم بإنشاء مجموعة mirror ، وإذا قمت بنشر وحدة <span class="notranslate farm-term" translate="no">farm</span> على N خادم، فستقوم بإنشاء مجموعة <span class="notranslate farm-term" translate="no">farm</span> .
 
-يمكن نشر العديد من وحدات التطبيق على نفس الخوادم. وبالتالي، يمكن تنفيذ بنى التجميع المتقدمة مثل تلك المعروضة سابقًا ( `farm` + mirror ، نشط/نشط، N-1).
+يمكن نشر العديد من وحدات التطبيق على نفس الخوادم. وبالتالي، يمكن تنفيذ بنى التجميع المتقدمة مثل تلك المعروضة سابقًا ( <span class="notranslate farm-term" translate="no">farm</span> + mirror ، نشط/نشط، N-1).
 
 ### ما هي وحدة التطبيق؟ {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ topics: "ما هي بنى التوافر العالي المختلفة ومجم�
   * أسماء أو عناوين IP الفعلية للخوادم،
   * اسم أو عنوان IP الظاهري للمجموعة،
   * مجلدات الملفات المراد نسخها في الوقت الفعلي (لوحدة mirror )،
-  * معايير موازنة أحمال الشبكة (لوحدة `farm` )،
+  * معايير موازنة أحمال الشبكة (لوحدة <span class="notranslate farm-term" translate="no">farm</span> )،
   * تكوين أجهزة كشف أعطال البرامج والأجهزة
 
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/safekit-smart-console-yo
 description: "当社のスマートコンソールを使えば、 SafeKitクラスタを簡単に管理できます。コード不要の設定、スマートフォンとの互換性、リアルタイムのPWA通知など、便利な機能が満載です。人的ミスを排除し、高い可用性をすぐに実現できます。詳細はこちらをご覧ください。"
 category: "architectures"
 lang: "ja"
-topics: "スマートコンソール：直感的でモバイル対応、エラーフリーの高可用性、目次、 SafeKit mirrorクラスタは Web コンソールとどのように連携しますか？、 SafeKit `farm`クラスタは Web コンソールとどのように連携しますか？、Web コンソールで複数のモジュールと複数のクラスタを監視する方法、コンソールでアラートを監視し、メール通知を管理する方法、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "スマートコンソール：直感的でモバイル対応、エラーフリーの高可用性、目次、 SafeKit mirrorクラスタは Web コンソールとどのように連携しますか？、 SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスタは Web コンソールとどのように連携しますか？、Web コンソールで複数のモジュールと複数のクラスタを監視する方法、コンソールでアラートを監視し、メール通知を管理する方法、🔍 SafeKit高可用性ナビゲーション ハブ"
 ---
 
 # SafeKitスマートコンソール：ポケットに収まる高可用性クラスタ {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "スマートコンソール：直感的でモバイル対応、エラ�
 
 **とシンプルさを追求して構築されたソリューションで**高可用性の管理方法を再定義しましょう**コンソールSafeKit 、学習曲線**ゼロの**を提供し、コード不要**インフラストラクチャを構成および制御できます。
 
-デスクにいても移動中でも、スマートフォン対応のダッシュボードにより、クラスターを完全に制御できます。 mirror そして `farm` モジュール、スマートコンソール **人的ミスを排除する** そして、最も重要なシステムに対して、シームレスなフェイルオーバープロセスを保証します。
+デスクにいても移動中でも、スマートフォン対応のダッシュボードにより、クラスターを完全に制御できます。 mirror そして <span class="notranslate farm-term" translate="no">farm</span> モジュール、スマートコンソール **人的ミスを排除する** そして、最も重要なシステムに対して、シームレスなフェイルオーバープロセスを保証します。
 
 ## 目次 {#table-of-contents}
 
   * SafeKitクラスターはウェブコンソールとどのように連携しますか？ [ mirror ](#safekit-mirror-cluster)
-  * SafeKitクラスターはウェブコンソールとどのように連携しますか？ [ `farm` ](#safekit-farm-cluster)
+  * SafeKitクラスターはウェブコンソールとどのように連携しますか？ [ <span class="notranslate farm-term" translate="no">farm</span> ](#safekit-farm-cluster)
   * [ Webコンソール経由で複数のモジュールと複数のクラスタを監視する方法は？ ](#multipe-modules-clusters)
   * [コンソールでアラートを監視し、メール通知を管理する方法は？ ](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ topics: "スマートコンソール：直感的でモバイル対応、エラ�
 
 **なステータス アイコンに加えて、インターフェースはワンクリック**オーバー オーケスト**(メニュー) を提供し、計画メンテナンスのためにプライマリ ロール`...`手動で再割り当てしながら**ユーザー アクティビティの継続的な可用性を確保します。
 
-## SafeKit `farm`クラスターは、Web コンソールとどのように連携しますか？ {#safekit-farm-cluster}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスターは、Web コンソールとどのように連携しますか？ {#safekit-farm-cluster}
 
-### SafeKit `farm`クラスターの構成方法、 {#safekit-farm-cluster-configuration}
+### SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスターの構成方法、 {#safekit-farm-cluster-configuration}
 
 
 ![ SafeKit Webコンソール: Farmネットワーク負荷分散と仮想IP管理のためのクラスタ構成。 ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-**SafeKit `farm`**のクラスタは、サービスの高可用性と拡張性を実現するように設計されています。この構成は、受信トラフィックを両方のノードに同時に分散することに重点を置いています。
+**SafeKit <span class="notranslate farm-term" translate="no">farm</span>**のクラスタは、サービスの高可用性と拡張性を実現するように設計されています。この構成は、受信トラフィックを両方のノードに同時に分散することに重点を置いています。
 
   * **ロードバランスされたサービス (マクロ タブ):**すべてのノードでアクティブに維持する特定のアプリケーション サービス (Apache、 IIS 、 Nginxなど) を定義します。
-  * **ハートビートネットワーク:**ノードが`farm`から離脱したかどうかを検出するために使用される通信パス。離脱した場合は、負荷の再分配が即座に実行されます。
-  * **仮想 IP ( `Farm` VIP):** mirrorクラスタとは異なり、 `Farm` VIP はカーネルフィルタリングアルゴリズムを使用してネットワークトラフィックを分散し、ノード間で共有されます。
+  * **ハートビートネットワーク:**ノードが<span class="notranslate farm-term" translate="no">farm</span>から離脱したかどうかを検出するために使用される通信パス。離脱した場合は、負荷の再分配が即座に実行されます。
+  * **仮想 IP ( <span class="notranslate farm-term" translate="no">Farm</span> VIP):** mirrorクラスタとは異なり、 <span class="notranslate farm-term" translate="no">Farm</span> VIP はカーネルフィルタリングアルゴリズムを使用してネットワークトラフィックを分散し、ノード間で共有されます。
   * **ロードバランシングルール:**送信元 IP アドレスまたはポートに基づいてトラフィック分散ポリシーを定義します。
   * **チェッカー:**アプリケーションの状態を監視し、プロセス障害が検出された場合は自動的に再起動します。
 
 
-### SafeKit `farm`クラスターを監視する方法は？ {#safekit-farm-cluster-monitoring}
+### SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスターを監視する方法は？ {#safekit-farm-cluster-monitoring}
 
 
 ![ SafeKitコンソール: 2ノードのFarmクラスタを監視しています。両方のノードがUP状態であり、負荷分散がアクティブになっています。 ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-`farm`クラスタを監視することで、 **アクティブ/アクティブ**というインフラストラクチャの性質を可視化できます。このインフラストラクチャでは、すべてのノードがアプリケーションのパフォーマンスに貢献します (この例では 2 つのノードを示していますが、ノード数を増やすことも可能です)。
+<span class="notranslate farm-term" translate="no">farm</span>クラスタを監視することで、 **アクティブ/アクティブ**というインフラストラクチャの性質を可視化できます。このインフラストラクチャでは、すべてのノードがアプリケーションのパフォーマンスに貢献します (この例では 2 つのノードを示していますが、ノード数を増やすことも可能です)。
 
-  * **UP状態（2ノードで50%）：**正常な`farm`では、両方のノードが「UP」（50%）状態であり、共有仮想IPを介してクライアント要求をアクティブに受信および処理しています。
+  * **UP状態（2ノードで50%）：**正常な<span class="notranslate farm-term" translate="no">farm</span>では、両方のノードが「UP」（50%）状態であり、共有仮想IPを介してクライアント要求をアクティブに受信および処理しています。
   * **自動リバランス:**ノードが1つ故障した場合、コンソールには残りのノードがトラフィックの100%を引き受けていることが視覚的に表示されます。生存ノードは既にアクティブになっているため（数秒の検出時間を除く）、「フェイルオーバー」の遅延はありません。
   * **ノード挿入:**修復されたノードが再起動されると、「STOP」から「UP」に移行し、管理者の介入なしに自動的に負荷の割り当てを受け取り始めます。
-  * **データ同期なし:** `farm`クラスターでは、ノードがステートレスであるか、バックエンド データベースを共有することが想定されているため ( mirrorクラスターでは、バックエンド データベースを個別に保護できます)、「オレンジ」の再同期状態はありません。
+  * **データ同期なし:** <span class="notranslate farm-term" translate="no">farm</span>クラスターでは、ノードがステートレスであるか、バックエンド データベースを共有することが想定されているため ( mirrorクラスターでは、バックエンド データベースを個別に保護できます)、「オレンジ」の再同期状態はありません。
 
 
 シンプルなステータスアイコンに加えて、インターフェースはワンクリックでノードを管理できます（メニュー**`...`** ）。これにより、共有仮想IPがユーザーアクティビティを中断することなくトラフィックを自動的に再分配する一方で、計画メンテナンスのためにノードを手動で停止または起動できます。

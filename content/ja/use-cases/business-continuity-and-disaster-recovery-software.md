@@ -21,7 +21,7 @@ topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit高�
 
 ### 2つの遠隔コンピュータ室間でシンプルな高可用性ソリューションを実装するにはどうすればよいでしょう？ {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-SafeKit mirror 、および`farm`モジュールは、特別なクラスタ構成を必要とせずに、遠隔地のコンピュータ室に設置されたサーバーに容易に展開できます。つまり、 SafeKit 、単一のシンプルなアーキテクチャ内で事業継続性と災害復旧を統合します。また、 SafeKit 、ネットワークが隔離された場合に、3台目のサーバーや特別なクォーラムディスクを必要とせずに、 [スプリットブレイン](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)を管理します。
+SafeKit mirror 、および<span class="notranslate farm-term" translate="no">farm</span>モジュールは、特別なクラスタ構成を必要とせずに、遠隔地のコンピュータ室に設置されたサーバーに容易に展開できます。つまり、 SafeKit 、単一のシンプルなアーキテクチャ内で事業継続性と災害復旧を統合します。また、 SafeKit 、ネットワークが隔離された場合に、3台目のサーバーや特別なクォーラムディスクを必要とせずに、 [スプリットブレイン](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)を管理します。
 
 ### 事業継続性 vs バックアップソリューション {#business-continuity-vs-backup-solutions}
 

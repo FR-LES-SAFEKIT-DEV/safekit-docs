@@ -27,11 +27,11 @@ Si eres editor de software y buscas una solución de agrupación de aplicaciones
 
 ### Agrupación de aplicaciones con replicación en tiempo real, equilibrio de carga y conmutación por error {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-El software SafeKit ofrece dos módulos genéricos para la agrupación de aplicaciones: el módulo mirror y el módulo `farm` .
+El software SafeKit ofrece dos módulos genéricos para la agrupación de aplicaciones: el módulo mirror y el módulo <span class="notranslate farm-term" translate="no">farm</span> .
 
 Los módulos [ mirror ](/es/product/#safekit-mirror-cluster) implementan la replicación de archivos en tiempo real y la conmutación por error de aplicaciones. Son adecuados para aplicaciones con base de datos.
 
-Los módulos [ `farm` ](/es/product/#safekit-farm-cluster) implementan el balanceo de carga de red y la conmutación por error de aplicaciones. Son adecuados para aplicaciones con servicios web.
+Los módulos [ <span class="notranslate farm-term" translate="no">farm</span> ](/es/product/#safekit-farm-cluster) implementan el balanceo de carga de red y la conmutación por error de aplicaciones. Son adecuados para aplicaciones con servicios web.
 
 Y puedes combinar los módulos.
 

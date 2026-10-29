@@ -21,13 +21,13 @@ Dans un cluster mirror , le logiciel SafeKit est installé sur deux serveurs phy
 
 ## Comment implémenter des serveurs redondants actifs/actifs avec répartition de charge réseau et basculement ? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### Le cluster SafeKit `farm` {#the-safekit-farm-cluster}
+### Le cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
 
 
 ![ Serveurs redondants avec répartition de charge réseau et basculement ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-Dans un cluster `farm` , le logiciel SafeKit est installé sur des serveurs redondants exécutant Windows ou Linux (sur site ou dans le cloud). Tous les serveurs redondants sont actifs et exécutent la même application frontale critique. Les clients se connectent à une adresse IP virtuelle [ ](</fr/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) ). Les sessions TCP sont réparties entre tous les serveurs redondants. Si un serveur tombe en panne, SafeKit reconfigure automatiquement la répartition des sessions TCP entre les serveurs actifs restants. Lorsque le serveur défaillant redémarre, il est automatiquement réintégré comme serveur redondant actif et reçoit les nouvelles sessions TCP.
+Dans un cluster <span class="notranslate farm-term" translate="no">farm</span> , le logiciel SafeKit est installé sur des serveurs redondants exécutant Windows ou Linux (sur site ou dans le cloud). Tous les serveurs redondants sont actifs et exécutent la même application frontale critique. Les clients se connectent à une adresse IP virtuelle [ ](</fr/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) ). Les sessions TCP sont réparties entre tous les serveurs redondants. Si un serveur tombe en panne, SafeKit reconfigure automatiquement la répartition des sessions TCP entre les serveurs actifs restants. Lorsque le serveur défaillant redémarre, il est automatiquement réintégré comme serveur redondant actif et reçoit les nouvelles sessions TCP.
 
 
 {{%  insert-safekit-hub-fr  %}}

@@ -21,9 +21,9 @@ Agrupamento ![ SafeKit com balanceamento de carga e espelhamento ](/wp-content/u
 
 Por exemplo, com o software de cluster SafeKit , você pode implementar o balanceamento de carga IIS e o espelhamento Microsoft SQL Server .
 
-Para isso, você precisa implantar um módulo `farm` para o servidor SQL IIS e um módulo mirror para o servidor SQL Microsoft . Cada módulo `farm` e mirror é configurado com seu próprio endereço IP virtual e seus próprios scripts de reinicialização.
+Para isso, você precisa implantar um módulo <span class="notranslate farm-term" translate="no">farm</span> para o servidor SQL IIS e um módulo mirror para o servidor SQL Microsoft . Cada módulo <span class="notranslate farm-term" translate="no">farm</span> e mirror é configurado com seu próprio endereço IP virtual e seus próprios scripts de reinicialização.
 
-Os módulos mirror e `farm` podem ser implementados em um único cluster de dois servidores. Os módulos IIS , Microsoft e SQL Server serão executados nesses dois servidores. Alternativamente, os dois módulos podem ser implementados em dois clusters com servidores diferentes.
+Os módulos mirror e <span class="notranslate farm-term" translate="no">farm</span> podem ser implementados em um único cluster de dois servidores. Os módulos IIS , Microsoft e SQL Server serão executados nesses dois servidores. Alternativamente, os dois módulos podem ser implementados em dois clusters com servidores diferentes.
 
 Com o software de cluster SafeKit , não há diferença entre uma implementação nos mesmos servidores ou em servidores diferentes.
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "Windows のネットワークロードバランシングと自動フェイルオーバーのために farm.safe モジュールを導入する方法を説明します。このガイドでは、外部のハードウェアロードバランサーや複雑な設定なしで、仮想 IP を使って Web サービスやアプリケーション向けの高可用性クラスターを構築する方法を紹介します。"
 category: "quick-install"
 lang: "ja"
-topics: "Windows 向け高可用性クイックインストールガイド, SafeKit 高可用性の制限事項, SafeKit / Windows ソリューションの概要, SafeKit / Windows ソリューションのインストール (farm.safe), SafeKit / Windows ソリューションのステップバイステップ設定, SafeKit `farm` ソリューションのデモ, 🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "Windows 向け高可用性クイックインストールガイド, SafeKit 高可用性の制限事項, SafeKit / Windows ソリューションの概要, SafeKit / Windows ソリューションのインストール (farm.safe), SafeKit / Windows ソリューションのステップバイステップ設定, SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモ, 🔍 SafeKit 高可用性ナビゲーションハブ"
 ---
 
 # Windows のネットワークロードバランシングとフェイルオーバー: SafeKit farm.safe モジュールのインストール {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -21,7 +21,7 @@ topics: "Windows 向け高可用性クイックインストールガイド, Safe
 
 ### 前提条件 {#prerequisites}
 
-  * `farm` に配置するアプリケーションを、2 ノード以上（仮想マシンまたは物理サーバー）にインストールしておく必要があります。
+  * <span class="notranslate farm-term" translate="no">farm</span> に配置するアプリケーションを、2 ノード以上（仮想マシンまたは物理サーバー）にインストールしておく必要があります。
 
 
 
@@ -36,7 +36,7 @@ topics: "Windows 向け高可用性クイックインストールガイド, Safe
 {{%  insert-safekit-82-farm-configuration-ja app="Windows" mod="farm"  %}}
  
 
-## SafeKit `farm` ソリューションのデモ {#demonstration-of-the-safekit-farm-solution}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモ {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

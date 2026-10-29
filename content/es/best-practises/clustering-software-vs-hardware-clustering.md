@@ -27,7 +27,7 @@ Existen dos tipos de soluciones de agrupación de hardware: agrupación de hardw
 
 La agrupación de hardware para el backend (como con el clúster de conmutación por error [ Microsoft ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) ) se basa en 2 servidores que comparten un disco con una conmutación por error automática de la aplicación en caso de fallo.
 
-El clustering de hardware para el frontend se basa en balanceadores de carga (como con [ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) delante de un `farm` de servidores (2 servidores o más). Los balanceadores de carga distribuyen las sesiones TCP a los servidores disponibles en el farm .
+El clustering de hardware para el frontend se basa en balanceadores de carga (como con [ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) delante de un <span class="notranslate farm-term" translate="no">farm</span> de servidores (2 servidores o más). Los balanceadores de carga distribuyen las sesiones TCP a los servidores disponibles en el farm .
 
 ### ¿Qué es la agrupación de software? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ Al igual que con la agrupación de hardware, existen dos tipos de soluciones de 
 
 La agrupación de software para el backend (como con [ SafeKit ](</>) ) se basa en 2 servidores que replican datos en tiempo real con una conmutación por error automática de la aplicación en caso de fallos.
 
-La agrupación de software para el frontend (como con SafeKit ) se basa en el balanceo de carga en un `farm` de servidores (2 servidores o más). El balanceo de carga se realiza mediante software y distribuye las sesiones TCP a los servidores disponibles en el farm .
+La agrupación de software para el frontend (como con SafeKit ) se basa en el balanceo de carga en un <span class="notranslate farm-term" translate="no">farm</span> de servidores (2 servidores o más). El balanceo de carga se realiza mediante software y distribuye las sesiones TCP a los servidores disponibles en el farm .
 
 ## Agrupación por software frente a agrupación por hardware: ventajas e inconvenientes {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

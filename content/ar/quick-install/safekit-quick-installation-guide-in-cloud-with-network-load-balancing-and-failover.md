@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "حسّن موازنة أحمال شبكة السحابة باستخدام نظام مراقبة التطبيقات الذكي SafeKit . توفر وحدة farm.safe فحصًا صحيًا مخصصًا لموازن أحمال السحابة، مما يتيح توافرًا عاليًا سلسًا على مستوى التطبيق. حقق الإصلاح الذاتي التلقائي والتحويل التلقائي في حالة الأعطال للتطبيقات بالغة الأهمية."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / السحابة، تثبيت حل SafeKit / السحابة على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / السحابة، عرض توضيحي لحل SafeKit `farm` ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / السحابة، تثبيت حل SafeKit / السحابة على Windows و Linux ( farm.safe )، التكوين خطوة بخطوة لحل SafeKit / السحابة، عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> ، 🔍 مركز التنقل للتوافر العالي SafeKit"
 ---
 
 # موازنة أحمال الشبكة السحابية والتحويل التلقائي في حالة الأعطال: قم بتثبيت الوحدات النمطية SafeKit farm.safe {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -15,7 +15,7 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 
 ## نظرة عامة على حل SafeKit / Cloud {#overview-of-the-safekit--cloud-solution}
 
-الحل موضح هنا: **💡 [ SafeKit : موازنة تحميل السحابة وتوافر التطبيقات العالي `Farm` Cluster ](</ar/solutions/cloud-load-balancing-cluster-failover/>)** .
+الحل موضح هنا: **💡 [ SafeKit : موازنة تحميل السحابة وتوافر التطبيقات العالي <span class="notranslate farm-term" translate="no">Farm</span> Cluster ](</ar/solutions/cloud-load-balancing-cluster-failover/>)** .
 
 ## تثبيت حل SafeKit / السحابي على Windows و Linux ( farm.safe ) و {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 
@@ -25,7 +25,7 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 ويجب تهيئة موازن الأحمال لإرسال حزم بيانات الصحة بشكل دوري إلى العقد.  
 لذلك، يوفر SafeKit فحصًا صحيًا يتم تشغيله داخل العقد، والذي
 
-  * يعود OK عندما تكون حالة وحدة `farm` هي UP (خضراء)
+  * يعود OK عندما تكون حالة وحدة <span class="notranslate farm-term" translate="no">farm</span> هي UP (خضراء)
   * لم يتم العثور على نتائج في جميع الولايات الأخرى
 
 
@@ -33,7 +33,7 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 
   * بروتوكول HTTP
   * المنفذ 9010، منفذ خادم الويب SafeKit
-  * عنوان URL /var/modules/farm/ready.txt (إذا كان `farm` هو اسم الوحدة التي ستقوم بنشرها لاحقًا)
+  * عنوان URL /var/modules/farm/ready.txt (إذا كان <span class="notranslate farm-term" translate="no">farm</span> هو اسم الوحدة التي ستقوم بنشرها لاحقًا)
 
 
 ⚠️ لا تقم بتكوين عنوان IP افتراضي وقواعد موازنة الأحمال في الخطوة 4 من خطوات التكوين الموضحة أدناه. عنوان IP الافتراضي وقواعد موازنة الأحمال مُعدّة مسبقًا في موازن الأحمال السحابي. يُفيد تكوين عنوان IP افتراضي وقواعد موازنة الأحمال في الخطوة 4 في التكوين المحلي فقط.
@@ -43,7 +43,7 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 يجب تهيئة أمان الشبكة لتمكين الاتصالات للبروتوكولات والمنافذ التالية:
 
   * UDP - 4800 لخدمة safeadmin (بين عقد SafeKit )
-  * UDP - 4803 لنبضات القلب داخل وحدة `farm` (بين عقد SafeKit )
+  * UDP - 4803 لنبضات القلب داخل وحدة <span class="notranslate farm-term" translate="no">farm</span> (بين عقد SafeKit )
   * يُستخدم المنفذ 9010 في بروتوكول TCP لفحص حالة موازن الأحمال، ولتشغيل وحدة تحكم الويب SafeKit في وضع HTTP.
   * TCP – 9001 لتكوين وضع HTTPS لوحدة التحكم
   * TCP – 9453 لوحدة تحكم الويب SafeKit التي تعمل في وضع HTTPS
@@ -63,7 +63,7 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 {{%  insert-safekit-82-farm-configuration-ar app="" mod="farm"  %}}
  
 
-## عرض توضيحي لحل SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ar  %}}

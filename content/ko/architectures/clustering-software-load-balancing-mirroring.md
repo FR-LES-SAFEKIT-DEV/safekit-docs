@@ -21,9 +21,9 @@ topics: "SafeKit 클러스터링 소프트웨어로 핵심 웹 및 데이터베�
 
 예를 들어, SafeKit 클러스터링 소프트웨어를 사용하면 IIS 로드 밸런싱과 Microsoft 및 SQL Server 미러링을 구현할 수 있습니다.
 
-이를 위해서는 IIS SQL 서버에는 `farm` 모듈을, Microsoft SQL 서버에는 mirror 모듈을 배포해야 합니다. 각 `farm` 및 mirror 모듈은 고유한 가상 IP 주소와 재시작 스크립트로 구성됩니다.
+이를 위해서는 IIS SQL 서버에는 <span class="notranslate farm-term" translate="no">farm</span> 모듈을, Microsoft SQL 서버에는 mirror 모듈을 배포해야 합니다. 각 <span class="notranslate farm-term" translate="no">farm</span> 및 mirror 모듈은 고유한 가상 IP 주소와 재시작 스크립트로 구성됩니다.
 
-mirror 및 `farm` 모듈은 모두 두 대의 서버로 구성된 단일 클러스터에 배포할 수 있습니다. IIS , Microsoft 및 SQL Server 모듈은 이 두 서버에서 실행됩니다. 또는 두 모듈을 서로 다른 서버로 구성된 두 개의 클러스터에 배포할 수도 있습니다.
+mirror 및 <span class="notranslate farm-term" translate="no">farm</span> 모듈은 모두 두 대의 서버로 구성된 단일 클러스터에 배포할 수 있습니다. IIS , Microsoft 및 SQL Server 모듈은 이 두 서버에서 실행됩니다. 또는 두 모듈을 서로 다른 서버로 구성된 두 개의 클러스터에 배포할 수도 있습니다.
 
 SafeKit 클러스터링 소프트웨어를 사용하면 동일한 서버에 배포하든 다른 서버에 배포하든 차이가 없습니다.
 

@@ -21,7 +21,7 @@ Es gibt keinen Konfigurationsunterschied, wenn ein SafeKit Cluster im selben Com
 
 ### Wie lässt sich eine einfache Hochverfügbarkeitslösung zwischen zwei entfernten Serverräumen implementieren? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-Die Module SafeKit mirror und `farm` lassen sich ohne spezielle Clusterkonfiguration problemlos auf Servern in entfernten Rechenzentren einsetzen. Dadurch vereint SafeKit Geschäftskontinuität und Notfallwiederherstellung in einer einzigen, einfachen Architektur. SafeKit verwaltet zudem im Falle einer Netzwerkisolation die Split-Brain-Situation [ ](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) , ohne dass ein dritter Server oder eine spezielle Quorum-Festplatte erforderlich ist.
+Die Module SafeKit mirror und <span class="notranslate farm-term" translate="no">farm</span> lassen sich ohne spezielle Clusterkonfiguration problemlos auf Servern in entfernten Rechenzentren einsetzen. Dadurch vereint SafeKit Geschäftskontinuität und Notfallwiederherstellung in einer einzigen, einfachen Architektur. SafeKit verwaltet zudem im Falle einer Netzwerkisolation die Split-Brain-Situation [ ](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) , ohne dass ein dritter Server oder eine spezielle Quorum-Festplatte erforderlich ist.
 
 ### Geschäftskontinuität vs. Backup-Lösungen {#business-continuity-vs-backup-solutions}
 

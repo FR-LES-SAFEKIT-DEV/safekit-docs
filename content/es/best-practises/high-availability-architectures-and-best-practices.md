@@ -27,7 +27,7 @@ Hay dos tipos de arquitecturas de alta disponibilidad [ ](<https://www.techtarge
 
 Las arquitecturas de alta disponibilidad para el backend se basan en dos servidores que comparten o replican datos, con una conmutación por error automática de la aplicación en caso de fallos de hardware o software.
 
-Las arquitecturas de alta disponibilidad para el frontend se basan en un `farm` de servidores (2 servidores o más). El balanceo de carga se realiza mediante hardware o software y distribuye las sesiones TCP a los servidores disponibles en el farm .
+Las arquitecturas de alta disponibilidad para el frontend se basan en un <span class="notranslate farm-term" translate="no">farm</span> de servidores (2 servidores o más). El balanceo de carga se realiza mediante hardware o software y distribuye las sesiones TCP a los servidores disponibles en el farm .
 
 Además, hay que elegir entre alta disponibilidad a nivel de aplicación o a nivel de máquina virtual.
 

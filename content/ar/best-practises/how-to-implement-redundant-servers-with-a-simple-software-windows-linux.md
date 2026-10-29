@@ -21,13 +21,13 @@ topics: "كيفية تطبيق خوادم احتياطية نشطة/سلبية �
 
 ## كيفية تطبيق خوادم نشطة/نشطة ذات تكرار مع موازنة أحمال الشبكة والتحويل التلقائي في حالة الفشل؟ {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### مجموعة SafeKit `farm` {#the-safekit-farm-cluster}
+### مجموعة SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
 
 
 خوادم احتياطية ![ مع موازنة أحمال الشبكة والتحويل التلقائي في حالة الفشل ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-في مجموعة `farm` ، يُثبَّت برنامج SafeKit على خوادم احتياطية تعمل بنظامي Windows أو Linux (سواءً في الموقع أو في السحابة). جميع الخوادم الاحتياطية نشطة وتُشغِّل نفس تطبيق الواجهة الأمامية الأساسي. يتصل العملاء بعنوان IP افتراضي [ ](</ar/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . تُوزَّع جلسات TCP بالتساوي بين جميع الخوادم الاحتياطية. في حال تعطل أحد الخوادم، يُعيد SafeKit تلقائيًا تكوين توزيع جلسات TCP بالتساوي بين الخوادم النشطة المتبقية. عند إعادة تشغيل الخادم المتعطل، يُعاد دمجه تلقائيًا كخادم احتياطي نشط ويستقبل جلسات TCP جديدة.
+في مجموعة <span class="notranslate farm-term" translate="no">farm</span> ، يُثبَّت برنامج SafeKit على خوادم احتياطية تعمل بنظامي Windows أو Linux (سواءً في الموقع أو في السحابة). جميع الخوادم الاحتياطية نشطة وتُشغِّل نفس تطبيق الواجهة الأمامية الأساسي. يتصل العملاء بعنوان IP افتراضي [ ](</ar/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . تُوزَّع جلسات TCP بالتساوي بين جميع الخوادم الاحتياطية. في حال تعطل أحد الخوادم، يُعيد SafeKit تلقائيًا تكوين توزيع جلسات TCP بالتساوي بين الخوادم النشطة المتبقية. عند إعادة تشغيل الخادم المتعطل، يُعاد دمجه تلقائيًا كخادم احتياطي نشط ويستقبل جلسات TCP جديدة.
 
 
 {{%  insert-safekit-hub-ar  %}}

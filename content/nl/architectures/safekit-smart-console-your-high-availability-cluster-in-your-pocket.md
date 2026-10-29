@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/architectures/safekit-smart-console-yo
 description: "Beheer SafeKit -clusters eenvoudig met onze Smart Console. Profiteer van configuratie zonder code, compatibiliteit met smartphones en realtime PWA-meldingen. Elimineer menselijke fouten en garandeer hoge beschikbaarheid binnen handbereik. Lees meer."
 category: "architectures"
 lang: "nl"
-topics: "Smart Console: Intuïtieve, mobiele en foutloze hoge beschikbaarheid, Inhoudsopgave, Hoe werkt een SafeKit mirror -cluster met de webconsole?, Hoe werkt een SafeKit `farm` -cluster met de webconsole?, Hoe kan ik meerdere modules en meerdere clusters bewaken via de webconsole?, Hoe kan ik waarschuwingen in de console bewaken en e-mailmeldingen beheren?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Smart Console: Intuïtieve, mobiele en foutloze hoge beschikbaarheid, Inhoudsopgave, Hoe werkt een SafeKit mirror -cluster met de webconsole?, Hoe werkt een SafeKit <span class="notranslate farm-term" translate="no">farm</span> -cluster met de webconsole?, Hoe kan ik meerdere modules en meerdere clusters bewaken via de webconsole?, Hoe kan ik waarschuwingen in de console bewaken en e-mailmeldingen beheren?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # SafeKit Smart Console: Uw High Availability Cluster in uw zak {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "Smart Console: Intuïtieve, mobiele en foutloze hoge beschikbaarheid, I
 
 Herdefinieer hoe u hoge beschikbaarheid beheert met een oplossing die is ontworpen voor **snelheid en eenvoud** . De SafeKit webconsole biedt een **gebruiksvriendelijke** interface waarmee u uw infrastructuur kunt configureren en beheren **zonder code** te hoeven schrijven.
 
-Of u nu achter uw bureau zit of onderweg bent, het smartphone-compatibele dashboard geeft u volledige controle over uw cluster. Door het beheer van de modules mirror en `farm` te stroomlijnen, elimineert de Smart Console **menselijke fouten** en zorgt deze voor een naadloos failoverproces voor uw meest vitale systemen.
+Of u nu achter uw bureau zit of onderweg bent, het smartphone-compatibele dashboard geeft u volledige controle over uw cluster. Door het beheer van de modules mirror en <span class="notranslate farm-term" translate="no">farm</span> te stroomlijnen, elimineert de Smart Console **menselijke fouten** en zorgt deze voor een naadloos failoverproces voor uw meest vitale systemen.
 
 ## Inhoudsopgave {#table-of-contents}
 
   * mirror [ SafeKit de webconsole? ](#safekit-mirror-cluster)
-  * `farm` [ SafeKit de webconsole? ](#safekit-farm-cluster)
+  * <span class="notranslate farm-term" translate="no">farm</span> [ SafeKit de webconsole? ](#safekit-farm-cluster)
   * [ Hoe kan ik meerdere modules en meerdere clusters bewaken via de webconsole? ](#multipe-modules-clusters)
   * [ Hoe kan ik waarschuwingen in de console controleren en e-mailmeldingen beheren? ](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ Voor een mirror cluster met twee knooppunten worden de rollen van elke server du
 
 Naast eenvoudige statuspictogrammen biedt de interface **one-click failover orchestration** ( **`...` menu** ), waarmee u handmatig de primaire rol opnieuw kunt toewijzen voor gepland onderhoud, terwijl de continue beschikbaarheid voor gebruikersactiviteiten gewaarborgd blijft.
 
-## Hoe werkt een SafeKit `farm` -cluster met de webconsole? {#safekit-farm-cluster}
+## Hoe werkt een SafeKit <span class="notranslate farm-term" translate="no">farm</span> -cluster met de webconsole? {#safekit-farm-cluster}
 
-### Hoe configureer ik een SafeKit `farm` -cluster? {#safekit-farm-cluster-configuration}
+### Hoe configureer ik een SafeKit <span class="notranslate farm-term" translate="no">farm</span> -cluster? {#safekit-farm-cluster-configuration}
 
 
 ![ SafeKit Webconsole: Farm clusterconfiguratie voor netwerktaakverdeling en virtueel IP-beheer. ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-Het cluster **SafeKit `farm`** is ontworpen voor hoge beschikbaarheid en schaalbaarheid van services. De configuratie is gericht op het gelijktijdig verdelen van inkomend verkeer over beide knooppunten:
+Het cluster **SafeKit <span class="notranslate farm-term" translate="no">farm</span>** is ontworpen voor hoge beschikbaarheid en schaalbaarheid van services. De configuratie is gericht op het gelijktijdig verdelen van inkomend verkeer over beide knooppunten:
 
   * **Load Balanced Services (tabblad Macro's):** Definieer de specifieke applicatieservices (bijv. Apache, IIS , Nginx ) die op alle knooppunten actief moeten blijven.
-  * **Heartbeat-netwerk(en):** Communicatiepad(en) gebruikt om te detecteren of een knooppunt het `farm` netwerk heeft verlaten, waardoor een onmiddellijke herverdeling van de belasting wordt geactiveerd.
-  * Virtueel IP-adres **(VIP `Farm` ):** In tegenstelling tot een mirror -cluster wordt het VIP `Farm` gedeeld tussen knooppunten met behulp van een kernelfilteralgoritme om het netwerkverkeer te verdelen.
+  * **Heartbeat-netwerk(en):** Communicatiepad(en) gebruikt om te detecteren of een knooppunt het <span class="notranslate farm-term" translate="no">farm</span> netwerk heeft verlaten, waardoor een onmiddellijke herverdeling van de belasting wordt geactiveerd.
+  * Virtueel IP-adres **(VIP <span class="notranslate farm-term" translate="no">Farm</span> ):** In tegenstelling tot een mirror -cluster wordt het VIP <span class="notranslate farm-term" translate="no">Farm</span> gedeeld tussen knooppunten met behulp van een kernelfilteralgoritme om het netwerkverkeer te verdelen.
   * **Load Balancing Rules:** Definieer het verkeersdistributiebeleid op basis van het bron-IP-adres of de poort.
   * **Checkers:** Bewaak de status van de applicatie en activeer een automatische herstart als een procesfout wordt gedetecteerd.
 
 
-### Hoe kan ik een SafeKit `farm` -cluster monitoren? {#safekit-farm-cluster-monitoring}
+### Hoe kan ik een SafeKit <span class="notranslate farm-term" translate="no">farm</span> -cluster monitoren? {#safekit-farm-cluster-monitoring}
 
 
 ![ SafeKit Console: Monitoring van een 2-knoops Farm -cluster, waarbij beide knooppunten in de UP-status worden weergegeven met actieve load balancing. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-Het monitoren van een `farm` -cluster biedt inzicht in de **-** aard van de infrastructuur, waarbij alle knooppunten bijdragen aan de prestaties van de applicatie (in dit voorbeeld worden 2 knooppunten getoond; schaalbaar naar extra knooppunten):
+Het monitoren van een <span class="notranslate farm-term" translate="no">farm</span> -cluster biedt inzicht in de **-** aard van de infrastructuur, waarbij alle knooppunten bijdragen aan de prestaties van de applicatie (in dit voorbeeld worden 2 knooppunten getoond; schaalbaar naar extra knooppunten):
 
-  * **UP-status (50% op 2 knooppunten):** In een gezonde `farm` bevinden beide knooppunten zich in de "UP"-status (50%), wat betekent dat ze beide actief clientverzoeken ontvangen en verwerken via het gedeelde virtuele IP-adres.
+  * **UP-status (50% op 2 knooppunten):** In een gezonde <span class="notranslate farm-term" translate="no">farm</span> bevinden beide knooppunten zich in de "UP"-status (50%), wat betekent dat ze beide actief clientverzoeken ontvangen en verwerken via het gedeelde virtuele IP-adres.
   * Automatische herverdeling: **Als één knooppunt uitvalt, toont de console visueel dat het resterende knooppunt 100% van het verkeer overneemt. Er is geen failover-vertraging, omdat het overgebleven knooppunt al actief is (afgezien van een detectietijd van enkele seconden** .
   * **Knooppuntinvoeging:** Wanneer een gerepareerd knooppunt opnieuw wordt opgestart, gaat het over van "STOP" naar "UP" en begint het automatisch zijn deel van de belasting te ontvangen zonder tussenkomst van de beheerder.
-  * **Geen gegevenssynchronisatie:** Merk op dat er in een `farm` -cluster geen "Oranje" resynchronisatiestatus is, omdat van de knooppunten wordt verwacht dat ze stateless zijn of een gedeelde backend-database hebben (die afzonderlijk kan worden beveiligd in een mirror -cluster).
+  * **Geen gegevenssynchronisatie:** Merk op dat er in een <span class="notranslate farm-term" translate="no">farm</span> -cluster geen "Oranje" resynchronisatiestatus is, omdat van de knooppunten wordt verwacht dat ze stateless zijn of een gedeelde backend-database hebben (die afzonderlijk kan worden beveiligd in een mirror -cluster).
 
 
 Naast eenvoudige statuspictogrammen biedt de interface beheer van knooppunten met één klik ( **`...` menu** ), waarmee u een knooppunt handmatig kunt stoppen of starten voor gepland onderhoud, terwijl het gedeelde virtuele IP-adres het verkeer automatisch herverdeelt zonder de gebruikersactiviteit te onderbreken.

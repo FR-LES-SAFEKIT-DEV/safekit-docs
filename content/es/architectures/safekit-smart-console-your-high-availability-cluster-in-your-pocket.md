@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/architectures/safekit-smart-console-yo
 description: "Gestiona fácilmente los clústeres SafeKit con nuestra Smart Console. Disfruta de configuración sin código, compatibilidad con smartphones y notificaciones PWA en tiempo real. Elimina los errores humanos y garantiza una alta disponibilidad al alcance de tu mano. Más información."
 category: "architectures"
 lang: "es"
-topics: "Consola inteligente: Intuitiva, móvil y de alta disponibilidad sin errores, Tabla de contenido, ¿Cómo funciona un clúster SafeKit mirror con la consola web?, ¿Cómo funciona un clúster SafeKit `farm` con la consola web?, ¿Cómo supervisar varios módulos y varios clústeres a través de la consola web?, ¿Cómo supervisar las alertas en la consola y gestionar las notificaciones por correo electrónico?, 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Consola inteligente: Intuitiva, móvil y de alta disponibilidad sin errores, Tabla de contenido, ¿Cómo funciona un clúster SafeKit mirror con la consola web?, ¿Cómo funciona un clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> con la consola web?, ¿Cómo supervisar varios módulos y varios clústeres a través de la consola web?, ¿Cómo supervisar las alertas en la consola y gestionar las notificaciones por correo electrónico?, 🔍 Centro de navegación de alta disponibilidad SafeKit"
 ---
 
 # Consola inteligente SafeKit : Su clúster de alta disponibilidad en su bolsillo {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "Consola inteligente: Intuitiva, móvil y de alta disponibilidad sin err
 
 Redefina cómo gestiona la alta disponibilidad con una solución diseñada para la **y** simplicidad. La SafeKit web ofrece una experiencia **curva de** , lo que le permite configurar y controlar su infraestructura **necesidad de código**
 
-Ya sea que se encuentre en su escritorio o en movimiento, el panel de control compatible con teléfonos inteligentes pone el control total del clúster al alcance de su mano. Al optimizar la administración de los módulos mirror y `farm` , la Smart Console **elimina el error humano** y garantiza un proceso de conmutación por error sin interrupciones para sus sistemas más críticos.
+Ya sea que se encuentre en su escritorio o en movimiento, el panel de control compatible con teléfonos inteligentes pone el control total del clúster al alcance de su mano. Al optimizar la administración de los módulos mirror y <span class="notranslate farm-term" translate="no">farm</span> , la Smart Console **elimina el error humano** y garantiza un proceso de conmutación por error sin interrupciones para sus sistemas más críticos.
 
 ## Tabla de contenido {#table-of-contents}
 
   * [ ¿Cómo funciona un clúster SafeKit mirror con la consola web? ](#safekit-mirror-cluster)
-  * [ ¿Cómo funciona un clúster SafeKit `farm` con la consola web? ](#safekit-farm-cluster)
+  * [ ¿Cómo funciona un clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> con la consola web? ](#safekit-farm-cluster)
   * [ Cómo supervisar varios módulos y varios clústeres a través de la consola web? ](#multipe-modules-clusters)
   * [ Cómo supervisar las alertas en la consola y gestionar las notificaciones por correo electrónico? ](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ Para un clúster mirror de 2 nodos, la consola muestra claramente las funciones 
 
 Más allá de simples iconos de estado, la interfaz proporciona orquestación de conmutación por error con un solo clic **menú** ( **`...`** ), lo que le permite reasignar manualmente el rol principal para el mantenimiento planificado al tiempo que garantiza la disponibilidad continua para la actividad del usuario.
 
-## ¿Cómo funciona un clúster SafeKit `farm` con la consola web? {#safekit-farm-cluster}
+## ¿Cómo funciona un clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> con la consola web? {#safekit-farm-cluster}
 
-### ¿Cómo configurar un clúster SafeKit `farm` ? {#safekit-farm-cluster-configuration}
+### ¿Cómo configurar un clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> ? {#safekit-farm-cluster-configuration}
 
 
 ![ SafeKit Consola web: Farm Configuración de clúster para el equilibrio de carga de red y la administración de IP virtual. ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-El clúster **SafeKit `farm`** está diseñado para ofrecer alta disponibilidad y escalabilidad de servicios. La configuración se centra en distribuir el tráfico entrante entre ambos nodos simultáneamente:
+El clúster **SafeKit <span class="notranslate farm-term" translate="no">farm</span>** está diseñado para ofrecer alta disponibilidad y escalabilidad de servicios. La configuración se centra en distribuir el tráfico entrante entre ambos nodos simultáneamente:
 
   * Servicios con equilibrio de carga **(pestaña Macros):** Defina los servicios de aplicación específicos (por ejemplo, Apache, IIS , Nginx ) que se mantendrán activos en todos los nodos.
-  * Red(es) de latido **: Ruta(s) de comunicación** utilizada(s) para detectar si un nodo ha abandonado la `farm` , lo que desencadena una redistribución inmediata de la carga.
-  * IP virtual **(VIP `Farm` ):** A diferencia de un clúster mirror , la VIP `Farm` se comparte entre nodos utilizando un algoritmo de filtrado del kernel para distribuir el tráfico de red.
+  * Red(es) de latido **: Ruta(s) de comunicación** utilizada(s) para detectar si un nodo ha abandonado la <span class="notranslate farm-term" translate="no">farm</span> , lo que desencadena una redistribución inmediata de la carga.
+  * IP virtual **(VIP <span class="notranslate farm-term" translate="no">Farm</span> ):** A diferencia de un clúster mirror , la VIP <span class="notranslate farm-term" translate="no">Farm</span> se comparte entre nodos utilizando un algoritmo de filtrado del kernel para distribuir el tráfico de red.
   * Reglas de equilibrio de carga **:** Defina la política de distribución de tráfico en función de la dirección IP o el puerto de origen.
   * Comprobadores **:** Supervisa el estado de la aplicación y activa el reinicio automático si se detecta un fallo en el proceso.
 
 
-### ¿Cómo supervisar un clúster SafeKit `farm` ? {#safekit-farm-cluster-monitoring}
+### ¿Cómo supervisar un clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> ? {#safekit-farm-cluster-monitoring}
 
 
 Consola ![ SafeKit : Monitoreo de un clúster Farm de 2 nodos que muestra ambos nodos en estado UP con balanceo de carga activo. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-La monitorización de un clúster `farm` proporciona visibilidad de la naturaleza **activo-activo** de la infraestructura, donde todos los nodos contribuyen al rendimiento de la aplicación (en este ejemplo se muestran 2 nodos; escalable a nodos adicionales):
+La monitorización de un clúster <span class="notranslate farm-term" translate="no">farm</span> proporciona visibilidad de la naturaleza **activo-activo** de la infraestructura, donde todos los nodos contribuyen al rendimiento de la aplicación (en este ejemplo se muestran 2 nodos; escalable a nodos adicionales):
 
-  * Estado ACTIVO de **(50% en 2 nodos):** En un `farm` saludable, ambos nodos están en el estado "ACTIVO" (50%), lo que significa que ambos están recibiendo y procesando activamente las solicitudes de los clientes a través de la IP virtual compartida.
+  * Estado ACTIVO de **(50% en 2 nodos):** En un <span class="notranslate farm-term" translate="no">farm</span> saludable, ambos nodos están en el estado "ACTIVO" (50%), lo que significa que ambos están recibiendo y procesando activamente las solicitudes de los clientes a través de la IP virtual compartida.
   * **Reequilibrio automático:** Si un nodo falla, la consola muestra visualmente que el nodo restante recibe el 100 % del tráfico. No hay demora de conmutación por error, ya que el nodo que sobrevive ya está activo (aparte de un tiempo de detección de unos pocos segundos).
   * Inserción de nodo **:** Cuando se reinicia un nodo reparado, pasa de "PARADO" a "ACTIVO" y comienza automáticamente a recibir su parte de la carga sin intervención del administrador.
-  * **Sin sincronización de datos:** Tenga en cuenta que en un clúster `farm` no hay un estado de resincronización "Naranja", ya que se espera que los nodos no tengan estado o compartan una base de datos de backend (que puede protegerse por separado en un clúster mirror ).
+  * **Sin sincronización de datos:** Tenga en cuenta que en un clúster <span class="notranslate farm-term" translate="no">farm</span> no hay un estado de resincronización "Naranja", ya que se espera que los nodos no tengan estado o compartan una base de datos de backend (que puede protegerse por separado en un clúster mirror ).
 
 
 Más allá de los simples iconos de estado, la interfaz proporciona administración de nodos con un solo clic (menú **`...`** ), lo que le permite detener o iniciar manualmente un nodo para el mantenimiento planificado, mientras que la IP virtual compartida redistribuye automáticamente el tráfico sin interrumpir la actividad del usuario.

@@ -4,10 +4,10 @@ canonical: "https://safekit.eviden.com/ar/solutions/aws-load-balancing-cluster-f
 description: "عزز أداء موازن الأحمال AWS باستخدام ميزة مراقبة التطبيقات الذكية SafeKit . حقق توافرًا عاليًا وسلسًا من خلال فحوصات السلامة الشاملة، والإصلاح الذاتي التلقائي، والتحويل التلقائي في حالة الأعطال لمجموعات farm ذات الأهمية البالغة."
 category: "solutions"
 lang: "ar"
-topics: "تحسين موازن أحمال السحابة من خلال مراقبة مستوى التطبيق والإصلاح الذاتي، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة موازنة أحمال الشبكة (NLB) AWS ؟، كيف تعمل مجموعة SafeKit `farm` مع AWS ؟، مقارنة: مجموعة SafeKit `Farm` في الموقع مقابل مجموعة SafeKit `Farm` في السحابة، دليل فيديو: تكوين مجموعة موازنة أحمال الشبكة SafeKit `Farm` ، 🔍 مركز التنقل عالي التوفر SafeKit"
+topics: "تحسين موازن أحمال السحابة من خلال مراقبة مستوى التطبيق والإصلاح الذاتي، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة موازنة أحمال الشبكة (NLB) AWS ؟، كيف تعمل مجموعة SafeKit <span class="notranslate farm-term" translate="no">farm</span> مع AWS ؟، مقارنة: مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> في الموقع مقابل مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> في السحابة، دليل فيديو: تكوين مجموعة موازنة أحمال الشبكة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ، 🔍 مركز التنقل عالي التوفر SafeKit"
 ---
 
-# SafeKit : موازنة الأحمال وتوافر التطبيقات العالي من أمازون AWS مجموعة `Farm` {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# SafeKit : موازنة الأحمال وتوافر التطبيقات العالي من أمازون AWS مجموعة <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="AWS" guide="/ar/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

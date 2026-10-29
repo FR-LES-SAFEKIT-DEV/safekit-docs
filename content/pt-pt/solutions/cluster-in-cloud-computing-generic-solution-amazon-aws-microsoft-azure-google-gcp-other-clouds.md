@@ -17,7 +17,7 @@ topics: "Descubra SafeKit em Microsoft Azure , Descubra SafeKit no Google GCP , 
 
 [ Nuvem Genérica Mirror > ](</pt-pt/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ Nuvem Genérica `Farm` > ](</pt-pt/solutions/cloud-load-balancing-cluster-failover/>)
+[ Nuvem Genérica <span class="notranslate farm-term" translate="no">Farm</span> > ](</pt-pt/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-pt-pt  %}}

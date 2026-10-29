@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Erfahren Sie, wie Sie das Modul apache_farm.safe unter Windows und Linux für Apache Network Load Balancing und automatisches Failover bereitstellen. Diese Anleitung zeigt Ihnen, wie Sie einen hochverfügbaren Cluster für Webdienste und Anwendungen mithilfe einer virtuellen IP-Adresse aufbauen – ganz ohne externe Hardware-Load-Balancer oder komplexe Konfiguration."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit mit Apache, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit/Apache-Lösung, Installation der SafeKit/Apache-Lösung unter Windows und Linux (apache_farm.safe), Schrittweise Konfiguration der SafeKit/Apache-Lösung, Demonstration der SafeKit-`farm`-Lösung, 🔍 SafeKit-Navigationszentrale für Hochverfügbarkeit"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit mit Apache, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit/Apache-Lösung, Installation der SafeKit/Apache-Lösung unter Windows und Linux (apache_farm.safe), Schrittweise Konfiguration der SafeKit/Apache-Lösung, Demonstration der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Lösung, 🔍 SafeKit-Navigationszentrale für Hochverfügbarkeit"
 ---
 
 # Apache Netzwerk-Lastverteilung und Failover: Installieren Sie das Modul SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
@@ -40,7 +40,7 @@ Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One Apache Load Balanc
 {{%  insert-safekit-82-farm-configuration-de app="Apache" mod="apache_farm"  %}}
  
 
-## Demonstration der SafeKit-`farm`-Lösung {#demonstration-of-the-safekit-farm-solution}
+## Demonstration der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Lösung {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-de  %}}

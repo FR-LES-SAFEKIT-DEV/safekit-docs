@@ -17,7 +17,7 @@ topics: "Découvrez SafeKit dans Microsoft Azure , découvrez SafeKit dans Googl
 
 [ Cloud générique Mirror > ](</fr/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ Cloud générique `Farm` > ](</fr/solutions/cloud-load-balancing-cluster-failover/>)
+[ Cloud générique <span class="notranslate farm-term" translate="no">Farm</span> > ](</fr/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-fr  %}}

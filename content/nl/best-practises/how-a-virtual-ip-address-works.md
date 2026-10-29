@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/how-a-virtual-ip-addres
 description: "Ontdek hoe SafeKit gebruikmaakt van softwaregedefinieerde virtuele IP-adressen (VIP's) om 24/7 beschikbaarheid te garanderen. Leer meer over geautomatiseerde failover via Gratuitous ARP en waarom dit betere resultaten oplevert dan DNS-omleiding voor bedrijfscontinuïteit op Windows en Linux ."
 category: "best-practises"
 lang: "nl"
-topics: "Wat is een virtueel IP-adres in een high availability-cluster?, Implementatie van een virtueel IP-adres in SafeKit , Inhoudsopgave, Hoe een virtueel IP-adres (VIP) werkt bij failover binnen hetzelfde subnet ( Mirror -cluster), Hoe een virtueel IP-adres (VIP) werkt over verschillende subnetten ( Mirror -cluster), Hoe een load-balanced virtueel IP-adres werkt in een `Farm` cluster binnen hetzelfde subnet ( `Farm` cluster), Hoe een load-balanced virtueel IP-adres werkt over verschillende subnetten ( `Farm` -cluster), Virtueel IP versus DNS-omleiding: Waarom DNS-failover vaak mislukt, Vergelijking: Implementatie van een virtueel IP-adres, latentie en applicatietransparantie, Een virtueel IP-adres configureren voor netwerkloadbalancing en high availability, Veelgestelde vragen over virtueel IP (VIP), 🔍 SafeKit High Availability Navigation Hub"
+topics: "Wat is een virtueel IP-adres in een high availability-cluster?, Implementatie van een virtueel IP-adres in SafeKit , Inhoudsopgave, Hoe een virtueel IP-adres (VIP) werkt bij failover binnen hetzelfde subnet ( Mirror -cluster), Hoe een virtueel IP-adres (VIP) werkt over verschillende subnetten ( Mirror -cluster), Hoe een load-balanced virtueel IP-adres werkt in een <span class="notranslate farm-term" translate="no">Farm</span> cluster binnen hetzelfde subnet ( <span class="notranslate farm-term" translate="no">Farm</span> cluster), Hoe een load-balanced virtueel IP-adres werkt over verschillende subnetten ( <span class="notranslate farm-term" translate="no">Farm</span> -cluster), Virtueel IP versus DNS-omleiding: Waarom DNS-failover vaak mislukt, Vergelijking: Implementatie van een virtueel IP-adres, latentie en applicatietransparantie, Een virtueel IP-adres configureren voor netwerkloadbalancing en high availability, Veelgestelde vragen over virtueel IP (VIP), 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # Hoe werkt een virtueel IP-adres (VIP) in een cluster met hoge beschikbaarheid? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -20,7 +20,7 @@ topics: "Wat is een virtueel IP-adres in een high availability-cluster?, Impleme
 ## Implementatie van virtueel IP in SafeKit {#safekit-vip-implementation}
 
   * **Mirror Clusters:** Beschikt over een zwevend IP-adres dat alleen actief is op de primaire server om realtime replicatie en failover mogelijk te maken.
-  * **`Farm` Clusters:** Maakt netwerkbelastingverdeling mogelijk door het VIP-adres gelijktijdig op alle knooppunten te handhaven.
+  * **<span class="notranslate farm-term" translate="no">Farm</span> Clusters:** Maakt netwerkbelastingverdeling mogelijk door het VIP-adres gelijktijdig op alle knooppunten te handhaven.
 
 
 **Belangrijkste voordeel:** Door gebruik te maken van **Gratuitous ARP (Address Resolution Protocol)** of **MAC Address Takeover** , maakt de VIP een naadloze failover van applicaties mogelijk zonder handmatige herconfiguratie van de client, waardoor 24/7 bedrijfscontinuïteit wordt gewaarborgd.
@@ -30,7 +30,7 @@ topics: "Wat is een virtueel IP-adres in een high availability-cluster?, Impleme
 
 ![ Vergelijkingsdiagram van het gedrag van virtuele IP-adressen (VIP's) in Evidian. SafeKit : Mirror Clusters met een zwevend IP-adres op het actieve knooppunt versus Farm Clusters met netwerkbelastingverdeling over alle knooppunten. ](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-Implementatiestrategieën voor virtuele IP-adressen **voor de clusters Mirror en `Farm` in SafeKit .**
+Implementatiestrategieën voor virtuele IP-adressen **voor de clusters Mirror en <span class="notranslate farm-term" translate="no">Farm</span> in SafeKit .**
 
 
 {{%  insert-safekit-4-buttons-nl  %}}
@@ -40,8 +40,8 @@ Implementatiestrategieën voor virtuele IP-adressen **voor de clusters Mirror en
 
   * [ Hoe een virtueel IP-adres (VIP) werkt bij failover binnen hetzelfde subnet ( Mirror -cluster) ](#virtual-ip-same-subnet-failover)
   * [ Hoe een virtueel IP-adres (VIP) werkt over verschillende subnetten ( Mirror -cluster) ](#virtual-ip-different-subnets-failover)
-  * [ Hoe een load-balanced virtueel IP-adres werkt in hetzelfde subnet `Farm` ( `Farm` -cluster) ](#vip-load-balancing-same-subnet)
-  * [ Hoe een load-balanced virtueel IP-adres werkt over verschillende subnetten ( `Farm` -cluster) ](#vip-load-balancing-different-subnets)
+  * [ Hoe een load-balanced virtueel IP-adres werkt in hetzelfde subnet <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> -cluster) ](#vip-load-balancing-same-subnet)
+  * [ Hoe een load-balanced virtueel IP-adres werkt over verschillende subnetten ( <span class="notranslate farm-term" translate="no">Farm</span> -cluster) ](#vip-load-balancing-different-subnets)
   * [ Virtueel IP-adres versus DNS-omleiding: Waarom DNS-failover vaak mislukt ](#virtual-ip-vs-dns-redirection-failover)
   * [ Vergelijking: Implementatie van virtueel IP, latentie en applicatietransparantie ](#vip-vs-dns-comparison)
   * [ Een virtueel IP-adres configureren voor netwerkbelastingverdeling en hoge beschikbaarheid ](#virtual-ip-configuration-load-balancing-ha)
@@ -119,22 +119,22 @@ Als een load balancer niet gewenst is, overleg dan met uw netwerkteam over het i
 
 > **⚠️ Opmerking:** Wanneer u kiest voor een load balancer, controleer dan of uw applicatie compatibel is met **Source/Destination IP Translation (SNAT/DNAT)** . Met een load balancer kan de applicatie de identiteit van de oorspronkelijke gebruiker kwijtraken of niet opstarten omdat deze het virtuele IP-adres dat direct op de eigen netwerkinterface is geconfigureerd niet meer ziet.
 
-## Hoe een load-balanced virtueel IP-adres werkt in hetzelfde subnet `Farm` ( `Farm` -cluster) {#vip-load-balancing-same-subnet}
+## Hoe een load-balanced virtueel IP-adres werkt in hetzelfde subnet <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> -cluster) {#vip-load-balancing-same-subnet}
 
 ### Schaalbare prestaties: Taakverdeling en redundantie op kernelniveau {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-Voor omgevingen met veel verkeer legt de **Architecture Guide: Scalable High Availability with Multi-Node `Farm` Clusters** uit hoe SafeKit workloads verdeelt over meerdere actieve servers met behoud van volledige redundantie. 
+Voor omgevingen met veel verkeer legt de **Architecture Guide: Scalable High Availability with Multi-Node <span class="notranslate farm-term" translate="no">Farm</span> Clusters** uit hoe SafeKit workloads verdeelt over meerdere actieve servers met behoud van volledige redundantie. 
 
-### `Farm` Clusterarchitectuur: Taakverdeling over Windows of Linux knooppunten {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### <span class="notranslate farm-term" translate="no">Farm</span> Clusterarchitectuur: Taakverdeling over Windows of Linux knooppunten {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 Diagram van een load-balanced virtueel IP-adres (VIP) binnen een cluster ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256") hetzelfde subnet farm ![
 
- Gedistribueerde verkeersverwerking via kernelfiltering In een **load-balancing `farm` -cluster** wordt een virtueel IP-adres (VIP) gebruikt om clientverzoeken gelijktijdig over meerdere servers te verdelen. Hoewel dit voorbeeld twee knooppunten bevat, is de architectuur schaalbaar voor grotere serverparken. In een configuratie binnen hetzelfde subnet wordt het VIP geconfigureerd op de Ethernet-kaart van **elke server** in het cluster via IP-aliasing. 
+ Gedistribueerde verkeersverwerking via kernelfiltering In een **load-balancing <span class="notranslate farm-term" translate="no">farm</span> -cluster** wordt een virtueel IP-adres (VIP) gebruikt om clientverzoeken gelijktijdig over meerdere servers te verdelen. Hoewel dit voorbeeld twee knooppunten bevat, is de architectuur schaalbaar voor grotere serverparken. In een configuratie binnen hetzelfde subnet wordt het VIP geconfigureerd op de Ethernet-kaart van **elke server** in het cluster via IP-aliasing. 
 
 #### Verkeersdistributie: Het kernelniveaufilter {#traffic-distribution-the-kernel-level-filter}
 
-In tegenstelling tot een eenvoudig failover-cluster beheert een `farm` cluster het verkeer via een gespecialiseerd **-filter op kernelniveau** . Het proces werkt als volgt: 
+In tegenstelling tot een eenvoudig failover-cluster beheert een <span class="notranslate farm-term" translate="no">farm</span> cluster het verkeer via een gespecialiseerd **-filter op kernelniveau** . Het proces werkt als volgt: 
 
   * **ARP-mapping:** In de ARP-caches van de clients is het VIP in eerste instantie gekoppeld aan één hardwareadres (bijvoorbeeld `mac1` van Server 1).
   * Pakketsplitsing **:** Wanneer server 1 het verkeer ontvangt, analyseert het kernelfilter SafeKit de identiteit van de binnenkomende pakketten (op basis van **client-IP** of **TCP-poort** ).
@@ -147,20 +147,20 @@ Als het primaire knooppunt (Server 1) uitvalt, blijft het cluster beschikbaar vi
 
 #### Implementatie op externe locaties {#deployment-in-remote-sites}
 
-Voor organisaties die opereren vanuit **meerdere datacenters op afstand** , blijft dit load-balancing-algoritme functioneel zolang de locaties via een **uitgebreid LAN of VLAN** met elkaar verbonden zijn. Dit creëert een virtuele "zelfde-subnet"-omgeving, wat de meest efficiënte configuratie is voor geografisch verspreide `farm` -clusters. 
+Voor organisaties die opereren vanuit **meerdere datacenters op afstand** , blijft dit load-balancing-algoritme functioneel zolang de locaties via een **uitgebreid LAN of VLAN** met elkaar verbonden zijn. Dit creëert een virtuele "zelfde-subnet"-omgeving, wat de meest efficiënte configuratie is voor geografisch verspreide <span class="notranslate farm-term" translate="no">farm</span> -clusters. 
 
-## Hoe een load-balanced virtueel IP-adres werkt over verschillende subnetten ( `Farm` -cluster) {#vip-load-balancing-different-subnets}
+## Hoe een load-balanced virtueel IP-adres werkt over verschillende subnetten ( <span class="notranslate farm-term" translate="no">Farm</span> -cluster) {#vip-load-balancing-different-subnets}
 
 ### Schaalvergroting over meerdere zones: Verkeer orkestreren over cloudsubnetten {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-De **-architectuurhandleiding: `Farm` -clusters schalen in omgevingen met meerdere zones en de cloud.** biedt het blauwdruk voor het verdelen van applicatieworkloads over afzonderlijke beschikbaarheidszones en subnetten. 
+De **-architectuurhandleiding: <span class="notranslate farm-term" translate="no">Farm</span> -clusters schalen in omgevingen met meerdere zones en de cloud.** biedt het blauwdruk voor het verdelen van applicatieworkloads over afzonderlijke beschikbaarheidszones en subnetten. 
 
-### Cross-Subnet `Farm` Clusters: Multi-Node Windows & Linux Schaalbaarheid {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### Cross-Subnet <span class="notranslate farm-term" translate="no">Farm</span> Clusters: Multi-Node Windows & Linux Schaalbaarheid {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 Diagram van een load-balanced ![ farm cluster dat werkt over twee verschillende subnetten ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
- Wereldwijde verkeersdistributie via externe load balancing. Wanneer `farm` -nodes over **verschillende subnetten** zijn verdeeld (wat vaak voorkomt in cloudimplementaties met meerdere beschikbaarheidszones), wordt het **virtuele IP-adres (VIP)** beheerd door een externe **load balancer (LB)** . De LB bewaart het VIP en stuurt inkomend verkeer door naar de fysieke IP-adressen van de servers in de respectievelijke subnetten. 
+ Wereldwijde verkeersdistributie via externe load balancing. Wanneer <span class="notranslate farm-term" translate="no">farm</span> -nodes over **verschillende subnetten** zijn verdeeld (wat vaak voorkomt in cloudimplementaties met meerdere beschikbaarheidszones), wordt het **virtuele IP-adres (VIP)** beheerd door een externe **load balancer (LB)** . De LB bewaart het VIP en stuurt inkomend verkeer door naar de fysieke IP-adressen van de servers in de respectievelijke subnetten. 
 
 #### Intelligente verkeersrouterings- en taakverdelingsregels {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -174,7 +174,7 @@ De load balancer verdeelt clientverzoeken op basis van twee primaire factoren:
 
 #### SafeKit Gezondheidscontrolemechanisme {#safekit-health-check-mechanism}
 
-SafeKit biedt een realtime **Health Check URL** op elke server in `farm` om de operationele status ervan aan de load balancer te communiceren: 
+SafeKit biedt een realtime **Health Check URL** op elke server in <span class="notranslate farm-term" translate="no">farm</span> om de operationele status ervan aan de load balancer te communiceren: 
 
   * **Node UP:** De health check geeft `HTTP 200 OK` terug. De load balancer neemt deze server op in de actieve rotatie.
   * **Knooppunt UITGEVALLEN/Failover:** Als een server of applicatie uitvalt, retourneert SafeKit `HTTP 404 NOT FOUND` (of de service wordt onbereikbaar). De load balancer stopt onmiddellijk met het verzenden van verkeer naar het uitgevallen knooppunt.
@@ -182,7 +182,7 @@ SafeKit biedt een realtime **Health Check URL** op elke server in `farm` om de o
 
 #### Cloudimplementatiestandaarden: AWS , Azure , GCP en {#cloud-deployment-standards-aws-azure-and-gcp}
 
-Deze architectuur vormt het basismodel voor **Cloud-, `Farm`** -clusters, waardoor wordt gegarandeerd dat als een volledig subnet of zone offline gaat, de resterende knooppunten de belasting blijven afhandelen. Dit wordt standaard ondersteund door: 
+Deze architectuur vormt het basismodel voor **Cloud-, <span class="notranslate farm-term" translate="no">Farm</span>** -clusters, waardoor wordt gegarandeerd dat als een volledig subnet of zone offline gaat, de resterende knooppunten de belasting blijven afhandelen. Dit wordt standaard ondersteund door: 
 
   * 💡 [ **Amazon AWS** ](</nl/solutions/aws-load-balancing-cluster-failover/>) ( AWS Netwerk Load Balancer)
   * 💡 [ **Microsoft Azure** ](</nl/solutions/azure-load-balancing-cluster-failover/>) ( Azure Load Balancer)
@@ -234,7 +234,7 @@ DNS-omleiding is een inconsistente oplossing voor een hoge beschikbaarheidsomgev
 Omgeving en gebruiksscenario | Type hoge beschikbaarheid | Omleidingsmechanisme | Netwerklatentie | Applicatietransparantie en IP-lokaliteit  
 ---|---|---|---|---  
 Primair/Back-up (Hoge Beschikbaarheid) | Mirror Cluster | Gratuitous ARP / MAC Takeover | Zeer laag: Tijd om broadcast GARP te detecteren en te verzenden | Volledige Transparantie: Virtueel IP-adres is lokaal op het actieve knooppunt. Client-IP-adres blijft behouden.  
-Loadbalancing (Actief/Actief) | `Farm` Cluster | Netwerkfilter op kernelniveau / GARP | Zeer laag: Tijd nodig om netwerkfilters te detecteren en opnieuw te configureren | Volledige transparantie: Virtueel IP-adres is lokaal op alle knooppunten. Client-IP-adres blijft behouden.  
+Loadbalancing (Actief/Actief) | <span class="notranslate farm-term" translate="no">Farm</span> Cluster | Netwerkfilter op kernelniveau / GARP | Zeer laag: Tijd nodig om netwerkfilters te detecteren en opnieuw te configureren | Volledige transparantie: Virtueel IP-adres is lokaal op alle knooppunten. Client-IP-adres blijft behouden.  
 Zelfde subnet / Uitgebreid LAN (VLAN-stretching) | Rampenherstel (externe datacenters) | Standaard IP-aliasing / GARP | Laag: Afhankelijk van de RTT (Round Trip Time) van het stretched VLAN | Volledige transparantie: Virtueel IP-adres is lokaal op de knooppunten. Client-IP-adres blijft behouden.  
 Verschillende subnetten | Rampenherstel (externe datacenters / cloud) | Externe load balancer | Gemiddeld: Hogere failover-latentie vanwege de interval van de load balancer-statuscontrole | ⚠️ Gedeeltelijke transparantie: Gebruikt SNAT/DNAT. Virtueel IP-adres is **NIET** lokaal op de knooppunten. Client-IP-adres is **NIET** behouden. De applicatie moet dit ondersteunen.  
 DNS-omleiding: Geen VIP | Rampenherstel (externe datacenters) | DNS-recordupdate (naam / fysiek IP-adres) | Hoog/onvoorspelbaar: Afhankelijk van DNS TTL (Time To Live) en DNS-caching aan de clientzijde. | ⚠️ Onbetrouwbaar: Client moet DNS opnieuw oplossen. Meestal blijven clients het verouderde IP-adres gebruiken dat bij het opstarten is opgelost en worden ze na een failover niet omgeleid.  

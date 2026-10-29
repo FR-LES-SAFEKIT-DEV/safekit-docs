@@ -27,11 +27,11 @@ Sind Sie Softwarehersteller und suchen nach einer Anwendungsclustering-Lösung, 
 
 ### Anwendungsclustering mit Echtzeitreplikation, Lastausgleich und Failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-Die Software SafeKit bietet zwei generische Module für das Anwendungsclustering an: das Modul mirror und das Modul `farm` .
+Die Software SafeKit bietet zwei generische Module für das Anwendungsclustering an: das Modul mirror und das Modul <span class="notranslate farm-term" translate="no">farm</span> .
 
 Das Modul [ mirror ](/de/product/#safekit-mirror-cluster) implementiert Dateireplikation in Echtzeit und Anwendungs-Failover. Es eignet sich für Anwendungen mit einer Datenbank.
 
-Das Modul [ `farm` ](/de/product/#safekit-farm-cluster) implementiert Netzwerklastausgleich und Anwendungsausfallsicherung. Es eignet sich für Anwendungen mit Webdiensten.
+Das Modul [ <span class="notranslate farm-term" translate="no">farm</span> ](/de/product/#safekit-farm-cluster) implementiert Netzwerklastausgleich und Anwendungsausfallsicherung. Es eignet sich für Anwendungen mit Webdiensten.
 
 Und Sie können die Module kombinieren.
 

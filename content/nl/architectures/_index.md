@@ -19,7 +19,7 @@ topics: "Wat zijn de verschillende architecturen voor hoge beschikbaarheid en de
 
 [ Meer informatie ](</nl/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### `Farm` cluster {#farm-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> cluster {#farm-cluster}
 
 
 ![ SafeKit farm cluster ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "Wat zijn de verschillende architecturen voor hoge beschikbaarheid en de
 
 [ Meer informatie ](</nl/architectures/network-load-balancing-cluster/>)
 
-### `Farm` + mirror cluster {#farmmirror-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> + mirror cluster {#farmmirror-cluster}
 
 
 ![ farm SafeKit + mirror cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ topics: "Wat zijn de verschillende architecturen voor hoge beschikbaarheid en de
 
 ### Gebruik modules met hoge beschikbaarheid {#use-high-availability-modules}
 
-Een module voor hoge beschikbaarheid is een aanpassing van SafeKit voor een specifieke toepassing. Er zijn twee typen modules: de mirror -module met realtime datareplicatie en failover, en de `farm` -module met load balancing en failover.
+Een module voor hoge beschikbaarheid is een aanpassing van SafeKit voor een specifieke toepassing. Er zijn twee typen modules: de mirror -module met realtime datareplicatie en failover, en de <span class="notranslate farm-term" translate="no">farm</span> -module met load balancing en failover.
 
-Als u een mirror -module op 2 servers implementeert, creëert u een mirror cluster, en als u een `farm` module op N servers implementeert, creëert u een `farm` cluster.
+Als u een mirror -module op 2 servers implementeert, creëert u een mirror cluster, en als u een <span class="notranslate farm-term" translate="no">farm</span> module op N servers implementeert, creëert u een <span class="notranslate farm-term" translate="no">farm</span> cluster.
 
-Meerdere applicatiemodules kunnen op dezelfde servers worden geïmplementeerd. Hierdoor kunnen geavanceerde clusteringarchitecturen worden gerealiseerd, zoals de eerder gepresenteerde ( `farm` + mirror , actief/actief, N-1).
+Meerdere applicatiemodules kunnen op dezelfde servers worden geïmplementeerd. Hierdoor kunnen geavanceerde clusteringarchitecturen worden gerealiseerd, zoals de eerder gepresenteerde ( <span class="notranslate farm-term" translate="no">farm</span> + mirror , actief/actief, N-1).
 
 ### Wat is een applicatiemodule? {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ In de praktijk is een applicatiemodule een ".Safe"-bestand (zip-bestand) dat het
   * namen of fysieke IP-adressen van de servers,
   * naam of virtueel IP-adres van het cluster,
   * bestandsmappen die in realtime moeten worden gerepliceerd (voor een mirror -module),
-  * criteria voor netwerkbelastingverdeling (voor een `farm` -module),
+  * criteria voor netwerkbelastingverdeling (voor een <span class="notranslate farm-term" translate="no">farm</span> -module),
   * configuratie van software- en hardwarefoutdetectoren
 
 

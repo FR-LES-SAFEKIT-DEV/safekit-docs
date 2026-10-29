@@ -19,7 +19,7 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 
 [ Weitere Informationen ](</de/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### `Farm` Cluster {#farm-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> Cluster {#farm-cluster}
 
 
 ![ ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300") SafeKit Cluster farm
@@ -27,7 +27,7 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 
 [ Weitere Informationen ](</de/architectures/network-load-balancing-cluster/>)
 
-### `Farm` + mirror Cluster {#farmmirror-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> + mirror Cluster {#farmmirror-cluster}
 
 
 ![ farm SafeKit + mirror Cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwareclust
 
 ### Verwenden Sie die hochverfügbaren Module {#use-high-availability-modules}
 
-Ein Hochverfügbarkeitsmodul ist eine anwendungsspezifische Anpassung von SafeKit . Es gibt zwei Modultypen: das Modul mirror mit Echtzeit-Datenreplikation und Failover sowie das Modul `farm` mit Lastausgleich und Failover.
+Ein Hochverfügbarkeitsmodul ist eine anwendungsspezifische Anpassung von SafeKit . Es gibt zwei Modultypen: das Modul mirror mit Echtzeit-Datenreplikation und Failover sowie das Modul <span class="notranslate farm-term" translate="no">farm</span> mit Lastausgleich und Failover.
 
-Wenn Sie ein mirror -Modul auf 2 Servern bereitstellen, erstellen Sie einen mirror Cluster, und wenn Sie ein `farm` Modul auf N Servern bereitstellen, erstellen Sie einen `farm` Cluster.
+Wenn Sie ein mirror -Modul auf 2 Servern bereitstellen, erstellen Sie einen mirror Cluster, und wenn Sie ein <span class="notranslate farm-term" translate="no">farm</span> Modul auf N Servern bereitstellen, erstellen Sie einen <span class="notranslate farm-term" translate="no">farm</span> Cluster.
 
-Mehrere Anwendungsmodule können auf denselben Servern bereitgestellt werden. Dadurch lassen sich fortgeschrittene Clusterarchitekturen wie die zuvor vorgestellten implementieren ( `farm` + mirror , aktiv/aktiv, N-1).
+Mehrere Anwendungsmodule können auf denselben Servern bereitgestellt werden. Dadurch lassen sich fortgeschrittene Clusterarchitekturen wie die zuvor vorgestellten implementieren ( <span class="notranslate farm-term" translate="no">farm</span> + mirror , aktiv/aktiv, N-1).
 
 ### Was ist ein Anwendungsmodul? {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ In der Praxis ist ein Anwendungsmodul eine „.Safe“-Datei (ZIP-Datei) mit fol
   * Namen oder physische IP-Adressen der Server,
   * Name oder virtuelle IP-Adresse des Clusters,
   * Dateiverzeichnisse, die in Echtzeit repliziert werden sollen (für ein mirror -Modul),
-  * Kriterien für den Netzwerklastausgleich (für ein `farm` -Modul),
+  * Kriterien für den Netzwerklastausgleich (für ein <span class="notranslate farm-term" translate="no">farm</span> -Modul),
   * Konfiguration von Software- und Hardware-Fehlerdetektoren
 
 

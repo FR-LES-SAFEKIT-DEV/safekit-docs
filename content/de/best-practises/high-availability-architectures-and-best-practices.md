@@ -27,7 +27,7 @@ Es gibt zwei Arten von [ ](<https://www.techtarget.com/it-infrastructure/definit
 
 Hochverfügbarkeitsarchitekturen für das Backend basieren auf zwei Servern, die Daten gemeinsam nutzen oder replizieren, wobei im Falle von Hardware- oder Softwarefehlern ein automatisches Anwendungs-Failover erfolgt.
 
-Hochverfügbarkeitsarchitekturen für das Frontend basieren auf einer Serveranzahl von `farm` (mindestens zwei Server). Der Lastausgleich erfolgt hardware- oder softwareseitig und verteilt die TCP-Sitzungen auf die verfügbaren Server in farm .
+Hochverfügbarkeitsarchitekturen für das Frontend basieren auf einer Serveranzahl von <span class="notranslate farm-term" translate="no">farm</span> (mindestens zwei Server). Der Lastausgleich erfolgt hardware- oder softwareseitig und verteilt die TCP-Sitzungen auf die verfügbaren Server in farm .
 
 Darüber hinaus müssen Sie sich zwischen Hochverfügbarkeit auf Anwendungsebene oder auf Ebene der virtuellen Maschine entscheiden.
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/architectures/safekit-smart-console-yo
 description: "스마트 콘솔을 사용하여 SafeKit 클러스터를 간편하게 관리하세요. 코딩 없이 구성 가능하고, 스마트폰과 호환되며, 실시간 PWA 알림을 제공합니다. 인적 오류를 줄이고 손쉽게 고가용성을 확보하세요. 자세히 알아보세요."
 category: "architectures"
 lang: "ko"
-topics: "스마트 콘솔: 직관적이고 모바일 친화적이며 오류 없는 고가용성, 목차, SafeKit 및 mirror 클러스터는 웹 콘솔에서 어떻게 작동하나요?, SafeKit 및 `farm` 클러스터는 웹 콘솔에서 어떻게 작동하나요?, 웹 콘솔을 통해 여러 모듈과 여러 클러스터를 모니터링하는 방법은 무엇인가요?, 콘솔에서 알림을 모니터링하고 이메일 알림을 관리하는 방법은 무엇인가요?, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "스마트 콘솔: 직관적이고 모바일 친화적이며 오류 없는 고가용성, 목차, SafeKit 및 mirror 클러스터는 웹 콘솔에서 어떻게 작동하나요?, SafeKit 및 <span class="notranslate farm-term" translate="no">farm</span> 클러스터는 웹 콘솔에서 어떻게 작동하나요?, 웹 콘솔을 통해 여러 모듈과 여러 클러스터를 모니터링하는 방법은 무엇인가요?, 콘솔에서 알림을 모니터링하고 이메일 알림을 관리하는 방법은 무엇인가요?, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # SafeKit 스마트 콘솔: 주머니 속 고가용성 클러스터 {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "스마트 콘솔: 직관적이고 모바일 친화적이며 오류 없�
 
 **속도와** 간편함을 위해 설계된 솔루션으로 고가용성 관리 방식을 재정의하십시오. SafeKit 웹 콘솔은 **학습 곡선이 없는** 환경을 제공하여 **코드 작성 없이** 인프라를 구성하고 제어할 수 있도록 지원합니다.
 
-책상에 앉아 있든 이동 중이든, 스마트폰과 호환되는 대시보드를 통해 클러스터 전체를 손쉽게 제어할 수 있습니다. 스마트 콘솔 mirror 및 `farm` 모듈 관리 간소화) **은 인적 오류를 제거하고** 가장 중요한 시스템에 대한 원활한 장애 조치 프로세스를 보장합니다.
+책상에 앉아 있든 이동 중이든, 스마트폰과 호환되는 대시보드를 통해 클러스터 전체를 손쉽게 제어할 수 있습니다. 스마트 콘솔 mirror 및 <span class="notranslate farm-term" translate="no">farm</span> 모듈 관리 간소화) **은 인적 오류를 제거하고** 가장 중요한 시스템에 대한 원활한 장애 조치 프로세스를 보장합니다.
 
 ## 목차 {#table-of-contents}
 
   * [ 클러스터는 웹 콘솔과 어떻게 연동되나요? SafeKit mirror ](#safekit-mirror-cluster)
-  * [ 클러스터는 웹 콘솔과 어떻게 연동되나요? SafeKit `farm` ](#safekit-farm-cluster)
+  * [ 클러스터는 웹 콘솔과 어떻게 연동되나요? SafeKit <span class="notranslate farm-term" translate="no">farm</span> ](#safekit-farm-cluster)
   * 웹 콘솔을 통해 여러 모듈 ](#multipe-modules-clusters) 여러 클러스터를 모니터링하는 방법은 무엇 [ ?
   * 콘솔에서 알림을 모니터링 ](#safekit-notifications-cluster) 이메일 알림을 관리하는 방법은 [ 인가요?
 
@@ -60,35 +60,35 @@ SafeKit 클러스터에는 세 번째 감시 장비나 추가 하트비트 네�
 
 단순한 상태 아이콘을 넘어, 인터페이스는 다음과 같은 기능을 제공합니다. **원클릭 페일오버 오케스트레이션** (**`...` 메뉴**이를 통해 계획된 유지 보수를 위해 기본 역할을 수동으로 재할당하는 동시에 사용자 활동에 대한 지속적인 가용성을 보장할 수 있습니다.
 
-## SafeKit `farm` 는 웹 콘솔과 어떻게 연동되나요? {#safekit-farm-cluster}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> 는 웹 콘솔과 어떻게 연동되나요? {#safekit-farm-cluster}
 
-### SafeKit `farm` 를 구성하는 방법은 무엇입니까? {#safekit-farm-cluster-configuration}
+### SafeKit <span class="notranslate farm-term" translate="no">farm</span> 를 구성하는 방법은 무엇입니까? {#safekit-farm-cluster-configuration}
 
 
 ![ SafeKit 웹 콘솔: 네트워크 로드 밸런싱 및 가상 IP 관리를 위한 클러스터 구성. Farm ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-**SafeKit `farm`** 클러스터는 서비스의 고가용성과 확장성을 위해 설계되었습니다. 이 구성은 들어오는 트래픽을 두 노드에 동시에 분산하는 데 중점을 둡니다.
+**SafeKit <span class="notranslate farm-term" translate="no">farm</span>** 클러스터는 서비스의 고가용성과 확장성을 위해 설계되었습니다. 이 구성은 들어오는 트래픽을 두 노드에 동시에 분산하는 데 중점을 둡니다.
 
   * **로드 밸런싱 서비스(매크로 탭):** 모든 노드에서 활성 상태로 유지할 특정 애플리케이션 서비스(예: Apache, IIS , Nginx )를 정의합니다.
-  * **하트비트 네트워크: 노드가 `farm` 에서 이탈했는지 감지하는 데 사용되는** 통신 경로로, 이탈 시 즉시 부하 재분배가 트리거됩니다.
-  * **가상 IP( `Farm` VIP):** `Farm` mirror 와 달리 커널 필터링 알고리즘을 사용하여 네트워크 트래픽을 분산함으로써 노드 간에 공유됩니다.
+  * **하트비트 네트워크: 노드가 <span class="notranslate farm-term" translate="no">farm</span> 에서 이탈했는지 감지하는 데 사용되는** 통신 경로로, 이탈 시 즉시 부하 재분배가 트리거됩니다.
+  * **가상 IP( <span class="notranslate farm-term" translate="no">Farm</span> VIP):** <span class="notranslate farm-term" translate="no">Farm</span> mirror 와 달리 커널 필터링 알고리즘을 사용하여 네트워크 트래픽을 분산함으로써 노드 간에 공유됩니다.
   * **로드 밸런싱 규칙:** 소스 IP 주소 또는 포트를 기반으로 트래픽 분산 정책을 정의합니다.
   * **검사기:** 애플리케이션의 상태를 모니터링하고 프로세스 오류가 감지되면 자동 재시작을 실행합니다.
 
 
-### SafeKit `farm` 를 모니터링하는 방법은 무엇입니까? {#safekit-farm-cluster-monitoring}
+### SafeKit <span class="notranslate farm-term" translate="no">farm</span> 를 모니터링하는 방법은 무엇입니까? {#safekit-farm-cluster-monitoring}
 
 
 ![ SafeKit 콘솔: 2개 노드로 구성된 Farm 클러스터를 모니터링 중입니다. 두 노드 모두 UP 상태이며 활성 로드 밸런싱이 적용되고 있습니다. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-`farm` 클러스터를 모니터링하면 모든 노드가 애플리케이션 성능에 기여하는 **액티브-액티브** 인프라의 특성을 파악할 수 있습니다(이 예에서는 2개의 노드를 보여주지만, 노드를 추가하여 확장 가능합니다).
+<span class="notranslate farm-term" translate="no">farm</span> 클러스터를 모니터링하면 모든 노드가 애플리케이션 성능에 기여하는 **액티브-액티브** 인프라의 특성을 파악할 수 있습니다(이 예에서는 2개의 노드를 보여주지만, 노드를 추가하여 확장 가능합니다).
 
-  * **UP 상태(2개 노드에서 50%):** 정상적인 `farm` 에서는 두 노드 모두 "UP"(50%) 상태이며, 이는 두 노드 모두 공유 가상 IP를 통해 클라이언트 요청을 활발하게 수신하고 처리하고 있음을 의미합니다.
+  * **UP 상태(2개 노드에서 50%):** 정상적인 <span class="notranslate farm-term" translate="no">farm</span> 에서는 두 노드 모두 "UP"(50%) 상태이며, 이는 두 노드 모두 공유 가상 IP를 통해 클라이언트 요청을 활발하게 수신하고 처리하고 있음을 의미합니다.
   * **자동 재분배:** 노드 하나에 장애가 발생하면 콘솔에 나머지 노드가 트래픽의 100%를 처리하는 모습이 시각적으로 표시됩니다. 장애가 발생한 노드가 이미 활성화되어 있으므로 (몇 초의 감지 시간 제외) "페일오버" 지연은 없습니다.
   * **노드 삽입:** 복구된 노드가 재시작되면 "STOP"에서 "UP"으로 전환되고 관리자 개입 없이 자동으로 부하를 할당받기 시작합니다.
-  * **데이터 동기화 없음:** 참고로 `farm` 클러스터에서는 노드가 상태를 유지하지 않거나 백엔드 데이터베이스를 공유하므로 "주황색" 재동기화 상태가 없습니다( mirror 클러스터에서는 백엔드 데이터베이스를 별도로 보호할 수 있습니다).
+  * **데이터 동기화 없음:** 참고로 <span class="notranslate farm-term" translate="no">farm</span> 클러스터에서는 노드가 상태를 유지하지 않거나 백엔드 데이터베이스를 공유하므로 "주황색" 재동기화 상태가 없습니다( mirror 클러스터에서는 백엔드 데이터베이스를 별도로 보호할 수 있습니다).
 
 
 단순한 상태 아이콘 외에도, 인터페이스는 원클릭 노드 관리( **`...` 메뉴** ) 기능을 제공하여 계획된 유지 보수를 위해 노드를 수동으로 중지하거나 시작할 수 있으며, 공유 가상 IP는 사용자 활동을 중단하지 않고 트래픽을 자동으로 재분배합니다.

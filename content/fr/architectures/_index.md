@@ -19,7 +19,7 @@ Cluster ![ SafeKit mirror ](/wp-content/uploads/2023/02/safekit-prim-second-300.
 
 [ Plus d'informations ](</fr/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Cluster `Farm` {#farm-cluster}
+### Cluster <span class="notranslate farm-term" translate="no">Farm</span> {#farm-cluster}
 
 
 Cluster ![ SafeKit farm ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ Cluster ![ SafeKit farm ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "
 
 [ Plus d'informations ](</fr/architectures/network-load-balancing-cluster/>)
 
-### Cluster `Farm` + mirror {#farmmirror-cluster}
+### Cluster <span class="notranslate farm-term" translate="no">Farm</span> + mirror {#farmmirror-cluster}
 
 
 Cluster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ Cluster de redondance N-1 ![ SafeKit ](/wp-content/uploads/2023/02/safekit-n-1-3
 
 ### Utiliser les modules à haute disponibilité {#use-high-availability-modules}
 
-Un module de haute disponibilité est une personnalisation de SafeKit pour une application. Il existe deux types de modules : le module mirror avec réplication des données en temps réel et basculement, et le module `farm` avec répartition de charge et basculement.
+Un module de haute disponibilité est une personnalisation de SafeKit pour une application. Il existe deux types de modules : le module mirror avec réplication des données en temps réel et basculement, et le module <span class="notranslate farm-term" translate="no">farm</span> avec répartition de charge et basculement.
 
-Si vous déployez un module mirror sur 2 serveurs, vous créez un cluster mirror et si vous déployez un module `farm` sur N serveurs, vous créez un cluster `farm` .
+Si vous déployez un module mirror sur 2 serveurs, vous créez un cluster mirror et si vous déployez un module <span class="notranslate farm-term" translate="no">farm</span> sur N serveurs, vous créez un cluster <span class="notranslate farm-term" translate="no">farm</span> .
 
-Plusieurs modules d'application peuvent être déployés sur les mêmes serveurs. Ainsi, des architectures de clustering avancées peuvent être mises en œuvre comme celles présentées précédemment ( `farm` + mirror , actif/actif, N-1).
+Plusieurs modules d'application peuvent être déployés sur les mêmes serveurs. Ainsi, des architectures de clustering avancées peuvent être mises en œuvre comme celles présentées précédemment ( <span class="notranslate farm-term" translate="no">farm</span> + mirror , actif/actif, N-1).
 
 ### Qu'est-ce qu'un module d'application ? {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ En pratique, un module d'application est un fichier « .Safe » (type zip) conte
   * noms ou adresses IP physiques des serveurs,
   * nom ou adresse IP virtuelle du cluster,
   * répertoires de fichiers à répliquer en temps réel (pour un module mirror ),
-  * critères d'équilibrage de charge réseau (pour un module `farm` ),
+  * critères d'équilibrage de charge réseau (pour un module <span class="notranslate farm-term" translate="no">farm</span> ),
   * configuration des détecteurs de pannes logicielles et matérielles
 
 

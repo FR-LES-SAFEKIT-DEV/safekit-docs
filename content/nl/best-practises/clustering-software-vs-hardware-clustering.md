@@ -27,7 +27,7 @@ Er zijn twee soorten hardwareclusteringoplossingen: hardwareclustering voor back
 
 Hardwareclustering voor de backend (zoals bij het failovercluster [ Microsoft ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) ) is gebaseerd op twee servers die een schijf delen, met een automatische applicatiefailover in geval van een storing.
 
-Hardwareclustering voor de frontend is gebaseerd op loadbalancers (zoals bij [ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) vóór een `farm` van servers (2 servers of meer). De loadbalancers verdelen de TCP-sessies over de beschikbare servers in de farm .
+Hardwareclustering voor de frontend is gebaseerd op loadbalancers (zoals bij [ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) vóór een <span class="notranslate farm-term" translate="no">farm</span> van servers (2 servers of meer). De loadbalancers verdelen de TCP-sessies over de beschikbare servers in de farm .
 
 ### Wat is softwareclustering? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ Net als bij hardwareclustering zijn er twee soorten softwareclusteringoplossinge
 
 Softwareclustering voor de backend (zoals met [ SafeKit ](</>) ) is gebaseerd op 2 servers die in realtime gegevens repliceren, met een automatische failover van de applicatie in geval van storingen.
 
-Softwareclustering voor de frontend (zoals met SafeKit ) is gebaseerd op load balancing in een `farm` van servers (2 servers of meer). De load balancing wordt door software uitgevoerd en verdeelt de TCP-sessies over de beschikbare servers in de farm .
+Softwareclustering voor de frontend (zoals met SafeKit ) is gebaseerd op load balancing in een <span class="notranslate farm-term" translate="no">farm</span> van servers (2 servers of meer). De load balancing wordt door software uitgevoerd en verdeelt de TCP-sessies over de beschikbare servers in de farm .
 
 ## Softwareclustering versus hardwareclustering: voor- en nadelen {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

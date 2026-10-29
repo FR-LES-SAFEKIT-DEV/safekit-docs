@@ -17,7 +17,7 @@ topics: "Ontdek SafeKit in Microsoft Azure , ontdek SafeKit in Google GCP , ontd
 
 [ Generieke cloud Mirror > ](</nl/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ Generieke cloud `Farm` > ](</nl/solutions/cloud-load-balancing-cluster-failover/>)
+[ Generieke cloud <span class="notranslate farm-term" translate="no">Farm</span> > ](</nl/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-nl  %}}

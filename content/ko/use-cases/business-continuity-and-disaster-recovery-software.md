@@ -21,7 +21,7 @@ SafeKit 클러스터를 동일한 전산실에 배포하거나 원격 전산실 
 
 ### 두 개의 원격 전산실 간에 간단한 고가용성 솔루션을 구현하는 방법은 무엇입니까? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-SafeKit mirror 및 `farm` 모듈은 특별한 클러스터 구성 없이 원격 전산실에 위치한 서버에 쉽게 배포할 수 있습니다. 즉, SafeKit 단일하고 간단한 아키텍처 내에서 비즈니스 연속성과 재해 복구를 결합합니다. 또한 SafeKit 네트워크 격리 시 제3의 서버나 특수 쿼럼 디스크 없이도 [ ](</ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) 와 같은 스플릿 브레인 환경을 관리합니다.
+SafeKit mirror 및 <span class="notranslate farm-term" translate="no">farm</span> 모듈은 특별한 클러스터 구성 없이 원격 전산실에 위치한 서버에 쉽게 배포할 수 있습니다. 즉, SafeKit 단일하고 간단한 아키텍처 내에서 비즈니스 연속성과 재해 복구를 결합합니다. 또한 SafeKit 네트워크 격리 시 제3의 서버나 특수 쿼럼 디스크 없이도 [ ](</ko/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) 와 같은 스플릿 브레인 환경을 관리합니다.
 
 ### 비즈니스 연속성 vs 백업 솔루션 {#business-continuity-vs-backup-solutions}
 

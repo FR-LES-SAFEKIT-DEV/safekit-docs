@@ -63,8 +63,8 @@
   * 在 `Virtual IP addresses` 中输入虚拟 IP 地址。虚拟 IP 地址是与两个节点 IP 地址处于同一 IP 网络（同一子网）的标准 IP 地址。应用程序客户端应配置为使用虚拟 IP 地址（或与其关联的 DNS 名称）。
   * 在 `Load balancing rules` 中设置要进行负载均衡的服务端口（例如 TCP 9010）。
   * 在 `Load balancing rules` 中设置 `Source address` 或 `Source port` 负载均衡规则：
-    * 使用客户端的源 IP 地址时，同一客户端在多个 TCP 会话中会连接到 `farm` 中的同一节点，并从该节点获取其上下文。
-    * 使用客户端的源 TCP 端口时，同一客户端在多个 TCP 会话中会连接到 `farm` 中的不同节点（不获取上下文）。
+    * 使用客户端的源 IP 地址时，同一客户端在多个 TCP 会话中会连接到 <span class="notranslate farm-term" translate="no">farm</span> 中的同一节点，并从该节点获取其上下文。
+    * 使用客户端的源 TCP 端口时，同一客户端在多个 TCP 会话中会连接到 <span class="notranslate farm-term" translate="no">farm</span> 中的不同节点（不获取上下文）。
   * 在 `Checkers` 中，可以根据需要配置检查器，例如进程监控、自定义检查器、TCP、ping 或脑裂检查器。例如，如果 `Monitored processes/services` 中显示进程名称，系统会监控该进程，并在故障时执行重启操作。配置错误的进程名称会导致模块启动后立即停止。
 
 
@@ -75,7 +75,7 @@
 ℹ️ 应用 SafeKit 配置时，Windows 服务的 `startup type` 会自动设置为 `Manual`。因此，服务不会在系统启动时自动启动，而只会在模块启动时启动（Linux 也适用）。
 
 
-![输入 {{ .Get "app" }} 的 `farm` 模块设置](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![输入 {{ .Get "app" }} 的 <span class="notranslate farm-term" translate="no">farm</span> 模块设置](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. 编辑脚本（可选）
@@ -114,9 +114,9 @@
 ![检查 {{ .Get "app" }} 模块配置是否成功](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. 在节点 1 和节点 2 上启动 `farm` 集群
+### 9. 在节点 1 和节点 2 上启动 <span class="notranslate farm-term" translate="no">farm</span> 集群
 
-  * 如图所示，单击 ⋯ `Start` 以启动 `farm` 集群。
+  * 如图所示，单击 ⋯ `Start` 以启动 <span class="notranslate farm-term" translate="no">farm</span> 集群。
 
 
 ![在两个节点上启动 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
@@ -144,7 +144,7 @@
 SafeKit 产品内置了一项测试：
 
   * 为 TCP 端口 9010 配置一条按源 TCP 端口进行负载均衡的规则。
-  * 连接一台位于 `farm` 节点之外的外部工作站。
+  * 连接一台位于 <span class="notranslate farm-term" translate="no">farm</span> 节点之外的外部工作站。
   * 在浏览器中打开以下地址：http://virtual-ip:9010/safekit/mosaic.html
 
 

@@ -21,13 +21,13 @@ In einem mirror Cluster ist die Software SafeKit auf zwei physischen oder virtue
 
 ## Wie implementiert man aktiv/aktiv redundante Server mit Netzwerklastausgleich und Failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### Der Cluster SafeKit `farm` {#the-safekit-farm-cluster}
+### Der Cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
 
 
 ![ Redundante Server mit Netzwerklastausgleich und Failover ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-In einem `farm` Cluster ist die Software SafeKit auf redundanten Servern installiert, auf denen Windows oder Linux (lokal oder in der Cloud) ausgeführt wird. Alle redundanten Server sind aktiv und führen dieselbe kritische Frontend-Anwendung aus. Clients sind mit der virtuellen IP-Adresse [ ](</de/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) verbunden. Die TCP-Sitzungen werden gleichmäßig auf alle redundanten Server verteilt. Fällt ein Server aus, konfiguriert SafeKit die Lastverteilung der TCP-Sitzungen automatisch neu. Nach dem Neustart des ausgefallenen Servers wird dieser automatisch wieder als aktiver redundanter Server integriert und empfängt neue TCP-Sitzungen.
+In einem <span class="notranslate farm-term" translate="no">farm</span> Cluster ist die Software SafeKit auf redundanten Servern installiert, auf denen Windows oder Linux (lokal oder in der Cloud) ausgeführt wird. Alle redundanten Server sind aktiv und führen dieselbe kritische Frontend-Anwendung aus. Clients sind mit der virtuellen IP-Adresse [ ](</de/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) verbunden. Die TCP-Sitzungen werden gleichmäßig auf alle redundanten Server verteilt. Fällt ein Server aus, konfiguriert SafeKit die Lastverteilung der TCP-Sitzungen automatisch neu. Nach dem Neustart des ausgefallenen Servers wird dieser automatisch wieder als aktiver redundanter Server integriert und empfängt neue TCP-Sitzungen.
 
 
 {{%  insert-safekit-hub-de  %}}

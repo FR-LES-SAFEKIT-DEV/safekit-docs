@@ -4,9 +4,9 @@
 
 
 
-## Como o cluster SafeKit em modo `farm` funciona com {{ .Get "app" }}? {#safekit-farm-cluster}
+## Como o cluster SafeKit em modo <span class="notranslate farm-term" translate="no">farm</span> funciona com {{ .Get "app" }}? {#safekit-farm-cluster}
 
-### Endereço IP virtual em um cluster em modo `farm` {#virtual-ip-address-farm}
+### Endereço IP virtual em um cluster em modo <span class="notranslate farm-term" translate="no">farm</span> {#virtual-ip-address-farm}
 
 
 ![Como o cluster SafeKit implementa o balanceamento de carga de rede e o failover de {{ .Get "app" }} em modo farm](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -14,7 +14,7 @@
 
 Na figura anterior, o aplicativo {{ .Get "app" }} está sendo executado em 3 servidores (3 é apenas um exemplo, podem ser 2 ou mais). Os usuários estão conectados a um endereço IP virtual.
 
-O [endereço IP virtual](/pt-br/best-practises/how-a-virtual-ip-address-works/) é configurado localmente em cada servidor no cluster em modo `farm`.\
+O [endereço IP virtual](/pt-br/best-practises/how-a-virtual-ip-address-works/) é configurado localmente em cada servidor no cluster em modo <span class="notranslate farm-term" translate="no">farm</span>.\
 Todos os servidores recebem o tráfego de entrada destinado ao endereço IP virtual, que é distribuído entre eles por um filtro de rede no kernel de cada servidor.
 
 O SafeKit detecta falhas de hardware e software, reconfigura os filtros de rede em caso de falha e oferece verificadores de aplicativos e scripts de recuperação configuráveis.
@@ -25,41 +25,41 @@ O algoritmo de balanceamento de carga de rede no filtro de rede baseia-se na ide
 
 Depois que um filtro aceita um pacote em um servidor, o aplicativo {{ .Get "app" }} que responde à solicitação do cliente usa apenas a CPU e a memória desse servidor. As mensagens de saída são enviadas diretamente do servidor do aplicativo para o cliente.
 
-Se um servidor falhar, o protocolo de heartbeat do `farm` reconfigura os filtros no cluster de balanceamento de carga de rede para redistribuir o tráfego entre os servidores disponíveis restantes.
+Se um servidor falhar, o protocolo de heartbeat do <span class="notranslate farm-term" translate="no">farm</span> reconfigura os filtros no cluster de balanceamento de carga de rede para redistribuir o tráfego entre os servidores disponíveis restantes.
 
 ### Aplicativos com ou sem estado {#stateful-stateless}
 
-Com um aplicativo {{ .Get "app" }} com estado, existe afinidade de sessão. O mesmo cliente deve estar conectado ao mesmo servidor em várias sessões TCP para recuperar seu contexto no servidor. Neste caso, a regra de balanceamento de carga do SafeKit é configurada com base no endereço IP do cliente. Assim, o mesmo cliente está sempre conectado ao mesmo servidor em múltiplas sessões TCP, enquanto clientes diferentes são distribuídos entre servidores diferentes no `farm`.
+Com um aplicativo {{ .Get "app" }} com estado, existe afinidade de sessão. O mesmo cliente deve estar conectado ao mesmo servidor em várias sessões TCP para recuperar seu contexto no servidor. Neste caso, a regra de balanceamento de carga do SafeKit é configurada com base no endereço IP do cliente. Assim, o mesmo cliente está sempre conectado ao mesmo servidor em múltiplas sessões TCP, enquanto clientes diferentes são distribuídos entre servidores diferentes no <span class="notranslate farm-term" translate="no">farm</span>.
 
-Com um aplicativo {{ .Get "app" }} sem estado, não há afinidade de sessão. O mesmo cliente pode se conectar a servidores diferentes no `farm` em múltiplas sessões TCP. Nenhum contexto é armazenado localmente em um servidor de uma sessão para outra. Neste caso, a regra de balanceamento de carga do SafeKit é configurada com base na identidade da sessão TCP do cliente. Esta configuração é a melhor para distribuir sessões entre servidores, mas requer um serviço TCP sem afinidade de sessão.
+Com um aplicativo {{ .Get "app" }} sem estado, não há afinidade de sessão. O mesmo cliente pode se conectar a servidores diferentes no <span class="notranslate farm-term" translate="no">farm</span> em múltiplas sessões TCP. Nenhum contexto é armazenado localmente em um servidor de uma sessão para outra. Neste caso, a regra de balanceamento de carga do SafeKit é configurada com base na identidade da sessão TCP do cliente. Esta configuração é a melhor para distribuir sessões entre servidores, mas requer um serviço TCP sem afinidade de sessão.
 
-### Como configurar um cluster SafeKit em modo `farm` para {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
+### Como configurar um cluster SafeKit em modo <span class="notranslate farm-term" translate="no">farm</span> para {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
 
 
 ![Console Web SafeKit: configuração do cluster em modo farm para o balanceamento de carga de rede de {{ .Get "app" }} e o gerenciamento do IP virtual.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-O **cluster SafeKit em modo `farm`** foi projetado para alta disponibilidade e escalabilidade de serviços. A configuração se concentra na distribuição simultânea do tráfego de entrada entre os dois nós:
+O **cluster SafeKit em modo <span class="notranslate farm-term" translate="no">farm</span>** foi projetado para alta disponibilidade e escalabilidade de serviços. A configuração se concentra na distribuição simultânea do tráfego de entrada entre os dois nós:
 
   * **Serviços com balanceamento de carga (aba Macros):** Defina os serviços de aplicativos específicos (por exemplo, Apache, IIS, Nginx) que devem permanecer ativos em todos os nós.
-  * **Rede(s) de heartbeat:** Caminho(s) de comunicação usado(s) para detectar se um nó deixou o `farm`, acionando uma redistribuição imediata da carga.
-  * **IP virtual (`Farm` VIP):** Ao contrário de um cluster `Mirror`, o `Farm` VIP é compartilhado entre os nós por meio de um algoritmo de filtragem do kernel para distribuir o tráfego de rede.
+  * **Rede(s) de heartbeat:** Caminho(s) de comunicação usado(s) para detectar se um nó deixou o <span class="notranslate farm-term" translate="no">farm</span>, acionando uma redistribuição imediata da carga.
+  * **IP virtual (<span class="notranslate farm-term" translate="no">Farm</span> VIP):** Ao contrário de um cluster `Mirror`, o <span class="notranslate farm-term" translate="no">Farm</span> VIP é compartilhado entre os nós por meio de um algoritmo de filtragem do kernel para distribuir o tráfego de rede.
   * **Regras de balanceamento de carga:** Defina a política de distribuição de tráfego com base no endereço IP ou na porta de origem.
   * **Verificadores:** Monitore a integridade do aplicativo e acione uma reinicialização automática se uma falha de processo for detectada.
 
 
-### Como monitorar um cluster SafeKit em modo `farm` para {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
+### Como monitorar um cluster SafeKit em modo <span class="notranslate farm-term" translate="no">farm</span> para {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
 
 
 ![Console SafeKit: monitoramento de um cluster de 2 nós em modo farm, com os dois nós de {{ .Get "app" }} no estado UP e o balanceamento de carga ativo.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-O monitoramento de um cluster em modo `farm` oferece visibilidade sobre a natureza **Ativo-Ativo** da infraestrutura, na qual todos os nós contribuem para o desempenho do aplicativo (este exemplo mostra 2 nós):
+O monitoramento de um cluster em modo <span class="notranslate farm-term" translate="no">farm</span> oferece visibilidade sobre a natureza **Ativo-Ativo** da infraestrutura, na qual todos os nós contribuem para o desempenho do aplicativo (este exemplo mostra 2 nós):
 
-  * **Estado UP (50% em 2 nós):** Em um `farm` íntegro, ambos os nós estão no estado "UP" (50%), o que significa que recebem e processam ativamente as solicitações dos clientes por meio do IP virtual compartilhado.
+  * **Estado UP (50% em 2 nós):** Em um <span class="notranslate farm-term" translate="no">farm</span> íntegro, ambos os nós estão no estado "UP" (50%), o que significa que recebem e processam ativamente as solicitações dos clientes por meio do IP virtual compartilhado.
   * **Rebalanceamento automático:** Se um nó falhar, o console mostra visualmente o nó restante assumindo 100% do tráfego. Não há atraso de failover, pois o nó sobrevivente já está ativo (exceto pelo tempo de detecção de alguns segundos).
   * **Adição de um nó:** Quando um nó reparado é reiniciado, ele muda de "STOP" para "UP" e começa a receber automaticamente sua parte da carga, sem intervenção do administrador.
-  * **Sem sincronização de dados:** Observe que em um cluster em modo `farm` não há estado de ressincronização "Laranja", pois espera-se que os nós não tenham estado ou compartilhem um banco de dados de backend (que pode ser protegido separadamente em um cluster `Mirror`).
+  * **Sem sincronização de dados:** Observe que em um cluster em modo <span class="notranslate farm-term" translate="no">farm</span> não há estado de ressincronização "Laranja", pois espera-se que os nós não tenham estado ou compartilhem um banco de dados de backend (que pode ser protegido separadamente em um cluster `Mirror`).
 
 
 Além dos ícones de status simples, a interface oferece gerenciamento de nós com um clique, permitindo que você pare ou inicie manualmente um nó para manutenção planejada, enquanto o IP virtual compartilhado redistribui o tráfego automaticamente sem interromper a atividade dos usuários.

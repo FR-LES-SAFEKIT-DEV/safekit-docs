@@ -19,7 +19,7 @@ topics: "Quali sono le diverse architetture ad alta disponibilità e i diversi c
 
 [ Ulteriori informazioni ](</it/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Cluster `Farm` {#farm-cluster}
+### Cluster <span class="notranslate farm-term" translate="no">Farm</span> {#farm-cluster}
 
 
 ![ SafeKit farm cluster ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "Quali sono le diverse architetture ad alta disponibilità e i diversi c
 
 [ Ulteriori informazioni ](</it/architectures/network-load-balancing-cluster/>)
 
-### Cluster `Farm` + mirror {#farmmirror-cluster}
+### Cluster <span class="notranslate farm-term" translate="no">Farm</span> + mirror {#farmmirror-cluster}
 
 
 ![ farm SafeKit + cluster mirror ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ topics: "Quali sono le diverse architetture ad alta disponibilità e i diversi c
 
 ### Utilizzare i moduli ad alta disponibilità {#use-high-availability-modules}
 
-Un modulo ad alta disponibilità è una personalizzazione di SafeKit per una specifica applicazione. Esistono due tipi di moduli: il modulo mirror con replica dei dati in tempo reale e failover e il modulo `farm` con bilanciamento del carico e failover.
+Un modulo ad alta disponibilità è una personalizzazione di SafeKit per una specifica applicazione. Esistono due tipi di moduli: il modulo mirror con replica dei dati in tempo reale e failover e il modulo <span class="notranslate farm-term" translate="no">farm</span> con bilanciamento del carico e failover.
 
-Se si installa un modulo mirror su 2 server, si crea un cluster mirror ; se invece si installa un modulo `farm` su N server, si crea un cluster `farm` .
+Se si installa un modulo mirror su 2 server, si crea un cluster mirror ; se invece si installa un modulo <span class="notranslate farm-term" translate="no">farm</span> su N server, si crea un cluster <span class="notranslate farm-term" translate="no">farm</span> .
 
-Sui server è possibile distribuire diversi moduli applicativi. In questo modo, è possibile implementare architetture di clustering avanzate come quelle presentate in precedenza ( `farm` + mirror , attivo/attivo, N-1).
+Sui server è possibile distribuire diversi moduli applicativi. In questo modo, è possibile implementare architetture di clustering avanzate come quelle presentate in precedenza ( <span class="notranslate farm-term" translate="no">farm</span> + mirror , attivo/attivo, N-1).
 
 ### Che cos'è un modulo applicativo? {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ In pratica, un modulo applicativo è un file “.Safe” (tipo zip) che include:
   * nomi o indirizzi IP fisici dei server,
   * nome o indirizzo IP virtuale del cluster,
   * directory di file da replicare in tempo reale (per un modulo mirror ),
-  * criteri di bilanciamento del carico di rete (per un modulo `farm` ),
+  * criteri di bilanciamento del carico di rete (per un modulo <span class="notranslate farm-term" translate="no">farm</span> ),
   * configurazione dei rilevatori di guasti software e hardware
 
 

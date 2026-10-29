@@ -21,9 +21,9 @@ topics: "Haute disponibilité et évolutivité des applications web et de bases 
 
 Par exemple, avec le logiciel de clustering SafeKit , vous pouvez implémenter l'équilibrage de charge IIS et la mise en miroir Microsoft SQL Server .
 
-Pour cela, vous devez déployer un module `farm` pour le serveur SQL IIS et un module mirror pour le serveur SQL Microsoft . Chaque module `farm` et mirror est configuré avec sa propre adresse IP virtuelle et ses propres scripts de redémarrage.
+Pour cela, vous devez déployer un module <span class="notranslate farm-term" translate="no">farm</span> pour le serveur SQL IIS et un module mirror pour le serveur SQL Microsoft . Chaque module <span class="notranslate farm-term" translate="no">farm</span> et mirror est configuré avec sa propre adresse IP virtuelle et ses propres scripts de redémarrage.
 
-Les modules mirror et `farm` peuvent être déployés sur un même cluster de deux serveurs. Les modules IIS , Microsoft et SQL Server s'exécuteront alors sur ces deux serveurs. Il est également possible de déployer les deux modules sur deux clusters distincts, chacun composé de serveurs différents.
+Les modules mirror et <span class="notranslate farm-term" translate="no">farm</span> peuvent être déployés sur un même cluster de deux serveurs. Les modules IIS , Microsoft et SQL Server s'exécuteront alors sur ces deux serveurs. Il est également possible de déployer les deux modules sur deux clusters distincts, chacun composé de serveurs différents.
 
 Avec le logiciel de clustering SafeKit , il n'y a aucune différence entre un déploiement sur les mêmes serveurs ou sur des serveurs différents.
 

@@ -21,7 +21,7 @@ Non vi è alcuna differenza di configurazione quando si implementa un cluster Sa
 
 ### Come implementare una semplice soluzione di alta disponibilità tra due sale server remote? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-I moduli SafeKit mirror e `farm` possono essere facilmente implementati su server situati in sale server remote, senza alcuna configurazione cluster speciale. Ciò significa che SafeKit combina la continuità operativa e il ripristino di emergenza in un'unica architettura semplice. SafeKit gestisce anche [ ](</it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in caso di isolamento di rete, senza richiedere un terzo server o un disco di quorum speciale.
+I moduli SafeKit mirror e <span class="notranslate farm-term" translate="no">farm</span> possono essere facilmente implementati su server situati in sale server remote, senza alcuna configurazione cluster speciale. Ciò significa che SafeKit combina la continuità operativa e il ripristino di emergenza in un'unica architettura semplice. SafeKit gestisce anche [ ](</it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in caso di isolamento di rete, senza richiedere un terzo server o un disco di quorum speciale.
 
 ### Soluzioni di continuità operativa vs soluzioni di backup {#business-continuity-vs-backup-solutions}
 

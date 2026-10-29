@@ -27,7 +27,7 @@ topics: "软件集群和硬件集群的区别？软件集群 vs 硬件集群：�
 
 后端硬件集群（例如[ Microsoft故障转移集群](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) ）基于 2 台服务器共享一个磁盘，并在发生故障时自动进行应用程序故障转移。
 
-前端硬件集群基于负载均衡器（例如[ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ），这些负载均衡器位于`farm`组服务器（2 台或更多服务器）的前端。负载均衡器将 TCP 会话分发到farm组中可用的服务器。
+前端硬件集群基于负载均衡器（例如[ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ），这些负载均衡器位于<span class="notranslate farm-term" translate="no">farm</span>组服务器（2 台或更多服务器）的前端。负载均衡器将 TCP 会话分发到farm组中可用的服务器。
 
 ### 什么是软件集群？ {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ topics: "软件集群和硬件集群的区别？软件集群 vs 硬件集群：�
 
 后端软件集群（如[ SafeKit ](</>) ）基于 2 台服务器实时复制数据，并在发生故障时自动进行应用程序故障转移。
 
-前端软件集群（例如SafeKit ）基于服务器集群`farm` （2 台或更多服务器）内的负载均衡。负载均衡由软件实现，并将 TCP 会话分配到farm中的可用服务器。
+前端软件集群（例如SafeKit ）基于服务器集群<span class="notranslate farm-term" translate="no">farm</span> （2 台或更多服务器）内的负载均衡。负载均衡由软件实现，并将 TCP 会话分配到farm中的可用服务器。
 
 ## 软件集群与硬件集群：优缺点分析 {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

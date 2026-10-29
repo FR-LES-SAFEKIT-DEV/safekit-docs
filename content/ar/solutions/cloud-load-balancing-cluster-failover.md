@@ -4,10 +4,10 @@ canonical: "https://safekit.eviden.com/ar/solutions/cloud-load-balancing-cluster
 description: "عزز أداء موازن الأحمال السحابي باستخدام ميزة مراقبة التطبيقات الذكية SafeKit . حقق توافرًا عاليًا وسلسًا من خلال فحوصات السلامة الشاملة، والإصلاح الذاتي التلقائي، والتحويل التلقائي في حالة الفشل لمجموعات farm ذات الأهمية البالغة."
 category: "solutions"
 lang: "ar"
-topics: "تحسين موازن أحمال السحابة من خلال مراقبة مستوى التطبيق والإصلاح الذاتي، جدول المحتويات، كيف يُنفذ برنامج SafeKit مجموعة موازنة أحمال شبكة السحابة (NLB) بسهولة؟، كيف تعمل مجموعة SafeKit `farm` مع السحابة؟، مقارنة: مجموعة SafeKit `Farm` في الموقع مقابل مجموعة SafeKit `Farm` في السحابة، دليل فيديو: تكوين مجموعة SafeKit `Farm` NLB، 🔍 مركز التنقل عالي التوفر SafeKit"
+topics: "تحسين موازن أحمال السحابة من خلال مراقبة مستوى التطبيق والإصلاح الذاتي، جدول المحتويات، كيف يُنفذ برنامج SafeKit مجموعة موازنة أحمال شبكة السحابة (NLB) بسهولة؟، كيف تعمل مجموعة SafeKit <span class="notranslate farm-term" translate="no">farm</span> مع السحابة؟، مقارنة: مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> في الموقع مقابل مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> في السحابة، دليل فيديو: تكوين مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLB، 🔍 مركز التنقل عالي التوفر SafeKit"
 ---
 
-# SafeKit : موازنة أحمال السحابة وتوافر التطبيقات العالي، مجموعة `Farm` {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
+# SafeKit : موازنة أحمال السحابة وتوافر التطبيقات العالي، مجموعة <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="Cloud" guide="/ar/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

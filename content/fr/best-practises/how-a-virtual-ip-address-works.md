@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/how-a-virtual-ip-addres
 description: "Découvrez comment SafeKit utilise des adresses IP virtuelles (VIP) logicielles pour garantir une disponibilité 24h/24 et 7j/7. Apprenez-en davantage sur le basculement automatique via ARP gratuit et découvrez pourquoi cette solution est plus performante que la redirection DNS pour assurer la continuité d'activité sur Windows et Linux ."
 category: "best-practises"
 lang: "fr"
-topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster haute disponibilité ? Implémentation d'une adresse IP virtuelle dans SafeKit , Sommaire, Fonctionnement d'une adresse IP virtuelle (VIP) lors d'un basculement au sein d'un même sous-réseau (cluster Mirror ), Fonctionnement d'une adresse IP virtuelle (VIP) entre différents sous-réseaux (cluster Mirror ), Fonctionnement d'une adresse IP virtuelle à charge équilibrée au sein d'un même sous-réseau `Farm` (cluster `Farm` ), Fonctionnement d'une adresse IP virtuelle à charge équilibrée entre différents sous-réseaux (cluster `Farm` ), IP virtuelle vs. redirection DNS : pourquoi le basculement DNS échoue souvent, Comparaison : implémentation d'une adresse IP virtuelle, latence et transparence des applications, Configuration d'une adresse IP virtuelle pour l'équilibrage de charge réseau et la haute disponibilité, Foire aux questions sur l'adresse IP virtuelle (VIP), 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster haute disponibilité ? Implémentation d'une adresse IP virtuelle dans SafeKit , Sommaire, Fonctionnement d'une adresse IP virtuelle (VIP) lors d'un basculement au sein d'un même sous-réseau (cluster Mirror ), Fonctionnement d'une adresse IP virtuelle (VIP) entre différents sous-réseaux (cluster Mirror ), Fonctionnement d'une adresse IP virtuelle à charge équilibrée au sein d'un même sous-réseau <span class="notranslate farm-term" translate="no">Farm</span> (cluster <span class="notranslate farm-term" translate="no">Farm</span> ), Fonctionnement d'une adresse IP virtuelle à charge équilibrée entre différents sous-réseaux (cluster <span class="notranslate farm-term" translate="no">Farm</span> ), IP virtuelle vs. redirection DNS : pourquoi le basculement DNS échoue souvent, Comparaison : implémentation d'une adresse IP virtuelle, latence et transparence des applications, Configuration d'une adresse IP virtuelle pour l'équilibrage de charge réseau et la haute disponibilité, Foire aux questions sur l'adresse IP virtuelle (VIP), 🔍 Centre de navigation haute disponibilité SafeKit"
 ---
 
 # Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -20,7 +20,7 @@ topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster haute disponibili
 ## Implémentation d'IP virtuelle dans SafeKit {#safekit-vip-implementation}
 
   * Clusters **Mirror :** dispose d’une adresse IP flottante active uniquement sur le serveur principal pour faciliter la réplication en temps réel et le basculement.
-  * Clusters **`Farm` :** Permet l’équilibrage de charge du réseau en maintenant le VIP sur tous les nœuds simultanément.
+  * Clusters **<span class="notranslate farm-term" translate="no">Farm</span> :** Permet l’équilibrage de charge du réseau en maintenant le VIP sur tous les nœuds simultanément.
 
 
 Avantage clé de **:** En utilisant **Gratuitous ARP (Address Resolution Protocol)** ou **MAC Address Takeover** , le VIP permet un basculement d'application transparent sans reconfiguration manuelle du client, garantissant une continuité d'activité 24h/24 et 7j/7.
@@ -30,7 +30,7 @@ Avantage clé de **:** En utilisant **Gratuitous ARP (Address Resolution Protoco
 
 ![ Diagramme comparatif du comportement des adresses IP virtuelles (VIP) dans Evidian. SafeKit : Mirror Clusters présentant une adresse IP flottante sur le nœud actif vs. Farm Clusters présentant une répartition de charge réseau sur tous les nœuds. ](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-Stratégies d'implémentation d'adresses IP virtuelles **pour les clusters Mirror et `Farm` dans SafeKit** .
+Stratégies d'implémentation d'adresses IP virtuelles **pour les clusters Mirror et <span class="notranslate farm-term" translate="no">Farm</span> dans SafeKit** .
 
 
 {{%  insert-safekit-4-buttons-fr  %}}
@@ -40,8 +40,8 @@ Stratégies d'implémentation d'adresses IP virtuelles **pour les clusters Mirro
 
   * [ Fonctionnement d'une adresse IP virtuelle (VIP) lors d'un basculement sur le même sous-réseau (cluster Mirror ) ](#virtual-ip-same-subnet-failover)
   * [ Fonctionnement d'une adresse IP virtuelle (VIP) sur différents sous-réseaux (Cluster Mirror ) ](#virtual-ip-different-subnets-failover)
-  * [ Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans un même sous-réseau `Farm` (Cluster `Farm` ) ](#vip-load-balancing-same-subnet)
-  * [ Fonctionnement d'une adresse IP virtuelle à charge équilibrée sur différents sous-réseaux (cluster `Farm` ) ](#vip-load-balancing-different-subnets)
+  * [ Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans un même sous-réseau <span class="notranslate farm-term" translate="no">Farm</span> (Cluster <span class="notranslate farm-term" translate="no">Farm</span> ) ](#vip-load-balancing-same-subnet)
+  * [ Fonctionnement d'une adresse IP virtuelle à charge équilibrée sur différents sous-réseaux (cluster <span class="notranslate farm-term" translate="no">Farm</span> ) ](#vip-load-balancing-different-subnets)
   * [ Adresse IP virtuelle vs. redirection DNS : pourquoi le basculement DNS échoue souvent ? ](#virtual-ip-vs-dns-redirection-failover)
   * Comparaison [ : Implémentation IP virtuelle, latence et transparence des applications ](#vip-vs-dns-comparison)
   * [ Configuration d'une adresse IP virtuelle pour l'équilibrage de charge réseau et la haute disponibilité ](#virtual-ip-configuration-load-balancing-ha)
@@ -119,22 +119,22 @@ Si l'utilisation d'un équilibreur de charge n'est pas souhaitée, consultez vot
 
 **⚠️ Remarque :** Si vous optez pour un équilibreur de charge, assurez-vous que votre application est compatible avec **la traduction d'adresses IP source/destination (SNAT/DNAT)** . Avec un équilibreur de charge, l'application risque de perdre l'identité de l'utilisateur d'origine ou de ne pas démarrer, car elle ne détecte plus l'adresse IP virtuelle configurée directement sur son interface réseau.
 
-## Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans un cluster `Farm` ( `Farm` ) sur le même sous-réseau {#vip-load-balancing-same-subnet}
+## Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans un cluster <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> ) sur le même sous-réseau {#vip-load-balancing-same-subnet}
 
 ### Performances évolutives : équilibrage de charge et redondance au niveau du noyau {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-Pour les environnements à trafic élevé, le guide d'architecture **: Haute disponibilité évolutive avec des clusters `Farm` multi-nœuds** explique comment SafeKit répartit les charges de travail sur plusieurs serveurs actifs tout en maintenant une redondance totale. 
+Pour les environnements à trafic élevé, le guide d'architecture **: Haute disponibilité évolutive avec des clusters <span class="notranslate farm-term" translate="no">Farm</span> multi-nœuds** explique comment SafeKit répartit les charges de travail sur plusieurs serveurs actifs tout en maintenant une redondance totale. 
 
-### Architecture du cluster `Farm` : répartition de charge entre les nœuds Windows ou Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### Architecture du cluster <span class="notranslate farm-term" translate="no">Farm</span> : répartition de charge entre les nœuds Windows ou Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 Diagramme ![ d'une adresse IP virtuelle (VIP) à charge équilibrée au sein d'un cluster farm ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256") appartenant au même sous-réseau.
 
- Traitement distribué du trafic via filtrage noyau. Dans un **cluster `farm` à répartition de charge** , une adresse IP virtuelle (VIP) est utilisée pour répartir simultanément les requêtes client sur plusieurs serveurs. Bien que cet exemple comporte deux nœuds, l'architecture est évolutive et peut prendre en charge des fermes de serveurs plus importantes. Dans une configuration au sein d'un même sous-réseau, la VIP est configurée sur la carte Ethernet de **chaque serveur** du cluster via un alias d'adresse IP. 
+ Traitement distribué du trafic via filtrage noyau. Dans un **cluster <span class="notranslate farm-term" translate="no">farm</span> à répartition de charge** , une adresse IP virtuelle (VIP) est utilisée pour répartir simultanément les requêtes client sur plusieurs serveurs. Bien que cet exemple comporte deux nœuds, l'architecture est évolutive et peut prendre en charge des fermes de serveurs plus importantes. Dans une configuration au sein d'un même sous-réseau, la VIP est configurée sur la carte Ethernet de **chaque serveur** du cluster via un alias d'adresse IP. 
 
 #### Distribution du trafic : Filtre au niveau du noyau {#traffic-distribution-the-kernel-level-filter}
 
-Contrairement à un cluster de basculement simple, un cluster `farm` gère le trafic via un filtre spécialisé **au niveau du noyau** . Le processus fonctionne comme suit : 
+Contrairement à un cluster de basculement simple, un cluster <span class="notranslate farm-term" translate="no">farm</span> gère le trafic via un filtre spécialisé **au niveau du noyau** . Le processus fonctionne comme suit : 
 
   * Mappage ARP **:** Dans les caches ARP des clients, le VIP est initialement associé à une seule adresse matérielle (par exemple, `mac1` du serveur 1).
   * **Division des paquets :** lorsque le serveur 1 reçoit le trafic, le filtre noyau SafeKit analyse l'identité des paquets entrants (en fonction de **l'adresse IP du client** ou **du port TCP** ).
@@ -147,20 +147,20 @@ En cas de défaillance du nœud principal (Serveur 1), le cluster maintient sa d
 
 #### Déploiement sur des sites distants {#deployment-in-remote-sites}
 
-Pour les organisations exploitant **des centres de données distants** , cet algorithme d'équilibrage de charge reste fonctionnel à condition que les sites soient reliés par un **réseau local étendu (LAN) ou un réseau local virtuel (VLAN)** . Ceci crée un environnement virtuel de « même sous-réseau », qui constitue la configuration la plus efficace pour les clusters `farm` géographiquement distribués. 
+Pour les organisations exploitant **des centres de données distants** , cet algorithme d'équilibrage de charge reste fonctionnel à condition que les sites soient reliés par un **réseau local étendu (LAN) ou un réseau local virtuel (VLAN)** . Ceci crée un environnement virtuel de « même sous-réseau », qui constitue la configuration la plus efficace pour les clusters <span class="notranslate farm-term" translate="no">farm</span> géographiquement distribués. 
 
-## Fonctionnement d'une adresse IP virtuelle à charge équilibrée sur différents sous-réseaux (cluster `Farm` ) {#vip-load-balancing-different-subnets}
+## Fonctionnement d'une adresse IP virtuelle à charge équilibrée sur différents sous-réseaux (cluster <span class="notranslate farm-term" translate="no">Farm</span> ) {#vip-load-balancing-different-subnets}
 
 ### Mise à l'échelle multizone : orchestration du trafic sur les sous-réseaux cloud {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-Guide d'architecture **: Mise à l'échelle des clusters `Farm` dans des environnements multizones et cloud.** fournit le plan directeur pour la distribution des charges de travail d'application sur des zones de disponibilité et des sous-réseaux distincts. 
+Guide d'architecture **: Mise à l'échelle des clusters <span class="notranslate farm-term" translate="no">Farm</span> dans des environnements multizones et cloud.** fournit le plan directeur pour la distribution des charges de travail d'application sur des zones de disponibilité et des sous-réseaux distincts. 
 
-### Clusters `Farm` inter-sous-réseaux : Évolutivité multi-nœuds Windows et Linux {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### Clusters <span class="notranslate farm-term" translate="no">Farm</span> inter-sous-réseaux : Évolutivité multi-nœuds Windows et Linux {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 Diagramme ![ d'un cluster farm à charge équilibrée fonctionnant sur deux sous-réseaux différents ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
- Distribution du trafic global via un équilibreur de charge externe : lorsque les nœuds `farm` sont répartis sur **différents sous-réseaux** (cas fréquent dans les déploiements cloud multi-AZ), l’ **adresse IP virtuelle (VIP)** est gérée par un **équilibreur de charge externe (LB)** . Ce dernier héberge la VIP et dirige le trafic entrant vers les adresses IP physiques des serveurs situés dans leurs sous-réseaux respectifs. 
+ Distribution du trafic global via un équilibreur de charge externe : lorsque les nœuds <span class="notranslate farm-term" translate="no">farm</span> sont répartis sur **différents sous-réseaux** (cas fréquent dans les déploiements cloud multi-AZ), l’ **adresse IP virtuelle (VIP)** est gérée par un **équilibreur de charge externe (LB)** . Ce dernier héberge la VIP et dirige le trafic entrant vers les adresses IP physiques des serveurs situés dans leurs sous-réseaux respectifs. 
 
 #### Règles intelligentes de routage du trafic et d'équilibrage de charge {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -174,7 +174,7 @@ L'équilibreur de charge répartit les requêtes des clients en fonction de deux
 
 #### Mécanisme de contrôle de santé SafeKit {#safekit-health-check-mechanism}
 
-SafeKit fournit une URL de vérification d'état **en temps réel** sur chaque serveur du `farm` pour communiquer son état opérationnel à l'équilibreur de charge : 
+SafeKit fournit une URL de vérification d'état **en temps réel** sur chaque serveur du <span class="notranslate farm-term" translate="no">farm</span> pour communiquer son état opérationnel à l'équilibreur de charge : 
 
   * **Nœud actif :** Le contrôle d'intégrité renvoie `HTTP 200 OK` . L'équilibreur de charge inclut ce serveur dans la rotation active.
   * **Nœud hors service/Basculement :** En cas de défaillance d'un serveur ou d'une application, SafeKit renvoie `HTTP 404 NOT FOUND` (ou le service devient inaccessible). L'équilibreur de charge cesse immédiatement d'envoyer du trafic vers le nœud défaillant.
@@ -182,7 +182,7 @@ SafeKit fournit une URL de vérification d'état **en temps réel** sur chaque s
 
 #### Normes de déploiement cloud : AWS , Azure , GCP et {#cloud-deployment-standards-aws-azure-and-gcp}
 
-Cette architecture constitue le modèle de base des clusters **Cloud `Farm`** , garantissant que si un sous-réseau ou une zone entière est hors service, les nœuds restants continuent de gérer la charge. Elle est prise en charge nativement par : 
+Cette architecture constitue le modèle de base des clusters **Cloud <span class="notranslate farm-term" translate="no">Farm</span>** , garantissant que si un sous-réseau ou une zone entière est hors service, les nœuds restants continuent de gérer la charge. Elle est prise en charge nativement par : 
 
   * 💡 [ **Amazon AWS** ](</fr/solutions/aws-load-balancing-cluster-failover/>) ( AWS Équilibreur de charge réseau)
   * 💡 [ **Microsoft Azure** ](</fr/solutions/azure-load-balancing-cluster-failover/>) ( Azure Équilibreur de charge)
@@ -234,7 +234,7 @@ La redirection DNS est une solution incohérente pour une haute disponibilité. 
 Environnement et cas d'utilisation : | Type de haute disponibilité ; | Mécanisme de redirection ; | Latence réseau ; | Transparence des applications et localité IP  
 ---|---|---|---|---  
 Primaire/Secours (Haute disponibilité) | Mirror Cluster | Prise de contrôle ARP/MAC gratuite | Très faible : Temps de détection et d’envoi de la diffusion GARP | Transparence totale : L’adresse IP virtuelle est locale sur le nœud actif. L’adresse IP du client est préservée.  
-Équilibrage de charge (actif/actif) | `Farm` Cluster | Filtre réseau au niveau du noyau / GARP | Très faible : Temps de détection et de reconfiguration des filtres réseau | Transparence totale : L’adresse IP virtuelle est locale sur tous les nœuds. L’adresse IP du client est préservée.  
+Équilibrage de charge (actif/actif) | <span class="notranslate farm-term" translate="no">Farm</span> Cluster | Filtre réseau au niveau du noyau / GARP | Très faible : Temps de détection et de reconfiguration des filtres réseau | Transparence totale : L’adresse IP virtuelle est locale sur tous les nœuds. L’adresse IP du client est préservée.  
 Même sous-réseau / LAN étendu (extension de VLAN) | Reprise après sinistre (centres de données distants) | Aliasage IP standard / GARP | Faible : Dépend du VLAN étendu RTT (temps d'aller-retour) | Transparence totale : L'adresse IP virtuelle est locale sur les nœuds. L'adresse IP du client est préservée.  
 Sous-réseaux différents | Reprise après sinistre (centres de données distants / Cloud) | Équilibreur de charge externe | Modéré : Latence de basculement plus élevée en raison des intervalles de vérification de l'état de l'équilibreur de charge | ⚠️ Transparence partielle : Utilise SNAT/DNAT. L'adresse IP virtuelle est **et non** locale sur les nœuds. L'adresse IP du client est **et non** préservée. L'application doit la prendre en charge.  
 Réacheminement DNS : Pas de VIP | Reprise après sinistre (centres de données distants) | Mise à jour de l’enregistrement DNS (nom/adresse IP physique) | Élevé/Imprévisible : Dépend du TTL (Time To Live) du DNS et de la mise en cache DNS du client. | ⚠️ Non fiable : Le client doit résoudre à nouveau le DNS. Le plus souvent, les clients continuent d’utiliser l’adresse IP obsolète résolue au démarrage et ne sont pas réacheminés après un basculement.  

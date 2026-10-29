@@ -71,7 +71,7 @@ SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **voor zowel Wind
   * **Cloudinfrastructuur:** Hoge beschikbaarheid voor cloudapplicaties.
 
 
-SafeKit biedt ook **`Farm` Clusters** met native **Netwerktaakverdeling en Failover** voor stateless applicaties zoals **Webservers** .
+SafeKit biedt ook **<span class="notranslate farm-term" translate="no">Farm</span> Clusters** met native **Netwerktaakverdeling en Failover** voor stateless applicaties zoals **Webservers** .
 
 💡 [ Bekijk hier de volledige lijst met ondersteunde HA-oplossingen. ](</nl/solutions/>)
 

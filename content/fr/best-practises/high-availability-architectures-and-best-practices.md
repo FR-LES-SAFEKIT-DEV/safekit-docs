@@ -27,7 +27,7 @@ Il existe deux types d'architectures à haute disponibilité [ ](<https://www.te
 
 Les architectures à haute disponibilité pour le backend sont basées sur 2 serveurs partageant ou répliquant les données avec un basculement automatique de l'application en cas de panne matérielle ou logicielle.
 
-Les architectures à haute disponibilité pour le frontend sont basées sur un ensemble de serveurs `farm` (2 serveurs ou plus). L'équilibrage de charge est assuré par du matériel ou du logiciel et répartit les sessions TCP entre les serveurs disponibles de l'ensemble farm .
+Les architectures à haute disponibilité pour le frontend sont basées sur un ensemble de serveurs <span class="notranslate farm-term" translate="no">farm</span> (2 serveurs ou plus). L'équilibrage de charge est assuré par du matériel ou du logiciel et répartit les sessions TCP entre les serveurs disponibles de l'ensemble farm .
 
 De plus, vous devez choisir entre une haute disponibilité au niveau de l'application ou au niveau de la machine virtuelle.
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Leer hoe u de iis_farm.safe -module implementeert op Windows voor IIS netwerkbelastingverdeling en automatische failover. Deze handleiding laat u zien hoe u een zeer beschikbaar cluster voor webdiensten en applicaties bouwt met behulp van een virtueel IP-adres, zonder dat u externe hardwarematige belastingverdelers of complexe configuratie nodig hebt."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor High Availability IIS , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / IIS -oplossing, Installatie van de SafeKit / IIS oplossing op Windows ( iis_farm.safe ), Stapsgewijze configuratie van de SafeKit / IIS oplossing, Demonstratie van de SafeKit `farm` -oplossing, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Snelstartgids voor High Availability IIS , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / IIS -oplossing, Installatie van de SafeKit / IIS oplossing op Windows ( iis_farm.safe ), Stapsgewijze configuratie van de SafeKit / IIS oplossing, Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> -oplossing, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # IIS Netwerktaakverdeling en failover: Installeer de SafeKit iis_farm.safe module {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
@@ -36,7 +36,7 @@ De oplossing wordt hier beschreven: **💡 [ SafeKit : Alles-in-één IIS Softwa
 {{%  insert-safekit-82-farm-configuration-nl app="IIS" mod="iis_farm"  %}}
  
 
-## Demonstratie van de SafeKit `farm` oplossing {#demonstration-of-the-safekit-farm-solution}
+## Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> oplossing {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-nl  %}}

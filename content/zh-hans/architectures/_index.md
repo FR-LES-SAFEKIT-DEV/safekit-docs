@@ -19,7 +19,7 @@ topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何�
 
 [更多信息](</zh-hans/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### `Farm`集群 {#farm-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span>集群 {#farm-cluster}
 
 
 ![ SafeKit farm集群](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
@@ -27,7 +27,7 @@ topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何�
 
 [更多信息](</zh-hans/architectures/network-load-balancing-cluster/>)
 
-### `Farm` + mirror集群 {#farmmirror-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> + mirror集群 {#farmmirror-cluster}
 
 
 ![ SafeKit farm + mirror集群](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何�
 
 ### 使用高可用性模块 {#use-high-availability-modules}
 
-高可用性模块是对SafeKit进行的应用定制。该模块分为两种类型： mirror模块具备实时数据复制和故障转移功能， `farm`模块具备负载均衡和故障转移功能。
+高可用性模块是对SafeKit进行的应用定制。该模块分为两种类型： mirror模块具备实时数据复制和故障转移功能， <span class="notranslate farm-term" translate="no">farm</span>模块具备负载均衡和故障转移功能。
 
-如果在 2 台服务器上部署mirror模块，则会创建一个mirror集群；如果在 N 台服务器上部署`farm`模块，则会创建一个`farm`集群。
+如果在 2 台服务器上部署mirror模块，则会创建一个mirror集群；如果在 N 台服务器上部署<span class="notranslate farm-term" translate="no">farm</span>模块，则会创建一个<span class="notranslate farm-term" translate="no">farm</span>集群。
 
-多个应用程序模块可以部署在同一台服务器上。因此，可以实现如前所述的高级集群架构（ `farm` + mirror ，主动/主动，N-1）。
+多个应用程序模块可以部署在同一台服务器上。因此，可以实现如前所述的高级集群架构（ <span class="notranslate farm-term" translate="no">farm</span> + mirror ，主动/主动，N-1）。
 
 ### 什么是应用模块？ {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ topics: "SafeKit支持哪些不同的高可用性架构和软件集群？如何�
   * 服务器的名称或物理IP地址，
   * 集群名称或虚拟IP地址
   * 要实时复制的文件目录（适用于mirror模块），
-  * 网络负载均衡准则（针对`farm`模块）
+  * 网络负载均衡准则（针对<span class="notranslate farm-term" translate="no">farm</span>模块）
   * 软件和硬件故障检测器的配置
 
 

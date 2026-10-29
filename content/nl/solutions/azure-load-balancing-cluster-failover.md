@@ -7,7 +7,7 @@ lang: "nl"
 topics: "Verbeter de cloudloadbalancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een netwerktaakverdelingscluster (NLB) voor Azure?, Hoe werkt het SafeKit-farm-cluster met Azure?, Vergelijking: SafeKit-Farm-cluster on-premises en SafeKit-Farm-cluster in de cloud, Videogids: configuratie van een SafeKit-Farm-NLB-cluster, 🔍 SafeKit High Availability Navigatiehub"
 ---
 
-# SafeKit: Microsoft Azure-loadbalancing en hoge beschikbaarheid van applicaties met een `Farm`-cluster {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: Microsoft Azure-loadbalancing en hoge beschikbaarheid van applicaties met een <span class="notranslate farm-term" translate="no">Farm</span>-cluster {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
 
 {{%  insert-safekit-solution-farm-cloud-nl app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}
 

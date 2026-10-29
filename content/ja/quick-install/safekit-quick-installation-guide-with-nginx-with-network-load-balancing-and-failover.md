@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "NGINXネットワーク負荷分散と自動フェイルオーバーのために、 WindowsとLinuxにfarm.safeモジュールをデプロイする方法を学びましょう。このガイドでは、外部ハードウェア負荷分散装置や複雑な設定を必要とせずに、仮想IPを使用してWebサービスやアプリケーション向けの高可用性クラスタを構築する方法を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "NGINX の高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / NGINX ソリューションの概要、 SafeKitおよびLinux ( farm.safe ) へのWindows / NGINX ソリューションのインストール、 SafeKit / NGINX ソリューションのステップバイステップ構成、 SafeKit `farm`ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "NGINX の高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / NGINX ソリューションの概要、 SafeKitおよびLinux ( farm.safe ) へのWindows / NGINX ソリューションのインストール、 SafeKit / NGINX ソリューションのステップバイステップ構成、 SafeKit <span class="notranslate farm-term" translate="no">farm</span>ソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # NGINXネットワーク負荷分散とフェイルオーバー： SafeKit farm.safeモジュールをインストールします {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -38,7 +38,7 @@ topics: "NGINX の高可用性クイックインストールガイド、 SafeKit
 {{%  insert-safekit-82-farm-configuration-ja app="NGINX" mod="farm"  %}}
  
 
-## SafeKit `farm`のソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span>のソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

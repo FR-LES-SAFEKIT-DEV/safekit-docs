@@ -27,7 +27,7 @@ topics: "소프트웨어 클러스터링과 하드웨어 클러스터링의 차�
 
 백엔드용 하드웨어 클러스터링(예: [ Microsoft 장애 조치 클러스터, ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) )은 디스크를 공유하는 두 대의 서버를 기반으로 하며, 장애 발생 시 애플리케이션이 자동으로 장애 조치됩니다.
 
-프런트엔드용 하드웨어 클러스터링은 `farm` 서버(2대 이상) 앞에 로드 밸런서(예: [ F5 BIG-IP, ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) )를 배치하여 구성됩니다. 로드 밸런서는 TCP 세션을 farm 에 있는 사용 가능한 서버로 분산합니다.
+프런트엔드용 하드웨어 클러스터링은 <span class="notranslate farm-term" translate="no">farm</span> 서버(2대 이상) 앞에 로드 밸런서(예: [ F5 BIG-IP, ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) )를 배치하여 구성됩니다. 로드 밸런서는 TCP 세션을 farm 에 있는 사용 가능한 서버로 분산합니다.
 
 ### 소프트웨어 클러스터링이란 무엇인가요? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ topics: "소프트웨어 클러스터링과 하드웨어 클러스터링의 차�
 
 백엔드용 소프트웨어 클러스터링(예: [ SafeKit ](</>) )은 두 대의 서버가 실시간으로 데이터를 복제하고 장애 발생 시 애플리케이션이 자동으로 페일오버되는 방식으로 구성됩니다.
 
-프런트엔드용 소프트웨어 클러스터링( SafeKit 와 같은 경우)은 서버(2대 이상)로 구성된 `farm` 에서 로드 밸런싱을 기반으로 합니다. 로드 밸런싱은 소프트웨어에 의해 수행되며 TCP 세션을 farm 에서 사용 가능한 서버로 분산합니다.
+프런트엔드용 소프트웨어 클러스터링( SafeKit 와 같은 경우)은 서버(2대 이상)로 구성된 <span class="notranslate farm-term" translate="no">farm</span> 에서 로드 밸런싱을 기반으로 합니다. 로드 밸런싱은 소프트웨어에 의해 수행되며 TCP 세션을 farm 에서 사용 가능한 서버로 분산합니다.
 
 ## 소프트웨어 클러스터링 vs 하드웨어 클러스터링: 장단점 비교 {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

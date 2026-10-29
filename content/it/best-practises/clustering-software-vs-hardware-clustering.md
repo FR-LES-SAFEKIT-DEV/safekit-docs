@@ -27,7 +27,7 @@ Esistono due tipi di soluzioni di clustering hardware: clustering hardware per a
 
 Il clustering hardware per il backend (come nel caso del cluster di failover [ Microsoft ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) ) si basa su due server che condividono un disco con failover automatico dell'applicazione in caso di guasto.
 
-Il clustering hardware per il frontend si basa su bilanciatori di carico (come [ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) posti davanti a un `farm` di server (2 o più). I bilanciatori di carico distribuiscono le sessioni TCP ai server disponibili nel farm .
+Il clustering hardware per il frontend si basa su bilanciatori di carico (come [ F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) posti davanti a un <span class="notranslate farm-term" translate="no">farm</span> di server (2 o più). I bilanciatori di carico distribuiscono le sessioni TCP ai server disponibili nel farm .
 
 ### Che cos'è il clustering software? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ Analogamente al clustering hardware, esistono due tipi di soluzioni di clusterin
 
 Il clustering software per il backend (come con [ SafeKit ](</>) ) si basa su 2 server che replicano i dati in tempo reale con un failover automatico dell'applicazione in caso di guasti.
 
-Il clustering software per il frontend (come con SafeKit ) si basa sul bilanciamento del carico in un `farm` di server (2 o più server). Il bilanciamento del carico viene effettuato dal software e distribuisce le sessioni TCP ai server disponibili nel cluster farm .
+Il clustering software per il frontend (come con SafeKit ) si basa sul bilanciamento del carico in un <span class="notranslate farm-term" translate="no">farm</span> di server (2 o più server). Il bilanciamento del carico viene effettuato dal software e distribuisce le sessioni TCP ai server disponibili nel cluster farm .
 
 ## Clustering software vs clustering hardware: vantaggi e svantaggi {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

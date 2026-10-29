@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/architectures/safekit-smart-console-yo
 description: "Verwalten Sie SafeKit -Cluster mühelos mit unserer Smart Console. Profitieren Sie von der Konfiguration ohne Programmierung, der Smartphone-Kompatibilität und PWA-Benachrichtigungen in Echtzeit. Vermeiden Sie menschliche Fehler und gewährleisten Sie höchste Verfügbarkeit. Erfahren Sie mehr."
 category: "architectures"
 lang: "de"
-topics: "Smart Console: Intuitive, mobile und fehlerfreie Hochverfügbarkeit, Inhaltsverzeichnis, Wie funktioniert ein SafeKit mirror -Cluster mit der Webkonsole?, Wie funktioniert ein SafeKit `farm` -Cluster mit der Webkonsole?, Wie überwacht man mehrere Module und Cluster über die Webkonsole?, Wie überwacht man Warnmeldungen in der Konsole und verwaltet E-Mail-Benachrichtigungen?, 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Smart Console: Intuitive, mobile und fehlerfreie Hochverfügbarkeit, Inhaltsverzeichnis, Wie funktioniert ein SafeKit mirror -Cluster mit der Webkonsole?, Wie funktioniert ein SafeKit <span class="notranslate farm-term" translate="no">farm</span> -Cluster mit der Webkonsole?, Wie überwacht man mehrere Module und Cluster über die Webkonsole?, Wie überwacht man Warnmeldungen in der Konsole und verwaltet E-Mail-Benachrichtigungen?, 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
 ---
 
 # SafeKit Smart Console: Ihr hochverfügbarer Cluster in der Hosentasche {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "Smart Console: Intuitive, mobile und fehlerfreie Hochverfügbarkeit, In
 
 Definieren Sie Ihr Hochverfügbarkeitsmanagement neu – mit einer Lösung, die auf **Geschwindigkeit und Einfachheit** ausgelegt ist. Die SafeKit Webkonsole bietet eine intuitive Bedienung **ohne Einarbeitungszeit** und ermöglicht Ihnen die Konfiguration und Steuerung Ihrer Infrastruktur ohne **Programmierkenntnisse** .
 
-Ob am Schreibtisch oder unterwegs – mit dem Smartphone-kompatiblen Dashboard haben Sie die volle Kontrolle über Ihr Cluster. Durch die optimierte Verwaltung der Module mirror und `farm` minimiert die Smart Console **menschliche Fehler** und gewährleistet einen reibungslosen Failover für Ihre wichtigsten Systeme.
+Ob am Schreibtisch oder unterwegs – mit dem Smartphone-kompatiblen Dashboard haben Sie die volle Kontrolle über Ihr Cluster. Durch die optimierte Verwaltung der Module mirror und <span class="notranslate farm-term" translate="no">farm</span> minimiert die Smart Console **menschliche Fehler** und gewährleistet einen reibungslosen Failover für Ihre wichtigsten Systeme.
 
 ## Inhaltsverzeichnis {#table-of-contents}
 
   * [ Wie funktioniert ein SafeKit mirror Cluster mit der Webkonsole? ](#safekit-mirror-cluster)
-  * [ Wie funktioniert ein SafeKit `farm` Cluster mit der Webkonsole? ](#safekit-farm-cluster)
+  * [ Wie funktioniert ein SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster mit der Webkonsole? ](#safekit-farm-cluster)
   * [ Wie kann man mehrere Module und mehrere Cluster über die Webkonsole überwachen? ](#multipe-modules-clusters)
   * [ Wie kann ich Warnmeldungen in der Konsole überwachen und E-Mail-Benachrichtigungen verwalten? ](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ Bei einem 2-Knoten-Cluster vom Typ mirror werden die Rollen der einzelnen Server
 
 Über einfache Statussymbole hinaus bietet die Benutzeroberfläche **eine One-Click-Failover-Orchestrierung** ( **`...` -Menü** ), mit der Sie die primäre Rolle für geplante Wartungsarbeiten manuell neu zuweisen und gleichzeitig die kontinuierliche Verfügbarkeit für Benutzeraktivitäten gewährleisten können.
 
-## Wie funktioniert ein SafeKit `farm` Cluster mit der Webkonsole? {#safekit-farm-cluster}
+## Wie funktioniert ein SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster mit der Webkonsole? {#safekit-farm-cluster}
 
-### Wie konfiguriert man einen SafeKit `farm` Cluster? {#safekit-farm-cluster-configuration}
+### Wie konfiguriert man einen SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster? {#safekit-farm-cluster-configuration}
 
 
 ![ SafeKit Webkonsole: Farm Clusterkonfiguration für Netzwerklastausgleich und Verwaltung virtueller IPs. ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-Der Cluster **SafeKit `farm`** ist auf hohe Verfügbarkeit und Skalierbarkeit von Diensten ausgelegt. Die Konfiguration konzentriert sich auf die gleichzeitige Verteilung des eingehenden Datenverkehrs auf beide Knoten.
+Der Cluster **SafeKit <span class="notranslate farm-term" translate="no">farm</span>** ist auf hohe Verfügbarkeit und Skalierbarkeit von Diensten ausgelegt. Die Konfiguration konzentriert sich auf die gleichzeitige Verteilung des eingehenden Datenverkehrs auf beide Knoten.
 
   * **Load Balanced Services (Makros-Registerkarte):** Definiert die spezifischen Anwendungsdienste (z. B. Apache, IIS , Nginx ), die auf allen Knoten aktiv gehalten werden sollen.
-  * **Heartbeat-Netzwerk(e):** Kommunikationspfad(e), die verwendet werden, um zu erkennen, ob ein Knoten das `farm` verlassen hat, was eine sofortige Umverteilung der Last auslöst.
-  * Virtuelle IP-Adresse **( `Farm` VIP):** Im Gegensatz zu einem mirror -Cluster wird die VIP `Farm` zwischen den Knoten geteilt, wobei ein Kernel-Filteralgorithmus zur Verteilung des Netzwerkverkehrs verwendet wird.
+  * **Heartbeat-Netzwerk(e):** Kommunikationspfad(e), die verwendet werden, um zu erkennen, ob ein Knoten das <span class="notranslate farm-term" translate="no">farm</span> verlassen hat, was eine sofortige Umverteilung der Last auslöst.
+  * Virtuelle IP-Adresse **( <span class="notranslate farm-term" translate="no">Farm</span> VIP):** Im Gegensatz zu einem mirror -Cluster wird die VIP <span class="notranslate farm-term" translate="no">Farm</span> zwischen den Knoten geteilt, wobei ein Kernel-Filteralgorithmus zur Verteilung des Netzwerkverkehrs verwendet wird.
   * **Load-Balancing-Regeln:** Definieren Sie die Richtlinie zur Verkehrsverteilung basierend auf der Quell-IP-Adresse oder dem Quellport.
   * **-Prüfer:** Überwachen den Zustand der Anwendung und lösen einen automatischen Neustart aus, wenn ein Prozessfehler erkannt wird.
 
 
-### Wie überwacht man einen SafeKit `farm` Cluster? {#safekit-farm-cluster-monitoring}
+### Wie überwacht man einen SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster? {#safekit-farm-cluster-monitoring}
 
 
 ![ SafeKit Konsole: Überwachung eines 2-Knoten-Clusters Farm ), beide Knoten im Status „UP“ mit aktivem Lastausgleich. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-Die Überwachung eines `farm` Clusters ermöglicht die Visualisierung der **Active-Active** Architektur der Infrastruktur, bei der alle Knoten zur Anwendungsleistung beitragen (in diesem Beispiel werden 2 Knoten gezeigt; skalierbar auf zusätzliche Knoten):
+Die Überwachung eines <span class="notranslate farm-term" translate="no">farm</span> Clusters ermöglicht die Visualisierung der **Active-Active** Architektur der Infrastruktur, bei der alle Knoten zur Anwendungsleistung beitragen (in diesem Beispiel werden 2 Knoten gezeigt; skalierbar auf zusätzliche Knoten):
 
-  * **UP-Status (50 % auf 2 Knoten):** In einem gesunden `farm` befinden sich beide Knoten im Zustand „UP“ (50 %), was bedeutet, dass sie beide aktiv Client-Anfragen über die gemeinsam genutzte virtuelle IP empfangen und verarbeiten.
+  * **UP-Status (50 % auf 2 Knoten):** In einem gesunden <span class="notranslate farm-term" translate="no">farm</span> befinden sich beide Knoten im Zustand „UP“ (50 %), was bedeutet, dass sie beide aktiv Client-Anfragen über die gemeinsam genutzte virtuelle IP empfangen und verarbeiten.
   * Automatischer Lastausgleich: **Fällt ein Knoten aus, zeigt die Konsole an** dass der verbleibende Knoten 100 % des Datenverkehrs übernimmt. Es gibt keine Verzögerung beim Failover, da der funktionierende Knoten bereits aktiv ist (abgesehen von einer Erkennungszeit von wenigen Sekunden).
   * **Knoteneinfügung:** Wenn ein reparierter Knoten neu gestartet wird, wechselt er von "STOP" zu "UP" und beginnt automatisch, seinen Anteil an der Last ohne Eingriff des Administrators zu empfangen.
-  * **Keine Datensynchronisierung:** Hinweis: In einem `farm` -Cluster gibt es keinen Resynchronisierungsstatus "Orange", da die Knoten entweder zustandslos sind oder eine gemeinsame Backend-Datenbank nutzen (die in einem mirror Cluster separat geschützt werden kann).
+  * **Keine Datensynchronisierung:** Hinweis: In einem <span class="notranslate farm-term" translate="no">farm</span> -Cluster gibt es keinen Resynchronisierungsstatus "Orange", da die Knoten entweder zustandslos sind oder eine gemeinsame Backend-Datenbank nutzen (die in einem mirror Cluster separat geschützt werden kann).
 
 
 Über einfache Statussymbole hinaus bietet die Benutzeroberfläche eine Ein-Klick-Knotenverwaltung ( **`...` Menü** ), mit der Sie einen Knoten für geplante Wartungsarbeiten manuell stoppen oder starten können, während die gemeinsam genutzte virtuelle IP den Datenverkehr automatisch neu verteilt, ohne die Benutzeraktivität zu unterbrechen.

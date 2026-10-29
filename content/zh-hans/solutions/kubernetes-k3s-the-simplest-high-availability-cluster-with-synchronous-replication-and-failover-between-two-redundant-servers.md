@@ -71,7 +71,7 @@ SafeKit是一个功能全面的高可用性解决方案，适用于**Windows 、
   * **云基础设施：**云应用程序的高可用性。
 
 
-SafeKit还为**`Farm`集群**提供原生**网络负载均衡和故障转移**用于无状态应用程序，例如**Web 服务器** 。
+SafeKit还为**<span class="notranslate farm-term" translate="no">Farm</span>集群**提供原生**网络负载均衡和故障转移**用于无状态应用程序，例如**Web 服务器** 。
 
 💡 [点击此处查看所有受支持的HA解决方案](</zh-hans/solutions/>)
 

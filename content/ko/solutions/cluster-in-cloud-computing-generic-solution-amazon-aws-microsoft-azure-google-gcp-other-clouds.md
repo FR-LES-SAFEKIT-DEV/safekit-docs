@@ -17,7 +17,7 @@ topics: "SafeKit Microsoft , Azure 에서 찾아보세요. SafeKit Google, GCP �
 
 [ 일반 클라우드 Mirror > ](</ko/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ 일반 클라우드 `Farm` > ](</ko/solutions/cloud-load-balancing-cluster-failover/>)
+[ 일반 클라우드 <span class="notranslate farm-term" translate="no">Farm</span> > ](</ko/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-ko  %}}

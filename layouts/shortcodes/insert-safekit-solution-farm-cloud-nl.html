@@ -6,34 +6,34 @@
 
 ## Verbeter de cloudloadbalancer met monitoring op applicatieniveau en zelfherstel
 
-Een SafeKit-`Farm`-cluster voor {{ .Get "app" }} is een softwaregedefinieerde oplossing voor hoge beschikbaarheid, geoptimaliseerd voor cloudomgevingen. Met **grondige monitoring en zelfherstel** op de applicatieknooppunten worden softwarefouten lokaal gedetecteerd en opgelost voordat ze de beschikbaarheid beïnvloeden. De oplossing integreert naadloos met **{{ .Get "app" }}-loadbalancers** en gebruikt intelligente statuscontroles om verkeer uitsluitend naar volledig operationele knooppunten te sturen.
+Een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster voor {{ .Get "app" }} is een softwaregedefinieerde oplossing voor hoge beschikbaarheid, geoptimaliseerd voor cloudomgevingen. Met **grondige monitoring en zelfherstel** op de applicatieknooppunten worden softwarefouten lokaal gedetecteerd en opgelost voordat ze de beschikbaarheid beïnvloeden. De oplossing integreert naadloos met **{{ .Get "app" }}-loadbalancers** en gebruikt intelligente statuscontroles om verkeer uitsluitend naar volledig operationele knooppunten te sturen.
 
-### Wat zijn de voordelen van een SafeKit-`Farm`-cluster voor {{ .Get "app" }}-applicaties?
+### Wat zijn de voordelen van een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster voor {{ .Get "app" }}-applicaties?
 
   * **Integratie met {{ .Get "app" }}-loadbalancers:** levert automatisch nauwkeurige statuscontroles voor {{ .Get "app" }}-loadbalancers, zodat verkeer wordt gerouteerd op basis van de werkelijke status van de {{ .Get "app" }}-applicatie en niet alleen op basis van serverpings.
   * **Grondige monitoring en zelfherstel:** detecteert ‘zombie’-toestanden waarin een cloudinstantie de status ‘Running’ heeft terwijl de applicatie is vastgelopen. SafeKit herstart de service lokaal automatisch voordat de cloudloadbalancer een failover krijgt gemeld.
-  * **Hybride `Farm`- en Mirror-functionaliteit:** maakt het mogelijk een `Farm`-cluster (voor het schalen van front-ends via een cloud-LB) te combineren met een Mirror-cluster (voor synchrone gegevensreplicatie van back-ends), zodat het probleem van persistente opslag in {{ .Get "app" }} wordt opgelost.
+  * **Hybride <span class="notranslate farm-term" translate="no">Farm</span>- en Mirror-functionaliteit:** maakt het mogelijk een <span class="notranslate farm-term" translate="no">Farm</span>-cluster (voor het schalen van front-ends via een cloud-LB) te combineren met een Mirror-cluster (voor synchrone gegevensreplicatie van back-ends), zodat het probleem van persistente opslag in {{ .Get "app" }} wordt opgelost.
   * **Alternatief voor Kubernetes:** SafeKit biedt hoge beschikbaarheid voor zowel oudere als gecontaineriseerde applicaties (niet ontworpen voor Kubernetes), zonder de operationele belasting en complexiteit van Kubernetes-orchestratie.
   * **Uniforme implementatie (on-premises of cloud):** afgezien van het configureren van het [virtuele IP-adres in een cloudloadbalancer](/nl/best-practises/how-a-virtual-ip-address-works/), blijft het SafeKit-implementatieproces hetzelfde in on-premises- en cloudomgevingen.
 
 
 ![SafeKit-architectuur voor hoge beschikbaarheid van het {{ .Get "app" }}-cluster met virtueel IP-adres, automatische failover, automatische failback en netwerktaakverdeling]({{ .Get "img" }} "w:512")
 
-**SafeKit-`Farm`-NLB-cluster voor {{ .Get "app" }}**
+**SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-cluster voor {{ .Get "app" }}**
 
 <a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Beknopte installatiehandleiding voor het <code>farm</code>-cluster voor {{ .Get "app" }} &gt;</a>
 ## Inhoudsopgave {#toc}
 
   * [Hoe implementeert de SafeKit-software eenvoudig een netwerktaakverdelingscluster (NLB) voor {{ .Get "app" }}?](#safekit-farm-ha-cluster)
-  * [Hoe werkt het SafeKit-`farm`-cluster met {{ .Get "app" }}?](#safekit-farm-cluster)
-  * [Vergelijking: SafeKit-`Farm`-cluster on-premises en SafeKit-`Farm`-cluster in de cloud](#safekit-farm-ha-comparison)
-  * [Videogids: configuratie van een SafeKit-`Farm`-NLB-cluster](#videoguide-safekit-farm-cluster)
+  * [Hoe werkt het SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-cluster met {{ .Get "app" }}?](#safekit-farm-cluster)
+  * [Vergelijking: SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster on-premises en SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster in de cloud](#safekit-farm-ha-comparison)
+  * [Videogids: configuratie van een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-cluster](#videoguide-safekit-farm-cluster)
   * [🔍 Navigatiecentrum voor hoge beschikbaarheid van SafeKit](#hub)
 
 
 ## Hoe implementeert de SafeKit-software eenvoudig een netwerktaakverdelingscluster (NLB) voor {{ .Get "app" }}? {#safekit-farm-ha-cluster}
 
-### Wat is de SafeKit-`Farm`-NLB-oplossing voor {{ .Get "app" }}?
+### Wat is de SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-oplossing voor {{ .Get "app" }}?
 
 SafeKit biedt netwerktaakverdeling en hoge beschikbaarheid voor {{ .Get "app" }} op twee of meer knooppunten.
 
@@ -63,13 +63,13 @@ In tegenstelling tot uitbreidingsoplossingen die afzonderlijke clusterproducten 
 
 Zo wordt het ‘kaartenhuis’-risico vermeden waarbij updates kwetsbare koppelingen tussen verschillende tools verbreken. Ook is er één aanspreekpunt voor de volledige HA-stack en vermindert een enkele interface voor **hoge beschikbaarheid van {{ .Get "app" }}-applicaties** menselijke fouten.
 
-### Is het mogelijk een {{ .Get "app" }}-`farm`-cluster in te stellen zonder clusterervaring?
+### Is het mogelijk een {{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-cluster in te stellen zonder clusterervaring?
 
-Ja. Dit artikel legt uit hoe u snel een [{{ .Get "app" }}-`farm`-cluster implementeert]({{ .Get "guide" }}) zonder gespecialiseerde en complexe clusterkennis. De statuscontroles van SafeKit verzorgen de virtuele-IP-taakverdeling, applicatiemonitoring en herstart. Zo ontstaat een robuuste, schaalbare oplossing die veel eenvoudiger te implementeren en te onderhouden is dan traditionele NLB-clusteroplossingen.
+Ja. Dit artikel legt uit hoe u snel een [{{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-cluster implementeert]({{ .Get "guide" }}) zonder gespecialiseerde en complexe clusterkennis. De statuscontroles van SafeKit verzorgen de virtuele-IP-taakverdeling, applicatiemonitoring en herstart. Zo ontstaat een robuuste, schaalbare oplossing die veel eenvoudiger te implementeren en te onderhouden is dan traditionele NLB-clusteroplossingen.
 
 ### Welke applicaties en omgevingen kan SafeKit naast {{ .Get "app" }} beschermen?
 
-SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **voor zowel Windows als Linux** en gaat veel verder dan {{ .Get "app" }}-`farm`-clusters. Mirror-clusters bieden **synchrone replicatie in realtime** en automatische failover voor uiteenlopende kritieke workloads, waaronder:
+SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **voor zowel Windows als Linux** en gaat veel verder dan {{ .Get "app" }}-<span class="notranslate farm-term" translate="no">farm</span>-clusters. Mirror-clusters bieden **synchrone replicatie in realtime** en automatische failover voor uiteenlopende kritieke workloads, waaronder:
 
   * **Virtuele en fysieke omgevingen:** volledige Hyper-V- of KVM-virtuele machines.
   * **Containerorkestratie:** Docker-, Podman- en K3s- (Kubernetes-)omgevingen.
@@ -79,12 +79,12 @@ SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **voor zowel Wind
 
 💡 [Bekijk hier de volledige lijst met ondersteunde HA-oplossingen.](/nl/solutions/)
 
-## Hoe werkt het SafeKit-`farm`-cluster met {{ .Get "app" }}? {#safekit-farm-cluster}
+## Hoe werkt het SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-cluster met {{ .Get "app" }}? {#safekit-farm-cluster}
 
 ### Hoe werkt netwerktaakverdeling (NLB) voor {{ .Get "app" }}?
 
   * **Multi-AZ-implementatie:** knooppunten worden over meerdere beschikbaarheidszones verdeeld voor maximale weerbaarheid tegen datacenterstoringen.
-  * **Actief-actieve redundantie:** de kritieke {{ .Get "app" }}-applicatie draait gelijktijdig op alle knooppunten in de `farm`.
+  * **Actief-actieve redundantie:** de kritieke {{ .Get "app" }}-applicatie draait gelijktijdig op alle knooppunten in de <span class="notranslate farm-term" translate="no">farm</span>.
   * **Intelligente verkeersroutering:** gebruikers maken verbinding via een door de {{ .Get "app" }}-loadbalancer beheerd [virtueel IP-adres](/nl/best-practises/how-a-virtual-ip-address-works/).
   * **Realtime statusbewaking:** de loadbalancer gebruikt de SafeKit-statuscontrole-URL. SafeKit geeft **HTTP 200 OK** terug wanneer een knooppunt gezond is en **HTTP 404** (of een time-out) bij een storing, zodat de loadbalancer verkeer automatisch alleen naar operationele knooppunten routeert.
 
@@ -97,7 +97,7 @@ SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **voor zowel Wind
   * **Vereenvoudigd onderhoud:** elk knooppunt bevat een SafeKit-webconsoleconnector met een interface waarmee knooppunten met één klik handmatig uit het cluster kunnen worden verwijderd voor hardware- of softwareonderhoud.
 
 
-![Diagram van een SafeKit-`farm`-cluster voor {{ .Get "app" }} met Multi-AZ-redundantie. Een loadbalancer gebruikt HTTP-statuscontroles om verkeer tussen actieve knooppunten te routeren en automatische failover af te handelen.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
+![Diagram van een SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-cluster voor {{ .Get "app" }} met Multi-AZ-redundantie. Een loadbalancer gebruikt HTTP-statuscontroles om verkeer tussen actieve knooppunten te routeren en automatische failover af te handelen.](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
 
 **SafeKit-NLB- en HA-architectuur voor {{ .Get "app" }}**
 
@@ -107,46 +107,46 @@ De configuratie van de loadbalancer hangt ervan af of uw applicatie stateful of 
 
 #### Stateful configuratie (sessieaffiniteit)
 
-Voor een **stateful** {{ .Get "app" }}-applicatie is sessieaffiniteit (persistentie) vereist. Zo blijft een bepaalde client gedurende meerdere TCP-sessies met hetzelfde knooppunt verbonden en behoudt de client zijn applicatiecontext. De loadbalancerregel is gebaseerd op het **IP-adres van de client**. Een client blijft dus aan een knooppunt gekoppeld, terwijl verkeer van verschillende clients over de knooppunten in de `farm` wordt verdeeld.
+Voor een **stateful** {{ .Get "app" }}-applicatie is sessieaffiniteit (persistentie) vereist. Zo blijft een bepaalde client gedurende meerdere TCP-sessies met hetzelfde knooppunt verbonden en behoudt de client zijn applicatiecontext. De loadbalancerregel is gebaseerd op het **IP-adres van de client**. Een client blijft dus aan een knooppunt gekoppeld, terwijl verkeer van verschillende clients over de knooppunten in de <span class="notranslate farm-term" translate="no">farm</span> wordt verdeeld.
 
 #### Stateless configuratie (geen affiniteit)
 
-Voor een **stateless** {{ .Get "app" }}-applicatie is sessieaffiniteit niet nodig. Omdat tussen sessies geen lokale context op het knooppunt wordt opgeslagen, kan één client voor elke nieuwe TCP-sessie over verschillende knooppunten worden verdeeld. De loadbalancerregel is gebaseerd op de **TCP-sessie-identiteit**. Dit verdeelt verkeer het efficiëntst over de `farm`, maar is alleen geschikt voor services zonder sessieafhankelijkheid.
+Voor een **stateless** {{ .Get "app" }}-applicatie is sessieaffiniteit niet nodig. Omdat tussen sessies geen lokale context op het knooppunt wordt opgeslagen, kan één client voor elke nieuwe TCP-sessie over verschillende knooppunten worden verdeeld. De loadbalancerregel is gebaseerd op de **TCP-sessie-identiteit**. Dit verdeelt verkeer het efficiëntst over de <span class="notranslate farm-term" translate="no">farm</span>, maar is alleen geschikt voor services zonder sessieafhankelijkheid.
 
-### Hoe configureert u een SafeKit-`farm`-cluster in {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
-
-
-![SafeKit-webconsole: configuratie van het `Farm`-cluster voor netwerktaakverdeling en beheer van virtuele IP-adressen.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+### Hoe configureert u een SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-cluster in {{ .Get "app" }}? {#safekit-farm-cluster-configuration}
 
 
-Het SafeKit-**`farm`-cluster** is ontworpen voor hoge beschikbaarheid en schaalbaarheid van services. De configuratie verdeelt binnenkomend verkeer gelijktijdig over beide knooppunten:
+![SafeKit-webconsole: configuratie van het <span class="notranslate farm-term" translate="no">Farm</span>-cluster voor netwerktaakverdeling en beheer van virtuele IP-adressen.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+
+
+Het SafeKit-**<span class="notranslate farm-term" translate="no">farm</span>-cluster** is ontworpen voor hoge beschikbaarheid en schaalbaarheid van services. De configuratie verdeelt binnenkomend verkeer gelijktijdig over beide knooppunten:
 
   * **Services met taakverdeling (tabblad Macros):** definieer de applicatieservices (bijvoorbeeld Apache, IIS en Nginx) die op alle knooppunten actief moeten blijven.
-  * **Heartbeat-netwerk(en):** communicatiepad(en) om te detecteren of een knooppunt de `farm` heeft verlaten.
-  * **Virtueel IP (`Farm`-VIP):** configureer bij een on-premises implementatie de VIP rechtstreeks in de SafeKit-webconsole. Configureer in de cloud het virtuele IP in de cloudloadbalancer met de statuscontrole van SafeKit.
+  * **Heartbeat-netwerk(en):** communicatiepad(en) om te detecteren of een knooppunt de <span class="notranslate farm-term" translate="no">farm</span> heeft verlaten.
+  * **Virtueel IP (<span class="notranslate farm-term" translate="no">Farm</span>-VIP):** configureer bij een on-premises implementatie de VIP rechtstreeks in de SafeKit-webconsole. Configureer in de cloud het virtuele IP in de cloudloadbalancer met de statuscontrole van SafeKit.
   * **Taakverdelingsregels:** configureer on-premises het verkeersbeleid op basis van het bron-IP-adres of de poort in de SafeKit-webconsole. Configureer het beleid in de cloudloadbalancer.
   * **Controles:** bewaak de applicatiestatus en start de applicatie automatisch opnieuw als een processtoring wordt gedetecteerd.
 
 
-### Hoe bewaakt u een SafeKit-`farm`-cluster in {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
+### Hoe bewaakt u een SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-cluster in {{ .Get "app" }}? {#safekit-farm-cluster-monitoring}
 
 
-![SafeKit-console: monitoring van een `Farm`-cluster met 2 knooppunten, beide in de status UP en met actieve taakverdeling.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+![SafeKit-console: monitoring van een <span class="notranslate farm-term" translate="no">Farm</span>-cluster met 2 knooppunten, beide in de status UP en met actieve taakverdeling.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-Monitoring van een `farm`-cluster maakt het **actief-actieve** karakter van de infrastructuur zichtbaar: alle knooppunten dragen bij aan de prestaties van de applicatie (in dit voorbeeld zijn 2 knooppunten te zien):
+Monitoring van een <span class="notranslate farm-term" translate="no">farm</span>-cluster maakt het **actief-actieve** karakter van de infrastructuur zichtbaar: alle knooppunten dragen bij aan de prestaties van de applicatie (in dit voorbeeld zijn 2 knooppunten te zien):
 
-  * **Status UP (50% op 2 knooppunten):** in een gezonde `farm` staan beide knooppunten op ‘UP’ (50%) en ontvangen en verwerken ze actief clientverzoeken via het gedeelde virtuele IP.
+  * **Status UP (50% op 2 knooppunten):** in een gezonde <span class="notranslate farm-term" translate="no">farm</span> staan beide knooppunten op ‘UP’ (50%) en ontvangen en verwerken ze actief clientverzoeken via het gedeelde virtuele IP.
   * **Automatische herverdeling:** als een knooppunt uitvalt, laat de console zien dat het resterende knooppunt 100% van het verkeer overneemt. De failoververtraging hangt af van het interval voor statuscontroles van de cloudloadbalancer.
   * **Knooppunt toevoegen:** wanneer een gerepareerd knooppunt opnieuw wordt gestart, gaat het van ‘STOP’ naar ‘UP’ en ontvangt het automatisch weer een deel van de belasting, zonder tussenkomst van de beheerder.
-  * **Geen gegevenssynchronisatie:** een `farm`-cluster heeft geen oranje hersynchronisatiestatus. De knooppunten zijn naar verwachting stateless of gebruiken een gedeelde backenddatabase, die afzonderlijk in een Mirror-cluster kan worden beveiligd.
+  * **Geen gegevenssynchronisatie:** een <span class="notranslate farm-term" translate="no">farm</span>-cluster heeft geen oranje hersynchronisatiestatus. De knooppunten zijn naar verwachting stateless of gebruiken een gedeelde backenddatabase, die afzonderlijk in een Mirror-cluster kan worden beveiligd.
 
 
 Naast eenvoudige statuspictogrammen biedt de interface knooppuntbeheer met één klik. U kunt een knooppunt handmatig stoppen of starten voor gepland onderhoud, terwijl het gedeelde virtuele IP het verkeer automatisch herverdeelt zonder gebruikers te onderbreken.
 
-## Vergelijking: SafeKit-`Farm`-cluster on-premises en SafeKit-`Farm`-cluster in de cloud {#safekit-farm-ha-comparison}
+## Vergelijking: SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster on-premises en SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-cluster in de cloud {#safekit-farm-ha-comparison}
 
-**Technische vergelijking van SafeKit-`Farm`-clusters on-premises en in de cloud**
+**Technische vergelijking van SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-clusters on-premises en in de cloud**
 
 Functie | SafeKit on-premises (fysiek/VM) | SafeKit in de cloud
 ---|---|---
@@ -159,7 +159,7 @@ Infrastructuurvereiste | Standaard Layer 2-netwerk (zelfde subnet voor VIP). | M
 
 **Samengevat:** zowel on-premises als in de cloud zorgt SafeKit ervoor dat kritieke applicaties veerkrachtig, schaalbaar en eenvoudig te beheren blijven via één uniforme interface. Voor softwareleveranciers is het **softwarematige karakter van SafeKit** de ideale manier om hoge beschikbaarheid aan hun productcatalogus toe te voegen. In tegenstelling tot hardwareafhankelijke of cloudspecifieke oplossingen is SafeKit 100% onafhankelijk en biedt het een consistente HA-ervaring, on-premises, in gevirtualiseerde omgevingen en in publieke clouds.
 
-## Videogids: configuratie van een SafeKit-`Farm`-NLB-cluster {#videoguide-safekit-farm-cluster}
+## Videogids: configuratie van een SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-NLB-cluster {#videoguide-safekit-farm-cluster}
 
 ### SafeKit-video: netwerktaakverdeling en beheer van virtuele IP-adressen (5:03) {#demo-farm}
 

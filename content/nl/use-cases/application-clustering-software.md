@@ -27,11 +27,11 @@ Bent u een software-uitgever en zoekt u een applicatieclusteringoplossing die ee
 
 ### Applicatieclustering met realtime replicatie, taakverdeling en failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-De SafeKit -software biedt twee generieke modules voor applicatieclustering: de mirror -module en de `farm` -module.
+De SafeKit -software biedt twee generieke modules voor applicatieclustering: de mirror -module en de <span class="notranslate farm-term" translate="no">farm</span> -module.
 
 De module [ mirror ](/nl/product/#safekit-mirror-cluster) implementeert realtime bestandsreplicatie en failover voor applicaties. Deze module is geschikt voor applicaties met een database.
 
-De module [ `farm` ](/nl/product/#safekit-farm-cluster) implementeert netwerkbelastingverdeling en applicatiefailover. Deze module is geschikt voor applicaties met webservices.
+De module [ <span class="notranslate farm-term" translate="no">farm</span> ](/nl/product/#safekit-farm-cluster) implementeert netwerkbelastingverdeling en applicatiefailover. Deze module is geschikt voor applicaties met webservices.
 
 En je kunt de modules combineren.
 

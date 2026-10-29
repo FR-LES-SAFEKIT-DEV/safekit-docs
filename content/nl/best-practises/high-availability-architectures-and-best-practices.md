@@ -27,7 +27,7 @@ Er zijn twee typen [ high availability ](<https://www.techtarget.com/it-infrastr
 
 Architecturen met hoge beschikbaarheid voor de backend zijn gebaseerd op twee servers die gegevens delen of repliceren, met een automatische failover van de applicatie in geval van hardware- of softwarefouten.
 
-Hoogbeschikbare frontend-architecturen zijn gebaseerd op een `farm` van servers (2 servers of meer). De load balancing wordt uitgevoerd door hardware of software en verdeelt de TCP-sessies over de beschikbare servers in de farm .
+Hoogbeschikbare frontend-architecturen zijn gebaseerd op een <span class="notranslate farm-term" translate="no">farm</span> van servers (2 servers of meer). De load balancing wordt uitgevoerd door hardware of software en verdeelt de TCP-sessies over de beschikbare servers in de farm .
 
 Bovendien moet je kiezen tussen hoge beschikbaarheid op applicatieniveau of op het niveau van de virtuele machine.
 

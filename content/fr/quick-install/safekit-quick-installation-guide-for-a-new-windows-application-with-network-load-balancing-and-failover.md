@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Découvrez comment déployer le module farm.safe pour la répartition de charge réseau et la reprise automatique sur panne sous Windows. Ce guide vous montre comment construire un cluster hautement disponible pour des services web et des applications avec une IP virtuelle, sans répartiteur de charge matériel externe ni configuration complexe."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d'installation rapide de la haute disponibilité pour Windows, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Windows, Installation de la solution SafeKit / Windows (farm.safe), Configuration pas à pas de la solution SafeKit / Windows, Démonstration de la solution SafeKit `farm`, 🔍 Portail de navigation SafeKit haute disponibilité"
+topics: "Guide d'installation rapide de la haute disponibilité pour Windows, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Windows, Installation de la solution SafeKit / Windows (farm.safe), Configuration pas à pas de la solution SafeKit / Windows, Démonstration de la solution SafeKit <span class="notranslate farm-term" translate="no">farm</span>, 🔍 Portail de navigation SafeKit haute disponibilité"
 ---
 
 # Répartition de charge réseau et reprise sur panne sous Windows : installer le module SafeKit farm.safe {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -21,7 +21,7 @@ La solution est décrite ici : **💡[SafeKit : logiciel tout-en-un de répartit
 
 ### Prérequis {#prerequisites}
 
-  * Vous devez avoir installé l'application que vous voulez placer dans une `farm` sur au moins 2 nœuds (machines virtuelles ou serveurs physiques).
+  * Vous devez avoir installé l'application que vous voulez placer dans une <span class="notranslate farm-term" translate="no">farm</span> sur au moins 2 nœuds (machines virtuelles ou serveurs physiques).
 
 
 
@@ -36,7 +36,7 @@ Remarque : le module générique **farm.safe** que vous allez configurer est fou
 {{%  insert-safekit-82-farm-configuration-fr app="Windows" mod="farm"  %}}
  
 
-## Démonstration de la solution SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## Démonstration de la solution SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-fr  %}}

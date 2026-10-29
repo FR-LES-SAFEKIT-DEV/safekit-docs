@@ -21,7 +21,7 @@ Il n'y a aucune différence de configuration lors du déploiement d'un cluster S
 
 ### Comment mettre en œuvre une solution simple de haute disponibilité entre deux salles informatiques distantes ? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-SafeKit mirror et `farm` Les modules peuvent être facilement déployés sur des serveurs situés dans des salles informatiques distantes, sans aucune configuration de cluster particulière. Cela signifie SafeKit combine la continuité des activités et la reprise après sinistre au sein d'une architecture unique et simple. SafeKit gère également [cerveau divisé](</fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) en cas d'isolation du réseau, sans nécessiter de serveur tiers ni de disque de quorum spécial.
+SafeKit mirror et <span class="notranslate farm-term" translate="no">farm</span> Les modules peuvent être facilement déployés sur des serveurs situés dans des salles informatiques distantes, sans aucune configuration de cluster particulière. Cela signifie SafeKit combine la continuité des activités et la reprise après sinistre au sein d'une architecture unique et simple. SafeKit gère également [cerveau divisé](</fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) en cas d'isolation du réseau, sans nécessiter de serveur tiers ni de disque de quorum spécial.
 
 ### Continuité d'activité vs solutions de sauvegarde {#business-continuity-vs-backup-solutions}
 

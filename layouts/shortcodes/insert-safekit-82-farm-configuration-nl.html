@@ -63,8 +63,8 @@ U kunt de console ook in een browser op een werkstation buiten het cluster gebru
   * Voer bij `Virtual IP addresses` een virtueel IP-adres in. Dit is een standaard-IP-adres in hetzelfde IP-netwerk (hetzelfde subnet) als de IP-adressen van beide knooppunten. Applicatieclients moeten worden geconfigureerd met het virtuele IP-adres (of de bijbehorende DNS-naam).
   * Stel bij `Load balancing rules` de servicepoort in die u wilt verdelen (bijvoorbeeld TCP 9010).
   * Stel bij `Load balancing rules` de load-balancingregel `Source address` of `Source port` in:
-    * Met het bron-IP-adres van de client wordt dezelfde client bij meerdere TCP-sessies verbonden met hetzelfde knooppunt in de `farm` en wordt de context op dat knooppunt opgehaald.
-    * Met de TCP-bronpoort van de client wordt dezelfde client bij meerdere TCP-sessies verbonden met verschillende knooppunten in de `farm` (zonder context op te halen).
+    * Met het bron-IP-adres van de client wordt dezelfde client bij meerdere TCP-sessies verbonden met hetzelfde knooppunt in de <span class="notranslate farm-term" translate="no">farm</span> en wordt de context op dat knooppunt opgehaald.
+    * Met de TCP-bronpoort van de client wordt dezelfde client bij meerdere TCP-sessies verbonden met verschillende knooppunten in de <span class="notranslate farm-term" translate="no">farm</span> (zonder context op te halen).
   * Bij `Checkers` kunt u zo nodig controles configureren, zoals procesbewaking, aangepaste controles, TCP-, ping- of split-brain-controles. Als bijvoorbeeld een procesnaam wordt weergegeven bij `Monitored processes/services`, wordt deze bewaakt en bij een storing opnieuw gestart. Een onjuiste procesnaam zorgt ervoor dat de module direct na het opstarten stopt.
 
 
@@ -75,7 +75,7 @@ U kunt de console ook in een browser op een werkstation buiten het cluster gebru
 ℹ️ Wanneer u de SafeKit-configuratie toepast, wordt het `startup type` van services in Windows-services automatisch ingesteld op `Manual`. Hierdoor starten services niet automatisch wanneer het systeem opstart, maar alleen wanneer de module zelf wordt gestart (dit geldt ook voor Linux).
 
 
-![Voer de instellingen van de {{ .Get "app" }}-module `farm` in](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Voer de instellingen van de {{ .Get "app" }}-module <span class="notranslate farm-term" translate="no">farm</span> in](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Scripts bewerken (optioneel)
@@ -114,9 +114,9 @@ U kunt de console ook in een browser op een werkstation buiten het cluster gebru
 ![Controleren of de configuratie van de {{ .Get "app" }}-module is geslaagd](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Het `farm`-cluster starten op knooppunt 1 en 2
+### 9. Het <span class="notranslate farm-term" translate="no">farm</span>-cluster starten op knooppunt 1 en 2
 
-  * Klik op ⋯ `Start` om het `farm`-cluster te starten, zoals weergegeven in de afbeelding.
+  * Klik op ⋯ `Start` om het <span class="notranslate farm-term" translate="no">farm</span>-cluster te starten, zoals weergegeven in de afbeelding.
 
 
 ![Het {{ .Get "app" }}-cluster op beide knooppunten starten](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
@@ -144,7 +144,7 @@ Knooppunt 1 en knooppunt 2 moeten de status UP (groen) bereiken. Dit betekent da
 SafeKit bevat een ingebouwde test:
 
   * Configureer een regel voor TCP-poort 9010 met load balancing op basis van de TCP-bronpoort.
-  * Verbind een extern werkstation dat zich buiten de `farm`-knooppunten bevindt.
+  * Verbind een extern werkstation dat zich buiten de <span class="notranslate farm-term" translate="no">farm</span>-knooppunten bevindt.
   * Open een browser op http://virtual-ip:9010/safekit/mosaic.html.
 
 

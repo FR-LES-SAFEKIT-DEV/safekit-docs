@@ -17,7 +17,7 @@ topics: "Entdecken Sie SafeKit in Microsoft Azure , entdecken Sie SafeKit in Goo
 
 [ Generische Wolke Mirror > ](</de/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ Generische Wolke `Farm` > ](</de/solutions/cloud-load-balancing-cluster-failover/>)
+[ Generische Wolke <span class="notranslate farm-term" translate="no">Farm</span> > ](</de/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-de  %}}

@@ -25,7 +25,7 @@ SafeKitを使用すれば、数十個のクラスターのデプロイは複雑�
 
 ### SafeKitソフトウェア：ビジネス継続のためのシンプルなソリューション {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit `farm`とmirror 2つのシンプルなモジュールを提供し、重要なアプリケーションを障害から保護します。導入は標準的なサーバーで行われ、ソリューションの管理にITスキルは必要ありません。共有ディスク、レプリケートSAN、ロードバランサー、エンタープライズ版のオペレーティングシステムやデータベースも不要です。 
+SafeKit <span class="notranslate farm-term" translate="no">farm</span>とmirror 2つのシンプルなモジュールを提供し、重要なアプリケーションを障害から保護します。導入は標準的なサーバーで行われ、ソリューションの管理にITスキルは必要ありません。共有ディスク、レプリケートSAN、ロードバランサー、エンタープライズ版のオペレーティングシステムやデータベースも不要です。 
 
 
 {{%  insert-safekit-hub-ja  %}}

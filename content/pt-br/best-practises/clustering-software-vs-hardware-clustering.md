@@ -27,7 +27,7 @@ Existem dois tipos de soluções de clusterização de hardware: clusterização
 
 O cluster de hardware para backend (como no cluster de failover [ Microsoft ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) ) é baseado em 2 servidores compartilhando um disco com failover automático de aplicativos em caso de falha.
 
-O cluster de hardware para o frontend é baseado em balanceadores de carga (como no caso do F5 BIG-IP [ ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) na frente de um conjunto de servidores `farm` (dois ou mais servidores). Os balanceadores de carga distribuem as sessões TCP para os servidores disponíveis no conjunto farm .
+O cluster de hardware para o frontend é baseado em balanceadores de carga (como no caso do F5 BIG-IP [ ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ) na frente de um conjunto de servidores <span class="notranslate farm-term" translate="no">farm</span> (dois ou mais servidores). Os balanceadores de carga distribuem as sessões TCP para os servidores disponíveis no conjunto farm .
 
 ### O que é clustering de software? {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ Assim como no clustering de hardware, existem dois tipos de soluções de cluste
 
 O cluster de software para backend (como em [ SafeKit ](</>) ) é baseado em 2 servidores que replicam dados em tempo real com failover automático do aplicativo em caso de falhas.
 
-O agrupamento de software para o frontend (como no caso do SafeKit ) baseia-se no balanceamento de carga em um conjunto de servidores `farm` (dois ou mais servidores). O balanceamento de carga é realizado por software e distribui as sessões TCP para os servidores disponíveis no conjunto farm .
+O agrupamento de software para o frontend (como no caso do SafeKit ) baseia-se no balanceamento de carga em um conjunto de servidores <span class="notranslate farm-term" translate="no">farm</span> (dois ou mais servidores). O balanceamento de carga é realizado por software e distribui as sessões TCP para os servidores disponíveis no conjunto farm .
 
 ## Clustering por software versus clustering por hardware: vantagens e desvantagens {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

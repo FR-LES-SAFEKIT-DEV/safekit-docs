@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "Windows 및 Linux 환경에서 Apache 네트워크 로드 밸런싱 및 자동 장애 조치를 위한 apache_farm.safe 모듈 배포 방법을 알아보세요. 이 가이드는 외부 하드웨어 로드 밸런서나 복잡한 구성 없이 가상 IP를 사용하여 웹 서비스 및 애플리케이션을 위한 고가용성 클러스터를 구축하는 방법을 보여줍니다."
 category: "quick-install"
 lang: "ko"
-topics: "SafeKit 고가용성 빠른 설치 가이드(Apache용), SafeKit 고가용성 제한 사항, SafeKit/Apache 솔루션 개요, Windows 및 Linux에 SafeKit/Apache 솔루션 설치(apache_farm.safe), SafeKit/Apache 솔루션 단계별 구성, SafeKit `farm` 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "SafeKit 고가용성 빠른 설치 가이드(Apache용), SafeKit 고가용성 제한 사항, SafeKit/Apache 솔루션 개요, Windows 및 Linux에 SafeKit/Apache 솔루션 설치(apache_farm.safe), SafeKit/Apache 솔루션 단계별 구성, SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # Apache 네트워크 로드 밸런싱 및 페일오버: SafeKit apache_farm.safe 모듈 설치 {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
@@ -40,7 +40,7 @@ topics: "SafeKit 고가용성 빠른 설치 가이드(Apache용), SafeKit 고가
 {{%  insert-safekit-82-farm-configuration-ko app="Apache" mod="apache_farm"  %}}
  
 
-## SafeKit `farm` 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ko  %}}

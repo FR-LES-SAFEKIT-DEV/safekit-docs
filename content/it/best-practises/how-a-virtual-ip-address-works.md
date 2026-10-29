@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/best-practises/how-a-virtual-ip-addres
 description: "Scopri come SafeKit utilizza gli indirizzi IP virtuali (VIP) definiti via software per garantire un funzionamento ininterrotto 24 ore su 24, 7 giorni su 7. Scopri il failover automatico tramite Gratuitous ARP e perché offre prestazioni superiori al reindirizzamento DNS per la continuità operativa su Windows e Linux ."
 category: "best-practises"
 lang: "it"
-topics: "Che cos'è un indirizzo IP virtuale in un cluster ad alta disponibilità?, Implementazione IP virtuale in SafeKit , Sommario, Come funziona un indirizzo IP virtuale (VIP) in un failover nella stessa sottorete (cluster Mirror ), Come funziona un IP virtuale (VIP) tra sottoreti diverse (cluster Mirror ), Come funziona un IP virtuale con bilanciamento del carico in un cluster `Farm` nella stessa sottorete (cluster `Farm` ), Come funziona un IP virtuale con bilanciamento del carico tra sottoreti diverse (cluster `Farm` ), IP virtuale vs. reindirizzamento DNS: perché il failover DNS spesso fallisce, Confronto: implementazione IP virtuale, latenza e trasparenza delle applicazioni, Configurazione di un indirizzo IP virtuale per il bilanciamento del carico di rete e l'alta disponibilità, Domande frequenti sull'IP virtuale (VIP), 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "Che cos'è un indirizzo IP virtuale in un cluster ad alta disponibilità?, Implementazione IP virtuale in SafeKit , Sommario, Come funziona un indirizzo IP virtuale (VIP) in un failover nella stessa sottorete (cluster Mirror ), Come funziona un IP virtuale (VIP) tra sottoreti diverse (cluster Mirror ), Come funziona un IP virtuale con bilanciamento del carico in un cluster <span class="notranslate farm-term" translate="no">Farm</span> nella stessa sottorete (cluster <span class="notranslate farm-term" translate="no">Farm</span> ), Come funziona un IP virtuale con bilanciamento del carico tra sottoreti diverse (cluster <span class="notranslate farm-term" translate="no">Farm</span> ), IP virtuale vs. reindirizzamento DNS: perché il failover DNS spesso fallisce, Confronto: implementazione IP virtuale, latenza e trasparenza delle applicazioni, Configurazione di un indirizzo IP virtuale per il bilanciamento del carico di rete e l'alta disponibilità, Domande frequenti sull'IP virtuale (VIP), 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
 ---
 
 # Come funziona un indirizzo IP virtuale (VIP) in un cluster ad alta disponibilità? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -20,7 +20,7 @@ topics: "Che cos'è un indirizzo IP virtuale in un cluster ad alta disponibilit�
 ## Implementazione IP virtuale in SafeKit {#safekit-vip-implementation}
 
   * Cluster **Mirror :** Dispone di un IP mobile attivo solo sul server primario per facilitare la replica in tempo reale e il failover.
-  * **`Farm` Cluster:** Abilita il bilanciamento del carico di rete mantenendo il VIP su tutti i nodi contemporaneamente.
+  * **<span class="notranslate farm-term" translate="no">Farm</span> Cluster:** Abilita il bilanciamento del carico di rete mantenendo il VIP su tutti i nodi contemporaneamente.
 
 
 **Vantaggio chiave:** Utilizzando **ARP (Address Resolution Protocol) gratuito** o **Acquisizione indirizzo MAC** , il VIP consente un failover dell'applicazione senza interruzioni e senza riconfigurazione manuale del client, garantendo la continuità operativa 24 ore su 24, 7 giorni su 7.
@@ -30,7 +30,7 @@ topics: "Che cos'è un indirizzo IP virtuale in un cluster ad alta disponibilit�
 
 Diagramma comparativo del comportamento dell'IP virtuale (VIP) in Evidian ![ : cluster SafeKit Mirror mostrano un IP fluttuante sul nodo attivo rispetto a cluster Farm che mostrano il bilanciamento del carico di rete su tutti i nodi. ](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-Strategie di implementazione IP virtuale **per i cluster Mirror e `Farm` in SafeKit .**
+Strategie di implementazione IP virtuale **per i cluster Mirror e <span class="notranslate farm-term" translate="no">Farm</span> in SafeKit .**
 
 
 {{%  insert-safekit-4-buttons-it  %}}
@@ -40,8 +40,8 @@ Strategie di implementazione IP virtuale **per i cluster Mirror e `Farm` in Safe
 
   * [ Come funziona un indirizzo IP virtuale (VIP) in un failover nella stessa sottorete (cluster Mirror ) ](#virtual-ip-same-subnet-failover)
   * [ Come funziona un IP virtuale (VIP) su diverse sottoreti (Cluster Mirror ) ](#virtual-ip-different-subnets-failover)
-  * [ Come funziona un IP virtuale con bilanciamento del carico nella stessa sottorete `Farm` (Cluster `Farm` ) ](#vip-load-balancing-same-subnet)
-  * [ Come funziona un IP virtuale con bilanciamento del carico su diverse sottoreti (Cluster `Farm` ) ](#vip-load-balancing-different-subnets)
+  * [ Come funziona un IP virtuale con bilanciamento del carico nella stessa sottorete <span class="notranslate farm-term" translate="no">Farm</span> (Cluster <span class="notranslate farm-term" translate="no">Farm</span> ) ](#vip-load-balancing-same-subnet)
+  * [ Come funziona un IP virtuale con bilanciamento del carico su diverse sottoreti (Cluster <span class="notranslate farm-term" translate="no">Farm</span> ) ](#vip-load-balancing-different-subnets)
   * [ IP virtuale vs. reindirizzamento DNS: perché il failover DNS spesso fallisce ](#virtual-ip-vs-dns-redirection-failover)
   * Confronto [ : Implementazione IP virtuale, latenza e trasparenza applicativa ](#vip-vs-dns-comparison)
   * [ Configurazione di un indirizzo IP virtuale per il bilanciamento del carico di rete e l'alta disponibilità ](#virtual-ip-configuration-load-balancing-ha)
@@ -119,22 +119,22 @@ Se non si desidera utilizzare un bilanciatore di carico, consultare il team di r
 
 > **⚠️ Nota:** Quando si sceglie un Load Balancer, verificare che l'applicazione sia compatibile con **Traduzione IP di origine/destinazione (SNAT/DNAT)** . Con un Load Balancer, l'applicazione potrebbe perdere traccia dell'identità dell'utente originale o non avviarsi perché non vede più l'IP virtuale configurato direttamente sulla propria interfaccia di rete.
 
-## Come funziona un IP virtuale con bilanciamento del carico nella stessa sottorete `Farm` (cluster `Farm` ) {#vip-load-balancing-same-subnet}
+## Come funziona un IP virtuale con bilanciamento del carico nella stessa sottorete <span class="notranslate farm-term" translate="no">Farm</span> (cluster <span class="notranslate farm-term" translate="no">Farm</span> ) {#vip-load-balancing-same-subnet}
 
 ### Prestazioni scalabili: bilanciamento del carico e ridondanza a livello di kernel {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-Per gli ambienti ad alto traffico, la Guida all'architettura **: Alta disponibilità scalabile con cluster `Farm` multi-nodo e** spiega come SafeKit distribuisce i carichi di lavoro su più server attivi mantenendo la totale ridondanza. 
+Per gli ambienti ad alto traffico, la Guida all'architettura **: Alta disponibilità scalabile con cluster <span class="notranslate farm-term" translate="no">Farm</span> multi-nodo e** spiega come SafeKit distribuisce i carichi di lavoro su più server attivi mantenendo la totale ridondanza. 
 
-### Architettura del cluster `Farm` : bilanciamento del carico tra i nodi Windows o Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### Architettura del cluster <span class="notranslate farm-term" translate="no">Farm</span> : bilanciamento del carico tra i nodi Windows o Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 Diagramma ![ di un IP virtuale (VIP) con bilanciamento del carico all'interno di un cluster farm della stessa sottorete ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
- Elaborazione distribuita del traffico tramite filtraggio del kernel In un cluster di bilanciamento del carico **`farm`** , un indirizzo IP virtuale (VIP) viene utilizzato per distribuire le richieste dei client su più server contemporaneamente. Sebbene questo esempio preveda due nodi, l'architettura è scalabile per supportare server farm più grandi. In una configurazione sulla stessa sottorete, il VIP è configurato sulla scheda Ethernet di **di ogni server** nel cluster tramite alias IP. 
+ Elaborazione distribuita del traffico tramite filtraggio del kernel In un cluster di bilanciamento del carico **<span class="notranslate farm-term" translate="no">farm</span>** , un indirizzo IP virtuale (VIP) viene utilizzato per distribuire le richieste dei client su più server contemporaneamente. Sebbene questo esempio preveda due nodi, l'architettura è scalabile per supportare server farm più grandi. In una configurazione sulla stessa sottorete, il VIP è configurato sulla scheda Ethernet di **di ogni server** nel cluster tramite alias IP. 
 
 #### Distribuzione del traffico: il filtro a livello di kernel {#traffic-distribution-the-kernel-level-filter}
 
-A differenza di un semplice cluster di failover, un cluster `farm` gestisce il traffico tramite un **filtro specializzato a livello di kernel** . Il processo funziona come segue: 
+A differenza di un semplice cluster di failover, un cluster <span class="notranslate farm-term" translate="no">farm</span> gestisce il traffico tramite un **filtro specializzato a livello di kernel** . Il processo funziona come segue: 
 
   * Mappatura ARP **:** Nelle cache ARP dei client, il VIP è inizialmente associato a un singolo indirizzo hardware (ad esempio, `mac1` del Server 1).
   * **Suddivisione dei pacchetti:** Quando il Server 1 riceve il traffico, il filtro del kernel SafeKit analizza l'identità dei pacchetti in entrata (in base a **Indirizzo IP client** o **Porta TCP** ).
@@ -147,20 +147,20 @@ Se il nodo primario (Server 1) si guasta, il cluster mantiene la disponibilità 
 
 #### Distribuzione in siti remoti {#deployment-in-remote-sites}
 
-Per le organizzazioni che operano su **data center remoti** , questo algoritmo di bilanciamento del carico rimane funzionale a condizione che i siti siano collegati tramite una **LAN estesa o una VLAN** . Ciò crea un ambiente virtuale "della stessa sottorete", che rappresenta la configurazione più efficiente per i cluster `farm` distribuiti geograficamente. 
+Per le organizzazioni che operano su **data center remoti** , questo algoritmo di bilanciamento del carico rimane funzionale a condizione che i siti siano collegati tramite una **LAN estesa o una VLAN** . Ciò crea un ambiente virtuale "della stessa sottorete", che rappresenta la configurazione più efficiente per i cluster <span class="notranslate farm-term" translate="no">farm</span> distribuiti geograficamente. 
 
-## Come funziona un IP virtuale con bilanciamento del carico su diverse sottoreti (cluster `Farm` ) {#vip-load-balancing-different-subnets}
+## Come funziona un IP virtuale con bilanciamento del carico su diverse sottoreti (cluster <span class="notranslate farm-term" translate="no">Farm</span> ) {#vip-load-balancing-different-subnets}
 
 ### Scalabilità multizona: orchestrazione del traffico tra sottoreti cloud {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-La guida all'architettura **: scalabilità dei cluster `Farm` in ambienti multi-zona e cloud.** fornisce il modello per la distribuzione dei carichi di lavoro delle applicazioni su zone di disponibilità e sottoreti separate. 
+La guida all'architettura **: scalabilità dei cluster <span class="notranslate farm-term" translate="no">Farm</span> in ambienti multi-zona e cloud.** fornisce il modello per la distribuzione dei carichi di lavoro delle applicazioni su zone di disponibilità e sottoreti separate. 
 
-### Cluster `Farm` tra sottoreti: scalabilità multi-nodo Windows e Linux {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### Cluster <span class="notranslate farm-term" translate="no">Farm</span> tra sottoreti: scalabilità multi-nodo Windows e Linux {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 Diagramma ![ di un cluster farm con bilanciamento del carico operante su due sottoreti diverse ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
- Distribuzione globale del traffico tramite bilanciamento del carico esterno Quando i nodi `farm` sono distribuiti su **sottoreti diverse** (comune nelle implementazioni cloud Multi-AZ), l' **indirizzo IP virtuale (VIP)** viene gestito da un **bilanciatore di carico (LB)** esterno. Il bilanciatore di carico detiene il VIP e indirizza il traffico in entrata verso gli indirizzi IP fisici dei server situati nelle rispettive sottoreti. 
+ Distribuzione globale del traffico tramite bilanciamento del carico esterno Quando i nodi <span class="notranslate farm-term" translate="no">farm</span> sono distribuiti su **sottoreti diverse** (comune nelle implementazioni cloud Multi-AZ), l' **indirizzo IP virtuale (VIP)** viene gestito da un **bilanciatore di carico (LB)** esterno. Il bilanciatore di carico detiene il VIP e indirizza il traffico in entrata verso gli indirizzi IP fisici dei server situati nelle rispettive sottoreti. 
 
 #### Regole intelligenti di instradamento del traffico e bilanciamento del carico {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -174,7 +174,7 @@ Il bilanciatore di carico distribuisce le richieste dei client in base a due fat
 
 #### Meccanismo di controllo dello stato di salute SafeKit {#safekit-health-check-mechanism}
 
-SafeKit fornisce un **URL di controllo dello stato di salute** in tempo reale su ogni server in `farm` per comunicare il suo stato operativo al bilanciatore di carico: 
+SafeKit fornisce un **URL di controllo dello stato di salute** in tempo reale su ogni server in <span class="notranslate farm-term" translate="no">farm</span> per comunicare il suo stato operativo al bilanciatore di carico: 
 
   * **Nodo ATTIVO:** Il controllo di integrità restituisce `HTTP 200 OK` . Il bilanciatore di carico include questo server nella rotazione attiva.
   * **Nodo DOWN/Failover:** Se un server o un'applicazione si guasta, SafeKit restituisce `HTTP 404 NOT FOUND` (oppure il servizio diventa irraggiungibile). Il bilanciatore di carico interrompe immediatamente l'invio del traffico al nodo guasto.
@@ -182,7 +182,7 @@ SafeKit fornisce un **URL di controllo dello stato di salute** in tempo reale su
 
 #### Standard di distribuzione cloud: AWS , Azure e GCP {#cloud-deployment-standards-aws-azure-and-gcp}
 
-Questa architettura è il modello fondamentale per i cluster cloud **`Farm`** , garantendo che se un'intera sottorete o zona va offline, i nodi rimanenti continuano a gestire il carico. Questa funzionalità è supportata nativamente da: 
+Questa architettura è il modello fondamentale per i cluster cloud **<span class="notranslate farm-term" translate="no">Farm</span>** , garantendo che se un'intera sottorete o zona va offline, i nodi rimanenti continuano a gestire il carico. Questa funzionalità è supportata nativamente da: 
 
   * 💡 [ **Amazon AWS** ](</it/solutions/aws-load-balancing-cluster-failover/>) ( AWS Bilanciatore di carico di rete)
   * 💡 [ **Microsoft Azure** ](</it/solutions/azure-load-balancing-cluster-failover/>) Bilanciatore di carico Azure )
@@ -234,7 +234,7 @@ Il reindirizzamento DNS è una soluzione incoerente per un'elevata disponibilit�
 Ambiente e caso d'uso | Tipo di alta disponibilità | Meccanismo di reindirizzamento | Latenza di rete | Trasparenza dell'applicazione e località IP  
 ---|---|---|---|---  
 Primario/Backup (Alta disponibilità) | Mirror Cluster | Acquisizione ARP/MAC gratuita | Molto basso: tempo per rilevare e inviare broadcast GARP | Piena trasparenza: l'IP virtuale è locale sul nodo attivo. L'IP del client viene preservato.  
-Bilanciamento del carico (attivo/attivo) | `Farm` Cluster | Filtro di rete a livello kernel / GARP | Molto basso: tempo per rilevare e riconfigurare i filtri di rete | Trasparenza completa: l'IP virtuale è locale su tutti i nodi. L'IP del client viene preservato.  
+Bilanciamento del carico (attivo/attivo) | <span class="notranslate farm-term" translate="no">Farm</span> Cluster | Filtro di rete a livello kernel / GARP | Molto basso: tempo per rilevare e riconfigurare i filtri di rete | Trasparenza completa: l'IP virtuale è locale su tutti i nodi. L'IP del client viene preservato.  
 Stessa sottorete / LAN estesa (VLAN Stretching) | Disaster Recovery (data center remoti) | Aliasing IP standard / GARP | Basso: dipende dalla VLAN estesa RTT (Round Trip Time) | Trasparenza completa: l'IP virtuale è locale sui nodi. L'IP del client viene preservato.  
 Sottoreti diverse | Ripristino di emergenza (data center remoti / Cloud) | Bilanciatore di carico esterno | Moderato: latenza di failover più elevata a causa degli intervalli di controllo dello stato del bilanciatore di carico | ⚠️ Trasparenza parziale: utilizza SNAT/DNAT. L'IP virtuale è **NON** locale sui nodi. L'IP client è **NON** conservato. L'applicazione deve supportarlo.  
 Reindirizzamento DNS: nessun VIP | Ripristino di emergenza (data center remoti) | Aggiornamento record DNS (nome / IP fisico) | Elevato/Imprevedibile: dipende dal TTL (Time To Live) DNS e dalla cache DNS del client. | ⚠️ Inaffidabile: il client deve risolvere nuovamente il DNS. Molto spesso, i client continuano a utilizzare l'IP obsoleto risolto all'avvio e non vengono reindirizzati dopo un failover.  

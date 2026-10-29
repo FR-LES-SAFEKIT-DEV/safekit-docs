@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/what-is-rpo-and-rto-wit
 description: "Aprenda las definiciones de RPO (Objetivo de Punto de Recuperación) y RTO (Objetivo de Tiempo de Recuperación) con ejemplos claros. Descubra cómo SafeKit logra cero pérdida de datos (RPO=0) y una conmutación por error rápida para garantizar la continuidad del negocio las 24 horas del día, los 7 días de la semana."
 category: "best-practises"
 lang: "es"
-topics: "Resumen rápido: RPO vs. RTO, Tabla de contenido, ¿Cómo calculo el RPO y el RTO para una solución de alta disponibilidad y continuidad del negocio?, ¿Cómo determino el RPO y el RTO para una solución de copia de seguridad y recuperación ante desastres?, ¿Cómo logra un clúster SafeKit Mirror un RPO cero y un RTO bajo?, ¿Cuáles son los puntos de referencia de RTO para un clúster SafeKit `Farm` con balanceo de carga?, Tablas comparativas: RTO vs. RPO, Alta disponibilidad en acción: demostraciones en tiempo real de RPO cero y RTO casi cero, Preguntas frecuentes: Optimización de RPO y RTO para la continuidad del negocio, 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Resumen rápido: RPO vs. RTO, Tabla de contenido, ¿Cómo calculo el RPO y el RTO para una solución de alta disponibilidad y continuidad del negocio?, ¿Cómo determino el RPO y el RTO para una solución de copia de seguridad y recuperación ante desastres?, ¿Cómo logra un clúster SafeKit Mirror un RPO cero y un RTO bajo?, ¿Cuáles son los puntos de referencia de RTO para un clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> con balanceo de carga?, Tablas comparativas: RTO vs. RPO, Alta disponibilidad en acción: demostraciones en tiempo real de RPO cero y RTO casi cero, Preguntas frecuentes: Optimización de RPO y RTO para la continuidad del negocio, 🔍 Centro de navegación de alta disponibilidad SafeKit"
 ---
 
 # ¿Qué son RPO y RTO? Definiciones, ejemplos y estrategias de alta disponibilidad {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
@@ -26,7 +26,7 @@ topics: "Resumen rápido: RPO vs. RTO, Tabla de contenido, ¿Cómo calculo el RP
   * [ ¿Cómo calculo el RPO y el RTO para una solución de alta disponibilidad y continuidad del negocio? ](#calculate-rpo-rto-high-availability)
   * [ ¿Cómo determino el RPO y el RTO para una solución de copia de seguridad y recuperación ante desastres? ](#calculate-rpo-rto-backup-solution)
   * [ ¿Cómo logra un clúster SafeKit Mirror un RPO cero y un RTO bajo? ](#rpo-rto-safekit-mirror-cluster)
-  * [ ¿Cuáles son los parámetros de referencia de RTO para un clúster SafeKit `Farm` con balanceo de carga? ](#rpo-rto-safekit-farm-cluster)
+  * [ ¿Cuáles son los parámetros de referencia de RTO para un clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> con balanceo de carga? ](#rpo-rto-safekit-farm-cluster)
   * Tablas comparativas [ : RTO vs RPO ](#rpo-vs-rto-comparison)
   * [ Alta disponibilidad en acción: demostraciones en tiempo real de RPO cero y RTO casi cero ](#safekit-rpo-rto-video-demos)
   * [ Preguntas frecuentes sobre RPO y RTO ](#faq-rpo-rto)
@@ -148,38 +148,38 @@ En una configuración estándar, el **de un clúster es aproximadamente un minut
 
 Al utilizar **la alta disponibilidad a nivel de aplicación** , SafeKit elimina la "penalización por reinicio" inherente a la virtualización estándar, lo que garantiza que su **Plan de Continuidad del Negocio** logre el menor tiempo de inactividad posible. 
 
-## ¿Cuáles son los valores de referencia de RTO para un clúster SafeKit `Farm` con balanceo de carga? {#rpo-rto-safekit-farm-cluster}
+## ¿Cuáles son los valores de referencia de RTO para un clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> con balanceo de carga? {#rpo-rto-safekit-farm-cluster}
 
-### ¿Qué es el clúster SafeKit `Farm` ? {#what-is-safekit-farm-cluster}
+### ¿Qué es el clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ? {#what-is-safekit-farm-cluster}
 
-El **clúster SafeKit `Farm`** es una solución de alta disponibilidad basada en software diseñada para aplicaciones sin estado (como servidores web) que requieren **escalabilidad** y **redundancia** . A diferencia de un clúster mirror que se centra en la replicación de datos, un clúster `farm` distribuye el tráfico entrante entre varios nodos activos.
+El **clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span>** es una solución de alta disponibilidad basada en software diseñada para aplicaciones sin estado (como servidores web) que requieren **escalabilidad** y **redundancia** . A diferencia de un clúster mirror que se centra en la replicación de datos, un clúster <span class="notranslate farm-term" translate="no">farm</span> distribuye el tráfico entrante entre varios nodos activos.
 
 
 ![ SafeKit Farm Arquitectura de clúster que demuestra el equilibrio de carga de red y la conmutación por error para aplicaciones sin estado ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-Para mantener **la continuidad del negocio** en entornos de alto tráfico, el clúster SafeKit `farm` opera a través de dos mecanismos principales:
+Para mantener **la continuidad del negocio** en entornos de alto tráfico, el clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> opera a través de dos mecanismos principales:
 
-  * Balanceo de carga de red **:** SafeKit utiliza una dirección IP virtual para distribuir el tráfico de red entrante entre un `farm` de múltiples servidores activos. Esto garantiza que ningún servidor se sature y maximiza el rendimiento de la aplicación.
-  * **Detección y reconfiguración automáticas de fallos:** Si un nodo del `farm` falla, SafeKit detecta el fallo mediante señales de latido y redistribuye inmediatamente el tráfico entre los nodos que siguen funcionando correctamente. Esto proporciona un tiempo de recuperación casi nulo para el servicio en general, ya que los demás nodos ya están activos y listos para absorber la carga.
+  * Balanceo de carga de red **:** SafeKit utiliza una dirección IP virtual para distribuir el tráfico de red entrante entre un <span class="notranslate farm-term" translate="no">farm</span> de múltiples servidores activos. Esto garantiza que ningún servidor se sature y maximiza el rendimiento de la aplicación.
+  * **Detección y reconfiguración automáticas de fallos:** Si un nodo del <span class="notranslate farm-term" translate="no">farm</span> falla, SafeKit detecta el fallo mediante señales de latido y redistribuye inmediatamente el tráfico entre los nodos que siguen funcionando correctamente. Esto proporciona un tiempo de recuperación casi nulo para el servicio en general, ya que los demás nodos ya están activos y listos para absorber la carga.
 
 
-### ¿Cuál es el RPO de un clúster SafeKit `Farm` ? {#what-is-rpo-safekit-farm}
+### ¿Cuál es el RPO de un clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ? {#what-is-rpo-safekit-farm}
 
-El RPO (Objetivo **Punto** **un clúster** SafeKit `Farm` se considera generalmente **No aplicable (N/A)** . Esto se debe **que un clúster `farm` está diseñado específicamente para aplicaciones sin estado** donde los datos no se almacenan localmente en los nodos. 
+El RPO (Objetivo **Punto** **un clúster** SafeKit <span class="notranslate farm-term" translate="no">Farm</span> se considera generalmente **No aplicable (N/A)** . Esto se debe **que un clúster <span class="notranslate farm-term" translate="no">farm</span> está diseñado específicamente para aplicaciones sin estado** donde los datos no se almacenan localmente en los nodos. 
 
-Dado que un clúster `farm` se centra en **el equilibrio de carga de la red** en lugar de la sincronización de datos, no hay replicación de datos entre los nodos dentro del propio clúster. En un **plan típico de continuidad del negocio** que involucre una arquitectura `farm` : 
+Dado que un clúster <span class="notranslate farm-term" translate="no">farm</span> se centra en **el equilibrio de carga de la red** en lugar de la sincronización de datos, no hay replicación de datos entre los nodos dentro del propio clúster. En un **plan típico de continuidad del negocio** que involucre una arquitectura <span class="notranslate farm-term" translate="no">farm</span> : 
 
-  * Operaciones sin estado **:** Todos los nodos en `farm` son idénticos y no almacenan datos persistentes; por lo tanto, no hay "pérdida de datos" que medir durante una falla de nodo. 
+  * Operaciones sin estado **:** Todos los nodos en <span class="notranslate farm-term" translate="no">farm</span> son idénticos y no almacenan datos persistentes; por lo tanto, no hay "pérdida de datos" que medir durante una falla de nodo. 
   * **Almacenamiento de datos externo:** Si la aplicación requiere persistencia de datos, generalmente se maneja mediante un backend separado **SafeKit Mirror Cluster** donde el RPO sería entonces cero. 
 
 
-### ¿Cuál es el RTO de un clúster SafeKit `Farm` ? {#rto-example-safekit-farm-cluster}
+### ¿Cuál es el RTO de un clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ? {#rto-example-safekit-farm-cluster}
 
-En una arquitectura `farm` , el RTO **se reduce a tan solo unos segundos** porque todos los nodos suelen estar activos simultáneamente. El tiempo de recuperación está determinado por la velocidad a la que el clúster reconfigura su distribución de tráfico:
+En una arquitectura <span class="notranslate farm-term" translate="no">farm</span> , el RTO **se reduce a tan solo unos segundos** porque todos los nodos suelen estar activos simultáneamente. El tiempo de recuperación está determinado por la velocidad a la que el clúster reconfigura su distribución de tráfico:
 
   * **Fallo de hardware:** El RTO es igual al tiempo de espera de detección de fallos en todos los canales de monitorización (por defecto, unos segundos). Una vez detectada la pérdida de la señal de latido, los **filtros de equilibrio de carga de IP virtual** se reconfiguran automáticamente para redirigir el tráfico a los nodos que siguen funcionando correctamente.
-  * **Fallo de software o reinicio planificado:** El RTO se calcula como el _tiempo de detención de la aplicación_ más el _tiempo de reinicio de la aplicación_ en ese nodo específico, durante el cual los demás nodos en `farm` continúan manejando todo el tráfico entrante.
+  * **Fallo de software o reinicio planificado:** El RTO se calcula como el _tiempo de detención de la aplicación_ más el _tiempo de reinicio de la aplicación_ en ese nodo específico, durante el cual los demás nodos en <span class="notranslate farm-term" translate="no">farm</span> continúan manejando todo el tráfico entrante.
 
 
 Este mecanismo "activo-activo" garantiza que, para los servicios sin estado, el impacto **en la continuidad del negocio** sea prácticamente imperceptible para el usuario final, ya que no es necesario inicializar el servicio en un nuevo nodo de reserva.
@@ -206,7 +206,7 @@ Puntos de referencia de RTO y RPO para clústeres **SafeKit**
 Arquitectura | Caso de uso | RTO (Disponibilidad) | RPO (Pérdida de datos)  
 ---|---|---|---  
 Clúster Mirror Replicación en tiempo real | ~1 min (Latido + Reinicio) | 0 (Sin | de datos)  
-Clúster `Farm` Balanceo de | | | A (Sin estado)  
+Clúster <span class="notranslate farm-term" translate="no">Farm</span> Balanceo de | | | A (Sin estado)  
   
 ## Alta disponibilidad en acción: demostraciones en tiempo real de RPO cero y RTO casi cero {#safekit-rpo-rto-video-demos}
 
@@ -223,9 +223,9 @@ Vea cómo SafeKit gestiona un fallo crítico. Este vídeo muestra **la replicaci
 
 Prueba gratuita aquí [ ](</es/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
-### Vídeo: Lograr un RTO casi nulo en un clúster SafeKit `Farm` (5:03) {#demo-farm-cluster-rpo-rto}
+### Vídeo: Lograr un RTO casi nulo en un clúster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (5:03) {#demo-farm-cluster-rpo-rto}
 
-Observa cómo SafeKit gestiona un servidor web Apache `farm` para proporcionar escalabilidad de rendimiento y conmutación por error instantánea.
+Observa cómo SafeKit gestiona un servidor web Apache <span class="notranslate farm-term" translate="no">farm</span> para proporcionar escalabilidad de rendimiento y conmutación por error instantánea.
 
 #### Capítulos {#chapters-1}
 

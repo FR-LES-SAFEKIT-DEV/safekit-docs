@@ -19,7 +19,7 @@ topics: "¿Cuáles son las diferentes arquitecturas de alta disponibilidad y los
 
 [ Más información ](</es/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### Clúster `Farm` {#farm-cluster}
+### Clúster <span class="notranslate farm-term" translate="no">Farm</span> {#farm-cluster}
 
 
 ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300") ![ SafeKit farm
@@ -27,7 +27,7 @@ topics: "¿Cuáles son las diferentes arquitecturas de alta disponibilidad y los
 
 [ Más información ](</es/architectures/network-load-balancing-cluster/>)
 
-### Clúster `Farm` + mirror {#farmmirror-cluster}
+### Clúster <span class="notranslate farm-term" translate="no">Farm</span> + mirror {#farmmirror-cluster}
 
 
 Clúster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
@@ -55,11 +55,11 @@ Clúster ![ farm SafeKit + mirror ](/wp-content/uploads/2023/02/safekit-farm-mir
 
 ### Utilice los módulos de alta disponibilidad {#use-high-availability-modules}
 
-Un módulo de alta disponibilidad es una personalización de SafeKit para una aplicación. Existen dos tipos de módulos: el módulo mirror con replicación de datos en tiempo real y conmutación por error, y el módulo `farm` con equilibrio de carga y conmutación por error.
+Un módulo de alta disponibilidad es una personalización de SafeKit para una aplicación. Existen dos tipos de módulos: el módulo mirror con replicación de datos en tiempo real y conmutación por error, y el módulo <span class="notranslate farm-term" translate="no">farm</span> con equilibrio de carga y conmutación por error.
 
-Si implementa un módulo mirror en 2 servidores, creará un clúster mirror , y si implementa un módulo `farm` en N servidores, creará un clúster `farm` .
+Si implementa un módulo mirror en 2 servidores, creará un clúster mirror , y si implementa un módulo <span class="notranslate farm-term" translate="no">farm</span> en N servidores, creará un clúster <span class="notranslate farm-term" translate="no">farm</span> .
 
-Se pueden implementar varios módulos de aplicación en los mismos servidores. De este modo, se pueden implementar arquitecturas de clúster avanzadas como las presentadas anteriormente ( `farm` + mirror , activo/activo, N-1).
+Se pueden implementar varios módulos de aplicación en los mismos servidores. De este modo, se pueden implementar arquitecturas de clúster avanzadas como las presentadas anteriormente ( <span class="notranslate farm-term" translate="no">farm</span> + mirror , activo/activo, N-1).
 
 ### ¿Qué es un módulo de aplicación? {#what-is-an-application-module}
 
@@ -70,7 +70,7 @@ En la práctica, un módulo de aplicación es un archivo “.Safe” (tipo zip) 
   * nombres o direcciones IP físicas de los servidores,
   * nombre o dirección IP virtual del clúster,
   * directorios de archivos para replicar en tiempo real (para un módulo mirror ),
-  * criterios de equilibrio de carga de red (para un módulo `farm` ),
+  * criterios de equilibrio de carga de red (para un módulo <span class="notranslate farm-term" translate="no">farm</span> ),
   * Configuración de detectores de fallos de software y hardware
 
 

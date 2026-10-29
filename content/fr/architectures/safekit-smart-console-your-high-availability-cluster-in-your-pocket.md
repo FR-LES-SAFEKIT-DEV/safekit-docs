@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/architectures/safekit-smart-console-yo
 description: "Gérez facilement vos clusters SafeKit grâce à notre console intelligente. Profitez d'une configuration sans code, de la compatibilité avec les smartphones et de notifications PWA en temps réel. Éliminez les erreurs humaines et garantissez une haute disponibilité à portée de main. En savoir plus."
 category: "architectures"
 lang: "fr"
-topics: "Console intelligente : Haute disponibilité intuitive, mobile et sans erreur, Sommaire, Comment un cluster SafeKit mirror fonctionne-t-il avec la console web ?, Comment un cluster SafeKit `farm` fonctionne-t-il avec la console web ?, Comment surveiller plusieurs modules et plusieurs clusters via la console web ?, Comment surveiller les alertes dans la console et gérer les notifications par e-mail ?, 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "Console intelligente : Haute disponibilité intuitive, mobile et sans erreur, Sommaire, Comment un cluster SafeKit mirror fonctionne-t-il avec la console web ?, Comment un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> fonctionne-t-il avec la console web ?, Comment surveiller plusieurs modules et plusieurs clusters via la console web ?, Comment surveiller les alertes dans la console et gérer les notifications par e-mail ?, 🔍 Centre de navigation haute disponibilité SafeKit"
 ---
 
 # Console intelligente SafeKit : Votre cluster haute disponibilité dans votre poche {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "Console intelligente : Haute disponibilité intuitive, mobile et sans 
 
 Repensez la gestion de la haute disponibilité grâce à une solution conçue pour **la rapidité et la simplicité** . La console web SafeKit offre une **prise en main immédiate** , vous permettant de configurer et de contrôler votre infrastructure sans écrire **une seule ligne de code** .
 
-Que vous soyez à votre bureau ou en déplacement, le tableau de bord compatible avec les smartphones vous offre un contrôle total du cluster. En simplifiant la gestion des modules mirror et `farm` , la console intelligente **élimine les erreurs humaines** et garantit un basculement transparent pour vos systèmes critiques.
+Que vous soyez à votre bureau ou en déplacement, le tableau de bord compatible avec les smartphones vous offre un contrôle total du cluster. En simplifiant la gestion des modules mirror et <span class="notranslate farm-term" translate="no">farm</span> , la console intelligente **élimine les erreurs humaines** et garantit un basculement transparent pour vos systèmes critiques.
 
 ## Table des matières {#table-of-contents}
 
   * [ Comment un cluster SafeKit mirror fonctionne-t-il avec la console web ? ](#safekit-mirror-cluster)
-  * [ Comment un cluster SafeKit `farm` fonctionne-t-il avec la console web ? ](#safekit-farm-cluster)
+  * [ Comment un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> fonctionne-t-il avec la console web ? ](#safekit-farm-cluster)
   * [ Comment surveiller plusieurs modules et plusieurs clusters via la console web ? ](#multipe-modules-clusters)
   * [ Comment surveiller les alertes dans la console et gérer les notifications par e-mail ? ](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ Pour un cluster mirror à 2 nœuds, la console affiche clairement les rôles de 
 
 Au-delà des simples icônes d'état, l'interface offre **une orchestration de basculement en un clic** ( **menu `...`** ), vous permettant de réaffecter manuellement le rôle principal pour la maintenance planifiée tout en assurant une disponibilité continue pour l'activité de l'utilisateur.
 
-## Comment un cluster SafeKit `farm` fonctionne-t-il avec la console web ? {#safekit-farm-cluster}
+## Comment un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> fonctionne-t-il avec la console web ? {#safekit-farm-cluster}
 
-### Comment configurer un cluster SafeKit `farm` ? {#safekit-farm-cluster-configuration}
+### Comment configurer un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> ? {#safekit-farm-cluster-configuration}
 
 
 Console Web ![ SafeKit : Configuration du cluster Farm pour l’équilibrage de charge réseau et la gestion des adresses IP virtuelles. ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-Le cluster **SafeKit `farm`** est conçu pour une haute disponibilité et une grande évolutivité des services. Sa configuration vise à répartir simultanément le trafic entrant entre les deux nœuds.
+Le cluster **SafeKit <span class="notranslate farm-term" translate="no">farm</span>** est conçu pour une haute disponibilité et une grande évolutivité des services. Sa configuration vise à répartir simultanément le trafic entrant entre les deux nœuds.
 
   * **Services à charge équilibrée (onglet Macros) :** Définissez les services d’application spécifiques (par exemple, Apache, IIS , Nginx ) à maintenir actifs sur tous les nœuds.
-  * Réseau(x) de battement de cœur **: Chemin(s) de communication** utilisé(s) pour détecter si un nœud a quitté le `farm` , déclenchant une redistribution immédiate de la charge.
-  * **IP virtuelle ( `Farm` VIP) :** Contrairement à un cluster mirror , le VIP `Farm` est partagé entre les nœuds à l'aide d'un algorithme de filtrage du noyau pour distribuer le trafic réseau.
+  * Réseau(x) de battement de cœur **: Chemin(s) de communication** utilisé(s) pour détecter si un nœud a quitté le <span class="notranslate farm-term" translate="no">farm</span> , déclenchant une redistribution immédiate de la charge.
+  * **IP virtuelle ( <span class="notranslate farm-term" translate="no">Farm</span> VIP) :** Contrairement à un cluster mirror , le VIP <span class="notranslate farm-term" translate="no">Farm</span> est partagé entre les nœuds à l'aide d'un algorithme de filtrage du noyau pour distribuer le trafic réseau.
   * Règles d'équilibrage de charge **:** Définissez la politique de distribution du trafic en fonction de l'adresse IP ou du port source.
   * Vérificateurs **:** Surveille l’état de l’application et déclenche un redémarrage automatique en cas de défaillance du processus.
 
 
-### Comment surveiller un cluster SafeKit `farm` ? {#safekit-farm-cluster-monitoring}
+### Comment surveiller un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> ? {#safekit-farm-cluster-monitoring}
 
 
 Console ![ SafeKit : Surveillance d'un cluster Farm à 2 nœuds, les deux nœuds étant opérationnels avec équilibrage de charge actif. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-La surveillance d'un cluster `farm` offre une visibilité sur la nature **active-active** de l'infrastructure, où tous les nœuds contribuent aux performances de l'application (2 nœuds sont présentés dans cet exemple ; extensible à des nœuds supplémentaires) :
+La surveillance d'un cluster <span class="notranslate farm-term" translate="no">farm</span> offre une visibilité sur la nature **active-active** de l'infrastructure, où tous les nœuds contribuent aux performances de l'application (2 nœuds sont présentés dans cet exemple ; extensible à des nœuds supplémentaires) :
 
-  * État UP de **(50 % sur 2 nœuds) :** Dans un `farm` sain, les deux nœuds sont dans l'état « UP » (50 %), ce qui signifie qu'ils reçoivent et traitent activement les requêtes des clients via l'adresse IP virtuelle partagée.
+  * État UP de **(50 % sur 2 nœuds) :** Dans un <span class="notranslate farm-term" translate="no">farm</span> sain, les deux nœuds sont dans l'état « UP » (50 %), ce qui signifie qu'ils reçoivent et traitent activement les requêtes des clients via l'adresse IP virtuelle partagée.
   * **Rééquilibrage automatique :** En cas de défaillance d'un nœud, la console affiche visuellement le nœud restant prenant en charge 100 % du trafic. Il n'y a pas de délai de basculement, car le nœud survivant est déjà actif (à l'exception d'un temps de détection de quelques secondes).
   * Insertion du nœud **:** Lorsqu'un nœud réparé est redémarré, il passe de l'état « ARRÊT » à l'état « EN MARCHE » et commence automatiquement à recevoir sa part de la charge sans intervention de l'administrateur.
-  * **Aucune synchronisation de données :** Notez que dans un cluster `farm` , il n’y a pas d’état de resynchronisation « Orange », car les nœuds sont censés être sans état ou partager une base de données backend (qui peut être protégée séparément dans un cluster mirror ).
+  * **Aucune synchronisation de données :** Notez que dans un cluster <span class="notranslate farm-term" translate="no">farm</span> , il n’y a pas d’état de resynchronisation « Orange », car les nœuds sont censés être sans état ou partager une base de données backend (qui peut être protégée séparément dans un cluster mirror ).
 
 
 Au-delà des simples icônes d'état, l'interface offre une gestion des nœuds en un clic (menu **`...`** ), vous permettant d'arrêter ou de démarrer manuellement un nœud pour une maintenance planifiée tandis que l'adresse IP virtuelle partagée redistribue automatiquement le trafic sans interrompre l'activité de l'utilisateur.

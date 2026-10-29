@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Leer hoe u de module farm.safe implementeert voor netwerkloadbalancing en automatische failover op Windows. Deze handleiding laat zien hoe u met een virtueel IP-adres een maximaal beschikbare cluster bouwt voor webservices en applicaties, zonder externe hardwareloadbalancers of complexe configuratie."
 category: "quick-install"
 lang: "nl"
-topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Windows, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Windows-oplossing, Installatie van de SafeKit-/Windows-oplossing (farm.safe), Stapsgewijze configuratie van de SafeKit-/Windows-oplossing, Demonstratie van de SafeKit-`farm`-oplossing, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
+topics: "Snelle installatiehandleiding voor hoge beschikbaarheid op Windows, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Windows-oplossing, Installatie van de SafeKit-/Windows-oplossing (farm.safe), Stapsgewijze configuratie van de SafeKit-/Windows-oplossing, Demonstratie van de SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-oplossing, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
 ---
 
 # Netwerkloadbalancing en failover op Windows: installeer de SafeKit-module farm.safe {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -21,7 +21,7 @@ De oplossing wordt hier beschreven: **💡[SafeKit: alles-in-éénsoftware voor 
 
 ### Vereisten {#prerequisites}
 
-  * De applicatie die u in een `farm` wilt plaatsen, moet op 2 of meer nodes (virtuele machines of fysieke servers) zijn geïnstalleerd.
+  * De applicatie die u in een <span class="notranslate farm-term" translate="no">farm</span> wilt plaatsen, moet op 2 of meer nodes (virtuele machines of fysieke servers) zijn geïnstalleerd.
 
 
 
@@ -36,7 +36,7 @@ Opmerking: de generieke module **farm.safe** die u gaat configureren, wordt in h
 {{%  insert-safekit-82-farm-configuration-nl app="Windows" mod="farm"  %}}
  
 
-## Demonstratie van de SafeKit-`farm`-oplossing {#demonstration-of-the-safekit-farm-solution}
+## Demonstratie van de SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-oplossing {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-nl  %}}

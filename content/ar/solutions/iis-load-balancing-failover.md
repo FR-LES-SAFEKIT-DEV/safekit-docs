@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/iis-load-balancing-failover/
 description: "يوفر SafeKit حلاً قوياً لموازنة الأحمال وتوفير توافر عالٍ، وهو حل برمجي بالكامل. استبدل أجهزة موازنة الأحمال المعقدة بـ IIS SafeKit يتميز ببروتوكول IP افتراضي مدمج، ومراقبة التطبيقات، والتحويل التلقائي في حالة الأعطال. يمكنك بسهولة نشر مجموعة IIS على خوادم Windows القياسية اليوم."
 category: "solutions"
 lang: "ar"
-topics: "مجموعة SafeKit `Farm` : موازنة تحميل الشبكة (NLB) البرمجية فقط والتحويل التلقائي في حالة الفشل لـ IIS ، جدول المحتويات، كيف يقوم برنامج SafeKit بتنفيذ مجموعة موازنة تحميل الشبكة (NLB) لـ IIS ببساطة؟، كيف تعمل مجموعة SafeKit في وضع `farm` مع IIS ؟، مقارنة: مجموعة SafeKit `Farm` لـ IIS مقابل حلول تجميع NLB الأخرى، دليل فيديو: تكوين مجموعة NLB لـ SafeKit `Farm` ، 🔍 مركز التنقل عالي التوفر SafeKit"
+topics: "مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> : موازنة تحميل الشبكة (NLB) البرمجية فقط والتحويل التلقائي في حالة الفشل لـ IIS ، جدول المحتويات، كيف يقوم برنامج SafeKit بتنفيذ مجموعة موازنة تحميل الشبكة (NLB) لـ IIS ببساطة؟، كيف تعمل مجموعة SafeKit في وضع <span class="notranslate farm-term" translate="no">farm</span> مع IIS ؟، مقارنة: مجموعة SafeKit <span class="notranslate farm-term" translate="no">Farm</span> لـ IIS مقابل حلول تجميع NLB الأخرى، دليل فيديو: تكوين مجموعة NLB لـ SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ، 🔍 مركز التنقل عالي التوفر SafeKit"
 ---
 
 # SafeKit : برنامج متكامل لموازنة الأحمال والتوافر العالي IIS {#safekit-all-in-one-iis-load-balancing--high-availability-software}

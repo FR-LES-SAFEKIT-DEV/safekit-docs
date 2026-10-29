@@ -27,11 +27,11 @@ SafeKitはハードウェアに依存せず、物理サーバーでも仮想サ�
 
 ### リアルタイムレプリケーション、ロードバランシング、フェイルオーバーを備えたアプリケーションクラスタリング {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-SafeKitソフトウェアは、アプリケーションクラスタリングのための汎用モジュールとして、 mirrorモジュールと`farm`モジュールの2つを提供します。
+SafeKitソフトウェアは、アプリケーションクラスタリングのための汎用モジュールとして、 mirrorモジュールと<span class="notranslate farm-term" translate="no">farm</span>モジュールの2つを提供します。
 
 [ mirror ](/ja/product/#safekit-mirror-cluster)は、リアルタイムファイルレプリケーションとアプリケーションフェイルオーバーを実現します。データベースを使用するアプリケーションに適しています。
 
-[ `farm` ](/ja/product/#safekit-farm-cluster)は、ネットワーク負荷分散とアプリケーションフェイルオーバーを実装します。Webサービスを含むアプリケーションに適しています。
+[ <span class="notranslate farm-term" translate="no">farm</span> ](/ja/product/#safekit-farm-cluster)は、ネットワーク負荷分散とアプリケーションフェイルオーバーを実装します。Webサービスを含むアプリケーションに適しています。
 
 モジュールを組み合わせることもできます。
 

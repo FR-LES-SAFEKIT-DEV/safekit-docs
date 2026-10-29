@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/architectures/safekit-smart-conso
 description: "使用我们的智能控制台轻松管理SafeKit集群。享受零代码配置、智能手机兼容性和实时 PWA 通知。消除人为错误，确保高可用性，一切尽在掌握。了解更多。"
 category: "architectures"
 lang: "zh-hans"
-topics: "智能控制台：直观、移动化、无故障的高可用性，目录， SafeKit mirror集群如何与 Web 控制台协同工作？， SafeKit `farm`集群如何与 Web 控制台协同工作？，如何通过 Web 控制台监控多个模块和多个集群？，如何在控制台中监控告警并管理电子邮件通知？，🔍 SafeKit高可用性导航中心"
+topics: "智能控制台：直观、移动化、无故障的高可用性，目录， SafeKit mirror集群如何与 Web 控制台协同工作？， SafeKit <span class="notranslate farm-term" translate="no">farm</span>集群如何与 Web 控制台协同工作？，如何通过 Web 控制台监控多个模块和多个集群？，如何在控制台中监控告警并管理电子邮件通知？，🔍 SafeKit高可用性导航中心"
 ---
 
 # SafeKit智能控制台：您的高可用性集群尽在掌握 {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "智能控制台：直观、移动化、无故障的高可用性，目�
 
 重新定义您管理高可用性的方式**采用专**速度和简易性**打造的解决方案。Web SafeKit提供零学习** **，让您无需编写**代码即可配置和控制您的基础架构。
 
-无论您身处办公桌前还是外出途中，这款兼容智能手机的控制面板都能让您轻松掌控整个**。智能控制台通过简化mirror和`farm`模块的管理，消除了人为错误**并确保关键系统实现无缝故障转移。
+无论您身处办公桌前还是外出途中，这款兼容智能手机的控制面板都能让您轻松掌控整个**。智能控制台通过简化mirror和<span class="notranslate farm-term" translate="no">farm</span>模块的管理，消除了人为错误**并确保关键系统实现无缝故障转移。
 
 ## 目录 {#table-of-contents}
 
   * [集群如何与 Web 控制台配合使用](#safekit-mirror-cluster) SafeKit mirror
-  * [集群如何与 Web 控制台配合使用](#safekit-farm-cluster) SafeKit `farm`
+  * [集群如何与 Web 控制台配合使用](#safekit-farm-cluster) SafeKit <span class="notranslate farm-term" translate="no">farm</span>
   * ](#multipe-modules-clusters)通过 Web 控制台监控多个模块和多个集群[
   * [如何在控制台中监控警报并管理电子邮件通知？ ](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ SafeKit集群包含一个专用的脑裂检测器，无需第三台见证机或�
 
 除了简单的状态图标外，该界面还提供**一键故障转移编排** （ **`...`菜单** ），允许您手动重新分配计划维护的主要角色，同时确保用户活动的持续可用性。
 
-## SafeKit `farm`集群如何与 Web 控制台配合使用？ {#safekit-farm-cluster}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span>集群如何与 Web 控制台配合使用？ {#safekit-farm-cluster}
 
-### 如何配置SafeKit `farm`集群？ {#safekit-farm-cluster-configuration}
+### 如何配置SafeKit <span class="notranslate farm-term" translate="no">farm</span>集群？ {#safekit-farm-cluster-configuration}
 
 
 ![SafeKit Web 控制台： Farm 用于网络负载均衡和虚拟IP管理的集群配置。](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-**SafeKit `farm`**集群旨在实现服务的高可用性和可扩展性。该配置侧重于将传入流量同时分配到两个节点上：
+**SafeKit <span class="notranslate farm-term" translate="no">farm</span>**集群旨在实现服务的高可用性和可扩展性。该配置侧重于将传入流量同时分配到两个节点上：
 
   * **负载均衡服务（宏选项卡）：**定义要在所有节点上保持活动的特定应用程序服务（例如，Apache、 IIS 、 Nginx ）。
-  * **心跳网络：**通信路径用于检测节点是否已离开`farm` ，从而触发负载的立即重新分配。
-  * **虚拟 IP（ `Farm` VIP）：**与mirror集群不同， `Farm` VIP 是在节点之间共享的，使用内核过滤算法来分配网络流量。
+  * **心跳网络：**通信路径用于检测节点是否已离开<span class="notranslate farm-term" translate="no">farm</span> ，从而触发负载的立即重新分配。
+  * **虚拟 IP（ <span class="notranslate farm-term" translate="no">Farm</span> VIP）：**与mirror集群不同， <span class="notranslate farm-term" translate="no">Farm</span> VIP 是在节点之间共享的，使用内核过滤算法来分配网络流量。
   * **负载均衡规则：**根据源 IP 地址或端口定义流量分配策略。
   * **检查器：**监控应用程序的运行状况，如果检测到进程故障，则触发自动重启。
 
 
-### 如何监控SafeKit `farm`集群？ {#safekit-farm-cluster-monitoring}
+### 如何监控SafeKit <span class="notranslate farm-term" translate="no">farm</span>集群？ {#safekit-farm-cluster-monitoring}
 
 
 ![SafeKit 控制台：监控一个双节点服务器 Farm 集群显示两个节点均处于运行状态，并启用了负载均衡。](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-监控`farm`集群可以了解**主动-主动**基础架构的特性，其中所有节点都对应用程序的性能做出贡献（本例中显示 2 个节点；可扩展到更多节点）：
+监控<span class="notranslate farm-term" translate="no">farm</span>集群可以了解**主动-主动**基础架构的特性，其中所有节点都对应用程序的性能做出贡献（本例中显示 2 个节点；可扩展到更多节点）：
 
-  * **运行状态（2 个节点 50%）：**在健康的`farm`中，两个节点都处于“运行”（50%）状态，这意味着它们都在通过共享的虚拟 IP 积极接收和处理客户端请求。
+  * **运行状态（2 个节点 50%）：**在健康的<span class="notranslate farm-term" translate="no">farm</span>中，两个节点都处于“运行”（50%）状态，这意味着它们都在通过共享的虚拟 IP 积极接收和处理客户端请求。
   * **自动重新平衡：**如果一个节点发生故障，控制台会直观地显示剩余节点将承担 100% 的流量。由于幸存节点已经处于活动状态（除了几秒钟的检测时间），因此不存在“故障转移”延迟。
   * **节点插入：**当修复后的节点重新启动时，它会从“STOP”状态过渡到“UP”状态，并自动开始接收其应承担的负载，而无需管理员干预。
-  * **无数据同步：**请注意，在`farm`集群中，没有“橙色”重新同步状态，因为节点应该是无状态的，或者共享后端数据库（这可以在mirror集群中单独保护）。
+  * **无数据同步：**请注意，在<span class="notranslate farm-term" translate="no">farm</span>集群中，没有“橙色”重新同步状态，因为节点应该是无状态的，或者共享后端数据库（这可以在mirror集群中单独保护）。
 
 
 除了简单的状态图标外，该界面还提供一键节点管理（ **`...`菜单** ），允许您手动停止或启动节点以进行计划维护，同时共享的虚拟 IP 会自动重新分配流量，而不会中断用户活动。

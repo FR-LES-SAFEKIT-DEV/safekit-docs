@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-a-virtual-ip-a
 description: "了解SafeKit如何使用软件定义的虚拟 IP (VIP) 地址来确保 24/7 全天候正常运行。了解通过免费 ARP 实现的自动故障转移，以及为什么它在Windows和Linux上比 DNS 重定向更能保证业务连续性。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚拟 IP 实现，目录，虚拟 IP 地址 (VIP) 如何在同子网故障转移中工作（ Mirror集群），虚拟 IP 地址 (VIP) 如何在不同子网中工作（ Mirror集群），负载均衡虚拟 IP 如何在同子网`Farm`中工作（ `Farm`集群），负载均衡虚拟 IP 如何在不同子网中工作（ `Farm`集群），虚拟 IP 与 DNS 重定向：为什么 DNS 故障转移经常失败，比较：虚拟 IP 实现、延迟和应用程序透明性，配置虚拟 IP 地址以实现网络负载均衡和高可用性，关于虚拟 IP (VIP) 的常见问题，🔍 SafeKit高可用性导航中心"
+topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚拟 IP 实现，目录，虚拟 IP 地址 (VIP) 如何在同子网故障转移中工作（ Mirror集群），虚拟 IP 地址 (VIP) 如何在不同子网中工作（ Mirror集群），负载均衡虚拟 IP 如何在同子网<span class="notranslate farm-term" translate="no">Farm</span>中工作（ <span class="notranslate farm-term" translate="no">Farm</span>集群），负载均衡虚拟 IP 如何在不同子网中工作（ <span class="notranslate farm-term" translate="no">Farm</span>集群），虚拟 IP 与 DNS 重定向：为什么 DNS 故障转移经常失败，比较：虚拟 IP 实现、延迟和应用程序透明性，配置虚拟 IP 地址以实现网络负载均衡和高可用性，关于虚拟 IP (VIP) 的常见问题，🔍 SafeKit高可用性导航中心"
 ---
 
 # 虚拟 IP 地址 (VIP) 在高可用性集群中如何工作？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -20,7 +20,7 @@ topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚�
 ## SafeKit中的虚拟 IP 实现 {#safekit-vip-implementation}
 
   * **Mirror集群：**具有仅在主服务器上活动的浮动 IP，以方便实时复制和故障转移。
-  * **`Farm`集群：**通过同时在所有节点上维护 VIP 来实现网络负载均衡。
+  * **<span class="notranslate farm-term" translate="no">Farm</span>集群：**通过同时在所有节点上维护 VIP 来实现网络负载均衡。
 
 
 **主要优势：**通过利用**免费 ARP（地址解析协议）**或**MAC 地址接管** ，VIP 可以实现无缝应用程序故障转移，而无需手动重新配置客户端，从而确保 24/7 全天候业务连续性。
@@ -30,7 +30,7 @@ topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚�
 
 ![是 Evidian 中虚拟 IP (VIP) 行为的对比图： SafeKit Mirror集群分别展示了活动节点上的浮动 IP 和Farm集群在所有节点上进行网络负载均衡的情况](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-**SafeKit中Mirror和`Farm`集群的虚拟 IP 实现策略。**
+**SafeKit中Mirror和<span class="notranslate farm-term" translate="no">Farm</span>集群的虚拟 IP 实现策略。**
 
 
 {{%  insert-safekit-4-buttons-zh-hans  %}}
@@ -40,8 +40,8 @@ topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚�
 
   * [同子网故障转移中虚拟 IP 地址 (VIP) 的工作原理 ( Mirror集群) ](#virtual-ip-same-subnet-failover)
   * [虚拟 IP (VIP) 如何跨不同子网工作（ Mirror集群） ](#virtual-ip-different-subnets-failover)
-  * [同子网中负载均衡虚拟 IP 的工作原理`Farm` （ `Farm`集群） ](#vip-load-balancing-same-subnet)
-  * [负载均衡虚拟 IP 如何跨不同子网工作（ `Farm`集群） ](#vip-load-balancing-different-subnets)
+  * [同子网中负载均衡虚拟 IP 的工作原理<span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>集群） ](#vip-load-balancing-same-subnet)
+  * [负载均衡虚拟 IP 如何跨不同子网工作（ <span class="notranslate farm-term" translate="no">Farm</span>集群） ](#vip-load-balancing-different-subnets)
   * [ IP 与 DNS 重定向：为什么 DNS 故障转移经常失败](#virtual-ip-vs-dns-redirection-failover)
   * [对比：虚拟 IP 实现、延迟和应用透明性](#vip-vs-dns-comparison)
   * [配置虚拟 IP 地址以实现网络负载均衡和高可用性](#virtual-ip-configuration-load-balancing-ha)
@@ -119,22 +119,22 @@ SafeKit通过在每个节点上提供专用的**健康检查 URL**来管理流�
 
 > **⚠️ 注意：**选择负载均衡器时，请确认您的应用程序与**源/目标 IP 转换 (SNAT/DNAT)**兼容。使用负载均衡器后，应用程序可能会丢失原始用户的身份信息，或者由于无法识别直接在其网络接口上配置的虚拟 IP 地址而无法启动。
 
-## 负载均衡虚拟 IP 在同一子网中的工作原理`Farm` （ `Farm`集群） {#vip-load-balancing-same-subnet}
+## 负载均衡虚拟 IP 在同一子网中的工作原理<span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>集群） {#vip-load-balancing-same-subnet}
 
 ### 可扩展性能：内核级负载均衡与冗余 {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-对于高流量环境，《 **架构指南：使用多节点`Farm`集群实现可扩展的高可用性SafeKit**在保持完全冗余的同时，将工作负载分配到多个活动服务器上。 
+对于高流量环境，《 **架构指南：使用多节点<span class="notranslate farm-term" translate="no">Farm</span>集群实现可扩展的高可用性SafeKit**在保持完全冗余的同时，将工作负载分配到多个活动服务器上。 
 
-### `Farm`集群架构：跨Windows或Linux节点进行负载均衡 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### <span class="notranslate farm-term" translate="no">Farm</span>集群架构：跨Windows或Linux节点进行负载均衡 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 ![同子网集群farm内负载均衡虚拟 IP (VIP) ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
- 在负载均衡集群**中，通过内核过滤实现分布式流量处理。该集群`farm`**组成。其中，虚拟 IP (VIP) 地址用于将客户端请求同时分发到多个服务器上。虽然此示例仅包含两个节点，但该架构可扩展以支持更大的服务器集群。在同子网配置中，通过 IP 别名**在集群中每台服务器**的以太网卡上配置 VIP。 
+ 在负载均衡集群**中，通过内核过滤实现分布式流量处理。该集群<span class="notranslate farm-term" translate="no">farm</span>**组成。其中，虚拟 IP (VIP) 地址用于将客户端请求同时分发到多个服务器上。虽然此示例仅包含两个节点，但该架构可扩展以支持更大的服务器集群。在同子网配置中，通过 IP 别名**在集群中每台服务器**的以太网卡上配置 VIP。 
 
 #### 流量分配：内核级过滤器 {#traffic-distribution-the-kernel-level-filter}
 
-与简单的故障转移集群不同， `farm`集群通过专门的**内核级过滤器**来管理流量。其工作原理如下： 
+与简单的故障转移集群不同， <span class="notranslate farm-term" translate="no">farm</span>集群通过专门的**内核级过滤器**来管理流量。其工作原理如下： 
 
   * **ARP 映射：**在客户端的 ARP 缓存中，VIP 最初与单个硬件地址关联（例如，服务器 1 的`mac1` ）。
   * **数据包拆分：**当服务器 1 收到流量时， SafeKit内核过滤器分析传入数据包的身份（基于**客户端 IP**或**TCP 端口** ）。
@@ -147,20 +147,20 @@ SafeKit通过在每个节点上提供专用的**健康检查 URL**来管理流�
 
 #### 远程站点部署 {#deployment-in-remote-sites}
 
-对于跨**个远程数据中心**运行的组织，只要这些站点通过**扩展 LAN 或** VLAN 连接，此负载均衡算法仍然有效。这将创建一个虚拟的“同子网”环境，这是地理位置分散的`farm`集群最有效的配置。 
+对于跨**个远程数据中心**运行的组织，只要这些站点通过**扩展 LAN 或** VLAN 连接，此负载均衡算法仍然有效。这将创建一个虚拟的“同子网”环境，这是地理位置分散的<span class="notranslate farm-term" translate="no">farm</span>集群最有效的配置。 
 
-## 负载均衡虚拟 IP 如何跨不同子网工作（ `Farm`集群） {#vip-load-balancing-different-subnets}
+## 负载均衡虚拟 IP 如何跨不同子网工作（ <span class="notranslate farm-term" translate="no">Farm</span>集群） {#vip-load-balancing-different-subnets}
 
 ### 多区域扩展：跨云子网协调流量 {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-**架构指南：在多区域和云环境中扩展`Farm`集群**提供了将应用程序工作负载分布到不同可用区和子网的蓝图。 
+**架构指南：在多区域和云环境中扩展<span class="notranslate farm-term" translate="no">Farm</span>集群**提供了将应用程序工作负载分布到不同可用区和子网的蓝图。 
 
-### 跨子网`Farm`集群：多节点Windows和Linux可扩展性 {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### 跨子网<span class="notranslate farm-term" translate="no">Farm</span>集群：多节点Windows和Linux可扩展性 {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 ![跨两个不同子网](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")运行的负载均衡集群farm示意图
 
- 通过外部负载均衡进行全局流量分配 当`farm`节点分布在**不同的子网**中时（这在多可用区云部署中很常见），**虚拟 IP (VIP)**由外部**负载均衡器 (LB)**管理。LB 持有 VIP 并将传入流量定向到位于各自子网中的服务器的物理 IP 地址。 
+ 通过外部负载均衡进行全局流量分配 当<span class="notranslate farm-term" translate="no">farm</span>节点分布在**不同的子网**中时（这在多可用区云部署中很常见），**虚拟 IP (VIP)**由外部**负载均衡器 (LB)**管理。LB 持有 VIP 并将传入流量定向到位于各自子网中的服务器的物理 IP 地址。 
 
 #### 智能流量路由和负载均衡规则 {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -174,7 +174,7 @@ SafeKit通过在每个节点上提供专用的**健康检查 URL**来管理流�
 
 #### SafeKit健康检查机制 {#safekit-health-check-mechanism}
 
-SafeKit在`farm`中的每台服务器上提供实时**健康检查 URL** ，以便将其运行状态传达给负载均衡器： 
+SafeKit在<span class="notranslate farm-term" translate="no">farm</span>中的每台服务器上提供实时**健康检查 URL** ，以便将其运行状态传达给负载均衡器： 
 
   * **节点已启动：**健康检查返回`HTTP 200 OK` 。负载均衡器已将此服务器加入活动轮换。
   * **节点宕机/故障转移：**如果服务器或应用程序发生故障， SafeKit将返回`HTTP 404 NOT FOUND` （或服务变得无法访问）。负载均衡器立即停止向故障节点发送流量。
@@ -182,7 +182,7 @@ SafeKit在`farm`中的每台服务器上提供实时**健康检查 URL** ，以�
 
 #### 云部署标准： AWS 、 Azure 、 GCP和 {#cloud-deployment-standards-aws-azure-and-gcp}
 
-此架构是**云、 `Farm`集群和**集群的基础模型，确保即使整个子网或区域离线，剩余节点也能继续处理负载。此功能由以下组件原生支持： 
+此架构是**云、 <span class="notranslate farm-term" translate="no">Farm</span>集群和**集群的基础模型，确保即使整个子网或区域离线，剩余节点也能继续处理负载。此功能由以下组件原生支持： 
 
   * 💡 [ **Amazon AWS** ](</zh-hans/solutions/aws-load-balancing-cluster-failover/>) ( AWS网络负载均衡器)
   * 💡 [ **Microsoft Azure** ](</zh-hans/solutions/azure-load-balancing-cluster-failover/>) Azure负载均衡器)
@@ -234,7 +234,7 @@ DNS重定向并非高可用性解决方案的理想选择。对于本地或区�
 环境与用例|高可用性类型|重定向机制|网络延迟|应用透明性和 IP 本地性  
 ---|---|---|---|---  
 主备（高可用性） | Mirror集群|免费 ARP / MAC 地址接管|极低：检测和发送广播 GARP 的时间|完全透明：虚拟 IP 地址位于活动节点本地。客户端 IP 地址保持不变。  
-负载均衡（主动/主动） | `Farm`集群|内核级网络过滤器/GARP |极低：检测和重新配置网络过滤器所需时间|完全透明：虚拟 IP 在所有节点上均为本地 IP。客户端 IP 保持不变。  
+负载均衡（主动/主动） | <span class="notranslate farm-term" translate="no">Farm</span>集群|内核级网络过滤器/GARP |极低：检测和重新配置网络过滤器所需时间|完全透明：虚拟 IP 在所有节点上均为本地 IP。客户端 IP 保持不变。  
 同子网/扩展局域网（VLAN 扩展） |灾难恢复（远程数据中心） |标准 IP 别名/GARP |低：取决于扩展 VLAN 的往返时间 (RTT) |完全透明：虚拟 IP 地址位于节点本地。客户端 IP 地址保持不变。  
 不同子网|灾难恢复（远程数据中心/云） |外部负载均衡器|中等：由于负载均衡器健康检查间隔，故障转移延迟较高| ⚠️ 部分透明：使用 SNAT/DNAT。虚拟 IP 为**，而非** （节点本地）。客户端 IP 为**，而非** （保留）。应用程序必须支持此功能。  
 DNS 重定向：无 VIP |灾难恢复（远程数据中心） | DNS 记录更新（名称/物理 IP） |高/不可预测：取决于 DNS TTL（生存时间）和客户端 DNS 缓存。 | ⚠️ 不可靠：客户端必须重新解析 DNS。大多数情况下，客户端会继续使用启动时解析的过时 IP，并且在故障转移后不会被重定向。  

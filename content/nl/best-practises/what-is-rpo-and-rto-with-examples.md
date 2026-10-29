@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/what-is-rpo-and-rto-wit
 description: "Leer de definities van RPO (Recovery Point Objective) en RTO (Recovery Time Objective) aan de hand van duidelijke voorbeelden. Ontdek hoe SafeKit zorgt voor nul dataverlies (RPO=0) en snelle failover om 24/7 bedrijfscontinuïteit te garanderen."
 category: "best-practises"
 lang: "nl"
-topics: "Korte samenvatting: RPO versus RTO, Inhoudsopgave, Hoe bereken ik RPO en RTO voor een oplossing voor hoge beschikbaarheid en bedrijfscontinuïteit?, Hoe bepaal ik RPO en RTO voor een back-up- en noodhersteloplossing?, Hoe bereikt een SafeKit Mirror -cluster een RPO van nul en een lage RTO?, Wat zijn de RTO-benchmarks voor een SafeKit `Farm` cluster met load balancing?, Vergelijkingstabellen: RTO versus RPO, Hoge beschikbaarheid in actie: realtime demo's van een RPO van nul en een RTO van bijna nul, Veelgestelde vragen: RPO en RTO optimaliseren voor bedrijfscontinuïteit, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Korte samenvatting: RPO versus RTO, Inhoudsopgave, Hoe bereken ik RPO en RTO voor een oplossing voor hoge beschikbaarheid en bedrijfscontinuïteit?, Hoe bepaal ik RPO en RTO voor een back-up- en noodhersteloplossing?, Hoe bereikt een SafeKit Mirror -cluster een RPO van nul en een lage RTO?, Wat zijn de RTO-benchmarks voor een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster met load balancing?, Vergelijkingstabellen: RTO versus RPO, Hoge beschikbaarheid in actie: realtime demo's van een RPO van nul en een RTO van bijna nul, Veelgestelde vragen: RPO en RTO optimaliseren voor bedrijfscontinuïteit, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # Wat zijn RPO en RTO? Definities, voorbeelden en HA-strategieën {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
@@ -26,7 +26,7 @@ topics: "Korte samenvatting: RPO versus RTO, Inhoudsopgave, Hoe bereken ik RPO e
   * [ Hoe bereken ik RPO en RTO voor een oplossing voor hoge beschikbaarheid en bedrijfscontinuïteit? ](#calculate-rpo-rto-high-availability)
   * [ Hoe bepaal ik de RPO en RTO voor een back-up- en noodhersteloplossing? ](#calculate-rpo-rto-backup-solution)
   * Hoe bereikt een [ SafeKit Mirror cluster een RPO van nul en een lage RTO? ](#rpo-rto-safekit-mirror-cluster)
-  * [ Wat zijn de RTO-benchmarks voor een SafeKit `Farm` -cluster met load balancing? ](#rpo-rto-safekit-farm-cluster)
+  * [ Wat zijn de RTO-benchmarks voor een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> -cluster met load balancing? ](#rpo-rto-safekit-farm-cluster)
   * [ Vergelijkingstabellen: RTO versus RPO ](#rpo-vs-rto-comparison)
   * [ Hoge beschikbaarheid in actie: realtime demonstraties van RPO van nul en RTO van bijna nul ](#safekit-rpo-rto-video-demos)
   * [ Veelgestelde vragen over RPO en RTO ](#faq-rpo-rto)
@@ -148,38 +148,38 @@ In een standaardconfiguratie **is de RTO (Recovery Time Objective) van een SafeK
 
 Door gebruik te maken van **hoge beschikbaarheid op applicatieniveau,** en SafeKit wordt de "herstartvertraging" die inherent is aan standaard virtualisatie geëlimineerd, waardoor uw **bedrijfscontinuïteitsplan** de laagst mogelijke downtime bereikt. 
 
-## Wat zijn de RTO-benchmarks voor een SafeKit `Farm` cluster met load balancing? {#rpo-rto-safekit-farm-cluster}
+## Wat zijn de RTO-benchmarks voor een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster met load balancing? {#rpo-rto-safekit-farm-cluster}
 
-### Wat is de SafeKit `Farm` cluster? {#what-is-safekit-farm-cluster}
+### Wat is de SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster? {#what-is-safekit-farm-cluster}
 
-Het **SafeKit `Farm` Cluster** is een softwarematige oplossing voor hoge beschikbaarheid, ontworpen voor stateless applicaties (zoals webservers) die zowel **schaalbaarheid** als **redundantie** vereisen. In tegenstelling tot een mirror cluster, dat zich richt op datareplicatie, verdeelt een `farm` cluster het inkomende verkeer over meerdere actieve knooppunten.
+Het **SafeKit <span class="notranslate farm-term" translate="no">Farm</span> Cluster** is een softwarematige oplossing voor hoge beschikbaarheid, ontworpen voor stateless applicaties (zoals webservers) die zowel **schaalbaarheid** als **redundantie** vereisen. In tegenstelling tot een mirror cluster, dat zich richt op datareplicatie, verdeelt een <span class="notranslate farm-term" translate="no">farm</span> cluster het inkomende verkeer over meerdere actieve knooppunten.
 
 
 ![ SafeKit Farm Clusterarchitectuur die netwerkbelastingverdeling en failover demonstreert voor stateless applicaties ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-Om **de bedrijfscontinuïteit** in omgevingen met veel verkeer te waarborgen, werkt het SafeKit `farm` -cluster via twee kernmechanismen:
+Om **de bedrijfscontinuïteit** in omgevingen met veel verkeer te waarborgen, werkt het SafeKit <span class="notranslate farm-term" translate="no">farm</span> -cluster via twee kernmechanismen:
 
-  * Netwerkbelastingverdeling **:** SafeKit gebruikt een virtueel IP-adres om inkomend netwerkverkeer te verdelen over een " `farm` " van meerdere actieve servers. Dit zorgt ervoor dat geen enkele server overbelast raakt en maximaliseert de prestaties van de applicatie.
-  * **Automatische foutdetectie en herconfiguratie:** Als een knooppunt in de `farm` uitvalt, detecteert SafeKit de storing via heartbeats en herverdeelt het verkeer onmiddellijk over de resterende, gezonde knooppunten. Dit zorgt voor een bijna nul RTO (Recovery Time Objective) voor de gehele service, omdat andere knooppunten al actief zijn en klaar staan om de belasting op te vangen.
+  * Netwerkbelastingverdeling **:** SafeKit gebruikt een virtueel IP-adres om inkomend netwerkverkeer te verdelen over een " <span class="notranslate farm-term" translate="no">farm</span> " van meerdere actieve servers. Dit zorgt ervoor dat geen enkele server overbelast raakt en maximaliseert de prestaties van de applicatie.
+  * **Automatische foutdetectie en herconfiguratie:** Als een knooppunt in de <span class="notranslate farm-term" translate="no">farm</span> uitvalt, detecteert SafeKit de storing via heartbeats en herverdeelt het verkeer onmiddellijk over de resterende, gezonde knooppunten. Dit zorgt voor een bijna nul RTO (Recovery Time Objective) voor de gehele service, omdat andere knooppunten al actief zijn en klaar staan om de belasting op te vangen.
 
 
-### Wat is de RPO van een SafeKit `Farm` cluster? {#what-is-rpo-safekit-farm}
+### Wat is de RPO van een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster? {#what-is-rpo-safekit-farm}
 
-De **RPO (Recovery Point Objective)** voor een **SafeKit `Farm` cluster** wordt over het algemeen **als niet van toepassing (N/A)** beschouwd. Dit komt omdat een `farm` -cluster specifiek is ontworpen voor **stateless applicaties** waarbij data niet lokaal op de nodes wordt opgeslagen. 
+De **RPO (Recovery Point Objective)** voor een **SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster** wordt over het algemeen **als niet van toepassing (N/A)** beschouwd. Dit komt omdat een <span class="notranslate farm-term" translate="no">farm</span> -cluster specifiek is ontworpen voor **stateless applicaties** waarbij data niet lokaal op de nodes wordt opgeslagen. 
 
-Omdat een `farm` cluster zich richt op **-netwerkbelastingverdeling** in plaats van gegevenssynchronisatie, vindt er geen gegevensreplicatie plaats tussen de knooppunten binnen het cluster zelf. In een typisch **bedrijfscontinuïteitsplan** met een `farm` -architectuur: 
+Omdat een <span class="notranslate farm-term" translate="no">farm</span> cluster zich richt op **-netwerkbelastingverdeling** in plaats van gegevenssynchronisatie, vindt er geen gegevensreplicatie plaats tussen de knooppunten binnen het cluster zelf. In een typisch **bedrijfscontinuïteitsplan** met een <span class="notranslate farm-term" translate="no">farm</span> -architectuur: 
 
-  * **Stateless Operations:** Alle knooppunten in de `farm` zijn identiek en bevatten geen permanente gegevens; daarom is er geen sprake van "gegevensverlies" tijdens een knooppuntstoring. 
+  * **Stateless Operations:** Alle knooppunten in de <span class="notranslate farm-term" translate="no">farm</span> zijn identiek en bevatten geen permanente gegevens; daarom is er geen sprake van "gegevensverlies" tijdens een knooppuntstoring. 
   * **Externe gegevensopslag:** Als de applicatie gegevenspersistentie vereist, wordt dit meestal afgehandeld door een aparte backend **SafeKit Mirror Cluster** waar de RPO dan nul zou zijn. 
 
 
-### Wat is de RTO van een SafeKit `Farm` cluster? {#rto-example-safekit-farm-cluster}
+### Wat is de RTO van een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster? {#rto-example-safekit-farm-cluster}
 
-In een `farm` -architectuur wordt de RTO **teruggebracht tot slechts enkele seconden** omdat alle knooppunten doorgaans gelijktijdig actief zijn. De hersteltijd wordt bepaald door de snelheid waarmee het cluster de verkeersverdeling opnieuw configureert.
+In een <span class="notranslate farm-term" translate="no">farm</span> -architectuur wordt de RTO **teruggebracht tot slechts enkele seconden** omdat alle knooppunten doorgaans gelijktijdig actief zijn. De hersteltijd wordt bepaald door de snelheid waarmee het cluster de verkeersverdeling opnieuw configureert.
 
   * **Hardwarefout:** De RTO is gelijk aan de _time-out voor foutdetectie_ over alle monitoringkanalen (standaard enkele seconden). Zodra het verlies van de heartbeat wordt gedetecteerd, worden de **virtuele IP-loadbalancingfilters** automatisch opnieuw geconfigureerd om het verkeer om te leiden naar de resterende, gezonde knooppunten.
-  * **Softwarefout of geplande herstart:** De RTO wordt berekend als de _tijd dat de applicatie stopt_ plus de _tijd dat de applicatie opnieuw opstart_ op dat specifieke knooppunt, gedurende welke de andere knooppunten in de `farm` alle inkomende verkeer blijven verwerken.
+  * **Softwarefout of geplande herstart:** De RTO wordt berekend als de _tijd dat de applicatie stopt_ plus de _tijd dat de applicatie opnieuw opstart_ op dat specifieke knooppunt, gedurende welke de andere knooppunten in de <span class="notranslate farm-term" translate="no">farm</span> alle inkomende verkeer blijven verwerken.
 
 
 Dit "Active-Active"-mechanisme zorgt ervoor dat voor stateless services de impact van **Business Continuity** vrijwel onmerkbaar is voor de eindgebruiker, omdat het niet nodig is de service op een nieuw standby-knooppunt te initialiseren.
@@ -206,7 +206,7 @@ Doel-RPO | > 0 (laatste back-uppunt) | 0 (synchrone replicatie)
 Architectuur | Gebruiksscenario | RTO (Beschikbaarheid) | RPO (Gegevensverlies)  
 ---|---|---|---  
 Mirror Cluster | Realtime replicatie | ~1 min (Heartbeat + Herstart) | 0 (Geen gegevensverlies)  
-`Farm` Cluster | Netwerktaakverdeling | Enkele seconden | N.v.t. (Stateless)  
+<span class="notranslate farm-term" translate="no">Farm</span> Cluster | Netwerktaakverdeling | Enkele seconden | N.v.t. (Stateless)  
   
 ## Hoge beschikbaarheid in actie: realtime demonstraties van nul RPO en bijna nul RTO {#safekit-rpo-rto-video-demos}
 
@@ -223,9 +223,9 @@ Bekijk hoe SafeKit omgaat met een kritieke storing. Deze video demonstreert **sy
 
 [ Gratis proefversie hier ](</nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
-### Video: Het bereiken van een bijna nul RTO in een SafeKit `Farm` cluster (5:03) {#demo-farm-cluster-rpo-rto}
+### Video: Het bereiken van een bijna nul RTO in een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster (5:03) {#demo-farm-cluster-rpo-rto}
 
-Bekijk hoe SafeKit een Apache-webserver `farm` beheert om zowel prestatieschaalbaarheid als directe failover te bieden.
+Bekijk hoe SafeKit een Apache-webserver <span class="notranslate farm-term" translate="no">farm</span> beheert om zowel prestatieschaalbaarheid als directe failover te bieden.
 
 #### Hoofdstukken {#chapters-1}
 

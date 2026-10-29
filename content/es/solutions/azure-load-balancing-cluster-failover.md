@@ -7,7 +7,7 @@ lang: "es"
 topics: "Mejore el balanceador de carga en la nube con supervisión a nivel de aplicación y autorrecuperación, Índice, ¿Cómo implementa fácilmente el software SafeKit un clúster de equilibrio de carga de red (NLB) para Azure?, ¿Cómo funciona el clúster farm de SafeKit con Azure?, Comparación: clúster Farm de SafeKit local y clúster Farm de SafeKit en la nube, Guía en vídeo: configuración de un clúster NLB Farm de SafeKit, 🔍 Centro de Navegación de Alta Disponibilidad SafeKit"
 ---
 
-# SafeKit: balanceo de carga de Microsoft Azure y alta disponibilidad de aplicaciones con clúster `Farm` {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: balanceo de carga de Microsoft Azure y alta disponibilidad de aplicaciones con clúster <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
 
 {{%  insert-safekit-solution-farm-cloud-es app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}
 

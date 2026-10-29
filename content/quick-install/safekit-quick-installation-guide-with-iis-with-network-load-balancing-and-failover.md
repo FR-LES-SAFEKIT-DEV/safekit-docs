@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Learn how to deploy the iis_farm.safe module on Windows for IIS Network Load Balancing and automatic failover. This guide shows you how to build a highly available cluster for web services and applications using a virtual IP, without the need for external hardware load balancers or complex configuration."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for IIS, SafeKit High Availability Limitations, Overview of the SafeKit / IIS solution, Installation of the SafeKit / IIS solution on Windows (iis_farm.safe), Step by step configuration of the SafeKit / IIS solution, Demonstration of the SafeKit `farm` solution, 🔍 SafeKit High Availability Navigation Hub"
+topics: "High Availability Quick Installation Guide for IIS, SafeKit High Availability Limitations, Overview of the SafeKit / IIS solution, Installation of the SafeKit / IIS solution on Windows (iis_farm.safe), Step by step configuration of the SafeKit / IIS solution, Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # IIS Network Load Balancing & Failover: Install the SafeKit iis_farm.safe Module {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
@@ -36,7 +36,7 @@ The solution is described here: **💡[SafeKit: All-in-One IIS Load Balancing & 
 {{%  insert-safekit-82-farm-configuration-en app="IIS" mod="iis_farm"  %}}
  
 
-## Demonstration of the SafeKit `farm` solution {#demonstration-of-the-safekit-farm-solution}
+## Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-en  %}}

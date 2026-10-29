@@ -17,7 +17,7 @@ topics: "在Microsoft Azure中探索SafeKit ，在 Google GCP中探索SafeKit �
 
 [通用云Mirror > ](</zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[通用云`Farm` > ](</zh-hans/solutions/cloud-load-balancing-cluster-failover/>)
+[通用云<span class="notranslate farm-term" translate="no">Farm</span> > ](</zh-hans/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-zh-hans  %}}

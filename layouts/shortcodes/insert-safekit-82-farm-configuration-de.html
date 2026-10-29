@@ -63,8 +63,8 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
   * Geben Sie unter `Virtual IP addresses` eine virtuelle IP-Adresse ein. Eine virtuelle IP-Adresse ist eine normale IP-Adresse im selben IP-Netzwerk (Subnetz) wie die IP-Adressen beider Knoten. Anwendungclients müssen für die virtuelle IP-Adresse (oder den zugehörigen DNS-Namen) konfiguriert werden.
   * Legen Sie unter `Load balancing rules` den auszugleichenden Dienstport fest (z. B. TCP 9010 im Beispiel).
   * Legen Sie unter `Load balancing rules` die Lastverteilungsregel `Source address` oder `Source port` fest:
-    * Bei Verwendung der Quell-IP-Adresse des Clients wird derselbe Client über mehrere TCP-Sitzungen mit demselben Knoten in der `farm` verbunden und kann seinen Kontext auf diesem Knoten abrufen.
-    * Bei Verwendung des TCP-Quellports des Clients wird derselbe Client über mehrere TCP-Sitzungen mit verschiedenen Knoten in der `farm` verbunden (ohne einen Kontext abzurufen).
+    * Bei Verwendung der Quell-IP-Adresse des Clients wird derselbe Client über mehrere TCP-Sitzungen mit demselben Knoten in der <span class="notranslate farm-term" translate="no">farm</span> verbunden und kann seinen Kontext auf diesem Knoten abrufen.
+    * Bei Verwendung des TCP-Quellports des Clients wird derselbe Client über mehrere TCP-Sitzungen mit verschiedenen Knoten in der <span class="notranslate farm-term" translate="no">farm</span> verbunden (ohne einen Kontext abzurufen).
   * Unter `Checkers` können Sie bei Bedarf Prüfmechanismen konfigurieren, etwa Prozessüberwachung, benutzerdefinierte Prüfungen, TCP-, Ping- oder Split-Brain-Prüfungen. Wird beispielsweise ein Prozessname unter `Monitored processes/services` angezeigt, wird der Prozess überwacht und bei einem Fehler neu gestartet. Ein falscher Prozessname führt dazu, dass das Modul direkt nach dem Start beendet wird.
 
 
@@ -75,7 +75,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 ℹ️ Beim Anwenden der SafeKit-Konfiguration wird der `startup type` der Dienste in den Windows-Diensten automatisch auf `Manual` gesetzt. So werden die Dienste beim Systemstart nicht automatisch, sondern erst beim Start des Moduls gestartet (dies gilt auch für Linux).
 
 
-![Einstellungen des {{ .Get "app" }}-Moduls `farm` eingeben](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Einstellungen des {{ .Get "app" }}-Moduls <span class="notranslate farm-term" translate="no">farm</span> eingeben](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Skripte bearbeiten (optional)
@@ -114,9 +114,9 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 ![Erfolgreiche Konfiguration des {{ .Get "app" }}-Moduls überprüfen](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Den `farm`-Cluster auf Knoten 1 und Knoten 2 starten
+### 9. Den <span class="notranslate farm-term" translate="no">farm</span>-Cluster auf Knoten 1 und Knoten 2 starten
 
-  * Klicken Sie wie in der Abbildung gezeigt auf ⋯ `Start`, um den `farm`-Cluster zu starten.
+  * Klicken Sie wie in der Abbildung gezeigt auf ⋯ `Start`, um den <span class="notranslate farm-term" translate="no">farm</span>-Cluster zu starten.
 
 
 ![{{ .Get "app" }}-Cluster auf beiden Knoten starten](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
@@ -144,7 +144,7 @@ Knoten 1 und Knoten 2 sollten den Zustand UP (grün) erreichen. Das bedeutet, da
 SafeKit enthält einen integrierten Produkttest:
 
   * Konfigurieren Sie eine Regel für TCP-Port 9010 mit Lastverteilung nach TCP-Quellport.
-  * Verbinden Sie eine externe Workstation außerhalb der `farm`-Knoten.
+  * Verbinden Sie eine externe Workstation außerhalb der <span class="notranslate farm-term" translate="no">farm</span>-Knoten.
   * Öffnen Sie einen Browser unter http://virtual-ip:9010/safekit/mosaic.html.
 
 

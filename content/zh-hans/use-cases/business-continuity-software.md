@@ -25,7 +25,7 @@ topics: "分布式企业中的业务连续性，🔍 SafeKit高可用性导航�
 
 ### SafeKit软件：一个简单的业务连续性解决方案 {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit提供两个简易的模块`farm`和mirror ，用于保护您的关键应用程序免受故障影响。该方案部署在标准服务器上，无需 IT 专业人员即可管理。无需共享磁盘、复制 SAN、负载均衡器、企业版操作系统或数据库。 
+SafeKit提供两个简易的模块<span class="notranslate farm-term" translate="no">farm</span>和mirror ，用于保护您的关键应用程序免受故障影响。该方案部署在标准服务器上，无需 IT 专业人员即可管理。无需共享磁盘、复制 SAN、负载均衡器、企业版操作系统或数据库。 
 
 
 {{%  insert-safekit-hub-zh-hans  %}}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Optimice el balanceo de carga de red AWS con la monitorización inteligente de aplicaciones de SafeKit . El módulo farm.safe realiza una comprobación de estado específica para el balanceador de carga AWS , lo que permite una alta disponibilidad sin interrupciones a nivel de aplicación. Consiga la recuperación automática y la conmutación por error para aplicaciones de misión crítica."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para AWS , limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit / AWS , instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ), configuración paso a paso de la solución SafeKit / AWS , demostración de la solución SafeKit `farm` , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para AWS , limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit / AWS , instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ), configuración paso a paso de la solución SafeKit / AWS , demostración de la solución SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Centro de navegación de alta disponibilidad SafeKit"
 ---
 
 # Balanceo de carga y conmutación por error de red AWS : Instale el módulo SafeKit farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
@@ -15,7 +15,7 @@ topics: "Guía de instalación rápida de alta disponibilidad para AWS , limitac
 
 ## Descripción general de la solución SafeKit / AWS {#overview-of-the-safekit--aws-solution}
 
-La solución se describe aquí: **💡 [ SafeKit : Amazon AWS Balanceo de carga y alta disponibilidad de aplicaciones `Farm` Clúster ](</es/solutions/aws-load-balancing-cluster-failover/>)** .
+La solución se describe aquí: **💡 [ SafeKit : Amazon AWS Balanceo de carga y alta disponibilidad de aplicaciones <span class="notranslate farm-term" translate="no">Farm</span> Clúster ](</es/solutions/aws-load-balancing-cluster-failover/>)** .
 
 ## Instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
@@ -25,7 +25,7 @@ El balanceador de carga debe configurarse con una dirección IP virtual.
 Además, el balanceador de carga debe configurarse para enviar periódicamente paquetes de estado a los nodos.  
 Para ello, SafeKit proporciona una comprobación de estado que se ejecuta dentro de los nodos y que
 
-  * Devuelve OK cuando el estado del módulo `farm` es UP (verde).
+  * Devuelve OK cuando el estado del módulo <span class="notranslate farm-term" translate="no">farm</span> es UP (verde).
   * Devoluciones NO ENCONTRADAS en todos los demás estados
 
 
@@ -33,7 +33,7 @@ Debe configurar el balanceador de carga Amazon AWS con:
 
   * protocolo HTTP
   * puerto 9010, el puerto del servidor web SafeKit
-  * URL /var/modules/farm/ready.txt (si `farm` es el nombre del módulo que implementará posteriormente)
+  * URL /var/modules/farm/ready.txt (si <span class="notranslate farm-term" translate="no">farm</span> es el nombre del módulo que implementará posteriormente)
 
 
 Para obtener más información, consulte [ la configuración del balanceador de carga de Amazon AWS ](<https://aws.amazon.com/elasticloadbalancing/>) .
@@ -46,7 +46,7 @@ Para obtener más información, consulte [ la configuración del balanceador de 
 La seguridad de la red debe configurarse para permitir las comunicaciones para los siguientes protocolos y puertos:
 
   * UDP - 4800 para el servicio safeadmin (entre nodos SafeKit )
-  * UDP - 4803 para la señal de latido dentro del módulo `farm` (entre los nodos SafeKit )
+  * UDP - 4803 para la señal de latido dentro del módulo <span class="notranslate farm-term" translate="no">farm</span> (entre los nodos SafeKit )
   * TCP – 9010 para la comprobación del estado del balanceador de carga y para la consola web SafeKit que se ejecuta en modo http.
   * TCP – 9001 para configurar el modo https para la consola
   * TCP – 9453 para la consola web SafeKit que se ejecuta en modo https.
@@ -66,7 +66,7 @@ Nota: el módulo genérico **farm.safe** que va a configurar se incluye dentro d
 {{%  insert-safekit-82-farm-configuration-es app="" mod="farm"  %}}
  
 
-## Demostración de la solución SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## Demostración de la solución SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-es  %}}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/architectures/safekit-smart-console-yo
 description: "Gestisci i cluster SafeKit con facilità grazie alla nostra Smart Console. Approfitta della configurazione senza codice, della compatibilità con gli smartphone e delle notifiche PWA in tempo reale. Elimina gli errori umani e garantisci un'elevata disponibilità a portata di mano. Scopri di più."
 category: "architectures"
 lang: "it"
-topics: "Smart Console: Intuitiva, Mobile e Alta Disponibilità senza Errori, Indice, Come funziona un cluster SafeKit mirror con la console web?, Come funziona un cluster SafeKit `farm` con la console web?, Come monitorare più moduli e più cluster tramite la console web?, Come monitorare gli avvisi nella console e gestire le notifiche e-mail?, 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "Smart Console: Intuitiva, Mobile e Alta Disponibilità senza Errori, Indice, Come funziona un cluster SafeKit mirror con la console web?, Come funziona un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> con la console web?, Come monitorare più moduli e più cluster tramite la console web?, Come monitorare gli avvisi nella console e gestire le notifiche e-mail?, 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
 ---
 
 # SafeKit Smart Console: il tuo cluster ad alta disponibilità in tasca {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
@@ -13,12 +13,12 @@ topics: "Smart Console: Intuitiva, Mobile e Alta Disponibilità senza Errori, In
 
 Ridefinisci il modo in cui gestisci l'alta disponibilità con una soluzione progettata per **velocità e semplicità** . La console web SafeKit offre un'esperienza **intuitiva** , consentendoti di configurare e controllare la tua infrastruttura senza dover **scrivere codice** .
 
-Che siate alla vostra scrivania o in movimento, la dashboard compatibile con smartphone vi offre il controllo completo del cluster a portata di mano. Semplificando la gestione dei moduli mirror e `farm` , la Smart Console **elimina gli errori umani** e garantisce un processo di failover senza interruzioni per i vostri sistemi più critici.
+Che siate alla vostra scrivania o in movimento, la dashboard compatibile con smartphone vi offre il controllo completo del cluster a portata di mano. Semplificando la gestione dei moduli mirror e <span class="notranslate farm-term" translate="no">farm</span> , la Smart Console **elimina gli errori umani** e garantisce un processo di failover senza interruzioni per i vostri sistemi più critici.
 
 ## Indice {#table-of-contents}
 
   * [ Come funziona un cluster SafeKit mirror con la console web? ](#safekit-mirror-cluster)
-  * [ Come funziona un cluster SafeKit `farm` con la console web? ](#safekit-farm-cluster)
+  * [ Come funziona un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> con la console web? ](#safekit-farm-cluster)
   * [ Come monitorare più moduli e più cluster tramite la console web? ](#multipe-modules-clusters)
   * [ Come monitorare gli avvisi nella console e gestire le notifiche e-mail? ](#safekit-notifications-cluster)
 
@@ -60,35 +60,35 @@ Per un cluster mirror a 2 nodi, la console visualizza chiaramente i ruoli di cia
 
 Oltre alle semplici icone di stato, l'interfaccia offre **un'orchestrazione del failover con un solo clic** ( **menu `...`** ), che consente di riassegnare manualmente il ruolo primario per la manutenzione programmata, garantendo al contempo la disponibilità continua per le attività degli utenti.
 
-## Come funziona un cluster SafeKit `farm` con la console web? {#safekit-farm-cluster}
+## Come funziona un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> con la console web? {#safekit-farm-cluster}
 
-### Come configurare un cluster SafeKit `farm` {#safekit-farm-cluster-configuration}
+### Come configurare un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#safekit-farm-cluster-configuration}
 
 
 Console Web ![ SafeKit : configurazione del cluster Farm per il bilanciamento del carico di rete e la gestione degli IP virtuali. ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-Il cluster **SafeKit `farm`** è progettato per garantire elevata disponibilità e scalabilità dei servizi. La configurazione si concentra sulla distribuzione simultanea del traffico in entrata su entrambi i nodi:
+Il cluster **SafeKit <span class="notranslate farm-term" translate="no">farm</span>** è progettato per garantire elevata disponibilità e scalabilità dei servizi. La configurazione si concentra sulla distribuzione simultanea del traffico in entrata su entrambi i nodi:
 
   * **Servizi con bilanciamento del carico (scheda Macro):** Definisci i servizi applicativi specifici (ad esempio, Apache, IIS , Nginx ) da mantenere attivi su tutti i nodi.
-  * Rete(i) heartbeat **:** Percorso(i) di comunicazione utilizzato(i) per rilevare se un nodo ha lasciato `farm` , attivando una ridistribuzione immediata del carico.
-  * **IP virtuale ( `Farm` VIP):** A differenza di un cluster mirror , il VIP `Farm` è condiviso tra i nodi utilizzando un algoritmo di filtraggio del kernel per distribuire il traffico di rete.
+  * Rete(i) heartbeat **:** Percorso(i) di comunicazione utilizzato(i) per rilevare se un nodo ha lasciato <span class="notranslate farm-term" translate="no">farm</span> , attivando una ridistribuzione immediata del carico.
+  * **IP virtuale ( <span class="notranslate farm-term" translate="no">Farm</span> VIP):** A differenza di un cluster mirror , il VIP <span class="notranslate farm-term" translate="no">Farm</span> è condiviso tra i nodi utilizzando un algoritmo di filtraggio del kernel per distribuire il traffico di rete.
   * Regole di bilanciamento del carico **:** Definisce la politica di distribuzione del traffico in base all'indirizzo IP o alla porta di origine.
   * **Checkers:** Monitora lo stato di salute dell'applicazione e attiva il riavvio automatico se viene rilevato un errore di processo.
 
 
-### Come monitorare un cluster SafeKit `farm` {#safekit-farm-cluster-monitoring}
+### Come monitorare un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#safekit-farm-cluster-monitoring}
 
 
 Console ![ SafeKit : Monitoraggio di un cluster Farm a 2 nodi che mostra entrambi i nodi in stato UP con bilanciamento del carico attivo. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-Il monitoraggio di un cluster `farm` fornisce visibilità sulla natura attivo **attivo** dell'infrastruttura, dove tutti i nodi contribuiscono alle prestazioni dell'applicazione (in questo esempio vengono mostrati 2 nodi; scalabile a nodi aggiuntivi):
+Il monitoraggio di un cluster <span class="notranslate farm-term" translate="no">farm</span> fornisce visibilità sulla natura attivo **attivo** dell'infrastruttura, dove tutti i nodi contribuiscono alle prestazioni dell'applicazione (in questo esempio vengono mostrati 2 nodi; scalabile a nodi aggiuntivi):
 
-  * **Stato UP (50% su 2 nodi):** In un `farm` sano, entrambi i nodi sono nello stato "UP" (50%), il che significa che entrambi stanno ricevendo ed elaborando attivamente le richieste dei client tramite l'IP virtuale condiviso.
+  * **Stato UP (50% su 2 nodi):** In un <span class="notranslate farm-term" translate="no">farm</span> sano, entrambi i nodi sono nello stato "UP" (50%), il che significa che entrambi stanno ricevendo ed elaborando attivamente le richieste dei client tramite l'IP virtuale condiviso.
   * **Ribilanciamento automatico:** Se un nodo si guasta, la console mostra visivamente il nodo rimanente che gestisce il 100% del traffico. Non c'è alcun ritardo di "failover", poiché il nodo sopravvissuto è già attivo (a parte un tempo di rilevamento di alcuni secondi).
   * Inserimento nodo **:** Quando un nodo riparato viene riavviato, passa dallo stato "STOP" allo stato "UP" e inizia automaticamente a ricevere la sua porzione di carico senza intervento dell'amministratore.
-  * **Nessuna sincronizzazione dati:** Si noti che in un cluster `farm` non esiste uno stato di risincronizzazione "Arancione", poiché si prevede che i nodi siano stateless o condividano un database backend (che può essere protetto separatamente in un cluster mirror ).
+  * **Nessuna sincronizzazione dati:** Si noti che in un cluster <span class="notranslate farm-term" translate="no">farm</span> non esiste uno stato di risincronizzazione "Arancione", poiché si prevede che i nodi siano stateless o condividano un database backend (che può essere protetto separatamente in un cluster mirror ).
 
 
 Oltre alle semplici icone di stato, l'interfaccia offre la gestione dei nodi con un solo clic ( **`...` menu** ), consentendo di arrestare o avviare manualmente un nodo per la manutenzione programmata, mentre l'IP virtuale condiviso ridistribuisce automaticamente il traffico senza interrompere l'attività dell'utente.

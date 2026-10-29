@@ -6,34 +6,34 @@
 
 ## アプリケーションレベルの監視と自己修復でクラウドロードバランサーを強化
 
-{{ .Get "app" }}向けのSafeKit `Farm` クラスターは、クラウド環境向けに最適化されたソフトウェア定義の高可用性ソリューションです。アプリケーションノード上で**詳細な監視と自己修復**を直接行うことで、可用性に影響する前にソフトウェア障害を検出し、ローカルで解決します。**{{ .Get "app" }}ロードバランサー**とシームレスに連携し、インテリジェントなヘルスチェックによって完全に稼働しているノードにのみトラフィックをルーティングします。
+{{ .Get "app" }}向けのSafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターは、クラウド環境向けに最適化されたソフトウェア定義の高可用性ソリューションです。アプリケーションノード上で**詳細な監視と自己修復**を直接行うことで、可用性に影響する前にソフトウェア障害を検出し、ローカルで解決します。**{{ .Get "app" }}ロードバランサー**とシームレスに連携し、インテリジェントなヘルスチェックによって完全に稼働しているノードにのみトラフィックをルーティングします。
 
-### {{ .Get "app" }}アプリケーション向けSafeKit `Farm` クラスターの利点は何ですか？
+### {{ .Get "app" }}アプリケーション向けSafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターの利点は何ですか？
 
   * **{{ .Get "app" }}ロードバランサーとの連携：** {{ .Get "app" }}ロードバランサーに正確なヘルスチェックを自動的に提供し、サーバーへのpingだけではなく、{{ .Get "app" }}アプリケーションの実際の状態に基づいてトラフィックをルーティングします。
   * **詳細な監視と自己修復：** クラウドインスタンスが「Running」でもアプリケーションがクラッシュしている「ゾンビ」状態を検出します。SafeKitはクラウドロードバランサーにフェイルオーバーを通知する前に、サービスをローカルで自動的に再起動します。
-  * **`Farm` とMirrorのハイブリッド機能：** `Farm` クラスター（クラウドLB経由でフロントエンドを拡張）とMirrorクラスター（バックエンドデータを同期レプリケーション）を組み合わせ、{{ .Get "app" }}の永続ストレージの課題を解決します。
+  * **<span class="notranslate farm-term" translate="no">Farm</span> とMirrorのハイブリッド機能：** <span class="notranslate farm-term" translate="no">Farm</span> クラスター（クラウドLB経由でフロントエンドを拡張）とMirrorクラスター（バックエンドデータを同期レプリケーション）を組み合わせ、{{ .Get "app" }}の永続ストレージの課題を解決します。
   * **Kubernetesの代替：** SafeKitは、Kubernetes向けに設計されていないレガシーアプリケーションとコンテナー化アプリケーションの両方に、Kubernetesオーケストレーションの運用負荷や複雑さなしで高可用性を提供します。
   * **統一された導入（オンプレミスまたはクラウド）：** [クラウドロードバランサー内の仮想IP設定](/ja/best-practises/how-a-virtual-ip-address-works/)を除き、SafeKitの導入手順はオンプレミス環境とクラウド環境で同じです。
 
 
 ![仮想IP、自動フェイルオーバー、自動フェイルバック、ネットワーク負荷分散を提供する{{ .Get "app" }}向けSafeKit高可用性クラスターアーキテクチャ]({{ .Get "img" }} "w:512")
 
-**{{ .Get "app" }}向けSafeKit `Farm` NLBクラスター**
+**{{ .Get "app" }}向けSafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLBクラスター**
 
 <a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }}向け<code>farm</code>クラスターのクイックインストールガイド &gt;</a>
 ## 目次 {#toc}
 
   * [SafeKitソフトウェアは{{ .Get "app" }}ネットワーク負荷分散（NLB）クラスターをどのように簡単に実装しますか？](#safekit-farm-ha-cluster)
-  * [SafeKit `farm` クラスターは{{ .Get "app" }}でどのように動作しますか？](#safekit-farm-cluster)
-  * [比較：オンプレミスのSafeKit `Farm` クラスターとクラウドのSafeKit `Farm` クラスター](#safekit-farm-ha-comparison)
-  * [ビデオガイド：SafeKit `Farm` NLBクラスターの構成](#videoguide-safekit-farm-cluster)
+  * [SafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスターは{{ .Get "app" }}でどのように動作しますか？](#safekit-farm-cluster)
+  * [比較：オンプレミスのSafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターとクラウドのSafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスター](#safekit-farm-ha-comparison)
+  * [ビデオガイド：SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLBクラスターの構成](#videoguide-safekit-farm-cluster)
   * [🔍 SafeKit高可用性ナビゲーションハブ](#hub)
 
 
 ## SafeKitソフトウェアは{{ .Get "app" }}ネットワーク負荷分散（NLB）クラスターをどのように簡単に実装しますか？ {#safekit-farm-ha-cluster}
 
-### {{ .Get "app" }}向けSafeKit `Farm` NLBソリューションとは何ですか？
+### {{ .Get "app" }}向けSafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLBソリューションとは何ですか？
 
 SafeKitは、二つ以上のノードにわたって{{ .Get "app" }}のネットワーク負荷分散と高可用性を実現します。
 
@@ -63,13 +63,13 @@ SafeKitはクラウドに依存せず、オンプレミスサーバーと主要�
 
 これにより、更新で個別ツール間の脆弱な連携が壊れる「砂上の楼閣」のリスクをなくし、HAスタック全体の責任を一本化します。また、{{ .Get "app" }}アプリケーションの**高可用性**を単一のインターフェースで管理し、人的ミスを減らします。
 
-### クラスタリングのスキルがなくても{{ .Get "app" }} `farm` クラスターを設定できますか？
+### クラスタリングのスキルがなくても{{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> クラスターを設定できますか？
 
-はい。この記事では、専門的で複雑なクラスタリングスキルなしで{{ .Get "app" }} `farm` クラスターを[すばやく実装する方法]({{ .Get "guide" }})を説明します。SafeKitのヘルスチェックで仮想IP負荷分散、アプリケーション監視、再起動を処理するため、従来のNLBクラスターソリューションより導入や保守がはるかに簡単な、堅牢で拡張性の高いソリューションになります。
+はい。この記事では、専門的で複雑なクラスタリングスキルなしで{{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> クラスターを[すばやく実装する方法]({{ .Get "guide" }})を説明します。SafeKitのヘルスチェックで仮想IP負荷分散、アプリケーション監視、再起動を処理するため、従来のNLBクラスターソリューションより導入や保守がはるかに簡単な、堅牢で拡張性の高いソリューションになります。
 
 ### {{ .Get "app" }}以外に、SafeKitはどのアプリケーションや環境を保護できますか？
 
-SafeKitは**WindowsとLinuxの両方**に対応する多用途の高可用性ソリューションで、{{ .Get "app" }} `farm` クラスターにとどまりません。**同期リアルタイムレプリケーション**と自動フェイルオーバーを備えるMirrorクラスターにより、次のような幅広い重要なワークロードを保護します。
+SafeKitは**WindowsとLinuxの両方**に対応する多用途の高可用性ソリューションで、{{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> クラスターにとどまりません。**同期リアルタイムレプリケーション**と自動フェイルオーバーを備えるMirrorクラスターにより、次のような幅広い重要なワークロードを保護します。
 
   * **仮想環境と物理環境：** Hyper-VまたはKVMの仮想マシン全体。
   * **コンテナーオーケストレーション：** Docker、Podman、K3s（Kubernetes）環境。
@@ -79,12 +79,12 @@ SafeKitは**WindowsとLinuxの両方**に対応する多用途の高可用性ソ
 
 💡 [サポート対象のHAソリューション一覧はこちらをご覧ください。](/ja/solutions/)
 
-## SafeKit `farm` クラスターは{{ .Get "app" }}でどのように動作しますか？ {#safekit-farm-cluster}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスターは{{ .Get "app" }}でどのように動作しますか？ {#safekit-farm-cluster}
 
 ### {{ .Get "app" }}のネットワーク負荷分散（NLB）はどのように動作しますか？
 
   * **Multi-AZ導入：** データセンターの障害に対する最大限の耐障害性を確保するため、ノードを複数のアベイラビリティゾーンに分散します。
-  * **アクティブ-アクティブ冗長化：** 重要な{{ .Get "app" }}アプリケーションを`farm`内のすべてのノードで同時に実行します。
+  * **アクティブ-アクティブ冗長化：** 重要な{{ .Get "app" }}アプリケーションを<span class="notranslate farm-term" translate="no">farm</span>内のすべてのノードで同時に実行します。
   * **インテリジェントなトラフィックルーティング：** ユーザーは{{ .Get "app" }}ロードバランサーが管理する[仮想IPアドレス](/ja/best-practises/how-a-virtual-ip-address-works/)を介して接続します。
   * **リアルタイムのヘルス監視：** ロードバランサーはSafeKitのヘルスチェックURLを使用します。ノードが正常な場合は**HTTP 200 OK**、障害時は**HTTP 404**（またはタイムアウト）を返し、稼働中のノードだけにトラフィックを自動ルーティングします。
 
@@ -97,7 +97,7 @@ SafeKitは**WindowsとLinuxの両方**に対応する多用途の高可用性ソ
   * **簡単なメンテナンス：** 各ノードにはSafeKit Webコンソールコネクターがあり、ワンクリックでノードをクラスターから手動除外してハードウェアまたはソフトウェアの保守を行えます。
 
 
-![Multi-AZ冗長化を備えた{{ .Get "app" }}向けSafeKit `farm` クラスターの図。ロードバランサーがHTTPヘルスチェックを使用してアクティブノード間のトラフィックをルーティングし、自動フェイルオーバーを処理します。](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
+![Multi-AZ冗長化を備えた{{ .Get "app" }}向けSafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスターの図。ロードバランサーがHTTPヘルスチェックを使用してアクティブノード間のトラフィックをルーティングし、自動フェイルオーバーを処理します。](/wp-content/uploads/2023/03/cloud-farm-cluster-load-balancing-cluster.png "w:256")
 
 **{{ .Get "app" }}向けSafeKit NLBおよびHAアーキテクチャ**
 
@@ -107,46 +107,46 @@ SafeKitは**WindowsとLinuxの両方**に対応する多用途の高可用性ソ
 
 #### ステートフル構成（セッションアフィニティ）
 
-**ステートフル**な{{ .Get "app" }}アプリケーションにはセッションアフィニティ（永続性）が必要です。これにより、特定のクライアントは複数のTCPセッションを通じて同じノードに接続され、アプリケーションコンテキストを維持できます。この場合、ロードバランサーのルールは**クライアントIPアドレス**に基づきます。個々のクライアントは特定のノードに固定されますが、異なるクライアントのトラフィックは`farm`内のノードに分散されます。
+**ステートフル**な{{ .Get "app" }}アプリケーションにはセッションアフィニティ（永続性）が必要です。これにより、特定のクライアントは複数のTCPセッションを通じて同じノードに接続され、アプリケーションコンテキストを維持できます。この場合、ロードバランサーのルールは**クライアントIPアドレス**に基づきます。個々のクライアントは特定のノードに固定されますが、異なるクライアントのトラフィックは<span class="notranslate farm-term" translate="no">farm</span>内のノードに分散されます。
 
 #### ステートレス構成（アフィニティなし）
 
-一方、**ステートレス**な{{ .Get "app" }}アプリケーションにはセッションアフィニティは不要です。セッション間にノード上へローカルコンテキストを保存しないため、クライアントは新しいTCPセッションごとに異なるノードへ分散できます。この場合、ルールは**TCPセッションID**に基づきます。`farm`全体で最も効率よくトラフィックを分散できますが、セッション依存のないサービスにのみ適用できます。
+一方、**ステートレス**な{{ .Get "app" }}アプリケーションにはセッションアフィニティは不要です。セッション間にノード上へローカルコンテキストを保存しないため、クライアントは新しいTCPセッションごとに異なるノードへ分散できます。この場合、ルールは**TCPセッションID**に基づきます。<span class="notranslate farm-term" translate="no">farm</span>全体で最も効率よくトラフィックを分散できますが、セッション依存のないサービスにのみ適用できます。
 
-### {{ .Get "app" }}でSafeKit `farm` クラスターを構成する方法 {#safekit-farm-cluster-configuration}
-
-
-![SafeKit Webコンソール：ネットワーク負荷分散と仮想IP管理のための`Farm`クラスター構成。](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+### {{ .Get "app" }}でSafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスターを構成する方法 {#safekit-farm-cluster-configuration}
 
 
-SafeKitの**`farm` クラスター**は、サービスの高可用性と拡張性を目的としています。構成では、両方のノードに受信トラフィックを同時に分散します。
+![SafeKit Webコンソール：ネットワーク負荷分散と仮想IP管理のための<span class="notranslate farm-term" translate="no">Farm</span>クラスター構成。](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+
+
+SafeKitの**<span class="notranslate farm-term" translate="no">farm</span> クラスター**は、サービスの高可用性と拡張性を目的としています。構成では、両方のノードに受信トラフィックを同時に分散します。
 
   * **負荷分散対象サービス（Macrosタブ）：** すべてのノードで稼働させるアプリケーションサービス（Apache、IIS、Nginxなど）を定義します。
-  * **ハートビートネットワーク：** ノードが`farm`を離れたことを検出する通信経路です。
-  * **仮想IP（`Farm` VIP）：** オンプレミスではSafeKit WebコンソールでVIPを設定します。クラウドではSafeKitのヘルスチェックを使用して、クラウドロードバランサーに仮想IPを設定します。
+  * **ハートビートネットワーク：** ノードが<span class="notranslate farm-term" translate="no">farm</span>を離れたことを検出する通信経路です。
+  * **仮想IP（<span class="notranslate farm-term" translate="no">Farm</span> VIP）：** オンプレミスではSafeKit WebコンソールでVIPを設定します。クラウドではSafeKitのヘルスチェックを使用して、クラウドロードバランサーに仮想IPを設定します。
   * **負荷分散ルール：** オンプレミスでは送信元IPアドレスまたはポートに基づく分散ポリシーをSafeKit Webコンソールで設定します。クラウドではクラウドロードバランサーで設定します。
   * **チェッカー：** アプリケーションの状態を監視し、プロセス障害の検出時に自動再起動を行います。
 
 
-### {{ .Get "app" }}でSafeKit `farm` クラスターを監視する方法 {#safekit-farm-cluster-monitoring}
+### {{ .Get "app" }}でSafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスターを監視する方法 {#safekit-farm-cluster-monitoring}
 
 
-![SafeKitコンソール：2ノードの`Farm`クラスターを監視し、両ノードがUP状態で負荷分散が有効になっている画面。](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+![SafeKitコンソール：2ノードの<span class="notranslate farm-term" translate="no">Farm</span>クラスターを監視し、両ノードがUP状態で負荷分散が有効になっている画面。](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-`farm`クラスターを監視すると、すべてのノードがアプリケーション性能に貢献する**アクティブ-アクティブ**構成を確認できます（この例では2ノードを表示）。
+<span class="notranslate farm-term" translate="no">farm</span>クラスターを監視すると、すべてのノードがアプリケーション性能に貢献する**アクティブ-アクティブ**構成を確認できます（この例では2ノードを表示）。
 
-  * **UP状態（2ノードで50%）：** 正常な`farm`では両ノードが「UP」（50%）になり、共有仮想IPを通じてクライアント要求を受信して処理します。
+  * **UP状態（2ノードで50%）：** 正常な<span class="notranslate farm-term" translate="no">farm</span>では両ノードが「UP」（50%）になり、共有仮想IPを通じてクライアント要求を受信して処理します。
   * **自動再分散：** いずれかのノードが障害になると、残りのノードがトラフィックの100%を処理する様子がコンソールに表示されます。フェイルオーバーの遅延はクラウドロードバランサーのヘルスチェック間隔によって異なります。
   * **ノードの追加：** 修復されたノードを再起動すると「STOP」から「UP」に変わり、管理者の操作なしで自動的にトラフィックの一部を受け取ります。
-  * **データ同期なし：** `farm`クラスターには「Orange」の再同期状態がありません。ノードはステートレスであるか、バックエンドデータベースを共有する想定です。データベースはMirrorクラスターで別途保護できます。
+  * **データ同期なし：** <span class="notranslate farm-term" translate="no">farm</span>クラスターには「Orange」の再同期状態がありません。ノードはステートレスであるか、バックエンドデータベースを共有する想定です。データベースはMirrorクラスターで別途保護できます。
 
 
 状態アイコンだけでなく、インターフェースからワンクリックでノードを管理できます。計画メンテナンスのために手動でノードを停止または起動しても、共有仮想IPがユーザーを中断することなくトラフィックを自動的に再分散します。
 
-## 比較：オンプレミスのSafeKit `Farm` クラスターとクラウドのSafeKit `Farm` クラスター {#safekit-farm-ha-comparison}
+## 比較：オンプレミスのSafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターとクラウドのSafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスター {#safekit-farm-ha-comparison}
 
-**オンプレミスとクラウドにおけるSafeKit `Farm` クラスターの技術比較**
+**オンプレミスとクラウドにおけるSafeKit <span class="notranslate farm-term" translate="no">Farm</span> クラスターの技術比較**
 
 機能 | SafeKitオンプレミス（物理/VM） | SafeKitクラウド
 ---|---|---
@@ -159,7 +159,7 @@ SafeKitの**`farm` クラスター**は、サービスの高可用性と拡張�
 
 **まとめると、**オンプレミスでもクラウドでも、SafeKitは重要なアプリケーションの耐障害性と拡張性を保ち、単一の統合インターフェースで簡単に管理できるようにします。ソフトウェアベンダーにとって、**ソフトウェアのみで動作するSafeKit**は製品に高可用性オプションを追加する最適な選択肢です。ハードウェア依存または特定クラウドに限定されたソリューションと異なり、SafeKitは100%独立しており、オンプレミス、仮想環境、パブリッククラウドのいずれでも一貫したHAを提供します。
 
-## ビデオガイド：SafeKit `Farm` NLBクラスターの構成 {#videoguide-safekit-farm-cluster}
+## ビデオガイド：SafeKit <span class="notranslate farm-term" translate="no">Farm</span> NLBクラスターの構成 {#videoguide-safekit-farm-cluster}
 
 ### SafeKitビデオ：ネットワーク負荷分散と仮想IP管理（5:03） {#demo-farm}
 

@@ -25,7 +25,7 @@ La mise en place d'une solution de continuité d'activité en entreprise pour pl
 
 ### Le logiciel SafeKit : une solution simple pour la continuité des activités {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit propose deux modules simples `farm` et mirror pour protéger vos applications critiques contre les pannes. Le déploiement s'effectue sur des serveurs standard et ne requiert aucune compétence informatique pour la gestion de la solution. Aucun disque partagé, SAN répliqué, équilibreur de charge, système d'exploitation ou base de données en édition Entreprise n'est nécessaire. 
+SafeKit propose deux modules simples <span class="notranslate farm-term" translate="no">farm</span> et mirror pour protéger vos applications critiques contre les pannes. Le déploiement s'effectue sur des serveurs standard et ne requiert aucune compétence informatique pour la gestion de la solution. Aucun disque partagé, SAN répliqué, équilibreur de charge, système d'exploitation ou base de données en édition Entreprise n'est nécessaire. 
 
 
 {{%  insert-safekit-hub-fr  %}}

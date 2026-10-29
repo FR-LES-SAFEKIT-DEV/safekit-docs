@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/how-a-virtual-ip-addres
 description: "SafeKitソフトウェア定義の仮想 IP (VIP) アドレスを使用して 24 時間 365 日の稼働時間をどのように確保しているかをご覧ください。Gratuitous ARP による自動フェイルオーバーについて、またWindowsおよびLinuxにおける業務継続性において、Gratuitous ARP が DNS リダイレクトよりも優れている理由について学びましょう。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性クラスタにおける仮想IPアドレスとは？、 SafeKitにおける仮想IPの実装、目次、同一サブネットフェイルオーバーにおける仮想IPアドレス（VIP）の動作（ Mirrorクラスタ）、異なるサブネット間における仮想IP（VIP）の動作（ Mirrorクラスタ）、同一サブネット`Farm`における負荷分散型仮想IPの動作（ `Farm`クラスタ）、異なるサブネット間における負荷分散型仮想IPの動作（ `Farm`クラスタ）、仮想IPとDNSリダイレクト：DNSフェイルオーバーが失敗する理由、比較：仮想IPの実装、レイテンシ、およびアプリケーションの透過性、ネットワーク負荷分散と高可用性のための仮想IPアドレスの構成、仮想IP（VIP）に関するよくある質問、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "高可用性クラスタにおける仮想IPアドレスとは？、 SafeKitにおける仮想IPの実装、目次、同一サブネットフェイルオーバーにおける仮想IPアドレス（VIP）の動作（ Mirrorクラスタ）、異なるサブネット間における仮想IP（VIP）の動作（ Mirrorクラスタ）、同一サブネット<span class="notranslate farm-term" translate="no">Farm</span>における負荷分散型仮想IPの動作（ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ）、異なるサブネット間における負荷分散型仮想IPの動作（ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ）、仮想IPとDNSリダイレクト：DNSフェイルオーバーが失敗する理由、比較：仮想IPの実装、レイテンシ、およびアプリケーションの透過性、ネットワーク負荷分散と高可用性のための仮想IPアドレスの構成、仮想IP（VIP）に関するよくある質問、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
 # 高可用性クラスタリングにおける仮想IPアドレス（VIP）の仕組みとは？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -20,7 +20,7 @@ topics: "高可用性クラスタにおける仮想IPアドレスとは？、 Sa
 ## SafeKitにおける仮想IPの実装 {#safekit-vip-implementation}
 
   * **Mirrorクラスター:** 、リアルタイムのレプリケーションとフェイルオーバーを容易にするために、プライマリ サーバーでのみアクティブなフローティング IP を備えています。
-  * **`Farm`クラスター:**すべてのノード間で VIP を同時に維持することにより、ネットワーク負荷分散を有効にします。
+  * **<span class="notranslate farm-term" translate="no">Farm</span>クラスター:**すべてのノード間で VIP を同時に維持することにより、ネットワーク負荷分散を有効にします。
 
 
 **主な利点：** VIPは、 **Gratuitous ARP（アドレス解決プロトコル）**または**MACアドレステイクオーバーを**利用することで、クライアントの手動再構成なしにシームレスなアプリケーションのフェイルオーバーを可能にし、24時間365日のビジネス継続性を保証します。
@@ -30,7 +30,7 @@ topics: "高可用性クラスタにおける仮想IPアドレスとは？、 Sa
 
 ![ Evidianにおける仮想IP（VIP）動作の比較図SafeKit : MirrorアクティブノードにフローティングIPを表示するクラスタと、 Farm全ノード間でネットワーク負荷分散を表示するクラスタ。 ](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-SafeKit内のMirrorおよび`Farm`クラスタに対する**仮想 IP 実装戦略**
+SafeKit内のMirrorおよび<span class="notranslate farm-term" translate="no">Farm</span>クラスタに対する**仮想 IP 実装戦略**
 
 
 {{%  insert-safekit-4-buttons-ja  %}}
@@ -40,8 +40,8 @@ SafeKit内のMirrorおよび`Farm`クラスタに対する**仮想 IP 実装戦�
 
   * [同一サブネットフェイルオーバー（ Mirrorクラスタ）における仮想IPアドレス（VIP）の仕組み](#virtual-ip-same-subnet-failover)
   * [仮想IP (VIP) が異なるサブネット間でどのように機能するか ( Mirrorクラスタ) ](#virtual-ip-different-subnets-failover)
-  * [同一サブネット内の負荷分散型仮想IPの動作原理`Farm` ( `Farm`クラスタ) ](#vip-load-balancing-same-subnet)
-  * [異なるサブネット間でのロードバランスされた仮想IPの動作方法（ `Farm`クラスタ） ](#vip-load-balancing-different-subnets)
+  * [同一サブネット内の負荷分散型仮想IPの動作原理<span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span>クラスタ) ](#vip-load-balancing-same-subnet)
+  * [異なるサブネット間でのロードバランスされた仮想IPの動作方法（ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ） ](#vip-load-balancing-different-subnets)
   * [仮想IPとDNSリダイレクト：DNSフェイルオーバーが失敗する理由](#virtual-ip-vs-dns-redirection-failover)
   * [比較: 仮想IPの実装、レイテンシ、およびアプリケーションの透過性](#vip-vs-dns-comparison)
   * [ネットワーク負荷分散と高可用性のための仮想IPアドレスの設定](#virtual-ip-configuration-load-balancing-ha)
@@ -119,22 +119,22 @@ SafeKit 、各ノードに専用の**ヘルスチェックURLを**提供する�
 
 > **⚠️ 注意:**ロードバランサーを選択する場合は、アプリケーションが**ソース/宛先 IP 変換 (SNAT/DNAT)**と互換性があることを確認してください。ロードバランサーを使用すると、アプリケーションは元のユーザーの ID を追跡できなくなったり、自身のネットワーク インターフェイスに直接構成された仮想 IP を認識できなくなったために起動に失敗したりする可能性があります。
 
-## 同一サブネット`Farm` （ `Farm`クラスタ）におけるロードバランスされた仮想IPの動作 {#vip-load-balancing-same-subnet}
+## 同一サブネット<span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ）におけるロードバランスされた仮想IPの動作 {#vip-load-balancing-same-subnet}
 
 ### スケーラブルなパフォーマンス：カーネルレベルの負荷分散と冗長性 {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-トラフィック量の多い環境向けには、 **アーキテクチャガイド：マルチノード`Farm`クラスタによるスケーラブルな高可用性**で、 SafeKit完全な冗長性を維持しながら、ワークロードを複数のアクティブサーバーに分散する方法を説明しています。 
+トラフィック量の多い環境向けには、 **アーキテクチャガイド：マルチノード<span class="notranslate farm-term" translate="no">Farm</span>クラスタによるスケーラブルな高可用性**で、 SafeKit完全な冗長性を維持しながら、ワークロードを複数のアクティブサーバーに分散する方法を説明しています。 
 
-### `Farm`クラスタアーキテクチャ: WindowsまたはLinuxノード間での負荷分散 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### <span class="notranslate farm-term" translate="no">Farm</span>クラスタアーキテクチャ: WindowsまたはLinuxノード間での負荷分散 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 ![同一サブネット内の負荷分散型仮想IP（VIP）クラスタの図farm ](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
- カーネルフィルタリングによる分散トラフィック処理 負荷**クラスタでは、 `farm` IP（VIP）アドレス**使用して、クライアント要求を複数のサーバーに同時に分散します。この例では2つのノードを使用していますが、このアーキテクチャはより大規模なサーバーファームをサポートするように拡張できます。同一サブネット構成では、IPエイリアシングを使用して**クラスタ内のすべてのサーバーの**カードにVIPが構成されます。 
+ カーネルフィルタリングによる分散トラフィック処理 負荷**クラスタでは、 <span class="notranslate farm-term" translate="no">farm</span> IP（VIP）アドレス**使用して、クライアント要求を複数のサーバーに同時に分散します。この例では2つのノードを使用していますが、このアーキテクチャはより大規模なサーバーファームをサポートするように拡張できます。同一サブネット構成では、IPエイリアシングを使用して**クラスタ内のすべてのサーバーの**カードにVIPが構成されます。 
 
 #### トラフィック分散：カーネルレベルフィルタ {#traffic-distribution-the-kernel-level-filter}
 
-単純なフェイルオーバークラスタとは異なり、 `farm`クラスタは、特殊な**カーネルレベルフィルタ**を介してトラフィックを管理します。そのプロセスは次のとおりです。 
+単純なフェイルオーバークラスタとは異なり、 <span class="notranslate farm-term" translate="no">farm</span>クラスタは、特殊な**カーネルレベルフィルタ**を介してトラフィックを管理します。そのプロセスは次のとおりです。 
 
   * **ARP マッピング:**クライアントの ARP キャッシュでは、VIP は最初に単一のハードウェア アドレス (サーバー 1 の`mac1`など) に関連付けられます。
   * **パケット分割:**サーバー 1 がトラフィックを受信すると、 SafeKitカーネルフィルタは、受信パケットの識別情報 ( **クライアント IP**または**TCP ポート**に基づく) を分析します。
@@ -147,20 +147,20 @@ SafeKit 、各ノードに専用の**ヘルスチェックURLを**提供する�
 
 #### 遠隔地への展開 {#deployment-in-remote-sites}
 
-**リモートデータセンター**にまたがって運用している組織の場合、サイトが**拡張 LAN または VLAN**を介してリンクされていれば、この負荷分散アルゴリズムは引き続き機能します。これにより、仮想的な「同一サブネット」環境が作成され、地理的に分散した`farm`クラスターにとって最も効率的な構成となります。 
+**リモートデータセンター**にまたがって運用している組織の場合、サイトが**拡張 LAN または VLAN**を介してリンクされていれば、この負荷分散アルゴリズムは引き続き機能します。これにより、仮想的な「同一サブネット」環境が作成され、地理的に分散した<span class="notranslate farm-term" translate="no">farm</span>クラスターにとって最も効率的な構成となります。 
 
-## 異なるサブネット間でロードバランスされた仮想IPがどのように機能するか（ `Farm`クラスタ） {#vip-load-balancing-different-subnets}
+## 異なるサブネット間でロードバランスされた仮想IPがどのように機能するか（ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ） {#vip-load-balancing-different-subnets}
 
 ### マルチゾーンスケーリング：クラウドサブネット間でのトラフィックのオーケストレーション {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-**アーキテクチャガイド：マルチゾーンおよびクラウド環境における`Farm`クラスタのスケーリング**アプリケーションワークロードを個別の可用性ゾーンとサブネットに分散するための設計図を提供します。 
+**アーキテクチャガイド：マルチゾーンおよびクラウド環境における<span class="notranslate farm-term" translate="no">Farm</span>クラスタのスケーリング**アプリケーションワークロードを個別の可用性ゾーンとサブネットに分散するための設計図を提供します。 
 
-### クロスサブネット`Farm`クラスタ: マルチノードWindowsおよびLinuxスケーラビリティ {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### クロスサブネット<span class="notranslate farm-term" translate="no">Farm</span>クラスタ: マルチノードWindowsおよびLinuxスケーラビリティ {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 ![ 2つの異なるサブネットにまたがって動作する負荷分散型クラスタの図farm ](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
- 外部ロードバランシングによるグローバルなトラフィック分散`farm`ノードが**異なるサブネット**に分散されている場合 (マルチ AZ クラウド展開で一般的)、 **仮想 IP (VIP)**は外部の**ロードバランサー (LB)**によって管理されます。LB は VIP を保持し、受信トラフィックをそれぞれのサブネットにあるサーバーの物理 IP アドレスに転送します。 
+ 外部ロードバランシングによるグローバルなトラフィック分散<span class="notranslate farm-term" translate="no">farm</span>ノードが**異なるサブネット**に分散されている場合 (マルチ AZ クラウド展開で一般的)、 **仮想 IP (VIP)**は外部の**ロードバランサー (LB)**によって管理されます。LB は VIP を保持し、受信トラフィックをそれぞれのサブネットにあるサーバーの物理 IP アドレスに転送します。 
 
 #### インテリジェントなトラフィックルーティングと負荷分散ルール {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -174,7 +174,7 @@ SafeKit 、各ノードに専用の**ヘルスチェックURLを**提供する�
 
 #### SafeKitヘルスチェックメカニズム {#safekit-health-check-mechanism}
 
-SafeKit 、 `farm`内のすべてのサーバーにリアルタイムの**ヘルスチェック URL**を提供し、その運用状況をロードバランサーに伝達します。 
+SafeKit 、 <span class="notranslate farm-term" translate="no">farm</span>内のすべてのサーバーにリアルタイムの**ヘルスチェック URL**を提供し、その運用状況をロードバランサーに伝達します。 
 
   * **ノードが稼働中:**ヘルスチェックの結果、 `HTTP 200 OK`が返されました。ロードバランサーはこのサーバーをアクティブローテーションに含めています。
   * **ノードダウン/フェイルオーバー:**サーバーまたはアプリケーションに障害が発生した場合、 SafeKit `HTTP 404 NOT FOUND`を返します (またはサービスにアクセスできなくなります)。ロードバランサーは、障害が発生したノードへのトラフィックの送信を直ちに停止します。
@@ -182,7 +182,7 @@ SafeKit 、 `farm`内のすべてのサーバーにリアルタイムの**ヘル
 
 #### クラウド導入標準: AWS 、 Azure 、 GCP 、 {#cloud-deployment-standards-aws-azure-and-gcp}
 
-このアーキテクチャは、 **クラウド`Farm`クラスタ**の基盤モデルであり、サブネットまたはゾーン全体がオフラインになった場合でも、残りのノードが負荷の処理を継続することを保証します。これは、以下のサービスでネイティブにサポートされています。 
+このアーキテクチャは、 **クラウド<span class="notranslate farm-term" translate="no">Farm</span>クラスタ**の基盤モデルであり、サブネットまたはゾーン全体がオフラインになった場合でも、残りのノードが負荷の処理を継続することを保証します。これは、以下のサービスでネイティブにサポートされています。 
 
   * 💡 [ **Amazon AWS** ](</ja/solutions/aws-load-balancing-cluster-failover/>) ( AWSネットワークロードバランサー)
   * 💡 [ **Microsoft Azure** ](</ja/solutions/azure-load-balancing-cluster-failover/>) ( Azureロードバランサー )
@@ -234,7 +234,7 @@ DNSリダイレクトは、高可用性ソリューションとしては一貫�
 環境とユースケース|高可用性タイプ|リダイレクトメカニズム|ネットワーク遅延|アプリケーションの透過性とIPローカリティ  
 ---|---|---|---|---  
 プライマリ/バックアップ (高可用性) | Mirrorクラスタ| Gratuitous ARP / MAC テイクオーバー|非常に低い: ブロードキャスト GARP を検出して送信する時間|完全な透過性: 仮想 IP はアクティブ ノードにローカルです。クライアント IP は保持されます。  
-ロードバランシング (アクティブ/アクティブ) | `Farm`クラスタ|カーネルレベルのネットワークフィルタ / GARP |非常に低い: ネットワークフィルタを検出して再構成するのに時間がかかります|完全な透過性: 仮想 IP はすべてのノードでローカルです。クライアント IP は保持されます。  
+ロードバランシング (アクティブ/アクティブ) | <span class="notranslate farm-term" translate="no">Farm</span>クラスタ|カーネルレベルのネットワークフィルタ / GARP |非常に低い: ネットワークフィルタを検出して再構成するのに時間がかかります|完全な透過性: 仮想 IP はすべてのノードでローカルです。クライアント IP は保持されます。  
 同一サブネット / 拡張 LAN (VLAN ストレッチ) |ディザスター リカバリ (リモート データ センター) |標準 IP エイリアシング / GARP |低: ストレッチ VLAN に依存します RTT (ラウンド トリップ タイム) |完全な透過性: 仮想 IP はノード上でローカルです。クライアント IP は保持されます。  
 異なるサブネット|ディザスターリカバリー (リモートデータセンター / クラウド) |外部ロードバランサー|中程度: ロードバランサーのヘルスチェック間隔により、フェイルオーバーのレイテンシが高くなります| ⚠️ 部分的な透過性: SNAT/DNAT を使用します。仮想 IP は**ノード上でローカルではありません**クライアント IP は**保持されません**アプリケーションがこれをサポートする必要があります。  
 DNS 再ルーティング: VIP なし|ディザスターリカバリー (リモートデータセンター) | DNS レコード更新 (名前 / 物理 IP) |高/予測不能: DNS TTL (Time To Live) とクライアント DNS キャッシュに依存します。 | ⚠️ 信頼性が低い: クライアントは DNS を再解決する必要があります。ほとんどの場合、クライアントは起動時に解決された古い IP を引き続き使用し、フェイルオーバー後に再ルーティングされません。  

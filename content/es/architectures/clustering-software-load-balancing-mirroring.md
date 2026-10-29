@@ -21,9 +21,9 @@ Agrupación ![ SafeKit con equilibrio de carga y duplicación ](/wp-content/uplo
 
 Por ejemplo, con el software de agrupación en clústeres SafeKit , puede implementar el equilibrio de carga IIS y la replicación Microsoft SQL Server .
 
-Para ello, debe implementar un módulo `farm` para el servidor SQL IIS y un módulo mirror para el servidor SQL Microsoft . Cada módulo `farm` y mirror está configurado con su propia dirección IP virtual y sus propios scripts de reinicio.
+Para ello, debe implementar un módulo <span class="notranslate farm-term" translate="no">farm</span> para el servidor SQL IIS y un módulo mirror para el servidor SQL Microsoft . Cada módulo <span class="notranslate farm-term" translate="no">farm</span> y mirror está configurado con su propia dirección IP virtual y sus propios scripts de reinicio.
 
-Los módulos mirror y `farm` pueden implementarse en un único clúster de dos servidores. Los módulos IIS , Microsoft y SQL Server se ejecutarán en estos dos servidores. También pueden implementarse en dos clústeres con servidores diferentes.
+Los módulos mirror y <span class="notranslate farm-term" translate="no">farm</span> pueden implementarse en un único clúster de dos servidores. Los módulos IIS , Microsoft y SQL Server se ejecutarán en estos dos servidores. También pueden implementarse en dos clústeres con servidores diferentes.
 
 Con el software de agrupación en clústeres SafeKit , no hay diferencia entre una implementación en los mismos servidores o en servidores diferentes.
 

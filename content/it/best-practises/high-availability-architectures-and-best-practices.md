@@ -27,7 +27,7 @@ Esistono due tipi di architetture [ ad alta disponibilità: quelle per applicazi
 
 Le architetture ad alta disponibilità per il backend si basano su due server che condividono o replicano i dati, con un failover automatico dell'applicazione in caso di guasti hardware o software.
 
-Le architetture ad alta disponibilità per il frontend si basano su una `farm` di server (2 o più server). Il bilanciamento del carico viene effettuato tramite hardware o software e distribuisce le sessioni TCP ai server disponibili nella configurazione farm .
+Le architetture ad alta disponibilità per il frontend si basano su una <span class="notranslate farm-term" translate="no">farm</span> di server (2 o più server). Il bilanciamento del carico viene effettuato tramite hardware o software e distribuisce le sessioni TCP ai server disponibili nella configurazione farm .
 
 Inoltre, è necessario scegliere tra alta disponibilità a livello di applicazione o a livello di macchina virtuale.
 

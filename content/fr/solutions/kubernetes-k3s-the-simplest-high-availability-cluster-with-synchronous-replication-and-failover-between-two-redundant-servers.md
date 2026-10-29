@@ -71,7 +71,7 @@ SafeKit est une solution de haute disponibilité polyvalente **compatible avec W
   * Infrastructure cloud **: Haute disponibilité pour les applications cloud** .
 
 
-SafeKit fournit également **`Farm` Clusters** avec **Network Load Balancer et Failover natifs** pour les applications sans état comme **Serveurs Web** .
+SafeKit fournit également **<span class="notranslate farm-term" translate="no">Farm</span> Clusters** avec **Network Load Balancer et Failover natifs** pour les applications sans état comme **Serveurs Web** .
 
 💡 [ Découvrez la liste complète des solutions HA prises en charge ici. ](</fr/solutions/>)
 

@@ -21,13 +21,13 @@ En un clúster mirror , el software SafeKit se instala en dos servidores físico
 
 ## ¿Cómo implementar servidores redundantes activos/activos con balanceo de carga de red y conmutación por error? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### El clúster SafeKit `farm` {#the-safekit-farm-cluster}
+### El clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
 
 
 ![ Servidores redundantes con balanceo de carga de red y conmutación por error ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-En un clúster `farm` , el software SafeKit se instala en servidores redundantes que ejecutan Windows o Linux (en las instalaciones o en la nube). Todos los servidores redundantes están activos y ejecutan la misma aplicación front-end crítica. Los clientes se conectan a una dirección IP virtual [ ](</es/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . Las sesiones TCP se distribuyen mediante balanceo de carga entre todos los servidores redundantes. Si un servidor falla, SafeKit reconfigura automáticamente el balanceo de carga de las sesiones TCP entre los servidores activos restantes. Cuando se reinicia el servidor que falló, se reintegra automáticamente como un servidor redundante activo y recibe nuevas sesiones TCP.
+En un clúster <span class="notranslate farm-term" translate="no">farm</span> , el software SafeKit se instala en servidores redundantes que ejecutan Windows o Linux (en las instalaciones o en la nube). Todos los servidores redundantes están activos y ejecutan la misma aplicación front-end crítica. Los clientes se conectan a una dirección IP virtual [ ](</es/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . Las sesiones TCP se distribuyen mediante balanceo de carga entre todos los servidores redundantes. Si un servidor falla, SafeKit reconfigura automáticamente el balanceo de carga de las sesiones TCP entre los servidores activos restantes. Cuando se reinicia el servidor que falló, se reintegra automáticamente como un servidor redundante activo y recibe nuevas sesiones TCP.
 
 
 {{%  insert-safekit-hub-es  %}}

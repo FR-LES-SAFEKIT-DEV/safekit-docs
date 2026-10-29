@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/what-is-rpo-and-rto-wit
 description: "명확한 예시를 통해 RPO(복구 시점 목표)와 RTO(복구 시간 목표)의 정의를 알아보세요. SafeKit 어떻게 데이터 손실 제로(RPO=0)와 신속한 페일오버를 달성하여 24시간 연중무휴 비즈니스 연속성을 보장하는지 살펴보세요."
 category: "best-practises"
 lang: "ko"
-topics: "요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 솔루션의 RPO 및 RTO 계산 방법, 백업 및 재해 복구 솔루션의 RPO 및 RTO 결정 방법, SafeKit Mirror 클러스터는 어떻게 0 RPO 및 낮은 RTO를 달성합니까?, 로드 밸런싱이 적용된 SafeKit `Farm` 클러스터의 RTO 벤치마크는 무엇입니까?, 비교표: RTO vs. RPO, 실제 고가용성: 0 RPO 및 거의 0에 가까운 RTO 실시간 데모, FAQ: 비즈니스 연속성을 위한 RPO 및 RTO 최적화, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 솔루션의 RPO 및 RTO 계산 방법, 백업 및 재해 복구 솔루션의 RPO 및 RTO 결정 방법, SafeKit Mirror 클러스터는 어떻게 0 RPO 및 낮은 RTO를 달성합니까?, 로드 밸런싱이 적용된 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터의 RTO 벤치마크는 무엇입니까?, 비교표: RTO vs. RPO, 실제 고가용성: 0 RPO 및 거의 0에 가까운 RTO 실시간 데모, FAQ: 비즈니스 연속성을 위한 RPO 및 RTO 최적화, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # RPO와 RTO란 무엇일까요? 정의, 예시 및 고가용성 {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}
@@ -26,7 +26,7 @@ topics: "요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 �
   * [ 고가용성 및 비즈니스 연속성 솔루션의 RPO와 RTO는 어떻게 계산하나요? ](#calculate-rpo-rto-high-availability)
   * [ 백업 및 재해 복구 솔루션의 RPO와 RTO는 어떻게 결정하나요? ](#calculate-rpo-rto-backup-solution)
   * SafeKit 클러스터는 어떻게 0 RPO와 낮은 RTO를 달성합니까? [ Mirror ](#rpo-rto-safekit-mirror-cluster)
-  * [ 로드 밸런싱이 적용된 SafeKit `Farm` 클러스터의 RTO 벤치마크는 무엇입니까? ](#rpo-rto-safekit-farm-cluster)
+  * [ 로드 밸런싱이 적용된 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터의 RTO 벤치마크는 무엇입니까? ](#rpo-rto-safekit-farm-cluster)
   * [ 비교표: RTO 대 RPO ](#rpo-vs-rto-comparison)
   * [ 고가용성 실전 구현: 제로 RPO 및 거의 제로 RTO의 실시간 데모 ](#safekit-rpo-rto-video-demos)
   * [ RPO 및 RTO 관련 자주 묻는 질문 ](#faq-rpo-rto)
@@ -148,38 +148,38 @@ SafeKit 의 **mirror 노드 간 데이터 복제가 [ 및 실시간 ](</ko/best-
 
 **애플리케이션 수준의 고가용성** 활용함으로써 SafeKit 표준 가상화에 내재된 "재부팅 페널티"를 제거하여 **비즈니스 연속성 계획** 의 가동 중지 시간을 최소화합니다. 
 
-## 로드 밸런싱이 적용된 SafeKit `Farm` 클러스터의 RTO 벤치마크는 무엇인가요? {#rpo-rto-safekit-farm-cluster}
+## 로드 밸런싱이 적용된 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터의 RTO 벤치마크는 무엇인가요? {#rpo-rto-safekit-farm-cluster}
 
-### SafeKit `Farm` 클러스터란 무엇입니까? {#what-is-safekit-farm-cluster}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터란 무엇입니까? {#what-is-safekit-farm-cluster}
 
-**SafeKit `Farm` 클러스터,** 는 웹 서버와 같은 상태 비저장 애플리케이션에 적합한 소프트웨어 기반 고가용성 솔루션으로, **확장성,** 및 **이중화** 모두 필요로 합니다. 데이터 복제에 중점을 둔 mirror 클러스터와 달리, `farm` 클러스터는 들어오는 트래픽을 여러 활성 노드에 분산시킵니다.
+**SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터,** 는 웹 서버와 같은 상태 비저장 애플리케이션에 적합한 소프트웨어 기반 고가용성 솔루션으로, **확장성,** 및 **이중화** 모두 필요로 합니다. 데이터 복제에 중점을 둔 mirror 클러스터와 달리, <span class="notranslate farm-term" translate="no">farm</span> 클러스터는 들어오는 트래픽을 여러 활성 노드에 분산시킵니다.
 
 
 ![ SafeKit Farm 상태 비저장 애플리케이션을 위한 네트워크 로드 밸런싱 및 페일오버를 보여주는 클러스터 아키텍처 ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-트래픽이 많은 환경에서 **비즈니스 연속성** 유지하기 위해 SafeKit 클러스터는 두 가지 핵심 메커니즘 `farm` 통해 작동합니다.
+트래픽이 많은 환경에서 **비즈니스 연속성** 유지하기 위해 SafeKit 클러스터는 두 가지 핵심 메커니즘 <span class="notranslate farm-term" translate="no">farm</span> 통해 작동합니다.
 
-  * **네트워크 로드 밸런싱:** SafeKit 는 가상 IP 주소를 사용하여 들어오는 네트워크 트래픽을 여러 활성 서버로 구성된 " `farm` "에 분산합니다. 이를 통해 특정 서버에 과부하가 걸리지 않고 애플리케이션 성능이 극대화됩니다.
-  * **자동 장애 감지 및 재구성:** `farm` 네트워크의 노드 중 하나에 장애가 발생하면 SafeKit 하트비트를 통해 장애를 감지하고 즉시 나머지 정상 노드들로 트래픽을 재분배합니다. 이를 통해 다른 노드들이 이미 활성화되어 부하를 흡수할 준비가 되어 있으므로 전체 서비스의 RTO(복구 시간 목표)를 거의 0에 가깝게 낮출 수 있습니다.
+  * **네트워크 로드 밸런싱:** SafeKit 는 가상 IP 주소를 사용하여 들어오는 네트워크 트래픽을 여러 활성 서버로 구성된 " <span class="notranslate farm-term" translate="no">farm</span> "에 분산합니다. 이를 통해 특정 서버에 과부하가 걸리지 않고 애플리케이션 성능이 극대화됩니다.
+  * **자동 장애 감지 및 재구성:** <span class="notranslate farm-term" translate="no">farm</span> 네트워크의 노드 중 하나에 장애가 발생하면 SafeKit 하트비트를 통해 장애를 감지하고 즉시 나머지 정상 노드들로 트래픽을 재분배합니다. 이를 통해 다른 노드들이 이미 활성화되어 부하를 흡수할 준비가 되어 있으므로 전체 서비스의 RTO(복구 시간 목표)를 거의 0에 가깝게 낮출 수 있습니다.
 
 
-### SafeKit `Farm` 의 RPO는 무엇입니까? {#what-is-rpo-safekit-farm}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 의 RPO는 무엇입니까? {#what-is-rpo-safekit-farm}
 
-**SafeKit `Farm` 클러스터** 의 **RPO(복구 시점 목표)** 는 일반적으로 **'해당 없음(N/A)'** 으로 간주됩니다. 이는 `farm` 클러스터가 데이터가 노드에 로컬로 저장되지 않는 **스테이트리스 애플리케이션을** 위해 특별히 설계되었기 때문입니다. 
+**SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터** 의 **RPO(복구 시점 목표)** 는 일반적으로 **'해당 없음(N/A)'** 으로 간주됩니다. 이는 <span class="notranslate farm-term" translate="no">farm</span> 클러스터가 데이터가 노드에 로컬로 저장되지 않는 **스테이트리스 애플리케이션을** 위해 특별히 설계되었기 때문입니다. 
 
-`farm` 클러스터는 데이터 동기화보다는 **네트워크 로드 밸런싱** 에 중점을 두기 때문에 클러스터 내 노드 간에는 데이터 복제가 이루어지지 않습니다. 일반적인 **비즈니스 연속성 계획** `farm` 아키텍처를 포함합니다. 
+<span class="notranslate farm-term" translate="no">farm</span> 클러스터는 데이터 동기화보다는 **네트워크 로드 밸런싱** 에 중점을 두기 때문에 클러스터 내 노드 간에는 데이터 복제가 이루어지지 않습니다. 일반적인 **비즈니스 연속성 계획** <span class="notranslate farm-term" translate="no">farm</span> 아키텍처를 포함합니다. 
 
-  * **상태 비저장 작업:** `farm` 의 모든 노드는 동일하며 영구 데이터를 저장하지 않습니다. 따라서 노드 장애 발생 시 측정할 수 있는 "데이터 손실"이 없습니다. 
+  * **상태 비저장 작업:** <span class="notranslate farm-term" translate="no">farm</span> 의 모든 노드는 동일하며 영구 데이터를 저장하지 않습니다. 따라서 노드 장애 발생 시 측정할 수 있는 "데이터 손실"이 없습니다. 
   * **외부 데이터 저장소:** 애플리케이션에 데이터 영구 저장이 필요한 경우 일반적으로 별도의 백엔드 **SafeKit Mirror 클러스터** 에서 처리되며, 이 경우 RPO는 0이 됩니다. 
 
 
-### SafeKit `Farm` 의 RTO는 얼마입니까? {#rto-example-safekit-farm-cluster}
+### SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 의 RTO는 얼마입니까? {#rto-example-safekit-farm-cluster}
 
-`farm` 아키텍처에서 모든 노드가 일반적으로 동시에 활성화되므로 **RTO는 단 몇 초** 로 단축됩니다. 복구 시간은 클러스터가 트래픽 분배를 재구성하는 속도에 따라 결정됩니다.
+<span class="notranslate farm-term" translate="no">farm</span> 아키텍처에서 모든 노드가 일반적으로 동시에 활성화되므로 **RTO는 단 몇 초** 로 단축됩니다. 복구 시간은 클러스터가 트래픽 분배를 재구성하는 속도에 따라 결정됩니다.
 
   * **하드웨어 오류:** RTO는 모니터링 채널 전체의 _장애 감지 시간 초과_와 같습니다(기본값은 몇 초). 하트비트 손실이 감지되면 **가상 IP 로드 밸런싱 필터** 자동으로 재구성되어 트래픽을 나머지 정상 노드로 리디렉션합니다.
-  * **소프트웨어 오류 또는 계획된 재시작:** RTO는 해당 노드의 _애플리케이션 중지 시간_과 _애플리케이션 재시작 시간_을 더한 값으로 계산되며, 이 시간 동안 `farm` 의 다른 노드들은 모든 수신 트래픽을 계속 처리합니다.
+  * **소프트웨어 오류 또는 계획된 재시작:** RTO는 해당 노드의 _애플리케이션 중지 시간_과 _애플리케이션 재시작 시간_을 더한 값으로 계산되며, 이 시간 동안 <span class="notranslate farm-term" translate="no">farm</span> 의 다른 노드들은 모든 수신 트래픽을 계속 처리합니다.
 
 
 이 "액티브-액티브" 메커니즘은 상태 비저장 서비스의 경우, 새로운 대기 노드에서 서비스를 초기화할 필요가 없으므로 **비즈니스 연속성** 의 영향이 최종 사용자에게 거의 느껴지지 않도록 보장합니다.
@@ -206,7 +206,7 @@ SafeKit 의 **mirror 노드 간 데이터 복제가 [ 및 실시간 ](</ko/best-
 아키텍처 | 사용 사례 | RTO(가용성) | RPO(데이터 손실)  
 ---|---|---|---  
 Mirror 클러스터 | 실시간 복제 | 약 1분 (하트비트 + 재시작) | 0 (데이터 손실 없음)  
-`Farm` 클러스터 | 네트워크 로드 밸런싱 | 몇 초 | 해당 없음(상태 비저장)  
+<span class="notranslate farm-term" translate="no">Farm</span> 클러스터 | 네트워크 로드 밸런싱 | 몇 초 | 해당 없음(상태 비저장)  
   
 ## 실제 고가용성 구현: 제로 RPO 및 거의 제로 RTO의 실시간 데모 {#safekit-rpo-rto-video-demos}
 
@@ -223,9 +223,9 @@ SafeKit 심각한 장애를 어떻게 처리하는지 확인해 보세요. 이 �
 
 [ 무료 체험판 바로가기 ](</ko/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/>)
 
-### 영상: SafeKit `Farm` 클러스터에서 거의 0에 가까운 RTO 달성 (5:03) {#demo-farm-cluster-rpo-rto}
+### 영상: SafeKit <span class="notranslate farm-term" translate="no">Farm</span> 클러스터에서 거의 0에 가까운 RTO 달성 (5:03) {#demo-farm-cluster-rpo-rto}
 
-SafeKit Apache 웹 서버 `farm` 관리하여 성능 확장성과 즉각적인 장애 조치를 모두 제공하는 방식을 살펴보세요.
+SafeKit Apache 웹 서버 <span class="notranslate farm-term" translate="no">farm</span> 관리하여 성능 확장성과 즉각적인 장애 조치를 모두 제공하는 방식을 살펴보세요.
 
 #### 챕터 {#chapters-1}
 

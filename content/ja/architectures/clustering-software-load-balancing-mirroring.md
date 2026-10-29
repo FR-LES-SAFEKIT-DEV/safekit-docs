@@ -21,9 +21,9 @@ topics: "SafeKitクラスタリングソフトウェア、🔍 SafeKit高可用�
 
 例えば、 SafeKitクラスタリングソフトウェアを使用すると、 IISロードバランシングとMicrosoftおよびSQL Serverミラーリングを実装できます。
 
-そのためには、 `farm` モジュール IIS そして mirror モジュール Microsoft SQLサーバー。各 `farm` そして mirror このモジュールは、独自の仮想IPアドレスと独自の再起動スクリプトで構成されています。
+そのためには、 <span class="notranslate farm-term" translate="no">farm</span> モジュール IIS そして mirror モジュール Microsoft SQLサーバー。各 <span class="notranslate farm-term" translate="no">farm</span> そして mirror このモジュールは、独自の仮想IPアドレスと独自の再起動スクリプトで構成されています。
 
-両方 mirror そして `farm` モジュールは、2台のサーバーからなる単一のクラスターにデプロイできます。 IIS そして Microsoft SQL Server これらの2台のサーバー上で実行されます。あるいは、2つのモジュールを異なるサーバーで構成される2つのクラスターにデプロイすることも可能です。
+両方 mirror そして <span class="notranslate farm-term" translate="no">farm</span> モジュールは、2台のサーバーからなる単一のクラスターにデプロイできます。 IIS そして Microsoft SQL Server これらの2台のサーバー上で実行されます。あるいは、2つのモジュールを異なるサーバーで構成される2つのクラスターにデプロイすることも可能です。
 
 SafeKitクラスタリングソフトウェアでは、同一サーバー上での展開と異なるサーバー上での展開に違いはありません。
 

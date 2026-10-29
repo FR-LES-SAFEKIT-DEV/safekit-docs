@@ -21,9 +21,9 @@ topics: "Hoge beschikbaarheid en schaalbaarheid van kritieke web- en databaseapp
 
 Met de clusteringsoftware SafeKit kunt u bijvoorbeeld load balancing met IIS en mirroring Microsoft SQL Server implementeren.
 
-Hiervoor moet u een `farm` module implementeren voor IIS SQL-server en een mirror module voor Microsoft -SQL-server. Elke `farm` en mirror -module is geconfigureerd met een eigen virtueel IP-adres en eigen herstartscripts.
+Hiervoor moet u een <span class="notranslate farm-term" translate="no">farm</span> module implementeren voor IIS SQL-server en een mirror module voor Microsoft -SQL-server. Elke <span class="notranslate farm-term" translate="no">farm</span> en mirror -module is geconfigureerd met een eigen virtueel IP-adres en eigen herstartscripts.
 
-Zowel mirror als `farm` -module kunnen op één cluster van twee servers worden geïmplementeerd. IIS en Microsoft SQL Server zullen op deze twee servers draaien. De twee modules kunnen ook op twee clusters met verschillende servers worden geïmplementeerd.
+Zowel mirror als <span class="notranslate farm-term" translate="no">farm</span> -module kunnen op één cluster van twee servers worden geïmplementeerd. IIS en Microsoft SQL Server zullen op deze twee servers draaien. De twee modules kunnen ook op twee clusters met verschillende servers worden geïmplementeerd.
 
 Met de SafeKit clusteringsoftware is er geen verschil tussen een implementatie op dezelfde servers of op verschillende servers.
 

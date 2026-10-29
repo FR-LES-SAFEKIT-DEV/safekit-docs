@@ -63,8 +63,8 @@
   * In `Virtual IP addresses`, inserire un indirizzo IP virtuale. È un normale indirizzo IP nella stessa rete IP (sottorete) degli indirizzi IP di entrambi i nodi. I client dell’applicazione devono essere configurati con l’indirizzo IP virtuale (o con il nome DNS associato).
   * In `Load balancing rules`, impostare la porta del servizio da bilanciare (ad esempio TCP 9010).
   * In `Load balancing rules`, impostare la regola di bilanciamento del carico `Source address` o `Source port`:
-    * Con l’indirizzo IP sorgente del client, lo stesso client si connetterà allo stesso nodo nella `farm` durante più sessioni TCP e recupererà il proprio contesto sul nodo.
-    * Con la porta TCP sorgente del client, lo stesso client si connetterà a nodi diversi nella `farm` durante più sessioni TCP (senza recuperare un contesto).
+    * Con l’indirizzo IP sorgente del client, lo stesso client si connetterà allo stesso nodo nella <span class="notranslate farm-term" translate="no">farm</span> durante più sessioni TCP e recupererà il proprio contesto sul nodo.
+    * Con la porta TCP sorgente del client, lo stesso client si connetterà a nodi diversi nella <span class="notranslate farm-term" translate="no">farm</span> durante più sessioni TCP (senza recuperare un contesto).
   * In `Checkers` è possibile configurare, se necessario, controlli quali monitoraggio dei processi, controlli personalizzati, TCP, ping o controlli split-brain. Ad esempio, se in `Monitored processes/services` viene visualizzato il nome di un processo, questo verrà monitorato e riavviato in caso di errore. Un nome di processo non corretto farà arrestare il modulo subito dopo l’avvio.
 
 
@@ -75,7 +75,7 @@
 ℹ️ Quando si applica la configurazione SafeKit, il `startup type` dei servizi Windows viene impostato automaticamente su `Manual`. In questo modo i servizi non si avviano automaticamente all’avvio del sistema, ma solo quando viene avviato il modulo (lo stesso vale per Linux).
 
 
-![Inserire le impostazioni del modulo `farm` di {{ .Get "app" }}](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Inserire le impostazioni del modulo <span class="notranslate farm-term" translate="no">farm</span> di {{ .Get "app" }}](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Modificare gli script (facoltativo)
@@ -114,9 +114,9 @@
 ![Verificare il buon esito della configurazione del modulo {{ .Get "app" }}](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Avviare il cluster `farm` sui nodi 1 e 2
+### 9. Avviare il cluster <span class="notranslate farm-term" translate="no">farm</span> sui nodi 1 e 2
 
-  * Fare clic su ⋯ `Start` per avviare il cluster `farm`, come mostrato nell’immagine.
+  * Fare clic su ⋯ `Start` per avviare il cluster <span class="notranslate farm-term" translate="no">farm</span>, come mostrato nell’immagine.
 
 
 ![Avviare il cluster {{ .Get "app" }} su entrambi i nodi](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
@@ -144,7 +144,7 @@ I nodi 1 e 2 devono raggiungere lo stato UP (verde), il che significa che lo scr
 SafeKit include un test integrato nel prodotto:
 
   * Configurare una regola per la porta TCP 9010 con bilanciamento del carico sulla porta TCP sorgente.
-  * Collegare una workstation esterna, al di fuori dei nodi `farm`.
+  * Collegare una workstation esterna, al di fuori dei nodi <span class="notranslate farm-term" translate="no">farm</span>.
   * Aprire un browser all’indirizzo http://virtual-ip:9010/safekit/mosaic.html.
 
 

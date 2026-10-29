@@ -27,7 +27,7 @@ topics: "ソフトウェアクラスタリングとハードウェアクラス�
 
 バックエンドのハードウェアクラスタリング（ [ Microsoftフェイルオーバークラスタ、 ](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)など）は、2台のサーバーがディスクを共有し、障害発生時にアプリケーションが自動的にフェイルオーバーする仕組みに基づいています。
 
-フロントエンドのハードウェアクラスタリングは、サーバー群（2 台以上）の前に[ （F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ）を`farm`することに基づいています。ロードバランサーは、TCP セッションをサーバーfarm内の利用可能なサーバーに分散します。
+フロントエンドのハードウェアクラスタリングは、サーバー群（2 台以上）の前に[ （F5 BIG-IP ](<https://www.f5.com/products/big-ip-services/local-traffic-manager>) ）を<span class="notranslate farm-term" translate="no">farm</span>することに基づいています。ロードバランサーは、TCP セッションをサーバーfarm内の利用可能なサーバーに分散します。
 
 ### ソフトウェアクラスタリングとは何ですか？ {#what-is-software-clustering}
 
@@ -35,7 +35,7 @@ topics: "ソフトウェアクラスタリングとハードウェアクラス�
 
 バックエンドのソフトウェアクラスタリング（ [ SafeKit ](</>)など）は、2台のサーバーがリアルタイムでデータを複製し、障害発生時には自動的にアプリケーションがフェイルオーバーする仕組みに基づいています。
 
-フロントエンドのソフトウェアクラスタリング（ SafeKitと同様）は、 `farm`のサーバー群（2 台以上）における負荷分散に基づいています。負荷分散はソフトウェアによって行われ、TCP セッションをfarm内の利用可能なサーバーに分散します。
+フロントエンドのソフトウェアクラスタリング（ SafeKitと同様）は、 <span class="notranslate farm-term" translate="no">farm</span>のサーバー群（2 台以上）における負荷分散に基づいています。負荷分散はソフトウェアによって行われ、TCP セッションをfarm内の利用可能なサーバーに分散します。
 
 ## ソフトウェアクラスタリングとハードウェアクラスタリング：メリットとデメリット {#software-clustering-vs-hardware-clustering-pros-and-cons}
 

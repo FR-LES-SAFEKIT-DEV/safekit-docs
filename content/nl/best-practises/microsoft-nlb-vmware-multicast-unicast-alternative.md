@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/microsoft-nlb-vmware-mu
 description: "Ondervindt u problemen met Microsoft NLB multicast of unicast in VMware? SafeKit biedt een SAN-loos farm -cluster als eenvoudig alternatief. Profiteer van automatische load balancing en failover op Windows en Linux zonder statische ARP-vermeldingen, MAC-spoofing of gespecialiseerde netwerkconfiguratie."
 category: "best-practises"
 lang: "nl"
-topics: "Microsoft NLB multicast-modus, Microsoft NLB unicast-modus, alternatief met SafeKit , hoe werkt het SafeKit cluster in `farm` -modus met Windows ?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Microsoft NLB multicast-modus, Microsoft NLB unicast-modus, alternatief met SafeKit , hoe werkt het SafeKit cluster in <span class="notranslate farm-term" translate="no">farm</span> -modus met Windows ?, 🔍 SafeKit High Availability Navigation Hub"
 ---
 
 # Microsoft NLB VMware-alternatief: Multicast- en Unicast-problemen opgelost {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

@@ -25,7 +25,7 @@ Die Bereitstellung einer Business-Continuity-Lösung für mehrere Anwendungen in
 
 ### Die Software SafeKit : eine einfache Lösung für Geschäftskontinuität {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit bietet zwei einfache Module `farm` und mirror , zum Schutz Ihrer kritischen Anwendungen vor Ausfällen. Die Installation erfolgt auf Standardservern und erfordert keine IT-Kenntnisse für die Verwaltung der Lösung. Es werden weder gemeinsam genutzte Festplatten, replizierte SANs, Load Balancer noch Enterprise-Versionen von Betriebssystemen oder Datenbanken benötigt. 
+SafeKit bietet zwei einfache Module <span class="notranslate farm-term" translate="no">farm</span> und mirror , zum Schutz Ihrer kritischen Anwendungen vor Ausfällen. Die Installation erfolgt auf Standardservern und erfordert keine IT-Kenntnisse für die Verwaltung der Lösung. Es werden weder gemeinsam genutzte Festplatten, replizierte SANs, Load Balancer noch Enterprise-Versionen von Betriebssystemen oder Datenbanken benötigt. 
 
 
 {{%  insert-safekit-hub-de  %}}

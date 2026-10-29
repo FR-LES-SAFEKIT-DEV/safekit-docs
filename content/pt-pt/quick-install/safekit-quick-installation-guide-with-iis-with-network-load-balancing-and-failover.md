@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-install
 description: "Aprenda como implantar o módulo iis_farm.safe no Windows para balanceamento de carga de rede e failover automático IIS . Este guia mostra como criar um cluster de alta disponibilidade para serviços e aplicações web usando um IP virtual, sem a necessidade de balanceadores de carga de hardware externos ou configurações complexas."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para IIS , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / IIS , Instalação da solução SafeKit / IIS no Windows ( iis_farm.safe ), Configuração passo a passo da solução SafeKit / IIS , Demonstração da solução SafeKit `farm` , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para IIS , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / IIS , Instalação da solução SafeKit / IIS no Windows ( iis_farm.safe ), Configuração passo a passo da solução SafeKit / IIS , Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
 ---
 
 # Balanceamento de carga e failover de rede IIS : Instale o módulo SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
@@ -36,7 +36,7 @@ A solução é descrita aqui: **💡 [ SafeKit : Software de balanceamento de ca
 {{%  insert-safekit-82-farm-configuration-pt-pt app="IIS" mod="iis_farm"  %}}
  
 
-## Demonstração da solução SafeKit `farm` {#demonstration-of-the-safekit-farm-solution}
+## Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-pt-pt  %}}
