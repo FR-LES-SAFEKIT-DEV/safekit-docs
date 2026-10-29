@@ -1,89 +1,89 @@
 ---
-title: "SafeKit Treinamento em Alta Disponibilidade: Programa de Certificação Online Gratuito"
-canonical: "https://safekit.eviden.com/pt-br/resources/safekit-on-line-training/"
-description: "Mestre SafeKit Alta disponibilidade sem SAN com nosso treinamento gratuito. Abrange instalação de software, gerenciamento via console web e linha de comando (CLI). Aprenda configuração avançada e solução de problemas para garantir alta disponibilidade 24 horas por dia, 7 dias por semana. Obtenha sua certificação oficial online."
+title: "Treinamento de Alta Disponibilidade do SafeKit: Programa de Certificação Online Gratuito"
+canonical: "https://safekit.eviden.com/pt-br/pt-br/resources/safekit-on-line-training/"
+description: "Domine a alta disponibilidade sem SAN do SafeKit com nosso treinamento gratuito. Abrange instalação de software, gerenciamento via console web e linha de comando (CLI). Aprenda configuração avançada e solução de problemas para garantir alta disponibilidade 24 horas por dia, 7 dias por semana. Obtenha sua certificação oficial online."
 category: "resources"
 lang: "pt-br"
-topics: "Como acessar a plataforma de treinamento? SafeKit 8 Materiais de Treinamento, 🔍 SafeKit Hub de navegação de alta disponibilidade"
+topics: "Como acessar a plataforma de treinamento?, Obtenha os materiais de treinamento do SafeKit 8, 🔍 Central de navegação de alta disponibilidade do SafeKit"
 ---
 
-# SafeKit Treinamento em Alta Disponibilidade: Programa de Certificação Online Gratuito {#safekit-high-availability-training-free-online-certification-program}
+# Treinamento de Alta Disponibilidade do SafeKit: Programa de Certificação Online Gratuito {#safekit-high-availability-training-free-online-certification-program}
 
-Como acessar a plataforma de treinamento? {#certif}
+## Como acessar a plataforma de treinamento? {#certif}
 
-### O SafeKit Plataforma de treinamento {#the-safekit-training-platform}
+### Plataforma de Treinamento SafeKit {#the-safekit-training-platform}
 
-O SafeKit O treinamento online é um recurso abrangente e autodidático, projetado para ajudá-lo a dominar alta disponibilidade e clustering de aplicativos. Você pode acessar a plataforma seguindo os passos abaixo:
+O treinamento online do SafeKit é um recurso abrangente e autodidático, projetado para ajudá-lo a dominar alta disponibilidade e clustering de aplicativos. Você pode acessar a plataforma seguindo os passos abaixo:
 
-  * Navegue até o **👉 🎓[SafeKit Plataforma de treinamento online](<https://training.my.evidian.com/mod/page/view.php?id=712>)**Esta plataforma serve como seu centro de informações para todos os módulos de aprendizagem e para o programa de certificação gratuito.
-  * **Obtenha suas credenciais:** Se você ainda não possui uma conta, clique aqui. **Contato** No menu superior da plataforma de treinamento, você pode solicitar suas credenciais de login.
+  * Acesse a **👉 🎓 [Plataforma de Treinamento Online SafeKit](<https://training.my.evidian.com/mod/page/view.php?id=712>)** . Ela serve como seu centro de informações para todos os módulos de aprendizado e para o programa de certificação gratuito.
+  * **Obtenha suas credenciais:** Se você ainda não possui uma conta, clique em **Contato** no menu superior da plataforma de treinamento para solicitar suas credenciais de login.
   * A plataforma está organizada em seções temáticas, incluindo: 
-    * **Arquitetura e Introdução:** Entender mirror e farm cluster conceitos.
-    * **Demonstrações:** Acesse cenários baseados em vídeo para SQL Server, Hyper-V e balanceamento de carga do Apache.
+    * **Arquitetura e Introdução:** Compreender os conceitos de clusters espelhados e de fazendas agrícolas.
+    * **Demonstrações:** Acesse cenários em vídeo para balanceamento de carga do SQL Server, Hyper-V e Apache.
     * **Instalação e configuração:** Aprenda como instalar o pacote e configurá-lo através do console de gerenciamento web ou da CLI.
-    * **Configuração avançada:** Análises aprofundadas sobre userconfig.xml, batimentos cardíacos, replicação e IPs virtuais.
-  * **Utilize videoaulas:** Grande parte do treinamento é ministrado por meio de vídeos online. Cada vídeo é geralmente dividido em capítulos (por exemplo, Pré-requisitos, Instalação, Solução de Problemas) para que você possa acessar diretamente o tópico desejado.
-  * **Obtenha diferentes níveis de certificação por meio de questionários:** Teste seus conhecimentos ao final de cada módulo para obter o reconhecimento oficial de sua formação. SafeKit experiência.
-  * **Pegar SafeKit 8 Materiais de Treinamento:** Acesse o [pacote de recursos completo](#training82) Para apoiar sua aprendizagem.
+    * **Configuração Avançada:** Análise detalhada do userconfig.xml , heartbeats, replicação e IPs virtuais.
+  * **Utilize as videoaulas:** Grande parte do treinamento é ministrado por meio de vídeos hospedados. Cada vídeo é geralmente dividido em capítulos (por exemplo, Pré-requisitos, Instalação, Solução de problemas) para que você possa acessar diretamente o tópico desejado.
+  * **Obtenha diferentes níveis de certificação por meio de questionários:** teste seus conhecimentos ao final de cada módulo para obter o reconhecimento oficial de sua especialização em SafeKit.
+  * **Obtenha os materiais de treinamento do SafeKit 8:** Acesse o [pacote completo de recursos](<#training82>) para apoiar seu aprendizado.
 
 
-### SafeKit Vídeo: Tutorial da Plataforma de Certificação Gratuita (6:11) {#demo-certification}
+### Vídeo SafeKit: Tutorial da Plataforma de Certificação Gratuita (6:11) {#demo-certification}
 
 #### Capítulos {#chapters}
 
   1. 🎬 [A Plataforma de Treinamento e Certificação](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=0s>) (1:41)
-  2. 🎬 [O que é um SafeKit Módulo de treinamento?](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=101s>) (1:57)
-  3. 🎬 [Como ganhar um SafeKit Certificado?](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=218s>) (1:40)
+  2. 🎬 [O que é um módulo de treinamento SafeKit?](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=101s>) (1:57)
+  3. 🎬 [Como obter um certificado SafeKit?](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=218s>) (1:40)
   4. 🎬 [Compartilhe seu certificado no LinkedIn](<https://www.youtube.com/watch?v=ijH4zXtn_3s&t=318s>) (0:53)
 
 [Plataforma de treinamento e certificação aqui](<https://training.my.evidian.com/>)
 
-## SafeKit Vídeos de treinamento {#training82}
+## Vídeos de treinamento do SafeKit {#training82}
 
-Note que isto não é o <a href="https://training.my.evidian.com/mod/page/view.php?id=712" target="_blank" rel="noopener noreferrer">plataforma de treinamento</a> em si, mas também um repositório para baixar os materiais de treinamento, se necessário.
+Note que esta não é a <a href="https://training.my.evidian.com/mod/page/view.php?id=712" target="_blank" rel="noopener noreferrer">plataforma de treinamento</a> em si, mas um repositório para baixar os materiais de treinamento, se necessário.
 
 ### Introdução {#introduction}
 
   1. Visão geral: 🎬 [vídeo](<https://www.youtube.com/watch?v=bMRyNq3egLQ>) (9:43) 
      * 🎬 [Introdução](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=0s>) (0:38)
-     * 🎬 [Demonstração de SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
+     * 🎬 [Demonstração do SafeKit](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=38s>) (1:41)
      * 🎬 [Exemplos de soluções de redundância e alta disponibilidade](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=139s>) (2:00)
      * 🎬 [SafeKit vendido em muitos países diferentes com Milestone](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=259s>) (0:49)
-     * 🎬 [Escolha entre duas soluções: máquina virtual ou aplicação. cluster](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
-     * 🎬 [Vantagens distintivas](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>))
+     * 🎬 [Escolha entre 2 soluções: máquina virtual ou cluster de aplicativos](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=308s>) (2:29)
+     * 🎬 [Vantagens diferenciadas](<https://www.youtube.com/watch?v=bMRyNq3egLQ&t=457s>) (2:06)
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/1-overview-en.pptx>) )
   2. Competição: 🎬 [vídeo](<https://www.youtube.com/watch?v=DKra6YVLGZk>) (13:21) 
      * 🎬 [Introdução](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s>) (4:10)
      * 🎬 [Cluster de máquinas virtuais](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s>) (1:20)
-     * 🎬 [Mirror cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
-     * 🎬 [Farm cluster](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>))
+     * 🎬 [Aglomerado de espelhos](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s>) (6:04)
+     * 🎬 [Aglomerado agrícola](<https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s>) (1:46)
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/2-competition-en.pptx>) )
 
 
 ### Demonstrações {#demonstrations}
 
-Hiper-V cluster demonstração: 🎬 [vídeo](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
+Demonstração de cluster Hyper-V: 🎬 [vídeo](<https://www.youtube.com/watch?v=H18s_-_CpmU>) (5:15)
 
   * 🎬 [2 nós Hyper-V e 2 máquinas virtuais](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=0s>) (0:49)
-  * 🎬 [Configure o cluster e dois hyperv.safe módulos](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
-  * 🎬 [Inicie e teste a replicação, migração e failover de VMs em caso de falha.](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
-  * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>))
+  * 🎬 [Configure o cluster e dois módulos hyperv.safe](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=49s>) (1:59)
+  * 🎬 [Iniciar e testar replicação, migração e failover de VMs em caso de falha](<https://www.youtube.com/watch?v=H18s_-_CpmU&t=168s>) (2:26)
+  * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-hyperv-demo.mp4>) )
 
 
-SQL Server cluster demonstração: 🎬 [vídeo](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
+Demonstração de cluster do SQL Server: 🎬 [vídeo](<https://www.youtube.com/watch?v=mGwEguDnnH0>) (8:47)
 
   * 🎬 [2 nós com SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  * 🎬 [Configure o cluster e o mirrorMódulo .safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
-  * 🎬 [Inicie e teste a replicação, migração e failover do SQL Server em caso de falha.](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
-  * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>))
+  * 🎬 [Configurar o cluster e o módulo mirror.safe](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  * 🎬 [Iniciar e testar replicação SQL, migração e failover em caso de falha](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
+  * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-mirror-demo.mp4>) )
 
 
-Farm cluster demonstração: 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
+Demonstração de agrupamento agrícola: 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2-cXHNx4>) (5:03)
 
   * 🎬 [2 nós com Apache](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=0s>) (0:13)
-  * 🎬 [Configure o cluster e o farmMódulo .safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
-  * 🎬 [Inicie e teste o balanceamento de carga da rede, com failover em caso de falha.](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
-  * ([mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>))
+  * 🎬 [Configurar o cluster e o módulo farm.safe](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=13s>) (2:20)
+  * 🎬 [Iniciar e testar balanceamento de carga de rede, failover em caso de falha](<https://www.youtube.com/watch?v=1Ww2-cXHNx4&t=153s>) (2:30)
+  * ( [mp4](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/safekit-farm-demo.mp4>) )
 
 
 ### Instalação, Console, CLI {#installation-console-cli}
@@ -91,11 +91,11 @@ Farm cluster demonstração: 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2
   3. Instalação e configuração: 🎬 [vídeo](<https://www.youtube.com/watch?v=iP8sd28GBnM>) (14:26) 
      * 🎬 [Visão geral](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=0s>) (0:47)
      * 🎬 [Pré-requisitos](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=47s>) (2:56)
-     * 🎬 [Instale o SafeKit Pacote](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=223s>) (2:20)
-     * 🎬 [Configurar SafeKit Nós](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=363s>) (4:44)
-     * 🎬 [Atualizar](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=647s>) (3:39)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/3-install-setup-en.pptx>))
-  4. Console da Web: 🎬 [vídeo](<https://www.youtube.com/watch?v=UPZK61eE5uA>) (34:02) 
+     * 🎬 [Instale o pacote SafeKit](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=223s>) (2:20)
+     * 🎬 [Configurar nós do SafeKit](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=363s>) (4:44)
+     * 🎬 [Atualização](<https://www.youtube.com/watch?v=iP8sd28GBnM&t=647s>) (3:39)
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/3-install-setup-en.pptx>) )
+  4. Console web: 🎬 [vídeo](<https://www.youtube.com/watch?v=UPZK61eE5uA>) (34:02) 
      * 🎬 [Visão geral](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=0s>) (1:40)
      * 🎬 [Configuração do cluster](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=100s>) (3:10)
      * 🎬 [Configuração de um novo módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=290s>) (8:38) 
@@ -104,73 +104,73 @@ Farm cluster demonstração: 🎬 [vídeo](<https://www.youtube.com/watch?v=1Ww2
        * 🎬 [Outras etapas de configuração](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=641s>) (02:47)
      * 🎬 [Monitoramento de módulos](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=808s>) (10:40) 
        * 🎬 [Visão geral do console de monitoramento](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=811s>) (01:59)
-       * 🎬 [Como um mirror O módulo funciona no console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
-       * 🎬 [Como um farm O módulo funciona no console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
+       * 🎬 [Como funciona um módulo de espelhamento no console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=930s>) (02:52)
+       * 🎬 [Como funciona um módulo de fazenda no console?](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1102s>) (01:43)
        * 🎬 [Linha do tempo dos estados do módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1205s>) (00:55)
        * 🎬 [Registros do módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1260s>) (02:16)
        * 🎬 [Recursos do módulo](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1396s>) (00:52)
      * 🎬 [Suporte e manutenção](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1448s>) (1:58)
      * 🎬 [Uso avançado](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1566s>) (3:41)
      * 🎬 [Protegendo o console da web](<https://www.youtube.com/watch?v=UPZK61eE5uA&t=1787s>) (4:15)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/4-web-console-en.pptx>))
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/4-web-console-en.pptx>) )
   5. Linha de comando: 🎬 [vídeo](<https://www.youtube.com/watch?v=QWMCdI2PF0s>) (15:52) 
      * 🎬 [Visão geral](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=0s>) (1:14)
-     * 🎬 [Configure o SafeKit cluster](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
-     * 🎬 [Configure um SafeKit módulo](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=271s>) (8:16) 
+     * 🎬 [Configurar o cluster SafeKit](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=74s>) (3:17)
+     * 🎬 [Configurar um módulo SafeKit](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=271s>) (8:16) 
        * 🎬 [Cenário apresentado](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=274s>) (0:30)
        * 🎬 [Instalar e configurar no nó 1](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=304s>) (3:40)
-       * 🎬 [Instale e configure o nó 2 a partir do nó 1.](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=524s>) (1:14)
-       * 🎬 [Inicie e pare o módulo em ambos os nós.](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=599s>) (2:48)
+       * 🎬 [Instalar e configurar o nó 2 a partir do nó 1](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=524s>) (1:14)
+       * 🎬 [Iniciar e parar o módulo em ambos os nós](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=599s>) (2:48)
      * 🎬 [Controlar e monitorar](<https://www.youtube.com/watch?v=QWMCdI2PF0s&t=767s>) (3:05)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/5-command-line-en.pptx>))
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/5-command-line-en.pptx>) )
 
 
 ### Configuração avançada {#advanced-configuration}
 
-  6. Mirror módulo: 🎬 [vídeo](<https://www.youtube.com/watch?v=SmWwVUYsx9Q>) (26:52) 
+  6. Módulo espelho: 🎬 [vídeo](<https://www.youtube.com/watch?v=SmWwVUYsx9Q>) (26:52) 
      * 🎬 [Visão geral](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=0s>) (2:59)
-     * 🎬 [Visão geral de userconfig.xml](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=179s>) (0:38)
-     * 🎬 [Batimentos cardíacos (&lt;hearbeat&gt;)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=217s>) (1:15)
-     * 🎬 [Endereço IP virtual (&lt;vip&gt;)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=292s>) (4:51)
-     * 🎬 [Replicação de arquivos em tempo real (&lt;rfs&gt;)](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=583s>) (2:35)
+     * 🎬 [Visão geral do userconfig.xml](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=179s>) (0:38)
+     * 🎬 [Batimentos cardíacos ( &lt;hearbeat&gt; )](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=217s>) (1:15)
+     * 🎬 [Endereço IP virtual ( &lt;vip&gt; )](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=292s>) (4:51)
+     * 🎬 [Replicação de arquivos em tempo real ( &lt;rfs&gt; )](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=583s>) (2:35)
      * 🎬 [Como funciona a replicação de arquivos em tempo real?](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=738s>) (3:47)
-     * 🎬 [start_prim / stop_prim roteiros](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
-     * 🎬 [Mirror transições de estado](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>))
-  7. Farm módulo: 🎬 [vídeo](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
+     * 🎬 [scripts start_prim / stop_prim](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=965s>) (3:01)
+     * 🎬 [Transições de estado espelhado](<https://www.youtube.com/watch?v=SmWwVUYsx9Q&t=1146s>) (7:46)
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/6-mirror-module-en.pptx>) )
+  7. Módulo Fazenda: 🎬 [vídeo](<https://www.youtube.com/watch?v=tFYXIa_KRHc>) (16:16) 
      * 🎬 [Visão geral](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=0s>) (2:05)
-     * 🎬 [Visão geral de userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
-     * 🎬 [Farm batimentos cardíacos (&lt;farm&gt;)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
-     * 🎬 [Endereço IP virtual e regras de balanceamento de carga (&lt;vip&gt;)](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
-     * 🎬 [start_both / stop_both roteiros](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
-     * 🎬 [Farm transições de estado](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>))
+     * 🎬 [Visão geral do userconfig.xml](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=125s>) (0:36)
+     * 🎬 [Batimentos cardíacos da fazenda ( &lt;farm&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=161s>) (0:34)
+     * 🎬 [Endereço IP virtual e regras de balanceamento de carga ( &lt;vip&gt; )](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=195s>) (6:03)
+     * 🎬 [scripts start_both / stop_both](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=558s>) (2:37)
+     * 🎬 [Transições de estado agrícola](<https://www.youtube.com/watch?v=tFYXIa_KRHc&t=715s>) (4:21)
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/7-farm-module-en.pptx>) )
 
 
   8. Damas: 🎬 [vídeo](<https://www.youtube.com/watch?v=Ru-YyPmIQa0>) (20:34) 
      * 🎬 [Visão geral](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=0s>) (4:08)
-     * 🎬 [Verificador de monitoramento de processos e serviços (&lt;errd&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=248s>) (2:50)
-     * 🎬 [Interface de rede e verificadores de IP virtual (&lt;intf&gt; e &lt;ip&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=418s>) (1:13)
-     * 🎬 [Verificador personalizado baseado em um script do usuário (&lt;custom&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=491s>) (2:27)
-     * 🎬 [Verificador de "cérebro dividido" em caso de isolamento de rede (&lt;splitbrain&gt;)](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=638s>) (2:16)
-     * 🎬 [&lt;tcp&gt;, &lt;ping&gt;, &lt;module&gt; damas](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=774s>) (3:44)
+     * 🎬 [Verificador de monitoramento de processos e serviços ( &lt;errd&gt; )](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=248s>) (2:50)
+     * 🎬 [Verificadores de interface de rede e IP virtual ( &lt;intf&gt; e &lt;ip&gt; )](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=418s>) (1:13)
+     * 🎬 [Verificador personalizado baseado em um script do usuário ( &lt;custom&gt; )](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=491s>) (2:27)
+     * 🎬 [Verificador de split brain em caso de isolamento de rede ( &lt;splitbrain&gt; )](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=638s>) (2:16)
+     * 🎬 [&lt;tcp&gt; , &lt;ping&gt; , &lt;module&gt; verificadores](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=774s>) (3:44)
      * 🎬 [Transições de estado do módulo com verificadores](<https://www.youtube.com/watch?v=Ru-YyPmIQa0&t=998s>) (3:55)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>))
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/8-checkers-en.pptx>) )
 
 
 ### Solução de problemas {#troubleshooting}
 
-  9. Resolução de problemas: 🎬 [vídeo](<https://www.youtube.com/watch?v=H1mxvpC3mP8>) (31:24) 
+  9. Solução de problemas: 🎬 [vídeo](<https://www.youtube.com/watch?v=H1mxvpC3mP8>) (31:24) 
      * 🎬 [Introdução](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=0s>) (0:58)
-     * 🎬 [Analise você mesmo os registros.](<https://www.youtube.com/watch?v=H1mxvpC3mP8?si=Gsk5Yh5uZSXVAggP&autoplay=1&cc_lang_pref=en&cc_load_policy=58&start=58&end=528>) (7:50)
-     * 🎬 [Executar um aplicativo sem SafeKit](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=528s>) (1:14)
+     * 🎬 [Analise você mesmo os registros](<https://www.youtube.com/watch?v=H1mxvpC3mP8?si=Gsk5Yh5uZSXVAggP&autoplay=1&cc_lang_pref=en&cc_load_policy=58&start=58&end=528>) (7:50)
+     * 🎬 [Executando um aplicativo sem SafeKit](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=528s>) (1:14)
      * 🎬 [Capturar e diagnosticar instantâneos do módulo](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=602s>) (5:19)
      * 🎬 [Problemas com o console da Web](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=921s>) (1:14)
      * 🎬 [Problemas na linha de comando](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=995s>) (0:59)
-     * 🎬 [Mirror problemas](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
-     * 🎬 [Farm problemas](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
+     * 🎬 [Problemas com o espelho](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1054s>) (5:33)
+     * 🎬 [Problemas na fazenda](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1387s>) (3:54)
      * 🎬 [Problemas com o verificador](<https://www.youtube.com/watch?v=H1mxvpC3mP8&t=1621s>) (4:22)
-     * ([pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>))
+     * ( [pptx](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-training/releases/download/v1.0/9-troubleshooting-en.pptx>) )
 
 
 
