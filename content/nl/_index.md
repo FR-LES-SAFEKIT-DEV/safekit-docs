@@ -82,3 +82,5 @@ Voor grotere volumes zijn gedeelde opslag of een andere aanpak geschikter.
 {{%  insert-safekit-videos-table-nl  %}}
 
 {{%  insert-safekit-hub-nl  %}}
+
+{{%  insert-safekit-4-buttons-nl  %}}

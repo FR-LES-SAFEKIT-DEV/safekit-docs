@@ -82,3 +82,5 @@ Bei größeren Datenmengen sind gemeinsamer Speicher oder ein anderer Ansatz bes
 {{%  insert-safekit-videos-table-de  %}}
 
 {{%  insert-safekit-hub-de  %}}
+
+{{%  insert-safekit-4-buttons-de  %}}

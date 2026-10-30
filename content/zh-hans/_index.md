@@ -82,3 +82,5 @@ SafeKit 以简洁为设计目标，并非适用于所有场景。它适合复制
 {{%  insert-safekit-videos-table-zh-hans  %}}
 
 {{%  insert-safekit-hub-zh-hans  %}}
+
+{{%  insert-safekit-4-buttons-zh-hans  %}}

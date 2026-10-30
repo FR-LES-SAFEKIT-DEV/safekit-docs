@@ -82,3 +82,5 @@ SafeKit은 단순성을 위해 설계되었으며 모든 상황에 적합한 것
 {{%  insert-safekit-videos-table-ko  %}}
 
 {{%  insert-safekit-hub-ko  %}}
+
+{{%  insert-safekit-4-buttons-ko  %}}

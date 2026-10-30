@@ -82,3 +82,5 @@ SafeKitはシンプルさを重視しており、すべてのケースに適す�
 {{%  insert-safekit-videos-table-ja  %}}
 
 {{%  insert-safekit-hub-ja  %}}
+
+{{%  insert-safekit-4-buttons-ja  %}}

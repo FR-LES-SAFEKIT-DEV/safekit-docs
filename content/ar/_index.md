@@ -82,3 +82,5 @@ topics: "ماذا يقدم SafeKit، اختر مستوى الحماية، وحد
 {{%  insert-safekit-videos-table-ar  %}}
 
 {{%  insert-safekit-hub-ar  %}}
+
+{{%  insert-safekit-4-buttons-ar  %}}

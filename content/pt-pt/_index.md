@@ -82,3 +82,5 @@ Para volumes maiores, o armazenamento partilhado ou outra abordagem será mais a
 {{%  insert-safekit-videos-table-pt-pt  %}}
 
 {{%  insert-safekit-hub-pt-pt  %}}
+
+{{%  insert-safekit-4-buttons-pt-pt  %}}

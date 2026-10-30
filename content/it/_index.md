@@ -82,3 +82,5 @@ Per volumi più grandi, è preferibile usare storage condiviso o un approccio di
 {{%  insert-safekit-videos-table-it  %}}
 
 {{%  insert-safekit-hub-it  %}}
+
+{{%  insert-safekit-4-buttons-it  %}}

@@ -89,3 +89,5 @@ Pour des volumes plus importants, un stockage partagé ou une autre approche ser
 {{%  insert-safekit-videos-table-fr  %}}
 
 {{%  insert-safekit-hub-fr  %}}
+
+{{%  insert-safekit-4-buttons-fr  %}}

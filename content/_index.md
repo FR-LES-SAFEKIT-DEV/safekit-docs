@@ -89,3 +89,5 @@ For larger volumes, shared storage or another approach is a better choice.
 {{%  insert-safekit-videos-table-en  %}}
 
 {{%  insert-safekit-hub-en  %}}
+
+{{%  insert-safekit-4-buttons-en  %}}

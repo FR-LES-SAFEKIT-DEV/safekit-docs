@@ -82,3 +82,5 @@ Para volúmenes mayores, es preferible usar almacenamiento compartido u otro enf
 {{%  insert-safekit-videos-table-es  %}}
 
 {{%  insert-safekit-hub-es  %}}
+
+{{%  insert-safekit-4-buttons-es  %}}
