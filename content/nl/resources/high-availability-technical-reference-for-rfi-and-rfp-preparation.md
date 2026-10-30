@@ -1,176 +1,176 @@
 ---
-title: "Technische handleiding voor hoge beschikbaarheid bij het opstellen van RFI's en RFP's."
+title: "SafeKit Technische handleiding voor RFI- en RFP-documenten"
 canonical: "https://safekit.eviden.com/nl/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "Technische handleiding voor het opstellen van RFI- en RFP-documenten voor hoge beschikbaarheid en applicatieclustering met behulp van SafeKit -concepten en -architecturen."
+description: "Vind technische informatie over SafeKit om informatieaanvragen (RFI's) en offerteaanvragen (RFP's) voor te bereiden. Lees meer over ondersteunde systemen, architecturen, hersteltijden, beveiliging, licenties en ondersteuning."
 category: "resources"
 lang: "nl"
-topics: "Overzicht, Inhoudsopgave, Productidentiteit, Ondersteunde besturingssystemen en platformen, SafeKit High Availability Limitations, Voorgebouwde applicatiemodules, Architectuur- en implementatiemodel, RPO- en RTO-mogelijkheden, Geschikt voor afgelegen locaties en gedistribueerde implementaties, Monitoring, beheer en waarschuwingen, Beveiliging en naleving, Licentiemodel, SLA's voor ondersteuning en onderhoud, Vergelijking versus alternatieven, Snel naslaglinks"
+topics: "Overzicht, Inhoudsopgave, Productinformatie, Ondersteunde besturingssystemen en platforms, SafeKit High Availability Limitations, Voorgeconfigureerde applicatiemodules, Architectuur en implementatie, Gegevensverlies en hersteltijden (RPO en RTO), Externe locaties en gedistribueerde implementaties, Monitoring, beheer en waarschuwingen, Beveiliging en naleving, Licenties, Serviceniveaus voor ondersteuning en onderhoud, Vergelijking met andere oplossingen, Nuttige links"
 ---
 
-# Technische handleiding voor hoge beschikbaarheid bij het opstellen van RFI&#39;s en RFP&#39;s. {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# SafeKit technische handleiding voor RFI- en RFP-documenten {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
 ## Overzicht {#overview}
 
-Deze pagina biedt gestructureerde, feitelijke antwoorden op veelgestelde vragen in RFP/RFI-aanvragen over SafeKit -software voor hoge beschikbaarheid. Het is bedoeld als technische referentie voor inkoopteams en oplossingsarchitecten die eisen voor hoge beschikbaarheid opstellen. 
+Gebruik deze pagina om een informatieaanvraag (RFI) of een offerteaanvraag (RFP) op te stellen. Hier vindt u antwoorden op veelgestelde technische vragen over SafeKit -software voor hoge beschikbaarheid. De informatie helpt inkoopteams en oplossingsarchitecten bij het definiëren van hun eisen.
 
 ## Inhoudsopgave {#table-of-contents}
 
-  1. [Productidentiteit](#product-identity)
-  2. [Ondersteunde besturingssystemen en platformen](#supported-operating-systems-platforms)
+  1. [Productinformatie](#product-identity)
+  2. [Ondersteunde besturingssystemen en platforms](#supported-operating-systems-platforms)
   3. [SafeKit High Availability Limitations](#safekit-ha-limitations)
-  4. [Voorgebouwde applicatiemodules](#pre-built-application-modules)
-  5. [Architectuur- en implementatiemodel](#architecture-deployment-model)
-  6. [RPO- en RTO-mogelijkheden](#rpo-rto-capabilities)
-  7. [Geschikt voor afgelegen locaties en gedistribueerde implementaties](#edge-distributed-deployment-suitability)
+  4. [Voorgeconfigureerde applicatiemodules](#pre-built-application-modules)
+  5. [Architectuur en implementatie](#architecture-deployment-model)
+  6. [Gegevensverlies en hersteltijden (RPO en RTO)](#rpo-rto-capabilities)
+  7. [Externe locaties en gedistribueerde implementaties](#edge-distributed-deployment-suitability)
   8. [Monitoring, beheer en waarschuwingen](#monitoring-management-alerting)
   9. [Beveiliging en naleving](#security-compliance)
-  10. [Licentiemodel](#licensing-model)
-  11. [SLA&#39;s voor ondersteuning en onderhoud](#support-maintenance-slas)
-  12. [Vergelijking versus alternatieven](#comparison-vs-alternatives)
-  13. [Snel naslaglinks](#quick-reference-links)
+  10. [Licenties](#licensing-model)
+  11. [Serviceniveaus voor ondersteuning en onderhoud](#support-maintenance-slas)
+  12. [Vergelijking met andere oplossingen](#comparison-vs-alternatives)
+  13. [Nuttige links](#quick-reference-links)
 
 
-## Productidentiteit {#product-identity}
+## Productinformatie {#product-identity}
 
 Veld | Antwoord  
 ---|---  
 Productnaam | SafeKit  
-Leverancier | Eviden (een Atos-bedrijf), voorheen Evidian  
-Productcategorie | Applicatieclustering / Hoge beschikbaarheid / Software voor noodherstel  
+Leverancier | Eviden, onderdeel van de Atos Group. Voorheen bekend als Evidian.  
+Productcategorie | Software voor applicatieclustering, hoge beschikbaarheid en noodherstel.  
 Huidige versie | SafeKit 8.2  
 Website | [https://safekit.eviden.com/nl/](</nl/>)  
-Eerste release | 2000 (meer dan 20 jaar in productie)  
+Eerste release | 2000. Al meer dan 20 jaar in gebruik in de productie.  
   
-## Ondersteunde besturingssystemen en platformen {#supported-operating-systems-platforms}
+## Ondersteunde besturingssystemen en platforms {#supported-operating-systems-platforms}
 
-Windows-besturingssysteem | Linux-besturingssysteem | Infrastructuur en virtualisatie | Cloudplatformen  
+Windows-besturingssystemen | Linux-besturingssystemen | Infrastructuur en virtualisatie | Cloudplatforms  
 ---|---|---|---  
-• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 Enterprise (x86-64)<br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br> • Red Hat Enterprise Linux 10 (AArch64)<br> • Red Hat Enterprise Linux 9 (x86-64)<br> • Red Hat Enterprise Linux 9 (AArch64)<br> • Red Hat Enterprise Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • Elke edge-server van elk merk<br> • VMware<br> • Microsoft Hyper-V*<br> • Linux KVM*<br> • Elke hypervisor<br> • Docker-containers<br> • Podman-containers  |  • Amazon Web Services (AWS)**<br> • Microsoft Azure\**<br> • Google Cloud Platform (GCP)\**<br> • Elke IaaS-cloud met standaard VM-instanties   
+• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 Enterprise (x86-64)<br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br> • Red Hat Enterprise Linux 10 (AArch64)<br> • Red Hat Enterprise Linux 9 (x86-64)<br> • Red Hat Enterprise Linux 9 (AArch64)<br> • Red Hat Enterprise Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • Elke edge-server van elk merk<br> • VMware<br> • Microsoft Hyper-V*<br> • Linux KVM*<br> • Elke hypervisor<br> • Docker-containers<br> • Podman-containers  |  • Amazon Web Services (AWS)**<br> • Microsoft Azure**<br> • Google Cloud Platform (GCP)**<br> • Elke IaaS-cloud met standaard VM-instanties   
   
-_* SafeKit ondersteunt zowel HA op applicatieniveau als HA op VM-niveau._
+_SafeKit biedt hoge beschikbaarheid voor individuele applicaties of complete virtuele machines._
 
-_**Virtuele IP-adressen moeten op het niveau van de cloud-loadbalancer worden geconfigureerd._
+_**Configureer in de cloud virtuele IP-adressen op de load balancer.**_
 
 {{%  insert-safekit-usage-nl  %}}
 
-## Voorgebouwde applicatiemodules {#pre-built-application-modules}
+## Voorgeconfigureerde applicatiemodules {#pre-built-application-modules}
 
-SafeKit bevat kant-en-klare, voorgeconfigureerde `.safe` modules. Deze zijn georganiseerd in twee HA-strategieën: **applicatie-HA** (directe applicatieclustering met mirror of <span class="notranslate farm-term" translate="no">farm</span> ) en **virtualisatie-HA** (clustering op VM-niveau met hyperv.safe of kvm.safe ).
+SafeKit bevat kant-en-klare `.safe` modules. Er zijn twee manieren om applicaties te beschermen. **Applicatie-hoge beschikbaarheid** beschermt een applicatie direct met een mirror of <span class="notranslate farm-term" translate="no">farm</span> . **Hoge beschikbaarheid van virtuele machines** beschermt de gehele virtuele machine met een hyperv.safe of kvm.safe module.
 
- | Applicatie HA | HA op VM-niveau  
+ | Hoge beschikbaarheid van de applicatie | Hoge beschikbaarheid van virtuele machines  
 ---|---|---  
-Configuratie | Het vereist een technisch begrip van de applicatie zelf: welke services opnieuw moeten worden opgestart, de specifieke applicatiemappen die realtime replicatie vereisen en de configuratie van een virtueel IP-adres voor failover. | Een generieke oplossing voor elke applicatie/elk besturingssysteem dat in de virtuele machine draait. Technische kennis van de geïnstalleerde applicatie is niet vereist. Het is de beste oplossing als u niet weet hoe de applicatie werkt. U hoeft alleen de locatie van de VM-bestanden te definiëren.  
-Ideaal voor | Ideaal voor het rechtstreeks integreren van hoge beschikbaarheid in een softwareoplossing, onafhankelijk van de onderliggende hardware of hypervisor. | Ideaal voor het beheren van complexe omgevingen met meerdere applicaties verspreid over verschillende virtuele machines via één enkel HA-beleid.  
+Configuratie | U moet weten welke applicatieservices u opnieuw moet starten en welke mappen u moet repliceren. U moet ook het virtuele IP-adres configureren dat voor failover wordt gebruikt. | U hoeft alleen de locatie van de virtuele machinebestanden op te geven. U hoeft niet te weten hoe de applicaties binnen de virtuele machine werken. Deze aanpak beschermt zowel de applicaties als het besturingssysteem.  
+Aanbevolen gebruik | Voeg hoge beschikbaarheid rechtstreeks toe aan een softwareoplossing, zonder afhankelijk te zijn van specifieke hardware of een specifieke hypervisor. | Beheer meerdere applicaties verspreid over verschillende virtuele machines met één beleid voor hoge beschikbaarheid.  
   
 De onderstaande tabel geeft een overzicht van alle beschikbare `.safe` modules:
 
-Applicatie-HA (clustering op applicatieniveau) | Virtualisatie HA (clustering op VM-niveau)  
+Hoge beschikbaarheid van de applicatie | Hoge beschikbaarheid van virtuele machines  
 ---|---  
 Nieuwe Windows-app — mirror.safe | Hyper-V VM — hyperv.safe (Windows)  
 Nieuwe Linux-app — mirror.safe | KVM VM — kvm.safe (Linux)  
 Windows-taakverdeling — farm.safe | Docker-container — mirror.safe (Linux)  
 Linux load balancing — farm.safe | Podman-container — mirror.safe (Linux)  
 Microsoft SQL Server — sqlserver.safe (Windows) | Kubernetes / K3s — k3s.safe (Linux)  
-PostgreSQL — postgresql.safe (Windows &amp; Linux) | Bosch AMS — hyperv.safe (Windows)  
-MySQL — mysql.safe (Windows &amp; Linux) | Bosch BIS — hyperv.safe (Windows)  
-MariaDB — mysql.safe (Windows &amp; Linux) | Bosch BVMS — hyperv.safe (Windows)  
-Oracle — oracle.safe (Windows &amp; Linux) | Hanwha Vision — hyperv.safe (Windows)  
-Firebird — firebird.safe (Windows &amp; Linux) | Hanwha Wisenet — hyperv.safe (Windows)  
-Apache — apache_farm.safe (Windows &amp; Linux) | Siemens Siveillance suite — hyperv.safe (Windows)  
+PostgreSQL — postgresql.safe (Windows & Linux) | Bosch AMS — hyperv.safe (Windows)  
+MySQL — mysql.safe (Windows & Linux) | Bosch BIS — hyperv.safe (Windows)  
+MariaDB — mysql.safe (Windows & Linux) | Bosch BVMS — hyperv.safe (Windows)  
+Oracle — oracle.safe (Windows & Linux) | Hanwha Vision — hyperv.safe (Windows)  
+Firebird — firebird.safe (Windows & Linux) | Hanwha Wisenet — hyperv.safe (Windows)  
+Apache — apache_farm.safe (Windows & Linux) | Siemens Siveillance suite — hyperv.safe (Windows)  
 IIS — iis_farm.safe (Windows) | Siemens Desigo CC — hyperv.safe (Windows)  
-NGINX — farm.safe (Windows &amp; Linux) | Siemens SiPass — hyperv.safe (Windows)  
+NGINX — farm.safe (Windows & Linux) | Siemens SiPass — hyperv.safe (Windows)  
 Milestone XProtect — milestone.safe (Windows) | Siemens SIPORT — hyperv.safe (Windows)  
 Nedap AEOS — nedap.safe (Windows) | SIMATIC PCS 7 — hyperv.safe (Windows)  
 Genetec (SQL Server) — sqlserver.safe (Windows) | SIMATIC WinCC — hyperv.safe (Windows)  
 Siemens Siveillance VMS — SiveillanceVMS.safe (Windows) |   
 Cloud (AWS, Azure, GCP, generiek) — mirror.safe / farm.safe |   
   
-## Architectuur- en implementatiemodel {#architecture-deployment-model}
+## Architectuur en implementatie {#architecture-deployment-model}
 
 ### Twee clustermodules: mirror.safe en farm.safe {#two-cluster-modules}
 
-Module | Patroon | Gebruiksvoorbeeld  
+Module | Hoe het werkt | Typische toepassingen  
 ---|---|---  
-mirror.safe | Actief-passief met synchrone bestandsreplicatie op byte-niveau + automatische failover | Databases, stateful applicaties, services die slechts op één server tegelijk draaien  
-farm.safe | Actief-actief met netwerkbelastingverdeling + automatische failover | Webservers, stateless microservices, API-gateways, services die op meerdere servers tegelijk draaien  
+mirror.safe | Eén server is actief en de andere staat in standby. Bestanden worden synchroon op byte-niveau gerepliceerd. Failover is automatisch. | Databases, applicaties die de status opslaan en services die slechts op één server tegelijk draaien.  
+farm.safe | Er zijn meerdere servers tegelijk actief. SafeKit verdeelt het netwerkverkeer over deze servers en zorgt automatisch voor failover. | Webservers, stateless microservices, API-gateways en services die op meerdere servers tegelijk draaien.  
   
-### Clusterinfrastructuur en -architectuur {#cluster-infrastructure-architecture}
+### Clusterinfrastructuur {#cluster-infrastructure-architecture}
 
-Vereiste / Specificatie | SafeKit functionaliteit/waarde  
+Vereiste | SafeKit functionaliteiten  
 ---|---  
-Gedeelde opslag nodig? | Nee — SAN-loze &quot;shared-nothing&quot;-architectuur. Gebruikt alleen lokale schijven.  
-Is Active Directory (AD) een vereiste? | Nee, een Windows-domein of Active Directory is niet vereist. Werkgroepen worden volledig ondersteund.  
+Gedeelde opslag nodig? | Nee. SafeKit gebruikt lokale schijven. Het heeft geen SAN of gedeelde opslag nodig.  
+Active Directory vereist? | Nee. SafeKit vereist geen Windows-domein of Active Directory. Het ondersteunt ook werkgroepen.  
 Clustergrootte | 2 knooppunten ( mirror ) of 2 of meer knooppunten ( <span class="notranslate farm-term" translate="no">farm</span> )  
-Virtueel IP-adres (VIP) | Softwarematig gedefinieerd virtueel IP-adres (VIP) dat automatisch via Gratuitous ARP (applicatie-level HA) naar het actieve knooppunt migreert. Voor HA op VM-niveau wordt het fysieke IP-adres binnen de VM transparant omgeleid — er is geen VIP nodig. Vereist een LAN, VLAN of stretched VLAN tussen de knooppunten.  
-3-knoops hybride architectuur | SafeKit verzorgt de HA-laag: een mirror met twee knooppunten via een LAN of een uitgebreid VLAN met synchrone replicatie (RPO=0) en automatische failover. Een back-upoplossing van een derde partij completeert de architectuur: een derde, extern knooppunt met asynchrone replicatie via een WAN voor herstel naar een specifiek tijdstip en bescherming tegen ransomware.  
-De rol van hoge beschikbaarheid | SafeKit maakt gebruik van synchrone replicatie om onmiddellijke failover te garanderen zonder gegevensverlies bij hardware- of softwarefouten. Omdat het echter tegelijkertijd gegevens naar beide knooppunten schrijft, worden logische fouten, gegevensdegradatie of onbedoelde verwijderingen in realtime naar het standby-knooppunt gerepliceerd.  
-Rol van back-up | Een back-upoplossing (niet geïmplementeerd door SafeKit ) biedt herstel naar een specifiek tijdstip via asynchrone replicatie. Deze oplossing beschermt tegen bedreigingen voor de gegevensintegriteit (zoals ransomware of menselijke fouten) die HA niet kan voorkomen. Automatische failover wordt niet ondersteund, omdat het terugdraaien van gegevens inherent leidt tot gegevensverlies.  
-Maximaal aantal gelijktijdige modules per cluster | 32 — deze limiet heeft betrekking op het maximale aantal SafeKit -modules dat gelijktijdig wordt beheerd in een cluster met twee knooppunten, wat doorgaans wordt gebruikt in HA op VM-niveau, waarbij elke module een andere VM repliceert en herstart. Elke module kan onafhankelijk als primaire module op een van beide knooppunten draaien, waardoor de werklast over beide servers kan worden verdeeld. Let op: het totale datavolume van alle VM&#39;s heeft direct invloed op de resynchronisatietijd na een failover of herstart van een knooppunt.  
-Agentgebaseerd of agentloos? | Agentgebaseerd — lichtgewicht software geïnstalleerd op elk knooppunt.  
-Toepassingsonafhankelijk? | Ja — beschermt elke Windows-service of Linux-daemon; vooraf gebouwde modules voor meer dan 30 toepassingen.  
+Virtueel IP-adres (VIP) | Voor hoge beschikbaarheid van applicaties wordt het virtuele IP-adres automatisch via Gratuitous ARP naar het actieve knooppunt verplaatst. Voor hoge beschikbaarheid van virtuele machines wordt verkeer naar het IP-adres binnen de virtuele machine automatisch omgeleid. Een apart virtueel IP-adres is niet nodig. De knooppunten moeten een LAN, VLAN of een VLAN-uitbreiding tussen locaties delen.  
+Architectuur met drie knooppunten | SafeKit draait een mirror met twee knooppunten op een LAN of een VLAN dat is uitgebreid tussen locaties. Het biedt synchrone replicatie met nul dataverlies (RPO=0) en automatische failover. Een apart back-upproduct repliceert data asynchroon naar een derde knooppunt via een WAN. Deze back-up maakt herstel naar een eerder tijdstip mogelijk en biedt bescherming tegen ransomware.  
+Doel van hoge beschikbaarheid | SafeKit repliceert gegevens synchroon naar beide knooppunten. Dit maakt automatische failover mogelijk zonder gegevensverlies na een hardware- of softwarefout. Logische fouten, gegevenscorruptie en onbedoelde verwijderingen worden echter ook direct naar het standby-knooppunt gekopieerd.  
+Doel van back-ups | Met back-ups kunt u gegevens herstellen vanaf een eerder tijdstip. Een apart back-upproduct, niet SafeKit , biedt deze bescherming via asynchrone replicatie. Back-ups helpen bij het herstellen van ransomware en menselijke fouten. Dit herstel is geen automatische failover. Bij het herstellen van een oudere back-up gaan wijzigingen die na die back-up zijn aangebracht verloren.  
+Maximaal aantal modules dat tegelijkertijd actief is | Een cluster met twee knooppunten kan tot 32 modules tegelijk beheren. Voor de bescherming van virtuele machines repliceert en herstart elke module een andere virtuele machine. Elke module kan primair zijn op een van beide knooppunten, zodat beide servers de werklast kunnen delen. De totale hoeveelheid data beïnvloedt de resynchronisatietijd na een failover of een herstart van een knooppunt.  
+Is er op elke node software nodig? | Ja. Op elke node is een lichtgewicht softwareagent geïnstalleerd.  
+Ondersteunde applicaties | SafeKit kan elke Windows-service of Linux-daemon beschermen. Er zijn voorgeconfigureerde modules beschikbaar voor meer dan 30 toepassingen.  
   
 ### Replicatie en gegevensbescherming {#replication-data-protection}
 
-Vereiste / Specificatie | SafeKit functionaliteit/waarde  
+Vereiste | SafeKit functionaliteiten  
 ---|---  
-Replicatiemethode | Bestandreplicatie op byte-niveau (niet op blokniveau).  
-Replicatiemodus | Synchroon (geen gegevensverlies)  
-Netwerkvereiste | Een retourlatentie tussen knooppunten van minder dan 5 ms wordt aanbevolen voor synchrone replicatie.  
-Aanbevolen datavolume | Enkele terabytes (synchronisatietijd)  
-Aanbevolen aantal bestanden | &lt; 1.000.000 bestanden (resynchronisatietijd)  
-Resynchronisatiesnelheid (1 TB) | Ongeveer 3 uur op een 1 Gb/s-netwerk; ongeveer 1 uur op een 10 Gb/s-netwerk.  
-Selectieve replicatie | Ja — specifieke mappen/bestanden dupliceren  
-Versleuteling tijdens overdracht | Ja — TLS/SSL voor replicatieverkeer  
+Replicatiemethode | SafeKit repliceert bestandswijzigingen op byte-niveau. Het repliceert geen schijfblokken.  
+Replicatiemodus | Synchrone replicatie, zonder gegevensverlies.  
+Netwerkvereiste | Voor synchrone replicatie wordt een retourlatentie van minder dan 5 ms tussen knooppunten aanbevolen.  
+Aanbevolen datavolume | Een paar terabytes, om de synchronisatietijd beheersbaar te houden.  
+Aanbevolen aantal bestanden | Minder dan 1.000.000 bestanden, om de synchronisatietijd beheersbaar te houden.  
+Tijd nodig om 1 TB te resynchroniseren | Ongeveer 3 uur via een 1 Gb/s-netwerk of 1 uur via een 10 Gb/s-netwerk.  
+Selectieve replicatie | Je kunt zelf kiezen welke mappen en bestanden je wilt kopiëren.  
+Versleuteling tijdens overdracht | Het replicatieverkeer is versleuteld met TLS/SSL.  
   
-## RPO- en RTO-mogelijkheden {#rpo-rto-capabilities}
+## Gegevensverlies en hersteltijden (RPO en RTO) {#rpo-rto-capabilities}
 
-### RPO &amp; RTO per clustertype {#rto-rpo-cluster-type}
+### RPO en RTO voor elk clustertype {#rto-rpo-cluster-type}
 
 Metrisch | Mirror ( mirror.safe ) | <span class="notranslate farm-term" translate="no">Farm</span> ( farm.safe )  
 ---|---|---  
-RPO (Recovery Point Objective) | 0 (geen gegevensverlies) — synchrone replicatie; schrijfbewerking wordt pas bevestigd nadat beide knooppunten dit hebben bevestigd | Niet van toepassing (staatloos; gegevens verwerkt door backend- mirror )  
-RTO (Recovery Time Objective) | ~1 minuut — time-out van de hartslag (standaard 30 s) + herstarttijd van de applicatie | Enkele seconden later wordt het verkeer onmiddellijk herverdeeld over de overgebleven actieve knooppunten.  
+RPO (recovery point objective) | Geen gegevensverlies. Een schrijfbewerking wordt pas bevestigd nadat beide knooppunten deze hebben bevestigd. | Niet van toepassing op stateless services. Een apart mirror cluster beheert de data.  
+RTO (recovery time objective) | Ongeveer een minuut. Dit is inclusief de time-out voor de hartslagmeting (standaard 30 seconden) en de tijd die nodig is om de applicatie opnieuw op te starten. | Een paar seconden. Het verkeer wordt herverdeeld over de resterende actieve knooppunten.  
 Replicatietype | Synchrone, realtime bestandsreplicatie op byte-niveau | Niet van toepassing  
-Failover-trigger | Automatisch bij verlies van hartslag, procescrash of controlefout. | Automatisch bij verlies van hartslag, procescrash of controlefout.  
-Handmatige interventie vereist? | Nee — volledig automatische failover en failback. | Nee — volledig automatische failover en failback.  
+Failover-trigger | Automatisch wanneer de hartslag stopt, een proces vastloopt of een controle een fout detecteert. | Automatisch wanneer de hartslag stopt, een proces vastloopt of een controle een fout detecteert.  
+Handmatige interventie vereist? | Nee. Failover en failback verlopen automatisch. | Nee. Failover en failback verlopen automatisch.  
   
-### RTO-overzicht ( Mirror — HA op applicatieniveau) {#rto-breakdown-mirror-application-level-ha}
+### Hersteltijd voor applicaties die worden beschermd door een mirror cluster {#rto-breakdown-mirror-application-level-ha}
 
-Fouttype | RTO-berekening  
+Fouttype | Hoe de hersteltijd wordt berekend  
 ---|---  
-Hardwarefout | Hartslag-time-out (standaard 30 s) + herstarttijd van de applicatie  
-Software-/procescrash | Tijdstip waarop de applicatie stopt + tijdstip waarop de applicatie opnieuw opstart  
-Crash op besturingssysteemniveau | Heartbeat-time-out + besturingssysteem draait al op secundaire machine → geen herstartstraf  
+Hardwarefout | De hartslag wordt na een time-out (standaard 30 seconden) opnieuw opgestart.  
+Software- of procescrash | Tijd om de applicatie te stoppen, gevolgd door het opnieuw opstarten van de applicatie.  
+Het besturingssysteem crasht. | Heartbeat-time-out. Het besturingssysteem draait al op de standby-server, dus deze hoeft niet opnieuw op te starten.  
   
-### RTO-analyse ( Mirror — HA op VM-niveau) {#rto-breakdown-mirror-vm-level-ha}
+### Hersteltijd voor virtuele machines die worden beschermd door een mirror cluster {#rto-breakdown-mirror-vm-level-ha}
 
-Fouttype | RTO-berekening  
+Fouttype | Hoe de hersteltijd wordt berekend  
 ---|---  
-Elke mislukking | Foutdetectie + volledige herstart van het besturingssysteem + herstart van de applicatie (duurt doorgaans enkele minuten)  
+Elke mislukking | Het duurt even om de fout te detecteren, het besturingssysteem van de virtuele machine opnieuw op te starten en de applicatie opnieuw te starten. Dit duurt meestal een paar minuten.  
   
-## Geschikt voor afgelegen locaties en gedistribueerde implementaties {#edge-distributed-deployment-suitability}
+## Externe locaties en gedistribueerde implementaties {#edge-distributed-deployment-suitability}
 
-SafeKit is specifiek ontworpen voor edge-, filiaal- en gedistribueerde bedrijfsomgevingen.
+SafeKit is ontworpen voor externe locaties, filiaalvestigingen en organisaties met meerdere locaties.
 
-Randvereiste | SafeKit antwoord  
+Vereiste op een externe locatie | SafeKit functionaliteiten  
 ---|---  
-Er is geen vast IT-personeel op locatie aanwezig. | Ja, automatische failover, geen handmatige tussenkomst nodig.  
-Geen SAN/NAS-infrastructuur | Ja — zonder SAN, alleen lokale schijven.  
-Beheer op afstand | Ja — beheer via de webconsole  
-Lage hardwarevoetafdruk | Ja — 2 standaardservers of virtuele machines, geen speciale hardware nodig.  
-Werkt achter firewalls/NAT. | Ja — configureerbare poorten, HTTPS-gebaseerde console  
-Rampenherstel op meerdere locaties | Ja — mirror tussen twee geografische locaties via een uitgestrekt VLAN.  
-OEM/ingebedde implementatie | Ja — stille installatie, scriptbaar, in te bedden door softwareleveranciers.  
-Honderden gedistribueerde clusters | Ja, ontworpen voor gedistribueerde ondernemingen met veel vestigingen.  
+Er is geen speciaal IT-personeel aanwezig op locatie. | De failover verloopt automatisch en vereist geen handmatige actie.  
+Geen SAN of NAS | SafeKit maakt gebruik van lokale schijven en vereist geen gedeelde opslag.  
+Beheer op afstand | Beheer het cluster via een webconsole.  
+Beperkte hardware | Twee standaardservers of virtuele machines zijn voldoende. Er is geen speciale hardware nodig.  
+Firewalls en netwerkadresvertaling (NAT) | Poorten kunnen worden geconfigureerd. De webconsole maakt gebruik van HTTPS.  
+Herstelwerkzaamheden na rampen tussen locaties | Een mirror kan twee locaties met elkaar verbinden via een VLAN dat ertussen is uitgebreid.  
+Integratie door software-uitgevers | Software-uitgevers kunnen SafeKit in hun producten integreren. De installatie kan zonder tussenkomst van de gebruiker plaatsvinden en kan worden geautomatiseerd met scripts.  
+Honderden clusters verspreid over vele locaties | SafeKit is ontworpen voor organisaties met veel vestigingen.  
   
-Ideale Edge-gebruiksscenario&#39;s: elke locatie zonder datacenter waar hoge beschikbaarheid nog steeds van belang is:
+De volgende sites vereisen een hoge beschikbaarheid, zelfs als ze geen eigen datacenter hebben:
 
-Verticaal | Typische randlocatie | Kritische toepassing  
+Industrie | Typische locatie | Kritische toepassingen  
 ---|---|---  
 Fysieke beveiliging en bewaking | Gebouwen, campussen, luchthavens | VMS — Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gebouwbeheersysteem (BMS) | Kantoorgebouwen, ziekenhuizen, fabrieken | Siemens Desigo CC, Bosch BIS/BVMS  
 Elektronische toegangscontrole (EACS) | Beveiligde faciliteiten, campussen | Siemens SiPass, Nedap, Bosch AMS  
-SCADA &amp; industriële besturing | Fabrieken, onderstations, waterzuiveringsinstallaties | Elke SCADA-, DCS- of HMI-software die draait op Windows of Linux.  
+SCADA & industriële besturing | Fabrieken, onderstations, waterzuiveringsinstallaties | Elke SCADA-, DCS- of HMI-software die draait op Windows of Linux.  
 Luchtverkeersleiding (ATC) | Luchthavens, verkeerstorens | ATC-beheer- en radarsystemen  
 Operationele controlecentra (OCC) | Metro, spoorwegen, openbaarvervoersknooppunten | Spoorwegsignalering en stationsbeheer  
 Maritiem | Schepen, marineschepen | Navigatie-, vracht- en boordbeheersystemen  
@@ -184,79 +184,79 @@ Verdediging | Vooruitgeschoven operationele bases, veldeenheden | Missiekritisch
 
 Vermogen | Details  
 ---|---  
-Webconsole | Web-app of Progressive Web App (PWA); clusterknooppunten configureren, bewaken en beheren.  
-Mobiele meldingen | Browser pushnotificaties voor statuswijzigingen  
-Tijdlijn van de staten | Visuele tijdlijn van modulestatussen en -gebeurtenissen  
-E-mailmeldingen | Ingebouwde e-mailagent voor meldingen  
-CLI-beheer | Volledige commandoregelinterface voor scripting en automatisering  
-Logboekbeheer | Logbestanden per module en per script; debug-snapshots voor ondersteuning.  
-Integratie van monitoring door derden | SafeKit registreert automatisch alle belangrijke clustergebeurtenissen in het Windows-gebeurtenislogboek of Linux Syslog, waardoor elk monitoringplatform deze gebeurtenissen kan verzamelen en alarmen kan genereren met standaard waarschuwingsregels — inclusief Nagios, Zabbix, Splunk en SIEM-oplossingen — zonder dat er maatwerkontwikkeling nodig is.  
+Webconsole | Configureer, bewaak en beheer clusterknooppunten via een webapplicatie of een Progressive Web App (PWA).  
+Mobiele meldingen | Ontvang browsernotificaties wanneer een module van status verandert.  
+Staatsgeschiedenis | Bekijk de status en gebeurtenissen van de module op een tijdlijn.  
+E-mailmeldingen | Een ingebouwde e-mailagent verstuurt meldingen.  
+Commandoregelbeheer | Gebruik de opdrachtregelinterface om scripts te schrijven en taken te automatiseren.  
+Logboekbeheer | Elke module en elk script heeft zijn eigen logbestanden. Diagnostische momentopnamen helpen het supportteam bij het onderzoeken van problemen.  
+Integratie met monitoringtools | SafeKit registreert belangrijke gebeurtenissen in het cluster in het Windows-gebeurtenislogboek of het Linux-syslog. Monitoringtools kunnen deze gebeurtenissen verzamelen en waarschuwingen activeren met standaardregels. Dit werkt met Nagios, Zabbix, Splunk en SIEM-tools zonder dat er maatwerkontwikkeling nodig is.  
   
 ## Beveiliging en naleving {#security-compliance}
 
 Functie | Details  
 ---|---  
-HTTPS-consoletoegang | Ja — TLS-certificaten voor de webconsole  
-Gebruikersauthenticatie | Lokale accounts, LDAP, PKI/certificaatgebaseerd, OpenID Connect  
-Gebruikersrollen | Configureerbaar toegangsbeleid voor beheerders-, controle- en monitorrollen.  
-Versleuteling | TLS/SSL voor TCP (replicatie, webconsole, gedistribueerde commando&#39;s) en AES-128-CBC + SHA256 symmetrische encryptie voor UDP (heartbeat, intern SafeAdmin-protocol); encryptie gebaseerd op de OpenSSL-bibliotheek. Webservice gebaseerd op Apache.  
-Antiviruscompatibiliteit | Gedocumenteerde uitsluitingsroutes  
-Soevereiniteit | Als Europees bedrijf biedt Eviden (Atos Group) met SafeKit een uniek, onafhankelijk product voor bedrijfscontinuïteit en noodherstel voor Windows en Linux. Hierdoor blijven data en failover-infrastructuur volledig lokaal, zonder afhankelijkheid van Amerikaanse leveranciers, in lijn met de NIS2-vereisten voor bedrijfscontinuïteit en noodherstel.  
+HTTPS-consoletoegang | TLS-certificaten beveiligen de toegang tot de webconsole.  
+Gebruikersauthenticatie | Lokale accounts, LDAP, certificaten (PKI) en OpenID Connect  
+Gebruikersrollen | Configureer toegangsbeleid voor beheer, controle en monitoring.  
+Versleuteling | TCP-verkeer maakt gebruik van TLS/SSL voor replicatie, de webconsole en gedistribueerde commando's. UDP-verkeer maakt gebruik van AES-128-CBC-encryptie met SHA256 voor heartbeats en het interne SafeAdmin-protocol. SafeKit gebruikt de OpenSSL-bibliotheek voor encryptie en Apache voor de webservice.  
+Antiviruscompatibiliteit | In de documentatie staan de paden vermeld die moeten worden uitgesloten van antivirusscans.  
+Gegevenssoevereiniteit | Eviden maakt deel uit van de Europese Atos Group. SafeKit biedt oplossingen voor bedrijfscontinuïteit en noodherstel voor Windows en Linux. Data en failover-infrastructuur kunnen volledig op uw eigen locatie blijven, zonder afhankelijk te zijn van Amerikaanse leveranciers. Deze aanpak ondersteunt de eisen van NIS2 op het gebied van bedrijfscontinuïteit en noodherstel.  
   
-## Licentiemodel {#licensing-model}
+## Licenties {#licensing-model}
 
 Aspect | Details  
 ---|---  
-Licentietype | Eeuwige licentie (eenmalige aankoop) op basis van hostnamen  
-Licentieomvang | Per server (node)  
-Licentieactivering | Offline activering wordt ondersteund; er is geen internettoegang nodig om licentiesleutels te activeren.  
-Gratis proefperiode | Ja, een volledig functionele gratis proefversie is beschikbaar.  
-Gratis licentie voor één maand | Beschikbaar voor proof-of-concept  
+Licentietype | Een permanente licentie wordt eenmalig aangeschaft en is gekoppeld aan een hostnaam.  
+Licentieomvang | Eén licentie per server (node)  
+Licentieactivering | Licentiesleutels kunnen zonder internetverbinding worden geactiveerd.  
+Gratis proefperiode | Een gratis proefperiode omvat alle functies.  
+Gratis licentie voor één maand | Beschikbaar om een proof of concept te testen.  
   
-## SLA&#39;s voor ondersteuning en onderhoud {#support-maintenance-slas}
+## Serviceniveaus voor ondersteuning en onderhoud {#support-maintenance-slas}
 
-### Standaard ondersteuning en onderhoud (inbegrepen bij een actief onderhoudscontract) {#standard-support-maintenance-included-with-active-maintenance-contract}
+### Standaard ondersteuning en onderhoud met een actief onderhoudscontract. {#standard-support-maintenance-included-with-active-maintenance-contract}
 
 Dienst | Details  
 ---|---  
-Toegang tot het ondersteuningsportaal | 24/7/365 webportaal voor maximaal 4 benoemde technische contactpersonen  
-Live supporturen | 9:00 - 17:00 uur Europees ondersteuningscentrum, maandag t/m vrijdag  
-Incidentbevestiging | Binnen 4 werkuren van het ondersteuningscentrum  
-Updates en upgrades | Alle servicepacks, updates en upgrades zijn zonder extra kosten inbegrepen.  
-Vervanging van de licentiesleutel | Een licentiesleutel kan opnieuw worden toegewezen bij een wijziging van de hostnaam onder een actief supportcontract. Licentieoverdracht is beperkt tot serververvanging binnen hetzelfde project, onder voorbehoud van voorafgaande schriftelijke toestemming van Eviden.  
+Toegang tot het ondersteuningsportaal | Het webportaal is 24 uur per dag, 7 dagen per week beschikbaar voor maximaal vier aangewezen technische contactpersonen.  
+Live supporturen | Maandag tot en met vrijdag van 9:00 tot 17:00 uur in het Europees ondersteuningscentrum.  
+Incidentbevestiging | Binnen vier werkuren van het ondersteuningscentrum  
+Updates en upgrades | Alle servicepakketten, updates en upgrades zijn zonder extra kosten inbegrepen.  
+Vervanging van de licentiesleutel | Met een actief supportcontract kan een licentiesleutel opnieuw worden toegewezen wanneer een hostnaam verandert. Overdracht is beperkt tot het vervangen van een server binnen hetzelfde project. Voorafgaande schriftelijke toestemming van Eviden is vereist.  
 toegang tot de kennisbank | Volledige toegang tot kennisbankartikelen, veelgestelde vragen en online documentatie.  
-Applicatie starten/stoppen zonder SafeKit | Ja — Stop SafeKit en gebruik een wrapper-script om de applicatie te starten of te stoppen. Het wrapper-script roept de start-/stop-scripts van de applicatie aan en configureert of verwijdert het virtuele IP-adres, indien nodig. 
+Een applicatie starten of stoppen zonder SafeKit | Stop SafeKit en gebruik vervolgens een wrapper-script om de applicatie te starten of te stoppen. Dit script roept de start- en stopscripts van de applicatie aan. Het voegt ook het virtuele IP-adres toe of verwijdert het indien nodig.  
 Ondersteuningsportaal | <https://customercare.evidian.com>  
   
-### Gratis bronnen (geen contract vereist) {#free-resources-no-contract-required}
+### Gratis resources zonder ondersteuningscontract {#free-resources-no-contract-required}
 
 Bron | Details  
 ---|---  
-AI-ondersteuningsassistent | [SafeKit AI-chat](</nl/resources/safekit-support/#ai-support>) op safekit.eviden.com en via elk LLM-bestand met behulp van safekit.eviden.com/llms.txt  
-Online training en certificering | Gratis, in eigen tempo te volgen, 12 video&#39;s (~3 uur en 40 minuten), certificaat na voltooiing.  
-Documentatie | Volledige gebruikershandleiding, release-opmerkingen, kennisbank, snelstartgidsen  
+AI-ondersteuningsassistent | Gebruik [SafeKit AI-chat](</nl/resources/safekit-support/#ai-support>) op safekit.eviden.com. Je kunt ook een AI-taalmodel gebruiken met de informatie in safekit.eviden.com/llms.txt.  
+Online training en certificering | Leer in je eigen tempo met 12 gratis video's van in totaal ongeveer 3 uur en 40 minuten. Je ontvangt een certificaat na afronding van de training.  
+Documentatie | Gebruikershandleiding, release-opmerkingen, kennisbank en snelle installatiehandleidingen.  
   
-## Vergelijking versus alternatieven {#comparison-vs-alternatives}
+## Vergelijking met andere oplossingen {#comparison-vs-alternatives}
 
 Criterium | SafeKit | Microsoft Failover Cluster (WSFC) | VMware HA | Open Source*  
 ---|---|---|---|---  
 Gedeelde opslag (SAN/vSAN) vereist | Nee | Ja | Ja | Nee  
 Windows-ondersteuning | Ja | Ja | Ja | Nee  
 Linux-ondersteuning | Ja | Nee | Ja | Ja  
-Edge-/filiaalimplementatie | Uitstekend | Complex | Complex | Complex  
-OEM-inbouwbaar | Ja | Nee | Nee | Nee  
-Kosten | Permanent per knooppunt | Windows Server + SAN | vSphere Enterprise + SAN | Integratiediensten op hoog niveau  
-Installatiecomplexiteit | Plug-and-play | Hoog (AD, SAN, getuige) | Hoog (vCenter, gedeelde opslag) | Hoog (gefragmenteerde producten)  
-Onderhoudbaarheid | Enkel product, webconsole | Hoog (AD- en SAN-expertise vereist) | Hoog (afhankelijkheid van vCenter) | Hoog (aparte producten voor onderhoud)  
+Implementatie op externe locaties | Uitstekend | Complex | Complex | Complex  
+Integratie in het product van een software-uitgever. | Ja | Nee | Nee | Nee  
+Kosten | Permanente licentie per node | Windows Server en SAN | vSphere Enterprise en SAN | Geavanceerde integratiediensten  
+Installatiecomplexiteit | Klaar voor configuratie en gebruik. | Hoog: Active Directory-, SAN- en witness-configuratie | Hoog: vCenter- en gedeelde opslagconfiguratie | Hoog: meerdere afzonderlijke producten om te configureren  
+Onderhoudsvereisten | Eén product beheerd via een webconsole | Hoog: Expertise in Active Directory en SAN | Hoog: afhankelijkheid van vCenter | Hoog: meerdere afzonderlijke producten om te onderhouden  
   
-_* Op Linux zijn er 6 afzonderlijke open-sourceprojecten nodig — Corosync, Pacemaker, DRBD, Keepalived, STONITH, HAProxy — om de functionaliteit van SafeKit te repliceren, en dat alleen al op Linux. SafeKit biedt dezelfde mogelijkheden in één enkel product, voor zowel Windows als Linux._
+_Op Linux zijn zes afzonderlijke open-sourceprojecten nodig om dezelfde functionaliteit te bieden: Corosync, Pacemaker, DRBD, Keepalived, STONITH en HAProxy. SafeKit biedt deze functionaliteit in één product voor zowel Windows als Linux._
 
-## Snel naslaglinks {#quick-reference-links}
+## Nuttige links {#quick-reference-links}
 
 Bron | URL  
 ---|---  
 Startpagina van het product | [https://safekit.eviden.com/nl/](</nl/>)  
-Technisch overzicht (DOCX met tekst en diagrammen) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
+Technisch overzicht (Word-document met tekst en diagrammen) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
 Gratis proefperiode | [https://safekit.eviden.com/nl/resources/safekit-free-trial/](</nl/resources/safekit-free-trial/>)  
 Vraag een offerte aan | [https://safekit.eviden.com/nl/safekit-pricing/](</nl/safekit-pricing/>)  
 Ondersteuningsportaal | <https://customercare.evidian.com>  

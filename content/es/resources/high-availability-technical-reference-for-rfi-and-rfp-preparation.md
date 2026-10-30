@@ -1,70 +1,70 @@
 ---
-title: "Referencia técnica de alta disponibilidad para la preparación de RFI y RFP."
+title: "Referencia técnica SafeKit para documentos RFI y RFP"
 canonical: "https://safekit.eviden.com/es/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "Referencia técnica para ayudar a preparar documentos RFI y RFP para alta disponibilidad y agrupación de aplicaciones utilizando los conceptos y arquitecturas SafeKit ."
+description: "Encuentre información técnica sobre SafeKit para preparar solicitudes de información (RFI) y solicitudes de propuestas (RFP). Conozca los sistemas, arquitecturas, tiempos de recuperación, seguridad, licencias y soporte compatibles."
 category: "resources"
 lang: "es"
-topics: "Descripción general, Tabla de contenido, Identidad del producto, Sistemas operativos y plataformas compatibles, Limitaciones de alta disponibilidad de SafeKit, Módulos de aplicación prediseñados, Modelo de arquitectura y despliegue, Capacidades de RPO y RTO, Idoneidad para emplazamientos remotos e implementaciones distribuidas, Monitoreo, gestión y alertas, Seguridad y cumplimiento, Modelo de licenciamiento, Acuerdos de nivel de servicio (SLA) de soporte y mantenimiento, Comparación frente a alternativas, Enlaces de referencia rápida"
+topics: "Descripción general, Tabla de contenido, Información del producto, Sistemas operativos y plataformas compatibles, Limitaciones de alta disponibilidad de SafeKit, Módulos de aplicación preconfigurados, Arquitectura y despliegue, Tiempos de recuperación y pérdida de datos (RPO y RTO), Sitios remotos y despliegues distribuidos, Monitoreo, gestión y alertas, Seguridad y cumplimiento, Licencias, Niveles de servicio de soporte y mantenimiento, Comparación con otras soluciones, Enlaces útiles"
 ---
 
-# Referencia técnica de alta disponibilidad para la preparación de RFI y RFP. {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# Referencia técnica SafeKit para documentos RFI y RFP {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
 ## Descripción general {#overview}
 
-Esta página ofrece respuestas estructuradas y objetivas a las preguntas más frecuentes en las solicitudes de propuestas (RFP) y solicitudes de información (RFI) sobre el software de alta disponibilidad SafeKit . Su objetivo es servir de referencia técnica para los equipos de compras y los arquitectos de soluciones que elaboran los requisitos de alta disponibilidad. 
+Utilice esta página para preparar una solicitud de información (RFI) o una solicitud de propuestas (RFP). Aquí encontrará respuestas a preguntas técnicas frecuentes sobre el software de alta disponibilidad SafeKit . La información ayuda a los equipos de compras y a los arquitectos de soluciones a definir sus requisitos.
 
 ## Tabla de contenido {#table-of-contents}
 
-  1. [Identidad del producto](#product-identity)
+  1. [Información del producto](#product-identity)
   2. [Sistemas operativos y plataformas compatibles](#supported-operating-systems-platforms)
   3. [Limitaciones de alta disponibilidad de SafeKit](#safekit-ha-limitations)
-  4. [Módulos de aplicación prediseñados](#pre-built-application-modules)
-  5. [Modelo de arquitectura y despliegue](#architecture-deployment-model)
-  6. [Capacidades de RPO y RTO](#rpo-rto-capabilities)
-  7. [Idoneidad para emplazamientos remotos e implementaciones distribuidas](#edge-distributed-deployment-suitability)
+  4. [Módulos de aplicación preconfigurados](#pre-built-application-modules)
+  5. [Arquitectura y despliegue](#architecture-deployment-model)
+  6. [Tiempos de recuperación y pérdida de datos (RPO y RTO)](#rpo-rto-capabilities)
+  7. [Sitios remotos y despliegues distribuidos](#edge-distributed-deployment-suitability)
   8. [Monitoreo, gestión y alertas](#monitoring-management-alerting)
   9. [Seguridad y cumplimiento](#security-compliance)
-  10. [Modelo de licenciamiento](#licensing-model)
-  11. [Acuerdos de nivel de servicio (SLA) de soporte y mantenimiento](#support-maintenance-slas)
-  12. [Comparación frente a alternativas](#comparison-vs-alternatives)
-  13. [Enlaces de referencia rápida](#quick-reference-links)
+  10. [Licencias](#licensing-model)
+  11. [Niveles de servicio de soporte y mantenimiento](#support-maintenance-slas)
+  12. [Comparación con otras soluciones](#comparison-vs-alternatives)
+  13. [Enlaces útiles](#quick-reference-links)
 
 
-## Identidad del producto {#product-identity}
+## Información del producto {#product-identity}
 
 Campo | Respuesta  
 ---|---  
 Nombre del producto | SafeKit  
-Proveedor | Eviden (una empresa de Atos), anteriormente Evidian  
-Categoría de producto | Software de agrupación de aplicaciones / alta disponibilidad / recuperación ante desastres  
+Proveedor | Eviden, parte del Grupo Atos. Anteriormente conocida como Evidian.  
+Categoría de producto | Software para la agrupación de aplicaciones, alta disponibilidad y recuperación ante desastres.  
 Versión actual | SafeKit 8.2  
 Sitio web | [https://safekit.eviden.com/es/](</es/>)  
-Primer lanzamiento | 2000 (más de 20 años en producción)  
+Primer lanzamiento | 2000. Se utiliza en producción desde hace más de 20 años.  
   
 ## Sistemas operativos y plataformas compatibles {#supported-operating-systems-platforms}
 
-Sistema operativo Windows | Sistema operativo Linux | Infraestructura y virtualización | Plataformas en la nube  
+Sistemas operativos Windows | Sistemas operativos Linux | Infraestructura y virtualización | Plataformas en la nube  
 ---|---|---|---  
-• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 Enterprise (x86-64)<br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br> • Red Hat Enterprise Linux 10 (AArch64)<br> • Red Hat Enterprise Linux 9 (x86-64)<br> • Red Hat Enterprise Linux 9 (AArch64)<br> • Red Hat Enterprise Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • Cualquier servidor perimetral de cualquier marca<br> • VMware<br> • Microsoft Hyper-V*<br> • Linux KVM*<br> • Cualquier hipervisor<br> • Contenedores Docker<br> • Contenedores Podman  |  • Amazon Web Services (AWS)\*\*<br> • Microsoft Azure\*\*<br> • Plataforma Google Cloud (GCP)\*\*<br> • Cualquier nube IaaS con instancias de máquinas virtuales estándar   
+• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 Enterprise (x86-64)<br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br> • Red Hat Enterprise Linux 10 (AArch64)<br> • Red Hat Enterprise Linux 9 (x86-64)<br> • Red Hat Enterprise Linux 9 (AArch64)<br> • Red Hat Enterprise Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • Cualquier servidor perimetral de cualquier marca<br> • VMware<br> • Microsoft Hyper-V*<br> • Linux KVM*<br> • Cualquier hipervisor<br> • Contenedores Docker<br> • Contenedores Podman  |  • Amazon Web Services (AWS)**<br> • Microsoft Azure**<br> • Plataforma Google Cloud (GCP)**<br> • Cualquier nube IaaS con instancias de máquinas virtuales estándar   
   
-_* SafeKit admite alta disponibilidad tanto a nivel de aplicación como a nivel de máquina virtual._
+_* SafeKit proporciona alta disponibilidad para aplicaciones individuales o máquinas virtuales completas._
 
-Las direcciones IP virtuales deben configurarse a nivel del balanceador de carga en la nube.
+_** En la nube, configure direcciones IP virtuales en el balanceador de carga de la nube._
 
 {{%  insert-safekit-usage-es  %}}
 
-## Módulos de aplicación prediseñados {#pre-built-application-modules}
+## Módulos de aplicación preconfigurados {#pre-built-application-modules}
 
-SafeKit incluye módulos `.safe` preconfigurados y listos para usar. Están organizados en dos estrategias de alta disponibilidad: **HA de aplicaciones** (agrupación directa de aplicaciones con módulos mirror o <span class="notranslate farm-term" translate="no">farm</span> ) y **HA de virtualización** (agrupación a nivel de máquina virtual con hyperv.safe o kvm.safe ).
+SafeKit incluye módulos `.safe` listos para usar. Existen dos maneras de proteger las aplicaciones. **La alta disponibilidad de aplicaciones** protege una aplicación directamente con un módulo mirror o <span class="notranslate farm-term" translate="no">farm</span> . **La alta disponibilidad de máquinas virtuales** protege toda la máquina virtual con un módulo hyperv.safe o kvm.safe .
 
- | Aplicación HA | Alta disponibilidad a nivel de máquina virtual  
+ | Alta disponibilidad de la aplicación | Alta disponibilidad de máquinas virtuales  
 ---|---|---  
-Configuración | Requiere un conocimiento técnico de la propia aplicación: qué servicios deben reiniciarse, las carpetas específicas de la aplicación que necesitan replicación en tiempo real y la configuración de una dirección IP virtual para la conmutación por error. | Solución genérica para cualquier aplicación o sistema operativo que se ejecute en la máquina virtual. No requiere conocimientos técnicos sobre la aplicación instalada. Es la mejor solución si desconoce el funcionamiento de la aplicación. Solo necesita definir la ubicación de los archivos de la máquina virtual.  
-Ideal para | Ideal para integrar alta disponibilidad directamente en una solución de software, independientemente del hardware subyacente o del hipervisor. | Ideal para gestionar entornos complejos con múltiples aplicaciones en varias máquinas virtuales mediante una única política de alta disponibilidad.  
+Configuración | Debe saber qué servicios de aplicación reiniciar y qué carpetas replicar. También debe configurar la dirección IP virtual que se utilizará para la conmutación por error. | Solo necesitas especificar la ubicación de los archivos de la máquina virtual. No necesitas saber cómo funcionan las aplicaciones dentro de la máquina virtual. Este método protege tanto las aplicaciones como el sistema operativo.  
+Uso recomendado | Agregue alta disponibilidad directamente a una solución de software, sin depender de hardware específico o un hipervisor específico. | Gestiona varias aplicaciones en múltiples máquinas virtuales con una única política de alta disponibilidad.  
   
 La siguiente tabla enumera todos los módulos `.safe` disponibles:
 
-Alta disponibilidad de aplicaciones (agrupación a nivel de aplicación) | Alta disponibilidad de virtualización (agrupación en clústeres a nivel de máquina virtual)  
+Alta disponibilidad de la aplicación | Alta disponibilidad de máquinas virtuales  
 ---|---  
 Nueva aplicación para Windows: mirror.safe | Máquina virtual Hyper-V — hyperv.safe (Windows)  
 Nueva aplicación para Linux: mirror.safe | Máquina virtual KVM — kvm.safe (Linux)  
@@ -85,87 +85,87 @@ Genetec (SQL Server) — sqlserver.safe (Windows) | SIMATIC WinCC — hyperv.saf
 Siemens Siveillance VMS — SiveillanceVMS.safe (Windows) |   
 Nube (AWS, Azure, GCP, genérica) — mirror.safe / farm.safe |   
   
-## Modelo de arquitectura y despliegue {#architecture-deployment-model}
+## Arquitectura y despliegue {#architecture-deployment-model}
 
 ### Dos módulos de clúster: mirror.safe y farm.safe {#two-cluster-modules}
 
-Módulo | Patrón | Caso de uso  
+Módulo | Cómo funciona | Aplicaciones típicas  
 ---|---|---  
-mirror.safe | Modo activo-pasivo con replicación síncrona de archivos a nivel de byte + conmutación por error automática. | Bases de datos, aplicaciones con estado, servicios que se ejecutan en un solo servidor a la vez.  
-farm.safe | Configuración activa-activa con equilibrio de carga de red y conmutación por error automática. | Servidores web, microservicios sin estado, pasarelas API, servicios que se ejecutan en varios servidores a la vez.  
+mirror.safe | Un servidor está activo y el otro en espera. Los archivos se replican de forma síncrona a nivel de byte. La conmutación por error es automática. | Bases de datos, aplicaciones que almacenan estado y servicios que se ejecutan en un solo servidor a la vez.  
+farm.safe | Varios servidores están activos al mismo tiempo. SafeKit distribuye el tráfico de red entre ellos y gestiona la conmutación por error automáticamente. | Servidores web, microservicios sin estado, pasarelas API y servicios que se ejecutan en varios servidores a la vez.  
   
-### Infraestructura y arquitectura del clúster {#cluster-infrastructure-architecture}
+### Infraestructura de clúster {#cluster-infrastructure-architecture}
 
-Requisito / Especificación | Capacidad/Valor SafeKit  
+Requisito | Capacidades SafeKit  
 ---|---  
-¿Se requiere almacenamiento compartido? | No — Arquitectura &quot;sin almacenamiento compartido&quot; SAN. Utiliza únicamente discos locales.  
-¿Requisito previo de Active Directory (AD)? | No, no requiere un dominio de Windows ni Active Directory. Los grupos de trabajo son totalmente compatibles.  
+¿Se requiere almacenamiento compartido? | No. SafeKit utiliza discos locales. No necesita una SAN ni almacenamiento compartido.  
+¿Se requiere Active Directory? | No. SafeKit no requiere un dominio de Windows ni Active Directory. Además, es compatible con grupos de trabajo.  
 Tamaño del clúster | 2 nodos ( mirror ) o 2 o más nodos ( <span class="notranslate farm-term" translate="no">farm</span> )  
-IP virtual (VIP) | VIP definida por software que migra automáticamente al nodo activo mediante ARP gratuito (alta disponibilidad a nivel de aplicación). Para la alta disponibilidad a nivel de máquina virtual, la IP física dentro de la máquina virtual se redirige de forma transparente; no se necesita VIP. Requiere una LAN, VLAN o VLAN extendida entre los nodos.  
-Arquitectura híbrida de 3 nodos | SafeKit cubre la capa de alta disponibilidad: un clúster mirror de dos nodos sobre una LAN o VLAN extendida con replicación síncrona (RPO=0) y conmutación por error automática. Una solución de copia de seguridad de terceros completa la arquitectura: un tercer nodo remoto con replicación asíncrona a través de una WAN para la recuperación puntual y la protección contra el ransomware.  
-Función de la alta disponibilidad | SafeKit utiliza la replicación síncrona para garantizar la conmutación por error instantánea sin pérdida de datos en caso de fallos de hardware o software. Sin embargo, dado que escribe datos en ambos nodos simultáneamente, replica fielmente los errores lógicos, la degradación de datos o las eliminaciones accidentales en el nodo de respaldo en tiempo real.  
-Función de respaldo | Una solución de respaldo (no implementada por SafeKit ) proporciona recuperación a un punto específico en el tiempo mediante replicación asíncrona. Protege contra amenazas a la integridad de los datos (como ransomware o errores humanos) que la alta disponibilidad no puede bloquear. No admite la conmutación por error automática, ya que la reversión de datos conlleva inherentemente la pérdida de datos.  
-Máximo de módulos simultáneos por clúster | 32: este límite abarca el número máximo de módulos SafeKit que se pueden gestionar simultáneamente en un clúster de dos nodos, utilizado normalmente en alta disponibilidad a nivel de máquina virtual, donde cada módulo replica y reinicia una máquina virtual diferente. Cada módulo puede ejecutarse de forma independiente como principal en cualquiera de los nodos, lo que permite distribuir la carga de trabajo entre ambos servidores. Nota: el volumen total de datos de todas las máquinas virtuales influye directamente en el tiempo de resincronización tras una conmutación por error o un reinicio de nodo.  
-¿Con o sin agentes? | Basado en agentes: software ligero instalado en cada nodo.  
-¿Agnóstico a la aplicación? | Sí, protege cualquier servicio de Windows o demonio de Linux; módulos preconfigurados para más de 30 aplicaciones.  
+Dirección IP virtual (VIP) | Para garantizar la alta disponibilidad de las aplicaciones, la dirección IP virtual se asigna automáticamente al nodo activo mediante ARP gratuito. Para la alta disponibilidad de las máquinas virtuales, el tráfico dirigido a la dirección IP dentro de la máquina virtual se redirige automáticamente. No se requiere una dirección IP virtual independiente. Los nodos deben compartir una LAN, una VLAN o una VLAN extendida entre sitios.  
+Arquitectura con tres nodos | SafeKit ejecuta un clúster mirror de dos nodos en una LAN o una VLAN extendida entre sitios. Proporciona replicación síncrona con cero pérdida de datos (RPO=0) y conmutación por error automática. Un producto de copia de seguridad independiente replica los datos de forma asíncrona en un tercer nodo a través de una WAN. Esta copia de seguridad permite la recuperación a un punto anterior en el tiempo y ofrece protección contra el ransomware.  
+Propósito de la alta disponibilidad | SafeKit replica los datos de forma síncrona en ambos nodos. Esto permite la conmutación por error automática sin pérdida de datos tras un fallo de hardware o software. Además, los errores lógicos, la corrupción de datos y las eliminaciones accidentales se copian inmediatamente al nodo de respaldo.  
+Finalidad de las copias de seguridad | Las copias de seguridad permiten restaurar datos desde un momento anterior. Un producto de copia de seguridad independiente, no SafeKit , proporciona esta protección mediante replicación asíncrona. Las copias de seguridad ayudan a recuperarse de ataques de ransomware y errores humanos. Esta recuperación no es una conmutación por error automática. Al restaurar una copia de seguridad antigua, se pierden los cambios realizados después de dicha copia.  
+Número máximo de módulos que se ejecutan simultáneamente | Un clúster de dos nodos puede gestionar hasta 32 módulos simultáneamente. Para proteger las máquinas virtuales, cada módulo replica y reinicia una máquina virtual diferente. Cada módulo puede ser principal en cualquiera de los nodos, de modo que ambos servidores pueden compartir la carga de trabajo. El volumen total de datos afecta al tiempo de resincronización tras una conmutación por error o el reinicio de un nodo.  
+¿Software necesario en cada nodo? | Sí. Se instala un agente de software ligero en cada nodo.  
+Aplicaciones compatibles | SafeKit puede proteger cualquier servicio de Windows o demonio de Linux. Hay módulos preconfigurados disponibles para más de 30 aplicaciones.  
   
 ### Replicación y protección de datos {#replication-data-protection}
 
-Requisito / Especificación | Capacidad/Valor SafeKit  
+Requisito | Capacidades SafeKit  
 ---|---  
-Método de replicación | Replicación de archivos a nivel de byte (no a nivel de bloque de disco)  
-Modo de replicación | Síncrono (sin pérdida de datos)  
-Requisitos de red | Se recomienda una latencia de ida y vuelta entre nodos inferior a 5 ms para la replicación síncrona.  
-Volumen de datos recomendado | Unos pocos terabytes (tiempo de resincronización)  
-Número de archivos recomendado | &lt; 1.000.000 de archivos (tiempo de resincronización)  
-Velocidad de resincronización (1 TB) | Aproximadamente 3 horas en una red de 1 Gb/s; aproximadamente 1 hora en una red de 10 Gb/s.  
-Replicación selectiva | Sí — replicar directorios/archivos específicos  
-Cifrado en tránsito | Sí, TLS/SSL para el tráfico de replicación  
+Método de replicación | SafeKit replica los cambios de archivo a nivel de byte. No replica los bloques de disco.  
+Modo de replicación | Replicación síncrona, sin pérdida de datos.  
+Requisitos de red | Para la replicación síncrona, se recomienda una latencia de ida y vuelta inferior a 5 ms entre nodos.  
+Volumen de datos recomendado | Unos pocos terabytes, para que el tiempo de resincronización sea manejable.  
+Número de archivos recomendado | Menos de 1.000.000 de archivos, para que el tiempo de resincronización sea manejable.  
+Es hora de resincronizar 1 TB | Aproximadamente 3 horas en una red de 1 Gb/s o 1 hora en una red de 10 Gb/s.  
+Replicación selectiva | Puedes elegir qué directorios y archivos replicar.  
+Cifrado durante la transferencia | El tráfico de replicación está cifrado con TLS/SSL.  
   
-## Capacidades de RPO y RTO {#rpo-rto-capabilities}
+## Tiempos de recuperación y pérdida de datos (RPO y RTO) {#rpo-rto-capabilities}
 
-### RPO y RTO por tipo de clúster {#rto-rpo-cluster-type}
+### RPO y RTO para cada tipo de clúster {#rto-rpo-cluster-type}
 
-Métrico | Grupo Mirror ( mirror.safe ) | Agrupación <span class="notranslate farm-term" translate="no">Farm</span> ( farm.safe )  
+Métrico | Grupo Mirror ( mirror.safe ) | Grupo <span class="notranslate farm-term" translate="no">Farm</span> ( farm.safe )  
 ---|---|---  
-RPO (Objetivo de Punto de Recuperación) | 0 (cero pérdida de datos) — replicación síncrona; la escritura se reconoce solo después de que ambos nodos lo confirmen | N/A (sin estado; los datos son gestionados por el servidor mirror )  
-RTO (Objetivo de Tiempo de Recuperación) | ~1 minuto — tiempo de espera del latido (predeterminado 30 s) + tiempo de reinicio de la aplicación | Unos segundos después, el tráfico se redistribuyó inmediatamente a los nodos activos que seguían funcionando.  
+RPO (objetivo de punto de recuperación) | Cero pérdida de datos. Una escritura se confirma solo después de que ambos nodos la reconozcan. | No aplicable a servicios sin estado. Un clúster mirror independiente gestiona los datos.  
+RTO (objetivo de tiempo de recuperación) | Aproximadamente un minuto. Esto incluye el tiempo de espera del latido (30 segundos por defecto) y el tiempo para reiniciar la aplicación. | Unos segundos. El tráfico se redistribuye entre los nodos activos restantes.  
 Tipo de replicación | Replicación de archivos síncrona, en tiempo real y a nivel de byte. | No aplicable  
-Disparador de conmutación por error | Automático en caso de pérdida de latido, fallo del proceso o error del verificador. | Automático en caso de pérdida de latido, fallo del proceso o error del verificador.  
-¿Se requiere intervención manual? | No, conmutación por error y recuperación totalmente automáticas. | No: conmutación por error y recuperación totalmente automáticas.  
+Disparador de conmutación por error | Automático cuando se detienen los latidos del corazón, un proceso falla o un verificador detecta un fallo. | Automático cuando se detienen los latidos del corazón, un proceso falla o un verificador detecta un fallo.  
+¿Se requiere intervención manual? | No. La conmutación por error y la recuperación son automáticas. | No. La conmutación por error y la recuperación son automáticas.  
   
-### Desglose de RTO ( Mirror : Alta disponibilidad a nivel de aplicación) {#rto-breakdown-mirror-application-level-ha}
+### Tiempo de recuperación para aplicaciones protegidas por un clúster mirror {#rto-breakdown-mirror-application-level-ha}
 
-Tipo de fallo | Cálculo de RTO  
+Tipo de fallo | Cómo se calcula el tiempo de recuperación  
 ---|---  
-Fallo de hardware | Tiempo de espera del latido (por defecto 30 s) + tiempo de reinicio de la aplicación  
-Fallo del software/proceso | Tiempo de detención de la aplicación + tiempo de reinicio de la aplicación  
-Fallo a nivel del sistema operativo | Tiempo de espera de latido agotado + el sistema operativo ya se está ejecutando en el servidor secundario → no hay penalización por reinicio  
+Fallo de hardware | Tiempo de espera de latido (30 segundos por defecto), seguido del reinicio de la aplicación.  
+Fallo del software o del proceso | Es hora de detener la aplicación y luego reiniciarla.  
+Fallo del sistema operativo | Tiempo de espera agotado para la señal de latido. El sistema operativo ya se está ejecutando en el servidor de reserva, por lo que no es necesario reiniciarlo.  
   
-### Desglose del RTO ( Mirror : HA a nivel de máquina virtual) {#rto-breakdown-mirror-vm-level-ha}
+### Tiempo de recuperación para máquinas virtuales protegidas por un clúster mirror {#rto-breakdown-mirror-vm-level-ha}
 
-Tipo de fallo | Cálculo de RTO  
+Tipo de fallo | Cómo se calcula el tiempo de recuperación  
 ---|---  
-Cualquier fallo | Detección de fallos + reinicio completo del sistema operativo + reinicio de la aplicación (normalmente varios minutos)  
+Cualquier fallo | Es hora de detectar el fallo, reiniciar el sistema operativo de la máquina virtual y reiniciar la aplicación. Esto suele tardar varios minutos.  
   
-## Idoneidad para emplazamientos remotos e implementaciones distribuidas {#edge-distributed-deployment-suitability}
+## Sitios remotos y despliegues distribuidos {#edge-distributed-deployment-suitability}
 
-SafeKit está diseñado específicamente para escenarios de borde, sucursales y empresas distribuidas.
+SafeKit está diseñado para ubicaciones remotas, sucursales y organizaciones con múltiples sedes.
 
-Requisito de borde | Respuesta SafeKit  
+Requisito en una ubicación remota | Capacidades SafeKit  
 ---|---  
-No hay personal informático dedicado en las instalaciones. | Sí, conmutación por error automática, sin intervención manual.  
-Sin infraestructura SAN/NAS | Sí, sin SAN, solo discos locales.  
-Gestión remota | Sí, gestión de la consola web  
-Bajo consumo de hardware | Sí, dos servidores estándar o máquinas virtuales, sin hardware especial.  
-Funciona detrás de cortafuegos/NAT | Sí, puertos configurables, consola basada en HTTPS.  
-Recuperación ante desastres en múltiples sitios | Sí, mirror entre dos sitios geográficos a través de una VLAN extendida.  
-Implementación OEM/integrada | Sí, instalación silenciosa, programable, integrable por los editores de software.  
-Cientos de clústeres distribuidos | Sí, diseñado para empresas distribuidas con muchas sucursales.  
+No hay personal informático dedicado en las instalaciones. | La conmutación por error es automática y no requiere ninguna acción manual.  
+Sin SAN ni NAS | SafeKit utiliza discos locales y no requiere almacenamiento compartido.  
+Gestión remota | Gestione el clúster a través de una consola web.  
+Hardware limitado | Dos servidores estándar o máquinas virtuales son suficientes. No se requiere hardware especial.  
+Cortafuegos y traducción de direcciones de red (NAT) | Los puertos se pueden configurar. La consola web utiliza HTTPS.  
+Recuperación tras desastres entre sitios | Un clúster mirror puede conectar dos sitios a través de una VLAN extendida entre ellos.  
+Integración por parte de los editores de software | Los desarrolladores de software pueden incluir SafeKit en sus productos. La instalación puede ejecutarse sin interacción del usuario y automatizarse mediante scripts.  
+Cientos de grupos en numerosos sitios | SafeKit está diseñado para organizaciones con muchas sucursales.  
   
-Casos de uso ideales para Edge: cualquier sitio sin centro de datos, donde la alta disponibilidad sigue siendo importante:
+Los siguientes sitios necesitan alta disponibilidad incluso cuando no disponen de un centro de datos:
 
-Vertical | Sitio de borde típico | Aplicación crítica  
+Industria | Sitio típico | Aplicaciones críticas  
 ---|---|---  
 Seguridad física y vigilancia | Edificios, campus, aeropuertos | VMS — Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gestión de edificios (BMS) | Edificios de oficinas, hospitales, fábricas | Siemens Desigo CC, Bosch BIS/BVMS  
@@ -174,7 +174,7 @@ SCADA y control industrial | Fábricas, subestaciones, plantas de tratamiento de
 control de tráfico aéreo (ATC) | Aeropuertos, torres de control | Sistemas de gestión y radar del control de tráfico aéreo  
 Centros de control de operaciones (OCC) | Metro, ferrocarril, centros de transporte | Señalización ferroviaria y gestión de estaciones  
 Marítimo | Buques, embarcaciones navales | Sistemas de navegación, carga y gestión a bordo  
-Petróleo y gas | Plataformas marinas, plataformas de perforación remotas | Sistemas de control de procesos y seguridad  
+Petróleo y gas | Plataformas marinas, plataformas remotas | Sistemas de control de procesos y seguridad  
 Telecomunicaciones | Emplazamientos de antenas 5G, nodos MEC | Servidores de computación perimetral de acceso múltiple (MEC)  
 Cuidado de la salud | Clínicas, centros de diagnóstico remoto | Imágenes médicas, datos de pacientes, diagnóstico remoto  
 Minorista | Tiendas, sucursales, almacenes | Gestión de puntos de venta e inventario  
@@ -184,79 +184,79 @@ Defensa | Bases operativas avanzadas, unidades de campo | Sistemas de mando y co
 
 Capacidad | Detalles  
 ---|---  
-Consola web | Aplicación web o aplicación web progresiva (PWA); configurar, supervisar y administrar los nodos del clúster.  
-Notificaciones móviles | Notificaciones push del navegador para cambios de estado  
-Cronología de los estados | Línea de tiempo visual de los estados y eventos del módulo.  
-notificaciones por correo electrónico | Agente de correo electrónico integrado para alertas  
-Gestión de CLI | Interfaz completa de línea de comandos para scripting y automatización.  
-Gestión de registros | Archivos de registro por módulo y por script; instantáneas de depuración para soporte  
-Integración de sistemas de monitorización de terceros | SafeKit registra automáticamente todos los eventos importantes del clúster en el registro de eventos de Windows o en el Syslog de Linux, lo que permite que cualquier plataforma de monitorización recopile estos eventos y genere alarmas con reglas de alerta estándar, incluidas Nagios, Zabbix, Splunk y las soluciones SIEM, sin necesidad de desarrollo personalizado.  
+Consola web | Configure, supervise y gestione los nodos del clúster mediante una aplicación web o una aplicación web progresiva (PWA).  
+Notificaciones móviles | Reciba notificaciones en el navegador cuando un módulo cambie de estado.  
+Historia del estado | Visualiza los estados y eventos del módulo en una línea de tiempo.  
+notificaciones por correo electrónico | Un agente de correo electrónico integrado envía alertas.  
+Gestión mediante línea de comandos | Utilice la interfaz de línea de comandos para escribir scripts y automatizar tareas.  
+Gestión de registros | Cada módulo y script tiene sus propios archivos de registro. Las instantáneas de diagnóstico ayudan al equipo de soporte a investigar los problemas.  
+Integración con herramientas de monitorización | SafeKit registra los eventos principales del clúster en el registro de eventos de Windows o en el Syslog de Linux. Las herramientas de monitorización pueden recopilar estos eventos y activar alertas con reglas estándar. Funciona con Nagios, Zabbix, Splunk y herramientas SIEM sin necesidad de desarrollo personalizado.  
   
 ## Seguridad y cumplimiento {#security-compliance}
 
 Característica | Detalles  
 ---|---  
-Acceso a la consola HTTPS | Sí, certificados TLS para la consola web.  
-Autenticación de usuario | Cuentas locales, LDAP, PKI/basado en certificados, OpenID Connect  
-Roles de usuario | Políticas de acceso configurables para los roles de administrador, control y supervisión.  
-Cifrado | TLS/SSL para TCP (replicación, consola web, comandos distribuidos) y cifrado simétrico AES-128-CBC + SHA256 para UDP (latido, protocolo interno de safeadmin); cifrado basado en la biblioteca OpenSSL. Servicio web basado en Apache.  
-Compatibilidad con antivirus | Rutas de exclusión documentadas  
-Soberanía | Como empresa europea, Eviden (Grupo Atos) ofrece con SafeKit un producto único de continuidad empresarial y recuperación ante desastres para Windows y Linux, que mantiene los datos y la infraestructura de conmutación por error completamente en las instalaciones del cliente, sin depender de proveedores estadounidenses, en línea con los requisitos de continuidad empresarial y recuperación ante desastres de NIS2.  
+Acceso a la consola HTTPS | Los certificados TLS protegen el acceso a la consola web.  
+Autenticación de usuario | Cuentas locales, LDAP, certificados (PKI) y OpenID Connect  
+Roles de usuario | Configure las políticas de acceso para la administración, el control y la supervisión.  
+Cifrado | El tráfico TCP utiliza TLS/SSL para la replicación, la consola web y los comandos distribuidos. El tráfico UDP utiliza cifrado AES-128-CBC con SHA256 para las señales de latido y el protocolo interno safeadmin. SafeKit utiliza la biblioteca OpenSSL para el cifrado y Apache para el servicio web.  
+Compatibilidad con antivirus | La documentación enumera las rutas que deben excluirse de los análisis antivirus.  
+Soberanía de los datos | Eviden forma parte del grupo europeo Atos. SafeKit proporciona continuidad del negocio y recuperación ante desastres para Windows y Linux. Los datos y la infraestructura de conmutación por error pueden permanecer íntegramente en sus instalaciones, sin depender de proveedores estadounidenses. Este enfoque cumple con los requisitos de continuidad del negocio y recuperación ante desastres de NIS2.  
   
-## Modelo de licenciamiento {#licensing-model}
+## Licencias {#licensing-model}
 
 Aspecto | Detalles  
 ---|---  
-Tipo de licencia | Licencia perpetua (compra única) basada en nombres de host.  
-Alcance de la licencia | Por servidor (nodo)  
-Activación de licencia | Se admite la activación sin conexión; no se requiere acceso a Internet para activar las claves de licencia.  
-Prueba gratuita | Sí, hay disponible una prueba gratuita con todas las funciones.  
-Licencia gratuita de un mes | Disponible para prueba de concepto.  
+Tipo de licencia | Una licencia perpetua se compra una sola vez y está vinculada a un nombre de host.  
+Alcance de la licencia | Una licencia por servidor (nodo)  
+Activación de licencia | Las claves de licencia se pueden activar sin conexión a internet.  
+Prueba gratuita | La prueba gratuita incluye todas las funciones.  
+Licencia gratuita de un mes | Disponible para probar una prueba de concepto.  
   
-## Acuerdos de nivel de servicio (SLA) de soporte y mantenimiento {#support-maintenance-slas}
+## Niveles de servicio de soporte y mantenimiento {#support-maintenance-slas}
 
-### Soporte y mantenimiento estándar (incluido con el contrato de mantenimiento vigente) {#standard-support-maintenance-included-with-active-maintenance-contract}
+### Soporte y mantenimiento estándar con un contrato de mantenimiento activo. {#standard-support-maintenance-included-with-active-maintenance-contract}
 
 Servicio | Detalles  
 ---|---  
-Acceso al portal de soporte | Portal web disponible las 24 horas, los 7 días de la semana, los 365 días del año para hasta 4 contactos técnicos designados.  
-Horario de atención al cliente en directo | Centro de soporte europeo, de 9:00 a 17:00, de lunes a viernes.  
-Acuse de recibo del incidente | Dentro de las 4 horas de funcionamiento del centro de soporte.  
-Actualizaciones y mejoras | Todos los Service Packs, actualizaciones y mejoras están incluidos sin cargo adicional.  
-Sustitución de la clave de licencia | La clave de licencia puede reasignarse al cambiar el nombre de host bajo un contrato de soporte activo. La transferencia de licencia se limita al reemplazo de servidores dentro del mismo proyecto, sujeta a la aceptación previa por escrito de Eviden.  
-Acceso a la base de conocimientos | Acceso completo a los artículos de la base de conocimientos, las preguntas frecuentes y la documentación en línea.  
-Inicio/parada de la aplicación sin SafeKit | Sí, detenga SafeKit y utilice un script auxiliar para iniciar o detener la aplicación. El script auxiliar llama a los scripts de inicio/parada de la aplicación y configura o elimina la dirección IP virtual, si es necesario. 
+Acceso al portal de soporte | El portal web está disponible en todo momento, todos los días del año, para un máximo de cuatro contactos técnicos designados.  
+Horario de atención al cliente en directo | De lunes a viernes, de 9:00 a 17:00 horas en el Centro de Soporte Europeo.  
+Acuse de recibo del incidente | En un plazo de cuatro horas laborables desde el Centro de Soporte.  
+Actualizaciones y mejoras | Todos los paquetes de servicio, actualizaciones y mejoras están incluidos sin coste adicional.  
+Sustitución de la clave de licencia | Con un contrato de soporte activo, la clave de licencia se puede reasignar al cambiar el nombre de host. La transferencia se limita al reemplazo de un servidor dentro del mismo proyecto. Se requiere la aprobación previa por escrito de Eviden.  
+Acceso a la base de conocimientos | Acceso completo a los artículos de la base de conocimientos, preguntas frecuentes y documentación en línea.  
+Iniciar o detener una aplicación sin SafeKit | Detén SafeKit y, a continuación, usa un script auxiliar para iniciar o detener la aplicación. Este script llama a los scripts de inicio y detención de la aplicación. También añade o elimina la dirección IP virtual cuando sea necesario.  
 Portal de soporte | <https://customercare.evidian.com>  
   
-### Recursos gratuitos (no se requiere contrato) {#free-resources-no-contract-required}
+### Recursos gratuitos sin contrato de soporte. {#free-resources-no-contract-required}
 
 Recurso | Detalles  
 ---|---  
-Asistente de soporte de IA | [El chat SafeKit AI está](</es/resources/safekit-support/#ai-support>) disponible en safekit.eviden.com y a través de cualquier LLM mediante safekit.eviden.com/llms.txt.  
-Formación y certificación en línea | Gratuito, a tu propio ritmo, 12 vídeos (~3h40min), certificado al finalizar.  
-Documentación | Guía de usuario completa, notas de la versión, base de conocimientos, guías de inicio rápido.  
+Asistente de soporte de IA | Utilice [el chat con IA SafeKit](</es/resources/safekit-support/#ai-support>) en safekit.eviden.com. También puede usar un modelo de lenguaje de IA con la información disponible en safekit.eviden.com/llms.txt.  
+Formación y certificación en línea | Aprende a tu propio ritmo con 12 vídeos gratuitos que suman aproximadamente 3 horas y 40 minutos. Recibe un certificado al completar la formación.  
+Documentación | Guía del usuario, notas de la versión, base de conocimientos y guías de instalación rápida.  
   
-## Comparación frente a alternativas {#comparison-vs-alternatives}
+## Comparación con otras soluciones {#comparison-vs-alternatives}
 
 Criterio | SafeKit | Clúster de conmutación por error de Microsoft (WSFC) | VMware HA | Código abierto*  
 ---|---|---|---|---  
 Se requiere almacenamiento compartido (SAN/vSAN). | No | Sí | Sí | No  
 Compatibilidad con Windows | Sí | Sí | Sí | No  
 Soporte para Linux | Sí | No | Sí | Sí  
-Implementación en el borde/sucursal | Excelente | Complejo | Complejo | Complejo  
-Integrable por el fabricante | Sí | No | No | No  
-Costo | Perpetuo por nodo | Windows Server + SAN | vSphere Enterprise + SAN | Servicios de integración de alto nivel  
-Complejidad de la configuración | Conectar y usar | Alto (AD, SAN, testigo) | Alto (vCenter, almacenamiento compartido) | Alto (productos fragmentados)  
-Mantenibilidad | Producto único, consola web | Alto nivel (se requiere experiencia en AD y SAN) | Alta (dependencia de vCenter) | Alto (productos separados para el mantenimiento)  
+Despliegue en sitios remotos | Excelente | Complejo | Complejo | Complejo  
+Integración en el producto de un editor de software | Sí | No | No | No  
+Costo | Licencia perpetua por nodo | Servidor Windows y SAN | vSphere Enterprise y SAN | Servicios de integración avanzada  
+Complejidad de la configuración | Listo para configurar y usar. | Alto: Configuración de Active Directory, SAN y testigos | Alto: Configuración de vCenter y almacenamiento compartido | Alto: varios productos separados para configurar  
+Requisitos de mantenimiento | Un producto gestionado a través de una consola web | Alto: Experiencia en Active Directory y SAN. | Alto: dependencia de vCenter | Alto: varios productos separados para mantener  
   
-_* En Linux, se necesitan 6 proyectos de código abierto independientes —Corosync, Pacemaker, DRBD, Keepalived, STONITH y HAProxy— para replicar el conjunto de funciones de SafeKit solo en Linux. SafeKit ofrece las mismas capacidades en un único producto, tanto para Windows como para Linux._
+_En Linux, se necesitan seis proyectos de código abierto independientes para ofrecer el mismo conjunto de funciones: Corosync, Pacemaker, DRBD, Keepalived, STONITH y HAProxy. SafeKit ofrece estas funciones en un solo producto para Windows y Linux._
 
-## Enlaces de referencia rápida {#quick-reference-links}
+## Enlaces útiles {#quick-reference-links}
 
 Recurso | URL  
 ---|---  
 Página principal del producto | [https://safekit.eviden.com/es/](</es/>)  
-Descripción técnica (DOCX con texto y diagramas) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
+Descripción técnica (documento de Word con texto y diagramas) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  
 Prueba gratuita | [https://safekit.eviden.com/es/resources/safekit-free-trial/](</es/resources/safekit-free-trial/>)  
 Obtén un presupuesto | [https://safekit.eviden.com/es/safekit-pricing/](</es/safekit-pricing/>)  
 Portal de soporte | <https://customercare.evidian.com>  
