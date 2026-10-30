@@ -202,7 +202,7 @@ Autenticação do usuário | Contas locais, LDAP, certificados (PKI) e OpenID Co
 Funções do usuário | Configure políticas de acesso para administração, controle e monitoramento.  
 Criptografia | O tráfego TCP utiliza TLS/SSL para replicação, console web e comandos distribuídos. O tráfego UDP utiliza criptografia AES-128-CBC com SHA256 para <span class="notranslate farm-term" translate="no">heartbeats</span> e o protocolo interno safeadmin. SafeKit utiliza a biblioteca OpenSSL para criptografia e o Apache para o serviço web.  
 Antivírus | A documentação lista os caminhos a serem excluídos das verificações de antivírus.  
-Soberania | SafeKit é desenvolvido na França pela Eviden, parte do Grupo Atos. Ele protege aplicativos Windows e Linux, mantendo seus dados e servidores em suas instalações. O software de alta disponibilidade não depende de um fornecedor americano. SafeKit pode ajudar a atender aos requisitos NIS2 para continuidade de negócios e recuperação de desastres.
+Soberania | SafeKit é desenvolvido na França pela Eviden, parte do Grupo Atos. Ele protege aplicativos Windows e Linux, mantendo seus dados e servidores em suas instalações. SafeKit pode ajudar a atender aos requisitos da Diretiva Europeia NIS2 para continuidade de negócios e recuperação de desastres.
   
 ## Licenciamento {#licensing-model}
 

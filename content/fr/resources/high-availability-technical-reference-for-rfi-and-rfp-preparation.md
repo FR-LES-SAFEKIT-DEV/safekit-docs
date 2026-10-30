@@ -140,7 +140,7 @@ Intervention manuelle requise ? | Non. Le basculement et le retour en arrière s
 Type de défaillance | Comment le temps de récupération est calculé  
 ---|---  
 panne matérielle | Délai <span class="notranslate farm-term" translate="no">Heartbeat</span> (30 secondes par défaut), suivi du redémarrage de l'application  
-Plantage logiciel ou de processus | Le temps d'arrêt de l'application, suivi du redémarrage de l'application  
+Plantage logiciel ou de processus | Le moment d'arrêter l'application, suivi du redémarrage de l'application  
 Plantage du système d'exploitation | Délai <span class="notranslate farm-term" translate="no">Heartbeat</span> . Le système d'exploitation est déjà en cours d'exécution sur le serveur de secours ; il n'est donc pas nécessaire de le redémarrer.  
   
 ### Temps de récupération des machines virtuelles protégées par un cluster mirror {#rto-breakdown-mirror-vm-level-ha}
@@ -202,7 +202,7 @@ Authentification de l'utilisateur | Comptes locaux, LDAP, certificats (PKI) et O
 Rôles des utilisateurs | Configurer les politiques d'accès pour l'administration, le contrôle et la surveillance.  
 Cryptage | Le trafic TCP utilise TLS/SSL pour la réplication, la console web et les commandes distribuées. Le trafic UDP utilise le chiffrement AES-128-CBC avec SHA256 pour <span class="notranslate farm-term" translate="no">heartbeats</span> et le protocole interne safeadmin. SafeKit utilise la bibliothèque OpenSSL pour le chiffrement et Apache pour le service web.  
 Antivirus | La documentation répertorie les chemins d'accès à exclure des analyses antivirus.  
-Souveraineté | SafeKit est développé en France par Eviden, filiale du groupe Atos. Il protège les applications Windows et Linux tout en conservant vos données et serveurs sur votre infrastructure. Ce logiciel de haute disponibilité est indépendant de tout fournisseur américain. SafeKit contribue à la conformité aux exigences NIS2 en matière de continuité d'activité et de reprise après sinistre.
+Souveraineté | SafeKit est développé en France par Eviden, filiale du groupe Atos. Il protège les applications Windows et Linux tout en conservant vos données et serveurs sur votre infrastructure. SafeKit contribue à la mise en conformité avec la directive européenne NIS2 relative à la continuité d'activité et à la reprise après sinistre.
   
 ## Licence {#licensing-model}
 

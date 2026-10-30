@@ -202,7 +202,7 @@ User authentication | Local accounts, LDAP, certificates (PKI), and OpenID Conne
 User roles | Configure access policies for administration, control, and monitoring.  
 Encryption | TCP traffic uses TLS/SSL for replication, the web console, and distributed commands. UDP traffic uses AES-128-CBC encryption with SHA256 for <span class="notranslate farm-term" translate="no">heartbeats</span> and the internal safeadmin protocol. SafeKit uses the OpenSSL library for encryption and Apache for the web service.  
 Antivirus | The documentation lists the paths to exclude from antivirus scans.  
-Sovereignty | SafeKit is developed in France by Eviden, part of the Atos Group. It protects Windows and Linux applications while keeping your data and servers on your premises. The high availability software does not depend on a US vendor. SafeKit can help meet NIS2 requirements for business continuity and disaster recovery.
+Sovereignty | SafeKit is developed in France by Eviden, part of the Atos Group. It protects Windows and Linux applications while keeping your data and servers on your premises. SafeKit can help meet the requirements of the European NIS2 Directive for business continuity and disaster recovery.
   
 ## Licensing {#licensing-model}
 

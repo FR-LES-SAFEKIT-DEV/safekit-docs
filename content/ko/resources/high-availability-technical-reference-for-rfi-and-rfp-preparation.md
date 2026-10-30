@@ -140,7 +140,7 @@ RTO(복구 시간 목표) | 약 1분 정도 소요됩니다. 여기에는 <span 
 실패 유형 | 회복 시간 계산 방법  
 ---|---  
 하드웨어 오류 | <span class="notranslate farm-term" translate="no">Heartbeat</span> 타임아웃(기본값 30초) 후 애플리케이션이 재시작됩니다.  
-소프트웨어 또는 프로세스 오류 발생 | 애플리케이션 종료 시간 및 이후 애플리케이션 재시작 시간  
+소프트웨어 또는 프로세스 오류 | 애플리케이션 종료 시간 및 이후 애플리케이션 재시작 시간  
 운영 체제 충돌 | <span class="notranslate farm-term" translate="no">Heartbeat</span> 타임아웃이 발생했습니다. 운영 체제가 이미 대기 서버에서 실행 중이므로 재부팅할 필요가 없습니다.  
   
 ### mirror 클러스터로 보호되는 가상 머신의 복구 시간 {#rto-breakdown-mirror-vm-level-ha}
@@ -202,7 +202,7 @@ HTTPS | TLS 인증서는 웹 콘솔에 대한 접근을 보호합니다.
 사용자 역할 | 관리, 제어 및 모니터링을 위한 액세스 정책을 구성합니다.  
 암호화 | TCP 트래픽은 복제, 웹 콘솔 및 분산 명령에 TLS/SSL을 사용합니다. UDP 트래픽은 <span class="notranslate farm-term" translate="no">heartbeats</span> 및 내부 safeadmin 프로토콜에 SHA256을 사용하는 AES-128-CBC 암호화를 사용합니다. SafeKit 암호화에 OpenSSL 라이브러리를 사용하고 웹 서비스에는 Apache를 사용합니다.  
 바이러스 백신 | 문서에는 바이러스 검사에서 제외할 경로 목록이 나와 있습니다.  
-주권 | SafeKit Atos 그룹의 자회사인 Eviden이 프랑스에서 개발한 보안 솔루션입니다. Windows 및 Linux 애플리케이션을 보호하는 동시에 데이터와 서버를 사내에 안전하게 보관할 수 있습니다. 고가용성 소프트웨어인 SafeKit은 미국 업체에 의존하지 않습니다. SafeKit 비즈니스 연속성 및 재해 복구에 대한 NIS2 요구사항을 충족하는 데 도움을 줄 수 있습니다.
+주권 | SafeKit Atos 그룹의 자회사인 Eviden이 프랑스에서 개발한 보안 솔루션입니다. Windows 및 Linux 애플리케이션을 보호하는 동시에 데이터와 서버를 사내에 안전하게 보관할 수 있습니다. SafeKit 유럽 NIS2 지침의 비즈니스 연속성 및 재해 복구 요건을 충족하는 데 도움을 줄 수 있습니다.
   
 ## 라이선스 {#licensing-model}
 

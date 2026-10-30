@@ -202,7 +202,7 @@ Benutzerauthentifizierung | Lokale Konten, LDAP, Zertifikate (PKI) und OpenID Co
 Benutzerrollen | Konfigurieren Sie Zugriffsrichtlinien für Administration, Kontrolle und Überwachung.  
 Verschlüsselung | Der TCP-Datenverkehr nutzt TLS/SSL für die Replikation, die Webkonsole und verteilte Befehle. Der UDP-Datenverkehr verwendet AES-128-CBC-Verschlüsselung mit SHA256 für <span class="notranslate farm-term" translate="no">heartbeats</span> und das interne Safeadmin-Protokoll. SafeKit verwendet die OpenSSL-Bibliothek für die Verschlüsselung und Apache für den Webdienst.  
 Antivirus | Die Dokumentation listet die Pfade auf, die von Antivirenscans ausgeschlossen werden sollen.  
-Souveränität | SafeKit wird in Frankreich von Eviden, einem Unternehmen der Atos-Gruppe, entwickelt. Es schützt Windows- und Linux-Anwendungen und ermöglicht gleichzeitig den Verbleib Ihrer Daten und Server in Ihren eigenen Räumlichkeiten. Die Hochverfügbarkeitssoftware ist unabhängig von einem US-amerikanischen Anbieter. SafeKit unterstützt Sie bei der Erfüllung der NIS2-Anforderungen für Geschäftskontinuität und Notfallwiederherstellung.
+Souveränität | SafeKit wurde in Frankreich von Eviden, einem Unternehmen der Atos-Gruppe, entwickelt. Es schützt Windows- und Linux-Anwendungen und gewährleistet gleichzeitig, dass Ihre Daten und Server in Ihren Räumlichkeiten verbleiben. SafeKit kann dazu beitragen, die Anforderungen der europäischen NIS2-Richtlinie für Geschäftskontinuität und Notfallwiederherstellung zu erfüllen.
   
 ## Lizenzierung {#licensing-model}
 

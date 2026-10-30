@@ -137,7 +137,7 @@ Attivatore di failover | Automatico quando <span class="notranslate farm-term" t
   
 ### Tempo di ripristino per le applicazioni protette da un cluster mirror {#rto-breakdown-mirror-application-level-ha}
 
-Tipo di spedizione | Come viene calcolato il tempo di recupero  
+Tipo di lunghezza | Come viene calcolato il tempo di recupero  
 ---|---  
 guasto hardware | Timeout <span class="notranslate farm-term" translate="no">Heartbeat</span> (30 secondi per impostazione predefinita), seguito dal riavvio dell'applicazione.  
 Arresto anomalo del software o del processo | Il momento di arrestare l'applicazione, seguito dal riavvio dell'applicazione.  
@@ -202,7 +202,7 @@ Autenticazione utente | Account locali, LDAP, certificati (PKI) e OpenID Connect
 Ruoli utente | Configura le politiche di accesso per l'amministrazione, il controllo e il monitoraggio.  
 Crittografia | Il traffico TCP utilizza TLS/SSL per la replica, la console web e i comandi distribuiti. Il traffico UDP utilizza la crittografia AES-128-CBC con SHA256 per <span class="notranslate farm-term" translate="no">heartbeats</span> e il protocollo interno safeadmin. SafeKit utilizza la libreria OpenSSL per la crittografia e Apache per il servizio web.  
 Antivirus | La documentazione elenca i percorsi da escludere dalle scansioni antivirus.  
-Sovranità | SafeKit è sviluppato in Francia da Eviden, parte del Gruppo Atos. Protegge le applicazioni Windows e Linux mantenendo i dati e i server presso la sede del cliente. Questo software ad alta disponibilità non dipende da un fornitore statunitense. SafeKit può contribuire a soddisfare i requisiti NIS2 per la continuità operativa e il ripristino di emergenza.
+Sovranità | SafeKit è sviluppato in Francia da Eviden, parte del Gruppo Atos. Protegge le applicazioni Windows e Linux mantenendo i dati e i server presso la sede aziendale. SafeKit può contribuire a soddisfare i requisiti della Direttiva europea NIS2 in materia di continuità operativa e ripristino di emergenza.
   
 ## Licenze {#licensing-model}
 
@@ -247,7 +247,7 @@ Supporto Linux | SÌ | NO | SÌ | SÌ
 Implementazione in siti remoti | Eccellente | Complesso | Complesso | Complesso  
 OEM | SÌ | NO | NO | NO  
 Costo | Licenza perpetua per nodo | Server Windows e SAN | vSphere Enterprise e SAN | servizi di integrazione avanzati  
-Configura reputazione | Pronto per la configurazione e l'utilizzo | Alto: Configurazione di Active Directory, SAN e witness. | Alto: configurazione di vCenter e storage condiviso | Alto: diversi prodotti separati da configurare  
+Configura reputazione | Pronto per la configurazione e l'uso | Alto: Configurazione di Active Directory, SAN e witness. | Alto: configurazione di vCenter e storage condiviso | Alto: diversi prodotti separati da configurare  
 Amministrazione | Un unico prodotto gestito tramite una console web. | Elevato: competenza in Active Directory e SAN | Elevato: dipendenza da vCenter | Alto: diversi prodotti separati da mantenere  
   
 **[1]** Su Linux, sono necessari sei progetti open-source separati per fornire lo stesso set di funzionalità: Corosync, Pacemaker, DRBD, Keepalived, STONITH e HAProxy. SafeKit fornisce queste funzionalità in un unico prodotto sia per Windows che per Linux.

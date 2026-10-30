@@ -7,7 +7,7 @@ lang: "es"
 topics: "Descripción general, Tabla de contenido, Información del producto, Sistemas operativos y plataformas compatibles, Limitaciones de alta disponibilidad de SafeKit, Módulos de aplicación preconfigurados, Arquitectura y despliegue, Tiempos de recuperación y pérdida de datos (RPO y RTO), Sitios remotos y despliegues distribuidos, Monitoreo, gestión y alertas, Seguridad y cumplimiento, Licencias, Soporte y mantenimiento, Comparación con otras soluciones, Enlaces útiles"
 ---
 
-# Referencia técnica SafeKit para documentos RFI y RFP. {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
+# Referencia técnica SafeKit para documentos RFI y RFP {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
 
 ## Descripción general {#overview}
 
@@ -202,7 +202,7 @@ Autenticación de usuario | Cuentas locales, LDAP, certificados (PKI) y OpenID C
 Roles de usuario | Configure las políticas de acceso para la administración, el control y la supervisión.  
 Cifrado | El tráfico TCP utiliza TLS/SSL para la replicación, la consola web y los comandos distribuidos. El tráfico UDP utiliza cifrado AES-128-CBC con SHA256 para <span class="notranslate farm-term" translate="no">heartbeats</span> y el protocolo interno safeadmin. SafeKit utiliza la biblioteca OpenSSL para el cifrado y Apache para el servicio web.  
 Antivirus | La documentación enumera las rutas que deben excluirse de los análisis antivirus.  
-Soberanía | SafeKit , desarrollado en Francia por Eviden, parte del Grupo Atos, protege las aplicaciones de Windows y Linux, manteniendo sus datos y servidores en sus propias instalaciones. Este software de alta disponibilidad no depende de un proveedor estadounidense. SafeKit puede ayudarle a cumplir con los requisitos NIS2 para la continuidad del negocio y la recuperación ante desastres.
+Soberanía | SafeKit , desarrollado en Francia por Eviden, empresa perteneciente al Grupo Atos, protege las aplicaciones de Windows y Linux, manteniendo sus datos y servidores en sus propias instalaciones. SafeKit puede ayudarle a cumplir con los requisitos de la Directiva NIS2 europea en materia de continuidad del negocio y recuperación ante desastres.
   
 ## Licencias {#licensing-model}
 
@@ -224,7 +224,7 @@ Acceso al portal de soporte | El portal web está disponible en todo momento, to
 Horario de atención al cliente en directo | De lunes a viernes, de 9:00 a 17:00 horas en el Centro de Soporte Europeo.  
 Acuse de recibo del incidente | En un plazo de cuatro horas laborables desde el Centro de Soporte.  
 Actualizaciones y mejoras | Todos los paquetes de servicio, actualizaciones y mejoras están incluidos sin coste adicional.  
-Reemplazo de la clave de licencia | Con un contrato de soporte activo, la clave de licencia se puede reasignar al cambiar el nombre de host. La transferencia se limita al reemplazo de un servidor dentro del mismo proyecto. Se requiere la aprobación previa por escrito de Eviden.  
+Sustitución de la clave de licencia | Con un contrato de soporte activo, la clave de licencia se puede reasignar al cambiar el nombre de host. La transferencia se limita al reemplazo de un servidor dentro del mismo proyecto. Se requiere la aprobación previa por escrito de Eviden.  
 Acceso a la base de conocimientos | Acceso completo a los artículos de la base de conocimientos, preguntas frecuentes y documentación en línea.  
 Procedimiento de emergencia | SafeKit proporciona un script auxiliar para iniciar o detener una aplicación sin utilizar las funciones de alta disponibilidad de SafeKit . Este script llama a los scripts de inicio y detención de la aplicación. Además, añade o elimina la dirección IP virtual cuando es necesario.  
 Portal de soporte | <https://customercare.evidian.com>  

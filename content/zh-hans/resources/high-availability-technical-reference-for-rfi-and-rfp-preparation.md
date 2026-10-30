@@ -176,7 +176,7 @@ SCADA及工业控制 | 工厂、变电站、水厂 | 任何运行在 Windows 或
 运行控制中心（OCC） | 地铁、铁路、交通枢纽 | 铁路信号和车站管理  
 海上 | 舰船，海军舰艇 | 导航、货物和船载管理系统  
 石油和天然气 | 海上平台，远程钻井平台 | 过程控制和安全系统  
-电信 | 5G天线站点、MEC节点 | 多接入边缘计算 (MEC) 服务器  
+电信 | 5G天线站点，MEC节点 | 多接入边缘计算 (MEC) 服务器  
 卫生保健 | 诊所、远程诊断中心 | 医学影像、患者数据、远程诊断  
 零售 | 商店、分店、仓库 | 销售点和库存管理  
 防御 | 前沿作战基地、野战部队 | 任务关键型指挥和通信系统  
@@ -202,7 +202,7 @@ HTTPS | TLS证书保护对Web控制台的访问。
 用户角色 | 配置管理、控制和监控的访问策略。  
 加密 | TCP 流量使用 TLS/SSL 进行数据复制、Web 控制台和分布式命令通信。UDP 流量使用 AES-128-CBC 加密，并使用 SHA256 进行<span class="notranslate farm-term" translate="no">heartbeats</span>和内部 safeadmin 协议通信。SafeKit 使用SafeKit库进行加密，并使用 Apache 提供 Web 服务。  
 杀毒软件 | 文档列出了要从杀毒软件扫描中排除的路径。  
-主权 | SafeKit由 Atos 集团旗下的 Eviden SafeKit在法国开发。它能够保护 Windows 和 Linux 应用程序，同时确保您的数据和服务器保留在您的本地。这款高可用性软件不依赖于美国供应商。SafeKit 可以帮助您满足 NIS2 对业务连续性和灾难恢复的要求。
+主权 | SafeKit由 Atos 集团旗下的 Eviden SafeKit在法国开发。它可在保护 Windows 和 Linux 应用程序的同时，确保您的数据和服务器保留在您自己的本地环境中。SafeKit 有助于满足欧盟 NIS2 指令关于业务连续性和灾难恢复的要求。
   
 ## 许可 {#licensing-model}
 

@@ -202,7 +202,7 @@ Gebruikersauthenticatie | Lokale accounts, LDAP, certificaten (PKI) en OpenID Co
 Gebruikersrollen | Configureer toegangsbeleid voor beheer, controle en monitoring.  
 Versleuteling | TCP-verkeer maakt gebruik van TLS/SSL voor replicatie, de webconsole en gedistribueerde commando's. UDP-verkeer maakt gebruik van AES-128-CBC-encryptie met SHA256 voor <span class="notranslate farm-term" translate="no">heartbeats</span> en het interne SafeAdmin-protocol. SafeKit gebruikt de OpenSSL-bibliotheek voor encryptie en Apache voor de webservice.  
 Antivirus | In de documentatie staan de paden vermeld die moeten worden uitgesloten van antivirusscans.  
-Soevereiniteit | SafeKit is ontwikkeld in Frankrijk door Eviden, onderdeel van de Atos Group. Het beschermt Windows- en Linux-applicaties en zorgt ervoor dat uw gegevens en servers op uw eigen locatie blijven. De software voor hoge beschikbaarheid is niet afhankelijk van een Amerikaanse leverancier. SafeKit kan helpen om te voldoen aan de NIS2-vereisten voor bedrijfscontinuïteit en noodherstel.
+Soevereiniteit | SafeKit is ontwikkeld in Frankrijk door Eviden, onderdeel van de Atos Group. Het beschermt Windows- en Linux-applicaties en zorgt ervoor dat uw gegevens en servers op uw eigen locatie blijven. SafeKit kan helpen te voldoen aan de eisen van de Europese NIS2-richtlijn voor bedrijfscontinuïteit en noodherstel.
   
 ## Licenties {#licensing-model}
 
