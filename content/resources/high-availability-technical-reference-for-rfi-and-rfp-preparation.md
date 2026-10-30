@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/resources/high-availability-technical-ref
 description: "Technical reference to help prepare RFI and RFP documents for high availability and application clustering using SafeKit concepts and architectures."
 category: "resources"
 lang: "en"
-topics: "Overview, Table of contents, Product Identity, Supported Operating Systems & Platforms, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Suitability for Remote Sites and Distributed Deployments, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links"
+topics: "Overview, Table of contents, Product Identity, Supported Operating Systems & Platforms, SafeKit High Availability Limitations, Pre-Built Application Modules, Architecture & Deployment Model, RPO & RTO Capabilities, Suitability for Remote Sites and Distributed Deployments, Monitoring, Management & Alerting, Security & Compliance, Licensing Model, Support & Maintenance SLAs, Comparison vs. Alternatives, Quick Reference Links"
 ---
 
 # High Availability Technical Reference for RFI and RFP Preparation {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
@@ -17,16 +17,17 @@ This page provides structured, factual answers to common RFP/RFI questions about
 
   1. [Product Identity](#product-identity)
   2. [Supported Operating Systems & Platforms](#supported-operating-systems-platforms)
-  3. [Pre-Built Application Modules](#pre-built-application-modules)
-  4. [Architecture & Deployment Model](#architecture-deployment-model)
-  5. [RPO & RTO Capabilities](#rpo-rto-capabilities)
-  6. [Suitability for Remote Sites and Distributed Deployments](#edge-distributed-deployment-suitability)
-  7. [Monitoring, Management & Alerting](#monitoring-management-alerting)
-  8. [Security & Compliance](#security-compliance)
-  9. [Licensing Model](#licensing-model)
-  10. [Support & Maintenance SLAs](#support-maintenance-slas)
-  11. [Comparison vs. Alternatives](#comparison-vs-alternatives)
-  12. [Quick Reference Links](#quick-reference-links)
+  3. [SafeKit High Availability Limitations](#safekit-ha-limitations)
+  4. [Pre-Built Application Modules](#pre-built-application-modules)
+  5. [Architecture & Deployment Model](#architecture-deployment-model)
+  6. [RPO & RTO Capabilities](#rpo-rto-capabilities)
+  7. [Suitability for Remote Sites and Distributed Deployments](#edge-distributed-deployment-suitability)
+  8. [Monitoring, Management & Alerting](#monitoring-management-alerting)
+  9. [Security & Compliance](#security-compliance)
+  10. [Licensing Model](#licensing-model)
+  11. [Support & Maintenance SLAs](#support-maintenance-slas)
+  12. [Comparison vs. Alternatives](#comparison-vs-alternatives)
+  13. [Quick Reference Links](#quick-reference-links)
 
 
 ## Product Identity {#product-identity}
@@ -50,9 +51,11 @@ _* SafeKit supports both application-level HA and VM-level HA._
 
 _** Virtual IPs must be configured at the Cloud load balancer level._
 
+{{%  insert-safekit-usage-en  %}}
+
 ## Pre-Built Application Modules {#pre-built-application-modules}
 
-SafeKit includes ready-to-use, pre-configured `.safe` modules. They are organized into two HA strategies: **Application HA** (direct application clustering with mirror or `farm` modules) and **Virtualization HA** (VM-level clustering with hyperv.safe or kvm.safe).
+SafeKit includes ready-to-use, pre-configured `.safe` modules. They are organized into two HA strategies: **Application HA** (direct application clustering with mirror or <span class="notranslate farm-term" translate="no">farm</span> modules) and **Virtualization HA** (VM-level clustering with hyperv.safe or kvm.safe).
 
  | Application HA | VM-level HA  
 ---|---|---  
@@ -97,7 +100,7 @@ Requirement / Specification | SafeKit Capability / Value
 ---|---  
 Shared storage required? | No — SANless "shared-nothing" architecture. Uses local disks only.  
 Active Directory (AD) prerequisite? | No — does not require a Windows domain or Active Directory. Workgroups are fully supported.  
-Cluster size | 2 nodes (mirror) or 2+ nodes (`farm`)  
+Cluster size | 2 nodes (mirror) or 2+ nodes (<span class="notranslate farm-term" translate="no">farm</span>)  
 Virtual IP (VIP) | Software-defined VIP that migrates automatically to the active node via Gratuitous ARP (application-level HA). For VM-level HA, the physical IP inside the VM is rerouted transparently — no VIP needed. Requires a LAN, VLAN, or stretched VLAN between nodes.  
 3-node hybrid architecture | SafeKit covers the HA layer: a 2-node mirror cluster over a LAN or stretched VLAN with synchronous replication (RPO=0) and automatic failover. A third-party backup solution completes the architecture: a 3rd remote node with asynchronous replication across a WAN for point-in-time recovery and ransomware protection.  
 Role of High Availability | SafeKit uses synchronous replication to guarantee instant failover with zero data loss during hardware or software failures. However, because it writes data to both nodes simultaneously, it faithfully replicates logical errors, data degradation, or accidental deletions to the standby node in real time.  
@@ -123,7 +126,7 @@ Encryption in transit | Yes — TLS/SSL for replication traffic
 
 ### RPO & RTO by cluster type {#rto-rpo-cluster-type}
 
-Metric | Mirror Cluster (mirror.safe) | `Farm` Cluster (farm.safe)  
+Metric | Mirror Cluster (mirror.safe) | <span class="notranslate farm-term" translate="no">Farm</span> Cluster (farm.safe)  
 ---|---|---  
 RPO (Recovery Point Objective) | 0 (zero data loss) — synchronous replication; write acknowledged only after both nodes confirm | N/A (stateless; data handled by backend mirror)  
 RTO (Recovery Time Objective) | ~1 minute — heartbeat timeout (default 30 s) + application restart time | A few seconds — traffic immediately redistributed to surviving active nodes  
