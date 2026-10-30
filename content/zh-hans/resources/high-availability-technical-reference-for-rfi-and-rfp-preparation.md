@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/resources/high-availability-techn
 description: "查找有关SafeKit技术信息，以便准备信息征询书 (RFI) 和提案征询书 (RFP)。了解其支持的系统、架构、恢复时间、安全性、许可和支持情况。"
 category: "resources"
 lang: "zh-hans"
-topics: "概述, 目录, 产品信息, 支持的操作系统和平台, SafeKit 高可用性限制, 预配置应用程序模块, 架构和部署, 数据丢失和恢复时间（RPO 和 RTO）, 远程站点和分布式部署, 监控、管理和警报, 安全与合规, 许可, 支持和维护服务级别, 与其他解决方案的比较, 实用链接"
+topics: "概述, 目录, 产品信息, 支持的操作系统和平台, SafeKit 高可用性限制, 预配置应用程序模块, 架构和部署, 数据丢失和恢复时间（RPO 和 RTO）, 远程站点和分布式部署, 监控、管理和警报, 安全与合规, 许可, 支持和维护, 与其他解决方案的比较, 实用链接"
 ---
 
 # SafeKit技术参考资料（RFI 和 RFP 文件） {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
@@ -25,7 +25,7 @@ topics: "概述, 目录, 产品信息, 支持的操作系统和平台, SafeKit �
   8. [监控、管理和警报](#monitoring-management-alerting)
   9. [安全与合规](#security-compliance)
   10. [许可](#licensing-model)
-  11. [支持和维护服务级别](#support-maintenance-slas)
+  11. [支持和维护](#support-maintenance-slas)
   12. [与其他解决方案的比较](#comparison-vs-alternatives)
   13. [实用链接](#quick-reference-links)
 
@@ -36,6 +36,7 @@ topics: "概述, 目录, 产品信息, 支持的操作系统和平台, SafeKit �
 ---|---  
 产品名称 | SafeKit  
 小贩 | Eviden，隶属于Atos集团。前身为Evidian。  
+软件开发 | 由法国开发。
 产品类别 | 用于应用程序集群、高可用性和灾难恢复的软件  
 当前版本 | SafeKit 8.2  
 网站 | [https://safekit.eviden.com/zh-hans/](</zh-hans/>)  
@@ -45,11 +46,11 @@ topics: "概述, 目录, 产品信息, 支持的操作系统和平台, SafeKit �
 
 Windows操作系统 | Linux操作系统 | 基础设施和虚拟化 | 云平台  
 ---|---|---|---  
-• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 企业版 (x86-64)<br> • Windows 11 专业版 (x86-64)  |  • 红帽企业版 Linux 10 (x86-64)<br> • 红帽企业 Linux 10 (AArch64)<br> • 红帽企业 Linux 9 (x86-64)<br> • 红帽企业 Linux 9 (AArch64)<br> • 红帽企业 Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • 任何品牌的任何边缘服务器<br>• VMware<br> • Microsoft Hyper-V*<br> • Linux KVM*<br> • 任何虚拟机管理程序<br>• Docker容器<br>• Podman 容器  |  • 亚马逊网络服务 (AWS)**<br> • Microsoft Azure**<br> • Google Cloud Platform (GCP)**<br> • 任何具有标准虚拟机实例的 IaaS 云   
+• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 企业版 (x86-64)<br> • Windows 11 专业版 (x86-64)  |  • 红帽企业版 Linux 10 (x86-64)<br> • 红帽企业 Linux 10 (AArch64)<br> • 红帽企业 Linux 9 (x86-64)<br> • 红帽企业 Linux 9 (AArch64)<br> • 红帽企业 Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • 任何品牌的任何边缘服务器<br>• VMware<br> • Microsoft Hyper-V [1]<br> • Linux KVM [1]<br> • 任何虚拟机管理程序<br>• Docker容器<br>• Podman 容器  |  • 亚马逊网络服务 (AWS) [2]<br> • Microsoft Azure [2]<br> • Google Cloud Platform (GCP) [2]<br> • 任何具有标准虚拟机实例的 IaaS 云   
   
-_* SafeKit为单个应用程序或整个虚拟机提供高可用性。_
+**[1]** SafeKit为单个应用程序或整个虚拟机提供高可用性。
 
-_** 在云端，在云负载均衡器上配置虚拟 IP 地址。_
+**[2]**在云端，在云负载均衡器上配置虚拟 IP 地址。
 
 {{%  insert-safekit-usage-zh-hans  %}}
 
@@ -57,7 +58,7 @@ _** 在云端，在云负载均衡器上配置虚拟 IP 地址。_
 
 SafeKit包含即用型`.safe`模块。有两种方式可以保护应用程序。**应用程序高可用性**使用mirror或<span class="notranslate farm-term" translate="no">farm</span>模块直接保护应用程序。**虚拟机高可用性**使用hyperv.safe或kvm.safe模块保护整个虚拟机。
 
- | 应用高可用性 | 虚拟机高可用性  
+比较标准 | 应用高可用性 | 虚拟机高可用性  
 ---|---|---  
 配置 | 您必须知道要重启哪些应用程序服务以及要复制哪些文件夹。您还必须配置用于故障转移的虚拟 IP 地址。 | 您只需指定虚拟机文件的位置即可，无需了解虚拟机内部应用程序的运行机制。这种方法可以同时保护应用程序和操作系统。  
 推荐用途 | 直接为软件解决方案添加高可用性，而无需依赖特定的硬件或特定的虚拟机管理程序。 | 使用一个高可用性策略管理跨多个虚拟机的多个应用程序。  
@@ -101,12 +102,12 @@ farm.safe | 多台服务器同时运行。SafeKit SafeKit在这些服务器之�
 需要共享存储吗？ | 不， SafeKit使用本地磁盘，不需要 SAN 或共享存储。  
 需要 Active Directory 吗？ | 不， SafeKit不需要 Windows 域或 Active Directory，它也支持工作组。  
 簇大小 | 2 个节点（ mirror ）或 2 个以上节点（ <span class="notranslate farm-term" translate="no">farm</span> ）  
-虚拟IP地址（VIP） | 为了实现应用的高可用性，虚拟 IP 地址会通过免费 ARP 自动切换到活动节点。为了实现虚拟机的高可用性，发往虚拟机内部 IP 地址的流量会被自动重定向，无需单独的虚拟 IP 地址。节点必须共享同一个 LAN、VLAN 或跨站点扩展的 VLAN。  
+虚拟IP地址（VIP） | 为了实现应用的高可用性，虚拟 IP 地址会通过免费 ARP 自动切换到活动节点。为了实现虚拟机的高可用性，发往虚拟机内部 IP 地址的流量会被自动重定向，无需单独的虚拟 IP 地址。节点必须共享一个跨站点扩展的 LAN 或 VLAN。  
 具有三个节点的架构 | SafeKit在局域网 (LAN) 或跨站点扩展的虚拟局域网 (VLAN) 上运行双节点mirror集群。它提供零数据丢失 (RPO=0) 的同步复制和自动故障转移。一个独立的备份产品通过广域网 (WAN) 将数据异步复制到第三个节点。此备份允许将数据恢复到之前的时间点，并提供针对勒索软件的保护。  
 高可用性的目的 | SafeKit会将数据同步复制到两个节点。这样，在硬件或软件故障后，即可实现自动故障转移，且不会丢失数据。但是，逻辑错误、数据损坏和意外删除也会立即复制到备用节点。  
 备份的目的 | 备份功能允许您从较早的时间点恢复数据。此功能由独立的备份产品（而非SafeKit ）通过异步复制提供。备份有助于从勒索软件攻击和人为错误中恢复数据。此恢复并非自动故障转移。恢复较早的备份会丢失该备份之后所做的更改。  
 同时运行的最大模块数 | 双节点集群最多可同时管理 32 个模块。为了保护虚拟机，每个模块都会复制并重启不同的虚拟机。每个模块都可以在任一节点上担任主模块，因此两台服务器可以分担工作负载。数据总量会影响故障转移或节点重启后的重新同步时间。  
-每个节点需要安装哪些软件？ | 是的。每个节点上都安装了一个轻量级软件代理。  
+每个节点需要安装哪些软件？ | 是的。每个节点上都安装了一个轻量级软件。  
 支持的应用程序 | SafeKit可以保护任何 Windows 服务或 Linux 守护进程。预配置模块适用于 30 多种应用程序。  
   
 ### 复制和数据保护 {#replication-data-protection}
@@ -126,21 +127,21 @@ farm.safe | 多台服务器同时运行。SafeKit SafeKit在这些服务器之�
 
 ### 每种集群类型的 RPO 和 RTO {#rto-rpo-cluster-type}
 
-指标 | Mirror集群（ mirror.safe ） | <span class="notranslate farm-term" translate="no">Farm</span>集群（ farm.safe ）  
+指标 | Mirror （ mirror.safe ） | <span class="notranslate farm-term" translate="no">Farm</span> （ farm.safe ）  
 ---|---|---  
 RPO（恢复点目标） | 零数据丢失。写入操作只有在两个节点都确认后才算完成。 | 不适用于无状态服务。数据由单独的mirror集群管理。  
-RTO（恢复时间目标） | 大约一分钟。这包括心跳超时时间（默认为 30 秒）和应用程序重启时间。 | 几秒钟后，流量将被重新分配到其余的活动节点。  
+RTO（恢复时间目标） | 大约一分钟。这包括<span class="notranslate farm-term" translate="no">heartbeat</span>超时时间（默认为 30 秒）和应用程序重启时间。 | 几秒钟后，流量将被重新分配到其余的活动节点。  
 复制类型 | 同步、实时、字节级文件复制 | 不适用  
-故障转移触发器 | 当心跳停止、进程崩溃或检查器检测到故障时，会自动执行此操作。 | 当心跳停止、进程崩溃或检查器检测到故障时，会自动执行此操作。  
+故障转移触发器 | 当<span class="notranslate farm-term" translate="no">heartbeats</span>停止、进程崩溃或检查器检测到故障时，会自动执行此操作。 | 当<span class="notranslate farm-term" translate="no">heartbeats</span>停止、进程崩溃或检查器检测到故障时，会自动执行此操作。  
 需要人工干预吗？ | 不，故障转移和故障恢复都是自动的。 | 不，故障转移和故障恢复都是自动的。  
   
 ### 受mirror集群保护的应用程序的恢复时间 {#rto-breakdown-mirror-application-level-ha}
 
 故障类型 | 恢复时间的计算方法  
 ---|---  
-硬件故障 | 心跳超时（默认 30 秒），随后应用程序重启  
-软件或进程崩溃 | 是时候停止应用程序了，然后重新启动应用程序。  
-操作系统崩溃 | 心跳超时。备用服务器上的操作系统已在运行，因此无需重启。  
+硬件故障 | <span class="notranslate farm-term" translate="no">Heartbeat</span>超时（默认 30 秒），随后应用程序重启  
+软件或进程崩溃 | 停止应用程序的时间，然后重新启动应用程序。  
+操作系统崩溃 | <span class="notranslate farm-term" translate="no">Heartbeat</span>超时。备用服务器上的操作系统已在运行，因此无需重启。  
   
 ### 受mirror集群保护的虚拟机的恢复时间 {#rto-breakdown-mirror-vm-level-ha}
 
@@ -186,22 +187,22 @@ SCADA及工业控制 | 工厂、变电站、水厂 | 任何运行在 Windows 或
 ---|---  
 Web控制台 | 通过 Web 应用程序或渐进式 Web 应用程序 (PWA) 配置、监控和管理集群节点。  
 移动通知 | 当模块状态发生变化时，接收浏览器通知。  
-州历史 | 在时间轴上查看模块状态和事件。  
+时间线 | 按时间顺序查看模块状态变更和事件。  
 电子邮件通知 | 内置的电子邮件代理会发送警报。  
-命令行管理 | 使用命令行界面编写脚本并实现任务自动化。  
-日志管理 | 每个模块和脚本都有自己的日志文件。诊断快照有助于支持团队调查问题。  
+命令行界面 | 使用命令行界面编写脚本并实现任务自动化。  
+日志管理 | 每个模块和脚本都有自己的日志文件。模块<span class="notranslate farm-term" translate="no">snapshots</span>有助于支持团队调查问题。  
 与监控工具集成 | SafeKit会将集群中的主要事件记录到 Windows 事件日志或 Linux 系统日志中。监控工具可以收集这些事件，并根据标准规则触发警报。它无需自定义开发即可与 Nagios、Zabbix、Splunk 和 SIEM 工具配合使用。  
   
 ## 安全与合规 {#security-compliance}
 
 特征 | 细节  
 ---|---  
-HTTPS 控制台访问 | TLS证书保护对Web控制台的访问。  
+HTTPS | TLS证书保护对Web控制台的访问。  
 用户身份验证 | 本地帐户、LDAP、证书（PKI）和 OpenID Connect  
 用户角色 | 配置管理、控制和监控的访问策略。  
-加密 | TCP 流量使用 TLS/SSL 进行数据复制、Web 控制台和分布式命令通信。UDP 流量使用 AES-128-CBC 加密，并使用 SHA256 进行心跳检测和内部 safeadmin 协议通信。SafeKit 使用SafeKit库进行加密，并使用 Apache 提供 Web 服务。  
-防病毒兼容性 | 文档列出了要从杀毒软件扫描中排除的路径。  
-数据主权 | SafeKit隶属于欧洲Atos集团。SafeKit为Windows和Linux系统提供业务连续性和灾难恢复解决方案。数据和故障转移基础设施可以完全保留在您的本地，无需依赖美国供应商。这种方法符合NIS2的业务连续性和灾难恢复要求。  
+加密 | TCP 流量使用 TLS/SSL 进行数据复制、Web 控制台和分布式命令通信。UDP 流量使用 AES-128-CBC 加密，并使用 SHA256 进行<span class="notranslate farm-term" translate="no">heartbeats</span>和内部 safeadmin 协议通信。SafeKit 使用SafeKit库进行加密，并使用 Apache 提供 Web 服务。  
+杀毒软件 | 文档列出了要从杀毒软件扫描中排除的路径。  
+主权 | SafeKit由 Atos 集团旗下的 Eviden SafeKit在法国开发。它能够保护 Windows 和 Linux 应用程序，同时确保您的数据和服务器保留在您的本地。这款高可用性软件不依赖于美国供应商。SafeKit 可以帮助您满足 NIS2 对业务连续性和灾难恢复的要求。
   
 ## 许可 {#licensing-model}
 
@@ -213,7 +214,7 @@ HTTPS 控制台访问 | TLS证书保护对Web控制台的访问。
 免费试用 | 免费试用版包含所有功能。  
 免费一个月许可 | 可用于概念验证测试  
   
-## 支持和维护服务级别 {#support-maintenance-slas}
+## 支持和维护 {#support-maintenance-slas}
 
 ### 包含有效维护合同的标准支持和维护服务 {#standard-support-maintenance-included-with-active-maintenance-contract}
 
@@ -225,31 +226,31 @@ HTTPS 控制台访问 | TLS证书保护对Web控制台的访问。
 更新和升级 | 所有服务包、更新和升级均包含在内，无需额外付费。  
 许可证密钥替换 | 在有效支持合同的约束下，主机名变更时可以重新分配许可证密钥。转移仅限于在同一项目内替换服务器。需事先获得 Eviden 的书面批准。  
 知识库访问 | 可全面访问知识库文章、常见问题解答和在线文档  
-未使用SafeKit启动或停止应用程序 | 停止SafeKit ，然后使用一个包装脚本来启动或停止该应用程序。该脚本会调用应用程序的启动和停止脚本，并在需要时添加或删除虚拟 IP 地址。  
+紧急程序 | SafeKit提供了一个包装脚本，用于在不使用SafeKit高可用性功能的情况下启动或停止应用程序。该脚本会调用应用程序的启动和停止脚本，并在需要时添加或删除虚拟 IP 地址。  
 支持门户 | <https://customercare.evidian.com>  
   
 ### 免费资源，无需支持合同 {#free-resources-no-contract-required}
 
 资源 | 细节  
 ---|---  
-人工智能助手 | 请访问 safekit.eviden.com 使用[SafeKit AI 聊天功能](</zh-hans/resources/safekit-support/#ai-support>)。您还可以使用 safekit.eviden.com/llms.txt 中的信息构建的 AI 语言模型。  
-在线培训和认证 | 您可以按照自己的节奏学习，观看12个免费视频，总时长约3小时40分钟。完成培训后，您将获得证书。  
-文档 | 用户指南、发行说明、知识库和快速安装指南  
+人工智能助手 | 请访问 safekit.eviden.com 使用[SafeKit AI 聊天功能](</zh-hans/resources/safekit-support/#ai-support>)。   
+在线培训和认证 | [您可以按照自己的节奏学习，](</zh-hans/resources/safekit-on-line-training/>)观看总时长约4小时的免费视频。完成培训后，您将获得证书。  
+文档 | 用户指南、发行说明、知识库和快速安装指南[请点击此处。](</zh-hans/resources/safekit-free-trial/>)  
   
 ## 与其他解决方案的比较 {#comparison-vs-alternatives}
 
-标准 | SafeKit | Microsoft故障转移群集（WSFC） | VMware HA | 开源*  
+标准 | SafeKit | Microsoft故障转移群集（WSFC） | VMware HA | 开源[1]  
 ---|---|---|---|---  
 需要共享存储（SAN/vSAN）。 | 不 | 是的 | 是的 | 不  
 Windows 支持 | 是的 | 是的 | 是的 | 不  
 Linux 支持 | 是的 | 不 | 是的 | 是的  
 远程站点部署 | 出色的 | 复杂的 | 复杂的 | 复杂的  
-集成到软件发行商的产品中 | 是的 | 不 | 不 | 不  
+原厂设备制造商 | 是的 | 不 | 不 | 不  
 成本 | 每个节点的永久许可证 | Windows Server 和 SAN | vSphere Enterprise 和 SAN | 高级集成服务  
 设置复杂性 | 准备配置和使用 | 高优先级：Active Directory、SAN 和见证配置 | 高：vCenter 和共享存储配置 | 高：需要配置多个独立产品  
-维护要求 | 一款通过 Web 控制台管理的产品 | 高：具备 Active Directory 和 SAN 专业知识 | 高：对 vCenter 的依赖性 | 高：需要维护的几个独立产品  
+行政 | 一款通过 Web 控制台管理的产品 | 高：具备 Active Directory 和 SAN 专业知识 | 高：对 vCenter 的依赖性 | 高：需要维护的几个独立产品  
   
-_在 Linux 系统上，需要六个独立的开源项目才能提供相同的功能集：Corosync、Pacemaker、DRBD、Keepalived、STONITH 和 HAProxy。SafeKit 将这些功能集成到一个产品中SafeKit同时支持 Windows 和 Linux 系统。_
+**[1]**在 Linux 系统上，需要六个独立的开源项目才能提供相同的功能集：Corosync、Pacemaker、DRBD、Keepalived、STONITH 和 HAProxy。SafeKit 将这些功能集成到一个产品中SafeKit同时支持 Windows 和 Linux 系统。
 
 ## 实用链接 {#quick-reference-links}
 

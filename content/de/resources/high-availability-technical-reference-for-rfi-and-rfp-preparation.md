@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/resources/high-availability-technical-
 description: "Hier finden Sie technische Informationen zu SafeKit , um Informationsanfragen (RFI) und Angebotsanfragen (RFP) vorzubereiten. Erfahren Sie mehr über unterstützte Systeme, Architekturen, Wiederherstellungszeiten, Sicherheit, Lizenzierung und Support."
 category: "resources"
 lang: "de"
-topics: "Überblick, Inhaltsverzeichnis, Produktinformationen, Unterstützte Betriebssysteme und Plattformen, SafeKit High Availability Limitations, Vorkonfigurierte Anwendungsmodule, Architektur und Bereitstellung, Datenverlust- und Wiederherstellungszeiten (RPO und RTO), Remote Standorte und verteilte Bereitstellungen, Überwachung, Verwaltung und Warnmeldungen, Sicherheit und Compliance, Lizenzierung, Support- und Wartungsservicelevel, Vergleich mit anderen Lösungen, Nützliche Links"
+topics: "Überblick, Inhaltsverzeichnis, Produktinformationen, Unterstützte Betriebssysteme und Plattformen, SafeKit High Availability Limitations, Vorkonfigurierte Anwendungsmodule, Architektur und Bereitstellung, Datenverlust- und Wiederherstellungszeiten (RPO und RTO), Remote Standorte und verteilte Bereitstellungen, Überwachung, Verwaltung und Warnmeldungen, Sicherheit und Compliance, Lizenzierung, Unterstützung und Wartung, Vergleich mit anderen Lösungen, Nützliche Links"
 ---
 
 # SafeKit Technische Referenz für RFI- und RFP-Dokumente {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
@@ -25,7 +25,7 @@ Diese Seite dient der Vorbereitung einer Informationsanfrage (RFI) oder einer An
   8. [Überwachung, Verwaltung und Warnmeldungen](#monitoring-management-alerting)
   9. [Sicherheit und Compliance](#security-compliance)
   10. [Lizenzierung](#licensing-model)
-  11. [Support- und Wartungsservicelevel](#support-maintenance-slas)
+  11. [Unterstützung und Wartung](#support-maintenance-slas)
   12. [Vergleich mit anderen Lösungen](#comparison-vs-alternatives)
   13. [Nützliche Links](#quick-reference-links)
 
@@ -36,6 +36,7 @@ Feld | Antwort
 ---|---  
 Produktname | SafeKit  
 Verkäufer | Eviden, Teil der Atos-Gruppe. Früher bekannt als Evidian.  
+Softwareentwicklung | Entwickelt in Frankreich.
 Produktkategorie | Software für Anwendungsclustering, Hochverfügbarkeit und Notfallwiederherstellung  
 Aktuelle Version | SafeKit 8.2  
 Webseite | [https://safekit.eviden.com/de/](</de/>)  
@@ -45,11 +46,11 @@ Erste Veröffentlichung | 2000. Seit über 20 Jahren in der Produktion im Einsat
 
 Windows-Betriebssysteme | Linux-Betriebssysteme | Infrastruktur und Virtualisierung | Cloud-Plattformen  
 ---|---|---|---  
-• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 Enterprise (x86-64)<br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br> • Red Hat Enterprise Linux 10 (AArch64)<br> • Red Hat Enterprise Linux 9 (x86-64)<br> • Red Hat Enterprise Linux 9 (AArch64)<br> • Red Hat Enterprise Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • Jeder Edge-Server beliebiger Marke<br> • VMware<br> • Microsoft Hyper-V*<br> • Linux KVM*<br> • Jeder Hypervisor<br> • Docker-Container<br> • Podman-Container  |  • Amazon Web Services (AWS)**<br> • Microsoft Azure**<br> • Google Cloud Platform (GCP)**<br> • Jede IaaS-Cloud mit Standard-VM-Instanzen   
+• Windows Server 2025 (x86-64)<br> • Windows Server 2022 (x86-64)<br> • Windows Server 2019 (x86-64)<br> • Windows 11 Enterprise (x86-64)<br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64)<br> • Red Hat Enterprise Linux 10 (AArch64)<br> • Red Hat Enterprise Linux 9 (x86-64)<br> • Red Hat Enterprise Linux 9 (AArch64)<br> • Red Hat Enterprise Linux 8 (x86-64)<br> • Ubuntu 24.04 LTS (x86-64)  |  • Jeder Edge-Server beliebiger Marke<br> • VMware<br> • Microsoft Hyper-V [1]<br> • Linux KVM [1]<br> • Jeder Hypervisor<br> • Docker-Container<br> • Podman-Container  |  • Amazon Web Services (AWS) [2]<br> • Microsoft Azure [2]<br> • Google Cloud Platform (GCP) [2]<br> • Jede IaaS-Cloud mit Standard-VM-Instanzen   
   
-_* SafeKit bietet hohe Verfügbarkeit für einzelne Anwendungen oder ganze virtuelle Maschinen._
+**[1]** SafeKit bietet hohe Verfügbarkeit für einzelne Anwendungen oder ganze virtuelle Maschinen.
 
-_** In der Cloud konfigurieren Sie virtuelle IP-Adressen auf dem Cloud Load Balancer._
+**[2]** Konfigurieren Sie in der Cloud virtuelle IP-Adressen auf dem Cloud Load Balancer.
 
 {{%  insert-safekit-usage-de  %}}
 
@@ -57,7 +58,7 @@ _** In der Cloud konfigurieren Sie virtuelle IP-Adressen auf dem Cloud Load Bala
 
 SafeKit enthält sofort einsatzbereite `.safe` Module. Es gibt zwei Möglichkeiten, Anwendungen zu schützen. **Die Hochverfügbarkeit von Anwendungen** schützt eine Anwendung direkt mit einem mirror oder <span class="notranslate farm-term" translate="no">farm</span> . **Die Hochverfügbarkeit virtueller Maschinen** schützt die gesamte virtuelle Maschine mit einem hyperv.safe oder kvm.safe -Modul.
 
- | Hochverfügbarkeit der Anwendung | Hochverfügbarkeit virtueller Maschinen  
+Vergleichskriterium | Hochverfügbarkeit der Anwendung | Hochverfügbarkeit virtueller Maschinen  
 ---|---|---  
 Konfiguration | Sie müssen wissen, welche Anwendungsdienste neu gestartet und welche Ordner repliziert werden sollen. Außerdem müssen Sie die für das Failover verwendete virtuelle IP-Adresse konfigurieren. | Sie müssen lediglich den Speicherort der Dateien der virtuellen Maschine angeben. Sie müssen nicht wissen, wie die Anwendungen innerhalb der virtuellen Maschine funktionieren. Dieser Ansatz schützt sowohl die Anwendungen als auch das Betriebssystem.  
 Empfohlene Verwendung | Integrieren Sie Hochverfügbarkeit direkt in eine Softwarelösung, ohne von spezifischer Hardware oder einem bestimmten Hypervisor abhängig zu sein. | Mehrere Anwendungen auf mehreren virtuellen Maschinen mit einer einzigen Hochverfügbarkeitsrichtlinie verwalten.  
@@ -101,12 +102,12 @@ Erfordernis | SafeKit -Funktionen
 Gemeinsamer Speicherplatz erforderlich? | Nein. SafeKit verwendet lokale Festplatten. Es benötigt kein SAN oder gemeinsam genutzten Speicher.  
 Active Directory erforderlich? | Nein. SafeKit benötigt weder eine Windows-Domäne noch Active Directory. Es unterstützt auch Arbeitsgruppen.  
 Clustergröße | 2 Knoten ( mirror ) oder 2+ Knoten ( <span class="notranslate farm-term" translate="no">farm</span> )  
-Virtuelle IP-Adresse (VIP) | Für die Hochverfügbarkeit von Anwendungen wird die virtuelle IP-Adresse automatisch per Gratuitous ARP an den aktiven Knoten übertragen. Für die Hochverfügbarkeit virtueller Maschinen wird der Datenverkehr zur IP-Adresse innerhalb der virtuellen Maschine automatisch umgeleitet. Eine separate virtuelle IP-Adresse ist nicht erforderlich. Die Knoten müssen sich ein LAN, ein VLAN oder ein standortübergreifendes VLAN teilen.  
+Virtuelle IP-Adresse (VIP) | Für die Hochverfügbarkeit von Anwendungen wird die virtuelle IP-Adresse automatisch per Gratuitous ARP an den aktiven Knoten übertragen. Für die Hochverfügbarkeit virtueller Maschinen wird der Datenverkehr zur IP-Adresse innerhalb der virtuellen Maschine automatisch umgeleitet. Eine separate virtuelle IP-Adresse ist nicht erforderlich. Die Knoten müssen sich ein LAN oder ein standortübergreifendes VLAN teilen.  
 Architektur mit drei Knoten | SafeKit betreibt einen Zwei-Knoten mirror -Cluster in einem LAN oder einem VLAN, das sich über mehrere Standorte erstreckt. Es bietet synchrone Replikation ohne Datenverlust (RPO=0) und automatisches Failover. Ein separates Backup-Produkt repliziert Daten asynchron über ein WAN auf einen dritten Knoten. Dieses Backup ermöglicht die Wiederherstellung zu einem früheren Zeitpunkt und bietet Schutz vor Ransomware.  
 Zweck der hohen Verfügbarkeit | SafeKit repliziert Daten synchron auf beide Knoten. Dies ermöglicht ein automatisches Failover ohne Datenverlust nach einem Hardware- oder Softwareausfall. Logische Fehler, Datenbeschädigungen und versehentliche Löschungen werden jedoch ebenfalls sofort auf den Standby-Knoten kopiert.  
 Zweck von Datensicherungen | Datensicherungen ermöglichen die Wiederherstellung von Daten aus einem früheren Zeitpunkt. Ein separates Backup-Produkt, nicht SafeKit , bietet diesen Schutz durch asynchrone Replikation. Datensicherungen helfen bei der Wiederherstellung nach Ransomware-Angriffen und bei menschlichen Fehlern. Diese Wiederherstellung ist kein automatisches Failover. Beim Wiederherstellen einer älteren Datensicherung gehen alle Änderungen verloren, die nach dieser Sicherung vorgenommen wurden.  
 Maximale Anzahl gleichzeitig laufender Module | Ein Cluster mit zwei Knoten kann bis zu 32 Module gleichzeitig verwalten. Zum Schutz virtueller Maschinen repliziert und startet jedes Modul eine andere virtuelle Maschine neu. Jedes Modul kann auf jedem Knoten als primärer Knoten fungieren, sodass sich beide Server die Arbeitslast teilen können. Das Gesamtdatenvolumen beeinflusst die Resynchronisierungszeit nach einem Failover oder einem Knotenneustart.  
-Benötigte Software auf jedem Knoten? | Ja. Auf jedem Knoten wird ein schlanker Softwareagent installiert.  
+Benötigte Software auf jedem Knoten? | Ja. Auf jedem Knoten wird eine schlanke Software installiert.  
 Unterstützte Anwendungen | SafeKit kann jeden Windows-Dienst oder Linux-Daemon schützen. Vorkonfigurierte Module sind für mehr als 30 Anwendungen verfügbar.  
   
 ### Replikation und Datenschutz {#replication-data-protection}
@@ -129,18 +130,18 @@ Verschlüsselung während der Übertragung | Der Replikationsverkehr wird mit TL
 Metrisch | Mirror ( mirror.safe ) | <span class="notranslate farm-term" translate="no">Farm</span> ( farm.safe )  
 ---|---|---  
 RPO (Recovery Point Objective) | Kein Datenverlust. Ein Schreibvorgang wird erst dann bestätigt, wenn beide Knoten ihn bestätigt haben. | Gilt nicht für zustandslose Dienste. Ein separater mirror verwaltet die Daten.  
-RTO (Recovery Time Objective) | Ungefähr eine Minute. Dies beinhaltet das Heartbeat-Timeout (standardmäßig 30 Sekunden) und die Zeit für den Neustart der Anwendung. | Ein paar Sekunden. Der Datenverkehr wird auf die verbleibenden aktiven Knoten umverteilt.  
+RTO (Recovery Time Objective) | Ungefähr eine Minute. Dies beinhaltet das <span class="notranslate farm-term" translate="no">heartbeat</span> Timeout (standardmäßig 30 Sekunden) und die Zeit für den Neustart der Anwendung. | Ein paar Sekunden. Der Datenverkehr wird auf die verbleibenden aktiven Knoten umverteilt.  
 Replikationstyp | Synchrone, Echtzeit-Dateireplikation auf Byte-Ebene | Nicht zutreffend  
-Failover-Auslöser | Automatisch, wenn die Herzschläge aufhören, ein Prozess abstürzt oder ein Prüfprogramm einen Fehler erkennt | Automatisch, wenn die Herzschläge aufhören, ein Prozess abstürzt oder ein Prüfprogramm einen Fehler erkennt  
+Failover-Auslöser | Automatisch, wenn <span class="notranslate farm-term" translate="no">heartbeats</span> aufhören, ein Prozess abstürzt oder ein Prüfprogramm einen Fehler erkennt | Automatisch, wenn <span class="notranslate farm-term" translate="no">heartbeats</span> aufhören, ein Prozess abstürzt oder ein Prüfprogramm einen Fehler erkennt  
 Manuelles Eingreifen erforderlich? | Nein. Failover und Failback erfolgen automatisch. | Nein. Failover und Failback erfolgen automatisch.  
   
 ### Wiederherstellungszeit für Anwendungen, die durch einen mirror geschützt sind {#rto-breakdown-mirror-application-level-ha}
 
 Fehlertyp | Wie die Wiederherstellungszeit berechnet wird  
 ---|---  
-Hardwarefehler | Heartbeat-Timeout (standardmäßig 30 Sekunden), gefolgt von einem Neustart der Anwendung  
-Software- oder Prozessabsturz | Es ist an der Zeit, die Anwendung zu beenden und anschließend neu zu starten.  
-Betriebssystemabsturz | Heartbeat-Timeout. Das Betriebssystem läuft bereits auf dem Standby-Server, daher ist kein Neustart erforderlich.  
+Hardwarefehler | <span class="notranslate farm-term" translate="no">Heartbeat</span> Timeout (standardmäßig 30 Sekunden), gefolgt von einem Neustart der Anwendung  
+Software- oder Prozessabsturz | Die Zeit zum Beenden der Anwendung, gefolgt vom Neustart der Anwendung.  
+Betriebssystemabsturz | <span class="notranslate farm-term" translate="no">Heartbeat</span> Timeout. Das Betriebssystem läuft bereits auf dem Standby-Server, daher ist kein Neustart erforderlich.  
   
 ### Wiederherstellungszeit für virtuelle Maschinen, die durch einen mirror geschützt sind {#rto-breakdown-mirror-vm-level-ha}
 
@@ -186,22 +187,22 @@ Fähigkeit | Details
 ---|---  
 Webkonsole | Konfigurieren, überwachen und verwalten Sie Clusterknoten über eine Webanwendung oder eine Progressive Web App (PWA).  
 Mobile Benachrichtigungen | Erhalten Sie Browserbenachrichtigungen, wenn sich der Status eines Moduls ändert.  
-Staatsgeschichte | Modulzustände und Ereignisse auf einer Zeitleiste anzeigen.  
+Zeitleiste | Modulstatusänderungen und Ereignisse in chronologischer Reihenfolge anzeigen.  
 E-Mail-Benachrichtigungen | Ein integrierter E-Mail-Agent versendet Benachrichtigungen.  
-Befehlszeilenverwaltung | Verwenden Sie die Befehlszeilenschnittstelle, um Skripte zu schreiben und Aufgaben zu automatisieren.  
-Protokollverwaltung | Jedes Modul und jedes Skript verfügt über eigene Protokolldateien. Diagnose-Snapshots helfen dem Support-Team bei der Untersuchung von Problemen.  
+Befehlszeilenschnittstelle | Verwenden Sie die Befehlszeilenschnittstelle, um Skripte zu schreiben und Aufgaben zu automatisieren.  
+Protokollverwaltung | Jedes Modul und jedes Skript verfügt über eigene Protokolldateien. Modul- <span class="notranslate farm-term" translate="no">snapshots</span> helfen dem Support-Team bei der Fehlersuche.  
 Integration mit Überwachungstools | SafeKit protokolliert wichtige Clusterereignisse im Windows-Ereignisprotokoll oder im Linux-Syslog. Überwachungstools können diese Ereignisse erfassen und anhand von Standardregeln Warnmeldungen auslösen. Dies funktioniert ohne zusätzliche Anpassungen mit Nagios, Zabbix, Splunk und SIEM-Systemen.  
   
 ## Sicherheit und Compliance {#security-compliance}
 
 Besonderheit | Details  
 ---|---  
-HTTPS-Konsolenzugriff | TLS-Zertifikate schützen den Zugriff auf die Webkonsole.  
+HTTPS | TLS-Zertifikate schützen den Zugriff auf die Webkonsole.  
 Benutzerauthentifizierung | Lokale Konten, LDAP, Zertifikate (PKI) und OpenID Connect  
 Benutzerrollen | Konfigurieren Sie Zugriffsrichtlinien für Administration, Kontrolle und Überwachung.  
-Verschlüsselung | Der TCP-Datenverkehr nutzt TLS/SSL für die Replikation, die Webkonsole und verteilte Befehle. Der UDP-Datenverkehr verwendet AES-128-CBC-Verschlüsselung mit SHA256 für Heartbeats und das interne Safeadmin-Protokoll. SafeKit verwendet die OpenSSL-Bibliothek für die Verschlüsselung und Apache für den Webdienst.  
-Antivirus-Kompatibilität | Die Dokumentation listet die Pfade auf, die von Antivirenscans ausgeschlossen werden sollen.  
-Datensouveränität | Eviden gehört zur europäischen Atos-Gruppe. SafeKit bietet Geschäftskontinuität und Notfallwiederherstellung für Windows und Linux. Daten und Failover-Infrastruktur können vollständig in Ihren Räumlichkeiten verbleiben, ohne dass Sie von US-Anbietern abhängig sind. Dieser Ansatz erfüllt die Anforderungen von NIS2 an Geschäftskontinuität und Notfallwiederherstellung.  
+Verschlüsselung | Der TCP-Datenverkehr nutzt TLS/SSL für die Replikation, die Webkonsole und verteilte Befehle. Der UDP-Datenverkehr verwendet AES-128-CBC-Verschlüsselung mit SHA256 für <span class="notranslate farm-term" translate="no">heartbeats</span> und das interne Safeadmin-Protokoll. SafeKit verwendet die OpenSSL-Bibliothek für die Verschlüsselung und Apache für den Webdienst.  
+Antivirus | Die Dokumentation listet die Pfade auf, die von Antivirenscans ausgeschlossen werden sollen.  
+Souveränität | SafeKit wird in Frankreich von Eviden, einem Unternehmen der Atos-Gruppe, entwickelt. Es schützt Windows- und Linux-Anwendungen und ermöglicht gleichzeitig den Verbleib Ihrer Daten und Server in Ihren eigenen Räumlichkeiten. Die Hochverfügbarkeitssoftware ist unabhängig von einem US-amerikanischen Anbieter. SafeKit unterstützt Sie bei der Erfüllung der NIS2-Anforderungen für Geschäftskontinuität und Notfallwiederherstellung.
   
 ## Lizenzierung {#licensing-model}
 
@@ -213,7 +214,7 @@ Lizenzaktivierung | Lizenzschlüssel können auch ohne Internetzugang aktiviert 
 Kostenlose Testversion | Eine kostenlose Testversion beinhaltet alle Funktionen.  
 Kostenlose einmonatige Lizenz | Verfügbar für die Erprobung eines Machbarkeitsnachweises  
   
-## Support- und Wartungsservicelevel {#support-maintenance-slas}
+## Unterstützung und Wartung {#support-maintenance-slas}
 
 ### Standardmäßiger Support und Wartung im Rahmen eines aktiven Wartungsvertrags {#standard-support-maintenance-included-with-active-maintenance-contract}
 
@@ -225,31 +226,31 @@ Bestätigung des Vorfalls | Innerhalb von vier Werktagen nach Eingang des Suppor
 Aktualisierungen und Upgrades | Alle Servicepakete, Updates und Upgrades sind ohne Aufpreis enthalten.  
 Ersatz für Lizenzschlüssel | Bei einem aktiven Supportvertrag kann ein Lizenzschlüssel bei einer Hostnamenänderung neu zugewiesen werden. Die Übertragung ist auf den Austausch eines Servers innerhalb desselben Projekts beschränkt. Eine vorherige schriftliche Genehmigung von Eviden ist erforderlich.  
 Zugriff auf die Wissensdatenbank | Vollständiger Zugriff auf Wissensdatenbankartikel, häufig gestellte Fragen und Online-Dokumentation  
-Starten oder Beenden einer Anwendung ohne SafeKit | Beenden Sie SafeKit und verwenden Sie anschließend ein Wrapper-Skript, um die Anwendung zu starten oder zu stoppen. Dieses Skript ruft die Start- und Stopp-Skripte der Anwendung auf. Außerdem fügt es bei Bedarf die virtuelle IP-Adresse hinzu oder entfernt sie.  
+Notfallverfahren | SafeKit stellt ein Wrapper-Skript bereit, um eine Anwendung zu starten oder zu stoppen, ohne die Hochverfügbarkeitsfunktionen von SafeKit zu nutzen. Dieses Skript ruft die Start- und Stopp-Skripte der Anwendung auf. Bei Bedarf fügt es außerdem die virtuelle IP-Adresse hinzu oder entfernt sie.  
 Supportportal | <https://customercare.evidian.com>  
   
 ### Kostenlose Ressourcen ohne Supportvertrag {#free-resources-no-contract-required}
 
 Ressource | Details  
 ---|---  
-KI-Unterstützungsassistent | Nutzen Sie [SafeKit -KI-Chat](</de/resources/safekit-support/#ai-support>) auf safekit.eviden.com. Alternativ können Sie ein KI-Sprachmodell mit den Informationen in safekit.eviden.com/llms.txt verwenden.  
-Online-Schulung und Zertifizierung | Lernen Sie in Ihrem eigenen Tempo mit 12 kostenlosen Videos mit einer Gesamtlaufzeit von ca. 3 Stunden und 40 Minuten. Nach Abschluss der Schulung erhalten Sie ein Zertifikat.  
-Dokumentation | Benutzerhandbuch, Versionshinweise, Wissensdatenbank und Schnellinstallationsanleitungen  
+KI-Unterstützungsassistent | Nutzen Sie [SafeKit AI-Chat](</de/resources/safekit-support/#ai-support>) auf safekit.eviden.com.   
+Online-Schulung und Zertifizierung | [Lernen Sie in Ihrem eigenen Tempo](</de/resources/safekit-on-line-training/>) mit kostenlosen Videos von insgesamt ca. 4 Stunden Länge. Nach Abschluss der Schulung erhalten Sie ein Zertifikat.  
+Dokumentation | Benutzerhandbuch, Versionshinweise, Wissensdatenbank und Schnellinstallationsanleitungen [finden Sie hier.](</de/resources/safekit-free-trial/>)  
   
 ## Vergleich mit anderen Lösungen {#comparison-vs-alternatives}
 
-Kriterium | SafeKit | Microsoft Failover Cluster (WSFC) | VMware HA | Open Source*  
+Kriterium | SafeKit | Microsoft Failover Cluster (WSFC) | VMware HA | Open Source [1]  
 ---|---|---|---|---  
 Gemeinsamer Speicher (SAN/vSAN) erforderlich | NEIN | Ja | Ja | NEIN  
 Windows-Unterstützung | Ja | Ja | Ja | NEIN  
 Linux-Unterstützung | Ja | NEIN | Ja | Ja  
 Einsatz an entfernten Standorten | Exzellent | Komplex | Komplex | Komplex  
-Integration in ein Produkt eines Softwareherstellers | Ja | NEIN | NEIN | NEIN  
+OEM | Ja | NEIN | NEIN | NEIN  
 Kosten | Dauerlizenz pro Knoten | Windows Server und SAN | vSphere Enterprise und SAN | Erweiterte Integrationsdienste  
 Komplexität der Einrichtung | Sofort konfigurierbar und einsatzbereit | Hoch: Active Directory-, SAN- und Witness-Konfiguration | Hoch: vCenter- und gemeinsam genutzte Speicherkonfiguration | Hoch: mehrere separate Produkte zur Konfiguration  
-Wartungsanforderungen | Ein Produkt, das über eine Webkonsole verwaltet wird. | Hoch: Expertise in Active Directory und SAN | Hoch: Abhängigkeit von vCenter | Hoch: mehrere separate Produkte zur Aufrechterhaltung  
+Verwaltung | Ein Produkt, das über eine Webkonsole verwaltet wird. | Hoch: Expertise in Active Directory und SAN | Hoch: Abhängigkeit von vCenter | Hoch: mehrere separate Produkte zur Aufrechterhaltung  
   
-_Unter Linux sind sechs separate Open-Source-Projekte erforderlich, um denselben Funktionsumfang bereitzustellen: Corosync, Pacemaker, DRBD, Keepalived, STONITH und HAProxy. SafeKit bietet diese Funktionen in einem einzigen Produkt für Windows und Linux._
+**[1]** Unter Linux sind sechs separate Open-Source-Projekte erforderlich, um denselben Funktionsumfang bereitzustellen: Corosync, Pacemaker, DRBD, Keepalived, STONITH und HAProxy. SafeKit bietet diese Funktionen in einem einzigen Produkt für Windows und Linux.
 
 ## Nützliche Links {#quick-reference-links}
 
