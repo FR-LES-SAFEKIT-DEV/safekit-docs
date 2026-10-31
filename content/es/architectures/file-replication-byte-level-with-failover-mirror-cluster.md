@@ -1,16 +1,17 @@
 ---
-title: "SafeKit: software de replicación de archivos en tiempo real a nivel de byte y clúster espejo"
+title: "Clúster SafeKit Mirror : replicación de archivos en tiempo real y alta disponibilidad"
 canonical: "https://safekit.eviden.com/es/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
-description: "SafeKit ofrece replicación de archivos en tiempo real a nivel de byte y duplicación síncrona de datos para Windows y Linux. Implemente un clúster espejo de alta disponibilidad con conmutación automática por error y sin el coste de una SAN. Evite la pérdida de datos y simplifique la recuperación ante desastres."
+description: "SafeKit proporciona replicación de archivos en tiempo real a nivel de byte y duplicación de datos síncrona para Windows y Linux . Implemente un clúster mirror de alta disponibilidad con conmutación por error automática sin el costo de una SAN. Garantice la ausencia total de pérdida de datos y una recuperación ante desastres simplificada hoy mismo."
 category: "architectures"
 lang: "es"
-topics: "Cómo funciona el clúster espejo SANless SafeKit con Windows o Linux, Índice, Cómo implementa SafeKit un clúster HA sin SAN para Windows o Linux, Cómo funciona el clúster espejo SafeKit con Windows o Linux, Comparación con otras soluciones de clustering, Vídeo: configurar un clúster espejo SafeKit HA, Centro de navegación de alta disponibilidad SafeKit"
+topics: "Cómo funciona el clúster SafeKit Mirror sin SAN con Windows o Linux , Tabla de contenido, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Windows o Linux sin SAN?, ¿Cómo funciona el clúster SafeKit mirror con Windows o Linux ?, Limitaciones de alta disponibilidad SafeKit , Comparación: SafeKit para Windows o Linux frente a otras soluciones de clúster, Guía en vídeo: Configuración de un clúster SafeKit HA mirror , 🔍 SafeKit Alta Centro de navegación de disponibilidad"
 ---
 
-# SafeKit: software de replicación de archivos en tiempo real a nivel de byte y clúster espejo {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
+# Clúster SafeKit Mirror : replicación de archivos en tiempo real y alta disponibilidad {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
 
-{{% insert-safekit-solution-mirror-2-es app="Windows/Linux" guide="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg" %}}
 
-{{% insert-safekit-hub-es %}}
+{{%  insert-safekit-solution-mirror-2-es app="Windows or Linux" guide="/es/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"  %}}
 
-{{% insert-safekit-4-buttons-es %}}
+{{%  insert-safekit-hub-es  %}}
+
+{{%  insert-safekit-4-buttons-es  %}}

@@ -1,16 +1,17 @@
 ---
-title: "SafeKit：リアルタイム・バイトレベル・ファイルレプリケーションとミラークラスターソフトウェア"
+title: "SafeKit Mirrorクラスター: リアルタイムファイルレプリケーションと高可用性"
 canonical: "https://safekit.eviden.com/ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
-description: "SafeKit は Windows と Linux 向けに、リアルタイムのバイトレベル・ファイルレプリケーションと同期データミラーリングを提供します。SAN の費用をかけずに、自動フェイルオーバーを備えた高可用性ミラークラスターを構成できます。データ損失を防ぎ、災害復旧を簡素化します。"
+description: "SafeKit 、 WindowsおよびLinuxに対して、リアルタイムのバイトレベルファイルレプリケーションと同期データミラーリングを提供します。SANのコストをかけずに、自動フェイルオーバー機能を備えた高可用性mirrorクラスタを実装できます。データ損失ゼロと簡素化された災害復旧を今すぐ実現しましょう。"
 category: "architectures"
 lang: "ja"
-topics: "Windows または Linux での SANless SafeKit ミラークラスターの仕組み, 目次, SafeKit で Windows または Linux の SANless HA クラスターを実装する方法, SafeKit ミラークラスターと Windows または Linux の連携, 他のクラスタリングソリューションとの比較, 動画：SafeKit HA ミラークラスターの構成, SafeKit 高可用性ナビゲーションハブ"
+topics: "SANレスSafeKit MirrorクラスタがWindowsまたはLinuxとどのように連携するか、目次、 SafeKitソフトウェアがSANレスWindowsまたはLinux高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがWindowsまたはLinuxとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとWindowsまたはLinuxと他のクラスタリングソリューションとの比較、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーションハブ"
 ---
 
-# SafeKit：リアルタイム・バイトレベル・ファイルレプリケーションとミラークラスターソフトウェア {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
+# SafeKit Mirrorクラスター: リアルタイムファイルレプリケーションと高可用性{#safekit-real-time-byte-level-file-replication--mirror-cluster-software}
 
-{{% insert-safekit-solution-mirror-2-ja app="Windows/Linux" guide="/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg" %}}
 
-{{% insert-safekit-hub-ja %}}
+{{%  insert-safekit-solution-mirror-2-ja app="Windows or Linux" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"  %}}
 
-{{% insert-safekit-4-buttons-ja %}}
+{{%  insert-safekit-hub-ja  %}}
+
+{{%  insert-safekit-4-buttons-ja  %}}
