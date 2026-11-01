@@ -80,6 +80,7 @@
   "Upgrading an Application Protected by SafeKit in an HA Cluster": "Aktualisierung einer durch SafeKit geschützten Anwendung in einem HA-Cluster",
   "Clustering best practises": "Best Practices für Clustering",
   "How a Virtual IP Address (VIP) Works in High Availability Clustering?": "Wie funktioniert eine virtuelle IP-Adresse (VIP) in einem Hochverfügbarkeitscluster?",
+  "Testing SafeKit Load Balancing on a Virtual IP Address": "SafeKit-Lastausgleich auf einer virtuellen IP-Adresse testen",
   "Handling Power Outages and Network Isolation in a HA Cluster": "Umgang mit Stromausfällen und Netzwerkisolierung in einem HA-Cluster",
   "Heartbeat, failover and quorum in a cluster": "Herzschlag, Failover und Quorum in einem Cluster",
   "SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison": "SAN vs. NAS Shared Storage für Failover-Cluster: Ein detaillierter Vergleich",

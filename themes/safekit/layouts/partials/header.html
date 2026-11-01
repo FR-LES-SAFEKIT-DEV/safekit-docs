@@ -432,6 +432,9 @@
                                 {{ with or ($localSite.GetPage "/best-practises/how-a-virtual-ip-address-works") ($enSite.GetPage "/best-practises/how-a-virtual-ip-address-works") }}
                                 <a href="{{ .RelPermalink }}">How a Virtual IP Address (VIP) Works in High Availability Clustering?</a>
                                 {{ end }}
+                                {{ with or ($localSite.GetPage "/best-practises/test-load-balancing-vip-farm") ($enSite.GetPage "/best-practises/test-load-balancing-vip-farm") }}
+                                <a href="{{ .RelPermalink }}">Testing SafeKit Load Balancing on a Virtual IP Address</a>
+                                {{ end }}
                                 {{ with or ($localSite.GetPage "/best-practises/power-outage-and-network-isolation-in-a-cluster") ($enSite.GetPage "/best-practises/power-outage-and-network-isolation-in-a-cluster") }}
                                 <a href="{{ .RelPermalink }}">Handling Power Outages and Network Isolation in a HA Cluster</a>
                                 {{ end }}
