@@ -81,7 +81,7 @@
   "Clustering best practises": "クラスタリングのベストプラクティス",
   "How a Virtual IP Address (VIP) Works in High Availability Clustering?": "高可用性クラスタリングにおける仮想IPアドレス（VIP）の仕組みとは？",
   "Testing the primary/backup virtual IP address in a SafeKit mirror cluster": "SafeKitミラークラスタにおけるプライマリ/バックアップ仮想IPアドレスのテスト",
-  "Testing the load balancing virtual IP address in a SafeKit farm cluster": "SafeKitファームクラスタにおけるロードバランシング仮想IPアドレスのテスト",
+  "Testing the load balancing virtual IP address in a SafeKit <span class=\"notranslate farm-term\" translate=\"no\">Farm</span> cluster": "SafeKitの<span class=\"notranslate farm-term\" translate=\"no\">Farm</span>クラスターにおける負荷分散仮想IPアドレスのテスト",
   "Handling Power Outages and Network Isolation in a HA Cluster": "HAクラスタにおける停電とネットワーク分離への対処",
   "Heartbeat, failover and quorum in a cluster": "クラスターにおけるハートビート、フェイルオーバー、クォーラム",
   "SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison": "フェイルオーバークラスタリングにおけるSANとNASの共有ストレージ：詳細な比較",

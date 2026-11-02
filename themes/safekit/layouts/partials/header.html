@@ -436,7 +436,7 @@
                                 <a href="{{ .RelPermalink }}">Testing the primary/backup virtual IP address in a SafeKit mirror cluster</a>
                                 {{ end }}
                                 {{ with or ($localSite.GetPage "/best-practises/test-load-balancing-vip-farm") ($enSite.GetPage "/best-practises/test-load-balancing-vip-farm") }}
-                                <a href="{{ .RelPermalink }}">Testing the load balancing virtual IP address in a SafeKit farm cluster</a>
+                                <a href="{{ .RelPermalink }}">Testing the load balancing virtual IP address in a SafeKit <span class="notranslate farm-term" translate="no">Farm</span> cluster</a>
                                 {{ end }}
                                 {{ with or ($localSite.GetPage "/best-practises/power-outage-and-network-isolation-in-a-cluster") ($enSite.GetPage "/best-practises/power-outage-and-network-isolation-in-a-cluster") }}
                                 <a href="{{ .RelPermalink }}">Handling Power Outages and Network Isolation in a HA Cluster</a>

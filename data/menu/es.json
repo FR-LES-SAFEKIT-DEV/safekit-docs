@@ -81,7 +81,7 @@
   "Clustering best practises": "Mejores prácticas de agrupamiento",
   "How a Virtual IP Address (VIP) Works in High Availability Clustering?": "¿Cómo funciona una dirección IP virtual (VIP) en un clúster de alta disponibilidad?",
   "Testing the primary/backup virtual IP address in a SafeKit mirror cluster": "Prueba de la dirección IP virtual principal/de respaldo en un clúster espejo de SafeKit.",
-  "Testing the load balancing virtual IP address in a SafeKit farm cluster": "Prueba de la dirección IP virtual de equilibrio de carga en un clúster de SafeKit.",
+  "Testing the load balancing virtual IP address in a SafeKit <span class=\"notranslate farm-term\" translate=\"no\">Farm</span> cluster": "Prueba de la dirección IP virtual de balanceo de carga en un clúster <span class=\"notranslate farm-term\" translate=\"no\">Farm</span> de SafeKit",
   "Handling Power Outages and Network Isolation in a HA Cluster": "Gestión de cortes de energía y aislamiento de red en un clúster de alta disponibilidad.",
   "Heartbeat, failover and quorum in a cluster": "Latido cardíaco, conmutación por error y quórum en un clúster",
   "SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison": "Almacenamiento compartido SAN frente a NAS para clústeres de conmutación por error: una comparación detallada",
