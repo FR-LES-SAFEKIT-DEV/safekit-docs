@@ -78,7 +78,7 @@ Anota la dirección MAC asociada a la IP virtual (VIP) antes de la conmutación 
 
 Esta prueba solo es posible si la estación de trabajo cliente se encuentra en la **misma subred IP** que el clúster.
 
-Si existe un enrutador entre el cliente y el clúster, la tabla ARP del cliente no contiene la IP virtual (VIP), sino la dirección de la puerta de enlace utilizada para acceder a la red del clúster. En ese caso, se debe verificar el redireccionamiento MAC en la tabla ARP del enrutador o la puerta de enlace, en colaboración con el equipo de red.
+Si existe un enrutador entre el cliente y el clúster, la tabla ARP del cliente no contiene la IP virtual (VIP), sino la dirección de la puerta de enlace utilizada para acceder a la red del clúster. En ese caso, consulte la tabla ARP del enrutador o la puerta de enlace con el equipo de red.
 
 **Pasos**
 
@@ -140,3 +140,6 @@ El comportamiento depende de la ruta de red entre el cliente y el clúster. Ejec
 - **Tras la conmutación por error, la IP virtual (VIP) deja de responder:** los mensajes de redireccionamiento MAC no son tenidos en cuenta por los dispositivos de la ruta (enrutador, puerta de enlace, conmutador virtual), que siguen enviando tráfico a la dirección MAC del antiguo servidor principal. Consulte con su equipo de red cómo se gestionan los mensajes de redireccionamiento MAC.
 - **Envío de GARPs:** el atributo `arpreroute="on"` de la sección `<vip>` (con `arpinterval` y `arpelapse` ) envía GARPs regularmente en la IP virtual (VIP) después de la conmutación por error. Consulte la Guía del usuario, sección 13.6.4 " [Sintaxis `<vip>`](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **Diagnóstico de la resolución de IP virtual (VIP) ↔ MAC:** consulte la Guía del usuario, sección 7.24 " [Solución de problemas de resolución de IP virtual (VIP) ↔ MAC](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Issue_with_VIP) " y sección 7.16 " [Problema con la IP virtual después de la conmutación por error](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Problem_with_the_1) ".
+
+Para el equilibrio de carga con una dirección IP virtual, consulte [la sección "Prueba de la dirección IP virtual de equilibrio de carga en un clúster de SafeKit Farm"](test-load-balancing-vip-farm/) .
+{{% insert-safekit-4-buttons-es %}}

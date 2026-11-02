@@ -78,7 +78,7 @@ Sie notieren die MAC-Adresse, die der virtuellen IP-Adresse (VIP) vor dem Failov
 
 Dieser Test ist nur möglich, wenn sich die Client-Workstation im **selben IP-Subnetz** wie der Cluster befindet.
 
-Befindet sich ein Router zwischen Client und Cluster, enthält die ARP-Tabelle des Clients nicht die virtuelle IP-Adresse (VIP), sondern die Adresse des Gateways, über das das Cluster-Netzwerk erreicht wird. In diesem Fall muss die MAC-Umleitung in der ARP-Tabelle des Routers bzw. Gateways in Zusammenarbeit mit dem Netzwerkteam überprüft werden.
+Befindet sich ein Router zwischen Client und Cluster, enthält die ARP-Tabelle des Clients nicht die virtuelle IP-Adresse (VIP), sondern die Adresse des Gateways, über das das Cluster-Netzwerk erreicht wird. In diesem Fall sollten Sie die ARP-Tabelle des Routers oder Gateways mit dem Netzwerkteam überprüfen.
 
 **Schritte**
 
@@ -140,3 +140,6 @@ Das Verhalten hängt vom Netzwerkpfad zwischen Client und Cluster ab. Führen Si
 - **Die virtuelle IP-Adresse (VIP) reagiert nach dem Failover nicht mehr:** MAC-Umleitungsnachrichten werden von einem Gerät auf dem Pfad (Router, Gateway, virtueller Switch) nicht berücksichtigt, das weiterhin Datenverkehr an die MAC-Adresse der ehemaligen primären IP-Adresse sendet. Klären Sie die Verarbeitung von MAC-Umleitungsnachrichten mit Ihrem Netzwerkteam.
 - **GARP-Senden:** Das Attribut `arpreroute="on"` des Abschnitts `<vip>` ` (mit `arpinterval` und `arpelapse` ) sendet nach dem Failover regelmäßig GARP-Anfragen an die virtuelle IP-Adresse (VIP). Siehe Benutzerhandbuch, Abschnitt 13.6.4 „ [`<vip>` -Syntax](https://safekit.eviden.com/de/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) “.
 - **Diagnose der Auflösung von virtueller IP (VIP) zu MAC:** siehe Benutzerhandbuch, Abschnitt 7.24 „ [Fehlerbehebung bei der Auflösung von virtueller IP (VIP) zu MAC](https://safekit.eviden.com/de/resources/safekit-user-guide-82/#_Issue_with_VIP) “ und Abschnitt 7.16 „ [Probleme mit der virtuellen IP nach dem Failover](https://safekit.eviden.com/de/resources/safekit-user-guide-82/#_Problem_with_the_1) “.
+
+Informationen zum Lastausgleich mit einer virtuellen IP-Adresse finden Sie [unter Testen der virtuellen IP-Adresse für den Lastausgleich in einem SafeKit Farm-Cluster](test-load-balancing-vip-farm/) .
+{{% insert-safekit-4-buttons-de %}}

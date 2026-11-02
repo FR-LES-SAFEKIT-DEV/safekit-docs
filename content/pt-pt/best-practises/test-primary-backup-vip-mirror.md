@@ -78,7 +78,7 @@ Você anota o endereço MAC associado ao IP Virtual (VIP) antes do failover e, e
 
 Este teste só é possível se a estação de trabalho do cliente estiver na **mesma sub-rede IP** que o cluster.
 
-Se houver um roteador entre o cliente e o cluster, a tabela ARP do cliente não conterá o IP Virtual (VIP), mas sim o endereço do gateway usado para acessar a rede do cluster. Nesse caso, o redirecionamento de MAC deve ser verificado na tabela ARP do roteador ou gateway, com a equipe de rede.
+Se houver um roteador entre o cliente e o cluster, a tabela ARP do cliente não conterá o IP Virtual (VIP), mas sim o endereço do gateway usado para acessar a rede do cluster. Nesse caso, verifique a tabela ARP do roteador ou gateway com a equipe de rede.
 
 **Passos**
 
@@ -140,3 +140,6 @@ Localização do cliente | | que o teste verifica |
 - **O IP Virtual (VIP) deixa de responder após o failover:** as mensagens de redirecionamento MAC não são consideradas por um dispositivo no caminho (roteador, gateway, switch virtual), que continua enviando tráfego para o endereço MAC do antigo servidor primário. Verifique o tratamento das mensagens de redirecionamento MAC com sua equipe de rede.
 - **Envio de GARPs:** o atributo `arpreroute="on"` da seção `<vip>` (com `arpinterval` e `arpelapse` ) envia GARPs regularmente no IP Virtual (VIP) após o failover. Consulte o Guia do Usuário, seção 13.6.4 " [Sintaxe `<vip>`](https://safekit.eviden.com/pt-pt/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **Diagnóstico de IP virtual (VIP) ↔ Resolução de MAC:** consulte o Guia do Usuário, seção 7.24 " [Solução de problemas de IP virtual (VIP) ↔ Resolução de MAC](https://safekit.eviden.com/pt-pt/resources/safekit-user-guide-82/#_Issue_with_VIP) " e seção 7.16 " [Problema com o IP virtual após failover](https://safekit.eviden.com/pt-pt/resources/safekit-user-guide-82/#_Problem_with_the_1) ".
+
+Para balanceamento de carga com um endereço IP virtual, consulte [Testando o endereço IP virtual de balanceamento de carga em um cluster SafeKit Farm](test-load-balancing-vip-farm/) .
+{{% insert-safekit-4-buttons-pt-pt %}}

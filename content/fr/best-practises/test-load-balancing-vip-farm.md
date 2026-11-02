@@ -9,19 +9,19 @@ topics: "Principes clés, Prérequis : le logiciel SafeKit Mosaic, Test 1 – D
 
 # Test de l'adresse IP virtuelle d'équilibrage de charge dans un cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit
 
-Ce guide explique comment vérifier qu'une <span class="notranslate farm-term" translate="no">Farm</span> SafeKit (module <span class="notranslate farm-term" translate="no">Farm</span> , répartition de charge sur une adresse IP virtuelle) fonctionne correctement sur votre réseau : distribution des connexions entre les nœuds et réacheminement de l'adresse IP virtuelle lorsque le nœud de répartition s'arrête.
+Ce guide explique comment vérifier qu'une <span class="notranslate farm-term" translate="no">Farm</span> SafeKit (module <span class="notranslate farm-term" translate="no">Farm</span> , équilibrage de charge sur une adresse IP virtuelle) fonctionne correctement sur votre réseau : distribution des connexions entre les nœuds et réacheminement de l'adresse IP virtuelle (VIP) lorsque le nœud de répartition s'arrête.
 
 ## 1. Principes clés
 
 **Prérequis :** tous les nœuds de la <span class="notranslate farm-term" translate="no">Farm</span> doivent se trouver dans le même sous-réseau IP de couche 2 : un LAN ou un VLAN étendu entre des sites distants.
 
 - L'adresse IP virtuelle (VIP) est configurée localement sur chaque nœud de la <span class="notranslate farm-term" translate="no">Farm</span> : elle est définie comme un alias de l'adresse IP physique, sur la carte réseau de cette adresse, lorsque la <span class="notranslate farm-term" translate="no">Farm</span> est démarrée sur le nœud.
-- Un seul nœud, le **serveur de répartition** , reçoit le trafic réseau pour le VIP (configuration `vmac_directed` , la valeur par défaut de SafeKit) : son adresse MAC est celle associée au VIP dans les tables ARP (routeur, passerelle, clients dans le même sous-réseau).
-- Le filtre noyau de ce nœud répartit ensuite les connexions TCP entre les nœuds de la <span class="notranslate farm-term" translate="no">Farm</span> , en **remplaçant l'adresse MAC de destination** des paquets par celle du nœud de traitement (l'adresse IP de destination reste l'adresse IP virtuelle). Les réponses sont envoyées directement du nœud qui traite la connexion au client.
+- Un seul nœud, le **serveur de répartition** , reçoit le trafic réseau pour l'IP virtuelle (VIP) (configuration `vmac_directed` , la valeur par défaut de SafeKit) : son adresse MAC est celle associée à l'IP virtuelle (VIP) dans les tables ARP (routeur, passerelle, clients dans le même sous-réseau).
+- Le filtre noyau de ce nœud répartit ensuite les connexions TCP entre les nœuds de la <span class="notranslate farm-term" translate="no">Farm</span> , en **réécrivant l'adresse MAC de destination** des paquets avec celle du nœud de traitement (l'adresse IP de destination reste l'adresse IP virtuelle (VIP)). Les réponses sont envoyées directement du nœud qui traite la connexion au client.
 - La distribution effectuée par le filtre est **déterministe** : le nœud de traitement est calculé à partir de l'identité du client, selon la règle d'équilibrage de charge configurée :
   - sur l' **adresse IP du client** ( `filter="on_addr"` ): un client donné est toujours servi par le même nœud, ce qui garantit l'affinité de session ;
   - Sur le **port TCP client** ( `filter="on_port"` ) : chaque connexion TCP provenant d'un même client peut être gérée par un nœud différent. C'est la règle utilisée pour la mosaïque (section 2), qui affiche donc tous les nœuds d'un seul poste de travail.
-- Si le serveur de répartition s'arrête, un autre nœud prend le relais et envoie **des GARP** (ARP gratuits) afin que le réseau associe le VIP à sa propre adresse MAC.
+- Si le serveur de répartition s'arrête, un autre nœud prend le relais et envoie **des GARP** (ARP gratuits) afin que le réseau associe l'adresse IP virtuelle (VIP) à sa propre adresse MAC.
 
 Ce que vous devez donc tester :
 
@@ -30,7 +30,7 @@ Ce que vous devez donc tester :
 
 ## 2. Prérequis : la mosaïque SafeKit
 
-La mosaïque est une page de test fournie par SafeKit. Elle ouvre de nombreuses connexions TCP vers l'adresse IP virtuelle et affiche, pour chacune d'elles, le nom du nœud ayant répondu. Cela permet de visualiser la distribution en un coup d'œil.
+La mosaïque est une page de test fournie par SafeKit. Elle ouvre de nombreuses connexions TCP vers l'adresse IP virtuelle (VIP) et affiche, pour chacune d'elles, le nom du nœud ayant répondu. Cela permet de visualiser la distribution en un coup d'œil.
 
 1. Dans le `userconfig.xml` du module <span class="notranslate farm-term" translate="no">Farm</span> , dans la section `<vip>` , ajoutez la règle d'équilibrage de charge sur le port du serveur web SafeKit. Exemple avec le serveur web SafeKit en HTTP sur le port 9010 :
 
@@ -88,23 +88,23 @@ Ce test vérifie que la <span class="notranslate farm-term" translate="no">Farm<
 
 ## 5. Test 3 – Vérification du reroutage GARP avec `arp -a`
 
-Avec le test 4, ce test vérifie réellement GARP : vous notez l'adresse MAC du serveur de répartition avant de l'arrêter, puis vous vérifiez que l'association VIP/MAC a changé par la suite.
+Avec le test 4, ce test vérifie réellement GARP : vous notez l'adresse MAC du serveur de répartition avant de l'arrêter, puis vous vérifiez que l'association IP virtuelle (VIP)/MAC a changé par la suite.
 
 Ce test n’est possible que si le poste de travail client affichant la mosaïque se trouve dans le **même sous-réseau IP** que la <span class="notranslate farm-term" translate="no">Farm</span> .
 
-Si un routeur est présent entre le client et la <span class="notranslate farm-term" translate="no">Farm</span> , la table ARP du client ne contient pas l'adresse IP virtuelle (VIP), mais l'adresse de la passerelle utilisée pour accéder au réseau de la <span class="notranslate farm-term" translate="no">Farm</span> . Dans ce cas, il est nécessaire de vérifier la présence d'un protocole GARP dans la table ARP du routeur ou de la passerelle, en collaboration avec l'équipe réseau.
+Si un routeur est présent entre le client et la <span class="notranslate farm-term" translate="no">Farm</span> , la table ARP du client ne contient pas l'adresse IP virtuelle (VIP), mais l'adresse de la passerelle utilisée pour accéder au réseau de la <span class="notranslate farm-term" translate="no">Farm</span> . Dans ce cas, veuillez consulter la table ARP du routeur ou de la passerelle avec votre équipe réseau.
 
 **Mesures**
 
 1. Démarrez la <span class="notranslate farm-term" translate="no">Farm</span> sur tous les nœuds.
-2. Sur le poste client, exécutez la `arp -a` et notez l'adresse MAC associée à l'adresse IP virtuelle (VIP). Elle identifie le serveur de répartition.
+2. Sur le poste client, exécutez `arp -a` et notez l'adresse MAC associée à l'adresse IP virtuelle (VIP). Celle-ci identifie le serveur de répartition.
 3. Arrêtez le nœud <span class="notranslate farm-term" translate="no">Farm</span> qui possède cette adresse MAC.
 4. Vérifiez que la mosaïque fonctionne toujours avec les nœuds restants.
-5. Exécutez à nouveau `arp -a` pour lire la nouvelle association VIP/MAC et identifier le nouveau serveur de répartition.
+5. Exécutez à nouveau `arp -a` pour lire la nouvelle association IP virtuelle (VIP)/MAC et identifier le nouveau serveur de répartition.
 
 ## 6. Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux)
 
-Vous pouvez suivre une connexion TCP vers le VIP en capturant des paquets sur le client et sur les nœuds <span class="notranslate farm-term" translate="no">Farm</span> : avec Wireshark sur les machines Windows et avec tcpdump sur les machines Linux.
+Vous pouvez suivre une connexion TCP vers l'adresse IP virtuelle (VIP) en capturant des paquets sur le client et sur les nœuds <span class="notranslate farm-term" translate="no">Farm</span> : avec Wireshark sur les machines Windows et avec tcpdump sur les machines Linux.
 
 Il est impératif d'examiner les **en-têtes MAC (Ethernet) des paquets** , et non pas seulement les adresses IP : le filtre noyau du serveur de répartition distribue les connexions en **remplaçant l'adresse MAC de destination** des paquets par celle du nœud de traitement. L'adresse IP de destination demeure l'adresse IP virtuelle (VIP) tout au long du chemin.
 
@@ -112,13 +112,13 @@ Il est impératif d'examiner les **en-têtes MAC (Ethernet) des paquets** , et n
 
 | Étape | Où capturer | Adresses MAC observées |
 |---|---|---|
-| 1. Le client envoie au VIP | client | Adresse MAC du client → Adresse MAC du **serveur de répartition** |
+| 1. Le client envoie à l'adresse IP virtuelle (VIP) | client | Adresse MAC du client → Adresse MAC du **serveur de répartition** |
 | 2. Le serveur de répartition transfère la connexion | serveur de répartition | MAC de répartition → MAC du **nœud de traitement** |
 | 3. Le nœud de traitement reçoit | nœud de traitement | MAC de répartition → MAC du nœud |
-| 4. Le nœud répond directement au client | nœud de traitement | MAC du nœud → MAC du client (SYN-ACK) |
+| 4. Le nœud répond directement au client | nœud de traitement | MAC du nœud → MAC du client |
 | 5. Le client reçoit la réponse | client | MAC du nœud → MAC du client |
 
-Si le poste client se trouve dans un sous-réseau différent de celui de la <span class="notranslate farm-term" translate="no">Farm</span> , l'adresse MAC affichée sur les nœuds de la <span class="notranslate farm-term" translate="no">Farm</span> correspond à l'adresse MAC de la **passerelle** (routeur) reliant les deux sous-réseaux, et non à celle du poste client. De même, sur le poste client, les paquets destinés à l'adresse IP virtuelle sont envoyés à l'adresse MAC de sa propre passerelle.
+> Si le poste de travail client se trouve dans un sous-réseau différent de celui de la <span class="notranslate farm-term" translate="no">Farm</span> , l'« adresse MAC du client » affichée sur les nœuds <span class="notranslate farm-term" translate="no">Farm</span> est l'adresse MAC de la **passerelle** (routeur) reliant les deux sous-réseaux, et non celle du poste de travail client.
 
 Répétez la capture après avoir arrêté le serveur de répartition (test 2, étape 4) : l'étape 1 doit maintenant afficher l'adresse MAC du **nouveau** serveur de répartition.
 
@@ -140,11 +140,14 @@ Le comportement dépend du chemin réseau entre le client et la <span class="not
 | 2.2 | Un seul nœud a démarré | Seul ce nœud apparaît |
 | 2.3 | Tous les nœuds ont démarré | Tous les nœuds apparaissent |
 | 2.4 | Arrêt du serveur de répartition | Les nœuds restants apparaissent, sans interruption durable |
-| 3 | `arp -a` avant et après l'arrêt | L'adresse MAC associée au VIP change |
+| 3 | `arp -a` avant et après l'arrêt | L'adresse MAC associée à l'adresse IP virtuelle (VIP) change |
 | 4 | Capture Wireshark ou tcpdump avant et après l'arrêt | Le client envoie à l'adresse MAC du nouveau serveur de répartition |
 
 ## 9. Dépannage
 
 - **Le réseau Mosaic ne répond plus après l'arrêt du serveur de distribution :** GARP n'est pas pris en compte par un périphérique du chemin (routeur, passerelle, commutateur virtuel). Veuillez vérifier la gestion de GARP avec votre équipe réseau.
 - **Envoi périodique de GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse` ) envoie régulièrement des GARP sur les VIP. Voir le Guide de l’utilisateur, section 13.6.4 «[ Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
-- **Diagnostic de la résolution VIP ↔ MAC :** voir le Guide de l'utilisateur, section 7.24 « [Dépannage de la résolution VIP ↔ MAC](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Issue_with_VIP) » et section 7.15 « [Module <span class="notranslate farm-term" translate="no">Farm</span> UP (prêt) mais problème d'équilibrage de charge dans une <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ».
+- **Diagnostic de la résolution IP virtuelle (VIP) ↔ MAC :** voir le Guide de l'utilisateur, section 7.24 « [Dépannage de la résolution IP virtuelle (VIP) ↔ MAC](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Issue_with_VIP) » et section 7.15 « [Module <span class="notranslate farm-term" translate="no">Farm</span> UP (prêt) mais problème d'équilibrage de charge dans une <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ».
+
+Pour le basculement principal/de secours avec une adresse IP virtuelle, consultez [la section Test de l'adresse IP virtuelle d'un cluster miroir SafeKit](test-primary-backup-vip-mirror/) .
+{{% insert-safekit-4-buttons-fr %}}

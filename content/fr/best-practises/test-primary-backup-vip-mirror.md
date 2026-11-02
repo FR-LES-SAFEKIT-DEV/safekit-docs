@@ -78,7 +78,7 @@ Vous notez l'adresse MAC associée à l'adresse IP virtuelle (VIP) avant le basc
 
 Ce test n'est possible que si le poste de travail client se trouve dans le **même sous-réseau IP** que le cluster.
 
-Si un routeur est présent entre le client et le cluster, la table ARP du client ne contient pas l'adresse IP virtuelle (VIP), mais l'adresse de la passerelle utilisée pour accéder au réseau du cluster. Dans ce cas, le réacheminement MAC doit être vérifié dans la table ARP du routeur ou de la passerelle, en collaboration avec l'équipe réseau.
+Si un routeur est présent entre le client et le cluster, la table ARP du client ne contient pas l'adresse IP virtuelle (VIP), mais l'adresse de la passerelle utilisée pour accéder au réseau du cluster. Dans ce cas, veuillez consulter la table ARP du routeur ou de la passerelle avec votre équipe réseau.
 
 **Mesures**
 
@@ -140,3 +140,6 @@ Le comportement dépend du chemin réseau entre le client et le cluster. Exécut
 - **L'adresse IP virtuelle (VIP) ne répond plus après le basculement :** les messages de réacheminement MAC ne sont pas pris en compte par un périphérique du chemin (routeur, passerelle, commutateur virtuel), qui continue d'envoyer le trafic vers l'adresse MAC de l'ancien serveur principal. Veuillez vérifier la gestion des messages de réacheminement MAC avec votre équipe réseau.
 - **Envoi de requêtes GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse` ) envoie régulièrement des requêtes GARP sur l’adresse IP virtuelle (VIP) après le basculement. Voir le Guide de l’utilisateur, section 13.6.4 «[ Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
 - **Diagnostic de la résolution IP virtuelle (VIP) ↔ MAC :** voir le Guide de l'utilisateur, section 7.24 « [Dépannage de la résolution IP virtuelle (VIP) ↔ MAC](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Issue_with_VIP) » et section 7.16 « [Problème avec l'IP virtuelle après basculement](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Problem_with_the_1) ».
+
+Pour l'équilibrage de charge avec une adresse IP virtuelle, consultez [la section Test de l'adresse IP virtuelle d'équilibrage de charge dans un cluster SafeKit Farm](test-load-balancing-vip-farm/) .
+{{% insert-safekit-4-buttons-fr %}}

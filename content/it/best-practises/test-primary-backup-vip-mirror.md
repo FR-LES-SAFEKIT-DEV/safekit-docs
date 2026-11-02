@@ -78,7 +78,7 @@ Si annota l'indirizzo MAC associato all'IP virtuale (VIP) prima del failover, qu
 
 Questo test è possibile solo se la workstation client si trova nella **stessa sottorete IP** del cluster.
 
-Se tra il client e il cluster è presente un router, la tabella ARP del client non contiene l'indirizzo IP virtuale (VIP), bensì l'indirizzo del gateway utilizzato per raggiungere la rete del cluster. In tal caso, è necessario verificare con il team di rete la presenza del reindirizzamento MAC nella tabella ARP del router o del gateway.
+Se tra il client e il cluster è presente un router, la tabella ARP del client non contiene l'indirizzo IP virtuale (VIP), bensì l'indirizzo del gateway utilizzato per raggiungere la rete del cluster. In tal caso, è necessario verificare la tabella ARP del router o del gateway con il team di rete.
 
 **Passaggi**
 
@@ -140,3 +140,6 @@ Il comportamento dipende dal percorso di rete tra il client e il cluster. Esegui
 - **L'indirizzo IP virtuale (VIP) non risponde più dopo il failover:** i messaggi di reindirizzamento MAC non vengono presi in considerazione da un dispositivo sul percorso (router, gateway, switch virtuale), che continua a inviare traffico all'indirizzo MAC del precedente indirizzo primario. Verifica la gestione dei messaggi di reindirizzamento MAC con il tuo team di rete.
 - **Invio di GARP:** l'attributo `arpreroute="on"` della sezione `<vip>` (con `arpinterval` e `arpelapse` ) invia regolarmente GARP sull'IP virtuale (VIP) dopo il failover. Vedere la Guida per l'utente, sezione 13.6.4 " [Sintassi `<vip>`](https://safekit.eviden.com/it/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **Diagnosi della risoluzione IP virtuale (VIP) ↔ MAC:** consultare la Guida per l'utente, sezione 7.24 " [Risoluzione dei problemi relativi alla risoluzione IP virtuale (VIP) ↔ MAC](https://safekit.eviden.com/it/resources/safekit-user-guide-82/#_Issue_with_VIP) " e sezione 7.16 " [Problema con l'IP virtuale dopo il failover](https://safekit.eviden.com/it/resources/safekit-user-guide-82/#_Problem_with_the_1) ".
+
+Per il bilanciamento del carico con un indirizzo IP virtuale, vedere [Test dell'indirizzo IP virtuale di bilanciamento del carico in un cluster SafeKit Farm](test-load-balancing-vip-farm/) .
+{{% insert-safekit-4-buttons-it %}}

@@ -9,19 +9,19 @@ topics: "Principios clave, Requisito previo: el mosaico SafeKit, Prueba 1: Distr
 
 # Prueba de la dirección IP virtual de equilibrio de carga en un clúster <span class="notranslate farm-term" translate="no">farm</span> SafeKit.
 
-Esta guía describe cómo comprobar que SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (módulo <span class="notranslate farm-term" translate="no">Farm</span> , balanceo de carga en una dirección IP virtual) funciona correctamente en su red: distribución de las conexiones entre los nodos y redireccionamiento de la IP virtual cuando el nodo de distribución se detiene.
+Esta guía describe cómo comprobar que SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (módulo <span class="notranslate farm-term" translate="no">Farm</span> , balanceo de carga en una dirección IP virtual) funciona correctamente en su red: distribución de las conexiones entre los nodos y redireccionamiento de la IP virtual (VIP) cuando el nodo de distribución se detiene.
 
 ## 1. Principios clave
 
 **Requisito previo:** todos los nodos de la <span class="notranslate farm-term" translate="no">Farm</span> deben estar en la misma subred IP de capa 2: una LAN o una VLAN extendida entre sitios remotos.
 
 - La IP virtual (VIP) se configura localmente en cada nodo de la <span class="notranslate farm-term" translate="no">Farm</span> : se establece como un alias de la dirección IP física, en la tarjeta de red de esa dirección, cuando se inicia la <span class="notranslate farm-term" translate="no">Farm</span> en el nodo.
-- Un único nodo, el **servidor de despacho** , recibe el tráfico de red para la VIP (configuración `vmac_directed` , la predeterminada de SafeKit): su dirección MAC es la asociada con la VIP en las tablas ARP (enrutador, puerta de enlace, clientes en la misma subred).
-- El filtro del núcleo de este nodo distribuye las conexiones TCP entre los nodos de la <span class="notranslate farm-term" translate="no">Farm</span> , **modificando la dirección MAC de destino** de los paquetes para que coincida con la del nodo que procesa la conexión (la dirección IP de destino sigue siendo la VIP). Las respuestas se envían directamente desde el nodo que procesa la conexión al cliente.
+- Un único nodo, el **servidor de despacho** , recibe el tráfico de red para la IP virtual (VIP) (configuración `vmac_directed` , la predeterminada de SafeKit): su dirección MAC es la asociada con la IP virtual (VIP) en las tablas ARP (enrutador, puerta de enlace, clientes en la misma subred).
+- El filtro del núcleo de este nodo distribuye las conexiones TCP entre los nodos de la <span class="notranslate farm-term" translate="no">Farm</span> , **reescribiendo la dirección MAC de destino** de los paquetes a la del nodo que los procesa (la dirección IP de destino sigue siendo la IP virtual (VIP)). Las respuestas se envían directamente desde el nodo que procesa la conexión al cliente.
 - La distribución realizada por el filtro es **determinista** : el nodo de procesamiento se calcula a partir de la identidad del cliente, de acuerdo con la regla de equilibrio de carga configurada:
   - en la **dirección IP del cliente** ( `filter="on_addr"` ): un cliente determinado siempre es atendido por el mismo nodo, lo que garantiza la afinidad de la sesión;
   - En el **puerto TCP del cliente** ( `filter="on_port"` ): cada conexión TCP del mismo cliente puede ser atendida por un nodo diferente. Esta es la regla utilizada para el mosaico (sección 2), que muestra todos los nodos de una misma estación de trabajo.
-- Si el servidor de despacho se detiene, otro nodo asume esta función y envía **GARP** (ARP gratuito) para que la red asocie la VIP con su propia dirección MAC.
+- Si el servidor de despacho se detiene, otro nodo asume esta función y envía **GARP** (ARP gratuito) para que la red asocie la IP virtual (VIP) con su propia dirección MAC.
 
 Por lo tanto, lo que necesitas probar es:
 
@@ -30,7 +30,7 @@ Por lo tanto, lo que necesitas probar es:
 
 ## 2. Requisito previo: el mosaico SafeKit
 
-El mosaico es una página de prueba proporcionada por SafeKit. Abre múltiples conexiones TCP al VIP y muestra, para cada una, el nombre del nodo que respondió. Esto permite visualizar la distribución de un vistazo.
+El mosaico es una página de prueba proporcionada por SafeKit. Abre múltiples conexiones TCP a la IP virtual (VIP) y muestra, para cada una, el nombre del nodo que respondió. Esto permite visualizar la distribución de un vistazo.
 
 1. En el `userconfig.xml` del módulo <span class="notranslate farm-term" translate="no">Farm</span> , en la sección `<vip>` , agregue la regla de balanceo de carga en el puerto del servidor web SafeKit. Ejemplo con el servidor web SafeKit en HTTP en el puerto 9010:
 
@@ -88,23 +88,23 @@ Esta prueba verifica que la <span class="notranslate farm-term" translate="no">F
 
 ## 5. Prueba 3: comprobación del redireccionamiento GARP con `arp -a`
 
-Junto con la prueba 4, esta prueba realmente verifica GARP: se anota la dirección MAC del servidor de despacho antes de detenerlo y luego se comprueba que la asociación VIP/MAC haya cambiado posteriormente.
+Junto con la prueba 4, esta prueba realmente verifica GARP: se anota la dirección MAC del servidor de despacho antes de detenerlo y luego se comprueba que la asociación IP virtual (VIP)/MAC haya cambiado posteriormente.
 
 Esta prueba solo es posible si la estación de trabajo cliente que muestra el mosaico se encuentra en la **misma subred IP** que la <span class="notranslate farm-term" translate="no">Farm</span> .
 
-Si existe un enrutador entre el cliente y la <span class="notranslate farm-term" translate="no">Farm</span> de servidores, la tabla ARP del cliente no contiene la IP virtual (VIP), sino la dirección de la puerta de enlace utilizada para acceder a la red de la <span class="notranslate farm-term" translate="no">Farm</span> . En ese caso, se debe verificar la configuración de GARP en la tabla ARP del enrutador o la puerta de enlace, junto con el equipo de red.
+Si existe un enrutador entre el cliente y la <span class="notranslate farm-term" translate="no">Farm</span> de servidores, la tabla ARP del cliente no contiene la IP virtual (VIP), sino la dirección de la puerta de enlace utilizada para acceder a la red de la <span class="notranslate farm-term" translate="no">Farm</span> . En ese caso, consulte la tabla ARP del enrutador o la puerta de enlace con el equipo de red.
 
 **Pasos**
 
 1. Inicia la <span class="notranslate farm-term" translate="no">Farm</span> en todos los nodos.
-2. En la estación de trabajo del cliente, ejecute `arp -a` y anote la dirección MAC asociada a la VIP. Esta identifica al servidor de despacho.
+2. En la estación de trabajo del cliente, ejecute `arp -a` y anote la dirección MAC asociada a la IP virtual (VIP). Esta identifica al servidor de despacho.
 3. Detenga el nodo <span class="notranslate farm-term" translate="no">Farm</span> que tiene esta dirección MAC.
 4. Comprueba que el mosaico siga funcionando con los nodos restantes.
-5. Vuelva a ejecutar `arp -a` para leer la nueva asociación VIP/MAC e identificar el nuevo servidor de despacho.
+5. Vuelva a ejecutar `arp -a` para leer la nueva asociación de IP virtual (VIP)/MAC e identificar el nuevo servidor de despacho.
 
 ## 6. Prueba 4: Verificación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux).
 
-Se puede seguir una conexión TCP a la IP virtual capturando paquetes en el cliente y en los nodos <span class="notranslate farm-term" translate="no">Farm</span> : con Wireshark en máquinas Windows y con tcpdump en máquinas Linux.
+Se puede seguir una conexión TCP a la IP virtual (VIP) capturando paquetes en el cliente y en los nodos <span class="notranslate farm-term" translate="no">Farm</span> : con Wireshark en máquinas Windows y con tcpdump en máquinas Linux.
 
 Debes fijarte en las **cabeceras MAC (Ethernet) de los paquetes** , no solo en las direcciones IP: el filtro del kernel del servidor de distribución distribuye las conexiones **reescribiendo la dirección MAC de destino** de los paquetes a la del nodo de procesamiento. La dirección IP de destino sigue siendo la IP virtual (VIP) a lo largo de toda la ruta.
 
@@ -112,13 +112,13 @@ Debes fijarte en las **cabeceras MAC (Ethernet) de los paquetes** , no solo en l
 
 | Paso | Dónde capturar | Direcciones MAC observadas |
 |---|---|---|
-| 1. El cliente envía al VIP | cliente | MAC del cliente → MAC del **servidor de despacho** |
+| 1. El cliente envía a la IP virtual (VIP) | cliente | MAC del cliente → MAC del **servidor de despacho** |
 | 2. El servidor de despacho reenvía la conexión | servidor de despacho | MAC de despacho → MAC del **nodo de procesamiento** |
 | 3. El nodo de procesamiento recibe | nodo de procesamiento | MAC de despacho → MAC del nodo |
-| 4. El nodo responde directamente al cliente | nodo de procesamiento | MAC del nodo → MAC del cliente (SYN-ACK) |
+| 4. El nodo responde directamente al cliente | nodo de procesamiento | MAC del nodo → MAC del cliente |
 | 5. El cliente recibe la respuesta | cliente | MAC del nodo → MAC del cliente |
 
-Si la estación de trabajo cliente se encuentra en una subred distinta a la del <span class="notranslate farm-term" translate="no">Farm</span> , la dirección MAC del cliente que se observa en los nodos <span class="notranslate farm-term" translate="no">Farm</span> es la dirección MAC de la **puerta de enlace** (enrutador) que conecta ambas subredes, no la de la estación de trabajo cliente. Del mismo modo, en la estación de trabajo cliente, los paquetes dirigidos a la IP virtual se envían a la dirección MAC de su propia puerta de enlace.
+Si la estación de trabajo cliente se encuentra en una subred diferente a la de la <span class="notranslate farm-term" translate="no">Farm</span> , la "MAC del cliente" que se ve en los nodos <span class="notranslate farm-term" translate="no">Farm</span> es la dirección MAC de la **puerta de enlace** (enrutador) que conecta las dos subredes, no la de la estación de trabajo cliente.
 
 Repita la captura después de detener el servidor de despacho (prueba 2, paso 4): el paso 1 ahora debe mostrar la dirección MAC del **nuevo** servidor de despacho.
 
@@ -140,11 +140,14 @@ El comportamiento depende de la ruta de red entre el cliente y la <span class="n
 | 2.2 | Se inició un único nodo | Solo aparece este nodo |
 | 2.3 | Todos los nodos se han iniciado | Todos los nodos aparecen |
 | 2.4 | Servidor de despacho detenido | Los nodos restantes aparecen, sin interrupción duradera |
-| 3 | `arp -a` antes y después de la parada | La dirección MAC asociada con el VIP cambia |
+| 3 | `arp -a` antes y después de la parada | La dirección MAC asociada a la IP virtual (VIP) cambia |
 | 4 | Captura de Wireshark o tcpdump antes y después de la parada | El cliente envía a la dirección MAC del nuevo servidor de despacho |
 
 ## 9. Solución de problemas
 
 - **El mosaico deja de responder tras la detención del servidor de distribución:** un dispositivo en la ruta (enrutador, puerta de enlace, conmutador virtual) no tiene en cuenta GARP. Consulte con su equipo de red para verificar la gestión de GARP.
 - **Envío periódico de GARP:** el atributo `arpreroute="on"` de la sección `<vip>` (con `arpinterval` y `arpelapse` ) envía GARPs regularmente a los VIP. Consulte la Guía del usuario, sección 13.6.4 " [Sintaxis `<vip>`](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
-- **Diagnóstico de la resolución VIP ↔ MAC:** consulte la Guía del usuario, sección 7.24 " [Solución de problemas de la resolución VIP ↔ MAC](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Issue_with_VIP) " y sección 7.15 " [Módulo <span class="notranslate farm-term" translate="no">Farm</span> UP (Listo) pero problema de equilibrio de carga en una <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+- **Diagnóstico de la resolución de IP virtual (VIP) ↔ MAC:** consulte la Guía del usuario, sección 7.24 " [Solución de problemas de resolución de IP virtual (VIP) ↔ MAC](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Issue_with_VIP) " y sección 7.15 " [Módulo <span class="notranslate farm-term" translate="no">Farm</span> UP (Listo) pero problema de equilibrio de carga en una <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+
+Para la conmutación por error principal/de respaldo con una dirección IP virtual, consulte [la sección "Prueba de la dirección IP virtual de un clúster espejo de SafeKit"](test-primary-backup-vip-mirror/) .
+{{% insert-safekit-4-buttons-es %}}

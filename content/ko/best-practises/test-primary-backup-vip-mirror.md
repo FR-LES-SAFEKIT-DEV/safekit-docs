@@ -78,7 +78,7 @@ topics: "주요 원칙, 필수 조건: 가상 IP(VIP) 구성, 테스트 1 – �
 
 이 테스트는 클라이언트 워크스테이션이 클러스터와 **동일한 IP 서브넷** 에 있는 경우에만 가능합니다.
 
-클라이언트와 클러스터 사이에 라우터가 있는 경우, 클라이언트의 ARP 테이블에는 가상 IP(VIP)가 아닌 클러스터 네트워크에 접속하는 데 사용되는 게이트웨이 주소가 포함됩니다. 이 경우, 네트워크 팀과 협력하여 라우터 또는 게이트웨이의 ARP 테이블에서 MAC 재라우팅 설정을 확인해야 합니다.
+클라이언트와 클러스터 사이에 라우터가 있는 경우, 클라이언트의 ARP 테이블에는 가상 IP(VIP)가 아닌 클러스터 네트워크에 접속하는 데 사용되는 게이트웨이 주소가 포함됩니다. 이 경우 네트워크 팀에 문의하여 라우터 또는 게이트웨이의 ARP 테이블을 확인하십시오.
 
 **단계**
 
@@ -140,3 +140,6 @@ ARP 테이블을 읽기 전에 가상 IP(VIP)에 다시 `ping` 십시오. 항목
 - **가상 IP(VIP)가 페일오버 후 더 이상 응답하지 않습니다.** 경로상의 장치(라우터, 게이트웨이, 가상 스위치)가 MAC 재라우팅 메시지를 고려하지 않아 이전 기본 IP의 MAC 주소로 계속 트래픽을 전송하고 있습니다. 네트워크 팀에 MAC 재라우팅 메시지 처리 방식을 확인하십시오.
 - **GARP 전송:** `<vip>` 섹션의 `arpreroute="on"` 속성( `arpinterval` 및 `arpelapse` 포함)은 페일오버 후 가상 IP(VIP)에서 정기적으로 GARP를 전송합니다. 사용자 가이드 13.6.4절 " [`<vip>` 구문](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) "을 참조하십시오.
 - **가상 IP(VIP) ↔ MAC 주소 확인 문제 진단:** 사용자 가이드 7.24절 " [가상 IP(VIP) ↔ MAC 주소 확인 문제 해결](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_Issue_with_VIP) " 및 7.16절 " [페일오버 후 가상 IP 문제](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_Problem_with_the_1) "를 참조하십시오.
+
+가상 IP 주소를 사용한 로드 밸런싱에 대해서는 [SafeKit Farm 클러스터에서 로드 밸런싱 가상 IP 주소 테스트를](test-load-balancing-vip-farm/) 참조하세요.
+{{% insert-safekit-4-buttons-ko %}}

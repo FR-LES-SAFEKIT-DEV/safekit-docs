@@ -9,19 +9,19 @@ topics: "Kernprincipes, Vereiste: de SafeKit-mozaïek, Test 1 – Distributie va
 
 # Het testen van het virtuele IP-adres voor load balancing in een SafeKit <span class="notranslate farm-term" translate="no">farm</span> .
 
-Deze handleiding beschrijft hoe u kunt controleren of een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> module, load balancing op een virtueel IP-adres) correct werkt in uw netwerk: de verdeling van verbindingen over de knooppunten en het omleiden van het VIP wanneer het verzendende knooppunt stopt.
+Deze handleiding beschrijft hoe u kunt controleren of een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> module, load balancing op een virtueel IP-adres) correct werkt in uw netwerk: de verdeling van verbindingen over de knooppunten en het omleiden van het virtuele IP-adres (VIP) wanneer het verzendende knooppunt stopt.
 
 ## 1. Kernprincipes
 
 **Vereiste:** alle knooppunten van de <span class="notranslate farm-term" translate="no">Farm</span> moeten zich in hetzelfde Layer 2 IP-subnet bevinden: een LAN of een VLAN dat is uitgebreid tussen externe locaties.
 
-- Het VIP-adres wordt lokaal geconfigureerd op elk knooppunt van de <span class="notranslate farm-term" translate="no">Farm</span> : het wordt ingesteld als een alias van het fysieke IP-adres op de netwerkkaart van dat adres wanneer de <span class="notranslate farm-term" translate="no">Farm</span> op het knooppunt wordt gestart.
-- Eén enkel knooppunt, de **verzendserver** , ontvangt het netwerkverkeer voor het VIP (configuratie `vmac_directed` , de standaardinstelling van SafeKit): het MAC-adres is het adres dat aan het VIP is gekoppeld in de ARP-tabellen (router, gateway, clients in hetzelfde subnet).
-- Het kernelfilter van dit knooppunt verdeelt vervolgens de TCP-verbindingen over de knooppunten van de <span class="notranslate farm-term" translate="no">Farm</span> door **het MAC-adres van de bestemming in de pakketten te herschrijven** naar dat van het verwerkende knooppunt (het IP-adres van de bestemming blijft het VIP). Reacties worden rechtstreeks verzonden van het knooppunt dat de verbinding verwerkt naar de client.
+- Het virtuele IP-adres (VIP) wordt lokaal geconfigureerd op elk knooppunt van de <span class="notranslate farm-term" translate="no">Farm</span> : het wordt ingesteld als een alias van het fysieke IP-adres op de netwerkkaart van dat adres wanneer de <span class="notranslate farm-term" translate="no">Farm</span> op het knooppunt wordt gestart.
+- Eén knooppunt, de **verzendserver** , ontvangt het netwerkverkeer voor het virtuele IP-adres (VIP) (configuratie `vmac_directed` , de standaardinstelling van SafeKit): het MAC-adres is het adres dat is gekoppeld aan het virtuele IP-adres (VIP) in de ARP-tabellen (router, gateway, clients in hetzelfde subnet).
+- Het kernelfilter van dit knooppunt verdeelt vervolgens de TCP-verbindingen over de knooppunten van de <span class="notranslate farm-term" translate="no">Farm</span> door **het MAC-adres van de bestemming in de pakketten te herschrijven** naar dat van het verwerkende knooppunt (het IP-adres van de bestemming blijft het virtuele IP-adres (VIP)). Reacties worden rechtstreeks verzonden van het knooppunt dat de verbinding verwerkt naar de client.
 - De distributie die door het filter wordt uitgevoerd, is **deterministisch** : het verwerkingsknooppunt wordt berekend op basis van de identiteit van de client, volgens de geconfigureerde load balancing-regel.
   - op het **IP-adres van de client** ( `filter="on_addr"` ): een bepaalde client wordt altijd door hetzelfde knooppunt bediend, wat sessie-affiniteit garandeert;
   - op de **TCP-poort van de client** ( `filter="on_port"` ): elke TCP-verbinding van dezelfde client kan door een ander knooppunt worden afgehandeld. Dit is de regel die wordt gebruikt voor het mozaïek (sectie 2), dat daarom alle knooppunten van één werkstation weergeeft.
-- Als de verzendende server uitvalt, neemt een ander knooppunt deze rol over en verzendt **GARP-berichten** (gratuitous ARP) zodat het netwerk het VIP-adres koppelt aan zijn eigen MAC-adres.
+- Als de verzendende server stopt, neemt een ander knooppunt deze rol over en verzendt **GARP-berichten** (gratuitous ARP) zodat het netwerk het virtuele IP-adres (VIP) koppelt aan zijn eigen MAC-adres.
 
 Wat u dus moet testen:
 
@@ -30,7 +30,7 @@ Wat u dus moet testen:
 
 ## 2. Vereiste: het SafeKit-mozaïek
 
-De mozaïekpagina is een testpagina van SafeKit. Deze opent meerdere TCP-verbindingen met het VIP-adres en toont voor elke verbinding de naam van het knooppunt dat heeft gereageerd. Zo krijgt de verdeling in één oogopslag inzichtelijk.
+De mozaïekpagina is een testpagina van SafeKit. Deze opent meerdere TCP-verbindingen met het virtuele IP-adres (VIP) en toont voor elke verbinding de naam van het knooppunt dat heeft gereageerd. Zo krijgt de verdeling in één oogopslag inzichtelijk.
 
 1. Voeg in het `userconfig.xml` van de <span class="notranslate farm-term" translate="no">Farm</span> module, in de sectie `<vip>` , de load balancing-regel toe voor de poort van de SafeKit-webserver. Voorbeeld met de SafeKit-webserver in HTTP op poort 9010:
 
@@ -88,37 +88,37 @@ Het stoppen van een ander knooppunt in de <span class="notranslate farm-term" tr
 
 ## 5. Test 3 – Controleren van GARP-omleiding met `arp -a`
 
-Samen met test 4 controleert deze test daadwerkelijk GARP: je noteert het MAC-adres van de verzendende server voordat je deze stopt, en controleert vervolgens of de VIP/MAC-koppeling daarna is gewijzigd.
+Samen met test 4 controleert deze test daadwerkelijk GARP: je noteert het MAC-adres van de verzendende server voordat je deze stopt, en controleert vervolgens of de koppeling tussen het virtuele IP-adres (VIP) en het MAC-adres daarna is gewijzigd.
 
 Deze test is alleen mogelijk als het clientwerkstation waarop het mozaïek wordt weergegeven zich in **hetzelfde IP-subnet** bevindt als de <span class="notranslate farm-term" translate="no">Farm</span> .
 
-Als er een router tussen de client en de <span class="notranslate farm-term" translate="no">Farm</span> staat, bevat de ARP-tabel van de client niet het VIP-adres, maar het adres van de gateway waarmee het netwerk van de <span class="notranslate farm-term" translate="no">Farm</span> wordt bereikt. In dat geval moet GARP worden gecontroleerd in de ARP-tabel van de router of gateway, in overleg met het netwerkteam.
+Als er een router tussen de client en de <span class="notranslate farm-term" translate="no">Farm</span> staat, bevat de ARP-tabel van de client niet het virtuele IP-adres (VIP), maar het adres van de gateway waarmee het netwerk van de <span class="notranslate farm-term" translate="no">Farm</span> wordt bereikt. Controleer in dat geval de ARP-tabel van de router of gateway met het netwerkteam.
 
 **Stappen**
 
 1. Start de <span class="notranslate farm-term" translate="no">Farm</span> op alle knooppunten.
-2. Voer op het clientwerkstation `arp -a` uit en noteer het MAC-adres dat is gekoppeld aan het VIP-adres. Dit adres identificeert de verzendende server.
+2. Voer op het clientwerkstation `arp -a` uit en noteer het MAC-adres dat is gekoppeld aan het virtuele IP-adres (VIP). Dit adres identificeert de verzendende server.
 3. Stop het <span class="notranslate farm-term" translate="no">Farm</span> met dit MAC-adres.
 4. Controleer of het mozaïek nog steeds werkt met de overgebleven knooppunten.
-5. Voer `arp -a` opnieuw uit om de nieuwe VIP/MAC-koppeling te lezen en de nieuwe verzendende server te identificeren.
+5. Voer `arp -a` opnieuw uit om de nieuwe virtuele IP (VIP)/MAC-koppeling te lezen en de nieuwe verzendende server te identificeren.
 
 ## 6. Test 4 – End-to-end controle met Wireshark (Windows) of tcpdump (Linux)
 
-Je kunt een TCP-verbinding met het VIP-adres volgen door pakketten vast te leggen op de client en op de <span class="notranslate farm-term" translate="no">Farm</span> : met Wireshark op Windows-machines en met tcpdump op Linux-machines.
+Je kunt een TCP-verbinding met het virtuele IP-adres (VIP) volgen door pakketten vast te leggen op de client en op de <span class="notranslate farm-term" translate="no">Farm</span> : met Wireshark op Windows-machines en met tcpdump op Linux-machines.
 
-Je moet naar de **MAC-headers (Ethernet) van de pakketten** kijken, niet alleen naar de IP-adressen: het kernelfilter van de verzendende server verdeelt de verbindingen door **het MAC-adres van de bestemming in de pakketten te herschrijven** naar dat van het verwerkende knooppunt. Het IP-adres van de bestemming blijft het virtuele IP-adres (VIP) over het hele traject.
+Je moet naar de **MAC-headers (Ethernet-headers) van de pakketten** kijken, niet alleen naar de IP-adressen: het kernelfilter van de verzendende server verdeelt de verbindingen door **het MAC-adres van de bestemming in de pakketten te herschrijven** naar dat van het verwerkende knooppunt. Het IP-adres van de bestemming blijft het virtuele IP-adres (VIP) over het hele pad.
 
 **Wat je voor hetzelfde SYN-pakket moet observeren:**
 
 | Stap | Waar vastleggen | Waargenomen MAC-adressen |
 |---|---|---|
-| 1. De client verzendt naar de VIP | client | MAC-adres van de client → MAC-adres van de **verzendende server** |
+| 1. De client verzendt naar het virtuele IP-adres (VIP) | client | MAC-adres van de client → MAC-adres van de **verzendende server** |
 | 2. De verzendserver stuurt de verbinding door | verzendserver | MAC-adres verzendserver → MAC- **adres verwerkingsknooppunt** |
 | 3. Het verwerkingsknooppunt ontvangt | verwerkingsknooppunt | Dispatching MAC → knooppunt MAC |
-| 4. Het knooppunt reageert direct op de client | verwerkend knooppunt | MAC-adres van knooppunt → MAC-adres van client (SYN-ACK) |
+| 4. Het knooppunt reageert direct op de client | verwerkend knooppunt | MAC-adres van knooppunt → MAC-adres van client |
 | 5. De client ontvangt het antwoord | client | MAC-adres van de node → MAC-adres van de client |
 
-Als het clientwerkstation zich in een ander subnet bevindt dan de <span class="notranslate farm-term" translate="no">Farm</span> , is het "client-MAC-adres" dat op de <span class="notranslate farm-term" translate="no">Farm</span> wordt weergegeven het MAC-adres van de **gateway** (router) die de twee subnets verbindt, en niet dat van het clientwerkstation. Op dezelfde manier worden pakketten naar het VIP op het clientwerkstation verzonden naar het MAC-adres van de eigen gateway.
+Als het clientwerkstation zich in een ander subnet bevindt dan de <span class="notranslate farm-term" translate="no">Farm</span> , is het "client-MAC-adres" dat op de <span class="notranslate farm-term" translate="no">Farm</span> wordt weergegeven het MAC-adres van de **gateway** (router) die de twee subnets verbindt, en niet dat van het clientwerkstation.
 
 Herhaal de opname na het stoppen van de verzendserver (test 2, stap 4): stap 1 moet nu het MAC-adres van de **nieuwe** verzendserver weergeven.
 
@@ -140,11 +140,14 @@ Het gedrag is afhankelijk van het netwerkpad tussen de client en de <span class=
 | 2.2 | Er is één knooppunt gestart | Alleen dit knooppunt verschijnt |
 | 2.3 | Alle knooppunten gestart | Alle knooppunten verschijnen |
 | 2.4 | Verzendserver gestopt | De resterende knooppunten verschijnen, zonder blijvende onderbreking |
-| 3 | `arp -a` voor en na de stop | Het MAC-adres dat aan het VIP is gekoppeld, verandert |
+| 3 | `arp -a` voor en na de stop | Het MAC-adres dat is gekoppeld aan het virtuele IP-adres (VIP) verandert |
 | 4 | Wireshark- of tcpdump-opname voor en na de stop | De client verzendt naar het MAC-adres van de nieuwe verzendserver |
 
 ## 9. Probleemoplossing
 
 - **Het mozaïek reageert niet meer nadat de verzendende server is gestopt:** GARP wordt niet in overweging genomen door een apparaat op het pad (router, gateway, virtuele switch). Neem contact op met uw netwerkteam om de GARP-afhandeling te controleren.
 - **Periodiek verzenden van GARP:** het `arpreroute="on"` van de `<vip>` -sectie (met `arpinterval` en `arpelapse` ) verzendt regelmatig GARP's op de VIP's. Zie de gebruikershandleiding, sectie 13.6.4 " [`<vip>` -syntaxis](https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
-- **Diagnose van VIP ↔ MAC-resolutie:** zie de gebruikershandleiding, sectie 7.24 " [Probleemoplossing voor VIP ↔ MAC-resolutie](https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_Issue_with_VIP) " en sectie 7.15 " [<span class="notranslate farm-term" translate="no">Farm</span> UP (gereed), maar probleem met taakverdeling in een <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+- **Diagnose van problemen met de resolutie van virtueel IP-adres (VIP) ↔ MAC-adres:** zie de gebruikershandleiding, sectie 7.24 " [Problemen met de resolutie van virtueel IP-adres (VIP) ↔ MAC-adres](https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_Issue_with_VIP) " en sectie 7.15 " [<span class="notranslate farm-term" translate="no">Farm</span> UP (Ready), maar probleem met load balancing in een <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+
+Voor failover tussen primaire en back-up met een virtueel IP-adres, zie [Testen van het virtuele IP-adres van een SafeKit-spiegelcluster](test-primary-backup-vip-mirror/) .
+{{% insert-safekit-4-buttons-nl %}}

@@ -78,7 +78,7 @@ You note the MAC address associated with the Virtual IP (VIP) before the failove
 
 This test is only possible if the client workstation is in the **same IP subnet** as the cluster.
 
-If there is a router between the client and the cluster, the client's ARP table does not contain the Virtual IP (VIP), but the address of the gateway used to reach the cluster's network. In that case, MAC rerouting must be checked in the ARP table of the router or gateway, with the network team.
+If there is a router between the client and the cluster, the client's ARP table does not contain the Virtual IP (VIP), but the address of the gateway used to reach the cluster's network. In that case, check the ARP table of the router or gateway with the network team.
 
 **Steps**
 
@@ -140,3 +140,7 @@ The behavior depends on the network path between the client and the cluster. Run
 - **The Virtual IP (VIP) no longer responds after the failover:** MAC rerouting messages are not taken into account by a device on the path (router, gateway, virtual switch), which keeps sending traffic to the MAC address of the former primary. Check the handling of MAC rerouting messages with your network team.
 - **Sending GARPs:** the `arpreroute="on"` attribute of the `<vip>` section (with `arpinterval` and `arpelapse`) sends GARPs regularly on the Virtual IP (VIP) after the failover. See the User's Guide, section 13.6.4 "[`<vip>` syntax](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
 - **Diagnosing Virtual IP (VIP) ↔ MAC resolution:** see the User's Guide, section 7.24 "[Troubleshooting Virtual IP (VIP) ↔ MAC resolution](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP)", and section 7.16 "[Problem with the virtual IP after failover](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Problem_with_the_1)".
+
+For load balancing with a virtual IP address, see [Testing the load balancing virtual IP address in a SafeKit Farm cluster](test-load-balancing-vip-farm/).
+
+{{%  insert-safekit-4-buttons-en  %}}
