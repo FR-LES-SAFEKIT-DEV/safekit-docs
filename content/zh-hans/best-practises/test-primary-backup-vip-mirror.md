@@ -141,5 +141,5 @@ topics: "关键原则，前提条件：虚拟 IP (VIP) 配置，测试 1 – 主
 - **发送 GARP：**故障转移后， `<vip>`部分的`arpreroute="on"`属性（带有`arpinterval`和`arpelapse` ）会定期在虚拟 IP (VIP) 上发送 GARP。请参阅用户指南第 13.6.4 节“ [`<vip>`语法](https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)”。
 - **诊断虚拟 IP (VIP) ↔ MAC 解析：**请参阅用户指南第 7.24 节“[虚拟 IP (VIP) ↔ MAC 解析故障排除](https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/#_Issue_with_VIP)”和第 7.16 节“[故障转移后虚拟 IP 出现问题](https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/#_Problem_with_the_1)”。
 
-有关使用虚拟 IP 地址进行负载均衡的信息，请参阅[在 SafeKit Farm 集群中测试负载均衡虚拟 IP 地址](test-load-balancing-vip-farm/)。
+有关使用虚拟 IP 地址进行负载均衡的信息，请参阅[在 SafeKit Farm 集群中测试负载均衡虚拟 IP 地址](/zh-hans/best-practises/test-load-balancing-vip-farm/)。
 {{% insert-safekit-4-buttons-zh-hans %}}

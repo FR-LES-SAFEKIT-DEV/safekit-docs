@@ -149,5 +149,5 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 - **주기적인 GARP 전송:** `<vip>` 섹션의 `arpreroute="on"` 속성( `arpinterval` 및 `arpelapse` 포함)은 VIP에 대해 정기적으로 GARP를 전송합니다. 사용자 가이드 13.6.4절 " [`<vip>` 구문](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) "을 참조하십시오.
 - **가상 IP(VIP) ↔ MAC 주소 확인 문제 진단:** 사용자 가이드 7.24절 " [가상 IP(VIP) ↔ MAC 주소 확인 문제 해결](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_Issue_with_VIP) " 및 7.15절 " [<span class="notranslate farm-term" translate="no">Farm</span> 모듈은 UP(준비됨)이지만 <span class="notranslate farm-term" translate="no">Farm</span> 에서 로드 밸런싱 문제가 발생함](<https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) "을 참조하십시오.
 
-가상 IP 주소를 사용한 기본/백업 페일오버에 대해서는 [SafeKit 미러 클러스터의 가상 IP 주소 테스트를](test-primary-backup-vip-mirror/) 참조하세요.
+가상 IP 주소를 사용한 기본/백업 페일오버에 대해서는 [SafeKit 미러 클러스터의 가상 IP 주소 테스트를](/ko/best-practises/test-primary-backup-vip-mirror/) 참조하세요.
 {{% insert-safekit-4-buttons-ko %}}

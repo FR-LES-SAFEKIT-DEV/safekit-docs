@@ -149,5 +149,5 @@ SafeKit 8.2 用户指南第 4.3.5 节“[测试虚拟 IP 地址上的 TCP 负载
 - **定期发送 GARP：** `<vip>`部分的`arpreroute="on"`属性（带有`arpinterval`和`arpelapse` ）会定期在 VIP 上发送 GARP。请参阅用户指南第 13.6.4 节“ [`<vip>`语法](https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)”。
 - **诊断虚拟 IP (VIP) ↔ MAC 解析：**请参阅用户指南第 7.24 节“[虚拟 IP (VIP) ↔ MAC 解析故障排除](https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/#_Issue_with_VIP)”和第 7.15 节“ [<span class="notranslate farm-term" translate="no">Farm</span>模块已启动（就绪），但<span class="notranslate farm-term" translate="no">Farm</span>中存在负载均衡问题](<https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>)”。
 
-对于使用虚拟 IP 地址的主/备故障转移，请参阅[测试 SafeKit 镜像集群的虚拟 IP 地址](test-primary-backup-vip-mirror/)。
+对于使用虚拟 IP 地址的主/备故障转移，请参阅[测试 SafeKit 镜像集群的虚拟 IP 地址](/zh-hans/best-practises/test-primary-backup-vip-mirror/)。
 {{% insert-safekit-4-buttons-zh-hans %}}

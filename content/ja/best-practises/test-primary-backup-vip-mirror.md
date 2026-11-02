@@ -141,5 +141,5 @@ ARP テーブルを読み取る前に、仮想 IP (VIP) に再度`ping` 。エ�
 - **GARP の送信:** `<vip>`セクションの`arpreroute="on"`属性 ( `arpinterval`および`arpelapse`を含む) は、フェイルオーバー後に仮想 IP (VIP) 上で定期的に GARP を送信します。ユーザー ガイドのセクション 13.6.4 " [`<vip>`構文](https://safekit.eviden.com/ja/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)" を参照してください。
 - **仮想IP（VIP）↔MAC解決の診断：**ユーザーガイドのセクション7.24「[仮想IP（VIP）↔MAC解決のトラブルシューティング](https://safekit.eviden.com/ja/resources/safekit-user-guide-82/#_Issue_with_VIP)」およびセクション7.16「[フェイルオーバー後の仮想IPの問題](https://safekit.eviden.com/ja/resources/safekit-user-guide-82/#_Problem_with_the_1)」を参照してください。
 
-仮想IPアドレスを使用したロードバランシングについては、 [「SafeKit Farmクラスタでのロードバランシング仮想IPアドレスのテスト」を](test-load-balancing-vip-farm/)参照してください。
+仮想IPアドレスを使用したロードバランシングについては、 [「SafeKit Farmクラスタでのロードバランシング仮想IPアドレスのテスト」を](/ja/best-practises/test-load-balancing-vip-farm/)参照してください。
 {{% insert-safekit-4-buttons-ja %}}

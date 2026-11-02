@@ -141,5 +141,5 @@ Het gedrag is afhankelijk van het netwerkpad tussen de client en het cluster. Vo
 - **GARP-berichten verzenden:** het attribuut `arpreroute="on"` van de `<vip>` -sectie (met `arpinterval` en `arpelapse` ) verzendt regelmatig GARP-berichten op het virtuele IP-adres (VIP) na de failover. Zie de gebruikershandleiding, sectie 13.6.4 " [`<vip>` -syntaxis](https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **Diagnose van problemen met virtuele IP (VIP) ↔ MAC-resolutie:** zie de gebruikershandleiding, sectie 7.24 " [Problemen met virtuele IP (VIP) ↔ MAC-resolutie](https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_Issue_with_VIP) " en sectie 7.16 " [Probleem met het virtuele IP-adres na failover](https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_Problem_with_the_1) ".
 
-Voor load balancing met een virtueel IP-adres, zie [Het testen van het virtuele IP-adres voor load balancing in een SafeKit Farm-cluster](test-load-balancing-vip-farm/) .
+Voor load balancing met een virtueel IP-adres, zie [Het testen van het virtuele IP-adres voor load balancing in een SafeKit Farm-cluster](/nl/best-practises/test-load-balancing-vip-farm/) .
 {{% insert-safekit-4-buttons-nl %}}

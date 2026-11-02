@@ -141,5 +141,5 @@ Le comportement dépend du chemin réseau entre le client et le cluster. Exécut
 - **Envoi de requêtes GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse` ) envoie régulièrement des requêtes GARP sur l’adresse IP virtuelle (VIP) après le basculement. Voir le Guide de l’utilisateur, section 13.6.4 «[ Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
 - **Diagnostic de la résolution IP virtuelle (VIP) ↔ MAC :** voir le Guide de l'utilisateur, section 7.24 « [Dépannage de la résolution IP virtuelle (VIP) ↔ MAC](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Issue_with_VIP) » et section 7.16 « [Problème avec l'IP virtuelle après basculement](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Problem_with_the_1) ».
 
-Pour l'équilibrage de charge avec une adresse IP virtuelle, consultez [la section Test de l'adresse IP virtuelle d'équilibrage de charge dans un cluster SafeKit Farm](test-load-balancing-vip-farm/) .
+Pour l'équilibrage de charge avec une adresse IP virtuelle, consultez [la section Test de l'adresse IP virtuelle d'équilibrage de charge dans un cluster SafeKit Farm](/fr/best-practises/test-load-balancing-vip-farm/) .
 {{% insert-safekit-4-buttons-fr %}}

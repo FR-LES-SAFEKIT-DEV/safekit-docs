@@ -141,5 +141,5 @@ El comportamiento depende de la ruta de red entre el cliente y el clúster. Ejec
 - **Envío de GARPs:** el atributo `arpreroute="on"` de la sección `<vip>` (con `arpinterval` y `arpelapse` ) envía GARPs regularmente en la IP virtual (VIP) después de la conmutación por error. Consulte la Guía del usuario, sección 13.6.4 " [Sintaxis `<vip>`](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **Diagnóstico de la resolución de IP virtual (VIP) ↔ MAC:** consulte la Guía del usuario, sección 7.24 " [Solución de problemas de resolución de IP virtual (VIP) ↔ MAC](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Issue_with_VIP) " y sección 7.16 " [Problema con la IP virtual después de la conmutación por error](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_Problem_with_the_1) ".
 
-Para el equilibrio de carga con una dirección IP virtual, consulte [la sección "Prueba de la dirección IP virtual de equilibrio de carga en un clúster de SafeKit Farm"](test-load-balancing-vip-farm/) .
+Para el equilibrio de carga con una dirección IP virtual, consulte [la sección "Prueba de la dirección IP virtual de equilibrio de carga en un clúster de SafeKit Farm"](/es/best-practises/test-load-balancing-vip-farm/) .
 {{% insert-safekit-4-buttons-es %}}

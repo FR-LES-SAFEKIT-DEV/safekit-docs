@@ -141,5 +141,5 @@ Localização do cliente | | que o teste verifica |
 - **Envio de GARPs:** o atributo `arpreroute="on"` da seção `<vip>` (com `arpinterval` e `arpelapse` ) envia GARPs regularmente no IP Virtual (VIP) após o failover. Consulte o Guia do Usuário, seção 13.6.4 " [Sintaxe `<vip>`](https://safekit.eviden.com/pt-pt/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **Diagnóstico de IP virtual (VIP) ↔ Resolução de MAC:** consulte o Guia do Usuário, seção 7.24 " [Solução de problemas de IP virtual (VIP) ↔ Resolução de MAC](https://safekit.eviden.com/pt-pt/resources/safekit-user-guide-82/#_Issue_with_VIP) " e seção 7.16 " [Problema com o IP virtual após failover](https://safekit.eviden.com/pt-pt/resources/safekit-user-guide-82/#_Problem_with_the_1) ".
 
-Para balanceamento de carga com um endereço IP virtual, consulte [Testando o endereço IP virtual de balanceamento de carga em um cluster SafeKit Farm](test-load-balancing-vip-farm/) .
+Para balanceamento de carga com um endereço IP virtual, consulte [Testando o endereço IP virtual de balanceamento de carga em um cluster SafeKit Farm](/pt-pt/best-practises/test-load-balancing-vip-farm/) .
 {{% insert-safekit-4-buttons-pt-pt %}}

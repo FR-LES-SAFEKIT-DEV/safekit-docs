@@ -141,5 +141,5 @@ ARP 테이블을 읽기 전에 가상 IP(VIP)에 다시 `ping` 십시오. 항목
 - **GARP 전송:** `<vip>` 섹션의 `arpreroute="on"` 속성( `arpinterval` 및 `arpelapse` 포함)은 페일오버 후 가상 IP(VIP)에서 정기적으로 GARP를 전송합니다. 사용자 가이드 13.6.4절 " [`<vip>` 구문](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) "을 참조하십시오.
 - **가상 IP(VIP) ↔ MAC 주소 확인 문제 진단:** 사용자 가이드 7.24절 " [가상 IP(VIP) ↔ MAC 주소 확인 문제 해결](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_Issue_with_VIP) " 및 7.16절 " [페일오버 후 가상 IP 문제](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_Problem_with_the_1) "를 참조하십시오.
 
-가상 IP 주소를 사용한 로드 밸런싱에 대해서는 [SafeKit Farm 클러스터에서 로드 밸런싱 가상 IP 주소 테스트를](test-load-balancing-vip-farm/) 참조하세요.
+가상 IP 주소를 사용한 로드 밸런싱에 대해서는 [SafeKit Farm 클러스터에서 로드 밸런싱 가상 IP 주소 테스트를](/ko/best-practises/test-load-balancing-vip-farm/) 참조하세요.
 {{% insert-safekit-4-buttons-ko %}}

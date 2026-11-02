@@ -141,5 +141,5 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 - **إرسال حزم GARP:** تقوم السمة `arpreroute="on"` في قسم `<vip>` (مع `arpinterval` و `arpelapse` ) بإرسال حزم GARP بانتظام على عنوان IP الظاهري (VIP) بعد تجاوز الفشل. راجع دليل المستخدم، القسم 13.6.4 " [صيغة `<vip>`](https://safekit.eviden.com/ar/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **تشخيص مشكلة حل عنوان IP الظاهري (VIP) ↔ MAC:** راجع دليل المستخدم، القسم 7.24 " [استكشاف أخطاء حل عنوان IP الظاهري (VIP) ↔ MAC وإصلاحها](https://safekit.eviden.com/ar/resources/safekit-user-guide-82/#_Issue_with_VIP) "، والقسم 7.16 " [مشكلة في عنوان IP الظاهري بعد تجاوز الفشل](https://safekit.eviden.com/ar/resources/safekit-user-guide-82/#_Problem_with_the_1) ".
 
-للحصول على معلومات حول موازنة الأحمال باستخدام عنوان IP افتراضي، راجع [اختبار عنوان IP الافتراضي لموازنة الأحمال في مجموعة SafeKit Farm](test-load-balancing-vip-farm/) .
+للحصول على معلومات حول موازنة الأحمال باستخدام عنوان IP افتراضي، راجع [اختبار عنوان IP الافتراضي لموازنة الأحمال في مجموعة SafeKit Farm](/ar/best-practises/test-load-balancing-vip-farm/) .
 {{% insert-safekit-4-buttons-ar %}}

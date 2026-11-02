@@ -149,5 +149,5 @@ topics: "主要原則、前提条件：SafeKitモザイク、テスト1 – 接�
 - **GARPの定期送信：** `<vip>`セクションの`arpreroute="on"`属性（ `arpinterval`と`arpelapse`含む）は、VIP上でGARPを定期的に送信します。ユーザーガイドのセクション13.6.4「 [`<vip>`構文](https://safekit.eviden.com/ja/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)」を参照してください。
 - **仮想IP（VIP）↔MAC解決の診断：**ユーザーガイドのセクション7.24「[仮想IP（VIP）↔MAC解決のトラブルシューティング](https://safekit.eviden.com/ja/resources/safekit-user-guide-82/#_Issue_with_VIP)」およびセクション7.15「 [<span class="notranslate farm-term" translate="no">Farm</span>モジュールはUP（準備完了）だが、 <span class="notranslate farm-term" translate="no">Farm</span>内の負荷分散に問題がある](<https://safekit.eviden.com/ja/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>)」を参照してください。
 
-仮想IPアドレスを使用したプライマリ/バックアップのフェイルオーバーについては、 [「SafeKitミラークラスタの仮想IPアドレスのテスト」を](test-primary-backup-vip-mirror/)参照してください。
+仮想IPアドレスを使用したプライマリ/バックアップのフェイルオーバーについては、 [「SafeKitミラークラスタの仮想IPアドレスのテスト」を](/ja/best-practises/test-primary-backup-vip-mirror/)参照してください。
 {{% insert-safekit-4-buttons-ja %}}

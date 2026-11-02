@@ -149,5 +149,5 @@ Localização do cliente | | que o teste verifica |
 - **Envio periódico de GARP:** o atributo `arpreroute="on"` da seção `<vip>` (com `arpinterval` e `arpelapse` ) envia GARPs regularmente nos VIPs. Consulte o Guia do Usuário, seção 13.6.4 " [Sintaxe `<vip>`](https://safekit.eviden.com/pt-br/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 - **Diagnóstico de IP Virtual (VIP) ↔ Resolução de MAC:** consulte o Guia do Usuário, seção 7.24 " [Solução de problemas de IP Virtual (VIP) ↔ Resolução de MAC](https://safekit.eviden.com/pt-br/resources/safekit-user-guide-82/#_Issue_with_VIP) " e seção 7.15 " [Módulo <span class="notranslate farm-term" translate="no">Farm</span> ATIVO (Pronto), mas com problema de balanceamento de carga em um <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/pt-br/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
 
-Para failover primário/backup com um endereço IP virtual, consulte [Testando o endereço IP virtual de um cluster espelho do SafeKit](test-primary-backup-vip-mirror/) .
+Para failover primário/backup com um endereço IP virtual, consulte [Testando o endereço IP virtual de um cluster espelho do SafeKit](/pt-br/best-practises/test-primary-backup-vip-mirror/) .
 {{% insert-safekit-4-buttons-pt-br %}}
