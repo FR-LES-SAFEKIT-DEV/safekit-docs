@@ -1,5 +1,5 @@
 ---
-title: "SafeKit load balancing testen op een virtueel IP-adres"
+title: "Het testen van het virtuele IP-adres voor load balancing in een SafeKit-farmcluster."
 canonical: "https://safekit.eviden.com/nl/best-practises/test-load-balancing-vip-farm/"
 description: "Leer hoe u de load balancing van SafeKit over clusterknooppunten kunt testen en hoe u virtuele IP-failover, GARP-rerouting en netwerkgedrag kunt verifiëren."
 category: "best-practises"
@@ -7,7 +7,7 @@ lang: "nl"
 topics: "Kernprincipes, Vereiste: de SafeKit-mozaïek, Test 1 – Distributie van verbindingen, Test 2 – Wijziging van de verzendende server, Test 3 – Controleren van GARP-rerouting met arp -a, Test 4 – End-to-end controle met Wireshark (Windows) of tcpdump (Linux), Welke werkstations te gebruiken voor de test, Samenvatting van de verwachte resultaten, Probleemoplossing"
 ---
 
-# Test de load balancing van SafeKit op een virtueel IP-adres in uw netwerk.
+# Het testen van het virtuele IP-adres voor load balancing in een SafeKit <span class="notranslate farm-term" translate="no">farm</span> .
 
 Deze handleiding beschrijft hoe u kunt controleren of een SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> module, load balancing op een virtueel IP-adres) correct werkt in uw netwerk: de verdeling van verbindingen over de knooppunten en het omleiden van het VIP wanneer het verzendende knooppunt stopt.
 

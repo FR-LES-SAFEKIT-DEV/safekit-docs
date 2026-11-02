@@ -51,6 +51,8 @@ topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚�
 
 ## 虚拟 IP 地址 (VIP) 在同一子网故障转移中的工作原理 ( Mirror集群) {#virtual-ip-same-subnet-failover}
 
+- [测试 SafeKit 镜像集群中的主/备份虚拟 IP 地址](/zh-hans/best-practises/test-primary-backup-vip-mirror/)
+
 ### 本地子网中的自动故障转移和网络重路由 {#automated-failover--network-rerouting-in-a-local-subnet}
 
 对于需要在本地基础架构内实现无缝业务连续性的组织而言， **SafeKit本地网络集群软件定义高可用性**提供了一个强大的自动化解决方案，用于管理虚拟 IP 地址和实时应用程序故障转移。 
@@ -120,6 +122,8 @@ SafeKit通过在每个节点上提供专用的**健康检查 URL**来管理流�
 > **⚠️ 注意：**选择负载均衡器时，请确认您的应用程序与**源/目标 IP 转换 (SNAT/DNAT)**兼容。使用负载均衡器后，应用程序可能会丢失原始用户的身份信息，或者由于无法识别直接在其网络接口上配置的虚拟 IP 地址而无法启动。
 
 ## 负载均衡虚拟 IP 在同一子网中的工作原理<span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>集群） {#vip-load-balancing-same-subnet}
+
+- [在 SafeKit 集群中测试负载均衡虚拟 IP 地址](/zh-hans/best-practises/test-load-balancing-vip-farm/)
 
 ### 可扩展性能：内核级负载均衡与冗余 {#scalable-performance-kernel-level-load-balancing--redundancy}
 

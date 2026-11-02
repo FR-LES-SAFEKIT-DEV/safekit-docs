@@ -1,5 +1,5 @@
 ---
-title: "在虚拟 IP 地址上测试 SafeKit 负载均衡"
+title: "在 SafeKit 集群中测试负载均衡虚拟 IP 地址"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/test-load-balancing-vip-farm/"
 description: "了解如何测试 SafeKit 在集群节点间的负载均衡，并验证虚拟 IP 故障转移、GARP 重路由和网络行为。"
 category: "best-practises"
@@ -7,7 +7,7 @@ lang: "zh-hans"
 topics: "关键原则，前提条件：SafeKit 马赛克，测试 1 – 连接分布，测试 2 – 调度服务器变更，测试 3 – 使用 arp -a 检查 GARP 重路由，测试 4 – 使用 Wireshark（Windows）或 tcpdump（Linux）进行端到端检查，测试工作站，预期结果总结，故障排除"
 ---
 
-# 在网络中的虚拟 IP 地址上测试 SafeKit 负载均衡
+# 在 SafeKit <span class="notranslate farm-term" translate="no">farm</span>中测试负载均衡虚拟 IP 地址
 
 本指南描述了如何检查 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>模块，在虚拟 IP 地址上进行负载均衡）在您的网络中是否正常工作：在节点之间分配连接，以及在调度节点停止时重新路由 VIP。
 

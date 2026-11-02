@@ -51,6 +51,8 @@ Stratégies d'implémentation d'adresses IP virtuelles **pour les clusters Mirro
 
 ## Fonctionnement d'une adresse IP virtuelle (VIP) lors d'un basculement sur le même sous-réseau (cluster Mirror ) {#virtual-ip-same-subnet-failover}
 
+- [Test de l'adresse IP virtuelle principale/de secours dans un cluster miroir SafeKit](/fr/best-practises/test-primary-backup-vip-mirror/)
+
 ### Basculement automatique et réacheminement réseau dans un sous-réseau local {#automated-failover--network-rerouting-in-a-local-subnet}
 
 Pour les organisations exigeant une continuité d'activité sans faille au sein d'une infrastructure locale, la haute disponibilité logicielle **SafeKit** pour les clusters de réseaux locaux offre une solution robuste et automatisée pour la gestion des adresses IP virtuelles et le basculement d'applications en temps réel. 
@@ -120,6 +122,8 @@ Si l'utilisation d'un équilibreur de charge n'est pas souhaitée, consultez vot
 **⚠️ Remarque :** Si vous optez pour un équilibreur de charge, assurez-vous que votre application est compatible avec **la traduction d'adresses IP source/destination (SNAT/DNAT)** . Avec un équilibreur de charge, l'application risque de perdre l'identité de l'utilisateur d'origine ou de ne pas démarrer, car elle ne détecte plus l'adresse IP virtuelle configurée directement sur son interface réseau.
 
 ## Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans un cluster <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> ) sur le même sous-réseau {#vip-load-balancing-same-subnet}
+
+- [Test de l'adresse IP virtuelle d'équilibrage de charge dans un cluster de ferme SafeKit](/fr/best-practises/test-load-balancing-vip-farm/)
 
 ### Performances évolutives : équilibrage de charge et redondance au niveau du noyau {#scalable-performance-kernel-level-load-balancing--redundancy}
 

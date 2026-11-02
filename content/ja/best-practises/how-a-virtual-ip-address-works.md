@@ -51,6 +51,8 @@ SafeKit内のMirrorおよび<span class="notranslate farm-term" translate="no">F
 
 ## 同一サブネットフェイルオーバーにおける仮想IPアドレス（VIP）の仕組み（ Mirrorクラスタ） {#virtual-ip-same-subnet-failover}
 
+- [SafeKitミラークラスタにおけるプライマリ/バックアップ仮想IPアドレスのテスト](/ja/best-practises/test-primary-backup-vip-mirror/)
+
 ### ローカルサブネットにおける自動フェイルオーバーとネットワーク再ルーティング {#automated-failover--network-rerouting-in-a-local-subnet}
 
 ローカルインフラストラクチャ内でシームレスなビジネス継続性を必要とする組織向けに、 **SafeKitローカルネットワーククラスタ向けソフトウェア定義型高可用性、** 、仮想IPアドレスの管理とリアルタイムのアプリケーションフェイルオーバーのための堅牢で自動化されたソリューションを提供します。 
@@ -120,6 +122,8 @@ SafeKit 、各ノードに専用の**ヘルスチェックURLを**提供する�
 > **⚠️ 注意:**ロードバランサーを選択する場合は、アプリケーションが**ソース/宛先 IP 変換 (SNAT/DNAT)**と互換性があることを確認してください。ロードバランサーを使用すると、アプリケーションは元のユーザーの ID を追跡できなくなったり、自身のネットワーク インターフェイスに直接構成された仮想 IP を認識できなくなったために起動に失敗したりする可能性があります。
 
 ## 同一サブネット<span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>クラスタ）におけるロードバランスされた仮想IPの動作 {#vip-load-balancing-same-subnet}
+
+- [SafeKitファームクラスタにおけるロードバランシング仮想IPアドレスのテスト](/ja/best-practises/test-load-balancing-vip-farm/)
 
 ### スケーラブルなパフォーマンス：カーネルレベルの負荷分散と冗長性 {#scalable-performance-kernel-level-load-balancing--redundancy}
 

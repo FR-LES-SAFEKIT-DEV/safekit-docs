@@ -1,5 +1,5 @@
 ---
-title: "Testen des SafeKit-Lastausgleichs auf einer virtuellen IP-Adresse"
+title: "Testen der Lastverteilungs-IP-Adresse in einem SafeKit-Farmcluster"
 canonical: "https://safekit.eviden.com/de/best-practises/test-load-balancing-vip-farm/"
 description: "Erfahren Sie, wie Sie den SafeKit-Lastausgleich über Clusterknoten hinweg testen und das virtuelle IP-Failover, das GARP-Rerouting und das Netzwerkverhalten überprüfen können."
 category: "best-practises"
@@ -7,7 +7,7 @@ lang: "de"
 topics: "Grundprinzipien, Voraussetzung: SafeKit-Mosaik, Test 1 – Verteilung der Verbindungen, Test 2 – Wechsel des Dispatching-Servers, Test 3 – Überprüfung des GARP-Reroutings mit arp -a, Test 4 – End-to-End-Test mit Wireshark (Windows) oder tcpdump (Linux), Welche Workstations sollen getestet werden?, Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung"
 ---
 
-# Testen des SafeKit-Lastausgleichs auf einer virtuellen IP-Adresse in Ihrem Netzwerk
+# Testen der Lastverteilungs-IP-Adresse in einem SafeKit- <span class="notranslate farm-term" translate="no">farm</span>
 
 Dieser Leitfaden beschreibt, wie Sie überprüfen können, ob eine SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> Modul, Lastverteilung auf einer virtuellen IP-Adresse) in Ihrem Netzwerk korrekt funktioniert: Verteilung der Verbindungen auf die Knoten und Umleitung der VIP, wenn der Dispatcher-Knoten ausfällt.
 

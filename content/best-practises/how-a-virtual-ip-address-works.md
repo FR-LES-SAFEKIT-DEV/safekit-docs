@@ -51,6 +51,8 @@ topics: "What is a virtual IP address in a high availability cluster?, Virtual I
 
 ## How a Virtual IP Address (VIP) Works in a Same-Subnet Failover (Mirror Cluster) {#virtual-ip-same-subnet-failover}
 
+- [Testing the primary/backup virtual IP address in a SafeKit mirror cluster](/best-practises/test-primary-backup-vip-mirror/)
+
 ### Automated Failover & Network Rerouting in a Local Subnet {#automated-failover--network-rerouting-in-a-local-subnet}
 
 For organizations requiring seamless business continuity within a local infrastructure, **SafeKit Software-Defined High Availability for Local Network Clusters** provides a robust, automated solution for managing Virtual IP addresses and real-time application failover. 
@@ -120,6 +122,8 @@ If a load balancer is not desired, consult your network team about implementing 
 > **⚠️ Note:** When opting for a Load Balancer, verify that your application is compatible with **Source/Destination IP Translation (SNAT/DNAT)**. With a Load Balancer, the application may lose track of the original user's identity or fail to start because it no longer sees the Virtual IP configured directly on its own network interface.
 
 ## How a Load Balanced Virtual IP Works in a Same-Subnet <span class="notranslate farm-term" translate="no">Farm</span> (<span class="notranslate farm-term" translate="no">Farm</span> Cluster) {#vip-load-balancing-same-subnet}
+
+- [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/)
 
 ### Scalable Performance: Kernel-Level Load Balancing & Redundancy {#scalable-performance-kernel-level-load-balancing--redundancy}
 

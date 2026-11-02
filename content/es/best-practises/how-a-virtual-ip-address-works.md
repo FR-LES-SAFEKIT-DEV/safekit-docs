@@ -51,6 +51,8 @@ Estrategias de implementación de IP virtual **para clústeres Mirror y <span cl
 
 ## Cómo funciona una dirección IP virtual (VIP) en una conmutación por error de la misma subred (clúster Mirror ) {#virtual-ip-same-subnet-failover}
 
+- [Prueba de la dirección IP virtual principal/de respaldo en un clúster espejo de SafeKit.](/es/best-practises/test-primary-backup-vip-mirror/)
+
 ### Conmutación por error automatizada y redireccionamiento de red en una subred local {#automated-failover--network-rerouting-in-a-local-subnet}
 
 Para las organizaciones que requieren una continuidad empresarial sin interrupciones dentro de una infraestructura local, **SafeKit Alta disponibilidad definida por software para clústeres de red local** proporciona una solución robusta y automatizada para administrar direcciones IP virtuales y conmutación por error de aplicaciones en tiempo real. 
@@ -120,6 +122,8 @@ Si no se desea utilizar un balanceador de carga, consulte con su equipo de red s
 > **⚠️ Nota:** Al optar por un balanceador de carga, verifique que su aplicación sea compatible con **Traducción de IP de origen/destino (SNAT/DNAT)** . Con un balanceador de carga, la aplicación puede perder el rastro de la identidad del usuario original o no iniciarse porque ya no ve la IP virtual configurada directamente en su propia interfaz de red.
 
 ## Cómo funciona una IP virtual con balanceo de carga en una misma subred <span class="notranslate farm-term" translate="no">Farm</span> (clúster <span class="notranslate farm-term" translate="no">Farm</span> ) {#vip-load-balancing-same-subnet}
+
+- [Prueba de la dirección IP virtual de equilibrio de carga en un clúster de SafeKit.](/es/best-practises/test-load-balancing-vip-farm/)
 
 ### Rendimiento escalable: balanceo de carga y redundancia a nivel de kernel {#scalable-performance-kernel-level-load-balancing--redundancy}
 

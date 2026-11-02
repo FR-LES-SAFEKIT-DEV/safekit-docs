@@ -1,5 +1,5 @@
 ---
-title: "仮想IPアドレス上でSafeKitロードバランシングをテストする"
+title: "SafeKitファームクラスタにおけるロードバランシング仮想IPアドレスのテスト"
 canonical: "https://safekit.eviden.com/ja/best-practises/test-load-balancing-vip-farm/"
 description: "クラスタノード間でのSafeKitロードバランシングのテスト方法、仮想IPフェイルオーバー、GARPリルーティング、およびネットワーク動作の検証方法を学びましょう。"
 category: "best-practises"
@@ -7,7 +7,7 @@ lang: "ja"
 topics: "主要原則、前提条件：SafeKitモザイク、テスト1 – 接続の分散、テスト2 – ディスパッチサーバーの変更、テスト3 – arp -aによるGARPリルーティングの確認、テスト4 – Wireshark（Windows）またはtcpdump（Linux）によるエンドツーエンドチェック、テストに使用するワークステーション、期待される結果の概要、トラブルシューティング"
 ---
 
-# ネットワーク内の仮想IPアドレスでSafeKitのロードバランシングをテストする
+# SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスタにおけるロードバランシング仮想IPアドレスのテスト
 
 このガイドでは、SafeKit <span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>モジュール、仮想IPアドレスでの負荷分散）がネットワーク内で正しく動作していることを確認する方法、つまり、ノード間での接続の分散、およびディスパッチノードが停止したときのVIPの再ルーティングについて説明します。
 

@@ -1,5 +1,5 @@
 ---
-title: "اختبار موازنة الأحمال SafeKit على عنوان IP افتراضي"
+title: "اختبار عنوان IP الظاهري لموازنة الأحمال في مجموعة خوادم SafeKit"
 canonical: "https://safekit.eviden.com/ar/best-practises/test-load-balancing-vip-farm/"
 description: "تعرف على كيفية اختبار موازنة الأحمال في SafeKit عبر عقد المجموعة والتحقق من تجاوز الفشل لعنوان IP الظاهري، وإعادة توجيه GARP، وسلوك الشبكة."
 category: "best-practises"
@@ -7,7 +7,7 @@ lang: "ar"
 topics: "المبادئ الأساسية، المتطلبات الأساسية: مجموعة أدوات SafeKit، الاختبار 1 - توزيع الاتصالات، الاختبار 2 - تغيير خادم الإرسال، الاختبار 3 - التحقق من إعادة توجيه GARP باستخدام arp -a، الاختبار 4 - فحص شامل باستخدام Wireshark (ويندوز) أو tcpdump (لينكس)، محطات العمل التي سيتم الاختبار منها، ملخص النتائج المتوقعة، استكشاف الأخطاء وإصلاحها"
 ---
 
-# اختبار موازنة الأحمال في SafeKit على عنوان IP افتراضي في شبكتك
+# اختبار عنوان IP الظاهري لموازنة الأحمال في مجموعة <span class="notranslate farm-term" translate="no">farm</span> SafeKit
 
 يصف هذا الدليل كيفية التحقق من أن <span class="notranslate farm-term" translate="no">Farm</span> SafeKit (وحدة <span class="notranslate farm-term" translate="no">Farm</span> ، موازنة التحميل على عنوان IP افتراضي) تعمل بشكل صحيح في شبكتك: توزيع الاتصالات عبر العقد، وإعادة توجيه عنوان IP الافتراضي عند توقف عقدة الإرسال.
 

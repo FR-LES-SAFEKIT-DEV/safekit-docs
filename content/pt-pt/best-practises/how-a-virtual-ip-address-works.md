@@ -51,6 +51,8 @@ Estratégias de implementação de IP virtual **para clusters Mirror e <span cla
 
 ## Como funciona um endereço IP virtual (VIP) em um failover na mesma sub-rede (cluster Mirror ) {#virtual-ip-same-subnet-failover}
 
+- [Testando o endereço IP virtual primário/de backup em um cluster espelhado do SafeKit](/pt-pt/best-practises/test-primary-backup-vip-mirror/)
+
 ### Failover automático e redirecionamento de rede em uma sub-rede local {#automated-failover--network-rerouting-in-a-local-subnet}
 
 Para organizações que necessitam de continuidade de negócios perfeita em uma infraestrutura local, **SafeKit Software-Defined High Availability for Local Network Clusters** oferece uma solução robusta e automatizada para gerenciar endereços IP virtuais e failover de aplicativos em tempo real. 
@@ -120,6 +122,8 @@ Caso não deseje utilizar um balanceador de carga, consulte sua equipe de rede s
 > **⚠️ Observação:** Ao optar por um balanceador de carga, verifique se seu aplicativo é compatível com **Tradução de IP de origem/destino (SNAT/DNAT)** . Com um balanceador de carga, o aplicativo pode perder o controle da identidade do usuário original ou não iniciar, pois não consegue mais visualizar o IP virtual configurado diretamente em sua própria interface de rede.
 
 ## Como funciona um IP virtual com balanceamento de carga em uma mesma sub-rede <span class="notranslate farm-term" translate="no">Farm</span> (cluster <span class="notranslate farm-term" translate="no">Farm</span> ) {#vip-load-balancing-same-subnet}
+
+- [Testando o endereço IP virtual de balanceamento de carga em um cluster de farm SafeKit](/pt-pt/best-practises/test-load-balancing-vip-farm/)
 
 ### Desempenho escalável: balanceamento de carga e redundância em nível de kernel {#scalable-performance-kernel-level-load-balancing--redundancy}
 

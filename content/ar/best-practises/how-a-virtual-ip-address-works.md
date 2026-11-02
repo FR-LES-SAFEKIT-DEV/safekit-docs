@@ -51,6 +51,8 @@ topics: "ما هو عنوان IP الظاهري في مجموعة عالية ا�
 
 ## كيفية عمل عنوان IP الظاهري (VIP) في حالة تجاوز الفشل ضمن نفس الشبكة الفرعية (مجموعة Mirror ) {#virtual-ip-same-subnet-failover}
 
+- [اختبار عنوان IP الظاهري الأساسي/الاحتياطي في مجموعة SafeKit المرآة](/ar/best-practises/test-primary-backup-vip-mirror/)
+
 ### التبديل التلقائي في حالة الفشل وإعادة توجيه الشبكة في شبكة فرعية محلية {#automated-failover--network-rerouting-in-a-local-subnet}
 
 بالنسبة للمؤسسات التي تتطلب استمرارية أعمال سلسة ضمن بنية تحتية محلية، يوفر **SafeKit Software-Defined High Availability for Local Network Clusters** حلاً قويًا وآليًا لإدارة عناوين IP الافتراضية والتحويل التلقائي للتطبيقات في الوقت الفعلي. 
@@ -120,6 +122,8 @@ topics: "ما هو عنوان IP الظاهري في مجموعة عالية ا�
 > **⚠️ ملاحظة:** عند اختيار موازن الأحمال، تأكد من توافق تطبيقك مع **ترجمة عناوين IP المصدر/الوجهة (SNAT/DNAT)** . مع موازن الأحمال، قد يفقد التطبيق تتبع هوية المستخدم الأصلي أو يفشل في البدء لأنه لم يعد يرى عنوان IP الظاهري المُكوّن مباشرةً على واجهة الشبكة الخاصة به.
 
 ## كيفية عمل عنوان IP افتراضي متوازن الأحمال في نفس الشبكة الفرعية <span class="notranslate farm-term" translate="no">Farm</span> (مجموعة <span class="notranslate farm-term" translate="no">Farm</span> ) {#vip-load-balancing-same-subnet}
+
+- [اختبار عنوان IP الظاهري لموازنة الأحمال في مجموعة خوادم SafeKit](/ar/best-practises/test-load-balancing-vip-farm/)
 
 ### أداء قابل للتطوير: موازنة الأحمال والتكرار على مستوى النواة {#scalable-performance-kernel-level-load-balancing--redundancy}
 

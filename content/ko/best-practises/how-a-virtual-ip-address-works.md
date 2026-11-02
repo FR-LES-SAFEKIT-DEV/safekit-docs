@@ -51,6 +51,8 @@ Evidian에서 가상 IP(VIP) 동작 비교 다이어그램 SafeKit ![ ): 활성 
 
 ## 동일 서브넷 장애 조치 환경에서 가상 IP 주소(VIP) 작동 방식 ( Mirror 클러스터) {#virtual-ip-same-subnet-failover}
 
+- [SafeKit 미러 클러스터에서 기본/백업 가상 IP 주소 테스트](/ko/best-practises/test-primary-backup-vip-mirror/)
+
 ### 로컬 서브넷 에서의 자동 장애 조치 및 네트워크 재라우팅 {#automated-failover--network-rerouting-in-a-local-subnet}
 
 로컬 인프라 내에서 원활한 비즈니스 연속성이 필요한 조직을 위해 **, SafeKit** 로컬 네트워크 클러스터용 소프트웨어 정의 고가용성을 제공하며, 가상 IP 주소 관리 및 실시간 애플리케이션 장애 조치를 위한 강력하고 자동화된 솔루션을 제공합니다. 
@@ -120,6 +122,8 @@ SafeKit 각 노드에 전용 **상태 확인 URL을** 제공하여 트래픽 스
 **⚠️ 주의:** 로드 밸런서를 선택할 경우, 애플리케이션이 **소스/대상 IP 변환(SNAT/DNAT)** 과 호환되는지 확인하십시오. 로드 밸런서를 사용하면 애플리케이션이 원래 사용자의 ID를 추적하지 못하거나, 자체 네트워크 인터페이스에 직접 구성된 가상 IP를 더 이상 인식하지 못하여 시작되지 않을 수 있습니다.
 
 ## 동일 서브넷 <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> 클러스터) 에서 로드 밸런싱된 가상 IP가 작동하는 방식 {#vip-load-balancing-same-subnet}
+
+- [SafeKit 팜 클러스터에서 로드 밸런싱 가상 IP 주소 테스트](/ko/best-practises/test-load-balancing-vip-farm/)
 
 ### 확장 가능한 성능: 커널 수준 로드 밸런싱 및 이중화 {#scalable-performance-kernel-level-load-balancing--redundancy}
 

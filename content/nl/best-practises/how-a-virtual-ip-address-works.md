@@ -51,6 +51,8 @@ Implementatiestrategieën voor virtuele IP-adressen **voor de clusters Mirror en
 
 ## Hoe een virtueel IP-adres (VIP) werkt bij failover binnen hetzelfde subnet ( Mirror -cluster) {#virtual-ip-same-subnet-failover}
 
+- [Het testen van het primaire/back-up virtuele IP-adres in een SafeKit-spiegelcluster.](/nl/best-practises/test-primary-backup-vip-mirror/)
+
 ### Geautomatiseerde failover en netwerkomleiding in een lokaal subnet {#automated-failover--network-rerouting-in-a-local-subnet}
 
 Voor organisaties die naadloze bedrijfscontinuïteit binnen een lokale infrastructuur vereisen, biedt **SafeKit Software-Defined High Availability voor lokale netwerkclusters** een robuuste, geautomatiseerde oplossing voor het beheren van virtuele IP-adressen en realtime failover van applicaties. 
@@ -120,6 +122,8 @@ Als een load balancer niet gewenst is, overleg dan met uw netwerkteam over het i
 > **⚠️ Opmerking:** Wanneer u kiest voor een load balancer, controleer dan of uw applicatie compatibel is met **Source/Destination IP Translation (SNAT/DNAT)** . Met een load balancer kan de applicatie de identiteit van de oorspronkelijke gebruiker kwijtraken of niet opstarten omdat deze het virtuele IP-adres dat direct op de eigen netwerkinterface is geconfigureerd niet meer ziet.
 
 ## Hoe een load-balanced virtueel IP-adres werkt in hetzelfde subnet <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> -cluster) {#vip-load-balancing-same-subnet}
+
+- [Het testen van het virtuele IP-adres voor load balancing in een SafeKit-farmcluster.](/nl/best-practises/test-load-balancing-vip-farm/)
 
 ### Schaalbare prestaties: Taakverdeling en redundantie op kernelniveau {#scalable-performance-kernel-level-load-balancing--redundancy}
 
