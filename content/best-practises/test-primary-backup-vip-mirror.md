@@ -1,34 +1,34 @@
 ---
-title: "Testing the primary/backup virtual IP address in a SafeKit mirror cluster"
+title: "Testing the virtual IP address of a SafeKit mirror cluster"
 canonical: "https://safekit.eviden.com/best-practises/test-primary-backup-vip-mirror/"
-description: "Test VIP availability and failover in a SafeKit mirror cluster, including GARP rerouting, ARP checks, and packet captures."
+description: "Test virtual IP availability and failover in a SafeKit mirror cluster, including GARP rerouting, ARP checks, and packet captures."
 category: "best-practises"
 lang: "en"
 topics: "Key principles, Prerequisite: VIP configuration, Test 1 – VIP held by the primary server, Test 2 – Manual failover (stop of the primary), Test 3 – Checking GARP rerouting with arp -a, Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), Which workstations to test from, Summary of expected results, Troubleshooting"
 ---
 
-# Testing the primary/backup virtual IP address in a SafeKit mirror cluster
+# Testing the virtual IP address of a SafeKit mirror cluster in your network
 
-This guide describes how to check that the virtual IP address (VIP) of a SafeKit mirror cluster (mirror module) works correctly in your network: the VIP is held by the primary server, and it is rerouted to the new primary server after a failover.
+This guide describes how to check that the virtual IP address (VIP) of a SafeKit mirror cluster (mirror module) works correctly in your network: VIP is held by the primary server, and it is rerouted to the new primary server after a failover.
 
 ## 1. Key principles
 
 **Prerequisite:** both nodes of the mirror cluster must be in the same layer 2 IP subnet: a LAN, or a VLAN extended between remote sites.
 
-- The VIP is active only on the **primary server** (PRIM or ALONE states): it is set as an alias of the physical IP address, on the network card of that address, when the module starts as primary on the node (`where="one_side_alias"` configuration).
-- The MAC address of the primary server is therefore the one associated with the VIP in the ARP tables (router, gateway, clients in the same subnet). All traffic to the VIP is sent to the primary.
-- During a failover (stop or failure of the primary), the VIP is removed from the former primary and set as an alias on the new primary. Two mechanisms then allow the network to associate the VIP with the MAC address of the new primary:
-  - the network messages sent by the operating system when the VIP is added as an alias on the network card;
+- VIP is active only on the **primary server** (PRIM or ALONE states): it is set as an alias of the physical IP address, on the network card of that address, when the module starts as primary on the node (`where="one_side_alias"` configuration).
+- The MAC address of the primary server is therefore the one associated with VIP in the ARP tables (router, gateway, clients in the same subnet). All traffic to VIP is sent to the primary.
+- During a failover (stop or failure of the primary), VIP is removed from the former primary and set as an alias on the new primary. Two mechanisms then allow the network to associate VIP with the MAC address of the new primary:
+  - the network messages sent by the operating system when VIP is added as an alias on the network card;
   - the **GARPs** (gratuitous ARP) sent by SafeKit, when the `arpreroute="on"` attribute is configured in the `<vip>` section.
 
 What you therefore need to test:
 
-1. that the VIP is held by the primary server and reachable from the clients;
-2. that the network (router, gateway, virtualization) takes the GARP into account when the primary server changes.
+1. that VIP is held by the primary server and reachable from the clients;
+2. that the MAC address associated with VIP is rerouted to the new primary in the network (router, gateway, virtualization) when the primary server changes.
 
 ## 2. Prerequisite: VIP configuration
 
-1. In the `userconfig.xml` of the mirror module, configure the VIP in the `<vip>` section. The `arpreroute="on"` attribute makes the new primary send GARPs after a failover:
+1. In the `userconfig.xml` of the mirror module, configure VIP in the `<vip>` section. The `arpreroute="on"` attribute makes the new primary send GARPs after a failover:
 
    ```xml
    <vip>
@@ -50,48 +50,46 @@ What you therefore need to test:
 **Steps**
 
 1. On the primary server, run `ipconfig` (Windows) or `ip addr show` (Linux).
-   → **Expected result:** the VIP appears as an alias on the network card of the physical IP address.
+   → **Expected result:** VIP appears as an alias on the network card of the physical IP address.
 2. On the secondary server, run the same command.
-   → **Expected result:** the VIP does not appear.
-3. From a client workstation **outside the cluster**, `ping` both physical IP addresses and the VIP.
+   → **Expected result:** VIP does not appear.
+3. From a client workstation **outside the cluster**, `ping` both physical IP addresses and VIP.
    → **Expected result:** all three `ping` commands respond (unless they are filtered by firewalls).
-4. Check access through the VIP with the SafeKit mosaic: from a browser on the client workstation, connect to `http://<VIP>:9010/safekit/mosaic.html`, then enter the mirror **module name** and run the test.
-   → **Expected result:** all the cells of the mosaic display the name of the **primary server**, in a single color: all TCP connections to the VIP are served by the primary.
+4. Check access through VIP with the SafeKit mosaic: from a browser on the **external** client, connect to `http://<VIP>:9010/safekit/mosaic.html`, then enter the mirror **module name** and run the test.
+   → **Expected result:** all the cells of the mosaic display the name of the **primary server**, in a single color: all TCP connections to VIP are served by the primary.
 
 ## 4. Test 2 – Manual failover (stop of the primary)
 
-This test checks that the VIP follows the primary server during a failover, triggered by stopping the module on the primary.
+This test checks that VIP follows the primary server during a failover, triggered by stopping the module on the primary.
 
 **Steps**
 
 1. Stop the module on the primary (node 1) from the SafeKit console (or from the command line with `safekit stop -m <module>`).
    → **Expected result:** node 1 goes to STOP (NotReady) and node 2 goes to ALONE (Ready). In the log of the new primary, the message `Virtual IP <VIP> set` appears.
 2. On the new primary, run `ipconfig` or `ip addr show`.
-   → **Expected result:** the VIP now appears as an alias on this node, and no longer on the former primary.
-3. From the client workstation, repeat the three `ping` commands and run the mosaic again on the VIP.
+   → **Expected result:** VIP now appears as an alias on this node, and no longer on the former primary.
+3. From the client workstation, repeat the three `ping` commands and run the mosaic again on VIP.
    → **Expected result:** everything responds, and all the cells of the mosaic now display the name of the **new primary**, in a single color.
 4. Restart the module on node 1: it resynchronizes and goes to SECOND (Ready), while node 2 goes to PRIM (Ready).
 
-> **Limitation of this test:** a correct result at step 3 does not prove that the GARPs sent by SafeKit work. When the VIP is set as an alias on the new primary, the operating system itself sends messages on the network that may already reroute the virtual IP address / MAC address association. Only tests 3 and 4 really check the rerouting of this association.
+## 5. Test 3 – Checking MAC rerouting with `arp -a`
 
-## 5. Test 3 – Checking GARP rerouting with `arp -a`
-
-You note the MAC address associated with the VIP before the failover, then check that it has changed afterwards.
+You note the MAC address associated with VIP before the failover, then check that it has changed afterwards.
 
 This test is only possible if the client workstation is in the **same IP subnet** as the cluster.
 
-If there is a router between the client and the cluster, the client's ARP table does not contain the VIP, but the address of the gateway used to reach the cluster's network. In that case, GARP must be checked in the ARP table of the router or gateway, with the network team.
+If there is a router between the client and the cluster, the client's ARP table does not contain VIP, but the address of the gateway used to reach the cluster's network. In that case, MAC rerouting must be checked in the ARP table of the router or gateway, with the network team.
 
 **Steps**
 
 1. The module is PRIM (Ready) on node 1 and SECOND (Ready) on node 2.
-2. On the client workstation, `ping` both physical IP addresses and the VIP, then run `arp -a`.
-   → **Expected result:** the VIP is associated with the **same MAC address as the physical IP address of the primary**.
+2. On the client workstation, `ping` both physical IP addresses and VIP, then run `arp -a`.
+   → **Expected result:** VIP is associated with the **same MAC address as the physical IP address of the primary**.
 3. `stop` the module on the primary (node 1).
-4. `ping` the VIP again, then run `arp -a` again.
-   → **Expected result:** the VIP is now associated with the **same MAC address as the physical IP address of the new primary**.
+4. `ping` VIP again, then run `arp -a` again.
+   → **Expected result:** VIP is now associated with the **same MAC address as the physical IP address of the new primary**.
 
-> `ping` the VIP again before reading the ARP table: the entry may be marked as stale and only refreshed after a `ping`.
+> `ping` VIP again before reading the ARP table: the entry may be marked as stale and only refreshed after a `ping`.
 
 Example of the expected ARP table, before and after the primary is stopped:
 
@@ -103,20 +101,20 @@ Example of the expected ARP table, before and after the primary is stopped:
 
 ## 6. Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux)
 
-You can follow a TCP connection to the VIP by capturing packets on the client and on both nodes: with Wireshark on Windows machines, and with tcpdump on Linux machines.
+You can follow a TCP connection to VIP by capturing packets on the client and on both nodes: with Wireshark on Windows machines, and with tcpdump on Linux machines.
 
-You must look at the **MAC (Ethernet) headers of the packets**: the destination IP address remains the VIP, and it is the destination MAC address that shows which node receives the traffic.
+You must look at the **MAC (Ethernet) headers of the packets**: the destination IP address remains VIP, and it is the destination MAC address that shows which node receives the traffic.
 
 **What you should observe:**
 
 | When | Where to capture | Observed MAC addresses |
 |---|---|---|
 | Before the failover | client | Client MAC → MAC of **node 1 (primary)** |
-| Before the failover | node 1 | Packets to the VIP are received; node 2 receives nothing |
-| During the failover | network | GARP sent by node 2 for the VIP |
+| Before the failover | node 1 | Packets to VIP are received; node 2 receives nothing |
+| During the failover | network | MAC rerouting messages sent by node 2 for VIP: messages sent by the OS when VIP is set as an alias, and GARPs sent by SafeKit (`arpreroute="on"`) |
 | After the failover | client | Client MAC → MAC of **node 2 (new primary)** |
 
-> If the client workstation is in a different subnet from the cluster, the "client MAC" seen on the nodes is the MAC address of the **gateway** (router) connecting the two subnets, not that of the client workstation. Likewise, on the client workstation, packets to the VIP are sent to the MAC address of its own gateway.
+> If the client workstation is in a different subnet from the cluster, the "client MAC" seen on the nodes is the MAC address of the **gateway** (router) connecting the two subnets, not that of the client workstation.
 
 ## 7. Which workstations to test from
 
@@ -124,9 +122,9 @@ The behavior depends on the network path between the client and the cluster. Run
 
 | Client location | What the test checks |
 |---|---|
-| Client in the **same subnet** as the cluster | Update of the clients' ARP tables by GARP (test 3 possible) |
-| Client in a **different subnet** (router, gateway, hypervisor virtual network) | GARP handling by the router or gateway |
-| Client VM **on a hypervisor that also hosts a cluster VM** | Behavior of the hypervisor's virtual switch, which also handles internal switching and routing |
+| Client in the **same subnet** as the cluster | Update of the clients' ARP tables (test 3 possible) |
+| Client in a **different subnet** (router, gateway, hypervisor virtual network) | Update of the clients' ARP tables in the router or gateway |
+| Client VM **on a hypervisor that also hosts one VM of the mirror cluster** | Behavior of the hypervisor's virtual switch, which also handles internal switching and routing |
 
 ## 8. Summary of expected results
 
@@ -134,11 +132,11 @@ The behavior depends on the network path between the client and the cluster. Run
 |---|---|---|
 | 1 | PRIM / SECOND, `ipconfig`, `ping` and mosaic | VIP as an alias on the primary only; the 3 `ping` commands respond (unless filtered by firewalls); the mosaic displays only the primary |
 | 2 | Stop of the primary | VIP as an alias on the new primary; `Virtual IP <VIP> set` message; the mosaic displays only the new primary |
-| 3 | `arp -a` before and after the primary is stopped | The VIP moves from the MAC address of node 1 to that of node 2 |
+| 3 | `arp -a` before and after the primary is stopped | VIP moves from the MAC address of node 1 to that of node 2 |
 | 4 | Wireshark or tcpdump capture before and after the failover | The client sends to the MAC address of the new primary |
 
 ## 9. Troubleshooting
 
-- **The VIP no longer responds after the failover:** GARP is not taken into account by a device on the path (router, gateway, virtual switch), which keeps sending traffic to the MAC address of the former primary. Check GARP handling with your network team.
-- **Sending GARPs:** the `arpreroute="on"` attribute of the `<vip>` section (with `arpinterval` and `arpelapse`) sends GARPs regularly on the VIP after the failover. See the User's Guide, section 13.6.4 "[`<vip>` syntax](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
+- **VIP no longer responds after the failover:** MAC rerouting messages are not taken into account by a device on the path (router, gateway, virtual switch), which keeps sending traffic to the MAC address of the former primary. Check the handling of MAC rerouting messages with your network team.
+- **Sending GARPs:** the `arpreroute="on"` attribute of the `<vip>` section (with `arpinterval` and `arpelapse`) sends GARPs regularly on VIP after the failover. See the User's Guide, section 13.6.4 "[`<vip>` syntax](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
 - **Diagnosing VIP ↔ MAC resolution:** see the User's Guide, section 7.24 "[Troubleshooting VIP ↔ MAC resolution](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP)", and section 7.16 "[Problem with the virtual IP after failover](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Problem_with_the_1)".

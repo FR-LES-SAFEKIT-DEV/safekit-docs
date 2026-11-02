@@ -1,15 +1,15 @@
 ---
-title: "Test de l'adresse IP virtuelle principale/de secours dans un cluster miroir SafeKit"
+title: "Test de l'adresse IP virtuelle d'un cluster miroir SafeKit"
 canonical: "https://safekit.eviden.com/fr/best-practises/test-primary-backup-vip-mirror/"
-description: "Tester la disponibilité et le basculement VIP dans un cluster miroir SafeKit, y compris le réacheminement GARP, les vérifications ARP et les captures de paquets."
+description: "Tester la disponibilité et le basculement des adresses IP virtuelles dans un cluster miroir SafeKit, y compris le réacheminement GARP, les vérifications ARP et les captures de paquets."
 category: "best-practises"
 lang: "fr"
 topics: "Principes clés, Prérequis : Configuration VIP, Test 1 – VIP hébergée par le serveur principal, Test 2 – Basculement manuel (arrêt du serveur principal), Test 3 – Vérification du reroutage GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Postes de travail à tester, Résumé des résultats attendus, Dépannage"
 ---
 
-# Test de l'adresse IP virtuelle principale/de secours dans un cluster miroir SafeKit
+# Tester l'adresse IP virtuelle d'un cluster miroir SafeKit sur votre réseau
 
-Ce guide décrit comment vérifier que l'adresse IP virtuelle (VIP) d'un cluster miroir SafeKit (module miroir) fonctionne correctement sur votre réseau : la VIP est détenue par le serveur principal et est redirigée vers le nouveau serveur principal après un basculement.
+Ce guide décrit comment vérifier que l'adresse IP virtuelle (VIP) d'un cluster miroir SafeKit (module miroir) fonctionne correctement sur votre réseau : la VIP est détenue par le serveur principal et est redirigée vers le nouveau serveur principal après un basculement.
 
 ## 1. Principes clés
 
@@ -17,14 +17,14 @@ Ce guide décrit comment vérifier que l'adresse IP virtuelle (VIP) d'un cluster
 
 - Le VIP est actif uniquement sur le **serveur principal** (états PRIM ou ALONE) : il est défini comme un alias de l'adresse IP physique, sur la carte réseau de cette adresse, lorsque le module démarre en tant que principal sur le nœud (configuration `where="one_side_alias"` ).
 - L'adresse MAC du serveur principal est donc celle associée à l'adresse IP virtuelle (VIP) dans les tables ARP (routeur, passerelle, clients du même sous-réseau). Tout le trafic destiné à l'adresse IP virtuelle est acheminé vers le serveur principal.
-- Lors d'un basculement (arrêt ou panne du serveur principal), l'adresse IP virtuelle (VIP) est supprimée de l'ancien serveur principal et définie comme alias sur le nouveau serveur principal. Deux mécanismes permettent ensuite au réseau d'associer l'adresse IP virtuelle à l'adresse MAC du nouveau serveur principal :
-  - les messages réseau envoyés par le système d'exploitation lorsque le VIP est ajouté comme alias sur la carte réseau ;
+- Lors d'un basculement (arrêt ou panne du serveur principal), l'adresse IP virtuelle (VIP) est supprimée de l'ancien serveur principal et définie comme alias sur le nouveau serveur principal. Deux mécanismes permettent alors au réseau d'associer la VIP à l'adresse MAC du nouveau serveur principal :
+  - les messages réseau envoyés par le système d'exploitation lorsque VIP est ajouté comme alias sur la carte réseau ;
   - les **GARP** (ARP gratuits) envoyés par SafeKit, lorsque l'attribut `arpreroute="on"` est configuré dans la section `<vip>` .
 
 Ce que vous devez donc tester :
 
-1. que le VIP est détenu par le serveur principal et accessible depuis les clients ;
-2. que le réseau (routeur, passerelle, virtualisation) prenne en compte le GARP lorsque le serveur principal change.
+1. ce VIP est détenu par le serveur principal et accessible depuis les clients ;
+2. que l'adresse MAC associée au VIP est redirigée vers le nouveau serveur principal du réseau (routeur, passerelle, virtualisation) lorsque le serveur principal change.
 
 ## 2. Prérequis : configuration VIP
 
@@ -50,12 +50,12 @@ Ce que vous devez donc tester :
 **Mesures**
 
 1. Sur le serveur principal, exécutez `ipconfig` (Windows) ou `ip addr show` (Linux).
-   → **Résultat attendu :** le VIP apparaît comme un alias sur la carte réseau de l'adresse IP physique.
+   → **Résultat attendu :** VIP apparaît comme un alias sur la carte réseau de l’adresse IP physique.
 2. Sur le serveur secondaire, exécutez la même commande.
    → **Résultat attendu :** le VIP n'apparaît pas.
 3. Depuis un poste de travail client **situé en dehors du cluster** , `ping` à la fois sur les adresses IP physiques et sur l'adresse IP virtuelle.
    → **Résultat attendu :** les trois commandes `ping` répondent (sauf si elles sont filtrées par des pare-feu).
-4. Vérifiez l'accès via le VIP avec le SafeKit mosaic : depuis un navigateur sur le poste de travail client, connectez-vous à `http://<VIP>:9010/safekit/mosaic.html` , puis entrez le **nom du module** miroir et exécutez le test.
+4. Vérifiez l'accès via VIP avec le diagramme SafeKit : depuis un navigateur sur le client **externe** , connectez-vous à `http://<VIP>:9010/safekit/mosaic.html` , puis entrez le **nom du module** miroir et exécutez le test.
    → **Résultat attendu :** toutes les cellules de la mosaïque affichent le nom du **serveur principal** , dans une seule couleur : toutes les connexions TCP vers le VIP sont gérées par le serveur principal.
 
 ## 4. Test 2 – Basculement manuel (arrêt du système principal)
@@ -67,31 +67,29 @@ Ce test vérifie que le VIP suit le serveur principal lors d'un basculement, dé
 1. Arrêtez le module sur le nœud principal (nœud 1) depuis la console SafeKit (ou depuis la ligne de commande avec `safekit stop -m <module>` ).
    → **Résultat attendu :** le nœud 1 passe à l’état STOP (Non prêt) et le nœud 2 à l’état ALONE (Prêt). Dans le journal du nouveau nœud primaire, le message `Virtual IP <VIP> set` apparaît.
 2. Sur le nouveau serveur principal, exécutez `ipconfig` ou `ip addr show` .
-   → **Résultat attendu :** le VIP apparaît désormais comme un alias sur ce nœud, et non plus sur l’ancien nœud principal.
+   → **Résultat attendu :** VIP apparaît désormais comme un alias sur ce nœud, et non plus sur l’ancien nœud principal.
 3. Depuis le poste de travail client, répétez les trois commandes `ping` et exécutez à nouveau le mosaic sur le VIP.
    → **Résultat attendu :** tout réagit et toutes les cellules de la mosaïque affichent désormais le nom de la **nouvelle primaire** , dans une seule couleur.
 4. Redémarrez le module sur le nœud 1 : il se resynchronise et passe à SECOND (Prêt), tandis que le nœud 2 passe à PRIM (Prêt).
 
-**Limite de ce test :** un résultat correct à l’étape 3 ne prouve pas le bon fonctionnement des requêtes GARP envoyées par SafeKit. Lorsque l’adresse IP virtuelle (VIP) est définie comme alias sur le nouveau serveur principal, le système d’exploitation envoie lui-même des messages sur le réseau susceptibles de modifier l’association adresse IP virtuelle/adresse MAC. Seuls les tests 3 et 4 vérifient réellement cette modification.
+## 5. Test 3 – Vérification du réacheminement MAC avec `arp -a`
 
-## 5. Test 3 – Vérification du reroutage GARP avec `arp -a`
-
-Vous notez l'adresse MAC associée à l'adresse IP virtuelle avant le basculement, puis vous vérifiez qu'elle a changé par la suite.
+Vous notez l'adresse MAC associée au VIP avant le basculement, puis vous vérifiez qu'elle a changé par la suite.
 
 Ce test n'est possible que si le poste de travail client se trouve dans le **même sous-réseau IP** que le cluster.
 
-Si un routeur est présent entre le client et le cluster, la table ARP du client ne contient pas l'adresse IP virtuelle (VIP), mais l'adresse de la passerelle utilisée pour accéder au réseau du cluster. Dans ce cas, il est nécessaire de vérifier la présence d'un routeur ou d'une passerelle (GARP) dans la table ARP du routeur ou de la passerelle, en collaboration avec l'équipe réseau.
+Si un routeur est présent entre le client et le cluster, la table ARP du client ne contient pas l'adresse IP virtuelle (VIP), mais l'adresse de la passerelle utilisée pour accéder au réseau du cluster. Dans ce cas, le réacheminement MAC doit être vérifié dans la table ARP du routeur ou de la passerelle, en collaboration avec l'équipe réseau.
 
 **Mesures**
 
 1. Le module est PRIM (Prêt) sur le nœud 1 et SECOND (Prêt) sur le nœud 2.
-2. Sur le poste de travail client, `ping` sur les deux adresses IP physiques et sur l'adresse IP virtuelle, puis exécutez `arp -a` .
-   → **Résultat attendu :** le VIP est associé à la **même adresse MAC que l'adresse IP physique du principal** .
+2. Sur le poste de travail client, `ping` sur les deux adresses IP physiques et l'adresse IP virtuelle, puis exécutez `arp -a` .
+   → **Résultat attendu :** le VIP est associé à la **même adresse MAC que l'adresse IP physique du serveur principal** .
 3. `stop` le module sur le nœud principal (nœud 1).
 4. `ping` à nouveau le VIP, puis exécutez à nouveau `arp -a` .
    → **Résultat attendu :** le VIP est maintenant associé à la **même adresse MAC que l'adresse IP physique du nouveau serveur principal** .
 
-> Effectuez un nouveau `ping` vers le VIP avant de lire la table ARP : l’entrée peut être marquée comme obsolète et ne sera actualisée qu’après un `ping` .
+> Effectuez un nouveau `ping` VIP avant de lire la table ARP : l’entrée peut être marquée comme obsolète et ne sera actualisée qu’après un `ping` .
 
 Exemple de la table ARP attendue, avant et après l'arrêt du serveur principal :
 
@@ -103,9 +101,9 @@ Exemple de la table ARP attendue, avant et après l'arrêt du serveur principal�
 
 ## 6. Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux)
 
-Vous pouvez suivre une connexion TCP vers le VIP en capturant les paquets sur le client et sur les deux nœuds : avec Wireshark sur les machines Windows et avec tcpdump sur les machines Linux.
+Vous pouvez suivre une connexion TCP vers une adresse IP virtuelle en capturant des paquets sur le client et sur les deux nœuds : avec Wireshark sur les machines Windows et avec tcpdump sur les machines Linux.
 
-Vous devez examiner les **en-têtes MAC (Ethernet) des paquets** : l’adresse IP de destination reste l’adresse IP virtuelle (VIP), et c’est l’adresse MAC de destination qui indique quel nœud reçoit le trafic.
+Vous devez examiner les **en-têtes MAC (Ethernet) des paquets** : l’adresse IP de destination reste VIP, et c’est l’adresse MAC de destination qui indique quel nœud reçoit le trafic.
 
 **Ce que vous devez observer :**
 
@@ -113,10 +111,10 @@ Vous devez examiner les **en-têtes MAC (Ethernet) des paquets** : l’adresse 
 |---|---|---|
 | Avant le basculement | client | Adresse MAC du client → Adresse MAC du **nœud 1 (primaire)** |
 | Avant le basculement | nœud 1 | Les paquets destinés au VIP sont reçus ; le nœud 2 ne reçoit rien |
-| Pendant le basculement | réseau | GARP envoyé par le nœud 2 pour le VIP |
+| Pendant le basculement | réseau | Messages de réacheminement MAC envoyés par le nœud 2 pour VIP : messages envoyés par le système d'exploitation lorsque VIP est défini comme alias, et GARP envoyés par SafeKit ( `arpreroute="on"` ) |
 | Après le basculement | client | Adresse MAC du client → Adresse MAC du **nœud 2 (nouveau nœud principal)** |
 
-Si le poste client se trouve dans un sous-réseau différent de celui du cluster, l'adresse MAC affichée sur les nœuds est celle de la **passerelle** (routeur) reliant les deux sous-réseaux, et non celle du poste client. De même, sur le poste client, les paquets destinés à l'adresse IP virtuelle sont envoyés à l'adresse MAC de sa propre passerelle.
+> Si le poste de travail client se trouve dans un sous-réseau différent de celui du cluster, l'« adresse MAC du client » affichée sur les nœuds est l'adresse MAC de la **passerelle** (routeur) reliant les deux sous-réseaux, et non celle du poste de travail client.
 
 ## 7. Quels postes de travail tester ?
 
@@ -124,9 +122,9 @@ Le comportement dépend du chemin réseau entre le client et le cluster. Exécut
 
 | Emplacement du client | Ce que le test vérifie |
 |---|---|
-| Client dans le **même sous-réseau** que le cluster | Mise à jour des tables ARP des clients par GARP (test 3 possible) |
-| Client dans un **sous-réseau différent** (routeur, passerelle, réseau virtuel d'hyperviseur) | Gestion GARP par le routeur ou la passerelle |
-| Machine virtuelle cliente **sur un hyperviseur hébergeant également une machine virtuelle de cluster** | Comportement du commutateur virtuel de l'hyperviseur, qui gère également la commutation et le routage internes |
+| Client dans le **même sous-réseau** que le cluster | Mise à jour des tables ARP des clients (test 3 possible) |
+| Client situé dans un **sous-réseau différent** (routeur, passerelle, réseau virtuel d'hyperviseur) | Mise à jour des tables ARP des clients dans le routeur ou la passerelle |
+| Machine virtuelle cliente **sur un hyperviseur hébergeant également une machine virtuelle du cluster miroir** | Comportement du commutateur virtuel de l'hyperviseur, qui gère également la commutation et le routage internes |
 
 ## 8. Résumé des résultats attendus
 
@@ -139,6 +137,6 @@ Le comportement dépend du chemin réseau entre le client et le cluster. Exécut
 
 ## 9. Dépannage
 
-- **Après le basculement, le VIP ne répond plus :** le protocole GARP n’est pas pris en compte par un équipement du chemin (routeur, passerelle, commutateur virtuel) qui continue d’envoyer du trafic vers l’adresse MAC de l’ancien serveur principal. Veuillez vérifier la gestion du protocole GARP avec votre équipe réseau.
-- **Envoi de GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse` ) envoie régulièrement des GARP sur l’adresse IP virtuelle après le basculement. Voir le Guide de l’utilisateur, section 13.6.4 «[ Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
+- **Le serveur VIP ne répond plus après le basculement :** les messages de réacheminement MAC ne sont pas pris en compte par un périphérique du chemin (routeur, passerelle, commutateur virtuel), qui continue d'envoyer du trafic vers l'adresse MAC de l'ancien serveur principal. Veuillez vérifier la gestion des messages de réacheminement MAC avec votre équipe réseau.
+- **Envoi de GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse` ) envoie régulièrement des GARP sur l’adresse VIP après le basculement. Voir le Guide de l’utilisateur, section 13.6.4 «[ Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
 - **Diagnostic de la résolution VIP ↔ MAC :** voir le Guide de l'utilisateur, section 7.24 « [Dépannage de la résolution VIP ↔ MAC](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Issue_with_VIP) » et section 7.16 « [Problème avec l'adresse IP virtuelle après basculement](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Problem_with_the_1) ».
