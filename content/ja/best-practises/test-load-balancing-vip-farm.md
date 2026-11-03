@@ -1,10 +1,10 @@
 ---
-タイトル: 「01クラスタにおけるロードバランシング仮想IPアドレスのテスト」
-正規: "https://safekit.eviden.com/ja/best-practises/test-load-balancing-vip-farm/"
-説明：「クラスタノード間での負荷分散をテストし、仮想IPフェイルオーバー、GARPルーティング、およびネットワーク動作を確認する方法を学びます。」
-カテゴリ：「ベストプラクティス」
+title: "SafeKit Farmクラスタにおけるロードバランシング仮想IPアドレスのテスト"
+canonical: "https://safekit.eviden.com/ja/best-practises/test-load-balancing-vip-farm/"
+description: "クラスタノード間での負荷分散をテストし、仮想IPフェイルオーバー、GARPルーティング、およびネットワーク動作を確認する方法を学びます。"
+category: "best-practises"
 lang: "ja"
-トピック: 「基本原則、前提条件: SafeKit モザイク、テスト 1 – 接続の分散、テスト 2 – ディスパッチ サーバーの変更、テスト 3 – arp -a を使用した GARP リルーティングの確認、テスト 4 – Wireshark (Windows) または tcpdump (Linux) を使用したエンドツーエンドのチェック、テストに使用するワークステーション、期待される結果の概要、トラブルシューティング」
+topics: "基本原則、前提条件: SafeKit モザイク、テスト 1 – 接続の分散、テスト 2 – ディスパッチ サーバーの変更、テスト 3 – arp -a を使用した GARP リルーティングの確認、テスト 4 – Wireshark (Windows) または tcpdump (Linux) を使用したエンドツーエンドのチェック、テストに使用するワークステーション、期待される結果の概要、トラブルシューティング"
 ---
 
 # SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスタでのロードバランシング仮想IPアドレスのテスト

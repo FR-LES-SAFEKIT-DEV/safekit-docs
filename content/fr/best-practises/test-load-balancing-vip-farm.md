@@ -1,10 +1,10 @@
 ---
-titre : « Test de l’adresse IP virtuelle d’équilibrage de charge dans un cluster SafeKit farm »
-canonique : "https://safekit.eviden.com/fr/best-practises/test-load-balancing-vip-farm/"
+title: "Test de l’adresse IP virtuelle d’équilibrage de charge dans un cluster SafeKit Farm"
+canonical: "https://safekit.eviden.com/fr/best-practises/test-load-balancing-vip-farm/"
 description: "Apprenez à tester l'équilibrage de charge SafeKit sur les nœuds du cluster et à vérifier le basculement d'adresse IP virtuelle, le reroutage GARP et le comportement du réseau."
-catégorie : « meilleures pratiques »
+category: "best-practises"
 lang: "fr"
-Sujets : « Principes clés, Prérequis : la mosaïque SafeKit, Test 1 – Distribution des connexions, Test 2 – Changement de serveur de répartition, Test 3 – Vérification du reroutage GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Postes de travail à tester, Résumé des résultats attendus, Dépannage »
+topics: "Principes clés, Prérequis : la mosaïque SafeKit, Test 1 – Distribution des connexions, Test 2 – Changement de serveur de répartition, Test 3 – Vérification du reroutage GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Postes de travail à tester, Résumé des résultats attendus, Dépannage"
 ---
 
 # Test de l'adresse IP virtuelle d'équilibrage de charge dans un cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span>

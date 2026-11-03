@@ -1,10 +1,10 @@
 ---
-Título: "Prueba de la dirección IP virtual de balanceo de carga en un clúster SafeKit farm"
-canónico: "https://safekit.eviden.com/es/best-practises/test-load-balancing-vip-farm/"
-Descripción: "Aprenda a probar el balanceo de carga SafeKit entre los nodos del clúster y verifique la conmutación por error de IP virtual, el redireccionamiento GARP y el comportamiento de la red."
-Categoría: "mejores prácticas"
+title: "Prueba de la dirección IP virtual de balanceo de carga en un clúster SafeKit Farm"
+canonical: "https://safekit.eviden.com/es/best-practises/test-load-balancing-vip-farm/"
+description: "Aprenda a probar el balanceo de carga SafeKit entre los nodos del clúster y verifique la conmutación por error de IP virtual, el redireccionamiento GARP y el comportamiento de la red."
+category: "best-practises"
 lang: "es"
-Temas: "Principios clave, Requisito previo: el mosaico SafeKit, Prueba 1: Distribución de conexiones, Prueba 2: Cambio de servidor de despacho, Prueba 3: Comprobación del redireccionamiento GARP con arp -a, Prueba 4: Comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), Estaciones de trabajo para realizar la prueba, Resumen de los resultados esperados, Solución de problemas"
+topics: "Principios clave, Requisito previo: el mosaico SafeKit, Prueba 1: Distribución de conexiones, Prueba 2: Cambio de servidor de despacho, Prueba 3: Comprobación del redireccionamiento GARP con arp -a, Prueba 4: Comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), Estaciones de trabajo para realizar la prueba, Resumen de los resultados esperados, Solución de problemas"
 ---
 
 # Probando la dirección IP virtual de equilibrio de carga en un clúster SafeKit <span class="notranslate farm-term" translate="no">farm</span>
