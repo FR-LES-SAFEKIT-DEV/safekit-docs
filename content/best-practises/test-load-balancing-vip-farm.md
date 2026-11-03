@@ -149,6 +149,11 @@ The behavior depends on the network path between the client and the <span class=
 - **Periodic sending of GARP:** the `arpreroute="on"` attribute of the `<vip>` section (with `arpinterval` and `arpelapse`) sends GARPs regularly on the VIPs. See the User's Guide, section 13.6.4 "[`<vip>` syntax](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
 - **Diagnosing Virtual IP (VIP) ↔ MAC resolution:** see the User's Guide, section 7.24 "[Troubleshooting Virtual IP (VIP) ↔ MAC resolution](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP)", and section 7.15 "[<span class="notranslate farm-term" translate="no">Farm</span> module UP (Ready) but problem of load balancing in a <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>)".
 
+## Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution {#demonstration-of-the-safekit-farm-solution}
+
+
+{{%  insert-safekit-farm-video-en  %}}
+
 For primary/backup failover with a virtual IP address, see [Testing the virtual IP address of a SafeKit mirror cluster](/best-practises/test-primary-backup-vip-mirror/).
 
 {{%  insert-safekit-4-buttons-en  %}}

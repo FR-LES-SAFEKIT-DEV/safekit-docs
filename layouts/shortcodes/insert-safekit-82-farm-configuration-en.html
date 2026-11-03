@@ -143,17 +143,7 @@ Node 1 and node 2 should reach the UP (green) state, which means that the `start
 
 ### 11. Testing
 
-SafeKit brings a built-in test in the product:
-
-  * Configure a rule for TCP port 9010 with a load balancing on source TCP port.
-  * Connect an external workstation outside the <span class="notranslate farm-term" translate="no">farm</span> nodes.
-  * Start a browser on http://virtual-ip:9010/safekit/mosaic.html.
-
-
-You should see a mosaic of colors depending on nodes answering to HTTP requests.
-
-  * Stop one UP (green) node by scrolling down its contextual menu and clicking Stop.
-  * Check that there is no more TCP connections on the stopped node and on the virtual IP address.
+SafeKit brings a built-in test in the product: see [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/).
 
 
 ℹ️ Find more details, along with videos, in the [SafeKit Online Training](/resources/safekit-on-line-training/).
@@ -171,4 +161,3 @@ You should see a mosaic of colors depending on nodes answering to HTTP requests.
 
 
 ![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
-
