@@ -57,6 +57,7 @@ Portanto, você precisa testar o seguinte:
    → **Resultado esperado:** todos os três comandos `ping` respondem (a menos que sejam filtrados por firewalls).
 4. Verifique o acesso através do IP Virtual (VIP) com o mosaico SafeKit: a partir de um navegador no cliente **externo** , conecte-se a `http://<VIP>:9010/safekit/mosaic.html` , insira o **nome do módulo** espelho e execute o teste.
    → **Resultado esperado:** todas as células do mosaico exibem o nome do **servidor primário** , em uma única cor: todas as conexões TCP com o IP Virtual (VIP) são atendidas pelo servidor primário.
+   Se o servidor web e o console do SafeKit foram alterados para HTTPS, substitua 9010 por 9453.
 
 ## 4. Teste 2 – Failover manual (parada do primário)
 

@@ -57,6 +57,7 @@ Wat u dus moet testen:
    → **Verwacht resultaat:** alle drie `ping` commando's reageren (tenzij ze door firewalls worden geblokkeerd).
 4. Controleer de toegang via het virtuele IP-adres (VIP) met de SafeKit-mozaïek: ga vanuit een browser op de **externe** client naar `http://<VIP>:9010/safekit/mosaic.html` , voer vervolgens de **naam van** de spiegelmodule in en voer de test uit.
    → **Verwacht resultaat:** alle cellen van het mozaïek tonen de naam van de **primaire server** in één kleur: alle TCP-verbindingen naar het virtuele IP-adres (VIP) worden door de primaire server afgehandeld.
+   Als de SafeKit-webserver en -console zijn overgeschakeld naar HTTPS, vervang dan 9010 door 9453.
 
 ## 4. Test 2 – Handmatige failover (stop van de primaire server)
 
