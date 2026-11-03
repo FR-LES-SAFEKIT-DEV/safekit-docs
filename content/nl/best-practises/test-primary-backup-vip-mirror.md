@@ -55,9 +55,8 @@ Wat u dus moet testen:
    → **Verwacht resultaat:** het virtuele IP-adres (VIP) verschijnt niet.
 3. `ping` vanaf een clientwerkstation **buiten het cluster** zowel de fysieke IP-adressen als het virtuele IP-adres (VIP).
    → **Verwacht resultaat:** alle drie `ping` commando's reageren (tenzij ze door firewalls worden geblokkeerd).
-4. Controleer de toegang via het virtuele IP-adres (VIP) met de SafeKit-mozaïek: ga vanuit een browser op de **externe** client naar `http://<VIP>:9010/safekit/mosaic.html` , voer vervolgens de **naam van** de spiegelmodule in en voer de test uit.
+4. Controleer de toegang via het virtuele IP-adres (VIP) met de SafeKit-mozaïek: maak vanuit een browser op de **externe** client verbinding met `http://<VIP>:9010/safekit/mosaic.html` (of gebruik poort 9453 als de SafeKit-webserver en -console zijn overgeschakeld naar HTTPS), voer vervolgens de **naam van de spiegelmodule** in en voer de test uit.
    → **Verwacht resultaat:** alle cellen van het mozaïek tonen de naam van de **primaire server** in één kleur: alle TCP-verbindingen naar het virtuele IP-adres (VIP) worden door de primaire server afgehandeld.
-   Als de SafeKit-webserver en -console zijn overgeschakeld naar HTTPS, vervang dan 9010 door 9453.
 
 ## 4. Test 2 – Handmatige failover (stop van de primaire server)
 

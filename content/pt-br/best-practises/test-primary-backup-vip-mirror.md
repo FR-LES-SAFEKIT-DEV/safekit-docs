@@ -55,9 +55,8 @@ Portanto, você precisa testar o seguinte:
    → **Resultado esperado:** o IP virtual (VIP) não aparece.
 3. A partir de uma estação de trabalho cliente **fora do cluster** , `ping` para ambos os endereços IP físicos e para o IP virtual (VIP).
    → **Resultado esperado:** todos os três comandos `ping` respondem (a menos que sejam filtrados por firewalls).
-4. Verifique o acesso através do IP Virtual (VIP) com o mosaico SafeKit: a partir de um navegador no cliente **externo** , conecte-se a `http://<VIP>:9010/safekit/mosaic.html` , insira o **nome do módulo** espelho e execute o teste.
+4. Verifique o acesso através do IP Virtual (VIP) com o mosaico SafeKit: a partir de um navegador no cliente **externo** , conecte-se a `http://<VIP>:9010/safekit/mosaic.html` (ou use a porta 9453 se o servidor web e o console do SafeKit estiverem configurados para HTTPS), insira o **nome do módulo** espelho e execute o teste.
    → **Resultado esperado:** todas as células do mosaico exibem o nome do **servidor primário** , em uma única cor: todas as conexões TCP com o IP Virtual (VIP) são atendidas pelo servidor primário.
-   Se o servidor web e o console do SafeKit foram alterados para HTTPS, substitua 9010 por 9453.
 
 ## 4. Teste 2 – Failover manual (parada do primário)
 
