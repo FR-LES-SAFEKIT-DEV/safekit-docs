@@ -58,6 +58,8 @@ What you therefore need to test:
 4. Check access through the Virtual IP (VIP) with the SafeKit mosaic: from a browser on the **external** client, connect to `http://<VIP>:9010/safekit/mosaic.html` (or use port 9453 if the SafeKit web server and console have been switched to HTTPS), then enter the mirror **module name** and run the test.
    → **Expected result:** all the cells of the mosaic display the name of the **primary server**, in a single color: all TCP connections to the Virtual IP (VIP) are served by the primary.
 
+![Test the virtual IP address of a SafeKit mirror with the mosaic](/wp-content/uploads/2024/03/appli-20.png)
+
 ## 4. Test 2 – Manual failover (stop of the primary)
 
 This test checks that the Virtual IP (VIP) follows the primary server during a failover, triggered by stopping the module on the primary.

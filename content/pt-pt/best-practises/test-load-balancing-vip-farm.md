@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/test-load-balancing-
 description: "Aprenda como testar o balanceamento de carga SafeKit em nós de cluster e verificar o failover IP virtual, o redirecionamento GARP e o comportamento da rede."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Princípios-chave, Pré-requisito: o mosaico SafeKit , Teste 1 – Distribuição de conexões, Teste 2 – Alteração do servidor de despacho, Teste 3 – Verificação do redirecionamento GARP com arp -a, Teste 4 – Verificação de ponta a ponta com Wireshark ( Windows ) ou tcpdump ( Linux ), Em quais estações de trabalho realizar os testes, Resumo dos resultados esperados, Solução de problemas"
+topics: "Princípios-chave, Pré-requisito: o mosaico SafeKit , Teste 1 – Distribuição de conexões, Teste 2 – Alteração do servidor de despacho, Teste 3 – Verificação do redirecionamento GARP com arp -a, Teste 4 – Verificação de ponta a ponta com Wireshark ( Windows ) ou tcpdump ( Linux ), Quais estações de trabalho usar para os testes, Resumo dos resultados esperados, Solução de problemas, Demonstração da solução SafeKit farm"
 ---
 
 # Testando o endereço IP virtual de balanceamento de carga em um cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit
@@ -55,7 +55,9 @@ O mosaico é uma página de teste fornecida pelo SafeKit . Ele abre várias cone
 
    Em HTTPS, use `https://<VIP>:9453/safekit/mosaic.html` , com a regra de balanceamento de carga na porta 9453.
 
-Assista ao vídeo de teste de mosaico na seção "[Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> ](/pt-pt/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ".
+![ Teste o endereço IP virtual de um <span class="notranslate farm-term" translate="no">farm</span> SafeKit com o mosaico ](/wp-content/uploads/2024/03/appli-19.png)
+
+Assista ao vídeo de teste de mosaico na seção " [ Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> ](/pt-pt/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ".
 
 ## 3. Teste 1 – Distribuição de conexões
 
@@ -113,10 +115,10 @@ Se houver um roteador entre o cliente e o <span class="notranslate farm-term" tr
 | Etapa | Onde capturar | Endereços MAC observados |
 |---|---|---|
 | 1. O cliente envia para o IP Virtual ( VIP ) | cliente | MAC do cliente → MAC do **servidor de despacho** |
-| 2. O servidor de despacho encaminha a conexão | servidor de despacho | MAC de despacho → MAC do **nó de processamento** |
-| 3. O nó de processamento recebe | nó de processamento | Despacho MAC → MAC do nó |
-| 4. O nó responde diretamente ao cliente | nó de processamento | MAC do nó → MAC do cliente |
-| 5. O cliente recebe a resposta | cliente | MAC do nó → MAC do cliente |
+| 2. O servidor de despacho encaminha a conexão. | servidor de despacho | Despacho MAC → MAC do **nó de processamento** |
+| 3. O nó de processamento recebe | nó de processamento | Despacho MAC → nó MAC |
+| 4. O nó responde diretamente ao cliente. | nó de processamento | MAC do nó → MAC do cliente |
+| 5. O cliente recebe a resposta. | cliente | MAC do nó → MAC do cliente |
 
 > Se a estação de trabalho do cliente estiver em uma sub-rede diferente da <span class="notranslate farm-term" translate="no">Farm</span> , o " MAC do cliente" visto nos nós <span class="notranslate farm-term" translate="no">Farm</span> será o endereço MAC do **gateway** (roteador) que conecta as duas sub-redes, e não o da estação de trabalho do cliente.
 
@@ -130,31 +132,31 @@ O comportamento depende do caminho de rede entre o cliente e o <span class="notr
 |---|---|
 | Cliente na **mesma sub-rede** que o <span class="notranslate farm-term" translate="no">Farm</span> | Atualização das tabelas ARP dos clientes pelo GARP (teste 3 possível) |
 | Cliente em uma **sub-rede diferente** (roteador, gateway, rede virtual do hipervisor) | Tratamento GARP pelo roteador ou gateway |
-| Máquina virtual cliente **em um hipervisor que também hospeda uma máquina virtual <span class="notranslate farm-term" translate="no">Farm</span>** | Comportamento do switch virtual do hipervisor, que também lida com comutação e roteamento internos |
+| Máquina virtual cliente **em um hipervisor que também hospeda uma máquina virtual <span class="notranslate farm-term" translate="no">Farm</span>** | Comportamento do switch virtual do hipervisor, que também lida com comutação e roteamento internos. |
 
 ## 8. Resumo dos resultados esperados
 
 | Teste | Ação | Resultado esperado |
 |---|---|---|
 | 1 | Todos os nós UP , mosaico | Todos os nós aparecem |
-| 2.2 | Um único nó foi iniciado | Somente este nó aparece |
-| 2.3 | Todos os nós iniciados | Todos os nós aparecem |
-| 2.4 | Servidor de despacho interrompido | Os nós restantes aparecem, sem interrupção duradoura |
-| 3 | `arp -a` antes e depois da parada | O endereço MAC associado ao IP Virtual ( VIP ) muda |
-| 4 | Captura Wireshark ou tcpdump antes e depois da parada | O cliente envia para o endereço MAC do novo servidor de despacho |
+| 2.2 | Um único nó foi iniciado. | Apenas este nó aparece |
+| 2.3 | Todos os nós foram iniciados. | Todos os nós aparecem |
+| 2.4 | Servidor de despacho parado | Os nós restantes aparecem, sem interrupção duradoura. |
+| 3 | `arp -a` antes e depois da parada | O endereço MAC associado ao IP Virtual ( VIP ) muda. |
+| 4 | Captura Wireshark ou tcpdump antes e depois da parada. | O cliente envia dados para o endereço MAC do novo servidor de despacho. |
 
 ## 9. Resolução de problemas
 
-- **Mapas de bits de balanceamento de carga:** para obter detalhes sobre o teste e os mapas de bits de balanceamento de carga, consulte o Guia do Usuário SafeKit 8.2, seção 4.3.5 "[Testar balanceamento de carga TCP em um endereço IP virtual ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ".
+- **Mapas de bits de balanceamento de carga:** para obter detalhes sobre o teste e os mapas de bits de balanceamento de carga, consulte o Guia do Usuário SafeKit 8.2, seção 4.3.5 " [ Testar balanceamento de carga TCP em um endereço IP virtual ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ".
 - **O mosaico deixa de responder após a parada do servidor de despacho:** GARP não está sendo considerado por um dispositivo no caminho (roteador, gateway, switch virtual). Verifique o tratamento GARP com sua equipe de rede.
-- **Envio periódico de GARP :** o atributo `arpreroute="on"` da seção `<vip>` (com `arpinterval` e `arpelapse` ) envia GARPs regularmente nos VIPs. Consulte o Guia do Usuário, seção 13.6.4 "[ `<vip>` syntax ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
-- **Diagnóstico de IP Virtual ( VIP ) ↔ Resolução MAC :** consulte o Guia do Usuário, seção 7.24 "[Solução de problemas IP Virtual ( VIP ) ↔ Resolução MAC ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " e seção 7.15 "[Módulo <span class="notranslate farm-term" translate="no">Farm</span> UP (Pronto), mas com problema de balanceamento de carga em um <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+- **Envio periódico de GARP :** o atributo `arpreroute="on"` da seção `<vip>` (com `arpinterval` e `arpelapse` ) envia GARPs regularmente nos VIPs. Consulte o Guia do Usuário, seção 13.6.4 " [ `<vip>` syntax ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
+- **Diagnóstico de IP Virtual ( VIP ) ↔ Resolução MAC :** consulte o Guia do Usuário, seção 7.24 " [ Solução de problemas IP Virtual ( VIP ) ↔ Resolução MAC ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " e seção 7.15 " [ Módulo <span class="notranslate farm-term" translate="no">Farm</span> UP ( Ready ), mas com problema de balanceamento de carga em um <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
 
 ## Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-pt-pt  %}}
 
-Para failover primário/backup com um endereço IP virtual, consulte [Testando o endereço IP virtual de um cluster espelho SafeKit ](/pt-pt/best-practises/test-primary-backup-vip-mirror/) .
+Para failover primário/backup com um endereço IP virtual, consulte [ Testando o endereço IP virtual de um cluster mirror SafeKit ](/pt-pt/best-practises/test-primary-backup-vip-mirror/) .
 
 {{%  insert-safekit-4-buttons-pt-pt  %}}

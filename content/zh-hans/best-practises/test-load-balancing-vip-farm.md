@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/test-load-balancin
 description: "了解如何测试SafeKit在集群节点间的负载均衡，并验证虚拟IP故障转移、 GARP重路由和网络行为。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "关键原则，前提条件： SafeKit马赛克，测试 1 – 连接分布，测试 2 – 调度服务器变更，测试 3 – 使用 arp -a 检查GARP重路由，测试 4 – 使用Wireshark （ Windows ）或tcpdump （ Linux ）进行端到端检查，测试工作站，预期结果总结，故障排除"
+topics: "关键原则、前提条件： SafeKit马赛克、测试 1 – 连接分布、测试 2 – 切换调度服务器、测试 3 – 使用 arp -a 检查GARP重路由、测试 4 – 使用Wireshark （ Windows ）或tcpdump （ Linux ）进行端到端检查、测试工作站、预期结果总结、故障排除、 SafeKit farm解决方案演示"
 ---
 
 # 在SafeKit <span class="notranslate farm-term" translate="no">farm</span>中测试负载均衡虚拟IP地址
@@ -55,7 +55,9 @@ topics: "关键原则，前提条件： SafeKit马赛克，测试 1 – 连接�
 
    在 HTTPS 中，使用`https://<VIP>:9453/safekit/mosaic.html` ，并在端口 9453 上启用负载均衡规则。
 
-观看“[ SafeKit <span class="notranslate farm-term" translate="no">farm</span>解决方案演示](/zh-hans/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) 。
+![使用 mosaic 测试SafeKit <span class="notranslate farm-term" translate="no">farm</span>的虚拟IP地址](/wp-content/uploads/2024/03/appli-19.png)
+
+观看“ [ SafeKit <span class="notranslate farm-term" translate="no">farm</span>解决方案演示](/zh-hans/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) 。
 
 ## 3. 测试 1 – 连接分布
 
@@ -110,13 +112,13 @@ topics: "关键原则，前提条件： SafeKit马赛克，测试 1 – 连接�
 
 **对于同一个SYN数据包，您应该观察以下几点：**
 
-|步骤|捕获位置|观察到的MAC地址|
+| 步 | 在哪里拍摄 | 观察到的MAC地址 |
 |---|---|---|
-| 1. 客户端向虚拟IP ( VIP ) 发送|客户端|客户端MAC →**调度服务器**的MAC |
-| 2. 调度服务器转发连接|调度服务器|调度MAC →**处理节点**的MAC |
-| 3. 处理节点接收|处理节点|调度MAC → 节点MAC |
-| 4. 节点直接响应客户端|处理节点|节点MAC地址 → 客户端MAC地址|
-| 5. 客户端收到响应|客户端|节点MAC地址 → 客户端MAC |
+| 1. 客户端向虚拟IP （ VIP ）发送数据 | 客户 | 客户端MAC →**调度服务器**的MAC |
+| 2. 调度服务器转发连接 | 调度服务器 | 调度MAC →**处理节点**的MAC |
+| 3. 处理节点接收 | 处理节点 | 调度MAC → 节点MAC |
+| 4. 节点直接响应客户端 | 处理节点 | 节点MAC → 客户端MAC |
+| 5. 客户收到回复 | 客户 | 节点MAC → 客户端MAC |
 
 > 如果客户端工作站与<span class="notranslate farm-term" translate="no">Farm</span>位于不同的子网中，则在<span class="notranslate farm-term" translate="no">Farm</span>节点上看到的“客户端MAC ”是连接这两个子网的**网关**（路由器）的MAC地址，而不是客户端工作站的 MAC 地址。
 
@@ -126,35 +128,35 @@ topics: "关键原则，前提条件： SafeKit马赛克，测试 1 – 连接�
 
 该行为取决于客户端和<span class="notranslate farm-term" translate="no">Farm</span>之间的网络路径。请针对与您的架构相关的每种客户端类型运行测试 1 和 2：
 
-|客户位置|测试内容|
+| 客户地点 | 测试内容 |
 |---|---|
-|客户端与<span class="notranslate farm-term" translate="no">Farm</span>位于**同一子网**|通过GARP更新客户端的ARP表（测试 3 可行） |
-|客户端位于**不同的子网**（路由器、网关、虚拟机管理程序虚拟网络） |路由器或网关的GARP处理|
-|客户端虚拟机**运行在同时托管<span class="notranslate farm-term" translate="no">Farm</span>虚拟机的虚拟机管理程序上**|虚拟机管理程序的虚拟交换机的行为，该虚拟交换机还处理内部交换和路由|
+| 客户端与<span class="notranslate farm-term" translate="no">Farm</span>位于**同一子网** | 通过GARP更新客户端的ARP表（测试 3 可行） |
+| 客户端位于**不同的子网**（路由器、网关、虚拟机管理程序虚拟网络）中 | 路由器或网关的GARP处理 |
+| 客户端虚拟机**位于同时托管<span class="notranslate farm-term" translate="no">Farm</span>虚拟机的虚拟机管理程序上** | 虚拟机管理程序虚拟交换机的行为，该交换机还负责处理内部交换和路由。 |
 
 ## 8. 预期结果总结
 
-|测试|操作|预期结果|
+| 测试 | 行动 | 预期结果 |
 |---|---|---|
-| 1 |所有节点UP ，马赛克|所有节点都出现|
-| 2.2 |单个节点已启动|仅显示此节点|
-| 2.3 |所有节点已启动|所有节点均已显示|
-| 2.4 |调度服务器已停止|其余节点已出现，无持续中断|
-| 3 |停止前后的`arp -a` |与虚拟IP ( VIP ) 关联的MAC地址发生变化|
-| 4 |停止前后使用Wireshark或tcpdump进行抓包|客户端向新调度服务器的MAC地址发送数据包|
+| 1 | 所有节点UP ，马赛克 | 所有节点都出现 |
+| 2.2 | 单个节点启动 | 仅显示此节点 |
+| 2.3 | 所有节点已启动 | 所有节点都出现 |
+| 2.4 | 调度服务器已停止 | 其余节点出现，没有持续中断。 |
+| 3 | `arp -a`在停止前后 | 与虚拟IP （ VIP ）关联的MAC地址发生变化 |
+| 4 | 停止前后使用Wireshark或tcpdump捕获数据包 | 客户端向新调度服务器的MAC地址发送消息 |
 
 ## 9. 故障排除
 
-- **负载均衡位图：**有关测试和负载均衡位图的详细信息，请参阅SafeKit 8.2 用户指南第 4.3.5 节“[在虚拟IP地址上测试TCP负载均衡](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)”。
+- **负载均衡位图：**有关测试和负载均衡位图的详细信息，请参阅SafeKit 8.2 用户指南第 4.3.5 节“ [在虚拟IP地址上测试TCP负载均衡](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ”。
 - **调度服务器停止后，马赛克网络不再响应：**路径上的某个设备（路由器、网关、虚拟交换机）未启用GARP 。请与您的网络团队检查GARP处理情况。
-- **定期发送GARP ：** `<vip>`部分的`arpreroute="on"`属性（带有`arpinterval`和`arpelapse` ）会定期在 VIP 上发送GARPs 。请参阅用户指南第 13.6.4 节 [ `<vip>`语法](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) 。
-- **诊断虚拟IP ( VIP ) ↔ MAC解析：**请参阅用户指南第 7.24 节“[虚拟IP ( VIP ) ↔ MAC地址解析故障排除](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP)”和第 7.15 节“[<span class="notranslate farm-term" translate="no">Farm</span>模块UP（就绪），但<span class="notranslate farm-term" translate="no">Farm</span>中存在负载均衡问题](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>)”。
+- **定期发送GARP ：** `<vip>`部分的`arpreroute="on"`属性（带有`arpinterval`和`arpelapse` ）会定期在 VIP 上发送GARPs 。请参阅用户指南第 13.6.4 节“ [ `<vip>`语法](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ”。
+- **诊断虚拟IP ( VIP ) ↔ MAC解析：**请参阅用户指南第 7.24 节“ [虚拟IP ( VIP ) ↔ MAC解析故障排除](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) ”，以及第 7.15 节“ [ <span class="notranslate farm-term" translate="no">Farm</span>模块UP （ Ready ）但<span class="notranslate farm-term" translate="no">Farm</span>中负载均衡存在问题](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ”。
 
 ## SafeKit <span class="notranslate farm-term" translate="no">farm</span>解决方案演示{#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-zh-hans  %}}
 
-对于使用虚拟IP地址的主/备份故障转移，请参阅[测试SafeKit镜像集群的虚拟IP地址](/zh-hans/best-practises/test-primary-backup-vip-mirror/) 。
+对于使用虚拟IP地址的主/备份故障转移，请参阅[测试SafeKit mirror集群的虚拟IP地址](/zh-hans/best-practises/test-primary-backup-vip-mirror/) 。
 
 {{%  insert-safekit-4-buttons-zh-hans  %}}

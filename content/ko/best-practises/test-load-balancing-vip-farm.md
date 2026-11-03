@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/test-load-balancing-vip
 description: "SafeKit 클러스터 노드 간 로드 밸런싱을 테스트하고 가상 IP 장애 조치, GARP 재라우팅 및 네트워크 동작을 검증하는 방법을 알아보세요."
 category: "best-practises"
 lang: "ko"
-topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연결 분산, 테스트 2 - 디스패칭 서버 변경, 테스트 3 - arp -a 명령어를 사용한 GARP 재라우팅 확인, 테스트 4 - Wireshark ( Windows ) 또는 tcpdump ( Linux )를 사용한 엔드 투 엔드 검사, 테스트에 사용할 워크스테이션, 예상 결과 요약, 문제 해결"
+topics: "핵심 원칙, 필수 조건: SafeKit 모자이크 구성, 테스트 1 – 연결 분산, 테스트 2 – 디스패칭 서버 변경, 테스트 3 – arp -a 명령어를 사용한 GARP 재라우팅 확인, 테스트 4 – Wireshark ( Windows ) 또는 tcpdump ( Linux )를 사용한 엔드투엔드 검사, 테스트 대상 워크스테이션, 예상 결과 요약, 문제 해결, SafeKit farm 솔루션 시연"
 ---
 
 # SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터에서 로드 밸런싱 가상 IP 주소 테스트
@@ -55,7 +55,9 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 
    HTTPS를 사용하는 경우, `https://<VIP>:9453/safekit/mosaic.html` 사용하고, 9453번 포트에 로드 밸런싱 규칙을 적용하십시오.
 
-[SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 데모](/ko/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) 섹션의 모자이크 테스트 비디오를 시청하세요.
+![ 모자이크 이미지를 사용하여 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 의 가상 IP 주소를 테스트합니다 ](/wp-content/uploads/2024/03/appli-19.png)
+
+[ SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 데모 ](/ko/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) 섹션에 있는 모자이크 테스트 비디오를 시청하세요.
 
 ## 3. 테스트 1 – 연결 분포
 
@@ -110,13 +112,13 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 
 **동일한 SYN 패킷에 대해 관찰해야 할 사항은 다음과 같습니다.**
 
-| 단계 | 캡처 위치 | 관찰된 MAC 주소 |
+| 단계 | 어디에서 촬영할 수 있나요? | 관찰된 MAC 주소 |
 |---|---|---|
-| 1. 클라이언트가 가상 IP ( VIP )로 전송 | 클라이언트 | 클라이언트 MAC → **전송 서버** 의 MAC |
-| 2. 디스패칭 서버는 연결을 전달합니다 | 디스패칭 서버 | 디스패칭 MAC → **처리 노드** 의 MAC |
-| 3. 처리 노드는 수신합니다 | 처리 노드 | 디스패칭 MAC → 노드 MAC |
-| 4. 노드가 클라이언트에 직접 응답합니다 | 처리 노드 | 노드 MAC 주소 → 클라이언트 MAC |
-| 5. 클라이언트가 응답을 수신합니다 | 클라이언트 | 노드 MAC 주소 → 클라이언트 MAC |
+| 1. 클라이언트가 가상 IP ( VIP )로 전송합니다. | 고객 | 클라이언트 MAC → **디스패칭 서버** 의 MAC |
+| 2. 디스패칭 서버는 연결을 전달합니다. | 디스패칭 서버 | 디스패칭 MAC → **처리 노드** 의 MAC |
+| 3. 처리 노드는 수신합니다. | 처리 노드 | MAC 주소 전송 → 노드 MAC 주소 |
+| 4. 노드는 클라이언트에 직접 응답합니다. | 처리 노드 | 노드 MAC 주소 → 클라이언트 MAC |
+| 5. 고객은 응답을 받습니다. | 고객 | 노드 MAC 주소 → 클라이언트 MAC |
 
 > 클라이언트 워크스테이션이 <span class="notranslate farm-term" translate="no">Farm</span> 과 다른 서브넷에 있는 경우, <span class="notranslate farm-term" translate="no">Farm</span> 노드에서 보이는 "클라이언트 MAC "은 클라이언트 워크스테이션의 MAC 주소가 아니라 두 서브넷을 연결하는 **게이트웨이** (라우터)의 MAC 주소입니다.
 
@@ -126,35 +128,35 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 
 동작은 클라이언트와 <span class="notranslate farm-term" translate="no">Farm</span> 간의 네트워크 경로에 따라 달라집니다. 아키텍처에 맞는 각 클라이언트 유형별로 테스트 1과 2를 실행하십시오.
 
-| 클라이언트 위치 | 테스트에서 확인하는 내용 |
+| 고객 위치 | 테스트에서 확인하는 사항 |
 |---|---|
-| 클라이언트가 <span class="notranslate farm-term" translate="no">Farm</span> 과 **동일한 서브넷** 에 있음 | GARP 를 통한 클라이언트의 ARP 테이블 업데이트 (테스트 3 가능) |
-| 클라이언트가 **다른 서브넷** (라우터, 게이트웨이, 하이퍼바이저 가상 네트워크)에 있음 | 라우터 또는 게이트웨이에 의한 GARP 처리 |
-| **<span class="notranslate farm-term" translate="no">Farm</span> VM을 호스팅하는 하이퍼바이저 상의** 클라이언트 VM | 내부 스위칭 및 라우팅을 처리하는 하이퍼바이저의 가상 스위치 동작 |
+| <span class="notranslate farm-term" translate="no">Farm</span> 과 **동일한 서브넷** 에 있는 클라이언트 | GARP 를 이용한 클라이언트 ARP 테이블 업데이트 (테스트 3 가능) |
+| 클라이언트가 **다른 서브넷** (라우터, 게이트웨이, 하이퍼바이저 가상 네트워크)에 있습니다. | 라우터 또는 게이트웨이에 의한 GARP 처리 |
+| **<span class="notranslate farm-term" translate="no">Farm</span> VM을 호스팅하는 하이퍼바이저에서 실행** 되는 클라이언트 VM | 하이퍼바이저의 가상 스위치 동작 방식 (가상 스위치는 내부 스위칭 및 라우팅도 처리함) |
 
 ## 8. 예상 결과 요약
 
-| 테스트 | 조치 | 예상 결과 |
+| 시험 | 행동 | 예상 결과 |
 |---|---|---|
 | 1 | 모든 노드가 UP , 모자이크 | 모든 노드가 나타납니다 |
-| 2.2 | 단일 노드가 시작되었습니다 | 이 노드만 표시됩니다 |
-| 2.3 | 모든 노드가 시작되었습니다 | 모든 노드가 표시됩니다 |
-| 2.4 | 디스패칭 서버가 중지되었습니다 | 나머지 노드들이 중단 없이 나타납니다 |
-| 3 | 정지 전후의 `arp -a` | 가상 IP ( VIP )와 연결된 MAC 주소가 변경됩니다 |
-| 4 | 중지 전후의 Wireshark 또는 tcpdump 캡처 | 클라이언트는 새로운 디스패칭 서버의 MAC 주소로 패킷을 전송합니다 |
+| 2.2 | 단일 노드가 시작되었습니다. | 이 노드만 나타납니다. |
+| 2.3 | 모든 노드가 시작되었습니다 | 모든 노드가 나타납니다 |
+| 2.4 | 디스패칭 서버가 중지되었습니다 | 나머지 노드들이 아무런 중단 없이 나타납니다. |
+| 3 | 정지 전후의 `arp -a` | 가상 IP ( VIP )와 연결된 MAC 주소가 변경됩니다. |
+| 4 | Wireshark 또는 tcpdump 사용하여 중단 전후의 패킷을 캡처합니다. | 클라이언트는 새로운 디스패칭 서버의 MAC 주소로 데이터를 전송합니다. |
 
 ## 9. 문제 해결
 
-- **로드 밸런싱 비트맵:** 테스트 및 로드 밸런싱 비트맵에 대한 자세한 내용은 SafeKit 8.2 사용자 가이드 4.3.5절 "[가상 IP 주소에서 TCP 로드 밸런싱 테스트 ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) "를 참조하십시오.
+- **로드 밸런싱 비트맵:** 테스트 및 로드 밸런싱 비트맵에 대한 자세한 내용은 SafeKit 8.2 사용자 가이드의 4.3.5절 " [ 가상 IP 주소에서 TCP 로드 밸런싱 테스트 ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) "를 참조하십시오.
 - **디스패칭 서버가 중지된 후 모자이크가 더 이상 응답하지 않습니다.** 경로상의 장치(라우터, 게이트웨이, 가상 스위치)에서 GARP 고려하지 않는 것 같습니다. 네트워크 팀에 GARP 처리 설정을 확인하십시오.
-- **주기적인 GARP 전송:** `<vip>` 섹션의 `arpreroute="on"` 속성( `arpinterval` 및 `arpelapse` 포함)은 VIP에 대해 정기적으로 GARPs 전송합니다. 사용자 가이드 13.6.4절 "[ `<vip>` 구문 ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) "을 참조하십시오.
-- **가상 IP ( VIP ) ↔ MAC 주소 확인 문제 진단:** 사용자 가이드 7.24절 "[가상 IP ( VIP ) ↔ MAC 주소 확인 문제 해결 ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " 및 7.15절 "[ <span class="notranslate farm-term" translate="no">Farm</span> 모듈은 UP (준비됨)이지만 <span class="notranslate farm-term" translate="no">Farm</span> 의 로드 밸런싱 문제 발생 ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) "을 참조하십시오.
+- **주기적인 GARP 전송:** `<vip>` 섹션의 `arpreroute="on"` 속성( `arpinterval` 및 `arpelapse` 포함)은 VIP에 대해 정기적으로 GARPs 전송합니다. 사용자 가이드 13.6.4절 " [ `<vip>` 구문 ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) "을 참조하십시오.
+- **가상 IP ( VIP ) ↔ MAC 주소 확인 문제 진단:** 사용자 가이드 7.24절 " [ 가상 IP ( VIP ) ↔ MAC 주소 확인 문제 해결 ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " 및 7.15절 " [ <span class="notranslate farm-term" translate="no">Farm</span> 모듈이 UP ( Ready ) 상태이지만 <span class="notranslate farm-term" translate="no">Farm</span> 의 로드 밸런싱에 문제가 있는 경우 ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) "를 참조하십시오.
 
 ## SafeKit <span class="notranslate farm-term" translate="no">farm</span> 솔루션 시연 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ko  %}}
 
-가상 IP 주소를 사용한 기본/백업 페일오버에 대해서는 [ SafeKit 미러 클러스터의 가상 IP 주소 테스트 ](/ko/best-practises/test-primary-backup-vip-mirror/) 참조하세요.
+가상 IP 주소를 사용한 기본/백업 페일오버에 대해서는 [ SafeKit mirror 클러스터의 가상 IP 주소 테스트 ](/ko/best-practises/test-primary-backup-vip-mirror/) 참조하세요.
 
 {{%  insert-safekit-4-buttons-ko  %}}

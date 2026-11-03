@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/test-load-balancing-vip
 description: "تعرف على كيفية اختبار موازنة الأحمال SafeKit عبر عقد المجموعة والتحقق من تجاوز الفشل IP الظاهري، وإعادة توجيه GARP ، وسلوك الشبكة."
 category: "best-practises"
 lang: "ar"
-topics: "المبادئ الأساسية، المتطلبات الأساسية: مجموعة أدوات SafeKit ، الاختبار 1 - توزيع الاتصالات، الاختبار 2 - تغيير خادم الإرسال، الاختبار 3 - التحقق من إعادة توجيه GARP باستخدام arp -a، الاختبار 4 - فحص شامل باستخدام Wireshark ( Windows ) أو tcpdump ( Linux )، محطات العمل التي سيتم الاختبار منها، ملخص النتائج المتوقعة، استكشاف الأخطاء وإصلاحها"
+topics: "المبادئ الأساسية، المتطلبات الأساسية: مجموعة SafeKit ، الاختبار 1 - توزيع الاتصالات، الاختبار 2 - تغيير خادم الإرسال، الاختبار 3 - التحقق من إعادة توجيه GARP باستخدام arp -a، الاختبار 4 - فحص شامل باستخدام Wireshark ( Windows ) أو tcpdump ( Linux )، محطات العمل التي سيتم الاختبار منها، ملخص النتائج المتوقعة، استكشاف الأخطاء وإصلاحها، عرض توضيحي لحل SafeKit farm"
 ---
 
 # اختبار عنوان IP الظاهري لموازنة الأحمال في مجموعة <span class="notranslate farm-term" translate="no">farm</span> SafeKit
@@ -55,7 +55,9 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 
    في HTTPS، استخدم `https://<VIP>:9453/safekit/mosaic.html` ، مع قاعدة موازنة التحميل على المنفذ 9453.
 
-شاهد فيديو اختبار الفسيفساء في قسم "[عرض توضيحي لحل <span class="notranslate farm-term" translate="no">farm</span> SafeKit ](/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ".
+![ اختبار عنوان IP الظاهري <span class="notranslate farm-term" translate="no">farm</span> SafeKit باستخدام الفسيفساء ](/wp-content/uploads/2024/03/appli-19.png)
+
+شاهد فيديو اختبار الفسيفساء في قسم " [ عرض توضيحي لحل <span class="notranslate farm-term" translate="no">farm</span> SafeKit ](/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ".
 
 ## 3. الاختبار 1 – توزيع الاتصالات
 
@@ -90,7 +92,7 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 
 بالإضافة إلى الاختبار 4، يتحقق هذا الاختبار بالفعل GARP : تقوم بتدوين عنوان MAC الخاص بخادم الإرسال قبل إيقافه، ثم تتحقق من أن ارتباط عنوان IP الظاهري ( VIP ) / MAC قد تغير بعد ذلك.
 
-لا يمكن إجراء هذا الاختبار إلا إذا كانت محطة عمل العميل التي تعرض الفسيفساء موجودة في **نفس الشبكة الفرعية لعنوان IP** الخاصة <span class="notranslate farm-term" translate="no">Farm</span> .
+لا يمكن إجراء هذا الاختبار إلا إذا كانت محطة عمل العميل التي تعرض الفسيفساء موجودة في **نفس الشبكة الفرعية لعنوان IP** الخاص <span class="notranslate farm-term" translate="no">Farm</span> .
 
 إذا كان هناك جهاز توجيه بين العميل <span class="notranslate farm-term" translate="no">Farm</span> ، فلن يحتوي جدول ARP الخاص بالعميل على عنوان IP الظاهري ( VIP )، بل على عنوان البوابة المستخدمة للوصول إلى شبكة <span class="notranslate farm-term" translate="no">Farm</span> . في هذه الحالة، يُرجى مراجعة جدول ARP الخاص بجهاز التوجيه أو البوابة مع فريق الشبكة.
 
@@ -110,13 +112,13 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 
 **ما يجب عليك ملاحظته لنفس حزمة SYN :**
 
-| الخطوة | مكان الالتقاط | عناوين MAC المرصودة |
+| خطوة | أين يتم التقاط الصور | عناوين MAC المرصودة |
 |---|---|---|
-| 1. يرسل العميل إلى عنوان IP الظاهري ( VIP ) | العميل | MAC الخاص بالعميل → MAC الخاص **بخادم الإرسال** |
-| 2. يقوم خادم الإرسال بإعادة توجيه الاتصال | خادم الإرسال | MAC للإرسال → MAC **لعقدة المعالجة** |
-| 3. تستقبل عقدة المعالجة | عقدة المعالجة | MAC للإرسال → عنوان MAC للعقدة |
-| 4. تستجيب العقدة مباشرة للعميل | عقدة المعالجة | عنوان MAC للعقدة → MAC للعميل |
-| 5. يتلقى العميل الرد | العميل | عنوان MAC للعقدة → MAC للعميل |
+| 1. يرسل العميل إلى IP الظاهري ( VIP ) | عميل | MAC الخاص بالعميل → MAC الخاص **بخادم الإرسال** |
+| 2. يقوم خادم الإرسال بإعادة توجيه الاتصال | خادم الإرسال | إرسال MAC → MAC **لعقدة المعالجة** |
+| 3. تستقبل عقدة المعالجة | عقدة المعالجة | إرسال MAC → عنوان MAC للعقدة |
+| 4. تستجيب العقدة مباشرةً للعميل | عقدة المعالجة | عنوان MAC للعقدة → MAC للعميل |
+| 5. يتلقى العميل الرد | عميل | عنوان MAC للعقدة → MAC للعميل |
 
 > إذا كانت محطة عمل العميل في شبكة فرعية مختلفة عن <span class="notranslate farm-term" translate="no">Farm</span> ، فإن " MAC الخاص بالعميل" الذي يظهر على عقد <span class="notranslate farm-term" translate="no">Farm</span> هو عنوان MAC الخاص **بالبوابة** (الموجه) التي تربط الشبكتين الفرعيتين، وليس عنوان MAC الخاص بمحطة عمل العميل.
 
@@ -126,35 +128,35 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 
 يعتمد السلوك على مسار الشبكة بين العميل <span class="notranslate farm-term" translate="no">Farm</span> . قم بتشغيل الاختبارين 1 و2 من كل نوع من أنواع العملاء ذوي الصلة ببنية نظامك:
 
-| موقع العميل | ما الذي يتحقق منه الاختبار |
+| موقع العميل | ما الذي يفحصه الاختبار |
 |---|---|
-| العميل في **نفس الشبكة الفرعية** مثل <span class="notranslate farm-term" translate="no">Farm</span> | تحديث جداول ARP الخاصة بالعملاء بواسطة GARP (الاختبار 3 ممكن) |
-| عميل في **شبكة فرعية مختلفة** (موجّه، بوابة، شبكة افتراضية للمشرف) | معالجة GARP بواسطة الموجّه أو البوابة |
-| جهاز العميل **الظاهري على برنامج إدارة الأجهزة الظاهرية الذي يستضيف أيضًا جهاز <span class="notranslate farm-term" translate="no">Farm</span>** | سلوك المحول الظاهري لبرنامج إدارة الأجهزة الظاهرية، والذي يتعامل أيضًا مع التبديل والتوجيه الداخليين |
+| العميل موجود في **نفس الشبكة الفرعية** مثل <span class="notranslate farm-term" translate="no">Farm</span> | تحديث جداول ARP الخاصة بالعملاء بواسطة GARP (الاختبار 3 ممكن) |
+| عميل في **شبكة فرعية مختلفة** (جهاز توجيه، بوابة، شبكة افتراضية للمشرف) | معالجة بروتوكول GARP بواسطة جهاز التوجيه أو البوابة |
+| جهاز افتراضي للعميل **على برنامج إدارة الأجهزة الافتراضية الذي يستضيف أيضًا جهازًا افتراضيًا <span class="notranslate farm-term" translate="no">Farm</span>** | سلوك المحول الظاهري للمشرف، والذي يتولى أيضًا عمليات التبديل والتوجيه الداخلية. |
 
 ## 8. ملخص النتائج المتوقعة
 
-| اختبار | إجراء | النتيجة المتوقعة |
+| امتحان | فعل | النتيجة المتوقعة |
 |---|---|---|
 | 1 | جميع العقد UP ، فسيفساء | تظهر جميع العقد |
-| 2.2 | تم بدء تشغيل عقدة واحدة | تظهر هذه العقدة فقط |
+| 2.2 | بدأت عقدة واحدة | تظهر هذه العقدة فقط |
 | 2.3 | تم تشغيل جميع العقد | تظهر جميع العقد |
-| 2.4 | توقف خادم الإرسال | تظهر العقد المتبقية، دون انقطاع دائم |
-| 3 | `arp -a` قبل وبعد الإيقاف | يتغير عنوان MAC المرتبط بعنوان IP الظاهري ( VIP ) |
-| 4 | التقاط بيانات Wireshark أو tcpdump قبل وبعد الإيقاف | يرسل العميل إلى عنوان MAC الخاص بخادم الإرسال الجديد |
+| 2.4 | تم إيقاف خادم الإرسال | تظهر العقد المتبقية، دون أي انقطاع دائم. |
+| 3 | `arp -a` قبل وبعد التوقف | يتغير عنوان MAC المرتبط بعنوان IP الظاهري ( VIP ). |
+| 4 | قم بتسجيل البيانات Wireshark أو tcpdump قبل وبعد عملية الإيقاف | يرسل العميل إلى عنوان MAC الخاص بخادم الإرسال الجديد |
 
 ## 9. استكشاف الأخطاء وإصلاحها
 
-- **خرائط موازنة الأحمال:** للحصول على تفاصيل حول الاختبار وخرائط موازنة الأحمال، راجع دليل مستخدم SafeKit 8.2، القسم 4.3.5 "[اختبار موازنة أحمال TCP على عنوان IP افتراضي ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ".
+- **خرائط موازنة الأحمال:** للحصول على تفاصيل حول الاختبار وخرائط موازنة الأحمال، راجع دليل مستخدم SafeKit 8.2، القسم 4.3.5 " [ اختبار موازنة أحمال TCP على عنوان IP افتراضي ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ".
 - **لا يستجيب نظام الفسيفساء بعد توقف خادم الإرسال:** لا يأخذ الجهاز الموجود على المسار (الموجه، البوابة، المحول الظاهري) GARP في الحسبان. يُرجى مراجعة فريق الشبكة لديكم بخصوص معالجة بروتوكول GARP .
-- **إرسال GARP دوريًا:** تقوم السمة `arpreroute="on"` في قسم `<vip>` (مع `arpinterval` و `arpelapse` ) بإرسال GARPs بانتظام على عناوين IP الافتراضية (VIPs). راجع دليل المستخدم، القسم 13.6.4 "[ صيغة `<vip>` ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
-- **تشخيص مشكلة حل عنوان IP الظاهري ( VIP ) ↔ MAC :** راجع دليل المستخدم، القسم 7.24 "[استكشاف أخطاء حل عنوان IP الظاهري ( VIP ) ↔ MAC وإصلاحها ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) "، والقسم 7.15 "[وحدة <span class="notranslate farm-term" translate="no">Farm</span> UP (جاهزة) ولكن هناك مشكلة في موازنة الأحمال في <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+- **إرسال GARP دوريًا:** تقوم السمة `arpreroute="on"` في قسم `<vip>` (مع `arpinterval` و `arpelapse` ) بإرسال GARPs بانتظام على عناوين IP الافتراضية (VIPs). راجع دليل المستخدم، القسم 13.6.4 " [ صيغة `<vip>` ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
+- **تشخيص مشكلة حل عنوان IP الظاهري ( VIP ) ↔ MAC :** راجع دليل المستخدم، القسم 7.24 " [ استكشاف أخطاء حل عنوان IP الظاهري ( VIP ) ↔ MAC وإصلاحها ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) "، والقسم 7.15 " [ وحدة <span class="notranslate farm-term" translate="no">Farm</span> UP ( Ready ) ولكن هناك مشكلة في موازنة الأحمال في <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
 
 ## عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ar  %}}
 
-للحصول على معلومات حول تجاوز الفشل الأساسي/الاحتياطي باستخدام عنوان IP افتراضي، انظر [اختبار عنوان IP الافتراضي لمجموعة مرايا SafeKit ](/ar/best-practises/test-primary-backup-vip-mirror/) .
+للحصول على معلومات حول تجاوز الفشل الأساسي/الاحتياطي باستخدام عنوان IP افتراضي، انظر [ اختبار عنوان IP الافتراضي لمجموعة mirror SafeKit ](/ar/best-practises/test-primary-backup-vip-mirror/) .
 
 {{%  insert-safekit-4-buttons-ar  %}}

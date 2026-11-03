@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/test-load-balancing-vip
 description: "SafeKit負荷分散をクラスタノード間でテストし、仮想IPのフェイルオーバー、 GARPルーティング変更、およびネットワーク動作を確認する方法を学びましょう。"
 category: "best-practises"
 lang: "ja"
-topics: "主要原則、前提条件： SafeKitモザイク、テスト1 – 接続の分散、テスト2 – ディスパッチサーバーの変更、テスト3 – arp -aによるGARPリルーティングの確認、テスト4 – Wireshark （ Windows ）またはtcpdump （ Linux ）によるエンドツーエンドチェック、テストに使用するワークステーション、期待される結果の概要、トラブルシューティング"
+topics: "主要原則、前提条件： SafeKitモザイク、テスト1 – 接続の分散、テスト2 – ディスパッチサーバーの変更、テスト3 – arp -aによるGARPリルーティングの確認、テスト4 – Wireshark （ Windows ）またはtcpdump （ Linux ）によるエンドツーエンドチェック、テストに使用するワークステーション、期待される結果の概要、トラブルシューティング、 SafeKit farmソリューションのデモンストレーション"
 ---
 
 # SafeKit <span class="notranslate farm-term" translate="no">farm</span>クラスタにおけるロードバランシング仮想IPアドレスのテスト
@@ -18,8 +18,8 @@ topics: "主要原則、前提条件： SafeKitモザイク、テスト1 – 接
 - 仮想IP （ VIP ）は、 <span class="notranslate farm-term" translate="no">Farm</span>の各ノードでローカルに設定されます。つまり、ノード上で<span class="notranslate farm-term" translate="no">Farm</span>が起動される際に、そのアドレスのネットワークカード上で、物理IPアドレスのエイリアスとして設定されます。
 - 単一のノードである**ディスパッチングサーバーは**、仮想IP （ VIP ）（ `vmac_directed`構成、 SafeKitデフォルト）のネットワークトラフィックを受信します。そのMACアドレスは、 ARPテーブル（ルーター、ゲートウェイ、同じサブネット内のクライアント）で仮想IP （ VIP ）に関連付けられているものです。
 - このノードのカーネルフィルタは、パケットの**宛先MACアドレスを処理ノードのMACアドレスに書き換える**ことで、 TCP接続を<span class="notranslate farm-term" translate="no">Farm</span>内のノードに分散します（宛先IPアドレスは仮想IP （ VIP ）のままです）。応答は、接続を処理するノードからクライアントに直接送信されます。
-- フィルタによる分散処理は**決定論的**である。処理ノードは、設定された負荷分散ルールに従って、クライアントの識別情報から計算される。
-  - **クライアントのIPアドレス**( `filter="on_addr"` ): 特定のクライアントは常に同じノードによって処理され、セッションの親和性が保証されます。
+- フィルタによる分散処理は**決定論的**である。処理ノードは、設定された負荷分散ルールに従って、クライアントのIDから計算される。
+  - **クライアントのIPアドレス**( `filter="on_addr"` ): 特定のクライアントは常に同じノードによってサービスされ、セッションの親和性が保証されます。
   - **クライアントのTCPポート**（ `filter="on_port"` ）において、同じクライアントからの各TCP接続は、異なるノードによって処理される可能性があります。これはモザイク図（セクション2）で使用されるルールであり、そのため単一のワークステーションからのすべてのノードが表示されます。
 - ディスパッチサーバーが停止した場合、別のノードがこの役割を引き継ぎ、 **GARPs** （Gratuitous ARP ）を送信して、ネットワークが仮想IP （ VIP ）を自身のMACアドレスに関連付けます。
 
@@ -55,7 +55,9 @@ topics: "主要原則、前提条件： SafeKitモザイク、テスト1 – 接
 
    HTTPSでは、 `https://<VIP>:9453/safekit/mosaic.html`を使用し、ポート9453にロードバランシングルールを設定します。
 
-「[SafeKit <span class="notranslate farm-term" translate="no">farm</span>ソリューションのデモンストレーション](/ja/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)」セクションのモザイクテスト動画をご覧ください。
+![モザイクを使用してSafeKit <span class="notranslate farm-term" translate="no">farm</span>の仮想IPアドレスをテストします](/wp-content/uploads/2024/03/appli-19.png)
+
+「 [ SafeKit <span class="notranslate farm-term" translate="no">farm</span>ソリューションのデモンストレーション](/ja/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) 。
 
 ## 3. テスト1 – 接続の分布
 
@@ -110,51 +112,51 @@ topics: "主要原則、前提条件： SafeKitモザイク、テスト1 – 接
 
 **同じSYNパケットで注意すべき点：**
 
-|手順|キャプチャする場所|観測されたMACアドレス|
+| ステップ | どこで撮影するか | 観測されたMACアドレス |
 |---|---|---|
-| 1. クライアントは仮想IP ( VIP ) に送信します|クライアント|クライアントMAC →**ディスパッチ サーバー**のMAC |
-| 2. ディスパッチング サーバーは接続を転送します|ディスパッチング サーバー|ディスパッチングMAC →**処理ノード**のMAC |
-| 3. 処理ノードは|処理ノード|ディスパッチングMAC → ノードMACを受信します|
-| 4. ノードはクライアントに直接応答します|処理ノード|ノードMAC → クライアントMAC |
-| 5. クライアントは応答を受信します|クライアント|ノードMAC → クライアントMAC |
+| 1. クライアントは仮想IP （ VIP ）に送信します | クライアント | クライアントMAC →**ディスパッチサーバー**のMAC |
+| 2. ディスパッチサーバーが接続を転送する | ディスパッチサーバー | MACディスパッチ →**処理ノード**のMAC |
+| 3. 処理ノードは | 処理ノード | MACのディスパッチ → ノードMAC |
+| 4. ノードはクライアントに直接応答する | 処理ノード | ノードMAC → クライアントMAC |
+| 5. クライアントは回答を受け取ります | クライアント | ノードMAC → クライアントMAC |
 
 > クライアントワークステーションが<span class="notranslate farm-term" translate="no">Farm</span>とは異なるサブネットにある場合、 <span class="notranslate farm-term" translate="no">Farm</span>ノードに表示される「クライアントMAC 」は、クライアントワークステーションのMACアドレスではなく、2つのサブネットを接続する**ゲートウェイ**（ルーター）のMACアドレスです。
 
-ディスパッチサーバーを停止した後、キャプチャを繰り返します（テスト2、ステップ4）。ステップ1には、**新しい**ディスパッチサーバーのMACアドレスが表示されるはずです。
+ディスパッチングサーバーを停止した後、キャプチャを繰り返します（テスト2、ステップ4）。ステップ1には、**新しい**ディスパッチングサーバーのMACアドレスが表示されるはずです。
 
 ## 7. どのワークステーションからテストを行うか
 
 動作は、クライアントと<span class="notranslate farm-term" translate="no">Farm</span>間のネットワークパスによって異なります。アーキテクチャに関連する各タイプのクライアントから、テスト1とテスト2を実行してください。
 
-|クライアントの所在地|テストで確認する内容|
+| クライアントの所在地 | テストで確認する内容 |
 |---|---|
-|クライアントは<span class="notranslate farm-term" translate="no">Farm</span>と**同じサブネット**内にあります| GARPによるクライアントのARPテーブルの更新 (テスト 3 が可能) |
-|**異なるサブネット**内のクライアント (ルーター、ゲートウェイ、ハイパーバイザー仮想ネットワーク) |ルーターまたはゲートウェイによるGARP処理|
-| **<span class="notranslate farm-term" translate="no">Farm</span> VM もホストするハイパーバイザ上のクライアント**VM |内部スイッチングとルーティングも処理するハイパーバイザの仮想スイッチの動作|
+| <span class="notranslate farm-term" translate="no">Farm</span>と**同じサブネット**内のクライアント | GARPによるクライアントのARPテーブルの更新（テスト3が可能） |
+| **別のサブネット**（ルーター、ゲートウェイ、ハイパーバイザー仮想ネットワーク）内のクライアント | ルーターまたはゲートウェイによるGARP処理 |
+| **<span class="notranslate farm-term" translate="no">Farm</span> VMもホストするハイパーバイザー上の**クライアントVM | ハイパーバイザの仮想スイッチの動作。仮想スイッチは内部スイッチングとルーティングも処理する。 |
 
-## 8. 期待される結果の概要
+## 8．期待される結果の概要
 
-|テスト|アクション|期待される結果|
+| テスト | アクション | 期待される結果 |
 |---|---|---|
-| 1 |すべてのノードUP 、モザイク|すべてのノードが表示されます|
-| 2.2 |単一のノードが起動しました|このノードのみが表示されます|
-| 2.3 |すべてのノードが起動しました|すべてのノードが表示されます|
-| 2.4 |ディスパッチサーバーが停止しました|残りのノードが表示され、永続的な中断はありません|
-| 3 |停止前と停止後の`arp -a` |仮想IP ( VIP ) に関連付けられたMACアドレスが変更されます|
-| 4 |停止前後のWiresharkまたはtcpdumpキャプチャ|クライアントは新しいディスパッチサーバーのMACアドレスに送信します|
+| 1 | すべてのノードUP 、モザイク | すべてのノードが表示されます |
+| 2.2 | 単一ノードが起動しました | このノードのみが表示されます |
+| 2.3 | すべてのノードが起動しました | すべてのノードが表示されます |
+| 2.4 | ディスパッチサーバーが停止しました | 残りのノードは、永続的な中断なく出現する。 |
+| 3 | 停止前と停止後の`arp -a` | 仮想IP （ VIP ）に関連付けられたMACアドレスが変更されます |
+| 4 | 停止前後のWiresharkまたはtcpdumpキャプチャ | クライアントは新しいディスパッチサーバーのMACアドレスにメッセージを送信します。 |
 
 ## 9. トラブルシューティング
 
-- **ロードバランシングビットマップ:**テストとロードバランシングビットマップの詳細については、SafeKit 8.2 ユーザーガイドのセクション 4.3.5「[仮想IPアドレスでのTCPロードバランシングのテスト](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)」を参照してください。
+- **ロードバランシングビットマップ:**テストとロードバランシングビットマップの詳細については、 SafeKit 8.2 ユーザーガイドのセクション 4.3.5「 [仮想IPアドレスでのTCPロードバランシングのテスト](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) 」を参照してください。
 - **ディスパッチングサーバーが停止した後、モザイクが応答しなくなります。**経路上のデバイス（ルーター、ゲートウェイ、仮想スイッチ）がGARP考慮していないためです。ネットワークチームにGARP処理状況を確認してください。
-- **GARPの定期送信:** `<vip>`セクションの`arpreroute="on"`属性 ( `arpinterval`と`arpelapse`含む) は、VIP 上でGARPs定期的に送信します。ユーザー ガイドのセクション 13.6.4 "[ `<vip>`構文](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) " を参照してください。
-- **仮想IP ( VIP ) ↔ MAC解決の診断:**ユーザー ガイドのセクション 7.24 "[仮想IP ( VIP ) ↔ MAC解決のトラブルシューティング](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) "、およびセクション 7.15 "[ <span class="notranslate farm-term" translate="no">Farm</span>モジュールはUP (Ready) だが、 <span class="notranslate farm-term" translate="no">Farm</span>での負荷分散に問題あり](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) "を参照してください。
+- **GARPの定期送信:** `<vip>`セクションの`arpreroute="on"`属性 ( `arpinterval`と`arpelapse`含む) は、VIP 上でGARPs定期的に送信します。ユーザー ガイドのセクション 13.6.4 " [ `<vip>`構文](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) " を参照してください。
+- **仮想IP ( VIP ) ↔ MAC解決の診断:**ユーザー ガイドのセクション 7.24「 [仮想IP ( VIP ) ↔ MAC解決のトラブルシューティング](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) 」およびセクション 7.15「 [ <span class="notranslate farm-term" translate="no">Farm</span>モジュールはUP ( Ready ) だが、 <span class="notranslate farm-term" translate="no">Farm</span>での負荷分散に問題あり](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) 」を参照してください。
 
 ## SafeKit <span class="notranslate farm-term" translate="no">farm</span>ソリューションのデモンストレーション{#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}
 
-仮想IPアドレスを使用したプライマリ/バックアップのフェイルオーバーについては、[ SafeKitミラー クラスタの仮想IPアドレスのテスト](/ja/best-practises/test-primary-backup-vip-mirror/)を参照してください。
+仮想IPアドレスを使用したプライマリ/バックアップのフェイルオーバーについては、 [ SafeKit mirrorクラスタの仮想IPアドレスのテスト](/ja/best-practises/test-primary-backup-vip-mirror/)を参照してください。
 
 {{%  insert-safekit-4-buttons-ja  %}}

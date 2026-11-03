@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/test-load-balancing-vip
 description: "Leer hoe u de load balancing SafeKit over clusterknooppunten kunt testen en hoe u virtuele IP failover, GARP rerouting en netwerkgedrag kunt verifiëren."
 category: "best-practises"
 lang: "nl"
-topics: "Kernprincipes, Vereiste: de SafeKit mozaïek, Test 1 – Distributie van verbindingen, Test 2 – Wijziging van de verzendende server, Test 3 – Controleren van GARP -rerouting met arp -a, Test 4 – End-to-end controle met Wireshark ( Windows ) of tcpdump ( Linux ), Welke werkstations te testen, Samenvatting van de verwachte resultaten, Probleemoplossing"
+topics: "Kernprincipes, Vereiste: de SafeKit mozaïek, Test 1 – Distributie van verbindingen, Test 2 – Wijziging van de dispatchingserver, Test 3 – Controle van GARP -rerouting met arp -a, Test 4 – End-to-end controle met Wireshark ( Windows ) of tcpdump ( Linux ), Welke werkstations te testen, Samenvatting van de verwachte resultaten, Probleemoplossing, Demonstratie van de SafeKit farm"
 ---
 
 # Het testen van het virtuele IP -adres voor load balancing in een SafeKit <span class="notranslate farm-term" translate="no">farm</span> .
@@ -55,7 +55,9 @@ De mozaïekpagina is een testpagina van SafeKit . Deze opent meerdere TCP verbin
 
    Gebruik in HTTPS `https://<VIP>:9453/safekit/mosaic.html` , met de load balancing-regel op poort 9453.
 
-Bekijk de mozaïektestvideo in de sectie "[Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> -oplossing ](/nl/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ".
+![ Test het virtuele IP adres van een SafeKit <span class="notranslate farm-term" translate="no">farm</span> met de mozaïekafbeelding ](/wp-content/uploads/2024/03/appli-19.png)
+
+Bekijk de mozaïektestvideo in de sectie " [ Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> -oplossing ](/nl/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ".
 
 ## 3. Test 1 – Verdeling van verbindingen
 
@@ -110,13 +112,13 @@ Je moet naar de **MAC headers (Ethernet-headers) van de pakketten** kijken, niet
 
 **Wat je voor hetzelfde SYN pakket moet observeren:**
 
-| Stap | Waar vastleggen | Waargenomen MAC adressen |
+| Stap | Waar te filmen | Waargenomen MAC adressen |
 |---|---|---|
-| 1. De client verzendt naar het virtuele IP ( VIP ) | client | MAC van de client → MAC van de **verzendende server** |
-| 2. De verzendserver stuurt de verbinding door | verzendserver | MAC verzendserver → MAC **adres verwerkingsknooppunt** |
-| 3. Het verwerkingsknooppunt ontvangt | verwerkingsknooppunt | Dispatching MAC → knooppunt MAC |
-| 4. Het knooppunt reageert direct op de client | verwerkend knooppunt | MAC van knooppunt → MAC van client |
-| 5. De client ontvangt het antwoord | client | MAC van de node → MAC van de client |
+| 1. De client verzendt naar het virtuele IP ( VIP ). | cliënt | MAC van de client → MAC van de **verzendende server** |
+| 2. De verzendende server stuurt de verbinding door. | verzendserver | MAC verzenden → MAC van het **verwerkingsknooppunt** |
+| 3. Het verwerkingsknooppunt ontvangt | verwerkingsknooppunt | MAC verzenden → MAC van knooppunt |
+| 4. Het knooppunt reageert direct op de client. | verwerkingsknooppunt | MAC van de node → MAC van de client |
+| 5. De klant ontvangt het antwoord. | cliënt | MAC van de node → MAC van de client |
 
 > Als het clientwerkstation zich in een ander subnet bevindt dan de <span class="notranslate farm-term" translate="no">Farm</span> , is het "client- MAC " dat op de <span class="notranslate farm-term" translate="no">Farm</span> wordt weergegeven het MAC adres van de **gateway** (router) die de twee subnets verbindt, en niet dat van het clientwerkstation.
 
@@ -126,35 +128,35 @@ Herhaal de opname na het stoppen van de verzendserver (test 2, stap 4): stap 1 m
 
 Het gedrag is afhankelijk van het netwerkpad tussen de client en de <span class="notranslate farm-term" translate="no">Farm</span> . Voer tests 1 en 2 uit vanaf elk type client dat relevant is voor uw architectuur:
 
-| Locatie van de klant | Wat de test controleert |
+| Klantlocatie | Wat de test controleert |
 |---|---|
-| Client in **hetzelfde subnet** als de <span class="notranslate farm-term" translate="no">Farm</span> | Update van ARP tabellen van de clients door GARP (test 3 mogelijk) |
-| Client in een **ander subnet** (router, gateway, virtueel netwerk van de hypervisor) | GARP afhandeling door de router of gateway |
-| Client-VM **op een hypervisor die ook een <span class="notranslate farm-term" translate="no">Farm</span> VM host** | Gedrag van de virtuele switch van de hypervisor, die ook interne switching en routing afhandelt |
+| Client in **hetzelfde subnet** als de <span class="notranslate farm-term" translate="no">Farm</span> | Update van de ARP tabellen van de clients door GARP (test 3 mogelijk) |
+| Client in een **ander subnet** (router, gateway, virtueel netwerk van de hypervisor) | GARP -afhandeling door de router of gateway |
+| Client-VM **op een hypervisor die ook een <span class="notranslate farm-term" translate="no">Farm</span> VM host.** | Het gedrag van de virtuele switch van de hypervisor, die ook de interne switching en routing afhandelt. |
 
 ## 8. Samenvatting van de verwachte resultaten
 
 | Test | Actie | Verwacht resultaat |
 |---|---|---|
 | 1 | Alle knooppunten UP , mozaïek | Alle knooppunten verschijnen |
-| 2.2 | Er is één knooppunt gestart | Alleen dit knooppunt verschijnt |
-| 2.3 | Alle knooppunten gestart | Alle knooppunten verschijnen |
-| 2.4 | Verzendserver gestopt | De resterende knooppunten verschijnen, zonder blijvende onderbreking |
-| 3 | `arp -a` voor en na de stop | Het MAC adres dat is gekoppeld aan het virtuele IP ( VIP ) verandert |
-| 4 | Wireshark of tcpdump -opname voor en na de stop | De client verzendt naar het MAC adres van de nieuwe verzendserver |
+| 2.2 | Een enkel knooppunt is gestart | Alleen dit knooppunt verschijnt |
+| 2.3 | Alle knooppunten zijn gestart. | Alle knooppunten verschijnen |
+| 2.4 | De verzendserver is gestopt | De resterende knooppunten verschijnen, zonder blijvende onderbreking. |
+| 3 | `arp -a` vóór en na de stop | Het MAC adres dat is gekoppeld aan het virtuele IP ( VIP ) verandert. |
+| 4 | Wireshark of tcpdump legt de situatie vast vóór en na het stoppen. | De client verzendt naar het MAC adres van de nieuwe verzendserver. |
 
 ## 9. Probleemoplossing
 
-- **Load balancing bitmaps:** voor details over de test en de load balancing bitmaps, zie de SafeKit 8.2 gebruikershandleiding, sectie 4.3.5 "[Test TCP load balancing op een virtueel IP adres ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ".
+- **Load balancing bitmaps:** voor details over de test en de load balancing bitmaps, zie de SafeKit 8.2 gebruikershandleiding, sectie 4.3.5 " [ Test TCP load balancing op een virtueel IP adres ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ".
 - **Het mozaïek reageert niet meer nadat de verzendende server is gestopt:** GARP wordt niet in overweging genomen door een apparaat op het pad (router, gateway, virtuele switch). Neem contact op met uw netwerkteam om GARP afhandeling te controleren.
-- **Periodiek verzenden van GARP :** het attribuut `arpreroute="on"` van de `<vip>` -sectie (met `arpinterval` en `arpelapse` ) verzendt regelmatig GARPs op de VIP's. Zie de gebruikershandleiding, sectie 13.6.4 "[ `<vip>` -syntaxis ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
-- **Diagnose van problemen met virtuele IP ( VIP ) ↔ MAC resolutie:** zie de gebruikershandleiding, sectie 7.24 "[Problemen oplossen met virtuele IP ( VIP ) ↔ MAC resolutie ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " en sectie 7.15 "[ <span class="notranslate farm-term" translate="no">Farm</span> UP (Ready) maar probleem met load balancing in een <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+- **Periodiek verzenden van GARP :** het attribuut `arpreroute="on"` van de `<vip>` -sectie (met `arpinterval` en `arpelapse` ) verzendt regelmatig GARPs op de VIP's. Zie de gebruikershandleiding, sectie 13.6.4 " [ `<vip>` -syntaxis ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
+- **Diagnose van problemen met virtuele IP ( VIP ) ↔ MAC resolutie:** zie de gebruikershandleiding, sectie 7.24 " [ Probleemoplossing voor virtuele IP ( VIP ) ↔ MAC resolutie ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " en sectie 7.15 " [ <span class="notranslate farm-term" translate="no">Farm</span> UP ( Ready ) maar probleem met load balancing in een <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
 
 ## Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> oplossing {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-nl  %}}
 
-Voor failover tussen primaire en back-up met een virtueel IP adres, zie [Het virtuele IP adres van een SafeKit spiegelcluster testen ](/nl/best-practises/test-primary-backup-vip-mirror/) .
+Voor failover tussen primaire en back-up met een virtueel IP adres, zie [ Het virtuele IP adres van een SafeKit mirror testen ](/nl/best-practises/test-primary-backup-vip-mirror/) .
 
 {{%  insert-safekit-4-buttons-nl  %}}

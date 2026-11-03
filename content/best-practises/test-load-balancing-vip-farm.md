@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/test-load-balancing-vip-fa
 description: "Learn how to test SafeKit load balancing across cluster nodes and verify virtual IP failover, GARP rerouting, and network behavior."
 category: "best-practises"
 lang: "en"
-topics: "Key principles, Prerequisite: the SafeKit mosaic, Test 1 – Distribution of connections, Test 2 – Change of dispatching server, Test 3 – Checking GARP rerouting with arp -a, Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), Which workstations to test from, Summary of expected results, Troubleshooting"
+topics: "Key principles, Prerequisite: the SafeKit mosaic, Test 1 – Distribution of connections, Test 2 – Change of dispatching server, Test 3 – Checking GARP rerouting with arp -a, Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), Which workstations to test from, Summary of expected results, Troubleshooting, Demonstration of the SafeKit farm solution"
 ---
 
 # Testing the load balancing virtual IP address in a SafeKit <span class="notranslate farm-term" translate="no">farm</span> cluster
@@ -54,6 +54,8 @@ The mosaic is a test page provided by SafeKit. It opens many TCP connections to 
    then enter the <span class="notranslate farm-term" translate="no">Farm</span> **module name** and run the test. Each cell of the mosaic displays the name of the node that responded to the TCP connection, and a color is associated with each node to clearly show the blocks of the mosaic served by the same node.
 
    In HTTPS, use `https://<VIP>:9453/safekit/mosaic.html`, with the load balancing rule on port 9453.
+
+![Test the virtual IP address of a SafeKit <span class="notranslate farm-term" translate="no">farm</span> with the mosaic](/wp-content/uploads/2024/03/appli-19.png)
 
 Watch the mosaic test video in the "[Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution](/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" section.
 
