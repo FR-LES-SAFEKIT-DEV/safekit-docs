@@ -112,11 +112,11 @@ You must look at the **MAC (Ethernet) headers of the packets**, not just the IP 
 
 **What you should observe for the same SYN packet:**
 
-| Step | Where to capture | Observed MAC addresses |
+| Step | Where to capture packets | Observed MAC addresses |
 |---|---|---|
 | 1. The client sends to the Virtual IP (VIP) | client | Client MAC → MAC of the **dispatching server** |
-| 2. The dispatching server forwards the connection | dispatching server | Dispatching MAC → MAC of the **processing node** |
-| 3. The processing node receives | processing node | Dispatching MAC → node MAC |
+| 2. The dispatching server forwards the connection | dispatching server | Dispatching server MAC → MAC of the **processing node** |
+| 3. The processing node receives | processing node | Dispatching server MAC → node MAC |
 | 4. The node responds directly to the client | processing node | Node MAC → client MAC |
 | 5. The client receives the response | client | Node MAC → client MAC |
 

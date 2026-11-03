@@ -9,15 +9,15 @@ topics: "关键原则、前提条件： SafeKit马赛克、测试 1 – 连接�
 
 # 在SafeKit <span class="notranslate farm-term" translate="no">farm</span>中测试负载均衡虚拟IP地址
 
-本指南描述了如何检查SafeKit <span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>模块，在虚拟IP地址上进行负载均衡）在您的网络中是否正常工作：在节点之间分配连接，以及在调度节点停止时重新路由虚拟IP ( VIP )。
+本指南描述了如何检查SafeKit <span class="notranslate farm-term" translate="no">Farm</span> （ <span class="notranslate farm-term" translate="no">Farm</span>模块，在虚拟IP地址上进行负载均衡）在您的网络中是否正常工作：在节点之间分配连接，以及在调度节点停止时重新路由虚拟IP (VIP)。
 
 ## 1. 关键原则
 
 **前提条件：** <span class="notranslate farm-term" translate="no">Farm</span>的所有节点必须位于同一第 2 层IP子网中： LAN ，或在远程站点之间扩展的VLAN 。
 
-- 虚拟IP ( VIP ) 在<span class="notranslate farm-term" translate="no">Farm</span>的每个节点上本地配置：当<span class="notranslate farm-term" translate="no">Farm</span>在节点上启动时，它会被设置为物理IP地址的别名，并配置在该地址的网卡上。
-- 单个节点（**调度服务器**）接收虚拟IP ( VIP ) 的网络流量（ `vmac_directed`配置， SafeKit默认）：其MAC地址是ARP表中与虚拟IP ( VIP ) 关联的地址（路由器、网关、同一子网中的客户端）。
-- 该节点的内核过滤器会将TCP连接分配到<span class="notranslate farm-term" translate="no">Farm</span>中的各个节点，方法是将数据包的**目标 MAC 地址重写为处理节点的MAC地址**（目标IP地址仍然是虚拟IP ( VIP )）。响应直接从处理连接的节点发送到客户端。
+- 虚拟IP (VIP) 在<span class="notranslate farm-term" translate="no">Farm</span>的每个节点上本地配置：当<span class="notranslate farm-term" translate="no">Farm</span>在节点上启动时，它会被设置为物理IP地址的别名，并配置在该地址的网卡上。
+- 单个节点（**调度服务器**）接收虚拟IP (VIP) 的网络流量（ `vmac_directed`配置， SafeKit默认）：其MAC地址是ARP表中与虚拟IP (VIP) 关联的地址（路由器、网关、同一子网中的客户端）。
+- 该节点的内核过滤器会将TCP连接分配到<span class="notranslate farm-term" translate="no">Farm</span>中的各个节点，方法是将数据包的**目标 MAC 地址重写为处理节点的MAC地址**（目标IP地址仍然是虚拟IP (VIP)）。响应直接从处理连接的节点发送到客户端。
 - 过滤器执行的分配是**确定性的**：处理节点是根据配置的负载均衡规则，从客户端的身份计算出来的：
   - 在**客户端IP地址**（ `filter="on_addr"` ）：给定的客户端始终由同一个节点提供服务，从而确保会话亲和性；
   - 在**客户端TCP端口**（ `filter="on_port"` ）上：来自同一客户端的每个TCP连接都可以由不同的节点提供服务。这是马赛克图（第 2 节）所使用的规则，因此它显示了来自单个工作站的所有节点。
@@ -30,7 +30,7 @@ topics: "关键原则、前提条件： SafeKit马赛克、测试 1 – 连接�
 
 ## 2. 前提条件： SafeKit马赛克
 
-该马赛克页面是SafeKit提供的一个测试页面。它会打开多个到虚拟IP ( VIP ) TCP连接，并显示每个连接对应的响应节点的名称。这样可以一目了然地显示网络分布情况。
+该马赛克页面是SafeKit提供的一个测试页面。它会打开多个到虚拟IP (VIP) TCP连接，并显示每个连接对应的响应节点的名称。这样可以一目了然地显示网络分布情况。
 
 1. 在<span class="notranslate farm-term" translate="no">Farm</span>模块的`userconfig.xml`文件中，于`<vip>`部分添加SafeKit Web 服务器端口的负载均衡规则。例如， SafeKit Web 服务器使用 HTTP 协议，端口为 9010：
 
@@ -90,33 +90,33 @@ topics: "关键原则、前提条件： SafeKit马赛克、测试 1 – 连接�
 
 ## 5. 测试 3 – 使用`arp -a`检查GARP重路由
 
-结合测试 4，此测试可以真正检查GARP ：在停止调度服务器之前记下其MAC地址，然后检查虚拟IP ( VIP )/ MAC关联是否已更改。
+结合测试 4，此测试可以真正检查GARP ：在停止调度服务器之前记下其MAC地址，然后检查虚拟IP (VIP)/ MAC关联是否已更改。
 
 只有当显示马赛克的客户端工作站与<span class="notranslate farm-term" translate="no">Farm</span>位于**同一IP子网**时，才能进行此测试。
 
-如果客户端和<span class="notranslate farm-term" translate="no">Farm</span>之间存在路由器，则客户端的ARP表中不包含虚拟IP地址（ VIP ），而是包含用于连接到<span class="notranslate farm-term" translate="no">Farm</span>集群网络的网关地址。在这种情况下，请与网络团队一起检查路由器或网关的ARP表。
+如果客户端和<span class="notranslate farm-term" translate="no">Farm</span>之间存在路由器，则客户端的ARP表中不包含虚拟IP （ VIP ），而是包含用于连接到<span class="notranslate farm-term" translate="no">Farm</span>集群网络的网关地址。在这种情况下，请与网络团队一起检查路由器或网关的ARP表。
 
 **步骤**
 
 1. 在所有节点上启动<span class="notranslate farm-term" translate="no">Farm</span> 。
-2. 在客户端工作站上，运行`arp -a`并记下与虚拟IP ( VIP ) 关联的MAC地址。该地址用于识别调度服务器。
+2. 在客户端工作站上，运行`arp -a`并记下与虚拟IP (VIP) 关联的MAC地址。该地址用于识别调度服务器。
 3. 停止具有此MAC地址的<span class="notranslate farm-term" translate="no">Farm</span>节点。
 4. 检查剩余节点是否仍然能正常构成马赛克图案。
-5. 再次运行`arp -a`以读取新的虚拟IP ( VIP )/ MAC关联并识别新的调度服务器。
+5. 再次运行`arp -a`以读取新的虚拟IP (VIP)/ MAC关联并识别新的调度服务器。
 
 ## 6. 测试 4 – 使用Wireshark （ Windows ）或tcpdump （ Linux ）进行端到端检查
 
-您可以通过在客户端和<span class="notranslate farm-term" translate="no">Farm</span>节点上捕获数据包来跟踪与虚拟IP ( VIP ) 的TCP连接：在Windows机器上使用Wireshark ，在Linux机器上使用tcpdump 。
+您可以通过在客户端和<span class="notranslate farm-term" translate="no">Farm</span>节点上捕获数据包来跟踪与虚拟IP (VIP) 的TCP连接：在Windows机器上使用Wireshark ，在Linux机器上使用tcpdump 。
 
-您必须查看**数据包的MAC （以太网）头部**，而不仅仅是IP地址：调度服务器的内核过滤器通过将数据包的**目标 MAC 地址重写为处理节点的MAC地址**来分配连接。目标IP地址在整个路径上始终保持为虚拟IP ( VIP )。
+您必须查看**数据包的MAC （以太网）头部**，而不仅仅是IP地址：调度服务器的内核过滤器通过将数据包的**目标 MAC 地址重写为处理节点的MAC地址**来分配连接。目标IP地址在整个路径上始终保持为虚拟IP (VIP)。
 
 **对于同一个SYN数据包，您应该观察以下几点：**
 
-| 步 | 在哪里拍摄 | 观察到的MAC地址 |
+| 步 | 在哪里捕获数据包 | 观察到的MAC地址 |
 |---|---|---|
 | 1. 客户端向虚拟IP （ VIP ）发送数据 | 客户 | 客户端MAC →**调度服务器**的MAC |
-| 2. 调度服务器转发连接 | 调度服务器 | 调度MAC →**处理节点**的MAC |
-| 3. 处理节点接收 | 处理节点 | 调度MAC → 节点MAC |
+| 2. 调度服务器转发连接 | 调度服务器 | 调度服务器MAC →**处理节点**的MAC |
+| 3. 处理节点接收 | 处理节点 | 调度服务器MAC → 节点MAC |
 | 4. 节点直接响应客户端 | 处理节点 | 节点MAC → 客户端MAC |
 | 5. 客户收到回复 | 客户 | 节点MAC → 客户端MAC |
 
@@ -150,7 +150,7 @@ topics: "关键原则、前提条件： SafeKit马赛克、测试 1 – 连接�
 - **负载均衡位图：**有关测试和负载均衡位图的详细信息，请参阅SafeKit 8.2 用户指南第 4.3.5 节“ [在虚拟IP地址上测试TCP负载均衡](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ”。
 - **调度服务器停止后，马赛克网络不再响应：**路径上的某个设备（路由器、网关、虚拟交换机）未启用GARP 。请与您的网络团队检查GARP处理情况。
 - **定期发送GARP ：** `<vip>`部分的`arpreroute="on"`属性（带有`arpinterval`和`arpelapse` ）会定期在 VIP 上发送GARPs 。请参阅用户指南第 13.6.4 节“ [ `<vip>`语法](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ”。
-- **诊断虚拟IP ( VIP ) ↔ MAC解析：**请参阅用户指南第 7.24 节“ [虚拟IP ( VIP ) ↔ MAC解析故障排除](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) ”，以及第 7.15 节“ [ <span class="notranslate farm-term" translate="no">Farm</span>模块UP （ Ready ）但<span class="notranslate farm-term" translate="no">Farm</span>中负载均衡存在问题](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ”。
+- **诊断虚拟IP (VIP) ↔ MAC解析：**请参阅用户指南第 7.24 节“ [虚拟IP (VIP) ↔ MAC解析故障排除](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) ”，以及第 7.15 节“ [ <span class="notranslate farm-term" translate="no">Farm</span>模块UP （ Ready ）但<span class="notranslate farm-term" translate="no">Farm</span>中负载均衡存在问题](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ”。
 
 ## SafeKit <span class="notranslate farm-term" translate="no">farm</span>解决方案演示{#demonstration-of-the-safekit-farm-solution}
 

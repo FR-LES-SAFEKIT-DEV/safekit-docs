@@ -4,24 +4,24 @@ canonical: "https://safekit.eviden.com/de/best-practises/test-load-balancing-vip
 description: "Erfahren Sie, wie Sie SafeKit Lastausgleich über Clusterknoten hinweg testen und das virtuelle IP Failover, GARP Rerouting und das Netzwerkverhalten überprüfen können."
 category: "best-practises"
 lang: "de"
-topics: "Grundprinzipien, Voraussetzung: SafeKit Mosaik, Test 1 – Verteilung der Verbindungen, Test 2 – Wechsel des Dispatching-Servers, Test 3 – Überprüfung GARP Reroutings mit arp -a, Test 4 – End-to-End-Test mit Wireshark ( Windows ) oder tcpdump ( Linux ), Welche Workstations sollen getestet werden?, Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung, Demonstration der SafeKit farm"
+topics: "Grundprinzipien, Voraussetzung: SafeKit Mosaik, Test 1 – Verteilung der Verbindungen, Test 2 – Wechsel des Dispatching-Servers, Test 3 – Überprüfung GARP Reroutings mit arp -a, Test 4 – End-to-End-Test mit Wireshark (Windows) oder tcpdump (Linux), Welche Workstations sollen getestet werden?, Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung, Demonstration der SafeKit farm"
 ---
 
 # Testen der Lastverteilungs- IP -Adresse in einem SafeKit <span class="notranslate farm-term" translate="no">farm</span>
 
-Dieser Leitfaden beschreibt, wie Sie überprüfen können, ob eine SafeKit <span class="notranslate farm-term" translate="no">Farm</span> ( <span class="notranslate farm-term" translate="no">Farm</span> Modul, Lastverteilung über eine virtuelle IP Adresse) in Ihrem Netzwerk korrekt funktioniert: Verteilung der Verbindungen auf die Knoten und Umleitung der virtuellen IP ( VIP ), wenn der Dispatcher-Knoten stoppt.
+Dieser Leitfaden beschreibt, wie Sie überprüfen können, ob eine SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (<span class="notranslate farm-term" translate="no">Farm</span> Modul, Lastverteilung über eine virtuelle IP Adresse) in Ihrem Netzwerk korrekt funktioniert: Verteilung der Verbindungen auf die Knoten und Umleitung der virtuellen IP (VIP), wenn der Dispatcher-Knoten stoppt.
 
 ## 1. Grundprinzipien
 
-**Voraussetzung:** Alle Knoten der <span class="notranslate farm-term" translate="no">Farm</span> müssen sich im selben Layer-2 IP Subnetz befinden: einem LAN oder einem VLAN , das sich über entfernte Standorte erstreckt.
+**Voraussetzung:** Alle Knoten der <span class="notranslate farm-term" translate="no">Farm</span> müssen sich im selben Layer-2 IP Subnetz befinden: einem LAN oder einem VLAN, das sich über entfernte Standorte erstreckt.
 
-- Die virtuelle IP ( VIP ) wird lokal auf jedem Knoten der <span class="notranslate farm-term" translate="no">Farm</span> konfiguriert: Sie wird als Alias der physischen IP Adresse auf der Netzwerkkarte dieser Adresse festgelegt, wenn die <span class="notranslate farm-term" translate="no">Farm</span> auf dem Knoten gestartet wird.
-- Ein einzelner Knoten, der **Dispatching-Server** , empfängt den Netzwerkverkehr für die virtuelle IP ( VIP ) ( `vmac_directed` Konfiguration, SafeKit Standard): Seine MAC -Adresse ist diejenige, die in den ARP Tabellen (Router, Gateway, Clients im selben Subnetz) mit der virtuellen IP ( VIP ) verknüpft ist.
-- Der Kernelfilter dieses Knotens verteilt die TCP Verbindungen auf die Knoten der <span class="notranslate farm-term" translate="no">Farm</span> , indem **er die Ziel MAC -Adresse der Pakete in die des verarbeitenden Knotens ändert** (die Ziel IP -Adresse bleibt die virtuelle IP ( VIP )). Antworten werden direkt vom Knoten, der die Verbindung verarbeitet, an den Client gesendet.
-- Die vom Filter durchgeführte Verteilung ist **deterministisch** : Der Verarbeitungsknoten wird anhand der Clientidentität gemäß der konfigurierten Lastverteilungsregel berechnet:
-  - auf der **Client IP -Adresse** ( `filter="on_addr"` ): Ein bestimmter Client wird immer vom selben Knoten bedient, was die Sitzungsaffinität gewährleistet;
-  - Am **Client TCP Port** ( `filter="on_port"` ): Jede TCP Verbindung desselben Clients kann von einem anderen Knoten bedient werden. Diese Regel wird für das Mosaik (Abschnitt 2) verwendet, das daher alle Knoten einer einzelnen Workstation anzeigt.
-- Wenn der Dispatching-Server ausfällt, übernimmt ein anderer Knoten diese Rolle und sendet **GARPs** (gratuitous ARP ), damit das Netzwerk die virtuelle IP ( VIP ) mit seiner eigenen MAC Adresse verknüpft.
+- Die virtuelle IP (VIP) wird lokal auf jedem Knoten der <span class="notranslate farm-term" translate="no">Farm</span> konfiguriert: Sie wird als Alias der physischen IP Adresse auf der Netzwerkkarte dieser Adresse festgelegt, wenn die <span class="notranslate farm-term" translate="no">Farm</span> auf dem Knoten gestartet wird.
+- Ein einzelner Knoten, der **Dispatching-Server**, empfängt den Netzwerkverkehr für die virtuelle IP (VIP) (`vmac_directed` Konfiguration, SafeKit Standard): Seine MAC -Adresse ist diejenige, die in den ARP Tabellen (Router, Gateway, Clients im selben Subnetz) mit der virtuellen IP (VIP) verknüpft ist.
+- Der Kernelfilter dieses Knotens verteilt die TCP Verbindungen auf die Knoten der <span class="notranslate farm-term" translate="no">Farm</span>, indem **er die Ziel MAC -Adresse der Pakete in die des verarbeitenden Knotens ändert** (die Ziel IP -Adresse bleibt die virtuelle IP (VIP)). Antworten werden direkt vom Knoten, der die Verbindung verarbeitet, an den Client gesendet.
+- Die vom Filter durchgeführte Verteilung ist **deterministisch**: Der Verarbeitungsknoten wird anhand der Clientidentität gemäß der konfigurierten Lastverteilungsregel berechnet:
+  - auf der **Client IP -Adresse** (`filter="on_addr"`): Ein bestimmter Client wird immer vom selben Knoten bedient, was die Sitzungsaffinität gewährleistet;
+  - Am **Client TCP Port** (`filter="on_port"`): Jede TCP Verbindung desselben Clients kann von einem anderen Knoten bedient werden. Diese Regel wird für das Mosaik (Abschnitt 2) verwendet, das daher alle Knoten einer einzelnen Workstation anzeigt.
+- Wenn der Dispatching-Server ausfällt, übernimmt ein anderer Knoten diese Rolle und sendet **GARPs** (gratuitous ARP), damit das Netzwerk die virtuelle IP (VIP) mit seiner eigenen MAC Adresse verknüpft.
 
 Was Sie daher testen müssen:
 
@@ -30,7 +30,7 @@ Was Sie daher testen müssen:
 
 ## 2. Voraussetzung: das SafeKit Mosaik
 
-Das Mosaik ist eine Testseite von SafeKit . Sie öffnet zahlreiche TCP Verbindungen zur virtuellen IP ( VIP ) und zeigt für jede Verbindung den Namen des antwortenden Knotens an. So lässt sich die Verteilung auf einen Blick darstellen.
+Das Mosaik ist eine Testseite von SafeKit. Sie öffnet zahlreiche TCP Verbindungen zur virtuellen IP (VIP) und zeigt für jede Verbindung den Namen des antwortenden Knotens an. So lässt sich die Verteilung auf einen Blick darstellen.
 
 1. Fügen Sie in der `userconfig.xml` des <span class="notranslate farm-term" translate="no">Farm</span> Moduls im Abschnitt `<vip>` die Load-Balancing-Regel für den Port des SafeKit -Webservers hinzu. Beispiel mit dem SafeKit -Webserver über HTTP auf Port 9010:
 
@@ -63,7 +63,7 @@ Sehen Sie sich das Mosaik-Testvideo im Abschnitt " [ Demonstration der SafeKit <
 
 **Schritte**
 
-1. Die <span class="notranslate farm-term" translate="no">Farm</span> wird auf allen Knoten gestartet (Status: UP ).
+1. Die <span class="notranslate farm-term" translate="no">Farm</span> wird auf allen Knoten gestartet (Status: UP).
 2. Öffnen Sie das Mosaik von einer Client-Workstation aus.
 
 **Erwartetes Ergebnis:** Das Mosaik zeigt die Namen **aller Knoten** der <span class="notranslate farm-term" translate="no">Farm</span> an, wobei jeder Verarbeitungsknoten eine andere Farbe hat.
@@ -76,12 +76,12 @@ Dieser Test überprüft, ob die <span class="notranslate farm-term" translate="n
 
 **Schritte**
 
-1. Stoppt die <span class="notranslate farm-term" translate="no">Farm</span> , d.h. alle Knoten in SafeKit .
-2. Starten Sie **einen einzelnen Knoten** . Dieser Knoten wird zum Dispatching-Server.
+1. Stoppt die <span class="notranslate farm-term" translate="no">Farm</span>, d.h. alle Knoten in SafeKit.
+2. Starten Sie **einen einzelnen Knoten**. Dieser Knoten wird zum Dispatching-Server.
    → **Erwartetes Ergebnis:** Das Mosaik zeigt nur diesen Knoten an.
 3. Starten Sie die anderen Knoten.
    → **Erwartetes Ergebnis:** Das Mosaik zeigt alle Knoten an.
-4. Stoppen Sie den **ersten Knoten** , der als Dispatching-Server fungiert.
+4. Stoppen Sie den **ersten Knoten**, der als Dispatching-Server fungiert.
    → **Erwartetes Ergebnis:** Das Mosaik zeigt die verbleibenden Knoten an.
 
 > **Einschränkung dieses Tests:** Ein korrektes Ergebnis in Schritt 4 beweist nicht, dass GARP funktioniert. Beim Start des <span class="notranslate farm-term" translate="no">Farm</span> Moduls auf den anderen Knoten (Schritt 3) wird die virtuelle IP Adresse auf diesen Knoten konfiguriert. Dies erzeugt Nachrichten im Netzwerk, die die Zuordnung von virtueller IP Adresse und MAC -Adresse möglicherweise bereits umleiten. Nur die Tests 3 und 4 prüfen GARP tatsächlich.
@@ -90,37 +90,37 @@ Dieser Test überprüft, ob die <span class="notranslate farm-term" translate="n
 
 ## 5. Test 3 – Überprüfung GARP -Reroutings mit `arp -a`
 
-Zusammen mit Test 4 überprüft dieser Test tatsächlich GARP : Man notiert die MAC -Adresse des sendenden Servers, bevor man ihn stoppt, und überprüft anschließend, ob sich die Zuordnung von virtueller IP ( VIP ) und MAC geändert hat.
+Zusammen mit Test 4 überprüft dieser Test tatsächlich GARP: Man notiert die MAC -Adresse des sendenden Servers, bevor man ihn stoppt, und überprüft anschließend, ob sich die Zuordnung von virtueller IP (VIP) und MAC geändert hat.
 
 Dieser Test ist nur möglich, wenn sich die Client-Workstation, die das Mosaik anzeigt, im **selben IP Subnetz** wie die <span class="notranslate farm-term" translate="no">Farm</span> befindet.
 
-Befindet sich ein Router zwischen dem Client und der <span class="notranslate farm-term" translate="no">Farm</span> , enthält die ARP Tabelle des Clients nicht die virtuelle IP ( VIP ), sondern die Adresse des Gateways, über das das Netzwerk der <span class="notranslate farm-term" translate="no">Farm</span> erreicht wird. In diesem Fall überprüfen Sie bitte die ARP Tabelle des Routers oder Gateways mit dem Netzwerkteam.
+Befindet sich ein Router zwischen dem Client und der <span class="notranslate farm-term" translate="no">Farm</span>, enthält die ARP Tabelle des Clients nicht die virtuelle IP (VIP), sondern die Adresse des Gateways, über das das Netzwerk der <span class="notranslate farm-term" translate="no">Farm</span> erreicht wird. In diesem Fall überprüfen Sie bitte die ARP Tabelle des Routers oder Gateways mit dem Netzwerkteam.
 
 **Schritte**
 
 1. Starte die <span class="notranslate farm-term" translate="no">Farm</span> auf allen Knoten.
-2. Führen Sie auf der Client-Workstation `arp -a` aus und notieren Sie sich die MAC -Adresse, die der virtuellen IP ( VIP ) zugeordnet ist. Diese identifiziert den Dispatcher-Server.
+2. Führen Sie auf der Client-Workstation `arp -a` aus und notieren Sie sich die MAC -Adresse, die der virtuellen IP (VIP) zugeordnet ist. Diese identifiziert den Dispatcher-Server.
 3. Stoppen Sie den <span class="notranslate farm-term" translate="no">Farm</span> Knoten, der diese MAC Adresse hat.
 4. Prüfen Sie, ob das Mosaik auch mit den verbleibenden Knoten noch funktioniert.
-5. Führen Sie `arp -a` erneut aus, um die neue Zuordnung von virtueller IP ( VIP ) und MAC Adresse zu lesen und den neuen Dispatching-Server zu identifizieren.
+5. Führen Sie `arp -a` erneut aus, um die neue Zuordnung von virtueller IP (VIP) und MAC Adresse zu lesen und den neuen Dispatching-Server zu identifizieren.
 
-## 6. Test 4 – End-to-End-Prüfung mit Wireshark ( Windows ) oder tcpdump ( Linux )
+## 6. Test 4 – End-to-End-Prüfung mit Wireshark (Windows) oder tcpdump (Linux)
 
-Sie können eine TCP -Verbindung zur virtuellen IP ( VIP ) verfolgen, indem Sie Pakete auf dem Client und auf den <span class="notranslate farm-term" translate="no">Farm</span> -Knoten erfassen: mit Wireshark auf Windows -Rechnern und mit tcpdump auf Linux -Rechnern.
+Sie können eine TCP -Verbindung zur virtuellen IP (VIP) verfolgen, indem Sie Pakete auf dem Client und auf den <span class="notranslate farm-term" translate="no">Farm</span> -Knoten erfassen: mit Wireshark auf Windows -Rechnern und mit tcpdump auf Linux -Rechnern.
 
-Sie müssen die **MAC Header (Ethernet-Header) der Pakete** betrachten, nicht nur die IP -Adressen: Der Kernelfilter des Dispatching-Servers verteilt die Verbindungen, indem **er die Ziel MAC Adresse der Pakete in die des verarbeitenden Knotens umschreibt** . Die Ziel IP -Adresse bleibt entlang des gesamten Pfades die virtuelle IP ( VIP ).
+Sie müssen die **MAC Header (Ethernet-Header) der Pakete** betrachten, nicht nur die IP -Adressen: Der Kernelfilter des Dispatching-Servers verteilt die Verbindungen, indem **er die Ziel MAC Adresse der Pakete in die des verarbeitenden Knotens umschreibt**. Die Ziel IP -Adresse bleibt entlang des gesamten Pfades die virtuelle IP (VIP).
 
 **Was Sie bei demselben SYN Paket beachten sollten:**
 
-| Schritt | Wo man erfassen kann | Beobachtete MAC Adressen |
+| Schritt | Wo können Pakete erfasst werden? | Beobachtete MAC Adressen |
 |---|---|---|
-| 1. Der Client sendet an die virtuelle IP ( VIP ). | Kunde | Client- MAC → MAC des **sendenden Servers** |
-| 2. Der sendende Server leitet die Verbindung weiter. | Dispatching-Server | Dispatching MAC → MAC des **Verarbeitungsknotens** |
-| 3. Der Verarbeitungsknoten empfängt | Verarbeitungsknoten | Dispatching MAC → node MAC |
+| 1. Der Client sendet an die virtuelle IP (VIP). | Kunde | Client- MAC → MAC des **sendenden Servers** |
+| 2. Der sendende Server leitet die Verbindung weiter. | Dispatching-Server | Dispatching-Server- MAC → MAC des **Verarbeitungsknotens** |
+| 3. Der Verarbeitungsknoten empfängt | Verarbeitungsknoten | Dispatching-Server- MAC → Knoten MAC |
 | 4. Der Knoten antwortet direkt dem Client. | Verarbeitungsknoten | Knoten MAC → Client MAC |
 | 5. Der Kunde erhält die Antwort | Kunde | Knoten MAC → Client MAC |
 
-> Befindet sich die Client-Workstation in einem anderen Subnetz als die <span class="notranslate farm-term" translate="no">Farm</span> , so ist die auf den <span class="notranslate farm-term" translate="no">Farm</span> -Knoten angezeigte "Client- MAC " die MAC Adresse des **Gateways** (Routers), das die beiden Subnetze verbindet, und nicht die der Client-Workstation.
+> Befindet sich die Client-Workstation in einem anderen Subnetz als die <span class="notranslate farm-term" translate="no">Farm</span>, so ist die auf den <span class="notranslate farm-term" translate="no">Farm</span> -Knoten angezeigte "Client- MAC " die MAC Adresse des **Gateways** (Routers), das die beiden Subnetze verbindet, und nicht die der Client-Workstation.
 
 Wiederholen Sie die Aufzeichnung nach dem Stoppen des Dispatching-Servers (Test 2, Schritt 4): Schritt 1 muss nun die MAC Adresse des **neuen** Dispatching-Servers anzeigen.
 
@@ -138,25 +138,25 @@ Das Verhalten hängt vom Netzwerkpfad zwischen Client und <span class="notransla
 
 | Prüfen | Aktion | Erwartetes Ergebnis |
 |---|---|---|
-| 1 | Alle Knoten UP , Mosaik | Alle Knoten erscheinen |
+| 1 | Alle Knoten UP, Mosaik | Alle Knoten erscheinen |
 | 2.2 | Ein einzelner Knoten wurde gestartet | Nur dieser Knoten erscheint |
 | 2.3 | Alle Knoten gestartet | Alle Knoten erscheinen |
 | 2.4 | Dispatching-Server gestoppt | Die restlichen Knoten erscheinen ohne dauerhafte Unterbrechung |
-| 3 | `arp -a` vor und nach dem Stopp | Die der virtuellen IP ( VIP ) zugeordnete MAC -Adresse ändert sich. |
+| 3 | `arp -a` vor und nach dem Stopp | Die der virtuellen IP (VIP) zugeordnete MAC -Adresse ändert sich. |
 | 4 | Wireshark oder tcpdump -Aufzeichnung vor und nach dem Stopp | Der Client sendet an die MAC Adresse des neuen Dispatching-Servers. |
 
 ## 9. Fehlerbehebung
 
 - **Load-Balancing-Bitmaps:** Einzelheiten zum Test und den Load-Balancing-Bitmaps finden Sie im SafeKit 8.2 Benutzerhandbuch, Abschnitt 4.3.5 " [ Test TCP Load Balancing auf einer virtuellen IP Adresse ](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic) ".
 - **Das Mosaik reagiert nicht mehr, nachdem der Dispatcher-Server gestoppt hat:** GARP wird von einem Gerät auf dem Pfad (Router, Gateway, virtueller Switch) nicht berücksichtigt. Klären Sie GARP -Verarbeitung mit Ihrem Netzwerkteam.
-- **Periodisches Senden von GARP :** Das Attribut `arpreroute="on"` des Abschnitts `<vip>` (mit `arpinterval` und `arpelapse` ) sendet regelmäßig GARPs an die VIPs. Siehe Benutzerhandbuch, Abschnitt 13.6.4 " [ `<vip>` Syntax ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
-- **Diagnose der Auflösung von virtueller IP ( VIP ) zu MAC :** siehe Benutzerhandbuch, Abschnitt 7.24 " [ Fehlerbehebung bei der Auflösung von virtueller IP ( VIP ) zu MAC ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " und Abschnitt 7.15 " [ <span class="notranslate farm-term" translate="no">Farm</span> UP ( Ready ), aber Problem mit dem Lastausgleich in einer <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
+- **Periodisches Senden von GARP :** Das Attribut `arpreroute="on"` des Abschnitts `<vip>` (mit `arpinterval` und `arpelapse`) sendet regelmäßig GARPs an die VIPs. Siehe Benutzerhandbuch, Abschnitt 13.6.4 " [ `<vip>` Syntax ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
+- **Diagnose der Auflösung von virtueller IP (VIP) zu MAC :** siehe Benutzerhandbuch, Abschnitt 7.24 " [ Fehlerbehebung bei der Auflösung von virtueller IP (VIP) zu MAC ](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) " und Abschnitt 7.15 " [ <span class="notranslate farm-term" translate="no">Farm</span> UP (Ready), aber Problem mit dem Lastausgleich in einer <span class="notranslate farm-term" translate="no">Farm</span> ](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ".
 
 ## Demonstration der SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-de  %}}
 
-Informationen zum Failover zwischen primärem und Backup-System mit einer virtuellen IP Adresse finden Sie unter [ Testen der virtuellen IP -Adresse eines SafeKit mirror Clusters ](/de/best-practises/test-primary-backup-vip-mirror/) .
+Informationen zum Failover zwischen primärem und Backup-System mit einer virtuellen IP Adresse finden Sie unter [ Testen der virtuellen IP -Adresse eines SafeKit mirror Clusters ](/de/best-practises/test-primary-backup-vip-mirror/).
 
 {{%  insert-safekit-4-buttons-de  %}}

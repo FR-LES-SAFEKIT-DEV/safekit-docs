@@ -109,7 +109,7 @@ You must look at the **MAC (Ethernet) headers of the packets**: the destination 
 
 **What you should observe:**
 
-| When | Where to capture | Observed MAC addresses |
+| When | Where to capture packets | Observed MAC addresses |
 |---|---|---|
 | Before the failover | client | Client MAC → MAC of **node 1 (primary)** |
 | Before the failover | node 1 | Packets to the Virtual IP (VIP) are received; node 2 receives nothing |
