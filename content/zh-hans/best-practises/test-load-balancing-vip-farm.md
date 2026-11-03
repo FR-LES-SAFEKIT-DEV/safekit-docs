@@ -2,14 +2,14 @@
 title: "测试负载均衡虚拟 IP 地址 SafeKit farm 簇"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/test-load-balancing-vip-farm/"
 description: "学习如何测试 SafeKit 跨集群节点进行负载均衡，并验证虚拟 IP 故障转移、GARP 重路由和网络行为。"
-category: "最佳实践"
+category: "best-practises"
 lang: "zh-hans"
 topics: "关键原则，前提条件： SafeKit 马赛克，测试 1 – 连接分布，测试 2 – 调度服务器变更，测试 3 – 使用 arp -a 检查 GARP 重路由，测试 4 – 使用 Wireshark 进行端到端检查 (Windows）或 tcpdump（Linux）、要测试的工作站、预期结果概述、故障排除"
 ---
 
 # 测试负载均衡虚拟 IP 地址 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 簇
 
-本指南介绍了如何检查…… SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (<span class="notranslate farm-term" translate="no">Farm</span> 模块（在虚拟 IP 地址上进行负载均衡）在您的网络中正常工作：在节点之间分配连接，并在调度节点停止时重新路由虚拟 IP (VIP)。
+本指南介绍了如何检查 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (<span class="notranslate farm-term" translate="no">Farm</span> 模块（在虚拟 IP 地址上进行负载均衡）在您的网络中正常工作：在节点之间分配连接，并在调度节点停止时重新路由虚拟 IP (VIP)。
 
 ## 1. 关键原则
 
@@ -57,6 +57,8 @@ topics: "关键原则，前提条件： SafeKit 马赛克，测试 1 – 连接�
 
 该测试的详细描述见下文。 SafeKit 8.2 用户指南，第 4.3.5 节“[在虚拟 IP 地址上测试 TCP 负载均衡](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 
+观看马赛克测试视频“[演示 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 解决方案](/zh-hans/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)“ 部分。
+
 ## 3. 测试 1 – 连接分布
 
 **步骤**
@@ -70,7 +72,7 @@ topics: "关键原则，前提条件： SafeKit 马赛克，测试 1 – 连接�
 
 ## 4. 测试 2 – 调度服务器变更
 
-该测试检查…… <span class="notranslate farm-term" translate="no">Farm</span> 即使调度服务器停止运行，仍然持续响应。
+这项测试检查的是 <span class="notranslate farm-term" translate="no">Farm</span> 即使调度服务器停止运行，仍然持续响应。
 
 **步骤**
 
@@ -86,7 +88,7 @@ topics: "关键原则，前提条件： SafeKit 马赛克，测试 1 – 连接�
 
 > 停止任何其他节点 <span class="notranslate farm-term" translate="no">Farm</span> （非调度服务器）仅测试分发的重新配置。
 
-## 5. 测试 3 – 使用 GARP 重路由进行检查 `arp -a`
+## 5. 测试 3 – 检查 GARP 重路由 `arp -a`
 
 结合测试 4，此测试可以真正检查 GARP：在停止调度服务器之前，记下其 MAC 地址，然后检查虚拟 IP (VIP) 是否正确。/MAC 此后协会的组织结构发生了变化。
 
@@ -122,7 +124,7 @@ topics: "关键原则，前提条件： SafeKit 马赛克，测试 1 – 连接�
 
 停止调度服务器后重复捕获（测试 2，步骤 4）：步骤 1 现在必须显示 MAC 地址 **新的** 调度服务器。
 
-## 7. 要从哪些工作站进行测试
+## 7. 从哪些工作站进行测试
 
 该行为取决于客户端和网络之间的路径。 <span class="notranslate farm-term" translate="no">Farm</span>针对与您的架构相关的每种客户端类型，运行测试 1 和 2：
 
@@ -132,7 +134,7 @@ topics: "关键原则，前提条件： SafeKit 马赛克，测试 1 – 连接�
 | 客户 **不同的子网** （路由器、网关、虚拟机管理程序虚拟网络） | 路由器或网关的 GARP 处理 |
 | 客户端虚拟机 **在也托管着一个虚拟机管理程序的虚拟机管理程序上 <span class="notranslate farm-term" translate="no">Farm</span> 虚拟机** | 虚拟机管理程序虚拟交换机的行为，该交换机还负责处理内部交换和路由。 |
 
-## 8. 预期结果概述
+## 8. 预期结果总结
 
 | 测试 | 行动 | 预期结果 |
 |---|---|---|
@@ -152,8 +154,8 @@ topics: "关键原则，前提条件： SafeKit 马赛克，测试 1 – 连接�
 ## 演示 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 解决方案 {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-zh-hans  %}}
 
-对于使用虚拟 IP 地址的主/备故障转移，请参阅 [测试虚拟 IP 地址 SafeKit mirror 簇](/best-practises/test-primary-backup-vip-mirror/).
+对于使用虚拟 IP 地址的主/备故障转移，请参阅 [测试虚拟 IP 地址 SafeKit mirror 簇](/zh-hans/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-zh-hans  %}}

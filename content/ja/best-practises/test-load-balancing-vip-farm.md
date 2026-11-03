@@ -1,8 +1,8 @@
 ---
 title: "ロードバランシング仮想IPアドレスのテスト SafeKit farm クラスタ"
 canonical: "https://safekit.eviden.com/ja/best-practises/test-load-balancing-vip-farm/"
-description: "テスト方法を学ぶ SafeKit クラスタノード間で負荷分散を行い、仮想IPフェイルオーバー、GARPルーティング変更、およびネットワーク動作を検証する。"
-category: "ベストプラクティス"
+description: "テスト方法を学ぶ SafeKit クラスタノード間で負荷分散を行い、仮想IPフェイルオーバー、GARPルーティング変更、およびネットワーク動作を検証します。"
+category: "best-practises"
 lang: "ja"
 topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続の分散、テスト 2 – ディスパッチ サーバーの変更、テスト 3 – arp -a を使用した GARP リルーティングの確認、テスト 4 – Wireshark を使用したエンドツーエンドのチェック (Windows) または tcpdump (Linuxテスト対象のワークステーション、期待される結果の概要、トラブルシューティング"
 ---
@@ -11,7 +11,7 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
 
 このガイドでは、 SafeKit <span class="notranslate farm-term" translate="no">Farm</span> (<span class="notranslate farm-term" translate="no">Farm</span> モジュール、仮想 IP アドレスでの負荷分散）がネットワークで正しく動作します。ノード間での接続の分散、およびディスパッチノードが停止したときの仮想 IP (VIP) の再ルーティングが行われます。
 
-## 1. 主要原則
+## 1. 基本原則
 
 **前提条件：** すべてのノード <span class="notranslate farm-term" translate="no">Farm</span> 同じレイヤ2 IPサブネット（LAN、またはリモートサイト間で拡張されたVLAN）に属している必要があります。
 
@@ -28,11 +28,11 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
 1. 接続がすべてのノードに正しく分散されていること。
 2. ネットワーク（ルーター、ゲートウェイ、仮想化）が、ディスパッチサーバーが変更される際にGARPを考慮に入れること。
 
-## 2. 前提条件： SafeKit モザイク
+## 2. 前提条件: SafeKit モザイク
 
-モザイクは、 SafeKit仮想IP（VIP）に対して多数のTCP接続を開き、それぞれの接続に対して応答したノードの名前を表示します。これにより、ネットワークの分布状況が一目でわかります。
+このモザイクは、 SafeKit仮想IP（VIP）に対して多数のTCP接続を開き、それぞれの接続に対して応答したノードの名前を表示します。これにより、ネットワークの分布状況が一目でわかります。
 
-1. では `userconfig.xml` の <span class="notranslate farm-term" translate="no">Farm</span> モジュールでは、 `<vip>` セクションで、ポートにロードバランシングルールを追加します。 SafeKit ウェブサーバー。例 SafeKit HTTPポート9010で動作するWebサーバー：
+1. では `userconfig.xml` の <span class="notranslate farm-term" translate="no">Farm</span> モジュールでは、 `<vip>` セクションで、ポートにロードバランシングルールを追加します。 SafeKit ウェブサーバー。例 SafeKit HTTPポート9010のWebサーバー：
 
    ```xml
    <loadbalancing_list>
@@ -56,6 +56,8 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
    HTTPSでは、 `https://<VIP>:9453/safekit/mosaic.html`ポート9453にロードバランシングルールを適用します。
 
 このテストは、 SafeKit 8.2 ユーザーガイド、セクション 4.3.5 "[仮想IPアドレス上でTCP負荷分散をテストする](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
+
+「モザイクテストビデオを見る」[のデモンストレーション SafeKit <span class="notranslate farm-term" translate="no">farm</span> 解決](/ja/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" セクション。
 
 ## 3. テスト1 – 接続の分布
 
@@ -92,7 +94,7 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
 
 このテストは、モザイクを表示するクライアントワークステーションが **同じIPサブネット** として <span class="notranslate farm-term" translate="no">Farm</span>.
 
-クライアントと <span class="notranslate farm-term" translate="no">Farm</span>クライアントのARPテーブルには仮想IP（VIP）は含まれておらず、ゲートウェイに到達するために使用されるゲートウェイのアドレスが含まれています。 <span class="notranslate farm-term" translate="no">Farm</span>のネットワークです。その場合は、ネットワークチームと協力してルーターまたはゲートウェイのARPテーブルを確認してください。
+クライアントとルーターの間にルーターがある場合 <span class="notranslate farm-term" translate="no">Farm</span>クライアントのARPテーブルには仮想IP（VIP）は含まれておらず、ゲートウェイに到達するために使用されるゲートウェイのアドレスが含まれています。 <span class="notranslate farm-term" translate="no">Farm</span>のネットワークです。その場合は、ネットワークチームと協力してルーターまたはゲートウェイのARPテーブルを確認してください。
 
 **手順**
 
@@ -104,7 +106,7 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
 
 ## 6. テスト 4 – Wireshark を使用したエンドツーエンドチェック (Windows) または tcpdump (Linux)
 
-クライアントとサーバー側でパケットをキャプチャすることで、仮想IP（VIP）へのTCP接続を追跡できます。 <span class="notranslate farm-term" translate="no">Farm</span> ノード: Wireshark がオンになっている Windows マシン、そしてtcpdumpで Linux 機械。
+クライアントとサーバー側でパケットをキャプチャすることで、仮想IP（VIP）へのTCP接続を追跡できます。 <span class="notranslate farm-term" translate="no">Farm</span> ノード: Wireshark がオン Windows マシン、そしてtcpdumpで Linux 機械。
 
 あなたは見なければなりません **パケットのMAC（イーサネット）ヘッダー**IP アドレスだけでなく、ディスパッチ サーバーのカーネル フィルタは接続を分散します。 **宛先MACアドレスを書き換える** パケットは処理ノードのIPアドレスに転送されます。宛先IPアドレスは、経路全体を通して仮想IP（VIP）のままです。
 
@@ -114,7 +116,7 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
 |---|---|---|
 | 1. クライアントは仮想IP（VIP）に送信します | クライアント | クライアントMAC → MAC **ディスパッチサーバー** |
 | 2. ディスパッチサーバーが接続を転送する | ディスパッチサーバー | MAC のディスパッチ → MAC の **処理ノード** |
-| 3. 処理ノードは | 処理ノード | MACのディスパッチ → ノードMAC |
+| 3. 処理ノードは受信する | 処理ノード | MACのディスパッチ → ノードMAC |
 | 4. ノードはクライアントに直接応答する | 処理ノード | ノードMAC → クライアントMAC |
 | 5. クライアントは回答を受け取ります | クライアント | ノードMAC → クライアントMAC |
 
@@ -132,7 +134,7 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
 | クライアント **異なるサブネット** （ルーター、ゲートウェイ、ハイパーバイザー仮想ネットワーク） | ルーターまたはゲートウェイによるGARP処理 |
 | クライアントVM **ハイパーバイザー上でも <span class="notranslate farm-term" translate="no">Farm</span> VM** | ハイパーバイザの仮想スイッチの動作。仮想スイッチは内部スイッチングとルーティングも処理する。 |
 
-## 8. 期待される結果の概要
+## 8．期待される結果の概要
 
 | テスト | アクション | 期待される結果 |
 |---|---|---|
@@ -152,8 +154,8 @@ topics: "主要原則、前提条件： SafeKit mosaic、テスト 1 – 接続�
 ## のデモンストレーション SafeKit <span class="notranslate farm-term" translate="no">farm</span> 解決 {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ja  %}}
 
-仮想IPアドレスを使用したプライマリ/バックアップフェイルオーバーについては、以下を参照してください。 [仮想IPアドレスのテスト SafeKit mirror クラスタ](/best-practises/test-primary-backup-vip-mirror/).
+仮想IPアドレスを使用したプライマリ/バックアップフェイルオーバーについては、以下を参照してください。 [仮想IPアドレスのテスト SafeKit mirror クラスタ](/ja/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-ja  %}}

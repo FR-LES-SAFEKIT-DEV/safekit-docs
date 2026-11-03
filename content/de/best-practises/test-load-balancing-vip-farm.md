@@ -2,7 +2,7 @@
 title: "Testen der virtuellen IP-Adresse für den Lastausgleich in einem SafeKit farm Cluster"
 canonical: "https://safekit.eviden.com/de/best-practises/test-load-balancing-vip-farm/"
 description: "Lerne, wie man testet SafeKit Lastverteilung über die Clusterknoten hinweg und Überprüfung von Failover der virtuellen IP-Adresse, GARP-Umleitung und Netzwerkverhalten."
-category: "bewährte Verfahren"
+category: "best-practises"
 lang: "de"
 topics: "Grundprinzipien, Voraussetzung: die SafeKit Mosaik, Test 1 – Verteilung der Verbindungen, Test 2 – Wechsel des Dispatching-Servers, Test 3 – Überprüfung des GARP-Reroutings mit arp -a, Test 4 – End-to-End-Prüfung mit Wireshark (Windows) oder tcpdump (LinuxWelche Workstations sollen getestet werden? Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung"
 ---
@@ -17,7 +17,7 @@ Diese Anleitung beschreibt, wie man überprüft, ob ein SafeKit <span class="not
 
 - Die virtuelle IP-Adresse (VIP) wird lokal auf jedem Knoten konfiguriert. <span class="notranslate farm-term" translate="no">Farm</span>: Es wird als Alias der physischen IP-Adresse auf der Netzwerkkarte dieser Adresse festgelegt, wenn die <span class="notranslate farm-term" translate="no">Farm</span> wird auf dem Knoten gestartet.
 - Ein einzelner Knoten, der **Dispatching-Server**, empfängt den Netzwerkverkehr für die virtuelle IP (VIP) (`vmac_directed` Konfiguration, die SafeKit Standardmäßig ist seine MAC-Adresse diejenige, die in den ARP-Tabellen (Router, Gateway, Clients im selben Subnetz) mit der virtuellen IP-Adresse (VIP) verknüpft ist.
-- Der Kernelfilter dieses Knotens verteilt dann die TCP-Verbindungen auf die Knoten des <span class="notranslate farm-term" translate="no">Farm</span>, von **die Ziel-MAC-Adresse neu schreiben** Die Pakete werden an den verarbeitenden Knoten weitergeleitet (die Ziel-IP-Adresse bleibt die virtuelle IP-Adresse (VIP)). Antworten werden direkt von dem Knoten, der die Verbindung verarbeitet, an den Client gesendet.
+- Der Kernelfilter dieses Knotens verteilt dann die TCP-Verbindungen auf die Knoten des <span class="notranslate farm-term" translate="no">Farm</span>, von **die Ziel-MAC-Adresse neu schreiben** Die Pakete werden an den verarbeitenden Knoten weitergeleitet (die Ziel-IP-Adresse bleibt die virtuelle IP-Adresse (VIP)). Antworten werden direkt vom Knoten, der die Verbindung verarbeitet, an den Client gesendet.
 - Die vom Filter durchgeführte Verteilung ist **deterministisch**Der Verarbeitungsknoten wird anhand der Clientidentität gemäß der konfigurierten Lastverteilungsregel berechnet:
   - auf **Client-IP-Adresse** (`filter="on_addr"`): Ein bestimmter Client wird immer vom selben Knoten bedient, wodurch die Sitzungsaffinität sichergestellt wird;
   - auf **Client-TCP-Port** (`filter="on_port"`Jede TCP-Verbindung desselben Clients kann von einem anderen Knoten bedient werden. Diese Regel wird für das Mosaik (Abschnitt 2) verwendet, das daher alle Knoten einer einzelnen Workstation anzeigt.
@@ -56,6 +56,8 @@ Das Mosaik ist eine Testseite, die bereitgestellt wird von SafeKitEs öffnet zah
    Bei HTTPS verwenden Sie `https://<VIP>:9453/safekit/mosaic.html`, mit der Lastverteilungsregel auf Port 9453.
 
 Der Test wird im Detail beschrieben in der SafeKit 8.2 Benutzerhandbuch, Abschnitt 4.3.5 "[Testen des TCP-Lastausgleichs auf einer virtuellen IP-Adresse](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
+
+Sehen Sie sich das Mosaiktestvideo im " an[Demonstration der SafeKit <span class="notranslate farm-term" translate="no">farm</span> Lösung](/de/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" Abschnitt.
 
 ## 3. Test 1 – Verteilung der Verbindungen
 
@@ -152,8 +154,8 @@ Das Verhalten hängt vom Netzwerkpfad zwischen Client und Netzwerk ab. <span cla
 ## Demonstration der SafeKit <span class="notranslate farm-term" translate="no">farm</span> Lösung {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-de  %}}
 
-Informationen zum Failover zwischen primärem und Backup-System mit einer virtuellen IP-Adresse finden Sie unter [Testen der virtuellen IP-Adresse eines SafeKit mirror Cluster](/best-practises/test-primary-backup-vip-mirror/).
+Informationen zum Failover zwischen primärem und Backup-System mit einer virtuellen IP-Adresse finden Sie unter [Testen der virtuellen IP-Adresse eines SafeKit mirror Cluster](/de/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-de  %}}

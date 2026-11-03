@@ -2,7 +2,7 @@
 title: "Testando o endereço IP virtual de balanceamento de carga em um SafeKit farm conjunto"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/test-load-balancing-vip-farm/"
 description: "Aprenda como testar SafeKit balanceamento de carga entre os nós do cluster e verificação de failover de IP virtual, redirecionamento GARP e comportamento da rede."
-category: "melhores práticas"
+category: "best-practises"
 lang: "pt-pt"
 topics: "Princípios-chave, Pré-requisito: o SafeKit Mosaico, Teste 1 – Distribuição de conexões, Teste 2 – Alteração do servidor de despacho, Teste 3 – Verificação do redirecionamento GARP com arp -a, Teste 4 – Verificação de ponta a ponta com Wireshark (Windows) ou tcpdump (Linux), Quais estações de trabalho usar para os testes, Resumo dos resultados esperados, Solução de problemas"
 ---
@@ -56,6 +56,8 @@ O mosaico é uma página de teste fornecida por SafeKitEle abre várias conexõe
    Em HTTPS, use `https://<VIP>:9453/safekit/mosaic.html`, com a regra de balanceamento de carga na porta 9453.
 
 O teste é descrito em detalhes no SafeKit 8.2 Guia do Usuário, seção 4.3.5 "[Teste o balanceamento de carga TCP em um endereço IP virtual.](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
+
+Assista ao vídeo do teste de mosaico em "[Demonstração do SafeKit <span class="notranslate farm-term" translate="no">farm</span> solução](/pt-pt/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" seção.
 
 ## 3. Teste 1 – Distribuição de conexões
 
@@ -129,7 +131,7 @@ O comportamento depende do caminho de rede entre o cliente e o servidor. <span c
 | Localização do cliente | O que o teste verifica |
 |---|---|
 | Cliente no **mesma sub-rede** como o <span class="notranslate farm-term" translate="no">Farm</span> | Atualização das tabelas ARP dos clientes pelo GARP (teste 3 possível) |
-| Cliente em um **sub-rede diferente** (roteador, gateway, hipervisor, rede virtual) | Tratamento do GARP pelo roteador ou gateway |
+| Cliente em um **sub-rede diferente** (roteador, gateway, hipervisor, rede virtual) | Tratamento GARP pelo roteador ou gateway |
 | VM do cliente **em um hipervisor que também hospeda um <span class="notranslate farm-term" translate="no">Farm</span> VM** | Comportamento do switch virtual do hipervisor, que também lida com comutação e roteamento internos. |
 
 ## 8. Resumo dos resultados esperados
@@ -143,7 +145,7 @@ O comportamento depende do caminho de rede entre o cliente e o servidor. <span c
 | 3 | `arp -a` antes e depois da parada | O endereço MAC associado ao IP Virtual (VIP) muda. |
 | 4 | Captura com Wireshark ou tcpdump antes e depois da parada. | O cliente envia dados para o endereço MAC do novo servidor de despacho. |
 
-## 9. Solução de problemas
+## 9. Resolução de problemas
 
 - **O mosaico deixa de responder após a parada do servidor de distribuição:** O GARP não é considerado por um dispositivo no caminho (roteador, gateway, switch virtual). Verifique o tratamento do GARP com sua equipe de rede.
 - **Envio periódico de GARP:** o `arpreroute="on"` atributo do `<vip>` seção (com `arpinterval` e `arpelapse`) envia GARPs regularmente para os VIPs. Consulte o Guia do Usuário, seção 13.6.4 "[`<vip>` sintaxe](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
@@ -152,8 +154,8 @@ O comportamento depende do caminho de rede entre o cliente e o servidor. <span c
 ## Demonstração do SafeKit <span class="notranslate farm-term" translate="no">farm</span> solução {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-pt-pt  %}}
 
-Para failover primário/de backup com um endereço IP virtual, consulte [Testando o endereço IP virtual de um SafeKit mirror conjunto](/best-practises/test-primary-backup-vip-mirror/).
+Para failover primário/de backup com um endereço IP virtual, consulte [Testando o endereço IP virtual de um SafeKit mirror conjunto](/pt-pt/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-pt-pt  %}}

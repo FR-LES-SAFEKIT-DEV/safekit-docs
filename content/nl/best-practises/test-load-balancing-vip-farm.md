@@ -2,7 +2,7 @@
 title: "Het testen van het virtuele IP-adres voor load balancing in een SafeKit farm cluster"
 canonical: "https://safekit.eviden.com/nl/best-practises/test-load-balancing-vip-farm/"
 description: "Leer hoe je moet testen SafeKit Het verdelen van de belasting over de clusterknooppunten en het verifiëren van virtuele IP-failover, GARP-rerouting en netwerkgedrag."
-category: "beste praktijken"
+category: "best-practises"
 lang: "nl"
 topics: "Kernprincipes, Voorwaarde: de SafeKit mozaïek, Test 1 – Distributie van verbindingen, Test 2 – Wijziging van de verzendende server, Test 3 – Controleren van GARP-omleiding met arp -a, Test 4 – End-to-end controle met Wireshark (Windows) of tcpdump (Linux), Welke werkstations te gebruiken voor de test, Samenvatting van de verwachte resultaten, Probleemoplossing"
 ---
@@ -28,7 +28,7 @@ Wat u dus moet testen:
 1. dat de verbindingen correct over alle knooppunten zijn verdeeld;
 2. dat het netwerk (router, gateway, virtualisatie) rekening houdt met GARP wanneer de verzendende server verandert.
 
-## 2. Voorwaarde: de SafeKit mozaïek
+## 2. Vereiste: de SafeKit mozaïek
 
 De mozaïekafbeelding is een testpagina die wordt aangeboden door SafeKitHet opent meerdere TCP-verbindingen met het virtuele IP-adres (VIP) en toont voor elke verbinding de naam van het knooppunt dat heeft gereageerd. Dit geeft in één oogopslag de verdeling weer.
 
@@ -56,6 +56,8 @@ De mozaïekafbeelding is een testpagina die wordt aangeboden door SafeKitHet ope
    Gebruik in HTTPS het volgende: `https://<VIP>:9453/safekit/mosaic.html`, met de load balancing-regel op poort 9453.
 
 De test wordt in detail beschreven in de SafeKit 8.2 Gebruikershandleiding, sectie 4.3.5 "[Test TCP-loadbalancing op een virtueel IP-adres.](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
+
+Bekijk de mozaïektestvideo in de "[Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> oplossing](/nl/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" sectie.
 
 ## 3. Test 1 – Verdeling van verbindingen
 
@@ -92,7 +94,7 @@ Samen met test 4 controleert deze test daadwerkelijk GARP: je noteert het MAC-ad
 
 Deze test is alleen mogelijk als het clientwerkstation waarop de mozaïekweergave te zien is, zich in de **hetzelfde IP-subnet** als de <span class="notranslate farm-term" translate="no">Farm</span>.
 
-Als er een router tussen de client en de router staat... <span class="notranslate farm-term" translate="no">Farm</span>De ARP-tabel van de client bevat niet het virtuele IP-adres (VIP), maar het adres van de gateway die gebruikt is om de client te bereiken. <span class="notranslate farm-term" translate="no">Farm</span>Het netwerk van 's. Controleer in dat geval de ARP-tabel van de router of gateway met het netwerkteam.
+Als er een router tussen de client en de client staat... <span class="notranslate farm-term" translate="no">Farm</span>De ARP-tabel van de client bevat niet het virtuele IP-adres (VIP), maar het adres van de gateway die gebruikt is om de client te bereiken. <span class="notranslate farm-term" translate="no">Farm</span>Het netwerk van 's. Controleer in dat geval de ARP-tabel van de router of gateway met het netwerkteam.
 
 **Stappen**
 
@@ -152,8 +154,8 @@ Het gedrag is afhankelijk van het netwerkpad tussen de client en de <span class=
 ## Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> oplossing {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-nl  %}}
 
-Voor failover tussen primaire en back-up met een virtueel IP-adres, zie [Het testen van het virtuele IP-adres van een SafeKit mirror cluster](/best-practises/test-primary-backup-vip-mirror/).
+Voor failover tussen primaire en back-up met een virtueel IP-adres, zie [Het testen van het virtuele IP-adres van een SafeKit mirror cluster](/nl/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-nl  %}}

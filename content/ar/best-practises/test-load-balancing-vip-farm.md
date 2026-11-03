@@ -2,7 +2,7 @@
 title: "اختبار عنوان IP الظاهري لموازنة الأحمال في SafeKit farm تَجَمَّع"
 canonical: "https://safekit.eviden.com/ar/best-practises/test-load-balancing-vip-farm/"
 description: "تعلم كيفية الاختبار SafeKit موازنة الأحمال عبر عقد المجموعة والتحقق من تجاوز الفشل لعنوان IP الظاهري، وإعادة توجيه GARP، وسلوك الشبكة."
-category: "أفضل الممارسات"
+category: "best-practises"
 lang: "ar"
 topics: "المبادئ الأساسية، المتطلبات الأساسية: SafeKit موزاييك، الاختبار 1 - توزيع الاتصالات، الاختبار 2 - تغيير خادم الإرسال، الاختبار 3 - التحقق من إعادة توجيه GARP باستخدام arp -a، الاختبار 4 - فحص شامل باستخدام Wireshark (Windows) أو tcpdump (Linux)، محطات العمل التي سيتم الاختبار منها، ملخص النتائج المتوقعة، استكشاف الأخطاء وإصلاحها"
 ---
@@ -57,7 +57,9 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 
 تم وصف الاختبار بالتفصيل في SafeKit 8.2 دليل المستخدم، القسم 4.3.5 "[اختبار موازنة تحميل TCP على عنوان IP افتراضي](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 
-## 3. الاختبار 1 - توزيع الاتصالات
+شاهد فيديو اختبار الفسيفساء في "[عرض توضيحي لـ SafeKit <span class="notranslate farm-term" translate="no">farm</span> حل](/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" قسم.
+
+## 3. الاختبار 1 – توزيع الاتصالات
 
 **خطوات**
 
@@ -102,7 +104,7 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 4. تأكد من أن الفسيفساء لا تزال تعمل مع العقد المتبقية.
 5. يجري `arp -a` مرة أخرى لقراءة عنوان IP الافتراضي الجديد (VIP)/MAC الربط وتحديد خادم الإرسال الجديد.
 
-## 6. الاختبار الرابع – فحص شامل باستخدام برنامج Wireshark (Windows) أو tcpdump (Linux)
+## 6. الاختبار 4 – فحص شامل باستخدام Wireshark (Windows) أو tcpdump (Linux)
 
 يمكنك تتبع اتصال TCP بعنوان IP الظاهري (VIP) عن طريق التقاط الحزم على جهاز العميل وعلى جهاز الكمبيوتر. <span class="notranslate farm-term" translate="no">Farm</span> العقد: مع تشغيل Wireshark Windows الأجهزة، ومع تشغيل tcpdump Linux الآلات.
 
@@ -122,7 +124,7 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 
 كرر عملية الالتقاط بعد إيقاف خادم الإرسال (الاختبار 2، الخطوة 4): يجب أن تُظهر الخطوة 1 الآن عنوان MAC الخاص بـ **جديد** خادم الإرسال.
 
-## 7. أي محطات العمل يجب اختبارها
+## 7. ما هي محطات العمل التي سيتم الاختبار منها؟
 
 يعتمد السلوك على مسار الشبكة بين العميل و <span class="notranslate farm-term" translate="no">Farm</span>قم بتشغيل الاختبارين 1 و 2 من كل نوع من أنواع العملاء ذات الصلة ببنية نظامك:
 
@@ -152,8 +154,8 @@ topics: "المبادئ الأساسية، المتطلبات الأساسية: 
 ## عرض توضيحي لـ SafeKit <span class="notranslate farm-term" translate="no">farm</span> حل {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ar  %}}
 
-للاطلاع على معلومات حول تجاوز الفشل الأساسي/الاحتياطي باستخدام عنوان IP افتراضي، انظر [اختبار عنوان IP الظاهري لـ SafeKit mirror تَجَمَّع](/best-practises/test-primary-backup-vip-mirror/).
+للاطلاع على معلومات حول تجاوز الفشل الأساسي/الاحتياطي باستخدام عنوان IP افتراضي، انظر [اختبار عنوان IP الظاهري لـ SafeKit mirror تَجَمَّع](/ar/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-ar  %}}

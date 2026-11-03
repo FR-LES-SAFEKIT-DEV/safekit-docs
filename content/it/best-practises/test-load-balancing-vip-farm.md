@@ -2,7 +2,7 @@
 title: "Test dell'indirizzo IP virtuale di bilanciamento del carico in un SafeKit farm grappolo"
 canonical: "https://safekit.eviden.com/it/best-practises/test-load-balancing-vip-farm/"
 description: "Scopri come eseguire i test SafeKit Bilanciare il carico tra i nodi del cluster e verificare il failover IP virtuale, il reindirizzamento GARP e il comportamento della rete."
-category: "migliori pratiche"
+category: "best-practises"
 lang: "it"
 topics: "Principi chiave, Prerequisito: il SafeKit mosaico, Test 1 – Distribuzione delle connessioni, Test 2 – Cambio del server di dispatching, Test 3 – Verifica del reindirizzamento GARP con arp -a, Test 4 – Verifica end-to-end con Wireshark (Windows) o tcpdump (Linux), Da quali postazioni di lavoro eseguire il test, Riepilogo dei risultati attesi, Risoluzione dei problemi"
 ---
@@ -57,6 +57,8 @@ Il mosaico è una pagina di prova fornita da SafeKitApre numerose connessioni TC
 
 Il test è descritto in dettaglio nel SafeKit 8.2 Guida per l'utente, sezione 4.3.5 "[Testare il bilanciamento del carico TCP su un indirizzo IP virtuale](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 
+Guarda il video del test del mosaico in "[Dimostrazione del SafeKit <span class="notranslate farm-term" translate="no">farm</span> soluzione](/it/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" sezione.
+
 ## 3. Test 1 – Distribuzione delle connessioni
 
 **Passaggi**
@@ -68,7 +70,7 @@ Il test è descritto in dettaglio nel SafeKit 8.2 Guida per l'utente, sezione 4.
 
 Ciò dimostra che il router o gateway a monte raggiunge uno dei nodi tramite il suo indirizzo MAC e che tale nodo distribuisce correttamente le connessioni.
 
-## 4. Test 2 – Cambio del server di dispatching
+## 4. Test 2 – Modifica del server di dispatching
 
 Questo test verifica che il <span class="notranslate farm-term" translate="no">Farm</span> continua a rispondere anche quando il server di dispatching si arresta.
 
@@ -113,9 +115,9 @@ Devi guardare il **Intestazioni MAC (Ethernet) dei pacchetti**, non solo gli ind
 | Fare un passo | Dove catturare | Indirizzi MAC osservati |
 |---|---|---|
 | 1. Il client invia all'IP virtuale (VIP) | cliente | MAC del client → MAC del **server di invio** |
-| 2. Il server di invio inoltra la connessione | server di invio | Invio MAC → MAC del **nodo di elaborazione** |
-| 3. Il nodo di elaborazione riceve | nodo di elaborazione | Invio MAC → nodo MAC |
-| 4. Il nodo risponde direttamente al client | nodo di elaborazione | MAC del nodo → MAC del client |
+| 2. Il server di invio inoltra la connessione | server di invio | Invio MAC → MAC del **Nodo di elaborazione** |
+| 3. Il nodo di elaborazione riceve | Nodo di elaborazione | Invio MAC → nodo MAC |
+| 4. Il nodo risponde direttamente al client | Nodo di elaborazione | MAC del nodo → MAC del client |
 | 5. Il cliente riceve la risposta | cliente | MAC del nodo → MAC del client |
 
 > Se la workstation client si trova in una sottorete diversa da quella <span class="notranslate farm-term" translate="no">Farm</span>, il "MAC client" visto sul <span class="notranslate farm-term" translate="no">Farm</span> nodi è l'indirizzo MAC del **gateway** (router) che collega le due sottoreti, non quella della workstation client.
@@ -152,8 +154,8 @@ Il comportamento dipende dal percorso di rete tra il client e il <span class="no
 ## Dimostrazione del SafeKit <span class="notranslate farm-term" translate="no">farm</span> soluzione {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-it  %}}
 
-Per il failover primario/di backup con un indirizzo IP virtuale, vedere [Test dell'indirizzo IP virtuale di un SafeKit mirror grappolo](/best-practises/test-primary-backup-vip-mirror/).
+Per il failover primario/di backup con un indirizzo IP virtuale, vedere [Test dell'indirizzo IP virtuale di un SafeKit mirror grappolo](/it/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-it  %}}

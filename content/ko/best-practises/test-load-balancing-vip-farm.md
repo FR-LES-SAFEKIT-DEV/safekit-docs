@@ -2,7 +2,7 @@
 title: "로드 밸런싱 가상 IP 주소 테스트 SafeKit farm 무리"
 canonical: "https://safekit.eviden.com/ko/best-practises/test-load-balancing-vip-farm/"
 description: "테스트하는 방법을 알아보세요 SafeKit 클러스터 노드 간 로드 밸런싱을 수행하고 가상 IP 장애 조치, GARP 재라우팅 및 네트워크 동작을 검증합니다."
-category: "모범 사례"
+category: "best-practises"
 lang: "ko"
 topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연결 분산, 테스트 2 - 디스패칭 서버 변경, 테스트 3 - arp -a를 사용한 GARP 재라우팅 확인, 테스트 4 - Wireshark를 사용한 종단 간 검사Windows) 또는 tcpdump(Linux테스트에 사용할 워크스테이션, 예상 결과 요약, 문제 해결"
 ---
@@ -30,9 +30,9 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 
 ## 2. 필수 조건: SafeKit 모자이크
 
-이 모자이크는 다음에서 제공하는 테스트 페이지입니다. SafeKit이 프로그램은 가상 IP(VIP)에 여러 TCP 연결을 열고 각 연결에 응답한 노드의 이름을 표시합니다. 이를 통해 네트워크 분포를 한눈에 파악할 수 있습니다.
+이 모자이크는 다음에서 제공하는 테스트 페이지입니다. SafeKit이 프로그램은 가상 IP(VIP)에 여러 TCP 연결을 열고 각 연결에 응답한 노드의 이름을 표시합니다. 이를 통해 연결 분포를 한눈에 파악할 수 있습니다.
 
-1. 그 안에서 `userconfig.xml` ~의 <span class="notranslate farm-term" translate="no">Farm</span> 모듈에서, `<vip>` 해당 섹션에서 포트에 로드 밸런싱 규칙을 추가합니다. SafeKit 웹 서버. 예시 SafeKit HTTP 포트 9010에서 웹 서버가 실행 중입니다.
+1. 그 안에서 `userconfig.xml` ~의 <span class="notranslate farm-term" translate="no">Farm</span> 모듈에서, `<vip>` 해당 섹션에서 포트에 로드 밸런싱 규칙을 추가합니다. SafeKit 웹 서버. 예시 SafeKit HTTP를 사용하는 웹 서버, 포트 9010:
 
    ```xml
    <loadbalancing_list>
@@ -57,6 +57,8 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 
 시험에 대한 자세한 설명은 다음과 같습니다. SafeKit 8.2 사용자 설명서, 4.3.5절 "[가상 IP 주소에서 TCP 로드 밸런싱을 테스트합니다.](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 
+모자이크 테스트 영상을 시청하세요.[시연 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 해결책](/ko/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" 부분.
+
 ## 3. 테스트 1 – 연결 분포
 
 **단계**
@@ -68,7 +70,7 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 
 이는 상위 라우터 또는 게이트웨이가 MAC 주소를 통해 노드 중 하나에 도달하고, 해당 노드가 연결을 올바르게 분배한다는 것을 증명합니다.
 
-## 4. 테스트 2 – 디스패칭 서버 변경
+## 4. 테스트 2 – 배송 서버 변경
 
 이 테스트는 다음을 확인합니다. <span class="notranslate farm-term" translate="no">Farm</span> 디스패칭 서버가 중단되어도 계속 응답합니다.
 
@@ -100,7 +102,7 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 2. 클라이언트 워크스테이션에서 다음 명령을 실행하십시오. `arp -a` 그리고 가상 IP(VIP)와 연결된 MAC 주소를 기록해 두십시오. 이 주소는 배차 서버를 식별합니다.
 3. 멈춰 <span class="notranslate farm-term" translate="no">Farm</span> 이 MAC 주소를 가진 노드.
 4. 나머지 노드를 사용해도 모자이크가 제대로 작동하는지 확인하십시오.
-5. 달리다 `arp -a` 새로운 가상 IP(VIP)를 다시 읽어보세요./MAC 새로운 디스패칭 서버를 연결하고 식별합니다.
+5. 달리다 `arp -a` 새로운 가상 IP(VIP)를 다시 읽어보겠습니다./MAC 새로운 디스패칭 서버를 연결하고 식별합니다.
 
 ## 6. 테스트 4 – Wireshark를 이용한 엔드투엔드 점검 (Windows) 또는 tcpdump(Linux)
 
@@ -113,7 +115,7 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 | 단계 | 어디에서 촬영할 수 있나요? | 관찰된 MAC 주소 |
 |---|---|---|
 | 1. 클라이언트가 가상 IP(VIP)로 전송합니다. | 고객 | 클라이언트 MAC 주소 → 대상의 MAC 주소 **디스패칭 서버** |
-| 2. 디스패칭 서버는 연결을 전달합니다. | 디스패칭 서버 | MAC 전송 → MAC의 **처리 노드** |
+| 2. 디스패칭 서버는 연결을 전달합니다. | 디스패칭 서버 | MAC 주소 전송 → MAC 주소 **처리 노드** |
 | 3. 처리 노드는 수신합니다. | 처리 노드 | MAC 주소 전송 → 노드 MAC 주소 |
 | 4. 노드는 클라이언트에 직접 응답합니다. | 처리 노드 | 노드 MAC 주소 → 클라이언트 MAC 주소 |
 | 5. 고객은 응답을 받습니다. | 고객 | 노드 MAC 주소 → 클라이언트 MAC 주소 |
@@ -122,7 +124,7 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 
 디스패칭 서버를 중지한 후 캡처를 반복합니다(테스트 2, 4단계): 이제 1단계에서 MAC 주소가 표시되어야 합니다. **새로운** 디스패칭 서버.
 
-## 7. 어떤 워크스테이션에서 테스트해야 할까요?
+## 7. 어떤 워크스테이션에서 테스트를 진행해야 할까요?
 
 동작 방식은 클라이언트와 서버 간의 네트워크 경로에 따라 달라집니다. <span class="notranslate farm-term" translate="no">Farm</span>아키텍처와 관련된 각 클라이언트 유형별로 테스트 1과 2를 실행하십시오.
 
@@ -152,8 +154,8 @@ topics: "핵심 원칙, 필수 조건: SafeKit 모자이크, 테스트 1 - 연�
 ## 시연 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 해결책 {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-ko  %}}
 
-가상 IP 주소를 사용한 기본/백업 페일오버에 대해서는 다음을 참조하십시오. [가상 IP 주소 테스트 SafeKit mirror 무리](/best-practises/test-primary-backup-vip-mirror/).
+가상 IP 주소를 사용한 기본/백업 페일오버에 대해서는 다음을 참조하십시오. [가상 IP 주소 테스트 SafeKit mirror 무리](/ko/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-ko  %}}

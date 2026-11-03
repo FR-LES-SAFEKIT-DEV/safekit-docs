@@ -2,7 +2,7 @@
 title: "Test de l'adresse IP virtuelle d'équilibrage de charge dans un SafeKit farm grappe"
 canonical: "https://safekit.eviden.com/fr/best-practises/test-load-balancing-vip-farm/"
 description: "Apprenez comment tester SafeKit Équilibrage de charge entre les nœuds du cluster et vérification du basculement d'adresse IP virtuelle, du réacheminement GARP et du comportement du réseau."
-category: "meilleures pratiques"
+category: "best-practises"
 lang: "fr"
 topics: "Principes clés, Prérequis : le SafeKit mosaïque, Test 1 – Distribution des connexions, Test 2 – Changement de serveur de répartition, Test 3 – Vérification du reroutage GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Postes de travail à tester, Résumé des résultats attendus, Dépannage"
 ---
@@ -57,6 +57,8 @@ La mosaïque est une page de test fournie par SafeKitIl ouvre de nombreuses conn
 
 Le test est décrit en détail dans le SafeKit 8.2 Guide de l'utilisateur, section 4.3.5 «[Tester l'équilibrage de charge TCP sur une adresse IP virtuelle](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 
+Regardez la vidéo de test de mosaïque dans le "[Démonstration de la SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution](/fr/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" section.
+
 ## 3. Test 1 – Distribution des connexions
 
 **Mesures**
@@ -86,7 +88,7 @@ Ce test vérifie que le <span class="notranslate farm-term" translate="no">Farm<
 
 > Arrêter tout autre nœud du <span class="notranslate farm-term" translate="no">Farm</span> (celui qui n'est pas le serveur de répartition) teste uniquement la reconfiguration de la distribution.
 
-## 5. Test 3 – Vérification du réacheminement GARP avec `arp -a`
+## 5. Test 3 – Vérification du reroutage GARP avec `arp -a`
 
 Associé au test 4, ce test vérifie réellement GARP : vous notez l’adresse MAC du serveur de répartition avant de l’arrêter, puis vous vérifiez que l’adresse IP virtuelle (VIP)/MAC L'association a changé par la suite.
 
@@ -104,7 +106,7 @@ S'il existe un routeur entre le client et le <span class="notranslate farm-term"
 
 ## 6. Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux)
 
-Vous pouvez suivre une connexion TCP vers l'adresse IP virtuelle (VIP) en capturant les paquets sur le client et sur le routeur. <span class="notranslate farm-term" translate="no">Farm</span> nœuds : avec Wireshark activé Windows machines, et avec tcpdump sur Linux machines.
+Vous pouvez suivre une connexion TCP vers l'adresse IP virtuelle (VIP) en capturant les paquets sur le client et sur le routeur. <span class="notranslate farm-term" translate="no">Farm</span> nœuds : avec Wireshark activé Windows machines, et avec tcpdump sur Linux machines.
 
 Vous devez regarder le **En-têtes MAC (Ethernet) des paquets**, et pas seulement les adresses IP : le filtre noyau du serveur de répartition distribue les connexions par **réécriture de l'adresse MAC de destination** des paquets à celui du nœud de traitement. L'adresse IP de destination reste l'adresse IP virtuelle (VIP) tout au long du chemin.
 
@@ -152,8 +154,8 @@ Le comportement dépend du chemin réseau entre le client et le <span class="not
 ## Démonstration de la SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-fr  %}}
 
-Pour le basculement principal/de secours avec une adresse IP virtuelle, voir [Tester l'adresse IP virtuelle d'un SafeKit mirror grappe](/best-practises/test-primary-backup-vip-mirror/).
+Pour le basculement principal/de secours avec une adresse IP virtuelle, voir [Tester l'adresse IP virtuelle d'un SafeKit mirror grappe](/fr/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-fr  %}}

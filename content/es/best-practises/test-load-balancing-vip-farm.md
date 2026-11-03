@@ -2,7 +2,7 @@
 title: "Probar la dirección IP virtual de equilibrio de carga en un SafeKit farm grupo"
 canonical: "https://safekit.eviden.com/es/best-practises/test-load-balancing-vip-farm/"
 description: "Aprende a realizar pruebas SafeKit Realizar el balanceo de carga entre los nodos del clúster y verificar la conmutación por error de IP virtual, el redireccionamiento GARP y el comportamiento de la red."
-category: "mejores prácticas"
+category: "best-practises"
 lang: "es"
 topics: "Principios clave, Requisito previo: el SafeKit mosaico, Prueba 1 – Distribución de conexiones, Prueba 2 – Cambio de servidor de despacho, Prueba 3 – Comprobación del redireccionamiento GARP con arp -a, Prueba 4 – Comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), Estaciones de trabajo para realizar las pruebas, Resumen de los resultados esperados, Solución de problemas"
 ---
@@ -57,6 +57,8 @@ El mosaico es una página de prueba proporcionada por SafeKitAbre múltiples con
 
 La prueba se describe en detalle en el SafeKit 8.2 Guía del usuario, sección 4.3.5 "[Prueba de balanceo de carga TCP en una dirección IP virtual](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 
+Mira el vídeo de prueba del mosaico en el "[Demostración de la SafeKit <span class="notranslate farm-term" translate="no">farm</span> solución](/es/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" sección.
+
 ## 3. Prueba 1 – Distribución de conexiones
 
 **Pasos**
@@ -86,7 +88,7 @@ Esta prueba comprueba que el <span class="notranslate farm-term" translate="no">
 
 > Detener cualquier otro nodo del <span class="notranslate farm-term" translate="no">Farm</span> (uno que no es el servidor de despacho) solo prueba la reconfiguración de la distribución.
 
-## 5. Prueba 3: comprobación del redireccionamiento GARP con `arp -a`
+## 5. Prueba 3 – Comprobación del redireccionamiento GARP con `arp -a`
 
 Junto con la prueba 4, esta prueba realmente verifica GARP: usted anota la dirección MAC del servidor de despacho antes de detenerlo, luego verifica que la IP virtual (VIP)/MAC La asociación cambió posteriormente.
 
@@ -152,8 +154,8 @@ El comportamiento depende de la ruta de red entre el cliente y el servidor. <spa
 ## Demostración de la SafeKit <span class="notranslate farm-term" translate="no">farm</span> solución {#demonstration-of-the-safekit-farm-solution}
 
 
-{{%  insert-safekit-farm-video-en  %}}
+{{%  insert-safekit-farm-video-es  %}}
 
-Para la conmutación por error principal/de respaldo con una dirección IP virtual, consulte [Probar la dirección IP virtual de un SafeKit mirror grupo](/best-practises/test-primary-backup-vip-mirror/).
+Para la conmutación por error principal/de respaldo con una dirección IP virtual, consulte [Probar la dirección IP virtual de un SafeKit mirror grupo](/es/best-practises/test-primary-backup-vip-mirror/).
 
-{{%  insert-safekit-4-buttons-en  %}}
+{{%  insert-safekit-4-buttons-es  %}}
