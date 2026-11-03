@@ -50,13 +50,13 @@ topics: "关键原则，前提条件：虚拟IP (VIP) 配置，测试 1 – 主�
 **步骤**
 
 1. 在主服务器上，运行`ipconfig` （ Windows ）或`ip addr show` （ Linux ）。
-   →**预期结果：**虚拟IP (VIP) 在网卡上显示为物理IP地址的别名。
+   →<strong>预期结果：</strong>虚拟IP (VIP) 在网卡上显示为物理IP地址的别名。
 2. 在备用服务器上运行相同的命令。
-   →**预期结果：**虚拟IP （ VIP ）不显示。
-3. 从**集群外部的**客户端工作站， `ping`物理IP地址和虚拟IP (VIP)。
-   →**预期结果：**所有三个`ping`命令都会响应（除非它们被防火墙过滤）。
-4. 使用SafeKit mosaic 通过虚拟IP (VIP) 检查访问权限：从**外部**客户端的浏览器连接到`http://<VIP>:9010/safekit/mosaic.html` （如果SafeKit Web 服务器和控制台已切换到 HTTPS，则使用端口 9453），然后输入mirror**模块名称**并运行测试。
-   →**预期结果：**马赛克的所有单元格都以单一颜色显示**主服务器**的名称：所有到虚拟IP (VIP) 的TCP连接都由主服务器提供服务。
+   →<strong>预期结果：</strong>虚拟IP （ VIP ）不显示。
+3. 从<strong>集群外部的</strong>客户端工作站， `ping`物理IP地址和虚拟IP (VIP)。
+   →<strong>预期结果：</strong>所有三个`ping`命令都会响应（除非它们被防火墙过滤）。
+4. 使用SafeKit mosaic 通过虚拟IP (VIP) 检查访问权限：从<strong>外部</strong>客户端的浏览器连接到`http://<VIP>:9010/safekit/mosaic.html` （如果SafeKit Web 服务器和控制台已切换到 HTTPS，则使用端口 9453），然后输入mirror<strong>模块名称</strong>并运行测试。
+   →<strong>预期结果：</strong>马赛克的所有单元格都以单一颜色显示<strong>主服务器</strong>的名称：所有到虚拟IP (VIP) 的TCP连接都由主服务器提供服务。
 
 ![使用马赛克测试SafeKit mirror的虚拟IP地址](/wp-content/uploads/2024/03/appli-20.png)
 
@@ -67,18 +67,18 @@ topics: "关键原则，前提条件：虚拟IP (VIP) 配置，测试 1 – 主�
 **步骤**
 
 1. 从SafeKit控制台（或从命令行使用`safekit stop -m <module>` ）停止主节点（节点 1）上的模块。
-   →**预期结果：**节点 1 进入STOP （ NotReady ）状态，节点 2 进入ALONE （ Ready ）状态。在新主节点的日志中，出现`Virtual IP <VIP> set`消息。
+   →<strong>预期结果：</strong>节点 1 进入STOP （ NotReady ）状态，节点 2 进入ALONE （ Ready ）状态。在新主节点的日志中，出现`Virtual IP <VIP> set`消息。
 2. 在新主节点上，运行`ipconfig`或`ip addr show` 。
-   →**预期结果：**虚拟IP (VIP) 现在显示为该节点上的别名，而不再显示为以前的主 IP。
+   →<strong>预期结果：</strong>虚拟IP (VIP) 现在显示为该节点上的别名，而不再显示为以前的主 IP。
 3. 从客户端工作站，重复执行三个`ping`命令，并在虚拟IP (VIP) 上再次运行 mosaic。
-   →**预期结果：**一切正常，马赛克的所有单元格现在都以单一颜色显示**新原色**的名称。
+   →<strong>预期结果：</strong>一切正常，马赛克的所有单元格现在都以单一颜色显示<strong>新原色</strong>的名称。
 4. 重新启动节点 1 上的模块：它重新同步并进入SECOND （ Ready ）状态，而节点 2 进入PRIM （ Ready ）状态。
 
 ## 5. 测试 3 – 使用`arp -a`检查MAC地址重路由
 
 在故障转移之前，记下与虚拟IP (VIP) 关联的MAC地址，然后检查故障转移后它是否发生了变化。
 
-只有当客户端工作站与集群位于**同一IP子网**时，才能进行此测试。
+只有当客户端工作站与集群位于<strong>同一IP子网</strong>时，才能进行此测试。
 
 如果客户端和集群之间存在路由器，则客户端的ARP表中不包含虚拟IP (VIP)，而是包含用于连接到集群网络的网关地址。在这种情况下，请与网络团队一起检查路由器或网关的ARP表。
 
@@ -86,10 +86,10 @@ topics: "关键原则，前提条件：虚拟IP (VIP) 配置，测试 1 – 主�
 
 1. 该模块在节点 1 上处于PRIM （ Ready ）状态，在节点 2 上处于SECOND （ Ready ）状态。
 2. 在客户端工作站上， `ping`物理IP地址和虚拟IP (VIP)，然后运行`arp -a` 。
-   →**预期结果：**虚拟IP (VIP) 与**主 IP 的物理IP地址关联的MAC地址相同**。
+   →<strong>预期结果：</strong>虚拟IP (VIP) 与**主 IP 的物理IP地址关联的MAC地址相同**。
 3. `stop`主节点（节点 1）上的模块。
 4. 再次`ping`虚拟IP (VIP)，然后再次运行`arp -a` 。
-   →**预期结果：**虚拟IP (VIP) 现在与**新主 IP 的物理IP地址关联相同的MAC地址**。
+   →<strong>预期结果：</strong>虚拟IP (VIP) 现在与**新主 IP 的物理IP地址关联相同的MAC地址**。
 
 > 在读取ARP表之前，再次`ping`虚拟IP (VIP)：该条目可能被标记为过期，只有在`ping`之后才会刷新。
 
@@ -111,10 +111,10 @@ topics: "关键原则，前提条件：虚拟IP (VIP) 配置，测试 1 – 主�
 
 | 什么时候 | 在哪里捕获数据包 | 观察到的MAC地址 |
 |---|---|---|
-| 故障转移之前 | 客户 | 客户端MAC →**节点 1（主节点）**的MAC |
+| 故障转移之前 | 客户 | 客户端MAC →<strong>节点 1（主节点）</strong>的MAC |
 | 故障转移之前 | 节点 1 | 已收到发往虚拟IP地址（ VIP ）的数据包；节点2未收到任何数据包。 |
 | 故障转移期间 | 网络 | 节点 2 为虚拟IP (VIP) 发送的MAC重路由消息：当虚拟 IP 被设置为别名时操作系统发送的消息，以及SafeKit发送的GARPs (`arpreroute="on"`) |
-| 故障转移后 | 客户 | 客户端MAC →**节点 2（新主节点）**的MAC |
+| 故障转移后 | 客户 | 客户端MAC →<strong>节点 2（新主节点）</strong>的MAC |
 
 > 如果客户端工作站与集群位于不同的子网中，则节点上看到的“客户端MAC ”是连接这两个子网的**网关**（路由器）的MAC地址，而不是客户端工作站的 MAC 地址。
 
@@ -139,9 +139,9 @@ topics: "关键原则，前提条件：虚拟IP (VIP) 配置，测试 1 – 主�
 
 ## 9. 故障排除
 
-- **故障切换后，虚拟IP （ VIP ）不再响应：**路径上的某个设备（路由器、网关、虚拟交换机）未考虑MAC地址重路由消息，仍然将流量发送到原主IP的MAC地址。请与您的网络团队检查MAC地址重路由消息的处理情况。
-- **发送GARPs ：**故障转移后， `<vip>`部分的`arpreroute="on"`属性（带有`arpinterval`和`arpelapse` ）会定期在虚拟IP (VIP) 上发送GARPs 。请参阅用户指南第 13.6.4 节“ [ `<vip>`语法](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ”。
-- **诊断虚拟IP (VIP) ↔ MAC解析：**请参阅用户指南第 7.24 节“ [虚拟IP (VIP) ↔ MAC解析故障排除](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) ”，以及第 7.16 节“ [故障转移后虚拟IP问题](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Problem_with_the_1) ”。
+- <strong>故障切换后，虚拟IP （ VIP ）不再响应：</strong>路径上的某个设备（路由器、网关、虚拟交换机）未考虑MAC地址重路由消息，仍然将流量发送到原主IP的MAC地址。请与您的网络团队检查MAC地址重路由消息的处理情况。
+- <strong>发送GARPs ：</strong>故障转移后， `<vip>`部分的`arpreroute="on"`属性（带有`arpinterval`和`arpelapse` ）会定期在虚拟IP (VIP) 上发送GARPs 。请参阅用户指南第 13.6.4 节“ [ `<vip>`语法](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ”。
+- <strong>诊断虚拟IP (VIP) ↔ MAC解析：</strong>请参阅用户指南第 7.24 节“ [虚拟IP (VIP) ↔ MAC解析故障排除](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP) ”，以及第 7.16 节“ [故障转移后虚拟IP问题](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Problem_with_the_1) ”。
 
 有关使用虚拟IP地址进行负载均衡，请参阅[在SafeKit Farm集群中测试负载均衡虚拟IP地址](/zh-hans/best-practises/test-load-balancing-vip-farm/) 。
 
