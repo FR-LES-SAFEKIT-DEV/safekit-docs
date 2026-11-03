@@ -7,10 +7,20 @@
 ### 필수 조건
 
   * {{ .Get "app" }} 애플리케이션이 2개 이상의 노드에 설치되었습니다.
-  * 가상 IP 로드 밸런싱을 사용하려면 노드가 동일한 LAN 또는 확장 LAN(L2)에 있어야 합니다. 라우팅된 L3 네트워크는 지원되지 않습니다(단, 🛠️를 사용하는 경우는 제외). [클라우드 로드 밸런서](/resources/safekit-user-guide-82/#Cloud)). ### 1. 실행 SafeKit 콘솔
+  * 가상 IP 로드 밸런싱을 사용하려면 노드가 동일한 LAN 또는 확장 LAN(L2)에 있어야 합니다. 라우팅된 L3 네트워크는 지원되지 않습니다(단, 🛠️를 사용하는 경우는 제외). [클라우드 로드 밸런서](/resources/safekit-user-guide-82/#Cloud)).
+
+
+### 1. 시작하세요 SafeKit 콘솔
 
   * 클러스터 노드 중 하나의 브라우저에서 웹 콘솔을 실행하려면 다음 주소로 연결하십시오. `http://localhost:9010`.
-  * 입력하다 `admin` 사용자 이름과 설치 중에 정의한 비밀번호를 사용하십시오. 클러스터 외부의 워크스테이션에서 브라우저를 통해 콘솔을 실행할 수도 있습니다. ⚠️ 구성 SafeKit 두 노드 모두에서 단일 브라우저로 작업이 수행됩니다. ℹ️ 웹 콘솔 보안 설정은 다음을 참조하세요. 🛠️ [11. 확보 SafeKit 웹 서비스](/resources/safekit-user-guide-82/#https) 사용자 설명서에 나와 있습니다.
+  * 입력하다 `admin` 사용자 이름과 비밀번호는 설치 중에 정의한 것입니다.
+
+
+클러스터 외부에 있는 워크스테이션의 브라우저에서 콘솔을 실행할 수도 있습니다.
+
+⚠️ 구성 SafeKit 두 노드 모두에서 단일 브라우저를 통해 작업이 수행됩니다.
+
+ℹ️ 웹 콘솔 보안 설정 방법은 🛠️를 참조하세요. [11. 확보 SafeKit 웹 서비스](/resources/safekit-user-guide-82/#https) 사용자 설명서에 나와 있습니다.
 
 
 ![시작하세요 SafeKit 웹 콘솔을 사용하여 구성합니다. {{ .Get "app" }} 무리](/wp-content/uploads/2024/03/01-login-large.png)
@@ -21,7 +31,12 @@
   * 노드 IP 주소를 입력하고 누르세요. `Tab key` 연결 상태를 확인하고 노드 이름을 입력하세요. node1 또는 node2 중 하나라도 빨간색으로 표시되면 브라우저에서 두 노드 모두에 대한 연결 상태를 확인하고 두 노드의 방화벽에서 문제가 없는지 확인하세요. [문제 해결](/resources/safekit-user-guide-82/#Troubleshooting).
   * 그런 다음 클릭하세요 `Save and apply` 설정을 저장하려면.
   * 확인하세요 `Success` ✅ 양쪽 노드 모두에 메시지가 있습니다.
-  * 구성이 다음과 같으면 `Failure` ❌ 오류가 한 노드에서 발생하면 해당 노드의 ▼ 아코디언을 열고 메시지를 확인하세요. 참고로, 다음을 사용할 수 있습니다. SafeKit AI 🤖가 도와드립니다. ℹ️ 원하시면 새 항목을 추가할 수 있습니다. `LAN and nodes` (첫 번째 ➕) 두 번째 하트비트와 전용 복제 네트워크를 생성합니다. ℹ️ 클릭하시면 `Advanced configuration`, 그 `cluster.xml` 파일이 표시됩니다. 이 파일은 콘솔에서 자동으로 채워지고 노드에 배포됩니다.
+  * 구성이 다음과 같으면 `Failure` ❌ 오류가 한 노드에서 발생하면 해당 노드의 ▼ 아코디언을 열고 메시지를 확인하세요. 참고로, 다음을 사용할 수 있습니다. SafeKit AI 🤖의 도움을 받으세요.
+
+
+ℹ️ 원하시면 새 항목을 추가할 수 있습니다. `LAN and nodes` (첫 번째 ➕) 두 번째 하트비트와 전용 복제 네트워크를 생성합니다.
+
+ℹ️ 클릭하시면 `Advanced configuration`, 그 `cluster.xml` 파일이 표시됩니다. 이 파일은 콘솔에서 자동으로 채워지고 노드에 배포됩니다.
 
 
 ![노드를 입력하세요 {{ .Get "app" }} 무리](/wp-content/uploads/2024/03/02-cluster-edit.png)
@@ -29,23 +44,37 @@
 
 ### 3. 모듈을 선택하세요
 
-  * ~ 안에 `New module`클릭하세요 `{{ .Get "mod" }}.safe` 모듈. ℹ️ 상단의 파란색 배너에, 🛜 `node1` 콘솔 연결 노드를 나타냅니다. 이 노드는 요청을 다음으로 전달합니다. `node2` 필요할 때. ℹ️ 콘솔은 다음을 찾습니다. `xxx.safe` 에서 `Application_Modules/generic/` 연결 노드의 디렉터리(`node1`) 설치 중에 해당 위치에 모듈을 배치한 경우.
+  * ~ 안에 `New module`클릭하세요 `{{ .Get "mod" }}.safe` 기준 치수.
+
+
+ℹ️ 상단의 파란색 배너에, 🛜 `node1` 콘솔 연결 노드를 나타냅니다. 이 노드는 요청을 다음으로 전달합니다. `node2` 필요할 경우.
+
+ℹ️ 콘솔은 다음을 찾습니다. `xxx.safe` 에서 `Application_Modules/generic/` 연결 노드의 디렉터리(`node1`) 설치 중에 해당 위치에 모듈을 배치한 경우.
 
 
 ![모듈을 선택하세요 {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 4. 모듈 구성
+### 4. 모듈을 구성합니다.
 
   * ~ 안에 `Module startup at boot`부팅 시 지연 없이 모듈이 자동으로 시작되도록 선택하십시오.
   * ~ 안에 `Macros` / `SERVICES`애플리케이션의 서비스 이름을 시작 순서대로 쉼표로 구분하여 입력하십시오.
   * ~ 안에 `Heartbeat networks`2단계에서 LAN을 추가하지 않은 경우 단일 하트비트 네트워크가 있어야 합니다.
-  * ~ 안에 `Virtual IP addresses`가상 IP 주소를 입력하십시오. 가상 IP 주소는 두 노드의 IP 주소와 동일한 IP 네트워크(동일한 서브넷)에 있는 표준 IP 주소입니다. 애플리케이션 클라이언트는 가상 IP 주소(또는 가상 IP 주소와 연결된 DNS 이름)로 구성되어야 합니다.
+  * ~ 안에 `Virtual IP addresses`가상 IP 주소를 입력하십시오. 가상 IP 주소는 두 노드의 IP 주소와 동일한 IP 네트워크(동일한 서브넷)에 있는 표준 IP 주소입니다.  
+애플리케이션 클라이언트는 가상 IP 주소(또는 가상 IP 주소와 연결된 DNS 이름)로 구성되어야 합니다.
   * ~ 안에 `Load balancing rules`로드 밸런싱을 위해 서비스 포트를 설정합니다(예: 예시에서는 TCP 9010).
   * ~ 안에 `Load balancing rules`부하 분산 규칙을 설정합니다. `Source address` 또는 `Source port`: 
     * 클라이언트의 소스 IP 주소를 사용하면 동일한 클라이언트는 동일한 노드에 연결됩니다. <span class="notranslate farm-term" translate="no">farm</span> 여러 TCP 세션에서 해당 노드의 컨텍스트를 검색합니다.
     * 클라이언트의 소스 TCP 포트를 사용하면 동일한 클라이언트가 네트워크 내의 여러 노드에 연결될 수 있습니다. <span class="notranslate farm-term" translate="no">farm</span> 여러 TCP 세션에서 (컨텍스트를 가져오지 않고).
-  * ~ 안에 `Checkers`필요에 따라 프로세스 모니터링, 사용자 지정 검사기, TCP, ping 또는 스플릿 브레인 검사기와 같은 검사기를 구성할 수 있습니다. 예를 들어 프로세스 이름이 표시되는 경우 `Monitored processes/services`오류 발생 시 재시작 조치가 이루어지도록 모니터링됩니다. 프로세스 이름을 잘못 설정하면 모듈이 시작 직후 중지됩니다. ℹ️ 클릭하시면 `Advanced configuration`, 그 `userconfig.xml` 파일이 표시됩니다. 이 파일은 콘솔에서 자동으로 채워지고 재시작 스크립트가 있는 노드에 배포됩니다. ℹ️ 클라우드 배포 환경에서는 가상 IP 주소와 로드 밸런싱 규칙을 구성할 필요가 없습니다. SafeKit가상 IP와 로드 밸런싱 규칙은 🛠️에서 관리됩니다. [클라우드 로드 밸런서 레벨](/resources/safekit-user-guide-82/#Cloud). ℹ️ 적용하실 때 SafeKit 구성, `startup type` 서비스 항목은 자동으로 설정됩니다. `Manual` ~에 Windows 이렇게 하면 시스템 부팅 시 서비스가 자동으로 시작되지 않고, 모듈 자체가 시작될 때만 시작되도록 합니다(동일한 내용이 다른 서비스에도 적용됩니다). Linux).
+  * ~ 안에 `Checkers`필요에 따라 프로세스 모니터링, 사용자 지정 검사기, TCP, ping 또는 스플릿 브레인 검사기와 같은 검사기를 구성할 수 있습니다.  
+예를 들어 프로세스 이름이 표시되는 경우 `Monitored processes/services`오류 발생 시 재시작 동작으로 모니터링됩니다. 프로세스 이름을 잘못 설정하면 모듈이 시작 직후 중지됩니다.
+
+
+ℹ️ 클릭하시면 `Advanced configuration`, 그 `userconfig.xml` 해당 파일이 표시됩니다. 이 파일은 콘솔에서 자동으로 채워지고 재시작 스크립트와 함께 노드에 배포됩니다.
+
+ℹ️ 클라우드 배포 환경에서는 가상 IP 주소와 로드 밸런싱 규칙을 구성할 필요가 없습니다. SafeKit가상 IP와 로드 밸런싱 규칙은 🛠️에서 관리됩니다. [클라우드 로드 밸런서 레벨](/resources/safekit-user-guide-82/#Cloud).
+
+ℹ️ 적용할 때 SafeKit 구성, `startup type` 서비스 항목은 자동으로 설정됩니다. `Manual` ~에 Windows 이렇게 하면 시스템 부팅 시 서비스가 자동으로 시작되지 않고, 모듈 자체가 시작될 때만 시작되도록 합니다(동일한 내용이 다른 서비스에도 적용됩니다). Linux).
 
 
 ![입력하세요 {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 모듈 설정](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
@@ -81,7 +110,7 @@
 ### 8. 구성이 성공적으로 완료되었는지 확인합니다.
 
   * 확인하세요 `Success` ✅ 양쪽 노드에 메시지가 표시되면 클릭하세요 `Monitor modules`.
-  * 구성이 다음과 같으면 `Failure` ❌ 오류가 한 노드에서 발생하면 해당 노드의 ▼ 아코디언을 열고 메시지를 확인하세요. 참고로, 다음을 사용할 수 있습니다. SafeKit AI 🤖 도움을 받으세요.
+  * 구성이 다음과 같으면 `Failure` ❌ 오류가 한 노드에서 발생하면 해당 노드의 ▼ 아코디언을 열고 메시지를 확인하세요. 참고로, 다음을 사용할 수 있습니다. SafeKit AI 🤖의 도움을 받으세요.
 
 
 ![확인하세요 {{ .Get "app" }} 모듈 구성 성공](/wp-content/uploads/2025/05/09-module-save-check-1.png)
@@ -95,11 +124,18 @@
 ![시작하세요 {{ .Get "app" }} 양쪽 노드 모두에 클러스터가 있습니다.](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-### 10. UP(녹색) / UP(녹색) 상태로 전환될 때까지 기다립니다. 노드 1과 노드 2가 UP(녹색) 상태에 도달해야 합니다. 이는 노드 1과 노드 2가 정상적으로 작동하고 있음을 의미합니다. `start_both` 스크립트가 노드 1과 노드 2에서 실행되었습니다. ⚠️ UP(녹색) 상태가 되지 않거나 애플리케이션이 시작되지 않으면 원인을 분석하십시오. [모듈 로그 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) 노드 1 또는 노드 2.
+### 10. 표시등이 위쪽(녹색) / 위쪽(녹색)으로 바뀔 때까지 기다리세요.
 
-  * 🔍 버튼을 클릭하세요 **통나무** 아이콘 `node1` 또는 `node2` 모듈 로그를 열고 검사기가 오류를 감지하여 모듈을 중지하는 등의 오류 메시지를 찾아보세요.
+<p>노드 1과 노드 2는 모두 UP(녹색) 상태에 도달해야 합니다. 이는 다음과 같은 의미입니다. <code>start_both</code> 스크립트가 노드 1과 노드 2에서 실행되었습니다.</p>
+
+<p>⚠️ UP(녹색) 상태에 도달하지 않거나 애플리케이션이 시작되지 않으면 원인을 분석하십시오. <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">모듈 로그 🖼️</a> 노드 1 또는 노드 2.</p>
+
+  * 🔍 버튼을 클릭하세요 **통나무** 아이콘 `node1` 또는 `node2` 모듈 로그를 열고 검사기가 오류를 감지하여 모듈을 중지하는 등의 오류 메시지를 찾으십시오.
   * 클릭하세요 `start_both` 로그에는 스크립트의 출력 메시지가 오른쪽에 표시되며, 서비스가 잘못 시작된 경우와 같은 오류를 감지할 수 있습니다.
-  * 사용하세요 SafeKit AI 🤖가 로그 메시지 분석을 도와드립니다. ℹ️ 참고로, 🕒 표시가 있습니다. **[타임라인 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** 이는 클러스터에서 무슨 일이 일어나는지 이해하는 데 도움이 될 수 있습니다.
+  * 사용하세요 SafeKit 로그 메시지 처리를 도와주는 AI 🤖.
+
+
+ℹ️ 참고로 당신은 🕒를 가지고 있습니다. **[타임라인 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** 이는 클러스터에서 무슨 일이 일어나는지 이해하는 데 도움이 될 수 있습니다.
 
 
 ![그만큼 {{ .Get "app" }} 클러스터가 시작되었습니다](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
@@ -107,15 +143,19 @@
 
 ### 11. 테스트
 
-SafeKit 제품에 내장된 테스트 기능을 제공합니다. 자세한 내용은 다음을 참조하세요. [로드 밸런싱 가상 IP 주소 테스트 SafeKit farm 무리](/best-practises/test-load-balancing-vip-farm/). ℹ️ 더 자세한 내용과 영상은 다음에서 확인하세요. [SafeKit 온라인 교육](/resources/safekit-on-line-training/).
-
+SafeKit 내장된 모자이크 테스트가 포함되어 있습니다. 자세한 내용은 다음을 참조하세요. [로드 밸런싱 가상 IP 주소 테스트 SafeKit farm 무리](/best-practises/test-load-balancing-vip-farm/).
 
 ![가상 IP 주소를 테스트합니다. {{ .Get "app" }} 모자이크와 함께](/wp-content/uploads/2024/03/appli-19.png)
+
+ℹ️ 더 자세한 내용과 영상은 다음에서 확인하세요. [SafeKit 온라인 교육](/resources/safekit-on-line-training/).
 
 
 ### 12. 지원
 
-  * 지원을 받으려면 2번 시도하세요. SafeKit `Snapshots` (노드당 하나씩, 총 2개의 .zip 파일입니다.) ℹ️ [지원에 대한 자세한 정보는 여기에서 확인하세요.](/resources/safekit-support/).
+  * 지원을 받으려면 2번 시도하세요. SafeKit `Snapshots` (노드당 하나씩, 총 2개의 .zip 파일)
+
+
+ℹ️ [지원에 대한 자세한 정보는 여기에서 확인하세요.](/resources/safekit-support/).
 
 
 ![가져가세요 {{ .Get "app" }} 지원을 위한 스냅샷](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)

@@ -7,21 +7,36 @@
 ### 前提条件
 
   * {{ .Get "app" }} アプリケーションは2つ以上のノードにインストールされています。
-  * 仮想 IP ロード バランシングでは、同じ LAN または拡張 LAN (L2) 上のノードが必要です。ルーティングされた L3 ネットワークはサポートされていません (🛠️ を除く) [クラウドロードバランサー](/resources/safekit-user-guide-82/#Cloud)) ### 1. 起動する SafeKit コンソール
+  * 仮想 IP ロード バランシングでは、同じ LAN または拡張 LAN (L2) 上のノードが必要です。ルーティングされた L3 ネットワークはサポートされていません (🛠️ を除く) [クラウドロードバランサー](/resources/safekit-user-guide-82/#Cloud)).
+
+
+### 1. 起動する SafeKit コンソール
 
   * 1 つのクラスタノードでブラウザを使用して Web コンソールを起動するには、 `http://localhost:9010`.
-  * 入力 `admin` インストール時に定義されたユーザー名とパスワードとして。クラスター外部のワークステーションのブラウザーでコンソールを実行することもできます。⚠️ 構成 SafeKit 両方のノードで単一のブラウザから実行されます。ℹ️ Webコンソールを保護するには、🛠️を参照してください。 [11. 確保する SafeKit ウェブサービス](/resources/safekit-user-guide-82/#https) ユーザーガイドに記載されています。
+  * 入力 `admin` インストール時に設定したユーザー名とパスワード。
+
+
+クラスター外部のワークステーション上のブラウザでコンソールを実行することもできます。
+
+⚠️ 構成 SafeKit これは、単一のブラウザから両方のノードで実行されます。
+
+ℹ️ Webコンソールを保護するには、以下を参照してください🛠️ [11. 確保する SafeKit ウェブサービス](/resources/safekit-user-guide-82/#https) ユーザーガイドに記載されています。
 
 
 ![開始する SafeKit ウェブコンソールで設定 {{ .Get "app" }} クラスタ](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 2. ノードアドレスの設定
+### 2. ノードアドレスを設定する
 
   * ノードのIPアドレスを入力し、 `Tab key` 接続性を確認し、ノード名を入力します。node1 または node2 のいずれかが赤色の場合は、ブラウザから両方のノードへの接続性を確認し、両方のノードのファイアウォールで 🛠️ を確認してください。 [トラブルシューティング](/resources/safekit-user-guide-82/#Troubleshooting).
   * 次に、 `Save and apply` 設定を保存します。
   * チェック `Success` ✅ 両方のノードにメッセージがあります。
-  * 設定が `Failure` ❌ は 1 つのノードで発生しています。そのノードの ▼ アコーディオンを開いてメッセージを確認してください。 SafeKit AI 🤖 がサポートします。ℹ️ 必要に応じて、新しい `LAN and nodes` (最初 ➕) 2 番目のハートビートと専用のレプリケーション ネットワークを作成します。ℹ️ クリックすると `Advanced configuration`、 `cluster.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、ノードにデプロイされます。
+  * 設定が `Failure` ❌ は 1 つのノードで発生しています。そのノードの ▼ アコーディオンを開いてメッセージを確認してください。 SafeKit AI 🤖 がサポートします。
+
+
+ℹ️ 必要に応じて、新しい `LAN and nodes` （まず）2つ目のハートビートと専用のレプリケーションネットワークを作成します。
+
+ℹ️ クリックすると `Advanced configuration`、 `cluster.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、ノードにデプロイされます。
 
 
 ![ノードを入力してください {{ .Get "app" }} クラスタ](/wp-content/uploads/2024/03/02-cluster-edit.png)
@@ -29,29 +44,43 @@
 
 ### 3. モジュールを選択します
 
-  * で `New module`クリックしてください `{{ .Get "mod" }}.safe` モジュール。ℹ️ 上部の青いバナーで、🛜 `node1` コンソール接続ノードを表します。このノードはリクエストを中継します。 `node2` 必要に応じて。ℹ️ コンソールは以下を探します `xxx.safe` で `Application_Modules/generic/` 接続ノード上のディレクトリ（`node1`インストール時にそこにモジュールを配置した場合。
+  * で `New module`クリックしてください `{{ .Get "mod" }}.safe` モジュール。
+
+
+ℹ️ 上部の青いバナーに、🛜 `node1` コンソール接続ノードを表します。このノードはリクエストを中継します。 `node2` 必要に応じて。
+
+ℹ️ コンソールは以下を探します `xxx.safe` で `Application_Modules/generic/` 接続ノード上のディレクトリ（`node1`インストール時にそこにモジュールを配置した場合。
 
 
 ![モジュールを選択してください {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 4. モジュールの設定
+### 4. モジュールを設定する
 
   * で `Module startup at boot`起動時にモジュールを遅延なく自動起動するように選択します。
   * で `Macros` / `SERVICES`アプリケーションのサービス名を起動順にカンマで区切って入力してください。
   * で `Heartbeat networks`ステップ2でLANを追加した場合を除き、単一のハートビートネットワークが必要です。
-  * で `Virtual IP addresses`仮想IPアドレスを入力してください。仮想IPアドレスとは、両方のノードのIPアドレスと同じIPネットワーク（同じサブネット）内の標準IPアドレスです。アプリケーションクライアントは、仮想IPアドレス（または仮想IPアドレスに関連付けられたDNS名）で構成する必要があります。
+  * で `Virtual IP addresses`仮想IPアドレスを入力してください。仮想IPアドレスとは、両方のノードのIPアドレスと同じIPネットワーク（同じサブネット）内の標準IPアドレスのことです。  
+アプリケーションクライアントは、仮想IPアドレス（または仮想IPアドレスに関連付けられたDNS名）で構成する必要があります。
   * で `Load balancing rules`サービスポートをロードバランシングするように設定します（例：例ではTCP 9010）。
-  * で `Load balancing rules`負荷分散ルールを設定し、 `Source address` または `Source port`: 
+  * で `Load balancing rules`負荷分散ルールを設定します。 `Source address` または `Source port`: 
     * クライアントの送信元 IP アドレスを使用すると、同じクライアントが同じノードに接続されます。 <span class="notranslate farm-term" translate="no">farm</span> 複数のTCPセッション上で動作し、ノード上でそのコンテキストを取得します。
     * クライアントの送信元 TCP ポートを使用すると、同じクライアントが異なるノードに接続されます。 <span class="notranslate farm-term" translate="no">farm</span> 複数のTCPセッション上で（コンテキストを取得せずに）。
-  * で `Checkers`必要に応じて、プロセス監視、カスタムチェッカー、TCP、ping、スプリットブレインチェッカーなどのチェッカーを設定できます。たとえば、プロセス名が次のように表示される場合 `Monitored processes/services`障害が発生した場合は、再起動アクションで監視されます。プロセス名を誤って設定すると、モジュールは起動直後に停止します。ℹ️ クリックすると `Advanced configuration`、 `userconfig.xml` ファイルが表示されます。このファイルはコンソールによって自動的に入力され、再起動スクリプトとともにノードにデプロイされます。ℹ️ クラウドデプロイメントでは、仮想 IP アドレスとロード バランシング ルールを構成する必要はありません。 SafeKit仮想IPとロードバランシングルールは🛠️で管理されます [クラウドロードバランサーレベル](/resources/safekit-user-guide-82/#Cloud). ℹ️適用すると SafeKit 構成、 `startup type` サービスの は自動的に設定されます `Manual` で Windows サービス。これにより、システムの起動時にサービスが自動的に開始されるのではなく、モジュール自体が起動されたときにのみサービスが開始されることが保証されます（ Linux).
+  * で `Checkers`必要に応じて、プロセス監視、カスタムチェッカー、TCP、ping、スプリットブレインチェッカーなどのチェッカーを設定できます。  
+例えば、プロセス名が次のように表示される場合 `Monitored processes/services`障害発生時には再起動動作が行われるよう監視されます。プロセス名を誤って設定すると、モジュールは起動直後に停止します。
+
+
+ℹ️ クリックすると `Advanced configuration`、 `userconfig.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、再起動スクリプトとともにノードにデプロイされます。
+
+ℹ️ クラウド展開では、仮想 IP アドレスとロード バランシング ルールを設定する必要はありません。 SafeKit仮想IPとロードバランシングルールは🛠️で管理されます [クラウドロードバランサーレベル](/resources/safekit-user-guide-82/#Cloud).
+
+ℹ️適用すると SafeKit 構成、 `startup type` サービスの は自動的に設定されます `Manual` で Windows サービス。これにより、システムの起動時にサービスが自動的に開始されるのではなく、モジュール自体が起動されたときにのみサービスが開始されることが保証されます（ Linux).
 
 
 ![入力 {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> モジュール設定](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
-### 5. スクリプトの編集（オプション）
+### 5. スクリプトの編集（任意）
 
   * この手順は任意であり、ほとんどの場合省略できます。なぜなら、再起動スクリプトは既に前の手順で定義されたサービスを再起動するように事前設定されているからです。
   * それでは、直接クリックしてください `Next step`.
@@ -78,7 +107,7 @@
 ![保存して適用する {{ .Get "app" }} モジュール構成](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8. 設定が成功したことを確認する
+### 8. 設定が正常に完了したことを確認する
 
   * チェック `Success` ✅ 両方のノードのメッセージをクリックして `Monitor modules`.
   * 設定が `Failure` ❌ は 1 つのノードで発生しています。そのノードの ▼ アコーディオンを開いてメッセージを確認してください。 SafeKit AI 🤖 がサポートします。
@@ -87,7 +116,7 @@
 ![チェック {{ .Get "app" }} モジュール構成成功](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. 開始 <span class="notranslate farm-term" translate="no">farm</span> ノード1とノード2のクラスタ
+### 9. 開始する <span class="notranslate farm-term" translate="no">farm</span> ノード1とノード2のクラスタ
 
   * ⋯ `Start` の <span class="notranslate farm-term" translate="no">farm</span> 画像に示すようにクラスター化します。
 
@@ -95,11 +124,18 @@
 ![開始する {{ .Get "app" }} 両方のノードでクラスタリング](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-### 10. UP (緑) / UP (緑) への遷移を待つ ノード 1 とノード 2 は UP (緑) 状態に達する必要があります。これは、 `start_both` スクリプトはノード 1 とノード 2 で実行されました。⚠️ UP (緑) に達しない場合、またはアプリケーションが起動しない場合は、以下の方法で原因を分析してください。 [モジュールログ🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) ノード1またはノード2のいずれか。
+### 10. UP（緑）/ UP（緑）への遷移を待ちます
+
+<p>ノード 1 とノード 2 は UP (緑) 状態に達する必要があります。これは、 <code>start_both</code> スクリプトはノード1とノード2で実行されました。</p>
+
+<p>⚠️ UP（緑）に達しない場合、またはアプリケーションが起動しない場合は、 <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">モジュールログ🖼️</a> ノード1またはノード2のいずれか。</p>
 
   * 🔍をクリック **ログ** アイコン `node1` または `node2` モジュールログを開き、チェッカーがエラーを検出してモジュールを停止したなどのエラーメッセージを探します。
   * クリックする `start_both` ログには、スクリプトの出力メッセージが右側に表示され、サービスが正しく起動されなかったなどのエラーを検出できます。
-  * 使用する SafeKit ログメッセージのサポートにはAI 🤖を使用してください。ℹ️ 🕒 があることにご注意ください。 **[タイムライン🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** それは、クラスター内で何が起こっているかを理解するのに役立ちます。
+  * 使用する SafeKit ログメッセージに関する支援のためのAI 🤖。
+
+
+ℹ️ 🕒 があることにご注意ください **[タイムライン🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** それは、クラスター内で何が起こっているかを理解するのに役立ちます。
 
 
 ![の {{ .Get "app" }} クラスターが起動しました](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
@@ -107,15 +143,19 @@
 
 ### 11. テスト
 
-SafeKit 製品に組み込みテストを導入します。 [ロードバランシング仮想IPアドレスのテスト SafeKit farm クラスタ](/best-practises/test-load-balancing-vip-farm/). ℹ️ 動画とともに詳細をご覧ください。 [SafeKit オンライン研修](/resources/safekit-on-line-training/).
-
+SafeKit モザイクテストが組み込まれています。 [ロードバランシング仮想IPアドレスのテスト SafeKit farm クラスタ](/best-practises/test-load-balancing-vip-farm/).
 
 ![仮想IPアドレスをテストします {{ .Get "app" }} モザイクと共に](/wp-content/uploads/2024/03/appli-19.png)
+
+ℹ️ 動画とともに詳細情報は以下をご覧ください。 [SafeKit オンライン研修](/resources/safekit-on-line-training/).
 
 
 ### 12. サポート
 
-  * サポートを受けるには、2 SafeKit `Snapshots` （2つの.zipファイル）、各ノードにつき1つ。ℹ️ [サポートに関する詳細はこちら](/resources/safekit-support/).
+  * サポートを受けるには、2 SafeKit `Snapshots` （2つの.zipファイル）、各ノードにつき1つ。
+
+
+ℹ️ [サポートに関する詳細はこちら](/resources/safekit-support/).
 
 
 ![取っていく {{ .Get "app" }} サポート用のスナップショット](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)

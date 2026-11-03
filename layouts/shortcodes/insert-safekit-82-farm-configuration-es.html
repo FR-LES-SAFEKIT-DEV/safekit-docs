@@ -7,21 +7,36 @@
 ### Requisitos previos
 
   * {{ .Get "app" }} Aplicación instalada en 2 nodos (o más).
-  * El balanceo de carga de IP virtual requiere nodos en la misma LAN o LAN extendida (L2); las redes L3 enrutadas no son compatibles (excepto con 🛠️ [balanceadores de carga en la nube](/resources/safekit-user-guide-82/#Cloud)). ### 1. Iniciar el SafeKit consola
+  * El balanceo de carga de IP virtual requiere nodos en la misma LAN o LAN extendida (L2); las redes L3 enrutadas no son compatibles (excepto con 🛠️ [balanceadores de carga en la nube](/resources/safekit-user-guide-82/#Cloud)).
+
+
+### 1. Lanzar el SafeKit consola
 
   * Inicie la consola web en un navegador en un nodo del clúster conectándose a `http://localhost:9010`.
-  * Ingresar `admin` como nombre de usuario y contraseña definidos durante la instalación. También puede ejecutar la consola en un navegador en una estación de trabajo externa al clúster. ⚠️ La configuración de SafeKit se realiza en ambos nodos desde un único navegador. ℹ️ Para proteger la consola web, consulte 🛠️ [11. Asegurar el SafeKit servicio web](/resources/safekit-user-guide-82/#https) en la Guía del Usuario.
+  * Ingresar `admin` como nombre de usuario y contraseña definidos durante la instalación.
+
+
+También puede ejecutar la consola en un navegador en una estación de trabajo externa al clúster.
+
+⚠️ La configuración de SafeKit se realiza en ambos nodos desde un único navegador.
+
+ℹ️ Para proteger la consola web, consulte 🛠️ [11. Asegurar el SafeKit servicio web](/resources/safekit-user-guide-82/#https) en la Guía del Usuario.
 
 
 ![Comienza el SafeKit consola web para configurar la {{ .Get "app" }} grupo](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 2. Configurar direcciones de nodo
+### 2. Configurar las direcciones de los nodos
 
   * Introduzca las direcciones IP de los nodos y pulse el botón. `Tab key` para comprobar la conectividad y rellenar los nombres de los nodos. Si el nodo1 o el nodo2 tienen un color rojo, compruebe la conectividad del navegador con ambos nodos y compruebe el firewall en ambos nodos para 🛠️ [solución de problemas](/resources/safekit-user-guide-82/#Troubleshooting).
   * Luego, haga clic en `Save and apply` para guardar la configuración.
   * Compruebe el `Success` ✅ mensaje en ambos nodos.
-  * Si la configuración `Failure` ❌ ocurre en un nodo, abra el acordeón ▼ para ese nodo y revise los mensajes. Tenga en cuenta que puede usar el SafeKit IA 🤖 para asistencia. ℹ️ Si lo desea, puede agregar uno nuevo. `LAN and nodes` (primero ➕) para crear un segundo latido y una red de replicación dedicada. ℹ️ Si hace clic en `Advanced configuration`, el `cluster.xml` Se muestra el archivo. Este archivo se completa automáticamente mediante la consola y se implementa en los nodos.
+  * Si la configuración `Failure` ❌ ocurre en un nodo, abra el acordeón ▼ para ese nodo y revise los mensajes. Tenga en cuenta que puede usar el SafeKit IA 🤖 para asistencia.
+
+
+ℹ️ Si lo desea, puede agregar uno nuevo `LAN and nodes` (primero ➕) para crear un segundo latido y una red de replicación dedicada.
+
+ℹ️ Si haces clic en `Advanced configuration`, el `cluster.xml` Se muestra el archivo. Este archivo se completa automáticamente mediante la consola y se implementa en los nodos.
 
 
 ![Ingrese los nodos del {{ .Get "app" }} grupo](/wp-content/uploads/2024/03/02-cluster-edit.png)
@@ -29,7 +44,12 @@
 
 ### 3. Seleccione un módulo
 
-  * En `New module`, haga clic en el `{{ .Get "mod" }}.safe` módulo. ℹ️ En el banner azul de la parte superior, 🛜 `node1` representa el nodo de conexión de la consola. Este nodo retransmite las solicitudes a `node2` cuando sea necesario. ℹ️ La consola busca `xxx.safe` en el `Application_Modules/generic/` directorio en el nodo de conexión (`node1`) si colocaste un módulo allí durante la instalación.
+  * En `New module`, haga clic en el `{{ .Get "mod" }}.safe` módulo.
+
+
+ℹ️ En el banner azul de la parte superior, 🛜 `node1` representa el nodo de conexión de la consola. Este nodo retransmite las solicitudes a `node2` cuando hace falta.
+
+ℹ️ La consola busca `xxx.safe` en el `Application_Modules/generic/` directorio en el nodo de conexión (`node1`) si colocaste un módulo allí durante la instalación.
 
 
 ![Elija el módulo para {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
@@ -40,12 +60,21 @@
   * En `Module startup at boot`, seleccione el inicio automático del módulo al arrancar el sistema sin demora.
   * En `Macros` / `SERVICES`Introduzca los nombres de los servicios de su aplicación, en el orden de inicio, separados por comas.
   * En `Heartbeat networks`Deberías tener una única red de latidos, excepto si has añadido una LAN en el paso 2.
-  * En `Virtual IP addresses`Introduzca una dirección IP virtual. Una dirección IP virtual es una dirección IP estándar en la misma red IP (misma subred) que las direcciones IP de ambos nodos. Los clientes de la aplicación deben configurarse con la dirección IP virtual (o el nombre DNS asociado a ella).
+  * En `Virtual IP addresses`Introduzca una dirección IP virtual. Una dirección IP virtual es una dirección IP estándar en la misma red IP (misma subred) que las direcciones IP de ambos nodos.  
+Los clientes de la aplicación deben configurarse con la dirección IP virtual (o el nombre DNS asociado a la dirección IP virtual).
   * En `Load balancing rules`, configure el puerto de servicio para balanceo de carga (por ejemplo: TCP 9010 en el ejemplo).
   * En `Load balancing rules`, establecer la regla de equilibrio de carga, `Source address` o `Source port`: 
     * con la dirección IP de origen del cliente, el mismo cliente se conectará al mismo nodo en el <span class="notranslate farm-term" translate="no">farm</span> en múltiples sesiones TCP y recuperar su contexto en el nodo.
     * con el puerto TCP de origen del cliente, el mismo cliente se conectará a diferentes nodos en el <span class="notranslate farm-term" translate="no">farm</span> en múltiples sesiones TCP (sin recuperar un contexto).
-  * En `Checkers`Podrá configurar comprobadores si es necesario, como la monitorización de procesos, comprobadores personalizados, TCP, ping o comprobadores de división de cerebro. Por ejemplo, si se muestra el nombre de un proceso en `Monitored processes/services`, se supervisará con una acción de reinicio en caso de fallo. Configurar un nombre de proceso incorrecto hará que el módulo se detenga justo después de su inicio. ℹ️ Si hace clic en `Advanced configuration`, el `userconfig.xml` Se muestra el archivo. Este archivo se completa automáticamente mediante la consola y se implementa en los nodos con los scripts de reinicio. ℹ️ En una implementación en la nube, no es necesario configurar una dirección IP virtual ni reglas de equilibrio de carga en SafeKit. Las reglas de IP virtual y de equilibrio de carga se gestionan en el 🛠️ [nivel de balanceador de carga en la nube](/resources/safekit-user-guide-82/#Cloud). ℹ️ Cuando aplicas el SafeKit la configuración, la `startup type` de servicios se establece automáticamente en `Manual` en Windows servicios. Esto garantiza que los servicios no se inicien automáticamente cuando el sistema arranca, sino que se inicien solo cuando se inicie el propio módulo (lo mismo se aplica en Linux).
+  * En `Checkers`Podrá configurar verificadores si es necesario, como por ejemplo, monitoreo de procesos, verificadores personalizados, TCP, ping o verificadores de división de clúster.  
+Por ejemplo, si se muestra el nombre de un proceso en `Monitored processes/services`Se realizará un seguimiento y se reiniciará en caso de fallo. Configurar un nombre de proceso incorrecto provocará que el módulo se detenga inmediatamente después de su inicio.
+
+
+ℹ️ Si haces clic en `Advanced configuration`, el `userconfig.xml` Se muestra el archivo. Este archivo se completa automáticamente mediante la consola y se implementa en los nodos con los scripts de reinicio.
+
+ℹ️ En una implementación en la nube, no necesita configurar una dirección IP virtual ni reglas de equilibrio de carga en SafeKit. Las reglas de IP virtual y de equilibrio de carga se gestionan en el 🛠️ [nivel de balanceador de carga en la nube](/resources/safekit-user-guide-82/#Cloud).
+
+ℹ️ Cuando apliques el SafeKit la configuración, la `startup type` de servicios se establece automáticamente en `Manual` en Windows servicios. Esto garantiza que los servicios no se inicien automáticamente cuando el sistema arranca, sino que se inicien solo cuando se inicie el propio módulo (lo mismo se aplica en Linux).
 
 
 ![Ingrese al {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> configuración del módulo](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
@@ -78,7 +107,7 @@
 ![Guardar y aplicar el {{ .Get "app" }} configuración del módulo](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8. Verificar la configuración correcta
+### 8. Verificar que la configuración se haya realizado correctamente.
 
   * Compruebe el `Success` ✅ mensaje en ambos nodos y haga clic en `Monitor modules`.
   * Si la configuración `Failure` ❌ ocurre en un nodo, abra el acordeón ▼ para ese nodo y revise los mensajes. Tenga en cuenta que puede usar el SafeKit IA 🤖 para asistencia.
@@ -87,7 +116,7 @@
 ![Compruebe el {{ .Get "app" }} Configuración del módulo correcta](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Comience el <span class="notranslate farm-term" translate="no">farm</span> clúster en el nodo 1 y el nodo 2
+### 9. Comienza el <span class="notranslate farm-term" translate="no">farm</span> clúster en el nodo 1 y el nodo 2
 
   * ⋯ `Start` el <span class="notranslate farm-term" translate="no">farm</span> agrupado como se muestra en la imagen.
 
@@ -95,11 +124,18 @@
 ![Comienza el {{ .Get "app" }} clúster en ambos nodos](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-### 10. Espere la transición a UP (verde) / UP (verde) El nodo 1 y el nodo 2 deben alcanzar el estado UP (verde), lo que significa que el `start_both` El script se ha ejecutado en el nodo 1 y el nodo 2. ⚠️ Si no se alcanza el estado UP (verde) o si la aplicación no se inicia, analice por qué con el [Registro del módulo 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) del nodo 1 o del nodo 2.
+### 10. Espere la transición a UP (verde) / UP (verde)
+
+<p>El nodo 1 y el nodo 2 deben alcanzar el estado UP (verde), lo que significa que el <code>start_both</code> El script se ha ejecutado en el nodo 1 y en el nodo 2.</p>
+
+<p>⚠️ Si no se alcanza UP (verde) o si la aplicación no se inicia, analice por qué con el <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">Registro del módulo 🖼️</a> del nodo 1 o del nodo 2.</p>
 
   * Haz clic en la 🔍 **registro** icono de `node1` o `node2` para abrir el registro del módulo y buscar mensajes de error, como por ejemplo que un verificador detecte un error y detenga el módulo.
   * Hacer clic en `start_both` En el registro: los mensajes de salida del script se muestran a la derecha y se pueden detectar errores, como por ejemplo, un servicio que se inició incorrectamente.
-  * Utilice el SafeKit IA 🤖 para asistencia con los mensajes de registro. ℹ️ Tenga en cuenta que tiene un 🕒 **[cronología 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** Eso puede ser útil para comprender lo que sucede en el clúster.
+  * Utilice el SafeKit IA 🤖 para asistencia con los mensajes de registro.
+
+
+ℹ️ Ten en cuenta que tienes un 🕒 **[cronología 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** Eso puede ser útil para comprender lo que sucede en el clúster.
 
 
 ![El {{ .Get "app" }} El clúster se ha iniciado](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
@@ -107,15 +143,19 @@
 
 ### 11. Pruebas
 
-SafeKit incluye una prueba integrada en el producto: ver [Probar la dirección IP virtual de equilibrio de carga en un SafeKit farm grupo](/best-practises/test-load-balancing-vip-farm/). ℹ️ Encuentra más detalles, junto con vídeos, en el [SafeKit Formación en línea](/resources/safekit-on-line-training/).
-
+SafeKit incluye una prueba de mosaico incorporada: ver [Probar la dirección IP virtual de equilibrio de carga en un SafeKit farm grupo](/best-practises/test-load-balancing-vip-farm/).
 
 ![Pruebe la dirección IP virtual de {{ .Get "app" }} con el mosaico](/wp-content/uploads/2024/03/appli-19.png)
 
+ℹ️ Encuentra más detalles, junto con vídeos, en el [SafeKit Formación en línea](/resources/safekit-on-line-training/).
 
-### 12. Soporte
 
-  * Para obtener ayuda, tome 2 SafeKit `Snapshots` (2 archivos .zip), uno para cada nodo. ℹ️ [Más información sobre el soporte aquí.](/resources/safekit-support/).
+### 12. Apoyo
+
+  * Para obtener ayuda, tome 2 SafeKit `Snapshots` (2 archivos .zip), uno para cada nodo.
+
+
+ℹ️ [Más información sobre el soporte aquí.](/resources/safekit-support/).
 
 
 ![Toma el {{ .Get "app" }} instantáneas para soporte](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)

@@ -126,9 +126,9 @@ For example, if a process name is displayed in `Monitored processes/services`, i
 
 ### 10. Wait for the transition to UP (green) / UP (green)
 
-Node 1 and node 2 should reach the UP (green) state, which means that the `start_both` script has been executed on node 1 and node 2.
+<p>Node 1 and node 2 should reach the UP (green) state, which means that the <code>start_both</code> script has been executed on node 1 and node 2.</p>
 
-⚠️ If UP (green) is not reached or if the application is not started, analyze why with the [module log 🖼️](/wp-content/uploads/2024/03/37-module-log-farm-script.png) of node 1 or node 2.
+<p>⚠️ If UP (green) is not reached or if the application is not started, analyze why with the <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">module log 🖼️</a> of node 1 or node 2.</p>
 
   * Click the 🔍 **log** icon of `node1` or `node2` to open the module log and look for error messages such as a checker detecting an error and stopping the module.
   * Click on `start_both` in the log: output messages of the script are displayed on the right and errors can be detected such as a service incorrectly started.

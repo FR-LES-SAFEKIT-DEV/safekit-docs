@@ -57,6 +57,8 @@ The mosaic is a test page provided by SafeKit. It opens many TCP connections to 
 
 The test is described in detail in the SafeKit 8.2 User's Guide, section 4.3.5 "[Test TCP load balancing on a virtual IP address](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 
+Watch the mosaic video in "[Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution](/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)".
+
 ## 3. Test 1 – Distribution of connections
 
 **Steps**
