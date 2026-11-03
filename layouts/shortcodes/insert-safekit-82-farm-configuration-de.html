@@ -6,156 +6,158 @@
 
 ### Voraussetzungen
 
-  * {{ .Get "app" }} Die Anwendung ist auf mindestens zwei Knoten installiert.
-  * Für den virtuellen IP-Lastausgleich müssen sich Knoten im selben LAN oder erweiterten LAN (L2) befinden – geroutete L3-Netzwerke werden nicht unterstützt (außer mit 🛠️). [Cloud-Load-Balancer](/resources/safekit-user-guide-82/#Cloud)).
+  * Installieren Sie {{ .Get "app" }} auf mindestens 2 Knoten.
+  * Für virtuelles IP Load-Balancing müssen sich alle Knoten im selben LAN oder erweiterten LAN (Schicht 2) befinden. Geroutete Layer-3-Netzwerke erfordern 🛠️ [Cloud-Load-Balancer ](/resources/safekit-user-guide-82/#Cloud) .
 
 
-### 1. Starten Sie die SafeKit Konsole
+### 1. Starten Sie die SafeKit Konsole.
 
-  * Starten Sie die Webkonsole in einem Browser auf einem Clusterknoten, indem Sie eine Verbindung herstellen zu `http://localhost:9010`.
-  * Eingeben `admin` als Benutzername und Passwort, die während der Installation festgelegt wurden.
-
-
-Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb des Clusters ausführen.
-
-⚠️ Die Konfiguration von SafeKit wird auf beiden Knoten von einem einzigen Browser aus durchgeführt.
-
-ℹ️ Informationen zur Sicherung der Webkonsole finden Sie unter 🛠️ [11. Sicherung der SafeKit Webdienst](/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
+  * Öffnen Sie auf einem Clusterknoten einen Browser und stellen Sie eine Verbindung zu `http://localhost:9010` .
+  * Melden Sie sich mit dem Benutzernamen `admin` und dem während der Installation festgelegten Passwort an.
 
 
-![Starten Sie die SafeKit Webkonsole zur Konfiguration der {{ .Get "app" }} Cluster](/wp-content/uploads/2024/03/01-login-large.png)
+Sie können die Konsole auch von einer Workstation außerhalb des Clusters aus öffnen.
+
+⚠️ Verwenden Sie einen einzigen Browser, um beide Knoten mit SafeKit zu konfigurieren.
+
+ℹ️ Informationen zur Sicherung der Webkonsole finden Sie unter 🛠️ [11. Absicherung des SafeKit -Webdienstes ](/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
+
+
+![ SafeKit Webkonsole für den {{ .Get "app" }} Cluster ](/wp-content/uploads/2024/03/01-login-large.png)
 
 
 ### 2. Knotenadressen konfigurieren
 
-  * Geben Sie die IP-Adressen der Knoten ein und drücken Sie die Taste. `Tab key` Um die Verbindung zu prüfen und die Knotennamen einzutragen. Falls Knoten 1 oder Knoten 2 rot angezeigt wird, prüfen Sie die Browserverbindung zu beiden Knoten und die Firewalls beider Knoten auf 🛠️. [Fehlerbehebung](/resources/safekit-user-guide-82/#Troubleshooting).
-  * Klicken Sie anschließend auf `Save and apply` um die Konfiguration zu speichern.
-  * Überprüfen Sie die `Success` ✅ Nachricht auf beiden Knoten.
-  * Wenn die Konfiguration `Failure` ❌ erscheint an einem Knoten. Öffnen Sie das ▼-Akkordeon für diesen Knoten und lesen Sie die Meldungen. Beachten Sie, dass Sie die SafeKit KI 🤖 zur Unterstützung.
+  * Geben Sie die IP Adresse jedes Knotens ein. Drücken Sie die Tabulatortaste, um die Verbindung zu überprüfen und die Knotennamen einzugeben.
+  * Wenn `node1` oder `node2` rot angezeigt wird, überprüfen Sie, ob der Browser beide Knoten erreichen kann. Überprüfen Sie die Firewall auf jedem Knoten. Siehe 🛠️ [Fehlerbehebung ](/resources/safekit-user-guide-82/#Troubleshooting) .
+  * Klicken Sie auf `Save and apply` um die Konfiguration zu speichern.
+  * Prüfen Sie, ob auf beiden Knoten ✅ `Success` angezeigt wird.
+  * Wenn ein Knoten die Meldung „❌ `Failure` anzeigt, öffnen Sie sein ▼-Fenster und lesen Sie die Meldungen. Nutzen Sie die SafeKit -KI 🤖, falls Sie Hilfe benötigen.
 
 
-ℹ️ Wenn Sie möchten, können Sie ein neues hinzufügen. `LAN and nodes` ( first ➕) um einen zweiten Heartbeat und ein dediziertes Replikationsnetzwerk zu erstellen.
+ℹ️ Um ein zweites Heartbeat-Netzwerk und ein dediziertes Replikationsnetzwerk hinzuzufügen, klicken Sie auf die erste ➕-Schaltfläche unter `LAN and nodes` .
 
-ℹ️ Wenn Sie klicken auf `Advanced configuration`, Die `cluster.xml` Die Datei wird angezeigt. Diese Datei wird automatisch von der Konsole befüllt und auf den Knoten bereitgestellt.
+ℹ️ Klicken Sie auf `Advanced configuration` , um die Datei `cluster.xml` anzuzeigen. Die Konsole füllt diese Datei aus und stellt sie auf beiden Knoten bereit.
 
 
-![Geben Sie die Knoten des {{ .Get "app" }} Cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
+![Knotenadressen für den {{ .Get "app" }} Cluster ](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
 ### 3. Wählen Sie ein Modul aus
 
-  * In `New module`Klicken Sie auf `{{ .Get "mod" }}.safe` Modul.
+  * Im Menü `New module` “ wählen Sie das Modul `{{ .Get "mod" }}.safe` .
 
 
-ℹ️ Im blauen Banner oben, 🛜 `node1` stellt den Konsolenverbindungsknoten dar. Dieser Knoten leitet Anfragen weiter an `node2` falls erforderlich.
+ℹ️ Im blauen Banner ist 🛜 `node1` der mit der Konsole verbundene Knoten. Er leitet Anfragen bei Bedarf an `node2` weiter.
 
-ℹ️ Die Konsole sucht nach `xxx.safe` im `Application_Modules/generic/` Verzeichnis auf dem Verbindungsknoten (`node1`) falls Sie dort während der Installation ein Modul platziert haben.
+ℹ️ Wenn Sie während der Installation eine Moduldatei `xxx.safe` hinzugefügt haben, sucht die Konsole auf `node1` im Verzeichnis `Application_Modules/generic/` danach.
 
 
-![Wählen Sie das Modul aus für {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+![Wähle das Modul für {{ .Get "app" }} ](/wp-content/uploads/2024/03/04-module-new.png)
 
 
 ### 4. Modul konfigurieren
 
-  * In `Module startup at boot`, wählen Sie einen automatischen Start des Moduls beim Systemstart ohne Verzögerung.
-  * In `Macros` / `SERVICES`Geben Sie die Dienstnamen Ihrer Anwendung in der Startreihenfolge durch Kommas getrennt ein.
-  * In `Heartbeat networks`Sie sollten über ein einziges Heartbeat-Netzwerk verfügen, es sei denn, Sie haben in Schritt 2 ein LAN hinzugefügt.
-  * In `Virtual IP addresses`Geben Sie eine virtuelle IP-Adresse ein. Eine virtuelle IP-Adresse ist eine Standard-IP-Adresse im selben IP-Netzwerk (demselben Subnetz) wie die IP-Adressen beider Knoten.  
-Anwendungsclients müssen mit der virtuellen IP-Adresse (oder dem mit der virtuellen IP-Adresse verknüpften DNS-Namen) konfiguriert werden.
-  * In `Load balancing rules`, legen Sie den Dienstport für den Lastausgleich fest (z. B. TCP 9010 im Beispiel).
-  * In `Load balancing rules`, die Lastverteilungsregel festlegen, `Source address` oder `Source port`: 
-    * Mit der Quell-IP-Adresse des Clients wird derselbe Client mit demselben Knoten im selben Netzwerk verbunden. <span class="notranslate farm-term" translate="no">farm</span> bei mehreren TCP-Sitzungen und den zugehörigen Kontext auf dem Knoten abrufen.
-    * Mit dem Quell-TCP-Port des Clients kann derselbe Client mit verschiedenen Knoten im Netzwerk verbunden werden. <span class="notranslate farm-term" translate="no">farm</span> bei mehreren TCP-Sitzungen (ohne Abrufen eines Kontextes).
-  * In `Checkers`Sie können bei Bedarf Prüfmechanismen konfigurieren, wie z. B. Prozessüberwachung, benutzerdefinierte Prüfmechanismen, TCP-, Ping- oder Split-Brain-Prüfmechanismen.  
-Wenn beispielsweise ein Prozessname angezeigt wird in `Monitored processes/services`Es wird überwacht und im Fehlerfall ein Neustart veranlasst. Die Konfiguration eines falschen Prozessnamens führt dazu, dass das Modul direkt nach dem Start beendet wird.
+  * Unter `Module startup at boot` können Sie festlegen, dass das Modul beim Systemstart automatisch und ohne Verzögerung gestartet wird.
+  * Unter `Macros` / `SERVICES` listen Sie die Anwendungsdienste in der Reihenfolge ihres Starts auf. Trennen Sie die Namen durch Kommas.
+  * Bei `Heartbeat networks` sollte nur ein Heartbeat-Netzwerk verwendet werden, es sei denn, in Schritt 2 wurde ein LAN hinzugefügt.
+  * Geben Sie unter `Virtual IP addresses` eine virtuelle IP -Adresse im selben Subnetz wie beide Knoten ein.
+  * Konfigurieren Sie die Anwendungsclients so, dass sie diese virtuelle IP Adresse oder ihren DNS Namen verwenden.
+  * Geben Sie unter `Load balancing rules` den zu verteilenden Dienstport ein, z. B. TCP Port 9010.
+  * Wählen Sie unter `Load balancing rules` `Source address` oder `Source port` aus:
+    * `Source address` : Alle TCP Verbindungen desselben Clients werden an denselben Knoten in der <span class="notranslate farm-term" translate="no">farm</span> geleitet. Dadurch bleibt der Sitzungskontext des Clients auf diesem Knoten erhalten.
+    * `Source port` : TCP Verbindungen vom selben Client können zu verschiedenen Knoten in der <span class="notranslate farm-term" translate="no">farm</span> geleitet werden. Der Sitzungskontext wird nicht zwischen den Knoten geteilt.
+  * Fügen Sie in `Checkers` bei Bedarf weitere Prüfungen hinzu: Prozessüberwachung, benutzerdefinierte Prüfungen, TCP , Ping- oder Split-Brain-Prüfungen.
+  * Ein in der Liste `Monitored processes/services` aufgeführter Prozess wird überwacht und bei einem Fehler neu gestartet. Ein falscher Prozessname führt dazu, dass das Modul unmittelbar nach dem Start beendet wird.
 
 
-ℹ️ Wenn Sie klicken auf `Advanced configuration`, Die `userconfig.xml` Die Datei wird angezeigt. Diese Datei wird automatisch von der Konsole befüllt und zusammen mit den Neustartskripten auf den Knoten bereitgestellt.
+ℹ️ Klicken Sie auf `Advanced configuration` , um die Datei `userconfig.xml` anzuzeigen. Die Konsole füllt diese Datei aus und stellt sie zusammen mit den Neustartskripten auf beiden Knoten bereit.
 
-ℹ️ Bei einer Cloud-Bereitstellung müssen Sie keine virtuelle IP-Adresse und keine Load-Balancing-Regeln konfigurieren. SafeKitDie virtuelle IP-Adresse und die Regeln für den Lastausgleich werden auf dem 🛠️ verwaltet. [Cloud Load Balancer-Ebene](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ In einer Cloud-Bereitstellung verwaltet der 🛠️ [Cloud Load Balancer ](/resources/safekit-user-guide-82/#Cloud) die virtuelle IP Adresse und die Load-Balancing-Regeln. Konfigurieren Sie diese nicht in SafeKit .
 
-ℹ️ Wenn Sie die SafeKit Konfiguration, die `startup type` von Diensten wird automatisch eingestellt auf `Manual` In Windows Dienste. Dadurch wird sichergestellt, dass Dienste nicht automatisch beim Systemstart gestartet werden, sondern erst beim Start des jeweiligen Moduls (dasselbe gilt für …). Linux).
+ℹ️ Bei der Konfiguration stellt SafeKit den Windows Dienststarttyp auf `Manual` ein. Die Dienste starten mit dem Modul, nicht beim Systemstart. SafeKit verhindert auch unter Linux , dass diese Dienste beim Systemstart gestartet werden.
 
 
-![Geben Sie die {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> Moduleinstellungen](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Moduleinstellungen für die {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> ](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Skripte bearbeiten (optional)
 
-  * Dieser Schritt ist optional und kann in den meisten Fällen übersprungen werden, da die Neustartskripte bereits so vorkonfiguriert sind, dass sie die im vorherigen Schritt definierten Dienste neu starten.
-  * Klicken Sie also direkt auf `Next step`.
-  * `start_both.ps1` startet alle Dienste in der im Dokument angegebenen Reihenfolge. `SERVICES` Liste, während `stop_both.ps1` Die Dienste werden in umgekehrter Reihenfolge gestoppt.
-  * Zusätzlich, `start_both.ps1` Überprüft den Start jedes Dienstes und stoppt das Modul, falls ein Dienst nicht ordnungsgemäß startet.
+  * In den meisten Fällen können Sie diesen Schritt überspringen. Die Skripte sind bereits so konfiguriert, dass sie die im vorherigen Schritt aufgeführten Dienste neu starten.
+  * Klicken Sie auf `Next step` , wenn keine Änderungen erforderlich sind.
+  * Das Skript `start_both.ps1` startet die Dienste in der Reihenfolge der Liste `SERVICES` .
+  * Das Skript `stop_both.ps1` stoppt die Dienste in umgekehrter Reihenfolge.
+  * Das Skript `start_both.ps1` überprüft ebenfalls jeden Dienst. Es stoppt das Modul, falls ein Dienst nicht gestartet werden kann.
 
 
-![Geben Sie die {{ .Get "app" }} Moduleinstellungen](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
+![Neustart-Skripte für das Modul {{ .Get "app" }} ](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
 
 
 ### 6. Kommunikationsverschlüsselung (optional)
 
-  * Die Kommunikation zwischen den Knoten muss verschlüsselt bleiben.
+  * Die Kommunikationsverschlüsselung zwischen den Knoten muss aktiviert bleiben.
 
 
-![Kommunikationsverschlüsselung der {{ .Get "app" }} Modul](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+![Kommunikationsverschlüsselung für das {{ .Get "app" }} Modul ](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
 ### 7. Speichern und anwenden
 
-  * `Save and apply` die Konfiguration und die Skripte auf beiden Knoten.
+  * Klicken Sie auf `Save and apply` , um die Konfiguration und die Skripte auf beiden Knoten bereitzustellen.
 
 
-![Speichern und anwenden {{ .Get "app" }} Modulkonfiguration](/wp-content/uploads/2025/05/08-module-save-1.png)
+![Konfigurationsbereitstellung für das {{ .Get "app" }} Modul ](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8. Erfolgreiche Konfiguration überprüfen
+### 8. Überprüfen Sie das Konfigurationsergebnis.
 
-  * Überprüfen Sie die `Success` ✅ Nachricht auf beiden Knoten anzeigen und klicken auf `Monitor modules`.
-  * Wenn die Konfiguration `Failure` ❌ erscheint an einem Knoten. Öffnen Sie das ▼-Akkordeon für diesen Knoten und lesen Sie die Meldungen. Beachten Sie, dass Sie die SafeKit KI 🤖 zur Unterstützung.
-
-
-![Überprüfen Sie die {{ .Get "app" }} Modulkonfiguration erfolgreich](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+  * Prüfen Sie, ob auf beiden Knoten ✅ `Success` angezeigt wird. Klicken Sie anschließend auf `Monitor modules` .
+  * Wenn ein Knoten die Meldung „❌ `Failure` anzeigt, öffnen Sie sein ▼-Fenster und lesen Sie die Meldungen. Nutzen Sie die SafeKit -KI 🤖, falls Sie Hilfe benötigen.
 
 
-### 9. Beginnen Sie mit dem <span class="notranslate farm-term" translate="no">farm</span> Cluster auf Knoten 1 und Knoten 2
-
-  * ⋯ `Start` Die <span class="notranslate farm-term" translate="no">farm</span> Cluster wie im Bild dargestellt.
+![Konfigurationsergebnis für das Modul {{ .Get "app" }} ](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-![Starten Sie die {{ .Get "app" }} Cluster auf beiden Knoten](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
+### 9. Starten Sie den <span class="notranslate farm-term" translate="no">farm</span> auf Knoten 1 und Knoten 2.
+
+  * Öffnen Sie das ⋯-Menü und wählen Sie auf beiden Knoten `Start` , wie in der Abbildung gezeigt.
 
 
-### 10. Warten Sie auf den Übergang zu UP (grün) / UP (grün).
-
-<p>Knoten 1 und Knoten 2 sollten den Zustand UP (grün) erreichen, was bedeutet, dass <code>start_both</code> Das Skript wurde auf Knoten 1 und Knoten 2 ausgeführt.</p>
-
-<p>⚠️ Falls der Status „UP“ (grün) nicht erreicht wird oder die Anwendung nicht startet, analysieren Sie die Ursache mit dem/der/der/dem … <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">Modulprotokoll 🖼️</a> von Knoten 1 oder Knoten 2.</p>
-
-  * Klicke auf die 🔍 **Protokoll** Symbol von `node1` oder `node2` Öffnen Sie das Modulprotokoll und suchen Sie nach Fehlermeldungen, z. B. wenn ein Prüfprogramm einen Fehler erkennt und das Modul stoppt.
-  * Klicken Sie auf `start_both` Im Protokoll: Die Ausgabemeldungen des Skripts werden rechts angezeigt, und Fehler wie beispielsweise ein nicht korrekt gestarteter Dienst können erkannt werden.
-  * Verwenden Sie die SafeKit KI 🤖 zur Unterstützung bei Protokollmeldungen.
+![Starten Sie den {{ .Get "app" }} Cluster auf beiden Knoten ](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-ℹ️ Beachte, dass du ein 🕒 hast. **[Zeitleiste 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** Das kann hilfreich sein, um zu verstehen, was im Cluster passiert.
+### 10. Warten Sie, bis beide Knoten `UP` (grün) sind.
+
+<p> Beide Knoten müssen den Status <code>UP</code> (grün) erreichen. Dies bedeutet, dass das Skript <code>start_both</code> auf beiden Knoten ausgeführt wurde. </p>
+
+<p> ⚠️ Falls ein Knoten <code>UP</code> (grün) nicht erreicht oder die Anwendung nicht startet, überprüfen Sie das <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png"> Modulprotokoll 🖼️ </a> . </p>
+
+  * Klicken Sie auf das 🔍-Symbol für `node1` oder `node2` , um das Modulprotokoll zu öffnen. Suchen Sie nach Fehlern, z. B. nach einer Prüfung, die das Modul gestoppt hat.
+  * Klicken Sie im Protokoll auf `start_both` . Die Skriptausgabe wird rechts angezeigt. Prüfen Sie, ob beim Start des Dienstes Fehler aufgetreten sind.
+  * Nutzen Sie die SafeKit -KI 🤖, um Hilfe bei Protokollmeldungen zu erhalten.
 
 
-![Der {{ .Get "app" }} Cluster wird gestartet](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
+ℹ️ Verwenden Sie die 🕒 ** [timeline 🖼️ ](/wp-content/uploads/2026/05/safekit-console-timeline.png) ** um die Abfolge der Ereignisse im Cluster zu verstehen.
+
+
+![Beide Knoten des {{ .Get "app" }} Clusters laufen ](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
 
 
 ### 11. Testen
 
-SafeKit Beinhaltet einen integrierten Mosaiktest: siehe [Testen der virtuellen IP-Adresse für den Lastausgleich in einem SafeKit farm Cluster](/best-practises/test-load-balancing-vip-farm/).
+SafeKit beinhaltet einen integrierten Mosaiktest. Siehe [Testen der virtuellen IP -Adresse für den Lastausgleich in einem SafeKit Farmcluster ](/de/best-practises/test-load-balancing-vip-farm/) .
 
-![Testen Sie die virtuelle IP-Adresse von {{ .Get "app" }} mit dem Mosaik](/wp-content/uploads/2024/03/appli-19.png)
+![Testen Sie die virtuelle IP Adresse von {{ .Get "app" }} mit dem Mosaik ](/wp-content/uploads/2024/03/appli-19.png)
 
-ℹ️ Weitere Details und Videos finden Sie in der [SafeKit Online-Schulung](/resources/safekit-on-line-training/).
+ℹ️ Weitere Details und Videos finden Sie im [ SafeKit Online-Training ](/resources/safekit-on-line-training/) .
 
 
 ### 12. Unterstützung
 
-  * Um Unterstützung zu erhalten, nehmen Sie 2 SafeKit `Snapshots` (2 .zip-Dateien), eine für jeden Knoten.
+  * Zur Unterstützung erstellen Sie bitte pro Knoten einen SafeKit `Snapshot` . Sammeln Sie die beiden .zip-Dateien.
 
 
-ℹ️ [Weitere Informationen zur Unterstützung finden Sie hier.](/resources/safekit-support/).
+ℹ️ Weitere Informationen finden Sie unter [ SafeKit Support ](/resources/safekit-support/) .
 
 
-![Nimm die {{ .Get "app" }} Screenshots zur Unterstützung](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
+![Support snapshots for the {{ .Get "app" }} cluster ](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)

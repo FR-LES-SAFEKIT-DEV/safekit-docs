@@ -6,50 +6,51 @@
 
 ### Prerequisites
 
-  * {{ .Get "app" }} application installed on 2 nodes (or more).
-  * Virtual IP load balancing requires nodes on the same LAN or extended LAN (L2) — routed L3 networks not supported (except with 🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud)).
+  * Install {{ .Get "app" }} on at least 2 nodes.
+  * For virtual IP load balancing, all nodes must be on the same LAN or extended LAN (layer 2). Routed layer 3 networks require 🛠️ [cloud load balancers](/resources/safekit-user-guide-82/#Cloud).
 
 
 ### 1. Launch the SafeKit console
 
-  * Launch the web console in a browser on one cluster node by connecting to `http://localhost:9010`.
-  * Enter `admin` as user name and the password defined during installation.
+  * On one cluster node, open a browser and connect to `http://localhost:9010`.
+  * Sign in with the user name `admin` and the password set during installation.
 
 
-You can also run the console in a browser on a workstation external to the cluster.
+You can also open the console from a workstation outside the cluster.
 
-⚠️ The configuration of SafeKit is done on both nodes from a single browser.
+⚠️ Use a single browser to configure both nodes with SafeKit.
 
 ℹ️ To secure the web console, see 🛠️ [11\. Securing the SafeKit web service](/resources/safekit-user-guide-82/#https) in the User's Guide.
 
 
-![Start the SafeKit web console to configure the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/01-login-large.png)
+![SafeKit web console for the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/01-login-large.png)
 
 
 ### 2. Configure node addresses
 
-  * Enter the node IP addresses, press the `Tab key` to check connectivity and fill node names. If either node1 or node2 has a red color, check connectivity of the browser to both nodes and check firewall on both nodes for 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
-  * Then, click on `Save and apply` to save the configuration.
-  * Check the `Success` ✅ message on both nodes.
-  * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
+  * Enter the IP address of each node. Press the Tab key to check the connection and fill in the node names.
+  * If `node1` or `node2` is red, check that the browser can reach both nodes. Check the firewall on each node. See 🛠️ [troubleshooting](/resources/safekit-user-guide-82/#Troubleshooting).
+  * Click `Save and apply` to save the configuration.
+  * Check that both nodes display ✅ `Success`.
+  * If a node displays ❌ `Failure`, expand its ▼ panel and read the messages. Use the SafeKit AI 🤖 if you need help.
 
 
-ℹ️ If you want, you can add a new `LAN and nodes` ( first ➕) to create a second heartbeat and a dedicated replication network.
+ℹ️ To add a second heartbeat network and a dedicated replication network, click the first ➕ button in `LAN and nodes`.
 
-ℹ️ If you click on `Advanced configuration`, the `cluster.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes.
+ℹ️ Click `Advanced configuration` to view the file `cluster.xml`. The console fills in this file and deploys it on both nodes.
 
 
-![Enter the nodes of the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
+![Node addresses for the {{ .Get "app" }} cluster](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
 ### 3. Select a module
 
-  * In `New module`, click on the `{{ .Get "mod" }}.safe` module.
+  * In `New module`, select the module `{{ .Get "mod" }}.safe`.
 
 
-ℹ️ In the blue banner at the top, 🛜 `node1` represents the console connection node. This node relays requests to `node2` when required.
+ℹ️ In the blue banner, 🛜 `node1` is the node connected to the console. It forwards requests to `node2` when needed.
 
-ℹ️ The console looks for `xxx.safe` in the `Application_Modules/generic/` directory on the connection node (`node1`) if you placed a module there during installation.
+ℹ️ If you added a module file `xxx.safe` during installation, the console looks for it in the directory `Application_Modules/generic/` on `node1`.
 
 
 ![Choose the module for {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
@@ -57,105 +58,106 @@ You can also run the console in a browser on a workstation external to the clust
 
 ### 4. Configure the module
 
-  * In `Module startup at boot`, choose an automatic start of the module at boot without delay.
-  * In `Macros` / `SERVICES`, enter the service names of your application, in the startup order, separated by commas.
-  * In `Heartbeat networks`, you should have a single heartbeat network except if you have added a LAN at step 2.
-  * In `Virtual IP addresses`, enter a virtual IP address. A virtual IP address is a standard IP address in the same IP network (same subnet) as the IP addresses of both nodes.  
-Application clients must be configured with the virtual IP address (or the DNS name associated with the virtual IP address).
-  * In `Load balancing rules`, set the service port to load balance (ex.: TCP 9010 in the example).
-  * In `Load balancing rules`, set the load balancing rule, `Source address` or `Source port`: 
-    * with the source IP address of the client, the same client will be connected to the same node in the <span class="notranslate farm-term" translate="no">farm</span> on multiple TCP sessions and retrieve its context on the node.
-    * with the source TCP port of the client, the same client will be connected to different nodes in the <span class="notranslate farm-term" translate="no">farm</span> on multiple TCP sessions (without retrieving a context).
-  * In `Checkers`, you will be able to configure checkers if needed, such as process monitoring, custom checkers, TCP, ping, or split-brain checkers.  
-For example, if a process name is displayed in `Monitored processes/services`, it will be monitored with a restart action in case of failure. Configuring a wrong process name will cause the module to stop right after its start.
+  * In `Module startup at boot`, set the module to start automatically at boot, without delay.
+  * In `Macros` / `SERVICES`, list the application services in startup order. Separate the names with commas.
+  * In `Heartbeat networks`, keep one heartbeat network unless you added a LAN in step 2.
+  * In `Virtual IP addresses`, enter a virtual IP address in the same subnet as both nodes.
+  * Configure application clients to use this virtual IP address or its DNS name.
+  * In `Load balancing rules`, enter the service port to balance, for example TCP port 9010.
+  * In `Load balancing rules`, select `Source address` or `Source port`:
+    * `Source address`: all TCP connections from the same client go to the same node in the <span class="notranslate farm-term" translate="no">farm</span>. This preserves the client's session context on that node.
+    * `Source port`: TCP connections from the same client can go to different nodes in the <span class="notranslate farm-term" translate="no">farm</span>. Session context is not shared between nodes.
+  * In `Checkers`, add checks if needed: process monitoring, custom checks, TCP, ping, or split-brain checks.
+  * A process listed in `Monitored processes/services` is monitored and restarted if it fails. An incorrect process name causes the module to stop immediately after startup.
 
 
-ℹ️ If you click on `Advanced configuration`, the `userconfig.xml` file is displayed. This file is automatically populated by the console and deployed on the nodes with the restart scripts.
+ℹ️ Click `Advanced configuration` to view the file `userconfig.xml`. The console fills in this file and deploys it on both nodes with the restart scripts.
 
-ℹ️ In a cloud deployment, you do not need to configure a virtual IP address and load balancing rules in SafeKit. The virtual IP and load balancing rules are managed at the 🛠️ [cloud load balancer level](/resources/safekit-user-guide-82/#Cloud).
+ℹ️ In a cloud deployment, the 🛠️ [cloud load balancer](/resources/safekit-user-guide-82/#Cloud) manages the virtual IP address and load balancing rules. Do not configure them in SafeKit.
 
-ℹ️ When you apply the SafeKit configuration, the `startup type` of services is automatically set to `Manual` in Windows services. This ensures that services do not start automatically when the system boots, but are instead started only when the module itself is started (the same applies on Linux).
+ℹ️ When you apply the configuration, SafeKit sets the Windows service startup type to `Manual`. Services start with the module, not at system boot. SafeKit also prevents these services from starting at system boot on Linux.
 
 
-![Enter the {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> module settings](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![Module settings for the {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span>](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
 ### 5. Edit scripts (optional)
 
-  * This step is optional and can be skipped in most cases, as the restart scripts are already pre-configured to restart services defined in the previous step.
-  * So, click directly on `Next step`.
-  * `start_both.ps1` starts all services in the order specified in the `SERVICES` list, while `stop_both.ps1` stops all services in the reverse order.
-  * Additionally, `start_both.ps1` checks the startup of each service and stops the module if any service fails to start correctly.
+  * In most cases, you can skip this step. The scripts are already configured to restart the services listed in the previous step.
+  * Click `Next step` if no changes are needed.
+  * The script `start_both.ps1` starts services in the order of the list `SERVICES`.
+  * The script `stop_both.ps1` stops services in reverse order.
+  * The script `start_both.ps1` also checks each service. It stops the module if a service fails to start.
 
 
-![Enter the {{ .Get "app" }} module settings](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
+![Restart scripts for the {{ .Get "app" }} module](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
 
 
 ### 6. Communication encryption (optional)
 
-  * Keep encryption of communication between nodes.
+  * Keep communication encryption enabled between nodes.
 
 
-![Communication encryption of the {{ .Get "app" }} module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+![Communication encryption for the {{ .Get "app" }} module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
 ### 7. Save and apply
 
-  * `Save and apply` the configuration and scripts on both nodes.
+  * Click `Save and apply` to deploy the configuration and scripts on both nodes.
 
 
-![Save and apply the {{ .Get "app" }} module configuration](/wp-content/uploads/2025/05/08-module-save-1.png)
+![Configuration deployment for the {{ .Get "app" }} module](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8. Verify successful configuration
+### 8. Check the configuration result
 
-  * Check the `Success` ✅ message on both nodes and click on `Monitor modules`.
-  * If the configuration `Failure` ❌ occurs on one node, open the ▼ accordion for that node and review the messages. Note that you can use the SafeKit AI 🤖 for assistance.
+  * Check that both nodes display ✅ `Success`. Then click `Monitor modules`.
+  * If a node displays ❌ `Failure`, expand its ▼ panel and read the messages. Use the SafeKit AI 🤖 if you need help.
 
 
-![Check the {{ .Get "app" }} module configuration success](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+![Configuration result for the {{ .Get "app" }} module](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
 ### 9. Start the <span class="notranslate farm-term" translate="no">farm</span> cluster on node 1 and node 2
 
-  * ⋯ `Start` the <span class="notranslate farm-term" translate="no">farm</span> cluster as shown in the image.
+  * Open the ⋯ menu and select `Start` on both nodes, as shown in the image.
 
 
 ![Start the {{ .Get "app" }} cluster on both nodes](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-### 10. Wait for the transition to UP (green) / UP (green)
+### 10. Wait until both nodes are `UP` (green)
 
-<p>Node 1 and node 2 should reach the UP (green) state, which means that the <code>start_both</code> script has been executed on node 1 and node 2.</p>
+<p>Both nodes must reach the state <code>UP</code> (green). This means that the script <code>start_both</code> has run on both nodes.</p>
 
-<p>⚠️ If UP (green) is not reached or if the application is not started, analyze why with the <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">module log 🖼️</a> of node 1 or node 2.</p>
+<p>⚠️ If a node does not reach <code>UP</code> (green), or if the application does not start, check its <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">module log 🖼️</a>.</p>
 
-  * Click the 🔍 **log** icon of `node1` or `node2` to open the module log and look for error messages such as a checker detecting an error and stopping the module.
-  * Click on `start_both` in the log: output messages of the script are displayed on the right and errors can be detected such as a service incorrectly started.
-  * Use the SafeKit AI 🤖 for assistance with log messages.
-
-
-ℹ️ Note that you have a 🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** that can be helpful to understand what happens in the cluster.
+  * Click the 🔍 icon for `node1` or `node2` to open the module log. Look for errors, such as a check that stopped the module.
+  * In the log, click `start_both`. The script output appears on the right. Check for service startup errors.
+  * Use the SafeKit AI 🤖 for help with log messages.
 
 
-![The {{ .Get "app" }} cluster is started](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
+ℹ️ Use the 🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** to understand the sequence of events in the cluster.
+
+
+![Both nodes of the {{ .Get "app" }} cluster are running](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
 
 
 ### 11. Testing
 
-SafeKit includes a built-in mosaic test: see [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/).
+SafeKit includes a built-in mosaic test. See [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/).
 
 ![Test the virtual IP address of {{ .Get "app" }} with the mosaic](/wp-content/uploads/2024/03/appli-19.png)
 
-ℹ️ Find more details, along with videos, in the [SafeKit Online Training](/resources/safekit-on-line-training/).
+ℹ️ See the [SafeKit Online Training](/resources/safekit-on-line-training/) for more details and videos.
 
 
 ### 12. Support
 
-  * For getting support, take 2 SafeKit `Snapshots` (2 .zip files), one for each node.
+  * For support, create one SafeKit `Snapshot` per node. Collect the 2 .zip files.
 
 
-ℹ️ [More information on the support here](/resources/safekit-support/).
+ℹ️ See [SafeKit Support](/resources/safekit-support/) for more information.
 
 
-![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
+![Support snapshots for the {{ .Get "app" }} cluster](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)

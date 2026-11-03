@@ -55,8 +55,6 @@ The mosaic is a test page provided by SafeKit. It opens many TCP connections to 
 
    In HTTPS, use `https://<VIP>:9453/safekit/mosaic.html`, with the load balancing rule on port 9453.
 
-The test is described in detail in the SafeKit 8.2 User's Guide, section 4.3.5 "[Test TCP load balancing on a virtual IP address](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
-
 Watch the mosaic test video in the "[Demonstration of the SafeKit <span class="notranslate farm-term" translate="no">farm</span> solution](/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution)" section.
 
 ## 3. Test 1 – Distribution of connections
@@ -147,6 +145,7 @@ The behavior depends on the network path between the client and the <span class=
 
 ## 9. Troubleshooting
 
+- **Load balancing bitmaps:** for details on the test and the load balancing bitmaps, see the SafeKit 8.2 User's Guide, section 4.3.5 "[Test TCP load balancing on a virtual IP address](https://safekit.eviden.com/resources/safekit-user-guide-82/#Mosaic)".
 - **The mosaic no longer responds after the dispatching server stops:** GARP is not taken into account by a device on the path (router, gateway, virtual switch). Check GARP handling with your network team.
 - **Periodic sending of GARP:** the `arpreroute="on"` attribute of the `<vip>` section (with `arpinterval` and `arpelapse`) sends GARPs regularly on the VIPs. See the User's Guide, section 13.6.4 "[`<vip>` syntax](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
 - **Diagnosing Virtual IP (VIP) ↔ MAC resolution:** see the User's Guide, section 7.24 "[Troubleshooting Virtual IP (VIP) ↔ MAC resolution](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP)", and section 7.15 "[<span class="notranslate farm-term" translate="no">Farm</span> module UP (Ready) but problem of load balancing in a <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>)".
