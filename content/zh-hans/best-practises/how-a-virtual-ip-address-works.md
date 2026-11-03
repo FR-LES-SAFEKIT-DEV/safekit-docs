@@ -1,10 +1,10 @@
 ---
 title: "虚拟IP地址（VIP）在高可用性集群中的工作原理是什么？"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-a-virtual-ip-address-works/"
-description: "了解SafeKit如何使用软件定义的虚拟 IP (VIP) 地址来确保 24/7 全天候正常运行。了解通过免费 ARP 实现的自动故障转移，以及为什么它在Windows和Linux上比 DNS 重定向更能保证业务连续性。"
+description: "了解 SafeKit 如何在故障转移时迁移虚拟 IP (VIP)：在同一子网中使用免费 ARP，在不同子网间使用负载均衡器、云 CLI 或 BGP。了解本地 VIP 为何重要。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "什么是高可用性集群中的虚拟 IP 地址？ SafeKit中的虚拟 IP 实现，目录，虚拟 IP 地址 (VIP) 如何在同子网故障转移中工作（ Mirror集群），虚拟 IP 地址 (VIP) 如何在不同子网中工作（ Mirror集群），负载均衡虚拟 IP 如何在同子网Farm中工作（ Farm集群），负载均衡虚拟 IP 如何在不同子网中工作（ Farm集群），虚拟 IP 与 DNS 重定向：为什么 DNS 故障转移经常失败，比较：虚拟 IP 实现、延迟和应用程序透明性，配置虚拟 IP 地址以实现网络负载均衡和高可用性，关于虚拟 IP (VIP) 的常见问题，🔍 SafeKit高可用性导航中心"
+topics: "什么是高可用性集群中的虚拟 IP 地址？, SafeKit 中的虚拟 IP 实现, 目录, 虚拟 IP 地址 (VIP) 如何在同一子网故障转移中工作（Mirror 集群）, 虚拟 IP 地址 (VIP) 如何通过负载均衡器在不同子网中工作（Mirror 集群）, 虚拟 IP 地址 (VIP) 如何通过云服务提供商 CLI 在不同子网中工作（Mirror 集群）, 虚拟 IP 地址 (VIP) 如何通过 BGP 在不同子网中工作（Mirror 集群）, 负载均衡虚拟 IP 如何在同一子网的 farm 中工作（farm 集群）, 负载均衡虚拟 IP 如何在不同子网中工作（farm 集群）, 虚拟 IP 与 DNS 重定向：DNS 故障转移为何经常失败, 虚拟 IP 实现、延迟和应用程序透明性的比较, 配置虚拟 IP 地址以实现网络负载均衡和高可用性, 虚拟 IP (VIP) 常见问题, 🔍 SafeKit 高可用性导航中心"
 ---
 
 # 虚拟 IP 地址 (VIP) 在高可用性集群中如何工作？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}

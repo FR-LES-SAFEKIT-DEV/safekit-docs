@@ -1,10 +1,10 @@
 ---
 title: "고가용성 클러스터링에서 가상 IP 주소(VIP)는 어떻게 작동합니까?"
 canonical: "https://safekit.eviden.com/ko/best-practises/how-a-virtual-ip-address-works/"
-description: "SafeKit 가 소프트웨어 정의 가상 IP(VIP) 주소를 사용하여 연중무휴 24시간 가동을 보장하는 방법을 알아보세요. Gratuitous ARP를 통한 자동 장애 조치와 Windows 및 Linux 서버에서 비즈니스 연속성을 위해 DNS 리디렉션보다 우수한 성능을 제공하는 이유를 확인해 보세요."
+description: "SafeKit이 장애 조치 시 가상 IP(VIP)를 이동하는 방법을 알아보세요. 동일 서브넷에서는 Gratuitous ARP를, 서브넷 간에는 로드 밸런서, 클라우드 CLI 또는 BGP를 사용합니다. 로컬 VIP가 중요한 이유도 설명합니다."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, SafeKit 클러스터의 가상 IP 구현, 목차, 동일 서브넷 장애 조치에서 가상 IP 주소(VIP) 작동 방식( Mirror 클러스터), 서로 다른 서브넷에서 가상 IP(VIP) 작동 방식( Mirror 클러스터), 동일 서브넷 Farm 클러스터에서 로드 밸런싱된 가상 IP 작동 방식( Farm 클러스터), 서로 다른 서브넷에서 로드 밸런싱된 가상 IP 작동 방식( Farm 클러스터), 가상 IP와 DNS 리디렉션 비교: DNS 장애 조치가 자주 실패하는 이유, 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 네트워크 로드 밸런싱 및 고가용성을 위한 가상 IP 주소 구성, 가상 IP(VIP) 관련 자주 묻는 질문, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, SafeKit의 가상 IP 구현, 목차, 동일 서브넷 장애 조치에서 가상 IP 주소(VIP)가 작동하는 방식(Mirror 클러스터), 로드 밸런서를 사용해 서로 다른 서브넷에서 가상 IP(VIP)가 작동하는 방식(Mirror 클러스터), 클라우드 공급자 CLI를 사용해 서로 다른 서브넷에서 가상 IP(VIP)가 작동하는 방식(Mirror 클러스터), BGP를 사용해 서로 다른 서브넷에서 가상 IP(VIP)가 작동하는 방식(Mirror 클러스터), 동일 서브넷 Farm에서 로드 밸런싱 가상 IP가 작동하는 방식(Farm 클러스터), 서로 다른 서브넷에서 로드 밸런싱 가상 IP가 작동하는 방식(Farm 클러스터), 가상 IP와 DNS 리디렉션: DNS 장애 조치가 자주 실패하는 이유, 가상 IP 구현, 지연 시간 및 애플리케이션 투명성 비교, 네트워크 로드 밸런싱 및 고가용성을 위한 가상 IP 주소 구성, 가상 IP(VIP) 관련 자주 묻는 질문, 🔍 SafeKit 고가용성 탐색 허브"
 ---
 
 # 고가용성 클러스터링에서 가상 IP 주소(VIP)는 어떻게 작동합니까? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
