@@ -1,0 +1,17 @@
+{
+  "keep": [
+    "SafeKit",
+    "mirror",
+    "farm",
+    "PRIM",
+    "SECOND",
+    "ALONE",
+    "UP",
+    "STOP"
+    "Floating IP",
+    "Direct Server Return",
+    "Network Load Balancer",
+    "Azure Load Balancer",
+    "Google Cloud Load Balancing"
+  ]
+}
