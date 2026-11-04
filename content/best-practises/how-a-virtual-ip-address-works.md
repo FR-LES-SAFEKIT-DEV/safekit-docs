@@ -190,7 +190,7 @@ DNS redirection is not a reliable high availability solution. Use it only if all
 
 - [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/)
 
-### Scalable performance: load balancing in the kernel, with redundancy {#scalable-performance-kernel-level-load-balancing--redundancy}
+### Load balancing in the kernel, with redundancy {#scalable-performance-kernel-level-load-balancing--redundancy}
 
 When there is a lot of traffic, SafeKit can share the work between several active servers. If one server fails, the other servers continue to work. 
 
@@ -199,7 +199,7 @@ When there is a lot of traffic, SafeKit can share the work between several activ
 
 ![Diagram of a load balanced virtual IP within the same subnet](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
-In a **load balancing <span class="notranslate farm-term" translate="no">farm</span> cluster**, clients connect to a virtual IP, and the requests are shared between several servers at the same time. This example has two nodes, but you can add more servers. In the same subnet, the virtual IP is configured with IP aliasing on the network card of **every server** in the cluster. 
+In a **load balancing <span class="notranslate farm-term" translate="no">farm</span> cluster**, clients connect to a virtual IP, and the requests are shared between several servers at the same time. This example shows two nodes. You can add more nodes to the cluster. In the same subnet, the virtual IP is configured with IP aliasing on the network card of **every server** in the cluster. 
 
 #### Traffic sharing: the kernel filter {#traffic-distribution-the-kernel-level-filter}
 
@@ -222,7 +222,7 @@ This load balancing solution also works between **remote data centers**, if the 
 
 ## How a load balanced virtual IP works across different subnets (<span class="notranslate farm-term" translate="no">farm</span> cluster) {#virtual-ip-load-balancing-different-subnets}
 
-### Multi-zone scaling: traffic across cloud subnets {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
+### Traffic across cloud subnets {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
 A <span class="notranslate farm-term" translate="no">farm</span> cluster can share the application work between several availability zones and subnets. 
 
@@ -265,9 +265,9 @@ Environment and use case | High availability type | Redirection method | Impleme
 Primary/backup (high availability) | Mirror cluster | Gratuitous ARP / MAC takeover | ✅ SafeKit product | Very low: time to detect the failure and send the GARP | Full transparency: the virtual IP is local on the active node. The client IP does not change.  
 Load balancing (active/active) | <span class="notranslate farm-term" translate="no">Farm</span> cluster | Kernel network filter / GARP | ✅ SafeKit product | Very low: time to detect the failure and change the network filters | Full transparency: the virtual IP is local on all nodes. The client IP does not change.  
 Same subnet / extended LAN (stretched VLAN) | Disaster recovery (remote data centers) | IP aliasing / GARP | ✅ SafeKit product (the stretched VLAN is provided by the network team) | Low: depends on the round trip time (RTT) of the stretched VLAN | Full transparency: the virtual IP is local on the nodes. The client IP does not change.  
-Different subnets: load balancer only | Disaster recovery (remote data centers / cloud) | External load balancer | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | ⚠️ Partial transparency: uses SNAT/DNAT. The virtual IP is **NOT** local on the nodes. The client IP may **NOT** be kept. The application must support this.  
-Different subnets: load balancer + local SafeKit virtual IP | Disaster recovery (remote data centers / cloud) | External load balancer with Floating IP / Direct Server Return | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | Good transparency: the virtual IP is local on the primary node and is the destination address. The client IP does not change. To test with the application.  
-Different subnets: cloud CLI | Disaster recovery (cloud) | Cloud API: the private IP or a cloud route moves to the new primary | 🛠️ Integrator: cloud CLI commands in the `start_prim` script | Medium to high: depends on the response time of the cloud API | Full transparency: the virtual IP is local on the primary node. The client IP does not change. Not a validated configuration.  
+Different subnets: load balancer only | Disaster recovery (remote data centers / cloud) | External load balancer | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | ⚠️ Partial transparency if SNAT/DNAT is used. The virtual IP is **NOT** local on the nodes. The client IP may **NOT** be kept. The application must support this.  
+Different subnets: load balancer + local SafeKit virtual IP | Disaster recovery (remote data centers / cloud) | External load balancer with Floating IP / Direct Server Return | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | Good transparency: the virtual IP is local on the primary node and is the destination address. The client IP does not change.
+Different subnets: cloud CLI | Disaster recovery (cloud) | Cloud API: the private IP or a cloud route moves to the new primary | 🛠️ Integrator: cloud CLI commands in the `start_prim` script | Medium to high: depends on the response time of the cloud API | Full transparency: the virtual IP is local on the primary node. The client IP does not change.
 Different subnets: BGP | Disaster recovery (remote data centers / cloud) | /32 route announced with BGP | 🛠️ Integrator: BGP commands in the `start_prim` and `stop_prim` scripts | Low to medium: depends on the BGP convergence time | Full transparency: the virtual IP is local on the primary node. The client IP does not change. Requires BGP routers.  
 DNS redirection: no virtual IP | Disaster recovery (remote data centers) | DNS record change (name / physical IP) | 🛠️ Integrator: DNS update commands in the `start_prim` script | High and not predictable: depends on DNS TTL (Time To Live) and client DNS cache | ⚠️ Not reliable: the client must do a new DNS lookup. Often, clients keep the old IP that they received at startup and are not rerouted after failover.  
   

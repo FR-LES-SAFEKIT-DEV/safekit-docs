@@ -38,8 +38,6 @@ Dans cet article :
 
 **Implémentation de l'adresse IP virtuelle dans les clusters Mirror et <span class="notranslate farm-term" translate="no">Farm</span> SafeKit.**
 
-{{%  insert-safekit-4-buttons-fr  %}}
-
 ## Fonctionnement d'une adresse IP virtuelle dans le même sous-réseau (cluster Mirror) {#virtual-ip-same-subnet-failover}
 
 - [Tester l'adresse IP virtuelle primaire/secours dans un cluster Mirror SafeKit](/fr/best-practises/test-primary-backup-vip-mirror/)
@@ -189,7 +187,7 @@ La redirection DNS n'est pas une solution fiable de haute disponibilité. Utilis
 
 - [Tester l'adresse IP virtuelle avec équilibrage de charge dans un cluster Farm SafeKit](/fr/best-practises/test-load-balancing-vip-farm/)
 
-### Performances évolutives : équilibrage de charge dans le noyau et redondance {#scalable-performance-kernel-level-load-balancing--redundancy}
+### Équilibrage de charge dans le noyau avec redondance {#scalable-performance-kernel-level-load-balancing--redundancy}
 
 Lorsque le trafic est important, SafeKit peut répartir la charge entre plusieurs serveurs actifs. Si l'un d'eux tombe en panne, les autres continuent de fonctionner.
 
@@ -197,7 +195,7 @@ Lorsque le trafic est important, SafeKit peut répartir la charge entre plusieur
 
 ![Schéma d'une adresse IP virtuelle avec équilibrage de charge dans un cluster Farm sur le même sous-réseau](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
-Dans un **cluster Farm avec équilibrage de charge**, les clients se connectent à une adresse IP virtuelle et leurs requêtes sont réparties simultanément entre plusieurs serveurs. Cet exemple comporte deux nœuds, mais il est possible d'en ajouter. Dans le même sous-réseau, l'adresse IP virtuelle est configurée par aliasage IP sur la carte réseau de **chaque serveur** du cluster.
+Dans un **cluster Farm avec équilibrage de charge**, les clients se connectent à une adresse IP virtuelle et leurs requêtes sont réparties simultanément entre plusieurs serveurs. Cet exemple montre deux nœuds. Vous pouvez ajouter d'autres nœuds au cluster. Dans le même sous-réseau, l'adresse IP virtuelle est configurée par aliasage IP sur la carte réseau de **chaque serveur** du cluster.
 
 #### Répartition du trafic : filtre du noyau {#traffic-distribution-the-kernel-level-filter}
 
@@ -219,7 +217,7 @@ Cette solution d'équilibrage de charge fonctionne également entre des **centre
 
 ## Comment fonctionne une adresse IP virtuelle avec équilibrage de charge dans un cluster Farm sur différents sous-réseaux {#virtual-ip-load-balancing-different-subnets}
 
-### Mise à l'échelle multizone : trafic entre sous-réseaux cloud {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
+### Trafic entre sous-réseaux cloud {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
 Un cluster <span class="notranslate farm-term" translate="no">Farm</span> peut répartir la charge de l'application entre plusieurs zones de disponibilité et sous-réseaux.
 
@@ -258,9 +256,9 @@ Environnement et cas d'utilisation | Type de haute disponibilité | Méthode de 
 Principal/secours (haute disponibilité) | Cluster Mirror | ARP gratuit / reprise de l'adresse MAC | ✅ Produit SafeKit | Très faible : délai de détection de la panne et d'envoi du GARP | Transparence totale : l'adresse IP virtuelle est locale sur le nœud actif. L'adresse IP du client ne change pas.  
 Équilibrage de charge (actif/actif) | Cluster <span class="notranslate farm-term" translate="no">Farm</span> | Filtre réseau du noyau / GARP | ✅ Produit SafeKit | Très faible : délai de détection et de modification des filtres réseau | Transparence totale : l'adresse IP virtuelle est locale sur tous les nœuds. L'adresse IP du client ne change pas.  
 Même sous-réseau / LAN étendu (VLAN étendu) | Reprise après sinistre (centres de données distants) | Aliasage IP / GARP | ✅ Produit SafeKit (le VLAN étendu est fourni par l'équipe réseau) | Faible : dépend du temps aller-retour (RTT) du VLAN étendu | Transparence totale : l'adresse IP virtuelle est locale sur les nœuds. L'adresse IP du client ne change pas.  
-Sous-réseaux différents : répartiteur de charge seul | Reprise après sinistre (centres de données distants / cloud) | Répartiteur de charge externe | 🛠️ Intégrateur : configuration du répartiteur (SafeKit fournit le contrôle d'état) | Moyenne : dépend de l'intervalle de contrôle d'état du répartiteur | ⚠️ Transparence partielle : SNAT/DNAT est utilisé. L'adresse IP virtuelle n'est **PAS** locale sur les nœuds et l'adresse IP du client peut ne **PAS** être conservée. L'application doit le prendre en charge.  
-Sous-réseaux différents : répartiteur + adresse IP virtuelle locale SafeKit | Reprise après sinistre (centres de données distants / cloud) | Répartiteur externe avec Floating IP / Direct Server Return | 🛠️ Intégrateur : configuration du répartiteur (SafeKit fournit le contrôle d'état) | Moyenne : dépend de l'intervalle de contrôle d'état du répartiteur | Bonne transparence : l'adresse IP virtuelle est locale sur le nœud principal et sert d'adresse de destination. L'adresse IP du client ne change pas. À tester avec l'application.  
-Sous-réseaux différents : CLI cloud | Reprise après sinistre (cloud) | API cloud : l'adresse IP privée ou une route cloud est déplacée vers le nouveau serveur principal | 🛠️ Intégrateur : commandes CLI cloud dans `start_prim` | Moyenne à élevée : dépend du temps de réponse de l'API cloud | Transparence totale : l'adresse IP virtuelle est locale sur le nœud principal. L'adresse IP du client ne change pas. Configuration non validée.  
+Sous-réseaux différents : répartiteur de charge seul | Reprise après sinistre (centres de données distants / cloud) | Répartiteur de charge externe | 🛠️ Intégrateur : configuration du répartiteur (SafeKit fournit le contrôle d'état) | Moyenne : dépend de l'intervalle de contrôle d'état du répartiteur | ⚠️ Transparence partielle si SNAT/DNAT est utilisé. L'adresse IP virtuelle n'est **PAS** locale sur les nœuds et l'adresse IP du client peut ne **PAS** être conservée. L'application doit le prendre en charge.  
+Sous-réseaux différents : répartiteur + adresse IP virtuelle locale SafeKit | Reprise après sinistre (centres de données distants / cloud) | Répartiteur externe avec Floating IP / Direct Server Return | 🛠️ Intégrateur : configuration du répartiteur (SafeKit fournit le contrôle d'état) | Moyenne : dépend de l'intervalle de contrôle d'état du répartiteur | Bonne transparence : l'adresse IP virtuelle est locale sur le nœud principal et sert d'adresse de destination. L'adresse IP du client ne change pas.
+Sous-réseaux différents : CLI cloud | Reprise après sinistre (cloud) | API cloud : l'adresse IP privée ou une route cloud est déplacée vers le nouveau serveur principal | 🛠️ Intégrateur : commandes CLI cloud dans `start_prim` | Moyenne à élevée : dépend du temps de réponse de l'API cloud | Transparence totale : l'adresse IP virtuelle est locale sur le nœud principal. L'adresse IP du client ne change pas.
 Sous-réseaux différents : BGP | Reprise après sinistre (centres de données distants / cloud) | Route /32 annoncée par BGP | 🛠️ Intégrateur : commandes BGP dans `start_prim` et `stop_prim` | Faible à moyenne : dépend du temps de convergence BGP | Transparence totale : l'adresse IP virtuelle est locale sur le nœud principal. L'adresse IP du client ne change pas. Routeurs BGP requis.  
 Redirection DNS : sans adresse IP virtuelle | Reprise après sinistre (centres de données distants) | Modification de l'enregistrement DNS (nom / adresse IP physique) | 🛠️ Intégrateur : commandes DNS dans `start_prim` | Élevée et imprévisible : dépend du TTL DNS et du cache DNS des clients | ⚠️ Non fiable : le client doit effectuer une nouvelle résolution DNS. Souvent, les clients conservent l'ancienne adresse IP reçue au démarrage et ne sont pas reroutés après le basculement.  
 
