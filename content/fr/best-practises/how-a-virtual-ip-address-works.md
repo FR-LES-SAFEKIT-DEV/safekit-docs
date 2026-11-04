@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/how-a-virtual-ip-addres
 description: "Découvrez comment SafeKit déplace une adresse IP virtuelle lors d'un basculement : ARP gratuit dans le même sous-réseau, répartiteur de charge, CLI cloud ou BGP entre sous-réseaux. Comprenez l'intérêt d'une VIP locale."
 category: "best-practises"
 lang: "fr"
-topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster haute disponibilité ?, Implémentation de l'adresse IP virtuelle dans SafeKit, Fonctionnement d'une adresse IP virtuelle dans le même sous-réseau (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec un répartiteur de charge (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec les CLI des fournisseurs cloud (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec BGP (cluster Mirror), Fonctionnement de la redirection DNS entre différents sous-réseaux (cluster Mirror), Fonctionnement d'une adresse IP virtuelle avec équilibrage de charge dans une Farm sur le même sous-réseau (cluster Farm), Fonctionnement d'une adresse IP virtuelle avec équilibrage de charge entre différents sous-réseaux (cluster Farm), Comparaison de l'implémentation, de la latence et de la transparence applicative, Foire aux questions sur l'adresse IP virtuelle, 🔍 Explorer SafeKit"
+topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster haute disponibilité ?, Implémentation de l'adresse IP virtuelle dans SafeKit, Fonctionnement d'une adresse IP virtuelle dans le même sous-réseau (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec un répartiteur de charge (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec les CLI des fournisseurs cloud (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec BGP (cluster Mirror), Fonctionnement de la redirection DNS entre différents sous-réseaux (cluster Mirror), Comment fonctionne une adresse IP virtuelle avec équilibrage de charge dans un cluster Farm sur le même sous-réseau, Comment fonctionne une adresse IP virtuelle avec équilibrage de charge dans un cluster Farm sur différents sous-réseaux, Comparaison de l'implémentation, de la latence et de la transparence applicative, Foire aux questions sur l'adresse IP virtuelle, 🔍 Explorer SafeKit"
 ---
 
 # Comment fonctionne une adresse IP virtuelle dans un cluster haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -185,7 +185,7 @@ Si une seule de ces conditions n'est pas remplie, les **clients 1 et 2 restent b
 
 La redirection DNS n'est pas une solution fiable de haute disponibilité. Utilisez-la uniquement si tous les clients effectuent une nouvelle résolution DNS à la reconnexion. Pour un basculement immédiat et transparent, utilisez une **adresse IP virtuelle** : via un LAN étendu, un répartiteur de charge, les CLI d'un fournisseur cloud ou BGP.
 
-## Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans une Farm sur le même sous-réseau (cluster Farm) {#virtual-ip-load-balancing-same-subnet}
+## Comment fonctionne une adresse IP virtuelle avec équilibrage de charge dans un cluster Farm sur le même sous-réseau {#virtual-ip-load-balancing-same-subnet}
 
 - [Tester l'adresse IP virtuelle avec équilibrage de charge dans un cluster Farm SafeKit](/fr/best-practises/test-load-balancing-vip-farm/)
 
@@ -217,7 +217,7 @@ Cette solution d'équilibrage de charge fonctionne également entre des **centre
 
 {{%  insert-safekit-farm-video-fr  %}}
 
-## Fonctionnement d'une adresse IP virtuelle à charge équilibrée entre différents sous-réseaux (cluster Farm) {#virtual-ip-load-balancing-different-subnets}
+## Comment fonctionne une adresse IP virtuelle avec équilibrage de charge dans un cluster Farm sur différents sous-réseaux {#virtual-ip-load-balancing-different-subnets}
 
 ### Mise à l'échelle multizone : trafic entre sous-réseaux cloud {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
