@@ -266,7 +266,7 @@ Primary/backup (high availability) | Mirror cluster | Gratuitous ARP / MAC takeo
 Load balancing (active/active) | <span class="notranslate farm-term" translate="no">Farm</span> cluster | Kernel network filter / GARP | ✅ SafeKit product | Very low: time to detect the failure and change the network filters | Full transparency: the virtual IP is local on all nodes. The client IP does not change.  
 Same subnet / extended LAN (stretched VLAN) | Disaster recovery (remote data centers) | IP aliasing / GARP | ✅ SafeKit product (the stretched VLAN is provided by the network team) | Low: depends on the round trip time (RTT) of the stretched VLAN | Full transparency: the virtual IP is local on the nodes. The client IP does not change.  
 Different subnets: load balancer only | Disaster recovery (remote data centers / cloud) | External load balancer | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | ⚠️ Partial transparency if SNAT/DNAT is used. The virtual IP is **NOT** local on the nodes. The client IP may **NOT** be kept. The application must support this.  
-Different subnets: load balancer + local SafeKit virtual IP | Disaster recovery (remote data centers / cloud) | External load balancer with Floating IP / Direct Server Return | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | Good transparency: the virtual IP is local on the primary node and is the destination address. The client IP does not change.
+Different subnets: load balancer + local SafeKit virtual IP | Disaster recovery (remote data centers / cloud) | External load balancer with Floating IP / Direct Server Return | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | Good transparency: the virtual IP is local on the primary node and is the destination address.
 Different subnets: cloud CLI | Disaster recovery (cloud) | Cloud API: the private IP or a cloud route moves to the new primary | 🛠️ Integrator: cloud CLI commands in the `start_prim` script | Medium to high: depends on the response time of the cloud API | Full transparency: the virtual IP is local on the primary node. The client IP does not change.
 Different subnets: BGP | Disaster recovery (remote data centers / cloud) | /32 route announced with BGP | 🛠️ Integrator: BGP commands in the `start_prim` and `stop_prim` scripts | Low to medium: depends on the BGP convergence time | Full transparency: the virtual IP is local on the primary node. The client IP does not change. Requires BGP routers.  
 DNS redirection: no virtual IP | Disaster recovery (remote data centers) | DNS record change (name / physical IP) | 🛠️ Integrator: DNS update commands in the `start_prim` script | High and not predictable: depends on DNS TTL (Time To Live) and client DNS cache | ⚠️ Not reliable: the client must do a new DNS lookup. Often, clients keep the old IP that they received at startup and are not rerouted after failover.  
@@ -295,7 +295,7 @@ Can I associate a DNS name with a virtual IP?
 
 How does a virtual IP work in the cloud (AWS, Azure, GCP)?
 
-In the cloud, layer 2 (ARP) is limited. SafeKit works with **cloud load balancers** (AWS ELB, Azure LB, or Google GCLB). SafeKit provides a **health check URL**. The load balancer reads it and sends the traffic to the active node with SNAT/DNAT.
+In the cloud, layer 2 GARP messages are not available for rerouting a virtual IP. SafeKit works with **cloud load balancers** (AWS ELB, Azure LB, or Google GCLB). SafeKit provides a **health check URL**. The load balancer reads it and sends the traffic to the active node.
 
 Is an extended LAN better than a load balancer for disaster recovery?
 
@@ -303,7 +303,7 @@ Is an extended LAN better than a load balancer for disaster recovery?
 
 What are the limits of DNS redirection compared with a virtual IP?
 
-**DNS redirection** depends on the **TTL (Time to Live)** and on the client DNS cache. Recovery can take hours. Also, **clients that do not do a new DNS lookup stay blocked** on the failed server. A **virtual IP** reroutes all the traffic immediately at layer 2. The client DNS cache has no effect.
+**DNS redirection** depends on the **TTL (Time to Live)** and on the client DNS cache. Recovery can take hours. Also, **clients that do not do a new DNS lookup stay blocked** on the failed server. A **virtual IP** is rerouted immediately with GARP messages at layer 2. The client DNS cache has no effect.
 
 ### Transparency and security {#transparency--security}
 
