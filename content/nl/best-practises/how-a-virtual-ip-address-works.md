@@ -1,310 +1,320 @@
 ---
-title: "Hoe werkt een virtueel IP-adres in een cluster met hoge beschikbaarheid?"
+title: "Hoe werkt een virtueel IP-adres in een clusteromgeving met hoge beschikbaarheid?"
 canonical: "https://safekit.eviden.com/nl/best-practises/how-a-virtual-ip-address-works/"
-description: "Ontdek hoe SafeKit een virtueel IP-adres verplaatst bij failover, met GARP, load balancers, cloud-CLI's of BGP."
+description: "Hoe SafeKit een virtueel IP-adres verplaatst bij failover: gratuitous ARP binnen hetzelfde subnet, load balancer, cloud CLI of BGP over subnets heen. Waarom een lokaal virtueel IP-adres belangrijk is."
 category: "best-practises"
 lang: "nl"
-topics: "Wat is een virtueel IP-adres in een cluster met hoge beschikbaarheid?, Implementatie van het virtuele IP-adres in SafeKit, Hoe een virtueel IP-adres werkt in hetzelfde subnet (Mirror-cluster), Hoe een virtueel IP-adres werkt tussen verschillende subnetten met een load balancer (Mirror-cluster), Hoe een virtueel IP-adres werkt tussen verschillende subnetten met cloudprovider-CLI's (Mirror-cluster), Hoe een virtueel IP-adres werkt tussen verschillende subnetten met BGP (Mirror-cluster), Hoe DNS-omleiding werkt tussen verschillende subnetten (Mirror-cluster), Hoe virtuele IP-load balancing werkt in een Farm-cluster binnen hetzelfde subnet, Load balancing van een virtueel IP-adres tussen verschillende subnetten (Farm-cluster), Vergelijking van implementatie, latentie en applicatietransparantie, Veelgestelde vragen over virtuele IP-adressen, 🔍 SafeKit ontdekken"
+topics: "Wat is een virtueel IP-adres in een high availability-cluster?, Implementatie van virtuele IP in SafeKit, Hoe werkt een virtueel IP-adres in hetzelfde subnet (mirror), Hoe werkt een virtueel IP-adres over verschillende subnets met een load balancer (mirror), Hoe werkt een virtueel IP-adres over verschillende subnets met CLI's van cloudproviders (mirror), Hoe werkt een virtueel IP-adres over verschillende subnets met BGP (mirror), Hoe werkt DNS-omleiding over verschillende subnets (mirror), Hoe werkt load balancing van virtuele IP in een farm op hetzelfde subnet, Hoe werkt een load balanced virtueel IP-adres over verschillende subnets (farm), Vergelijking: implementatie van virtuele IP, latentie en applicatietransparantie, Veelgestelde vragen over virtuele IP, 🔍 Ontdek SafeKit"
 ---
 
-# Hoe werkt een virtueel IP-adres in een cluster met hoge beschikbaarheid? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# Hoe werkt een virtueel IP-adres in een clusteromgeving met hoge beschikbaarheid? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
 
-## Wat is een virtueel IP-adres in een cluster met hoge beschikbaarheid? {#virtual-ip-definition}
+## Wat is een virtueel IP-adres in een high availability-cluster? {#virtual-ip-definition}
 
-Een **virtueel IP-adres** is het enige adres waarmee clients verbinding maken met een applicatie in een [cluster met hoge beschikbaarheid](</nl/>). Het is niet aan één specifieke server gekoppeld. Bij een failover wordt het verplaatst naar de server waarop de applicatie draait. Clients hoeven hun configuratie niet aan te passen.
+Een **virtueel IP-adres** is het enige adres dat clients gebruiken om verbinding te maken met een applicatie in een [high availability-cluster](</nl/>). Het virtuele IP-adres is niet gekoppeld aan één server. Bij failover wordt het toegewezen aan de server waarop de applicatie draait. Clients hoeven hun configuratie niet aan te passen.
 
-**Belangrijk principe van SafeKit:** het virtuele IP-adres wordt **lokaal geconfigureerd op de server** waarop de applicatie draait. De applicatie wordt op dit adres gestart en ontvangt het oorspronkelijke IP-adres van de client. Daarom werken veel applicaties zonder aanpassingen met SafeKit. SafeKit ondersteunt twee soorten virtuele IP-adressen:
+**Kernprincipe van SafeKit:** het virtuele IP-adres wordt **lokaal geconfigureerd op de server** waarop de applicatie draait. De applicatie start op het virtuele IP-adres en ontvangt vervolgens het oorspronkelijke client-IP-adres. Dit is de reden waarom veel applicaties zonder problemen met SafeKit werken. SafeKit biedt twee typen virtuele IP-adressen:
 
-  * **Primair/secundair virtueel IP-adres in een Mirror-cluster:** het virtuele IP-adres is alleen actief op de primaire server. Bij een failover wordt het naar de secundaire server verplaatst.
-  * **Virtueel IP-adres met Network Load Balancing in een <span class="notranslate farm-term" translate="no">farm</span>-cluster:** het virtuele IP-adres is tegelijkertijd actief op alle servers. Het verkeer wordt over deze servers verdeeld.
+  * **Primair/back-up virtueel IP-adres met een mirror :** het virtuele IP-adres is alleen actief op de primaire server. Bij failover wordt het verplaatst naar de back-upserver.
+  * **Netwerkbelastingverdeling met een virtueel IP-adres in een <span class="notranslate farm-term" translate="no">farm</span> :** het virtuele IP-adres is tegelijkertijd actief op alle servers. Het verkeer wordt over de servers verdeeld.
 
-## Implementatie van het virtuele IP-adres in SafeKit {#safekit-virtual-ip-implementation}
+## Implementatie van virtuele IP in SafeKit {#safekit-virtual-ip-implementation}
 
-In dit artikel wordt uitgelegd hoe SafeKit het virtuele IP-adres verplaatst in de verschillende netwerkarchitecturen:
+Dit artikel legt uit hoe SafeKit het virtuele IP-adres verplaatst in elke netwerkarchitectuur:
 
-  * **Hetzelfde subnet of een uitgebreid LAN ([Mirror](#virtual-ip-same-subnet-failover) en [<span class="notranslate farm-term" translate="no">Farm</span>](#virtual-ip-load-balancing-same-subnet)-clusters):** SafeKit configureert het virtuele IP-adres op de server en verzendt een **gratuitous ARP (GARP)**. Externe hardware is niet nodig. Dit is de meest transparante oplossing; SafeKit implementeert het volledige mechanisme.
-  * **Verschillende subnetten met een load balancer ( [Mirror](#virtual-ip-different-subnets-failover)- en [<span class="notranslate farm-term" translate="no">Farm</span>](#virtual-ip-load-balancing-different-subnets)-clusters):** de load balancer gebruikt de **SafeKit-healthcheck** om verkeer naar de juiste server te sturen. De integrator configureert de load balancer.
-  * **[Verschillende subnetten met cloudprovider-CLI's](#virtual-ip-cloud-cli-failover) (Mirror-cluster):** het SafeKit-script `start_prim` roept de cloud-CLI aan om het virtuele IP-adres te verplaatsen. De integrator schrijft het script.
-  * **[Verschillende subnetten met BGP](#virtual-ip-bgp-failover) (Mirror-cluster):** de primaire server kondigt het virtuele IP-adres aan bij de routers. De integrator schrijft het script.
-  * **[Verschillende subnetten met DNS-omleiding](#virtual-ip-vs-dns-redirection-failover) (Mirror-cluster):** het SafeKit-script `start_prim` wijzigt de DNS-record van de virtuele naam zodat deze verwijst naar het fysieke IP-adres van de nieuwe primaire server. De integrator schrijft het script. Er is geen enkel virtueel IP-adres en deze methode is niet betrouwbaar voor alle clients.
+  * **Hetzelfde subnet of uitgebreid LAN ([mirror](#virtual-ip-same-subnet-failover) en [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-same-subnet)):** SafeKit configureert het virtuele IP-adres op de server en verstuurt een **gratuitous ARP (GARP)**. Er is geen externe hardware nodig. Dit is de meest transparante oplossing (alles wordt geïmplementeerd door het SafeKit-product).
+  * **Verschillende subnetten met een load balancer ([mirror](#virtual-ip-different-subnets-failover) en [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-different-subnets)):** de load balancer gebruikt de SafeKit- **healthcheck** om verkeer naar de juiste server te sturen (de load balancer wordt geconfigureerd door de integrator).
+  * **[Verschillende subnetten met CLI's van cloudproviders](#virtual-ip-cloud-cli-failover) (mirror):** het SafeKit `start_prim` script roept de cloud-CLI aan om het virtuele IP-adres te verplaatsen (script geschreven door de integrator).
+  * **[Verschillende subnetten met BGP](#virtual-ip-bgp-failover) (mirror):** de primaire server kondigt het virtuele IP-adres aan de routers aan (script geschreven door de integrator).
+  * **[Verschillende subnetten met DNS-omleiding](#virtual-ip-vs-dns-redirection-failover) (mirror):** het SafeKit `start_prim` script wijzigt het DNS-record van de virtuele naam naar het fysieke IP-adres van de nieuwe primaire server (script geschreven door de integrator). Er is geen eenduidig virtueel IP-adres en deze methode is niet betrouwbaar voor alle clients.
 
-In dit artikel:
+Ook in dit artikel:
 
-  * [Vergelijking van implementatie, latentie en applicatietransparantie](#virtual-ip-methods-comparison)
-  * [Veelgestelde vragen over virtuele IP-adressen](#virtual-ip-faq)
-  * [🔍 SafeKit ontdekken](#hub)
+  * [Vergelijking: implementatie van virtueel IP, latentie en applicatietransparantie](#virtual-ip-methods-comparison)
+  * [Veelgestelde vragen over virtueel IP-adres](#virtual-ip-faq)
+  * [🔍 Ontdek SafeKit](#hub)
 
-![Vergelijking van virtuele IP-adressen in Evidian SafeKit: Mirror-clusters met een zwevend IP-adres op de actieve node en Farm-clusters met Network Load Balancing op alle nodes.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
+![Vergelijkend diagram van het gedrag van virtuele IP-adressen in Eviden SafeKit: Mirror -clusters met een floating IP op het actieve knooppunt versus farm clusters met netwerkbelastingverdeling over alle knooppunten.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-**Implementatie van virtuele IP-adressen in Mirror- en <span class="notranslate farm-term" translate="no">Farm</span>-clusters met SafeKit.**
+**Implementatie van virtuele IP-adressen voor mirror en <span class="notranslate farm-term" translate="no">farm</span> in SafeKit.**
 
-## Hoe een virtueel IP-adres werkt in hetzelfde subnet (Mirror-cluster) {#virtual-ip-same-subnet-failover}
+## Hoe werkt een virtueel IP-adres binnen hetzelfde subnet (mirror)? {#virtual-ip-same-subnet-failover}
 
-- [Het primaire/secundaire virtuele IP-adres in een SafeKit-Mirror-cluster testen](/nl/best-practises/test-primary-backup-vip-mirror/)
+- [Het testen van het primaire/back-up virtuele IP-adres in een SafeKit- mirror .](/nl/best-practises/test-primary-backup-vip-mirror/)
 
-### Automatische failover en netwerkroutering in een lokaal subnet {#automated-failover--network-rerouting-in-a-local-subnet}
+### Automatische failover en netwerkomleiding binnen een lokaal subnet. {#automated-failover--network-rerouting-in-a-local-subnet}
 
-In een lokaal netwerk beheert **SafeKit** automatisch het virtuele IP-adres en de failover van de applicatie.
+In een lokaal netwerk beheert **SafeKit** automatisch het virtuele IP-adres en de failover van applicaties.
 
-### Lokaal Mirror-cluster: failover met twee nodes op Windows of Linux {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
+### Lokaal mirror : failover met 2 knooppunten op Windows of Linux {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
 
-![Failovermechanisme van het SafeKit-virtuele IP-adres tussen twee servers in hetzelfde subnet](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-In een **SafeKit-Mirror-cluster** bevinden de twee nodes zich in hetzelfde subnet. Hoge beschikbaarheid is gebaseerd op een **virtueel IP-adres**. SafeKit beheert dit adres in de netwerkstack van het besturingssysteem. Speciale hardware is niet nodig. Het virtuele IP-adres wordt met **IP-aliasing** toegevoegd aan de fysieke IP-adressen van server 1 en server 2. Clients maken altijd verbinding met het virtuele IP-adres.
+![SafeKit virtueel IP-failovermechanisme tussen twee servers in hetzelfde subnet.](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-#### IP-aliasing en ondersteuning voor meerdere virtuele IP-adressen (VIP's) in SafeKit {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
+In een **SafeKit- mirror** bevinden de twee knooppunten zich in hetzelfde subnet. Hoge beschikbaarheid wordt bereikt door een **virtueel IP-adres**. SafeKit beheert het virtuele IP-adres in de netwerkstack van het besturingssysteem. Er is geen speciale hardware nodig. Het virtuele IP-adres wordt via **IP-aliasing** toegevoegd aan de fysieke IP-adressen van Server 1 en Server 2. Clients maken altijd verbinding met het virtuele IP-adres.
 
-Het virtuele IP-adres is een derde IP-adres dat tussen de nodes wordt verplaatst. SafeKit kan **meerdere virtuele IP-adressen** in één cluster beheren. Deze kunnen op dezelfde of op verschillende netwerkkaarten worden geconfigureerd. Zo kan elke service een eigen virtueel IP-adres hebben.
+#### IP-aliasing en meerdere virtuele IP-adressen (VIP's) in SafeKit {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
+
+Het virtuele IP-adres is een derde IP-adres dat tussen de knooppunten wisselt. SafeKit kan **meerdere virtuele IP-adressen** in één cluster beheren. U kunt ze op dezelfde netwerkkaart plaatsen of op verschillende netwerkkaarten. Op deze manier kan elke service zijn eigen virtuele IP-adres gebruiken.
 
 #### Het failovermechanisme: gratuitous ARP (GARP) {#the-failover-mechanism-gratuitous-arp-garp}
 
-Voor failover is geen handmatige actie nodig. Tijdens normaal bedrijf is het virtuele IP-adres gekoppeld aan het **MAC-adres van server 1 (mac1)**. Als server 1 uitvalt, voert SafeKit drie acties uit:
+Failover vereist geen handmatige actie. In normale werking is het virtuele IP-adres gekoppeld aan het **MAC-adres van Server 1 (mac1)**. Als Server 1 uitvalt, doet SafeKit drie dingen:
 
-  * **Aliasing van het virtuele IP-adres:** SafeKit configureert het virtuele IP-adres als alias op de netwerkkaart van server 2, de nieuwe primaire server. Het besturingssysteem verzendt vervolgens berichten op het netwerk om het virtuele IP-adres aan te kondigen.
-  * **GARP:** SafeKit verzendt ook **gratuitous ARP-berichten (GARP)**. Netwerkswitches en clients werken hun ARP-cache bij. Het virtuele IP-adres is nu gekoppeld aan het **MAC-adres van server 2 (mac2)**.
-  * **Applicatieherstel:** SafeKit start de applicatieservices opnieuw op server 2.
+  * **Virtuele IP-aliasing:** SafeKit configureert het virtuele IP-adres als een alias op de netwerkkaart van Server 2, de nieuwe primaire server. Het besturingssysteem verzendt vervolgens berichten over het netwerk om het virtuele IP-adres aan te kondigen.
+  * **GARP:** SafeKit verzendt ook **gratuitous ARP (GARP)** -berichten. Netwerkswitches en clients werken hun ARP-cache bij. Het virtuele IP-adres is nu gekoppeld aan het **MAC-adres van Server 2 (mac2)**.
+  * **Applicatieherstel:** SafeKit herstart de applicatieservices op Server 2.
+
 
 #### Externe datacenters en uitgebreide VLAN's {#remote-data-centers--extended-vlans}
 
-De hierboven beschreven **oplossing binnen hetzelfde subnet** is ook geschikt voor **disaster recovery (DR)** tussen externe locaties. Dit is vaak de beste keuze wanneer de locaties via een **uitgebreid LAN of stretched VLAN** met elkaar zijn verbonden. Beide locaties bevinden zich dan in één subnet. Dit vereenvoudigt het netwerk en voorkomt complexe routeringsprotocollen.
+De **hierboven beschreven oplossing met hetzelfde subnet** werkt ook voor **noodherstel (DR)** tussen externe locaties en is vaak de beste keuze wanneer de locaties verbonden zijn via een **uitgebreid LAN of een uitgestrekt VLAN**. Beide locaties bevinden zich in één subnet. Het netwerk is eenvoudiger en u hebt geen complexe routeringsprotocollen nodig.
 
-> **⚠️ Opmerking:** routering op laag 2 met gratuitous ARP is de **meest transparante oplossing** voor applicaties. De applicatie ontvangt het oorspronkelijke IP-adres van de client en het virtuele IP-adres is lokaal geconfigureerd. **Veel applicaties hebben** een lokaal virtueel IP-adres nodig. Zonder dit adres **werken ze mogelijk niet goed**. In deze configuratie binnen hetzelfde subnet implementeert SafeKit het volledige mechanisme; speciale integratie is niet nodig.
+> **⚠️ Opmerking:** Omleiding op laag 2 met gratuitous ARP is de **meest transparante oplossing** voor applicaties. De applicatie ontvangt het oorspronkelijke client-IP-adres en het virtuele IP-adres wordt lokaal geconfigureerd. **Veel applicaties hebben een lokaal virtueel IP-adres nodig**. Zonder dit **werken deze applicaties mogelijk niet correct**. In deze configuratie binnen hetzelfde subnet implementeert SafeKit het volledige mechanisme, waardoor er geen speciale integratie nodig is.
 
-## Hoe een virtueel IP-adres werkt tussen verschillende subnetten met een load balancer (Mirror-cluster) {#virtual-ip-different-subnets-failover}
+## Hoe werkt een virtueel IP-adres over verschillende subnetten met een load balancer (mirror)? {#virtual-ip-different-subnets-failover}
 
-### Load balancer met SafeKit-healthchecks {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
+### Load balancer met SafeKit health checks {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
 
-![Diagram van failover van een virtueel IP-adres met een load balancer tussen twee verschillende subnetten](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
+![Diagram van een virtuele IP-failover met behulp van een load balancer over twee verschillende subnetten.](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
-Wanneer de nodes zich in **verschillende subnetten** bevinden, kan gratuitous ARP het virtuele IP-adres niet verplaatsen. In dat geval staat het virtuele IP-adres op een **load balancer**, die verkeer naar de primaire server stuurt.
+Wanneer de knooppunten zich in **verschillende subnetten** bevinden, kan gratuitous ARP het virtuele IP-adres niet verplaatsen. In dit geval bevindt het virtuele IP-adres zich op een **load balancer**. De load balancer stuurt het verkeer door naar de primaire server.
 
-SafeKit biedt op elke node een **healthcheck-URL**:
+SafeKit biedt op elk knooppunt een **URL voor een gezondheidscontrole** :
 
-  * **Primair (PRIM):** retourneert `HTTP 200 OK`. De load balancer stuurt verkeer naar deze node.
-  * **Secundair (SECOND):** retourneert `HTTP 404 NOT FOUND`. De load balancer stuurt geen verkeer naar deze node.
+  * **Primair (PRIM):** retourneert `HTTP 200 OK`.. De load balancer stuurt verkeer naar dit knooppunt.
+  * **Secundair (SECOND):** retourneert `HTTP 404 NOT FOUND`.. De load balancer stuurt geen verkeer naar dit knooppunt.
 
-Bij een failover wijzigt SafeKit de antwoorden en stuurt de load balancer verkeer naar de nieuwe primaire server. Dit is de standaardoplossing tussen **availability zones** op [**AWS**](</nl/solutions/aws-high-availability-cluster-synchronous-replication-failover/>), [**Azure**](</nl/solutions/azure-high-availability-cluster-synchronous-replication-failover/>) en [**Google Cloud**](</nl/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>).
+Bij failover wijzigt SafeKit de responsen en stuurt de load balancer het verkeer door naar de nieuwe primaire server. Dit is de standaardoplossing tussen **beschikbaarheidszones** op [**AWS**](</nl/solutions/aws-high-availability-cluster-synchronous-replication-failover/>), [**Azure**](</nl/solutions/azure-high-availability-cluster-synchronous-replication-failover/>) en [**Google Cloud**](</nl/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>).
 
-> **⚠️ Opmerking:** SafeKit levert de healthcheck. Uw netwerk of cloudprovider levert de load balancer.
+> **⚠️ Let op:** SafeKit verzorgt de gezondheidscontrole. Uw netwerk of cloudprovider zorgt voor de load balancer.
 
-### Het probleem: de load balancer bezit het virtuele IP-adres {#the-load-balancer-pitfall-virtual-ip-on-the-frontend-nat-to-the-physical-ip}
+### Het probleem: de load balancer beheert het virtuele IP-adres. {#the-load-balancer-pitfall-virtual-ip-on-the-frontend-nat-to-the-physical-ip}
 
-Wanneer alleen een load balancer wordt gebruikt, maken clients verbinding met het virtuele IP-adres. De load balancer vertaalt dit via NAT naar het **fysieke IP-adres** van de primaire server. De client gebruikt het virtuele adres, maar de server gebruikt zijn fysieke adres en ziet het virtuele IP-adres dus niet.
+Met alleen een load balancer maken clients verbinding met het virtuele IP-adres. De load balancer vertaalt het virtuele IP-adres (NAT) naar het **fysieke IP-adres** van de primaire server. De client gebruikt het virtuele IP-adres, maar de server gebruikt zijn fysieke IP-adres. De server ziet het virtuele IP-adres niet.
 
-### Het virtuele IP-adres lokaal configureren op de primaire server {#why-the-virtual-ip-must-stay-configured-locally-on-the-primary-server}
+### Zorg ervoor dat het virtuele IP-adres lokaal geconfigureerd is op de primaire server. {#why-the-virtual-ip-must-stay-configured-locally-on-the-primary-server}
 
-Sommige applicaties gebruiken het virtuele IP-adres als serveradres. Ze werken alleen correct als dit adres ook **lokaal op de primaire server is geconfigureerd**. Dan geldt:
+Sommige applicaties gebruiken het virtuele IP-adres als hun serveradres. Ze werken alleen correct als het virtuele IP-adres ook **lokaal op de primaire server is geconfigureerd**. Dan geldt het volgende:
 
-  * services kunnen op het virtuele IP-adres starten;
-  * de server kan zijn eigen services via dit adres bereiken;
-  * verificatie werkt met dit adres.
+  * De services kunnen op het virtuele IP-adres worden gestart;
+  * De server kan via het virtuele IP-adres zijn eigen services bereiken;
+  * Authenticatie werkt met het virtuele IP-adres.
 
-**Aanbevolen werkwijze:** gebruik een load-balancermodus die het virtuele IP-adres als doeladres behoudt, bijvoorbeeld Floating IP of Direct Server Return. Configureer het virtuele IP-adres vervolgens lokaal op de primaire server. De methode hangt af van het subnet van het virtuele IP-adres:
+**Aanbevolen werkwijze:** Gebruik een load balancer-modus die het virtuele IP-adres als bestemmingsadres behoudt (bijvoorbeeld Floating IP of Direct Server Return). Configureer vervolgens het virtuele IP-adres lokaal op de primaire server. De methode is afhankelijk van het subnet van het virtuele IP-adres.
 
-  * **Het virtuele IP-adres bevindt zich in hetzelfde subnet als de fysieke IP-adressen van de servers:** behoud de sectie `<vip>` in de SafeKit-module. SafeKit configureert het virtuele IP-adres automatisch als alias op de netwerkkaart van het fysieke IP-adres.
-  * **Het virtuele IP-adres bevindt zich in een ander subnet:** configureer `<vip>` niet in SafeKit. Gebruik het script `start_prim` om het virtuele IP-adres vóór de start van de applicatie op een speciale interface, zoals loopback, te configureren. Gebruik `stop_prim` om het adres na het stoppen van de applicatie te verwijderen. De integrator schrijft deze opdrachten; ze maken geen deel uit van het SafeKit-product.
+  * **Het virtuele IP-adres bevindt zich in hetzelfde subnet als de fysieke IP-adressen van de servers:** behoud het gedeelte `<vip>` in de SafeKit-module. SafeKit configureert het virtuele IP-adres automatisch als een alias op de netwerkkaart van het fysieke IP-adres.
+  * **Het virtuele IP-adres bevindt zich in een ander subnet:** configureer `<vip>` niet in SafeKit. Gebruik het `start_prim` script om het virtuele IP-adres te configureren op een dedicated interface, zoals loopback, voordat de applicatie start. Gebruik het `stop_prim` script om het virtuele IP-adres te verwijderen nadat de applicatie is gestopt. Deze commando's worden door de integrator geschreven en zijn niet standaard beschikbaar in SafeKit.
 
-## Hoe een virtueel IP-adres werkt tussen verschillende subnetten met cloudprovider-CLI's (Mirror-cluster) {#virtual-ip-cloud-cli-failover}
+
+## Hoe een virtueel IP-adres werkt over verschillende subnetten met CLI's van cloudproviders (mirror) {#virtual-ip-cloud-cli-failover}
 
 ### Waarom gratuitous ARP niet werkt in de cloud {#why-gratuitous-arp-does-not-work-in-public-clouds}
 
-Cloudnetwerken (AWS, Azure en Google Cloud) **negeren gratuitous ARP**. Ze routeren verkeer alleen naar IP-adressen die aan het cloudplatform zijn toegewezen. SafeKit configureert het virtuele IP-adres op de primaire server, maar het cloudnetwerk stuurt het verkeer voor dit adres niet naar die server.
+Cloudnetwerken (AWS, Azure, Google Cloud) **negeren gratuitous ARP**. Ze sturen verkeer alleen door naar IP-adressen die zijn toegewezen in het cloudplatform. SafeKit configureert het virtuele IP-adres op de primaire server, maar het cloudnetwerk stuurt het verkeer van het virtuele IP-adres niet door naar deze server.
 
 ### Het virtuele IP-adres verplaatsen met de cloud-CLI {#moving-the-virtual-ip-through-the-cloud-api-in-safekit-failover-scripts}
 
-Zonder load balancer kan de CLI van de cloudprovider worden geïntegreerd in het SafeKit-script **`start_prim`** om de cloudnetwerkconfiguratie bij te werken voordat de applicatie start. De CLI kan het virtuele IP-adres toewijzen aan de node die primair wordt of de cloudroute bijwerken zodat het verkeer voor dit adres naar die node gaat.
+Zonder load balancer kan de CLI van de cloudprovider worden geïntegreerd in het SafeKit **`start_prim` script** om de cloudnetwerkconfiguratie bij te werken voordat de applicatie start. De CLI kan het virtuele IP-adres toewijzen aan het knooppunt dat primair wordt, of de cloudroute bijwerken om virtueel IP-verkeer naar dat knooppunt te leiden.
 
-Het **virtuele IP-adres blijft lokaal** op de primaire server. Er is **geen NAT** en het oorspronkelijke IP-adres van de client verandert niet.
+Het **virtuele IP-adres blijft lokaal** op de primaire server. Er vindt **geen NAT** plaats en het oorspronkelijke IP-adres van de client verandert niet.
 
 ### Verantwoordelijkheid van de integrator {#integrator-responsibility}
 
-De **integrator** moet de cloud-CLI-opdrachten toevoegen aan het script `start_prim`. Deze opdrachten worden **niet door het SafeKit-product geleverd**. Ze zijn afhankelijk van de cloudprovider, het netwerkontwerp en de beveiligingsregels van de klant.
+De **integrator** moet de cloud-CLI-opdrachten toevoegen aan het `start_prim` script. Deze opdrachten worden **niet door het SafeKit-product geleverd**. Ze zijn afhankelijk van de cloudprovider, het netwerkontwerp en de beveiligingsregels van de klant.
 
 ### Beperkingen {#constraints-of-the-cli-approach}
 
-  * De cloud-CLI moet op beide nodes zijn geïnstalleerd. Elke node heeft een cloudidentiteit met de benodigde netwerkrechten nodig.
-  * Het script moet fouten en nieuwe pogingen afhandelen.
-  * Failover verloopt waarschijnlijk langzamer dan met een load balancer.
+  * De cloud-CLI moet op beide knooppunten geïnstalleerd zijn. Elk knooppunt heeft een cloud-identiteit met netwerkrechten nodig.
+  * Het script moet fouten en herhaalpogingen afhandelen.
+  * Failover is waarschijnlijk trager dan met een load balancer.
 
-## Hoe een virtueel IP-adres werkt tussen verschillende subnetten met BGP (Mirror-cluster) {#virtual-ip-bgp-failover}
+## Hoe een virtueel IP-adres werkt over verschillende subnetten met BGP (mirror) {#virtual-ip-bgp-failover}
 
-### Het virtuele IP-adres omleiden met BGP {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
+### Virtuele IP-routering met BGP {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
-Bij **BGP (Border Gateway Protocol)** configureert het script `start_prim` het virtuele IP-adres meestal vóór de start van de applicatie op een loopbackinterface van de primaire server. De primaire server kondigt de VIP vervolgens als een /32-route aan bij de routers.
+Bij BGP (Border Gateway Protocol) wordt het virtuele IP-adres doorgaans geconfigureerd op een loopback-interface van de primaire server door het `start_prim` script voordat de applicatie start. De primaire server kondigt het VIP-adres aan de routers aan als een /32-route.
 
-Bij een failover stopt het script `stop_prim` op de oude primaire server de applicatie, verwijdert de VIP van de loopbackinterface en trekt de /32-route bij de routers in. Als de oude primaire server vastloopt, wordt `stop_prim` niet uitgevoerd. De routers verliezen echter de BGP-sessie en verwijderen de route automatisch.
+Bij failover stopt het `stop_prim` script op de oude primaire server de applicatie, verwijdert het VIP van de loopback-interface en trekt de /32-route in van de routers. Als de oude primaire server crasht, wordt `stop_prim` niet uitgevoerd, maar verliezen de routers de BGP-sessie en verwijderen ze de route automatisch.
 
-### Voordelen en vereisten {#benefits-and-prerequisites}
+### Voordelen en voorwaarden {#benefits-and-prerequisites}
 
   * **Het virtuele IP-adres blijft lokaal, er is geen NAT en het IP-adres van de client verandert niet.**
-  * De oplossing werkt tussen subnetten en locaties. Een stretched VLAN is niet nodig.
-  * BGP-routers en ondersteuning van uw netwerkteam zijn vereist. In de cloud is een route-serverdienst van de cloudprovider nodig.
+  * Het werkt over subnetten en locaties heen. Je hebt geen uitgestrekt VLAN nodig.
+  * Je hebt BGP-routers en hulp van je netwerkteam nodig. In de cloud heb je een routeserver-service van de cloudprovider nodig.
 
-> **⚠️ Opmerking:** BGP-integratie gebruikt SafeKit-scripts en uw routeringsinfrastructuur. De **integrator** moet de opdrachten schrijven in de scripts `start_prim` en `stop_prim`. Deze scripts worden **niet door het SafeKit-product geleverd**. Valideer de oplossing vóór ingebruikname met uw netwerkteam.
+> **⚠️ Let op:** BGP-integratie maakt gebruik van SafeKit-scripts en uw routeringsinfrastructuur. De **integrator** moet de commando's in `start_prim` en `stop_prim` -scripts schrijven. Deze scripts worden **niet door SafeKit meegeleverd**. Valideer de oplossing met uw netwerkteam voordat u deze in productie neemt.
 
-## Hoe DNS-omleiding werkt tussen verschillende subnetten (Mirror-cluster) {#virtual-ip-vs-dns-redirection-failover}
+## Hoe werkt DNS-omleiding over verschillende subnetten (mirror)? {#virtual-ip-vs-dns-redirection-failover}
 
-### DNS-routering met het script `start_prim` {#dns-rerouting-with-the-start-prim-script}
+### DNS-omleiding met het `start_prim` -script {#dns-rerouting-with-the-start-prim-script}
 
-Bij DNS-omleiding is er **geen enkel virtueel IP-adres**. Clients maken verbinding met een **virtuele naam** (de DNS-naam). Bij een failover start het script `start_prim` op de nieuwe primaire server de applicatie en wijzigt daarna de DNS-record van de virtuele naam zodat deze verwijst naar het **fysieke IP-adres** van de nieuwe primaire server.
+Bij DNS-omleiding is er **geen sprake van één enkel virtueel IP-adres**. Clients maken verbinding met een **virtuele naam** (de DNS-naam). Bij failover start het `start_prim` script op de nieuwe primaire server de applicatie en wijzigt vervolgens het DNS-record van de virtuele naam naar het **fysieke IP-adres** van de nieuwe primaire server.
 
-Het script `stop_prim` hoeft niets te doen. Als de oude primaire server uitvalt, overschrijft de nieuwe primaire server de DNS-record.
+Het `stop_prim` script heeft niets te doen. Als de oude primaire server crasht, overschrijft de nieuwe primaire server het DNS-record.
 
 ### Voorbeeld: DNS-resolutie en geblokkeerde clients {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
-![Diagram van DNS-naamomzetting naar fysiek IP-adres 1 in een cluster met hoge beschikbaarheid](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
+![Diagram dat de DNS-naamresolutie naar fysiek IP-adres 1 in een high availability-cluster weergeeft.](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
-DNS-resolutie: clients blijven in een cluster met hoge beschikbaarheid geblokkeerd op fysiek IP-adres 1.
+ DNS-resolutie en clients geblokkeerd op fysiek IP-adres 1 in een high availability-cluster
 
 #### Vóór failover: de naam verwijst naar fysiek IP-adres 1 {#current-state-resolution-to-physical-ip-1}
 
-**Client 1** en **client 2** vragen het DNS-systeem om het IP-adres van de virtuele naam. Het DNS-systeem retourneert **fysiek IP-adres 1**. De clients openen vervolgens een netwerkverbinding naar dit adres.
+**Client 1** en **Client 2** vragen het DNS-systeem om het IP-adres van de virtuele naam. Het DNS-systeem retourneert **fysiek IP-adres 1.** De clients openen vervolgens een netwerkverbinding met dit adres.
 
 #### Na failover: de naam verwijst naar fysiek IP-adres 2 {#the-failover-challenge-rerouting-to-physical-ip-2}
 
-Server 1 valt uit. Het script `start_prim` op server 2 wijzigt de DNS-record naar **fysiek IP-adres 2**. De clients kunnen alleen verbinding maken met dit adres als aan alle volgende voorwaarden is voldaan:
+Server 1 valt uit. Het `start_prim` script op server 2 wijzigt het DNS-record naar **fysiek IP-adres 2.** De clients maken alleen verbinding met fysiek IP-adres 2 als aan al deze voorwaarden is voldaan:
 
-  * De **TTL (Time to Live)** is verlopen op alle DNS-servers tussen de client en de DNS-record.
-  * De lokale DNS-cache van client 1 en client 2 is leeg.
-  * De applicatie sluit de verbinding en voert een **nieuwe** DNS-lookup uit.
+  * De **TTL (Time to Live)** is verlopen op alle DNS-servers tussen de client en het DNS-record.
+  * De lokale DNS-cache van Client 1 en Client 2 is leeg.
+  * De applicatie verbreekt de verbinding en voert een *nieuwe* DNS-zoekopdracht uit.
 
-Als niet aan één voorwaarde wordt voldaan, blijven **client 1 en client 2 geblokkeerd** op fysiek IP-adres 1. De service is niet beschikbaar, ook al is de DNS-record correct.
+Als aan één van de voorwaarden niet wordt voldaan, **blijven Client 1 en Client 2 geblokkeerd** op fysiek IP-adres 1. De service is dan niet beschikbaar, zelfs als het DNS-record correct is.
 
-### Beperkingen en vereisten {#the-two-black-boxes-of-dns-redirection}
+### Beperkingen en voorwaarden {#the-two-black-boxes-of-dns-redirection}
 
-  * **DNS-cache:** veel internetproviders en bedrijfs-DNS-servers negeren korte TTL-waarden. Ze kunnen het oude fysieke IP-adres 1 minuten of uren bewaren.
-  * **Applicatiegedrag:** veel applicaties, bijvoorbeeld Java-services of webbrowsers, voeren alleen bij het starten een DNS-lookup uit. Daarna blijven ze het eerste IP-adres gebruiken.
-  * **Het IP-adres verandert bij elke failover:** de applicatie heeft geen lokaal virtueel IP-adres dat gelijk blijft. Applicaties die hun eigen IP-adres registreren werken mogelijk niet.
-  * **Vereisten:** een korte TTL voor de DNS-record (bijvoorbeeld 30 tot 60 seconden) en rechten om de DNS-zone vanaf beide servers bij te werken.
+  * **DNS-cache:** Veel internetproviders en DNS-servers van bedrijven negeren korte TTL-waarden. Ze kunnen het oude fysieke IP-adres 1 minuten of zelfs urenlang vasthouden.
+  * **Applicatiegedrag:** Veel applicaties (bijvoorbeeld Java-services of webbrowsers) voeren slechts één keer een DNS-lookup uit, bij het opstarten. Ze blijven het eerste IP-adres gebruiken.
+  * **Het IP-adres verandert bij elke failover:** de applicatie heeft geen lokaal virtueel IP-adres dat hetzelfde blijft. Applicaties die hun eigen IP-adres registreren, werken mogelijk niet.
+  * **Voorwaarden:** een korte TTL op het DNS-record (bijvoorbeeld 30 tot 60 seconden) en rechten om de DNS-zone vanaf beide servers bij te werken.
 
-> **⚠️ Opmerking:** de **integrator** moet de DNS-updateopdrachten schrijven in het script `start_prim`. Deze opdrachten worden **niet door het SafeKit-product geleverd** en zijn afhankelijk van de DNS-server (Windows DNS, BIND of clouddns).
+> **⚠️ Let op:** De **integrator** moet de DNS-updateopdrachten in het `start_prim` -script schrijven. Deze opdrachten worden **niet door het SafeKit-product geleverd**. Ze zijn afhankelijk van de DNS-server (Windows DNS, BIND of cloud-DNS).
 
 ### Conclusie {#conclusion}
 
-DNS-omleiding is geen betrouwbare oplossing voor hoge beschikbaarheid. Gebruik deze methode alleen als alle clients bij het opnieuw verbinden een nieuwe DNS-lookup uitvoeren. Gebruik voor onmiddellijke en transparante failover een **virtueel IP-adres**: via een uitgebreid LAN, een load balancer, cloudprovider-CLI's of BGP.
+DNS-omleiding is geen betrouwbare oplossing voor hoge beschikbaarheid. Gebruik het alleen als alle clients een nieuwe DNS-lookup uitvoeren wanneer ze opnieuw verbinding maken. Voor een onmiddellijke en transparante failover kunt u een **virtueel IP-adres** gebruiken: op een uitgebreid LAN, met een load balancer, met CLI's van cloudproviders of met BGP.
 
-## Hoe load balancing van een virtueel IP-adres werkt in hetzelfde subnet (Farm-cluster) {#virtual-ip-load-balancing-same-subnet}
+## Hoe werkt load balancing met virtuele IP-adressen in een <span class="notranslate farm-term" translate="no">farm</span> op hetzelfde subnet? {#virtual-ip-load-balancing-same-subnet}
 
-- [Load balancing van een virtueel IP-adres in een SafeKit-Farm-cluster testen](/nl/best-practises/test-load-balancing-vip-farm/)
+- [Het testen van het virtuele IP-adres voor load balancing in een SafeKit farm .](/nl/best-practises/test-load-balancing-vip-farm/)
 
-### Load balancing in de kernel met redundantie {#scalable-performance-kernel-level-load-balancing--redundancy}
+### Taakverdeling in de kernel, met redundantie. {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-Bij veel verkeer kan SafeKit het werk verdelen over meerdere actieve servers. Als één server uitvalt, blijven de andere servers werken.
+Bij veel verkeer kan SafeKit de taken verdelen over meerdere actieve servers. Als één server uitvalt, blijven de andere servers gewoon doorwerken.
 
-### Farm-clusterarchitectuur: load balancing tussen Windows- of Linux-nodes {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### <span class="notranslate farm-term" translate="no">Farm</span> : taakverdeling tussen Windows- of Linux-nodes {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
-![Diagram van een virtueel IP-adres met load balancing binnen hetzelfde subnet](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
-In een **Farm-cluster met load balancing** maken clients verbinding met een virtueel IP-adres en worden verzoeken tegelijkertijd over meerdere servers verdeeld. Dit voorbeeld toont twee nodes. U kunt meer nodes aan het cluster toevoegen. In hetzelfde subnet wordt het virtuele IP-adres via IP-aliasing geconfigureerd op de netwerkkaart van **elke server** in het cluster.
+![Diagram van een load-balanced virtueel IP-adres binnen hetzelfde subnet.](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
-#### Verkeersverdeling: het kernel-filter {#traffic-distribution-the-kernel-level-filter}
+In een **load balancing <span class="notranslate farm-term" translate="no">farm</span> cluster** maken clients verbinding met een virtueel IP-adres en worden de aanvragen tegelijkertijd over meerdere servers verdeeld. Dit voorbeeld toont twee knooppunten. U kunt meer knooppunten aan het cluster toevoegen. Binnen hetzelfde subnet is het virtuele IP-adres geconfigureerd met IP-aliasing op de netwerkkaart van **elke server** in het cluster.
 
-In een <span class="notranslate farm-term" translate="no">Farm</span>-cluster verdeelt een SafeKit-**kernel-filter** het verkeer. Dit gebeurt als volgt:
+#### Verkeersdeling: het kernelfilter {#traffic-distribution-the-kernel-level-filter}
 
-  * **ARP-toewijzing:** in de ARP-cache van de clients is het virtuele IP-adres gekoppeld aan één MAC-adres, bijvoorbeeld `mac1` van server 1.
-  * **Pakketcontrole:** server 1 ontvangt de pakketten. Het SafeKit-kernel-filter leest het **IP-adres van de client** of de **TCP-poort** van elk pakket.
-  * **Load balancing:** het filter bepaalt welke pakketten server 1 verwerkt en welke naar andere nodes, bijvoorbeeld server 2, gaan. Om een pakket naar een andere node te sturen, vervangt het filter het **MAC-adres van bestemming** door het MAC-adres van die node. Het IP-adres van bestemming blijft het virtuele IP-adres. Zo wordt het werk over de servers verdeeld.
+In een <span class="notranslate farm-term" translate="no">farm</span> verdeelt een SafeKit- **filter in de kernel** het verkeer. Het werkt als volgt:
 
-#### Failover en routering met gratuitous ARP {#failover-and-rerouting-with-gratuitous-arp}
+  * **ARP-mapping:** In de ARP-cache van de clients wordt het virtuele IP-adres gekoppeld aan één MAC-adres (bijvoorbeeld `mac1` van Server 1).
+  * **Pakketanalyse:** Server 1 ontvangt de pakketten. Het SafeKit-kernelfilter leest het **client-IP-adres** of de **TCP-poort** van elk pakket.
+  * **Taakverdeling:** Het filter bepaalt welke pakketten Server 1 verwerkt en welke naar de andere knooppunten (bijvoorbeeld Server 2) gaan. Om een pakket naar een ander knooppunt te sturen, herschrijft het filter het **MAC-adres van de bestemming** in het pakket met het MAC-adres van dat knooppunt. Het IP-adres van de bestemming blijft het virtuele IP-adres. De werklast wordt verdeeld over de servers.
 
-Als server 1 uitvalt, verzendt SafeKit een **gratuitous ARP-bericht (GARP)**. Clients werken hun ARP-cache bij met `mac2`, het MAC-adres van server 2. Het verkeer wordt vervolgens onmiddellijk naar de andere Farm-nodes gestuurd.
 
-#### Implementatie op externe locaties {#deployment-in-remote-sites}
+#### Failover en omleiding met gratuitous ARP {#failover-and-rerouting-with-gratuitous-arp}
 
-Deze load-balancingoplossing werkt ook tussen **externe datacenters**, als de locaties met elkaar verbonden zijn via een **uitgebreid LAN of VLAN**. Alle locaties bevinden zich dan in hetzelfde subnet. Dit is de efficiëntste configuratie voor <span class="notranslate farm-term" translate="no">Farm</span>-clusters op meerdere locaties.
+Als server 1 uitvalt, stuurt SafeKit een **gratuitous ARP (GARP)** -bericht. De clients werken hun ARP-cache bij met `mac2` van server 2. De clients worden vervolgens direct doorgestuurd naar de andere knooppunten van de farm.
+
+#### Implementatie op afgelegen locaties {#deployment-in-remote-sites}
+
+Deze load balancing-oplossing werkt ook tussen **externe datacenters**, mits de locaties via een **uitgebreid LAN of VLAN** met elkaar verbonden zijn. Alle locaties bevinden zich dan in hetzelfde subnet. Dit is de meest efficiënte configuratie voor <span class="notranslate farm-term" translate="no">farm</span> op meerdere locaties.
 
 {{%  insert-safekit-farm-video-nl  %}}
 
-## Load balancing van een virtueel IP-adres tussen verschillende subnetten (Farm-cluster) {#virtual-ip-load-balancing-different-subnets}
+## Hoe werkt een load-balanced virtueel IP-adres over verschillende subnetten (<span class="notranslate farm-term" translate="no">farm</span>)? {#virtual-ip-load-balancing-different-subnets}
 
-### Verkeer tussen cloudsubnetten {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
+### Verkeer tussen cloud-subnetten {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-Een <span class="notranslate farm-term" translate="no">Farm</span>-cluster kan de applicatielast verdelen over meerdere beschikbaarheidszones en subnetten.
+Een <span class="notranslate farm-term" translate="no">farm</span> kan de applicatietaken verdelen over meerdere beschikbaarheidszones en subnetten.
 
-### Farm-clusters over subnetten: meerdere Windows- of Linux-nodes {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### Cross-subnet <span class="notranslate farm-term" translate="no">farm</span> : meerdere Windows- of Linux-nodes {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
-![Diagram van een Farm-cluster met load balancing over twee verschillende subnetten](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
-Wanneer de <span class="notranslate farm-term" translate="no">Farm</span>-nodes zich in **verschillende subnetten** bevinden, bijvoorbeeld in meerdere cloudbeschikbaarheidszones, staat het **virtuele IP-adres** op een externe **load balancer (LB)**. De load balancer stuurt verkeer naar de fysieke IP-adressen van servers in elk subnet.
+![Diagram van een load-balanced farm dat opereert over twee verschillende subnetten.](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
-#### Regels voor verkeersroutering en load balancing {#intelligent-traffic-routing--load-balancing-rules}
+Wanneer de <span class="notranslate farm-term" translate="no">farm</span> zich in **verschillende subnetten** bevinden (bijvoorbeeld in meerdere cloudbeschikbaarheidszones), bevindt het **virtuele IP-adres** zich op een externe **load balancer (LB)**. De load balancer stuurt het verkeer door naar de fysieke IP-adressen van de servers in elk subnet.
 
-De load balancer verdeelt clientverzoeken op basis van twee criteria:
+#### Regels voor verkeersroutering en taakverdeling {#intelligent-traffic-routing--load-balancing-rules}
 
-  * **Load-balancingregels:** bijvoorbeeld het **IP-adres van de client** of de **TCP-poort van de client**.
-  * **Beschikbaarheid van nodes:** op basis van de SafeKit-healthcheck stuurt de load balancer alleen verkeer naar gezonde nodes.
+De load balancer verdeelt de clientverzoeken op basis van twee criteria:
 
-> **⚠️ Opmerking:** SafeKit levert de healthcheck. Uw netwerk of cloudprovider levert de load balancer.
+  * **Regels voor taakverdeling:** bijvoorbeeld het **IP-adres van de client** of de **TCP-poort van de client**.
+  * **Beschikbaarheid van knooppunten:** de load balancer stuurt verkeer alleen naar de knooppunten die gezond zijn, op basis van de SafeKit-statuscontrole.
 
-#### SafeKit-healthcheck {#safekit-health-check-mechanism}
 
-SafeKit biedt een **healthcheck-URL** op elke Farm-server. De load balancer vraagt deze op om de status van elke server te bepalen:
+> **⚠️ Let op:** SafeKit verzorgt de gezondheidscontrole. Uw netwerk of cloudprovider zorgt voor de load balancer.
 
-  * **Node UP:** de healthcheck retourneert `HTTP 200 OK`. De load balancer stuurt verkeer naar deze server.
-  * **Node DOWN:** als een server of applicatie uitvalt, retourneert SafeKit `HTTP 404 NOT FOUND` (of antwoordt de server niet). De load balancer stopt onmiddellijk met het sturen van verkeer naar deze node.
+#### SafeKit-gezondheidscontrole {#safekit-health-check-mechanism}
+
+SafeKit biedt op elke server in de <span class="notranslate farm-term" translate="no">farm</span> een **URL voor een statuscontrole**. De load balancer leest deze URL om de status van elke server te controleren.
+
+  * **Node UP:** de gezondheidscontrole retourneert `HTTP 200 OK`.. De load balancer stuurt verkeer naar deze server.
+  * **Knooppunt UITGEVALLEN:** als een server of applicatie uitvalt, retourneert SafeKit `HTTP 404 NOT FOUND` (of de server reageert niet). De load balancer stopt onmiddellijk met het doorsturen van verkeer naar dit knooppunt.
+
 
 #### Cloudimplementatie: AWS, Azure en GCP {#cloud-deployment-standards-aws-azure-and-gcp}
 
-Dit is de standaardarchitectuur voor **<span class="notranslate farm-term" translate="no">Farm</span>-clusters in de cloud**. Als een subnet of zone uitvalt, blijven de andere nodes het verkeer verwerken. De oplossing wordt ondersteund door [**Amazon AWS**](</nl/solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer), [**Microsoft Azure**](</nl/solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer) en [**Google Cloud (GCP)**](</nl/solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing).
+Dit is de standaardarchitectuur voor **<span class="notranslate farm-term" translate="no">farm</span> in de cloud**. Als een subnet of een zone uitvalt, blijven de andere knooppunten het verkeer verwerken. Deze architectuur wordt ondersteund door [**Amazon AWS**](</nl/solutions/aws-load-balancing-cluster-failover/>) (AWS Network Load Balancer), [**Microsoft Azure**](</nl/solutions/azure-load-balancing-cluster-failover/>) (Azure Load Balancer) en [**Google Cloud (GCP)**](</nl/solutions/gcp-load-balancing-cluster-failover/>) (Google Cloud Load Balancing).
 
-## Vergelijking: implementatie van virtuele IP-adressen, latentie en applicatietransparantie {#virtual-ip-methods-comparison}
 
-**Vergelijking van omleidingsmethoden met virtuele IP-adressen en DNS voor hoge beschikbaarheid en disaster recovery.**
+## Vergelijking: implementatie van virtueel IP, latentie en applicatietransparantie {#virtual-ip-methods-comparison}
 
-Omgeving en gebruikssituatie | Type hoge beschikbaarheid | Omleidingsmethode | Geïmplementeerd door | Netwerklatentie | Applicatietransparantie en lokaal IP-adres  
+**Vergelijking van virtuele IP-omleidingsmethoden en DNS-omleiding voor hoge beschikbaarheid en noodherstel.**
+
+Omgeving en gebruiksscenario | Type met hoge beschikbaarheid | Omleidingsmethode | Uitgevoerd door | Netwerklatentie | Applicatietransparantie en lokaal IP-adres  
 ---|---|---|---|---|---  
-Primair/secundair (hoge beschikbaarheid) | Mirror-cluster | Gratuitous ARP / MAC-overname | ✅ SafeKit-product | Zeer laag: tijd om de storing te detecteren en GARP te verzenden | Volledige transparantie: het virtuele IP-adres is lokaal op de actieve node. Het IP-adres van de client verandert niet.  
-Load balancing (actief/actief) | <span class="notranslate farm-term" translate="no">Farm</span>-cluster | Kernel-netwerkfilter / GARP | ✅ SafeKit-product | Zeer laag: tijd om de storing te detecteren en netwerkfilters te wijzigen | Volledige transparantie: het virtuele IP-adres is lokaal op alle nodes. Het IP-adres van de client verandert niet.  
-Hetzelfde subnet / uitgebreid LAN (stretched VLAN) | Disaster recovery (externe datacenters) | IP-aliasing / GARP | ✅ SafeKit-product (het stretched VLAN wordt geleverd door het netwerkteam) | Laag: afhankelijk van de round-trip-tijd (RTT) van het stretched VLAN | Volledige transparantie: het virtuele IP-adres is lokaal op de nodes. Het IP-adres van de client verandert niet.  
-Verschillende subnetten: alleen load balancer | Disaster recovery (externe datacenters / cloud) | Externe load balancer | 🛠️ Integrator: configuratie van de load balancer (SafeKit levert de healthcheck) | Gemiddeld: afhankelijk van het healthcheckinterval van de load balancer | ⚠️ Gedeeltelijke transparantie als SNAT/DNAT wordt gebruikt. Het virtuele IP-adres is **NIET** lokaal op de nodes. Het IP-adres van de client blijft mogelijk **NIET** behouden. De applicatie moet dit ondersteunen.  
-Verschillende subnetten: load balancer + lokaal SafeKit-virtueel IP | Disaster recovery (externe datacenters / cloud) | Externe load balancer met Floating IP / Direct Server Return | 🛠️ Integrator: configuratie van de load balancer (SafeKit levert de healthcheck) | Gemiddeld: afhankelijk van het healthcheckinterval van de load balancer | Goede transparantie: het virtuele IP-adres is lokaal op de primaire node en dient als doeladres.  
-Verschillende subnetten: cloud-CLI | Disaster recovery (cloud) | Cloud-API: het privé-IP-adres of een cloudroute wordt naar de nieuwe primaire server verplaatst | 🛠️ Integrator: cloud-CLI-opdrachten in het script `start_prim` | Gemiddeld tot hoog: afhankelijk van de responstijd van de cloud-API | Volledige transparantie: het virtuele IP-adres is lokaal op de primaire node. Het IP-adres van de client verandert niet.  
-Verschillende subnetten: BGP | Disaster recovery (externe datacenters / cloud) | Via BGP aangekondigde /32-route | 🛠️ Integrator: BGP-opdrachten in de scripts `start_prim` en `stop_prim` | Laag tot gemiddeld: afhankelijk van de BGP-convergentietijd | Volledige transparantie: het virtuele IP-adres is lokaal op de primaire node. Het IP-adres van de client verandert niet. BGP-routers vereist.  
-DNS-omleiding: geen virtueel IP-adres | Disaster recovery (externe datacenters) | DNS-record wijzigen (naam / fysiek IP-adres) | 🛠️ Integrator: DNS-updateopdrachten in het script `start_prim` | Hoog en onvoorspelbaar: afhankelijk van DNS-TTL (Time to Live) en de DNS-cache van de client | ⚠️ Onbetrouwbaar: de client moet een nieuwe DNS-lookup uitvoeren. Clients blijven vaak het oude IP-adres gebruiken dat ze bij het opstarten hebben ontvangen en worden na een failover niet omgeleid.  
-
-## Veelgestelde vragen over virtuele IP-adressen {#virtual-ip-faq}
+Primair/back-up (hoge beschikbaarheid) | Mirror | Onnodige overname van ARP/MAC | ✅ SafeKit-product | Zeer laag: tijd om de storing te detecteren en de GARP te verzenden. | Volledige transparantie: het virtuele IP-adres is lokaal op het actieve knooppunt. Het IP-adres van de client verandert niet.  
+Taakverdeling (actief/actief) | <span class="notranslate farm-term" translate="no">Farm</span> | Kernelnetwerkfilter / GARP | ✅ SafeKit-product | Zeer kort: tijd om de storing te detecteren en de netwerkfilters te vervangen. | Volledige transparantie: het virtuele IP-adres is lokaal op alle knooppunten. Het IP-adres van de client verandert niet.  
+Hetzelfde subnet / uitgebreid LAN (stretched VLAN) | Rampenherstel (externe datacenters) | IP-aliasing / GARP | ✅ SafeKit-product (de uitgebreide VLAN wordt geleverd door het netwerkteam) | Laag: afhankelijk van de round trip time (RTT) van het uitgerekte VLAN. | Volledige transparantie: het virtuele IP-adres is lokaal op de knooppunten. Het IP-adres van de client verandert niet.  
+Verschillende subnetten: alleen load balancer | Rampenherstel (externe datacenters / cloud) | Externe lastverdeler | 🛠️ Integrator: configuratie van de load balancer (SafeKit verzorgt de health check) | Gemiddeld: afhankelijk van het interval voor de gezondheidscontrole van de load balancer. | ⚠️ Gedeeltelijke transparantie indien SNAT/DNAT wordt gebruikt. Het virtuele IP-adres is **NIET** lokaal op de nodes. Het IP-adres van de client mag **NIET** worden bewaard. De applicatie moet dit ondersteunen.  
+Verschillende subnetten: load balancer + lokaal virtueel SafeKit-IP-adres | Rampenherstel (externe datacenters / cloud) | Externe load balancer met Floating IP / Direct Server Return | 🛠️ Integrator: configuratie van de load balancer (SafeKit verzorgt de health check) | Gemiddeld: afhankelijk van het interval voor de gezondheidscontrole van de load balancer. | Goede transparantie: het virtuele IP-adres bevindt zich lokaal op het primaire knooppunt en is het bestemmingsadres.
+Verschillende subnetten: cloud CLI | Rampenherstel (cloud) | Cloud API: het privé-IP-adres of een cloudroute wordt verplaatst naar het nieuwe primaire adres. | 🛠️ Integrator: cloud CLI-opdrachten in het `start_prim` script | Gemiddeld tot hoog: afhankelijk van de reactietijd van de cloud-API | Volledige transparantie: het virtuele IP-adres bevindt zich lokaal op het primaire knooppunt. Het IP-adres van de client verandert niet.
+Verschillende subnetten: BGP | Rampenherstel (externe datacenters / cloud) | /32-route aangekondigd met BGP | 🛠️ Integrator: BGP-opdrachten in de `start_prim` en `stop_prim` -scripts | Laag tot gemiddeld: afhankelijk van de BGP-convergentietijd. | Volledige transparantie: het virtuele IP-adres is lokaal op het primaire knooppunt. Het IP-adres van de client verandert niet. Vereist BGP-routers.  
+DNS-omleiding: geen virtueel IP-adres | Rampenherstel (externe datacenters) | Wijziging van DNS-record (naam / fysiek IP-adres) | 🛠️ Integrator: DNS-updateopdrachten in het `start_prim` -script | Hoog en onvoorspelbaar: afhankelijk van de DNS TTL (Time To Live) en de DNS-cache van de client. | ⚠️ Niet betrouwbaar: de client moet een nieuwe DNS-lookup uitvoeren. Vaak behouden clients het oude IP-adres dat ze bij het opstarten hebben gekregen en worden ze na een failover niet omgeleid.  
+  
+## Veelgestelde vragen over virtueel IP-adres {#virtual-ip-faq}
 
 ### Virtueel IP-adres en netwerken {#virtual-ip--networking}
 
-Wat is een virtueel IP-adres en hoe verschilt het van een fysiek IP-adres?
+Wat is een virtueel IP-adres en waarin verschilt het van een fysiek IP-adres?
 
-Een **fysiek IP-adres** is gekoppeld aan een netwerkkaart. Een **virtueel IP-adres** is niet aan hardware gekoppeld. In een SafeKit-cluster gebruiken clients altijd het virtuele IP-adres. Als de primaire server uitvalt, wordt het virtuele IP-adres automatisch naar een gezonde node verplaatst. De configuratie van de clients hoeft niet te worden gewijzigd.
+Een **fysiek IP-adres** is gekoppeld aan één netwerkkaart. Een **virtueel IP-adres** is niet gekoppeld aan hardware. In een SafeKit-cluster gebruiken clients altijd het virtuele IP-adres. Als de primaire server uitvalt, wordt het virtuele IP-adres automatisch overgezet naar een functionerende node. U hoeft de clientconfiguratie niet te wijzigen.
 
-Heb ik een hardware-load balancer nodig om een virtueel IP-adres te gebruiken?
+Heb ik een hardwarematige load balancer nodig om een virtueel IP-adres te gebruiken?
 
-Nee. **SafeKit** beheert het virtuele IP-adres met software. In hetzelfde subnet gebruikt SafeKit **IP-aliasing** en **gratuitous ARP (GARP)** om het verkeer om te leiden. Een externe load balancer of proxyserver is niet nodig.
+Nee. **SafeKit** beheert het virtuele IP-adres met software. Binnen hetzelfde subnet gebruikt het **IP-aliasing** en **gratuitous ARP (GARP)** om het verkeer om te leiden. U hebt geen externe load balancer of proxyserver nodig.
 
 Wat is gratuitous ARP (GARP) en waarom wordt het gebruikt?
 
-**Gratuitous ARP (GARP)** is een netwerkbericht dat naar alle apparaten wordt verzonden. Het werkt de ARP-tabellen van switches en routers bij. Bij een failover verzendt de nieuwe primaire server een GARP-bericht om aan te geven dat het **virtuele IP-adres** nu aan het MAC-adres van deze server is gekoppeld. Het verkeer wordt vervolgens onmiddellijk omgeleid.
+**Gratuitous ARP (GARP)** is een netwerkbericht dat naar alle apparaten wordt verzonden. Het werkt de ARP-tabellen van switches en routers bij. Bij failover stuurt de nieuwe primaire server een GARP-bericht. Dit bericht meldt dat het **virtuele IP-adres** nu is gekoppeld aan het MAC-adres van de nieuwe primaire server. Het verkeer wordt vervolgens direct omgeleid.
 
-Kan ik een DNS-naam aan een virtueel IP-adres koppelen?
+Kan ik een DNS-naam koppelen aan een virtueel IP-adres?
 
-**Ja.** Maak een standaard A-record aan voor het virtuele IP-adres. De omleiding gebeurt op het **niveau van het virtuele IP-adres** (via ARP of netwerkomleiding), **niet op DNS-niveau**. Er zijn geen DNS-vertragingen of TTL-problemen en de failover blijft **transparant voor de applicatie**.
+**Ja.** Maak een standaard A-record aan voor het virtuele IP-adres. Omleiding vindt plaats op het **niveau van het virtuele IP-adres** (met ARP of netwerkomleiding), **niet op DNS-niveau**. U ondervindt geen DNS-vertragingen of TTL-problemen en de failover blijft **transparant voor de applicatie**.
 
 ### Cloud en geavanceerde architecturen {#cloud--advanced-architectures}
 
 Hoe werkt een virtueel IP-adres in de cloud (AWS, Azure, GCP)?
 
-In de cloud zijn Layer-2-GARP-berichten niet beschikbaar om een virtueel IP-adres om te leiden. SafeKit werkt met **cloud-load-balancers** (AWS ELB, Azure LB of Google GCLB). SafeKit biedt een **healthcheck-URL**. De load balancer vraagt deze op en stuurt verkeer naar de actieve node.
+In de cloud zijn Layer 2 GARP-berichten niet beschikbaar voor het omleiden van een virtueel IP-adres. SafeKit werkt met **cloud load balancers** (AWS ELB, Azure LB of Google GCLB). SafeKit biedt een **health check-URL**. De load balancer leest deze en stuurt het verkeer door naar het actieve knooppunt.
 
-Is een uitgebreid LAN beter dan een load balancer voor disaster recovery?
+Is een uitgebreid LAN beter dan een load balancer voor noodherstel?
 
-**Ja.** Tussen externe datacenters is een **uitgebreid LAN (stretched VLAN)** vaak beter, omdat de failover **transparant blijft voor de applicatie**. Het **virtuele IP-adres verandert niet**, zodat de applicatie en clients na een failover tussen datacenters hetzelfde adres blijven gebruiken.
+**Ja**. Tussen externe datacenters is een **uitgebreid LAN (stretched VLAN)** vaak beter, omdat de failover **transparant blijft voor de applicatie**. Het **virtuele IP-adres verandert niet**, waardoor de applicatie en de clients hetzelfde adres blijven gebruiken na een failover tussen datacenters.
 
-Wat zijn de beperkingen van DNS-omleiding ten opzichte van een virtueel IP-adres?
+Wat zijn de beperkingen van DNS-omleiding in vergelijking met een virtueel IP-adres?
 
-DNS-omleiding is afhankelijk van de **TTL (Time to Live)** en de DNS-cache van de client. Herstel kan uren duren. Bovendien blijven **clients die geen nieuwe DNS-lookup uitvoeren geblokkeerd** op de uitgevallen server. Een **virtueel IP-adres** wordt onmiddellijk omgeleid met GARP-berichten op laag 2. De DNS-cache van de client heeft geen invloed.
+**DNS-omleiding** is afhankelijk van de **TTL (Time to Live)** en de DNS-cache van de client. Herstel kan uren duren. **Clients die geen nieuwe DNS-lookup uitvoeren, blijven bovendien geblokkeerd** op de server die niet werkt. Een **virtueel IP-adres** wordt direct omgeleid met GARP-berichten op laag 2. De DNS-cache van de client heeft geen effect.
 
-### Transparantie en beveiliging {#transparency--security}
+### Transparantie en veiligheid {#transparency--security}
 
 Waarom is een lokaal virtueel IP-adres belangrijk voor applicatietransparantie?
 
-Met een lokaal **virtueel IP-adres** gebruikt de applicatie een adres dat niet verandert. SafeKit voert de omleiding uit in de **kernel**, zodat de applicatie de failover niet merkt. Met DNAT verandert het adres dat door de applicatie wordt gebruikt.
+Met een lokaal **virtueel IP-adres** gebruikt de applicatie een adres dat niet verandert. SafeKit voert de omleiding uit in de **kernel**. De applicatie merkt de failover niet. Met DNAT verandert het adres dat de applicatie gebruikt.
 
 Behoudt een virtueel IP-adres het oorspronkelijke IP-adres van de client?
 
-Ja. SafeKit gebruikt geen source NAT (SNAT). Omdat het virtuele IP-adres lokaal op de actieve server is geconfigureerd, ontvangt de applicatie het **oorspronkelijke IP-adres van de client**. Dit is belangrijk voor beveiligingsaudits, sessiepersistentie en wettelijk verplichte logboeken.
+Ja. SafeKit gebruikt geen source NAT (SNAT). Het virtuele IP-adres is lokaal op de actieve server, waardoor de applicatie het **oorspronkelijke client-IP-adres** ontvangt. Dit is belangrijk voor beveiligingsaudits, sessiepersistentie en wettelijke logboeken.
+
 
 {{%  insert-safekit-hub-nl  %}}
 

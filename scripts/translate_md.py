@@ -15,9 +15,13 @@ Front matter : title, linkTitle, description, summary, topics traduits ;
 lang mis à jour ; canonical réécrit vers la version de la langue.
 Liens internes (/xxx/ et https://safekit.eviden.com/xxx/) : préfixés par /<lang>/ ;
 les pages cibles pas encore traduites sont listées en fin d'exécution.
+Titres : l'ancre {#...} n'est jamais envoyée à Google, elle est remise en fin de titre.
+Chinois / japonais : 。 rétabli après du `code`, espaces chinois-latin, gras Markdown valide.
+Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues.
+Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-import argparse, html, json, os, re, sys, urllib.parse, urllib.request
+import argparse, html, json, os, re, sys, unicodedata, urllib.parse, urllib.request
 from pathlib import Path
 
 API = "https://translation.googleapis.com/language/translate/v2"
@@ -48,9 +52,31 @@ LINK = re.compile(r"(!?)\[((?:[^\[\]]|\[[^\]]*\])*)\]\((<[^>]*>|[^)\s]+)((?:\s+\
 BOLD = re.compile(r"\*\*(.+?)\*\*")
 S = "\x00"  # sentinelle interne
 
+GLOSSARY = {"keep": [], "replace": {}}
+APOS = False  # apostrophe typographique ’ (fr, it...)
+CJK = False   # chinois / japonais : ponctuation pleine chasse, espaces chinois-latin
+CJK_CHAR = "\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"
+CJK_PUNCT = "。，、；：？！）」』】"
+KEEP_RE = None
+
+def load_glossary(path, lang):
+    """glossary.json : {"keep": [termes jamais traduits], "replace": {"fr": {"texte Google": "correction"}}}"""
+    global KEEP_RE
+    if path and Path(path).exists():
+        GLOSSARY.update(json.load(open(path, encoding="utf-8")))
+        print(f"Glossaire chargé : {len(GLOSSARY.get('keep', []))} termes protégés ({path})")
+    else:
+        print(f"ATTENTION : glossaire introuvable ({path}) -> mirror, farm... seront traduits.")
+    terms = sorted(GLOSSARY.get("keep", []), key=len, reverse=True)
+    if terms:
+        KEEP_RE = re.compile(r"(?<![\w/#.-])(%s)(?![\w/-])" % "|".join(re.escape(t) for t in terms), re.I)
+    GLOSSARY["_rep"] = GLOSSARY.get("replace", {}).get(lang, {})
+
 class Ctx:
     def __init__(self, link_fix):
         self.store, self.link_fix = [], link_fix
+        self.apos = APOS
+        self.dot_after = set()
     def add(self, v):
         self.store.append(v); return len(self.store) - 1
 
@@ -60,30 +86,107 @@ def encode(text, ctx):
         return f"{S}A{n}{S}{m.group(2)}{S}/A{S}"
     text = LINK.sub(link, text)
     text = PROTECT.sub(lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    for m in re.finditer(f"{S}P(\\d+){S}\\.(?=\\s|$)", text):   # `code`. -> phrase terminée
+        if ctx.store[int(m.group(1))].startswith("`"):
+            ctx.dot_after.add(int(m.group(1)))
+    if KEEP_RE:  # termes du glossaire à ne jamais traduire (mirror, farm...)
+        parts = re.split(f"({S}P\\d+{S})", text)
+        text = "".join(p if re.fullmatch(f"{S}P\\d+{S}", p) else KEEP_RE.sub(lambda m: f"{S}P{ctx.add(m.group(0))}{S}", p) for p in parts)
     text = html.escape(text, quote=False)
     text = BOLD.sub(r"<b>\1</b>", text)
+    text = re.sub(r"(?<![\w*])_([^_\n]+?)_(?!\w)", r"<i>\1</i>", text)       # _italique_
     text = re.sub(f"{S}A(\\d+){S}", r'<a id="\1">', text)
     text = text.replace(f"{S}/A{S}", "</a>")
-    return re.sub(f"{S}P(\\d+){S}", r'<span class="notranslate">\1</span>', text)
+    def span(m):
+        # Google voit le vrai mot (mirror, `start_prim`...) et non un numéro,
+        # sinon il invente un nom autour ("集群编号为", "方案SafeKit"...)
+        tok = ctx.store[int(m.group(1))]
+        if tok.startswith("`"):
+            shown = tok.strip("`")
+        elif tok.startswith("{"):
+            shown = ""
+        else:
+            shown = re.sub(r"<[^>]+>", "", tok).strip()
+        shown = html.escape(shown, quote=False) or m.group(1)
+        return f'<span class="notranslate" translate="no" data-k="{m.group(1)}">{shown}</span>'
+    return re.sub(f"{S}P(\\d+){S}", span, text)
 
 def decode(text, ctx):
     st = ctx.store
-    text = re.sub(r'<span class="notranslate">\s*(\d+)\s*</span>', lambda m: f"{S}P{m.group(1)}{S}", text)
+    text = re.sub(r'<span[^>]*data-k="(\d+)"[^>]*>.*?</span>', lambda m: f"{S}P{m.group(1)}{S}", text)
+    text = re.sub(r"<b>\s*([。，、；：！？.,;:!?]+)\s*", r"\1<b>", text)   # "<b>。SafeKit</b>" -> "。<b>SafeKit</b>"
     text = re.sub(r"\s*<b>\s*(.*?)\s*</b>\s*", lambda m: f" **{m.group(1)}** ", text)
+    text = re.sub(r"<i>\s*(.*?)\s*</i>", r"*\1*", text)
     def link(m):
         bang, dest = st[int(m.group(1))]
         return f"{bang}[{m.group(2).strip()}]({dest})"
     text = re.sub(r'<a id="(\d+)">(.*?)</a>', link, text)
     text = html.unescape(text)
+    # point perdu par Google après du `code` en fin de phrase : "`start_prim` Ces commandes"
+    def code_dot(m):
+        tok = st[int(m.group(1))]
+        return f"{S}P{m.group(1)}{S}." if tok.startswith("`") else m.group(0)
+    text = re.sub(f"{S}P(\\d+){S}(?=\\s+[A-ZÀ-ÖØ-Þ][a-zà-öø-ÿ’'])", code_dot, text)
+    # point perdu après un `code` qui terminait une phrase dans la source
+    stop = "。" if CJK else "."
+    def src_dot(m):
+        n = int(m.group(1))
+        return f"{S}P{n}{S}{stop}" if n in ctx.dot_after else m.group(0)
+    text = re.sub(f"{S}P(\\d+){S}(?![{S}.。，,;；:：!！?？)）\\]*])", src_dot, text)
+    if CJK:
+        tok = f"{S}P\\d+{S}"
+        text = re.sub(f"\\s+([{CJK_PUNCT}])", r"\1", text)                 # espace avant 。，
+        text = re.sub(r"([（「『【])\s+", r"\1", text)                      # （ x -> （x
+        # espace entre chinois/japonais et latin, chiffres, `code`, termes protégés
+        text = re.sub(f"([{CJK_CHAR}])(?=[A-Za-z0-9`]|{tok})", r"\1 ", text)
+        text = re.sub(f"([A-Za-z0-9`%]|{tok})(?=[{CJK_CHAR}])", r"\1 ", text)
+    text = text.replace("'", "’") if ctx.apos else text
     text = re.sub(f"{S}P(\\d+){S}", lambda m: st[int(m.group(1))], text)
+    for wrong, right in GLOSSARY.get("_rep", {}).items():  # corrections du glossaire
+        if ctx.apos:
+            wrong, right = wrong.replace("'", "’"), right.replace("'", "’")
+        text = text.replace(wrong, right)
     # nettoyage des espaces ajoutés autour du gras / des parenthèses
     text = re.sub(r"\*\* +([,.;)\]])", r"**\1", text)
     text = re.sub(r"([(\[]) +\*\*", r"\1**", text)
     text = re.sub(r"\( +", "(", text)
     text = re.sub(r" +\)", ")", text)
     text = re.sub(r" +([,.](?:\s|$))", r"\1", text)
+    text = re.sub(r"([A-Za-zÀ-ÿ][’'])\s+(\*\*|\[)", r"\1\2", text)   # l' **adresse -> l'**adresse
+    text = re.sub(r"\*\*([;:!?])", r"** \1", text) if ctx.apos else text  # espace avant ; : ! ?
+    if CJK:
+        text = re.sub(f"\\s+([{CJK_PUNCT}])", r"\1", text)
+        text = cjk_bold(text)
     text = re.sub(r"  +", " ", text)
     return text.strip()
+
+def _kind(c):
+    """'s' espace/début, 'p' ponctuation, 'c' caractère CJK, 'l' latin/chiffre"""
+    if not c or c.isspace():
+        return "s"
+    if unicodedata.category(c)[0] in "PS":
+        return "p"
+    return "c" if re.match(f"[{CJK_CHAR}]", c) else "l"
+
+def cjk_bold(text):
+    """Espaces autour de **gras** en chinois/japonais : aucun entre caractères CJK,
+    un espace avec du latin, et un espace seulement là où Markdown en a besoin
+    (ex. '**主节点（PRIM）：** 返回' sinon le gras ne s'affiche pas)."""
+    parts = text.split("**")
+    if len(parts) < 3 or len(parts) % 2 == 0:
+        return text
+    for k in range(1, len(parts), 2):
+        inner = parts[k].strip()
+        if not inner:
+            continue
+        before, after = parts[k - 1].rstrip(), parts[k + 1].lstrip()
+        b, a, i0, i1 = _kind(before[-1:]), _kind(after[:1]), _kind(inner[0]), _kind(inner[-1])
+        sp_b = b != "s" and ((i0 == "p" and b in "lc") or "l" in (b, i0) and b != "p" and i0 != "p")
+        sp_a = a != "s" and ((i1 == "p" and a in "lc") or "l" in (a, i1) and a != "p" and i1 != "p")
+        parts[k - 1] = before + (" " if sp_b else "") if before else parts[k - 1]
+        parts[k] = inner
+        parts[k + 1] = (" " if sp_a else "") + after if after else parts[k + 1]
+    return "**".join(parts)
 
 PREFIX = re.compile(r"^(\s*(?:#{1,6}\s+|[-*+]\s+|\d+\.\s+|>\s*)*)(.*)$")
 
@@ -155,7 +258,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("source"); ap.add_argument("target")
     ap.add_argument("--to", required=True); ap.add_argument("--from", dest="src", default="en")
-    ap.add_argument("--lang"); ap.add_argument("--host", default="safekit.eviden.com"); ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--lang"); ap.add_argument("--host", default="safekit.eviden.com"); ap.add_argument("--glossary", default=str(Path(__file__).with_name("glossary.json"))); ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
     lang = (a.lang or a.to).lower()
     # codes Hugo -> codes Google
@@ -163,6 +266,11 @@ def main():
     key = os.environ.get("GOOGLE_TRANSLATE_API_KEY")
     if not key and not a.dry_run:
         sys.exit("Variable GOOGLE_TRANSLATE_API_KEY absente.")
+    global APOS
+    global CJK
+    APOS = lang.split("-")[0] in ("fr", "it", "pt")
+    CJK = lang.split("-")[0] in ("zh", "ja")
+    load_glossary(a.glossary, lang)
     lines = open(a.source, encoding="utf-8").read().split("\n")
     missing = set()
     link_fix = make_link_fixer(a.target, lang, missing, a.host)
@@ -185,6 +293,7 @@ def main():
             m = re.match(r'^(\s*(?:%s)\s*[:=]\s*)(["\']?)(.+?)\2\s*$' % "|".join(FM_KEYS), line)
             if m:
                 ctx = Ctx(link_fix)
+                ctx.apos = APOS and m.group(2) != "'"
                 jobs.append((i, m.group(1) + m.group(2), encode(m.group(3), ctx), m.group(2), ctx))
             continue
         if i <= fm_end:
@@ -209,18 +318,34 @@ def main():
                     jobs.append(((i, c), lead, encode(cells[c].strip(), ctx), trail, ctx))
             continue
         h = re.match(r"^(#{1,6}\s+)(.*?)\s*$", line)
-        if h and not re.search(r"\{#[^}]+\}\s*$", h.group(2)):
-            # titre sans ancre explicite : on fige l'ancre anglaise
-            line = lines[i] = f"{h.group(1)}{h.group(2)} {{#{anchorize(h.group(2))}}}"
+        if h:
+            # l'ancre n'est jamais envoyée à Google : elle est remise en fin de titre
+            am = re.match(r"^(.*?)\s*((?:\{[#.][^}]*\}\s*)+)$", h.group(2))
+            title, anchor = (am.group(1), " " + am.group(2).strip()) if am else (h.group(2), "")
+            if "{#" not in anchor:   # titre sans ancre explicite : on fige l'ancre anglaise
+                anchor = f" {{#{anchorize(title)}}}" + anchor
+            if title.strip():
+                ctx = Ctx(link_fix)
+                jobs.append((i, h.group(1), encode(title, ctx), anchor, ctx))
+            continue
         m = PREFIX.match(line)
         if m.group(2).strip():
             ctx = Ctx(link_fix)
             jobs.append((i, m.group(1), encode(m.group(2), ctx), "", ctx))
 
     out = [MOCK(j[2]) for j in jobs] if a.dry_run else google([j[2] for j in jobs], a.src, a.to, key)
-    tables, lost = {}, 0
-    for (idx, before, _, after, ctx), t in zip(jobs, out):
-        lost += len(ctx.store) - len(set(re.findall(r'(?:notranslate">\s*|<a id=")(\d+)', t)))
+    tables, lost, numbers, punct = {}, 0, [], []
+    for (idx, before, enc, after, ctx), t in zip(jobs, out):
+        lost += len(ctx.store) - len(set(re.findall(r'(?:data-k="|<a id=")(\d+)', t)))
+        strip = lambda x: re.sub(r"<[^>]+>", " ", re.sub(r'<span[^>]*data-k="\d+"[^>]*>.*?</span>|<a id="\d+">', " ", x))
+        miss = [n for n in set(re.findall(r"\d+", strip(enc))) if n not in re.findall(r"\d+", strip(t))]
+        if CJK:
+            n_src = len(re.findall(r"[.!?](?:\s|$)", re.sub(r"<[^>]+>", "", enc)))
+            n_out = len(re.findall(r"[。！？]", t))
+            if n_out < n_src:
+                punct.append(idx[0] if isinstance(idx, tuple) else idx)
+        if miss:
+            numbers.append((idx[0] if isinstance(idx, tuple) else idx, miss))
         t = decode(t, ctx)
         if isinstance(idx, tuple):
             row, c = idx
@@ -234,6 +359,13 @@ def main():
     print(f"{len(jobs)} segments traduits -> {a.target}")
     if lost:
         print(f"ATTENTION : {lost} élément(s) protégé(s) perdu(s) par Google, à vérifier.")
+    if numbers:
+        print("ATTENTION : nombre(s) disparu(s) à la traduction, lignes à vérifier :")
+        for ln, miss in numbers:
+            print(f"   ligne {ln + 1} : {', '.join(sorted(miss))}")
+    if punct:
+        print("A vérifier : fin de phrase (。) possiblement perdue, lignes :",
+              ", ".join(str(n + 1) for n in sorted(set(punct))))
     if sc_missing:
         print("Shortcodes laissés en version source (version traduite introuvable) :")
         for n in sorted(sc_missing):

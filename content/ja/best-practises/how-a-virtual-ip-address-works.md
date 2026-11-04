@@ -1,310 +1,320 @@
 ---
-title: "高可用性クラスターで仮想IPアドレスはどのように機能するか"
+title: "高可用性クラスタリングにおいて、仮想 IP アドレスはどのように機能するのでしょうか？"
 canonical: "https://safekit.eviden.com/ja/best-practises/how-a-virtual-ip-address-works/"
-description: "SafeKitがフェイルオーバー時にGARP、ロードバランサー、クラウドCLI、BGPを使って仮想IPを移動する仕組みを説明します。"
+description: "SafeKit がフェイルオーバー時に仮想 IP アドレスを移動する方法：同一サブネット内での Gratuitous ARP、ロードバランサー、クラウド CLI、またはサブネットをまたぐ BGP。ローカル仮想 IP アドレスが重要な理由。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性クラスターの仮想IPアドレスとは, SafeKitでの仮想IPアドレスの実装, 同一サブネットでの仮想IPアドレスの動作（Mirrorクラスター）, ロードバランサーを使用して異なるサブネット間で仮想IPアドレスを使用する方法（Mirrorクラスター）, クラウドプロバイダーのCLIを使用して異なるサブネット間で仮想IPアドレスを使用する方法（Mirrorクラスター）, BGPを使用して異なるサブネット間で仮想IPアドレスを使用する方法（Mirrorクラスター）, 異なるサブネット間でのDNSリダイレクトの仕組み（Mirrorクラスター）, 同一サブネットのFarmクラスターにおける仮想IPロードバランシング, 異なるサブネット間の仮想IPロードバランシング（Farmクラスター）, 実装、レイテンシー、アプリケーション透過性の比較, 仮想IPに関するよくある質問, 🔍 SafeKitを確認"
+topics: "高可用性クラスタにおける仮想 IP アドレスとは？、SafeKit における仮想 IP の実装、同一サブネット内での仮想 IP アドレスの動作（mirror クラスタ）、ロードバランサーを使用した異なるサブネット間での仮想 IP の動作（mirror クラスタ）、クラウドプロバイダ CLI を使用した異なるサブネット間での仮想 IP の動作（mirror クラスタ）、BGP を使用した異なるサブネット間での仮想 IP の動作（mirror クラスタ）、異なるサブネット間での DNS リダイレクトの動作（mirror クラスタ）、同一サブネット上の farm クラスタにおける仮想 IP ロードバランシングの動作、異なるサブネット間でのロードバランスされた仮想 IP の動作（farm クラスタ）、比較：仮想 IP の実装、レイテンシ、およびアプリケーションの透過性、仮想 IP に関するよくある質問、🔍 SafeKit を探索する"
 ---
 
-# 高可用性クラスターで仮想IPアドレスはどのように機能するか {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# 高可用性クラスタリングにおいて、仮想 IP アドレスはどのように機能するのでしょうか？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
 
-## 高可用性クラスターの仮想IPアドレスとは {#virtual-ip-definition}
+## 高可用性クラスタにおける仮想 IP アドレスとは何ですか？ {#virtual-ip-definition}
 
-**仮想IPアドレス**は、[高可用性クラスター](</ja/>)内のアプリケーションにクライアントが接続するための唯一のアドレスです。特定のサーバーには紐づいていません。フェイルオーバー時に、アプリケーションを実行するサーバーへ移動します。クライアント側の設定変更は不要です。
+**仮想 IP アドレス**とは、[高可用性クラスタ](</ja/>)内のアプリケーションにクライアントが接続するために使用する単一のアドレスです。仮想 IP アドレスは特定のサーバーに紐づけられていません。フェイルオーバーが発生すると、アプリケーションを実行しているサーバーに自動的に移行します。クライアントは設定を変更する必要はありません。
 
-**SafeKitの基本原則:** 仮想IPアドレスは、アプリケーションを実行するサーバー上に**ローカルに設定**されます。アプリケーションはこのアドレスで起動し、クライアントの元のIPアドレスを受け取ります。そのため、多くのアプリケーションは変更なしでSafeKit上で正常に動作します。SafeKitは次の2種類の仮想IPアドレスを提供します。
+**SafeKit の重要な原則は、** 仮想 IP がアプリケーションを実行する**サーバー上でローカルに設定される**ことです。アプリケーションは仮想 IP 上で起動し、元のクライアント IP を受け取ります。そのため、多くのアプリケーションは SafeKit で変更を加えることなく正しく動作します。SafeKit は 2 種類の仮想 IP を提供します。
 
-  * **Mirrorクラスターのプライマリ／セカンダリ仮想IP:** 仮想IPアドレスはプライマリサーバーでのみ有効です。フェイルオーバー時にセカンダリサーバーへ移動します。
-  * **<span class="notranslate farm-term" translate="no">farm</span>クラスターのネットワーク負荷分散仮想IP:** 仮想IPアドレスはすべてのサーバーで同時に有効になり、トラフィックが各サーバーに分散されます。
+  * **mirror クラスタ構成のプライマリ/バックアップ仮想 IP：** 仮想 IP はプライマリサーバーでのみ有効です。フェイルオーバー時には、バックアップサーバーに移行します。
+  * **<span class="notranslate farm-term" translate="no">farm</span> クラスタを使用した仮想 IP によるネットワーク負荷分散：** 仮想 IP はすべてのサーバーで同時にアクティブになり、トラフィックはサーバー間で共有されます。
 
-## SafeKitでの仮想IPアドレスの実装 {#safekit-virtual-ip-implementation}
+## SafeKit における仮想 IP の実装 {#safekit-virtual-ip-implementation}
 
-この記事では、ネットワーク構成ごとにSafeKitが仮想IPアドレスを移動する方法を説明します。
+この記事では、SafeKit が各ネットワークアーキテクチャにおいて仮想 IP アドレスをどのように移動するかを説明します。
 
-  * **同一サブネットまたは拡張LAN（[Mirror](#virtual-ip-same-subnet-failover)クラスターと[<span class="notranslate farm-term" translate="no">Farm</span>](#virtual-ip-load-balancing-same-subnet)クラスター）：** SafeKitはサーバーに仮想IPアドレスを設定し、**Gratuitous ARP（GARP）**を送信します。外部ハードウェアは不要です。SafeKitがすべての処理を実装するため、最も透過性の高い方法です。
-  * **ロードバランサーを使用する異なるサブネット（[Mirror](#virtual-ip-different-subnets-failover)クラスターと[<span class="notranslate farm-term" translate="no">Farm</span>](#virtual-ip-load-balancing-different-subnets)クラスター）：** ロードバランサーはSafeKitの**ヘルスチェック**を使用して、適切なサーバーへトラフィックを送ります。ロードバランサーはインテグレーターが設定します。
-  * **[クラウドプロバイダーのCLIを使用する異なるサブネット](#virtual-ip-cloud-cli-failover)（Mirrorクラスター）：** SafeKitの`start_prim`スクリプトがクラウドCLIを呼び出して仮想IPを移動します。スクリプトはインテグレーターが作成します。
-  * **[BGPを使用する異なるサブネット](#virtual-ip-bgp-failover)（Mirrorクラスター）：** プライマリサーバーが仮想IPをルーターにアナウンスします。スクリプトはインテグレーターが作成します。
-  * **[DNSリダイレクトを使用する異なるサブネット](#virtual-ip-vs-dns-redirection-failover)（Mirrorクラスター）：** SafeKitの`start_prim`スクリプトが仮想名のDNSレコードを変更し、新しいプライマリサーバーの**物理IPアドレス**を指定します。スクリプトはインテグレーターが作成します。単一の仮想IPはなく、この方法はすべてのクライアントに対して信頼できるとは限りません。
+  * **同一サブネットまたは拡張 LAN（[mirror](#virtual-ip-same-subnet-failover)および[<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-same-subnet)クラスタ）：** SafeKit はサーバー上で仮想 IP アドレスを設定し、**GARP（Gratuitous ARP）** を送信します。外部ハードウェアは不要です。これは最も透過的なソリューションです（すべて SafeKit 製品によって実装されます）。
+  * **ロードバランサーを備えた異なるサブネット（[mirror](#virtual-ip-different-subnets-failover)および[<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-different-subnets)クラスタ）：** ロードバランサーは SafeKit **ヘルスチェック**を使用してトラフィックを適切なサーバーに送信します（ロードバランサーはインテグレーターによって構成されます）。
+  * **[クラウドプロバイダーの CLI を持つ異なるサブネット](#virtual-ip-cloud-cli-failover)（mirror クラスタ）：** SafeKit の `start_prim` スクリプトは、クラウド CLI を呼び出して仮想 IP を移動します（インテグレーターが作成したスクリプト）。
+  * **[BGP を使用した異なるサブネット](#virtual-ip-bgp-failover)（mirror クラスタ）：** プライマリサーバーがルーターに仮想 IP を通知します（インテグレーターが作成したスクリプト）。
+  * **[DNS リダイレクトを使用した異なるサブネット](#virtual-ip-vs-dns-redirection-failover)（mirror クラスタ）：** SafeKit の `start_prim` スクリプトは、仮想名の DNS レコードを新しいプライマリサーバーの物理 IP アドレスに変更します（このスクリプトはインテグレーターによって作成されます）。単一の仮想 IP アドレスは存在せず、この方法はすべてのクライアントに対して信頼できるとは限りません。
 
-この記事の内容:
+この記事には以下の内容も含まれています。
 
-  * [実装、レイテンシー、アプリケーション透過性の比較](#virtual-ip-methods-comparison)
-  * [仮想IPに関するよくある質問](#virtual-ip-faq)
-  * [🔍 SafeKitを確認](#hub)
+  * [比較：仮想 IP の実装、レイテンシ、およびアプリケーションの透過性](#virtual-ip-methods-comparison)
+  * [仮想 IP に関するよくある質問](#virtual-ip-faq)
+  * [🔍 SafeKit を探索する](#hub)
 
-![Evidian SafeKitにおける仮想IPの動作比較。Mirrorクラスターではアクティブノード上のフローティングIP、Farmクラスターでは全ノードでのネットワーク負荷分散を示しています。](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
+![Eviden SafeKit における仮想 IP の動作の比較図：アクティブノードに floating IP を表示する Mirror クラスタと、すべてのノード間でネットワーク負荷分散を表示する farm クラスタ。](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-**SafeKitのMirrorクラスターと<span class="notranslate farm-term" translate="no">Farm</span>クラスターにおける仮想IPアドレスの実装。**
+**SafeKit における mirror および <span class="notranslate farm-term" translate="no">farm</span> クラスタ向けの仮想 IP 実装。**
 
-## 同一サブネットでの仮想IPアドレスの動作（Mirrorクラスター） {#virtual-ip-same-subnet-failover}
+## 同一サブネット内（mirror クラスタ）における仮想 IP アドレスの仕組み {#virtual-ip-same-subnet-failover}
 
-- [SafeKit Mirrorクラスターのプライマリ／セカンダリ仮想IPアドレスをテスト](/ja/best-practises/test-primary-backup-vip-mirror/)
+- [SafeKit mirror クラスタにおけるプライマリ/バックアップ仮想 IP アドレスのテスト](/ja/best-practises/test-primary-backup-vip-mirror/)
 
-### ローカルサブネットでの自動フェイルオーバーとネットワーク再ルーティング {#automated-failover--network-rerouting-in-a-local-subnet}
+### ローカルサブネットにおける自動フェイルオーバーとネットワーク再ルーティング {#automated-failover--network-rerouting-in-a-local-subnet}
 
-ローカルネットワークでは、**SafeKit**が仮想IPアドレスとアプリケーションのフェイルオーバーを自動的に管理します。
+ローカルネットワークでは、**SafeKit が**仮想 IP アドレスとアプリケーションのフェイルオーバーを自動的に管理します。
 
-### ローカルMirrorクラスター: WindowsまたはLinux上の2ノードフェイルオーバー {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
+### ローカル mirror クラスタ：Windows または Linux 上での 2 ノードフェイルオーバー {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
 
-![同一サブネット内の2台のサーバー間でSafeKitの仮想IPがフェイルオーバーする仕組み](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-**SafeKit Mirrorクラスター**では、2つのノードが同一サブネットに配置されます。高可用性は**仮想IPアドレス**を使用します。SafeKitはオペレーティングシステムのネットワークスタック内で仮想IPを管理するため、特別なハードウェアは必要ありません。仮想IPアドレスは**IPエイリアス**によってサーバー1とサーバー2の物理IPアドレスに追加されます。クライアントは常に仮想IPアドレスに接続します。
+![同一サブネット内の 2 台のサーバー間における SafeKit 仮想 IP フェイルオーバーメカニズム](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-#### SafeKitのIPエイリアスと複数仮想IP（VIP）対応 {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
+**SafeKit mirror クラスタ**では、2 つのノードは同じサブネットに属します。高可用性は**仮想 IP アドレス**を使用して実現されます。SafeKit はオペレーティングシステムのネットワークスタック内で仮想 IP アドレスを管理します。特別なハードウェアは必要ありません。仮想 IP アドレスは、**IP エイリアシング**によってサーバー 1 とサーバー 2 の物理 IP アドレスに追加されます。クライアントは常に仮想 IP アドレスに接続します。
 
-仮想IPアドレスは、ノード間を移動する3つ目のIPアドレスです。SafeKitは1つのクラスターで**複数の仮想IPアドレス**を管理できます。同じネットワークカードまたは異なるネットワークカードに設定できるため、各サービスに独自の仮想IPを割り当てられます。
+#### SafeKit における IP エイリアシングと複数の仮想 IP（VIP） {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
 
-#### フェイルオーバーの仕組み: Gratuitous ARP（GARP） {#the-failover-mechanism-gratuitous-arp-garp}
+仮想 IP アドレスは、ノード間を移動する 3 つ目の IP アドレスです。SafeKit は、1 つのクラスタ内で**複数の仮想 IP アドレスを**管理できます。仮想 IP アドレスは、同じネットワークカード上に配置することも、異なるネットワークカード上に配置することも可能です。このようにして、各サービスが独自の仮想 IP アドレスを使用できます。
 
-フェイルオーバーに手動操作は必要ありません。通常運用時、仮想IPアドレスは**サーバー1のMACアドレス（mac1）**に紐づいています。サーバー1が故障すると、SafeKitは次の3つの処理を行います。
+#### フェイルオーバーメカニズム：Gratuitous ARP（GARP） {#the-failover-mechanism-gratuitous-arp-garp}
 
-  * **仮想IPのエイリアス設定:** SafeKitは、新しいプライマリとなるサーバー2のネットワークカードに仮想IPをエイリアスとして設定します。その後、OSがネットワークにメッセージを送信し、仮想IPを通知します。
-  * **GARP:** SafeKitは**Gratuitous ARP（GARP）**メッセージも送信します。ネットワークスイッチとクライアントはARPキャッシュを更新します。仮想IPアドレスは**サーバー2のMACアドレス（mac2）**に紐づきます。
-  * **アプリケーションの復旧:** SafeKitはサーバー2上でアプリケーションサービスを再起動します。
+フェイルオーバーには手動操作は一切不要です。通常動作時、仮想 IP アドレスは**サーバー 1 の MAC アドレス（mac1）** にリンクされます。サーバー 1 に障害が発生した場合、SafeKit は次の 3 つの処理を実行します。
 
-#### リモートデータセンターと拡張VLAN {#remote-data-centers--extended-vlans}
+  * **仮想 IP エイリアシング：** SafeKit は、新しいプライマリサーバーであるサーバー 2 のネットワークカード上に、仮想 IP をエイリアスとして設定します。その後、オペレーティングシステムはネットワーク上でメッセージを送信し、仮想 IP を通知します。
+  * **GARP:** SafeKit は、**Gratuitous ARP (GARP)** メッセージも送信します。ネットワークスイッチとクライアントは、ARP キャッシュを更新します。仮想 IP は、**サーバー 2 (mac2) の MAC アドレス**にリンクされます。
+  * **アプリケーションの復旧：** SafeKit はサーバー 2 上でアプリケーションサービスを再起動します。
 
-上記の**同一サブネットのソリューション**は、リモートサイト間の**災害復旧（DR）**にも適しています。サイト間が**拡張LANまたは拡張VLAN**で接続されている場合は、最適な選択肢となることがよくあります。両サイトが1つのサブネットに属するため、ネットワークが簡素化され、複雑なルーティングプロトコルが不要になります。
 
-> **⚠️ 注意:** Gratuitous ARPによるレイヤー2の再ルーティングは、アプリケーションにとって**最も透過性の高い方法**です。アプリケーションはクライアントの元のIPアドレスを受け取り、仮想IPアドレスはローカルに設定されます。**多くのアプリケーションは**ローカル仮想IPを必要とします。ローカル仮想IPがないと、**正常に動作しない場合があります**。同一サブネット構成ではSafeKitがすべての処理を実装するため、特別な統合は不要です。
+#### リモートデータセンターと拡張 VLAN {#remote-data-centers--extended-vlans}
 
-## ロードバランサーを使用して異なるサブネット間で仮想IPアドレスを使用する方法（Mirrorクラスター） {#virtual-ip-different-subnets-failover}
+**上記で説明した同一サブネットソリューションは**、リモートサイト間の**災害復旧（DR）** にも有効であり、サイトが**拡張 LAN または拡張 VLAN** で接続されている場合には最適な選択肢となることが多い。両サイトが同じサブネットに属しているため、ネットワーク構成が簡素化され、複雑なルーティングプロトコルも不要となる。
 
-### SafeKitヘルスチェックを使用するロードバランサー {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
+> **⚠️ 注意：** レイヤ 2 での Gratuitous ARP によるルーティング変更は、アプリケーションにとって**最も透過的なソリューション**です。アプリケーションは元のクライアント IP アドレスを受け取り、仮想 IP アドレスはローカルで設定されます。**多くのアプリケーションはローカル仮想 IP アドレスを必要とします**。これがないと、これらのアプリケーションは**正しく動作しない可能性があります**。この同一サブネット構成では、SafeKit がメカニズム全体を実装するため、特別な統合作業は不要です。
 
-![異なる2つのサブネット間でロードバランサーを使用して仮想IPをフェイルオーバーする図](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
+## ロードバランサー（mirror クラスタ）を使用した場合、仮想 IP アドレスが異なるサブネット間でどのように機能するか {#virtual-ip-different-subnets-failover}
 
-ノードが**異なるサブネット**にある場合、Gratuitous ARPでは仮想IPを移動できません。この場合、仮想IPアドレスは**ロードバランサー**上にあり、プライマリサーバーへトラフィックを送ります。
+### SafeKit ヘルスチェック機能を備えたロードバランサー {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
 
-SafeKitは各ノードに**ヘルスチェックURL**を提供します。
+![2 つの異なるサブネット間でロードバランサーを使用した仮想 IP フェイルオーバーの図](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
-  * **プライマリ（PRIM）:** `HTTP 200 OK`を返します。ロードバランサーはこのノードにトラフィックを送ります。
-  * **セカンダリ（SECOND）:** `HTTP 404 NOT FOUND`を返します。ロードバランサーはこのノードにトラフィックを送りません。
+ノードが**異なるサブネット**にある場合、Gratuitous ARP では仮想 IP アドレスを移動できません。この場合、仮想 IP アドレスは**ロードバランサー**上にあります。ロードバランサーはトラフィックをプライマリサーバーに送信します。
 
-フェイルオーバー時にSafeKitが応答を変更し、ロードバランサーは新しいプライマリへトラフィックを送ります。これは[**AWS**](</ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)、[**Azure**](</ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/>)、[**Google Cloud**](</ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)の**アベイラビリティゾーン**間で標準的な方法です。
+SafeKit は各ノードに**ヘルスチェック用 URL** を提供します。
 
-> **⚠️ 注意:** SafeKitはヘルスチェックを提供します。ロードバランサーはネットワークまたはクラウドプロバイダーが提供します。
+  * **プライマリ（PRIM）：**`HTTP 200 OK`。を返します。ロードバランサーはこのノードにトラフィックを送信します。
+  * **セカンダリ（SECOND）：**`HTTP 404 NOT FOUND`。を返します。ロードバランサーはこのノードにトラフィックを送信しません。
 
-### 問題: ロードバランサーが仮想IPを所有する {#the-load-balancer-pitfall-virtual-ip-on-the-frontend-nat-to-the-physical-ip}
+フェイルオーバーが発生すると、SafeKit は応答を変更し、ロードバランサーはトラフィックを新しいプライマリサーバーに送信します。これは、 [**AWS**](</ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)、 [**Azure**](</ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/>)、 [**Google Cloud**](</ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)の**アベイラビリティゾーン**間の標準的なソリューションです。
 
-ロードバランサーのみを使用する場合、クライアントは仮想IPに接続します。ロードバランサーはNATを使って仮想IPをプライマリサーバーの**物理IPアドレス**に変換します。クライアントは仮想IPを使用しますが、サーバーは物理IPを使用するため、サーバーは仮想IPを認識しません。
+> **⚠️ 注意：** SafeKit はヘルスチェックを提供します。ロードバランサーは、お客様のネットワークまたはクラウドプロバイダーが提供します。
 
-### プライマリサーバー上で仮想IPをローカルに設定する {#why-the-virtual-ip-must-stay-configured-locally-on-the-primary-server}
+### 問題点：ロードバランサーが仮想 IP を所有している {#the-load-balancer-pitfall-virtual-ip-on-the-frontend-nat-to-the-physical-ip}
 
-仮想IPをサーバーアドレスとして使用するアプリケーションがあります。これらのアプリケーションが正常に動作するには、仮想IPを**プライマリサーバー上にもローカルに設定**する必要があります。設定すると:
+ロードバランサーのみの場合、クライアントは仮想 IP アドレスに接続します。ロードバランサーは仮想 IP アドレスを（NAT によって）プライマリサーバーの**物理 IP アドレス**に変換します。クライアントは仮想 IP アドレスを使用しますが、サーバーは自身の物理 IP アドレスを使用します。サーバーは仮想 IP アドレスを認識しません。
 
-  * サービスを仮想IPアドレスで起動できる
-  * サーバーが仮想IPを使って自身のサービスにアクセスできる
-  * 仮想IPを使った認証が機能する
+### 仮想 IP アドレスはプライマリサーバー上でローカルに構成したままにしてください。 {#why-the-virtual-ip-must-stay-configured-locally-on-the-primary-server}
 
-**推奨事項:** Floating IPやDirect Server Returnなど、仮想IPを宛先アドレスとして保持するロードバランサーモードを使用します。その後、仮想IPをプライマリサーバー上にローカル設定します。設定方法は仮想IPが属するサブネットによって異なります。
+一部のアプリケーションは、仮想 IP をサーバーアドレスとして使用します。これらのアプリケーションは、**プライマリサーバー上で仮想 IP がローカルに設定されて**いる場合にのみ正しく動作します。その場合：
 
-  * **仮想IPがサーバーの物理IPと同じサブネットにある場合:** SafeKitモジュールの`<vip>`セクションを維持します。SafeKitは物理IPアドレスに関連付けられたネットワークカード上に、仮想IPをエイリアスとして自動設定します。
-  * **仮想IPが異なるサブネットにある場合:** SafeKitで`<vip>`を設定しないでください。`start_prim`スクリプトを使用して、アプリケーションの起動前にloopbackなどの専用インターフェースへ仮想IPを設定します。アプリケーション停止後に`stop_prim`で削除します。これらのコマンドはインテグレーターが作成するもので、SafeKit製品には含まれません。
+  * サービスは仮想 IP 上で起動できます。
+  * サーバーは仮想 IP アドレスを使用して自身のサービスにアクセスできます。
+  * 認証は仮想 IP アドレスで機能します。
 
-## クラウドプロバイダーのCLIを使用して異なるサブネット間で仮想IPアドレスを使用する方法（Mirrorクラスター） {#virtual-ip-cloud-cli-failover}
+**ベストプラクティス：** 仮想 IP を宛先アドレスとして保持するロードバランサーモード（Floating IP や Direct Server Return など）を使用します。次に、プライマリサーバー上で仮想 IP をローカルで構成します。この方法は、仮想 IP のサブネットによって異なります。
 
-### クラウドでGratuitous ARPが機能しない理由 {#why-gratuitous-arp-does-not-work-in-public-clouds}
+  * **仮想 IP アドレスは、サーバーの物理 IP アドレスと同じサブネットに属します。SafeKit** モジュールの `<vip>` セクションはそのままにしておいてください。SafeKit は、仮想 IP アドレスを物理 IP アドレスのネットワークカード上のエイリアスとして自動的に設定します。
+  * **仮想 IP アドレスは別のサブネットにあります。SafeKit** で `<vip>` を設定しないでください。アプリケーションの起動前に、 `start_prim` スクリプトを使用して、ループバックなどの専用インターフェースに仮想 IP アドレスを設定してください。アプリケーションの停止後に、 `stop_prim` スクリプトを使用して仮想 IP アドレスを削除してください。これらのコマンドはインテグレーターが作成するものであり、SafeKit 製品には含まれていません。
 
-クラウドネットワーク（AWS、Azure、Google Cloud）は**Gratuitous ARPを無視**します。クラウドプラットフォームに割り当てられたIPアドレスに対してのみトラフィックを送信します。SafeKitはプライマリサーバーに仮想IPを設定しますが、クラウドネットワークは仮想IPのトラフィックをそのサーバーに送りません。
 
-### クラウドCLIで仮想IPを移動する {#moving-the-virtual-ip-through-the-cloud-api-in-safekit-failover-scripts}
+## クラウドプロバイダーの CLI（mirror クラスタ）を使用して、異なるサブネット間で仮想 IP がどのように機能するか {#virtual-ip-cloud-cli-failover}
 
-ロードバランサーがない場合、クラウドプロバイダーのCLIをSafeKitの**`start_prim`スクリプト**に組み込み、アプリケーション起動前にクラウドネットワーク設定を更新できます。CLIで仮想IPをプライマリになるノードに割り当てるか、クラウドルートを更新してそのノードへトラフィックを転送できます。
+### クラウド環境で Gratuitous ARP が機能しない理由 {#why-gratuitous-arp-does-not-work-in-public-clouds}
 
-**仮想IPはプライマリサーバー上にローカルに保持**されます。**NATは使用せず**、クライアントの元のIPアドレスも変わりません。
+クラウドネットワーク（AWS、Azure、Google Cloud）は、**Gratuitous ARP を無視します**。クラウドネットワークは、クラウドプラットフォームで割り当てられた IP アドレスにのみトラフィックを送信します。SafeKit はプライマリサーバーに仮想 IP を設定しますが、クラウドネットワークはこのサーバーに仮想 IP トラフィックを送信しません。
+
+### クラウド CLI を使用して仮想 IP を移動する {#moving-the-virtual-ip-through-the-cloud-api-in-safekit-failover-scripts}
+
+ロードバランサーがない場合、クラウドプロバイダーの CLI を SafeKit の **`start_prim` スクリプト**に統合することで、アプリケーション起動前にクラウドネットワーク構成を更新できます。CLI は、プライマリノードとなるノードに仮想 IP アドレスを割り当てたり、クラウドルートを更新して仮想 IP トラフィックをそのノードにルーティングしたりできます。
+
+**仮想 IP アドレスはプライマリサーバー上でローカルに保持されます**。NAT **は行われず**、元のクライアント IP アドレスも変更されません。
 
 ### インテグレーターの責任 {#integrator-responsibility}
 
-**インテグレーター**はクラウドCLIコマンドを`start_prim`スクリプトに追加する必要があります。これらのコマンドは**SafeKit製品には含まれません**。クラウドプロバイダー、ネットワーク設計、お客様のセキュリティルールによって異なります。
+**インテグレーターは**、 `start_prim` スクリプトにクラウド CLI コマンドを追加する必要があります。これらのコマンドは **SafeKit 製品には含まれていません**。クラウドプロバイダー、ネットワーク設計、および顧客のセキュリティルールによって異なります。
 
-### 制約事項 {#constraints-of-the-cli-approach}
+### 制約 {#constraints-of-the-cli-approach}
 
-  * クラウドCLIを両方のノードにインストールする必要があります。各ノードには必要なネットワーク権限を持つクラウドIDが必要です。
-  * スクリプトでエラーと再試行を処理する必要があります。
-  * ロードバランサーを使用する場合よりフェイルオーバーが遅くなる可能性があります。
+  * クラウド CLI は両方のノードにインストールする必要があります。各ノードには、ネットワーク権限を持つクラウド ID が必要です。
+  * スクリプトはエラー処理と再試行処理を行う必要があります。
+  * フェイルオーバーは、ロードバランサーを使用した場合よりもおそらく遅いでしょう。
 
-## BGPを使用して異なるサブネット間で仮想IPアドレスを使用する方法（Mirrorクラスター） {#virtual-ip-bgp-failover}
+## BGP（mirror クラスタ）を使用して異なるサブネット間で仮想 IP がどのように機能するか {#virtual-ip-bgp-failover}
 
-### BGPによる仮想IPの再ルーティング {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
+### BGP による仮想 IP ルーティング {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
-**BGP（Border Gateway Protocol）**では、通常、アプリケーションの起動前に`start_prim`スクリプトがプライマリサーバーのloopbackインターフェースに仮想IPを設定します。プライマリサーバーはその後、VIPを/32ルートとしてルーターにアナウンスします。
+BGP（Border Gateway Protocol）では、仮想 IP アドレスは通常、アプリケーションの起動前に `start_prim` スクリプトによってプライマリサーバーのループバックインターフェースに設定されます。プライマリサーバーは、その仮想 IP アドレスを/32 ルートとしてルーターに通知します。
 
-フェイルオーバー時、旧プライマリサーバー上の`stop_prim`スクリプトがアプリケーションを停止し、loopbackインターフェースからVIPを削除して、ルーターから/32ルートを取り下げます。旧プライマリサーバーがクラッシュした場合、`stop_prim`は実行されませんが、ルーターはBGPセッションを失い、ルートを自動的に削除します。
+フェイルオーバーが発生すると、古いプライマリサーバー上の `stop_prim` スクリプトがアプリケーションを停止し、ループバックインターフェイスから VIP を削除し、ルーターから /32 ルートを削除します。古いプライマリサーバーがクラッシュした場合、 `stop_prim` 実行されませんが、ルーターは BGP セッションを失い、ルートを自動的に削除します。
 
 ### メリットと前提条件 {#benefits-and-prerequisites}
 
-  * **仮想IPはローカルに保持され、NATは使用せず、クライアントIPも変わりません。**
-  * サブネットやサイトをまたいで動作し、拡張VLANは不要です。
-  * BGPルーターとネットワークチームの協力が必要です。クラウドではプロバイダーのルートサーバーサービスが必要です。
+  * **仮想 IP アドレスはローカルのままであり、NAT は行われず、クライアント IP アドレスも変更されません。**
+  * サブネットやサイトをまたいで動作します。拡張 VLAN は必要ありません。
+  * BGP ルーターとネットワークチームのサポートが必要です。クラウド環境では、クラウドプロバイダーのルートサーバーサービスが必要です。
 
-> **⚠️ 注意:** BGP統合ではSafeKitスクリプトとルーティングインフラストラクチャを使用します。**インテグレーター**は`start_prim`および`stop_prim`スクリプトにコマンドを記述する必要があります。これらのスクリプトは**SafeKit製品には含まれません**。本番環境に導入する前にネットワークチームと検証してください。
+> **⚠️ 注意：** BGP 統合には SafeKit スクリプトとお客様のルーティングインフラストラクチャが必要です。**統合担当者は**`start_prim` および `stop_prim` スクリプトにコマンドを記述する必要があります。これらのスクリプトは **SafeKit 製品には含まれていません**。本番運用前にネットワークチームとソリューションの妥当性を検証してください。
 
-## DNSリダイレクトを使用して異なるサブネット間で仮想IPアドレスを使用する方法（Mirrorクラスター） {#virtual-ip-vs-dns-redirection-failover}
+## 異なるサブネット間（mirror クラスタ）での DNS リダイレクトの仕組み {#virtual-ip-vs-dns-redirection-failover}
 
-### `start_prim`スクリプトによるDNSリダイレクト {#dns-rerouting-with-the-start-prim-script}
+### `start_prim` スクリプトを使用した DNS リルーティング {#dns-rerouting-with-the-start-prim-script}
 
-DNSリダイレクトでは、**単一の仮想IPアドレスはありません**。クライアントは**仮想名**（DNS名）に接続します。フェイルオーバー時、新しいプライマリサーバー上の`start_prim`スクリプトがアプリケーションを起動し、仮想名のDNSレコードを新しいプライマリサーバーの**物理IPアドレス**に変更します。
+DNS リダイレクトを使用する場合、**単一の仮想 IP アドレスは存在しません**。クライアントは**仮想名**（DNS 名）に接続します。フェイルオーバー時には、新しいプライマリサーバー上の `start_prim` スクリプトがアプリケーションを起動し、仮想名の DNS レコードを新しいプライマリサーバーの**物理 IP アドレス**に変更します。
 
-`stop_prim`スクリプトで実行する処理はありません。旧プライマリサーバーがクラッシュした場合、新しいプライマリサーバーがDNSレコードを上書きします。
+`stop_prim` スクリプトは何もする必要はありません。古いプライマリサーバーがクラッシュした場合、新しいプライマリサーバーが DNS レコードを上書きします。
 
-### 例: DNS解決と接続できないクライアント {#the-technical-scenario-dns-resolution-and-the-stuck-client}
+### 例：DNS 解決とブロックされたクライアント {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
-![高可用性クラスターでDNS名が物理IPアドレス1に解決される様子](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
+![高可用性クラスタにおける物理 IP 1 への DNS 名前解決を示す図](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
-DNS解決: 高可用性クラスターでクライアントが物理IPアドレス1に接続したままになる状態。
+ 高可用性クラスタで物理 IP 1 上の DNS 解決とクライアントのブロックが発生する
 
-#### フェイルオーバー前: 名前は物理IPアドレス1を指す {#current-state-resolution-to-physical-ip-1}
+#### フェイルオーバー前：名前は物理 IP 1 を指しています {#current-state-resolution-to-physical-ip-1}
 
-**クライアント1**と**クライアント2**はDNSシステムに仮想名のIPアドレスを問い合わせます。DNSシステムは**物理IPアドレス1**を返します。クライアントはこのアドレスへのネットワーク接続を開きます。
+**クライアント 1** と**クライアント 2 は**、DNS システムに仮想名の IP アドレスを問い合わせます。DNS システムは**物理 IP アドレス 1** を返します。その後、クライアントはこのアドレスへのネットワーク接続を開きます。
 
-#### フェイルオーバー後: 名前は物理IPアドレス2を指す {#the-failover-challenge-rerouting-to-physical-ip-2}
+#### フェイルオーバー後：名前は物理 IP 2 を指す {#the-failover-challenge-rerouting-to-physical-ip-2}
 
-サーバー1が故障します。サーバー2の`start_prim`スクリプトがDNSレコードを**物理IPアドレス2**に変更します。クライアントがこのアドレスに接続できるのは、次のすべての条件を満たした場合だけです。
+サーバー 1 が故障します。サーバー 2 上の `start_prim` スクリプトは、DNS レコードを**物理 IP アドレス 2** に変更します。クライアントは、以下のすべての条件が満たされた場合にのみ、物理 IP アドレス 2 に接続します。
 
-  * クライアントとDNSレコードの間にあるすべてのDNSサーバーで**TTL（Time to Live）**が期限切れになっている。
-  * クライアント1とクライアント2のローカルDNSキャッシュが空になっている。
-  * アプリケーションが接続を閉じて、**新たに**DNSを検索する。
+  * クライアントと DNS レコード間のすべての DNS サーバーにおいて、**TTL（有効期限）** が期限切れとなりました。
+  * クライアント 1 とクライアント 2 のローカル DNS キャッシュは空です。
+  * アプリケーションは接続を閉じ、*新しい*DNS ルックアップを実行します。
 
-1つでも条件を満たさないと、**クライアント1とクライアント2は物理IPアドレス1に接続したまま**になります。DNSレコードが正しくてもサービスを利用できません。
+いずれかの条件が満たされない場合、**クライアント 1 とクライアント 2 は物理 IP アドレス 1 上でブロックされたままになります。DNS** レコードが正しくても、サービスは停止状態となります。
 
 ### 制限事項と前提条件 {#the-two-black-boxes-of-dns-redirection}
 
-  * **DNSキャッシュ:** 多くのインターネットサービスプロバイダーや企業のDNSサーバーは短いTTLを無視し、古い物理IPアドレス1を数分から数時間保持する場合があります。
-  * **アプリケーションの動作:** JavaサービスやWebブラウザーなど、多くのアプリケーションは起動時に一度だけDNSを検索し、その後も最初のIPアドレスを使い続けます。
-  * **フェイルオーバーごとにIPアドレスが変わる:** アプリケーションはローカルの固定仮想IPを持ちません。アプリケーション自身のIPアドレスを登録する場合、正常に動作しないことがあります。
-  * **前提条件:** DNSレコードのTTLが短いこと（例: 30～60秒）、および両方のサーバーからDNSゾーンを更新できる権限があること。
+  * **DNS キャッシュ：** 多くのインターネットサービスプロバイダや企業の DNS サーバーは、短い TTL 値を無視します。そのため、古い物理 IP アドレスを数分から数時間保持してしまうことがあります。
+  * **アプリケーションの動作：** 多くのアプリケーション（例えば、Java サービスや Web ブラウザ）は、起動時に一度だけ DNS ルックアップを実行します。そして、最初に取得した IP アドレスを使い続けます。
+  * **フェイルオーバーのたびに IP アドレスが変更されます。** アプリケーションには、固定のローカル仮想 IP アドレスがありません。独自の IP アドレスを登録するアプリケーションは、正常に動作しない可能性があります。
+  * **前提条件：** DNS レコードの TTL（有効期限）を短く設定すること（例えば、30～60 秒）、および両方のサーバーから DNS ゾーンを更新する権限があること。
 
-> **⚠️ 注意:** **インテグレーター**はDNS更新コマンドを`start_prim`スクリプトに記述する必要があります。これらのコマンドは**SafeKit製品には含まれず**、DNSサーバー（Windows DNS、BIND、クラウドDNS）によって異なります。
+> **⚠️ 注意：** **インテグレーターは**、 `start_prim` スクリプトに DNS 更新コマンドを記述する必要があります。これらのコマンドは **SafeKit 製品には含まれていません**。DNS サーバー（Windows DNS、BIND、またはクラウド DNS）に依存します。
 
-### まとめ {#conclusion}
+### 結論 {#conclusion}
 
-DNSリダイレクトは信頼できる高可用性ソリューションではありません。再接続時にすべてのクライアントがDNSを再検索する場合に限り使用してください。即時かつ透過的なフェイルオーバーには、拡張LAN、ロードバランサー、クラウドプロバイダーのCLI、またはBGPを使用した**仮想IPアドレス**を利用してください。
+DNS リダイレクトは、信頼性の高い高可用性ソリューションではありません。再接続時にすべてのクライアントが新しい DNS ルックアップを実行する場合にのみ使用してください。即時かつ透過的なフェイルオーバーを実現するには、**仮想 IP** アドレスを使用してください。拡張 LAN、ロードバランサー、クラウドプロバイダーの CLI、または BGP を使用できます。
 
-## 同一サブネットのFarmクラスターにおける仮想IPの負荷分散 {#virtual-ip-load-balancing-same-subnet}
+## 同一サブネット上の <span class="notranslate farm-term" translate="no">farm</span> クラスタにおける仮想 IP ロードバランシングの仕組み {#virtual-ip-load-balancing-same-subnet}
 
-- [SafeKit Farmクラスターの負荷分散仮想IPをテスト](/ja/best-practises/test-load-balancing-vip-farm/)
+- [SafeKit farm クラスタにおけるロードバランシング仮想 IP アドレスのテスト](/ja/best-practises/test-load-balancing-vip-farm/)
 
-### カーネル内の負荷分散と冗長性 {#scalable-performance-kernel-level-load-balancing--redundancy}
+### カーネルにおける冗長性を備えた負荷分散 {#scalable-performance-kernel-level-load-balancing--redundancy}
 
-トラフィックが多い場合、SafeKitは複数のアクティブサーバーに処理を分散できます。1台のサーバーが故障しても、他のサーバーは動作を続けます。
+トラフィックが多い場合、SafeKit は複数の稼働中のサーバー間で処理を分散させることができます。いずれかのサーバーが故障しても、他のサーバーが処理を継続します。
 
-### Farmクラスターの構成: WindowsまたはLinuxノード間の負荷分散 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### <span class="notranslate farm-term" translate="no">Farm</span> クラスタアーキテクチャ：Windows ノードと Linux ノード間の負荷分散 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
-![同一サブネット内で負荷分散を行う仮想IPの図](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
-**負荷分散を行うFarmクラスター**では、クライアントが仮想IPに接続し、リクエストが複数のサーバーに同時に分散されます。この例では2つのノードを示していますが、クラスターにサーバーを追加できます。同一サブネットでは、クラスター内の**すべてのサーバー**のネットワークカードにIPエイリアスを設定して仮想IPを構成します。
+![同一サブネット内の負荷分散型仮想 IP の図](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
-#### トラフィック分散: カーネルフィルター {#traffic-distribution-the-kernel-level-filter}
+**ロードバランシング <span class="notranslate farm-term" translate="no">farm</span> クラスタ**では、クライアントは仮想 IP に接続し、リクエストは複数のサーバー間で同時に共有されます。この例では 2 つのノードを示していますが、クラスタにノードを追加することも可能です。同じサブネット内では、クラスタ内の**すべてのサーバー**のネットワークカードに IP エイリアシングが設定され、仮想 IP が構成されます。
 
-<span class="notranslate farm-term" translate="no">Farm</span>クラスターでは、SafeKitの**カーネル内フィルター**がトラフィックを分散します。処理の流れは次のとおりです。
+#### トラフィック共有：カーネルフィルタ {#traffic-distribution-the-kernel-level-filter}
 
-  * **ARPマッピング:** クライアントのARPキャッシュでは、仮想IPが1つのMACアドレス（例: サーバー1の`mac1`）に紐づいています。
-  * **パケット分析:** サーバー1がパケットを受信します。SafeKitのカーネルフィルターは、各パケットの**クライアントIP**または**TCPポート**を読み取ります。
-  * **負荷分散:** フィルターはサーバー1が処理するパケットと、サーバー2など他のノードへ送るパケットを決定します。他のノードへ送る場合、パケットの**宛先MACアドレス**をそのノードのMACアドレスに書き換えます。宛先IPアドレスは仮想IPのままです。これによりサーバー間で処理を分散します。
+<span class="notranslate farm-term" translate="no">farm</span> クラスタでは、**カーネル内の SafeKit フィルタが**トラフィックを共有します。その仕組みは次のとおりです。
 
-#### Gratuitous ARPによるフェイルオーバーと再ルーティング {#failover-and-rerouting-with-gratuitous-arp}
+  * **ARP マッピング：** クライアントの ARP キャッシュでは、仮想 IP が 1 つの MAC アドレス（例えば、サーバー 1 の `mac1`）にリンクされます。
+  * **パケット解析：** サーバー 1 はパケットを受信します。SafeKit カーネルフィルタは、各パケットの**クライアント IP** アドレスまたは **TCP ポート**を読み取ります。
+  * **負荷分散：** フィルタは、サーバー 1 が処理するパケットと、他のノード（例えばサーバー 2）に送信するパケットを決定します。パケットを別のノードに送信する場合、フィルタはパケットの**宛先 MAC アドレスを**そのノードの MAC アドレスに書き換えます。宛先 IP アドレスは仮想 IP アドレスのままです。処理はサーバー間で分散されます。
 
-サーバー1が故障すると、SafeKitは**Gratuitous ARP（GARP）**メッセージを送信します。クライアントはサーバー2のMACアドレスである`mac2`を使ってARPキャッシュを更新します。その後、トラフィックは直ちに他のFarmノードへ送られます。
 
-#### リモートサイトへの展開 {#deployment-in-remote-sites}
+#### 無償 ARP によるフェイルオーバーと再ルーティング {#failover-and-rerouting-with-gratuitous-arp}
 
-この負荷分散ソリューションは、**拡張LANまたはVLAN**で接続された**リモートデータセンター**間でも機能します。すべてのサイトが同一サブネットに属するため、複数サイトにまたがる<span class="notranslate farm-term" translate="no">Farm</span>クラスターに最も効率的な構成です。
+サーバー 1 に障害が発生した場合、SafeKit は **GARP（Gratuitous ARP）** メッセージを送信します。クライアントはサーバー 2 の `mac2` を使用して ARP キャッシュを更新します。その後、クライアントは farm 内の他のノードに即座に接続されます。
+
+#### 遠隔地への展開 {#deployment-in-remote-sites}
+
+この負荷分散ソリューションは、**拡張 LAN または VLAN** で接続された**リモートデータセンター**間でも機能します。この場合、すべてのサイトは同じサブネットに属します。これは、複数のサイトにまたがる <span class="notranslate farm-term" translate="no">farm</span> クラスタにとって最も効率的な構成です。
 
 {{%  insert-safekit-farm-video-ja  %}}
 
-## 異なるサブネット間の仮想IP負荷分散（Farmクラスター） {#virtual-ip-load-balancing-different-subnets}
+## 異なるサブネット（<span class="notranslate farm-term" translate="no">farm</span> クラスタ）間で負荷分散された仮想 IP がどのように機能するか {#virtual-ip-load-balancing-different-subnets}
 
 ### クラウドサブネット間のトラフィック {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-<span class="notranslate farm-term" translate="no">Farm</span>クラスターは複数のアベイラビリティゾーンとサブネットにアプリケーション負荷を分散できます。
+<span class="notranslate farm-term" translate="no">farm</span> クラスタは、複数の可用性ゾーンとサブネット間でアプリケーションの処理を分散させることができます。
 
-### サブネット間のFarmクラスター: 複数のWindowsまたはLinuxノード {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### クロスサブネット <span class="notranslate farm-term" translate="no">farm</span> クラスタ：複数の Windows または Linux ノード {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
-![2つの異なるサブネットにまたがるFarmクラスターの負荷分散図](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
-<span class="notranslate farm-term" translate="no">Farm</span>ノードが**異なるサブネット**（例: 複数のクラウドアベイラビリティゾーン）にある場合、**仮想IP**は外部の**ロードバランサー（LB）**上にあります。ロードバランサーは各サブネットにあるサーバーの物理IPアドレスへトラフィックを送ります。
+![2 つの異なるサブネットにまたがって動作する負荷分散型 farm クラスタの図](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
-#### トラフィックルーティングと負荷分散のルール {#intelligent-traffic-routing--load-balancing-rules}
+<span class="notranslate farm-term" translate="no">farm</span> ノードが**異なるサブネット**（例えば、複数のクラウド可用性ゾーン）にある場合、**仮想 IP** は外部**ロードバランサー（LB）** 上に配置されます。ロードバランサーは、各サブネット内のサーバーの物理 IP アドレスにトラフィックを送信します。
 
-ロードバランサーは次の2つの基準でクライアントリクエストを分散します。
+#### トラフィックルーティングと負荷分散ルール {#intelligent-traffic-routing--load-balancing-rules}
 
-  * **負荷分散ルール:** **クライアントIPアドレス**や**クライアントTCPポート**など。
-  * **ノードの可用性:** SafeKitのヘルスチェックに基づき、正常なノードにのみトラフィックを送信します。
+ロードバランサーは、以下の 2 つの基準に基づいてクライアントからのリクエストを共有します。
 
-> **⚠️ 注意:** SafeKitはヘルスチェックを提供します。ロードバランサーはネットワークまたはクラウドプロバイダーが提供します。
+  * **負荷分散ルール:** 例えば、**クライアントの IP アドレス**や**クライアントの TCP ポートなど**。
+  * **ノードの可用性：** ロードバランサーは、SafeKit のヘルスチェックに基づいて、正常なノードにのみトラフィックを送信します。
 
-#### SafeKitヘルスチェック {#safekit-health-check-mechanism}
 
-SafeKitは各<span class="notranslate farm-term" translate="no">Farm</span>サーバーに**ヘルスチェックURL**を提供します。ロードバランサーはURLを確認し、各サーバーの状態を判定します。
+> **⚠️ 注意：** SafeKit はヘルスチェックを提供します。ロードバランサーは、お客様のネットワークまたはクラウドプロバイダーが提供します。
 
-  * **ノードUP:** ヘルスチェックは`HTTP 200 OK`を返します。ロードバランサーはこのサーバーにトラフィックを送信します。
-  * **ノードDOWN:** サーバーまたはアプリケーションが故障すると、SafeKitは`HTTP 404 NOT FOUND`を返すか、サーバーが応答しません。ロードバランサーはこのノードへのトラフィック送信を直ちに停止します。
+#### SafeKit のヘルスチェック {#safekit-health-check-mechanism}
 
-#### クラウド展開: AWS、Azure、GCP {#cloud-deployment-standards-aws-azure-and-gcp}
+SafeKit は、 <span class="notranslate farm-term" translate="no">farm</span> 内のすべてのサーバーに**ヘルスチェック用の URL** を提供します。ロードバランサーはこの URL を読み取り、各サーバーの状態を把握します。
 
-これは**クラウド上の<span class="notranslate farm-term" translate="no">Farm</span>クラスター**の標準的な構成です。サブネットまたはゾーンが停止しても、他のノードはトラフィック処理を続けます。[**Amazon AWS**](</ja/solutions/aws-load-balancing-cluster-failover/>)（AWS Network Load Balancer）、[**Microsoft Azure**](</ja/solutions/azure-load-balancing-cluster-failover/>)（Azure Load Balancer）、[**Google Cloud (GCP)**](</ja/solutions/gcp-load-balancing-cluster-failover/>)（Google Cloud Load Balancing）でサポートされています。
+  * **ノード稼働中：** ヘルスチェックで `HTTP 200 OK`。が返されました。ロードバランサーはこのサーバーにトラフィックを送信します。
+  * **ノードダウン：** サーバーまたはアプリケーションに障害が発生した場合、SafeKit は `HTTP 404 NOT FOUND` を返します（またはサーバーが応答しません）。ロードバランサーは直ちにこのノードへのトラフィック送信を停止します。
 
-## 仮想IPの実装、レイテンシー、アプリケーション透過性の比較 {#virtual-ip-methods-comparison}
 
-**高可用性と災害復旧における仮想IPおよびDNSのリダイレクト方法の比較。**
+#### クラウド導入：AWS、Azure、GCP {#cloud-deployment-standards-aws-azure-and-gcp}
 
-環境とユースケース | 高可用性の種類 | リダイレクト方法 | 実装者 | ネットワークレイテンシー | アプリケーション透過性とローカルIP  
+これは**クラウドにおける <span class="notranslate farm-term" translate="no">farm</span> クラスター**の標準アーキテクチャです。サブネットまたはゾーンが停止しても、他のノードがトラフィックの処理を継続します。Amazon [**AWS**](</ja/solutions/aws-load-balancing-cluster-failover/>) （AWS Network Load Balancer）、 [**Microsoft Azure**](</ja/solutions/azure-load-balancing-cluster-failover/>) （Azure Load Balancer）、および[**Google Cloud（GCP）**](</ja/solutions/gcp-load-balancing-cluster-failover/>) （Google Cloud Load Balancing）でサポートされています。
+
+
+## 比較：仮想 IP の実装、レイテンシ、およびアプリケーションの透過性 {#virtual-ip-methods-comparison}
+
+**高可用性と災害復旧のための仮想 IP リダイレクト方式と DNS リダイレクト方式の比較。**
+
+環境とユースケース | 高可用性タイプ | リダイレクト方法 | 実装者 | ネットワーク遅延 | アプリケーションの透明性とローカル IP  
 ---|---|---|---|---|---  
-プライマリ／セカンダリ（高可用性） | Mirrorクラスター | Gratuitous ARP / MAC引き継ぎ | ✅ SafeKit製品 | 非常に低い: 障害検出とGARP送信にかかる時間 | 完全な透過性: 仮想IPはアクティブノード上にローカル設定されます。クライアントIPは変わりません。  
-負荷分散（アクティブ／アクティブ） | <span class="notranslate farm-term" translate="no">Farm</span>クラスター | カーネルネットワークフィルター / GARP | ✅ SafeKit製品 | 非常に低い: 障害検出とネットワークフィルター変更にかかる時間 | 完全な透過性: 仮想IPはすべてのノード上にローカル設定されます。クライアントIPは変わりません。  
-同一サブネット／拡張LAN（拡張VLAN） | 災害復旧（リモートデータセンター） | IPエイリアス / GARP | ✅ SafeKit製品（拡張VLANはネットワークチームが提供） | 低い: 拡張VLANの往復時間（RTT）による | 完全な透過性: 仮想IPは各ノード上にローカル設定されます。クライアントIPは変わりません。  
-異なるサブネット: ロードバランサーのみ | 災害復旧（リモートデータセンター／クラウド） | 外部ロードバランサー | 🛠️ インテグレーター: ロードバランサー設定（SafeKitはヘルスチェックを提供） | 中程度: ロードバランサーのヘルスチェック間隔による | ⚠️ SNAT/DNATを使用する場合、透過性は部分的です。仮想IPはノード上にローカル設定され**ません**。クライアントIPが保持され**ない**場合があります。アプリケーション側で対応が必要です。  
-異なるサブネット: ロードバランサー + SafeKitローカル仮想IP | 災害復旧（リモートデータセンター／クラウド） | Floating IP / Direct Server Return対応の外部ロードバランサー | 🛠️ インテグレーター: ロードバランサー設定（SafeKitはヘルスチェックを提供） | 中程度: ロードバランサーのヘルスチェック間隔による | 高い透過性: 仮想IPはプライマリノード上にローカル設定され、宛先アドレスとして使用されます。  
-異なるサブネット: クラウドCLI | 災害復旧（クラウド） | クラウドAPI: プライベートIPまたはクラウドルートを新しいプライマリへ移動 | 🛠️ インテグレーター: `start_prim`スクリプト内のクラウドCLIコマンド | 中～高: クラウドAPIの応答時間による | 完全な透過性: 仮想IPはプライマリノード上にローカル設定されます。クライアントIPは変わりません。  
-異なるサブネット: BGP | 災害復旧（リモートデータセンター／クラウド） | BGPでアナウンスする/32ルート | 🛠️ インテグレーター: `start_prim`と`stop_prim`スクリプト内のBGPコマンド | 低～中: BGP収束時間による | 完全な透過性: 仮想IPはプライマリノード上にローカル設定されます。クライアントIPは変わりません。BGPルーターが必要です。  
-DNSリダイレクト: 仮想IPなし | 災害復旧（リモートデータセンター） | DNSレコードの変更（名前／物理IP） | 🛠️ インテグレーター: `start_prim`スクリプト内のDNS更新コマンド | 高く予測困難: DNS TTLとクライアントDNSキャッシュによる | ⚠️ 信頼性がありません: クライアントがDNSを再検索する必要があります。多くの場合、クライアントは起動時に取得した古いIPを使い続け、フェイルオーバー後も切り替わりません。  
+プライマリ／バックアップ（高可用性） | Mirror クラスター | 不必要な ARP/MAC 乗っ取り | ✅ SafeKit 製品 | 非常に低い: 障害を検出して GARP を送信するまでの時間 | 完全な透明性：仮想 IP アドレスはアクティブノード上のローカル IP アドレスです。クライアント IP アドレスは変更されません。  
+負荷分散（アクティブ/アクティブ） | <span class="notranslate farm-term" translate="no">Farm</span> 群 | カーネルネットワークフィルタ / GARP | ✅ SafeKit 製品 | 非常に低い：障害を検出してネットワークフィルタを変更するまでの時間 | 完全な透明性：仮想 IP アドレスはすべてのノードでローカルです。クライアント IP アドレスは変更されません。  
+同一サブネット／拡張 LAN（ストレッチ VLAN） | 災害復旧（遠隔データセンター） | IP エイリアシング/GARP | ✅ SafeKit 製品（拡張 VLAN はネットワークチームによって提供されます） | 低: 拡張 VLAN の往復時間(RTT)に依存します | 完全な透明性：仮想 IP アドレスはノード上でローカルです。クライアント IP アドレスは変更されません。  
+異なるサブネット：ロードバランサーのみ | 災害復旧（リモートデータセンター／クラウド） | 外部ロードバランサー | 🛠️インテグレーター：ロードバランサーの設定（SafeKit がヘルスチェックを提供します） | 中程度：ロードバランサーのヘルスチェック間隔によって異なります | ⚠️ SNAT/DNAT を使用する場合、透過性は部分的にしか確保されません。仮想 IP アドレスはノード上でローカル**ではありません**。クライアント IP アドレスが保持され**ない**場合があります。アプリケーションはこの機能をサポートする必要があります。  
+異なるサブネット：ロードバランサー + ローカル SafeKit 仮想 IP | 災害復旧（リモートデータセンター／クラウド） | Floating IP / Direct Server Return を備えた外部ロードバランサー | 🛠️インテグレーター：ロードバランサーの設定（SafeKit がヘルスチェックを提供します） | 中程度：ロードバランサーのヘルスチェック間隔によって異なります | 優れた透明性：仮想 IP はプライマリノード上のローカル IP であり、宛先アドレスです。
+異なるサブネット: クラウド CLI | 災害復旧（クラウド） | クラウド API：プライベート IP またはクラウドルートが新しいプライマリに移動します | 🛠️ インテグレーター: `start_prim` スクリプト内のクラウド CLI コマンド | 中～高：クラウド API の応答時間による | 完全な透明性：仮想 IP アドレスはプライマリノード上でローカルに設定されます。クライアント IP アドレスは変更されません。
+異なるサブネット: BGP | 災害復旧（リモートデータセンター／クラウド） | /32 ルートが BGP でアナウンスされました | 🛠️ インテグレーター: `start_prim` および `stop_prim` スクリプト内の BGP コマンド | 低～中程度：BGP 収束時間による | 完全な透明性：仮想 IP アドレスはプライマリノード上でローカルに設定されます。クライアント IP アドレスは変更されません。BGP ルーターが必要です。  
+DNS リダイレクト：仮想 IP なし | 災害復旧（遠隔データセンター） | DNS レコードの変更（名前／物理 IP アドレス） | 🛠️ インテグレーター: `start_prim` スクリプト内の DNS 更新コマンド | 高い値で予測不可能：DNS TTL（Time To Live）とクライアントの DNS キャッシュに依存します | ⚠️ 信頼性が低い：クライアントは新しい DNS ルックアップを実行する必要があります。多くの場合、クライアントは起動時に取得した古い IP アドレスを保持し、フェイルオーバー後も再ルーティングされません。  
+  
+## 仮想 IP に関するよくある質問 {#virtual-ip-faq}
 
-## 仮想IPに関するよくある質問 {#virtual-ip-faq}
+### 仮想 IP とネットワーク {#virtual-ip--networking}
 
-### 仮想IPとネットワーク {#virtual-ip--networking}
+仮想 IP とは何ですか？また、物理 IP とはどのように異なりますか？
 
-仮想IPアドレスとは何ですか。物理IPアドレスとどう違いますか。
+**物理 IP アドレス**は 1 枚のネットワークカードに紐づけられます。**仮想 IP アドレス**はハードウェアに紐づけられません。SafeKit クラスタでは、クライアントは常に仮想 IP アドレスを使用します。プライマリサーバーに障害が発生した場合、仮想 IP アドレスは自動的に正常なノードに移動します。クライアントの設定を変更する必要はありません。
 
-**物理IPアドレス**はネットワークカードに紐づいています。**仮想IPアドレス**はハードウェアに紐づいていません。SafeKitクラスターではクライアントは常に仮想IPを使用します。プライマリサーバーが故障すると、仮想IPは正常なノードへ自動的に移動します。クライアント設定の変更は不要です。
+仮想 IP を使用するには、ハードウェアロードバランサーが必要ですか？
 
-仮想IPを使うためにハードウェアロードバランサーは必要ですか。
+いいえ。SafeKit **は**ソフトウェアで仮想 IP を管理します。同じサブネット内では、**IP エイリアシング**と **GARP（Gratuitous ARP）** を使用してトラフィックをリダイレクトします。外部のロードバランサーやプロキシサーバーは必要ありません。
 
-いいえ。**SafeKit**はソフトウェアで仮想IPを管理します。同一サブネットでは**IPエイリアス**と**Gratuitous ARP（GARP）**を使ってトラフィックをリダイレクトします。外部ロードバランサーやプロキシサーバーは不要です。
+無償 ARP（GARP）とは何ですか？また、なぜ使用されるのですか？
 
-Gratuitous ARP（GARP）とは何ですか。なぜ使用するのですか。
+**Gratuitous ARP（GARP）** は、すべてのデバイスに送信されるネットワークメッセージです。スイッチやルーターの ARP テーブルを更新します。フェイルオーバーが発生すると、新しいプライマリサーバーが GARP メッセージを送信します。このメッセージは、**仮想 IP** アドレスが新しいプライマリサーバーの MAC アドレスにリンクされたことを示します。その後、トラフィックは直ちに再ルーティングされます。
 
-**Gratuitous ARP（GARP）**はすべてのデバイスに送信するネットワークメッセージです。スイッチやルーターのARPテーブルを更新します。フェイルオーバー時、新しいプライマリサーバーがGARPメッセージを送り、**仮想IP**が新しいプライマリのMACアドレスに紐づいたことを通知します。トラフィックは直ちに再ルーティングされます。
+仮想 IP アドレスに DNS 名を関連付けることはできますか？
 
-仮想IPにDNS名を関連付けることはできますか。
-
-**はい。** 仮想IPに標準のAレコードを作成します。リダイレクトは**仮想IPレベル**（ARPまたはネットワークリダイレクト）で行われ、**DNSレベルでは行われません**。DNS遅延やTTLの問題はなく、フェイルオーバーは**アプリケーションに対して透過的**です。
+**はい。** 仮想 IP アドレスに対して標準の A レコードを作成してください。リダイレクトは **DNS レベルではなく**、**仮想 IP レベル**（ARP またはネットワークリダイレクトを使用）で行われます。DNS の遅延や TTL の問題は発生せず、フェイルオーバーは**アプリケーションにとって透過的**です。
 
 ### クラウドと高度なアーキテクチャ {#cloud--advanced-architectures}
 
-クラウド（AWS、Azure、GCP）で仮想IPはどのように機能しますか。
+クラウド（AWS、Azure、GCP）における仮想 IP アドレスの仕組みは？
 
-クラウドでは、レイヤー2のGARPメッセージを使って仮想IPを再ルーティングできません。SafeKitは**クラウドロードバランサー**（AWS ELB、Azure LB、Google GCLB）と連携します。SafeKitは**ヘルスチェックURL**を提供し、ロードバランサーはURLを確認してアクティブノードへトラフィックを送ります。
+クラウド環境では、レイヤー 2 の GARP メッセージを使用して仮想 IP アドレスをルーティングすることはできません。SafeKit は**クラウドロードバランサー**（AWS ELB、Azure LB、Google GCLB など）と連携して動作します。SafeKit は**ヘルスチェック用の URL** を提供し、ロードバランサーはこの URL を読み取ってトラフィックをアクティブなノードに送信します。
 
-災害復旧ではロードバランサーより拡張LANの方が適していますか。
+災害復旧において、拡張 LAN はロードバランサーよりも優れているのでしょうか？
 
-**はい。** リモートデータセンター間では、フェイルオーバーが**アプリケーションに対して透過的**なため、**拡張LAN（拡張VLAN）**が適していることがよくあります。**仮想IPは変わらない**ため、データセンター間のフェイルオーバー後もアプリケーションとクライアントは同じアドレスを使用できます。
+**はい**。遠隔地のデータセンター間では、**拡張 LAN（ストレッチ VLAN）** の方が多くの場合優れています。なぜなら、フェイル**オーバーがアプリケーションにとって透過的に**行われるからです。**仮想 IP アドレスは変更されない**ため、データセンター間のフェイルオーバー後も、アプリケーションとそのクライアントは同じアドレスを使い続けることができます。
 
-仮想IPと比べてDNSリダイレクトにはどのような制限がありますか。
+仮想 IP アドレスと比較した場合、DNS リダイレクトにはどのような限界がありますか？
 
-**DNSリダイレクト**は**TTL（Time to Live）**とクライアントDNSキャッシュに依存します。復旧に数時間かかることがあります。また、DNSを再検索しない**クライアントは故障したサーバーに接続したまま**になります。**仮想IP**はレイヤー2のGARPメッセージで直ちに再ルーティングされるため、クライアントDNSキャッシュの影響を受けません。
+**DNS リダイレクトは** **TTL（Time to Live）** とクライアント DNS キャッシュに依存します。復旧には数時間かかる場合があります。また、**新しい DNS ルックアップを行わないクライアントは、障害が発生したサーバーでブロックされたままになります**。**仮想 IP** は、レイヤー 2 で GARP メッセージを使用して即座に再ルーティングされます。クライアント DNS キャッシュは影響しません。
 
-### 透過性とセキュリティ {#transparency--security}
+### 透明性とセキュリティ {#transparency--security}
 
-ローカル仮想IPがアプリケーション透過性に重要なのはなぜですか。
+アプリケーションの透過性にとって、ローカル仮想 IP が重要なのはなぜですか？
 
-ローカルな**仮想IP**を使用すると、アプリケーションは変わらないアドレスを使用します。SafeKitは**カーネル**でリダイレクトするため、アプリケーションはフェイルオーバーを認識しません。DNATではアプリケーションが使用するアドレスが変わります。
+ローカル**仮想 IP** を使用する場合、アプリケーションは変更されないアドレスを使用します。SafeKit が**カーネル**内でリダイレクトを実行します。アプリケーションはフェイルオーバーを認識しません。DNAT を使用する場合、アプリケーションが使用するアドレスは変更されます。
 
-仮想IPはクライアントの元のIPアドレスを維持しますか。
+仮想 IP アドレスは、元のクライアント IP アドレスを保持しますか？
 
-はい。SafeKitは送信元NAT（SNAT）を使用しません。仮想IPはアクティブサーバー上にローカル設定されているため、アプリケーションは**クライアントの元のIPアドレス**を受け取ります。これはセキュリティ監査、セッション維持、規制ログに重要です。
+はい。SafeKit はソース NAT（SNAT）を使用しません。仮想 IP アドレスはアクティブサーバー上のローカル IP アドレスであるため、アプリケーションは**元のクライアント IP** アドレスを受信します。これは、セキュリティ監査、セッションの永続性、および規制ログにとって重要です。
+
 
 {{%  insert-safekit-hub-ja  %}}
 
