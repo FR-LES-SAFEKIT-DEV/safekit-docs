@@ -11,7 +11,7 @@ topics: "What is a virtual IP address in a high availability cluster?, Virtual I
 
 ## What is a virtual IP address in a high availability cluster? {#virtual-ip-definition}
 
-A **virtual IP address** is the single address that clients use to connect to an application in a [high availability cluster](</>). The virtual IP is not linked to one server. On failover, it moves to the server that runs the application. Clients do not need to change their configuration.
+A **virtual IP address** is the single address that clients use to connect to an application in a [high availability cluster](</>). The virtual IP is not linked to one server. On failover, it moves to the server that runs the application. Clients do not need to change their configuration. 
 
 **Key principle in SafeKit:** the virtual IP is **configured locally on the server** that runs the application. The application starts on the virtual IP, and it receives the original client IP. This is why many applications work correctly with SafeKit without any change. SafeKit provides two types of virtual IP:
 
