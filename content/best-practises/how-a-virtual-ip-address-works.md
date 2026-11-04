@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/how-a-virtual-ip-address-w
 description: "How SafeKit moves a virtual IP on failover: gratuitous ARP in the same subnet, load balancer, cloud CLI or BGP across subnets. Why a local virtual IP matters."
 category: "best-practises"
 lang: "en"
-topics: "What is a virtual IP address in a high availability cluster?, Virtual IP implementation in SafeKit, How a virtual IP address works in the same subnet (mirror cluster), How a virtual IP works across different subnets with a load balancer (mirror cluster), How a virtual IP works across different subnets with cloud provider CLIs (mirror cluster), How a virtual IP works across different subnets with BGP (mirror cluster), How DNS redirection works across different subnets (mirror cluster), How a load balanced virtual IP works in a same-subnet farm (farm cluster), How a load balanced virtual IP works across different subnets (farm cluster), Comparison: virtual IP implementation, latency, and application transparency, Frequently asked questions on virtual IP, 🔍 Explore SafeKit"
+topics: "What is a virtual IP address in a high availability cluster?, Virtual IP implementation in SafeKit, How a virtual IP address works in the same subnet (mirror cluster), How a virtual IP works across different subnets with a load balancer (mirror cluster), How a virtual IP works across different subnets with cloud provider CLIs (mirror cluster), How a virtual IP works across different subnets with BGP (mirror cluster), How DNS redirection works across different subnets (mirror cluster), How a load balanced virtual IP works in the same subnet (farm cluster), How a load balanced virtual IP works across different subnets (farm cluster), Comparison: virtual IP implementation, latency, and application transparency, Frequently asked questions on virtual IP, 🔍 Explore SafeKit"
 ---
 
 # How a virtual IP address works in high availability clustering? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -186,7 +186,7 @@ If one condition is false, **Client 1 and Client 2 stay blocked** on physical IP
 
 DNS redirection is not a reliable high availability solution. Use it only if all clients do a new DNS lookup when they reconnect. For immediate and transparent failover, use a **virtual IP**: on an extended LAN, with a load balancer, with cloud provider CLIs or with BGP.
 
-## How a load balanced virtual IP works in a same-subnet <span class="notranslate farm-term" translate="no">farm</span> (<span class="notranslate farm-term" translate="no">farm</span> cluster) {#virtual-ip-load-balancing-same-subnet}
+## How a load balanced virtual IP works in the same subnet (<span class="notranslate farm-term" translate="no">farm</span> cluster) {#virtual-ip-load-balancing-same-subnet}
 
 - [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/)
 
@@ -197,7 +197,7 @@ When there is a lot of traffic, SafeKit can share the work between several activ
 ### <span class="notranslate farm-term" translate="no">Farm</span> cluster architecture: load balancing between Windows or Linux nodes {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
-![Diagram of a load balanced virtual IP within a same-subnet farm cluster](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
+![Diagram of a load balanced virtual IP within the same subnet](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
 In a **load balancing <span class="notranslate farm-term" translate="no">farm</span> cluster**, clients connect to a virtual IP, and the requests are shared between several servers at the same time. This example has two nodes, but you can add more servers. In the same subnet, the virtual IP is configured with IP aliasing on the network card of **every server** in the cluster. 
 
