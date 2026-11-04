@@ -35,6 +35,7 @@ Also in this article:
   * [🔍 Explore SafeKit](#hub)
 
 ![Comparison diagram of virtual IP behavior in Eviden SafeKit: Mirror Clusters showing a floating IP on the active node vs. farm clusters showing network load balancing across all nodes.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
+
 **Virtual IP implementation for mirror and <span class="notranslate farm-term" translate="no">farm</span> clusters in SafeKit.**
 
 ## How a virtual IP address works in the same subnet (mirror cluster) {#virtual-ip-same-subnet-failover}
