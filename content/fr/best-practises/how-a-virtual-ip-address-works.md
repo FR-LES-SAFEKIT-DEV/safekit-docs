@@ -56,7 +56,7 @@ Sur un réseau local, **SafeKit pour les clusters de réseau local** gère autom
 
 Dans un **cluster Mirror SafeKit**, les deux nœuds se trouvent dans le même sous-réseau. La haute disponibilité repose sur une **adresse IP virtuelle**. SafeKit gère la VIP dans la pile réseau du système d'exploitation, sans matériel spécial. La VIP est ajoutée aux adresses IP physiques des serveurs 1 et 2 au moyen de l'**aliasage IP**. Les clients se connectent toujours à la VIP.
 
-#### Aliasage IP et gestion de plusieurs VIP dans SafeKit {#safekits-advanced-ip-aliasing--multiple-vip-support}
+#### Aliasage IP et gestion de plusieurs VIP dans SafeKit {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
 
 La VIP est une troisième adresse IP qui passe d'un nœud à l'autre. SafeKit peut gérer **plusieurs adresses IP virtuelles** dans un même cluster. Elles peuvent être configurées sur la même carte réseau ou sur des cartes différentes, afin que chaque service dispose de sa propre VIP.
 
@@ -114,7 +114,7 @@ Certaines applications utilisent la VIP comme adresse de serveur. Elles ne fonct
 
 Les réseaux cloud (AWS, Azure, Google Cloud) **ignorent l'ARP gratuit**. Ils acheminent le trafic uniquement vers les adresses IP attribuées sur la plateforme cloud. SafeKit configure la VIP sur le serveur principal, mais le réseau cloud ne dirige pas le trafic de la VIP vers ce serveur.
 
-### Déplacer la VIP avec la CLI cloud {#moving-the-vip-through-the-cloud-api-in-safekit-failover-scripts}
+### Déplacer la VIP avec la CLI cloud {#moving-the-virtual-ip-through-the-cloud-api-in-safekit-failover-scripts}
 
 Sans répartiteur de charge, la CLI du fournisseur cloud peut être intégrée au script SafeKit **`start_prim`** pour mettre à jour la configuration réseau du cloud avant le démarrage de l'application. La CLI peut attribuer l'adresse IP virtuelle au nœud qui devient principal ou modifier la route cloud pour diriger le trafic de cette adresse vers ce nœud.
 
@@ -187,7 +187,7 @@ Si une seule de ces conditions n'est pas remplie, les **clients 1 et 2 restent b
 
 La redirection DNS n'est pas une solution fiable de haute disponibilité. Utilisez-la uniquement si tous les clients effectuent une nouvelle résolution DNS à la reconnexion. Pour un basculement immédiat et transparent, utilisez une **adresse IP virtuelle** : via un LAN étendu, un répartiteur de charge, les CLI d'un fournisseur cloud ou BGP.
 
-## Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans une Farm sur le même sous-réseau (cluster Farm) {#vip-load-balancing-same-subnet}
+## Fonctionnement d'une adresse IP virtuelle à charge équilibrée dans une Farm sur le même sous-réseau (cluster Farm) {#virtual-ip-load-balancing-same-subnet}
 
 - [Tester l'adresse IP virtuelle avec équilibrage de charge dans un cluster Farm SafeKit](/fr/best-practises/test-load-balancing-vip-farm/)
 
@@ -219,7 +219,7 @@ Cette solution d'équilibrage de charge fonctionne également entre des **centre
 
 {{%  insert-safekit-farm-video-fr  %}}
 
-## Fonctionnement d'une adresse IP virtuelle à charge équilibrée entre différents sous-réseaux (cluster Farm) {#vip-load-balancing-different-subnets}
+## Fonctionnement d'une adresse IP virtuelle à charge équilibrée entre différents sous-réseaux (cluster Farm) {#virtual-ip-load-balancing-different-subnets}
 
 ### Mise à l'échelle multizone : trafic entre sous-réseaux cloud {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
@@ -273,7 +273,7 @@ Redirection DNS : sans adresse IP virtuelle | Reprise après sinistre (centres d
   
 ## Foire aux questions sur l'adresse IP virtuelle {#virtual-ip-faq}
 
-### Adresse IP virtuelle et réseau {#virtual-ip-vip--networking}
+### Adresse IP virtuelle et réseau {#virtual-ip--networking}
 
 Qu'est-ce qu'une adresse IP virtuelle et en quoi diffère-t-elle d'une adresse IP physique ?
 
