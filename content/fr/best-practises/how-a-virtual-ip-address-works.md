@@ -1,5 +1,5 @@
 ---
-title: "Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ?"
+title: "Comment fonctionne une adresse IP virtuelle dans un cluster à haute disponibilité ?"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-a-virtual-ip-address-works/"
 description: "Découvrez comment SafeKit déplace une adresse IP virtuelle lors d'un basculement : ARP gratuit dans le même sous-réseau, répartiteur de charge, CLI cloud ou BGP entre sous-réseaux. Pourquoi une adresse IP virtuelle locale est importante."
 category: "best-practises"
@@ -7,7 +7,7 @@ lang: "fr"
 topics: "Qu'est-ce qu'une adresse IP virtuelle dans un cluster haute disponibilité ?, Implémentation de l'adresse IP virtuelle dans SafeKit, Fonctionnement d'une adresse IP virtuelle dans le même sous-réseau (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec un répartiteur de charge (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec les CLI des fournisseurs cloud (cluster Mirror), Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec BGP (cluster Mirror), Fonctionnement de la redirection DNS entre différents sous-réseaux (cluster Mirror), Fonctionnement d'une adresse IP virtuelle avec équilibrage de charge dans une Farm sur le même sous-réseau (cluster Farm), Fonctionnement d'une adresse IP virtuelle avec équilibrage de charge entre différents sous-réseaux (cluster Farm), Comparaison de l'implémentation, de la latence et de la transparence applicative, Foire aux questions sur l'adresse IP virtuelle, 🔍 Explorer SafeKit"
 ---
 
-# Comment fonctionne une adresse IP virtuelle (VIP) dans un cluster à haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# Comment fonctionne une adresse IP virtuelle dans un cluster à haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
 
 ## Qu'est-ce qu'une adresse IP virtuelle dans un cluster à haute disponibilité ? {#virtual-ip-definition}
 
@@ -52,9 +52,9 @@ Sur un réseau local, **SafeKit pour les clusters de réseau local** gère autom
 
 ### Cluster Mirror local : basculement à deux nœuds sous Windows ou Linux {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
 
-![Mécanisme de basculement de l'adresse IP virtuelle (VIP) SafeKit entre deux serveurs dans le même sous-réseau](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
+![Mécanisme de basculement de l'adresse IP virtuelle SafeKit entre deux serveurs dans le même sous-réseau](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-Dans un **cluster Mirror SafeKit**, les deux nœuds se trouvent dans le même sous-réseau. La haute disponibilité repose sur une **adresse IP virtuelle (VIP)**. SafeKit gère la VIP dans la pile réseau du système d'exploitation, sans matériel spécial. La VIP est ajoutée aux adresses IP physiques des serveurs 1 et 2 au moyen de l'**aliasage IP**. Les clients se connectent toujours à la VIP.
+Dans un **cluster Mirror SafeKit**, les deux nœuds se trouvent dans le même sous-réseau. La haute disponibilité repose sur une **adresse IP virtuelle**. SafeKit gère la VIP dans la pile réseau du système d'exploitation, sans matériel spécial. La VIP est ajoutée aux adresses IP physiques des serveurs 1 et 2 au moyen de l'**aliasage IP**. Les clients se connectent toujours à la VIP.
 
 #### Aliasage IP et gestion de plusieurs VIP dans SafeKit {#safekits-advanced-ip-aliasing--multiple-vip-support}
 
@@ -107,12 +107,6 @@ Certaines applications utilisent la VIP comme adresse de serveur. Elles ne fonct
 
   * **La VIP se trouve dans le même sous-réseau que les adresses IP physiques des serveurs :** conservez la section `<vip>` dans le module SafeKit. SafeKit configure automatiquement la VIP comme alias sur la carte réseau portant l'adresse IP physique.
   * **La VIP se trouve dans un sous-réseau différent :** ne configurez pas `<vip>` dans SafeKit. Utilisez le script `start_prim` pour configurer la VIP sur une interface dédiée, telle que loopback, avant le démarrage de l'application. Utilisez `stop_prim` pour supprimer la VIP après l'arrêt de l'application. L'intégrateur écrit ces commandes, qui ne sont pas fournies par le produit SafeKit.
-
-### Alternatives à un répartiteur de charge {#network-considerations-load-balancer-vs-extended-lan}
-
-  * Un [**LAN étendu (VLAN étendu)**](#remote-data-centers--extended-vlans) entre les sous-réseaux permet d'utiliser la solution plus simple dans le même sous-réseau.
-  * [Les CLI des fournisseurs cloud dans les scripts de basculement](#virtual-ip-cloud-cli-failover).
-  * [L'annonce de routes BGP](#virtual-ip-bgp-failover).
 
 ## Fonctionnement d'une adresse IP virtuelle entre différents sous-réseaux avec les CLI des fournisseurs cloud (cluster Mirror) {#virtual-ip-cloud-cli-failover}
 
@@ -203,9 +197,9 @@ Lorsque le trafic est important, SafeKit peut répartir la charge entre plusieur
 
 ### Architecture du cluster Farm : équilibrage de charge entre des nœuds Windows ou Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
-![Schéma d'une adresse IP virtuelle (VIP) avec équilibrage de charge dans un cluster Farm sur le même sous-réseau](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
+![Schéma d'une adresse IP virtuelle avec équilibrage de charge dans un cluster Farm sur le même sous-réseau](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
 
-Dans un **cluster Farm avec équilibrage de charge**, les clients se connectent à une adresse IP virtuelle (VIP) et leurs requêtes sont réparties simultanément entre plusieurs serveurs. Cet exemple comporte deux nœuds, mais il est possible d'en ajouter. Dans le même sous-réseau, la VIP est configurée par aliasage IP sur la carte réseau de **chaque serveur** du cluster.
+Dans un **cluster Farm avec équilibrage de charge**, les clients se connectent à une adresse IP virtuelle et leurs requêtes sont réparties simultanément entre plusieurs serveurs. Cet exemple comporte deux nœuds, mais il est possible d'en ajouter. Dans le même sous-réseau, la VIP est configurée par aliasage IP sur la carte réseau de **chaque serveur** du cluster.
 
 #### Répartition du trafic : filtre du noyau {#traffic-distribution-the-kernel-level-filter}
 
@@ -273,17 +267,17 @@ Principal/secours (haute disponibilité) | Cluster Mirror | ARP gratuit / repris
 Même sous-réseau / LAN étendu (VLAN étendu) | Reprise après sinistre (centres de données distants) | Aliasage IP / GARP | ✅ Produit SafeKit (le VLAN étendu est fourni par l'équipe réseau) | Faible : dépend du temps aller-retour (RTT) du VLAN étendu | Transparence totale : l'adresse IP virtuelle est locale sur les nœuds. L'adresse IP du client ne change pas.  
 Sous-réseaux différents : répartiteur de charge seul | Reprise après sinistre (centres de données distants / cloud) | Répartiteur de charge externe | 🛠️ Intégrateur : configuration du répartiteur (SafeKit fournit le contrôle d'état) | Moyenne : dépend de l'intervalle de contrôle d'état du répartiteur | ⚠️ Transparence partielle : SNAT/DNAT est utilisé. L'adresse IP virtuelle n'est **PAS** locale sur les nœuds et l'adresse IP du client peut ne **PAS** être conservée. L'application doit le prendre en charge.  
 Sous-réseaux différents : répartiteur de charge + VIP SafeKit locale | Reprise après sinistre (centres de données distants / cloud) | Répartiteur externe avec Floating IP / Direct Server Return | 🛠️ Intégrateur : configuration du répartiteur (SafeKit fournit le contrôle d'état) | Moyenne : dépend de l'intervalle de contrôle d'état du répartiteur | Bonne transparence : l'adresse IP virtuelle est locale sur le nœud principal et sert d'adresse de destination. L'adresse IP du client ne change pas. À tester avec l'application.  
-Sous-réseaux différents : CLI cloud | Reprise après sinistre (cloud) | API cloud : attribution de l'adresse IP ou modification d'une route vers le nouveau primaire | 🛠️ Intégrateur : commandes CLI cloud dans `start_prim` | Moyenne à élevée : dépend du temps de réponse de l'API cloud | Transparence totale : l'adresse IP virtuelle est locale sur le nœud principal. L'adresse IP du client ne change pas. Configuration non validée.  
+Sous-réseaux différents : CLI cloud | Reprise après sinistre (cloud) | API cloud : l'adresse IP privée ou une route cloud est déplacée vers le nouveau serveur principal | 🛠️ Intégrateur : commandes CLI cloud dans `start_prim` | Moyenne à élevée : dépend du temps de réponse de l'API cloud | Transparence totale : l'adresse IP virtuelle est locale sur le nœud principal. L'adresse IP du client ne change pas. Configuration non validée.  
 Sous-réseaux différents : BGP | Reprise après sinistre (centres de données distants / cloud) | Route /32 annoncée par BGP | 🛠️ Intégrateur : commandes BGP dans `start_prim` et `stop_prim` | Faible à moyenne : dépend du temps de convergence BGP | Transparence totale : l'adresse IP virtuelle est locale sur le nœud principal. L'adresse IP du client ne change pas. Routeurs BGP requis.  
 Redirection DNS : sans adresse IP virtuelle | Reprise après sinistre (centres de données distants) | Modification de l'enregistrement DNS (nom / adresse IP physique) | 🛠️ Intégrateur : commandes DNS dans `start_prim` | Élevée et imprévisible : dépend du TTL DNS et du cache DNS des clients | ⚠️ Non fiable : le client doit effectuer une nouvelle résolution DNS. Souvent, les clients conservent l'ancienne adresse IP reçue au démarrage et ne sont pas reroutés après le basculement.  
   
-## Foire aux questions sur l'adresse IP virtuelle (VIP) {#virtual-ip-faq}
+## Foire aux questions sur l'adresse IP virtuelle {#virtual-ip-faq}
 
-### Adresse IP virtuelle (VIP) et réseau {#virtual-ip-vip--networking}
+### Adresse IP virtuelle et réseau {#virtual-ip-vip--networking}
 
-Qu'est-ce qu'une adresse IP virtuelle (VIP) et en quoi diffère-t-elle d'une adresse IP physique ?
+Qu'est-ce qu'une adresse IP virtuelle et en quoi diffère-t-elle d'une adresse IP physique ?
 
-Une **adresse IP physique** est associée à une carte réseau. Une **adresse IP virtuelle (VIP)** n'est pas liée au matériel. Dans un cluster SafeKit, les clients utilisent toujours la VIP. Si le serveur principal tombe en panne, la VIP passe automatiquement à un nœud disponible. Les clients n'ont pas besoin de modifier leur configuration.
+Une **adresse IP physique** est associée à une carte réseau. Une **adresse IP virtuelle** n'est pas liée au matériel. Dans un cluster SafeKit, les clients utilisent toujours la VIP. Si le serveur principal tombe en panne, la VIP passe automatiquement à un nœud disponible. Les clients n'ont pas besoin de modifier leur configuration.
 
 Ai-je besoin d'un répartiteur de charge matériel pour utiliser une adresse IP virtuelle ?
 
@@ -315,7 +309,7 @@ La **redirection DNS** dépend du **TTL (Time to Live)** et du cache DNS des cli
 
 Pourquoi une adresse IP virtuelle locale est-elle importante pour la transparence applicative ?
 
-Avec une **adresse IP virtuelle (VIP)** locale, l'application utilise une adresse qui ne change pas. SafeKit effectue le reroutage dans le **noyau** : l'application ne voit pas le basculement. Avec DNAT, l'adresse utilisée par l'application change.
+Avec une **adresse IP virtuelle** locale, l'application utilise une adresse qui ne change pas. SafeKit effectue le reroutage dans le **noyau** : l'application ne voit pas le basculement. Avec DNAT, l'adresse utilisée par l'application change.
 
 Une adresse IP virtuelle conserve-t-elle l'adresse IP d'origine du client ?
 
