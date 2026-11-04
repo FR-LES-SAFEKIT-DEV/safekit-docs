@@ -20,15 +20,15 @@ A **virtual IP (VIP) address** is the single address that clients use to connect
 This article explains how SafeKit moves the virtual IP (VIP) in each network architecture:
 
   * **Same subnet or extended LAN (mirror and <span class="notranslate farm-term" translate="no">farm</span> clusters):** SafeKit configures the virtual IP (VIP) on the server and sends a **gratuitous ARP (GARP)**. No external hardware is needed. This is the most transparent solution (everything is implemented by the SafeKit product).
-  * **Different subnets with a load balancer:** the load balancer uses the SafeKit **health check** to send traffic to the right server. Keep the virtual IP (VIP) also configured locally on the primary server (the load balancer is configured by the integrator).
+  * **Different subnets with a load balancer:** the load balancer uses the SafeKit **health check** to send traffic to the right server (the load balancer is configured by the integrator).
   * **Different subnets with cloud provider CLIs:** the SafeKit `start_prim` script calls the cloud CLI to move the virtual IP (VIP) (script written by the integrator).
   * **Different subnets with BGP:** the primary server announces the virtual IP (VIP) to the routers (script written by the integrator).
 
 The article also explains why **DNS redirection** is not a reliable alternative to a virtual IP (VIP).
 
-![Comparison diagram of virtual IP (VIP) behavior in Evidian SafeKit: Mirror Clusters showing a floating IP on the active node vs. farm clusters showing network load balancing across all nodes.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
+![Comparison diagram of virtual IP (VIP) behavior in Eviden SafeKit: Mirror Clusters showing a floating IP on the active node vs. farm clusters showing network load balancing across all nodes.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
-**virtual IP implementation for mirror and <span class="notranslate farm-term" translate="no">farm</span> clusters in SafeKit.**
+**vVirtual IP implementation for mirror and <span class="notranslate farm-term" translate="no">farm</span> clusters in SafeKit.**
 
 ## Table of contents {#table-of-contents}
 
@@ -36,18 +36,18 @@ The article also explains why **DNS redirection** is not a reliable alternative 
   * [How a virtual IP (VIP) works across different subnets with a load balancer (mirror cluster)](#virtual-ip-different-subnets-failover)
   * [How a virtual IP (VIP) works across different subnets with cloud provider CLIs (mirror cluster)](#virtual-ip-cloud-cli-failover)
   * [How a virtual IP (VIP) works across different subnets with BGP (mirror cluster)](#virtual-ip-bgp-failover)
-  * [How a load balanced virtual IP works in a same-subnet <span class="notranslate farm-term" translate="no">farm</span> (<span class="notranslate farm-term" translate="no">farm</span> cluster)](#virtual IP (VIP)-load-balancing-same-subnet)
-  * [How a load balanced virtual IP works across different subnets (<span class="notranslate farm-term" translate="no">farm</span> cluster)](#virtual IP (VIP)-load-balancing-different-subnets)
+  * [How a load balanced virtual IP works in a same-subnet <span class="notranslate farm-term" translate="no">farm</span> (<span class="notranslate farm-term" translate="no">farm</span> cluster)](#virtual-ip-load-balancing-same-subnet)
+  * [How a load balanced virtual IP works across different subnets (<span class="notranslate farm-term" translate="no">farm</span> cluster)](#virtual-ip-load-balancing-different-subnets)
   * [virtual IP vs. DNS redirection: why DNS failover often fails](#virtual-ip-vs-dns-redirection-failover)
-  * [Comparison: virtual IP implementation, latency, and application transparency](#virtual IP (VIP)-vs-dns-comparison)
+  * [Comparison: virtual IP implementation, latency, and application transparency](#virtual-ip-vs-dns-comparison)
   * [Configuring a virtual IP address for network load balancing and high availability](#virtual-ip-configuration-load-balancing-ha)
   * [Frequently asked questions on virtual IP (VIP)](#virtual-ip-faq)
-  * [🔍 SafeKit high availability navigation hub](#hub)
+  * [🔍 Explore SafeKit](#hub)
 
 
 ## How a virtual IP address (VIP) works in a same-subnet failover (mirror cluster) {#virtual-ip-same-subnet-failover}
 
-- [Testing the primary/backup virtual IP address in a SafeKit mirror cluster](/best-practises/test-primary-backup-virtual IP (VIP)-mirror/)
+- [Testing the primary/backup virtual IP address in a SafeKit mirror cluster](/best-practises/test-primary-backup-virtual-ip-mirror/)
 
 ### Automatic failover and network rerouting in a local subnet {#automated-failover--network-rerouting-in-a-local-subnet}
 
@@ -170,7 +170,7 @@ On failover, the `stop_prim` script on the old primary server stops the applicat
 
 ## How a load balanced virtual IP works in a same-subnet <span class="notranslate farm-term" translate="no">farm</span> (<span class="notranslate farm-term" translate="no">farm</span> cluster) {#virtual-ip-load-balancing-same-subnet}
 
-- [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-virtual IP (VIP)-farm/)
+- [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-virtual-ip-farm/)
 
 ### Scalable performance: load balancing in the kernel, with redundancy {#scalable-performance-kernel-level-load-balancing--redundancy}
 
