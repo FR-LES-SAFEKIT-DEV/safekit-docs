@@ -1,48 +1,52 @@
 ---
-title: "SafeKit: hoge beschikbaarheidssoftware voor Windows en Linux, zonder SAN"
+title: "SafeKit: software voor hoge beschikbaarheid voor Windows en Linux, zonder SAN"
 canonical: "https://safekit.eviden.com/nl/"
-description: "SafeKit is de alles-in-één SANless-software voor hoge beschikbaarheid op Windows en Linux. Profiteer van realtime synchrone replicatie, automatische failover en load balancing in één eenvoudig, kosteneffectief pakket. Start uw gratis proefperiode van 30 dagen."
+description: "SafeKit is de alles-in-één SANless HA-software voor Windows en Linux. Krijg real-time synchrone replicatie, automatische failover en load balancing in één eenvoudig, kosteneffectief pakket. Start uw gratis proefperiode van 30 dagen."
 category: "home"
 lang: "nl"
-topics: "Wat SafeKit doet, Kies uw beschermingsniveau, Kant-en-klare modules voor uw toepassingen, Klanttoepassingen, Eenvoudige, voorspelbare prijzen, Ken de beperkingen voordat u begint, SafeKit-videobibliotheek, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
+topics: "Wat SafeKit doet, Kies uw beschermingsniveau, Kant-en-klare modules voor uw toepassingen, Klantcasestudy's, Eenvoudige, voorspelbare prijzen, Ken de limieten voordat u begint, SafeKit-videobibliotheek, 🔍 SafeKit High Availability-navigatiehub"
+translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.12 | Translation LLM | 14 expressions"
 ---
 
-# SafeKit: hoge beschikbaarheidssoftware voor Windows en Linux, zonder SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
+# SafeKit: software voor hoge beschikbaarheid voor Windows en Linux, zonder SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
-SafeKit maakt van twee standaardservers een SANless-cluster met hoge beschikbaarheid dat uw toepassingen draaiend houdt. Het repliceert uw gegevens in realtime, start uw toepassing opnieuw op de tweede server als de eerste uitvalt en neemt de gerepareerde server automatisch weer op. U installeert het op uw bestaande servers, zonder gedeelde opslag of specialistische clusterkennis.
+SafeKit verandert twee standaardservers in een SANless-cluster met hoge beschikbaarheid dat uw applicaties blijft draaien. Het repliceert uw gegevens in realtime, start uw applicatie opnieuw op de tweede server als de eerste uitvalt, en integreert de uitgevallen server automatisch opnieuw zodra deze is gerepareerd. U installeert het op de servers die u al heeft, zonder gedeelde opslag en zonder dat er clusterkennis vereist is.
 
-De replicatie is synchroon: bij een serverstoring gaan geen gegevens verloren en is uw toepassing binnen ongeveer een minuut of minder weer beschikbaar. Licenties zijn permanent en worden per server geprijsd.
+Replicatie is synchroon, dus er gaan geen gegevens verloren wanneer een server uitvalt, en uw toepassing is binnen ongeveer een minuut of minder weer beschikbaar. Licenties zijn eeuwigdurend en geprijsd per server.
 
 <a class="btn-download" href="/nl/resources/safekit-free-trial/">Start uw gratis proefperiode van 30 dagen ›</a>
 
+
 ## Wat SafeKit doet {#features}
 
-SafeKit combineert vier functies in één product, dat u op Windows en Linux beheert via één webconsole of opdrachtregel.
+SafeKit combineert vier functies in één product, dat wordt beheerd vanuit één webconsole of één opdrachtregel, op Windows en Linux.
 
-| Functie | Werking |
+| Functie | Hoe het werkt |
 |---|---|
-| **Realtime replicatie** | Elke wijziging in uw bestanden wordt direct naar de tweede server gekopieerd, zodat er bij een storing geen gegevens verloren gaan. |
-| **Automatische failover** | SafeKit detecteert de storing, verplaatst het virtuele IP-adres en start de toepassing op de andere server opnieuw. |
-| **Automatische failback** | De gerepareerde server synchroniseert op de achtergrond opnieuw terwijl de toepassing blijft draaien. |
-| **Load balancing** | Netwerkloadbalancing draait op de servers zelf, zonder externe load balancer of proxy. |
+| **Realtime replicatie** | Elke wijziging die aan uw bestanden wordt aangebracht, wordt direct naar de tweede server gekopieerd, zodat er bij een storing geen gegevens verloren gaan. |
+| **Automatische failover** | SafeKit detecteert de storing, verplaatst het virtuele IP-adres en start de toepassing opnieuw op de andere server. |
+| **Automatische failback** | De herstelde server wordt op de achtergrond opnieuw gesynchroniseerd terwijl de toepassing blijft draaien. |
+| **Taakverdeling** | Netwerktaakverdeling wordt binnen de servers uitgevoerd, zonder externe load balancer of proxy's. |
 
-![SafeKit-webconsole die een mirroringcluster met twee knooppunten voor Windows en Linux bewaakt, met de servers PRIM en SECOND en actieve gegevensreplicatie](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png)
+![SafeKit-webconsole die een mirror-cluster 2 knooppunten voor Windows en Linux bewaakt, met de PRIM en SECOND -servers en actieve datareplicatie](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png)
 
-U hebt geen SAN, quorumdisk, Active Directory of Enterprise-edities van uw besturingssysteem of database nodig.
+U hebt geen SAN, een quorumschijf, Active Directory of enterprise-edities van uw besturingssysteem of database nodig.
 
-<a class="btn-download" href="/nl/architectures/">Bekijk de clusterarchitecturen ›</a>
+<a class="btn-download" href="/nl/architectures/">Ontdek de clusterarchitecturen ›</a>
+
 
 ## Kies uw beschermingsniveau {#protection-levels}
 
-**Applicatie-HA** (`mirror.safe`, `farm.safe` en de applicatiemodules) repliceert alleen uw applicatiegegevens en start de toepassing opnieuw op de tweede server. U moet weten welke services u opnieuw moet starten, welke mappen realtime moeten worden gerepliceerd en welk virtueel IP-adres moet worden overgenomen. Het werkt op fysieke servers, virtuele machines op alle hypervisors, waaronder VMware, Hyper-V en KVM, en in de cloud; bovendien biedt het de snelste herstelprocedure.
+**Applicatie-HA** (`mirror.safe`, `farm.safe` en de applicatiemodules) repliceert alleen uw applicatiegegevens en start de applicatie opnieuw op de tweede server. U moet weten welke services u opnieuw moet starten, welke mappen u in realtime moet repliceren en welk virtueel IP-adres u moet failoveren. Het werkt op fysieke servers, in virtuele machines op alle hypervisors, waaronder VMware, Hyper-V en KVM, en in de cloud, en het biedt het snelste herstel.
 
-**VM-HA** (`hyperv.safe`, `kvm.safe`) repliceert en schakelt de volledige virtuele machine over, zodat u niet hoeft te weten hoe de toepassing werkt. Dit is geschikt voor omgevingen met meerdere toepassingen verdeeld over meerdere VM's.
+**VM-HA** (`hyperv.safe`, `kvm.safe`) repliceert en failovert de hele virtuele machine, dus u hoeft niet te weten hoe de applicatie werkt. Het is geschikt voor omgevingen met meerdere applicaties verspreid over meerdere VM's.
 
 <a class="btn-download" href="/nl/best-practises/vm-ha-vs-application-ha/">Vergelijk applicatie-HA en VM-HA ›</a>
 
+
 ## Kant-en-klare modules voor uw toepassingen {#modules}
 
-Vooraf geconfigureerde modules zijn gratis en inbegrepen bij het product. Elke module bepaalt welke services opnieuw moeten starten en welke mappen voor een bepaalde toepassing moeten worden gerepliceerd.
+Voorgeconfigureerde modules zijn gratis en worden meegeleverd met het product. Elke module definieert welke services opnieuw moeten worden gestart en welke mappen moeten worden gerepliceerd voor een bepaalde toepassing.
 
 - **Databases:** SQL Server, PostgreSQL, Oracle, MySQL, MariaDB, Firebird
 - **Web:** Apache, IIS, NGINX
@@ -50,34 +54,38 @@ Vooraf geconfigureerde modules zijn gratis en inbegrepen bij het product. Elke m
 - **Cloud:** AWS, Azure, GCP en andere clouds
 - **Fysieke beveiliging en industrie:** Milestone XProtect, Genetec, Nedap, Bosch, Hanwha, Siemens
 
-<a class="btn-download" href="/nl/solutions/">Bekijk alle oplossingen en modules ›</a>
+<a class="btn-download" href="/nl/solutions/">Blader door alle oplossingen en modules ›</a>
 
-## Klanttoepassingen {#use-cases}
 
-- **Videobeheer (VMS):** houdt live- en opgenomen video beschikbaar als een server uitvalt. Gebruikt met Milestone, Genetec en Hanwha.
-- **Toegangscontrole (EACS):** houdt aanmeldgegevens en alarmen altijd beschikbaar. Gebruikt met Hirsch Microsesame, Nedap AEOS en Siemens SiPass.
-- **SCADA en industrie:** houdt productielijnen onder controle, bijvoorbeeld bij Probat-koffiebranders en ALSTEF-bagagesorteersystemen.
-- **Gebouwbeheer (BMS):** houdt HVAC-, beveiligings- en energiesystemen in bedrijf. Gebruikt met Siemens Desigo CC en Bosch BIS.
-- **Luchtverkeersleiding (ATC):** houdt verkeersleiders verbonden met kritieke platformtoepassingen, bijvoorbeeld met ADB SafeGate.
-- **Metrobedrijfsvoering (OCC):** houdt toezicht beschikbaar op geautomatiseerde, onbemande metrolijnen in Parijs.
-- **Edge-locaties:** maakt van twee standaardservers een HA-cluster op locaties zonder datacenter.
-- **Softwareleveranciers (OEM):** voegen hoge beschikbaarheid als softwareoptie toe aan hun catalogus.
+## Gebruiksscenario's van klanten {#use-cases}
 
-<a class="btn-download" href="/nl/use-cases/">Bekijk alle toepassingen ›</a>
+- **Videobeheer (VMS):** houdt live en opgenomen video beschikbaar tijdens een serverstoring. Wordt gebruikt met Milestone, Genetec en Hanwha.
+- **Toegangscontrole (EACS):** houdt inloggegevens en alarmen te allen tijde beschikbaar. Gebruikt met Hirsch Microsesame, Nedap AEOS en Siemens SiPass.
+- **SCADA en industrie:** houdt operators in controle over productielijnen, bijvoorbeeld Probat-koffiebranders en ALSTEF-bagagesorteermachines.
+- **Gebouwbeheersysteem (GBS):** houdt HVAC-, veiligheids- en energiesystemen draaiende. Wordt gebruikt met Siemens Desigo CC en Bosch BIS.
+- **Luchtverkeersleiding (ATC):** houdt controllers verbonden met essentiële luchtzijdige toepassingen, bijvoorbeeld met ADB SafeGate.
+- **Metro Operations Control (OCC):** houdt toezicht op geautomatiseerde, zelfrijdende metrolijnen in Parijs.
+- **Edge-sites:** verandert twee standaardservers in een HA-cluster waar geen datacenter is.
+- **Softwareleveranciers (OEM):** voegt hoge beschikbaarheid toe aan uw catalogus als een software-only optie.
+
+<a class="btn-download" href="/nl/use-cases/">Ontdek alle gebruiksscenario's ›</a>
+
 
 ## Eenvoudige, voorspelbare prijzen {#pricing}
 
-SafeKit wordt verkocht met een permanente licentie, dus er is geen verplicht abonnement. De prijs hangt alleen af van het aantal servers, niet van CPU-kernen of sockets, en alle applicatiemodules zijn gratis. Het werkt ook met standaardedities van Windows, Linux en uw databases, zodat u niet voor Enterprise-edities hoeft te betalen.
+SafeKit wordt verkocht met een eeuwigdurende licentie, dus er is geen verplicht abonnement. De prijs is alleen afhankelijk van het aantal servers, niet van CPU-cores of -sockets, en alle applicatiemodules zijn gratis. Het werkt ook met standaardversies van Windows, Linux en uw databases, zodat u niet betaalt voor Enterprise-edities.
 
 <a class="btn-download" href="/nl/safekit-pricing/">Vraag een offerte aan ›</a>
 
-## Ken de beperkingen voordat u begint {#limits}
 
-SafeKit is ontworpen voor eenvoud, niet voor elke situatie. Het is geschikt voor enkele terabytes gerepliceerde gegevens, minder dan 1.000.000 bestanden, maximaal 32 VM's met VM-HA en twee knooppunten op hetzelfde LAN of VLAN met lage latentie (doorgaans minder dan 5 ms retour).
+## Ken de grenzen voordat u begint {#limits}
 
-Voor grotere volumes zijn gedeelde opslag of een andere aanpak geschikter.
+SafeKit is gebouwd voor eenvoud, niet voor elk geval. Het is geschikt voor maximaal een paar terabytes aan gerepliceerde gegevens, minder dan 1.000.000 bestanden, maximaal 32 VM's bij gebruik van VM-HA, en twee knooppunten op hetzelfde LAN of VLAN met lage latentie (doorgaans minder dan 5 ms roundtrip).
 
-<a class="btn-download" href="/nl/product/#safekit-ha-limitations">Bekijk alle beperkingen ›</a>
+Voor grotere volumes is gedeelde opslag of een andere aanpak een betere keuze.
+
+<a class="btn-download" href="/nl/product/#safekit-ha-limitations">Bekijk de volledige lijst met beperkingen ›</a>
+
 
 {{%  insert-safekit-videos-table-nl  %}}
 

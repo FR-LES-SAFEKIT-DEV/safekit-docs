@@ -1,4 +1,5 @@
 {
+  "version": "2026-11-05.12",
   "keep": [
     "mirror",
     "farm",
@@ -9,6 +10,366 @@
     "Direct Server Return",
     "Network Load Balancer",
     "Azure Load Balancer",
-    "Google Cloud Load Balancing"
-  ]
+    "Google Cloud Load Balancing",
+    "GARP"
+  ],
+  "terms": {
+    "farm cluster": {
+      "fr": "cluster farm",
+      "de": "Farm-Cluster",
+      "es": "clúster farm",
+      "it": "cluster farm",
+      "nl": "farm-cluster",
+      "pt": "cluster farm",
+      "ja": "farm クラスター",
+      "ko": "farm 클러스터",
+      "zh-hans": "farm 集群",
+      "ar": "مجموعة farm"
+    },
+    "farm clusters": {
+      "fr": "clusters farm",
+      "de": "Farm-Cluster",
+      "es": "clústeres farm",
+      "it": "cluster farm",
+      "nl": "farm-clusters",
+      "pt": "clusters farm",
+      "ja": "farm クラスター",
+      "ko": "farm 클러스터",
+      "zh-hans": "farm 集群",
+      "ar": "مجموعات farm"
+    },
+    "mirror cluster": {
+      "fr": "cluster mirror",
+      "de": "Mirror-Cluster",
+      "es": "clúster mirror",
+      "it": "cluster mirror",
+      "nl": "mirror-cluster",
+      "pt": "cluster mirror",
+      "ja": "mirror クラスター",
+      "ko": "mirror 클러스터",
+      "zh-hans": "mirror 集群",
+      "ar": "مجموعة mirror"
+    },
+    "mirror clusters": {
+      "fr": "clusters mirror",
+      "de": "Mirror-Cluster",
+      "es": "clústeres mirror",
+      "it": "cluster mirror",
+      "nl": "mirror-clusters",
+      "pt": "clusters mirror",
+      "ja": "mirror クラスター",
+      "ko": "mirror 클러스터",
+      "zh-hans": "mirror 集群",
+      "ar": "مجموعات mirror"
+    },
+    "mirror and farm clusters": {
+      "fr": "clusters mirror et farm",
+      "de": "Mirror- und Farm-Cluster",
+      "es": "clústeres mirror y farm",
+      "it": "cluster mirror e farm",
+      "nl": "mirror- en farm-clusters",
+      "pt": "clusters mirror e farm",
+      "ja": "mirror クラスターと farm クラスター",
+      "ko": "mirror 및 farm 클러스터",
+      "zh-hans": "mirror 和 farm 集群",
+      "ar": "مجموعات mirror و farm"
+    },
+    "mirror or farm clusters": {
+      "fr": "clusters mirror ou farm",
+      "de": "Mirror- oder Farm-Cluster",
+      "es": "clústeres mirror o farm",
+      "it": "cluster mirror o farm",
+      "nl": "mirror- of farm-clusters",
+      "pt": "clusters mirror ou farm",
+      "ja": "mirror クラスターまたは farm クラスター",
+      "ko": "mirror 또는 farm 클러스터",
+      "zh-hans": "mirror 或 farm 集群",
+      "ar": "مجموعات mirror أو farm"
+    },
+    "primary/secondary": {
+      "fr": "principal/secondaire",
+      "zh-hans": "主/备",
+      "ja": "プライマリ/セカンダリ",
+      "ar": "أساسي/ثانوي",
+      "ko": "기본/보조"
+    },
+    "Primary (PRIM)": {
+      "fr": "Principal (PRIM)",
+      "zh-hans": "主节点 (PRIM)",
+      "ja": "プライマリ (PRIM)",
+      "ar": "الأساسي (PRIM)",
+      "ko": "기본 (PRIM)"
+    },
+    "Secondary (SECOND)": {
+      "fr": "Secondaire (SECOND)",
+      "zh-hans": "备节点 (SECOND)",
+      "ja": "セカンダリ (SECOND)",
+      "ar": "الثانوي (SECOND)",
+      "ko": "보조 (SECOND)"
+    },
+    "gratuitous ARP": {
+      "zh-hans": "免费 ARP",
+      "ja": "Gratuitous ARP",
+      "ar": "ARP المجاني",
+      "de": "Gratuitous ARP",
+      "ko": "Gratuitous ARP",
+      "nl": "gratuitous ARP"
+    },
+    "integrator": {
+      "zh-hans": "集成商",
+      "ja": "インテグレーター",
+      "ko": "통합자"
+    },
+    "load balancer": {
+      "de": "Load Balancer",
+      "nl": "load balancer",
+      "es": "balanceador de carga"
+    },
+    "load balancers": {
+      "de": "Load Balancer",
+      "nl": "load balancers",
+      "es": "balanceadores de carga"
+    },
+    "stretched VLAN": {
+      "de": "Stretched VLAN",
+      "ko": "확장 VLAN",
+      "ja": "ストレッチ VLAN",
+      "zh-hans": "扩展 VLAN",
+      "fr": "VLAN étendu",
+      "nl": "stretched VLAN"
+    },
+    "stretched VLANs": {
+      "de": "Stretched VLANs",
+      "ko": "확장 VLAN",
+      "ja": "ストレッチ VLAN",
+      "zh-hans": "扩展 VLAN",
+      "fr": "VLAN étendus",
+      "nl": "stretched VLAN's"
+    },
+    "MAC address takeover": {
+      "ko": "MAC 주소 인계",
+      "zh-hans": "MAC 地址接管",
+      "ja": "MAC アドレスの引き継ぎ",
+      "pt": "transferência do endereço MAC",
+      "es": "traspaso de la dirección MAC",
+      "it": "subentro dell’indirizzo MAC"
+    },
+    "remote sites": {
+      "ja": "リモートサイト",
+      "zh-hans": "远程站点",
+      "ko": "원격 사이트"
+    },
+    "health check": {
+      "zh-hans": "健康检查",
+      "ja": "ヘルスチェック"
+    },
+    "active/active": {
+      "zh-hans": "双活",
+      "ja": "アクティブ/アクティブ",
+      "ko": "액티브/액티브"
+    },
+    "DNS resolution": {
+      "ar": "تحليل DNS",
+      "ko": "DNS 확인",
+      "zh-hans": "DNS 解析",
+      "ja": "DNS 名前解決"
+    },
+    "cloud route": {
+      "fr": "route cloud",
+      "de": "Cloud-Route"
+    },
+    "primary server": {
+      "ko": "기본 서버"
+    },
+    "automatic failback": {
+      "fr": "failback automatique",
+      "es": "failback automático",
+      "pt": "failback automático",
+      "it": "failback automatico",
+      "de": "automatischer Failback",
+      "nl": "automatische failback",
+      "ja": "自動フェイルバック",
+      "zh-hans": "自动回切",
+      "ko": "자동 페일백",
+      "ar": "الاسترجاع التلقائي (failback)"
+    },
+    "Application HA": {
+      "fr": "HA applicative",
+      "es": "HA de aplicación",
+      "pt": "HA de aplicação",
+      "it": "HA applicativa",
+      "de": "Anwendungs-HA",
+      "nl": "applicatie-HA",
+      "ar": "HA على مستوى التطبيق",
+      "ko": "애플리케이션 HA",
+      "ja": "アプリケーション HA",
+      "zh-hans": "应用级 HA"
+    },
+    "VM HA": {
+      "fr": "HA de VM",
+      "es": "HA de VM",
+      "pt": "HA de VM",
+      "it": "HA delle VM",
+      "de": "VM-HA",
+      "nl": "VM-HA",
+      "ar": "HA على مستوى الأجهزة الافتراضية",
+      "ko": "VM HA",
+      "ja": "VM HA",
+      "zh-hans": "虚拟机级 HA"
+    }
+  },
+  "grammar": {
+    "fr": [
+      [
+        "(?<!\\w)([Aa])ucune(\\s+)((?:\\*\\*)?(?:<[^>]+>)*clusters?\\b)",
+        "\\1ucun\\2\\3"
+      ],
+      [
+        "(?<!\\w)([Uu])ne(\\s+)((?:\\*\\*)?(?:<[^>]+>)*clusters?\\b)",
+        "\\1n\\2\\3"
+      ],
+      [
+        "(?<!\\w)([Ll])a(\\s+)((?:\\*\\*)?(?:<[^>]+>)*clusters?\\b)",
+        "\\1e\\2\\3"
+      ],
+      [
+        "(?<!\\w)([Cc])ette(\\s+)((?:\\*\\*)?(?:<[^>]+>)*clusters?\\b)",
+        "\\1e\\2\\3"
+      ],
+      [
+        "([Aa]rchitecture) [Cc](luster)",
+        "\\1 de c\\2"
+      ],
+      [
+        "((?:adresse )?IP virtuelles?) principal/secondaire",
+        "\\1 principale/secondaire"
+      ]
+    ],
+    "it": [
+      [
+        "(?<!\\w)([Uu])na(\\s+)((?:\\*\\*)?(?:<[^>]+>)*clusters?\\b)",
+        "\\1n\\2\\3"
+      ],
+      [
+        "(\\S) +:(?=\\s|\\*|$)",
+        "\\1:"
+      ],
+      [
+        "([Aa]rchitettura) ([Cc]luster)",
+        "\\1 di \\2"
+      ]
+    ],
+    "es": [
+      [
+        "(?<!\\w)([Uu])na(\\s+)((?:\\*\\*)?(?:<[^>]+>)*clústere?s?\\b)",
+        "\\1n\\2\\3"
+      ],
+      [
+        "(\\S) +:(?=\\s|\\*|$)",
+        "\\1:"
+      ],
+      [
+        "([Aa]rquitectura) ([Cc]lúster)",
+        "\\1 de \\2"
+      ]
+    ],
+    "pt": [
+      [
+        "(?<!\\w)([Uu])ma(\\s+)((?:\\*\\*)?(?:<[^>]+>)*clusters?\\b)",
+        "\\1m\\2\\3"
+      ],
+      [
+        "(\\S) +:(?=\\s|\\*|$)",
+        "\\1:"
+      ],
+      [
+        "([Aa]rquitetura) ([Cc]luster)",
+        "\\1 de \\2"
+      ]
+    ],
+    "ar": [
+      [
+        "((?:IP|اسم|بروتوكول الإنترنت)\\s+(?:\\*\\*)?(?:ال)?)افتراضي",
+        "\\1ظاهري"
+      ],
+      [
+        "(\\S*مجموعات)\\s+مجموعات(?=\\s)",
+        "\\1"
+      ],
+      [
+        "(\\S*مجموعة)\\s+مجموعة(?=\\s)",
+        "\\1"
+      ],
+      [
+        "بروتوكول (?:[\\u0600-\\u06FF]+ ){1,3}(?=\\(?GARP)",
+        ""
+      ]
+    ],
+    "de": [
+      [
+        "(Cluster) +([:,.])",
+        "\\1\\2"
+      ],
+      [
+        "(Cluster) -(\\w)",
+        "\\1-\\2"
+      ],
+      [
+        "` -(\\w)",
+        "`-\\1"
+      ],
+      [
+        "(\\S) +:(?=\\s|\\*|$)",
+        "\\1:"
+      ]
+    ],
+    "ko": [
+      [
+        "(클러스터|VLAN|ARP|IP|통합자|\\(PRIM\\)|\\(SECOND\\))\\s+(의|에서|에|용|를|을|은|는|이|가|과|와|으로|로|도|만)(?=[\\s.,:;)!?*]|$)",
+        "\\1\\2"
+      ],
+      [
+        "(\\*\\*)\\s+(의|에서|에|용|를|을|은|는|이|가|과|와|으로|로|도|만)(?=[\\s.,:;)!?]|$)",
+        "\\1\\2"
+      ],
+      [
+        "(\\w)/ (GARP)",
+        "\\1/\\2"
+      ]
+    ],
+    "ja": [
+      [
+        "クラスタ(?!ー)",
+        "クラスター"
+      ],
+      [
+        "透明性",
+        "透過性"
+      ],
+      [
+        "(\\S) （",
+        "\\1（"
+      ]
+    ],
+    "zh-hans": [
+      [
+        "(\\S) （",
+        "\\1（"
+      ],
+      [
+        "(\\w)/ (\\w)",
+        "\\1/\\2"
+      ]
+    ],
+    "nl": [
+      [
+        "(\\S) +:(?=\\s|\\*|$)",
+        "\\1:"
+      ],
+      [
+        "-cluster\\s+cluster(\\w)",
+        "-cluster\\1"
+      ]
+    ]
+  }
 }

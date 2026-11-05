@@ -1,13 +1,13 @@
 ---
-title: "How a virtual IP address works in high availability clustering?"
+title: "How does a virtual IP address work in a high availability cluster?"
 canonical: "https://safekit.eviden.com/best-practises/how-a-virtual-ip-address-works/"
 description: "How SafeKit moves a virtual IP on failover: gratuitous ARP in the same subnet, load balancer, cloud CLI or BGP across subnets. Why a local virtual IP matters."
 category: "best-practises"
 lang: "en"
-topics: "What is a virtual IP address in a high availability cluster?, Virtual IP implementation in SafeKit, How a virtual IP address works in the same subnet (mirror cluster), How a virtual IP works across different subnets with a load balancer (mirror cluster), How a virtual IP works across different subnets with cloud provider CLIs (mirror cluster), How a virtual IP works across different subnets with BGP (mirror cluster), How DNS redirection works across different subnets (mirror cluster), How virtual IP load balancing works in a farm cluster on the same subnet, How a load balanced virtual IP works across different subnets (farm cluster), Comparison: virtual IP implementation, latency, and application transparency, Frequently asked questions on virtual IP, 🔍 Explore SafeKit"
+topics: "What is a virtual IP address in a high availability cluster?, Virtual IP implementation in SafeKit, How a virtual IP works in the same subnet (mirror cluster), How a virtual IP works across different subnets with a load balancer (mirror cluster), How a virtual IP works across different subnets with cloud provider CLIs (mirror cluster), How a virtual IP works across different subnets with BGP (mirror cluster), How DNS redirection works across different subnets (mirror cluster), How virtual IP load balancing works in a farm cluster on the same subnet, How a load balanced virtual IP works across different subnets (farm cluster), Comparison: virtual IP implementation, latency, and application transparency, Frequently asked questions on virtual IP, 🔍 Explore SafeKit"
 ---
 
-# How a virtual IP address works in high availability clustering? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# How does a virtual IP address work in a high availability cluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
 
 ## What is a virtual IP address in a high availability cluster? {#virtual-ip-definition}
 
@@ -15,14 +15,14 @@ A **virtual IP address** is the single address that clients use to connect to an
 
 **Key principle in SafeKit:** the virtual IP is **configured locally on the server** that runs the application. The application starts on the virtual IP, and it receives the original client IP. This is why many applications work correctly with SafeKit without any change. SafeKit provides two types of virtual IP:
 
-  * **Primary/backup virtual IP with a mirror cluster:** the virtual IP is active only on the primary server. On failover, it moves to the backup server.
+  * **Primary/secondary virtual IP with a mirror cluster:** the virtual IP is active only on the primary server. On failover, it moves to the secondary server.
   * **Network load balancing virtual IP with a <span class="notranslate farm-term" translate="no">farm</span> cluster:** the virtual IP is active on all the servers at the same time. The traffic is shared between them.
 
 ## Virtual IP implementation in SafeKit {#safekit-virtual-ip-implementation}
 
 This article explains how SafeKit moves the virtual IP in each network architecture:
 
-  * **Same subnet or extended LAN ([mirror](#virtual-ip-same-subnet-failover) and [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-same-subnet) clusters):** SafeKit configures the virtual IP on the server and sends a **gratuitous ARP (GARP)**. No external hardware is needed. This is the most transparent solution (everything is implemented by the SafeKit product).
+  * **Same subnet or stretched VLAN ([mirror](#virtual-ip-same-subnet-failover) and [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-same-subnet) clusters):** SafeKit configures the virtual IP on the server and sends a **gratuitous ARP (GARP)**. No external hardware is needed. This is the most transparent solution (everything is implemented by the SafeKit product).
   * **Different subnets with a load balancer ([mirror](#virtual-ip-different-subnets-failover) and [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-different-subnets) clusters):** the load balancer uses the SafeKit **health check** to send traffic to the right server (the load balancer is configured by the integrator).
   * **[Different subnets with cloud provider CLIs](#virtual-ip-cloud-cli-failover) (mirror cluster):** the SafeKit `start_prim` script calls the cloud CLI to move the virtual IP (script written by the integrator).
   * **[Different subnets with BGP](#virtual-ip-bgp-failover) (mirror cluster):** the primary server announces the virtual IP to the routers (script written by the integrator).
@@ -34,17 +34,17 @@ Also in this article:
   * [Frequently asked questions on virtual IP](#virtual-ip-faq)
   * [🔍 Explore SafeKit](#hub)
 
-![Comparison diagram of virtual IP behavior in Eviden SafeKit: Mirror Clusters showing a floating IP on the active node vs. farm clusters showing network load balancing across all nodes.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
+![Comparison diagram of virtual IP behavior in Eviden SafeKit: mirror clusters showing a floating IP on the active node vs. farm clusters showing network load balancing across all nodes.](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
 **Virtual IP implementation for mirror and <span class="notranslate farm-term" translate="no">farm</span> clusters in SafeKit.**
 
-## How a virtual IP address works in the same subnet (mirror cluster) {#virtual-ip-same-subnet-failover}
+## How a virtual IP works in the same subnet (mirror cluster) {#virtual-ip-same-subnet-failover}
 
-- [Testing the primary/backup virtual IP address in a SafeKit mirror cluster](/best-practises/test-primary-backup-vip-mirror/)
+- [Testing the primary/secondary virtual IP in a SafeKit mirror cluster](/best-practises/test-primary-backup-vip-mirror/)
 
 ### Automatic failover and network rerouting in a local subnet {#automated-failover--network-rerouting-in-a-local-subnet}
 
-In a local network, **SafeKit** manages the virtual IP address and the application failover automatically. 
+In a local network, **SafeKit** manages the virtual IP and the application failover automatically. 
 
 ### Local mirror cluster: 2-node failover on Windows or Linux {#local-mirror-cluster-seamless-2-node-windows-or-linux-failover}
 
@@ -53,30 +53,30 @@ In a local network, **SafeKit** manages the virtual IP address and the applicati
 
 In a **SafeKit mirror cluster**, the two nodes are in the same subnet. High availability uses a **virtual IP**. SafeKit manages the virtual IP in the network stack of the operating system. No special hardware is required. The virtual IP is added to the physical IP addresses of Server 1 and Server 2 with **IP aliasing**. Clients always connect to the virtual IP. 
 
-#### IP aliasing and multiple virtual IPs (VIPs) in SafeKit {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
+#### IP aliasing and multiple virtual IPs in SafeKit {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
 
-The virtual IP is a third IP address that moves between the nodes. SafeKit can manage **several virtual IP addresses** in one cluster. You can put them on the same network card or on different network cards. In this way, each service can use its own virtual IP. 
+The virtual IP is a third IP address that moves between the nodes. SafeKit can manage **several virtual IPs** in one cluster. You can put them on the same network card or on different network cards. In this way, each service can use its own virtual IP. 
 
 #### The failover mechanism: gratuitous ARP (GARP) {#the-failover-mechanism-gratuitous-arp-garp}
 
 Failover does not require any manual action. In normal operation, the virtual IP is linked to the **MAC address of Server 1 (mac1)**. If Server 1 fails, SafeKit does three things: 
 
-  * **Virtual IP aliasing:** SafeKit configures the virtual IP as an alias on the network card of Server 2, the new primary. The operating system then sends messages on the network to announce the virtual IP.
+  * **Virtual IP aliasing:** SafeKit configures the virtual IP as an alias on the network card of Server 2, the new primary server. The operating system then sends messages on the network to announce the virtual IP.
   * **GARP:** SafeKit also sends **gratuitous ARP (GARP)** messages. Network switches and clients update their ARP cache. The virtual IP is now linked to the **MAC address of Server 2 (mac2)**.
   * **Application recovery:** SafeKit restarts the application services on Server 2.
 
 
-#### Remote data centers and extended VLANs {#remote-data-centers--extended-vlans}
+#### Remote data centers and stretched VLANs {#remote-data-centers--extended-vlans}
 
-The **same-subnet solution described above** also works for **disaster recovery (DR)** between remote sites and is often the best choice when the sites are connected by an **extended LAN or stretched VLAN**. Both sites are in one subnet. The network is simpler, and you do not need complex routing protocols. 
+The **same-subnet solution described above** also works for **disaster recovery** between remote sites. It is often the best choice when the sites are connected by a **stretched VLAN** (extended LAN). Both sites are in one subnet. The network is simpler, and you do not need complex routing protocols. 
 
-> **⚠️ Note:** Rerouting at layer 2 with gratuitous ARP is the **most transparent solution** for applications. The application receives the original client IP, and the virtual IP is configured locally. **Many applications need** a local virtual IP. Without it, these applications **may not work correctly**. In this same-subnet setup, SafeKit implements the entire mechanism, so no special integration work is required.
+> **⚠️ Note:** Rerouting at layer 2 with gratuitous ARP is the **most transparent solution** for applications. The application receives the original client IP, and the virtual IP is configured locally. Many applications **need a local virtual IP**. Without it, these applications **may not work correctly**. In this same-subnet setup, SafeKit implements the entire mechanism, so no special integration work is required.
 
 ## How a virtual IP works across different subnets with a load balancer (mirror cluster) {#virtual-ip-different-subnets-failover}
 
 ### Load balancer with SafeKit health checks {#cloud-ready-traffic-orchestration-via-load-balancer-integration}
 
-![Diagram of a virtual IP failover using a Load Balancer across two different subnets](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
+![Diagram of a virtual IP failover using a load balancer across two different subnets](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
 When the nodes are in **different subnets**, gratuitous ARP cannot move the virtual IP. In this case, the virtual IP is on a **load balancer**. The load balancer sends traffic to the primary server.
 
@@ -85,7 +85,7 @@ SafeKit provides a **health check URL** on each node:
   * **Primary (PRIM):** returns `HTTP 200 OK`. The load balancer sends traffic to this node.
   * **Secondary (SECOND):** returns `HTTP 404 NOT FOUND`. The load balancer sends no traffic to this node.
 
-On failover, SafeKit changes the responses, and the load balancer sends traffic to the new primary. This is the standard solution between **availability zones** on [**AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>), [**Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) and [**Google Cloud**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>).
+On failover, SafeKit changes the responses, and the load balancer sends traffic to the new primary server. This is the standard solution between **availability zones** on [**AWS**](</solutions/aws-high-availability-cluster-synchronous-replication-failover/>), [**Azure**](</solutions/azure-high-availability-cluster-synchronous-replication-failover/>) and [**Google Cloud**](</solutions/gcp-high-availability-cluster-synchronous-replication-failover/>).
 
 > **⚠️ Note:** SafeKit provides the health check. Your network or your cloud provider provides the load balancer.
 
@@ -133,9 +133,9 @@ The **integrator** must add the cloud CLI commands to the `start_prim` script. T
 
 ### Virtual IP rerouting with BGP {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
-With BGP (Border Gateway Protocol), the Virtual IP is typically configured on a loopback interface of the primary server by the `start_prim` script before the application starts. The primary server announces the VIP to the routers as a /32 route.
+With BGP (Border Gateway Protocol), the virtual IP is typically configured on a loopback interface of the primary server by the `start_prim` script before the application starts. The primary server announces the virtual IP to the routers as a /32 route.
 
-On failover, the `stop_prim` script on the old primary server stops the application, removes the VIP from the loopback interface and withdraws the /32 route from the routers. If the old primary server crashes, `stop_prim` does not run, but the routers lose the BGP session and remove the route automatically.
+On failover, the `stop_prim` script on the old primary server stops the application, removes the virtual IP from the loopback interface and withdraws the /32 route from the routers. If the old primary server crashes, `stop_prim` does not run, but the routers lose the BGP session and remove the route automatically.
 
 ### Benefits and prerequisites {#benefits-and-prerequisites}
 
@@ -151,13 +151,13 @@ On failover, the `stop_prim` script on the old primary server stops the applicat
 
 With DNS redirection, there is **no single virtual IP**. Clients connect to a **virtual name** (the DNS name). On failover, the `start_prim` script on the new primary server starts the application, then changes the DNS record of the virtual name to the **physical IP** of the new primary server.
 
-The `stop_prim` script has nothing to do. If the old primary server crashes, the new primary server overwrites the DNS record.
+The `stop_prim` script does not need to do anything. If the old primary server crashes, the new primary server overwrites the DNS record.
 
-### Example: DNS resolution and blocked clients {#the-technical-scenario-dns-resolution-and-the-stuck-client}
+### Example: DNS resolution and clients that keep the old IP {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
-![Diagram showing DNS Name resolution to Physical IP 1 in a high availability cluster](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
+![Diagram showing DNS name resolution to physical IP 1 in a high availability cluster](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
- DNS resolution and clients blocked on physical IP 1 in a high availability cluster
+ DNS resolution: clients still connected to physical IP 1 in a high availability cluster
 
 #### Before failover: the name points to physical IP 1 {#current-state-resolution-to-physical-ip-1}
 
@@ -167,11 +167,11 @@ The `stop_prim` script has nothing to do. If the old primary server crashes, the
 
 Server 1 fails. The `start_prim` script on Server 2 changes the DNS record to **physical IP 2**. The clients connect to physical IP 2 only if all these conditions are true: 
 
-  * The **TTL (Time to Live)** has expired on all DNS servers between the client and the DNS record.
+  * The **TTL (Time to Live)** is expired on all DNS servers between the client and the DNS record.
   * The local DNS cache of Client 1 and Client 2 is empty.
-  * The application closes its connection and does a _new_ DNS lookup.
+  * The application closes its connection and does a *new* DNS lookup.
 
-If one condition is false, **Client 1 and Client 2 stay blocked** on physical IP 1. The service is down, even if the DNS record is correct. 
+If one condition is false, **Client 1 and Client 2** keep using physical IP 1. The service is down, even if the DNS record is correct. 
 
 ### Limits and prerequisites {#the-two-black-boxes-of-dns-redirection}
 
@@ -184,13 +184,13 @@ If one condition is false, **Client 1 and Client 2 stay blocked** on physical IP
 
 ### Conclusion {#conclusion}
 
-DNS redirection is not a reliable high availability solution. Use it only if all clients do a new DNS lookup when they reconnect. For immediate and transparent failover, use a **virtual IP**: on an extended LAN, with a load balancer, with cloud provider CLIs or with BGP.
+DNS redirection is not a reliable high availability solution. Use it only if all clients do a new DNS lookup when they reconnect. For immediate and transparent failover, use a **virtual IP**: with a stretched VLAN, with a load balancer, with cloud provider CLIs or with BGP.
 
 ## How virtual IP load balancing works in a <span class="notranslate farm-term" translate="no">farm</span> cluster on the same subnet {#virtual-ip-load-balancing-same-subnet}
 
-- [Testing the load balancing virtual IP address in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/)
+- [Testing the load balancing virtual IP in a SafeKit farm cluster](/best-practises/test-load-balancing-vip-farm/)
 
-### Load balancing in the kernel, with redundancy {#scalable-performance-kernel-level-load-balancing--redundancy}
+### Kernel-level load balancing and redundancy {#scalable-performance-kernel-level-load-balancing--redundancy}
 
 When there is a lot of traffic, SafeKit can share the work between several active servers. If one server fails, the other servers continue to work. 
 
@@ -216,7 +216,7 @@ If Server 1 fails, SafeKit sends a **gratuitous ARP (GARP)** message. The client
 
 #### Deployment in remote sites {#deployment-in-remote-sites}
 
-This load balancing solution also works between **remote data centers**, if the sites are connected by an **extended LAN or VLAN**. All sites are then in the same subnet. This is the most efficient configuration for <span class="notranslate farm-term" translate="no">farm</span> clusters on several sites. 
+This load balancing solution also works between **remote data centers**, if the sites are connected by a **stretched VLAN**. All sites are then in the same subnet. This is the most efficient configuration for <span class="notranslate farm-term" translate="no">farm</span> clusters on several sites. 
 
 {{%  insert-safekit-farm-video-en  %}}
 
@@ -231,7 +231,7 @@ A <span class="notranslate farm-term" translate="no">farm</span> cluster can sha
 
 ![Diagram of a load-balanced farm cluster operating across two different subnets](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
 
-When the <span class="notranslate farm-term" translate="no">farm</span> nodes are in **different subnets** (for example, in several cloud availability zones), the **virtual IP** is on an external **load balancer (LB)**. The load balancer sends the traffic to the physical IP addresses of the servers in each subnet. 
+When the <span class="notranslate farm-term" translate="no">farm</span> nodes are in **different subnets** (for example, in several cloud availability zones), the **virtual IP** is on an external **load balancer**. The load balancer sends the traffic to the physical IP addresses of the servers in each subnet. 
 
 #### Traffic routing and load balancing rules {#intelligent-traffic-routing--load-balancing-rules}
 
@@ -262,12 +262,12 @@ This is the standard architecture for **<span class="notranslate farm-term" tran
 
 Environment and use case | High availability type | Redirection method | Implemented by | Network latency | Application transparency and local IP  
 ---|---|---|---|---|---  
-Primary/backup (high availability) | Mirror cluster | Gratuitous ARP / MAC takeover | ✅ SafeKit product | Very low: time to detect the failure and send the GARP | Full transparency: the virtual IP is local on the active node. The client IP does not change.  
+Primary/secondary (high availability) | Mirror cluster | Gratuitous ARP (MAC address takeover) | ✅ SafeKit product | Very low: time to detect the failure and send the GARP | Full transparency: the virtual IP is local on the active node. The client IP does not change.  
 Load balancing (active/active) | <span class="notranslate farm-term" translate="no">Farm</span> cluster | Kernel network filter / GARP | ✅ SafeKit product | Very low: time to detect the failure and change the network filters | Full transparency: the virtual IP is local on all nodes. The client IP does not change.  
-Same subnet / extended LAN (stretched VLAN) | Disaster recovery (remote data centers) | IP aliasing / GARP | ✅ SafeKit product (the stretched VLAN is provided by the network team) | Low: depends on the round trip time (RTT) of the stretched VLAN | Full transparency: the virtual IP is local on the nodes. The client IP does not change.  
+Same subnet / stretched VLAN | Disaster recovery (remote data centers) | IP aliasing / GARP | ✅ SafeKit product (the stretched VLAN is provided by the network team) | Low: depends on the round trip time (RTT) of the stretched VLAN | Full transparency: the virtual IP is local on the nodes. The client IP does not change.  
 Different subnets: load balancer only | Disaster recovery (remote data centers / cloud) | External load balancer | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | ⚠️ Partial transparency if SNAT/DNAT is used. The virtual IP is **NOT** local on the nodes. The client IP may **NOT** be kept. The application must support this.  
 Different subnets: load balancer + local SafeKit virtual IP | Disaster recovery (remote data centers / cloud) | External load balancer with Floating IP / Direct Server Return | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | Good transparency: the virtual IP is local on the primary node and is the destination address.
-Different subnets: cloud CLI | Disaster recovery (cloud) | Cloud API: the private IP or a cloud route moves to the new primary | 🛠️ Integrator: cloud CLI commands in the `start_prim` script | Medium to high: depends on the response time of the cloud API | Full transparency: the virtual IP is local on the primary node. The client IP does not change.
+Different subnets: cloud CLI | Disaster recovery (cloud) | Cloud API: the private IP or a cloud route moves to the new primary node | 🛠️ Integrator: cloud CLI commands in the `start_prim` script | Medium to high: depends on the response time of the cloud API | Full transparency: the virtual IP is local on the primary node. The client IP does not change.
 Different subnets: BGP | Disaster recovery (remote data centers / cloud) | /32 route announced with BGP | 🛠️ Integrator: BGP commands in the `start_prim` and `stop_prim` scripts | Low to medium: depends on the BGP convergence time | Full transparency: the virtual IP is local on the primary node. The client IP does not change. Requires BGP routers.  
 DNS redirection: no virtual IP | Disaster recovery (remote data centers) | DNS record change (name / physical IP) | 🛠️ Integrator: DNS update commands in the `start_prim` script | High and not predictable: depends on DNS TTL (Time To Live) and client DNS cache | ⚠️ Not reliable: the client must do a new DNS lookup. Often, clients keep the old IP that they received at startup and are not rerouted after failover.  
   
@@ -285,7 +285,7 @@ No. **SafeKit** manages the virtual IP with software. In the same subnet, it use
 
 What is gratuitous ARP (GARP) and why is it used?
 
-**Gratuitous ARP (GARP)** is a network message sent to all devices. It updates the ARP tables of switches and routers. On failover, the new primary server sends a GARP message. The message says that the **virtual IP** is now linked to the MAC address of the new primary. The traffic is then rerouted immediately.
+**Gratuitous ARP (GARP)** is a network message sent to all devices. It updates the ARP tables of switches and routers. On failover, the new primary server sends a GARP message. The message says that the **virtual IP** is now linked to the MAC address of the new primary server. The traffic is then rerouted immediately.
 
 Can I associate a DNS name with a virtual IP?
 
@@ -295,15 +295,15 @@ Can I associate a DNS name with a virtual IP?
 
 How does a virtual IP work in the cloud (AWS, Azure, GCP)?
 
-In the cloud, layer 2 GARP messages are not available for rerouting a virtual IP. SafeKit works with **cloud load balancers** (AWS ELB, Azure LB, or Google GCLB). SafeKit provides a **health check URL**. The load balancer reads it and sends the traffic to the active node.
+In the cloud, layer 2 GARP messages are not available for rerouting a virtual IP. SafeKit works with **cloud load balancers** (AWS Elastic Load Balancing, Azure Load Balancer or Google Cloud Load Balancing). SafeKit provides a **health check URL**. The load balancer reads it and sends the traffic to the active node.
 
-Is an extended LAN better than a load balancer for disaster recovery?
+Is a stretched VLAN better than a load balancer for disaster recovery?
 
-**Yes**. Between remote data centers, an **extended LAN (stretched VLAN)** is often better because the failover stays **transparent for the application**. The **virtual IP does not change**, so the application and its clients continue to use the same address after a failover between data centers.
+**Yes**. Between remote data centers, a **stretched VLAN** is often better because the failover stays **transparent for the application**. The **virtual IP does not change**, so the application and its clients continue to use the same address after a failover between data centers.
 
 What are the limits of DNS redirection compared with a virtual IP?
 
-**DNS redirection** depends on the **TTL (Time to Live)** and on the client DNS cache. Recovery can take hours. Also, **clients that do not do a new DNS lookup stay blocked** on the failed server. A **virtual IP** is rerouted immediately with GARP messages at layer 2. The client DNS cache has no effect.
+**DNS redirection** depends on the **TTL (Time to Live)** and on the client DNS cache. Recovery can take hours. Also, **clients that do not do a new DNS lookup** keep using the failed server. A **virtual IP** is rerouted immediately with GARP messages at layer 2. The client DNS cache has no effect.
 
 ### Transparency and security {#transparency--security}
 
