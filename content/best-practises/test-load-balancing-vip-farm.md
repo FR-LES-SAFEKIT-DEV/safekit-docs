@@ -157,6 +157,8 @@ The behavior depends on the network path between the client and the <span class=
 
 {{%  insert-safekit-farm-video-en  %}}
 
-For primary/backup failover with a virtual IP address, see [Testing the virtual IP address of a SafeKit mirror cluster](/best-practises/test-primary-backup-vip-mirror/).
+For more information:
+- [How a virtual IP address works in high availability clustering?](/best-practises/how-a-virtual-ip-address-works/)
+- For primary/backup failover with a virtual IP address, see [Testing the virtual IP address of a SafeKit mirror cluster](/best-practises/test-primary-backup-vip-mirror/).
 
 {{%  insert-safekit-4-buttons-en  %}}

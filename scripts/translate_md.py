@@ -23,7 +23,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-05.9"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-05.13"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -117,7 +117,7 @@ def load_glossary(path, lang):
                 words.append(r"(?:<span[^>]*>\s*%s\s*</span>|%s)" % (re.escape(w), re.escape(w)))
             else:
                 words.append(re.escape(w))
-        TERMS.append((re.compile(r"(?<![\w-])" + r"\s+".join(words) + r"(?![\w-])", re.I), target))
+        TERMS.append((re.compile(r"(?<![\w/.-])" + r"\s+".join(words) + r"(?![\w/-]|\.\w)", re.I), target))
     GRAMMAR.clear()
     g = GLOSSARY.get("grammar", {})
     for pat, repl in g.get(lang) or g.get(lang.split("-")[0]) or []:
@@ -131,7 +131,8 @@ class Ctx:
         self.store, self.link_fix = [], link_fix
         self.apos = APOS
         self.dot_after = set()
-        self.terms = set()   # jetons issus des expressions imposées
+        self.terms = set()
+        self.shown = {}      # texte montré à Google pour une expression imposée   # jetons issus des expressions imposées
     def add(self, v):
         self.store.append(v); return len(self.store) - 1
 
@@ -142,6 +143,7 @@ def encode(text, ctx):
     text = LINK.sub(link, text)
     # liens HTML bruts : <a href="/page/"> -> <a href="/fr/page/">
     text = re.sub(r'(<a\b[^>]*?\bhref=")([^"]+)(")', lambda m: m.group(1) + ctx.link_fix(m.group(2)) + m.group(3), text)
+    text = re.sub(r"`[^`]+`", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)   # code d'abord
     for rx, target in TERMS:
         def term(m, target=target):
             out = target
@@ -152,6 +154,7 @@ def encode(text, ctx):
                 out = re.sub(r"(?<!\w)%s(?!\w)" % re.escape(word), wrap, out, count=1, flags=re.I)
             n = ctx.add(out)
             ctx.terms.add(n)
+            ctx.shown[n] = re.sub(r"<[^>]+>", "", m.group(0)).strip()   # Google voit le terme anglais
             return f"{S}P{n}{S}"
         text = rx.sub(term, text)
     text = PROTECT.sub(lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
@@ -170,6 +173,9 @@ def encode(text, ctx):
         # Google voit le vrai mot (mirror, `start_prim`...) et non un numéro,
         # sinon il invente un nom autour ("集群编号为", "方案SafeKit"...)
         tok = ctx.store[int(m.group(1))]
+        if int(m.group(1)) in ctx.shown:   # expression imposée : on montre l'anglais, pas la traduction
+            shown = html.escape(ctx.shown[int(m.group(1))], quote=False)
+            return f'<span class="notranslate" translate="no" data-k="{m.group(1)}">{shown}</span>'
         if tok.startswith("`"):
             shown = tok.strip("`")
         elif tok.startswith("{"):
@@ -206,7 +212,7 @@ def decode(text, ctx):
         rest = text[m.end():]
         if not CJK and not re.match(r"\s*$|\s+[A-ZÀ-ÖØ-Þ]", rest):
             return m.group(0)
-        if CJK and re.match(r"\s*[のをにはがでとへもや的和是在与及或、]", rest):
+        if CJK and re.match(r"\s*[のをにはがでとへもや的和是在与及或、後前后之时時中上下]", rest):
             return m.group(0)
         return f"{S}P{n}{S}{stop}"
     text = re.sub(f"{S}P(\\d+){S}(?!\\s*[{S}.。，,;；:：!！?？)）\\]*])", src_dot, text)
@@ -263,6 +269,10 @@ def decode(text, ctx):
         # gras étendu par Google sur la phrase suivante : "**虚拟 IP。SafeKit**" -> "**虚拟 IP**。SafeKit"
         text = re.sub(r"\*\*([^*\n]+?)([。！？])([^*\n]+?)\*\*", r"**\1**\2\3", text)
         text = cjk_bold(text)
+        text = re.sub(r"→\*\*", "→ **", text)
+        # états : parenthèses pleine chasse, sans espaces — jamais dans une URL de lien
+        parts = re.split(r"(\]\(<[^>]*>\)|\]\([^)\s]*\))", text)
+        text = "".join(p if i % 2 else re.sub(r"\s*[（(](Ready|NotReady)[)）]\s*", r"（\1）", p) for i, p in enumerate(parts))
     text = re.sub(r"  +", " ", text)
     text = re.sub(r"(?<!\.)\.\.(?!\.)", ".", text)   # ".." -> "." (pas "...")
     return text.strip()

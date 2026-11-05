@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05.13",
+  "version": "2026-11-05.16",
   "keep": [
     "mirror",
     "farm",
@@ -11,8 +11,15 @@
     "Network Load Balancer",
     "Azure Load Balancer",
     "Google Cloud Load Balancing",
+    "GARPs",
     "GARP",
-    "loopback"
+    "loopback",
+    "Ready",
+    "NotReady",
+    "STOP",
+    "WAIT",
+    "UP",
+    "DOWN"
   ],
   "terms": {
     "farm cluster": {
@@ -217,6 +224,30 @@
       "ko": "VM HA",
       "ja": "VM HA",
       "zh-hans": "虚拟机级 HA"
+    },
+    "mosaic": {
+      "fr": "mosaïque",
+      "de": "Mosaik",
+      "es": "mosaico",
+      "pt": "mosaico",
+      "it": "mosaico",
+      "nl": "mozaïek",
+      "ja": "モザイク",
+      "zh-hans": "马赛克",
+      "ko": "모자이크",
+      "ar": "الفسيفساء (mosaic)"
+    },
+    "SafeKit mosaic": {
+      "fr": "mosaïque SafeKit",
+      "de": "SafeKit-Mosaik",
+      "es": "mosaico de SafeKit",
+      "pt": "mosaico do SafeKit",
+      "it": "mosaico SafeKit",
+      "nl": "SafeKit-mozaïek",
+      "ja": "SafeKit モザイク",
+      "zh-hans": "SafeKit 马赛克",
+      "ko": "SafeKit 모자이크",
+      "ar": "فسيفساء SafeKit (mosaic)"
     }
   },
   "grammar": {
@@ -350,6 +381,10 @@
       [
         "(\\S) （",
         "\\1（"
+      ],
+      [
+        "→\\*\\*",
+        "→ **"
       ]
     ],
     "zh-hans": [
@@ -360,6 +395,10 @@
       [
         "(\\w)/ (\\w)",
         "\\1/\\2"
+      ],
+      [
+        "→\\*\\*",
+        "→ **"
       ]
     ],
     "nl": [

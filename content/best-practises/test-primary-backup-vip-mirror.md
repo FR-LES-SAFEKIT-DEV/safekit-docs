@@ -143,6 +143,8 @@ The behavior depends on the network path between the client and the cluster. Run
 - **Sending GARPs:** the `arpreroute="on"` attribute of the `<vip>` section (with `arpinterval` and `arpelapse`) sends GARPs regularly on the Virtual IP (VIP) after the failover. See the User's Guide, section 13.6.4 "[`<vip>` syntax](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
 - **Diagnosing Virtual IP (VIP) ↔ MAC resolution:** see the User's Guide, section 7.24 "[Troubleshooting Virtual IP (VIP) ↔ MAC resolution](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Issue_with_VIP)", and section 7.16 "[Problem with the virtual IP after failover](https://safekit.eviden.com/resources/safekit-user-guide-82/#_Problem_with_the_1)".
 
-For load balancing with a virtual IP address, see [Testing the load balancing virtual IP address in a SafeKit Farm cluster](/best-practises/test-load-balancing-vip-farm/).
+For more information:
+- [How a virtual IP address works in high availability clustering?](/best-practises/how-a-virtual-ip-address-works/)
+- For load balancing with a virtual IP address, see [Testing the load balancing virtual IP address in a SafeKit Farm cluster](/best-practises/test-load-balancing-vip-farm/).
 
 {{%  insert-safekit-4-buttons-en  %}}
