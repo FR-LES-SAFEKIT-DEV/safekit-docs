@@ -225,6 +225,7 @@ def rebuild_topics_from_h2(md_content, filename=""):
     # 1. Extraction des H2 Markdown : ^## Titre
     for match in re.finditer(r"^##\s+(.+)$", md_content, re.MULTILINE):
         text = match.group(1)
+        text = re.sub(r"</?span\b[^>]*>", "", text, flags=re.IGNORECASE)
         text = hugo_anchor_pattern.sub("", text)
         text = re.sub(r"\s+", " ", text).strip()
         if text and text not in extracted_h2s:
