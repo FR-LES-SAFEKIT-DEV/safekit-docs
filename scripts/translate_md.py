@@ -23,7 +23,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-05.8"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-05.9"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -195,7 +195,6 @@ def decode(text, ctx):
     def code_dot(m):
         tok = st[int(m.group(1))]
         return f"{S}P{m.group(1)}{S}." if tok.startswith("`") else m.group(0)
-    text = re.sub(f"{S}P(\\d+){S}(?=\\s+[A-ZÀ-ÖØ-Þ][a-zà-öø-ÿ’'])", code_dot, text)
     # point perdu après un `code` qui terminait une phrase dans la source
     stop = "。" if CJK else "."
     def src_dot(m):
@@ -206,6 +205,8 @@ def decode(text, ctx):
         # (fin de texte ou majuscule après) — pas "Gibt `HTTP 200 OK` zurück."
         rest = text[m.end():]
         if not CJK and not re.match(r"\s*$|\s+[A-ZÀ-ÖØ-Þ]", rest):
+            return m.group(0)
+        if CJK and re.match(r"\s*[のをにはがでとへもや的和是在与及或、]", rest):
             return m.group(0)
         return f"{S}P{n}{S}{stop}"
     text = re.sub(f"{S}P(\\d+){S}(?!\\s*[{S}.。，,;；:：!！?？)）\\]*])", src_dot, text)
@@ -225,6 +226,9 @@ def decode(text, ctx):
         text = re.sub(f"([{CJK_CHAR}])(?={S}P(\\d+){S})", lambda m: m.group(1) + (" " if latin(vis(int(m.group(2)), False)) else ""), text)
         text = re.sub(f"([A-Za-z0-9`%])(?=[{CJK_CHAR}])", r"\1 ", text)
         text = re.sub(f"({S}P(\\d+){S})(?=[{CJK_CHAR}])", lambda m: m.group(1) + (" " if latin(vis(int(m.group(2)), True)) else ""), text)
+        cjk = lambda c: bool(re.match(f"[{CJK_CHAR}]", c))
+        text = re.sub(f"([A-Za-z0-9`%])(?={S}P(\\d+){S})", lambda m: m.group(1) + (" " if cjk(vis(int(m.group(2)), False)) else ""), text)
+        text = re.sub(f"({S}P(\\d+){S})(?=[A-Za-z0-9`])", lambda m: m.group(1) + (" " if cjk(vis(int(m.group(2)), True)) else ""), text)
     text = text.replace("'", "’") if ctx.apos else text
     def restore(m):
         n = int(m.group(1))

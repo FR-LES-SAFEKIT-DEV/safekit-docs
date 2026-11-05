@@ -5,7 +5,7 @@ description: "Cómo SafeKit mueve una IP virtual en la conmutación por error: A
 category: "best-practises"
 lang: "es"
 topics: "¿Qué es una dirección IP virtual en un clúster de alta disponibilidad?, Implementación de IP virtual en SafeKit, Cómo funciona una IP virtual en la misma subred (clúster mirror), Cómo funciona una IP virtual en diferentes subredes con un balanceador de carga (clúster mirror), Cómo funciona una IP virtual en diferentes subredes con las CLI de los proveedores de la nube (clúster mirror), Cómo funciona una IP virtual en diferentes subredes con BGP (clúster mirror), Cómo funciona la redirección DNS en diferentes subredes (clúster mirror), Cómo funciona el balanceo de carga de IP virtual en un clúster farm en la misma subred, Cómo funciona una IP virtual con balanceo de carga en diferentes subredes (clúster farm), Comparación: implementación de IP virtual, latencia y transparencia de la aplicación, Preguntas frecuentes sobre IP virtual, 🔍 Explora SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 12 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 12 expressions"
 ---
 
 # ¿Cómo funciona una dirección IP virtual en un clúster de alta disponibilidad? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ Algunas aplicaciones utilizan la IP virtual como dirección de servidor. Funcion
 
 ### Ejemplo: balanceador de carga de Azure con una IP virtual local (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-Esta arquitectura se utiliza en producción con el módulo `videoos`. SafeKit para el **servidor de gestión Milestone XProtect** en Azure. Los dos nodos están en una subred. La IP virtual es la **IP frontal del balanceador de carga**, en una subred dedicada.
+Esta arquitectura se utiliza en producción en Azure para el **servidor de gestión Milestone XProtect**, con el módulo `videoos` SafeKit. Los dos nodos están en una subred. La IP virtual es la IP frontal del balanceador de carga. Esta IP frontal está en una subred dedicada.
 
 **En el lado de Azure** (configurado por el equipo de infraestructura):
 

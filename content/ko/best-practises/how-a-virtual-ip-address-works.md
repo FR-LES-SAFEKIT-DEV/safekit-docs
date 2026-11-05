@@ -5,7 +5,7 @@ description: "SafeKit이 장애 조치 시 가상 IP를 이동하는 방법: 동
 category: "best-practises"
 lang: "ko"
 topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, SafeKit의 가상 IP 구현, 동일 서브넷에서 가상 IP가 작동하는 방식(mirror 클러스터), 로드 밸런서를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), 클라우드 공급자 CLI를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), BGP를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), 서로 다른 서브넷 간에 DNS 리디렉션이 작동하는 방식(mirror 클러스터), 동일 서브넷의 farm 클러스터에서 가상 IP 로드 밸런싱이 작동하는 방식, 로드 밸런싱된 가상 IP가 서로 다른 서브넷 간에 작동하는 방식(farm 클러스터), 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 가상 IP에 대한 자주 묻는 질문, 🔍 SafeKit 살펴보기"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
 ---
 
 # 고가용성 클러스터에서 가상 IP 주소는 어떻게 작동하나요? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ SafeKit은 각 노드에 **상태 확인 URL을** 제공합니다.
 
 ### 예시: 로컬 가상 IP가 있는 Azure 로드 밸런서(Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-이 아키텍처는 Azure의 **Milestone XProtect 관리 서버용** SafeKit `videoos` 모듈과 함께 프로덕션 환경에서 사용됩니다. 두 노드는 하나의 서브넷에 있습니다. 가상 IP는 전용 서브넷에 있는 **로드 밸런서의 프런트 엔드 IP** 입니다.
+이 아키텍처는 SafeKit `videoos` 모듈과 함께 **Milestone XProtect 관리 서버용** Azure에서 프로덕션 환경으로 사용됩니다. 두 노드는 하나의 서브넷에 있습니다. 가상 IP는 로드 밸런서의 프런트 엔드 IP입니다. 이 프런트 엔드 IP는 전용 서브넷에 있습니다.
 
 **Azure 측** (인프라 팀에서 구성):
 

@@ -5,7 +5,7 @@ description: "Wie SafeKit eine virtuelle IP bei einem Failover verschiebt: Gratu
 category: "best-practises"
 lang: "de"
 topics: "Was ist eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster?, Implementierung einer virtuellen IP in SafeKit, Wie eine virtuelle IP im selben Subnetz funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit einem Load Balancer funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit Cloud-Provider-CLIs funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit BGP funktioniert (Mirror-Cluster), Wie die DNS-Umleitung über verschiedene Subnetze funktioniert (Mirror-Cluster), Wie das Lastausgleichsverfahren für virtuelle IPs in einem Farm-Cluster im selben Subnetz funktioniert, Wie eine virtuelle IP mit Lastausgleich über verschiedene Subnetze funktioniert (Farm-Cluster), Vergleich: Implementierung virtueller IPs, Latenz und Anwendungstransparenz, Häufig gestellte Fragen zu virtuellen IPs, 🔍 SafeKit erkunden"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 15 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 15 expressions"
 ---
 
 # Wie funktioniert eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ Einige Anwendungen verwenden die virtuelle IP-Adresse als Serveradresse. Sie fun
 
 ### Beispiel: Azure Load Balancer mit einer lokalen virtuellen IP-Adresse (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-Diese Architektur wird in der Produktion mit dem SafeKit `videoos`. Modul für den **Milestone XProtect-Verwaltungsserver** auf Azure eingesetzt. Die beiden Knoten befinden sich in einem Subnetz. Die virtuelle IP-Adresse ist die **Frontend-IP-Adresse des Load Balancer** in einem dedizierten Subnetz.
+Diese Architektur wird in der Produktion auf Azure für den **Milestone XProtect-Verwaltungsserver** mit dem SafeKit `videoos` Modul verwendet. Die beiden Knoten befinden sich in einem Subnetz. Die virtuelle IP-Adresse ist die Frontend-IP-Adresse des Load Balancer. Diese Frontend-IP-Adresse befindet sich in einem dedizierten Subnetz.
 
 **Auf der Azure-Seite** (konfiguriert vom Infrastrukturteam):
 
@@ -183,7 +183,7 @@ Bei einem Failover stoppt das `stop_prim`-Skript auf dem alten primären Server 
 
 ### DNS-Umleitung mit dem Skript `start_prim` {#dns-rerouting-with-the-start-prim-script}
 
-Bei der DNS-Umleitung gibt es **keine einzelne virtuelle IP**. Clients verbinden sich mit einem **virtuellen Namen** (dem DNS-Namen). Beim Failover startet das `start_prim`. Skript auf dem neuen primären Server die Anwendung und ändert dann den DNS-Eintrag des virtuellen Namens in die **physische IP** des neuen primären Servers.
+Bei der DNS-Umleitung gibt es **keine einzelne virtuelle IP**. Clients verbinden sich mit einem **virtuellen Namen** (dem DNS-Namen). Beim Failover startet das `start_prim` Skript auf dem neuen primären Server die Anwendung und ändert dann den DNS-Eintrag des virtuellen Namens in die **physische IP** des neuen primären Servers.
 
 Das `stop_prim`-Skript muss nichts tun. Wenn der alte primäre Server abstürzt, überschreibt der neue primäre Server den DNS-Eintrag.
 

@@ -5,7 +5,7 @@ description: "Hoe SafeKit een virtueel IP-adres verplaatst bij failover: gratuit
 category: "best-practises"
 lang: "nl"
 topics: "Wat is een virtueel IP-adres in een high-availabilitycluster?, Implementatie van virtuele IP in SafeKit, Hoe een virtueel IP werkt in hetzelfde subnet (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met een load balancer (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met cloudprovider-CLI's (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met BGP (mirror-cluster), Hoe DNS-omleiding werkt in verschillende subnets (mirror-cluster), Hoe virtuele IP-loadbalancing werkt in een farm-cluster op hetzelfde subnet, Hoe een loadbalanced virtueel IP werkt in verschillende subnets (farm-cluster), Vergelijking: implementatie van virtuele IP, latentie en applicatietransparantie, Veelgestelde vragen over virtuele IP, 🔍 Ontdek SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 14 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 14 expressions"
 ---
 
 # Hoe werkt een virtueel IP-adres in een high-availability-cluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ Sommige toepassingen gebruiken het virtuele IP-adres als serveradres. Ze werken 
 
 ### Voorbeeld: Azure load balancer met een lokaal virtueel IP-adres (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-Deze architectuur wordt in productie gebruikt met de SafeKit `videoos` module voor de **Milestone XProtect-beheerserver** op Azure. De twee knooppunten bevinden zich in één subnet. Het virtuele IP-adres is het **frontend-IP-adres van de load balancer**, in een speciaal subnet.
+Deze architectuur wordt in productie gebruikt op Azure voor de **Milestone XProtect-beheerserver**, met de SafeKit `videoos` module. De twee knooppunten bevinden zich in één subnet. Het virtuele IP-adres is het frontend-IP-adres van de load balancer. Dit frontend-IP-adres bevindt zich in een speciaal subnet.
 
 **Aan de Azure-kant** (geconfigureerd door het infrastructuurteam):
 

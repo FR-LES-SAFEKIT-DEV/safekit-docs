@@ -5,7 +5,7 @@ description: "Como o SafeKit move um IP virtual em caso de falha: ARP gratuito n
 category: "best-practises"
 lang: "pt-pt"
 topics: "O que é um endereço IP virtual num cluster de alta disponibilidade?, Implementação de IP virtual no SafeKit, Como funciona um IP virtual na mesma sub-rede (cluster mirror), Como funciona um IP virtual em diferentes sub-redes com um balanceador de carga (cluster mirror), Como funciona um IP virtual em diferentes sub-redes com CLIs de fornecedor de nuvem (cluster mirror), Como funciona um IP virtual em diferentes sub-redes com BGP (cluster mirror), Como funciona o redirecionamento de DNS em diferentes sub-redes (cluster mirror), Como funciona o balanceamento de carga de IP virtual numa cluster farm na mesma sub-rede, Como funciona um IP virtual com balanceamento de carga em diferentes sub-redes (cluster farm), Comparação: implementação de IP virtual, latência e transparência da aplicação, Perguntas frequentes sobre IP virtual, 🔍 Explorar SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 10 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 10 expressions"
 ---
 
 # Como funciona um endereço IP virtual num cluster de alta disponibilidade? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ Algumas aplicações utilizam o IP virtual como endereço do servidor. Funcionam
 
 ### Exemplo: Balanceador de carga do Azure com um IP virtual local (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-Esta arquitetura é utilizada em produção com o módulo `videoos`. SafeKit para o **servidor de gestão Milestone XProtect** no Azure. Os dois nós estão numa única sub-rede. O IP virtual é o **IP de front-end do balanceador de carga**, numa sub-rede dedicada.
+Esta arquitetura é utilizada em produção no Azure para o **servidor de gestão Milestone XProtect**, com o módulo `videoos` SafeKit. Os dois nós estão numa única sub-rede. O IP virtual é o IP de front-end do balanceador de carga. Este IP de front-end está numa sub-rede dedicada.
 
 **No lado do Azure** (configurado pela equipa de infraestruturas):
 

@@ -109,7 +109,7 @@ Some applications use the virtual IP as their server address. They work correctl
 
 ### Example: Azure load balancer with a local virtual IP (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-This architecture is used in production with the SafeKit `videoos` module for the **Milestone XProtect management server** on Azure. The two nodes are in one subnet. The virtual IP is the **frontend IP of the load balancer**, in a dedicated subnet.
+This architecture is used in production on Azure for the **Milestone XProtect management server**, with the SafeKit `videoos` module. The two nodes are in one subnet. The virtual IP is the frontend IP of the load balancer. This frontend IP is in a dedicated subnet.
 
 **On the Azure side** (configured by the infrastructure team):
 

@@ -5,7 +5,7 @@ description: "كيف ينقل SafeKit عنوان IP ظاهري عند تجاوز
 category: "best-practises"
 lang: "ar"
 topics: "ما هو عنوان IP الظاهري في مجموعة عالية التوفر؟، تطبيق IP الظاهري في SafeKit، كيف يعمل IP الظاهري في نفس الشبكة الفرعية (مجموعة mirror)، كيف يعمل IP الظاهري عبر شبكات فرعية مختلفة مع موازن تحميل (مجموعة mirror)، كيف يعمل IP الظاهري عبر شبكات فرعية مختلفة مع واجهات سطر الأوامر لمزود السحابة (مجموعة mirror)، كيف يعمل IP الظاهري عبر شبكات فرعية مختلفة مع BGP (مجموعة mirror)، كيف يعمل إعادة توجيه DNS عبر شبكات فرعية مختلفة (مجموعة mirror)، كيف يعمل موازنة تحميل IP الظاهري في مجموعة farm على نفس الشبكة الفرعية، كيف يعمل IP الظاهري المتوازن عبر شبكات فرعية مختلفة (مجموعة farm)، مقارنة: تطبيق IP الظاهري، زمن الانتقال، وشفافية التطبيق، أسئلة متكررة حول IP الظاهري، 🔍 استكشف SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 14 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 14 expressions"
 ---
 
 # كيف يعمل عنوان IP الظاهري في مجموعة عالية التوافر؟ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation 
 
 ### مثال: موازن تحميل Azure مع عنوان IP ظاهري محلي (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-تُستخدم هذه البنية في بيئة الإنتاج مع وحدة SafeKit `videoos` **لخادم إدارة Milestone XProtect** على Azure. توجد العقدتان في شبكة فرعية واحدة. عنوان IP الظاهري هو **عنوان IP الأمامي لموازن التحميل** ، في شبكة فرعية مخصصة.
+تُستخدم هذه البنية في بيئة الإنتاج على Azure **لخادم إدارة Milestone XProtect** ، مع وحدة SafeKit `videoos`. توجد العقدتان في شبكة فرعية واحدة. عنوان IP الظاهري هو عنوان IP الأمامي لموازن التحميل. يوجد عنوان IP الأمامي هذا في شبكة فرعية مخصصة.
 
 **من جانب Azure** (يتم تكوينه بواسطة فريق البنية التحتية):
 

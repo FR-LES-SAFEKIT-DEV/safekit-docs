@@ -5,7 +5,7 @@ description: "Come SafeKit sposta un IP virtuale in caso di failover: ARP gratui
 category: "best-practises"
 lang: "it"
 topics: "Che cos’è un indirizzo IP virtuale in un cluster ad alta disponibilità?, Implementazione dell’IP virtuale in SafeKit, Come funziona un IP virtuale nella stessa sottorete (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con un bilanciatore del carico (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con le CLI dei provider cloud (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con BGP (cluster mirror), Come funziona il reindirizzamento DNS su sottoreti diverse (cluster mirror), Come funziona il bilanciamento del carico dell’IP virtuale in un cluster farm sulla stessa sottorete, Come funziona un IP virtuale con bilanciamento del carico su sottoreti diverse (cluster farm), Confronto: implementazione dell’IP virtuale, latenza e trasparenza dell’applicazione, Domande frequenti sull’IP virtuale, 🔍 Esplora SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 10 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 10 expressions"
 ---
 
 # Come funziona un indirizzo IP virtuale in un cluster ad alta disponibilità? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ Alcune applicazioni utilizzano l’IP virtuale come indirizzo del server. Funzio
 
 ### Esempio: bilanciatore del carico di Azure con un IP virtuale locale (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-Questa architettura viene utilizzata in produzione con il modulo `videoos`. SafeKit per il **server di gestione Milestone XProtect** su Azure. I due nodi si trovano in una sottorete. L’IP virtuale è l’**IP frontend del bilanciatore del carico**, in una sottorete dedicata.
+Questa architettura viene utilizzata in produzione su Azure per il **server di gestione Milestone XProtect**, con il modulo `videoos` di SafeKit. I due nodi si trovano in una sottorete. L’IP virtuale è l’IP frontend del bilanciatore del carico. Questo IP frontend si trova in una sottorete dedicata.
 
 **Sul lato Azure** (configurato dal team dell’infrastruttura):
 

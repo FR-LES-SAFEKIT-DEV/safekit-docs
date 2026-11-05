@@ -5,7 +5,7 @@ description: "SafeKit がフェイルオーバー時に仮想 IP を移動する
 category: "best-practises"
 lang: "ja"
 topics: "高可用性クラスターにおける仮想 IP アドレスとは？、SafeKit における仮想 IP の実装、同一サブネットでの仮想 IP の動作（mirror クラスター）、ロードバランサーを用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、クラウドプロバイダー CLI を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、BGP を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、異なるサブネット間での DNS リダイレクトの動作（mirror クラスター）、同一サブネット上の farm クラスターにおける仮想 IP ロードバランシングの動作、異なるサブネット間でのロードバランシングされた仮想 IP の動作（farm クラスター）、比較：仮想 IP の実装、レイテンシー、およびアプリケーションの透過性、仮想 IP に関するよくある質問、🔍 SafeKit を探索する"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
 ---
 
 # 高可用性クラスターにおいて、仮想 IP アドレスはどのように機能しますか？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -81,10 +81,10 @@ translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation 
 
 ノードが**異なるサブネット**にある場合、Gratuitous ARP 仮想 IP を移動できません **。この場合、仮想 IP は ロード バランサー**上にあります。ロード バランサーはトラフィックをプライマリ サーバーに送信します。
 
-SafeKit は各ノードに**ヘルスチェックURL** を提供します。
+SafeKit は各ノードに**ヘルスチェック URL** を提供します。
 
-  * **プライマリ (PRIM) :**`HTTP 200 OK`。を返します。ロードバランサーはこのノードにトラフィックを送信します。
-  * **セカンダリ (SECOND) :**`HTTP 404 NOT FOUND`。を返します。ロードバランサーはこのノードにトラフィックを送信しません。
+  * **プライマリ (PRIM) :**`HTTP 200 OK` を返します。ロードバランサーはこのノードにトラフィックを送信します。
+  * **セカンダリ (SECOND) :**`HTTP 404 NOT FOUND` を返します。ロードバランサーはこのノードにトラフィックを送信しません。
 
 フェイルオーバー時に、SafeKit は応答を変更し、ロードバランサーはトラフィックを新しいプライマリサーバーに送信します。これは、[**AWS**](</ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)、[**Azure**](</ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/>)、[**Google Cloud**](</ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>)の**アベイラビリティゾーン**間の標準的なソリューションです。
 
@@ -110,13 +110,13 @@ SafeKit は各ノードに**ヘルスチェックURL** を提供します。
 
 ### 例：ローカル仮想 IP アドレスを持つ Azure ロードバランサー（Milestone XProtect） {#azure-load-balancer-local-virtual-ip-example}
 
-このアーキテクチャは、Azure 上の **Milestone XProtect 管理サーバー**用の SafeKit `videoos` モジュールで本番環境で使用されています **。2 つのノードは 1 つのサブネットにあり、仮想 IP は専用サブネット内 のロードバランサーのフロントエンド IP** です。
+このアーキテクチャは、SafeKit `videoos` モジュールとともに、**Milestone XProtect 管理サーバー**向けに Azure 上で本番環境で使用されています。2 つのノードは 1 つのサブネットにあり、仮想 IP はロードバランサーのフロントエンド IP です。このフロントエンド IP は専用のサブネットにあります。
 
 **Azure 側**（インフラストラクチャチームが設定）：
 
   1. 専用サブネット内にフロントエンド IP を持つ**レイヤー 4 ロード バランサー**を作成します。
   2. 2 つの SafeKit ノードをロードバランサーの**バックエンドプール**に追加します。
-  3. モジュールの SafeKitヘルスチェックURL に**ヘルスプローブ**を追加します。パスは`/var/modules/videoos/ready.txt`、ポートは `9010`（HTTP）または `9453`（有効な証明書付き HTTPS）です。別のモジュールの場合は、`videoos` モジュール名に置き換えます。
+  3. モジュールの SafeKit ヘルスチェック URL に**ヘルスプローブ**を追加します。パスは`/var/modules/videoos/ready.txt`、ポートは `9010`（HTTP）または `9453`（有効な証明書付き HTTPS）です。別のモジュールの場合は、`videoos` モジュール名に置き換えます。
   4. クライアントが仮想 IP で使用するすべてのポート（管理サーバーのポートと他のサービスのポート）に**ロードバランシングルールを**追加します。
 
 **SafeKit 側：** モジュールの `userconfig.xml` ファイル（`videoos/conf/userconfig.xml`）で、標準の `<vip>` セクションをこのセクションに置き換えます。
@@ -137,7 +137,7 @@ SafeKit は各ノードに**ヘルスチェックURL** を提供します。
 
 **アプリケーション側では、** すべての Milestone サービスがサーバーのプライベート IP アドレスではなく、仮想 IP アドレスを使用するように設定します。
 
-> **⚠️ 注意:** VM のサブネットと**重複しない**フロントエンドサブネットを使用してください。たとえば、`10.0.1.0/24` の VM と `10.0.2.0/24`。のロードバランサーフロントエンド IP などです。SafeKit は、ネットマスクとともにフロントエンド IP を VM のネットワークインターフェイスに追加します。2 つのサブネットが重複する場合、このエイリアスによって VM のルーティングが変更され、VM のネットワークトラフィックが失敗する可能性があります。
+> **⚠️ 注意:** VM のサブネットと**重複しない**フロントエンドサブネットを使用してください。たとえば、`10.0.1.0/24` の VM と `10.0.2.0/24` のロードバランサーフロントエンド IP などです。SafeKit は、ネットマスクとともにフロントエンド IP を VM のネットワークインターフェイスに追加します。2 つのサブネットが重複する場合、このエイリアスによって VM のルーティングが変更され、VM のネットワークトラフィックが失敗する可能性があります。
 
 
 ## クラウドプロバイダーの CLI を使用した異なるサブネット間での仮想 IP の動作方法（mirror クラスター） {#virtual-ip-cloud-cli-failover}
@@ -277,11 +277,11 @@ DNS リダイレクトは、信頼性の高い高可用性ソリューション�
 
 > **⚠️ 注：** SafeKit はヘルスチェックを提供します。ロードバランサーは、お客様のネットワークまたはクラウドプロバイダーが提供します。
 
-#### SafeKitヘルスチェック {#safekit-health-check-mechanism}
+#### SafeKit ヘルスチェック {#safekit-health-check-mechanism}
 
-SafeKit は、<span class="notranslate farm-term" translate="no">farm</span> の各サーバーに**ヘルスチェックURL を**提供します。ロードバランサーはこれを読み取り、各サーバーのステータスを把握します。
+SafeKit は、<span class="notranslate farm-term" translate="no">farm</span> の各サーバーに**ヘルスチェック URL を**提供します。ロードバランサーはこれを読み取り、各サーバーのステータスを把握します。
 
-  * **ノードがアップ:** ヘルスチェック`HTTP 200 OK`。を返します。ロードバランサーはこのサーバーにトラフィックを送信します。
+  * **ノードがアップ:** ヘルスチェック`HTTP 200 OK` を返します。ロードバランサーはこのサーバーにトラフィックを送信します。
   * **ノードダウン:** サーバーまたはアプリケーションに障害が発生した場合、SafeKit は `HTTP 404 NOT FOUND` を返します (またはサーバーが応答しません)。ロードバランサーは、このノードへのトラフィックの送信を直ちに停止します。
 
 
@@ -329,7 +329,7 @@ Gratuitous ARP (GARP) とは何ですか？また、なぜ使用されるので�
 
 クラウド（AWS、Azure、GCP）における仮想 IP の仕組みは？
 
-クラウドでは、レイヤー 2 の GARP メッセージは仮想 IP のルーティング変更には使用できません。SafeKit は、**クラウドロードバランサー**（AWS Elastic Load Balancing、Azure Load Balancer、Google Cloud Load Balancing）と連携します **。SafeKit は ヘルスチェックURL** を提供します。ロードバランサーはこれを読み取り、トラフィックをアクティブノードに送信します。
+クラウドでは、レイヤー 2 の GARP メッセージは仮想 IP のルーティング変更には使用できません。SafeKit は、**クラウドロードバランサー**（AWS Elastic Load Balancing、Azure Load Balancer、Google Cloud Load Balancing）と連携します **。SafeKit は ヘルスチェック URL** を提供します。ロードバランサーはこれを読み取り、トラフィックをアクティブノードに送信します。
 
 ストレッチ VLAN ディザスタリカバリにおいてロードバランサーよりも優れていますか？
 

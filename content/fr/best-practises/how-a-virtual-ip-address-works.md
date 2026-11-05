@@ -5,7 +5,7 @@ description: "Comment SafeKit déplace une IP virtuelle lors d’un basculement 
 category: "best-practises"
 lang: "fr"
 topics: "Qu’est-ce qu’une adresse IP virtuelle dans un cluster haute disponibilité ?, Implémentation de l’IP virtuelle dans SafeKit, Comment une IP virtuelle fonctionne dans le même sous-réseau (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec un équilibreur de charge (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec les CLI des fournisseurs de cloud (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec BGP (cluster mirror), Comment la redirection DNS fonctionne sur différents sous-réseaux (cluster mirror), Comment l’équilibrage de charge d’IP virtuelle fonctionne dans un cluster farm sur le même sous-réseau, Comment une IP virtuelle à équilibrage de charge fonctionne sur différents sous-réseaux (cluster farm), Comparaison : implémentation de l’IP virtuelle, latence et transparence de l’application, Questions fréquemment posées sur l’IP virtuelle, 🔍 Explorer SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 15 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 15 expressions"
 ---
 
 # Comment fonctionne une adresse IP virtuelle dans un cluster à haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -110,7 +110,7 @@ Certaines applications utilisent l’adresse IP virtuelle comme adresse de serve
 
 ### Exemple : Équilibreur de charge Azure avec une adresse IP virtuelle locale (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-Cette architecture est utilisée en production avec le module `videoos`. SafeKit pour le **serveur de gestion Milestone XProtect** sur Azure. Les deux nœuds se trouvent dans un même sous-réseau. L’adresse IP virtuelle est l’**adresse IP frontale de l’équilibreur de charge**, dans un sous-réseau dédié.
+Cette architecture est utilisée en production sur Azure pour le **serveur de gestion Milestone XProtect**, avec le module `videoos` SafeKit. Les deux nœuds se trouvent dans un même sous-réseau. L’adresse IP virtuelle est l’adresse IP frontale de l’équilibreur de charge. Cette adresse IP frontale se trouve dans un sous-réseau dédié.
 
 **Du côté d’Azure** (configuré par l’équipe d’infrastructure) :
 

@@ -5,7 +5,7 @@ description: "SafeKit 如何在故障转移时移动虚拟 IP：同一子网中�
 category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性集群中的虚拟 IP 地址是什么？, SafeKit 中的虚拟 IP 实现, 虚拟 IP 在同一子网中如何工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过负载均衡器工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过云提供商 CLI 工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过 BGP 工作（mirror 集群）, DNS 重定向在不同子网中如何工作（mirror 集群）, 虚拟 IP 负载均衡在同一子网 farm 集群中如何工作, 负载均衡的虚拟 IP 在不同子网中如何工作（farm 集群）, 比较：虚拟 IP 实现、延迟和应用程序透明度, 关于虚拟 IP 的常见问题, 🔍 探索 SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
+translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
 ---
 
 # 虚拟 IP 地址在高可用性集群中是如何工作的？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -81,7 +81,7 @@ translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation 
 
 当节点位于**不同的子网**中时，免费 ARP 无法移动虚拟 IP **。在这种情况下，虚拟 IP 位于 负载均衡器**上。负载均衡器将流量发送到主服务器。
 
-SafeKit 在每个节点上提供一个**健康检查URL**：
+SafeKit 在每个节点上提供一个**健康检查 URL**：
 
   * **主节点 (PRIM)：** 返回 `HTTP 200 OK`。负载均衡器将流量发送到此节点。
   * **备节点 (SECOND)：** 返回 `HTTP 404 NOT FOUND`。负载均衡器不会向此节点发送流量。
@@ -110,13 +110,13 @@ SafeKit 在每个节点上提供一个**健康检查URL**：
 
 ### 示例：具有本地虚拟 IP 的 Azure 负载均衡器 (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-此架构与 SafeKit `videoos` 模块一起用于 Azure 上的 **Milestone XProtect 管理服务器**。这两个节点位于一个子网中 **。虚拟 IP 是 负载均衡器的前端 IP**，位于专用子网中。
+此架构用于 Azure 上的 **Milestone XProtect 管理服务器**，并使用 SafeKit `videoos` 模块。两个节点位于一个子网中。虚拟 IP 是负载均衡器的前端 IP。此前端 IP 位于专用子网中。
 
 **在 Azure 端**（由基础架构团队配置）：
 
   1. 在专用子网中创建具有前端 IP 的**第 4 层负载均衡器**。
   2. 将两个 SafeKit 节点添加到负载均衡器的**后端池**。
-  3. 在模块的 SafeKit健康检查URL 上添加**健康探测**：路径`/var/modules/videoos/ready.txt`，端口 `9010`（HTTP）或端口 `9453`（使用有效证书的 HTTPS）。对于另一个模块，请将 `videoos` 替换为模块名称。
+  3. 在模块的 SafeKit 健康检查 URL 上添加**健康探测**：路径`/var/modules/videoos/ready.txt`，端口 `9010`（HTTP）或端口 `9453`（使用有效证书的 HTTPS）。对于另一个模块，请将 `videoos` 替换为模块名称。
   4. 为客户端在虚拟 IP 上使用的所有端口添加**负载均衡规则**：管理服务器端口以及其他服务的端口。
 
 **在 SafeKit 端：** 在模块的 `userconfig.xml` 文件（`videoos/conf/userconfig.xml`）中，将标准 `<vip>` 部分替换为以下部分：
@@ -272,14 +272,14 @@ DNS 重定向不是一个可靠的高可用性解决方案。仅当所有客户�
 负载均衡器根据两个标准共享客户端请求：
 
   * **负载均衡规则：** 例如，**客户端 IP 地址**或**客户端 TCP 端口**。
-  * **节点可用性：** 负载均衡器仅将流量发送到健康的节点，具体取决于 SafeKit健康检查。
+  * **节点可用性：** 负载均衡器仅将流量发送到健康的节点，具体取决于 SafeKit 健康检查。
 
 
 > **⚠️ 注意：** SafeKit 提供健康检查。您的网络或云提供商提供负载均衡器。
 
-#### SafeKit健康检查 {#safekit-health-check-mechanism}
+#### SafeKit 健康检查 {#safekit-health-check-mechanism}
 
-SafeKit 在 <span class="notranslate farm-term" translate="no">farm</span> 的每台服务器上提供一个**健康检查URL**。负载均衡器读取该 URL 以了解每台服务器的状态：
+SafeKit 在 <span class="notranslate farm-term" translate="no">farm</span> 的每台服务器上提供一个**健康检查 URL**。负载均衡器读取该 URL 以了解每台服务器的状态：
 
   * **节点正常：** 健康检查返回 `HTTP 200 OK`。负载均衡器将流量发送到此服务器。
   * **节点 DOWN：** 如果服务器或应用程序出现故障，SafeKit 将返回 `HTTP 404 NOT FOUND`（或服务器不响应）。负载均衡器会立即停止向该节点发送流量。
@@ -329,7 +329,7 @@ DNS 重定向：无虚拟 IP | 灾难恢复（远程数据中心） | DNS 记录
 
 虚拟 IP 在云中（AWS、Azure、GCP）是如何工作的？
 
-在云中，第 2 层 GARP 消息不可用于重新路由虚拟 IP。SafeKit 可与**云负载均衡器**（AWS 弹性负载均衡、Azure Load Balancer 或 Google Cloud Load Balancing）配合使用 **。SafeKit 提供一个 健康检查URL**。负载均衡器读取该 URL 并将流量发送到活动节点。
+在云中，第 2 层 GARP 消息不可用于重新路由虚拟 IP。SafeKit 可与**云负载均衡器**（AWS 弹性负载均衡、Azure Load Balancer 或 Google Cloud Load Balancing）配合使用 **。SafeKit 提供一个 健康检查 URL**。负载均衡器读取该 URL 并将流量发送到活动节点。
 
 对于灾难恢复，扩展 VLAN 比负载均衡器更好吗？
 
