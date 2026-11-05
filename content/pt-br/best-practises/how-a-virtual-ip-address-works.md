@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/how-a-virtual-ip-add
 description: "Como o SafeKit move um IP virtual em caso de falha: ARP gratuito na mesma sub-rede, balanceador de carga, CLI de nuvem ou BGP entre sub-redes. Por que um IP virtual local é importante."
 category: "best-practises"
 lang: "pt-br"
-topics: "O que é um endereço IP virtual em um cluster de alta disponibilidade?, Implementação de IP virtual no SafeKit, Como um IP virtual funciona na mesma sub-rede (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com um balanceador de carga (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com CLIs de provedor de nuvem (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com BGP (cluster mirror), Como o redirecionamento de DNS funciona em diferentes sub-redes (cluster mirror), Como o balanceamento de carga de IP virtual funciona em um cluster farm na mesma sub-rede, Como um IP virtual balanceado funciona em diferentes sub-redes (cluster farm), Comparação: implementação de IP virtual, latência e transparência de aplicação, Perguntas frequentes sobre IP virtual, 🔍 Explore o SafeKit"
-translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 10 expressions"
+topics: "O que é um endereço IP virtual em um cluster de alta disponibilidade?, Implementação de IP virtual no SafeKit, Como um IP virtual funciona na mesma sub-rede (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com um balanceador de carga (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com CLIs de provedor de nuvem (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com BGP (cluster mirror), Como o redirecionamento de DNS funciona em diferentes sub-redes (cluster mirror), Como o balanceamento de carga de IP virtual funciona em um cluster farm na mesma sub-rede, Como um IP virtual balanceado funciona em diferentes sub-redes (cluster farm), Comparação: implementação de IP virtual, latência e transparência da aplicação, Perguntas frequentes sobre IP virtual, 🔍 Explore o SafeKit"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 12 expressions"
 ---
 
 # Como funciona um endereço IP virtual em um cluster de alta disponibilidade? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -16,8 +16,8 @@ Um **endereço IP virtual** é o único endereço que os clientes usam para se c
 
 **Princípio fundamental do SafeKit:** o IP virtual é **configurado localmente no servidor** que executa a aplicação. A aplicação é iniciada no IP virtual e recebe o IP original do cliente. É por isso que muitas aplicações funcionam corretamente com o SafeKit sem qualquer alteração. O SafeKit oferece dois tipos de IP virtual:
 
-  * **IP virtual primário/secundário com um cluster mirror:** o IP virtual está ativo apenas no servidor primário. Em caso de failover, ele é movido para o servidor secundário.
-  * **Balanceamento de carga de rede com IP virtual e um cluster <span class="notranslate farm-term" translate="no">farm</span>:** o IP virtual está ativo em todos os servidores ao mesmo tempo. O tráfego é compartilhado entre eles.
+  * **IP virtual primário/secundário com um cluster mirror:** o IP virtual está ativo apenas no servidor primário. Em caso de falha, ele é movido para o servidor secundário.
+  * **Balanceamento de carga de rede com IP virtual e cluster <span class="notranslate farm-term" translate="no">farm</span>:** o IP virtual está ativo em todos os servidores ao mesmo tempo. O tráfego é compartilhado entre eles.
 
 ## Implementação de IP virtual no SafeKit {#safekit-virtual-ip-implementation}
 
@@ -27,7 +27,7 @@ Este artigo explica como o SafeKit move o IP virtual em cada arquitetura de rede
   * **Diferentes sub-redes com um balanceador de carga (clusters [mirror](#virtual-ip-different-subnets-failover) e [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-different-subnets)):** o balanceador de carga usa a **verificação de integridade** do SafeKit para enviar o tráfego para o servidor correto (o balanceador de carga é configurado pelo integrador).
   * **[Diferentes sub-redes com CLIs de provedor de nuvem](#virtual-ip-cloud-cli-failover) (cluster mirror):** o script `start_prim` do SafeKit chama a CLI da nuvem para mover o IP virtual (script escrito pelo integrador).
   * **[Diferentes sub-redes com BGP](#virtual-ip-bgp-failover) (cluster mirror):** o servidor principal anuncia o IP virtual para os roteadores (script escrito pelo integrador).
-  * **[Diferentes sub-redes com redirecionamento de DNS](#virtual-ip-vs-dns-redirection-failover) (cluster mirror):** o script `start_prim` do SafeKit altera o registro de DNS do nome virtual para o IP físico do novo servidor primário (script escrito pelo integrador). Não há um único IP virtual, e esse método não é confiável para todos os clientes.
+  * **[Diferentes sub-redes com redirecionamento de DNS](#virtual-ip-vs-dns-redirection-failover) (cluster mirror):** o script `start_prim` do SafeKit altera o registro DNS do nome virtual para o IP físico do novo servidor primário (script escrito pelo integrador). Não há um único IP virtual, e esse método não é confiável para todos os clientes.
 
 Também neste artigo:
 
@@ -52,7 +52,7 @@ Em uma rede local, **o SafeKit** gerencia o IP virtual e o failover do aplicativ
 
 ![Mecanismo de failover de IP virtual do SafeKit entre dois servidores na mesma sub-rede](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-Em um **cluster mirror SafeKit**, os dois nós estão na mesma sub-rede. A alta disponibilidade usa um **IP virtual**. O SafeKit gerencia o IP virtual na pilha de rede do sistema operacional. Nenhum hardware especial é necessário. O IP virtual é adicionado aos endereços IP físicos do Servidor 1 e do Servidor 2 com **alias de IP**. Os clientes sempre se conectam ao IP virtual.
+Em um **cluster mirror do SafeKit**, os dois nós estão na mesma sub-rede. A alta disponibilidade usa um **IP virtual**. O SafeKit gerencia o IP virtual na pilha de rede do sistema operacional. Nenhum hardware especial é necessário. O IP virtual é adicionado aos endereços IP físicos do Servidor 1 e do Servidor 2 com **alias de IP**. Os clientes sempre se conectam ao IP virtual.
 
 #### Alias de IP e múltiplos IPs virtuais no SafeKit {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
 
@@ -105,19 +105,19 @@ Alguns aplicativos usam o IP virtual como endereço do servidor. Eles funcionam 
 **Melhor prática:** use um modo de balanceador de carga que mantenha o IP virtual como o endereço de destino (por exemplo, Floating IP ou Direct Server Return). Em seguida, configure o IP virtual localmente no servidor principal. O método depende da sub-rede do IP virtual:
 
   * **O IP virtual está na mesma sub-rede que os endereços IP físicos dos servidores:** mantenha a seção `<vip>` no módulo SafeKit. O SafeKit configura automaticamente o IP virtual como um alias na placa de rede do endereço IP físico.
-  * **O IP virtual está em uma sub-rede diferente:** configure o IP virtual como um **alias de um lado** na seção `<vip>` do módulo SafeKit (`where="one_side_alias"`). O SafeKit adiciona o IP virtual como um alias local apenas no servidor primário. O exemplo abaixo mostra essa configuração no Azure.
-  * **Outra opção para uma sub-rede diferente:** use o script `start_prim` para configurar o IP virtual em uma interface dedicada, como loopback, antes que o aplicativo seja iniciado. Use o script `stop_prim` para remover o IP virtual após o aplicativo parar. O integrador escreve esses comandos. Eles não são fornecidos pelo produto SafeKit.
+  * **O IP virtual está em uma sub-rede diferente:** mantenha a seção `<vip>` no módulo SafeKit, com uma configuração específica. O exemplo abaixo mostra essa configuração no Azure.
+  * **Outra opção para uma sub-rede diferente:** use o script `start_prim` para configurar o IP virtual em uma interface dedicada, como a interface loopback, antes que o aplicativo seja iniciado. Use o script `stop_prim` para remover o IP virtual após o aplicativo parar. O integrador escreve esses comandos. Eles não são fornecidos pelo produto SafeKit.
 
 ### Exemplo: Balanceador de carga do Azure com um IP virtual local (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-Essa arquitetura é usada em produção no Azure para o **servidor de gerenciamento Milestone XProtect**, com o módulo `videoos` SafeKit. Os dois nós estão em uma sub-rede. O IP virtual é o IP de front-end do balanceador de carga. Esse IP de front-end está em uma sub-rede dedicada.
+Essa arquitetura é usada em produção no Azure para o **servidor de gerenciamento Milestone XProtect**, com o módulo `videoos` SafeKit. Os dois nós estão em duas zonas de disponibilidade. O IP virtual é o IP de front-end do balanceador de carga. Esse IP de front-end está em uma sub-rede dedicada.
 
 **No lado do Azure** (configurado pela equipe de infraestrutura):
 
   1. Crie um **balanceador de carga de camada 4** com um IP de front-end em uma sub-rede dedicada.
   2. Adicione os dois nós do SafeKit ao **pool de back-end** do balanceador de carga.
   3. Adicione uma **sonda de integridade** no URL de verificação de integridade do SafeKit do módulo: caminho `/var/modules/videoos/ready.txt`, porta `9010` (HTTP) ou porta `9453` (HTTPS com certificados válidos). Para outro módulo, substitua `videoos` pelo nome do módulo.
-  4. Adicione **regras de balanceamento de carga** para todas as portas que os clientes usam no IP virtual: as portas do servidor de gerenciamento e as portas dos outros serviços.
+  4. Adicione **regras de balanceamento de carga** para todas as portas que os clientes usam no IP virtual: as portas dos serviços de gerenciamento do Milestone e, se necessário, as portas de outros serviços.
 
 **No lado do SafeKit:** no arquivo `userconfig.xml` do módulo (`videoos/conf/userconfig.xml`), substitua a seção padrão `<vip>` por esta seção:
 
@@ -152,16 +152,13 @@ Sem um balanceador de carga, a CLI do provedor de nuvem pode ser integrada ao **
 
 O **IP virtual permanece local** no servidor principal. **Não há NAT**, e o IP original do cliente não muda.
 
-### Responsabilidade do integrador {#integrator-responsibility}
-
-O **integrador** deve adicionar os comandos da CLI da nuvem ao script `start_prim`. Esses comandos **não são fornecidos pelo produto SafeKit**. Eles dependem do provedor de nuvem, do design da rede e das regras de segurança do cliente.
-
 ### Restrições {#constraints-of-the-cli-approach}
 
   * A CLI da nuvem deve ser instalada em ambos os nós. Cada nó precisa de uma identidade de nuvem com direitos de rede.
   * O script deve gerenciar erros e novas tentativas.
   * A recuperação de falhas é **muito mais lenta** do que com um balanceador de carga e uma sonda de integridade, porque cada recuperação de falhas aguarda a resposta da API da nuvem.
-  * Não há nenhuma implantação de referência dessa arquitetura em produção. Valide-a em um ambiente de teste antes da produção. Quando um balanceador de carga estiver disponível, prefira a arquitetura do balanceador de carga descrita acima.
+
+> **⚠️ Observação:** O **integrador** deve adicionar os comandos da CLI da nuvem ao script `start_prim`. Esses comandos **não são fornecidos pelo produto SafeKit**. Eles dependem do provedor de nuvem, do design da rede e das regras de segurança do cliente. Valide a solução com sua equipe de rede antes da produção.
 
 ## Como um IP virtual funciona em diferentes sub-redes com BGP (cluster mirror) {#virtual-ip-bgp-failover}
 
@@ -222,7 +219,7 @@ O redirecionamento de DNS não é uma solução confiável de alta disponibilida
 
 ## Como funciona o balanceamento de carga de IP virtual em um cluster <span class="notranslate farm-term" translate="no">farm</span> na mesma sub-rede {#virtual-ip-load-balancing-same-subnet}
 
-- [Testando o IP virtual de balanceamento de carga em um cluster farm SafeKit](/pt-br/best-practises/test-load-balancing-vip-farm/)
+- [Testando o IP virtual de balanceamento de carga em um cluster farm do SafeKit](/pt-br/best-practises/test-load-balancing-vip-farm/)
 
 ### Balanceamento de carga e redundância em nível de kernel {#scalable-performance-kernel-level-load-balancing--redundancy}
 
@@ -258,9 +255,9 @@ Essa solução de balanceamento de carga também funciona entre **data centers r
 
 ### Tráfego entre sub-redes da nuvem {#multi-zone-scaling-orchestrating-traffic-across-cloud-subnets}
 
-Um cluster <span class="notranslate farm-term" translate="no">farm</span> pode compartilhar o trabalho de aplicação entre várias zonas de disponibilidade e sub-redes.
+Um cluster <span class="notranslate farm-term" translate="no">farm</span> pode compartilhar o trabalho da aplicação entre várias zonas de disponibilidade e sub-redes.
 
-### Clusters <span class="notranslate farm-term" translate="no">farm</span> sub-redes cruzadas: vários nós Windows ou Linux {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### Clusters <span class="notranslate farm-term" translate="no">farm</span> em várias sub-redes: vários nós Windows ou Linux {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 ![Diagrama de um cluster farm com balanceamento de carga operando em duas sub-redes diferentes](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
@@ -281,7 +278,7 @@ O balanceador de carga compartilha as solicitações do cliente com dois critér
 
 O SafeKit fornece um **URL de verificação de integridade** em cada servidor do <span class="notranslate farm-term" translate="no">farm</span>. O balanceador de carga o lê para saber o status de cada servidor:
 
-  * **Nó ATIVO:** a verificação de integridade retorna `HTTP 200 OK`. O balanceador de carga envia tráfego para este servidor.
+  * **Nó UP:** a verificação de integridade retorna `HTTP 200 OK`. O balanceador de carga envia tráfego para este servidor.
   * **Nó DOWN:** se um servidor ou uma aplicação falhar, o SafeKit retorna `HTTP 404 NOT FOUND` (ou o servidor não responde). O balanceador de carga para de enviar tráfego para este nó imediatamente.
 
 

@@ -5,7 +5,7 @@ description: "SafeKit 如何在故障转移时移动虚拟 IP：同一子网中�
 category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性集群中的虚拟 IP 地址是什么？, SafeKit 中的虚拟 IP 实现, 虚拟 IP 在同一子网中如何工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过负载均衡器工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过云提供商 CLI 工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过 BGP 工作（mirror 集群）, DNS 重定向在不同子网中如何工作（mirror 集群）, 虚拟 IP 负载均衡在同一子网 farm 集群中如何工作, 负载均衡的虚拟 IP 在不同子网中如何工作（farm 集群）, 比较：虚拟 IP 实现、延迟和应用程序透明度, 关于虚拟 IP 的常见问题, 🔍 探索 SafeKit"
-translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 23 expressions"
 ---
 
 # 虚拟 IP 地址在高可用性集群中是如何工作的？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -16,7 +16,7 @@ translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation 
 
 **SafeKit 的关键原则：** 虚拟 IP 在运行应用程序的**服务器上本地配置**。应用程序在虚拟 IP 上启动，并接收原始客户端 IP。这就是为什么许多应用程序无需任何更改即可与 SafeKit 正确配合使用。SafeKit 提供两种类型的虚拟 IP：
 
-  * **主/备虚拟 IP 与 mirror 集群：** 虚拟 IP 仅在主服务器上处于活动状态。故障转移时，它会移动到辅助服务器。
+  * **带有 mirror 集群 主/备虚拟 IP：** 虚拟 IP 仅在主服务器上处于活动状态。故障转移时，它会移动到辅助服务器。
   * **网络负载均衡虚拟 IP 与 <span class="notranslate farm-term" translate="no">farm</span> 集群：** 虚拟 IP 同时在所有服务器上处于活动状态。流量在它们之间共享。
 
 ## SafeKit 中的虚拟 IP 实现 {#safekit-virtual-ip-implementation}
@@ -26,7 +26,7 @@ translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation 
   * **同一子网或扩展 VLAN（[mirror](#virtual-ip-same-subnet-failover)和[<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-same-subnet)集群）：** SafeKit 在服务器上配置虚拟 IP 并发送**免费 ARP (GARP)**。无需外部硬件。这是最透明的解决方案（一切都由 SafeKit 产品实现）。
   * **具有负载均衡器的不同子网（[mirror](#virtual-ip-different-subnets-failover)和[<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-different-subnets)集群）：** 负载均衡器使用 SafeKit **健康检查**将流量发送到正确的服务器（负载均衡器由集成商配置）。
   * **[使用云提供商 CLI 的不同子网](#virtual-ip-cloud-cli-failover)（mirror 集群）：** SafeKit `start_prim` 脚本调用云 CLI 来移动虚拟 IP（由集成商编写的脚本）。
-  * **[具有 BGP 的不同子网](#virtual-ip-bgp-failover)（mirror 集群）：** 主服务器将虚拟 IP 通告给路由器（由集成商编写的脚本）。
+  * **[具有 BGP 的不同子网](#virtual-ip-bgp-failover)（mirror 集群）：** 主服务器将虚拟 IP 公告给路由器（由集成商编写的脚本）。
   * **[具有 DNS 重定向的不同子网](#virtual-ip-vs-dns-redirection-failover)（mirror 集群）：** SafeKit `start_prim` 脚本将虚拟名称的 DNS 记录更改为新主服务器的物理 IP（由集成商编写的脚本）。没有单个虚拟 IP，并且此方法对于所有客户端都不可靠。
 
 本文还包括：
@@ -35,11 +35,11 @@ translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation 
   * [虚拟 IP 常见问题](#virtual-ip-faq)
   * [🔍 探索 SafeKit](#hub)
 
-![Eviden SafeKit 中虚拟 IP 行为的比较图：mirror 集群显示活动节点上的浮动 IP，而 farm 集群显示所有节点上的网络负载均衡。](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
+![Eviden SafeKit 中虚拟 IP 行为的比较图：mirror 集群在活动节点上显示浮动 IP，而 farm 集群在所有节点上显示网络负载均衡。](/wp-content/uploads/2026/01/vip-3-1024.jpg "w:512")
 
 **在 SafeKit 中为 mirror 和 <span class="notranslate farm-term" translate="no">farm</span> 集群实现虚拟 IP。**
 
-## 虚拟 IP 在同一子网中如何工作（mirror 集群） {#virtual-ip-same-subnet-failover}
+## 虚拟 IP 在同一子网（mirror 集群）中的工作原理 {#virtual-ip-same-subnet-failover}
 
 - [在 SafeKit mirror 集群中测试主/备虚拟 IP](/zh-hans/best-practises/test-primary-backup-vip-mirror/)
 
@@ -52,13 +52,13 @@ translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation 
 
 ![SafeKit 在同一子网的两台服务器之间实现虚拟 IP 故障转移机制](/wp-content/uploads/2023/05/vip-mirror-same-subnet-1.png "w:256")
 
-在 **SafeKit mirror 集群**中，两个节点位于同一子网中 **。高可用性使用 虚拟 IP。SafeKit** 在操作系统的网络堆栈中管理虚拟 IP **。无需特殊的硬件。虚拟 IP 通过 IP 别名**添加到服务器 1 和服务器 2 的物理 IP 地址中。客户端始终连接到虚拟 IP。
+在 **SafeKit mirror 集群**中，两个节点位于同一子网中 **。高可用性使用 虚拟 IP。SafeKit** 在操作系统的网络堆栈中管理虚拟 IP **。无需特殊硬件。虚拟 IP 通过 IP 别名**添加到服务器 1 和服务器 2 的物理 IP 地址中。客户端始终连接到虚拟 IP。
 
 #### SafeKit 中的 IP 别名和多个虚拟 IP {#safekits-advanced-ip-aliasing--multiple-virtual-ip-support}
 
 虚拟 IP 是在节点之间移动的第三个 IP 地址。SafeKit 可以在一个集群中管理**多个虚拟 IP**。您可以将它们放在同一网卡或不同的网卡上。这样，每个服务都可以使用自己的虚拟 IP。
 
-#### 故障转移机制：免费 ARP (GARP) {#the-failover-mechanism-gratuitous-arp-garp}
+#### 故障转移机制： 免费 ARP (GARP) {#the-failover-mechanism-gratuitous-arp-garp}
 
 故障转移不需要任何手动操作。在正常操作中，虚拟 IP 链接到**服务器 1 的 MAC 地址 (mac1)**。如果服务器 1 发生故障，SafeKit 会执行以下三项操作：
 
@@ -71,7 +71,7 @@ translation: "translate_md 2026-11-05.9 | glossaire 2026-11-05.13 | Translation 
 
 **上述同一子网解决方案**也适用于远程站点之间的**灾难恢复**。当站点通过**扩展 VLAN**（扩展局域网）连接时，这通常是最佳选择。两个站点都在一个子网中。网络更简单，您不需要复杂的路由协议。
 
-> **⚠️ 注意：** 使用免费 ARP 在第 2 层重新路由是应用程序**最透明的解决方案**。应用程序接收原始客户端 IP，虚拟 IP 在本地配置 **。许多应用程序 需要本地虚拟 IP**。如果没有它，这些应用程序**可能无法正常工作**。在此同一子网设置中，SafeKit 实现了整个机制，因此无需特殊的集成工作。
+> **⚠️ 注意：** 使用免费 ARP 在第 2 层重新路由是应用程序**最透明的解决方案**。应用程序接收原始客户端 IP，虚拟 IP 在本地配置 **。许多应用程序 需要本地虚拟 IP**。如果没有它，这些应用程序**可能无法正常工作**。在此相同子网设置中，SafeKit 实现了整个机制，因此无需特殊的集成工作。
 
 ## 虚拟 IP 如何通过负载均衡器（mirror 集群）在不同子网之间工作 {#virtual-ip-different-subnets-failover}
 
@@ -105,19 +105,19 @@ SafeKit 在每个节点上提供一个**健康检查 URL**：
 **最佳实践：** 使用将虚拟 IP 作为目标地址的负载均衡器模式（例如，Floating IP 或 Direct Server Return）。然后在主服务器上本地配置虚拟 IP。该方法取决于虚拟 IP 的子网：
 
   * **虚拟 IP 与服务器的物理 IP 地址位于同一子网中：** 在 SafeKit 模块中保留 `<vip>` 部分。SafeKit 会自动将虚拟 IP 配置为物理 IP 地址网卡上的别名。
-  * **虚拟 IP 位于不同的子网中：** 在 SafeKit 模块的 `<vip>` 部分（`where="one_side_alias"`）中将虚拟 IP 配置为**单边别名**。SafeKit 仅在主服务器上将虚拟 IP 添加为本地别名。下面的示例显示了 Azure 上的此配置。
-  * **对于不同子网的另一种选择：** 在应用程序启动之前，使用 `start_prim` 脚本在专用接口（如 loopback 上配置虚拟 IP。在应用程序停止后，使用 `stop_prim` 脚本删除虚拟 IP。集成商编写这些命令。SafeKit 产品不提供这些命令。
+  * **虚拟 IP 位于不同的子网中：** 在 SafeKit 模块中保留 `<vip>` 部分，并进行特定配置。以下示例显示了 Azure 上的此配置。
+  * **其他用于不同子网的选项：** 使用 `start_prim` 脚本在应用程序启动前，在专用接口（如 loopback 接口）上配置虚拟 IP。使用 `stop_prim` 脚本在应用程序停止后删除虚拟 IP。集成商编写这些命令。这些命令不是由 SafeKit 产品提供的。
 
 ### 示例：具有本地虚拟 IP 的 Azure 负载均衡器 (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-此架构用于 Azure 上的 **Milestone XProtect 管理服务器**，并使用 SafeKit `videoos` 模块。两个节点位于一个子网中。虚拟 IP 是负载均衡器的前端 IP。此前端 IP 位于专用子网中。
+此架构用于 Azure 上的 **Milestone XProtect 管理服务器**的生产环境，并使用 SafeKit `videoos` 模块。两个节点位于两个可用区中。虚拟 IP 是负载均衡器的前端 IP。此前端 IP 位于专用子网中。
 
 **在 Azure 端**（由基础架构团队配置）：
 
   1. 在专用子网中创建具有前端 IP 的**第 4 层负载均衡器**。
   2. 将两个 SafeKit 节点添加到负载均衡器的**后端池**。
-  3. 在模块的 SafeKit 健康检查 URL 上添加**健康探测**：路径`/var/modules/videoos/ready.txt`，端口 `9010`（HTTP）或端口 `9453`（使用有效证书的 HTTPS）。对于另一个模块，请将 `videoos` 替换为模块名称。
-  4. 为客户端在虚拟 IP 上使用的所有端口添加**负载均衡规则**：管理服务器端口以及其他服务的端口。
+  3. 在模块的 SafeKit 健康检查 URL 上添加**健康探测**：路径`/var/modules/videoos/ready.txt`，端口 `9010`（HTTP）或端口 `9453`（使用有效证书的 HTTPS）。对于另一个模块，将 `videoos` 替换为模块名称。
+  4. 为客户端在虚拟 IP 上使用的所有端口添加**负载均衡规则**：Milestone 管理服务的端口，以及（如果需要）其他服务的端口。
 
 **在 SafeKit 端：** 在模块的 `userconfig.xml` 文件（`videoos/conf/userconfig.xml`）中，将标准 `<vip>` 部分替换为以下部分：
 
@@ -140,9 +140,9 @@ SafeKit 在每个节点上提供一个**健康检查 URL**：
 > **⚠️ 注意：** 使用与虚拟机子网**不重叠的**前端子网。例如，虚拟机位于 `10.0.1.0/24`，负载均衡器前端 IP 位于 `10.0.2.0/24`。会将前端 IP 及其网络掩码添加到虚拟机的网络接口上。如果两个子网重叠，此别名会更改虚拟机的路由，并且虚拟机的网络流量可能会失败。
 
 
-## 虚拟 IP 如何通过云提供商 CLI 在不同子网之间工作（mirror 集群） {#virtual-ip-cloud-cli-failover}
+## 虚拟 IP 如何通过云提供商 CLI（mirror 集群）在不同子网之间工作 {#virtual-ip-cloud-cli-failover}
 
-### 为什么免费 ARP 在云端不起作用 {#why-gratuitous-arp-does-not-work-in-public-clouds}
+### 为什么免费 ARP 在云中不起作用 {#why-gratuitous-arp-does-not-work-in-public-clouds}
 
 云网络（AWS、Azure、Google Cloud）**会忽略免费 ARP**。它们仅将流量发送到云平台中分配的 IP 地址。SafeKit 在主服务器上配置虚拟 IP，但云网络不会将虚拟 IP 流量发送到此服务器。
 
@@ -152,18 +152,15 @@ SafeKit 在每个节点上提供一个**健康检查 URL**：
 
 **虚拟 IP 保持在主服务器上的本地**。**没有 NAT**，原始客户端 IP 不会改变。
 
-### 集成商责任 {#integrator-responsibility}
-
-**集成商**必须将云 CLI 命令添加到 `start_prim` 脚本中 **。这些命令 不是由 SafeKit 产品提供的**。它们取决于云提供商、网络设计和客户的安全规则。
-
 ### 约束条件 {#constraints-of-the-cli-approach}
 
   * 云 CLI 必须安装在两个节点上。每个节点都需要一个具有网络权限的云身份。
   * 脚本必须管理错误和重试。
   * 与负载均衡器和运行状况探测相比，故障转移速度要**慢得多**，因为每次故障转移都需要等待云 API 的响应。
-  * 此架构在生产中没有参考部署。在生产之前，请在测试环境中对其进行验证。如果负载均衡器可用，请优先使用上述负载均衡器架构。
 
-## BGP 如何在不同子网之间实现虚拟 IP（mirror 集群） {#virtual-ip-bgp-failover}
+> **⚠️ 注意：** **集成商**必须将云 CLI 命令添加到 `start_prim` 脚本中 **。这些命令 不是由 SafeKit 产品提供的**。它们取决于云提供商、网络设计和客户的安全规则。在生产之前，请与您的网络团队一起验证解决方案。
+
+## BGP（mirror 集群）如何使虚拟 IP 跨不同子网工作 {#virtual-ip-bgp-failover}
 
 ### 使用 BGP 进行虚拟 IP 重路由 {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
@@ -174,10 +171,10 @@ SafeKit 在每个节点上提供一个**健康检查 URL**：
 ### 优势与先决条件 {#benefits-and-prerequisites}
 
   * **虚拟 IP 保持本地，没有 NAT，客户端 IP 不会改变。**
-  * 它可以在子网和站点之间工作。您不需要扩展 VLAN。
+  * 它可以在子网和站点之间运行。您不需要扩展 VLAN。
   * 您需要 BGP 路由器，并获得网络团队的帮助。在云中，您需要云提供商提供的路由服务器服务。
 
-> **⚠️ 注意：** BGP 集成使用 SafeKit 脚本和您的路由基础设施 **。 集成商**必须在 `start_prim` 和 `stop_prim` 脚本中编写命令 **。这些脚本 不是由 SafeKit 产品提供的**。在生产之前，请与您的网络团队一起验证解决方案。
+> **⚠️ 注意：** BGP 集成使用 SafeKit 脚本和您的路由基础设施 **。 集成商**必须在 `start_prim` 和 `stop_prim` 脚本中编写命令 **。这些脚本 并非由 SafeKit 产品提供**。在生产之前，请与您的网络团队一起验证解决方案。
 
 ## DNS 重定向如何在不同子网（mirror 集群）之间工作 {#virtual-ip-vs-dns-redirection-failover}
 
@@ -220,7 +217,7 @@ SafeKit 在每个节点上提供一个**健康检查 URL**：
 
 DNS 重定向不是一个可靠的高可用性解决方案。仅当所有客户端在重新连接时执行新的 DNS 查询时，才使用它。对于即时和透明的故障转移，请使用**虚拟 IP**：使用扩展 VLAN、负载均衡器、云提供商 CLI 或 BGP。
 
-## 同一子网中的虚拟 IP 负载均衡器如何在 <span class="notranslate farm-term" translate="no">farm</span> 集群中工作 {#virtual-ip-load-balancing-same-subnet}
+## 虚拟 IP 负载均衡器在同一子网上的 <span class="notranslate farm-term" translate="no">farm</span> 集群中如何工作 {#virtual-ip-load-balancing-same-subnet}
 
 - [在 SafeKit farm 集群中测试负载均衡虚拟 IP](/zh-hans/best-practises/test-load-balancing-vip-farm/)
 
@@ -228,7 +225,7 @@ DNS 重定向不是一个可靠的高可用性解决方案。仅当所有客户�
 
 当流量很大时，SafeKit 可以在多个活动服务器之间分担工作。如果一台服务器出现故障，其他服务器将继续工作。
 
-### <span class="notranslate farm-term" translate="no">Farm</span> 集群架构：在 Windows 或 Linux 节点之间进行负载均衡 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### <span class="notranslate farm-term" translate="no">Farm</span> 集群架构：在 Windows 或 Linux 节点之间进行负载平衡 {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 ![同一子网内负载均衡虚拟 IP 的示意图](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
@@ -246,11 +243,11 @@ DNS 重定向不是一个可靠的高可用性解决方案。仅当所有客户�
 
 #### 使用免费 ARP 进行故障转移和重新路由 {#failover-and-rerouting-with-gratuitous-arp}
 
-如果服务器 1 出现故障，SafeKit 会发送一个**免费 ARP (GARP)** 消息。客户端使用服务器 2 的 `mac2` 更新其 ARP 缓存。然后，客户端会立即发送到 farm 的其他节点。
+如果服务器 1 发生故障，SafeKit 会发送一个**免费 ARP（GARP）** 消息。客户端使用服务器 2 的 `mac2` 更新其 ARP 缓存。然后，客户端会立即发送到 farm 的其他节点。
 
-#### 远程站点部署 {#deployment-in-remote-sites}
+#### 在远程站点部署 {#deployment-in-remote-sites}
 
-如果站点通过**扩展 VLAN** 连接，则此负载平衡解决方案也适用于**远程数据中心**。所有站点都位于同一子网中。这是在多个站点上进行 <span class="notranslate farm-term" translate="no">farm</span> 集群的最有效配置。
+如果站点通过**扩展 VLAN** 连接，此负载平衡解决方案也可在**远程数据中心**之间运行。然后，所有站点都在同一子网中。这是在多个站点上进行 <span class="notranslate farm-term" translate="no">farm</span> 集群的最有效配置。
 
 {{%  insert-safekit-farm-video-zh-hans  %}}
 
@@ -260,7 +257,7 @@ DNS 重定向不是一个可靠的高可用性解决方案。仅当所有客户�
 
 一个 <span class="notranslate farm-term" translate="no">farm</span> 集群可以在多个可用区和子网之间共享应用程序工作。
 
-### 跨子网 <span class="notranslate farm-term" translate="no">farm</span> 集群：多个 Windows 或 Linux 节点 {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
+### 跨子网的 <span class="notranslate farm-term" translate="no">farm</span> 集群：多个 Windows 或 Linux 节点 {#cross-subnet-farm-clusters-multi-node-windows--linux-scalability}
 
 
 ![跨两个不同子网运行的负载均衡 farm 集群的示意图](/wp-content/uploads/2023/05/vip-farm-different-subnet.png "w:256")
@@ -272,16 +269,16 @@ DNS 重定向不是一个可靠的高可用性解决方案。仅当所有客户�
 负载均衡器根据两个标准共享客户端请求：
 
   * **负载均衡规则：** 例如，**客户端 IP 地址**或**客户端 TCP 端口**。
-  * **节点可用性：** 负载均衡器仅将流量发送到健康的节点，具体取决于 SafeKit 健康检查。
+  * **节点可用性：** 负载均衡器仅将流量发送到健康的节点，具体取决于 SafeKit 的健康检查。
 
 
 > **⚠️ 注意：** SafeKit 提供健康检查。您的网络或云提供商提供负载均衡器。
 
 #### SafeKit 健康检查 {#safekit-health-check-mechanism}
 
-SafeKit 在 <span class="notranslate farm-term" translate="no">farm</span> 的每台服务器上提供一个**健康检查 URL**。负载均衡器读取该 URL 以了解每台服务器的状态：
+SafeKit 在 <span class="notranslate farm-term" translate="no">farm</span> 中的每台服务器上提供一个**健康检查 URL**。负载均衡器读取该 URL 以了解每台服务器的状态：
 
-  * **节点正常：** 健康检查返回 `HTTP 200 OK`。负载均衡器将流量发送到此服务器。
+  * **节点 UP：** 健康检查返回 `HTTP 200 OK`。负载均衡器将流量发送到此服务器。
   * **节点 DOWN：** 如果服务器或应用程序出现故障，SafeKit 将返回 `HTTP 404 NOT FOUND`（或服务器不响应）。负载均衡器会立即停止向该节点发送流量。
 
 
@@ -299,11 +296,11 @@ SafeKit 在 <span class="notranslate farm-term" translate="no">farm</span> 的�
 主/备（高可用性） | Mirror 集群 | 免费 ARP（MAC 地址接管） | ✅ SafeKit 产品 | 非常低：检测故障并发送 GARP 时间 | 完全透明：虚拟 IP 位于活动节点上。客户端 IP 不会改变。  
 负载均衡（双活） | <span class="notranslate farm-term" translate="no">Farm</span> 集群 | 内核网络过滤器/GARP | ✅ SafeKit 产品 | 非常低：检测故障和更换网络过滤器所需的时间 | 完全透明：虚拟 IP 在所有节点上都是本地的。客户端 IP 不会改变。  
 同一子网/扩展 VLAN | 灾难恢复（远程数据中心） | IP 别名/GARP | ✅ SafeKit 产品（扩展 VLAN 由网络团队提供） | 低：取决于扩展 VLAN 的往返时间 (RTT) | 完全透明：虚拟 IP 位于节点本地。客户端 IP 不会改变。  
-不同的子网：仅限负载均衡器 | 灾难恢复（远程数据中心/云） | 外部负载均衡器 | 🛠️集成商：负载均衡器配置（SafeKit 提供健康检查） | 时间：取决于负载均衡器的健康检查间隔。 | ⚠️ 如果使用 SNAT/DNAT，则部分透明。虚拟 IP **不在**节点上本地 **。客户端 IP 可能 不会**保留。应用程序必须支持此功能。  
-不同子网：负载均衡器 + 本地 SafeKit 虚拟 IP | 灾难恢复（远程数据中心/云） | 具有 Floating IP / Direct Server Return 外部负载均衡器，或将前端 IP 作为本地 SafeKit 别名 | 🛠️集成商：负载均衡器配置（SafeKit 提供健康检查） | 时间：取决于负载均衡器的健康检查间隔。 | 良好的透明性：虚拟 IP 位于主节点上，是目标地址。
-不同的子网：云 CLI | 灾难恢复（云） | 云 API：私有 IP 或云路由将移动到新的主节点。 | 🛠️集成商：`start_prim` 脚本中的云 CLI 命令 | 中等到高：取决于云 API 的响应时间 | 完全透明：虚拟 IP 位于主节点上。客户端 IP 不变。
-不同的子网：BGP | 灾难恢复（远程数据中心/云） | 通过 BGP 公告 /32 路由 | 🛠️集成商：`start_prim` 和 `stop_prim` 脚本中的 BGP 命令 | 低到中等：取决于 BGP 收敛时间 | 完全透明：虚拟 IP 位于主节点上。客户端 IP 不变。需要 BGP 路由器。  
-DNS 重定向：无虚拟 IP | 灾难恢复（远程数据中心） | DNS 记录更改（名称/物理 IP） | 🛠️集成商：`start_prim` 脚本中的 DNS 更新命令 | 高且不可预测：取决于 DNS TTL（生存时间）和客户端 DNS 缓存 | ⚠️ 不可靠：客户端必须执行新的 DNS 查询。通常，客户端会保留启动时收到的旧 IP，并且在故障转移后不会重新路由。  
+不同的子网：仅限负载均衡器 | 灾难恢复（远程数据中心/云） | 外部负载均衡器 | 🛠️ 集成商：负载均衡器配置（SafeKit 提供健康检查） | 中等：取决于负载均衡器的健康检查间隔。 | ⚠️ 如果使用 SNAT/DNAT，则部分透明。虚拟 IP **不在**节点上本地 **。客户端 IP 可能 不会**保留。应用程序必须支持此功能。  
+不同子网：负载均衡器 + 本地 SafeKit 虚拟 IP | 灾难恢复（远程数据中心/云） | 具有 Floating IP / Direct Server Return 外部负载均衡器，或将前端 IP 作为本地 SafeKit 别名 | 🛠️ 集成商：负载均衡器配置（SafeKit 提供健康检查） | 中等：取决于负载均衡器的健康检查间隔。 | 良好的透明性：虚拟 IP 位于主节点上，是目标地址。
+不同的子网：云 CLI | 灾难恢复（云） | 云 API：私有 IP 或云路由将移动到新的主节点。 | 🛠️ 集成商：`start_prim` 脚本中的云 CLI 命令 | 中等到高：取决于云 API 的响应时间 | 完全透明：虚拟 IP 位于主节点上。客户端 IP 不变。
+不同的子网：BGP | 灾难恢复（远程数据中心/云） | 通过 BGP 公告 /32 路由 | 🛠️ 集成商：`start_prim` 和 `stop_prim` 脚本中的 BGP 命令 | 低到中等：取决于 BGP 收敛时间 | 完全透明：虚拟 IP 位于主节点上。客户端 IP 不变。需要 BGP 路由器。  
+DNS 重定向：无虚拟 IP | 灾难恢复（远程数据中心） | DNS 记录更改（名称/物理 IP） | 🛠️ 集成商：`start_prim` 脚本中的 DNS 更新命令 | 高且不可预测：取决于 DNS TTL（生存时间）和客户端 DNS 缓存 | ⚠️ 不可靠：客户端必须执行新的 DNS 查询。通常，客户端会保留启动时收到的旧 IP，并且在故障转移后不会重新路由。  
   
 ## 虚拟 IP 常见问题 {#virtual-ip-faq}
 
@@ -329,9 +326,9 @@ DNS 重定向：无虚拟 IP | 灾难恢复（远程数据中心） | DNS 记录
 
 虚拟 IP 在云中（AWS、Azure、GCP）是如何工作的？
 
-在云中，第 2 层 GARP 消息不可用于重新路由虚拟 IP。SafeKit 可与**云负载均衡器**（AWS 弹性负载均衡、Azure Load Balancer 或 Google Cloud Load Balancing）配合使用 **。SafeKit 提供一个 健康检查 URL**。负载均衡器读取该 URL 并将流量发送到活动节点。
+在云中，第 2 层 GARP 消息不可用于重新路由虚拟 IP。SafeKit 可与**云负载均衡器**（AWS 弹性负载均衡、Azure Load Balancer 或 Google Cloud Load Balancing）配合使用 **。SafeKit 提供 健康检查 URL**。负载均衡器读取该 URL 并将流量发送到活动节点。
 
-对于灾难恢复，扩展 VLAN 比负载均衡器更好吗？
+对于灾难恢复而言，扩展 VLAN 比负载均衡器更好吗？
 
 **是的**。在远程数据中心之间，**扩展 VLAN** 通常更好，因为故障转移**对应用程序保持透明**。**虚拟 IP 不会改变**，因此在数据中心之间发生故障转移后，应用程序及其客户端将继续使用相同的地址。
 

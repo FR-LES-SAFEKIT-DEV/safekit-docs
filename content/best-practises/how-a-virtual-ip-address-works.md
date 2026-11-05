@@ -104,19 +104,19 @@ Some applications use the virtual IP as their server address. They work correctl
 **Best practice:** Use a load balancer mode that keeps the virtual IP as the destination address (for example, Floating IP or Direct Server Return). Then configure the virtual IP locally on the primary server. The method depends on the subnet of the virtual IP:
 
   * **The virtual IP is in the same subnet as the physical IP addresses of the servers:** keep the `<vip>` section in the SafeKit module. SafeKit automatically configures the virtual IP as an alias on the network card of the physical IP address.
-  * **The virtual IP is in a different subnet:** configure the virtual IP as a **one-side alias** in the `<vip>` section of the SafeKit module (`where="one_side_alias"`). SafeKit adds the virtual IP as a local alias on the primary server only. The example below shows this configuration on Azure.
-  * **Other option for a different subnet:** use the `start_prim` script to configure the virtual IP on a dedicated interface, such as loopback, before the application starts. Use the `stop_prim` script to remove the virtual IP after the application stops. The integrator writes these commands. They are not provided by the SafeKit product.
+  * **The virtual IP is in a different subnet:** keep the `<vip>` section in the SafeKit module, with a specific configuration. The example below shows this configuration on Azure. 
+  * **Other option for a different subnet:** use the `start_prim` script to configure the virtual IP on a dedicated interface, such as the loopback interface, before the application starts. Use the `stop_prim` script to remove the virtual IP after the application stops. The integrator writes these commands. They are not provided by the SafeKit product.
 
 ### Example: Azure load balancer with a local virtual IP (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
-This architecture is used in production on Azure for the **Milestone XProtect management server**, with the SafeKit `videoos` module. The two nodes are in one subnet. The virtual IP is the frontend IP of the load balancer. This frontend IP is in a dedicated subnet.
+This architecture is used in production on Azure for the **Milestone XProtect management server**, with the SafeKit `videoos` module. The two nodes are in two availability zones. The virtual IP is the frontend IP of the load balancer. This frontend IP is in a dedicated subnet.
 
 **On the Azure side** (configured by the infrastructure team):
 
   1. Create a **layer 4 load balancer** with a frontend IP in a dedicated subnet.
   2. Add the two SafeKit nodes to the **backend pool** of the load balancer.
   3. Add a **health probe** on the SafeKit health check URL of the module: path `/var/modules/videoos/ready.txt`, port `9010` (HTTP) or port `9453` (HTTPS with valid certificates). For another module, replace `videoos` with the module name.
-  4. Add **load balancing rules** for all the ports that clients use on the virtual IP: the management server ports and the ports of the other services.
+  4. Add **load balancing rules** for all the ports that clients use on the virtual IP: the ports of the Milestone management services and, if required, the ports of other services.
 
 **On the SafeKit side:** in the `userconfig.xml` file of the module (`videoos/conf/userconfig.xml`), replace the standard `<vip>` section with this section:
 
@@ -151,16 +151,13 @@ Without a load balancer, the cloud provider CLI can be integrated into the SafeK
 
 The **virtual IP stays local** on the primary server. There is **no NAT**, and the original client IP does not change.
 
-### Integrator responsibility {#integrator-responsibility}
-
-The **integrator** must add the cloud CLI commands to the `start_prim` script. These commands are **not provided by the SafeKit product**. They depend on the cloud provider, the network design and the security rules of the customer.
-
 ### Constraints {#constraints-of-the-cli-approach}
 
   * The cloud CLI must be installed on both nodes. Each node needs a cloud identity with network rights.
   * The script must manage errors and retries.
   * Failover is **much slower** than with a load balancer and a health probe, because each failover waits for the response of the cloud API.
-  * There is no reference deployment of this architecture in production. Validate it in a test environment before production. When a load balancer is available, prefer the load balancer architecture described above.
+
+> **⚠️ Note:** The **integrator** must add the cloud CLI commands to the `start_prim` script. These commands are **not provided by the SafeKit product**. They depend on the cloud provider, the network design and the security rules of the customer. Validate the solution with your network team before production.
 
 ## How a virtual IP works across different subnets with BGP (mirror cluster) {#virtual-ip-bgp-failover}
 
