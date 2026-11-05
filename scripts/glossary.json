@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05.12",
+  "version": "2026-11-05.13",
   "keep": [
     "mirror",
     "farm",
@@ -11,7 +11,8 @@
     "Network Load Balancer",
     "Azure Load Balancer",
     "Google Cloud Load Balancing",
-    "GARP"
+    "GARP",
+    "loopback"
   ],
   "terms": {
     "farm cluster": {

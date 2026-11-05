@@ -104,7 +104,39 @@ Some applications use the virtual IP as their server address. They work correctl
 **Best practice:** Use a load balancer mode that keeps the virtual IP as the destination address (for example, Floating IP or Direct Server Return). Then configure the virtual IP locally on the primary server. The method depends on the subnet of the virtual IP:
 
   * **The virtual IP is in the same subnet as the physical IP addresses of the servers:** keep the `<vip>` section in the SafeKit module. SafeKit automatically configures the virtual IP as an alias on the network card of the physical IP address.
-  * **The virtual IP is in a different subnet:** do not configure `<vip>` in SafeKit. Use the `start_prim` script to configure the virtual IP on a dedicated interface, such as loopback, before the application starts. Use the `stop_prim` script to remove the virtual IP after the application stops. The integrator writes these commands. They are not provided by the SafeKit product.
+  * **The virtual IP is in a different subnet:** configure the virtual IP as a **one-side alias** in the `<vip>` section of the SafeKit module (`where="one_side_alias"`). SafeKit adds the virtual IP as a local alias on the primary server only. The example below shows this configuration on Azure.
+  * **Other option for a different subnet:** use the `start_prim` script to configure the virtual IP on a dedicated interface, such as loopback, before the application starts. Use the `stop_prim` script to remove the virtual IP after the application stops. The integrator writes these commands. They are not provided by the SafeKit product.
+
+### Example: Azure load balancer with a local virtual IP (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
+
+This architecture is used in production with the SafeKit `videoos` module for the **Milestone XProtect management server** on Azure. The two nodes are in one subnet. The virtual IP is the **frontend IP of the load balancer**, in a dedicated subnet.
+
+**On the Azure side** (configured by the infrastructure team):
+
+  1. Create a **layer 4 load balancer** with a frontend IP in a dedicated subnet.
+  2. Add the two SafeKit nodes to the **backend pool** of the load balancer.
+  3. Add a **health probe** on the SafeKit health check URL of the module: path `/var/modules/videoos/ready.txt`, port `9010` (HTTP) or port `9453` (HTTPS with valid certificates). For another module, replace `videoos` with the module name.
+  4. Add **load balancing rules** for all the ports that clients use on the virtual IP: the management server ports and the ports of the other services.
+
+**On the SafeKit side:** in the `userconfig.xml` file of the module (`videoos/conf/userconfig.xml`), replace the standard `<vip>` section with this section:
+
+```xml
+<vip>
+  <interface_list>
+    <interface check="on" arpreroute="on" name="VM_INTERFACE_NAME">
+      <real_interface>
+        <virtual_addr addr="LB_FRONTEND_IP" netmask="LB_FRONTEND_NETMASK" where="one_side_alias" />
+      </real_interface>
+    </interface>
+  </interface_list>
+</vip>
+```
+
+Replace `VM_INTERFACE_NAME` with the name of the network interface of the VM, `LB_FRONTEND_IP` with the frontend IP of the load balancer and `LB_FRONTEND_NETMASK` with the netmask of the frontend subnet. The network interface must have the same name on both nodes.
+
+**On the application side:** configure all the Milestone services to use the virtual IP, not the private IP address of the server.
+
+> **⚠️ Note:** Use a frontend subnet that **does not overlap** with the subnet of the VMs. For example, VMs in `10.0.1.0/24` and load balancer frontend IP in `10.0.2.0/24`. SafeKit adds the frontend IP with its netmask on the network interface of the VM. If the two subnets overlap, this alias changes the routing of the VM and the network traffic of the VMs can fail.
 
 
 ## How a virtual IP works across different subnets with cloud provider CLIs (mirror cluster) {#virtual-ip-cloud-cli-failover}
@@ -127,7 +159,8 @@ The **integrator** must add the cloud CLI commands to the `start_prim` script. T
 
   * The cloud CLI must be installed on both nodes. Each node needs a cloud identity with network rights.
   * The script must manage errors and retries.
-  * Failover is probably slower than with a load balancer.
+  * Failover is **much slower** than with a load balancer and a health probe, because each failover waits for the response of the cloud API.
+  * There is no reference deployment of this architecture in production. Validate it in a test environment before production. When a load balancer is available, prefer the load balancer architecture described above.
 
 ## How a virtual IP works across different subnets with BGP (mirror cluster) {#virtual-ip-bgp-failover}
 
@@ -266,7 +299,7 @@ Primary/secondary (high availability) | Mirror cluster | Gratuitous ARP (MAC add
 Load balancing (active/active) | <span class="notranslate farm-term" translate="no">Farm</span> cluster | Kernel network filter / GARP | ✅ SafeKit product | Very low: time to detect the failure and change the network filters | Full transparency: the virtual IP is local on all nodes. The client IP does not change.  
 Same subnet / stretched VLAN | Disaster recovery (remote data centers) | IP aliasing / GARP | ✅ SafeKit product (the stretched VLAN is provided by the network team) | Low: depends on the round trip time (RTT) of the stretched VLAN | Full transparency: the virtual IP is local on the nodes. The client IP does not change.  
 Different subnets: load balancer only | Disaster recovery (remote data centers / cloud) | External load balancer | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | ⚠️ Partial transparency if SNAT/DNAT is used. The virtual IP is **NOT** local on the nodes. The client IP may **NOT** be kept. The application must support this.  
-Different subnets: load balancer + local SafeKit virtual IP | Disaster recovery (remote data centers / cloud) | External load balancer with Floating IP / Direct Server Return | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | Good transparency: the virtual IP is local on the primary node and is the destination address.
+Different subnets: load balancer + local SafeKit virtual IP | Disaster recovery (remote data centers / cloud) | External load balancer with Floating IP / Direct Server Return, or frontend IP as a local SafeKit alias | 🛠️ Integrator: load balancer configuration (SafeKit provides the health check) | Medium: depends on the health check interval of the load balancer | Good transparency: the virtual IP is local on the primary node and is the destination address.
 Different subnets: cloud CLI | Disaster recovery (cloud) | Cloud API: the private IP or a cloud route moves to the new primary node | 🛠️ Integrator: cloud CLI commands in the `start_prim` script | Medium to high: depends on the response time of the cloud API | Full transparency: the virtual IP is local on the primary node. The client IP does not change.
 Different subnets: BGP | Disaster recovery (remote data centers / cloud) | /32 route announced with BGP | 🛠️ Integrator: BGP commands in the `start_prim` and `stop_prim` scripts | Low to medium: depends on the BGP convergence time | Full transparency: the virtual IP is local on the primary node. The client IP does not change. Requires BGP routers.  
 DNS redirection: no virtual IP | Disaster recovery (remote data centers) | DNS record change (name / physical IP) | 🛠️ Integrator: DNS update commands in the `start_prim` script | High and not predictable: depends on DNS TTL (Time To Live) and client DNS cache | ⚠️ Not reliable: the client must do a new DNS lookup. Often, clients keep the old IP that they received at startup and are not rerouted after failover.  

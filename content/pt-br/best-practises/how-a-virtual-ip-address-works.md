@@ -5,7 +5,7 @@ description: "Como o SafeKit move um IP virtual em caso de falha: ARP gratuito n
 category: "best-practises"
 lang: "pt-br"
 topics: "O que é um endereço IP virtual em um cluster de alta disponibilidade?, Implementação de IP virtual no SafeKit, Como um IP virtual funciona na mesma sub-rede (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com um balanceador de carga (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com CLIs de provedor de nuvem (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com BGP (cluster mirror), Como o redirecionamento de DNS funciona em diferentes sub-redes (cluster mirror), Como o balanceamento de carga de IP virtual funciona em um cluster farm na mesma sub-rede, Como um IP virtual balanceado funciona em diferentes sub-redes (cluster farm), Comparação: implementação de IP virtual, latência e transparência de aplicação, Perguntas frequentes sobre IP virtual, 🔍 Explore o SafeKit"
-translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation LLM | 6 expressions"
+translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 10 expressions"
 ---
 
 # Como funciona um endereço IP virtual em um cluster de alta disponibilidade? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -16,8 +16,8 @@ Um **endereço IP virtual** é o único endereço que os clientes usam para se c
 
 **Princípio fundamental do SafeKit:** o IP virtual é **configurado localmente no servidor** que executa a aplicação. A aplicação é iniciada no IP virtual e recebe o IP original do cliente. É por isso que muitas aplicações funcionam corretamente com o SafeKit sem qualquer alteração. O SafeKit oferece dois tipos de IP virtual:
 
-  * **IP virtual primário/secundário com um cluster mirror :** o IP virtual está ativo apenas no servidor primário. Em caso de failover, ele é movido para o servidor secundário.
-  * **Balanceamento de carga de rede com IP virtual e um cluster <span class="notranslate farm-term" translate="no">farm</span> :** o IP virtual está ativo em todos os servidores ao mesmo tempo. O tráfego é compartilhado entre eles.
+  * **IP virtual primário/secundário com um cluster mirror:** o IP virtual está ativo apenas no servidor primário. Em caso de failover, ele é movido para o servidor secundário.
+  * **Balanceamento de carga de rede com IP virtual e um cluster <span class="notranslate farm-term" translate="no">farm</span>:** o IP virtual está ativo em todos os servidores ao mesmo tempo. O tráfego é compartilhado entre eles.
 
 ## Implementação de IP virtual no SafeKit {#safekit-virtual-ip-implementation}
 
@@ -63,7 +63,7 @@ O IP virtual é um terceiro endereço IP que se move entre os nós. O SafeKit po
 O failover não requer nenhuma ação manual. Em operação normal, o IP virtual está vinculado ao **endereço MAC do Servidor 1 (mac1)**. Se o Servidor 1 falhar, o SafeKit faz três coisas:
 
   * **Alias de IP virtual:** o SafeKit configura o IP virtual como um alias na placa de rede do Servidor 2, o novo servidor primário. O sistema operacional envia mensagens na rede para anunciar o IP virtual.
-  * **GARP :** O SafeKit também envia mensagens **ARP gratuitas (GARP)**. Os switches de rede e os clientes atualizam o seu cache ARP. O IP virtual agora está vinculado ao **endereço MAC do Servidor 2 (mac2)**.
+  * **GARP:** O SafeKit também envia mensagens **ARP gratuitas (GARP)**. Os switches de rede e os clientes atualizam o seu cache ARP. O IP virtual agora está vinculado ao **endereço MAC do Servidor 2 (mac2)**.
   * **Recuperação de aplicativos:** o SafeKit reinicia os serviços de aplicativos no Servidor 2.
 
 
@@ -105,7 +105,39 @@ Alguns aplicativos usam o IP virtual como endereço do servidor. Eles funcionam 
 **Melhor prática:** use um modo de balanceador de carga que mantenha o IP virtual como o endereço de destino (por exemplo, Floating IP ou Direct Server Return). Em seguida, configure o IP virtual localmente no servidor principal. O método depende da sub-rede do IP virtual:
 
   * **O IP virtual está na mesma sub-rede que os endereços IP físicos dos servidores:** mantenha a seção `<vip>` no módulo SafeKit. O SafeKit configura automaticamente o IP virtual como um alias na placa de rede do endereço IP físico.
-  * **O IP virtual está em uma sub-rede diferente:** não configure `<vip>` no SafeKit. Use o script `start_prim` para configurar o IP virtual em uma interface dedicada, como loopback, antes que o aplicativo seja iniciado. Use o script `stop_prim` para remover o IP virtual após o aplicativo parar. O integrador escreve esses comandos. Eles não são fornecidos pelo produto SafeKit.
+  * **O IP virtual está em uma sub-rede diferente:** configure o IP virtual como um **alias de um lado** na seção `<vip>` do módulo SafeKit (`where="one_side_alias"`). O SafeKit adiciona o IP virtual como um alias local apenas no servidor primário. O exemplo abaixo mostra essa configuração no Azure.
+  * **Outra opção para uma sub-rede diferente:** use o script `start_prim` para configurar o IP virtual em uma interface dedicada, como loopback, antes que o aplicativo seja iniciado. Use o script `stop_prim` para remover o IP virtual após o aplicativo parar. O integrador escreve esses comandos. Eles não são fornecidos pelo produto SafeKit.
+
+### Exemplo: Balanceador de carga do Azure com um IP virtual local (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
+
+Essa arquitetura é usada em produção com o módulo `videoos`. SafeKit para o **servidor de gerenciamento Milestone XProtect** no Azure. Os dois nós estão em uma sub-rede. O IP virtual é o **IP de front-end do balanceador de carga**, em uma sub-rede dedicada.
+
+**No lado do Azure** (configurado pela equipe de infraestrutura):
+
+  1. Crie um **balanceador de carga de camada 4** com um IP de front-end em uma sub-rede dedicada.
+  2. Adicione os dois nós do SafeKit ao **pool de back-end** do balanceador de carga.
+  3. Adicione uma **sonda de integridade** no URL de verificação de integridade do SafeKit do módulo: caminho `/var/modules/videoos/ready.txt`, porta `9010` (HTTP) ou porta `9453` (HTTPS com certificados válidos). Para outro módulo, substitua `videoos` pelo nome do módulo.
+  4. Adicione **regras de balanceamento de carga** para todas as portas que os clientes usam no IP virtual: as portas do servidor de gerenciamento e as portas dos outros serviços.
+
+**No lado do SafeKit:** no arquivo `userconfig.xml` do módulo (`videoos/conf/userconfig.xml`), substitua a seção padrão `<vip>` por esta seção:
+
+```xml
+<vip>
+  <interface_list>
+    <interface check="on" arpreroute="on" name="VM_INTERFACE_NAME">
+      <real_interface>
+        <virtual_addr addr="LB_FRONTEND_IP" netmask="LB_FRONTEND_NETMASK" where="one_side_alias" />
+      </real_interface>
+    </interface>
+  </interface_list>
+</vip>
+```
+
+Substitua `VM_INTERFACE_NAME` pelo nome da interface de rede da VM, `LB_FRONTEND_IP` pelo IP do frontend do balanceador de carga e `LB_FRONTEND_NETMASK` pela máscara de rede da sub-rede do frontend. A interface de rede deve ter o mesmo nome em ambos os nós.
+
+**No lado da aplicação:** configure todos os serviços do Milestone para usar o IP virtual, e não o endereço IP privado do servidor.
+
+> **⚠️ Observação:** Use uma sub-rede de front-end que **não se sobreponha** à sub-rede das VMs. Por exemplo, VMs em `10.0.1.0/24` e IP de front-end do balanceador de carga em `10.0.2.0/24`. O SafeKit adiciona o IP de front-end com sua máscara de rede na interface de rede da VM. Se as duas sub-redes se sobrepuserem, esse alias altera o roteamento da VM e o tráfego de rede das VMs pode falhar.
 
 
 ## Como um IP virtual funciona em diferentes sub-redes com CLIs de provedores de nuvem (cluster mirror) {#virtual-ip-cloud-cli-failover}
@@ -128,15 +160,16 @@ O **integrador** deve adicionar os comandos da CLI da nuvem ao script `start_pri
 
   * A CLI da nuvem deve ser instalada em ambos os nós. Cada nó precisa de uma identidade de nuvem com direitos de rede.
   * O script deve gerenciar erros e novas tentativas.
-  * A recuperação de falhas é provavelmente mais lenta do que com um balanceador de carga.
+  * A recuperação de falhas é **muito mais lenta** do que com um balanceador de carga e uma sonda de integridade, porque cada recuperação de falhas aguarda a resposta da API da nuvem.
+  * Não há nenhuma implantação de referência dessa arquitetura em produção. Valide-a em um ambiente de teste antes da produção. Quando um balanceador de carga estiver disponível, prefira a arquitetura do balanceador de carga descrita acima.
 
 ## Como um IP virtual funciona em diferentes sub-redes com BGP (cluster mirror) {#virtual-ip-bgp-failover}
 
 ### Redirecionamento de IP virtual com BGP {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
-Com o BGP (Border Gateway Protocol), o IP virtual é normalmente configurado em uma interface de loopback do servidor primário pelo script `start_prim` antes do início da aplicação. O servidor primário anuncia o IP virtual aos roteadores como uma rota /32.
+Com o BGP (Border Gateway Protocol), o IP virtual é normalmente configurado em uma interface loopback do servidor primário pelo script `start_prim` antes do início da aplicação. O servidor primário anuncia o IP virtual aos roteadores como uma rota /32.
 
-No failover, o script `stop_prim` no servidor primário antigo para a aplicação, remove o IP virtual da interface de loopback e retira a rota /32 dos roteadores. Se o servidor primário antigo travar, `stop_prim` não é executado, mas os roteadores perdem a sessão BGP e removem a rota automaticamente.
+No failover, o script `stop_prim` no servidor primário antigo para a aplicação, remove o IP virtual da interface loopback e retira a rota /32 dos roteadores. Se o servidor primário antigo travar, `stop_prim` não é executado, mas os roteadores perdem a sessão BGP e removem a rota automaticamente.
 
 ### Benefícios e pré-requisitos {#benefits-and-prerequisites}
 
@@ -195,7 +228,7 @@ O redirecionamento de DNS não é uma solução confiável de alta disponibilida
 
 Quando há muito tráfego, o SafeKit pode compartilhar o trabalho entre vários servidores ativos. Se um servidor falhar, os outros servidores continuam a funcionar.
 
-### Arquitetura cluster <span class="notranslate farm-term" translate="no">farm</span> : balanceamento de carga entre nós Windows ou Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
+### Arquitetura de cluster <span class="notranslate farm-term" translate="no">farm</span>: balanceamento de carga entre nós Windows ou Linux {#farm-cluster-architecture-load-balancing-across-windows-or-linux-nodes}
 
 
 ![Diagrama de um IP virtual com balanceamento de carga dentro da mesma sub-rede](/wp-content/uploads/2023/05/vip-farm-same-subnet.png "w:256")
@@ -263,11 +296,11 @@ Esta é a arquitetura padrão para **clusters <span class="notranslate farm-term
 
 Ambiente e caso de uso | Tipo de alta disponibilidade | Método de redirecionamento | Implementado por | Latência da rede | Transparência do aplicativo e IP local  
 ---|---|---|---|---|---  
-Primário/secundário (alta disponibilidade) | Cluster mirror | ARP gratuito (apropriação de endereço MAC) | ✅ Produto SafeKit | Muito baixo: tempo para detetar a falha e enviar o GARP | Transparência total: o IP virtual é local no nó ativo. O IP do cliente não muda.  
+Primário/secundário (alta disponibilidade) | Cluster mirror | ARP gratuito (transferência do endereço MAC) | ✅ Produto SafeKit | Muito baixo: tempo para detetar a falha e enviar o GARP | Transparência total: o IP virtual é local no nó ativo. O IP do cliente não muda.  
 Balanceamento de carga (ativo/ativo) | Cluster <span class="notranslate farm-term" translate="no">farm</span> | Filtro de rede do kernel / GARP | ✅ Produto SafeKit | Muito baixo: tempo para detetar a falha e mudar os filtros da rede | Transparência total: o IP virtual é local em todos os nós. O IP do cliente não muda.  
 Mesma sub-rede / VLAN estendida | Recuperação de desastres (centros de dados remotos) | Alias de IP / GARP | ✅ Produto SafeKit (a VLAN estendida é fornecida pela equipe de rede) | Baixo: depende do tempo de ida e volta (RTT) da VLAN estendida | Transparência total: o IP virtual é local nos nós. O IP do cliente não muda.  
 Sub-redes diferentes: apenas balanceador de carga | Recuperação de desastres (data centers remotos/nuvem) | Balanceador de carga externo | 🛠️ Integrador: configuração do balanceador de carga (o SafeKit fornece a verificação de integridade) | Médio: depende do intervalo de verificação de integridade do balanceador de carga | ⚠️ Transparência parcial se SNAT/DNAT for usado. O IP virtual **NÃO** é local nos nós. O IP do cliente PODE **NÃO** ser mantido. A aplicação deve suportar isso.  
-Sub-redes diferentes: balanceador de carga + IP virtual local do SafeKit | Recuperação de desastres (data centers remotos/nuvem) | Balanceador de carga externo com Floating IP / Direct Server Return | 🛠️ Integrador: configuração do balanceador de carga (o SafeKit fornece a verificação de integridade) | Médio: depende do intervalo de verificação de integridade do balanceador de carga | Boa transparência: o IP virtual é local no nó principal e é o endereço de destino.
+Sub-redes diferentes: balanceador de carga + IP virtual local do SafeKit | Recuperação de desastres (data centers remotos/nuvem) | Balanceador de carga externo com Floating IP / Direct Server Return ou IP de front-end como um alias local do SafeKit | 🛠️ Integrador: configuração do balanceador de carga (o SafeKit fornece a verificação de integridade) | Médio: depende do intervalo de verificação de integridade do balanceador de carga | Boa transparência: o IP virtual é local no nó principal e é o endereço de destino.
 Sub-redes diferentes: CLI da nuvem | Recuperação de desastres (nuvem) | API de nuvem: o IP privado ou uma rota de nuvem é movido para o novo nó principal | 🛠️ Integrador: comandos da CLI da nuvem no script `start_prim` | Médio a alto: depende do tempo de resposta da API da nuvem | Transparência total: o IP virtual é local no nó principal. O IP do cliente não muda.
 Sub-redes diferentes: BGP | Recuperação de desastres (data centers remotos/nuvem) | /32 rota anunciada com BGP | 🛠️ Integrador: Comandos BGP nos scripts `start_prim` e `stop_prim` | Baixo a médio: depende do tempo de convergência do BGP | Transparência total: o IP virtual é local no nó principal. O IP do cliente não muda. Requer roteadores BGP.  
 Redirecionamento de DNS: sem IP virtual | Recuperação de desastres (centros de dados remotos) | Alteração de registro DNS (nome/IP físico) | 🛠️ Integrador: Comandos de atualização de DNS no script `start_prim` | Alta e imprevisível: depende do TTL (Time To Live) do DNS e do cache de DNS do cliente | ⚠️ Não confiável: o cliente deve fazer uma nova consulta de DNS. Muitas vezes, os clientes mantêm o IP antigo que receberam na inicialização e não são redirecionados após a falha.  

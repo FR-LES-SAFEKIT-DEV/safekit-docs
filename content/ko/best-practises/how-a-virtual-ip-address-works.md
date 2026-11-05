@@ -5,7 +5,7 @@ description: "SafeKit이 장애 조치 시 가상 IP를 이동하는 방법: 동
 category: "best-practises"
 lang: "ko"
 topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, SafeKit의 가상 IP 구현, 동일 서브넷에서 가상 IP가 작동하는 방식(mirror 클러스터), 로드 밸런서를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), 클라우드 공급자 CLI를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), BGP를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), 서로 다른 서브넷 간에 DNS 리디렉션이 작동하는 방식(mirror 클러스터), 동일 서브넷의 farm 클러스터에서 가상 IP 로드 밸런싱이 작동하는 방식, 로드 밸런싱된 가상 IP가 서로 다른 서브넷 간에 작동하는 방식(farm 클러스터), 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 가상 IP에 대한 자주 묻는 질문, 🔍 SafeKit 살펴보기"
-translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation LLM | 17 expressions"
+translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 21 expressions"
 ---
 
 # 고가용성 클러스터에서 가상 IP 주소는 어떻게 작동하나요? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -16,7 +16,7 @@ translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation 
 
 **SafeKit의 핵심 원칙:** 가상 IP는 애플리케이션을 실행하는 **서버에 로컬로 구성** 됩니다. 애플리케이션은 가상 IP에서 시작되며 원래 클라이언트 IP를 수신합니다. 이것이 바로 많은 애플리케이션이 변경 없이 SafeKit과 함께 올바르게 작동하는 이유입니다. SafeKit은 두 가지 유형의 가상 IP를 제공합니다.
 
-  * **Mirror 클러스터가 있는 기본/보조 가상 IP:** 가상 IP는 기본 서버에서만 활성화됩니다. 장애 조치 시 보조 서버로 이동합니다.
+  * **Mirror 클러스터가 있는 기본/보조 가상 IP:** 가상 IP는 기본 서버 에서만 활성화됩니다. 장애 조치 시 보조 서버로 이동합니다.
   * **<span class="notranslate farm-term" translate="no">Farm</span> 클러스터의 네트워크 부하 분산 가상 IP:** 가상 IP는 모든 서버에서 동시에 활성화됩니다. 트래픽은 서버 간에 공유됩니다.
 
 ## SafeKit의 가상 IP 구현 {#safekit-virtual-ip-implementation}
@@ -26,8 +26,8 @@ translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation 
   * **동일 서브넷 또는 확장 VLAN ([mirror](#virtual-ip-same-subnet-failover) 및 [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-same-subnet) 클러스터):** SafeKit은 서버에 가상 IP를 구성하고 **Gratuitous ARP (GARP)를** 보냅니다. 외부 하드웨어는 필요하지 않습니다. 이것은 가장 투명한 솔루션입니다(모든 것이 SafeKit 제품에 의해 구현됩니다).
   * **로드 밸런서가 있는 여러 서브넷([mirror](#virtual-ip-different-subnets-failover) 및 [<span class="notranslate farm-term" translate="no">farm</span>](#virtual-ip-load-balancing-different-subnets) 클러스터):** 로드 밸런서는 SafeKit **상태 확인을** 사용하여 트래픽을 올바른 서버로 보냅니다(로드 밸런서는 통합자 구성합니다).
   * **[클라우드 공급자 CLI를 사용하는 다른 서브넷](#virtual-ip-cloud-cli-failover) (mirror 클러스터):** SafeKit `start_prim` 스크립트는 클라우드 CLI를 호출하여 가상 IP를 이동합니다(통합자 작성한 스크립트).
-  * **[BGP가 있는 다른 서브넷](#virtual-ip-bgp-failover) (mirror 클러스터):** 기본 서버가 라우터에 가상 IP를 알립니다(통합자 작성한 스크립트).
-  * **[DNS 리디렉션이 있는 다른 서브넷](#virtual-ip-vs-dns-redirection-failover) (mirror 클러스터):** SafeKit `start_prim` 스크립트는 가상 이름의 DNS 레코드를 새 주 서버의 물리적 IP로 변경합니다(통합자 작성한 스크립트). 단일 가상 IP가 없으며 이 방법은 모든 클라이언트에 대해 안정적이지 않습니다.
+  * **[BGP가 있는 다른 서브넷](#virtual-ip-bgp-failover) (mirror 클러스터):** 기본 서버 가 라우터에 가상 IP를 알립니다(통합자 작성한 스크립트).
+  * **[DNS 리디렉션](#virtual-ip-vs-dns-redirection-failover) (mirror 클러스터)이 있는 다른 서브넷:** SafeKit `start_prim` 스크립트는 가상 이름의 DNS 레코드를 새 기본 서버 의 물리적 IP로 변경합니다(통합자 작성한 스크립트). 단일 가상 IP가 없으며 이 방법은 모든 클라이언트에 대해 안정적이지 않습니다.
 
 이 기사의 다른 내용:
 
@@ -62,7 +62,7 @@ translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation 
 
 장애 조치에는 수동 작업이 필요하지 않습니다. 정상 작동 시 가상 IP는 **서버 1의 MAC 주소(mac1)**에 연결됩니다. 서버 1에 장애가 발생하면 SafeKit은 다음 세 가지 작업을 수행합니다.
 
-  * **가상 IP 별칭 지정:** SafeKit은 가상 IP를 새로운 주 서버인 서버 2의 네트워크 카드에 별칭으로 구성합니다. 그러면 운영 체제는 가상 IP를 알리기 위해 네트워크로 메시지를 보냅니다.
+  * **가상 IP 별칭 지정:** SafeKit은 가상 IP를 새 기본 서버 인 서버 2의 네트워크 카드에 별칭으로 구성합니다. 그러면 운영 체제는 가상 IP를 알리기 위해 네트워크로 메시지를 보냅니다.
   * **GARP :** SafeKit은 **Gratuitous ARP GARP** 메시지도 보냅니다. 네트워크 스위치와 클라이언트는 ARP 캐시를 업데이트합니다. 이제 가상 IP는 **서버 2의 MAC 주소(mac2)**에 연결됩니다.
   * **애플리케이션 복구:** SafeKit이 서버 2에서 애플리케이션 서비스를 다시 시작합니다.
 
@@ -79,46 +79,78 @@ translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation 
 
 ![두 개의 서로 다른 서브넷에 걸쳐 로드 밸런서를 사용하여 가상 IP 장애 조치를 수행하는 다이어그램](/wp-content/uploads/2023/05/vip-mirror-different-subnet.png "w:256")
 
-노드가 **서로 다른 서브넷**에 있는 경우, Gratuitous ARP 가상 IP를 이동할 수 없습니다. 이 경우 가상 IP는 **로드 밸런서**에 있습니다. 로드 밸런서는 트래픽을 기본 서버로 보냅니다.
+노드가 **서로 다른 서브넷**에 있는 경우, Gratuitous ARP 가상 IP를 이동할 수 없습니다. 이 경우 가상 IP는 **로드 밸런서**에 있습니다. 로드 밸런서는 트래픽을 기본 서버 로 보냅니다.
 
 SafeKit은 각 노드에 **상태 확인 URL을** 제공합니다.
 
   * **기본 (PRIM) :** `HTTP 200 OK` 반환합니다. 로드 밸런서가 이 노드로 트래픽을 보냅니다.
   * **보조 (SECOND) :** `HTTP 404 NOT FOUND` 반환합니다. 로드 밸런서는 이 노드로 트래픽을 보내지 않습니다.
 
-장애 조치 시 SafeKit은 응답을 변경하고 로드 밸런서는 트래픽을 새 기본 서버로 보냅니다. 이는 [**AWS**](</ko/solutions/aws-high-availability-cluster-synchronous-replication-failover/>), [**Azure**](</ko/solutions/azure-high-availability-cluster-synchronous-replication-failover/>) 및 [**Google Cloud**](</ko/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) 의 **가용성 영역** 간 표준 솔루션입니다.
+장애 조치 시 SafeKit은 응답을 변경하고 로드 밸런서는 트래픽을 새 기본 서버 로 보냅니다. 이는 [**AWS**](</ko/solutions/aws-high-availability-cluster-synchronous-replication-failover/>), [**Azure**](</ko/solutions/azure-high-availability-cluster-synchronous-replication-failover/>) 및 [**Google Cloud**](</ko/solutions/gcp-high-availability-cluster-synchronous-replication-failover/>) 의 **가용성 영역** 간 표준 솔루션입니다.
 
 > **⚠️ 참고:** SafeKit는 상태 점검 기능을 제공합니다. 로드 밸런서는 네트워크 또는 클라우드 공급자가 제공합니다.
 
 ### 문제: 로드 밸런서가 가상 IP를 소유합니다. {#the-load-balancer-pitfall-virtual-ip-on-the-frontend-nat-to-the-physical-ip}
 
-로드 밸런서만 있는 경우 클라이언트는 가상 IP에 연결됩니다. 로드 밸런서는 가상 IP(NAT)를 기본 서버의 **물리적 IP**로 변환합니다. 클라이언트는 가상 IP를 사용하지만 서버는 물리적 IP를 사용합니다. 서버는 가상 IP를 보지 못합니다.
+로드 밸런서만 있는 경우 클라이언트는 가상 IP에 연결됩니다. 로드 밸런서는 가상 IP(NAT)를 기본 서버 의 **물리적 IP**로 변환합니다. 클라이언트는 가상 IP를 사용하지만 서버는 물리적 IP를 사용합니다. 서버는 가상 IP를 보지 못합니다.
 
-### 가상 IP는 기본 서버에 로컬로 구성된 상태로 유지하세요. {#why-the-virtual-ip-must-stay-configured-locally-on-the-primary-server}
+### 기본 서버 에 가상 IP를 로컬로 구성된 상태로 유지하세요. {#why-the-virtual-ip-must-stay-configured-locally-on-the-primary-server}
 
-일부 애플리케이션은 가상 IP를 서버 주소로 사용합니다. 이러한 애플리케이션은 가상 IP가 **기본 서버에 로컬로 구성된** 경우에만 올바르게 작동합니다. 그러면:
+일부 애플리케이션은 가상 IP를 서버 주소로 사용합니다. 가상 IP가 **기본 서버 에도 로컬로 구성된** 경우에만 올바르게 작동합니다. 그러면:
 
   * 서비스는 가상 IP에서 시작될 수 있습니다.
   * 서버는 가상 IP를 사용하여 자체 서비스에 도달할 수 있습니다.
   * 인증은 가상 IP로 작동합니다.
 
-**모범 사례:** 가상 IP를 대상 주소로 유지하는 로드 밸런서 모드(예: Floating IP 또는 Direct Server Return)를 사용합니다. 그런 다음 기본 서버에서 가상 IP를 로컬로 구성합니다. 이 방법은 가상 IP의 서브넷에 따라 달라집니다.
+**모범 사례:** 가상 IP를 대상 주소로 유지하는 로드 밸런서 모드(예: Floating IP 또는 Direct Server Return)를 사용합니다. 그런 다음 기본 서버 에서 가상 IP를 로컬로 구성합니다. 이 방법은 가상 IP의 서브넷에 따라 달라집니다.
 
   * **가상 IP는 서버의 물리적 IP 주소와 동일한 서브넷에 있습니다.** SafeKit 모듈에서 `<vip>` 섹션을 유지하십시오. SafeKit은 가상 IP를 물리적 IP 주소의 네트워크 카드에 별칭으로 자동 구성합니다.
-  * **가상 IP가 다른 서브넷에 있는 경우:** SafeKit에서 `<vip>` 구성하지 마십시오. `start_prim` 스크립트를 사용하여 애플리케이션이 시작되기 전에 루프백과 같은 전용 인터페이스에 가상 IP를 구성하십시오. `stop_prim` 스크립트를 사용하여 애플리케이션이 중지된 후 가상 IP를 제거하십시오. 통합자 이러한 명령을 작성합니다. 이러한 명령은 SafeKit 제품에서 제공되지 않습니다.
+  * **가상 IP가 다른 서브넷에 있는 경우:** SafeKit 모듈의 `<vip>` 섹션에서 가상 IP를 **단일 측면 별칭**으로 구성합니다(`where="one_side_alias"`). SafeKit은 기본 서버 에만 가상 IP를 로컬 별칭으로 추가합니다. 아래 예시는 Azure에서 이 구성을 보여줍니다.
+  * **다른 서브넷에 대한 다른 옵션:** 애플리케이션이 시작되기 전에 `start_prim` 스크립트를 사용하여 loopback 과 같은 전용 인터페이스에서 가상 IP를 구성합니다. 애플리케이션이 중지된 후 `stop_prim` 스크립트를 사용하여 가상 IP를 제거합니다. 통합자 이러한 명령을 작성합니다. 이러한 명령은 SafeKit 제품에서 제공하지 않습니다.
+
+### 예시: 로컬 가상 IP가 있는 Azure 로드 밸런서(Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
+
+이 아키텍처는 Azure의 **Milestone XProtect 관리 서버용** SafeKit `videoos` 모듈과 함께 프로덕션 환경에서 사용됩니다. 두 노드는 하나의 서브넷에 있습니다. 가상 IP는 전용 서브넷에 있는 **로드 밸런서의 프런트 엔드 IP** 입니다.
+
+**Azure 측** (인프라 팀에서 구성):
+
+  1. 전용 서브넷에 프런트 엔드 IP가 있는 **레이어 4 로드 밸런서를** 만듭니다.
+  2. 두 SafeKit 노드를 로드 밸런서의 **백엔드 풀**에 추가합니다.
+  3. 모듈의 SafeKit 상태 확인 URL에 **상태 프로브를** 추가합니다. 경로는 `/var/modules/videoos/ready.txt`, 포트는 `9010` (HTTP) 또는 `9453` (유효한 인증서가 있는 HTTPS)입니다. 다른 모듈의 경우 `videoos` 모듈 이름으로 바꿉니다.
+  4. 클라이언트가 가상 IP에서 사용하는 모든 포트(관리 서버 포트 및 기타 서비스 포트)에 대한 **로드 밸런싱 규칙을** 추가합니다.
+
+**SafeKit 측:** 모듈의 `userconfig.xml` 파일(`videoos/conf/userconfig.xml`)에서 표준 `<vip>` 섹션을 다음 섹션으로 바꿉니다.
+
+```xml
+<vip>
+  <interface_list>
+    <interface check="on" arpreroute="on" name="VM_INTERFACE_NAME">
+      <real_interface>
+        <virtual_addr addr="LB_FRONTEND_IP" netmask="LB_FRONTEND_NETMASK" where="one_side_alias" />
+      </real_interface>
+    </interface>
+  </interface_list>
+</vip>
+```
+
+`VM_INTERFACE_NAME` VM의 네트워크 인터페이스 이름으로, `LB_FRONTEND_IP` 로드 밸런서의 프런트엔드 IP로, `LB_FRONTEND_NETMASK` 프런트엔드 서브넷의 넷마스크로 대체하십시오. 네트워크 인터페이스는 두 노드 모두에서 동일한 이름을 가져야 합니다.
+
+**애플리케이션 측면:** 모든 Milestone 서비스를 서버의 개인 IP 주소가 아닌 가상 IP를 사용하도록 구성합니다.
+
+> **⚠️ 참고:** VM의 서브넷과 **겹치지 않는** 프런트엔드 서브넷을 사용하십시오. 예를 들어, `10.0.1.0/24` 의 VM과 `10.0.2.0/24` 의 로드 밸런서 프런트엔드 IP를 사용하십시오. SafeKit은 VM의 네트워크 인터페이스에 넷마스크가 있는 프런트엔드 IP를 추가합니다. 두 서브넷이 겹치면 이 별칭이 VM의 라우팅을 변경하여 VM의 네트워크 트래픽이 실패할 수 있습니다.
 
 
 ## 클라우드 제공업체 CLI를 사용하여 가상 IP가 서로 다른 서브넷에서 작동하는 방식(mirror 클러스터) {#virtual-ip-cloud-cli-failover}
 
 ### 클라우드에서 Gratuitous ARP 작동하지 않는 이유 {#why-gratuitous-arp-does-not-work-in-public-clouds}
 
-클라우드 네트워크(AWS, Azure, Google Cloud)는 **Gratuitous ARP 무시합니다**. 클라우드 플랫폼에 할당된 IP 주소로만 트래픽을 보냅니다. SafeKit은 기본 서버에 가상 IP를 구성하지만, 클라우드 네트워크는 이 서버로 가상 IP 트래픽을 보내지 않습니다.
+클라우드 네트워크(AWS, Azure, Google Cloud)는 **Gratuitous ARP 무시합니다**. 클라우드 플랫폼에 할당된 IP 주소로만 트래픽을 보냅니다. SafeKit은 기본 서버 에 가상 IP를 구성하지만, 클라우드 네트워크는 이 서버로 가상 IP 트래픽을 보내지 않습니다.
 
 ### 클라우드 CLI를 사용하여 가상 IP 이동하기 {#moving-the-virtual-ip-through-the-cloud-api-in-safekit-failover-scripts}
 
 로드 밸런서가 없는 경우, 클라우드 공급자 CLI를 SafeKit **`start_prim` 스크립트**에 통합하여 애플리케이션 시작 전에 클라우드 네트워크 구성을 업데이트할 수 있습니다. CLI는 기본 노드가 되는 노드에 가상 IP를 할당하거나 가상 IP 트래픽을 해당 노드로 향하게 하도록 클라우드 라우트를 업데이트할 수 있습니다.
 
-**가상 IP는 기본 서버에 로컬로 유지됩니다**. **NAT는 없으며**, 원래 클라이언트 IP는 변경되지 않습니다.
+**가상 IP는** 기본 서버 에 로컬로 유지됩니다. **NAT는 없으며**, 원래 클라이언트 IP는 변경되지 않습니다.
 
 ### 통합자 책임 {#integrator-responsibility}
 
@@ -128,15 +160,16 @@ SafeKit은 각 노드에 **상태 확인 URL을** 제공합니다.
 
   * 클라우드 CLI는 두 노드 모두에 설치해야 합니다. 각 노드에는 네트워크 권한이 있는 클라우드 ID가 필요합니다.
   * 스크립트는 오류와 재시도를 관리해야 합니다.
-  * 장애 조치(failover)는 로드 밸런서를 사용할 때보다 느릴 수 있습니다.
+  * 각 장애 조치는 클라우드 API의 응답을 기다리기 때문에 로드 밸런서와 상태 프로브를 사용하는 경우보다 장애 조치 **속도가 훨씬 느립니다**.
+  * 이 아키텍처의 프로덕션 배포에 대한 참조는 없습니다. 프로덕션 전에 테스트 환경에서 검증하십시오. 로드 밸런서를 사용할 수 있는 경우 위에 설명된 로드 밸런서 아키텍처를 사용하는 것이 좋습니다.
 
 ## BGP를 사용하는 서로 다른 서브넷에서 가상 IP가 작동하는 방식(mirror 클러스터) {#virtual-ip-bgp-failover}
 
 ### BGP를 사용한 가상 IP 리라우팅 {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
-BGP(Border Gateway Protocol)를 사용하는 경우, 가상 IP는 일반적으로 애플리케이션이 시작되기 전에 `start_prim` 스크립트에 의해 기본 서버의 루프백 인터페이스에 구성됩니다. 기본 서버는 /32 경로로 라우터에 가상 IP를 알립니다.
+BGP(Border Gateway Protocol)를 사용하는 경우, 가상 IP는 일반적으로 애플리케이션이 시작되기 전에 `start_prim` 스크립트에 의해 기본 서버 의 loopback 인터페이스에 구성됩니다. 기본 서버 /32 경로로 라우터에 가상 IP를 알립니다.
 
-장애 조치 시, 이전 주 서버의 `stop_prim` 스크립트는 애플리케이션을 중지하고, 루프백 인터페이스에서 가상 IP를 제거하며, 라우터에서 /32 경로를 철회합니다. 이전 주 서버가 다운되면 `stop_prim` 실행되지 않지만, 라우터는 BGP 세션을 잃고 경로를 자동으로 제거합니다.
+장애 조치 시, 이전 기본 서버 의 `stop_prim` 스크립트가 애플리케이션을 중지하고 loopback 인터페이스에서 가상 IP를 제거하며 라우터에서 /32 경로를 철회합니다. 이전 기본 서버 충돌하는 경우 `stop_prim` 실행되지 않지만 라우터는 BGP 세션을 잃고 경로를 자동으로 제거합니다.
 
 ### 혜택 및 필수 요건 {#benefits-and-prerequisites}
 
@@ -150,9 +183,9 @@ BGP(Border Gateway Protocol)를 사용하는 경우, 가상 IP는 일반적으�
 
 ### `start_prim` 스크립트를 사용한 DNS 경로 재설정 {#dns-rerouting-with-the-start-prim-script}
 
-DNS 리디렉션을 사용하면 **단일 가상 IP가 없습니다**. 클라이언트는 **가상 이름** (DNS 이름)에 연결합니다. 장애 조치 시 새 주 서버의 `start_prim` 스크립트가 애플리케이션을 시작한 다음 가상 이름의 DNS 레코드를 새 주 서버의 **실제 IP**로 변경합니다.
+DNS 리디렉션을 사용하면 **단일 가상 IP가 없습니다**. 클라이언트는 **가상 이름** (DNS 이름)에 연결합니다. 장애 조치 시 새 기본 서버 의 `start_prim` 스크립트가 애플리케이션을 시작한 다음 가상 이름의 DNS 레코드를 새 기본 서버 의 **실제 IP**로 변경합니다.
 
-`stop_prim` 스크립트는 아무것도 할 필요가 없습니다. 이전 기본 서버가 다운되면 새 기본 서버가 DNS 레코드를 덮어씁니다.
+`stop_prim` 스크립트는 아무것도 할 필요가 없습니다. 기존 기본 서버 충돌하면 새 기본 서버 DNS 레코드를 덮어씁니다.
 
 ### 예시: DNS 확인 및 이전 IP를 유지하는 클라이언트 {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
@@ -267,7 +300,7 @@ SafeKit은 <span class="notranslate farm-term" translate="no">farm</span> 의 �
 로드 밸런싱(액티브/액티브) | <span class="notranslate farm-term" translate="no">Farm</span> 클러스터 | 커널 네트워크 필터 / GARP | ✅ SafeKit 제품 | 매우 낮음: 장애 감지 및 네트워크 필터 변경 시간 | 전체 투명성: 가상 IP는 모든 노드에서 로컬입니다. 클라이언트 IP는 변경되지 않습니다.  
 동일 서브넷 / 확장 VLAN | 재해 복구(원격 데이터 센터) | IP 별칭/GARP | ✅ SafeKit 제품(확장 VLAN 네트워크 팀에서 제공) | 낮음: 확장 VLAN의 왕복 시간(RTT)에 따라 달라집니다. | 완전한 투명성: 가상 IP는 노드에 로컬로 있습니다. 클라이언트 IP는 변경되지 않습니다.  
 다른 서브넷: 로드 밸런서만 해당 | 재해 복구(원격 데이터 센터/클라우드) | 외부 로드 밸런서 | 🛠️ 통합자 : 로드 밸런서 구성(SafeKit에서 상태 확인 제공) | 중간: 로드 밸런서의 상태 확인 간격에 따라 달라집니다. | ⚠️ SNAT/DNAT를 사용하는 경우 부분적으로 투명합니다. 가상 IP는 노드에 로컬로 있지 **않습니다**. 클라이언트 IP가 유지되지 **않을** 수 있습니다. 애플리케이션은 이를 지원해야 합니다.  
-다른 서브넷: 로드 밸런서 + 로컬 SafeKit 가상 IP | 재해 복구(원격 데이터 센터/클라우드) | Floating IP / Direct Server Return 사용한 외부 로드 밸런서 | 🛠️ 통합자 : 로드 밸런서 구성(SafeKit에서 상태 확인 제공) | 중간: 로드 밸런서의 상태 확인 간격에 따라 달라집니다. | 투명성 우수: 가상 IP는 기본 노드에 로컬로 있으며 대상 주소입니다.
+다른 서브넷: 로드 밸런서 + 로컬 SafeKit 가상 IP | 재해 복구(원격 데이터 센터/클라우드) | Floating IP / Direct Server Return 사용하는 외부 로드 밸런서 또는 로컬 SafeKit 별칭으로 사용되는 프런트엔드 IP | 🛠️ 통합자 : 로드 밸런서 구성(SafeKit에서 상태 확인 제공) | 중간: 로드 밸런서의 상태 확인 간격에 따라 달라집니다. | 투명성 우수: 가상 IP는 기본 노드에 로컬로 있으며 대상 주소입니다.
 다른 서브넷: 클라우드 CLI | 재해 복구(클라우드) | 클라우드 API: 개인 IP 또는 클라우드 라우트가 새 기본 노드로 이동합니다. | 🛠️ 통합자 : `start_prim` 스크립트의 클라우드 CLI 명령어 | 중간에서 높음: 클라우드 API의 응답 시간에 따라 달라집니다. | 완전한 투명성: 가상 IP는 기본 노드에 로컬로 있습니다. 클라이언트 IP는 변경되지 않습니다.
 다른 서브넷: BGP | 재해 복구(원격 데이터 센터/클라우드) | BGP를 통해 /32 경로가 발표되었습니다. | 🛠️ 통합자 : `start_prim` 및 `stop_prim` 스크립트의 BGP 명령어 | 낮음~중간: BGP 수렴 시간에 따라 달라짐 | 완전한 투명성: 가상 IP는 기본 노드에 로컬로 있습니다. 클라이언트 IP는 변경되지 않습니다. BGP 라우터가 필요합니다.  
 DNS 리디렉션: 가상 IP 없음 | 재해 복구(원격 데이터 센터) | DNS 레코드 변경(이름/물리적 IP) | 🛠️ 통합자 : `start_prim` 스크립트의 DNS 업데이트 명령어 | 높고 예측 불가능: DNS TTL(Time To Live) 및 클라이언트 DNS 캐시에 따라 달라집니다. | ⚠️ 신뢰할 수 없음: 클라이언트가 새 DNS 조회를 수행해야 합니다. 클라이언트는 시작 시 받은 이전 IP를 유지하고 장애 조치 후 리디렉션되지 않는 경우가 많습니다.  
@@ -278,7 +311,7 @@ DNS 리디렉션: 가상 IP 없음 | 재해 복구(원격 데이터 센터) | DN
 
 가상 IP란 무엇이며, 물리적 IP와는 어떻게 다른가요?
 
-**물리적 IP 주소는** 하나의 네트워크 카드에 연결됩니다. **가상 IP**는 하드웨어에 연결되지 않습니다. SafeKit 클러스터에서 클라이언트는 항상 가상 IP를 사용합니다. 주 서버에 장애가 발생하면 가상 IP는 자동으로 정상 노드로 이동합니다. 클라이언트 구성을 변경할 필요가 없습니다.
+**물리적 IP 주소는** 하나의 네트워크 카드에 연결됩니다. **가상 IP**는 하드웨어에 연결되지 않습니다. SafeKit 클러스터에서 클라이언트는 항상 가상 IP를 사용합니다. 기본 서버 장애가 발생하면 가상 IP는 자동으로 정상 노드로 이동합니다. 클라이언트 구성을 변경할 필요가 없습니다.
 
 가상 IP를 사용하려면 하드웨어 로드 밸런서가 필요한가요?
 
@@ -286,7 +319,7 @@ DNS 리디렉션: 가상 IP 없음 | 재해 복구(원격 데이터 센터) | DN
 
 Gratuitous ARP (GARP)란 무엇이며 왜 사용될까요?
 
-**GARP (Gratuitous ARP)**는 모든 장치에 전송되는 네트워크 메시지입니다. 이 메시지는 스위치와 라우터의 ARP 테이블을 업데이트합니다. 장애 조치 시 새 주 서버가 GARP 메시지를 보냅니다. 이 메시지는 **가상 IP가** 이제 새 주 서버의 MAC 주소에 연결되었음을 나타냅니다. 그러면 트래픽이 즉시 다시 라우팅됩니다.
+**Gratuitous ARP (GARP)**는 모든 장치에 전송되는 네트워크 메시지입니다. 이 메시지는 스위치와 라우터의 ARP 테이블을 업데이트합니다. 장애 조치 시 새 기본 서버 GARP 메시지를 보냅니다. 이 메시지는 **가상 IP가** 이제 새 기본 서버 의 MAC 주소에 연결되었음을 나타냅니다. 그러면 트래픽이 즉시 다시 라우팅됩니다.
 
 가상 IP에 DNS 이름을 연결할 수 있나요?
 

@@ -5,7 +5,7 @@ description: "Comment SafeKit déplace une IP virtuelle lors d’un basculement 
 category: "best-practises"
 lang: "fr"
 topics: "Qu’est-ce qu’une adresse IP virtuelle dans un cluster haute disponibilité ?, Implémentation de l’IP virtuelle dans SafeKit, Comment une IP virtuelle fonctionne dans le même sous-réseau (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec un équilibreur de charge (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec les CLI des fournisseurs de cloud (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec BGP (cluster mirror), Comment la redirection DNS fonctionne sur différents sous-réseaux (cluster mirror), Comment l’équilibrage de charge d’IP virtuelle fonctionne dans un cluster farm sur le même sous-réseau, Comment une IP virtuelle à équilibrage de charge fonctionne sur différents sous-réseaux (cluster farm), Comparaison : implémentation de l’IP virtuelle, latence et transparence de l’application, Questions fréquemment posées sur l’IP virtuelle, 🔍 Explorer SafeKit"
-translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation LLM | 12 expressions"
+translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 15 expressions"
 ---
 
 # Comment fonctionne une adresse IP virtuelle dans un cluster à haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -105,7 +105,39 @@ Certaines applications utilisent l’adresse IP virtuelle comme adresse de serve
 **Bonne pratique :** utilisez un mode d’équilibrage de charge qui conserve l’adresse IP virtuelle comme adresse de destination (par exemple, Floating IP ou Direct Server Return). Ensuite, configurez l’adresse IP virtuelle localement sur le serveur principal. La méthode dépend du sous-réseau de l’adresse IP virtuelle :
 
   * **L’IP virtuelle se trouve dans le même sous-réseau que les adresses IP physiques des serveurs :** conservez la section `<vip>` dans le module SafeKit. SafeKit configure automatiquement l’IP virtuelle comme un alias sur la carte réseau de l’adresse IP physique.
-  * **L’IP virtuelle se trouve dans un sous-réseau différent :** ne configurez pas `<vip>` dans SafeKit. Utilisez le script `start_prim` pour configurer l’IP virtuelle sur une interface dédiée, telle que loopback, avant le démarrage de l’application. Utilisez le script `stop_prim` pour supprimer l’IP virtuelle après l’arrêt de l’application. L’intégrateur écrit ces commandes. Elles ne sont pas fournies par le produit SafeKit.
+  * **L’IP virtuelle se trouve dans un sous-réseau différent :** configurez l’IP virtuelle comme un **alias unilatéral** dans la section `<vip>` du module SafeKit (`where="one_side_alias"`). SafeKit ajoute l’IP virtuelle comme alias local sur le serveur principal uniquement. L’exemple ci-dessous montre cette configuration sur Azure.
+  * **Autre option pour un sous-réseau différent :** utilisez le script `start_prim` pour configurer l’IP virtuelle sur une interface dédiée, telle que loopback, avant le démarrage de l’application. Utilisez le script `stop_prim` pour supprimer l’IP virtuelle après l’arrêt de l’application. L’intégrateur écrit ces commandes. Elles ne sont pas fournies par le produit SafeKit.
+
+### Exemple : Équilibreur de charge Azure avec une adresse IP virtuelle locale (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
+
+Cette architecture est utilisée en production avec le module `videoos`. SafeKit pour le **serveur de gestion Milestone XProtect** sur Azure. Les deux nœuds se trouvent dans un même sous-réseau. L’adresse IP virtuelle est l’**adresse IP frontale de l’équilibreur de charge**, dans un sous-réseau dédié.
+
+**Du côté d’Azure** (configuré par l’équipe d’infrastructure) :
+
+  1. Créez un **équilibreur de charge de couche 4** avec une adresse IP frontale dans un sous-réseau dédié.
+  2. Ajoutez les deux nœuds SafeKit au **pool de serveurs** du répartiteur de charge.
+  3. Ajoutez une **sonde de contrôle de l’état** sur l’URL de contrôle de l’état SafeKit du module : chemin `/var/modules/videoos/ready.txt`, port `9010` (HTTP) ou port `9453` (HTTPS avec des certificats valides). Pour un autre module, remplacez `videoos` par le nom du module.
+  4. Ajoutez **des règles d’équilibrage de charge** pour tous les ports que les clients utilisent sur l’adresse IP virtuelle : les ports du serveur de gestion et les ports des autres services.
+
+**Du côté de SafeKit :** dans le fichier `userconfig.xml` du module (`videoos/conf/userconfig.xml`), remplacez la section `<vip>` standard par cette section :
+
+```xml
+<vip>
+  <interface_list>
+    <interface check="on" arpreroute="on" name="VM_INTERFACE_NAME">
+      <real_interface>
+        <virtual_addr addr="LB_FRONTEND_IP" netmask="LB_FRONTEND_NETMASK" where="one_side_alias" />
+      </real_interface>
+    </interface>
+  </interface_list>
+</vip>
+```
+
+Remplacez `VM_INTERFACE_NAME` par le nom de l’interface réseau de la VM, `LB_FRONTEND_IP` par l’IP frontale de l’équilibreur de charge et `LB_FRONTEND_NETMASK` par le masque réseau du sous-réseau frontal. L’interface réseau doit avoir le même nom sur les deux nœuds.
+
+**Côté application :** configurez tous les services Milestone pour qu’ils utilisent l’adresse IP virtuelle et non l’adresse IP privée du serveur.
+
+> **⚠️ Remarque :** Utilisez un sous-réseau frontal qui **ne chevauche pas** le sous-réseau des machines virtuelles. Par exemple, des machines virtuelles dans `10.0.1.0/24` et une adresse IP frontale d’équilibrage de charge dans `10.0.2.0/24`. SafeKit ajoute l’IP frontale avec son masque réseau sur l’interface réseau de la machine virtuelle. Si les deux sous-réseaux se chevauchent, cet alias modifie le routage de la machine virtuelle et le trafic réseau des machines virtuelles peut échouer.
 
 
 ## Fonctionnement d’une adresse IP virtuelle sur différents sous-réseaux avec les interfaces de ligne de commande des fournisseurs de services cloud (cluster mirror) {#virtual-ip-cloud-cli-failover}
@@ -128,15 +160,16 @@ L’**intégrateur** doit ajouter les commandes CLI du cloud au script `start_pr
 
   * L’interface de ligne de commande (CLI) du cloud doit être installée sur les deux nœuds. Chaque nœud a besoin d’une identité cloud avec des droits réseau.
   * Le script doit gérer les erreurs et les nouvelles tentatives.
-  * Le basculement est probablement plus lent qu’avec un équilibreur de charge.
+  * Le basculement est **beaucoup plus lent** qu’avec un équilibreur de charge et une sonde d’intégrité, car chaque basculement attend la réponse de l’API cloud.
+  * Il n’existe aucun déploiement de référence de cette architecture en production. Validez-la dans un environnement de test avant la production. Lorsqu’un équilibreur de charge est disponible, préférez l’architecture d’équilibrage de charge décrite ci-dessus.
 
 ## Fonctionnement d’une adresse IP virtuelle sur différents sous-réseaux avec BGP (cluster mirror) {#virtual-ip-bgp-failover}
 
 ### Reroutage d’IP virtuelle avec BGP {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
-Avec BGP (Border Gateway Protocol), l’IP virtuelle est généralement configurée sur une interface de bouclage du serveur principal par le script `start_prim` avant le démarrage de l’application. Le serveur principal annonce l’IP virtuelle aux routeurs sous la forme d’une route /32.
+Avec BGP (Border Gateway Protocol), l’IP virtuelle est généralement configurée sur une interface loopback du serveur principal par le script `start_prim` avant le démarrage de l’application. Le serveur principal annonce l’IP virtuelle aux routeurs sous la forme d’une route /32.
 
-En cas de basculement, le script `stop_prim` sur l’ancien serveur principal arrête l’application, supprime l’IP virtuelle de l’interface de bouclage et retire la route /32 des routeurs. Si l’ancien serveur principal plante, `stop_prim` ne s’exécute pas, mais les routeurs perdent la session BGP et suppriment la route automatiquement.
+En cas de basculement, le script `stop_prim` sur l’ancien serveur principal arrête l’application, supprime l’IP virtuelle de l’interface loopback et retire la route /32 des routeurs. Si l’ancien serveur principal plante, `stop_prim` ne s’exécute pas, mais les routeurs perdent la session BGP et suppriment la route automatiquement.
 
 ### Avantages et conditions préalables {#benefits-and-prerequisites}
 
@@ -267,7 +300,7 @@ Principal/secondaire (haute disponibilité) | Cluster mirror | ARP gratuit (pris
 Répartition de charge (actif/actif) | Cluster <span class="notranslate farm-term" translate="no">farm</span> | Filtre réseau du noyau / GARP | ✅ Produit SafeKit | Très faible : temps de détection de la défaillance et de changement des filtres réseau. | Transparence totale : l’adresse IP virtuelle est locale sur tous les nœuds. L’adresse IP du client ne change pas.  
 Même sous-réseau / VLAN étendu | Reprise d’activité après sinistre (centres de données distants) | Alias d’adresse IP / GARP | ✅ Produit SafeKit (le VLAN étendu est fourni par l’équipe réseau) | Faible : dépend du temps d’aller-retour (RTT) du VLAN étendu | Transparence totale : l’adresse IP virtuelle est locale sur les nœuds. L’adresse IP du client ne change pas.  
 Sous-réseaux différents : équilibreur de charge uniquement | Reprise d’activité après sinistre (centres de données distants / cloud) | Équilibreur de charge externe | 🛠️ Intégrateur : configuration de l’équilibreur de charge (SafeKit assure la vérification de l’état de santé) | Moyen : dépend de l’intervalle de vérification de l’état de l’équilibreur de charge. | ⚠️ Transparence partielle si SNAT/DNAT est utilisé. L’IP virtuelle **n’est PAS** locale sur les nœuds. L’IP du client peut **NE PAS** être conservée. L’application doit prendre en charge cette fonctionnalité.  
-Sous-réseaux différents : équilibreur de charge + IP virtuelle SafeKit locale | Reprise d’activité après sinistre (centres de données distants / cloud) | Équilibreur de charge externe avec Floating IP / Direct Server Return | 🛠️ Intégrateur : configuration de l’équilibreur de charge (SafeKit assure la vérification de l’état de santé) | Moyen : dépend de l’intervalle de vérification de l’état de l’équilibreur de charge. | Bonne transparence : l’IP virtuelle est locale sur le nœud principal et constitue l’adresse de destination.
+Sous-réseaux différents : équilibreur de charge + IP virtuelle SafeKit locale | Reprise d’activité après sinistre (centres de données distants / cloud) | Équilibreur de charge externe avec Floating IP / Direct Server Return, ou IP frontale en tant qu’alias SafeKit local | 🛠️ Intégrateur : configuration de l’équilibreur de charge (SafeKit assure la vérification de l’état de santé) | Moyen : dépend de l’intervalle de vérification de l’état de l’équilibreur de charge. | Bonne transparence : l’IP virtuelle est locale sur le nœud principal et constitue l’adresse de destination.
 Sous-réseaux différents : CLI cloud | Reprise d’activité après sinistre (cloud) | API Cloud : l’adresse IP privée ou une route cloud est déplacée vers le nouveau nœud principal. | 🛠️ Intégrateur : commandes CLI cloud dans le script `start_prim` | Moyen à élevé : dépend du temps de réponse de l’API cloud. | Transparence totale : l’adresse IP virtuelle est locale sur le nœud principal. L’adresse IP du client ne change pas.
 Sous-réseaux différents : BGP | Reprise d’activité après sinistre (centres de données distants / cloud) | Route /32 annoncée avec BGP | 🛠️ Intégrateur : commandes BGP dans les scripts `start_prim` et `stop_prim` | Faible à moyen : dépend du temps de convergence BGP. | Transparence totale : l’adresse IP virtuelle est locale sur le nœud principal. L’adresse IP du client ne change pas. Nécessite des routeurs BGP.  
 Redirection DNS : pas d’IP virtuelle | Reprise d’activité après sinistre (centres de données distants) | Modification d’un enregistrement DNS (nom/adresse IP physique) | 🛠️ Intégrateur : commandes de mise à jour DNS dans le script `start_prim` | Élevé et imprévisible : dépend du TTL (Time To Live) du DNS et du cache DNS du client. | ⚠️ Non fiable : le client doit effectuer une nouvelle recherche DNS. Souvent, les clients conservent l’ancienne adresse IP qu’ils ont reçue au démarrage et ne sont pas redirigés après le basculement.  
@@ -290,7 +323,7 @@ Qu’est-ce que le protocole ARP gratuit (GARP) et pourquoi est-il utilisé ?
 
 Puis-je associer un nom DNS à une adresse IP virtuelle ?
 
-**Oui.** Créez un enregistrement A standard pour l’IP virtuelle. La redirection se fait au **niveau de l’IP virtuelle** (avec ARP ou redirection réseau), **et non au niveau du DNS**. Vous n’avez pas de retards DNS ni de problèmes de TTL, et le basculement reste **transparent pour l’application**.
+**Oui.** Créez un enregistrement A standard pour l’IP virtuelle. La redirection se fait au **niveau de l’IP virtuelle** (avec ARP ou redirection réseau), et **non au niveau du DNS**. Vous n’avez pas de retards DNS ni de problèmes de TTL, et le basculement reste **transparent pour l’application**.
 
 ### Cloud et architectures avancées {#cloud--advanced-architectures}
 

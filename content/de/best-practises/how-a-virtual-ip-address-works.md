@@ -5,7 +5,7 @@ description: "Wie SafeKit eine virtuelle IP bei einem Failover verschiebt: Gratu
 category: "best-practises"
 lang: "de"
 topics: "Was ist eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster?, Implementierung einer virtuellen IP in SafeKit, Wie eine virtuelle IP im selben Subnetz funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit einem Load Balancer funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit Cloud-Provider-CLIs funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit BGP funktioniert (Mirror-Cluster), Wie die DNS-Umleitung über verschiedene Subnetze funktioniert (Mirror-Cluster), Wie das Lastausgleichsverfahren für virtuelle IPs in einem Farm-Cluster im selben Subnetz funktioniert, Wie eine virtuelle IP mit Lastausgleich über verschiedene Subnetze funktioniert (Farm-Cluster), Vergleich: Implementierung virtueller IPs, Latenz und Anwendungstransparenz, Häufig gestellte Fragen zu virtuellen IPs, 🔍 SafeKit erkunden"
-translation: "translate_md 2026-11-05.5 | glossaire 2026-11-05.10 | Translation LLM | 12 expressions"
+translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.13 | Translation LLM | 15 expressions"
 ---
 
 # Wie funktioniert eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -63,7 +63,7 @@ Die virtuelle IP ist eine dritte IP-Adresse, die zwischen den Knoten wechselt. S
 Failover erfordert keine manuelle Aktion. Im Normalbetrieb ist die virtuelle IP-Adresse mit der **MAC-Adresse von Server 1 (mac1)** verknüpft. Wenn Server 1 ausfällt, tut SafeKit drei Dinge:
 
   * **Virtuelles IP-Aliasing:** SafeKit konfiguriert die virtuelle IP als Alias auf der Netzwerkkarte von Server 2, dem neuen primären Server. Das Betriebssystem sendet dann Nachrichten im Netzwerk, um die virtuelle IP anzukündigen.
-  * **GARP :** SafeKit sendet auch **Gratuitous ARP Nachrichten (GARP)**. Netzwerk-Switches und Clients aktualisieren ihren ARP-Cache. Die virtuelle IP-Adresse ist nun mit der **MAC-Adresse von Server 2 (mac2)** verknüpft.
+  * **GARP:** SafeKit sendet auch **Gratuitous ARP Nachrichten (GARP)**. Netzwerk-Switches und Clients aktualisieren ihren ARP-Cache. Die virtuelle IP-Adresse ist nun mit der **MAC-Adresse von Server 2 (mac2)** verknüpft.
   * **Anwendungsrecovery:** SafeKit startet die Anwendungsdienste auf Server 2 neu.
 
 
@@ -105,7 +105,39 @@ Einige Anwendungen verwenden die virtuelle IP-Adresse als Serveradresse. Sie fun
 **Bewährte Methode:** Verwenden Sie einen Load Balancer -Modus, der die virtuelle IP-Adresse als Zieladresse beibehält (z. B. Floating IP oder Direct Server Return). Konfigurieren Sie dann die virtuelle IP-Adresse lokal auf dem primären Server. Die Methode hängt vom Subnetz der virtuellen IP-Adresse ab:
 
   * **Die virtuelle IP-Adresse befindet sich im selben Subnetz wie die physischen IP-Adressen der Server:** Behalten Sie den Abschnitt `<vip>` im SafeKit-Modul bei. SafeKit konfiguriert die virtuelle IP-Adresse automatisch als Alias auf der Netzwerkkarte der physischen IP-Adresse.
-  * **Die virtuelle IP befindet sich in einem anderen Subnetz:** Konfigurieren Sie `<vip>` nicht in SafeKit. Verwenden Sie das Skript `start_prim`, um die virtuelle IP auf einer dedizierten Schnittstelle, wie z. B. Loopback, zu konfigurieren, bevor die Anwendung gestartet wird. Verwenden Sie das Skript `stop_prim`, um die virtuelle IP zu entfernen, nachdem die Anwendung gestoppt wurde. Der Integrator schreibt diese Befehle. Sie werden nicht vom SafeKit-Produkt bereitgestellt.
+  * **Die virtuelle IP befindet sich in einem anderen Subnetz:** Konfigurieren Sie die virtuelle IP als **One-Side-Alias** im Abschnitt `<vip>` des SafeKit-Moduls (`where="one_side_alias"`). SafeKit fügt die virtuelle IP nur als lokalen Alias auf dem primären Server hinzu. Das folgende Beispiel zeigt diese Konfiguration auf Azure.
+  * **Andere Option für ein anderes Subnetz:** Verwenden Sie das `start_prim`-Skript, um die virtuelle IP-Adresse auf einer dedizierten Schnittstelle, wie z. B. loopback, zu konfigurieren, bevor die Anwendung gestartet wird. Verwenden Sie das `stop_prim`-Skript, um die virtuelle IP-Adresse zu entfernen, nachdem die Anwendung gestoppt wurde. Der Integrator schreibt diese Befehle. Sie werden nicht vom SafeKit-Produkt bereitgestellt.
+
+### Beispiel: Azure Load Balancer mit einer lokalen virtuellen IP-Adresse (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
+
+Diese Architektur wird in der Produktion mit dem SafeKit `videoos`. Modul für den **Milestone XProtect-Verwaltungsserver** auf Azure eingesetzt. Die beiden Knoten befinden sich in einem Subnetz. Die virtuelle IP-Adresse ist die **Frontend-IP-Adresse des Load Balancer** in einem dedizierten Subnetz.
+
+**Auf der Azure-Seite** (konfiguriert vom Infrastrukturteam):
+
+  1. Erstellen Sie einen **Layer-4 Load Balancer** mit einer Frontend-IP in einem dedizierten Subnetz.
+  2. Fügen Sie die beiden SafeKit-Knoten dem **Backend-Pool** des Load Balancer hinzu.
+  3. Fügen Sie eine **Health-Probe** zur SafeKit-Health-Check-URL des Moduls hinzu: Pfad `/var/modules/videoos/ready.txt`, Port `9010` (HTTP) oder Port `9453` (HTTPS mit gültigen Zertifikaten). Ersetzen Sie für ein anderes Modul `videoos` durch den Modulnamen.
+  4. Fügen Sie **Lastausgleichsregeln** für alle Ports hinzu, die Clients auf der virtuellen IP-Adresse verwenden: die Management-Server-Ports und die Ports der anderen Dienste.
+
+**Auf der SafeKit-Seite:** Ersetzen Sie in der Datei `userconfig.xml` des Moduls (`videoos/conf/userconfig.xml`) den Standardabschnitt `<vip>` durch diesen Abschnitt:
+
+```xml
+<vip>
+  <interface_list>
+    <interface check="on" arpreroute="on" name="VM_INTERFACE_NAME">
+      <real_interface>
+        <virtual_addr addr="LB_FRONTEND_IP" netmask="LB_FRONTEND_NETMASK" where="one_side_alias" />
+      </real_interface>
+    </interface>
+  </interface_list>
+</vip>
+```
+
+Ersetzen Sie `VM_INTERFACE_NAME` durch den Namen der Netzwerkschnittstelle der VM, `LB_FRONTEND_IP` durch die Frontend-IP des Load Balancer und `LB_FRONTEND_NETMASK` durch die Netzmaske des Frontend-Subnetzes. Die Netzwerkschnittstelle muss auf beiden Knoten denselben Namen haben.
+
+**Auf der Anwendungsseite:** Konfigurieren Sie alle Milestone-Dienste so, dass sie die virtuelle IP-Adresse und nicht die private IP-Adresse des Servers verwenden.
+
+> **⚠️ Hinweis:** Verwenden Sie ein Frontend-Subnetz, das **sich nicht mit dem Subnetz der VMs überschneidet**. Zum Beispiel VMs in `10.0.1.0/24` und Load Balancer Frontend-IP in `10.0.2.0/24`. SafeKit fügt die Frontend-IP mit ihrer Netzmaske zur Netzwerkschnittstelle der VM hinzu. Wenn sich die beiden Subnetze überschneiden, ändert dieser Alias das Routing der VM und der Netzwerkverkehr der VMs kann fehlschlagen.
 
 
 ## Wie eine virtuelle IP-Adresse über verschiedene Subnetze mit Cloud-Provider-CLIs hinweg funktioniert (Mirror-Cluster) {#virtual-ip-cloud-cli-failover}
@@ -128,15 +160,16 @@ Der **Integrator** muss die Cloud-CLI-Befehle zum `start_prim`-Skript hinzufüge
 
   * Die Cloud-CLI muss auf beiden Knoten installiert sein. Jeder Knoten benötigt eine Cloud-Identität mit Netzwerkrechten.
   * Das Skript muss Fehler und Wiederholungsversuche verwalten.
-  * Das Failover ist wahrscheinlich langsamer als bei einem Load Balancer.
+  * Das Failover ist **viel langsamer** als mit einem Load Balancer und einer Health-Probe, da jedes Failover auf die Antwort der Cloud-API wartet.
+  * Es gibt keine Referenzbereitstellung dieser Architektur in der Produktion. Validieren Sie sie in einer Testumgebung vor der Produktion. Wenn ein Load Balancer verfügbar ist, bevorzugen Sie die oben beschriebene Load Balancer -Architektur.
 
 ## Wie eine virtuelle IP-Adresse über verschiedene Subnetze mit BGP funktioniert (Mirror-Cluster) {#virtual-ip-bgp-failover}
 
 ### Umleitung virtueller IPs mit BGP {#layer-3-virtual-ip-rerouting-with-bgp-route-advertisement}
 
-Bei BGP (Border Gateway Protocol) wird die virtuelle IP-Adresse typischerweise auf einer Loopback-Schnittstelle des primären Servers durch das `start_prim`-Skript konfiguriert, bevor die Anwendung gestartet wird. Der primäre Server kündigt die virtuelle IP-Adresse den Routern als /32-Route an.
+Bei BGP (Border Gateway Protocol) wird die virtuelle IP-Adresse typischerweise auf einer loopback Schnittstelle des primären Servers durch das `start_prim`-Skript konfiguriert, bevor die Anwendung gestartet wird. Der primäre Server kündigt die virtuelle IP-Adresse den Routern als /32-Route an.
 
-Bei einem Failover stoppt das `stop_prim`-Skript auf dem alten primären Server die Anwendung, entfernt die virtuelle IP von der Loopback-Schnittstelle und zieht die /32-Route von den Routern zurück. Wenn der alte primäre Server abstürzt, wird `stop_prim` nicht ausgeführt, aber die Router verlieren die BGP-Sitzung und entfernen die Route automatisch.
+Bei einem Failover stoppt das `stop_prim`-Skript auf dem alten primären Server die Anwendung, entfernt die virtuelle IP von der loopback Schnittstelle und zieht die /32-Route von den Routern zurück. Wenn der alte primäre Server abstürzt, wird `stop_prim` nicht ausgeführt, aber die Router verlieren die BGP-Sitzung und entfernen die Route automatisch.
 
 ### Vorteile und Voraussetzungen {#benefits-and-prerequisites}
 
@@ -185,7 +218,7 @@ Wenn eine Bedingung falsch ist, verwenden **Client 1 und Client 2** weiterhin di
 
 ### Schlussfolgerung {#conclusion}
 
-Die DNS-Umleitung ist keine zuverlässige Hochverfügbarkeitslösung. Verwenden Sie sie nur, wenn alle Clients bei der Wiederverbindung eine neue DNS-Abfrage durchführen. Für ein sofortiges und transparentes Failover verwenden Sie eine **virtuelle IP** : mit einem Stretched VLAN, mit einem Load Balancer, mit Cloud-Provider-CLIs oder mit BGP.
+Die DNS-Umleitung ist keine zuverlässige Hochverfügbarkeitslösung. Verwenden Sie sie nur, wenn alle Clients bei der Wiederverbindung eine neue DNS-Abfrage durchführen. Für ein sofortiges und transparentes Failover verwenden Sie eine **virtuelle IP**: mit einem Stretched VLAN, mit einem Load Balancer, mit Cloud-Provider-CLIs oder mit BGP.
 
 ## So funktioniert das virtuelle IP-Load-Balancing in einem <span class="notranslate farm-term" translate="no">Farm</span>-Cluster im selben Subnetz {#virtual-ip-load-balancing-same-subnet}
 
@@ -267,7 +300,7 @@ Primär/Sekundär (Hochverfügbarkeit) | Mirror-Cluster | Gratuitous ARP (MAC-Ad
 Lastverteilung (aktiv/aktiv) | <span class="notranslate farm-term" translate="no">Farm</span>-Cluster | Kernel-Netzwerkfilter / GARP | ✅ SafeKit-Produkt | Sehr niedrig: Zeit bis zur Fehlererkennung und zum Austausch der Netzwerkfilter | Volle Transparenz: Die virtuelle IP ist auf allen Knoten lokal. Die Client-IP ändert sich nicht.  
 Dasselbe Subnetz / Stretched VLAN | Disaster Recovery (Remote-Rechenzentren) | IP-Aliasing / GARP | ✅ SafeKit-Produkt (das Stretched VLAN wird vom Netzwerkteam bereitgestellt) | Niedrig: Abhängig von der Round-Trip-Time (RTT) des Stretched VLAN | Volle Transparenz: Die virtuelle IP-Adresse ist lokal auf den Knoten. Die Client-IP-Adresse ändert sich nicht.  
 Unterschiedliche Subnetze: Nur Load Balancer | Disaster Recovery (Remote-Rechenzentren/Cloud) | Externer Load Balancer | 🛠️ Integrator: Load Balancer -Konfiguration (SafeKit stellt den Health-Check bereit) | Medium: hängt vom Health-Check-Intervall des Load Balancer | ⚠️ Teilweise Transparenz, wenn SNAT/DNAT verwendet wird. Die virtuelle IP ist **NICHT** lokal auf den Knoten. Die Client-IP wird möglicherweise **NICHT** beibehalten. Die Anwendung muss dies unterstützen.  
-Unterschiedliche Subnetze: Load Balancer + lokale SafeKit-virtuelle IP | Disaster Recovery (Remote-Rechenzentren/Cloud) | Externer Load Balancer mit Floating IP / Direct Server Return | 🛠️ Integrator: Load Balancer -Konfiguration (SafeKit stellt den Health-Check bereit) | Medium: hängt vom Health-Check-Intervall des Load Balancer | Gute Transparenz: Die virtuelle IP-Adresse befindet sich lokal auf dem primären Knoten und ist die Zieladresse.
+Unterschiedliche Subnetze: Load Balancer + lokale SafeKit-virtuelle IP | Disaster Recovery (Remote-Rechenzentren/Cloud) | Externer Load Balancer mit Floating IP / Direct Server Return oder Frontend-IP als lokaler SafeKit-Alias | 🛠️ Integrator: Load Balancer -Konfiguration (SafeKit stellt den Health-Check bereit) | Medium: hängt vom Health-Check-Intervall des Load Balancer | Gute Transparenz: Die virtuelle IP-Adresse befindet sich lokal auf dem primären Knoten und ist die Zieladresse.
 Unterschiedliche Subnetze: Cloud-CLI | Disaster Recovery (Cloud) | Cloud-API: Die private IP-Adresse oder eine Cloud-Route wird auf den neuen primären Knoten verschoben. | 🛠️ Integrator: Cloud-CLI-Befehle im `start_prim`-Skript | Mittel bis hoch: abhängig von der Antwortzeit der Cloud-API | Volle Transparenz: Die virtuelle IP-Adresse befindet sich lokal auf dem primären Knoten. Die Client-IP-Adresse ändert sich nicht.
 Unterschiedliche Subnetze: BGP | Disaster Recovery (Remote-Rechenzentren/Cloud) | /32-Route mit BGP angekündigt | 🛠️ Integrator: BGP-Befehle in den Skripten `start_prim` und `stop_prim` | Niedrig bis mittel: hängt von der BGP-Konvergenzzeit ab | Volle Transparenz: Die virtuelle IP-Adresse befindet sich lokal auf dem primären Knoten. Die Client-IP-Adresse ändert sich nicht. Erfordert BGP-Router.  
 DNS-Umleitung: keine virtuelle IP | Disaster Recovery (Remote-Rechenzentren) | Änderung des DNS-Eintrags (Name/physische IP) | 🛠️ Integrator: DNS-Update-Befehle im `start_prim`-Skript | Hoch und nicht vorhersehbar: hängt vom DNS-TTL (Time To Live) und dem DNS-Cache des Clients ab | ⚠️ Nicht zuverlässig: Der Client muss eine neue DNS-Abfrage durchführen. Oft behalten Clients die alte IP-Adresse, die sie beim Start erhalten haben, und werden nach dem Failover nicht umgeleitet.  
