@@ -5,7 +5,7 @@ description: "Testez la disponibilité de l’IP virtuelle et le basculement dan
 category: "best-practises"
 lang: "fr"
 topics: "Principes clés, Prérequis : configuration de l’IP virtuelle (VIP), Test 1 – IP virtuelle (VIP) détenue par le serveur principal, Test 2 – Basculement manuel (arrêt du serveur principal), Test 3 – Vérification du réacheminement GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Quelles stations de travail tester, Résumé des résultats attendus, Dépannage"
-translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 17 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 20 expressions"
 ---
 
 # Test de l’adresse IP virtuelle d’un cluster mirror SafeKit dans votre réseau {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}
@@ -20,7 +20,7 @@ Ce guide décrit comment vérifier que l’adresse IP virtuelle (VIP) d’un clu
 - L’adresse MAC du serveur principal est donc celle associée à l’IP virtuelle (VIP) dans les tables ARP (routeur, passerelle, clients dans le même sous-réseau). Tout le trafic vers l’IP virtuelle (VIP) est envoyé au serveur principal.
 - Lors d’un basculement (arrêt ou défaillance du primaire), l’IP virtuelle (VIP) est supprimée de l’ancien primaire et définie comme un alias sur le nouveau primaire. Deux mécanismes permettent alors au réseau d’associer l’IP virtuelle (VIP) à l’adresse MAC du nouveau primaire :
   - les messages réseau envoyés par le système d’exploitation lorsque l’adresse IP virtuelle (VIP) est ajoutée en tant qu’alias sur la carte réseau;
-  - les **GARP** (gratuitous ARP) envoyés par SafeKit, lorsque l’attribut `arpreroute="on"` est configuré dans la section `<vip>`.
+  - les **GARPs** (gratuitous ARP) envoyés par SafeKit, lorsque l’attribut `arpreroute="on"` est configuré dans la section `<vip>`.
 
 Ce que vous devez donc tester :
 
@@ -29,7 +29,7 @@ Ce que vous devez donc tester :
 
 ## 2. Prérequis : configuration de l’adresse IP virtuelle (VIP) {#2-prerequisite-virtual-ip-vip-configuration}
 
-1. Dans le `userconfig.xml` du module mirror, configurez l’adresse IP virtuelle (VIP) dans la section `<vip>`. L’attribut `arpreroute="on"` permet au nouveau primaire d’envoyer des GARP après un basculement :
+1. Dans le `userconfig.xml` du module mirror, configurez l’adresse IP virtuelle (VIP) dans la section `<vip>`. L’attribut `arpreroute="on"` permet au nouveau primaire d’envoyer GARPs après un basculement :
 
    ```xml
    <vip>
@@ -114,7 +114,7 @@ Vous devez regarder les **en-têtes MAC (Ethernet) des paquets** : l’adresse I
 |---|---|---|
 | Avant le basculement | client | Adresse MAC du client → Adresse MAC du **nœud 1 (primaire)** |
 | Avant le basculement | nœud 1 | Les paquets destinés à l’adresse IP virtuelle (VIP) sont reçus ; le nœud 2 ne reçoit rien. |
-| Pendant le basculement | réseau | MAC réachemine les messages envoyés par le nœud 2 pour l’IP virtuelle (VIP) : les messages envoyés par le système d’exploitation lorsqu’il est défini comme un alias, et les GARP envoyés par SafeKit (`arpreroute="on"`) |
+| Pendant le basculement | réseau | MAC réachemine les messages envoyés par le nœud 2 pour l’IP virtuelle (VIP) : les messages envoyés par le système d’exploitation lorsqu’il est défini comme un alias, et GARPs envoyés par SafeKit (`arpreroute="on"`) |
 | Après le basculement | client | MAC du client → MAC du **nœud 2 (nouveau primaire)** |
 
 > Si le poste de travail client se trouve dans un sous-réseau différent de celui du cluster, l’adresse MAC client vue sur les nœuds est l’adresse MAC de la **passerelle** (routeur) connectant les deux sous-réseaux, et non celle du poste de travail client.
@@ -141,11 +141,11 @@ Le comportement dépend du chemin réseau entre le client et le cluster. Exécut
 ## 9. Dépannage {#9-troubleshooting}
 
 - **L’adresse IP virtuelle (VIP) ne répond plus après le basculement :** les messages de réacheminement MAC ne sont pas pris en compte par un périphérique sur le chemin (routeur, passerelle, commutateur virtuel), qui continue d’envoyer du trafic à l’adresse MAC de l’ancien périphérique principal. Vérifiez la gestion des messages de réacheminement MAC avec votre équipe réseau.
-- **Envoi de GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse`) envoie des GARP régulièrement sur l’IP virtuelle (VIP) après le basculement. Voir le Guide de l’utilisateur, section 13.6.4 « [Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
+- **Envoi GARPs :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse`) envoie GARPs régulièrement sur l’IP virtuelle (VIP) après le basculement. Voir le Guide de l’utilisateur, section 13.6.4 « [Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
 - **Diagnostic de la résolution IP virtuelle (VIP) ↔ MAC :** consultez le Guide de l’utilisateur, section 7.24 « [Dépannage de la résolution IP virtuelle (VIP) ↔ MAC](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Issue_with_VIP) », et la section 7.16 « [Problème avec l’IP virtuelle après le basculement](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Problem_with_the_1) ».
 
 Pour plus d’informations :
-- [Comment fonctionne une adresse IP virtuelle dans un cluster haute disponibilité ?](/fr/best-practises/how-a-virtual-ip-address-works/)
-- Pour l’équilibrage de charge avec une adresse IP virtuelle, consultez [la section Test de l’adresse IP virtuelle d’équilibrage de charge dans un cluster farm SafeKit](/fr/best-practises/test-load-balancing-vip-farm/).
+- [Comment fonctionne une adresse IP virtuelle dans un cluster de haute disponibilité ?](/fr/best-practises/how-a-virtual-ip-address-works/)
+- Pour l’équilibrage de charge avec une adresse IP virtuelle, consultez [la section Test de l’adresse IP virtuelle d’équilibrage de charge dans un cluster farm](/fr/best-practises/test-load-balancing-vip-farm/).
 
 {{%  insert-safekit-4-buttons-fr  %}}

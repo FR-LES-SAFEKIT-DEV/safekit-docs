@@ -1,18 +1,18 @@
 ---
-title: "Comment fonctionne une adresse IP virtuelle dans un cluster à haute disponibilité ?"
+title: "Comment fonctionne une adresse IP virtuelle dans un cluster de haute disponibilité ?"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-a-virtual-ip-address-works/"
 description: "Comment SafeKit déplace une IP virtuelle lors d’un basculement : ARP gratuit dans le même sous-réseau, équilibreur de charge, CLI cloud ou BGP entre les sous-réseaux. Pourquoi une IP virtuelle locale est importante."
 category: "best-practises"
 lang: "fr"
-topics: "Qu’est-ce qu’une adresse IP virtuelle dans un cluster haute disponibilité ?, Implémentation de l’IP virtuelle dans SafeKit, Comment une IP virtuelle fonctionne dans le même sous-réseau (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec un équilibreur de charge (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec les CLI des fournisseurs de cloud (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec BGP (cluster mirror), Comment la redirection DNS fonctionne sur différents sous-réseaux (cluster mirror), Comment l’équilibrage de charge IP virtuelle fonctionne dans un cluster farm sur le même sous-réseau, Comment une IP virtuelle à équilibrage de charge fonctionne sur différents sous-réseaux (cluster farm), Comparaison : implémentation de l’IP virtuelle, latence et transparence de l’application, Questions fréquemment posées sur l’IP virtuelle, 🔍 Explorer SafeKit"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 17 expressions"
+topics: "Qu’est-ce qu’une adresse IP virtuelle dans un cluster de haute disponibilité ?, Implémentation de l’IP virtuelle dans SafeKit, Comment une IP virtuelle fonctionne dans le même sous-réseau (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec un équilibreur de charge (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec les CLI des fournisseurs de cloud (cluster mirror), Comment une IP virtuelle fonctionne sur différents sous-réseaux avec BGP (cluster mirror), Comment la redirection DNS fonctionne sur différents sous-réseaux (cluster mirror), Comment l’équilibrage de charge d’IP virtuelle fonctionne dans un cluster farm sur le même sous-réseau, Comment une IP virtuelle équilibrée fonctionne sur différents sous-réseaux (cluster farm), Comparaison : implémentation de l’IP virtuelle, latence et transparence de l’application, Questions fréquemment posées sur l’IP virtuelle, 🔍 Explorer SafeKit"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 20 expressions"
 ---
 
-# Comment fonctionne une adresse IP virtuelle dans un cluster à haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
+# Comment fonctionne une adresse IP virtuelle dans un cluster de haute disponibilité ? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
 
-## Qu’est-ce qu’une adresse IP virtuelle dans un cluster haute disponibilité ? {#virtual-ip-definition}
+## Qu’est-ce qu’une adresse IP virtuelle dans un cluster de haute disponibilité ? {#virtual-ip-definition}
 
-Une **adresse IP virtuelle** est l’adresse unique que les clients utilisent pour se connecter à une application dans un [cluster haute disponibilité](</fr/>). L’IP virtuelle n’est pas liée à un serveur. En cas de basculement, elle se déplace vers le serveur qui exécute l’application. Les clients n’ont pas besoin de modifier leur configuration.
+Une **adresse IP virtuelle** est l’adresse unique que les clients utilisent pour se connecter à une application dans un [cluster de haute disponibilité](</fr/>). L’IP virtuelle n’est pas liée à un serveur. En cas de basculement, elle se déplace vers le serveur qui exécute l’application. Les clients n’ont pas besoin de modifier leur configuration.
 
 **Principe clé de SafeKit :** l’IP virtuelle est **configurée localement sur le serveur** qui exécute l’application. L’application démarre sur l’IP virtuelle et reçoit l’IP client d’origine. C’est pourquoi de nombreuses applications fonctionnent correctement avec SafeKit sans aucune modification. SafeKit fournit deux types d’IP virtuelle :
 
@@ -186,9 +186,9 @@ Le script `stop_prim` n’a rien à faire. Si l’ancien serveur principal plant
 
 ### Exemple : Résolution DNS et clients qui conservent l’ancienne adresse IP {#the-technical-scenario-dns-resolution-and-the-stuck-client}
 
-![Schéma illustrant la résolution de nom DNS vers l’adresse IP physique 1 dans un cluster à haute disponibilité.](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
+![Schéma illustrant la résolution de nom DNS vers l’adresse IP physique 1 dans un cluster de haute disponibilité](/wp-content/uploads/2025/12/dns-rerouting.png "w:256")
 
- Résolution DNS : les clients sont toujours connectés à l’IP physique 1 dans un cluster à haute disponibilité.
+ Résolution DNS : les clients sont toujours connectés à l’IP physique 1 dans un cluster de haute disponibilité
 
 #### Avant le basculement : le nom pointe vers l’adresse IP physique 1 {#current-state-resolution-to-physical-ip-1}
 

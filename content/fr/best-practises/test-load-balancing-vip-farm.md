@@ -5,7 +5,7 @@ description: "Découvrez comment tester l’équilibrage de charge de SafeKit su
 category: "best-practises"
 lang: "fr"
 topics: "Principes clés, Prérequis : la mosaïque SafeKit, Test 1 – Distribution des connexions, Test 2 – Changement de serveur de répartition, Test 3 – Vérification du réacheminement GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Quelles stations de travail tester, Résumé des résultats attendus, Dépannage, Démonstration de la solution farm SafeKit"
-translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 17 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 20 expressions"
 ---
 
 # Test de l’adresse IP virtuelle d’équilibrage de charge dans un cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}
@@ -21,8 +21,8 @@ Ce guide décrit comment vérifier qu’une <span class="notranslate farm-term" 
 - Le filtre du noyau de ce nœud distribue ensuite les connexions TCP sur les nœuds de la <span class="notranslate farm-term" translate="no">Farm</span>, en **réécrivant l’adresse MAC de destination** des paquets à celle du nœud de traitement (l’adresse IP de destination reste l’adresse IP virtuelle (VIP)). Les réponses sont envoyées directement du nœud qui traite la connexion au client.
 - La distribution effectuée par le filtre est **déterministe** : le nœud de traitement est calculé à partir de l’identité du client, selon la règle d’équilibrage de charge configurée :
   - sur l’**adresse IP du client** (`filter="on_addr"`) : un client donné est toujours servi par le même nœud, ce qui assure l’affinité de session ;
-  - sur le **port TCP du client** (`filter="on_port"`) : chaque connexion TCP du même client peut être desservie par un nœud différent. C’est la règle utilisée pour la mosaïque (section 2), qui affiche donc tous les nœuds d’un seul poste de travail.
-- Si le serveur de répartition s’arrête, un autre nœud prend ce rôle et envoie **des GARP** (ARP gratuit) afin que le réseau associe l’IP virtuelle (VIP) à sa propre adresse MAC.
+  - sur le **port TCP du client** (`filter="on_port"`) : chaque connexion TCP du même client peut être desservie par un nœud différent. C’est la règle utilisée pour la mosaïque (section 2), qui affiche donc tous les nœuds à partir d’un seul poste de travail.
+- Si le serveur de répartition s’arrête, un autre nœud prend ce rôle et envoie **GARPs** (ARP gratuit) afin que le réseau associe l’IP virtuelle (VIP) à sa propre adresse MAC.
 
 Ce que vous devez donc tester :
 
@@ -52,13 +52,13 @@ La mosaïque est une page de test fournie par SafeKit. Elle ouvre de nombreuses 
    http://<VIP>:9010/safekit/mosaic.html
    ```
 
-   puis entrez le **nom du module** <span class="notranslate farm-term" translate="no">Farm</span> et exécutez le test. Chaque cellule de la mosaïque affiche le nom du nœud qui a répondu à la connexion TCP, et une couleur est associée à chaque nœud pour montrer clairement les blocs de la mosaïque desservis par le même nœud.
+   puis entrez le **nom du module** <span class="notranslate farm-term" translate="no">Farm</span> et exécutez le test. Chaque cellule de la mosaïque affiche le nom du nœud qui a répondu à la connexion TCP, et une couleur est associée à chaque nœud pour montrer clairement les blocs de la mosaïque servis par le même nœud.
 
    En HTTPS, utilisez `https://<VIP>:9453/safekit/mosaic.html`, avec la règle d’équilibrage de charge sur le port 9453.
 
 ![Testez l’adresse IP virtuelle d’une <span class="notranslate farm-term" translate="no">farm</span> SafeKit avec la mosaïque](/wp-content/uploads/2024/03/appli-19.png)
 
-Regardez la vidéo de test mosaïque dans la section « [Démonstration de la solution <span class="notranslate farm-term" translate="no">farm</span> SafeKit](/fr/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ».
+Regardez la vidéo de test de mosaïque dans la section « [Démonstration de la solution <span class="notranslate farm-term" translate="no">farm</span> SafeKit](/fr/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/#demonstration-of-the-safekit-farm-solution) ».
 
 ## 3. Test 1 – Répartition des connexions {#3-test-1--distribution-of-connections}
 
@@ -149,8 +149,8 @@ Le comportement dépend du chemin réseau entre le client et la <span class="not
 ## 9. Dépannage {#9-troubleshooting}
 
 - **Images bitmap d’équilibrage de charge :** pour plus de détails sur le test et les images bitmap d’équilibrage de charge, consultez le Guide de l’utilisateur SafeKit 8.2, section 4.3.5 « [Test de l’équilibrage de charge TCP sur une adresse IP virtuelle](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#Mosaic) ».
-- **La mosaïque ne répond plus après l’arrêt du serveur d’expédition :** GARP n’est pas pris en compte par un appareil sur le chemin (routeur, passerelle, commutateur virtuel). Vérifiez la gestion GARP avec votre équipe réseau.
-- **Envoi périodique de GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse`) envoie des GARP régulièrement sur les VIP. Voir le Guide de l’utilisateur, section 13.6.4 « [Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
+- **La mosaïque ne répond plus après l’arrêt du serveur d’expédition :** GARP n’est pas pris en compte par un périphérique sur le chemin (routeur, passerelle, commutateur virtuel). Vérifiez la gestion GARP avec votre équipe réseau.
+- **Envoi périodique de GARP :** l’attribut `arpreroute="on"` de la section `<vip>` (avec `arpinterval` et `arpelapse`) envoie GARPs régulièrement sur les VIP. Voir le Guide de l’utilisateur, section 13.6.4 « [Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
 - **Diagnostic de la résolution IP virtuelle (VIP) ↔ MAC :** voir le Guide de l’utilisateur, section 7.24 « [Dépannage de la résolution IP virtuelle (VIP) ↔ MAC](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Issue_with_VIP) », et section 7.15 « [Module <span class="notranslate farm-term" translate="no">Farm</span> UP (Ready) mais problème d’équilibrage de charge dans une <span class="notranslate farm-term" translate="no">Farm</span>](<https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_Farm_module_UP(Ready)but>) ».
 
 ## Démonstration de la solution <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#demonstration-of-the-safekit-farm-solution}
@@ -159,7 +159,7 @@ Le comportement dépend du chemin réseau entre le client et la <span class="not
 {{%  insert-safekit-farm-video-fr  %}}
 
 Pour plus d’informations :
-- [Comment fonctionne une adresse IP virtuelle dans un cluster haute disponibilité ?](/fr/best-practises/how-a-virtual-ip-address-works/)
+- [Comment fonctionne une adresse IP virtuelle dans un cluster de haute disponibilité ?](/fr/best-practises/how-a-virtual-ip-address-works/)
 - Pour le basculement primaire/de secours avec une adresse IP virtuelle, consultez [la section Test de l’adresse IP virtuelle d’un cluster mirror SafeKit](/fr/best-practises/test-primary-backup-vip-mirror/).
 
 {{%  insert-safekit-4-buttons-fr  %}}

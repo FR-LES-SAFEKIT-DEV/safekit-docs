@@ -5,12 +5,12 @@ description: "SafeKit est le logiciel de haute disponibilité sans SAN tout-en-u
 category: "home"
 lang: "fr"
 topics: "Ce que fait SafeKit, choisissez votre niveau de protection, modules prêts à l’emploi pour vos applications, cas d’utilisation des clients, tarification simple et prévisible, connaissez les limites avant de commencer, vidéothèque SafeKit, 🔍 Centre de navigation haute disponibilité SafeKit"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.12 | Translation LLM | 15 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 20 expressions"
 ---
 
 # SafeKit : Logiciel de haute disponibilité pour Windows et Linux, sans SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
-SafeKit transforme deux serveurs standards en un cluster haute disponibilité sans SAN qui assure la continuité de vos applications. Il réplique vos données en temps réel, redémarre votre application sur le second serveur si le premier tombe en panne, et réintègre automatiquement le serveur défaillant une fois qu’il est réparé. Vous l’installez sur les serveurs que vous possédez déjà, sans stockage partagé ni expertise en matière de cluster.
+SafeKit transforme deux serveurs standards en un cluster de haute disponibilité sans SAN qui assure la continuité de vos applications. Il réplique vos données en temps réel, redémarre votre application sur le second serveur si le premier tombe en panne, et réintègre automatiquement le serveur défaillant une fois qu’il est réparé. Vous l’installez sur les serveurs que vous possédez déjà, sans stockage partagé ni expertise en matière de cluster.
 
 La réplication est synchrone, donc aucune donnée n’est perdue en cas de défaillance d’un serveur, et votre application est de nouveau opérationnelle en une minute ou moins. Les licences sont perpétuelles et tarifées par serveur.
 
@@ -37,11 +37,11 @@ Vous n’avez pas besoin d’un SAN, d’un disque de quorum, d’Active Directo
 
 ## Choisissez votre niveau de protection {#protection-levels}
 
-**HA applicative** (`mirror.safe`, `farm.safe` et les modules d’application) réplique uniquement vos données d’application et redémarre l’application sur le deuxième serveur. Elle nécessite que vous sachiez quels services redémarrer, quels dossiers répliquer en temps réel et quelle adresse IP virtuelle utiliser pour le basculement. Elle fonctionne sur des serveurs physiques, dans des machines virtuelles sur tous les hyperviseurs, y compris VMware, Hyper-V et KVM, et dans le cloud, et elle offre la récupération la plus rapide.
+**HA applicative** (`mirror.safe`, `farm.safe` et les modules d’application) réplique uniquement vos données d’application et redémarre l’application sur le deuxième serveur. Elle nécessite que vous sachiez quels services redémarrer, quels dossiers répliquer en temps réel et quelle adresse IP virtuelle utiliser en cas de basculement. Elle fonctionne sur des serveurs physiques, dans des machines virtuelles sur tous les hyperviseurs, y compris VMware, Hyper-V et KVM, et dans le cloud, et elle offre la récupération la plus rapide.
 
 **HA de VM** (`hyperv.safe`, `kvm.safe`) réplique et bascule l’ensemble de la machine virtuelle, vous n’avez donc pas besoin de savoir comment l’application fonctionne. Il convient aux environnements avec plusieurs applications réparties sur plusieurs machines virtuelles.
 
-<a class="btn-download" href="/fr/best-practises/vm-ha-vs-application-ha/">Comparer HA applicative et HA de VM ›</a>
+<a class="btn-download" href="/fr/best-practises/vm-ha-vs-application-ha/">Comparaison HA applicative et HA de VM ›</a>
 
 
 ## Modules prêts à l’emploi pour vos applications {#modules}
@@ -80,7 +80,7 @@ SafeKit est vendu avec une licence perpétuelle, il n’y a donc pas d’abonnem
 
 ## Connaissez les limites avant de commencer {#limits}
 
-SafeKit est conçu pour la simplicité, pas pour tous les cas. Il convient bien à quelques téraoctets de données répliquées, moins de 1 000 000 de fichiers, jusqu’à 32 machines virtuelles lors de l’utilisation HA de VM, et deux nœuds sur le même réseau local ou VLAN avec une faible latence (généralement moins de 5 ms aller-retour).
+SafeKit est conçu pour la simplicité, pas pour tous les cas. Il convient bien à quelques téraoctets de données répliquées, moins de 1 000 000 de fichiers, jusqu’à 32 machines virtuelles lors de l’utilisation HA de VM, et deux nœuds sur le même LAN ou VLAN avec une faible latence (généralement moins de 5 ms aller-retour).
 
 Pour des volumes plus importants, le stockage partagé ou une autre approche est un meilleur choix.
 

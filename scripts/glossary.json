@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05.16",
+  "version": "2026-11-05.17",
   "keep": [
     "mirror",
     "farm",
@@ -248,6 +248,15 @@
       "zh-hans": "SafeKit 马赛克",
       "ko": "SafeKit 모자이크",
       "ar": "فسيفساء SafeKit (mosaic)"
+    },
+    "high availability cluster": {
+      "fr": "cluster de haute disponibilité"
+    },
+    "high availability clusters": {
+      "fr": "clusters de haute disponibilité"
+    },
+    "high-availability cluster": {
+      "fr": "cluster de haute disponibilité"
     }
   },
   "grammar": {
@@ -275,6 +284,10 @@
       [
         "((?:adresse )?IP virtuelles?) principal/secondaire",
         "\\1 principale/secondaire"
+      ],
+      [
+        "\\b(clusters?)\\s+(?:à\\s+)?haute disponibilité",
+        "\\1 de haute disponibilité"
       ]
     ],
     "it": [
