@@ -23,7 +23,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-06.15"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-06.18"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -187,6 +187,9 @@ def encode(text, ctx):
     # durées / heures (9:43, 3:21:35) : jamais traduites ("7 時 40 分", "٨:٤٧")
     # sauf "9:00 AM" / "5:00 PM" : Google doit les convertir ("9 h", "17 h", "午後 5:00")
     text = re.sub(r"(?<![\w:.=/])\d{1,2}(?::\d{2}){1,2}(?![\w:])(?!\s?[AaPp]\.?[Mm]\b)", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    # emojis (🛠️, 📘, ⬇️...) : protégés, sinon Google en supprime parfois ("**🛠️[commencez" -> "**请[从")
+    text = re.sub("[\U0001F000-\U0001FAFF\u2190-\u21FF\u2300-\u23FF\u2600-\u27BF\u2B00-\u2BFF\u2139][\uFE0F\u200D\U0001F000-\U0001FAFF\u2600-\u27BF]*",
+                  lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     # noms de fichiers (mirror.safe, farm.safe, setup.exe...) : protégés en entier, sinon "mirror" seul est protégé
     text = re.sub(r"(?<![\w/.-])[\w-]+\.(?:safe|exe|msi|ps1|sh|cmd|bat|xml|conf|cfg|ini|txt|log|json|ya?ml|dll|vhdx?)\b(?![\w/-])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     for rx, target in TERMS:
@@ -289,11 +292,14 @@ def decode(text, ctx):
             if st[n].startswith(("{{", "`")):
                 return "a"   # `.safe` : code = latin -> espace avec le chinois/japonais   # {{ .Get "app" }} = nom de produit latin -> espace avec le chinois/japonais
             v = re.sub(r"<[^>]+>", "", st[n]).strip("`") or "a"
+            if re.match("[\U0001F000-\U0001FAFF\u2190-\u21FF\u2300-\u23FF\u2600-\u27BF\u2B00-\u2BFF\u2139]", v):
+                return "a"   # emoji : espace avec le chinois/japonais, comme dans la source ("💡 要开始")
             return v[-1] if end else v[0]
         latin = lambda c: bool(re.match(r"[A-Za-z0-9`%]", c))
         # espace entre chinois/japonais et latin, chiffres, `code`, termes protégés
         # (pas d'espace si le jeton commence / finit lui-même par un caractère CJK : "farm 集群的")
         text = re.sub(f"([{CJK_CHAR}])(?=[A-Za-z0-9`])", r"\1 ", text)
+        text = re.sub(f"([{CJK_CHAR}])(?=\\.[A-Za-z])", r"\1 ", text)   # 可能な.BIN -> 可能な .BIN
         text = re.sub(f"([{CJK_CHAR}])(?={S}P(\\d+){S})", lambda m: m.group(1) + (" " if latin(vis(int(m.group(2)), False)) else ""), text)
         text = re.sub(f"([A-Za-z0-9`%])(?=[{CJK_CHAR}])", r"\1 ", text)
         text = re.sub(f"({S}P(\\d+){S})(?=[{CJK_CHAR}])", lambda m: m.group(1) + (" " if latin(vis(int(m.group(2)), True)) else ""), text)
@@ -342,7 +348,7 @@ def decode(text, ctx):
         text = re.sub(f"([{CJK_CHAR}]) +(?=[{CJK_CHAR}])", r"\1", text)
         text = re.sub(f"([{CJK_CHAR}]):\\s*(?=\\S)", r"\1：", text)   # "アーキテクチャ: 共有" -> "アーキテクチャ：共有"   # "管理することで ネットワーク"
         # espacements de la source autour des liens : "🎬 [texte](url) (2:00)"
-        text = re.sub(r"([^\w\s%s%s\[(（*])\[" % (CJK_CHAR, CJK_PUNCT), r"\1 [", text)   # 🎬[ -> 🎬 [
+        text = re.sub(r"([^\w\s%s%s\[(（*!])\[" % (CJK_CHAR, CJK_PUNCT), r"\1 [", text)   # 🎬[ -> 🎬 [ (jamais "![image]")
         text = re.sub(r"(\]\([^)\s]*\))(?=[(（]\d)", r"\1 ", text)                  # ](url)(2:00) -> ](url) (2:00)
         # durées / numéros entre parenthèses : demi-chasse comme la source — "（9:43）" -> " (9:43)"
         text = re.sub(r"\s*（(\d[\d:.,]*)）", r" (\1)", text)
@@ -366,6 +372,9 @@ def native_terms(text, ctx):
         tr = re.sub(r"<[^>]+>", "", ctx.store[n]).strip()
         if len(tr) < 3:
             continue
+        last = re.split(r"\s+", tr)[-1]
+        if len(last) >= 2 and last != tr:   # dernier mot répété : "mirror クラスタークラスター" -> "mirror クラスター"
+            text = re.sub("(" + re.escape(tr) + r")\s*" + re.escape(last), r"\1", text, flags=re.I)
         for k in range(len(tr) - 1, 1, -1):   # préfixe du terme répété juste avant lui
             text = text.replace(tr[:k] + tr, tr)
             text = text.replace(tr[:k] + "**" + tr, "**" + tr)

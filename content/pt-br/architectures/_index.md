@@ -1,88 +1,89 @@
 ---
 title: "Arquiteturas SafeKit"
 canonical: "https://safekit.eviden.com/pt-br/architectures/"
-description: "Explore arquiteturas de alta disponibilidade com SafeKit . Saiba mais sobre os clusters Mirror , Farm e Farm + Mirror para failover de aplicações sem SAN e balanceamento de carga."
+description: "Explore arquiteturas de alta disponibilidade com o SafeKit. Saiba mais sobre os clusters Mirror, Farm e Farm + clusters mirror para failover de aplicativos e balanceamento de carga sem SAN."
 category: "architectures"
 lang: "pt-br"
-topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os diferentes clusters de software com SafeKit ? Como construir clusters de alta disponibilidade com SafeKit ? 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os diferentes clusters de software com o SafeKit?, Como construir clusters de alta disponibilidade com o SafeKit?, 🔍 Central de Navegação de Alta Disponibilidade do SafeKit"
+translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 13 expressions"
 ---
 
 # Arquiteturas SafeKit {#safekit-architectures}
 
-## Quais são as diferentes arquiteturas de alta disponibilidade e os diferentes clusters de software com SafeKit ? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
+## Quais são as diferentes arquiteturas de alta disponibilidade e os diferentes clusters de software com o SafeKit? {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Cluster Mirror {#mirror-cluster}
-
-
-![ SafeKit mirror cluster ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+### Cluster mirror {#mirror-cluster}
 
 
-[ Mais informações ](</pt-br/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
-
-### Cluster <span class="notranslate farm-term" translate="no">Farm</span> {#farm-cluster}
+![cluster mirror SafeKit](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-![ SafeKit farm cluster ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+[Mais informações](</pt-br/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
+
+### Cluster <span class="notranslate farm-term" translate="no">farm</span> {#farm-cluster}
 
 
-[ Mais informações ](</pt-br/architectures/network-load-balancing-cluster/>)
-
-### Cluster <span class="notranslate farm-term" translate="no">Farm</span> + mirror {#farmmirror-cluster}
+![cluster farm SafeKit](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-![ SafeKit farm cluster mirror ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+[Mais informações](</pt-br/architectures/network-load-balancing-cluster/>)
+
+### <span class="notranslate farm-term" translate="no">Farm</span> + cluster mirror {#farmmirror-cluster}
 
 
-[ Mais informações ](</pt-br/architectures/clustering-software-load-balancing-mirroring/>)
+![cluster mirror SafeKit farm](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+
+
+[Mais informações](</pt-br/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### Cluster ativo/ativo {#activeactive-cluster}
 
 
-![ SafeKit cluster ativo ativo com replicação em tempo real ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+![Cluster ativo-ativo SafeKit com replicação em tempo real](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[ Mais informações ](</pt-br/architectures/active-active-cluster-real-time-replication/>)
+[Mais informações](</pt-br/architectures/active-active-cluster-real-time-replication/>)
 
 ### Cluster N-1 {#n-1-cluster}
 
 
-![ SafeKit Cluster de redundância N-1 ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
+![Cluster de redundância SafeKit N-1](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[ Mais informações ](</pt-br/architectures/n-1-redundancy/>)
+[Mais informações](</pt-br/architectures/n-1-redundancy/>)
 
-## Como construir clusters de alta disponibilidade com SafeKit ? {#how-to-build-high-availability-clusters-with-safekit}
+## Como construir clusters de alta disponibilidade com o SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Utilize os módulos de alta disponibilidade {#use-high-availability-modules}
+### Utilize módulos de alta disponibilidade {#use-high-availability-modules}
 
 Um módulo de alta disponibilidade é uma personalização do SafeKit para uma aplicação. Existem dois tipos de módulos: o módulo mirror com replicação de dados em tempo real e failover, e o módulo <span class="notranslate farm-term" translate="no">farm</span> com balanceamento de carga e failover.
 
-Se você implantar um módulo mirror em 2 servidores, criará um cluster mirror e, se implantar um módulo <span class="notranslate farm-term" translate="no">farm</span> em N servidores, criará um cluster <span class="notranslate farm-term" translate="no">farm</span> .
+Se você implantar um módulo mirror em 2 servidores, criará um cluster mirror e, se implantar um módulo <span class="notranslate farm-term" translate="no">farm</span> em N servidores, criará um cluster <span class="notranslate farm-term" translate="no">farm</span>.
 
-Diversos módulos de aplicação podem ser implantados nos mesmos servidores. Assim, arquiteturas de cluster avançadas podem ser implementadas, como as apresentadas anteriormente ( <span class="notranslate farm-term" translate="no">farm</span> + mirror , ativo/ativo, N-1).
+Vários módulos de aplicação podem ser implantados nos mesmos servidores. Assim, arquiteturas de cluster avançadas podem ser implementadas como as apresentadas anteriormente (<span class="notranslate farm-term" translate="no">farm</span> + mirror, ativo/ativo, N-1).
 
 ### O que é um módulo de aplicação? {#what-is-an-application-module}
 
 Na prática, um módulo de aplicação é um arquivo “.Safe” (tipo zip) que inclui:
 
-1 - o arquivo de configuração userconfig.xml que contém:
+1 - o arquivo de configuração userconfig.xml, que contém:
 
   * nomes ou endereços IP físicos dos servidores,
   * nome ou endereço IP virtual do cluster,
-  * diretórios de arquivos a serem replicados em tempo real (para um módulo mirror ),
-  * critérios de balanceamento de carga de rede (para um módulo <span class="notranslate farm-term" translate="no">farm</span> ),
-  * Configuração de detectores de falhas de software e hardware
+  * diretórios de arquivos para replicar em tempo real (para um módulo mirror),
+  * critérios de balanceamento de carga da rede (para um módulo <span class="notranslate farm-term" translate="no">farm</span>),
+  * configuração dos detetores de falhas de software e hardware
 
 
 2 - os scripts para iniciar e parar a aplicação.
 
-### Implantação plug and play de módulos de alta disponibilidade {#plug-and-play-deployment-of-high-availability-modules}
+### Implementação plug-and-play de módulos de alta disponibilidade {#plug-and-play-deployment-of-high-availability-modules}
 
-Uma vez que um módulo de aplicação esteja configurado e testado com uma aplicação, a implantação não requer habilidades específicas de TI:
+Uma vez que um módulo de aplicação é configurado e testado com uma aplicação, a implantação não requer habilidades de TI específicas:
 
-  1. Instalar a aplicação em 2 servidores padrão (físicos ou virtuais),
-  2. Instale o software SafeKit em ambos os servidores.
-  3. Instale o módulo de aplicação em ambos os servidores.
+  1. instalar o aplicativo em 2 servidores padrão (físicos ou virtuais),
+  2. instale o software SafeKit em ambos os servidores,
+  3. Instale o módulo do aplicativo em ambos os servidores.
 
 
 

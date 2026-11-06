@@ -1,44 +1,45 @@
 ---
-title: "SafeKitアーキテクチャ"
+title: "SafeKit アーキテクチャ"
 canonical: "https://safekit.eviden.com/ja/architectures/"
-description: "SafeKitを使用して高可用性アーキテクチャを探索しましょう。SAN レスのアプリケーションフェイルオーバーとロードバランシングを実現するMirror 、 Farm 、およびFarm + Mirrorクラスタについて学びましょう。"
+description: "SafeKit で高可用性アーキテクチャを探索しましょう。SAN レスアプリケーションのフェイルオーバーとロードバランシングのための Mirror、Farm、Farm + mirror クラスターについて学びましょう。"
 category: "architectures"
 lang: "ja"
-topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざまなソフトウェアクラスタとは何ですか?、 SafeKitで高可用性クラスタを構築する方法?、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SafeKit にはどのような高可用性アーキテクチャとソフトウェアクラスターがありますか？、SafeKit で高可用性クラスターを構築するには？、🔍 SafeKit 高可用性ナビゲーションハブ"
+translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 27 expressions"
 ---
 
-# SafeKitアーキテクチャ {#safekit-architectures}
+# SafeKit アーキテクチャ {#safekit-architectures}
 
-## SafeKitとには、どのような異なる高可用性アーキテクチャと異なるソフトウェアクラスタがありますか？ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
+## SafeKit にはどのような高可用性アーキテクチャとソフトウェアクラスターがありますか？ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### Mirrorクラスター {#mirror-cluster}
+### Mirror クラスター {#mirror-cluster}
 
 
-![ SafeKit mirror ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+![SafeKit mirror クラスター](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 [詳細情報](</ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
 
-### <span class="notranslate farm-term" translate="no">Farm</span>クラスター {#farm-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> クラスター {#farm-cluster}
 
 
-![ SafeKit farm ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+![SafeKit farm クラスター](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
 [詳細情報](</ja/architectures/network-load-balancing-cluster/>)
 
-### <span class="notranslate farm-term" translate="no">Farm</span> + mirrorクラスター {#farmmirror-cluster}
+### <span class="notranslate farm-term" translate="no">Farm</span> ＋ mirror クラスター {#farmmirror-cluster}
 
 
-![ SafeKit 、 farm + mirrorクラスター](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+![SafeKit farm + mirror クラスター](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
 [詳細情報](</ja/architectures/clustering-software-load-balancing-mirroring/>)
 
-### アクティブ/アクティブ クラスター {#activeactive-cluster}
+### アクティブ/アクティブクラスター {#activeactive-cluster}
 
 
-![ SafeKitリアルタイムレプリケーションを備えたアクティブアクティブクラスタ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+![リアルタイムレプリケーション対応の SafeKit アクティブ・アクティブクラスター](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
 [詳細情報](</ja/architectures/active-active-cluster-real-time-replication/>)
@@ -46,43 +47,43 @@ topics: "SafeKitのさまざまな高可用性アーキテクチャとさまざ�
 ### N-1 クラスター {#n-1-cluster}
 
 
-![ SafeKit N-1冗長クラスタ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
+![SafeKit N-1 冗長化クラスター](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
 [詳細情報](</ja/architectures/n-1-redundancy/>)
 
-## SafeKitとを使用して高可用性クラスタを構築する方法 {#how-to-build-high-availability-clusters-with-safekit}
+## SafeKit で高可用性クラスターを構築する方法 {#how-to-build-high-availability-clusters-with-safekit}
 
 ### 高可用性モジュールを使用する {#use-high-availability-modules}
 
-高可用性モジュールは、アプリケーション向けにSafeKitをカスタマイズしたものです。モジュールには2種類あり、リアルタイムデータレプリケーションとフェイルオーバー機能を備えたmirrorモジュールと、ロードバランシングとフェイルオーバー機能を備えた<span class="notranslate farm-term" translate="no">farm</span>モジュールがあります。
+高可用性モジュールは、アプリケーション向けの SafeKit のカスタマイズです。モジュールには、リアルタイムデータレプリケーションとフェイルオーバーを備えた mirror モジュールと、ロードバランシングとフェイルオーバーを備えた <span class="notranslate farm-term" translate="no">farm</span> モジュールの 2 種類があります。
 
-mirrorモジュールを2台のサーバーにデプロイすると、 mirrorクラスターが作成され、 <span class="notranslate farm-term" translate="no">farm</span>モジュールをN台のサーバーにデプロイすると、 <span class="notranslate farm-term" translate="no">farm</span>クラスターが作成されます。
+mirror モジュールを 2 台のサーバーにデプロイすると、mirror クラスターが作成されます。<span class="notranslate farm-term" translate="no">farm</span> モジュールを N 台のサーバーにデプロイすると、<span class="notranslate farm-term" translate="no">farm</span> クラスターが作成されます。
 
-複数のアプリケーションモジュールを同じサーバー上にデプロイできます。そのため、前述のような高度なクラスタリングアーキテクチャ（ <span class="notranslate farm-term" translate="no">farm</span> + mirror 、アクティブ/アクティブ、N-1）を実装できます。
+複数のアプリケーションモジュールを同じサーバーにデプロイできます。したがって、以前に提示されたもの（<span class="notranslate farm-term" translate="no">farm</span> + mirror、アクティブ/アクティブ、N-1）のような高度なクラスタリングアーキテクチャを実装できます。
 
 ### アプリケーションモジュールとは何ですか？ {#what-is-an-application-module}
 
-実際には、アプリケーションモジュールは「.Safe」ファイル（zip形式）であり、以下の内容を含みます。
+実際には、アプリケーションモジュールは、以下を含む「.Safe」ファイル（zip 形式）です
 
-1 - 設定ファイルuserconfig.xmlの内容:
+1 - 以下の内容を含む設定ファイル userconfig.xml :
 
-  * サーバーの名前または物理IPアドレス、
-  * クラスターの名前または仮想IPアドレス、
-  * リアルタイムで複製するファイルディレクトリ（ mirrorモジュール用）、
-  * ネットワーク負荷分散基準（ <span class="notranslate farm-term" translate="no">farm</span>モジュール用）
+  * サーバーの名称または物理的な IP アドレス、
+  * クラスターの名前または仮想 IP アドレス、
+  * リアルタイムで複製するファイルディレクトリ（mirror モジュール用）
+  * ネットワーク負荷分散基準（<span class="notranslate farm-term" translate="no">farm</span> モジュール用）
   * ソフトウェアおよびハードウェア障害検出器の構成
 
 
-2 - アプリケーションを起動および停止するためのスクリプト。
+2 - アプリケーションの起動と停止を行うスクリプト。
 
-### 高可用性モジュールのプラグアンドプレイ展開 {#plug-and-play-deployment-of-high-availability-modules}
+### 高可用性モジュールのプラグアンドプレイ導入 {#plug-and-play-deployment-of-high-availability-modules}
 
-アプリケーションモジュールが構成され、アプリケーションとのテストが完了すれば、展開には特別なITスキルは必要ありません。
+アプリケーションモジュールをアプリケーションで設定してテストすれば、導入に特別な IT スキルは必要ありません
 
-  1. アプリケーションを2台の標準サーバー（物理サーバーまたは仮想サーバー）にインストールします。
-  2. 両方のサーバーにSafeKitソフトウェアをインストールします。
-  3. 両方のサーバーにアプリケーションモジュールをインストールしてください。
+  1. 2 台の標準サーバー（物理または仮想）にアプリケーションをインストールする
+  2. 両方のサーバーに SafeKit ソフトウェアをインストールします
+  3. 両方のサーバーにアプリケーションモジュールをインストールします。
 
 
 

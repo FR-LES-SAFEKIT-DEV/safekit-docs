@@ -1,86 +1,87 @@
 ---
-title: "SafeKit Architectures"
+title: "بُنى SafeKit"
 canonical: "https://safekit.eviden.com/ar/architectures/"
-description: "استكشف بنى التوافر العالي مع SafeKit . تعرّف على مجموعات Mirror و Farm و Farm + Mirror لتجاوز أعطال التطبيقات وموازنة الأحمال بدون شبكة تخزين (SAN)."
+description: "استكشف معماريات التوافر العالي باستخدام SafeKit. تعرّف على مجموعات Mirror و Farm و Farm + مجموعات mirror لتجاوز الأعطال في التطبيقات بدون شبكة SAN وتحقيق توازن الأحمال."
 category: "architectures"
 lang: "ar"
-topics: "ما هي بنى التوافر العالي المختلفة ومجموعات البرامج المختلفة مع SafeKit ؟، كيف يتم إنشاء مجموعات عالية التوافر باستخدام SafeKit ؟، 🔍 مركز التنقل عالي التوافر SafeKit"
+topics: "ما هي معماريات التوافر العالي المختلفة ومجموعات البرامج المختلفة مع SafeKit؟، كيف يمكن بناء مجموعات التوافر العالي باستخدام SafeKit؟، 🔍 مركز تنقل SafeKit للتوافر العالي"
+translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 17 expressions"
 ---
 
-# SafeKit Architectures {#safekit-architectures}
+# بُنى SafeKit {#safekit-architectures}
 
-## ما هي بنى التوافر العالي المختلفة ومجموعات البرامج المختلفة التي تستخدم SafeKit ؟ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
+## ما هي معماريات التوافر العالي المختلفة ومجموعات البرامج المختلفة مع SafeKit؟ {#what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit}
 
-### مجموعة Mirror مجموعة {#mirror-cluster}
-
-
-![ SafeKit mirror cluster ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+### مجموعة mirror {#mirror-cluster}
 
 
-[ مزيد من المعلومات ](</ar/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
-
-### مجموعة <span class="notranslate farm-term" translate="no">Farm</span> مجموعة {#farm-cluster}
+![مجموعة mirror](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-![ SafeKit farm cluster ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+[مزيد من المعلومات](</ar/architectures/file-replication-byte-level-with-failover-mirror-cluster/>)
+
+### مجموعة <span class="notranslate farm-term" translate="no">farm</span> {#farm-cluster}
 
 
-[ مزيد من المعلومات ](</ar/architectures/network-load-balancing-cluster/>)
-
-### <span class="notranslate farm-term" translate="no">Farm</span> + mirror مجموعة {#farmmirror-cluster}
+![مجموعة farm SafeKit](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-![ farm SafeKit + mirror cluster ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+[مزيد من المعلومات](</ar/architectures/network-load-balancing-cluster/>)
+
+### <span class="notranslate farm-term" translate="no">Farm</span> + مجموعة mirror {#farmmirror-cluster}
 
 
-[ مزيد من المعلومات ](</ar/architectures/clustering-software-load-balancing-mirroring/>)
+![مجموعة SafeKit farm + مجموعة mirror](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+
+
+[مزيد من المعلومات](</ar/architectures/clustering-software-load-balancing-mirroring/>)
 
 ### مجموعة نشطة/نشطة {#activeactive-cluster}
 
 
-![ SafeKit مجموعة نشطة نشطة مع نسخ متماثل في الوقت الحقيقي ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+![مجموعة SafeKit النشطة النشطة مع النسخ المتماثل في الوقت الفعلي](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-[ مزيد من المعلومات ](</ar/architectures/active-active-cluster-real-time-replication/>)
+[مزيد من المعلومات](</ar/architectures/active-active-cluster-real-time-replication/>)
 
 ### مجموعة N-1 {#n-1-cluster}
 
 
-![ SafeKit مجموعة تكرار N-1 ](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
+![مجموعة التكرار SafeKit N-1](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
-[ مزيد من المعلومات ](</ar/architectures/n-1-redundancy/>)
+[مزيد من المعلومات](</ar/architectures/n-1-redundancy/>)
 
-## كيفية إنشاء مجموعات عالية التوافر باستخدام SafeKit ؟ {#how-to-build-high-availability-clusters-with-safekit}
+## كيفية بناء مجموعات عالية التوافر باستخدام SafeKit؟ {#how-to-build-high-availability-clusters-with-safekit}
 
-### استخدم وحدات التوافر العالي {#use-high-availability-modules}
+### استخدم وحدات توفر عالية {#use-high-availability-modules}
 
-وحدة التوافر العالي هي تخصيص لوحدة SafeKit لتطبيق معين. يوجد نوعان من الوحدات: وحدة mirror التي تتميز بنسخ البيانات في الوقت الفعلي والتحويل التلقائي في حالة الأعطال، ووحدة <span class="notranslate farm-term" translate="no">farm</span> التي تتميز بموازنة الأحمال والتحويل التلقائي في حالة الأعطال.
+وحدة التوافر العالي هي تخصيص لبرنامج SafeKit لتطبيق ما. هناك نوعان من الوحدات: وحدة mirror مع النسخ المتماثل للبيانات في الوقت الفعلي وتجاوز الفشل، ووحدة <span class="notranslate farm-term" translate="no">farm</span> مع موازنة التحميل وتجاوز الفشل.
 
-إذا قمت بنشر وحدة mirror على خادمين، فستقوم بإنشاء مجموعة mirror ، وإذا قمت بنشر وحدة <span class="notranslate farm-term" translate="no">farm</span> على N خادم، فستقوم بإنشاء مجموعة <span class="notranslate farm-term" translate="no">farm</span> .
+إذا قمت بنشر وحدة mirror على خادمين، فإنك تنشئ مجموعة mirror، وإذا قمت بنشر وحدة <span class="notranslate farm-term" translate="no">farm</span> على عدد N من الخوادم، فإنك تنشئ مجموعة <span class="notranslate farm-term" translate="no">farm</span>.
 
-يمكن نشر العديد من وحدات التطبيق على نفس الخوادم. وبالتالي، يمكن تنفيذ بنى التجميع المتقدمة مثل تلك المعروضة سابقًا ( <span class="notranslate farm-term" translate="no">farm</span> + mirror ، نشط/نشط، N-1).
+يمكن نشر العديد من وحدات التطبيق على نفس الخوادم. وبالتالي، يمكن تنفيذ بنى تجميع متقدمة مثل تلك التي تم عرضها سابقًا (<span class="notranslate farm-term" translate="no">farm</span> + mirror، نشط/نشط، N-1).
 
 ### ما هي وحدة التطبيق؟ {#what-is-an-application-module}
 
-عمليًا، وحدة التطبيق عبارة عن ملف ".Safe" (من نوع zip) يتضمن ما يلي:
+من الناحية العملية، تكون وحدة التطبيق عبارة عن ملف ".Safe" (من نوع zip) يتضمن:
 
-1- ملف التكوين userconfig.xml الذي يحتوي على:
+1 - ملف التكوين userconfig.xml الذي يحتوي على:
 
   * أسماء أو عناوين IP الفعلية للخوادم،
   * اسم أو عنوان IP الظاهري للمجموعة،
-  * مجلدات الملفات المراد نسخها في الوقت الفعلي (لوحدة mirror )،
-  * معايير موازنة أحمال الشبكة (لوحدة <span class="notranslate farm-term" translate="no">farm</span> )،
+  * أدلة الملفات المراد نسخها في الوقت الفعلي (لوحدة mirror)،
+  * معايير موازنة تحميل الشبكة (لوحدة <span class="notranslate farm-term" translate="no">farm</span>)،
   * تكوين أجهزة كشف أعطال البرامج والأجهزة
 
 
-2- البرامج النصية لبدء وإيقاف التطبيق.
+2 - البرامج النصية لبدء التطبيق وإيقافه.
 
-### نشر وحدات عالية التوافر بسهولة تامة {#plug-and-play-deployment-of-high-availability-modules}
+### نشر وحدات عالية التوافر بنظام التوصيل والتشغيل {#plug-and-play-deployment-of-high-availability-modules}
 
-بمجرد تهيئة وحدة التطبيق واختبارها مع التطبيق، لا يتطلب النشر أي مهارات تقنية معلومات محددة:
+بمجرد تكوين وحدة التطبيق واختبارها مع تطبيق ما، لا يتطلب النشر أي مهارات تقنية محددة:
 
-  1. قم بتثبيت التطبيق على خادمين قياسيين (فعليين أو افتراضيين)،
+  1. تثبيت التطبيق على خادمين قياسيين (ماديين أو افتراضيين)،
   2. قم بتثبيت برنامج SafeKit على كلا الخادمين،
   3. قم بتثبيت وحدة التطبيق على كلا الخادمين.
 

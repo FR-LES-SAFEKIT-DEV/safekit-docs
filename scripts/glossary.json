@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-06.9",
+  "version": "2026-11-06.13",
   "keep": [
     "mirror",
     "farm",
@@ -22,7 +22,13 @@
     "DOWN",
     "OEM",
     "Eviden",
-    "Evidian"
+    "Evidian",
+    "Linux",
+    "Intel",
+    "ARM",
+    "Windows",
+    "RFI",
+    "RFP"
   ],
   "terms": {
     "farm cluster": {
@@ -285,6 +291,22 @@
       "ja": "ネットワーク負荷分散",
       "zh-hans": "网络负载均衡",
       "ko": "네트워크 부하 분산"
+    },
+    "mirror module": {
+      "de": "mirror-Modul",
+      "nl": "mirror-module"
+    },
+    "mirror modules": {
+      "de": "mirror-Module",
+      "nl": "mirror-modules"
+    },
+    "farm module": {
+      "de": "farm-Modul",
+      "nl": "farm-module"
+    },
+    "farm modules": {
+      "de": "farm-Module",
+      "nl": "farm-modules"
     }
   },
   "grammar": {
@@ -320,6 +342,10 @@
       [
         "\\b([Ff]onctionnement) (cluster)",
         "\\1 du \\2"
+      ],
+      [
+        "\\b(construire|créer|déployer|configurer|installer|gérer) (clusters)\\b",
+        "\\1 des \\2"
       ]
     ],
     "it": [
@@ -384,6 +410,10 @@
       [
         "(\\S) +:(?=\\s)",
         "\\1:"
+      ],
+      [
+        "\\s+،",
+        "،"
       ]
     ],
     "de": [
@@ -430,8 +460,12 @@
         "**\\1**\\2"
       ],
       [
-        "([A-Za-z0-9])\\s+(의|에서|에게|에|를|을|은|는|이|가|과|와|으로|로|도|만)(?=[\\s.,:;)!?*]|$)",
+        "([A-Za-z0-9])\\s+(의|용|에서|에게|에|를|을|은|는|이|가|과|와|으로|로|도|만)(?=[\\s.,:;)!?*]|$)",
         "\\1\\2"
+      ],
+      [
+        "(클러스터|모듈) (생성|구성|배포|설치|시작|중지)(되|됩|된|될|돼)",
+        "\\1가 \\2\\3"
       ]
     ],
     "ja": [
@@ -476,7 +510,7 @@
         "-cluster\\1"
       ],
       [
-        "(\\S) -(?=[a-z])",
+        "(\\.\\w+) -(?=[a-z])",
         "\\1-"
       ]
     ]

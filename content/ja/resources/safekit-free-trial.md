@@ -1,13 +1,14 @@
 ---
-title: "SafeKit無料トライアル"
+title: "SafeKit 無料トライアル"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-free-trial/"
-description: "SafeKit無料トライアルをダウンロードして、アプリケーションおよび仮想マシンレベルの高可用性をテストできます。SafeKitはWindowsとLinux向けにSAN不要のアーキテクチャを提供し、データ損失ゼロとSANを使用しない自動フェイルオーバーを実現します。"
+description: "SafeKit の無料トライアルをダウンロードして、アプリケーションレベルと VM レベルでの高可用性をテストしてください。SafeKit は、Windows および Linux 向けに、データ損失ゼロと自動フェイルアーキテクチャを提供します。"
 category: "resources"
 lang: "ja"
-topics: "SafeKit高可用性無料トライアルと技術ドキュメント、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SafeKit HA 無料トライアルと技術ドキュメント、🔍 SafeKit 高可用性ナビゲーションハブ"
+translation: "translate_md 2026-11-06.17 | glossaire 2026-11-06.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit無料トライアル {#safekit-free-trial}
+# SafeKit 無料トライアル {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-ja  %}}

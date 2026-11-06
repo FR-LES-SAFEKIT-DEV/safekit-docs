@@ -1,10 +1,11 @@
 ---
 title: "Prueba gratuita de SafeKit"
 canonical: "https://safekit.eviden.com/es/resources/safekit-free-trial/"
-description: "Descargue la prueba gratuita de SafeKit para probar la alta disponibilidad de aplicaciones y a nivel de máquinas virtuales. SafeKit ofrece una arquitectura sin SAN para Windows y Linux, que permite evitar la pérdida de datos y realizar la conmutación por error automática sin SAN."
+description: "Descargue la versión de prueba gratuita de SafeKit para probar la alta disponibilidad a nivel de aplicación y a nivel de máquina virtual. SafeKit proporciona una arquitectura sin SAN para Windows y Linux, con cero pérdida de datos y conmutación por error automática."
 category: "resources"
 lang: "es"
-topics: "Prueba gratuita y documentación técnica de alta disponibilidad de SafeKit, 🔍 Centro de navegación de SafeKit para alta disponibilidad"
+topics: "Prueba gratuita y documentación técnica de SafeKit HA, 🔍 Centro de navegación de alta disponibilidad de SafeKit"
+translation: "translate_md 2026-11-06.17 | glossaire 2026-11-06.11 | Translation LLM | 15 expressions"
 ---
 
 # Prueba gratuita de SafeKit {#safekit-free-trial}

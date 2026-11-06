@@ -1,13 +1,14 @@
 ---
-title: "النسخة التجريبية المجانية من SafeKit"
+title: "نسخة تجريبية مجانية من SafeKit"
 canonical: "https://safekit.eviden.com/ar/resources/safekit-free-trial/"
-description: "نزّل النسخة التجريبية المجانية من SafeKit لاختبار التوافر العالي للتطبيقات وعلى مستوى الآلات الافتراضية. تقدم SafeKit بنية بلا SAN لأنظمة Windows وLinux، مع انعدام فقدان البيانات والتحويل التلقائي عند التعطل دون SAN."
+description: "قم بتنزيل النسخة التجريبية المجانية من SafeKit لاختبار التوافر العالي على مستوى التطبيق ومستوى الجهاز الظاهري. يوفر SafeKit البنية خالية من شبكات التخزين (SANless) لأنظمة Windows و Linux، مع عدم فقدان البيانات والتحويل التلقائي عند الفشل."
 category: "resources"
 lang: "ar"
-topics: "النسخة التجريبية من SafeKit للتوافر العالي والوثائق التقنية، 🔍 مركز التنقل في SafeKit للتوافر العالي"
+topics: "النسخة التجريبية المجانية من SafeKit HA والوثائق الفنية، 🔍 مركز تنقل SafeKit عالي التوافر"
+translation: "translate_md 2026-11-06.17 | glossaire 2026-11-06.11 | Translation LLM | 17 expressions"
 ---
 
-# النسخة التجريبية المجانية من SafeKit {#safekit-free-trial}
+# نسخة تجريبية مجانية من SafeKit {#safekit-free-trial}
 
 
 {{%  insert-safekit-training-ar  %}}
