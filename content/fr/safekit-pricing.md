@@ -37,4 +37,4 @@ Avec un contrat de support actif, le support standard inclut un accès 24/7/365 
 
 **Remarque :** Pour la haute disponibilité au niveau de la machine virtuelle, `hyperv.safe` et `kvm.safe` ne nécessitent que deux licences SafeKit pour les deux hôtes hyperviseurs, quel que soit le nombre de machines virtuelles répliquées et redémarrées.
 
-{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/fr/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="French" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/fr/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

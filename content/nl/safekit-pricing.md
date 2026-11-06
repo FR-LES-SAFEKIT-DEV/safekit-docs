@@ -37,4 +37,4 @@ Met een actief ondersteuningscontract omvat de standaardondersteuning 24/7/365 t
 
 **Opmerking:** voor HA op VM-niveau vereisen `hyperv.safe` en `kvm.safe` slechts twee SafeKit-licenties voor de twee hypervisor-hosts, ongeacht het aantal gerepliceerde en opnieuw gestarte virtuele machines.
 
-{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/nl/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="Dutch" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/nl/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

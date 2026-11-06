@@ -37,4 +37,4 @@ translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation 
 
 **ملاحظة:** بالنسبة للتوافر العالي على مستوى الجهاز الظاهري، يتطلب كل من `hyperv.safe` و `kvm.safe` ترخيصين فقط من SafeKit لمضيفي برنامج المحاكاة الافتراضية، بغض النظر عن عدد الأجهزة الظاهرية التي يتم نسخها وإعادة تشغيلها.
 
-{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/ar/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="AR" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/ar/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

@@ -37,4 +37,4 @@ SafeKit 支持离线许可证激活，因此激活许可证密钥不需要互联
 
 **注意：** 对于 VM 级 HA，`hyperv.safe` 和 `kvm.safe` 仅需要两个 SafeKit 许可证用于两个虚拟机管理程序主机，而与复制和重新启动的虚拟机数量无关。
 
-{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="ZH-HANS" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

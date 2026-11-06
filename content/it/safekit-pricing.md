@@ -37,4 +37,4 @@ Con un contratto di assistenza attivo, l’assistenza standard include l’acces
 
 **Nota:** per l’HA a livello di VM, `hyperv.safe` e `kvm.safe` richiedono solo due licenze SafeKit per i due host hypervisor, indipendentemente dal numero di macchine virtuali replicate e riavviate.
 
-{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/it/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="Italian" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/it/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
