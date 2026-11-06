@@ -53,9 +53,9 @@ topics: "What are the different high availability architectures and the differen
 
 ## How to build high availability clusters with SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Use high availability modules {#use-high-availability-modules}
+### Use application modules {#use-high-availability-modules}
 
-A high availability module is a customization of SafeKit for an application. There are two types of modules: the mirror module with real-time data replication and failover and the <span class="notranslate farm-term" translate="no">farm</span> module with load balancing and failover.
+An application module is a customization of SafeKit for an application. There are two types of modules: the mirror module with real-time data replication and failover and the <span class="notranslate farm-term" translate="no">farm</span> module with load balancing and failover.
 
 If you deploy a mirror module on 2 servers, then you create a mirror cluster and if you deploy a <span class="notranslate farm-term" translate="no">farm</span> module on N servers, then you create a <span class="notranslate farm-term" translate="no">farm</span> cluster.
 
@@ -67,8 +67,7 @@ In practice, an application module is a “.Safe” file (zip type) including:
 
 1 - the configuration file userconfig.xml which contains:
 
-  * names or physical IP addresses of the servers,
-  * name or virtual IP address of the cluster,
+  * virtual IP address of the cluster,
   * file directories to replicate in real time (for a mirror module),
   * network load balancing criteria (for a <span class="notranslate farm-term" translate="no">farm</span> module),
   * configuration of software and hardware failures detectors
@@ -76,11 +75,11 @@ In practice, an application module is a “.Safe” file (zip type) including:
 
 2 - the scripts to start and stop the application.
 
-### Plug and play deployment of high availability modules {#plug-and-play-deployment-of-high-availability-modules}
+### Plug and play deployment of application modules {#plug-and-play-deployment-of-high-availability-modules}
 
 Once an application module is configured and tested with an application, deployment requires no specific IT skills:
 
-  1. install application on 2 standard servers (physical or virtual),
+  1. install the application on 2 standard servers (physical or virtual),
   2. install the SafeKit software on both servers,
   3. install the application module on both servers.
 

@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## 如何使用 SafeKit 构建高可用性集群？ {#how-to-build-high-availability-clusters-with-safekit}
 
-### 使用高可用性模块 {#use-high-availability-modules}
+### 使用应用程序模块 {#use-high-availability-modules}
 
-高可用性模块是 SafeKit 针对应用程序的定制。模块有两种类型：具有实时数据复制和故障转移的 mirror 模块，以及具有负载平衡和故障转移的 <span class="notranslate farm-term" translate="no">farm</span> 模块。
+应用程序模块是 SafeKit 的应用程序定制。模块有两种类型：具有实时数据复制和故障转移的 mirror 模块，以及具有负载平衡和故障转移的 <span class="notranslate farm-term" translate="no">farm</span> 模块。
 
 如果您在 2 台服务器上部署 mirror 模块，则会创建一个 mirror 集群；如果您在 N 台服务器上部署 <span class="notranslate farm-term" translate="no">farm</span> 模块，则会创建一个 <span class="notranslate farm-term" translate="no">farm</span> 集群。
 
@@ -68,8 +68,7 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 1 - 配置文件 userconfig.xml，其中包含：
 
-  * 服务器的名称或物理 IP 地址，
-  * 集群的名称或虚拟 IP 地址，
+  * 集群的虚拟 IP 地址，
   * 要实时复制的文件目录（用于 mirror 模块），
   * 网络负载均衡标准（针对 <span class="notranslate farm-term" translate="no">farm</span> 模块）
   * 软件和硬件故障检测器的配置
@@ -77,7 +76,7 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 2 - 启动和停止应用程序的脚本。
 
-### 高可用性模块的即插即用式部署 {#plug-and-play-deployment-of-high-availability-modules}
+### 应用程序模块的即插即用式部署 {#plug-and-play-deployment-of-high-availability-modules}
 
 应用程序模块配置并经过应用程序测试后，部署无需任何特定的 IT 技能：
 

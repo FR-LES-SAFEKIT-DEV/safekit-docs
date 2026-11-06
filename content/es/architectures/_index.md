@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## ¿Cómo crear clústeres de alta disponibilidad con SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Utilice módulos de alta disponibilidad {#use-high-availability-modules}
+### Utilizar módulos de aplicación {#use-high-availability-modules}
 
-Un módulo de alta disponibilidad es una personalización de SafeKit para una aplicación. Hay dos tipos de módulos: el módulo mirror con replicación de datos en tiempo real y conmutación por error, y el módulo <span class="notranslate farm-term" translate="no">farm</span> con equilibrio de carga y conmutación por error.
+Un módulo de aplicación es una personalización de SafeKit para una aplicación. Hay dos tipos de módulos: el módulo mirror con replicación de datos en tiempo real y conmutación por error, y el módulo <span class="notranslate farm-term" translate="no">farm</span> con equilibrio de carga y conmutación por error.
 
 Si implementa un módulo mirror en 2 servidores, entonces crea un clúster mirror y si implementa un módulo <span class="notranslate farm-term" translate="no">farm</span> en N servidores, entonces crea un clúster <span class="notranslate farm-term" translate="no">farm</span>.
 
@@ -68,8 +68,7 @@ En la práctica, un módulo de aplicación es un archivo «.Safe» (tipo zip) qu
 
 1 - el archivo de configuración userconfig.xml, que contiene:
 
-  * nombres o direcciones IP físicas de los servidores,
-  * nombre o dirección IP virtual del clúster,
+  * dirección IP virtual del clúster,
   * directorios de archivos para replicar en tiempo real (para un módulo mirror),
   * criterios de equilibrio de carga de la red (para un módulo <span class="notranslate farm-term" translate="no">farm</span>),
   * Configuración de los detectores de fallos de software y hardware
@@ -77,11 +76,11 @@ En la práctica, un módulo de aplicación es un archivo «.Safe» (tipo zip) qu
 
 2 - los scripts para iniciar y detener la aplicación.
 
-### Implementación "plug and play" de módulos de alta disponibilidad {#plug-and-play-deployment-of-high-availability-modules}
+### Implementación "plug and play" de módulos de aplicación {#plug-and-play-deployment-of-high-availability-modules}
 
 Una vez que un módulo de aplicación se configura y se prueba con una aplicación, su implementación no requiere conocimientos informáticos específicos:
 
-  1. Instalar la aplicación en 2 servidores estándar (físicos o virtuales)
+  1. Instale la aplicación en 2 servidores estándar (físicos o virtuales)
   2. Instale el software SafeKit en ambos servidores
   3. Instale el módulo de la aplicación en ambos servidores.
 

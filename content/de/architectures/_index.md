@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## Wie baut man Hochverfügbarkeitscluster mit SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Hochverfügbarkeitsmodule verwenden {#use-high-availability-modules}
+### Anwendungsmodule verwenden {#use-high-availability-modules}
 
-Ein Hochverfügbarkeitsmodul ist eine Anpassung von SafeKit für eine Anwendung. Es gibt zwei Arten von Modulen: das mirror-Modul mit Echtzeit-Datenreplikation und Failover sowie das <span class="notranslate farm-term" translate="no">farm</span>-Modul mit Lastausgleich und Failover.
+Ein Anwendungsmodul ist eine Anpassung von SafeKit für eine Anwendung. Es gibt zwei Arten von Modulen: das mirror-Modul mit Echtzeit-Datenreplikation und Failover und das <span class="notranslate farm-term" translate="no">farm</span>-Modul mit Lastausgleich und Failover.
 
 Wenn Sie ein mirror-Modul auf 2 Servern bereitstellen, erstellen Sie einen Mirror-Cluster, und wenn Sie ein <span class="notranslate farm-term" translate="no">farm</span>-Modul auf N Servern bereitstellen, erstellen Sie einen <span class="notranslate farm-term" translate="no">Farm</span>-Cluster.
 
@@ -68,8 +68,7 @@ In der Praxis ist ein Anwendungsmodul eine „.Safe“-Datei (Zip-Typ), die Folg
 
 1 – die Konfigurationsdatei userconfig.xml, die Folgendes enthält:
 
-  * Namen oder physische IP-Adressen der Server,
-  * Name oder virtuelle IP-Adresse des Clusters,
+  * virtuelle IP-Adresse des Clusters,
   * Dateiverzeichnisse, die in Echtzeit repliziert werden sollen (für ein mirror-Modul),
   * Kriterien für den Netzwerklastenausgleich (für ein <span class="notranslate farm-term" translate="no">farm</span>-Modul)
   * Konfiguration von Software- und Hardwarefehlerdetektoren
@@ -77,11 +76,11 @@ In der Praxis ist ein Anwendungsmodul eine „.Safe“-Datei (Zip-Typ), die Folg
 
 2 – die Skripte zum Starten und Stoppen der Anwendung.
 
-### Plug-and-Play-Bereitstellung von Hochverfügbarkeitsmodulen {#plug-and-play-deployment-of-high-availability-modules}
+### Plug-and-Play-Bereitstellung von Anwendungsmodulen {#plug-and-play-deployment-of-high-availability-modules}
 
 Sobald ein Anwendungsmodul konfiguriert und mit einer Anwendung getestet wurde, erfordert die Bereitstellung keine speziellen IT-Kenntnisse:
 
-  1. Anwendung auf 2 Standardservern (physisch oder virtuell) installieren,
+  1. Installieren Sie die Anwendung auf 2 Standardservern (physisch oder virtuell)
   2. Installieren Sie die SafeKit-Software auf beiden Servern
   3. Installieren Sie das Anwendungsmodul auf beiden Servern.
 

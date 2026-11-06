@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## Hoe bouw je clusters met hoge beschikbaarheid met SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Gebruik modules voor hoge beschikbaarheid {#use-high-availability-modules}
+### Toepassingsmodules gebruiken {#use-high-availability-modules}
 
-Een hoge beschikbaarheidsmodule is een aanpassing van SafeKit voor een toepassing. Er zijn twee soorten modules: de mirror-module met realtime gegevensreplicatie en failover en de <span class="notranslate farm-term" translate="no">farm</span>-module met load balancing en failover.
+Een applicatiemodule is een aanpassing van SafeKit voor een applicatie. Er zijn twee soorten modules: de mirror-module met realtime gegevensreplicatie en failover en de <span class="notranslate farm-term" translate="no">farm</span>-module met load balancing en failover.
 
 Als u een mirror-module op 2 servers implementeert, maakt u een mirror-cluster en als u een <span class="notranslate farm-term" translate="no">farm</span>-module op N servers implementeert, maakt u een <span class="notranslate farm-term" translate="no">farm</span>-cluster.
 
@@ -68,8 +68,7 @@ In de praktijk is een applicatiemodule een ".Safe"-bestand (zip-type) dat het vo
 
 1 - het configuratiebestand userconfig.xml, dat het volgende bevat:
 
-  * namen of fysieke IP-adressen van de servers,
-  * naam of virtueel IP-adres van het cluster,
+  * het virtuele IP-adres van het cluster,
   * bestandsmappen die in realtime moeten worden gerepliceerd (voor een mirror-module),
   * criteria voor netwerkbelastingsverdeling (voor een <span class="notranslate farm-term" translate="no">farm</span>-module),
   * configuratie van software- en hardwarefoutdetectoren
@@ -77,11 +76,11 @@ In de praktijk is een applicatiemodule een ".Safe"-bestand (zip-type) dat het vo
 
 2 - de scripts om de toepassing te starten en te stoppen.
 
-### Plug-and-play-implementatie van modules met hoge beschikbaarheid {#plug-and-play-deployment-of-high-availability-modules}
+### Plug-and-play-implementatie van applicatiemodules {#plug-and-play-deployment-of-high-availability-modules}
 
 Zodra een applicatiemodule is geconfigureerd en getest met een applicatie, zijn er voor de implementatie geen specifieke IT-vaardigheden vereist:
 
-  1. de applicatie installeren op 2 standaardservers (fysiek of virtueel),
+  1. installeer de applicatie op 2 standaardservers (fysiek of virtueel),
   2. installeer de SafeKit-software op beide servers,
   3. Installeer de applicatiemodule op beide servers.
 

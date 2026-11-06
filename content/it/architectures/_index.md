@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## Come creare cluster ad alta disponibilità con SafeKit? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Utilizzare moduli ad alta disponibilità {#use-high-availability-modules}
+### Utilizzare i moduli dell’applicazione {#use-high-availability-modules}
 
-Un modulo ad alta disponibilità è una personalizzazione di SafeKit per un’applicazione. Esistono due tipi di moduli: il modulo mirror con replica di dati in tempo reale e failover e il modulo <span class="notranslate farm-term" translate="no">farm</span> con bilanciamento del carico e failover.
+Un modulo applicativo è una personalizzazione di SafeKit per un’applicazione. Esistono due tipi di moduli: il modulo mirror con replica dei dati in tempo reale e failover e il modulo <span class="notranslate farm-term" translate="no">farm</span> con bilanciamento del carico e failover.
 
 Se si implementa un modulo mirror su 2 server, si crea un cluster mirror e se si implementa un modulo <span class="notranslate farm-term" translate="no">farm</span> su N server, si crea un cluster <span class="notranslate farm-term" translate="no">farm</span>.
 
@@ -68,8 +68,7 @@ In pratica, un modulo applicativo è un file ".Safe" (di tipo zip) che include:
 
 1 - il file di configurazione userconfig.xml, che contiene:
 
-  * nomi o indirizzi IP fisici dei server,
-  * nome o indirizzo IP virtuale del cluster,
+  * indirizzo IP virtuale del cluster,
   * directory di file da replicare in tempo reale (per un modulo mirror),
   * criteri di bilanciamento del carico di rete (per un modulo <span class="notranslate farm-term" translate="no">farm</span>),
   * Configurazione dei rilevatori di guasti software e hardware
@@ -77,7 +76,7 @@ In pratica, un modulo applicativo è un file ".Safe" (di tipo zip) che include:
 
 2 - gli script per avviare e arrestare l’applicazione.
 
-### Implementazione plug-and-play di moduli ad alta disponibilità {#plug-and-play-deployment-of-high-availability-modules}
+### Implementazione plug-and-play dei moduli applicativi {#plug-and-play-deployment-of-high-availability-modules}
 
 Una volta configurato e testato un modulo applicativo con un’applicazione, la sua implementazione non richiede competenze informatiche specifiche:
 

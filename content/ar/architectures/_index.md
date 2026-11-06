@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## كيفية بناء مجموعات عالية التوافر باستخدام SafeKit؟ {#how-to-build-high-availability-clusters-with-safekit}
 
-### استخدم وحدات توفر عالية {#use-high-availability-modules}
+### استخدام وحدات التطبيق {#use-high-availability-modules}
 
-وحدة التوافر العالي هي تخصيص لبرنامج SafeKit لتطبيق ما. هناك نوعان من الوحدات: وحدة mirror مع النسخ المتماثل للبيانات في الوقت الفعلي وتجاوز الفشل، ووحدة <span class="notranslate farm-term" translate="no">farm</span> مع موازنة التحميل وتجاوز الفشل.
+وحدة التطبيق هي تخصيص لبرنامج SafeKit لتطبيق ما. هناك نوعان من الوحدات: وحدة mirror مع النسخ المتماثل للبيانات في الوقت الفعلي وتجاوز الفشل، ووحدة <span class="notranslate farm-term" translate="no">farm</span> مع موازنة التحميل وتجاوز الفشل.
 
 إذا قمت بنشر وحدة mirror على خادمين، فإنك تنشئ مجموعة mirror، وإذا قمت بنشر وحدة <span class="notranslate farm-term" translate="no">farm</span> على عدد N من الخوادم، فإنك تنشئ مجموعة <span class="notranslate farm-term" translate="no">farm</span>.
 
@@ -68,8 +68,7 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 1 - ملف التكوين userconfig.xml الذي يحتوي على:
 
-  * أسماء أو عناوين IP الفعلية للخوادم،
-  * اسم أو عنوان IP الظاهري للمجموعة،
+  * عنوان IP الظاهري للمجموعة،
   * أدلة الملفات المراد نسخها في الوقت الفعلي (لوحدة mirror)،
   * معايير موازنة تحميل الشبكة (لوحدة <span class="notranslate farm-term" translate="no">farm</span>)،
   * تكوين أجهزة كشف أعطال البرامج والأجهزة
@@ -77,7 +76,7 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 2 - البرامج النصية لبدء التطبيق وإيقافه.
 
-### نشر وحدات عالية التوافر بنظام التوصيل والتشغيل {#plug-and-play-deployment-of-high-availability-modules}
+### نشر وحدات التطبيق بنظام التوصيل والتشغيل {#plug-and-play-deployment-of-high-availability-modules}
 
 بمجرد تكوين وحدة التطبيق واختبارها مع تطبيق ما، لا يتطلب النشر أي مهارات تقنية محددة:
 

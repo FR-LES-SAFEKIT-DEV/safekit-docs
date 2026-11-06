@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## Comment construire des clusters de haute disponibilité avec SafeKit ? {#how-to-build-high-availability-clusters-with-safekit}
 
-### Utiliser des modules de haute disponibilité {#use-high-availability-modules}
+### Utiliser les modules d’application {#use-high-availability-modules}
 
-Un module de haute disponibilité est une personnalisation de SafeKit pour une application. Il existe deux types de modules : le module mirror avec réplication de données en temps réel et basculement, et le module <span class="notranslate farm-term" translate="no">farm</span> avec équilibrage de charge et basculement.
+Un module d’application est une personnalisation de SafeKit pour une application. Il existe deux types de modules : le module mirror avec réplication de données en temps réel et basculement, et le module <span class="notranslate farm-term" translate="no">farm</span> avec équilibrage de charge et basculement.
 
 Si vous déployez un module mirror sur 2 serveurs, vous créez un cluster mirror et si vous déployez un module <span class="notranslate farm-term" translate="no">farm</span> sur N serveurs, vous créez un cluster <span class="notranslate farm-term" translate="no">farm</span>.
 
@@ -68,8 +68,7 @@ En pratique, un module d’application est un fichier « .Safe » (de type zip) 
 
 1 - le fichier de configuration userconfig.xml qui contient :
 
-  * les noms ou les adresses IP physiques des serveurs,
-  * nom ou adresse IP virtuelle du cluster,
+  * adresse IP virtuelle du cluster,
   * répertoires de fichiers à répliquer en temps réel (pour un module mirror),
   * critères d’équilibrage de charge du réseau (pour un module <span class="notranslate farm-term" translate="no">farm</span>),
   * configuration des détecteurs de pannes logicielles et matérielles
@@ -77,7 +76,7 @@ En pratique, un module d’application est un fichier « .Safe » (de type zip) 
 
 2 - les scripts de démarrage et d’arrêt de l’application.
 
-### Déploiement prêt à l’emploi de modules de haute disponibilité {#plug-and-play-deployment-of-high-availability-modules}
+### Déploiement plug-and-play des modules d’application {#plug-and-play-deployment-of-high-availability-modules}
 
 Une fois qu’un module d’application est configuré et testé avec une application, le déploiement ne nécessite aucune compétence informatique particulière :
 

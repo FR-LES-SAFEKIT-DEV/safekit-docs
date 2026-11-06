@@ -54,9 +54,9 @@ translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation
 
 ## SafeKit で高可用性クラスターを構築する方法 {#how-to-build-high-availability-clusters-with-safekit}
 
-### 高可用性モジュールを使用する {#use-high-availability-modules}
+### アプリケーションモジュールを使用する {#use-high-availability-modules}
 
-高可用性モジュールは、アプリケーション向けの SafeKit のカスタマイズです。モジュールには、リアルタイムデータレプリケーションとフェイルオーバーを備えた mirror モジュールと、ロードバランシングとフェイルオーバーを備えた <span class="notranslate farm-term" translate="no">farm</span> モジュールの 2 種類があります。
+アプリケーションモジュールは、アプリケーション向けの SafeKit のカスタマイズです。モジュールには、リアルタイムデータレプリケーションとフェイルオーバーを備えた mirror モジュールと、ロードバランシングとフェイルオーバーを備えた <span class="notranslate farm-term" translate="no">farm</span> モジュールの 2 種類があります。
 
 mirror モジュールを 2 台のサーバーにデプロイすると、mirror クラスターが作成されます。<span class="notranslate farm-term" translate="no">farm</span> モジュールを N 台のサーバーにデプロイすると、<span class="notranslate farm-term" translate="no">farm</span> クラスターが作成されます。
 
@@ -68,8 +68,7 @@ mirror モジュールを 2 台のサーバーにデプロイすると、mirror 
 
 1 - 以下の内容を含む設定ファイル userconfig.xml :
 
-  * サーバーの名称または物理的な IP アドレス、
-  * クラスターの名前または仮想 IP アドレス、
+  * クラスターの仮想 IP アドレス
   * リアルタイムで複製するファイルディレクトリ（mirror モジュール用）
   * ネットワーク負荷分散基準（<span class="notranslate farm-term" translate="no">farm</span> モジュール用）
   * ソフトウェアおよびハードウェア障害検出器の構成
@@ -77,11 +76,11 @@ mirror モジュールを 2 台のサーバーにデプロイすると、mirror 
 
 2 - アプリケーションの起動と停止を行うスクリプト。
 
-### 高可用性モジュールのプラグアンドプレイ導入 {#plug-and-play-deployment-of-high-availability-modules}
+### アプリケーションモジュールのプラグアンドプレイ展開 {#plug-and-play-deployment-of-high-availability-modules}
 
 アプリケーションモジュールをアプリケーションで設定してテストすれば、導入に特別な IT スキルは必要ありません
 
-  1. 2 台の標準サーバー（物理または仮想）にアプリケーションをインストールする
+  1. アプリケーションを 2 台の標準サーバー（物理または仮想）にインストールします
   2. 両方のサーバーに SafeKit ソフトウェアをインストールします
   3. 両方のサーバーにアプリケーションモジュールをインストールします。
 
