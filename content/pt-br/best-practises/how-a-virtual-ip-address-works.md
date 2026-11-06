@@ -5,7 +5,7 @@ description: "Como o SafeKit move um IP virtual em caso de falha: ARP gratuito n
 category: "best-practises"
 lang: "pt-br"
 topics: "O que é um endereço IP virtual em um cluster de alta disponibilidade?, Implementação de IP virtual no SafeKit, Como um IP virtual funciona na mesma sub-rede (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com um balanceador de carga (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com CLIs de provedor de nuvem (cluster mirror), Como um IP virtual funciona em diferentes sub-redes com BGP (cluster mirror), Como o redirecionamento de DNS funciona em diferentes sub-redes (cluster mirror), Como o balanceamento de carga de IP virtual funciona em um cluster farm na mesma sub-rede, Como um IP virtual balanceado funciona em diferentes sub-redes (cluster farm), Comparação: implementação de IP virtual, latência e transparência da aplicação, Perguntas frequentes sobre IP virtual, 🔍 Explore o SafeKit"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 12 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 12 expressions"
 ---
 
 # Como funciona um endereço IP virtual em um cluster de alta disponibilidade? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -102,11 +102,13 @@ Alguns aplicativos usam o IP virtual como endereço do servidor. Eles funcionam 
   * o servidor pode acessar seus próprios serviços com o IP virtual;
   * A autenticação funciona com o IP virtual.
 
-**Melhor prática:** use um modo de balanceador de carga que mantenha o IP virtual como o endereço de destino (por exemplo, Floating IP ou Direct Server Return). Em seguida, configure o IP virtual localmente no servidor principal. O método depende da sub-rede do IP virtual:
+ Com o SafeKit, você pode configurar o IP virtual localmente no servidor principal. O método depende da sub-rede do IP virtual:
 
   * **O IP virtual está na mesma sub-rede que os endereços IP físicos dos servidores:** mantenha a seção `<vip>` no módulo SafeKit. O SafeKit configura automaticamente o IP virtual como um alias na placa de rede do endereço IP físico.
   * **O IP virtual está em uma sub-rede diferente:** mantenha a seção `<vip>` no módulo SafeKit, com uma configuração específica. O exemplo abaixo mostra essa configuração no Azure.
   * **Outra opção para uma sub-rede diferente:** use o script `start_prim` para configurar o IP virtual em uma interface dedicada, como a interface loopback, antes que o aplicativo seja iniciado. Use o script `stop_prim` para remover o IP virtual após o aplicativo parar. O integrador escreve esses comandos. Eles não são fornecidos pelo produto SafeKit.
+
+**Observação:** alguns balanceadores de carga podem manter o IP virtual como o endereço de destino (por exemplo, Floating IP ou Direct Server Return).
 
 ### Exemplo: Balanceador de carga do Azure com um IP virtual local (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ Essa arquitetura é usada em produção no Azure para o **servidor de gerenciame
 </vip>
 ```
 
-Substitua `VM_INTERFACE_NAME` pelo nome da interface de rede da VM, `LB_FRONTEND_IP` pelo IP do frontend do balanceador de carga e `LB_FRONTEND_NETMASK` pela máscara de rede da sub-rede do frontend. A interface de rede deve ter o mesmo nome em ambos os nós.
+Substitua `VM_INTERFACE_NAME` pelo nome da interface de rede da VM, `LB_FRONTEND_IP` pelo IP de front-end do balanceador de carga e `LB_FRONTEND_NETMASK` pela máscara de rede da sub-rede de front-end. A interface de rede deve ter o mesmo nome em ambos os nós. Para obter mais informações, consulte o Guia do Usuário, seção 13.6.4 " [`<vip>` syntax](https://safekit.eviden.com/pt-br/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 
 **No lado da aplicação:** configure todos os serviços do Milestone para usar o IP virtual, e não o endereço IP privado do servidor.
 

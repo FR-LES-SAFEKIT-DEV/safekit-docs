@@ -5,7 +5,7 @@ description: "SafeKit がフェイルオーバー時に仮想 IP を移動する
 category: "best-practises"
 lang: "ja"
 topics: "高可用性クラスターにおける仮想 IP アドレスとは？、SafeKit における仮想 IP の実装、同一サブネット内での仮想 IP の動作（mirror クラスター）、ロードバランサーを用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、クラウドプロバイダー CLI を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、BGP を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、異なるサブネット間での DNS リダイレクトの動作（mirror クラスター）、同一サブネット上の farm クラスターにおける仮想 IP ロードバランシングの動作、異なるサブネット間でのロードバランシングされた仮想 IP の動作（farm クラスター）、比較：仮想 IP の実装、レイテンシー、およびアプリケーションの透過性、仮想 IP に関するよくある質問、🔍 SafeKit を探索する"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 23 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 23 expressions"
 ---
 
 # 高可用性クラスターにおいて、仮想 IP アドレスはどのように機能しますか？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -102,11 +102,13 @@ SafeKit は各ノードに**ヘルスチェック URL** を提供します。
   * サーバーは仮想 IP で自身のサービスにアクセスできます。
   * 認証は仮想 IP で機能します。
 
-**ベストプラクティス:** 仮想 IP を宛先アドレスとして保持するロードバランサーモード (例: Floating IP または Direct Server Return) を使用します。次に、プライマリサーバーで仮想 IP をローカルに設定します。この方法は、仮想 IP のサブネットによって異なります。
+ SafeKit を使用すると、プライマリサーバー上で仮想 IP をローカルに設定できます。方法は仮想 IP のサブネットによって異なります。
 
   * **仮想 IP は、サーバーの物理 IP アドレスと同じサブネットにあります。**`<vip>` セクションを SafeKit モジュールに維持してください。SafeKit は、仮想 IP を物理 IP アドレスのネットワークカード上のエイリアスとして自動的に設定します。
   * **仮想 IP が異なるサブネットにある場合：**`<vip>` セクションを SafeKit モジュールに特定の構成で保持します。以下の例は、Azure でのこの構成を示しています。
   * **別のサブネットのオプション：**`start_prim` スクリプトを使用して、アプリケーションの起動前に、loopback インターフェースなどの専用インターフェースに仮想 IP を設定します。stop_prim スクリプト `stop_prim` 使用して、アプリケーションの停止後に仮想 IP を削除します。これらのコマンドはインテグレーターが記述します。SafeKit 製品では提供されません。
+
+**注:** 一部のロードバランサーは、仮想 IP を宛先アドレスとして保持できます (例: Floating IP または Direct Server Return)。
 
 ### 例：ローカル仮想 IP アドレスを持つ Azure ロードバランサー（Milestone XProtect） {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ SafeKit は各ノードに**ヘルスチェック URL** を提供します。
 </vip>
 ```
 
-`VM_INTERFACE_NAME` VM のネットワークインターフェースの名前に、`LB_FRONTEND_IP` ロードバランサーのフロントエンド IP に、`LB_FRONTEND_NETMASK` フロントエンドサブネットのネットマスクに置き換えます。ネットワークインターフェースは、両方のノードで同じ名前である必要があります。
+`VM_INTERFACE_NAME` VM のネットワークインターフェース名に、`LB_FRONTEND_IP` ロードバランサーのフロントエンド IP に、`LB_FRONTEND_NETMASK` フロントエンドサブネットのネットマスクに置き換えます。ネットワークインターフェースは、両方のノードで同じ名前である必要があります。詳細については、ユーザーガイドのセクション 13.6.4「[`<vip>` 構文](https://safekit.eviden.com/ja/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)」を参照してください。
 
 **アプリケーション側では、** すべての Milestone サービスがサーバーのプライベート IP アドレスではなく、仮想 IP アドレスを使用するように設定します。
 

@@ -101,11 +101,13 @@ Some applications use the virtual IP as their server address. They work correctl
   * the server can reach its own services with the virtual IP;
   * authentication works with the virtual IP.
 
-**Best practice:** Use a load balancer mode that keeps the virtual IP as the destination address (for example, Floating IP or Direct Server Return). Then configure the virtual IP locally on the primary server. The method depends on the subnet of the virtual IP:
+ With SafeKit, you can configure the virtual IP locally on the primary server. The method depends on the subnet of the virtual IP:
 
   * **The virtual IP is in the same subnet as the physical IP addresses of the servers:** keep the `<vip>` section in the SafeKit module. SafeKit automatically configures the virtual IP as an alias on the network card of the physical IP address.
   * **The virtual IP is in a different subnet:** keep the `<vip>` section in the SafeKit module, with a specific configuration. The example below shows this configuration on Azure. 
   * **Other option for a different subnet:** use the `start_prim` script to configure the virtual IP on a dedicated interface, such as the loopback interface, before the application starts. Use the `stop_prim` script to remove the virtual IP after the application stops. The integrator writes these commands. They are not provided by the SafeKit product.
+
+**Note:** Some load balancers can keep the virtual IP as the destination address (for example, Floating IP or Direct Server Return).
 
 ### Example: Azure load balancer with a local virtual IP (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -132,7 +134,7 @@ This architecture is used in production on Azure for the **Milestone XProtect ma
 </vip>
 ```
 
-Replace `VM_INTERFACE_NAME` with the name of the network interface of the VM, `LB_FRONTEND_IP` with the frontend IP of the load balancer and `LB_FRONTEND_NETMASK` with the netmask of the frontend subnet. The network interface must have the same name on both nodes.
+Replace `VM_INTERFACE_NAME` with the name of the network interface of the VM, `LB_FRONTEND_IP` with the frontend IP of the load balancer and `LB_FRONTEND_NETMASK` with the netmask of the frontend subnet. The network interface must have the same name on both nodes. For more information, see the User's Guide, section 13.6.4 "[`<vip>` syntax](https://safekit.eviden.com/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)".
 
 **On the application side:** configure all the Milestone services to use the virtual IP, not the private IP address of the server.
 

@@ -5,7 +5,7 @@ description: "Cómo SafeKit mueve una IP virtual en la conmutación por error: A
 category: "best-practises"
 lang: "es"
 topics: "¿Qué es una dirección IP virtual en un clúster de alta disponibilidad?, Implementación de IP virtual en SafeKit, Cómo funciona una IP virtual en la misma subred (clúster mirror), Cómo funciona una IP virtual en diferentes subredes con un balanceador de carga (clúster mirror), Cómo funciona una IP virtual en diferentes subredes con las CLI de los proveedores de la nube (clúster mirror), Cómo funciona una IP virtual en diferentes subredes con BGP (clúster mirror), Cómo funciona la redirección DNS en diferentes subredes (clúster mirror), Cómo funciona el balanceo de carga de IP virtual en un clúster farm en la misma subred, Cómo funciona una IP virtual con balanceo de carga en diferentes subredes (clúster farm), Comparación: implementación de IP virtual, latencia y transparencia de la aplicación, Preguntas frecuentes sobre IP virtual, 🔍 Explorar SafeKit"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 14 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 14 expressions"
 ---
 
 # ¿Cómo funciona una dirección IP virtual en un clúster de alta disponibilidad? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -102,11 +102,13 @@ Algunas aplicaciones utilizan la IP virtual como dirección de servidor. Funcion
   * el servidor puede acceder a sus propios servicios con la IP virtual;
   * La autenticación funciona con la IP virtual.
 
-**Mejor práctica:** Utilice un modo de balanceador de carga que mantenga la IP virtual como dirección de destino (por ejemplo, Floating IP o Direct Server Return). A continuación, configure la IP virtual localmente en el servidor principal. El método depende de la subred de la IP virtual:
+ Con SafeKit, puede configurar la IP virtual localmente en el servidor principal. El método depende de la subred de la IP virtual:
 
   * **La IP virtual está en la misma subred que las direcciones IP físicas de los servidores:** mantenga la sección `<vip>` en el módulo SafeKit. SafeKit configura automáticamente la IP virtual como un alias en la tarjeta de red de la dirección IP física.
   * **La IP virtual está en una subred diferente:** mantenga la sección `<vip>` en el módulo SafeKit, con una configuración específica. El siguiente ejemplo muestra esta configuración en Azure.
   * **Otra opción para una subred diferente:** utilice el script `start_prim` para configurar la IP virtual en una interfaz dedicada, como la interfaz loopback, antes de que se inicie la aplicación. Utilice el script `stop_prim` para eliminar la IP virtual después de que se detenga la aplicación. El integrador escribe estos comandos. No son proporcionados por el producto SafeKit.
+
+**Nota:** Algunos balanceadores de carga pueden mantener la IP virtual como dirección de destino (por ejemplo, Floating IP o Direct Server Return).
 
 ### Ejemplo: balanceador de carga de Azure con una IP virtual local (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ Esta arquitectura se utiliza en producción en Azure para el **servidor de gesti
 </vip>
 ```
 
-Reemplace `VM_INTERFACE_NAME` con el nombre de la interfaz de red de la VM, `LB_FRONTEND_IP` con la IP de front-end del balanceador de carga y `LB_FRONTEND_NETMASK` con la máscara de red de la subred de front-end. La interfaz de red debe tener el mismo nombre en ambos nodos.
+Sustituya `VM_INTERFACE_NAME` por el nombre de la interfaz de red de la máquina virtual, `LB_FRONTEND_IP` por la IP de front-end del balanceador de carga y `LB_FRONTEND_NETMASK` por la máscara de red de la subred de front-end. La interfaz de red debe tener el mismo nombre en ambos nodos. Para obtener más información, consulte la Guía del usuario, sección 13.6.4 " [Sintaxis `<vip>`](https://safekit.eviden.com/es/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 
 **En el lado de la aplicación:** configure todos los servicios de Milestone para que utilicen la IP virtual, no la dirección IP privada del servidor.
 

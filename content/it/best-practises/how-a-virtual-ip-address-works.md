@@ -5,7 +5,7 @@ description: "Come SafeKit sposta un IP virtuale in caso di failover: ARP gratui
 category: "best-practises"
 lang: "it"
 topics: "Che cos’è un indirizzo IP virtuale in un cluster ad alta disponibilità?, Implementazione dell’IP virtuale in SafeKit, Come funziona un IP virtuale nella stessa sottorete (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con un bilanciatore del carico (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con le CLI dei provider cloud (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con BGP (cluster mirror), Come funziona il reindirizzamento DNS su sottoreti diverse (cluster mirror), Come funziona il bilanciamento del carico dell’IP virtuale in un cluster farm sulla stessa sottorete, Come funziona un IP virtuale bilanciato su sottoreti diverse (cluster farm), Confronto: implementazione dell’IP virtuale, latenza e trasparenza dell’applicazione, Domande frequenti sull’IP virtuale, 🔍 Esplora SafeKit"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 12 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 12 expressions"
 ---
 
 # Come funziona un indirizzo IP virtuale in un cluster ad alta disponibilità? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -102,11 +102,13 @@ Alcune applicazioni utilizzano l’IP virtuale come indirizzo del server. Funzio
   * il server può raggiungere i propri servizi con l’IP virtuale;
   * L’autenticazione funziona con l’IP virtuale.
 
-**Best practice:** utilizzare una modalità di bilanciamento del carico che mantenga l’IP virtuale come indirizzo di destinazione (ad esempio, Floating IP o Direct Server Return). Quindi configurare l’IP virtuale localmente sul server primario. Il metodo dipende dalla subnet dell’IP virtuale:
+ Con SafeKit, è possibile configurare l’IP virtuale in locale sul server primario. Il metodo dipende dalla sottorete dell’IP virtuale:
 
   * **L’IP virtuale si trova nella stessa sottorete degli indirizzi IP fisici dei server:** mantenere la sezione `<vip>` nel modulo SafeKit. SafeKit configura automaticamente l’IP virtuale come alias sulla scheda di rete dell’indirizzo IP fisico.
   * **L’IP virtuale si trova in una sottorete diversa:** mantenere la sezione `<vip>` nel modulo SafeKit, con una configurazione specifica. L’esempio seguente mostra questa configurazione su Azure.
   * **Altra opzione per una sottorete diversa:** utilizzare lo script `start_prim` per configurare l’IP virtuale su un’interfaccia dedicata, come l’interfaccia loopback, prima dell’avvio dell’applicazione. Utilizzare lo script `stop_prim` per rimuovere l’IP virtuale dopo l’arresto dell’applicazione. L’integratore scrive questi comandi. Non sono forniti dal prodotto SafeKit.
+
+**Nota:** alcuni bilanciatori del carico possono mantenere l’IP virtuale come indirizzo di destinazione (ad esempio, Floating IP o Direct Server Return).
 
 ### Esempio: bilanciatore del carico di Azure con un IP virtuale locale (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ Questa architettura viene utilizzata in produzione su Azure per il **server di g
 </vip>
 ```
 
-Sostituire `VM_INTERFACE_NAME` con il nome dell’interfaccia di rete della VM, `LB_FRONTEND_IP` con l’IP frontend del load balancer e `LB_FRONTEND_NETMASK` con la netmask della sottorete frontend. L’interfaccia di rete deve avere lo stesso nome su entrambi i nodi.
+Sostituire `VM_INTERFACE_NAME` con il nome dell’interfaccia di rete della VM, `LB_FRONTEND_IP` con l’IP frontend del bilanciatore del carico e `LB_FRONTEND_NETMASK` con la netmask della sottorete frontend. L’interfaccia di rete deve avere lo stesso nome su entrambi i nodi. Per maggiori informazioni, consultare la Guida dell’utente, sezione 13.6.4 " [Sintassi `<vip>`](https://safekit.eviden.com/it/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 
 **Lato applicazione:** configurare tutti i servizi Milestone in modo che utilizzino l’IP virtuale, non l’indirizzo IP privato del server.
 

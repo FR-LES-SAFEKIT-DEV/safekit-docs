@@ -5,7 +5,7 @@ description: "SafeKit 如何在故障转移时移动虚拟 IP：同一子网中�
 category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性集群中的虚拟 IP 地址是什么？, SafeKit 中的虚拟 IP 实现, 虚拟 IP 在同一子网中如何工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过负载均衡器工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过云提供商 CLI 工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过 BGP 工作（mirror 集群）, DNS 重定向在不同子网中如何工作（mirror 集群）, 虚拟 IP 负载均衡在同一子网 farm 集群中如何工作, 负载均衡的虚拟 IP 在不同子网中如何工作（farm 集群）, 比较：虚拟 IP 实现、延迟和应用程序透明度, 关于虚拟 IP 的常见问题, 🔍 探索 SafeKit"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 23 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 23 expressions"
 ---
 
 # 虚拟 IP 地址在高可用性集群中是如何工作的？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -102,11 +102,13 @@ SafeKit 在每个节点上提供一个**健康检查 URL**：
   * 服务器可以使用虚拟 IP 访问其自身的服务；
   * 身份验证与虚拟 IP 配合使用。
 
-**最佳实践：** 使用将虚拟 IP 作为目标地址的负载均衡器模式（例如，Floating IP 或 Direct Server Return）。然后在主服务器上本地配置虚拟 IP。该方法取决于虚拟 IP 的子网：
+ 使用 SafeKit，您可以在主服务器上本地配置虚拟 IP。该方法取决于虚拟 IP 的子网：
 
   * **虚拟 IP 与服务器的物理 IP 地址位于同一子网中：** 在 SafeKit 模块中保留 `<vip>` 部分。SafeKit 会自动将虚拟 IP 配置为物理 IP 地址网卡上的别名。
   * **虚拟 IP 位于不同的子网中：** 在 SafeKit 模块中保留 `<vip>` 部分，并进行特定配置。以下示例显示了 Azure 上的此配置。
   * **其他用于不同子网的选项：** 使用 `start_prim` 脚本在应用程序启动前，在专用接口（如 loopback 接口）上配置虚拟 IP。使用 `stop_prim` 脚本在应用程序停止后删除虚拟 IP。集成商编写这些命令。这些命令不是由 SafeKit 产品提供的。
+
+**注意：** 某些负载均衡器可以将虚拟 IP 作为目标地址（例如，Floating IP 或 Direct Server Return）。
 
 ### 示例：具有本地虚拟 IP 的 Azure 负载均衡器 (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ SafeKit 在每个节点上提供一个**健康检查 URL**：
 </vip>
 ```
 
-将 `VM_INTERFACE_NAME` 替换为虚拟机的网络接口名称，`LB_FRONTEND_IP` 替换为负载均衡器的前端 IP，将 `LB_FRONTEND_NETMASK` 替换为前端子网的子网掩码。网络接口在两个节点上必须具有相同的名称。
+将 `VM_INTERFACE_NAME` 替换为虚拟机网络接口的名称，`LB_FRONTEND_IP` 替换为负载均衡器的前端 IP，将 `LB_FRONTEND_NETMASK` 替换为前端子网的网掩码。网络接口在两个节点上必须具有相同的名称。有关更多信息，请参阅用户指南第 13.6.4 节“ [`<vip>` 语法](https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax)”。
 
 **在应用程序端：** 将所有 Milestone 服务配置为使用虚拟 IP，而不是服务器的私有 IP 地址。
 

@@ -5,7 +5,7 @@ description: "Hoe SafeKit een virtueel IP-adres verplaatst bij failover: gratuit
 category: "best-practises"
 lang: "nl"
 topics: "Wat is een virtueel IP-adres in een high-availabilitycluster?, Implementatie van virtueel IP in SafeKit, Hoe een virtueel IP werkt in hetzelfde subnet (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met een load balancer (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met cloudprovider-CLI's (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met BGP (mirror-cluster), Hoe DNS-omleiding werkt in verschillende subnets (mirror-cluster), Hoe virtuele IP-loadbalancing werkt in een farm-cluster op hetzelfde subnet, Hoe een loadbalanced virtueel IP werkt in verschillende subnets (farm-cluster), Vergelijking: implementatie van virtueel IP, latentie en applicatietransparantie, Veelgestelde vragen over virtueel IP, 🔍 Ontdek SafeKit"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 16 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 16 expressions"
 ---
 
 # Hoe werkt een virtueel IP-adres in een high-availability-cluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -102,11 +102,13 @@ Sommige toepassingen gebruiken het virtuele IP-adres als serveradres. Ze werken 
   * de server kan zijn eigen services bereiken met het virtuele IP-adres;
   * Authenticatie werkt met het virtuele IP-adres.
 
-**Best practice:** Gebruik een load balancer modus die het virtuele IP-adres als bestemmingsadres behoudt (bijvoorbeeld Floating IP of Direct Server Return). Configureer vervolgens het virtuele IP-adres lokaal op de primaire server. De methode is afhankelijk van het subnet van het virtuele IP-adres:
+ Met SafeKit kunt u het virtuele IP lokaal op de primaire server configureren. De methode is afhankelijk van het subnet van het virtuele IP:
 
   * **Het virtuele IP-adres bevindt zich in hetzelfde subnet als de fysieke IP-adressen van de servers:** houd de sectie `<vip>` in de SafeKit-module. SafeKit configureert het virtuele IP-adres automatisch als een alias op de netwerkkaart van het fysieke IP-adres.
   * **Het virtuele IP-adres bevindt zich in een ander subnet:** houd de sectie `<vip>` in de SafeKit-module, met een specifieke configuratie. Het onderstaande voorbeeld toont deze configuratie op Azure.
   * **Andere optie voor een ander subnet:** gebruik het `start_prim` script om de virtuele IP-configuratie op een speciale interface, zoals de loopback interface, te configureren voordat de applicatie start. Gebruik het `stop_prim` script om de virtuele IP-configuratie te verwijderen nadat de applicatie is gestopt. De integrator schrijft deze commando's. Ze worden niet geleverd door het SafeKit-product.
+
+**Opmerking:** sommige load balancers kunnen het virtuele IP-adres als bestemmingsadres behouden (bijvoorbeeld Floating IP of Direct Server Return).
 
 ### Voorbeeld: Azure load balancer met een lokaal virtueel IP-adres (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ Deze architectuur wordt in productie gebruikt op Azure voor de **Milestone XProt
 </vip>
 ```
 
-Vervang `VM_INTERFACE_NAME` door de naam van de netwerkinterface van de VM, `LB_FRONTEND_IP` door het frontend-IP van de load balancer en `LB_FRONTEND_NETMASK` door de netmasker van het frontend-subnet. De netwerkinterface moet op beide knooppunten dezelfde naam hebben.
+Vervang `VM_INTERFACE_NAME` door de naam van de netwerkinterface van de VM, `LB_FRONTEND_IP` door het frontend-IP van de load balancer en `LB_FRONTEND_NETMASK` door de netmasker van het frontend-subnet. De netwerkinterface moet op beide knooppunten dezelfde naam hebben. Raadpleeg voor meer informatie de gebruikershandleiding, sectie 13.6.4 " [`<vip>` syntax](https://safekit.eviden.com/nl/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ".
 
 **Aan de applicatiezijde:** configureer alle Milestone-services om het virtuele IP-adres te gebruiken, niet het privé-IP-adres van de server.
 

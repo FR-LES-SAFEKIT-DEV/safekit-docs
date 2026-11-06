@@ -102,11 +102,13 @@ Certaines applications utilisent l’adresse IP virtuelle comme adresse de serve
   * le serveur peut atteindre ses propres services avec l’adresse IP virtuelle;
   * L’authentification fonctionne avec l’adresse IP virtuelle.
 
-**Bonne pratique :** utilisez un mode d’équilibrage de charge qui conserve l’adresse IP virtuelle comme adresse de destination (par exemple, Floating IP ou Direct Server Return). Ensuite, configurez l’adresse IP virtuelle localement sur le serveur principal. La méthode dépend du sous-réseau de l’adresse IP virtuelle :
+ Avec SafeKit, vous pouvez configurer l’adresse IP virtuelle localement sur le serveur principal. La méthode dépend du sous-réseau de l’adresse IP virtuelle :
 
   * **L’IP virtuelle se trouve dans le même sous-réseau que les adresses IP physiques des serveurs :** conservez la section `<vip>` dans le module SafeKit. SafeKit configure automatiquement l’IP virtuelle comme un alias sur la carte réseau de l’adresse IP physique.
   * **L’IP virtuelle se trouve dans un sous-réseau différent :** conservez la section `<vip>` dans le module SafeKit, avec une configuration spécifique. L’exemple ci-dessous montre cette configuration sur Azure.
   * **Autre option pour un sous-réseau différent :** utilisez le script `start_prim` pour configurer l’IP virtuelle sur une interface dédiée, telle que l’interface loopback, avant le démarrage de l’application. Utilisez le script `stop_prim` pour supprimer l’IP virtuelle après l’arrêt de l’application. L’intégrateur écrit ces commandes. Elles ne sont pas fournies par le produit SafeKit.
+
+**Remarque :** certains équilibreurs de charge peuvent conserver l’adresse IP virtuelle comme adresse de destination (par exemple, Floating IP ou Direct Server Return).
 
 ### Exemple : Équilibreur de charge Azure avec une adresse IP virtuelle locale (Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ Cette architecture est utilisée en production sur Azure pour le **serveur de ge
 </vip>
 ```
 
-Remplacez `VM_INTERFACE_NAME` par le nom de l’interface réseau de la VM, `LB_FRONTEND_IP` par l’IP frontale de l’équilibreur de charge et `LB_FRONTEND_NETMASK` par le masque réseau du sous-réseau frontal. L’interface réseau doit avoir le même nom sur les deux nœuds.
+Remplacez `VM_INTERFACE_NAME` par le nom de l’interface réseau de la VM, `LB_FRONTEND_IP` par l’IP frontale de l’équilibreur de charge et `LB_FRONTEND_NETMASK` par le masque réseau du sous-réseau frontal. L’interface réseau doit avoir le même nom sur les deux nœuds. Pour plus d’informations, consultez le Guide de l’utilisateur, section 13.6.4 « [Syntaxe `<vip>`](https://safekit.eviden.com/fr/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) ».
 
 **Côté application :** configurez tous les services Milestone pour qu’ils utilisent l’adresse IP virtuelle et non l’adresse IP privée du serveur.
 

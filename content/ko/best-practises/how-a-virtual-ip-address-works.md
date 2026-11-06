@@ -5,7 +5,7 @@ description: "SafeKit이 장애 조치 시 가상 IP를 이동하는 방법: 동
 category: "best-practises"
 lang: "ko"
 topics: "고가용성 클러스터의 가상 IP 주소란?, SafeKit의 가상 IP 구현, 동일 서브넷에서 가상 IP가 작동하는 방식(mirror 클러스터), 로드 밸런서를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), 클라우드 공급자 CLI를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), BGP를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), DNS 리디렉션이 서로 다른 서브넷 간에 작동하는 방식(mirror 클러스터), 동일 서브넷의 farm 클러스터에서 가상 IP 로드 밸런싱이 작동하는 방식, 로드 밸런싱된 가상 IP가 서로 다른 서브넷 간에 작동하는 방식(farm 클러스터), 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 가상 IP에 대한 자주 묻는 질문, 🔍 SafeKit 살펴보기"
-translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 23 expressions"
+translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 23 expressions"
 ---
 
 # 고가용성 클러스터에서 가상 IP 주소는 어떻게 작동하나요? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}
@@ -102,11 +102,13 @@ SafeKit은 각 노드에 **상태 확인 URL을** 제공합니다.
   * 서버는 가상 IP를 사용하여 자체 서비스에 도달할 수 있습니다.
   * 인증은 가상 IP로 작동합니다.
 
-**모범 사례:** 가상 IP를 대상 주소로 유지하는 로드 밸런서 모드(예: Floating IP 또는 Direct Server Return)를 사용합니다. 그런 다음 기본 서버 에서 가상 IP를 로컬로 구성합니다. 이 방법은 가상 IP의 서브넷에 따라 달라집니다.
+ SafeKit을 사용하면 기본 서버 에서 가상 IP를 로컬로 구성할 수 있습니다. 이 방법은 가상 IP의 서브넷에 따라 달라집니다.
 
   * **가상 IP는 서버의 물리적 IP 주소와 동일한 서브넷에 있습니다.** SafeKit 모듈에서 `<vip>` 섹션을 유지하십시오. SafeKit은 가상 IP를 물리적 IP 주소의 네트워크 카드에 별칭으로 자동 구성합니다.
   * **가상 IP가 다른 서브넷에 있는 경우:** 특정 구성으로 SafeKit 모듈에 `<vip>` 섹션을 유지합니다. 아래 예시는 Azure에서 이 구성을 보여줍니다.
   * **다른 서브넷을 위한 다른 옵션:** 애플리케이션이 시작되기 전에 `start_prim` 스크립트를 사용하여 loopback 인터페이스와 같은 전용 인터페이스에서 가상 IP를 구성합니다. 애플리케이션이 중지된 후 가상 IP를 제거하려면 `stop_prim` 스크립트를 사용합니다. 통합자 이러한 명령을 작성합니다. 이러한 명령은 SafeKit 제품에서 제공하지 않습니다.
+
+**참고:** 일부 로드 밸런서는 가상 IP를 대상 주소로 유지할 수 있습니다(예: Floating IP 또는 Direct Server Return).
 
 ### 예시: 로컬 가상 IP가 있는 Azure 로드 밸런서(Milestone XProtect) {#azure-load-balancer-local-virtual-ip-example}
 
@@ -133,7 +135,7 @@ SafeKit은 각 노드에 **상태 확인 URL을** 제공합니다.
 </vip>
 ```
 
-`VM_INTERFACE_NAME` VM의 네트워크 인터페이스 이름으로, `LB_FRONTEND_IP` 로드 밸런서의 프런트엔드 IP로, `LB_FRONTEND_NETMASK` 프런트엔드 서브넷의 넷마스크로 대체하십시오. 네트워크 인터페이스는 두 노드 모두에서 동일한 이름을 가져야 합니다.
+`VM_INTERFACE_NAME` VM의 네트워크 인터페이스 이름으로, `LB_FRONTEND_IP` 로드 밸런서의 프런트엔드 IP로, `LB_FRONTEND_NETMASK` 프런트엔드 서브넷의 넷마스크로 바꿉니다. 네트워크 인터페이스는 두 노드 모두에서 동일한 이름을 가져야 합니다. 자세한 내용은 사용자 가이드 13.6.4절 " [`<vip>` 구문](https://safekit.eviden.com/ko/resources/safekit-user-guide-82/#_%3Cvip%3E_Syntax) "을 참조하십시오.
 
 **애플리케이션 측면:** 모든 Milestone 서비스를 서버의 개인 IP 주소가 아닌 가상 IP를 사용하도록 구성합니다.
 
