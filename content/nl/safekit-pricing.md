@@ -1,39 +1,40 @@
 ---
 title: "SafeKit-prijzen"
 canonical: "https://safekit.eviden.com/nl/safekit-pricing/"
-description: "Lees meer over het SafeKit-licentiemodel en vraag een offerte op maat aan voor hoge beschikbaarheid, replicatie, failover en load balancing op Windows en Linux."
+description: "Begrijp het licentiemodel van SafeKit en vraag een offerte op maat aan voor hoge beschikbaarheid, replicatie, failover en load balancing op Windows en Linux."
 category: "home"
 lang: "nl"
-topics: "Licentiemodel en prijzen, standaardondersteuning en onderhoud, offerte aanvragen"
+topics: "Licentiemodel en prijzen, Standaardondersteuning en-onderhoud, Offerte aanvragen"
+translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 17 expressions"
 ---
 
 # SafeKit-prijzen {#safekit-pricing}
 
 ## Licentiemodel en prijzen {#licensing-model-and-pricing}
 
-SafeKit gebruikt een **permanent licentiemodel**: de licentie wordt eenmalig aangeschaft en is gebaseerd op de hostnamen van de beschermde servers. De licentie geldt per server, fysiek of virtueel. Een standaard SafeKit-cluster bestaat doorgaans uit twee servers.
+SafeKit maakt gebruik van een **eeuwigdurend licentiemodel**: de licentie wordt eenmalig aangeschaft en is gebaseerd op de hostnamen van de beveiligde servers. De licentie is per server (fysiek of virtueel) gedefinieerd. Een standaard SafeKit-cluster maakt doorgaans gebruik van 2 servers.
 
 De prijs is onafhankelijk van het aantal CPU's of sockets en van de Windows- of Linux-editie.
 
-De vooraf geconfigureerde `.safe`-applicatiemodules worden gratis geleverd.
+De vooraf geconfigureerde `.safe` applicatiemodules worden gratis aangeboden.
 
-SafeKit ondersteunt offline licentieactivering. Er is dus geen internetverbinding nodig om een licentiesleutel te activeren.
+SafeKit ondersteunt offline licentieactivering, dus een internetverbinding is niet vereist om een licentiesleutel te activeren.
 
 Er is een gratis proefversie met alle functies beschikbaar voor evaluatie.
 
-## Standaardondersteuning en onderhoud {#standard-support-and-maintenance}
+## Standaardondersteuning en-onderhoud {#standard-support-and-maintenance}
 
-Het eerste jaar standaardondersteuning en onderhoud is verplicht bij aankoop van de licentie. De daaropvolgende jaren kunnen optioneel worden verlengd.
+Het eerste jaar van standaardondersteuning en-onderhoud is verplicht bij de aankoop van de licentie. De daaropvolgende jaren kunnen optioneel worden verlengd.
 
-Met een actief supportcontract omvat standaardondersteuning 24/7/365 toegang tot het online supportportaal voor maximaal vier aangewezen technische contactpersonen, toegang tot de kennisbank en alle servicepacks, updates en upgrades zonder extra kosten. Live ondersteuning is beschikbaar via het Europese Support Center, van maandag tot en met vrijdag van 9.00 tot 17.00 uur. De ontvangst van incidenten wordt binnen vier werkuren van het Support Center bevestigd.
+Met een actief ondersteuningscontract omvat de standaardondersteuning 24/7/365 toegang tot het webondersteuningsportaal voor maximaal vier benoemde technische contactpersonen, toegang tot de kennisbank en alle servicepacks, updates en upgrades zonder extra kosten. Liveondersteuning is beschikbaar via het Europese ondersteuningscentrum, van maandag tot en met vrijdag van 9:00 tot 17:00 uur, met een bevestiging van het incident binnen vier werkuren van het ondersteuningscentrum.
 
-## Een offerte aanvragen {#information-to-include-in-your-quote-request}
+## Vraag een offerte aan {#information-to-include-in-your-quote-request}
 
-  * Vermeld het aantal nodes; een standaard SafeKit-cluster heeft doorgaans twee nodes.
-  * Geef aan of de nodes Windows of Linux draaien.
-  * Vermeld de applicatie voor HA op applicatieniveau of de hypervisor voor HA op VM-niveau.
+  * Geef het aantal knooppunten op; een standaard SafeKit-cluster heeft doorgaans 2 knooppunten.
+  * Geef aan of de knooppunten Windows of Linux draaien.
+  * Geef de toepassing op voor HA op toepassingsniveau of de hypervisor voor HA op VM-niveau.
 
 
-**Opmerking:** Voor HA op VM-niveau hebben `hyperv.safe` en `kvm.safe` slechts twee SafeKit-licenties nodig voor de twee hypervisorhosts, ongeacht het aantal gerepliceerde en opnieuw gestarte virtuele machines.
+**Opmerking:** voor HA op VM-niveau vereisen `hyperv.safe` en `kvm.safe` slechts twee SafeKit-licenties voor de twee hypervisor-hosts, ongeacht het aantal gerepliceerde en opnieuw gestarte virtuele machines.
 
-{{< contact-marketo-form preferredLanguage="Dutch" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/nl/confirmation-safekit/" programMemberField01="Contact NL (REQUIRES AN ANSWER)" Country="Netherlands" >}}
+{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/nl/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

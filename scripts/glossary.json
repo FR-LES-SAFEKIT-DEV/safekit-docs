@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-06.5",
+  "version": "2026-11-06.6",
   "keep": [
     "mirror",
     "farm",
@@ -20,7 +20,9 @@
     "WAIT",
     "UP",
     "DOWN",
-    "OEM"
+    "OEM",
+    "Eviden",
+    "Evidian"
   ],
   "terms": {
     "farm cluster": {

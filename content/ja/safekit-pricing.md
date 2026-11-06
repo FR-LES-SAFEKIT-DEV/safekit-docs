@@ -1,39 +1,40 @@
 ---
-title: "SafeKitの価格"
+title: "SafeKit の価格"
 canonical: "https://safekit.eviden.com/ja/safekit-pricing/"
-description: "SafeKitのライセンスモデルを確認し、WindowsおよびLinuxでの高可用性、レプリケーション、フェイルオーバー、負荷分散に関する個別見積もりをご依頼ください。"
+description: "SafeKit のライセンスモデルについてご理解いただき、Windows および Linux での高可用性、レプリケーション、フェイルオーバー、ロードバランシングに関する個別のお見積もりをご依頼ください。"
 category: "home"
 lang: "ja"
-topics: "ライセンスモデルと価格、標準サポートと保守、見積もり依頼"
+topics: "ライセンスモデルと価格、標準サポートとメンテナンス、お見積りのご依頼"
+translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 27 expressions"
 ---
 
-# SafeKitの価格 {#safekit-pricing}
+# SafeKit の価格 {#safekit-pricing}
 
 ## ライセンスモデルと価格 {#licensing-model-and-pricing}
 
-SafeKitは**永続ライセンスモデル**を採用しています。ライセンスは一度購入すればよく、保護対象サーバーのホスト名に基づいて発行されます。ライセンスは物理サーバーまたは仮想サーバーごとに適用されます。標準的なSafeKitクラスターは通常2台のサーバーで構成されます。
+SafeKit は**永久ライセンスモデル**を採用しています。ライセンスは一度購入すれば、保護対象サーバーのホスト名に基づいて使用できます。ライセンスはサーバー（物理または仮想）ごとに範囲が定められています。標準的な SafeKit クラスターでは通常 2 台のサーバーを使用します。
 
-価格はCPUやソケットの数、WindowsまたはLinuxのエディションによって変わりません。
+価格は、CPU 数、ソケット数、Windows または Linux のエディションとは無関係です。
 
-事前設定済みのアプリケーションモジュール `.safe` は無料で提供されます。
+事前に設定された `.safe` アプリケーションモジュールは無料で提供されます。
 
-SafeKitはオフラインでのライセンス認証に対応しているため、ライセンスキーの有効化にインターネット接続は必要ありません。
+SafeKit はオフラインでのライセンス認証に対応しているため、ライセンスキーを有効化するのにインターネット接続は必要ありません。
 
-評価用に、すべての機能を利用できる無料トライアルをご用意しています。
+評価用に、すべての機能が利用可能な無料トライアルをご用意しています。
 
-## 標準サポートと保守 {#standard-support-and-maintenance}
+## 標準サポートおよびメンテナンス {#standard-support-and-maintenance}
 
-ライセンス購入時には、初年度の標準サポートおよび保守への加入が必須です。2年目以降は任意で更新できます。
+ライセンス購入時には、標準サポートおよびメンテナンスの初年度契約が必須となります。翌年以降は任意で更新が可能です。
 
-有効なサポート契約には、指定された最大4名の技術担当者向けのWebサポートポータルへの24時間365日のアクセス、ナレッジベースの利用、すべてのサービスパック、アップデート、アップグレードが追加料金なしで含まれます。欧州サポートセンターによる有人サポートは、月曜日から金曜日の9:00～17:00に利用でき、インシデントの受付はサポートセンターの営業時間内4時間以内に確認されます。
+有効なサポート契約を締結されている場合、標準サポートには、最大 4 名の指定技術担当者様を対象とした年中無休のウェブサポートポータルへのアクセス、ナレッジベースへのアクセス、および追加料金なしでのすべてのサービスパック、アップデート、アップグレードが含まれます。ライブサポートは、欧州サポートセンターにて月曜日から金曜日の午前 9 時から午後 5 時までご利用いただけます。インシデントの受付は、サポートセンターの営業時間内 4 時間以内に行われます。
 
-## 見積もりを依頼する {#information-to-include-in-your-quote-request}
+## お見積もりを依頼する {#information-to-include-in-your-quote-request}
 
-  * ノード数を指定してください。標準的なSafeKitクラスターは通常2ノードです。
-  * 各ノードのOSがWindowsかLinuxかを指定してください。
-  * アプリケーションレベルのHAでは対象アプリケーションを、VMレベルのHAではハイパーバイザーを指定してください。
+  * ノード数を指定します。標準的な SafeKit クラスターには通常 2 つのノードがあります。
+  * ノードで Windows または Linux を実行するかどうかを指定します。
+  * アプリケーションレベルの HA の場合はアプリケーションを、VM レベルの HA の場合はハイパーバイザーを指定します。
 
 
-**注:** VMレベルのHAでは、`hyperv.safe` と `kvm.safe` に必要なSafeKitライセンスは2つのハイパーバイザーホスト分の2ライセンスのみです。複製して再起動する仮想マシンの数は問いません。
+**注：** VM レベルの HA の場合、`hyperv.safe` および `kvm.safe`、複製および再起動される仮想マシンの数に関係なく、2 つのハイパーバイザーホストに対して 2 つの SafeKit ライセンスのみを必要とします。
 
-{{< contact-marketo-form preferredLanguage="Japanese" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/ja/confirmation-safekit/" programMemberField01="Contact JA (REQUIRES AN ANSWER)" Country="Japan" >}}
+{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/ja/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

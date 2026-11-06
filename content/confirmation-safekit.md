@@ -1,6 +1,6 @@
 ---
 title: "Thank you for contacting us"
-description: "Confirmation after sending the SafeKit contact form."
+description: "Confirmation page displayed after you submit the SafeKit contact form."
 lang: "en"
 category: "home"
 sitemap:
@@ -12,9 +12,9 @@ sitemap:
     <h1 id="confirmation-title">Thank you for contacting us.</h1>
     <p><strong>We will process your request as soon as possible.</strong></p>
     <p>Meanwhile, please feel free to continue browsing our site.</p>
-    <p>Kind regards</p>
+    <p>Kind regards,</p>
     <p>The Eviden team</p>
-    <p class="contact-safekit-confirmation-link"><a href="/">Continue browsing SafeKit</a></p>
+    <p class="contact-safekit-confirmation-link"><a href="/">Back to the SafeKit website</a></p>
   </section>
 </div>
 <link rel="stylesheet" href="/css/contact-safekit.css">

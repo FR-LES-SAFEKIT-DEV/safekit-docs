@@ -23,7 +23,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-06.11"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-06.14"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -185,7 +185,8 @@ def encode(text, ctx):
     text = re.sub(r'(<a\b[^>]*?\bhref=")([^"]+)(")', lambda m: m.group(1) + ctx.link_fix(m.group(2)) + m.group(3), text)
     text = re.sub(r"`[^`]+`", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)   # code d'abord
     # durées / heures (9:43, 3:21:35) : jamais traduites ("7 時 40 分", "٨:٤٧")
-    text = re.sub(r"(?<![\w:.=/])\d{1,2}(?::\d{2}){1,2}(?![\w:])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    # sauf "9:00 AM" / "5:00 PM" : Google doit les convertir ("9 h", "17 h", "午後 5:00")
+    text = re.sub(r"(?<![\w:.=/])\d{1,2}(?::\d{2}){1,2}(?![\w:])(?!\s?[AaPp]\.?[Mm]\b)", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     # noms de fichiers (mirror.safe, farm.safe, setup.exe...) : protégés en entier, sinon "mirror" seul est protégé
     text = re.sub(r"(?<![\w/.-])[\w-]+\.(?:safe|exe|msi|ps1|sh|cmd|bat|xml|conf|cfg|ini|txt|log|json|ya?ml|dll|vhdx?)\b(?![\w/-])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     for rx, target in TERMS:
@@ -285,8 +286,8 @@ def decode(text, ctx):
         text = re.sub(r"([，。、；！？])[ ]+(?![*\s])", r"\1", text)           # 例如， Floating -> 例如，Floating
         # espace entre chinois/japonais et latin, chiffres, `code`, termes protégés
         def vis(n, end):   # premier / dernier caractère visible d'un jeton protégé
-            if st[n].startswith("{{"):
-                return "a"   # {{ .Get "app" }} = nom de produit latin -> espace avec le chinois/japonais
+            if st[n].startswith(("{{", "`")):
+                return "a"   # `.safe` : code = latin -> espace avec le chinois/japonais   # {{ .Get "app" }} = nom de produit latin -> espace avec le chinois/japonais
             v = re.sub(r"<[^>]+>", "", st[n]).strip("`") or "a"
             return v[-1] if end else v[0]
         latin = lambda c: bool(re.match(r"[A-Za-z0-9`%]", c))
@@ -542,6 +543,9 @@ def main():
             in_code = not in_code; continue
         if not in_code:
             line = lines[i] = sc_fix(line)
+            # paramètres de shortcode pointant vers une page du site : destination="/confirmation-safekit/" -> "/fr/confirmation-safekit/"
+            line = lines[i] = re.sub(r'(\{\{[<%][^\n]*?\b\w+=")(/[\w\-/]*/(?:#[\w\-]+)?)(")',
+                                     lambda x: x.group(1) + link_fix(x.group(2)) + x.group(3), line)
             s = line.strip()
         if in_code or not s or (re.fullmatch(r"\|?[\s:|-]+\|?", s) and "-" in s):
             continue
@@ -579,7 +583,15 @@ def main():
             ctx = Ctx(link_fix)
             body = m.group(2)
             trail = body[len(body.rstrip()):]   # "  " en fin de ligne = saut de ligne Markdown, à conserver
-            jobs.append((i, m.group(1), encode(body.rstrip(), ctx), trail, ctx))
+            lead = m.group(1)
+            # HTML brut "<p><strong>texte</strong></p>" : les balises d'ouverture / fermeture restent hors
+            # de la requête (sinon Google voit "0texte1" et peut perdre des mots : "感谢您联系我们" -> "您联系我们")
+            hm = re.match(r"^((?:<[a-zA-Z][^<>]*>\s*)+)([^<>]*?\S[^<>]*?)((?:\s*</[a-zA-Z][^<>]*>)+)$", body.rstrip())
+            if hm and not re.search(r"\{\{", hm.group(1)):
+                lead += re.sub(r'(<a\b[^>]*?\bhref=")([^"]+)(")', lambda x: x.group(1) + link_fix(x.group(2)) + x.group(3), hm.group(1))
+                trail = hm.group(3) + trail
+                body = hm.group(2)
+            jobs.append((i, lead, encode(body.rstrip(), ctx), trail, ctx))
 
     global MODEL
     if a.model == "llm":
@@ -656,6 +668,12 @@ def main():
             row, c = idx
             tables.setdefault(row, lines[row].split("|"))[c] = before + t + after
         else:
+            src_line = lines[idx]
+            if "<" in src_line and not re.search(r">\s|\s<", src_line.strip()):
+                # HTML brut sans espaces entre balises : "<p> <strong> texte </strong> </p>" -> "<p><strong>texte</strong></p>"
+                t = re.sub(r"(<[a-zA-Z][^<>]*>)\s+", r"\1", t)
+                t = re.sub(r"\s+(</[a-zA-Z]+>)", r"\1", t)
+                t = re.sub(r"(</[a-zA-Z]+>)\s+(?=<)", r"\1", t)
             if before.lstrip().startswith("#") and not CJK:   # titre : majuscule initiale
                 t = re.sub(r"^((?:[*_\[(]|<[^>]+>)*)([a-zà-öø-ÿ])", lambda x: x.group(1) + x.group(2).upper(), t, count=1)
             lines[idx] = before + t + after

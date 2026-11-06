@@ -1,39 +1,40 @@
 ---
 title: "SafeKit 定价"
 canonical: "https://safekit.eviden.com/zh-hans/safekit-pricing/"
-description: "了解 SafeKit 许可模式，并申请适用于 Windows 和 Linux 高可用性、复制、故障切换及负载均衡的定制报价。"
+description: "了解 SafeKit 许可模式，并为 Windows 和 Linux 上的高可用性、复制、故障转移和负载平衡请求量身定制的报价。"
 category: "home"
 lang: "zh-hans"
-topics: "许可模式与定价、标准支持与维护、申请报价"
+topics: "许可模式和定价、标准支持和维护、询价"
+translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 27 expressions"
 ---
 
 # SafeKit 定价 {#safekit-pricing}
 
-## 许可模式与定价 {#licensing-model-and-pricing}
+## 许可模式和定价 {#licensing-model-and-pricing}
 
-SafeKit 采用**永久许可模式**：许可只需购买一次，并根据受保护服务器的主机名确定。许可按服务器计费，物理服务器和虚拟服务器均适用。标准 SafeKit 集群通常使用两台服务器。
+SafeKit 采用**永久许可模式**：许可证一次性购买，并基于受保护服务器的主机名。许可范围为每台服务器（物理或虚拟）。标准 SafeKit 集群通常使用 2 台服务器。
 
-价格与 CPU 或插槽数量以及 Windows 或 Linux 版本无关。
+定价与 CPU 或插槽的数量以及 Windows 或 Linux 版本无关。
 
 预配置的 `.safe` 应用程序模块免费提供。
 
-SafeKit 支持离线激活许可，因此激活许可密钥时无需连接互联网。
+SafeKit 支持离线许可证激活，因此激活许可证密钥不需要互联网连接。
 
-提供功能完整的免费试用版，供您评估使用。
+我们提供功能齐全的免费试用版供您评估。
 
 ## 标准支持与维护 {#standard-support-and-maintenance}
 
-购买许可时必须包含第一年的标准支持与维护。之后的年份可选择续订。
+购买许可证时，必须购买第一年的标准支持和维护服务。后续年份可选择续订。
 
-在支持合同有效期内，标准支持包括：指定最多四名技术联系人的全天候 Web 支持门户访问权限、知识库访问权限，以及所有 Service Pack、更新和升级，均不另收费。欧洲支持中心在周一至周五 9:00 至 17:00 提供人工支持，并在支持中心工作时间内四小时内确认收到事件报告。
+对于有效的支持合同，标准支持包括：最多四名指定技术联系人可全天候 24/7/365 访问网络支持门户，访问知识库，以及免费获得所有服务包、更新和升级。欧洲支持中心提供实时支持，时间为周一至周五上午 9:00 至下午 5:00，并在四个支持中心工作小时内确认事件。
 
-## 申请报价 {#information-to-include-in-your-quote-request}
+## 询价 {#information-to-include-in-your-quote-request}
 
-  * 请注明节点数量；标准 SafeKit 集群通常包含两个节点。
-  * 请注明节点运行的是 Windows 还是 Linux。
-  * 应用级高可用请注明应用程序；虚拟机级高可用请注明虚拟机监控程序。
+  * 指定节点数；标准 SafeKit 集群通常有 2 个节点。
+  * 指定节点运行的是 Windows 还是 Linux。
+  * 指定应用程序级 HA 的应用程序，或指定虚拟机级 HA 的虚拟机管理程序。
 
 
-**注意：**对于虚拟机级高可用，`hyperv.safe` 和 `kvm.safe` 只需为两台虚拟机监控程序主机购买两份 SafeKit 许可，与复制和重启的虚拟机数量无关。
+**注意：** 对于 VM 级 HA，`hyperv.safe` 和 `kvm.safe` 仅需要两个 SafeKit 许可证用于两个虚拟机管理程序主机，而与复制和重新启动的虚拟机数量无关。
 
-{{< contact-marketo-form preferredLanguage="ZH-HANS" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact ZH (REQUIRES AN ANSWER)" Country="China" >}}
+{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}

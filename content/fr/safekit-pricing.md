@@ -1,39 +1,40 @@
 ---
 title: "Tarifs SafeKit"
 canonical: "https://safekit.eviden.com/fr/safekit-pricing/"
-description: "Découvrez le modèle de licence SafeKit et demandez un devis sur mesure pour la haute disponibilité, la réplication, le basculement et l'équilibrage de charge sous Windows et Linux."
+description: "Comprenez le modèle de licence SafeKit et demandez un devis personnalisé pour la haute disponibilité, la réplication, le basculement et l’équilibrage de charge sur Windows et Linux."
 category: "home"
 lang: "fr"
 topics: "Modèle de licence et tarification, Assistance et maintenance standard, Demander un devis"
+translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 21 expressions"
 ---
 
 # Tarifs SafeKit {#safekit-pricing}
 
 ## Modèle de licence et tarification {#licensing-model-and-pricing}
 
-SafeKit utilise un **modèle de licence permanente** : la licence s'achète une seule fois et est liée aux noms d'hôte des serveurs protégés. La licence s'applique à chaque serveur (physique ou virtuel). Un cluster SafeKit standard comprend généralement 2 serveurs.
+SafeKit utilise un **modèle de licence perpétuelle** : la licence est achetée une seule fois et est basée sur les noms d’hôte des serveurs protégés. La licence est définie par serveur (physique ou virtuel). Un cluster SafeKit standard utilise généralement 2 serveurs.
 
-La tarification est indépendante du nombre de processeurs ou de sockets, ainsi que de l'édition de Windows ou de Linux.
+Le prix est indépendant du nombre de processeurs ou de sockets et de l’édition de Windows ou de Linux.
 
-Les modules d'application `.safe` préconfigurés sont fournis gratuitement.
+Les modules d’application `.safe` préconfigurés sont fournis gratuitement.
 
-SafeKit prend en charge l'activation hors ligne des licences ; il n'est donc pas nécessaire de disposer d'une connexion Internet pour activer une clé de licence.
+SafeKit prend en charge l’activation de licence hors ligne, de sorte qu’une connexion Internet n’est pas nécessaire pour activer une clé de licence.
 
-Une version d'essai gratuite et complète est disponible à des fins d'évaluation.
+Une version d’essai gratuite et complète est disponible pour évaluation.
 
 ## Assistance et maintenance standard {#standard-support-and-maintenance}
 
-La première année d'assistance et de maintenance standard est obligatoire lors de l'achat de la licence. Les années suivantes peuvent être renouvelées à titre facultatif.
+La première année de support et de maintenance standard est obligatoire avec l’achat de la licence. Les années suivantes peuvent être renouvelées en option.
 
-Dans le cadre d'un contrat de support en vigueur, l'assistance standard comprend un accès 24 h/24, 7 j/7 et 365 j/an au portail d'assistance en ligne pour un maximum de quatre interlocuteurs techniques désignés, l'accès à la base de connaissances, ainsi que l'ensemble des Service Packs, mises à jour et mises à niveau, sans frais supplémentaires. Une assistance en direct est assurée par le Centre d'assistance européen, du lundi au vendredi, de 9 h à 17 h, avec un accusé de réception des incidents dans un délai de quatre heures ouvrées du Centre d'assistance.
+Avec un contrat de support actif, le support standard inclut un accès 24/7/365 au portail de support web pour un maximum de quatre contacts techniques désignés, l’accès à la base de connaissances, ainsi que tous les Service Packs, mises à jour et mises à niveau sans frais supplémentaires. Le support en direct est disponible auprès du Centre de support européen, du lundi au vendredi, de 9h00 à 17h00, avec un accusé de réception des incidents dans les quatre heures ouvrables du Centre de support.
 
 ## Demander un devis {#information-to-include-in-your-quote-request}
 
-  * Veuillez indiquer le nombre de nœuds ; un cluster SafeKit standard compte généralement 2 nœuds.
-  * Précisez si les nœuds fonctionnent sous Windows ou sous Linux.
-  * Précisez l'application pour la haute disponibilité au niveau de l'application ou l'hyperviseur pour la haute disponibilité au niveau des machines virtuelles.
+  * Spécifiez le nombre de nœuds ; un cluster SafeKit standard comporte généralement 2 nœuds.
+  * Indiquez si les nœuds exécutent Windows ou Linux.
+  * Spécifiez l’application pour la haute disponibilité au niveau de l’application ou l’hyperviseur pour la haute disponibilité au niveau de la machine virtuelle.
 
 
-**Remarque :** pour la haute disponibilité au niveau des machines virtuelles, les solutions `hyperv.safe` et `kvm.safe` ne nécessitent que deux licences SafeKit pour les deux hôtes d’hyperviseur, quel que soit le nombre de machines virtuelles répliquées et redémarrées.
+**Remarque :** Pour la haute disponibilité au niveau de la machine virtuelle, `hyperv.safe` et `kvm.safe` ne nécessitent que deux licences SafeKit pour les deux hôtes hyperviseurs, quel que soit le nombre de machines virtuelles répliquées et redémarrées.
 
-{{< contact-marketo-form preferredLanguage="French" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/fr/confirmation-safekit/" programMemberField01="Contact FR (REQUIRES AN ANSWER)" Country="France" >}}
+{{< contact-marketo-form preferredLanguage="English US" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/fr/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
