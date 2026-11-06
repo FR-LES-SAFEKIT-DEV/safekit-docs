@@ -5,7 +5,7 @@ description: "Informieren Sie sich über das SafeKit-Lizenzmodell und fordern Si
 category: "home"
 lang: "de"
 topics: "Lizenzmodell und Preise, Standard-Support und Wartung, Angebot anfordern"
-translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 18 expressions"
+translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 18 expressions"
 ---
 
 # SafeKit Preise {#safekit-pricing}
@@ -37,4 +37,4 @@ Bei einem aktiven Supportvertrag umfasst der Standard-Support den 24/7/365-Zugan
 
 **Hinweis:** Für HA auf VM-Ebene benötigen `hyperv.safe` und `kvm.safe` nur zwei SafeKit-Lizenzen für die beiden Hypervisor-Hosts, unabhängig von der Anzahl der replizierten und neu gestarteten virtuellen Maschinen.
 
-{{< contact-marketo-form preferredLanguage="German" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/de/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="German" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/de/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Germany" >}}

@@ -5,7 +5,7 @@ description: "Comprendi il modello di licenza SafeKit e richiedi un preventivo p
 category: "home"
 lang: "it"
 topics: "Modello di licenza e prezzi, supporto e manutenzione standard, richiedi un preventivo"
-translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 13 expressions"
+translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 13 expressions"
 ---
 
 # Prezzi di SafeKit {#safekit-pricing}
@@ -37,4 +37,4 @@ Con un contratto di assistenza attivo, l’assistenza standard include l’acces
 
 **Nota:** per l’HA a livello di VM, `hyperv.safe` e `kvm.safe` richiedono solo due licenze SafeKit per i due host hypervisor, indipendentemente dal numero di macchine virtuali replicate e riavviate.
 
-{{< contact-marketo-form preferredLanguage="Italian" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/it/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="Italian" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/it/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Italy" >}}

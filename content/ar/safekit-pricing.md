@@ -5,7 +5,7 @@ description: "تعرّف على نموذج ترخيص SafeKit واطلب عرض 
 category: "home"
 lang: "ar"
 topics: "نموذج الترخيص والتسعير، والدعم والصيانة القياسية، وطلب عرض أسعار"
-translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 17 expressions"
+translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 17 expressions"
 ---
 
 # أسعار SafeKit {#safekit-pricing}

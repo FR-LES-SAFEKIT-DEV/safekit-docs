@@ -5,7 +5,7 @@ description: "SafeKit のライセンスモデルについてご理解いただ�
 category: "home"
 lang: "ja"
 topics: "ライセンスモデルと価格、標準サポートとメンテナンス、お見積りのご依頼"
-translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 27 expressions"
+translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 27 expressions"
 ---
 
 # SafeKit の価格 {#safekit-pricing}
@@ -37,4 +37,4 @@ SafeKit はオフラインでのライセンス認証に対応しているため
 
 **注：** VM レベルの HA の場合、`hyperv.safe` および `kvm.safe`、複製および再起動される仮想マシンの数に関係なく、2 つのハイパーバイザーホストに対して 2 つの SafeKit ライセンスのみを必要とします。
 
-{{< contact-marketo-form preferredLanguage="Japanese" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/ja/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="Japanese" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/ja/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Japan" >}}

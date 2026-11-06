@@ -5,7 +5,7 @@ description: "Begrijp het licentiemodel van SafeKit en vraag een offerte op maat
 category: "home"
 lang: "nl"
 topics: "Licentiemodel en prijzen, Standaardondersteuning en-onderhoud, Offerte aanvragen"
-translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 17 expressions"
+translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 17 expressions"
 ---
 
 # SafeKit-prijzen {#safekit-pricing}
@@ -37,4 +37,4 @@ Met een actief ondersteuningscontract omvat de standaardondersteuning 24/7/365 t
 
 **Opmerking:** voor HA op VM-niveau vereisen `hyperv.safe` en `kvm.safe` slechts twee SafeKit-licenties voor de twee hypervisor-hosts, ongeacht het aantal gerepliceerde en opnieuw gestarte virtuele machines.
 
-{{< contact-marketo-form preferredLanguage="Dutch" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/nl/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="Dutch" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/nl/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Netherlands" >}}

@@ -23,7 +23,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-06.14"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-06.15"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -546,6 +546,12 @@ def main():
             # paramètres de shortcode pointant vers une page du site : destination="/confirmation-safekit/" -> "/fr/confirmation-safekit/"
             line = lines[i] = re.sub(r'(\{\{[<%][^\n]*?\b\w+=")(/[\w\-/]*/(?:#[\w\-]+)?)(")',
                                      lambda x: x.group(1) + link_fix(x.group(2)) + x.group(3), line)
+            # paramètres de shortcode imposés par langue (glossaire "shortcode_params") :
+            # preferredLanguage="English US" -> "French", "ZH-HANS"...
+            for pname, values in GLOSSARY.get("shortcode_params", {}).items():
+                if lang in values:
+                    line = lines[i] = re.sub(r'(\{\{[<%%][^\n]*?\b%s=")[^"]*(")' % re.escape(pname),
+                                             lambda x, v=values[lang]: x.group(1) + v + x.group(2), line)
             s = line.strip()
         if in_code or not s or (re.fullmatch(r"\|?[\s:|-]+\|?", s) and "-" in s):
             continue

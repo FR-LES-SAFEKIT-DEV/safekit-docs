@@ -5,7 +5,7 @@ description: "了解 SafeKit 许可模式，并为 Windows 和 Linux 上的高�
 category: "home"
 lang: "zh-hans"
 topics: "许可模式和定价、标准支持和维护、询价"
-translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 27 expressions"
+translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 27 expressions"
 ---
 
 # SafeKit 定价 {#safekit-pricing}
@@ -37,4 +37,4 @@ SafeKit 支持离线许可证激活，因此激活许可证密钥不需要互联
 
 **注意：** 对于 VM 级 HA，`hyperv.safe` 和 `kvm.safe` 仅需要两个 SafeKit 许可证用于两个虚拟机管理程序主机，而与复制和重新启动的虚拟机数量无关。
 
-{{< contact-marketo-form preferredLanguage="ZH-HANS" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="ZH-HANS" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/zh-hans/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="China" >}}

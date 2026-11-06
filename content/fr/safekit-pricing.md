@@ -5,7 +5,7 @@ description: "Comprenez le modèle de licence SafeKit et demandez un devis perso
 category: "home"
 lang: "fr"
 topics: "Modèle de licence et tarification, Assistance et maintenance standard, Demander un devis"
-translation: "translate_md 2026-11-06.14 | glossaire 2026-11-06.6 | Translation LLM | 21 expressions"
+translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 21 expressions"
 ---
 
 # Tarifs SafeKit {#safekit-pricing}
@@ -37,4 +37,4 @@ Avec un contrat de support actif, le support standard inclut un accès 24/7/365 
 
 **Remarque :** Pour la haute disponibilité au niveau de la machine virtuelle, `hyperv.safe` et `kvm.safe` ne nécessitent que deux licences SafeKit pour les deux hôtes hyperviseurs, quel que soit le nombre de machines virtuelles répliquées et redémarrées.
 
-{{< contact-marketo-form preferredLanguage="French" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/fr/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="" >}}
+{{< contact-marketo-form preferredLanguage="French" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/fr/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="France" >}}

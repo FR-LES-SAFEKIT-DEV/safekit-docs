@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-06.6",
+  "version": "2026-11-06.9",
   "keep": [
     "mirror",
     "farm",
@@ -428,6 +428,10 @@
       [
         "\\*\\*([^*\\n]+?)(을|를|은|는|의)\\*\\*",
         "**\\1**\\2"
+      ],
+      [
+        "([A-Za-z0-9])\\s+(의|에서|에게|에|를|을|은|는|이|가|과|와|으로|로|도|만)(?=[\\s.,:;)!?*]|$)",
+        "\\1\\2"
       ]
     ],
     "ja": [
@@ -476,5 +480,32 @@
         "\\1-"
       ]
     ]
+  },
+  "shortcode_params": {
+    "preferredLanguage": {
+      "ar": "AR",
+      "de": "German",
+      "es": "Spanish",
+      "fr": "French",
+      "it": "Italian",
+      "ja": "Japanese",
+      "ko": "KO",
+      "nl": "Dutch",
+      "pt-br": "Brazilian Portuguese",
+      "pt-pt": "PT-PT",
+      "zh-hans": "ZH-HANS"
+    },
+    "Country": {
+      "de": "Germany",
+      "es": "Spain",
+      "fr": "France",
+      "it": "Italy",
+      "ja": "Japan",
+      "ko": "Korea, Republic of",
+      "nl": "Netherlands",
+      "pt-br": "Brazil",
+      "pt-pt": "Portugal",
+      "zh-hans": "China"
+    }
   }
 }
