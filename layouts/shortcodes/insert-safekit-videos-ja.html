@@ -1,118 +1,119 @@
-{{/* Shortcode: insert-safekit-videos-ja — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-06.11 | glossaire 2026-11-06.5 | Translation LLM | 27 expressions */}}
+{{/* Shortcode: insert-safekit-videos-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
-{{/* Source: content\ja\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 {{ $.Page.RenderString "{{%  insert-safekit-videos-table-ja  %}}" }}
 
-## SafeKit テクニカル・フェイルオーバー チュートリアル ＆ デモ {#safekit-failover-tutorials}
+## SafeKit テクニカルフェイルオーバーチュートリアルとデモ {#safekit-failover-tutorials}
 
-### SafeKit 動画：ウェビナー (9:43) {#demo-webinar}
+### SafeKit ビデオ：ウェビナー (9:43) {#demo-webinar}
 
 
-#### チャプター {#chapters}
+#### 章 {#chapters}
 
-  1. 🎬 [イントロダクション](https://www.youtube.com/watch?v=UiLwzqsMxis&t=0s) (0:38)
+  1. 🎬 [はじめに](https://www.youtube.com/watch?v=UiLwzqsMxis&t=0s) (0:38)
   2. 🎬 [SafeKit のデモンストレーション](https://www.youtube.com/watch?v=UiLwzqsMxis&t=38s) (1:41)
-  3. 🎬 [冗長性と高可用性（HA）ソリューションの例](https://www.youtube.com/watch?v=UiLwzqsMxis&t=139s) (2:00)
-  4. 🎬 [Milestone と連携し世界各国で販売される SafeKit](https://www.youtube.com/watch?v=UiLwzqsMxis&t=259s) (0:49)
-  5. 🎬 [2つのソリューションの選択：仮想マシンかアプリケーションクラスタか](https://www.youtube.com/watch?v=UiLwzqsMxis&t=308s) (2:29)
-  6. 🎬 [際立つ独自のメリット](https://www.youtube.com/watch?v=UiLwzqsMxis&t=457s) (2:06)
+  3. 🎬 [冗長化と高可用性ソリューションの例](https://www.youtube.com/watch?v=UiLwzqsMxis&t=139s) (2:00)
+  4. 🎬 [SafeKit は Milestone と共に多くの国で販売されています](https://www.youtube.com/watch?v=UiLwzqsMxis&t=259s) (0:49)
+  5. 🎬 [2 つのソリューションから選択：仮想マシンまたはアプリケーションクラスター](https://www.youtube.com/watch?v=UiLwzqsMxis&t=308s) (2:29)
+  6. 🎬 [独自の強み](https://www.youtube.com/watch?v=UiLwzqsMxis&t=457s) (2:06)
 
 [すべての動画はこちら](/ja/resources/safekit-on-line-training/)
 
-### SafeKit：HADRの導入方法 (6:42) {#safekit-hadr}
+### SafeKit: HADR の実装方法 (7:40) {#safekit-hadr}
 
 
-#### チャプター {#chapters-1}
+#### 章 {#chapters-1}
 
-  1. 🎬 [ストレッチ VLAN 構成における SafeKit HADR のご紹介](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s) (1:06)
-  2. 🎬 [同期ミラーリングとダブル確認（Double-Acknowledgment）の仕組み (1:41)](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s)
-  3. 🎬 [フェイルオーバーの仕組み：Gratuitous ARP (GARP) と仮想 IP](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s) (2:10)
-  4. 🎬 [低速な WAN 環境向けの設計：高可用性（HA）vs. バックアップ戦略](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s) (2:45)
+  1. 🎬 [SafeKit HADR over ストレッチ VLAN の紹介](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s) (1:06)
+  2. 🎬 [同期ミラーリングとダブル承認の仕組み](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s) (1:41)
+  3. 🎬 [フェイルオーバーの仕組み：Gratuitous ARP（GARP）と仮想 IP](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s) (2:10)
+  4. 🎬 [低速 WAN 向けの設計：HA とバックアップ戦略](https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s) (2:45)
 
-[SafeKit HADRについて詳しくはこちら](/ja/best-practises/high-availability-disaster-recovery-hadr/)
+[SafeKit HADR の詳細](/ja/best-practises/high-availability-disaster-recovery-hadr/)
 
-### SafeKit 動画: 仮想マシンレベルのクラスタリング (5:15) {#demo-hyperv}
+### SafeKit ビデオ：仮想マシンレベルのクラスタリング (5:15) {#demo-hyperv}
 
 
-#### チャプター {#chapters-2}
+#### 章 {#chapters-2}
 
-  1. 🎬 [2つの Hyper-V ノードと 2台の仮想マシン](https://www.youtube.com/watch?v=foo6YKg5Dmw&t=0s) (0:49)
-  2. 🎬 [クラスタと 2つの hyperv.safe モジュールの設定](https://www.youtube.com/watch?v=foo6YKg5Dmw&t=49s) (1:59)
-  3. 🎬 [VM のレプリケーション、移行、クラッシュ時のフェイルオーバー起動とテスト](https://www.youtube.com/watch?v=foo6YKg5Dmw&t=168s) (2:26)
+  1. 🎬 [Hyper-V ノード 2 台と仮想マシン 2 台](https://www.youtube.com/watch?v=foo6YKg5Dmw&t=0s) (0:49)
+  2. 🎬 [クラスターと 2 つの hyperv.safe モジュールを構成する](https://www.youtube.com/watch?v=foo6YKg5Dmw&t=49s) (1:59)
+  3. 🎬 [VM レプリケーション、移行、クラッシュ時のフェイルオーバーを開始してテストする](https://www.youtube.com/watch?v=foo6YKg5Dmw&t=168s) (2:26)
 
 🛠️ [無料トライアルはこちら](/ja/quick-install/safekit-quick-installation-guide-with-hyper-v/)
 
-### SafeKit 動画: SQLによるアプリケーションレベルのクラスタリング (8:47) {#demo-sql}
+### SafeKit ビデオ：SQL によるアプリケーションレベルのクラスタリング (8:47) {#demo-sql}
 
 
-#### チャプター {#chapters-3}
+#### 章 {#chapters-3}
 
-  1. 🎬 [SQL Server を搭載した 2つのノード](https://www.youtube.com/watch?v=T_6PsS4f9OQ&t=0s) (0:32)
-  2. 🎬 [クラスタと mirror.safe モジュールの設定](https://www.youtube.com/watch?v=T_6PsS4f9OQ&t=32s) (3:58)
-  3. 🎬 [SQL のレプリケーション、移行、クラッシュ時のフェイルオーバー起動とテスト](https://www.youtube.com/watch?v=T_6PsS4f9OQ&t=270s) (4:17)
-
-🛠️ [無料トライアルはこちら](/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/)
-
-### SafeKit 動画: OEM高可用性統合 (4:22) {#demo-milestone}
-
-
-#### チャプター {#chapters-4}
-
-  1. 🎬 [OEM 統合向け SafeKit](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=0s) (0:09)
-  2. 🎬 [OEM 設定例：Milestone XProtect](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=9s) (2:18)
-  3. 🎬 [フェイルオーバーのシナリオ解説](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=138s) (1:49)
-  4. 🎬 [まとめ：OEM 向け高可用性（HA）を製品ラインナップに追加する](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=247s) (0:15)
+  1. 🎬 [SQL Server を使用する 2 つのノード](https://www.youtube.com/watch?v=T_6PsS4f9OQ&t=0s) (0:32)
+  2. 🎬 [クラスターと mirror.safe モジュールを構成する](https://www.youtube.com/watch?v=T_6PsS4f9OQ&t=32s) (3:58)
+  3. 🎬 [SQL レプリケーション、移行、クラッシュ時のフェイルオーバーを開始してテストする](https://www.youtube.com/watch?v=T_6PsS4f9OQ&t=270s) (4:17)
 
 🛠️ [無料トライアルはこちら](/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/)
 
-### SafeKit 動画: ネットワーク負荷分散クラスタリング (5:03) {#demo-farm}
+### SafeKit ビデオ：OEM 高可用性統合 (4:22) {#demo-milestone}
 
 
-#### チャプター {#chapters-5}
+#### 章 {#chapters-4}
 
-  1. 🎬 [Apache を搭載した 2つのノード](https://www.youtube.com/watch?v=XSMV_eM-jgk&t=0s) (0:13)
-  2. 🎬 [クラスタと farm.safe モジュールの設定](https://www.youtube.com/watch?v=XSMV_eM-jgk&t=13s) (2:20)
-  3. 🎬 [ネットワーク負荷分散（ロードバランシング）、クラッシュ時のフェイルオーバー起動とテスト](https://www.youtube.com/watch?v=XSMV_eM-jgk&t=153s) (2:30)
+  1. 🎬 [OEM 統合用 SafeKit](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=0s) (0:09)
+  2. 🎬 [OEM セットアップ例：Milestone XProtect](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=9s) (2:18)
+  3. 🎬 [フェイルオーバーシナリオの説明](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=138s) (1:49)
+  4. 🎬 [まとめ：OEM HA をカタログに追加する](https://www.youtube.com/watch?v=dxiPG5ILC-0&t=247s) (0:15)
+
+🛠️ [無料トライアルはこちら](/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/)
+
+### SafeKit ビデオ：ネットワーク負荷分散クラスタリング (5:03) {#demo-farm}
+
+
+#### 章 {#chapters-5}
+
+  1. 🎬 [Apache を搭載した 2 つのノード](https://www.youtube.com/watch?v=XSMV_eM-jgk&t=0s) (0:13)
+  2. 🎬 [クラスターと farm.safe モジュールを構成する](https://www.youtube.com/watch?v=XSMV_eM-jgk&t=13s) (2:20)
+  3. 🎬 [ネットワーク負荷分散開始とテスト、クラッシュ時のフェイルオーバー](https://www.youtube.com/watch?v=XSMV_eM-jgk&t=153s) (2:30)
 
 🛠️ [無料トライアルはこちら](/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/)
 
-### SafeKit 動画: 無料認定プラットフォームチュートリアル (6:11) {#demo-certification}
+### SafeKit ビデオ：無料認証プラットフォームのチュートリアル (6:11) {#demo-certification}
 
 
-#### チャプター {#chapters-6}
+#### 章 {#chapters-6}
 
-  1. 🎬 [トレーニング & 資格認定プラットフォーム](https://www.youtube.com/watch?v=ijH4zXtn_3s&t=0s) (1:41)
+  1. 🎬 [トレーニングと認定のプラットフォーム](https://www.youtube.com/watch?v=ijH4zXtn_3s&t=0s) (1:41)
   2. 🎬 [SafeKit トレーニングモジュールとは？](https://www.youtube.com/watch?v=ijH4zXtn_3s&t=101s) (1:57)
-  3. 🎬 [SafeKit 認定資格を取得する方法](https://www.youtube.com/watch?v=ijH4zXtn_3s&t=218s) (1:40)
-  4. 🎬 [取得した認定資格を LinkedIn で共有する](https://www.youtube.com/watch?v=ijH4zXtn_3s&t=318s) (0:53)
+  3. 🎬 [SafeKit の認定資格を取得するには？](https://www.youtube.com/watch?v=ijH4zXtn_3s&t=218s) (1:40)
+  4. 🎬 [LinkedIn で証明書をシェアする](https://www.youtube.com/watch?v=ijH4zXtn_3s&t=318s) (0:53)
 
-[トレーニングおよび認定プラットフォームはこちら](https://training.my.evidian.com/)
+[トレーニングと認定のプラットフォームはこちら](https://training.my.evidian.com/)
 
-### SafeKit ビデオ：競合比較とクラスターアーキテクチャ (13:21) {#safekit-competition}
-
-
-#### チャプター {#chapters-7}
-
-  1. 🎬 [イントロダクション](https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s) (4:10)
-  2. 🎬 [仮想マシンクラスタ](https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s) (1:20)
-  3. 🎬 [ミラークラスタ](https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s) (6:04)
-  4. 🎬 [ファームクラスタ](https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s) (1:46)
-
-[SafeKit と従来の HA クラスターの比較を見る](/ja/product/#safekit-ha-comparison "SafeKit ソフトウェアと従来のハードウェアベース HA クラスターの詳細な比較")
-
-### SafeKit ビデオ: スマートフォン上のコンソール (0:42) {#demo-console}
+### SafeKit ビデオ：SafeKit と競合製品の比較 (13:21) {#safekit-competition}
 
 
-#### チャプター {#chapter}
+#### 章 {#chapters-7}
 
-  1. 🎬 [クラスタ管理のためのスマートフォン上のコンソール](https://www.youtube.com/watch?v=W_qaeZmEozAs&t=0s) (0:42)
+  1. 🎬 [はじめに](https://www.youtube.com/watch?v=DKra6YVLGZk&t=0s) (4:10)
+  2. 🎬 [仮想マシンのクラスター](https://www.youtube.com/watch?v=DKra6YVLGZk&t=250s) (1:20)
+  3. 🎬 [mirror クラスター](https://www.youtube.com/watch?v=DKra6YVLGZk&t=330s) (6:04)
+  4. 🎬 [farm クラスター](https://www.youtube.com/watch?v=DKra6YVLGZk&t=694s) (1:46)
+
+[SafeKit と従来の HA クラスターの比較](/ja/product/#safekit-ha-comparison "SafeKit ソフトウェアと従来のハードウェアベース HA クラスターの詳細な比較")
+
+### SafeKit ビデオ：スマートフォンでのコンソール操作 (0:42) {#demo-console}
 
 
-### SafeKit ビデオ: フェイルオーバー時のメール通知 (0:56) {#demo-notifications}
+#### 章 {#chapter}
+
+  1. 🎬 [スマートフォンでクラスターを管理するコンソール](https://www.youtube.com/watch?v=W_qaeZmEozAs&t=0s) (0:42)
 
 
-#### チャプター {#chapter-1}
+### SafeKit ビデオ：フェイルオーバー時のメール通知 (0:56) {#demo-notifications}
+
+
+#### 章 {#chapter-1}
 
   1. 🎬 [フェイルオーバー時のメール通知](https://www.youtube.com/watch?v=arSUU45_AJs&t=0s) (0:56)
 

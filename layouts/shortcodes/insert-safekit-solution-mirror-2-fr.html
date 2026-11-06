@@ -1,129 +1,132 @@
-{{/* Shortcode: insert-safekit-solution-mirror-2-fr — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-06.1 | glossaire 2026-11-06.1 | Translation LLM | 21 expressions */}}
+{{/* Shortcode: insert-safekit-solution-mirror-2-en — 13 instances in 13 files */}}
 {{/* Parameters: app, guide, img */}}
-{{/* Source: content\fr\architectures\file-replication-byte-level-with-failover-mirror-cluster.md */}}
+{{/* Source: content\architectures\file-replication-byte-level-with-failover-mirror-cluster.md */}}
 
 
 
-## Fonctionnement du cluster miroir SANless SafeKit avec {{ .Get "app" }} {#safekit-hyperv-tco}
+## Fonctionnement du cluster mirror SafeKit SANless avec {{ .Get "app" }} {#safekit-hyperv-tco}
 
-**SafeKit pour {{ .Get "app" }}** offre une **Haute Disponibilité** transparente tout en réduisant considérablement le TCO (Coût Total de Possession). En éliminant les coûts matériels et opérationnels du clustering traditionnel, SafeKit propose une alternative HA légère à 2 nœuds face aux solutions de clustering complexes.
+**SafeKit pour {{ .Get "app" }}** offre **une haute disponibilité** transparente tout en réduisant considérablement le TCO (coût total de possession). En éliminant le matériel et les frais généraux opérationnels du clustering traditionnel, SafeKit offre une alternative HA à 2 nœuds et légère aux solutions de clustering complexes.
 
-  * **Continuité d'activité tout-en-un :** Une solution complète fournissant une **IP virtuelle** , un **Basculement automatique** , un **Retour automatique après panne** et une **Réplication en temps réel** dans un seul package intégré.
-  * **Réplication synchrone (Zéro perte de données) :** Assurez une intégrité absolue des données pour les applications transactionnelles grâce à la réplication synchrone, garantissant 0 perte de données en cas de défaillance.
-  * **Protection flexible au niveau du fichier :** SafeKit effectue une réplication logicielle au niveau du fichier, totalement transparente pour l'application. Elle protège non seulement les bases de données, mais aussi tous les dossiers et données associés. Vous pouvez répliquer les dossiers existants là où ils sont installés, même sur le **disque système**.
-  * **Déploiement simplifié (Sans AD/LDAP) :** Contrairement aux clusters traditionnels, il n'y a **pas besoin de configurer d'annuaire AD/LDAP** , ce qui supprime les contraintes d'installation complexes et les dépendances d'infrastructure.
-  * **Zéro investissement SAN pour la HA :** Obtenez une redondance complète grâce à une architecture sans partage de ressources (shared-nothing). Elle fonctionne avec des disques locaux standards, éliminant le besoin de matériel SAN coûteux, de commutateurs Fiber Channel et de maintenance de stockage spécialisée.
-  * **Efficacité réelle à 2 nœuds :** Alors que la plupart des solutions nécessitent un troisième nœud « témoin » (witness) pour éviter le split-brain, SafeKit offre un **cluster robuste à 2 nœuds** , permettant d'économiser 33 % sur le matériel, l'énergie et l'espace en rack.
-  * **Redondance indépendante du matériel :** Évitez la dépendance vis-à-vis d'un fournisseur (vendor lock-in). Construisez votre cluster de Haute Disponibilité en utilisant n'importe quelle marque de serveur ou type de stockage interne, prolongeant ainsi le cycle de vie du matériel existant et réduisant les coûts de remplacement.
-  * **Licence au coût prévisible :** SafeKit assure la Haute Disponibilité via une licence perpétuelle unique, garantissant une budgétisation prévisible et éliminant le risque de hausses de prix annuelles.
-
-
-En regroupant la **Haute Disponibilité** dans une couche logicielle légère, SafeKit offre une **redondance et une continuité d'activité de classe entreprise pour {{ .Get "app" }}** à une fraction du coût des suites de clustering traditionnelles.
+  * **Continuité des activités tout-en-un :** une solution complète offrant **une IP virtuelle**, **un basculement automatique**, **failback automatique** et **une réplication en temps réel** dans un seul ensemble intégré.
+  * **Réplication synchrone (zéro perte de données) :** assurez l’intégrité absolue des données pour les applications transactionnelles avec la réplication synchrone, garantissant une perte de données nulle en cas de panne.
+  * **Protection flexible au niveau des fichiers :** SafeKit effectue une réplication basée sur l’hôte au niveau des fichiers, ce qui est totalement transparent pour l’application. Il protège non seulement les bases de données, mais aussi tous les dossiers et données associés. Vous pouvez répliquer les dossiers existants exactement là où ils sont installés, même sur le **disque système**.
+  * **Déploiement simplifié (sans AD/LDAP) :** Contrairement aux clusters traditionnels, il **n’est pas nécessaire de configurer le répertoire AD/LDAP**, ce qui supprime les exigences d’installation complexes et les dépendances d’infrastructure.
+  * **Aucun investissement SAN pour la HA :** Obtenez une redondance complète en utilisant une architecture sans partage. Elle fonctionne avec des disques locaux standard, éliminant le besoin de matériel SAN coûteux, de commutateurs à canal de fibre et de maintenance de stockage spécialisée.
+  * **Véritable efficacité à 2 nœuds :** Alors que la plupart des solutions nécessitent un troisième nœud « témoin » pour éviter la scission du cluster, SafeKit offre un **cluster robuste à 2 nœuds**, ce qui permet d’économiser 33 % sur le matériel, l’énergie et l’espace dans le rack.
+  * **Redondance indépendante du matériel :** Évitez la dépendance vis-à-vis d’un fournisseur. Créez votre cluster de haute disponibilité en utilisant n’importe quelle marque de serveur ou type de stockage interne, prolongeant ainsi le cycle de vie du matériel existant et réduisant les coûts de remplacement.
+  * **Licences à coût prévisible :** SafeKit offre une haute disponibilité grâce à une licence perpétuelle unique, garantissant un budget prévisible et éliminant le risque d’augmentations de prix annuelles.
 
 
-![Architecture de cluster SafeKit HA pour {{ .Get "app" }} fournissant une IP virtuelle, un basculement automatique, un retour automatique après panne et une réplication en temps réel]({{ .Get "img" }} "w:512")
-
- **Cluster miroir SafeKit HA pour {{ .Get "app" }}**  
+En intégrant **la haute disponibilité** dans une couche logicielle légère, SafeKit offre **une redondance de niveau entreprise et une continuité des activités pour {{ .Get "app" }}** à une fraction du coût des suites de clustering traditionnelles.
 
 
-<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Guide d'installation rapide d'un cluster miroir pour {{ .Get "app" }} ></a>
+![Architecture de cluster {{ .Get "app" }} haute disponibilité SafeKit fournissant une adresse IP virtuelle, un basculement automatique, failback automatique et une réplication en temps réel.]({{ .Get "img" }} "w:512")
+
+**Cluster mirror SafeKit HA pour {{ .Get "app" }}**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ Guide d’installation rapide cluster mirror pour {{ .Get "app" }} ></a>
 ## Table des matières {#toc}
 
-  * [Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité sans SAN pour {{ .Get "app" }} ?](#safekit-mirror-ha-cluster)
-  * [Comment le cluster miroir SafeKit fonctionne-t-il avec {{ .Get "app" }} ?](#safekit-mirror-cluster)
-  * [Comparatif : SafeKit pour {{ .Get "app" }} vs. Autres solutions de clustering](#safekit-mirror-ha-comparison)
-  * [Guide vidéo : Configuration d'un cluster miroir SafeKit HA](#videoguide-safekit-mirror-cluster)
-  * [🔍 Hub de navigation Haute Disponibilité SafeKit](#hub)
+  * [Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité {{ .Get "app" }} sans SAN ?](#safekit-mirror-ha-cluster)
+  * [Comment le cluster mirror SafeKit fonctionne-t-il avec {{ .Get "app" }} ?](#safekit-mirror-cluster)
+  * [Limitations de la haute disponibilité de SafeKit](#safekit-ha-limitations)
+  * [Comparaison : SafeKit pour {{ .Get "app" }} et autres solutions de clustering](#safekit-mirror-ha-comparison)
+  * [Guide vidéo : Configuration d’un cluster HA Mirror SafeKit](#videoguide-safekit-mirror-cluster)
+  * [🔍 Centre de navigation de haute disponibilité SafeKit](#hub)
 
 
-## Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité sans SAN pour {{ .Get "app" }} ? {#safekit-mirror-ha-cluster}
+## Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité {{ .Get "app" }} sans SAN ? {#safekit-mirror-ha-cluster}
 
-### Qu'est-ce que la solution SafeKit Mirror HA pour {{ .Get "app" }} ? {#safekit-mirror-ha-solution}
+### Qu’est-ce que la solution SafeKit Mirror HA pour {{ .Get "app" }} ? {#safekit-mirror-ha-solution}
 
-SafeKit apporte la haute disponibilité à {{ .Get "app" }} entre deux serveurs de n'importe quelle marque.
+SafeKit apporte une haute disponibilité à {{ .Get "app" }} entre deux serveurs de n’importe quelle marque.
 
-Cet article explique comment implémenter rapidement un cluster {{ .Get "app" }} sans stockage partagé sur un SAN et sans compétences spécifiques.
+Cet article explique comment mettre en œuvre rapidement un cluster {{ .Get "app" }} sans stockage partagé sur un SAN et sans compétences spécifiques.
 
-Le principe de la solution est de définir les dossiers où résident les données de l'**application {{ .Get "app" }}** , ses services, une IP virtuelle et des modules de surveillance (checkers).
+Le principe de la solution consiste à définir les dossiers où résident les données de l’**application {{ .Get "app" }}**, ses services, une adresse IP virtuelle et les vérificateurs.
 
-SafeKit implémente ensuite la **réplication en temps réel** et le **basculement automatique** pour garantir la disponibilité continue du service.
+SafeKit met ensuite en œuvre **la réplication en temps réel** et **le basculement automatique** pour garantir la disponibilité continue du service.
 
-### Pourquoi choisir une solution HA tout-en-un unifiée plutôt que des outils fragmentés ? {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
+### Pourquoi choisir une solution HA unifiée tout-en-un plutôt que des outils fragmentés ? {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
 
-Contrairement aux solutions « d'appoint » qui combinent des produits distincts pour la réplication et le clustering, **SafeKit** intègre l'**IP virtuelle, le basculement automatique, le retour automatique après panne et la réplication de fichiers en temps réel** au sein d'un seul et unique moteur.
+Contrairement aux solutions « bolt-on » qui combinent des produits distincts pour la réplication et le clustering, **SafeKit** intègre **l’IP virtuelle, le basculement automatique, failback automatique et la réplication de fichiers en temps réel** dans un seul moteur.
 
-Cela élimine le risque d'un « château de cartes » où les mises à jour de l'OS brisent les liens fragiles entre des outils disparates, offre un point de responsabilité unique pour l'ensemble de la pile HA, et réduit les erreurs humaines en fournissant une interface unique pour la HA de {{ .Get "app" }}.
+Cela élimine le risque de « château de cartes » où les mises à jour du système d’exploitation brisent les liens fragiles entre des outils disparates, fournit un point de responsabilité unique pour l’ensemble de la pile HA et réduit les erreurs humaines en fournissant une interface unique pour {{ .Get "app" }} HA.
 
-### Dois-je choisir la haute disponibilité au niveau applicatif ou au niveau de la machine virtuelle (VM) ? {#application-vs-vm-high-availability}
+### Dois-je choisir la haute disponibilité au niveau de l’application ou au niveau de la machine virtuelle (VM) ? {#application-vs-vm-high-availability}
 
-Avec SafeKit, vous disposez de la flexibilité nécessaire pour choisir le modèle de redondance qui correspond à vos besoins.
+Avec SafeKit, vous avez la possibilité de choisir le modèle de redondance qui correspond à vos besoins.
 
-La **redondance au niveau de la VM** (pour Hyper-V ou KVM) est la plus simple à mettre en œuvre car elle réplique l'intégralité de la machine virtuelle, sans nécessiter de connaissances sur l'application interne.
+**La redondance au niveau de la machine virtuelle** (pour Hyper-V ou KVM) est la plus simple à mettre en œuvre, car elle réplique l’ensemble de la machine virtuelle, sans nécessiter de connaissance de l’application interne.
 
-À l'inverse, la **redondance au niveau applicatif** est plus granulaire ; elle réplique uniquement des dossiers de données spécifiques et redémarre les services de l'application plutôt que l'ensemble du système d'exploitation.
+Par ailleurs, **la redondance au niveau des applications** est plus granulaire ; elle ne réplique que des dossiers de données spécifiques et redémarre les services d’application plutôt que l’ensemble du système d’exploitation.
 
-Bien que la HA au niveau de la VM soit plus facile à configurer, la HA au niveau applicatif est indépendante de l'hyperviseur et peut s'exécuter sur des environnements physiques, virtuels ou cloud.
+Bien que la haute disponibilité au niveau de la machine virtuelle soit plus facile à configurer, la haute disponibilité au niveau de l’application est indépendante de l’hyperviseur et peut s’exécuter dans des environnements physiques, virtuels ou cloud.
 
-### Quels sont les avantages distinctifs de la haute disponibilité SafeKit pour {{ .Get "app" }} par rapport aux concurrents ? {#safekit-mirror-ha-advantages}
+### Quels sont les avantages distinctifs de la haute disponibilité de {{ .Get "app" }} SafeKit par rapport à la concurrence ? {#safekit-mirror-ha-advantages}
 
-SafeKit se différencie des clusters traditionnels pour {{ .Get "app" }} grâce à son **architecture sans partage de ressources (shared-nothing)** et son déploiement simplifié. Alors que la plupart des solutions d'entreprise nécessitent un déploiement de réplication complexe ou un stockage SAN coûteux, SafeKit offre :
+SafeKit se différencie des clusters {{ .Get "app" }} traditionnels grâce à son **architecture sans partage** et à son déploiement simplifié. Alors que la plupart des solutions d’entreprise nécessitent un déploiement de réplication complexe ou un stockage SAN coûteux, SafeKit offre :
 
-  * **Réplication synchrone avec zéro perte de données :** SafeKit implémente une réplication 100 % synchrone, garantissant une intégrité totale des données pour les applications transactionnelles. En cas de défaillance, il n'y a **aucune perte de données (RPO=0)**. De plus, SafeKit est capable de répliquer non seulement les bases de données de {{ .Get "app" }}, mais aussi **tous les autres dossiers de données** (journaux, fichiers de configuration, etc.), assurant ainsi le miroir complet de tout l'environnement.
-  * **Clustering simplifié à 2 nœuds :** Contrairement aux clusters standards qui nécessitent souvent un « témoin » (un 3e nœud, disque ou partage de fichiers) pour maintenir un quorum, SafeKit offre une haute disponibilité complète avec seulement deux serveurs redondants, réduisant ainsi les coûts et la complexité de l'infrastructure.  
-[En savoir plus sur notre mécanisme de heartbeat et de quorum](/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
-  * **Gestion unifiée :** Les administrateurs peuvent gérer le basculement de {{ .Get "app" }}, la réplication des données et la supervision via une console SafeKit unique. Cela rend la haute disponibilité accessible aux équipes sans expertise spécialisée en administration de cluster.
-  * **Modules de surveillance personnalisés (Checkers) :** SafeKit va au-delà de la simple surveillance des services de base ; il **propose des checkers** pour surveiller l'état de santé du processus de {{ .Get "app" }}. Le système est hautement extensible, permettant l'ajout de checkers personnalisés adaptés à votre environnement.
-
-
-### Comment SafeKit réduit-il le TCO (Coût Total de Possession) pour {{ .Get "app" }} par rapport au clustering standard ? {#safekit-mirror-ha-tco}
-
-Contrairement aux solutions de haute disponibilité traditionnelles, SafeKit est conçu pour fonctionner avec un **surcoût d'infrastructure minimal** , sans aucun compromis sur la fiabilité. Les principales économies par rapport à un cluster de basculement traditionnel comprennent :
-
-  * **Zéro coût de stockage :** SafeKit utilise une architecture sans partage de ressources (shared-nothing) qui fonctionne avec des disques locaux. Cela élimine le besoin de matériel SAN coûteux, de réseaux iSCSI ou de configurations vSAN complexes.
-  * **Aucune édition Enterprise requise :** Alors que les mécanismes de réplication natifs peuvent nécessiter des licences Enterprise onéreuses, SafeKit **n'a pas besoin de l'édition Enterprise**. Il fonctionne parfaitement avec l'édition standard et même avec la **version gratuite** , offrant une disponibilité haut de gamme pour une fraction du prix.
-  * **Efficacité réelle à 2 nœuds :** Contrairement aux clusters standards qui nécessitent souvent un « témoin » (un 3e nœud, un disque ou un partage de fichiers) pour maintenir un quorum, SafeKit offre une haute disponibilité complète avec seulement **deux serveurs redondants**.
-  * **Pas d'abonnements forcés :** SafeKit propose une **licence perpétuelle**. Vous êtes propriétaire de votre logiciel, ce qui vous évite le « piège de l'abonnement » et les hausses de prix annuelles imprévisibles, courantes avec les modèles modernes basés uniquement sur le cloud ou sur abonnement.
-  * **Faibles dépenses opérationnelles (OPEX) :** En tant que solution plug-and-play, elle ne nécessite aucune formation spécialisée ni recours à des consultants externes coûteux pour la maintenance, contrairement aux outils de clustering open-source complexes.
-  * **Tarification indépendante du processeur :** L'octroi de licences est indépendant du nombre de processeurs ou de cœurs. Avec seulement deux licences pour deux nœuds, vous pouvez protéger {{ .Get "app" }} contre les pannes.
+  * **Réplication synchrone avec zéro perte de données :** SafeKit implémente une réplication 100 % synchrone, garantissant une intégrité totale des données pour les applications transactionnelles. En cas de panne, il n’y a **aucune perte de données (RPO=0)**. De plus, SafeKit est capable de répliquer non seulement les bases de données {{ .Get "app" }}, mais **aussi tous les autres dossiers de données** (journaux, fichiers de configuration, etc.), garantissant ainsi la mise en miroir de l’environnement entier.
+  * **Clustering simplifié à 2 nœuds :** Contrairement aux clusters standard qui nécessitent souvent un « témoin » (un 3e nœud, un disque, un partage de fichiers) pour maintenir un quorum, SafeKit offre une haute disponibilité complète avec seulement deux serveurs redondants, réduisant ainsi les coûts et la complexité de l’infrastructure.  
+[Apprenez-en davantage sur notre mécanisme de pulsation et de quorum](/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+  * **Gestion unifiée :** les administrateurs peuvent gérer le basculement {{ .Get "app" }}, la réplication des données et la surveillance via une seule console SafeKit. Cela rend la haute disponibilité accessible aux équipes sans expertise spécialisée en « administration de cluster ».
+  * **Vérificateurs personnalisés :** SafeKit va au-delà de la surveillance de base des services ; il **offre des vérificateurs** pour surveiller l’état du processus de l’ {{ .Get "app" }}. Le système est hautement extensible, ce qui permet d’ajouter des vérificateurs personnalisés adaptés à votre environnement.
 
 
-### Est-il possible de mettre en place un cluster miroir {{ .Get "app" }} sans compétences en clustering ? {#mirror-cluster-without-clustering-skills}
+### Comment SafeKit réduit-il le coût total de possession (TCO) d’ {{ .Get "app" }} par rapport au clustering standard ? {#safekit-mirror-ha-tco}
 
-Oui. Cet article explique comment [**implémenter rapidement un cluster miroir {{ .Get "app" }}**]({{ .Get "guide" }}) sans avoir besoin d'une gestion SAN spécialisée ou de compétences complexes en clustering de haute disponibilité (HA). En utilisant les **scripts de basculement automatisés** de SafeKit pour gérer la réplication et le redémarrage de **{{ .Get "app" }}** , vous bénéficiez d'une solution de redondance robuste, nettement plus simple à déployer et à maintenir que les solutions de clustering traditionnelles.
+Contrairement aux solutions traditionnelles de haute disponibilité, SafeKit est conçu pour fonctionner avec un **minimum absolu de frais d’infrastructure**, sans compromettre la fiabilité. Les principales économies par rapport aux clusters de basculement traditionnels comprennent :
 
-### Au-delà de {{ .Get "app" }}, quels types d'applications et d'environnements SafeKit peut-il protéger ? {#supported-applications-and-environments}
-
-SafeKit est une solution de haute disponibilité polyvalente **compatible à la fois avec Windows et Linux**. Elle permet une **réplication synchrone en temps réel** et un basculement automatique pour un large éventail de charges de travail critiques, notamment :
-
-  * **Environnements virtuels et physiques :** des machines virtuelles complètes sous Hyper-V ou KVM.
-  * **Orchestration de conteneurs :** des environnements Docker, Podman et K3s (Kubernetes).
-  * **Données et services :** des répertoires de fichiers individuels, des services et diverses bases de données.
-  * **Infrastructures Cloud :** la haute disponibilité pour les applications Cloud.
+  * **Coûts de stockage nuls :** SafeKit utilise une architecture sans partage qui fonctionne avec des disques locaux. Cela élimine le besoin de matériel SAN coûteux, de réseaux iSCSI ou de configurations vSAN complexes.
+  * **Pas besoin de l’édition Entreprise :** Alors que le mécanisme de réplication natif peut nécessiter des licences Entreprise coûteuses, SafeKit **n’a pas besoin de l’édition Entreprise**. Il fonctionne parfaitement avec l’édition standard et même l’**édition gratuite**, offrant une haute disponibilité à une fraction du coût.
+  * **Véritable efficacité à 2 nœuds :** Contrairement aux clusters standard qui nécessitent souvent un « témoin » (un 3e nœud, disque ou partage de fichiers) pour maintenir un quorum, SafeKit offre une haute disponibilité complète avec seulement **deux serveurs redondants**.
+  * **Pas d’abonnement forcé :** SafeKit offre une **licence perpétuelle**. Vous êtes propriétaire de votre logiciel, ce qui vous évite le « piège de l’abonnement » et les augmentations de prix annuelles imprévisibles, courantes avec les modèles modernes basés sur le cloud ou sur abonnement.
+  * **Faibles dépenses opérationnelles (OPEX) :** En tant que solution prête à l’emploi, elle ne nécessite aucune formation spécialisée ni consultation externe coûteuse pour la maintenance, contrairement aux outils de clustering open source complexes.
+  * **Tarification indépendante du processeur :** La licence est indépendante du nombre de processeurs ou de cœurs. Avec seulement deux licences pour deux nœuds, vous pouvez protéger {{ .Get "app" }} contre les pannes.
 
 
-SafeKit propose également des **clusters de type "Farm"** avec des fonctionnalités natives de **répartition de charge réseau et de basculement** (Network Load Balancing and Failover) pour les applications sans état (stateless) telles que les **serveurs Web**.
+### Est-il possible de configurer un cluster mirror {{ .Get "app" }} sans compétences en clustering ? {#mirror-cluster-without-clustering-skills}
 
-💡 [Explorez la liste complète des solutions de haute disponibilité supportées ici.](/fr/solutions/)
+Oui. Cet article explique comment [implémenter rapidement un cluster mirror {{ .Get "app" }}]({{ .Get "guide" }}) sans avoir besoin de compétences spécialisées en gestion de SAN ou en clustering HA complexe. En utilisant **les scripts de basculement automatisés** de SafeKit pour gérer la réplication et le redémarrage de **{{ .Get "app" }}**, vous obtenez une solution de redondance robuste qui est beaucoup plus simple à déployer et à maintenir que les solutions de clustering traditionnelles.
+
+### Au-delà {{ .Get "app" }}, quelles applications et environnements SafeKit peut-il protéger ? {#supported-applications-and-environments}
+
+SafeKit est une solution polyvalente de haute disponibilité **pour Windows et Linux**. Elle permet **la réplication synchrone en temps réel** et le basculement automatique pour une large gamme de charges de travail critiques, notamment :
+
+  * **Environnements virtuels et physiques :** Machines virtuelles Hyper-V ou KVM complètes.
+  * **Orchestration de conteneurs :** environnements Docker, Podman et K3s (Kubernetes).
+  * **Données et services :** Répertoires de fichiers individuels, services et diverses bases de données.
+  * **Infrastructure Cloud :** Haute disponibilité pour les applications Cloud.
+
+
+SafeKit fournit également **clusters farm** **une répartition de charge réseau et un basculement** natifs pour les applications sans état, telles que **les serveurs Web**.
+
+💡 [Découvrez la liste complète des solutions HA prises en charge ici.](/fr/solutions/)
 
 
 {{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-fr app=%q  %%}}" (.Get "app")) }}
 
+{{ $.Page.RenderString "{{%  insert-safekit-usage-fr  %}}" }}
 
-## Comparaison : SafeKit pour {{ .Get "app" }} vs Autres Solutions de Clustering {#safekit-mirror-ha-comparison}
 
-Fonctionnalité | SafeKit pour {{ .Get "app" }} | Clustering de Basculement avec Stockage Partagé | Réplication de Base de Données  
+## Comparaison : SafeKit pour {{ .Get "app" }} et autres solutions de clustering {#safekit-mirror-ha-comparison}
+
+Fonctionnalité | SafeKit pour {{ .Get "app" }} | Clustering de basculement de stockage partagé | Réplication de base de données  
 ---|---|---|---  
-Architecture | SANless (Shared-Nothing) | Stockage Partagé (SAN/NAS) | Shared-Nothing  
-Reconfiguration de l'Application | Aucune (Exécution sur place) | Requise (Déplacement des données vers le disque partagé) | Aucune  
-Périmètre de Réplication | Application Complète (BD + Config + Logs) | Données du Disque Partagé | Données de la Base de Données Uniquement  
-Type de Réplication | Synchrone (RPO Zéro) | Synchrone (via SAN) | Dépend des Éditions (Souvent Asynchrone)  
-Logique de Basculement / Retour de Ressource | Entièrement Automatique | Entièrement Automatique | Souvent Manuelle ou Complexe  
-Dépendance AD/LDAP | Indépendant (Pas d'AD requis) | Requis sur Windows (Active Directory) | Indépendant  
-Complexité du Déploiement | Faible (< 30 Minutes) | Élevée (AD, Stockage, Quorum) | Moyenne (Réplication Uniquement, Pas de Basculement)  
+Architecture | SANless (sans partage) | Stockage partagé (SAN/NAS) | Sans partage  
+Reconfiguration de l’application | Aucun (s’exécute sur place) | Obligatoire (Déplacer les données vers le disque partagé) | Aucun  
+Portée de la réplication | Application complète (base de données + configuration + journaux) | Données du disque partagé | Données de la base de données uniquement  
+Type de réplication | Synchrone (RPO zéro) | Synchrone (via SAN) | Dépend des éditions (souvent asynchrone)  
+Logique de basculement/retour arrière | Entièrement automatique | Entièrement automatique | Souvent manuel ou complexe  
+Dépendance AD/LDAP | Indépendant (aucune autorisation requise) | Requis sur Windows (Active Directory) | Indépendant  
+Complexité du déploiement | Faible (< 30 minutes) | Élevé (AD, stockage, quorum) | Moyen (réplication uniquement, pas de basculement)  
 
-**Pour résumé** , en éliminant le besoin d'un SAN et en simplifiant le déploiement — en supprimant les dépendances telles qu'**Active Directory** et les configurations de **Quorum** spécialisées — SafeKit offre une alternative HA légère et indépendante du matériel. Cela se traduit par un TCO considérablement réduit tout en garantissant que votre environnement {{ .Get "app" }} reste résilient, avec une perte de données nulle et une reprise automatisée.
+**En résumé**, en éliminant le besoin d’un SAN et en simplifiant le déploiement (en supprimant les dépendances telles **qu’Active Directory** et les configurations **Quorum** spécialisées), SafeKit offre une alternative HA légère et indépendante du matériel. Il en résulte un TCO (coût total de possession) nettement inférieur, tout en garantissant que votre environnement {{ .Get "app" }} reste résilient, sans perte de données et avec une récupération automatisée.
 
-## Guide vidéo : Configuration d'un cluster miroir HA SafeKit {#videoguide-safekit-mirror-cluster}
+## Guide vidéo : Configuration d’un cluster mirror SafeKit HA {#videoguide-safekit-mirror-cluster}
 
 
 {{ $.Page.RenderString "{{%  insert-safekit-mirror-video-fr  %}}" }}

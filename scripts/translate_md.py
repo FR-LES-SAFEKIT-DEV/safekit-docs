@@ -23,7 +23,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-05.13"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-06.11"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -82,6 +82,7 @@ S = "\x00"  # sentinelle interne
 
 GLOSSARY = {"keep": [], "replace": {}}
 APOS = False  # apostrophe typographique ’ (fr, it...)
+NATIVE = False  # ja/zh/ko : Google voit la traduction imposée (particules ajoutées naturellement)
 CJK = False   # chinois / japonais : ponctuation pleine chasse, espaces chinois-latin
 CJK_CHAR = "\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"
 CJK_PUNCT = "。，、；：？！）」』】"
@@ -102,7 +103,7 @@ def load_glossary(path, lang):
     if terms:
         # mot en minuscules (mirror, farm) : toute casse ; sinon casse exacte (Floating IP)
         alts = [("(?i:%s)" % re.escape(t)) if t.islower() else re.escape(t) for t in terms]
-        KEEP_RE = re.compile(r"(?<![\w/#.-])(%s)(?![\w/-])" % "|".join(alts))
+        KEEP_RE = re.compile(r"(?<![\w/#.-])(%s)(?![\w/-]|\.\w)" % "|".join(alts))
     GLOSSARY["_rep"] = GLOSSARY.get("replace", {}).get(lang, {})
     # "terms" : expressions traduites d'office, ex. "farm cluster" -> "cluster farm" (fr)
     keep_lower = {k.lower() for k in GLOSSARY.get("keep", [])}
@@ -132,18 +133,61 @@ class Ctx:
         self.apos = APOS
         self.dot_after = set()
         self.terms = set()
+        self.titles = []     # infobulles de liens à traduire à part : [(n, texte)]
+        self.title_tr = {}
+        self.bold_terms = set()   # termes imposés formant à eux seuls un passage en gras
         self.shown = {}      # texte montré à Google pour une expression imposée   # jetons issus des expressions imposées
     def add(self, v):
         self.store.append(v); return len(self.store) - 1
 
+def go_templates(text):
+    """Positions des expressions Go Template {{ ... }} (imbrication comprise : printf "{{%% x %%}}")."""
+    out, i = [], 0
+    while True:
+        a = text.find("{{", i)
+        if a < 0:
+            return out
+        depth, j = 0, a
+        while j < len(text) - 1:
+            if text.startswith("{{", j):
+                depth += 1; j += 2; continue
+            if text.startswith("}}", j):
+                depth -= 1; j += 2
+                if depth == 0:
+                    break
+                continue
+            j += 1
+        if depth != 0:
+            return out
+        out.append((a, j))
+        i = j
+
+def protect_templates(text, ctx):
+    parts, last = [], 0
+    for a, b in go_templates(text):
+        parts.append(text[last:a]); parts.append(f"{S}P{ctx.add(text[a:b])}{S}"); last = b
+    parts.append(text[last:])
+    return "".join(parts)
+
 def encode(text, ctx):
+    text = protect_templates(text, ctx)   # {{ .Get "app" }}, {{< shortcode >}}... jamais traduits
     def link(m):
-        n = ctx.add((m.group(1), ctx.link_fix(m.group(3)) + m.group(4)))
-        return f"{S}A{n}{S}{m.group(2)}{S}/A{S}"
+        title = re.match(r'\s+"([^"]*)"', m.group(4)) if m.group(4) else None
+        n = ctx.add((m.group(1), ctx.link_fix(m.group(3)), title.group(1) if title else None, m.group(2)))
+        out = f"{S}A{n}{S}{m.group(2)}{S}/A{S}"
+        if title and (m.group(1) == "!" or " " not in title.group(1).strip()):
+            return out   # image ou titre technique ("w:512") : titre conservé tel quel
+        if title:   # infobulle : traduite dans une requête séparée (sinon Google mélange texte et infobulle)
+            ctx.titles.append((n, title.group(1)))
+        return out
     text = LINK.sub(link, text)
     # liens HTML bruts : <a href="/page/"> -> <a href="/fr/page/">
     text = re.sub(r'(<a\b[^>]*?\bhref=")([^"]+)(")', lambda m: m.group(1) + ctx.link_fix(m.group(2)) + m.group(3), text)
     text = re.sub(r"`[^`]+`", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)   # code d'abord
+    # durées / heures (9:43, 3:21:35) : jamais traduites ("7 時 40 分", "٨:٤٧")
+    text = re.sub(r"(?<![\w:.=/])\d{1,2}(?::\d{2}){1,2}(?![\w:])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    # noms de fichiers (mirror.safe, farm.safe, setup.exe...) : protégés en entier, sinon "mirror" seul est protégé
+    text = re.sub(r"(?<![\w/.-])[\w-]+\.(?:safe|exe|msi|ps1|sh|cmd|bat|xml|conf|cfg|ini|txt|log|json|ya?ml|dll|vhdx?)\b(?![\w/-])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     for rx, target in TERMS:
         def term(m, target=target):
             out = target
@@ -168,33 +212,51 @@ def encode(text, ctx):
     text = BOLD.sub(r"<b>\1</b>", text)
     text = re.sub(r"(?<![\w*])_([^_\n]+?)_(?!\w)", r"<i>\1</i>", text)       # _italique_
     text = re.sub(f"{S}A(\\d+){S}", r'<a id="\1">', text)
+    text = re.sub(f"{S}T(\\d+){S}", r'<span class="tt" data-t="\1">', text)
+    text = text.replace(f"{S}/T{S}", "</span>")
     text = text.replace(f"{S}/A{S}", "</a>")
     def span(m):
         # Google voit le vrai mot (mirror, `start_prim`...) et non un numéro,
         # sinon il invente un nom autour ("集群编号为", "方案SafeKit"...)
         tok = ctx.store[int(m.group(1))]
         if int(m.group(1)) in ctx.shown:   # expression imposée : on montre l'anglais, pas la traduction
-            shown = html.escape(ctx.shown[int(m.group(1))], quote=False)
+            shown = html.escape(re.sub(r"<[^>]+>", "", tok).strip() if NATIVE else ctx.shown[int(m.group(1))], quote=False)
             return f'<span class="notranslate" translate="no" data-k="{m.group(1)}">{shown}</span>'
         if tok.startswith("`"):
             shown = tok.strip("`")
+        elif tok.startswith("{{"):
+            g = re.search(r'\.Get\s+"(\w+)"', tok)
+            shown = g.group(1).capitalize() if g else ""   # {{ .Get "app" }} -> "App" (nom propre)
         elif tok.startswith("{"):
             shown = ""
         else:
             shown = re.sub(r"<[^>]+>", "", tok).strip()
         shown = html.escape(shown, quote=False) or m.group(1)
         return f'<span class="notranslate" translate="no" data-k="{m.group(1)}">{shown}</span>'
+    for m in re.finditer(f"<b>{S}P(\\d+){S}</b>", text):   # gras = exactement un terme imposé
+        ctx.bold_terms.add(int(m.group(1)))
     return re.sub(f"{S}P(\\d+){S}", span, text)
 
 def decode(text, ctx):
     st = ctx.store
     text = re.sub(r'<span[^>]*data-k="(\d+)"[^>]*>.*?</span>', lambda m: f"{S}P{m.group(1)}{S}", text)
-    text = re.sub(r"<b>\s*([。，、；：！？.,;:!?]+)\s*", r"\1<b>", text)   # "<b>。SafeKit</b>" -> "。<b>SafeKit</b>"
+    text = re.sub(r"<b>\s*([。，、；：！？.,;:!?]+)\s*", r"\1<b>", text)
+    # source "**terme imposé**" : si Google étend le gras à la phrase, on le ramène au terme seul
+    for n in ctx.bold_terms:
+        tk = f"{S}P{n}{S}"
+        text = re.sub(r"<b>((?:(?!</?b>).)*?)%s((?:(?!</?b>).)*?)</b>" % re.escape(tk),
+                      lambda m: (m.group(1) + f"<b>{tk}</b>" + m.group(2)) if (m.group(1).strip() or m.group(2).strip()) else m.group(0), text, flags=re.S)
     text = re.sub(r"\s*<b>\s*(.*?)\s*</b>\s*", lambda m: f" **{m.group(1)}** ", text)
     text = re.sub(r"<i>\s*(.*?)\s*</i>", r"*\1*", text)
     def link(m):
-        bang, dest = st[int(m.group(1))]
-        return f"{bang}[{m.group(2).strip()}]({dest})"
+        bang, dest, title, orig = st[int(m.group(1))]
+        label = m.group(2).strip()
+        if not re.search(r"[.!?。！？]\s*$", re.sub(r"<[^>]+>|\x00P\d+\x00", "", orig)):
+            label = re.sub(r"\s*[.。]$", "", label)   # point ajouté par Google en fin de lien
+        if title is not None:
+            t = ctx.title_tr.get(int(m.group(1)), title).replace('"', "”")
+            dest = f'{dest} "{t}"'
+        return f"{bang}[{label}]({dest})"
     text = re.sub(r'<a id="(\d+)">(.*?)</a>', link, text)
     text = html.unescape(text)
     # point perdu par Google après du `code` en fin de phrase : "`start_prim` Ces commandes"
@@ -223,6 +285,8 @@ def decode(text, ctx):
         text = re.sub(r"([，。、；！？])[ ]+(?![*\s])", r"\1", text)           # 例如， Floating -> 例如，Floating
         # espace entre chinois/japonais et latin, chiffres, `code`, termes protégés
         def vis(n, end):   # premier / dernier caractère visible d'un jeton protégé
+            if st[n].startswith("{{"):
+                return "a"   # {{ .Get "app" }} = nom de produit latin -> espace avec le chinois/japonais
             v = re.sub(r"<[^>]+>", "", st[n]).strip("`") or "a"
             return v[-1] if end else v[0]
         latin = lambda c: bool(re.match(r"[A-Za-z0-9`%]", c))
@@ -245,7 +309,10 @@ def decode(text, ctx):
             if at_start:   # jamais de minuscule forcée ("ARP المجاني" doit rester "ARP")
                 tok = re.sub(r"^((?:<[^>]+>)*)(\w)", lambda x: x.group(1) + x.group(2).upper(), tok, count=1)
         return tok
-    text = re.sub(f"{S}P(\\d+){S}", restore, text)
+    for _ in range(4):   # jetons imbriqués (balise HTML contenant {{ .Get }})
+        if not re.search(f"{S}P\\d+{S}", text):
+            break
+        text = re.sub(f"{S}P(\\d+){S}", restore, text)
     text = re.sub(r"(<a\b[^>]*>)\s+", r"\1", text)      # "<a ...> texte </a>" -> "<a ...>texte</a>"
     text = re.sub(r"\s+(</a>)", r"\1", text)
     for pat, repl in GRAMMAR:   # accords autour des expressions imposées (ex. "une cluster" -> "un cluster")
@@ -255,6 +322,7 @@ def decode(text, ctx):
             wrong, right = wrong.replace("'", "’"), right.replace("'", "’")
         text = text.replace(wrong, right)
     # nettoyage des espaces ajoutés autour du gras / des parenthèses
+    text = re.sub(r"\*\*([^*\n]+?)([,;])\*\*", r"**\1**\2", text)   # "**Load-Balancing,**" -> "**Load-Balancing**,"
     text = re.sub(r"\*\* +([,.;)\]])", r"**\1", text)
     text = re.sub(r"([(\[]) +\*\*", r"\1**", text)
     text = re.sub(r"\( +", "(", text)
@@ -270,12 +338,48 @@ def decode(text, ctx):
         text = re.sub(r"\*\*([^*\n]+?)([。！？])([^*\n]+?)\*\*", r"**\1**\2\3", text)
         text = cjk_bold(text)
         text = re.sub(r"→\*\*", "→ **", text)
+        text = re.sub(f"([{CJK_CHAR}]) +(?=[{CJK_CHAR}])", r"\1", text)
+        text = re.sub(f"([{CJK_CHAR}]):\\s*(?=\\S)", r"\1：", text)   # "アーキテクチャ: 共有" -> "アーキテクチャ：共有"   # "管理することで ネットワーク"
+        # espacements de la source autour des liens : "🎬 [texte](url) (2:00)"
+        text = re.sub(r"([^\w\s%s%s\[(（*])\[" % (CJK_CHAR, CJK_PUNCT), r"\1 [", text)   # 🎬[ -> 🎬 [
+        text = re.sub(r"(\]\([^)\s]*\))(?=[(（]\d)", r"\1 ", text)                  # ](url)(2:00) -> ](url) (2:00)
+        # durées / numéros entre parenthèses : demi-chasse comme la source — "（9:43）" -> " (9:43)"
+        text = re.sub(r"\s*（(\d[\d:.,]*)）", r" (\1)", text)
+        text = re.sub(r"([，。、；：！？])[ ]+(?=[%s])" % CJK_CHAR, r"\1", text)          # ： 免费 -> ：免费
         # états : parenthèses pleine chasse, sans espaces — jamais dans une URL de lien
         parts = re.split(r"(\]\(<[^>]*>\)|\]\([^)\s]*\))", text)
         text = "".join(p if i % 2 else re.sub(r"\s*[（(](Ready|NotReady)[)）]\s*", r"（\1）", p) for i, p in enumerate(parts))
     text = re.sub(r"  +", " ", text)
     text = re.sub(r"(?<!\.)\.\.(?!\.)", ".", text)   # ".." -> "." (pas "...")
+    if NATIVE:
+        text = native_terms(text, ctx)
     return text.strip()
+
+def native_terms(text, ctx):
+    """ja/zh/ko, après restauration des expressions imposées :
+    - doublon : "ネットワークネットワーク負荷分散" -> "ネットワーク負荷分散"
+    - gras étendu : "**SafeKit は…負荷分散**" -> "SafeKit は…**負荷分散**" (si la source mettait le terme seul en gras)
+    - particule d'objet perdue avant un verbe : "**負荷分散**簡素化し" -> "**負荷分散**を簡素化し" ; "분산** 간소화하고" -> "분산**을 간소화하고"
+    """
+    for n in ctx.terms:
+        tr = re.sub(r"<[^>]+>", "", ctx.store[n]).strip()
+        if len(tr) < 3:
+            continue
+        for k in range(len(tr) - 1, 1, -1):   # préfixe du terme répété juste avant lui
+            text = text.replace(tr[:k] + tr, tr)
+            text = text.replace(tr[:k] + "**" + tr, "**" + tr)
+        if n in ctx.bold_terms:
+            esc = re.escape(tr)
+            text = re.sub(r"\*\*([^*\n]*?)%s([^*\n]*?)\*\*" % esc,
+                          lambda m: m.group(1) + f"**{tr}**" + m.group(2) if (m.group(1).strip() or m.group(2).strip()) else m.group(0), text)
+        esc = re.escape(tr)
+        # japonais : nom + verbe en する sans particule
+        text = re.sub(r"(%s(?:\*\*)?)(?=[\u4e00-\u9fff]{2,}(?:し|する|します|され|させ))" % esc, r"\1を", text) if re.search("[\u3040-\u30ff]", text) else text
+        # coréen : nom + verbe en 하다 sans particule
+        if re.match("[\uac00-\ud7a3]", tr[-1]):
+            obj = "을" if (ord(tr[-1]) - 0xAC00) % 28 else "를"
+            text = re.sub(r"(%s(?:\*\*)?)(?= [\uac00-\ud7a3]+(?:하고|하여|합니다|하는|한다|해서|하며|하기))" % esc, r"\1" + obj, text)
+    return text
 
 def _kind(c):
     """'s' espace/début, 'p' ponctuation, 'c' caractère CJK, 'l' latin/chiffre"""
@@ -292,6 +396,16 @@ def cjk_bold(text):
     parts = text.split("**")
     if len(parts) < 3 or len(parts) % 2 == 0:
         return text
+    for k in range(1, len(parts), 2):
+        # ponctuation de phrase en tête ou en fin de gras : "透明 **。它…**" -> "透明。**它…**"
+        m1 = re.match(r"\s*([。！？、，；：]+)\s*", parts[k])
+        if m1 and parts[k][m1.end():].strip():
+            parts[k - 1] = parts[k - 1].rstrip() + m1.group(1)
+            parts[k] = parts[k][m1.end():]
+        m2 = re.search(r"\s*([。！？、，；]+)\s*$", parts[k])
+        if m2 and parts[k][:m2.start()].strip():
+            parts[k + 1] = m2.group(1) + parts[k + 1].lstrip()
+            parts[k] = parts[k][:m2.start()]
     for k in range(1, len(parts), 2):
         inner = parts[k].strip()
         if not inner:
@@ -339,7 +453,7 @@ def make_link_fixer(target, lang, missing, host):
         return f"<{new}>" if angle else new
     return fix
 
-SHORTCODE = re.compile(r"(\{\{[<%]\s*/?\s*)([\w-]+?)-([A-Za-z]{2}(?:-[A-Za-z]+)?)(?=[\s%>])")
+SHORTCODE = re.compile(r"(\{\{[<%]%?\s*/?\s*)([\w-]+?)-([A-Za-z]{2}(?:-[A-Za-z]+)?)(?=[\s%>\"])")
 
 def make_shortcode_fixer(target, src, lang, missing):
     """insert-xxx-en -> insert-xxx-<lang> si layouts/shortcodes/insert-xxx-<lang>.* existe."""
@@ -389,11 +503,14 @@ def main():
     if not key and not a.dry_run:
         sys.exit("Variable GOOGLE_TRANSLATE_API_KEY absente.")
     global APOS
-    global CJK
+    global CJK, NATIVE
+    NATIVE = lang.split("-")[0] in ("zh", "ja", "ko")
     APOS = lang.split("-")[0] in ("fr", "it", "pt")
     CJK = lang.split("-")[0] in ("zh", "ja")
     load_glossary(a.glossary, lang)
-    lines = open(a.source, encoding="utf-8").read().split("\n")
+    raw = open(a.source, encoding="utf-8", newline="").read()
+    eol = "\r\n" if "\r\n" in raw else "\n"          # fins de ligne d'origine (CRLF Windows conservé)
+    lines = raw.replace("\r\n", "\n").split("\n")
     missing = set()
     link_fix = make_link_fixer(a.target, lang, missing, a.host)
     sc_missing = set()
@@ -428,8 +545,9 @@ def main():
             s = line.strip()
         if in_code or not s or (re.fullmatch(r"\|?[\s:|-]+\|?", s) and "-" in s):
             continue
-        if re.fullmatch(r"(\{\{[<%].*?[%>]\}\}\s*)+", s):
-            continue
+        if s.startswith("{{") and not re.sub(r"\s", "", "".join(
+                s[p:q] for p, q in zip([0] + [b for _, b in go_templates(s)], [a for a, _ in go_templates(s)] + [len(s)]))):
+            continue   # ligne composée uniquement d'expressions Go Template / shortcodes
         if "|" in s and (s.startswith("|") or s.count("|") >= 2):
             # la ligne entière du tableau part en une seule requête (contexte complet) ;
             # les cellules sont séparées par des balises <td> que Google conserve
@@ -459,7 +577,9 @@ def main():
         m = PREFIX.match(line)
         if m.group(2).strip():
             ctx = Ctx(link_fix)
-            jobs.append((i, m.group(1), encode(m.group(2), ctx), "", ctx))
+            body = m.group(2)
+            trail = body[len(body.rstrip()):]   # "  " en fin de ligne = saut de ligne Markdown, à conserver
+            jobs.append((i, m.group(1), encode(body.rstrip(), ctx), trail, ctx))
 
     global MODEL
     if a.model == "llm":
@@ -474,7 +594,7 @@ def main():
     retry, row_lost = [], 0
     for (i, rc, ctx), t in zip(rows, row_out):
         tds = re.findall(r"<td[^>]*>(.*?)</td>", t, re.S)
-        row_lost += len(ctx.store) - len(set(re.findall(r'(?:data-k="|<a id=")(\d+)', t)))
+        row_lost += len(set(re.findall(r'(?:data-k="|<a id=")(\d+)', "".join(e for _, _, e, _ in rc))) - set(re.findall(r'(?:data-k="|<a id=")(\d+)', t)))
         if len(tds) == len(rc):
             for (c, lead, e, trail), td in zip(rc, tds):
                 jobs.append(((i, c), lead, e, trail, ctx)); out.append(td.strip())
@@ -485,12 +605,30 @@ def main():
         print(f"{len(retry)} cellule(s) retraduite(s) une par une (structure de ligne modifiée par Google)")
         jobs += retry
         out += translate([r[2] for r in retry])
+    # infobulles des liens : traduites à part, puis réinjectées au décodage
+    seen, tjobs = set(), []
+    for j in jobs:
+        c = j[4]
+        if id(c) in seen:
+            continue
+        seen.add(id(c))
+        for n, ttl in c.titles:
+            tc = Ctx(link_fix)
+            tjobs.append((c, n, ttl, tc, encode(ttl, tc)))
+    if tjobs:
+        for (c, n, ttl, tc, _), r in zip(tjobs, translate([x[4] for x in tjobs])):
+            d = decode(r, tc)
+            if not re.search(r"[.!?]\s*$", ttl):
+                d = re.sub(r"\s*[.。]$", "", d)
+            c.title_tr[n] = d
     tables, lost, numbers, punct, bold = {}, 0, [], [], []
     for (idx, before, enc, after, ctx), t in zip(jobs, out):
         if not getattr(ctx, "row", False):
-            lost += len(ctx.store) - len(set(re.findall(r'(?:data-k="|<a id=")(\d+)', t)))
+            lost += len(set(re.findall(r'(?:data-k="|<a id=")(\d+)', enc)) - set(re.findall(r'(?:data-k="|<a id=")(\d+)', t)))
         strip = lambda x: re.sub(r"<[^>]+>", " ", re.sub(r'<span[^>]*data-k="\d+"[^>]*>.*?</span>|<a id="\d+">', " ", x))
-        miss = [n for n in set(re.findall(r"\d+", strip(enc))) if n not in re.findall(r"\d+", strip(t))]
+        # nombres souvent écrits en toutes lettres : "0 data loss", "2-node", "3rd", "layer 2", "Test 1"
+        src_nums = re.sub(r"\b0\b|\b[1-9](?=-\w|st\b|nd\b|rd\b|th\b)|(?i:\b(?:layer|test)\s+)\d\b", " ", strip(enc))
+        miss = [n for n in set(re.findall(r"\d+", src_nums)) if n not in re.findall(r"\d+", strip(t))]
         if CJK:  # "layer 2" -> "二层", "2-node" -> "双节点" : pas une perte
             cn = {"1": "一单", "2": "二两双", "3": "三", "4": "四", "5": "五", "6": "六", "7": "七", "8": "八", "9": "九", "10": "十"}
             miss = [n for n in miss if not any(c in t for c in cn.get(n, "-"))]
@@ -503,6 +641,10 @@ def main():
         if miss:
             numbers.append((idx[0] if isinstance(idx, tuple) else idx, miss))
         t = decode(t, ctx)
+        # pas de point final ajouté quand la source n'en a pas ("[Lire le guide](/x/)。")
+        src_vis = re.sub(r"<[^>]+>", "", enc).strip()
+        if src_vis and not re.search(r"[.!?。！？]$", src_vis):
+            t = re.sub(r"(?<!\.)[.。](?=\s*$)", "", t)
         if CJK:  # gras déplacé par Google : à cheval sur deux phrases ou coupant un mot
             parts = t.split("**")
             bad = len(parts) % 2 == 0 or any(
@@ -526,10 +668,17 @@ def main():
         had = any(l.startswith("translation:") for l in lines[:fm_end])
         lines = [l for l in lines[:fm_end] if not l.startswith("translation:")] + [sig] + lines[fm_end:]
         shift = 0 if had else 1   # les numéros de ligne signalés suivent le fichier écrit
+    elif lines and lines[0].lstrip().startswith("{{"):
+        # gabarit de shortcode sans front matter : trace dans un commentaire Go (invisible sur le site)
+        sig = (f'{{{{/* translation: translate_md {VERSION} | glossaire {GLOSSARY.get("version", "?")} | '
+               f'{"Translation LLM" if MODEL else "NMT"} | {len(TERMS)} expressions */}}}}')
+        had = lines[0].startswith("{{/* translation:")
+        lines = [sig] + (lines[1:] if had else lines)
+        shift = 0 if had else 1
     else:
         shift = 0
     Path(a.target).parent.mkdir(parents=True, exist_ok=True)
-    open(a.target, "w", encoding="utf-8").write("\n".join(lines))
+    open(a.target, "w", encoding="utf-8", newline="").write(eol.join(lines))
     lost += row_lost
     n_cells = sum(1 for j in jobs if getattr(j[4], "row", False))
     print(f"{len(jobs) - n_cells + len(rows)} segments traduits"

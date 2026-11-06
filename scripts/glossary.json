@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-05.17",
+  "version": "2026-11-06.5",
   "keep": [
     "mirror",
     "farm",
@@ -19,7 +19,8 @@
     "STOP",
     "WAIT",
     "UP",
-    "DOWN"
+    "DOWN",
+    "OEM"
   ],
   "terms": {
     "farm cluster": {
@@ -250,13 +251,38 @@
       "ar": "فسيفساء SafeKit (mosaic)"
     },
     "high availability cluster": {
-      "fr": "cluster de haute disponibilité"
+      "fr": "cluster de haute disponibilité",
+      "ja": "高可用性クラスター",
+      "zh-hans": "高可用性集群",
+      "ko": "고가용성 클러스터"
     },
     "high availability clusters": {
-      "fr": "clusters de haute disponibilité"
+      "fr": "clusters de haute disponibilité",
+      "ja": "高可用性クラスター",
+      "zh-hans": "高可用性集群",
+      "ko": "고가용성 클러스터"
     },
     "high-availability cluster": {
       "fr": "cluster de haute disponibilité"
+    },
+    "SafeKit for": {
+      "fr": "SafeKit pour",
+      "de": "SafeKit für",
+      "es": "SafeKit para",
+      "pt": "SafeKit para",
+      "it": "SafeKit per",
+      "nl": "SafeKit voor"
+    },
+    "architecture": {
+      "ja": "アーキテクチャ",
+      "zh-hans": "架构",
+      "ko": "아키텍처",
+      "ar": "البنية"
+    },
+    "network load balancing": {
+      "ja": "ネットワーク負荷分散",
+      "zh-hans": "网络负载均衡",
+      "ko": "네트워크 부하 분산"
     }
   },
   "grammar": {
@@ -288,6 +314,10 @@
       [
         "\\b(clusters?)\\s+(?:à\\s+)?haute disponibilité",
         "\\1 de haute disponibilité"
+      ],
+      [
+        "\\b([Ff]onctionnement) (cluster)",
+        "\\1 du \\2"
       ]
     ],
     "it": [
@@ -348,6 +378,10 @@
       [
         "بروتوكول (?:[\\u0600-\\u06FF]+ ){1,3}(?=\\(?GARP)",
         ""
+      ],
+      [
+        "(\\S) +:(?=\\s)",
+        "\\1:"
       ]
     ],
     "de": [
@@ -366,6 +400,10 @@
       [
         "(\\S) +:(?=\\s|\\*|$)",
         "\\1:"
+      ],
+      [
+        "(\\w\\.safe) (?=(?:Modul|Cluster)\\w*)",
+        "\\1-"
       ]
     ],
     "ko": [
@@ -380,11 +418,19 @@
       [
         "(\\w)/ (GARP)",
         "\\1/\\2"
+      ],
+      [
+        "(\\S) +:(?=\\s)",
+        "\\1:"
+      ],
+      [
+        "\\*\\*([^*\\n]+?)(을|를|은|는|의)\\*\\*",
+        "**\\1**\\2"
       ]
     ],
     "ja": [
       [
-        "クラスタ(?!ー)",
+        "クラスタ(?![ーリ])",
         "クラスター"
       ],
       [
@@ -422,6 +468,10 @@
       [
         "-cluster\\s+cluster(\\w)",
         "-cluster\\1"
+      ],
+      [
+        "(\\S) -(?=[a-z])",
+        "\\1-"
       ]
     ]
   }

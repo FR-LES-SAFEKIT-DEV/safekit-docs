@@ -1,110 +1,134 @@
-{{/* Shortcode: insert-safekit-solution-mirror-2-zh-hans */}}
+{{/* translation: translate_md 2026-11-06.3 | glossaire 2026-11-06.1 | Translation LLM | 23 expressions */}}
+{{/* Shortcode: insert-safekit-solution-mirror-2-en — 13 instances in 13 files */}}
 {{/* Parameters: app, guide, img */}}
+{{/* Source: content\architectures\file-replication-byte-level-with-failover-mirror-cluster.md */}}
 
-## SafeKit SANless 镜像集群如何与 {{ .Get "app" }} 配合工作 {#safekit-hyperv-tco}
 
-**适用于 {{ .Get "app" }} 的 SafeKit** 可提供无缝的**高可用性**，显著降低总体拥有成本（TCO）。SafeKit 无需传统集群所需的硬件和运维开销，提供轻量的双节点 HA 替代方案。
 
-  * **一体化业务连续性：** 在一个集成方案中提供虚拟 IP、自动故障转移、自动故障恢复和实时复制。
-  * **同步复制（零数据丢失）：** 为事务型应用保障数据完整性，故障时实现 RPO=0。
-  * **灵活的文件级保护：** 以对应用透明的主机级方式复制数据库及相关文件夹，也支持**系统磁盘**。
-  * **简化部署（无需 AD/LDAP）：** 无需配置 AD/LDAP 目录，也不依赖相关基础设施。
-  * **HA 无需投资 SAN：** 采用无共享架构和标准本地磁盘，无需昂贵的 SAN 硬件或专门存储维护。
-  * **真正的双节点效率：** 无需第三个 witness 节点来防止 split-brain；硬件、电力和机架空间最多可节省 33%。
-  * **硬件无关的冗余：** 可选用任意服务器品牌和内部存储，延长现有硬件的使用周期。
-  * **许可成本可预测：** 一次性永久许可，避免不可预测的年度涨价。
+## SANless SafeKit mirror 集群如何与 {{ .Get "app" }} 配合使用 {#safekit-hyperv-tco}
 
-SafeKit 将**高可用性**整合到轻量软件层中，以远低于传统集群套件的成本，为 **{{ .Get "app" }} 提供冗余和业务连续性**。
+**SafeKit for {{ .Get "app" }}** 可提供无缝**高可用性**，同时显著降低总拥有成本 (TCO)。通过消除传统集群的硬件和运营开销，SafeKit 提供了一种精简的 2 节点高可用性替代方案，以取代复杂的集群解决方案。
 
-![适用于 {{ .Get "app" }} 的 SafeKit HA 集群架构，包含虚拟 IP、自动故障转移与恢复以及实时复制]({{ .Get "img" }} "w:512")
+  * **一体化业务连续性：** 一个完整的解决方案，在一个单一的集成包中提供**虚拟 IP**、**自动故障转移**、**自动回切**和**实时复制**。
+  * **同步复制（零数据丢失）：** 通过同步复制确保事务处理应用程序的绝对数据完整性，在发生故障时保证零数据丢失。
+  * **灵活的文件级保护：** SafeKit 在文件级别执行基于主机的复制，对应用程序完全透明。**它不仅保护数据库，还保护所有相关文件夹和数据。您可以将现有文件夹精确地复制到其安装位置，甚至在 系统磁盘**上。
+  * **简化部署（无 AD/LDAP）：** 与传统集群不同，**无需 AD/LDAP 目录配置**，从而消除了复杂的安装要求和基础架构依赖。
+  * **高可用性零 SAN 投资：** 使用无共享架构实现完全冗余。它适用于标准本地磁盘，无需昂贵的 SAN 硬件、光纤通道交换机和专业的存储维护。
+  * **真正的双节点效率：** 虽然大多数解决方案需要第三个“见证”节点来防止裂脑，但 SafeKit 提供了一个强大的**双节点集群**，节省了 33% 的硬件、电力和机架空间。
+  * **硬件无关的冗余：** 避免供应商锁定。使用任何服务器品牌或内部存储类型构建高可用性集群，延长现有硬件的生命周期并降低更换成本。
+  * **成本可预测的许可：** SafeKit 通过一次性永久许可提供高可用性，确保预算可预测并消除年度价格上涨的风险。
 
-**适用于 {{ .Get "app" }} 的 SafeKit HA 镜像集群**
 
-<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }} 镜像集群快速安装指南 ></a>
+通过将**高可用性**整合到轻量级软件层中，SafeKit 以传统集群套件一小部分的成本**为 {{ .Get "app" }} 提供企业级冗余和业务连续性**。
+
+
+![SafeKit 高可用性 {{ .Get "app" }} 集群架构，提供虚拟 IP、自动故障转移、自动回切和实时复制]({{ .Get "img" }} "w:512")
+
+**适用于 {{ .Get "app" }} SafeKit HA mirror 集群**
+
+<a class="btn-quick-install" href="{{ .Get "guide" }}">⚡ {{ .Get "app" }} 的快速 mirror 集群安装指南 ></a>
 ## 目录 {#toc}
 
-  * [SafeKit 如何为 {{ .Get "app" }} 实现无 SAN 的 HA 集群？](#safekit-mirror-ha-cluster)
-  * [SafeKit 镜像集群如何与 {{ .Get "app" }} 配合工作？](#safekit-mirror-cluster)
-  * [与其他集群解决方案的比较](#safekit-mirror-ha-comparison)
-  * [视频：配置 SafeKit HA 镜像集群](#videoguide-safekit-mirror-cluster)
-  * [🔍 SafeKit 高可用导航中心](#hub)
+  * [SafeKit 软件如何简单地实现无共享存储 {{ .Get "app" }} 高可用性集群？](#safekit-mirror-ha-cluster)
+  * [SafeKit mirror 集群如何与 {{ .Get "app" }} 配合使用？](#safekit-mirror-cluster)
+  * [SafeKit 高可用性限制](#safekit-ha-limitations)
+  * [比较：SafeKit for {{ .Get "app" }} 与其他集群解决方案](#safekit-mirror-ha-comparison)
+  * [视频指南：配置 SafeKit Mirror HA 集群](#videoguide-safekit-mirror-cluster)
+  * [🔍 SafeKit 高可用性导航中心](#hub)
 
-## SafeKit 如何为 {{ .Get "app" }} 实现无 SAN 的 HA 集群？ {#safekit-mirror-ha-cluster}
 
-### 什么是适用于 {{ .Get "app" }} 的 SafeKit Mirror HA 解决方案？ {#safekit-mirror-ha-solution}
+## SafeKit 软件如何简单地实现无共享存储 {{ .Get "app" }} 高可用性集群？ {#safekit-mirror-ha-cluster}
 
-SafeKit 可在任意品牌的两台服务器之间为 {{ .Get "app" }} 提供高可用性。只需定义**{{ .Get "app" }} 应用程序**的数据文件夹、服务、虚拟 IP 和检查器，即可在无需共享 SAN 存储或专门技能的情况下构建集群。SafeKit 负责**实时复制**和**自动故障转移**。
+### 什么是适用于 {{ .Get "app" }} SafeKit Mirror HA 解决方案？ {#safekit-mirror-ha-solution}
 
-### 为什么选择一体化 HA 方案，而不是分散的工具？ {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
+SafeKit 可为任何品牌的两台服务器之间的 {{ .Get "app" }} 提供高可用性。
 
-**SafeKit** 将虚拟 IP、自动故障转移与恢复、实时文件复制集成到单一引擎中，避免不同产品之间脆弱的连接，集中管理并减少人为错误。
+本文介绍了如何在没有共享存储的 SAN 上快速实施 {{ .Get "app" }} 集群，而无需特定技能。
 
-### 应选择应用级还是虚拟机（VM）级高可用性？ {#application-vs-vm-high-availability}
+该解决方案的原理是定义 **{{ .Get "app" }} 程序**数据、其服务、虚拟 IP 和检查器所在的文件夹。
 
-**VM 级冗余**（Hyper-V 或 KVM）复制整个虚拟机，无需了解应用内部机制。**应用级冗余**仅复制指定数据文件夹，并重启应用服务而非整个操作系统。它不依赖虚拟机监控程序，可用于物理、虚拟或云环境。
+SafeKit 随后实施**实时复制**和**自动故障转移**，以确保服务的持续可用性。
 
-### 与其他 {{ .Get "app" }} 集群相比，SafeKit 有哪些优势？ {#safekit-mirror-ha-advantages}
+### 为什么选择统一的一体化高可用性解决方案，而不是零散的工具？ {#why-choose-a-unified-all-in-one-ha-solution-over-fragmented-tools}
 
-SafeKit 将**无共享架构**与简化部署相结合：
+与将复制和集群的独立产品组合在一起的“附加”解决方案不同，**SafeKit** 将**虚拟 IP、自动故障转移、自动回切和实时文件复制集成**到单个引擎中。
 
-  * **同步复制，零数据丢失：** 事务型应用达到 RPO=0；除数据库外，还可复制日志、配置等文件夹。
-  * **简化的双节点集群：** 两台冗余服务器即可，无需 witness 维持仲裁。[了解 heartbeat 和 quorum](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)。
-  * **统一管理：** 通过一个 SafeKit 控制台管理故障转移、数据复制和监控。
-  * **自定义检查器：** 使用 checker 监控 {{ .Get "app" }} 进程状态。
+这消除了操作系统更新破坏不同工具之间脆弱链接的“纸牌屋”风险，为整个 HA 堆栈提供了一个单一的责任点，并通过为 {{ .Get "app" }} HA 提供一个单一的界面来减少人为错误。
 
-### SafeKit 如何降低 {{ .Get "app" }} 的 TCO？ {#safekit-mirror-ha-tco}
+### 我应该选择应用程序级别还是虚拟机 (VM) 级别的“高可用性”？ {#application-vs-vm-high-availability}
 
-  * **无存储成本：** 使用本地磁盘，无需昂贵 SAN、iSCSI 网络或复杂的 vSAN 配置。
-  * **无需 Enterprise 版本：** 可使用 Standard 版本，甚至免费版本。
-  * **仅需两台服务器：** 无需第三个 witness 维持仲裁。
-  * **无强制订阅：** 永久许可避免持续费用和不可预测的涨价。
-  * **低运维成本：** 即插即用，无需专门维护培训或昂贵的外部咨询。
-  * **许可与 CPU 无关：** 两个许可即可保护两个节点，不受处理器或核心数影响。
+使用 SafeKit，您可以灵活选择适合您需求的冗余模型。
 
-### 没有集群专业技能也能设置 {{ .Get "app" }} 镜像集群吗？ {#mirror-cluster-without-clustering-skills}
+**VM 级冗余**（适用于 Hyper-V 或 KVM）最易于实施，因为它会复制整个虚拟机，而无需了解内部应用程序。
 
-可以。SafeKit 的**自动故障转移脚本**负责 **{{ .Get "app" }}** 的复制和重启，无需专门的 SAN 管理。[快速部署 {{ .Get "app" }} 镜像集群]({{ .Get "guide" }})。
+或者，**应用程序级别的冗余**更细化；它只复制特定的数据文件夹并重新启动应用程序服务，而不是整个操作系统。
+
+虽然虚拟机级别的 HA 更易于设置，但应用程序级别的 HA 与管理程序无关，可以在物理、虚拟或云环境中运行。
+
+### 与竞争对手相比，SafeKit {{ .Get "app" }} 高可用性有哪些独特的优势？ {#safekit-mirror-ha-advantages}
+
+SafeKit 通过其**无共享架构**和简化的部署，使其有别于传统的 {{ .Get "app" }} 集群。虽然大多数企业解决方案需要复杂的复制部署或昂贵的 SAN 存储，但 SafeKit 提供：
+
+  * **零数据丢失的同步复制：** SafeKit 实现 100% 同步复制，确保事务应用程序的数据完整性。**发生故障时， 数据零丢失 (RPO=0)**。此外，SafeKit 不仅可以复制 {{ .Get "app" }} 数据库，还可以复制**任何其他数据文件夹**（日志、配置文件等），确保整个环境被镜像。
+  * **简化的双节点集群：** 与通常需要“见证”（第三个节点、磁盘、文件共享）来维持仲裁的标准集群不同，SafeKit 仅需两个冗余服务器即可提供完全的高可用性，从而降低了基础设施成本和复杂性。  
+[了解更多关于我们的心跳和仲裁机制](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)。
+  * **统一管理：** 管理员可以通过单个 SafeKit 控制台管理 {{ .Get "app" }} 故障转移、数据复制和监控。这使得没有专业“集群管理员”专业知识的团队也能实现高可用性。
+  * **自定义检查器：** SafeKit 不仅限于基本的服务监控，还**提供检查器**来监控 {{ .Get "app" }} 程序进程的运行状况。该系统具有高度可扩展性，允许添加适合您环境的自定义检查器。
+
+
+### 与标准集群相比，SafeKit 如何降低 {{ .Get "app" }} 的总拥有成本 (TCO)？ {#safekit-mirror-ha-tco}
+
+与传统的高可用性解决方案不同，SafeKit 的设计旨在以**绝对最低的基础设施开销**运行，同时不影响可靠性。与传统故障转移集群相比，主要节省包括：
+
+  * **零存储成本：** SafeKit 采用无共享架构，可与本地磁盘配合使用。这样就无需昂贵的 SAN 硬件、iSCSI 网络或复杂的 vSAN 配置。
+  * **无需企业版：** 虽然原生复制机制可能需要昂贵的企业版许可证，但 SafeKit **不需要企业版**。它与标准版甚至**免费版**无缝协作，以极低的成本提供高端可用性。
+  * **真正的双节点效率：** 与通常需要“见证”（第三个节点、磁盘或文件共享）来维持仲裁的标准集群不同，SafeKit 仅需**两台冗余服务器**即可提供完全的高可用性。
+  * **无强制订阅：** SafeKit 提供**永久许可证**。您拥有自己的软件，避免了现代云端或基于订阅的模式中常见的“订阅陷阱”和不可预测的年度价格上涨。
+  * **运营费用低：** 作为即插即用解决方案，它不需要专门的培训或昂贵的外部咨询来维护，这与复杂的开源集群工具不同。
+  * **CPU 独立定价：** 许可独立于 CPU 或内核的数量。只需两个节点即可获得两个许可证，从而保护 {{ .Get "app" }} 免受故障影响。
+
+
+### 是否可以在没有集群技能的情况下设置 {{ .Get "app" }} mirror 集群？ {#mirror-cluster-without-clustering-skills}
+
+是的。本文介绍了如何[快速实施 {{ .Get "app" }} mirror 集群]({{ .Get "guide" }})而无需专业的 SAN 管理或复杂的 HA 集群技能。通过使用 SafeKit 的**自动故障转移脚本**来处理 **{{ .Get "app" }}** 的复制和重新启动，您可以获得强大的冗余解决方案，其部署和维护比传统集群解决方案简单得多。
 
 ### 除了 {{ .Get "app" }}，SafeKit 还能保护哪些应用和环境？ {#supported-applications-and-environments}
 
-SafeKit 为 **Windows 和 Linux 提供高可用性**，通过同步实时复制和自动故障转移保护：
+SafeKit 是一款**适用于 Windows 和 Linux 的**多功能高可用性解决方案。**它支持对各种关键工作负载进行 同步实时复制**和自动故障转移，包括：
 
   * **虚拟和物理环境：** 完整的 Hyper-V 或 KVM 虚拟机。
-  * **容器：** Docker、Podman 和 K3s（Kubernetes）。
-  * **数据和服务：** 文件目录、服务和各类数据库。
-  * **云基础设施：** 云应用程序。
+  * **容器编排：** Docker、Podman 和 K3s (Kubernetes) 环境。
+  * **数据与服务：** 单个文件目录、服务和各种数据库。
+  * **云基础设施：** 为云应用程序提供高可用性。
 
-SafeKit 还提供 **Farm 集群**，通过网络负载均衡和故障转移保护**Web 服务器**等无状态应用。
 
-💡 [查看所有受支持的 HA 解决方案。](/zh-hans/solutions/)
+SafeKit 还为 **farm 集群**提供原生**网络负载均衡和故障转移功能**，适用于 **Web 服务器**等无状态应用程序。
 
-{{ $.Page.RenderString (printf "{{%% insert-safekit-mirror-zh-hans app=%q %%}}" (.Get "app")) }}
+💡[在此处查看支持的 HA 解决方案的完整列表。](/zh-hans/solutions/)
 
-{{ $.Page.RenderString "{{% insert-safekit-usage-zh-hans %}}" }}
 
-## SafeKit 与其他 {{ .Get "app" }} 集群解决方案的比较 {#safekit-mirror-ha-comparison}
+{{ $.Page.RenderString (printf "{{%%  insert-safekit-mirror-zh-hans app=%q  %%}}" (.Get "app")) }}
 
-功能 | SafeKit（{{ .Get "app" }}） | 共享存储故障转移集群 | 数据库复制
----|---|---|---
-架构 | SANless（无共享） | 共享存储（SAN/NAS） | 无共享
-应用程序重新配置 | 无需 | 需要（将数据移至共享磁盘） | 无需
-复制范围 | 整个应用（数据库、配置、日志） | 共享磁盘数据 | 仅数据库数据
-复制类型 | 同步（RPO 为零） | 同步（通过 SAN） | 取决于版本，通常为异步
-故障转移／恢复 | 全自动 | 全自动 | 通常需手动或较复杂
-AD/LDAP 依赖 | 无 | Windows 上需要 | 无
-部署复杂度 | 低（少于 30 分钟） | 高（AD、存储、仲裁） | 中（仅复制）
+{{ $.Page.RenderString "{{%  insert-safekit-usage-zh-hans  %}}" }}
 
-**总结：** SafeKit 无需 SAN，部署更简单，也不依赖 **Active Directory** 或特殊的**仲裁**配置。它提供轻量、硬件无关的 HA 方案，降低 TCO，实现零数据丢失和自动恢复。
 
-## 视频：配置 SafeKit HA 镜像集群 {#videoguide-safekit-mirror-cluster}
+## 比较：SafeKit for {{ .Get "app" }} 与其他集群解决方案 {#safekit-mirror-ha-comparison}
 
-### SafeKit 视频：应用级集群 (8:47) {#demo-mirror-ha-cluster}
+特色 | {{ .Get "app" }} 的 SafeKit | 共享存储故障转移群集 | 数据库复制  
+---|---|---|---  
+建筑学 | 无共享 (SANless) | 共享存储（SAN/NAS） | 无共享  
+应用程序重新配置 | 无（就地运行） | 必填（将数据移动到共享磁盘） | 无  
+复制范围 | 整个应用程序（数据库 + 配置 + 日志） | 共享磁盘数据 | 仅数据库数据  
+复制类型 | 同步（零恢复点目标） | 同步（通过 SAN） | 取决于版本（通常是异步的）  
+故障转移/故障恢复逻辑 | 全自动 | 全自动 | 通常为手动或复杂  
+AD/LDAP 依赖项 | 独立（无需广告） | Windows（Active Directory）必填 | 独立  
+部署复杂性 | 低（<30 分钟） | 高（AD、存储、仲裁） | 中等（仅复制，无故障转移）  
 
-了解如何在无需 SAN 复杂配置的情况下部署 **HA 镜像集群**。演示使用 Microsoft SQL Server，但同样适用于其他数据库和应用程序。
+**总而言之**，SafeKit 无需 SAN，简化了部署，消除了对 **Active Directory** 和专用 **Quorum** 配置等依赖项，从而提供了一种精简、与硬件无关的高可用性替代方案。这大大降低了总拥有成本，同时确保您的 {{ .Get "app" }} 环境保持弹性，实现零数据丢失和自动恢复。
 
-  1. [使用 SQL Server 的双节点集群](https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s) (0:32)
-  2. [配置集群和 mirror.safe 模块](https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s) (3:58)
-  3. [测试 SQL 复制、迁移和故障转移](https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s) (4:17)
+## 视频指南：配置 SafeKit HA mirror 集群 {#videoguide-safekit-mirror-cluster}
 
-  * [Windows 镜像集群配置指南](/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/)
-  * [Linux 镜像集群配置指南](/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/)
+
+{{ $.Page.RenderString "{{%  insert-safekit-mirror-video-zh-hans  %}}" }}
+
+
