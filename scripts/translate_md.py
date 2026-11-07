@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-07.13"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-07.14"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -374,6 +374,9 @@ def decode(text, ctx):
         text = "".join(p if i % 2 else re.sub(r"\s*[（(](Ready|NotReady)[)）]\s*", r"（\1）", p) for i, p in enumerate(parts))
     text = re.sub(r"  +", " ", text)
     text = re.sub(r"(?<!\.)\.\.(?!\.)", ".", text)   # ".." -> "." (pas "...")
+    # gras Markdown invalide : espace avant le ** fermant ("ALSTEF **,") ou après le ** ouvrant ("** les")
+    text = re.sub(r"(^|\s)\*\* +(?=\S)", r"\1**", text)
+    text = re.sub(r"(\S) +\*\*(?=[\s,.;:!?)\]。，、；：！？]|$)", r"\1**", text)
     if NATIVE:
         text = native_terms(text, ctx)
     if CJK:   # après restauration : deux termes protégés collés ("Siveillance虚拟机级 HA架构")
