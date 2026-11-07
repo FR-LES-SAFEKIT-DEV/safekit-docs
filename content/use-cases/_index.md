@@ -1,7 +1,7 @@
 ---
 title: "Customer Use Cases"
 canonical: "https://safekit.eviden.com/use-cases/"
-description: "Discover how SafeKit delivers simple, SANless high availability for critical industries: OEM software, edge sites, VMS, EACS, SCADA, BMS, air traffic control, and metro operations."
+description: "SafeKit delivers simple, SANless high availability for critical sectors: OEM software, edge sites, VMS, EACS, SCADA, BMS, air traffic control, and metro operations."
 category: "use-cases"
 lang: "en"
 topics: "SafeKit Use Cases, 🔍 Explore SafeKit"

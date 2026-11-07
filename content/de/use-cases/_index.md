@@ -1,13 +1,14 @@
 ---
-title: "Kundenanwendungsfälle"
+title: "Kundennutzungsfälle"
 canonical: "https://safekit.eviden.com/de/use-cases/"
-description: "Erfahren Sie, wie SafeKit einfache Hochverfügbarkeit ohne SAN für kritische Branchen ermöglicht: OEM-Software, Edge-Standorte, VMS, EACS, SCADA, BMS, Flugsicherung und Metro-Betrieb."
+description: "SafeKit bietet einfache, SANless-Hochverfügbarkeit für kritische Sektoren: OEM Software, Edge-Sites, VMS, EACS, SCADA, BMS, Flugverkehrskontrolle und U-Bahn-Betrieb."
 category: "use-cases"
 lang: "de"
-topics: "SafeKit-Anwendungsfälle, 🔍 SafeKit entdecken"
+topics: "SafeKit Anwendungsfälle, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-07.13 | glossaire 2026-11-07.9 | Translation LLM | 24 expressions"
 ---
 
-# Kundenanwendungsfälle {#customer-use-cases}
+# Kundennutzungsfälle {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-de  %}}

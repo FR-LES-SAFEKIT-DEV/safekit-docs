@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-07.6",
+  "version": "2026-11-07.10",
   "keep": [
     "mirror",
     "farm",
@@ -80,7 +80,13 @@
     "SIMATIC",
     "WinCC",
     "Siemens",
-    "SafeKit"
+    "SafeKit",
+    "ADB SafeGate",
+    "SafeGate",
+    "Hirsch Microsesame",
+    "Microsesame",
+    "Probat",
+    "ALSTEF"
   ],
   "terms": {
     "farm cluster": {
@@ -365,6 +371,12 @@
       "pt": "Centro de navegação de alta disponibilidade do SafeKit",
       "it": "Hub di navigazione per l’alta disponibilità di SafeKit",
       "de": "SafeKit Hochverfügbarkeits-Navigations-Hub"
+    },
+    "metro operations": {
+      "fr": "exploitation du métro",
+      "it": "esercizio della metropolitana",
+      "de": "U-Bahn-Betrieb",
+      "nl": "metrobedrijf"
     }
   },
   "grammar": {
@@ -470,6 +482,10 @@
       [
         "([Aa]rchitettura) ([Cc]luster)",
         "\\1 di \\2"
+      ],
+      [
+        "(?<=\\s)e (?=[eEèé])",
+        "ed "
       ]
     ],
     "es": [
@@ -614,6 +630,10 @@
       [
         "vs\\.(?=[^\\s])",
         "vs. "
+      ],
+      [
+        "(^|[。！？]\\s*)SafeKit、",
+        "\\1SafeKit は、"
       ]
     ],
     "zh-hans": [

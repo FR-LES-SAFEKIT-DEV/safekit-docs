@@ -1,13 +1,14 @@
 ---
-title: "Klanttoepassingen"
+title: "Gebruiksscenario's van klanten"
 canonical: "https://safekit.eviden.com/nl/use-cases/"
-description: "Ontdek hoe SafeKit eenvoudige SAN-loze hoge beschikbaarheid biedt voor kritieke sectoren: OEM-software, edge-locaties, VMS, EACS, SCADA, BMS, luchtverkeersleiding en metroverkeer."
+description: "SafeKit levert eenvoudige, SANless hoge beschikbaarheid voor kritieke sectoren: OEM software, edge-sites, VMS, EACS, SCADA, BMS, luchtverkeersleiding en metrobedrijf."
 category: "use-cases"
 lang: "nl"
-topics: "SafeKit-toepassingen, 🔍 Ontdek SafeKit"
+topics: "SafeKit gebruiksscenario's, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-07.13 | glossaire 2026-11-07.9 | Translation LLM | 23 expressions"
 ---
 
-# Klanttoepassingen {#customer-use-cases}
+# Gebruiksscenario's van klanten {#customer-use-cases}
 
 
 {{%  insert-safekit-use-cases-nl  %}}

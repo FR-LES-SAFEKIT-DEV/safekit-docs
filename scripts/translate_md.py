@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-07.11"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-07.13"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -252,7 +252,12 @@ def decode(text, ctx):
     text = re.sub(r'<span[^>]*data-k="(\d+)"[^>]*>.*?</span>', lambda m: f"{S}P{m.group(1)}{S}", text)
     text = re.sub(r'\s*<br[^>]*data-k="(\d+)"[^>]*>\s*', lambda m: f" {S}P{m.group(1)}{S} ", text)
     text = re.sub(f"({S}P\\d+{S})\\s*/\\s*(?={S}P\\d+{S})", r"\1/", text)   # "Windows / Hyper-V" -> "Windows/Hyper-V"
-    text = re.sub(f"({S}P\\d+{S}) +-(?=\\w)", r"\1-", text)   # "SafeKit -Lösungen" -> "SafeKit-Lösungen" (pas "SafeKit - Version")
+    text = re.sub(f"({S}P\\d+{S}) +-(?=\\w)", r"\1-", text)
+    def dedup(m):   # premier mot d'un nom protégé répété juste avant lui : "SQL SQL Server" -> "SQL Server"
+        tok = re.sub(r"<[^>]+>", "", st[int(m.group(3))]).strip()
+        return m.group(2) if " " in tok and tok.split(" ")[0] == m.group(1) else m.group(0)
+    # (avec ou sans gras entre les deux : "ADB <b>ADB SafeGate</b>")
+    text = re.sub(f"(?<![\\w-])([A-Za-z][\\w-]*)\\s+((?:<b>\\s*)?{S}P(\\d+){S})", dedup, text)
     text = re.sub(r"<b>\s*([。，、；：！？.,;:!?]+)\s*", r"\1<b>", text)
     # source "**terme imposé**" : si Google étend le gras à la phrase, on le ramène au terme seul
     for n in ctx.bold_terms:
