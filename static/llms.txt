@@ -210,6 +210,12 @@ Also: enhances the native cloud load balancer with application-level monitoring 
 - [How a Virtual IP Address (VIP) Works in High Availability Clustering?](https://safekit.eviden.com/best-practises/how-a-virtual-ip-address-works/)
   Topics: What is a virtual IP address in a high availability cluster?, Virtual IP Implementation in SafeKit, How a Virtual IP Address (VIP) Works in a Same-Subnet Failover (Mirror Cluster), How a Virtual IP (VIP) Works Across Different Subnets (Mirror Cluster), How a Load Balanced Virtual IP Works in a Same-Subnet Farm (Farm Cluster), How a Load Balanced Virtual IP Works Across Different Subnets (Farm Cluster), Virtual IP vs. DNS Redirection: Why DNS Failover Often Fails, Comparison: Virtual IP Implementation, Latency, and Application Transparency, Configuring a Virtual IP Address for Network Loadbalancing and High Availability, Frequently Asked Questions on Virtual IP (VIP)
 
+- [Testing the virtual IP address of a SafeKit mirror cluster - SafeKit](https://safekit.eviden.com/best-practises/test-primary-backup-vip-mirror/)
+  Topics: Testing the VIP of a SafeKit mirror cluster
+
+- [Testing the load balancing virtual IP address in a SafeKit farm cluster - SafeKit](https://safekit.eviden.com/best-practises/test-load-balancing-vip-farm/)
+  Topics: Testing the load balancing VIP of a SafeKit farm cluster
+
 - [How to Implement Redundant Servers with Simple HA Software](https://safekit.eviden.com/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/)
   Topics: How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?
 
