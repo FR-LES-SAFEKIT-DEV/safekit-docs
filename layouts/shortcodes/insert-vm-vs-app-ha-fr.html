@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 21 expressions */}}
+{{/* translation: translate_md 2026-11-07.7 | glossaire 2026-11-07.4 | Translation LLM | 21 expressions */}}
 {{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -15,9 +15,9 @@ Fonction de comparaison | HA de VM avec le module SafeKit Hyper-V ou KVM | HA ap
 ---|---|---  
 Portée du basculement | SafeKit à l’intérieur de 2 hyperviseurs : réplication et basculement de la VM complète. | SafeKit à l’intérieur de 2 machines virtuelles ou physiques : réplication et basculement au niveau de l’application.  
 Données répliquées | Réplique davantage de données (application + système d’exploitation). | Ne réplique que les données d’application, ce qui réduit les volumes de données.  
-Processus et vitesse de récupération (RTO) | Redémarrage de la VM sur l’hyperviseur 2 si l’hyperviseur 1 plante. Le temps de récupération dépend du redémarrage du système d’exploitation. Vérificateur de VM et mécanisme de basculement. | Temps de récupération rapide avec redémarrage de l’application sur OS2 si le serveur 1 tombe en panne. Généralement environ 1 minute ou moins (RTO faible). Vérificateur d’application et basculement logiciel.  
+Processus et vitesse de récupération (RTO) | Redémarrage de la VM sur l’hyperviseur 2 si l’hyperviseur 1 tombe en panne. Le temps de récupération dépend du redémarrage du système d’exploitation. Vérificateur de VM et mécanisme de basculement. | Temps de récupération rapide avec redémarrage de l’application sur OS2 si le serveur 1 tombe en panne. Généralement environ 1 minute ou moins (RTO faible). Vérificateur d’application et basculement logiciel.  
 Installation | L’application est installée une seule fois dans une seule machine virtuelle. | L’application est installée sur deux nœuds.  
 Configuration | Solution générique pour toute application/tout système d’exploitation fonctionnant dans la machine virtuelle. <br> • Il ne nécessite pas de compréhension technique de l’application installée dans la machine virtuelle. <br> • C’est la meilleure solution si vous ne savez pas comment l’application fonctionne. <br> • Vous n’avez qu’à définir l’emplacement des fichiers de la machine virtuelle.  | Cela nécessite une compréhension technique de l’application elle-même. <br> • Quels services doivent être redémarrés. <br> • Les dossiers d’application spécifiques qui nécessitent une réplication en temps réel. <br> • La configuration d’une adresse IP virtuelle pour le basculement.   
-Compatibilité des plateformes | Fonctionne avec Windows / Hyper-V et Linux / KVM, mais n’est pas compatible avec VMware. | Agnostique à la plateforme ; fonctionne avec des machines physiques ou virtuelles, une infrastructure cloud et n’importe quel hyperviseur, y compris VMware.  
+Compatibilité des plateformes | Fonctionne avec Windows/Hyper-V et Linux/KVM, mais n’est pas compatible avec VMware. | Agnostique à la plateforme ; fonctionne avec des machines physiques ou virtuelles, une infrastructure cloud et n’importe quel hyperviseur, y compris VMware.  
 Idéal pour | Idéal pour gérer des environnements complexes avec de multiples applications sur plusieurs machines virtuelles grâce à une seule politique de haute disponibilité. | Idéal pour intégrer la haute disponibilité directement dans une solution logicielle, indépendamment du matériel ou de l’hyperviseur sous-jacent.  
 

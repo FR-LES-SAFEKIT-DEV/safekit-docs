@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 13 expressions */}}
+{{/* translation: translate_md 2026-11-07.7 | glossaire 2026-11-07.4 | Translation LLM | 14 expressions */}}
 {{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -18,6 +18,6 @@ Dados Replicados | Replica mais dados (Aplicação + Sistema Operativo). | Repli
 Processo e Velocidade de Recuperação (RTO) | Reiniciar a VM no hipervisor 2 se o hipervisor 1 falhar. O tempo de recuperação depende da reinicialização do SO. Verificador de VM e mecanismo de failover. | Tempo de recuperação rápido com reinício da aplicação no SO2 se o servidor 1 falhar. Normalmente, cerca de 1 minuto ou menos (RTO baixo). Verificador de aplicações e failover de software.  
 Instalação | A aplicação é instalada uma única vez numa única máquina virtual. | A aplicação está instalada em dois nós.  
 Configuração | Solução genérica para qualquer aplicação/sistema operativo em execução na máquina virtual. <br> • Não requer um conhecimento técnico da aplicação instalada na máquina virtual. <br> • É a melhor solução se não souber como a aplicação funciona. <br> • Apenas é necessário definir a localização dos ficheiros da máquina virtual.  | Requer um conhecimento técnico da própria aplicação. <br> • Quais os serviços que precisam de ser reiniciados. <br> • As pastas de aplicações específicas que necessitam de replicação em tempo real. <br> • A configuração de um endereço IP virtual para o sistema de redundância.   
-Compatibilidade da Plataforma | Funciona com Windows / Hyper-V e Linux / KVM, mas não é compatível com VMware. | Independente da plataforma; funciona com máquinas físicas ou virtuais, infraestrutura em nuvem e qualquer hipervisor, incluindo VMware.  
+Compatibilidade da Plataforma | Funciona com Windows/Hyper-V e Linux/KVM, mas não é compatível com VMware. | Independente da plataforma; funciona com máquinas físicas ou virtuais, infraestrutura em nuvem e qualquer hipervisor, incluindo VMware.  
 Ideal para | Ideal para gerir ambientes complexos com múltiplas aplicações em várias máquinas virtuais através de uma única política de alta disponibilidade. | Ideal para integrar alta disponibilidade diretamente numa solução de software, independentemente do hardware ou do hipervisor subjacente.  
 

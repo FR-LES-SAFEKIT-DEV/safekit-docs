@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 13 expressions */}}
+{{/* translation: translate_md 2026-11-07.7 | glossaire 2026-11-07.4 | Translation LLM | 14 expressions */}}
 {{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -15,9 +15,9 @@ Recurso de Comparação | HA de VM com o Módulo SafeKit Hyper-V ou KVM | HA de 
 ---|---|---  
 Escopo de Failover | SafeKit em 2 hipervisores: replicação e failover da VM completa. | SafeKit em 2 máquinas virtuais ou físicas: replicação e failover ao nível da aplicação.  
 Dados Replicados | Replica mais dados (aplicativo + sistema operacional). | Replica apenas os dados da aplicação, resultando em volumes de dados menores.  
-Processo e Velocidade de Recuperação (RTO) | Reinicialização da VM no hipervisor 2 se o hipervisor 1 falhar. O tempo de recuperação depende da reinicialização do SO. Verificador de VM e mecanismo de failover. | Tempo de recuperação rápido com reinicialização do aplicativo no SO2 se o servidor 1 falhar. Normalmente, cerca de 1 minuto ou menos (RTO baixo). Verificador de aplicativos e failover de software.  
+Processo e Velocidade de Recuperação (RTO) | Reinicialização da VM no hipervisor 2 se o hipervisor 1 falhar. O tempo de recuperação depende da reinicialização do SO. Verificador de VM e mecanismo de failover. | Tempo de recuperação rápido com reinicialização do aplicativo no SO2 se o servidor 1 falhar. Normalmente, cerca de 1 minuto ou menos (baixo RTO). Verificador de aplicativos e failover de software.  
 Instalação | O aplicativo é instalado uma única vez em uma única máquina virtual. | O aplicativo está instalado em dois nós.  
 Configuração | Solução genérica para qualquer aplicativo/sistema operacional em execução na máquina virtual. <br> • Não exige conhecimento técnico da aplicação instalada na máquina virtual. <br> • É a melhor solução se você não sabe como o aplicativo funciona. <br> • Você só precisa definir a localização dos arquivos da máquina virtual.  | É necessário um conhecimento técnico da própria aplicação. <br> • Quais serviços precisam ser reiniciados. <br> • As pastas de aplicativos específicas que precisam de replicação em tempo real. <br> • A configuração de um endereço IP virtual para o failover.   
-Compatibilidade da Plataforma | Funciona com Windows / Hyper-V e Linux / KVM, mas não é compatível com VMware. | Independente de plataforma; funciona com máquinas físicas ou virtuais, infraestrutura de nuvem e qualquer hipervisor, incluindo VMware.  
+Compatibilidade da Plataforma | Funciona com Windows/Hyper-V e Linux/KVM, mas não é compatível com VMware. | Independente de plataforma; funciona com máquinas físicas ou virtuais, infraestrutura de nuvem e qualquer hipervisor, incluindo VMware.  
 Ideal para | Ideal para gerenciar ambientes complexos com vários aplicativos em várias máquinas virtuais por meio de uma única política de alta disponibilidade. | Ideal para incorporar alta disponibilidade diretamente em uma solução de software, independentemente do hardware ou hipervisor subjacente.  
 

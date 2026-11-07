@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 21 expressions */}}
+{{/* translation: translate_md 2026-11-07.7 | glossaire 2026-11-07.4 | Translation LLM | 22 expressions */}}
 {{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -18,6 +18,6 @@ Gegevens gerepliceerd | Repliceert meer gegevens (toepassing + besturingssysteem
 Herstelproces en -snelheid (RTO) | Opnieuw opstarten van de VM op hypervisor 2 als hypervisor 1 crasht. De hersteltijd is afhankelijk van het opnieuw opstarten van het besturingssysteem. VM-checker en failovermechanisme. | Snelle hersteltijd met herstart van de app op OS2 als server 1 crasht. Meestal ongeveer 1 minuut of minder (lage RTO). Applicatiecontrole en software failover.  
 Installatie | De toepassing wordt eenmalig in één VM geïnstalleerd. | De toepassing is op twee knooppunten geïnstalleerd.  
 Configuratie | Generieke oplossing voor elke toepassing/elk besturingssysteem dat in de VM draait. <br> • Er is geen technische kennis van de toepassing die in de VM is geïnstalleerd, vereist. <br> • Het is de beste oplossing als u niet weet hoe de applicatie werkt. <br> • U hoeft alleen de locatie van de VM-bestanden te definiëren.  | Het vereist een technisch begrip van de toepassing zelf. <br> • Welke services moeten opnieuw worden gestart. <br> • De specifieke toepassingsmappen die real-time replicatie vereisen. <br> • De configuratie van een virtueel IP-adres voor failover.   
-Platformcompatibiliteit | Werkt met Windows / Hyper-V en Linux / KVM, maar is niet compatibel met VMware. | Platformonafhankelijk; werkt met fysieke of virtuele machines, cloudinfrastructuur en elke hypervisor, inclusief VMware.  
+Platformcompatibiliteit | Werkt met Windows/Hyper-V en Linux/KVM, maar is niet compatibel met VMware. | Platformonafhankelijk; werkt met fysieke of virtuele machines, cloudinfrastructuur en elke hypervisor, inclusief VMware.  
 Ideaal voor | Ideaal voor het beheren van complexe omgevingen met meerdere toepassingen op verschillende VM's via één HA-beleid. | Ideaal om hoge beschikbaarheid rechtstreeks in een softwareoplossing in te bouwen, onafhankelijk van de onderliggende hardware of hypervisor.  
 

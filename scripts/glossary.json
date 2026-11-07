@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-07.3",
+  "version": "2026-11-07.4",
   "keep": [
     "mirror",
     "farm",
@@ -364,6 +364,50 @@
       [
         "haute disponibilité HA\\b",
         "HA"
+      ],
+      [
+        "\\b[Uu]n plantage\\b",
+        "une panne"
+      ],
+      [
+        "\\b([Ll])e plantage\\b",
+        "\\1a panne"
+      ],
+      [
+        "\\b([Dd])u plantage\\b",
+        "\\1e la panne"
+      ],
+      [
+        "\\b([Aa])u plantage\\b",
+        "\\1 la panne"
+      ],
+      [
+        "\\b([Cc])e plantage\\b",
+        "\\1ette panne"
+      ],
+      [
+        "\\bplantages\\b",
+        "pannes"
+      ],
+      [
+        "\\bplantage\\b",
+        "panne"
+      ],
+      [
+        "\\b(a|ont) planté\\b",
+        "\\1 subi une panne"
+      ],
+      [
+        "\\bplantent\\b",
+        "tombent en panne"
+      ],
+      [
+        "\\bplante\\b",
+        "tombe en panne"
+      ],
+      [
+        "\\bplanter\\b",
+        "tomber en panne"
       ]
     ],
     "it": [

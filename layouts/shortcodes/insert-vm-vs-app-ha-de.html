@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 22 expressions */}}
+{{/* translation: translate_md 2026-11-07.7 | glossaire 2026-11-07.4 | Translation LLM | 22 expressions */}}
 {{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -18,6 +18,6 @@ Daten repliziert | Replikate mehr Daten (Anwendung + Betriebssystem). | Replikat
 Wiederherstellungsprozess und -geschwindigkeit (RTO) | Neustart der VM auf Hypervisor 2, wenn Hypervisor 1 abstürzt. Die Wiederherstellungszeit hängt vom Neustart des Betriebssystems ab. VM-Checker und Failover-Mechanismus. | Schnelle Wiederherstellungszeit mit Neustart der App auf OS2, wenn Server 1 abstürzt. Typischerweise etwa 1 Minute oder weniger (niedrige RTO). Anwendungsprüfer und Software-Failover.  
 Installation | Die Anwendung wird einmal in einer einzelnen VM installiert. | Die Anwendung ist auf zwei Knoten installiert.  
 Konfiguration | Generische Lösung für jede Anwendung/jedes Betriebssystem, das in der VM läuft. <br> • Es ist kein technisches Verständnis der in der VM installierten Anwendung erforderlich. <br> • Es ist die beste Lösung, wenn Sie nicht wissen, wie die Anwendung funktioniert. <br> • Sie müssen lediglich den Speicherort der VM-Dateien festlegen.  | Es erfordert ein technisches Verständnis der Anwendung selbst. <br> • Welche Dienste neu gestartet werden müssen. <br> • Die spezifischen Anwendungsordner, die eine Echtzeitreplikation benötigen. <br> • Die Konfiguration einer virtuellen IP-Adresse für das Failover.   
-Plattformkompatibilität | Funktioniert mit Windows / Hyper-V und Linux / KVM, ist aber nicht mit VMware kompatibel. | Plattformunabhängig; funktioniert mit physischen oder virtuellen Maschinen, Cloud-Infrastruktur und jedem Hypervisor, einschließlich VMware.  
+Plattformkompatibilität | Funktioniert mit Windows/Hyper-V und Linux/KVM, ist aber nicht mit VMware kompatibel. | Plattformunabhängig; funktioniert mit physischen oder virtuellen Maschinen, Cloud-Infrastruktur und jedem Hypervisor, einschließlich VMware.  
 Ideal für | Ideal für die Verwaltung komplexer Umgebungen mit mehreren Anwendungen auf mehreren VMs durch eine einzige HA-Richtlinie. | Ideal, um Hochverfügbarkeit direkt in eine Softwarelösung einzubetten, unabhängig von der zugrunde liegenden Hardware oder dem Hypervisor.  
 

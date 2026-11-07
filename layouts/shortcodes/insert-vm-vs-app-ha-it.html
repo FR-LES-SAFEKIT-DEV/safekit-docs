@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 13 expressions */}}
+{{/* translation: translate_md 2026-11-07.7 | glossaire 2026-11-07.4 | Translation LLM | 14 expressions */}}
 {{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -18,6 +18,6 @@ Dati replicati | Replica più dati (applicazione + sistema operativo). | Replica
 Processo e velocità di ripristino (RTO) | Riavvio della VM sull’hypervisor 2 se l’hypervisor 1 si arresta in modo anomalo. Il tempo di ripristino dipende dal riavvio del sistema operativo. Controllo VM e meccanismo di failover. | Tempi di ripristino rapidi con riavvio dell’app su OS2 in caso di arresto anomalo del server 1. In genere circa 1 minuto o meno (RTO basso). Controllo dell’applicazione e failover del software.  
 Installazione | L’applicazione viene installata una sola volta in una singola VM. | L’applicazione è installata su due nodi.  
 Configurazione | Soluzione generica per qualsiasi applicazione/sistema operativo in esecuzione nella macchina virtuale. <br> • Non richiede una conoscenza tecnica dell’applicazione installata nella VM. <br> • È la soluzione migliore se non sai come funziona l’applicazione. <br> • È sufficiente definire la posizione dei file della macchina virtuale.  | Richiede una comprensione tecnica dell’applicazione stessa. <br> • Quali servizi devono essere riavviati. <br> • Le cartelle delle applicazioni specifiche che necessitano di replica in tempo reale. <br> • La configurazione di un indirizzo IP virtuale per il failover.   
-Compatibilità della piattaforma | Funziona con Windows / Hyper-V e Linux / KVM, ma non è compatibile con VMware. | Indipendente dalla piattaforma; funziona con macchine fisiche o virtuali, infrastrutture cloud e qualsiasi hypervisor, incluso VMware.  
+Compatibilità della piattaforma | Funziona con Windows/Hyper-V e Linux/KVM, ma non è compatibile con VMware. | Indipendente dalla piattaforma; funziona con macchine fisiche o virtuali, infrastrutture cloud e qualsiasi hypervisor, incluso VMware.  
 Ideale per | Ideale per la gestione di ambienti complessi con più applicazioni su più macchine virtuali attraverso un’unica policy HA. | Ideale per integrare l’alta disponibilità direttamente in una soluzione software, indipendentemente dall’hardware o dall’hypervisor sottostante.  
 
