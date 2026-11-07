@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/resources/high-availability-and-load-b
 description: "Windows 및 Linux에서 한 달간 사용할 SafeKit 클러스터 키를 요청하세요. SafeKit은 SAN 없이 고가용성과 애플리케이션 클러스터링을 구현하는 간편한 올인원 아키텍처를 제공합니다."
 category: "resources"
 lang: "ko"
-topics: "Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이메일로 받기, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이메일로 받기, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit 1개월 무료 평가판 키 {#safekit-one-month-free-trial-key}

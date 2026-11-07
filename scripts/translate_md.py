@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-07.7"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-07.11"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -252,6 +252,7 @@ def decode(text, ctx):
     text = re.sub(r'<span[^>]*data-k="(\d+)"[^>]*>.*?</span>', lambda m: f"{S}P{m.group(1)}{S}", text)
     text = re.sub(r'\s*<br[^>]*data-k="(\d+)"[^>]*>\s*', lambda m: f" {S}P{m.group(1)}{S} ", text)
     text = re.sub(f"({S}P\\d+{S})\\s*/\\s*(?={S}P\\d+{S})", r"\1/", text)   # "Windows / Hyper-V" -> "Windows/Hyper-V"
+    text = re.sub(f"({S}P\\d+{S}) +-(?=\\w)", r"\1-", text)   # "SafeKit -Lösungen" -> "SafeKit-Lösungen" (pas "SafeKit - Version")
     text = re.sub(r"<b>\s*([。，、；：！？.,;:!?]+)\s*", r"\1<b>", text)
     # source "**terme imposé**" : si Google étend le gras à la phrase, on le ramène au terme seul
     for n in ctx.bold_terms:
@@ -342,6 +343,8 @@ def decode(text, ctx):
     text = re.sub(r"([(\[]) +\*\*", r"\1**", text)
     text = re.sub(r"\( +", "(", text)
     text = re.sub(r" +\)", ")", text)
+    text = re.sub(r"\s+(\\\))", r"\1", text)   # infobulle "\(mirror.safe \)" -> "\(mirror.safe\)"
+    text = re.sub(r"(\\\()\s+", r"\1", text)
     text = re.sub(r" +([,.](?:\s|$))", r"\1", text)
     text = re.sub(r"([A-Za-zÀ-ÿ][’'])\s+(\*\*|\[)", r"\1\2", text)   # l' **adresse -> l'**adresse
     text = re.sub(r"\*\*([;:!?])", r"** \1", text) if ctx.apos else text  # espace avant ; : ! ?
@@ -368,6 +371,9 @@ def decode(text, ctx):
     text = re.sub(r"(?<!\.)\.\.(?!\.)", ".", text)   # ".." -> "." (pas "...")
     if NATIVE:
         text = native_terms(text, ctx)
+    if CJK:   # après restauration : deux termes protégés collés ("Siveillance虚拟机级 HA架构")
+        text = re.sub(f"([A-Za-z0-9])(?=[{CJK_CHAR}])", r"\1 ", text)
+        text = re.sub(f"([{CJK_CHAR}])(?=[A-Za-z0-9])", r"\1 ", text)
     return text.strip()
 
 def native_terms(text, ctx):
@@ -781,13 +787,29 @@ def batch():
     for lang in langs:
         tgt = targets[lang]
         cmd = [sys.executable, str(Path(__file__).resolve()), str(src), str(tgt), "--to", lang] + extra
-        env = dict(os.environ, PYTHONIOENCODING="utf-8")   # sortie du sous-processus toujours en UTF-8 (console Windows cp1252)
-        for attempt in (1, 2):
-            r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
-            if r.returncode == 0:
+        # sortie du sous-processus en UTF-8 (console Windows cp1252) et sans tampon (progression visible)
+        env = dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONUNBUFFERED="1")
+        idx = langs.index(lang) + 1
+        for attempt in (1, 2, 3):
+            print(f"[{idx}/{len(langs)}] {lang} : traduction en cours..." + (f" (essai {attempt})" if attempt > 1 else ""), flush=True)
+            p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True,
+                                 encoding="utf-8", errors="replace", env=env)
+            lines = []
+            for line in p.stdout:   # affichage en direct : limite de débit, nouvelles tentatives...
+                line = line.rstrip("\n")
+                lines.append(line)
+                if line.startswith(("Limite de débit", "Quota Google", "Traceback", "ATTENTION")) or "Error" in line:
+                    print(f"      {line}", flush=True)
+            p.wait()
+            if p.returncode == 0:
                 break
-            print(f"[{lang}] échec (essai {attempt}) : {(r.stderr or r.stdout).strip()[-300:]}")
-            time.sleep(30)
+            quota = any("Quota Google" in x or "RateLimit" in x for x in lines)
+            wait = 120 if quota else 30
+            print(f"[{lang}] échec (essai {attempt}/3) : {(lines[-1] if lines else '').strip()[:200]}", flush=True)
+            if attempt < 3:
+                print(f"      nouvel essai de {lang} dans {wait} s", flush=True)
+                time.sleep(wait)
+        r = subprocess.CompletedProcess(cmd, p.returncode, "\n".join(lines), "")
         out = r.stdout.splitlines()
         seg = next((x for x in out if "segments traduits" in x), "ÉCHEC")
         warn, keep = [], False
@@ -799,7 +821,7 @@ def batch():
             else:
                 keep = False
         summary.append((lang, r.returncode == 0, re.sub(r" ->.*", "", seg), warn))
-        print(f"[{lang}] {re.sub(r' ->.*', '', seg)}" + (f" - {len(warn)} avertissement(s)" if warn else ""))
+        print(f"      {lang} : {re.sub(r' ->.*', '', seg)}" + (f" - {len(warn)} avertissement(s)" if warn else ""), flush=True)
     if a.export:
         exp = Path(a.export)
         exp.mkdir(parents=True, exist_ok=True)
@@ -826,7 +848,7 @@ def batch():
 if __name__ == "__main__":
     for stream in (sys.stdout, sys.stderr):   # console Windows : jamais de plantage sur un caractère non affichable
         try:
-            stream.reconfigure(errors="replace")
+            stream.reconfigure(errors="replace", line_buffering=True)
         except Exception:
             pass
     if "--to" not in sys.argv:   # sans --to : les 11 langues

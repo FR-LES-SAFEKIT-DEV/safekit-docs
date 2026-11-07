@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "SafeKit 에 k3s.safe 모듈을 배포하여 Linux Kubernetes 의 자동 장애 조치를 활성화하십시오. 이 가이드에서는 공유 스토리지가 없는 중요한 Linux 애플리케이션을 위한 2노드 SANless 클러스터 설정 과정을 안내합니다."
 category: "quick-install"
 lang: "ko"
-topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Kubernetes 솔루션 개요, Linux ( k3s.safe )에 SafeKit / Kubernetes 솔루션 설치 및 구성, 클러스터에서 네트워크 격리 시 다양한 시나리오, SafeKit mirror 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Kubernetes 솔루션 개요, Linux ( k3s.safe )에 SafeKit / Kubernetes 솔루션 설치 및 구성, 클러스터에서 네트워크 격리 시 다양한 시나리오, SafeKit mirror 솔루션 데모, 🔍 SafeKit 살펴보기"
 ---
 
 # K3S 고가용성 SafeKit 사용): 장애 조치 위한 k3s.safe 모듈 설치 {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}

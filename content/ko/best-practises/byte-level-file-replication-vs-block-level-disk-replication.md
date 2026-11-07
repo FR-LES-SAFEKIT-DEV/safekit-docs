@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/byte-level-file-replica
 description: "바이트 수준 파일 복제와 블록 수준 디스크 복제를 비교해 보세요. SafeKit 파일 내에서 수정된 데이터만 복제하는 SAN리스 아키텍처를 제안하는 이유를 알아보세요. 이를 통해 데이터 손실 제로(RPO 0), 빠른 복구(RTO), 그리고 Windows 및 Linux 에서 간편한 구성을 보장합니다."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성 클러스터에서 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교, 바이트 수준 파일 복제와 블록 수준 디스크 복제의 장단점, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "고가용성 클러스터에서 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교, 바이트 수준 파일 복제와 블록 수준 디스크 복제의 장단점, 🔍 SafeKit 살펴보기"
 ---
 
 # 고가용성(HA)을 위한 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-install
 description: "Implemente o módulo mirror.safe do SafeKit para ativar a replicação síncrona em tempo real e o failover automático em Linux. Este guia acompanha-o na configuração de um cluster SANless de 2 nós para aplicações Linux críticas, sem armazenamento partilhado."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de instalação rápida de elevada disponibilidade para Linux, Limitações da elevada disponibilidade do SafeKit, Descrição geral da solução SafeKit / Linux, Instalação da solução SafeKit / Linux (mirror.safe), Configuração passo a passo da solução SafeKit / Linux, Demonstração da solução SafeKit mirror, 🔍 Hub de navegação de elevada disponibilidade do SafeKit"
+topics: "Guia de instalação rápida de elevada disponibilidade para Linux, Limitações da elevada disponibilidade do SafeKit, Descrição geral da solução SafeKit / Linux, Instalação da solução SafeKit / Linux (mirror.safe), Configuração passo a passo da solução SafeKit / Linux, Demonstração da solução SafeKit mirror, 🔍 Explore o SafeKit"
 ---
 
 # Elevada disponibilidade em Linux com SafeKit: instale o módulo mirror.safe para failover {#linux-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/active-active-cluster-re
 description: "حقق أقصى استفادة من الموارد مع تقنية التجميع النشط SafeKit . فعّل خاصية تجاوز الفشل المتبادل بين خادمين باستخدام النسخ المتماثل المتزامن في الوقت الفعلي ووحدات mirror المتعددة. اضمن عدم فقدان البيانات (RPO=0) والاسترداد التلقائي لوحدات Windows و Linux بدون الحاجة إلى شبكة تخزين (SAN). حمّل النسخة التجريبية المجانية."
 category: "architectures"
 lang: "ar"
-topics: "كيف تعمل مجموعة الخوادم النشطة النشطة مع النسخ المتماثل في الوقت الفعلي؟، 🔍 SafeKit مركز التنقل عالي التوفر"
+topics: "كيف تعمل مجموعة الخوادم النشطة النشطة مع النسخ المتماثل في الوقت الفعلي؟، 🔍 استكشف SafeKit"
 ---
 
 # برنامج تجميع نشط-نشط مع نسخ متماثل في الوقت الفعلي وتجاوز الفشل المتبادل {#active-active-clustering-software-with-real-time-replication--mutual-failover}

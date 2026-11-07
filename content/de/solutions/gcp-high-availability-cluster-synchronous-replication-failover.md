@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/solutions/gcp-high-availability-cluste
 description: "Stellen Sie einen einfachen Google GCP HA-Cluster mit SafeKit bereit. Unsere Shared-Nothing-Architektur bietet synchrone Replikation, automatisches Failover und RPO=0 für Windows und Linux Anwendungen ohne die Kosten für gemeinsam genutzte Cloud-Festplatten."
 category: "solutions"
 lang: "de"
-topics: "SafeKit Shared-Nothing HA in GCP : Gemeinsam genutzte Datenträger ohne Datenverlust eliminieren, Inhaltsverzeichnis, Wie implementiert die SafeKit -Software einen Shared-Nothing-Hochverfügbarkeitscluster GCP ?, Wie funktioniert der SafeKit mirror Cluster mit GCP ?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit für GCP vs. native Cloud-HA/DR-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA- mirror Clusters, 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "SafeKit Shared-Nothing HA in GCP : Gemeinsam genutzte Datenträger ohne Datenverlust eliminieren, Inhaltsverzeichnis, Wie implementiert die SafeKit -Software einen Shared-Nothing-Hochverfügbarkeitscluster GCP ?, Wie funktioniert der SafeKit mirror Cluster mit GCP ?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit für GCP vs. native Cloud-HA/DR-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA- mirror Clusters, 🔍 SafeKit entdecken"
 ---
 
 # Google GCP Hochverfügbarkeit: SafeKit Synchrone Replikation & Failover {#google-gcp-high-availability-safekit-synchronous-replication--failover}

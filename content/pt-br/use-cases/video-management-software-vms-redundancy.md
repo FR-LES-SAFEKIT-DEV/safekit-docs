@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/use-cases/video-management-software
 description: "Evite a perda de vídeo com SafeKit , o software de alta disponibilidade mais simples para redundância de VMS. Obtenha gerenciamento contínuo 24 horas por dia, 7 dias por semana, com clustering de 2 nós sem SAN, replicação síncrona e failover automático. Compatível com Milestone XProtect , Genetec, Siemens, Bosch e qualquer VMS Windows / Linux . Alcance zero perda de dados (RPO=0) sem hardware complexo."
 category: "use-cases"
 lang: "pt-br"
-topics: "O que é um software de gerenciamento de vídeo (VMS)? Por que um software VMS é essencial? Principais players em VMS: SafeKit oferece duas soluções para redundância e alta disponibilidade em um software VMS; SafeKit é uma solução reconhecida no mercado de segurança; 🔍 SafeKit é um hub de navegação de alta disponibilidade."
+topics: "O que é um software de gerenciamento de vídeo (VMS)? Por que um software VMS é essencial? Principais players em VMS: SafeKit oferece duas soluções para redundância e alta disponibilidade em um software VMS; SafeKit é uma solução reconhecida no mercado de segurança; 🔍 Explore o SafeKit"
 ---
 
 # Alta disponibilidade e redundância para software de gerenciamento de vídeo (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}

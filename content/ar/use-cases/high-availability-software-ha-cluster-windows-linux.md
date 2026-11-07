@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/high-availability-software-h
 description: "احمِ تطبيقاتك الحيوية باستخدام SafeKit ، البرنامج الرائد في مجال التوافر العالي لـ Windows و Linux . أنشئ مجموعات عالية التوافر بسهولة دون الحاجة إلى تخزين مشترك أو شبكات تخزين معقدة. استفد من النسخ المتماثل في الوقت الفعلي، والتحويل التلقائي في حالة الأعطال، وموازنة الأحمال في حل واحد بسيط مُعرّف برمجياً."
 category: "use-cases"
 lang: "ar"
-topics: "عرض تقديمي موجز مدته 30 ثانية لمركز الملاحة عالي التوفر SafeKit ، 🔍 SafeKit"
+topics: "عرض تقديمي موجز مدته 30 ثانية لمركز الملاحة عالي التوفر SafeKit ، 🔍 استكشف SafeKit"
 ---
 
 # برنامج التوافر العالي: Windows و Linux التجميع مع SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}

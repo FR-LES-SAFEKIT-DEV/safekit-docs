@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/use-cases/business-continuity-softw
 description: "Proteja todas as filiais da sua empresa distribuída com SafeKit . Implante um cluster de alta disponibilidade (HA) padronizado, totalmente baseado em software, em escala, para garantir disponibilidade 24 horas por dia, 7 dias por semana, para aplicativos críticos das filiais. Sem armazenamento compartilhado, sem SANs complexos e sem necessidade de conhecimento especializado em TI no local para Windows e Linux ."
 category: "use-cases"
 lang: "pt-pt"
-topics: "Continuidade de negócios em uma empresa distribuída, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Continuidade de negócios em uma empresa distribuída, 🔍 Explore o SafeKit"
 ---
 
 # Padronização da Alta Disponibilidade para Empresas Distribuídas com Muitas Filiais {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

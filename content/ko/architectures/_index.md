@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/architectures/"
 description: "SafeKit으로 고가용성 아키텍처를 살펴보세요. SANless 애플리케이션 장애 조치 및 로드 밸런싱을 위한 Mirror, Farm, Farm + mirror 클러스터에 대해 알아보세요."
 category: "architectures"
 lang: "ko"
-topics: "SafeKit의 다양한 고가용성 아키텍처와 소프트웨어 클러스터는 무엇인가요?, SafeKit으로 고가용성 클러스터를 구축하는 방법은 무엇인가요?, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "SafeKit의 다양한 고가용성 아키텍처와 소프트웨어 클러스터는 무엇인가요?, SafeKit으로 고가용성 클러스터를 구축하는 방법은 무엇인가요?, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 27 expressions"
 ---
 

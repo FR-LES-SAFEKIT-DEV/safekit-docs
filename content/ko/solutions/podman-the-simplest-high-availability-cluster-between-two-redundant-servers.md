@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/solutions/podman-the-simplest-high-ava
 description: "SafeKit 통합 동기식 데이터 복제 기능을 갖춘 강력한 Podman 고가용성 솔루션을 제공합니다. 표준 Linux 서버에서 자동 장애 조치 및 데이터 손실 없는 상태 저장 컨테이너 클러스터를 구현할 수 있습니다. SAN이나 공유 스토리지가 필요하지 않으며, 몇 분 만에 배포할 수 있습니다."
 category: "solutions"
 lang: "ko"
-topics: "SAN이 없는 SafeKit Mirror 클러스터가 Podman 와 연동되는 방식, 목차, SafeKit 소프트웨어로 Podman 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit mirror 클러스터가 Podman 와 연동되는 방식, SafeKit 고가용성 제한 사항, 비교: SAN이 없는 SafeKit 클러스터와 기존 Podman 고가용성, 비교: SafeKit 와 오픈 소스 Linux 고가용성(Pacemaker/Corosync/DRBD) 비교, Podman 고가용성 요약, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "SAN이 없는 SafeKit Mirror 클러스터가 Podman 와 연동되는 방식, 목차, SafeKit 소프트웨어로 Podman 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit mirror 클러스터가 Podman 와 연동되는 방식, SafeKit 고가용성 제한 사항, 비교: SAN이 없는 SafeKit 클러스터와 기존 Podman 고가용성, 비교: SafeKit 와 오픈 소스 Linux 고가용성(Pacemaker/Corosync/DRBD) 비교, Podman 고가용성 요약, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit : Podman 고가용성 및 실시간 데이터 복제 소프트웨어 {#safekit-podman-high-availability--real-time-data-replication-software}
@@ -34,7 +34,7 @@ SafeKit 가벼운 무게를 제공합니다. **"딱 필요한 만큼"의 HA 솔�
   * [ 비교: SafeKit SANless 클러스터 vs. 기존 Podman HA ](#safekit-podman-comparison)
   * [ 비교: SafeKit vs. 오픈소스 Linux HA (심박조율기/코로싱크/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Podman 고가용성 요약 ](#podman-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit 고가용성 내비게이션 허브 ](#hub)
+  * [ 🔍 SafeKit 살펴보기
 
 
 ## SafeKit 소프트웨어는 어떻게 간단하게 Podman 고가용성 클러스터를 구현합니까? {#how-safekit-implements-podman-ha}

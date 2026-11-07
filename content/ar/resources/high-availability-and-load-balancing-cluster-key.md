@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/resources/high-availability-and-load-b
 description: "اطلب مفتاح مجموعة SafeKit لتجربة لمدة شهر على Windows وLinux. تقدم SafeKit بنية متكاملة وبسيطة للتوافر العالي وتجميع التطبيقات دون SAN."
 category: "resources"
 lang: "ar"
-topics: "احصل على مفتاح ترخيص SafeKit مجاني لمدة شهر عبر البريد الإلكتروني لأنظمة Windows أو Linux، 🔍 مركز التنقل في SafeKit للتوافر العالي"
+topics: "احصل على مفتاح ترخيص SafeKit مجاني لمدة شهر عبر البريد الإلكتروني لأنظمة Windows أو Linux، 🔍 استكشف SafeKit"
 ---
 
 # مفتاح تجربة SafeKit المجانية لمدة شهر {#safekit-one-month-free-trial-key}

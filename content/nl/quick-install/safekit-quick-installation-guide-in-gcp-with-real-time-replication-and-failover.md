@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Implementeer de mirror.safe module voor SafeKit in GCP om synchrone realtime-replicatie en automatische failover op Windows en Linux mogelijk te maken. Deze handleiding beschrijft hoe u een shared-nothing-cluster met twee knooppunten configureert voor kritieke applicaties zonder gedeelde opslag."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor High Availability GCP , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / GCP mirror oplossing, Installatie van de SafeKit / GCP mirror oplossing op Windows en Linux ( mirror.safe ), Stapsgewijze configuratie van de SafeKit / GCP mirror oplossing, Demonstratie van de SafeKit mirror -oplossing, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Snelstartgids voor High Availability GCP , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / GCP mirror oplossing, Installatie van de SafeKit / GCP mirror oplossing op Windows en Linux ( mirror.safe ), Stapsgewijze configuratie van de SafeKit / GCP mirror oplossing, Demonstratie van de SafeKit mirror -oplossing, 🔍 Ontdek SafeKit"
 ---
 
 # GCP Hoge beschikbaarheid met SafeKit : Installeer de mirror.safe module voor failover {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

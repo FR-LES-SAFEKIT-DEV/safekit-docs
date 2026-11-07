@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-disas
 description: "Élaborez une stratégie de haute disponibilité et de reprise après sinistre (HA/DR) robuste en combinant SafeKit pour la réplication synchrone (RPO=0) avec une sauvegarde asynchrone pour la reprise après sinistre hors site. Garantissez la disponibilité des applications et l'intégrité des données 24h/24 et 7j/7 sous Windows et Linux grâce à cette approche à deux niveaux."
 category: "best-practises"
 lang: "fr"
-topics: "Réplication synchrone SafeKit pour la haute disponibilité vs. réplication asynchrone de sauvegarde pour la reprise après sinistre, Table des matières, HADR Synchrone : Zéro perte de données sur réseaux rapides (LAN/VLAN), HADR Asynchrone : Reprise d'activité sur réseaux lents (WAN), Comment combiner HADR et sauvegarde pour une résilience totale du système, Comparatif des architectures HADR : Réseaux rapides vs Réseaux lents, Guide Vidéo : Comment implémenter le HADR avec SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Réplication synchrone SafeKit pour la haute disponibilité vs. réplication asynchrone de sauvegarde pour la reprise après sinistre, Table des matières, HADR Synchrone : Zéro perte de données sur réseaux rapides (LAN/VLAN), HADR Asynchrone : Reprise d'activité sur réseaux lents (WAN), Comment combiner HADR et sauvegarde pour une résilience totale du système, Comparatif des architectures HADR : Réseaux rapides vs Réseaux lents, Guide Vidéo : Comment implémenter le HADR avec SafeKit, 🔍 Explorez SafeKit"
 ---
 
 # Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre {#combining-safekit-high-availability-with-disaster-recovery-backups}
@@ -28,7 +28,7 @@ Par conséquent, l'environnement est protégé contre les défaillances matérie
   * [Comment combiner HADR et sauvegarde pour une résilience totale](#hadr-resilience-strategy)
   * [Comparatif des architectures HADR : réseaux rapides vs lents](#hadr-architectures-comparison)
   * [Guide Vidéo : Comment implémenter le HADR avec SafeKit](#videoguide-hadr-safekit)
-  * [🔍 Hub de navigation Haute Disponibilité SafeKit](#hub)
+  * [🔍 Explorez SafeKit
 
 
 

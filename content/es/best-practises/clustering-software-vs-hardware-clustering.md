@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/clustering-software-vs-
 description: "Compare la agrupación por software con la agrupación por hardware para alta disponibilidad. Descubra cómo SafeKit elimina la necesidad de costosos sistemas de almacenamiento SAN, dispositivos de balanceo de carga y personal de TI especializado, a la vez que proporciona alta disponibilidad 24/7 en servidores estándar."
 category: "best-practises"
 lang: "es"
-topics: "¿Diferencia entre agrupación por software y agrupación por hardware?, Agrupación por software vs. agrupación por hardware: ventajas y desventajas, 🔍 SafeKit Centro de navegación de alta disponibilidad"
+topics: "¿Diferencia entre agrupación por software y agrupación por hardware?, Agrupación por software vs. agrupación por hardware: ventajas y desventajas, 🔍 Explora SafeKit"
 ---
 
 # Agrupación de software frente a agrupación de hardware para alta disponibilidad {#software-clustering-vs-hardware-clustering-for-high-availability}

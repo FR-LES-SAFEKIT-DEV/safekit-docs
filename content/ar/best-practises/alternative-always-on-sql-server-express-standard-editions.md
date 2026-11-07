@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/alternative-always-on-s
 description: "هل تبحث عن بديل اقتصادي لـ SQL Server Always On؟ يقدم SafeKit بنيةً بدون شبكة تخزين (SAN) توفر توافرًا عاليًا لإصداري SQL Server Express وStandard. استمتع بالنسخ المتزامن، وعنوان IP افتراضي، والتحويل التلقائي في حالة الأعطال دون الحاجة إلى شبكة تخزين أو Active Directory."
 category: "best-practises"
 lang: "ar"
-topics: "بديل لـ Always On SQL Server للإصدارين السريع والقياسي، كيف تعمل مجموعة SafeKit mirror مع Microsoft SQL Server ؟، دليل فيديو: تكوين مجموعة SafeKit HA mirror لـ SQL Server ، 🔍 مركز التنقل عالي التوفر SafeKit"
+topics: "بديل لـ Always On SQL Server للإصدارين السريع والقياسي، كيف تعمل مجموعة SafeKit mirror مع Microsoft SQL Server ؟، دليل فيديو: تكوين مجموعة SafeKit HA mirror لـ SQL Server ، 🔍 استكشف SafeKit"
 ---
 
 # بديل لـ SQL Server Always On: HA للإصدارين Express و Standard {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}

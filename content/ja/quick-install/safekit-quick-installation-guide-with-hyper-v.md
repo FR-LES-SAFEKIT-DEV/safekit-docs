@@ -8,7 +8,7 @@ category: quick-install
 lang: ja
 topics: Hyper-V の高可用性クイック インストール ガイド、SafeKit 高可用性の制限、SafeKit / Hyper-V
   ソリューションの概要、Windows への SafeKit / Hyper-V ソリューションのインストール (hyperv.safe)、SafeKit /
-  Hyper-V ソリューションのステップバイステップの構成、SafeKit / Hyper-V ソリューションのデモ、🔍 SafeKit High
+  Hyper-V ソリューションのステップバイステップの構成、SafeKit / Hyper-V ソリューションのデモ、🔍 SafeKit を探索する
   Availability Navigation Hub
 ---
 

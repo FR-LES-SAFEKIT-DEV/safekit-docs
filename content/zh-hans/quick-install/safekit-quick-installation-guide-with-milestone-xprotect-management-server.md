@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "部署 SafeKit 的 milestone.safe 模块，在 Windows 上为 Milestone XProtect 启用同步实时复制和自动故障转移。本指南介绍如何为关键应用设置一个无需共享存储的双节点 SANless 集群。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Milestone XProtect 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit / Milestone XProtect 解决方案概述、在 Windows 上安装 SafeKit / Milestone XProtect 解决方案 (milestone.safe)、SafeKit / Milestone XProtect 解决方案分步配置、SafeKit mirror 解决方案演示、🔍 SafeKit 高可用性导航中心"
+topics: "Milestone XProtect 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit / Milestone XProtect 解决方案概述、在 Windows 上安装 SafeKit / Milestone XProtect 解决方案 (milestone.safe)、SafeKit / Milestone XProtect 解决方案分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"
 ---
 
 # 使用 SafeKit 实现 Milestone XProtect 高可用性：安装用于故障转移的 milestone.safe 模块 {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

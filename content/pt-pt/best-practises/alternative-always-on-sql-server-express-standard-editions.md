@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/alternative-always-o
 description: "Procurando uma alternativa econômica ao SQL Server Always On? SafeKit propõe uma arquitetura sem SAN que traz alta disponibilidade para as edições Express e Standard SQL Server . Desfrute de replicação síncrona, IP virtual e failover automático sem a necessidade de SAN ou Active Directory."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Alternativa ao Always On SQL Server para edições Express e Standard, Como o cluster SafeKit mirror funciona com Microsoft SQL Server ?, Guia em vídeo: Configurando um cluster HA SafeKit mirror para SQL Server , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Alternativa ao Always On SQL Server para edições Express e Standard, Como o cluster SafeKit mirror funciona com Microsoft SQL Server ?, Guia em vídeo: Configurando um cluster HA SafeKit mirror para SQL Server , 🔍 Explore o SafeKit"
 ---
 
 # Alternativa ao SQL Server Always On: HA para as edições Express e Standard {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}

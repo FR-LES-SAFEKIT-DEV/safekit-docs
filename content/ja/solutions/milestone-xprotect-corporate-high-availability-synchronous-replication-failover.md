@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/milestone-xprotect-corporate
 description: "Milestone XProtect の高可用性を実装する最も簡単な方法です。SafeKit は同期レプリケーションと自動フェイルオーバーを備えた2ノードの SANless クラスターを提供し、AD や専門知識は必要ありません。"
 category: "solutions"
 lang: "ja"
-topics: "SANless SafeKit Mirror クラスターと Milestone XProtect の連携方法、目次、SafeKit ソフトウェアで SANless Milestone XProtect 高可用性クラスターを簡単に実装する方法、SafeKit Mirror クラスターと Milestone XProtect の連携方法、SafeKit 高可用性の制限事項、比較：Milestone XProtect 用 SafeKit と他のクラスターソリューション、動画ガイド：SafeKit HA Mirror クラスターの構成、セキュリティ市場で高く評価される SafeKit、🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "SANless SafeKit Mirror クラスターと Milestone XProtect の連携方法、目次、SafeKit ソフトウェアで SANless Milestone XProtect 高可用性クラスターを簡単に実装する方法、SafeKit Mirror クラスターと Milestone XProtect の連携方法、SafeKit 高可用性の制限事項、比較：Milestone XProtect 用 SafeKit と他のクラスターソリューション、動画ガイド：SafeKit HA Mirror クラスターの構成、セキュリティ市場で高く評価される SafeKit、🔍 SafeKit を探索する"
 ---
 
 # Milestone XProtect の最もシンプルな高可用性：2ノードの同期レプリケーションとフェイルオーバー {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}

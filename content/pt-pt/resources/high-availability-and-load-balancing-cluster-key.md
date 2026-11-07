@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/resources/high-availability-and-loa
 description: "Peça a chave de cluster do SafeKit para uma avaliação de um mês em Windows e Linux. O SafeKit disponibiliza uma arquitetura simples e integrada de alta disponibilidade e clustering de aplicações sem SAN."
 category: "resources"
 lang: "pt-pt"
-topics: "Receba por e-mail uma chave de licença gratuita do SafeKit por um mês para Windows ou Linux, 🔍 Centro de navegação do SafeKit para alta disponibilidade"
+topics: "Receba por e-mail uma chave de licença gratuita do SafeKit por um mês para Windows ou Linux, 🔍 Explore o SafeKit"
 ---
 
 # Chave de avaliação gratuita do SafeKit por um mês {#safekit-one-month-free-trial-key}

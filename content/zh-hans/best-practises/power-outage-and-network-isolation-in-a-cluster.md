@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/power-outage-and-n
 description: "了解如何在高可用性集群中管理网络隔离和断电。 SafeKit 提出了一种无 SAN 架构，集成了脑裂检测器和自动重新同步功能，以确保数据完整性和 24/7 全天候正常运行，而无需共享磁盘。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "集群中发生网络隔离时有哪些不同的场景？集群中发生断电时有哪些不同的场景？🔍 SafeKit高可用性导航中心"
+topics: "集群中发生网络隔离时有哪些不同的场景？集群中发生断电时有哪些不同的场景？🔍 探索 SafeKit"
 ---
 
 # HA集群中断电和网络隔离的处理 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

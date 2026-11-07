@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/heartbeat-failover-quor
 description: "Aprenda cómo funcionan los latidos, la conmutación por error y el quórum en un clúster. SafeKit propone una arquitectura sin SAN que elimina la necesidad de un tercer servidor de quórum o un disco de quórum especial. Logre alta disponibilidad en Windows y Linux con un sencillo comprobador de división de clúster."
 category: "best-practises"
 lang: "es"
-topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cómo funcionan los latidos y la conmutación por error en un clúster Windows o Linux ?, Problema de división de clúster y quórum cuando los servidores están en dos salas de servidores remotas, Quórum de clúster simple con el verificador de división de clúster SafeKit , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cómo funcionan los latidos y la conmutación por error en un clúster Windows o Linux ?, Problema de división de clúster y quórum cuando los servidores están en dos salas de servidores remotas, Quórum de clúster simple con el verificador de división de clúster SafeKit , 🔍 Explora SafeKit"
 ---
 
 # Latido, conmutación por error y quórum en los clústeres Windows y Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

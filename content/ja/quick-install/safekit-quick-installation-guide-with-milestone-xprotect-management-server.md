@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "SafeKit の milestone.safe モジュールを展開して、Windows 上の Milestone XProtect の同期リアルタイムレプリケーションと自動フェイルオーバーを実現します。このガイドでは、共有ストレージを使わずに重要なアプリケーション向けの 2 ノード SANless クラスターを設定する方法を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Milestone XProtect 高可用性クイックインストールガイド、SafeKit 高可用性の制限事項、SafeKit / Milestone XProtect ソリューションの概要、Windows への SafeKit / Milestone XProtect ソリューションのインストール (milestone.safe)、SafeKit / Milestone XProtect ソリューションのステップごとの設定、SafeKit mirror ソリューションのデモ、🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "Milestone XProtect 高可用性クイックインストールガイド、SafeKit 高可用性の制限事項、SafeKit / Milestone XProtect ソリューションの概要、Windows への SafeKit / Milestone XProtect ソリューションのインストール (milestone.safe)、SafeKit / Milestone XProtect ソリューションのステップごとの設定、SafeKit mirror ソリューションのデモ、🔍 SafeKit を探索する"
 ---
 
 # SafeKit による Milestone XProtect の高可用性: フェイルオーバー用 milestone.safe モジュールのインストール {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

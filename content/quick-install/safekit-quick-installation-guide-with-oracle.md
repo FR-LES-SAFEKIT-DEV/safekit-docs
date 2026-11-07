@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Deploy the oracle.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Oracle on Windows and Linux. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Oracle, SafeKit High Availability Limitations, Overview of the SafeKit / Oracle solution, Installation of the SafeKit / Oracle solution on Windows and Linux (oracle.safe), Step by step configuration of the SafeKit / Oracle solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
+topics: "High Availability Quick Installation Guide for Oracle, SafeKit High Availability Limitations, Overview of the SafeKit / Oracle solution, Installation of the SafeKit / Oracle solution on Windows and Linux (oracle.safe), Step by step configuration of the SafeKit / Oracle solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 ---
 
 # Oracle High Availability with SafeKit: Install the oracle.safe Module for Failover {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-install
 description: "Saiba como configurar o kvm.safe para um cluster KVM ativo/ativo com SafeKit. Obtenha alta disponibilidade ao nível da VM com uma arquitetura de dois nós sem armazenamento partilhado. Replicar várias VMs de forma síncrona entre nós para failover automático, sem o custo de uma SAN ou de armazenamento partilhado."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de instalação rápida de alta disponibilidade para KVM, Limitações da alta disponibilidade do SafeKit, Visão geral da solução SafeKit / KVM, Instalação da solução SafeKit / KVM no Linux (kvm.safe), Configuração passo a passo da solução SafeKit / KVM, Demonstração de uma solução de alta disponibilidade ao nível da VM, 🔍 Centro de navegação de alta disponibilidade SafeKit"
+topics: "Guia de instalação rápida de alta disponibilidade para KVM, Limitações da alta disponibilidade do SafeKit, Visão geral da solução SafeKit / KVM, Instalação da solução SafeKit / KVM no Linux (kvm.safe), Configuração passo a passo da solução SafeKit / KVM, Demonstração de uma solução de alta disponibilidade ao nível da VM, 🔍 Explore o SafeKit"
 ---
 
 # Alta disponibilidade de KVM com SafeKit: instalar o módulo kvm.safe para failover {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}

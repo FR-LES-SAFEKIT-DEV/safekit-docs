@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/high-availability-disas
 description: "Entwickeln Sie eine robuste HA/DR-Strategie, indem Sie SafeKit für die synchrone Replikation (RPO=0) mit asynchroner Datensicherung für die externe Notfallwiederherstellung kombinieren. Gewährleisten Sie mit diesem zweischichtigen Ansatz die ständige Verfügbarkeit Ihrer Anwendungen und die Datenintegrität auf Windows und Linux ."
 category: "best-practises"
 lang: "de"
-topics: "Synchrone SafeKit -Replikation für Hochverfügbarkeit vs. asynchrone Backup-Replikation für Disaster Recovery, Inhaltsverzeichnis, Synchrones HADR: Datenverlustfreier Betrieb in schnellen Netzwerken (LAN/VLAN), Asynchrones HADR: Disaster Recovery in langsamen Netzwerken (WAN), Kombination von HADR und Backup für maximale Systemausfallsicherheit, Vergleich von HADR-Architekturen: Schnelle vs. langsame Netzwerke, Videoanleitung: Implementierung von HADR mit SafeKit , 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Synchrone SafeKit -Replikation für Hochverfügbarkeit vs. asynchrone Backup-Replikation für Disaster Recovery, Inhaltsverzeichnis, Synchrones HADR: Datenverlustfreier Betrieb in schnellen Netzwerken (LAN/VLAN), Asynchrones HADR: Disaster Recovery in langsamen Netzwerken (WAN), Kombination von HADR und Backup für maximale Systemausfallsicherheit, Vergleich von HADR-Architekturen: Schnelle vs. langsame Netzwerke, Videoanleitung: Implementierung von HADR mit SafeKit , 🔍 SafeKit entdecken"
 ---
 
 # Kombination von SafeKit Hochverfügbarkeit mit Disaster-Recovery-Backups {#combining-safekit-high-availability-with-disaster-recovery-backups}
@@ -29,7 +29,7 @@ Folglich ist die Umgebung durch SafeKit vor Hardware- oder Softwarefehlern gesch
   * [ Wie man HADR und Backup für vollständige Systemausfallsicherheit kombiniert ](#hadr-resilience-strategy)
   * [ Vergleich von HADR-Architekturen: Schnelle vs. langsame Netzwerke ](#hadr-architectures-comparison)
   * [ Videoanleitung: Implementierung von HADR mit SafeKit ](#videoguide-hadr-safekit)
-  * [ 🔍 SafeKit Hochverfügbarer Navigationshub ](#hub)
+  * [ 🔍 SafeKit entdecken
 
 
 

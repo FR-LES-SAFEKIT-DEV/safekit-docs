@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/building-management-system-s
 description: "Garandeer 100% uptime voor uw slimme gebouw met SafeKit . Onze SAN-loze, 2-knoops redundantiesoftware biedt realtime synchrone replicatie en automatische failover voor elk gebouwbeheersysteem (BMS), inclusief Siemens, Honeywell, Schneider Electric en Johnson Controls. Bereik nul dataverlies (RPO=0) en operationele veerkracht voor kritieke HVAC- en beveiligingssystemen met Windows en Linux ."
 category: "use-cases"
 lang: "nl"
-topics: "Wat is een gebouwbeheersysteem (BMS)?, Waarom is BMS-software cruciaal?, Lijst met belangrijke spelers in de BMS-markt, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van BMS-software, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Wat is een gebouwbeheersysteem (BMS)?, Waarom is BMS-software cruciaal?, Lijst met belangrijke spelers in de BMS-markt, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van BMS-software, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
 ---
 
 # Hoge beschikbaarheid en redundantie voor gebouwbeheersystemen (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}

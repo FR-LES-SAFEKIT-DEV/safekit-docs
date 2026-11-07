@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-
 description: "通过将SafeKit用于同步复制（RPO=0）并结合异步备份以实现异地灾难恢复，构建弹性高可用性/灾难恢复 (HA/DR) 策略。利用这种双层架构，确保Windows和Linux上的应用程序全天候正常运行，并保证数据完整性。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "同步SafeKit复制实现高可用性，异步备份复制实现灾难恢复，目录，同步高可用性灾难恢复：高速网络（LAN/VLAN）零数据丢失，异步高可用性灾难恢复：低速网络（WAN）灾难恢复，如何结合高可用性灾难恢复和备份以实现系统全面弹性，高可用性灾难恢复架构比较：高速网络与低速网络，视频指南：如何使用SafeKit实现高可用性灾难恢复，🔍 SafeKit高可用性导航中心"
+topics: "同步SafeKit复制实现高可用性，异步备份复制实现灾难恢复，目录，同步高可用性灾难恢复：高速网络（LAN/VLAN）零数据丢失，异步高可用性灾难恢复：低速网络（WAN）灾难恢复，如何结合高可用性灾难恢复和备份以实现系统全面弹性，高可用性灾难恢复架构比较：高速网络与低速网络，视频指南：如何使用SafeKit实现高可用性灾难恢复，🔍 探索 SafeKit"
 ---
 
 # 将SafeKit高可用性与灾难恢复备份相结合 {#combining-safekit-high-availability-with-disaster-recovery-backups}
@@ -29,7 +29,7 @@ SafeKit提供了一种灵活的、基于软件的**高可用性和灾难恢复 (
   * [如何将高可用性灾难恢复 (HADR) 与备份相结合以实现系统全面恢复](#hadr-resilience-strategy)
   * HADR架构比较：快速网络与](#hadr-architectures-comparison)网络[
   * [视频指南：如何使用SafeKit和](#videoguide-hadr-safekit)实施 HADR
-  * [ 🔍 SafeKit高可用性导航中心](#hub)
+  * [ 🔍 探索 SafeKit
 
 
 

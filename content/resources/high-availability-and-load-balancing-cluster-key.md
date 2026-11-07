@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/resources/high-availability-and-load-bala
 description: "Request your SafeKit cluster key for a one-month trial on Windows and Linux. SafeKit proposes a SANless architecture for simple, all-in-one high availability and application clustering without a SAN."
 category: "resources"
 lang: "en"
-topics: "Receive a free SafeKit one-month license key by email for Windows or Linux, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Receive a free SafeKit one-month license key by email for Windows or Linux, 🔍 Explore SafeKit"
 ---
 
 # SafeKit One-Month Free Trial Key {#safekit-one-month-free-trial-key}

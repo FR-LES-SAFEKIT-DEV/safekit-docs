@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-disas
 description: "同期レプリケーション（RPO=0）用のSafeKitと、オフサイト災害復旧用の非同期バックアップを組み合わせることで、堅牢なHA/DR戦略を構築します。この二層構造のアプローチにより、 WindowsとLinux上で24時間365日のアプリケーション稼働とデータ整合性を確保します。"
 category: "best-practises"
 lang: "ja"
-topics: "HAのためのSafeKitレプリケーションとDRのための非同期バックアップレプリケーションの比較、目次、同期HADR：高速ネットワーク（LAN/VLAN）でのデータ損失ゼロ、非同期HADR：低速ネットワーク（WAN）での災害復旧、システム全体の回復力を高めるためのHADRとバックアップの組み合わせ方、HADRアーキテクチャの比較：高速ネットワークと低速ネットワーク、ビデオガイド： SafeKitを使用したHADRの実装方法、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "HAのためのSafeKitレプリケーションとDRのための非同期バックアップレプリケーションの比較、目次、同期HADR：高速ネットワーク（LAN/VLAN）でのデータ損失ゼロ、非同期HADR：低速ネットワーク（WAN）での災害復旧、システム全体の回復力を高めるためのHADRとバックアップの組み合わせ方、HADRアーキテクチャの比較：高速ネットワークと低速ネットワーク、ビデオガイド： SafeKitを使用したHADRの実装方法、🔍 SafeKit を探索する"
 ---
 
 # SafeKit高可用性と災害復旧バックアップの組み合わせ {#combining-safekit-high-availability-with-disaster-recovery-backups}
@@ -29,7 +29,7 @@ SafeKit 柔軟なソフトウェアベースの **高可用性および災害復
   * [ HADRとバックアップを組み合わせてシステム全体の回復力を高める方法](#hadr-resilience-strategy)
   * [ HADRアーキテクチャの比較：高速ネットワークと低速ネットワーク](#hadr-architectures-comparison)
   * [ビデオガイド: SafeKit ](#videoguide-hadr-safekit)を使用して HADR を実装する方法
-  * [ 🔍 SafeKit高可用性ナビゲーションハブ](#hub)
+  * [ 🔍 SafeKit を探索する
 
 
 

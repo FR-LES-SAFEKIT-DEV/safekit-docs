@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/application-clustering-softw
 description: "SafeKit 로 소프트웨어 성능을 강화하세요. OEM 파트너로서 자동화된 장애 조치 및 동기식 복제 기능을 애플리케이션에 직접 통합할 수 있습니다. 복잡한 하드웨어 클러스터 없이도 Windows 및 Linux 를 통해 고객에게 연중무휴 24시간 가동 시간을 제공하세요."
 category: "use-cases"
 lang: "ko"
-topics: "OEM 고가용성 사용 사례, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "OEM 고가용성 사용 사례, 🔍 SafeKit 살펴보기"
 ---
 
 # OEM 고가용성: 소프트웨어에 클러스터링 기능 내장( SafeKit {#oem-high-availability-embedding-safekit-clustering-into-your-software}

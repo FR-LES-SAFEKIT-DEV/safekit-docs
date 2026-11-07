@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/edge-high-availability-witho
 description: "Edge-Standorte verfügen über kein Rechenzentrum – benötigen aber dennoch Hochverfügbarkeit. SafeKit verwandelt zwei Standardserver in einen sofort einsatzbereiten HA-Cluster: kein SAN, kein IT-Personal, automatisches Failover."
 category: "use-cases"
 lang: "de"
-topics: "Die Edge-HA-Herausforderung, Warum SafeKit die ideale Lösung für Edge-Umgebungen ist, Eignung für Edge- und verteilte Bereitstellungen, Warum sich Edge-OT-Umgebungen unterscheiden, Ideale Edge-Anwendungsfälle, Edge- vs. Rechenzentrum-HA: Wichtigste Unterschiede, Technische Mindestanforderungen, 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Die Edge-HA-Herausforderung, Warum SafeKit die ideale Lösung für Edge-Umgebungen ist, Eignung für Edge- und verteilte Bereitstellungen, Warum sich Edge-OT-Umgebungen unterscheiden, Ideale Edge-Anwendungsfälle, Edge- vs. Rechenzentrum-HA: Wichtigste Unterschiede, Technische Mindestanforderungen, 🔍 SafeKit entdecken"
 ---
 
 # Edge-Hochverfügbarkeit ohne Rechenzentrum: SafeKit für OT & verteilte Standorte {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/application-clustering-
 description: "借助SafeKit为您的软件赋能。作为 OEM 合作伙伴，您可以将自动故障转移和同步复制功能直接嵌入到您的应用程序中。无需复杂的硬件集群，即可为您的客户提供Windows和Linux的 24/7 全天候正常运行时间。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "OEM 高可用性用例，🔍 SafeKit高可用性导航中心"
+topics: "OEM 高可用性用例，🔍 探索 SafeKit"
 ---
 
 # OEM 高可用性：将SafeKit集群嵌入到您的软件中 {#oem-high-availability-embedding-safekit-clustering-into-your-software}

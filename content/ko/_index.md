@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/"
 description: "SafeKit은 Windows 및 Linux용 올인원 SANless HA 소프트웨어입니다. 실시간 동기 복제, 자동 장애 조치, 부하 분산을 하나의 간단하고 비용 효율적인 패키지로 이용해 보세요. 30일 무료 평가판을 시작하세요."
 category: "home"
 lang: "ko"
-topics: "SafeKit의 기능, 보호 수준 선택, 애플리케이션용 기성 모듈, 고객 사용 사례, 간단하고 예측 가능한 가격 책정, 시작하기 전에 한계 파악, SafeKit 비디오 라이브러리, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "SafeKit의 기능, 보호 수준 선택, 애플리케이션용 기성 모듈, 고객 사용 사례, 간단하고 예측 가능한 가격 책정, 시작하기 전에 한계 파악, SafeKit 비디오 라이브러리, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.12 | Translation LLM | 21 expressions"
 ---
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/architectures/n-1-redundancy/"
 description: "Optimaliseer uw datacenter met SafeKit N-1 redundantie. Implementeer N mirror modules over N+1 servers om hoge beschikbaarheid te bieden voor meerdere applicaties met één gedeelde back-up. Elimineer SAN-vereisten en verlaag hardwarekosten met realtime replicatie voor Windows en Linux . Lees meer."
 category: "architectures"
 lang: "nl"
-topics: "Hoge beschikbaarheid met datareplicatie en applicatiefailover van N servers naar 1, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Hoge beschikbaarheid met datareplicatie en applicatiefailover van N servers naar 1, 🔍 Ontdek SafeKit"
 ---
 
 # N-1 redundantieclustering: hoge beschikbaarheid voor meerdere applicaties met één back-up {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

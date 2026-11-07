@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/aws-high-availability-cluste
 description: "Déployez un cluster HA Amazon AWS simple avec SafeKit . Notre architecture sans partage assure la réplication synchrone, le basculement automatique et un RPO de 0 pour les applications Windows et Linux sans les coûts liés aux disques partagés dans le cloud."
 category: "solutions"
 lang: "fr"
-topics: "SafeKit Haute disponibilité sans partage dans AWS : Éliminez les disques partagés sans perte de données, Sommaire, Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité AWS sans partage ?, Comment le cluster SafeKit mirror fonctionne-t-il avec AWS ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour AWS vs. Solutions HA/DR cloud natives, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "SafeKit Haute disponibilité sans partage dans AWS : Éliminez les disques partagés sans perte de données, Sommaire, Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité AWS sans partage ?, Comment le cluster SafeKit mirror fonctionne-t-il avec AWS ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour AWS vs. Solutions HA/DR cloud natives, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Explorez SafeKit"
 ---
 
 # Amazon AWS Haute disponibilité : SafeKit Réplication synchrone et basculement {#amazon-aws-high-availability-safekit-synchronous-replication--failover}

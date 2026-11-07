@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/oracle-high-availability-syn
 description: "أبسط طريقة لتطبيق خاصية التوافر العالي Oracle . يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SAN) مع نسخ متزامن وتجاوز تلقائي في حالة الفشل - لا يتطلب ذلك Active Directory أو مهارات متخصصة."
 category: "solutions"
 lang: "ar"
-topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Oracle ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Oracle عالية التوفر بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع Oracle ؟، قيود التوفر العالي SafeKit ، مقارنة: SafeKit لـ Oracle مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ mirror ، 🔍 مركز تنقل التوفر العالي SafeKit"
+topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Oracle ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Oracle عالية التوفر بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع Oracle ؟، قيود التوفر العالي SafeKit ، مقارنة: SafeKit لـ Oracle مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ mirror ، 🔍 استكشف SafeKit"
 ---
 
 # أبسط حلول التوافر العالي Oracle : النسخ المتزامن والتحويل التلقائي في حالة الفشل على عقدتين {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}

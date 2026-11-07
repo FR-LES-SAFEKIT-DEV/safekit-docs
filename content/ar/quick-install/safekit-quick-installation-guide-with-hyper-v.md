@@ -10,7 +10,7 @@ lang: ar
 topics: دليل التثبيت السريع للتوافر العالي لـ Hyper-V، قيود التوفر العالي لـ
   SafeKit، نظرة عامة على حل SafeKit / Hyper-V، تثبيت حل SafeKit / Hyper-V على
   Windows (hyperv.safe)، التكوين خطوة بخطوة لحل SafeKit / Hyper-V، عرض توضيحي
-  لحل SafeKit / Hyper-V، 🔍 مركز التنقل عالي التوفر SafeKit
+  لحل SafeKit / Hyper-V، 🔍 استكشف SafeKit
 ---
 
 # Hyper-V التوفر العالي مع SafeKit: تثبيت وحدة Hyperv.safe لتجاوز الفشل {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}

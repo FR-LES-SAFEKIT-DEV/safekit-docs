@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/resources/safekit-support/"
 description: "SafeKit offre tre canali di supporto: supporto contrattuale standard con segnalazione degli incidenti 24 ore su 24, 7 giorni su 7, assistenza gratuita basata sull'intelligenza artificiale tramite SafeKit AI e un programma gratuito di certificazione e formazione online."
 category: "resources"
 lang: "it"
-topics: "Supporto AI di livello 1 gratuito, supporto e manutenzione standard, programma di certificazione e formazione gratuito, 🔍 SafeKit Hub di navigazione ad alta disponibilità"
+topics: "Supporto AI di livello 1 gratuito, supporto e manutenzione standard, programma di certificazione e formazione gratuito, 🔍 Esplora SafeKit"
 ---
 
 # SafeKit IA e supporto {#safekit-ai--support}

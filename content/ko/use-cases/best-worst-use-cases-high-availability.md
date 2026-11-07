@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/best-worst-use-cases-high-av
 description: "고가용성의 최적 및 최악의 사용 사례를 파악하십시오. SafeKit Windows 및 Linux 에 대한 소프트웨어 정의 클러스터링에서 탁월한 성능을 발휘하는 경우를 알아보고, 기존의 공유 스토리지 또는 하드웨어 기반 고가용성이 비즈니스에 적합하지 않을 수 있는 경우를 확인하십시오."
 category: "use-cases"
 lang: "ko"
-topics: "최적 사용 사례, SafeKit 고가용성 제한 사항, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "최적 사용 사례, SafeKit 고가용성 제한 사항, 🔍 SafeKit 살펴보기"
 ---
 
 # 고가용성 활용 사례 중 최고와 최악의 경우: SafeKit 구현 가이드 {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

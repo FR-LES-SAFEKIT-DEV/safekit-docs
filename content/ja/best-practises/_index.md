@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/"
 description: "SafeKit高可用性に関するベストプラクティスを探究します。HA アーキテクチャパターン、同期レプリケーションと非同期レプリケーション、クラスタリング戦略、VIP フェイルオーバー、RPO/RTO、およびWindowsとLinuxの冗長設計について説明します。"
 category: "best-practises"
 lang: "ja"
-topics: "SafeKitクラスタリングのベストプラクティス: HA アーキテクチャ、レプリケーションと冗長性、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SafeKitクラスタリングのベストプラクティス: HA アーキテクチャ、レプリケーションと冗長性、🔍 SafeKit を探索する"
 ---
 
 # 高可用性のベストプラクティス {#high-availability-best-practices}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بتثبيت وحدة mysql.safe لـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لـ MySQL على Windows و Linux . يرشدك هذا الدليل خلال إعداد مجموعة SAN ثنائية العقد للتطبيقات الحيوية التي لا تستخدم تخزينًا مشتركًا."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ MySQL و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / MySQL ، تثبيت حل SafeKit / MySQL على Windows و Linux ( mysql.safe )، التكوين خطوة بخطوة لحل الخادم SafeKit / MySQL ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ MySQL و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / MySQL ، تثبيت حل SafeKit / MySQL على Windows و Linux ( mysql.safe )، التكوين خطوة بخطوة لحل الخادم SafeKit / MySQL ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # MySQL توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة mysql.safe للتحويل التلقائي في حالة الفشل {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}

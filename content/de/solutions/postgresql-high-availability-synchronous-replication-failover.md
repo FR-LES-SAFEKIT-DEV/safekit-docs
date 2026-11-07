@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/solutions/postgresql-high-availability
 description: "Der einfachste Weg, PostgreSQL High Availability zu implementieren. SafeKit bietet einen SANless-Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover – kein AD oder spezielle Kenntnisse erforderlich."
 category: "solutions"
 lang: "de"
-topics: "Funktionsweise des SANless SafeKit Mirror-Clusters mit PostgreSQL, Inhaltsverzeichnis, Wie die SafeKit-Software einfach einen SANless PostgreSQL-Hochverfügbarkeitscluster implementiert?, Wie der SafeKit Mirror-Cluster mit PostgreSQL funktioniert?, SafeKit High Availability-Einschränkungen, Vergleich: SafeKit für PostgreSQL im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Spiegelclusters, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Funktionsweise des SANless SafeKit Mirror-Clusters mit PostgreSQL, Inhaltsverzeichnis, Wie die SafeKit-Software einfach einen SANless PostgreSQL-Hochverfügbarkeitscluster implementiert?, Wie der SafeKit Mirror-Cluster mit PostgreSQL funktioniert?, SafeKit High Availability-Einschränkungen, Vergleich: SafeKit für PostgreSQL im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Spiegelclusters, 🔍 SafeKit entdecken"
 ---
 
 # Die einfachste PostgreSQL-Hochverfügbarkeit: Synchrone Replikation und Failover mit zwei Knoten {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}

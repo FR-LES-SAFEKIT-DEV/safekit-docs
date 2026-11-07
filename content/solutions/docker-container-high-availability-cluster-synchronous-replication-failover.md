@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/docker-container-high-availabil
 description: "SafeKit provides a robust Docker high availability solution with integrated synchronous data replication. Implement a stateful container cluster with automatic failover and zero data loss on standard Linux servers. No SAN or shared storage required. Deploy in minutes."
 category: "solutions"
 lang: "en"
-topics: "How the SANless SafeKit Mirror Cluster Works with Docker, Table of Contents, How the SafeKit software simply implements a Docker high availability cluster?, How the SafeKit mirror cluster works with Docker?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Docker HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker High Availability Summary, 🔍 SafeKit High Availability Navigation Hub"
+topics: "How the SANless SafeKit Mirror Cluster Works with Docker, Table of Contents, How the SafeKit software simply implements a Docker high availability cluster?, How the SafeKit mirror cluster works with Docker?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Docker HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker High Availability Summary, 🔍 Explore SafeKit"
 ---
 
 # SafeKit: Docker High Availability & Real-Time Data Replication Software {#safekit-docker-high-availability--real-time-data-replication-software}
@@ -39,7 +39,7 @@ By utilizing real-time synchronous replication and an **automatically switched V
   * [Comparison: SafeKit SANless Cluster vs. Traditional Docker HA](#safekit-docker-comparison)
   * [Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD)](#safekit-vs-linux-ha-stack)
   * [Docker High Availability Summary](#docker-ha-summary-quick-installation-guide)
-  * [🔍 SafeKit High Availability Navigation Hub](#hub)
+  * [🔍 Explore SafeKit](#hub)
 
 
 ## How the SafeKit software simply implements a Docker high availability cluster? {#how-safekit-implements-docker-ha}

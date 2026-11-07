@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/use-cases/"
 description: "Descubra como o SafeKit oferece alta disponibilidade simples e sem SAN para setores críticos: software OEM, sites de edge, VMS, EACS, SCADA, BMS, controle de tráfego aéreo e operações metroviárias."
 category: "use-cases"
 lang: "pt-br"
-topics: "Casos de uso do SafeKit, 🔍 Central de navegação do SafeKit para alta disponibilidade"
+topics: "Casos de uso do SafeKit, 🔍 Explore o SafeKit"
 ---
 
 # Casos de uso de clientes {#customer-use-cases}

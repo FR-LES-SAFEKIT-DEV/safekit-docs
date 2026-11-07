@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/edge-high-availability-witho
 description: "엣지 사이트는 데이터 센터가 없지만 고가용성(HA)은 필수적입니다. SafeKit 표준 서버 두 대를 플러그 앤 플레이 방식의 HA 클러스터로 구성해 줍니다. SAN이나 IT 인력 없이 자동 장애 조치가 가능합니다."
 category: "use-cases"
 lang: "ko"
-topics: "엣지 고가용성(HA) 과제, SafeKit 엣지에 적합한 이유, 엣지 및 분산 배포 적합성, 엣지 OT 환경의 차이점, 이상적인 엣지 사용 사례, 엣지 고가용성과 데이터 센터 고가용성의 주요 차이점, 기술 최소 요구 사항, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "엣지 고가용성(HA) 과제, SafeKit 엣지에 적합한 이유, 엣지 및 분산 배포 적합성, 엣지 OT 환경의 차이점, 이상적인 엣지 사용 사례, 엣지 고가용성과 데이터 센터 고가용성의 주요 차이점, 기술 최소 요구 사항, 🔍 SafeKit 살펴보기"
 ---
 
 # 데이터센터 없이 엣지 고가용성 구현: OT 및 분산 사이트를 위한 SafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

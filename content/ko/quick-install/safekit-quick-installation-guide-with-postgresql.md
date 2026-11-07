@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "Windows 및 Linux에서 PostgreSQL의 동기식 실시간 복제 및 자동 장애 조치를 활성화하려면 SafeKit용 postgresql.safe 모듈을 배포하세요. 이 가이드는 공유 스토리지가 없는 중요한 애플리케이션을 위한 2노드 SANless 클러스터를 설정하는 과정을 안내합니다."
 category: "quick-install"
 lang: "ko"
-topics: "PostgreSQL용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/PostgreSQL 솔루션 개요, Windows 및 Linux에 SafeKit/PostgreSQL 솔루션 설치(postgresql.safe), SafeKit/PostgreSQL 솔루션의 단계별 구성, SafeKit 미러 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "PostgreSQL용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/PostgreSQL 솔루션 개요, Windows 및 Linux에 SafeKit/PostgreSQL 솔루션 설치(postgresql.safe), SafeKit/PostgreSQL 솔루션의 단계별 구성, SafeKit 미러 솔루션 시연, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit를 통한 PostgreSQL 고가용성: 장애 조치를 위한 postgresql.safe 모듈 설치 {#postgresql-high-availability-with-safekit-install-the-postgresqlsafe-module-for-failover}

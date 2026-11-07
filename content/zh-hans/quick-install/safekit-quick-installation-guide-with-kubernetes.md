@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "为SafeKit部署k3s.safe模块，以启用Kubernetes在Linux上的同步实时复制和自动故障转移。本指南将引导您设置一个双节点无 SAN 集群，用于运行关键的Linux应用程序，而无需共享存储。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kubernetes解决方案概述； SafeKit / Kubernetes解决方案在Linux ( k3s.safe ) 上的安装和配置；集群中网络隔离的不同场景； SafeKit和mirror解决方案演示；🔍 SafeKit高可用性导航中心"
+topics: "Kubernetes 、 SafeKit高可用性快速安装指南； SafeKit / Kubernetes解决方案概述； SafeKit / Kubernetes解决方案在Linux ( k3s.safe ) 上的安装和配置；集群中网络隔离的不同场景； SafeKit和mirror解决方案演示；🔍 探索 SafeKit"
 ---
 
 # 使用SafeKit的 K3S 高可用性：安装k3s.safe模块以实现故障转移 {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}

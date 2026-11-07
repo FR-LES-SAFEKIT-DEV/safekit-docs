@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/high-availability-softw
 description: "使用领先的高可用性软件SafeKit保护您的关键应用程序，该软件适用于Windows和Linux 。无需共享存储或复杂的 SAN，即可轻松创建高可用性集群。在一个简单易用的软件定义解决方案中，即可享受实时复制、故障转移和负载均衡功能。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "30 秒电梯演讲，介绍SafeKit和 🔍 SafeKit高可用性导航中心"
+topics: "30 秒电梯演讲，介绍SafeKit和 🔍 探索 SafeKit"
 ---
 
 # 高可用性软件： Windows和Linux与SafeKit和集群 {#high-availability-software-windows-and-linux-clustering-with-safekit}

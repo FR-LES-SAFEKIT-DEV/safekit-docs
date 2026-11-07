@@ -1,13 +1,14 @@
 ---
-title: "SafeKitのソリューション"
+title: "SafeKit ソリューション"
 canonical: "https://safekit.eviden.com/ja/solutions/"
-description: "SafeKit高可用性ソフトウェアのHAモジュールを使用すれば、WindowsおよびLinuxのクラスターを簡単に構成できます。"
+description: "SafeKit 高可用性ソフトウェアの HA モジュールを使用すれば、Windows および Linux でのクラスター構成は非常に簡単になります。"
 category: "solutions"
 lang: "ja"
-topics: "SafeKitアプリケーションモジュールライブラリ：すぐに使えるHAソリューション、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SafeKit アプリケーションモジュールライブラリ：すぐに使える HA ソリューション、🔍 SafeKit を詳しく見る"
+translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 27 expressions"
 ---
 
-# SafeKitのソリューション {#safekit-solutions}
+# SafeKit ソリューション {#safekit-solutions}
 
 
 {{%  insert-safekit-modules-ja  %}}

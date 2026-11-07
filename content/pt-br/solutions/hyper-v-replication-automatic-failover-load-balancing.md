@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/solutions/hyper-v-replication-autom
 description: "Obtenha HA do Hyper-V sem SAN. SafeKit oferece replicação em tempo real e failover automático para clusters de 2 nós. Baixe seu teste gratuito agora."
 category: "solutions"
 lang: "pt-br"
-topics: "SafeKit para Hyper-V: Cluster Hyper-V sem SAN de 2 nós, Índice, Como o software SafeKit simplesmente implementa um cluster de alta disponibilidade Hyper-V sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit Hyper-V?, Limitações de alta disponibilidade do SafeKit, Comparação: SafeKit para Hyper-V vs. Clustering nativo do Hyper-V, Guia de vídeo: Configurando um cluster SafeKit HA para Hyper-V, 🔍 SafeKit High Hub de navegação de disponibilidade"
+topics: "SafeKit para Hyper-V: Cluster Hyper-V sem SAN de 2 nós, Índice, Como o software SafeKit simplesmente implementa um cluster de alta disponibilidade Hyper-V sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit Hyper-V?, Limitações de alta disponibilidade do SafeKit, Comparação: SafeKit para Hyper-V vs. Clustering nativo do Hyper-V, Guia de vídeo: Configurando um cluster SafeKit HA para Hyper-V, 🔍 Explore o SafeKit"
 ---
 
 # Alta disponibilidade simples do Hyper-V sem armazenamento compartilhado (SAN) {#simple-hyper-v-high-availability-without-shared-storage-san}

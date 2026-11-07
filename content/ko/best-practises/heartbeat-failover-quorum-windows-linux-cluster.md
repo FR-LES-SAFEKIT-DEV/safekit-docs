@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/heartbeat-failover-quor
 description: "클러스터에서 하트비트, 페일오버 및 쿼럼이 어떻게 작동하는지 알아보세요. SafeKit 세 번째 쿼럼 서버나 특수 쿼럼 디스크가 필요 없는 SAN리스 아키텍처를 제안합니다. 간단한 스플릿 브레인 체커를 사용하여 Windows 및 Linux 에서 고가용성을 구현하세요."
 category: "best-practises"
 lang: "ko"
-topics: "클러스터에서 네트워크 격리가 발생할 경우 다양한 시나리오는 무엇인가요? Windows 또는 Linux 클러스터에서 하트비트와 페일오버는 어떻게 작동하나요? 서버가 두 개의 원격 전산실에 있을 때 발생하는 스플릿 브레인 문제와 쿼럼은 어떻게 해결하나요? SafeKit 스플릿 브레인 체커를 사용한 간단한 클러스터 쿼럼 확인 방법은 무엇인가요? 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "클러스터에서 네트워크 격리가 발생할 경우 다양한 시나리오는 무엇인가요? Windows 또는 Linux 클러스터에서 하트비트와 페일오버는 어떻게 작동하나요? 서버가 두 개의 원격 전산실에 있을 때 발생하는 스플릿 브레인 문제와 쿼럼은 어떻게 해결하나요? SafeKit 스플릿 브레인 체커를 사용한 간단한 클러스터 쿼럼 확인 방법은 무엇인가요? 🔍 SafeKit 살펴보기"
 ---
 
 # Windows 및 Linux 클러스터의 하트비트, 페일오버 및 쿼럼 {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/edge-high-availability-
 description: "边缘站点没有数据中心，但仍然需要高可用性。 SafeKit 将 2 台标准服务器变成即插即用的 HA 集群：无需 SAN，无需 IT 人员，自动故障转移。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "边缘高可用性挑战， SafeKit为何是边缘的理想之选，边缘与分布式部署的适用性，边缘 OT 环境的独特之处，理想的边缘用例，边缘与数据中心高可用性：主要区别，技术最低要求，🔍 SafeKit高可用性导航中心"
+topics: "边缘高可用性挑战， SafeKit为何是边缘的理想之选，边缘与分布式部署的适用性，边缘 OT 环境的独特之处，理想的边缘用例，边缘与数据中心高可用性：主要区别，技术最低要求，🔍 探索 SafeKit"
 ---
 
 # 无需数据中心的边缘高可用性：适用于 OT 和分布式站点的SafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

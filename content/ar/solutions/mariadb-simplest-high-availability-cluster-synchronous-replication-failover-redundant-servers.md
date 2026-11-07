@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/mariadb-simplest-high-availa
 description: "أبسط طريقة لتطبيق خاصية التوافر العالي MariaDB . يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SAN) مع نسخ متزامن وتجاوز تلقائي في حالة الفشل - لا يتطلب ذلك Active Directory أو مهارات متخصصة."
 category: "solutions"
 lang: "ar"
-topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع MariaDB ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة MariaDB عالية التوفر بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع MariaDB ؟، قيود التوفر العالي SafeKit ، مقارنة: SafeKit لـ MariaDB مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ mirror ، 🔍 مركز تنقل التوفر العالي SafeKit"
+topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع MariaDB ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة MariaDB عالية التوفر بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع MariaDB ؟، قيود التوفر العالي SafeKit ، مقارنة: SafeKit لـ MariaDB مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ mirror ، 🔍 استكشف SafeKit"
 ---
 
 # أبسط حلول التوافر العالي MariaDB : النسخ المتزامن والتحويل التلقائي في حالة الفشل على عقدتين {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}

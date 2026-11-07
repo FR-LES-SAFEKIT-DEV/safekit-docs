@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/"
 description: "SafeKit は、Windows および Linux 向けのオールインワン SAN レス HA ソフトウェアです。リアルタイムの同期レプリケーション、自動フェイルオーバー、ロードバランシングを、シンプルで費用対効果の高い 1 つのパッケージで実現します。30 日間の無料トライアルを開始してください。"
 category: "home"
 lang: "ja"
-topics: "SafeKit の機能、保護レベルの選択、アプリケーション向けの既製モジュール、顧客のユースケース、シンプルで予測可能な価格設定、開始前に制限事項を把握、SafeKit ビデオライブラリ、🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "SafeKit の機能、保護レベルの選択、アプリケーション向けの既製モジュール、顧客のユースケース、シンプルで予測可能な価格設定、開始前に制限事項を把握、SafeKit ビデオライブラリ、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.12 | Translation LLM | 21 expressions"
 ---
 

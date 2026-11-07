@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/architectures/n-1-redundancy/"
 description: "Otimize seu data center com a redundância N-1 SafeKit . Implante N módulos mirror em N+1 servidores para fornecer alta disponibilidade para vários aplicativos com um único backup compartilhado. Elimine a necessidade de SAN e reduza os custos de hardware com a replicação em tempo real para Windows e Linux . Saiba mais."
 category: "architectures"
 lang: "pt-br"
-topics: "Alta disponibilidade com replicação de dados e failover de aplicativos de N servidores para 1, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Alta disponibilidade com replicação de dados e failover de aplicativos de N servidores para 1, 🔍 Explore o SafeKit"
 ---
 
 # Clustering com redundância N-1: Alta disponibilidade para múltiplas aplicações com um único backup {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

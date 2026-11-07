@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/building-management-system-s
 description: "SafeKit 로 스마트 빌딩의 100% 가동 시간을 보장하세요. 당사의 SAN이 필요 없는 2노드 이중화 소프트웨어는 Siemens, Honeywell, Schneider Electric, Johnson Controls 등 모든 BMS에 대해 실시간 동기식 복제 및 자동 장애 조치를 제공합니다. Windows 및 Linux 통해 중요한 HVAC 및 보안 시스템에 대한 데이터 손실 제로(RPO=0) 및 운영 복원력을 확보하세요."
 category: "use-cases"
 lang: "ko"
-topics: "건물 관리 시스템(BMS)이란 무엇인가?, BMS 소프트웨어가 중요한 이유는 무엇인가?, BMS 주요 업체 목록, SafeKit BMS 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다. SafeKit 보안 시장에서 인정받는 솔루션입니다. 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "건물 관리 시스템(BMS)이란 무엇인가?, BMS 소프트웨어가 중요한 이유는 무엇인가?, BMS 주요 업체 목록, SafeKit BMS 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다. SafeKit 보안 시장에서 인정받는 솔루션입니다. 🔍 SafeKit 살펴보기"
 ---
 
 # 건물 관리 시스템(BMS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-building-management-systems-bms}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/scada-software-redundancy-hi
 description: "Schützen Sie Ihre kritische Infrastruktur mit SafeKit , der führenden SAN-losen Hochverfügbarkeitssoftware für SCADA. Gewährleisten Sie die unterbrechungsfreie Verfügbarkeit (24/7) von Wonderware, WinCC, iFix und Inductive Automation durch synchrone Echtzeitreplikation und automatisches Failover. Erreichen Sie null Datenverlust (RPO=0) für Ihre Industriedatenbank – ohne komplexe SAN-Speicherlösungen oder IT-Kenntnisse."
 category: "use-cases"
 lang: "de"
-topics: "Was ist ein SCADA-System? Warum ist SCADA-Software so wichtig? Wichtige Anbieter von SCADA-Software. SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von SCADA-Software. SafeKit ist eine anerkannte Lösung auf dem SCADA-Markt. 🔍 SafeKit ist ein Navigations-Hub für Hochverfügbarkeit."
+topics: "Was ist ein SCADA-System? Warum ist SCADA-Software so wichtig? Wichtige Anbieter von SCADA-Software. SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von SCADA-Software. SafeKit ist eine anerkannte Lösung auf dem SCADA-Markt. 🔍 SafeKit entdecken"
 ---
 
 # Hochverfügbarkeit und Redundanz für SCADA- und industrielle Steuerungssysteme (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

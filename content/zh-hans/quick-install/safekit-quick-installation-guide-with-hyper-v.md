@@ -7,7 +7,7 @@ category: quick-install
 lang: zh-hans
 topics: Hyper-V 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit / Hyper-V 解决方案概述、在 Windows 上安装
   SafeKit / Hyper-V 解决方案 (hyperv.safe)、SafeKit / Hyper-V 解决方案的逐步配置、SafeKit /
-  Hyper-V 解决方案演示、🔍 SafeKit 高可用性导航中心
+  Hyper-V 解决方案演示、🔍 探索 SafeKit
 ---
 
 # Hyper-V 高可用性与 SafeKit：安装 hyperv.safe 模块以进行故障转移 {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}

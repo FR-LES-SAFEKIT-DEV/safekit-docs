@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/resources/"
 description: "SafeKit 무료 평가판을 다운로드하고, Windows 및 Linux 고가용성 클러스터링에 대한 기술 문서, 빠른 설치 가이드, 사용자 가이드, 백서 및 제품 자료에 액세스하세요."
 category: "resources"
 lang: "ko"
-topics: "SafeKit 고가용성, 🔍 SafeKit 고가용성 내비게이션 허브 무료 체험, 기술 문서 및 제품 정보"
+topics: "SafeKit 고가용성, 🔍 SafeKit 살펴보기, 기술 문서 및 제품 정보"
 ---
 
 # SafeKit 리소스 {#safekit-resources}

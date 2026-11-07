@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/architectures/"
 description: "使用 SafeKit 探索高可用性架构。了解 Mirror、Farm 和 Farm + mirror 集群，以实现无 SAN 应用故障转移和负载平衡。"
 category: "architectures"
 lang: "zh-hans"
-topics: "SafeKit 有哪些不同的高可用性架构和不同的软件集群？如何使用 SafeKit 构建高可用性集群？🔍 SafeKit 高可用性导航中心"
+topics: "SafeKit 有哪些不同的高可用性架构和不同的软件集群？如何使用 SafeKit 构建高可用性集群？🔍 探索 SafeKit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 27 expressions"
 ---
 

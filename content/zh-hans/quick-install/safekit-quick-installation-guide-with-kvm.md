@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "了解如何使用 SafeKit 配置 kvm.safe 主动/主动 KVM 集群。通过双节点无共享架构实现虚拟机级高可用。在节点之间同步复制多个虚拟机，实现自动故障转移，无需承担 SAN 或共享存储的成本。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "KVM 高可用快速安装指南，SafeKit 高可用性限制，SafeKit / KVM 解决方案概述，在 Linux 上安装 SafeKit / KVM 解决方案 (kvm.safe)，逐步配置 SafeKit / KVM 解决方案，虚拟机级高可用解决方案演示，🔍 SafeKit 高可用导航中心"
+topics: "KVM 高可用快速安装指南，SafeKit 高可用性限制，SafeKit / KVM 解决方案概述，在 Linux 上安装 SafeKit / KVM 解决方案 (kvm.safe)，逐步配置 SafeKit / KVM 解决方案，虚拟机级高可用解决方案演示，🔍 探索 SafeKit"
 ---
 
 # SafeKit 的 KVM 高可用：安装 kvm.safe 模块以实现故障转移 {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}

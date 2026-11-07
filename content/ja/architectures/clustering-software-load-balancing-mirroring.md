@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/clustering-software-load
 description: "高度なアーキテクチャをミックスして展開する SafeKit Farm そして Mirror モジュール。フロントエンドのスケーラビリティのためのネットワーク負荷分散と、バックエンドのデータ保護のためのリアルタイム同期レプリケーションを組み合わせます。シンプルなSANレスクラスタリングで Windows そして Linux 専門的なITスキルは不要です。無料トライアルをダウンロードしてください。"
 category: "architectures"
 lang: "ja"
-topics: "SafeKitクラスタリングソフトウェア、🔍 SafeKit高可用性ナビゲーションハブによる、重要なWebアプリケーションおよびデータベースアプリケーションの高可用性と拡張性"
+topics: "SafeKitクラスタリングソフトウェア、🔍 SafeKit を探索する"
 ---
 
 # ファームとミラー向けのクラスタリングソフトウェア：高可用性と負荷分散 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/"
 description: "SafeKitが、OEMソフトウェア、エッジ拠点、VMS、EACS、SCADA、BMS、航空管制、地下鉄運行などの重要分野に、シンプルなSANレス高可用性をどのように提供するかをご紹介します。"
 category: "use-cases"
 lang: "ja"
-topics: "SafeKitのユースケース、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SafeKitのユースケース、🔍 SafeKit を探索する"
 ---
 
 # お客様のユースケース {#customer-use-cases}

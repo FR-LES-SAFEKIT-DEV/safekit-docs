@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/solutions/kubernetes-k3s-the-simplest-
 description: "Logre alta disponibilidad de K3s en 2 nodos sin almacenamiento externo ni quórum de etcd. Descubra cómo SafeKit proporciona replicación sin pérdida de datos y conmutación por error automática."
 category: "solutions"
 lang: "es"
-topics: "Simplificando la alta disponibilidad de K3s: ¿Por qué elegir SafeKit en lugar de MetalLB y Longhorn?, Tabla de contenido, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad de K3s Kubernetes ?, ¿Cómo funciona el clúster SafeKit mirror con K3S Kubernetes ?, Limitaciones de alta disponibilidad SafeKit , Comparación: SafeKit frente a la pila K3s estándar (MetalLB y Longhorn), Guía en vídeo: Configuración de un clúster de alta disponibilidad SafeKit mirror , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Simplificando la alta disponibilidad de K3s: ¿Por qué elegir SafeKit en lugar de MetalLB y Longhorn?, Tabla de contenido, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad de K3s Kubernetes ?, ¿Cómo funciona el clúster SafeKit mirror con K3S Kubernetes ?, Limitaciones de alta disponibilidad SafeKit , Comparación: SafeKit frente a la pila K3s estándar (MetalLB y Longhorn), Guía en vídeo: Configuración de un clúster de alta disponibilidad SafeKit mirror , 🔍 Explora SafeKit"
 ---
 
 # Kubernetes K3s Alta disponibilidad: replicación síncrona de 2 nodos y conmutación por error {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ Diagrama de arquitectura ![ SafeKit para alta disponibilidad de K3s de 2 nodos c
   * [ SafeKit Limitaciones de alta disponibilidad ](#safekit-ha-limitations)
   * Comparación [ : SafeKit frente a la pila K3s estándar (MetalLB y Longhorn) ](#safekit-k3s-ha-comparison)
   * Guía de vídeo [ : Configuración de un clúster HA SafeKit Mirror ](#videoguide-safekit-mirror-cluster)
-  * [ 🔍 SafeKit Centro de navegación de alta disponibilidad ](#hub)
+  * [ 🔍 Explora SafeKit
 
 
 ## ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad K3s Kubernetes ? {#safekit-mirror-k3s-cluster}

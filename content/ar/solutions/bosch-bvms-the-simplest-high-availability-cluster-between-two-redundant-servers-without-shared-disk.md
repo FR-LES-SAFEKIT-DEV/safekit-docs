@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/bosch-bvms-the-simplest-high
 description: "اضمن توفر نظام إدارة الفيديو والمباني من بوش على مدار الساعة طوال أيام الأسبوع مع SafeKit . يوفر نظامنا العنقودي البسيط ثنائي العقدة بدون شبكة تخزين (SAN) تجاوز الأعطال تلقائيًا ونسخ البيانات في الوقت الفعلي دون الحاجة إلى أقراص مشتركة باهظة الثمن. احمِ نظام إدارة الفيديو والمباني الخاص بك اليوم."
 category: "solutions"
 lang: "ar"
-topics: "SafeKit لنظام Bosch BVMS: مجموعة Hyper-V ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Bosch BVMS عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit لنظام Bosch BVMS؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لنظام Bosch BVMS مقابل تجميع Hyper-V الأصلي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لنظام Bosch BVMS، SafeKit ، حل معترف به في سوق الأمان، 🔍 مركز تنقل التوفر العالي SafeKit"
+topics: "SafeKit لنظام Bosch BVMS: مجموعة Hyper-V ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Bosch BVMS عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit لنظام Bosch BVMS؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لنظام Bosch BVMS مقابل تجميع Hyper-V الأصلي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لنظام Bosch BVMS، SafeKit ، حل معترف به في سوق الأمان، 🔍 استكشف SafeKit"
 ---
 
 # SafeKit توافر عالٍ لأنظمة إدارة الفيديو من بوش: نظام إدارة فيديو احتياطي بدون شبكة تخزين {#safekit-high-availability-for-bosch-bvms-sanless-video-management-redundancy}

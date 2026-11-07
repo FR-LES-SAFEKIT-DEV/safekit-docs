@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/oracle-high-availability-synchr
 description: "The simplest way to implement Oracle High Availability. SafeKit provides a 2-node SANless cluster with synchronous replication and automatic failover—no AD or specialized skills required."
 category: "solutions"
 lang: "en"
-topics: "How the SANless SafeKit Mirror Cluster Works with Oracle, Table of Contents, How the SafeKit software simply implements a SANless Oracle high availability cluster?, How the SafeKit mirror cluster works with Oracle?, SafeKit High Availability Limitations, Comparison: SafeKit for Oracle vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 SafeKit High Availability Navigation Hub"
+topics: "How the SANless SafeKit Mirror Cluster Works with Oracle, Table of Contents, How the SafeKit software simply implements a SANless Oracle high availability cluster?, How the SafeKit mirror cluster works with Oracle?, SafeKit High Availability Limitations, Comparison: SafeKit for Oracle vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
 ---
 
 # The Simplest Oracle High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}

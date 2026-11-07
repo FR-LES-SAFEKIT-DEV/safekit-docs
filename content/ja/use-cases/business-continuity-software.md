@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-software
 description: "分散型企業のあらゆる支店を保護する SafeKit標準化されたソフトウェアのみのHAクラスタを大規模に展開し、重要なブランチアプリケーションの24時間365日の稼働時間を確保します。共有ストレージ、複雑なSAN、オンサイトのIT専門知識は不要です。 Windows そして Linux."
 category: "use-cases"
 lang: "ja"
-topics: "分散型エンタープライズにおける事業継続性、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "分散型エンタープライズにおける事業継続性、🔍 SafeKit を探索する"
 ---
 
 # 多数の支店を持つ分散型企業における高可用性の標準化 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

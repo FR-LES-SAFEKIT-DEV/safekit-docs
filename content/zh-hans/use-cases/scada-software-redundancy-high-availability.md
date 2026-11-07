@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/scada-software-redundan
 description: "使用领先的无SAN高可用性SCADA软件SafeKit保护关键基础设施。通过实时同步复制和自动故障转移，确保Wonderware、WinCC、iFix和Inductive Automation全天候正常运行。无需复杂的SAN存储或IT技能，即可实现工业数据库零数据丢失（RPO=0）。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "什么是SCADA系统？为什么SCADA软件至关重要？SCADA软件主要厂商名单； SafeKit提供两种SCADA软件冗余和高可用性解决方案； SafeKit是SCADA市场上公认的解决方案；🔍 SafeKit高可用性导航中心"
+topics: "什么是SCADA系统？为什么SCADA软件至关重要？SCADA软件主要厂商名单； SafeKit提供两种SCADA软件冗余和高可用性解决方案； SafeKit是SCADA市场上公认的解决方案；🔍 探索 SafeKit"
 ---
 
 # SCADA 和工业控制系统 (ICS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

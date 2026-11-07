@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/shared-nothing-architec
 description: "고가용성을 위한 공유 디스크 아키텍처와 공유 디스크 아키텍처를 비교해 보세요. SafeKit 공유 디스크 아키텍처를 활용하여 SAN 비용을 절감하고, 장애 조치를 간소화하며, 복잡한 하드웨어 제약 없이 동기식 복제를 제공하는 방법을 알아보세요."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성 클러스터를 위한 공유 디스크 아키텍처와 공유 없음 아키텍처 비교, 공유 디스크 아키텍처와 공유 없음 아키텍처의 장단점, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "고가용성 클러스터를 위한 공유 디스크 아키텍처와 공유 없음 아키텍처 비교, 공유 디스크 아키텍처와 공유 없음 아키텍처의 장단점, 🔍 SafeKit 살펴보기"
 ---
 
 # 공유 디스크 아키텍처 vs. 공유 디스크 아키텍처: 최적의 HA 클러스터 선택하기 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "SafeKitにsqlserver.safeモジュールをデプロイして、 SQL Server Microsoft同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージを使用しない重要なアプリケーション向けの 2 ノード SAN レス クラスタのセットアップ手順を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Microsoft 、 SQL Server 、 SafeKitの高可用性クイックインストールガイド、高可用性の制限事項、 SafeKit / Microsoft SQL Serverソリューションの概要、 Windows ( sqlserver.safe ) へのSafeKit / Microsoft 、 SQL Serverソリューションのインストール、 SafeKit / Microsoft 、 SQL Serverソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "Microsoft 、 SQL Server 、 SafeKitの高可用性クイックインストールガイド、高可用性の制限事項、 SafeKit / Microsoft SQL Serverソリューションの概要、 Windows ( sqlserver.safe ) へのSafeKit / Microsoft 、 SQL Serverソリューションのインストール、 SafeKit / Microsoft 、 SQL Serverソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit を探索する"
 ---
 
 # Microsoft SQL Server SafeKitによる高可用性：フェイルオーバーのためにsqlserver.safeモジュールをインストールしてください {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/business-continuity-software
 description: "Sichern Sie jeden Standort Ihres verteilten Unternehmens mit SafeKit . Stellen Sie einen standardisierten, rein softwarebasierten HA-Cluster in großem Umfang bereit, um die Verfügbarkeit kritischer Anwendungen rund um die Uhr zu gewährleisten. Für Windows und Linux sind weder gemeinsam genutzter Speicher noch komplexe SANs oder IT-Fachkräfte vor Ort erforderlich."
 category: "use-cases"
 lang: "de"
-topics: "Geschäftskontinuität in einem verteilten Unternehmen, 🔍 SafeKit Hochverfügbarkeits-Navigationshub"
+topics: "Geschäftskontinuität in einem verteilten Unternehmen, 🔍 SafeKit entdecken"
 ---
 
 # Standardisierung von Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

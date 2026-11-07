@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "Azure에 SafeKit mirror.safe 모듈을 배포하여 Windows 및 Linux에서 동기식 실시간 복제와 자동 장애 조치를 구현합니다. 이 가이드에서는 중요 애플리케이션을 위해 공유 스토리지 없이 2노드 클러스터를 설정하는 방법을 설명합니다."
 category: "quick-install"
 lang: "ko"
-topics: "Azure 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Azure mirror 솔루션 개요, Windows 및 Linux에 SafeKit / Azure mirror 솔루션 설치(mirror.safe), SafeKit / Azure mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Azure 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Azure mirror 솔루션 개요, Windows 및 Linux에 SafeKit / Azure mirror 솔루션 설치(mirror.safe), SafeKit / Azure mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 데모, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit을 사용한 Azure 고가용성: 장애 조치용 mirror.safe 모듈 설치 {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

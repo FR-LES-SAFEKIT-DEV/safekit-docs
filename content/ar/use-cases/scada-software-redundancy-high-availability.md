@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/scada-software-redundancy-hi
 description: "احمِ البنية التحتية الحيوية باستخدام SafeKit ، البرنامج الرائد عالي التوافر لأنظمة SCADA بدون الحاجة إلى شبكة تخزين (SAN). اضمن استمرارية عمل Wonderware وWinCC وiFix وInductive Automation على مدار الساعة طوال أيام الأسبوع من خلال النسخ المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الأعطال. حقق انعدام فقدان البيانات (RPO=0) لقاعدة بياناتك الصناعية دون الحاجة إلى حلول تخزين SAN معقدة أو مهارات تقنية معلومات متقدمة."
 category: "use-cases"
 lang: "ar"
-topics: "ما هو نظام SCADA؟، لماذا يُعدّ برنامج SCADA بالغ الأهمية؟، قائمة بأهمّ الشركات في مجال برامج SCADA، يُقدّم SafeKit حلّين لضمان التكرار والتوافر العالي لبرنامج SCADA، SafeKit ، وهو حلّ معروف في سوق SCADA، 🔍 SafeKit مركز توجيه عالي التوافر"
+topics: "ما هو نظام SCADA؟، لماذا يُعدّ برنامج SCADA بالغ الأهمية؟، قائمة بأهمّ الشركات في مجال برامج SCADA، يُقدّم SafeKit حلّين لضمان التكرار والتوافر العالي لبرنامج SCADA، SafeKit ، وهو حلّ معروف في سوق SCADA، 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي والتكرار لأنظمة التحكم الإشرافي وجمع البيانات (SCADA) وأنظمة التحكم الصناعية (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

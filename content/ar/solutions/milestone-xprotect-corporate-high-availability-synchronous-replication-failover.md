@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/milestone-xprotect-corporate
 description: "أسهل طريقة لتنفيذ التوافر العالي لـ Milestone XProtect. يوفر SafeKit مجموعة SANless من عقدتين مع النسخ المتماثل المتزامن وتجاوز الفشل التلقائي، من دون الحاجة إلى AD أو مهارات متخصصة."
 category: "solutions"
 lang: "ar"
-topics: "كيف تعمل مجموعة SafeKit Mirror Cluster دون SAN مع Milestone XProtect، جدول المحتويات، كيف ينفذ برنامج SafeKit ببساطة مجموعة توافر عالٍ SANless لـ Milestone XProtect؟، كيف تعمل مجموعة SafeKit Mirror مع Milestone XProtect؟، قيود التوافر العالي لـ SafeKit، مقارنة: SafeKit لـ Milestone XProtect مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit HA Mirror، SafeKit حل معترف به في سوق الأمن، 🔍 مركز التنقل للتوافر العالي من SafeKit"
+topics: "كيف تعمل مجموعة SafeKit Mirror Cluster دون SAN مع Milestone XProtect، جدول المحتويات، كيف ينفذ برنامج SafeKit ببساطة مجموعة توافر عالٍ SANless لـ Milestone XProtect؟، كيف تعمل مجموعة SafeKit Mirror مع Milestone XProtect؟، قيود التوافر العالي لـ SafeKit، مقارنة: SafeKit لـ Milestone XProtect مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit HA Mirror، SafeKit حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
 ---
 
 # أبسط حل للتوافر العالي لـ Milestone XProtect: النسخ المتماثل المتزامن وتجاوز الفشل بين عقدتين {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}

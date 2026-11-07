@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/synchronous-replication
 description: "Vergleichen Sie synchrone und asynchrone Replikation für Geschäftskontinuität. Erfahren Sie, wie SafeKit synchrone Replikation in Echtzeit verwendet, um in HA-Clustern keinen Datenverlust (RPO=0) zu garantieren, und warum asynchrone Replikation besser für die Notfallwiederherstellung über große Entfernungen geeignet ist."
 category: "best-practises"
 lang: "de"
-topics: "Datenverlust oder nicht bei Anwendungs-Failover mit synchroner oder asynchroner Replikation?, Inhaltsverzeichnis, Wie funktioniert asynchrone Replikation?, Wie funktioniert synchrone Replikation?, Wie funktioniert halbsynchrone Replikation?, Endgültiges Urteil: Auswahl der richtigen Replikation für Hochverfügbarkeit, Vergleichstabelle: Synchrone vs. asynchrone vs. halbsynchrone, Videoanleitung: Konfigurieren synchroner Echtzeitreplikation und hoher Verfügbarkeit, FAQ: Replikation Strategien in Hochverfügbarkeitsclustern, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Datenverlust oder nicht bei Anwendungs-Failover mit synchroner oder asynchroner Replikation?, Inhaltsverzeichnis, Wie funktioniert asynchrone Replikation?, Wie funktioniert synchrone Replikation?, Wie funktioniert halbsynchrone Replikation?, Endgültiges Urteil: Auswahl der richtigen Replikation für Hochverfügbarkeit, Vergleichstabelle: Synchrone vs. asynchrone vs. halbsynchrone, Videoanleitung: Konfigurieren synchroner Echtzeitreplikation und hoher Verfügbarkeit, FAQ: Replikation Strategien in Hochverfügbarkeitsclustern, 🔍 SafeKit entdecken"
 ---
 
 # Synchrone vs. asynchrone Replikation: Wie gewährleistet SafeKit keinen Datenverlust? {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/how-to-implement-red
 description: "Aprenda como implementar servidores redundantes com uma abordagem simples, baseada exclusivamente em software. SafeKit propõe uma arquitetura sem SAN para Windows e Linux , oferecendo replicação de dados em tempo real e failover automático sem discos compartilhados ou conhecimentos de TI especializados."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Como implementar servidores redundantes ativos/passivos com replicação em tempo real e failover?, Como implementar servidores redundantes ativos/ativos com balanceamento de carga de rede e failover?, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Como implementar servidores redundantes ativos/passivos com replicação em tempo real e failover?, Como implementar servidores redundantes ativos/ativos com balanceamento de carga de rede e failover?, 🔍 Explore o SafeKit"
 ---
 
 # Como implementar servidores redundantes com software de alta disponibilidade simples {#how-to-implement-redundant-servers-with-simple-ha-software}

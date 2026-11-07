@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/power-outage-and-networ
 description: "Leer hoe u netwerkisolatie en stroomuitval in een high availability-cluster beheert. SafeKit biedt een SANless-architectuur met geïntegreerde split-brain-controlemechanismen en automatische resynchronisatie om data-integriteit en 24/7 uptime te garanderen zonder gedeelde schijf."
 category: "best-practises"
 lang: "nl"
-topics: "Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster? Wat zijn de verschillende scenario's bij stroomuitval in een cluster? 🔍 SafeKit High Availability Navigation Hub"
+topics: "Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster? Wat zijn de verschillende scenario's bij stroomuitval in een cluster? 🔍 Ontdek SafeKit"
 ---
 
 # Het afhandelen van stroomuitval en netwerkisolatie in een HA-cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

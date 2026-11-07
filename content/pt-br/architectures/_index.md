@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/architectures/"
 description: "Explore arquiteturas de alta disponibilidade com o SafeKit. Saiba mais sobre os clusters Mirror, Farm e Farm + clusters mirror para failover de aplicativos e balanceamento de carga sem SAN."
 category: "architectures"
 lang: "pt-br"
-topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os diferentes clusters de software com o SafeKit?, Como construir clusters de alta disponibilidade com o SafeKit?, 🔍 Central de Navegação de Alta Disponibilidade do SafeKit"
+topics: "Quais são as diferentes arquiteturas de alta disponibilidade e os diferentes clusters de software com o SafeKit?, Como construir clusters de alta disponibilidade com o SafeKit?, 🔍 Explore o SafeKit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 13 expressions"
 ---
 

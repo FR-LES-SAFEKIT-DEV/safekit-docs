@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/best-practises/high-availability-clust
 description: "Confronta i cluster HA con i sistemi a tolleranza di errore. Scopri come SafeKit propone un cluster HA software senza SAN che protegge sia dai guasti hardware che software. Riduci i costi eliminando l'hardware FT specializzato e garantendo zero perdita di dati (RPO 0)."
 category: "best-practises"
 lang: "it"
-topics: "Qual è la differenza tra alta disponibilità e tolleranza ai guasti?, Pro e contro dell'alta disponibilità e della tolleranza ai guasti, 🔍 SafeKit Hub di navigazione ad alta disponibilità"
+topics: "Qual è la differenza tra alta disponibilità e tolleranza ai guasti?, Pro e contro dell'alta disponibilità e della tolleranza ai guasti, 🔍 Esplora SafeKit"
 ---
 
 # Cluster HA vs. sistema a tolleranza di errore: scegliere la giusta strategia di ridondanza {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

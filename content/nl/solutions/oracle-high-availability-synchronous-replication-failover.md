@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/oracle-high-availability-syn
 description: "De eenvoudigste manier om Oracle High Availability te implementeren. SafeKit biedt een SAN-loos cluster met twee knooppunten, synchrone replicatie en automatische failover – zonder Active Directory of specialistische kennis."
 category: "solutions"
 lang: "nl"
-topics: "Hoe het SANless SafeKit Mirror -cluster werkt met Oracle , Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SANless Oracle high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Oracle ?, Beperkingen SafeKit high availability, Vergelijking: SafeKit voor Oracle versus andere clusteringoplossingen, Videogids: Een SafeKit HA mirror -cluster configureren, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Hoe het SANless SafeKit Mirror -cluster werkt met Oracle , Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SANless Oracle high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Oracle ?, Beperkingen SafeKit high availability, Vergelijking: SafeKit voor Oracle versus andere clusteringoplossingen, Videogids: Een SafeKit HA mirror -cluster configureren, 🔍 Ontdek SafeKit"
 ---
 
 # De eenvoudigste Oracle hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}

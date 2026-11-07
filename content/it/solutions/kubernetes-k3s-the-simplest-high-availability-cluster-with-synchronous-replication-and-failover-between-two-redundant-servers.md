@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/solutions/kubernetes-k3s-the-simplest-
 description: "Ottieni l'alta disponibilità di K3s su 2 nodi senza storage esterno o quorum etcd. Scopri come SafeKit offre replica senza perdita di dati e failover automatico."
 category: "solutions"
 lang: "it"
-topics: "Semplificare l'alta disponibilità di K3s: perché scegliere SafeKit rispetto a MetalLB e Longhorn?, Indice, Come il software SafeKit implementa in modo semplice un cluster di alta disponibilità K3s Kubernetes ?, Come funziona il cluster SafeKit mirror con K3S Kubernetes ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: SafeKit vs. Stack K3s standard (MetalLB e Longhorn), Guida video: configurazione di un cluster HA SafeKit mirror , 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "Semplificare l'alta disponibilità di K3s: perché scegliere SafeKit rispetto a MetalLB e Longhorn?, Indice, Come il software SafeKit implementa in modo semplice un cluster di alta disponibilità K3s Kubernetes ?, Come funziona il cluster SafeKit mirror con K3S Kubernetes ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: SafeKit vs. Stack K3s standard (MetalLB e Longhorn), Guida video: configurazione di un cluster HA SafeKit mirror , 🔍 Esplora SafeKit"
 ---
 
 # Kubernetes K3s Alta disponibilità: replica sincrona a 2 nodi e failover {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ Diagramma architetturale ![ SafeKit per alta disponibilità K3s a 2 nodi con IP 
   * [ SafeKit Limitazioni di elevata disponibilità ](#safekit-ha-limitations)
   * Confronto [ : SafeKit vs. Stack K3s standard (MetalLB e Longhorn) ](#safekit-k3s-ha-comparison)
   * Guida video [ : Configurazione di un cluster HA SafeKit Mirror ](#videoguide-safekit-mirror-cluster)
-  * [ 🔍 SafeKit Hub di navigazione ad alta disponibilità ](#hub)
+  * [ 🔍 Esplora SafeKit
 
 
 ## Come il software SafeKit implementa in modo semplice un cluster ad alta disponibilità K3s Kubernetes ? {#safekit-mirror-k3s-cluster}

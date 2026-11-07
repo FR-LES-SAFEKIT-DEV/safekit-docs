@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/architectures/active-active-clust
 description: "利用SafeKit主动-主动集群最大程度地利用资源。通过实时同步复制和多个mirror模块，在两台服务器之间部署相互故障转移。无需 SAN，即可确保Windows和Linux实现零数据丢失 (RPO=0) 和自动恢复。下载免费试用版。"
 category: "architectures"
 lang: "zh-hans"
-topics: "实时复制的活/活集群如何工作？🔍 SafeKit高可用性导航中心"
+topics: "实时复制的活/活集群如何工作？🔍 探索 SafeKit"
 ---
 
 # 具备实时复制和相互故障转移功能的双活集群软件 {#active-active-clustering-software-with-real-time-replication--mutual-failover}

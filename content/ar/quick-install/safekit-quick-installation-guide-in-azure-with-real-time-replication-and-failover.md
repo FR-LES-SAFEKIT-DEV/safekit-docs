@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "انشر وحدة mirror.safe من SafeKit في Azure لتمكين النسخ المتطابق المتزامن في الوقت الفعلي وتجاوز الفشل التلقائي على Windows وLinux. يشرح هذا الدليل إعداد مجموعة من عقدتين دون تخزين مشترك للتطبيقات الحيوية."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي في Azure، قيود التوافر العالي في SafeKit، نظرة عامة على حل SafeKit / Azure mirror، تثبيت حل SafeKit / Azure mirror على Windows وLinux (mirror.safe)، التكوين خطوة بخطوة لحل SafeKit / Azure mirror، عرض توضيحي لحل SafeKit mirror، 🔍 مركز التنقل للتوافر العالي في SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي في Azure، قيود التوافر العالي في SafeKit، نظرة عامة على حل SafeKit / Azure mirror، تثبيت حل SafeKit / Azure mirror على Windows وLinux (mirror.safe)، التكوين خطوة بخطوة لحل SafeKit / Azure mirror، عرض توضيحي لحل SafeKit mirror، 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي في Azure باستخدام SafeKit: تثبيت وحدة mirror.safe لتجاوز الفشل {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

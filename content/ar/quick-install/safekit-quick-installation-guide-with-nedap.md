@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بتثبيت وحدة nedap.safe لـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لـ Nedap على Windows . يرشدك هذا الدليل خلال إعداد مجموعة SAN ثنائية العقد للتطبيقات الحيوية التي لا تستخدم تخزينًا مشتركًا."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Nedap ، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / Nedap ، تثبيت حل SafeKit / Nedap على Windows ( nedap.safe )، التكوين خطوة بخطوة لحل SafeKit / Nedap ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Nedap ، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / Nedap ، تثبيت حل SafeKit / Nedap على Windows ( nedap.safe )، التكوين خطوة بخطوة لحل SafeKit / Nedap ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # Nedap توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة nedap.safe للتحويل التلقائي في حالة الفشل {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

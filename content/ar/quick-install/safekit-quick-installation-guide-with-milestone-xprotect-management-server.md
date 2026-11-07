@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "انشر وحدة milestone.safe لـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الحقيقي وتجاوز الفشل التلقائي لـ Milestone XProtect على Windows. يرشدك هذا الدليل خلال إعداد مجموعة SANless ذات عقدتين للتطبيقات الحيوية دون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Milestone XProtect، قيود التوافر العالي في SafeKit، نظرة عامة على حل SafeKit / Milestone XProtect، تثبيت حل SafeKit / Milestone XProtect على Windows (milestone.safe)، التكوين خطوة بخطوة لحل SafeKit / Milestone XProtect، عرض توضيحي لحل SafeKit mirror، 🔍 مركز التنقل للتوافر العالي في SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Milestone XProtect، قيود التوافر العالي في SafeKit، نظرة عامة على حل SafeKit / Milestone XProtect، تثبيت حل SafeKit / Milestone XProtect على Windows (milestone.safe)، التكوين خطوة بخطوة لحل SafeKit / Milestone XProtect، عرض توضيحي لحل SafeKit mirror، 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي لـ Milestone XProtect مع SafeKit: تثبيت وحدة milestone.safe لتجاوز الفشل {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-disas
 description: "Ontwikkel een robuuste HA/DR-strategie door SafeKit te combineren voor synchrone replicatie (RPO=0) met asynchrone back-up voor herstel na een ramp op een externe locatie. Garandeer 24/7 applicatiebeschikbaarheid en data-integriteit op Windows en Linux met deze tweelaagse aanpak."
 category: "best-practises"
 lang: "nl"
-topics: "Synchrone SafeKit -replicatie voor HA versus asynchrone back-upreplicatie voor DR, Inhoudsopgave, Synchrone HADR: geen gegevensverlies over snelle netwerken (LAN/VLAN), Asynchrone HADR: rampenherstel over trage netwerken (WAN), Hoe HADR en back-up te combineren voor totale systeemveerkracht, Vergelijking van HADR-architecturen: snelle versus trage netwerken, Videogids: Hoe HADR te implementeren met SafeKit , 🔍 SafeKit High Availability Navigation Hub"
+topics: "Synchrone SafeKit -replicatie voor HA versus asynchrone back-upreplicatie voor DR, Inhoudsopgave, Synchrone HADR: geen gegevensverlies over snelle netwerken (LAN/VLAN), Asynchrone HADR: rampenherstel over trage netwerken (WAN), Hoe HADR en back-up te combineren voor totale systeemveerkracht, Vergelijking van HADR-architecturen: snelle versus trage netwerken, Videogids: Hoe HADR te implementeren met SafeKit , 🔍 Ontdek SafeKit"
 ---
 
 # Combinatie van SafeKit hoge beschikbaarheid met noodherstelback-ups {#combining-safekit-high-availability-with-disaster-recovery-backups}

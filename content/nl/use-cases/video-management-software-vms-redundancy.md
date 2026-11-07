@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/video-management-software-vm
 description: "Voorkom videoverlies met SafeKit , de eenvoudigste software voor hoge beschikbaarheid en redundantie van VMS. Profiteer van continu beheer, 24/7, met SAN-loze 2-knoopsclustering, synchrone replicatie en automatische failover. Compatibel met Milestone XProtect , Genetec, Siemens, Bosch en alle Windows / Linux VMS-systemen. Bereik nul dataverlies (RPO=0) zonder complexe hardware."
 category: "use-cases"
 lang: "nl"
-topics: "Wat is videomanagementsoftware (VMS)?, Waarom is VMS-software cruciaal?, Lijst met belangrijke spelers in VMS, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van VMS-software, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Wat is videomanagementsoftware (VMS)?, Waarom is VMS-software cruciaal?, Lijst met belangrijke spelers in VMS, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van VMS-software, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
 ---
 
 # Hoge beschikbaarheid en redundantie voor videobeheersoftware (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}

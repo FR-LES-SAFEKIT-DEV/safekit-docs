@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/siemens-siveillance-redundan
 description: "Garandeer 100% uptime voor Siemens Siveillance Suite met SafeKit . Realiseer SAN-loze hoge beschikbaarheid, synchrone replicatie en actieve-actieve clustering zonder complexe hardware. Download vandaag nog de gratis proefversie."
 category: "solutions"
 lang: "nl"
-topics: "SafeKit voor Siemens Siveillance: 2-knoops SAN-loos Hyper-V-cluster, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een Siemens Siveillance high availability-cluster zonder gedeelde opslag op een SAN?, Hoe werkt het SafeKit Siemens Siveillance-cluster?, Beperkingen van SafeKit high availability, Vergelijking: SafeKit voor Siemens Siveillance versus native Hyper-V-clustering, Videogids: Een SafeKit HA-cluster configureren voor Siemens Siveillance, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 SafeKit High Availability Navigation Hub"
+topics: "SafeKit voor Siemens Siveillance: 2-knoops SAN-loos Hyper-V-cluster, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een Siemens Siveillance high availability-cluster zonder gedeelde opslag op een SAN?, Hoe werkt het SafeKit Siemens Siveillance-cluster?, Beperkingen van SafeKit high availability, Vergelijking: SafeKit voor Siemens Siveillance versus native Hyper-V-clustering, Videogids: Een SafeKit HA-cluster configureren voor Siemens Siveillance, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
 ---
 
 # Hoge beschikbaarheid en redundantie voor Siemens Siveillance Suite: Active-Active SANless Clustering {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}

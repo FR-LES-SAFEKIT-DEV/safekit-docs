@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/resources/safekit-on-line-training/"
 description: "Master SafeKit SANless HA with our free training. Covers software installation, web console management, and CLI. Learn advanced configuration and troubleshooting to ensure 24/7 high availability. Get your official certification online."
 category: "resources"
 lang: "en"
-topics: "How to Access the Training Platform?, Get SafeKit 8 Training Materials, 🔍 SafeKit High Availability Navigation Hub"
+topics: "How to Access the Training Platform?, Get SafeKit 8 Training Materials, 🔍 Explore SafeKit"
 ---
 
 # SafeKit High Availability Training: Free Online Certification Program {#safekit-high-availability-training-free-online-certification-program}

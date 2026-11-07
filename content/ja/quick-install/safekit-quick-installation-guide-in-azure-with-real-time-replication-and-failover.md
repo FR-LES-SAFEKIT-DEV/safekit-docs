@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "SafeKitのmirror.safeモジュールをAzureに展開し、WindowsおよびLinuxで同期リアルタイムレプリケーションと自動フェイルオーバーを実現します。このガイドでは、重要なアプリケーション向けに共有ストレージを使用しない2ノードクラスターを設定する方法を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Azure高可用性クイックインストールガイド、SafeKit高可用性の制限事項、SafeKit / Azure mirrorソリューションの概要、WindowsおよびLinuxへのSafeKit / Azure mirrorソリューションのインストール（mirror.safe）、SafeKit / Azure mirrorソリューションの段階的な設定、SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "Azure高可用性クイックインストールガイド、SafeKit高可用性の制限事項、SafeKit / Azure mirrorソリューションの概要、WindowsおよびLinuxへのSafeKit / Azure mirrorソリューションのインストール（mirror.safe）、SafeKit / Azure mirrorソリューションの段階的な設定、SafeKit mirrorソリューションのデモ、🔍 SafeKit を探索する"
 ---
 
 # SafeKitによるAzure高可用性：フェイルオーバー用mirror.safeモジュールのインストール {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/shared-nothing-architec
 description: "Vergelijk shared-nothing- en shared-disk-architecturen voor hoge beschikbaarheid. Ontdek hoe SafeKit een shared-nothing-aanpak gebruikt om SAN-kosten te elimineren, failover te vereenvoudigen en synchrone replicatie te bieden zonder complexe hardwarebeperkingen."
 category: "best-practises"
 lang: "nl"
-topics: "Shared Nothing-architectuur versus gedeelde schijfarchitectuur voor clusters met hoge beschikbaarheid, Shared Nothing-architectuur versus gedeelde schijfarchitectuur: voor- en nadelen, 🔍 SafeKit Navigatiehub voor hoge beschikbaarheid"
+topics: "Shared Nothing-architectuur versus gedeelde schijfarchitectuur voor clusters met hoge beschikbaarheid, Shared Nothing-architectuur versus gedeelde schijfarchitectuur: voor- en nadelen, 🔍 Ontdek SafeKit"
 ---
 
 # Shared Nothing versus Shared Disk-architectuur: de beste HA-cluster kiezen {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/building-management-system-s
 description: "Garantisci il 100% di uptime per il tuo smart building con SafeKit . Il nostro software di ridondanza SANless a 2 nodi offre replica sincrona in tempo reale e failover automatico per qualsiasi BMS, inclusi Siemens, Honeywell, Schneider Electric e Johnson Controls. Raggiungi zero perdita di dati (RPO=0) e resilienza operativa per i sistemi HVAC e di sicurezza critici con Windows e Linux ."
 category: "use-cases"
 lang: "it"
-topics: "Che cos'è un sistema di gestione degli edifici (BMS)?, Perché un software BMS è fondamentale?, Elenco dei principali attori nel settore BMS, SafeKit offre due soluzioni per la ridondanza e l'alta disponibilità di un software BMS, SafeKit , una soluzione riconosciuta sul mercato della sicurezza, 🔍 SafeKit Hub di navigazione ad alta disponibilità"
+topics: "Che cos'è un sistema di gestione degli edifici (BMS)?, Perché un software BMS è fondamentale?, Elenco dei principali attori nel settore BMS, SafeKit offre due soluzioni per la ridondanza e l'alta disponibilità di un software BMS, SafeKit , una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
 ---
 
 # Elevata disponibilità e ridondanza per i sistemi di gestione degli edifici (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/solutions/docker-container-high-availa
 description: "SafeKit bietet eine robuste Hochverfügbarkeitslösung Docker mit integrierter synchroner Datenreplikation. Implementieren Sie einen zustandsbehafteten Containercluster mit automatischem Failover und null Datenverlust auf Standard- Linux -Servern. Kein SAN oder gemeinsam genutzter Speicher erforderlich. Bereitstellung in wenigen Minuten."
 category: "solutions"
 lang: "de"
-topics: "Wie der SANless-Cluster SafeKit Mirror mit Docker zusammenarbeitet, Inhaltsverzeichnis, Wie die Software SafeKit einen hochverfügbaren Cluster Docker implementiert, Wie der Cluster SafeKit mirror mit Docker zusammenarbeitet, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SANless-Cluster SafeKit vs. traditionelle Docker , Vergleich: SafeKit vs. Open-Source-Hochverfügbarkeit Linux (Pacemaker/Corosync/DRBD), Zusammenfassung der Hochverfügbarkeit von Docker , 🔍 Navigationszentrale für Hochverfügbarkeit SafeKit"
+topics: "Wie der SANless-Cluster SafeKit Mirror mit Docker zusammenarbeitet, Inhaltsverzeichnis, Wie die Software SafeKit einen hochverfügbaren Cluster Docker implementiert, Wie der Cluster SafeKit mirror mit Docker zusammenarbeitet, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SANless-Cluster SafeKit vs. traditionelle Docker , Vergleich: SafeKit vs. Open-Source-Hochverfügbarkeit Linux (Pacemaker/Corosync/DRBD), Zusammenfassung der Hochverfügbarkeit von Docker , 🔍 SafeKit entdecken"
 ---
 
 # SafeKit : Docker Hochverfügbarkeits- und Echtzeit-Datenreplikationssoftware {#safekit-docker-high-availability--real-time-data-replication-software}
@@ -39,7 +39,7 @@ Hochverfügbarkeits-Clusterarchitektur für ![ Docker SafeKit mit virtueller IP-
   * [ -Vergleich: SafeKit SANless-Cluster vs. traditioneller Docker HA ](#safekit-docker-comparison)
   * [ -Vergleich: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Docker Zusammenfassung der Hochverfügbarkeit ](#docker-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit Hochverfügbarer Navigationshub ](#hub)
+  * [ 🔍 SafeKit entdecken
 
 
 ## Wie implementiert die Software SafeKit auf einfache Weise einen hochverfügbaren Docker -Cluster? {#how-safekit-implements-docker-ha}

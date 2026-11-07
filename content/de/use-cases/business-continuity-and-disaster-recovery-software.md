@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/business-continuity-and-disa
 description: "SafeKit ist eine Software für Geschäftskontinuität und Notfallwiederherstellung und implementiert eine einfache Hochverfügbarkeitslösung zwischen zwei entfernten Serverräumen. Erreichen Sie mit SafeKit , der benutzerfreundlichsten Software für Geschäftskontinuität und Notfallwiederherstellung, eine Verfügbarkeit rund um die Uhr. Dank synchroner 2-Knoten-Replikation, automatischem Failover und Lastausgleich für Windows und Linux entfallen teure SANs und komplexe IT-Kenntnisse. Null Datenverlust (RPO=0) für kritische Anwendungen in jeder Cloud- oder On-Premise-Umgebung."
 category: "use-cases"
 lang: "de"
-topics: "Software für Geschäftskontinuität und Notfallwiederherstellung, 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Software für Geschäftskontinuität und Notfallwiederherstellung, 🔍 SafeKit entdecken"
 ---
 
 # Business Continuity und Disaster Recovery Software für 2-Knoten-Cluster mit SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

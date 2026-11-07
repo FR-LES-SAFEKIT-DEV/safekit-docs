@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/use-cases/application-clustering-so
 description: "Potencialize seu software com SafeKit . Como parceiro OEM, você pode incorporar failover automatizado e replicação síncrona diretamente em seu aplicativo. Ofereça aos seus clientes disponibilidade 24 horas por dia, 7 dias por semana, com Windows e Linux , sem a complexidade de clusters de hardware."
 category: "use-cases"
 lang: "pt-pt"
-topics: "Caso de uso de alta disponibilidade para OEMs, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Caso de uso de alta disponibilidade para OEMs, 🔍 Explore o SafeKit"
 ---
 
 # Alta disponibilidade OEM: Incorporando o cluster SafeKit em seu software {#oem-high-availability-embedding-safekit-clustering-into-your-software}

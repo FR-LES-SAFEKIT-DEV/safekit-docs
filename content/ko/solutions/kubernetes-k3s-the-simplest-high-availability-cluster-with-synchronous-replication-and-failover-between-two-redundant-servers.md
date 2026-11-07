@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/solutions/kubernetes-k3s-the-simplest-
 description: "외부 스토리지나 etcd 쿼럼 없이 2개 노드에서 K3s 고가용성을 구현하세요. SafeKit 가 데이터 손실 없는 복제 및 자동 페일오버를 제공하는 방법을 알아보세요."
 category: "solutions"
 lang: "ko"
-topics: "K3s 고가용성 간소화: MetalLB 및 Longhorn 대신 SafeKit 선택해야 하는 이유, 목차, SafeKit 소프트웨어로 Kubernetes K3s 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit mirror 클러스터가 Kubernetes K3S와 연동되는 방식, SafeKit 고가용성 제한 사항, 비교: SafeKit vs. 표준 K3s 스택(MetalLB 및 Longhorn), 비디오 가이드: SafeKit 및 mirror 고가용성 클러스터 구성, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "K3s 고가용성 간소화: MetalLB 및 Longhorn 대신 SafeKit 선택해야 하는 이유, 목차, SafeKit 소프트웨어로 Kubernetes K3s 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit mirror 클러스터가 Kubernetes K3S와 연동되는 방식, SafeKit 고가용성 제한 사항, 비교: SafeKit vs. 표준 K3s 스택(MetalLB 및 Longhorn), 비디오 가이드: SafeKit 및 mirror 고가용성 클러스터 구성, 🔍 SafeKit 살펴보기"
 ---
 
 # Kubernetes K3s 고가용성: 2노드 동기 복제 및 장애 조치 {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ K3s용 표준 오픈 소스 스택(MetalLB + Longhorn)은 대규모 데이터 �
   * [ SafeKit 고가용성 제한 사항 ](#safekit-ha-limitations)
   * [ 비교: SafeKit vs. 표준 K3s 스택(MetalLB & Longhorn) ](#safekit-k3s-ha-comparison)
   * [ 비디오 가이드: SafeKit Mirror ](#videoguide-safekit-mirror-cluster) HA 클러스터 구성
-  * [ 🔍 SafeKit 고가용성 내비게이션 허브 ](#hub)
+  * [ 🔍 SafeKit 살펴보기
 
 
 ## SafeKit 소프트웨어는 Kubernetes K3s 고가용성 클러스터를 어떻게 간단하게 구현합니까? {#safekit-mirror-k3s-cluster}

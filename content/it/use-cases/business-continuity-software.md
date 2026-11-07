@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/business-continuity-software
 description: "Proteggi ogni filiale della tua azienda distribuita con SafeKit . Implementa un cluster HA standardizzato, basato esclusivamente su software e scalabile, per garantire la disponibilità 24 ore su 24, 7 giorni su 7, delle applicazioni critiche delle filiali. Windows e Linux non richiedono storage condiviso, SAN complesse o competenze IT in loco."
 category: "use-cases"
 lang: "it"
-topics: "Continuità operativa in un'azienda distribuita, 🔍 SafeKit Hub di navigazione ad alta disponibilità"
+topics: "Continuità operativa in un'azienda distribuita, 🔍 Esplora SafeKit"
 ---
 
 # Standardizzazione dell'alta disponibilità per aziende distribuite con numerose filiali {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

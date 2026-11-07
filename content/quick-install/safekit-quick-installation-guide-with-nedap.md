@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Deploy the nedap.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Nedap on Windows. This guide walks you through setting up a 2-node SANless cluster for critical applications without shared storage."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Nedap, SafeKit High Availability Limitations, Overview of the SafeKit / Nedap solution, Installation of the SafeKit / Nedap solution on Windows (nedap.safe), Step by step configuration of the SafeKit / Nedap solution, Demonstration of the SafeKit mirror solution, 🔍 SafeKit High Availability Navigation Hub"
+topics: "High Availability Quick Installation Guide for Nedap, SafeKit High Availability Limitations, Overview of the SafeKit / Nedap solution, Installation of the SafeKit / Nedap solution on Windows (nedap.safe), Step by step configuration of the SafeKit / Nedap solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 ---
 
 # Nedap High Availability with SafeKit: Install the nedap.safe Module for Failover {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

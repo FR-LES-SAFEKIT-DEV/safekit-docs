@@ -1,10 +1,11 @@
 ---
 title: "حلول SafeKit"
 canonical: "https://safekit.eviden.com/ar/solutions/"
-description: "يمكن إعداد مجموعة على Windows وLinux بسهولة كبيرة باستخدام وحدات التوافر العالي في برنامج SafeKit."
+description: "يمكن أن يكون تكوين المجموعة على نظامي التشغيل Windows و Linux بسيطًا للغاية إذا استخدمت وحدات التوافر العالي (HA) من برنامج SafeKit للتوافر العالي."
 category: "solutions"
 lang: "ar"
-topics: "مكتبة وحدات تطبيقات SafeKit: حلول توافر عالٍ جاهزة للاستخدام، 🔍 مركز التنقل في SafeKit للتوافر العالي"
+topics: "مكتبة وحدات تطبيقات SafeKit: حلول التوافر العالي الجاهزة للاستخدام، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 17 expressions"
 ---
 
 # حلول SafeKit {#safekit-solutions}

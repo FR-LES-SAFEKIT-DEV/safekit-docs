@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/azure-load-balancing-cluster
 description: "Breid Azure Load Balancer uit met de intelligente applicatiemonitoring van SafeKit. Bereik naadloze hoge beschikbaarheid met grondige statuscontroles, automatisch zelfherstel en failover voor bedrijfskritieke Farm-clusters."
 category: "solutions"
 lang: "nl"
-topics: "Verbeter de cloudloadbalancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een netwerktaakverdelingscluster (NLB) voor Azure?, Hoe werkt het SafeKit-farm-cluster met Azure?, Vergelijking: SafeKit-Farm-cluster on-premises en SafeKit-Farm-cluster in de cloud, Videogids: configuratie van een SafeKit-Farm-NLB-cluster, 🔍 SafeKit High Availability Navigatiehub"
+topics: "Verbeter de cloudloadbalancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een netwerktaakverdelingscluster (NLB) voor Azure?, Hoe werkt het SafeKit-farm-cluster met Azure?, Vergelijking: SafeKit-Farm-cluster on-premises en SafeKit-Farm-cluster in de cloud, Videogids: configuratie van een SafeKit-Farm-NLB-cluster, 🔍 Ontdek SafeKit"
 ---
 
 # SafeKit: Microsoft Azure-loadbalancing en hoge beschikbaarheid van applicaties met een <span class="notranslate farm-term" translate="no">Farm</span>-cluster {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}

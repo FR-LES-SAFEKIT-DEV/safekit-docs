@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "انشر وحدة mirror.safe من SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي عند الفشل على Windows. يرشدك هذا الدليل إلى إعداد عنقود SANless من عقدتين لتطبيقات Windows الحرجة دون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي على Windows, قيود التوافر العالي في SafeKit, نظرة عامة على حل SafeKit / Windows, التثبيت على حلول SafeKit / Windows (mirror.safe), التهيئة خطوة بخطوة لحل SafeKit / Windows, عرض توضيحي لحل SafeKit mirror, 🔍 مركز التنقل للتوافر العالي في SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي على Windows, قيود التوافر العالي في SafeKit, نظرة عامة على حل SafeKit / Windows, التثبيت على حلول SafeKit / Windows (mirror.safe), التهيئة خطوة بخطوة لحل SafeKit / Windows, عرض توضيحي لحل SafeKit mirror, 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي على Windows مع SafeKit: تثبيت وحدة mirror.safe للتحويل عند الفشل {#windows-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

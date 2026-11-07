@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/electronic-access-contr
 description: "使用SafeKit ，这款最简便的高可用性电子门禁控制 (EACS) 软件，确保全天候 (24/7) 楼宇安全。借助无 SAN 双节点集群、实时同步复制和自动故障转移功能，防止系统锁定，适用于Nedap 、TIL Technologies、Siemens、HID 以及所有Windows / Linux EACS。无需 SAN 即可实现零数据丢失 (RPO=0)。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "什么是电子门禁系统 (EACS)？为什么 EACS 软件至关重要？EACS 领域的主要参与者有哪些？ SafeKit提供两种 EACS 软件冗余和高可用性解决方案， SafeKit是安全市场上公认的解决方案，🔍 SafeKit高可用性导航中心"
+topics: "什么是电子门禁系统 (EACS)？为什么 EACS 软件至关重要？EACS 领域的主要参与者有哪些？ SafeKit提供两种 EACS 软件冗余和高可用性解决方案， SafeKit是安全市场上公认的解决方案，🔍 探索 SafeKit"
 ---
 
 # 电子门禁控制软件 (EACS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}

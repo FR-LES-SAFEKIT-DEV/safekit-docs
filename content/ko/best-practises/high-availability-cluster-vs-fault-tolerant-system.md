@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-clust
 description: "고가용성(HA) 클러스터와 내결함성 시스템을 비교해 보세요. SafeKit 하드웨어 및 소프트웨어 장애 모두로부터 보호하는 SAN이 필요 없는 소프트웨어 HA 클러스터를 어떻게 제안하는지 알아보세요. 특수 내결함성 하드웨어를 제거하여 비용을 절감하는 동시에 데이터 손실 제로(RPO 0)를 보장합니다."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성과 내결함성의 차이점은 무엇인가요?, 고가용성과 내결함성의 장단점, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "고가용성과 내결함성의 차이점은 무엇인가요?, 고가용성과 내결함성의 장단점, 🔍 SafeKit 살펴보기"
 ---
 
 # HA 클러스터 vs. 내결함성 시스템: 올바른 이중화 전략 선택 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

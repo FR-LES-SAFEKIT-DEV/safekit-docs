@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/how-to-implement-redund
 description: "ソフトウェアのみのシンプルなアプローチで冗長サーバーを実装する方法を学びましょう。 SafeKit SANレスアーキテクチャを提案する Windows そして Linux共有ディスクや専門的なITスキルを必要とせずに、リアルタイムのデータレプリケーションと自動フェイルオーバーを実現します。"
 category: "best-practises"
 lang: "ja"
-topics: "リアルタイムレプリケーションとフェイルオーバーを備えたアクティブ/パッシブ冗長サーバーの実装方法、ネットワーク負荷分散とフェイルオーバーを備えたアクティブ/アクティブ冗長サーバーの実装方法、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "リアルタイムレプリケーションとフェイルオーバーを備えたアクティブ/パッシブ冗長サーバーの実装方法、ネットワーク負荷分散とフェイルオーバーを備えたアクティブ/アクティブ冗長サーバーの実装方法、🔍 SafeKit を探索する"
 ---
 
 # シンプルなHAソフトウェアで冗長サーバーを実装する方法 {#how-to-implement-redundant-servers-with-simple-ha-software}

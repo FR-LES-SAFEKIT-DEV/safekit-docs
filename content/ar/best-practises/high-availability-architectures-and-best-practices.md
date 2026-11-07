@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/high-availability-archi
 description: "استكشف بنى التوافر العالي (HA) وأفضل الممارسات لتجميع التطبيقات. تعرّف على كيفية تنفيذ برنامج SafeKit لمجموعات mirror و farm بدون أقراص مشتركة، مما يضمن عدم فقدان البيانات والتحويل التلقائي في حالة الفشل للتطبيقات الحيوية."
 category: "best-practises"
 lang: "ar"
-topics: "ما هي بنى التوافر العالي وأفضل الممارسات؟، جداول مقارنة حول بنى التوافر العالي وأفضل الممارسات، 🔍 SafeKit مركز التنقل للتوافر العالي"
+topics: "ما هي بنى التوافر العالي وأفضل الممارسات؟، جداول مقارنة حول بنى التوافر العالي وأفضل الممارسات، 🔍 استكشف SafeKit"
 ---
 
 # أفضل الممارسات في مجال بنى التوافر العالي وتجميع البرمجيات {#high-availability-architectures--software-clustering-best-practices}

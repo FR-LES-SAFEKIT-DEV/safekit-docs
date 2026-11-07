@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-07.4",
+  "version": "2026-11-07.6",
   "keep": [
     "mirror",
     "farm",
@@ -33,7 +33,54 @@
     "KVM",
     "VMware",
     "RTO",
-    "RPO"
+    "RPO",
+    "Microsoft SQL Server",
+    "SQL Server",
+    "PostgreSQL",
+    "MySQL",
+    "MariaDB",
+    "Oracle",
+    "Firebird",
+    "Apache",
+    "IIS",
+    "NGINX",
+    "Docker",
+    "Podman",
+    "Kubernetes",
+    "K3S",
+    "AWS",
+    "GCP",
+    "Azure",
+    "Milestone XProtect",
+    "Milestone",
+    "XProtect",
+    "Nedap AEOS",
+    "Nedap",
+    "AEOS",
+    "Genetec",
+    "Bosch AMS",
+    "Bosch BIS",
+    "Bosch BVMS",
+    "Bosch",
+    "Hanwha Vision",
+    "Hanwha Wisenet",
+    "Hanwha",
+    "Wisenet",
+    "Siemens Siveillance VMS",
+    "Siemens Siveillance",
+    "Siveillance",
+    "Siemens Desigo CC",
+    "Desigo CC",
+    "Siemens SiPass",
+    "SiPass",
+    "Siemens SIPORT",
+    "SIPORT",
+    "SIMATIC PCS 7",
+    "SIMATIC WinCC",
+    "SIMATIC",
+    "WinCC",
+    "Siemens",
+    "SafeKit"
   ],
   "terms": {
     "farm cluster": {
@@ -316,7 +363,8 @@
     "SafeKit High Availability Navigation Hub": {
       "nl": "SafeKit-navigatiehub voor hoge beschikbaarheid",
       "pt": "Centro de navegação de alta disponibilidade do SafeKit",
-      "it": "Hub di navigazione per l’alta disponibilità di SafeKit"
+      "it": "Hub di navigazione per l’alta disponibilità di SafeKit",
+      "de": "SafeKit Hochverfügbarkeits-Navigations-Hub"
     }
   },
   "grammar": {
@@ -480,6 +528,10 @@
       [
         "\\s+،",
         "،"
+      ],
+      [
+        "\\b(Windows|Linux) (Windows|Linux)\\b",
+        "\\1 و \\2"
       ]
     ],
     "de": [

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/application-clustering-softw
 description: "عزّز برمجياتك باستخدام SafeKit . بصفتك شريكًا مُصنِّعًا للمعدات الأصلية، يمكنك دمج خاصية تجاوز الأعطال التلقائي والنسخ المتزامن مباشرةً في تطبيقك. قدّم لعملائك خدمة تشغيل متواصلة على مدار الساعة طوال أيام الأسبوع على Windows و Linux دون الحاجة إلى تعقيدات مجموعات الأجهزة."
 category: "use-cases"
 lang: "ar"
-topics: "حالة استخدام التوافر العالي لمصنعي المعدات الأصلية، 🔍 SafeKit مركز الملاحة عالي التوافر"
+topics: "حالة استخدام التوافر العالي لمصنعي المعدات الأصلية، 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي للمصنعين الأصليين: تضمين تجميع SafeKit في برنامجك {#oem-high-availability-embedding-safekit-clustering-into-your-software}

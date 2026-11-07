@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بتثبيت وحدة oracle.safe لـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لـ Oracle على Windows و Linux . يرشدك هذا الدليل خلال إعداد مجموعة SAN ثنائية العقد للتطبيقات الحيوية التي لا تستخدم تخزينًا مشتركًا."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Oracle و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / Oracle ، تثبيت حل SafeKit / Oracle على Windows و Linux ( oracle.safe )، التكوين خطوة بخطوة لحل SafeKit / Oracle ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Oracle و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / Oracle ، تثبيت حل SafeKit / Oracle على Windows و Linux ( oracle.safe )، التكوين خطوة بخطوة لحل SafeKit / Oracle ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # Oracle توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة oracle.safe للتحويل التلقائي في حالة الفشل {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}

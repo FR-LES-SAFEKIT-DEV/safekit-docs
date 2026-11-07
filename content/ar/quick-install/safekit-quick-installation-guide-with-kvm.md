@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "تعرف على تكوين kvm.safe لمجموعة KVM نشطة/نشطة باستخدام SafeKit. حقق توافرًا عاليًا على مستوى الجهاز الافتراضي من خلال بنية لا شيء مشتركة ثنائية العقد. نسخ العديد من الأجهزة الافتراضية بشكل متزامن عبر العقد للتجاوز التلقائي للفشل دون تكلفة شبكة منطقة التخزين (SAN) أو التخزين المشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع عالي التوافر لـ KVM، قيود التوافر العالي لـ SafeKit، نظرة عامة على حل SafeKit/ KVM، تثبيت حل SafeKit/ KVM على Linux (kvm.safe)، تكوين حل SafeKit/ KVM خطوة بخطوة، عرض حل التوافر العالي على مستوى VM، مركز 🔍 التنقل عالي التوافر لـ SafeKit"
+topics: "دليل التثبيت السريع عالي التوافر لـ KVM، قيود التوافر العالي لـ SafeKit، نظرة عامة على حل SafeKit/ KVM، تثبيت حل SafeKit/ KVM على Linux (kvm.safe)، تكوين حل SafeKit/ KVM خطوة بخطوة، عرض حل التوافر العالي على مستوى VM، مركز 🔍 استكشف SafeKit"
 ---
 
 # توافر KVM عالٍ مع SafeKit: تثبيت وحدة kvm.safe لتجاوز الفشل {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}

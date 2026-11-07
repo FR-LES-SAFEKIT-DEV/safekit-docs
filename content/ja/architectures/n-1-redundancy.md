@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/n-1-redundancy/"
 description: "データセンターを最適化するには SafeKit N-1冗長性。Nをデプロイする mirror N+1サーバー上のモジュールにより、単一の共有バックアップで複数のアプリケーションの高可用性を実現します。SAN要件を排除し、リアルタイムレプリケーションによりハードウェアコストを削減します。 Windows そして Linux。 もっと詳しく知る。"
 category: "architectures"
 lang: "ja"
-topics: "データレプリケーションとN台のサーバーから1台のサーバーへのアプリケーションフェイルオーバーによる高可用性、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "データレプリケーションとN台のサーバーから1台のサーバーへのアプリケーションフェイルオーバーによる高可用性、🔍 SafeKit を探索する"
 ---
 
 # N-1冗長クラスタリング：1つのバックアップで複数のアプリケーションの高可用性を実現 {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

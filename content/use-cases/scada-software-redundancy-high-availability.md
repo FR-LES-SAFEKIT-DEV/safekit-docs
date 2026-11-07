@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/use-cases/scada-software-redundancy-high-
 description: "Protect critical infrastructure with SafeKit, the leading SANless high availability software for SCADA. Ensure 24/7 uptime for Wonderware, WinCC, iFix, and Inductive Automation with real-time synchronous replication and automatic failover. Achieve zero data loss (RPO=0) for your industrial database without complex SAN storage or IT skills."
 category: "use-cases"
 lang: "en"
-topics: "What is a SCADA system?, Why a SCADA software is critical?, Key players list in SCADA software, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market, 🔍 SafeKit High Availability Navigation Hub"
+topics: "What is a SCADA system?, Why a SCADA software is critical?, Key players list in SCADA software, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market, 🔍 Explore SafeKit"
 ---
 
 # High Availability and Redundancy for SCADA and Industrial Control Systems (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

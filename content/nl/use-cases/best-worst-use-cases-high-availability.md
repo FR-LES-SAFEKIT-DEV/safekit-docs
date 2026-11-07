@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/best-worst-use-cases-high-av
 description: "Identificeer de beste en slechtste gebruiksscenario's voor hoge beschikbaarheid. Ontdek waar SafeKit in uitblinkt bij softwaregedefinieerde clustering voor Windows en Linux , en kom te weten wanneer traditionele gedeelde opslag of hardwarematige HA uw bedrijf in de steek kan laten."
 category: "use-cases"
 lang: "nl"
-topics: "Beste gebruiksscenario's, SafeKit Beperkingen voor hoge beschikbaarheid, 🔍 SafeKit Navigatiehub voor hoge beschikbaarheid"
+topics: "Beste gebruiksscenario's, SafeKit Beperkingen voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"
 ---
 
 # Beste en slechtste gebruiksscenario's voor hoge beschikbaarheid: een implementatiehandleiding voor SafeKit {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

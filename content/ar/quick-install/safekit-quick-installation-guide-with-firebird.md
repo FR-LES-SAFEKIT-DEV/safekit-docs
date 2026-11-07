@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بتثبيت وحدة firebird.safe لـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لـ Firebird على Windows و Linux . يرشدك هذا الدليل خلال إعداد مجموعة SAN ثنائية العقد للتطبيقات الحيوية التي لا تستخدم تخزينًا مشتركًا."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Firebird و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / Firebird ، تثبيت حل SafeKit / Firebird على Windows و Linux ( firebird.safe )، التكوين خطوة بخطوة لحل SafeKit / Firebird ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Firebird و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / Firebird ، تثبيت حل SafeKit / Firebird على Windows و Linux ( firebird.safe )، التكوين خطوة بخطوة لحل SafeKit / Firebird ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # Firebird توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة firebird.safe للتحويل التلقائي في حالة الفشل {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/architectures/network-load-balancin
 description: "SafeKit oferece balanceamento de carga de rede (NLB) de alto desempenho e failover automático em um único pacote de software. Substitua balanceadores de hardware caros pelo gerenciamento de IP virtual em nível de kernel do SafeKit para Windows e Linux . Ideal para integração OEM e gerenciamento simplificado de clusters."
 category: "architectures"
 lang: "pt-pt"
-topics: "Cluster SafeKit Farm : NLB somente por software e failover automático para Windows / Linux , Sumário, Como o software SafeKit implementa de forma simples um cluster de balanceamento de carga de rede (NLB) Windows / Linux ?, Como o cluster SafeKit no modo farm funciona com Windows / Linux ?, Comparação: Cluster SafeKit Farm para Windows / Linux vs. outras soluções de cluster NLB, Guia em vídeo: Configurando um cluster NLB SafeKit Farm , 🔍 Hub de navegação de alta disponibilidade SafeKit"
+topics: "Cluster SafeKit Farm : NLB somente por software e failover automático para Windows / Linux , Sumário, Como o software SafeKit implementa de forma simples um cluster de balanceamento de carga de rede (NLB) Windows / Linux ?, Como o cluster SafeKit no modo farm funciona com Windows / Linux ?, Comparação: Cluster SafeKit Farm para Windows / Linux vs. outras soluções de cluster NLB, Guia em vídeo: Configurando um cluster NLB SafeKit Farm , 🔍 Explore o SafeKit"
 ---
 
 # Cluster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> : balanceamento de carga e alta disponibilidade {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}

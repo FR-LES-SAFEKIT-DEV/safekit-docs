@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/best-worst-use-cases-high-av
 description: "高可用性の最適なユースケースと最悪のユースケースを特定します。 SafeKit ソフトウェア定義クラスタリングに優れています Windows そして Linuxそして、従来の共有ストレージやハードウェアベースのHAがビジネスに失敗する可能性がある場合を把握します。"
 category: "use-cases"
 lang: "ja"
-topics: "最適な使用例、 SafeKit高可用性の制限事項、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "最適な使用例、 SafeKit高可用性の制限事項、🔍 SafeKit を探索する"
 ---
 
 # 高可用性の最適SafeKitユースケースと最悪のユースケース：実装 {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

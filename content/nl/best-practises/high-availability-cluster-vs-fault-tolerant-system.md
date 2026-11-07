@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-clust
 description: "Vergelijk HA-clusters met fouttolerante systemen. Ontdek hoe SafeKit een SAN-loos softwarematig HA-cluster voorstelt dat bescherming biedt tegen zowel hardware- als softwarefouten. Verlaag de kosten door gespecialiseerde FT-hardware te elimineren en garandeer tegelijkertijd nul dataverlies (RPO 0)."
 category: "best-practises"
 lang: "nl"
-topics: "Wat is het verschil tussen hoge beschikbaarheid en fouttolerantie?, Voordelen en nadelen van hoge beschikbaarheid en fouttolerantie, 🔍 SafeKit Navigatiehub met hoge beschikbaarheid"
+topics: "Wat is het verschil tussen hoge beschikbaarheid en fouttolerantie?, Voordelen en nadelen van hoge beschikbaarheid en fouttolerantie, 🔍 Ontdek SafeKit"
 ---
 
 # HA-cluster versus fouttolerant systeem: de juiste redundantiestrategie kiezen {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

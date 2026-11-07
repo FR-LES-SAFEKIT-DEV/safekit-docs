@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/kubernetes-k3s-the-simp
 description: "无需外部存储或 etcd 仲裁，即可在 2 个节点上实现 K3s 高可用性。了解SafeKit如何提供零数据丢失复制和自动故障转移。"
 category: "solutions"
 lang: "zh-hans"
-topics: "简化 K3s 高可用性：为何选择SafeKit而非 MetalLB 和 Longhorn？，目录， SafeKit软件如何简化实现Kubernetes K3s 高可用性集群？， SafeKit mirror集群如何与Kubernetes K3S 协同工作？， SafeKit高可用性限制，对比： SafeKit与标准 K3s 堆栈（MetalLB 和 Longhorn），视频指南：配置SafeKit和mirror高可用性集群，🔍 SafeKit高可用性导航中心"
+topics: "简化 K3s 高可用性：为何选择SafeKit而非 MetalLB 和 Longhorn？，目录， SafeKit软件如何简化实现Kubernetes K3s 高可用性集群？， SafeKit mirror集群如何与Kubernetes K3S 协同工作？， SafeKit高可用性限制，对比： SafeKit与标准 K3s 堆栈（MetalLB 和 Longhorn），视频指南：配置SafeKit和mirror高可用性集群，🔍 探索 SafeKit"
 ---
 
 # Kubernetes K3s 高可用性：2 节点同步复制和故障转移 {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ topics: "简化 K3s 高可用性：为何选择SafeKit而非 MetalLB 和 Longhor
   * [ SafeKit高可用性限制](#safekit-ha-limitations)
   * [对比： SafeKit与标准 K3s 套装（MetalLB 和 Longhorn） ](#safekit-k3s-ha-comparison)
   * [视频指南：配置SafeKit Mirror ](#videoguide-safekit-mirror-cluster)高可用性集群
-  * [ 🔍 SafeKit高可用性导航中心](#hub)
+  * [ 🔍 探索 SafeKit
 
 
 ## SafeKit软件如何简单地实现Kubernetes K3s 高可用性集群？ {#safekit-mirror-k3s-cluster}

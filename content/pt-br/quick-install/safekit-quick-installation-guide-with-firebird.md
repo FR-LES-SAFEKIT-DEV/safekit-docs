@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-install
 description: "Implante o módulo firebird.safe para SafeKit para habilitar a replicação síncrona em tempo real e o failover automático de Firebird em Windows e Linux . Este guia orienta você na configuração de um cluster SANless de 2 nós para aplicações críticas sem armazenamento compartilhado."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para Firebird , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / Firebird , Instalação da solução SafeKit / Firebird em Windows e Linux ( firebird.safe ), Configuração passo a passo da solução SafeKit / Firebird , Demonstração da solução SafeKit mirror , 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para Firebird , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / Firebird , Instalação da solução SafeKit / Firebird em Windows e Linux ( firebird.safe ), Configuração passo a passo da solução SafeKit / Firebird , Demonstração da solução SafeKit mirror , 🔍 Explore o SafeKit"
 ---
 
 # Alta disponibilidade Firebird com SafeKit : Instale o módulo firebird.safe para failover {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

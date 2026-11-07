@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/power-outage-and-networ
 description: "Erfahren Sie, wie Sie Netzwerkisolation und Stromausfälle in einem Hochverfügbarkeitscluster managen. SafeKit schlägt eine SAN-lose Architektur mit integrierten Split-Brain-Prüfmechanismen und automatischer Resynchronisierung vor, um Datenintegrität und 24/7-Verfügbarkeit ohne gemeinsam genutzte Festplatte zu gewährleisten."
 category: "best-practises"
 lang: "de"
-topics: "Welche Szenarien gibt es bei Netzwerkisolation in einem Cluster? Welche Szenarien gibt es bei Stromausfall in einem Cluster? 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Welche Szenarien gibt es bei Netzwerkisolation in einem Cluster? Welche Szenarien gibt es bei Stromausfall in einem Cluster? 🔍 SafeKit entdecken"
 ---
 
 # Umgang mit Stromausfällen und Netzwerkisolierung in einem HA-Cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

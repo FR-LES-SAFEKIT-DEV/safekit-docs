@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/resources/high-availability-and-load-b
 description: "Vraag uw SafeKit-clustersleutel aan voor een proefperiode van één maand op Windows en Linux. SafeKit biedt een eenvoudige, alles-in-één architectuur voor hoge beschikbaarheid en applicatieclustering zonder SAN."
 category: "resources"
 lang: "nl"
-topics: "Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux, 🔍 SafeKit-navigatiehub voor hoge beschikbaarheid"
+topics: "Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux, 🔍 Ontdek SafeKit"
 ---
 
 # Gratis SafeKit-proefsleutel voor één maand {#safekit-one-month-free-trial-key}

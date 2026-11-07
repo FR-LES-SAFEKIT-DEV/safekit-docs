@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "在AWS中为SafeKit部署mirror.safe模块，以在Windows和Linux上启用同步实时复制和自动故障转移。本指南将引导您设置一个适用于关键应用程序且无需共享存储的双节点无共享集群。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS mirror解决方案概述；在Windows和Linux ( mirror.safe ) 上安装SafeKit / AWS 、 mirror解决方案； SafeKit / AWS mirror解决方案分步配置； SafeKit mirror解决方案演示；🔍 SafeKit高可用性导航中心"
+topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS mirror解决方案概述；在Windows和Linux ( mirror.safe ) 上安装SafeKit / AWS 、 mirror解决方案； SafeKit / AWS mirror解决方案分步配置； SafeKit mirror解决方案演示；🔍 探索 SafeKit"
 ---
 
 # AWS高可用性（与SafeKit配合使用）：安装mirror.safe模块以实现故障转移 {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

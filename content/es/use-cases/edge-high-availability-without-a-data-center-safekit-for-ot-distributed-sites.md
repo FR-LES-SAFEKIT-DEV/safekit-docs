@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/use-cases/edge-high-availability-witho
 description: "Los sitios periféricos no tienen centro de datos, pero aun así necesitan alta disponibilidad. SafeKit convierte dos servidores estándar en un clúster de alta disponibilidad plug-and-play: sin SAN, sin personal de TI, con conmutación por error automática."
 category: "use-cases"
 lang: "es"
-topics: "El desafío de la alta disponibilidad en el borde, ¿Qué hace que SafeKit sea la opción natural para el borde?, Idoneidad para la implementación en el borde y distribuida, ¿Por qué los entornos OT en el borde son diferentes?, Casos de uso ideales para el borde, Alta disponibilidad en el borde frente a la del centro de datos: diferencias clave, Requisitos técnicos mínimos, 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "El desafío de la alta disponibilidad en el borde, ¿Qué hace que SafeKit sea la opción natural para el borde?, Idoneidad para la implementación en el borde y distribuida, ¿Por qué los entornos OT en el borde son diferentes?, Casos de uso ideales para el borde, Alta disponibilidad en el borde frente a la del centro de datos: diferencias clave, Requisitos técnicos mínimos, 🔍 Explora SafeKit"
 ---
 
 # Alta disponibilidad en el borde sin centro de datos: SafeKit para OT y sitios distribuidos {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/building-management-sys
 description: "使用SafeKit确保您的智能建筑 100% 正常运行。我们这款无需 SAN 存储的双节点冗余软件可为任何楼宇管理系统 (BMS Linux Windows实现关键暖通空调和安防系统的零数据丢失 (RPO=0) 和运行弹性。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "什么是楼宇管理系统 (BMS)？为什么 BMS 软件至关重要？BMS 主要厂商有哪些？ SafeKit提供两种 BMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 SafeKit高可用性导航中心"
+topics: "什么是楼宇管理系统 (BMS)？为什么 BMS 软件至关重要？BMS 主要厂商有哪些？ SafeKit提供两种 BMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 探索 SafeKit"
 ---
 
 # 楼宇管理系统 (BMS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-building-management-systems-bms}

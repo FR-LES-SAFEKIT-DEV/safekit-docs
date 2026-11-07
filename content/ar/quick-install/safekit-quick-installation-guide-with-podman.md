@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بتثبيت وحدة mirror.safe على SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لحاويات Podman على Linux . يرشدك هذا الدليل خلال إعداد مجموعة خوادم ثنائية العقدة بدون شبكة تخزين (SAN) للتطبيقات الحيوية التي لا تتطلب تخزينًا مشتركًا."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Podman ، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / Podman ، تثبيت حل SafeKit / Podman على Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / Podman ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Podman ، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / Podman ، تثبيت حل SafeKit / Podman على Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / Podman ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # Podman توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة mirror.safe للتحويل التلقائي في حالة الفشل {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

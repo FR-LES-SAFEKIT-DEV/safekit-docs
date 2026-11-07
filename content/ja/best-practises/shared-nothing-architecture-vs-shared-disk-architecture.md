@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/shared-nothing-architec
 description: "高可用性を実現する共有ディスクアーキテクチャと共有ディスクアーキテクチャを比較します。 SafeKit 共有リソースを持たないアプローチを採用することで、SANコストを削減し、フェイルオーバーを簡素化し、複雑なハードウェア制約なしに同期レプリケーションを実現します。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性クラスタにおける共有なしアーキテクチャと共有ディスクアーキテクチャの比較、共有なしアーキテクチャと共有ディスクアーキテクチャ：長所と短所、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "高可用性クラスタにおける共有なしアーキテクチャと共有ディスクアーキテクチャの比較、共有なしアーキテクチャと共有ディスクアーキテクチャ：長所と短所、🔍 SafeKit を探索する"
 ---
 
 # 共有ディスクなしアーキテクチャと共有ディスクアーキテクチャ：最適なHAクラスタの選択 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

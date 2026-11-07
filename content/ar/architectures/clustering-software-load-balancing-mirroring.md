@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/clustering-software-load
 description: "انشر بنىً متقدمةً من خلال دمج وحدات SafeKit و Farm و Mirror . اجمع بين موازنة أحمال الشبكة لتوسيع نطاق الواجهة الأمامية، والنسخ المتزامن في الوقت الفعلي لحماية بيانات الواجهة الخلفية. نظام تجميع بسيط بدون شبكة تخزين (SAN) لوحدات Windows و Linux دون الحاجة إلى مهارات تقنية معلومات متخصصة. حمّل نسختك التجريبية المجانية."
 category: "architectures"
 lang: "ar"
-topics: "توفر برامج التجميع SafeKit إمكانية عالية للتوافر وقابلية التوسع لتطبيقات الويب وقواعد البيانات الحيوية، 🔍 SafeKit مركز التنقل عالي التوافر"
+topics: "توفر برامج التجميع SafeKit إمكانية عالية للتوافر وقابلية التوسع لتطبيقات الويب وقواعد البيانات الحيوية، 🔍 استكشف SafeKit"
 ---
 
 # برنامج تجميع البيانات للمزارع والخوادم المتطابقة: توافر عالٍ وموازنة الأحمال {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

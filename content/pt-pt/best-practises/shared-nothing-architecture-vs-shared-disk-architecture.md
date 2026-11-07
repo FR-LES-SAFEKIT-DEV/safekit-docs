@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/shared-nothing-archi
 description: "Compare arquiteturas de disco compartilhado (sem compartilhamento) com arquiteturas de disco compartilhado para alta disponibilidade. Saiba como SafeKit utiliza uma abordagem sem compartilhamento para eliminar custos de SAN, simplificar o failover e fornecer replicação síncrona sem restrições complexas de hardware."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Arquitetura sem compartilhamento versus arquitetura de disco compartilhado para clusters de alta disponibilidade, Arquitetura sem compartilhamento versus arquitetura de disco compartilhado: Prós e contras, 🔍 SafeKit Hub de Navegação de Alta Disponibilidade"
+topics: "Arquitetura sem compartilhamento versus arquitetura de disco compartilhado para clusters de alta disponibilidade, Arquitetura sem compartilhamento versus arquitetura de disco compartilhado: Prós e contras, 🔍 Explore o SafeKit"
 ---
 
 # Arquitetura de Disco Compartilhado vs. Sem Compartilhamento: Escolhendo o Melhor Cluster de Alta Disponibilidade {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

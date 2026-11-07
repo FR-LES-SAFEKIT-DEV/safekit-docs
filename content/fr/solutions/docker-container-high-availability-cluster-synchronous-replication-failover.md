@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/docker-container-high-availa
 description: "SafeKit offre une solution de haute disponibilité robuste avec réplication synchrone des données intégrée. Déployez un cluster de conteneurs avec état Docker basculement automatique et absence totale de perte de données sur des serveurs Linux standard. Aucun SAN ni stockage partagé n'est requis. Déploiement en quelques minutes."
 category: "solutions"
 lang: "fr"
-topics: "Fonctionnement du cluster SafeKit Mirror sans SAN avec Docker , Sommaire, Comment le logiciel SafeKit implémente-t-il un cluster haute disponibilité Docker ?, Comment le cluster SafeKit mirror fonctionne-t-il avec Docker ?, Limitations de la haute disponibilité SafeKit , Comparaison : Cluster SafeKit sans SAN vs. Haute Docker traditionnelle, Comparaison : SafeKit vs. Haute disponibilité open source Linux (Pacemaker/Corosync/DRBD), Résumé de la haute disponibilité Docker , 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "Fonctionnement du cluster SafeKit Mirror sans SAN avec Docker , Sommaire, Comment le logiciel SafeKit implémente-t-il un cluster haute disponibilité Docker ?, Comment le cluster SafeKit mirror fonctionne-t-il avec Docker ?, Limitations de la haute disponibilité SafeKit , Comparaison : Cluster SafeKit sans SAN vs. Haute Docker traditionnelle, Comparaison : SafeKit vs. Haute disponibilité open source Linux (Pacemaker/Corosync/DRBD), Résumé de la haute disponibilité Docker , 🔍 Explorez SafeKit"
 ---
 
 # SafeKit : Logiciel de réplication de données haute disponibilité et en temps réel Docker {#safekit-docker-high-availability--real-time-data-replication-software}
@@ -39,7 +39,7 @@ Architecture de cluster haute disponibilité ![ SafeKit pour Docker offrant une 
   * Comparaison [ : Cluster sans SAN SafeKit vs. Haute disponibilité (HA) traditionnelle Docker ](#safekit-docker-comparison)
   * Comparaison [ : SafeKit vs. Linux HA open-source (Pacemaker/Corosync/DRBD) ](#safekit-vs-linux-ha-stack)
   * Résumé de la haute disponibilité [ Docker ](#docker-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit Hub de navigation haute disponibilité ](#hub)
+  * [ 🔍 Explorez SafeKit
 
 
 ## Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité Docker ? {#how-safekit-implements-docker-ha}

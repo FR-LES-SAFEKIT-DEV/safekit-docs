@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Installieren Sie das Modul sqlserver.safe für SafeKit , um die synchrone Echtzeitreplikation und das automatische Failover für Microsoft SQL Server zu aktivieren. Diese Anleitung führt Sie durch die Einrichtung eines SAN-losen Clusters mit zwei Knoten für kritische Anwendungen ohne gemeinsam genutzten Speicher."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Microsoft , SQL Server und SafeKit Einschränkungen der Hochverfügbarkeit; Übersicht der Lösung SafeKit / Microsoft SQL Server ; Installation der Lösung SafeKit / Microsoft / SQL Server auf Windows ( sqlserver.safe ); Schrittweise Konfiguration der Lösung SafeKit / Microsoft / SQL Server ; Demonstration der Lösung SafeKit mirror ; 🔍 Navigationszentrale für Hochverfügbarkeit SafeKit"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Microsoft , SQL Server und SafeKit Einschränkungen der Hochverfügbarkeit; Übersicht der Lösung SafeKit / Microsoft SQL Server ; Installation der Lösung SafeKit / Microsoft / SQL Server auf Windows ( sqlserver.safe ); Schrittweise Konfiguration der Lösung SafeKit / Microsoft / SQL Server ; Demonstration der Lösung SafeKit mirror ; 🔍 SafeKit entdecken"
 ---
 
 # Microsoft SQL Server Hochverfügbarkeit mit SafeKit : Installieren Sie das Modul sqlserver.safe für Failover {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}

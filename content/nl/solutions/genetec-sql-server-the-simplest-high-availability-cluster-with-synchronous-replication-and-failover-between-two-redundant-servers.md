@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/genetec-sql-server-the-simpl
 description: "De eenvoudigste manier om Genetec SQL High Availability te implementeren. SafeKit biedt een SAN-loos cluster met twee knooppunten, synchrone replicatie en automatische failover – geen Active Directory of specialistische kennis vereist."
 category: "solutions"
 lang: "nl"
-topics: "Hoe het SAN-loze SafeKit Mirror -cluster werkt met Genetec SQL, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SAN-loos Genetec SQL-cluster met hoge beschikbaarheid?, Hoe werkt het SafeKit mirror -cluster met Genetec SQL?, Beperkingen van SafeKit voor hoge beschikbaarheid, Vergelijking: SafeKit voor Genetec SQL versus andere clusteringoplossingen, Videohandleiding: Een SafeKit HA mirror -cluster configureren, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 SafeKit Navigatiehub voor hoge beschikbaarheid"
+topics: "Hoe het SAN-loze SafeKit Mirror -cluster werkt met Genetec SQL, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SAN-loos Genetec SQL-cluster met hoge beschikbaarheid?, Hoe werkt het SafeKit mirror -cluster met Genetec SQL?, Beperkingen van SafeKit voor hoge beschikbaarheid, Vergelijking: SafeKit voor Genetec SQL versus andere clusteringoplossingen, Videohandleiding: Een SafeKit HA mirror -cluster configureren, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
 ---
 
 # De eenvoudigste Genetec SQL High Availability: 2-knoops synchrone replicatie en failover {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}

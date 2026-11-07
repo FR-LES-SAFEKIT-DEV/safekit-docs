@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/alternative-always-on-s
 description: "SQL Server Always On のコスト効率の高い代替ソリューションをお探しですか？ SafeKit 、SAN レス アーキテクチャを採用し、 SQL Server Express および Standard エディションに高可用性をもたらします。SAN や Active Directory を使用せずに、同期レプリケーション、仮想 IP、自動フェイルオーバーをご利用いただけます。"
 category: "best-practises"
 lang: "ja"
-topics: "Express および Standard エディション向けの Always On SQL Serverの代替、 SafeKit mirrorクラスターはMicrosoft SQL Serverとどのように連携するのか、ビデオ ガイド: SafeKit用のSQL Server HA mirrorクラスターの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "Express および Standard エディション向けの Always On SQL Serverの代替、 SafeKit mirrorクラスターはMicrosoft SQL Serverとどのように連携するのか、ビデオ ガイド: SafeKit用のSQL Server HA mirrorクラスターの構成、🔍 SafeKit を探索する"
 ---
 
 # SQL Serverの代替品：Express および Standard エディション向けの常時オン HA {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}

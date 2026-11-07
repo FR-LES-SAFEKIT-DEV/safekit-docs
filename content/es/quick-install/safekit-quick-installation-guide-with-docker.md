@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Implemente el módulo mirror.safe para SafeKit para habilitar la replicación síncrona en tiempo real y la conmutación por error automática de los contenedores Docker en Linux . Esta guía le muestra cómo configurar un clúster de dos nodos sin almacenamiento compartido para aplicaciones críticas."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para Docker , Limitaciones de alta disponibilidad SafeKit , Descripción general de la solución SafeKit / Docker , Instalación de la solución SafeKit / Docker en Linux ( mirror.safe ), Configuración paso a paso de la solución SafeKit / Docker , Demostración de la solución SafeKit mirror , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para Docker , Limitaciones de alta disponibilidad SafeKit , Descripción general de la solución SafeKit / Docker , Instalación de la solución SafeKit / Docker en Linux ( mirror.safe ), Configuración paso a paso de la solución SafeKit / Docker , Demostración de la solución SafeKit mirror , 🔍 Explora SafeKit"
 ---
 
 # Alta disponibilidad Docker con SafeKit : Instale el módulo mirror.safe para la conmutación por error {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

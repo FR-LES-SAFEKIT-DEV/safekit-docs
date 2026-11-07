@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/use-cases/business-continuity-software
 description: "Proteja cada sucursal de su empresa distribuida con SafeKit . Implemente un clúster HA estandarizado, basado únicamente en software, a gran escala para garantizar la disponibilidad 24/7 de las aplicaciones críticas de las sucursales. Windows y Linux no requieren almacenamiento compartido, SAN complejas ni personal de TI in situ."
 category: "use-cases"
 lang: "es"
-topics: "Continuidad del negocio en una empresa distribuida, 🔍 SafeKit Centro de navegación de alta disponibilidad"
+topics: "Continuidad del negocio en una empresa distribuida, 🔍 Explora SafeKit"
 ---
 
 # Estandarización de la alta disponibilidad para empresas distribuidas con múltiples sucursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

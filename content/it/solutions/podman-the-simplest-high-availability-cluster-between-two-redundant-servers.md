@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/solutions/podman-the-simplest-high-ava
 description: "SafeKit offre una solida soluzione di alta disponibilità Podman con replica sincrona dei dati integrata. Implementa un cluster di container con stato, failover automatico e zero perdita di dati su server Linux standard. Non sono necessari SAN o storage condiviso. Implementazione in pochi minuti."
 category: "solutions"
 lang: "it"
-topics: "Come funziona il cluster SANless SafeKit Mirror con Podman , Indice, Come il software SafeKit implementa semplicemente un cluster ad alta disponibilità Podman ?, Come funziona il cluster SafeKit mirror con Podman ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: cluster SANless SafeKit vs. HA tradizionale Podman , Confronto: SafeKit vs. HA open-source Linux (Pacemaker/Corosync/DRBD), Riepilogo dell'alta disponibilità Podman , 🔍 Hub di navigazione dell'alta disponibilità SafeKit"
+topics: "Come funziona il cluster SANless SafeKit Mirror con Podman , Indice, Come il software SafeKit implementa semplicemente un cluster ad alta disponibilità Podman ?, Come funziona il cluster SafeKit mirror con Podman ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: cluster SANless SafeKit vs. HA tradizionale Podman , Confronto: SafeKit vs. HA open-source Linux (Pacemaker/Corosync/DRBD), Riepilogo dell'alta disponibilità Podman , 🔍 Esplora SafeKit"
 ---
 
 # SafeKit : Podman Software di replica dati ad alta disponibilità e in tempo reale {#safekit-podman-high-availability--real-time-data-replication-software}
@@ -34,7 +34,7 @@ SafeKit offre una **soluzione HA leggera e "essenziale",** pensata per le organi
   * Confronto [ : Cluster SANless SafeKit vs. HA tradizionale Podman ](#safekit-podman-comparison)
   * Confronto [ : SafeKit vs. Linux HA open-source (Pacemaker/Corosync/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Podman Riepilogo alta disponibilità ](#podman-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit Hub di navigazione ad alta disponibilità ](#hub)
+  * [ 🔍 Esplora SafeKit
 
 
 ## Come il software SafeKit implementa in modo semplice un cluster ad alta disponibilità Podman ? {#how-safekit-implements-podman-ha}

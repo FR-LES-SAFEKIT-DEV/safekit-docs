@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installati
 description: "Distribuisci il modulo mirror.safe per SafeKit nel cloud per abilitare la replica sincrona in tempo reale e il failover automatico su Windows e Linux . Questa guida illustra la configurazione di un cluster shared-nothing a 2 nodi per applicazioni critiche senza storage condiviso."
 category: "quick-install"
 lang: "it"
-topics: "Guida rapida all'installazione dell'alta disponibilità per il cloud, Limitazioni dell'alta disponibilità SafeKit , Panoramica della soluzione SafeKit / Cloud mirror , Installazione della soluzione SafeKit / Cloud mirror su Windows e Linux ( mirror.safe ), Configurazione passo passo della soluzione SafeKit / Cloud mirror , Dimostrazione della soluzione SafeKit mirror , 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "Guida rapida all'installazione dell'alta disponibilità per il cloud, Limitazioni dell'alta disponibilità SafeKit , Panoramica della soluzione SafeKit / Cloud mirror , Installazione della soluzione SafeKit / Cloud mirror su Windows e Linux ( mirror.safe ), Configurazione passo passo della soluzione SafeKit / Cloud mirror , Dimostrazione della soluzione SafeKit mirror , 🔍 Esplora SafeKit"
 ---
 
 # Alta disponibilità cloud con SafeKit : installare il modulo mirror.safe per il failover {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

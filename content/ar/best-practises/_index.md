@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/"
 description: "استكشف أفضل الممارسات المتعلقة بالتوافر العالي SafeKit : أنماط بنية التوافر العالي، والنسخ المتزامن مقابل النسخ غير المتزامن، واستراتيجيات التجميع، والتحويل التلقائي للفشل، وRPO/RTO، وتصميم التكرار لـ Windows و Linux ."
 category: "best-practises"
 lang: "ar"
-topics: "أفضل ممارسات التجميع SafeKit : بنية عالية التوفر، النسخ المتماثل والتكرار، 🔍 مركز التنقل عالي التوفر SafeKit"
+topics: "أفضل ممارسات التجميع SafeKit : بنية عالية التوفر، النسخ المتماثل والتكرار، 🔍 استكشف SafeKit"
 ---
 
 # أفضل ممارسات التوافر العالي {#high-availability-best-practices}

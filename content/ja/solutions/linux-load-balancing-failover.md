@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/linux-load-balancing-failove
 description: "SafeKit 、強力なソフトウェアのみのLinuxロードバランシングおよび高可用性ソリューションを提供します。複雑なNLBハードウェアを、 SafeKitの統合された仮想IP、アプリケーション監視、および自動フェイルオーバーに置き換えることができます。標準のLinuxサーバー上に、 SafeKitクラスタを今すぐ簡単にデプロイできます。"
 category: "solutions"
 lang: "ja"
-topics: "SafeKit Farmクラスタ: Linuxのソフトウェアのみの NLB と自動フェイルオーバー、目次、 SafeKitソフトウェアがLinuxネットワーク負荷分散 (NLB) クラスタをどのように簡単に実装するか、 farmモードのSafeKitクラスタがLinuxとどのように連携するか、比較: SafeKit用のLinux Farmクラスタと他の NLB クラスタリング ソリューション、ビデオ ガイド: SafeKit Farm NLB クラスタの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "SafeKit Farmクラスタ: Linuxのソフトウェアのみの NLB と自動フェイルオーバー、目次、 SafeKitソフトウェアがLinuxネットワーク負荷分散 (NLB) クラスタをどのように簡単に実装するか、 farmモードのSafeKitクラスタがLinuxとどのように連携するか、比較: SafeKit用のLinux Farmクラスタと他の NLB クラスタリング ソリューション、ビデオ ガイド: SafeKit Farm NLB クラスタの構成、🔍 SafeKit を探索する"
 ---
 
 # SafeKit : オールインワンLinuxロードバランシング＆高可用性ソフトウェア {#safekit-all-in-one-linux-load-balancing--high-availability-software}

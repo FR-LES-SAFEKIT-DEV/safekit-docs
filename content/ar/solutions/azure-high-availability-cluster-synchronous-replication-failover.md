@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/azure-high-availability-clus
 description: "انشر مجموعة توافر عالٍ بسيطة في Microsoft Azure باستخدام SafeKit. توفر بنيتنا بلا مشاركة نسخاً متزامناً متماثلاً وتجاوزاً تلقائياً للفشل وRPO=0 لتطبيقات Windows وLinux دون تكلفة الأقراص المشتركة السحابية."
 category: "solutions"
 lang: "ar"
-topics: "SafeKit للتوافر العالي بلا مشاركة في Azure: استغنِ عن الأقراص المشتركة مع انعدام فقدان البيانات, جدول المحتويات, كيف يطبّق برنامج SafeKit ببساطة مجموعة توافر عالٍ في Azure بلا مشاركة؟, كيف تعمل عنقودية المرآة (Mirror Cluster) في SafeKit مع Azure؟, حدود توفر SafeKit العالي, مقارنة: SafeKit لـ Azure مقابل حلول التوافر العالي والتعافي من الكوارث السحابية الأصلية, دليل فيديو: تكوين مجموعة SafeKit HA Mirror, 🔍 مركز توجيه SafeKit للتوافر العالي (High Availability)"
+topics: "SafeKit للتوافر العالي بلا مشاركة في Azure: استغنِ عن الأقراص المشتركة مع انعدام فقدان البيانات, جدول المحتويات, كيف يطبّق برنامج SafeKit ببساطة مجموعة توافر عالٍ في Azure بلا مشاركة؟, كيف تعمل عنقودية المرآة (Mirror Cluster) في SafeKit مع Azure؟, حدود توفر SafeKit العالي, مقارنة: SafeKit لـ Azure مقابل حلول التوافر العالي والتعافي من الكوارث السحابية الأصلية, دليل فيديو: تكوين مجموعة SafeKit HA Mirror, 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي في Microsoft Azure: النسخ المتزامن المتماثل وتجاوز الفشل باستخدام SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}

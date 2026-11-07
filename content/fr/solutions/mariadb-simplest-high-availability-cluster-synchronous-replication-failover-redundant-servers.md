@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/mariadb-simplest-high-availa
 description: "La solution la plus simple pour implémenter la haute disponibilité MariaDB . SafeKit fournit un cluster sans SAN à 2 nœuds avec réplication synchrone et basculement automatique ; aucune configuration Active Directory ni compétences spécialisées ne sont requises."
 category: "solutions"
 lang: "fr"
-topics: "Fonctionnement du cluster SafeKit Mirror sans SAN avec MariaDB , Sommaire, Comment le logiciel SafeKit implémente-t-il un cluster haute disponibilité MariaDB sans SAN ?, Comment le cluster SafeKit mirror fonctionne-t-il avec MariaDB ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour MariaDB vs. autres solutions de clustering, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "Fonctionnement du cluster SafeKit Mirror sans SAN avec MariaDB , Sommaire, Comment le logiciel SafeKit implémente-t-il un cluster haute disponibilité MariaDB sans SAN ?, Comment le cluster SafeKit mirror fonctionne-t-il avec MariaDB ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour MariaDB vs. autres solutions de clustering, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Explorez SafeKit"
 ---
 
 # La solution la plus simple pour la haute disponibilité MariaDB : réplication synchrone à 2 nœuds et basculement {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}

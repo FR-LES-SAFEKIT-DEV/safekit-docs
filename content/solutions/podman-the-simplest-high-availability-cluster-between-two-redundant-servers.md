@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/podman-the-simplest-high-availa
 description: "SafeKit provides a robust Podman high availability solution with integrated synchronous data replication. Implement a stateful container cluster with automatic failover and zero data loss on standard Linux servers. No SAN or shared storage required. Deploy in minutes."
 category: "solutions"
 lang: "en"
-topics: "How the SANless SafeKit Mirror Cluster Works with Podman, Table of Contents, How the SafeKit software simply implements a Podman high availability cluster?, How the SafeKit mirror cluster works with Podman?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Podman HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Podman High Availability Summary, 🔍 SafeKit High Availability Navigation Hub"
+topics: "How the SANless SafeKit Mirror Cluster Works with Podman, Table of Contents, How the SafeKit software simply implements a Podman high availability cluster?, How the SafeKit mirror cluster works with Podman?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Podman HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Podman High Availability Summary, 🔍 Explore SafeKit"
 ---
 
 # SafeKit: Podman High Availability & Real-Time Data Replication Software {#safekit-podman-high-availability--real-time-data-replication-software}
@@ -34,7 +34,7 @@ SafeKit offers a lightweight, **"just-enough" HA solution** tailored for organiz
   * [Comparison: SafeKit SANless Cluster vs. Traditional Podman HA](#safekit-podman-comparison)
   * [Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD)](#safekit-vs-linux-ha-stack)
   * [Podman High Availability Summary](#podman-ha-summary-quick-installation-guide)
-  * [🔍 SafeKit High Availability Navigation Hub](#hub)
+  * [🔍 Explore SafeKit](#hub)
 
 
 ## How the SafeKit software simply implements a Podman high availability cluster? {#how-safekit-implements-podman-ha}

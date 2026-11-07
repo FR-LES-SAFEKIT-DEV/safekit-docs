@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-to-implement-r
 description: "学习如何使用简单的纯软件方法实现冗余服务器。 SafeKit 提出了一种无SAN架构 Windows 和 Linux无需共享磁盘或专业 IT 技能，即可实现实时数据复制和自动故障转移。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "如何实现具有实时复制和故障转移的主备冗余服务器？如何实现具有网络负载均衡和故障转移的主备冗余服务器？🔍 SafeKit高可用性导航中心"
+topics: "如何实现具有实时复制和故障转移的主备冗余服务器？如何实现具有网络负载均衡和故障转移的主备冗余服务器？🔍 探索 SafeKit"
 ---
 
 # 如何使用简易高可用性软件实现冗余服务器 {#how-to-implement-redundant-servers-with-simple-ha-software}

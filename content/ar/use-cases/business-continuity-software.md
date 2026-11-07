@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/business-continuity-software
 description: "احمِ جميع فروع مؤسستك الموزعة باستخدام SafeKit . انشر مجموعة خوادم عالية التوفر (HA) موحدة تعتمد على البرمجيات فقط، وعلى نطاق واسع لضمان استمرارية عمل تطبيقات الفروع الحيوية على مدار الساعة. لا حاجة إلى تخزين مشترك، أو شبكات تخزين معقدة (SANs)، أو خبرة تقنية معلومات في الموقع لـ Windows و Linux ."
 category: "use-cases"
 lang: "ar"
-topics: "استمرارية الأعمال في مؤسسة موزعة، 🔍 SafeKit مركز التنقل عالي التوافر"
+topics: "استمرارية الأعمال في مؤسسة موزعة، 🔍 استكشف SafeKit"
 ---
 
 # توحيد معايير التوافر العالي للمؤسسات الموزعة ذات الفروع المتعددة {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

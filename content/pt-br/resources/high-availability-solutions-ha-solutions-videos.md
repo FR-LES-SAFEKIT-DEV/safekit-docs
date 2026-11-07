@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/resources/high-availability-solutio
 description: "Assista às demonstrações do SafeKit para ver como implementar alta disponibilidade sem SAN de 2 nós, replicação em tempo real e failover automático para Windows e Linux. Aprenda a criar clusters somente de software para SQL Server, Hyper-V e VMS sem armazenamento compartilhado caro ou balanceadores de carga de hardware complexos."
 category: "resources"
 lang: "pt-br"
-topics: "Tutoriais e demonstrações técnicas de failover do SafeKit, 🔍 Hub de navegação de alta disponibilidade do SafeKit"
+topics: "Tutoriais e demonstrações técnicas de failover do SafeKit, 🔍 Explore o SafeKit"
 ---
 
 # Demonstrações de alta disponibilidade e failover SafeKit: tutoriais em vídeo sobre clustering sem SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/podman-the-simplest-high-ava
 description: "يوفر SafeKit حلاً قوياً عالي التوفر Podman مع نسخ متزامن متكامل للبيانات. قم بتنفيذ مجموعة حاويات ذات حالة مع تجاوز تلقائي للأعطال وعدم فقدان البيانات على خوادم Linux القياسية. لا حاجة إلى شبكة تخزين شبكية (SAN) أو تخزين مشترك. النشر في دقائق."
 category: "solutions"
 lang: "ar"
-topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Podman ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Podman عالية التوفر؟، كيف تعمل مجموعة SafeKit mirror مع Podman ؟، قيود التوفر العالي SafeKit ، مقارنة: مجموعة SafeKit بدون SAN مقابل Podman التقليدية عالية التوفر، مقارنة: SafeKit مقابل Linux مفتوحة المصدر عالية التوفر (Pacemaker/Corosync/DRBD)، ملخص التوفر العالي Podman ، 🔍 مركز التنقل للتوفر العالي SafeKit"
+topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Podman ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Podman عالية التوفر؟، كيف تعمل مجموعة SafeKit mirror مع Podman ؟، قيود التوفر العالي SafeKit ، مقارنة: مجموعة SafeKit بدون SAN مقابل Podman التقليدية عالية التوفر، مقارنة: SafeKit مقابل Linux مفتوحة المصدر عالية التوفر (Pacemaker/Corosync/DRBD)، ملخص التوفر العالي Podman ، 🔍 استكشف SafeKit"
 ---
 
 # SafeKit : برنامج Podman عالي التوافر وبرنامج نسخ البيانات في الوقت الفعلي {#safekit-podman-high-availability--real-time-data-replication-software}
@@ -34,7 +34,7 @@ topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Podman 
   * مقارنة [ : مجموعة SafeKit بدون SAN مقابل Podman التقليدية عالية التوفر ](#safekit-podman-comparison)
   * مقارنة بين [ و SafeKit مفتوح المصدر Linux HA (منظم ضربات القلب/Corosync/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Podman ملخص التوافر العالي ](#podman-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit مركز الملاحة عالي التوفر ](#hub)
+  * [ 🔍 استكشف SafeKit
 
 
 ## كيف يقوم برنامج SafeKit ببساطة بتنفيذ مجموعة Podman عالية التوافر؟ {#how-safekit-implements-podman-ha}

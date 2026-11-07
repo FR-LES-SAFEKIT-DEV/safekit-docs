@@ -1,10 +1,11 @@
 ---
 title: "Soluções SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/"
-description: "A configuração de clusters em Windows e Linux pode ser muito simples com os módulos de alta disponibilidade do software SafeKit."
+description: "A configuração de um cluster no Windows e Linux pode ser muito simples se utilizar os módulos HA do software de alta disponibilidade SafeKit."
 category: "solutions"
 lang: "pt-pt"
-topics: "Biblioteca de módulos de aplicação SafeKit: soluções de alta disponibilidade prontas a utilizar, 🔍 Centro de navegação do SafeKit para alta disponibilidade"
+topics: "Biblioteca de Módulos de Aplicação SafeKit: Soluções de Alta Disponibilidade Prontas a Usar, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 14 expressions"
 ---
 
 # Soluções SafeKit {#safekit-solutions}

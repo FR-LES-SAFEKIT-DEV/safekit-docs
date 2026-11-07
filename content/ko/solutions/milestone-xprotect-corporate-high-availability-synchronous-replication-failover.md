@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/solutions/milestone-xprotect-corporate
 description: "Milestone XProtect 고가용성을 구현하는 가장 간단한 방법입니다. SafeKit은 동기식 복제와 자동 장애 조치를 제공하는 2노드 SANless 클러스터를 제공하므로 AD나 전문 기술이 필요하지 않습니다."
 category: "solutions"
 lang: "ko"
-topics: "SANless SafeKit Mirror 클러스터와 Milestone XProtect의 작동 방식, 목차, SafeKit 소프트웨어로 SANless Milestone XProtect 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit Mirror 클러스터와 Milestone XProtect의 작동 방식, SafeKit 고가용성 제한 사항, 비교: Milestone XProtect용 SafeKit과 다른 클러스터링 솔루션, 동영상 가이드: SafeKit HA Mirror 클러스터 구성, 보안 시장에서 인정받는 SafeKit, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "SANless SafeKit Mirror 클러스터와 Milestone XProtect의 작동 방식, 목차, SafeKit 소프트웨어로 SANless Milestone XProtect 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit Mirror 클러스터와 Milestone XProtect의 작동 방식, SafeKit 고가용성 제한 사항, 비교: Milestone XProtect용 SafeKit과 다른 클러스터링 솔루션, 동영상 가이드: SafeKit HA Mirror 클러스터 구성, 보안 시장에서 인정받는 SafeKit, 🔍 SafeKit 살펴보기"
 ---
 
 # 가장 간단한 Milestone XProtect 고가용성: 2노드 동기식 복제 및 장애 조치 {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}

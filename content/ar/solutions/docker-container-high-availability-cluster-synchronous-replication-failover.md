@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/docker-container-high-availa
 description: "يوفر SafeKit حلاً قوياً عالي التوفر Docker مع نسخ متزامن متكامل للبيانات. قم بتنفيذ مجموعة حاويات ذات حالة مع تجاوز تلقائي للأعطال وعدم فقدان البيانات على خوادم Linux القياسية. لا حاجة إلى شبكة تخزين شبكية (SAN) أو تخزين مشترك. النشر في دقائق."
 category: "solutions"
 lang: "ar"
-topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Docker ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Docker عالية التوفر؟، كيف تعمل مجموعة SafeKit mirror مع Docker ؟، قيود التوفر العالي SafeKit ، مقارنة: مجموعة SafeKit بدون SAN مقابل Docker التقليدية عالية التوفر، مقارنة: SafeKit مقابل Linux مفتوحة المصدر عالية التوفر (Pacemaker/Corosync/DRBD)، ملخص التوفر العالي Docker ، 🔍 مركز التنقل للتوفر العالي SafeKit"
+topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Docker ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Docker عالية التوفر؟، كيف تعمل مجموعة SafeKit mirror مع Docker ؟، قيود التوفر العالي SafeKit ، مقارنة: مجموعة SafeKit بدون SAN مقابل Docker التقليدية عالية التوفر، مقارنة: SafeKit مقابل Linux مفتوحة المصدر عالية التوفر (Pacemaker/Corosync/DRBD)، ملخص التوفر العالي Docker ، 🔍 استكشف SafeKit"
 ---
 
 # SafeKit : برنامج Docker عالي التوافر وبرنامج نسخ البيانات في الوقت الفعلي {#safekit-docker-high-availability--real-time-data-replication-software}
@@ -39,7 +39,7 @@ topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Docker 
   * مقارنة [ : مجموعة SafeKit بدون SAN مقابل Docker التقليدية عالية التوفر ](#safekit-docker-comparison)
   * مقارنة بين [ و SafeKit مفتوح المصدر Linux HA (منظم ضربات القلب/Corosync/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Docker ملخص التوافر العالي ](#docker-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit مركز الملاحة عالي التوفر ](#hub)
+  * [ 🔍 استكشف SafeKit
 
 
 ## كيف يقوم برنامج SafeKit ببساطة بتنفيذ مجموعة Docker عالية التوافر؟ {#how-safekit-implements-docker-ha}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/kubernetes-k3s-the-simplest-
 description: "حقق توافرًا عاليًا لـ K3s على عقدتين دون الحاجة إلى تخزين خارجي أو نصاب etcd. تعرّف على كيفية توفير SafeKit لنسخ البيانات دون فقدانها والتحويل التلقائي في حالة الفشل."
 category: "solutions"
 lang: "ar"
-topics: "تبسيط التوافر العالي لـ K3s: لماذا نختار SafeKit بدلاً من MetalLB وLonghorn؟، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة توافر عالي لـ K3s Kubernetes ؟، كيف تعمل مجموعة SafeKit mirror مع Kubernetes K3S؟، قيود التوافر العالي لـ SafeKit ، مقارنة: SafeKit مقابل حزمة K3s القياسية (MetalLB وLonghorn)، دليل فيديو: تكوين مجموعة SafeKit HA mirror ، 🔍 مركز تنقل التوافر العالي SafeKit"
+topics: "تبسيط التوافر العالي لـ K3s: لماذا نختار SafeKit بدلاً من MetalLB وLonghorn؟، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة توافر عالي لـ K3s Kubernetes ؟، كيف تعمل مجموعة SafeKit mirror مع Kubernetes K3S؟، قيود التوافر العالي لـ SafeKit ، مقارنة: SafeKit مقابل حزمة K3s القياسية (MetalLB وLonghorn)، دليل فيديو: تكوين مجموعة SafeKit HA mirror ، 🔍 استكشف SafeKit"
 ---
 
 # Kubernetes التوافر العالي K3s: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل على عقدتين {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ topics: "تبسيط التوافر العالي لـ K3s: لماذا نختار 
   * [ SafeKit قيود التوافر العالي ](#safekit-ha-limitations)
   * مقارنة [ : SafeKit مقابل مجموعة K3s القياسية (MetalLB و Longhorn) ](#safekit-k3s-ha-comparison)
   * دليل فيديو [ : تكوين مجموعة SafeKit Mirror عالية التوفر و ](#videoguide-safekit-mirror-cluster)
-  * [ 🔍 SafeKit مركز الملاحة عالي التوفر ](#hub)
+  * [ 🔍 استكشف SafeKit
 
 
 ## كيف يقوم برنامج SafeKit ببساطة بتنفيذ مجموعة Kubernetes K3s عالية التوافر؟ {#safekit-mirror-k3s-cluster}

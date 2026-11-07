@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/solutions/siemens-siveillance-redundan
 description: "SafeKit 사용하여 Siemens Siveillance Suite의 100% 가동 시간을 보장하세요. 복잡한 하드웨어 없이 SAN이 필요 없는 고가용성, 동기식 복제 및 액티브-액티브 클러스터링을 구현할 수 있습니다. 지금 무료 평가판을 다운로드하세요."
 category: "solutions"
 lang: "ko"
-topics: "Siemens Siveillance용 SafeKit : 2노드 SAN리스 Hyper-V 클러스터, 목차, SafeKit 소프트웨어로 SAN의 공유 스토리지 없이 Siemens Siveillance 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit Siemens Siveillance 클러스터 작동 방식, SafeKit 고가용성 제한 사항, 비교: Siemens Siveillance용 SafeKit 와 네이티브 Hyper-V 클러스터링, 비디오 가이드: Siemens Siveillance용 SafeKit HA 클러스터 구성, 보안 시장에서 인정받는 솔루션인 SafeKit , 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Siemens Siveillance용 SafeKit : 2노드 SAN리스 Hyper-V 클러스터, 목차, SafeKit 소프트웨어로 SAN의 공유 스토리지 없이 Siemens Siveillance 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit Siemens Siveillance 클러스터 작동 방식, SafeKit 고가용성 제한 사항, 비교: Siemens Siveillance용 SafeKit 와 네이티브 Hyper-V 클러스터링, 비디오 가이드: Siemens Siveillance용 SafeKit HA 클러스터 구성, 보안 시장에서 인정받는 솔루션인 SafeKit , 🔍 SafeKit 살펴보기"
 ---
 
 # 지멘스 감시 제품군을 위한 고가용성 및 이중화: 액티브-액티브 SAN리스 클러스터링 {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}

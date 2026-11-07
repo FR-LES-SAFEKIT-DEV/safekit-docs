@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-siveillance-red
 description: "使用SafeKit确保 Siemens Siveillance Suite 100% 正常运行时间。无需复杂硬件即可实现无 SAN 高可用性、同步复制和双活集群。立即下载免费试用版。"
 category: "solutions"
 lang: "zh-hans"
-topics: "SafeKit适用于 Siemens Siveillance：2 节点无 SAN Hyper-V 集群，目录， SafeKit软件如何在不使用 SAN 共享存储的情况下轻松实现 Siemens Siveillance 高可用性集群？， SafeKit Siemens Siveillance 集群的工作原理？， SafeKit高可用性限制，对比： SafeKit适用于 Siemens Siveillance 与原生 Hyper-V 集群，视频指南：配置SafeKit Siemens Siveillance 高可用性集群， SafeKit ，安全市场上的公认解决方案，🔍 SafeKit高可用性导航中心"
+topics: "SafeKit适用于 Siemens Siveillance：2 节点无 SAN Hyper-V 集群，目录， SafeKit软件如何在不使用 SAN 共享存储的情况下轻松实现 Siemens Siveillance 高可用性集群？， SafeKit Siemens Siveillance 集群的工作原理？， SafeKit高可用性限制，对比： SafeKit适用于 Siemens Siveillance 与原生 Hyper-V 集群，视频指南：配置SafeKit Siemens Siveillance 高可用性集群， SafeKit ，安全市场上的公认解决方案，🔍 探索 SafeKit"
 ---
 
 # 西门子 Siveillance 套件的高可用性和冗余性：主动-主动无 SAN 集群 {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}

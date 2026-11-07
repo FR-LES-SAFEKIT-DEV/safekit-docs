@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/physical-security-software-r
 description: "يضمن SafeKit استمرارية عمل أنظمة الأمان الحيوية بنسبة 100%. وهو عبارة عن مجموعة برمجية ثنائية العقد، لا تعتمد على شبكة تخزين (SAN)، توفر نسخًا متزامنًا فوريًا وتجاوزًا تلقائيًا للأعطال لأنظمة إدارة الفيديو ( Milestone ، من Genetec)، وأنظمة التحكم في الوصول ( Nedap ، من Siemens)، وأنظمة SCADA. كما يوفر Windows و Linux نظام تكرار بسيطًا ومستقلًا عن نوع الأجهزة، دون تعقيدات التخزين التقليدية عبر شبكة التخزين (SAN)."
 category: "use-cases"
 lang: "ar"
-topics: "يوفر SafeKit حلّين لضمان التكرار والتوافر العالي لبرامج الأمان المادي، 🔍 SafeKit مركز التنقل عالي التوافر"
+topics: "يوفر SafeKit حلّين لضمان التكرار والتوافر العالي لبرامج الأمان المادي، 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي والتكرار لبرامج الأمن المادي {#high-availability-and-redundancy-for-physical-security-software}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "SafeKit mirror.safe 모듈을 배포하여 Windows에서 동기식 실시간 복제와 자동 페일오버를 구현합니다. 이 가이드는 공유 스토리지 없이 중요한 Windows 애플리케이션을 위한 2노드 SANless 클러스터를 설정하는 방법을 안내합니다."
 category: "quick-install"
 lang: "ko"
-topics: "Windows용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Windows 솔루션 개요, SafeKit / Windows 솔루션에 설치 (mirror.safe), SafeKit / Windows 솔루션 단계별 구성, SafeKit mirror 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Windows용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Windows 솔루션 개요, SafeKit / Windows 솔루션에 설치 (mirror.safe), SafeKit / Windows 솔루션 단계별 구성, SafeKit mirror 솔루션 데모, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit를 사용한 Windows 고가용성: 페일오버를 위한 mirror.safe 모듈 설치 {#windows-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

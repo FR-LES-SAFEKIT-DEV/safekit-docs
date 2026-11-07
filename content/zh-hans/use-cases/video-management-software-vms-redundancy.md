@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/video-management-softwa
 description: "使用SafeKit防止视频丢失，它是最简便的 VMS 冗余高可用性软件。借助无 SAN 双节点集群、同步复制和自动故障转移，实现 24/7 全天候不间断管理。兼容Milestone XProtect 、Genetec、Siemens、Bosch 以及所有Windows / Linux VMS。无需复杂的硬件即可实现零数据丢失 (RPO=0)。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "什么是视频管理软件 (VMS)？为什么 VMS 软件至关重要？VMS 领域的主要厂商有哪些？ SafeKit提供两种 VMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 SafeKit高可用性导航中心"
+topics: "什么是视频管理软件 (VMS)？为什么 VMS 软件至关重要？VMS 领域的主要厂商有哪些？ SafeKit提供两种 VMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 探索 SafeKit"
 ---
 
 # 视频管理软件 (VMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-video-management-software-vms}

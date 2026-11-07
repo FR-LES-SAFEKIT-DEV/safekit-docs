@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/nl/resources/safekit-on-line-training/
 description: "Beheers SafeKit SANless HA met onze gratis training. De training behandelt software-installatie, beheer via de webconsole en de CLI. Leer geavanceerde configuratie- en probleemoplossingstechnieken om 24/7 hoge beschikbaarheid te garanderen. Behaal uw officiële certificering online."
 category: "resources"
 lang: "nl"
-topics: "Hoe krijg ik toegang tot het trainingsplatform? Download het SafeKit 8-trainingsmateriaal. 🔍 SafeKit High Availability-navigatiehub"
+topics: "Hoe krijg ik toegang tot het trainingsplatform? Download het SafeKit 8-trainingsmateriaal. 🔍 Ontdek SafeKit"
 ---
 
 # SafeKit High Availability-training: gratis online certificeringsprogramma {#safekit-high-availability-training-free-online-certification-program}

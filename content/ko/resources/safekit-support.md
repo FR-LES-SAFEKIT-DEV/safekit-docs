@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/resources/safekit-support/"
 description: "SafeKit 세 가지 지원 채널을 제공합니다. 연중무휴 24시간 사고 보고가 가능한 표준 계약 지원, SafeKit AI를 통한 무료 AI 기반 지원, 그리고 무료 온라인 인증 및 교육 프로그램입니다."
 category: "resources"
 lang: "ko"
-topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지 보수, 무료 인증 및 교육 프로그램, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지 보수, 무료 인증 및 교육 프로그램, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit AI 및 지원 {#safekit-ai--support}

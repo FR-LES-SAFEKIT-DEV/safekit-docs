@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "SafeKit用のmirror.safeモジュールをクラウドにデプロイして、 WindowsおよびLinuxで同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージを使用しない重要なアプリケーション向けに、2 ノードの共有なしクラスタをセットアップする手順を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "クラウド向け高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / クラウドmirrorソリューションの概要、 SafeKitおよびLinux ( mirror.safe ) へのWindows / クラウドmirrorソリューションのインストール、 SafeKit / クラウドmirrorソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "クラウド向け高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / クラウドmirrorソリューションの概要、 SafeKitおよびLinux ( mirror.safe ) へのWindows / クラウドmirrorソリューションのインストール、 SafeKit / クラウドmirrorソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit を探索する"
 ---
 
 # SafeKitを使用したクラウド高可用性:フェイルオーバー用にmirror.safeモジュールをインストールしてください {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

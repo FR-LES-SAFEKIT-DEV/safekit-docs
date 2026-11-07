@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/postgresql-high-availability
 description: "إن أبسط طريقة لتنفيذ PostgreSQL High Availability. يوفر SafeKit مجموعة بدون شبكة SAN مكونة من عقدتين مع النسخ المتماثل المتزامن وتجاوز الفشل التلقائي - لا يتطلب الأمر AD أو مهارات متخصصة."
 category: "solutions"
 lang: "ar"
-topics: "كيف تعمل مجموعة مرآة SafeKit SANless مع PostgreSQL، جدول المحتويات، كيف ينفذ برنامج SafeKit ببساطة مجموعة SANless PostgreSQL عالية التوفر؟، كيف تعمل مجموعة مرآة SafeKit مع PostgreSQL؟، قيود التوفر العالي لـ SafeKit، مقارنة: SafeKit لـ PostgreSQL مقابل حلول التجميع الأخرى، دليل الفيديو: تكوين مجموعة مرآة SafeKit HA، 🔍 التوفر العالي لـ SafeKit مركز الملاحة"
+topics: "كيف تعمل مجموعة مرآة SafeKit SANless مع PostgreSQL، جدول المحتويات، كيف ينفذ برنامج SafeKit ببساطة مجموعة SANless PostgreSQL عالية التوفر؟، كيف تعمل مجموعة مرآة SafeKit مع PostgreSQL؟، قيود التوفر العالي لـ SafeKit، مقارنة: SafeKit لـ PostgreSQL مقابل حلول التجميع الأخرى، دليل الفيديو: تكوين مجموعة مرآة SafeKit HA، 🔍 استكشف SafeKit"
 ---
 
 # أبسط توفر عالي لـ PostgreSQL: النسخ المتماثل المتزامن ثنائي العقد وتجاوز الفشل {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}

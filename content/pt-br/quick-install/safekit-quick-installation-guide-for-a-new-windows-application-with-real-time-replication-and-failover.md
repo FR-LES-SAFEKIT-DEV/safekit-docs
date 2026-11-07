@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-install
 description: "Implante o módulo mirror.safe do SafeKit para habilitar replicação síncrona em tempo real e failover automático no Windows. Este guia orienta a configuração de um cluster SANless de 2 nós para aplicações Windows críticas, sem armazenamento compartilhado."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de instalação rápida de alta disponibilidade para Windows, Limitações da alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Windows, Instalação nas soluções SafeKit / Windows (mirror.safe), Configuração passo a passo da solução SafeKit / Windows, Demonstração da solução SafeKit mirror, 🔍 Hub de navegação de alta disponibilidade do SafeKit"
+topics: "Guia de instalação rápida de alta disponibilidade para Windows, Limitações da alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Windows, Instalação nas soluções SafeKit / Windows (mirror.safe), Configuração passo a passo da solução SafeKit / Windows, Demonstração da solução SafeKit mirror, 🔍 Explore o SafeKit"
 ---
 
 # Alta disponibilidade no Windows com SafeKit: instale o módulo mirror.safe para failover {#windows-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

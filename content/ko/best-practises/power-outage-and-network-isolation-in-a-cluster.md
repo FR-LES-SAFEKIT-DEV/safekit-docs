@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/power-outage-and-networ
 description: "고가용성 클러스터에서 네트워크 격리 및 정전 관리 방법을 알아보세요. SafeKit 공유 디스크 없이 데이터 무결성과 연중무휴 24시간 가동을 보장하기 위해 통합 스플릿 브레인 체커 및 자동 재동기화 기능을 갖춘 SAN리스 아키텍처를 제안합니다."
 category: "best-practises"
 lang: "ko"
-topics: "클러스터에서 네트워크 격리가 발생할 경우 어떤 시나리오가 있을까요?, 클러스터에서 정전이 발생할 경우 어떤 시나리오가 있을까요?, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "클러스터에서 네트워크 격리가 발생할 경우 어떤 시나리오가 있을까요?, 클러스터에서 정전이 발생할 경우 어떤 시나리오가 있을까요?, 🔍 SafeKit 살펴보기"
 ---
 
 # HA 클러스터에서 정전 및 네트워크 격리 처리 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

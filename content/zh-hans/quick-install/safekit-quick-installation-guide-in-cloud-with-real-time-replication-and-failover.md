@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "在云端为SafeKit部署mirror.safe模块，以在Windows和Linux上启用同步实时复制和自动故障转移。本指南将引导您设置一个双节点无共享集群，用于运行没有共享存储的关键应用程序。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "云端高可用性快速安装指南， SafeKit高可用性限制， SafeKit / 云端mirror解决方案概述，在Windows和Linux ( mirror.safe ) 上安装SafeKit / 云端mirror解决方案， SafeKit / 云端mirror解决方案分步配置， SafeKit和mirror解决方案演示，🔍 SafeKit高可用性导航中心"
+topics: "云端高可用性快速安装指南， SafeKit高可用性限制， SafeKit / 云端mirror解决方案概述，在Windows和Linux ( mirror.safe ) 上安装SafeKit / 云端mirror解决方案， SafeKit / 云端mirror解决方案分步配置， SafeKit和mirror解决方案演示，🔍 探索 SafeKit"
 ---
 
 # 使用SafeKit实现云高可用性：安装mirror.safe模块以实现故障转移 {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

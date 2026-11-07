@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "WindowsおよびGCPで同期リアルタイムレプリケーションと自動フェイルオーバーを有効にするには、 SafeKit用のmirror.safeモジュールをLinuxにデプロイします。このガイドでは、共有ストレージを使用しない重要なアプリケーション向けの 2 ノード共有なしクラスタの設定手順を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "GCPの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / GCP mirrorソリューションの概要、 SafeKitおよびLinux ( mirror.safe ) へのWindows / GCP mirrorソリューションのインストール、 SafeKit / GCP mirrorソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモンストレーション、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "GCPの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / GCP mirrorソリューションの概要、 SafeKitおよびLinux ( mirror.safe ) へのWindows / GCP mirrorソリューションのインストール、 SafeKit / GCP mirrorソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモンストレーション、🔍 SafeKit を探索する"
 ---
 
 # GCP高可用性とSafeKit : フェイルオーバーのためにmirror.safeモジュールをインストールしてください {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

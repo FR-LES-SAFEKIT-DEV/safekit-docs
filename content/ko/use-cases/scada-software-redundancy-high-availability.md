@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/scada-software-redundancy-hi
 description: "SCADA용 SANless 고가용성 소프트웨어의 선두주자인 SafeKit 로 핵심 인프라를 보호하세요. 실시간 동기식 복제 및 자동 장애 조치를 통해 Wonderware, WinCC, iFix 및 Inductive Automation의 24시간 연중무휴 가동을 보장합니다. 복잡한 SAN 스토리지나 IT 전문 지식 없이도 산업용 데이터베이스에서 데이터 손실 제로(RPO=0)를 달성하세요."
 category: "use-cases"
 lang: "ko"
-topics: "SCADA 시스템이란 무엇인가?, SCADA 소프트웨어가 중요한 이유는 무엇인가?, SCADA 소프트웨어 주요 업체 목록, SafeKit SCADA 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다. SafeKit 는 SCADA 시장에서 인정받는 솔루션입니다. 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "SCADA 시스템이란 무엇인가?, SCADA 소프트웨어가 중요한 이유는 무엇인가?, SCADA 소프트웨어 주요 업체 목록, SafeKit SCADA 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다. SafeKit 는 SCADA 시장에서 인정받는 솔루션입니다. 🔍 SafeKit 살펴보기"
 ---
 
 # SCADA 및 산업 제어 시스템(ICS)을 위한 고가용성 및 이중화 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

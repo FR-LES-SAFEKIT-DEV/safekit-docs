@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بتثبيت وحدة mirror.safe على SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لحاويات Docker على Linux . يرشدك هذا الدليل خلال عملية إعداد مجموعة من عقدتين لا تستخدم التخزين المشترك للتطبيقات الحيوية التي لا تتطلب تخزينًا مشتركًا."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Docker ، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / Docker ، تثبيت حل SafeKit / Docker على Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / Docker ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Docker ، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / Docker ، تثبيت حل SafeKit / Docker على Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / Docker ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # Docker توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة mirror.safe للتحويل التلقائي في حالة الفشل {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

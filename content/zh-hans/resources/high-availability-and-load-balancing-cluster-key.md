@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/resources/high-availability-and-l
 description: "申请适用于 Windows 和 Linux 的 SafeKit 集群密钥，免费试用一个月。SafeKit 提供简单的一体化无 SAN 架构，实现高可用性和应用程序集群。"
 category: "resources"
 lang: "zh-hans"
-topics: "通过电子邮件获取适用于 Windows 或 Linux 的 SafeKit 一个月免费许可证密钥，🔍 SafeKit 高可用导航中心"
+topics: "通过电子邮件获取适用于 Windows 或 Linux 的 SafeKit 一个月免费许可证密钥，🔍 探索 SafeKit"
 ---
 
 # SafeKit 一个月免费试用密钥 {#safekit-one-month-free-trial-key}

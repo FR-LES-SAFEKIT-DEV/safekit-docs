@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Implementeer de mirror.safe module voor SafeKit om synchrone realtime-replicatie en automatische failover van Docker containers op Linux mogelijk te maken. Deze handleiding beschrijft hoe u een shared-nothing-cluster met twee knooppunten opzet voor kritieke applicaties zonder gedeelde opslag."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor High Availability Docker , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / Docker -oplossing, Installatie van de SafeKit / Docker oplossing op Linux ( mirror.safe ), Stapsgewijze configuratie van de SafeKit / Docker oplossing, Demonstratie van de SafeKit mirror -oplossing, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Snelstartgids voor High Availability Docker , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / Docker -oplossing, Installatie van de SafeKit / Docker oplossing op Linux ( mirror.safe ), Stapsgewijze configuratie van de SafeKit / Docker oplossing, Demonstratie van de SafeKit mirror -oplossing, 🔍 Ontdek SafeKit"
 ---
 
 # Docker Hoge beschikbaarheid met SafeKit : Installeer de mirror.safe module voor failover {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

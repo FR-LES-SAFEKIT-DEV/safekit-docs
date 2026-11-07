@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/podman-the-simplest-high-ava
 description: "SafeKit 、同期データレプリケーションを統合した堅牢なPodman高可用性ソリューションを提供します。標準のLinuxサーバー上で、自動フェイルオーバーとデータ損失ゼロを実現するステートフルコンテナクラスタを実装できます。SANや共有ストレージは不要です。数分でデプロイ可能です。"
 category: "solutions"
 lang: "ja"
-topics: "SANレスSafeKit MirrorクラスタがPodmanとどのように連携するか、目次、 SafeKitソフトウェアがPodman高可用性クラスタをどのように実装するか、 SafeKit mirrorクラスタがPodmanとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKit SANレスクラスタと従来のPodman HA、比較： SafeKitとオープンソースLinux HA（Pacemaker/Corosync/DRBD）、 Podman高可用性の概要、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SANレスSafeKit MirrorクラスタがPodmanとどのように連携するか、目次、 SafeKitソフトウェアがPodman高可用性クラスタをどのように実装するか、 SafeKit mirrorクラスタがPodmanとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKit SANレスクラスタと従来のPodman HA、比較： SafeKitとオープンソースLinux HA（Pacemaker/Corosync/DRBD）、 Podman高可用性の概要、🔍 SafeKit を探索する"
 ---
 
 # SafeKit : Podman高可用性およびリアルタイムデータレプリケーションソフトウェア {#safekit-podman-high-availability--real-time-data-replication-software}
@@ -34,7 +34,7 @@ SafeKit 軽量で、 **「必要最低限」のHAソリューション** 組織�
   * [比較: SafeKit SANレスクラスタ vs. 従来のPodman HA ](#safekit-podman-comparison)
   * [比較: SafeKit対 オープンソースLinux HA (ペースメーカー/コロシンク/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Podman高可用性概要](#podman-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit高可用性ナビゲーションハブ](#hub)
+  * [ 🔍 SafeKit を探索する
 
 
 ## SafeKitソフトウェアはどのようにしてPodman高可用性クラスタを簡単に実装するのでしょうか？ {#how-safekit-implements-podman-ha}

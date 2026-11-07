@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/architectures/active-active-cluster
 description: "Maximize a utilização de recursos com o cluster ativo-ativo SafeKit . Implemente failover mútuo entre dois servidores usando replicação síncrona em tempo real e múltiplos módulos mirror . Garanta zero perda de dados (RPO=0) e recuperação automática para Windows e Linux sem a necessidade de uma SAN. Baixe a versão de avaliação gratuita."
 category: "architectures"
 lang: "pt-br"
-topics: "Como funciona o cluster ativo-ativo com replicação em tempo real?, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Como funciona o cluster ativo-ativo com replicação em tempo real?, 🔍 Explore o SafeKit"
 ---
 
 # Software de clusterização ativo-ativo com replicação em tempo real e failover mútuo {#active-active-clustering-software-with-real-time-replication--mutual-failover}

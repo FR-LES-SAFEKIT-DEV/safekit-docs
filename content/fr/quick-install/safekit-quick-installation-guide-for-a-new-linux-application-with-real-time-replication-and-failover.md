@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Déployez le module mirror.safe de SafeKit pour activer la réplication synchrone en temps réel et la reprise automatique sur panne sous Linux. Ce guide vous accompagne dans la mise en place d'un cluster SANless à 2 nœuds pour vos applications Linux critiques, sans stockage partagé."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d'installation rapide de la haute disponibilité pour Linux, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Linux, Installation de la solution SafeKit / Linux (mirror.safe), Configuration pas à pas de la solution SafeKit / Linux, Démonstration de la solution SafeKit mirror, 🔍 Portail de navigation SafeKit haute disponibilité"
+topics: "Guide d'installation rapide de la haute disponibilité pour Linux, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Linux, Installation de la solution SafeKit / Linux (mirror.safe), Configuration pas à pas de la solution SafeKit / Linux, Démonstration de la solution SafeKit mirror, 🔍 Explorez SafeKit"
 ---
 
 # Haute disponibilité Linux avec SafeKit : installer le module mirror.safe pour la reprise sur panne {#linux-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/how-to-implement-redund
 description: "Découvrez comment implémenter des serveurs redondants grâce à une approche logicielle simple. SafeKit propose une architecture sans SAN pour Windows et Linux , assurant la réplication des données en temps réel et le basculement automatique sans disques partagés ni compétences informatiques spécialisées."
 category: "best-practises"
 lang: "fr"
-topics: "Comment implémenter des serveurs redondants actifs/passifs avec réplication en temps réel et basculement ? Comment implémenter des serveurs redondants actifs/actifs avec équilibrage de charge réseau et basculement ? 🔍 SafeKit Centre de navigation haute disponibilité"
+topics: "Comment implémenter des serveurs redondants actifs/passifs avec réplication en temps réel et basculement ? Comment implémenter des serveurs redondants actifs/actifs avec équilibrage de charge réseau et basculement ? 🔍 Explorez SafeKit"
 ---
 
 # Comment implémenter des serveurs redondants avec le logiciel HA simple {#how-to-implement-redundant-servers-with-simple-ha-software}

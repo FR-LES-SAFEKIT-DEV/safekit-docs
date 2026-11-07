@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Déployez le module milestone.safe de SafeKit pour activer la réplication synchrone en temps réel et le basculement automatique de Milestone XProtect sous Windows. Ce guide explique comment configurer un cluster SANless à 2 nœuds pour les applications critiques sans stockage partagé."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d'installation rapide haute disponibilité pour Milestone XProtect, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Milestone XProtect, Installation de la solution SafeKit / Milestone XProtect sous Windows (milestone.safe), Configuration étape par étape de la solution SafeKit / Milestone XProtect, Démonstration de la solution mirror SafeKit, 🔍 Hub de navigation haute disponibilité SafeKit"
+topics: "Guide d'installation rapide haute disponibilité pour Milestone XProtect, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Milestone XProtect, Installation de la solution SafeKit / Milestone XProtect sous Windows (milestone.safe), Configuration étape par étape de la solution SafeKit / Milestone XProtect, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"
 ---
 
 # Haute disponibilité de Milestone XProtect avec SafeKit : installez le module milestone.safe pour le basculement {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

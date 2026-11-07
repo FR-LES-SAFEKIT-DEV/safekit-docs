@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/siemens-siport-redundancy-high-
 description: '"Ensure 24/7 uptime for Siemens SIPORT with SafeKit. Our 2-node SANless cluster provides synchronous replication and automatic failover without the cost of a SAN. Simple, reliable, and high-performance redundancy. Download the free trial.'
 category: "solutions"
 lang: "en"
-topics: "SafeKit for Siemens SIPORT: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens SIPORT high availability cluster without shared storage on a SAN?, How the SafeKit Siemens SIPORT cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens SIPORT vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens SIPORT, SafeKit, a recognized solution on the security market, 🔍 SafeKit High Availability Navigation Hub"
+topics: "SafeKit for Siemens SIPORT: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens SIPORT high availability cluster without shared storage on a SAN?, How the SafeKit Siemens SIPORT cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens SIPORT vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens SIPORT, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
 ---
 
 # High Availability for Siemens SIPORT Access Control: SANless Redundancy & Failover {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}

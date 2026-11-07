@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/application-clustering-softw
 description: "Optimieren Sie Ihre Software mit SafeKit . Als OEM-Partner können Sie automatisiertes Failover und synchrone Replikation direkt in Ihre Anwendung integrieren. Bieten Sie Ihren Kunden mit Windows und Linux eine 24/7-Verfügbarkeit ohne die Komplexität von Hardware-Clustern."
 category: "use-cases"
 lang: "de"
-topics: "Anwendungsfall für OEM-Hochverfügbarkeit, 🔍 SafeKit Hochverfügbarkeits-Navigationshub"
+topics: "Anwendungsfall für OEM-Hochverfügbarkeit, 🔍 SafeKit entdecken"
 ---
 
 # OEM-Hochverfügbarkeit: Einbettung SafeKit -Clustering in Ihre Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}

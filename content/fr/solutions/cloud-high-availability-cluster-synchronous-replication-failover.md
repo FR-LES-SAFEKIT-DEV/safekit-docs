@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/cloud-high-availability-clus
 description: "Déployez une solution de haute disponibilité simple et indépendante du cloud : cluster HA SafeKit avec réplication synchrone et basculement, associé à SafeKit . Notre architecture sans partage de ressources assure la réplication synchrone, le basculement automatique et un RPO de 0 pour les applications Windows et Linux , sans les coûts liés aux disques partagés dans le cloud."
 category: "solutions"
 lang: "fr"
-topics: "SafeKit Haute disponibilité sans partage dans le cloud : éliminez les disques partagés sans perte de données, Sommaire, Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité cloud sans partage ?, Comment le cluster SafeKit mirror fonctionne-t-il avec le cloud ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour le cloud vs. solutions HA/DR cloud natives, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "SafeKit Haute disponibilité sans partage dans le cloud : éliminez les disques partagés sans perte de données, Sommaire, Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité cloud sans partage ?, Comment le cluster SafeKit mirror fonctionne-t-il avec le cloud ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour le cloud vs. solutions HA/DR cloud natives, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Explorez SafeKit"
 ---
 
 # Haute disponibilité indépendante du cloud : SafeKit Réplication synchrone et basculement {#cloud-agnostic-high-availability-safekit-synchronous-replication--failover}

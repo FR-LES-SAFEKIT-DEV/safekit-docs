@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Implementeer de mirror.safe module voor SafeKit in de cloud om synchrone realtime-replicatie en automatische failover op Windows en Linux mogelijk te maken. Deze handleiding beschrijft hoe u een shared-nothing-cluster met twee knooppunten configureert voor kritieke applicaties zonder gedeelde opslag."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor hoge beschikbaarheid in de cloud, beperkingen van de SafeKit -oplossing voor hoge beschikbaarheid, overzicht van de SafeKit / Cloud mirror oplossing, installatie van de SafeKit / Cloud mirror -oplossing op Windows en Linux ( mirror.safe ), stapsgewijze configuratie van de SafeKit / Cloud mirror -oplossing, demonstratie van de SafeKit mirror -oplossing, 🔍 SafeKit navigatiehub voor hoge beschikbaarheid"
+topics: "Snelstartgids voor hoge beschikbaarheid in de cloud, beperkingen van de SafeKit -oplossing voor hoge beschikbaarheid, overzicht van de SafeKit / Cloud mirror oplossing, installatie van de SafeKit / Cloud mirror -oplossing op Windows en Linux ( mirror.safe ), stapsgewijze configuratie van de SafeKit / Cloud mirror -oplossing, demonstratie van de SafeKit mirror -oplossing, 🔍 Ontdek SafeKit"
 ---
 
 # Cloud High Availability met SafeKit : Installeer de mirror.safe -module voor failover {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

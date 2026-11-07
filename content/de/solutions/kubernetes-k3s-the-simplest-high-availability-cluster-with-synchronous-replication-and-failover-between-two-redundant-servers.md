@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/solutions/kubernetes-k3s-the-simplest-
 description: "Erreichen Sie hohe K3s-Verfügbarkeit auf zwei Knoten ohne externen Speicher oder etcd-Quorum. Erfahren Sie, wie SafeKit verlustfreie Replikation und automatisches Failover ermöglicht."
 category: "solutions"
 lang: "de"
-topics: "Vereinfachte K3s-Hochverfügbarkeit: Warum SafeKit statt MetalLB und Longhorn?, Inhaltsverzeichnis, Wie implementiert die SafeKit -Software einen hochverfügbaren Kubernetes -K3s-Cluster?, Wie funktioniert der SafeKit mirror -Cluster mit Kubernetes K3S?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit vs. Standard-K3s-Stack (MetalLB & Longhorn), Videoanleitung: Konfiguration eines SafeKit mirror Hochverfügbarkeitsclusters, 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Vereinfachte K3s-Hochverfügbarkeit: Warum SafeKit statt MetalLB und Longhorn?, Inhaltsverzeichnis, Wie implementiert die SafeKit -Software einen hochverfügbaren Kubernetes -K3s-Cluster?, Wie funktioniert der SafeKit mirror -Cluster mit Kubernetes K3S?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit vs. Standard-K3s-Stack (MetalLB & Longhorn), Videoanleitung: Konfiguration eines SafeKit mirror Hochverfügbarkeitsclusters, 🔍 SafeKit entdecken"
 ---
 
 # Kubernetes K3s Hochverfügbarkeit: Synchrone 2-Knoten-Replikation & Failover {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ Architekturdiagramm ![ SafeKit für hochverfügbares 2-Knoten-K3s mit integriert
   * [ SafeKit Einschränkungen der Hochverfügbarkeit ](#safekit-ha-limitations)
   * [ -Vergleich: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn) ](#safekit-k3s-ha-comparison)
   * [ Videoanleitung: Konfigurieren eines SafeKit Mirror HA-Clusters ](#videoguide-safekit-mirror-cluster)
-  * [ 🔍 SafeKit Hochverfügbarer Navigationshub ](#hub)
+  * [ 🔍 SafeKit entdecken
 
 
 ## Wie implementiert die Software SafeKit auf einfache Weise einen hochverfügbaren K3s-Cluster Kubernetes ? {#safekit-mirror-k3s-cluster}

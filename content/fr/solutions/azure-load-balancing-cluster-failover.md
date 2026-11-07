@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/azure-load-balancing-cluster
 description: "Améliorez Azure Load Balancer avec la supervision applicative intelligente de SafeKit. Bénéficiez d'une haute disponibilité fluide grâce à des contrôles d'état approfondis, à l'autorétablissement automatique et au basculement pour les clusters Farm critiques."
 category: "solutions"
 lang: "fr"
-topics: "Optimiser le répartiteur de charge cloud grâce à la supervision applicative et à l'autorétablissement, Table des matières, Comment le logiciel SafeKit met-il simplement en œuvre un cluster d'équilibrage de charge réseau (NLB) pour Azure ?, Comment fonctionne le cluster farm SafeKit avec Azure ?, Comparaison : cluster Farm SafeKit sur site et cluster Farm SafeKit dans le cloud, Guide vidéo : configurer un cluster NLB Farm SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Optimiser le répartiteur de charge cloud grâce à la supervision applicative et à l'autorétablissement, Table des matières, Comment le logiciel SafeKit met-il simplement en œuvre un cluster d'équilibrage de charge réseau (NLB) pour Azure ?, Comment fonctionne le cluster farm SafeKit avec Azure ?, Comparaison : cluster Farm SafeKit sur site et cluster Farm SafeKit dans le cloud, Guide vidéo : configurer un cluster NLB Farm SafeKit, 🔍 Explorez SafeKit"
 ---
 
 # SafeKit : équilibrage de charge Microsoft Azure et haute disponibilité des applications avec un cluster <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}

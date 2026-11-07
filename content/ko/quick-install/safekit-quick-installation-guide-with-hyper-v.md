@@ -8,7 +8,7 @@ category: quick-install
 lang: ko
 topics: Hyper-V용 고가용성 빠른 설치 안내서, SafeKit 고가용성 제한 사항, SafeKit/Hyper-V 솔루션 개요,
   Windows에 SafeKit/Hyper-V 솔루션 설치(hyperv.safe), SafeKit/Hyper-V 솔루션의 단계별 구성,
-  SafeKit/Hyper-V 솔루션 시연, 🔍 SafeKit 고가용성 탐색 허브
+  SafeKit/Hyper-V 솔루션 시연, 🔍 SafeKit 살펴보기
 ---
 
 # Hyper-V SafeKit를 통한 고가용성: 장애 조치를 위한 hyperv.safe 모듈 설치 {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}

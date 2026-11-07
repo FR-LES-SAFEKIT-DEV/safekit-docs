@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/synchronous-replication
 description: "Vergelijk synchrone en asynchrone replicatie voor bedrijfscontinuïteit. Ontdek hoe SafeKit realtime synchrone replicatie gebruikt om nul gegevensverlies (RPO=0) in HA-clusters te garanderen, en waarom asynchroon beter geschikt is voor noodherstel over lange afstanden."
 category: "best-practises"
 lang: "nl"
-topics: "Gegevensverlies of niet bij failover van applicaties met synchrone of asynchrone replicatie?, Inhoudsopgave, Hoe asynchrone replicatie werkt?, Hoe synchrone replicatie werkt?, Hoe semi-synchrone replicatie werkt?, Eindoordeel: de juiste replicatie kiezen voor hoge beschikbaarheid, Vergelijkingstabel: synchrone versus asynchroon versus semi-synchrone, Videogids: Synchrone real-time replicatie en hoge beschikbaarheid configureren, FAQ: Replicatie Strategieën in clusters met hoge beschikbaarheid, 🔍 SafeKit navigatiehub met hoge beschikbaarheid"
+topics: "Gegevensverlies of niet bij failover van applicaties met synchrone of asynchrone replicatie?, Inhoudsopgave, Hoe asynchrone replicatie werkt?, Hoe synchrone replicatie werkt?, Hoe semi-synchrone replicatie werkt?, Eindoordeel: de juiste replicatie kiezen voor hoge beschikbaarheid, Vergelijkingstabel: synchrone versus asynchroon versus semi-synchrone, Videogids: Synchrone real-time replicatie en hoge beschikbaarheid configureren, FAQ: Replicatie Strategieën in clusters met hoge beschikbaarheid, 🔍 Ontdek SafeKit"
 ---
 
 # Synchrone versus asynchrone replicatie: hoe SafeKit zorgt voor nul gegevensverlies? {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}

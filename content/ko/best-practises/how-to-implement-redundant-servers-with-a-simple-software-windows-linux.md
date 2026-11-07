@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/how-to-implement-redund
 description: "간단한 소프트웨어만으로 이중화 서버를 구현하는 방법을 알아보세요. SafeKit Windows 및 Linux 에 SAN이 없는 아키텍처를 제안하여 공유 디스크나 전문 IT 기술 없이도 실시간 데이터 복제 및 자동 장애 조치를 제공합니다."
 category: "best-practises"
 lang: "ko"
-topics: "실시간 복제 및 페일오버를 지원하는 액티브/패시브 이중화 서버를 구현하는 방법은 무엇인가요?, 네트워크 로드 밸런싱 및 페일오버를 지원하는 액티브/액티브 이중화 서버를 구현하는 방법은 무엇인가요?, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "실시간 복제 및 페일오버를 지원하는 액티브/패시브 이중화 서버를 구현하는 방법은 무엇인가요?, 네트워크 로드 밸런싱 및 페일오버를 지원하는 액티브/액티브 이중화 서버를 구현하는 방법은 무엇인가요?, 🔍 SafeKit 살펴보기"
 ---
 
 # 간단한 HA 소프트웨어로 이중화 서버를 구현하는 방법 {#how-to-implement-redundant-servers-with-simple-ha-software}

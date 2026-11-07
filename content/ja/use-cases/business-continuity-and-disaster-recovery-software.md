@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-and-disa
 description: "SafeKit は、事業継続および災害復旧ソフトウェアであり、2 つの遠隔コンピュータ ルーム間でシンプルな高可用性ソリューションを実装します。 24 時間 365 日の稼働時間を実現します。 SafeKit最も使いやすいビジネス継続性および災害復旧ソフトウェア。2ノード同期レプリケーション、自動フェイルオーバー、ロードバランシングにより、高価なSANや複雑なITスキルを排除します。 Windows そして Linuxクラウド環境またはオンプレミス環境を問わず、重要なアプリケーションにおけるデータ損失ゼロ（RPO=0）。"
 category: "use-cases"
 lang: "ja"
-topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit を探索する"
 ---
 
 # SafeKitを搭載した 2 ノード クラスタ向け事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

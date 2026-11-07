@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/high-availability-archi
 description: "Explore las arquitecturas de alta disponibilidad (HA) y las mejores prácticas para la agrupación de aplicaciones. Descubra cómo el software SafeKit implementa los clústeres mirror y farm sin discos compartidos, lo que garantiza la ausencia de pérdida de datos y la conmutación por error automática para aplicaciones críticas."
 category: "best-practises"
 lang: "es"
-topics: "¿Cuáles son las arquitecturas de alta disponibilidad y las mejores prácticas?, Tablas comparativas sobre arquitecturas de alta disponibilidad y mejores prácticas, 🔍 SafeKit Centro de navegación de alta disponibilidad"
+topics: "¿Cuáles son las arquitecturas de alta disponibilidad y las mejores prácticas?, Tablas comparativas sobre arquitecturas de alta disponibilidad y mejores prácticas, 🔍 Explora SafeKit"
 ---
 
 # Arquitecturas de alta disponibilidad y mejores prácticas de agrupación de software {#high-availability-architectures--software-clustering-best-practices}

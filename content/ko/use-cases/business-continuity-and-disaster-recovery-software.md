@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/business-continuity-and-disa
 description: "SafeKit 는 비즈니스 연속성 및 재해 복구 소프트웨어로, 두 개의 원격 전산실 간에 간단한 고가용성 솔루션을 제공합니다. 가장 사용하기 쉬운 비즈니스 연속성 및 재해 복구 소프트웨어인 SafeKit 통해 24시간 연중무휴 가동 시간을 확보하세요. Windows 와 Linux 는 2노드 동기식 복제, 자동 장애 조치 및 로드 밸런싱 기능을 제공하여 고가의 SAN과 복잡한 IT 전문 기술 없이도 효율적인 운영이 가능합니다. 클라우드 또는 온프레미스 환경에서 중요 애플리케이션의 데이터 손실을 제로(RPO=0)로 보장합니다."
 category: "use-cases"
 lang: "ko"
-topics: "비즈니스 연속성 및 재해 복구 소프트웨어, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "비즈니스 연속성 및 재해 복구 소프트웨어, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit 및 사용하는 2노드 클러스터용 비즈니스 연속성 및 재해 복구 소프트웨어 {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

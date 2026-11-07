@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Implemente el módulo oracle.safe para SafeKit para habilitar la replicación síncrona en tiempo real y la conmutación por error automática de Oracle en Windows y Linux . Esta guía le muestra cómo configurar un clúster SAN de 2 nodos para aplicaciones críticas sin almacenamiento compartido."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para Oracle , limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit / Oracle , instalación de la solución SafeKit / Oracle en Windows y Linux ( oracle.safe ), configuración paso a paso de la solución SafeKit / Oracle , demostración de la solución SafeKit mirror , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para Oracle , limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit / Oracle , instalación de la solución SafeKit / Oracle en Windows y Linux ( oracle.safe ), configuración paso a paso de la solución SafeKit / Oracle , demostración de la solución SafeKit mirror , 🔍 Explora SafeKit"
 ---
 
 # Alta disponibilidad Oracle con SafeKit : Instale el módulo oracle.safe para la conmutación por error {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}

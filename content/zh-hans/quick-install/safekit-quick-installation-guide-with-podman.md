@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "为SafeKit部署mirror.safe模块，以在Linux上实现Podman容器的同步实时复制和自动故障转移。本指南将引导您设置一个适用于关键应用程序且无需共享存储的双节点无 SAN 集群。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Podman 、 SafeKit高可用性快速安装指南； SafeKit / Podman解决方案概述；在Linux ( mirror.safe ) 上安装SafeKit / Podman解决方案； SafeKit / Podman解决方案分步配置； SafeKit mirror解决方案演示；🔍 SafeKit高可用性导航中心"
+topics: "Podman 、 SafeKit高可用性快速安装指南； SafeKit / Podman解决方案概述；在Linux ( mirror.safe ) 上安装SafeKit / Podman解决方案； SafeKit / Podman解决方案分步配置； SafeKit mirror解决方案演示；🔍 探索 SafeKit"
 ---
 
 # Podman高可用性（与SafeKit配合使用）：安装mirror.safe模块以实现故障转移 {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

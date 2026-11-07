@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/"
 description: "Explore las mejores prácticas de alta disponibilidad SafeKit : patrones de arquitectura HA, replicación síncrona frente a asíncrona, estrategias de agrupación en clústeres, conmutación por error de VIP, RPO/RTO y diseño de redundancia para Windows y Linux ."
 category: "best-practises"
 lang: "es"
-topics: "SafeKit Mejores prácticas de clustering: arquitectura de alta disponibilidad, replicación y redundancia, 🔍 SafeKit Centro de navegación de alta disponibilidad"
+topics: "SafeKit Mejores prácticas de clustering: arquitectura de alta disponibilidad, replicación y redundancia, 🔍 Explora SafeKit"
 ---
 
 # Buenas prácticas de alta disponibilidad {#high-availability-best-practices}

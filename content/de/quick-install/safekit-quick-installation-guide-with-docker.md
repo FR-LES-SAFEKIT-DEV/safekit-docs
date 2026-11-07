@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Stellen Sie das Modul mirror.safe für SafeKit bereit, um die synchrone Echtzeitreplikation und das automatische Failover von Docker Containern auf Linux zu aktivieren. Diese Anleitung führt Sie durch die Einrichtung eines Shared-Nothing-Clusters mit zwei Knoten für kritische Anwendungen ohne gemeinsam genutzten Speicher."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Docker , Einschränkungen der Hochverfügbarkeit SafeKit , Übersicht der Lösung SafeKit / Docker , Installation der Lösung SafeKit / Docker auf Linux ( mirror.safe ), Schrittweise Konfiguration der Lösung SafeKit / Docker , Demonstration der Lösung SafeKit mirror , 🔍 Navigationszentrale für Hochverfügbarkeit SafeKit"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Docker , Einschränkungen der Hochverfügbarkeit SafeKit , Übersicht der Lösung SafeKit / Docker , Installation der Lösung SafeKit / Docker auf Linux ( mirror.safe ), Schrittweise Konfiguration der Lösung SafeKit / Docker , Demonstration der Lösung SafeKit mirror , 🔍 SafeKit entdecken"
 ---
 
 # Hochverfügbarkeit mit Docker SafeKit : Installieren Sie das Modul mirror.safe für Failover {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

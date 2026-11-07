@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/"
 description: "SafeKit 고가용성 모범 사례를 살펴보세요: HA 아키텍처 패턴, 동기식 vs. 비동기식 복제, 클러스터링 전략, VIP 페일오버, RPO/RTO, 그리고 Windows 및 Linux 에 대한 이중화 설계에 대해 알아보세요."
 category: "best-practises"
 lang: "ko"
-topics: "SafeKit 클러스터링 모범 사례: 고가용성 아키텍처, 복제 및 이중화, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "SafeKit 클러스터링 모범 사례: 고가용성 아키텍처, 복제 및 이중화, 🔍 SafeKit 살펴보기"
 ---
 
 # 고가용성 모범 사례 {#high-availability-best-practices}

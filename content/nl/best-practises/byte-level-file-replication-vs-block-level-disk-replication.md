@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/byte-level-file-replica
 description: "Vergelijk bestandsreplicatie op byte-niveau met schijfreplicatie op blokniveau. Ontdek waarom SafeKit een SAN-loze architectuur voorstelt die alleen gewijzigde gegevens binnen bestanden repliceert, waardoor er geen gegevensverlies optreedt (RPO 0), het herstel sneller verloopt (RTO) en de configuratie eenvoudig is op Windows en Linux ."
 category: "best-practises"
 lang: "nl"
-topics: "Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau in een high availability-cluster, Voordelen en nadelen van bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau in een high availability-cluster, Voordelen en nadelen van bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau, 🔍 Ontdek SafeKit"
 ---
 
 # Bestandreplicatie op byte-niveau versus schijfreplicatie op blokniveau voor HA {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

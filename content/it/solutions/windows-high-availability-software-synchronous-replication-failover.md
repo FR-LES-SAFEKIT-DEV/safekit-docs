@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/solutions/windows-high-availability-so
 description: "Il modo più semplice per implementare l'alta disponibilità Windows . SafeKit offre un cluster SANless a 2 nodi con replica sincrona e failover automatico, senza necessità di Active Directory o competenze specialistiche."
 category: "solutions"
 lang: "it"
-topics: "Come funziona il cluster SANless SafeKit Mirror con Windows , Indice, Come il software SafeKit implementa semplicemente un cluster ad alta disponibilità SANless Windows ?, Come funziona il cluster SafeKit mirror con Windows ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: SafeKit per Windows rispetto ad altre soluzioni di clustering, Guida video: Configurazione di un cluster HA SafeKit mirror , 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "Come funziona il cluster SANless SafeKit Mirror con Windows , Indice, Come il software SafeKit implementa semplicemente un cluster ad alta disponibilità SANless Windows ?, Come funziona il cluster SafeKit mirror con Windows ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: SafeKit per Windows rispetto ad altre soluzioni di clustering, Guida video: Configurazione di un cluster HA SafeKit mirror , 🔍 Esplora SafeKit"
 ---
 
 # La più semplice Windows Alta disponibilità: replica sincrona a 2 nodi e failover {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}

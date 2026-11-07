@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/heartbeat-failover-q
 description: "Aprenda como funcionam os mecanismos de heartbeat, failover e quorum em um cluster. SafeKit propõe uma arquitetura sem SAN que elimina a necessidade de um terceiro servidor de quorum ou disco de quorum dedicado. Obtenha alta disponibilidade no Windows e Linux com um verificador de split-brain simples."
 category: "best-practises"
 lang: "pt-br"
-topics: "Quais são os diferentes cenários em caso de isolamento de rede em um cluster? Como funcionam os heartbeats e o failover em um cluster Windows ou Linux ? Problema de split brain e quorum quando os servidores estão em duas salas de computadores remotas. Quorum de cluster simples com o verificador de split brain SafeKit . 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Quais são os diferentes cenários em caso de isolamento de rede em um cluster? Como funcionam os heartbeats e o failover em um cluster Windows ou Linux ? Problema de split brain e quorum quando os servidores estão em duas salas de computadores remotas. Quorum de cluster simples com o verificador de split brain SafeKit . 🔍 Explore o SafeKit"
 ---
 
 # Pulsação, Failover e Quorum nos clusters Windows e Linux e {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

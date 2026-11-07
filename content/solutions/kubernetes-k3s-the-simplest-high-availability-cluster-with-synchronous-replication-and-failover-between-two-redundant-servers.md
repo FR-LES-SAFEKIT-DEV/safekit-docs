@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/kubernetes-k3s-the-simplest-hig
 description: "Achieve K3s high availability on 2 nodes without external storage or etcd quorum. Learn how SafeKit provides zero-data-loss replication and automatic failover."
 category: "solutions"
 lang: "en"
-topics: "Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn?, Table of Contents, How the SafeKit software simply implements a Kubernetes K3s high availability cluster?, How the SafeKit mirror cluster works with Kubernetes K3S?, SafeKit High Availability Limitations, Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn), Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn?, Table of Contents, How the SafeKit software simply implements a Kubernetes K3s high availability cluster?, How the SafeKit mirror cluster works with Kubernetes K3S?, SafeKit High Availability Limitations, Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn), Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
 ---
 
 # Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ While the standard open-source stack (MetalLB + Longhorn) for K3s is powerful fo
   * [SafeKit High Availability Limitations](#safekit-ha-limitations)
   * [Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn)](#safekit-k3s-ha-comparison)
   * [Video Guide: Configuring a SafeKit Mirror HA cluster](#videoguide-safekit-mirror-cluster)
-  * [🔍 SafeKit High Availability Navigation Hub](#hub)
+  * [🔍 Explore SafeKit](#hub)
 
 
 ## How the SafeKit software simply implements a Kubernetes K3s high availability cluster? {#safekit-mirror-k3s-cluster}

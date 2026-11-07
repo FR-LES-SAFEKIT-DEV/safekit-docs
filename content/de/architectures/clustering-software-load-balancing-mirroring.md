@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/architectures/clustering-software-load
 description: "Implementieren Sie fortschrittliche Architekturen durch die Kombination der Module SafeKit Farm und Mirror . Nutzen Sie die Vorteile des Netzwerk-Load-Balancings für skalierbare Frontend-Lösungen und der Echtzeit-Synchronreplikation für optimalen Backend-Datenschutz. Einfaches, SAN-loses Clustering für Windows und Linux – ohne spezielle IT-Kenntnisse. Jetzt kostenlos testen!"
 category: "architectures"
 lang: "de"
-topics: "Hohe Verfügbarkeit und Skalierbarkeit kritischer Web- und Datenbankanwendungen mit der Clustering-Software SafeKit , 🔍 SafeKit High Availability Navigation Hub"
+topics: "Hohe Verfügbarkeit und Skalierbarkeit kritischer Web- und Datenbankanwendungen mit der Clustering-Software SafeKit , 🔍 SafeKit entdecken"
 ---
 
 # Clustering-Software für Farmen und Spiegelserver: Hochverfügbarkeit und Lastausgleich {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

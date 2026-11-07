@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/n-1-redundancy/"
 description: "حسّن أداء مركز بياناتك باستخدام تقنية التكرار N-1 لوحدة SafeKit . انشر N وحدة mirror على N+1 خادمًا لتوفير توافر عالٍ لتطبيقات متعددة مع نسخة احتياطية مشتركة واحدة. استغنِ عن متطلبات شبكة التخزين (SAN) وخفّض تكاليف الأجهزة باستخدام النسخ المتماثل في الوقت الفعلي لوحدتي Windows و Linux . تعرّف على المزيد."
 category: "architectures"
 lang: "ar"
-topics: "توافر عالٍ مع نسخ البيانات وتجاوز فشل التطبيق من N خادم إلى خادم واحد، 🔍 SafeKit مركز التنقل عالي التوافر"
+topics: "توافر عالٍ مع نسخ البيانات وتجاوز فشل التطبيق من N خادم إلى خادم واحد، 🔍 استكشف SafeKit"
 ---
 
 # تجميع التكرار N-1: توافر عالٍ لتطبيقات متعددة مع نسخة احتياطية واحدة {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

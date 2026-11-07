@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/best-practises/high-availability-disas
 description: "Crea una strategia HA/DR resiliente combinando SafeKit per la replica sincrona (RPO=0) con il backup asincrono per il ripristino di emergenza fuori sede. Garantisci la disponibilità delle applicazioni 24 ore su 24, 7 giorni su 7 e l'integrità dei dati su Windows e Linux con questo approccio a doppio livello."
 category: "best-practises"
 lang: "it"
-topics: "Replica sincrona SafeKit per HA vs. replica di backup asincrona per DR, Indice, HADR sincrono: zero perdita di dati su reti veloci (LAN/VLAN), HADR asincrono: ripristino di emergenza su reti lente (WAN), Come combinare HADR e backup per la resilienza totale del sistema, Confronto tra architetture HADR: reti veloci vs. lente, Guida video: come implementare HADR con SafeKit , 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "Replica sincrona SafeKit per HA vs. replica di backup asincrona per DR, Indice, HADR sincrono: zero perdita di dati su reti veloci (LAN/VLAN), HADR asincrono: ripristino di emergenza su reti lente (WAN), Come combinare HADR e backup per la resilienza totale del sistema, Confronto tra architetture HADR: reti veloci vs. lente, Guida video: come implementare HADR con SafeKit , 🔍 Esplora SafeKit"
 ---
 
 # Combinazione dell'alta disponibilità SafeKit con i backup di ripristino di emergenza {#combining-safekit-high-availability-with-disaster-recovery-backups}
@@ -29,7 +29,7 @@ Di conseguenza, l'ambiente è protetto da guasti hardware o software tramite Saf
   * [ Come combinare HADR e backup per una resilienza totale del sistema ](#hadr-resilience-strategy)
   * [ Confronto delle architetture HADR: reti veloci vs. reti lente ](#hadr-architectures-comparison)
   * Guida video [ : Come implementare HADR con SafeKit ](#videoguide-hadr-safekit)
-  * [ 🔍 SafeKit Hub di navigazione ad alta disponibilità ](#hub)
+  * [ 🔍 Esplora SafeKit
 
 
 

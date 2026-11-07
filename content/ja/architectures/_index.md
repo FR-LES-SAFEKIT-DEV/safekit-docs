@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/"
 description: "SafeKit で高可用性アーキテクチャを探索しましょう。SAN レスアプリケーションのフェイルオーバーとロードバランシングのための Mirror、Farm、Farm + mirror クラスターについて学びましょう。"
 category: "architectures"
 lang: "ja"
-topics: "SafeKit にはどのような高可用性アーキテクチャとソフトウェアクラスターがありますか？、SafeKit で高可用性クラスターを構築するには？、🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "SafeKit にはどのような高可用性アーキテクチャとソフトウェアクラスターがありますか？、SafeKit で高可用性クラスターを構築するには？、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 27 expressions"
 ---
 

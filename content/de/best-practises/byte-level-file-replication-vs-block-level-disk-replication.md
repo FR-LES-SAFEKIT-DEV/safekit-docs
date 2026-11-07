@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/byte-level-file-replica
 description: "Vergleichen Sie die Replikation von Dateien auf Byte-Ebene mit der Replikation von Festplatten auf Block-Ebene. Erfahren Sie, warum SafeKit eine SAN-lose Architektur vorschlägt, die nur geänderte Daten innerhalb von Dateien repliziert und so Datenverlustfreiheit (RPO 0), schnellere Wiederherstellung (RTO) und einfache Konfiguration auf Windows und Linux gewährleistet."
 category: "best-practises"
 lang: "de"
-topics: "Bytebasierte Dateireplikation vs. blockbasierte Festplattenreplikation in einem Hochverfügbarkeitscluster, Vor- und Nachteile der bytebasierten Dateireplikation im Vergleich zur blockbasierten Festplattenreplikation, 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Bytebasierte Dateireplikation vs. blockbasierte Festplattenreplikation in einem Hochverfügbarkeitscluster, Vor- und Nachteile der bytebasierten Dateireplikation im Vergleich zur blockbasierten Festplattenreplikation, 🔍 SafeKit entdecken"
 ---
 
 # Bytebasierte Dateireplikation vs. blockbasierte Festplattenreplikation für HA {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

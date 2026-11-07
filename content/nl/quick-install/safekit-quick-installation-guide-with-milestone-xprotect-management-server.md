@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Implementeer de milestone.safe-module van SafeKit om synchrone replicatie in realtime en automatische failover voor Milestone XProtect op Windows mogelijk te maken. Deze handleiding beschrijft hoe u een SANless-cluster met 2 knooppunten instelt voor kritieke toepassingen zonder gedeelde opslag."
 category: "quick-install"
 lang: "nl"
-topics: "Snelinstallatiehandleiding voor hoge beschikbaarheid van Milestone XProtect, beperkingen van SafeKit-hoge beschikbaarheid, overzicht van de SafeKit / Milestone XProtect-oplossing, installatie van de SafeKit / Milestone XProtect-oplossing op Windows (milestone.safe), stapsgewijze configuratie van de SafeKit / Milestone XProtect-oplossing, demonstratie van de SafeKit-mirror-oplossing, 🔍 SafeKit-navigatiecentrum voor hoge beschikbaarheid"
+topics: "Snelinstallatiehandleiding voor hoge beschikbaarheid van Milestone XProtect, beperkingen van SafeKit-hoge beschikbaarheid, overzicht van de SafeKit / Milestone XProtect-oplossing, installatie van de SafeKit / Milestone XProtect-oplossing op Windows (milestone.safe), stapsgewijze configuratie van de SafeKit / Milestone XProtect-oplossing, demonstratie van de SafeKit-mirror-oplossing, 🔍 Ontdek SafeKit"
 ---
 
 # Hoge beschikbaarheid van Milestone XProtect met SafeKit: installeer de milestone.safe-module voor failover {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

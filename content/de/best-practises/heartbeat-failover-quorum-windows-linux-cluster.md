@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/heartbeat-failover-quor
 description: "Erfahren Sie, wie Heartbeats, Failover und Quorum in einem Cluster funktionieren. SafeKit schlägt eine SAN-lose Architektur vor, die den Bedarf an einem dritten Quorumserver oder einer speziellen Quorum-Festplatte eliminiert. Erreichen Sie Hochverfügbarkeit auf Windows und Linux mit einem einfachen Split-Brain-Checker."
 category: "best-practises"
 lang: "de"
-topics: "Welche Szenarien gibt es bei Netzwerkisolation in einem Cluster? Wie funktionieren Heartbeats und Failover in einem Windows oder Linux -Cluster? Split-Brain-Problem und Quorum bei Servern in zwei entfernten Rechenzentren. Einfaches Cluster-Quorum mit dem SafeKit Split-Brain-Checker. 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Welche Szenarien gibt es bei Netzwerkisolation in einem Cluster? Wie funktionieren Heartbeats und Failover in einem Windows oder Linux -Cluster? Split-Brain-Problem und Quorum bei Servern in zwei entfernten Rechenzentren. Einfaches Cluster-Quorum mit dem SafeKit Split-Brain-Checker. 🔍 SafeKit entdecken"
 ---
 
 # Heartbeat, Failover und Quorum in den Clustern Windows und Linux sowie {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

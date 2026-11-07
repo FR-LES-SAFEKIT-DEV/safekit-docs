@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/san-vs-nas-shared-
 description: "比较 SAN 和 NAS 共享存储，以构建故障转移集群。了解SafeKit如何提出一种无 SAN 架构，该架构无需昂贵的硬件或复杂的仲裁磁盘，即可消除对共享存储的依赖，简化故障转移脚本，并防止数据损坏。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "对于故障转移集群，SAN 和 NAS 共享存储哪个方案最简单？🔍 SafeKit高可用性导航中心"
+topics: "对于故障转移集群，SAN 和 NAS 共享存储哪个方案最简单？🔍 探索 SafeKit"
 ---
 
 # SAN 与 NAS 共享存储故障转移集群对比：详细比较 {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

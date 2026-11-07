@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/mariadb-simplest-high-availa
 description: "実装する最も簡単な方法 MariaDB 高可用性。 SafeKit 同期レプリケーションと自動フェイルオーバーを備えた2ノードのSANレスクラスタを提供します。ADや特別なスキルは必要ありません。"
 category: "solutions"
 lang: "ja"
-topics: "SANレスSafeKit MirrorクラスタがMariaDBとどのように連携するか、目次、 SafeKitソフトウェアがSANレスMariaDB高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがMariaDBとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとMariaDBと他のクラスタリングソリューション、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SANレスSafeKit MirrorクラスタがMariaDBとどのように連携するか、目次、 SafeKitソフトウェアがSANレスMariaDB高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがMariaDBとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとMariaDBと他のクラスタリングソリューション、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit を探索する"
 ---
 
 # 最もシンプルな高可用性MariaDB : 2ノード同期レプリケーションとフェイルオーバー {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}

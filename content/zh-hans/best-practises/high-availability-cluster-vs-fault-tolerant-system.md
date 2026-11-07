@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-
 description: "比较高可用性集群与容错系统。了解SafeKit如何提出一种无需 SAN 的软件高可用性集群，该集群可同时抵御硬件和软件故障。通过省去专用容错硬件来降低成本，同时确保零数据丢失 (RPO 0)。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "高可用性和容错性有什么区别？高可用性和容错性的优缺点是什么？🔍 SafeKit高可用性导航中心"
+topics: "高可用性和容错性有什么区别？高可用性和容错性的优缺点是什么？🔍 探索 SafeKit"
 ---
 
 # 高可用性集群与容错系统：选择合适的冗余策略 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

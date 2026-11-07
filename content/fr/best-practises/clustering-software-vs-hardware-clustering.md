@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/clustering-software-vs-
 description: "Comparez le clustering logiciel et le clustering matériel pour la haute disponibilité. Découvrez comment SafeKit élimine le besoin de stockage SAN coûteux, de serveurs d'équilibrage de charge et de compétences informatiques spécialisées, tout en assurant une haute disponibilité 24h/24 et 7j/7 sur des serveurs standard."
 category: "best-practises"
 lang: "fr"
-topics: "Quelle est la différence entre le clustering logiciel et le clustering matériel ? Clustering logiciel vs clustering matériel : avantages et inconvénients, 🔍 SafeKit Centre de navigation haute disponibilité"
+topics: "Quelle est la différence entre le clustering logiciel et le clustering matériel ? Clustering logiciel vs clustering matériel : avantages et inconvénients, 🔍 Explorez SafeKit"
 ---
 
 # Clustering logiciel vs. clustering matériel pour la haute disponibilité {#software-clustering-vs-hardware-clustering-for-high-availability}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/docker-container-high-availa
 description: "SafeKit 、同期データレプリケーションを統合した堅牢なDocker高可用性ソリューションを提供します。標準のLinuxサーバー上で、自動フェイルオーバーとデータ損失ゼロを実現するステートフルコンテナクラスタを実装できます。SANや共有ストレージは不要です。数分でデプロイ可能です。"
 category: "solutions"
 lang: "ja"
-topics: "SANレスSafeKit MirrorクラスタがDockerとどのように連携するか、目次、 SafeKitソフトウェアがDocker高可用性クラスタをどのように実装するか、 SafeKit mirrorクラスタがDockerとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKit SANレスクラスタと従来のDocker HA、比較： SafeKitとオープンソースLinux HA（Pacemaker/Corosync/DRBD）、 Docker高可用性の概要、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SANレスSafeKit MirrorクラスタがDockerとどのように連携するか、目次、 SafeKitソフトウェアがDocker高可用性クラスタをどのように実装するか、 SafeKit mirrorクラスタがDockerとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKit SANレスクラスタと従来のDocker HA、比較： SafeKitとオープンソースLinux HA（Pacemaker/Corosync/DRBD）、 Docker高可用性の概要、🔍 SafeKit を探索する"
 ---
 
 # SafeKit : Docker高可用性およびリアルタイムデータレプリケーションソフトウェア {#safekit-docker-high-availability--real-time-data-replication-software}
@@ -39,7 +39,7 @@ SafeKit 、 **Kubernetes**リソースを過剰に消費したり、複雑すぎ
   * [比較: SafeKit SANレスクラスタ vs. 従来のDocker HA ](#safekit-docker-comparison)
   * [比較: SafeKit対 オープンソースLinux HA (ペースメーカー/コロシンク/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Docker高可用性概要](#docker-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit高可用性ナビゲーションハブ](#hub)
+  * [ 🔍 SafeKit を探索する
 
 
 ## SafeKitソフトウェアはどのようにしてDocker高可用性クラスタを簡単に実装するのでしょうか？ {#how-safekit-implements-docker-ha}

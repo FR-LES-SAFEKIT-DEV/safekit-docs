@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/electronic-access-control-so
 description: "Garantisci la sicurezza dell'edificio 24 ore su 24, 7 giorni su 7 con SafeKit , il software di alta disponibilità più semplice per il controllo degli accessi elettronici (EACS). Previeni i blocchi del sistema con il clustering a 2 nodi senza SAN, la replica sincrona in tempo reale e il failover automatico per Nedap , TIL Technologies, Siemens, HID e qualsiasi sistema EACS Windows / Linux . Raggiungi zero perdita di dati (RPO=0) senza SAN."
 category: "use-cases"
 lang: "it"
-topics: "Che cos'è un sistema di controllo accessi elettronico (EACS)?, Perché un software EACS è fondamentale?, Elenco dei principali attori nel settore EACS, SafeKit offre due soluzioni per la ridondanza e l'alta disponibilità di un software EACS, SafeKit , una soluzione riconosciuta sul mercato della sicurezza, 🔍 SafeKit Hub di navigazione ad alta disponibilità"
+topics: "Che cos'è un sistema di controllo accessi elettronico (EACS)?, Perché un software EACS è fondamentale?, Elenco dei principali attori nel settore EACS, SafeKit offre due soluzioni per la ridondanza e l'alta disponibilità di un software EACS, SafeKit , una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
 ---
 
 # Elevata disponibilità e ridondanza per il software di controllo accessi elettronico (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}

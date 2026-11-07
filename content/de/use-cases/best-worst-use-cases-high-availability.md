@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/best-worst-use-cases-high-av
 description: "Ermitteln Sie die besten und schlechtesten Anwendungsfälle für Hochverfügbarkeit. Erfahren Sie, wo SafeKit in softwaredefiniertem Clustering für Windows und Linux seine Stärken ausspielt, und finden Sie heraus, wann herkömmliche gemeinsam genutzte Speicherlösungen oder hardwarebasierte Hochverfügbarkeit für Ihr Unternehmen ungeeignet sein könnten."
 category: "use-cases"
 lang: "de"
-topics: "Optimale Anwendungsfälle, Einschränkungen der Hochverfügbarkeit SafeKit , 🔍 Hochverfügbarkeits-Navigationszentrale SafeKit"
+topics: "Optimale Anwendungsfälle, Einschränkungen der Hochverfügbarkeit SafeKit , 🔍 SafeKit entdecken"
 ---
 
 # Beste und schlechteste Anwendungsfälle für Hochverfügbarkeit: Ein Implementierungsleitfaden SafeKit {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

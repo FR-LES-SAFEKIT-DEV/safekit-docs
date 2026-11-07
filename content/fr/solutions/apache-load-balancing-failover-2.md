@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/apache-load-balancing-failov
 description: "SafeKit offre une solution logicielle performante d'équilibrage de charge et de haute disponibilité pour Apache. Remplacez votre infrastructure NLB complexe par l'IP virtuelle intégrée, la surveillance des applications et le basculement automatique de SafeKit. Déployez facilement un cluster Apache sur des serveurs Windows standard dès aujourd'hui."
 category: "solutions"
 lang: "fr"
-topics: "Le cluster Farm SafeKit : équilibrage de charge réseau logiciel et basculement automatique pour Apache, Table des matières, Comment le logiciel SafeKit met-il simplement en œuvre un cluster d'équilibrage de charge réseau (NLB) pour Apache ?, Comment fonctionne le cluster SafeKit en mode farm avec Apache ?, Comparaison du cluster Farm SafeKit pour Apache avec les autres solutions de clustering NLB, Guide vidéo : configurer un cluster NLB Farm SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Le cluster Farm SafeKit : équilibrage de charge réseau logiciel et basculement automatique pour Apache, Table des matières, Comment le logiciel SafeKit met-il simplement en œuvre un cluster d'équilibrage de charge réseau (NLB) pour Apache ?, Comment fonctionne le cluster SafeKit en mode farm avec Apache ?, Comparaison du cluster Farm SafeKit pour Apache avec les autres solutions de clustering NLB, Guide vidéo : configurer un cluster NLB Farm SafeKit, 🔍 Explorez SafeKit"
 ---
 
 # SafeKit : Logiciel tout-en-un d'équilibrage de charge et de haute disponibilité Apache {#safekit-all-in-one-apache-load-balancing--high-availability-software}

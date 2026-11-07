@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/kubernetes-k3s-the-simplest-
 description: "外部ストレージやetcdクォーラムなしで、2ノードでK3sの高可用性を実現する方法を学びましょう。 SafeKit データ損失ゼロのレプリケーションと自動フェイルオーバーを提供します。"
 category: "solutions"
 lang: "ja"
-topics: "K3s HA の簡素化: MetalLB と Longhorn ではなくSafeKit選択する理由、目次、 SafeKitソフトウェアがKubernetes K3s 高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがKubernetes K3S とどのように連携するか、 SafeKit高可用性の制限、比較: SafeKitと標準 K3s スタック (MetalLB と Longhorn)、ビデオ ガイド: SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "K3s HA の簡素化: MetalLB と Longhorn ではなくSafeKit選択する理由、目次、 SafeKitソフトウェアがKubernetes K3s 高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがKubernetes K3S とどのように連携するか、 SafeKit高可用性の制限、比較: SafeKitと標準 K3s スタック (MetalLB と Longhorn)、ビデオ ガイド: SafeKit HA mirrorクラスタの構成、🔍 SafeKit を探索する"
 ---
 
 # Kubernetes K3s 高可用性: 2ノード同期レプリケーションとフェイルオーバー {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ K3s向けの標準的なオープンソーススタック（MetalLB + Longhorn�
   * [ SafeKit高可用性制限事項](#safekit-ha-limitations)
   * [比較： SafeKitと標準K3sスタック（MetalLBおよびLonghorn） ](#safekit-k3s-ha-comparison)比較
   * [ビデオガイド: SafeKit Mirror HA クラスタの構成](#videoguide-safekit-mirror-cluster)
-  * [ 🔍 SafeKit高可用性ナビゲーションハブ](#hub)
+  * [ 🔍 SafeKit を探索する
 
 
 ## SafeKitソフトウェアはどのようにしてKubernetes K3s高可用性クラスタを簡単に実装するのでしょうか？ {#safekit-mirror-k3s-cluster}

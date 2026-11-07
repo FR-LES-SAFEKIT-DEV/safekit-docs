@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/siemens-siveillance-redundan
 description: "SafeKitを使用すれば、Siemens Siveillance Suite の稼働率を 100% に保証できます。複雑なハードウェアを必要とせずに、SAN レスの高可用性、同期レプリケーション、アクティブ/アクティブクラスタリングを実現します。今すぐ無料トライアルをダウンロードしてください。"
 category: "solutions"
 lang: "ja"
-topics: "Siemens Siveillance 用SafeKit : 2 ノード SAN レス Hyper-V クラスタ、目次、 SafeKitソフトウェアが SAN 上の共有ストレージなしで Siemens Siveillance 高可用性クラスタを簡単に実装する方法、 SafeKit Siemens Siveillance クラスタの仕組み、 SafeKit高可用性の制限、比較: Siemens Siveillance 用SafeKitとネイティブ Hyper-V クラスタリング、ビデオ ガイド: Siemens Siveillance 用SafeKit HA クラスタの構成、 SafeKit 、セキュリティ市場で認められたソリューション、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "Siemens Siveillance 用SafeKit : 2 ノード SAN レス Hyper-V クラスタ、目次、 SafeKitソフトウェアが SAN 上の共有ストレージなしで Siemens Siveillance 高可用性クラスタを簡単に実装する方法、 SafeKit Siemens Siveillance クラスタの仕組み、 SafeKit高可用性の制限、比較: Siemens Siveillance 用SafeKitとネイティブ Hyper-V クラスタリング、ビデオ ガイド: Siemens Siveillance 用SafeKit HA クラスタの構成、 SafeKit 、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
 ---
 
 # Siemens Siveillance Suiteの高可用性と冗長性：アクティブ/アクティブSANレスクラスタリング {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}

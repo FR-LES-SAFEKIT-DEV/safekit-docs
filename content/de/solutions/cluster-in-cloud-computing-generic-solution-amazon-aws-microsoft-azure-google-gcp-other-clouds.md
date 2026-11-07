@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/solutions/cluster-in-cloud-computing-g
 description: "Wie die Eviden SafeKit Software eine generische Lösung für Cluster im Cloud Computing bietet (Amazon AWS , Microsoft Azure , Google GCP und andere Clouds)"
 category: "solutions"
 lang: "de"
-topics: "Entdecken Sie SafeKit in Microsoft Azure , entdecken Sie SafeKit in Google GCP , entdecken Sie SafeKit in Amazon AWS , weitere Cloud-Lösungen mit Eviden SafeKit , 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Entdecken Sie SafeKit in Microsoft Azure , entdecken Sie SafeKit in Google GCP , entdecken Sie SafeKit in Amazon AWS , weitere Cloud-Lösungen mit Eviden SafeKit , 🔍 SafeKit entdecken"
 ---
 
 # Cluster im Cloud Computing: Eine generische Lösung für Amazon AWS , Microsoft Azure , Google GCP und andere Clouds {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

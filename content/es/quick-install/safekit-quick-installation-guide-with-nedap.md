@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Implemente el módulo nedap.safe para SafeKit para habilitar la replicación síncrona en tiempo real y la conmutación por error automática de Nedap en Windows . Esta guía le muestra cómo configurar un clúster SAN de 2 nodos para aplicaciones críticas sin almacenamiento compartido."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para Nedap , Limitaciones de alta disponibilidad SafeKit , Descripción general de la solución SafeKit / Nedap , Instalación de la solución SafeKit / Nedap en Windows ( nedap.safe ), Configuración paso a paso de la solución SafeKit / Nedap , Demostración de la solución SafeKit mirror , 🔍 Centro de navegación de alta disponibilidad SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para Nedap , Limitaciones de alta disponibilidad SafeKit , Descripción general de la solución SafeKit / Nedap , Instalación de la solución SafeKit / Nedap en Windows ( nedap.safe ), Configuración paso a paso de la solución SafeKit / Nedap , Demostración de la solución SafeKit mirror , 🔍 Explora SafeKit"
 ---
 
 # Alta disponibilidad Nedap con SafeKit : Instale el módulo nedap.safe para la conmutación por error {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/linux-high-availability-soft
 description: "De eenvoudigste manier om Linux High Availability te implementeren. SafeKit biedt een SAN-loos cluster met twee knooppunten, synchrone replicatie en automatische failover – zonder Active Directory of specialistische kennis."
 category: "solutions"
 lang: "nl"
-topics: "Hoe het SANless SafeKit Mirror -cluster werkt met Linux , Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SANless Linux high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Linux ?, Beperkingen SafeKit high availability, Vergelijking: SafeKit voor Linux versus andere clusteringoplossingen, Videogids: Een SafeKit HA mirror -cluster configureren, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Hoe het SANless SafeKit Mirror -cluster werkt met Linux , Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SANless Linux high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Linux ?, Beperkingen SafeKit high availability, Vergelijking: SafeKit voor Linux versus andere clusteringoplossingen, Videogids: Een SafeKit HA mirror -cluster configureren, 🔍 Ontdek SafeKit"
 ---
 
 # De eenvoudigste Linux hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}

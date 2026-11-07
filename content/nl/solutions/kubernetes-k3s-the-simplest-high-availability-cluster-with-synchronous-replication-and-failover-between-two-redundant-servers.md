@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/kubernetes-k3s-the-simplest-
 description: "Bereik hoge beschikbaarheid van K3s op 2 knooppunten zonder externe opslag of etcd-quorum. Ontdek hoe SafeKit zorgt voor replicatie zonder gegevensverlies en automatische failover."
 category: "solutions"
 lang: "nl"
-topics: "K3s HA vereenvoudigen: Waarom kiezen voor SafeKit in plaats van MetalLB en Longhorn?, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een Kubernetes K3s high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Kubernetes K3S?, Beperkingen SafeKit high availability, Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn), Videohandleiding: Een SafeKit HA mirror -cluster configureren, 🔍 SafeKit High Availability-navigatiehub"
+topics: "K3s HA vereenvoudigen: Waarom kiezen voor SafeKit in plaats van MetalLB en Longhorn?, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een Kubernetes K3s high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Kubernetes K3S?, Beperkingen SafeKit high availability, Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn), Videohandleiding: Een SafeKit HA mirror -cluster configureren, 🔍 Ontdek SafeKit"
 ---
 
 # Kubernetes K3s Hoge Beschikbaarheid: Synchrone Replicatie en Failover met 2 Knooppunten {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
@@ -37,7 +37,7 @@ Architectuurdiagram ![ SafeKit voor een K3s-architectuur met 2 knooppunten en ho
   * [ SafeKit Beperkingen voor hoge beschikbaarheid ](#safekit-ha-limitations)
   * [ Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn) ](#safekit-k3s-ha-comparison)
   * Videohandleiding [ : Een HA-cluster configureren SafeKit Mirror ](#videoguide-safekit-mirror-cluster)
-  * [ 🔍 SafeKit Navigatiehub met hoge beschikbaarheid ](#hub)
+  * [ 🔍 Ontdek SafeKit
 
 
 ## Hoe implementeert de SafeKit -software eenvoudig een Kubernetes K3s high availability-cluster? {#safekit-mirror-k3s-cluster}

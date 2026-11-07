@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/high-availability-clust
 description: "Vergleichen Sie HA-Cluster mit fehlertoleranten Systemen. Erfahren Sie, wie SafeKit einen SAN-losen Software-HA-Cluster vorschlägt, der sowohl vor Hardware- als auch vor Softwareausfällen schützt. Senken Sie die Kosten durch den Wegfall spezialisierter fehlertoleranter Hardware und gewährleisten Sie gleichzeitig null Datenverlust (RPO 0)."
 category: "best-practises"
 lang: "de"
-topics: "Was ist der Unterschied zwischen Hochverfügbarkeit und Fehlertoleranz? Vor- und Nachteile von Hochverfügbarkeit und Fehlertoleranz. 🔍 SafeKit Hochverfügbarkeits-Navigationszentrale"
+topics: "Was ist der Unterschied zwischen Hochverfügbarkeit und Fehlertoleranz? Vor- und Nachteile von Hochverfügbarkeit und Fehlertoleranz. 🔍 SafeKit entdecken"
 ---
 
 # HA-Cluster vs. fehlertolerantes System: Die richtige Redundanzstrategie wählen {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

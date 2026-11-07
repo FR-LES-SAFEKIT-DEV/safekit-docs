@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/"
 description: "SafeKit ist die All-in-One-SANless-HA-Software für Windows und Linux. Erhalten Sie synchrone Replikation in Echtzeit, automatische Failover und Lastausgleich in einem einfachen, kostengünstigen Paket. Starten Sie Ihre 30-tägige kostenlose Testversion."
 category: "home"
 lang: "de"
-topics: "Was SafeKit leistet, Wählen Sie Ihr Schutzniveau, Vorgefertigte Module für Ihre Anwendungen, Kundenanwendungsfälle, Einfache, vorhersehbare Preise, Kennen Sie die Grenzen, bevor Sie beginnen, SafeKit-Videobibliothek, 🔍 SafeKit Hochverfügbarkeits-Navigations-Hub"
+topics: "Was SafeKit leistet, Wählen Sie Ihr Schutzniveau, Vorgefertigte Module für Ihre Anwendungen, Kundenanwendungsfälle, Einfache, vorhersehbare Preise, Kennen Sie die Grenzen, bevor Sie beginnen, SafeKit-Videobibliothek, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.12 | Translation LLM | 15 expressions"
 ---
 

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/solutions/sql-server-high-availabil
 description: "A maneira mais simples de implementar alta disponibilidade Microsoft SQL Server . SafeKit oferece um cluster SANless de 2 nós com replicação síncrona e failover automático — sem necessidade de Active Directory ou conhecimentos especializados."
 category: "solutions"
 lang: "pt-br"
-topics: "Como o cluster SafeKit Mirror sem SAN funciona com Microsoft SQL Server , Sumário, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Microsoft SQL Server sem SAN?, Como o cluster SafeKit mirror funciona com Microsoft SQL Server ?, Limitações de alta disponibilidade SafeKit , Comparação: SafeKit para Microsoft SQL Server vs. Outras soluções de cluster, Guia em vídeo: Configurando um cluster de alta disponibilidade SafeKit mirror , 🔍 Hub de navegação de alta disponibilidade SafeKit"
+topics: "Como o cluster SafeKit Mirror sem SAN funciona com Microsoft SQL Server , Sumário, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Microsoft SQL Server sem SAN?, Como o cluster SafeKit mirror funciona com Microsoft SQL Server ?, Limitações de alta disponibilidade SafeKit , Comparação: SafeKit para Microsoft SQL Server vs. Outras soluções de cluster, Guia em vídeo: Configurando um cluster de alta disponibilidade SafeKit mirror , 🔍 Explore o SafeKit"
 ---
 
 # A solução mais simples de alta disponibilidade: Replicação síncrona e failover de 2 nós Microsoft SQL Server {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}

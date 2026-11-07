@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بنشر وحدة mirror.safe لـ SafeKit في السحابة لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل على Windows و Linux . يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون مشاركة تخزين للتطبيقات الحيوية التي لا تتطلب مشاركة التخزين."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / السحابة mirror ، تثبيت حل SafeKit / السحابة mirror على Windows و Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / السحابة mirror ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / السحابة mirror ، تثبيت حل SafeKit / السحابة mirror على Windows و Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / السحابة mirror ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # توفير إمكانية الوصول العالي إلى السحابة باستخدام SafeKit : قم بتثبيت وحدة mirror.safe للتحويل التلقائي في حالة الفشل {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

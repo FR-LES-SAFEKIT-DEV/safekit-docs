@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "SafeKit의 milestone.safe 모듈을 배포하여 Windows에서 Milestone XProtect의 동기식 실시간 복제 및 자동 페일오버를 구현합니다. 이 가이드에서는 공유 스토리지 없이 중요 애플리케이션을 위한 2노드 SANless 클러스터를 설정하는 방법을 설명합니다."
 category: "quick-install"
 lang: "ko"
-topics: "Milestone XProtect 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Milestone XProtect 솔루션 개요, Windows에 SafeKit / Milestone XProtect 솔루션 설치 (milestone.safe), SafeKit / Milestone XProtect 솔루션 단계별 구성, SafeKit mirror 솔루션 데모, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "Milestone XProtect 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Milestone XProtect 솔루션 개요, Windows에 SafeKit / Milestone XProtect 솔루션 설치 (milestone.safe), SafeKit / Milestone XProtect 솔루션 단계별 구성, SafeKit mirror 솔루션 데모, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit을 사용한 Milestone XProtect 고가용성: 페일오버용 milestone.safe 모듈 설치 {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

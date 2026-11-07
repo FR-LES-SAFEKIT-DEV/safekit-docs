@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/architectures/"
 description: "Entdecken Sie Hochverfügbarkeitsarchitekturen mit SafeKit. Erfahren Sie mehr über Mirror, Farm und Farm + Mirror-Cluster für SANless-Anwendungsfailover und Lastausgleich."
 category: "architectures"
 lang: "de"
-topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwarecluster gibt es mit SafeKit?, Wie baut man Hochverfügbarkeitscluster mit SafeKit?, 🔍 SafeKit Hochverfügbarkeits-Navigations-Hub"
+topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwarecluster gibt es mit SafeKit?, Wie baut man Hochverfügbarkeitscluster mit SafeKit?, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 22 expressions"
 ---
 

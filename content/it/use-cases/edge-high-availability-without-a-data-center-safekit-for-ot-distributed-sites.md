@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/edge-high-availability-witho
 description: "I siti periferici non dispongono di un data center, ma necessitano comunque di alta disponibilità. SafeKit trasforma 2 server standard in un cluster HA plug-and-play: nessuna SAN, nessun personale IT necessario, failover automatico."
 category: "use-cases"
 lang: "it"
-topics: "La sfida dell'alta disponibilità di Edge, cosa rende SafeKit la soluzione ideale per Edge, idoneità per implementazioni Edge e distribuite, perché gli ambienti OT di Edge sono diversi, casi d'uso Edge ideali, alta disponibilità di Edge vs. Data Center: differenze chiave, requisiti tecnici minimi, 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "La sfida dell'alta disponibilità di Edge, cosa rende SafeKit la soluzione ideale per Edge, idoneità per implementazioni Edge e distribuite, perché gli ambienti OT di Edge sono diversi, casi d'uso Edge ideali, alta disponibilità di Edge vs. Data Center: differenze chiave, requisiti tecnici minimi, 🔍 Esplora SafeKit"
 ---
 
 # Elevata disponibilità Edge senza data center: SafeKit per siti OT e distribuiti {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

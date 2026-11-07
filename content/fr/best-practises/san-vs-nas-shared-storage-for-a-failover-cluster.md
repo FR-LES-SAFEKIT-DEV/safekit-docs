@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/san-vs-nas-shared-stora
 description: "Comparez le stockage partagé SAN et NAS pour les clusters HA. Découvrez pourquoi SafeKit propose une architecture sans SAN qui élimine les dépendances au stockage partagé, simplifie les scripts de basculement et empêche la corruption des données sans matériel coûteux ni disques de quorum complexes."
 category: "best-practises"
 lang: "fr"
-topics: "Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ?, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ?, 🔍 Explorez SafeKit"
 ---
 
 # Comparaison détaillée du stockage partagé SAN et NAS pour le clustering HA {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

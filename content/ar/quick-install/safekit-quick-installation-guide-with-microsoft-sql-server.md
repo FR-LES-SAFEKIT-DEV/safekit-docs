@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "قم بتثبيت وحدة sqlserver.safe لوحدة SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لوحدتي Microsoft SQL Server . يرشدك هذا الدليل خلال عملية إعداد مجموعة خوادم ثنائية العقدة بدون شبكة تخزين (SAN) للتطبيقات الحيوية التي لا تتطلب تخزينًا مشتركًا."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Microsoft SQL Server و SafeKit قيود التوافر العالي، نظرة عامة على حل SafeKit / Microsoft SQL Server ، تثبيت حل SafeKit / Microsoft SQL Server على Windows ( sqlserver.safe )، التكوين خطوة بخطوة لحل SafeKit / Microsoft SQL Server ، عرض توضيحي لحل SafeKit mirror ، 🔍 مركز التنقل للتوافر العالي SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Microsoft SQL Server و SafeKit قيود التوافر العالي، نظرة عامة على حل SafeKit / Microsoft SQL Server ، تثبيت حل SafeKit / Microsoft SQL Server على Windows ( sqlserver.safe )، التكوين خطوة بخطوة لحل SafeKit / Microsoft SQL Server ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
 ---
 
 # Microsoft SQL Server التوافر العالي مع SafeKit : قم بتثبيت وحدة sqlserver.safe للتحويل التلقائي في حالة الفشل {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}

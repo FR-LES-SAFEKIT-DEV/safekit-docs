@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/heartbeat-failover-quor
 description: "Leer hoe heartbeats, failover en quorum werken in een cluster. SafeKit biedt een SAN-loze architectuur die de noodzaak voor een derde quorumserver of speciale quorumschijf elimineert. Bereik hoge beschikbaarheid op Windows en Linux met een eenvoudige split-brain checker."
 category: "best-practises"
 lang: "nl"
-topics: "Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster? Hoe werken heartbeats en failover in een Windows of Linux -cluster? Het split-brain-probleem en quorum wanneer servers zich in twee externe computerruimtes bevinden. Eenvoudig clusterquorum met de SafeKit split-brain checker. 🔍 SafeKit High Availability Navigation Hub"
+topics: "Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster? Hoe werken heartbeats en failover in een Windows of Linux -cluster? Het split-brain-probleem en quorum wanneer servers zich in twee externe computerruimtes bevinden. Eenvoudig clusterquorum met de SafeKit split-brain checker. 🔍 Ontdek SafeKit"
 ---
 
 # Heartbeat, failover en quorum in Windows en Linux clusters {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

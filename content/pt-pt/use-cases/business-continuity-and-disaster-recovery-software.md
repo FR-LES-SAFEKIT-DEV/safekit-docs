@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/use-cases/business-continuity-and-d
 description: "SafeKit é um software de continuidade de negócios e recuperação de desastres que implementa uma solução simples de alta disponibilidade entre duas salas de computadores remotas. Obtenha disponibilidade 24 horas por dia, 7 dias por semana, com SafeKit , o software de continuidade de negócios e recuperação de desastres mais fácil de usar. Elimine SANs dispendiosas e habilidades complexas de TI com replicação síncrona de 2 nós, failover automático e balanceamento de carga para Windows e Linux . Perda de dados zero (RPO=0) para aplicações críticas em qualquer ambiente de nuvem ou local."
 category: "use-cases"
 lang: "pt-pt"
-topics: "Software de continuidade de negócios e recuperação de desastres, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Software de continuidade de negócios e recuperação de desastres, 🔍 Explore o SafeKit"
 ---
 
 # Software de Continuidade de Negócios e Recuperação de Desastres para Clusters de 2 Nós com SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

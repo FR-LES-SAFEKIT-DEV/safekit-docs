@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/power-outage-and-networ
 description: "Aprenda a gestionar el aislamiento de la red y las interrupciones de energía en un clúster de alta disponibilidad. SafeKit propone una arquitectura sin SAN con comprobadores de división de clúster integrados y resincronización automática para garantizar la integridad de los datos y un funcionamiento ininterrumpido (24/7) sin necesidad de un disco compartido."
 category: "best-practises"
 lang: "es"
-topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster?, 🔍 SafeKit Centro de navegación de alta disponibilidad"
+topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster?, 🔍 Explora SafeKit"
 ---
 
 # Gestión de cortes de energía y aislamiento de red en un clúster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "在 Azure 中部署 SafeKit mirror.safe 模块，以便在 Windows 和 Linux 上实现同步实时复制和自动故障转移。本指南介绍如何为关键应用程序配置一个无共享存储的双节点集群。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Azure 高可用性快速安装指南，SafeKit 高可用性限制，SafeKit / Azure mirror 解决方案概述，在 Windows 和 Linux 上安装 SafeKit / Azure mirror 解决方案 (mirror.safe)，SafeKit / Azure mirror 解决方案分步配置，SafeKit mirror 解决方案演示，🔍 SafeKit 高可用性导航中心"
+topics: "Azure 高可用性快速安装指南，SafeKit 高可用性限制，SafeKit / Azure mirror 解决方案概述，在 Windows 和 Linux 上安装 SafeKit / Azure mirror 解决方案 (mirror.safe)，SafeKit / Azure mirror 解决方案分步配置，SafeKit mirror 解决方案演示，🔍 探索 SafeKit"
 ---
 
 # 使用 SafeKit 实现 Azure 高可用性：安装用于故障转移的 mirror.safe 模块 {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

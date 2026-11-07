@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/clustering-software-vs-
 description: "HAにおけるソフトウェアクラスタリングとハードウェアクラスタリングを比較します。 SafeKit 高価なSANストレージ、ロードバランシング機器、専門的なITスキルが不要になり、標準サーバー上で24時間365日の高可用性を実現します。"
 category: "best-practises"
 lang: "ja"
-topics: "ソフトウェアクラスタリングとハードウェアクラスタリングの違いは？、ソフトウェアクラスタリングとハードウェアクラスタリング：メリットとデメリット、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "ソフトウェアクラスタリングとハードウェアクラスタリングの違いは？、ソフトウェアクラスタリングとハードウェアクラスタリング：メリットとデメリット、🔍 SafeKit を探索する"
 ---
 
 # 高可用性を実現するソフトウェアクラスタリングとハードウェアクラスタリングの比較 {#software-clustering-vs-hardware-clustering-for-high-availability}

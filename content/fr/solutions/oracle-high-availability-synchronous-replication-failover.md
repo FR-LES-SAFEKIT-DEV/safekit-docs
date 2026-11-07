@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/oracle-high-availability-syn
 description: "La solution la plus simple pour implémenter la haute disponibilité Oracle . SafeKit fournit un cluster sans SAN à 2 nœuds avec réplication synchrone et basculement automatique ; aucune configuration Active Directory ni compétences spécialisées ne sont requises."
 category: "solutions"
 lang: "fr"
-topics: "Fonctionnement du cluster SafeKit Mirror sans SAN avec Oracle , Sommaire, Comment le logiciel SafeKit implémente-t-il un cluster haute disponibilité Oracle sans SAN ?, Comment le cluster SafeKit mirror fonctionne-t-il avec Oracle ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour Oracle vs. autres solutions de clustering, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "Fonctionnement du cluster SafeKit Mirror sans SAN avec Oracle , Sommaire, Comment le logiciel SafeKit implémente-t-il un cluster haute disponibilité Oracle sans SAN ?, Comment le cluster SafeKit mirror fonctionne-t-il avec Oracle ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour Oracle vs. autres solutions de clustering, Tutoriel vidéo : Configuration d’un cluster HA SafeKit mirror , 🔍 Explorez SafeKit"
 ---
 
 # La solution la plus simple pour la haute disponibilité Oracle : réplication synchrone à 2 nœuds et basculement {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}

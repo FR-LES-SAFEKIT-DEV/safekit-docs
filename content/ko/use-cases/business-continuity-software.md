@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/business-continuity-software
 description: "SafeKit 사용하여 분산된 기업의 모든 지점을 안전하게 보호하세요. 표준화된 소프트웨어 전용 고가용성(HA) 클러스터를 대규모로 배포하여 핵심 지점 애플리케이션에 연중무휴 24시간 가동 시간을 보장하십시오. Windows 및 Linux 는 공유 스토리지, 복잡한 SAN, 현장 IT 전문가가 필요하지 않습니다."
 category: "use-cases"
 lang: "ko"
-topics: "분산형 기업 환경에서의 비즈니스 연속성, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "분산형 기업 환경에서의 비즈니스 연속성, 🔍 SafeKit 살펴보기"
 ---
 
 # 다수의 지점을 보유한 분산형 기업을 위한 고가용성 표준화 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

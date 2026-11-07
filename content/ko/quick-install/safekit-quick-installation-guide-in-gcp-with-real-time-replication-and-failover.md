@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "SafeKit 용 mirror.safe 모듈을 GCP 에 배포하여 Windows 및 Linux 에서 동기식 실시간 복제 및 자동 장애 조치를 활성화하십시오. 이 가이드에서는 공유 스토리지가 없는 중요 애플리케이션을 위한 2노드 공유 스토리지 없음 클러스터 설정 과정을 안내합니다."
 category: "quick-install"
 lang: "ko"
-topics: "GCP , SafeKit 고가용성 빠른 설치 가이드, 고가용성 제한 사항, SafeKit / GCP mirror 솔루션 개요, SafeKit 및 Linux ( mirror.safe )에 Windows / GCP 및 mirror 솔루션 설치, SafeKit / GCP mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "GCP , SafeKit 고가용성 빠른 설치 가이드, 고가용성 제한 사항, SafeKit / GCP mirror 솔루션 개요, SafeKit 및 Linux ( mirror.safe )에 Windows / GCP 및 mirror 솔루션 설치, SafeKit / GCP mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"
 ---
 
 # GCP 고가용성 SafeKit 포함): 장애 조치용 mirror.safe 모듈 설치 포함) {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

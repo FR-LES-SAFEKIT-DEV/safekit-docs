@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/podman-the-simplest-hig
 description: "SafeKit提供强大的Podman高可用性解决方案，并集成同步数据复制功能。可在标准Linux服务器上部署有状态容器集群，实现自动故障转移和零数据丢失。无需 SAN 或共享存储。几分钟即可完成部署。"
 category: "solutions"
 lang: "zh-hans"
-topics: "无 SAN 集群SafeKit Mirror如何与Podman协同工作？目录； SafeKit软件如何简单实现Podman高可用性集群？ SafeKit和mirror集群如何与Podman协同工作？ SafeKit高可用性限制；比较：无 SAN 集群SafeKit与传统高可用性Podman ；比较： SafeKit与开源高可用性Linux （Pacemaker/Corosync/DRBD）； Podman高可用性总结；🔍 SafeKit高可用性导航中心"
+topics: "无 SAN 集群SafeKit Mirror如何与Podman协同工作？目录； SafeKit软件如何简单实现Podman高可用性集群？ SafeKit和mirror集群如何与Podman协同工作？ SafeKit高可用性限制；比较：无 SAN 集群SafeKit与传统高可用性Podman ；比较： SafeKit与开源高可用性Linux （Pacemaker/Corosync/DRBD）； Podman高可用性总结；🔍 探索 SafeKit"
 ---
 
 # SafeKit : Podman高可用性和实时数据复制软件 {#safekit-podman-high-availability--real-time-data-replication-software}
@@ -34,7 +34,7 @@ SafeKit 提供轻便的， **“恰到好处”的HA解决方案** 专为那些�
   * [对比： SafeKit无 SAN 集群 vs. 传统集群Podman高可用性集群](#safekit-podman-comparison)
   * [对比： SafeKit与开源Linux HA（起搏器/Corosync/DRBD） ](#safekit-vs-linux-ha-stack)
   * [ Podman高可用性概要](#podman-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit高可用性导航中心](#hub)
+  * [ 🔍 探索 SafeKit
 
 
 ## SafeKit软件如何简单地实现Podman高可用性集群？ {#how-safekit-implements-podman-ha}

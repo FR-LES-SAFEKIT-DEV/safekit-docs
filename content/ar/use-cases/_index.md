@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/"
 description: "اكتشف كيف توفر SafeKit توافراً عالياً بسيطاً دون SAN للصناعات الحيوية: برامج OEM، والمواقع الطرفية، وأنظمة VMS وEACS وSCADA وBMS، ومراقبة الحركة الجوية، وعمليات المترو."
 category: "use-cases"
 lang: "ar"
-topics: "حالات استخدام SafeKit، 🔍 مركز التنقل في SafeKit للتوافر العالي"
+topics: "حالات استخدام SafeKit، 🔍 استكشف SafeKit"
 ---
 
 # حالات استخدام العملاء {#customer-use-cases}

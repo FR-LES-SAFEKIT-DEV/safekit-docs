@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "انشر وحدة postgresql.safe لـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الحقيقي وتجاوز الفشل التلقائي لـ PostgreSQL على نظامي التشغيل Windows وLinux. يرشدك هذا الدليل خلال عملية إعداد مجموعة SANless ذات عقدتين للتطبيقات الهامة بدون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع لـ PostgreSQL، قيود التوفر العالية لـ SafeKit، نظرة عامة على حل SafeKit / PostgreSQL، تثبيت حل SafeKit / PostgreSQL على نظامي التشغيل Windows وLinux (postgresql.safe)، التكوين خطوة بخطوة لحل SafeKit / PostgreSQL، عرض توضيحي لحل مرآة SafeKit، 🔍 مركز التنقل عالي التوفر من SafeKit"
+topics: "دليل التثبيت السريع لـ PostgreSQL، قيود التوفر العالية لـ SafeKit، نظرة عامة على حل SafeKit / PostgreSQL، تثبيت حل SafeKit / PostgreSQL على نظامي التشغيل Windows وLinux (postgresql.safe)، التكوين خطوة بخطوة لحل SafeKit / PostgreSQL، عرض توضيحي لحل مرآة SafeKit، 🔍 استكشف SafeKit"
 ---
 
 # التوفر العالي لـ PostgreSQL مع SafeKit: تثبيت وحدة postgresql.safe لتجاوز الفشل {#postgresql-high-availability-with-safekit-install-the-postgresqlsafe-module-for-failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/resources/"
 description: "SafeKit無料トライアルをダウンロードし、 WindowsおよびLinux高可用性クラスタリングに関する技術文書、クイックインストールガイド、ユーザーガイド、ホワイトペーパー、製品リソースにアクセスしてください。"
 category: "resources"
 lang: "ja"
-topics: "SafeKit高可用性、🔍 SafeKit高可用性ナビゲーションハブの無料トライアル、技術ドキュメント、製品情報"
+topics: "SafeKit高可用性、🔍 SafeKit を探索する"
 ---
 
 # SafeKitリソース {#safekit-resources}

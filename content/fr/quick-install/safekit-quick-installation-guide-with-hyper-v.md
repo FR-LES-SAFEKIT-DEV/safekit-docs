@@ -13,7 +13,7 @@ topics: Guide d'installation rapide haute disponibilité pour Hyper-V,
   Limitations de la haute disponibilité SafeKit, Présentation de la solution
   SafeKit / Hyper-V, Installation de la solution SafeKit / Hyper-V sous Windows
   (hyperv.safe), Configuration étape par étape de la solution SafeKit / Hyper-V,
-  Démonstration de la solution SafeKit / Hyper-V, 🔍 Hub de navigation haute
+  Démonstration de la solution SafeKit / Hyper-V, 🔍 Explorez SafeKit
   disponibilité SafeKit
 ---
 

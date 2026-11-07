@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/high-availability-di
 description: "Crie uma estratégia de alta disponibilidade/recuperação de desastres resiliente combinando SafeKit para replicação síncrona (RPO=0) com backup assíncrono para recuperação de desastres fora do local. Garanta disponibilidade ininterrupta do aplicativo e integridade dos dados em Windows e Linux com essa abordagem de dupla camada."
 category: "best-practises"
 lang: "pt-br"
-topics: "Replicação síncrona SafeKit para alta disponibilidade vs. Replicação de backup assíncrona para recuperação de desastres, Sumário, HADR síncrono: Zero perda de dados em redes rápidas (LAN/VLAN), HADR assíncrono: Recuperação de desastres em redes lentas (WAN), Como combinar HADR e backup para resiliência total do sistema, Comparação de arquiteturas HADR: redes rápidas vs. lentas, Guia em vídeo: Como implementar HADR com SafeKit , 🔍 Hub de navegação de alta disponibilidade SafeKit"
+topics: "Replicação síncrona SafeKit para alta disponibilidade vs. Replicação de backup assíncrona para recuperação de desastres, Sumário, HADR síncrono: Zero perda de dados em redes rápidas (LAN/VLAN), HADR assíncrono: Recuperação de desastres em redes lentas (WAN), Como combinar HADR e backup para resiliência total do sistema, Comparação de arquiteturas HADR: redes rápidas vs. lentas, Guia em vídeo: Como implementar HADR com SafeKit , 🔍 Explore o SafeKit"
 ---
 
 # Combinando a alta disponibilidade SafeKit com backups de recuperação de desastres {#combining-safekit-high-availability-with-disaster-recovery-backups}
@@ -29,7 +29,7 @@ Consequentemente, o ambiente fica protegido contra falhas de hardware ou softwar
   * [ Como combinar HADR e backup para resiliência total do sistema ](#hadr-resilience-strategy)
   * Comparação de arquiteturas [ : redes rápidas vs. ](#hadr-architectures-comparison)
   * Guia em vídeo [ : Como implementar HADR com SafeKit ](#videoguide-hadr-safekit)
-  * [ 🔍 SafeKit Hub de Navegação de Alta Disponibilidade ](#hub)
+  * [ 🔍 Explore o SafeKit
 
 
 

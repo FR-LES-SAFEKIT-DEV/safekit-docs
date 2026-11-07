@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/"
 description: "Explorez les meilleures pratiques de haute disponibilité SafeKit : modèles d’architecture HA, réplication synchrone vs asynchrone, stratégies de clustering, basculement VIP, RPO/RTO et conception de redondance pour Windows et Linux ."
 category: "best-practises"
 lang: "fr"
-topics: "SafeKit Bonnes pratiques de clustering : architecture haute disponibilité, réplication et redondance, 🔍 SafeKit Centre de navigation haute disponibilité"
+topics: "SafeKit Bonnes pratiques de clustering : architecture haute disponibilité, réplication et redondance, 🔍 Explorez SafeKit"
 ---
 
 # Meilleures pratiques de haute disponibilité {#high-availability-best-practices}

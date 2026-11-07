@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/building-management-system-s
 description: "スマートビルディングの稼働率を100%確保するには SafeKit当社のSANレス2ノード冗長ソフトウェアは、シーメンス、ハネウェル、シュナイダーエレクトリック、ジョンソンコントロールズなど、あらゆるBMSに対してリアルタイム同期レプリケーションと自動フェイルオーバーを提供します。重要なHVACおよびセキュリティシステムで、データ損失ゼロ（RPO=0）と運用上の回復力を実現します。 Windows そして Linux."
 category: "use-cases"
 lang: "ja"
-topics: "ビル管理システム（BMS）とは何か？、BMSソフトウェアが重要な理由、BMSの主要プレーヤー一覧 SafeKit BMSソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供します。 SafeKitセキュリティ市場で認知されているソリューション、🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "ビル管理システム（BMS）とは何か？、BMSソフトウェアが重要な理由、BMSの主要プレーヤー一覧 SafeKit BMSソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供します。 SafeKitセキュリティ市場で認知されているソリューション、🔍 SafeKit を探索する"
 ---
 
 # ビル管理システム（BMS）の高可用性と冗長性 {#high-availability-and-redundancy-for-building-management-systems-bms}

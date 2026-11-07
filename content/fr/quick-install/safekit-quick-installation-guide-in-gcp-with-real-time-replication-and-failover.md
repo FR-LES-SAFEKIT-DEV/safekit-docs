@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Déployez le module mirror.safe de SafeKit dans GCP pour activer la réplication synchrone en temps réel et le basculement automatique sous Windows et Linux. Ce guide explique comment configurer un cluster à deux nœuds sans stockage partagé pour les applications critiques."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d’installation rapide de la haute disponibilité pour GCP, Limites de la haute disponibilité SafeKit, Présentation de la solution SafeKit / GCP mirror, Installation de la solution SafeKit / GCP mirror sous Windows et Linux (mirror.safe), Configuration étape par étape de la solution SafeKit / GCP mirror, Démonstration de la solution mirror SafeKit, 🔍 Hub de navigation SafeKit Haute Disponibilité"
+topics: "Guide d’installation rapide de la haute disponibilité pour GCP, Limites de la haute disponibilité SafeKit, Présentation de la solution SafeKit / GCP mirror, Installation de la solution SafeKit / GCP mirror sous Windows et Linux (mirror.safe), Configuration étape par étape de la solution SafeKit / GCP mirror, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"
 ---
 
 # Haute disponibilité GCP avec SafeKit : installer le module mirror.safe pour le basculement {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

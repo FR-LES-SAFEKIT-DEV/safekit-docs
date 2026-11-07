@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/use-cases/business-continuity-and-disaste
 description: "SafeKit is a business continuity and disaster recovery software and implements a simple high availability solution between two remote computer rooms. Achieve 24/7 uptime with SafeKit, the easiest-to-use business continuity and disaster recovery software. Eliminate expensive SANs and complex IT skills with 2-node synchronous replication, automatic failover, and load balancing for Windows and Linux. Zero data loss (RPO=0) for critical applications in any cloud or on-premise environment."
 category: "use-cases"
 lang: "en"
-topics: "Business continuity and disaster recovery software, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Business continuity and disaster recovery software, 🔍 Explore SafeKit"
 ---
 
 # Business Continuity and Disaster Recovery Software for 2-Node Clusters with SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

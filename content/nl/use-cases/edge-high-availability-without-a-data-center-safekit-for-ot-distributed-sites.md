@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/edge-high-availability-witho
 description: "Edge-locaties hebben geen datacenter, maar hebben wel behoefte aan HA. SafeKit transformeert 2 standaardservers in een plug-and-play HA-cluster: geen SAN, geen IT-personeel, automatische failover."
 category: "use-cases"
 lang: "nl"
-topics: "De Edge HA-uitdaging, Waarom SafeKit de ideale keuze is voor Edge-omgevingen, Geschiktheid voor Edge- en gedistribueerde implementaties, Waarom Edge OT-omgevingen verschillen, Ideale Edge-gebruiksscenario's, Edge versus datacenter HA: Belangrijkste verschillen, Technische minimumvereisten, 🔍 SafeKit High Availability Navigation Hub"
+topics: "De Edge HA-uitdaging, Waarom SafeKit de ideale keuze is voor Edge-omgevingen, Geschiktheid voor Edge- en gedistribueerde implementaties, Waarom Edge OT-omgevingen verschillen, Ideale Edge-gebruiksscenario's, Edge versus datacenter HA: Belangrijkste verschillen, Technische minimumvereisten, 🔍 Ontdek SafeKit"
 ---
 
 # Edge High Availability zonder datacenter: SafeKit voor OT & gedistribueerde locaties {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

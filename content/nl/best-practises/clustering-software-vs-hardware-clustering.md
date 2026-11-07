@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/clustering-software-vs-
 description: "Vergelijk softwareclustering met hardwareclustering voor hoge beschikbaarheid (HA). Ontdek hoe SafeKit de noodzaak voor dure SAN-opslag, loadbalancing-apparaten en gespecialiseerde IT-vaardigheden overbodig maakt, terwijl het 24/7 hoge beschikbaarheid biedt op standaardservers."
 category: "best-practises"
 lang: "nl"
-topics: "Wat is het verschil tussen softwareclustering en hardwareclustering? Softwareclustering versus hardwareclustering: voor- en nadelen, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Wat is het verschil tussen softwareclustering en hardwareclustering? Softwareclustering versus hardwareclustering: voor- en nadelen, 🔍 Ontdek SafeKit"
 ---
 
 # Softwareclustering versus hardwareclustering voor hoge beschikbaarheid {#software-clustering-vs-hardware-clustering-for-high-availability}

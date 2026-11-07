@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/building-management-system-s
 description: "Sichern Sie mit SafeKit die hundertprozentige Verfügbarkeit Ihres Smart Buildings. Unsere SAN-lose 2-Knoten-Redundanzsoftware bietet synchrone Echtzeit-Replikation und automatisches Failover für jedes Gebäudeleitsystem (BMS), einschließlich Siemens, Honeywell, Schneider Electric und Johnson Controls. Erreichen Sie mit Windows und Linux null Datenverlust (RPO=0) und maximale Betriebssicherheit für kritische HLK- und Sicherheitssysteme."
 category: "use-cases"
 lang: "de"
-topics: "Was ist ein Gebäudemanagementsystem (BMS)? Warum ist eine BMS-Software so wichtig? Wichtige Anbieter im BMS-Bereich. SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von BMS-Software. SafeKit ist eine anerkannte Lösung im Sicherheitsmarkt. 🔍 SafeKit Navigationszentrale für Hochverfügbarkeit."
+topics: "Was ist ein Gebäudemanagementsystem (BMS)? Warum ist eine BMS-Software so wichtig? Wichtige Anbieter im BMS-Bereich. SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von BMS-Software. SafeKit ist eine anerkannte Lösung im Sicherheitsmarkt. 🔍 SafeKit entdecken"
 ---
 
 # Hochverfügbarkeit und Redundanz für Gebäudeleittechniksysteme (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}

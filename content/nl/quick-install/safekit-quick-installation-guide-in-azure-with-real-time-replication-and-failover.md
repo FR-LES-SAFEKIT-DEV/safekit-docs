@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Implementeer de SafeKit-module mirror.safe in Azure voor synchrone replicatie in realtime en automatische failover op Windows en Linux. Deze handleiding beschrijft hoe u voor bedrijfskritieke toepassingen een cluster met twee knooppunten zonder gedeelde opslag configureert."
 category: "quick-install"
 lang: "nl"
-topics: "Handleiding voor snelle installatie van hoge beschikbaarheid voor Azure, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Azure-mirroroplossing, Installatie van de SafeKit-/Azure-mirroroplossing op Windows en Linux (mirror.safe), Stapsgewijze configuratie van de SafeKit-/Azure-mirroroplossing, Demonstratie van de SafeKit-mirroroplossing, 🔍 SafeKit-navigatiecentrum voor hoge beschikbaarheid"
+topics: "Handleiding voor snelle installatie van hoge beschikbaarheid voor Azure, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Azure-mirroroplossing, Installatie van de SafeKit-/Azure-mirroroplossing op Windows en Linux (mirror.safe), Stapsgewijze configuratie van de SafeKit-/Azure-mirroroplossing, Demonstratie van de SafeKit-mirroroplossing, 🔍 Ontdek SafeKit"
 ---
 
 # Hoge beschikbaarheid in Azure met SafeKit: de module mirror.safe installeren voor failover {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

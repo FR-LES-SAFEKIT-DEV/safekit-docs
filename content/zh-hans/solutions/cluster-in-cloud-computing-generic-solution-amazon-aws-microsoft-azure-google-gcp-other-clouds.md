@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/cluster-in-cloud-comput
 description: "Eviden SafeKit软件如何为云计算集群（Amazon AWS 、 Microsoft Azure 、Google GCP和其他云平台）提供通用解决方案"
 category: "solutions"
 lang: "zh-hans"
-topics: "在Microsoft Azure中探索SafeKit ，在 Google GCP中探索SafeKit ，在 Amazon AWS中探索SafeKit ，以及 Eviden 的其他云解决方案SafeKit ，🔍 SafeKit高可用性导航中心"
+topics: "在Microsoft Azure中探索SafeKit ，在 Google GCP中探索SafeKit ，在 Amazon AWS中探索SafeKit ，以及 Eviden 的其他云解决方案SafeKit ，🔍 探索 SafeKit"
 ---
 
 # 云计算集群：适用于 Amazon AWS 、 Microsoft Azure 、Google GCP和其他云平台的通用解决方案 {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

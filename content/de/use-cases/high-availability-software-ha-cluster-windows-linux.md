@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/high-availability-software-h
 description: "Sichern Sie Ihre kritischen Anwendungen mit SafeKit , der führenden Hochverfügbarkeitssoftware für Windows und Linux . Erstellen Sie mühelos HA-Cluster ohne gemeinsam genutzten Speicher oder komplexe SANs. Profitieren Sie von Echtzeitreplikation, Failover und Lastausgleich in einer einzigen, einfachen, softwaredefinierten Lösung."
 category: "use-cases"
 lang: "de"
-topics: "Elevator Pitch in 30 Sekunden für SafeKit , 🔍 SafeKit Hochverfügbarkeits-Navigationshub"
+topics: "Elevator Pitch in 30 Sekunden für SafeKit , 🔍 SafeKit entdecken"
 ---
 
 # Hochverfügbarkeitssoftware: Windows und Linux Clustering mit SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}

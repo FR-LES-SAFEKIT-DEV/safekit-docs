@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/how-to-implement-redundant
 description: "Learn how to implement redundant servers with a simple software-only approach. SafeKit proposes a SANless architecture for Windows and Linux, providing real-time data replication and automatic failover without shared disks or specialized IT skills."
 category: "best-practises"
 lang: "en"
-topics: "How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?, 🔍 Explore SafeKit"
 ---
 
 # How to Implement Redundant Servers with Simple HA Software {#how-to-implement-redundant-servers-with-simple-ha-software}

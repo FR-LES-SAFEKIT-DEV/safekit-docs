@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/resources/high-availability-and-load-b
 description: "WindowsおよびLinuxで1か月間試用できるSafeKitクラスターキーをお申し込みください。SafeKitは、SANを使用せずに高可用性とアプリケーションクラスタリングを実現する、シンプルなオールインワンアーキテクチャを提供します。"
 category: "resources"
 lang: "ja"
-topics: "WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る、🔍 SafeKit 高可用性ナビゲーションハブ"
+topics: "WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る、🔍 SafeKit を探索する"
 ---
 
 # SafeKit 1か月無料試用ライセンスキー {#safekit-one-month-free-trial-key}

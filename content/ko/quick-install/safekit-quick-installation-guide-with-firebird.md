@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "SafeKit 에 firebird.safe 모듈을 배포하여 Firebird 의 동기식 실시간 복제 및 Windows 와 Linux 에 대한 자동 장애 조치를 활성화하십시오. 이 가이드에서는 공유 스토리지가 없는 중요 애플리케이션을 위한 2노드 SANless 클러스터 설정 과정을 안내합니다."
 category: "quick-install"
 lang: "ko"
-topics: "Firebird 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Firebird 솔루션 개요, SafeKit 및 Firebird ( firebird.safe )에 Windows / Linux 솔루션 설치, SafeKit / Firebird 솔루션 단계별 구성, SafeKit 및 mirror 솔루션 시연, 🔍 SafeKit 고가용성 내비게이션 허브"
+topics: "Firebird 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / Firebird 솔루션 개요, SafeKit 및 Firebird ( firebird.safe )에 Windows / Linux 솔루션 설치, SafeKit / Firebird 솔루션 단계별 구성, SafeKit 및 mirror 솔루션 시연, 🔍 SafeKit 살펴보기"
 ---
 
 # Firebird 고가용성 SafeKit 포함): 장애 조치용 firebird.safe 모듈 설치 포함) {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

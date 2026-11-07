@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/heartbeat-failover-quor
 description: "クラスターにおけるハートビート、フェイルオーバー、クォーラムの仕組みを学びましょう。 SafeKit SANレスアーキテクチャを提案し、第3のクォーラムサーバーや特別なクォーラムディスクの必要性を排除します。高可用性を実現します。 Windows そして Linux 単純なスプリットブレインチェッカーを使用。"
 category: "best-practises"
 lang: "ja"
-topics: "クラスタにおけるネットワーク分離のさまざまなシナリオとは？、 WindowsまたはLinuxクラスタにおけるハートビートとフェイルオーバーの仕組み、サーバーが2つのリモートコンピュータ室にある場合のスプリットブレイン問題とクォーラム、 SafeKitスプリットブレインチェッカーを使用したシンプルなクラスタクォーラム、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "クラスタにおけるネットワーク分離のさまざまなシナリオとは？、 WindowsまたはLinuxクラスタにおけるハートビートとフェイルオーバーの仕組み、サーバーが2つのリモートコンピュータ室にある場合のスプリットブレイン問題とクォーラム、 SafeKitスプリットブレインチェッカーを使用したシンプルなクラスタクォーラム、🔍 SafeKit を探索する"
 ---
 
 # WindowsおよびLinuxクラスターにおけるハートビート、フェイルオーバー、クォーラム、 {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

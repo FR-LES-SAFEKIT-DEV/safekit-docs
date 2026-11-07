@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/docker-container-high-a
 description: "SafeKit提供强大的Docker高可用性解决方案，并集成同步数据复制功能。可在标准Linux服务器上部署有状态容器集群，实现自动故障转移和零数据丢失。无需 SAN 或共享存储。几分钟即可完成部署。"
 category: "solutions"
 lang: "zh-hans"
-topics: "无 SAN 集群SafeKit Mirror如何与Docker协同工作？目录； SafeKit软件如何简单实现Docker高可用性集群？ SafeKit和mirror集群如何与Docker协同工作？ SafeKit高可用性限制；比较：无 SAN 集群SafeKit与传统高可用性Docker ；比较： SafeKit与开源高可用性Linux （Pacemaker/Corosync/DRBD）； Docker高可用性总结；🔍 SafeKit高可用性导航中心"
+topics: "无 SAN 集群SafeKit Mirror如何与Docker协同工作？目录； SafeKit软件如何简单实现Docker高可用性集群？ SafeKit和mirror集群如何与Docker协同工作？ SafeKit高可用性限制；比较：无 SAN 集群SafeKit与传统高可用性Docker ；比较： SafeKit与开源高可用性Linux （Pacemaker/Corosync/DRBD）； Docker高可用性总结；🔍 探索 SafeKit"
 ---
 
 # SafeKit : Docker高可用性和实时数据复制软件 {#safekit-docker-high-availability--real-time-data-replication-software}
@@ -39,7 +39,7 @@ SafeKit提供轻量级的**“恰到好处”的高可用性解决方案**专为
   * [对比： SafeKit无 SAN 集群 vs. 传统集群Docker高可用性集群](#safekit-docker-comparison)
   * [对比： SafeKit与开源Linux HA（起搏器/Corosync/DRBD） ](#safekit-vs-linux-ha-stack)
   * [ Docker高可用性概要](#docker-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit高可用性导航中心](#hub)
+  * [ 🔍 探索 SafeKit
 
 
 ## SafeKit软件如何简单地实现Docker高可用性集群？ {#how-safekit-implements-docker-ha}

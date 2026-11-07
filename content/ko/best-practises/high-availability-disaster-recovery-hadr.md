@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-disas
 description: "동기식 복제(RPO=0)를 위한 SafeKit 와 오프사이트 재해 복구를 위한 비동기식 백업을 결합하여 탄력적인 고가용성/재해 복구(HA/DR) 전략을 구축하십시오. 이 이중 계층 접근 방식을 통해 Windows 및 Linux 에서 연중무휴 24시간 애플리케이션 가동 시간과 데이터 무결성을 보장하십시오."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성(HA)을 위한 동기식 SafeKit 복제와 재해 복구(DR)를 위한 비동기식 백업 복제 비교, 목차, 동기식 HADR: 고속 네트워크(LAN/VLAN)에서의 데이터 손실 제로, 비동기식 HADR: 저속 네트워크(WAN)에서의 재해 복구, 완벽한 시스템 복원력을 위한 HADR과 백업 결합 방법, HADR 아키텍처 비교: 고속 네트워크 vs. 저속 네트워크, 비디오 가이드: SafeKit 이용한 HADR 구현 방법, 🔍 SafeKit 고가용성 탐색 허브"
+topics: "고가용성(HA)을 위한 동기식 SafeKit 복제와 재해 복구(DR)를 위한 비동기식 백업 복제 비교, 목차, 동기식 HADR: 고속 네트워크(LAN/VLAN)에서의 데이터 손실 제로, 비동기식 HADR: 저속 네트워크(WAN)에서의 재해 복구, 완벽한 시스템 복원력을 위한 HADR과 백업 결합 방법, HADR 아키텍처 비교: 고속 네트워크 vs. 저속 네트워크, 비디오 가이드: SafeKit 이용한 HADR 구현 방법, 🔍 SafeKit 살펴보기"
 ---
 
 # SafeKit 고가용성과 재해 복구 백업 결합 {#combining-safekit-high-availability-with-disaster-recovery-backups}
@@ -29,7 +29,7 @@ SafeKit 값비싼 공유 스토리지가 필요 없는 유연한 소프트웨어
   * [ HADR과 백업을 결합하여 완벽한 시스템 복원력을 확보하는 방법 ](#hadr-resilience-strategy)
   * HADR 아키텍처 비교: 고속 네트워크 vs. ](#hadr-architectures-comparison) 네트워크 [
   * [ 비디오 가이드: SafeKit ](#videoguide-hadr-safekit) 사용한 HADR 구현 방법
-  * [ 🔍 SafeKit 고가용성 내비게이션 허브 ](#hub)
+  * [ 🔍 SafeKit 살펴보기
 
 
 

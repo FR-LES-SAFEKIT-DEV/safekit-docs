@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/edge-high-availability-witho
 description: "エッジサイトにはデータセンターがないが、それでも高可用性（HA）は必要だ。 SafeKit 2台の標準サーバーをプラグアンドプレイのHAクラスタに変換します。SAN不要、ITスタッフ不要、自動フェイルオーバー機能付き。"
 category: "use-cases"
 lang: "ja"
-topics: "エッジHAの課題、 SafeKitがエッジに最適な理由、エッジと分散展開の適合性、エッジOT環境が異なる理由、理想的なエッジのユースケース、エッジとデータセンターのHA：主な違い、技術的な最小要件、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "エッジHAの課題、 SafeKitがエッジに最適な理由、エッジと分散展開の適合性、エッジOT環境が異なる理由、理想的なエッジのユースケース、エッジとデータセンターのHA：主な違い、技術的な最小要件、🔍 SafeKit を探索する"
 ---
 
 # データセンター不要のエッジ高可用性：OTおよび分散サイト向けSafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

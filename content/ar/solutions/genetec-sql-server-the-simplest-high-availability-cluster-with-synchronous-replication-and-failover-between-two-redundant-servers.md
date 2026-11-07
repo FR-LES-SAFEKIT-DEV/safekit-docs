@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/genetec-sql-server-the-simpl
 description: "أبسط طريقة لتطبيق خاصية التوافر العالي لـ Genetec SQL. يوفر SafeKit مجموعة من عقدتين بدون SAN مع نسخ متزامن وتجاوز تلقائي في حالة الفشل - لا حاجة إلى Active Directory أو مهارات متخصصة."
 category: "solutions"
 lang: "ar"
-topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Genetec SQL، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Genetec SQL عالية التوفر بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع Genetec SQL؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لـ Genetec SQL مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر، mirror ، SafeKit ، حل معترف به في سوق الأمن، 🔍 مركز تنقل التوفر العالي SafeKit"
+topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Genetec SQL، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Genetec SQL عالية التوفر بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع Genetec SQL؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لـ Genetec SQL مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر، mirror ، SafeKit ، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
 ---
 
 # أبسط حلول التوافر العالي لـ Genetec SQL: النسخ المتماثل المتزامن ثنائي العقدة والتحويل التلقائي في حالة الفشل {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/solutions/firebird-high-availability-s
 description: "Il modo più semplice per implementare l'alta disponibilità Firebird . SafeKit offre un cluster SANless a 2 nodi con replica sincrona e failover automatico, senza necessità di Active Directory o competenze specialistiche."
 category: "solutions"
 lang: "it"
-topics: "Come funziona il cluster SANless SafeKit Mirror con Firebird , Indice, Come il software SafeKit implementa semplicemente un cluster ad alta disponibilità SANless Firebird ?, Come funziona il cluster SafeKit mirror con Firebird ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: SafeKit per Firebird rispetto ad altre soluzioni di clustering, Guida video: Configurazione di un cluster HA SafeKit mirror , 🔍 Hub di navigazione per l'alta disponibilità SafeKit"
+topics: "Come funziona il cluster SANless SafeKit Mirror con Firebird , Indice, Come il software SafeKit implementa semplicemente un cluster ad alta disponibilità SANless Firebird ?, Come funziona il cluster SafeKit mirror con Firebird ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: SafeKit per Firebird rispetto ad altre soluzioni di clustering, Guida video: Configurazione di un cluster HA SafeKit mirror , 🔍 Esplora SafeKit"
 ---
 
 # La più semplice Firebird Alta disponibilità: replica sincrona a 2 nodi e failover {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}

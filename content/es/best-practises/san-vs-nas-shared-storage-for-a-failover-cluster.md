@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/san-vs-nas-shared-stora
 description: "Comparación entre almacenamiento compartido SAN y NAS para clústeres de conmutación por error. Descubre por qué SafeKit propone una arquitectura sin SAN que elimina las dependencias de almacenamiento compartido, simplifica los scripts de conmutación por error y previene la corrupción de datos sin necesidad de hardware costoso ni discos de quórum complejos."
 category: "best-practises"
 lang: "es"
-topics: "¿Cuál es la solución más sencilla entre un almacenamiento compartido SAN y un NAS para un clúster de conmutación por error?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "¿Cuál es la solución más sencilla entre un almacenamiento compartido SAN y un NAS para un clúster de conmutación por error?, 🔍 Explora SafeKit"
 ---
 
 # Almacenamiento compartido SAN frente a NAS para clústeres de conmutación por error: una comparación detallada {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

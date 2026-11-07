@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "为SafeKit部署firebird.safe模块，以在Windows和Linux上实现Firebird的同步实时复制和自动故障转移。本指南将引导您设置一个适用于关键应用程序且无需共享存储的双节点无 SAN 集群。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Firebird 、 SafeKit高可用性快速安装指南； SafeKit / Firebird高可用性限制； SafeKit / Firebird解决方案概述；在Windows和Linux ( firebird.safe ) 上安装SafeKit / Firebird解决方案的逐步配置； SafeKit和mirror解决方案演示；🔍 SafeKit高可用性导航中心"
+topics: "Firebird 、 SafeKit高可用性快速安装指南； SafeKit / Firebird高可用性限制； SafeKit / Firebird解决方案概述；在Windows和Linux ( firebird.safe ) 上安装SafeKit / Firebird解决方案的逐步配置； SafeKit和mirror解决方案演示；🔍 探索 SafeKit"
 ---
 
 # Firebird高可用性（与SafeKit配合使用）：安装firebird.safe模块以实现故障转移 {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

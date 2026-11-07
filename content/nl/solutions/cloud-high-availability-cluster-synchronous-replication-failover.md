@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/cloud-high-availability-clus
 description: "Implementeer een eenvoudig, cloudonafhankelijk, high availability-cluster: SafeKit Synchronous Replication & Failover HA met SafeKit . Onze shared-nothing-architectuur biedt synchrone replicatie, automatische failover en RPO=0 voor Windows en Linux applicaties zonder de kosten van gedeelde cloudschijven."
 category: "solutions"
 lang: "nl"
-topics: "SafeKit Shared-Nothing HA in de cloud: elimineer gedeelde schijven met nul dataverlies, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een shared-nothing cloud high availability-cluster?, Hoe werkt het SafeKit mirror cluster met de cloud?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor de cloud versus native cloud HA/DR-oplossingen, Videogids: Een SafeKit HA mirror -cluster configureren, 🔍 SafeKit High Availability-navigatiehub"
+topics: "SafeKit Shared-Nothing HA in de cloud: elimineer gedeelde schijven met nul dataverlies, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een shared-nothing cloud high availability-cluster?, Hoe werkt het SafeKit mirror cluster met de cloud?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor de cloud versus native cloud HA/DR-oplossingen, Videogids: Een SafeKit HA mirror -cluster configureren, 🔍 Ontdek SafeKit"
 ---
 
 # Cloud-agnostische hoge beschikbaarheid: SafeKit Synchrone replicatie en failover {#cloud-agnostic-high-availability-safekit-synchronous-replication--failover}

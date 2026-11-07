@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/siemens-sipass-redundancy-high-
 description: "Ensure 24/7 uptime for Siemens SiPass access control. SafeKit provides simple SANless high availability with real-time replication and automatic failover on two standard servers. No SAN or specialized IT skills required. Download the free trial."
 category: "solutions"
 lang: "en"
-topics: "SafeKit for Siemens SiPass: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens SiPass high availability cluster without shared storage on a SAN?, How the SafeKit Siemens SiPass cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens SiPass vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens SiPass, SafeKit, a recognized solution on the security market, 🔍 SafeKit High Availability Navigation Hub"
+topics: "SafeKit for Siemens SiPass: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens SiPass high availability cluster without shared storage on a SAN?, How the SafeKit Siemens SiPass cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens SiPass vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens SiPass, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
 ---
 
 # High Availability and Redundancy for Siemens SiPass Access Control: 2-Node SANless Cluster {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}

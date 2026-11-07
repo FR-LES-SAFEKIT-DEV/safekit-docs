@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/solutions/podman-the-simplest-high-ava
 description: "SafeKit bietet eine robuste Hochverfügbarkeitslösung Podman mit integrierter synchroner Datenreplikation. Implementieren Sie einen zustandsbehafteten Containercluster mit automatischem Failover und null Datenverlust auf Standard- Linux -Servern. Kein SAN oder gemeinsam genutzter Speicher erforderlich. Bereitstellung in wenigen Minuten."
 category: "solutions"
 lang: "de"
-topics: "Wie der SANless-Cluster SafeKit Mirror mit Podman zusammenarbeitet, Inhaltsverzeichnis, Wie die Software SafeKit einen hochverfügbaren Cluster Podman implementiert, Wie der Cluster SafeKit mirror mit Podman zusammenarbeitet, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SANless-Cluster SafeKit vs. traditionelle Podman , Vergleich: SafeKit vs. Open-Source-Hochverfügbarkeit Linux (Pacemaker/Corosync/DRBD), Zusammenfassung der Hochverfügbarkeit von Podman , 🔍 Navigationszentrale für Hochverfügbarkeit SafeKit"
+topics: "Wie der SANless-Cluster SafeKit Mirror mit Podman zusammenarbeitet, Inhaltsverzeichnis, Wie die Software SafeKit einen hochverfügbaren Cluster Podman implementiert, Wie der Cluster SafeKit mirror mit Podman zusammenarbeitet, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SANless-Cluster SafeKit vs. traditionelle Podman , Vergleich: SafeKit vs. Open-Source-Hochverfügbarkeit Linux (Pacemaker/Corosync/DRBD), Zusammenfassung der Hochverfügbarkeit von Podman , 🔍 SafeKit entdecken"
 ---
 
 # SafeKit : Podman Hochverfügbarkeits- und Echtzeit-Datenreplikationssoftware {#safekit-podman-high-availability--real-time-data-replication-software}
@@ -34,7 +34,7 @@ Hochverfügbarkeits-Clusterarchitektur für ![ Podman SafeKit mit virtueller IP-
   * [ -Vergleich: SafeKit SANless-Cluster vs. traditioneller Podman HA ](#safekit-podman-comparison)
   * [ -Vergleich: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD) ](#safekit-vs-linux-ha-stack)
   * [ Podman Zusammenfassung der Hochverfügbarkeit ](#podman-ha-summary-quick-installation-guide)
-  * [ 🔍 SafeKit Hochverfügbarer Navigationshub ](#hub)
+  * [ 🔍 SafeKit entdecken
 
 
 ## Wie implementiert die Software SafeKit auf einfache Weise einen hochverfügbaren Podman -Cluster? {#how-safekit-implements-podman-ha}

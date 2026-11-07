@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "انشر وحدة mirror.safe من SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي عند الفشل على Linux. يرشدك هذا الدليل إلى إعداد عنقود SANless من عقدتين لتطبيقات Linux الحرجة دون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي على Linux, قيود التوافر العالي في SafeKit, نظرة عامة على حل SafeKit / Linux, تثبيت حل SafeKit / Linux (mirror.safe), التهيئة خطوة بخطوة لحل SafeKit / Linux, عرض توضيحي لحل SafeKit mirror, 🔍 مركز التنقل للتوافر العالي في SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي على Linux, قيود التوافر العالي في SafeKit, نظرة عامة على حل SafeKit / Linux, تثبيت حل SafeKit / Linux (mirror.safe), التهيئة خطوة بخطوة لحل SafeKit / Linux, عرض توضيحي لحل SafeKit mirror, 🔍 استكشف SafeKit"
 ---
 
 # التوافر العالي على Linux مع SafeKit: تثبيت وحدة mirror.safe للتحويل عند الفشل {#linux-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

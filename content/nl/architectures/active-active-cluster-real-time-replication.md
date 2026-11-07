@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/architectures/active-active-cluster-re
 description: "Maximaliseer het gebruik van resources met SafeKit actieve-actieve clustering. Implementeer wederzijdse failover tussen twee servers met behulp van realtime synchrone replicatie en meerdere mirror -modules. Garandeer nul dataverlies (RPO=0) en automatisch herstel voor Windows en Linux zonder SAN. Download de gratis proefversie."
 category: "architectures"
 lang: "nl"
-topics: "Hoe werkt een actief-actief cluster met realtime replicatie? 🔍 SafeKit High Availability Navigation Hub"
+topics: "Hoe werkt een actief-actief cluster met realtime replicatie? 🔍 Ontdek SafeKit"
 ---
 
 # Actieve-actieve clusteringsoftware met realtime replicatie en wederzijdse failover {#active-active-clustering-software-with-real-time-replication--mutual-failover}

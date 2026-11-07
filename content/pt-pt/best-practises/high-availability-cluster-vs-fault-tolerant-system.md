@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/high-availability-cl
 description: "Compare clusters de alta disponibilidade (HA) com sistemas tolerantes a falhas. Saiba como SafeKit propõe um cluster HA de software sem SAN que protege contra falhas de hardware e software. Reduza custos eliminando hardware FT especializado e garantindo zero perda de dados (RPO 0)."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Qual a diferença entre alta disponibilidade e tolerância a falhas? Prós e contras da alta disponibilidade e da tolerância a falhas. 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "Qual a diferença entre alta disponibilidade e tolerância a falhas? Prós e contras da alta disponibilidade e da tolerância a falhas. 🔍 Explore o SafeKit"
 ---
 
 # Cluster HA vs. Sistema Tolerante a Falhas: Escolhendo a Estratégia de Redundância Correta {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

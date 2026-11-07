@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/solutions/bosch-bis-the-simplest-hi
 description: "Garanta disponibilidade 24 horas por dia, 7 dias por semana para o Bosch Building Integration System (BIS) com o SafeKit . Nosso cluster de 2 nós mais simples oferece replicação em tempo real e failover automático sem a necessidade de SAN ou disco compartilhado. Econômico e fácil de implementar. Baixe a versão de avaliação gratuita."
 category: "solutions"
 lang: "pt-br"
-topics: "SafeKit para Bosch BIS: Cluster Hyper-V sem SAN de 2 nós, Sumário, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade para Bosch BIS sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit para Bosch BIS?, Limitações de Alta Disponibilidade SafeKit , Comparação: SafeKit para Bosch BIS vs. Clustering Hyper-V Nativo, Guia em Vídeo: Configurando um cluster HA SafeKit para Bosch BIS, SafeKit , uma solução reconhecida no mercado de segurança, 🔍 Hub de Navegação de Alta Disponibilidade SafeKit"
+topics: "SafeKit para Bosch BIS: Cluster Hyper-V sem SAN de 2 nós, Sumário, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade para Bosch BIS sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit para Bosch BIS?, Limitações de Alta Disponibilidade SafeKit , Comparação: SafeKit para Bosch BIS vs. Clustering Hyper-V Nativo, Guia em Vídeo: Configurando um cluster HA SafeKit para Bosch BIS, SafeKit , uma solução reconhecida no mercado de segurança, 🔍 Explore o SafeKit"
 ---
 
 # SafeKit Alta disponibilidade para Bosch BIS: Cluster de 2 nós sem disco compartilhado {#safekit-high-availability-for-bosch-bis-2-node-cluster-without-shared-disk}

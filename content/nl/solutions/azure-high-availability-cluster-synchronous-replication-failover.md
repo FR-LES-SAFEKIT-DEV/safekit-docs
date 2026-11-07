@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/azure-high-availability-clus
 description: "Implementeer met SafeKit een eenvoudig Microsoft Azure-HA-cluster. Onze architectuur zonder gedeelde opslag biedt synchrone replicatie, automatische failover en RPO=0 voor Windows- en Linux-applicaties, zonder de kosten van gedeelde clouddisks."
 category: "solutions"
 lang: "nl"
-topics: "SafeKit Shared-Nothing-HA in Azure: gedeelde disks elimineren zonder gegevensverlies, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een cluster met hoge beschikbaarheid voor Azure zonder gedeelde opslag?, Hoe werkt het SafeKit mirror-cluster met Azure?, SafeKit High Availability Limitations, Vergelijking: SafeKit voor Azure versus native cloud-HA/DR-oplossingen, Videogids: configuratie van een SafeKit HA-Mirror-cluster, 🔍 SafeKit High Availability Navigatiehub"
+topics: "SafeKit Shared-Nothing-HA in Azure: gedeelde disks elimineren zonder gegevensverlies, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een cluster met hoge beschikbaarheid voor Azure zonder gedeelde opslag?, Hoe werkt het SafeKit mirror-cluster met Azure?, SafeKit High Availability Limitations, Vergelijking: SafeKit voor Azure versus native cloud-HA/DR-oplossingen, Videogids: configuratie van een SafeKit HA-Mirror-cluster, 🔍 Ontdek SafeKit"
 ---
 
 # Microsoft Azure hoge beschikbaarheid: synchrone replicatie en failover met SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}

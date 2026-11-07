@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/iis-load-balancing-failover/
 description: "SafeKit 、強力なソフトウェアのみのIISロードバランシングおよび高可用性ソリューションを提供します。複雑なNLBハードウェアを、 SafeKitの統合された仮想IP、アプリケーション監視、および自動フェイルオーバーに置き換えることができます。標準のWindowsサーバー上に、 IISクラスタを今すぐ簡単にデプロイできます。"
 category: "solutions"
 lang: "ja"
-topics: "SafeKit Farmクラスタ: IISのソフトウェアのみの NLB と自動フェイルオーバー、目次、 SafeKitソフトウェアがIISネットワーク負荷分散 (NLB) クラスタをどのように簡単に実装するか、 farmモードのSafeKitクラスタがIISとどのように連携するか、比較: SafeKit用のIIS Farmクラスタと他の NLB クラスタリング ソリューション、ビデオ ガイド: SafeKit Farm NLB クラスタの構成、🔍 SafeKit高可用性ナビゲーション ハブ"
+topics: "SafeKit Farmクラスタ: IISのソフトウェアのみの NLB と自動フェイルオーバー、目次、 SafeKitソフトウェアがIISネットワーク負荷分散 (NLB) クラスタをどのように簡単に実装するか、 farmモードのSafeKitクラスタがIISとどのように連携するか、比較: SafeKit用のIIS Farmクラスタと他の NLB クラスタリング ソリューション、ビデオ ガイド: SafeKit Farm NLB クラスタの構成、🔍 SafeKit を探索する"
 ---
 
 # SafeKit : オールインワンIISロードバランシング＆高可用性ソフトウェア {#safekit-all-in-one-iis-load-balancing--high-availability-software}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/"
 description: "了解 SafeKit 如何为 OEM 软件、边缘站点、VMS、EACS、SCADA、BMS、空中交通管制和地铁运营等关键行业提供简单、无 SAN 的高可用性。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "SafeKit 应用案例，🔍 SafeKit 高可用性导航中心"
+topics: "SafeKit 应用案例，🔍 探索 SafeKit"
 ---
 
 # 客户应用案例 {#customer-use-cases}

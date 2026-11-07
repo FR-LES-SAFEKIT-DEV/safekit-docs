@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/solutions/sql-server-high-availability
 description: "De eenvoudigste manier om Microsoft te implementeren is SQL Server High Availability. SafeKit biedt een SAN-loos cluster met twee knooppunten, synchrone replicatie en automatische failover – zonder Active Directory of specialistische kennis."
 category: "solutions"
 lang: "nl"
-topics: "Hoe het SANless SafeKit Mirror -cluster werkt met Microsoft SQL Server , Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SANless Microsoft SQL Server high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Microsoft SQL Server ?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Microsoft SQL Server versus andere clusteringoplossingen, Videogids: Een SafeKit HA mirror cluster configureren, 🔍 Navigatie SafeKit High Availability Middelpunt"
+topics: "Hoe het SANless SafeKit Mirror -cluster werkt met Microsoft SQL Server , Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een SANless Microsoft SQL Server high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Microsoft SQL Server ?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Microsoft SQL Server versus andere clusteringoplossingen, Videogids: Een SafeKit HA mirror cluster configureren, 🔍 Ontdek SafeKit"
 ---
 
 # De eenvoudigste Microsoft SQL Server Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}

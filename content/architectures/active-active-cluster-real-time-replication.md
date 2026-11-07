@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/architectures/active-active-cluster-real-
 description: "Maximize resource utilization with SafeKit active-active clustering. Deploy mutual failover between two servers using real-time synchronous replication and multiple mirror modules. Ensure zero data loss (RPO=0) and automatic recovery for Windows and Linux without a SAN. Download the free trial."
 category: "architectures"
 lang: "en"
-topics: "How the active active cluster with real-time replication works?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "How the active active cluster with real-time replication works?, 🔍 Explore SafeKit"
 ---
 
 # Active-Active Clustering Software with Real-Time Replication & Mutual Failover {#active-active-clustering-software-with-real-time-replication--mutual-failover}

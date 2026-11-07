@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Implementeer de oracle.safe module voor SafeKit om synchrone realtime-replicatie en automatische failover van Oracle op Windows en Linux mogelijk te maken. Deze handleiding beschrijft hoe u een SANless-cluster met twee knooppunten opzet voor kritieke applicaties zonder gedeelde opslag."
 category: "quick-install"
 lang: "nl"
-topics: "Snelstartgids voor High Availability Oracle , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / Oracle -oplossing, Installatie van de SafeKit / Oracle -oplossing op Windows en Linux ( oracle.safe ), Stapsgewijze configuratie van de SafeKit / Oracle -oplossing, Demonstratie van de SafeKit mirror -oplossing, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Snelstartgids voor High Availability Oracle , Beperkingen van High Availability SafeKit , Overzicht van de SafeKit / Oracle -oplossing, Installatie van de SafeKit / Oracle -oplossing op Windows en Linux ( oracle.safe ), Stapsgewijze configuratie van de SafeKit / Oracle -oplossing, Demonstratie van de SafeKit mirror -oplossing, 🔍 Ontdek SafeKit"
 ---
 
 # Oracle Hoge beschikbaarheid met SafeKit : Installeer de oracle.safe module voor failover {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}

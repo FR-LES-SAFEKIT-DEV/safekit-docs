@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/san-vs-nas-shared-storage-
 description: "Compare SAN vs. NAS shared storage for failover clusters. Learn why SafeKit proposes a SANless architecture that eliminates shared storage dependencies, simplifies failover scripts, and prevents data corruption without expensive hardware or complex quorum disks."
 category: "best-practises"
 lang: "en"
-topics: "What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster?, 🔍 SafeKit High Availability Navigation Hub"
+topics: "What is the simplest solution between a SAN vs a NAS shared storage for a failover cluster?, 🔍 Explore SafeKit"
 ---
 
 # SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

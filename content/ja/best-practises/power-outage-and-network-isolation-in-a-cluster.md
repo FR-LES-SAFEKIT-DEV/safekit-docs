@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/power-outage-and-networ
 description: "高可用性クラスタにおけるネットワーク分離と停電への対処方法を学びましょう。 SafeKit 統合されたスプリットブレインチェッカーと自動再同期機能を備えたSANレスアーキテクチャを提案し、共有ディスクなしでデータの整合性と24時間365日の稼働時間を保証する。"
 category: "best-practises"
 lang: "ja"
-topics: "クラスタ内でネットワークが分離した場合のさまざまなシナリオは何ですか？、クラスタ内で停電が発生した場合のさまざまなシナリオは何ですか？、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "クラスタ内でネットワークが分離した場合のさまざまなシナリオは何ですか？、クラスタ内で停電が発生した場合のさまざまなシナリオは何ですか？、🔍 SafeKit を探索する"
 ---
 
 # HAクラスタにおける停電とネットワーク分離への対処 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

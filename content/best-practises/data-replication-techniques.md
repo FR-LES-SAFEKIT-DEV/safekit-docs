@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/data-replication-technique
 description: "Compare data replication techniques at the database, disk, and file level. Learn why SafeKit proposes a SANless architecture for simple, real-time synchronous replication that ensures zero data loss and automatic failover on Windows and Linux."
 category: "best-practises"
 lang: "en"
-topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques, 🔍 Explore SafeKit"
 ---
 
 # Data Replication Techniques for High Availability: A Complete Comparison {#data-replication-techniques-for-high-availability-a-complete-comparison}

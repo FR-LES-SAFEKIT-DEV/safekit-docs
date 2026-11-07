@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/resources/high-availability-solutions-
 description: "Sehen Sie sich SafeKit-Demos an, um zu erfahren, wie Sie SAN-lose Hochverfügbarkeit mit zwei Knoten, Echtzeitreplikation und automatisches Failover für Windows und Linux implementieren. Erfahren Sie, wie Sie reine Software-Cluster für SQL Server, Hyper-V und VMS ohne teuren gemeinsamen Speicher oder komplexe Hardware-Lastausgleichsfunktionen erstellen."
 category: "resources"
 lang: "de"
-topics: "Tutorials und Demos zum technischen Failover von SafeKit, 🔍 SafeKit High Availability Navigation Hub"
+topics: "Tutorials und Demos zum technischen Failover von SafeKit, 🔍 SafeKit entdecken"
 ---
 
 # SafeKit Hochverfügbarkeits- und Failover-Demos: SANless Clustering-Video-Tutorials {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

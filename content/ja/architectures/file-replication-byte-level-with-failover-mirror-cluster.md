@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/file-replication-byte-le
 description: "SafeKit 、 WindowsおよびLinuxに対して、リアルタイムのバイトレベルファイルレプリケーションと同期データミラーリングを提供します。SANのコストをかけずに、自動フェイルオーバー機能を備えた高可用性mirrorクラスタを実装できます。データ損失ゼロと簡素化された災害復旧を今すぐ実現しましょう。"
 category: "architectures"
 lang: "ja"
-topics: "SANレスSafeKit MirrorクラスタがWindowsまたはLinuxとどのように連携するか、目次、 SafeKitソフトウェアがSANレスWindowsまたはLinux高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがWindowsまたはLinuxとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとWindowsまたはLinuxと他のクラスタリングソリューションとの比較、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit高可用性ナビゲーションハブ"
+topics: "SANレスSafeKit MirrorクラスタがWindowsまたはLinuxとどのように連携するか、目次、 SafeKitソフトウェアがSANレスWindowsまたはLinux高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがWindowsまたはLinuxとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとWindowsまたはLinuxと他のクラスタリングソリューションとの比較、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit を探索する"
 ---
 
 # SafeKit Mirrorクラスター: リアルタイムファイルレプリケーションと高可用性{#safekit-real-time-byte-level-file-replication--mirror-cluster-software}

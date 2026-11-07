@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/shared-nothing-arc
 description: "比较无共享架构和共享磁盘架构在实现高可用性方面的差异。了解SafeKit如何利用无共享架构消除 SAN 成本、简化故障转移，并在没有复杂硬件限制的情况下提供同步复制。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "高可用性集群中的无共享架构与共享磁盘架构对比，无共享架构与共享磁盘架构：优缺点，🔍 SafeKit高可用性导航中心"
+topics: "高可用性集群中的无共享架构与共享磁盘架构对比，无共享架构与共享磁盘架构：优缺点，🔍 探索 SafeKit"
 ---
 
 # 无共享架构与共享磁盘架构：选择最佳高可用性集群 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

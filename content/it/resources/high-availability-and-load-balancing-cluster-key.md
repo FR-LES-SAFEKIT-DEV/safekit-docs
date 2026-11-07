@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/resources/high-availability-and-load-b
 description: "Richiedi la chiave del cluster SafeKit per una prova di un mese su Windows e Linux. SafeKit propone un'architettura semplice e integrata per l'alta affidabilità e il clustering delle applicazioni senza SAN."
 category: "resources"
 lang: "it"
-topics: "Ricevi via e-mail una chiave di licenza SafeKit gratuita di un mese per Windows o Linux, 🔍 Hub di navigazione SafeKit per l'alta affidabilità"
+topics: "Ricevi via e-mail una chiave di licenza SafeKit gratuita di un mese per Windows o Linux, 🔍 Esplora SafeKit"
 ---
 
 # Chiave di prova gratuita SafeKit di un mese {#safekit-one-month-free-trial-key}

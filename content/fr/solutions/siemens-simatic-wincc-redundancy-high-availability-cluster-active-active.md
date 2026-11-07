@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/siemens-simatic-wincc-redund
 description: "Créez un cluster SCADA Siemens SIMATIC WinCC à haute disponibilité sans SAN. SafeKit assure la redondance et le basculement sur deux nœuds pour WinCC dans Hyper-V."
 category: "solutions"
 lang: "fr"
-topics: "SafeKit pour Siemens SIMATIC WinCC : Cluster Hyper-V sans SAN à 2 nœuds, Sommaire, Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité Siemens SIMATIC WinCC sans stockage partagé sur un SAN ?, Comment fonctionne le cluster Siemens SIMATIC WinCC SafeKit ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour Siemens SIMATIC WinCC vs. Clustering Hyper-V natif, Tutoriel vidéo : Configuration d'un cluster HA SafeKit pour Siemens SIMATIC WinCC, SafeKit , une solution reconnue sur le marché SCADA, 🔍 SafeKit Hub de navigation haute disponibilité"
+topics: "SafeKit pour Siemens SIMATIC WinCC : Cluster Hyper-V sans SAN à 2 nœuds, Sommaire, Comment le logiciel SafeKit implémente-t-il simplement un cluster haute disponibilité Siemens SIMATIC WinCC sans stockage partagé sur un SAN ?, Comment fonctionne le cluster Siemens SIMATIC WinCC SafeKit ?, Limitations de la haute disponibilité SafeKit , Comparaison : SafeKit pour Siemens SIMATIC WinCC vs. Clustering Hyper-V natif, Tutoriel vidéo : Configuration d'un cluster HA SafeKit pour Siemens SIMATIC WinCC, SafeKit , une solution reconnue sur le marché SCADA, 🔍 Explorez SafeKit"
 ---
 
 # Haute disponibilité Siemens SIMATIC WinCC SCADA : Cluster SANless à 2 nœuds {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}

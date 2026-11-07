@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/fr/resources/safekit-on-line-training/
 description: "Maîtrisez la haute disponibilité sans SAN de SafeKit grâce à notre formation gratuite. Elle couvre l&#39;installation du logiciel, la gestion via la console web et l&#39;interface de ligne de commande (CLI). Apprenez la configuration avancée et le dépannage pour garantir une haute disponibilité 24h/24 et 7j/7. Obtenez votre certification officielle en ligne."
 category: "resources"
 lang: "fr"
-topics: "Comment accéder à la plateforme de formation ? Obtenez les supports de formation SafeKit 8. 🔍 Centre de navigation haute disponibilité SafeKit"
+topics: "Comment accéder à la plateforme de formation ? Obtenez les supports de formation SafeKit 8. 🔍 Explorez SafeKit"
 ---
 
 # Formation SafeKit Haute Disponibilité : Programme de certification en ligne gratuit {#safekit-high-availability-training-free-online-certification-program}

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/byte-level-file-re
 description: "比较字节级文件复制与块级磁盘复制。了解SafeKit如何提出一种无 SAN 架构，该架构仅复制文件中已修改的数据，从而确保零数据丢失 (RPO 0)、更快的恢复速度 (RTO) 以及在Windows和Linux上的简单配置。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "高可用性集群中字节级文件复制与块级磁盘复制的比较，字节级文件复制与块级磁盘复制的优缺点，🔍 SafeKit高可用性导航中心"
+topics: "高可用性集群中字节级文件复制与块级磁盘复制的比较，字节级文件复制与块级磁盘复制的优缺点，🔍 探索 SafeKit"
 ---
 
 # 字节级文件复制与块级磁盘复制在高可用性方面的比较 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

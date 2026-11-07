@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/architectures/clustering-software
 description: "通过混合使用SafeKit Farm和Mirror模块，部署高级架构。结合网络负载均衡实现前端可扩展性，以及实时同步复制实现后端数据保护。无需专业 IT 技能，即可轻松构建适用于Windows和Linux的无 SAN 集群。立即下载免费试用版。"
 category: "architectures"
 lang: "zh-hans"
-topics: "借助SafeKit集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性，🔍 SafeKit高可用性导航中心"
+topics: "借助SafeKit集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性，🔍 探索 SafeKit"
 ---
 
 # 面向农场和镜像的集群软件：高可用性和负载均衡 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

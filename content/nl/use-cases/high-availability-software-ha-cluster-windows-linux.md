@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-software-h
 description: "Beveilig uw kritieke applicaties met SafeKit , de toonaangevende software voor hoge beschikbaarheid (HA) voor Windows en Linux . Creëer eenvoudig HA-clusters zonder gedeelde opslag of complexe SAN's. Profiteer van realtime replicatie, failover en load balancing in één simpele, softwarematige oplossing."
 category: "use-cases"
 lang: "nl"
-topics: "Korte presentatie (30 seconden) voor SafeKit , 🔍 SafeKit High Availability Navigation Hub"
+topics: "Korte presentatie (30 seconden) voor SafeKit , 🔍 Ontdek SafeKit"
 ---
 
 # Software voor hoge beschikbaarheid: Windows en Linux clustering met SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}

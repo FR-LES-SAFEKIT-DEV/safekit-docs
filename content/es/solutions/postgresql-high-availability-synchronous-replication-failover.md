@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/solutions/postgresql-high-availability
 description: "La forma más sencilla de implementar la alta disponibilidad de PostgreSQL. SafeKit proporciona un clúster sin SAN de 2 nodos con replicación sincrónica y conmutación por error automática, sin necesidad de AD ni habilidades especializadas."
 category: "solutions"
 lang: "es"
-topics: "Cómo funciona el clúster espejo de SafeKit sin SAN con PostgreSQL, tabla de contenido, ¿Cómo el software SafeKit simplemente implementa un clúster de alta disponibilidad de PostgreSQL sin SAN?, ¿Cómo funciona el clúster espejo de SafeKit con PostgreSQL?, Limitaciones de alta disponibilidad de SafeKit, Comparación: SafeKit para PostgreSQL frente a otras soluciones de agrupación, Guía en video: Configuración de un clúster espejo de HA de SafeKit, 🔍 Centro de navegación de alta disponibilidad de SafeKit"
+topics: "Cómo funciona el clúster espejo de SafeKit sin SAN con PostgreSQL, tabla de contenido, ¿Cómo el software SafeKit simplemente implementa un clúster de alta disponibilidad de PostgreSQL sin SAN?, ¿Cómo funciona el clúster espejo de SafeKit con PostgreSQL?, Limitaciones de alta disponibilidad de SafeKit, Comparación: SafeKit para PostgreSQL frente a otras soluciones de agrupación, Guía en video: Configuración de un clúster espejo de HA de SafeKit, 🔍 Explora SafeKit"
 ---
 
 # La alta disponibilidad de PostgreSQL más simple: replicación síncrona y conmutación por error de 2 nodos {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}

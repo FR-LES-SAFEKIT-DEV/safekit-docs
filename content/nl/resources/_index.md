@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/resources/"
 description: "Download de gratis proefversie SafeKit en krijg toegang tot technische documentatie, snelle installatiehandleidingen, gebruikershandleidingen, whitepapers en productinformatie voor Windows en Linux high availability clustering."
 category: "resources"
 lang: "nl"
-topics: "Gratis proefversie, technische documentatie en productinformatie voor SafeKit High Availability en 🔍 SafeKit High Availability Navigation Hub"
+topics: "Gratis proefversie, technische documentatie en productinformatie voor SafeKit High Availability en 🔍 Ontdek SafeKit"
 ---
 
 # SafeKit Bronnen {#safekit-resources}
