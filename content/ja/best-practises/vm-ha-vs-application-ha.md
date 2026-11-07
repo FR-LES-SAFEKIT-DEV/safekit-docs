@@ -1,13 +1,14 @@
 ---
-title: "VM HA と Application HA"
+title: "VM HA とアプリケーション HA の比較"
 canonical: "https://safekit.eviden.com/ja/best-practises/vm-ha-vs-application-ha/"
-description: "仮想マシンの高可用性（VM HA）とアプリケーション高可用性（Application HA）を比較します。SafeKit は、共有ディスクを使わずにリアルタイムレプリケーションと自動フェイルオーバーを実現する、SAN不要の2つのソリューションを提供します。シンプルさを重視するならVM全体の冗長化を、WindowsとLinuxでハイパーバイザーに依存しない保護を求めるならアプリケーションHAを選択してください。"
+description: "VM HA とアプリケーション HA を比較します。SafeKit は、共有ディスクなしでリアルタイムレプリケーションと自動フェイルオーバーを提供する、両方の SAN レスソリューションを提案します。シンプルさを求めるなら完全な VM 冗長性を、Windows と Linux でハイパーバイザーに依存しない保護を求めるならアプリケーションレベルの HA を選択してください。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性戦略の選択：VM HA と Application HA、🔍 SafeKit ナビゲーションハブ"
+topics: "高可用性戦略の選択：VM HA vs. アプリケーション HA、🔍 SafeKit 高可用性ナビゲーションハブ"
+translation: "translate_md 2026-11-07.7 | glossaire 2026-11-07.3 | Translation LLM | 27 expressions"
 ---
 
-# VM HA と Application HA {#vm-ha-vs-application-ha}
+# VM HA とアプリケーション HA の比較 {#vm-ha-vs-application-ha}
 
 {{%  insert-vm-vs-app-ha-ja  %}}
 

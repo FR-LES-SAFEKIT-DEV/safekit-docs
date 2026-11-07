@@ -1,22 +1,23 @@
-{{/* Shortcode: insert-vm-vs-app-ha-nl — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 21 expressions */}}
+{{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\nl\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Kies uw strategie voor hoge beschikbaarheid: VM HA vs. Application HA {#safekit-ha-redundancy-choices}
+## Uw strategie voor hoge beschikbaarheid kiezen: VM-HA versus applicatie-HA {#safekit-ha-redundancy-choices}
 
-SafeKit biedt twee primaire benaderingen om de bedrijfscontinuïteit te waarborgen: Virtual Machine HA (VM HA) en Application HA. Hoewel beide methoden automatische failover mogelijk maken, verschillen ze aanzienlijk in hun scope, mechanismen voor gegevensreplicatie, herstelsnelheid en platformcompatibiliteit. Deze vergelijking licht deze verschillen toe om de optimale strategie te helpen bepalen voor specifieke IT-omgevingen, afhankelijk van de focus op brede virtualisatieondersteuning of op fijnmazig en snel applicatieherstel.
+SafeKit biedt twee primaire benaderingen om bedrijfscontinuïteit te waarborgen: Virtual Machine HA (VM-HA) en applicatie-HA. Hoewel beide methoden automatische failovermogelijkheden bieden, verschillen ze aanzienlijk in hun reikwijdte, datareplicatiemechanismen, herstelsnelheid en platformcompatibiliteit. Deze vergelijking zet deze verschillen uiteen om te helpen bij het identificeren van de optimale strategie voor specifieke IT-omgevingen, of de focus nu ligt op brede virtualisatiesondersteuning of gedetailleerd, snel applicatieherstel.
 
-**Functievergelijking: SafeKit VM HA vs. SafeKit Application HA Clustering**
+**Functievergelijking: SafeKit VM-HA versus SafeKit applicatie-HA Clustering**
 
-Vergelijkingskenmerk | VM HA met SafeKit Hyper-V of KVM-module | Application HA met SafeKit Application-modules  
+Vergelijkingsfunctie | VM-HA met SafeKit Hyper-V of KVM module | Applicatie-HA met SafeKit-toepassingsmodules  
 ---|---|---  
-Scope van failover | SafeKit binnen twee hypervisors: replicatie en failover van de volledige VM. | SafeKit op twee virtuele of fysieke machines: replicatie en failover op applicatieniveau.  
-Gerepliceerde gegevens | Repliceert meer gegevens (applicatie + besturingssysteem). | Repliceert uitsluitend applicatiegegevens, wat leidt tot kleinere datavolumes.  
-Herstelproces & snelheid (RTO) | Herstart van de VM op hypervisor 2 wanneer hypervisor 1 uitvalt. Hersteltijd hangt af van de herstart van het besturingssysteem. VM-monitoring en failovermechanisme. | Snelle hersteltijd met herstart van de applicatie op OS2 wanneer server 1 uitvalt. Typisch rond 1 minuut of minder (lage RTO). Applicatiemonitoring en softwarematige failover.  
-Installatie | De applicatie wordt één keer geïnstalleerd in een enkele VM. | De applicatie wordt op twee nodes geïnstalleerd.  
-Configuratie | Generieke oplossing voor elke applicatie / elk OS dat in de VM draait. <br>• Vereist geen technische kennis van de applicatie binnen de VM.<br>• Beste oplossing als u niet weet hoe de applicatie werkt.<br>• U hoeft alleen de locatie van de VM-bestanden te definiëren.  | Vereist technische kennis van de applicatie zelf. <br>• Welke services opnieuw moeten worden gestart.<br>• Welke applicatiemappen realtime gerepliceerd moeten worden.<br>• Configuratie van een virtueel IP-adres voor failover.   
-Platformcompatibiliteit | Werkt met Windows/Hyper-V en Linux/KVM, maar is niet compatibel met VMware. | Platformonafhankelijk; werkt met fysieke of virtuele machines, cloudinfrastructuren en elke hypervisor, inclusief VMware.  
-Ideaal voor | Ideaal voor het beheren van complexe omgevingen met meerdere applicaties over verschillende VM’s via één HA-beleid. | Ideaal voor het direct integreren van hoge beschikbaarheid in een softwareoplossing, onafhankelijk van onderliggende hardware of hypervisor.  
+Failoverbereik | SafeKit in 2 hypervisors: replicatie en failover van de volledige VM. | SafeKit in 2 virtuele of fysieke machines: replicatie en failover op applicatieniveau.  
+Gegevens gerepliceerd | Repliceert meer gegevens (toepassing + besturingssysteem). | Repliceert alleen applicatiegegevens, wat resulteert in kleinere datavolumes.  
+Herstelproces en -snelheid (RTO) | Opnieuw opstarten van de VM op hypervisor 2 als hypervisor 1 crasht. De hersteltijd is afhankelijk van het opnieuw opstarten van het besturingssysteem. VM-checker en failovermechanisme. | Snelle hersteltijd met herstart van de app op OS2 als server 1 crasht. Meestal ongeveer 1 minuut of minder (lage RTO). Applicatiecontrole en software failover.  
+Installatie | De toepassing wordt eenmalig in één VM geïnstalleerd. | De toepassing is op twee knooppunten geïnstalleerd.  
+Configuratie | Generieke oplossing voor elke toepassing/elk besturingssysteem dat in de VM draait. <br> • Er is geen technische kennis van de toepassing die in de VM is geïnstalleerd, vereist. <br> • Het is de beste oplossing als u niet weet hoe de applicatie werkt. <br> • U hoeft alleen de locatie van de VM-bestanden te definiëren.  | Het vereist een technisch begrip van de toepassing zelf. <br> • Welke services moeten opnieuw worden gestart. <br> • De specifieke toepassingsmappen die real-time replicatie vereisen. <br> • De configuratie van een virtueel IP-adres voor failover.   
+Platformcompatibiliteit | Werkt met Windows / Hyper-V en Linux / KVM, maar is niet compatibel met VMware. | Platformonafhankelijk; werkt met fysieke of virtuele machines, cloudinfrastructuur en elke hypervisor, inclusief VMware.  
+Ideaal voor | Ideaal voor het beheren van complexe omgevingen met meerdere toepassingen op verschillende VM's via één HA-beleid. | Ideaal om hoge beschikbaarheid rechtstreeks in een softwareoplossing in te bouwen, onafhankelijk van de onderliggende hardware of hypervisor.  
 

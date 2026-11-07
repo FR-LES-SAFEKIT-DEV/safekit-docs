@@ -2,7 +2,11 @@
 """Traduit une page Markdown Hugo avec Google Cloud Translation (API v2).
 
 Usage :
-  python translate_md.py SOURCE.md CIBLE.md --to fr [--from en] [--lang fr] [--model nmt]
+  python translate_md.py SOURCE            -> traduit dans les 11 langues et écrase les traductions
+     SOURCE = content/<chemin>.md  ou  layouts/shortcodes/<nom>-en.html  (fichier anglais)
+     options : --langs fr,de  (sous-ensemble)  --export DOSSIER (copie en.* et <lang>.* dans DOSSIER)
+               --dry-run  --model nmt
+  python translate_md.py SOURCE.md CIBLE.md --to fr [--from en] [--lang fr] [--model nmt]   (une seule langue)
   Par défaut : modèle Translation LLM de Google (meilleure qualité, coût plus élevé).
   --model nmt : ancien modèle classique, moins cher.
 
@@ -23,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-06.18"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-07.7"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -103,7 +107,7 @@ def load_glossary(path, lang):
     if terms:
         # mot en minuscules (mirror, farm) : toute casse ; sinon casse exacte (Floating IP)
         alts = [("(?i:%s)" % re.escape(t)) if t.islower() else re.escape(t) for t in terms]
-        KEEP_RE = re.compile(r"(?<![\w/#.-])(%s)(?![\w/-]|\.\w)" % "|".join(alts))
+        KEEP_RE = re.compile(r"(?<![\w#.-])(?<!/[a-z0-9-]/)(%s)(?![\w-]|/[a-z0-9-]*/|\.\w)" % "|".join(alts))
     GLOSSARY["_rep"] = GLOSSARY.get("replace", {}).get(lang, {})
     # "terms" : expressions traduites d'office, ex. "farm cluster" -> "cluster farm" (fr)
     keep_lower = {k.lower() for k in GLOSSARY.get("keep", [])}
@@ -226,6 +230,8 @@ def encode(text, ctx):
         if int(m.group(1)) in ctx.shown:   # expression imposée : on montre l'anglais, pas la traduction
             shown = html.escape(re.sub(r"<[^>]+>", "", tok).strip() if NATIVE else ctx.shown[int(m.group(1))], quote=False)
             return f'<span class="notranslate" translate="no" data-k="{m.group(1)}">{shown}</span>'
+        if re.fullmatch(r"<br\s*/?>", tok, re.I):
+            return f'<br data-k="{m.group(1)}">'   # vrai saut de ligne pour Google (sinon il voit "0", "2"... et les déplace)
         if tok.startswith("`"):
             shown = tok.strip("`")
         elif tok.startswith("{{"):
@@ -244,6 +250,8 @@ def encode(text, ctx):
 def decode(text, ctx):
     st = ctx.store
     text = re.sub(r'<span[^>]*data-k="(\d+)"[^>]*>.*?</span>', lambda m: f"{S}P{m.group(1)}{S}", text)
+    text = re.sub(r'\s*<br[^>]*data-k="(\d+)"[^>]*>\s*', lambda m: f" {S}P{m.group(1)}{S} ", text)
+    text = re.sub(f"({S}P\\d+{S})\\s*/\\s*(?={S}P\\d+{S})", r"\1/", text)   # "Windows / Hyper-V" -> "Windows/Hyper-V"
     text = re.sub(r"<b>\s*([。，、；：！？.,;:!?]+)\s*", r"\1<b>", text)
     # source "**terme imposé**" : si Google étend le gras à la phrase, on le ramène au terme seul
     for n in ctx.bold_terms:
@@ -463,7 +471,9 @@ def make_link_fixer(target, lang, missing, host):
         return f"<{new}>" if angle else new
     return fix
 
-SHORTCODE = re.compile(r"(\{\{[<%]%?\s*/?\s*)([\w-]+?)-([A-Za-z]{2}(?:-[A-Za-z]+)?)(?=[\s%>\"])")
+# suffixe de langue = un code du site uniquement ("insert-vm-vs-app-ha-en" : "ha" n'est pas une langue)
+SHORTCODE = re.compile(r"(\{\{[<%%]%%?\s*/?\s*)([\w-]+)-(%s)(?=[\s%%>\"])" % "|".join(
+    sorted(["ar", "de", "en", "es", "fr", "it", "ja", "ko", "nl", "pt-br", "pt-pt", "zh-hans"], key=len, reverse=True)), re.I)
 
 def make_shortcode_fixer(target, src, lang, missing):
     """insert-xxx-en -> insert-xxx-<lang> si layouts/shortcodes/insert-xxx-<lang>.* existe."""
@@ -737,5 +747,89 @@ def main():
         for p in sorted(missing):
             print("  ", p)
 
+ALL_LANGS = ["ar", "de", "es", "fr", "it", "ja", "ko", "nl", "pt-br", "pt-pt", "zh-hans"]
+
+def batch_targets(src):
+    """Chemins cibles des 11 langues, déduits du fichier anglais (règles du site Hugo)."""
+    if src.parent.name == "shortcodes":
+        if not re.search(r"-en$", src.stem):
+            sys.exit(f"Shortcode source attendu en -en.html : {src.name}")
+        return {l: src.with_name(re.sub(r"-en$", f"-{l}", src.stem) + src.suffix) for l in ALL_LANGS}
+    content = next((p for p in src.parents if p.name == "content"), None)
+    if content is None:
+        sys.exit(f"Fichier hors de content/ ou layouts/shortcodes/ : {src}")
+    rel = src.relative_to(content)
+    if rel.parts[0] in LANGS:
+        sys.exit(f"La source doit être la page anglaise (content/{rel.as_posix()} est déjà une traduction).")
+    return {l: content / l / rel for l in ALL_LANGS}
+
+def batch():
+    """Mode « tout-en-un » : 11 langues + résumé (copie seulement avec --export)."""
+    import shutil, subprocess
+    ap = argparse.ArgumentParser(description="Traduit un fichier anglais dans les 11 langues du site.")
+    ap.add_argument("source")
+    ap.add_argument("--langs", default=",".join(ALL_LANGS))
+    ap.add_argument("--export", default=None, help="dossier où copier en.* et <lang>.* (aucune copie par défaut)")
+    a, extra = ap.parse_known_args()
+    src = Path(a.source).resolve()
+    if not src.exists():
+        sys.exit(f"Fichier introuvable : {src}")
+    targets = batch_targets(src)
+    langs = [l.strip() for l in a.langs.split(",") if l.strip()]
+    print(f"translate_md.py version {VERSION} - {src.name} -> {len(langs)} langue(s)")
+    summary = []
+    for lang in langs:
+        tgt = targets[lang]
+        cmd = [sys.executable, str(Path(__file__).resolve()), str(src), str(tgt), "--to", lang] + extra
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")   # sortie du sous-processus toujours en UTF-8 (console Windows cp1252)
+        for attempt in (1, 2):
+            r = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
+            if r.returncode == 0:
+                break
+            print(f"[{lang}] échec (essai {attempt}) : {(r.stderr or r.stdout).strip()[-300:]}")
+            time.sleep(30)
+        out = r.stdout.splitlines()
+        seg = next((x for x in out if "segments traduits" in x), "ÉCHEC")
+        warn, keep = [], False
+        for x in out:
+            if x.startswith(("ATTENTION", "A vérifier", "Shortcodes laissés", "Liens localisés")):
+                keep = True; warn.append(x.strip())
+            elif keep and x.startswith("   "):
+                warn.append("  " + x.strip())
+            else:
+                keep = False
+        summary.append((lang, r.returncode == 0, re.sub(r" ->.*", "", seg), warn))
+        print(f"[{lang}] {re.sub(r' ->.*', '', seg)}" + (f" - {len(warn)} avertissement(s)" if warn else ""))
+    if a.export:
+        exp = Path(a.export)
+        exp.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, exp / f"en{src.suffix}")
+        for lang, ok, _, _ in summary:
+            if ok and targets[lang].exists():
+                shutil.copyfile(targets[lang], exp / f"{lang}{src.suffix}")
+        print(f"Copié dans {exp} : en{src.suffix} + {sum(1 for s in summary if s[1])} traduction(s)")
+    gpath = Path(__file__).with_name("glossary.json")
+    gver = json.load(open(gpath, encoding="utf-8")).get("version", "?") if gpath.exists() else "introuvable"
+    rep = ["===== RESUME =====",
+           f"Fichier : {src.name}  ({time.strftime('%Y-%m-%d %H:%M')})",
+           f"Script {VERSION} | glossaire {gver}"]
+    for lang, ok, seg, warn in summary:
+        rep.append(f"{lang:8} {'OK ' if ok else 'ÉCHEC'} {seg}")
+        rep += [f"         {w}" for w in warn]
+    print("\n" + "\n".join(rep))
+    if a.export:   # le résumé accompagne les fichiers copiés (lisible pour la vérification)
+        (Path(a.export) / "RESUME.txt").write_text("\n".join(rep) + "\n", encoding="utf-8")
+        print(f"Résumé copié dans {Path(a.export) / 'RESUME.txt'}")
+    if not all(s[1] for s in summary):
+        sys.exit(1)
+
 if __name__ == "__main__":
-    main()
+    for stream in (sys.stdout, sys.stderr):   # console Windows : jamais de plantage sur un caractère non affichable
+        try:
+            stream.reconfigure(errors="replace")
+        except Exception:
+            pass
+    if "--to" not in sys.argv:   # sans --to : les 11 langues
+        batch()
+    else:
+        main()

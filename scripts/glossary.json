@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-06.13",
+  "version": "2026-11-07.3",
   "keep": [
     "mirror",
     "farm",
@@ -28,7 +28,12 @@
     "ARM",
     "Windows",
     "RFI",
-    "RFP"
+    "RFP",
+    "Hyper-V",
+    "KVM",
+    "VMware",
+    "RTO",
+    "RPO"
   ],
   "terms": {
     "farm cluster": {
@@ -307,6 +312,11 @@
     "farm modules": {
       "de": "farm-Module",
       "nl": "farm-modules"
+    },
+    "SafeKit High Availability Navigation Hub": {
+      "nl": "SafeKit-navigatiehub voor hoge beschikbaarheid",
+      "pt": "Centro de navegação de alta disponibilidade do SafeKit",
+      "it": "Hub di navigazione per l’alta disponibilità di SafeKit"
     }
   },
   "grammar": {
@@ -346,6 +356,14 @@
       [
         "\\b(construire|créer|déployer|configurer|installer|gérer) (clusters)\\b",
         "\\1 des \\2"
+      ],
+      [
+        "haute disponibilité (HA applicative|HA de VM)",
+        "\\1"
+      ],
+      [
+        "haute disponibilité HA\\b",
+        "HA"
       ]
     ],
     "it": [
@@ -374,6 +392,10 @@
       [
         "([Aa]rquitectura) ([Cc]lúster)",
         "\\1 de \\2"
+      ],
+      [
+        "alta (?:disponibilidad )?(HA de (?:VM|aplicación))",
+        "\\1"
       ]
     ],
     "pt": [
@@ -466,6 +488,14 @@
       [
         "(클러스터|모듈) (생성|구성|배포|설치|시작|중지)(되|됩|된|될|돼)",
         "\\1가 \\2\\3"
+      ],
+      [
+        "(HA|클러스터) (비교|선택|구성|설치|사용)(해|하|합)",
+        "\\1를 \\2\\3"
+      ],
+      [
+        "(모듈) (비교|선택|구성|설치|사용)(해|하|합)",
+        "\\1을 \\2\\3"
       ]
     ],
     "ja": [
@@ -484,6 +514,10 @@
       [
         "→\\*\\*",
         "→ **"
+      ],
+      [
+        "vs\\.(?=[^\\s])",
+        "vs. "
       ]
     ],
     "zh-hans": [

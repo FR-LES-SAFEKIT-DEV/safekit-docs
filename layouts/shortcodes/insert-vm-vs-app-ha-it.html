@@ -1,22 +1,23 @@
-{{/* Shortcode: insert-vm-vs-app-ha-it — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 13 expressions */}}
+{{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\it\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Scegliere la strategia di alta disponibilità: VM HA vs. Application HA {#safekit-ha-redundancy-choices}
+## Scelta della strategia di alta disponibilità: HA delle VM o HA applicativa {#safekit-ha-redundancy-choices}
 
-SafeKit offre due approcci principali per garantire la continuità operativa: l’alta disponibilità delle macchine virtuali (VM HA) e l’alta disponibilità delle applicazioni (Application HA). Sebbene entrambi i metodi offrano capacità di failover automatico, differiscono significativamente per ambito, meccanismi di replica dei dati, velocità di ripristino e compatibilità con le piattaforme. Questo confronto evidenzia tali differenze per aiutare a identificare la strategia ottimale per specifici ambienti IT, sia che l’obiettivo sia un ampio supporto alla virtualizzazione o un recupero applicativo granulare e ad alta velocità.
+SafeKit offre due approcci principali per garantire la continuità aziendale: HA della macchina virtuale (HA delle VM) e HA applicativa. Sebbene entrambi i metodi forniscano funzionalità di failover automatico, differiscono in modo significativo per ambito, meccanismi di replica dei dati, velocità di ripristino e compatibilità della piattaforma. Questo confronto analizza queste differenze per aiutare a identificare la strategia ottimale per specifici ambienti IT, sia che l’obiettivo sia un ampio supporto alla virtualizzazione o un ripristino granulare e ad alta velocità delle applicazioni.
 
-**Confronto delle funzionalità: SafeKit VM HA vs. clustering Application HA di SafeKit**
+**Confronto tra le funzionalità: SafeKit HA delle VM e SafeKit HA applicativa Clustering**
 
-Caratteristica di confronto | VM HA con modulo SafeKit Hyper-V o KVM | Application HA con moduli applicativi SafeKit  
+Funzione di confronto | HA delle VM con modulo SafeKit Hyper-V o KVM | HA applicativa con i moduli applicativi SafeKit  
 ---|---|---  
-Ambito del failover | SafeKit all’interno di 2 hypervisor: replica e failover della VM completa. | SafeKit su 2 macchine virtuali o fisiche: replica e failover a livello applicativo.  
-Dati replicati | Replica una quantità maggiore di dati (applicazione + sistema operativo). | Replica solo i dati applicativi, riducendo il volume di dati.  
-Processo e velocità di ripristino (RTO) | Riavvio della VM sull’hypervisor 2 se l’hypervisor 1 si arresta. Il tempo di ripristino dipende dal riavvio del sistema operativo. Controllo VM e meccanismo di failover. | Ripristino rapido con riavvio dell’applicazione su OS2 se il server 1 si arresta. Tipicamente circa 1 minuto o meno (RTO basso). Controllo applicativo e failover software.  
-Installazione | L’applicazione è installata una sola volta in una VM. | L’applicazione è installata su due nodi.  
-Configurazione | Soluzione generica per qualsiasi applicazione / sistema operativo in esecuzione nella VM. <br>• Non richiede una conoscenza tecnica dell’applicazione installata nella VM.<br>• È la soluzione migliore se non si conosce il funzionamento dell’applicazione.<br>• È sufficiente definire la posizione dei file della VM.  | Richiede una conoscenza tecnica dell’applicazione stessa. <br>• Quali servizi devono essere riavviati.<br>• Le cartelle applicative che devono essere replicate in tempo reale.<br>• La configurazione di un indirizzo IP virtuale per il failover.   
-Compatibilità con le piattaforme | Compatibile con Windows/Hyper-V e Linux/KVM, ma non con VMware. | Indipendente dalla piattaforma; funziona su macchine fisiche o virtuali, infrastrutture cloud e qualsiasi hypervisor, incluso VMware.  
-Ideale per | Ideale per gestire ambienti complessi con più applicazioni su diverse VM tramite una singola policy HA. | Ideale per integrare direttamente l’alta disponibilità in una soluzione software, indipendentemente dall’hardware o dall’hypervisor sottostante.  
+Ambito di failover | SafeKit all’interno di 2 hypervisor: replica e failover dell’intera VM. | SafeKit all’interno di 2 macchine virtuali o fisiche: replica e failover a livello di applicazione.  
+Dati replicati | Replica più dati (applicazione + sistema operativo). | Replica solo i dati dell’applicazione, riducendo i volumi di dati.  
+Processo e velocità di ripristino (RTO) | Riavvio della VM sull’hypervisor 2 se l’hypervisor 1 si arresta in modo anomalo. Il tempo di ripristino dipende dal riavvio del sistema operativo. Controllo VM e meccanismo di failover. | Tempi di ripristino rapidi con riavvio dell’app su OS2 in caso di arresto anomalo del server 1. In genere circa 1 minuto o meno (RTO basso). Controllo dell’applicazione e failover del software.  
+Installazione | L’applicazione viene installata una sola volta in una singola VM. | L’applicazione è installata su due nodi.  
+Configurazione | Soluzione generica per qualsiasi applicazione/sistema operativo in esecuzione nella macchina virtuale. <br> • Non richiede una conoscenza tecnica dell’applicazione installata nella VM. <br> • È la soluzione migliore se non sai come funziona l’applicazione. <br> • È sufficiente definire la posizione dei file della macchina virtuale.  | Richiede una comprensione tecnica dell’applicazione stessa. <br> • Quali servizi devono essere riavviati. <br> • Le cartelle delle applicazioni specifiche che necessitano di replica in tempo reale. <br> • La configurazione di un indirizzo IP virtuale per il failover.   
+Compatibilità della piattaforma | Funziona con Windows / Hyper-V e Linux / KVM, ma non è compatibile con VMware. | Indipendente dalla piattaforma; funziona con macchine fisiche o virtuali, infrastrutture cloud e qualsiasi hypervisor, incluso VMware.  
+Ideale per | Ideale per la gestione di ambienti complessi con più applicazioni su più macchine virtuali attraverso un’unica policy HA. | Ideale per integrare l’alta disponibilità direttamente in una soluzione software, indipendentemente dall’hardware o dall’hypervisor sottostante.  
 

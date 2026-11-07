@@ -1,22 +1,23 @@
-{{/* Shortcode: insert-vm-vs-app-ha-de — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 22 expressions */}}
+{{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\de\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Wahl Ihrer Hochverfügbarkeitsstrategie: VM HA vs. Application HA {#safekit-ha-redundancy-choices}
+## Auswahl Ihrer Hochverfügbarkeitsstrategie: VM-HA vs. Anwendungs-HA {#safekit-ha-redundancy-choices}
 
-SafeKit bietet zwei primäre Ansätze zur Sicherstellung der Geschäftskontinuität: Virtual Machine HA (VM HA) und Application HA. Obwohl beide Methoden automatische Failover-Funktionen bieten, unterscheiden sie sich deutlich in ihrem Umfang, ihren Datenreplikationsmechanismen, der Wiederherstellungsgeschwindigkeit und der Plattformkompatibilität. Dieser Vergleich erläutert diese Unterschiede, um die optimale Strategie für spezifische IT-Umgebungen zu identifizieren – abhängig davon, ob der Fokus auf breiter Virtualisierungsunterstützung oder feingranularer, schneller Anwendungswiederherstellung liegt.
+SafeKit bietet zwei primäre Ansätze zur Gewährleistung der Geschäftskontinuität: Virtual Machine HA (VM-HA) und Anwendungs-HA. Während beide Methoden automatische Failover-Funktionen bieten, unterscheiden sie sich erheblich in ihrem Umfang, ihren Datenreplikationsmechanismen, ihrer Wiederherstellungsgeschwindigkeit und ihrer Plattformkompatibilität. Dieser Vergleich erläutert diese Unterschiede, um die optimale Strategie für spezifische IT-Umgebungen zu identifizieren, unabhängig davon, ob der Fokus auf breiter Virtualisierungsunterstützung oder granularer, schneller Anwendungs-Wiederherstellung liegt.
 
-**Funktionsvergleich: SafeKit VM HA vs. SafeKit Application HA Clustering**
+**Funktionsvergleich: SafeKit VM-HA vs. SafeKit Anwendungs-HA Clustering**
 
-Vergleichsmerkmal | VM HA mit SafeKit Hyper-V- oder KVM-Modul | Application HA mit SafeKit Application-Modulen  
+Vergleichsfunktion | VM-HA mit dem SafeKit Hyper-V oder KVM Modul | Anwendungs-HA mit SafeKit-Anwendungsmodulen  
 ---|---|---  
-Failover-Umfang | SafeKit innerhalb von zwei Hypervisoren: Replikation und Failover der gesamten VM. | SafeKit auf zwei virtuellen oder physischen Maschinen: Replikation und Failover auf Anwendungsebene.  
-Replizierte Daten | Repliziert mehr Daten (Anwendung + Betriebssystem). | Repliziert nur Anwendungsdaten, was zu geringeren Datenmengen führt.  
-Wiederherstellungsprozess & Geschwindigkeit (RTO) | Neustart der VM auf Hypervisor 2, wenn Hypervisor 1 ausfällt. Die Wiederherstellungszeit hängt vom Neustart des Betriebssystems ab. VM-Überwachung und Failover-Mechanismus. | Schnelle Wiederherstellung mit Neustart der Anwendung auf OS2, wenn Server 1 ausfällt. Typischerweise etwa 1 Minute oder weniger (niedriger RTO). Anwendungsüberwachung und softwarebasiertes Failover.  
-Installation | Die Anwendung wird einmal in einer einzelnen VM installiert. | Die Anwendung wird auf zwei Nodes installiert.  
-Konfiguration | Generische Lösung für jede Anwendung / jedes OS, das in der VM läuft. <br>• Erfordert kein technisches Verständnis der in der VM installierten Anwendung.<br>• Beste Lösung, wenn Sie nicht wissen, wie die Anwendung funktioniert.<br>• Sie müssen lediglich den Speicherort der VM-Dateien definieren.  | Erfordert technisches Verständnis der Anwendung selbst. <br>• Welche Dienste neu gestartet werden müssen.<br>• Welche Anwendungsverzeichnisse in Echtzeit repliziert werden müssen.<br>• Konfiguration einer virtuellen IP-Adresse für das Failover.   
-Plattformkompatibilität | Funktioniert mit Windows/Hyper-V und Linux/KVM, ist jedoch nicht mit VMware kompatibel. | Plattformunabhängig; funktioniert mit physischen oder virtuellen Maschinen, Cloud-Infrastrukturen und allen Hypervisoren, einschließlich VMware.  
-Ideal für | Ideal für die Verwaltung komplexer Umgebungen mit mehreren Anwendungen über mehrere VMs hinweg mittels einer einzigen HA-Richtlinie. | Ideal zur direkten Integration von Hochverfügbarkeit in eine Softwarelösung, unabhängig von der zugrunde liegenden Hardware oder dem Hypervisor.  
+Failover-Bereich | SafeKit in 2 Hypervisoren: Replikation und Failover der gesamten VM. | SafeKit in 2 virtuellen oder physischen Maschinen: Replikation und Failover auf Anwendungsebene.  
+Daten repliziert | Replikate mehr Daten (Anwendung + Betriebssystem). | Replikate nur Anwendungsdaten, was zu geringeren Datenmengen führt.  
+Wiederherstellungsprozess und -geschwindigkeit (RTO) | Neustart der VM auf Hypervisor 2, wenn Hypervisor 1 abstürzt. Die Wiederherstellungszeit hängt vom Neustart des Betriebssystems ab. VM-Checker und Failover-Mechanismus. | Schnelle Wiederherstellungszeit mit Neustart der App auf OS2, wenn Server 1 abstürzt. Typischerweise etwa 1 Minute oder weniger (niedrige RTO). Anwendungsprüfer und Software-Failover.  
+Installation | Die Anwendung wird einmal in einer einzelnen VM installiert. | Die Anwendung ist auf zwei Knoten installiert.  
+Konfiguration | Generische Lösung für jede Anwendung/jedes Betriebssystem, das in der VM läuft. <br> • Es ist kein technisches Verständnis der in der VM installierten Anwendung erforderlich. <br> • Es ist die beste Lösung, wenn Sie nicht wissen, wie die Anwendung funktioniert. <br> • Sie müssen lediglich den Speicherort der VM-Dateien festlegen.  | Es erfordert ein technisches Verständnis der Anwendung selbst. <br> • Welche Dienste neu gestartet werden müssen. <br> • Die spezifischen Anwendungsordner, die eine Echtzeitreplikation benötigen. <br> • Die Konfiguration einer virtuellen IP-Adresse für das Failover.   
+Plattformkompatibilität | Funktioniert mit Windows / Hyper-V und Linux / KVM, ist aber nicht mit VMware kompatibel. | Plattformunabhängig; funktioniert mit physischen oder virtuellen Maschinen, Cloud-Infrastruktur und jedem Hypervisor, einschließlich VMware.  
+Ideal für | Ideal für die Verwaltung komplexer Umgebungen mit mehreren Anwendungen auf mehreren VMs durch eine einzige HA-Richtlinie. | Ideal, um Hochverfügbarkeit direkt in eine Softwarelösung einzubetten, unabhängig von der zugrunde liegenden Hardware oder dem Hypervisor.  
 

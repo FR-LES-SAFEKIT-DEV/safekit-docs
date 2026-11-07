@@ -1,22 +1,23 @@
-{{/* Shortcode: insert-vm-vs-app-ha-es — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 15 expressions */}}
+{{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\es\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Elegir su estrategia de alta disponibilidad: HA de VM vs. HA de aplicación {#safekit-ha-redundancy-choices}
+## Cómo elegir su estrategia de alta disponibilidad: HA de VM frente a HA de aplicación {#safekit-ha-redundancy-choices}
 
-SafeKit ofrece dos enfoques principales para garantizar la continuidad del negocio: Alta Disponibilidad de Máquina Virtual (VM HA) y Alta Disponibilidad de Aplicación (Application HA). Aunque ambos métodos proporcionan capacidades de conmutación por error (failover) automática, difieren significativamente en su alcance, los mecanismos de replicación de datos, la velocidad de recuperación y la compatibilidad de plataforma. Esta comparación detalla estas diferencias para ayudar a identificar la estrategia óptima para entornos de TI específicos, ya sea que el enfoque esté en un amplio soporte de virtualización o en una recuperación de aplicaciones granular y de alta velocidad.
+SafeKit ofrece dos enfoques principales para garantizar la continuidad del negocio: alta disponibilidad de máquinas virtuales (HA de VM) y HA de aplicación. Si bien ambos métodos proporcionan capacidades de conmutación por error automática, difieren significativamente en su alcance, mecanismos de replicación de datos, velocidad de recuperación y compatibilidad con la plataforma. Esta comparación desglosa estas diferencias para ayudar a identificar la estrategia óptima para entornos de TI específicos, ya sea que el enfoque esté en el amplio soporte de virtualización o en la recuperación granular y de alta velocidad de las aplicaciones.
 
-**Comparación de funcionalidades: SafeKit VM HA vs. Clustering de aplicaciones SafeKit**
+**Comparación de características: SafeKit HA de VM vs. clúster de HA de aplicación SafeKit**
 
-Criterio de comparación | VM HA con módulo SafeKit Hyper-V o KVM | Application HA con módulos de aplicación SafeKit  
+Función de comparación | HA de VM con el módulo SafeKit Hyper-V o KVM | HA de aplicación con módulos de aplicación SafeKit  
 ---|---|---  
-Alcance del failover | SafeKit en 2 hipervisores: replicación y failover de la VM completa. | SafeKit en 2 máquinas virtuales o físicas: replicación y failover a nivel de aplicación.  
-Datos replicados | Replica más datos (Aplicación + Sistema Operativo). | Replica únicamente los datos de la aplicación, lo que reduce el volumen de datos.  
-Proceso de recuperación y velocidad (RTO) | Reinicio de la VM en el hipervisor 2 si el hipervisor 1 falla. El tiempo de recuperación depende del reinicio del sistema operativo. Verificación de VM y mecanismo de failover. | Tiempo de recuperación rápido con el reinicio de la aplicación en el SO2 si el servidor 1 falla. Normalmente alrededor de 1 minuto o menos (RTO bajo). Monitorización de la aplicación y failover software.  
-Instalación | La aplicación se instala una sola vez en una única VM. | La aplicación se instala en dos nodos.  
-Configuración | Solución genérica para cualquier aplicación / SO que se ejecute en la VM. <br>• No requiere conocimientos técnicos de la aplicación instalada dentro de la VM.<br>• Es la mejor solución si no conoce cómo funciona la aplicación.<br>• Solo necesita definir la ubicación de los archivos de la VM.  | Requiere un conocimiento técnico de la propia aplicación. <br>• Qué servicios deben reiniciarse.<br>• Las carpetas específicas de la aplicación que necesitan replicación en tiempo real.<br>• La configuración de una dirección IP virtual para el failover.   
-Compatibilidad de plataforma | Funciona con Windows/Hyper-V y Linux/KVM, pero no es compatible con VMware. | Independiente de la plataforma; funciona con máquinas físicas o virtuales, infraestructuras en la nube y cualquier hipervisor, incluido VMware.  
-Ideal para | Ideal para gestionar entornos complejos con múltiples aplicaciones en varias VMs mediante una única política de HA. | Ideal para integrar la alta disponibilidad directamente en una solución de software, independientemente del hardware o hipervisor subyacente.  
+Ámbito de la conmutación por error | SafeKit dentro de 2 hipervisores: replicación y conmutación por error de la máquina virtual completa. | SafeKit en 2 máquinas virtuales o físicas: replicación y conmutación por error a nivel de aplicación.  
+Datos replicados | Replica más datos (aplicación + sistema operativo). | Replica solo los datos de la aplicación, lo que da lugar a volúmenes de datos más pequeños.  
+Proceso y velocidad de recuperación (RTO) | Reinicie la máquina virtual en el hipervisor 2 si el hipervisor 1 falla. El tiempo de recuperación depende del reinicio del sistema operativo. Verificador de máquina virtual y mecanismo de conmutación por error. | Tiempo de recuperación rápido con reinicio de la aplicación en OS2 si el servidor 1 falla. Normalmente alrededor de 1 minuto o menos (RTO bajo). Verificador de aplicaciones y conmutación por error de software.  
+Instalación | La aplicación se instala una sola vez en una única máquina virtual. | La aplicación está instalada en dos nodos.  
+Configuración | Solución genérica para cualquier aplicación o sistema operativo que se ejecute en la máquina virtual. <br> • No requiere conocimientos técnicos de la aplicación instalada en la máquina virtual. <br> • Es la mejor solución si no sabes cómo funciona la aplicación. <br> • Solo es necesario definir la ubicación de los archivos de la máquina virtual.  | Requiere un conocimiento técnico de la aplicación en sí. <br> • Qué servicios deben reiniciarse. <br> • Las carpetas de aplicaciones específicas que necesitan replicación en tiempo real. <br> • La configuración de una dirección IP virtual para la conmutación por error.   
+Compatibilidad de la plataforma | Funciona con Windows / Hyper-V y Linux / KVM, pero no es compatible con VMware. | Agnóstico de la plataforma; funciona con máquinas físicas o virtuales, infraestructura en la nube y cualquier hipervisor, incluido VMware.  
+Ideal para | Ideal para gestionar entornos complejos con múltiples aplicaciones en varias máquinas virtuales a través de una única política de alta disponibilidad. | Ideal para integrar la alta disponibilidad directamente en una solución de software, independientemente del hardware o hipervisor subyacente.  
 

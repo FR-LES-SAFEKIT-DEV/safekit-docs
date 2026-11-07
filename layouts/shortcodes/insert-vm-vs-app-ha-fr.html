@@ -1,22 +1,23 @@
-{{/* Shortcode: insert-vm-vs-app-ha-fr — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-07.5 | glossaire 2026-11-07.1 | Translation LLM | 21 expressions */}}
+{{/* Shortcode: insert-vm-vs-app-ha-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\fr\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Choisir sa stratégie de haute disponibilité : HA VM vs HA applicative {#safekit-ha-redundancy-choices}
+## Choisir votre stratégie de haute disponibilité : HA de VM ou HA applicative {#safekit-ha-redundancy-choices}
 
-SafeKit propose deux approches principales pour assurer la continuité d’activité : la HA des machines virtuelles (VM HA) et la HA applicative. Bien que ces deux méthodes offrent des mécanismes de basculement automatique, elles diffèrent sensiblement par leur périmètre, leurs mécanismes de réplication des données, leur vitesse de reprise et leur compatibilité plateforme. Cette comparaison met en évidence ces différences afin d’identifier la stratégie la plus adaptée à chaque environnement IT, selon que l’on privilégie un support large de la virtualisation ou une reprise applicative fine et rapide.
+SafeKit propose deux approches principales pour assurer la continuité des activités : la haute disponibilité des machines virtuelles (HA de VM) et la HA applicative. Bien que les deux méthodes offrent des capacités de basculement automatique, elles diffèrent considérablement par leur portée, leurs mécanismes de réplication des données, leur vitesse de récupération et leur compatibilité avec les plateformes. Cette comparaison détaille ces différences afin d’aider à identifier la stratégie optimale pour des environnements informatiques spécifiques, qu’il s’agisse de prendre en charge la virtualisation à grande échelle ou d’assurer une récupération granulaire et rapide des applications.
 
-**Comparaison des fonctionnalités : SafeKit VM HA vs clustering HA applicatif SafeKit**
+**Comparaison des fonctionnalités : Clustering HA de VM SafeKit vs. Clustering HA applicative SafeKit**
 
-Critère de comparaison | VM HA avec module SafeKit Hyper-V ou KVM | HA applicative avec modules applicatifs SafeKit  
+Fonction de comparaison | HA de VM avec le module SafeKit Hyper-V ou KVM | HA applicative avec les modules d’application SafeKit  
 ---|---|---  
-Périmètre du basculement | SafeKit dans 2 hyperviseurs : réplication et basculement de la VM complète. | SafeKit sur 2 machines virtuelles ou physiques : réplication et basculement au niveau applicatif.  
-Données répliquées | Réplication d’un volume plus important de données (application + système d’exploitation). | Réplication uniquement des données applicatives, réduisant le volume de données.  
-Processus et vitesse de reprise (RTO) | Redémarrage de la VM sur l’hyperviseur 2 si l’hyperviseur 1 tombe. Le temps de reprise dépend du redémarrage de l’OS. Vérification de la VM et mécanisme de basculement. | Temps de reprise rapide avec redémarrage de l’application sur OS2 si le serveur 1 tombe. Typiquement autour d’une minute ou moins (RTO faible). Vérification applicative et basculement logiciel.  
-Installation | L’application est installée une seule fois dans une VM. | L’application est installée sur deux nœuds.  
-Configuration | Solution générique pour toute application / OS exécuté dans la VM. <br>• Ne nécessite pas une connaissance technique de l’application installée dans la VM.<br>• Solution idéale si vous ne connaissez pas le fonctionnement interne de l’application.<br>• Il suffit de définir l’emplacement des fichiers de la VM.  | Nécessite une compréhension technique de l’application elle-même. <br>• Quels services doivent être redémarrés.<br>• Les répertoires applicatifs à répliquer en temps réel.<br>• La configuration d’une adresse IP virtuelle pour le basculement.   
-Compatibilité plateforme | Compatible avec Windows/Hyper-V et Linux/KVM, mais pas avec VMware. | Indépendant de la plateforme ; fonctionne sur machines physiques ou virtuelles, infrastructures cloud et tout hyperviseur, y compris VMware.  
-Cas d’usage idéal | Idéal pour gérer des environnements complexes avec plusieurs applications réparties sur plusieurs VM via une politique HA unique. | Idéal pour intégrer la haute disponibilité directement au sein d’une solution logicielle, indépendamment du matériel ou de l’hyperviseur.  
+Portée du basculement | SafeKit à l’intérieur de 2 hyperviseurs : réplication et basculement de la VM complète. | SafeKit à l’intérieur de 2 machines virtuelles ou physiques : réplication et basculement au niveau de l’application.  
+Données répliquées | Réplique davantage de données (application + système d’exploitation). | Ne réplique que les données d’application, ce qui réduit les volumes de données.  
+Processus et vitesse de récupération (RTO) | Redémarrage de la VM sur l’hyperviseur 2 si l’hyperviseur 1 plante. Le temps de récupération dépend du redémarrage du système d’exploitation. Vérificateur de VM et mécanisme de basculement. | Temps de récupération rapide avec redémarrage de l’application sur OS2 si le serveur 1 tombe en panne. Généralement environ 1 minute ou moins (RTO faible). Vérificateur d’application et basculement logiciel.  
+Installation | L’application est installée une seule fois dans une seule machine virtuelle. | L’application est installée sur deux nœuds.  
+Configuration | Solution générique pour toute application/tout système d’exploitation fonctionnant dans la machine virtuelle. <br> • Il ne nécessite pas de compréhension technique de l’application installée dans la machine virtuelle. <br> • C’est la meilleure solution si vous ne savez pas comment l’application fonctionne. <br> • Vous n’avez qu’à définir l’emplacement des fichiers de la machine virtuelle.  | Cela nécessite une compréhension technique de l’application elle-même. <br> • Quels services doivent être redémarrés. <br> • Les dossiers d’application spécifiques qui nécessitent une réplication en temps réel. <br> • La configuration d’une adresse IP virtuelle pour le basculement.   
+Compatibilité des plateformes | Fonctionne avec Windows / Hyper-V et Linux / KVM, mais n’est pas compatible avec VMware. | Agnostique à la plateforme ; fonctionne avec des machines physiques ou virtuelles, une infrastructure cloud et n’importe quel hyperviseur, y compris VMware.  
+Idéal pour | Idéal pour gérer des environnements complexes avec de multiples applications sur plusieurs machines virtuelles grâce à une seule politique de haute disponibilité. | Idéal pour intégrer la haute disponibilité directement dans une solution logicielle, indépendamment du matériel ou de l’hyperviseur sous-jacent.  
 
