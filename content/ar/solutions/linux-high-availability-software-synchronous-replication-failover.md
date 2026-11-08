@@ -1,13 +1,14 @@
 ---
-title: "أبسط حلول التوافر العالي Linux : النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل على عقدتين"
+title: "أبسط طرق تحقيق التوافر العالي Linux: النسخ المتزامن وإعادة توجيه حركة المرور بين عقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/linux-high-availability-software-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق خاصية التوافر العالي Linux . يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SAN) مع نسخ متزامن وتجاوز تلقائي في حالة الفشل - لا يتطلب ذلك Active Directory أو مهارات متخصصة."
+description: "أبسط طريقة لتطبيق التوافر العالي Linux. يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SANless) مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر أي خدمات دليل (AD) أو مهارات متخصصة."
 category: "solutions"
 lang: "ar"
-topics: "كيفية عمل مجموعة SafeKit Mirror بدون SAN مع Linux ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Linux عالية التوفر بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع Linux ؟، قيود التوفر العالي SafeKit ، مقارنة: SafeKit لـ Linux مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ mirror ، 🔍 استكشف SafeKit"
+topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Linux، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Linux عالية التوافر بدون شبكة تخزين (SANless)؟، كيف تعمل مجموعة mirror SafeKit مع Linux؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لنظام Linux مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# أبسط حلول التوافر العالي Linux : النسخ المتزامن والتحويل التلقائي في حالة الفشل على عقدتين {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
+# أبسط طرق تحقيق التوافر العالي Linux: النسخ المتزامن وإعادة توجيه حركة المرور بين عقدتين {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="Linux" guide="/ar/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

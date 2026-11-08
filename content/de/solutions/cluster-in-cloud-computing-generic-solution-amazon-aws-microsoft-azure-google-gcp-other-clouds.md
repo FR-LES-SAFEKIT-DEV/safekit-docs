@@ -1,13 +1,14 @@
 ---
-title: "Cluster im Cloud Computing: Eine generische Lösung für Amazon AWS , Microsoft Azure , Google GCP und andere Clouds"
+title: "Cluster im Cloud-Computing: eine generische Lösung für Amazon AWS, Microsoft Azure, Google GCP und andere Clouds"
 canonical: "https://safekit.eviden.com/de/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
-description: "Wie die Eviden SafeKit Software eine generische Lösung für Cluster im Cloud Computing bietet (Amazon AWS , Microsoft Azure , Google GCP und andere Clouds)"
+description: "Wie die Eviden SafeKit Software eine generische Lösung für Cluster im Cloud-Computing (Amazon AWS, Microsoft Azure, Google GCP und andere Clouds) bereitstellt"
 category: "solutions"
 lang: "de"
-topics: "Entdecken Sie SafeKit in Microsoft Azure , entdecken Sie SafeKit in Google GCP , entdecken Sie SafeKit in Amazon AWS , weitere Cloud-Lösungen mit Eviden SafeKit , 🔍 SafeKit entdecken"
+topics: "Entdecken Sie SafeKit in Microsoft Azure, Entdecken Sie SafeKit in Google GCP, Entdecken Sie SafeKit in Amazon AWS, Weitere Cloud-Lösungen mit Eviden SafeKit, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 ---
 
-# Cluster im Cloud Computing: Eine generische Lösung für Amazon AWS , Microsoft Azure , Google GCP und andere Clouds {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
+# Cluster im Cloud-Computing: eine generische Lösung für Amazon AWS, Microsoft Azure, Google GCP und andere Clouds {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
 
 
 {{%  insert-safekit-all-cloud-solutions-de  %}}
@@ -15,9 +16,9 @@ topics: "Entdecken Sie SafeKit in Microsoft Azure , entdecken Sie SafeKit in Goo
 
 ## Weitere Cloud-Lösungen mit Eviden SafeKit {#other-cloud-solutions-with-eviden-safekit}
 
-[ Generische Wolke Mirror > ](</de/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
+[Generischer Cloud-Mirror >](</de/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ Generische Wolke <span class="notranslate farm-term" translate="no">Farm</span> > ](</de/solutions/cloud-load-balancing-cluster-failover/>)
+[Generische Cloud <span class="notranslate farm-term" translate="no">Farm</span> >](</de/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-de  %}}

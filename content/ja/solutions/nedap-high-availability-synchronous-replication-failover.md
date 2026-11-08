@@ -1,13 +1,14 @@
 ---
-title: "最もシンプルなNedap高可用性：2ノード同期レプリケーションとフェイルオーバー"
+title: "Nedap 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/nedap-high-availability-synchronous-replication-failover/"
-description: "実装する最も簡単な方法 Nedap 高可用性。 SafeKit 同期レプリケーションと自動フェイルオーバーを備えた2ノードのSANレスクラスタを提供します。ADや特別なスキルは必要ありません。"
+description: "Nedap High Availability を実装する最も簡単な方法。SafeKit は、同期レプリケーションと自動フェイルオーバーを備えた 2 ノードの SAN レス・クラスターを提供します。AD や専門的なスキルは必要ありません。"
 category: "solutions"
 lang: "ja"
-topics: "SANレスSafeKit MirrorクラスタがNedapとどのように連携するか、目次、 SafeKitソフトウェアがどのようにして SANレスNedap高可用性クラスタを簡単に実装するのか、 SafeKit mirrorクラスタがNedapとどのように連携するか、 SafeKit高可用性の制限、比較: SafeKitとNedapと他のクラスタリング ソリューション、ビデオ ガイド: SafeKit HA mirrorクラスタの構成、 SafeKit 、セキュリティ マーケットで認められたソリューション、🔍 SafeKit を探索する"
+topics: "SANless SafeKit mirror クラスターと Nedap の連携方法、目次、SafeKit ソフトウェアは、SAN レスの Nedap 高可用性クラスターどのように簡単に実装するのか？、SafeKit mirror クラスターが Nedap とどのように連携しますか？、SafeKit High Availability の制限事項、比較：Nedap 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# 最もシンプルな高可用性Nedap : 2ノード同期レプリケーションとフェイルオーバー {#the-simplest-nedap-high-availability-2-node-synchronous-replication--failover}
+# Nedap 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-nedap-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Nedap" guide="/ja/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}

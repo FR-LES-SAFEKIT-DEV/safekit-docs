@@ -1,13 +1,14 @@
 ---
-title: "最もシンプルなWindows高可用性：2ノード同期レプリケーションとフェイルオーバー"
+title: "Windows 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/windows-high-availability-software-synchronous-replication-failover/"
-description: "実装する最も簡単な方法 Windows 高可用性。 SafeKit 同期レプリケーションと自動フェイルオーバーを備えた2ノードのSANレスクラスタを提供します。ADや特別なスキルは必要ありません。"
+description: "Windows 高可用性を実装する最も簡単な方法。SafeKit は、同期レプリケーションと自動フェイルオーバーを備えた 2 ノードの SAN レス・クラスターを提供します。AD や専門的なスキルは必要ありません。"
 category: "solutions"
 lang: "ja"
-topics: "SANレスSafeKit MirrorクラスタがWindowsとどのように連携するか、目次、 SafeKitソフトウェアがSANレスWindows高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがWindowsとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとWindowsと他のクラスタリングソリューション、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit を探索する"
+topics: "SANless SafeKit mirror クラスターが Windows で動作する仕組み、目次、SafeKit ソフトウェアは、SAN レスの Windows 高可用性クラスターをどのように簡単に実装しますか？、SafeKit mirror クラスターが Windows でどのように動作しますか？、SafeKit High Availability の制限事項、比較：SafeKit for Windows とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# 最もシンプルな高可用性Windows : 2ノード同期レプリケーションとフェイルオーバー {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
+# Windows 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Windows" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

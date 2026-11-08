@@ -1,13 +1,14 @@
 ---
-title: "共有ストレージを使用しないシンプルなLinux KVM高可用性"
+title: "共有ストレージなしで実現するシンプルな Linux KVM 高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
-description: "SANなしでLinux KVMの高可用性を実現します。SafeKitは、2ノードKVMクラスタ向けに同期レプリケーションと自動フェイルオーバーを提供します。Linux VMの冗長性を簡素化し、総所有コスト（TCO）を削減しましょう。"
+description: "SAN なしで Linux KVM 高可用性を実現。SafeKit は、2 ノード KVM クラスターに同期レプリケーションと自動フェイルオーバーを提供します。Linux VM 冗長性を簡素化し、TCO を削減しましょう。"
 category: "solutions"
 lang: "ja"
-topics: "SafeKit for KVM: 2ノードSANレスKVMクラスタ、目次、SafeKitソフトウェアはSAN上の共有ストレージなしでKVM高可用性クラスタをどのように簡単に実装するのか？、SafeKit KVMクラスタの仕組み、SafeKit高可用性の制限事項、比較：SafeKit for KVMと従来のクラスタリング、ビデオガイド：SafeKit HAクラスタをKVM用に構成する、🔍 SafeKit を探索する"
+topics: "SafeKit for KVM：2 ノード SAN レス KVM クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで KVM 高可用性クラスターどのように簡単に実装しますか？、SafeKit KVM クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：KVM 向け SafeKit と従来のクラスタリング、ビデオガイド：KVM 向け SafeKit HA クラスターの構成、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# 共有ストレージを使用しないシンプルなLinux KVM高可用性 {#simple-linux-kvm-high-availability-without-shared-storage}
+# 共有ストレージなしで実現するシンプルな Linux KVM 高可用性 {#simple-linux-kvm-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-ja app="KVM"  %}}

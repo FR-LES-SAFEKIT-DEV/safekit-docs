@@ -1,15 +1,17 @@
 ---
-title: "SafeKit: bilanciamento del carico Microsoft Azure e alta disponibilità delle applicazioni con cluster Farm"
+title: "SafeKit: bilanciamento del carico di Microsoft Azure e cluster farm ad alta disponibilità delle applicazioni"
 canonical: "https://safekit.eviden.com/it/solutions/azure-load-balancing-cluster-failover/"
-description: "Migliora Azure Load Balancer con il monitoraggio intelligente delle applicazioni di SafeKit. Ottieni un'alta disponibilità senza interruzioni con controlli di integrità approfonditi, autoriparazione automatica e failover per cluster Farm mission-critical."
+description: "Migliora Azure Load Balancer con il monitoraggio intelligente delle applicazioni di SafeKit. Ottieni un’elevata disponibilità senza interruzioni con controlli approfonditi dello stato di salute, ripristino automatico e failover per cluster farm mission-critical."
 category: "solutions"
 lang: "it"
-topics: "Potenziare il bilanciatore di carico cloud con monitoraggio a livello applicativo e autoriparazione, Indice dei contenuti, Come implementa facilmente il software SafeKit un cluster di Network Load Balancing (NLB) per Azure?, Come funziona il cluster farm SafeKit con Azure?, Confronto: cluster Farm SafeKit on-premises e cluster Farm SafeKit nel cloud, Guida video: configurazione di un cluster NLB Farm SafeKit, 🔍 Esplora SafeKit"
+topics: "Migliora il Cloud Load Balancer con il monitoraggio a livello di applicazione e l’autoriparazione, Indice, In che modo il software SafeKit implementa semplicemente un cluster di bilanciamento del carico di rete (NLB) Azure?, Come funziona il cluster farm SafeKit con Azure?, Confronto: cluster farm SafeKit On-Premises e cluster farm SafeKit nel Cloud, Guida video: configurazione di un cluster NLB farm SafeKit, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 ---
 
-# SafeKit: bilanciamento del carico Microsoft Azure e alta disponibilità delle applicazioni con cluster <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: bilanciamento del carico di Microsoft Azure e cluster farm ad alta disponibilità delle applicazioni {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
 
-{{%  insert-safekit-solution-farm-cloud-it app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}
+
+{{%  insert-safekit-solution-farm-cloud-it app="Azure" guide="/it/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}
 
 {{%  insert-safekit-hub-it  %}}
 

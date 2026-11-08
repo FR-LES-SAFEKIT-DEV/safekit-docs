@@ -1,13 +1,14 @@
 ---
-title: "最もシンプルなMariaDB高可用性：2ノード同期レプリケーションとフェイルオーバー"
+title: "最もシンプルな MariaDB 高可用性：2 ノード同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
-description: "実装する最も簡単な方法 MariaDB 高可用性。 SafeKit 同期レプリケーションと自動フェイルオーバーを備えた2ノードのSANレスクラスタを提供します。ADや特別なスキルは必要ありません。"
+description: "MariaDB 高可用性を実装する最も簡単な方法。SafeKit は、同期レプリケーションと自動フェイルオーバーを備えた 2 ノードの SAN レスクラスターを提供します。AD や専門的なスキルは必要ありません。"
 category: "solutions"
 lang: "ja"
-topics: "SANレスSafeKit MirrorクラスタがMariaDBとどのように連携するか、目次、 SafeKitソフトウェアがSANレスMariaDB高可用性クラスタをどのように簡単に実装するか、 SafeKit mirrorクラスタがMariaDBとどのように連携するか、 SafeKit高可用性の制限、比較： SafeKitとMariaDBと他のクラスタリングソリューション、ビデオガイド： SafeKit HA mirrorクラスタの構成、🔍 SafeKit を探索する"
+topics: "SANless SafeKit mirror クラスターと MariaDB の連携方法、目次、SafeKit ソフトウェアは、SAN レスの MariaDB 高可用性クラスターどのように簡単に実装するのか？、SafeKit mirror クラスターが MariaDB とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit for MariaDB とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# 最もシンプルな高可用性MariaDB : 2ノード同期レプリケーションとフェイルオーバー {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
+# 最もシンプルな MariaDB 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="MariaDB" guide="/ja/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

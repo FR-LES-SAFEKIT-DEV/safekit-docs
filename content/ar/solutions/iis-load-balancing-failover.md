@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : برنامج IIS المتكامل لموازنة الأحمال والتوافر العالي"
+title: "SafeKit: برنامج متكامل لموازنة تحميل IIS وتوفير درجة عالية من التوافر"
 canonical: "https://safekit.eviden.com/ar/solutions/iis-load-balancing-failover/"
-description: "يوفر SafeKit حلاً قوياً لموازنة الأحمال وتوفير توافر عالٍ، وهو حل برمجي بالكامل. استبدل أجهزة موازنة الأحمال المعقدة بـ IIS SafeKit يتميز ببروتوكول IP افتراضي مدمج، ومراقبة التطبيقات، والتحويل التلقائي في حالة الأعطال. يمكنك بسهولة نشر مجموعة IIS على خوادم Windows القياسية اليوم."
+description: "يوفر SafeKit حلاً قوياً ومقتصراً على البرمجيات لتحقيق موازنة تحميل IIS والتوافر العالي. استبدل أجهزة NLB المعقدة بـ SafeKit الذي يضم عنوان IP ظاهري متكامل، ومراقبة التطبيقات، وتجاوز تلقائي للأعطال. يمكنك بسهولة نشر مجموعة IIS على خوادم Windows القياسية اليوم."
 category: "solutions"
 lang: "ar"
-topics: "مجموعة SafeKit Farm : موازنة تحميل الشبكة (NLB) البرمجية فقط والتحويل التلقائي في حالة الفشل لـ IIS ، جدول المحتويات، كيف يقوم برنامج SafeKit بتنفيذ مجموعة موازنة تحميل الشبكة (NLB) لـ IIS ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع IIS ؟، مقارنة: مجموعة SafeKit Farm لـ IIS مقابل حلول تجميع NLB الأخرى، دليل فيديو: تكوين مجموعة NLB لـ SafeKit Farm ، 🔍 استكشف SafeKit"
+topics: "مجموعة SafeKit farm: موازن تحميل الشبكة (NLB) القائم على البرمجيات فقط وتجاوز الفشل التلقائي لـ IIS، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) الخاصة بخادم معلومات الإنترنت IIS) ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع IIS؟، مقارنة: مجموعة SafeKit farm لـ IIS مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit : برنامج متكامل لموازنة الأحمال والتوافر العالي IIS {#safekit-all-in-one-iis-load-balancing--high-availability-software}
+# SafeKit: برنامج متكامل لموازنة تحميل IIS وتوفير درجة عالية من التوافر {#safekit-all-in-one-iis-load-balancing--high-availability-software}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="IIS" guide="/ar/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

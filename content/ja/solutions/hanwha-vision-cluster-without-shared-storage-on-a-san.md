@@ -1,13 +1,14 @@
 ---
-title: "SafeKit Hanwha Vision向け高可用性：SANレスビル管理冗長性"
+title: "Hanwha Vision 向け SafeKit 高可用性：SAN レスビル管理冗長化"
 canonical: "https://safekit.eviden.com/ja/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
-description: "SafeKitでHanwha Visionの24時間365日稼働を確保しましょう。当社の最もシンプルな2ノードSANレスクラスタは、SANなしで自動フェイルオーバーとリアルタイムレプリケーションを実現します。ビル管理システムの高可用性を実現します。無料トライアルをダウンロードしてください。"
+description: "SafeKit で Hanwha Vision の 24 時間年中無休の稼働時間を確保しましょう。当社の最もシンプルな 2 ノード SAN レスクラスターは、SAN なしで自動フェイルオーバーとリアルタイムレプリケーションを提供します。ビル管理システムの高可用性を実現します。無料トライアルをダウンロードしてください。"
 category: "solutions"
 lang: "ja"
-topics: "Hanwha Vision 用SafeKit : 2 ノード SAN レス Hyper-V クラスタ、目次、 SafeKitソフトウェアが SAN 上の共有ストレージなしで Hanwha Vision 高可用性クラスタを簡単に実装する方法、 SafeKit Hanwha Vision クラスタの仕組み、 SafeKit高可用性の制限、比較: Hanwha Vision 用SafeKitとネイティブ Hyper-V クラスタリング、ビデオ ガイド: Hanwha Vision 用SafeKit HA クラスタの構成、セキュリティ市場で認められたソリューションであるSafeKit 、🔍 SafeKit を探索する"
+topics: "Hanwha Vision 向け SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、Hanwha Vision 高可用性クラスターどのように簡単に実装しますか？、SafeKit Hanwha Vision クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Hanwha Vision 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Hanwha Vision 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# SafeKit Hanwha Vision向け高可用性：SANレスビル管理冗長性 {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
+# Hanwha Vision 向け SafeKit 高可用性：SAN レスビル管理冗長化 {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Hanwha Vision"  %}}

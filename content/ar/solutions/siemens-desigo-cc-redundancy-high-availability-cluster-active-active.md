@@ -1,13 +1,14 @@
 ---
-title: "نظام سيمنز ديزيجو سي سي عالي التوافر: نظام تكرار ثنائي العقد بدون شبكة تخزين"
+title: "التوافر العالي لبرنامج Siemens Desigo CC: التكرار بدون شبكة SAN بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
-description: "ضمان استمرارية عمل نظام Siemens Desigo CC على مدار الساعة طوال أيام الأسبوع باستخدام SafeKit . تحقيق توافر عالٍ بدون شبكة تخزين (SAN)، ونسخ متماثل فوري، وتجاوز تلقائي للأعطال على عقدتين فقط. خفض التكلفة الإجمالية للملكية عن طريق إلغاء التخزين المشترك."
+description: "اضمن وقت تشغيل على مدار الساعة طوال أيام الأسبوع لنظام Siemens Desigo CC باستخدام SafeKit. حقق توفرًا عاليًا بدون شبكة SAN، ونسخًا متماثلًا في الوقت الفعلي، وتحويلًا تلقائيًا في حالة الفشل على عقدتين فقط. خفض التكلفة الإجمالية للملكية عن طريق التخلص من التخزين المشترك."
 category: "solutions"
 lang: "ar"
-topics: "SafeKit لـ Siemens Desigo CC: مجموعة Hyper-V ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Siemens Desigo CC عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit لـ Siemens Desigo CC؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لـ Siemens Desigo CC مقابل تجميع Hyper-V الأصلي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ Siemens Desigo CC، SafeKit ، حل معترف به في سوق الأمان، 🔍 استكشف SafeKit"
+topics: "SafeKit لبرنامج Siemens Desigo CC: مجموعة Hyper-V بدون شبكة SAN مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Siemens Desigo CC عالية التوافر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Siemens Desigo CC؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Siemens Desigo CC مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لبرنامج Siemens Desigo CC، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# نظام سيمنز ديسيجو سي سي عالي التوافر: نظام تكرار ثنائي العقد بدون شبكة تخزين {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
+# التوافر العالي لبرنامج Siemens Desigo CC: التكرار بدون شبكة SAN بعقدتين {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens Desigo CC"  %}}

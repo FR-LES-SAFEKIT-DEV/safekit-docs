@@ -1,13 +1,14 @@
 ---
-title: "最简单的Microsoft SQL Server高可用性：双节点同步复制和故障转移"
+title: "最简单的 Microsoft SQL Server 高可用性：双节点同步复制和故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/sql-server-high-availability-synchronous-replication-failover/"
-description: "实现Microsoft SQL Server高可用性的最简单方法是使用SafeKit构建一个双节点无 SAN 集群，该集群具有同步复制和自动故障转移功能——无需 AD 或专业技能。"
+description: "实施 Microsoft SQL Server 高可用性的最简单方法。SafeKit 提供了一个具有同步复制和自动转移功能的双节点无共享集群——无需 AD 或专业技能。"
 category: "solutions"
 lang: "zh-hans"
-topics: "无 SAN 集群SafeKit Mirror如何与Microsoft和SQL Server协同工作？目录； SafeKit软件如何轻松实现无 SAN 集群Microsoft SQL Server ？ SafeKit mirror集群如何与Microsoft和SQL Server协同工作？ SafeKit高可用性限制；比较： SafeKit与Microsoft和SQL Server以及其他集群解决方案；视频指南：配置SafeKit高可用性集群mirror ；🔍 探索 SafeKit"
+topics: "无共享存储的 SafeKit mirror 集群如何与 Microsoft SQL Server 配合使用、目录、SafeKit 软件如何简单地实现无共享存储的 Microsoft SQL Server 高可用性集群？、SafeKit mirror 集群如何与 Microsoft SQL Server 配合使用？、SafeKit 高可用性限制、比较：适用于 Microsoft SQL Server 的 SafeKit 与其他集群解决方案、视频指南：配置 SafeKit HA mirror 集群、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# 最简单的Microsoft SQL Server高可用性：双节点同步复制和故障转移 {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# 最简单的 Microsoft SQL Server 高可用性：双节点同步复制和故障转移 {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Microsoft SQL Server" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

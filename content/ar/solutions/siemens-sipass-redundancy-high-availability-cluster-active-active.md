@@ -1,13 +1,14 @@
 ---
-title: "التوافر العالي والتكرار لنظام التحكم في الوصول SiPass من سيمنز: مجموعة عقدتين بدون شبكة تخزين"
+title: "التوافر العالي والتكرار لنظام التحكم في الوصول Siemens SiPass: مجموعة من عقدتين بدون شبكة تخزين (SANless)"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
-description: "يضمن نظام التحكم بالوصول Siemens SiPass استمرارية عمل النظام على مدار الساعة. يوفر SafeKit إمكانية الوصول العالي دون الحاجة إلى شبكة تخزين (SAN) مع نسخ متماثل فوري وتجاوز تلقائي في حالة الأعطال على خادمين قياسيين. لا يتطلب الأمر شبكة تخزين أو مهارات تقنية معلومات متخصصة. حمّل النسخة التجريبية المجانية."
+description: "اضمن وقت تشغيل على مدار الساعة طوال أيام الأسبوع لنظام التحكم في الوصول Siemens SiPass. يوفر SafeKit توفرًا عاليًا بسيطًا بدون شبكة SAN مع النسخ المتماثل في الوقت الفعلي وتجاوز الأعطال التلقائي على خادمين قياسيين. لا يلزم وجود شبكة SAN أو مهارات تكنولوجيا معلومات متخصصة. قم بتنزيل النسخة التجريبية المجانية."
 category: "solutions"
 lang: "ar"
-topics: "SafeKit لـ Siemens SiPass: مجموعة Hyper-V ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Siemens SiPass عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit Siemens SiPass؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لـ Siemens SiPass مقابل تجميع Hyper-V الأصلي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ Siemens SiPass، SafeKit ، حل معترف به في سوق الأمان، 🔍 استكشف SafeKit"
+topics: "SafeKit لـ Siemens SiPass: مجموعة Hyper-V بدون شبكة SAN مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Siemens SiPass عالية التوافر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Siemens SiPass؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Siemens SiPass مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لـ Siemens SiPass، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# التوافر العالي والتكرار لنظام التحكم في الوصول SiPass من سيمنز: مجموعة عقدتين بدون شبكة تخزين {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}
+# التوافر العالي والتكرار لنظام التحكم في الوصول Siemens SiPass: مجموعة من عقدتين بدون شبكة تخزين (SANless) {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SiPass"  %}}

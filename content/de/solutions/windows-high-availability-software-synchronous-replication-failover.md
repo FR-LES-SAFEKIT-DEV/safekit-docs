@@ -1,13 +1,14 @@
 ---
-title: "Die einfachste Hochverfügbarkeitslösung Windows : Synchrone Replikation und Failover auf zwei Knoten"
+title: "Die einfachste Hochverfügbarkeit Windows: synchrone Replikation und Failover mit 2 Knoten"
 canonical: "https://safekit.eviden.com/de/solutions/windows-high-availability-software-synchronous-replication-failover/"
-description: "Die einfachste Möglichkeit zur Implementierung von Hochverfügbarkeit Windows . SafeKit bietet einen SAN-losen Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover – weder Active Directory noch spezielle Kenntnisse sind erforderlich."
+description: "Die einfachste Methode zur Implementierung Windows High Availability. SafeKit bietet einen SANless-Cluster mit 2 Knoten, synchroner Replikation und automatischem Failover – keine AD- oder Spezialkenntnisse erforderlich."
 category: "solutions"
 lang: "de"
-topics: "Wie der SANless-Cluster SafeKit Mirror mit Windows zusammenarbeitet, Inhaltsverzeichnis, Wie implementiert die Software SafeKit einen SANless-Cluster Windows mit hoher Verfügbarkeit?, Wie funktioniert der Cluster SafeKit mirror mit Windows ?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit für Windows vs. andere Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Clusters mirror , 🔍 SafeKit entdecken"
+topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Windows, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless-Windows Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit Windows?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Windows im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 ---
 
-# Die einfachste Hochverfügbarkeitslösung Windows : Synchrone 2-Knoten-Replikation und Failover {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
+# Die einfachste Hochverfügbarkeit Windows: synchrone Replikation und Failover mit 2 Knoten {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Windows" guide="/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

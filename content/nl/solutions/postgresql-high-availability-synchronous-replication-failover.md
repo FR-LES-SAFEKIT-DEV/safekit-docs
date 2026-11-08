@@ -1,16 +1,17 @@
 ---
-title: "De eenvoudigste PostgreSQL hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten"
+title: "De eenvoudigste PostgreSQL High Availability: 2-node synchrone replicatie en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/postgresql-high-availability-synchronous-replication-failover/"
-description: "De eenvoudigste manier om PostgreSQL High Availability te implementeren. SafeKit biedt een SAN-loos cluster met 2 knooppunten, synchrone replicatie en automatische failover, zonder dat er AD- of gespecialiseerde vaardigheden vereist zijn."
+description: "De eenvoudigste manier om PostgreSQL High Availability te implementeren. SafeKit biedt een SANless-cluster met 2 knooppunten, synchrone replicatie en automatische failover – geen AD of gespecialiseerde vaardigheden vereist."
 category: "solutions"
 lang: "nl"
-topics: "Hoe het SANless SafeKit Mirror Cluster werkt met PostgreSQL, Inhoudsopgave, Hoe de SafeKit-software eenvoudig een SANless PostgreSQL-cluster met hoge beschikbaarheid implementeert?, Hoe het SafeKit-spiegelcluster werkt met PostgreSQL?, SafeKit-beperkingen voor hoge beschikbaarheid, Vergelijking: SafeKit voor PostgreSQL versus andere clusteroplossingen, Videogids: Een SafeKit HA-spiegelcluster configureren, 🔍 Ontdek SafeKit"
+topics: "Hoe de SANless SafeKit mirror-cluster werkt met PostgreSQL, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een SANless PostgreSQL cluster met hoge beschikbaarheid?, Hoe werkt het SafeKit mirror-cluster met PostgreSQL?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor PostgreSQL versus andere clusteringoplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
 ---
 
-# De eenvoudigste PostgreSQL hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}
+# De eenvoudigste PostgreSQL High Availability: 2-node synchrone replicatie en failover {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}
 
 
-{{%  insert-safekit-solution-mirror-2-nl app="PostgreSQL" guide="/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}
+{{%  insert-safekit-solution-mirror-2-nl app="PostgreSQL" guide="/nl/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}
 
 {{%  insert-safekit-hub-nl  %}}
 

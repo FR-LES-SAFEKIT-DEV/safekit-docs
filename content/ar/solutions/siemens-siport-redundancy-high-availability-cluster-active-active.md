@@ -1,13 +1,14 @@
 ---
-title: "توافر عالٍ لنظام التحكم في الوصول Siemens SIPORT: التكرار والتحويل التلقائي بدون شبكة تخزين"
+title: "التوافر العالي لنظام التحكم في الوصول Siemens SIPORT: التكرار وتجاوز الأعطال بدون شبكة SAN"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
-description: "ضمان استمرارية عمل نظام Siemens SIPORT على مدار الساعة طوال أيام الأسبوع مع SafeKit . توفر مجموعتنا المكونة من عقدتين بدون شبكة تخزين (SAN) نسخًا متزامنًا وتجاوزًا تلقائيًا للأعطال دون تكلفة شبكة تخزين. حل بسيط وموثوق وعالي الأداء للتكرار. حمّل النسخة التجريبية المجانية."
+description: '"اضمن وقت تشغيل على مدار الساعة طوال أيام الأسبوع لـ Siemens SIPORT باستخدام SafeKit. توفر مجموعتنا المكونة من عقدتين بدون شبكة SAN نسخًا متماثلًا متزامنًا وتجاوزًا تلقائيًا للأعطال دون تكلفة شبكة SAN. تكرار بسيط وموثوق وعالي الأداء. قم بتنزيل النسخة التجريبية المجانية."'
 category: "solutions"
 lang: "ar"
-topics: "SafeKit لـ Siemens SIPORT: مجموعة Hyper-V ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Siemens SIPORT عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit لـ Siemens SIPORT؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لـ Siemens SIPORT مقابل تجميع Hyper-V الأصلي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ Siemens SIPORT، SafeKit ، حل معترف به في سوق الأمان، 🔍 استكشف SafeKit"
+topics: "SafeKit لشركة Siemens SIPORT: مجموعة Hyper-V بدون شبكة SAN مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Siemens SIPORT ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Siemens SIPORT؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Siemens SIPORT مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لـ Siemens SIPORT، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# توافر عالٍ لنظام التحكم في الوصول Siemens SIPORT: التكرار والتحويل التلقائي بدون شبكة تخزين {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
+# التوافر العالي لنظام التحكم في الوصول Siemens SIPORT: التكرار وتجاوز الأعطال بدون شبكة SAN {#high-availability-for-siemens-siport-access-control-sanless-redundancy--failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SIPORT"  %}}

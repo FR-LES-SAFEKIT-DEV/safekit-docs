@@ -1,13 +1,14 @@
 ---
-title: "إمكانية الوصول العالي إلى نظام لينكس KVM البسيط بدون وحدة تخزين مشتركة"
+title: "توفير إمكانية التوافر العالي البسيطة Linux KVM بدون تخزين مشترك"
 canonical: "https://safekit.eviden.com/ar/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
-description: "حقق توافرًا عاليًا لأنظمة لينكس KVM بدون الحاجة إلى شبكة تخزين (SAN). يوفر SafeKit نسخًا متزامنًا وتجاوزًا تلقائيًا للأعطال لمجموعات KVM ثنائية العقد. بسّط عملية تكرار أنظمة لينكس الافتراضية وخفّض التكلفة الإجمالية للملكية اليوم."
+description: "حقق توافرًا عاليًا Linux KVM بدون شبكة SAN. يوفر SafeKit النسخ المتماثل المتزامن وتجاوز الفشل التلقائي لمجموعات KVM ذات العقدتين. بسّط تكرار جهاز Linux الافتراضي الخاص بك وخفّض التكلفة الإجمالية للملكية اليوم."
 category: "solutions"
 lang: "ar"
-topics: "SafeKit لـ KVM: مجموعة KVM ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة KVM عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit KVM؟، قيود التوفر العالي لـ SafeKit، مقارنة: SafeKit لـ KVM مقابل التجميع التقليدي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ KVM، 🔍 استكشف SafeKit"
+topics: "SafeKit for KVM: مجموعة KVM بدون شبكة تخزين (SANless) مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة KVM عالية التوافر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit KVM؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ KVM مقابل التجميع التقليدي، دليل الفيديو: تهيئة مجموعة SafeKit HA لـ KVM، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# إمكانية الوصول العالي إلى نظام لينكس KVM البسيط بدون وحدة تخزين مشتركة {#simple-linux-kvm-high-availability-without-shared-storage}
+# توفير إمكانية التوافر العالي البسيطة Linux KVM بدون تخزين مشترك {#simple-linux-kvm-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-ar app="KVM"  %}}

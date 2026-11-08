@@ -1,13 +1,14 @@
 ---
-title: "지멘스 SIMATIC PCS 7의 고가용성: 2노드 SANless 클러스터"
+title: "Siemens SIMATIC PCS 7용 고가용성: 2노드 SANless 클러스터"
 canonical: "https://safekit.eviden.com/ko/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
-description: "SAN 없이 Siemens SIMATIC PCS 7에 고가용성을 구현하세요. SafeKit HA는 동기식 복제, 2노드 페일오버 및 데이터 손실 없는 보안을 제공합니다."
+description: "SAN 없이 Siemens SIMATIC PCS 7의 고가용성을 구현하세요. SafeKit HA는 동기 복제, 2노드 장애 조치 및 제로 데이터 손실을 제공합니다."
 category: "solutions"
 lang: "ko"
-topics: "지멘스 SIMATIC PCS7용 SafeKit : 2노드 SAN리스 Hyper-V 클러스터, 목차, SafeKit 소프트웨어로 SAN의 공유 스토리지 없이 지멘스 SIMATIC PCS7 고가용성 클러스터를 간편하게 구현하는 방법, SafeKit 지멘스 SIMATIC PCS7 클러스터 작동 방식, SafeKit 고가용성 제한 사항, 비교: 지멘스 SIMATIC PCS7용 SafeKit 와 네이티브 Hyper-V 클러스터링, 비디오 가이드: 지멘스 SIMATIC PCS7용 SafeKit HA 클러스터 구성, SCADA 시장에서 인정받는 솔루션인 SafeKit , 🔍 SafeKit 살펴보기"
+topics: "Siemens SIMATIC PCS7용 SafeKit: 2노드 SANless Hyper-V 클러스터, 목차, SafeKit 소프트웨어는 SAN에 공유 스토리지가 없는 Siemens SIMATIC PCS7 고가용성 클러스터를 어떻게 간단하게 구현하나요?, SafeKit Siemens SIMATIC PCS7 클러스터는 어떻게 작동하나요?, SafeKit 고가용성 제한 사항, 비교: Siemens SIMATIC PCS7용 SafeKit vs. 기본 Hyper-V 클러스터링, 비디오 가이드: Siemens SIMATIC PCS7용 SafeKit HA 클러스터를 구성, SafeKit, SCADA 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# 지멘스 SIMATIC PCS 7용 고가용성: 2노드 SANless 클러스터 {#high-availability-for-siemens-simatic-pcs-7-2-node-sanless-cluster}
+# Siemens SIMATIC PCS 7용 고가용성: 2노드 SANless 클러스터 {#high-availability-for-siemens-simatic-pcs-7-2-node-sanless-cluster}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Siemens SIMATIC PCS7"  %}}

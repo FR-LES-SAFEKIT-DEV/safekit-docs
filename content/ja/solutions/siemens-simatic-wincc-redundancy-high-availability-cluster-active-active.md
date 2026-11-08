@@ -1,13 +1,14 @@
 ---
-title: "シーメンス SIMATIC WinCC SCADA 高可用性: 2ノードSANレスクラスタ"
+title: "Siemens SIMATIC WinCC SCADA 高可用性：2 ノード SAN レスクラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/"
-description: "SANを使用せずに、Siemens SIMATIC WinCC SCADAの高可用性クラスタを構築する。 SafeKit Hyper-V環境におけるWinCCに対し、2ノード冗長性とフェイルオーバー機能を提供します。"
+description: "SAN なしで Siemens SIMATIC WinCC SCADA 高可用性クラスターを構築します。SafeKit は、Hyper-V の WinCC に 2 ノードの冗長性とフェイルオーバーを提供します。"
 category: "solutions"
 lang: "ja"
-topics: "Siemens SIMATIC WinCC 用SafeKit : 2 ノード SAN レス Hyper-V クラスタ、目次、 SafeKitソフトウェアが SAN 上の共有ストレージなしで Siemens SIMATIC WinCC 高可用性クラスタを簡単に実装する方法、 SafeKit Siemens SIMATIC WinCC クラスタの動作原理、 SafeKit高可用性の制限事項、比較: Siemens SIMATIC WinCC 用SafeKitとネイティブ Hyper-V クラスタリング、ビデオ ガイド: Siemens SIMATIC WinCC 用SafeKit HA クラスタの構成、 SafeKit 、SCADA 市場で定評のあるソリューション、🔍 SafeKit を探索する"
+topics: "Siemens SIMATIC WinCC 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、Siemens SIMATIC WinCC 高可用性クラスターどのように簡単に実装しますか？、SafeKit Siemens SIMATIC WinCC クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens SIMATIC WinCC 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens SIMATIC WinCC 用 SafeKit HA クラスターの構成、SafeKit、SCADA 市場で認められたソリューション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# Siemens SIMATIC WinCC SCADA 高可用性: 2ノードSANレスクラスタ {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}
+# Siemens SIMATIC WinCC SCADA 高可用性：2 ノード SAN レスクラスター {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens SIMATIC WinCC"  %}}

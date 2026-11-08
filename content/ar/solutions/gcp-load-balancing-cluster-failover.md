@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : موازنة الأحمال وتوافر التطبيقات العالي GCP من جوجل، مجموعة Farm"
+title: "SafeKit: موازنة تحميل جوجل GCP مجموعة farm التطبيقات عالية التوافر"
 canonical: "https://safekit.eviden.com/ar/solutions/gcp-load-balancing-cluster-failover/"
-description: "عزز أداء موازن الأحمال GCP باستخدام ميزة مراقبة التطبيقات الذكية SafeKit . حقق توافرًا عاليًا وسلسًا من خلال فحوصات السلامة الشاملة، والإصلاح الذاتي التلقائي، والتحويل التلقائي في حالة الأعطال لمجموعات farm ذات الأهمية البالغة."
+description: "عزّز موازن تحميل GCP بمراقبة التطبيقات الذكية من SafeKit. حقّق توفرًا عاليًا سلسًا مع فحوصات صحية عميقة، وإصلاح ذاتي تلقائي، وتجاوز للأعطال مجموعات farm ذات المهام الحرجة."
 category: "solutions"
 lang: "ar"
-topics: "تحسين موازن أحمال السحابة من خلال مراقبة مستوى التطبيق والإصلاح الذاتي، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة موازنة أحمال الشبكة (NLB) GCP ؟، كيف تعمل مجموعة SafeKit farm مع GCP ؟، مقارنة: مجموعة SafeKit Farm في الموقع مقابل مجموعة SafeKit Farm في السحابة، دليل فيديو: تكوين مجموعة موازنة أحمال الشبكة SafeKit Farm ، 🔍 استكشف SafeKit"
+topics: "تحسين موازن تحميل السحابة من خلال المراقبة على مستوى التطبيق والشفاء الذاتي، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) الخاصة بـ GCP ببساطة؟، كيف تعمل مجموعة SafeKit farm مع GCP؟، مقارنة: مجموعة SafeKit farm المحلية مقابل مجموعة SafeKit farm السحابية، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit : موازنة الأحمال وتوافر التطبيقات العالي من جوجل GCP مجموعة <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-google-gcp-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: موازنة تحميل جوجل GCP مجموعة <span class="notranslate farm-term" translate="no">farm</span> التطبيقات عالية التوافر {#safekit-google-gcp-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="GCP" guide="/ar/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

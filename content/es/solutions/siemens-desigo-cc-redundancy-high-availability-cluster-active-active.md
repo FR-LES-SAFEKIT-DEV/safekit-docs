@@ -1,13 +1,14 @@
 ---
-title: "Siemens Desigo CC Alta Disponibilidad: Redundancia de 2 nodos sin SAN"
+title: "Siemens Desigo CC de alta disponibilidad: redundancia de 2 nodos sin SAN"
 canonical: "https://safekit.eviden.com/es/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
-description: "Garantice la disponibilidad 24/7 para Siemens Desigo CC con SafeKit . Logre alta disponibilidad sin SAN, replicación en tiempo real y conmutación por error automática en solo 2 nodos. Reduzca el costo total de propiedad al eliminar el almacenamiento compartido."
+description: "Garantice la disponibilidad ininterrumpida de Siemens Desigo CC con SafeKit. Consiga alta disponibilidad sin SAN, replicación en tiempo real y conmutación por error automática en solo 2 nodos. Reduzca el coste total de propiedad (TCO) al eliminar el almacenamiento compartido."
 category: "solutions"
 lang: "es"
-topics: "SafeKit para Siemens Desigo CC: clúster Hyper-V sin SAN de 2 nodos, Tabla de contenido, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad de Siemens Desigo CC sin almacenamiento compartido en una SAN?, ¿Cómo funciona el clúster SafeKit de Siemens Desigo CC?, Limitaciones de alta disponibilidad SafeKit , Comparación: SafeKit para Siemens Desigo CC frente a clústeres Hyper-V nativos, Guía en vídeo: Configuración de un clúster HA SafeKit para Siemens Desigo CC, SafeKit , una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"
+topics: "SafeKit para Siemens Desigo CC: clúster Hyper-V sin SAN de 2 nodos, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Siemens Desigo CC sin almacenamiento compartido en una SAN?, ¿Cómo funciona el clúster SafeKit Siemens Desigo CC?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para Siemens Desigo CC frente a la agrupación en clústeres nativa Hyper-V, Guía en vídeo: Configuración de un clúster HA SafeKit para Siemens Desigo CC, SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 ---
 
-# Siemens Desigo CC Alta disponibilidad: Redundancia de 2 nodos sin SAN {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
+# Siemens Desigo CC de alta disponibilidad: redundancia de 2 nodos sin SAN {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-es app="Siemens Desigo CC"  %}}

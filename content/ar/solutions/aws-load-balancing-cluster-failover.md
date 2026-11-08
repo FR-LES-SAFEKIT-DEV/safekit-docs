@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : موازنة الأحمال والتوافر العالي للتطبيقات في Amazon AWS مجموعة Farm"
+title: "SafeKit: مجموعة farm موازنة تحميل وتوافر عالٍ للتطبيقات على Amazon AWS"
 canonical: "https://safekit.eviden.com/ar/solutions/aws-load-balancing-cluster-failover/"
-description: "عزز أداء موازن الأحمال AWS باستخدام ميزة مراقبة التطبيقات الذكية SafeKit . حقق توافرًا عاليًا وسلسًا من خلال فحوصات السلامة الشاملة، والإصلاح الذاتي التلقائي، والتحويل التلقائي في حالة الأعطال لمجموعات farm ذات الأهمية البالغة."
+description: "عزّز موازن تحميل AWS بمراقبة التطبيقات الذكية من SafeKit. حقّق توفُّرًا عاليًا سلسًا مع فحوصات صحية عميقة، ومعالجة ذاتية تلقائية، وتجاوز للأعطال مجموعات farm ذات المهام الحرجة."
 category: "solutions"
 lang: "ar"
-topics: "تحسين موازن أحمال السحابة من خلال مراقبة مستوى التطبيق والإصلاح الذاتي، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة موازنة أحمال الشبكة (NLB) AWS ؟، كيف تعمل مجموعة SafeKit farm مع AWS ؟، مقارنة: مجموعة SafeKit Farm في الموقع مقابل مجموعة SafeKit Farm في السحابة، دليل فيديو: تكوين مجموعة موازنة أحمال الشبكة SafeKit Farm ، 🔍 استكشف SafeKit"
+topics: "تحسين موازن تحميل السحابة من خلال المراقبة على مستوى التطبيق والشفاء الذاتي، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) AWS ببساطة؟، كيف تعمل مجموعة SafeKit farm مع AWS؟، مقارنة: مجموعة SafeKit farm المحلية مقابل مجموعة SafeKit farm السحابية، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit : موازنة الأحمال وتوافر التطبيقات العالي من أمازون AWS مجموعة <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: مجموعة <span class="notranslate farm-term" translate="no">farm</span> موازنة تحميل وتوافر عالٍ للتطبيقات على Amazon AWS {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="AWS" guide="/ar/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

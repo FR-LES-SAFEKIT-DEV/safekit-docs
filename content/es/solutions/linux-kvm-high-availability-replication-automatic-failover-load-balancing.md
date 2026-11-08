@@ -1,13 +1,14 @@
 ---
-title: "Alta disponibilidad sencilla de Linux KVM sin almacenamiento compartido"
+title: "Alta disponibilidad sencilla Linux KVM sin almacenamiento compartido"
 canonical: "https://safekit.eviden.com/es/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
-description: "Logre alta disponibilidad para Linux KVM sin SAN. SafeKit ofrece replicación síncrona y conmutación por error automática para clústeres KVM de 2 nodos. Simplifique la redundancia de sus máquinas virtuales Linux y reduzca el costo total de propiedad hoy mismo."
+description: "Consiga alta disponibilidad Linux KVM sin una SAN. SafeKit proporciona replicación síncrona y conmutación por error automática para clústeres KVM de 2 nodos. Simplifique la redundancia de sus máquinas virtuales Linux y reduzca el TCO hoy mismo."
 category: "solutions"
 lang: "es"
-topics: "SafeKit para KVM: Clúster KVM de 2 nodos sin SAN, Tabla de contenido, ¿Cómo implementa el software SafeKit un clúster KVM de alta disponibilidad sin almacenamiento compartido en una SAN?, ¿Cómo funciona el clúster KVM de SafeKit?, Limitaciones de alta disponibilidad de SafeKit, Comparación: SafeKit para KVM frente a clústeres tradicionales, Guía en vídeo: Configuración de un clúster SafeKit HA para KVM, 🔍 Explora SafeKit"
+topics: "SafeKit para KVM: clúster KVM sin SAN de 2 nodos, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad KVM sin almacenamiento compartido en una SAN?, ¿Cómo funciona el clúster KVM SafeKit?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para KVM frente a la agrupación en clúster tradicional, Guía en vídeo: Configuración de un clúster HA SafeKit para KVM, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 ---
 
-# Alta disponibilidad sencilla de Linux KVM sin almacenamiento compartido {#simple-linux-kvm-high-availability-without-shared-storage}
+# Alta disponibilidad sencilla Linux KVM sin almacenamiento compartido {#simple-linux-kvm-high-availability-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-es app="KVM"  %}}

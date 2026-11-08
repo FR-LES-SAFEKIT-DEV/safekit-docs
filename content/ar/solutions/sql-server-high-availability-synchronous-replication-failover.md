@@ -1,13 +1,14 @@
 ---
-title: "أبسط حلول Microsoft SQL Server للتوافر العالي: النسخ المتزامن والتحويل التلقائي في حالة الفشل على عقدتين"
+title: "أبسط طرق تحقيق التوافر العالي Microsoft SQL Server: النسخ المتماثل المتزامن وتجاوز الفشل بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/sql-server-high-availability-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق خاصية التوافر العالي Microsoft SQL Server . يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SAN) مع نسخ متزامن وتجاوز تلقائي في حالة الفشل - لا يتطلب ذلك Active Directory أو مهارات متخصصة."
+description: "أبسط طريقة لتطبيق ميزة التوافر العالي Microsoft SQL Server. يوفر SafeKit مجموعة من عقدتين بدون شبكة SAN مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر أي مهارات متخصصة أو معرفة بـ AD."
 category: "solutions"
 lang: "ar"
-topics: "كيف تعمل مجموعة SafeKit Mirror بدون SAN مع Microsoft SQL Server ، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة عالية التوفر Microsoft SQL Server بدون SAN؟، كيف تعمل مجموعة SafeKit mirror مع Microsoft SQL Server ؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لـ Microsoft SQL Server مقابل حلول التجميع الأخرى، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر mirror ، 🔍 استكشف SafeKit"
+topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Microsoft SQL Server، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة خوادم Microsoft SQL Server عالية التوافر بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع Microsoft SQL Server؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Microsoft SQL Server مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# أبسط حلول Microsoft SQL Server للتوافر العالي: النسخ المتزامن والتحويل التلقائي في حالة الفشل على عقدتين {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
+# أبسط طرق تحقيق التوافر العالي Microsoft SQL Server: النسخ المتماثل المتزامن وتجاوز الفشل بعقدتين {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="Microsoft SQL Server" guide="/ar/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

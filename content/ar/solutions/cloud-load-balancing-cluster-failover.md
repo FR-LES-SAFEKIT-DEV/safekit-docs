@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : موازنة أحمال السحابة وتوافر التطبيقات العالي، مجموعة Farm"
+title: "SafeKit: موازنة تحميل سحابية مجموعة farm عالية التوافر للتطبيقات"
 canonical: "https://safekit.eviden.com/ar/solutions/cloud-load-balancing-cluster-failover/"
-description: "عزز أداء موازن الأحمال السحابي باستخدام ميزة مراقبة التطبيقات الذكية SafeKit . حقق توافرًا عاليًا وسلسًا من خلال فحوصات السلامة الشاملة، والإصلاح الذاتي التلقائي، والتحويل التلقائي في حالة الفشل لمجموعات farm ذات الأهمية البالغة."
+description: "عزّز موازن تحميل السحابة (Cloud Load Balancer) بمراقبة التطبيقات الذكية من SafeKit. حقق توفرًا عاليًا سلسًا من خلال فحوصات صحية عميقة، وإصلاح ذاتي تلقائي، وتجاوز للأعطال مجموعات farm ذات المهام الحرجة."
 category: "solutions"
 lang: "ar"
-topics: "تحسين موازن أحمال السحابة من خلال مراقبة مستوى التطبيق والإصلاح الذاتي، جدول المحتويات، كيف يُنفذ برنامج SafeKit مجموعة موازنة أحمال شبكة السحابة (NLB) بسهولة؟، كيف تعمل مجموعة SafeKit farm مع السحابة؟، مقارنة: مجموعة SafeKit Farm في الموقع مقابل مجموعة SafeKit Farm في السحابة، دليل فيديو: تكوين مجموعة SafeKit Farm NLB، 🔍 استكشف SafeKit"
+topics: "تحسين موازن تحميل السحابة من خلال المراقبة على مستوى التطبيق والشفاء الذاتي، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة السحابية (NLB) ببساطة؟، كيف تعمل مجموعة SafeKit farm مع السحابة؟، مقارنة: مجموعة SafeKit farm المحلية مقابل مجموعة SafeKit farm السحابية، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit : موازنة أحمال السحابة وتوافر التطبيقات العالي، مجموعة <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: موازنة تحميل سحابية مجموعة <span class="notranslate farm-term" translate="no">farm</span> عالية التوافر للتطبيقات {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="Cloud" guide="/ar/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

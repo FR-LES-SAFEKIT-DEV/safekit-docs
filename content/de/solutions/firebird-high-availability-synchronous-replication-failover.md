@@ -1,13 +1,14 @@
 ---
-title: "Die einfachste Hochverfügbarkeitslösung Firebird : Synchrone Replikation und Failover auf zwei Knoten"
+title: "Die einfachste Firebird Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover"
 canonical: "https://safekit.eviden.com/de/solutions/firebird-high-availability-synchronous-replication-failover/"
-description: "Die einfachste Möglichkeit zur Implementierung von Hochverfügbarkeit Firebird . SafeKit bietet einen SAN-losen Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover – weder Active Directory noch spezielle Kenntnisse sind erforderlich."
+description: "Die einfachste Methode zur Implementierung Firebird High Availability. SafeKit bietet einen SANless-Cluster mit 2 Knoten, synchroner Replikation und automatischem Failover – ohne AD oder spezielle Kenntnisse."
 category: "solutions"
 lang: "de"
-topics: "Wie der SANless-Cluster SafeKit Mirror mit Firebird zusammenarbeitet, Inhaltsverzeichnis, Wie implementiert die Software SafeKit einen SANless-Cluster Firebird mit hoher Verfügbarkeit?, Wie funktioniert der Cluster SafeKit mirror mit Firebird ?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit für Firebird vs. andere Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Clusters mirror , 🔍 SafeKit entdecken"
+topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Firebird, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless Firebird Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit Firebird?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Firebird im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 ---
 
-# Die einfachste Hochverfügbarkeitslösung Firebird : Synchrone 2-Knoten-Replikation und Failover {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}
+# Die einfachste Firebird Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Firebird" guide="/de/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

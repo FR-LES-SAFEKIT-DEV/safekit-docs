@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : Software todo en uno para balanceo de carga y alta disponibilidad de NGINX"
+title: "SafeKit: Software todo en uno de equilibrio de carga y alta disponibilidad NGINX"
 canonical: "https://safekit.eviden.com/es/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
-description: "SafeKit ofrece una potente solución de balanceo de carga y alta disponibilidad para NGINX basada exclusivamente en software. Reemplace el complejo hardware NLB con la IP virtual integrada, la monitorización de aplicaciones y la conmutación por error automática de SafeKit . Implemente fácilmente un clúster NGINX en servidores Windows estándar hoy mismo."
+description: "SafeKit proporciona una potente solución de equilibrio de carga y alta disponibilidad NGINX basada únicamente en software. Sustituya el complejo hardware NLB por la IP virtual integrada de SafeKit, la supervisión de aplicaciones y la conmutación por error automática. Implemente fácilmente un clúster NGINX en servidores Windows estándar hoy mismo."
 category: "solutions"
 lang: "es"
-topics: "Clúster SafeKit Farm : NLB solo por software y conmutación por error automática para NGINX, Tabla de contenido, ¿Cómo implementa el software SafeKit un clúster de balanceo de carga de red (NLB) de NGINX?, ¿Cómo funciona el clúster SafeKit en modo farm con NGINX?, Comparación: Clúster SafeKit Farm para NGINX frente a otras soluciones de clúster NLB, Guía en vídeo: Configuración de un clúster NLB SafeKit Farm , 🔍 Explora SafeKit"
+topics: "El clúster farm SafeKit: NLB solo de software y conmutación por error automática para NGINX, Índice, ¿Cómo implementa el software SafeKit un clúster de equilibrio de carga de red (NLB) NGINX?, ¿Cómo funciona el clúster SafeKit en modo farm con NGINX?, Comparación: clúster farm SafeKit para NGINX frente a otras soluciones de clúster NLB, Guía en vídeo: Configuración de un clúster NLB farm SafeKit, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 ---
 
-# SafeKit : Software todo en uno de balanceo de carga y alta disponibilidad para NGINX {#safekit-all-in-one-nginx-load-balancing--high-availability-software}
+# SafeKit: Software todo en uno de equilibrio de carga y alta disponibilidad NGINX {#safekit-all-in-one-nginx-load-balancing--high-availability-software}
 
 
 {{%  insert-safekit-solution-farm-2-es app="NGINX" guide="/es/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

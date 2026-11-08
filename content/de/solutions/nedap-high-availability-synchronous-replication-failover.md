@@ -1,13 +1,14 @@
 ---
-title: "Die einfachste Hochverfügbarkeitslösung Nedap : Synchrone Replikation und Failover auf zwei Knoten"
+title: "Die einfachste Nedap Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover"
 canonical: "https://safekit.eviden.com/de/solutions/nedap-high-availability-synchronous-replication-failover/"
-description: "Die einfachste Möglichkeit zur Implementierung von Hochverfügbarkeit Nedap . SafeKit bietet einen SAN-losen Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover – weder Active Directory noch spezielle Kenntnisse sind erforderlich."
+description: "Die einfachste Methode zur Implementierung Nedap High Availability. SafeKit bietet einen SANless-Cluster mit 2 Knoten, synchroner Replikation und automatischem Failover – ohne AD oder spezielle Kenntnisse."
 category: "solutions"
 lang: "de"
-topics: "Wie der SANless-Cluster SafeKit Mirror mit Nedap zusammenarbeitet, Inhaltsverzeichnis, Wie die Software SafeKit einen SANless-Cluster Nedap mit hoher Verfügbarkeit implementiert, Wie der Cluster SafeKit mirror mit Nedap zusammenarbeitet, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit für Nedap vs. andere Clustering-Lösungen, Videoanleitung: Konfiguration eines SafeKit HA-Clusters mirror , SafeKit , eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
+topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Nedap, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless-Nedap Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit Nedap?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Nedap im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 ---
 
-# Die einfachste Hochverfügbarkeitslösung Nedap : Synchrone 2-Knoten-Replikation und Failover {#the-simplest-nedap-high-availability-2-node-synchronous-replication--failover}
+# Die einfachste Nedap Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover {#the-simplest-nedap-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Nedap" guide="/de/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}

@@ -1,13 +1,14 @@
 ---
-title: "SafeKit ：云负载均衡和应用高可用性Farm集群"
+title: "SafeKit：云负载均衡和应用高可用性 farm 集群"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cloud-load-balancing-cluster-failover/"
-description: "利用SafeKit的智能应用监控功能增强云负载均衡器。通过深度健康检查、自动自愈和故障转移，为关键任务型farm集群实现无缝高可用性。"
+description: "使用 SafeKit 的智能应用程序监控功能增强云负载均衡器。通过深度运行状况检查、自动自我修复和故障转移，为关键任务 farm 集群实现无缝高可用性。"
 category: "solutions"
 lang: "zh-hans"
-topics: "利用应用级监控和自愈功能增强云负载均衡器，目录， SafeKit软件如何轻松实现云网络负载均衡 (NLB) 集群？， SafeKit farm集群如何与云协同工作？，对比：本地部署SafeKit Farm集群与云端部署的SafeKit Farm集群，视频指南：配置SafeKit Farm NLB 集群，🔍 探索 SafeKit"
+topics: "通过应用级监控和自我修复功能增强云负载均衡器、目录、SafeKit 软件如何简单地实现云网络负载均衡(NLB) 集群？、SafeKit farm 集群如何与云协同工作？、比较：本地 SafeKit farm 集群与云端 SafeKit farm 集群、视频指南：配置 SafeKit farm NLB 集群、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# SafeKit ：云负载均衡和应用高可用性<span class="notranslate farm-term" translate="no">Farm</span>集群 {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
+# SafeKit：云负载均衡和应用高可用性 <span class="notranslate farm-term" translate="no">farm</span> 集群 {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-zh-hans app="Cloud" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

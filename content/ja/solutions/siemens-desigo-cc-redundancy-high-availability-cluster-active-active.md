@@ -1,13 +1,14 @@
 ---
-title: "シーメンス Desigo CC 高可用性：SANレス 2ノード冗長構成"
+title: "Siemens Desigo CC 高可用性：SAN レス 2 ノード冗長化"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
-description: "SafeKitを使用すれば、Siemens Desigo CC の 24 時間 365 日の稼働を確保できます。わずか 2 ノードで SAN レスの高可用性、リアルタイム レプリケーション、自動フェイルオーバーを実現します。共有ストレージを排除することで、総所有コスト (TCO) を削減できます。"
+description: "SafeKit で Siemens Desigo CC の 24 時間 365 日の稼働時間を確保しましょう。わずか 2 ノードで SAN レスの高可用性、リアルタイムレプリケーション、自動フェイルオーバーを実現します。共有ストレージを排除することで、TCO を削減します。"
 category: "solutions"
 lang: "ja"
-topics: "Siemens Desigo CC 用SafeKit : 2 ノード SAN レス Hyper-V クラスタ、目次、 SafeKitソフトウェアが SAN 上の共有ストレージなしで Siemens Desigo CC 高可用性クラスタを簡単に実装する方法、 SafeKit Siemens Desigo CC クラスタの動作原理、 SafeKit高可用性の制限事項、比較: Siemens Desigo CC 用SafeKitとネイティブ Hyper-V クラスタリング、ビデオ ガイド: Siemens Desigo CC 用SafeKit HA クラスタの構成、セキュリティ市場で認められたソリューションであるSafeKit 、🔍 SafeKit を探索する"
+topics: "SafeKit for Siemens Desigo CC：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、どのようにして Siemens Desigo CC 高可用性クラスターを簡単に実装するのでしょうか？、SafeKit Siemens Desigo CC クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens Desigo CC 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens Desigo CC 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# Siemens Desigo CC 高可用性: SANレス 2ノード冗長構成 {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
+# Siemens Desigo CC 高可用性：SAN レス 2 ノード冗長化 {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens Desigo CC"  %}}

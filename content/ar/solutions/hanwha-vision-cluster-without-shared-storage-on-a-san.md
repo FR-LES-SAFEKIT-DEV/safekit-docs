@@ -1,13 +1,14 @@
 ---
-title: "SafeKit التوافر العالي لنظام Hanwha Vision: نظام إدارة المباني الاحتياطي بدون شبكة تخزين"
+title: "SafeKit لضمان التوافر العالي لمنتجات Hanwha Vision: تحقيق التكرار في إدارة المباني بدون الحاجة إلى شبكة SAN"
 canonical: "https://safekit.eviden.com/ar/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
-description: "اضمن استمرارية عمل نظام Hanwha Vision على مدار الساعة مع SafeKit . يوفر نظامنا البسيط ثنائي العقدة، بدون شبكة تخزين (SAN)، تجاوزًا تلقائيًا للأعطال ونسخًا فوريًا للبيانات دون الحاجة إلى شبكة تخزين. تمتع بتوافر عالٍ لنظام إدارة المباني الخاص بك. حمّل النسخة التجريبية المجانية."
+description: "اضمن استمرارية عمل Hanwha Vision على مدار الساعة طوال أيام الأسبوع باستخدام SafeKit. توفر مجموعتنا الأبسط المكونة من عقدتين بدون شبكة SAN ميزة تجاوز الفشل التلقائي والنسخ المتماثل في الوقت الفعلي بدون شبكة SAN. توفر عالٍ لنظام إدارة المباني الخاص بك. قم بتنزيل النسخة التجريبية المجانية."
 category: "solutions"
 lang: "ar"
-topics: "SafeKit لـ Hanwha Vision: مجموعة Hyper-V ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Hanwha Vision عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit لـ Hanwha Vision؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لـ Hanwha Vision مقابل تجميع Hyper-V الأصلي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لـ Hanwha Vision، SafeKit ، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
+topics: "SafeKit لـ Hanwha Vision: مجموعة Hyper-V بدون شبكة تخزين (SAN) مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Hanwha Vision عالية التوافر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Hanwha Vision؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Hanwha Vision مقابل ميزة التجميع الأصلي Hyper-V، دليل الفيديو: تهيئة مجموعة SafeKit HA لـ Hanwha Vision، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit توفر عالٍ لنظام Hanwha Vision: نظام إدارة المباني الاحتياطي بدون شبكة تخزين {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
+# SafeKit لضمان التوافر العالي لمنتجات Hanwha Vision: تحقيق التكرار في إدارة المباني بدون الحاجة إلى شبكة SAN {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Hanwha Vision"  %}}

@@ -1,13 +1,14 @@
 ---
-title: "SafeKit Alta disponibilidade para Hanwha Vision: Redundância de gerenciamento predial sem SAN"
+title: "Alta Disponibilidade SafeKit para Hanwha Vision: Redundância de Gestão de Edifícios sem SAN"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
-description: "Garanta disponibilidade 24 horas por dia, 7 dias por semana para o Hanwha Vision com o SafeKit . Nosso cluster sem SAN mais simples, com 2 nós, oferece failover automático e replicação em tempo real sem a necessidade de uma SAN. Alta disponibilidade para o seu Sistema de Gerenciamento Predial. Baixe a versão de avaliação gratuita."
+description: "Garanta o funcionamento ininterrupto 24/7 da Hanwha Vision com SafeKit. O nosso cluster SANless mais simples de 2 nós oferece failover automático e replicação em tempo real sem necessidade de SAN. Alta disponibilidade para o seu Sistema de Gestão de Edifícios. Descarregue a versão de avaliação gratuita."
 category: "solutions"
 lang: "pt-pt"
-topics: "SafeKit para Hanwha Vision: Cluster Hyper-V sem SAN de 2 nós, Sumário, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Hanwha Vision sem armazenamento compartilhado em uma SAN?, Como funciona o cluster Hanwha Vision SafeKit ?, Limitações de Alta Disponibilidade SafeKit , Comparação: SafeKit para Hanwha Vision vs. Clustering Hyper-V Nativo, Guia em Vídeo: Configurando um cluster HA SafeKit para Hanwha Vision, SafeKit , uma solução reconhecida no mercado de segurança, 🔍 Explore o SafeKit"
+topics: "SafeKit para Hanwha Vision: Cluster Hyper-V sem SAN de 2 nós, Índice, Como é que o software SafeKit implementa de forma simples um cluster de alta disponibilidade Hanwha Vision sem armazenamento partilhado numa SAN?, Como funciona o cluster SafeKit Hanwha Vision?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit para Hanwha Vision vs. Agrupamento de Clusters Nativo Hyper-V, Guia em Vídeo: Configuração de um cluster HA SafeKit para Hanwha Vision, SafeKit, uma solução reconhecida no mercado da segurança, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
 ---
 
-# SafeKit Alta disponibilidade para Hanwha Vision: Redundância de gerenciamento predial sem SAN {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
+# Alta Disponibilidade SafeKit para Hanwha Vision: Redundância de Gestão de Edifícios sem SAN {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-pt-pt app="Hanwha Vision"  %}}

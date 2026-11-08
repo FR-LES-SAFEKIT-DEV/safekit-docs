@@ -1,15 +1,17 @@
 ---
-title: "Alta disponibilità Microsoft Azure: replica sincrona e failover con SafeKit"
+title: "Microsoft Azure ad alta disponibilità: replica sincrona e failover SafeKit"
 canonical: "https://safekit.eviden.com/it/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
-description: "Distribuisci un semplice cluster HA Microsoft Azure con SafeKit. L'architettura senza risorse condivise offre replica sincrona, failover automatico e RPO=0 per applicazioni Windows e Linux, senza i costi dei dischi condivisi cloud."
+description: "Implementa un semplice cluster HA di Microsoft Azure con SafeKit. La nostra architettura shared-nothing offre replica sincrona, failover automatico e RPO =0 per applicazioni Windows e Linux senza il costo dei dischi condivisi nel cloud."
 category: "solutions"
 lang: "it"
-topics: "HA Shared-Nothing SafeKit in Azure: eliminare i dischi condivisi senza perdita di dati, Indice dei contenuti, Come implementa facilmente il software SafeKit un cluster ad alta disponibilità Azure senza risorse condivise?, Come funziona il cluster mirror di SafeKit con Azure?, Limitazioni dell'alta affidabilità SafeKit, Confronto: SafeKit per Azure e le soluzioni HA/DR native del cloud, Guida video: configurazione di un cluster Mirror HA SafeKit, 🔍 Esplora SafeKit"
+topics: "SafeKit shared-nothing HA in Azure: elimina i dischi condivisi con zero perdita di dati, Indice, In che modo il software SafeKit implementa semplicemente un cluster Azure ad alta disponibilità shared-nothing?, Come funziona il cluster mirror SafeKit con Azure?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Azure e soluzioni HA/DR cloud native, Guida video: configurazione di un cluster mirror SafeKit HA, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 ---
 
-# Alta disponibilità Microsoft Azure: replica sincrona e failover con SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}
+# Microsoft Azure ad alta disponibilità: replica sincrona e failover SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}
 
-{{%  insert-safekit-solution-mirror-cloud-it app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}
+
+{{%  insert-safekit-solution-mirror-cloud-it app="Azure" guide="/it/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}
 
 {{%  insert-safekit-hub-it  %}}
 

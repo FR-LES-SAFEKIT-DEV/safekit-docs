@@ -1,13 +1,14 @@
 ---
-title: "الحوسبة العنقودية في الحوسبة السحابية: حل عام لـ Amazon AWS و Microsoft Azure و Google GCP وغيرها من الخدمات السحابية"
+title: "الكتلة في الحوسبة السحابية: حل عام لخدمات أمازون ويب سيرفيسز (Amazon AWS، Azure (Microsoft)، وجوجل كلاود بلاتفورم (Google GCP، وغيرها من الخدمات السحابية"
 canonical: "https://safekit.eviden.com/ar/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
-description: "كيف يوفر برنامج Eviden SafeKit حلاً عاماً للمجموعات في الحوسبة السحابية (Amazon AWS و Microsoft Azure و Google GCP وغيرها من الخدمات السحابية)"
+description: "كيف يوفر برنامج Eviden SafeKit حلاً عامًا للتجمعات في الحوسبة السحابية (Amazon AWS و Microsoft Azure و Google GCP وغيرها من السحابات)"
 category: "solutions"
 lang: "ar"
-topics: "اكتشف SafeKit في Microsoft Azure ، واكتشف SafeKit في Google GCP ، واكتشف SafeKit في Amazon AWS ، وحلول سحابية أخرى مع Eviden SafeKit ، و🔍 استكشف SafeKit"
+topics: "اكتشف SafeKit في Microsoft Azure، اكتشف SafeKit في Google GCP، اكتشف SafeKit في Amazon AWS، حلول سحابية أخرى مع Eviden SafeKit، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# الحوسبة العنقودية في الحوسبة السحابية: حل عام لـ Amazon AWS و Microsoft و Azure و Google GCP وغيرها من الخدمات السحابية {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
+# الكتلة في الحوسبة السحابية: حل عام لخدمات أمازون ويب سيرفيسز (Amazon AWS، Azure (Microsoft)، وجوجل كلاود بلاتفورم (Google GCP، وغيرها من الخدمات السحابية {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
 
 
 {{%  insert-safekit-all-cloud-solutions-ar  %}}
@@ -15,9 +16,9 @@ topics: "اكتشف SafeKit في Microsoft Azure ، واكتشف SafeKit في Go
 
 ## حلول سحابية أخرى مع Eviden SafeKit {#other-cloud-solutions-with-eviden-safekit}
 
-[ سحابة عامة Mirror > ](</ar/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
+[Mirror سحابية عامة >](</ar/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[ سحابة عامة <span class="notranslate farm-term" translate="no">Farm</span> > ](</ar/solutions/cloud-load-balancing-cluster-failover/>)
+[<span class="notranslate farm-term" translate="no">Farm</span> السحابة العامة >](</ar/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-ar  %}}

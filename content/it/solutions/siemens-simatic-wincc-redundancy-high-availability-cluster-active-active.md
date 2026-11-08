@@ -1,10 +1,11 @@
 ---
-title: "Siemens SIMATIC WinCC SCADA ad alta disponibilità: cluster SANless a 2 nodi."
+title: "Siemens SIMATIC WinCC SCADA ad alta disponibilità: cluster SANless a 2 nodi"
 canonical: "https://safekit.eviden.com/it/solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active/"
-description: "Realizza un cluster SCADA Siemens SIMATIC WinCC ad alta disponibilità senza SAN. SafeKit offre ridondanza a 2 nodi e failover per WinCC in Hyper-V."
+description: "Crea un cluster ad alta disponibilità Siemens SIMATIC WinCC SCADA senza SAN. SafeKit fornisce ridondanza a 2 nodi e failover per WinCC in Hyper-V."
 category: "solutions"
 lang: "it"
-topics: "SafeKit per Siemens SIMATIC WinCC: cluster Hyper-V senza SAN a 2 nodi, Indice, Come il software SafeKit implementa in modo semplice un cluster ad alta disponibilità Siemens SIMATIC WinCC senza storage condiviso su una SAN?, Come funziona il cluster Siemens SIMATIC WinCC SafeKit ?, Limitazioni dell'alta disponibilità SafeKit , Confronto: SafeKit per Siemens SIMATIC WinCC vs. clustering Hyper-V nativo, Guida video: configurazione di un cluster HA SafeKit per Siemens SIMATIC WinCC, SafeKit , una soluzione riconosciuta sul mercato SCADA, 🔍 Esplora SafeKit"
+topics: "SafeKit per Siemens SIMATIC WinCC: cluster Hyper-V SANless a 2 nodi, Indice, In che modo il software SafeKit implementa semplicemente un cluster ad alta disponibilità Siemens SIMATIC WinCC senza storage condiviso su una SAN?, Come funziona il cluster SafeKit Siemens SIMATIC WinCC?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Siemens SIMATIC WinCC e clustering nativo Hyper-V, Guida video: configurazione di un cluster HA SafeKit per Siemens SIMATIC WinCC, SafeKit, una soluzione riconosciuta sul mercato SCADA, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 ---
 
 # Siemens SIMATIC WinCC SCADA ad alta disponibilità: cluster SANless a 2 nodi {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}

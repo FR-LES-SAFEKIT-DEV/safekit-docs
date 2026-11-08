@@ -1,13 +1,14 @@
 ---
-title: "SafeKit Hochverfügbarkeit für Hanwha Wisenet: SAN-lose BMS-Redundanz"
+title: "SafeKit Hochverfügbarkeit für Hanwha Wisenet: SANless BMS-Redundanz"
 canonical: "https://safekit.eviden.com/de/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "Schützen Sie Hanwha Wisenet mit SafeKit . Unser SANless-Cluster mit zwei Knoten bietet die einfachste automatische Ausfallsicherung und Echtzeitreplikation für Ihr Gebäudemanagementsystem – ganz ohne SAN. Einfache Bereitstellung und Verwaltung. Jetzt kostenlos testen."
+description: "Schützen Sie Hanwha Wisenet mit SafeKit. Unser SANless-Cluster mit 2 Knoten bietet die einfachste automatische Failover- und Echtzeit-Replikation für Ihr Gebäudemanagementsystem ohne SAN. Einfach zu implementieren und zu verwalten. Holen Sie sich Ihre kostenlose Testversion."
 category: "solutions"
 lang: "de"
-topics: "SafeKit für Hanwha Wisenet: 2-Knoten-Hyper-V-Cluster ohne SAN, Inhaltsverzeichnis, Wie implementiert die Software SafeKit einen Hanwha-Wisenet-Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert der Hanwha-Wisenet-Cluster SafeKit ?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit für Hanwha Wisenet vs. natives Hyper-V-Clustering, Videoanleitung: Konfiguration eines SafeKit -HA-Clusters für Hanwha Wisenet, SafeKit , eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
+topics: "SafeKit für Hanwha Wisenet: SANless Hyper-V-Cluster mit 2 Knoten, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Hanwha Wisenet Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert das SafeKit Hanwha Wisenet Cluster?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Hanwha Wisenet vs. natives Hyper-V-Clustering, Videoanleitung: Konfigurieren eines SafeKit-HA-Cluster für Hanwha Wisenet, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 ---
 
-# SafeKit Hochverfügbarkeit für Hanwha Wisenet: SAN-lose BMS-Redundanz {#safekit-high-availability-for-hanwha-wisenet-sanless-bms-redundancy}
+# SafeKit Hochverfügbarkeit für Hanwha Wisenet: SANless BMS-Redundanz {#safekit-high-availability-for-hanwha-wisenet-sanless-bms-redundancy}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-de app="Hanwha Wisenet"  %}}

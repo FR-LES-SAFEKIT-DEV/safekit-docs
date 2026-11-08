@@ -1,13 +1,14 @@
 ---
-title: "Die einfachste Hochverfügbarkeitslösung Linux : Synchrone Replikation und Failover auf zwei Knoten"
+title: "Die einfachste Hochverfügbarkeit Linux: synchrone Replikation und Failover mit 2 Knoten"
 canonical: "https://safekit.eviden.com/de/solutions/linux-high-availability-software-synchronous-replication-failover/"
-description: "Die einfachste Möglichkeit zur Implementierung von Hochverfügbarkeit Linux . SafeKit bietet einen SAN-losen Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover – weder Active Directory noch spezielle Kenntnisse sind erforderlich."
+description: "Die einfachste Methode zur Implementierung Linux High Availability. SafeKit bietet einen SANless-Cluster mit 2 Knoten, synchroner Replikation und automatischem Failover – ohne AD oder spezielle Kenntnisse."
 category: "solutions"
 lang: "de"
-topics: "Wie der SANless-Cluster SafeKit Mirror mit Linux zusammenarbeitet, Inhaltsverzeichnis, Wie implementiert die Software SafeKit einen SANless-Cluster Linux mit hoher Verfügbarkeit?, Wie funktioniert der Cluster SafeKit mirror mit Linux ?, Einschränkungen der Hochverfügbarkeit SafeKit , Vergleich: SafeKit für Linux vs. andere Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Clusters mirror , 🔍 SafeKit entdecken"
+topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Linux, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless-Linux Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster unter Linux?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Linux im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 ---
 
-# Die einfachste Hochverfügbarkeitslösung Linux : Synchrone 2-Knoten-Replikation und Failover {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
+# Die einfachste Hochverfügbarkeit Linux: synchrone Replikation und Failover mit 2 Knoten {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Linux" guide="/de/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

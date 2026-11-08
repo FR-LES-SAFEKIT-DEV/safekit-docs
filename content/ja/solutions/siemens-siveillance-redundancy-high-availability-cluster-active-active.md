@@ -1,22 +1,23 @@
 ---
-title: "Siemens Siveillance Suiteの高可用性と冗長性：アクティブ/アクティブSANレスクラスタリング"
+title: "Siemens Siveillance Suite の高可用性と冗長性：アクティブ/アクティブ SAN レスクラスタリング"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
-description: "SafeKitを使用すれば、Siemens Siveillance Suite の稼働率を 100% に保証できます。複雑なハードウェアを必要とせずに、SAN レスの高可用性、同期レプリケーション、アクティブ/アクティブクラスタリングを実現します。今すぐ無料トライアルをダウンロードしてください。"
+description: "SafeKit で Siemens Siveillance Suite の 100% の稼働時間を確保しましょう。複雑なハードウェアなしで、SAN レスの高可用性、同期レプリケーション、アクティブ/アクティブクラスタリングを実現します。無料トライアルを今すぐダウンロードしてください。"
 category: "solutions"
 lang: "ja"
-topics: "Siemens Siveillance 用SafeKit : 2 ノード SAN レス Hyper-V クラスタ、目次、 SafeKitソフトウェアが SAN 上の共有ストレージなしで Siemens Siveillance 高可用性クラスタを簡単に実装する方法、 SafeKit Siemens Siveillance クラスタの仕組み、 SafeKit高可用性の制限、比較: Siemens Siveillance 用SafeKitとネイティブ Hyper-V クラスタリング、ビデオ ガイド: Siemens Siveillance 用SafeKit HA クラスタの構成、 SafeKit 、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+topics: "Siemens Siveillance 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、どのようにして Siemens Siveillance 高可用性クラスター簡単に実装するのでしょうか？、SafeKit Siemens Siveillance クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens Siveillance 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens Siveillance 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# Siemens Siveillance Suiteの高可用性と冗長性：アクティブ/アクティブSANレスクラスタリング {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}
+# Siemens Siveillance Suite の高可用性と冗長性：アクティブ/アクティブ SAN レスクラスタリング {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens Siveillance"  %}}
  
 
-### 注記 {#notes}
+### 備考 {#notes}
 
-  * Siveillance VMSと録画サーバーについては、 SafeKitではなく、統合フェイルオーバーメカニズムを使用してください。レコーダーは、両方の物理サーバーのホストレベルで実行することも、両方の物理サーバー上の2つの仮想マシンで実行することもできます（ SafeKitでは複製されません）。
-  * **💡 [ Siemens Siveillance VMS ](</ja/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)**には、アプリケーション レベルで別のソリューションがあり、あらゆるインフラストラクチャ (物理サーバー、 **VMware**を含むあらゆるハイパーバイザーなど) で動作します。
+  * Siveillance VMS およびレコーディングサーバーには、SafeKit ではなく統合フェイルオーバーメカニズムを使用します。レコーダーは、両方の物理サーバー上のホストレベル、または両方の物理サーバー上の 2 つの仮想マシンで実行できます（SafeKit によって複製されません）。
+  * **💡 [Siemens Siveillance VMS](</ja/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/>)** には、アプリケーションレベルで、あらゆるインフラストラクチャ（物理サーバー、**VMware** を含むあらゆるハイパーバイザーなど）で動作する別のソリューションが存在します。
 
 
 

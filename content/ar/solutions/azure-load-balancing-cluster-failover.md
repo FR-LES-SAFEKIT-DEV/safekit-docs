@@ -1,15 +1,17 @@
 ---
-title: "SafeKit: موازنة تحميل Microsoft Azure والتوافر العالي للتطبيقات باستخدام مجموعة Farm"
+title: "SafeKit: موازنة تحميل Microsoft Azure مجموعة farm عالية الإتاحة للتطبيقات"
 canonical: "https://safekit.eviden.com/ar/solutions/azure-load-balancing-cluster-failover/"
-description: "عزّز Azure Load Balancer بمراقبة التطبيقات الذكية من SafeKit. حقق توافراً عالياً سلساً مع فحوصات صحة متعمقة، وإصلاح ذاتي تلقائي، وتجاوز للفشل لمجموعات Farm بالغة الأهمية."
+description: "عزّز Azure Load Balancer بمراقبة التطبيقات الذكية من SafeKit. حقّق توفرًا عاليًا سلسًا من خلال فحوصات صحية عميقة، وإصلاح ذاتي تلقائي، وتجاوز للأعطال مجموعات farm ذات المهام الحرجة."
 category: "solutions"
 lang: "ar"
-topics: "تعزيز موازن التحميل السحابي بالمراقبة على مستوى التطبيق والإصلاح الذاتي, جدول المحتويات, كيف يطبّق برنامج SafeKit ببساطة مجموعة موازنة تحميل الشبكة (NLB) لـ Azure؟, كيف تعمل مجموعة SafeKit farm مع Azure؟, مقارنة مجموعة SafeKit Farm محلياً ومجموعة SafeKit Farm في السحابة, دليل فيديو: تكوين مجموعة SafeKit Farm لموازنة تحميل الشبكة, 🔍 استكشف SafeKit"
+topics: "تحسين موازن تحميل السحابة من خلال المراقبة على مستوى التطبيق والشفاء الذاتي، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Azure ببساطة؟، كيف تعمل مجموعة SafeKit farm مع Azure؟، مقارنة: مجموعة SafeKit farm المحلية مقابل مجموعة SafeKit farm السحابية، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit: موازنة تحميل Microsoft Azure والتوافر العالي للتطبيقات باستخدام مجموعة <span class="notranslate farm-term" translate="no">Farm</span> {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: موازنة تحميل Microsoft Azure مجموعة farm عالية الإتاحة للتطبيقات {#safekit-microsoft-azure-load-balancing--application-high-availability-farm-cluster}
 
-{{%  insert-safekit-solution-farm-cloud-ar app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}
+
+{{%  insert-safekit-solution-farm-cloud-ar app="Azure" guide="/ar/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}
 
 {{%  insert-safekit-hub-ar  %}}
 

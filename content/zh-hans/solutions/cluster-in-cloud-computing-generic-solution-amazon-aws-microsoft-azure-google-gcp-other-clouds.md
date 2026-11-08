@@ -1,23 +1,24 @@
 ---
-title: "云计算集群：适用于 Amazon AWS 、 Microsoft Azure 、Google GCP和其他云的通用解决方案"
+title: "云计算中的集群：适用于 Amazon AWS、Microsoft Azure、Google GCP 和其他云的通用解决方案"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
-description: "Eviden SafeKit软件如何为云计算集群（Amazon AWS 、 Microsoft Azure 、Google GCP和其他云平台）提供通用解决方案"
+description: "Eviden SafeKit 软件如何为云计算（Amazon AWS、Microsoft Azure、Google GCP 和其他云）中的集群提供通用解决方案"
 category: "solutions"
 lang: "zh-hans"
-topics: "在Microsoft Azure中探索SafeKit ，在 Google GCP中探索SafeKit ，在 Amazon AWS中探索SafeKit ，以及 Eviden 的其他云解决方案SafeKit ，🔍 探索 SafeKit"
+topics: "在 Microsoft Azure 中发现 SafeKit、在 Google GCP 中发现 SafeKit、在 Amazon AWS 上发现 SafeKit、其他采用 Eviden SafeKit 的云解决方案、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# 云计算集群：适用于 Amazon AWS 、 Microsoft Azure 、Google GCP和其他云平台的通用解决方案 {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
+# 云计算中的集群：适用于 Amazon AWS、Microsoft Azure、Google GCP 和其他云的通用解决方案 {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}
 
 
 {{%  insert-safekit-all-cloud-solutions-zh-hans  %}}
  
 
-## Eviden SafeKit的其他云解决方案 {#other-cloud-solutions-with-eviden-safekit}
+## 其他采用 Eviden SafeKit 的云解决方案 {#other-cloud-solutions-with-eviden-safekit}
 
-[通用云Mirror > ](</zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
+[通用云 Mirror >](</zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)
 
-[通用云<span class="notranslate farm-term" translate="no">Farm</span> > ](</zh-hans/solutions/cloud-load-balancing-cluster-failover/>)
+[通用云 <span class="notranslate farm-term" translate="no">Farm</span> >](</zh-hans/solutions/cloud-load-balancing-cluster-failover/>)
 
 
 {{%  insert-safekit-hub-zh-hans  %}}

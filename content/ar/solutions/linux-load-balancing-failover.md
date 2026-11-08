@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : برنامج Linux المتكامل لموازنة الأحمال والتوافر العالي"
+title: "SafeKit: برنامج متكامل لموازنة الأحمال وتوفير التوافر العالي Linux"
 canonical: "https://safekit.eviden.com/ar/solutions/linux-load-balancing-failover/"
-description: "يوفر SafeKit حلاً قوياً لموازنة الأحمال وتوفير توافر عالٍ، وهو حل برمجي بالكامل. استبدل أجهزة موازنة الأحمال المعقدة بـ Linux SafeKit يتميز ببروتوكول IP افتراضي مدمج، ومراقبة التطبيقات، والتحويل التلقائي في حالة الأعطال. يمكنك بسهولة نشر مجموعة SafeKit على خوادم Linux القياسية اليوم."
+description: "يوفر SafeKit حلاً قوياً ومقتصراً على البرمجيات لتحقيق التوازن في التحميل وتوافر عالٍ Linux. استبدل أجهزة NLB المعقدة ببروتوكول الإنترنت الظاهري المتكامل من SafeKit، ومراقبة التطبيقات، وتجاوز الأعطال التلقائي. انشر مجموعة SafeKit بسهولة على خوادم Linux القياسية اليوم."
 category: "solutions"
 lang: "ar"
-topics: "مجموعة SafeKit Farm : موازنة تحميل الشبكة (NLB) البرمجية فقط والتحويل التلقائي في حالة الفشل لـ Linux ، جدول المحتويات، كيف يقوم برنامج SafeKit بتنفيذ مجموعة موازنة تحميل الشبكة (NLB) لـ Linux ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع Linux ؟، مقارنة: مجموعة SafeKit Farm لـ Linux مقابل حلول تجميع NLB الأخرى، دليل فيديو: تكوين مجموعة NLB لـ SafeKit Farm ، 🔍 استكشف SafeKit"
+topics: "مجموعة SafeKit farm: موازن تحميل للشبكة (NLB) يعتمد على البرمجيات فقط وتجاوز تلقائي للأعطال لنظام Linux، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Linux ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع Linux؟، مقارنة: مجموعة SafeKit farm لـ Linux مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit : برنامج متكامل لموازنة الأحمال والتوافر العالي Linux {#safekit-all-in-one-linux-load-balancing--high-availability-software}
+# SafeKit: برنامج متكامل لموازنة الأحمال وتوفير التوافر العالي Linux {#safekit-all-in-one-linux-load-balancing--high-availability-software}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="Linux" guide="/ar/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

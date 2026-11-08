@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : Amazon AWS Load Balancing & Application High Availability Farm Cluster"
+title: "SafeKit: Amazon AWS Lastausgleich und Anwendungs-Hochverfügbarkeits Farm-Cluster"
 canonical: "https://safekit.eviden.com/de/solutions/aws-load-balancing-cluster-failover/"
-description: "Erweitern Sie den Load Balancer AWS mit der intelligenten Anwendungsüberwachung von SafeKit . Erreichen Sie nahtlose Hochverfügbarkeit durch umfassende Integritätsprüfungen, automatische Selbstheilung und Failover für unternehmenskritische farm Cluster."
+description: "Erweitern Sie AWS Load Balancer mit der intelligenten Anwendungsüberwachung von SafeKit. Erzielen Sie nahtlose Hochverfügbarkeit mit umfassenden Zustandsprüfungen, automatischer Selbstheilung und Failover für geschäftskritische Farm-Cluster."
 category: "solutions"
 lang: "de"
-topics: "Cloud Load Balancer mit Anwendungsüberwachung und Selbstheilung erweitern, Inhaltsverzeichnis, Wie implementiert die Software SafeKit einen AWS Network Load Balancing (NLB)-Cluster?, Wie funktioniert der SafeKit farm Cluster mit AWS ?, Vergleich: SafeKit Farm -Cluster lokal vs. SafeKit Farm -Cluster in der Cloud, Videoanleitung: Konfigurieren eines SafeKit Farm NLB-Clusters, 🔍 SafeKit entdecken"
+topics: "Erweitern Sie den Cloud Load Balancer um anwendungsorientiertes Monitoring und Self-Healing., Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen AWS Network Load Balancing (NLB)-Cluster?, Wie funktioniert das SafeKit-Farm-Cluster mit AWS?, Vergleich: SafeKit-Farm-Cluster On-Premises vs. SafeKit-Farm-Cluster in der Cloud, Videoanleitung: Konfigurieren eines SafeKit-Farm-NLB-Cluster, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 ---
 
-# SafeKit : Amazon AWS Load Balancing & Application High Availability <span class="notranslate farm-term" translate="no">Farm</span> Cluster {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
+# SafeKit: Amazon AWS Lastausgleich und Anwendungs-Hochverfügbarkeits <span class="notranslate farm-term" translate="no">Farm</span>-Cluster {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-de app="AWS" guide="/de/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

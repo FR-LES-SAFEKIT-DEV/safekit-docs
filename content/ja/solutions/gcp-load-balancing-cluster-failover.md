@@ -1,13 +1,14 @@
 ---
-title: "SafeKit : Google GCPロードバランシングおよびアプリケーションの高可用性Farmクラスター"
+title: "SafeKit：Google GCP ロードバランシングとアプリケーションの高可用性 farm クラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/gcp-load-balancing-cluster-failover/"
-description: "GCPロードバランサーをSafeKitのインテリジェントなアプリケーション監視機能で強化します。詳細なヘルスチェック、自動自己修復、フェイルオーバーにより、ミッションクリティカルなfarmクラスタのシームレスな高可用性を実現します。"
+description: "SafeKit のインテリジェントなアプリケーション監視機能で GCP ロードバランサーを強化しましょう。詳細なヘルスチェック、自動セルフヒーリング、ミッションクリティカルな farm クラスターのフェイルオーバーにより、シームレスな高可用性を実現します。"
 category: "solutions"
 lang: "ja"
-topics: "アプリケーションレベルの監視と自己修復でクラウドロードバランサーを強化する、目次、 SafeKitソフトウェアがGCPネットワークロードバランシング（NLB）クラスタをどのように簡単に実装するか、 SafeKit farmクラスタがGCPとどのように連携するか、比較：オンプレミスのSafeKit FarmクラスタとクラウドのSafeKit Farmクラスタ、ビデオガイド： SafeKit Farm NLBクラスタの構成、🔍 SafeKit を探索する"
+topics: "アプリケーションレベルのモニタリングと自動修復機能で Cloud Load Balancer を強化、目次、SafeKit ソフトウェアは、GCP ネットワーク負荷分散(NLB)クラスターをどのように簡単に実装しますか？、SafeKit farm クラスターが GCP とどのように連携しますか？、比較：オンプレミスの SafeKit farm クラスターとクラウドの SafeKit farm クラスター、ビデオガイド：SafeKit farm NLB クラスターの構成、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 ---
 
-# SafeKit : Google GCPロードバランシングとアプリケーションの高可用性<span class="notranslate farm-term" translate="no">Farm</span>クラスタ {#safekit-google-gcp-load-balancing--application-high-availability-farm-cluster}
+# SafeKit：Google GCP ロードバランシングとアプリケーションの高可用性 <span class="notranslate farm-term" translate="no">farm</span> クラスター {#safekit-google-gcp-load-balancing--application-high-availability-farm-cluster}
 
 
 {{%  insert-safekit-solution-farm-cloud-ja app="GCP" guide="/ja/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

@@ -1,13 +1,14 @@
 ---
-title: "SafeKit التوافر العالي لأنظمة إدارة التطبيقات من بوش: التكرار والتحويل التلقائي بدون شبكة تخزين"
+title: "SafeKit لضمان التوافر العالي لأنظمة Bosch AMS: التكرار وتجاوز الأعطال بدون شبكة SAN"
 canonical: "https://safekit.eviden.com/ar/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "اضمن استمرارية عمل نظام Bosch AMS بنسبة 100% مع SafeKit . توفر مجموعتنا المكونة من عقدتين بدون شبكة تخزين (SAN) نسخًا متماثلًا في الوقت الفعلي وتجاوزًا تلقائيًا للأعطال دون تعقيدات شبكة التخزين. سهولة النشر، وتكرار عالي الأداء لإدارة الوصول. حمّل النسخة التجريبية المجانية."
+description: "اضمن وقت تشغيل بنسبة 100% لنظام Bosch AMS باستخدام SafeKit. توفر مجموعتنا المكونة من عقدتين بدون شبكة SAN نسخًا متماثلًا في الوقت الفعلي وتجاوزًا تلقائيًا للأعطال دون تعقيد شبكة SAN. سهولة في النشر، وتكرار عالي الأداء لإدارة الوصول. قم بتنزيل النسخة التجريبية المجانية."
 category: "solutions"
 lang: "ar"
-topics: "SafeKit لنظام Bosch AMS: مجموعة Hyper-V ثنائية العقد بدون SAN، جدول المحتويات، كيف يُنفذ برنامج SafeKit ببساطة مجموعة Bosch AMS عالية التوفر بدون تخزين مشترك على SAN؟، كيف تعمل مجموعة SafeKit لنظام Bosch AMS؟، قيود التوفر العالي لـ SafeKit ، مقارنة: SafeKit لنظام Bosch AMS مقابل تجميع Hyper-V الأصلي، دليل فيديو: تكوين مجموعة SafeKit عالية التوفر لنظام Bosch AMS، SafeKit ، حل معترف به في سوق الأمان، 🔍 استكشف SafeKit"
+topics: "SafeKit لشركة Bosch AMS: مجموعة Hyper-V بدون شبكة تخزين (SANless) مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Bosch AMS عالية التوفر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Bosch AMS؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Bosch AMS مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لتطبيق Bosch AMS، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 ---
 
-# SafeKit التوافر العالي لأنظمة إدارة التطبيقات من بوش: التكرار والتحويل التلقائي بدون شبكة تخزين {#safekit-high-availability-for-bosch-ams-sanless-redundancy-and-failover}
+# SafeKit لضمان التوافر العالي لأنظمة Bosch AMS: التكرار وتجاوز الأعطال بدون شبكة SAN {#safekit-high-availability-for-bosch-ams-sanless-redundancy-and-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Bosch AMS"  %}}
