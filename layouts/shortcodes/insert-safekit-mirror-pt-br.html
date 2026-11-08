@@ -1,89 +1,90 @@
-{{/* Shortcode: insert-safekit-mirror-pt-br — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-07.15 | glossaire 2026-11-07.12 | Translation LLM | 14 expressions */}}
+{{/* Shortcode: insert-safekit-mirror-en — 21 instances in 21 files */}}
 {{/* Parameters: app */}}
-{{/* Source: content\pt-br\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Como o cluster espelho (mirror cluster) do SafeKit funciona com o {{ .Get "app" }}? {#safekit-mirror-cluster}
+## Como o cluster mirror SafeKit funciona com {{ .Get "app" }} ? {#safekit-mirror-cluster}
 
 ### Passo 1. Replicação em tempo real {#step1}
 
-O Servidor 1 (PRIM) executa a aplicação {{ .Get "app" }}. Os clientes estão conectados a um [endereço IP virtual](/pt-br/best-practises/how-a-virtual-ip-address-works/). O SafeKit replica em tempo real as modificações feitas dentro dos arquivos através da rede.
+O Servidor 1 (PRIM) executa o aplicativo {{ .Get "app" }}. Os clientes estão conectados a um [endereço IP virtual](/pt-br/best-practises/how-a-virtual-ip-address-works/). SafeKit replica em tempo real as modificações feitas nos arquivos através da rede.
 
 
-![Replicação de arquivos em nível de byte em um cluster espelho (mirror) do {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+![Replicação de arquivos em nível de byte em um cluster {{ .Get "app" }} mirror](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
 A replicação é [síncrona](/pt-br/best-practises/synchronous-replication-vs-asynchronous-replication/), sem perda de dados em caso de falha, ao contrário da replicação assíncrona.
 
-Você só precisa configurar os nomes dos diretórios a serem replicados no SafeKit. Não há pré-requisitos na organização do disco. Os diretórios podem estar localizados no disco do sistema.
+Você só precisa configurar os nomes dos diretórios a serem replicados no SafeKit. Não há pré-requisitos quanto à organização do disco. Os diretórios podem estar localizados no disco do sistema.
 
 ### Passo 2. Failover automático {#step2}
 
-Quando o Servidor 1 falha, o Servidor 2 assume o controle. O SafeKit alterna o endereço IP virtual e reinicia a aplicação {{ .Get "app" }} automaticamente no Servidor 2.
+Quando o Servidor 1 falha, o Servidor 2 assume o controle. SafeKit alterna o endereço IP virtual e reinicia o aplicativo {{ .Get "app" }} automaticamente no Servidor 2.
 
-A aplicação encontra os arquivos replicados pelo SafeKit atualizados no Servidor 2. A aplicação continua a ser executada no Servidor 2, modificando localmente seus arquivos, que não são mais replicados para o Servidor 1.
-
-
-![Failover do {{ .Get "app" }} em um cluster espelho (mirror cluster)](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
+O aplicativo encontra os arquivos replicados pelo SafeKit atualizados no Servidor 2. O aplicativo continua a ser executado no Servidor 2, modificando localmente seus arquivos que não são mais replicados para o Servidor 1.
 
 
-O tempo de failover é igual ao tempo de detecção de falhas (30 segundos por padrão) mais o tempo de inicialização da aplicação.
-
-### Passo 3. Failback automático {#step3}
-
-O failback envolve reiniciar o Servidor 1 após a correção do problema que causou a sua falha.
-
-O SafeKit ressincroniza automaticamente os arquivos, atualizando apenas os arquivos modificados no Servidor 2 enquanto o Servidor 1 estava parado.
+![Failover do {{ .Get "app" }} em um cluster mirror](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
-![Failback em um cluster espelho (mirror) do {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
+O tempo de failover é igual ao tempo de deteção de falhas (30 segundos por predefinição) mais o tempo de inicialização da aplicação.
+
+### Etapa 3. failback automático {#step3}
+
+A recuperação de falhas envolve reiniciar o Servidor 1 após corrigir o problema que causou a falha.
+
+SafeKit resincroniza automaticamente os arquivos, atualizando apenas os arquivos modificados no Servidor 2 enquanto o Servidor 1 estava parado.
 
 
-O failback ocorre sem interromper a aplicação {{ .Get "app" }}, que pode continuar em execução no Servidor 2.
-
-### Passo 4. Retorno ao normal {#step-4-back-to-normal}
-
-Após a reintegração, os arquivos ficam novamente em modo espelho (mirror), como no passo 1. O sistema volta ao modo de alta disponibilidade, com a aplicação {{ .Get "app" }} em execução no Servidor 2 e o SafeKit replicando as atualizações de arquivos para o Servidor 1.
+![Recuperação de falha em um cluster {{ .Get "app" }} mirror](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
 
-![Retorno à operação normal em um cluster espelho (mirror) do {{ .Get "app" }}](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
+O failback ocorre sem interromper a {{ .Get "app" }}, que pode continuar a ser executada no Servidor 2.
+
+### Passo 4. Voltar ao normal {#step-4-back-to-normal}
+
+Após a reintegração, os arquivos ficam novamente no modo mirror, como na etapa 1. O sistema volta ao modo de alta disponibilidade, com o aplicativo {{ .Get "app" }} em execução no Servidor 2 e SafeKit replicando as atualizações de arquivos para o Servidor 1.
 
 
-Se o administrador desejar que a aplicação seja executada no Servidor 1, isso pode ser feito manualmente através do console web em um momento apropriado ou automaticamente através de configuração.
-
-### Como configurar um Cluster Espelho (Mirror Cluster) do SafeKit para o {{ .Get "app" }}? {#safekit-mirror-cluster-configure}
+![Retornar à operação normal em um cluster {{ .Get "app" }} mirror](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
 
-![SafeKit Web Console: High Availability configuration dashboard for {{ .Get "app" }} showing heartbeat networks, virtual IP setup, and real-time directory replication for a mirror cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
+Se o administrador desejar que o aplicativo seja executado no Servidor 1, isso pode ser feito manualmente através do console da web em um momento apropriado ou automaticamente através da configuração.
+
+### Como configurar um cluster mirror SafeKit para {{ .Get "app" }} ? {#safekit-mirror-cluster-configure}
 
 
-O **console web do SafeKit** oferece uma interface intuitiva para orquestrar a alta disponibilidade de suas aplicações críticas. Em apenas alguns passos, você pode configurar um **cluster espelho do SafeKit** para garantir a continuidade dos negócios:
-
-  * **Failover de Aplicação (Aba Macros):** Defina os serviços de aplicação específicos a serem reiniciados automaticamente em caso de falha.
-  * **Rede(s) de Heartbeat:** Caminho(s) de comunicação dedicado(s) usado(s) pelos nós do cluster para monitorar continuamente a integridade e a disponibilidade uns dos outros e sincronizar as decisões de failover.
-  * **Gerenciamento de IP Virtual:** Configure o IP Virtual (VIP) para a reconexão transparente do cliente após um failover.
-  * **Replicação em Tempo Real:** Selecione os diretórios críticos para replicação síncrona baseada em host no nível de byte.
-  * **Checkers (Verificadores):** Monitore a integridade da aplicação e acione a recuperação automática se uma falha de processo for detectada.
+![Console Web SafeKit: Painel de configuração de alta disponibilidade para {{ .Get "app" }}, mostrando redes de pulsações, configuração de IP virtual e replicação de diretório em tempo real para um cluster mirror.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
-O cluster SafeKit inclui um verificador de split-brain dedicado para resolver problemas de isolamento de rede sem a necessidade de uma terceira máquina testemunha (witness) ou de uma rede de heartbeat adicional. Saiba mais sobre [heartbeat, failover e quórum em um cluster](/pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+O **console da web SafeKit** fornece uma interface intuitiva para orquestrar alta disponibilidade para seus aplicativos críticos. Em apenas algumas etapas, você pode configurar um **cluster mirror SafeKit** para garantir a continuidade dos negócios:
 
-### Como monitorar um cluster espelho (mirror cluster) do SafeKit para o {{ .Get "app" }}? {#safekit-mirror-cluster-monitoring}
-
-
-![SafeKit Web Console: Real-time monitoring of a 2-node mirror cluster for {{ .Get "app" }} showing PRIM and SECOND states with active data replication.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
-
-
-O **console de gerenciamento do SafeKit** oferece uma visão unificada de sua infraestrutura de alta disponibilidade. Ele permite que os administradores monitorem o **estado operacional** do cluster e acompanhem a sincronização de dados em tempo real.
-
-Para um cluster espelho de 2 nós, o console exibe claramente as funções de cada servidor:
-
-  * **PRIM (Primary):** O nó ativo que atualmente executa a aplicação e gerencia o IP Virtual. Ele realiza gravações no armazenamento local e a replicação em tempo real para o nó secundário.
-  * **SECOND (Secondary):** O nó de prontidão (standby) que recebe as atualizações síncronas em nível de byte. Ele está pronto para assumir o controle instantaneamente se o Primário falhar.
-  * **Estado ALONE:** Alerta você visualmente quando o cluster está sendo executado em um único nó (por exemplo, durante uma manutenção ou após uma falha), indicando que a redundância foi temporariamente perdida.
-  * **Progresso de Ressincronização:** Quando um nó com falha se recupera, seu status muda para laranja durante a reintegração de dados em segundo plano, garantindo que não haja tempo de inatividade durante a fase de "retorno ao normal".
+  * **Failover de Aplicativo (Guia Macros):** Defina os serviços de aplicativo específicos a serem reiniciados automaticamente em caso de falha.
+  * **Rede(s) de pulsações:** Caminho(s) de comunicação dedicado(s) usado(s) pelos nós do cluster para monitorar continuamente a integridade e a disponibilidade um do outro e sincronizar as decisões de failover.
+  * **Gerenciamento de IP Virtual:** configure o IP Virtual (VIP) para reconexão transparente do cliente após uma falha.
+  * **Replicação em tempo real:** selecione os diretórios críticos para replicação síncrona em nível de byte baseada no host.
+  * **Verificadores:** Monitore a integridade do aplicativo e acione a recuperação automática se for detectada uma falha no processo.
 
 
-Além de simples ícones de status, a interface oferece **orquestração de failover com um clique** , permitindo que você reatribua manualmente a função primária para manutenções planejadas, garantindo ao mesmo tempo a disponibilidade contínua para a atividade dos usuários.
+O cluster SafeKit inclui um verificador de divisão de rede dedicado para resolver problemas de isolamento de rede sem a necessidade de uma terceira máquina testemunha ou de uma rede de pulsações adicional. Saiba mais sobre [pulsações, failover e quórum em um cluster](/pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/).
+
+### Como monitorar um cluster mirror SafeKit para {{ .Get "app" }} ? {#safekit-mirror-cluster-monitoring}
+
+
+![Console Web SafeKit: Monitoramento em tempo real de um cluster mirror 2 nós para {{ .Get "app" }}, mostrando os estados PRIM e SECOND com replicação de dados ativa.](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png "w:604")
+
+
+O **console de gerenciamento SafeKit** oferece uma visão unificada da sua infraestrutura de alta disponibilidade. Ele permite que os administradores monitorem o **estado operacional** do cluster e acompanhem a sincronização de dados em tempo real.
+
+Para um cluster mirror de 2 nós, o console exibe claramente as funções de cada servidor:
+
+  * **PRIM (Primário):** O nó ativo que executa atualmente o aplicativo e gerencia o IP virtual. Ele executa gravações no armazenamento local e replicação em tempo real para o nó secundário.
+  * **SECOND:** O nó de espera recebe atualizações síncronas em nível de byte. Ele está pronto para assumir o controle instantaneamente se o primário falhar.
+  * **ALONE Estado:** Alerta visualmente quando o cluster está sendo executado em um único nó (por exemplo, durante a manutenção ou após uma falha), indicando que a redundância foi temporariamente perdida.
+  * **Progresso da resincronização:** quando um nó com falha é recuperado, seu status fica laranja durante a reintegração de dados em segundo plano, garantindo que não haja tempo de inatividade durante a fase de "retorno ao normal".
+
+
+Além de ícones de status simples, a interface fornece **orquestração de failover com um clique**, permitindo que você reatribua manualmente a função primária para manutenção planejada, garantindo a disponibilidade contínua para a atividade do usuário.
 

@@ -59,7 +59,7 @@ This eliminates the "house of cards" risk where updates break fragile links betw
 SafeKit is a cloud-agnostic solution, meaning the deployment process and architecture stay the same across on-premises servers and all major cloud providers. The only architectural difference lies in how the **[Virtual IP](/best-practises/how-a-virtual-ip-address-works/)** is presented to the network:
 
   * **On-Premises:** SafeKit manages the VIP directly by sending **GARP (Gratuitous ARP)** packets to local switches, moving the IP between nodes instantly.
-  * **In the Cloud:** Since Cloud networks do not support GARP, the Virtual IP is hosted by a **Cloud Load Balancer**.**SafeKit provides the health probe** to determine which node is the primary one. This allows the Load Balancer to detect the active node in real-time and route traffic to it automatically, ensuring seamless failover across Availability Zones.
+  * **In the Cloud:** Since Cloud networks do not support GARP, the Virtual IP is hosted by a **Cloud Load Balancer**. **SafeKit provides the health probe** to determine which node is the primary one. This allows the Load Balancer to detect the active node in real-time and route traffic to it automatically, ensuring seamless failover across Availability Zones.
 
 
 ### What are the distinctive advantages of SafeKit for {{ .Get "app" }} high availability compared to competitors?

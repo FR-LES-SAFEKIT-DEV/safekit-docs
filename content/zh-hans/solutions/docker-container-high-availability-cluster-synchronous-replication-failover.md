@@ -1,72 +1,73 @@
 ---
-title: "SafeKit : Docker高可用性和实时数据复制软件"
+title: "SafeKit：Docker 高可用性和实时数据复制软件"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit提供强大的Docker高可用性解决方案，并集成同步数据复制功能。可在标准Linux服务器上部署有状态容器集群，实现自动故障转移和零数据丢失。无需 SAN 或共享存储。几分钟即可完成部署。"
+description: "SafeKit 提供了一个强大的 Docker 高可用性解决方案，集成了同步数据复制。在标准 Linux 服务器上实现有状态容器集群，具有自动故障转移和零数据丢失功能。无需 SAN 或共享存储。几分钟即可部署。"
 category: "solutions"
 lang: "zh-hans"
-topics: "无 SAN 集群SafeKit Mirror如何与Docker协同工作？目录； SafeKit软件如何简单实现Docker高可用性集群？ SafeKit和mirror集群如何与Docker协同工作？ SafeKit高可用性限制；比较：无 SAN 集群SafeKit与传统高可用性Docker ；比较： SafeKit与开源高可用性Linux （Pacemaker/Corosync/DRBD）； Docker高可用性总结；🔍 探索 SafeKit"
+topics: "SANless SafeKit mirror 集群如何与 Docker 配合使用，目录，SafeKit 软件如何简单地实现 Docker 高可用性集群？，SafeKit mirror 集群如何与 Docker 配合使用？，SafeKit 高可用性限制，比较：SafeKit SANless 集群与传统 Docker HA，比较：SafeKit 与开源 Linux HA (Pacemaker/Corosync/DRBD)，Docker 高可用性总结，🔍 探索 SafeKit"
+translation: "translate_md 2026-11-08.2 | glossaire 2026-11-08.1 | Translation LLM | 36 expressions"
 ---
 
-# SafeKit : Docker高可用性和实时数据复制软件 {#safekit-docker-high-availability--real-time-data-replication-software}
+# SafeKit：Docker 高可用性和实时数据复制软件 {#safekit-docker-high-availability--real-time-data-replication-software}
 
-## 无 SAN 的SafeKit Mirror集群如何与Docker协同工作 {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
+## SANless SafeKit mirror 集群如何与 Docker 配合使用 {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 
-SafeKit提供轻量级的**“恰到好处”的高可用性解决方案**专为那些发现**Kubernetes**资源消耗过高、过于复杂或过度设计，无法满足本地化或边缘计算容器工作负载需求的组织而设计。
+SafeKit 提供了一种轻量级、**刚刚好的高可用性解决方案**，专为那些认为 **Kubernetes** 对于本地化或边缘计算容器工作负载而言资源消耗过大、过于复杂或设计过度冗余的组织量身定制。
 
-**SafeKit**为Docker和**在Linux上提供了一个精简的、一体化的双节点**高可用性集群。它为复杂的“自己动手”（DIY） Linux高可用性堆栈提供了一个无缝集成的替代方案，消除了手动配置**Corosync**用于节点成员）、 **Pacemaker** （用于资源编排）和**DRBD**用于块级复制）的技术负担。
+**SafeKit** 为 Linux 上的 **Docker 提供了一个简化的、一体化的双节点高可用性集群**。它作为复杂“自己动手”（DIY） Linux HA 堆栈的无缝集成替代方案，消除了手动配置 **Corosync** 进行节点成员管理、**Pacemaker** 进行资源编排以及 **DRBD** 进行块级复制的技术负担。
 
-通过利用实时同步复制和自动切换的虚拟 IP 地址SafeKit **了一个强大的** SAN 集群**无需昂贵的共享存储。**架构确保了透明的客户端重连、快速的自动故障转移，并为容器**应用程序**零数据丢失保证 (RPO=0)。
+SafeKit 利用实时同步复制和**自动切换的虚拟 IP 地址**，创建了一个强大的**无共享存储集群**，从而消除了对昂贵共享存储的需求。**这种架构确保了透明的客户端重新连接、快速的自动故障转移以及容器化应用程序的零数据丢失保证（RPO = 0）**。
 
-  * ✅ **Kubernetes替代方案：**为容器提供高可用性，而无需 K8s 网络（入口/负载均衡器）和编排的开销。
-  * ✅ **简化架构：**用单个软件包取代 Corosync/Pacemaker/DRBD 堆栈。
-  * ✅ **无需共享存储：**无 SAN 架构，使用本地磁盘和字节级复制。
-  * ✅ **自动虚拟 IP (VIP) 故障转移：**确保在切换期间透明地重新连接客户端。
-  * ✅ **同步数据复制：**保证节点间零数据丢失 (RPO=0)。
-  * ✅ **自动故障转移和故障恢复：**在冗余节点上快速重启应用程序，无需手动脚本。
-
-
-![ SafeKit高可用性集群架构，为Docker提供虚拟 IP、自动故障转移、自动故障恢复和实时复制功能](/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg "w:512")
-
- **一个高可用性 (HA) 解决方案，适用于Docker容器，采用SafeKit的无 SAN 架构**  
+  * ✅**Kubernetes 替代方案：** 为容器提供高可用性，而无需承担 K8s 网络（入口/负载均衡器）和编排的开销。
+  * ✅**架构简化：** 用单个软件包取代 Corosync/Pacemaker/DRBD 堆栈。
+  * ✅**无需共享存储：** SANless 架构使用本地磁盘和字节级复制。
+  * ✅**自动虚拟 IP (VIP) 故障转移：** 确保在切换期间客户端能够透明地重新连接。
+  * ✅**同步数据复制：** 保证节点之间零数据丢失（RPO = 0）。
+  * ✅**自动故障转移和故障恢复：** 在冗余节点上快速重启应用程序，无需手动脚本。
 
 
-<a class="btn-quick-install" href="/zh-hans/quick-install/safekit-quick-installation-guide-with-docker/"> ⚡ Docker > </a>的快速 HA 安装指南
+![SafeKit 高可用性集群架构适用于 Docker 提供虚拟 IP、自动故障转移、自动回切和实时复制](/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg "w:512")
+
+ **使用 SafeKit 的 SANless 架构为 Docker 容器提供高可用性 (HA) 解决方案**。  
+
+
+<a class="btn-quick-install" href="/zh-hans/quick-install/safekit-quick-installation-guide-with-docker/">⚡ Docker HA 快速安装指南 ></a>
 ## 目录 {#table-of-contents}
 
-  * [软件如何简单地实现Docker高可用性集群](#how-safekit-implements-docker-ha) SafeKit
-  * [集群如何与SafeKit mirror集群以及Docker集群协同工作？ ](#safekit-mirror-cluster)
-  * [ SafeKit高可用性限制](#safekit-ha-limitations)
-  * [对比： SafeKit无 SAN 集群 vs. 传统集群Docker高可用性集群](#safekit-docker-comparison)
-  * [对比： SafeKit与开源Linux HA（起搏器/Corosync/DRBD） ](#safekit-vs-linux-ha-stack)
-  * [ Docker高可用性概要](#docker-ha-summary-quick-installation-guide)
-  * [ 🔍 探索 SafeKit
+  * [SafeKit 软件如何简单地实现 Docker 高可用性集群？](#how-safekit-implements-docker-ha)
+  * [SafeKit mirror 集群如何与 Docker 配合使用？](#safekit-mirror-cluster)
+  * [SafeKit 高可用性限制](#safekit-ha-limitations)
+  * [比较：SafeKit SANless 集群与传统 Docker HA](#safekit-docker-comparison)
+  * [比较：SafeKit 与开源 Linux HA（Pacemaker/Corosync/DRBD）](#safekit-vs-linux-ha-stack)
+  * [Docker 高可用性概述](#docker-ha-summary-quick-installation-guide)
+  * [🔍 探索 SafeKit](#hub)
 
 
-## SafeKit软件如何简单地实现Docker高可用性集群？ {#how-safekit-implements-docker-ha}
+## SafeKit 软件如何简单地实现 Docker 高可用性集群？ {#how-safekit-implements-docker-ha}
 
-### 如何在两台服务器上实现Docker和的高可用性？ {#how-can-i-achieve-high-availability-for-docker-on-two-servers}
+### 如何在两台服务器上实现 Docker 的高可用性？ {#how-can-i-achieve-high-availability-for-docker-on-two-servers}
 
-**SafeKit**为两台冗余服务器之间的**Docker**提供高可用性解决方案，无需共享磁盘。该系统通过配置**对与Docker持久数据关联的目录进行实时复制**来实现。一旦发生故障， SafeKit将管理自动故障转移，并在几秒钟内将容器重启到备用节点上。
+**SafeKit** 为两台冗余服务器之间的 **Docker** 提供高可用性解决方案，无需共享磁盘。**该系统通过配置与 Docker 永久数据相关联的目录的实时复制**来工作。如果发生故障，SafeKit 会管理自动故障转移，并在几秒钟内将您的容器重新启动到辅助节点上。
 
-### Docker容器容器的自动网络故障转移是如何工作的？ {#how-does-automatic-network-failover-work-for-docker-containers}
+### Docker 容器的自动网络故障转移是如何工作的？ {#how-does-automatic-network-failover-work-for-docker-containers}
 
-SafeKit实现了**自动切换的虚拟 IP (VIP) 地址** 。此 VIP 作为客户端应用程序的单一入口点。如果主服务器发生故障， SafeKit会使用**免费 ARP 将虚拟 IP 切换到冗余服务器。这确保客户端能够透明地重新连接到**应用程序重启后Docker同一 IP 地址。
+SafeKit 实现了一个**自动切换的虚拟 IP (VIP) 地址**。此 VIP 作为客户端应用程序的单个入口点。如果主服务器发生故障，SafeKit 会使用**免费 ARP** 将虚拟 IP 移动到冗余服务器。这确保客户端透明地重新连接到已重新启动 Docker 应用程序的同一 IP 地址。
 
-### 什么是Docker的“无 SAN”集群？ {#what-is-a-sanless-cluster-for-docker}
+### 什么是 Docker 的“无 SAN”集群？ {#what-is-a-sanless-cluster-for-docker}
 
-一个无需昂贵存储区域网络 (SAN) 或网络附加存储 (NAS) 的**SAN**架构Docker可实现高可用性。 **架构使用基于主机的**复制技术SafeKit在两台服务器的本地磁盘之间mirror数据。 **消除了共享存储的单点故障风险，并确保**点目标 (RPO) 为零， **意味着在**转移期间不会发生数据丢失。
+适用于 Docker 的**无 SAN 集群**是一种架构，可在无需昂贵的存储区域网络 (SAN) 或网络附加存储 (NAS)**SafeKit** 情况下提供高可用性。**使用基于主机的同步复制**在两台服务器的本地磁盘之间 mirror 数据。**这消除了共享存储作为单点故障，并确保恢复点目标 (RPO) 为零**，这意味着在故障转移期间不会发生数据丢失。
 
-### 是否有可能在不具备Kubernetes技能的情况下搭建Docker集群？ {#is-it-possible-to-set-up-a-docker-cluster-without-kubernetes-skills}
+### 是否可以在没有 Kubernetes 技能的情况下搭建 Docker 集群？ {#is-it-possible-to-set-up-a-docker-cluster-without-kubernetes-skills}
 
-是的。本文[介绍如何在无需专业集群技能或复杂编排Kubernetes SafeKit下](</zh-hans/quick-install/safekit-quick-installation-guide-with-docker/>)快速部署Docker 。通过使用**重启脚本来处理Docker程序的启动和** ，您可以获得一个强大的冗余解决方案，其部署和维护都比 Kubernetes 简单得多。
+是的。本文介绍了如何在没有专业集群技能或复杂 Kubernetes 编排的情况下[快速实施 Docker 集群](</zh-hans/quick-install/safekit-quick-installation-guide-with-docker/>)。通过使用 SafeKit 的**自动重启脚本**来处理 Docker 应用程序的启动和停止，您可以获得一个强大的冗余解决方案，其部署和维护比 K8s 简单得多。
 
-### SafeKit复制与Docker块级解决方案（例如 DRBD）有何不同？ {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}
+### SafeKit 复制与 DRBD 等 Docker 块级解决方案有何不同？ {#how-does-safekit-replication-differ-from-block-level-solutions-like-drbd-for-docker}
 
-与大多数使用块级复制（例如 DRBD）的**SAN 解决方案不同，** **SafeKit执行基于主机**文件级复制。这种方法对应用程序完全透明**因为它不需要将数据迁移到新创建的特定“复制磁盘”卷。相反，您只需配置SafeKit以复制现有的应用程序文件夹——即使是位于Docker系统磁盘**上**文件夹。这样**您就可以在应用程序已安装的位置实现高可用性，而无需进行复杂的Docker重新配置或更改应用程序。
+与大多数使用**块级复制**（如 DRBD）的无共享存储解决方案不同，**SafeKit** **在文件级别执行基于主机的复制**。这种方法对于 Docker 应用程序是完全透明的，因为它不需要您将数据迁移到特定、新创建的“复制磁盘”卷。**相反，您只需配置 SafeKit 来复制现有的应用程序文件夹——甚至包括系统磁盘**上的文件夹。这使您能够在 Docker 已经安装的位置为其实现高可用性，而无需进行复杂的磁盘重新配置或应用程序更改。
 
-### SafeKit能否为Docker及之后的应用提供高可用性？ {#can-safekit-provide-high-availability-for-applications-beyond-docker}
+### SafeKit 能否为 Docker 以外的应用程序提供高可用性？ {#can-safekit-provide-high-availability-for-applications-beyond-docker}
 
-是的。 **SafeKit** 是一款功能高度通用、高可用性的软件，与两者兼容 **Windows 和 Linux**。 超过 Docker, SafeKit 可用于实现 **实时复制和自动故障转移** 适用于任何文件目录、服务或数据库。它支持多种技术，包括 **Hyper-V 和 KVM 虚拟机** , **Docker** , **K3s** 以及各种 **云应用**这使得 SafeKit 一种通用的集群解决方案，无需专用硬件即可保护各种 IT 环境中的关键工作负载。
+是的。**SafeKit** 是一款高度通用、兼容 **Windows 和 Linux** 高可用性软件。**除了 Docker，SafeKit 还可以用于为任何文件目录、服务或数据库实现实时复制和自动故障转移**它支持多种技术，包括 **Hyper-V 和 KVM 虚拟机**、**Docker**、**K3s** 以及各种**云应用程序**。这使得 SafeKit 成为一种通用的集群解决方案，可在各种 IT 环境中保护关键工作负载，而无需专用硬件。
 
 
 {{%  insert-safekit-mirror-zh-hans app="Docker"  %}}
@@ -74,33 +75,33 @@ SafeKit实现了**自动切换的虚拟 IP (VIP) 地址** 。此 VIP 作为客�
 {{%  insert-safekit-usage-zh-hans  %}}
  
 
-## 对比： SafeKit无 SAN 集群 vs. 传统Docker高可用性集群 {#safekit-docker-comparison}
+## 比较：SafeKit SANless 集群与传统 Docker HA {#safekit-docker-comparison}
 
-特性|传统 HA（K8s / 共享存储） | SafeKit （无 SAN Mirror ）  
+特色 | 传统 HA（K8s/共享存储） | SafeKit（无共享 Mirror）  
 ---|---|---  
-存储架构|需要昂贵的**SAN 或 NAS；** （共享磁盘）； |无共享架构：仅使用本地磁盘。  
-复制类型|通常为块级复制（配置复杂） |字节级文件复制（透明）  
-数据一致性|取决于外部存储可靠性|同步复制 (RPO = 0)  
-网络配置|复杂（负载均衡器、入口等） |自动虚拟 IP (VIP) 故障转移  
-技能要求|专家级（ Kubernetes /聚类专家） |简单级：无需专业技能  
-故障恢复流程|手动或复杂重新同步|自动重新同步已修改的数据  
+存储架构 | 需要昂贵的 **SAN 或 NAS**（共享磁盘） | 无共享：仅使用本地磁盘  
+复制类型 | 通常为块级（配置复杂） | 字节级文件复制（透明）  
+数据一致性 | 取决于外部存储的可靠性 | 同步复制 (RPO = 0)  
+网络设置 | 复杂（负载均衡器、入口等） | 自动虚拟 IP (VIP) 故障转移  
+技能要求 | 专家（Kubernetes /集群专家） | 简单：无需专业技能  
+故障恢复流程 | 手动或复杂地重新同步 | 自动重新同步修改后的数据  
   
-## 对比： SafeKit与开源Linux HA（起搏器/Corosync/DRBD） {#safekit-vs-linux-ha-stack}
+## 比较：SafeKit 与开源 Linux HA（Pacemaker/Corosync/DRBD） {#safekit-vs-linux-ha-stack}
 
-功能| Linux HA 堆栈（Pacemaker + Corosync + DRBD） | SafeKit （无 SAN Mirror ）  
+特色 | Linux HA 堆栈（Pacemaker + Corosync + DRBD） | SafeKit（无共享 Mirror）  
 ---|---|---  
-建筑学 | 模块化：需要管理 3 个以上不同的工具和内核模块。 | 一体化：用于复制和故障转移的单一集成软件。  
-复制级别 | 块级（DRBD）：复制整个分区/磁盘卷。 | 字节级（SafeKit）：仅复制特定文件中的已修改数据。  
-配置难度|复杂：需要具备命令行界面 (CLI) 专业知识，才能手动设置排序约束（虚拟 IP、挂载点）、应用程序恢复脚本和仲裁/隔离规则。配置难度|简单：直观的 Web 控制台和即用型应用程序模块。  
-隔离（STONITH） |为防止数据损坏而必需：STONITH（Shoot The Other Node In The Head， [ |额外硬件的智能脑裂修复](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)  
-故障恢复过程 | 手动/技术：重新同步过程中存在数据发散或“脑裂”的风险。 | 自动且透明：后台重新同步，并具有安全故障恢复功能。  
-维护 | 需要高度专业技能才能更新/排除各个组件的故障。 | 普通系统管理员可通过网页控制面板轻松维护。  
+架构 | 模块化：需要管理 3 种或更多种不同的工具和内核模块。 | 一体化：用于复制和故障转移的单一集成软件。  
+复制级别 | 块级 (DRBD)：复制整个分区/磁盘卷。 | 字节级（SafeKit）：仅复制特定文件内已修改的数据。  
+配置简便 | 复杂：需要 CLI（命令行界面）专业知识来手动编程排序约束（虚拟 IP、挂载）、应用程序恢复脚本和仲裁/隔离规则。 | 简单：直观的 Web 控制台和即用型应用程序模块。  
+隔离（STONITH） | 防止损坏的强制措施：STONITH（Shoot The Other Node In The Head）需要专门的硬件（IPMI/iDRAC）来切断电源或重启故障服务器。 | 基于软件：[智能分割脑解决方案，无需额外硬件。](</zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)  
+故障恢复流程 | 手动/技术：重新同步期间数据发散或“脑裂”的风险。 | 自动且透明：后台重新同步，并具备安全故障恢复功能。  
+维护 | 更新/排除单个组件故障需要高超的专业技能。 | 普通系统管理员可通过网络仪表板轻松维护。  
   
-## Docker高可用性概要 {#docker-ha-summary-quick-installation-guide}
+## Docker 高可用性概述 {#docker-ha-summary-quick-installation-guide}
 
-**SafeKit** 提供了一种简单的 **用于 2 节点高可用性集群 Docker** 提供轻便 **Kubernetes 选择** 针对关键任务型工作负载。通过替换复杂的 **Corosync、Pacemaker 和 DRBD** 堆， SafeKit 无需昂贵的 **SAN/NAS** 共享存储。
+**SafeKit** **为 Docker 提供了一个简单的双节点高可用集群**，为关键任务工作负载提供了一个轻量级的 **Kubernetes 替代方案**。通过替换复杂的 **Corosync、Pacemaker 和 DRBD** 堆栈，SafeKit 无需昂贵的 **SAN/NAS** 共享存储。
 
-SafeKit通过**实时同步复制**和**自动虚拟 IP (VIP) 故障转移**，确保**零数据丢失 (RPO=0)**和透明的应用恢复。对于需要强大、**无 SAN 的高可用性**且配置和管理开销极低的组织而言，它是理想的解决方案。
+通过**实时同步复制**和**自动虚拟 IP (VIP) 故障转移**，SafeKit 可确保**零数据丢失 (RPO = 0)** 和透明的应用程序恢复。**对于需要强大、无 SAN 的高可用性**，且配置和管理开销极小的组织而言，它是理想的解决方案。
 
 
 {{%  insert-safekit-hub-zh-hans  %}}

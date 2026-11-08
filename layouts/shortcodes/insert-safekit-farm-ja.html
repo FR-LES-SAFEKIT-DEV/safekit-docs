@@ -1,65 +1,66 @@
-{{/* Shortcode: insert-safekit-farm-ja — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-07.15 | glossaire 2026-11-07.14 | Translation LLM | 27 expressions */}}
+{{/* Shortcode: insert-safekit-farm-en — 8 instances in 8 files */}}
 {{/* Parameters: app */}}
-{{/* Source: content\ja\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## SafeKitクラスターは<span class="notranslate farm-term" translate="no">farm</span>モードで{{ .Get "app" }}とどのように連携しますか？ {#safekit-farm-cluster}
+## <span class="notranslate farm-term" translate="no">farm</span> モードの SafeKit クラスターは、{{ .Get "app" }} とどのように連携しますか？ {#safekit-farm-cluster}
 
-### <span class="notranslate farm-term" translate="no">farm</span>モードクラスターにおける仮想IPアドレス {#virtual-ip-address-farm}
-
-
-![SafeKitクラスターが{{ .Get "app" }}のネットワーク負荷分散とフェイルオーバーを実現する仕組み](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+### <span class="notranslate farm-term" translate="no">farm</span> モードクラスターの仮想 IP アドレス {#virtual-ip-address-farm}
 
 
-上図では、{{ .Get "app" }}アプリケーションが3台のサーバー（3台は一例であり、2台以上で構成可能）で動作しています。ユーザーは仮想IPアドレスに接続します。
-
-[仮想IPアドレス](/ja/best-practises/how-a-virtual-ip-address-works/)は、<span class="notranslate farm-term" translate="no">farm</span>モードクラスター内の各サーバーにローカルで構成されます。\
-仮想IPアドレスへの入力トラフィックはすべてのサーバーによって受信され、各サーバーのカーネル内にあるネットワークフィルターによってサーバー間に分散されます。
-
-SafeKitはハードウェアおよびソフトウェアの障害を検出し、障害発生時にネットワークフィルターを再構成します。また、構成可能なアプリケーションチェッカーとリカバリスクリプトを提供します。
-
-### ネットワークフィルターにおける負荷分散 {#network-load-balancing}
-
-ネットワークフィルター内のネットワーク負荷分散アルゴリズムは、クライアントパケットの識別情報（クライアントIPアドレス、クライアントTCPポート）に基づいています。入力されたクライアントパケットの識別情報に応じて、1台のサーバーにあるフィルターのみがそのパケットを受け入れ、他のサーバーにあるフィルターはそれを拒否します。
-
-あるサーバーのフィルターによってパケットが受け入れられると、クライアントの要求に応答する{{ .Get "app" }}アプリケーションによって、そのサーバーのCPUとメモリのみが使用されます。出力メッセージは、アプリケーションサーバーからクライアントへ直接送信されます。
-
-サーバーに障害が発生した場合、<span class="notranslate farm-term" translate="no">farm</span>のハートビートプロトコルがネットワーク負荷分散クラスター内のフィルターを再構成し、残りの利用可能なサーバーにトラフィックを再分散します。
-
-### ステートフルまたはステートレスアプリケーション {#stateful-stateless}
-
-ステートフルな{{ .Get "app" }}アプリケーションでは、セッションアフィニティが存在します。同じクライアントが複数のTCPセッションにわたってサーバー上のコンテキストを取得するには、常に同じサーバーに接続する必要があります。この場合、SafeKitの負荷分散ルールはクライアントIPアドレスに基づいて構成されます。これにより、同じクライアントは複数のTCPセッションにおいて常に同じサーバーに接続され、異なるクライアントは<span class="notranslate farm-term" translate="no">farm</span>内の異なるサーバーに分散されます。
-
-ステートレスな{{ .Get "app" }}アプリケーションでは、セッションアフィニティは存在しません。同じクライアントが複数のTCPセッションにおいて、<span class="notranslate farm-term" translate="no">farm</span>内の異なるサーバーに接続することができます。セッション間でサーバーにローカル保存されるコンテキストはありません。この場合、SafeKitの負荷分散ルールはTCPクライアントセッションの識別情報に基づいて構成されます。この構成はサーバー間でセッションを分散させるのに最適ですが、セッションアフィニティを必要としないTCPサービスである必要があります。
-
-### {{ .Get "app" }}向けに<span class="notranslate farm-term" translate="no">farm</span>モードのSafeKitクラスターを構成する方法 {#safekit-farm-cluster-configuration}
+![SafeKit クラスターによる {{ .Get "app" }}ネットワーク負荷分散とフェイルオーバーの実装方法](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-![SafeKit Web Console：{{ .Get "app" }}のネットワーク負荷分散と仮想IP管理のためのfarmモードクラスター構成](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+前の図では、{{ .Get "app" }} アプリケーションが 3 台のサーバーで実行されています（3 は例であり、2 台以上でもかまいません）。ユーザーは仮想 IP アドレスに接続されています。
+
+[仮想 IP アドレスは](/ja/best-practises/how-a-virtual-ip-address-works/)、<span class="notranslate farm-term" translate="no">farm</span> モードクラスター内の各サーバーにローカルに設定されます。  
+仮想 IP アドレスへの入力トラフィックは、すべてのサーバーによって受信され、各サーバーのカーネル内のネットワークフィルターによってサーバー間で分割されます。
+
+SafeKit は、ハードウェアおよびソフトウェアの障害を検出し、障害発生時にネットワークフィルタを再構成し、設定可能なアプリケーションチェッカーとリカバリスクリプトを提供します。
+
+### ネットワークフィルタにおける負荷分散 {#network-load-balancing}
+
+ネットワークフィルタ内のネットワーク負荷分散アルゴリズムは、クライアントパケットの ID（クライアント IP アドレス、クライアント TCP ポート）に基づいています。クライアントパケット入力の ID に応じて、サーバー内の 1 つのフィルタのみがパケットを受け入れ、他のサーバー内の他のフィルタはそれを拒否します。
+
+サーバー上のフィルターによってパケットが受け入れられると、クライアントの要求に応答する {{ .Get "app" }} アプリケーションによって、このサーバーの CPU とメモリのみが使用されます。出力メッセージは、アプリケーションサーバーからクライアントに直接送信されます。
+
+サーバーに障害が発生した場合、<span class="notranslate farm-term" translate="no">farm</span> ハートビートプロトコルはネットワーク負荷分散クラスター内のフィルターを再構成し、残りの使用可能なサーバーへのトラフィックを再調整します。
+
+### ステートフルアプリケーションまたはステートレスアプリケーション {#stateful-stateless}
+
+ステートフルな {{ .Get "app" }} では、セッションアフィニティが適用されます。同じクライアントは、サーバー上のコンテキストを取得するために、複数の TCP セッションで同じサーバーに接続する必要があります。この場合、SafeKit ロードバランシングルールはクライアントの IP アドレスに設定されます。したがって、同じクライアントは常に複数の TCP セッションで同じサーバーに接続されます。そして、異なるクライアントは <span class="notranslate farm-term" translate="no">farm</span> 内の異なるサーバーに分散されます。
+
+ステートレスな {{ .Get "app" }} アプリケーションでは、セッションアフィニティはありません。同じクライアントが、複数の TCP セッションで <span class="notranslate farm-term" translate="no">farm</span> 内の異なるサーバーに接続される可能性があります。あるセッションから別のセッションへのコンテキストは、サーバー上にローカルに保存されません。この場合、SafeKit ロードバランシングルールは、TCP クライアントセッション ID で構成されます。この構成は、サーバー間でセッションを分散するのに最適ですが、セッションアフィニティのない TCP サービスが必要です。
+
+### {{ .Get "app" }} 向けに <span class="notranslate farm-term" translate="no">farm</span> モードで SafeKit クラスターを構成する方法 {#safekit-farm-cluster-configuration}
 
 
-**<span class="notranslate farm-term" translate="no">farm</span>モードのSafeKitクラスター**は、サービスの高可用性と拡張性を実現するために設計されています。構成では、流入するトラフィックを両方のノードに同時に分散させます。
-
-  * **負荷分散サービス（Macrosタブ）：**すべてのノードでアクティブに維持する特定のアプリケーションサービス（例：Apache、IIS、Nginx）を定義します。
-  * **ハートビートネットワーク：**ノードが<span class="notranslate farm-term" translate="no">farm</span>から離脱したかどうかを検出する通信経路であり、離脱を検出すると即座に負荷の再配分を開始します。
-  * **仮想IP（<span class="notranslate farm-term" translate="no">Farm</span> VIP）：**`Mirror`クラスターとは異なり、<span class="notranslate farm-term" translate="no">Farm</span> VIPはカーネルフィルタリングアルゴリズムを使用してノード間で共有され、ネットワークトラフィックを分散します。
-  * **負荷分散ルール：**送信元IPアドレスまたはポートに基づいて、トラフィックの分散ポリシーを定義します。
-  * **チェッカー：**アプリケーションの健全性を監視し、プロセス障害が検出された場合に自動再起動を開始します。
+![SafeKit Web Console: {{ .Get "app" }}ネットワーク負荷分散と仮想 IP 管理のためのクラスター構成。](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-### {{ .Get "app" }}向けに<span class="notranslate farm-term" translate="no">farm</span>モードのSafeKitクラスターを監視する方法 {#safekit-farm-cluster-monitoring}
+**<span class="notranslate farm-term" translate="no">farm</span> モードの SafeKit クラスターは**、サービスの高可用性とスケーラビリティを目的として設計されています。この構成では、両方のノードに同時に着信するトラフィックを分散することに重点を置いています
+
+  * **ロードバランシングサービス（マクロタブ）：** すべてのノードでアクティブに保つ特定のアプリケーションサービス（例：Apache、IIS、Nginx）を定義します。
+  * **ハートビートネットワーク：** ノードが <span class="notranslate farm-term" translate="no">farm</span> から離脱したかどうかを検出するために使用される通信パスで、負荷の即時再分配をトリガーします。
+  * **仮想 IP（<span class="notranslate farm-term" translate="no">Farm</span> VIP）：** mirror クラスターとは異なり、<span class="notranslate farm-term" translate="no">Farm</span> VIP はカーネルフィルタリングアルゴリズムを使用してネットワークトラフィックを分散し、ノード間で共有されます。
+  * **ロードバランシングルール：** 送信元 IP アドレスまたはポートに基づいてトラフィック分散ポリシーを定義します。
+  * **チェッカー：** アプリケーションの正常性を監視し、プロセスの障害が検出された場合は自動再起動をトリガーします。
 
 
-![SafeKit Console：farmモードの2ノードクラスターの監視画面。両方の{{ .Get "app" }}ノードがUP状態で、負荷分散が有効です。](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+### {{ .Get "app" }} の <span class="notranslate farm-term" translate="no">farm</span> モードで SafeKit クラスターを監視する方法は？ {#safekit-farm-cluster-monitoring}
 
 
-<span class="notranslate farm-term" translate="no">farm</span>モードのクラスターを監視すると、すべてのノードがアプリケーションのパフォーマンスに貢献する**アクティブ・アクティブ**構成のインフラストラクチャを確認できます（この例では2つのノードを表示しています）。
-
-  * **UP状態（2つのノードで50%ずつ）：**正常な<span class="notranslate farm-term" translate="no">farm</span>では、両方のノードが「UP」（50%）状態にあり、共有された仮想IPを介してクライアントからのリクエストをアクティブに受信し、処理しています。
-  * **自動再配分：**1つのノードに障害が発生した場合、残りのノードがトラフィックの100%を引き受ける様子がコンソールに表示されます。生存しているノードはすでにアクティブ状態であるため、数秒程度の検出時間を除きフェイルオーバーによる遅延はありません。
-  * **ノードの追加：**修復されたノードが再起動されると、「STOP」から「UP」へ遷移し、管理者の介入なしに自動的に割り当て分の負荷の受信を開始します。
-  * **データ同期なし：**<span class="notranslate farm-term" translate="no">farm</span>モードのクラスターでは、ノードがステートレスであるか、バックエンドデータベースを共有している（`Mirror`クラスターで個別に保護可能）ことが前提となるため、「オレンジ色」の再同期状態はありません。
+![SafeKit コンソール：2 ノードのファームモードクラスターを監視。両方の {{ .Get "app" }} ノードが UP 状態で、アクティブなロードバランシングが有効になっていることを示しています。](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
 
 
-単なるステータスアイコンの表示にとどまらず、インターフェースからワンクリックでノードを管理できます。計画メンテナンスのためにノードを手動で停止または起動でき、その間も共有仮想IPがユーザーの操作を中断することなくトラフィックを自動的に再配分します。
+<span class="notranslate farm-term" translate="no">farm</span> モードでクラスターを監視すると、インフラストラクチャの**アクティブ/アクティブな**性質を可視化できます。このモードでは、すべてのノードがアプリケーションのパフォーマンスに貢献します（この例では 2 つのノードが表示されます）
+
+  * **UP 状態 (2 ノードで 50%):** 正常な <span class="notranslate farm-term" translate="no">farm</span> では、両方のノードが「UP」(50%)状態にあり、共有仮想 IP を介してクライアント要求をアクティブに受信および処理していることを意味します。
+  * **自動リバランス：** 1 つのノードに障害が発生した場合、コンソールには残りのノードがトラフィックの 100% を引き受けていることが視覚的に表示されます。生き残ったノードはすでにアクティブであるため、「フェイルオーバー」による遅延はありません（数秒の検出時間を除く）。
+  * **ノード挿入：** 修復されたノードが再起動すると、「STOP」から「UP」に移行し、管理者の介入なしに自動的に負荷の一部を受信し始めます。
+  * **データ同期なし：**<span class="notranslate farm-term" translate="no">farm</span> モードクラスターでは、ノードはステートレスであるか、バックエンドデータベースを共有することが想定されているため、「オレンジ」の再同期状態はありません (バックエンドデータベースは mirror クラスターで個別に保護できます)。
+
+
+シンプルなステータスアイコンに加え、このインターフェースはワンクリックのノード管理を提供します。計画的なメンテナンスのためにノードを手動で停止または開始できる一方で、共有仮想 IP はユーザーの活動を中断することなく自動的にトラフィックを再分配します。

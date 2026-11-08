@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-07.14"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-08.3"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -188,6 +188,7 @@ def encode(text, ctx):
     # liens HTML bruts : <a href="/page/"> -> <a href="/fr/page/">
     text = re.sub(r'(<a\b[^>]*?\bhref=")([^"]+)(")', lambda m: m.group(1) + ctx.link_fix(m.group(2)) + m.group(3), text)
     text = re.sub(r"`[^`]+`", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)   # code d'abord
+    text = re.sub(r"<code>([^<`]+)</code>", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)   # <code>farm</code> : un seul bloc
     # durées / heures (9:43, 3:21:35) : jamais traduites ("7 時 40 分", "٨:٤٧")
     # sauf "9:00 AM" / "5:00 PM" : Google doit les convertir ("9 h", "17 h", "午後 5:00")
     text = re.sub(r"(?<![\w:.=/])\d{1,2}(?::\d{2}){1,2}(?![\w:])(?!\s?[AaPp]\.?[Mm]\b)", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
@@ -251,11 +252,59 @@ def decode(text, ctx):
     st = ctx.store
     text = re.sub(r'<span[^>]*data-k="(\d+)"[^>]*>.*?</span>', lambda m: f"{S}P{m.group(1)}{S}", text)
     text = re.sub(r'\s*<br[^>]*data-k="(\d+)"[^>]*>\s*', lambda m: f" {S}P{m.group(1)}{S} ", text)
+    seen = set()
+    def once(m):   # Google recopie parfois un nom protégé ("SafeKit 提供健康探测 SafeKit") : chaque marqueur est unique
+        if m.group(1) in seen:
+            return ""
+        seen.add(m.group(1))
+        return m.group(0)
+    text = re.sub(f"{S}P(\\d+){S}", once, text)
+    if KEEP_RE:   # nom protégé recopié en clair par Google en plus du marqueur ("SafeKit 提供健康探测 SafeKit")
+        plain = lambda i: re.sub(r"<[^>]+>", "", st[i]).strip()
+        made = [plain(i) for i in range(len(st)) if isinstance(st[i], str)]
+        for t in {x for x in made if KEEP_RE.fullmatch(x)}:
+            n, seen_t = made.count(t), [0]
+            pat = f"{S}P(\\d+){S}|(?<![A-Za-z0-9_#.-])" + re.escape(t) + r"(?![A-Za-z0-9_-])"   # collé au japonais : "SafeKit堅牢"
+            total = sum(1 for mm in re.finditer(pat, text) if mm.group(1) is None or plain(int(mm.group(1))) == t)
+            if total <= n:
+                continue
+            # on supprime d'abord les occurrences en clair (jamais un marqueur : "**Docker**" -> "****") ;
+            # si un marqueur suit dans la même phrase, il prend la place du texte en clair
+            # ("SafeKit 提供健康探测 SafeKit" -> "SafeKit 提供健康探测")
+            for _ in range(total - n):
+                occ = [mm for mm in re.finditer(pat, text) if mm.group(1) is None or plain(int(mm.group(1))) == t]
+                pl = [mm for mm in occ if mm.group(1) is None]
+                if not pl:
+                    break
+                alone = lambda mm: re.search(r"<b>\s*$", text[:mm.start()]) and re.match(r"\s*</b>", text[mm.end():])
+                adj = next((p for p in pl for mm in occ if mm.group(1) is not None
+                            and re.fullmatch(r"[\s<>/b]*", text[p.end():mm.start()] if mm.start() > p.end() else text[mm.end():p.start()])), None)
+                pair = next(((p, mm) for p in pl for mm in occ if mm.group(1) is not None and mm.start() > p.end() and not alone(mm)
+                             and not re.search(r"[。！？]|[.!?](?:\s|$)", text[p.end():mm.start()])), None)
+                start = next((p for p in pl if re.search(r"(?:^|[。！？]|[.!?:]\s)\s*(?:<b>\s*)?$", text[:p.start()])), None)
+                lone = [mm for mm in occ if mm.group(1) is not None and alone(mm)]
+                if adj:   # "SafeKit **SafeKit**、" : le texte en clair collé au marqueur disparaît
+                    text = text[:adj.start()] + text[adj.end():]
+                elif pair:   # "SafeKit 提供健康探测 SafeKit" : le marqueur prend la place du texte en clair
+                    p, nxt = pair
+                    text = text[:p.start()] + nxt.group(0) + text[p.end():nxt.start()] + text[nxt.end():]
+                elif start and lone and lone[-1].start() > start.end():   # sujet en début de phrase gardé, "**SafeKit**" déplacé ailleurs supprimé
+                    mm = lone[-1]
+                    text = text[:start.start()] + "<b>" + mm.group(0) + "</b>" + text[start.end():mm.start()] + text[mm.end():]
+                    text = re.sub(r"<b>\s*</b>", "", text)
+                else:   # sinon : la dernière occurrence en clair
+                    p = pl[-1]
+                    text = text[:p.start()] + text[p.end():]
+            text = re.sub(r"(?<=\S)  +(?=\S)", " ", text)
+            text = re.sub(r"([，。、；：！？])\s+", r"\1", text)
+            text = re.sub(r"<b>\s+", "<b>", text)
     text = re.sub(f"({S}P\\d+{S})\\s*/\\s*(?={S}P\\d+{S})", r"\1/", text)   # "Windows / Hyper-V" -> "Windows/Hyper-V"
     text = re.sub(f"({S}P\\d+{S}) +-(?=\\w)", r"\1-", text)
     def dedup(m):   # premier mot d'un nom protégé répété juste avant lui : "SQL SQL Server" -> "SQL Server"
         tok = re.sub(r"<[^>]+>", "", st[int(m.group(3))]).strip()
-        return m.group(2) if " " in tok and tok.split(" ")[0] == m.group(1) else m.group(0)
+        if tok == m.group(1) or (" " in tok and tok.split(" ")[0] == m.group(1)) or tok.startswith(m.group(1) + "-"):   # "Hyper Hyper-V"
+            return m.group(2)   # aussi "SafeKit SafeKit" -> "SafeKit"
+        return m.group(0)
     # (avec ou sans gras entre les deux : "ADB <b>ADB SafeGate</b>")
     text = re.sub(f"(?<![\\w-])([A-Za-z][\\w-]*)\\s+((?:<b>\\s*)?{S}P(\\d+){S})", dedup, text)
     text = re.sub(r"<b>\s*([。，、；：！？.,;:!?]+)\s*", r"\1<b>", text)
@@ -350,7 +399,7 @@ def decode(text, ctx):
     text = re.sub(r" +\)", ")", text)
     text = re.sub(r"\s+(\\\))", r"\1", text)   # infobulle "\(mirror.safe \)" -> "\(mirror.safe\)"
     text = re.sub(r"(\\\()\s+", r"\1", text)
-    text = re.sub(r" +([,.](?:\s|$))", r"\1", text)
+    text = re.sub(r" +([,.](?:\s|$|\]))", r"\1", text)   # aussi "cluster mirror .](" (texte d'image)
     text = re.sub(r"([A-Za-zÀ-ÿ][’'])\s+(\*\*|\[)", r"\1\2", text)   # l' **adresse -> l'**adresse
     text = re.sub(r"\*\*([;:!?])", r"** \1", text) if ctx.apos else text  # espace avant ; : ! ?
     if CJK:
@@ -382,6 +431,23 @@ def decode(text, ctx):
     if CJK:   # après restauration : deux termes protégés collés ("Siveillance虚拟机级 HA架构")
         text = re.sub(f"([A-Za-z0-9])(?=[{CJK_CHAR}])", r"\1 ", text)
         text = re.sub(f"([{CJK_CHAR}])(?=[A-Za-z0-9])", r"\1 ", text)
+    if CJK:   # gras étendu par Google sur plusieurs phrases ("**これにより…。…は クライアントの IP アドレス**") : on garde la fin
+        def shrink(m):
+            body = m.group(1)
+            if not re.search("[。！？](?=.)", body):
+                return m.group(0)
+            cut = max(body.rfind(c) for c in "。！？、，")
+            head, tail = body[:cut + 1], body[cut + 1:]
+            k = tail.rfind("は")   # japonais : sujet "ロードバランサーは" hors du gras
+            if 0 <= k < len(tail) - 2:
+                head, tail = head + tail[:k + 1], tail[k + 1:]
+            p = max((tail.rfind(w) + len(w), w) for w in ("根据", "基于", "按照", "通过"))[0]   # chinois : "负载均衡器会根据" hors du gras
+            if 2 < p < len(tail) - 2:
+                head, tail = head + tail[:p], tail[p:]
+            return f"{head}**{tail.strip()}**" if tail.strip() else m.group(0)
+        text = re.sub(r"\*\*([^*\n]+?)\*\*", shrink, text)
+    text = re.sub(r"<code>\s+", "<code>", text)
+    text = re.sub(r"\s+</code>", "</code>", text)
     return text.strip()
 
 def native_terms(text, ctx):
@@ -396,7 +462,10 @@ def native_terms(text, ctx):
             continue
         last = re.split(r"\s+", tr)[-1]
         if len(last) >= 2 and last != tr:   # dernier mot répété : "mirror クラスタークラスター" -> "mirror クラスター"
-            text = re.sub("(" + re.escape(tr) + r")\s*" + re.escape(last), r"\1", text, flags=re.I)
+            text = re.sub("(" + re.escape(tr) + r"(?:\*\*)?)\s*" + re.escape(last), r"\1", text, flags=re.I)   # aussi "クラスター**クラスター"
+        kat = re.search(r"[\u30a0-\u30ff]{3,}$|[가-힣]{2,}$|[\u4e00-\u9fff]{2}$", tr)   # "高可用性クラスタークラスター" -> "高可用性クラスター"
+        if kat and kat.group(0) != tr:
+            text = re.sub("(" + re.escape(tr) + r"(?:\*\*)?)\s*" + re.escape(kat.group(0)), r"\1", text)
         for k in range(len(tr) - 1, 1, -1):   # préfixe du terme répété juste avant lui
             text = text.replace(tr[:k] + tr, tr)
             text = text.replace(tr[:k] + "**" + tr, "**" + tr)
@@ -567,7 +636,13 @@ def main():
             if m:
                 ctx = Ctx(link_fix)
                 ctx.apos = APOS and m.group(2) != "'"
-                jobs.append((i, m.group(1) + m.group(2), encode(m.group(3), ctx), m.group(2), ctx))
+                val = m.group(3)
+                if re.match(r"\s*topics\b", m.group(1)) and ", " in val:
+                    # liste de titres "A, B, C" : un titre par ligne pour Google (sinon il fusionne
+                    # ou perd des éléments : "SafeKit SafeKit クラスター…"), puis réassemblés
+                    ctx.list_sep = "、" if CJK else ("، " if lang.startswith("ar") else ", ")
+                    val = "<br>".join(x.strip() for x in val.split(", "))
+                jobs.append((i, m.group(1) + m.group(2), encode(val, ctx), m.group(2), ctx))
             continue
         if i <= fm_end:
             continue
@@ -625,8 +700,11 @@ def main():
             lead = m.group(1)
             # HTML brut "<p><strong>texte</strong></p>" : les balises d'ouverture / fermeture restent hors
             # de la requête (sinon Google voit "0texte1" et peut perdre des mots : "感谢您联系我们" -> "您联系我们")
-            hm = re.match(r"^((?:<[a-zA-Z][^<>]*>\s*)+)([^<>]*?\S[^<>]*?)((?:\s*</[a-zA-Z][^<>]*>)+)$", body.rstrip())
-            if hm and not re.search(r"\{\{", hm.group(1)):
+            # (balise ouvrante pouvant contenir {{ .Get "guide" }} ; texte pouvant contenir ">" : "… {{ .Get "app" }} >")
+            hm = re.match(r"^((?:<[a-zA-Z](?:[^<>{]|\{\{[^}]*\}\})*>\s*)+)((?:[^<]|</?(?:code|b|strong|em|i)>)*?\S(?:[^<]|</?(?:code|b|strong|em|i)>)*?)((?:\s*</[a-zA-Z][^<>]*>)+)$", body.rstrip())
+            if hm and re.search(r"\s>$", hm.group(2)):   # flèche finale "… >" du bouton : hors traduction (sinon déplacée : "{{ app }} ></a> のための…")
+                hm = type("M", (), {"group": lambda self, k, _g=(hm.group(0), hm.group(1), hm.group(2)[:-1].rstrip(), " >" + hm.group(3)): _g[k]})()
+            if hm:
                 lead += re.sub(r'(<a\b[^>]*?\bhref=")([^"]+)(")', lambda x: x.group(1) + link_fix(x.group(2)) + x.group(3), hm.group(1))
                 trail = hm.group(3) + trail
                 body = hm.group(2)
@@ -692,6 +770,8 @@ def main():
         if miss:
             numbers.append((idx[0] if isinstance(idx, tuple) else idx, miss))
         t = decode(t, ctx)
+        if getattr(ctx, "list_sep", None):
+            t = re.sub(r"\s*<br\s*/?>\s*", ctx.list_sep, t)
         # pas de point final ajouté quand la source n'en a pas ("[Lire le guide](/x/)。")
         src_vis = re.sub(r"<[^>]+>", "", enc).strip()
         if src_vis and not re.search(r"[.!?。！？]$", src_vis):

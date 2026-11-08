@@ -1,184 +1,185 @@
 ---
-title: "Kubernetes K3s Hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten"
+title: "Kubernetes K3s hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten"
 canonical: "https://safekit.eviden.com/nl/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Bereik hoge beschikbaarheid van K3s op 2 knooppunten zonder externe opslag of etcd-quorum. Ontdek hoe SafeKit zorgt voor replicatie zonder gegevensverlies en automatische failover."
+description: "Bereik hoge beschikbaarheid van K3s op 2 nodes zonder externe opslag of etcd-quorum. Leer hoe SafeKit replicatie zonder gegevensverlies en automatische failover biedt."
 category: "solutions"
 lang: "nl"
-topics: "K3s HA vereenvoudigen: Waarom kiezen voor SafeKit in plaats van MetalLB en Longhorn?, Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een Kubernetes K3s high availability-cluster?, Hoe werkt het SafeKit mirror cluster met Kubernetes K3S?, Beperkingen SafeKit high availability, Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn), Videohandleiding: Een SafeKit HA mirror -cluster configureren, 🔍 Ontdek SafeKit"
+topics: "K3s HA vereenvoudigen: Waarom SafeKit kiezen boven MetalLB en Longhorn?, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een Kubernetes K3s-cluster met hoge beschikbaarheid?, Hoe werkt het SafeKit mirror-cluster met Kubernetes K3S?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn), Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 32 expressions"
 ---
 
-# Kubernetes K3s Hoge Beschikbaarheid: Synchrone Replicatie en Failover met 2 Knooppunten {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
+# Kubernetes K3s hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}
 
-## K3s HA vereenvoudigen: Waarom kiezen voor SafeKit in plaats van MetalLB en Longhorn? {#safekit-k3s-ha-introduction}
+## K3s HA vereenvoudigen: Waarom SafeKit kiezen boven MetalLB en Longhorn? {#safekit-k3s-ha-introduction}
 
-Hoewel de standaard open-source stack (MetalLB + Longhorn) voor K3s krachtig is voor grote datacenters, introduceert deze een te grote complexiteit voor on-premises locaties met twee nodes. **SafeKit** vereenvoudigt de K3s-omgeving door losstaande netwerk- en opslagtools te vervangen door één geconsolideerde HA-engine. 
+Hoewel de standaard open-source stack (MetalLB + Longhorn) voor K3s krachtig is voor grote datacenters, introduceert deze overmatige complexiteit voor on-premises sites met 2 knooppunten. **SafeKit** vereenvoudigt de K3s-omgeving door op zichzelf staande netwerk- en opslagtools te vervangen door één enkele, geconsolideerde HA-engine. 
 
-### Waarom SafeKit gebruiken voor 2-knoops K3s High Availability (HA)? {#why-use-safekit-for-2-node-k3s-high-availability-ha}
+### Waarom SafeKit voor hoge beschikbaarheid (HA) met 2-node K3s? {#why-use-safekit-for-2-node-k3s-high-availability-ha}
 
-  * **Echte hoge beschikbaarheid met 2 knooppunten:** SafeKit biedt volledige redundantie met slechts **knooppunten,** de vereiste van 3 knooppunten voor het _etcd_-quorum vervalt.
-  * **Nul gegevensverlies (RPO=0):** Vervangt blokopslag met hoge overhead door **Synchrone replicatie op byte-niveau** voor lokale SSD-prestaties.
-  * **Flexibele bescherming op bestandsniveau:** SafeKit voert replicatie op hostniveau uit op bestandsniveau, wat volledig transparant is voor de applicatie. Het beschermt niet alleen databases, maar ook alle bijbehorende mappen en gegevens. U kunt bestaande mappen repliceren op exact dezelfde locatie als waar ze zijn geïnstalleerd, zelfs op de **systeemdisk** .
-  * **Geïntegreerd virtueel IP (VIP):** beheert het cluster-IP-adres op kernelniveau, waardoor aparte **MetalLB** -configuraties overbodig zijn.
-  * **Automatische failover en failback:** activeert een onmiddellijke overgang naar het secundaire knooppunt bij een storing; zodra het primaire knooppunt weer functioneert, voert SafeKit **automatische gegevensresynchronisatie** uit zonder handmatige tussenkomst.
-  * **Ultralage overhead:** SafeKit werkt zonder de zware beheerkosten van opslagpods (CSI/Longhorn) en netwerkpods (CNI/MetalLB) die standaard stacks vereisen, waardoor cruciaal RAM-geheugen en CPU-capaciteit vrijkomen voor uw applicaties.
-  * **IT Generalist Friendly:** Vervangt complexe **infrastructuur YAML** voor netwerken en opslag door een **eenvoudige web-GUI** en geautomatiseerde implementatiescripts, zodat u zich volledig kunt concentreren op uw applicaties.
-
-
-Architectuurdiagram ![ SafeKit voor een K3s-architectuur met 2 knooppunten en hoge beschikbaarheid, inclusief geïntegreerd virtueel IP, realtime replicatie en automatische failover. ](/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg "w:512")
-
- **Shared-nothing high availability (HA) voor 2-knoops K3s-clusters**  
+  * **Echte hoge beschikbaarheid met 2 knooppunten:** SafeKit biedt volledige redundantie met slechts **2 knooppunten**, waardoor de vereiste van 3 knooppunten voor *etcd-* quorum wordt geëlimineerd.
+  * **Geen gegevensverlies (RPO = 0):** vervangt opslag met hoge overhead door **synchrone replicatie op byte-niveau** voor lokale SSD-prestaties.
+  * **Flexibele bescherming op bestandsniveau:** SafeKit voert hostgebaseerde replicatie uit op bestandsniveau, wat volledig transparant is voor de toepassing. Het beschermt niet alleen databases, maar ook alle bijbehorende mappen en gegevens. U kunt bestaande mappen precies daar repliceren waar ze zijn geïnstalleerd, zelfs op de **systeemdisk**.
+  * **Geïntegreerde virtuele IP (VIP):** beheert de cluster-IP standaard op kernelniveau, waardoor afzonderlijke **MetalLB-** configuraties overbodig worden.
+  * **Automatische failover en failback:** Activeert een onmiddellijke overgang naar de secundaire node bij een storing; zodra de primaire node weer operationeel is, voert SafeKit **een automatische gegevensresynchronisatie** uit zonder handmatige tussenkomst.
+  * **Extreem lage overhead:** SafeKit werkt zonder de zware beheersoverhead van opslagpods (CSI/Longhorn) en netwerkpods (CNI/MetalLB) die vereist zijn voor standaardstacks, waardoor kritiek RAM- en CPU-geheugen vrijkomt voor uw applicaties.
+  * **IT-generalistvriendelijk:** vervangt complexe **infrastructuur-YAML** voor netwerken en opslag door een **eenvoudige web-GUI** en geautomatiseerde implementatiescripts, zodat u zich alleen op uw applicaties hoeft te richten.
 
 
-<a class="btn-quick-install" href="/nl/quick-install/safekit-quick-installation-guide-with-kubernetes/"> ⚡ Snelle installatiehandleiding voor een HA-cluster Kubernetes > </a>
+![SafeKit architectuurdiagram voor K3s-high availability met 2 knooppunten, met geïntegreerd virtueel IP-adres, realtime replicatie en automatische failover.](/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg "w:512")
+
+ **Shared-nothing high availability (HA) voor K3s-clusters met 2 nodes**  
+
+
+<a class="btn-quick-install" href="/nl/quick-install/safekit-quick-installation-guide-with-kubernetes/">⚡ Snelle installatiegids Kubernetes HA-cluster ></a>
 ## Inhoudsopgave {#toc}
 
-  * [ Hoe implementeert de SafeKit -software eenvoudig een Kubernetes K3s-cluster met hoge beschikbaarheid? ](#safekit-mirror-k3s-cluster)
-  * [ Hoe werkt het SafeKit mirror cluster samen met Kubernetes K3S? ](#safekit-mirror-cluster)
-  * [ SafeKit Beperkingen voor hoge beschikbaarheid ](#safekit-ha-limitations)
-  * [ Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn) ](#safekit-k3s-ha-comparison)
-  * Videohandleiding [ : Een HA-cluster configureren SafeKit Mirror ](#videoguide-safekit-mirror-cluster)
-  * [ 🔍 Ontdek SafeKit
+  * [Hoe implementeert de SafeKit-software eenvoudig een Kubernetes K3s-cluster met hoge beschikbaarheid?](#safekit-mirror-k3s-cluster)
+  * [Hoe werkt het SafeKit mirror-cluster met Kubernetes K3S?](#safekit-mirror-cluster)
+  * [Beperkingen SafeKit High Availability](#safekit-ha-limitations)
+  * [Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn)](#safekit-k3s-ha-comparison)
+  * [Videogids: Een SafeKit mirror HA-cluster configureren](#videoguide-safekit-mirror-cluster)
+  * [🔍 Ontdek SafeKit](#hub)
 
 
-## Hoe implementeert de SafeKit -software eenvoudig een Kubernetes K3s high availability-cluster? {#safekit-mirror-k3s-cluster}
+## Hoe implementeert de SafeKit-software eenvoudig een Kubernetes K3s-cluster met hoge beschikbaarheid? {#safekit-mirror-k3s-cluster}
 
-### Hoe implementeer ik hoge beschikbaarheid voor een K3S-cluster met 2 knooppunten Kubernetes )? {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
+### Hoe implementeer ik hoge beschikbaarheid voor een Kubernetes K3s-cluster met 2 knooppunten? {#how-do-i-implement-high-availability-for-a-2-node-kubernetes-k3s-cluster}
 
-U kunt hoge beschikbaarheid (HA) implementeren voor een 2-knoops Kubernetes K3s-cluster met behulp van de **SafeKit k3s.safe mirror module** . Deze oplossing stelt u in staat een redundante omgeving te implementeren zonder dat u externe NFS-opslag, een speciale externe configuratiedatabase of specialistische Kubernetes -expertise nodig hebt.
+U kunt hoge beschikbaarheid (HA) implementeren voor een Kubernetes K3s-cluster met 2 knooppunten met behulp van de **SafeKit k3s.safe mirror-module**. Met deze oplossing kunt u een redundante omgeving implementeren zonder dat u externe NFS-opslag, een speciale externe configuratiedatabase of gespecialiseerde Kubernetes expertise nodig hebt.
 
-### Waarom K3s gebruiken voor Edge- en IoT-computing? {#why-use-k3s-for-edge-and-iot-computing}
+### Waarom K3s gebruiken voor edge- en IoT-computing? {#why-use-k3s-for-edge-and-iot-computing}
 
-[ K3s ](<https://k3s.io/>) is de Kubernetes voor **IoT- en Edge-computing** omdat het een lichtgewicht, gecertificeerde distributie is die is ontworpen voor omgevingen met beperkte resources. Het vereenvoudigt de operationele overhead van de standaard Kubernetes met behoud van volledige compatibiliteit.
+[K3s](<https://k3s.io/>) is de voorkeurs Kubernetes engine voor **IoT en edgecomputing**, omdat het een lichtgewicht, gecertificeerde distributie is die is ontworpen voor omgevingen met beperkte middelen. Het vereenvoudigt de operationele overhead van standaard Kubernetes met behoud van volledige compatibiliteit.
 
-### Wat zijn de belangrijkste kenmerken van de k3s.safe mirror -module? {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
+### Wat zijn de belangrijkste kenmerken van de k3s.safe mirror-module? {#what-are-the-key-features-of-the-k3ssafe-mirror-module}
 
-De k3s.safe -module biedt een complete HA-stack voor K3's door de volgende implementatie:
+De k3s.safe module biedt een uitgebreide HA-stack voor K3s door het volgende te implementeren:
 
-  * **Dubbele actieve knooppunten:** Draait gelijktijdig 2 actieve K3s masters/agents om pods te hosten.
-  * **Database Replicatie:** Realtime replicatie van de MariaDB configuratiedatabase tussen knooppunten.
+  * **Dubbele actieve knooppunten:** Voert 2 actieve K3s-masters/agents tegelijkertijd uit om pods te hosten.
+  * **Database-replicatie:** real-time replicatie van de MariaDB-configuratiedatabase tussen knooppunten.
   * **Permanente opslag:** Replicatie van permanente volumes via een geïntegreerde NFS-client dynamische provisioner (nfs-client).
-  * **Netwerkcontinuïteit:** Bevat een virtueel IP-adres voor naadloze clienttoegang.
+  * **Netwerkcontinuïteit:** Inclusief een virtueel IP-adres voor naadloze clienttoegang.
   * **Geautomatiseerd herstel:** Volledige ondersteuning voor automatische failover en failback.
 
 
-### Naast K3's, welke applicaties en omgevingen kan SafeKit beschermen? {#beyond-k3s-which-applications-and-environments-can-safekit-protect}
+### Welke applicaties en omgevingen kan SafeKit beschermen, naast K3s? {#beyond-k3s-which-applications-and-environments-can-safekit-protect}
 
-SafeKit is een veelzijdige oplossing voor hoge beschikbaarheid **voor zowel Windows als Linux ,** die veel verder reikt dan het mirror -cluster van K3s. Het maakt **synchrone realtime replicatie** en automatische failover mogelijk voor een breed scala aan kritieke workloads, waaronder:
+SafeKit is een veelzijdige high-availability-oplossing **voor zowel Windows als Linux** die veel verder gaat dan een K3s- mirror-cluster. Het maakt **synchrone real-time replicatie** en automatische failover mogelijk voor een breed scala aan bedrijfskritische workloads, waaronder:
 
-  * **Virtuele en fysieke omgevingen:** Complete Hyper-V- of KVM-virtuele machines.
-  * **Container Orchestratie:** , Docker , Podman omgevingen.
-  * **Gegevens en services:** Individuele bestandsmappen, services en diverse databases.
-  * **Cloudinfrastructuur:** Hoge beschikbaarheid voor cloudapplicaties.
+  * **Virtuele en fysieke omgevingen:** complete Hyper-V of KVM virtuele machines.
+  * **Containerorkestratie:** Docker, Podman omgevingen.
+  * **Gegevens en diensten:** Individuele bestandsmappen, diensten en diverse databases.
+  * **Cloudinfrastructuur:** hoge beschikbaarheid voor cloudtoepassingen.
 
 
-SafeKit biedt ook **<span class="notranslate farm-term" translate="no">Farm</span> Clusters** met native **Netwerktaakverdeling en Failover** voor stateless applicaties zoals **Webservers** .
+SafeKit biedt **<span class="notranslate farm-term" translate="no">farm</span>-clusters** ook native **netwerktaakverdeling en failover** voor stateless applicaties zoals **webservers**.
 
-💡 [ Bekijk hier de volledige lijst met ondersteunde HA-oplossingen. ](</nl/solutions/>)
+💡 [Bekijk hier de volledige lijst met ondersteunde HA-oplossingen.](</nl/solutions/>)
 
-### Hoe realiseert SafeKit de hoge beschikbaarheid van K3s? {#safekit-k3s-architecture-table}
+### Hoe bereikt SafeKit de hoge beschikbaarheid van K3s? {#safekit-k3s-architecture-table}
 
-Architectuur en redundantielogica **voor een K3s-cluster met 2 knooppunten, gebruikmakend van SafeKit**
+**Architectuur en redundantielogica voor een K3s-cluster met 2 knooppunten met behulp van SafeKit**
 
-2-knoops K3s-cluster | SafeKit PRIM (Primaire knoop) | SafeKit SECOND (Secundaire knoop)  
+K3s-cluster met 2 knooppunten | SafeKit PRIM (primaire node) | SafeKit SECOND (secundair knooppunt)  
 ---|---|---  
-Werkbelastinguitvoering | De K3s master- en agentservices zijn actief en beheren de clusterorkestratie en de draaiende pods. | De K3s master- en agentservices blijven actief en zorgen voor parallelle verwerking en hoge beschikbaarheid.  
-NFS-opslag en PV's | • Host virtueel IP-adres en NFS-poort <br> • Beheert actieve geëxporteerde NFS-shares <br> • Slaat K3s Persistent Volumes (PV's) | Synchrone mirroring: SafeKit repliceert alle persistente volumes in realtime om dataverlies te voorkomen.  
-Configuratiedatabase | • Host virtueel IP-adres en poort MariaDB <br> • Beheert de actieve K3s-configuratiedatabase | Databasereplicatie: De MariaDB database wordt synchroon gespiegeld, waardoor de clusterstatus behouden blijft bij failover.  
+Uitvoering van werkbelasting | De master- en agent-services van K3s zijn actief, beheren de clusterorkestratie en voeren pods uit. | De master- en agentdiensten van K3s blijven actief, wat zorgt voor parallelle verwerking en hoge beschikbaarheid.  
+NFS-opslag en PV's |  • Hostt virtueel IP-adres en NFS-poort <br> • Beheert actieve geëxporteerde NFS-shares <br> • Slaat K3s Persistent Volumes (PV's) op  | Synchrone spiegeling: SafeKit repliceert alle persistente volumes in realtime om nul gegevensverlies te garanderen.  
+Configuratiedatabase |  • Host virtueel IP-adres en MariaDB-poort <br> • Beheert de actieve K3s-configuratiedatabase  | Database-replicatie: De MariaDB database wordt synchroon gespiegeld, waardoor de clusterstatus voor failover behouden blijft.  
   
-Automatisch failovermechanisme **:** In geval van een storing van het primaire knooppunt migreert SafeKit automatisch de virtuele IP-adressen en opslagservices naar het secundaire knooppunt, waardoor een ononderbroken werking van het K3s-cluster wordt gewaarborgd.
+**Automatisch failovermechanisme:** In het geval van een storing van de primaire node migreert SafeKit automatisch de virtuele IP's en opslagservices naar de secundaire node, waardoor een ononderbroken service voor het K3s-cluster wordt gegarandeerd.
 
-## Hoe werkt het SafeKit mirror cluster samen met Kubernetes K3S? {#safekit-mirror-cluster}
+## Hoe werkt het SafeKit mirror-cluster met Kubernetes K3S? {#safekit-mirror-cluster}
 
-### Stap 1: Bestandsreplicatie op byte-niveau in een Mirror cluster {#step-1-byte-level-file-replication-in-a-mirror-cluster}
+### Stap 1: Bestandsreplicatie op byte-niveau in een mirror-cluster {#step-1-byte-level-file-replication-in-a-mirror-cluster}
 
-Deze fase illustreert de architectuur voor hoge beschikbaarheid tussen **Server 1 (PRIM)** en **Server 2 (SECOND)** . Beide servers draaien K3s master- en agentcomponenten zoals gedefinieerd in de architectuurtabel [ ](#safekit-k3s-architecture-table) .
-
-
-![ Bestandsreplicatie op byte-niveau in een Kubernetes K3s mirror cluster ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+Deze fase illustreert de high-availability-architectuur tussen **server 1 (PRIM)** en **server 2 (SECOND)**. Beide servers draaien K3s master- en agentcomponenten zoals gedefinieerd in de [architectuurtabel](#safekit-k3s-architecture-table).
 
 
-Momenteel zijn de virtuele IP-adressen (VIP) **,** , **,** en **MariaDB** alleen actief op Server 1 (PRIM). De K3s-mastercomponenten op beide knooppunten synchroniseren met elkaar door de clusterstatus te benaderen via het virtuele IP-adres en de poort MariaDB . SafeKit implementeert [ synchrone replicatie ](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>) van MariaDB en persistente NFS-bestanden, waardoor **nul gegevensverlies (RPO = 0)** wordt gegarandeerd in geval van een storing.
+![Bestandsreplicatie op byteniveau in een Kubernetes K3s mirror-cluster](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
-De K3s-masters verdelen de werklast over beide (of meer) knooppunten door rechtstreeks met de K3s-agents te communiceren. Externe clients maken verbinding met de masters.  
-**virtuele IP-adres van [ -cluster ](</nl/best-practises/how-a-virtual-ip-address-works/>) op het PRIM-knooppunt. Met behulp van Kubernetes stuurt de K3s-master verkeer door naar pods die over de knooppunten zijn verdeeld. Op dezelfde manier hebben pods toegang tot hun persistente volumes (PV's)** op de PRIM-server via het virtuele IP-adres en de NFS-poort.
+
+Momenteel zijn de **Virtual IP (VIP)**, **de persistente NFS-opslag** en **MariaDB** alleen actief op server 1 (PRIM). De K3s-mastercomponenten op beide knooppunten synchroniseren met elkaar door de clusterstatus te benaderen via de Virtual IP en de MariaDB poort. SafeKit implementeert [synchrone replicatie](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>) van MariaDB en persistente NFS-bestanden, wat garant staat voor **nul gegevensverlies (RPO = 0)** in geval van een storing.
+
+De K3s-masters verdelen de werklast over beide (of meer) nodes door rechtstreeks te communiceren met de K3s-agents. Externe clients maken verbinding met de  
+[Het virtuele IP-adres van het cluster](</nl/best-practises/how-a-virtual-ip-address-works/>) op de PRIM node. Met behulp van standaard Kubernetes mechanismen stuurt de K3s-master het verkeer door naar pods die over de nodes zijn verdeeld. Op vergelijkbare wijze hebben pods toegang tot hun **persistente volumes (PV's)** op de PRIM server via het virtuele IP-adres en de NFS-poort.
 
 ### Stap 2: Automatische failover en servicecontinuïteit {#step-2-automatic-failover-and-service-continuity}
 
-Als **Server 1 (PRIM)** uitvalt, neemt **Server 2 (SECOND)** automatisch de clusteractiviteiten over om de continuïteit te waarborgen.
+Wanneer **server 1 (PRIM)** uitvalt, neemt **server 2 (SECOND)** automatisch de clusteractiviteiten over om de continuïteit te waarborgen.
 
 
-![ Failover in een Kubernetes K3S mirror cluster ](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
+![Failover in een Kubernetes K3S mirror-cluster](/wp-content/uploads/2023/02/safekit-stop-alone-300.png "w:300")
 
 
-SafeKit detecteert de storing en migreert onmiddellijk het **virtuele IP-adres** van het cluster naar Server 2. Vervolgens worden de lokale **MariaDB** en **NFS-services** geactiveerd. Dankzij de synchrone replicatie die in stap 1 is uitgevoerd, zijn alle MariaDB -databases en NFS Persistent Volume (PV)-bestanden op Server 2 al up-to-date, waardoor er geen gegevensverlies optreedt.
+SafeKit detecteert de storing en migreert het **virtuele IP-adres** van het cluster onmiddellijk naar Server 2. Vervolgens worden de lokale **MariaDB** en **NFS-services** naar een actieve status gepromoveerd. Vanwege de synchrone replicatie die in stap 1 is uitgevoerd, zijn alle MariaDB databases en NFS Persistent Volume (PV)-bestanden al bijgewerkt op Server 2, waardoor gegevensverlies wordt voorkomen.
 
-Met behoud van de clusterstatus zet de **K3s Master** op Server 2 de uitvoering voort. Deze detecteert het verlies van de agent op Server 1 en plant de betreffende pods automatisch opnieuw in op de resterende actieve K3s-agents. De totale failovertijd (RTO) is de som van het foutdetectie-interval (standaard: 30 seconden) en de tijd die nodig is voor de initialisatie van de K3s-componenten op het secundaire knooppunt.
+Met behoud van de clusterstatus blijft de **K3s Master** op Server 2 de uitvoering voortzetten. Deze detecteert het verlies van de agent op Server 1 en plant de getroffen pods automatisch opnieuw in op de resterende actieve K3s-agents. De totale failovertijd (RTO) is de som van het foutdetectie-interval (standaard: 30 seconden) en de tijd die nodig is voor de initialisatie van K3s-componenten op de secundaire node.
 
-Terwijl server 1 offline is, blijven de services MariaDB en NFS op server 2 actief en schrijven ze wijzigingen alleen lokaal weg.  
-
-
-### Stap 3: Failback en automatische herintegratie {#step-3-failback-and-automatic-reintegration}
-
-**Failback** treedt op wanneer Server 1 opnieuw wordt opgestart nadat het initiële probleem is opgelost. SafeKit synchroniseert automatisch de MariaDB en NFS-bestanden opnieuw, waarbij alleen de gegevens worden bijgewerkt die tijdens de downtime op Server 2 zijn gewijzigd. Dit herintegratieproces is **niet-verstorend** ; de K3s master- en agentcomponenten blijven zonder onderbreking op Server 2 draaien. 
+Terwijl server 1 offline is, blijven MariaDB en NFS-services op server 2 draaien en worden wijzigingen alleen lokaal opgeslagen.  
 
 
-![ Automatische resynchronisatie en failback in een K3s mirror cluster ](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
+### Stap 3: Failback en automatische reintegratie {#step-3-failback-and-automatic-reintegration}
+
+**Failback** vindt plaats wanneer Server 1 opnieuw wordt opgestart nadat het oorspronkelijke probleem is opgelost. SafeKit synchroniseert de MariaDB en NFS-bestanden automatisch opnieuw, waarbij alleen de gegevens worden bijgewerkt die op Server 2 zijn gewijzigd tijdens de downtime. Dit herintegratieproces is **niet-disruptief**; de K3s master- en agentcomponenten blijven zonder onderbreking op Server 2 draaien. 
+
+
+![Automatische resynchronisatie en failback in een K3s mirror-cluster](/wp-content/uploads/2023/02/safekit-resynchro-alone-300.png "w:300")
 
  
 
 SafeKit optimaliseert de hersteltijd op basis van de manier waarop de server is gestopt: 
 
-  * **Schone afsluiting:** Als SafeKit opzettelijk is gestopt op Server 1, worden alleen de specifieke gewijzigde zones binnen de bestanden opnieuw gesynchroniseerd met behulp van **bitmaps voor het bijhouden van wijzigingen** . Dit zorgt voor een ultrasnelle herintegratie. 
-  * **Systeemcrash (bijv. stroomuitval):** Als server 1 een onjuiste afsluiting heeft ondergaan, worden de wijzigingsbitmaps om veiligheidsredenen overgeslagen. SafeKit synchroniseert in plaats daarvan alle bestanden met een wijzigingstijdstempel die recenter is dan het laatst vastgestelde synchronisatiepunt, waardoor **de volledige gegevensintegriteit wordt gewaarborgd.** . 
+  * **Schone afsluiting:** Als SafeKit opzettelijk is gestopt op Server 1, worden alleen de specifieke gewijzigde zones binnen de bestanden opnieuw gesynchroniseerd met behulp van **modificatietrackingsbitmaps**. Dit zorgt voor een ultrasnelle reintegratie. 
+  * **Systeemcrash (bijv. stroomstoring):** Als Server 1 een onverwachte afsluiting heeft ondergaan, worden de modificatiebitmaps om veiligheidsredenen omzeild. SafeKit synchroniseert in plaats daarvan alle bestanden met een wijzigingstijdstempel die recenter is dan het laatst vastgestelde synchronisatiepunt, waardoor **de totale gegevensintegriteit** wordt gewaarborgd. 
 
 
-### Stap 4: Herstellen van hoge beschikbaarheid en taakverdeling {#step-4-restoring-high-availability-and-load-distribution}
+### Stap 4: Hoge beschikbaarheid en taakverdeling herstellen {#step-4-restoring-high-availability-and-load-distribution}
 
-Na de herintegratie keert het cluster terug naar **de volledige mirror -modus** , waarmee de status zoals beschreven in stap 1 wordt nagebootst. Het systeem bevindt zich opnieuw in een zeer beschikbare staat: **MariaDB** en **NFS-services** blijven actief op server 2, terwijl SafeKit realtime replicatie van alle bestandsupdates naar server 1 uitvoert. 
+Na de reintegratie keert de cluster terug naar **de volledige mirror**, die de status van stap 1 weerspiegelt. Het systeem is opnieuw in een zeer beschikbare toestand: **MariaDB** en **NFS-services** blijven actief op server 2, terwijl SafeKit alle bestandsupdates in realtime repliceert naar server 1. 
 
 
-![ Terugkeer naar normale werking in een Kubernetes K3s mirror cluster ](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
+![Terugkeer naar normale werking in een Kubernetes K3s- mirror-cluster](/wp-content/uploads/2023/02/safekit-second-prim-300.png "w:300")
 
  
 
-De K3s Master **K3s Agent** en K3s Agent **, K3s Agent** worden automatisch opnieuw opgestart op Server 1. De scheduler Kubernetes herkent Server 1 nu als een gezond knooppunt en kan beginnen met het herplannen van pods om de werklast over beide servers te verdelen. 
+De **K3s Master** en **K3s Agent** worden automatisch opnieuw opgestart op Server 1. De Kubernetes-scheduler herkent Server 1 nu als een gezond knooppunt en kan beginnen met het opnieuw plannen van pods om de werklast over beide servers te verdelen. 
 
-Als de beheerder er de voorkeur aan geeft dat de MariaDB en NFS-services op Server 1 draaien (waardoor de oorspronkelijke PRIM-rol wordt hersteld), kan een **omschakeling** handmatig via de webconsole op een geschikt moment worden geactiveerd of geautomatiseerd via de configuratie-instellingen. 
+Als de beheerder de voorkeur geeft aan het uitvoeren van de MariaDB en NFS-services op Server 1 (waarbij de oorspronkelijke PRIM rol wordt hersteld), kan een **overschakeling** handmatig worden geactiveerd via de webconsole op een geschikt moment of geautomatiseerd via de configuratie-instellingen. 
 
-### Hoe configureer ik een SafeKit Mirror -cluster? {#safekit-mirror-cluster-configure}
-
-
-![ SafeKit Webconsole: Dashboard voor configuratie van hoge beschikbaarheid met weergave van heartbeat-netwerken, virtuele IP-configuratie en realtime directoryreplicatie voor een mirror -cluster. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
+### Hoe configureer ik een SafeKit mirror-cluster? {#safekit-mirror-cluster-configure}
 
 
-De webconsole **SafeKit** biedt een intuïtieve interface voor het orkestreren van hoge beschikbaarheid voor uw kritieke applicaties. In slechts enkele stappen kunt u een cluster **SafeKit mirror** configureren om bedrijfscontinuïteit te garanderen.
+![SafeKit Web Console: dashboard voor hoge beschikbaarheid met heartbeat-netwerken, virtuele IP-instellingen en realtime directoryreplicatie voor een mirror-cluster.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
-  * **Toepassingsfailover (tabblad Macro's):** Definieer de specifieke toepassingsservices die automatisch opnieuw moeten worden opgestart in geval van een storing.
-  * **Heartbeat-netwerk(en):** Speciaal communicatiepad(en) gebruikt door clusterknooppunten om elkaars status en beschikbaarheid continu te bewaken en failover-beslissingen te synchroniseren.
+
+De **SafeKit webconsole** biedt een intuïtieve interface om hoge beschikbaarheid voor uw bedrijfskritische applicaties te orkestreren. In slechts een paar stappen kunt u een **SafeKit mirror-cluster** configureren om bedrijfscontinuïteit te garanderen:
+
+  * **Failover van applicaties (tabblad Macro's):** Definieer de specifieke applicatiediensten die automatisch opnieuw moeten worden gestart in geval van een storing.
+  * **Heartbeatnetwerk(en):** Toegewezen communicatiepad(en) die door clusterknooppunten worden gebruikt om de status en beschikbaarheid van elkaar continu te controleren en failoverbeslissingen te synchroniseren.
   * **Virtueel IP-beheer:** Stel het virtuele IP-adres (VIP) in voor een transparante herverbinding van de client na een failover.
-  * **Realtime replicatie:** Selecteer de kritieke mappen voor hostgebaseerde, synchrone replicatie op byte-niveau.
-  * **Checkers:** Bewaak de status van de applicatie en activeer automatisch herstel als een procesfout wordt gedetecteerd.
+  * **Realtime replicatie:** Selecteer de kritieke mappen voor hostgebaseerde, synchrone replicatie op byteniveau.
+  * **Checkers:** controleer de status van de toepassing en activeer automatisch herstel als er een procesfout wordt gedetecteerd.
 
 
-Het SafeKit cluster bevat een speciale split-brain-checker om problemen met netwerkisolatie op te lossen zonder dat een derde witness-machine of een extra heartbeat-netwerk nodig is. Lees meer over de heartbeat, failover en quorum [ in een ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) -cluster.
+Het SafeKit cluster bevat een speciale split-brain-checker om netwerkisolatieproblemen op te lossen zonder dat er een derde 'witness'-machine of een extra 'heartbeat'-netwerk nodig is. Lees meer over ['heartbeat', 'failover' en 'quorum' in een cluster](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
-### Hoe kan ik een SafeKit mirror -cluster monitoren? {#safekit-mirror-cluster-monitoring}
-
-
-![ SafeKit Webconsole: Realtime monitoring van een 2-knoops mirror -cluster met weergave van de PRIM- en SECOND-status met actieve gegevensreplicatie. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
+### Hoe kan ik een SafeKit mirror-cluster monitoren? {#safekit-mirror-cluster-monitoring}
 
 
-De **SafeKit** beheerconsole biedt een uniform overzicht van uw infrastructuur voor hoge beschikbaarheid. Hiermee kunnen beheerders de **operationele status** van het cluster bewaken en de gegevenssynchronisatie in realtime volgen.
-
-Voor een mirror cluster met twee knooppunten worden de rollen van elke server duidelijk weergegeven in de console:
-
-  * **PRIM (Primair):** Het actieve knooppunt waarop momenteel de applicatie draait en dat het virtuele IP-adres beheert. Het voert schrijfbewerkingen uit naar de lokale opslag en realtime replicatie naar het secundaire knooppunt.
-  * **SECOND (Secundair):** Het standby-knooppunt ontvangt synchrone updates op byte-niveau. Het is direct klaar om de taken over te nemen als het primaire knooppunt uitvalt.
-  * **ALONE Status:** Geeft een visuele melding wanneer het cluster op één knooppunt draait (bijvoorbeeld tijdens onderhoud of na een storing), wat aangeeft dat de redundantie tijdelijk verloren is gegaan.
-  * **Resynchronisatievoortgang:** Wanneer een defect knooppunt herstelt, kleurt de status oranje tijdens de herintegratie van de achtergrondgegevens, waardoor er geen downtime is tijdens de "terugkeer naar normaal"-fase.
+![SafeKit Web Console: realtimemonitoring van een mirror-cluster met 2 knooppunten, met weergave PRIM en SECOND status en actieve datareplicatie.](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
 
 
-Naast eenvoudige statuspictogrammen biedt de interface **one-click failover orchestration** , waarmee u handmatig de primaire rol opnieuw kunt toewijzen voor gepland onderhoud, terwijl de continue beschikbaarheid voor gebruikersactiviteiten gewaarborgd blijft.
+De **SafeKit beheerconsole** biedt een uniform overzicht van uw hoge beschikbaarheidsinfrastructuur. Hiermee kunnen beheerders de **operationele status** van het cluster controleren en de gegevenssynchronisatie in realtime volgen.
+
+Voor een mirror-cluster met 2 knooppunten geeft de console duidelijk de rollen van elke server weer:
+
+  * **PRIM (primair):** de actieve node die momenteel de toepassing uitvoert en het virtuele IP-adres beheert. Deze voert schrijfbewerkingen uit naar de lokale opslag en realtime-replicatie naar de secundaire node.
+  * **SECOND:** Het stand-byknooppunt ontvangt synchrone updates op byteniveau. Het is direct klaar om het over te nemen als het primaire knooppunt uitvalt.
+  * **ALONE status:** Geeft een visuele waarschuwing wanneer het cluster op één knooppunt draait (bijv. tijdens onderhoud of na een storing), wat aangeeft dat de redundantie tijdelijk verloren is gegaan.
+  * **Voortgang van de resynchronisatie:** Wanneer een defecte node herstelt, wordt de status oranje tijdens de achtergrondgegevensreïntegratie, zodat er geen downtime is tijdens de fase 'terug naar normaal'.
+
+
+Naast eenvoudige statuspictogrammen biedt de interface **failover-orkestratie met één klik**, zodat u de primaire rol handmatig kunt toewijzen voor gepland onderhoud, terwijl u de continue beschikbaarheid voor gebruikersactiviteiten waarborgt.
 
 
 {{%  insert-safekit-usage-nl  %}}
@@ -186,33 +187,33 @@ Naast eenvoudige statuspictogrammen biedt de interface **one-click failover orch
 
 ## Vergelijking: SafeKit versus standaard K3s-stack (MetalLB & Longhorn) {#safekit-k3s-ha-comparison}
 
-Vergelijking **: SafeKit versus standaard open-source (MetalLB + Longhorn)**
+**Vergelijking: SafeKit versus standaard open-source (MetalLB + Longhorn)**
 
-Mogelijkheid | SafeKit ( K3s.safe ) | MetalLB + Longhorn (Standaard K8s)  
+Capaciteit | SafeKit (K3s.safe) | MetalLB + Longhorn (standaard K8s)  
 ---|---|---  
-Architectuur | All-in-One: Geïntegreerde netwerkfunctionaliteit, replicatie en failover in één pakket. | DIY (Do It Yourself) Stack: Meerdere onafhankelijke pakketten vereist (CNI, CSI, LoadBalancer).  
-Hardware-efficiëntie | Pure 2-knoops HA: Volledige redundantie zonder een derde "witness"- of arbiter-knoop. | Minimaal 3 knopen: Vereist doorgaans een oneven aantal voor Etcd-quorum en opslagveiligheid.  
-Netwerken (VIP) | Native: Virtueel IP-adres beheerd op OS-niveau; transparant voor K3s. | Complex: Vereist MetalLB-installatie met L2- of BGP-configuratie met behulp van dedicated speaker pods die CPU/RAM verbruiken op elke node.  
-Opslagvereisten | Synchronisch op byteniveau: Realtime bestandsreplicatie van bestaande mappen; werkt op standaard systeemschijven; bestandsreplicatie op byteniveau met minimale CPU-/netwerkbelasting. | Op blokniveau: Gedistribueerde blokopslag (Longhorn) met behulp van dedicated storage pods; hoger resourceverbruik.  
-Failover-intelligentie | Onafhankelijke stabiliteit: SafeKit werkt buiten de container-runtime. Het bewaakt het besturingssysteem en de hardware rechtstreeks en zorgt voor failover, zelfs als het Kubernetes -controlepaneel of de container-engine vastloopt. | Circulaire afhankelijkheid: De failover-logica bevindt zich _binnen_ de pods die het moet beschermen. Als het host-besturingssysteem of de K3s-engine vastloopt, bevriezen ook de management-pods (MetalLB/Longhorn), waardoor vaak handmatige interventie nodig is om de "blokkering" op te heffen.  
-Beheer | Vereenvoudigd: Beheerbaar via één webconsole; geen Kubernetes -expert vereist. | Gespecialiseerd: Vereist diepgaande kennis van YAML, Helm en interne K8s-controllers.  
+Architectuur | Alles-in-één: Geïntegreerde netwerken, replicatie en failover in één pakket. | DIY (Do It Yourself) Stack: Meerdere onafhankelijke pakketten vereist (CNI, CSI, LoadBalancer).  
+Hardware-efficiëntie | Pure 2-node HA: volledige redundantie zonder een 3e "witness"- of arbiterknooppunt. | Minimaal 3 knooppunten: doorgaans zijn oneven aantallen vereist voor het Etcd-quorum en de opslagveiligheid.  
+Netwerken (VIP) | Native: virtueel IP-adres beheerd op OS-niveau; transparant voor K3s. | Complex: Vereist de installatie van MetalLB met L2- of BGP-configuratie met behulp van speciale speakerpods die CPU/RAM verbruiken op elk knooppunt.  
+Opslagvereisten | Byte-Level Synchronous: real-time bestandsreplicatie van bestaande mappen; werkt op standaard systeemdisks; bestandsreplicatie op byte-niveau met minimale CPU/netwerk overhead. | Blokniveau: Gedistribueerde blokopslag (Longhorn) met behulp van speciale opslagpods; hoger resourceverbruik.  
+Failover-intelligentie | Onafhankelijke stabiliteit: SafeKit werkt buiten de container-runtime. Het bewaakt het besturingssysteem en de hardware rechtstreeks, waardoor failover wordt gegarandeerd, zelfs als het Kubernetes-besturingsvlak of de containermotor vastloopt. | Circulaire afhankelijkheid: De failoverlogica wordt gehost *in* de pods die het moet beschermen. Als het host-OS of de K3s-engine vastloopt, bevriezen ook de beheerpods (MetalLB/Longhorn), waardoor vaak handmatige triage nodig is om de "vergrendeling" te doorbreken  
+Administratie | Vereenvoudigd: Beheerbaar via één webconsole; geen Kubernetes expert vereist. | Gespecialiseerd: Vereist diepgaande kennis van YAML, Helm en interne K8s-controllers.  
   
-Samenvattend **hoewel een standaard doe-het-zelf-stack** MetalLB + Longhorn) modulariteit biedt voor Kubernetes , creëert het een **afhankelijkheid waarbij de opslag- en netwerktools kwetsbaar zijn voor dezelfde knooppuntfouten die ze juist zouden moeten beheren.** afhankelijkheid doorbreekt **lus door te functioneren als een onafhankelijke infrastructuurlaag; het biedt een robuustere, hardware SafeKit agnostische HA** oplossing met twee knooppunten die operationeel blijft, zelfs als de engine of het Kubernetes vastloopt. Dit garandeert geautomatiseerd herstel en data-integriteit zonder de hoge resourcekosten, het verplichte quorum van drie knooppunten of de configuratiecomplexiteit die vereist is bij traditionele gedistribueerde blokopslag en netwerkoverlays.
+**Samenvattend** biedt een standaard doe-het-zelf-stack (MetalLB + Longhorn) modulariteit voor Kubernetes experts, maar creëert het een **circulaire afhankelijkheid** waarbij de opslag- en netwerkinstrumenten kwetsbaar zijn voor dezelfde knooppuntstoringen die ze moeten beheren. **SafeKit** doorbreekt deze lus door te opereren als een onafhankelijke infrastructuurlaag; het biedt een robuustere, hardware-agnostische 2-knoops HA-oplossing die operationeel blijft, zelfs als de Kubernetes-engine of het host-besturingssysteem vastloopt. Dit zorgt voor geautomatiseerd herstel en gegevensintegriteit zonder de zware resourceoverhead, het verplichte drieknoopsquorum of de configuratiecomplexiteit die vereist is door traditionele gedistribueerde blokopslag en netwerkoverlays.
 
-## Videohandleiding: Een SafeKit HA mirror -cluster configureren {#videoguide-safekit-mirror-cluster}
+## Videogids: Een SafeKit HA- mirror-cluster configureren {#videoguide-safekit-mirror-cluster}
 
-### SafeKit Video: Clustering op applicatieniveau (8:47) {#demo-mirror-ha-cluster}
+### SafeKit video: Clustering op applicatieniveau (8:47) {#demo-mirror-ha-cluster}
 
-Hoewel deze video de hoge beschikbaarheid van SafeKit voor Microsoft SQL Server demonstreert, geeft hij een uitstekend overzicht van hoe de oplossing K3s-omgevingen beveiligt. SafeKit werkt identiek voor elke andere database of bedrijfskritische applicatie.
+Hoewel deze video de hoge beschikbaarheid van SafeKit voor Microsoft SQL Server demonstreert, geeft het een uitstekend overzicht van hoe de oplossing K3s-omgevingen beveiligt. SafeKit functioneert identiek voor elke andere database of bedrijfskritische toepassing.
 
 ### Videohoogtepunten {#video-highlights}
 
-  1. 🎬 [ 2 knooppunten met SQL Server ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
-  2. 🎬 [ Configureer het cluster en de mirror.safe module ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
-  3. 🎬 [ Start en test SQL-replicatie, migratie, failover bij crash ](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
+  1. 🎬 [2 knooppunten met SQL Server](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=0s>) (0:32)
+  2. 🎬 [Configureer het cluster en de mirror.safe-module](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=32s>) (3:58)
+  3. 🎬 [SQL-replicatie, -migratie en -failover bij een crash starten en testen](<https://www.youtube.com/watch?v=mGwEguDnnH0&t=270s>) (4:17)
 
 
-&lt;br /> 
+&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
 {{%  insert-safekit-hub-nl  %}}

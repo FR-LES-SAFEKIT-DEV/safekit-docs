@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-07.12",
+  "version": "2026-11-08.9",
   "keep": [
     "mirror",
     "farm",
@@ -86,7 +86,8 @@
     "Hirsch Microsesame",
     "Microsesame",
     "Probat",
-    "ALSTEF"
+    "ALSTEF",
+    "VIP"
   ],
   "terms": {
     "farm cluster": {
@@ -377,6 +378,126 @@
       "it": "esercizio della metropolitana",
       "de": "U-Bahn-Betrieb",
       "nl": "metrobedrijf"
+    },
+    "SafeKit farm cluster": {
+      "fr": "cluster farm SafeKit",
+      "de": "SafeKit-Farm-Cluster",
+      "es": "clúster farm SafeKit",
+      "it": "cluster farm SafeKit",
+      "nl": "SafeKit farm-cluster",
+      "pt": "cluster farm SafeKit",
+      "ja": "SafeKit farm クラスター",
+      "ko": "SafeKit farm 클러스터",
+      "zh-hans": "SafeKit farm 集群",
+      "ar": "مجموعة SafeKit farm"
+    },
+    "SafeKit farm NLB cluster": {
+      "fr": "cluster NLB farm SafeKit",
+      "de": "SafeKit-Farm-NLB-Cluster",
+      "es": "clúster NLB farm SafeKit",
+      "it": "cluster NLB farm SafeKit",
+      "nl": "SafeKit farm-NLB-cluster",
+      "pt": "cluster NLB farm SafeKit",
+      "ja": "SafeKit farm NLB クラスター",
+      "ko": "SafeKit farm NLB 클러스터",
+      "zh-hans": "SafeKit farm NLB 集群",
+      "ar": "مجموعة NLB من SafeKit farm"
+    },
+    "SafeKit HA cluster": {
+      "fr": "cluster HA SafeKit",
+      "de": "SafeKit-HA-Cluster",
+      "es": "clúster HA SafeKit",
+      "it": "cluster HA SafeKit",
+      "nl": "SafeKit HA-cluster",
+      "pt": "cluster HA SafeKit",
+      "ja": "SafeKit HA クラスター",
+      "ko": "SafeKit HA 클러스터",
+      "zh-hans": "SafeKit HA 集群",
+      "ar": "مجموعة SafeKit HA"
+    },
+    "mirror HA cluster": {
+      "fr": "cluster HA mirror",
+      "de": "Mirror-HA-Cluster",
+      "es": "clúster HA mirror",
+      "it": "cluster HA mirror",
+      "nl": "mirror HA-cluster",
+      "pt": "cluster HA mirror",
+      "ja": "mirror HA クラスター",
+      "ko": "mirror HA 클러스터",
+      "zh-hans": "mirror HA 集群",
+      "ar": "مجموعة mirror HA"
+    },
+    "mirror HA clusters": {
+      "fr": "clusters HA mirror",
+      "de": "Mirror-HA-Cluster",
+      "es": "clústeres HA mirror",
+      "it": "cluster HA mirror",
+      "nl": "mirror HA-clusters",
+      "pt": "clusters HA mirror",
+      "ja": "mirror HA クラスター",
+      "ko": "mirror HA 클러스터",
+      "zh-hans": "mirror HA 集群",
+      "ar": "مجموعات mirror HA"
+    },
+    "health probe": {
+      "fr": "sonde d’intégrité",
+      "de": "Health-Probe",
+      "es": "sonda de estado",
+      "it": "probe di integrità",
+      "nl": "health probe",
+      "pt": "sonda de integridade",
+      "ja": "ヘルスプローブ",
+      "ko": "상태 프로브",
+      "zh-hans": "健康探测",
+      "ar": "مسبار الحالة"
+    },
+    "health probes": {
+      "fr": "sondes d’intégrité",
+      "de": "Health-Probes",
+      "es": "sondas de estado",
+      "it": "probe di integrità",
+      "nl": "health probes",
+      "pt": "sondas de integridade",
+      "ja": "ヘルスプローブ",
+      "ko": "상태 프로브",
+      "zh-hans": "健康探测",
+      "ar": "مسابير الحالة"
+    },
+    "stateful": {
+      "fr": "avec état",
+      "de": "zustandsbehaftet",
+      "es": "con estado",
+      "it": "con stato",
+      "nl": "stateful",
+      "pt": "com estado",
+      "ja": "ステートフル",
+      "ko": "상태 저장",
+      "zh-hans": "有状态",
+      "ar": "ذات الحالة"
+    },
+    "stateless": {
+      "fr": "sans état",
+      "de": "zustandslos",
+      "es": "sin estado",
+      "it": "senza stato",
+      "nl": "stateless",
+      "pt": "sem estado",
+      "ja": "ステートレス",
+      "ko": "상태 비저장",
+      "zh-hans": "无状态",
+      "ar": "عديمة الحالة"
+    },
+    "shared-nothing": {
+      "fr": "sans partage",
+      "de": "Shared-Nothing",
+      "es": "sin recursos compartidos",
+      "it": "shared-nothing",
+      "nl": "shared-nothing",
+      "pt": "sem compartilhamento",
+      "ja": "シェアードナッシング",
+      "ko": "비공유(shared-nothing)",
+      "zh-hans": "无共享",
+      "ar": "بدون مشاركة"
     }
   },
   "grammar": {
@@ -468,6 +589,18 @@
       [
         "\\bplanter\\b",
         "tomber en panne"
+      ],
+      [
+        "\\bsur Windows\\b",
+        "sous Windows"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        " pour \\2"
+      ],
+      [
+        "\\bau-delà (?=clusters? )",
+        "au-delà du "
       ]
     ],
     "it": [
@@ -486,6 +619,18 @@
       [
         "(?<=\\s)e (?=[eEèé])",
         "ed "
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        " per \\2"
+      ],
+      [
+        "(\\}\\}) +([?!])(?=\\s|$|\\]|\\))",
+        "\\1\\2"
+      ],
+      [
+        "([A-Za-z0-9\\)]) +\\?",
+        "\\1?"
       ]
     ],
     "es": [
@@ -504,6 +649,18 @@
       [
         "alta (?:disponibilidad )?(HA de (?:VM|aplicación))",
         "\\1"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        " para \\2"
+      ],
+      [
+        "(\\}\\}) +([?!])(?=\\s|$|\\]|\\))",
+        "\\1\\2"
+      ],
+      [
+        "([A-Za-z0-9\\)]) +\\?",
+        "\\1?"
       ]
     ],
     "pt": [
@@ -518,6 +675,22 @@
       [
         "([Aa]rquitetura) ([Cc]luster)",
         "\\1 de \\2"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        " para \\2"
+      ],
+      [
+        "(\\}\\}) +([?!])(?=\\s|$|\\]|\\))",
+        "\\1\\2"
+      ],
+      [
+        "([A-Za-z0-9\\)]) +\\?",
+        "\\1?"
+      ],
+      [
+        "\\bAlém (?=[A-Z][\\w-]*\\s*,)",
+        "Além do "
       ]
     ],
     "ar": [
@@ -548,6 +721,22 @@
       [
         "\\b(Windows|Linux) (Windows|Linux)\\b",
         "\\1 و \\2"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        " لـ \\2"
+      ],
+      [
+        "(?<!\\S)([\\u0600-\\u06FF]{4,}) \\1(?!\\S)",
+        "\\1"
+      ],
+      [
+        "([A-Za-z0-9\\)]) +؟",
+        "\\1؟"
+      ],
+      [
+        "مجموعة(?: النسخ المتطابق)? (SafeKit) (مجموعة (?:mirror|farm))",
+        "\\2 \\1"
       ]
     ],
     "de": [
@@ -570,6 +759,50 @@
       [
         "(\\w\\.safe) (?=(?:Modul|Cluster)\\w*)",
         "\\1-"
+      ],
+      [
+        "(\\w)- (?=[A-ZÄÖÜ])",
+        "\\1-"
+      ],
+      [
+        "\\b(Hyper-V|KVM|Windows|Linux) (Knoten|Cluster\\w*|Modul\\w*|Server\\w*)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\b(Hyper-V|KVM|SafeKit) ((?:Mirror|Farm)-Cluster)",
+        "\\1-\\2"
+      ],
+      [
+        "\\b(eines|des) ((?:[\\w-]+-)?(?:<span[^>]*>)?(?:[Mm]irror|[Ff]arm)(?:</span>)?-Cluster)(?!s)\\b",
+        "\\1 \\2s"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        " für \\2"
+      ],
+      [
+        "(\\}\\}) +([?!])(?=\\s|$|\\]|\\))",
+        "\\1\\2"
+      ],
+      [
+        "\\b([Ee]ine|[Dd]ie|[Ee]iner|[Dd]er|[Dd]en) (\\*\\*)?(zustandsbehaftet|zustandslos)(?![a-z])",
+        "\\1 \\2\\3e"
+      ],
+      [
+        "\\b([Ee]inen|[Ee]inem|[Ee]ines|[Dd]en|[Dd]em|[Dd]es) (\\*\\*)?(zustandsbehaftet|zustandslos)(?![a-z])",
+        "\\1 \\2\\3en"
+      ],
+      [
+        "\\b([Ee]in) (\\*\\*)?(zustandsbehaftet|zustandslos)(?![a-z])",
+        "\\1 \\2\\3er"
+      ],
+      [
+        "([A-Za-z0-9\\)]) +\\?",
+        "\\1?"
+      ],
+      [
+        "\\b(zustandslos|zustandsbehaftet) (?=[A-ZÄÖÜ]\\w*en\\b)",
+        "\\1e "
       ]
     ],
     "ko": [
@@ -620,6 +853,86 @@
       [
         "(\\S) \\[(과|와) 같은 ",
         "\\1\\2 같은 ["
+      ],
+      [
+        "SafeKit \\*\\*(이|가|은|는|을|를) ",
+        "SafeKit\\1 **"
+      ],
+      [
+        "(Hyper-V|KVM) (사용|이용|활용)",
+        "\\1를 \\2"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        "(\\2용)"
+      ],
+      [
+        "(^|[.!?]\\s+)(\\*\\*[^*\\n]*클러스터)\\*\\* (?=[가-힣])",
+        "\\1\\2**는 "
+      ],
+      [
+        "(^|[.!?]\\s+)\\*\\*SafeKit\\*\\* (?=[가-힣])",
+        "\\1**SafeKit**은 "
+      ],
+      [
+        "(^|[.!?]\\s+)\\*\\*SafeKit (?=[가-힣])",
+        "\\1**SafeKit은 "
+      ],
+      [
+        "([A-Za-z0-9]) (사용|지원|이용|활용)(하|해|합|할|한)",
+        "\\1를 \\2\\3"
+      ],
+      [
+        "클러스터\\*\\*(?:는)? (구현|구성|배포|설치|생성|사용)(하|해|합|할|한|하는)",
+        "클러스터**를 \\1\\2"
+      ],
+      [
+        "(</span>|\\}\\}) (의|에서|에|를|을|은|는|이|가|과|와|으로|로|도|용)(?=[\\s.,:;)!?*]|$)",
+        "\\1\\2"
+      ],
+      [
+        "(외에도|또한|이를 통해|이로 인해|따라서),? SafeKit (?=[가-힣])",
+        "\\1 SafeKit은 "
+      ],
+      [
+        "클러스터\\s*(?=[A-Za-z][\\w-]*\\s*(?:과|와|에서|에) )",
+        "클러스터가 "
+      ],
+      [
+        "클러스터 (?=(?:어떻게 )?(?:간단하게|쉽게|빠르게)? ?(?:구현|구성|배포))",
+        "클러스터를 "
+      ],
+      [
+        "SafeKit를",
+        "SafeKit을"
+      ],
+      [
+        "SafeKit는",
+        "SafeKit은"
+      ],
+      [
+        "SafeKit가(?=\\s)",
+        "SafeKit이"
+      ],
+      [
+        "SafeKit (?=(?:선택|사용|도입|구성|설치|배포)(?:해|하|합|할|한))",
+        "SafeKit을 "
+      ],
+      [
+        "SafeKit (?=(?:어떻게|장애를|오류를|문제를|어떤|다른|모든|자동으로|가상 IP|MariaDB|컨테이너|애플리케이션을|데이터를|파일을)(?![A-Za-z]))",
+        "SafeKit은 "
+      ],
+      [
+        "클러스터 (?=훨씬|이상으로|넘어)",
+        "클러스터를 "
+      ],
+      [
+        "(^|[.!?:]\\s+)SafeKit (?=\\*\\*)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "클러스터\\*\\* (?=(?:제공|지원|구현|구성)(?:합|하|해))",
+        "클러스터**를 "
       ]
     ],
     "ja": [
@@ -644,8 +957,60 @@
         "vs. "
       ],
       [
-        "(^|[。！？]\\s*)SafeKit、",
-        "\\1SafeKit は、"
+        "(^|[。！？]\\s*)(\\*\\*)?SafeKit、",
+        "\\1\\2SafeKit は、"
+      ],
+      [
+        "([A-Za-z0-9]) (使用|利用|採用|導入|サポート)(し|す|さ)",
+        "\\1 を\\2\\3"
+      ],
+      [
+        "SafeKit SAN の",
+        "SafeKit が SAN の"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        "（\\2 向け）"
+      ],
+      [
+        "クラスター\\*\\*、",
+        "クラスター**は、"
+      ],
+      [
+        "^(\\s*\\*\\*(?!(?:いいえ|はい)\\*\\*)[^*\\n]+\\*\\*)\\s*、",
+        "\\1は、"
+      ],
+      [
+        "^\\s*特集\\s*$",
+        "機能"
+      ],
+      [
+        "^(\\s*\\*\\*(?!(?:いいえ|はい)\\s*、)[^*\\n]+?)\\s*、\\s*\\*\\*",
+        "\\1**は、"
+      ],
+      [
+        "^(\\s*\\*\\*(?:いいえ|はい)\\*\\*)は、",
+        "\\1、"
+      ],
+      [
+        "(^|[。！？]\\s*)\\*\\*SafeKit\\*\\* (?=[\\u30a0-\\u30ff\\u4e00-\\u9fff])",
+        "\\1**SafeKit** は"
+      ],
+      [
+        "(^|[。！？]\\s*)\\*\\*SafeKit\\*\\*\\s*、",
+        "\\1**SafeKit** は、"
+      ],
+      [
+        "、\\s*SafeKit\\s*、",
+        "、SafeKit は、"
+      ],
+      [
+        "(にも|では|でも|また)、\\s*SafeKit\\s+(?=[\\u3040-\\u30ff\\u4e00-\\u9fff])",
+        "\\1、SafeKit は"
+      ],
+      [
+        "クラスター\\s*(?=[A-Za-z][\\w-]*\\s*(?:で|と))",
+        "クラスターが "
       ]
     ],
     "zh-hans": [
@@ -660,6 +1025,10 @@
       [
         "→\\*\\*",
         "→ **"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        "（适用于 \\2）"
       ]
     ],
     "nl": [
@@ -674,6 +1043,18 @@
       [
         "(\\.\\w+) -(?=[a-z])",
         "\\1-"
+      ],
+      [
+        "( for )(\\{\\{ \\.Get \"\\w+\" \\}\\})",
+        " voor \\2"
+      ],
+      [
+        "(\\}\\}) +([?!])(?=\\s|$|\\]|\\))",
+        "\\1\\2"
+      ],
+      [
+        "([A-Za-z0-9\\)]) +\\?",
+        "\\1?"
       ]
     ]
   },
