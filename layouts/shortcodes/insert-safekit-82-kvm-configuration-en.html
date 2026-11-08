@@ -26,7 +26,7 @@ On node 1:
 
         cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
 
-The original vm1 image can be deleted as soon as tests with the new location are successfull.
+The original vm1 image can be deleted as soon as tests with the new location are successful.
   * Edit the vm1 configuration file: 
 
         EDITOR=vi virsh edit vm1
@@ -42,7 +42,7 @@ by :
 
   * Set the [cache option to 'none'](/wp-content/uploads/2022/07/kvm-2.png) in the same file, for data integrity in case of crash: 
 
-        <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
+        <disk type='file' device='disk'> <driver name='qemu' type='qcow2' **cache='none'** />
 
   * Close the vm1 configuration file
   * Disable [vm1 automatic start](/wp-content/uploads/2022/07/kvm-3.png): 
@@ -123,7 +123,7 @@ You can also run the console in a browser on a workstation external to the clust
   * Enter in `VM_NAME`, the name of the virtual machine (`vm1`).
 
 
-We assume that the VM1 files are in `/var/lib/libvirt/image/vm1/` (see [prerequisites](#prerequisite)). This directory will be replicated in real-time by SafeKit.
+We assume that the VM1 files are in `/var/lib/libvirt/images/vm1/` (see [prerequisites](#prerequisite)). This directory will be replicated in real-time by SafeKit.
 
 ℹ️ You do not need to configure a virtual IP address. VM1 will be rebooted on the secondary {{ .Get "app" }} with its physical IP address, and this IP address will be rerouted.
 
@@ -141,7 +141,7 @@ The custom checker checks if the VM is running (with the 'virsh domstate' comman
   * If you set `stopstart` in `Action`, there is a direct failover on the other {{ .Get "app" }} node as soon as the VM is not running.
 
 
-ℹ️ For maintenance, if you want to stop the virtual machine, the custom checker will restart it automatically. To avoid that, you can temporarly [suspend the checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Or you can remove it by deleting the configuration line in the console.
+ℹ️ For maintenance, if you want to stop the virtual machine, the custom checker will restart it automatically. To avoid that, you can temporarily [suspend the checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Or you can remove it by deleting the configuration line in the console.
 
 
 ![Enter the {{ .Get "app" }} custom checker parameters](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
@@ -256,7 +256,7 @@ Only changes inside files are replicated in real time in this state.
 ⚠️
 
   * If everything is okay, initiate a start on node1, which will resynchronize the replicated directories from node2.
-  * If things go wrong, stop node2 and [force the start as primary 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) of node1, which will restart with its locally healthy data at the time of the stop.
+  * If things go wrong, stop node2 and [force node 1 to start as primary 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png), which will restart with its locally healthy data at the time of the stop.
 
 
 ℹ️ Note that you have a 🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** that can be helpful to understand what happens in the cluster.
@@ -308,7 +308,7 @@ To replicate it:
 Note: when creating a snapshot with a command line, you have to refresh the snapshot view into virt-manager.
 
 
-Snapshots created on the PRIM node are operationnal on node 2 after failover, but not listed on node 2.
+Snapshots created on the PRIM node are operational on node 2 after failover, but not listed on node 2.
 
   * For importing a snapshot on node 2, you have to run the command: 
 
@@ -330,6 +330,6 @@ Snapshots created on the PRIM node are operationnal on node 2 after failover, bu
 ℹ️ [More information on the support here](/resources/safekit-support/).
 
 
-![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+![Take the {{ .Get "app" }} snapshots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 

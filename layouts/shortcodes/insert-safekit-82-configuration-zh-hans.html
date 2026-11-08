@@ -1,224 +1,225 @@
-{{/* Shortcode: insert-safekit-82-configuration-zh-hans */}}
+{{/* translation: translate_md 2026-11-08.9 | glossaire 2026-11-08.25 | Translation LLM | 37 expressions */}}
+{{/* Shortcode: insert-safekit-82-configuration-en — 15 instances in 15 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
 
 
-### 先决条件
+### 先决条件 {#prerequisites}
 
-  * {{ .Get "app" }} 应用程序安装在 2 个节点上。
-  * 总复制数据限制为几 TB — 除此之外，重新同步时间变得很重要。
-  * 节点之间至少 1Gb/s 互连（建议使用 10Gb/s 以加快重新同步速度）。
-  * IP 故障转移需要同一 LAN 或扩展 LAN (L2) 上的两个节点 — 不支持路由 L3 网络（🛠️ [ 云负载均衡器 ](/zh-hans/resources/safekit-user-guide-82/#Cloud) 除外）。
-
-
-### 1.启动SafeKit控制台
-
-  * 通过连接到 `http://localhost:9010`，在一个集群节点上的浏览器中启动 Web 控制台。
-  * 输入 `admin` 作为用户名和安装期间定义的密码。
+  * {{ .Get "app" }} 程序安装在 2 个节点上。
+  * 复制数据的总量限制在几 TB 以内，超出此范围，重新同步所需的时间将变得非常长。
+  * 节点之间的最小互连速度为 1Gb/s（建议使用 10Gb/s 以实现更快的重新同步）。
+  * IP 故障转移要求两个节点位于同一 LAN 或扩展 LAN (L2) 上 — 不支持路由 L3 网络（🛠️ [云负载均衡器](/zh-hans/resources/safekit-user-guide-82/#Cloud)除外）。
 
 
-您还可以在集群外部工作站上的浏览器中运行控制台。
+### 1. 启动 SafeKit 控制台 {#1-launch-the-safekit-console}
 
-⚠️ SafeKit 的配置是通过单个浏览器在两个节点上完成的。
-
-ℹ️ 要保护 Web 控制台，请参阅🛠️ [11\。用户指南中的保护 SafeKit Web 服务](/zh-hans/resources/safekit-user-guide-82/#https)。
-
-
-![启动 SafeKit Web 控制台来配置 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/01-login-large.png)
+  * 在某个集群节点上，通过连接到 `http://localhost:9010` 在浏览器中启动 Web 控制台。
+  * 输入用户名 `admin` 和安装过程中定义的密码。
 
 
-### 2.配置节点地址
+您也可以在集群外部工作站的浏览器中运行控制台。
 
-  * 输入节点IP地址，按`Tab key`检查连通性并填写节点名称。如果 node1 或 node2 为红色，请检查浏览器与两个节点的连接，并检查两个节点上的防火墙是否有 🛠️ [troubleshooting](/zh-hans/resources/safekit-user-guide-82/#Troubleshooting)。
-  * 然后，单击“`Save and apply`”保存配置。
+⚠️ SafeKit 的配置通过单个浏览器在两个节点上完成。
+
+ℹ️ 要保护 Web 控制台，请参阅用户指南中的 🛠️ [11. 保护 SafeKit Web 服务](/zh-hans/resources/safekit-user-guide-82/#https)。
+
+
+![启动 SafeKit Web 控制台以配置 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/01-login-large.png)
+
+
+### 2. 配置节点地址 {#2-configure-node-addresses}
+
+  * 输入节点 IP 地址，按 `Tab key` 检查连接性并填写节点名称。如果 node1 或 node2 为红色，请检查浏览器与这两个节点的连接性，并检查这两个节点的防火墙以进行 🛠️ [故障排除](/zh-hans/resources/safekit-user-guide-82/#Troubleshooting)。
+  * 然后，单击 `Save and apply` 以保存配置。
   * 检查两个节点上的 `Success` ✅ 消息。
-  * 如果配置 `Failure` ❌ 发生在一个节点上，请打开该节点的 ▼ 折叠面板并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+  * 如果某个节点上发生配置 `Failure` ❌，请打开该节点的▼手风琴，然后查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
 
 
-ℹ️ 如果需要，您可以添加一个新的 `LAN and nodes`（第一个 ➕）来创建第二个心跳和专用复制网络。
+ℹ️ 如果您愿意，可以添加新的 `LAN and nodes`（首先 ➕），以创建第二个心跳和专用复制网络。
 
-ℹ️如果点击`Advanced configuration`，则会显示`cluster.xml`文件。该文件由控制台自动填充并部署在节点上。
-
-
-![输入{{ .Get "app" }}集群的节点](/wp-content/uploads/2024/03/02-cluster-edit.png)
+ℹ️ 如果您单击 `Advanced configuration`，则会显示 `cluster.xml` 文件。此文件由控制台自动填充并部署到节点上。
 
 
-### 3. 选择模块
-
-  * 在`New module`中，单击`{{ .Get "mod" }}.safe`模块。
+![输入 {{ .Get "app" }} 集群的节点](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-ℹ️ 顶部蓝色横幅中，🛜 `node1` 代表控制台连接节点。该节点在需要时将请求中继到 `node2`。
+### 3. 选择模块 {#3-select-a-module}
 
-ℹ️ 控制台寻找 `xxx.safe` 在 `Application_Modules/generic/` 连接节点上的目录（`node1`）如果您在安装过程中放置了一个模块。
-
-
-![选择{{ .Get "app" }}的模块](/wp-content/uploads/2024/03/04-module-new.png)
+  * 在 `New module` 中，单击 `{{ .Get "mod" }}.safe` ”模块。
 
 
-### 4. 配置模块
+ℹ️ 在顶部的蓝色横幅中，🛜 `node1` 代表控制台连接节点。此节点在需要时将请求中继到 `node2`。
 
-  * 在`Module startup at boot`中，选择开机时模块自动启动，无延迟。
-  * 在 `Macros` / `SERVICES` 中，按启动顺序输入应用程序的服务名称，以逗号分隔。请参阅此屏幕截图，了解 [Milestone XProtect 服务🖼️](/wp-content/uploads/2025/05/milestone-services.png) 的可视化示例。
-  * 在 `Heartbeat networks` 中，您应该有一个用于进行复制的心跳网络。如果您在步骤 2 中添加了专用 LAN，则可以在专用 LAN 上使用复制流配置两个心跳。
-  * 在 `Virtual IP addresses`，输入虚拟 IP 地址。一个虚拟的 IP 地址是一个标准 IP 地址在同一个 IP 网络（同一子网）作为 IP 两个节点的地址。  
-应用程序客户端必须配置虚拟 IP 地址（或 DNS 与虚拟关联的名称 IP 地址）。  
-虚拟的 IP 如果发生故障，地址会自动切换。
-  * 在`Replicated directories`中设置要复制的目录路径。检查它们是否存在于两个节点上并包含应用程序数据。  
+ℹ️ 如果您在安装期间将模块放置在连接节点（`node1`）上的 `Application_Modules/generic/` 目录中，则控制台会在该目录中搜索 `xxx.safe`
+
+
+![选择 {{ .Get "app" }} 模块](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. 配置模块 {#4-configure-the-module}
+
+  * 在 `Module startup at boot` 中，选择在启动时自动启动模块，无需延迟。
+  * 在 `Macros`/`SERVICES` 中，按启动顺序输入应用程序的服务名称，并用逗号分隔。有关[Milestone XProtect 服务的直观示例，请参阅此屏幕截图 🖼️](/wp-content/uploads/2025/05/milestone-services.png)。
+  * 在 `Heartbeat networks` 中，您应该有一个用于进行复制的单一心跳网络。如果您在步骤 2 中添加了专用 LAN，那么您可以在专用 LAN 上配置两个带有复制流的心跳。
+  * 在 `Virtual IP addresses` 中，输入虚拟 IP 地址。虚拟 IP 地址是与两个节点的 IP 地址位于同一 IP 网络（同一子网）中的标准 IP 地址。  
+必须使用虚拟 IP 地址（或与虚拟 IP 地址关联的 DNS 名称）配置应用程序客户端。  
+发生故障时，虚拟 IP 地址会自动切换。
+  * 在 `Replicated directories` 中，设置要复制的目录路径。检查它们是否存在于两个节点上并包含应用程序数据。  
 数据和日志复制对于数据库至关重要。  
 您可以根据需要创建其他复制目录。  
-请参阅此屏幕截图，了解 [Milestone XProtect SQL 复制 🖼️](/wp-content/uploads/2025/05/milestone-replication.png) 的直观示例。
-  * 在 `Checkers` 中，您将能够根据需要配置检查器，例如进程监控、自定义检查器、TCP、ping 或裂脑检查器。  
-例如，如果某个进程名称显示在 `Monitored processes/services` 中，则将对其进行监视，并在出现故障时进行重新启动操作。配置错误的进程名称将导致模块启动后立即停止。
+请参阅此屏幕截图，了解[Milestone XProtect SQL 复制的可视化示例 🖼️](/wp-content/uploads/2025/05/milestone-replication.png)。
+  * 在 `Checkers` 中，您可以根据需要配置检查器，例如进程监控、自定义检查器、TCP、ping 或裂脑检查器。  
+例如，如果进程名称显示在 `Monitored processes/services` 中，则在发生故障时，它将通过重启操作进行监控。配置错误的进程名称将导致模块在启动后立即停止。
 
 
-ℹ️如果点击`Advanced configuration`，则会显示`userconfig.xml`文件。该文件由控制台自动填充，并使用重新启动脚本部署在节点上。
+ℹ️ 如果您单击 `Advanced configuration`，则会显示 `userconfig.xml` 文件。此文件由控制台自动填充，并通过重启脚本部署到节点上。
 
-ℹ️ 在云部署中，您不需要配置虚拟 IP 地址在 SafeKit。虚拟的 IP 由 🛠️ 管理 [云负载均衡器级别](/zh-hans/resources/safekit-user-guide-82/#Cloud)。
+ℹ️ 在云部署中，您无需在 SafeKit 中配置虚拟 IP 地址。虚拟 IP 由 🛠️ [云负载均衡器](/zh-hans/resources/safekit-user-guide-82/#Cloud)管理。
 
-ℹ️ 当您涂抹 SafeKit 配置，将 `startup type` 服务的数量自动设置为 `Manual` 在 Windows 服务。这可以确保服务不会在系统启动时自动启动，而是仅在模块本身启动时启动（这同样适用于 Linux）。
-
-
-![输入{{ .Get "app" }}模块设置](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+ℹ️ 应用 SafeKit 配置时，Windows 服务中的服务 `startup type` 会自动设置为 `Manual`。这可确保服务在系统启动时不会自动启动，而是在模块本身启动时才启动（Linux 上也适用）。
 
 
-### 5. 编辑脚本（可选）
+![进入 {{ .Get "app" }} 模块设置](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
 
-  * 此步骤是可选的，在大多数情况下可以跳过，因为重新启动脚本已预先配置为重新启动上一步中定义的服务。
-  * 所以，直接点击`Next step`。
+
+### 5. 编辑脚本（可选） {#5-edit-scripts-optional}
+
+  * 此步骤是可选的，在大多数情况下可以跳过，因为重启脚本已预先配置为重启上一步中定义的服务。
+  * 因此，请直接点击 `Next step`。
   * `start_prim.ps1` 按照 `SERVICES` 列表中指定的顺序启动所有服务，而 `stop_prim.ps1` 按照相反的顺序停止所有服务。
-  * 另外，`start_prim.ps1`会检查每个服务的启动情况，如果有服务无法正确启动，则停止模块。
+  * 此外，`start_prim.ps1` 会检查每个服务的启动情况，如果任何服务未能正确启动，则会停止该模块。
 
 
-![输入{{ .Get "app" }}模块设置](/wp-content/uploads/2026/09/28-module-edit-script.png)
+![进入 {{ .Get "app" }} 模块设置](/wp-content/uploads/2026/09/28-module-edit-script.png)
 
 
-### 6.通讯加密（可选）
+### 6. 通信加密（可选） {#6-communication-encryption-optional}
 
-  * 保持节点之间的通信加密。
-
-
-![{{ .Get "app" }}模块的通信加密](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+  * 保持节点间通信的加密。
 
 
-### 7.保存并应用
+![{{ .Get "app" }} 模块的通信加密](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
-  * `Save and apply` 两个节点上的配置和脚本。
+
+### 7. 保存并应用 {#7-save-and-apply}
+
+  * 在两个节点上 `Save and apply` 配置和脚本。
 
 
 ![保存并应用 {{ .Get "app" }} 模块配置](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8.验证配置成功
+### 8. 验证配置是否成功 {#8-verify-successful-configuration}
 
   * 检查两个节点上的 `Success` ✅ 消息，然后单击 `Monitor modules`。
-  * 如果配置 `Failure` ❌ 发生在一个节点上，请打开该节点的 ▼ 折叠面板并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+  * 如果某个节点上发生配置 `Failure` ❌，请打开该节点的▼手风琴，然后查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
 
 
-⚠️在Linux上，如果复制的目录是挂载点，这一步可能会报错。🛠️[解决问题见SK-0030](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf)。
+⚠️ 在 Linux 上，如果复制的目录是挂载点，您可能会在此步骤中收到错误。🛠️ [请参阅 SK-0030 来解决此问题](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf)。
 
 
-![检查{{ .Get "app" }}模块配置是否成功](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+![检查 {{ .Get "app" }} 模块配置是否成功](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. 使用最新数据启动节点
+### 9. 使用最新数据启动节点 {#9-start-the-node-with-up-to-date-data}
 
-  * 如果节点 1 具有最新的复制目录，请选择它并 ⋯ `Force start` ▶ `As primary`。
-
-
-当节点2启动时，所有数据将从节点1复制到节点2。
-
-⚠️ 如果您做出错误的选择，您将面临在两个节点上同步过时数据的风险。
-
-⚠️ 还假设 {{ .Get "app" }} 应用程序在节点 1 上停止，以便 SafeKit 安装复制机制，然后在 `start_prim` 脚本中启动该应用程序。
-
-⚠️后续启动使用`Start`：SafeKit保留最新的服务器。首次启动或异常操作期间启动`As primary`是特殊启动。
+  * 如果节点 1 拥有最新的复制目录，请选择它，然后⋯ `Force start` ▶ `As primary`。
 
 
-![使用最新数据作为主节点启动 {{ .Get "app" }}](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+当节点 2 启动时，所有数据将从节点 1 复制到节点 2。
+
+⚠️ 如果您做出错误的选择，则有可能在两个节点上同步过时的数据。
+
+⚠️ 还假定 {{ .Get "app" }} 程序在节点 1 上已停止，以便 SafeKit 安装复制机制，然后在 `start_prim` 脚本中启动应用程序。
+
+⚠️ 首次启动后，请使用 `Start`：SafeKit 会保留最新的服务器。首次启动或在特殊操作期间，请使用“启动 `As primary`。
 
 
-### 10.等待过渡到ALONE（绿色）
-
-  * 节点 1 应达到 ALONE（绿色）状态，这意味着虚拟 IP 已设置并且 `start_prim` 脚本已在节点 1 上执行。
+![将包含最新数据的 {{ .Get "app" }} 节点启动为主要节点](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-⚠️如果未到达ALONE（绿色）或者应用未启动，请通过节点1的[模块日志🖼️](/wp-content/uploads/2024/03/24-module-log-script.png)分析原因。
+### 10. 等待过渡到 ALONE ”（绿色） {#10-wait-for-the-transition-to-alone-green}
 
-  * 点击🔍 **日志** 的图标 `node1` 打开模块日志并查找错误消息，例如检查器检测到错误并停止模块。
-  * 点击日志中的`start_prim`，右侧会显示脚本的输出信息，可以检测到服务启动不正确等错误。
+  * 节点 1 应达到 ALONE（绿色）状态，这意味着虚拟 IP 已设置，并且 `start_prim` 脚本已在节点 1 上执行。
+
+
+⚠️ 如果未达到 ALONE（绿色）或未启动应用程序，请使用节点 1 的[模块日志 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png)分析原因。
+
+  * 单击 `node1` 的 🔍**日志**图标，打开模块日志，查找错误消息，例如检查器检测到错误并停止模块。
+  * 点击日志中的 `start_prim`：脚本的输出消息显示在右侧，可以检测到错误，例如服务启动不正确。
   * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
 
 
-⚠️ 如果集群处于 `WAIT (red) not uptodate, STOP (red) not uptodate` 状态，则停止 WAIT 节点，[ 强制其作为主节点启动 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。
+⚠️ 如果集群处于 `WAIT (red) not uptodate, STOP (red) not uptodate` 状态，请停止 WAIT 节点并[强制将其启动为主节点 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。
 
 
-![第一个 {{ .Get "app" }} 节点作为主节点启动并成为 ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+![第一个 {{ .Get "app" }} 节点以主节点身份启动，并成为 ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
 
-### 11.启动节点2
+### 11. 启动节点 2 {#11-start-node-2}
 
-  * ⋯ `Start` 节点 2 及其上下文菜单。
+  * ⋯使用其上下文菜单 `Start` 节点 2。
   * 等待 SECOND（绿色）状态。
 
 
-ℹ️ 节点 2 保持 SECOND（橙色）状态，同时重新同步复制的目录（从节点 1 复制到节点 2）。
+ℹ️ 节点 2 在重新同步复制目录（从节点 1 复制到节点 2）时保持 SECOND（橙色）状态。
 
   * 这可能需要一段时间，具体取决于复制目录中要重新同步的文件大小和网络带宽。
-  * 要查看复制进度，请查看节点 2 的 [ 模块日志🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) 和 [ 复制资源🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png)。使用 SafeKit AI 🤖 获取日志消息方面的帮助。
+  * 要查看复制进度，请参阅节点 2 的[模块日志 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png)和[复制资源 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png)使用 SafeKit AI 🤖 协助处理日志消息。
 
 
-![启动{{ .Get "app" }}节点2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+![启动 {{ .Get "app" }} 节点 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-### 12. 验证集群是否正常运行
+### 12. 验证集群是否正常运行 {#12-verify-that-the-cluster-is-operational}
 
-  * 检查集群是否为绿色/绿色，其中 {{ .Get "app" }} 服务在 PRIM 节点上运行，而不在 SECOND 节点上运行。
-
-
-在此状态下，仅实时复制文件内部的更改。
-
-⚠️ 作为 {{ .Get "app" }} 服务客户端的组件必须配置虚拟 IP 地址。可以使用 DNS 名称完成配置（如果已创建 DNS 名称并与虚拟 IP 地址关联）。
+  * 检查集群是否为绿色/绿色，{{ .Get "app" }} 服务是否在 PRIM 节点上运行，而不是在 SECOND 节点上运行。
 
 
-![{{ .Get "app" }} 节点 2 是 SECOND（绿色）](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+在此状态下，只有文件内部的更改会实时复制。
+
+⚠️ 作为 {{ .Get "app" }} 服务客户端的组件必须配置虚拟 IP 地址。配置可以使用 DNS 名称（如果已创建 DNS 名称并将其与虚拟 IP 地址相关联）。
 
 
-### 13. 测试
+![{{ .Get "app" }} 节点 2 为 SECOND（绿色）](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
-  * 停止 PRIM 向下滚动节点的上下文菜单并单击 `Stop`。
+
+### 13. 测试 {#13-testing}
+
+  * 向下滚动 PRIM 节点的上下文菜单，然后单击 `Stop`。
   * 验证 SECOND 节点上是否存在故障转移，该节点应变为 ALONE（绿色）。
-  * 并使用 Microsoft 管理控制台 (MMC) 上 Windows 或使用命令行 Linux，检查故障转移 {{ .Get "app" }} 服务（在节点 1 上停止） `stop_prim` 脚本并在节点 2 上启动 `start_prim` 脚本）。
+  * 在 Windows 上使用 Microsoft 管理控制台 (MMC)，或在 Linux 上使用命令行，检查 {{ .Get "app" }} 服务的故障转移（在 `stop_prim` 脚本中停止节点 1 上的服务，并在 `start_prim` 脚本中启动节点 2 上的服务）。
 
 
-⚠️如果 ALONE （绿色）未达到 node2 或者如果应用程序未启动，请使用以下命令分析原因 [模块日志🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) 节点 2 的。
+⚠️ 如果 node2 未达到 ALONE（绿色）状态或应用程序未启动，请使用节点 2 的[模块日志 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png)分析原因。
 
-  * 点击🔍 **日志** 的图标 `node2` 打开模块日志并查找错误消息，例如检查器检测到错误并停止模块。
-  * 点击日志中的`start_prim`，右侧会显示脚本的输出信息，可以检测到服务启动不正确等错误。
+  * 单击 `node2` 的 🔍**日志**图标以打开模块日志，并查找错误消息，例如检测器检测到错误并停止模块。
+  * 点击日志中的 `start_prim`：脚本的输出消息显示在右侧，可以检测到错误，例如服务启动不正确。
   * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
 
 
 ⚠️ 
 
-  * 如果一切正常，则启动 node1，这将重新同步 node2 的复制目录。
-  * 如果出现问题，请停止 node2 和 [强制启动作为主要🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) 的 node1，它将使用停止时的本地健康数据重新启动。
+  * 如果一切正常，请在 node1 上启动，这将从 node2 重新同步复制的目录。
+  * 如果出现问题，请停止 node2 并[强制节点 1 启动为主节点 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)，它将使用停止时本地健康的数据重新启动。
 
 
-ℹ️ 在 [SafeKit 在线培训](/zh-hans/resources/safekit-on-line-training/) 中查找更多详细信息和视频。
+ℹ️ 在[SafeKit 在线培训](/zh-hans/resources/safekit-on-line-training/)中查找更多详细信息和视频。
 
 
-![停止 {{ .Get "app" }} 模块上的 PRIM 服务器](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+![停止 PRIM 服务器上的 {{ .Get "app" }} 模块](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 14. 支持
+### 14. 支持 {#14-support}
 
-  * 要获得支持，请获取 2 个 SafeKit `Snapshots`（2 个 .zip 文件），每个节点一个。
-
-
-ℹ️ [ 有关支持的更多信息请参见此处 ](/zh-hans/resources/safekit-support/)。
+  * 如需获取支持，请为每个节点拍摄 2 个 SafeKit `Snapshots`（2 个 .zip 文件）。
 
 
-![拍摄 {{ .Get "app" }} 快照以获取支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+ℹ️ [有关支持的更多信息，请点击此处](/zh-hans/resources/safekit-support/)。
+
+
+![截取 {{ .Get "app" }} 快照以获得支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 

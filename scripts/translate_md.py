@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-08.3"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-08.15"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -169,11 +169,18 @@ def go_templates(text):
 def protect_templates(text, ctx):
     parts, last = [], 0
     for a, b in go_templates(text):
+        if a < last:
+            continue
+        # nom de fichier construit : {{ .Get "mod" }}.safe -> un seul bloc (sinon "{{ .Get "mod" }} .safe" ou ".safe" perdu)
+        ext = re.match(r"\.[A-Za-z0-9]+(?:[.-][A-Za-z0-9]+)*", text[b:])
+        if ext and not re.match(r"\.\s", text[b:]):
+            b += ext.end()
         parts.append(text[last:a]); parts.append(f"{S}P{ctx.add(text[a:b])}{S}"); last = b
     parts.append(text[last:])
     return "".join(parts)
 
 def encode(text, ctx):
+    ctx.src = text
     text = protect_templates(text, ctx)   # {{ .Get "app" }}, {{< shortcode >}}... jamais traduits
     def link(m):
         title = re.match(r'\s+"([^"]*)"', m.group(4)) if m.group(4) else None
@@ -193,7 +200,12 @@ def encode(text, ctx):
     # sauf "9:00 AM" / "5:00 PM" : Google doit les convertir ("9 h", "17 h", "午後 5:00")
     text = re.sub(r"(?<![\w:.=/])\d{1,2}(?::\d{2}){1,2}(?![\w:])(?!\s?[AaPp]\.?[Mm]\b)", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     # emojis (🛠️, 📘, ⬇️...) : protégés, sinon Google en supprime parfois ("**🛠️[commencez" -> "**请[从")
-    text = re.sub("[\U0001F000-\U0001FAFF\u2190-\u21FF\u2300-\u23FF\u2600-\u27BF\u2B00-\u2BFF\u2139][\uFE0F\u200D\U0001F000-\U0001FAFF\u2600-\u27BF]*",
+    text = re.sub("[\U0001F000-\U0001FAFF\u2190-\u21FF\u2300-\u23FF\u25A0-\u25FF\u2600-\u27BF\u2B00-\u2BFF\u2139\u22EF][\uFE0F\u200D\U0001F000-\U0001FAFF\u2600-\u27BF]*",
+                  lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    # identifiants (VM1, SRV2...) : jamais traduits ("VM1" -> "الجهاز الظاهري 1", "máquina virtual 1")
+    text = re.sub(r"(?<![\w/.-])(?<!\x00P)[A-Za-z]{2,}[0-9]+(?![\w-])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    # chemins (C:/safekit/..., /opt/safekit/...) : jamais traduits ni coupés ("**C:/…/generic ab**")
+    text = re.sub(r"(?<![\w/:.])(?:[A-Za-z]:[/\\]|/(?:opt|etc|var|usr|home|tmp|root|srv|mnt)/)[^\s*<>\"'`()]*[^\s*<>\"'`().,;:!?]",
                   lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     # noms de fichiers (mirror.safe, farm.safe, setup.exe...) : protégés en entier, sinon "mirror" seul est protégé
     text = re.sub(r"(?<![\w/.-])[\w-]+\.(?:safe|exe|msi|ps1|sh|cmd|bat|xml|conf|cfg|ini|txt|log|json|ya?ml|dll|vhdx?)\b(?![\w/-])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
@@ -238,6 +250,9 @@ def encode(text, ctx):
         elif tok.startswith("{{"):
             g = re.search(r'\.Get\s+"(\w+)"', tok)
             shown = g.group(1).capitalize() if g else ""   # {{ .Get "app" }} -> "App" (nom propre)
+            sfx = re.search(r"\}\}([.\w-]+)$", tok)
+            if sfx:
+                shown = (g.group(1) if g else "file") + sfx.group(1)   # {{ .Get "mod" }}.safe -> "mod.safe"
         elif tok.startswith("{"):
             shown = ""
         else:
@@ -259,16 +274,61 @@ def decode(text, ctx):
         seen.add(m.group(1))
         return m.group(0)
     text = re.sub(f"{S}P(\\d+){S}", once, text)
-    if KEEP_RE:   # nom protégé recopié en clair par Google en plus du marqueur ("SafeKit 提供健康探测 SafeKit")
+    # emoji protégé recopié en clair par Google ("[forcez le 🖼️](…) … primaire 🖼️") : la copie disparaît
+    for i in {int(x) for x in re.findall(f"{S}P(\\d+){S}", text)}:
+        tok = st[i] if isinstance(st[i], str) else ""
+        if re.fullmatch("[\U0001F000-\U0001FAFF\u2190-\u21FF\u2300-\u23FF\u25A0-\u25FF\u2600-\u27BF\u2B00-\u2BFF\u2139\u22EF][\uFE0F\u200D\U0001F000-\U0001FAFF\u2600-\u27BF]*", tok):
+            base = re.escape(tok.rstrip("\uFE0F"))
+            parts = re.split(f"({S}P\\d+{S})", text)
+            text = "".join(p if p.startswith(S) else re.sub(r"\s?" + base + "\uFE0F?", "", p) for p in parts)
+    if True:   # nom protégé recopié en clair par Google en plus du marqueur ("SafeKit 提供健康探测 SafeKit")
         plain = lambda i: re.sub(r"<[^>]+>", "", st[i]).strip()
         made = [plain(i) for i in range(len(st)) if isinstance(st[i], str)]
-        for t in {x for x in made if KEEP_RE.fullmatch(x)}:
+        for t in {x for x in made if (KEEP_RE and KEEP_RE.fullmatch(x)) or re.fullmatch(r"[A-Za-z]{2,}[0-9]+", x)}:
             n, seen_t = made.count(t), [0]
             pat = f"{S}P(\\d+){S}|(?<![A-Za-z0-9_#.-])" + re.escape(t) + r"(?![A-Za-z0-9_-])"   # collé au japonais : "SafeKit堅牢"
             total = sum(1 for mm in re.finditer(pat, text) if mm.group(1) is None or plain(int(mm.group(1))) == t)
             if total <= n:
                 continue
-            # on supprime d'abord les occurrences en clair (jamais un marqueur : "**Docker**" -> "****") ;
+            # 1) alignement phrase par phrase avec la source : une copie en clair dans une phrase
+            #    où la source n'a pas le nom est supprimée ("ℹ️ VM1 无需配置虚拟 IP 地址。VM1 将…")
+            src = re.sub(r"<[^>]+>|\*\*", "", getattr(ctx, "src", "") or "")
+            ssent = [x for x in re.split(r"(?<=[.!?])\s+(?=\S)", src.strip()) if x]
+            cuts = [0] + [mm.end() for mm in re.finditer(r"[。！？]|[.!?](?=\s|$)", text) if mm.end() < len(text.rstrip())] + [len(text)]
+            if len(ssent) > 1 and len(cuts) - 1 == len(ssent):
+                rx_src = re.compile(r"(?<![A-Za-z0-9_#.-])" + re.escape(t) + r"(?![A-Za-z0-9_-])")
+                out = []
+                for k in range(len(ssent)):
+                    seg = text[cuts[k]:cuts[k + 1]]
+                    allow = len(rx_src.findall(ssent[k]))
+                    occ = [mm for mm in re.finditer(pat, seg) if mm.group(1) is None or plain(int(mm.group(1))) == t]
+                    extra = len(occ) - allow
+                    for mm in reversed([x for x in occ if x.group(1) is None]):
+                        if extra <= 0:
+                            break
+                        seg = seg[:mm.start()] + seg[mm.end():]
+                        extra -= 1
+                    out.append(seg)
+                # marqueur placé par Google dans une phrase où la source n'a pas le nom, alors qu'une autre phrase
+                # n'a que la copie en clair : le marqueur prend la place de la copie ("ℹ️ VM1 无需…。将在" -> "ℹ️ 无需…。VM1 将在")
+                occ_of = lambda sg: [mm for mm in re.finditer(pat, sg) if mm.group(1) is None or plain(int(mm.group(1))) == t]
+                for k in range(len(out)):
+                    allow_k = len(rx_src.findall(ssent[k]))
+                    mk = [mm for mm in occ_of(out[k]) if mm.group(1) is not None]
+                    if len(occ_of(out[k])) <= allow_k or not mk:
+                        continue
+                    for j in range(len(out)):
+                        pj = [mm for mm in occ_of(out[j]) if mm.group(1) is None]
+                        if j != k and pj and len([mm for mm in occ_of(out[j]) if mm.group(1) is not None]) < len(rx_src.findall(ssent[j])):
+                            m0, p0 = mk[0], pj[0]
+                            out[j] = out[j][:p0.start()] + m0.group(0) + out[j][p0.end():]
+                            out[k] = re.sub(r"\s{2,}", " ", out[k][:m0.start()] + out[k][m0.end():])
+                            break
+                text = "".join(out)
+                total = sum(1 for mm in re.finditer(pat, text) if mm.group(1) is None or plain(int(mm.group(1))) == t)
+                if total <= n:
+                    continue
+            # 2) on supprime d'abord les occurrences en clair (jamais un marqueur : "**Docker**" -> "****") ;
             # si un marqueur suit dans la même phrase, il prend la place du texte en clair
             # ("SafeKit 提供健康探测 SafeKit" -> "SafeKit 提供健康探测")
             for _ in range(total - n):
@@ -446,6 +506,8 @@ def decode(text, ctx):
                 head, tail = head + tail[:p], tail[p:]
             return f"{head}**{tail.strip()}**" if tail.strip() else m.group(0)
         text = re.sub(r"\*\*([^*\n]+?)\*\*", shrink, text)
+    # guillemet ouvrant laissé hors du gras : '" **Texte"**' -> '**"Texte"**'
+    text = re.sub(r'(["“«„「])\s*\*\*([^*\n]+?)(["”»“」])\*\*', r"**\1\2\3**", text)
     text = re.sub(r"<code>\s+", "<code>", text)
     text = re.sub(r"\s+</code>", "</code>", text)
     return text.strip()
@@ -649,6 +711,13 @@ def main():
         s = line.strip()
         if s.startswith(("```", "~~~")):
             in_code = not in_code; continue
+        # bloc de code indenté (commande dans une liste : 8 espaces ou tabulation) : jamais traduit
+        if re.match(r"^(?: {8,}|\t)\S", line) and not re.match(r"^\s*(?:[*+-]|\d+\.)\s", line):
+            continue
+        # bloc de code indenté de 4 espaces hors liste, précédé d'une ligne vide (ex. "    /var/lib/libvirt/...")
+        if re.match(r"^ {4}\S", line) and not re.match(r"^\s*(?:[*+-]|\d+\.)\s", line) and i > 0 and not lines[i - 1].strip() \
+                and not any(re.match(r"^\s*(?:[*+-]|\d+\.)\s", lines[j]) for j in range(max(0, i - 6), i)):
+            continue
         if not in_code:
             line = lines[i] = sc_fix(line)
             # paramètres de shortcode pointant vers une page du site : destination="/confirmation-safekit/" -> "/fr/confirmation-safekit/"
@@ -775,7 +844,7 @@ def main():
         # pas de point final ajouté quand la source n'en a pas ("[Lire le guide](/x/)。")
         src_vis = re.sub(r"<[^>]+>", "", enc).strip()
         if src_vis and not re.search(r"[.!?。！？]$", src_vis):
-            t = re.sub(r"(?<!\.)[.。](?=\s*$)", "", t)
+            t = re.sub(r"(?<!\.)[.。](?=(?:\*\*)?\s*$)", "", t)   # aussi "**safekitinstall.**"
         if CJK:  # gras déplacé par Google : à cheval sur deux phrases ou coupant un mot
             parts = t.split("**")
             bad = len(parts) % 2 == 0 or any(

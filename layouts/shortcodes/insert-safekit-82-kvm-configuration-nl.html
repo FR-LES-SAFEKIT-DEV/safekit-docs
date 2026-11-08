@@ -1,37 +1,38 @@
-{{/* Shortcode: insert-safekit-82-kvm-configuration-nl */}}
+{{/* translation: translate_md 2026-11-08.14 | glossaire 2026-11-08.29 | Translation LLM | 33 expressions */}}
+{{/* Shortcode: insert-safekit-82-kvm-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-kvm.md */}}
 
 
 
-⚠️ De {{ .Get "app" }}-configuratie wordt gepresenteerd met een virtuele machine met de naam `VM1` en met de applicatie om opnieuw op te starten in geval van een storing.
+⚠️ De {{ .Get "app" }} configuratie wordt gepresenteerd met een virtuele machine met de naam `VM1` en bevat de toepassing die opnieuw moet worden gestart in geval van een storing.
 
 ⚠️ U moet deze configuratie herhalen voor alle VM's die u wilt repliceren en opnieuw wilt opstarten.
 
 ### 1. Vereisten {#prerequisite}
 
-De afbeelding van de virtuele machine VM1 bevindt zich in het bestand `/var/lib/libvirt/images/vm1.qcow2`. Voordat u SafeKit configureert, moet u de volgende configuratie uitvoeren om de virtuele machine in een vm1-specifieke map te plaatsen die door SafeKit wordt gerepliceerd.
+De VM1 virtuele machine-image bevindt zich in het bestand `/var/lib/libvirt/images/vm1.qcow2`. Voordat u SafeKit configureert, moet u de volgende configuratie uitvoeren om de virtuele machine in een vm1-specifieke map te plaatsen die door SafeKit zal worden gerepliceerd.
 
-Op knooppunt 1:
+Op node 1:
 
-  * Stop vm1: 
+  * vm1 stoppen: 
 
         virsh shutdown vm1
 
-  * Maak een `vm1/` map: 
+  * Maak een `vm1/`-directory aan: 
 
         mkdir -p /var/lib/libvirt/images/vm1/
 
-  * Kopieer de vm1-afbeelding naar de nieuwe locatie: 
+  * Kopieer de vm1 image naar de nieuwe locatie: 
 
         cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
 
-De originele vm1-afbeelding kan worden verwijderd zodra tests met de nieuwe locatie succesvol zijn.
-  * Bewerk het vm1-configuratiebestand: 
+De oorspronkelijke vm1 image kan worden verwijderd zodra de tests met de nieuwe locatie succesvol zijn.
+  * Bewerk het configuratiebestand vm1: 
 
         EDITOR=vi virsh edit vm1
 
-En verander de regel: 
+En wijzig de regel: 
 
         <source file='/var/lib/libvirt/images/vm1.qcow2'>
 
@@ -40,24 +41,24 @@ door:
 
         <source file='/var/lib/libvirt/images/vm1/vm1.qcow2'>
 
-  * Stel de [cache-optie op 'geen'](/wp-content/uploads/2022/07/kvm-2.png) in hetzelfde bestand, voor gegevensintegriteit in geval van een crash: 
+  * Stel de [cacheoptie in op 'geen'](/wp-content/uploads/2022/07/kvm-2.png) in hetzelfde bestand, voor gegevensintegriteit in geval van een crash: 
 
-        <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
+        <disk type='file' device='disk'> <driver name='qemu' type='qcow2' **cache='none'** />
 
-  * Sluit het vm1-configuratiebestand
-  * Uitschakelen [vm1 automatische start](/wp-content/uploads/2022/07/kvm-3.png): 
+  * Sluit het configuratiebestand vm1
+  * [Automatische start van vm1](/wp-content/uploads/2022/07/kvm-3.png) uitschakelen: 
 
         virsh autostart vm1 --disable
 
-  * Maak een `vm1.xml` configuratiebestand voor vm1: 
+  * Maak een configuratiebestand `vm1.xml` voor vm1: 
 
         virsh dumpxml vm1 > vm1.xml
 
 
 Op knooppunt 2:
 
-  * Kopieer de `vm1.xml` configuratiebestand van knooppunt 1. Opmerking: telkens wanneer de vm1-configuratie op knooppunt 1 wordt gewijzigd, moet u de nieuwe configuratie opnieuw toepassen op knooppunt 2.
-  * Maak vm1 aan, maar start het niet: 
+  * Kopieer het configuratiebestand `vm1.xml` van node 1. Opmerking: telkens wanneer vm1 configuratie op node 1 wordt gewijzigd, moet u de nieuwe configuratie opnieuw toepassen op node 2.
+  * Maak vm1 aan, maar start deze niet: 
 
         virsh define vm1.xml
 
@@ -65,252 +66,252 @@ Op knooppunt 2:
 
         virsh autostart vm1 --disable
 
-  * Maak de map voor de afbeeldingslocatie: 
+  * Maak de map voor de afbeeldingslocatie aan: 
 
         mkdir -p /var/lib/libvirt/images/vm1/
 
 
-### 2. Start de SafeKit-console
+### 2. Start de SafeKit console {#2-launch-the-safekit-console}
 
-  * Start de webconsole in een browser op één clusterknooppunt door verbinding te maken met `http://localhost:9010`.
-  * Kom binnen `admin` als gebruikersnaam en het wachtwoord dat tijdens de installatie is gedefinieerd.
+  * Start de webconsole in een browser op een clusterknooppunt door verbinding te maken met `http://localhost:9010`.
+  * Voer `admin` in als gebruikersnaam en het wachtwoord dat tijdens de installatie is gedefinieerd.
 
 
-U kunt de console ook in een browser uitvoeren op een werkstation buiten het cluster.
+U kunt de console ook in een browser uitvoeren op een werkstation dat zich buiten het cluster bevindt.
 
 ⚠️ De configuratie van SafeKit gebeurt op beide knooppunten vanuit één browser.
 
-ℹ️ Zie 🛠️ voor het beveiligen van de webconsole [11\. Beveiligen van de SafeKit-webservice](/nl/resources/safekit-user-guide-82/#https) in de Gebruikershandleiding.
+ℹ️ Raadpleeg 🛠️ [11. De SafeKit-webservice beveiligen](/nl/resources/safekit-user-guide-82/#https) in de gebruikershandleiding om de webconsole te beveiligen.
 
 
-![Start de SafeKit-webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
+![Start de SafeKit webconsole om het {{ .Get "app" }} cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 3. Configureer knooppuntadressen
+### 3. Knoopp Adressen configureren {#3-configure-node-addresses}
 
-  * Voer de IP-adressen van het knooppunt in, druk op de `Tab key` om de connectiviteit te controleren en knooppuntnamen in te vullen. Als node1 of node2 een rode kleur heeft, controleer dan de connectiviteit van de browser met beide knooppunten en controleer de firewall op beide knooppunten op 🛠️ [probleemoplossing](/nl/resources/safekit-user-guide-82/#Troubleshooting).
+  * Voer de IP-adressen van de knooppunten in, druk op de `Tab key` om de connectiviteit te controleren en vul de namen van de knooppunten in. Als node1 of node2 rood is, controleer dan de connectiviteit van de browser met beide knooppunten en controleer de firewall op beide knooppunten voor 🛠️ [probleemoplossing](/nl/resources/safekit-user-guide-82/#Troubleshooting).
   * Klik vervolgens op `Save and apply` om de configuratie op te slaan.
-  * Controleer de `Success` ✅-bericht op beide knooppunten.
-  * Als de configuratie `Failure` ❌ komt voor op één knooppunt, open de ▼ accordeon voor dat knooppunt en bekijk de berichten. Merk op dat u de SafeKit AI 🤖 voor hulp kunt gebruiken.
+  * Controleer het `Success` ✅ op beide knooppunten.
+  * Als de `Failure` ❌ optreedt op één node, open dan het ▼ accordeon voor die node en bekijk de berichten. Merk op dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
 
 
-ℹ️ Als u wilt, kunt u een nieuw toevoegen `LAN and nodes` (eerste ➕) om een tweede hartslag en een speciaal replicatienetwerk te creëren.
+ℹ️ Indien gewenst kunt u een nieuw `LAN and nodes` toevoegen (eerst ➕) om een tweede heartbeat en een speciaal replicatienetwerk te creëren.
 
-ℹ️ Als u op klikt `Advanced configuration`, de `cluster.xml` bestand wordt weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten.
-
-
-![Voer de knooppunten van het {{ .Get "app" }}-cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
+ℹ️ Als u op `Advanced configuration` klikt, wordt het bestand `cluster.xml` weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten.
 
 
-### 4. Selecteer een module
-
-  * In `New module`, klik op de `{{ .Get "mod" }}.safe` module.
+![Voer de knooppunten van het {{ .Get "app" }} cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-ℹ️ In de blauwe banner bovenaan staat 🛜 `node1` vertegenwoordigt het consoleverbindingsknooppunt. Dit knooppunt stuurt verzoeken door naar `node2` wanneer nodig.
+### 4. Selecteer een module {#4-select-a-module}
 
-ℹ️ De console zoekt naar `xxx.safe` in de `Application_Modules/generic/` directory op het verbindingsknooppunt (`node1`) als u daar tijdens de installatie een module hebt geplaatst.
+  * Klik in de `New module` op de module `{{ .Get "mod" }}.safe`.
+
+
+ℹ️ In de blauwe banner bovenaan staat 🛜 `node1` voor de consoleverbindingsnode. Deze node stuurt verzoeken door naar `node2` wanneer dat nodig is.
+
+ℹ️ De console zoekt naar `xxx.safe` in de map `Application_Modules/generic/` op de verbindingsnode (`node1`) als u daar tijdens de installatie een module hebt geplaatst.
 
 
 ![Kies de module voor {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 5. Configureer de module
+### 5. De module configureren {#5-configure-the-module}
 
-  * Kies een `Automatic` start van de module bij het opstarten zonder vertraging.
-  * Normaal gesproken heb je een single `Heartbeat` netwerk waarop de replicatie wordt gemaakt. Maar u kunt indien nodig een privénetwerk definiëren (door bij stap 3 een LAN toe te voegen).
-  * Zet erin `VM_PATH`, het hoofdpad van de gerepliceerde map (`/var/lib/libvirt/images`).
-  * Kom binnen `VM_NAME`, de naam van de virtuele machine (`vm1`).
-
-
-We gaan ervan uit dat de VM1-bestanden aanwezig zijn `/var/lib/libvirt/image/vm1/` (zie [vereisten](#prerequisite)). Deze map wordt in realtime gerepliceerd door SafeKit.
-
-ℹ️ U hoeft geen virtueel IP-adres te configureren. VM1 wordt opnieuw opgestart op de secundaire {{ .Get "app" }} met het fysieke IP-adres, en dit IP-adres wordt omgeleid.
+  * Kies voor een `Automatic` start van de module bij het opstarten zonder vertraging.
+  * Normaal gesproken hebt u één `Heartbeat` netwerk waarop de replicatie wordt uitgevoerd. Maar u kunt indien nodig een privénetwerk definiëren (door een LAN toe te voegen in stap 3).
+  * Voer in `VM_PATH` het hoofdpad van de gerepliceerde map in (`/var/lib/libvirt/images`).
+  * Voer bij `VM_NAME` de naam van de virtuele machine in (`vm1`).
 
 
-![Voer de {{ .Get "app" }}-parameters in](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+We gaan ervan uit dat de VM1 bestanden zich in `/var/lib/libvirt/images/vm1/` bevinden (zie [vereisten](#prerequisite)). Deze map wordt in realtime gerepliceerd door SafeKit.
+
+ℹ️ U hoeft geen virtueel IP-adres te configureren. VM1 wordt opnieuw opgestart op de secundaire {{ .Get "app" }} met zijn fysieke IP-adres en dit IP-adres wordt omgeleid.
 
 
-### 6. Aangepaste controle om VM-storingen te detecteren
+![Voer de {{ .Get "app" }} parameters in](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
 
-De aangepaste checker controleert of de VM actief is (met de opdracht 'virsh domstate'). Als de VM niet actief is, start de aangepaste controle de VM automatisch opnieuw op op hetzelfde {{ .Get "app" }}-knooppunt of op het andere.
+
+### 6. Aangepaste checker om VM-storingen te detecteren {#6-custom-checker-to-detect-vm-malfunction}
+
+De aangepaste checker controleert of de VM actief is (met de opdracht 'virsh domstate'). Als de VM niet actief is, start de aangepaste checker de VM automatisch opnieuw op op dezelfde {{ .Get "app" }} node of op de andere.
 
   * Klik op `Checkers / Custom` (zie afbeelding).
   * `Resource name` identificeert de virtuele machine met een resourcenaam in SafeKit: `custom.VM_NAME_check`.
-  * Met `restart` binnen `Action`, wordt de VM opnieuw opgestart op hetzelfde {{ .Get "app" }}-knooppunt. Na 3 mislukte herstarts binnen 24 uur stopt de SafeKit {{ .Get "mod" }}-module op het primaire knooppunt en vindt er een failover plaats van de VM op het secundaire knooppunt.
-  * Als je instelt `stopstart` binnen `Action`, is er een directe failover op het andere {{ .Get "app" }}-knooppunt zodra de VM niet actief is.
+  * Met `restart` in `Action` wordt de VM opnieuw opgestart op dezelfde {{ .Get "app" }} node. Na 3 mislukte herstarts in 24 uur stopt de SafeKit {{ .Get "mod" }} module op de primaire node en vindt er een failover van de VM plaats op de secundaire node.
+  * Als u `stopstart` instelt in `Action`, vindt er een directe failover plaats op de andere {{ .Get "app" }} node zodra de VM niet meer actief is.
 
 
-ℹ️ Als u voor onderhoud de virtuele machine wilt stoppen, zal de aangepaste controleur deze automatisch opnieuw opstarten. Om dat te voorkomen, kunt u tijdelijk [schort de controleur 🖼️ op](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Of u kunt het verwijderen door de configuratieregel in de console te verwijderen.
+ℹ️ Als u de virtuele machine wilt stoppen voor onderhoud, zal de aangepaste checker deze automatisch opnieuw opstarten. Om dat te voorkomen, kunt u [de checker tijdelijk opschorten 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Of u kunt deze verwijderen door de configuratieregel in de console te verwijderen.
 
 
-![Voer de aangepaste controleparameters van de {{ .Get "app" }} in](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
+![Voer de parameters voor de aangepaste {{ .Get "app" }} controle in](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
 
 
-### 7. Scripts bewerken (optioneel)
+### 7. Scripts bewerken (optioneel) {#7-edit-scripts-optional}
 
   * Bewerk geen scripts.
 
 
-### 8. Communicatie-encryptie (optioneel)
+### 8. Communicatieversleuteling (optioneel) {#8-communication-encryption-optional}
 
-  * Behoud de codering van de communicatie tussen knooppunten.
-
-
-![Communicatie-encryptie van de {{ .Get "app" }}-module](/wp-content/uploads/2024/03/07-module-encryption.png)
+  * De versleuteling van de communicatie tussen knooppunten behouden.
 
 
-### 9. Opslaan en toepassen
-
-  * `Save and apply` de configuratie en scripts op beide knooppunten.
+![Communicatieversleuteling van de {{ .Get "app" }} module](/wp-content/uploads/2024/03/07-module-encryption.png)
 
 
-![Bewaar de {{ .Get "app" }}-moduleconfiguratie en pas deze toe](/wp-content/uploads/2024/03/08-module-save.png)
+### 9. Opslaan en toepassen {#9-save-and-apply}
+
+  * `Save and apply` op beide knooppunten.
 
 
-### 10. Controleer of de configuratie succesvol is
-
-  * Controleer de `Success` ✅-bericht op beide knooppunten en klik op `Monitor modules`.
-  * Als de configuratie `Failure` ❌ komt voor op één knooppunt, open de ▼ accordeon voor dat knooppunt en bekijk de berichten. Merk op dat u de SafeKit AI 🤖 voor hulp kunt gebruiken.
+![De configuratie van de {{ .Get "app" }} module opslaan en toepassen](/wp-content/uploads/2024/03/08-module-save.png)
 
 
-![Controleer het succes van de {{ .Get "app" }}-moduleconfiguratie](/wp-content/uploads/2024/03/09-module-save-check.png)
+### 10. Controleer of de configuratie succesvol is {#10-verify-successful-configuration}
+
+  * Controleer het `Success` ✅ op beide knooppunten en klik op `Monitor modules`.
+  * Als de `Failure` ❌ optreedt op één node, open dan het ▼ accordeon voor die node en bekijk de berichten. Merk op dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
 
 
-### 11. Start het knooppunt met actuele gegevens
+![Controleer of de configuratie van de {{ .Get "app" }} module is geslaagd](/wp-content/uploads/2024/03/09-module-save-check.png)
 
-  * Als knooppunt 1 de up-to-date gerepliceerde map voor heeft `vm1/`, selecteer het en ⋯ `Force start` ▶ `As primary`.
+
+### 11. Start de node met actuele gegevens {#11-start-the-node-with-up-to-date-data}
+
+  * Als knooppunt 1 de meest recente gerepliceerde map voor `vm1/` heeft, selecteer deze dan en ⋯ `Force start` ▶ `As primary`.
 
 
 Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar knooppunt 2 gekopieerd.
 
-⚠️ Als u de verkeerde keuze maakt, loopt u het risico verouderde gegevens op beide knooppunten te synchroniseren.
+⚠️ Als u de verkeerde keuze maakt, loopt u het risico dat u verouderde gegevens op beide knooppunten synchroniseert.
 
-⚠️ Er wordt ook van uitgegaan dat `VM1` wordt gestopt op knooppunt 1, zodat SafeKit de replicatiemechanismen installeert en vervolgens start `VM1` in de `start_prim` schrift.
+⚠️ Er wordt ook aangenomen dat `VM1` is gestopt op node 1, zodat SafeKit de replicatiemechanismen installeert en vervolgens `VM1` start in het `start_prim` script.
 
-⚠️ Gebruik `Start` voor volgende starts: SafeKit behoudt de meest up-to-date server. Beginnen `As primary` is een bijzondere start-up, de eerste keer of tijdens uitzonderlijke operaties.
-
-
-![Begin als primair knooppunt {{ .Get "app" }} met de actuele gegevens](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+⚠️ Gebruik `Start` voor volgende starts: SafeKit behoudt de meest recente server. Starten `As primary` is een speciale opstart de eerste keer of tijdens uitzonderlijke bewerkingen.
 
 
-### 12. Wacht op de overgang naar ALONE (groen)
-
-  * Knooppunt 1 zou de status ALONE (groen) moeten bereiken, wat betekent dat de `start_prim` script is uitgevoerd op knooppunt 1.
+![Start de {{ .Get "app" }} node met de meest recente gegevens als primaire node](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-⚠️ Als ALONE (groen) niet wordt bereikt of als VM1 niet wordt gestart, analyseer dan met de [modulelogboek 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) van knooppunt 1.
+### 12. Wacht tot de overgang naar ALONE (groen) {#12-wait-for-the-transition-to-alone-green}
 
-  * Klik op de 🔍 **loggen** icoon van `node1` om het modulelogboek te openen en te zoeken naar foutmeldingen, zoals een controleur die een fout detecteert en de module stopt.
-  * Klik op `start_prim` in de log: uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd zoals VM1 verkeerd gestart.
+  * Knooppunt 1 moet de ALONE status (groen) bereiken, wat betekent dat het `start_prim` script op knooppunt 1 is uitgevoerd.
+
+
+⚠️ Als ALONE (groen) niet wordt bereikt of als VM1 niet wordt gestart, analyseer dan waarom met het [modullogboek 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) van knooppunt 1.
+
+  * Klik op het 🔍 **logboekpictogram** van `node1` om het modulelogboek te openen en zoek naar foutmeldingen, zoals een checker die een fout detecteert en de module stopt.
+  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals VM1 die niet correct is gestart.
   * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
-⚠️ Als het cluster zich in `WAIT (red) not uptodate, STOP (red) not uptodate` status, stop het WAIT-knooppunt en [forceer de start als primaire 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+⚠️ Als de cluster in de toestand `WAIT (red) not uptodate, STOP (red) not uptodate`, stop dan het WAIT knooppunt en [forceer de start ervan als primair 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
 
 
-![Het eerste {{ .Get "app" }}-knooppunt begint als primair en wordt ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+![Het eerste {{ .Get "app" }} knooppunt start als primair en wordt ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
 
-### 13. Begin knooppunt 2
+### 13. Start knooppunt 2 {#13-start-node-2}
 
-  * ⋯ `Start` knooppunt 2 met zijn contextueel menu.
-  * Wacht op de status SECOND (groen).
+  * ⋯ `Start` knooppunt 2 met het contextmenu.
+  * Wacht op de SECOND (groene) toestand.
 
 
 ℹ️ 
 
-  * Knooppunt 2 blijft in de status SECOND (oranje) terwijl de gerepliceerde mappen opnieuw worden gesynchroniseerd (kopiëren van knooppunt 1 naar knooppunt 2).
-  * Dit kan enige tijd duren, afhankelijk van de grootte van de bestanden die opnieuw moeten worden gesynchroniseerd in gerepliceerde mappen en de netwerkbandbreedte.
-  * Om de voortgang van het kopiëren te zien, zie de [modulelogboek 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) en de [replicatiebronnen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) van knooppunt 2. Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
+  * Knooppunt 2 blijft in de SECOND (oranje) toestand terwijl de gerepliceerde mappen opnieuw worden gesynchroniseerd (kopiëren van knooppunt 1 naar knooppunt 2).
+  * Dit kan even duren, afhankelijk van de grootte van de bestanden die opnieuw moeten worden gesynchroniseerd in gerepliceerde mappen en de netwerkbandbreedte.
+  * Om de voortgang van de kopie te zien, raadpleegt u het [modullogboek 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) en de [replicatiebronnen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) van knooppunt 2. Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
-![Start het {{ .Get "app" }}-knooppunt 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+![Start de {{ .Get "app" }} node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-### 14. Controleer of het cluster operationeel is
+### 14. Controleer of het cluster operationeel is {#14-verify-that-the-cluster-is-operational}
 
-  * Controleer of het cluster groen/groen is met `VM1` draait op het PRIM-knooppunt en niet op het SECOND-knooppunt.
-
-
-In deze staat worden alleen wijzigingen in bestanden in realtime gerepliceerd.
+  * Controleer of het cluster groen/groen is, met `VM1` die op de PRIM node draait en niet op de SECOND-node.
 
 
-![Het {{ .Get "app" }}-knooppunt 2 is SECOND (groen)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+In deze status worden alleen wijzigingen in bestanden in realtime gerepliceerd.
 
 
-### 15. Testen
-
-  * Stop het PRIM-knooppunt door naar beneden te scrollen in het contextuele menu en te klikken `Stop`.
-  * Controleer of er een failover is op het SECOND-knooppunt, dat ALONE (groen) moet worden.
-  * Controleer met {{ .Get "app" }}-tools of `VM1` draait op knooppunt 2.
+![{{ .Get "app" }} node 2 is SECOND (groen)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-⚠️ Als ALONE (groen) niet wordt bereikt op node2 of als VM1 niet wordt gestart, analyseer dan waarom met de [modulelogboek 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) van knooppunt 2.
+### 15. Testen {#15-testing}
 
-  * Klik op de 🔍 **loggen** icoon van `node2` om het modulelogboek te openen en te zoeken naar foutmeldingen, zoals een controleur die een fout detecteert en de module stopt.
-  * Klik op `start_prim` in de log: uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd zoals VM1 verkeerd gestart.
+  * Stop de PRIM node door in het contextmenu naar beneden te scrollen en `Stop` te klikken.
+  * Controleer of er een failover is op het SECOND knooppunt, dat ALONE (groen) zou moeten worden.
+  * Controleer met {{ .Get "app" }} tools of `VM1` op node 2 draait.
+
+
+⚠️ Als ALONE (groen) niet wordt bereikt op node2 of als VM1 niet is gestart, analyseer dan waarom met het [modullogboek 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) van node 2.
+
+  * Klik op het 🔍 **logboekpictogram** van `node2` om het modulelogboek te openen en zoek naar foutmeldingen, zoals een checker die een fout detecteert en de module stopt.
+  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals VM1 die niet correct is gestart.
   * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
 ⚠️
 
-  * Als alles in orde is, start u node1, waardoor de gerepliceerde mappen van node2 opnieuw worden gesynchroniseerd.
-  * Als er iets misgaat, stop dan met node2 en [forceer de start als primaire 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) van node1, die op het moment van de stop opnieuw zal opstarten met zijn lokaal gezonde gegevens.
+  * Als alles in orde is, start u node1 op, die de gerepliceerde mappen van node2 opnieuw synchroniseert.
+  * Als er iets misgaat, stop dan node2 en [forceer node 1 om als primair te starten 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png), die opnieuw zal opstarten met zijn lokaal gezonde gegevens op het moment van de stop.
 
 
-ℹ️ Houd er rekening mee dat u een 🕒 heeft **[tijdlijn 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** dat kan nuttig zijn om te begrijpen wat er in het cluster gebeurt.
+ℹ️ Let op: u hebt een 🕒 **[tijdlijn 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** die nuttig kan zijn om te begrijpen wat er in het cluster gebeurt.
 
 
-![Stop de {{ .Get "app" }}-module op de PRIM-server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+![Stop de {{ .Get "app" }} module op de PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16. Configureer indien nodig een splitbrain-checker
+### 16. Configureer indien nodig een splitbrain-checker {#16-if-necessary-configure-a-splitbrain-checker}
 
-  * Zie [Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster?](/nl/best-practises/power-outage-and-network-isolation-in-a-cluster/) om te weten of u een splitbrain-checker moet configureren.
+  * Raadpleeg [Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?](/nl/best-practises/power-outage-and-network-isolation-in-a-cluster/) om te weten of u een splitbrain-checker moet configureren.
   * Ga naar de moduleconfiguratie en klik op `Checkers / Splitbrain` (zie afbeelding) om de splitbrain-parameters te bewerken.
-  * `Save and apply` de nieuwe configuratie om deze opnieuw te implementeren op beide knooppunten (de module moet op beide knooppunten worden gestopt om op te slaan en toe te passen).
+  * `Save and apply` om deze opnieuw te implementeren op beide knooppunten (de module moet op beide knooppunten worden gestopt om op te slaan en toe te passen).
 
 
-**Parameters** :
+**Parameters**:
 
   * `Resource name` identificeert de getuige met een resourcenaam: `splitbrain.witness`. U kunt deze waarde wijzigen om de getuige te identificeren.
-  * `Witness address` is het argument voor een ping wanneer een knooppunt van PRIM naar ALONE of van SECOND naar ALONE gaat. Wijzig deze waarde met de IP van de getuige (een robuust element, meestal een router).
-  * Let op: u kunt meerdere IP's instellen, gescheiden door spaties. Houd er rekening mee dat de IP-adressen toegankelijk moeten zijn vanaf het ene knooppunt, maar niet vanaf het andere in geval van netwerkisolatie.
+  * `Witness address` is het argument voor een ping wanneer een node van PRIM naar ALONE of van SECOND naar ALONE gaat. Wijzig deze waarde met het IP-adres van de witness (een robuust element, meestal een router).
+  * Opmerking: u kunt meerdere IP-adressen instellen, gescheiden door spaties. Let op: de IP-adressen moeten toegankelijk zijn vanaf één knooppunt, maar niet vanaf het andere in het geval van netwerkisolatie.
 
 
-![Voer de {{ .Get "app" }} splitbrain-parameters in](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+![Voer de splitbrain-parameters {{ .Get "app" }} in](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
 
 
-### 17. Momentopnamen repliceren
+### 17. Snapshots repliceren {#17-replicating-snapshots}
 
-De map die de snapshot-XML-bestanden bevat, is:
+De map die de XML-bestanden van de momentopname bevat, is:
 
 
     /var/lib/libvirt/qemu/snapshot/%VM_NAME%
 
-waar `VM_NAME` is de naam van de virtuele machine (vm1).
+waarbij `VM_NAME` de naam is van de virtuele machine (vm1).
 
-Opmerking: als er geen momentopname is gemaakt, maak er dan een om de map te genereren (anders mislukt de SafeKit-configuratie).
+Opmerking: Als er geen momentopname is gemaakt, maak er dan een aan om de map te genereren (anders mislukt de SafeKit-configuratie).
 
 Om het te repliceren:
 
-  * Klik in de moduleconfiguratie op `Advanced Configuration` (zie afbeelding) om te bewerken `userconfig.xml`.
-  * Plaats de onderstaande regels in het `<rfs>` gedeelte van userconfig.xml: 
+  * Klik in de moduleconfiguratie op `Advanced Configuration` (zie afbeelding) om `userconfig.xml` te bewerken.
+  * Voeg de onderstaande regels toe aan de `<rfs>`-sectie van userconfig.xml: 
 
         <replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%" mode="read_only"> </replicated>
 
-  * `Save and apply` de nieuwe configuratie om het gewijzigde userconfig.xml-bestand opnieuw te implementeren op beide knooppunten (de module moet op beide knooppunten worden gestopt om op te slaan en toe te passen).
-  * Maak snapshots op het PRIM-knooppunt via virt-manager of een opdrachtregel: 
+  * `Save and apply` om het gewijzigde userconfig.xml bestand opnieuw te implementeren op beide knooppunten (de module moet op beide knooppunten worden gestopt om op te slaan en toe te passen).
+  * Maak snapshots op de PRIM node via virt-manager of een opdrachtregel: 
 
         virsh snapshot-create-as vm1 snapshot-name
 
-Opmerking: wanneer u een snapshot maakt met een opdrachtregel, moet u de snapshotweergave vernieuwen naar virt-manager.
+Opmerking: wanneer u een momentopname maakt met een opdrachtregel, moet u de momentopnameweergave in virt-manager vernieuwen.
 
 
-Momentopnamen die op het knooppunt PRIM zijn gemaakt, zijn na een failover operationeel op knooppunt 2, maar worden niet vermeld op knooppunt 2.
+Snapshots die op de PRIM node zijn gemaakt, zijn na een failover operationeel op node 2, maar worden niet weergegeven op node 2.
 
-  * Om een momentopname op knooppunt 2 te importeren, moet u de opdracht uitvoeren: 
+  * Om een momentopname op node 2 te importeren, moet u de volgende opdracht uitvoeren: 
 
         virsh snapshot-create --redefine vm1 /var/lib/libvirt/qemu/snapshot/vm1/snapshot-name
 
@@ -319,17 +320,17 @@ Momentopnamen die op het knooppunt PRIM zijn gemaakt, zijn na een failover opera
         virsh snapshot-list vm1
 
 
-![Voer de {{ .Get "app" }}-parameters in](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+![Voer de {{ .Get "app" }} parameters in](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
 
 
-### 18. Ondersteuning
+### 18. Ondersteuning {#18-support}
 
-  * Om ondersteuning te krijgen, neemt u 2 SafeKit `Snapshots` (2 .zip-bestanden), één voor elk knooppunt.
+  * Om ondersteuning te krijgen, maakt u 2 SafeKit `Snapshots` (2 .zip-bestanden), één voor elke node.
 
 
 ℹ️ [Meer informatie over de ondersteuning vindt u hier](/nl/resources/safekit-support/).
 
 
-![Neem de {{ .Get "app" }}-snaphots voor ondersteuning](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+![Maak {{ .Get "app" }} momentopnamen voor ondersteuning](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 

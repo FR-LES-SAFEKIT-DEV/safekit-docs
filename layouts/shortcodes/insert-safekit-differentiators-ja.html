@@ -1,30 +1,31 @@
-{{/* Shortcode: insert-safekit-differentiators-ja — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.7 | glossaire 2026-11-08.20 | Translation LLM | 37 expressions */}}
+{{/* Shortcode: insert-safekit-differentiators-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\ja\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
 ## SafeKit と従来の高可用性 (HA) クラスターの比較 {#safekit-ha-comparison}
 
-この比較は、SafeKit とフェイルオーバークラスター、仮想化 HA、SQL Always-On などの従来の高可用性 (HA) クラスターソリューションとの根本的な違いを示しています。SafeKit は、汎用的なアプリケーション冗長化のための低複雑性・ソフトウェアのみのソリューションとして設計されており、従来の HA メカニズムに特有の高い複雑性や特定のストレージ要件（共有ストレージ、SAN）とは対照的です。 
+この比較は、SafeKit と、フェイルオーバークラスター、仮想化 HA、SQL Always-On などの従来の高可用性（HA）クラスターソリューションとの根本的な違いを浮き彫りにします。SafeKit は、汎用アプリケーションの冗長性のための、低複雑性のソフトウェアのみのソリューションとして設計されており、従来の HA メカニズムに典型的な高い複雑性と特定のストレージ要件（共有ストレージ、SAN）とは対照的です。 
 
-**SafeKit と従来の高可用性 (HA) クラスターの比較**
+**SafeKit と従来の高可用性（HA）クラスターの比較**
 
 ソリューション | 複雑性 | コメント  
 ---|---|---  
-フェイルオーバークラスター (Microsoft) | 高い | 特定のストレージが必要（共有ストレージ、SAN）  
-仮想化 (VMware HA) | 高い | 特定のストレージが必要（共有ストレージ、SAN、vSAN）  
-SQL Always-On (Microsoft) | 高い | SQL のみが冗長化され、SQL Enterprise Edition が必要  
-SafeKit | 低い | 最もシンプルで汎用的、ソフトウェアのみ。大規模データのレプリケーションには不向き。  
+フェールオーバークラスター (Microsoft) | 高 | 特定ストレージ（共有ストレージ、SAN）  
+仮想化 (VMware HA) | 高 | 特定ストレージ（共有ストレージ、SAN、vSAN）  
+SQL Always-On (Microsoft) | 高 | SQL のみが冗長であり、SQL Enterprise Edition が必要です  
+SafeKit | 低 | 最もシンプルで汎用性が高く、ソフトウェアのみで構成されます。大規模なデータレプリケーションには不向きです。  
 
-**まとめ** として、SafeKit はシンプルなソフトウェアベースのミラーリング機構により、SAN（ストレージエリアネットワーク）のような高価な専用ハードウェアを不要にし、低複雑性で高可用性を実現します。これにより、複雑なインフラ変更なしにアプリケーションの冗長化を迅速に導入できる、非常にアクセスしやすいソリューションとなっています。 
+**要約すると**は、SafeKit は、SAN（ストレージエリアネットワーク）のような高価な専用ハードウェアを不要にする、シンプルなソフトウェアベースのミラーリングメカニズムによって、複雑さの少ない高可用性を実現します。これにより、複雑なインフラストラクチャの変更なしに、アプリケーションの冗長性を迅速に実装するための、非常にアクセスしやすいソリューションとなります。 
 
-詳細については、次のページをご覧ください。
+詳細については、以下を参照してください
 
 * [高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス](/ja/best-practises/high-availability-architectures-and-best-practices/)
-* [高可用性のためのデータレプリケーション技術：徹底比較](/ja/best-practises/data-replication-techniques/)
-* [SafeKit Farm クラスターと他の NLB ソリューションの比較](/ja/architectures/network-load-balancing-cluster/#safekit-farm-ha-comparison)
-* [VM HA と Application HA](/ja/best-practises/vm-ha-vs-application-ha/)
+* [高可用性のためのデータレプリケーション技術：完全比較](/ja/best-practises/data-replication-techniques/)
+* [比較：Windows/Linux 向け SafeKit farm クラスターとその他の NLB クラスタリングソリューション](/ja/architectures/network-load-balancing-cluster/#safekit-farm-ha-comparison)
+* [VM HA とアプリケーション HA の比較](/ja/best-practises/vm-ha-vs-application-ha/)
 
 
 

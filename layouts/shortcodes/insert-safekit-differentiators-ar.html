@@ -1,30 +1,31 @@
-{{/* Shortcode: insert-safekit-differentiators-ar — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.7 | glossaire 2026-11-08.20 | Translation LLM | 27 expressions */}}
+{{/* Shortcode: insert-safekit-differentiators-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\ar\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## مقارنة SafeKit بمجموعات التوفر العالي (HA) التقليدية {#safekit-ha-comparison}
+## مقارنة بين SafeKit وعناقيد التوافر العالي التقليدية (HA) {#safekit-ha-comparison}
 
-تُبرز هذه المقارنة الفروقات الجوهرية بين SafeKit وحلول التوافر العالي (HA) التقليدية مثل مجموعات تجاوز الفشل (Failover Clusters) والتوافر العالي عبر المحاكاة الافتراضية وSQL Always-On. صُمم SafeKit كحل برمجي بسيط للتكرار العام للتطبيقات، على عكس التعقيد العالي ومتطلبات التخزين المحددة (التخزين المشترك، SAN) التي تميز آليات التوافر العالي التقليدية. 
+يسلط هذا المقارنة الضوء على الاختلافات الأساسية بين SafeKit وحلول المجموعات التقليدية عالية التوافر (HA) مثل مجموعات تجاوز الفشل، والتوافر العالي للمحاكاة الافتراضية، و SQL Always-On. تم تصميم SafeKit كحل بسيط ومنخفض التعقيد، يعتمد على البرمجيات فقط، لتحقيق التكرار العام للتطبيقات، على عكس التعقيد العالي ومتطلبات التخزين المحددة (التخزين المشترك، SAN) التي تميز آليات التوافر العالي التقليدية. 
 
-**مقارنة SafeKit مع مجموعات التوافر العالي (HA) التقليدية**
+**مقارنة بين SafeKit ومجموعات التوافر العالي (HA) التقليدية**
 
-الحلول | التعقيد | ملاحظات  
+الحلول | التعقيد | التعليقات  
 ---|---|---  
-Failover Cluster (Microsoft) | عالٍ | تخزين محدد (تخزين مشترك، SAN)  
-المحاكاة الافتراضية (VMware HA) | عالٍ | تخزين محدد (تخزين مشترك، SAN، vSAN)  
-SQL Always-On (Microsoft) | عالٍ | SQL فقط يكون متكرراً، يتطلب إصدار SQL Enterprise  
-SafeKit | منخفض | الأبسط، عام وبرمجي بالكامل. غير مناسب لنسخ كميات كبيرة من البيانات.  
+مجموعة تجاوز الفشل (Microsoft) | مرتفع | التخزين المحدد (التخزين المشترك، SAN)  
+المحاكاة الافتراضية (VMware HA) | مرتفع | التخزين المحدد (التخزين المشترك، شبكة منطقة التخزين SAN، vSAN)  
+SQL Always-On (Microsoft) | مرتفع | SQL فقط هو الزائد عن الحاجة، ويتطلب إصدار SQL Enterprise Edition  
+SafeKit | منخفض | الأبسط، والأكثر عمومية، ويعتمد على البرمجيات فقط. غير مناسب لتكرار البيانات الكبيرة.  
 
-**باختصار** ، يحقق SafeKit توافراً عالياً بتعقيد منخفض من خلال آلية نسخ برمجية بسيطة تُلغي الحاجة إلى أجهزة مخصصة مكلفة مثل شبكة تخزين SAN (Storage Area Network). وهذا يجعله حلاً سهل الوصول لتنفيذ تكرار التطبيقات بسرعة دون تغييرات معقدة في البنية التحتية. 
+**باختصار**، يحقق SafeKit التوافر العالي منخفض التعقيد من خلال آلية نسخ متطابقة بسيطة تعتمد على البرامج، مما يلغي الحاجة إلى أجهزة مخصصة باهظة الثمن مثل شبكة منطقة التخزين (SAN). وهذا يجعله حلاً سهل الوصول إليه لتنفيذ تكرار التطبيقات بسرعة دون تغييرات معقدة في البنية التحتية. 
 
-لمزيد من المعلومات، راجع:
+لمزيد من المعلومات، انظر:
 
-* [بنى التوافر العالي وأفضل ممارسات تجميع البرامج](/ar/best-practises/high-availability-architectures-and-best-practices/)
-* [تقنيات نسخ البيانات للتوافر العالي: مقارنة شاملة](/ar/best-practises/data-replication-techniques/)
-* [مقارنة مجموعة SafeKit Farm بحلول NLB الأخرى](/ar/architectures/network-load-balancing-cluster/#safekit-farm-ha-comparison)
-* [HA للأجهزة الافتراضية مقابل HA للتطبيقات](/ar/best-practises/vm-ha-vs-application-ha/)
+* [بنى تحتية عالية التوافر وأفضل ممارسات تجميع البرامج](/ar/best-practises/high-availability-architectures-and-best-practices/)
+* [تقنيات تكرار البيانات لتحقيق التوافر العالي: مقارنة شاملة](/ar/best-practises/data-replication-techniques/)
+* [مقارنة: مجموعة SafeKit farm لأنظمة Windows/Linux مقابل حلول تجميع NLB الأخرى](/ar/architectures/network-load-balancing-cluster/#safekit-farm-ha-comparison)
+* [HA على مستوى الأجهزة الافتراضية مقابل HA على مستوى التطبيق](/ar/best-practises/vm-ha-vs-application-ha/)
 
 
 

@@ -1,30 +1,31 @@
-{{/* Shortcode: insert-safekit-differentiators-pt-pt — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.7 | glossaire 2026-11-08.20 | Translation LLM | 24 expressions */}}
+{{/* Shortcode: insert-safekit-differentiators-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\pt-pt\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Comparação do SafeKit com Clusters de Alta Disponibilidade (HA) Tradicionais {#safekit-ha-comparison}
+## Comparação do SafeKit com os Clusters Tradicionais de Alta Disponibilidade (HA) {#safekit-ha-comparison}
 
-Esta comparação destaca as diferenças fundamentais entre o SafeKit e as soluções tradicionais de cluster de alta disponibilidade (HA), como Failover Clusters, HA por virtualização e SQL Always-On. O SafeKit é concebido como uma solução de baixa complexidade, exclusivamente em software, para redundância genérica de aplicações, contrastando com a elevada complexidade e os requisitos específicos de armazenamento (armazenamento partilhado, SAN) típicos dos mecanismos HA tradicionais. 
+Esta comparação realça as diferenças fundamentais entre SafeKit e as soluções tradicionais de cluster de Alta Disponibilidade (HA), como Failover Clusters, Virtualização HA e SQL Always-On. SafeKit foi concebido como uma solução de baixa complexidade, apenas em software, para redundância de aplicações genéricas, contrastando com a elevada complexidade e os requisitos de armazenamento específicos (armazenamento partilhado, SAN) típicos dos mecanismos tradicionais de HA. 
 
-**Comparação do SafeKit com clusters tradicionais de alta disponibilidade (HA)**
+**Comparação do SafeKit com os clusters tradicionais de Alta Disponibilidade (HA)**
 
 Soluções | Complexidade | Comentários  
 ---|---|---  
-Failover Cluster (Microsoft) | Elevada | Armazenamento específico (armazenamento partilhado, SAN)  
-Virtualização (VMware HA) | Elevada | Armazenamento específico (armazenamento partilhado, SAN, vSAN)  
-SQL Always-On (Microsoft) | Elevada | Apenas o SQL é redundante, requer SQL Enterprise Edition  
-SafeKit | Baixa | O mais simples, genérico e exclusivamente em software. Não adequado para replicação de grandes volumes de dados.  
+Cluster de Failover (Microsoft) | Elevado | Armazenamento Específico (armazenamento partilhado, SAN)  
+Virtualização (VMware HA) | Elevado | Armazenamento Específico (armazenamento partilhado, SAN, vSAN)  
+SQL Always-On (Microsoft) | Elevado | Apenas o SQL é redundante, requer a SQL Enterprise Edition  
+SafeKit | Baixo | Mais simples, genérico e apenas de software. Inadequado para replicação de grandes volumes de dados.  
 
-**Em resumo** , o SafeKit alcança alta disponibilidade com baixa complexidade através de um mecanismo simples de espelhamento baseado em software, que elimina a necessidade de hardware dedicado e dispendioso, como uma SAN (Storage Area Network). Isto torna-o numa solução altamente acessível para implementar rapidamente a redundância de aplicações sem alterações complexas na infraestrutura. 
+**Em resumo**, SafeKit atinge a sua Alta Disponibilidade de baixa complexidade através de um mecanismo de espelhamento simples, baseado em software, que elimina a necessidade de hardware dedicado e dispendioso, como uma SAN (Storage Area Network). Isto torna-o uma solução altamente acessível para implementar rapidamente a redundância de aplicações sem alterações complexas na infraestrutura. 
 
 Para mais informações, consulte:
 
-* [Arquitecturas de alta disponibilidade e boas práticas de clustering de software](/pt-pt/best-practises/high-availability-architectures-and-best-practices/)
-* [Técnicas de replicação de dados para alta disponibilidade: uma comparação completa](/pt-pt/best-practises/data-replication-techniques/)
-* [Comparação: cluster SafeKit Farm e outras soluções NLB](/pt-pt/architectures/network-load-balancing-cluster/#safekit-farm-ha-comparison)
-* [HA de VM vs. HA de aplicações](/pt-pt/best-practises/vm-ha-vs-application-ha/)
+* [Arquiteturas de Alta Disponibilidade e Melhores Práticas de Agrupamento de Software](/pt-pt/best-practises/high-availability-architectures-and-best-practices/)
+* [Técnicas de Replicação de Dados para Alta Disponibilidade: Uma Comparação Completa](/pt-pt/best-practises/data-replication-techniques/)
+* [Comparação: cluster farm SafeKit para Windows/Linux vs. Outras Soluções de Agrupamento NLB](/pt-pt/architectures/network-load-balancing-cluster/#safekit-farm-ha-comparison)
+* [HA de VM vs. HA de aplicação](/pt-pt/best-practises/vm-ha-vs-application-ha/)
 
 
 

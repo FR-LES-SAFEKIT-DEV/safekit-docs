@@ -24,13 +24,13 @@ If all the files of VM1 are not in the same folder, use {{ .Get "app" }} manager
   * Import VM1, previously exported, into {{ .Get "app" }} manager
 
 
-⚠️ Take a snapshot or your VM before starting the procedure.
+⚠️ Take a snapshot of your VM before starting the procedure.
 
 ⚠️ VM1 must only be created on a single node. The only thing to create on the other node is the VM1 directory (D:/Repli-{{ .Get "app" }}/VM1).
 
 ⚠️ Make sure the virtual switch name(s) referenced by the virtual machine exist on both {{ .Get "app" }} servers and corresponds to the same physical network.
 
-⚠️ Hyper‑V module ({{ .Get "mod" }}.safe) failover may fail if VM migration prerequisites are not met. To detect compatibility issues between Hyper‑V nodes (hardware, network, configuration), see🛠️ [KB SK-0088 in this document](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+⚠️ Hyper‑V module ({{ .Get "mod" }}.safe) failover may fail if VM migration prerequisites are not met. To detect compatibility issues between Hyper‑V nodes (hardware, network, configuration), see 🛠️ [KB SK-0088 in this document](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
 ### 2. Launch the SafeKit console
 
@@ -118,7 +118,7 @@ If the {{ .Get "app" }} Heartbeat Service does not respond to the message (VM lo
   * If you set `stopstart` in `Action`, there is a direct failover on the other {{ .Get "app" }} node as soon as the VM does not respond to heartbeats.
 
 
-ℹ️ For maintenance, if you want to stop the virtual machine, the custom checker will restart it automatically. To avoid that, you can temporarly [suspend the checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Or you can remove it by deleting the configuration line in the console.
+ℹ️ For maintenance, if you want to stop the virtual machine, the custom checker will restart it automatically. To avoid that, you can temporarily [suspend the checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Or you can remove it by deleting the configuration line in the console.
 
 ℹ️ It’s the same when you want to restore a checkpoint. {{ .Get "app" }} will stop the VM to perform the operation, and the VM checker may react negatively by automatically restarting the VM. To avoid this, [suspend the checker 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png) before proceeding with the operation.
 
@@ -236,11 +236,11 @@ Only changes inside files are replicated in real time in this state.
   * Use the SafeKit AI 🤖 for assistance with log messages.
 
 
-⚠️ As the `start_prim` script imports the virtual machine on node 2, the failover can fail because of🛠️ [{{ .Get "app" }} settings (see KB SK-0088 in this document)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+⚠️ As the `start_prim` script imports the virtual machine on node 2, the failover can fail because of 🛠️ [{{ .Get "app" }} settings (see KB SK-0088 in this document)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
 ⚠️ If everything is okay, initiate a start on node1, which will resynchronize the replicated directories from node2.
 
-If things go wrong, stop node2 and [force the start as primary 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) of node1, which will restart with its locally healthy data at the time of the stop.
+If things go wrong, stop node2 and [force node 1 to start as primary 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png), which will restart with its locally healthy data at the time of the stop.
 
 ℹ️ Note that you have a 🕒 **[timeline 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** that can be helpful to understand what happens in the cluster.
 
@@ -273,7 +273,7 @@ First you must configure the [VM custom checker](#vm-checker) previously describ
 
 And then in Microsoft Service Manager inside the VM, select your critical service and in the recovery property of the service, you just have to configure shutdown of the VM when the critical service fails.
 
-For that, in the Recovery options of your critical service, choose "**Run a Program** " on failures and in Run program options, set"**C:/Windows/System32/shutdown.exe** " and in "Command line parameters", set **/s /c "service fails"**.
+For that, in the Recovery options of your critical service, choose "**Run a Program** " on failures and in Run program options, set "**C:/Windows/System32/shutdown.exe** " and in "Command line parameters", set **/s /c "service fails"**.
 
 Of course, you can implement more subtle recovery with your own scripts. But just be aware that shutting down the VM will enable the custom checker in the host. The custom checker will detect that the {{ .Get "app" }} heartbeat is no more responding and will restart the VM on the same {{ .Get "app" }} server or will make a failover on the other {{ .Get "app" }} server (depending on its configuration).
 
@@ -291,6 +291,6 @@ To test the feature, use Task Manager and kill the process (End task) associated
 ℹ️ [More information on the support here](/resources/safekit-support/).
 
 
-![Take the {{ .Get "app" }} snaphots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+![Take the {{ .Get "app" }} snapshots for support](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 

@@ -1,67 +1,68 @@
-{{/* Shortcode: insert-safekit-sanless-pt-pt — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.7 | glossaire 2026-11-08.23 | Translation LLM | 24 expressions */}}
+{{/* Shortcode: insert-safekit-sanless-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
-{{/* Source: content\pt-pt\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-## Porque é Essencial um Produto de Alta Disponibilidade SANless Tudo-em-Um? {#all-in-one-sanless-ha}
+## Por que um produto de alta disponibilidade SANless tudo-em-um é essencial? {#all-in-one-sanless-ha}
 
-No mundo da continuidade de negócio, muitas organizações acreditam erradamente que ter uma cópia de segurança (backup) ou uma ferramenta de replicação de dados é o mesmo que ter **Alta Disponibilidade (HA)**. Na realidade, estas são apenas peças de um puzzle muito maior. A alta disponibilidade real exige que todas as camadas do processo de failover funcionem em conjunto: **replicação**, **deteção de falhas**, **comutação do IP virtual**, **reinício** e **failback**.
+No mundo da continuidade de negócios, muitas organizações acreditam erroneamente que ter uma cópia de segurança ou uma ferramenta de replicação de dados é o mesmo que ter **Alta Disponibilidade (HA)**. Na realidade, estas são apenas peças de um puzzle muito maior. A verdadeira alta disponibilidade requer que todas as camadas do processo de failover funcionem em conjunto: **replicação**, **deteção de falhas**, **comutação de IP virtual**, **reinício** e **failback**.
 
-Eis porque é que uma abordagem fragmentada falha e porque é necessário um produto integrado e tudo-em-um como o **SafeKit** — que utiliza **replicação baseada em host ao nível do ficheiro**.
+Eis o porquê de uma abordagem fragmentada falhar e de ser necessário um produto integrado e completo como **SafeKit** que utiliza **replicação baseada no anfitrião ao nível do ficheiro**. 
 
-### A replicação baseada em host é suficiente por si só para Alta Disponibilidade? {#is-host-based-replication-alone-sufficient-for-high-availability}
+### A replicação baseada no anfitrião, por si só, é suficiente para garantir a alta disponibilidade? {#is-host-based-replication-alone-sufficient-for-high-availability}
 
-Não. A replicação de dados é simplesmente o ato de copiar dados do Servidor A para o Servidor B. Embora seja crítica, a replicação por si só não oferece disponibilidade. Sem os outros componentes de uma pilha de HA, a replicação é apenas uma "cópia passiva" que requer uma intervenção manual e demorada para se tornar útil:
+Não. A replicação de dados é simplesmente o ato de copiar dados do Servidor A para o Servidor B. Embora seja crucial, a replicação por si só não garante a disponibilidade. Sem os outros componentes de uma pilha de alta disponibilidade, a replicação é apenas uma "cópia passiva" que requer intervenção manual e demorada para se tornar útil:
 
   * Se o Servidor A falhar, o software de replicação de dados não redirecionará automaticamente os seus utilizadores para o Servidor B.
-  * Não detetará que a aplicação parou.
+  * Não será detetado que a aplicação parou.
   * Não reiniciará os serviços.
 
 
-### Os Riscos Ocultos das Soluções Fragmentadas: Porque é que a HA em Silos Aumenta as Falhas {#the-hidden-risks-of-fragmented-solutions-why-siloed-ha-increases-failure}
+### Os Riscos Ocultos das Soluções Fragmentadas: Porque a HA em Silo Aumenta a Falha {#the-hidden-risks-of-fragmented-solutions-why-siloed-ha-increases-failure}
 
-Muitos fornecedores exigem que "una" vários produtos diferentes para obter **replicação baseada em host** , **failover** e **balanceamento de carga**. Esta arquitetura fragmentada é uma estratégia perigosa para sistemas de missão crítica:
+Muitos fornecedores exigem que "junte" vários produtos diferentes para conseguir **replicação baseada no anfitrião**, **comutação por falha** e **balanceamento de carga**. Esta arquitetura fragmentada é uma estratégia perigosa para sistemas de missão crítica:
 
-  * **Integração Frágil:** Quando utiliza o produto A para replicação e o produto B para clustering, cria um "castelo de cartas". Cada atualização de SO ou patch de segurança corre o risco de quebrar a frágil ligação de comunicação entre estes motores separados.
-  * **Carga Cognitiva Elevada & Erro Humano:** Gerir múltiplas interfaces aumenta o risco de erros. Durante uma falha de sistema sob alta pressão, saltar entre diferentes GUIs ou utilizar diferentes sintaxes de CLI para diagnosticar um problema leva à confusão e a um tempo de inatividade prolongado.
-  * **Troca de Acusações entre Fornecedores:** Se um failover falhar, o fornecedor da replicação pode culpar a ferramenta de clustering, deixando-o preso no meio sem um caminho claro para a resolução. Uma solução tudo-em-um oferece um único ponto de responsabilidade.
-  * **Manutenção Complexa:** Sistemas fragmentados requerem competências especializadas para cada componente separado, tornando a solução mais difícil de manter e significativamente mais dispendiosa ao longo do tempo.
+  * **Integração Frágil:** Quando se utiliza o produto A para replicação e o produto B para clustering, cria-se uma "casa de cartas". Cada atualização do sistema operativo ou correção de segurança arrisca-se a quebrar a frágil ligação de comunicação entre estes motores separados.
+  * **Elevada Carga Cognitiva e Erro Humano:** A gestão de múltiplas interfaces aumenta o risco de erros. Durante uma falha de sistema de alta pressão, alternar entre diferentes GUIs ou usar diferentes sintaxes de CLI para diagnosticar um problema leva a confusão e a um tempo de inatividade prolongado.
+  * **Acusação Mútua entre Fornecedores:** Se uma falha de redundância ocorrer, o fornecedor da replicação pode culpar a ferramenta de clustering, deixando-o no meio do problema sem um caminho claro para a resolução. Uma solução tudo-em-um oferece um único ponto de responsabilidade.
+  * **Manutenção Complexa:** Sistemas fragmentados exigem competências especializadas para cada componente individual, tornando a solução mais difícil de manter e significativamente mais cara ao longo do tempo.
 
 
-### Para além dos dados, que componentes específicos são necessários para um verdadeiro failover SANless? {#beyond-data-what-specific-components-are-required-for-a-true-sanless-failover}
+### Para além dos dados, que componentes específicos são necessários para uma verdadeira redundância sem SAN? {#beyond-data-what-specific-components-are-required-for-a-true-sanless-failover}
 
 Para automatizar a recuperação e eliminar o tempo de inatividade, um produto tudo-em-um deve gerir várias partes técnicas móveis em simultâneo:
 
-  * **Replicação Baseada em Host:** replicação síncrona em tempo real de dados críticos de aplicações entre servidores sem depender de armazenamento partilhado (SAN). Isto garante zero perda de dados (RPO=0) e elimina dependências de hardware dispendiosas.
-  * **Endereço IP Virtual (VIP):** oferece um ponto de entrada único para os utilizadores. Quando ocorre uma falha, o software move o VIP do nó com falha para o nó saudável, para que os utilizadores não tenham de alterar a sua configuração.
-  * **Detetores de Erros de Hardware e Software:** o sistema deve efetuar constantemente um "heartbeat" tanto ao servidor físico como aos processos de software específicos para identificar imediatamente um bloqueio ou uma falha.
-  * **Scripts de Reinício Personalizáveis:** nem todas as aplicações iniciam da mesma forma. Uma ferramenta tudo-em-um permite scripts personalizados para garantir que serviços complexos iniciam na ordem correta.
-  * **Failover Automático:** a inteligência para orquestrar toda a transição de um servidor para outro sem intervenção humana.
+  * **Replicação baseada no anfitrião:** replicação síncrona e em tempo real de dados de aplicações críticas entre servidores, sem depender de armazenamento partilhado (SAN). Isto garante a perda zero de dados (RPO = 0) e elimina dependências de hardware dispendiosas.
+  * **Endereço IP Virtual (VIP):** Este fornece um único ponto de entrada para os utilizadores. Quando ocorre uma falha, o software move o VIP do nó com falha para o nó saudável, para que os utilizadores não tenham de alterar a sua configuração.
+  * **Detetores de Erros de Hardware e Software:** O sistema deve monitorizar constantemente o "pulso" tanto do servidor físico como dos processos de software específicos para identificar imediatamente um bloqueio ou uma falha.
+  * **Scripts de Reinicialização Personalizáveis:** Nem todas as aplicações iniciam da mesma forma. Uma ferramenta tudo-em-um permite scripts personalizados para garantir que serviços complexos iniciem na ordem correta.
+  * **Failover Automático:** A inteligência para orquestrar toda a migração de um servidor para outro sem intervenção humana.
 
 
-### Porque é que o mecanismo de failover deve estar sincronizado com a replicação baseada em host? {#why-must-the-failover-mechanism-be-synchronized-with-host-based-replication}
+### Por que o mecanismo de failover deve ser sincronizado com a replicação baseada no anfitrião? {#why-must-the-failover-mechanism-be-synchronized-with-host-based-replication}
 
-Se o seu gestor de failover e a sua replicação de dados forem dois produtos diferentes, estes poderão não estar "em sincronia".
+Se o seu gestor de contingência e a sua replicação de dados forem dois produtos diferentes, eles podem não estar "sincronizados"
 
-**O Perigo:** Se ocorrer um failover mas a replicação ainda não tiver terminado de enviar os últimos bits, o Servidor B iniciará a aplicação com dados desatualizados ou corrompidos.
+**O Perigo:** Se ocorrer uma falha, mas a replicação não tiver terminado de enviar os dados mais recentes, o Servidor B iniciará a aplicação com dados desatualizados ou corrompidos.
 
-Uma **solução de HA SANless tudo-em-um** garante que o mecanismo de failover esteja ciente do estado da replicação. Este apenas permitirá que a aplicação seja iniciada no nó de reserva (backup) se houver a garantia de que os dados estão atualizados, evitando nós ativos em conflito e perda de dados.
+Uma **solução de alta disponibilidade (HA) tudo-em-um sem SAN** garante que o mecanismo de failover esteja ciente do estado da replicação. A aplicação só será iniciada no nó de backup se os dados tiverem a garantia de estarem atualizados, evitando conflitos entre nós ativos e perda de dados.
 
-### O que acontece quando o servidor com falha é reparado (failback)? {#what-happens-when-the-failed-server-is-repaired-failback}
+### O que acontece quando o servidor que falhou é reparado (failback)? {#what-happens-when-the-failed-server-is-repaired-failback}
 
-Frequentemente ignorado em guias técnicos e mal executado pelas soluções de HA tradicionais, o failback automático continua a ser o requisito mais crítico para uma verdadeira resiliência. Um verdadeiro produto tudo-em-um gere o "Regresso ao Normal" de forma tão elegante como gere a falha. Quando o servidor que falhou volta a estar online, os seus dados estão desatualizados. O software de HA deve:
+Frequentemente ignorado em guias técnicos e mal executado por soluções tradicionais de HA, failback automático continua a ser o requisito mais crítico para uma verdadeira resiliência. Um verdadeiro produto "tudo-em-um" lida com o "Retorno ao Normal" tão elegantemente como com a falha. Quando o servidor que falhou volta a estar online, está atrasado em dados. O software de HA deve:
 
-  1. **Resincronizar os dados** em segundo plano, do nó ativo para o nó recuperado.
-  2. **Manter o Tempo de Atividade (Uptime):** esta resincronização deve ocorrer sem interromper a aplicação que está a correr no nó ativo.
-  3. **Restaurar a Redundância:** assim que os dados estiverem novamente espelhados (mirrored), o cluster regressa automaticamente a um estado protegido, pronto para o próximo evento.
+  1. **Sincronize novamente os dados** em segundo plano do nó ativo para o nó recuperado.
+  2. **Manter o tempo de atividade:** Esta resincronização deve ocorrer sem interromper a aplicação que está a ser executada no nó ativo.
+  3. **Restaurar Redundância:** Assim que os dados forem espelhados novamente, o cluster retorna automaticamente a um estado protegido, pronto para o próximo evento.
 
 
-### Replicação ao Nível do Bloco vs. Ficheiro: Porque é que a Transparência é Importante {#block-vs-file-level-replication-why-transparency-matters}
+### Replicação ao nível de bloco vs. ao nível de ficheiro: porque a transparência é importante {#block-vs-file-level-replication-why-transparency-matters}
 
-O método técnico utilizado para a **replicação baseada em host** tem um impacto significativo na quantidade de alterações que terá de efetuar na configuração da sua aplicação existente.
+O método técnico utilizado para **a replicação baseada no anfitrião** tem um impacto significativo na quantidade de alterações que terá de fazer na configuração da sua aplicação existente.
 
-  * **O Desafio da Replicação ao Nível do Bloco:** A maioria das soluções SANless replica ao nível do disco/bloco. Isto **não é transparente** para a aplicação. Exige que reconfigure totalmente a aplicação para mover os seus dados para um volume de "disco replicado" específico, criado recentemente. Isto envolve frequentemente uma migração complexa e potenciais alterações na lógica da aplicação.
-  * **A Vantagem do SafeKit ao Nível do Ficheiro:** O SafeKit efetua a **replicação baseada em host ao nível do ficheiro** , o que é completamente transparente para a aplicação. Não precisa de mover os dados para um disco especial; basta configurar o SafeKit para replicar as pastas existentes da aplicação. Estas pastas podem até permanecer no **disco do sistema** , permitindo-lhe proteger uma aplicação exatamente onde esta já está instalada.
+  * **O Desafio da Replicação ao Nível de Bloco:** A maioria das soluções sem SAN replica ao nível de disco/bloco. Isto **não é transparente** para a aplicação. Requer que reconfigure a aplicação inteiramente para mover os seus dados para um volume de "disco replicado" específico, recém-criado. Isto envolve frequentemente uma migração complexa e potenciais alterações à lógica da aplicação.
+  * **A Vantagem SafeKit ao Nível de Ficheiros:** SafeKit executa **replicação baseada no anfitrião ao nível de ficheiros**, o que é completamente transparente para a aplicação. Não precisa de mover dados para um disco especial; simplesmente configura SafeKit para replicar as pastas da aplicação existentes. Estas pastas podem até permanecer no **disco do sistema**, permitindo-lhe proteger uma aplicação exatamente onde já está instalada.
 
 

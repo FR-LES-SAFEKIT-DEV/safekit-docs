@@ -1,335 +1,336 @@
-{{/* Shortcode: insert-safekit-82-kvm-configuration-ja */}}
+{{/* translation: translate_md 2026-11-08.14 | glossaire 2026-11-08.29 | Translation LLM | 37 expressions */}}
+{{/* Shortcode: insert-safekit-82-kvm-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-kvm.md */}}
 
 
 
-⚠️ {{ .Get "app" }} 構成には、という名前の仮想マシンが表示されます。 `VM1` 障害が発生した場合に再起動するアプリケーションが含まれています。
+⚠️ {{ .Get "app" }} 構成は、`VM1` という名前の仮想マシンで示されており、障害発生時に再起動するアプリケーションが含まれています。
 
-⚠️ 複製して再起動するすべての VM に対してこの構成を繰り返す必要があります。
+⚠️ この設定は、レプリケートおよび再起動するすべての VM に対して繰り返す必要があります。
 
 ### 1. 前提条件 {#prerequisite}
 
-VM1 仮想マシン イメージがファイル内にあります `/var/lib/libvirt/images/vm1.qcow2`。設定する前に SafeKitに仮想マシンを配置するには、次の構成を実行する必要があります。 vm1- レプリケートされる特定のディレクトリ SafeKit。
+VM1 仮想マシンイメージは、ファイル `/var/lib/libvirt/images/vm1.qcow2` にあります。SafeKit が設定する前に、仮想マシンを SafeKit によって複製される vm1 固有のディレクトリに配置するために、以下の設定を実行する必要があります。
 
-ノード 1 上:
+ノード 1 の場合：
 
-  * vm1 を停止します: 
+  * vm1 を停止: 
 
         virsh shutdown vm1
 
-  * を作成します `vm1/` ディレクトリ: 
+  * `vm1/` ディレクトリを作成します 
 
         mkdir -p /var/lib/libvirt/images/vm1/
 
-  * vm1 イメージを新しい場所にコピーします。 
+  * vm1 イメージを新しい場所にコピーします 
 
         cp -a /var/lib/libvirt/images/vm1.qcow2 /var/lib/libvirt/images/vm1/
 
-元の vm1 イメージは、新しい場所でのテストが成功するとすぐに削除できます。
-  * vm1 構成ファイルを編集します。 
+新しい場所でのテストが成功したら、元の vm1 イメージは削除できます。
+  * vm1 設定ファイルを編集します 
 
         EDITOR=vi virsh edit vm1
 
-そして行を変更します: 
+そして、次の行を変更します 
 
         <source file='/var/lib/libvirt/images/vm1.qcow2'>
 
 
-によって: 
+作成者： 
 
         <source file='/var/lib/libvirt/images/vm1/vm1.qcow2'>
 
-  * を設定します。 [キャッシュオプションを「なし」に設定](/wp-content/uploads/2022/07/kvm-2.png) クラッシュ時のデータ整合性のために、同じファイル内に次のように記述します。 
+  * クラッシュ時のデータ整合性のために、同じファイルで[キャッシュオプションを「なし」に](/wp-content/uploads/2022/07/kvm-2.png)設定します 
 
-        <disk type='file' device='disk'> <driver name='qemu' type=’qcow2’ **cache='none'** />
+        <disk type='file' device='disk'> <driver name='qemu' type='qcow2' **cache='none'** />
 
-  * vm1設定ファイルを閉じます。
-  * 無効にする [vm1 自動起動](/wp-content/uploads/2022/07/kvm-3.png): 
+  * vm1 設定ファイルを閉じます
+  * [vm1 の自動起動](/wp-content/uploads/2022/07/kvm-3.png)を無効にする： 
 
         virsh autostart vm1 --disable
 
-  * を作成します `vm1.xml` vm1 の設定ファイル: 
+  * vm1 用の `vm1.xml` 設定ファイルを作成します 
 
         virsh dumpxml vm1 > vm1.xml
 
 
-ノード 2:
+ノード 2 の場合：
 
-  * をコピーします `vm1.xml` 注: ノード 1 で vm1 構成が変更されるたびに、新しい構成をノード 2 に再適用する必要があります。
-  * vm1 を作成しますが、開始しません。 
+  * ノード 1 から `vm1.xml` 構成ファイルをコピーします。注：ノード 1 で vm1 構成が変更されるたびに、ノード 2 で新しい構成を再適用する必要があります。
+  * vm1 を作成しますが、起動しません 
 
         virsh define vm1.xml
 
-  * vm1 自動起動を無効にします。 
+  * vm1 自動起動を無効にする: 
 
         virsh autostart vm1 --disable
 
-  * イメージの場所のディレクトリを作成します。 
+  * イメージの保存先ディレクトリを作成します 
 
         mkdir -p /var/lib/libvirt/images/vm1/
 
 
-### 2. SafeKit コンソールを起動します
+### 2. SafeKit コンソールを起動します {#2-launch-the-safekit-console}
 
-  * に接続して、1 つのクラスター ノード上のブラウザーで Web コンソールを起動します。 `http://localhost:9010`.
-  * 入力してください `admin` インストール時に定義されたユーザー名とパスワードとして。
-
-
-クラスター外部のワークステーション上のブラウザーでコンソールを実行することもできます。
-
-⚠️ SafeKit の構成は、単一のブラウザから両方のノードで実行されます。
-
-ℹ️ Web コンソールを保護するには、🛠️ を参照してください。 [11\. SafeKit Web サービスのセキュリティ保護](/ja/resources/safekit-user-guide-82/#https) ユーザーズガイドに記載されています。
+  * いずれかのクラスターノードで、`http://localhost:9010` に接続してウェブコンソールをブラウザで起動します。
+  * ユーザー名に `admin` と入力し、インストール時に定義したパスワードを入力します。
 
 
-![SafeKit Web コンソールを起動して、{{ .Get "app" }} クラスターを構成します。](/wp-content/uploads/2024/03/01-login-large.png)
+コンソールは、クラスター外部のワークステーションのブラウザーで実行することもできます。
+
+⚠️ SafeKit の設定は、単一のブラウザから両方のノードで行います。
+
+ℹ️ Web コンソールを保護するには、ユーザーガイドの 🛠️ [11. SafeKit Web サービスの保護を](/ja/resources/safekit-user-guide-82/#https)参照してください。
 
 
-### 3. ノードアドレスを設定する
-
-  * ノード IP アドレスを入力し、 `Tab key` 接続を確認し、ノード名を入力します。 node1 または node2 のいずれかが赤色の場合は、両方のノードへのブラウザの接続を確認し、両方のノードのファイアウォールで 🛠️ を確認してください。 [トラブルシューティング](/ja/resources/safekit-user-guide-82/#Troubleshooting).
-  * 次に、 をクリックします `Save and apply` をクリックして設定を保存します。
-  * チェックしてください `Success` 両方のノードで ✅ メッセージ。
-  * 構成の場合 `Failure` ❌ が 1 つのノードで発生する場合は、そのノードの ▼ アコーディオンを開いてメッセージを確認します。 SafeKit AI 🤖 を支援として使用できることに注意してください。
+![SafeKit ウェブコンソールを起動して、{{ .Get "app" }} クラスターを設定します](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-ℹ️ 必要に応じて、新しいものを追加できます `LAN and nodes` (最初の ➕) 2 番目のハートビートと専用のレプリケーション ネットワークを作成します。
+### 3. ノードアドレスの設定 {#3-configure-node-addresses}
 
-ℹ️ をクリックすると `Advanced configuration`、 `cluster.xml` ファイルが表示されます。このファイルはコンソールによって自動的に設定され、ノードにデプロイされます。
-
-
-![{{ .Get "app" }} クラスターのノードを入力します。](/wp-content/uploads/2024/03/02-cluster-edit.png)
-
-
-### 4. モジュールを選択します
-
-  * で `New module`をクリックして、 `{{ .Get "mod" }}.safe` モジュール。
+  * ノードの IP アドレスを入力し、`Tab key` を押して接続性を確認し、ノード名を入力します。node1 または node2 のいずれかが赤色の場合、両方のノードへのブラウザの接続性を確認し、両方のノードのファイアウォールを 🛠️ [トラブルシューティング](/ja/resources/safekit-user-guide-82/#Troubleshooting)のために確認します。
+  * 次に、`Save and apply` をクリックして設定を保存します。
+  * 両方のノードで `Success` ✅ メッセージを確認します。
+  * あるノードで構成の `Failure` ❌ が発生した場合は、そのノードの▼アコーディオンを開いてメッセージを確認してください。AI 🤖 SafeKit を使用して支援を受けることができます。
 
 
-ℹ️ 上部の青いバナー内、🛜 `node1` はコンソール接続ノードを表します。このノードはリクエストを中継します `node2` 必要な場合。
+ℹ️ 必要に応じて、新しい `LAN and nodes`（最初の ➕）を追加して、2 番目のハートビートと専用のレプリケーションネットワークを作成できます。
 
-ℹ️ コンソールは次のものを探します `xxx.safe` で `Application_Modules/generic/` 接続ノード上のディレクトリ (`node1`) インストール中にそこにモジュールを配置した場合。
+ℹ️ `Advanced configuration` をクリックすると、`cluster.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、ノードにデプロイされます。
+
+
+![{{ .Get "app" }} クラスターのノードを入力します](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 4. モジュールを選択します {#4-select-a-module}
+
+  * `New module` で、`{{ .Get "mod" }}.safe` モジュールをクリックします。
+
+
+ℹ️ 上部の青いバナーで、🛜 `node1` コンソール接続ノードを表します。このノードは、必要に応じて `node2` にリクエストを中継します。
+
+ℹ️ インストール時にモジュールを配置した場合、コンソールは接続ノード (`node1`) の `Application_Modules/generic/` ディレクトリで `xxx.safe` を検索します。
 
 
 ![{{ .Get "app" }} のモジュールを選択してください](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 5. モジュールの構成
+### 5. モジュールの設定 {#5-configure-the-module}
 
-  * を選択してください `Automatic` 起動時に遅延なくモジュールが開始されます。
-  * 通常は 1 つあります `Heartbeat` レプリケーションが行われるネットワーク。ただし、必要に応じてプライベート ネットワークを定義できます (ステップ 3 で LAN を追加します)。
-  * 入れて `VM_PATH`、レプリケートされたディレクトリのルート パス (`/var/lib/libvirt/images`).
-  * 入力してください `VM_NAME`、仮想マシンの名前 (`vm1`).
-
-
-VM1 ファイルが次の場所にあると仮定します。 `/var/lib/libvirt/image/vm1/` (参照 [前提条件](#prerequisite)）。このディレクトリは、SafeKit によってリアルタイムでレプリケートされます。
-
-ℹ️ 仮想を構成する必要はありません IP 住所。 VM1 セカンダリで再起動されます {{ .Get "app" }} その物理的な IP 住所とこれ IP アドレスは再ルーティングされます。
+  * 起動時にモジュールを遅延なく `Automatic` 起動するように選択します。
+  * 通常、レプリケーションは単一の `Heartbeat` ネットワーク上で行われます。ただし、必要に応じてプライベートネットワークを定義できます（ステップ 3 で LAN 追加します）。
+  * `VM_PATH` に、レプリケートされたディレクトリのルートパス (`/var/lib/libvirt/images`) を入力します。
+  * `VM_NAME` に仮想マシン名 (`vm1`) を入力します。
 
 
-![{{ .Get "app" }}パラメータを入力します](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+VM1 ファイルは `/var/lib/libvirt/images/vm1/` にあると仮定します（[前提条件を](#prerequisite)参照）。このディレクトリは SafeKit によってリアルタイムで複製されます。
+
+ℹ️ 仮想 IP アドレスを設定する必要はありません。VM1 は、セカンダリ {{ .Get "app" }} で物理 IP アドレスを使用して再起動され、この IP アドレスは再ルーティングされます。
 
 
-### 6. VMの異常を検出するカスタムチェッカー
-
-カスタム チェッカーは、VM が実行されているかどうかをチェックします (「virsh domstate」コマンドを使用)。 VM が実行されていない場合、カスタム チェッカーは同じ {{ .Get "app" }} ノードまたは別のノードで VM を自動的に再起動します。
-
-  * をクリックしてください `Checkers / Custom` (画像を参照)。
-  * `Resource name` SafeKit のリソース名を持つ仮想マシンを識別します。 `custom.VM_NAME_check`.
-  * と `restart` で `Action`、VM は同じ {{ .Get "app" }} ノードで再起動されます。 24 時間以内に再起動が 3 回失敗すると、プライマリ ノードで SafeKit {{ .Get "mod" }} モジュールが停止し、セカンダリ ノードで VM のフェールオーバーが発生します。
-  * 設定した場合 `stopstart` で `Action`、VM が実行されなくなるとすぐに、他の {{ .Get "app" }} ノードで直接フェールオーバーが行われます。
+![{{ .Get "app" }} パラメータを入力してください](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
 
 
-ℹ️ メンテナンスのために仮想マシンを停止する場合、カスタム チェッカーによって仮想マシンが自動的に再起動されます。それを回避するには、一時的に [チェッカー 🖼️ を一時停止します](/wp-content/uploads/2024/04/safekit-disable-checkers.png)。または、コンソールの設定行を削除して削除することもできます。
+### 6. VM の誤動作を検出するカスタムチェッカー {#6-custom-checker-to-detect-vm-malfunction}
+
+カスタムチェッカーは、VM が実行中であるかどうかをチェックします（'virsh domstate'コマンドを使用）。VM が実行されていない場合、カスタムチェッカーは同じ {{ .Get "app" }} ノードまたは別のノードで VM を自動的に再起動します。
+
+  * `Checkers / Custom` をクリックします（画像参照）。
+  * `Resource name` SafeKit のリソース名 `custom.VM_NAME_check` で仮想マシンを識別します。
+  * `Action` で `restart` と、VM は同じ {{ .Get "app" }} ノードで再起動されます。24 時間以内に 3 回再起動に失敗すると、SafeKit {{ .Get "mod" }} モジュールはプライマリノードで停止し、セカンダリノードで VM のフェイルオーバーが発生します。
+  * `Action` で `stopstart` を設定すると、VM が実行されていない場合に、もう一方の {{ .Get "app" }} ノードに直接フェイルオーバーされます。
 
 
-![{{ .Get "app" }} カスタム チェッカー パラメータを入力します](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
+ℹ️ メンテナンスのために仮想マシンを停止したい場合、カスタムチェッカーが自動的に再起動します。これを避けるには、[チェッカーを一時的に一時停止してください 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)。または、コンソールで設定行を削除して削除することもできます。
 
 
-### 7. スクリプトの編集 (オプション)
+![{{ .Get "app" }} カスタムチェッカーのパラメーターを入力します](/wp-content/uploads/2024/12/custom-kvm-checker-2.png)
+
+
+### 7. スクリプトを編集する（任意） {#7-edit-scripts-optional}
 
   * スクリプトを編集しないでください。
 
 
-### 8. 通信の暗号化（オプション）
+### 8. 通信の暗号化（オプション） {#8-communication-encryption-optional}
 
   * ノード間の通信の暗号化を維持します。
 
 
-![{{ .Get "app" }}モジュールの通信暗号化](/wp-content/uploads/2024/03/07-module-encryption.png)
+![{{ .Get "app" }} モジュールの通信暗号化](/wp-content/uploads/2024/03/07-module-encryption.png)
 
 
-### 9. 保存して適用する
+### 9. 保存して適用 {#9-save-and-apply}
 
-  * `Save and apply` 両方のノードの構成とスクリプト。
-
-
-![{{ .Get "app" }} モジュール構成を保存して適用します。](/wp-content/uploads/2024/03/08-module-save.png)
+  * 両方のノードで設定とスクリプト `Save and apply`。
 
 
-### 10. 構成が成功したことを確認する
-
-  * チェックしてください `Success` 両方のノードで ✅ メッセージが表示され、 `Monitor modules`.
-  * 構成の場合 `Failure` ❌ が 1 つのノードで発生する場合は、そのノードの ▼ アコーディオンを開いてメッセージを確認します。 SafeKit AI 🤖 を支援として使用できることに注意してください。
+![{{ .Get "app" }} モジュールの構成を保存して適用します](/wp-content/uploads/2024/03/08-module-save.png)
 
 
-![{{ .Get "app" }} モジュール構成の成功を確認します。](/wp-content/uploads/2024/03/09-module-save-check.png)
+### 10. 設定が正常に完了したことを確認する {#10-verify-successful-configuration}
+
+  * 両方のノードで `Success` ✅ メッセージを確認し、`Monitor modules` をクリックします。
+  * あるノードで構成の `Failure` ❌ が発生した場合は、そのノードの▼アコーディオンを開いてメッセージを確認してください。AI 🤖 SafeKit を使用して支援を受けることができます。
 
 
-### 11. 最新のデータを使用してノードを起動します
+![{{ .Get "app" }} モジュールの設定が成功したことを確認します](/wp-content/uploads/2024/03/09-module-save-check.png)
 
-  * ノード 1 に最新のレプリケートされたディレクトリがある場合、 `vm1/`、それを選択し、⋯ `Force start` ▶ `As primary`.
+
+### 11. 最新のデータでノードを起動する {#11-start-the-node-with-up-to-date-data}
+
+  * ノード 1 に `vm1/` の最新のレプリケートされたディレクトリがある場合は、それを選択して⋯ `Force start` ▶ `As primary`。選択します。
 
 
 ノード 2 が起動すると、すべてのデータがノード 1 からノード 2 にコピーされます。
 
-⚠️ 選択を誤ると、両方のノードで古いデータが同期される危険があります。
+⚠️ 間違った選択をすると、両方のノードで古いデータを同期させてしまう危険性があります。
 
-⚠️ とも仮定します。 `VM1` ノード 1 で停止しているため、SafeKit はレプリケーション メカニズムをインストールしてから開始します。 `VM1` で `start_prim` スクリプト。
+⚠️ また、SafeKit はレプリケーションメカニズムをインストールし、その後 `start_prim` スクリプトで `VM1` 起動できるように、`VM1` はノード 1 で停止していると想定されます。
 
-⚠️の使用 `Start` 以降の起動の場合: SafeKit は最新のサーバーを保持します。開始 `As primary` は、初回または例外的な操作中の特別な起動です。
-
-
-![最新のデータを使用して {{ .Get "app" }} ノードをプライマリとして開始します。](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+⚠️ 2 回目以降の起動には `Start` 使用してください。SafeKit は最新のサーバーを保持します。「Starting `As primary` は、初回起動時または例外的な操作時に使用する特別な起動方法です。
 
 
-### 12. ALONE (緑色) への遷移を待ちます。
-
-  * ノード 1 は ALONE (緑色) 状態になるはずです。 `start_prim` スクリプトはノード 1 で実行されました。
+![最新のデータを持つ {{ .Get "app" }} ノードをプライマリとして起動します](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-⚠️ ALONE (緑) に達しない場合、または VM1 が開始されない場合は、次のコマンドを使用して理由を分析します。 [モジュールログ 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) ノード1の。
+### 12. ALONE（緑）に切り替わるまで待ちます {#12-wait-for-the-transition-to-alone-green}
 
-  * 🔍をクリックしてください **ログ** のアイコン `node1` モジュール ログを開いて、チェッカーがエラーを検出してモジュールを停止したなどのエラー メッセージを探します。
-  * をクリックしてください `start_prim` ログ: スクリプトの出力メッセージが右側に表示され、VM1 が正しく開始されていないなどのエラーを検出できます。
-  * ログ メッセージの支援には、SafeKit AI 🤖 を使用してください。
+  * ノード 1 は ALONE（緑）状態に達する必要があります。これは、`start_prim` スクリプトがノード 1 で実行されたことを意味します。
 
 
-⚠️ クラスターが存在する場合 `WAIT (red) not uptodate, STOP (red) not uptodate` 状態、WAIT ノードを停止し、 [プライマリ 🖼️ として強制的に開始します](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+⚠️ ALONE（緑）に到達しない場合、または VM1 が起動しない場合は、ノード 1 の[モジュールログ 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png)で原因を分析してください。
+
+  * `node1` の 🔍**ログ**アイコンをクリックしてモジュールログを開き、チェッカーがエラーを検出してモジュールを停止するなどのエラーメッセージを探します。
+  * ログの `start_prim` をクリックします。スクリプトの出力メッセージが右側に表示され、VM1 正しく起動していないなどのエラーを検出できます。
+  * ログメッセージについては、SafeKit AI 🤖 をご利用ください。
 
 
-![最初の {{ .Get "app" }} ノードはプライマリとして開始され、ALONE になります。](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+⚠️ クラスターが `WAIT (red) not uptodate, STOP (red) not uptodate` 状態の場合は、WAIT ノードを停止し、[プライマリとして強制的に起動してください 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。
 
 
-### 13. ノード 2 を開始します
+![最初の {{ .Get "app" }} ノードはプライマリとして起動し、ALONE になります](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
-  * ⋯ `Start` ノード 2 とそのコンテキスト メニュー。
-  * SECOND (緑色) 状態になるまで待ちます。
+
+### 13. ノード 2 を起動する {#13-start-node-2}
+
+  * ⋯コンテキストメニューからノード 2 `Start`。
+  * SECOND（緑色）の状態になるまで待ちます。
 
 
 ℹ️ 
 
-  * ノード 2 は、レプリケートされたディレクトリを再同期している間 (ノード 1 からノード 2 にコピー)、SECOND (オレンジ) 状態を維持します。
-  * 複製されたディレクトリ内で再同期するファイルのサイズとネットワーク帯域幅によっては、時間がかかる場合があります。
-  * コピーの進行状況を確認するには、 [モジュールログ 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) そして [レプリケーションリソース 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) ログ メッセージの支援には、SafeKit AI 🤖 を使用します。
+  * ノード 2 は、レプリケートされたディレクトリを再同期している間（ノード 1 からノード 2 にコピー）、SECOND（オレンジ）の状態を維持します。
+  * レプリケートされたディレクトリで再同期するファイルのサイズやネットワーク帯域幅によっては、これに時間がかかる場合があります。
+  * コピーの進捗状況を確認するには、ノード 2 の[モジュールログ 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png)と[レプリケーションリソース 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png)を参照してください。ログメッセージのサポートには SafeKit AI 🤖 を使用してください。
 
 
-![{{ .Get "app" }} ノード 2 を開始します。](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+![{{ .Get "app" }} ノード 2 を起動します](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-### 14. クラスターが動作していることを確認します。
+### 14. クラスターが動作していることを確認します {#14-verify-that-the-cluster-is-operational}
 
-  * クラスターが緑色/緑色であることを確認します。 `VM1` PRIM ノードでは実行されていますが、SECOND ノードでは実行されていません。
-
-
-この状態では、ファイル内の変更のみがリアルタイムでレプリケートされます。
+  * PRIM ノードで `VM1` が稼働しており、SECOND ノードでは稼働していない状態で、クラスターが緑/緑であることを確認します。
 
 
-![{{ .Get "app" }} ノード 2 は SECOND (緑)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+この状態では、ファイル内の変更のみがリアルタイムで複製されます。
 
 
-### 15. テスト
-
-  * コンテキスト メニューを下にスクロールして をクリックして、PRIM ノードを停止します。 `Stop`.
-  * SECOND ノードにフェイルオーバーが存在し、ALONE (緑色) になることを確認します。
-  * {{ .Get "app" }} ツールで確認してください。 `VM1` ノード 2 で実行されています。
+![{{ .Get "app" }} ノード 2 は SECOND（緑色）です](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-⚠️ もし ALONE (緑) に達していません node2 あるいは VM1 が開始されない場合は、原因を分析してください [モジュールログ 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) ノード2の。
+### 15. テスト {#15-testing}
 
-  * 🔍をクリックしてください **ログ** のアイコン `node2` モジュール ログを開いて、チェッカーがエラーを検出してモジュールを停止したなどのエラー メッセージを探します。
-  * をクリックしてください `start_prim` ログ: スクリプトの出力メッセージが右側に表示され、VM1 が正しく開始されていないなどのエラーを検出できます。
-  * ログ メッセージの支援には、SafeKit AI 🤖 を使用してください。
+  * PRIM ノードのコンテキストメニューを下にスクロールして、`Stop` をクリックして停止します。
+  * SECOND ノードでフェイルオーバーが発生し、ALONE（緑色）になっていることを確認します。
+  * {{ .Get "app" }} tools で、`VM1` ノード 2 で実行されていることを確認します。
+
+
+⚠️ node2 で ALONE（緑）に到達しない場合、または VM1 が起動しない場合は、ノード 2 の[モジュールログ 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png)で原因を分析してください。
+
+  * `node2` の 🔍**ログ**アイコンをクリックしてモジュールログを開き、チェッカーがエラーを検出してモジュールを停止するなどのエラーメッセージを探します。
+  * ログの `start_prim` をクリックします。スクリプトの出力メッセージが右側に表示され、VM1 正しく起動していないなどのエラーを検出できます。
+  * ログメッセージについては、SafeKit AI 🤖 をご利用ください。
 
 
 ⚠️
 
-  * すべてに問題がない場合は、node1 で起動を開始します。これにより、複製されたディレクトリが node2 から再同期されます。
-  * 問題が発生した場合は、node2 を停止し、 [プライマリ 🖼️ として強制的に起動します](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) node1 の、停止時にローカルに正常なデータを使用して再起動されます。
+  * すべて問題なければ、node1 で開始すると、node2 からレプリケートされたディレクトリが再同期されます。
+  * 問題が発生した場合は、node2 を停止し、[node1 をプライマリとして強制的に起動します 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。これにより、停止時のローカルに正常なデータで再起動します。
 
 
-ℹ️ 🕒 があることに注意してください。 **[タイムライン 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** これは、クラスター内で何が起こっているかを理解するのに役立ちます。
+ℹ️ クラスターで何が起こっているかを理解するのに役立つ 🕒**[タイムライン 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** があることに注意してください。
 
 
-![やめてください {{ .Get "app" }} 上のモジュール PRIM サーバー](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+![PRIM サーバーで {{ .Get "app" }} モジュールを停止します](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16. 必要に応じて、スプリットブレイン チェッカーを構成します
+### 16. 必要に応じて、スプリットブレインチェッカーを設定します {#16-if-necessary-configure-a-splitbrain-checker}
 
-  * 参照 [クラスター内でネットワークが分離された場合のさまざまなシナリオにはどのようなものがありますか?](/ja/best-practises/power-outage-and-network-isolation-in-a-cluster/) スプリットブレイン チェッカーを構成する必要があるかどうかを確認します。
-  * モジュール構成に移動し、をクリックします。 `Checkers / Splitbrain` (画像を参照) スプリットブレインパラメータを編集します。
-  * `Save and apply` 新しい構成を両方のノードに再デプロイします (保存して適用するには、モジュールを両方のノードで停止する必要があります)。
-
-
-**パラメータ** :
-
-  * `Resource name` リソース名で監視者を識別します。 `splitbrain.witness`。この値を変更して証人を識別できます。
-  * `Witness address` ノードが PRIM から ALONE に、または SECOND から ALONE に移行するときの ping の引数です。この値は、監視 (堅牢な要素、通常はルーター) の IP で変更します。
-  * 注: 複数の IP を空白で区切って設定できます。 IP アドレスは 1 つのノードからはアクセス可能である必要がありますが、ネットワークが分離されている場合は他のノードからはアクセスできないことに注意してください。
+  * スプリットブレインチェッカーを設定する必要があるかどうかについては[、「クラスターでネットワークが分離された場合のさまざまなシナリオ」を](/ja/best-practises/power-outage-and-network-isolation-in-a-cluster/)参照してください。
+  * モジュールの設定に移動し、`Checkers / Splitbrain` ] (画像参照) をクリックして、スプリットブレインのパラメータを編集します。
+  * 新しい設定 `Save and apply` 両方のノードに再デプロイします（保存して適用するには、両方のノードでモジュールを停止する必要があります）。
 
 
-![{{ .Get "app" }} スプリットブレイン パラメータを入力します](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+**パラメータ**：
+
+  * `Resource name` リソース名 `splitbrain.witness` でウィットネスを識別します。この値を変更して、ウィットネスを識別することもできます。
+  * `Witness address` は、ノードが PRIM から ALONE、または SECOND から ALONE に移行する際の ping の引数です。この値をウィットネスの IP（通常はルーターなどの堅牢な要素）に変更します。
+  * 注：複数の IP アドレスをスペースで区切って設定できます。ネットワークが分離されている場合、IP アドレスは 1 つのノードからはアクセス可能で、もう一方のノードからはアクセスできないようにしてください。
 
 
-### 17. スナップショットのレプリケーション
+![{{ .Get "app" }} スプリットブレインパラメータを入力します](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
 
-スナップショット XML ファイルが含まれるディレクトリは次のとおりです。
+
+### 17. スナップショットの複製 {#17-replicating-snapshots}
+
+スナップショットの XML ファイルが格納されているディレクトリは、次のとおりです
 
 
     /var/lib/libvirt/qemu/snapshot/%VM_NAME%
 
-どこで `VM_NAME` 仮想マシンの名前です (vm1)。
+`VM_NAME` は仮想マシンの名前 (vm1) です。
 
-注: スナップショットが作成されていない場合は、スナップショットを作成してディレクトリを生成します (そうしないと、SafeKit 構成が失敗します)。
+注：スナップショットが作成されていない場合は、ディレクトリを生成するためにスナップショットを作成してください（作成しないと SafeKit 設定が失敗します）。
 
-それを複製するには:
+再現方法：
 
-  * モジュール構成で、 をクリックします。 `Advanced Configuration` (画像を参照) 編集するには `userconfig.xml`.
-  * 以下の行を `<rfs>` userconfig.xml のセクション: 
+  * モジュール構成で、`Advanced Configuration` (画像参照) をクリックして `userconfig.xml`。編集します。
+  * userconfig.xml の `<rfs>` セクションに以下の行を挿入します 
 
         <replicated dir="/var/lib/libvirt/qemu/snapshot/%VM_NAME%" mode="read_only"> </replicated>
 
-  * `Save and apply` 変更された userconfig.xml ファイルを両方のノードに再デプロイするための新しい構成 (保存して適用するには、両方のノードでモジュールを停止する必要があります)。
-  * でスナップショットを作成します。 PRIM ノードのいずれかを介して virt-manager またはコマンドライン: 
+  * 新しい構成 `Save and apply` 変更された userconfig.xml ファイルを両方のノードに再デプロイします（保存して適用するには、両方のノードでモジュールを停止する必要があります）。
+  * virt-manager またはコマンドラインを使用して、PRIM ノードにスナップショットを作成します 
 
         virsh snapshot-create-as vm1 snapshot-name
 
-注: コマンド ラインでスナップショットを作成する場合は、スナップショット ビューを virt-manager に更新する必要があります。
+注：コマンドラインでスナップショットを作成する場合、スナップショットビューを virt-manager で更新する必要があります。
 
 
 PRIM ノードで作成されたスナップショットは、フェイルオーバー後にノード 2 で動作しますが、ノード 2 にはリストされません。
 
-  * ノード 2 にスナップショットをインポートするには、次のコマンドを実行する必要があります。 
+  * ノード 2 にスナップショットをインポートするには、次のコマンドを実行します 
 
         virsh snapshot-create --redefine vm1 /var/lib/libvirt/qemu/snapshot/vm1/snapshot-name
 
-  * vm1 のすべてのスナップショットをリストするコマンド ラインは次のとおりです。 
+  * vm1 のすべてのスナップショットを一覧表示するコマンドラインは次のとおりです 
 
         virsh snapshot-list vm1
 
 
-![{{ .Get "app" }}パラメータを入力します](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
+![{{ .Get "app" }} パラメータを入力してください](/wp-content/uploads/2024/03/21-module-kvm-edit-config-1.png)
 
 
-### 18. サポート
+### 18. サポート {#18-support}
 
-  * サポートを受けるには、SafeKit を 2 つ受け取ります `Snapshots` (2 つの .zip ファイル)、ノードごとに 1 つ。
-
-
-ℹ️ [詳しいサポート情報はこちら](/ja/resources/safekit-support/).
+  * サポートを受けるには、ノードごとに 1 つずつ、合計 2 つの SafeKit `Snapshots`（2 つの .zip ファイル）を取得してください。
 
 
-![サポートのために {{ .Get "app" }} スナップショットを取得します](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+ℹ️ [サポートに関する詳細はこちら](/ja/resources/safekit-support/)。
+
+
+![サポートのために {{ .Get "app" }} スナップショットを撮る](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 
