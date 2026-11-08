@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité pour le contrôle d’accès Siemens SIPORT : redondance et basculement sans SAN"
 canonical: "https://safekit.eviden.com/fr/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
-description: '"Assurez une disponibilité 24/7 pour Siemens SIPORT avec SafeKit. Notre cluster SANless à 2 nœuds fournit une réplication synchrone et un basculement automatique sans le coût d'un SAN. Redondance simple, fiable et haute performance. Téléchargez la version d'essai gratuite."'
+description: "Assurez une disponibilité 24/7 pour Siemens SIPORT avec SafeKit. Notre cluster SANless à 2 nœuds fournit une réplication synchrone et un basculement automatique sans le coût d'un SAN. Redondance simple, fiable et haute performance. Téléchargez la version d'essai gratuite."
 category: "solutions"
 lang: "fr"
 topics: "SafeKit pour Siemens SIPORT : cluster Hyper-V sans SAN à 2 nœuds, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Siemens SIPORT sans stockage partagé sur un SAN ?, Comment fonctionne le cluster SafeKit Siemens SIPORT ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour Siemens SIPORT et le clustering natif Hyper-V, Guide vidéo : Configuration d’un cluster HA SafeKit pour Siemens SIPORT, SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Explorez SafeKit"
