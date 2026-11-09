@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-farm-guide-ja — 9 instances in 9 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.6 | Translation LLM | 43 expressions */}}
+{{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
@@ -6,26 +7,26 @@
 
 ## {{ .Get "app" }} の高可用性クイックインストールガイド {#quick-guide}
 
-このガイドでは、SafeKit を使用して {{ .Get "app" }} 用の **<span class="notranslate farm-term" translate="no">farm</span> クラスター** を設定し、ネットワーク負荷分散と自動フェイルオーバーを実現する方法を説明します。
+このガイドでは、SafeKit を使用して {{ .Get "app" }} 用の **<span class="notranslate farm-term" translate="no">farm</span> クラスター**をセットアップし、ネットワーク負荷分散と自動フェイルオーバーを確実にする方法について説明します。
 
-サポートが必要な場合は、[SafeKit AI 🤖](/ja/resources/safekit-support/) をご利用ください。
+ヘルプが必要な場合は、[SafeKit AI 🤖](/ja/resources/safekit-support/)をご利用ください。
 
-### 1. 概要
+### 1. 概要 {#1-overview}
 
-  * **アーキテクチャ:** 仮想 IP アドレスを使用する、拡張可能なマルチノード負荷分散 <span class="notranslate farm-term" translate="no">farm</span> を構成します。
-  * **高可用性:** 自動ヘルス監視とシームレスなフェイルオーバーにより、**サービスの継続性を確保**します。
-
-
-### 2. インストール
-
-  * **ソフトウェア:** すべてのサーバーに SafeKit エンジンをインストールします。
-  * **モジュール:** 事前設定済みのアプリケーションモジュール `{{ .Get "mod" }}.safe` をダウンロードします。
+  * **アーキテクチャ：** 仮想 IP アドレスを使用した、スケーラブルなマルチノードの負荷分散 <span class="notranslate farm-term" translate="no">farm</span> を実装します。
+  * **高可用性：** 自動ヘルスモニタリングとシームレスなフェイルオーバー機能を備え、**サービスの継続性を確保します**。
 
 
-### 3. 設定
+### 2. インストール {#2-installation}
 
-  * **Web コンソール:** {{ .Get "app" }} 用の <span class="notranslate farm-term" translate="no">farm</span> クラスターを設定します。
-  * **監視:** {{ .Get "app" }} アプリケーションの監視と保護を開始します。
+  * **ソフトウェア：** すべてのサーバーに SafeKit エンジンをインストールします。
+  * **モジュール：** 事前に設定された `{{ .Get "mod" }}.safe` アプリケーションモジュールをダウンロードします。
+
+
+### 3. 設定 {#3-configuration}
+
+  * **Web コンソール：**{{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> クラスターを構成します。
+  * **監視：**{{ .Get "app" }} アプリケーションの監視と保護を開始します。
 
 
 

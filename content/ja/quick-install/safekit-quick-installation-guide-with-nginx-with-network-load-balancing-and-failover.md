@@ -1,27 +1,28 @@
 ---
-title: "NGINXネットワーク負荷分散とフェイルオーバー： SafeKit farm.safeモジュールをインストールします"
+title: "NGINX ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
-description: "NGINXネットワーク負荷分散と自動フェイルオーバーのために、 WindowsとLinuxにfarm.safeモジュールをデプロイする方法を学びましょう。このガイドでは、外部ハードウェア負荷分散装置や複雑な設定を必要とせずに、仮想IPを使用してWebサービスやアプリケーション向けの高可用性クラスタを構築する方法を説明します。"
+description: "NGINX ネットワーク負荷分散と自動フェイルオーバーのために、Windows および Linux で farm.safe モジュールをデプロイする方法を学びます。このガイドでは、外部ハードウェアロードバランサーや複雑な設定を必要とせずに、仮想 IP を使用して Web サービスおよびアプリケーションの高可用性クラスターを構築する方法を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "NGINX の高可用性クイックインストールガイド、 SafeKit高可用性の制限事項、 SafeKit / NGINX ソリューションの概要、 SafeKitおよびLinux ( farm.safe ) へのWindows / NGINX ソリューションのインストール、 SafeKit / NGINX ソリューションのステップバイステップ構成、 SafeKit farmソリューションのデモ、🔍 SafeKit を探索する"
+topics: "NGINX 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/NGINX ソリューションの概要、Windows および Linux への SafeKit/NGINX ソリューションのインストール (farm.safe)、SafeKit/NGINX ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# NGINXネットワーク負荷分散とフェイルオーバー： SafeKit farm.safeモジュールをインストールします {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# NGINX ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ja app="NGINX" mod="farm"  %}}
  
 
-## SafeKit / NGINX ソリューションの概要 {#overview-of-the-safekit--nginx-solution}
+## SafeKit/NGINX ソリューションの概要 {#overview-of-the-safekit--nginx-solution}
 
-ソリューションはここに記載されています: **💡 [ SafeKit : オールインワン NGINX ロードバランシングおよび高可用性ソフトウェア](</ja/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>)** 。
+ソリューションについては、こちらで説明しています。**💡 [SafeKit オールインワンの NGINX ロードバランシング＆高可用性ソフトウェア](</ja/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>)**。
 
-## SafeKit / NGINX ソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
+## Windows および Linux への SafeKit/NGINX ソリューションのインストール (farm.safe) {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 
 ### 前提条件 {#prerequisites}
 
-  * NGINXは2つ以上のノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
+  * 2 つ以上のノード（仮想マシンまたは物理サーバー）に NGINX インストールする必要があります。
 
 
 
@@ -30,15 +31,15 @@ topics: "NGINX の高可用性クイックインストールガイド、 SafeKit
 {{%  insert-safekit-installation-package-linux-ja app="NGINX" mod="farm"  %}}
  
 
-注：設定する汎用モジュール**farm.safe**は、パッケージ内に同梱されています。
+注：設定する汎用 **farm.safe** モジュールは、パッケージ内に同梱されています。
 
-## SafeKit / NGINX ソリューションの段階的な設定 {#step-by-step-configuration-of-the-safekit--nginx-solution}
+## SafeKit/NGINX ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--nginx-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ja app="NGINX" mod="farm"  %}}
  
 
-## SafeKit <span class="notranslate farm-term" translate="no">farm</span>のソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

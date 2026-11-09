@@ -1,39 +1,41 @@
-{{/* Shortcode: insert-safekit-network-isolation-fr — 2 instances in 2 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.3 | Translation LLM | 36 expressions */}}
+{{/* Shortcode: insert-safekit-network-isolation-en — 3 instances in 3 files */}}
 {{/* Parameters: none */}}
-{{/* Source: content\fr\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
+{{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
 
 
 
-## Quels sont les différents scénarios en cas d'isolement réseau dans un cluster ? {#isolation}
+## Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ? {#isolation}
 
-### Un seul réseau {#a-single-network}
+### Un réseau unique {#a-single-network}
 
-Lorsqu'il y a un isolement réseau, le comportement par défaut est :
+En cas d’isolement du réseau, le comportement par défaut est le suivant :
 
-  * comme les heartbeats sont perdus pour chaque nœud, chaque nœud passe en ALONE et exécute l'application avec son adresse IP virtuelle (double exécution de l'application modifiant ses données locales),
-  * lorsque l'isolement est réparé, un nœud ALONE est obligé de s'arrêter et de resynchroniser ses données depuis l'autre nœud,
-  * à la fin, le cluster est PRIM-SECOND (ou SECOND-PRIM selon la détection d'adresse IP virtuelle en double faite par Windows).
+  * à mesure que les heartbeats sont perdus pour chaque nœud, chaque nœud passe à ALONE et exécute l’application avec son adresse IP virtuelle (double exécution de l’application modifiant ses données locales),
+  * lorsque l’isolement est réparé, un nœud ALONE est forcé de s’arrêter et de resynchroniser ses données à partir de l’autre nœud,
+  * à la fin, le cluster est PRIM-SECOND (ou SECOND-PRIM selon la détection d’adresse IP virtuelle dupliquée effectuée par Windows).
 
 
 ### Deux réseaux avec un réseau de réplication dédié {#two-networks-with-a-dedicated-replication-network}
 
-Lorsqu'il y a un isolement réseau, le comportement avec un réseau de réplication dédié est :
+En cas d’isolement du réseau, le comportement avec un réseau de réplication dédié est le suivant :
 
-  * un réseau de réplication dédié est implémenté sur un réseau privé,
+  * un réseau de réplication dédié est mis en œuvre sur un réseau privé,
   * les heartbeats sur le réseau de production sont perdus (réseau isolé),
   * les heartbeats sur le réseau de réplication fonctionnent (réseau non isolé),
-  * le cluster reste à l'état PRIM/SECOND.
+  * Le cluster reste dans l’état PRIM/SECOND.
 
 
-### Un seul réseau et un checker split-brain {#a-single-network-and-a-splitbrain-checker}
+### Un réseau unique et un checker split-brain {#a-single-network-and-a-splitbrain-checker}
 
-Lorsqu'il y a un isolement du réseau, le comportement avec un split-brain checker est :
+En cas d’isolement du réseau, le comportement avec un checker split-brain est le suivant :
 
-  * un split-brain checker a été configuré avec l'adresse IP d'un témoin (typiquement un routeur),
-  * le checker split-brain agit lorsqu'un serveur passe de PRIM à ALONE ou de SECOND à ALONE,
-  * en cas d'isolement du réseau, avant de passer en ALONE, les deux nœuds testent l'adresse IP,
-  * le nœud qui peut accéder à l'adresse IP passe à ALONE, l'autre passe à WAIT,
-  * lorsque l'isolement est réparé, le nœud WAIT resynchronise ses données et devient SECOND.
+  * un checker split-brain a été configuré avec l’adresse IP d’un témoin (généralement un routeur),
+  * le checker split-brain s’exécute lorsqu’un serveur passe de PRIM à ALONE ou de SECOND à ALONE,
+  * En cas d’isolement du réseau, avant de passer à ALONE, les deux nœuds testent l’adresse IP
+  * le nœud qui peut accéder à l’adresse IP passe à ALONE, l’autre passe à WAIT,
+  * Lorsque l’isolement est réparé, le nœud WAIT resynchronise ses données et devient SECOND.
 
 
-Remarque : Si le témoin est en panne ou déconnecté, les deux nœuds passent à WAIT et l'application n'est plus en cours d'exécution. C'est pourquoi vous devez choisir un témoin robuste comme un routeur.
+Remarque : Si le témoin est en panne ou déconnecté, les deux nœuds passent à WAIT et l’application n’est plus en cours d’exécution. C’est pourquoi vous devez choisir un témoin robuste comme un routeur.
+

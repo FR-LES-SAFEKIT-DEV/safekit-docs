@@ -1,27 +1,28 @@
 ---
-title: "موازنة أحمال الشبكة والتحويل التلقائي في حالة الفشل IIS : قم بتثبيت وحدة SafeKit iis_farm.safe"
+title: "موازنة تحميل الشبكة وتجاوز الفشل IIS: تثبيت وحدة SafeKit iis_farm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
-description: "تعرّف على كيفية نشر وحدة iis_farm.safe على Windows لموازنة أحمال الشبكة والتحويل التلقائي في حالة الأعطال لـ IIS . يُوضح لك هذا الدليل كيفية إنشاء مجموعة عالية التوفر لخدمات الويب والتطبيقات باستخدام عنوان IP افتراضي، دون الحاجة إلى موازنات أحمال خارجية أو إعدادات معقدة."
+description: "تعرّف على كيفية نشر وحدة iis_farm.safe على Windows لتحقيق موازنة تحميل الشبكة IIS وتجاوز الفشل التلقائي. يوضح لك هذا الدليل كيفية بناء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP ظاهري، دون الحاجة إلى موازنات تحميل الأجهزة الخارجية أو تكوين معقد."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ IIS ، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / IIS ، تثبيت حل SafeKit / IIS على Windows ( iis_farm.safe )، التكوين خطوة بخطوة لحل SafeKit / IIS ، عرض توضيحي لحل SafeKit farm ، 🔍 استكشف SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ IIS، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/IIS، تثبيت حل SafeKit/IIS على Windows (iis_farm.safe)، تهيئة حل SafeKit/IIS خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 ---
 
-# موازنة أحمال الشبكة والتحويل التلقائي في حالة الفشل IIS : قم بتثبيت الوحدات النمطية SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
+# موازنة تحميل الشبكة وتجاوز الفشل IIS: تثبيت وحدة SafeKit iis_farm.safe {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ar app="IIS" mod="iis_farm"  %}}
  
 
-## نظرة عامة على حل SafeKit / IIS {#overview-of-the-safekit--iis-solution}
+## نظرة عامة على حل SafeKit/IIS {#overview-of-the-safekit--iis-solution}
 
-الحل موضح هنا: **💡 [ SafeKit : برنامج موازنة الأحمال والتوافر العالي المتكامل IIS ](</ar/solutions/iis-load-balancing-failover/>)** .
+يُوصَف الحل هنا: **💡 [SafeKit: برنامج متكامل لموازنة تحميل IIS وتوفير التوافر العالي](</ar/solutions/iis-load-balancing-failover/>)**.
 
-## تثبيت حل SafeKit / IIS على Windows ( iis_farm.safe ) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
+## تثبيت حل SafeKit/IIS على Windows (iis_farm.safe) {#installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe}
 
 ### المتطلبات الأساسية {#prerequisites}
 
-  * أنت بحاجة إلى تثبيت IIS على عقدتين أو أكثر (أجهزة افتراضية أو خوادم فعلية).
+  * يجب تثبيت IIS على عقدتين أو أكثر (أجهزة افتراضية أو خوادم فعلية).
 
 
 
@@ -30,13 +31,13 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ I
 {{%  insert-safekit-82-installation-module-windows-ar app="IIS" mod="iis_farm"  %}}
  
 
-## خطوات تكوين حل SafeKit / IIS {#step-by-step-configuration-of-the-safekit--iis-solution}
+## تهيئة حل SafeKit/IIS خطوة بخطوة {#step-by-step-configuration-of-the-safekit--iis-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ar app="IIS" mod="iis_farm"  %}}
  
 
-## عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+## عرض حل SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ar  %}}

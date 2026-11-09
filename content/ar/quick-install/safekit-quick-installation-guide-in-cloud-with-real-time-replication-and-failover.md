@@ -1,13 +1,14 @@
 ---
-title: "التوافر العالي للسحابة مع SafeKit : قم بتثبيت وحدة mirror.safe للتحويل التلقائي في حالة الفشل"
+title: "التوافر العالي في السحابة باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
-description: "قم بنشر وحدة mirror.safe لـ SafeKit في السحابة لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل على Windows و Linux . يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون مشاركة تخزين للتطبيقات الحيوية التي لا تتطلب مشاركة التخزين."
+description: "انشر وحدة mirror.safe الخاصة بـ SafeKit في السحابة لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الفشل التلقائي على Windows و Linux. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون مشاركة للتطبيقات الهامة بدون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي لـ SafeKit ، نظرة عامة على حل SafeKit / السحابة mirror ، تثبيت حل SafeKit / السحابة mirror على Windows و Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / السحابة mirror ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit / Cloud mirror، تثبيت حل mirror SafeKit / Cloud على نظامي التشغيل Windows و Linux (mirror.safe)، إعداد حل mirror SafeKit / Cloud خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 ---
 
-# توفير إمكانية الوصول العالي إلى السحابة باستخدام SafeKit : قم بتثبيت وحدة mirror.safe للتحويل التلقائي في حالة الفشل {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# التوافر العالي في السحابة باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Cloud" mod="mirror"  %}}
@@ -15,39 +16,39 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 
 ## نظرة عامة على حل SafeKit / Cloud mirror {#overview-of-the-safekit--cloud-mirror-solution}
 
-الحل موضح هنا: **💡 [ توافر عالٍ مستقل عن السحابة: SafeKit النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل ](</ar/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)** .
+الحل موضح هنا: **💡 [التوافر العالي المستقل عن السحابة: النسخ المتماثل المتزامن والتحويل التلقائي SafeKit](</ar/solutions/cloud-high-availability-cluster-synchronous-replication-failover/>)**.
 
-## تثبيت حل SafeKit / Cloud mirror على Windows و Linux ( mirror.safe ) و {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
+## تثبيت حل mirror SafeKit / Cloud على نظامي التشغيل Windows و Linux (mirror.safe) {#installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe}
 
 ### تكوين موازن تحميل السحابة {#configuration-of-the-cloud-load-balancer}
 
-يجب تكوين موازن الأحمال إذا كنت ترغب في تطبيق عنوان IP افتراضي.  
-ويجب تهيئة موازن الأحمال لإرسال حزم بيانات الصحة بشكل دوري إلى العقد.  
-لذلك، يوفر SafeKit فحصًا صحيًا يتم تشغيله داخل العقد، والذي
+يجب تكوين موازن التحميل إذا كنت ترغب في تطبيق عنوان IP ظاهري.  
+ويجب تكوين موازن التحميل لإرسال حزم الحالة بشكل دوري إلى العُقد.  
+ولهذا الغرض، يوفر SafeKit فحصًا صحيًا يعمل داخل العُقد و
 
-  * يُرجع OK عندما تكون حالة وحدة mirror هي PRIM (أخضر) أو ALONE (أخضر).
-  * لم يتم العثور على نتائج في جميع الولايات الأخرى
+  * تُرجع قيمة OK عندما تكون حالة وحدة mirror PRIM (أخضر) أو ALONE (أخضر)
+  * تُرجع "غير موجود" في جميع الحالات الأخرى
 
 
-يجب عليك تهيئة موازن تحميل السحابة باستخدام ما يلي:
+يجب عليك تكوين موازن تحميل السحابة باستخدام:
 
   * بروتوكول HTTP
   * المنفذ 9010، منفذ خادم الويب SafeKit
-  * عنوان URL /var/modules/mirror/ready.txt (إذا كان mirror هو اسم الوحدة التي ستقوم بنشرها لاحقًا)
+  * عنوان URL /var/modules/mirror/ready.txt (إذا كان mirror هو اسم الوحدة النمطية التي ستنشرها لاحقًا)
 
 
-⚠️ لا تقم بتكوين عنوان IP افتراضي في الخطوة 4 من خطوات التكوين الموضحة أدناه. عنوان IP الافتراضي مُعيّن مسبقًا في مُوازن تحميل السحابة. يُفيد تعيين عنوان IP افتراضي في الخطوة 4 في التكوين المحلي فقط.
+⚠️ لا تقم بتكوين عنوان IP ظاهري في الخطوة 4 في التكوين المفصل أدناه. تم تعيين عنوان IP الظاهري بالفعل في موازن تحميل السحابة. يعد تعيين عنوان IP ظاهري في الخطوة 4 مفيدًا للتكوين المحلي فقط.
 
 ### تكوين أمان شبكة السحابة {#configuration-of-the-cloud-network-security}
 
-يجب تهيئة أمان الشبكة لتمكين الاتصالات للبروتوكولات والمنافذ التالية:
+يجب تكوين أمان الشبكة لتمكين الاتصالات للبروتوكولات والمنافذ التالية:
 
-  * UDP - 4800 لخدمة safeadmin (بين عقد SafeKit )
-  * UDP - 8888 لنبضات قلب الوحدة (بين عقد SafeKit )
-  * TCP – 5600 لنسخ الملفات في الوقت الحقيقي للوحدة (بين عقد SafeKit )
-  * يُستخدم المنفذ 9010 في بروتوكول TCP لفحص حالة موازن الأحمال، ولتشغيل وحدة تحكم الويب SafeKit في وضع HTTP.
-  * TCP – 9001 لتكوين وضع HTTPS لوحدة التحكم
-  * TCP – 9453 لوحدة تحكم الويب SafeKit التي تعمل في وضع HTTPS
+  * UDP - 4800 لخدمة safeadmin (بين عُقد SafeKit)
+  * UDP - 8888 لوظيفة نبضة heartbeat الوحدة (بين عُقد SafeKit)
+  * بروتوكول التحكم بالإرسال (TCP) – 5600 لنسخ الملفات في الوقت الفعلي للوحدة (بين عُقد SafeKit)
+  * بروتوكول التحكم بالإرسال (TCP) – 9010 لفحص سلامة موازن التحميل وللوحدة التحكمية لـ SafeKit التي تعمل في وضع http
+  * بروتوكول التحكم بالإرسال (TCP) – 9001 لتهيئة وضع https لوحدة التحكم
+  * TCP – 9453 لوحدة تحكم الويب SafeKit التي تعمل في وضع https
 
 
 
@@ -58,13 +59,13 @@ topics: "دليل التثبيت السريع للتوافر العالي للس
 
 ملاحظة: يتم تسليم وحدة **mirror.safe** العامة التي ستقوم بتكوينها داخل الحزمة.
 
-## خطوات إعداد حل SafeKit / Cloud mirror {#step-by-step-configuration-of-the-safekit--cloud-mirror-solution}
+## إعداد حل mirror SafeKit / Cloud خطوة بخطوة {#step-by-step-configuration-of-the-safekit--cloud-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ar app="Windows" mod="mirror"  %}}
  
 
-## عرض توضيحي لحل SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## عرض حل mirror من SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ar  %}}

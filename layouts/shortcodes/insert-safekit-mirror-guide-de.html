@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-mirror-guide-de — 19 instances in 19 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.7 | Translation LLM | 40 expressions */}}
+{{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
@@ -6,26 +7,26 @@
 
 ## Schnellinstallationsanleitung für Hochverfügbarkeit für {{ .Get "app" }} {#quick-guide}
 
-In dieser Anleitung wird erläutert, wie Sie eine einrichten **Spiegelcluster** für {{ .Get "app" }} unter Verwendung von SafeKit, wodurch automatisches Failover und synchrone Replikation gewährleistet werden, ohne dass gemeinsamer Speicher erforderlich ist. 
+Diese Anleitung erklärt, wie Sie mit SafeKit einen **Mirror-Cluster** für {{ .Get "app" }} einrichten, der ein automatisches Failover und eine synchrone Replikation ohne die Notwendigkeit eines gemeinsam genutzten Speichers gewährleistet. 
 
-Für Hilfe können Sie verwenden [SafeKit AI 🤖](/de/resources/safekit-support/).
+Für Hilfe können Sie [SafeKit AI 🤖](/de/resources/safekit-support/) nutzen.
 
-### 1. Übersicht
+### 1. Überblick {#1-overview}
 
   * **Architektur:** Verwendet ein Zwei-Knoten-System (primär/sekundär).
-  * **Datenschutz:** Implementiert synchrone Echtzeitreplikation für **Null Datenverlust** (RPO=0).
+  * **Datenschutz:** Implementiert synchrone Replikation in Echtzeit für **null Datenverlust** (RPO = 0).
 
 
-### 2. Installation
+### 2. Installation {#2-installation}
 
   * **Software:** Installieren Sie die SafeKit-Engine auf beiden Servern.
-  * **Modul:** Laden Sie die vorkonfigurierte Datei herunter `{{ .Get "mod" }}.safe` Anwendungsmodul.
+  * **Modul:** Laden Sie das vorkonfigurierte `{{ .Get "mod" }}.safe` Anwendungsmodul herunter.
 
 
-### 3. Konfiguration
+### 3. Konfiguration {#3-configuration}
 
-  * **Webkonsole:** Konfigurieren Sie die spezifischen Ordner, die die {{ .Get "app" }}-Dateien enthalten.
-  * **Überwachung:** Beginnen Sie mit der Überwachung und dem Schutz der {{ .Get "app" }}-Anwendung.
+  * **Webkonsole:** Konfigurieren Sie die spezifischen Ordner, die die {{ .Get "app" }} Dateien enthalten.
+  * **Überwachung:** Starten Sie die Überwachung und den Schutz der {{ .Get "app" }} Anwendung.
 
 
 

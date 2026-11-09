@@ -1,39 +1,41 @@
-{{/* Shortcode: insert-safekit-network-isolation-ko — 3 instances in 3 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.2 | Translation LLM | 41 expressions */}}
+{{/* Shortcode: insert-safekit-network-isolation-en — 3 instances in 3 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
 
 
 
-## 클러스터에서 네트워크 격리가 발생하면 어떤 시나리오가 있나요? {#isolation}
+## 클러스터에서 네트워크가 고립될 경우 발생할 수 있는 다양한 시나리오는 무엇인가요? {#isolation}
 
 ### 단일 네트워크 {#a-single-network}
 
-네트워크 격리가 발생하면 기본 동작은 다음과 같습니다.
+네트워크가 격리된 경우 기본 동작은 다음과 같습니다
 
-  * 각 노드의 하트비트가 손실되므로 각 노드는 ALONE으로 전환되고 자신의 가상 IP 주소로 애플리케이션을 실행합니다(애플리케이션이 이중으로 실행되어 각자의 로컬 데이터를 수정함).
-  * 격리가 해소되면 ALONE 노드 하나가 강제로 중지되고 다른 노드에서 데이터를 다시 동기화합니다.
-  * 최종적으로 클러스터는 PRIM-SECOND가 됩니다(Windows의 중복 가상 IP 주소 감지 결과에 따라 SECOND-PRIM이 될 수도 있음).
+  * 각 노드에 대한 하트비트 손실되면 각 노드는 ALONE로 전환되고 가상 IP 주소로 애플리케이션을 실행합니다(로컬 데이터를 수정하는 애플리케이션의 이중 실행)
+  * 격리가 복구되면, 하나의 ALONE 노드는 강제로 중지되고 다른 노드로부터 데이터를 재동기화해야 합니다
+  * 결과적으로 클러스터는 PRIM-SECOND(또는 Windows에서 수행한 중복 가상 IP 주소 감지에 따라 SECOND-PRIM)가 됩니다.
 
 
-### 전용 복제 네트워크가 있는 두 개의 네트워크 {#two-networks-with-a-dedicated-replication-network}
+### 전용 복제 네트워크를 갖춘 두 개의 네트워크 {#two-networks-with-a-dedicated-replication-network}
 
-네트워크 격리가 발생할 때 전용 복제 네트워크를 사용하는 경우의 동작은 다음과 같습니다.
+네트워크가 격리된 경우 전용 복제 네트워크를 사용하면 다음과 같이 동작합니다
 
-  * 사설 네트워크에 전용 복제 네트워크를 구현합니다.
-  * 운영 네트워크의 하트비트가 손실됩니다(격리된 네트워크).
-  * 복제 네트워크의 하트비트는 정상 작동합니다(격리되지 않은 네트워크).
+  * 전용 복제 네트워크는 사설 네트워크에 구현됩니다
+  * 프로덕션 네트워크의 하트비트 손실됩니다(네트워크 격리)
+  * 복제 네트워크의 하트비트 작동 중입니다(격리된 네트워크가 아님)
   * 클러스터는 PRIM/SECOND 상태를 유지합니다.
 
 
-### 단일 네트워크와 스플릿 브레인 검사기 {#a-single-network-and-a-splitbrain-checker}
+### 단일 네트워크 및 스플릿 브레인 체커 {#a-single-network-and-a-splitbrain-checker}
 
-네트워크 격리가 발생할 때 스플릿 브레인 검사기를 사용하는 경우의 동작은 다음과 같습니다.
+네트워크가 분리되었을 때 스플릿 브레인 체커 의 동작은 다음과 같습니다
 
-  * 감시자(일반적으로 라우터)의 IP 주소로 스플릿 브레인 검사기를 구성합니다.
-  * 서버가 PRIM에서 ALONE 또는 SECOND에서 ALONE으로 전환될 때 스플릿 브레인 검사기가 작동합니다.
-  * 네트워크 격리가 발생하면 두 노드는 ALONE으로 전환하기 전에 IP 주소를 테스트합니다.
-  * IP 주소에 접근할 수 있는 노드는 ALONE으로, 다른 노드는 WAIT로 전환됩니다.
-  * 격리가 해소되면 WAIT 노드가 데이터를 다시 동기화하고 SECOND가 됩니다.
+  * 스플릿 브레인 체커 증인(일반적으로 라우터)의 IP 주소로 구성되었습니다
+  * 스플릿 브레인 체커 서버가 PRIM에서 ALONE으로 또는 SECOND에서 ALONE으로 전환될 때 작동합니다
+  * 네트워크가 격리된 경우, ALONE으로 전환하기 전에 두 노드 모두 IP 주소를 테스트합니다
+  * IP 주소에 액세스할 수 있는 노드는 ALONE으로 이동하고, 다른 노드는 WAIT으로 이동합니다
+  * 격리가 복구되면 WAIT 노드는 데이터를 재동기화하고 SECOND 상태가 됩니다.
 
 
-참고: 감시자가 중단되거나 연결이 끊어지면 두 노드 모두 WAIT로 전환되고 애플리케이션은 더 이상 실행되지 않습니다. 따라서 라우터처럼 안정적인 감시자를 선택해야 합니다.
+참고: 위트니스가 다운되거나 연결이 끊어지면 두 노드 모두 WAIT로 전환되고 애플리케이션은 더 이상 실행되지 않습니다. 따라서 라우터와 같이 견고한 위트니스를 선택해야 합니다.
+

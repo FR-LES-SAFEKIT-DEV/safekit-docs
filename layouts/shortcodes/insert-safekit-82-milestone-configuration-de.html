@@ -1,180 +1,178 @@
-{{/* Shortcode: insert-safekit-82-milestone-configuration-de */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.2 | Translation LLM | 38 expressions */}}
+{{/* Shortcode: insert-safekit-82-milestone-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-milestone-xprotect-management-server.md */}}
 
 
 
-### Voraussetzungen
+### Voraussetzungen {#prerequisites}
 
-  * {{ .Get "app" }}-Anwendung auf 2 Knoten installiert.
-  * Die gesamten replizierten Daten sind auf einige Terabyte begrenzt – darüber hinaus wird die Zeit für die Neusynchronisierung erheblich.
-  * Mindestens 1 Gbit/s Verbindung zwischen Knoten (10 Gbit/s empfohlen für eine schnellere Neusynchronisierung).
-  * IP-Failover erfordert beide Knoten auf demselben LAN oder erweiterten LAN (L2) – geroutete L3-Netzwerke werden nicht unterstützt.
+  * {{ .Get "app" }} Anwendung ist auf 2 Knoten installiert.
+  * Die Gesamtmenge der replizierten Daten ist auf wenige Terabyte begrenzt – darüber hinaus wird die Resynchronisierungszeit erheblich.
+  * Mindestens 1 Gbit/s Interkonnekt zwischen den Knoten (10 Gbit/s für eine schnellere Resynchronisierung empfohlen).
+  * Für das IP-Failover müssen sich beide Knoten im selben LAN oder erweiterten LAN (L2) befinden – geroutete L3-Netzwerke werden nicht unterstützt.
 
 
 ⚠️ Diese Konfiguration erfordert **mindestens Milestone XProtect 2023 R3**. Für frühere Versionen 🛠️ [siehe diesen Artikel](/de/quick-install/safekit-quick-installation-guide-old-milestone-configuration/).
 
-
-### 1. Starten Sie die SafeKit-Konsole
+### 1. Starten Sie die SafeKit Konsole {#1-launch-the-safekit-console}
 
   * Starten Sie die Webkonsole in einem Browser auf einem Clusterknoten, indem Sie eine Verbindung zu `http://localhost:9010` herstellen.
-  * Geben Sie als Benutzernamen `admin` und das bei der Installation festgelegte Passwort ein.
+  * Geben Sie als Benutzernamen `admin` und das während der Installation festgelegte Passwort ein.
 
 
 Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb des Clusters ausführen.
 
 ⚠️ Die Konfiguration von SafeKit erfolgt auf beiden Knoten über einen einzigen Browser.
 
-ℹ️ Informationen zum Sichern der Webkonsole finden Sie unter 🛠️ [11\. Sichern des SafeKit-Webdienstes](/de/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
+ℹ️ Um die Webkonsole zu sichern, siehe 🛠️ [11. Sichern des SafeKit Webdienstes](/de/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
 
 
-![Starten Sie die SafeKit-Webkonsole, um den {{ .Get "app" }}-Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
+![Starten Sie die SafeKit Webkonsole, um den {{ .Get "app" }} Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 2. Knotenadressen konfigurieren
+### 2. Knotenadressen konfigurieren {#2-configure-node-addresses}
 
-  * Geben Sie die Knotenadressen IP ein, drücken Sie `Tab key`, um die Konnektivität zu überprüfen und Knotennamen einzugeben. Wenn entweder node1 oder node2 eine rote Farbe hat, überprüfen Sie die Konnektivität des Browsers zu beiden Knoten und überprüfen Sie die Firewall auf beiden Knoten auf 🛠️ [Fehlerbehebung](/de/resources/safekit-user-guide-82/#Troubleshooting).
-  * Klicken Sie dann auf `Save and apply`, um die Konfiguration zu speichern.
-  * Überprüfen Sie die `Success` ✅-Meldung auf beiden Knoten.
-  * Wenn die Konfiguration `Failure` ❌ auf einem Knoten auftritt, öffnen Sie das Akkordeon ▼ für diesen Knoten und überprüfen Sie die Meldungen. Beachten Sie, dass Sie als Hilfe den SafeKit AI 🤖 verwenden können.
-
-
-ℹ️ Wenn Sie möchten, können Sie ein neues `LAN and nodes` (zuerst ➕) hinzufügen, um einen zweiten Heartbeat und ein dediziertes Replikationsnetzwerk zu erstellen.
-
-ℹ️ Wenn Sie auf `Advanced configuration` klicken, wird die `cluster.xml`-Datei angezeigt. Diese Datei wird automatisch von der Konsole gefüllt und auf den Knoten bereitgestellt.
+  * Geben Sie die IP-Adressen der Knoten ein, drücken Sie die `Tab key`, um die Konnektivität zu überprüfen und die Knotennamen auszufüllen. Wenn entweder node1 oder node2 rot angezeigt wird, überprüfen Sie die Konnektivität des Browsers zu beiden Knoten und überprüfen Sie die Firewall auf beiden Knoten zur 🛠️ [Fehlerbehebung](/de/resources/safekit-user-guide-82/#Troubleshooting).
+  * Klicken Sie anschließend auf `Save and apply` um die Konfiguration zu speichern.
+  * Überprüfen Sie die `Success` ✅ auf beiden Knoten.
+  * Wenn der `Failure` ❌ auf einem Knoten auftritt, öffnen Sie das ▼ Akkordeon für diesen Knoten und überprüfen Sie die Nachrichten. Beachten Sie, dass Sie die SafeKit AI 🤖 zur Unterstützung verwenden können.
 
 
-![Geben Sie die Knoten des {{ .Get "app" }}-Clusters ein](/wp-content/uploads/2024/03/02-cluster-edit.png)
+ℹ️ Wenn Sie möchten, können Sie ein neues `LAN and nodes` (erstes ➕) hinzufügen, um einen zweiten Heartbeat und ein dediziertes Replikationsnetzwerk zu erstellen.
+
+ℹ️ Wenn Sie auf `Advanced configuration` klicken, wird die Datei `cluster.xml` angezeigt. Diese Datei wird automatisch von der Konsole ausgefüllt und auf den Knoten bereitgestellt.
 
 
-### 3. Wählen Sie ein Modul aus
-
-  * Klicken Sie in `New module` auf das Modul `{{ .Get "mod" }}.safe`.
+![Geben Sie die Knoten des {{ .Get "app" }} Clusters ein](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-ℹ️ Im blauen Banner oben steht 🛜 `node1` für den Konsolenverbindungsknoten. Dieser Knoten leitet Anfragen bei Bedarf an `node2` weiter.
+### 3. Modul auswählen {#3-select-a-module}
 
-ℹ️ Die Konsole sucht `xxx.safe` im `Application_Modules/generic/` Verzeichnis auf dem Verbindungsknoten (`node1`), wenn Sie dort während der Installation ein Modul platziert haben.
-
-
-![Wählen Sie das Modul für {{ .Get "app" }}](/wp-content/uploads/2024/03/04-module-new.png)
+  * Klicken Sie im `New module` auf das Modul `{{ .Get "mod" }}.safe`.
 
 
-### 4. Konfigurieren Sie das Modul
+ℹ️ Im blauen Banner oben stellt 🛜 `node1` den Konsolenverbindungsknoten dar. Dieser Knoten leitet bei Bedarf Anfragen an `node2` weiter.
 
-  * Wählen Sie in `Module startup at boot` einen automatischen Start des Moduls beim Booten ohne Verzögerung.
-  * Geben Sie in `Macros` / `SERVICES` die Dienstnamen Ihrer Anwendung in der Startreihenfolge ein, getrennt durch Kommas. Sehen Sie sich diesen Screenshot für ein visuelles Beispiel der [Milestone XProtect-Dienste an 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
-  * In `Heartbeat networks` sollten Sie über ein einzelnes Heartbeat-Netzwerk verfügen, in dem die Replikation durchgeführt wird. Wenn Sie in Schritt 2 einen privaten LAN hinzugefügt haben, können Sie zwei Heartbeats mit dem Replikationsfluss auf dem privaten LAN konfigurieren.
-  * Geben Sie in `Virtual IP addresses` eine virtuelle IP-Adresse ein. Eine virtuelle IP-Adresse ist eine Standard-IP-Adresse im selben IP-Netzwerk (gleiches Subnetz) wie die IP-Adressen beider Knoten.  
-Anwendungsclients müssen mit der virtuellen IP-Adresse (oder dem DNS-Namen, der der virtuellen IP-Adresse zugeordnet ist) konfiguriert werden.  
-Bei einem Ausfall wird die virtuelle IP-Adresse automatisch umgeschaltet.
-  * Legen Sie in `Replicated directories` die Pfade der zu replizierenden Verzeichnisse fest. Überprüfen Sie, ob sie auf beiden Knoten vorhanden sind und die Anwendungsdaten enthalten.  
+ℹ️ Die Konsole sucht nach `xxx.safe` im Verzeichnis `Application_Modules/generic/` auf dem Verbindungsknoten (`node1`), wenn Sie dort während der Installation ein Modul platziert haben.
+
+
+![Modul für die {{ .Get "app" }} auswählen](/wp-content/uploads/2024/03/04-module-new.png)
+
+
+### 4. Modul konfigurieren {#4-configure-the-module}
+
+  * Wählen Sie unter `Module startup at boot` einen automatischen Start des Moduls beim Booten ohne Verzögerung.
+  * Geben Sie unter `Macros`/`SERVICES` die Dienstnamen Ihrer Anwendung in der Startreihenfolge durch Kommas getrennt ein. Siehe diesen Screenshot für ein visuelles Beispiel der [Milestone XProtect-Dienste 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
+  * In `Heartbeat networks` sollten Sie ein einzelnes Heartbeat Netzwerk haben, auf dem die Replikation durchgeführt wird. Wenn Sie in Schritt 2 ein privates LAN hinzugefügt haben, können Sie zwei Heartbeats mit dem Replikationsfluss im privaten LAN konfigurieren.
+  * Geben Sie unter `Virtual IP addresses` eine virtuelle IP-Adresse ein. Eine virtuelle IP-Adresse ist eine Standard-IP-Adresse im selben IP-Netzwerk (dasselbe Subnetz) wie die IP-Adressen beider Knoten.  
+Anwendungsklienten müssen mit der virtuellen IP-Adresse (oder dem mit der virtuellen IP-Adresse verknüpften DNS-Namen) konfiguriert werden.  
+Die virtuelle IP-Adresse wird im Fehlerfall automatisch umgeschaltet.
+  * Legen Sie unter `Replicated directories` die Pfade der zu replizierenden Verzeichnisse fest. Stellen Sie sicher, dass sie auf beiden Knoten vorhanden sind und die Anwendungsdaten enthalten.  
 Daten- und Protokollreplikation sind für eine Datenbank unerlässlich.  
-Sie können bei Bedarf weitere replizierte Verzeichnisse erstellen.  
-In diesem Screenshot finden Sie ein visuelles Beispiel der [Milestone XProtect SQL-Replikation 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
-  * In `Checkers` können Sie bei Bedarf Prüfer konfigurieren, z. B. Prozessüberwachung, benutzerdefinierte Prüfer, TCP, Ping oder Split-Brain-Prüfer.  
-Wenn beispielsweise ein Prozessname in `Monitored processes/services` angezeigt wird, wird dieser im Fehlerfall mit einer Neustartaktion überwacht. Die Konfiguration eines falschen Prozessnamens führt dazu, dass das Modul direkt nach dem Start stoppt.
+Sie können bei Bedarf zusätzliche replizierte Verzeichnisse erstellen.  
+Sehen Sie sich diesen Screenshot für ein visuelles Beispiel der [Milestone XProtect SQL-Replikation an 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
+  * In `Checkers` können Sie bei Bedarf Checkers konfigurieren, z. B. Prozessüberwachung, benutzerdefinierte Checkers, TCP, Ping oder Split-Brain-Checkers.  
+Wenn beispielsweise ein Prozessname unter `Monitored processes/services` angezeigt wird, wird er im Fehlerfall mit einer Neustartaktion überwacht. Die Konfiguration eines falschen Prozessnamens führt dazu, dass das Modul direkt nach dem Start beendet wird.
 
 
-⚠️ Wenn SQL auf dem Management Server installiert ist:
+⚠️ Wenn sich SQL auf dem Management-Server befindet:
 
-  * Die [SQL-Systemdatenbanken](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases) (wie master.mdf und mastlog.ldf) müssen auf beiden Knoten in denselben Verzeichnissen liegen. Die Verzeichnisse müssen für die Replikation konfiguriert sein.
-  * SQL muss auf beiden Knoten auch am selben Ort im Dateisystem installiert sein, da die schreibgeschützte [SQL-Ressourcendatenbank](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database) bei den Binärdateien liegt und für das Failover erforderlich ist. Diese Datenbank muss nicht repliziert werden.
-  * Die SQL-Datenbanken von Milestone (.mdf und .ldf) müssen auf beiden Knoten in denselben Verzeichnissen liegen. Die Verzeichnisse müssen für die Replikation konfiguriert sein. Die Milestone-Datenbanken sind in diesem [Artikel](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html) aufgeführt.
-
-
-ℹ️ Wenn Sie auf `Advanced configuration` klicken, wird die `userconfig.xml`-Datei angezeigt. Diese Datei wird automatisch von der Konsole gefüllt und mit den Neustartskripten auf den Knoten bereitgestellt.
-
-ℹ️ Wenn Sie die SafeKit-Konfiguration anwenden, wird der `startup type` der Dienste automatisch auf `Manual` in Windows-Diensten gesetzt. Dadurch wird sichergestellt, dass Dienste nicht automatisch beim Systemstart gestartet werden, sondern erst beim Start des Moduls selbst.
+  * Die [SQL-Systemdatenbanken](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases) (wie master.mdf und mastlog.ldf) müssen sich in denselben Verzeichnissen auf beiden Knoten befinden. Die Verzeichnisse müssen als repliziert konfiguriert sein.
+  * SQL muss auch am gleichen Ort im Dateisystem auf beiden Knoten installiert sein, da sich die schreibgeschützte [SQL-Ressourcendatenbank](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database) in der Binärdatei befindet und für das Failover erforderlich ist. Diese Datenbank muss nicht repliziert werden.
+  * Die SQL-Milestone-Datenbanken (.mdf und .ldf) müssen sich auf beiden Knoten in denselben Verzeichnissen befinden. Die Verzeichnisse müssen als repliziert konfiguriert sein. Milestone-Datenbanken sind gemäß diesem [Artikel](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html) wie folgt:
 
 
-![Geben Sie die {{ .Get "app" }}-Moduleinstellungen ein](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+ℹ️ Wenn Sie auf `Advanced configuration` klicken, wird die Datei `userconfig.xml` angezeigt. Diese Datei wird automatisch von der Konsole ausgefüllt und mit den Neustartskripten auf den Knoten bereitgestellt.
+
+ℹ️ Wenn Sie die SafeKit-Konfiguration anwenden, wird der `startup type` der Dienste in Windows-Diensten automatisch auf `Manual` gesetzt. Dadurch wird sichergestellt, dass die Dienste nicht automatisch beim Systemstart gestartet werden, sondern erst, wenn das Modul selbst gestartet wird.
 
 
-### 5. Skripte bearbeiten (optional)
+![{{ .Get "app" }} Modul-Einstellungen aufrufen](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
 
-  * Dieser Schritt ist optional und kann in den meisten Fällen übersprungen werden, da die Neustartskripte bereits vorkonfiguriert sind, um die im vorherigen Schritt definierten Dienste neu zu starten.
+
+### 5. Skripte bearbeiten (optional) {#5-edit-scripts-optional}
+
+  * Dieser Schritt ist optional und kann in den meisten Fällen übersprungen werden, da die Neustartskripte bereits so vorkonfiguriert sind, dass sie die im vorherigen Schritt definierten Dienste neu starten.
   * Klicken Sie also direkt auf `Next step`.
-  * `start_prim.ps1` startet alle Dienste in der in der `SERVICES`-Liste angegebenen Reihenfolge und startet die von Milestone verwendeten `IIS application pools`. `stop_prim.ps1` stoppt alle Dienste in umgekehrter Reihenfolge.
-  * Darüber hinaus überprüft `start_prim.ps1` den Start jedes Dienstes und stoppt das Modul, wenn ein Dienst nicht ordnungsgemäß gestartet werden kann.
+  * `start_prim.ps1` startet alle Dienste in der in der Liste `SERVICES` angegebenen Reihenfolge und startet die von Milestone verwendeten `IIS application pools`. `stop_prim.ps1` stoppt alle Dienste in umgekehrter Reihenfolge.
+  * Zusätzlich überprüft `start_prim.ps1` den Start jedes Dienstes und stoppt das Modul, wenn ein Dienst nicht korrekt gestartet werden kann.
 
 
-![Geben Sie die {{ .Get "app" }}-Moduleinstellungen ein](/wp-content/uploads/2026/09/28-module-edit-script.png)
+![{{ .Get "app" }} Modul-Einstellungen aufrufen](/wp-content/uploads/2026/09/28-module-edit-script.png)
 
 
-### 6. Kommunikationsverschlüsselung (optional)
+### 6. Kommunikationsverschlüsselung (optional) {#6-communication-encryption-optional}
 
-  * Behalten Sie die Verschlüsselung der Kommunikation zwischen Knoten bei.
-
-
-![Kommunikationsverschlüsselung des {{ .Get "app" }}-Moduls](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+  * Verschlüsselung der Kommunikation zwischen den Knoten beibehalten.
 
 
-### 7. Speichern und anwenden
-
-  * `Save and apply` die Konfiguration und Skripte auf beiden Knoten.
+![Kommunikationsverschlüsselung des {{ .Get "app" }} Moduls](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
-![Speichern Sie die {{ .Get "app" }}-Modulkonfiguration und wenden Sie sie an](/wp-content/uploads/2025/05/08-module-save-1.png)
+### 7. Speichern und anwenden {#7-save-and-apply}
+
+  * `Save and apply` die Konfiguration und die Skripte auf beiden Knoten an.
 
 
-### 8. Überprüfen Sie die erfolgreiche Konfiguration
-
-  * Überprüfen Sie die Meldung `Success` ✅ auf beiden Knoten und klicken Sie auf `Monitor modules`.
-  * Wenn die Konfiguration `Failure` ❌ auf einem Knoten auftritt, öffnen Sie das Akkordeon ▼ für diesen Knoten und überprüfen Sie die Meldungen. Beachten Sie, dass Sie als Hilfe den SafeKit AI 🤖 verwenden können.
+![{{ .Get "app" }} Modulkonfiguration speichern und anwenden](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
+### 8. Erfolgreiche Konfiguration überprüfen {#8-verify-successful-configuration}
+
+  * Überprüfen Sie die `Success` ✅ auf beiden Knoten und klicken Sie auf `Monitor modules`.
+  * Wenn der `Failure` ❌ auf einem Knoten auftritt, öffnen Sie das ▼ Akkordeon für diesen Knoten und überprüfen Sie die Nachrichten. Beachten Sie, dass Sie die SafeKit AI 🤖 zur Unterstützung verwenden können.
 
 
 ![Überprüfen Sie den Erfolg der {{ .Get "app" }}-Modulkonfiguration](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. Starten Sie den Knoten mit aktuellen Daten
+### 9. Starten Sie den Knoten mit aktuellen Daten {#9-start-the-node-with-up-to-date-data}
 
-  * Wenn Knoten 1 über die aktuellen replizierten Verzeichnisse verfügt, wählen Sie ihn aus und ⋯ `Force start` ▶ `As primary`.
+  * Wenn Knoten 1 über die aktuellsten replizierten Verzeichnisse verfügt, wählen Sie ihn aus und ⋯ `Force start` ▶ `As primary`.
 
 
 Wenn Knoten 2 gestartet wird, werden alle Daten von Knoten 1 auf Knoten 2 kopiert.
 
-⚠️ Wenn Sie die falsche Wahl treffen, besteht die Gefahr, dass veraltete Daten auf beiden Knoten synchronisiert werden.
+⚠️ Wenn Sie die falsche Wahl treffen, laufen Sie Gefahr, veraltete Daten auf beiden Knoten zu synchronisieren.
 
-⚠️ Es wird außerdem davon ausgegangen, dass die {{ .Get "app" }}-Anwendung auf Knoten 1 gestoppt wird, sodass SafeKit die Replikationsmechanismen installiert und dann die Anwendung im `start_prim`-Skript startet.
+⚠️ Es wird auch davon ausgegangen, dass die {{ .Get "app" }} Anwendung auf Knoten 1 gestoppt ist, damit SafeKit die Replikationsmechanismen installiert und dann die Anwendung im `start_prim`-Skript startet.
 
-⚠️ Verwenden Sie `Start` für nachfolgende Starts: SafeKit behält den aktuellsten Server. Der Start von `As primary` ist eine Sonderinbetriebnahme beim ersten Mal oder bei außergewöhnlichen Einsätzen.
-
-
-![Starten Sie als Primärknoten den {{ .Get "app" }}-Knoten mit den aktuellen Daten](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+⚠️ Verwenden Sie `Start` für nachfolgende Starts: SafeKit behält den aktuellsten Server bei. Starten `As primary` ist ein spezieller Startvorgang beim ersten Mal oder bei außergewöhnlichen Vorgängen.
 
 
-### 10. Warten Sie auf den Übergang zu ALONE (grün)
-
-  * Knoten 1 sollte den Zustand ALONE (grün) erreichen, was bedeutet, dass der virtuelle IP gesetzt ist und das `start_prim`-Skript auf Knoten 1 ausgeführt wurde.
+![Starten Sie den {{ .Get "app" }} Knoten mit den aktuellen Daten als primären Knoten](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-⚠️ Wenn ALONE (grün) nicht erreicht wird oder die Anwendung nicht gestartet wird, analysieren Sie den Grund mit dem [-Modulprotokoll 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) von Knoten 1.
+### 10. Warten Sie, bis der Übergang zu ALONE (grün) erfolgt {#10-wait-for-the-transition-to-alone-green}
 
-  * Klicken Sie auf das Symbol 🔍 **log** von `node1`, um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfer einen Fehler erkennt und das Modul stoppt.
-  * Klicken Sie im Protokoll auf `start_prim`: Rechts werden Ausgabemeldungen des Skripts angezeigt und es können Fehler wie ein falsch gestarteter Dienst erkannt werden.
-  * Verwenden Sie SafeKit AI 🤖 für Unterstützung bei Protokollmeldungen.
+  * Knoten 1 sollte den ALONE Status (grün) erreichen, was bedeutet, dass die virtuelle IP-Adresse festgelegt wurde und das `start_prim` Skript auf Knoten 1 ausgeführt wurde.
 
 
-⚠️ Wenn sich der Cluster im `WAIT (red) not uptodate, STOP (red) not uptodate`-Status befindet, stoppen Sie den WAIT-Knoten und [ erzwingen seinen Start als Primärknoten 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+⚠️ Wenn ALONE (grün) nicht erreicht wird oder die Anwendung nicht gestartet wird, analysieren Sie den Grund mit dem [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) von Knoten 1.
+
+  * Klicken Sie auf das 🔍 **Protokollsymbol** von `node1`, um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfer einen Fehler erkennt und das Modul stoppt.
+  * Klicken Sie im Protokoll auf `start_prim`: Die Ausgabemeldungen des Skripts werden rechts angezeigt und Fehler können erkannt werden, z. B. wenn ein Dienst falsch gestartet wurde.
+  * Nutzen Sie die SafeKit AI 🤖 für Unterstützung bei Protokollnachrichten.
 
 
-![Der erste {{ .Get "app" }}-Knoten startet als primärer Knoten und wird zu ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+⚠️ Wenn sich der Cluster im Zustand `WAIT (red) not uptodate, STOP (red) not uptodate`, stoppen Sie den WAIT Knoten und [erzwingen Sie seinen Start als primär 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
 
 
-### 11. Auf dem Desktop von Knoten 1: Milestone Management Server stoppen, unter der virtuellen IP-Adresse registrieren, den Milestone-KB-Artikel anwenden und neu starten
+![Der erste {{ .Get "app" }} Knoten startet als primärer Knoten und wird ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
-Führen Sie die folgenden Schritte auf Knoten 1 anhand des Menüs im Bild aus:
 
-  * Deaktivieren Sie im Menü **ALONE** der SafeKit-Konsole **Checkers** und **Process/Service Monitoring**, um Fehlalarme beim Stoppen des Management Server Service zu vermeiden ([Prüfung aussetzen 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
-  * Klicken Sie mit der rechten Maustaste auf das Symbol **Milestone Management Server** in der Taskleiste.
-  * **Stop Management Server Service**
-  * Wählen Sie anschließend **Server Configurator...** und registrieren Sie die virtuelle IP-Adresse.
-  * **Bearbeiten Sie ServerConfig.xml** auf Knoten 1.
-    * Wechseln Sie zu "C:/ProgramData/Milestone/XProtect Management Server" und sichern Sie die ursprüngliche Datei ServerConfig.xml.
-    * Öffnen Sie ServerConfig.xml mit einem beliebigen Texteditor (mit Administratorrechten).
+### 11. Stoppen Sie auf dem Desktop von Knoten 1 den Dienst, registrieren Sie ihn dann auf der virtuellen IP-Adresse, wenden Sie das Milestone KB an und starten Sie den Milestone Management Server neu {#11-in-the-desktop-of-node-1-stop-then-register-on-the-virtual-ip-address-apply-the-milestone-kb-and-restart-the-milestone-management-server}
+
+Führen Sie die folgenden Punkte auf Knoten 1 gemäß dem Menü im Bild aus:
+
+  * Verwenden Sie das Menü **ALONE** der SafeKit Konsole, um **Checker** und **Prozess-/Service-Überwachung** zu deaktivieren und so Fehlalarme beim Stoppen des Management-Server-Dienstes zu verhindern ([Checker aussetzen 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
+  * Klicken Sie mit der rechten Maustaste auf das Symbol **Milestone Management Servers** in der Taskleiste.
+  * **Management-Server-Dienst beenden**
+  * Wählen Sie dann **Server Configurator ...** und registrieren Sie die virtuelle IP-Adresse.
+  * **Bearbeiten Sie die ServerConfig.xml** auf Knoten 1. 
+    * Gehen Sie zu „ C:/ProgramData/Milestone/XProtect Management Server“ und sichern Sie die ursprüngliche Datei ServerConfig.xml.
+    * Öffnen Sie die ServerConfig.xml mit einem beliebigen Texteditor (mit Administratorrechten).
     * Ersetzen Sie `XXX.XXX.XXX.XXX` durch die tatsächliche virtuelle IP-Adresse in:
     * `<Failover>...`
     * `<VirtualAddress>`
@@ -182,28 +180,28 @@ Führen Sie die folgenden Schritte auf Knoten 1 anhand des Menüs im Bild aus:
     * `</VirtualAddress>`
     * `...</Failover>`
     * Ändern Sie `<ClusterMember>false</ClusterMember>` in `true`
-    * Tragen Sie `http://NODE1_FQDN:9010` (bei einer Arbeitsgruppe den Hostnamen von NODE1) ein unter:
+    * Legen Sie `http://NODE1_FQDN:9010` (oder den Hostnamen NODE1, wenn es sich um eine Arbeitsgruppe handelt) fest in: 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE1_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
-    * Weitere Informationen finden Sie in diesem **[Milestone-KB-Artikel](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
-  * **Start Management Server Service**
-  * Aktivieren Sie im Menü **ALONE** der SafeKit-Konsole **Checkers** und **Process/Service Monitoring** ([Prüfung aktivieren 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
+    * Weitere Informationen finden Sie in diesem **[Milestone KB-Artikel](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+  * **Management-Server-Dienst starten**
+  * Verwenden Sie das **ALONE** Menü der SafeKit Konsole, um **die Prüfer** und **die Prozess-/Serviceüberwachung** zu aktivieren ([aktivieren Sie den Prüfer 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
 
 
-ℹ️ Dieses Verfahren registriert den Management Server von Knoten 1 in der SQL-Datenbank (auf Knoten 1) über eine Verbindung zur virtuellen Adresse.
+ℹ️ Dieses Verfahren registriert den Management-Server von Knoten 1 in der SQL-Datenbank (die auf Knoten 1 ausgeführt wird) über eine Verbindung zur virtuellen Adresse.
 
 
-![Management Server in Milestone 2020+ registrieren](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+![Registrieren Sie den Management-Server in Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 12. Auf dem Desktop von Knoten 2 den Management Server unter der virtuellen IP-Adresse registrieren
+### 12. Registrieren Sie auf dem Desktop von Knoten 2 den Verwaltungsserver unter der virtuellen IP-Adresse {#12-in-the-desktop-of-node-2-register-the-management-server-on-the-virtual-ip-address}
 
-  * Wählen Sie **Server Configurator** in der Taskleiste von Knoten 2 und registrieren Sie ihn unter der virtuellen IP-Adresse (siehe Bild).
-  * Anschließend **Stop Management Server Service**.
-  * **Bearbeiten Sie ServerConfig.xml** auf Knoten 2.
-    * Wechseln Sie zu "C:/ProgramData/Milestone/XProtect Management Server" und sichern Sie die ursprüngliche Datei ServerConfig.xml.
-    * Öffnen Sie ServerConfig.xml mit einem beliebigen Texteditor (mit Administratorrechten).
+  * Wählen Sie im Taskleistenbereich von Knoten 2 **Server Configurator** aus und registrieren Sie ihn auf der virtuellen IP-Adresse (siehe Abbildung).
+  * **Beenden Sie dann den Management-Server-Dienst**.
+  * **Bearbeiten Sie die ServerConfig.xml** auf Knoten 2. 
+    * Gehen Sie zu „ C:/ProgramData/Milestone/XProtect Management Server“ und sichern Sie die ursprüngliche Datei ServerConfig.xml.
+    * Öffnen Sie die ServerConfig.xml mit einem beliebigen Texteditor (mit Administratorrechten).
     * Ersetzen Sie `XXX.XXX.XXX.XXX` durch die tatsächliche virtuelle IP-Adresse in:
     * `<Failover>...`
     * `<VirtualAddress>`
@@ -211,123 +209,123 @@ Führen Sie die folgenden Schritte auf Knoten 1 anhand des Menüs im Bild aus:
     * `</VirtualAddress>`
     * `...</Failover>`
     * Ändern Sie `<ClusterMember>false</ClusterMember>` in `true`
-    * Tragen Sie `http://NODE2_FQDN:9010` (bei einer Arbeitsgruppe den Hostnamen von NODE2) ein unter:
+    * Legen Sie `http://NODE2_FQDN:9010` (oder den Hostnamen NODE2 wenn es sich um eine Arbeitsgruppe handelt) fest in: 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE2_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
-    * Weitere Informationen finden Sie in diesem **[Milestone-KB-Artikel](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
+    * Weitere Informationen finden Sie in diesem **[Milestone KB-Artikel](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**.
 
 
-⚠️ Achtung:
+⚠️ Vorsicht:
 
-  * Das Benutzerkonto, das die Registrierung auf Knoten 2 ausführt, muss in Milestone auf Knoten 1 die Administratorrolle besitzen.
-  * Führt der lokale Administrator von Knoten 2 die Registrierung durch, muss die integrierte Windows-Gruppe `BUILTIN/Administrators` unter Management Client / Security / Roles in [Schritt 13](#role) eingerichtet worden sein. Andernfalls funktioniert die Registrierung nicht.
-
-
-ℹ️ Dieses Verfahren registriert den Management Server von Knoten 2 in der SQL-Datenbank (auf Knoten 1) über eine Verbindung zur virtuellen Adresse.
+  * Das Konto des Benutzers, der die Registrierung auf Knoten 2 ausführt, muss über die Administratorrolle in Milestone auf Knoten 1 verfügen.
+  * Wenn der lokale Administrator auf Knoten 2 die Registrierung vornimmt, muss die integrierte Windows Gruppe `BUILTIN/Administrators` in [Schritt 13](#role) unter Management Client / Sicherheit / Rollen festgelegt worden sein. Andernfalls funktioniert die Registrierung nicht.
 
 
-![Management Server mit Milestone 2020+ registrieren](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+ℹ️ Dieses Verfahren registriert den Management-Server von Knoten 2 in der SQL-Datenbank (die auf Knoten 1 läuft) über eine Verbindung zur virtuellen Adresse.
 
 
-### 13. Windows-Authentifizierungsproblem beim Failover lösen {#role}
-
-Beim Starten des Milestone XProtect Management Client müssen Sie sich mit einer der folgenden Methoden authentifizieren. Je nach Auswahl sind bestimmte Schritte erforderlich, damit die Anmeldung nach einem SafeKit-Failover funktioniert. Referenz: [Anmeldebildschirm anzeigen 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png).
-
-#### Windows-Authentifizierung mit Active Directory (AD)
-
-**Konfiguration:** Es ist keine besondere Konfiguration erforderlich.
-
-Ist die Milestone-Option "Windows authentication" mit einem Active Directory konfiguriert, werden Benutzer- und Kennwortinformationen aus dem externen AD abgerufen. Nach einem Failover verbindet sich der sekundäre Knoten mit demselben AD, sodass die Authentifizierung automatisch funktioniert.
-
-#### Windows-Authentifizierung in einer Arbeitsgruppe
-
-**Konfiguration:** Sie müssen die Gruppe **BUILTIN/Administrators** unter "Security / Roles" hinzufügen.
-
-**Warnung:** In einer Arbeitsgruppe haben lokale Benutzer auf jedem Knoten unterschiedliche Sicherheitskennungen (SIDs), selbst bei identischen Namen. Nur die Gruppe BUILTIN/Administrators hat auf beiden Knoten dieselbe SID.
-
-  * Durch Hinzufügen dieser Gruppe können Sie sich nach einem Failover auf dem sekundären Knoten mit jedem lokalen Administratorkonto authentifizieren.
-  * Andernfalls schlägt die lokale Windows-Authentifizierung auf dem sekundären Knoten fehl, weil die SIDs nicht übereinstimmen.
+![Registrieren Sie den Management-Server bei Milestone 2020+](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-#### Basisauthentifizierung mit SQL-Datenbank
+### 13. Beheben von Windows Authentifizierungsproblemen bei Failover {#role}
 
-**Konfiguration:** Erstellen Sie einen Benutzer mit "Basic authentication" (z. B. "Admin").
+Wenn Sie den Milestone XProtect Management Client starten, müssen Sie sich mit einer der folgenden Methoden authentifizieren. Je nach Ihrer Wahl sind bestimmte Schritte erforderlich, um sicherzustellen, dass die Anmeldung nach einem SafeKit Failover funktioniert. Referenz: [Anmelde-Screenshot anzeigen 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png).
 
-Bei "Basic authentication" werden die Benutzeranmeldedaten direkt in der SQL-Datenbank gespeichert. Da SafeKit die SQL-Datenbank in Echtzeit auf den sekundären Knoten repliziert, stehen diese Benutzer nach einem Failover immer sofort zur Verfügung.
+#### Windows Authentifizierung mit Active Directory (AD) {#windows-authentication-with-active-directory-ad}
+
+**Konfiguration:** Es ist keine spezielle Konfiguration erforderlich.
+
+Wenn Milestone „ Windows-Authentifizierung“ mit einem Active Directory konfiguriert ist, werden die Benutzer- und Passwortinformationen aus dem externen AD abgerufen. Nach einem Failover verbindet sich der sekundäre Knoten mit demselben AD, sodass die Authentifizierung automatisch funktioniert.
+
+#### Windows Authentifizierung in Arbeitsgruppen {#windows-authentication-in-workgroup}
+
+**Konfiguration:** Sie müssen die Gruppe **BUILTIN/Administrators** unter „Sicherheit/Rollen“ hinzufügen.
+
+**Warnung:** In einer Arbeitsgruppe haben lokale Benutzer auf jedem Knoten unterschiedliche Sicherheitskennungen (SIDs), auch wenn die Namen identisch sind. Nur die Gruppe BUILTIN/Administrators hat auf beiden Knoten dieselbe SID.
+
+  * Durch das Hinzufügen dieser Gruppe können Sie sich nach einem Failover mit jedem lokalen Administratorkonto am sekundären Knoten authentifizieren.
+  * Ohne diese Maßnahme schlägt die lokale Windows Authentifizierung auf dem sekundären Knoten fehl, da die SIDs nicht übereinstimmen.
+
+
+#### Grundlegende Authentifizierung mit SQL-Datenbank {#basic-authentication-with-sql-database}
+
+**Konfiguration:** Erstellen Sie einen Benutzer mit „Basisauthentifizierung“ (z. B. „ Admin “).
+
+Bei der „Basisauthentifizierung“ werden die Benutzeranmeldeinformationen direkt in der SQL-Datenbank gespeichert. Da SafeKit die SQL-Datenbank in Echtzeit auf den sekundären Knoten repliziert, stehen diese Benutzer nach einem Failover sofort zur Verfügung.
 
 
 ![Rollen im Milestone Management Client festlegen](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
 
-### 14. Starten Sie Knoten 2
+### 14. Startknoten 2 {#14-start-node-2}
 
   * ⋯ `Start` Knoten 2 mit seinem Kontextmenü.
-  * Warten Sie auf den Status SECOND (grün).
+  * Warten Sie auf den SECOND (grünen) Zustand.
 
 
 ℹ️
 
-  * Knoten 2 bleibt im Status SECOND (orange), während die replizierten Verzeichnisse neu synchronisiert werden (Kopieren von Knoten 1 auf Knoten 2).
-
-  * Dies kann abhängig von der Größe der neu zu synchronisierenden Dateien in replizierten Verzeichnissen und der Netzwerkbandbreite eine Weile dauern.
-  * Um den Fortschritt des Kopierens zu sehen, sehen Sie sich das [module-Protokoll 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) und die [replikationsressourcen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) von Knoten 2 an. Verwenden Sie SafeKit AI 🤖 für Unterstützung bei Protokollmeldungen.
-
-
-![Starten Sie den {{ .Get "app" }}-Knoten 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+  * Knoten 2 verbleibt im SECOND (orangen) Zustand, während die replizierten Verzeichnisse resynchronisiert werden (Kopie von Knoten 1 auf Knoten 2).
+  * Dies kann je nach Größe der in replizierten Verzeichnissen zu resynchronisierenden Dateien und der Netzwerkbandbreite einige Zeit dauern.
+  * Um den Fortschritt der Kopie zu sehen, siehe das [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) und die [Replikationsressourcen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) von Knoten 2. Verwenden Sie SafeKit AI 🤖 für Unterstützung bei Protokollmeldungen.
 
 
-### 15. Stellen Sie sicher, dass der Cluster betriebsbereit ist
-
-  * Überprüfen Sie, ob der Cluster grün/grün ist und die {{ .Get "app" }}-Dienste auf dem PRIM-Knoten und nicht auf dem SECOND-Knoten ausgeführt werden.
+![Starten Sie den {{ .Get "app" }} Knoten 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
+### 15. Überprüfen Sie, ob der Cluster betriebsbereit ist {#15-verify-that-the-cluster-is-operational}
+
+  * Überprüfen Sie, ob der Cluster grün/grün ist und {{ .Get "app" }} Dienste auf dem PRIM-Knoten ausgeführt werden und nicht auf dem SECOND-Knoten.
   * In diesem Zustand werden nur Änderungen innerhalb von Dateien in Echtzeit repliziert.
 
+
 ⚠️
 
-  * Registrieren Sie die **Aufzeichnungsserver** unter der virtuellen IP-Adresse.
+  * Registrieren Sie die **Aufzeichnungsserver** mit der virtuellen IP-Adresse.
   * Verbinden Sie den **Milestone Management Client** und den **Milestone Smart Client** mit der virtuellen IP-Adresse.
-  * Komponenten, die Clients von {{ .Get "app" }}-Diensten sind, müssen mit der virtuellen IP-Adresse konfiguriert werden. Die Konfiguration kann mit einem DNS-Namen erfolgen (sofern ein DNS-Name erstellt und mit der virtuellen IP-Adresse verknüpft wurde).
+  * Komponenten, die Clients von {{ .Get "app" }} Diensten sind, müssen mit der virtuellen IP-Adresse konfiguriert werden. Die Konfiguration kann mit einem DNS-Namen erfolgen (wenn ein DNS-Name erstellt und der virtuellen IP-Adresse zugeordnet wurde).
 
 
-![Der {{ .Get "app" }}-Knoten 2 ist SECOND (grün)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+![Der {{ .Get "app" }} Knoten 2 ist SECOND (grün)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-### 16. Testen
+### 16. Tests {#16-testing}
 
-  * Stoppen Sie den Knoten PRIM, indem Sie im Kontextmenü nach unten scrollen und auf `Stop` klicken.
-  * Stellen Sie sicher, dass auf dem Knoten SECOND ein Failover stattfindet, der zu ALONE (grün) werden sollte.
-  * Überprüfen Sie mit der Microsoft Management Console (MMC) auf Windows oder mit Befehlszeilen auf Linux das Failover der {{ .Get "app" }}-Dienste (im `stop_prim`-Skript auf Knoten 1 gestoppt und im `start_prim`-Skript auf Knoten 2 gestartet).
+  * Stoppen Sie den PRIM-Knoten, indem Sie im Kontextmenü nach unten scrollen und auf `Stop` klicken.
+  * Überprüfen Sie, ob auf dem SECOND Knoten ein Failover stattfindet, der ALONE (grün) sein sollte.
+  * Überprüfen Sie mit Microsoft Management Console (MMC) unter Windows oder mit Befehlszeilen unter Linux das Failover der {{ .Get "app" }}-Dienste (gestoppt auf Knoten 1 im `stop_prim`-Skript und gestartet auf Knoten 2 im `start_prim`-Skript).
 
 
-⚠️ Wenn ALONE (grün) auf node2 nicht erreicht wird oder die Anwendung nicht gestartet wird, analysieren Sie die Ursache mit dem [-Modulprotokoll 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) von Knoten 2.
+⚠️ Wenn ALONE (grün) auf node2 nicht erreicht wird oder die Anwendung nicht gestartet wird, analysieren Sie den Grund mit dem [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) von Knoten 2.
 
-  * Klicken Sie auf das Symbol 🔍 **log** von `node2`, um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfer einen Fehler erkennt und das Modul stoppt.
-  * Klicken Sie im Protokoll auf `start_prim`: Rechts werden Ausgabemeldungen des Skripts angezeigt und es können Fehler wie ein falsch gestarteter Dienst erkannt werden.
-  * Verwenden Sie SafeKit AI 🤖 für Unterstützung bei Protokollmeldungen.
+  * Klicken Sie auf das 🔍 **Protokollsymbol** von `node2`, um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfer einen Fehler erkennt und das Modul stoppt.
+  * Klicken Sie im Protokoll auf `start_prim`: Die Ausgabemeldungen des Skripts werden rechts angezeigt und Fehler können erkannt werden, z. B. wenn ein Dienst falsch gestartet wurde.
+  * Nutzen Sie die SafeKit AI 🤖 für Unterstützung bei Protokollnachrichten.
 
 
 ⚠️
 
-  * Wenn alles in Ordnung ist, initiieren Sie einen Start auf node1, wodurch die replizierten Verzeichnisse von node2 neu synchronisiert werden.
-  * Wenn etwas schief geht, stoppen Sie node2 und [. Erzwingen Sie den Start als primäres 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) von node1, das zum Zeitpunkt des Stopps mit seinen lokal gesunden Daten neu startet.
+  * Wenn alles in Ordnung ist, starten Sie einen Start auf node1, wodurch die replizierten Verzeichnisse von node2 erneut synchronisiert werden.
+  * Wenn etwas schiefgeht, stoppen Sie node2 und [erzwingen Sie den Start als primärer Knoten 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) von node1, der mit seinen lokal intakten Daten zum Zeitpunkt des Stopps neu gestartet wird.
 
 
-ℹ️ Beachten Sie die 🕒 **[Zeitleiste 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)**, die helfen kann, die Vorgänge im Cluster zu verstehen.
+ℹ️ Beachten Sie, dass Sie eine 🕒 **[Zeitleiste 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** haben, die hilfreich sein kann, um zu verstehen, was im Cluster passiert.
 
-ℹ️ Weitere Details und Videos finden Sie in der [SafeKit-Onlineschulung](/de/resources/safekit-on-line-training/).
-
-
-![Stoppen Sie das {{ .Get "app" }}-Modul auf dem PRIM-Server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+ℹ️ Weitere Details sowie Videos finden Sie im [SafeKit Online-Training](/de/resources/safekit-on-line-training/).
 
 
-### 17. Unterstützung
-
-  * Um Unterstützung zu erhalten, nehmen Sie 2 SafeKit `Snapshots` (2 .zip-Dateien), eine für jeden Knoten.
+![Stoppen Sie das {{ .Get "app" }} Modul auf dem PRIM-Server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-ℹ️ [Weitere Informationen zum Support hier](/de/resources/safekit-support/).
+### 17. Unterstützung {#17-support}
+
+  * Um Unterstützung zu erhalten, erstellen Sie 2 SafeKit `Snapshots` (2 .zip-Dateien), einen für jeden Knoten.
 
 
-![Nehmen Sie zur Unterstützung die {{ .Get "app" }}-Snapshots](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+ℹ️ [Weitere Informationen zum Support finden Sie hier](/de/resources/safekit-support/).
+
+
+![Machen Sie {{ .Get "app" }} Snapshots zur Unterstützung](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

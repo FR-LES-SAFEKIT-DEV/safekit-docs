@@ -1,31 +1,32 @@
-{{/* Shortcode: insert-safekit-farm-guide-it — 9 instances in 9 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.6 | Translation LLM | 31 expressions */}}
+{{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
 
 
-## Guida rapida all'installazione ad alta disponibilità per {{ .Get "app" }} {#quick-guide}
+## Guida rapida all’installazione ad alta disponibilità per {{ .Get "app" }} {#quick-guide}
 
-Questa guida spiega come configurare con SafeKit un cluster **<span class="notranslate farm-term" translate="no">farm</span>** per {{ .Get "app" }}, garantendo il bilanciamento del carico di rete e il failover automatico.
+Questa guida spiega come configurare un **cluster <span class="notranslate farm-term" translate="no">farm</span>** per {{ .Get "app" }} utilizzando SafeKit, garantendo il bilanciamento del carico di rete e il failover automatico.
 
 Per assistenza, puoi utilizzare [SafeKit AI 🤖](/it/resources/safekit-support/).
 
-### 1. Panoramica
+### 1. Panoramica {#1-overview}
 
-  * **Architettura:** Implementa una soluzione <span class="notranslate farm-term" translate="no">farm</span> scalabile e con bilanciamento del carico su più nodi, con un indirizzo IP virtuale.
-  * **Alta disponibilità:** Offre monitoraggio automatico dello stato e failover senza interruzioni **per garantire la continuità del servizio**.
-
-
-### 2. Installazione
-
-  * **Software:** Installa il motore SafeKit su tutti i server.
-  * **Modulo:** Scarica il modulo applicativo preconfigurato `{{ .Get "mod" }}.safe`.
+  * **Architettura:** implementa una <span class="notranslate farm-term" translate="no">farm</span> scalabile e multi-nodo con bilanciamento del carico e un indirizzo IP virtuale.
+  * **Elevata disponibilità:** include il monitoraggio automatico dello stato di integrità e il failover continuo per **garantire la continuità del servizio**.
 
 
-### 3. Configurazione
+### 2. Installazione {#2-installation}
 
-  * **Console Web:** Configura il cluster <span class="notranslate farm-term" translate="no">farm</span> di {{ .Get "app" }}.
-  * **Monitoraggio:** Inizia a monitorare e proteggere l'applicazione {{ .Get "app" }}.
+  * **Software:** installare il motore SafeKit su tutti i server.
+  * **Modulo:** Scarica il modulo dell’applicazione `{{ .Get "mod" }}.safe` preconfigurato.
+
+
+### 3. Configurazione {#3-configuration}
+
+  * **Console Web:** configurare il cluster <span class="notranslate farm-term" translate="no">farm</span> {{ .Get "app" }}.
+  * **Monitoraggio:** avvia il monitoraggio e la protezione dell’applicazione {{ .Get "app" }}.
 
 
 

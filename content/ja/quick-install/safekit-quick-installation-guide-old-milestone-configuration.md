@@ -1,462 +1,463 @@
 ---
-title: "旧SafeKit Milestone構成"
+title: "旧 SafeKit Milestone 設定"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
 lang: "ja"
-topics: "SafeKit / Milestone XProtectソリューションの旧ステップバイステップ構成"
+topics: "SafeKit/Milestone XProtect ソリューションの旧バージョンのステップバイステップ設定"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# 旧SafeKit Milestone構成 {#old-safekit-milestone-configuration}
+# 旧 SafeKit Milestone 設定 {#old-safekit-milestone-configuration}
 
-## SafeKit / Milestone XProtectソリューションの古いステップバイステップ構成 {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
-
-
-![警告](/wp-content/uploads/2022/07/warning-small.png)
-
-
-注意：仮想IPアドレスを設定するには、いくつかの特定の手順が必要です。そうしないと、フェイルオーバーが機能しません。
-
-### 1. SafeKitコンソールを起動します {#1-launch-the-safekit-console}
-
-  * `http://localhost:9010`に接続して、いずれかのクラスタノードでブラウザからウェブコンソールを起動します。
-  * ユーザー名に`admin` 、パスワードにはインストール時に設定したパスワードを入力してください。
-
-
-クラスター外部のワークステーション上のブラウザでコンソールを実行することもできます。
+## SafeKit/Milestone XProtect ソリューションの旧バージョンのステップバイステップ設定 {#old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution}
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-SafeKitの設定は、単一のブラウザから両方のノードで行われます。
+注意：仮想 IP アドレスを設定するには、特定のステップが必要です。そうしないとフェイルオーバーが機能しません。
+
+### 1. SafeKit コンソールを起動します {#1-launch-the-safekit-console}
+
+  * いずれかのクラスターノードで、`http://localhost:9010` に接続してウェブコンソールをブラウザで起動します。
+  * ユーザー名に `admin` と入力し、インストール時に定義したパスワードを入力します。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
-
-
-ウェブコンソールを保護する方法については、ユーザーガイドの「 SafeKitウェブコンソールの保護」を参照してください。
-
-
-![クラスターを構成するために、 SafeKit Web コンソールを起動します](/wp-content/uploads/2023/01/appli-1.png)
-
-
-### 2. ノードアドレスを設定します {#2-configure-node-addresses}
-
-  * ノードのIPアドレスを入力してください。
-  * 次に、 `Apply`をクリックして設定を保存します。
+コンソールは、クラスター外部のワークステーションのブラウザーで実行することもできます。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-node1またはnode2の背景色が赤色の場合は、ブラウザと両方のノード間の接続を確認し、トラブルシューティングのために両方のノードのファイアウォールを確認してください。
+SafeKit の設定は、単一のブラウザから両方のノードで行います。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![注](/wp-content/uploads/2022/07/note.png)
 
 
-この操作により、IPアドレスが両方のノード上の`cluster.xml`ファイルに格納されます（詳細はコマンドラインを使用したトレーニングを参照してください）。
+Web コンソールを保護するには、ユーザーガイドの「SafeKit Web コンソールの保護」を参照してください。
 
 
-![クラスターのノードを入力してください](/wp-content/uploads/2023/01/appli-3.png)
+![SafeKit ウェブコンソールを起動してクラスターを構成します](/wp-content/uploads/2023/01/appli-1.png)
 
 
-### 3. モジュールを選択します。 {#3-choose-the-module}
+### 2. ノードアドレスの設定 {#2-configure-node-addresses}
 
-  * 「設定」タブで、「.safe」モジュールをクリックします。
-
-
-![注記](/wp-content/uploads/2022/07/note.png)
+  * ノードの IP アドレスを入力します。
+  * 次に、`Apply` をクリックして設定を保存します。
 
 
-インストール時にサーバー側の「Application_Modules/demo/」ディレクトリにモジュールを配置した場合、コンソールはそこにxxx.safe検出します。
+![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-![ ](/wp-content/uploads/2023/01/appli-4.png)のモジュールを選択してください
+node1 または node2 背景色が赤色の場合は、両方のノードへのブラウザの接続を確認し、トラブルシューティングのために両方のノードのファイアウォールを確認します。
 
 
-### 4. モジュールを設定します。 {#4-configure-the-module}
+![注](/wp-content/uploads/2022/07/note.png)
 
-  * 起動時に遅延なくモジュールを自動的に起動するオプションを選択してください。
+
+この操作により、両方のノードの `cluster.xml` ファイルに IP アドレスが配置されます (コマンドラインを使用したトレーニングで詳細を確認できます)。
+
+
+![クラスターのノードを入力します](/wp-content/uploads/2023/01/appli-3.png)
+
+
+### 3. モジュールを選択 {#3-choose-the-module}
+
+  * [構成] タブで、.safe モジュールをクリックします。
+
+
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+インストール時にモジュールをそこにドロップした場合、コンソールはサーバー側の「Application_Modules/demo/」ディレクトリで xxx.safe 検索します。
+
+
+![モジュールを選択してください](/wp-content/uploads/2023/01/appli-4.png)
+
+
+### 4. モジュールを構成する {#4-configure-the-module}
+
+  * 起動時にモジュールを遅延なく自動起動するように選択します。
   * 通常、レプリケーションは単一のハートビートネットワーク上で行われます。ただし、必要に応じてプライベートネットワークを定義することもできます。
-  * 複製されたディレクトリが両方のノードにインストールされ、アプリケーションデータが含まれていることを確認してください。  
-データベースには、データとログの複製が必要です。  
+  * レプリケートされたディレクトリが両方のノードにインストールされ、アプリケーションデータが含まれていることを確認します。  
+データベースには、データとログのレプリケーションが必要です。  
 必要に応じて、新しいレプリケートディレクトリを追加できます。
-  * 仮想IPアドレスを入力してください。仮想IPアドレスとは、両方のノードのIPアドレスと同じIPネットワーク（同じサブネット）内の標準IPアドレスのことです。  
-アプリケーションクライアントは、仮想IPアドレス（または仮想IPアドレスに関連付けられたDNS名）で構成する必要があります。  
-障害発生時には、仮想IPアドレスが自動的に切り替わります。
-  * `start_prim`と`stop_prim`には、アプリケーションの起動と停止に関する情報が含まれている必要があります。  
+  * 仮想 IP アドレスを入力します。仮想 IP アドレスは、両方のノードの IP アドレスと同じ IP ネットワーク（同じサブネット）内の標準的な IP アドレスです。  
+アプリケーションクライアントは、仮想 IP アドレス（または仮想 IP アドレスに関連付けられた DNS 名）で設定する必要があります。  
+障害発生時には、仮想 IP アドレスが自動的に切り替わります。
+  * `start_prim` と `stop_prim`、アプリケーションの起動と停止が含まれている必要があります。  
 これらのスクリプトに新しいサービスを追加できます。  
-これらのスクリプト内のサービス名が両方のノードにインストールされているものと一致していることを確認してください。一致していない場合は、スクリプト内のサービス名を変更してください。
-  * 両方のノードで、 `start_prim`に設定されているサービスを停止してください。
-  * Windowsおよび両方のノードで、 Windowsサービスマネージャを使用して、 `start_prim`に登録されているすべてのサービスに対して`Boot Startup Type = Manual`設定します ( SafeKit `start_prim`のサービスの開始を制御します)。
+これらのスクリプト内のサービス名が両方のノードにインストールされているものと一致していることを確認し、一致しない場合はスクリプト内で修正してください。
+  * 両方のノードで、`start_prim` に設定されているサービスを停止します。
+  * Windows および両方のノードで、Windows サービスマネージャーを使用して、`start_prim` に登録されているすべてのサービスについて `Boot Startup Type = Manual` に設定します（SafeKit `start_prim` でサービスの開始を制御します）。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-SQLが管理サーバー上にある場合：
+SQL が管理サーバー上にある場合：
 
-  * [ SQLシステムデータベース](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases>) （master.mdfやmastlog.ldfなど）は、両ノードで同じディレクトリに配置する必要があります。また、これらのディレクトリはレプリケート構成にする必要があります。
-  * 読み取り専用のSQLリソースデータベース[ ](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database>)バイナリ内に存在し、フェイルオーバーに必要となるため、SQLは両ノードのファイルシステム上の同じ場所にインストールする必要があります。このデータベースは複製する必要はありません。
-  * SQL Milestoneデータベース (.mdf および .ldf) は](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>) Milestone [のようになります。
-
-
-![警告](/wp-content/uploads/2022/07/warning-small.png)
-
-
-プロセスチェッカーにプロセス名が表示されている場合、そのプロセスは監視され、障害発生時には再起動アクションが実行されます。誤ったプロセス名を設定すると、モジュールは起動直後に停止しますのでご注意ください。
-
-
-![注記](/wp-content/uploads/2022/07/note.png)
-
-
-「適用」ボタンをクリックすると、両方のノード上の`userconfig.xml` 、 `start_prim` 、 `stop_prim`ファイルに設定が反映されます（詳細はコマンドラインを使用したトレーニングを参照してください）。
-
-
-![モジュール設定を入力してください](/wp-content/uploads/2023/01/appli-7-1.png)
-
-
-### 5. 設定が成功したことを確認します {#5-verify-successful-configuration}
-
-  * 両方のノードで成功メッセージ（緑色）を確認し、「次へ」をクリックします。
-
-
-![モジュール構成の成功を確認します](/wp-content/uploads/2023/01/appli-9-2.png)
-
-
-### 6. 何も開始せずに閉じるボタンをクリックしてください {#6-do-not-start-anything-and-click-on-the-close-button}
+  * [SQL システムデータベース](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases>)(master.mdf や mastlog.ldf など) は、両方のノードで同じディレクトリに配置する必要があります。これらのディレクトリは、レプリケートされるように構成する必要があります。
+  * 読み取り専用の[SQL リソースデータベースは](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database>)バイナリにあり、フェイルオーバーに必要であるため、SQL は両方のノードのファイルシステムの同じ場所にインストールする必要があります。このデータベースを複製する必要はありません。
+  * SQL Milestone データベース（.mdf および .ldf）は、両方のノードで同じディレクトリに配置する必要があります。ディレクトリはレプリケートされるように構成する必要があります。この[記事](<https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html>)によると、Milestone データベースは次のとおりです。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-何も開始せず、「閉じる」ボタンをクリックしてください。開始する前に仮想IPアドレスに特別な設定が必要です。
+プロセスチェッカーにプロセス名が表示されている場合、障害発生時に再起動アクションで監視されます。誤ったプロセス名を設定すると、モジュールは起動直後に停止します。
 
 
-![最新のデータを持つノードを選択してください](/wp-content/uploads/2023/01/appli-10-1.png)
+![注](/wp-content/uploads/2022/07/note.png)
 
 
-### 7. ノード 1 のデスクトップに移動し、内部ファイルMilestoneに仮想 IP アドレスを設定します {#milestone-files}
+「適用」ボタンをクリックすると、両方のノードの `userconfig.xml`、`start_prim`、`stop_prim` ファイルの設定が報告されます（コマンドラインを使用したトレーニングで詳細を確認できます）。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![モジュール設定を入力します](/wp-content/uploads/2023/01/appli-7-1.png)
 
 
-Milestone 2022 R3 以降、この手順は不要となり、次のステップで「サーバーコンフィギュレーター - サーバーの登録 - http://virtual-IP" 」によって自動的に実行されます。
+### 5. 設定が正常に完了したことを確認する {#5-verify-successful-configuration}
 
-管理者権限でPowerShellコマンドラインを開き、ノード1で以下のスクリプトを実行してください。
-    
-    
-    c: /safekit/modules / /bin/UpdateAuthServerUri.ps1
+  * 両方のノードで成功メッセージ（緑色）を確認し、[次へ] をクリックします。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![モジュールの設定が成功したことを確認します](/wp-content/uploads/2023/01/appli-9-2.png)
 
 
-このスクリプトは、2つの内部Milestoneファイルに仮想IPアドレスを設定します。
-    
-    
-    C:\ProgramData\ Milestone \ XProtect Management Server\ ServerConfig.xml
-    
-    
-        <AuthorizationServerUri> /IDP</AuthorizationServerUri> http://** < virtual-ip> **
-    
-    
-    C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
-    
-    
-        「権限」: " http://**< virtual-ip>** /IDP
+### 6. 何も起動せずに「閉じる」ボタンをクリックします {#6-do-not-start-anything-and-click-on-the-close-button}
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-このステップでは、仮想IPアドレスが前のステップで正しく設定されていることを前提としています（スクリプトは、 SafeKitコンソールに入力され、 `userconfig.xml`に保存されている仮想IPアドレスを使用します）。
+起動前に仮想 IP アドレスに特別な設定が必要なため、何も起動せずに[閉じる]ボタンをクリックしてください
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![最新のデータを持つノードを選択します](/wp-content/uploads/2023/01/appli-10-1.png)
 
 
-### 8. コンソールで、最新のデータを持つノードプライマリとして起動します。 {#8-start-node-1-as-primary-in-the-console-the-node-with-up-to-date-data}
-
-ステップ7以降、ノード1には最新の複製ディレクトリが存在すると仮定します。
-
-ノード1をプライマリとして強制的に起動します。ノード2が起動すると、ノード1のすべてのデータがノード2にコピーされます。
+### 7. ノード 1 のデスクトップに移動し、Milestone 内部ファイルで仮想 IP アドレスを設定します {#milestone-files}
 
 
-![警告](/wp-content/uploads/2022/07/warning-small.png)
+![注](/wp-content/uploads/2022/07/note.png)
 
 
-誤った選択をすると、両方のノードで古いデータが同期されてしまうリスクがあります。
+Milestone 2022 R3 以降、この手順は不要であり、次の手順「Server Configurator - サーバーの登録 - http://virtual-IP"で自動的に実行されます。
+
+管理者として PowerShell コマンドラインで、ノード 1 でこのスクリプトを実行します
+    
+    
+    c:/safekit/modules//bin/UpdateAuthServerUri.ps1
 
 
-![警告](/wp-content/uploads/2022/07/warning-small.png)
+![注](/wp-content/uploads/2022/07/note.png)
 
 
-また、アプリケーションはノード1で停止しているものと想定されており、 SafeKitレプリケーションメカニズムをインストールした後、 `start_prim`スクリプトでアプリケーションを起動します。
-
-
-![最新データを持つノードをプライマリとして強制的に起動する](/wp-content/uploads/2022/07/appli-11-bis.png)
-
-
-### 9. ALONE（緑色）に切り替わるまで待ちます {#9-wait-for-the-transition-to-alone-green}
-
-  * ノード1はALONE（緑色）状態になるはずです。これは、ノード1で`start_prim`スクリプトが実行されたことを意味します。
-
-
-![警告](/wp-content/uploads/2022/07/warning-small.png)
-
-
-ステータスがALONE（緑色）でアプリケーションが起動していない場合は、ノード1のアプリケーションログにある`start_prim`の出力メッセージを確認してください。
-
-
-![警告](/wp-content/uploads/2022/07/warning-small.png)
-
-
-ノード1がALONE（緑色）状態に達しない場合は、ノード1のモジュールログを使用してその理由を分析してください。
+このスクリプトは、2 つの Milestone 内部ファイルに仮想 IP アドレスを設定します
+    
+    
+    C:\ProgramData\Milestone\XProtect Management Server\ServerConfig.xml
+    
+    
+        <AuthorizationServerUri>http://**<仮想 IP>**/IDP</AuthorizationServerUri>
+    
+    
+    C:\Program Files\Milestone\XProtect Management Server\IIS\IDP\appsettings.json
+    
+    
+        "Authority": " http://**< virtual-ip>**/IDP"
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-クラスターが`WAIT (red) not uptodate - STOP (red) not uptodate`状態にある場合は、WAITノードを停止し、プライマリとして強制的に起動します。
+このステップでは、仮想 IP アドレスが前のステップで正しく設定されていると仮定します（スクリプトは、SafeKit コンソールに入力され、`userconfig.xml` に保存された仮想 IP アドレスを使用します）。
 
 
-![最初のノードはプライマリとして起動し、ALONEになります](/wp-content/uploads/2022/07/appli-11-bis-bis.png)
+![注](/wp-content/uploads/2022/07/note.png)
 
 
-### 10. ノード 1 のデスクトップで、 Milestone管理サーバーを停止し、仮想 IP アドレスに登録してから再起動します。 {#10-in-the-desktop-of-node-1-stop-then-register-on-the-vitual-ip-address-and-restart-the-milestone-management-server}
+### 8. コンソールで、最新のデータを持つノード 1 をプライマリとして起動します {#8-start-node-1-as-primary-in-the-console-the-node-with-up-to-date-data}
 
-画像に示されているメニューに従って、ノード1で以下の手順を実行してください。
+ステップ 7 以降、ノード 1 が最新のレプリケートされたディレクトリを持っていると仮定します。
 
-  * タスクバーにある**Milestone Management Server**アイコンを右クリックします。
-  * **管理サーバーサービスを停止します**
-  * 次に、 **Server Configurator...**を選択し、仮想 IP アドレスを登録します。
-  * **管理サーバーサービスを開始します**
-
-
-![注記](/wp-content/uploads/2022/07/note.png)
-
-
-この手順では、仮想アドレスへの接続を介して、ノード1の管理サーバーをSQLデータベース（ノード1上で実行されている）に登録します。
+ノード 1 をプライマリとして強制的に起動します。ノード 2 が起動すると、ノード 1 のすべてのデータがノード 2 にコピーされます。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-Milestone 2022 R3 バージョンより前は、登録時に内部Milestoneファイル内の仮想 IP アドレス設定が削除されている可能性があります。この場合、 [手順 7 ](#milestone-files)を繰り返してください。
+誤った選択をすると、両方のノードで古いデータを同期させてしまう危険性があります。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-注: Milestone 2020 R2 より前のバージョンを登録するには、 **暗号化設定の変更...**を使用してください。
+また、SafeKit はレプリケーションメカニズムをインストールし、その後 `start_prim` スクリプトでアプリケーションを起動できるように、アプリケーションはノード 1 で停止していると想定されます。
 
 
-![管理サーバーをMilestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)に登録します
+![最新のデータを持つノードをプライマリとして強制的に起動する](/wp-content/uploads/2022/07/appli-11-bis.png)
 
 
-### 11. Milestone管理クライアントがインストールされているノード1のデスクトップで、サービスとネットワークのURLに仮想IPアドレスを設定します。 {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network}
+### 9. ALONE（緑）に切り替わるまで待ちます {#9-wait-for-the-transition-to-alone-green}
+
+  * ノード 1 は ALONE（緑）状態に達する必要があります。これは、`start_prim` スクリプトがノード 1 で実行されたことを意味します。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-Milestone 2022 R3以降、この手順は不要となり、「サーバーコンフィギュレーター - サーバーの登録 - http://virtual-IP".で自動的に実行されるようになりました。
+ステータスが ALONE（緑）で、アプリケーションが起動していない場合は、ノード 1 のアプリケーションログで `start_prim` の出力メッセージを確認してください。
+
+
+![警告](/wp-content/uploads/2022/07/warning-small.png)
+
+
+ノード 1 が ALONE（緑）状態に達しない場合は、ノード 1 のモジュールログで原因を分析してください。
+
+
+![警告](/wp-content/uploads/2022/07/warning-small.png)
+
+
+クラスターが `WAIT (red) not uptodate - STOP (red) not uptodate` 状態に移行した場合は、WAIT ノードを停止し、プライマリとして強制的に起動します。
+
+
+![最初のノードはプライマリとして開始し、ALONE になります](/wp-content/uploads/2022/07/appli-11-bis-bis.png)
+
+
+### 10. ノード 1 のデスクトップで、Milestone Management Server を停止し、仮想 IP アドレスに登録してから再起動します {#10-in-the-desktop-of-node-1-stop-then-register-on-the-vitual-ip-address-and-restart-the-milestone-management-server}
+
+画像内のメニューに従って、ノード 1 で以下の項目を実行します
+
+  * タスクバーの **Milestone Management Server** アイコンを右クリックします。
+  * **管理サーバーサービスを停止**
+  * 次に、**Server Configurator ]** を選択し、仮想 IP アドレスを登録します。
+  * **管理サーバーサービスを開始**
+
+
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+この手順では、仮想アドレスへの接続を介して、ノード 1 の管理サーバーを SQL データベース（ノード 1 で実行中）に登録します。
+
+
+![警告](/wp-content/uploads/2022/07/warning-small.png)
+
+
+Milestone 2022 R3 バージョン以前では、登録時に Milestone 内部ファイルから仮想 IP アドレスの設定が削除されている可能性があります。この場合は、[ステップ 7](#milestone-files)を繰り返してください。
+
+
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+注：Milestone 2020 R2 より前のバージョンを登録するには、**[暗号化設定の変更...]** を使用します。
+
+
+![Milestone 2020+で管理サーバーを登録する](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+
+
+### 11. Milestone Management Client を搭載したノード 1 のデスクトップで、サービスとネットワークの URL に仮想 IP アドレスを設定します {#11-in-the-desktop-of-node-1-with-milestone-management-client-set-the-virtual-ip-address-in-urls-for-services-and-network}
+
+
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+Milestone 2022 R3 以降、この手順は不要になり、「Server Configurator - サーバーの登録 - http://virtual-IP".
 
 画像によると：
 
-  1. ノード 1 で**Milestone XProtect**の管理クライアントを開始します。
-  2. **ツール**メニューで、 **登録済みサービス**を選択します。 
-     * **登録済みサービスの追加/削除**ウィンドウで、リストからサービスを選択し、 **編集**をクリックします。
-     * **登録済みサービス**の編集ウィンドウで、サービスの URL アドレスを、仮想 IP アドレスを含む同じ URL アドレスに変更します。
-     * ウィンドウに表示されているすべてのサービスについて、これらの手順を繰り返してください。
-  3. 同じウィンドウで、 **Network**をクリックします。 
-     * **ネットワーク構成**ウィンドウで、サーバーの URL アドレスを、仮想 IP アドレスを含む同じ URL アドレスに変更します。
+  1. ノード 1 で **Milestone XProtect Management Client** 起動します。
+  2. **[ツール]** メニューで、**[登録済みサービス]** を選択します。 
+     * **「登録済みサービスの追加/削除」** ウィンドウで、リストからサービスを選択し、**「編集」** をクリックします。
+     * **「登録済みサービスの編集」** ウィンドウで、サービスの URL アドレスを、同じ URL アドレスで仮想 IP アドレスを含むものに変更します。
+     * ウィンドウに表示されているすべてのサービスについて、これらの手順を繰り返します。
+  3. 同じウィンドウで、**[ネットワーク]** をクリックします。 
+     * **[ネットワーク構成]** ウィンドウで、サーバーの URL アドレスを、仮想 IP アドレスを含む同じ URL アドレスに変更します。
 
 
-![ URLとMilestone管理クライアント](/wp-content/uploads/2022/07/milestone-url-vip.png)で仮想IPアドレスを設定します
+![URL と Milestone Management Client で仮想 IP アドレスを設定します](/wp-content/uploads/2022/07/milestone-url-vip.png)
 
 
-### 12. Milestone管理クライアントがインストールされているノード1のデスクトップで、管理者ロールを設定して、正しいフェイルオーバーが実行されるようにします {#role}
+### 12. Milestone Management Client を搭載したノード 1 のデスクトップで、管理者ロールを設定して、フェイルオーバーが正しく行われるようにします {#role}
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![注](/wp-content/uploads/2022/07/note.png)
 
 
-Milestone " Windows認証 " が Active Directory で構成されている場合、フェイルオーバー後にセカンダリ ノードの外部 AD からユーザー名とパスワードが取得されるため、特別な設定は不要です。
+Milestone 「Windows 認証」が Active Directory で構成されている場合、フェイルオーバー後にセカンダリノードの外部 AD でユーザー/パスワードが取得されるため、特別な構成は必要ありません。
 
-Milestone XProtect管理クライアントを起動すると、「 Windows認証」または「基本認証」 ](</wp-content/uploads/2022/07/milestone-management-server-connect.png>) [ 。
+Milestone XProtect Management Client 起動すると、「Windows 認証」または「基本認証」のいずれかで認証する必要があります（[スクリーンショットはこちらをクリックしてください](</wp-content/uploads/2022/07/milestone-management-server-connect.png>)）。
 
-**Milestone XProtect管理クライアント**を開き、 **セキュリティ/ロール**を開きます（画像を参照）。
+**Milestone XProtect Management Client** 開き、**[セキュリティ] / [ロール]** の順に選択します (画像参照)
 
-  * Windowsグループを**BUILTIN\Administrators**に設定します。これにより、セカンダリの管理者ユーザーは、「 Windows認証」を使用してセカンダリのMilestoneに接続できるようになります。
-  * フェイルオーバー後にセカンダリノードで確実に再認証を行うため、「基本認証」を使用するユーザー（図中の**Admin** ）を作成してください。「基本認証」の場合、ユーザー名とパスワードはSQLデータベースに保存され、フェイルオーバー後にセカンダリノードで取得されます。
-
-
-![警告](/wp-content/uploads/2022/07/warning-small.png)
-
-
-BUILTIN\Administrators グループを設定することで、ローカルのWindows管理者を使用してセカンダリ ノードで認証できるようになります。
-
-そうしないと、フェイルオーバー後にセカンダリ上のローカルアカウントWindowsで認証を行うことができません。
-
-これは、BUILTIN\Administrators グループの SID が両方のノードで同じであるためです。他のローカルグループやローカルユーザーの場合、SID が同じ名前であっても、両方のノードで異なるため、セカンダリノードでの認証はできません。
-
-
-![管理クライアントMilestoneで役割を設定します](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
-
-
-### 13. ノード2のデスクトップに移動し、内部ファイルMilestoneに仮想IPアドレスを設定します。 {#milestone-files-2}
-
-
-![注記](/wp-content/uploads/2022/07/note.png)
-
-
-Milestone 2022 R3 以降、この手順は不要となり、次のステップで「サーバーコンフィギュレーター - サーバーの登録 - http://virtual-IP" 」によって自動的に実行されます。
-
-管理者権限でPowerShellコマンドラインを開き、ノード2で以下のスクリプトを実行してください。
-    
-    
-    c: /safekit/modules/milestone/bin/UpdateAuthServerUri.ps1
-
-
-![注記](/wp-content/uploads/2022/07/note.png)
-
-
-このスクリプトは、2つの内部Milestoneファイルに仮想IPアドレスを設定します。
-    
-    
-    C:\ProgramData\ Milestone \ XProtect Management Server\ ServerConfig.xml
-    
-    
-        <AuthorizationServerUri> /IDP</AuthorizationServerUri> http://** < virtual-ip> **
-    
-    
-    C:\Program Files\ Milestone \ XProtect Management Server\ IIS \IDP\appsettings.json
-    
-    
-        「権限」: " http://**< virtual-ip>** /IDP
-
-### 14. ノード2のデスクトップで、仮想IPアドレスに管理サーバーを登録します。 {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
-
-  * ノード2のタスクバーで**Server Configurator**を選択し、仮想IPアドレスに登録します（画像を参照）。
-  * 次に、 **管理サーバーサービス**を停止します。
+  * Windows グループ **BUILTIN\Administrators** を設定します。これにより、セカンダリ上の管理者ユーザーは、「Windows 認証」を使用してセカンダリ上の Milestone に接続できるようになります。
+  * フェイルオーバー後にセカンダリノードで再認証されるように、「基本認証」 (画像では **Admin**) を使用してユーザーを作成します。「基本認証」の場合、ユーザー/パスワードは SQL データベースに保存され、フェイルオーバー後にセカンダリノードで取得されます。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-ノード2で登録を実行するユーザーのアカウントは、ノード1のMilestoneで管理者ロールを持っている必要があります。
+BUILTIN\Administrators グループを設定すると、ローカルの Windows 管理者を使用してセカンダリノードで認証できるようになります。
 
-ノード 2 のローカル管理者が登録を行う場合、組み込みグループWindows `BUILTIN\Administrators`管理クライアント / セキュリティ / 役割の[ステップ 12 ](#role)で設定されている必要があります。そうでない場合、登録は機能しません。
+そうしないと、フェイルオーバー後にセカンダリでローカルの Windows アカウントを使用した認証ができなくなります。
+
+これは、BUILTIN\Administrators グループが両方のノードで同じ SID を持つためです。他のローカルグループまたはローカルユーザーの場合、名前が同じであっても両方のノード間で SID が異なるため、セカンダリでは認証できません。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![Milestone Management Client でロールを設定する](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
 
-この手順では、仮想アドレスへの接続を介して、ノード2の管理サーバーを（ノード1で実行されている）SQLデータベースに登録します。
+### 13. ノード 2 のデスクトップに移動し、内部 Milestone ファイルで仮想 IP アドレスを設定します {#milestone-files-2}
+
+
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+Milestone 2022 R3 以降、この手順は不要であり、次の手順「Server Configurator - サーバーの登録 - http://virtual-IP"で自動的に実行されます。
+
+管理者として PowerShell コマンドラインで、ノード 2 でこのスクリプトを実行します
+    
+    
+    c:/safekit/modules/milestone/bin/UpdateAuthServerUri.ps1
+
+
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+このスクリプトは、2 つの Milestone 内部ファイルに仮想 IP アドレスを設定します
+    
+    
+    C:\ProgramData\Milestone\XProtect Management Server\ServerConfig.xml
+    
+    
+        <AuthorizationServerUri>http://**<仮想 IP>**/IDP</AuthorizationServerUri>
+    
+    
+    C:\Program Files\Milestone\XProtect Management Server\IIS\IDP\appsettings.json
+    
+    
+        "Authority": " http://**< virtual-ip>**/IDP"
+
+### 14. ノード 2 のデスクトップで、仮想 IP アドレス上の管理サーバーを登録します {#14-in-the-desktop-of-node-2-register-the-management-server-on-the-vitual-ip-address}
+
+  * ノード 2 のタスクバーで **Server Configurator** を選択し、仮想 IP アドレスに登録します（画像参照）。
+  * 次に、**管理サーバーサービスを停止します**。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-2022 R3 より前のバージョンのMilestoneでは、登録時に内部のMilestoneファイル内の仮想 IP アドレス構成が削除されている可能性があります。この場合は、 [手順 13 ](#milestone-files-2)を繰り返してください。
+ノード 2 で登録を実行するユーザーのアカウントは、ノード 1 の Milestone で管理者ロールを持っている必要があります。
+
+ノード 2 の Windows 管理者が登録を行う場合、[ステップ 12](#role)で Management Client / Security / Roles に `BUILTIN\Administrators` 設定されている必要があります。そうでない場合、登録は機能しません。
 
 
-![管理サーバーをMilestone 2020+ ](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)に登録します
+![注](/wp-content/uploads/2022/07/note.png)
 
 
-### 15. ノード2を開始します {#15-start-node-2}
-
-  * コンテキストメニューからノード2を起動します。
-  * 2番目の（緑色の）状態になるまでお待ちください。
+この手順では、仮想アドレスへの接続を介して、ノード 2 の管理サーバーを SQL データベース（ノード 1 で実行）に登録します。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-ノード2は、複製されたディレクトリの再同期（ノード1からノード2へのコピー）中は、SECOND（マゼンタ）状態のままです。
-
-複製されたディレクトリ内の再同期対象ファイルのサイズやネットワーク帯域幅によっては、時間がかかる場合があります。
-
-コピーの進行状況を確認するには、ノード2のモジュールログを詳細表示オプションを有効にして、ウィンドウを更新することを忘れないでください。
+2022 R3 より前のバージョンの Milestone では、登録によって内部 Milestone ファイル内の仮想 IP アドレス構成が削除されている可能性があります。この場合は、[手順 13](#milestone-files-2)を繰り返してください。
 
 
-![最初のノードはプライマリとして起動し、ALONEになります](/wp-content/uploads/2022/07/appli-11.png)
+![管理サーバーを Milestone 2020+に登録する](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+
+
+### 15. ノード 2 を起動する {#15-start-node-2}
+
+  * コンテキストメニューからノード 2 を開始します。
+  * SECOND（緑色）の状態になるまで待ちます。
+
+
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+ノード 2 は、レプリケートされたディレクトリを再同期している間（ノード 1 からノード 2 へのコピー）、SECOND（マゼンタ）の状態を維持します。
+
+レプリケートされたディレクトリで再同期するファイルのサイズやネットワーク帯域幅によっては、これに時間がかかる場合があります。
+
+コピーの進捗状況を確認するには、ウィンドウを更新することを忘れずに、詳細オプションを付けてノード 2 のモジュールログを参照してください。
+
+
+![最初のノードはプライマリとして開始し、ALONE になります](/wp-content/uploads/2022/07/appli-11.png)
 
 
 ### 16. クラスターが動作していることを確認します {#16-verify-that-the-cluster-is-operational}
 
-  * クラスターの状態がグリーン/グリーンであり、サービスがPRIMノードで実行され、SECONDノードで実行されていないことを確認してください。
+  * PRIM ノードでサービスが実行され、SECOND ノードでは実行されていない状態で、クラスターが緑/緑であることを確認します。
 
 
-この状態では、ファイル内部の変更のみがリアルタイムで反映されます。
+この状態では、ファイル内の変更のみがリアルタイムで複製されます。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-サービスのクライアントとなるコンポーネントは、仮想IPアドレスで構成する必要があります。構成は、DNS名を使用して行うことができます（DNS名が作成され、仮想IPアドレスに関連付けられている場合）。
+サービスのクライアントであるコンポーネントは、仮想 IP アドレスで構成する必要があります。構成は、DNS 名（DNS 名が作成され、仮想 IP アドレスに関連付けられている場合）で行うことができます。
 
 
-![ 2 番目のノードは SECOND ](/wp-content/uploads/2022/07/appli-12.png)として開始します
+![2 番目のノードは SECOND として開始されます](/wp-content/uploads/2022/07/appli-12.png)
 
 
-### 17. 録画サーバーで仮想IPアドレスを設定します。 {#17-configure-the-virtual-ip-address-in-recording-servers}
+### 17. 録画サーバーで仮想 IP アドレスを設定する {#17-configure-the-virtual-ip-address-in-recording-servers}
 
-  * 録画サーバーをインストールする場合は、インストールURLに仮想IPアドレスを指定してください。
-  * または、録画サーバー側で、次のフィールドに仮想IPアドレスを設定します。 
+  * インストール URL で仮想 IP アドレスを指定して、レコーディングサーバーをインストールします。
+  * または、レコーディングサーバー側で、以下のフィールドに仮想 IP アドレスを設定します 
         
-        C:\ProgramData\ Milestone \ XProtect Recording Server\ RecorderConfig.xml
+        C:\ProgramData\Milestone\XProtect Recording Server\RecorderConfig.xml
         
-            <server> <address>
+            <server><address>
         
-            <server> <authorizationserveraddress>
+            <server><authorizationserveraddress>
 
-  * Milestone管理クライアントとMilestoneスマートクライアントを仮想IPアドレスに接続します。
-
-
-### 18. ノード切り替え後、管理クライアントとスマートクライアントが正常に機能しない {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch}
-
-クラスタ構成のXProtect ® 管理サーバーにおいて、ノード切り替え後に Smart Client および管理クライアントで様々な問題が発生する場合があります。この問題は、ノード切り替えの前後でトークンが異なるノードで生成されること、およびトークン検証に必要な特定の証明書へのアクセスに問題が生じることに関連しています。解決策が提供されています (バージョン 2022 R3 から 2023 R2 については、 Milestone KB を参照してください)。
-
-この問題は、 Milestone 2023 R3で解決されています。
-
-### 18.テスト {#18-testing}
-
-  * PRIMノードを停止するには、コンテキストメニューをスクロールして「停止」をクリックします。**最初のテストではスワップを使用しないでください**（理由は下記参照）。
-  * 2番目のノードでフェイルオーバーが発生し、そのノードが単独状態（緑色）になることを確認してください。
-  * また、 Microsoft管理コンソール（MMC）を使用して、サービスのフェイルオーバーを確認します（ `stop_prim`スクリプトでノード1で停止し、 `start_prim`スクリプトでノード2で開始）。
+  * Milestone Management Client と Milestone Smart Client 仮想 IP アドレスに接続します。
 
 
-![警告](/wp-content/uploads/2022/07/warning-small.png)
+### 18. ノード切り替え後、Management Client と Smart Client が正常に機能しない {#18-management-client-and-smart-client-are-not-functioning-properly-after-node-switch}
 
+クラスター化された XProtect Management Server のセットアップでは、ノードの切り替え後に Smart Client と Management Client さまざまな問題が発生します。この問題は、ノードの切り替え前後に異なるノードで生成されるトークンと、トークンの検証に必要な特定の証明書へのアクセスに関する問題に関連しています。解決策が提供されています (バージョン 2022 R3 から 2023 R2 まで、Milestone KB を参照してください)。
 
-システムがPRIM-SECOND構成で、すべてが正常に動作している場合は、PRIMを停止し、ALONE状態となるnode2ですべてが正しく動作していることを確認します。すべてが正常であれば、node1で起動を開始し、node2から複製されたディレクトリを再同期します。
+この問題は Milestone 2023 R3 で解決されました。
 
-問題が発生した場合は、node2を停止し、node1をプライマリとして強制的に起動します。これにより、node1は停止時のローカルで正常なデータを使用して再起動します。
+### 18. テスト {#18-testing}
 
-この切り替え処理ではPRIMの停止と起動が行われ、停止直後にノード2からデータが再同期されるため、レプリケーション構成に問題がある場合、正常なデータで再起動する機会はなくなります。
+  * PRIM ノードのコンテキストメニューを下にスクロールして[停止]をクリックし、ノードを停止します。**最初のテストではスワップを使用しないでください**（理由は下記参照）。
+  * SECOND ノードでフェイルオーバーが発生し、ALONE（緑色）になっていることを確認します。
+  * また、Microsoft 管理コンソール（MMC）を使用して、サービスのフェイルオーバーを確認します（`stop_prim` スクリプトでノード 1 で停止し、`start_prim` スクリプトでノード 2 で開始）。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-ノード2でアプリケーションが起動せず、状態がALONE（緑）の場合は、ノード2のアプリケーションログにある`start_prim`スクリプトの出力メッセージを確認してください。
+システムが PRIM-SECOND で、すべてが正常に機能している場合は、PRIM を停止し、ALONE になる node2 で、すべてが正しく機能していることを確認します。すべてが問題なければ、node1 で開始を実行します。これにより、node2 からレプリケートされたディレクトリが再同期されます。
+
+問題が発生した場合は、node2 停止し、node1 をプライマリとして強制的に起動します。これにより、停止時のローカルに正常なデータで再起動されます。
+
+このスワップでは、PRIM の停止と再開が行われます。これにより、ノード 2 の停止直後に node2 からデータが再同期されます。レプリケーション構成に問題がある場合、正常なデータで再起動する機会は残りません。
 
 
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-ALONE（緑色）に到達しない場合は、ノード2のモジュールログを使用してその理由を分析してください。
+状態が ALONE（緑）のときにノード 2 でアプリケーションが起動していない場合は、ノード 2 のアプリケーションログで `start_prim` スクリプトの出力メッセージを確認してください。
 
 
-![注記](/wp-content/uploads/2022/07/note.png)
+![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-テストに関する詳細はユーザーガイドをご覧ください。
+ALONE（緑）に到達しない場合は、ノード 2 のモジュールログで原因を分析してください。
 
 
-![ PRIMサーバー上のモジュールを停止します](/wp-content/uploads/2022/07/appli-19.png)
+![注](/wp-content/uploads/2022/07/note.png)
+
+
+テストに関する詳細は、ユーザーガイドをご覧ください
+
+
+![PRIM サーバー上のモジュールを停止します](/wp-content/uploads/2022/07/appli-19.png)

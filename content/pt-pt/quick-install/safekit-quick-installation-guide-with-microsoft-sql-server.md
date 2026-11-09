@@ -1,33 +1,34 @@
 ---
-title: "Alta disponibilidade com Microsoft : Instale sqlserver.safe SafeKit failover SQL Server"
+title: "Alta Disponibilidade Microsoft SQL Server com SafeKit: Instale o Módulo sqlserver.safe para Failover"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
-description: "Implante o módulo sqlserver.safe para SafeKit para habilitar a replicação síncrona em tempo real e o failover automático para Microsoft SQL Server . Este guia orienta você na configuração de um cluster SANless de 2 nós para aplicações críticas sem armazenamento compartilhado."
+description: "Implemente o módulo sqlserver.safe para SafeKit para ativar a replicação síncrona em tempo real e o failover automático para Microsoft SQL Server. Este guia explica como configurar um cluster SANless de 2 nós para aplicações críticas sem armazenamento partilhado."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para Microsoft , SQL Server e SafeKit Limitações de Alta Disponibilidade, Visão Geral da solução SafeKit / Microsoft SQL Server , Instalação da solução SafeKit / Microsoft SQL Server no Windows ( sqlserver.safe ), Configuração passo a passo da solução SafeKit / Microsoft SQL Server , Demonstração da solução SafeKit mirror , 🔍 Explore o SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para Microsoft SQL Server, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução SafeKit/Microsoft SQL Server, Instalação da solução SafeKit/Microsoft SQL Server no Windows (sqlserver.safe), Configuração passo a passo da solução SafeKit/Microsoft SQL Server, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
-# Alta disponibilidade com Microsoft : Instale o módulo sqlserver.safe para SafeKit SQL Server {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
+# Alta Disponibilidade Microsoft SQL Server com SafeKit: Instale o Módulo sqlserver.safe para Failover {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-pt-pt app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## Visão geral da solução SafeKit / Microsoft SQL Server {#overview-of-the-safekit--microsoft-sql-server-solution}
+## Visão geral da solução SafeKit/Microsoft SQL Server {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-Para uma visão geral detalhada da solução, consulte **💡 [ O mais simples Microsoft SQL Server Alta disponibilidade: replicação síncrona de 2 nós e failover ](</pt-pt/solutions/sql-server-high-availability-synchronous-replication-failover/>)** .
+Para uma visão geral detalhada da solução, consulte **💡 [A Mais Simples Alta Disponibilidade Microsoft SQL Server: Replicação Síncrona e Failover de 2 Nós](</pt-pt/solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
 
-## Instalação da solução SafeKit / Microsoft SQL Server em Windows ( sqlserver.safe ) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
+## Instalação da solução SafeKit/Microsoft SQL Server no Windows (sqlserver.safe) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 
 ### Pré-requisitos {#prerequisites}
 
-  * Você precisa ter Microsoft SQL Server instalados em 2 nós (máquinas virtuais ou servidores físicos).
+  * É necessário ter Microsoft SQL Server instalado em 2 nós (máquinas virtuais ou servidores físicos).
   * SafeKit funciona com todas as versões do SQL, incluindo o SQL Express.
 
 
-  * Os bancos de dados do sistema SQL [ ](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases>) (como master.mdf e master.ldf) devem estar localizados nos mesmos diretórios em ambos os nós. Os diretórios serão configurados como replicados na etapa 4 da configuração passo a passo.
-  * O SQL Server também deve ser instalado no mesmo local do sistema de arquivos em ambos os nós, pois o banco de dados de recursos SQL somente leitura [ ](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database>) está localizado no diretório binário e é necessário para o failover. Este banco de dados não precisa ser replicado.
-  * Os bancos de dados SQL do usuário (.mdf e .ldf) devem estar localizados nos mesmos diretórios em ambos os nós. Os diretórios serão configurados como replicados na etapa 4 da configuração passo a passo.
+  * As [bases de dados do sistema SQL](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases>) (como master.mdf e mastlog.ldf) devem estar localizadas nos mesmos diretórios em ambos os nós. Os diretórios serão configurados como replicados no passo 4 da configuração passo a passo.
+  * O SQL também deve ser instalado no mesmo local no sistema de ficheiros em ambos os nós, porque a [base de dados de recursos SQL](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database>) de apenas leitura está localizada no binário e é necessária para a comutação de falha. Esta base de dados não precisa de ser replicada.
+  * As bases de dados de utilizador SQL (.mdf e .ldf) devem estar localizadas nos mesmos diretórios em ambos os nós. Os diretórios serão configurados como replicados no passo 4 da configuração passo a passo.
 
 
 
@@ -36,13 +37,13 @@ Para uma visão geral detalhada da solução, consulte **💡 [ O mais simples M
 {{%  insert-safekit-82-installation-module-windows-pt-pt app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## Configuração passo a passo da solução SafeKit / Microsoft SQL Server {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}
+## Configuração passo a passo da solução SafeKit/Microsoft SQL Server {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-pt-pt app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## Demonstração da solução SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## Demonstração da solução mirror SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-pt-pt  %}}

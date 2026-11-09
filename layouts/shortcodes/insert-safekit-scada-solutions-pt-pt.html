@@ -1,10 +1,11 @@
-{{/* Shortcode: insert-safekit-scada-solutions-pt-pt — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.10 | Translation LLM | 30 expressions */}}
+{{/* Shortcode: insert-safekit-scada-solutions-en — 1 instance in 1 file */}}
 {{/* Parameters: app */}}
 {{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
 
 
 
-## O SafeKit oferece duas soluções para redundância e alta disponibilidade de um software {{ .Get "app" }} {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
+## SafeKit oferece duas soluções para redundância e alta disponibilidade de um software {{ .Get "app" }} {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
 
 ### Redundância e alta disponibilidade ao nível da aplicação {#redundancy-and-high-availability-at-the-application-level}
 
@@ -14,19 +15,21 @@ Neste tipo de solução, apenas os dados da aplicação são replicados. E apena
 ![Redundância ao nível da aplicação para um software {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
 
 
-Com esta solução, é necessário escrever scripts de reinício para reiniciar a aplicação. A solução é independente da plataforma e funciona com aplicações em máquinas físicas, máquinas virtuais e na nuvem. É suportado qualquer hipervisor (VMware, Hyper-V...).
+Com esta solução, é necessário escrever scripts de reinicialização para reiniciar a aplicação. Esta solução é independente da plataforma e funciona com aplicações em máquinas físicas, máquinas virtuais e na nuvem. Qualquer hipervisor é suportado (VMware, Hyper-V ...).
 
-  * Solução para uma nova aplicação (scripts de reinício a escrever): 💡 [Windows](/pt-pt/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/pt-pt/solutions/linux-high-availability-software-synchronous-replication-failover/)
+  * Solução para uma nova aplicação (reiniciar os scripts para escrever): 💡 [Windows](/pt-pt/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/pt-pt/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
 ### Redundância e alta disponibilidade ao nível da máquina virtual {#redundancy-and-high-availability-at-the-virtual-machine-level}
 
-Neste tipo de solução, o software {{ .Get "app" }} é colocado numa máquina virtual. A máquina virtual (VM) completa é replicada e reiniciada (aplicação + OS).
+Neste tipo de solução, o software {{ .Get "app" }} é colocado dentro de uma máquina virtual. A máquina virtual (VM) completa é replicada e reiniciada (aplicação + sistema operativo).
 
 
-![Redundância ao nível da máquina virtual para um software {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+![Redundância ao nível da máquina virtual para uma {{ .Get "app" }} de software](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
 
 
-A vantagem desta solução é que não há scripts de reinício a escrever por aplicação. A solução é genérica para qualquer software {{ .Get "app" }}. Funciona com Windows/Hyper-V e Linux/KVM, mas não com VMware. É uma solução ativo/ativo com várias máquinas virtuais replicadas e reiniciadas entre dois nós.
+A vantagem desta solução é que não é necessário escrever scripts de reinício para cada aplicação. Esta solução é genérica para qualquer software {{ .Get "app" }}. Funciona com Windows/Hyper-V e Linux/KVM, mas não com VMware. Esta é uma solução ativa/ativa com várias máquinas virtuais replicadas e reiniciadas entre dois nós.
 
-  * Solução para uma nova aplicação (sem script de reinício a escrever): 💡 [Windows/Hyper-V](/pt-pt/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/pt-pt/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+  * Solução para uma nova aplicação (não é necessário escrever um script de reinicialização): 💡 [Windows/Hyper-V](/pt-pt/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/pt-pt/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+

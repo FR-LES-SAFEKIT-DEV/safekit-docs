@@ -1,39 +1,41 @@
-{{/* Shortcode: insert-safekit-network-isolation-es — 3 instances in 3 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.2 | Translation LLM | 29 expressions */}}
+{{/* Shortcode: insert-safekit-network-isolation-en — 3 instances in 3 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
 
 
 
-## ¿Cuáles son los distintos escenarios en caso de aislamiento de red en un clúster? {#isolation}
+## ¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster? {#isolation}
 
-### Una sola red {#a-single-network}
+### Una única red {#a-single-network}
 
-Cuando se produce un aislamiento de red, el comportamiento predeterminado es el siguiente:
+Cuando hay un aislamiento de red, el comportamiento predeterminado es:
 
-  * al perderse los latidos de cada nodo, cada uno pasa a ALONE y ejecuta la aplicación con su dirección IP virtual (doble ejecución de la aplicación que modifica sus datos locales),
-  * al solucionarse el aislamiento, se fuerza a un nodo ALONE a detenerse y a resincronizar sus datos desde el otro nodo,
-  * al final, el clúster queda en PRIM-SECOND (o SECOND-PRIM según la detección de dirección IP virtual duplicada realizada por Windows).
+  * a medida que se pierden heartbeats de cada nodo, cada nodo pasa a ALONE y ejecuta la aplicación con su dirección IP virtual (doble ejecución de la aplicación que modifica sus datos locales),
+  * Cuando se repara el aislamiento, un nodo ALONE se ve obligado a detenerse y a resincronizar sus datos desde el otro nodo
+  * Al final, el clúster es PRIM-SECOND (o SECOND-PRIM, según la detección de direcciones IP virtuales duplicadas realizada por Windows).
 
 
 ### Dos redes con una red de replicación dedicada {#two-networks-with-a-dedicated-replication-network}
 
-Cuando se produce un aislamiento de red, el comportamiento con una red de replicación dedicada es el siguiente:
+Cuando hay un aislamiento de red, el comportamiento con una red de replicación dedicada es el siguiente:
 
   * se implementa una red de replicación dedicada en una red privada,
-  * se pierden los latidos en la red de producción (red aislada),
-  * los latidos de la red de replicación funcionan (red no aislada),
-  * el clúster permanece en el estado PRIM/SECOND.
+  * se pierden heartbeats en la red de producción (red aislada),
+  * Heartbeats en la red de replicación funcionan (no en una red aislada),
+  * El clúster permanece en el estado PRIM/SECOND.
 
 
-### Una sola red y un comprobador de split-brain {#a-single-network-and-a-splitbrain-checker}
+### Una única red y un checker split-brain {#a-single-network-and-a-splitbrain-checker}
 
-Cuando se produce un aislamiento de red, el comportamiento con un comprobador de split-brain es el siguiente:
+Cuando hay un aislamiento de red, el comportamiento con un checker split-brain es:
 
-  * se ha configurado un comprobador de split-brain con la dirección IP de un testigo (normalmente un router),
-  * el comprobador actúa cuando un servidor pasa de PRIM a ALONE o de SECOND a ALONE,
-  * en caso de aislamiento de red, antes de pasar a ALONE, ambos nodos comprueban la dirección IP,
-  * el nodo que puede acceder a la dirección IP pasa a ALONE y el otro pasa a WAIT,
-  * al solucionarse el aislamiento, el nodo WAIT resincroniza sus datos y pasa a SECOND.
+  * se ha configurado un checker split-brain con la dirección IP de un testigo (normalmente un enrutador),
+  * el checker split-brain funciona cuando un servidor pasa de PRIM a ALONE o de SECOND a ALONE,
+  * En caso de aislamiento de la red, antes de pasar a ALONE, ambos nodos prueban la dirección IP
+  * el nodo que puede acceder a la dirección IP pasa a ALONE, el otro pasa a WAIT,
+  * Cuando se repara el aislamiento, el nodo WAIT resincroniza sus datos y se convierte en SECOND.
 
 
-Nota: Si el testigo está caído o desconectado, ambos nodos pasan a WAIT y la aplicación deja de ejecutarse. Por eso debe elegir un testigo robusto, como un router.
+Nota: Si el testigo está inactivo o desconectado, ambos nodos pasan a WAIT y la aplicación deja de ejecutarse. Por eso debe elegir un testigo robusto como un enrutador.
+

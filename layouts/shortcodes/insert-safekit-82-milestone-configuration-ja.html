@@ -1,333 +1,331 @@
-{{/* Shortcode: insert-safekit-82-milestone-configuration-ja */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.5 | Translation LLM | 43 expressions */}}
+{{/* Shortcode: insert-safekit-82-milestone-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-milestone-xprotect-management-server.md */}}
 
 
 
-### 前提条件
+### 前提条件 {#prerequisites}
 
-  * {{ .Get "app" }} アプリケーションは 2 つのノードにインストールされます。
-  * 複製されるデータの合計は数テラバイトに制限されており、これを超えると再同期にかかる時間が大幅に長くなります。
-  * ノード間の相互接続は最低 1Gb/秒 (再同期を高速化するには 10Gb/秒を推奨)。
-  * IP フェイルオーバーには、両方のノードが同じ LAN または拡張 LAN (L2) 上にある必要があります。ルーティングされた L3 ネットワークはサポートされていません。
-
-
-⚠️ この構成には **Milestone XProtect 2023 R3 以降**が必要です。以前のバージョンについては、🛠️ [こちらの記事](/ja/quick-install/safekit-quick-installation-guide-old-milestone-configuration/)を参照してください。
+  * {{ .Get "app" }} は 2 つのノードにインストールされています。
+  * レプリケートされるデータの総量は数テラバイトに制限されます。これを超えると、再同期に要する時間が長くなります。
+  * ノード間の相互接続は最低 1Gb/s（より高速な再同期のためには 10Gb/s を推奨）。
+  * IP フェイルオーバーには、両方のノードが同じ LAN または拡張 LAN（L2）上にある必要があります。ルーティングされた L3 ネットワークはサポートされていません。
 
 
-### 1. SafeKit コンソールを起動します
+⚠️ この設定には、**Milestone XProtect 2023 R3 以降が**必要です。以前のバージョンについては、🛠️ [こちらの記事をご覧ください](/ja/quick-install/safekit-quick-installation-guide-old-milestone-configuration/)。
 
-  * `http://localhost:9010` に接続して、一つのクラスター ノード上のブラウザーで Web コンソールを起動します。
-  * ユーザー名として「`admin`」を入力し、インストール中に定義したパスワードを入力します。
+### 1. SafeKit コンソールを起動します {#1-launch-the-safekit-console}
 
-
-クラスター外部のワークステーション上のブラウザーでコンソールを実行することもできます。
-
-⚠️ SafeKit の設定は、単一のブラウザから両方のノードで実行されます。
-
-ℹ️ Web コンソールを保護するには、🛠️ [11\ を参照してください。ユーザーズガイドのSafeKit Webサービス](/ja/resources/safekit-user-guide-82/#https)のセキュリティ保護。
+  * いずれかのクラスターノードで、`http://localhost:9010` に接続してウェブコンソールをブラウザで起動します。
+  * ユーザー名に `admin` と入力し、インストール時に定義したパスワードを入力します。
 
 
-![SafeKit Web コンソールを起動して、{{ .Get "app" }} クラスターを構成します。](/wp-content/uploads/2024/03/01-login-large.png)
+コンソールは、クラスター外部のワークステーションのブラウザーで実行することもできます。
+
+⚠️ SafeKit の設定は、単一のブラウザから両方のノードで行います。
+
+ℹ️ Web コンソールを保護するには、ユーザーガイドの 🛠️ [11. SafeKit Web サービスの保護を](/ja/resources/safekit-user-guide-82/#https)参照してください。
 
 
-### 2. ノードアドレスを設定する
+![SafeKit ウェブコンソールを起動して、{{ .Get "app" }} クラスターを設定します](/wp-content/uploads/2024/03/01-login-large.png)
 
-  * ノード IP アドレスを入力し、`Tab key` を押して接続を確認し、ノード名を入力します。 node1 または node2 の色が赤色の場合は、両方のノードへのブラウザーの接続を確認し、🛠️ [トラブルシューティング ](/ja/resources/safekit-user-guide-82/#Troubleshooting) について両方のノードのファイアウォールを確認してください。
-  * 次に、`Save and apply` をクリックして構成を保存します。
+
+### 2. ノードアドレスの設定 {#2-configure-node-addresses}
+
+  * ノードの IP アドレスを入力し、`Tab key` を押して接続性を確認し、ノード名を入力します。node1 または node2 のいずれかが赤色の場合、両方のノードへのブラウザの接続性を確認し、両方のノードのファイアウォールを 🛠️ [トラブルシューティング](/ja/resources/safekit-user-guide-82/#Troubleshooting)のために確認します。
+  * 次に、`Save and apply` をクリックして設定を保存します。
   * 両方のノードで `Success` ✅ メッセージを確認します。
-  * 構成 `Failure` ❌ が一つのノードで発生する場合は、そのノードの ▼ アコーディオンを開いてメッセージを確認します。 SafeKit AI 🤖 を使用できることに注意してください。
+  * あるノードで構成の `Failure` ❌ が発生した場合は、そのノードの▼アコーディオンを開いてメッセージを確認してください。AI 🤖 SafeKit を使用して支援を受けることができます。
 
 
-ℹ️ 必要に応じて、新しい `LAN and nodes` (最初の ➕) を追加して、二番目のハートビートと専用のレプリケーション ネットワークを作成できます。
+ℹ️ 必要に応じて、新しい `LAN and nodes`（最初の ➕）を追加して、2 番目のハートビートと専用のレプリケーションネットワークを作成できます。
 
-ℹ️ `Advanced configuration`をクリックすると、`cluster.xml`ファイルが表示されます。このファイルはコンソールによって自動的に設定され、ノードにデプロイされます。
-
-
-![{{ .Get "app" }} クラスターのノードを入力します。](/wp-content/uploads/2024/03/02-cluster-edit.png)
+ℹ️ `Advanced configuration` をクリックすると、`cluster.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、ノードにデプロイされます。
 
 
-### 3. モジュールを選択します
+![{{ .Get "app" }} クラスターのノードを入力します](/wp-content/uploads/2024/03/02-cluster-edit.png)
+
+
+### 3. モジュールを選択します {#3-select-a-module}
 
   * `New module` で、`{{ .Get "mod" }}.safe` モジュールをクリックします。
 
 
-ℹ️ 上部の青いバナーで、🛜 `node1` はコンソール接続ノードを表します。このノードは、必要に応じてリクエストを `node2` に中継します。
+ℹ️ 上部の青いバナーで、🛜 `node1` コンソール接続ノードを表します。このノードは、必要に応じて `node2` にリクエストを中継します。
 
-ℹ️ コンソールは次のものを探します `xxx.safe` で `Application_Modules/generic/` 接続ノード上のディレクトリ (`node1`) インストール中にそこにモジュールを配置した場合。
+ℹ️ インストール時にモジュールを配置した場合、コンソールは接続ノード (`node1`) の `Application_Modules/generic/` ディレクトリで `xxx.safe` を検索します。
 
 
 ![{{ .Get "app" }} のモジュールを選択してください](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 4. モジュールの構成
+### 4. モジュールを構成する {#4-configure-the-module}
 
-  * `Module startup at boot` では、起動時に遅延なくモジュールを自動起動するように選択します。
-  * `Macros` / `SERVICES` には、アプリケーションのサービス名を起動順にカンマで区切って入力します。 [Milestone XProtect サービス 🖼️](/wp-content/uploads/2025/05/milestone-services.png) の視覚的な例については、このスクリーンショットを参照してください。
-  * `Heartbeat networks` では、レプリケーションが行われる単一のハートビート ネットワークが必要です。ステップ 2 でプライベート LAN を追加した場合は、プライベート LAN 上のレプリケーション フローで二つのハートビートを構成できます。
-  * で `Virtual IP addresses`、仮想を入力します IP 住所。仮想 IP 住所は標準です IP 同じ住所 IP ネットワーク (同じサブネット) IP 両方のノードのアドレス。  
-アプリケーションクライアントは仮想 IP 住所 (または DNS 仮想に関連付けられた名前 IP 住所）。  
-仮想 IP 障害発生時にはアドレスが自動的に切り替わります。
-  * `Replicated directories` で、レプリケートするディレクトリのパスを設定します。これらが両方のノードに存在し、アプリケーション データが含まれていることを確認します。  
-データとログのレプリケーションはデータベースにとって不可欠です。  
-必要に応じて、追加の複製ディレクトリを作成できます。  
-[Milestone XProtect SQL レプリケーション 🖼️](/wp-content/uploads/2025/05/milestone-replication.png) の視覚的な例については、このスクリーンショットを参照してください。
-  * `Checkers` では、必要に応じて、プロセス監視、カスタム チェッカー、TCP、ping、スプリット ブレイン チェッカーなどのチェッカーを構成できます。  
-たとえば、`Monitored processes/services` にプロセス名が表示されている場合、障害が発生した場合は再起動アクションで監視されます。間違ったプロセス名を設定すると、モジュールが開始直後に停止します。
+  * `Module startup at boot` で、遅延なしで起動時にモジュールを自動起動するように選択します。
+  * `Macros`/`SERVICES` に、アプリケーションのサービス名を起動順にコンマで区切って入力します。Milestone [Milestone XProtect サービスの視覚的な例については、このスクリーンショットを参照してください 🖼️](/wp-content/uploads/2025/05/milestone-services.png)。
+  * `Heartbeat networks` では、レプリケーションが行われるハートビートネットワークを 1 つだけ持つ必要があります。ステップ 2 でプライベート LAN を追加した場合は、プライベート LAN でレプリケーションフローを持つ 2 つのハートビートを構成できます。
+  * `Virtual IP addresses` に、仮想 IP アドレスを入力します。仮想 IP アドレスは、両方のノードの IP アドレスと同じ IP ネットワーク (同じサブネット) 内の標準 IP アドレスです。  
+アプリケーションクライアントは、仮想 IP アドレス（または仮想 IP アドレスに関連付けられた DNS 名）で設定する必要があります。  
+障害発生時には、仮想 IP アドレスが自動的に切り替わります。
+  * `Replicated directories` で、レプリケートするディレクトリのパスを設定します。両方のノードに存在し、アプリケーションデータが含まれていることを確認します。  
+データとログのレプリケーションは、データベースにとって不可欠です。  
+必要に応じて、追加のレプリケートディレクトリを作成できます。  
+[Milestone XProtect SQL レプリケーションの視覚的な例については、こちらのスクリーンショットをご覧ください 🖼️](/wp-content/uploads/2025/05/milestone-replication.png)。
+  * `Checkers` では、必要に応じて、プロセス監視、カスタムチェッカー、TCP、ping、またはスプリットブレインチェッカーなどのチェッカーを設定できます。  
+たとえば、プロセス名が `Monitored processes/services` に表示されている場合、障害発生時に再起動アクションで監視されます。誤ったプロセス名を設定すると、モジュールは起動直後に停止します。
 
 
 ⚠️ SQL が管理サーバー上にある場合：
 
-  * [SQL システムデータベース](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases)（master.mdf、mastlog.ldf など）は、両方のノードの同じディレクトリに置く必要があります。ディレクトリは複製対象として構成する必要があります。
-  * SQL も両方のノードのファイルシステム上の同じ場所にインストールする必要があります。読み取り専用の [SQL リソースデータベース](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database)がバイナリ内にあり、フェイルオーバーに必要なためです。このデータベースを複製する必要はありません。
-  * Milestone の SQL データベース（.mdf と .ldf）は、両方のノードの同じディレクトリに置く必要があります。ディレクトリは複製対象として構成する必要があります。Milestone データベースの一覧は、こちらの[記事](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html)を参照してください。
+  * [SQL システムデータベース](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases)(master.mdf や mastlog.ldf など) は、両方のノードで同じディレクトリに配置する必要があります。これらのディレクトリは、レプリケートされるように構成する必要があります。
+  * 読み取り専用の[SQL リソースデータベースは](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database)バイナリにあり、フェイルオーバーに必要であるため、SQL は両方のノードのファイルシステムの同じ場所にインストールする必要があります。このデータベースを複製する必要はありません。
+  * SQL Milestone データベース（.mdf および .ldf）は、両方のノードで同じディレクトリに配置する必要があります。ディレクトリはレプリケートされるように構成する必要があります。この[記事](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html)によると、Milestone データベースは次のとおりです。
 
 
-ℹ️ `Advanced configuration`をクリックすると、`userconfig.xml`ファイルが表示されます。このファイルはコンソールによって自動的に設定され、再起動スクリプトを使用してノードにデプロイされます。
+ℹ️ `Advanced configuration` をクリックすると、`userconfig.xml` ファイルが表示されます。このファイルはコンソールによって自動的に作成され、再起動スクリプトを使用してノードにデプロイされます。
 
-ℹ️ SafeKit 構成を適用すると、Windows サービスの `startup type` は自動的に `Manual` に設定されます。これにより、サービスはシステム起動時に自動的には開始されず、モジュール自体の開始時にのみ開始されます。
-
-
-![{{ .Get "app" }}モジュール設定を入力します](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+ℹ️ SafeKit の設定を適用すると、Windows サービスでサービスの `startup type` が自動的に `Manual` に設定されます。これにより、システム起動時にサービスが自動的に開始されることはなく、モジュール自体が開始された場合にのみ開始されます。
 
 
-### 5. スクリプトの編集 (オプション)
-
-  * この手順はオプションであり、前の手順で定義したサービスを再起動するように再起動スクリプトがすでに構成されているため、ほとんどの場合はスキップできます。
-  * したがって、`Next step` を直接クリックしてください。
-  * `start_prim.ps1` は、`SERVICES` リストで指定された順序ですべてのサービスを開始し、Milestone が使用する `IIS application pools` も開始します。`stop_prim.ps1` は逆の順序ですべてのサービスを停止します。
-  * さらに、`start_prim.ps1` は各サービスの起動をチェックし、サービスが正しく起動できない場合はモジュールを停止します。
+![{{ .Get "app" }} モジュールの設定を入力します](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
 
 
-![{{ .Get "app" }}モジュール設定を入力します](/wp-content/uploads/2026/09/28-module-edit-script.png)
+### 5. スクリプトを編集する（任意） {#5-edit-scripts-optional}
+
+  * このステップはオプションであり、ほとんどの場合スキップできます。再起動スクリプトは、前のステップで定義されたサービスを再起動するようにすでに事前設定されています。
+  * `Next step` を直接クリックしてください。
+  * `start_prim.ps1`、`SERVICES` リストで指定された順序ですべてのサービスを起動し、Milestone で使用される `IIS application pools` を起動します。stop_prim.ps1 `stop_prim.ps1` すべてのサービスを逆順で停止します。
+  * さらに、`start_prim.ps1` 各サービスの起動をチェックし、いずれかのサービスが正しく起動しなかった場合はモジュールを停止します。
 
 
-### 6. 通信の暗号化（オプション）
+![{{ .Get "app" }} モジュールの設定を入力します](/wp-content/uploads/2026/09/28-module-edit-script.png)
+
+
+### 6. 通信の暗号化（オプション） {#6-communication-encryption-optional}
 
   * ノード間の通信の暗号化を維持します。
 
 
-![{{ .Get "app" }}モジュールの通信暗号化](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+![{{ .Get "app" }} モジュールの通信暗号化](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
-### 7. 保存して適用する
+### 7. 保存して適用 {#7-save-and-apply}
 
-  * `Save and apply` 両方のノードの構成とスクリプト。
-
-
-![{{ .Get "app" }} モジュール構成を保存して適用します。](/wp-content/uploads/2025/05/08-module-save-1.png)
+  * 両方のノードで設定とスクリプト `Save and apply`。
 
 
-### 8. 構成が成功したことを確認する
+![{{ .Get "app" }} モジュールの構成を保存して適用します](/wp-content/uploads/2025/05/08-module-save-1.png)
+
+
+### 8. 設定が正常に完了したことを確認する {#8-verify-successful-configuration}
 
   * 両方のノードで `Success` ✅ メッセージを確認し、`Monitor modules` をクリックします。
-  * 構成 `Failure` ❌ が一つのノードで発生する場合は、そのノードの ▼ アコーディオンを開いてメッセージを確認します。 SafeKit AI 🤖 を使用できることに注意してください。
+  * あるノードで構成の `Failure` ❌ が発生した場合は、そのノードの▼アコーディオンを開いてメッセージを確認してください。AI 🤖 SafeKit を使用して支援を受けることができます。
 
 
+![{{ .Get "app" }} モジュールの設定が成功したことを確認します](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-![{{ .Get "app" }} モジュール構成の成功を確認します。](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+### 9. 最新のデータでノードを起動する {#9-start-the-node-with-up-to-date-data}
 
-
-### 9. 最新のデータを使用してノードを起動します
-
-  * ノード 1 に最新のレプリケートされたディレクトリがある場合は、それを選択し、⋯ `Force start` ▶ `As primary` を選択します。
+  * ノード 1 に最新のレプリケートされたディレクトリがある場合は、それを選択して⋯ `Force start` ▶ `As primary` ] を選択します。
 
 
 ノード 2 が起動すると、すべてのデータがノード 1 からノード 2 にコピーされます。
 
-⚠️ 選択を誤ると、両方のノードで古いデータが同期される危険があります。
+⚠️ 間違った選択をすると、両方のノードで古いデータを同期させてしまう危険性があります。
 
-⚠️ {{ .Get "app" }} アプリケーションがノード 1 で停止していることも想定されており、SafeKit がレプリケーション メカニズムをインストールしてから、`start_prim` スクリプトでアプリケーションを起動します。
+⚠️ また、SafeKit はレプリケーションメカニズムをインストールし、`start_prim` スクリプトでアプリケーションを起動できるように、ノード 1 で {{ .Get "app" }} アプリケーションが停止していることも前提としています。
 
-⚠️ 以降の起動には `Start` を使用します: SafeKit は最新のサーバーを保持します。 `As primary` の起動は、初回または例外的な操作中の特別な起動です。
-
-
-![最新のデータを使用して {{ .Get "app" }} ノードをプライマリとして開始します。](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+⚠️ 2 回目以降の起動には `Start` 使用してください。SafeKit は最新のサーバーを保持します。「Starting `As primary` は、初回起動時または例外的な操作時に使用する特別な起動方法です。
 
 
-### 10. ALONE (緑色) への遷移を待ちます。
-
-  * ノード 1 は ALONE (緑色) 状態になるはずです。これは、仮想 IP が設定され、`start_prim` スクリプトがノード 1 で実行されたことを意味します。
+![最新のデータを持つ {{ .Get "app" }} ノードをプライマリとして起動します](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
-⚠️ ALONE (緑) に達していない場合、またはアプリケーションが起動していない場合は、ノード 1 の [module ログ 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) を使用して理由を分析します。
+### 10. ALONE（緑）に切り替わるまで待ちます {#10-wait-for-the-transition-to-alone-green}
 
-  * 🔍をクリックしてください **ログ** のアイコン `node1` モジュール ログを開いて、チェッカーがエラーを検出してモジュールを停止したなどのエラー メッセージを探します。
-  * ログ内の `start_prim` をクリックすると、スクリプトの出力メッセージが右側に表示され、サービスが正しく開始されなかったなどのエラーを検出できます。
-  * ログ メッセージに関する支援として、SafeKit AI 🤖 を使用してください。
+  * ノード 1 は ALONE（緑）状態に達する必要があります。これは、仮想 IP が設定され、`start_prim` スクリプトがノード 1 で実行されたことを意味します。
 
 
-⚠️ クラスターが `WAIT (red) not uptodate, STOP (red) not uptodate` 状態の場合は、WAIT ノードを停止し、[ 強制的にプライマリ 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) として起動します。
+⚠️ ALONE（緑）に到達しない場合、またはアプリケーションが起動しない場合は、ノード 1 の[モジュールログ 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png)で原因を分析してください。
+
+  * `node1` の 🔍**ログ**アイコンをクリックしてモジュールログを開き、チェッカーがエラーを検出してモジュールを停止するなどのエラーメッセージを探します。
+  * ログの `start_prim` をクリックします。スクリプトの出力メッセージが右側に表示され、サービスが正しく起動していないなどのエラーを検出できます。
+  * ログメッセージについては、SafeKit AI 🤖 をご利用ください。
 
 
-![最初の {{ .Get "app" }} ノードはプライマリとして開始され、ALONE になります。](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+⚠️ クラスターが `WAIT (red) not uptodate, STOP (red) not uptodate` 状態の場合は、WAIT ノードを停止し、[プライマリとして強制的に起動してください 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。
 
 
-### 11. ノード 1 のデスクトップで Milestone Management Server を停止し、仮想 IP アドレスに登録して Milestone KB の内容を適用し、再起動する
+![最初の {{ .Get "app" }} ノードはプライマリとして起動し、ALONE になります](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
-画像のメニューに従い、ノード 1 で以下の手順を実行します。
 
-  * SafeKit コンソールの **ALONE** メニューで **Checkers** と **Process/Service Monitoring** を無効にし、Management Server Service の停止時の誤検出を防ぎます（[チェッカーを一時停止 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)）。
+### 11. ノード 1 のデスクトップで、停止してから仮想 IP アドレスに登録し、Milestone KB を適用して Milestone Management Server を再起動します {#11-in-the-desktop-of-node-1-stop-then-register-on-the-virtual-ip-address-apply-the-milestone-kb-and-restart-the-milestone-management-server}
+
+画像内のメニューに従って、ノード 1 で以下の項目を実行します
+
+  * SafeKit コンソールの **ALONE** メニューを使用して、**チェッカー**と**プロセス/サービス監視を**無効にし、管理サーバーサービスを停止する際の誤検出を防ぎます（[チェッカーを一時停止します 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)）。
   * タスクバーの **Milestone Management Server** アイコンを右クリックします。
-  * **Stop Management Server Service**
-  * 次に **Server Configurator...** を選択し、仮想 IP アドレスを登録します。
-  * ノード 1 の **ServerConfig.xml を編集**します。
-    * "C:/ProgramData/Milestone/XProtect Management Server" に移動し、元の ServerConfig.xml ファイルをバックアップします。
-    * 任意のテキストエディターで ServerConfig.xml を開きます（管理者権限が必要）。
-    * 以下の `XXX.XXX.XXX.XXX` を実際の仮想 IP アドレスに置き換えます。
+  * **管理サーバーサービスを停止**
+  * 次に、**Server Configurator ]** を選択し、仮想 IP アドレスを登録します。
+  * ノード 1 の **ServerConfig.xml 編集します**。 
+    * 「C:/ProgramData/Milestone/XProtect Management Server」に移動し、元の ServerConfig.xml ファイルをバックアップします。
+    * ServerConfig.xml テキストエディターで開きます（管理者権限が必要です）。
+    * `XXX.XXX.XXX.XXX` を実際の仮想 IP アドレスに置き換えてください
     * `<Failover>...`
     * `<VirtualAddress>`
     * `XXX.XXX.XXX.XXX`
     * `</VirtualAddress>`
     * `...</Failover>`
-    * `<ClusterMember>false</ClusterMember>` を `true` に変更します
-    * 以下に `http://NODE1_FQDN:9010`（ワークグループの場合は NODE1 のホスト名）を設定します。
+    * `<ClusterMember>false</ClusterMember>` `true` に変更します
+    * 以下に `http://NODE1_FQDN:9010` (またはワークグループの場合は NODE1 ホスト名) を設定します 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE1_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
-    * 詳細は、こちらの **[Milestone ナレッジベース記事](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**を参照してください。
-  * **Start Management Server Service**
-  * SafeKit コンソールの **ALONE** メニューで **Checkers** と **Process/Service Monitoring** を有効にします（[チェッカーを有効化 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)）。
+    * 詳細については、こちらの **[Milestone KB を](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)** 参照してください。
+  * **管理サーバーサービスを開始**
+  * SafeKit コンソールの **ALONE** メニューを使用して、**チェッカー**と**プロセス/サービス監視を**有効にします（[チェッカーを有効にする 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)）。
 
 
-ℹ️ この手順は、仮想アドレスへの接続を通じて、ノード 1 の管理サーバーを SQL データベース（ノード 1 で稼働）に登録します。
+ℹ️ この手順では、仮想アドレスへの接続を介して、ノード 1 の管理サーバーを SQL データベース（ノード 1 で実行中）に登録します。
 
 
-![Milestone 2020+ で管理サーバーを登録](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+![Milestone 2020+で管理サーバーを登録する](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 12. ノード 2 のデスクトップで管理サーバーを仮想 IP アドレスに登録する
+### 12. ノード 2 のデスクトップで、仮想 IP アドレス上の管理サーバーを登録します {#12-in-the-desktop-of-node-2-register-the-management-server-on-the-virtual-ip-address}
 
   * ノード 2 のタスクバーで **Server Configurator** を選択し、仮想 IP アドレスに登録します（画像参照）。
-  * 次に **Stop Management Server Service**。
-  * ノード 2 の **ServerConfig.xml を編集**します。
-    * "C:/ProgramData/Milestone/XProtect Management Server" に移動し、元の ServerConfig.xml ファイルをバックアップします。
-    * 任意のテキストエディターで ServerConfig.xml を開きます（管理者権限が必要）。
-    * 以下の `XXX.XXX.XXX.XXX` を実際の仮想 IP アドレスに置き換えます。
+  * 次に、**管理サーバーサービスを停止します**。
+  * ノード 2 の **ServerConfig.xml 編集します**。 
+    * 「C:/ProgramData/Milestone/XProtect Management Server」に移動し、元の ServerConfig.xml ファイルをバックアップします。
+    * ServerConfig.xml テキストエディターで開きます（管理者権限が必要です）。
+    * `XXX.XXX.XXX.XXX` を実際の仮想 IP アドレスに置き換えてください
     * `<Failover>...`
     * `<VirtualAddress>`
     * `XXX.XXX.XXX.XXX`
     * `</VirtualAddress>`
     * `...</Failover>`
-    * `<ClusterMember>false</ClusterMember>` を `true` に変更します
-    * 以下に `http://NODE2_FQDN:9010`（ワークグループの場合は NODE2 のホスト名）を設定します。
+    * `<ClusterMember>false</ClusterMember>` `true` に変更します
+    * 以下に `http://NODE2_FQDN:9010` (またはワークグループの場合は NODE2 ホスト名) を設定します 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE2_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
-    * 詳細は、こちらの **[Milestone ナレッジベース記事](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**を参照してください。
+    * 詳細については、こちらの **[Milestone KB を](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)** 参照してください。
 
 
 ⚠️ 注意：
 
-  * ノード 2 で登録を実行するユーザーアカウントには、ノード 1 の Milestone で管理者ロールが必要です。
-  * ノード 2 のローカル管理者が登録する場合、[手順 13](#role) で Windows 組み込みグループ `BUILTIN/Administrators` を Management Client / Security / Roles に設定しておく必要があります。そうしないと登録は機能しません。
+  * ノード 2 で登録を実行するユーザーのアカウントは、ノード 1 の Milestone で管理者ロールを持っている必要があります。
+  * ノード 2 のローカル管理者が登録を行う場合、[ステップ 13](#role)で Management Client / Security / Roles に組み込みの Windows グループ `BUILTIN/Administrators` 設定する必要があります。そうしないと、登録は機能しません。
 
 
-ℹ️ この手順は、仮想アドレスへの接続を通じて、ノード 2 の管理サーバーを SQL データベース（ノード 1 で稼働）に登録します。
+ℹ️ この手順では、仮想アドレスへの接続を介して、ノード 2 の管理サーバーを SQL データベース（ノード 1 で実行）に登録します。
 
 
-![Milestone 2020+ を使用して管理サーバーを登録](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
+![管理サーバーを Milestone 2020+に登録する](/wp-content/uploads/2022/07/milestone-management-server-register-2020.png)
 
 
-### 13. フェイルオーバー時の Windows 認証の問題を解決する {#role}
+### 13. フェールオーバー時の Windows 認証の問題を解決する {#role}
 
-Milestone XProtect Management Client の起動時には、以下のいずれかの方法で認証する必要があります。選択した方法に応じて、SafeKit のフェイルオーバー後もログインできるようにするための手順が必要です。参考：[ログイン画面を表示 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png)。
+Milestone XProtect Management Client 起動すると、次のいずれかの方法で認証する必要があります。選択した方法に応じて、SafeKit フェイルオーバー後にログインが機能するように、特定のステップが必要になります。参照：[ログイン画面のスクリーンショット 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png)。
 
-#### Active Directory (AD) を使用した Windows 認証
+#### Active Directory (AD) を使用した Windows 認証 {#windows-authentication-with-active-directory-ad}
 
-**構成：** 特別な構成は必要ありません。
+**設定：** 特別な設定は必要ありません。
 
-Milestone の "Windows authentication" が Active Directory を使用するよう構成されている場合、ユーザー名とパスワードの情報は外部 AD から取得されます。フェイルオーバー後、セカンダリノードは同じ AD に接続するため、認証は自動的に機能します。
+Milestone 「Windows 認証」が Active Directory で構成されている場合、ユーザーとパスワードの情報は外部 AD から取得されます。フェイルオーバー後、セカンダリノードは同じ AD に接続するため、認証は自動的に機能します。
 
-#### ワークグループでの Windows 認証
+#### ワークグループでの Windows 認証 {#windows-authentication-in-workgroup}
 
-**構成：** "Security / Roles" に **BUILTIN/Administrators** グループを追加する必要があります。
+**設定：**「セキュリティ/ロール」に **BUILTIN/Administrators** グループを追加する必要があります。
 
-**警告：** ワークグループでは、名前が同一でも、ローカルユーザーのセキュリティ識別子（SID）はノードごとに異なります。両方のノードで同じ SID を持つのは BUILTIN/Administrators グループだけです。
+**警告：** ワークグループでは、ローカルユーザーは、名前が同じであっても、各ノードで異なるセキュリティ識別子 (SID) を持ちます。BUILTIN BUILTIN/Administrators グループのみが、両方のノードで同じ SID を持ちます。
 
-  * このグループを追加すると、フェイルオーバー後に任意のローカル管理者アカウントでセカンダリノードに認証できます。
-  * 追加しない場合、SID が一致しないため、セカンダリノードでのローカル Windows 認証は失敗します。
-
-
-#### SQL データベースによる基本認証
-
-**構成：** "Basic authentication" を使用するユーザー（例："Admin"）を作成します。
-
-"Basic authentication" では、ユーザーの資格情報は SQL データベースに直接保存されます。SafeKit が SQL データベースをセカンダリノードへリアルタイムに複製するため、これらのユーザーはフェイルオーバー直後から常に利用できます。
+  * このグループを追加すると、フェイルオーバー後にローカルの管理者アカウントでセカンダリノードに認証できるようになります。
+  * これがないと、SID が一致しないため、セカンダリノードでローカルの Windows 認証が失敗します。
 
 
-![Milestone Management Client でロールを設定](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
+#### SQL データベースによる基本認証 {#basic-authentication-with-sql-database}
+
+**設定：**「基本認証」でユーザーを作成します (例：「Admin」)。
+
+「基本認証」の場合、ユーザー認証情報は SQL データベースに直接保存されます。SafeKit SQL データベースをセカンダリノードにリアルタイムでレプリケートするため、フェイルオーバー後すぐにこれらのユーザーが利用可能になります。
 
 
-### 14. ノード 2 を開始します
+![Milestone Management Client でロールを設定する](/wp-content/uploads/2022/07/milestone-management-server-roles.png)
 
-  * ⋯ `Start` ノード 2 とそのコンテキスト メニュー。
-  * SECOND (緑色) 状態になるまで待ちます。
+
+### 14. ノード 2 を起動する {#14-start-node-2}
+
+  * ⋯コンテキストメニューからノード 2 `Start`。
+  * SECOND（緑色）の状態になるまで待ちます。
 
 
 ℹ️
 
-  * 複製されたディレクトリ (ノード 1 からノード 2 へのコピー) を再同期している間、ノード 2 は SECOND (オレンジ) 状態のままです。
-
-  * 複製されたディレクトリ内で再同期するファイルのサイズとネットワーク帯域幅によっては、時間がかかる場合があります。
-  * コピーの進行状況を確認するには、ノード 2 の [module ログ 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) と [ レプリケーション リソース 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) を参照してください。ログ メッセージの支援については、SafeKit AI 🤖 を使用してください。
-
-
-![{{ .Get "app" }} ノード 2 を開始します。](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+  * ノード 2 は、レプリケートされたディレクトリを再同期している間（ノード 1 からノード 2 にコピー）、SECOND（オレンジ）の状態を維持します。
+  * レプリケートされたディレクトリで再同期するファイルのサイズやネットワーク帯域幅によっては、これに時間がかかる場合があります。
+  * コピーの進捗状況を確認するには、ノード 2 の[モジュールログ 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png)と[レプリケーションリソース 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png)を参照してください。ログメッセージのサポートには SafeKit AI 🤖 を使用してください。
 
 
-### 15. クラスターが動作していることを確認します。
-
-  * クラスターが緑色/緑色で、{{ .Get "app" }} サービスが PRIM ノードで実行されており、SECOND ノードでは実行されていないことを確認します。
+![{{ .Get "app" }} ノード 2 を起動します](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
-  * この状態では、ファイル内の変更のみがリアルタイムでレプリケートされます。
+### 15. クラスターが動作していることを確認します {#15-verify-that-the-cluster-is-operational}
 
-⚠️
-
-  * **録画サーバー**を仮想 IP アドレスで登録します。
-  * **Milestone Management Client** と **Milestone Smart Client** を仮想 IP アドレスに接続します。
-  * {{ .Get "app" }} サービスのクライアントであるコンポーネントは、仮想 IP アドレスを使用して構成する必要があります。構成は、DNS 名を使用して実行できます (DNS 名が作成され、仮想 IP アドレスに関連付けられている場合)。
-
-
-![{{ .Get "app" }} ノード 2 は SECOND (緑)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
-
-
-### 16. テスト
-
-  * やめてください PRIM ノードのコンテキスト メニューを下にスクロールして、 `Stop`。
-  * SECOND ノードにフェイルオーバーが存在し、ALONE (緑色) になることを確認します。
-  * Microsoft 管理コンソール (MMC) に Windows またはコマンドラインを使用して Linux、のフェールオーバーを確認します。 {{ .Get "app" }} サービス (ノード 1 で停止) `stop_prim` スクリプトを作成し、ノード 2 で開始しました。 `start_prim` スクリプト）。
-
-
-⚠️場合 ALONE (緑) に達していません node2 または、アプリケーションが起動していない場合は、次のコマンドを使用して理由を分析します。 [モジュールログ 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) ノード2の。
-
-  * 🔍をクリックしてください **ログ** のアイコン `node2` モジュール ログを開いて、チェッカーがエラーを検出してモジュールを停止したなどのエラー メッセージを探します。
-  * ログ内の `start_prim` をクリックすると、スクリプトの出力メッセージが右側に表示され、サービスが正しく開始されなかったなどのエラーを検出できます。
-  * ログ メッセージに関する支援として、SafeKit AI 🤖 を使用してください。
+  * PRIM ノードで {{ .Get "app" }} サービスが実行され、SECOND ノードでは実行されていない状態で、クラスターが緑/緑であることを確認します。
+  * この状態では、ファイル内の変更のみがリアルタイムで複製されます。
 
 
 ⚠️
 
-  * すべてに問題がない場合は、node1 で起動を開始します。これにより、複製されたディレクトリが node2 から再同期されます。
-  * 物事がうまくいかない場合は、停止してください node2 そして [プライマリとして強制的に開始します 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) の node1、停止時にローカルに正常なデータを使用して再起動します。
+  * 仮想 IP アドレスで**レコーディングサーバー**を登録します。
+  * **Milestone Management Client** と **Milestone Smart Client** 仮想 IP アドレスに接続します。
+  * {{ .Get "app" }} サービスのクライアントであるコンポーネントは、仮想 IP アドレスで構成する必要があります。構成は、DNS 名で行うことができます（DNS 名が作成され、仮想 IP アドレスに関連付けられている場合）。
 
 
-ℹ️ クラスター内で何が起きているかを理解するために、🕒 **[タイムライン 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)**を利用できます。
-
-ℹ️ 詳細と動画は [SafeKit オンライントレーニング](/ja/resources/safekit-on-line-training/)を参照してください。
+![{{ .Get "app" }} ノード 2 は SECOND（緑色）です](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
-![やめてください {{ .Get "app" }} 上のモジュール PRIM サーバー](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+### 16. テスト {#16-testing}
+
+  * PRIM ノードのコンテキストメニューを下にスクロールして、`Stop` をクリックして停止します。
+  * SECOND ノードでフェイルオーバーが発生し、ALONE（緑色）になっていることを確認します。
+  * Windows の Microsoft 管理コンソール (MMC) または Linux のコマンドラインを使用して、{{ .Get "app" }} サービスのフェイルオーバーを確認します (`stop_prim` スクリプトでノード 1 で停止し、`start_prim` スクリプトでノード 2 で開始します)。
 
 
-### 17. サポート
+⚠️ node2 で ALONE（緑）に到達しない場合、またはアプリケーションが起動しない場合は、ノード 2 の[モジュールログ 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png)で原因を分析してください。
 
-  * サポートを受けるには、2 件の SafeKit `Snapshots` (2 つの .zip ファイル) を、ノードごとに一つずつ取得します。
+  * `node2` の 🔍**ログ**アイコンをクリックしてモジュールログを開き、チェッカーがエラーを検出してモジュールを停止するなどのエラーメッセージを探します。
+  * ログの `start_prim` をクリックします。スクリプトの出力メッセージが右側に表示され、サービスが正しく起動していないなどのエラーを検出できます。
+  * ログメッセージについては、SafeKit AI 🤖 をご利用ください。
 
 
-ℹ️ [サポートの詳細についてはこちら](/ja/resources/safekit-support/)。
+⚠️
+
+  * すべて問題なければ、node1 で開始すると、node2 からレプリケートされたディレクトリが再同期されます。
+  * 問題が発生した場合は、node2 停止し、node1 を[プライマリとして強制的に起動します 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。これにより、停止時のローカルに正常なデータで再起動します。
 
 
-![サポートのために {{ .Get "app" }} スナップショットを取得します](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+ℹ️ クラスターで何が起こっているかを理解するのに役立つ 🕒**[タイムライン 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** があることに注意してください。
+
+ℹ️ 詳細と動画については、[SafeKit オンライン研修](/ja/resources/safekit-on-line-training/)をご覧ください。
+
+
+![PRIM サーバーで {{ .Get "app" }} モジュールを停止します](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+
+
+### 17. サポート {#17-support}
+
+  * サポートを受けるには、ノードごとに 1 つずつ、合計 2 つの SafeKit `Snapshots`（2 つの .zip ファイル）を取得してください。
+
+
+ℹ️ [サポートに関する詳細はこちら](/ja/resources/safekit-support/)。
+
+
+![サポートのために {{ .Get "app" }} スナップショットを撮る](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+
+

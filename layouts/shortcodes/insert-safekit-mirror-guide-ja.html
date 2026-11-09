@@ -1,31 +1,32 @@
-{{/* Shortcode: insert-safekit-mirror-guide-ja — 19 instances in 19 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.8 | Translation LLM | 43 expressions */}}
+{{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
 
 
-## {{ .Get "app" }} の高可用性クイック インストール ガイド {#quick-guide}
+## {{ .Get "app" }} の高可用性クイックインストールガイド {#quick-guide}
 
-このガイドでは、セットアップ方法について説明します。 **ミラークラスタ** のために {{ .Get "app" }} を使用して SafeKit共有ストレージを必要とせずに、自動フェイルオーバーと同期レプリケーションを保証します。 
+このガイドでは、SafeKit を使用して {{ .Get "app" }} 用の **mirror クラスター**をセットアップし、共有ストレージを必要とせずに自動フェイルオーバーと同期レプリケーションを確実に行う方法について説明します。 
 
-ヘルプが必要な場合は、次を使用できます [SafeKit AI 🤖](/ja/resources/safekit-support/).
+ヘルプが必要な場合は、[SafeKit AI 🤖](/ja/resources/safekit-support/)をご利用ください。
 
-### 1. 概要
+### 1. 概要 {#1-overview}
 
-  * **アーキテクチャ:** 2ノードシステム(プライマリ/セカンダリ)を採用します。
-  * **データ保護:** リアルタイム同期レプリケーションを実装します。 **データ損失ゼロ** (RPO=0)。
-
-
-### 2. インストール
-
-  * **ソフトウェア:** SafeKit エンジンを両方のサーバーにインストールします。
-  * **モジュール:** 事前設定されたものをダウンロードする `{{ .Get "mod" }}.safe` アプリケーションモジュール。
+  * **アーキテクチャ：** 2 ノードシステム (プライマリ/セカンダリ) を使用します。
+  * **データ保護：** **ゼロデータ損失**（RPO = 0）を実現するリアルタイム同期レプリケーションを実装します。
 
 
-### 3. 構成
+### 2. インストール {#2-installation}
 
-  * **ウェブコンソール:** {{ .Get "app" }} ファイルを含む特定のフォルダーを構成します。
-  * **モニタリング:** {{ .Get "app" }} アプリケーションの監視と保護を開始します。
+  * **ソフトウェア：** 両方のサーバーに SafeKit エンジンをインストールします。
+  * **モジュール：** 事前に設定された `{{ .Get "mod" }}.safe` アプリケーションモジュールをダウンロードします。
+
+
+### 3. 設定 {#3-configuration}
+
+  * **Web コンソール：**{{ .Get "app" }} ファイルを含む特定のフォルダーを構成します。
+  * **監視：**{{ .Get "app" }} アプリケーションの監視と保護を開始します。
 
 
 

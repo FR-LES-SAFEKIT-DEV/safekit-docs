@@ -1,63 +1,75 @@
 ---
-title: "Azureの高可用性：SafeKitによるリアルタイムレプリケーションとフェイルオーバー"
+title: "Azure での SafeKit クイックインストールガイド（リアルタイムレプリケーションおよびフェイルオーバー用の mirror.safe モジュール）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
-description: "SafeKitのmirror.safeモジュールをAzureに展開し、WindowsおよびLinuxで同期リアルタイムレプリケーションと自動フェイルオーバーを実現します。このガイドでは、重要なアプリケーション向けに共有ストレージを使用しない2ノードクラスターを設定する方法を説明します。"
+description: "Azre で SafeKit 用の mirror.safe モジュールをデプロイし、Windows および Linux で同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで、ミッションクリティカルなアプリケーション向けに 2 ノードのシェアードナッシングクラスターをセットアップする手順を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Azure高可用性クイックインストールガイド、SafeKit高可用性の制限事項、SafeKit / Azure mirrorソリューションの概要、WindowsおよびLinuxへのSafeKit / Azure mirrorソリューションのインストール（mirror.safe）、SafeKit / Azure mirrorソリューションの段階的な設定、SafeKit mirrorソリューションのデモ、🔍 SafeKit を探索する"
+topics: "Azure 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Azure mirror ソリューションの概要、Windows および Linux への SafeKit/Azure mirror ソリューションのインストール (mirror.safe)、SafeKit/Azure mirror ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# SafeKitによるAzure高可用性：フェイルオーバー用mirror.safeモジュールのインストール {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# SafeKit による Azure 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+
 
 {{%  insert-safekit-mirror-guide-ja app="Azure" mod="mirror"  %}}
+ 
 
-## SafeKit / Azure mirrorソリューションの概要 {#overview-of-the-safekit--azure-mirror-solution}
+## SafeKit/Azure mirror ソリューションの概要 {#overview-of-the-safekit--azure-mirror-solution}
 
-ソリューションの説明はこちらです: **💡[Microsoft Azureの高可用性：SafeKitによる同期レプリケーションとフェイルオーバー](</ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/>)**。
+解決策については、こちらで説明しています。**💡 [Microsoft Azure 可用性：SafeKit 同期レプリケーションとフェイルオーバー](</ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/>)**。
 
-## WindowsおよびLinuxへのSafeKit / Azure mirrorソリューションのインストール（mirror.safe） {#installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe}
+## Windows および Linux への SafeKit/Azure mirror ソリューションのインストール (mirror.safe) {#installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Microsoft Azureロードバランサーの構成 {#configuration-of-the-microsoft-azure-load-balancer}
+### Microsoft Azure ロードバランサーの構成 {#configuration-of-the-microsoft-azure-load-balancer}
 
-仮想IPアドレスを実装する場合は、ロードバランサーを構成する必要があります。
-また、ロードバランサーがノードにヘルスチェックパケットを定期的に送信するよう構成してください。
-SafeKitは、ノード内で実行されるヘルスチェックを提供しており、次のように動作します。
+仮想 IP アドレスを実装する場合は、ロードバランサーを設定する必要があります。  
+また、ロードバランサーは、ノードに定期的にヘルスパケットを送信するように設定する必要があります。  
+そのため、SafeKit ノード内で実行されるヘルスチェックを提供します
 
-  * mirrorモジュールの状態がPRIM（緑）またはALONE（緑）の場合はOKを返す
-  * それ以外のすべての状態ではNOT FOUNDを返す
+  * mirror モジュールの状態が PRIM（緑）または ALONE（緑）の場合、OK を返します
+  * その他のすべての状態では、NOT FOUND を返します
 
-Microsoft Azureロードバランサーを次のように構成します。
 
-  * HTTPプロトコル
-  * ポート9010（SafeKit Webサーバーのポート）
-  * URL /var/modules/mirror/ready.txt（後でデプロイするモジュール名がmirrorの場合）
+Microsoft Azure ロードバランサーを次のように構成する必要があります
 
-詳細については、[Microsoft Azureロードバランサーの構成](<https://learn.microsoft.com/en-us/azure/load-balancer/>)を参照してください。
+  * HTTP プロトコル
+  * ポート 9010、SafeKit ウェブサーバーのポート
+  * URL /var/modules/mirror/ready.txt (mirror は、後でデプロイするモジュール名です)
 
-⚠️ 以下の段階的な構成の手順4では、仮想IPアドレスを構成しないでください。仮想IPアドレスはMicrosoft Azureロードバランサーにすでに設定されています。手順4で仮想IPを設定するのはオンプレミス構成の場合のみです。
 
-### Microsoft Azureネットワークセキュリティの構成 {#configuration-of-the-microsoft-azure-network-security}
+詳細については、[「Microsoft Azure ロードバランサーの構成」を](<https://learn.microsoft.com/en-us/azure/load-balancer/>)参照してください。 
 
-次のプロトコルとポートで通信できるように、ネットワークセキュリティを構成する必要があります。
 
-  * UDP - 4800：safeadminサービス用（SafeKitノード間）
-  * UDP - 8888：モジュールのハートビート用（SafeKitノード間）
-  * TCP – 5600：モジュールのリアルタイムファイルレプリケーション用（SafeKitノード間）
-  * TCP – 9010：ロードバランサーのヘルスチェックおよびhttpモードで実行するSafeKit Webコンソール用
-  * TCP – 9001：コンソールのhttpsモードを構成するため
-  * TCP – 9453：httpsモードで実行するSafeKit Webコンソール用
+⚠️ 以下のステップバイステップ構成のステップ 4 で仮想 IP アドレスを設定しないでください。仮想 IP アドレスは Microsoft Azure ロードバランサーに既に設定されています。ステップ 4 で仮想 IP を設定するのは、オンプレミス構成の場合のみです。
+
+### Microsoft Azure ネットワークセキュリティの構成 {#configuration-of-the-microsoft-azure-network-security}
+
+ネットワークセキュリティは、以下のプロトコルとポートの通信を有効にするように設定する必要があります
+
+  * UDP - 4800 (safeadmin サービス用、SafeKit ノード間)
+  * UDP - 8888 (モジュールハートビート用、SafeKit ノード間)
+  * TCP – 5600 (モジュールのリアルタイムファイルレプリケーション用 (SafeKit ノード間))
+  * TCP – 9010 は、ロードバランサーのヘルスチェック用、および http モードで実行されている SafeKit Web コンソール用です
+  * TCP – 9001 を使用してコンソールの HTTPS モードを設定します
+  * TCP – 9453 (https モードで実行されている SafeKit ウェブコンソール用)
+
+
 
 {{%  insert-safekit-installation-package-windows-ja app="" mod="mirror"  %}}
 
 {{%  insert-safekit-installation-package-linux-ja app="" mod="mirror"  %}}
+ 
 
-注：構成する汎用 **mirror.safe** モジュールはパッケージに含まれています。
+注：設定する汎用 **mirror.safe** モジュールは、パッケージ内に同梱されています。
 
-## SafeKit / Azure mirrorソリューションの段階的な設定 {#step-by-step-configuration-of-the-safekit--azure-mirror-solution}
+## SafeKit/Azure mirror ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--azure-mirror-solution}
+
 
 {{%  insert-safekit-82-configuration-ja app="Windows" mod="mirror"  %}}
+ 
 
-## SafeKit mirrorソリューションのデモ {#demonstration-of-the-safekit-mirror-solution}
+## SafeKit mirror ソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
+
 
 {{%  insert-safekit-mirror-video-ja  %}}
 

@@ -1,31 +1,32 @@
-{{/* Shortcode: insert-safekit-farm-guide-de — 9 instances in 9 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.4 | Translation LLM | 40 expressions */}}
+{{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
 
 
-## Schnellinstallationsanleitung für hohe Verfügbarkeit für {{ .Get "app" }} {#quick-guide}
+## Schnellinstallationsanleitung für Hochverfügbarkeit für {{ .Get "app" }} {#quick-guide}
 
-Diese Anleitung erklärt, wie Sie mit SafeKit einen **<span class="notranslate farm-term" translate="no">farm</span>-Cluster** für {{ .Get "app" }} einrichten und so Netzwerklastverteilung und automatisches Failover sicherstellen.
+Dieser Leitfaden erklärt, wie Sie mit SafeKit ein **<span class="notranslate farm-term" translate="no">Farm</span>-Cluster** für {{ .Get "app" }} einrichten, um Lastausgleich im Netzwerk und automatische Failover zu gewährleisten.
 
-Hilfe erhalten Sie über [SafeKit AI 🤖](/de/resources/safekit-support/).
+Für Hilfe können Sie [SafeKit AI 🤖](/de/resources/safekit-support/) nutzen.
 
-### 1. Überblick
+### 1. Überblick {#1-overview}
 
-  * **Architektur:** Eine skalierbare, lastverteilte <span class="notranslate farm-term" translate="no">farm</span> mit mehreren Knoten und virtueller IP-Adresse.
-  * **Hohe Verfügbarkeit:** Automatische Zustandsüberwachung und nahtloses Failover **gewährleisten die Dienstkontinuität**.
+  * **Architektur:** Implementiert eine skalierbare, mehrknotige <span class="notranslate farm-term" translate="no">farm</span> mit einer virtuellen IP-Adresse.
+  * **Hohe Verfügbarkeit:** Bietet automatische Zustandsüberwachung und nahtlose Failover-Funktion, um **die Servicekontinuität zu gewährleisten**.
 
 
-### 2. Installation
+### 2. Installation {#2-installation}
 
   * **Software:** Installieren Sie die SafeKit-Engine auf allen Servern.
-  * **Modul:** Laden Sie das vorkonfigurierte Anwendungsmodul `{{ .Get "mod" }}.safe` herunter.
+  * **Modul:** Laden Sie das vorkonfigurierte `{{ .Get "mod" }}.safe` Anwendungsmodul herunter.
 
 
-### 3. Konfiguration
+### 3. Konfiguration {#3-configuration}
 
-  * **Webkonsole:** Konfigurieren Sie den <span class="notranslate farm-term" translate="no">farm</span>-Cluster für {{ .Get "app" }}.
-  * **Überwachung:** Starten Sie die Überwachung und den Schutz der Anwendung {{ .Get "app" }}.
+  * **Webkonsole:** Konfigurieren Sie den {{ .Get "app" }} <span class="notranslate farm-term" translate="no">Farm</span>-Cluster.
+  * **Überwachung:** Starten Sie die Überwachung und den Schutz der {{ .Get "app" }} Anwendung.
 
 
 

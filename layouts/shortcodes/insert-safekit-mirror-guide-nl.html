@@ -1,31 +1,32 @@
-{{/* Shortcode: insert-safekit-mirror-guide-nl — 19 instances in 19 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.7 | Translation LLM | 39 expressions */}}
+{{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
 
 
-## Snelle installatiehandleiding met hoge beschikbaarheid voor {{ .Get "app" }} {#quick-guide}
+## Snelinstallatiegids voor hoge beschikbaarheid voor {{ .Get "app" }} {#quick-guide}
 
-In deze handleiding wordt uitgelegd hoe u een **spiegel cluster** voor {{ .Get "app" }} met SafeKit, waardoor automatische failover en synchrone replicatie worden gegarandeerd zonder de noodzaak van gedeelde opslag. 
+Deze handleiding legt uit hoe u een **mirror-cluster** voor {{ .Get "app" }} instelt met SafeKit, wat zorgt voor automatische failover en synchrone replicatie zonder dat er gedeelde opslag nodig is. 
 
-Voor hulp kunt u gebruiken [SafeKit AI 🤖](/nl/resources/safekit-support/).
+Voor hulp kunt u [SafeKit AI 🤖](/nl/resources/safekit-support/) gebruiken.
 
-### 1. Overzicht
+### 1. Overzicht {#1-overview}
 
-  * **Architectuur:** Maakt gebruik van een systeem met twee knooppunten (primair/secundair).
-  * **Gegevensbescherming:** Implementeert realtime synchrone replicatie voor **nul gegevensverlies** (RPO=0).
+  * **Architectuur:** maakt gebruik van een systeem met twee knooppunten (primair/secundair).
+  * **Gegevensbescherming:** implementeert synchrone replicatie in realtime voor **nul gegevensverlies** (RPO = 0).
 
 
-### 2. Installatie
+### 2. Installatie {#2-installation}
 
   * **Software:** Installeer de SafeKit-engine op beide servers.
-  * **module:** Download de vooraf geconfigureerde `{{ .Get "mod" }}.safe` applicatiemodule.
+  * **Module:** Download de vooraf geconfigureerde `{{ .Get "mod" }}.safe`-applicatiemodule.
 
 
-### 3. Configuratie
+### 3. Configuratie {#3-configuration}
 
-  * **Webconsole:** Configureer de specifieke mappen die de {{ .Get "app" }}-bestanden bevatten.
-  * **Toezicht:** Begin met het monitoren en beschermen van de {{ .Get "app" }}-applicatie.
+  * **Webconsole:** configureer de specifieke mappen die de {{ .Get "app" }} bestanden bevatten.
+  * **Monitoren:** Begin met het monitoren en beveiligen van de {{ .Get "app" }} applicatie.
 
 
 

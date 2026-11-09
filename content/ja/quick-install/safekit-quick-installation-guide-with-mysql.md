@@ -1,27 +1,28 @@
 ---
-title: "MySQLとSafeKitによる高可用性：フェイルオーバーのためにmysql.safeモジュールをインストールしてください"
+title: "SafeKit による MySQL 高可用性：フェイルオーバーのための mysql.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-mysql/"
-description: "SafeKitにmysql.safeモジュールをデプロイして、 WindowsおよびLinux上でMySQLの同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージを使用せずに、重要なアプリケーション向けに 2 ノードの SAN レス クラスタをセットアップする手順を説明します。"
+description: "SafeKit は用の mysql.safe モジュールをデプロイして、Windows および Linux 上の MySQL の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで重要なアプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "MySQLの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / MySQLソリューションの概要、 SafeKitおよびMySQL ( mysql.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / MySQLサーバーソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit を探索する"
+topics: "MySQL 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/MySQL ソリューションの概要、Windows および Linux への SafeKit/MySQL ソリューションのインストール (mysql.safe)、SafeKit/MySQL Server ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# MySQL高可用性とSafeKit : フェイルオーバーのためにmysql.safeモジュールをインストールしてください {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
+# SafeKit による MySQL 高可用性：フェイルオーバーのための mysql.safe モジュールのインストール {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit / MySQLソリューションの概要 {#overview-of-the-safekit--mysql-solution}
+## SafeKit/MySQL ソリューションの概要 {#overview-of-the-safekit--mysql-solution}
 
-解決策はここに記載されています: **💡 [最もシンプルなMySQL高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/mysql-high-availability-synchronous-replication-failover/>)** 。
+解決策はこちらで説明されています：**💡 [最もシンプルな MySQL 高可用性：2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/mysql-high-availability-synchronous-replication-failover/>)**。
 
-## SafeKit / MySQLソリューションをWindowsおよびLinux ( mysql.safe )にインストールします。 {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
+## Windows および Linux への SafeKit/MySQL ソリューションのインストール (mysql.safe) {#installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe}
 
 ### 前提条件 {#prerequisites}
 
-  * MySQL 2つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
+  * 2 つのノード（仮想マシンまたは物理サーバー）に MySQL をインストールする必要があります。
 
 
 
@@ -34,13 +35,13 @@ topics: "MySQLの高可用性クイックインストールガイド、 SafeKit�
 {{%  insert-safekit-82-installation-module-linux-ja app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit / MySQLサーバーソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--mysql-server-solution}
+## SafeKit/MySQL Server ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--mysql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="MySQL" mod="mysql"  %}}
  
 
-## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
+## SafeKit mirror ソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

@@ -1,33 +1,34 @@
 ---
-title: "Microsoft SQL Server التوافر العالي مع SafeKit : قم بتثبيت وحدة sqlserver.safe للتحويل التلقائي في حالة الفشل"
+title: "التوفر العالي Microsoft SQL Server باستخدام SafeKit: تثبيت وحدة sqlserver.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
-description: "قم بتثبيت وحدة sqlserver.safe لوحدة SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لوحدتي Microsoft SQL Server . يرشدك هذا الدليل خلال عملية إعداد مجموعة خوادم ثنائية العقدة بدون شبكة تخزين (SAN) للتطبيقات الحيوية التي لا تتطلب تخزينًا مشتركًا."
+description: "انشر وحدة sqlserver.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الفشل التلقائي Microsoft SQL Server. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة منطقة تخزين (SANless) للتطبيقات الهامة بدون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Microsoft SQL Server و SafeKit قيود التوافر العالي، نظرة عامة على حل SafeKit / Microsoft SQL Server ، تثبيت حل SafeKit / Microsoft SQL Server على Windows ( sqlserver.safe )، التكوين خطوة بخطوة لحل SafeKit / Microsoft SQL Server ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي Microsoft SQL Server، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Microsoft SQL Server، تثبيت حل SafeKit/Microsoft SQL Server على Windows (sqlserver.safe)، إعداد حل SafeKit/Microsoft SQL Server خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 ---
 
-# Microsoft SQL Server التوافر العالي مع SafeKit : قم بتثبيت وحدة sqlserver.safe للتحويل التلقائي في حالة الفشل {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
+# التوفر العالي Microsoft SQL Server باستخدام SafeKit: تثبيت وحدة sqlserver.safe للتحويل التلقائي عند الفشل {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## نظرة عامة على حلول SafeKit / Microsoft SQL Server {#overview-of-the-safekit--microsoft-sql-server-solution}
+## نظرة عامة على حل SafeKit/Microsoft SQL Server {#overview-of-the-safekit--microsoft-sql-server-solution}
 
-للحصول على نظرة عامة مفصلة عن الحل، انظر **💡 [ الأبسط Microsoft SQL Server التوافر العالي: النسخ المتماثل المتزامن ثنائي العقدة والتحويل التلقائي ](</ar/solutions/sql-server-high-availability-synchronous-replication-failover/>)** .
+للاطلاع على نظرة عامة مفصلة عن الحل، راجع **💡 [أبسط حلول التوافر العالي Microsoft SQL Server: النسخ المتماثل المتزامن وفشل التحويل بين عقدتين](</ar/solutions/sql-server-high-availability-synchronous-replication-failover/>)**.
 
-## تثبيت حل SafeKit / Microsoft SQL Server على Windows ( sqlserver.safe ) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
+## تثبيت حل SafeKit/Microsoft SQL Server على Windows (sqlserver.safe) {#installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe}
 
 ### المتطلبات الأساسية {#prerequisites}
 
-  * أنت بحاجة إلى تثبيت Microsoft SQL Server على عقدتين (أجهزة افتراضية أو خوادم فعلية).
+  * يجب تثبيت Microsoft SQL Server على عقدتين (أجهزة افتراضية أو خوادم فعلية).
   * يعمل SafeKit مع جميع إصدارات SQL بما في ذلك SQL Express.
 
 
-  * يجب أن تكون قواعد بيانات نظام SQL [ ](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases>) (مثل master.mdf وmastlog.ldf) موجودة في نفس المجلدات على كلا العقدتين. سيتم تكوين المجلدات على أنها متماثلة في الخطوة 4 من عملية التكوين خطوة بخطوة.
-  * يجب تثبيت SQL في نفس الموقع في نظام الملفات على كلا العقدتين، لأن قاعدة بيانات موارد SQL للقراءة فقط [ ](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database>) موجودة في الملف التنفيذي وهي ضرورية لعملية تجاوز الفشل. لا يلزم نسخ هذه القاعدة.
-  * يجب أن تكون قواعد بيانات مستخدمي SQL (.mdf و .ldf) موجودة في نفس المجلدات على كلا العقدتين. سيتم تكوين المجلدات على أنها متماثلة في الخطوة 4 من عملية التكوين التدريجي.
+  * يجب أن توجد [قواعد بيانات نظام SQL](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases>) (مثل master.mdf و mastlog.ldf) في نفس الدلائل على كلتا العقدتين. سيتم تكوين الدلائل على أنها مكررة في الخطوة 4 في التكوين خطوة بخطوة.
+  * يجب أيضًا تثبيت SQL في نفس الموقع في نظام الملفات على كلتا العقدتين لأن [قاعدة بيانات موارد SQL](<https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database>) للقراءة فقط موجودة في الملف الثنائي وهي مطلوبة للتحويل التلقائي. لا تحتاج قاعدة البيانات هذه إلى النسخ المتماثل.
+  * يجب أن توجد قواعد بيانات مستخدمي SQL (ملفات .mdf و .ldf) في نفس الدلائل على كلتا العقدتين. سيتم تكوين الدلائل على أنها مكررة في الخطوة 4 في التكوين خطوة بخطوة.
 
 
 
@@ -36,13 +37,13 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ M
 {{%  insert-safekit-82-installation-module-windows-ar app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## خطوات تكوين حلول SafeKit / Microsoft SQL Server {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}
+## إعداد حل SafeKit/Microsoft SQL Server خطوة بخطوة {#step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution}
 
 
 {{%  insert-safekit-82-configuration-ar app="Microsoft SQL Server" mod="sqlserver"  %}}
  
 
-## عرض توضيحي لحل SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## عرض حل mirror من SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ar  %}}

@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-farm-guide-zh-hans — 9 instances in 9 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.4 | Translation LLM | 43 expressions */}}
+{{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
@@ -6,26 +7,26 @@
 
 ## {{ .Get "app" }} 高可用性快速安装指南 {#quick-guide}
 
-本指南介绍如何使用 SafeKit 为 {{ .Get "app" }} 配置 **<span class="notranslate farm-term" translate="no">farm</span> 集群**，实现网络负载均衡和自动故障转移。
+本指南介绍如何使用 SafeKit 为 {{ .Get "app" }} 设置 **<span class="notranslate farm-term" translate="no">farm</span> 集群**，以确保网络负载均衡和自动故障转移。
 
-如需帮助，请使用 [SafeKit AI 🤖](/zh-hans/resources/safekit-support/)。
+如需帮助，您可以使用[SafeKit AI 🤖](/zh-hans/resources/safekit-support/)。
 
-### 1. 概述
+### 1. 概述 {#1-overview}
 
-  * **架构：** 实现可扩展的多节点负载均衡 <span class="notranslate farm-term" translate="no">farm</span>，并使用虚拟 IP 地址。
-  * **高可用性：** 通过自动健康监控和无缝故障转移，**确保服务连续性**。
+  * **架构：** 实现一个可扩展的多节点负载均衡 <span class="notranslate farm-term" translate="no">farm</span>，并带有虚拟 IP 地址。
+  * **高可用性：** 具有自动运行状况监控和无缝故障转移功能，以**确保服务连续性**。
 
 
-### 2. 安装
+### 2. 安装 {#2-installation}
 
   * **软件：** 在所有服务器上安装 SafeKit 引擎。
-  * **模块：** 下载预配置的应用程序模块 `{{ .Get "mod" }}.safe`。
+  * **模块：** 下载预配置的 `{{ .Get "mod" }}.safe` 应用程序模块。
 
 
-### 3. 配置
+### 3. 配置 {#3-configuration}
 
-  * **Web 控制台：** 配置 {{ .Get "app" }} 的 <span class="notranslate farm-term" translate="no">farm</span> 集群。
-  * **监控：** 开始监控并保护 {{ .Get "app" }} 应用程序。
+  * **Web 控制台：** 配置 {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 集群。
+  * **监控：** 开始监控和保护 {{ .Get "app" }} 应用程序。
 
 
 

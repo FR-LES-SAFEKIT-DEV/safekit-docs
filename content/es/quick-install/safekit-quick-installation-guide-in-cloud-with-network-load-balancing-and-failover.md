@@ -1,52 +1,53 @@
 ---
-title: "Balanceo de carga y conmutación por error de la red en la nube: Instale el módulo SafeKit farm.safe"
+title: "Balanceo de carga y conmutación por error de la red en la nube: Instale el módulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
-description: "Optimice el balanceo de carga de la red en la nube con la monitorización inteligente de aplicaciones del módulo SafeKit . Este módulo realiza una comprobación de estado específica para el balanceador de carga en la nube, lo que permite una alta disponibilidad sin farm.safe a nivel de aplicación. Consiga la recuperación automática y la conmutación por error para aplicaciones de misión crítica."
+description: "Mejore el equilibrio de carga de la red en la nube con la supervisión inteligente de aplicaciones de SafeKit. El módulo farm.safe proporciona una comprobación de estado dedicada para el balanceador de carga en la nube, lo que permite una alta disponibilidad (HA) sin interrupciones a nivel de aplicación. Consiga la autocorrección y la conmutación por error automáticas para aplicaciones de misión crítica."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para la nube, limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit /Cloud, instalación de la solución SafeKit /Cloud en Windows y Linux ( farm.safe ), configuración paso a paso de la solución SafeKit /Cloud, demostración de la solución SafeKit farm , 🔍 Explora SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para la nube, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit / Cloud, Instalación de la solución SafeKit / Cloud en Windows y Linux (farm.safe), Configuración paso a paso de la solución SafeKit / Cloud, Demostración de la solución farm SafeKit, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 ---
 
-# Balanceo de carga y conmutación por error de la red en la nube: Instale el módulo SafeKit farm.safe {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Balanceo de carga y conmutación por error de la red en la nube: Instale el módulo farm.safe SafeKit {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-es app="Cloud" mod="farm"  %}}
  
 
-## Descripción general de la solución en la nube SafeKit / {#overview-of-the-safekit--cloud-solution}
+## Descripción general de la solución SafeKit / Cloud {#overview-of-the-safekit--cloud-solution}
 
-La solución se describe aquí: **💡 [ SafeKit : Balanceo de carga en la nube y alta disponibilidad de aplicaciones Clúster <span class="notranslate farm-term" translate="no">Farm</span> ](</es/solutions/cloud-load-balancing-cluster-failover/>)** .
+La solución se describe aquí: **💡 [SafeKit: clúster <span class="notranslate farm-term" translate="no">farm</span> equilibrio de carga en la nube y alta disponibilidad de aplicaciones](</es/solutions/cloud-load-balancing-cluster-failover/>)**.
 
-## Instalación de la solución SafeKit / Nube en Windows y Linux ( farm.safe ) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
+## Instalación de la solución SafeKit / Cloud en Windows y Linux (farm.safe) {#installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe}
 
 ### Configuración del balanceador de carga en la nube {#configuration-of-the-cloud-load-balancer}
 
 El balanceador de carga debe configurarse con una dirección IP virtual.  
-Además, el balanceador de carga debe configurarse para enviar periódicamente paquetes de estado a los nodos.  
+Y el balanceador de carga debe configurarse para enviar periódicamente paquetes de estado a los nodos.  
 Para ello, SafeKit proporciona una comprobación de estado que se ejecuta dentro de los nodos y que
 
-  * Devuelve OK cuando el estado del módulo <span class="notranslate farm-term" translate="no">farm</span> es UP (verde).
-  * Devoluciones NO ENCONTRADAS en todos los demás estados
+  * devuelve OK cuando el estado del módulo <span class="notranslate farm-term" translate="no">farm</span> es UP (verde)
+  * devuelve NO ENCONTRADO en todos los demás estados
 
 
 Debe configurar el balanceador de carga de la nube con:
 
-  * protocolo HTTP
+  * Protocolo HTTP
   * puerto 9010, el puerto del servidor web SafeKit
-  * URL /var/modules/farm/ready.txt (si <span class="notranslate farm-term" translate="no">farm</span> es el nombre del módulo que implementará posteriormente)
+  * URL /var/modules/farm/ready.txt (si <span class="notranslate farm-term" translate="no">farm</span> es el nombre del módulo que implementará más adelante)
 
 
-⚠️ No configure una dirección IP virtual ni reglas de balanceo de carga en el paso 4 de la configuración paso a paso que se describe a continuación. La dirección IP virtual y las reglas de balanceo de carga ya están configuradas en el balanceador de carga en la nube. Configurar una IP virtual y reglas de balanceo de carga en el paso 4 solo es útil para la configuración local.
+⚠️ No configure una dirección IP virtual ni reglas de equilibrio de carga en el paso 4 de la configuración paso a paso que se muestra a continuación. La dirección IP virtual y las reglas de equilibrio de carga ya están configuradas en el balanceador de carga de la nube. La configuración de una IP virtual y reglas de equilibrio de carga en el paso 4 solo es útil para la configuración local.
 
 ### Configuración de la seguridad de la red en la nube {#configuration-of-the-cloud-network-security}
 
-La seguridad de la red debe configurarse para permitir las comunicaciones para los siguientes protocolos y puertos:
+La seguridad de la red debe configurarse para habilitar las comunicaciones de los siguientes protocolos y puertos:
 
-  * UDP - 4800 para el servicio safeadmin (entre nodos SafeKit )
-  * UDP - 4803 para los latidos dentro del módulo <span class="notranslate farm-term" translate="no">farm</span> (entre los nodos SafeKit )
-  * TCP – 9010 para la comprobación del estado del balanceador de carga y para la consola web SafeKit que se ejecuta en modo http.
+  * UDP - 4800 para el servicio safeadmin (entre nodos SafeKit)
+  * UDP - 4803 para los heartbeats dentro del módulo <span class="notranslate farm-term" translate="no">farm</span> (entre los nodos SafeKit)
+  * TCP – 9010 para la comprobación del estado del balanceador de carga y para la consola web SafeKit que se ejecuta en el modo http
   * TCP – 9001 para configurar el modo https para la consola
-  * TCP – 9453 para la consola web SafeKit que se ejecuta en modo https.
+  * TCP – 9453 para la consola web SafeKit que se ejecuta en modo https
 
 
 
@@ -55,15 +56,15 @@ La seguridad de la red debe configurarse para permitir las comunicaciones para l
 {{%  insert-safekit-installation-package-linux-es app="" mod="mirror"  %}}
  
 
-Nota: el módulo genérico **farm.safe** que va a configurar se incluye dentro del paquete.
+Nota: el módulo genérico **farm.safe** que va a configurar se entrega dentro del paquete.
 
-## Configuración paso a paso de la solución en la nube SafeKit / {#step-by-step-configuration-of-the-safekit--cloud-solution}
+## Configuración paso a paso de la solución SafeKit / Cloud {#step-by-step-configuration-of-the-safekit--cloud-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-es app="" mod="farm"  %}}
  
 
-## Demostración de la solución SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+## Demostración de la solución <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-es  %}}

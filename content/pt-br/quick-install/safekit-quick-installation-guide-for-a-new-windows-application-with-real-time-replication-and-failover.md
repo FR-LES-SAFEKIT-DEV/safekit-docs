@@ -1,42 +1,43 @@
 ---
-title: "Alta disponibilidade no Windows com SafeKit: instale o módulo mirror.safe para failover"
+title: "Alta Disponibilidade Windows com SafeKit: Instale o Módulo mirror.safe para Failover"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
-description: "Implante o módulo mirror.safe do SafeKit para habilitar replicação síncrona em tempo real e failover automático no Windows. Este guia orienta a configuração de um cluster SANless de 2 nós para aplicações Windows críticas, sem armazenamento compartilhado."
+description: "Implemente o módulo mirror.safe para SafeKit para habilitar a replicação síncrona em tempo real e o failover automático no Windows. Este guia mostra como configurar um cluster SANless de 2 nós para aplicações críticas Windows sem armazenamento compartilhado."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de instalação rápida de alta disponibilidade para Windows, Limitações da alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Windows, Instalação nas soluções SafeKit / Windows (mirror.safe), Configuração passo a passo da solução SafeKit / Windows, Demonstração da solução SafeKit mirror, 🔍 Explore o SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para Windows, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Windows, Instalação das soluções SafeKit/Windows (mirror.safe), Configuração passo a passo da solução SafeKit/Windows, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
-# Alta disponibilidade no Windows com SafeKit: instale o módulo mirror.safe para failover {#windows-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Alta Disponibilidade Windows com SafeKit: Instale o Módulo mirror.safe para Failover {#windows-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-pt-br app="Windows" mod="mirror"  %}}
  
 
-## Visão geral da solução SafeKit / Windows {#overview-of-the-safekit--windows-solution}
+## Visão geral da solução SafeKit/Windows {#overview-of-the-safekit--windows-solution}
 
-A solução é descrita aqui: **💡[A alta disponibilidade mais simples no Windows: replicação síncrona de 2 nós e failover](</pt-br/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
+A solução é descrita aqui: **💡 [A maneira mais simples de ter alta disponibilidade Windows: replicação síncrona e failover de 2 nós](</pt-br/solutions/windows-high-availability-software-synchronous-replication-failover/>)**
 
-## Instalação nas soluções SafeKit / Windows (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
+## Instalação das soluções SafeKit/Windows (mirror.safe) {#installation-on-the-safekit--windows-solutions-mirrorsafe}
 
 ### Pré-requisitos {#prerequisites}
 
-  * Você precisa ter a aplicação que deseja reiniciar no SafeKit instalada em 2 nós (máquinas virtuais ou servidores físicos).
+  * Você precisa que o aplicativo que deseja reiniciar no SafeKit esteja instalado em 2 nós (máquinas virtuais ou servidores físicos).
 
 
 
 {{%  insert-safekit-installation-package-windows-pt-br app="" mod="mirror"  %}}
  
 
-Observação: o módulo genérico **mirror.safe** que você vai configurar é fornecido dentro do pacote.
+Observação: o módulo genérico **mirror.safe** que você vai configurar é entregue dentro do pacote.
 
-## Configuração passo a passo da solução SafeKit / Windows {#step-by-step-configuration-of-the-safekit--windows-solution}
+## Configuração passo a passo da solução SafeKit/Windows {#step-by-step-configuration-of-the-safekit--windows-solution}
 
 
 {{%  insert-safekit-82-configuration-pt-br app="Windows" mod="mirror"  %}}
  
 
-## Demonstração da solução SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## Demonstração da solução mirror SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-pt-br  %}}

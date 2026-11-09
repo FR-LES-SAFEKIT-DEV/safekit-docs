@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-network-isolation-pt-pt — 3 instances in 3 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.2 | Translation LLM | 28 expressions */}}
+{{/* Shortcode: insert-safekit-network-isolation-en — 3 instances in 3 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
 
@@ -8,32 +9,33 @@
 
 ### Uma única rede {#a-single-network}
 
-Quando ocorre um isolamento de rede, o comportamento predefinido é:
+Quando existe um isolamento de rede, o comportamento predefinido é:
 
-  * como se perdem os heartbeats de cada nó, cada nó passa para ALONE e executa a aplicação com o seu endereço IP virtual (execução dupla da aplicação, modificando os seus dados locais),
-  * quando o isolamento é resolvido, um nó ALONE é forçado a parar e a ressincronizar os seus dados a partir do outro nó,
-  * no final, o cluster fica em PRIM-SECOND (ou SECOND-PRIM, consoante a deteção de endereço IP virtual duplicado efetuada pelo Windows).
+  * à medida que heartbeats são perdidos para cada nó, cada nó vai para ALONE e executa a aplicação com o seu endereço IP virtual (execução dupla da aplicação que modifica os seus dados locais),
+  * quando o isolamento é reparado, um nó ALONE é forçado a parar e a resincronizar os seus dados a partir do outro nó,
+  * no final, o cluster é PRIM-SECOND (ou SECOND-PRIM, de acordo com a deteção de endereço IP virtual duplicado feita pelo Windows).
 
 
 ### Duas redes com uma rede de replicação dedicada {#two-networks-with-a-dedicated-replication-network}
 
-Quando ocorre um isolamento de rede, o comportamento com uma rede de replicação dedicada é:
+Quando existe isolamento de rede, o comportamento com uma rede de replicação dedicada é:
 
-  * é implementada uma rede de replicação dedicada numa rede privada,
-  * os heartbeats na rede de produção perdem-se (rede isolada),
-  * os heartbeats na rede de replicação funcionam (rede não isolada),
-  * o cluster mantém-se no estado PRIM/SECOND.
-
-
-### Uma única rede e um verificador de split-brain {#a-single-network-and-a-splitbrain-checker}
-
-Quando ocorre um isolamento de rede, o comportamento com um verificador de split-brain é:
-
-  * foi configurado um verificador de split-brain com o endereço IP de uma testemunha (normalmente um router),
-  * o verificador de split-brain atua quando um servidor passa de PRIM para ALONE ou de SECOND para ALONE,
-  * em caso de isolamento de rede, antes de passarem para ALONE, ambos os nós testam o endereço IP,
-  * o nó que consegue aceder ao endereço IP passa para ALONE e o outro passa para WAIT,
-  * quando o isolamento é resolvido, o nó WAIT ressincroniza os seus dados e passa a SECOND.
+  * uma rede de replicação dedicada é implementada numa rede privada,
+  * Heartbeats na rede de produção são perdidas (rede isolada),
+  * Heartbeats na rede de replicação estão a funcionar (não é uma rede isolada),
+  * o cluster permanece no estado PRIM/SECOND.
 
 
-Nota: Se a testemunha estiver inativa ou desligada, ambos os nós passam para WAIT e a aplicação deixa de ser executada. Por isso, deve escolher uma testemunha robusta, como um router.
+### Uma única rede e um checker split-brain {#a-single-network-and-a-splitbrain-checker}
+
+Quando existe um isolamento de rede, o comportamento com um checker split-brain é:
+
+  * um checker split-brain foi configurado com o endereço IP de um testemunha (normalmente um router),
+  * o checker split-brain funciona quando um servidor passa de PRIM para ALONE ou de SECOND para ALONE,
+  * em caso de isolamento de rede, antes de ir para ALONE, ambos os nós testam o endereço IP,
+  * o nó que consegue aceder ao endereço IP vai para ALONE, o outro vai para WAIT,
+  * Quando o isolamento é reparado, o nó WAIT resincroniza os seus dados e torna-se SECOND.
+
+
+Nota: Se a testemunha estiver inativa ou desconectada, ambos os nós entram em WAIT e a aplicação deixa de funcionar. É por isso que deve escolher uma testemunha robusta, como um router.
+

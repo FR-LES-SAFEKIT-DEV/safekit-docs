@@ -5,7 +5,7 @@ description: "Aceda à biblioteca completa de guias de instalação rápida Safe
 category: "quick-install"
 lang: "pt-pt"
 topics: "Biblioteca de Módulos de Aplicação SafeKit: Soluções de Alta Disponibilidade Prontas a Usar, 🔍 Explore SafeKit"
-translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 14 expressions"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
 # Guias de Instalação Rápida SafeKit {#safekit-quick-installation-guides}

@@ -1,22 +1,23 @@
 ---
-title: "Migratie van Milestone -beheer met SafeKit"
+title: "Migratie van Milestone Management met SafeKit"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-milestone-migration/"
-description: "Leer hoe u Milestone XProtect Management Server migreert naar een SafeKit high availability-cluster. Deze stapsgewijze handleiding behandelt databasemigratie, SQL Server-replicatie en failover-configuratie voor een naadloze overgang naar de nieuwe Milestone versies."
+description: "Leer hoe u Milestone XProtect Management Server migreert in een SafeKit cluster met hoge beschikbaarheid. Deze stapsgewijze handleiding behandelt databasemigratie, SQL Server-replicatie en failoverconfiguratie voor een naadloze overgang naar nieuwe Milestone versies."
 category: "quick-install"
 lang: "nl"
 topics: "Eviden SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 ---
 
-# Migratie Milestone -beheer met SafeKit {#milestone-management-migration-with-safekit}
+# Migratie van Milestone Management met SafeKit {#milestone-management-migration-with-safekit}
 
-## Bewijs SafeKit {#eviden-safekit}
+## Eviden SafeKit {#eviden-safekit}
 
 
 {{%  insert-safekit-4-buttons-nl  %}}
  
 
 
-![ Waarschuwing ](/wp-content/uploads/2022/07/warning-small.png)
+![Waarschuwing](/wp-content/uploads/2022/07/warning-small.png)
 
 
-Dit KB-artikel van Milestone legt de procedure uit: [ Hoe een XProtect Management Server te upgraden wanneer een volledig Safekit-cluster is geconfigureerd ](<https://support.milestonesys.com/article/upgrade-XProtect-MS-when-full-Evidian-Safekit-cluster-is-configured-howto>) .
+Deze KB van Milestone legt de procedure uit: [Hoe u een XProtect Management Server kunt upgraden wanneer een volledig Safekit-cluster is geconfigureerd](<https://support.milestonesys.com/article/upgrade-XProtect-MS-when-full-Evidian-Safekit-cluster-is-configured-howto>).

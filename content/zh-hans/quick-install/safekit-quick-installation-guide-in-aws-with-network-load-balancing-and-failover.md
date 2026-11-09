@@ -1,55 +1,56 @@
 ---
-title: "AWS网络负载均衡和故障转移：安装SafeKit farm.safe模块"
+title: "AWS 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
-description: "提高 AWS 网络负载均衡 SafeKit的智能应用监控。 farm.safe 该模块提供专门的健康检查功能 AWS 负载均衡器，可在应用层实现无缝高可用性。为关键任务型应用实现自动自愈和故障转移。"
+description: "使用 SafeKit 的智能应用程序监控功能增强 AWS 网络负载均衡。farm.safe farm.safe 为 AWS 负载均衡器提供专用健康检查，从而在应用程序级别实现无缝高可用性。为关键任务应用程序实现自动自我修复和故障转移。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS高可用性限制； SafeKit / AWS解决方案概述；在Windows和Linux ( farm.safe ) 上安装SafeKit / AWS解决方案的逐步配置； SafeKit和farm解决方案演示；🔍 探索 SafeKit"
+topics: "AWS 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/AWS 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/AWS 解决方案 (farm.safe)、SafeKit/AWS 解决方案的分步配置、SafeKit farm 解决方案演示、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# AWS网络负载均衡和故障转移：安装SafeKit farm.safe模块模块 {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# AWS 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块 {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="AWS" mod="farm"  %}}
  
 
-## SafeKit / AWS解决方案概述 {#overview-of-the-safekit--aws-solution}
+## SafeKit/AWS 解决方案概述 {#overview-of-the-safekit--aws-solution}
 
-解决方案描述如下： **💡 [ SafeKit : Amazon AWS负载均衡和应用程序高可用性<span class="notranslate farm-term" translate="no">Farm</span>集群](</zh-hans/solutions/aws-load-balancing-cluster-failover/>)** 。
+解决方案在此处描述：**💡 [SafeKit：Amazon AWS 负载均衡和应用程序高可用性 <span class="notranslate farm-term" translate="no">farm</span> 集群](</zh-hans/solutions/aws-load-balancing-cluster-failover/>)**。
 
-## 在Windows和Linux ( farm.safe )上安装SafeKit / AWS解决方案 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
+## 在 Windows 和 Linux 上安装 SafeKit/AWS 解决方案 (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
-### Amazon AWS负载均衡器的配置 {#configuration-of-the-amazon-aws-load-balancer}
+### Amazon AWS 负载均衡器的配置 {#configuration-of-the-amazon-aws-load-balancer}
 
-负载均衡器必须配置虚拟 IP 地址。  
-负载均衡器必须配置为定期向节点发送健康数据包。  
-为此， SafeKit提供了一个在节点内部运行的健康检查，该检查
+必须为负载均衡器配置虚拟 IP 地址。  
+并且必须将负载均衡器配置为定期向节点发送运行状况数据包。  
+为此，SafeKit 提供了一个在节点内部运行的健康检查，
 
-  * 当<span class="notranslate farm-term" translate="no">farm</span>模块状态为 UP（绿色）时，返回 OK
-  * 在其他所有州均未找到返回结果
+  * 当 <span class="notranslate farm-term" translate="no">farm</span> 模块状态为 UP（绿色）时，返回 OK
+  * 在所有其他状态下返回 NOT FOUND
 
 
-您必须使用以下命令配置 Amazon AWS负载均衡器：
+您必须使用以下配置来配置 Amazon AWS 负载均衡器：
 
   * HTTP 协议
-  * 端口 9010，即SafeKit Web 服务器端口
-  * URL /var/modules/farm/ready.txt （如果<span class="notranslate farm-term" translate="no">farm</span>是您稍后要部署的模块名称）
+  * 端口 9010，SafeKit Web 服务器端口
+  * URL /var/modules/farm/ready.txt（如果 <span class="notranslate farm-term" translate="no">farm</span> 是您稍后将部署的模块名称）
 
 
-有关更多信息，请参阅[ Amazon AWS负载均衡器](<https://aws.amazon.com/elasticloadbalancing/>)的配置。
+有关更多信息，请参阅[Amazon AWS 负载均衡器的配置](<https://aws.amazon.com/elasticloadbalancing/>)。
 
 
-⚠️ 请勿在以下步骤配置的第 4 步配置虚拟 IP 地址和负载均衡规则。Amazon AWS负载均衡器中已设置了虚拟 IP 地址和负载均衡规则。在第 4 步设置虚拟 IP 地址和负载均衡规则仅适用于本地部署配置。
+⚠️ 请勿在下面的分步配置中的步骤 4 中配置虚拟 IP 地址和负载平衡规则。虚拟 IP 地址和负载平衡规则已在 Amazon AWS 负载均衡器中设置。在步骤 4 中设置虚拟 IP 和负载平衡规则仅适用于本地配置。
 
-### Amazon AWS网络安全的配置 {#configuration-of-the-amazon-aws-network-security}
+### Amazon AWS 网络安全配置 {#configuration-of-the-amazon-aws-network-security}
 
-必须配置网络安全，以启用以下协议和端口的通信：
+必须将网络安全配置为启用以下协议和端口的通信：
 
-  * safeadmin 服务使用 UDP 端口 4800（在SafeKit节点之间）。
-  * <span class="notranslate farm-term" translate="no">farm</span>模块内部（ SafeKit节点之间）的心跳信号使用 UDP 4803 端口。
-  * TCP – 9010 用于负载均衡器健康检查以及以 http 模式运行的SafeKit Web 控制台。
-  * TCP 端口 9001 用于配置控制台的 HTTPS 模式。
-  * TCP – 9453 用于以 https 模式运行的SafeKit Web 控制台
+  * UDP - 4800 用于 safeadmin 服务（SafeKit 节点之间）
+  * UDP - 4803 用于 <span class="notranslate farm-term" translate="no">farm</span> 模块内部的心跳（SafeKit 节点之间）
+  * TCP – 9010 用于负载均衡器健康检查和以 http 模式运行的 SafeKit Web 控制台
+  * TCP – 9001 用于为控制台配置 https 模式
+  * TCP – 9453，用于在 https 模式下运行的 SafeKit Web 控制台
 
 
 
@@ -58,15 +59,15 @@ topics: "AWS 、 SafeKit高可用性快速安装指南； SafeKit / AWS高可用
 {{%  insert-safekit-installation-package-linux-zh-hans app="" mod="mirror"  %}}
  
 
-注意：您将要配置的通用**farm.safe**模块包含在软件包中。
+注意：您将要配置的通用 **farm.safe** 模块包含在软件包中。
 
-## SafeKit / AWS解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--aws-solution}
+## SafeKit/AWS 解决方案的分步配置 {#step-by-step-configuration-of-the-safekit--aws-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-zh-hans app="" mod="farm"  %}}
  
 
-## SafeKit <span class="notranslate farm-term" translate="no">farm</span>解决方案的演示 {#demonstration-of-the-safekit-farm-solution}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> 解决方案演示 {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-zh-hans  %}}

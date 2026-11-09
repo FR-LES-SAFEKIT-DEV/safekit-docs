@@ -1,42 +1,43 @@
 ---
-title: "Linux のネットワークロードバランシングとフェイルオーバー: SafeKit farm.safe モジュールのインストール"
+title: "Linux ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
-description: "Linux のネットワークロードバランシングと自動フェイルオーバーのために farm.safe モジュールを導入する方法を説明します。このガイドでは、外部のハードウェアロードバランサーや複雑な設定なしで、仮想 IP を使って Web サービスやアプリケーション向けの高可用性クラスターを構築する方法を紹介します。"
+description: "Linux ネットワーク負荷分散と自動フェイルオーバーのために farm.safe モジュールをデプロイする方法を学びます。このガイドでは、外部ハードウェアロードバランサーや複雑な設定を必要とせずに、仮想 IP を使用して Web サービスおよびアプリケーションの高可用性クラスターを構築する方法を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Linux 向け高可用性クイックインストールガイド, SafeKit 高可用性の制限事項, SafeKit / Linux ソリューションの概要, SafeKit / Linux ソリューションのインストール (farm.safe), SafeKit / Linux ソリューションのステップバイステップ設定, SafeKit farm ソリューションのデモ, 🔍 SafeKit を探索する"
+topics: "Linux 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Linux ソリューションの概要、SafeKit/Linux ソリューション (farm.safe) のインストール、SafeKit/Linux ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# Linux のネットワークロードバランシングとフェイルオーバー: SafeKit farm.safe モジュールのインストール {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Linux ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ja app="Linux" mod="farm"  %}}
  
 
-## SafeKit / Linux ソリューションの概要 {#overview-of-the-safekit--linux-solution}
+## SafeKit/Linux ソリューションの概要 {#overview-of-the-safekit--linux-solution}
 
-ソリューションの説明はこちらです: **💡[SafeKit: オールインワンの Linux ロードバランシング & 高可用性ソフトウェア](</ja/solutions/linux-load-balancing-failover/>)**。
+ソリューションについては、こちらで説明しています。**💡 [SafeKit オールインワンの Linux ロードバランシング＆高可用性ソフトウェア](</ja/solutions/linux-load-balancing-failover/>)**。
 
-## SafeKit / Linux ソリューションのインストール (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
+## SafeKit/Linux ソリューション (farm.safe) のインストール {#installation-of-the-safekit--linux-solution-farmsafe}
 
 ### 前提条件 {#prerequisites}
 
-  * <span class="notranslate farm-term" translate="no">farm</span> に配置するアプリケーションを、2 ノード以上（仮想マシンまたは物理サーバー）にインストールしておく必要があります。
+  * <span class="notranslate farm-term" translate="no">farm</span> に配置するアプリケーションを、2 つ以上のノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
 
 
 
 {{%  insert-safekit-installation-package-linux-ja app="" mod="farm"  %}}
  
 
-注: 設定する汎用の **farm.safe** モジュールは、パッケージに含まれています。
+注：設定する汎用 **farm.safe** モジュールは、パッケージ内に同梱されています。
 
-## SafeKit / Linux ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--linux-solution}
+## SafeKit/Linux ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ja app="Linux" mod="farm"  %}}
  
 
-## SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモ {#demonstration-of-the-safekit-farm-solution}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

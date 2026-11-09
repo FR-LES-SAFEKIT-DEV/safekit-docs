@@ -1,55 +1,56 @@
 ---
-title: "AWSネットワーク負荷分散およびフェイルオーバー: SafeKit farm.safeモジュールをインストールします"
+title: "AWS ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
-description: "強化する AWS ネットワーク負荷分散 SafeKitのインテリジェントなアプリケーション監視。 farm.safe モジュールは、専用の健康チェックを提供します。 AWS ロードバランサーにより、アプリケーションレベルでシームレスな高可用性を実現します。ミッションクリティカルなアプリケーションに対して、自動的な自己修復とフェイルオーバー機能を提供します。"
+description: "SafeKit のインテリジェントなアプリケーション監視で AWS ネットワーク負荷分散を強化します。farm.safe farm.safe は、AWS ロードバランサー専用のヘルスチェックを提供し、アプリケーションレベルでのシームレスな HA を可能にします。ミッションクリティカルなアプリケーションの自動セルフヒーリングとフェイルオーバーを実現します。"
 category: "quick-install"
 lang: "ja"
-topics: "AWSの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / AWSソリューションの概要、 SafeKitおよびAWS ( farm.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / AWSソリューションのステップバイステップ構成、 SafeKit farmソリューションのデモ、🔍 SafeKit を探索する"
+topics: "AWS 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/AWS ソリューションの概要、Windows および Linux への SafeKit/AWS ソリューションのインストール (farm.safe)、SafeKit/AWS ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# AWSネットワーク負荷分散とフェイルオーバー: SafeKit farm.safeモジュールをインストールします {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# AWS ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ja app="AWS" mod="farm"  %}}
  
 
-## SafeKit / AWSソリューションの概要 {#overview-of-the-safekit--aws-solution}
+## SafeKit/AWS ソリューションの概要 {#overview-of-the-safekit--aws-solution}
 
-ソリューションはここに記載されています: **💡 [ SafeKit : Amazon AWSロードバランシングとアプリケーションの高可用性<span class="notranslate farm-term" translate="no">Farm</span>クラスター](</ja/solutions/aws-load-balancing-cluster-failover/>)** 。
+解決策はこちらで説明されています：**💡 [SafeKit : Amazon AWS ロードバランシングとアプリケーションの高可用性 <span class="notranslate farm-term" translate="no">farm</span> クラスター](</ja/solutions/aws-load-balancing-cluster-failover/>)**。
 
-## SafeKit / AWSソリューションをWindowsおよびLinux ( farm.safe )にインストールします。 {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
+## Windows および Linux への SafeKit/AWS ソリューションのインストール (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
-### Amazon AWSロードバランサーの設定 {#configuration-of-the-amazon-aws-load-balancer}
+### Amazon AWS ロードバランサーの設定 {#configuration-of-the-amazon-aws-load-balancer}
 
-ロードバランサーには仮想IPアドレスを設定する必要があります。  
-また、ロードバランサーは、ノードに対して定期的にヘルスチェックパケットを送信するように設定する必要があります。  
-そのため、 SafeKitノード内部で実行されるヘルスチェックを提供し、
+ロードバランサーは、仮想 IP アドレスで設定する必要があります。  
+また、ロードバランサーは、ノードに定期的にヘルスパケットを送信するように設定する必要があります。  
+そのため、SafeKit ノード内で実行されるヘルスチェックを提供します
 
-  * <span class="notranslate farm-term" translate="no">farm</span>モジュールの状態がUP（緑色）の場合、OKを返します。
-  * 他のすべての州では「見つかりません」と表示されます。
-
-
-Amazon AWSロードバランサーを以下のように設定する必要があります。
-
-  * HTTPプロトコル
-  * ポート9010、 SafeKitウェブサーバーポート
-  * URL /var/modules/farm/ready.txt （ <span class="notranslate farm-term" translate="no">farm</span>が後でデプロイするモジュール名である場合）
+  * <span class="notranslate farm-term" translate="no">farm</span> モジュールの状態が UP（緑）の場合、OK を返します
+  * その他のすべての状態では、NOT FOUND を返します
 
 
-詳細については、Amazon AWSの設定を参照[てください](<https://aws.amazon.com/elasticloadbalancing/>)
+Amazon AWS ロードバランサーを次のように設定する必要があります
+
+  * HTTP プロトコル
+  * ポート 9010、SafeKit ウェブサーバーのポート
+  * URL /var/modules/farm/ready.txt (<span class="notranslate farm-term" translate="no">farm</span> 後でデプロイするモジュール名です)
 
 
-⚠️ 下記の手順設定のステップ4では、仮想IPアドレスとロードバランシングルールを設定しないでください。仮想IPアドレスとロードバランシングルールは、Amazon AWSロードバランサーに既に設定されています。ステップ4で仮想IPアドレスとロードバランシングルールを設定するのは、オンプレミス環境での設定にのみ有効です。
+詳細については、[Amazon AWS ロードバランサーの構成を](<https://aws.amazon.com/elasticloadbalancing/>)参照してください。
 
-### Amazon AWSネットワークセキュリティの設定 {#configuration-of-the-amazon-aws-network-security}
 
-ネットワークセキュリティは、以下のプロトコルとポートでの通信を有効にするように構成する必要があります。
+⚠️ 以下のステップバイステップ設定のステップ 4 で、仮想 IP アドレスとロードバランシングルールを設定しないでください。仮想 IP アドレスとロードバランシングルールは、Amazon AWS ロードバランサーにすでに設定されています。ステップ 4 で仮想 IP とロードバランシングルールを設定するのは、オンプレミス設定の場合のみです。
 
-  * UDP - safeadminサービス用ポート4800（ SafeKitノード間）
-  * UDP - <span class="notranslate farm-term" translate="no">farm</span>モジュール内部（ SafeKitノード間）のハートビート用ポート番号4803
-  * TCP – ロードバランサーのヘルスチェックと、HTTPモードで動作するSafeKit Webコンソール用に9010番ポートを使用します。
-  * TCP – 9001 コンソールの HTTPS モードを設定する
-  * TCP – HTTPSモードで動作するSafeKitウェブコンソール用の9453番ポート
+### Amazon AWS ネットワークセキュリティの設定 {#configuration-of-the-amazon-aws-network-security}
+
+ネットワークセキュリティは、以下のプロトコルとポートの通信を有効にするように設定する必要があります
+
+  * UDP - 4800 (safeadmin サービス用、SafeKit ノード間)
+  * UDP - 4803 (<span class="notranslate farm-term" translate="no">farm</span> モジュール内のハートビート用 (SafeKit ノード間))
+  * TCP – 9010 は、ロードバランサーのヘルスチェック用、および http モードで実行されている SafeKit Web コンソール用です
+  * TCP – 9001 を使用してコンソールの HTTPS モードを設定します
+  * TCP – 9453 (https モードで実行されている SafeKit ウェブコンソール用)
 
 
 
@@ -58,15 +59,15 @@ Amazon AWSロードバランサーを以下のように設定する必要があ�
 {{%  insert-safekit-installation-package-linux-ja app="" mod="mirror"  %}}
  
 
-注：設定する汎用モジュール**farm.safe**は、パッケージ内に同梱されています。
+注：設定する汎用 **farm.safe** モジュールは、パッケージ内に同梱されています。
 
-## SafeKit / AWSソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--aws-solution}
+## SafeKit/AWS ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--aws-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ja app="" mod="farm"  %}}
  
 
-## SafeKit <span class="notranslate farm-term" translate="no">farm</span>のソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
+## SafeKit <span class="notranslate farm-term" translate="no">farm</span> ソリューションのデモンストレーション {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ja  %}}

@@ -1,62 +1,74 @@
 ---
-title: "AWS-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe"
+title: "AWS-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
-description: "Erweitern Sie den AWS-Netzwerklastausgleich um die intelligente Anwendungsüberwachung von SafeKit. Das Modul farm.safe stellt eine dedizierte Integritätsprüfung für den AWS-Load-Balancer bereit und ermöglicht nahtlose Hochverfügbarkeit auf Anwendungsebene. Erzielen Sie automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
+description: "Erweitern Sie AWS Network Load Balancing mit dem intelligenten Anwendungsmonitoring von SafeKit. Das Modul farm.safe bietet eine dedizierte Zustandsprüfung für den AWS Load Balancer, die eine nahtlose Hochverfügbarkeit auf Anwendungsebene ermöglicht. Erzielen Sie automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in AWS, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit-/AWS-Lösung, Installation der SafeKit-/AWS-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit-/AWS-Lösung, Demonstration der SafeKit-Lösung farm, 🔍 SafeKit entdecken"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in AWS, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/AWS-Lösung, Installation der SafeKit/AWS-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/AWS-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 ---
 
-# AWS-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# AWS-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+
 
 {{%  insert-safekit-farm-guide-de app="AWS" mod="farm"  %}}
+ 
 
-## Überblick über die SafeKit-/AWS-Lösung {#overview-of-the-safekit--aws-solution}
+## Übersicht über die SafeKit/AWS-Lösung {#overview-of-the-safekit--aws-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: Amazon AWS-Lastausgleich und Anwendungs-Hochverfügbarkeit mit einem <span class="notranslate farm-term" translate="no">Farm</span>-Cluster](</de/solutions/aws-load-balancing-cluster-failover/>)**.
+Die Lösung wird hier beschrieben: **💡 [SafeKit: Amazon AWS Lastausgleich und hochverfügbarer <span class="notranslate farm-term" translate="no">Farm</span>-Cluster](</de/solutions/aws-load-balancing-cluster-failover/>)**.
 
-## Installation der SafeKit-/AWS-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
+## Installation der SafeKit/AWS-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
-### Konfiguration des Amazon AWS-Load-Balancers {#configuration-of-the-amazon-aws-load-balancer}
+### Konfiguration des Amazon AWS Load Balancer {#configuration-of-the-amazon-aws-load-balancer}
 
-Der Load-Balancer muss mit einer virtuellen IP-Adresse konfiguriert werden.  
-Außerdem muss der Load-Balancer so konfiguriert werden, dass er regelmäßig Integritätspakete an die Knoten sendet.  
-Dafür stellt SafeKit eine Integritätsprüfung bereit, die auf den Knoten läuft und
+Der Load Balancer muss mit einer virtuellen IP-Adresse konfiguriert werden.  
+Und der Load Balancer muss so konfiguriert sein, dass er regelmäßig Statuspakete an die Knoten sendet.  
+Dafür bietet SafeKit einen Health-Check, der innerhalb der Knoten ausgeführt wird und der
 
-  * OK zurückgibt, wenn der Status des Moduls <span class="notranslate farm-term" translate="no">farm</span> UP (grün) ist
-  * in allen anderen Status NOT FOUND zurückgibt
+  * gibt OK zurück, wenn der Status des <span class="notranslate farm-term" translate="no">Farm</span>-Modul UP (grün) ist
+  * Gibt in allen anderen Bundesstaaten NICHT GEFUNDEN zurück
 
-Sie müssen den Amazon AWS-Load-Balancer wie folgt konfigurieren:
+
+Sie müssen den Amazon AWS Load Balancer mit folgenden Einstellungen konfigurieren:
 
   * HTTP-Protokoll
-  * Port 9010, der Port des SafeKit-Webservers
-  * URL /var/modules/farm/ready.txt (wenn <span class="notranslate farm-term" translate="no">farm</span> der Name des Moduls ist, das Sie später bereitstellen)
+  * Port 9010, der SafeKit Webserver-Port
+  * URL /var/modules/farm/ready.txt (wenn <span class="notranslate farm-term" translate="no">farm</span> der Modulname ist, den Sie später bereitstellen werden)
 
-Weitere Informationen finden Sie unter [Konfiguration des Amazon AWS-Load-Balancers](<https://aws.amazon.com/elasticloadbalancing/>).
 
-⚠️ Konfigurieren Sie in Schritt 4 der folgenden Schritt-für-Schritt-Konfiguration weder eine virtuelle IP-Adresse noch Lastausgleichsregeln. Die virtuelle IP-Adresse und die Lastausgleichsregeln sind bereits im Amazon AWS-Load-Balancer festgelegt. Das Festlegen einer virtuellen IP-Adresse und von Lastausgleichsregeln in Schritt 4 ist nur für eine lokale (On-Premises-)Konfiguration sinnvoll.
+Weitere Informationen finden Sie [unter Konfiguration des Amazon AWS Load Balancer](<https://aws.amazon.com/elasticloadbalancing/>).
+
+
+⚠️ Konfigurieren Sie in Schritt 4 der folgenden Schritt-für-Schritt-Konfiguration keine virtuelle IP-Adresse und keine Lastausgleichsregeln. Die virtuelle IP-Adresse und die Lastausgleichsregeln sind bereits im Amazon AWS Load Balancer festgelegt. Das Festlegen einer virtuellen IP-Adresse und von Lastausgleichsregeln in Schritt 4 ist nur für die lokale Konfiguration nützlich.
 
 ### Konfiguration der Amazon AWS-Netzwerksicherheit {#configuration-of-the-amazon-aws-network-security}
 
-Die Netzwerksicherheit muss so konfiguriert werden, dass die Kommunikation für die folgenden Protokolle und Ports möglich ist:
+Die Netzwerksicherheit muss so konfiguriert werden, dass die Kommunikation für die folgenden Protokolle und Ports ermöglicht wird:
 
-  * UDP - 4800 für den Dienst safeadmin (zwischen SafeKit-Knoten)
-  * UDP - 4803 für den Heartbeat innerhalb des Moduls <span class="notranslate farm-term" translate="no">farm</span> (zwischen SafeKit-Knoten)
-  * TCP – 9010 für die Integritätsprüfung des Load-Balancers und für die SafeKit-Webkonsole im http-Modus
-  * TCP – 9001 zum Konfigurieren des https-Modus für die Konsole
-  * TCP – 9453 für die SafeKit-Webkonsole im https-Modus
+  * UDP – 4800 für den SafeAdmin-Dienst (zwischen SafeKit Knoten)
+  * UDP – 4803 für den Heartbeat innerhalb des <span class="notranslate farm-term" translate="no">Farm</span>-Modul (zwischen SafeKit Knoten)
+  * TCP – 9010 für die Zustandsprüfung des Load-Balancers und für die SafeKit-Webkonsole, die im HTTP-Modus ausgeführt wird
+  * TCP – 9001 zur Konfiguration des HTTPS-Modus für die Konsole
+  * TCP – 9453 für die SafeKit-Webkonsole im HTTPS-Modus
+
+
 
 {{%  insert-safekit-installation-package-windows-de app="" mod="mirror"  %}}
 
 {{%  insert-safekit-installation-package-linux-de app="" mod="mirror"  %}}
+ 
 
 Hinweis: Das generische Modul **farm.safe**, das Sie konfigurieren werden, ist im Paket enthalten.
 
-## Schritt-für-Schritt-Konfiguration der SafeKit-/AWS-Lösung {#step-by-step-configuration-of-the-safekit--aws-solution}
+## Schritt-für-Schritt-Konfiguration der SafeKit/AWS-Lösung {#step-by-step-configuration-of-the-safekit--aws-solution}
+
 
 {{%  insert-safekit-82-farm-configuration-de app="" mod="farm"  %}}
+ 
 
-## Demonstration der SafeKit-Lösung <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+## Demonstration der SafeKit <span class="notranslate farm-term" translate="no">farm</span> Lösung {#demonstration-of-the-safekit-farm-solution}
+
 
 {{%  insert-safekit-farm-video-de  %}}
 

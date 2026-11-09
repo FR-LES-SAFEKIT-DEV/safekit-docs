@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-farm-guide-nl — 9 instances in 9 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.4 | Translation LLM | 39 expressions */}}
+{{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
@@ -6,26 +7,26 @@
 
 ## Snelinstallatiegids voor hoge beschikbaarheid voor {{ .Get "app" }} {#quick-guide}
 
-Deze gids legt uit hoe u met SafeKit een **<span class="notranslate farm-term" translate="no">farm</span>-cluster** voor {{ .Get "app" }} configureert, met netwerkbelastingverdeling en automatische failover.
+Deze handleiding legt uit hoe u een **<span class="notranslate farm-term" translate="no">farm</span>-cluster** voor {{ .Get "app" }} instelt met SafeKit, voor netwerktaakverdeling en automatische failover.
 
 Voor hulp kunt u [SafeKit AI 🤖](/nl/resources/safekit-support/) gebruiken.
 
-### 1. Overzicht
+### 1. Overzicht {#1-overview}
 
-  * **Architectuur:** Implementeert een schaalbare, over meerdere knooppunten verdeelde <span class="notranslate farm-term" translate="no">farm</span> met een virtueel IP-adres.
-  * **Hoge beschikbaarheid:** Automatische statusbewaking en naadloze failover **waarborgen de continuïteit van de service**.
+  * **Architectuur:** implementeert een schaalbare, multi-node <span class="notranslate farm-term" translate="no">farm</span> met taakverdeling en een virtueel IP-adres.
+  * **Hoge beschikbaarheid:** beschikt over automatische conditiebewaking en naadloze failover om **de continuïteit van de dienstverlening te waarborgen**.
 
 
-### 2. Installatie
+### 2. Installatie {#2-installation}
 
   * **Software:** Installeer de SafeKit-engine op alle servers.
-  * **Module:** Download de vooraf geconfigureerde applicatiemodule `{{ .Get "mod" }}.safe`.
+  * **Module:** Download de vooraf geconfigureerde `{{ .Get "mod" }}.safe`-applicatiemodule.
 
 
-### 3. Configuratie
+### 3. Configuratie {#3-configuration}
 
-  * **Webconsole:** Configureer het <span class="notranslate farm-term" translate="no">farm</span>-cluster voor {{ .Get "app" }}.
-  * **Bewaking:** Start de bewaking en bescherming van de toepassing {{ .Get "app" }}.
+  * **Webconsole:** Configureer het {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span>-cluster.
+  * **Monitoren:** Begin met het monitoren en beveiligen van de {{ .Get "app" }} applicatie.
 
 
 

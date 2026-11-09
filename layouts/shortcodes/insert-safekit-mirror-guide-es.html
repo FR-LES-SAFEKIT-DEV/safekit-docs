@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-mirror-guide-es — 19 instances in 19 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.7 | Translation LLM | 31 expressions */}}
+{{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
@@ -6,26 +7,26 @@
 
 ## Guía de instalación rápida de alta disponibilidad para {{ .Get "app" }} {#quick-guide}
 
-Esta guía explica cómo configurar un **mirror cluster** para {{ .Get "app" }} usando SafeKit, lo que garantiza la conmutación por error automática y la replicación sincrónica sin necesidad de almacenamiento compartido. 
+Esta guía explica cómo configurar un **clúster mirror** para {{ .Get "app" }} utilizando SafeKit, garantizando la conmutación por error automática y la replicación síncrona sin necesidad de almacenamiento compartido. 
 
-Para obtener ayuda, puede usar [SafeKit AI 🤖](/es/resources/safekit-support/).
+Para obtener ayuda, puedes usar [SafeKit AI 🤖](/es/resources/safekit-support/).
 
-### 1. Descripción general
+### 1. Descripción general {#1-overview}
 
-  * **Arquitectura:** Utiliza un sistema de dos nodos (primario/secundario).
-  * **Protección de datos:** Implementa replicación síncrona en tiempo real para **cero pérdida de datos** (RPO=0).
-
-
-### 2. Instalación
-
-  * **Programas:** Instale el motor SafeKit en ambos servidores.
-  * **Módulo:** Descargue el módulo de aplicación preconfigurado `{{ .Get "mod" }}.safe`.
+  * **Arquitectura:** utiliza un sistema de dos nodos (primario/secundario).
+  * **Protección de datos:** implementa la replicación síncrona en tiempo real para **una pérdida de datos nula** (RPO = 0).
 
 
-### 3. Configuration
+### 2. Instalación {#2-installation}
 
-  * **Consola web:** Configure las carpetas específicas que contienen los archivos de {{ .Get "app" }}.
-  * **Supervisión:** Comience a supervisar y proteger la aplicación {{ .Get "app" }}.
+  * **Software:** Instale el motor SafeKit en ambos servidores.
+  * **Módulo:** Descargue el módulo de aplicación `{{ .Get "mod" }}.safe` preconfigurado.
+
+
+### 3. Configuración {#3-configuration}
+
+  * **Consola web:** configure las carpetas específicas que contienen los archivos {{ .Get "app" }}.
+  * **Supervisión:** Inicie la supervisión y protección de la aplicación {{ .Get "app" }}.
 
 
 

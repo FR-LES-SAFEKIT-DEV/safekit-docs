@@ -1,163 +1,164 @@
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.1 | Translation LLM | 37 expressions */}}
 {{/* Shortcode: insert-safekit-82-farm-configuration-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
 
 
-### 先决条件
+### 先决条件 {#prerequisites}
 
-  * 在至少 2 个节点上安装{{ .Get "app" }} 。
-  * 对于虚拟IP负载均衡，所有节点必须位于同一LAN或扩展LAN （第 2 层）。路由第 3 层网络需要 🛠️ [云负载均衡器](/resources/safekit-user-guide-82/#Cloud) 。
+  * 在至少 2 个节点上安装 {{ .Get "app" }}。
+  * 对于虚拟 IP 负载均衡，所有节点必须位于同一 LAN 或扩展 LAN（第 2 层）。路由第 3 层网络需要 🛠️ [云负载均衡器](/zh-hans/resources/safekit-user-guide-82/#Cloud)。
 
 
-### 1. 启动SafeKit控制台
+### 1. 启动 SafeKit 控制台 {#1-launch-the-safekit-console}
 
-  * 在集群的一个节点上，打开浏览器并连接到`http://localhost:9010` 。
-  * 使用用户名`admin`和安装过程中设置的密码登录。
+  * 在其中一个集群节点上，打开浏览器并连接到 `http://localhost:9010`。
+  * 使用用户名 `admin` 和安装期间设置的密码登录。
 
 
 您也可以从集群外部的工作站打开控制台。
 
-⚠️ 使用单个浏览器通过SafeKit配置两个节点。
+⚠️ 使用单个浏览器通过 SafeKit 配置两个节点。
 
-ℹ️ 要保护 Web 控制台，请参阅用户指南中的 🛠️ [11\. 保护SafeKit Web 服务](/resources/safekit-user-guide-82/#https) 。
+ℹ️ 要保护 Web 控制台，请参阅用户指南中的 🛠️ [11. 保护 SafeKit Web 服务](/zh-hans/resources/safekit-user-guide-82/#https)。
 
 
-![ SafeKit Web 控制台，适用于{{ .Get "app" }}集群](/wp-content/uploads/2024/03/01-login-large.png)
+![适用于 {{ .Get "app" }} 集群的 SafeKit Web 控制台](/wp-content/uploads/2024/03/01-login-large.png)
 
 
-### 2. 配置节点地址
+### 2. 配置节点地址 {#2-configure-node-addresses}
 
-  * 输入每个节点的IP地址。按Tab键检查连接并填写节点名称。
-  * 如果`node1`或`node2`显示为红色，请检查浏览器是否可以访问这两个节点。检查每个节点上的防火墙。请参阅 🛠️ [故障排除](/resources/safekit-user-guide-82/#Troubleshooting) 。
-  * 点击`Save and apply`以保存配置。
-  * 检查两个节点是否都显示✅ `Success` 。
-  * 如果节点显示❌ `Failure` ，请展开其▼面板并阅读消息。如果需要帮助，请使用SafeKit AI🤖。
+  * 输入每个节点的 IP 地址。按 Tab 键检查连接并填写节点名称。
+  * 如果 `node1` 或 `node2` 为红色，请检查浏览器是否可以访问这两个节点。检查每个节点上的防火墙。请参阅 🛠️ [故障排除](/zh-hans/resources/safekit-user-guide-82/#Troubleshooting)。
+  * 单击 `Save and apply` 以保存配置。
+  * 检查两个节点是否都显示 ✅ `Success`。
+  * 如果节点显示 ❌ `Failure`，请展开其▼面板并阅读消息。如果您需要帮助，请使用 SafeKit AI 🤖。
 
 
-ℹ️ 要添加第二个心跳网络和专用复制网络，请单击`LAN and nodes`中的第一个 ➕ 按钮。
+ℹ️ 要添加第二个心跳网络和专用复制网络，请单击 `LAN and nodes` 中的第一个 ➕ 按钮。
 
-ℹ️ 点击`Advanced configuration`查看`cluster.xml`文件。控制台将填充此文件并将其部署到两个节点上。
+ℹ️ 单击 `Advanced configuration` 以查看文件 `cluster.xml`。控制台会填充此文件，并将其部署到两个节点上。
 
 
-![ {{ .Get "app" }}集群的节点地址](/wp-content/uploads/2024/03/02-cluster-edit.png)
+![{{ .Get "app" }} 集群的节点地址](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
-### 3. 选择一个模块
+### 3. 选择模块 {#3-select-a-module}
 
-  * 在`New module`中，选择模块`{{ .Get "mod" }}.safe` 。
+  * 在 `New module` 中，选择模块 `{{ .Get "mod" }}.safe`。
 
 
-ℹ️ 在蓝色横幅中，🛜 `node1`是连接到控制台的节点。它会在需要时将请求转发到`node2` 。
+ℹ️ 在蓝色横幅中，🛜 `node1` 是连接到控制台的节点。它在需要时将请求转发到 `node2`。
 
-ℹ️ 如果在安装过程中添加了模块文件`xxx.safe` ，控制台会在`node1`上的`Application_Modules/generic/`目录中查找该文件。
+ℹ️ 如果您在安装期间添加了模块文件 `xxx.safe`，控制台会在 `node1` 上的 `Application_Modules/generic/` 目录中查找它。
 
 
-![选择{{ .Get "app" }}的模块](/wp-content/uploads/2024/03/04-module-new.png)
+![选择 {{ .Get "app" }} 模块](/wp-content/uploads/2024/03/04-module-new.png)
 
 
-### 4. 配置模块
+### 4. 配置模块 {#4-configure-the-module}
 
-  * 在`Module startup at boot`中，将模块设置为在启动时自动启动，无需延迟。
-  * 在`Macros` / `SERVICES`中，按启动顺序列出应用程序服务。用逗号分隔服务名称。
-  * 在`Heartbeat networks`中，除非您在步骤 2 中添加了LAN ，否则请保留一个心跳网络。
-  * 在`Virtual IP addresses`中，输入与两个节点位于同一子网中的虚拟IP地址。
-  * 配置应用程序客户端使用此虚拟IP地址或其DNS名称。
-  * 在`Load balancing rules`中，输入要进行均衡的服务端口，例如TCP端口 9010。
-  * 在`Load balancing rules`中，选择`Source address`或`Source port` ：
-    * `Source address` ：来自同一客户端的所有TCP连接都连接到<span class="notranslate farm-term" translate="no">farm</span>中的同一节点。这样可以保持客户端在该节点上的会话上下文。
-    * `Source port` ：来自同一客户端的TCP连接可以连接到<span class="notranslate farm-term" translate="no">farm</span>中的不同节点。会话上下文在节点之间不共享。
-  * 在`Checkers`中，根据需要添加检查：进程监控、自定义检查、 TCP 、ping 或脑裂检查。
-  * `Monitored processes/services`列表中列出的进程会受到监控，如果发生故障则会被重启。如果进程名称错误，模块会在启动后立即停止。
+  * 在 `Module startup at boot` 中，将模块设置为在启动时自动启动，不带延迟。
+  * 在 `Macros`/`SERVICES` 中，按启动顺序列出应用程序服务。用逗号分隔名称。
+  * 在 `Heartbeat networks` 中，保留一个心跳网络，除非您在步骤 2 中添加了 LAN。
+  * 在 `Virtual IP addresses` 中，输入与两个节点位于同一子网中的虚拟 IP 地址。
+  * 将应用程序客户端配置为使用此虚拟 IP 地址或其 DNS 名称。
+  * 在 `Load balancing rules` 中，输入要均衡的服务端口，例如 TCP 端口 9010。
+  * 在 `Load balancing rules` 中，选择 `Source address` 或 `Source port`：
+    * `Source address`：来自同一客户端的所有 TCP 连接都将转到 <span class="notranslate farm-term" translate="no">farm</span> 中的同一节点。这会在该节点上保留客户端的会话上下文。
+    * `Source port`：来自同一客户端的 TCP 连接可以转到 <span class="notranslate farm-term" translate="no">farm</span> 中的不同节点。会话上下文不会在节点之间共享。
+  * 在 `Checkers` 中，根据需要添加检查：进程监控、自定义检查、TCP、ping 或裂脑检查。
+  * `Monitored processes/services` 中列出的进程会受到监控，如果失败，则会重新启动。不正确的进程名称会导致模块在启动后立即停止。
 
 
-ℹ️ 点击`Advanced configuration`查看`userconfig.xml`文件。控制台会填充此文件，并将其与重启脚本一起部署到两个节点上。
+ℹ️ 单击 `Advanced configuration` 以查看文件 `userconfig.xml`。控制台会填充此文件，并通过重启脚本将其部署到两个节点上。
 
-ℹ️ 在云部署中，🛠️ [云负载均衡器](/resources/safekit-user-guide-82/#Cloud)管理虚拟IP地址和负载均衡规则。请勿在SafeKit中配置它们。
+ℹ️ 在云部署中，🛠️ [云负载均衡器](/zh-hans/resources/safekit-user-guide-82/#Cloud)管理虚拟 IP 地址和负载均衡规则。请勿在 SafeKit 中配置它们。
 
-ℹ️ 应用配置后， SafeKit会将Windows服务的启动类型设置为`Manual` 。服务将随模块启动，而不是在系统启动时启动。SafeKit 还会SafeKit这些服务在Linux系统启动时启动。
+ℹ️ 应用配置时，SafeKit 会将 Windows 服务的启动类型设置为 `Manual`。服务随模块启动，而不是在系统启动时启动。还会 SafeKit 这些服务在 Linux 系统启动时启动。
 
 
-![ {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span>的模块设置](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
+![{{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 的模块设置](/wp-content/uploads/2025/05/36-module-farm-config-edit-1.jpg)
 
 
-### 5. 编辑脚本（可选）
+### 5. 编辑脚本（可选） {#5-edit-scripts-optional}
 
-  * 大多数情况下，您可以跳过此步骤。脚本已配置好，会自动重启上一步中列出的服务。
-  * 如果无需更改，请点击`Next step` 。
-  * 脚本`start_both.ps1`按照`SERVICES`列表的顺序启动服务。
-  * 脚本`stop_both.ps1`会按相反的顺序停止服务。
-  * 脚本`start_both.ps1`还会检查每个服务。如果某个服务启动失败，它会停止该模块。
+  * 在大多数情况下，您可以跳过此步骤。脚本已配置为重新启动上一步中列出的服务。
+  * 如果不需要更改，请点击 `Next step`。
+  * 脚本 `start_both.ps1` 按照 `SERVICES`。列表中的顺序启动服务。
+  * 脚本 `stop_both.ps1` 以相反的顺序停止服务。
+  * 脚本 `start_both.ps1` 还会检查每个服务。如果某个服务无法启动，它会停止该模块。
 
 
-![重启{{ .Get "app" }}模块的脚本](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
+![重启 {{ .Get "app" }} 模块的脚本](/wp-content/uploads/2025/05/35-module-iis-edit-script-1.png)
 
 
-### 6. 通信加密（可选）
+### 6. 通信加密（可选） {#6-communication-encryption-optional}
 
-  * 保持节点间通信加密启用。
+  * 保持节点间通信加密。
 
 
-![ {{ .Get "app" }}模块的通信加密](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+![{{ .Get "app" }} 模块的通信加密](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
-### 7. 保存并应用
+### 7. 保存并应用 {#7-save-and-apply}
 
-  * 点击`Save and apply`以将配置和脚本部署到两个节点上。
+  * 单击 `Save and apply` 以在两个节点上部署配置和脚本。
 
 
-![ {{ .Get "app" }}模块的配置部署](/wp-content/uploads/2025/05/08-module-save-1.png)
+![{{ .Get "app" }} 模块的配置部署](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
-### 8. 检查配置结果
+### 8. 检查配置结果 {#8-check-the-configuration-result}
 
-  * 确认两个节点都显示“✅ `Success` 。然后点击`Monitor modules` 。
-  * 如果节点显示❌ `Failure` ，请展开其▼面板并阅读消息。如果需要帮助，请使用SafeKit AI🤖。
+  * 检查两个节点是否都显示 ✅ `Success`。然后单击 `Monitor modules`。
+  * 如果节点显示 ❌ `Failure`，请展开其▼面板并阅读消息。如果您需要帮助，请使用 SafeKit AI 🤖。
 
 
-![ {{ .Get "app" }}模块的配置结果](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+![{{ .Get "app" }} 模块的配置结果](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
-### 9. 在节点 1 和节点 2 上启动<span class="notranslate farm-term" translate="no">farm</span>集群。
+### 9. 在节点 1 和节点 2 上启动 <span class="notranslate farm-term" translate="no">farm</span> 集群 {#9-start-the-farm-cluster-on-node-1-and-node-2}
 
-  * 打开⋯菜单，然后在两个节点上选择`Start` ，如图所示。
+  * 打开⋯菜单，然后在两个节点上选择 `Start`，如图片所示。
 
 
-![在两个节点上启动{{ .Get "app" }}集群](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
+![在两个节点上启动 {{ .Get "app" }} 集群](/wp-content/uploads/2024/03/11-monitoring-farm-stop-stop-start.png)
 
 
-### 10. 等待两个节点都变为`UP` （绿色）状态。
+### 10. 等待两个节点都处于 `UP`（绿色） {#10-wait-until-both-nodes-are-up-green}
 
-<p>两个节点都必须达到<code>UP</code> （绿色）状态。这意味着<code>start_both</code>脚本已在两个节点上运行。 </p>
+<p>两个节点都必须达到 <code>UP</code>（绿色）状态。这意味着 <code>start_both</code> 脚本已在两个节点上运行。</p>
 
-<p> ⚠️ 如果节点未达到<code>UP</code> （绿色）状态，或者应用程序未启动，请检查其<a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">模块日志🖼️ </a> 。 </p>
+<p> ⚠️ 如果节点未达到 <code>UP</code>（绿色） </p>，或者应用程序未启动，请检查其 <a href="/wp-content/uploads/2024/03/37-module-log-farm-script.png">模块日志 🖼️</a>
 
-  * 点击`node1`或`node2`的🔍图标打开模块日志。查找错误，例如导致模块停止运行的检查。
-  * 在日志中，点击`start_both` 。脚本输出将显示在右侧。检查服务启动错误。
-  * 使用SafeKit AI 🤖 获取日志消息方面的帮助。
+  * 单击 `node1` 或 `node2` 的 🔍 图标以打开模块日志。查找错误，例如导致模块停止的检查。
+  * 在日志中，单击 `start_both`。脚本输出显示在右侧。检查是否有服务启动错误。
+  * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
 
 
-ℹ️ 使用 🕒 ** [时间线 🖼️ ](/wp-content/uploads/2026/05/safekit-console-timeline.png) **来了解集群中的事件顺序。
+ℹ️ 使用 🕒**[时间轴 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** 来了解集群中的事件顺序。
 
 
-![ {{ .Get "app" }}集群的两个节点都在运行](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
+![{{ .Get "app" }} 集群的两个节点都在运行](/wp-content/uploads/2024/03/15-monitoring-up-up.png)
 
 
-### 11. 测试
+### 11. 测试 {#11-testing}
 
-SafeKit包含一个内置的马赛克测试。请参阅[在SafeKit集群中测试负载均衡虚拟IP地址](/zh-hans/best-practises/test-load-balancing-vip-farm/) 。
+SafeKit 包含一个内置的马赛克测试。请参阅[在 SafeKit farm 集群中测试负载平衡虚拟 IP 地址](/zh-hans/best-practises/test-load-balancing-vip-farm/)。
 
-![使用马赛克测试{{ .Get "app" }}的虚拟IP地址](/wp-content/uploads/2024/03/appli-19.png)
+![使用马赛克测试 {{ .Get "app" }} 的虚拟 IP 地址](/wp-content/uploads/2024/03/appli-19.png)
 
-ℹ️ 有关更多详细信息和视频，请参阅 [ SafeKit在线培训](/resources/safekit-on-line-training/) 。
+ℹ️ 请参阅[SafeKit 在线培训](/zh-hans/resources/safekit-on-line-training/)，了解更多详情和视频。
 
 
-### 12. 支持
+### 12. 支持 {#12-support}
 
-  * 如需支持，请为每个节点创建一个SafeKit `Snapshot` 。收集这两个 .zip 文件。
+  * 如需支持，请为每个节点创建一个 SafeKit `Snapshot`。收集 2 个 .zip 文件。
 
 
-ℹ️ 有关更多信息，请参阅 [ SafeKit支持](/resources/safekit-support/) 。
+ℹ️ 有关更多信息，请参阅[SafeKit 支持](/zh-hans/resources/safekit-support/)。
 
 
-![支持{{ .Get "app" }}集群的快照](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)
+![支持 {{ .Get "app" }} 集群的快照](/wp-content/uploads/2026/09/32-snapshots-network-load-balancing-cluster.png)

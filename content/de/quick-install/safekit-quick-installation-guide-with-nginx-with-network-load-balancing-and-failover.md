@@ -1,27 +1,28 @@
 ---
-title: "NGINX Netzwerk-Lastverteilung und Failover: Installieren Sie das Modul SafeKit farm.safe"
+title: "NGINX Netzwerklastverteilung und Failover: Installieren Sie das SafeKit Modul farm.safe"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
-description: "Erfahren Sie, wie Sie das Modul farm.safe auf Windows und Linux für NGINX Network Load Balancing und automatisches Failover bereitstellen. Diese Anleitung zeigt Ihnen, wie Sie einen hochverfügbaren Cluster für Webdienste und Anwendungen mithilfe einer virtuellen IP-Adresse aufbauen – ohne externe Hardware-Load-Balancer oder komplexe Konfiguration."
+description: "Erfahren Sie, wie Sie das Modul farm.safe unter Windows und Linux für NGINX-Netzwerk-Load-Balancing und die automatische Failover-Funktion bereitstellen. Diese Anleitung zeigt Ihnen, wie Sie einen hochverfügbaren Cluster für Webdienste und Anwendungen mit einer virtuellen IP-Adresse erstellen, ohne dass externe Hardware-Load Balancer oder eine komplexe Konfiguration erforderlich sind."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für NGINX, Einschränkungen der Hochverfügbarkeit für SafeKit , Übersicht der SafeKit /NGINX-Lösung, Installation der SafeKit /NGINX-Lösung auf Windows und Linux ( farm.safe ), Schrittweise Konfiguration der SafeKit /NGINX-Lösung, Demonstration der SafeKit / farm -Lösung, 🔍 SafeKit entdecken"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit mit NGINX, Einschränkungen SafeKit Hochverfügbarkeit, Überblick über die SafeKit/NGINX Lösung, Installation der SafeKit/NGINX-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/NGINX-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 ---
 
-# NGINX Netzwerk-Lastverteilung und Failover: Installieren Sie das Modul SafeKit farm.safe {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# NGINX Netzwerklastverteilung und Failover: Installieren Sie das SafeKit Modul farm.safe {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-de app="NGINX" mod="farm"  %}}
  
 
-## Übersicht der SafeKit / NGINX-Lösung {#overview-of-the-safekit--nginx-solution}
+## Überblick über die SafeKit/NGINX Lösung {#overview-of-the-safekit--nginx-solution}
 
-Die Lösung wird hier beschrieben: **💡 [ SafeKit : All-in-One NGINX Load Balancing & High Availability Software ](</de/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>)** .
+Die Lösung wird hier beschrieben: **💡 [SafeKit: All-in-One NGINX Load Balancing & High Availability Software](</de/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/>)**.
 
-## Installation der SafeKit / NGINX-Lösung auf Windows und Linux ( farm.safe ) {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
+## Installation der SafeKit/NGINX-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe}
 
 ### Voraussetzungen {#prerequisites}
 
-  * Sie benötigen NGINX auf mindestens zwei Knoten (virtuelle Maschinen oder physische Server).
+  * Sie benötigen NGINX auf zwei oder mehr Knoten (virtuelle Maschinen oder physische Server) installiert ist.
 
 
 
@@ -30,15 +31,15 @@ Die Lösung wird hier beschrieben: **💡 [ SafeKit : All-in-One NGINX Load Bala
 {{%  insert-safekit-installation-package-linux-de app="NGINX" mod="farm"  %}}
  
 
-Hinweis: Das generische **farm.safe** -Modul, das Sie konfigurieren werden, ist im Paket enthalten.
+Hinweis: Das generische Modul **farm.safe**, das Sie konfigurieren werden, ist im Paket enthalten.
 
-## Schrittweise Konfiguration der SafeKit / NGINX-Lösung {#step-by-step-configuration-of-the-safekit--nginx-solution}
+## Schritt-für-Schritt-Konfiguration der SafeKit/NGINX-Lösung {#step-by-step-configuration-of-the-safekit--nginx-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-de app="NGINX" mod="farm"  %}}
  
 
-## Demonstration der Lösung SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+## Demonstration der SafeKit <span class="notranslate farm-term" translate="no">farm</span> Lösung {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-de  %}}

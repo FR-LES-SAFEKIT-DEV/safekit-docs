@@ -1,27 +1,28 @@
 ---
-title: "OracleとSafeKitによる高可用性：フェイルオーバーのためにoracle.safeモジュールをインストールしてください"
+title: "SafeKit による Oracle 高可用性：フェイルオーバー用の oracle.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-oracle/"
-description: "SafeKitにoracle.safeモジュールをデプロイして、 WindowsおよびLinux上でOracleの同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージを使用せずに、重要なアプリケーション向けに 2 ノードの SAN レス クラスタをセットアップする手順を説明します。"
+description: "SafeKit は用の oracle.safe モジュールをデプロイして、Windows および Linux 上の Oracle の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしでクリティカルアプリケーション用の 2 ノード SANless クラスターをセットアップする手順を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Oracleの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Oracleソリューションの概要、 SafeKitおよびOracle ( oracle.safe ) へのWindows / Linuxソリューションのインストール、 SafeKit / Oracleソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit を探索する"
+topics: "Oracle 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Oracle ソリューションの概要、Windows および Linux への SafeKit/Oracle ソリューションのインストール (oracle.safe)、SafeKit/Oracle ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# Oracle高可用性とSafeKit : フェイルオーバーのためにoracle.safeモジュールをインストールしてください {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
+# SafeKit による Oracle 高可用性：フェイルオーバー用の oracle.safe モジュールをインストールする {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit / Oracleソリューションの概要 {#overview-of-the-safekit--oracle-solution}
+## SafeKit/Oracle ソリューションの概要 {#overview-of-the-safekit--oracle-solution}
 
-解決策はここに記載されています: **💡 [最もシンプルなOracle高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/oracle-high-availability-synchronous-replication-failover/>)** 。
+解決策はこちらで説明されています：**💡 [最もシンプルな Oracle 高可用性：2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/oracle-high-availability-synchronous-replication-failover/>)**。
 
-## SafeKit / OracleソリューションをWindowsおよびLinux ( oracle.safe )にインストールします。 {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
+## Windows および Linux への SafeKit/Oracle ソリューションのインストール (oracle.safe) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 
 ### 前提条件 {#prerequisites}
 
-  * Oracle 2つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
+  * 2 つのノード（仮想マシンまたは物理サーバー）に Oracle をインストールする必要があります。
 
 
 
@@ -34,13 +35,13 @@ topics: "Oracleの高可用性クイックインストールガイド、 SafeKit
 {{%  insert-safekit-82-installation-module-linux-ja app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit / Oracleソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--oracle-solution}
+## SafeKit/Oracle ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--oracle-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Oracle" mod="oracle"  %}}
  
 
-## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
+## SafeKit mirror ソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

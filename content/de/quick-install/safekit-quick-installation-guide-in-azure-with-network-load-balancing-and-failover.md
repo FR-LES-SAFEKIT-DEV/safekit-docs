@@ -1,62 +1,74 @@
 ---
-title: "Azure-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe"
+title: "Azure-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
-description: "Erweitern Sie den Azure Load Balancer mit der intelligenten Anwendungsüberwachung von SafeKit. Das Modul farm.safe bietet eine dedizierte Integritätsprüfung für den Azure Load Balancer und ermöglicht nahtlose Hochverfügbarkeit auf Anwendungsebene, automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
+description: "Erweitern Sie Azure Network Load Balancing mit dem intelligenten Anwendungsmonitoring von SafeKit. Das Modul farm.safe bietet eine dedizierte Zustandsprüfung für den Azure Load Balancer, die eine nahtlose Hochverfügbarkeit auf Anwendungsebene ermöglicht. Erzielen Sie automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in Azure, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit-/Azure-Lösung, Installation der SafeKit-/Azure-Lösung unter Windows und Linux (farm.safe), Schrittweise Konfiguration der SafeKit-/Azure-Lösung, Demonstration der SafeKit-farm-Lösung, 🔍 SafeKit entdecken"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in Azure, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Azure-Lösung, Installation der SafeKit/Azure-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Azure-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 ---
 
-# Azure-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Azure-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+
 
 {{%  insert-safekit-farm-guide-de app="Azure" mod="farm"  %}}
+ 
 
-## Überblick über die SafeKit-/Azure-Lösung {#overview-of-the-safekit--azure-solution}
+## Übersicht über die SafeKit/Azure-Lösung {#overview-of-the-safekit--azure-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: Microsoft-Azure-Lastenausgleich und Anwendungshochverfügbarkeit mit einem <span class="notranslate farm-term" translate="no">Farm</span>-Cluster](</de/solutions/azure-load-balancing-cluster-failover/>)**.
+Die Lösung wird hier beschrieben: **💡 [SafeKit: Microsoft Azure Load Balancing & Application High Availability <span class="notranslate farm-term" translate="no">Farm</span>-Cluster](</de/solutions/azure-load-balancing-cluster-failover/>)**.
 
-## Installation der SafeKit-/Azure-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
+## Installation der SafeKit/Azure-Lösung unter Windows und Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
 
-### Konfiguration des Microsoft-Azure-Load Balancers {#configuration-of-the-microsoft-azure-load-balancer}
+### Konfiguration des Microsoft Azure Load Balancer {#configuration-of-the-microsoft-azure-load-balancer}
 
-Der Load Balancer muss mit einer virtuellen IP-Adresse konfiguriert werden.
-Außerdem muss der Load Balancer regelmäßig Integritätsprüfungen an die Knoten senden.
-Dafür stellt SafeKit eine Integritätsprüfung bereit, die auf den Knoten ausgeführt wird und:
+Der Load Balancer muss mit einer virtuellen IP-Adresse konfiguriert werden.  
+Und der Load Balancer muss so konfiguriert sein, dass er regelmäßig Statuspakete an die Knoten sendet.  
+Dafür bietet SafeKit einen Health-Check, der innerhalb der Knoten ausgeführt wird und der
 
-  * OK zurückgibt, wenn der Status des <span class="notranslate farm-term" translate="no">farm</span>-Moduls UP (grün) ist
-  * in allen anderen Zuständen NOT FOUND zurückgibt
+  * gibt OK zurück, wenn der Status des <span class="notranslate farm-term" translate="no">Farm</span>-Modul UP (grün) ist
+  * Gibt in allen anderen Bundesstaaten NICHT GEFUNDEN zurück
 
-Konfigurieren Sie den Microsoft-Azure-Load Balancer mit:
+
+Sie müssen den Microsoft Azure Load Balancer mit folgenden Einstellungen konfigurieren:
 
   * HTTP-Protokoll
-  * Port 9010, dem SafeKit-Webserverport
-  * URL /var/modules/farm/ready.txt (wenn <span class="notranslate farm-term" translate="no">farm</span> der Name des später bereitzustellenden Moduls ist)
+  * Port 9010, der SafeKit Webserver-Port
+  * URL /var/modules/farm/ready.txt (wenn <span class="notranslate farm-term" translate="no">farm</span> der Modulname ist, den Sie später bereitstellen werden)
 
-Weitere Informationen finden Sie unter [Konfiguration des Microsoft-Azure-Load Balancers](<https://learn.microsoft.com/en-us/azure/load-balancer/>).
 
-⚠️ Konfigurieren Sie in Schritt 4 der folgenden Schritt-für-Schritt-Anleitung weder eine virtuelle IP-Adresse noch Lastenausgleichsregeln. Die virtuelle IP-Adresse und die Lastenausgleichsregeln sind bereits im Microsoft-Azure-Load Balancer festgelegt. Ihre Konfiguration in Schritt 4 ist nur für lokale Konfigurationen vorgesehen.
+Weitere Informationen finden Sie [unter Konfiguration des Microsoft Azure Load Balancer](<https://learn.microsoft.com/en-us/azure/load-balancer/>). 
 
-### Konfiguration der Microsoft-Azure-Netzwerksicherheit {#configuration-of-the-microsoft-azure-network-security}
 
-Die Netzwerksicherheit muss so konfiguriert werden, dass die Kommunikation über folgende Protokolle und Ports möglich ist:
+⚠️ Konfigurieren Sie in Schritt 4 der folgenden Schritt-für-Schritt-Konfiguration keine virtuelle IP-Adresse und keine Lastausgleichsregeln. Die virtuelle IP-Adresse und die Lastausgleichsregeln sind bereits im Microsoft Azure Load Balancer konfiguriert. Das Festlegen einer virtuellen IP-Adresse und von Lastausgleichsregeln in Schritt 4 ist nur für die lokale Konfiguration nützlich.
 
-  * UDP - 4800 für den safeadmin-Dienst (zwischen SafeKit-Knoten)
-  * UDP - 4803 für Heartbeats innerhalb des <span class="notranslate farm-term" translate="no">farm</span>-Moduls (zwischen SafeKit-Knoten)
-  * TCP – 9010 für die Integritätsprüfung des Load Balancers und die im http-Modus ausgeführte SafeKit-Webkonsole
-  * TCP – 9001 zum Konfigurieren des https-Modus für die Konsole
-  * TCP – 9453 für die im https-Modus ausgeführte SafeKit-Webkonsole
+### Konfiguration der Netzwerksicherheit von Microsoft Azure {#configuration-of-the-microsoft-azure-network-security}
+
+Die Netzwerksicherheit muss so konfiguriert werden, dass die Kommunikation für die folgenden Protokolle und Ports ermöglicht wird:
+
+  * UDP – 4800 für den SafeAdmin-Dienst (zwischen SafeKit Knoten)
+  * UDP – 4803 für die Heartbeats innerhalb des <span class="notranslate farm-term" translate="no">Farm</span>-Modul (zwischen SafeKit Knoten)
+  * TCP – 9010 für die Zustandsprüfung des Load-Balancers und für die SafeKit-Webkonsole, die im HTTP-Modus ausgeführt wird
+  * TCP – 9001 zur Konfiguration des HTTPS-Modus für die Konsole
+  * TCP – 9453 für die SafeKit-Webkonsole im HTTPS-Modus
+
+
 
 {{%  insert-safekit-installation-package-windows-de app="" mod="mirror"  %}}
 
 {{%  insert-safekit-installation-package-linux-de app="" mod="mirror"  %}}
+ 
 
 Hinweis: Das generische Modul **farm.safe**, das Sie konfigurieren werden, ist im Paket enthalten.
 
-## Schrittweise Konfiguration der SafeKit-/Azure-Lösung {#step-by-step-configuration-of-the-safekit--azure-solution}
+## Schritt-für-Schritt-Konfiguration der SafeKit/Azure-Lösung {#step-by-step-configuration-of-the-safekit--azure-solution}
+
 
 {{%  insert-safekit-82-farm-configuration-de app="" mod="farm"  %}}
+ 
 
-## Demonstration der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Lösung {#demonstration-of-the-safekit-farm-solution}
+## Demonstration der SafeKit <span class="notranslate farm-term" translate="no">farm</span> Lösung {#demonstration-of-the-safekit-farm-solution}
+
 
 {{%  insert-safekit-farm-video-de  %}}
 

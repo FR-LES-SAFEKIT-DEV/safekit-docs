@@ -1,37 +1,33 @@
 ---
-title: "SafeKit を使用した Hyper-V 高可用性: フェールオーバー用の hyperv.safe モジュールをインストールする"
-canonical: https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-hyper-v/
-description: SafeKit を使用したアクティブ/アクティブ Hyper-V クラスターの hyperv.safe の構成について説明します。 2
-  ノードのシェアードナッシング アーキテクチャにより、VM レベルで高可用性を実現します。 SAN
-  や共有ストレージのコストをかけずに、自動フェイルオーバーのために複数の VM をノード間で同期的にレプリケートします。
-category: quick-install
-lang: ja
-topics: Hyper-V の高可用性クイック インストール ガイド、SafeKit 高可用性の制限、SafeKit / Hyper-V
-  ソリューションの概要、Windows への SafeKit / Hyper-V ソリューションのインストール (hyperv.safe)、SafeKit /
-  Hyper-V ソリューションのステップバイステップの構成、SafeKit / Hyper-V ソリューションのデモ、🔍 SafeKit を探索する
-  Availability Navigation Hub
+title: "SafeKit による Hyper-V 高可用性：フェイルオーバー用の hyperv.safe モジュールをインストールする"
+canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-hyper-v/"
+description: "SafeKit を使用したアクティブ/アクティブ Hyper-V クラスターの hyperv.safe の構成について説明します。2 ノードのシェアードナッシングアーキテクチャで、VM レベルでの高可用性を実現します。や共有ストレージのコストなしに、自動フェイルオーバーのために複数の VM をノード間 SAN 同期的にレプリケートします。"
+category: "quick-install"
+lang: "ja"
+topics: "Hyper-V 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Hyper-V ソリューションの概要、Windows への SafeKit/Hyper-V ソリューションのインストール (hyperv.safe)、SafeKit/Hyper-V ソリューションのステップバイステップ設定、SafeKit/Hyper-V ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# Hyper-V SafeKit による高可用性: フェイルオーバー用の hyperv.safe モジュールのインストール {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}
+# SafeKit による Hyper-V 高可用性：フェイルオーバー用の hyperv.safe モジュールをインストールする {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Hyper-V" mod="hyperv"  %}}
  
 
-## SafeKit / Hyper-V ソリューションの概要 {#overview-of-the-safekit--hyper-v-solution}
+## SafeKit/Hyper-V ソリューションの概要 {#overview-of-the-safekit--hyper-v-solution}
 
-解決策はここで説明されています。 **💡[シンプル Hyper-V 共有ストレージ (SAN) を使用しない高可用性](</ja/solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
+解決策はこちらで説明されています：**💡 [共有ストレージ (SAN) なしで Hyper-V 高可用性を実現する簡単な方法](</ja/solutions/hyper-v-replication-automatic-failover-load-balancing/>)**
 
-## のインストール SafeKit / Hyper-V 解決策 Windows (hyperv.safe) {#installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe}
+## Windows への SafeKit/Hyper-V ソリューションのインストール (hyperv.safe) {#installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe}
 
 ### 前提条件 {#prerequisites}
 
-  * Hyper-V 2 にインストールされた役割 Windows ノード (すべてに無料で埋め込まれています) Windows を含むバージョン Windows PC用）。
-  * 1 つ以上の仮想マシン内にインストールされた重要なアプリケーション。
-  * Hyper-V ホストあたり最大 32 の仮想マシン。
-  * 複製されるデータの合計は数テラバイトに制限されており、これを超えると再同期にかかる時間が大幅に長くなります。
-  * ノード間の相互接続は最低 1Gb/秒 (再同期を高速化するには 10Gb/秒を推奨)。
-  * IP フェイルオーバーには、同じ LAN または拡張 LAN (L2) 上の両方のノードが必要です。ルーティングされた L3 ネットワークはサポートされていません (🛠️ [クラウド ロード バランサー ](</ja/resources/safekit-user-guide-82/#Cloud>)] を除く)。
+  * Hyper-V 役割は、2 つの Windows ノードにインストールされています（PC 用 Windows を含むすべての Windows バージョンに無料で組み込まれています）。
+  * 1 つ以上の仮想マシンにインストールされた重要なアプリケーション。
+  * Hyper-V ホストあたり最大 32 台の仮想マシン。
+  * レプリケートされるデータの総量は数テラバイトに制限されます。これを超えると、再同期に要する時間が長くなります。
+  * ノード間の相互接続は最低 1Gb/s（より高速な再同期のためには 10Gb/s を推奨）。
+  * IP フェイルオーバーには、同じ LAN または拡張 LAN（L2）上の両方のノードが必要です。ルーティングされた L3 ネットワークはサポートされていません（🛠️ [クラウドロードバランサー](</ja/resources/safekit-user-guide-82/#Cloud>)を除く）。
 
 
 
@@ -42,13 +38,13 @@ topics: Hyper-V の高可用性クイック インストール ガイド、SafeK
 {{%  insert-safekit-82-installation-module-windows-ja app="Hyper-V" mod="hyperv"  %}}
  
 
-## SafeKit / Hyper-V ソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--hyper-v-solution}
+## SafeKit/Hyper-V ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--hyper-v-solution}
 
 
 {{%  insert-safekit-82-hyper-v-configuration-ja app="Hyper-V" mod="hyperv"  %}}
  
 
-## SafeKit / Hyper-V ソリューションのデモンストレーション {#demonstration-of-the-safekit--hyper-v-solution}
+## SafeKit/Hyper-V ソリューションのデモンストレーション {#demonstration-of-the-safekit--hyper-v-solution}
 
 
 {{%  insert-safekit-hyperv-video-ja  %}}

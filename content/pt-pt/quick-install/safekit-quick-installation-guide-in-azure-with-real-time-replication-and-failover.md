@@ -1,63 +1,75 @@
 ---
-title: "Alta disponibilidade no Azure: replicação em tempo real e failover com SafeKit"
+title: "Guia de instalação rápida SafeKit no Azure (módulo mirror.safe para replicação em tempo real e recuperação de desastres)"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
-description: "Implemente o módulo mirror.safe da SafeKit no Azure para permitir a replicação síncrona em tempo real e o failover automático no Windows e Linux. Este guia explica como configurar um cluster de dois nós sem armazenamento partilhado para aplicações críticas."
+description: "Implemente o módulo mirror.safe para SafeKit no Azure para ativar a replicação síncrona em tempo real e o failover automático no Windows e Linux. Este guia explica como configurar um cluster de 2 nós sem armazenamento sem compartilhamento para aplicações críticas."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de instalação rápida de alta disponibilidade para Azure, Limitações de alta disponibilidade da SafeKit, Descrição geral da solução SafeKit / Azure mirror, Instalação da solução SafeKit / Azure mirror no Windows e Linux (mirror.safe), Configuração passo a passo da solução SafeKit / Azure mirror, Demonstração da solução mirror da SafeKit, 🔍 Explore o SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para Azure, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução mirror SafeKit/Azure, Instalação da solução mirror SafeKit/Azure no Windows e Linux (mirror.safe), Configuração passo a passo da solução mirror SafeKit/Azure, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
-# Alta disponibilidade do Azure com SafeKit: instalar o módulo mirror.safe para failover {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Alta Disponibilidade Azure com SafeKit: Instale o Módulo mirror.safe para Failover {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+
 
 {{%  insert-safekit-mirror-guide-pt-pt app="Azure" mod="mirror"  %}}
+ 
 
-## Descrição geral da solução SafeKit / Azure mirror {#overview-of-the-safekit--azure-mirror-solution}
+## Visão geral da solução mirror SafeKit/Azure {#overview-of-the-safekit--azure-mirror-solution}
 
-A solução é descrita aqui: **💡[Alta disponibilidade do Microsoft Azure: replicação síncrona e failover com SafeKit](</pt-pt/solutions/azure-high-availability-cluster-synchronous-replication-failover/>)**.
+A solução é descrita aqui: **💡 [Alta Disponibilidade Microsoft Azure: Replicação Síncrona e Failover SafeKit](</pt-pt/solutions/azure-high-availability-cluster-synchronous-replication-failover/>)**.
 
-## Instalação da solução SafeKit / Azure mirror no Windows e Linux (mirror.safe) {#installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe}
+## Instalação da solução mirror SafeKit/Azure no Windows e Linux (mirror.safe) {#installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Configuração do balanceador de carga do Microsoft Azure {#configuration-of-the-microsoft-azure-load-balancer}
+### Configuração do balanceador de carga Microsoft Azure {#configuration-of-the-microsoft-azure-load-balancer}
 
-O balanceador de carga tem de ser configurado se pretender implementar um endereço IP virtual.
-O balanceador de carga também tem de enviar periodicamente pacotes de verificação de estado para os nós.
-Para isso, a SafeKit disponibiliza uma verificação de estado executada nos nós, que:
+O balanceador de carga deve ser configurado se pretender implementar um endereço IP virtual.  
+E o balanceador de carga deve ser configurado para enviar periodicamente pacotes de verificação de estado aos nós.  
+Para isso, SafeKit fornece uma verificação de estado que é executada dentro dos nós e que
 
-  * devolve OK quando o estado do módulo mirror é PRIM (verde) ou ALONE (verde)
-  * devolve NOT FOUND em todos os outros estados
+  * retorna OK quando o estado do módulo mirror é PRIM (verde) ou ALONE (verde)
+  * retorna NÃO ENCONTRADO em todos os outros estados
 
-Configure o balanceador de carga do Microsoft Azure com:
 
-  * protocolo HTTP
-  * porta 9010, a porta do servidor Web da SafeKit
-  * URL /var/modules/mirror/ready.txt (se mirror for o nome do módulo que será implementado posteriormente)
+É necessário configurar o balanceador de carga Microsoft Azure com:
 
-Para obter mais informações, consulte [a configuração do balanceador de carga do Microsoft Azure](<https://learn.microsoft.com/en-us/azure/load-balancer/>).
+  * Protocolo HTTP
+  * porta 9010, a porta do servidor web SafeKit
+  * URL /var/modules/mirror/ready.txt (se mirror for o nome do módulo que irá implementar mais tarde)
 
-⚠️ Não configure um endereço IP virtual no passo 4 da configuração passo a passo abaixo. O endereço IP virtual já está definido no balanceador de carga do Microsoft Azure. A definição de um IP virtual no passo 4 só é útil para uma configuração no local.
 
-### Configuração da segurança de rede do Microsoft Azure {#configuration-of-the-microsoft-azure-network-security}
+Para mais informações, consulte [a configuração do balanceador de carga Microsoft Azure](<https://learn.microsoft.com/en-us/azure/load-balancer/>). 
 
-A segurança de rede tem de ser configurada para permitir comunicações através dos seguintes protocolos e portas:
+
+⚠️ Não configure um endereço IP virtual no passo 4 da configuração passo a passo abaixo. O endereço IP virtual já está definido no balanceador de carga Microsoft Azure. A definição de um IP virtual no passo 4 é útil apenas para configuração no local.
+
+### Configuração da segurança da rede Microsoft Azure {#configuration-of-the-microsoft-azure-network-security}
+
+A segurança da rede deve ser configurada para permitir comunicações para os seguintes protocolos e portas:
 
   * UDP - 4800 para o serviço safeadmin (entre nós SafeKit)
-  * UDP - 8888 para o heartbeat do módulo (entre nós SafeKit)
-  * TCP – 5600 para a replicação de ficheiros em tempo real do módulo (entre nós SafeKit)
-  * TCP – 9010 para a verificação de estado do balanceador de carga e para a consola Web da SafeKit em modo http
-  * TCP – 9001 para configurar o modo https da consola
-  * TCP – 9453 para a consola Web da SafeKit em modo https
+  * UDP - 8888 para o heartbeat do módulo (entre os nós SafeKit)
+  * TCP – 5600 para o módulo de replicação de ficheiros em tempo real (entre nós SafeKit)
+  * TCP – 9010 para a verificação de estado do balanceador de carga e para a consola web SafeKit em execução no modo http
+  * TCP – 9001 para configurar o modo https para a consola
+  * TCP – 9453 para a consola web SafeKit em execução no modo https
+
+
 
 {{%  insert-safekit-installation-package-windows-pt-pt app="" mod="mirror"  %}}
 
 {{%  insert-safekit-installation-package-linux-pt-pt app="" mod="mirror"  %}}
+ 
 
-Nota: o módulo genérico **mirror.safe** que irá configurar está incluído no pacote.
+Nota: o módulo genérico **mirror.safe** que vai configurar é fornecido dentro do pacote.
 
-## Configuração passo a passo da solução SafeKit / Azure mirror {#step-by-step-configuration-of-the-safekit--azure-mirror-solution}
+## Configuração passo a passo da solução mirror SafeKit/Azure {#step-by-step-configuration-of-the-safekit--azure-mirror-solution}
+
 
 {{%  insert-safekit-82-configuration-pt-pt app="Windows" mod="mirror"  %}}
+ 
 
-## Demonstração da solução mirror da SafeKit {#demonstration-of-the-safekit-mirror-solution}
+## Demonstração da solução mirror SafeKit {#demonstration-of-the-safekit-mirror-solution}
+
 
 {{%  insert-safekit-mirror-video-pt-pt  %}}
 

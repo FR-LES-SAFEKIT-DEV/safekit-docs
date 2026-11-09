@@ -1,31 +1,32 @@
-{{/* Shortcode: insert-safekit-mirror-guide-pt-pt — 19 instances in 19 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.7 | Translation LLM | 30 expressions */}}
+{{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
 
 
-## Guia de instalação rápida de alta disponibilidade para {{ .Get "app" }} {#quick-guide}
+## Guia de Instalação Rápida de Alta Disponibilidade para {{ .Get "app" }} {#quick-guide}
 
-Este guia explica como configurar um **cluster de espelhos** para {{ .Get "app" }} utilizando SafeKit, garantindo failover automático e replicação síncrona sem necessidade de armazenamento partilhado. 
+Este guia explica como configurar um **cluster mirror** para {{ .Get "app" }} usando SafeKit, garantindo a comutação automática de falhas e a replicação síncrona sem a necessidade de armazenamento partilhado. 
 
-Para obter ajuda, pode utilizar [SafeKit AI 🤖](/pt-pt/resources/safekit-support/).
+Para obter ajuda, pode usar [SafeKit AI 🤖](/pt-pt/resources/safekit-support/).
 
-### 1. Visão geral
+### 1. Visão Geral {#1-overview}
 
   * **Arquitetura:** Utiliza um sistema de dois nós (Primário/Secundário).
-  * **Proteção de dados:** Implementa a replicação síncrona em tempo real para **zero perda de dados** (RPO=0).
+  * **Proteção de Dados:** Implementa replicação síncrona em tempo real para **perda zero de dados** (RPO = 0).
 
 
-### 2. Instalação
+### 2. Instalação {#2-installation}
 
-  * **Programas:** Instale o motor SafeKit em ambos os servidores.
-  * **Módulo:** Descarregue o pré-configurado `{{ .Get "mod" }}.safe` módulo de aplicação.
+  * **Software:** Instale o motor SafeKit em ambos os servidores.
+  * **Módulo:** Descarregue o módulo de aplicação pré-configurado `{{ .Get "mod" }}.safe`.
 
 
-### 3. Configuração
+### 3. Configuração {#3-configuration}
 
   * **Consola Web:** Configure as pastas específicas que contêm os ficheiros {{ .Get "app" }}.
-  * **Monitorização:** Comece a monitorizar e a proteger a aplicação {{ .Get "app" }}.
+  * **Monitorização:** Inicie a monitorização e proteção da aplicação {{ .Get "app" }}.
 
 
 

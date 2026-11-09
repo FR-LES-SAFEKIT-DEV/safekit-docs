@@ -1,31 +1,32 @@
-{{/* Shortcode: insert-safekit-mirror-guide-pt-br — 19 instances in 19 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.7 | Translation LLM | 30 expressions */}}
+{{/* Shortcode: insert-safekit-mirror-guide-en — 19 instances in 19 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-oracle.md */}}
 
 
 
-## Guia de instalação rápida de alta disponibilidade para {{ .Get "app" }} {#quick-guide}
+## Guia de Instalação Rápida de Alta Disponibilidade para {{ .Get "app" }} {#quick-guide}
 
-Este guia explica como configurar um **cluster de espelhos** para {{ .Get "app" }} usando SafeKit, garantindo failover automático e replicação síncrona sem a necessidade de armazenamento compartilhado. 
+Este guia explica como configurar um **cluster mirror** para {{ .Get "app" }} usando SafeKit, garantindo o failover automático e a replicação síncrona sem a necessidade de armazenamento compartilhado. 
 
 Para obter ajuda, você pode usar [SafeKit AI 🤖](/pt-br/resources/safekit-support/).
 
-### 1. Visão geral
+### 1. Visão geral {#1-overview}
 
-  * **Arquitetura:** Usa um sistema de dois nós (Primário/Secundário).
-  * **Proteção de dados:** Implementa replicação síncrona em tempo real para **zero perda de dados** (RPO=0).
-
-
-### 2. Instalação
-
-  * **Programas:** Instale o mecanismo SafeKit em ambos os servidores.
-  * **Módulo:** Baixe o pré-configurado `{{ .Get "mod" }}.safe` módulo de aplicação.
+  * **Arquitetura:** utiliza um sistema de dois nós (primário/secundário).
+  * **Proteção de dados:** implementa a replicação síncrona em tempo real para **perda zero de dados** (RPO = 0).
 
 
-### 3. Configuração
+### 2. Instalação {#2-installation}
 
-  * **Consola Web:** Configure as pastas específicas que contêm os arquivos {{ .Get "app" }}.
-  * **Monitoramento:** Comece a monitorar e proteger o aplicativo {{ .Get "app" }}.
+  * **Software:** Instale o motor SafeKit em ambos os servidores.
+  * **Módulo:** Baixe o módulo de aplicativo pré-configurado `{{ .Get "mod" }}.safe`.
+
+
+### 3. Configuração {#3-configuration}
+
+  * **Console da Web:** configure as pastas específicas que contêm os arquivos {{ .Get "app" }}.
+  * **Monitoramento:** Inicie o monitoramento e a proteção do aplicativo {{ .Get "app" }}.
 
 
 

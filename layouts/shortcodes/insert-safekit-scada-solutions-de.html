@@ -1,32 +1,35 @@
-{{/* Shortcode: insert-safekit-scada-solutions-de — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.10 | Translation LLM | 40 expressions */}}
+{{/* Shortcode: insert-safekit-scada-solutions-en — 1 instance in 1 file */}}
 {{/* Parameters: app */}}
 {{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
 
 
 
-## SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit einer {{ .Get "app" }}-Software {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
+## SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von {{ .Get "app" }}-Software {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
 
 ### Redundanz und Hochverfügbarkeit auf Anwendungsebene {#redundancy-and-high-availability-at-the-application-level}
 
-Bei dieser Art von Lösung werden nur die Anwendungsdaten repliziert. Bei einem Ausfall wird nur die Anwendung neu gestartet.
+Bei dieser Art von Lösung werden nur Anwendungsdaten repliziert. Und nur die Anwendung wird im Fehlerfall neu gestartet.
 
 
 ![Redundanz auf Anwendungsebene für eine {{ .Get "app" }}-Software](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
 
 
-Bei dieser Lösung müssen Neustartskripte für die Anwendung geschrieben werden. Die Lösung ist plattformunabhängig und funktioniert mit Anwendungen auf physischen Maschinen, virtuellen Maschinen und in der Cloud. Jeder Hypervisor wird unterstützt (VMware, Hyper-V...).
+Bei dieser Lösung müssen Neustartskripte geschrieben werden, um die Anwendung neu zu starten. Diese Lösung ist plattformunabhängig und funktioniert mit Anwendungen in physischen Maschinen, virtuellen Maschinen und in der Cloud. Jeder Hypervisor wird unterstützt (VMware, Hyper-V usw.).
 
-  * Lösung für eine neue Anwendung (Neustartskripte zu schreiben): 💡 [Windows](/de/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/de/solutions/linux-high-availability-software-synchronous-replication-failover/)
-
-
-### Redundanz und Hochverfügbarkeit auf Ebene der virtuellen Maschine {#redundancy-and-high-availability-at-the-virtual-machine-level}
-
-Bei dieser Art von Lösung wird die {{ .Get "app" }}-Software in einer virtuellen Maschine installiert. Die gesamte virtuelle Maschine (VM) wird repliziert und neu gestartet (Anwendung + OS).
+  * Lösung für eine neue Anwendung (Skripte zum Neustart schreiben): 💡 [Windows](/de/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/de/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
-![Redundanz auf Ebene der virtuellen Maschine für eine {{ .Get "app" }}-Software](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+### Redundanz und Hochverfügbarkeit auf der Ebene der virtuellen Maschine {#redundancy-and-high-availability-at-the-virtual-machine-level}
+
+Bei dieser Art von Lösung wird die {{ .Get "app" }}-Software in einer virtuellen Maschine untergebracht. Die gesamte virtuelle Maschine (VM) wird repliziert und neu gestartet (Anwendung + Betriebssystem).
 
 
-Der Vorteil dieser Lösung ist, dass keine Neustartskripte pro Anwendung geschrieben werden müssen. Diese Lösung eignet sich allgemein für jede {{ .Get "app" }}-Software. Sie funktioniert mit Windows/Hyper-V und Linux/KVM, aber nicht mit VMware. Es handelt sich um eine Aktiv/Aktiv-Lösung, bei der mehrere virtuelle Maschinen zwischen zwei Knoten repliziert und neu gestartet werden.
+![Redundanz auf der Ebene der virtuellen Maschine für eine {{ .Get "app" }}-Software](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
 
-  * Lösung für eine neue Anwendung (kein Neustartskript zu schreiben): 💡 [Windows/Hyper-V](/de/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/de/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+Der Vorteil dieser Lösung besteht darin, dass keine Neustartskripte pro Anwendung geschrieben werden müssen. Diese Lösung ist generisch für jede {{ .Get "app" }}-Software. Sie funktioniert mit Windows/Hyper-V und Linux/KVM, aber nicht mit VMware. Dies ist eine Aktiv/Aktiv-Lösung mit mehreren virtuellen Maschinen, die zwischen zwei Knoten repliziert und neu gestartet werden.
+
+  * Lösung für eine neue Anwendung (kein Neustartskript erforderlich): 💡 [Windows/Hyper-V](/de/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/de/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+

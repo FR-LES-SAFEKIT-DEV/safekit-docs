@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-scada-solutions-es — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.10 | Translation LLM | 31 expressions */}}
+{{/* Shortcode: insert-safekit-scada-solutions-en — 1 instance in 1 file */}}
 {{/* Parameters: app */}}
 {{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
 
@@ -8,25 +9,27 @@
 
 ### Redundancia y alta disponibilidad a nivel de aplicación {#redundancy-and-high-availability-at-the-application-level}
 
-En este tipo de solución, solo se replican los datos de la aplicación. Y solo se reinicia la aplicación en caso de fallo.
+En este tipo de solución, solo se replican los datos de la aplicación. Y solo se reinicia la aplicación en caso de error.
 
 
 ![Redundancia a nivel de aplicación para un software {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
 
 
-Con esta solución, hay que escribir scripts de reinicio para reiniciar la aplicación. Esta solución es independiente de la plataforma y funciona con aplicaciones en máquinas físicas, máquinas virtuales y en la nube. Se admite cualquier hipervisor (VMware, Hyper-V...).
+Con esta solución, se deben escribir scripts de reinicio para reiniciar la aplicación. Esta solución es independiente de la plataforma y funciona con aplicaciones dentro de máquinas físicas, máquinas virtuales y en la nube. Se admite cualquier hipervisor (VMware, Hyper-V ...).
 
-  * Solución para una aplicación nueva (hay que escribir scripts de reinicio): 💡 [Windows](/es/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/es/solutions/linux-high-availability-software-synchronous-replication-failover/)
+  * Solución para una nueva aplicación (reiniciar los scripts para escribir): 💡 [Windows](/es/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/es/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
 ### Redundancia y alta disponibilidad a nivel de máquina virtual {#redundancy-and-high-availability-at-the-virtual-machine-level}
 
-En este tipo de solución, el software {{ .Get "app" }} se instala en una máquina virtual. Se replica y reinicia toda la máquina virtual (VM) (aplicación + OS).
+En este tipo de solución, el software {{ .Get "app" }} se coloca dentro de una máquina virtual. La máquina virtual completa (VM) se replica y se reinicia (aplicación + sistema operativo).
 
 
 ![Redundancia a nivel de máquina virtual para un software {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
 
 
-La ventaja de esta solución es que no hay que escribir scripts de reinicio por aplicación. Esta solución es genérica para cualquier software {{ .Get "app" }}. Funciona con Windows/Hyper-V y Linux/KVM, pero no con VMware. Es una solución activo/activo con varias máquinas virtuales replicadas y reiniciadas entre dos nodos.
+La ventaja de esta solución es que no hay que escribir scripts de reinicio para cada aplicación. Esta solución es genérica para cualquier software {{ .Get "app" }}. Funciona con Windows/Hyper-V y Linux/KVM, pero no con VMware. Se trata de una solución activa/activa con varias máquinas virtuales replicadas y reiniciadas entre dos nodos.
 
-  * Solución para una aplicación nueva (sin scripts de reinicio que escribir): 💡 [Windows/Hyper-V](/es/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/es/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+  * Solución para una nueva aplicación (no es necesario escribir un script de reinicio): 💡 [Windows/Hyper-V](/es/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/es/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+

@@ -1,56 +1,57 @@
 ---
-title: "التوافر العالي AWS مع SafeKit : قم بتثبيت وحدة mirror.safe للتحويل التلقائي في حالة الفشل"
+title: "التوافر العالي AWS باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/"
-description: "قم بتثبيت وحدة mirror.safe الخاصة بـ SafeKit في AWS لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل على Windows و Linux . يرشدك هذا الدليل خلال عملية إعداد مجموعة من عقدتين لا تستخدم التخزين المشترك للتطبيقات الحيوية التي لا تتطلب تخزينًا مشتركًا."
+description: "انشر وحدة mirror.safe الخاصة بـ SafeKit في AWS لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الفشل التلقائي على Windows و Linux. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون مشاركة للتطبيقات الهامة بدون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ AWS و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / AWS mirror ، تثبيت حل SafeKit / AWS mirror على Windows و Linux ( mirror.safe )، التكوين خطوة بخطوة لحل SafeKit / AWS mirror ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ AWS، قيود التوافر العالي SafeKit، نظرة عامة على حل mirror SafeKit/AWS، تثبيت حل mirror SafeKit/AWS على Windows و Linux (mirror.safe)، إعداد حل mirror SafeKit/AWS خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 ---
 
-# AWS توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة mirror.safe للتحويل التلقائي في حالة الفشل {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# التوافر العالي AWS باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ar app="AWS" mod="mirror"  %}}
  
 
-## نظرة عامة على حلول SafeKit / AWS mirror {#overview-of-the-safekit--aws-mirror-solution}
+## نظرة عامة على حل mirror SafeKit/AWS {#overview-of-the-safekit--aws-mirror-solution}
 
-الحل موضح هنا: **💡 [ Amazon AWS التوافر العالي: SafeKit النسخ المتزامن والتحويل التلقائي ](</ar/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)** .
+الحل موضح هنا: **💡 [التوافر العالي Amazon AWS: النسخ المتماثل المتزامن وتجاوز الأعطال SafeKit](</ar/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)**.
 
-## تثبيت حل SafeKit / AWS mirror على Windows و Linux ( mirror.safe ) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
+## تثبيت حل mirror SafeKit/AWS على Windows و Linux (mirror.safe) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### تكوين موازن الأحمال Amazon AWS {#configuration-of-the-amazon-aws-load-balancer}
+### تهيئة موازن تحميل Amazon AWS {#configuration-of-the-amazon-aws-load-balancer}
 
-يجب تكوين موازن الأحمال إذا كنت تريد عنوان IP افتراضي.  
-ويجب تهيئة موازن الأحمال لإرسال حزم بيانات الصحة بشكل دوري إلى العقد.  
-لذلك، يوفر SafeKit فحصًا صحيًا يتم تشغيله داخل العقد، والذي
+يجب تكوين موازن التحميل إذا كنت تريد عنوان IP ظاهري.  
+ويجب تكوين موازن التحميل لإرسال حزم الحالة بشكل دوري إلى العُقد.  
+ولهذا الغرض، يوفر SafeKit فحصًا صحيًا يعمل داخل العُقد و
 
-  * يُرجع OK عندما تكون حالة وحدة mirror هي PRIM (أخضر) أو ALONE (أخضر).
-  * لم يتم العثور على نتائج في جميع الولايات الأخرى
+  * تُرجع قيمة OK عندما تكون حالة وحدة mirror PRIM (أخضر) أو ALONE (أخضر)
+  * تُرجع "غير موجود" في جميع الحالات الأخرى
 
 
-يجب عليك تهيئة موازن الأحمال Amazon AWS باستخدام ما يلي:
+يجب عليك تكوين موازن تحميل Amazon AWS باستخدام:
 
   * بروتوكول HTTP
   * المنفذ 9010، منفذ خادم الويب SafeKit
-  * عنوان URL /var/modules/mirror/ready.txt (إذا كان mirror هو اسم الوحدة التي ستقوم بنشرها لاحقًا)
+  * عنوان URL /var/modules/mirror/ready.txt (إذا كان mirror هو اسم الوحدة النمطية التي ستنشرها لاحقًا)
 
 
-للمزيد من المعلومات، راجع [ تكوين موازن الأحمال Amazon AWS ](<https://aws.amazon.com/elasticloadbalancing/>) .
+لمزيد من المعلومات، راجع [إعدادات موازن تحميل Amazon AWS](<https://aws.amazon.com/elasticloadbalancing/>).
 
 
-⚠️ لا تقم بتكوين عنوان IP افتراضي في الخطوة 4 من خطوات التكوين الموضحة أدناه. عنوان IP الافتراضي مُعيّن مسبقًا في مُوازن الأحمال Amazon AWS . يُفيد تعيين عنوان IP افتراضي في الخطوة 4 في التكوين المحلي فقط.
+⚠️ لا تقم بتكوين عنوان IP ظاهري في الخطوة 4 في التكوين المفصل أدناه. عنوان IP الظاهري مُعيّن بالفعل في موازن تحميل Amazon AWS. يُعد تعيين عنوان IP ظاهري في الخطوة 4 مفيدًا للتكوين المحلي فقط.
 
 ### تكوين أمان شبكة Amazon AWS {#configuration-of-the-amazon-aws-network-security}
 
-يجب تهيئة أمان الشبكة لتمكين الاتصالات للبروتوكولات والمنافذ التالية:
+يجب تكوين أمان الشبكة لتمكين الاتصالات للبروتوكولات والمنافذ التالية:
 
-  * UDP - 4800 لخدمة safeadmin (بين عقد SafeKit )
-  * UDP - 8888 لنبضات قلب الوحدة (بين عقد SafeKit )
-  * TCP – 5600 لنسخ الملفات في الوقت الحقيقي للوحدة (بين عقد SafeKit )
-  * يُستخدم المنفذ 9010 في بروتوكول TCP لفحص حالة موازن الأحمال، ولتشغيل وحدة تحكم الويب SafeKit في وضع HTTP.
-  * TCP – 9001 لتكوين وضع HTTPS لوحدة التحكم
-  * TCP – 9453 لوحدة تحكم الويب SafeKit التي تعمل في وضع HTTPS
+  * UDP - 4800 لخدمة safeadmin (بين عُقد SafeKit)
+  * UDP - 8888 لوظيفة نبضة heartbeat الوحدة (بين عُقد SafeKit)
+  * بروتوكول التحكم بالإرسال (TCP) – 5600 لنسخ الملفات في الوقت الفعلي للوحدة (بين عُقد SafeKit)
+  * بروتوكول التحكم بالإرسال (TCP) – 9010 لفحص سلامة موازن التحميل وللوحدة التحكمية لـ SafeKit التي تعمل في وضع http
+  * بروتوكول التحكم بالإرسال (TCP) – 9001 لتهيئة وضع https لوحدة التحكم
+  * TCP – 9453 لوحدة تحكم الويب SafeKit التي تعمل في وضع https
 
 
 
@@ -61,13 +62,13 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ A
 
 ملاحظة: يتم تسليم وحدة **mirror.safe** العامة التي ستقوم بتكوينها داخل الحزمة.
 
-## خطوات تكوين حلول SafeKit / AWS mirror {#step-by-step-configuration-of-the-safekit--aws-mirror-solution}
+## إعداد حل mirror SafeKit/AWS خطوة بخطوة {#step-by-step-configuration-of-the-safekit--aws-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-ar app="Windows" mod="mirror"  %}}
  
 
-## عرض توضيحي لحل SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## عرض حل mirror من SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ar  %}}

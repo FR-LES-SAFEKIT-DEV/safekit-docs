@@ -1,33 +1,35 @@
-{{/* Shortcode: insert-safekit-scada-solutions-fr — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.10 | Translation LLM | 38 expressions */}}
+{{/* Shortcode: insert-safekit-scada-solutions-en — 1 instance in 1 file */}}
 {{/* Parameters: app */}}
-{{/* Source: content\fr\use-cases\scada-software-redundancy-high-availability.md */}}
+{{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
 
 
 
-## SafeKit apporte deux solutions pour la redondance et la haute disponibilité des logiciels {{ .Get "app" }} {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
+## SafeKit propose deux solutions pour la redondance et la haute disponibilité d’un logiciel {{ .Get "app" }} {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
 
-### Redondance et haute disponibilité au niveau de l'application {#redundancy-and-high-availability-at-the-application-level}
+### Redondance et haute disponibilité au niveau de l’application {#redundancy-and-high-availability-at-the-application-level}
 
-Dans ce type de solution, seules les données applicatives sont répliquées. Et seule l'application est redémarrée en cas de panne.
-
-
-![Redondance au niveau applicatif pour un logiciel {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+Dans ce type de solution, seules les données de l’application sont répliquées. Et seule l’application est redémarrée en cas de panne.
 
 
-Avec cette solution, des scripts de reprise doivent être écrits pour redémarrer l'application. Cette solution est indépendante de la plate-forme et fonctionne avec des applications à l'intérieur de machines physiques, de machines virtuelles, dans le Cloud. Tout hyperviseur est supporté (VMware, Hyper-V...).
-
-  * Solution pour une nouvelle application (scripts de reprise à écrire) : 💡 [Windows](/fr/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/fr/solutions/linux-high-availability-software-synchronous-replication-failover/)
+![Redondance au niveau de l’application pour un logiciel {{ .Get "app" }}](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
 
 
-### Redondance et haute disponibilité au niveau machine virtuelle {#redundancy-and-high-availability-at-the-virtual-machine-level}
+Avec cette solution, des scripts de redémarrage doivent être écrits pour redémarrer l’application. Cette solution est indépendante de la plateforme et fonctionne avec des applications dans des machines physiques, des machines virtuelles, dans le Cloud. Tout hyperviseur est pris en charge (VMware, Hyper-V ...).
 
-Dans ce type de solution, le logiciel {{ .Get "app" }} est placé dans une machine virtuelle. La machine virtuelle (VM) complète est répliquée et redémarrée (Application + OS).
-
-
-![Redondance au niveau machine virtuelle pour un logiciel {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+  * Solution pour une nouvelle application (redémarrer les scripts d’écriture) : 💡 [Windows](/fr/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/fr/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
-L'avantage de cette solution est qu'il n'y a pas de scripts de reprise à écrire par application. Cette solution est générique pour tous les logiciels {{ .Get "app" }}. Elle fonctionne avec Windows/Hyper-V et Linux/KVM mais pas avec VMware. Il s'agit d'une solution active/active avec plusieurs machines virtuelles répliquées et redémarrées entre deux nœuds.
+### Redondance et haute disponibilité au niveau de la machine virtuelle {#redundancy-and-high-availability-at-the-virtual-machine-level}
 
-  * Solution pour une nouvelle application (pas de script de reprise à écrire) : 💡 [Windows/Hyper-V](/fr/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/fr/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+Dans ce type de solution, le logiciel {{ .Get "app" }} est placé dans une machine virtuelle. La machine virtuelle (VM) complète est répliquée et redémarrée (application + système d’exploitation).
+
+
+![Redondance au niveau de la machine virtuelle pour un logiciel {{ .Get "app" }}](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+
+
+L’avantage de cette solution est qu’il n’y a pas de scripts de redémarrage à écrire par application. Cette solution est générique pour tout logiciel {{ .Get "app" }}. Elle fonctionne avec Windows/Hyper-V et Linux/KVM, mais pas avec VMware. Il s’agit d’une solution active/active avec plusieurs machines virtuelles répliquées et redémarrées entre deux nœuds.
+
+  * Solution pour une nouvelle application (aucun script de redémarrage à écrire) : 💡 [Windows/Hyper-V](/fr/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/fr/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
 

@@ -1,32 +1,35 @@
-{{/* Shortcode: insert-safekit-scada-solutions-zh-hans — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.10 | Translation LLM | 43 expressions */}}
+{{/* Shortcode: insert-safekit-scada-solutions-en — 1 instance in 1 file */}}
 {{/* Parameters: app */}}
 {{/* Source: content\use-cases\scada-software-redundancy-high-availability.md */}}
 
 
 
-## SafeKit 为 {{ .Get "app" }} 软件的冗余和高可用性提供两种解决方案 {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
+## SafeKit 为 {{ .Get "app" }} 软件的冗余和高可用性提供了两种解决方案 {#safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software}
 
-### 应用程序级别的冗余和高可用性 {#redundancy-and-high-availability-at-the-application-level}
+### 应用层面的冗余和高可用性 {#redundancy-and-high-availability-at-the-application-level}
 
-在此类解决方案中，仅复制应用程序数据。发生故障时，也仅重新启动应用程序。
-
-
-![{{ .Get "app" }} 软件在应用程序级别的冗余](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+在这种解决方案中，只有应用程序数据被复制。并且只有在发生故障时才重新启动应用程序。
 
 
-采用此解决方案时，必须编写重启脚本来重新启动应用程序。此解决方案与平台无关，适用于物理机、虚拟机和云中的应用程序。支持任何虚拟机监控程序（VMware、Hyper-V...）。
+![{{ .Get "app" }} 软件在应用层面的冗余](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
 
-  * 新应用程序的解决方案（需要编写重启脚本）：💡 [Windows](/zh-hans/solutions/windows-high-availability-software-synchronous-replication-failover/)、💡 [Linux](/zh-hans/solutions/linux-high-availability-software-synchronous-replication-failover/)
+
+使用此解决方案时，必须编写重启脚本以重启应用程序。此解决方案与平台无关，适用于物理机、虚拟机和云中的应用程序。支持任何虚拟机管理程序（VMware、Hyper-V 等）。
+
+  * 新应用程序的解决方案（重启脚本以写入）： 💡 [Windows](/zh-hans/solutions/windows-high-availability-software-synchronous-replication-failover/)，💡 [Linux](/zh-hans/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
 ### 虚拟机级别的冗余和高可用性 {#redundancy-and-high-availability-at-the-virtual-machine-level}
 
-在此类解决方案中，{{ .Get "app" }} 软件放置在虚拟机内。整个虚拟机（VM）都将被复制并重新启动（应用程序 + OS）。
+在这种解决方案中，{{ .Get "app" }} 软件被置于虚拟机中。整个虚拟机（VM）被复制并重新启动（应用程序+操作系统）。
 
 
-![{{ .Get "app" }} 软件在虚拟机级别的冗余](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
+![{{ .Get "app" }} 软件在虚拟机层面的冗余](/wp-content/uploads/2023/02/vm-ha-4.png "w:186")
 
 
-此解决方案的优势是无需为每个应用程序编写重启脚本。此解决方案通用于任何 {{ .Get "app" }} 软件。它支持 Windows/Hyper-V 和 Linux/KVM，但不支持 VMware。这是一种双活解决方案，在两个节点之间复制并重新启动多个虚拟机。
+此解决方案的优点是无需为每个应用程序编写重启脚本。此解决方案适用于任何 {{ .Get "app" }} 软件。它适用于 Windows/Hyper-V 和 Linux/KVM，但不适用于 VMware。这是一个双活解决方案，多个虚拟机在两个节点之间复制和重启。
 
-  * 新应用程序的解决方案（无需编写重启脚本）：💡 [Windows/Hyper-V](/zh-hans/solutions/hyper-v-replication-automatic-failover-load-balancing/)、💡 [Linux/KVM](/zh-hans/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+  * 新应用程序的解决方案（无需编写重启脚本）： 💡 [Windows/Hyper-V](/zh-hans/solutions/hyper-v-replication-automatic-failover-load-balancing/)，💡 [Linux/KVM](/zh-hans/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+
+

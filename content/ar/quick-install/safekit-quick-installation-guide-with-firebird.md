@@ -1,27 +1,28 @@
 ---
-title: "التوافر العالي Firebird مع SafeKit : قم بتثبيت وحدة firebird.safe للتحويل التلقائي في حالة الفشل"
+title: "التوفر العالي Firebird باستخدام SafeKit: تثبيت وحدة firebird.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-firebird/"
-description: "قم بتثبيت وحدة firebird.safe لـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لـ Firebird على Windows و Linux . يرشدك هذا الدليل خلال إعداد مجموعة SAN ثنائية العقد للتطبيقات الحيوية التي لا تستخدم تخزينًا مشتركًا."
+description: "انشر وحدة firebird.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الأعطال التلقائي لـ Firebird على Windows و Linux. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة منطقة تخزين (SANless) للتطبيقات الهامة بدون تخزين مشترك."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Firebird و SafeKit ، قيود التوافر العالي، نظرة عامة على حل SafeKit / Firebird ، تثبيت حل SafeKit / Firebird على Windows و Linux ( firebird.safe )، التكوين خطوة بخطوة لحل SafeKit / Firebird ، عرض توضيحي لحل SafeKit mirror ، 🔍 استكشف SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Firebird، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Firebird، تثبيت حل SafeKit/Firebird على نظامي التشغيل Windows و Linux (firebird.safe)، إعداد حل SafeKit/Firebird خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 ---
 
-# Firebird توفر إمكانية عالية مع SafeKit : قم بتثبيت وحدة firebird.safe للتحويل التلقائي في حالة الفشل {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
+# التوفر العالي Firebird باستخدام SafeKit: تثبيت وحدة firebird.safe للتحويل التلقائي عند الفشل {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Firebird" mod="firebird"  %}}
  
 
-## نظرة عامة على حل SafeKit / Firebird {#overview-of-the-safekit--firebird-solution}
+## نظرة عامة على حل SafeKit/Firebird {#overview-of-the-safekit--firebird-solution}
 
-الحل موضح هنا: **💡 [ أبسط Firebird التوافر العالي: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين ](</ar/solutions/firebird-high-availability-synchronous-replication-failover/>)** .
+الحل موضح هنا: **💡 [أبسط طريقة لتحقيق التوافر العالي Firebird: النسخ المتماثل المتزامن و تجاوز الفشل بعقدتين](</ar/solutions/firebird-high-availability-synchronous-replication-failover/>)**.
 
-## تثبيت حل SafeKit / Firebird على Windows و Linux ( firebird.safe ) و {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
+## تثبيت حل SafeKit/Firebird على نظامي التشغيل Windows و Linux (firebird.safe) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 
 ### المتطلبات الأساسية {#prerequisites}
 
-  * أنت بحاجة إلى تثبيت Firebird على عقدتين (أجهزة افتراضية أو خوادم فعلية).
+  * يجب تثبيت Firebird على عقدتين (أجهزة افتراضية أو خوادم فعلية).
 
 
 
@@ -34,13 +35,13 @@ topics: "دليل التثبيت السريع للتوافر العالي لـ F
 {{%  insert-safekit-82-installation-module-linux-ar app="Firebird" mod="firebird"  %}}
  
 
-## خطوات تكوين حل SafeKit / Firebird {#step-by-step-configuration-of-the-safekit--firebird-solution}
+## إعداد حل SafeKit/Firebird خطوة بخطوة {#step-by-step-configuration-of-the-safekit--firebird-solution}
 
 
 {{%  insert-safekit-82-configuration-ar app="Firebird" mod="firebird"  %}}
  
 
-## عرض توضيحي لحل SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## عرض حل mirror من SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ar  %}}

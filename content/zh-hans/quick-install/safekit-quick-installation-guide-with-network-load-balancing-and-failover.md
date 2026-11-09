@@ -1,23 +1,24 @@
 ---
-title: "Apache 网络负载均衡与故障转移：安装 SafeKit apache_farm.safe 模块"
+title: "Apache 网络负载均衡和故障转移：安装 SafeKit apache_farm.safe 模块"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
-description: "了解如何在 Windows 和 Linux 系统上部署 apache_farm.safe 模块，以实现 Apache 网络负载均衡和自动故障转移。本指南将向您展示如何使用虚拟 IP 构建高可用性的 Web 服务和应用程序集群，而无需外部硬件负载均衡器或复杂的配置。"
+description: "了解如何在 Windows 和 Linux 上部署 apache_farm.safe 模块，以实现 Apache 网络负载均衡和自动故障转移。本指南将向您展示如何使用虚拟 IP 为 Web 服务和应用程序构建高可用性集群，而无需外部硬件负载均衡器或复杂的配置。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "Apache 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit / Apache 解决方案概述、在 Windows 和 Linux 上安装 SafeKit / Apache 解决方案 (apache_farm.safe)、SafeKit / Apache 解决方案的分步配置、SafeKit farm 解决方案演示、🔍 探索 SafeKit"
+topics: "Apache 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Apache 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/Apache 解决方案 (apache_farm.safe)、SafeKit/Apache 解决方案的分步配置、SafeKit farm 解决方案演示、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# Apache 网络负载均衡与故障转移：安装 SafeKit apache_farm.safe 模块 {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
+# Apache 网络负载均衡和故障转移：安装 SafeKit apache_farm.safe 模块 {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="Apache" mod="apache_farm"  %}}
  
 
-## SafeKit / Apache 解决方案概述 {#overview-of-the-safekit--apache-solution}
+## SafeKit/Apache 解决方案概述 {#overview-of-the-safekit--apache-solution}
 
-解决方案描述如下：**💡[SafeKit：一体化 Apache 负载均衡和高可用性软件](</zh-hans/solutions/apache-load-balancing-failover-2/>)**。
+解决方案在此处介绍：**💡 [SafeKit：一体化 Apache 负载均衡和高可用性软件](</zh-hans/solutions/apache-load-balancing-failover-2/>)**。
 
-## 在 Windows 和 Linux 上安装 SafeKit / Apache 解决方案 (apache_farm.safe) {#installation-of-the-safekit--apache-solution-on-windows-and-linux-apache_farmsafe}
+## 在 Windows 和 Linux 上安装 SafeKit/Apache 解决方案 (apache_farm.safe) {#installation-of-the-safekit--apache-solution-on-windows-and-linux-apache_farmsafe}
 
 ### 先决条件 {#prerequisites}
 
@@ -34,7 +35,7 @@ topics: "Apache 高可用性快速安装指南、SafeKit 高可用性限制、Sa
 {{%  insert-safekit-82-installation-module-linux-zh-hans app="Apache" mod="apache_farm"  %}}
  
 
-## SafeKit / Apache 解决方案的逐步配置 {#step-by-step-configuration-of-the-safekit--apache-solution}
+## SafeKit/Apache 解决方案的分步配置 {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-zh-hans app="Apache" mod="apache_farm"  %}}

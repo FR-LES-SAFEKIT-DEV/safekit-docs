@@ -1,27 +1,28 @@
 ---
-title: "Balanceamento de carga de rede e failover em Linux: instale o módulo farm.safe do SafeKit"
+title: "Balanceamento de Carga e Redundância de Rede Linux: Instale o Módulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
-description: "Saiba como implementar o módulo farm.safe para balanceamento de carga de rede e failover automático em Linux. Este guia mostra como criar um cluster de elevada disponibilidade para serviços web e aplicações com um IP virtual, sem balanceadores de carga de hardware externos nem configuração complexa."
+description: "Saiba como implementar o módulo farm.safe para o Balanceamento de Carga de Rede Linux e o failover automático. Este guia mostra como construir um cluster de alta disponibilidade para serviços e aplicações web usando um IP virtual, sem a necessidade de balanceadores de carga de hardware externos ou configurações complexas."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de instalação rápida de elevada disponibilidade para Linux, Limitações da elevada disponibilidade do SafeKit, Descrição geral da solução SafeKit / Linux, Instalação da solução SafeKit / Linux (farm.safe), Configuração passo a passo da solução SafeKit / Linux, Demonstração da solução SafeKit farm, 🔍 Explore o SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para Linux, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução SafeKit/Linux, Instalação da solução SafeKit/Linux (farm.safe), Configuração passo a passo da solução SafeKit/Linux, Demonstração da solução farm SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
-# Balanceamento de carga de rede e failover em Linux: instale o módulo farm.safe do SafeKit {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Balanceamento de Carga e Redundância de Rede Linux: Instale o Módulo farm.safe SafeKit {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-pt-pt app="Linux" mod="farm"  %}}
  
 
-## Descrição geral da solução SafeKit / Linux {#overview-of-the-safekit--linux-solution}
+## Visão geral da solução SafeKit/Linux {#overview-of-the-safekit--linux-solution}
 
-A solução é descrita aqui: **💡[SafeKit: software completo de balanceamento de carga e elevada disponibilidade para Linux](</pt-pt/solutions/linux-load-balancing-failover/>)**.
+A solução é descrita aqui: **💡 [SafeKit: Software tudo-em-um para balanceamento de carga e alta disponibilidade Linux](</pt-pt/solutions/linux-load-balancing-failover/>)**.
 
-## Instalação da solução SafeKit / Linux (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
+## Instalação da solução SafeKit/Linux (farm.safe) {#installation-of-the-safekit--linux-solution-farmsafe}
 
 ### Pré-requisitos {#prerequisites}
 
-  * É necessário ter a aplicação que pretende colocar numa <span class="notranslate farm-term" translate="no">farm</span> instalada em 2 ou mais nós (máquinas virtuais ou servidores físicos).
+  * É necessário que a aplicação que pretende instalar numa <span class="notranslate farm-term" translate="no">farm</span> instalada em 2 ou mais nós (máquinas virtuais ou servidores físicos).
 
 
 
@@ -30,13 +31,13 @@ A solução é descrita aqui: **💡[SafeKit: software completo de balanceamento
 
 Nota: o módulo genérico **farm.safe** que vai configurar é fornecido dentro do pacote.
 
-## Configuração passo a passo da solução SafeKit / Linux {#step-by-step-configuration-of-the-safekit--linux-solution}
+## Configuração passo a passo da solução SafeKit/Linux {#step-by-step-configuration-of-the-safekit--linux-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-pt-pt app="Linux" mod="farm"  %}}
  
 
-## Demonstração da solução SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+## Demonstração da solução <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-pt-pt  %}}

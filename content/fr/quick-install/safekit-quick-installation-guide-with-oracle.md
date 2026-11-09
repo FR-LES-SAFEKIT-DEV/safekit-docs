@@ -1,27 +1,28 @@
 ---
-title: "Haute disponibilité Oracle avec SafeKit : Installez le module oracle.safe pour le basculement."
+title: "Haute disponibilité Oracle avec SafeKit : installer le module oracle.safe pour le basculement"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-oracle/"
-description: "Déployez le module oracle.safe pour SafeKit afin d'activer la réplication synchrone en temps réel et le basculement automatique de Oracle sur Windows et Linux . Ce guide vous accompagne dans la configuration d'un cluster SANless à deux nœuds pour les applications critiques sans stockage partagé."
+description: "Déployez le module oracle.safe pour SafeKit afin d’activer la réplication synchrone en temps réel et le basculement automatique d’ Oracle sous Windows et Linux. Ce guide vous explique comment configurer un cluster SANless à 2 nœuds pour des applications critiques sans stockage partagé."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d'installation rapide haute disponibilité pour Oracle et SafeKit limitations de haute disponibilité ; présentation de la solution SafeKit / Oracle ; installation de la solution SafeKit / Oracle sur Windows et Linux ( oracle.safe ) ; configuration pas à pas de la solution SafeKit / Oracle ; démonstration de la solution SafeKit mirror ; hub de navigation haute disponibilité SafeKit"
+topics: "Guide d’installation rapide de la haute disponibilité pour Oracle, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Oracle, Installation de la solution SafeKit/Oracle sous Windows et Linux (oracle.safe), Configuration pas à pas de la solution SafeKit/Oracle, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 ---
 
-# Haute disponibilité Oracle avec SafeKit : Installez le module oracle.safe pour le basculement {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
+# Haute disponibilité Oracle avec SafeKit : installer le module oracle.safe pour le basculement {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-fr app="Oracle" mod="oracle"  %}}
  
 
-## Présentation de la solution SafeKit / Oracle {#overview-of-the-safekit--oracle-solution}
+## Présentation de la solution SafeKit/Oracle {#overview-of-the-safekit--oracle-solution}
 
-La solution est décrite ici : **💡 [ Le plus simple Oracle Haute disponibilité : Réplication synchrone à 2 nœuds et basculement ](</fr/solutions/oracle-high-availability-synchronous-replication-failover/>)** .
+La solution est décrite ici : **💡 [La haute disponibilité la plus simple Oracle : réplication synchrone et basculement à 2 nœuds](</fr/solutions/oracle-high-availability-synchronous-replication-failover/>)**.
 
-## Installation de la solution SafeKit / Oracle sur Windows et Linux ( oracle.safe ) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
+## Installation de la solution SafeKit/Oracle sous Windows et Linux (oracle.safe) {#installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe}
 
 ### Prérequis {#prerequisites}
 
-  * Vous devez installer Oracle sur 2 nœuds (machines virtuelles ou serveurs physiques).
+  * Vous devez avoir Oracle installé sur 2 nœuds (machines virtuelles ou serveurs physiques).
 
 
 
@@ -34,13 +35,13 @@ La solution est décrite ici : **💡 [ Le plus simple Oracle Haute disponibili
 {{%  insert-safekit-82-installation-module-linux-fr app="Oracle" mod="oracle"  %}}
  
 
-## Configuration étape par étape de la solution SafeKit / Oracle {#step-by-step-configuration-of-the-safekit--oracle-solution}
+## Configuration pas à pas de la solution SafeKit/Oracle {#step-by-step-configuration-of-the-safekit--oracle-solution}
 
 
 {{%  insert-safekit-82-configuration-fr app="Oracle" mod="oracle"  %}}
  
 
-## Démonstration de la solution SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## Démonstration de la solution mirror SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-fr  %}}

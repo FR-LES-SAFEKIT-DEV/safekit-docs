@@ -1,27 +1,28 @@
 ---
-title: "موازنة الأحمال والتحويل التلقائي في شبكة أباتشي: تثبيت وحدة SafeKit apache_farm.safe"
+title: "موازنة تحميل الشبكة وتجاوز الفشل Apache: تثبيت وحدة SafeKit apache_farm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
-description: "تعرّف على كيفية نشر وحدة apache_farm.safe على نظامي التشغيل ويندوز ولينكس لموازنة أحمال شبكة أباتشي والتحويل التلقائي في حالة الأعطال. يُوضح لك هذا الدليل كيفية إنشاء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP افتراضي، دون الحاجة إلى موازنات أحمال خارجية أو إعدادات معقدة."
+description: "تعرّف على كيفية نشر وحدة apache_farm.safe على نظامي Windows و Linux لتحقيق موازنة تحميل الشبكة التلقائية Apache وتجاوز الفشل التلقائي. يوضح لك هذا الدليل كيفية بناء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP ظاهري، دون الحاجة إلى موازنات تحميل أجهزة خارجية أو تكوين معقد."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع لتوافر Apache العالي، قيود التوافر العالي لـ SafeKit، نظرة عامة على حل SafeKit / Apache، تثبيت حل SafeKit / Apache على نظامي التشغيل Windows وLinux (apache_farm.safe)، تهيئة حل SafeKit / Apache خطوة بخطوة، عرض توضيحي لحل SafeKit farm، 🔍 استكشف SafeKit"
+topics: "دليل التثبيت السريع للتوافر العالي لـ Apache، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Apache، تثبيت حل SafeKit/Apache على نظامي Windows و Linux (apache_farm.safe)، إعداد حل SafeKit/Apache خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 ---
 
-# موازنة الأحمال والتحويل التلقائي في شبكة أباتشي: قم بتثبيت وحدة SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
+# موازنة تحميل الشبكة وتجاوز الفشل Apache: تثبيت وحدة SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-ar app="Apache" mod="apache_farm"  %}}
  
 
-## نظرة عامة على حل SafeKit / Apache {#overview-of-the-safekit--apache-solution}
+## نظرة عامة على حل SafeKit/Apache {#overview-of-the-safekit--apache-solution}
 
-الحل موضح هنا: **💡[SafeKit: برنامج Apache المتكامل لموازنة الأحمال والتوافر العالي](</ar/solutions/apache-load-balancing-failover-2/>)**.
+يُوصَف الحل هنا: **💡 [SafeKit: برنامج متكامل لموازنة تحميل Apache وتوفير التوافر العالي](</ar/solutions/apache-load-balancing-failover-2/>)**.
 
-## تثبيت حل SafeKit / Apache على نظامي التشغيل Windows و Linux (apache_farm.safe) {#installation-of-the-safekit--apache-solution-on-windows-and-linux-apache_farmsafe}
+## تثبيت حل SafeKit/Apache على نظامي Windows و Linux (apache_farm.safe) {#installation-of-the-safekit--apache-solution-on-windows-and-linux-apache_farmsafe}
 
 ### المتطلبات الأساسية {#prerequisites}
 
-  * أنت بحاجة إلى تثبيت Apache على عقدتين أو أكثر (أجهزة افتراضية أو خوادم فعلية).
+  * تحتاج إلى تثبيت Apache على عقدتين أو أكثر (أجهزة افتراضية أو خوادم فعلية).
 
 
 
@@ -34,13 +35,13 @@ topics: "دليل التثبيت السريع لتوافر Apache العالي،
 {{%  insert-safekit-82-installation-module-linux-ar app="Apache" mod="apache_farm"  %}}
  
 
-## خطوات تكوين حل SafeKit / Apache {#step-by-step-configuration-of-the-safekit--apache-solution}
+## إعداد حل SafeKit/Apache خطوة بخطوة {#step-by-step-configuration-of-the-safekit--apache-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-ar app="Apache" mod="apache_farm"  %}}
  
 
-## عرض توضيحي لحل SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+## عرض حل SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-ar  %}}

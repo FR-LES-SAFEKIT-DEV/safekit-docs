@@ -1,31 +1,32 @@
-{{/* Shortcode: insert-safekit-farm-guide-ar — 9 instances in 9 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.4 | Translation LLM | 33 expressions */}}
+{{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
 
 
-## دليل التثبيت السريع للتوافر العالي لـ {{ .Get "app" }} {#quick-guide}
+## دليل التثبيت السريع {{ .Get "app" }} عالي التوفر {#quick-guide}
 
-يشرح هذا الدليل كيفية إعداد مجموعة **<span class="notranslate farm-term" translate="no">farm</span>** لـ {{ .Get "app" }} باستخدام SafeKit، بما يضمن موازنة تحميل الشبكة والتحويل التلقائي عند التعطل.
+يشرح هذا الدليل كيفية إعداد **مجموعة <span class="notranslate farm-term" translate="no">farm</span>** لتطبيق {{ .Get "app" }} باستخدام SafeKit، مما يضمن موازنة تحميل الشبكة وتجاوز الأعطال التلقائي.
 
-للحصول على المساعدة، يمكنك استخدام [SafeKit AI 🤖](/ar/resources/safekit-support/).
+للمساعدة، يمكنك استخدام [SafeKit AI 🤖](/ar/resources/safekit-support/).
 
-### 1. نظرة عامة
+### 1. نظرة عامة {#1-overview}
 
-  * **البنية:** تنفيذ مجموعة <span class="notranslate farm-term" translate="no">farm</span> قابلة للتوسع ومتوازنة التحميل ومتعددة العقد، مع عنوان IP افتراضي.
-  * **التوافر العالي:** مراقبة تلقائية للحالة الصحية وتحويل سلس عند التعطل **لضمان استمرارية الخدمة**.
-
-
-### 2. التثبيت
-
-  * **البرنامج:** تثبيت محرك SafeKit على جميع الخوادم.
-  * **الوحدة:** تنزيل وحدة التطبيق المهيأة مسبقًا `{{ .Get "mod" }}.safe`.
+  * **البنية :** تطبيق <span class="notranslate farm-term" translate="no">farm</span> قابلة للتوسع ومتعددة العقد ومتوازنة التحميل باستخدام عنوان IP ظاهري.
+  * **التوافر العالي:** يتميز بمراقبة تلقائية للصحة والتحويل التلقائي في حالة الفشل **لضمان استمرارية الخدمة**.
 
 
-### 3. التكوين
+### 2. التثبيت {#2-installation}
 
-  * **وحدة تحكم الويب:** تكوين مجموعة <span class="notranslate farm-term" translate="no">farm</span> الخاصة بـ {{ .Get "app" }}.
-  * **المراقبة:** بدء مراقبة تطبيق {{ .Get "app" }} وحمايته.
+  * **البرامج:** قم بتثبيت محرك SafeKit على جميع الخوادم.
+  * **الوحدة:** قم بتنزيل وحدة التطبيق `{{ .Get "mod" }}.safe` المعدة مسبقًا.
+
+
+### 3. التهيئة {#3-configuration}
+
+  * **وحدة التحكم بالويب:** تكوين مجموعة <span class="notranslate farm-term" translate="no">farm</span> {{ .Get "app" }}.
+  * **المراقبة:** ابدأ بمراقبة تطبيق {{ .Get "app" }} وحمايته.
 
 
 

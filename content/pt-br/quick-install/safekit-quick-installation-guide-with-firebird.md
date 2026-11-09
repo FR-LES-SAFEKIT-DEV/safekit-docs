@@ -1,27 +1,28 @@
 ---
-title: "Alta disponibilidade Firebird com SafeKit : Instale o módulo firebird.safe para failover."
+title: "Alta Disponibilidade Firebird com SafeKit: Instale o Módulo firebird.safe para Failover"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-with-firebird/"
-description: "Implante o módulo firebird.safe para SafeKit para habilitar a replicação síncrona em tempo real e o failover automático de Firebird em Windows e Linux . Este guia orienta você na configuração de um cluster SANless de 2 nós para aplicações críticas sem armazenamento compartilhado."
+description: "Implemente o módulo firebird.safe para SafeKit para habilitar a replicação síncrona em tempo real e o failover automático do Firebird no Windows e Linux. Este guia mostra como configurar um cluster SANless de 2 nós para aplicações críticas sem armazenamento compartilhado."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para Firebird , Limitações de Alta Disponibilidade do SafeKit , Visão Geral da solução SafeKit / Firebird , Instalação da solução SafeKit / Firebird em Windows e Linux ( firebird.safe ), Configuração passo a passo da solução SafeKit / Firebird , Demonstração da solução SafeKit mirror , 🔍 Explore o SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para Firebird, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Firebird, Instalação da solução SafeKit/Firebird no Windows e Linux (firebird.safe), Configuração passo a passo da solução SafeKit/Firebird, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
-# Alta disponibilidade Firebird com SafeKit : Instale o módulo firebird.safe para failover {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
+# Alta Disponibilidade Firebird com SafeKit: Instale o Módulo firebird.safe para Failover {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-pt-br app="Firebird" mod="firebird"  %}}
  
 
-## Visão geral da solução SafeKit / Firebird {#overview-of-the-safekit--firebird-solution}
+## Visão geral da solução SafeKit/Firebird {#overview-of-the-safekit--firebird-solution}
 
-A solução é descrita aqui: **💡 [ O mais simples Firebird Alta disponibilidade: replicação síncrona de 2 nós e failover ](</pt-br/solutions/firebird-high-availability-synchronous-replication-failover/>)** .
+A solução é descrita aqui: **💡 [A mais simples alta disponibilidade Firebird: replicação síncrona e failover de 2 nós](</pt-br/solutions/firebird-high-availability-synchronous-replication-failover/>)**.
 
-## Instalação da solução SafeKit / Firebird em Windows e Linux ( firebird.safe ) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
+## Instalação da solução SafeKit/Firebird no Windows e Linux (firebird.safe) {#installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe}
 
 ### Pré-requisitos {#prerequisites}
 
-  * Você precisa ter Firebird instalado em 2 nós (máquinas virtuais ou servidores físicos).
+  * Você precisa Firebird instalado em 2 nós (máquinas virtuais ou servidores físicos).
 
 
 
@@ -34,13 +35,13 @@ A solução é descrita aqui: **💡 [ O mais simples Firebird Alta disponibilid
 {{%  insert-safekit-82-installation-module-linux-pt-br app="Firebird" mod="firebird"  %}}
  
 
-## Configuração passo a passo da solução SafeKit / Firebird {#step-by-step-configuration-of-the-safekit--firebird-solution}
+## Configuração passo a passo da solução SafeKit/Firebird {#step-by-step-configuration-of-the-safekit--firebird-solution}
 
 
 {{%  insert-safekit-82-configuration-pt-br app="Firebird" mod="firebird"  %}}
  
 
-## Demonstração da solução SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## Demonstração da solução mirror SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-pt-br  %}}

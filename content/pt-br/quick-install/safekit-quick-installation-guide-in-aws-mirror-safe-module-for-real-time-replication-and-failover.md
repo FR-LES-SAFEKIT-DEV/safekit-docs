@@ -1,54 +1,55 @@
 ---
-title: "Alta disponibilidade AWS com SafeKit : Instale o módulo mirror.safe para failover."
+title: "Alta disponibilidade AWS com SafeKit: instale o módulo mirror.safe para failover"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/"
-description: "Implante o módulo mirror.safe para SafeKit em AWS para habilitar a replicação síncrona em tempo real e o failover automático em Windows e Linux . Este guia orienta você na configuração de um cluster de 2 nós sem compartilhamento de recursos para aplicações críticas."
+description: "Implemente o módulo mirror.safe para SafeKit na AWS para habilitar a replicação síncrona em tempo real e o failover automático no Windows e Linux. Este guia mostra como configurar um cluster de 2 nós sem armazenamento sem compartilhamento para aplicações críticas."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para AWS , Limitações de Alta Disponibilidade SafeKit , Visão Geral da solução SafeKit / AWS mirror , Instalação da solução SafeKit / AWS mirror em Windows e Linux ( mirror.safe ), Configuração passo a passo da solução SafeKit / AWS mirror , Demonstração da solução SafeKit mirror , 🔍 Explore o SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para AWS, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução mirror SafeKit/AWS, Instalação da solução mirror SafeKit/AWS no Windows e Linux (mirror.safe), Configuração passo a passo da solução mirror SafeKit/AWS, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
-# Alta disponibilidade AWS com SafeKit : Instale o módulo mirror.safe para failover {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
+# Alta disponibilidade AWS com SafeKit: instale o módulo mirror.safe para failover {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-pt-br app="AWS" mod="mirror"  %}}
  
 
-## Visão geral da solução SafeKit / AWS mirror {#overview-of-the-safekit--aws-mirror-solution}
+## Visão geral da solução mirror SafeKit/AWS {#overview-of-the-safekit--aws-mirror-solution}
 
-A solução é descrita aqui: **💡 [ Amazon AWS Alta disponibilidade: SafeKit Replicação síncrona e failover ](</pt-br/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)** .
+A solução é descrita aqui: **💡 [Alta Disponibilidade Amazon AWS: Replicação Síncrona e Failover SafeKit](</pt-br/solutions/aws-high-availability-cluster-synchronous-replication-failover/>)**.
 
-## Instalação da solução SafeKit / AWS mirror em Windows e Linux ( mirror.safe ) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
+## Instalação da solução mirror SafeKit/AWS no Windows e Linux (mirror.safe) {#installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe}
 
-### Configuração do balanceador de carga Amazon AWS {#configuration-of-the-amazon-aws-load-balancer}
+### Configuração do balanceador de carga da Amazon AWS {#configuration-of-the-amazon-aws-load-balancer}
 
-O balanceador de carga precisa ser configurado se você quiser um endereço IP virtual.  
-E o balanceador de carga deve ser configurado para enviar periodicamente pacotes de saúde aos nós.  
-Para isso, SafeKit fornece uma verificação de integridade que é executada dentro dos nós e que
+O balanceador de carga deve ser configurado se você quiser um endereço IP virtual.  
+E o balanceador de carga deve ser configurado para enviar pacotes de verificação de integridade periodicamente para os nós.  
+Para isso, SafeKit oferece uma verificação de integridade que é executada dentro dos nós e que
 
-  * Retorna OK quando o estado do módulo mirror é PRIM (verde) ou ALONE (verde).
-  * retornos NÃO ENCONTRADOS em todos os outros estados
+  * retorna OK quando o estado do módulo mirror é PRIM (verde) ou ALONE (verde)
+  * retorna NÃO ENCONTRADO em todos os outros estados
 
 
 Você deve configurar o balanceador de carga Amazon AWS com:
 
-  * protocolo HTTP
+  * Protocolo HTTP
   * porta 9010, a porta do servidor web SafeKit
-  * URL /var/modules/mirror/ready.txt (se mirror for o nome do módulo que você implantará posteriormente)
+  * URL /var/modules/mirror/ready.txt (se mirror for o nome do módulo que você implantará mais tarde)
 
 
-Para ](<https://aws.amazon.com/elasticloadbalancing/>) mais informações, consulte a configuração do balanceador de carga Amazon [ AWS .
+Para obter mais informações, consulte [a configuração do balanceador de carga da Amazon AWS](<https://aws.amazon.com/elasticloadbalancing/>).
 
 
-⚠️ Não configure um endereço IP virtual na etapa 4 da configuração passo a passo abaixo. O endereço IP virtual já está configurado no balanceador de carga Amazon AWS . A configuração de um IP virtual na etapa 4 é útil apenas para configurações locais.
+⚠️ Não configure um endereço IP virtual na etapa 4 da configuração passo a passo abaixo. O endereço IP virtual já está definido no balanceador de carga Amazon AWS. A configuração de um IP virtual na etapa 4 é útil apenas para configuração local.
 
-### Configuração da segurança de rede Amazon AWS {#configuration-of-the-amazon-aws-network-security}
+### Configuração da segurança da rede Amazon AWS {#configuration-of-the-amazon-aws-network-security}
 
-A segurança da rede deve ser configurada para permitir a comunicação dos seguintes protocolos e portas:
+A segurança da rede deve ser configurada para permitir comunicações para os seguintes protocolos e portas:
 
-  * UDP - 4800 para o serviço safeadmin (entre nós SafeKit )
-  * UDP - 8888 para o módulo de pulsação (entre nós SafeKit )
-  * TCP – 5600 para o módulo de replicação de arquivos em tempo real (entre nós SafeKit )
-  * TCP – 9010 para a verificação de integridade do balanceador de carga e para o console web SafeKit em execução no modo http.
+  * UDP - 4800 para o serviço safeadmin (entre os nós SafeKit)
+  * UDP - 8888 para o heartbeat do módulo (entre os nós SafeKit)
+  * TCP – 5600 para o módulo de replicação de arquivos em tempo real (entre os nós SafeKit)
+  * TCP – 9010 para a verificação de integridade do balanceador de carga e para o console da web SafeKit em execução no modo http
   * TCP – 9001 para configurar o modo https para o console
   * TCP – 9453 para o console web SafeKit em execução no modo https
 
@@ -59,15 +60,15 @@ A segurança da rede deve ser configurada para permitir a comunicação dos segu
 {{%  insert-safekit-installation-package-linux-pt-br app="" mod="mirror"  %}}
  
 
-Observação: o módulo genérico **mirror.safe** que você irá configurar está incluído no pacote.
+Observação: o módulo genérico **mirror.safe** que você vai configurar é entregue dentro do pacote.
 
-## Configuração passo a passo da solução SafeKit / AWS mirror {#step-by-step-configuration-of-the-safekit--aws-mirror-solution}
+## Configuração passo a passo da solução mirror SafeKit/AWS {#step-by-step-configuration-of-the-safekit--aws-mirror-solution}
 
 
 {{%  insert-safekit-82-configuration-pt-br app="Windows" mod="mirror"  %}}
  
 
-## Demonstração da solução SafeKit mirror {#demonstration-of-the-safekit-mirror-solution}
+## Demonstração da solução mirror SafeKit {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-pt-br  %}}

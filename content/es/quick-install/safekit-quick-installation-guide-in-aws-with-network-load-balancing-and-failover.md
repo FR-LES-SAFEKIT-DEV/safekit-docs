@@ -1,55 +1,56 @@
 ---
-title: "Balanceo de carga y conmutación por error de red AWS : Instale el módulo SafeKit farm.safe"
+title: "Balanceo de carga y conmutación por error de la red AWS: Instale el módulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
-description: "Optimice el balanceo de carga de red AWS con la monitorización inteligente de aplicaciones de SafeKit . El módulo farm.safe realiza una comprobación de estado específica para el balanceador de carga AWS , lo que permite una alta disponibilidad sin interrupciones a nivel de aplicación. Consiga la recuperación automática y la conmutación por error para aplicaciones de misión crítica."
+description: "Mejore el equilibrio de carga de red AWS con la supervisión inteligente de aplicaciones de SafeKit. El módulo farm.safe proporciona una comprobación de estado dedicada para el balanceador de carga AWS, lo que permite una alta disponibilidad (HA) sin interrupciones a nivel de aplicación. Consiga la autocorrección y la conmutación por error automáticas para las aplicaciones de misión crítica."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para AWS , limitaciones de alta disponibilidad de SafeKit , descripción general de la solución SafeKit / AWS , instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ), configuración paso a paso de la solución SafeKit / AWS , demostración de la solución SafeKit farm , 🔍 Explora SafeKit"
+topics: "Guía de instalación rápida de alta disponibilidad para AWS, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/AWS, Instalación de la solución SafeKit/AWS en Windows y Linux (farm.safe), Configuración paso a paso de la solución SafeKit/AWS, Demostración de la solución farm SafeKit, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 ---
 
-# Balanceo de carga y conmutación por error de red AWS : Instale el módulo SafeKit farm.safe {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Balanceo de carga y conmutación por error de la red AWS: Instale el módulo farm.safe SafeKit {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-es app="AWS" mod="farm"  %}}
  
 
-## Descripción general de la solución SafeKit / AWS {#overview-of-the-safekit--aws-solution}
+## Descripción general de la solución SafeKit/AWS {#overview-of-the-safekit--aws-solution}
 
-La solución se describe aquí: **💡 [ SafeKit : Amazon AWS Balanceo de carga y alta disponibilidad de aplicaciones <span class="notranslate farm-term" translate="no">Farm</span> Clúster ](</es/solutions/aws-load-balancing-cluster-failover/>)** .
+La solución se describe aquí: **💡 [SafeKit: clúster <span class="notranslate farm-term" translate="no">farm</span> equilibrio de carga y alta disponibilidad de aplicaciones Amazon AWS](</es/solutions/aws-load-balancing-cluster-failover/>)**.
 
-## Instalación de la solución SafeKit / AWS en Windows y Linux ( farm.safe ) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
+## Instalación de la solución SafeKit/AWS en Windows y Linux (farm.safe) {#installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe}
 
 ### Configuración del balanceador de carga Amazon AWS {#configuration-of-the-amazon-aws-load-balancer}
 
 El balanceador de carga debe configurarse con una dirección IP virtual.  
-Además, el balanceador de carga debe configurarse para enviar periódicamente paquetes de estado a los nodos.  
+Y el balanceador de carga debe configurarse para enviar periódicamente paquetes de estado a los nodos.  
 Para ello, SafeKit proporciona una comprobación de estado que se ejecuta dentro de los nodos y que
 
-  * Devuelve OK cuando el estado del módulo <span class="notranslate farm-term" translate="no">farm</span> es UP (verde).
-  * Devoluciones NO ENCONTRADAS en todos los demás estados
+  * devuelve OK cuando el estado del módulo <span class="notranslate farm-term" translate="no">farm</span> es UP (verde)
+  * devuelve NO ENCONTRADO en todos los demás estados
 
 
 Debe configurar el balanceador de carga Amazon AWS con:
 
-  * protocolo HTTP
+  * Protocolo HTTP
   * puerto 9010, el puerto del servidor web SafeKit
-  * URL /var/modules/farm/ready.txt (si <span class="notranslate farm-term" translate="no">farm</span> es el nombre del módulo que implementará posteriormente)
+  * URL /var/modules/farm/ready.txt (si <span class="notranslate farm-term" translate="no">farm</span> es el nombre del módulo que implementará más adelante)
 
 
-Para obtener más información, consulte [ la configuración del balanceador de carga de Amazon AWS ](<https://aws.amazon.com/elasticloadbalancing/>) .
+Para obtener más información, consulte [la configuración del balanceador de carga Amazon AWS](<https://aws.amazon.com/elasticloadbalancing/>).
 
 
-⚠️ No configure una dirección IP virtual ni reglas de balanceo de carga en el paso 4 de la configuración paso a paso que se describe a continuación. La dirección IP virtual y las reglas de balanceo de carga ya están configuradas en el balanceador de carga Amazon AWS . Configurar una IP virtual y reglas de balanceo de carga en el paso 4 solo es útil para configuraciones locales.
+⚠️ No configure una dirección IP virtual ni reglas de equilibrio de carga en el paso 4 de la configuración paso a paso que se muestra a continuación. La dirección IP virtual y las reglas de equilibrio de carga ya están configuradas en el balanceador de carga Amazon AWS. La configuración de una IP virtual y reglas de equilibrio de carga en el paso 4 solo es útil para la configuración local.
 
-### Configuración de la seguridad de red de Amazon AWS {#configuration-of-the-amazon-aws-network-security}
+### Configuración de la seguridad de la red Amazon AWS {#configuration-of-the-amazon-aws-network-security}
 
-La seguridad de la red debe configurarse para permitir las comunicaciones para los siguientes protocolos y puertos:
+La seguridad de la red debe configurarse para habilitar las comunicaciones de los siguientes protocolos y puertos:
 
-  * UDP - 4800 para el servicio safeadmin (entre nodos SafeKit )
-  * UDP - 4803 para la señal de latido dentro del módulo <span class="notranslate farm-term" translate="no">farm</span> (entre los nodos SafeKit )
-  * TCP – 9010 para la comprobación del estado del balanceador de carga y para la consola web SafeKit que se ejecuta en modo http.
+  * UDP - 4800 para el servicio safeadmin (entre nodos SafeKit)
+  * UDP - 4803 para el heartbeat dentro del módulo <span class="notranslate farm-term" translate="no">farm</span> (entre los nodos SafeKit)
+  * TCP – 9010 para la comprobación del estado del balanceador de carga y para la consola web SafeKit que se ejecuta en el modo http
   * TCP – 9001 para configurar el modo https para la consola
-  * TCP – 9453 para la consola web SafeKit que se ejecuta en modo https.
+  * TCP – 9453 para la consola web SafeKit que se ejecuta en modo https
 
 
 
@@ -58,15 +59,15 @@ La seguridad de la red debe configurarse para permitir las comunicaciones para l
 {{%  insert-safekit-installation-package-linux-es app="" mod="mirror"  %}}
  
 
-Nota: el módulo genérico **farm.safe** que va a configurar se incluye dentro del paquete.
+Nota: el módulo genérico **farm.safe** que va a configurar se entrega dentro del paquete.
 
-## Configuración paso a paso de la solución SafeKit / AWS {#step-by-step-configuration-of-the-safekit--aws-solution}
+## Configuración paso a paso de la solución SafeKit/AWS {#step-by-step-configuration-of-the-safekit--aws-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-es app="" mod="farm"  %}}
  
 
-## Demostración de la solución SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+## Demostración de la solución <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-es  %}}

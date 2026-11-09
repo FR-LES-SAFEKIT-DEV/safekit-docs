@@ -1,39 +1,41 @@
-{{/* Shortcode: insert-safekit-network-isolation-zh-hans — 3 instances in 3 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.2 | Translation LLM | 41 expressions */}}
+{{/* Shortcode: insert-safekit-network-isolation-en — 3 instances in 3 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\heartbeat-failover-quorum-windows-linux-cluster.md */}}
 
 
 
-## 集群发生网络隔离时有哪些不同场景？ {#isolation}
+## 集群中网络隔离的不同场景有哪些？ {#isolation}
 
-### 单个网络 {#a-single-network}
+### 单一网络 {#a-single-network}
 
-发生网络隔离时，默认行为如下：
+当网络隔离时，默认行为是：
 
-  * 由于每个节点都丢失了心跳，每个节点都会进入 ALONE 状态，并使用自己的虚拟 IP 地址运行应用程序（应用程序双重运行，各自修改本地数据），
-  * 隔离修复后，一个 ALONE 节点会被强制停止，并从另一个节点重新同步数据，
-  * 最终集群处于 PRIM-SECOND 状态（也可能是 SECOND-PRIM，取决于 Windows 对重复虚拟 IP 地址的检测）。
-
-
-### 两个网络，其中一个为专用复制网络 {#two-networks-with-a-dedicated-replication-network}
-
-发生网络隔离时，使用专用复制网络的行为如下：
-
-  * 在私有网络上部署专用复制网络，
-  * 生产网络上的心跳丢失（网络已隔离），
-  * 复制网络上的心跳正常工作（网络未隔离），
-  * 集群保持 PRIM/SECOND 状态。
+  * 当每个节点的心跳丢失时，每个节点都会进入 ALONE，并使用其虚拟 IP 地址运行应用程序（应用程序会修改其本地数据，从而实现双重执行）
+  * 当隔离修复时，一个 ALONE 节点将被强制停止，并从另一个节点重新同步其数据，
+  * 最后，集群为 PRIM-SECOND（或根据 Windows 进行的重复虚拟 IP 地址检测，为 SECOND-PRIM）。
 
 
-### 单个网络和脑裂检查器 {#a-single-network-and-a-splitbrain-checker}
+### 两个网络，一个专用复制网络 {#two-networks-with-a-dedicated-replication-network}
 
-发生网络隔离时，使用脑裂检查器的行为如下：
+在网络隔离的情况下，专用复制网络的行为如下：
 
-  * 已使用见证设备（通常为路由器）的 IP 地址配置脑裂检查器，
-  * 当服务器从 PRIM 转为 ALONE 或从 SECOND 转为 ALONE 时，脑裂检查器开始工作，
-  * 网络隔离时，两个节点在进入 ALONE 状态前都会测试该 IP 地址，
-  * 能够访问该 IP 地址的节点进入 ALONE 状态，另一个进入 WAIT 状态，
-  * 隔离修复后，WAIT 节点重新同步数据并进入 SECOND 状态。
+  * 专用复制网络在专用网络上实施，
+  * 生产网络上的心跳丢失（隔离网络），
+  * 复制网络上的心跳正在工作（不是隔离网络），
+  * 集群保持在 PRIM/SECOND 状态。
 
 
-注意：如果见证设备宕机或断开连接，两个节点都会进入 WAIT 状态，应用程序将不再运行。因此，必须选择可靠的见证设备，例如路由器。
+### 单个网络和脑裂检测器 {#a-single-network-and-a-splitbrain-checker}
+
+当网络隔离时，脑裂检测器的行为是：
+
+  * 脑裂检测器已配置为见证人（通常是路由器）的 IP 地址，
+  * 当服务器从 PRIM 变为 ALONE，或从 SECOND 变为 ALONE 状态时，脑裂检测器就会启动
+  * 在网络隔离的情况下，在进入 ALONE 之前，两个节点都会测试 IP 地址，
+  * 可以访问 IP 地址的节点进入 ALONE，另一个节点进入 WAIT，
+  * 当隔离修复后，WAIT 节点会重新同步其数据并变为 SECOND。
+
+
+注意：如果见证人宕机或断开连接，两个节点都会进入 WAIT，应用程序将不再运行。这就是为什么您必须选择一个像路由器一样可靠的见证人。
+

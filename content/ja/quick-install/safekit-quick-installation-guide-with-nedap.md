@@ -1,40 +1,41 @@
 ---
-title: "NedapとSafeKitによる高可用性：フェイルオーバーのためにnedap.safeモジュールをインストールしてください"
+title: "SafeKit による Nedap 高可用性：フェイルオーバー用に nedap.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-nedap/"
-description: "SafeKitにnedap.safeモジュールをデプロイして、 Windowsの同期リアルタイムレプリケーションとNedapへの自動フェイルオーバーを有効にします。このガイドでは、共有ストレージを使用しない重要なアプリケーション向けに、2 ノードの SAN レス クラスタをセットアップする手順を説明します。"
+description: "SafeKit は用の nedap.safe モジュールをデプロイして、Windows 上の Nedap の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで重要なアプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
 category: "quick-install"
 lang: "ja"
-topics: "Nedapの高可用性クイックインストールガイド、 SafeKitの高可用性制限、 SafeKit / Nedapソリューションの概要、 Windows ( nedap.safe ) へのSafeKit / Nedapソリューションのインストール、 SafeKit / Nedapソリューションのステップバイステップ構成、 SafeKit mirrorソリューションのデモ、🔍 SafeKit を探索する"
+topics: "Nedap 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Nedap ソリューションの概要、Windows への SafeKit/Nedap ソリューションのインストール (nedap.safe)、SafeKit/Nedap ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# Nedap高可用性とSafeKit : フェイルオーバーのためにnedap.safeモジュールをインストールしてください {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
+# SafeKit による Nedap 高可用性：フェイルオーバー用に nedap.safe モジュールをインストールする {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Nedap" mod="nedap"  %}}
  
 
-**📘 [ Nedap AOES とSafeKit (PDF) ](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)**の構成: すべての詳細はこのドキュメントに記載されています。
+**📘 [Nedap AOES と SafeKit の構成（PDF）](</wp-content/uploads/documents/NEDAP_AEOS_CLUSTER_SAFEKIT.pdf>)**：すべての詳細は本書に記載されています。
 
-## SafeKit / Nedapソリューションの概要 {#overview-of-the-safekit--nedap-solution}
+## SafeKit/Nedap ソリューションの概要 {#overview-of-the-safekit--nedap-solution}
 
-解決策はここに記載されています: **💡 [最もシンプルなNedap高可用性: 2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/nedap-high-availability-synchronous-replication-failover/>)** 。
+解決策はこちらで説明されています。**💡 [Nedap 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー](</ja/solutions/nedap-high-availability-synchronous-replication-failover/>)**。
 
-## SafeKit / NedapソリューションをWindows ( nedap.safe )にインストールします。 {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
+## Windows への SafeKit/Nedap ソリューションのインストール (nedap.safe) {#installation-of-the-safekit--nedap-solution-on-windows-nedapsafe}
 
 ### 前提条件 {#prerequisites}
 
-  * 2つのノード（仮想マシンまたは物理サーバー）に、 Nedap AEOSとSQLがインストールされている必要があります。
-  * と SQL Server 同じノードで Nedap AEOS、接続を構成する Nedap AEOSからSQLへの接続には、サーバーの物理IPアドレスではなく、仮想IPアドレスを使用してください。そうしないと、フェイルオーバーが機能しません。 SQL Server 外部の場合もあります。下記の注記を参照してください。
+  * Nedap AEOS と SQL を 2 つのノード（仮想マシンまたは物理サーバー）にインストールする必要があります。
+  * Nedap AEOS と同じノードで SQL Server を使用する場合は、サーバーの物理 IP アドレスではなく、仮想 IP アドレスを使用して Nedap AEOS を SQL に接続するように設定してください。そうしないと、フェイルオーバーが機能しません。SQL Server 外部に配置することもできます。以下の注記を参照してください。
 
 
-ℹ️ 注: SQL Server外部の場合があります。この場合、ステップバイステップの設定手順のステップ 4 で次の操作を行います。
+ℹ️ 注：SQL Server 外部に配置することも可能です。その場合、ステップバイステップ構成のステップ 4 で、
 
-  * SQLデータおよびログフォルダのレプリケーションを削除します。
-  * sqlservr.exeのプロセスチェッカーを削除します。
-  * SERVICESマクロからMSSQLServerを削除します。
+  * SQL データとログフォルダーのレプリケーションを削除します
+  * sqlservr.exe のプロセスチェッカーを削除します
+  * SERVICES マクロから MSSQLServer を削除します。
 
 
-外部モジュールSQL Serverの冗長性は、💡 [ SafeKitおよびsqlserver.safeモジュール](</ja/solutions/sql-server-high-availability-synchronous-replication-failover/>)を使用して実装できます。この場合、 Nedap AEOS と SQL の接続を、 sqlserver.safeモジュールの仮想 IP アドレスで構成してください。
+💡 [SafeKit と sqlserver.safe モジュール](</ja/solutions/sql-server-high-availability-synchronous-replication-failover/>)を使用すると、外部 SQL Server の冗長化を実装できます。この場合、sqlserver.safe モジュールの仮想 IP アドレスを使用して、Nedap AEOS と SQL の接続を構成します。
 
 
 {{%  insert-safekit-installation-package-windows-ja app="Nedap AEOS and SQL" mod="nedap"  %}}
@@ -42,13 +43,13 @@ topics: "Nedapの高可用性クイックインストールガイド、 SafeKit�
 {{%  insert-safekit-82-installation-module-windows-ja app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit / Nedapソリューションの段階的な構成 {#step-by-step-configuration-of-the-safekit--nedap-solution}
+## SafeKit/Nedap ソリューションのステップバイステップ設定 {#step-by-step-configuration-of-the-safekit--nedap-solution}
 
 
 {{%  insert-safekit-82-configuration-ja app="Nedap AEOS and SQL" mod="nedap"  %}}
  
 
-## SafeKit mirrorのソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
+## SafeKit mirror ソリューションのデモンストレーション {#demonstration-of-the-safekit-mirror-solution}
 
 
 {{%  insert-safekit-mirror-video-ja  %}}

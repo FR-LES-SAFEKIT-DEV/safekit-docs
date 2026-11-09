@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-farm-guide-ko — 9 instances in 9 files */}}
+{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.6 | Translation LLM | 43 expressions */}}
+{{/* Shortcode: insert-safekit-farm-guide-en — 9 instances in 9 files */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-network-load-balancing-and-failover.md */}}
 
@@ -6,26 +7,26 @@
 
 ## {{ .Get "app" }} 고가용성 빠른 설치 가이드 {#quick-guide}
 
-이 가이드는 SafeKit을 사용해 {{ .Get "app" }}용 **<span class="notranslate farm-term" translate="no">farm</span> 클러스터**를 구성하고 네트워크 로드 밸런싱과 자동 장애 조치를 구현하는 방법을 설명합니다.
+이 가이드는 SafeKit을 사용하여 {{ .Get "app" }}용 **<span class="notranslate farm-term" translate="no">farm</span> 클러스터**를 설정하는 방법을 설명하며, 네트워크 부하 분산 및 자동 장애 조치를 보장합니다.
 
-도움이 필요하면 [SafeKit AI 🤖](/ko/resources/safekit-support/)를 이용하세요.
+도움이 필요하시면 [SafeKit AI 🤖](/ko/resources/safekit-support/) 이용해 보세요.
 
-### 1. 개요
+### 1. 개요 {#1-overview}
 
-  * **아키텍처:** 가상 IP 주소를 사용하는 확장 가능한 다중 노드 로드 밸런싱 <span class="notranslate farm-term" translate="no">farm</span>을 구현합니다.
-  * **고가용성:** 자동 상태 모니터링과 원활한 장애 조치를 통해 **서비스 연속성을 보장**합니다.
-
-
-### 2. 설치
-
-  * **소프트웨어:** 모든 서버에 SafeKit 엔진을 설치합니다.
-  * **모듈:** 사전 구성된 애플리케이션 모듈 `{{ .Get "mod" }}.safe`를 다운로드합니다.
+  * **아키텍처 :** 가상 IP 주소를 사용하여 확장 가능한 다중 노드 로드 밸런싱 <span class="notranslate farm-term" translate="no">farm</span>을 구현합니다.
+  * **고가용성:** 자동 상태 모니터링 및 원활한 장애 조치를 통해 **서비스 연속성을 보장합니다**.
 
 
-### 3. 구성
+### 2. 설치 {#2-installation}
 
-  * **웹 콘솔:** {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 클러스터를 구성합니다.
-  * **모니터링:** {{ .Get "app" }} 애플리케이션의 모니터링과 보호를 시작합니다.
+  * **소프트웨어:** 모든 서버에 SafeKit 엔진을 설치하십시오.
+  * **모듈:** 사전 구성된 `{{ .Get "mod" }}.safe` 애플리케이션 모듈을 다운로드합니다.
+
+
+### 3. 구성 {#3-configuration}
+
+  * **웹 콘솔:** {{ .Get "app" }} <span class="notranslate farm-term" translate="no">farm</span> 클러스터를 구성
+  * **모니터링:** {{ .Get "app" }} 애플리케이션 모니터링 및 보호를 시작합니다.
 
 
 

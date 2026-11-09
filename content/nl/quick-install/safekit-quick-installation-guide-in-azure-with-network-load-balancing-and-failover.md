@@ -1,62 +1,74 @@
 ---
-title: "Netwerktaakverdeling en failover in Azure: de SafeKit-module farm.safe installeren"
+title: "Azure Network Load Balancing & Failover: Installeer de SafeKit farm.safe-module"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
-description: "Verbeter de netwerktaakverdeling van Azure met de intelligente toepassingsbewaking van SafeKit. De module farm.safe biedt een speciale statuscontrole voor de Azure Load Balancer en maakt naadloze hoge beschikbaarheid op toepassingsniveau, automatisch herstel en failover mogelijk voor bedrijfskritieke toepassingen."
+description: "Verbeter Azure Network Load Balancing met de intelligente applicatiemonitoring van SafeKit. De farm.safe module biedt een speciale gezondheidscontrole voor de Azure load balancer, waardoor naadloze HA op applicatieniveau mogelijk is. Bereik automatisch zelfherstel en failover voor bedrijfskritieke applicaties."
 category: "quick-install"
 lang: "nl"
-topics: "Handleiding voor snelle installatie van hoge beschikbaarheid voor Azure, Beperkingen van SafeKit-hoge beschikbaarheid, Overzicht van de SafeKit-/Azure-oplossing, Installatie van de SafeKit-/Azure-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit-/Azure-oplossing, Demonstratie van de SafeKit-farm-oplossing, 🔍 Ontdek SafeKit"
+topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Azure, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Azure-oplossing, Installatie van de SafeKit/Azure-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit/Azure-oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 ---
 
-# Netwerktaakverdeling en failover in Azure: de SafeKit-module farm.safe installeren {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Azure Network Load Balancing & Failover: Installeer de SafeKit farm.safe-module {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+
 
 {{%  insert-safekit-farm-guide-nl app="Azure" mod="farm"  %}}
+ 
 
-## Overzicht van de SafeKit-/Azure-oplossing {#overview-of-the-safekit--azure-solution}
+## Overzicht van de SafeKit/Azure-oplossing {#overview-of-the-safekit--azure-solution}
 
-De oplossing wordt hier beschreven: **💡[SafeKit: taakverdeling van Microsoft Azure en hoge beschikbaarheid van toepassingen met een <span class="notranslate farm-term" translate="no">Farm</span>-cluster](</nl/solutions/azure-load-balancing-cluster-failover/>)**.
+De oplossing wordt hier beschreven: **💡 [SafeKit: Microsoft Azure Load Balancing & Application High Availability <span class="notranslate farm-term" translate="no">farm</span>-cluster](</nl/solutions/azure-load-balancing-cluster-failover/>)**.
 
-## Installatie van de SafeKit-/Azure-oplossing op Windows en Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
+## Installatie van de SafeKit/Azure-oplossing op Windows en Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
 
-### De load balancer van Microsoft Azure configureren {#configuration-of-the-microsoft-azure-load-balancer}
+### Configuratie van de Microsoft Azure load balancer {#configuration-of-the-microsoft-azure-load-balancer}
 
-De load balancer moet worden geconfigureerd met een virtueel IP-adres.
-De load balancer moet ook periodiek statuscontrolepakketten naar de knooppunten sturen.
-Daarvoor biedt SafeKit een statuscontrole die op de knooppunten wordt uitgevoerd en:
+De load balancer moet worden geconfigureerd met een virtueel IP-adres.  
+En de load balancer moet zo worden geconfigureerd dat deze periodiek gezondheidspakketten naar de knooppunten stuurt.  
+Hiervoor biedt SafeKit een gezondheidscontrole die binnen de knooppunten wordt uitgevoerd en die
 
-  * OK retourneert wanneer de status van de <span class="notranslate farm-term" translate="no">farm</span>-module UP (groen) is
-  * in alle andere statussen NOT FOUND retourneert
+  * geeft OK terug wanneer de status van de <span class="notranslate farm-term" translate="no">farm</span>-module UP (groen) is
+  * geeft NIET GEVONDEN terug in alle andere staten
 
-Configureer de load balancer van Microsoft Azure met:
+
+U moet de Microsoft Azure load balancer configureren met:
 
   * HTTP-protocol
-  * poort 9010, de poort van de SafeKit-webserver
-  * URL /var/modules/farm/ready.txt (als <span class="notranslate farm-term" translate="no">farm</span> de naam is van de module die u later implementeert)
+  * poort 9010, de SafeKit-webserverpoort
+  * URL /var/modules/farm/ready.txt (als <span class="notranslate farm-term" translate="no">farm</span> de modenaam is die u later gaat implementeren)
 
-Zie [de configuratie van de load balancer van Microsoft Azure](<https://learn.microsoft.com/en-us/azure/load-balancer/>) voor meer informatie.
 
-⚠️ Configureer geen virtueel IP-adres en geen taakverdelingsregels bij stap 4 van de stapsgewijze configuratie hieronder. Het virtuele IP-adres en de taakverdelingsregels zijn al ingesteld in de load balancer van Microsoft Azure. Deze instellen bij stap 4 is alleen nuttig voor een on-premises configuratie.
+Raadpleeg [de configuratie van de Microsoft Azure load balancer](<https://learn.microsoft.com/en-us/azure/load-balancer/>) voor meer informatie. 
 
-### De netwerkbeveiliging van Microsoft Azure configureren {#configuration-of-the-microsoft-azure-network-security}
 
-Configureer de netwerkbeveiliging om communicatie via de volgende protocollen en poorten toe te staan:
+⚠️ Configureer geen virtueel IP-adres en geen load balancing-regels in stap 4 van de stapsgewijze configuratie hieronder. Het virtuele IP-adres en de load balancing-regels zijn al ingesteld in de Microsoft Azure load balancer. Het instellen van een virtueel IP-adres en load balancing-regels in stap 4 is alleen nuttig voor on-premise configuratie.
 
-  * UDP - 4800 voor de safeadmin-service (tussen SafeKit-knooppunten)
-  * UDP - 4803 voor heartbeats binnen de <span class="notranslate farm-term" translate="no">farm</span>-module (tussen SafeKit-knooppunten)
-  * TCP – 9010 voor de statuscontrole van de load balancer en de SafeKit-webconsole in http-modus
+### Configuratie van de netwerkbeveiliging van Microsoft Azure {#configuration-of-the-microsoft-azure-network-security}
+
+De netwerkbeveiliging moet zo worden geconfigureerd dat communicatie voor de volgende protocollen en poorten mogelijk is:
+
+  * UDP - 4800 voor de safeadmin-service (tussen SafeKit knooppunten)
+  * UDP - 4803 voor de heartbeats binnen de <span class="notranslate farm-term" translate="no">farm</span>-module (tussen SafeKit knooppunten)
+  * TCP – 9010 voor de statuscontrole van de loadbalancer en voor de SafeKit webconsole die in de http-modus draait
   * TCP – 9001 om de https-modus voor de console te configureren
-  * TCP – 9453 voor de SafeKit-webconsole in https-modus
+  * TCP – 9453 voor de SafeKit webconsole die in https-modus draait
+
+
 
 {{%  insert-safekit-installation-package-windows-nl app="" mod="mirror"  %}}
 
 {{%  insert-safekit-installation-package-linux-nl app="" mod="mirror"  %}}
+ 
 
-Opmerking: de generieke module **farm.safe** die u gaat configureren, wordt meegeleverd in het pakket.
+Opmerking: de generieke **farm.safe** module die u gaat configureren, wordt meegeleverd in het pakket.
 
-## Stapsgewijze configuratie van de SafeKit-/Azure-oplossing {#step-by-step-configuration-of-the-safekit--azure-solution}
+## Stapsgewijze configuratie van de SafeKit/Azure-oplossing {#step-by-step-configuration-of-the-safekit--azure-solution}
+
 
 {{%  insert-safekit-82-farm-configuration-nl app="" mod="farm"  %}}
+ 
 
-## Demonstratie van de SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-oplossing {#demonstration-of-the-safekit-farm-solution}
+## Demonstratie van de SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#demonstration-of-the-safekit-farm-solution}
+
 
 {{%  insert-safekit-farm-video-nl  %}}
 

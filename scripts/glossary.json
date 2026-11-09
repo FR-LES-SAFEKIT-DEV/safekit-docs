@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-08.30",
+  "version": "2026-11-09.11",
   "keep": [
     "mirror",
     "farm",
@@ -96,7 +96,16 @@
     "LAN",
     "virt-manager",
     "libvirt",
-    "virsh"
+    "virsh",
+    "BUILTIN/Administrators",
+    "Server Configurator",
+    "Management Client",
+    "Smart Client",
+    "Amazon",
+    "Alstef Group",
+    "Alstef",
+    "Fives Syleps",
+    "BAGware"
   ],
   "terms": {
     "farm cluster": {
@@ -507,6 +516,78 @@
       "ko": "비공유(shared-nothing)",
       "zh-hans": "无共享",
       "ar": "بدون مشاركة"
+    },
+    "split-brain checker": {
+      "fr": "checker split-brain",
+      "de": "Split-Brain-Checker",
+      "es": "checker split-brain",
+      "it": "checker split-brain",
+      "nl": "split-brain-checker",
+      "pt": "checker split-brain",
+      "ja": "スプリットブレインチェッカー",
+      "ko": "스플릿 브레인 체커",
+      "zh-hans": "脑裂检测器",
+      "ar": "مدقق split-brain"
+    },
+    "splitbrain checker": {
+      "fr": "checker split-brain",
+      "de": "Split-Brain-Checker",
+      "es": "checker split-brain",
+      "it": "checker split-brain",
+      "nl": "split-brain-checker",
+      "pt": "checker split-brain",
+      "ja": "スプリットブレインチェッカー",
+      "ko": "스플릿 브레인 체커",
+      "zh-hans": "脑裂检测器",
+      "ar": "مدقق split-brain"
+    },
+    "heartbeats": {
+      "fr": "heartbeats",
+      "de": "Heartbeats",
+      "es": "heartbeats",
+      "it": "heartbeat",
+      "nl": "heartbeats",
+      "pt": "heartbeats",
+      "ja": "ハートビート",
+      "ko": "하트비트",
+      "zh-hans": "心跳",
+      "ar": "نبضات heartbeat"
+    },
+    "heartbeat": {
+      "fr": "heartbeat",
+      "de": "Heartbeat",
+      "es": "heartbeat",
+      "it": "heartbeat",
+      "nl": "heartbeat",
+      "pt": "heartbeat",
+      "ja": "ハートビート",
+      "ko": "하트비트",
+      "zh-hans": "心跳",
+      "ar": "نبضة heartbeat"
+    },
+    "Mirror on Windows or Linux": {
+      "fr": "Mirror sous Windows ou Linux",
+      "de": "Mirror unter Windows oder Linux",
+      "es": "Mirror en Windows o Linux",
+      "it": "Mirror su Windows o Linux",
+      "nl": "Mirror op Windows of Linux",
+      "pt": "Mirror no Windows ou Linux",
+      "ja": "Windows または Linux 上の Mirror",
+      "ko": "Windows 또는 Linux의 Mirror",
+      "zh-hans": "Windows 或 Linux 上的 Mirror",
+      "ar": "Mirror على Windows أو Linux"
+    },
+    "Farm on Windows or Linux": {
+      "fr": "Farm sous Windows ou Linux",
+      "de": "Farm unter Windows oder Linux",
+      "es": "Farm en Windows o Linux",
+      "it": "Farm su Windows o Linux",
+      "nl": "Farm op Windows of Linux",
+      "pt": "Farm no Windows ou Linux",
+      "ja": "Windows または Linux 上の Farm",
+      "ko": "Windows 또는 Linux의 Farm",
+      "zh-hans": "Windows 或 Linux 上的 Farm",
+      "ar": "Farm على Windows أو Linux"
     }
   },
   "grammar": {
@@ -618,6 +699,26 @@
       [
         "^(\\s*)Élevé(\\s*)$",
         "\\1Élevée\\2"
+      ],
+      [
+        "(^|\\*\\s+|[.:]\\s+)[Hh]eartbeats\\b",
+        "\\1les heartbeats"
+      ],
+      [
+        "\\b(que|si|car|où|quand|lorsque) heartbeats\\b",
+        "\\1 les heartbeats"
+      ],
+      [
+        "(heartbeats\\b[^.,;]{0,60}?\\b(?:sont|restent|semblent)) (perdu|arrêté|coupé|interrompu)es\\b",
+        "\\1 \\2s"
+      ],
+      [
+        "\\b(le|un|du|au) heartbeats\\b",
+        "\\1 heartbeat"
+      ],
+      [
+        "^(\\s*\\*\\s+)les heartbeats",
+        "\\1les heartbeats"
       ]
     ],
     "it": [
@@ -648,6 +749,14 @@
       [
         "([A-Za-z0-9\\)]) +\\?",
         "\\1?"
+      ],
+      [
+        "\\b(cl[uú]ster) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) \\1 ((?:<span[^>]*>)?[Ff]arm(?:</span>)?)",
+        "\\1 \\3 \\2"
+      ],
+      [
+        "((?:<span[^>]*>)?[Ff]arm(?:</span>)?) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) [Ff]arm\\b",
+        "\\1 \\2"
       ]
     ],
     "es": [
@@ -678,6 +787,18 @@
       [
         "([A-Za-z0-9\\)]) +\\?",
         "\\1?"
+      ],
+      [
+        "\\b(cl[uú]ster) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) \\1 ((?:<span[^>]*>)?[Ff]arm(?:</span>)?)",
+        "\\1 \\3 \\2"
+      ],
+      [
+        "((?:<span[^>]*>)?[Ff]arm(?:</span>)?) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) [Ff]arm\\b",
+        "\\1 \\2"
+      ],
+      [
+        "\\b(protección|supervisión|configuración) de la ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00))(?=\\s*[.,;]|\\s*$)",
+        "\\1 de la aplicación \\2"
       ]
     ],
     "pt": [
@@ -708,6 +829,14 @@
       [
         "\\bAlém (?=[A-Z][\\w-]*\\s*,)",
         "Além do "
+      ],
+      [
+        "\\b(cl[uú]ster) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) \\1 ((?:<span[^>]*>)?[Ff]arm(?:</span>)?)",
+        "\\1 \\3 \\2"
+      ],
+      [
+        "((?:<span[^>]*>)?[Ff]arm(?:</span>)?) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) [Ff]arm\\b",
+        "\\1 \\2"
       ]
     ],
     "ar": [
@@ -1018,6 +1147,46 @@
       [
         "(^|[.!?]\\s+)([A-Z]{2,}[0-9]+) (?=[가-힣])",
         "\\1\\2은 "
+      ],
+      [
+        "SafeKit\\s*(?:을|를)?\\s*(?:살펴보세요|찾아보세요|발견하세요|알아보세요)",
+        "SafeKit 살펴보기"
+      ],
+      [
+        "(farm</span>) (구현|구성|설정|사용|배포)(하|합|해|할|한)",
+        "\\1을 \\2\\3"
+      ],
+      [
+        "((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) 위한",
+        "\\1용"
+      ],
+      [
+        "클러스터\\*\\* (설정|구현|구성|배포|생성)(하|해|합|할|한|하는)",
+        "클러스터**를 \\1\\2"
+      ],
+      [
+        "(\\[[^\\]]*AI 🤖\\]\\([^)\\s]+\\)) (이용|사용|활용)",
+        "\\1를 \\2"
+      ],
+      [
+        "\\b(RPO|RTO) ?= ?(\\d)",
+        "\\1 = \\2"
+      ],
+      [
+        "(^\\s*|[.!?]\\s+)SafeKit (?=[A-Z][^가-힣\\n]{0,30}(?:에 의해|에서|과|와) )",
+        "\\1SafeKit은 "
+      ],
+      [
+        "([A-Za-z]) SafeKit (선택|채택|도입|사용)(했|하|합|한)",
+        "\\1에서 SafeKit을 \\2\\3"
+      ],
+      [
+        "(^\\s*)SafeKit (?=\\[[^\\]]+\\]\\([^)]+\\)에서)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "(^#+\\s+|^\\s*)SafeKit (?=(?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00) [^\\n]*(?:제공|지원|구현|보장)합니다)",
+        "\\1SafeKit은 "
       ]
     ],
     "ja": [
@@ -1140,6 +1309,22 @@
       [
         "(^|[。！？]\\s*)([A-Z]{2,}[0-9]+)\\s*、",
         "\\1\\2 は、"
+      ],
+      [
+        "^(\\s*(?:\\*\\s+)?)(スプリットブレインチェッカー)(?=(?:ウィットネス|サーバー|ノード|モジュール)[^\\n]{0,40}(?:の|が|から))",
+        "\\1\\2は、"
+      ],
+      [
+        "で\\s*SafeKit\\s*(?:を)?(?:試す|検索|発見|探す|見つける|ご覧ください)",
+        "で SafeKit を発見"
+      ],
+      [
+        "(farm</span>|mirror</span>) (実装|構成|設定|使用|導入)(し|す)",
+        "\\1 を\\2\\3"
+      ],
+      [
+        "\\b(RPO|RTO) ?= ?(\\d)",
+        "\\1 = \\2"
       ]
     ],
     "zh-hans": [
@@ -1162,6 +1347,10 @@
       [
         "SafeKit for ((?:[A-Z][\\w.-]*(?: (?=[A-Z]))?)+)\\s*(?=与|和|对比|vs)",
         "适用于 \\1 的 SafeKit "
+      ],
+      [
+        "\\b(RPO|RTO) ?= ?(\\d)",
+        "\\1 = \\2"
       ]
     ],
     "nl": [

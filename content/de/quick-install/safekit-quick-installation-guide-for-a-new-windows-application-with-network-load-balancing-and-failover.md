@@ -1,27 +1,28 @@
 ---
-title: "Windows-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe"
+title: "Windows Network Load Balancing & Failover: Installieren Sie das SafeKit farm.safe-Modul"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
-description: "Erfahren Sie, wie Sie das Modul farm.safe für Netzwerklastausgleich und automatisches Failover unter Windows bereitstellen. Diese Anleitung zeigt, wie Sie mit einer virtuellen IP-Adresse einen hochverfügbaren Cluster für Webdienste und Anwendungen aufbauen – ohne externe Hardware-Load-Balancer und ohne komplexe Konfiguration."
+description: "Erfahren Sie, wie Sie das farm.safe-Modul für Windows Network Load Balancing und automatische Failover bereitstellen. Diese Anleitung zeigt Ihnen, wie Sie einen hochverfügbaren Cluster für Webdienste und Anwendungen mit einer virtuellen IP-Adresse erstellen, ohne dass externe Hardware Load Balancer oder eine komplexe Konfiguration erforderlich sind."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Einschränkungen der SafeKit-Hochverfügbarkeit, Überblick über die SafeKit-/Windows-Lösung, Installation der SafeKit-/Windows-Lösung (farm.safe), Schrittweise Konfiguration der SafeKit-/Windows-Lösung, Demonstration der SafeKit-farm-Lösung, 🔍 SafeKit entdecken"
+topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Windows-Lösung, Installation der SafeKit/Windows-Lösung (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Windows-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 ---
 
-# Windows-Netzwerklastausgleich und Failover: Installieren des SafeKit-Moduls farm.safe {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Windows Network Load Balancing & Failover: Installieren Sie das SafeKit farm.safe-Modul {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}
 
 
 {{%  insert-safekit-farm-guide-de app="Windows" mod="farm"  %}}
  
 
-## Überblick über die SafeKit-/Windows-Lösung {#overview-of-the-safekit--windows-solution}
+## Übersicht über die SafeKit/Windows-Lösung {#overview-of-the-safekit--windows-solution}
 
-Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One-Windows-Lastausgleichs- und Hochverfügbarkeitssoftware](</de/solutions/windows-load-balancing-failover/>)**.
+Die Lösung wird hier beschrieben: **💡 [SafeKit: All-in-One-Software für Lastausgleich und Hochverfügbarkeit Windows](</de/solutions/windows-load-balancing-failover/>)**.
 
-## Installation der SafeKit-/Windows-Lösung (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
+## Installation der SafeKit/Windows-Lösung (farm.safe) {#installation-of-the-safekit--windows-solution-farmsafe}
 
 ### Voraussetzungen {#prerequisites}
 
-  * Die Anwendung, die Sie in einer <span class="notranslate farm-term" translate="no">farm</span> betreiben möchten, muss auf mindestens 2 Knoten (virtuelle Maschinen oder physische Server) installiert sein.
+  * Die Anwendung, die Sie in einer <span class="notranslate farm-term" translate="no">farm</span> bereitstellen möchten, muss auf mindestens zwei Knoten (virtuelle Maschinen oder physische Server) installiert sein.
 
 
 
@@ -30,13 +31,13 @@ Die Lösung wird hier beschrieben: **💡[SafeKit: All-in-One-Windows-Lastausgle
 
 Hinweis: Das generische Modul **farm.safe**, das Sie konfigurieren werden, ist im Paket enthalten.
 
-## Schrittweise Konfiguration der SafeKit-/Windows-Lösung {#step-by-step-configuration-of-the-safekit--windows-solution}
+## Schritt-für-Schritt-Konfiguration der SafeKit/Windows-Lösung {#step-by-step-configuration-of-the-safekit--windows-solution}
 
 
 {{%  insert-safekit-82-farm-configuration-de app="Windows" mod="farm"  %}}
  
 
-## Demonstration der SafeKit-<span class="notranslate farm-term" translate="no">farm</span>-Lösung {#demonstration-of-the-safekit-farm-solution}
+## Demonstration der SafeKit <span class="notranslate farm-term" translate="no">farm</span> Lösung {#demonstration-of-the-safekit-farm-solution}
 
 
 {{%  insert-safekit-farm-video-de  %}}

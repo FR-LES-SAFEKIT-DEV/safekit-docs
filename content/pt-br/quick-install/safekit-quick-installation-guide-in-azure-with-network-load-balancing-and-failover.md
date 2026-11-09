@@ -1,62 +1,74 @@
 ---
-title: "Balanceamento de carga de rede e failover no Azure: instalar o módulo farm.safe do SafeKit"
+title: "Balanceamento de Carga e Failover de Rede Azure: Instale o Módulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
-description: "Aprimore o balanceamento de carga de rede do Azure com o monitoramento inteligente de aplicações do SafeKit. O módulo farm.safe oferece uma verificação de integridade dedicada para o balanceador de carga do Azure, permitindo alta disponibilidade no nível da aplicação, autorrecuperação e failover automático para aplicações críticas."
+description: "Melhore Azure Network Load Balancing com o monitoramento inteligente de aplicações do SafeKit. O módulo farm.safe oferece uma verificação de integridade dedicada para o balanceador de carga Azure, permitindo alta disponibilidade (HA) perfeita no nível da aplicação. Obtenha autocura automática e failover para aplicações de missão crítica."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de instalação rápida de alta disponibilidade para Azure, Limitações de alta disponibilidade do SafeKit, Visão geral da solução SafeKit / Azure, Instalação da solução SafeKit / Azure no Windows e Linux (farm.safe), Configuração passo a passo da solução SafeKit / Azure, Demonstração da solução farm do SafeKit, 🔍 Explore o SafeKit"
+topics: "Guia de Instalação Rápida de Alta Disponibilidade para Azure, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Azure, Instalação da solução SafeKit/Azure no Windows e Linux (farm.safe), Configuração passo a passo da solução SafeKit/Azure, Demonstração da solução farm SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 ---
 
-# Balanceamento de carga de rede e failover no Azure: instalar o módulo farm.safe do SafeKit {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+# Balanceamento de Carga e Failover de Rede Azure: Instale o Módulo farm.safe SafeKit {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}
+
 
 {{%  insert-safekit-farm-guide-pt-br app="Azure" mod="farm"  %}}
+ 
 
-## Visão geral da solução SafeKit / Azure {#overview-of-the-safekit--azure-solution}
+## Visão geral da solução SafeKit/Azure {#overview-of-the-safekit--azure-solution}
 
-A solução está descrita aqui: **💡[SafeKit: balanceamento de carga do Microsoft Azure e alta disponibilidade de aplicações com um cluster <span class="notranslate farm-term" translate="no">Farm</span>](</pt-br/solutions/azure-load-balancing-cluster-failover/>)**.
+A solução é descrita aqui: **💡 [SafeKit: Balanceamento de Carga Microsoft Azure e cluster <span class="notranslate farm-term" translate="no">farm</span> Alta Disponibilidade de Aplicações](</pt-br/solutions/azure-load-balancing-cluster-failover/>)**.
 
-## Instalação da solução SafeKit / Azure no Windows e Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
+## Instalação da solução SafeKit/Azure no Windows e Linux (farm.safe) {#installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe}
 
-### Configuração do balanceador de carga do Microsoft Azure {#configuration-of-the-microsoft-azure-load-balancer}
+### Configuração do balanceador de carga Microsoft Azure {#configuration-of-the-microsoft-azure-load-balancer}
 
-O balanceador de carga deve ser configurado com um endereço IP virtual.
-Ele também deve enviar periodicamente pacotes de verificação de integridade aos nós.
-Para isso, o SafeKit fornece uma verificação de integridade executada nos nós, que:
+O balanceador de carga deve ser configurado com um endereço IP virtual.  
+E o balanceador de carga deve ser configurado para enviar pacotes de verificação de integridade periodicamente para os nós.  
+Para isso, SafeKit oferece uma verificação de integridade que é executada dentro dos nós e que
 
   * retorna OK quando o estado do módulo <span class="notranslate farm-term" translate="no">farm</span> é UP (verde)
-  * retorna NOT FOUND em todos os outros estados
+  * retorna NÃO ENCONTRADO em todos os outros estados
 
-Configure o balanceador de carga do Microsoft Azure com:
 
-  * protocolo HTTP
-  * porta 9010, a porta do servidor Web do SafeKit
-  * URL /var/modules/farm/ready.txt (se <span class="notranslate farm-term" translate="no">farm</span> for o nome do módulo que será implantado posteriormente)
+Você deve configurar o balanceador de carga Microsoft Azure com:
 
-Para obter mais informações, consulte [a configuração do balanceador de carga do Microsoft Azure](<https://learn.microsoft.com/en-us/azure/load-balancer/>).
+  * Protocolo HTTP
+  * porta 9010, a porta do servidor web SafeKit
+  * URL /var/modules/farm/ready.txt (se <span class="notranslate farm-term" translate="no">farm</span> for o nome do módulo que você implantará mais tarde)
 
-⚠️ Não configure um endereço IP virtual nem regras de balanceamento de carga na etapa 4 da configuração passo a passo abaixo. O endereço IP virtual e as regras de balanceamento de carga já estão definidos no balanceador de carga do Microsoft Azure. Configurá-los na etapa 4 é útil somente em configurações locais.
 
-### Configuração da segurança de rede do Microsoft Azure {#configuration-of-the-microsoft-azure-network-security}
+Para obter mais informações, consulte [a configuração do balanceador de carga Microsoft Azure](<https://learn.microsoft.com/en-us/azure/load-balancer/>). 
 
-A segurança de rede deve ser configurada para permitir comunicações pelos seguintes protocolos e portas:
 
-  * UDP - 4800 para o serviço safeadmin (entre os nós do SafeKit)
-  * UDP - 4803 para os heartbeats dentro do módulo <span class="notranslate farm-term" translate="no">farm</span> (entre os nós do SafeKit)
-  * TCP – 9010 para a verificação de integridade do balanceador de carga e o console Web do SafeKit no modo http
-  * TCP – 9001 para configurar o modo https do console
-  * TCP – 9453 para o console Web do SafeKit no modo https
+⚠️ Não configure um endereço IP virtual e regras de balanceamento de carga na etapa 4 da configuração passo a passo abaixo. O endereço IP virtual e as regras de balanceamento de carga já estão definidos no balanceador de carga Microsoft Azure. A configuração de um IP virtual e regras de balanceamento de carga na etapa 4 é útil apenas para configuração local.
+
+### Configuração da segurança da rede Microsoft Azure {#configuration-of-the-microsoft-azure-network-security}
+
+A segurança da rede deve ser configurada para permitir comunicações para os seguintes protocolos e portas:
+
+  * UDP - 4800 para o serviço safeadmin (entre os nós SafeKit)
+  * UDP - 4803 para os heartbeats dentro do módulo <span class="notranslate farm-term" translate="no">farm</span> (entre os nós SafeKit)
+  * TCP – 9010 para a verificação de integridade do balanceador de carga e para o console da web SafeKit em execução no modo http
+  * TCP – 9001 para configurar o modo https para o console
+  * TCP – 9453 para o console web SafeKit em execução no modo https
+
+
 
 {{%  insert-safekit-installation-package-windows-pt-br app="" mod="mirror"  %}}
 
 {{%  insert-safekit-installation-package-linux-pt-br app="" mod="mirror"  %}}
+ 
 
-Observação: o módulo genérico **farm.safe** que você configurará está incluído no pacote.
+Observação: o módulo genérico **farm.safe** que você vai configurar é entregue dentro do pacote.
 
-## Configuração passo a passo da solução SafeKit / Azure {#step-by-step-configuration-of-the-safekit--azure-solution}
+## Configuração passo a passo da solução SafeKit/Azure {#step-by-step-configuration-of-the-safekit--azure-solution}
+
 
 {{%  insert-safekit-82-farm-configuration-pt-br app="" mod="farm"  %}}
+ 
 
-## Demonstração da solução <span class="notranslate farm-term" translate="no">farm</span> do SafeKit {#demonstration-of-the-safekit-farm-solution}
+## Demonstração da solução <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#demonstration-of-the-safekit-farm-solution}
+
 
 {{%  insert-safekit-farm-video-pt-br  %}}
 

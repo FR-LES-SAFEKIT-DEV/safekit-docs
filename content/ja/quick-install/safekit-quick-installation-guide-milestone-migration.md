@@ -1,15 +1,16 @@
 ---
-title: "MilestoneとSafeKitの管理移行"
+title: "SafeKit による Milestone Management の移行"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-milestone-migration/"
-description: "SafeKit高可用性クラスタでMilestone XProtect管理サーバーを移行する方法を学びましょう。このステップバイステップガイドでは、データベースの移行、SQL Server のレプリケーション、およびフェールオーバー構成について説明し、新しいMilestoneバージョンへのスムーズな移行を実現します。"
+description: "SafeKit 高可用性クラスターで Milestone XProtect Management Server を移行する方法を学びましょう。このステップバイステップガイドでは、データベースの移行、SQL サーバーのレプリケーション、およびフェイルオーバーの構成について説明し、新しい Milestone バージョンへのシームレスな移行を可能にします。"
 category: "quick-install"
 lang: "ja"
-topics: "エビデンSafeKit"
+topics: "Eviden SafeKit"
+translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 ---
 
-# Milestone管理移行とSafeKit {#milestone-management-migration-with-safekit}
+# SafeKit による Milestone Management の移行 {#milestone-management-migration-with-safekit}
 
-## 証拠SafeKit {#eviden-safekit}
+## Eviden SafeKit {#eviden-safekit}
 
 
 {{%  insert-safekit-4-buttons-ja  %}}
@@ -19,4 +20,4 @@ topics: "エビデンSafeKit"
 ![警告](/wp-content/uploads/2022/07/warning-small.png)
 
 
-Milestoneのこの KB では、手順を説明しています: [ Safekit クラスタ全体が構成されている場合にXProtect管理サーバーをアップグレードする方法](<https://support.milestonesys.com/article/upgrade-XProtect-MS-when-full-Evidian-Safekit-cluster-is-configured-howto>) 。
+Milestone 社のこちらのナレッジベース記事に手順が記載されています。[完全な Safekit クラスターが構成されている場合の XProtect Management Server のアップグレード方法](<https://support.milestonesys.com/article/upgrade-XProtect-MS-when-full-Evidian-Safekit-cluster-is-configured-howto>)。
