@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-10.1",
+  "version": "2026-11-10.3",
   "keep": [
     "mirror",
     "farm",
@@ -702,6 +702,15 @@
       "es": "split brain y quórum",
       "pt": "split brain e quórum",
       "ar": "split-brain والنصاب (quorum)"
+    },
+    "shared disk cluster": {
+      "fr": "cluster à disque partagé",
+      "es": "clúster de disco compartido",
+      "nl": "cluster met gedeelde schijf"
+    },
+    "SafeKit package": {
+      "fr": "package SafeKit",
+      "nl": "SafeKit-pakket"
     }
   },
   "grammar": {
@@ -1161,6 +1170,14 @@
       [
         "(RPO) والوقت (RTO)",
         "\\1 و \\2"
+      ],
+      [
+        "مدقق split-brain بسيط(?:ًا)?، والتي يتم تكوينها",
+        "مدقق split-brain بسيطًا يتم تكوينه"
+      ],
+      [
+        "(heartbeat)، والفشل،",
+        "\\1، وتجاوز الفشل،"
       ]
     ],
     "de": [
@@ -1315,6 +1332,14 @@
       [
         "\\b(Shared-Nothing|Shared-Disk) (Architektur|Cluster)",
         "\\1-\\2"
+      ],
+      [
+        "\\bNetzwerk Load Balancer\\b",
+        "Netzwerk-Load-Balancer"
+      ],
+      [
+        "(•\\s*)Anwendungs-HA müssen Sie",
+        "\\1Bei Anwendungs-HA müssen Sie"
       ]
     ],
     "ko": [
@@ -1617,6 +1642,18 @@
       [
         "\\b(KVM|Hyper-V) (?=중첩)",
         "\\1을 "
+      ],
+      [
+        "(참고:\\s*)SafeKit (?![은는이가의을])",
+        "\\1SafeKit은 "
+      ],
+      [
+        "(위해 )SafeKit (?=[^.]*제공합니다)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "복구 시간 목표 RTO\\)",
+        "복구 시간 목표(RTO)"
       ]
     ],
     "ja": [
@@ -1819,6 +1856,10 @@
       [
         "^(\\s*)回復時間(?=\\s*(?:\\||$))",
         "\\1復旧時間"
+      ],
+      [
+        "(注\\s*[:：]\\s*)SafeKit\\s*(?!は)(?=[\\u30a0-\\u30ff\\u4e00-\\u9fff])",
+        "\\1SafeKit は "
       ]
     ],
     "zh-hans": [
@@ -1911,6 +1952,18 @@
       [
         "\\bKVM virtuele machines",
         "virtuele KVM-machines"
+      ],
+      [
+        "(•\\s*)Applicatie-HA moet u",
+        "\\1Bij applicatie-HA moet u"
+      ],
+      [
+        "\\bApplicatie-HA verwerken\\b",
+        "Applicatie-HA verwerkt"
+      ],
+      [
+        "\\bSafeKit (pakket|cluster)\\b",
+        "SafeKit-\\1"
       ]
     ]
   },
