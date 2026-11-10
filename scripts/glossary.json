@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-09.19",
+  "version": "2026-11-10.1",
   "keep": [
     "mirror",
     "farm",
@@ -672,6 +672,36 @@
       "fr": "clustering HA/matériel traditionnel",
       "es": "clustering HA/de hardware tradicional",
       "pt": "clustering HA/de hardware tradicional"
+    },
+    "software vs hardware clustering": {
+      "fr": "clustering logiciel vs clustering matériel",
+      "es": "clustering de software vs. clustering de hardware",
+      "pt": "clustering de software vs. clustering de hardware"
+    },
+    "shared nothing vs shared disk architecture": {
+      "de": "Shared-Nothing- vs. Shared-Disk-Architektur",
+      "es": "arquitectura sin recursos compartidos frente a arquitectura de disco compartido",
+      "it": "architettura shared-nothing vs. architettura a disco condiviso",
+      "ar": "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك"
+    },
+    "application vs virtual machine high availability": {
+      "de": "Hochverfügbarkeit auf Anwendungs- vs. VM-Ebene",
+      "it": "alta disponibilità a livello di applicazione vs. macchina virtuale",
+      "pt": "alta disponibilidade de aplicações vs. máquinas virtuais",
+      "ar": "التوافر العالي على مستوى التطبيق مقابل الجهاز الافتراضي",
+      "zh-hans": "应用级与虚拟机级高可用性"
+    },
+    "split brain and quorum": {
+      "fr": "split brain et quorum",
+      "es": "split brain y quórum",
+      "pt": "split brain e quórum",
+      "ar": "split-brain والنصاب (quorum)"
+    },
+    "split brain ans quorum": {
+      "fr": "split brain et quorum",
+      "es": "split brain y quórum",
+      "pt": "split brain e quórum",
+      "ar": "split-brain والنصاب (quorum)"
     }
   },
   "grammar": {
@@ -831,6 +861,14 @@
       [
         "\\b([Pp]as besoin) (?=[A-Z])",
         "\\1 de "
+      ],
+      [
+        "\\b(pratiques) (clustering)\\b",
+        "\\1 de \\2"
+      ],
+      [
+        "([A-Za-zÀ-ÿ])\\?(?=\\s|$|\")",
+        "\\1 ?"
       ]
     ],
     "it": [
@@ -871,7 +909,7 @@
         "\\1 \\2"
       ],
       [
-        "(^|[.!?]\\s+)(architettura)\\b",
+        "(^|(?<!\\bvs)[.!?]\\s+)(architettura)\\b",
         "\\1Un’\\2"
       ],
       [
@@ -967,6 +1005,10 @@
       [
         "\\bHA (?:de |)VMware\\b",
         "VMware HA"
+      ],
+      [
+        "\\b(prácticas) (clustering)\\b",
+        "\\1 de \\2"
       ]
     ],
     "pt": [
@@ -1033,6 +1075,10 @@
       [
         "\\b(?:HA|Alta Disponibilidade) (?:da |do |)VMware\\b",
         "VMware HA"
+      ],
+      [
+        "(?i)\\b(práticas) (clustering)\\b",
+        "\\1 de \\2"
       ]
     ],
     "ar": [
@@ -1103,6 +1149,18 @@
       [
         "^(\\s*)تم تكرار البيانات(?=\\s*(?:\\||$))",
         "\\1البيانات المنسوخة"
+      ],
+      [
+        "\\bكل البنية\\b",
+        "كل بنية"
+      ],
+      [
+        "البنية التوافر",
+        "بنية التوافر"
+      ],
+      [
+        "(RPO) والوقت (RTO)",
+        "\\1 و \\2"
       ]
     ],
     "de": [
@@ -1253,6 +1311,10 @@
       [
         "\\bSafeKit (Lösungen|Lösung)\\b",
         "SafeKit-\\1"
+      ],
+      [
+        "\\b(Shared-Nothing|Shared-Disk) (Architektur|Cluster)",
+        "\\1-\\2"
       ]
     ],
     "ko": [
@@ -1509,7 +1571,7 @@
         "\\1가"
       ],
       [
-        "(?<=[가-힣A-Za-z0-9/]) (에서도|에서|에는|에|와는|와|과는|입니다)(?=[\\s.,]|$)",
+        "(?<=[가-힣A-Za-z0-9/]) (에서도|에서|에는|에|와는|와|과는|입니다|의)(?=[\\s.,]|$)",
         "\\1"
       ],
       [

@@ -13,7 +13,7 @@ topics: "What are the high availability architectures and the best practices?, C
 
 ### Overview {#overview}
 
-This article explores the different high availability architectures and the best practices by given the pros and cons of each architecture.
+This article explores the different high availability architectures and the best practices by giving the pros and cons of each architecture.
 
 
 ![High availability architectures and best practices](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
@@ -25,7 +25,7 @@ The following comparative tables explain in detail the SafeKit high availability
 
 There are two types of [high availability](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) architectures: those for backend applications such as databases and those for frontend applications such as web services.
 
-High availability architectures for backend are based on 2 servers sharing or replicating data with an automatic application failover in the event of hardware of software failures.
+High availability architectures for backend are based on 2 servers sharing or replicating data with an automatic application failover in the event of hardware or software failures.
 
 High availability architectures for frontend are based on a <span class="notranslate farm-term" translate="no">farm</span> of servers (2 servers or more). The load balancing is made by hardware or software and distributes the TCP sessions to the available servers in the farm.
 
@@ -43,7 +43,7 @@ This article explores the best practices in high availability architectures by c
   * [file vs disk replication](</best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
   * [data replication techniques](</best-practises/data-replication-techniques/>),
   * [RPO and RTO with examples](</best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [split brain ans quorum](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
+  * [split brain and quorum](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
   * [virtual IP addresses](</best-practises/how-a-virtual-ip-address-works/>).
 
 

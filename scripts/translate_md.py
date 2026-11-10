@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-09.5"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-10.1"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -859,6 +859,17 @@ def main():
         src_vis = re.sub(r"<[^>]+>", "", enc).strip()
         if src_vis and not re.search(r"[.!?。！？]$", src_vis):
             t = re.sub(r"(?<!\.)[.。](?=(?:\*\*)?\s*$)", "", t)   # aussi "**safekitinstall.**"
+        # ponctuation finale de la source perdue par Google (élément de liste "[lien](/x/)," ou phrase d'introduction "… :")
+        end = src_vis[-1:] if src_vis else ""
+        if end in ",:." and not re.search(r"[,:;.!?、，：；،。！？…]\s*(?:\*\*)?\s*$", t) and t.strip():
+            if end == ":":
+                add = "：" if CJK else (" :" if lang == "fr" else ":")
+            elif end == ".":
+                add = "。" if CJK else "."
+            else:
+                add = "" if CJK or lang == "ko" else ("،" if lang == "ar" else ",")
+            if add:
+                t = re.sub(r"\s*$", "", t) + add + re.search(r"\s*$", t).group(0)
         if CJK:  # gras déplacé par Google : à cheval sur deux phrases ou coupant un mot
             parts = t.split("**")
             bad = len(parts) % 2 == 0 or any(
