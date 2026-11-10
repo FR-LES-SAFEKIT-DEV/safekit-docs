@@ -1,11 +1,11 @@
-{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.1 | Translation LLM | 34 expressions */}}
+{{/* translation: translate_md 2026-11-09.3 | glossaire 2026-11-09.15 | Translation LLM | 44 expressions */}}
 {{/* Shortcode: insert-safekit-shared-nothing-vs-shared-disk-table-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\shared-nothing-architecture-vs-shared-disk-architecture.md */}}
 
 
 
-Die Wahl der richtigen Hochverfügbarkeitsarchitektur ist entscheidend für das Gleichgewicht zwischen Kosten, Komplexität und Zuverlässigkeit. Die beiden Hauptansätze – **Shared Nothing** und **Shared Disk** – unterscheiden sich grundlegend in der Art und Weise, wie sie Datenredundanz und Failover handhaben. Eine Shared-Nothing-Architektur wie SafeKit repliziert Daten zwischen unabhängigen Servern mit eigenem lokalen Speicher, während eine Shared-Disk-Architektur auf einen zentralen Speicher (SAN) angewiesen ist, auf den mehrere Server zugreifen. Die folgende Tabelle vergleicht diese beiden Ansätze anhand wichtiger Kriterien.
+Die Wahl der richtigen Hochverfügbarkeitsarchitektur ist entscheidend für das Gleichgewicht zwischen Kosten, Komplexität und Zuverlässigkeit. Die beiden Hauptansätze – **Shared-Nothing** und **Shared Disk** – unterscheiden sich grundlegend in der Art und Weise, wie sie Datenredundanz und Failover handhaben. Eine Shared-Nothing-Architektur wie SafeKit repliziert Daten zwischen unabhängigen Servern mit eigenem lokalen Speicher, während eine Shared-Disk-Architektur auf einen zentralen Speicher (SAN) angewiesen ist, auf den mehrere Server zugreifen. Die folgende Tabelle vergleicht diese beiden Ansätze anhand wichtiger Kriterien.
 
 Kriterien | Shared-Nothing-Architektur | Shared-Disk-Architektur  
 ---|---|---  
@@ -15,10 +15,10 @@ Organisation von Anwendungsdaten | Keine Auswirkungen auf die Organisation der A
 Komplexität der Bereitstellung | Nein – installieren Sie eine Software auf 2 Servern | Ja – erfordert spezielle IT-Kenntnisse zur Konfiguration des Betriebssystems und der freigegebenen Festplatte  
 Failover | Starten Sie die Anwendung einfach auf dem zweiten Server neu. | Wechseln Sie die gemeinsam genutzte Festplatte. Hängen Sie das Dateisystem erneut ein. Führen Sie die Wiederherstellungsprozedur für das Dateisystem aus. Starten Sie anschließend die Anwendung neu.  
 Notfallwiederherstellung | Stellen Sie die beiden Server einfach an zwei entfernten Standorten auf, die über ein erweitertes LAN verbunden sind. | Zusätzliche Kosten für ein zweites Festplatten-Bay. Erfordert spezielle IT-Kenntnisse zur Konfiguration der Spiegelung von Bays über ein SAN.  
-Quorum und Split-Brain | Die Anwendung läuft nach der Netzwerktrennung (Split-Brain) auf einem einzelnen Server. Die Datenkonsistenz ist gewährleistet. Es wird keine dritte Maschine, Quorum-Festplatte oder spezielle Heartbeat-Leitung benötigt. [Mehr zu Heartbeat, Failover und Quorum](/de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Erfordert eine spezielle Quorum-Disk oder einen dritten Quorum-Server, um Datenbeschädigungen bei Split-Brain zu vermeiden.  
+Quorum und Split-Brain | Die Anwendung läuft nach der Netzwerktrennung (Split-Brain) auf einem einzelnen Server. Die Datenkohärenz ist gewährleistet. Es wird keine dritte Maschine, keine Quorum-Festplatte und keine spezielle Heartbeat Leitung benötigt. [Mehr zu Heartbeat, Failover und Quorum](/de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Erfordert eine spezielle Quorum-Disk oder einen dritten Quorum-Server, um Datenbeschädigungen bei Split-Brain zu vermeiden.  
 Am besten geeignet für | [Softwarehersteller, die ihrer Anwendung eine einfache HA-Option hinzufügen möchten](/de/use-cases/application-clustering-software/) | Unternehmen mit IT-Kenntnissen in den Bereichen Clustering und großen Datenbankanwendungen  
 
 **Zusammenfassend** lässt sich sagen, dass die Shared-Nothing-Architektur, wie sie von SafeKit implementiert wird, in Bezug auf **Einfachheit**, **Kosten** und **Bereitstellungsgeschwindigkeit** überzeugt. Sie erfordert keine zusätzliche Hardware, keine spezialisierten IT-Kenntnisse und keine Änderungen an der Datenorganisation der Anwendung. Failover ist unkompliziert, Disaster Recovery ist integriert und Split-Brain wird ohne zusätzliche Infrastruktur gehandhabt.
 
-Die Shared-Disk-Architektur bleibt für große Unternehmen mit bestehender SAN Infrastruktur und engagierten IT-Teams, die sehr große Datenbanken verwalten, relevant. Für die meisten Anforderungen an die Hochverfügbarkeit von Anwendungen – insbesondere für Softwarehersteller, OT/Edge-Umgebungen und verteilte Standorte – ist jedoch die Shared-Nothing-Architektur mit SafeKit die einfachere und kostengünstigere Wahl.
+Die Shared-Disk-Architektur bleibt für große Unternehmen mit bestehender SAN-Infrastruktur und engagierten IT-Teams, die sehr große Datenbanken verwalten, relevant. Für die meisten Anforderungen an die Hochverfügbarkeit von Anwendungen – insbesondere für Softwarehersteller, OT/Edge-Umgebungen und verteilte Standorte – ist jedoch die Shared-Nothing-Architektur mit SafeKit die einfachere und kostengünstigere Wahl.
 

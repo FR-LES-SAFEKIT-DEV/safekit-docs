@@ -1,4 +1,5 @@
-{{/* Shortcode: insert-safekit-security-solutions-nl — 4 instances in 4 files */}}
+{{/* translation: translate_md 2026-11-09.2 | glossaire 2026-11-09.12 | Translation LLM | 39 expressions */}}
+{{/* Shortcode: insert-safekit-security-solutions-en — 4 instances in 4 files */}}
 {{/* Parameters: app */}}
 {{/* Source: content\use-cases\physical-security-software-redundancy.md */}}
 
@@ -8,37 +9,38 @@
 
 ### Redundantie en hoge beschikbaarheid op applicatieniveau {#redundancy-and-high-availability-at-the-application-level}
 
-Bij dit type oplossing worden alleen de applicatiegegevens gerepliceerd. Bij een storing wordt alleen de applicatie opnieuw gestart.
+Bij dit type oplossing worden alleen de toepassingsgegevens gerepliceerd. En alleen de toepassing wordt opnieuw opgestart in geval van een storing.
 
 
-![Redundantie op applicatieniveau voor {{ .Get "app" }}-software](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+![Redundantie op applicatieniveau voor {{ .Get "app" }} software](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
 
 
-Deze oplossing vereist technisch inzicht in de applicatie. U moet bepalen welke diensten opnieuw moeten worden gestart, de te repliceren applicatiemappen opgeven en een virtueel IP-adres voor failover configureren. Maar deze oplossing is platformonafhankelijk en werkt met applicaties op fysieke machines, virtuele machines en in de cloud. Elke hypervisor wordt ondersteund (VMware, Hyper-V...).
+Deze oplossing vereist een technisch begrip van de toepassing. U moet bepalen welke services opnieuw moeten worden gestart, de toepassingsmappen opgeven die moeten worden gerepliceerd en een virtueel IP-adres configureren voor failover. Maar deze oplossing is platformonafhankelijk en werkt met toepassingen in fysieke machines, virtuele machines en in de cloud. Elke hypervisor wordt ondersteund (VMware, Hyper-V ...).
 
 ### Voorbeelden {#examples}
 
-  * Videobeheer: 💡 [Milestone (Management, SQL, Log, Event)/SafeKit](/nl/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
+  * Videobeheer: 💡 [Milestone (beheer, SQL, logboek, gebeurtenis)/SafeKit](/nl/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
   * Videobeheer: 💡 [Genetec (SQL)/SafeKit](/nl/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
   * Toegangscontrole: 💡 [Nedap (AEOS, SQL)/SafeKit](/nl/solutions/nedap-high-availability-synchronous-replication-failover/)
-  * Nieuwe applicatie (te herstarten diensten, te repliceren applicatiemappen en een virtueel IP-adres voor failover bepalen): 💡 [Windows](/nl/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/nl/solutions/linux-high-availability-software-synchronous-replication-failover/)
+  * Nieuwe toepassing (definieer services om opnieuw op te starten, applicatiemappen om te repliceren, een virtueel IP-adres voor failover): 💡 [Windows](/nl/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/nl/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
 ### Redundantie en hoge beschikbaarheid op het niveau van de virtuele machine {#redundancy-and-high-availability-at-the-virtual-machine-level}
 
-Bij dit type oplossing wordt de {{ .Get "app" }}-software in een virtuele machine geplaatst. De volledige virtuele machine (VM) wordt gerepliceerd en opnieuw gestart (applicatie + OS).
+Bij dit type oplossing wordt de {{ .Get "app" }}-software in een virtuele machine geplaatst. De volledige virtuele machine (VM) wordt gerepliceerd en opnieuw opgestart (applicatie + besturingssysteem).
 
 
-![Redundantie op het niveau van de virtuele machine voor {{ .Get "app" }}-software](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+![Redundantie op het niveau van de virtuele machine voor een {{ .Get "app" }} software](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
 
 
-Het voordeel van deze oplossing is dat ze geen technisch inzicht in de applicatie vereist; u hoeft alleen de locatie van de VM-bestanden te bepalen waarin de applicatie is geïnstalleerd. Deze oplossing is generiek voor alle {{ .Get "app" }}-software. Ze werkt echter alleen met Windows/Hyper-V en Linux/KVM, niet met VMware. Het is een actief/actief-oplossing met meerdere virtuele machines die tussen twee nodes worden gerepliceerd en opnieuw gestart.
+Het voordeel van deze oplossing is dat er geen technisch inzicht in de toepassing vereist is; u hoeft alleen de locatie van de VM-bestanden te definiëren waar de toepassing is geïnstalleerd. Deze oplossing is generiek voor elke {{ .Get "app" }} software. Het werkt echter alleen met Windows/Hyper-V en Linux/KVM, maar niet met VMware. Dit is een actief/actieve oplossing met meerdere virtuele machines die worden gerepliceerd en opnieuw opgestart tussen twee knooppunten.
 
 ### Voorbeelden {#examples-1}
 
   * Gebouwbeheer: 💡 [Siemens Desigo CC/SafeKit](/nl/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
-  * Videobeheer en toegangscontrole: 💡 [Siemens Siveillance-suite/SafeKit](/nl/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
-  * Nieuwe applicatie (de locatie bepalen van de map met VM-bestanden waarin de applicatie is geïnstalleerd): 💡 [Windows/Hyper-V](/nl/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/nl/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+  * Videobeheer en toegangscontrole: 💡 [Siemens Siveillance suite/SafeKit](/nl/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+  * Nieuwe toepassing (definieer de locatie van de map met VM-bestanden waar de toepassing is geïnstalleerd): 💡 [Windows/Hyper-V](/nl/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/nl/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
 
 
 Meer vergelijking tussen [VM-HA en applicatie-HA](/nl/best-practises/vm-ha-vs-application-ha/)
+

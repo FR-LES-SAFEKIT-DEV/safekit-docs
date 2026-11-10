@@ -1,13 +1,13 @@
-{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.1 | Translation LLM | 24 expressions */}}
+{{/* translation: translate_md 2026-11-09.3 | glossaire 2026-11-09.15 | Translation LLM | 34 expressions */}}
 {{/* Shortcode: insert-safekit-shared-nothing-vs-shared-disk-table-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\shared-nothing-architecture-vs-shared-disk-architecture.md */}}
 
 
 
-A escolha da arquitetura de alta disponibilidade correta é fundamental para equilibrar custo, complexidade e fiabilidade. As duas abordagens principais — **sem partilha de recursos** e **com disco partilhado** — diferem fundamentalmente na forma como lidam com a redundância de dados e a recuperação de falhas. Uma arquitetura sem partilha de recursos, como SafeKit replica dados entre servidores independentes com o seu próprio armazenamento local, enquanto uma arquitetura com disco partilhado depende de uma baía de armazenamento centralizada (SAN) acedida por vários servidores. A tabela seguinte compara estas duas abordagens em critérios-chave.
+A escolha da arquitetura de alta disponibilidade correta é fundamental para equilibrar custo, complexidade e fiabilidade. As duas abordagens principais — **sem partilha** e **com disco partilhado** — diferem fundamentalmente na forma como lidam com a redundância de dados e a recuperação de falhas. Uma arquitetura sem partilha como SafeKit replica dados entre servidores independentes com o seu próprio armazenamento local, enquanto uma arquitetura de disco partilhado depende de uma baía de armazenamento centralizada (SAN) acedida por vários servidores. A tabela seguinte compara estas duas abordagens em critérios-chave.
 
-Critérios | Arquitetura sem Partilha de Recursos | Arquitetura de Disco Partilhado  
+Critérios | Arquitetura sem partilha | Arquitetura de disco partilhado  
 ---|---|---  
 Produto | [SafeKit no Windows e Linux](/pt-pt/) | Kit de ferramentas de clustering para disco partilhado  
 Hardware adicional | Não — utiliza discos internos dos servidores | Sim — custo adicional com uma baía de discos partilhada (SAN)  
@@ -15,10 +15,10 @@ Organização dos dados da aplicação | Impacto zero na organização dos dados
 Complexidade da implementação | Não — instale um software em 2 servidores | Sim — requer conhecimentos específicos de TI para configurar o sistema operativo e o disco partilhado  
 Recuperação de falhas | Basta reiniciar a aplicação no segundo servidor. | Mude o disco partilhado. Monte novamente o sistema de ficheiros. Execute o procedimento de recuperação no sistema de ficheiros. Em seguida, reinicie a aplicação.  
 Recuperação de desastres | Basta colocar os 2 servidores em 2 locais remotos ligados por uma LAN estendida. | Custo adicional com uma segunda baía de discos. Requer conhecimentos específicos de TI para configurar a replicação de baías através de uma SAN.  
-Quórum e cérebro dividido | A aplicação é executada num único servidor após o isolamento da rede (split brain). A coerência dos dados é garantida. Não é necessária uma terceira máquina, disco de quórum ou linha especial de heartbeat. [Mais informações sobre heartbeat, failover e quórum](/pt-pt/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Requer um disco de quórum especial ou um terceiro servidor de quórum para evitar a corrupção de dados em caso de divisão da rede.  
-Mais adequado para | [Editores de software que desejam adicionar uma opção simples de HA às suas aplicações](/pt-pt/use-cases/application-clustering-software/) | Empresas com competências em TI na área de clustering e aplicações de bases de dados de grande dimensão  
+Quórum e cérebro dividido | A aplicação é executada num único servidor após o isolamento da rede (split brain). A coerência dos dados é garantida. Não é necessária uma terceira máquina, um disco de quórum ou uma linha especial de heartbeat. [Mais informações sobre heartbeat, "failover" e quórum](/pt-pt/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Requer um disco de quórum especial ou um terceiro servidor de quórum para evitar a corrupção de dados em caso de divisão da rede.  
+Mais adequado para | [Fornecedores de software que desejam adicionar uma opção simples de HA às suas aplicações](/pt-pt/use-cases/application-clustering-software/) | Empresas com competências em TI na área de clustering e aplicações de bases de dados de grande dimensão  
 
-**Em resumo**, a arquitetura de partilha de recursos, tal como implementada pelo SafeKit, é superior em **simplicidade**, **custo** e **velocidade de implementação**. Não requer hardware adicional, competências de TI especializadas ou alterações à organização dos dados da aplicação. A comutação por falha é simples, a recuperação de desastres está integrada e o problema de "split brain" é resolvido sem infraestrutura adicional.
+**Em resumo**, a arquitetura sem partilha, tal como implementada pelo SafeKit, é superior em termos de **simplicidade**, **custo** e **velocidade de implementação**. Não requer hardware adicional, competências de TI especializadas ou alterações na organização dos dados da aplicação. A comutação por falha é simples, a recuperação de desastres está integrada e o "split brain" é gerido sem infraestrutura adicional.
 
-A arquitetura de disco partilhado continua a ser relevante para grandes empresas com infraestrutura SAN existente e equipas de TI dedicadas que gerem bases de dados muito grandes. No entanto, para a maioria das necessidades de alta disponibilidade de aplicações — especialmente para editores de software, ambientes OT/edge e locais distribuídos — a arquitetura "shared nothing" com SafeKit é a escolha mais simples e económica.
+A arquitetura de disco partilhado continua a ser relevante para grandes empresas com infraestrutura SAN existente e equipas de TI dedicadas que gerem bases de dados muito grandes. No entanto, para a maioria das necessidades de alta disponibilidade de aplicações — especialmente para fornecedores de software, ambientes OT/edge e locais distribuídos — a abordagem sem partilha com SafeKit é a escolha mais simples e económica.
 

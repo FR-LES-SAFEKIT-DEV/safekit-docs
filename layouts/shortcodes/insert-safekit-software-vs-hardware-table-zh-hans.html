@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.1 | Translation LLM | 37 expressions */}}
+{{/* translation: translate_md 2026-11-09.5 | glossaire 2026-11-09.17 | Translation LLM | 48 expressions */}}
 {{/* Shortcode: insert-safekit-software-vs-hardware-table-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -13,11 +13,11 @@
 ---|---|---  
 [软件集群与硬件集群](/zh-hans/best-practises/clustering-software-vs-hardware-clustering/) |  • 一个简单的软件集群，SafeKit 软件包仅安装在两台服务器上  |  • 复杂的硬件集群，具有外部存储或网络负载均衡器   
 [无共享与共享磁盘集群](/zh-hans/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/) |  • SafeKit 是一个无共享集群：即使在远程站点也易于部署  |  • 共享磁盘集群的部署较为复杂   
-[应用高可用性与完整虚拟机高可用性](/zh-hans/best-practises/vm-ha-vs-application-ha/) |  •应用级 HA 支持通过应用检查器处理硬件故障和软件故障。<br> • 只需重启应用程序即可快速恢复（恢复时间目标 ([RTO 约为 1 分钟或更短](/zh-hans/best-practises/what-is-rpo-and-rto-with-examples/)）。<br> •应用级 HA 需要为每个应用程序和要复制的文件夹定义重启脚本（SafeKit 应用程序模块）。  |  • 完整虚拟机高可用性支持硬件故障和某些软件故障，例如虚拟机冻结。<br> • 虚拟机在出现故障时会重启，恢复时间取决于操作系统重启时间。<br> • 无需定义重启脚本即可实现完整虚拟机的 HA（SafeKit 🛠️ [hyperv.safe](/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/)或 🛠️ [kvm.safe](/zh-hans/quick-install/safekit-quick-installation-guide-with-kvm/)模块）。虚拟机管理程序仅需多个虚拟机即可实现双活。   
+[应用高可用性与完整虚拟机高可用性](/zh-hans/best-practises/vm-ha-vs-application-ha/) |  • 应用级 HA 支持通过应用检查器处理硬件故障和软件故障。<br> • 只需重启应用程序即可快速恢复（恢复时间目标 ([RTO 约为 1 分钟或更短](/zh-hans/best-practises/what-is-rpo-and-rto-with-examples/)）。<br> • 应用级 HA 需要为每个应用程序和要复制的文件夹定义重启脚本（SafeKit 应用程序模块）。  |  • 完整虚拟机高可用性支持硬件故障和某些软件故障，例如虚拟机冻结。<br> • 虚拟机在出现故障时会重启，恢复时间取决于操作系统重启时间。<br> • 无需定义重启脚本即可实现完整虚拟机的 HA（SafeKit 🛠️ [hyperv.safe](/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/)或 🛠️ [kvm.safe](/zh-hans/quick-install/safekit-quick-installation-guide-with-kvm/)模块）。虚拟机管理程序仅需多个虚拟机即可实现双活。   
 [高可用性与容错性](/zh-hans/best-practises/high-availability-cluster-vs-fault-tolerant-system/) |  • SafeKit 不提供专用服务器。每台[服务器都可以是另一台服务器的故障转移服务器](/zh-hans/architectures/active-active-cluster-real-time-replication/)。<br> • 软件故障，在另一个操作系统环境中重启。<br> • 可逐台服务器平滑升级应用程序和操作系统（N 版和 N+1 版可共存）  |  • 辅助服务器，专门用于执行指令级别同步的同一应用程序。<br> • 两台服务器同时出现软件异常。<br> • 无法顺利升级 <br> • 特定容错硬件或虚拟机管理程序   
 [同步复制与异步复制](/zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/) |  • SafeKit 实施实时同步复制，在发生故障时不会丢失数据。<br> • 高可用性的先决条件  |  • 使用异步复制时，如果发生故障，数据会丢失。<br> • 不适用于高可用性，但适用于备份解决方案   
 [字节级文件复制与块级磁盘复制](/zh-hans/best-practises/byte-level-file-replication-vs-block-level-disk-replication/) |  • SafeKit 实施实时字节级文件复制，并且只需配置应用程序目录即可复制，甚至可以在系统磁盘中复制  |  • 块级磁盘复制配置复杂，需要将应用程序数据放在专用磁盘中   
-[心跳、故障转移和仲裁，以避免出现 2 个主节点](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) |  • 为避免出现两个主节点，SafeKit 建议在路由器上配置一个简单的裂脑检测器  |  • 为避免出现两个主节点，其他集群需要使用第三台机器、专用仲裁磁盘和专用互连进行复杂配置   
+[心跳、故障转移和仲裁以避免出现 2 个主节点](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) |  • 为避免出现两个主节点，SafeKit 建议在路由器上配置一个简单的脑裂检测器  |  • 为避免出现两个主节点，其他集群需要使用第三台机器、专用仲裁磁盘和专用互连进行复杂配置   
 [虚拟 IP 地址：主/备、网络负载均衡、故障转移](/zh-hans/best-practises/how-a-virtual-ip-address-works/) |  • SafeKit 集群中的虚拟 IP 地址不需要专用代理服务器，也不需要特殊的网络配置  |  • 其他集群中需要特殊的网络配置才能使用虚拟 IP 地址。请注意，SafeKit 提供了一种适用于负载均衡器的健康检查   
 
 **总而言之**，软件集群（如 SafeKit）和硬件集群（传统共享磁盘/SAN）之间的架构选择会显著影响部署复杂性、运营成本和恢复效率。这次比较的关键收获是转向无共享、应用级高可用性，它优先考虑快速应用恢复（低 RTO）和部署灵活性（甚至跨远程站点），通常会产生比高度复杂、依赖硬件的集群配置更精简、更具弹性的解决方案。为了在简化管理的同时实现最大的业务连续性，评估基于软件的方法至关重要。

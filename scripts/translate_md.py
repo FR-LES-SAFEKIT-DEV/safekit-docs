@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-08.15"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-09.5"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -359,6 +359,7 @@ def decode(text, ctx):
             text = re.sub(r"([，。、；：！？])\s+", r"\1", text)
             text = re.sub(r"<b>\s+", "<b>", text)
     text = re.sub(f"({S}P\\d+{S})\\s*/\\s*(?={S}P\\d+{S})", r"\1/", text)   # "Windows / Hyper-V" -> "Windows/Hyper-V"
+    text = re.sub(f"([)\\]）]|\\w)/\\s+(?={S}P\\d+{S})", r"\1/", text)   # "(SQL)/ SafeKit", "Suite/ SafeKit" -> ".../SafeKit"
     text = re.sub(f"({S}P\\d+{S}) +-(?=\\w)", r"\1-", text)
     def dedup(m):   # premier mot d'un nom protégé répété juste avant lui : "SQL SQL Server" -> "SQL Server"
         tok = re.sub(r"<[^>]+>", "", st[int(m.group(3))]).strip()
@@ -461,6 +462,8 @@ def decode(text, ctx):
     text = re.sub(r"(\\\()\s+", r"\1", text)
     text = re.sub(r" +([,.](?:\s|$|\]))", r"\1", text)   # aussi "cluster mirror .](" (texte d'image)
     text = re.sub(r"([A-Za-zÀ-ÿ][’'])\s+(\*\*|\[)", r"\1\2", text)   # l' **adresse -> l'**adresse
+    if ctx.apos:   # élision suivie d'une espace autour d'une expression imposée : "l’ architecture" -> "l’architecture"
+        text = re.sub(r"(?<![\w’'])([lLdDjJmMnNsStTcC]|[Qq]u|[Uu]n|[Dd]ell|[Nn]ell|[Aa]ll|[Ss]ull|[Dd]all|[Qq]uell|[Ll]orsqu|[Pp]uisqu)([’'])\s+(?=[A-Za-zÀ-ÿ])", r"\1\2", text)
     text = re.sub(r"\*\*([;:!?])", r"** \1", text) if ctx.apos else text  # espace avant ; : ! ?
     if CJK:
         text = re.sub(f"\\s+([{CJK_PUNCT}])", r"\1", text)
@@ -488,6 +491,8 @@ def decode(text, ctx):
     text = re.sub(r"(\S) +\*\*(?=[\s,.;:!?)\]。，、；：！？]|$)", r"\1**", text)
     if NATIVE:
         text = native_terms(text, ctx)
+    if CJK:   # mot katakana doublé ("シェアードナッシングナッシング", "リモートサイトサイト") -> une seule fois
+        text = re.sub(r"(?!アクティブアクティブ)([\u30a1-\u30fc]{3,})\1", r"\1", text)   # aussi "ナッシングナッシングクラスタリング"
     if CJK:   # après restauration : deux termes protégés collés ("Siveillance虚拟机级 HA架构")
         text = re.sub(f"([A-Za-z0-9])(?=[{CJK_CHAR}])", r"\1 ", text)
         text = re.sub(f"([{CJK_CHAR}])(?=[A-Za-z0-9])", r"\1 ", text)
@@ -508,6 +513,15 @@ def decode(text, ctx):
         text = re.sub(r"\*\*([^*\n]+?)\*\*", shrink, text)
     # guillemet ouvrant laissé hors du gras : '" **Texte"**' -> '**"Texte"**'
     text = re.sub(r'(["“«„「])\s*\*\*([^*\n]+?)(["”»“」])\*\*', r"**\1\2\3**", text)
+    # guillemets ajoutés par Google à cheval sur le gras : '**"shared disk** "' -> '**"shared disk"**'
+    text = re.sub(r'\*\*(["“«„])([^*\n"“”»]+?)\*\*\s?(["”»“])(?=\s|$|[,.;:])', r"**\1\2\3**", text)
+    # tiret cadratin avalé par le gras fermant : "**con disco compartido—** difieren" -> "**con disco compartido** — difieren"
+    text = re.sub(r"(?<=[^\s*])\s*([—–])\*\*(?=\s)", r"** \1", text)
+    # puce collée au texte ("•应用级 HA") ou remplacée par le point médian japonais ("<br> ・高可用性")
+    text = re.sub(r"(^|\s)・(?=\S)", r"\1• ", text)
+    text = re.sub(r"•(?=[^\s•])", "• ", text)
+    if not CJK:   # puce en minuscule après une expression imposée ("• clustering matériel complexe") -> majuscule
+        text = re.sub(r"(•\s+)([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), text)
     text = re.sub(r"<code>\s+", "<code>", text)
     text = re.sub(r"\s+</code>", "</code>", text)
     return text.strip()

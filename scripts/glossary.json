@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-09.11",
+  "version": "2026-11-09.19",
   "keep": [
     "mirror",
     "farm",
@@ -515,7 +515,8 @@
       "ja": "シェアードナッシング",
       "ko": "비공유(shared-nothing)",
       "zh-hans": "无共享",
-      "ar": "بدون مشاركة"
+      "ar": "بدون مشاركة",
+      "pt-pt": "sem partilha"
     },
     "split-brain checker": {
       "fr": "checker split-brain",
@@ -588,6 +589,89 @@
       "ko": "Windows 또는 Linux의 Farm",
       "zh-hans": "Windows 或 Linux 上的 Farm",
       "ar": "Farm على Windows أو Linux"
+    },
+    "shared nothing architecture": {
+      "fr": "architecture sans partage",
+      "de": "Shared-Nothing-Architektur",
+      "es": "arquitectura sin recursos compartidos",
+      "it": "architettura shared-nothing",
+      "nl": "shared-nothing-architectuur",
+      "pt": "arquitetura sem compartilhamento",
+      "ja": "シェアードナッシングアーキテクチャ",
+      "ko": "비공유(shared-nothing) 아키텍처",
+      "zh-hans": "无共享架构",
+      "ar": "بنية عدم المشاركة (shared-nothing)",
+      "pt-pt": "arquitetura sem partilha"
+    },
+    "shared disk architecture": {
+      "fr": "architecture à disque partagé",
+      "de": "Shared-Disk-Architektur",
+      "es": "arquitectura de disco compartido",
+      "it": "architettura a disco condiviso",
+      "nl": "architectuur met gedeelde schijf",
+      "pt": "arquitetura de disco compartilhado",
+      "ja": "共有ディスクアーキテクチャ",
+      "ko": "공유 디스크 아키텍처",
+      "zh-hans": "共享磁盘架构",
+      "ar": "بنية القرص المشترك",
+      "pt-pt": "arquitetura de disco partilhado"
+    },
+    "shared nothing": {
+      "fr": "sans partage",
+      "de": "Shared-Nothing",
+      "es": "sin recursos compartidos",
+      "it": "shared-nothing",
+      "nl": "shared-nothing",
+      "pt": "sem compartilhamento",
+      "ja": "シェアードナッシング",
+      "ko": "비공유(shared-nothing)",
+      "zh-hans": "无共享",
+      "ar": "بدون مشاركة",
+      "pt-pt": "sem partilha"
+    },
+    "software editors": {
+      "fr": "éditeurs de logiciels",
+      "de": "Softwarehersteller",
+      "es": "editores de software",
+      "it": "produttori di software",
+      "nl": "softwareleveranciers",
+      "pt": "fornecedores de software",
+      "ja": "ソフトウェアベンダー",
+      "ko": "소프트웨어 공급업체",
+      "zh-hans": "软件厂商",
+      "ar": "مطوري البرمجيات"
+    },
+    "split brain checker": {
+      "fr": "checker split-brain",
+      "de": "Split-Brain-Checker",
+      "es": "checker split-brain",
+      "it": "checker split-brain",
+      "nl": "split-brain-checker",
+      "pt": "checker split-brain",
+      "ja": "スプリットブレインチェッカー",
+      "ko": "스플릿 브레인 체커",
+      "zh-hans": "脑裂检测器",
+      "ar": "مدقق split-brain"
+    },
+    "software clustering": {
+      "fr": "clustering logiciel",
+      "es": "clustering de software",
+      "pt": "clustering de software"
+    },
+    "hardware clustering": {
+      "fr": "clustering matériel",
+      "es": "clustering de hardware",
+      "pt": "clustering de hardware"
+    },
+    "complex hardware clustering": {
+      "fr": "clustering matériel complexe",
+      "es": "clustering de hardware complejo",
+      "pt": "clustering de hardware complexo"
+    },
+    "traditional HA / hardware clustering": {
+      "fr": "clustering HA/matériel traditionnel",
+      "es": "clustering HA/de hardware tradicional",
+      "pt": "clustering HA/de hardware tradicional"
     }
   },
   "grammar": {
@@ -719,6 +803,34 @@
       [
         "^(\\s*\\*\\s+)les heartbeats",
         "\\1les heartbeats"
+      ],
+      [
+        "\\bpour (éditeurs|fournisseurs) de logiciels",
+        "pour les \\1 de logiciels"
+      ],
+      [
+        "(,\\s*)(sans partage)(?= avec [^,.]{1,30} est )",
+        "\\1l’approche \\2"
+      ],
+      [
+        "(•\\s*)HA applicative",
+        "\\1La HA applicative"
+      ],
+      [
+        "\\bla (clustering)\\b",
+        "le \\1"
+      ],
+      [
+        "\\bde le (clustering)\\b",
+        "du \\1"
+      ],
+      [
+        "\\bà le (clustering)\\b",
+        "au \\1"
+      ],
+      [
+        "\\b([Pp]as besoin) (?=[A-Z])",
+        "\\1 de "
       ]
     ],
     "it": [
@@ -757,6 +869,30 @@
       [
         "((?:<span[^>]*>)?[Ff]arm(?:</span>)?) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) [Ff]arm\\b",
         "\\1 \\2"
+      ],
+      [
+        "(^|[.!?]\\s+)(architettura)\\b",
+        "\\1Un’\\2"
+      ],
+      [
+        "\\bmentre (architettura)\\b",
+        "mentre un’\\1"
+      ],
+      [
+        "\\bper (produttori|editori|fornitori) di software",
+        "per i \\1 di software"
+      ],
+      [
+        "(,\\s*)(shared-nothing)(?= con [^,.]{1,30} è )",
+        "\\1l’approccio \\2"
+      ],
+      [
+        "(•\\s*)HA applicativa",
+        "\\1L’HA applicativa"
+      ],
+      [
+        "all’interno (?=VMware|Hyper-V|KVM)",
+        "all’interno di "
       ]
     ],
     "es": [
@@ -799,6 +935,38 @@
       [
         "\\b(protección|supervisión|configuración) de la ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00))(?=\\s*[.,;]|\\s*$)",
         "\\1 de la aplicación \\2"
+      ],
+      [
+        "(•\\s*)HA de aplicación",
+        "\\1La HA de aplicación"
+      ],
+      [
+        "\\bla (clustering)\\b",
+        "el \\1"
+      ],
+      [
+        "\\bde el (clustering)\\b",
+        "del \\1"
+      ],
+      [
+        "\\ba el (clustering)\\b",
+        "al \\1"
+      ],
+      [
+        "hacia la sin recursos compartidos",
+        "hacia la alta disponibilidad sin recursos compartidos"
+      ],
+      [
+        "\\bfrente (clustering)\\b",
+        "frente al \\1"
+      ],
+      [
+        "\\bdentro (?=VMware|Hyper-V|KVM)",
+        "dentro de "
+      ],
+      [
+        "\\bHA (?:de |)VMware\\b",
+        "VMware HA"
       ]
     ],
     "pt": [
@@ -837,6 +1005,34 @@
       [
         "((?:<span[^>]*>)?[Ff]arm(?:</span>)?) ((?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00)) [Ff]arm\\b",
         "\\1 \\2"
+      ],
+      [
+        "(—\\s*)(sem (?:compartilhamento|partilha))(?= com )",
+        "\\1a abordagem \\2"
+      ],
+      [
+        "(•\\s*)HA de aplicação",
+        "\\1A HA de aplicação"
+      ],
+      [
+        "(^|\\s)a (clustering)\\b",
+        "\\1o \\2"
+      ],
+      [
+        "\\bda (clustering)\\b",
+        "do \\1"
+      ],
+      [
+        "\\bna (clustering)\\b",
+        "no \\1"
+      ],
+      [
+        "\\bdentro (?=VMware|Hyper-V|KVM)",
+        "dentro do "
+      ],
+      [
+        "\\b(?:HA|Alta Disponibilidade) (?:da |do |)VMware\\b",
+        "VMware HA"
       ]
     ],
     "ar": [
@@ -891,6 +1087,22 @@
       [
         "(مقارنة: SafeKit) (?=Microsoft|[A-Z][\\w-]* )",
         "\\1 لـ "
+      ],
+      [
+        "(متصلين|متصلة|متصل) (LAN|WAN|SAN)\\b",
+        "\\1 بشبكة \\2"
+      ],
+      [
+        "اختيار البنية التوافر",
+        "اختيار بنية التوافر"
+      ],
+      [
+        "أداة بسيطة (مدقق split-brain)",
+        "\\1 بسيط"
+      ],
+      [
+        "^(\\s*)تم تكرار البيانات(?=\\s*(?:\\||$))",
+        "\\1البيانات المنسوخة"
       ]
     ],
     "de": [
@@ -969,6 +1181,78 @@
       [
         "\\b(mit|von|aus|zu|in) ((?:[^.|\\n]{0,25}? )?)((?:<span[^>]*>)?(?:[Mm]irror|[Ff]arm)(?:</span>)?-Module)\\b(?!n)",
         "\\1 \\2\\3n"
+      ],
+      [
+        "\\bhat sich (SafeKit) entschieden",
+        "hat sich für \\1 entschieden"
+      ],
+      [
+        "\\bist jedoch (Shared-Nothing|Shared-Disk)",
+        "ist jedoch die \\1"
+      ],
+      [
+        "\\b(SAN|LAN|WAN|HA) (Infrastruktur|Umgebung)",
+        "\\1-\\2"
+      ],
+      [
+        "\\b(Softwarehersteller|Softwareanbieter) (die|denen) ",
+        "\\1, \\2 "
+      ],
+      [
+        "\\bShared-Nothing (Clustering|Cluster|HA)\\b",
+        "Shared-Nothing-\\1"
+      ],
+      [
+        "\\bNetzwerk-Load Balancer",
+        "Netzwerk-Load-Balancer"
+      ],
+      [
+        "\\b(Split-Brain-Checker) (der|den) ",
+        "\\1, \\2 "
+      ],
+      [
+        "\\bSafeKit (Cluster|Clustern|Paket|Module|Modul)\\b",
+        "SafeKit-\\1"
+      ],
+      [
+        "^(\\s*)Lagerung(?=\\s*(?:\\||$))",
+        "\\1Speicher"
+      ],
+      [
+        "^(\\s*)Daten repliziert(?=\\s*(?:\\||$))",
+        "\\1Replizierte Daten"
+      ],
+      [
+        "^(\\s*)Erholungszeit(?=\\s*(?:\\||$))",
+        "\\1Wiederherstellungszeit"
+      ],
+      [
+        "\\bReplikate von mehr Daten",
+        "Repliziert mehr Daten"
+      ],
+      [
+        "\\bReplikate nur\\b",
+        "Repliziert nur"
+      ],
+      [
+        "\\bVerschachtelung (?=Hyper-V|KVM)",
+        "Verschachtelung von "
+      ],
+      [
+        "\\binnerhalb (?=VMware|Hyper-V|KVM)",
+        "innerhalb von "
+      ],
+      [
+        "\\bKVM Virtual-Maschinen",
+        "virtuelle KVM-Maschinen"
+      ],
+      [
+        "\\b(Hyper-V|KVM|vSphere) Umgebungen",
+        "\\1-Umgebungen"
+      ],
+      [
+        "\\bSafeKit (Lösungen|Lösung)\\b",
+        "SafeKit-\\1"
       ]
     ],
     "ko": [
@@ -1041,7 +1325,7 @@
         "\\1**SafeKit**은 "
       ],
       [
-        "(^|[.!?]\\s+)\\*\\*SafeKit (?!(?:복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|mirror|farm|HA|vs|PRIM|SECOND|서버|살펴보기|제품|라이선스|평가판|솔루션)|[A-Za-z])(?=[가-힣])",
+        "(^|[.!?]\\s+)\\*\\*SafeKit (?!(?:애플리케이션|복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|mirror|farm|HA|vs|PRIM|SECOND|서버|살펴보기|제품|라이선스|평가판|솔루션)|[A-Za-z])(?=[가-힣])",
         "\\1**SafeKit은 "
       ],
       [
@@ -1117,15 +1401,15 @@
         "\\1비고\\2"
       ],
       [
-        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?!(?:복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=[가-힣]+하는 )",
+        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?!(?:애플리케이션|복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=[가-힣]+하는 )",
         "\\1SafeKit이 "
       ],
       [
-        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?!(?:복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=(?:\\*\\*)?[가-힣])",
+        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?!(?:애플리케이션|복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=(?:\\*\\*)?[가-힣])",
         "\\1SafeKit은 "
       ],
       [
-        "(^#+\\s+)SafeKit (?!(?:복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=[^\\n]*[?？]\\s*(?:\\{#|$))(?=(?:어떤|어떻게|왜|무엇|추가|여러|모든)(?![A-Za-z]))",
+        "(^#+\\s+)SafeKit (?!(?:애플리케이션|복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=[^\\n]*[?？]\\s*(?:\\{#|$))(?=(?:어떤|어떻게|왜|무엇|추가|여러|모든)(?![A-Za-z]))",
         "\\1SafeKit은 "
       ],
       [
@@ -1187,6 +1471,90 @@
       [
         "(^#+\\s+|^\\s*)SafeKit (?=(?:\\{\\{ \\.Get \"\\w+\" \\}\\}|\\x00P\\d+\\x00) [^\\n]*(?:제공|지원|구현|보장)합니다)",
         "\\1SafeKit은 "
+      ],
+      [
+        "(^\\s*|[.!?]\\s+)SafeKit (?=[A-Z][\\w ]{0,30}의 )",
+        "\\1SafeKit은 "
+      ],
+      [
+        "(^\\s*|[.!?]\\s+)SafeKit (?=💡)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "SafeKit (선택|채택|도입|추천)(했|하|합|한)",
+        "SafeKit을 \\1\\2"
+      ],
+      [
+        "(아키텍처) (?=기존 |현재 )",
+        "\\1는 "
+      ],
+      [
+        "(아키텍처) (?=자체 |여러 |중앙 |\\*\\*)",
+        "\\1는 "
+      ],
+      [
+        "(\\(shared-nothing\\)(?:\\*\\*)?)과(?=\\s)",
+        "\\1와"
+      ],
+      [
+        "(\\(shared-nothing\\)(?:\\*\\*)?)은(?=\\s)",
+        "\\1는"
+      ],
+      [
+        "(\\(shared-nothing\\)(?:\\*\\*)?)을(?=\\s)",
+        "\\1를"
+      ],
+      [
+        "(\\(shared-nothing\\)(?:\\*\\*)?)이(?=\\s)",
+        "\\1가"
+      ],
+      [
+        "(?<=[가-힣A-Za-z0-9/]) (에서도|에서|에는|에|와는|와|과는|입니다)(?=[\\s.,]|$)",
+        "\\1"
+      ],
+      [
+        "(•\\s*애플리케이션 HA) (?=[가-힣])",
+        "\\1는 "
+      ],
+      [
+        "(•\\s*)SafeKit (?!에|의)(?!(?:애플리케이션|복제|균일|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=[가-힣])",
+        "\\1SafeKit은 "
+      ],
+      [
+        "클러스터를 구성보다",
+        "클러스터 구성보다"
+      ],
+      [
+        "^(\\s*)SafeKit (?=\\d+(?:개|대))",
+        "\\1SafeKit은 "
+      ],
+      [
+        "SafeKit (?=(?:설치|구성|배포)(?:했|합니다|하여|하고|하세요|할 ))",
+        "SafeKit을 "
+      ],
+      [
+        "(,\\s*)SafeKit (?=\\*\\*)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "\\*\\* (됩니다|합니다|입니다)",
+        "**\\1"
+      ],
+      [
+        "^(\\s*)저장(?=\\s*(?:\\||$))",
+        "\\1스토리지"
+      ],
+      [
+        "^(\\s*)데이터 복제됨(?=\\s*(?:\\||$))",
+        "\\1복제되는 데이터"
+      ],
+      [
+        "^(\\s*)회복 시간(?=\\s*(?:\\||$))",
+        "\\1복구 시간"
+      ],
+      [
+        "\\b(KVM|Hyper-V) (?=중첩)",
+        "\\1을 "
       ]
     ],
     "ja": [
@@ -1325,6 +1693,70 @@
       [
         "\\b(RPO|RTO) ?= ?(\\d)",
         "\\1 = \\2"
+      ],
+      [
+        "(^|\\[)SafeKit、",
+        "\\1SafeKit は、"
+      ],
+      [
+        "(アーキテクチャ)(?=既存の|現在|今後)",
+        "\\1は、"
+      ],
+      [
+        "^(\\s*\\*\\*[^*\\n]*[とにてでばら]\\*\\*)は、",
+        "\\1、"
+      ],
+      [
+        "(アーキテクチャ)\\s*(?=独自の|複数の|集中型|SAN)",
+        "\\1は"
+      ],
+      [
+        "(シェアードナッシング)\\s*(?=方が)",
+        "\\1の"
+      ],
+      [
+        "(\\d\\s*つ)\\s*(?![以目])(?=[\\u30a1-\\u30f6\\u4e00-\\u9fff])",
+        "\\1の"
+      ],
+      [
+        "\\b(SAN|LAN|WAN|VPN|IP)\\s*(?=介して)",
+        "\\1 を"
+      ],
+      [
+        "(^|[。！？]\\s*)のような([^。！？]*?)\\s*([A-Z][\\w-]+)\\s*は、",
+        "\\1\\3 のような\\2は、"
+      ],
+      [
+        "(•\\s*)(アプリケーション HA)\\s*、",
+        "\\1\\2 では、"
+      ],
+      [
+        "(•\\s*)(アプリケーション HA)\\s*(?=[^\\sはがをのでにと、])",
+        "\\1\\2 は"
+      ],
+      [
+        "(•\\s*)SafeKit\\s*、",
+        "\\1SafeKit は、"
+      ],
+      [
+        "(•\\s*|ため、\\s*)SafeKit (?!(?:복제|균일|레플리케이션|レプリケーション|アプリケーション|無料|バージョン|ソフトウェア|コンソール|クラスター|モジュール|製品|ライセンス|ソリューション|サーバー|Web|ウェブ|管理|高可用性|アーキテクチャ|クイック|ユースケース|mirror|farm|HA|vs|の|は|が|を|で|と|に|も)|[A-Za-z])(?=[\\u3040-\\u30ff\\u4e00-\\u9fff])",
+        "\\1SafeKit は"
+      ],
+      [
+        "^(\\s*)SafeKit (?=\\d+ 台)",
+        "\\1SafeKit は "
+      ],
+      [
+        "(、\\s*)SafeKit (?=\\*\\*)",
+        "\\1SafeKit は "
+      ],
+      [
+        "^(\\s*)データが複製されました(?=\\s*(?:\\||$))",
+        "\\1複製されるデータ"
+      ],
+      [
+        "^(\\s*)回復時間(?=\\s*(?:\\||$))",
+        "\\1復旧時間"
       ]
     ],
     "zh-hans": [
@@ -1351,6 +1783,10 @@
       [
         "\\b(RPO|RTO) ?= ?(\\d)",
         "\\1 = \\2"
+      ],
+      [
+        "^(\\s*)数据已复制(?=\\s*(?:\\||$))",
+        "\\1复制的数据"
       ]
     ],
     "nl": [
@@ -1381,6 +1817,38 @@
       [
         "(\\*\\*[^*\\n]+?)-\\*\\*\\s+(?=[a-z])",
         "\\1**-"
+      ],
+      [
+        "(•\\s*)applicatie-HA ondersteunen",
+        "\\1Applicatie-HA ondersteunt"
+      ],
+      [
+        "(•\\s*)applicatie-HA moeten",
+        "\\1Voor applicatie-HA moeten"
+      ],
+      [
+        "(^|•\\s*)applicatie-HA",
+        "\\1Applicatie-HA"
+      ],
+      [
+        "\\s+'(?=,)",
+        ""
+      ],
+      [
+        "^(\\s*)Gegevens gerepliceerd(?=\\s*(?:\\||$))",
+        "\\1Gerepliceerde gegevens"
+      ],
+      [
+        "\\bSafeKit (oplossingen|oplossing|module|modules)\\b",
+        "SafeKit-\\1"
+      ],
+      [
+        "\\b(KVM|Hyper-V) (module|omgevingen)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bKVM virtuele machines",
+        "virtuele KVM-machines"
       ]
     ]
   },

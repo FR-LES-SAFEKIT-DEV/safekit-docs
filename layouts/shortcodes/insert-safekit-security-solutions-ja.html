@@ -1,44 +1,46 @@
-{{/* Shortcode: insert-safekit-security-solutions-ja — 4 instances in 4 files */}}
+{{/* translation: translate_md 2026-11-09.1 | glossaire 2026-11-09.12 | Translation LLM | 43 expressions */}}
+{{/* Shortcode: insert-safekit-security-solutions-en — 4 instances in 4 files */}}
 {{/* Parameters: app */}}
 {{/* Source: content\use-cases\physical-security-software-redundancy.md */}}
 
 
 
-## SafeKit は {{ .Get "app" }} ソフトウェアの冗長化と高可用性のために 2 つのソリューションを提供します {#safekit-security-solutions}
+## SafeKit は、{{ .Get "app" }} ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します {#safekit-security-solutions}
 
-### アプリケーションレベルの冗長化と高可用性 {#redundancy-and-high-availability-at-the-application-level}
+### アプリケーションレベルでの冗長性と高可用性 {#redundancy-and-high-availability-at-the-application-level}
 
-この方式では、アプリケーションデータのみをレプリケーションします。障害時に再起動するのもアプリケーションのみです。
-
-
-![{{ .Get "app" }} ソフトウェアのアプリケーションレベルの冗長化](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+このタイプのソリューションでは、アプリケーションデータのみがレプリケートされます。障害発生時には、アプリケーションのみが再起動されます。
 
 
-このソリューションには、アプリケーションの技術的な理解が必要です。再起動するサービス、レプリケーションするアプリケーションフォルダーを指定し、フェイルオーバー用の仮想 IP アドレスを設定する必要があります。ただし、プラットフォームに依存せず、物理マシン、仮想マシン、クラウド内のアプリケーションで動作します。どのハイパーバイザーにも対応します（VMware、Hyper-V...）。
+![{{ .Get "app" }} ソフトウェアのアプリケーションレベルでの冗長性](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
+
+
+このソリューションには、アプリケーションに関する技術的な理解が必要です。再起動するサービスを定義し、レプリケートするアプリケーションフォルダを指定し、フェイルオーバー用の仮想 IP アドレスを設定する必要があります。ただし、このソリューションはプラットフォームに依存せず、物理マシン、仮想マシン、クラウド内のアプリケーションで動作します。あらゆるハイパーバイザー（VMware、Hyper-V など）がサポートされています。
 
 ### 例 {#examples}
 
-  * 映像管理：💡 [Milestone (Management, SQL, Log, Event)/SafeKit](/ja/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
-  * 映像管理：💡 [Genetec (SQL)/SafeKit](/ja/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
-  * 入退室管理：💡 [Nedap (AEOS, SQL)/SafeKit](/ja/solutions/nedap-high-availability-synchronous-replication-failover/)
-  * 新しいアプリケーション（再起動するサービス、レプリケーションするアプリケーションフォルダー、フェイルオーバー用の仮想 IP アドレスを指定）：💡 [Windows](/ja/solutions/windows-high-availability-software-synchronous-replication-failover/)、💡 [Linux](/ja/solutions/linux-high-availability-software-synchronous-replication-failover/)
+  * ビデオ管理：💡 [Milestone (管理、SQL、ログ、イベント)/SafeKit](/ja/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
+  * ビデオ管理：💡 [Genetec (SQL)/SafeKit](/ja/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
+  * アクセス制御：💡 [Nedap (AEOS, SQL)/SafeKit](/ja/solutions/nedap-high-availability-synchronous-replication-failover/)
+  * 新規アプリケーション（再起動するサービス、レプリケートするアプリケーションフォルダ、フェイルオーバー用の仮想 IP アドレスを定義）： 💡 [Windows](/ja/solutions/windows-high-availability-software-synchronous-replication-failover/)、💡 [Linux](/ja/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
-### 仮想マシンレベルの冗長化と高可用性 {#redundancy-and-high-availability-at-the-virtual-machine-level}
+### 仮想マシンレベルでの冗長性と高可用性 {#redundancy-and-high-availability-at-the-virtual-machine-level}
 
-この方式では、{{ .Get "app" }} ソフトウェアを仮想マシン内に配置します。仮想マシン（VM）全体をレプリケーションし、再起動します（アプリケーション + OS）。
-
-
-![{{ .Get "app" }} ソフトウェアの仮想マシンレベルの冗長化](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+このタイプのソリューションでは、{{ .Get "app" }} ソフトウェアは仮想マシン内に配置されます。仮想マシン（VM）全体が複製され、再起動されます（アプリケーション + OS）。
 
 
-このソリューションの利点は、アプリケーションの技術的な理解を必要としないことです。アプリケーションがインストールされた VM のファイルの場所を指定するだけです。どの {{ .Get "app" }} ソフトウェアにも汎用的に適用できます。ただし、Windows/Hyper-V と Linux/KVM でのみ動作し、VMware では動作しません。複数の仮想マシンを 2 つのノード間でレプリケーションし再起動する、アクティブ/アクティブのソリューションです。
+![{{ .Get "app" }} ソフトウェアの仮想マシンレベルでの冗長性](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+
+
+このソリューションの利点は、アプリケーションの技術的な理解を必要としないことです。アプリケーションがインストールされている VM ファイルの場所を定義するだけで済みます。このソリューションは、あらゆる {{ .Get "app" }} ソフトウェアに汎用的に適用できます。ただし、Windows/Hyper-V および Linux/KVM でのみ機能し、VMware では機能しません。これは、2 つのノード間で複数の仮想マシンが複製され、再起動されるアクティブ/アクティブソリューションです。
 
 ### 例 {#examples-1}
 
-  * ビル管理：💡 [Siemens Desigo CC/SafeKit](/ja/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
-  * 映像管理と入退室管理：💡 [Siemens Siveillance スイート/SafeKit](/ja/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
-  * 新しいアプリケーション（アプリケーションがインストールされた VM のファイルフォルダーの場所を指定）：💡 [Windows/Hyper-V](/ja/solutions/hyper-v-replication-automatic-failover-load-balancing/)、💡 [Linux/KVM](/ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+  * ビル管理： 💡 [Siemens Desigo CC/SafeKit](/ja/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
+  * ビデオ管理とアクセス制御： 💡 [Siemens Siveillance suite/SafeKit](/ja/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+  * 新規アプリケーション（アプリケーションがインストールされている VM ファイルのフォルダの場所を定義します）： 💡 [Windows/Hyper-V](/ja/solutions/hyper-v-replication-automatic-failover-load-balancing/)、💡 [Linux/KVM](/ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
 
 
-[VM HA とアプリケーション HA](/ja/best-practises/vm-ha-vs-application-ha/) の詳しい比較
+[VM HA とアプリケーション HA](/ja/best-practises/vm-ha-vs-application-ha/)のさらなる比較
+

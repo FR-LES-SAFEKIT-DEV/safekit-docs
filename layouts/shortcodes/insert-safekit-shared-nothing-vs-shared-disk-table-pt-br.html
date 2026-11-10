@@ -1,13 +1,13 @@
-{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.1 | Translation LLM | 24 expressions */}}
+{{/* translation: translate_md 2026-11-09.3 | glossaire 2026-11-09.15 | Translation LLM | 34 expressions */}}
 {{/* Shortcode: insert-safekit-shared-nothing-vs-shared-disk-table-en — 1 instance in 1 file */}}
 {{/* Parameters: none */}}
 {{/* Source: content\best-practises\shared-nothing-architecture-vs-shared-disk-architecture.md */}}
 
 
 
-Escolher a arquitetura de alta disponibilidade correta é fundamental para equilibrar custo, complexidade e confiabilidade. As duas abordagens principais — **sem compartilhamento** e **disco compartilhado** — diferem fundamentalmente na forma como lidam com a redundância de dados e o failover. Uma arquitetura sem compartilhamento, como SafeKit replica dados entre servidores independentes com seu próprio armazenamento local, enquanto uma arquitetura de disco compartilhado depende de um compartimento de armazenamento centralizado (SAN) acessado por vários servidores. A tabela a seguir compara essas duas abordagens em critérios-chave.
+Escolher a arquitetura de alta disponibilidade correta é fundamental para equilibrar custo, complexidade e confiabilidade. As duas abordagens principais — **sem compartilhamento** e **disco compartilhado** — diferem fundamentalmente na forma como lidam com a redundância de dados e o failover. Uma arquitetura sem compartilhamento como SafeKit replica dados entre servidores independentes com seu próprio armazenamento local, enquanto uma arquitetura de disco compartilhado depende de um compartimento de armazenamento centralizado (SAN) acessado por vários servidores. A tabela a seguir compara essas duas abordagens em critérios-chave.
 
-Critérios | Arquitetura sem compartilhamento | Arquitetura de Disco Compartilhado  
+Critérios | Arquitetura sem compartilhamento | Arquitetura de disco compartilhado  
 ---|---|---  
 Produto | [SafeKit no Windows e Linux](/pt-br/) | Kit de ferramentas de cluster para disco compartilhado  
 Hardware adicional | Não — utiliza discos internos dos servidores | Sim — custo adicional com um compartimento de discos compartilhado (SAN)  
@@ -15,10 +15,10 @@ Organização dos dados da aplicação | Impacto zero na organização dos dados
 Complexidade da implementação | Não — instale um software em 2 servidores | Sim — requer conhecimentos específicos de TI para configurar o sistema operacional e o disco compartilhado  
 Failover | Basta reiniciar a aplicação no segundo servidor. | Alterne o disco compartilhado. Remonte o sistema de arquivos. Execute o procedimento de recuperação no sistema de arquivos. Em seguida, reinicie o aplicativo.  
 Recuperação de desastres | Basta colocar os 2 servidores em 2 locais remotos conectados por uma LAN estendida. | Custo adicional com uma segunda baia de discos. Requer conhecimentos específicos de TI para configurar o espelhamento de baias em uma SAN.  
-Quórum e cérebro dividido | O aplicativo é executado em um único servidor após o isolamento de rede (split brain). A coerência dos dados é garantida. Não há necessidade de uma terceira máquina, disco de quórum ou linha de pulsação especial. [Mais sobre pulsação, failover e quórum](/pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Requer um disco de quórum especial ou um terceiro servidor de quórum para evitar a corrupção de dados em caso de divisão de cluster.  
-Mais adequado para | [Editores de software que desejam adicionar uma opção simples de HA ao seu aplicativo](/pt-br/use-cases/application-clustering-software/) | Empresas com competências em TI em clustering e aplicações de grandes bases de dados  
+Quórum e cérebro dividido | O aplicativo é executado em um único servidor após o isolamento de rede (split brain). A coerência dos dados é garantida. Não há necessidade de uma terceira máquina, disco de quórum ou linha especial heartbeat. [Mais sobre heartbeat, failover e quórum](/pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | Requer um disco de quórum especial ou um terceiro servidor de quórum para evitar a corrupção de dados em caso de divisão de cluster.  
+Mais adequado para | [Fornecedores de software que desejam adicionar uma opção simples de HA ao seu aplicativo](/pt-br/use-cases/application-clustering-software/) | Empresas com competências em TI em clustering e aplicações de grandes bases de dados  
 
-**Em resumo**, a arquitetura de "nada compartilhado", conforme implementada pelo SafeKit, é vantajosa em termos de **simplicidade**, **custo** e **velocidade de implantação**. Ela não requer hardware adicional, habilidades de TI especializadas ou alterações na organização dos dados da aplicação. O failover é simples, a recuperação de desastres é integrada e o "split brain" é tratado sem infraestrutura adicional.
+**Em resumo**, a arquitetura sem compartilhamento, como implementada pelo SafeKit, é vantajosa em termos de **simplicidade**, **custo** e **velocidade de implantação**. Ela não requer hardware adicional, nem habilidades de TI especializadas, nem alterações na organização dos dados da aplicação. A recuperação de falhas é simples, a recuperação de desastres é integrada e o "split brain" é tratado sem infraestrutura adicional.
 
-A arquitetura de disco compartilhado continua relevante para grandes empresas com infraestrutura SAN existente e equipes de TI dedicadas que gerenciam bancos de dados muito grandes. No entanto, para a maioria das necessidades de alta disponibilidade de aplicativos — especialmente para editores de software, ambientes de TI/edge e sites distribuídos — a arquitetura "shared nothing" com SafeKit é a escolha mais simples e econômica.
+A arquitetura de disco compartilhado continua relevante para grandes empresas com infraestrutura SAN existente e equipes de TI dedicadas que gerenciam bancos de dados muito grandes. No entanto, para a maioria das necessidades de alta disponibilidade de aplicativos — especialmente para fornecedores de software, ambientes OT/edge e sites distribuídos — a abordagem sem compartilhamento com SafeKit é a escolha mais simples e econômica.
 

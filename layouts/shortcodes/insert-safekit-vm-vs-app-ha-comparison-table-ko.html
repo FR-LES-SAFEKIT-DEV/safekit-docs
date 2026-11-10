@@ -1,25 +1,26 @@
-{{/* Shortcode: insert-safekit-vm-vs-app-ha-comparison-table-ko — 1 instance in 1 file */}}
+{{/* translation: translate_md 2026-11-09.5 | glossaire 2026-11-09.19 | Translation LLM | 48 expressions */}}
+{{/* Shortcode: insert-safekit-vm-vs-app-ha-comparison-table-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
-{{/* Source: content\ko\_index.md */}}
+{{/* Source: content\_index.md */}}
 
 
 
-고가용성을 구현할 때, **가상 머신(VM) 수준** 에서 보호할지 **애플리케이션 수준** 에서 보호할지가 핵심 결정 사항입니다. VM 수준 HA는 전체 가상 머신을 복제하고 페일오버하여 모든 애플리케이션에 대한 범용 솔루션을 제공합니다. 애플리케이션 수준 HA는 애플리케이션 데이터와 서비스만을 대상으로 하여 더 빠른 복구 시간과 낮은 리소스 사용량을 달성합니다. SafeKit은 **두 가지 접근 방식 모두** 를 유일하게 제공하며, 어느 경우에도 공유 스토리지(SAN)가 필요 없어 인프라와 복구 요구 사항에 가장 적합한 방식을 선택할 수 있습니다.
+고가용성을 구현할 때 핵심적인 결정은 **가상 머신(VM) 수준**에서 보호할지 또는 **애플리케이션 수준**에서 보호할지 여부입니다. VM 수준 HA는 전체 가상 머신을 복제하고 장애 조치하여 모든 애플리케이션에 대한 일반적인 솔루션을 제공합니다. 애플리케이션 수준 HA는 애플리케이션 데이터 및 서비스만 대상으로 하므로 복구 시간이 더 빠르고 리소스 사용량이 낮습니다. SafeKit은 **두 가지 접근 방식**을 모두 고유하게 제공하며, 두 경우 모두 공유 스토리지(SAN)가 필요하지 않아 인프라 및 복구 요구 사항에 가장 적합한 방식을 선택할 수 있습니다.
 
-**SafeKit VM HA vs 애플리케이션 HA vs 기존 Hyper-V 클러스터 & VMware HA**
+**SafeKit VM HA vs. 애플리케이션 HA vs. 기존 Hyper-V 클러스터 및 VMware HA**
 
-기준 | SafeKit Hyper-V 또는 KVM 모듈의 VM HA | SafeKit 애플리케이션 모듈의 애플리케이션 HA | Microsoft Hyper-V 클러스터 & VMware HA  
+기준 | SafeKit Hyper-V 또는 KVM 모듈을 사용한 VM HA | SafeKit 애플리케이션 모듈을 사용한 애플리케이션 HA | Microsoft Hyper-V 클러스터 및 VMware HA  
 ---|---|---|---  
-아키텍처 | SafeKit을 2개의 하이퍼바이저에 설치. 전체 VM의 복제 및 페일오버. | SafeKit을 2개의 가상 또는 물리 머신에 설치. 애플리케이션 수준의 복제 및 페일오버. | 공유 스토리지가 있는 하이퍼바이저 클러스터. 하이퍼바이저 장애 시 다른 호스트에서 VM 재시작.  
-스토리지 | 공유 디스크 불필요 — [데이터 손실 없는 동기식 실시간 복제](/ko/best-practises/synchronous-replication-vs-asynchronous-replication/) | 공유 디스크 불필요 — 애플리케이션 데이터만 동기식 복제 | 공유 디스크와 전용 외부 디스크 베이 필요  
-복제 데이터 | 더 많은 데이터 복제 (애플리케이션 + OS) | 애플리케이션 데이터만 복제 | 복제 없음 — 모든 호스트가 공유 스토리지에 접근  
-복구 시간 | 하이퍼바이저 1 장애 시 하이퍼바이저 2에서 VM 재부팅. 복구 시간 = VM 재부팅 시간. VM 장애 시 페일오버. | 서버 2에서 애플리케이션 재시작으로 빠른 복구. 약 1분 이내 ([RTO/RPO 보기](/ko/best-practises/what-is-rpo-and-rto-with-examples/)). 고급 애플리케이션 체커 및 소프트웨어 페일오버. | 새 하이퍼바이저에서 전체 VM 재부팅. 복구 시간은 OS 재부팅 + 애플리케이션 시작에 따라 결정.  
-재해 복구 / 원격 사이트 | SAN 불필요 — SafeKit에 원격 사이트 간 복제 내장 | SAN 불필요 — SafeKit에 원격 사이트 간 복제 내장 | SAN 또는 vSAN을 통한 디스크 베이 복제 필요  
-구성 | 애플리케이션이 설치된 VM 파일 폴더 위치 정의. 모든 애플리케이션/OS에 대한 범용 솔루션. | 재시작할 서비스, 복제할 애플리케이션 폴더, 페일오버를 위한 가상 IP 주소를 [애플리케이션 모듈](/ko/solutions/)에서 정의. | 시스템 구성에 전문 IT 기술 필요
-지원 플랫폼 | [Hyper-V](/ko/solutions/hyper-v-replication-automatic-failover-load-balancing/)와 [KVM](/ko/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/) 지원 (VMware 직접 지원 안 함, VMware 내에서 Hyper-V 또는 KVM 중첩 제외). | 모든 인프라에서 작동: 물리 서버, VMware, Hyper-V, KVM 가상 머신, 클라우드. | VMware vSphere 또는 Microsoft Hyper-V 환경으로 제한  
-IT 기술 | 전문 IT 기술 불필요. 자동 페일오버. | 전문 IT 기술 불필요. 자동 페일오버. | 시스템 구성에 전문 IT 기술 필요  
+아키텍처 | 2개의 하이퍼바이저에 SafeKit을 설치했습니다. 전체 VM의 복제 및 장애 조치. | SafeKit은 2개의 가상 또는 물리적 머신에 설치됩니다. 애플리케이션 수준에서 복제 및 장애 조치가 이루어집니다. | 공유 스토리지를 사용하는 하이퍼바이저 클러스터. 하이퍼바이저에 장애가 발생하면 다른 호스트에서 VM이 다시 시작됩니다.  
+스토리지 | 공유 디스크 없음 — [데이터 손실 없는 동기식 실시간 복제](/ko/best-practises/synchronous-replication-vs-asynchronous-replication/) | 공유 디스크 없음 — 애플리케이션 데이터만 동기식으로 복제 | 공유 디스크와 특정 외부 디스크 베이가 필요합니다  
+복제되는 데이터 | 더 많은 데이터(애플리케이션 + OS)를 복제합니다 | 애플리케이션 데이터만 복제합니다 | 복제 없음 — 모든 호스트가 액세스하는 공유 스토리지  
+복구 시간 | 하이퍼바이저 1이 충돌하는 경우 하이퍼바이저 2에서 VM을 재부팅합니다. 복구 시간 = VM을 재부팅하는 데 걸리는 시간. VM이 충돌하는 경우 장애 조치합니다. | 서버 2에서 애플리케이션을 다시 시작하여 신속하게 복구합니다. 약 1분 이내([RTO/RPO 참조](/ko/best-practises/what-is-rpo-and-rto-with-examples/)). 고급 애플리케이션 검사기 및 소프트웨어 장애 조치. | 새 하이퍼바이저에서 VM을 완전히 재부팅합니다. 복구 시간은 OS 재부팅 및 애플리케이션 시작 시간에 따라 달라집니다.  
+재해 복구/원격 사이트 | SAN 불필요 — SafeKit에 원격 사이트 간 복제 기능 내장 | SAN 불필요 — SafeKit에 원격 사이트 간 복제 기능 내장 | SAN 또는 vSAN 전반에 걸쳐 디스크 베이를 복제해야 합니다  
+구성 | 애플리케이션이 설치된 VM 파일 폴더의 위치를 정의합니다. 모든 애플리케이션/OS에 대한 일반적인 솔루션입니다. | [애플리케이션 모듈](/ko/solutions/) 내에서 다시 시작할 서비스, 복제할 애플리케이션 폴더, 장애 조치를 위한 가상 IP 주소를 정의합니다. | 시스템 구성에 필요한 특정 IT 기술  
+지원 플랫폼 | [Hyper-V](/ko/solutions/hyper-v-replication-automatic-failover-load-balancing/) 및 [KVM](/ko/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)과 호환됩니다(VMware 내부에 Hyper-V 또는 KVM을 중첩하는 경우를 제외하고 VMware와는 직접 호환되지 않음). | 물리적 서버, VMware, Hyper-V, KVM 가상 머신, 클라우드 등 모든 인프라에서 작동합니다. | VMware vSphere 또는 Microsoft Hyper-V 환경으로 제한됩니다  
+IT 기술 | 특별한 IT 기술이 필요하지 않습니다. 자동 장애 조치. | 특별한 IT 기술이 필요하지 않습니다. 자동 장애 조치. | 시스템 구성에 필요한 특정 IT 기술  
 
-**요약하면** , SafeKit은 **공유 스토리지 없이 VM 수준과 애플리케이션 수준 고가용성을 모두 제공하는** 유일한 솔루션입니다. 최대 유연성과 가장 빠른 복구 시간(약 1분)을 위해 애플리케이션 수준 HA가 선호되는 접근 방식입니다 — 모든 플랫폼(물리, 가상 또는 클라우드)에서 작동하며 중요한 데이터만 복제합니다. 전체 VM을 보호하는 것이 더 간단한 환경에서는 SafeKit의 Hyper-V/KVM 모듈이 기존 Microsoft Hyper-V 클러스터나 VMware HA에 대한 범용 SAN 불필요 대안을 제공하여 동기식 실시간 복제를 통한 데이터 손실 제로를 보장하면서 공유 스토리지 인프라의 비용과 복잡성을 제거합니다.
+**요약하자면**, SafeKit은 **공유 스토리지 없이 VM 수준 및 애플리케이션 수준의 고가용성을 모두** 제공하는 유일한 솔루션입니다. 최대의 유연성과 가장 빠른 복구 시간(약 1분)을 위해 애플리케이션 수준 HA가 선호되는 접근 방식입니다. 이는 모든 플랫폼(물리적, 가상 또는 클라우드)에서 작동하며 중요한 데이터만 복제합니다. 전체 VM 보호가 더 간단한 환경의 경우, SafeKit의 Hyper-V/KVM 모듈은 기존 Microsoft Hyper-V 클러스터 또는 VMware HA에 대한 일반적인 SAN 없는 대안을 제공합니다. 공유 스토리지 인프라의 비용과 복잡성을 제거하면서도 동기식 실시간 복제를 통해 데이터 손실을 방지합니다.
 
-SafeKit 솔루션은 구현이 가장 간단하지만 **[수 테라바이트](/ko/product/#safekit-ha-limitations)의 복제와 [32개 VM](/ko/product/#safekit-ha-limitations)의 페일오버로 제한**됩니다.
+SafeKit 솔루션은 구현이 가장 간단하지만, **[몇 테라바이트](/ko/product/#safekit-ha-limitations)의 복제와 [32개 VM](/ko/product/#safekit-ha-limitations)의 장애 조치로 제한**됩니다.
 

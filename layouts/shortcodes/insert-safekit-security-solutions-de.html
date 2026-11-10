@@ -1,44 +1,46 @@
-{{/* Shortcode: insert-safekit-security-solutions-de — 4 instances in 4 files */}}
+{{/* translation: translate_md 2026-11-09.2 | glossaire 2026-11-09.12 | Translation LLM | 40 expressions */}}
+{{/* Shortcode: insert-safekit-security-solutions-en — 4 instances in 4 files */}}
 {{/* Parameters: app */}}
 {{/* Source: content\use-cases\physical-security-software-redundancy.md */}}
 
 
 
-## SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit einer {{ .Get "app" }}-Software {#safekit-security-solutions}
+## SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von {{ .Get "app" }}-Software {#safekit-security-solutions}
 
 ### Redundanz und Hochverfügbarkeit auf Anwendungsebene {#redundancy-and-high-availability-at-the-application-level}
 
-Bei dieser Art von Lösung werden nur die Anwendungsdaten repliziert. Bei einem Ausfall wird nur die Anwendung neu gestartet.
+Bei dieser Art von Lösung werden nur Anwendungsdaten repliziert. Und nur die Anwendung wird im Fehlerfall neu gestartet.
 
 
 ![Redundanz auf Anwendungsebene für eine {{ .Get "app" }}-Software](/wp-content/uploads/2023/02/application-ha-4.png "w:168")
 
 
-Diese Lösung erfordert ein technisches Verständnis der Anwendung. Sie müssen die neu zu startenden Dienste festlegen, die zu replizierenden Anwendungsordner angeben und eine virtuelle IP-Adresse für das Failover konfigurieren. Die Lösung ist jedoch plattformunabhängig und funktioniert mit Anwendungen auf physischen Maschinen, virtuellen Maschinen und in der Cloud. Jeder Hypervisor wird unterstützt (VMware, Hyper-V...).
+Diese Lösung erfordert ein technisches Verständnis der Anwendung. Sie müssen definieren, welche Dienste neu gestartet werden sollen, die zu replizierenden Anwendungsordner angeben und eine virtuelle IP-Adresse für das Failover konfigurieren. Diese Lösung ist jedoch plattformunabhängig und funktioniert mit Anwendungen in physischen Maschinen, virtuellen Maschinen und in der Cloud. Jeder Hypervisor wird unterstützt (VMware, Hyper-V usw.).
 
 ### Beispiele {#examples}
 
   * Videomanagement: 💡 [Milestone (Management, SQL, Log, Event)/SafeKit](/de/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/)
   * Videomanagement: 💡 [Genetec (SQL)/SafeKit](/de/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/)
   * Zutrittskontrolle: 💡 [Nedap (AEOS, SQL)/SafeKit](/de/solutions/nedap-high-availability-synchronous-replication-failover/)
-  * Neue Anwendung (neu zu startende Dienste, zu replizierende Anwendungsordner und eine virtuelle IP-Adresse für das Failover festlegen): 💡 [Windows](/de/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/de/solutions/linux-high-availability-software-synchronous-replication-failover/)
+  * Neue Anwendung (Dienste zum Neustart definieren, Anwendungsordner zum Replizieren, eine virtuelle IP-Adresse für Failover): 💡 [Windows](/de/solutions/windows-high-availability-software-synchronous-replication-failover/), 💡 [Linux](/de/solutions/linux-high-availability-software-synchronous-replication-failover/)
 
 
-### Redundanz und Hochverfügbarkeit auf Ebene der virtuellen Maschine {#redundancy-and-high-availability-at-the-virtual-machine-level}
+### Redundanz und Hochverfügbarkeit auf der Ebene der virtuellen Maschine {#redundancy-and-high-availability-at-the-virtual-machine-level}
 
-Bei dieser Art von Lösung wird die {{ .Get "app" }}-Software in einer virtuellen Maschine installiert. Die gesamte virtuelle Maschine (VM) wird repliziert und neu gestartet (Anwendung + OS).
-
-
-![Redundanz auf Ebene der virtuellen Maschine für eine {{ .Get "app" }}-Software](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+Bei dieser Art von Lösung wird die {{ .Get "app" }}-Software in einer virtuellen Maschine untergebracht. Die gesamte virtuelle Maschine (VM) wird repliziert und neu gestartet (Anwendung + Betriebssystem).
 
 
-Der Vorteil dieser Lösung ist, dass sie kein technisches Verständnis der Anwendung erfordert; Sie müssen nur den Speicherort der VM-Dateien festlegen, in der die Anwendung installiert ist. Diese Lösung eignet sich allgemein für jede {{ .Get "app" }}-Software. Sie funktioniert jedoch nur mit Windows/Hyper-V und Linux/KVM, nicht mit VMware. Es handelt sich um eine Aktiv/Aktiv-Lösung, bei der mehrere virtuelle Maschinen zwischen zwei Knoten repliziert und neu gestartet werden.
+![Redundanz auf der Ebene der virtuellen Maschine für eine {{ .Get "app" }}-Software](/wp-content/uploads/2023/02/vm-ha-4.png "w:184")
+
+
+Der Vorteil dieser Lösung besteht darin, dass kein technisches Verständnis der Anwendung erforderlich ist. Sie müssen lediglich den Speicherort der VM-Dateien definieren, an dem die Anwendung installiert ist. Diese Lösung ist für jede {{ .Get "app" }}-Software generisch. Sie funktioniert jedoch nur mit Windows/Hyper-V und Linux/KVM, nicht jedoch mit VMware. Dies ist eine Aktiv/Aktiv-Lösung mit mehreren virtuellen Maschinen, die zwischen zwei Knoten repliziert und neu gestartet werden.
 
 ### Beispiele {#examples-1}
 
   * Gebäudemanagement: 💡 [Siemens Desigo CC/SafeKit](/de/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/)
-  * Videomanagement und Zutrittskontrolle: 💡 [Siemens Siveillance-Suite/SafeKit](/de/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
-  * Neue Anwendung (Speicherort des Ordners mit den VM-Dateien festlegen, in der die Anwendung installiert ist): 💡 [Windows/Hyper-V](/de/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/de/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
+  * Videomanagement und Zutrittskontrolle: 💡 [Siemens Siveillance Suite/SafeKit](/de/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/)
+  * Neue Anwendung (definieren Sie den Speicherort des VM-Dateienordners, in dem die Anwendung installiert ist): 💡 [Windows/Hyper-V](/de/solutions/hyper-v-replication-automatic-failover-load-balancing/), 💡 [Linux/KVM](/de/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/)
 
 
-Weiterer Vergleich zwischen [VM-HA und Anwendungs-HA](/de/best-practises/vm-ha-vs-application-ha/)
+Weitere Vergleiche zwischen [VM-HA und Anwendungs-HA](/de/best-practises/vm-ha-vs-application-ha/)
+
