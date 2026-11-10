@@ -23,7 +23,7 @@ The following comparative tables explain in detail the difference between shared
 
 ### What is a shared disk architecture? {#what-is-a-shared-disk-architecture}
 
-A shared disk architecture (like with [Microsoft failover cluster](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)) is based on 2 servers sharing a disk with an automatic application failover in case of hardware of software failures.
+A shared disk architecture (like with [Microsoft failover cluster](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)) is based on 2 servers sharing a disk with an automatic application failover in case of hardware or software failures.
 
 This architecture has hardware constraints: the specific external shared storage, the specific cards to install inside the servers, and the specific switches between the servers and the shared storage.
 
@@ -37,9 +37,9 @@ Finally, the solution is not easy to configure because skills are required to co
 
 A shared nothing architecture (like with [SafeKit](</>)) is based on 2 servers replicating data in real-time with an automatic application failover in case of hardware of software failures.
 
-There are two types of data replication: [byte level file replication vs block level disk replication](</best-practises/byte-level-file-replication-vs-block-level-disk-replication/>). We consider here byte level file replication because it has many advantages against block level disk replication.
+There are two types of data replication: [byte level file replication vs block level disk replication](</best-practises/byte-level-file-replication-vs-block-level-disk-replication/>). We consider here byte level file replication because it has many advantages over block level disk replication.
 
-The shared nothing architecture has no hardware constraints: the servers can be physical or virtual with any type of disk organization. Real-time file replication ([synchronous](</best-practises/synchronous-replication-vs-asynchronous-replication/>) for having 0 data loss) is made through the standard network between servers.
+The shared nothing architecture has no hardware constraints: the servers can be physical or virtual with any type of disk organization. Real-time file replication ([synchronous](</best-practises/synchronous-replication-vs-asynchronous-replication/>) for zero data loss) is made through the standard network between servers.
 
 This architecture has no impact on application data organization. For instance, if an application has its data in the system disk, real-time file replication is working.
 

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-10.3",
+  "version": "2026-11-10.8",
   "keep": [
     "mirror",
     "farm",
@@ -682,7 +682,14 @@
       "de": "Shared-Nothing- vs. Shared-Disk-Architektur",
       "es": "arquitectura sin recursos compartidos frente a arquitectura de disco compartido",
       "it": "architettura shared-nothing vs. architettura a disco condiviso",
-      "ar": "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك"
+      "ar": "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك",
+      "fr": "architecture sans partage vs architecture à disque partagé",
+      "nl": "shared-nothing-architectuur versus architectuur met gedeelde schijf",
+      "pt": "arquitetura sem compartilhamento vs. arquitetura de disco compartilhado",
+      "pt-pt": "arquitetura sem partilha vs. arquitetura de disco partilhado",
+      "ja": "シェアードナッシングアーキテクチャと共有ディスクアーキテクチャ",
+      "ko": "비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처",
+      "zh-hans": "无共享架构与共享磁盘架构"
     },
     "application vs virtual machine high availability": {
       "de": "Hochverfügbarkeit auf Anwendungs- vs. VM-Ebene",
@@ -711,6 +718,42 @@
     "SafeKit package": {
       "fr": "package SafeKit",
       "nl": "SafeKit-pakket"
+    },
+    "shared nothing vs shared disk architectures": {
+      "pt": "arquiteturas sem compartilhamento e de disco compartilhado",
+      "pt-pt": "arquiteturas sem partilha e de disco partilhado",
+      "es": "arquitecturas sin recursos compartidos y de disco compartido"
+    },
+    "quorum and split brain": {
+      "fr": "quorum et split brain",
+      "es": "quórum y split brain",
+      "it": "quorum e split brain",
+      "nl": "quorum en split brain",
+      "pt": "quórum e split brain",
+      "ko": "쿼럼 및 스플릿 브레인",
+      "ar": "النصاب وانقسام الدماغ (split brain)"
+    },
+    "split brain": {
+      "fr": "split brain",
+      "es": "split brain",
+      "it": "split brain",
+      "nl": "split brain",
+      "pt": "split brain"
+    },
+    "shared disk array": {
+      "fr": "baie de disques partagée",
+      "pt": "array de discos compartilhado",
+      "pt-pt": "matriz de discos partilhada"
+    },
+    "disk arrays": {
+      "fr": "baies de disques",
+      "pt": "arrays de discos",
+      "pt-pt": "matrizes de discos"
+    },
+    "disk array": {
+      "fr": "baie de disques",
+      "pt": "array de discos",
+      "pt-pt": "matriz de discos"
     }
   },
   "grammar": {
@@ -878,6 +921,34 @@
       [
         "([A-Za-zÀ-ÿ])\\?(?=\\s|$|\")",
         "\\1 ?"
+      ],
+      [
+        "\\b(de|à|entre) architecture\\b",
+        "\\1 l’architecture"
+      ],
+      [
+        "\\bproduit clustering\\b",
+        "produit de clustering"
+      ],
+      [
+        "\\b([Uu])n second baie\\b",
+        "\\1ne seconde baie"
+      ],
+      [
+        "\\b([Uu])n baie\\b",
+        "\\1ne baie"
+      ],
+      [
+        "(baie\\b[^.|]{0,40}?)\\bcentralisé auquel\\b",
+        "\\1centralisée à laquelle"
+      ],
+      [
+        "\\bet split brain (?=est\\b)",
+        "et le split brain "
+      ],
+      [
+        "\\*\\*(de|d’) ",
+        "\\1 **"
       ]
     ],
     "it": [
@@ -940,6 +1011,34 @@
       [
         "all’interno (?=VMware|Hyper-V|KVM)",
         "all’interno di "
+      ],
+      [
+        "\\bi contro architettura\\b",
+        "i contro dell’architettura"
+      ],
+      [
+        "\\brispetto architettura\\b",
+        "rispetto all’architettura"
+      ],
+      [
+        "\\btra architettura\\b",
+        "tra l’architettura"
+      ],
+      [
+        "\\bimplementa architettura\\b",
+        "implementa un’architettura"
+      ],
+      [
+        "\\bChe cos[’']è architettura\\b",
+        "Che cos’è un’architettura"
+      ],
+      [
+        "^Architettura (a disco condiviso|shared-nothing) (?=\\(|ha\\b|si basa\\b)",
+        "Un’architettura \\1 "
+      ],
+      [
+        "\\be split brain (?=viene\\b)",
+        "e lo split brain "
       ]
     ],
     "es": [
@@ -1018,6 +1117,26 @@
       [
         "\\b(prácticas) (clustering)\\b",
         "\\1 de \\2"
+      ],
+      [
+        "\\bfrente (?!a\\b|al\\b)(?=(?:la |el )?arquitectura)",
+        "frente a "
+      ],
+      [
+        "\\b(de|entre) arquitectura\\b",
+        "\\1 la arquitectura"
+      ],
+      [
+        "(de la arquitectura [^.:]*? frente a) arquitectura\\b",
+        "\\1 la arquitectura"
+      ],
+      [
+        "\\bproducto clustering\\b",
+        "producto de clustering"
+      ],
+      [
+        "\\by split brain (?=se\\b)",
+        "y el split brain "
       ]
     ],
     "pt": [
@@ -1088,6 +1207,18 @@
       [
         "(?i)\\b(práticas) (clustering)\\b",
         "\\1 de \\2"
+      ],
+      [
+        "\\b(em comparação com|entre) arquitetura\\b",
+        "\\1 a arquitetura"
+      ],
+      [
+        "\\bproduto clustering\\b",
+        "produto de clustering"
+      ],
+      [
+        "\\be split brain (?=é\\b)",
+        "e o split brain "
       ]
     ],
     "ar": [
@@ -1178,6 +1309,30 @@
       [
         "(heartbeat)، والفشل،",
         "\\1، وتجاوز الفشل،"
+      ],
+      [
+        "\\) \\\"(?=\\s*[؟(])",
+        ")"
+      ],
+      [
+        "\\s+؟",
+        "؟"
+      ],
+      [
+        "\\bيؤثر بنية",
+        "تؤثر بنية"
+      ],
+      [
+        "\\bيؤثر هذا البنية",
+        "تؤثر هذه البنية"
+      ],
+      [
+        "على الأجهزة بنية",
+        "على الأجهزة في بنية"
+      ],
+      [
+        "(\\*\\*)\\s+\\*\\*(?=بنية)",
+        "\\1 و**"
       ]
     ],
     "de": [
@@ -1340,6 +1495,30 @@
       [
         "(•\\s*)Anwendungs-HA müssen Sie",
         "\\1Bei Anwendungs-HA müssen Sie"
+      ],
+      [
+        "\\b(\\w{3,}ieren)ieren\\b",
+        "\\1"
+      ],
+      [
+        "\\bShared-Nothing Ansatz",
+        "Shared-Nothing-Ansatz"
+      ],
+      [
+        "\\bSAN Kosten\\b",
+        "SAN-Kosten"
+      ],
+      [
+        "\\bmit automatischer Anwendungsfailover\\b",
+        "mit automatischem Anwendungs-Failover"
+      ],
+      [
+        "\\bHeartbeat Leitung",
+        "Heartbeat-Leitung"
+      ],
+      [
+        "\\*\\*Zusammenfassend lässt\\*\\* sich",
+        "**Zusammenfassend** lässt sich"
       ]
     ],
     "ko": [
@@ -1654,6 +1833,30 @@
       [
         "복구 시간 목표 RTO\\)",
         "복구 시간 목표(RTO)"
+      ],
+      [
+        "아키텍처 란 ",
+        "아키텍처란 "
+      ],
+      [
+        "아키텍처 (?=애플리케이션 데이터 구성)",
+        "아키텍처는 "
+      ],
+      [
+        "아키텍처 (?=하드웨어 제약이 없)",
+        "아키텍처에는 "
+      ],
+      [
+        "아키텍처\\s+\\(\\s*\\[",
+        "아키텍처(["
+      ],
+      [
+        "(\\[SafeKit\\]\\([^)]*\\))과 같은",
+        "\\1와 같은"
+      ],
+      [
+        "\\bSAN 통해",
+        "SAN을 통해"
       ]
     ],
     "ja": [
@@ -1860,6 +2063,42 @@
       [
         "(注\\s*[:：]\\s*)SafeKit\\s*(?!は)(?=[\\u30a0-\\u30ff\\u4e00-\\u9fff])",
         "\\1SafeKit は "
+      ],
+      [
+        "高可用性クラスター(?=シェアードナッシング|共有ディスク)",
+        "高可用性クラスターにおける"
+      ],
+      [
+        "アーキテクチャ(?=シェアードナッシング)",
+        "アーキテクチャと、"
+      ],
+      [
+        "アーキテクチャ(?=アプリケーションデータ)",
+        "アーキテクチャは"
+      ],
+      [
+        "SafeKit\\s*(?=[\\u30a0-\\u30ff]+\\s*アプローチを使用)",
+        "SafeKit が"
+      ],
+      [
+        "アーキテクチャ\\s+(?=\\*\\*[^*]+\\*\\*\\s*、)",
+        "アーキテクチャは "
+      ],
+      [
+        "の\\*\\*\\s*(?=点)",
+        "**の"
+      ],
+      [
+        "(^|。)SafeKit\\s*(?=[\\u30a0-\\u30ff]+を実装)",
+        "\\1SafeKit は "
+      ],
+      [
+        "ソフトウェア\\s*SafeKit\\s*(?=\\d)",
+        "SafeKit ソフトウェアを "
+      ],
+      [
+        "(\\*\\*)\\s*(?=\\d+ つです)",
+        "\\1の "
       ]
     ],
     "zh-hans": [
@@ -1890,6 +2129,22 @@
       [
         "^(\\s*)数据已复制(?=\\s*(?:\\||$))",
         "\\1复制的数据"
+      ],
+      [
+        "在高可用性集群(?=\\s*(?:\\{#|$|、))",
+        "在高可用性集群中的比较"
+      ],
+      [
+        "(架构)(软件集群产品)",
+        "\\1的\\2"
+      ],
+      [
+        "，是一款实现",
+        "，后者是一款实现"
+      ],
+      [
+        "实施\\s*SafeKit\\s*是",
+        "SafeKit 实现了"
       ]
     ],
     "nl": [
@@ -1964,6 +2219,38 @@
       [
         "\\bSafeKit (pakket|cluster)\\b",
         "SafeKit-\\1"
+      ],
+      [
+        "(?i)\\b(shared-nothing) (architectuur|architecturen|benadering)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "'shared disk'-architecturen",
+        "architecturen met gedeelde schijf"
+      ],
+      [
+        "\\bSAN kosten\\b",
+        "SAN-kosten"
+      ],
+      [
+        "\\bsysteemdisk\\b",
+        "systeemschijf"
+      ],
+      [
+        "\\bheartbeat lijn\\b",
+        "heartbeatlijn"
+      ],
+      [
+        "\\bsysteem-schijf\\b",
+        "systeemschijf"
+      ],
+      [
+        "\\bSafeKit software\\b",
+        "SafeKit-software"
+      ],
+      [
+        "\\bsplit brain situatie\\b",
+        "split-brainsituatie"
       ]
     ]
   },
