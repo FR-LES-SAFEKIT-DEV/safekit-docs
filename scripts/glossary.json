@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-11.4",
+  "version": "2026-11-11.6",
   "keep": [
     "mirror",
     "farm",
@@ -990,6 +990,10 @@
       [
         "(\\]\\(#[\\w-]+\\)) (?=(?:Sinon|Dans le cas contraire)\\b)",
         "\\1. "
+      ],
+      [
+        "\\bPrenez SafeKit snapshots\\b",
+        "Prenez des SafeKit snapshots"
       ]
     ],
     "it": [
@@ -2006,6 +2010,18 @@
       [
         "`Stop` 클릭",
         "`Stop`을 클릭"
+      ],
+      [
+        "`Start` 사용하",
+        "`Start`를 사용하"
+      ],
+      [
+        "SafeKit snapshots 찍",
+        "SafeKit snapshots를 찍"
+      ],
+      [
+        "\\[같은 ",
+        "같은 ["
       ]
     ],
     "ja": [
@@ -2272,6 +2288,14 @@
       [
         "Milestone (\\[Milestone)",
         "\\1"
+      ],
+      [
+        "(`[^`]+`) ?使用して",
+        "\\1 を使用して"
+      ],
+      [
+        "通常<",
+        "通常 <"
       ]
     ],
     "zh-hans": [
