@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-10.8",
+  "version": "2026-11-11.4",
   "keep": [
     "mirror",
     "farm",
@@ -105,7 +105,8 @@
     "Alstef Group",
     "Alstef",
     "Fives Syleps",
-    "BAGware"
+    "BAGware",
+    "SafeKit snapshots"
   ],
   "terms": {
     "farm cluster": {
@@ -949,6 +950,46 @@
       [
         "\\*\\*(de|d’) ",
         "\\1 **"
+      ],
+      [
+        "([lLdD]’) (\\{\\{ \\.Get)",
+        "\\1\\2"
+      ],
+      [
+        "\\b(node\\d) (Node\\d)\\b",
+        "\\1. \\2"
+      ],
+      [
+        "\\bà partir (?=node\\d|nœud)",
+        "à partir de "
+      ],
+      [
+        "\\bdans le SECOND état\\b",
+        "dans l’état SECOND"
+      ],
+      [
+        "\\ble SECOND état\\b",
+        "l’état SECOND"
+      ],
+      [
+        "\\bdu SECOND état\\b",
+        "de l’état SECOND"
+      ],
+      [
+        "\\ble SECOND nœud\\b",
+        "le nœud SECOND"
+      ],
+      [
+        "\\bdu SECOND nœud\\b",
+        "du nœud SECOND"
+      ],
+      [
+        "^(\\d+\\.\\s*)Soutien(?=\\s*$)",
+        "\\1Assistance"
+      ],
+      [
+        "(\\]\\(#[\\w-]+\\)) (?=(?:Sinon|Dans le cas contraire)\\b)",
+        "\\1. "
       ]
     ],
     "it": [
@@ -1039,6 +1080,22 @@
       [
         "\\be split brain (?=viene\\b)",
         "e lo split brain "
+      ],
+      [
+        "(\\]\\(#[\\w-]+\\)) (?=In caso contrario\\b)",
+        "\\1. "
+      ],
+      [
+        "\\b(il|sul|del|nel) SECOND nodo\\b",
+        "\\1 nodo SECOND"
+      ],
+      [
+        "\\bil ▼ fisco\\b",
+        "la fisarmonica ▼"
+      ],
+      [
+        "(„|\")\\s+(?=[A-Z]:/)",
+        "\\1"
       ]
     ],
     "es": [
@@ -1137,6 +1194,18 @@
       [
         "\\by split brain (?=se\\b)",
         "y el split brain "
+      ],
+      [
+        "(\\]\\(#[\\w-]+\\)) (?=De lo contrario\\b)",
+        "\\1. "
+      ],
+      [
+        "\\b(el|del|al) SECOND nodo\\b",
+        "\\1 nodo SECOND"
+      ],
+      [
+        "(„|\")\\s+(?=[A-Z]:/)",
+        "\\1"
       ]
     ],
     "pt": [
@@ -1219,6 +1288,26 @@
       [
         "\\be split brain (?=é\\b)",
         "e o split brain "
+      ],
+      [
+        "\\bresincroniz",
+        "ressincroniz"
+      ],
+      [
+        "\\bo SECOND nó\\b",
+        "o nó SECOND"
+      ],
+      [
+        "\\bno SECOND nó\\b",
+        "no nó SECOND"
+      ],
+      [
+        "(„|\")\\s+(?=[A-Z]:/)",
+        "\\1"
+      ],
+      [
+        "\\b(no|o|do) SECOND estado\\b",
+        "\\1 estado SECOND"
       ]
     ],
     "ar": [
@@ -1519,6 +1608,34 @@
       [
         "\\*\\*Zusammenfassend lässt\\*\\* sich",
         "**Zusammenfassend** lässt sich"
+      ],
+      [
+        "(\\{\\{ \\.Get \"\\w+\" \\}\\}) (?=(?:[A-ZÄÖÜ][a-zäöüß]+|VM)\\b)",
+        "\\1-"
+      ],
+      [
+        "\\bHeartbeat (?=[A-ZÄÖÜ][a-zäöüß]+\\b)",
+        "Heartbeat-"
+      ],
+      [
+        "\\b(VM\\d+) (?=(?:Dateien|Datei|Verzeichnis|Verzeichnisse)\\b)",
+        "\\1-"
+      ],
+      [
+        "`(Heartbeat|Automatic)` (?=[A-ZÄÖÜ][a-zäöüß]+\\b)",
+        "`\\1`-"
+      ],
+      [
+        "\\b(PRIM|SECOND|ALONE|WAIT) Knoten",
+        "\\1-Knoten"
+      ],
+      [
+        "\\bWenn der Cluster-Status (`[^`]+`), ",
+        "Wenn der Cluster-Status \\1 ist, "
+      ],
+      [
+        "(„|\")\\s+(?=[A-Z]:/)",
+        "\\1"
       ]
     ],
     "ko": [
@@ -1857,6 +1974,38 @@
       [
         "\\bSAN 통해",
         "SAN을 통해"
+      ],
+      [
+        "\\b(node[13678])를",
+        "\\1을"
+      ],
+      [
+        "\\b(Node[13678]) (node\\d) ?로부터",
+        "\\1이 \\2로부터"
+      ],
+      [
+        "\\b(VM[13678]) 제대로",
+        "\\1이 제대로"
+      ],
+      [
+        "(`start_prim`) (클릭)",
+        "\\1을 \\2"
+      ],
+      [
+        "(`[^`]+`) (프로그램으로|명령줄 매개변수로) 설정",
+        "\\1를 \\2 설정"
+      ],
+      [
+        "하트비트 더 이상",
+        "하트비트가 더 이상"
+      ],
+      [
+        "(</ClusterMember>`) (`true`로)",
+        "\\1를 \\2"
+      ],
+      [
+        "`Stop` 클릭",
+        "`Stop`을 클릭"
       ]
     ],
     "ja": [
@@ -2099,6 +2248,30 @@
       [
         "(\\*\\*)\\s*(?=\\d+ つです)",
         "\\1の "
+      ],
+      [
+        "\\bLAN ?追加",
+        "LAN を追加"
+      ],
+      [
+        "\\b(VM\\d) ?正しく",
+        "\\1 が正しく"
+      ],
+      [
+        "\\b(Node\\d)、 ?(node\\d) ?から",
+        "\\1 は \\2 から"
+      ],
+      [
+        "\\bServerConfig\\.xml ?編集",
+        "ServerConfig.xml を編集"
+      ],
+      [
+        "(</ClusterMember>`) ?(`true` ?に)",
+        "\\1 を \\2"
+      ],
+      [
+        "Milestone (\\[Milestone)",
+        "\\1"
       ]
     ],
     "zh-hans": [
@@ -2251,6 +2424,18 @@
       [
         "\\bsplit brain situatie\\b",
         "split-brainsituatie"
+      ],
+      [
+        "(\\{\\{ \\.Get \\\"\\w+\\\" \\}\\}|`Heartbeat`) (server|servers|cluster|configuratie|node|nodes|parameters|heartbeat|module|netwerk|VM)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bheartbeat (berichten|service)\\b",
+        "heartbeat\\1"
+      ],
+      [
+        "(„|\")\\s+(?=[A-Z]:/)",
+        "\\1"
       ]
     ]
   },

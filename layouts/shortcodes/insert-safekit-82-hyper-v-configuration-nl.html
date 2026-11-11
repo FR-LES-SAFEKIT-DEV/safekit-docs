@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-08.10 | glossaire 2026-11-08.28 | Translation LLM | 33 expressions */}}
+{{/* translation: translate_md 2026-11-11.1 | glossaire 2026-11-11.2 | Translation LLM | 49 expressions */}}
 {{/* Shortcode: insert-safekit-82-hyper-v-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-hyper-v.md */}}
@@ -7,7 +7,7 @@
 
 ⚠️ Lees deze punten zorgvuldig door voordat u begint:
 
-  * De {{ .Get "app" }} configuratie wordt gepresenteerd met een virtuele machine met de naam `VM1`. Lees "1. Vereisten" zorgvuldig door voor de **organisatie van VM1-bestanden**, anders kan het herstel op de secundaire node mislukken met inconsistente gegevens.
+  * De {{ .Get "app" }}-configuratie wordt gepresenteerd met een virtuele machine met de naam `VM1`. Lees "1. Vereisten" zorgvuldig door voor de **organisatie van de VM1-bestanden**. Anders kan het herstel op de secundaire node mislukken met inconsistente gegevens.
   * U moet deze configuratie herhalen voor alle VM's die u wilt repliceren en opnieuw opstarten.
   * Het bestandssysteem waar de VM-bestanden die door SafeKit worden gerepliceerd, worden opgeslagen, moet NTFS zijn; **ReFS wordt niet ondersteund**.
   * SafeKit ondersteunt de replicatie van **productieknooppunten {{ .Get "app" }}, maar geen standaardknooppunten**. Gebruik geen standaardknooppunten, anders kan het herstel op de secundaire node mislukken met inconsistente gegevens.
@@ -15,7 +15,7 @@
 
 ### 1. Vereisten {#prerequisite}
 
-Voor SafeKit-replicatie moeten alle virtuele machinebestanden VM1 (configuratiebestand, virtuele harde schijf, enz.) in dezelfde map worden opgeslagen, ook al is dit niet het standaardgedrag van Hyper-V (bijv. D:/Repli-{{ .Get "app" }}/VM1, waarbij VM1 de naam van de virtuele machine is).
+Voor SafeKit-replicatie moeten alle bestanden van de virtuele machine VM1 (configuratiebestand, virtuele harde schijf, enz.) in dezelfde map worden opgeslagen, ook al is dit niet het standaardgedrag van Hyper-V (bijv. D:/Repli-{{ .Get "app" }}/VM1, waarbij VM1 de naam is van de virtuele machine).
 
 Als niet alle bestanden van VM1 zich in dezelfde map bevinden, gebruik dan {{ .Get "app" }}:
 
@@ -29,7 +29,7 @@ Als niet alle bestanden van VM1 zich in dezelfde map bevinden, gebruik dan {{ .G
 
 ⚠️ VM1 mag alleen op één node worden aangemaakt. Het enige dat op de andere node moet worden aangemaakt, is de VM1 directory (D:/Repli-{{ .Get "app" }}/VM1).
 
-⚠️ Zorg ervoor dat de naam/namen van de virtuele switch(es) waarnaar de virtuele machine verwijst, bestaan op beide {{ .Get "app" }} servers en overeenkomen met hetzelfde fysieke netwerk.
+⚠️ Zorg ervoor dat de namen van de virtuele schakelaars waarnaar de virtuele machine verwijst, op beide {{ .Get "app" }}-servers bestaan en overeenkomen met hetzelfde fysieke netwerk.
 
 ⚠️ Failover van de Hyper-V-module ({{ .Get "mod" }}.safe) kan mislukken als niet aan de vereisten voor VM-migratie is voldaan. Raadpleeg 🛠️ [KB SK-0088 in dit document](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf) om compatibiliteitsproblemen tussen Hyper-V-knooppunten (hardware, netwerk, configuratie) te detecteren.
 
@@ -46,7 +46,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation dat zich buite
 ℹ️ Raadpleeg 🛠️ [11. De SafeKit-webservice beveiligen](/nl/resources/safekit-user-guide-82/#https) in de gebruikershandleiding om de webconsole te beveiligen.
 
 
-![Start de SafeKit webconsole om het {{ .Get "app" }} cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
+![Start de SafeKit webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
 
 
 ### 3. Knoopp Adressen configureren {#3-configure-node-addresses}
@@ -62,7 +62,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation dat zich buite
 ℹ️ Als u op `Advanced configuration` klikt, wordt het bestand `cluster.xml` weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten.
 
 
-![Voer de knooppunten van het {{ .Get "app" }} cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
+![Voer de knooppunten van het {{ .Get "app" }}-cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
 ### 4. Selecteer een module {#4-select-a-module}
@@ -81,49 +81,49 @@ U kunt de console ook in een browser uitvoeren op een werkstation dat zich buite
 ### 5. De module configureren {#5-configure-the-module}
 
   * Kies voor een `Automatic` start van de module bij het opstarten zonder vertraging.
-  * Normaal gesproken hebt u één `Heartbeat` netwerk waarop de replicatie wordt uitgevoerd. Maar u kunt indien nodig een privénetwerk definiëren (door een LAN toe te voegen in stap 3).
+  * Normaal gesproken hebt u één `Heartbeat`-netwerk waarop de replicatie wordt uitgevoerd. U kunt echter indien nodig een privénetwerk definiëren (door een LAN toe te voegen in stap 3).
   * Voer in `VM_PATH` het hoofdpad van de gerepliceerde map in (D:/Repli-{{ .Get "app" }}).
-  * Voer `VM_NAME` in, de naam van de virtuele machine (VM1).
+  * Voer in `VM_NAME` de naam van de virtuele machine (VM1) in.
 
 
 We gaan ervan uit dat alle VM1 bestanden zich in D:/Repli-{{ .Get "app" }}/VM1 bevinden (zie [vereisten](#prerequisite)). Deze map wordt in realtime gerepliceerd door SafeKit. Voer geen gedeeltelijke replicatie uit, omdat failover dan niet werkt.
 
-De waarden `NORMAL_STOP` en `FORCE_STOP` kunnen " `stop` ", " `save` " of " `off` " zijn:
+De waarden `NORMAL_STOP` en `FORCE_STOP` kunnen "`stop`", "`save`" of "`off`" zijn:
 
-  * " `stop` " sluit de VM af wanneer de module wordt gestopt.
-  * " `save` " slaat de huidige status van de VM op (opschorten) wanneer de module wordt gestopt.
-  * " `off` " schakelt de VM uit (power off) wanneer de module wordt gestopt.
+  * "`stop`" schakelt de VM uit wanneer de module wordt gestopt.
+  * "`save`" slaat de huidige status van de VM op (opschorten) wanneer de module wordt gestopt.
+  * "`off`" schakelt de VM uit (power off) wanneer de module wordt gestopt.
 
 
-" `stop` " wordt aanbevolen omdat het de uitschakeling en vervolgens de herstart van de VM veroorzaakt wanneer de module wordt gestopt en opnieuw gestart. Dus als de applicatie in de VM faalt, wordt deze opnieuw gestart.
+"`stop`" wordt aanbevolen omdat het de VM afsluit en vervolgens opnieuw opstart wanneer de module wordt gestopt en opnieuw gestart. Als de toepassing in de VM dus faalt, wordt deze opnieuw gestart.
 
 Dit is bijvoorbeeld het geval bij het wisselen tussen primaire en secundaire rollen.
 
-ℹ️ U hoeft geen virtueel IP-adres te configureren. VM1 wordt opnieuw opgestart op de secundaire {{ .Get "app" }} met zijn fysieke IP-adres en dit IP-adres wordt omgeleid.
+ℹ️ U hoeft geen virtueel IP-adres te configureren. VM1 wordt opnieuw opgestart op de secundaire {{ .Get "app" }}-server met zijn fysieke IP-adres en dit IP-adres wordt omgeleid.
 
 ℹ️ Wanneer u de SafeKit configuratie toepast, wordt de `Automatic Start Action` van de virtuele machine ingesteld op `Nothing` in {{ .Get "app" }}. Dit zorgt ervoor dat de VM niet automatisch wordt gestart wanneer de Hyper-V-host wordt gestart, maar alleen wordt gestart wanneer de module zelf wordt gestart.
 
 
-![Voer de {{ .Get "app" }} parameters in](/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png)
+![Voer de {{ .Get "app" }}-parameters in](/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png)
 
 
 ### 6. Aangepaste checker om VM-storingen te detecteren {#vm-checker}
 
-De aangepaste checker verzendt met regelmatige tussenpozen heartbeat-berichten van de host naar de VM. Het is dan de taak van de {{ .Get "app" }} Heartbeat-service die in de VM is geïnstalleerd om een antwoord te verzenden op elk van deze heartbeat-berichten.
+De aangepaste checker verzendt met regelmatige tussenpozen heartbeatberichten van de host naar de VM. Het is dan de taak van de {{ .Get "app" }}-heartbeatservice die in de VM is geïnstalleerd om een antwoord te verzenden op elk van deze heartbeatberichten.
 
-Als de {{ .Get "app" }} Heartbeat-service niet reageert op het bericht (VM vergrendeld, vastgelopen of gestopt met functioneren), voert de aangepaste checker een actie uit om de VM opnieuw op te starten op dezelfde {{ .Get "app" }} node of op de andere.
+Als de {{ .Get "app" }}-heartbeatservice niet reageert op het bericht (VM vergrendeld, vastgelopen of gestopt met functioneren), voert de aangepaste checker een actie uit om de VM opnieuw op te starten op dezelfde {{ .Get "app" }}-node of op de andere.
 
   * Klik op `Checkers / Custom` (zie afbeelding).
-  * Stel gewoon een naam naar keuze in bij `Resource name` (voorbeeld VM1). `Resource name` identificeert de virtuele machine met een resourcenaam in SafeKit: `custom.VM1`.
-  * Met `restart` in `Action` wordt de VM opnieuw opgestart op dezelfde {{ .Get "app" }} node. Na 3 mislukte herstarts in 24 uur stopt de SafeKit {{ .Get "mod" }} module op de primaire node en vindt er een failover van de VM plaats op de secundaire node.
-  * Als u `stopstart` instelt in `Action`, is er een directe failover op de andere {{ .Get "app" }} node zodra de VM niet reageert op heartbeats.
+  * Stel een naam naar keuze in `Resource name` (voorbeeld VM1). `Resource name` identificeert de virtuele machine met een resourcenaam in SafeKit: `custom.VM1`.
+  * Met `restart` in `Action` wordt de VM opnieuw opgestart op dezelfde {{ .Get "app" }}-node. Na 3 mislukte herstarts in 24 uur stopt de SafeKit {{ .Get "mod" }}-module op de primaire node en vindt er een failover van de VM plaats op de secundaire node.
+  * Als u `stopstart` instelt in `Action`, is er een directe failover op de andere {{ .Get "app" }}-node zodra de VM niet reageert op heartbeats.
 
 
 ℹ️ Als u de virtuele machine wilt stoppen voor onderhoud, zal de aangepaste checker deze automatisch opnieuw opstarten. Om dat te voorkomen, kunt u [de checker tijdelijk opschorten 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Of u kunt deze verwijderen door de configuratieregel in de console te verwijderen.
 
 ℹ️ Hetzelfde geldt wanneer u een controlepunt wilt herstellen. {{ .Get "app" }} stopt de VM om de bewerking uit te voeren, en de VM-checker kan negatief reageren door de VM automatisch opnieuw op te starten. Om dit te voorkomen, [moet u de checker 🖼️ onderbreken](/wp-content/uploads/2024/04/safekit-disable-checkers.png) voordat u doorgaat met de bewerking.
 
-ℹ️ Standaard geeft de aangepaste checker 50 seconden de tijd voor de VM om op te starten voordat deze als onbeschikbaar wordt beschouwd. Als uw {{ .Get "app" }} VM meer tijd nodig heeft om te starten, kunt u deze vertraging verhogen door -InitialGrace toe te voegen aan de aangepaste checker vmcheck.ps1 in userconfig.xml. De waarde wordt uitgedrukt in stappen van 5 seconden. Bijvoorbeeld: -InitialGrace 20 staat een respijtperiode van 100 seconden toe: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+ℹ️ Standaard geeft de aangepaste checker 50 seconden de tijd voor de VM om op te starten voordat deze als onbeschikbaar wordt beschouwd. Als uw {{ .Get "app" }}-VM meer tijd nodig heeft om te starten, kunt u deze vertraging verhogen door -InitialGrace toe te voegen aan de aangepaste checker vmcheck.ps1 in userconfig.xml. De waarde wordt uitgedrukt in stappen van 5 seconden. Bijvoorbeeld: -InitialGrace 20 staat een respijtperiode van 100 seconden toe: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
 
 
 ![Voer de parameters voor de aangepaste {{ .Get "app" }} controle in](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
@@ -139,7 +139,7 @@ Als de {{ .Get "app" }} Heartbeat-service niet reageert op het bericht (VM vergr
   * De versleuteling van de communicatie tussen knooppunten behouden.
 
 
-![Communicatieversleuteling van de {{ .Get "app" }} module](/wp-content/uploads/2024/03/07-module-encryption.png)
+![Communicatieversleuteling van de {{ .Get "app" }}-module](/wp-content/uploads/2024/03/07-module-encryption.png)
 
 
 ### 9. Opslaan en toepassen {#9-save-and-apply}
@@ -147,7 +147,7 @@ Als de {{ .Get "app" }} Heartbeat-service niet reageert op het bericht (VM vergr
   * `Save and apply` op beide knooppunten.
 
 
-![De configuratie van de {{ .Get "app" }} module opslaan en toepassen](/wp-content/uploads/2024/03/08-module-save.png)
+![De configuratie van de {{ .Get "app" }}-module opslaan en toepassen](/wp-content/uploads/2024/03/08-module-save.png)
 
 
 ### 10. Controleer of de configuratie succesvol is {#10-verify-successful-configuration}
@@ -156,7 +156,7 @@ Als de {{ .Get "app" }} Heartbeat-service niet reageert op het bericht (VM vergr
   * Als de `Failure` ❌ optreedt op één node, open dan het ▼ accordeon voor die node en bekijk de berichten. Merk op dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
 
 
-![Controleer of de configuratie van de {{ .Get "app" }} module is geslaagd](/wp-content/uploads/2024/03/09-module-save-check.png)
+![Controleer of de configuratie van de {{ .Get "app" }}-module is geslaagd](/wp-content/uploads/2024/03/09-module-save-check.png)
 
 
 ### 11. Start de node met actuele gegevens {#11-start-the-node-with-up-to-date-data}
@@ -173,7 +173,7 @@ Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar kno
 ⚠️ Gebruik `Start` voor volgende starts: SafeKit behoudt de meest recente server. Starten `As primary` is een speciale opstart de eerste keer of tijdens uitzonderlijke bewerkingen.
 
 
-![Start de {{ .Get "app" }} node met de meest recente gegevens als primaire node](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+![Start de {{ .Get "app" }}-node met de meest recente gegevens als primaire node](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
 ### 12. Wacht tot de overgang naar ALONE (groen) {#12-wait-for-the-transition-to-alone-green}
@@ -184,7 +184,7 @@ Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar kno
 ⚠️ Als ALONE (groen) niet wordt bereikt of als VM1 niet wordt gestart, analyseer dan waarom met het [modullogboek 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) van knooppunt 1.
 
   * Klik op het 🔍 **logboekpictogram** van `node1` om het modulelogboek te openen en zoek naar foutmeldingen, zoals een checker die een fout detecteert en de module stopt.
-  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals VM1 die niet correct is gestart.
+  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en u kunt fouten detecteren, bijvoorbeeld als VM1 niet correct is gestart.
   * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
@@ -209,7 +209,7 @@ Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar kno
 ℹ️ Bij het gebruik van {{ .Get "app" }} verschilsoftware wordt alleen de verschilsoftware opnieuw gesynchroniseerd na de eerste synchronisatie, wat tijd bespaart voor grote virtuele harde schijven.
 
 
-![Start de {{ .Get "app" }} node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+![Start de {{ .Get "app" }}-node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
 ### 14. Controleer of het cluster operationeel is {#14-verify-that-the-cluster-is-operational}
@@ -220,7 +220,7 @@ Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar kno
 In deze status worden alleen wijzigingen in bestanden in realtime gerepliceerd.
 
 
-![{{ .Get "app" }} node 2 is SECOND (groen)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+![{{ .Get "app" }}-node 2 is SECOND (groen)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
 ### 15. Testen {#15-testing}
@@ -233,25 +233,25 @@ In deze status worden alleen wijzigingen in bestanden in realtime gerepliceerd.
 ⚠️ Als ALONE (groen) niet wordt bereikt op node2 of als VM1 niet is gestart, analyseer dan waarom met het [modullogboek 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) van node 2.
 
   * Klik op het 🔍 **logboekpictogram** van `node2` om het modulelogboek te openen en zoek naar foutmeldingen, zoals een checker die een fout detecteert en de module stopt.
-  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals VM1 die niet correct is gestart.
+  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en u kunt fouten detecteren, bijvoorbeeld als VM1 niet correct is gestart.
   * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
 ⚠️ Aangezien het `start_prim` script de virtuele machine op node 2 importeert, kan de failover mislukken vanwege 🛠️ [{{ .Get "app" }} instellingen (zie KB SK-0088 in dit document)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
-⚠️ Als alles in orde is, start u node1, die de gerepliceerde mappen van node2 opnieuw synchroniseert.
+⚠️ Als alles in orde is, start node1. Node1 synchroniseert vervolgens de gerepliceerde mappen opnieuw vanaf node2.
 
 Als er iets misgaat, stop dan node2 en [forceer node 1 om als primair te starten 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png), die opnieuw zal opstarten met zijn lokaal gezonde gegevens op het moment van de stop.
 
 ℹ️ Let op: u hebt een 🕒 **[tijdlijn 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** die nuttig kan zijn om te begrijpen wat er in het cluster gebeurt.
 
 
-![Stop de {{ .Get "app" }} module op de PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+![Stop de {{ .Get "app" }}-module op de PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16. Configureer indien nodig een splitbrain-checker {#16-if-necessary-configure-a-splitbrain-checker}
+### 16. Configureer indien nodig een split-brain-checker {#16-if-necessary-configure-a-splitbrain-checker}
 
-  * Raadpleeg [Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?](/nl/best-practises/power-outage-and-network-isolation-in-a-cluster/) om te weten of u een splitbrain-checker moet configureren.
+  * Raadpleeg [Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?](/nl/best-practises/power-outage-and-network-isolation-in-a-cluster/) om te weten of u een split-brain-checker moet configureren.
   * Ga naar de moduleconfiguratie en klik op `Checkers / Splitbrain` (zie afbeelding) om de splitbrain-parameters te bewerken.
   * `Save and apply` om deze opnieuw te implementeren op beide knooppunten (de module moet op beide knooppunten worden gestopt om op te slaan en toe te passen).
 
@@ -260,7 +260,7 @@ Als er iets misgaat, stop dan node2 en [forceer node 1 om als primair te starten
 
   * `Resource name` identificeert de getuige met een resourcenaam: `splitbrain.witness`. U kunt deze waarde wijzigen om de getuige te identificeren.
   * `Witness address` is het argument voor een ping wanneer een node van PRIM naar ALONE of van SECOND naar ALONE gaat. Wijzig deze waarde met het IP-adres van de witness (een robuust element, meestal een router).
-  * Opmerking: u kunt meerdere IP-adressen instellen, gescheiden door spaties. Let op: de IP-adressen moeten toegankelijk zijn vanaf één knooppunt, maar niet vanaf het andere in het geval van netwerkisolatie.
+  * Opmerking: u kunt meerdere IP-adressen instellen, gescheiden door spaties. Zorg ervoor dat de IP-adressen toegankelijk zijn vanaf het ene knooppunt, maar niet vanaf het andere in het geval van netwerkisolatie.
 
 
 ![Voer de splitbrain-parameters {{ .Get "app" }} in](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
@@ -272,21 +272,21 @@ Als u een automatische herstart of failover wilt wanneer een kritieke service bi
 
 Eerst moet u de eerder beschreven [aangepaste VM-checker](#vm-checker) configureren.
 
-En selecteer vervolgens in Microsoft Service Manager in de VM uw kritieke service en in de herstel-eigenschap van de service hoeft u alleen de uitschakeling van de VM te configureren wanneer de kritieke service faalt.
+Selecteer vervolgens in Microsoft Service Manager in de VM uw kritieke service en configureer in de herstelopties van de service het afsluiten van de VM wanneer de kritieke service uitvalt.
 
-Kies daarvoor in de herstelopties van uw kritieke service " **Een programma uitvoeren** " bij storingen en stel in de opties voor het uitvoeren van programma's " **C:/Windows/System32/shutdown.exe** " in en in "Opdrachtregelparameters" stelt **u /s /c "service fails" in**.
+Kies hiervoor in de herstelopties van uw kritieke service de optie "**Een programma uitvoeren**" bij storingen. Stel in de opties voor het uitvoeren van een programma `C:/Windows/System32/shutdown.exe` in als het programma en `/s /c "service fails"` als de opdrachtregelparameters.
 
-Natuurlijk kunt u met uw eigen scripts een subtieler herstel implementeren. Houd er echter rekening mee dat het afsluiten van de VM de aangepaste checker in de host inschakelt. De aangepaste checker detecteert dat de {{ .Get "app" }} heartbeat niet langer reageert en start de VM opnieuw op op dezelfde {{ .Get "app" }} server of voert een failover uit op de andere {{ .Get "app" }} server (afhankelijk van de configuratie).
+U kunt natuurlijk een subtieler herstel implementeren met uw eigen scripts. Houd er echter rekening mee dat het afsluiten van de VM de aangepaste checker in de host inschakelt. De aangepaste checker detecteert dat de {{ .Get "app" }}-heartbeat niet langer reageert. Vervolgens wordt de VM opnieuw gestart op dezelfde {{ .Get "app" }}-server of wordt er een failover uitgevoerd naar de andere {{ .Get "app" }}-server (afhankelijk van de configuratie).
 
 Om de functie te testen, gebruikt u Taakbeheer en beëindigt u het proces (Taak beëindigen) dat is gekoppeld aan de kritieke service. Een schone stop van de service via Servicebeheer of de opdracht "net stop" activeert de herstelactie niet in Windows Servicebeheer.
 
 
-![Failover van kritieke services {{ .Get "app" }} VM van {{ .Get "app" }} module](/wp-content/uploads/2023/11/hyperv-critical-service.png)
+![Failover van de {{ .Get "app" }}-VM wanneer een kritieke service uitvalt](/wp-content/uploads/2023/11/hyperv-critical-service.png)
 
 
 ### 18. Ondersteuning {#18-support}
 
-  * Om ondersteuning te krijgen, maakt u 2 SafeKit `Snapshots` (2 .zip-bestanden), één voor elke node.
+  * Om ondersteuning te krijgen, maakt u twee SafeKit `Snapshots` (twee .zip-bestanden), één voor elke node.
 
 
 ℹ️ [Meer informatie over de ondersteuning vindt u hier](/nl/resources/safekit-support/).

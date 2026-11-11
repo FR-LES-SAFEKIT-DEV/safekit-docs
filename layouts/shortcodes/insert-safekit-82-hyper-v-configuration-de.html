@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-08.10 | glossaire 2026-11-08.28 | Translation LLM | 34 expressions */}}
+{{/* translation: translate_md 2026-11-11.1 | glossaire 2026-11-11.2 | Translation LLM | 47 expressions */}}
 {{/* Shortcode: insert-safekit-82-hyper-v-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-hyper-v.md */}}
@@ -7,7 +7,7 @@
 
 ⚠️ Lesen Sie diese Punkte sorgfältig durch, bevor Sie beginnen:
 
-  * Die {{ .Get "app" }}-Konfiguration wird mit einer virtuellen Maschine namens `VM1` dargestellt. Lesen Sie sorgfältig "1. Voraussetzungen" für die **Organisation der VM1-Dateien**, da sonst die Wiederherstellung auf dem sekundären Knoten mit inkonsistenten Daten fehlschlagen kann.
+  * Die {{ .Get "app" }}-Konfiguration wird mit einer virtuellen Maschine namens `VM1` dargestellt. Lesen Sie sorgfältig "1. Voraussetzungen" für die **Organisation der VM1-Dateien**. Andernfalls kann die Wiederherstellung auf dem sekundären Knoten mit inkonsistenten Daten fehlschlagen.
   * Sie müssen diese Konfiguration für alle VMs wiederholen, die Sie replizieren und neu starten möchten.
   * Das Dateisystem, in dem die von SafeKit replizierten VM-Dateien gespeichert werden, muss NTFS sein; **ReFS wird nicht unterstützt**.
   * SafeKit unterstützt die Replikation von **{{ .Get "app" }}-Produktions-Checkpoints, aber keine Standard-Checkpoints**. Verwenden Sie keine Standard-Checkpoints, da die Wiederherstellung auf dem sekundären Knoten sonst mit inkonsistenten Daten fehlschlagen kann.
@@ -15,21 +15,21 @@
 
 ### 1. Voraussetzungen {#prerequisite}
 
-Für SafeKit-Replikation müssen alle virtuellen Maschinen-Dateien VM1 (Konfigurationsdatei, virtuelle Festplatte usw.) im selben Ordner gespeichert werden, auch wenn dies nicht das Standardverhalten von Hyper-V ist (z. B. D:/Repli-{{ .Get "app" }}/VM1, wobei VM1 der Name der virtuellen Maschine ist).
+Für SafeKit-Replikation müssen alle Dateien der virtuellen Maschine VM1 (Konfigurationsdatei, virtuelle Festplatte usw.) im selben Ordner gespeichert werden, auch wenn dies nicht das Standardverhalten von Hyper-V ist (z. B. D:/Repli-{{ .Get "app" }}/VM1, wobei VM1 der Name der virtuellen Maschine ist).
 
-Wenn sich nicht alle Dateien von VM1 im selben Ordner befinden, verwenden Sie {{ .Get "app" }} Manager:
+Wenn sich nicht alle Dateien von VM1 im selben Ordner befinden, verwenden Sie {{ .Get "app" }}-Manager:
 
   * Exportieren Sie VM1 in einen Ordner, z. B. in D:/Repli-{{ .Get "app" }}
-  * Dieser Export erstellt einen Ordner D:/Repli-{{ .Get "app" }}/VM1 der alle VM1 Dateien enthält
-  * VM1 aus dem Inventar des {{ .Get "app" }} Managers entfernen
-  * Importieren Sie die zuvor exportierte VM1 in {{ .Get "app" }} Manager
+  * Dieser Export erstellt einen Ordner D:/Repli-{{ .Get "app" }}/VM1 der alle VM1-Dateien enthält
+  * VM1 aus dem Inventar des {{ .Get "app" }}-Managers entfernen
+  * Importieren Sie die zuvor exportierte VM1 in {{ .Get "app" }}-Manager
 
 
 ⚠️ Erstellen Sie einen Snapshot Ihrer VM, bevor Sie mit dem Vorgang beginnen.
 
-⚠️ VM1 darf nur auf einem einzigen Knoten erstellt werden. Das Einzige, was auf dem anderen Knoten erstellt werden muss, ist das VM1 Verzeichnis (D:/Repli-{{ .Get "app" }}/VM1).
+⚠️ VM1 darf nur auf einem einzigen Knoten erstellt werden. Das Einzige, was auf dem anderen Knoten erstellt werden muss, ist das VM1-Verzeichnis (D:/Repli-{{ .Get "app" }}/VM1).
 
-⚠️ Stellen Sie sicher, dass der/die von der virtuellen Maschine referenzierte(n) virtuelle(n) Switch-Name(n) auf beiden {{ .Get "app" }} Servern vorhanden ist/sind und demselben physischen Netzwerk entsprechen.
+⚠️ Stellen Sie sicher, dass der/die von der virtuellen Maschine referenzierte(n) Name(n) des virtuellen Switches auf beiden {{ .Get "app" }}-Servern vorhanden ist/sind und demselben physischen Netzwerk entsprechen.
 
 ⚠️ Das Failover des Hyper-V-Moduls ({{ .Get "mod" }}.safe) kann fehlschlagen, wenn die Voraussetzungen für die VM-Migration nicht erfüllt sind. Um Kompatibilitätsprobleme zwischen Hyper-V-Knoten (Hardware, Netzwerk, Konfiguration) zu erkennen, siehe 🛠️ [KB SK-0088 in diesem Dokument](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
@@ -46,7 +46,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 ℹ️ Um die Webkonsole zu sichern, siehe 🛠️ [11. Sichern des SafeKit Webdienstes](/de/resources/safekit-user-guide-82/#https) im Benutzerhandbuch.
 
 
-![Starten Sie die SafeKit Webkonsole, um den {{ .Get "app" }} Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
+![Starten Sie die SafeKit Webkonsole, um den {{ .Get "app" }}-Cluster zu konfigurieren](/wp-content/uploads/2024/03/01-login-large.png)
 
 
 ### 3. Knotenadressen konfigurieren {#3-configure-node-addresses}
@@ -62,7 +62,7 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 ℹ️ Wenn Sie auf `Advanced configuration` klicken, wird die Datei `cluster.xml` angezeigt. Diese Datei wird automatisch von der Konsole ausgefüllt und auf den Knoten bereitgestellt.
 
 
-![Geben Sie die Knoten des {{ .Get "app" }} Clusters ein](/wp-content/uploads/2024/03/02-cluster-edit.png)
+![Geben Sie die Knoten des {{ .Get "app" }}-Clusters ein](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
 ### 4. Wählen Sie ein Modul aus {#4-select-a-module}
@@ -80,53 +80,53 @@ Sie können die Konsole auch in einem Browser auf einer Workstation außerhalb d
 
 ### 5. Modul konfigurieren {#5-configure-the-module}
 
-  * Wählen Sie einen `Automatic` Start des Moduls beim Hochfahren ohne Verzögerung.
-  * Normalerweise haben Sie ein einzelnes `Heartbeat` Netzwerk, auf dem die Replikation durchgeführt wird. Bei Bedarf können Sie jedoch ein privates Netzwerk definieren (indem Sie in Schritt 3 ein LAN hinzufügen).
-  * Geben Sie in `VM_PATH` den Stammverzeichnis-Pfad des replizierten Verzeichnisses ein (D:/Repli-{{ .Get "app" }}).
-  * Geben Sie `VM_NAME` ein, den Namen der virtuellen Maschine (VM1).
+  * Wählen Sie einen `Automatic`-Start des Moduls beim Hochfahren ohne Verzögerung.
+  * Normalerweise haben Sie ein einzelnes `Heartbeat`-Netzwerk, auf dem die Replikation durchgeführt wird. Sie können jedoch bei Bedarf ein privates Netzwerk definieren (indem Sie in Schritt 3 ein LAN hinzufügen).
+  * Geben Sie unter `VM_PATH` den Stammverzeichnispfad des replizierten Verzeichnisses ein (D:/Repli-{{ .Get "app" }}).
+  * Geben Sie unter `VM_NAME` den Namen der virtuellen Maschine (VM1) ein.
 
 
-Wir gehen davon aus, dass sich alle VM1 Dateien in D:/Repli-{{ .Get "app" }}/VM1 befinden (siehe [Voraussetzungen](#prerequisite)). Dieses Verzeichnis wird von SafeKit in Echtzeit repliziert. Führen Sie keine Teilreplikation durch, da das Failover nicht funktioniert.
+Wir gehen davon aus, dass sich alle VM1-Dateien in D:/Repli-{{ .Get "app" }}/VM1 befinden (siehe [Voraussetzungen](#prerequisite)). Dieses Verzeichnis wird von SafeKit in Echtzeit repliziert. Führen Sie keine Teilreplikation durch, da das Failover nicht funktioniert.
 
-Die Werte `NORMAL_STOP` und `FORCE_STOP` können „ `stop` “, „ `save` “ oder „ `off` “ sein:
+Die Werte `NORMAL_STOP` und `FORCE_STOP` können „`stop`“, „`save`“ oder „`off`“ sein:
 
-  * „ `stop` “ fährt die VM herunter, wenn das Modul gestoppt wird.
-  * „ `save` “ speichert den aktuellen Zustand der VM (Anhalten), wenn das Modul gestoppt wird.
-  * „ `off` “ schaltet die VM aus (Stromversorgung unterbrechen), wenn das Modul gestoppt wird.
+  * „`stop`“ fährt die VM herunter, wenn das Modul gestoppt wird.
+  * „`save`“ speichert den aktuellen Zustand der VM (Anhalten), wenn das Modul gestoppt wird.
+  * „`off`“ schaltet die VM aus (Stromversorgung unterbrechen), wenn das Modul gestoppt wird.
 
 
-" `stop` " wird empfohlen, da es das Herunterfahren und anschließende Neustarten der VM bewirkt, wenn das Modul gestoppt und neu gestartet wird. Wenn die Anwendung innerhalb der VM also ausfällt, wird sie neu gestartet.
+"`stop`" wird empfohlen, da es die VM herunterfährt und dann neu startet, wenn das Modul gestoppt und neu gestartet wird. Wenn also die Anwendung in der VM ausfällt, wird sie neu gestartet.
 
 Dies ist beispielsweise beim Wechsel zwischen primären und sekundären Rollen der Fall.
 
-ℹ️ Sie müssen keine virtuelle IP-Adresse konfigurieren. VM1 wird auf der sekundären {{ .Get "app" }} mit seiner physischen IP-Adresse neu gestartet, und diese IP-Adresse wird umgeleitet.
+ℹ️ Sie müssen keine virtuelle IP-Adresse konfigurieren. VM1 wird auf dem sekundären {{ .Get "app" }}-Server mit seiner physischen IP-Adresse neu gestartet, und diese IP-Adresse wird umgeleitet.
 
 ℹ️ Wenn Sie die SafeKit-Konfiguration anwenden, wird die `Automatic Start Action` der virtuellen Maschine auf `Nothing` in {{ .Get "app" }} gesetzt. Dadurch wird sichergestellt, dass die VM nicht automatisch startet, wenn der Hyper-V-Host startet, sondern erst gestartet wird, wenn das Modul selbst gestartet wird.
 
 
-![Geben Sie die {{ .Get "app" }} Parameter ein](/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png)
+![Geben Sie die {{ .Get "app" }}-Parameter ein](/wp-content/uploads/2024/03/19-module-hyperv-edit-config-1.png)
 
 
 ### 6. Benutzerdefinierter Prüfer zur Erkennung von VM-Fehlfunktionen {#vm-checker}
 
-Der benutzerdefinierte Checker sendet in regelmäßigen Abständen Heartbeat-Nachrichten vom Host an die VM. Es ist dann die Aufgabe des in der VM installierten {{ .Get "app" }} Heartbeat-Dienstes, eine Antwort auf jede dieser Heartbeat-Nachrichten zu senden.
+Der benutzerdefinierte Checker sendet in regelmäßigen Abständen Heartbeat-Nachrichten vom Host an die VM. Es ist dann die Aufgabe des in der VM installierten {{ .Get "app" }}-Heartbeat-Dienstes, eine Antwort auf jede dieser Heartbeat-Nachrichten zu senden.
 
-Wenn der {{ .Get "app" }} Heartbeat-Dienst nicht auf die Nachricht reagiert (VM gesperrt, abgestürzt oder außer Betrieb), führt der benutzerdefinierte Prüfer eine Aktion aus, um die VM auf demselben {{ .Get "app" }} Knoten oder auf dem anderen neu zu starten.
+Wenn der {{ .Get "app" }}-Heartbeat-Dienst nicht auf die Nachricht reagiert (VM gesperrt, abgestürzt oder außer Betrieb), führt der benutzerdefinierte Prüfer eine Aktion aus, um die VM auf demselben {{ .Get "app" }}-Knoten oder auf dem anderen neu zu starten.
 
   * Klicken Sie auf `Checkers / Custom` (siehe Abbildung).
-  * Legen Sie einfach einen Namen Ihrer Wahl unter `Resource name` fest (Beispiel: VM1). `Resource name` identifiziert die virtuelle Maschine mit einem Ressourcennamen in SafeKit: `custom.VM1`.
-  * Bei `restart` in `Action` wird die VM auf demselben {{ .Get "app" }} Knoten neu gestartet. Nach 3 erfolglosen Neustarts innerhalb von 24 Stunden stoppt das SafeKit {{ .Get "mod" }} Modul auf dem primären Knoten und es erfolgt ein Failover der VM auf den sekundären Knoten.
-  * Wenn Sie `stopstart` in `Action` einstellen, erfolgt ein direkter Failover auf dem anderen {{ .Get "app" }} Knoten, sobald die VM nicht auf Heartbeats reagiert.
+  * Legen Sie einen Namen Ihrer Wahl in `Resource name` fest (Beispiel: VM1). `Resource name` identifiziert die virtuelle Maschine mit einem Ressourcennamen in SafeKit: `custom.VM1`.
+  * Bei `restart` in `Action` wird die VM auf demselben {{ .Get "app" }}-Knoten neu gestartet. Nach 3 erfolglosen Neustarts innerhalb von 24 Stunden stoppt das SafeKit {{ .Get "mod" }}-Modul auf dem primären Knoten und es erfolgt ein Failover der VM auf den sekundären Knoten.
+  * Wenn Sie `stopstart` in `Action` einstellen, erfolgt ein direkter Failover auf dem anderen {{ .Get "app" }}-Knoten, sobald die VM nicht auf Heartbeats reagiert.
 
 
 ℹ️ Wenn Sie die virtuelle Maschine für Wartungszwecke anhalten möchten, startet der benutzerdefinierte Checker sie automatisch neu. Um dies zu vermeiden, können Sie [den Checker vorübergehend anhalten 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Oder Sie können ihn entfernen, indem Sie die Konfigurationszeile in der Konsole löschen.
 
-ℹ️ Das Gleiche gilt, wenn Sie einen Checkpoint wiederherstellen möchten. {{ .Get "app" }} stoppt die VM, um den Vorgang auszuführen, und der VM-Checker kann negativ reagieren, indem er die VM automatisch neu startet. Um dies zu vermeiden, [setzen Sie den Checker 🖼️ aus,](/wp-content/uploads/2024/04/safekit-disable-checkers.png) bevor Sie mit dem Vorgang fortfahren.
+ℹ️ Das Gleiche gilt, wenn Sie einen Checkpoint wiederherstellen möchten. {{ .Get "app" }} stoppt die VM, um den Vorgang auszuführen, und der VM-Checker kann negativ reagieren, indem er die VM automatisch neu startet. Um dies zu vermeiden, [setzen Sie den Checker 🖼️ aus](/wp-content/uploads/2024/04/safekit-disable-checkers.png), bevor Sie mit dem Vorgang fortfahren.
 
-ℹ️ Standardmäßig lässt der benutzerdefinierte Checker 50 Sekunden Zeit für den Start der VM, bevor er sie als nicht verfügbar betrachtet. Wenn Ihre {{ .Get "app" }} VM mehr Zeit zum Starten benötigt, können Sie diese Verzögerung erhöhen, indem Sie -InitialGrace zum benutzerdefinierten Checker vmcheck.ps1 in userconfig.xml hinzufügen. Der Wert wird in 5-Sekunden-Schritten ausgedrückt. Zum Beispiel erlaubt -InitialGrace 20 eine Schonfrist von 100 Sekunden: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
+ℹ️ Standardmäßig lässt der benutzerdefinierte Checker 50 Sekunden Zeit für den Start der VM, bevor er sie als nicht verfügbar betrachtet. Wenn Ihre {{ .Get "app" }}-VM mehr Zeit zum Starten benötigt, können Sie diese Verzögerung erhöhen, indem Sie -InitialGrace zum benutzerdefinierten Checker vmcheck.ps1 in userconfig.xml hinzufügen. Der Wert wird in 5-Sekunden-Schritten ausgedrückt. Zum Beispiel erlaubt -InitialGrace 20 eine Schonfrist von 100 Sekunden: `<custom ident="VM1" exec="vmcheck.ps1" arg="%VM_NAME% -InitialGrace 20" when="prim" action="restart"></custom>`.
 
 
-![Geben Sie die Parameter für die benutzerdefinierte {{ .Get "app" }} Prüfung ein](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
+![Geben Sie die Parameter für die benutzerdefinierte {{ .Get "app" }}-Prüfung ein](/wp-content/uploads/2024/04/safekit-custom-checker-hyperv.png)
 
 
 ### 7. Skripte bearbeiten (optional) {#7-edit-scripts-optional}
@@ -139,7 +139,7 @@ Wenn der {{ .Get "app" }} Heartbeat-Dienst nicht auf die Nachricht reagiert (VM 
   * Verschlüsselung der Kommunikation zwischen den Knoten beibehalten.
 
 
-![Kommunikationsverschlüsselung des {{ .Get "app" }} Moduls](/wp-content/uploads/2024/03/07-module-encryption.png)
+![Kommunikationsverschlüsselung des {{ .Get "app" }}-Moduls](/wp-content/uploads/2024/03/07-module-encryption.png)
 
 
 ### 9. Speichern und anwenden {#9-save-and-apply}
@@ -147,7 +147,7 @@ Wenn der {{ .Get "app" }} Heartbeat-Dienst nicht auf die Nachricht reagiert (VM 
   * `Save and apply` die Konfiguration und die Skripte auf beiden Knoten an.
 
 
-![{{ .Get "app" }} Modulkonfiguration speichern und anwenden](/wp-content/uploads/2024/03/08-module-save.png)
+![{{ .Get "app" }}-Modulkonfiguration speichern und anwenden](/wp-content/uploads/2024/03/08-module-save.png)
 
 
 ### 10. Erfolgreiche Konfiguration überprüfen {#10-verify-successful-configuration}
@@ -173,7 +173,7 @@ Wenn Knoten 2 gestartet wird, werden alle Daten von Knoten 1 auf Knoten 2 kopier
 ⚠️ Verwenden Sie `Start` für nachfolgende Starts: SafeKit behält den aktuellsten Server bei. Starten `As primary` ist ein spezieller Startvorgang beim ersten Mal oder bei außergewöhnlichen Vorgängen.
 
 
-![Starten Sie den {{ .Get "app" }} Knoten mit den aktuellen Daten als primären Knoten](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+![Starten Sie den {{ .Get "app" }}-Knoten mit den aktuellen Daten als primären Knoten](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
 ### 12. Warten Sie, bis die Anzeige auf ALONE (grün) wechselt {#12-wait-for-the-transition-to-alone-green}
@@ -184,14 +184,14 @@ Wenn Knoten 2 gestartet wird, werden alle Daten von Knoten 1 auf Knoten 2 kopier
 ⚠️ Wenn ALONE (grün) nicht erreicht wird oder wenn VM1 nicht gestartet wird, analysieren Sie den Grund mit dem [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) von Knoten 1.
 
   * Klicken Sie auf das 🔍 **Protokollsymbol** von `node1`, um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfer einen Fehler erkennt und das Modul stoppt.
-  * Klicken Sie im Protokoll auf `start_prim`: Die Ausgabemeldungen des Skripts werden rechts angezeigt und Fehler wie z. B. VM1 die nicht korrekt gestartet wurde, können erkannt werden.
+  * Klicken Sie im Protokoll auf `start_prim`: Die Ausgabemeldungen des Skripts werden rechts angezeigt, und Sie können Fehler erkennen, z. B. wenn VM1 nicht korrekt gestartet wurde.
   * Nutzen Sie die SafeKit AI 🤖 für Unterstützung bei Protokollnachrichten.
 
 
 ⚠️ Wenn sich der Cluster im Zustand `WAIT (red) not uptodate, STOP (red) not uptodate`, stoppen Sie den WAIT Knoten und [erzwingen Sie seinen Start als primär 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
 
 
-![Der erste {{ .Get "app" }} Knoten startet als primärer Knoten und wird ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
+![Der erste {{ .Get "app" }}-Knoten startet als primärer Knoten und wird ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
 
 
 ### 13. Startknoten 2 {#13-start-node-2}
@@ -206,10 +206,10 @@ Wenn Knoten 2 gestartet wird, werden alle Daten von Knoten 1 auf Knoten 2 kopier
   * Um den Fortschritt der Kopie zu sehen, siehe das [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) und die [Replikationsressourcen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) von Knoten 2. Verwenden Sie SafeKit AI 🤖 für Unterstützung bei Protokollmeldungen.
 
 
-ℹ️ Bei der Verwendung {{ .Get "app" }} Differenzlaufwerken muss nach der ersten Synchronisierung nur das Differenzlaufwerk erneut synchronisiert werden, was bei großen virtuellen Festplatten Zeit spart.
+ℹ️ Bei der Verwendung {{ .Get "app" }}-Differenzlaufwerken muss nach der ersten Synchronisierung nur das Differenzlaufwerk erneut synchronisiert werden, was bei großen virtuellen Festplatten Zeit spart.
 
 
-![Starten Sie den {{ .Get "app" }} Knoten 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+![Starten Sie den {{ .Get "app" }}-Knoten 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
 ### 14. Überprüfen Sie, ob der Cluster betriebsbereit ist {#14-verify-that-the-cluster-is-operational}
@@ -220,38 +220,38 @@ Wenn Knoten 2 gestartet wird, werden alle Daten von Knoten 1 auf Knoten 2 kopier
 In diesem Zustand werden nur Änderungen innerhalb von Dateien in Echtzeit repliziert.
 
 
-![Der {{ .Get "app" }} Knoten 2 ist SECOND (grün)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+![Der {{ .Get "app" }}-Knoten 2 ist SECOND (grün)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
 ### 15. Tests {#15-testing}
 
   * Stoppen Sie den PRIM-Knoten, indem Sie im Kontextmenü nach unten scrollen und auf `Stop` klicken.
   * Überprüfen Sie, ob auf dem SECOND Knoten ein Failover stattfindet, der ALONE (grün) sein sollte.
-  * Überprüfen Sie mit {{ .Get "app" }} Manager, ob `VM1` auf Knoten 2 läuft.
+  * Überprüfen Sie mit {{ .Get "app" }}-Manager, ob `VM1` auf Knoten 2 läuft.
 
 
 ⚠️ Wenn ALONE (grün) auf node2 nicht erreicht wird oder wenn VM1 nicht gestartet wird, analysieren Sie den Grund mit dem [Modulprotokoll 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) von Knoten 2.
 
   * Klicken Sie auf das 🔍 **Protokollsymbol** von `node2`, um das Modulprotokoll zu öffnen und nach Fehlermeldungen zu suchen, z. B. wenn ein Prüfer einen Fehler erkennt und das Modul stoppt.
-  * Klicken Sie im Protokoll auf `start_prim`: Die Ausgabemeldungen des Skripts werden rechts angezeigt und Fehler wie z. B. VM1 die nicht korrekt gestartet wurde, können erkannt werden.
+  * Klicken Sie im Protokoll auf `start_prim`: Die Ausgabemeldungen des Skripts werden rechts angezeigt, und Sie können Fehler erkennen, z. B. wenn VM1 nicht korrekt gestartet wurde.
   * Nutzen Sie die SafeKit AI 🤖 für Unterstützung bei Protokollnachrichten.
 
 
-⚠️ Da das `start_prim`-Skript die virtuelle Maschine auf Knoten 2 importiert, kann das Failover aufgrund der 🛠️ [{{ .Get "app" }} Einstellungen fehlschlagen (siehe KB SK-0088 in diesem Dokument)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
+⚠️ Da das `start_prim`-Skript die virtuelle Maschine auf Knoten 2 importiert, kann das Failover aufgrund der 🛠️ [{{ .Get "app" }}-Einstellungen fehlschlagen (siehe KB SK-0088 in diesem Dokument)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
-⚠️ Wenn alles in Ordnung ist, starten Sie den node1, wodurch die replizierten Verzeichnisse von node2 erneut synchronisiert werden.
+⚠️ Wenn alles in Ordnung ist, starten Sie node1. Node1 synchronisiert dann die replizierten Verzeichnisse von node2 erneut.
 
 Wenn etwas schiefgeht, stoppen Sie node2 und [erzwingen Sie, dass Knoten 1 als primärer Knoten startet 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png). Dieser wird dann mit seinen lokal intakten Daten zum Zeitpunkt des Stopps neu gestartet.
 
 ℹ️ Beachten Sie, dass Sie eine 🕒 **[Zeitleiste 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** haben, die hilfreich sein kann, um zu verstehen, was im Cluster passiert.
 
 
-![Stoppen Sie das {{ .Get "app" }} Modul auf dem PRIM-Server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+![Stoppen Sie das {{ .Get "app" }}-Modul auf dem PRIM-Server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16. Konfigurieren Sie bei Bedarf einen Splitbrain-Checker {#16-if-necessary-configure-a-splitbrain-checker}
+### 16. Konfigurieren Sie bei Bedarf einen Split-Brain-Checker {#16-if-necessary-configure-a-splitbrain-checker}
 
-  * Informationen darüber, ob Sie einen Split-Brain-Checker konfigurieren müssen, finden Sie unter [„Welche verschiedenen Szenarien gibt es bei Netzwerktrennung in einem Cluster?“](/de/best-practises/power-outage-and-network-isolation-in-a-cluster/).
+  * Weitere Informationen finden Sie unter [„Welche verschiedenen Szenarien gibt es bei Netzwerktrennung in einem Cluster?“](/de/best-practises/power-outage-and-network-isolation-in-a-cluster/), um zu erfahren, ob Sie einen Split-Brain-Checker konfigurieren müssen.
   * Gehen Sie zur Modulkonfiguration und klicken Sie auf `Checkers / Splitbrain` (siehe Abbildung), um die Splitbrain-Parameter zu bearbeiten.
   * `Save and apply` die neue Konfiguration an, um sie auf beiden Knoten erneut bereitzustellen (das Modul muss auf beiden Knoten gestoppt werden, um es zu speichern und anzuwenden).
 
@@ -260,10 +260,10 @@ Wenn etwas schiefgeht, stoppen Sie node2 und [erzwingen Sie, dass Knoten 1 als p
 
   * `Resource name` identifiziert den Witness mit einem Ressourcennamen: `splitbrain.witness`. Sie können diesen Wert ändern, um den Witness zu identifizieren.
   * `Witness address` ist das Argument für einen Ping, wenn ein Knoten von PRIM zu ALONE oder von SECOND zu ALONE wechselt. Ändern Sie diesen Wert mit der IP-Adresse des Witness (ein robustes Element, typischerweise ein Router).
-  * Hinweis: Sie können mehrere IPs durch Leerzeichen getrennt einstellen. Achten Sie darauf, dass die IP-Adressen von einem Knoten aus zugänglich sein müssen, aber nicht von dem anderen im Falle einer Netzwerktrennung.
+  * Hinweis: Sie können mehrere IPs durch Leerzeichen getrennt einstellen. Stellen Sie sicher, dass die IP-Adressen von einem Knoten aus zugänglich sind, aber nicht von dem anderen im Falle einer Netzwerktrennung.
 
 
-![Geben Sie die {{ .Get "app" }} Splitbrain-Parameter ein](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
+![Geben Sie die {{ .Get "app" }}-Splitbrain-Parameter ein](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
 
 
 ### 17. Automatischer Neustart, wenn ein kritischer Dienst innerhalb der VM ausfällt {#17-automatic-restart-if-a-critical-service-fails-inside-the-vm}
@@ -272,26 +272,26 @@ Wenn Sie einen automatischen Neustart oder Failover wünschen, wenn ein kritisch
 
 Zuerst müssen Sie den zuvor beschriebenen [benutzerdefinierten VM-Checker](#vm-checker) konfigurieren.
 
-Wählen Sie dann im Microsoft Service Manager innerhalb der VM Ihren kritischen Dienst aus und konfigurieren Sie in der Wiederherstellungseigenschaft des Dienstes einfach das Herunterfahren der VM, wenn der kritische Dienst ausfällt.
+Wählen Sie dann im Microsoft Service Manager in der VM Ihren kritischen Dienst aus und konfigurieren Sie in der Wiederherstellungseigenschaft des Dienstes das Herunterfahren der VM, wenn der kritische Dienst ausfällt.
 
-Wählen Sie dazu in den Wiederherstellungsoptionen Ihres kritischen Dienstes bei Fehlern " **Programm ausführen** " und legen Sie in den Programmoptionen " **C:/Windows/System32/shutdown.exe** " fest und in "Befehlszeilenparameter**"/s /c "service fails"**.
+Wählen Sie dazu in den Wiederherstellungsoptionen Ihres kritischen Dienstes bei Fehlern die Option „**Programm ausführen**“. Legen Sie in den Optionen für die Programmausführung `C:/Windows/System32/shutdown.exe` als Programm und `/s /c "service fails"` als Befehlszeilenparameter fest.
 
-Natürlich können Sie mit Ihren eigenen Skripten eine subtilere Wiederherstellung implementieren. Beachten Sie jedoch, dass das Herunterfahren der VM den benutzerdefinierten Checker im Host aktiviert. Der benutzerdefinierte Checker erkennt, dass der {{ .Get "app" }} Heartbeat nicht mehr antwortet, und startet die VM auf demselben {{ .Get "app" }} Server neu oder führt ein Failover auf dem anderen {{ .Get "app" }} Server durch (abhängig von seiner Konfiguration).
+Natürlich können Sie mit Ihren eigenen Skripten eine subtilere Wiederherstellung implementieren. Beachten Sie jedoch, dass das Herunterfahren der VM den benutzerdefinierten Checker im Host aktiviert. Der benutzerdefinierte Checker erkennt, dass der {{ .Get "app" }}-Heartbeat nicht mehr antwortet. Er startet dann die VM auf demselben {{ .Get "app" }}-Server neu oder führt ein Failover auf den anderen {{ .Get "app" }}-Server durch (je nach Konfiguration).
 
 Um die Funktion zu testen, verwenden Sie den Task-Manager und beenden Sie den Prozess (Aufgabe beenden), der dem kritischen Dienst zugeordnet ist. Ein sauberes Beenden des Dienstes über den Service-Manager oder den Befehl „net stop“ löst die Wiederherstellungsaktion im Windows Service-Manager nicht aus.
 
 
-![Failover kritischer Dienste {{ .Get "app" }} VM des {{ .Get "app" }} Moduls](/wp-content/uploads/2023/11/hyperv-critical-service.png)
+![Failover der {{ .Get "app" }}-VM bei Ausfall eines kritischen Dienstes](/wp-content/uploads/2023/11/hyperv-critical-service.png)
 
 
 ### 18. Unterstützung {#18-support}
 
-  * Um Unterstützung zu erhalten, erstellen Sie 2 SafeKit `Snapshots` (2 .zip-Dateien), einen für jeden Knoten.
+  * Um Unterstützung zu erhalten, erstellen Sie zwei SafeKit `Snapshots` (zwei .zip-Dateien), einen für jeden Knoten.
 
 
 ℹ️ [Weitere Informationen zum Support finden Sie hier](/de/resources/safekit-support/).
 
 
-![{{ .Get "app" }} Snapshots für Support erstellen](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+![{{ .Get "app" }}-Snapshots für Support erstellen](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 

@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.2 | Translation LLM | 37 expressions */}}
+{{/* translation: translate_md 2026-11-11.2 | glossaire 2026-11-11.4 | Translation LLM | 49 expressions */}}
 {{/* Shortcode: insert-safekit-82-milestone-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-milestone-xprotect-management-server.md */}}
@@ -28,7 +28,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation dat zich buite
 ℹ️ Raadpleeg 🛠️ [11. De SafeKit-webservice beveiligen](/nl/resources/safekit-user-guide-82/#https) in de gebruikershandleiding om de webconsole te beveiligen.
 
 
-![Start de SafeKit webconsole om het {{ .Get "app" }} cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
+![Start de SafeKit webconsole om het {{ .Get "app" }}-cluster te configureren](/wp-content/uploads/2024/03/01-login-large.png)
 
 
 ### 2. Knoopp Adressen configureren {#2-configure-node-addresses}
@@ -36,7 +36,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation dat zich buite
   * Voer de IP-adressen van de knooppunten in, druk op de `Tab key` om de connectiviteit te controleren en vul de namen van de knooppunten in. Als node1 of node2 rood is, controleer dan de connectiviteit van de browser met beide knooppunten en controleer de firewall op beide knooppunten voor 🛠️ [probleemoplossing](/nl/resources/safekit-user-guide-82/#Troubleshooting).
   * Klik vervolgens op `Save and apply` om de configuratie op te slaan.
   * Controleer het `Success` ✅ op beide knooppunten.
-  * Als de `Failure` ❌ optreedt op één node, open dan het ▼ accordeon voor die node en bekijk de berichten. Merk op dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
+  * Als er een `Failure` ❌ wordt weergegeven op één node, open dan het ▼ accordeon voor die node en bekijk de berichten. U kunt de SafeKit AI 🤖 gebruiken voor hulp.
 
 
 ℹ️ Indien gewenst kunt u een nieuw `LAN and nodes` toevoegen (eerst ➕) om een tweede heartbeat en een speciaal replicatienetwerk te creëren.
@@ -44,7 +44,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation dat zich buite
 ℹ️ Als u op `Advanced configuration` klikt, wordt het bestand `cluster.xml` weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten.
 
 
-![Voer de knooppunten van het {{ .Get "app" }} cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
+![Voer de knooppunten van het {{ .Get "app" }}-cluster in](/wp-content/uploads/2024/03/02-cluster-edit.png)
 
 
 ### 3. Selecteer een module {#3-select-a-module}
@@ -64,7 +64,7 @@ U kunt de console ook in een browser uitvoeren op een werkstation dat zich buite
 
   * Kies bij `Module startup at boot` voor een automatische start van de module bij het opstarten zonder vertraging.
   * Voer in `Macros`/`SERVICES` de servicenamen van uw toepassing in, in de opstartvolgorde, gescheiden door komma's. Zie deze schermafbeelding voor een visueel voorbeeld van [Milestone XProtect-services 🖼️](/wp-content/uploads/2025/05/milestone-services.png).
-  * In `Heartbeat networks` moet u één heartbeat netwerk hebben waarop de replicatie wordt uitgevoerd. Als u in stap 2 een privé- LAN hebt toegevoegd, kunt u twee heartbeats configureren met de replicatiestroom op het privé- LAN.
+  * In `Heartbeat networks` moet u één heartbeat netwerk hebben waarop de replicatie wordt uitgevoerd. Als u in stap 2 een privénetwerk hebt toegevoegd, kunt u twee heartbeats configureren, met de replicatiestroom op het privénetwerk.
   * Voer bij `Virtual IP addresses` een virtueel IP-adres in. Een virtueel IP-adres is een standaard IP-adres in hetzelfde IP-netwerk (hetzelfde subnet) als de IP-adressen van beide knooppunten.  
 Applicatieclients moeten worden geconfigureerd met het virtuele IP-adres (of de DNS-naam die aan het virtuele IP-adres is gekoppeld).  
 Het virtuele IP-adres wordt automatisch omgeschakeld in geval van een storing.
@@ -72,15 +72,15 @@ Het virtuele IP-adres wordt automatisch omgeschakeld in geval van een storing.
 Gegevens- en logboekreplicatie zijn essentieel voor een database.  
 U kunt naar behoefte extra gerepliceerde mappen aanmaken.  
 Bekijk deze schermafbeelding voor een visueel voorbeeld van [Milestone XProtect SQL-replicatie 🖼️](/wp-content/uploads/2025/05/milestone-replication.png).
-  * In `Checkers` kunt u indien nodig checkers configureren, zoals procesbewaking, aangepaste checkers, TCP, ping of split-brain checkers.  
+  * In `Checkers` kunt u indien nodig checkers configureren, zoals procesbewaking, aangepaste checkers, TCP-checkers, ping-checkers of split brain checkers.  
 Als een procesnaam bijvoorbeeld wordt weergegeven in `Monitored processes/services`, wordt deze gemonitord met een herstartactie in geval van een storing. Als u een verkeerde procesnaam configureert, stopt de module direct na de start.
 
 
 ⚠️ Als SQL zich op de beheerserver bevindt:
 
   * De [SQL-systeemdatabases](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases) (zoals master.mdf en mastlog.ldf) moeten zich in dezelfde mappen op beide knooppunten bevinden. De mappen moeten worden geconfigureerd als gerepliceerd.
-  * SQL moet ook op dezelfde locatie in het bestandssysteem op beide knooppunten worden geïnstalleerd, omdat de alleen-lezen [SQL-resource database](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database) zich in het binaire bestand bevindt en vereist is voor de failover. Deze database hoeft niet te worden gerepliceerd.
-  * De SQL Milestone databases (.mdf en .ldf) moeten zich in dezelfde mappen op beide knooppunten bevinden. De mappen moeten worden geconfigureerd als gerepliceerd. Milestone databases zijn als volgt volgens dit [artikel](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html).
+  * SQL moet ook op dezelfde locatie in het bestandssysteem op beide knooppunten worden geïnstalleerd, omdat de alleen-lezen [SQL-resource database](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database) zich in de binaire SQL-directory bevindt en vereist is voor de failover. Deze database hoeft niet te worden gerepliceerd.
+  * De SQL Milestone databases (.mdf en .ldf) moeten zich in dezelfde mappen op beide knooppunten bevinden. De mappen moeten worden geconfigureerd als gerepliceerd. De lijst met Milestone-databases wordt in dit [artikel](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html) gegeven.
 
 
 ℹ️ Als u op `Advanced configuration` klikt, wordt het bestand `userconfig.xml` weergegeven. Dit bestand wordt automatisch ingevuld door de console en geïmplementeerd op de knooppunten met de herstartscripts.
@@ -88,7 +88,7 @@ Als een procesnaam bijvoorbeeld wordt weergegeven in `Monitored processes/servic
 ℹ️ Wanneer u de SafeKit-configuratie toepast, wordt het `startup type` van services automatisch ingesteld op `Manual` in Windows Services. Dit zorgt ervoor dat de services niet automatisch starten wanneer het systeem opstart, maar alleen worden gestart wanneer de module zelf wordt gestart.
 
 
-![Open de instellingen van de {{ .Get "app" }} module](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
+![Open de instellingen van de {{ .Get "app" }}-module](/wp-content/uploads/2025/05/05-module-mirror-edit-config-3.png)
 
 
 ### 5. Scripts bewerken (optioneel) {#5-edit-scripts-optional}
@@ -99,7 +99,7 @@ Als een procesnaam bijvoorbeeld wordt weergegeven in `Monitored processes/servic
   * Daarnaast controleert `start_prim.ps1` de opstart van elke service en stopt de module als een service niet correct start.
 
 
-![Open de instellingen van de {{ .Get "app" }} module](/wp-content/uploads/2026/09/28-module-edit-script.png)
+![Open de instellingen van de {{ .Get "app" }}-module](/wp-content/uploads/2026/09/28-module-edit-script.png)
 
 
 ### 6. Communicatieversleuteling (optioneel) {#6-communication-encryption-optional}
@@ -107,24 +107,24 @@ Als een procesnaam bijvoorbeeld wordt weergegeven in `Monitored processes/servic
   * De versleuteling van de communicatie tussen knooppunten behouden.
 
 
-![Communicatieversleuteling van de {{ .Get "app" }} module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
+![Communicatieversleuteling van de {{ .Get "app" }}-module](/wp-content/uploads/2025/05/07-module-encryption-1.png)
 
 
 ### 7. Opslaan en toepassen {#7-save-and-apply}
 
-  * `Save and apply` op beide knooppunten.
+  * Klik op `Save and apply` om de configuratie en de scripts op beide knooppunten op te slaan.
 
 
-![De configuratie van de {{ .Get "app" }} module opslaan en toepassen](/wp-content/uploads/2025/05/08-module-save-1.png)
+![De configuratie van de {{ .Get "app" }}-module opslaan en toepassen](/wp-content/uploads/2025/05/08-module-save-1.png)
 
 
 ### 8. Controleer of de configuratie succesvol is {#8-verify-successful-configuration}
 
   * Controleer het `Success` ✅ op beide knooppunten en klik op `Monitor modules`.
-  * Als de `Failure` ❌ optreedt op één node, open dan het ▼ accordeon voor die node en bekijk de berichten. Merk op dat u de SafeKit AI 🤖 kunt gebruiken voor hulp.
+  * Als er een `Failure` ❌ wordt weergegeven op één node, open dan het ▼ accordeon voor die node en bekijk de berichten. U kunt de SafeKit AI 🤖 gebruiken voor hulp.
 
 
-![Controleer of de configuratie van de {{ .Get "app" }} module is geslaagd](/wp-content/uploads/2025/05/09-module-save-check-1.png)
+![Controleer of de configuratie van de {{ .Get "app" }}-module is geslaagd](/wp-content/uploads/2025/05/09-module-save-check-1.png)
 
 
 ### 9. Start de node met actuele gegevens {#9-start-the-node-with-up-to-date-data}
@@ -138,10 +138,10 @@ Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar kno
 
 ⚠️ Er wordt ook aangenomen dat de {{ .Get "app" }} applicatie is gestopt op node 1, zodat SafeKit de replicatiemechanismen installeert en vervolgens de applicatie start in het `start_prim` script.
 
-⚠️ Gebruik `Start` voor volgende starts: SafeKit behoudt de meest recente server. Starten `As primary` is een speciale opstart de eerste keer of tijdens uitzonderlijke bewerkingen.
+⚠️ Gebruik `Start` voor volgende starts: SafeKit behoudt de meest recente server. Gebruik `As primary` alleen voor de eerste start of tijdens uitzonderlijke bewerkingen.
 
 
-![Start de {{ .Get "app" }} node met de meest recente gegevens als primaire node](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
+![Start de {{ .Get "app" }}-node met de meest recente gegevens als primaire node](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
 
 
 ### 10. Wacht tot de overgang naar ALONE (groen) {#10-wait-for-the-transition-to-alone-green}
@@ -152,11 +152,11 @@ Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar kno
 ⚠️ Als ALONE (groen) niet wordt bereikt of als de applicatie niet wordt gestart, analyseer dan waarom met het [modullogboek 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) van knooppunt 1.
 
   * Klik op het 🔍 **logboekpictogram** van `node1` om het modulelogboek te openen en zoek naar foutmeldingen, zoals een checker die een fout detecteert en de module stopt.
-  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals een service die niet correct is gestart.
+  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden aan de rechterkant weergegeven en u kunt fouten detecteren, bijvoorbeeld als een service niet correct is gestart.
   * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
-⚠️ Als de cluster in de toestand `WAIT (red) not uptodate, STOP (red) not uptodate`, stop dan het WAIT knooppunt en [forceer de start ervan als primair 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
+⚠️ Als de clusterstatus `WAIT (red) not uptodate, STOP (red) not uptodate`, stop dan het WAIT knooppunt en [forceer de start ervan als primair 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png).
 
 
 ![Het eerste {{ .Get "app" }} knooppunt start als primair en wordt ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
@@ -164,28 +164,28 @@ Wanneer knooppunt 2 wordt gestart, worden alle gegevens van knooppunt 1 naar kno
 
 ### 11. Stop op het bureaublad van node 1, registreer vervolgens op het virtuele IP-adres, pas de Milestone KB toe en start de Milestone Management Server opnieuw op {#11-in-the-desktop-of-node-1-stop-then-register-on-the-virtual-ip-address-apply-the-milestone-kb-and-restart-the-milestone-management-server}
 
-Voer de volgende stappen uit op knooppunt 1 volgens het menu in de afbeelding:
+Voer op knooppunt 1 de volgende stappen uit met het menu dat in de afbeelding wordt weergegeven:
 
   * Gebruik het **ALONE** menu van de SafeKit console om **Checkers** en **Process/Service Monitoring** uit te schakelen om valse detecties te voorkomen bij het stoppen van de Management Server Service ([schort de checker op 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
   * Klik met de rechtermuisknop op het pictogram van de **Milestone Management Server** in de taakbalk.
-  * **Beheerserverdienst stoppen**
+  * Klik op **Beheercloudsactiviteitsservice stoppen**.
   * Kies vervolgens **Server Configurator ...** en registreer het virtuele IP-adres.
   * **Bewerk het bestand ServerConfig.xml** op knooppunt 1. 
-    * Ga naar " C:/ProgramData/Milestone/XProtect Management Server" en maak een back-up van het originele ServerConfig.xml bestand.
+    * Ga naar "C:/ProgramData/Milestone/XProtect Management Server" en maak een back-up van het oorspronkelijke ServerConfig.xml bestand.
     * Open het bestand ServerConfig.xml met een teksteditor (met beheerdersrechten).
     * Vervang de `XXX.XXX.XXX.XXX` door het daadwerkelijke virtuele IP-adres in:
-    * `<Failover>...`
+    * `<Failover>...`,
     * `<VirtualAddress>`
     * `XXX.XXX.XXX.XXX`
     * `</VirtualAddress>`
     * `...</Failover>`
     * Wijzig `<ClusterMember>false</ClusterMember>` in `true`
-    * Stel `http://NODE1_FQDN:9010` in (of de hostnaam van NODE1 als het een werkgroep is) in: 
+    * Stel `http://NODE1_FQDN:9010` (of de NODE1 hostnaam in een werkgroep) in: 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE1_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
     * Raadpleeg deze **[Milestone KB](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)** voor meer informatie.
-  * **Beheerserverdienst starten**
+  * Klik op **Beheerserverdienst starten**.
   * Gebruik het **ALONE** menu van de SafeKit console om **Checkers** en **Proces-/Servicebewaking** in te schakelen ([schakel de checker in 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)).
 
 
@@ -198,18 +198,18 @@ Voer de volgende stappen uit op knooppunt 1 volgens het menu in de afbeelding:
 ### 12. Registreer op het bureaublad van node 2 de beheerserver op het virtuele IP-adres {#12-in-the-desktop-of-node-2-register-the-management-server-on-the-virtual-ip-address}
 
   * Kies **Server Configurator** in de taakbalk van node 2 en registreer deze op het virtuele IP-adres (zie afbeelding).
-  * **Stop vervolgens de Management Server-service**.
+  * Klik vervolgens op **Beheerserverdienst stoppen**.
   * **Bewerk het bestand ServerConfig.xml** op knooppunt 2. 
-    * Ga naar " C:/ProgramData/Milestone/XProtect Management Server" en maak een back-up van het originele ServerConfig.xml bestand.
+    * Ga naar "C:/ProgramData/Milestone/XProtect Management Server" en maak een back-up van het oorspronkelijke ServerConfig.xml bestand.
     * Open het bestand ServerConfig.xml met een teksteditor (met beheerdersrechten).
     * Vervang de `XXX.XXX.XXX.XXX` door het daadwerkelijke virtuele IP-adres in:
-    * `<Failover>...`
+    * `<Failover>...`,
     * `<VirtualAddress>`
     * `XXX.XXX.XXX.XXX`
     * `</VirtualAddress>`
     * `...</Failover>`
     * Wijzig `<ClusterMember>false</ClusterMember>` in `true`
-    * Stel `http://NODE2_FQDN:9010` (of de hostnaam van NODE2 indien het een werkgroep is) in in: 
+    * Stel `http://NODE2_FQDN:9010` (of de NODE2 hostnaam in een werkgroep) in: 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE2_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
@@ -219,7 +219,7 @@ Voer de volgende stappen uit op knooppunt 1 volgens het menu in de afbeelding:
 ⚠️ Wees voorzichtig:
 
   * Het account van de gebruiker die de registratie uitvoert op knooppunt 2 moet de beheerdersrol hebben in Milestone op knooppunt 1.
-  * Als de lokale beheerder op node 2 de registratie uitvoert, moet de ingebouwde Windows-groep `BUILTIN/Administrators` zijn ingesteld in Management Client / Security / Roles bij [stap 13](#role) Anders zal de registratie niet werken.
+  * Als de lokale beheerder op node 2 de registratie uitvoert, moet de ingebouwde Windows-groep `BUILTIN/Administrators` zijn ingesteld in Management Client / Security / Roles bij [stap 13](#role) Anders werkt de registratie niet.
 
 
 ℹ️ Deze procedure registreert de beheerserver van knooppunt 2 in de SQL-database (die wordt uitgevoerd op knooppunt 1) via een verbinding met het virtuele adres.
@@ -230,7 +230,7 @@ Voer de volgende stappen uit op knooppunt 1 volgens het menu in de afbeelding:
 
 ### 13. Windows-authenticatieprobleem oplossen bij failover {#role}
 
-Wanneer u de Milestone XProtect Management Client start, moet u zich authenticeren met een van de volgende methoden. Afhankelijk van uw keuze zijn specifieke stappen vereist om ervoor te zorgen dat de login werkt na een SafeKit failover. Referentie: [Bekijk de inlogschermprint 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png).
+Wanneer u de Milestone XProtect Management Client start, moet u zich authenticeren met een van de volgende methoden. Afhankelijk van uw keuze zijn specifieke stappen vereist om ervoor te zorgen dat de aanmelding werkt na een SafeKit failover. Zie de [aanmeldingsschermopname 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png).
 
 #### Windows authenticatie met Active Directory (AD) {#windows-authentication-with-active-directory-ad}
 
@@ -260,7 +260,7 @@ Voor "Basisauthenticatie" worden de gebruikersgegevens rechtstreeks in de SQL-da
 
 ### 14. Start knooppunt 2 {#14-start-node-2}
 
-  * ⋯ `Start` knooppunt 2 met het contextmenu.
+  * Start knooppunt 2 met ⋯ `Start` in het contextmenu.
   * Wacht op de SECOND (groene) toestand.
 
 
@@ -271,7 +271,7 @@ Voor "Basisauthenticatie" worden de gebruikersgegevens rechtstreeks in de SQL-da
   * Om de voortgang van de kopie te zien, raadpleegt u het [modullogboek 🖼️](/wp-content/uploads/2024/03/27-module-log-reintegration.png) en de [replicatiebronnen 🖼️](/wp-content/uploads/2024/03/26-replication-resources-reintegration.png) van knooppunt 2. Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
-![Start de {{ .Get "app" }} node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
+![Start de {{ .Get "app" }}-node 2](/wp-content/uploads/2024/03/13-monitoring-alone-stop-start.png)
 
 
 ### 15. Controleer of het cluster operationeel is {#15-verify-that-the-cluster-is-operational}
@@ -287,27 +287,27 @@ Voor "Basisauthenticatie" worden de gebruikersgegevens rechtstreeks in de SQL-da
   * Componenten die clients zijn van {{ .Get "app" }} moeten worden geconfigureerd met het virtuele IP-adres. De configuratie kan worden gedaan met een DNS-naam (als er een DNS-naam is gemaakt en gekoppeld aan het virtuele IP-adres).
 
 
-![{{ .Get "app" }} node 2 is SECOND (groen)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
+![{{ .Get "app" }}-node 2 is SECOND (groen)](/wp-content/uploads/2024/03/14-monitoring-prim-second.png)
 
 
 ### 16. Testen {#16-testing}
 
   * Stop de PRIM node door in het contextmenu naar beneden te scrollen en `Stop` te klikken.
-  * Controleer of er een failover is op het SECOND knooppunt, dat ALONE (groen) zou moeten worden.
-  * Controleer met Microsoft Management Console (MMC) op Windows of met opdrachtregels op Linux de failover van {{ .Get "app" }} Services (gestopt op knooppunt 1 in het `stop_prim` script en gestart op knooppunt 2 in het `start_prim` script).
+  * Controleer of er een failover plaatsvindt op de SECOND node, die ALONE (groen) wordt.
+  * Controleer met Microsoft Management Console (MMC) op Windows of met opdrachtregels op Linux de failover van {{ .Get "app" }}-services (gestopt op knooppunt 1 in het `stop_prim` script en gestart op knooppunt 2 in het `start_prim` script).
 
 
 ⚠️ Als ALONE (groen) niet wordt bereikt op node2 of als de applicatie niet is gestart, analyseer dan waarom met de [modullog 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) van node 2.
 
   * Klik op het 🔍 **logboekpictogram** van `node2` om het modulelogboek te openen en zoek naar foutmeldingen, zoals een checker die een fout detecteert en de module stopt.
-  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden rechts weergegeven en fouten kunnen worden gedetecteerd, zoals een service die niet correct is gestart.
+  * Klik op `start_prim` in het logboek: de uitvoerberichten van het script worden aan de rechterkant weergegeven en u kunt fouten detecteren, bijvoorbeeld als een service niet correct is gestart.
   * Gebruik de SafeKit AI 🤖 voor hulp bij logberichten.
 
 
 ⚠️
 
-  * Als alles in orde is, start u node1 op, die de gerepliceerde mappen van node2 opnieuw synchroniseert.
-  * Als er iets misgaat, stop dan node2 en [forceer de start als primair 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) van node1, die opnieuw zal opstarten met zijn lokaal gezonde gegevens op het moment van de stop.
+  * Als alles in orde is, start node1. Node1 synchroniseert vervolgens de gerepliceerde mappen opnieuw vanaf node2.
+  * Als er iets misgaat, stop dan node2 en [forceer node1 om als primair te starten 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png). Node1 start dan opnieuw op met de lokale gegevens die gezond waren toen het stopte.
 
 
 ℹ️ Let op: u hebt een 🕒 **[tijdlijn 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)** die nuttig kan zijn om te begrijpen wat er in het cluster gebeurt.
@@ -315,17 +315,17 @@ Voor "Basisauthenticatie" worden de gebruikersgegevens rechtstreeks in de SQL-da
 ℹ️ Meer details en video's vindt u in de [SafeKit onlinecursus](/nl/resources/safekit-on-line-training/).
 
 
-![Stop de {{ .Get "app" }} module op de PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
+![Stop de {{ .Get "app" }}-module op de PRIM server](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
 ### 17. Ondersteuning {#17-support}
 
-  * Om ondersteuning te krijgen, maakt u 2 SafeKit `Snapshots` (2 .zip-bestanden), één voor elke node.
+  * Om ondersteuning te krijgen, maakt u twee SafeKit `Snapshots` (twee .zip-bestanden), één voor elke node.
 
 
 ℹ️ [Meer informatie over de ondersteuning vindt u hier](/nl/resources/safekit-support/).
 
 
-![Maak {{ .Get "app" }} momentopnamen voor ondersteuning](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+![Maak SafeKit snapshots van het {{ .Get "app" }}-cluster voor ondersteuning](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 

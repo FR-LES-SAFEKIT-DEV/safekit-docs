@@ -1,13 +1,13 @@
-{{/* translation: translate_md 2026-11-08.10 | glossaire 2026-11-08.28 | Translation LLM | 32 expressions */}}
+{{/* translation: translate_md 2026-11-11.1 | glossaire 2026-11-11.2 | Translation LLM | 58 expressions */}}
 {{/* Shortcode: insert-safekit-82-hyper-v-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-hyper-v.md */}}
 
 
 
-⚠️ Lisez attentivement ces éléments avant de commencer :
+⚠️ Lisez attentivement les points suivants avant de commencer :
 
-  * La configuration {{ .Get "app" }} est présentée avec une machine virtuelle nommée `VM1`. Lisez attentivement la section « 1. Prérequis » pour l’**organisation des fichiers VM1**, sinon la récupération sur le nœud secondaire peut échouer avec des données incohérentes.
+  * La configuration {{ .Get "app" }} est présentée avec une machine virtuelle nommée `VM1`. Lisez attentivement la section « 1. Prérequis » pour l’**organisation des fichiers de VM1**. Sinon, la récupération sur le nœud secondaire peut échouer avec des données incohérentes.
   * Vous devrez répéter cette configuration pour toutes les machines virtuelles que vous souhaitez répliquer et redémarrer.
   * Le système de fichiers dans lequel les fichiers de machine virtuelle répliqués par SafeKit sont stockés doit être NTFS ; **ReFS n’est pas pris en charge**.
   * SafeKit prend en charge la réplication des **points de contrôle de production {{ .Get "app" }}, mais pas des points de contrôle standard**. N’utilisez pas de points de contrôle standard, sinon la récupération sur le nœud secondaire peut échouer en raison de données incohérentes.
@@ -82,8 +82,8 @@ Vous pouvez également exécuter la console dans un navigateur sur un poste de t
 
   * Choisissez le démarrage `Automatic` du module au démarrage sans délai.
   * Normalement, vous disposez d’un seul réseau `Heartbeat` sur lequel la réplication est effectuée. Cependant, vous pouvez définir un réseau privé si nécessaire (en ajoutant un LAN à l’étape 3).
-  * Saisissez dans `VM_PATH` le chemin d’accès racine du répertoire répliqué (D:/Repli-{{ .Get "app" }}).
-  * Saisissez `VM_NAME`, le nom de la machine virtuelle (VM1).
+  * Dans `VM_PATH`, saisissez le chemin d’accès racine du répertoire répliqué (D:/Repli-{{ .Get "app" }}).
+  * Dans `VM_NAME`, saisissez le nom de la machine virtuelle (VM1).
 
 
 Nous supposons que tous les fichiers VM1 se trouvent dans D:/Repli-{{ .Get "app" }}/VM1 (voir [les prérequis](#prerequisite)). Ce répertoire sera répliqué en temps réel par SafeKit. N’effectuez pas de réplication partielle, car le basculement ne fonctionnera pas.
@@ -95,11 +95,11 @@ Les valeurs `NORMAL_STOP` et `FORCE_STOP` peuvent être « `stop` », « `save` 
   * « `off` » éteint la VM (mise hors tension) lorsque le module est arrêté.
 
 
-L’option « `stop` » est recommandée car elle provoque l’arrêt puis le redémarrage de la VM lorsque le module est arrêté et redémarré. Ainsi, si l’application à l’intérieur de la VM échoue, elle est redémarrée.
+L’option « `stop` » est recommandée, car elle arrête la machine virtuelle, puis la redémarre lorsque le module est arrêté et redémarré. Ainsi, si l’application à l’intérieur de la machine virtuelle échoue, elle est redémarrée.
 
 Ce sera le cas, par exemple, lors du passage d’un rôle principal à un rôle secondaire.
 
-ℹ️ Vous n’avez pas besoin de configurer une adresse IP virtuelle. VM1 sera redémarrée sur l’ {{ .Get "app" }} secondaire avec son adresse IP physique, et cette adresse IP sera redirigée.
+ℹ️ Vous n’avez pas besoin de configurer une adresse IP virtuelle. VM1 sera redémarrée sur le serveur {{ .Get "app" }} secondaire avec son adresse IP physique, et cette adresse IP sera redirigée.
 
 ℹ️ Lorsque vous appliquez la configuration SafeKit, l’ `Automatic Start Action` de la machine virtuelle est définie sur `Nothing` dans {{ .Get "app" }}. Cela garantit que la machine virtuelle ne démarre pas automatiquement lorsque l’hôte Hyper-V démarre, mais qu’elle ne démarre que lorsque le module lui-même est démarré.
 
@@ -109,14 +109,14 @@ Ce sera le cas, par exemple, lors du passage d’un rôle principal à un rôle 
 
 ### 6. Vérificateur personnalisé pour détecter les dysfonctionnements de la machine virtuelle {#vm-checker}
 
-Le vérificateur personnalisé envoie des messages de pulsation de l’hôte à la machine virtuelle à intervalles réguliers. Il incombe ensuite au service de pulsation {{ .Get "app" }} installé dans la machine virtuelle d’envoyer une réponse à chacun de ces messages de pulsation.
+Le vérificateur personnalisé envoie des messages heartbeat de l’hôte à la machine virtuelle à intervalles réguliers. Il incombe ensuite au service heartbeat {{ .Get "app" }} installé dans la machine virtuelle d’envoyer une réponse à chacun de ces messages heartbeat.
 
-Si le service {{ .Get "app" }} Heartbeat ne répond pas au message (VM bloquée, plantée ou ayant cessé de fonctionner), le vérificateur personnalisé exécute une action pour redémarrer la VM sur le même nœud {{ .Get "app" }} ou sur l’autre.
+Si le service {{ .Get "app" }} heartbeat ne répond pas au message (VM bloquée, plantée ou ayant cessé de fonctionner), le vérificateur personnalisé exécute une action pour redémarrer la VM sur le même nœud {{ .Get "app" }} ou sur l’autre.
 
   * Cliquez sur `Checkers / Custom` (voir l’image).
-  * Il suffit de définir un nom de votre choix dans `Resource name` (par exemple VM1). `Resource name` identifie la machine virtuelle avec un nom de ressource dans SafeKit : `custom.VM1`.
+  * Définissez un nom de votre choix dans `Resource name` (par exemple VM1). `Resource name` identifie la machine virtuelle avec un nom de ressource dans SafeKit : `custom.VM1`.
   * Avec `restart` en `Action`, la machine virtuelle est redémarrée sur le même nœud {{ .Get "app" }}. Après 3 redémarrages infructueux en 24 heures, le module SafeKit {{ .Get "mod" }} s’arrête sur le nœud principal et il y a un basculement de la machine virtuelle sur le nœud secondaire.
-  * Si vous définissez `stopstart` dans `Action`, il y a un basculement direct sur l’autre nœud {{ .Get "app" }} dès que la machine virtuelle ne répond pas aux pulsations.
+  * Si vous définissez `stopstart` dans `Action`, il y a un basculement direct sur l’autre nœud {{ .Get "app" }} dès que la machine virtuelle ne répond pas aux heartbeats.
 
 
 ℹ️ Pour la maintenance, si vous souhaitez arrêter la machine virtuelle, le vérificateur personnalisé la redémarrera automatiquement. Pour éviter cela, vous pouvez [suspendre temporairement le vérificateur 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Ou vous pouvez le supprimer en supprimant la ligne de configuration dans la console.
@@ -139,7 +139,7 @@ Si le service {{ .Get "app" }} Heartbeat ne répond pas au message (VM bloquée,
   * Conservez le chiffrement des communications entre les nœuds.
 
 
-![Chiffrement de la communication du module de l’ {{ .Get "app" }}](/wp-content/uploads/2024/03/07-module-encryption.png)
+![Chiffrement de la communication du module de l’{{ .Get "app" }}](/wp-content/uploads/2024/03/07-module-encryption.png)
 
 
 ### 9. Enregistrer et appliquer {#9-save-and-apply}
@@ -164,7 +164,7 @@ Si le service {{ .Get "app" }} Heartbeat ne répond pas au message (VM bloquée,
   * Si le nœud 1 possède le répertoire répliqué à jour pour `VM1/`, sélectionnez-le et ⋯ `Force start` ▶ `As primary`.
 
 
-Lorsque le nœud 2 sera démarré, toutes les données seront copiées du nœud 1 vers le nœud 2.
+Lorsque le nœud 2 est démarré, toutes les données sont copiées du nœud 1 vers le nœud 2.
 
 ⚠️ Si vous faites le mauvais choix, vous risquez de synchroniser des données obsolètes sur les deux nœuds.
 
@@ -183,8 +183,8 @@ Lorsque le nœud 2 sera démarré, toutes les données seront copiées du nœud 
 
 ⚠️ Si ALONE (vert) n’est pas atteint ou si VM1 n’est pas démarré, analysez la raison avec le [journal du module 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) du nœud 1.
 
-  * Cliquez sur l’icône **de journal** 🔍 du `node1` pour ouvrir le journal du module et recherchez les messages d’erreur, tels qu’un vérificateur détectant une erreur et arrêtant le module.
-  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite et les erreurs peuvent être détectées, comme le démarrage incorrect VM1.
+  * Cliquez sur l’icône de **journal** 🔍 du `node1` pour ouvrir le journal du module et recherchez les messages d’erreur, tels qu’un vérificateur détectant une erreur et arrêtant le module.
+  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite, et vous pouvez détecter les erreurs, par exemple si VM1 n’a pas démarré correctement.
   * Utilisez l’IA SafeKit 🤖 pour obtenir de l’aide concernant les messages du journal.
 
 
@@ -232,14 +232,14 @@ Dans cet état, seules les modifications apportées aux fichiers sont répliqué
 
 ⚠️ Si ALONE (vert) n’est pas atteint sur node2 ou si VM1 n’est pas démarrée, analysez la raison avec le [journal du module 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) du nœud 2.
 
-  * Cliquez sur l’icône **de journal** 🔍 du `node2` pour ouvrir le journal du module et recherchez les messages d’erreur, tels qu’un vérificateur détectant une erreur et arrêtant le module.
-  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite et les erreurs peuvent être détectées, comme le démarrage incorrect VM1.
+  * Cliquez sur l’icône de **journal** 🔍 du `node2` pour ouvrir le journal du module et recherchez les messages d’erreur, tels qu’un vérificateur détectant une erreur et arrêtant le module.
+  * Cliquez sur `start_prim` dans le journal : les messages de sortie du script sont affichés à droite, et vous pouvez détecter les erreurs, par exemple si VM1 n’a pas démarré correctement.
   * Utilisez l’IA SafeKit 🤖 pour obtenir de l’aide concernant les messages du journal.
 
 
 ⚠️ Étant donné que le script `start_prim` importe la machine virtuelle sur le nœud 2, le basculement peut échouer en raison des 🛠️ [paramètres {{ .Get "app" }} (voir la KB SK-0088 dans ce document)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
-⚠️ Si tout est correct, lancez une initialisation sur node1, ce qui resynchronisera les répertoires répliqués à partir node2.
+⚠️ Si tout est correct, démarrez node1. Node1 resynchronise alors les répertoires répliqués à partir de node2.
 
 Si les choses tournent mal, arrêtez node2 et [forcez le nœud 1 à démarrer en tant que primaire 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png), qui redémarrera avec ses données localement saines au moment de l’arrêt.
 
@@ -249,9 +249,9 @@ Si les choses tournent mal, arrêtez node2 et [forcez le nœud 1 à démarrer en
 ![Arrêtez le module {{ .Get "app" }} sur le serveur PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16. Si nécessaire, configurez un vérificateur de scission de cerveau {#16-if-necessary-configure-a-splitbrain-checker}
+### 16. Si nécessaire, configurez un checker split-brain {#16-if-necessary-configure-a-splitbrain-checker}
 
-  * Consultez la [section « Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ? »](/fr/best-practises/power-outage-and-network-isolation-in-a-cluster/) pour savoir si vous devez configurer un vérificateur de scission de cerveau.
+  * Consultez la [section « Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ? »](/fr/best-practises/power-outage-and-network-isolation-in-a-cluster/) pour savoir si vous devez configurer un checker split-brain.
   * Accédez à la configuration du module et cliquez sur `Checkers / Splitbrain` (voir l’image) pour modifier les paramètres de splitbrain.
   * `Save and apply` la nouvelle configuration pour la redéployer sur les deux nœuds (le module doit être arrêté sur les deux nœuds pour l’enregistrer et l’appliquer).
 
@@ -260,7 +260,7 @@ Si les choses tournent mal, arrêtez node2 et [forcez le nœud 1 à démarrer en
 
   * `Resource name` identifie le témoin avec un nom de ressource : `splitbrain.witness`. Vous pouvez modifier cette valeur pour identifier le témoin.
   * `Witness address` est l’argument d’un ping lorsqu’un nœud passe de PRIM à ALONE ou de SECOND à ALONE. Modifiez cette valeur avec l’adresse IP du témoin (un élément robuste, généralement un routeur).
-  * Remarque : vous pouvez définir plusieurs adresses IP séparées par des espaces. Notez que les adresses IP doivent être accessibles à partir d’un nœud, mais pas de l’autre en cas d’isolement du réseau.
+  * Remarque : vous pouvez définir plusieurs adresses IP séparées par des espaces. Assurez-vous que les adresses IP sont accessibles à partir d’un nœud, mais pas de l’autre en cas d’isolement du réseau.
 
 
 ![Saisissez les paramètres de la fonction de détection de cerveau divisé {{ .Get "app" }}](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
@@ -272,21 +272,21 @@ Si vous souhaitez un redémarrage automatique ou un basculement lorsqu’un serv
 
 Vous devez d’abord configurer le [vérificateur personnalisé de la machine virtuelle](#vm-checker) décrit précédemment.
 
-Ensuite, dans Microsoft Service Manager, à l’intérieur de la machine virtuelle, sélectionnez votre service critique et, dans la propriété de récupération du service, vous devez simplement configurer l’arrêt de la machine virtuelle lorsque le service critique échoue.
+Ensuite, dans Microsoft Service Manager, à l’intérieur de la machine virtuelle, sélectionnez votre service critique et, dans la propriété de récupération du service, configurez l’arrêt de la machine virtuelle en cas de défaillance du service critique.
 
-Pour cela, dans les options de récupération de votre service critique, choisissez « **Exécuter un programme** » en cas d’échec et dans les options d’exécution du programme, définissez « **C:/Windows/System32/shutdown.exe** » et dans « Paramètres de la ligne de commande », définissez **/s /c « service fails »**.
+Pour ce faire, dans les options de récupération de votre service critique, choisissez « **Exécuter un programme** » en cas d’échec. Dans les options d’exécution du programme, définissez `C:/Windows/System32/shutdown.exe` comme programme et `/s /c "service fails"` comme paramètres de ligne de commande.
 
-Bien sûr, vous pouvez mettre en œuvre une récupération plus subtile avec vos propres scripts. Mais sachez simplement que l’arrêt de la machine virtuelle activera le vérificateur personnalisé sur l’hôte. Le vérificateur personnalisé détectera que le signal vital {{ .Get "app" }} ne répond plus et redémarrera la machine virtuelle sur le même serveur {{ .Get "app" }} ou effectuera un basculement sur l’autre serveur {{ .Get "app" }} (selon sa configuration).
+Bien sûr, vous pouvez mettre en œuvre une récupération plus subtile avec vos propres scripts. Cependant, sachez que l’arrêt de la machine virtuelle activera le vérificateur personnalisé dans l’hôte. Le vérificateur personnalisé détectera que le heartbeat {{ .Get "app" }} ne répond plus. Il redémarrera alors la machine virtuelle sur le même serveur {{ .Get "app" }} ou basculera sur l’autre serveur {{ .Get "app" }} (selon sa configuration).
 
 Pour tester la fonctionnalité, utilisez le Gestionnaire des tâches et arrêtez le processus (Terminer la tâche) associé au service critique. Un arrêt propre du service via le Gestionnaire des services ou la commande « net stop » ne déclenche pas l’action de récupération dans le Gestionnaire des services Windows.
 
 
-![Basculement des services critiques de la machine virtuelle de l’ {{ .Get "app" }} du module {{ .Get "app" }}](/wp-content/uploads/2023/11/hyperv-critical-service.png)
+![Basculement de la machine virtuelle {{ .Get "app" }} en cas de défaillance d’un service critique](/wp-content/uploads/2023/11/hyperv-critical-service.png)
 
 
 ### 18. Soutien {#18-support}
 
-  * Pour obtenir de l’aide, prenez 2 `Snapshots` SafeKit (2 fichiers .zip), un pour chaque nœud.
+  * Pour obtenir de l’aide, prenez deux `Snapshots` SafeKit (deux fichiers .zip), un pour chaque nœud.
 
 
 ℹ️ [Plus d’informations sur l’assistance ici](/fr/resources/safekit-support/).

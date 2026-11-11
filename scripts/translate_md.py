@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-10.3"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-11.2"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -527,6 +527,9 @@ def decode(text, ctx):
         text = re.sub(r"(•\s+)([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), text)
     # parenthèse ouvrante perdue autour d'un sigle protégé dans un texte de lien : "[복구 시간 목표 RTO) 약 1분]" -> "[복구 시간 목표(RTO) 약 1분]"
     text = re.sub(r"(\[[^\]()]*?)\s+([A-Z][A-Z0-9/]{1,})\)(?=[^\]()]*\])", lambda m: m.group(1) + ("" if re.search(f"[\uac00-\ud7a3{CJK_CHAR}]$", m.group(1)) else " ") + "(" + m.group(2) + ")", text)
+    # espaces parasites entre guillemets droits/chinois/allemands et `code` ou **gras** : '" `stop` "' -> '"`stop`"' (pas « » en français)
+    text = re.sub(r'(["“„「])[ \t]+(`[^`\n]+`|\*\*[^*\n]+\*\*)[ \t]*(["”“」])', r"\1\2\3", text)
+    text = re.sub(r'(["“„「])[ \t]*(`[^`\n]+`|\*\*[^*\n]+\*\*)[ \t]+(["”“」])', r"\1\2\3", text)
     # virgule avalée dans le texte du lien : "([synchron,](url) um" -> "([synchron](url), um"
     text = re.sub(r"(?<!!)\[([^\[\]]*?)\s*,\s*\]\((<[^>]*>|[^)\s]+)\)", r"[\1](\2),", text)
     text = re.sub(r"<code>\s+", "<code>", text)
@@ -853,7 +856,7 @@ def main():
             miss = [n for n in miss if not any(c in t for c in cn.get(n, "-"))]
         if CJK:
             # la phrase source se termine par un point, la traduction non
-            end_src = re.search(r"[.!?]$", re.sub(r"<[^>]+>|\s", "", enc))
+            end_src = re.search(r"(?<!\.\.)[.!?]$", re.sub(r"<[^>]+>|\s", "", enc))
             end_out = re.search(r"[。！？.!?]$", re.sub(r"\*|\s", "", t))
             if end_src and not end_out:
                 punct.append(idx[0] if isinstance(idx, tuple) else idx)
@@ -867,7 +870,8 @@ def main():
         if src_vis and not re.search(r"[.!?。！？]$", src_vis):
             t = re.sub(r"(?<!\.)[.。](?=(?:\*\*)?\s*$)", "", t)   # aussi "**safekitinstall.**"
         # ponctuation finale de la source perdue par Google (élément de liste "[lien](/x/)," ou phrase d'introduction "… :")
-        end = src_vis[-1:] if src_vis else ""
+        # source finissant par "..." (ex. `<Failover>...`) : pas un point de fin de phrase
+        end = src_vis[-1:] if src_vis and not re.search(r"(?:\.\.\.|…)`?$", src_vis) else ""
         if end in ",:." and not re.search(r"[,:;.!?、，：；،。！？…]\s*(?:\*\*)?\s*$", t) and t.strip():
             if end == ":":
                 add = "：" if CJK else (" :" if lang == "fr" else ":")

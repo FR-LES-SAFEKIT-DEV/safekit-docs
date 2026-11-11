@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-08.15 | glossaire 2026-11-09.2 | Translation LLM | 41 expressions */}}
+{{/* translation: translate_md 2026-11-11.2 | glossaire 2026-11-11.4 | Translation LLM | 50 expressions */}}
 {{/* Shortcode: insert-safekit-82-milestone-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-milestone-xprotect-management-server.md */}}
@@ -36,7 +36,7 @@
   * 输入节点 IP 地址，按 `Tab key` 检查连接性并填写节点名称。如果 node1 或 node2 为红色，请检查浏览器与这两个节点的连接性，并检查这两个节点的防火墙以进行 🛠️ [故障排除](/zh-hans/resources/safekit-user-guide-82/#Troubleshooting)。
   * 然后，单击 `Save and apply` 以保存配置。
   * 检查两个节点上的 `Success` ✅ 消息。
-  * 如果某个节点上发生配置 `Failure` ❌，请打开该节点的▼手风琴，然后查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+  * 如果一个节点上显示配置 `Failure` ❌ 消息，请打开该节点的▼手风琴，并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
 
 
 ℹ️ 如果您愿意，可以添加新的 `LAN and nodes`（首先 ➕），以创建第二个心跳和专用复制网络。
@@ -54,7 +54,7 @@
 
 ℹ️ 在顶部的蓝色横幅中，🛜 `node1` 代表控制台连接节点。此节点在需要时将请求中继到 `node2`。
 
-ℹ️ 如果您在安装期间将模块放置在连接节点（`node1`）上的 `Application_Modules/generic/` 目录中，则控制台会在该目录中搜索 `xxx.safe`
+ℹ️ 如果您在安装期间将模块放置在连接节点（`node1`）上的 `Application_Modules/generic/` 目录中，则控制台会在该目录中搜索 `xxx.safe`。
 
 
 ![选择 {{ .Get "app" }} 模块](/wp-content/uploads/2024/03/04-module-new.png)
@@ -64,7 +64,7 @@
 
   * 在 `Module startup at boot` 中，选择在启动时自动启动模块，无需延迟。
   * 在 `Macros`/`SERVICES` 中，按启动顺序输入应用程序的服务名称，并用逗号分隔。有关[Milestone XProtect 服务的直观示例，请参阅此屏幕截图 🖼️](/wp-content/uploads/2025/05/milestone-services.png)。
-  * 在 `Heartbeat networks` 中，您应该有一个用于进行复制的单一心跳网络。如果您在步骤 2 中添加了专用 LAN，那么您可以在专用 LAN 上配置两个心跳，并进行复制流。
+  * 在 `Heartbeat networks` 中，您应该有一个用于复制的单一心跳网络。如果您在步骤 2 中添加了专用网络，则可以配置两个心跳，并将复制流放在专用网络上。
   * 在 `Virtual IP addresses` 中，输入虚拟 IP 地址。虚拟 IP 地址是与两个节点的 IP 地址位于同一 IP 网络（同一子网）中的标准 IP 地址。  
 必须使用虚拟 IP 地址（或与虚拟 IP 地址关联的 DNS 名称）配置应用程序客户端。  
 发生故障时，虚拟 IP 地址会自动切换。
@@ -72,15 +72,15 @@
 数据和日志复制对于数据库至关重要。  
 您可以根据需要创建其他复制目录。  
 请参阅此屏幕截图，了解[Milestone XProtect SQL 复制的可视化示例 🖼️](/wp-content/uploads/2025/05/milestone-replication.png)。
-  * 在 `Checkers` 中，您可以根据需要配置检查器，例如进程监控、自定义检查器、TCP、ping 或裂脑检查器。  
+  * 在 `Checkers` 中，您可以根据需要配置检查器，例如进程监控、自定义检查器、TCP 检查器、ping 检查器或裂脑检查器。  
 例如，如果进程名称显示在 `Monitored processes/services` 中，则在发生故障时，它将通过重启操作进行监控。配置错误的进程名称将导致模块在启动后立即停止。
 
 
 ⚠️ 如果 SQL 位于管理服务器上：
 
   * [SQL 系统数据库](https://learn.microsoft.com/en-us/sql/relational-databases/databases/system-databases)（如 master.mdf 和 mastlog.ldf）必须位于两个节点上的同一目录中。这些目录必须配置为可复制。
-  * SQL 也必须安装在两个节点的文件系统的同一位置，因为只读[SQL 资源数据库](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database)位于二进制文件中，并且是故障转移所必需的。此数据库不需要复制。
-  * SQL Milestone 数据库（.mdf 和 .ldf）必须位于两个节点上的同一目录中。这些目录必须配置为可复制。根据[本文](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html)，Milestone 数据库如下所示。
+  * SQL 也必须安装在两个节点的文件系统的同一位置，因为只读[SQL 资源数据库](https://learn.microsoft.com/en-us/sql/relational-databases/databases/resource-database)位于 SQL 二进制目录中，并且是故障转移所必需的。此数据库不需要复制。
+  * SQL Milestone 数据库（.mdf 和 .ldf）必须位于两个节点上的同一目录中。这些目录必须配置为复制。Milestone 的列表在此[文章](https://doc.milestonesys.com/xprotect/xprotect-management-client/2026r1/en/change-the-location-and-name-of-a-sql-server-database.html)中给出。
 
 
 ℹ️ 如果您单击 `Advanced configuration`，则会显示 `userconfig.xml` 文件。此文件由控制台自动填充，并通过重启脚本部署到节点上。
@@ -112,7 +112,7 @@
 
 ### 7. 保存并应用 {#7-save-and-apply}
 
-  * 在两个节点上 `Save and apply` 配置和脚本。
+  * 单击 `Save and apply` 以保存两个节点上的配置和脚本。
 
 
 ![保存并应用 {{ .Get "app" }} 模块配置](/wp-content/uploads/2025/05/08-module-save-1.png)
@@ -121,7 +121,7 @@
 ### 8. 验证配置是否成功 {#8-verify-successful-configuration}
 
   * 检查两个节点上的 `Success` ✅ 消息，然后单击 `Monitor modules`。
-  * 如果某个节点上发生配置 `Failure` ❌，请打开该节点的▼手风琴，然后查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
+  * 如果一个节点上显示配置 `Failure` ❌ 消息，请打开该节点的▼手风琴，并查看消息。请注意，您可以使用 SafeKit AI 🤖 寻求帮助。
 
 
 ![检查 {{ .Get "app" }} 模块配置是否成功](/wp-content/uploads/2025/05/09-module-save-check-1.png)
@@ -132,13 +132,13 @@
   * 如果节点 1 拥有最新的复制目录，请选择它，然后⋯ `Force start` ▶ `As primary`。
 
 
-当节点 2 启动时，所有数据将从节点 1 复制到节点 2。
+启动节点 2 时，所有数据将从节点 1 复制到节点 2。
 
 ⚠️ 如果您做出错误的选择，则有可能在两个节点上同步过时的数据。
 
 ⚠️ 还假定 {{ .Get "app" }} 程序在节点 1 上已停止，以便 SafeKit 安装复制机制，然后在 `start_prim` 脚本中启动应用程序。
 
-⚠️ 首次启动后，请使用 `Start`：SafeKit 会保留最新的服务器。首次启动或在特殊操作期间，请使用“启动 `As primary`。
+⚠️ 首次启动后，请使用 `Start`：SafeKit 会保留最新的服务器。仅在首次启动或特殊操作期间使用 `As primary`。
 
 
 ![将包含最新数据的 {{ .Get "app" }} 节点启动为主要节点](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)
@@ -152,11 +152,11 @@
 ⚠️ 如果未达到 ALONE（绿色）或未启动应用程序，请使用节点 1 的[模块日志 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png)分析原因。
 
   * 单击 `node1` 的 🔍**日志**图标，打开模块日志，查找错误消息，例如检查器检测到错误并停止模块。
-  * 点击日志中的 `start_prim`：脚本的输出消息显示在右侧，可以检测到错误，例如服务启动不正确。
+  * 点击日志中的 `start_prim`：脚本的输出消息显示在右侧，您可以检测错误，例如服务是否未正确启动。
   * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
 
 
-⚠️ 如果集群处于 `WAIT (red) not uptodate, STOP (red) not uptodate` 状态，请停止 WAIT 节点并[强制将其启动为主节点 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。
+⚠️ 如果集群状态为 `WAIT (red) not uptodate, STOP (red) not uptodate`，请停止 WAIT 节点并[强制其作为主节点启动 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。
 
 
 ![第一个 {{ .Get "app" }} 节点以主节点身份启动，并成为 ALONE](/wp-content/uploads/2024/03/12-monitoring-alone-stop.png)
@@ -164,15 +164,15 @@
 
 ### 11. 在节点 1 的桌面上，停止，然后注册到虚拟 IP 地址，应用 Milestone KB 并重新启动 Milestone 管理服务器 {#11-in-the-desktop-of-node-1-stop-then-register-on-the-virtual-ip-address-apply-the-milestone-kb-and-restart-the-milestone-management-server}
 
-根据图片中的菜单，在节点 1 上执行以下要点：
+在节点 1 上，按照图像中显示的菜单执行以下步骤：
 
   * 使用 SafeKit 控制台的 **ALONE** 菜单禁用**检查器**和**进程/服务监控**，以防止在停止管理服务器服务时出现误报（[暂停检查器 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)）。
   * 右键单击任务栏中的 **Milestone 管理服务器**图标。
-  * **停止管理服务器服务**
+  * 单击 **“停止管理服务器服务”**。
   * 然后选择 **Server Configurator ...”** 并注册虚拟 IP 地址。
   * **编辑节点 1 上的 ServerConfig.xml**。 
-    * 转到“ C:/ProgramData/Milestone/XProtect Management Server”，并备份原始 ServerConfig.xml 文件。
-    * 使用任何文本编辑器（具有管理员权限）打开 ServerConfig.xml 文件。
+    * 转到“ C:/ProgramData/Milestone/XProtect Management Server”，然后备份原始 ServerConfig.xml 文件。
+    * 使用文本编辑器（具有管理员权限）打开 ServerConfig.xml 文件。
     * 将 `XXX.XXX.XXX.XXX` 替换为以下内容中的实际虚拟 IP 地址：
     * `<Failover>...`
     * `<VirtualAddress>`
@@ -180,12 +180,12 @@
     * `</VirtualAddress>`
     * `...</Failover>`
     * 将 `<ClusterMember>false</ClusterMember>` 更改为 `true`
-    * 在以下位置设置 `http://NODE1_FQDN:9010`（如果为工作组，则为 NODE1 主机名）： 
+    * 在以下位置设置 `http://NODE1_FQDN:9010`（或工作组中的 NODE1 主机名）： 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE1_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
     * 如需了解更多信息，请参阅此 **[Milestone 知识库文章](https://milestonesys.my.site.com/developer/s/article/Management-Client-and-Smart-Client-are-not-functioning-properly-after-node-switch-in-a-clustered-Management-Server-setup)**。
-  * **启动管理服务器服务**
+  * 单击 **“启动管理服务器服务”**。
   * 使用 SafeKit 控制台的 **ALONE** 菜单启用**检查器**和**进程/服务监控**（[启用检查器 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png)）。
 
 
@@ -198,10 +198,10 @@
 ### 12. 在节点 2 的桌面上，在虚拟 IP 地址上注册管理服务器 {#12-in-the-desktop-of-node-2-register-the-management-server-on-the-virtual-ip-address}
 
   * 在节点 2 的任务栏中选择 **Server Configurator**，并在虚拟 IP 地址上注册（见图）。
-  * 然后**停止管理服务器服务**。
+  * 然后单击 **“停止管理服务器服务”**。
   * **编辑节点 2 上的 ServerConfig.xml**。 
-    * 转到“ C:/ProgramData/Milestone/XProtect Management Server”，并备份原始 ServerConfig.xml 文件。
-    * 使用任何文本编辑器（具有管理员权限）打开 ServerConfig.xml 文件。
+    * 转到“ C:/ProgramData/Milestone/XProtect Management Server”，然后备份原始 ServerConfig.xml 文件。
+    * 使用文本编辑器（具有管理员权限）打开 ServerConfig.xml 文件。
     * 将 `XXX.XXX.XXX.XXX` 替换为以下内容中的实际虚拟 IP 地址：
     * `<Failover>...`
     * `<VirtualAddress>`
@@ -209,7 +209,7 @@
     * `</VirtualAddress>`
     * `...</Failover>`
     * 将 `<ClusterMember>false</ClusterMember>` 更改为 `true`
-    * 在以下位置设置 `http://NODE2_FQDN:9010`（如果为工作组，则为 NODE2 主机名）： 
+    * 在以下位置设置 `http://NODE2_FQDN:9010`（或工作组中的 NODE2 主机名）： 
     * `<ClusterLocalWebserverUri>`
     * `http://NODE2_FQDN:9010`
     * `</ClusterLocalWebserverUri>`
@@ -219,7 +219,7 @@
 ⚠️ 请注意：
 
   * 在节点 2 上执行注册的用户帐户必须在节点 1 的 Milestone 中拥有管理员角色。
-  * 如果节点 2 上的本地管理员进行注册，则必须在[步骤 13](#role)中将内置 Windows 组 `BUILTIN/Administrators` 设置在 Management Client / Security / Roles 中。否则注册将无法正常工作。
+  * 如果节点 2 上的本地管理员进行注册，则必须在[步骤 13](#role)中将内置 Windows 组 `BUILTIN/Administrators` 设置在 Management Client /安全/角色中。否则，注册将不起作用。
 
 
 ℹ️ 此过程通过连接到虚拟地址，在 SQL 数据库（在节点 1 上运行）中注册节点 2 管理服务器。
@@ -230,7 +230,7 @@
 
 ### 13. 解决故障转移时的 Windows 身份验证问题 {#role}
 
-启动 Milestone XProtect Management Client 时，您必须使用以下方法之一进行身份验证。根据您的选择，需要执行特定步骤以确保 SafeKit 故障转移后登录正常工作。参考：[查看登录屏幕截图 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png)。
+启动 Milestone XProtect Management Client 时，您必须使用以下方法之一进行身份验证。根据您的选择，需要采取具体步骤来确保 SafeKit 故障转移后登录正常工作。请参阅[登录屏幕截图 🖼️](/wp-content/uploads/2022/07/milestone-management-server-connect.png)。
 
 #### 使用 Active Directory (AD) 进行 Windows 身份验证 {#windows-authentication-with-active-directory-ad}
 
@@ -260,7 +260,7 @@
 
 ### 14. 启动节点 2 {#14-start-node-2}
 
-  * ⋯使用其上下文菜单 `Start` 节点 2。
+  * 在节点 2 的上下文菜单中，点击⋯ `Start` ”。
   * 等待 SECOND（绿色）状态。
 
 
@@ -293,21 +293,21 @@
 ### 16. 测试 {#16-testing}
 
   * 向下滚动 PRIM 节点的上下文菜单，然后单击 `Stop`。
-  * 验证 SECOND 节点上是否存在故障转移，该节点应变为 ALONE（绿色）。
-  * 在 Windows 上使用 Microsoft 管理控制台 (MMC)，或在 Linux 上使用命令行，检查 {{ .Get "app" }} 服务的故障转移（在 `stop_prim` 脚本中停止节点 1 上的服务，并在 `start_prim` 脚本中启动节点 2 上的服务）。
+  * 验证故障转移是否发生在 SECOND 节点上，该节点将变为 ALONE（绿色）。
+  * 在 Windows 上使用 Microsoft 管理控制台 (MMC)，或在 Linux 上使用命令行，检查 {{ .Get "app" }} 服务的故障转移（在 `stop_prim` 脚本中在节点 1 上停止，在 `start_prim` 脚本中在节点 2 上启动）。
 
 
 ⚠️ 如果 node2 未达到 ALONE（绿色）状态或应用程序未启动，请使用节点 2 的[模块日志 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png)分析原因。
 
   * 单击 `node2` 的 🔍**日志**图标以打开模块日志，并查找错误消息，例如检测器检测到错误并停止模块。
-  * 点击日志中的 `start_prim`：脚本的输出消息显示在右侧，可以检测到错误，例如服务启动不正确。
+  * 点击日志中的 `start_prim`：脚本的输出消息显示在右侧，您可以检测错误，例如服务是否未正确启动。
   * 使用 SafeKit AI 🤖 获取日志消息方面的帮助。
 
 
 ⚠️
 
-  * 如果一切正常，请在 node1 上启动，这将从 node2 重新同步复制的目录。
-  * 如果出现问题，请停止 node2 并[强制 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png) node1 作为主节点，它将使用停止时本地健康的数据重新启动。
+  * 如果一切正常，请启动 node1。然后，Node1 会从 node2 重新同步复制的目录。
+  * 如果出现问题，请停止 node2 并[强制 node1 启动为主节点 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png)。然后，Node1 将使用停止时处于健康状态的本地数据重新启动。
 
 
 ℹ️ 请注意，您有一个 🕒**[时间线 🖼️](/wp-content/uploads/2026/05/safekit-console-timeline.png)**，可以帮助您了解集群中发生的情况。
@@ -320,12 +320,12 @@
 
 ### 17. 支持 {#17-support}
 
-  * 如需获取支持，请为每个节点拍摄 2 个 SafeKit `Snapshots`（2 个 .zip 文件）。
+  * 如需获得支持，请为每个节点各拍摄一张 SafeKit `Snapshots`（两个 .zip 文件）。
 
 
 ℹ️ [有关支持的更多信息，请点击此处](/zh-hans/resources/safekit-support/)。
 
 
-![截取 {{ .Get "app" }} 快照以获得支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
+![为 {{ .Get "app" }} 集群创建 SafeKit snapshots 以获得支持](/wp-content/uploads/2024/03/30-snapshots-mirror.png)
 
 

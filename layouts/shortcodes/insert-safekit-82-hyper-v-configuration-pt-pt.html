@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-08.10 | glossaire 2026-11-08.28 | Translation LLM | 24 expressions */}}
+{{/* translation: translate_md 2026-11-11.1 | glossaire 2026-11-11.2 | Translation LLM | 50 expressions */}}
 {{/* Shortcode: insert-safekit-82-hyper-v-configuration-en — 1 instance in 1 file */}}
 {{/* Parameters: app, mod */}}
 {{/* Source: content\quick-install\safekit-quick-installation-guide-with-hyper-v.md */}}
@@ -7,7 +7,7 @@
 
 ⚠️ Leia atentamente estes pontos antes de começar:
 
-  * A configuração {{ .Get "app" }} é apresentada com uma máquina virtual denominada `VM1`. Leia atentamente "1. Pré-requisitos" para a **organização dos ficheiros VM1**, caso contrário, a recuperação no nó secundário poderá falhar com dados inconsistentes.
+  * A configuração {{ .Get "app" }} é apresentada com uma máquina virtual denominada `VM1`. Leia atentamente "1. Pré-requisitos" para a **organização dos ficheiros VM1**. Caso contrário, a recuperação no nó secundário poderá falhar com dados inconsistentes.
   * Terá de repetir esta configuração para todas as máquinas virtuais que deseja replicar e reiniciar.
   * O sistema de ficheiros onde os ficheiros da VM replicados pelo SafeKit são armazenados deve ser NTFS; **o ReFS não é suportado**.
   * SafeKit suporta a replicação de **pontos de verificação de produção {{ .Get "app" }}, mas não de pontos de verificação padrão**. Não utilize pontos de verificação padrão, caso contrário, a recuperação no nó secundário poderá falhar com dados inconsistentes.
@@ -82,24 +82,24 @@ Também é possível executar a consola num navegador, numa estação de trabalh
 
   * Escolha o arranque `Automatic` do módulo no arranque, sem demora.
   * Normalmente, tem uma única rede `Heartbeat` na qual a replicação é feita. No entanto, pode definir uma rede privada, se necessário (adicionando uma LAN no passo 3).
-  * Introduza em `VM_PATH` o caminho raiz do diretório replicado (D:/Repli-{{ .Get "app" }}).
-  * Introduza em `VM_NAME` o nome da máquina virtual (VM1).
+  * Em `VM_PATH`, introduza o caminho raiz do diretório replicado (D:/Repli-{{ .Get "app" }}).
+  * Em `VM_NAME`, introduza o nome da máquina virtual (VM1).
 
 
 Assumimos que todos os ficheiros VM1 estão em D:/Repli-{{ .Get "app" }}/VM1 (ver [pré-requisitos](#prerequisite)). Este diretório será replicado em tempo real pelo SafeKit. Não execute a replicação parcial, pois a recuperação de falhas não funcionará.
 
-Os valores `NORMAL_STOP` e `FORCE_STOP` podem ser " `stop` ", " `save` " ou " `off` ":
+Os valores `NORMAL_STOP` e `FORCE_STOP` podem ser "`stop`", "`save`" ou "`off`":
 
-  * " `stop` " encerra a máquina virtual quando o módulo é parado.
-  * " `save` " guarda o estado atual da VM (suspensão) quando o módulo é parado.
-  * " `off` " desliga a máquina virtual (desliga a energia) quando o módulo é parado.
+  * "`stop`" encerra a máquina virtual quando o módulo é parado.
+  * "`save`" guarda o estado atual da VM (suspensão) quando o módulo é parado.
+  * "`off`" desliga a máquina virtual (desliga a energia) quando o módulo é parado.
 
 
-A opção " `stop` " é recomendada porque causa o encerramento e, em seguida, o reinício da VM quando o módulo é parado e reiniciado. Assim, se a aplicação dentro da VM falhar, ela é reiniciada.
+A opção "`stop`" é recomendada porque desliga a máquina virtual e, em seguida, reinicia-a quando o módulo é parado e reiniciado. Assim, se a aplicação dentro da máquina virtual falhar, ela é reiniciada.
 
 Este será o caso, por exemplo, ao alternar entre funções primárias e secundárias.
 
-ℹ️ Não é necessário configurar um endereço IP virtual. VM1 será reiniciada na {{ .Get "app" }} secundária com o seu endereço IP físico e este endereço IP será redirecionado.
+ℹ️ Não é necessário configurar um endereço IP virtual. VM1 será reiniciada no servidor {{ .Get "app" }} secundário com o seu endereço IP físico, e este endereço IP será redirecionado.
 
 ℹ️ Ao aplicar a configuração SafeKit, a `Automatic Start Action` da máquina virtual é definida como " `Nothing` na {{ .Get "app" }}. Isto garante que a máquina virtual não inicia automaticamente quando o anfitrião Hyper-V é iniciado, mas é iniciada apenas quando o próprio módulo é iniciado.
 
@@ -109,14 +109,14 @@ Este será o caso, por exemplo, ao alternar entre funções primárias e secund�
 
 ### 6. Verificador personalizado para detetar avarias na máquina virtual {#vm-checker}
 
-O verificador personalizado envia mensagens de pulsação do anfitrião para a máquina virtual em intervalos regulares. É então da responsabilidade do Serviço de Pulsação {{ .Get "app" }}, instalado na máquina virtual, enviar uma resposta a cada uma destas mensagens de pulsação.
+O verificador personalizado envia mensagens heartbeat do anfitrião para a máquina virtual em intervalos regulares. É então da responsabilidade do Serviço heartbeat {{ .Get "app" }}, instalado na máquina virtual, enviar uma resposta a cada uma destas mensagens heartbeat.
 
-Se o Serviço de Pulsação {{ .Get "app" }} não responder à mensagem (VM bloqueada, bloqueada ou deixou de funcionar), o verificador personalizado executa uma ação para reiniciar a VM no mesmo nó {{ .Get "app" }} ou no outro.
+Se o Serviço heartbeat {{ .Get "app" }} não responder à mensagem (VM bloqueada, bloqueada ou deixou de funcionar), o verificador personalizado executa uma ação para reiniciar a VM no mesmo nó {{ .Get "app" }} ou no outro.
 
   * Clique em `Checkers / Custom` (ver imagem).
-  * Basta definir um nome à sua escolha em `Resource name` (exemplo VM1). `Resource name` identifica a máquina virtual com um nome de recurso no SafeKit: `custom.VM1`.
+  * Defina um nome à sua escolha em `Resource name` (exemplo VM1). `Resource name` identifica a máquina virtual com um nome de recurso no SafeKit: `custom.VM1`.
   * Com `restart` em `Action`, a VM é reiniciada no mesmo nó {{ .Get "app" }}. Após 3 reinícios sem sucesso em 24 horas, o módulo SafeKit {{ .Get "mod" }} para no nó primário e ocorre uma comutação de contingência da VM para o nó secundário.
-  * Se definir `stopstart` na `Action`, haverá uma comutação automática para o outro nó {{ .Get "app" }} assim que a máquina virtual deixar de responder aos sinais de pulsações.
+  * Se definir `stopstart` na `Action`, haverá uma comutação automática para o outro nó {{ .Get "app" }} assim que a VM deixar de responder aos heartbeats.
 
 
 ℹ️ Para manutenção, se quiser parar a máquina virtual, o verificador personalizado irá reiniciá-la automaticamente. Para evitar isso, pode [suspender temporariamente o verificador 🖼️](/wp-content/uploads/2024/04/safekit-disable-checkers.png). Ou pode removê-lo, eliminando a linha de configuração na consola.
@@ -184,7 +184,7 @@ Quando o nó 2 for iniciado, todos os dados serão copiados do nó 1 para o nó 
 ⚠️ Se ALONE (verde) não for atingido ou se VM1 não for iniciado, analise o motivo com o [registo do módulo 🖼️](/wp-content/uploads/2024/03/24-module-log-script.png) do nó 1.
 
   * Clique no ícone **de registo** 🔍 do `node1` para abrir o registo do módulo e procure mensagens de erro, como um verificador que deteta um erro e para o módulo.
-  * Clique em `start_prim` no registo: as mensagens de saída do script são apresentadas à direita e os erros podem ser detetados, como VM1 iniciado incorretamente.
+  * Clique em `start_prim` no registo: as mensagens de saída do script são exibidas à direita e pode detetar erros, por exemplo, se VM1 não foi iniciada corretamente.
   * Utilize o SafeKit AI 🤖 para obter assistência com as mensagens de registo.
 
 
@@ -233,13 +233,13 @@ Apenas as alterações dentro dos ficheiros são replicadas em tempo real neste 
 ⚠️ Se ALONE (verde) não for atingido no node2 ou se VM1 não for iniciada, analise o motivo com o [registo do módulo 🖼️](/wp-content/uploads/2024/03/38-module-log-script-second.png) do nó 2.
 
   * Clique no ícone **de registo** 🔍 do `node2` para abrir o registo do módulo e procure mensagens de erro, como um verificador que deteta um erro e para o módulo.
-  * Clique em `start_prim` no registo: as mensagens de saída do script são apresentadas à direita e os erros podem ser detetados, como VM1 iniciado incorretamente.
+  * Clique em `start_prim` no registo: as mensagens de saída do script são exibidas à direita e pode detetar erros, por exemplo, se VM1 não foi iniciada corretamente.
   * Utilize o SafeKit AI 🤖 para obter assistência com as mensagens de registo.
 
 
 ⚠️ Como o script `start_prim` importa a máquina virtual no nó 2, a comutação de contingência pode falhar devido às 🛠️ [definições {{ .Get "app" }} (consulte a KB SK-0088 neste documento)](https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf).
 
-⚠️ Se tudo estiver bem, inicie o node1, que irá ressincronizar os diretórios replicados do node2.
+⚠️ Se tudo estiver bem, inicie node1. Node1 em seguida, resincroniza os diretórios replicados do node2.
 
 Se as coisas correrem mal, pare node2 e [force o nó 1 a iniciar como primário 🖼️](/wp-content/uploads/2024/03/10-monitoring-mirror-stop-stop-prim.png), que será reiniciado com os seus dados localmente íntegros no momento da paragem.
 
@@ -249,9 +249,9 @@ Se as coisas correrem mal, pare node2 e [force o nó 1 a iniciar como primário 
 ![Parar o módulo {{ .Get "app" }} no servidor PRIM](/wp-content/uploads/2024/03/16-monitoring-prim-second-stop.png)
 
 
-### 16. Se necessário, configure um verificador de divisão de rede {#16-if-necessary-configure-a-splitbrain-checker}
+### 16. Se necessário, configure um checker split-brain {#16-if-necessary-configure-a-splitbrain-checker}
 
-  * Consulte ["Quais são os diferentes cenários em caso de isolamento de rede num cluster?"](/pt-pt/best-practises/power-outage-and-network-isolation-in-a-cluster/) para saber se precisa de configurar um verificador de divisão de rede.
+  * Consulte ["Quais são os diferentes cenários em caso de isolamento de rede num cluster?"](/pt-pt/best-practises/power-outage-and-network-isolation-in-a-cluster/) para saber se precisa de configurar um checker split-brain.
   * Vá para a configuração do módulo e clique em `Checkers / Splitbrain` (ver imagem) para editar os parâmetros do splitbrain.
   * `Save and apply` a nova configuração para a reimplantar em ambos os nós (o módulo deve estar parado em ambos os nós para guardar e aplicar).
 
@@ -260,7 +260,7 @@ Se as coisas correrem mal, pare node2 e [force o nó 1 a iniciar como primário 
 
   * `Resource name` identifica a testemunha com um nome de recurso: `splitbrain.witness`. Pode alterar este valor para identificar a testemunha.
   * `Witness address` é o argumento para um ping quando um nó passa de PRIM para ALONE ou de SECOND para ALONE. Altere este valor para o IP do testemunha (um elemento robusto, normalmente um router).
-  * Nota: pode definir vários IPs separados por espaços em branco. Tenha em atenção que os endereços IP devem ser acessíveis a partir de um nó, mas não do outro, em caso de isolamento de rede.
+  * Nota: pode definir vários IPs separados por espaços em branco. Certifique-se de que os endereços IP são acessíveis a partir de um nó, mas não do outro, em caso de isolamento de rede.
 
 
 ![Introduza os parâmetros de divisão de rede {{ .Get "app" }}](/wp-content/uploads/2024/04/safekit-split-brain-checker.png)
@@ -270,23 +270,23 @@ Se as coisas correrem mal, pare node2 e [force o nó 1 a iniciar como primário 
 
 Se pretender um reinício automático ou uma comutação de contingência quando um serviço crítico dentro da VM falhar, pode configurar as propriedades de Recuperação do serviço (ver imagem).
 
-Primeiro, deve configurar o [verificador personalizado da máquina virtual,](#vm-checker) conforme descrito anteriormente.
+Primeiro, deve configurar o [verificador personalizado da máquina virtual](#vm-checker), conforme descrito anteriormente.
 
-E depois, no Microsoft Service Manager, dentro da VM, selecione o seu serviço crítico e, na propriedade de recuperação do serviço, só tem de configurar o encerramento da VM quando o serviço crítico falhar.
+E depois, no Microsoft Service Manager, dentro da VM, selecione o seu serviço crítico e, na propriedade de recuperação do serviço, configure o encerramento da VM quando o serviço crítico falhar.
 
-Para isso, nas Opções de Recuperação do seu serviço crítico, escolha " **Executar um Programa** " em caso de falhas e, nas Opções de Execução do Programa, defina " **C:/Windows/System32/shutdown.exe** " e, em "Parâmetros da linha de comando", defina **/s /c "service fails"**.
+Para fazer isso, nas Opções de Recuperação do seu serviço crítico, escolha "**Executar um Programa**" em caso de falhas. Nas opções de Execução do programa, defina `C:/Windows/System32/shutdown.exe` como o programa e defina `/s /c "service fails"` como os parâmetros da linha de comando.
 
-Claro que pode implementar uma recuperação mais subtil com os seus próprios scripts. Mas tenha em atenção que o encerramento da VM ativará o verificador personalizado no anfitrião. O verificador personalizado detetará que o "heartbeat" {{ .Get "app" }} deixou de responder e reiniciará a VM no mesmo servidor {{ .Get "app" }} ou fará um "failover" para o outro servidor {{ .Get "app" }} (dependendo da sua configuração).
+Claro que pode implementar uma recuperação mais subtil com os seus próprios scripts. No entanto, tenha em atenção que o encerramento da VM ativará o verificador personalizado no anfitrião. O verificador personalizado detetará que o heartbeat {{ .Get "app" }} já não responde. Em seguida, reiniciará a VM no mesmo servidor {{ .Get "app" }} ou fará failover para o outro servidor {{ .Get "app" }} (dependendo da sua configuração).
 
 Para testar a funcionalidade, utilize o Gestor de Tarefas e encerre o processo (Terminar tarefa) associado ao serviço crítico. Uma paragem limpa do serviço através do Gestor de Serviços ou do comando "net stop" não aciona a ação de recuperação dentro do Gestor de Serviços Windows.
 
 
-![Falha na migração de serviços críticos da VM {{ .Get "app" }} do módulo {{ .Get "app" }}](/wp-content/uploads/2023/11/hyperv-critical-service.png)
+![Recuperação de falhas da máquina virtual {{ .Get "app" }} quando um serviço crítico falha](/wp-content/uploads/2023/11/hyperv-critical-service.png)
 
 
 ### 18. Apoio {#18-support}
 
-  * Para obter suporte, faça 2 `Snapshots` SafeKit (2 ficheiros .zip), uma para cada nó.
+  * Para obter suporte, faça duas `Snapshots` SafeKit (dois ficheiros .zip), uma para cada nó.
 
 
 ℹ️ [Mais informações sobre o apoio aqui](/pt-pt/resources/safekit-support/).
