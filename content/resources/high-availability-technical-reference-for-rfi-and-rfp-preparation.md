@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/resources/high-availability-technical-ref
 description: "Find technical information about SafeKit to prepare requests for information (RFI) and requests for proposals (RFP). Learn about supported systems, architectures, recovery times, security, licensing, and support."
 category: "resources"
 lang: "en"
-topics: "Overview, Table of contents, Product information, Supported operating systems and platforms, SafeKit High Availability Limitations, Preconfigured application modules, Architecture and deployment, Data loss and recovery times (RPO and RTO), Remote sites and distributed deployments, Monitoring, management, and alerts, Security and compliance, Licensing, Support and maintenance service levels, Comparison with other solutions, Useful links"
+topics: "Overview, Table of contents, Product information, Supported operating systems and platforms, SafeKit High Availability Limitations, Preconfigured application modules, Architecture and deployment, Data loss and recovery times (RPO and RTO), Remote sites and distributed deployments, Monitoring and alerts, Security and compliance, Licensing, Support and maintenance, Comparison with other solutions, Useful links"
 ---
 
 # SafeKit technical reference for RFI and RFP documents {#high-availability-technical-reference-for-rfi-and-rfp-preparation}
@@ -22,21 +22,21 @@ Use this page to prepare a request for information (RFI) or a request for propos
   5. [Architecture and deployment](#architecture-deployment-model)
   6. [Data loss and recovery times (RPO and RTO)](#rpo-rto-capabilities)
   7. [Remote sites and distributed deployments](#edge-distributed-deployment-suitability)
-  8. [Monitoring, management, and alerts](#monitoring-management-alerting)
+  8. [Monitoring and alerts](#monitoring-management-alerting)
   9. [Security and compliance](#security-compliance)
   10. [Licensing](#licensing-model)
-  11. [Support and maintenance service levels](#support-maintenance-slas)
+  11. [Support and maintenance](#support-maintenance-slas)
   12. [Comparison with other solutions](#comparison-vs-alternatives)
   13. [Useful links](#quick-reference-links)
 
 
 ## Product information {#product-identity}
 
-Field | Answer  
+Topic | Details  
 ---|---  
 Product name | SafeKit  
-Vendor | Eviden, part of the Atos Group. Previously known as Evidian.  
-Software development | Developed in France.
+Vendor | Eviden, part of the Atos Group. Formerly Evidian.  
+Country of development | France  
 Product category | Software for application clustering, high availability, and disaster recovery  
 Current version | SafeKit 8.2  
 Website | [https://safekit.eviden.com](/)  
@@ -71,7 +71,7 @@ New Windows app — mirror.safe | Hyper-V VM — hyperv.safe (Windows)
 New Linux app — mirror.safe | KVM VM — kvm.safe (Linux)  
 Windows load balancing — farm.safe | Docker container — mirror.safe (Linux)  
 Linux load balancing — farm.safe | Podman container — mirror.safe (Linux)  
-Microsoft SQL Server — sqlserver.safe (Windows) | Kubernetes / K3s — k3s.safe (Linux)  
+Microsoft SQL Server — sqlserver.safe (Windows) | K3s Kubernetes — k3s.safe (Linux)  
 PostgreSQL — postgresql.safe (Windows & Linux) | Bosch AMS — hyperv.safe (Windows)  
 MySQL — mysql.safe (Windows & Linux) | Bosch BIS — hyperv.safe (Windows)  
 MariaDB — mysql.safe (Windows & Linux) | Bosch BVMS — hyperv.safe (Windows)  
@@ -90,7 +90,7 @@ Cloud (AWS, Azure, GCP, generic) — mirror.safe / farm.safe |
 
 ### Two cluster modules: mirror.safe and farm.safe {#two-cluster-modules}
 
-Module | How it works | Typical applications  
+Module | Operating principle | Typical applications  
 ---|---|---  
 mirror.safe | One server is active and the other is on standby. Files are replicated synchronously at byte level. Failover is automatic. | Databases, applications that store state, and services that run on only one server at a time  
 farm.safe | Several servers are active at the same time. SafeKit distributes network traffic between them and handles failover automatically. | Web servers, stateless microservices, API gateways, and services that run on several servers at a time  
@@ -101,13 +101,13 @@ Requirement | SafeKit capabilities
 ---|---  
 Shared storage required? | No. SafeKit uses local disks. It does not need a SAN or shared storage.  
 Active Directory required? | No. SafeKit does not require a Windows domain or Active Directory. It also supports workgroups.  
-Cluster size | 2 nodes (mirror) or 2+ nodes (<span class="notranslate farm-term" translate="no">farm</span>)  
+Number of nodes in a cluster | 2 nodes (mirror) or 2+ nodes (<span class="notranslate farm-term" translate="no">farm</span>)  
 Virtual IP address (VIP) | For application high availability, the virtual IP address moves automatically to the active node through Gratuitous ARP. For virtual machine high availability, traffic to the IP address inside the virtual machine is redirected automatically. No separate virtual IP address is needed. The nodes must share a LAN or a VLAN extended between sites.  
 Architecture with three nodes | SafeKit runs a two-node mirror cluster on a LAN or a VLAN extended between sites. It provides synchronous replication with zero data loss (RPO=0) and automatic failover. A separate backup product replicates data asynchronously to a third node over a WAN. This backup allows recovery to an earlier point in time and provides protection against ransomware.  
 Purpose of high availability | SafeKit replicates data synchronously to both nodes. This allows automatic failover without data loss after a hardware or software failure. However, logical errors, data corruption, and accidental deletions are also copied immediately to the standby node.  
 Purpose of backups | Backups let you restore data from an earlier point in time. A separate backup product, not SafeKit, provides this protection through asynchronous replication. Backups help recover from ransomware and human error. This recovery is not automatic failover. Restoring an older backup loses changes made after that backup.  
 Maximum modules running at the same time | A two-node cluster can manage up to 32 modules at the same time. For virtual machine protection, each module replicates and restarts a different virtual machine. Each module can be primary on either node, so both servers can share the workload. The total volume of data affects resynchronization time after failover or a node restart.  
-Software required on each node? | Yes. A lightweight software is installed on each node.  
+Is software installed on each node? | Yes. A lightweight software is installed on each node.  
 Supported applications | SafeKit can protect any Windows service or Linux daemon. Preconfigured modules are available for more than 30 applications.  
   
 ### Replication and data protection {#replication-data-protection}
@@ -119,7 +119,7 @@ Replication mode | Synchronous replication, with zero data loss
 Network requirement | A round-trip latency below 5 ms between nodes is recommended for synchronous replication.  
 Recommended data volume | A few terabytes, to keep resynchronization time manageable  
 Recommended file count | Fewer than 1,000,000 files, to keep resynchronization time manageable  
-Time to resynchronize 1 TB | About 3 hours over a 1 Gb/s network or 1 hour over a 10 Gb/s network  
+Resynchronization time for 1 TB | About 3 hours over a 1 Gb/s network or 1 hour over a 10 Gb/s network  
 Selective replication | You can choose which directories and files to replicate.  
 Encryption during transfer | Replication traffic is encrypted with TLS/SSL.  
   
@@ -129,10 +129,10 @@ Encryption during transfer | Replication traffic is encrypted with TLS/SSL.
 
 Metric | Mirror (mirror.safe) | <span class="notranslate farm-term" translate="no">Farm</span> (farm.safe)  
 ---|---|---  
-RPO (recovery point objective) | Zero data loss. A write is confirmed only after both nodes acknowledge it. | Not applicable to stateless services. A separate mirror cluster manages the data.  
+RPO (recovery point objective) | Zero data loss. A write operation is complete only when both nodes have written the data. | Not applicable to stateless services. The data is managed by a separate mirror cluster.  
 RTO (recovery time objective) | About one minute. This includes the <span class="notranslate farm-term" translate="no">heartbeat</span> timeout (30 seconds by default) and the time to restart the application. | A few seconds. Traffic is redistributed to the remaining active nodes.  
 Replication type | Synchronous, real-time, byte-level file replication | Not applicable  
-Failover trigger | Automatic when <span class="notranslate farm-term" translate="no">heartbeats</span> stop, a process crashes, or a checker detects a failure | Automatic when <span class="notranslate farm-term" translate="no">heartbeats</span> stop, a process crashes, or a checker detects a failure  
+Failover trigger | Failover starts automatically when <span class="notranslate farm-term" translate="no">heartbeat</span> messages stop, when a process crashes, or when a checker detects a failure | Failover starts automatically when <span class="notranslate farm-term" translate="no">heartbeat</span> messages stop, when a process crashes, or when a checker detects a failure  
 Manual intervention required? | No. Failover and failback are automatic. | No. Failover and failback are automatic.  
   
 ### Recovery time for applications protected by a mirror cluster {#rto-breakdown-mirror-application-level-ha}
@@ -141,13 +141,13 @@ Failure type | How recovery time is calculated
 ---|---  
 Hardware failure | <span class="notranslate farm-term" translate="no">Heartbeat</span> timeout (30 seconds by default), followed by application restart  
 Software or process crash | The time to stop the application, followed by application restart  
-Operating system crash | <span class="notranslate farm-term" translate="no">Heartbeat</span> timeout. The operating system is already running on the standby server, so it does not need to reboot.  
+Operating system crash | The <span class="notranslate farm-term" translate="no">heartbeat</span> timeout, followed by application restart. The standby server does not need to reboot because its operating system is already running.  
   
 ### Recovery time for virtual machines protected by a mirror cluster {#rto-breakdown-mirror-vm-level-ha}
 
 Failure type | How recovery time is calculated  
 ---|---  
-Any failure | Time to detect the failure, reboot the virtual machine operating system, and restart the application. This usually takes several minutes.  
+All failure types | Time to detect the failure, reboot the virtual machine operating system, and restart the application. This usually takes several minutes.  
   
 ## Remote sites and distributed deployments {#edge-distributed-deployment-suitability}
 
@@ -156,13 +156,13 @@ SafeKit is designed for remote sites, branch offices, and organizations with man
 Requirement at a remote site | SafeKit capabilities  
 ---|---  
 No dedicated IT staff on site | Failover is automatic and requires no manual action.  
-No SAN or NAS | SafeKit uses local disks and does not require shared storage.  
+No shared storage (SAN or NAS) | Only local disks are needed. Shared storage is not required.  
 Remote management | Manage the cluster through a web console.  
 Limited hardware | Two standard servers or virtual machines are enough. No special hardware is required.  
 Firewalls and network address translation (NAT) | Ports can be configured. The web console uses HTTPS.  
 Disaster recovery between sites | A mirror cluster can connect two sites through a VLAN extended between them.  
 Integration by software publishers | Software publishers can include SafeKit in their products. Installation can run without user interaction and can be automated with scripts.  
-Hundreds of clusters across many sites | SafeKit is designed for organizations with many branches.  
+Hundreds of SafeKit clusters across many sites | SafeKit is designed for organizations with many branches.  
   
 The following sites need high availability even when they do not have a data center:
 
@@ -181,32 +181,32 @@ Healthcare | Clinics, remote diagnostic centers | Medical imaging, patient data,
 Retail | Stores, branches, warehouses | Point-of-sale and inventory management  
 Defense | Forward operating bases, field units | Mission-critical command and communications systems  
   
-## Monitoring, management, and alerts {#monitoring-management-alerting}
+## Monitoring and alerts {#monitoring-management-alerting}
 
-Capability | Details  
+Feature | Details  
 ---|---  
 Web console | Configure, monitor, and manage cluster nodes through a web application or a Progressive Web App (PWA).  
 Mobile notifications | Receive browser notifications when a module changes state.  
 Timeline | View module status changes and events in chronological order.  
 Email notifications | A built-in email agent sends alerts.  
 Command-line interface | Use the command-line interface to write scripts and automate tasks.  
-Log management | Each module and script has its own log files. Module <span class="notranslate farm-term" translate="no">snapshots</span> help the support team investigate problems.  
+Log management | Each module and script has its own log files. The support team uses module <span class="notranslate farm-term" translate="no">snapshots</span> to investigate problems.  
 Integration with monitoring tools | SafeKit records major cluster events in the Windows Event Log or Linux Syslog. Monitoring tools can collect these events and trigger alerts with standard rules. This works with Nagios, Zabbix, Splunk, and SIEM tools without custom development.  
   
 ## Security and compliance {#security-compliance}
 
 Feature | Details  
 ---|---  
-HTTPS | TLS certificates protect access to the web console.  
+HTTPS | The web console uses HTTPS with TLS certificates.  
 User authentication | Local accounts, LDAP, certificates (PKI), and OpenID Connect  
 User roles | Configure access policies for administration, control, and monitoring.  
-Encryption | TCP traffic uses TLS/SSL for replication, the web console, and distributed commands. UDP traffic uses AES-128-CBC encryption with SHA256 for <span class="notranslate farm-term" translate="no">heartbeats</span> and the internal safeadmin protocol. SafeKit uses the OpenSSL library for encryption and Apache for the web service.  
+Encryption | TCP traffic uses TLS/SSL for replication, the web console, and distributed commands. UDP traffic uses AES-128-CBC encryption with SHA256 for <span class="notranslate farm-term" translate="no">heartbeat</span> messages and for the internal safeadmin protocol. The OpenSSL library provides encryption. The web service runs on Apache.  
 Antivirus | The documentation lists the paths to exclude from antivirus scans.  
 Sovereignty | SafeKit is developed in France by Eviden, part of the Atos Group. It protects Windows and Linux applications while keeping your data and servers on your premises. SafeKit can help meet the requirements of the European NIS2 Directive for business continuity and disaster recovery.
   
 ## Licensing {#licensing-model}
 
-Aspect | Details  
+Topic | Details  
 ---|---  
 License type | A perpetual license is purchased once and is tied to a hostname.  
 License scope | One license per server (node)  
@@ -221,8 +221,8 @@ Free one-month license | Available to test a proof of concept
 Service | Details  
 ---|---  
 Support portal access | The web portal is available at all times, every day of the year, for up to four named technical contacts.  
-Live support hours | Monday to Friday, from 9:00 AM to 5:00 PM at the European Support Centre  
-Incident acknowledgement | Within four working hours of the Support Centre  
+Live support hours | Monday to Friday, from 09:00 to 17:00, at the European Support Centre  
+Incident acknowledgement | Within four working hours. Working hours are the live support hours of the Support Centre.  
 Updates and upgrades | All service packs, updates, and upgrades are included at no extra charge.  
 License key replacement | With an active support contract, a license key can be reassigned when a hostname changes. Transfer is limited to replacing a server within the same project. Prior written approval from Eviden is required.  
 Knowledge base access | Full access to knowledge base articles, frequently asked questions, and online documentation  
@@ -231,9 +231,9 @@ Support portal | <https://customercare.evidian.com>
   
 ### Free resources without a support contract {#free-resources-no-contract-required}
 
-Resource | Details  
+Free resource | Details  
 ---|---  
-AI support assistant | Use [SafeKit AI chat](</resources/safekit-support/#ai-support>) on safekit.eviden.com.   
+AI assistant for support | Use [SafeKit AI chat](</resources/safekit-support/#ai-support>) on safekit.eviden.com.   
 Online training and certification | [Learn at your own pace](/resources/safekit-on-line-training/) with free videos lasting about 4 hours in total. Receive a certificate when you complete the training.  
 Documentation | User guide, release notes, knowledge base, and quick installation guides [here](/resources/safekit-free-trial/)  
   
@@ -247,14 +247,14 @@ Linux support | Yes | No | Yes | Yes
 Deployment at remote sites | Excellent | Complex | Complex | Complex  
 OEM | Yes | No | No | No  
 Cost | Perpetual license per node | Windows Server and SAN | vSphere Enterprise and SAN | Advanced integration services  
-Setup complexity | Ready to configure and use | High: Active Directory, SAN, and witness configuration | High: vCenter and shared storage configuration | High: several separate products to configure  
-Administration | One product managed through a web console | High: Active Directory and SAN expertise | High: dependency on vCenter | High: several separate products to maintain  
+Setup complexity | Low: one product to install and configure | High: Active Directory, SAN, and witness configuration | High: vCenter and shared storage configuration | High: several separate products to configure  
+Administration | One product managed through a web console | High: requires Active Directory and SAN expertise | High: depends on vCenter | High: several separate products to maintain  
   
 **[1]** On Linux, six separate open-source projects are needed to provide the same set of features: Corosync, Pacemaker, DRBD, Keepalived, STONITH, and HAProxy. SafeKit provides these features in one product for both Windows and Linux.
 
 ## Useful links {#quick-reference-links}
 
-Resource | URL  
+Link | URL  
 ---|---  
 Product home page | [https://safekit.eviden.com](/)  
 Technical overview (Word document with text and diagrams) | [https://safekit.eviden.com/wp-content/uploads/documents/safekit-technical-overview-en.docx](</wp-content/uploads/documents/safekit-technical-overview-en.docx>)  

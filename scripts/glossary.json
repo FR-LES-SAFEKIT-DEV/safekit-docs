@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-11.6",
+  "version": "2026-11-11.10",
   "keep": [
     "mirror",
     "farm",
@@ -106,7 +106,10 @@
     "Alstef",
     "Fives Syleps",
     "BAGware",
-    "SafeKit snapshots"
+    "SafeKit snapshots",
+    "Windows Server",
+    "BVMS",
+    "BIS"
   ],
   "terms": {
     "farm cluster": {
@@ -994,6 +997,26 @@
       [
         "\\bPrenez SafeKit snapshots\\b",
         "Prenez des SafeKit snapshots"
+      ],
+      [
+        "\\binfonuagiques?\\b",
+        "cloud"
+      ],
+      [
+        "sous le nom (?=Evidian)",
+        "sous le nom d’"
+      ],
+      [
+        "(utilise|utilisez|utiliser) (<span[^>]*>snapshots</span>)",
+        "\\1 les \\2"
+      ],
+      [
+        "\\bmise en grappe\\b",
+        "mise en cluster"
+      ],
+      [
+        "\\b[Nn]otifications par courriel\\b",
+        "Notifications par e-mail"
       ]
     ],
     "it": [
@@ -1100,6 +1123,10 @@
       [
         "(„|\")\\s+(?=[A-Z]:/)",
         "\\1"
+      ],
+      [
+        "(utilizza|utilizzare|usa|usare) (<span[^>]*>snapshots</span>)",
+        "\\1 gli \\2"
       ]
     ],
     "es": [
@@ -1210,6 +1237,10 @@
       [
         "(„|\")\\s+(?=[A-Z]:/)",
         "\\1"
+      ],
+      [
+        "(utiliza|utilice|usa|use) (<span[^>]*>snapshots</span>)",
+        "\\1 los \\2"
       ]
     ],
     "pt": [
@@ -1312,6 +1343,10 @@
       [
         "\\b(no|o|do) SECOND estado\\b",
         "\\1 estado SECOND"
+      ],
+      [
+        "(utiliza|utilize|usa|use) (<span[^>]*>snapshots</span>)",
+        "\\1 os \\2"
       ]
     ],
     "ar": [
@@ -1640,6 +1675,18 @@
       [
         "(„|\")\\s+(?=[A-Z]:/)",
         "\\1"
+      ],
+      [
+        "(\\w)- (<span[^>]*>)",
+        "\\1-\\2"
+      ],
+      [
+        "(Heartbeat</span>) Nachrichten",
+        "\\1-Nachrichten"
+      ],
+      [
+        "\\bzustandslos (Dienste|Diensten|Anwendungen)",
+        "zustandslose \\1"
       ]
     ],
     "ko": [
@@ -2022,6 +2069,14 @@
       [
         "\\[같은 ",
         "같은 ["
+      ],
+      [
+        "(<span[^>]*>snapshots</span>) (?=사용)",
+        "\\1를 "
+      ],
+      [
+        "경우 SafeKit (?=[A-Za-z])",
+        "경우 SafeKit은 "
       ]
     ],
     "ja": [
@@ -2296,6 +2351,14 @@
       [
         "通常<",
         "通常 <"
+      ],
+      [
+        "(^|\\| )SafeKit ?、",
+        "\\1SafeKit は"
+      ],
+      [
+        "(<span[^>]*>snapshots</span>) ?(?=使用)",
+        "\\1 を"
       ]
     ],
     "zh-hans": [
@@ -2460,6 +2523,10 @@
       [
         "(„|\")\\s+(?=[A-Z]:/)",
         "\\1"
+      ],
+      [
+        "(heartbeat</span>) berichten",
+        "\\1berichten"
       ]
     ]
   },

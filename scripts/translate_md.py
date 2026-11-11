@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-11.2"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-11.5"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -79,7 +79,7 @@ PROTECT = re.compile(
     r"|\{[#.][^}]*\}"                                               # {#ancre} {.classe}
     r"|`[^`]+`"                                                     # code en ligne
     r"|</?[A-Za-z][^>]*>"                                           # balises HTML
-    r"|https?://[^\s)>\]]+)")                                       # URL nues
+    r"|https?://[^\s)>\]\x00]+)")                                   # URL nues (jamais la sentinelle : "[https://site](/)" -> "https://site /A")
 LINK = re.compile(r"(!?)\[((?:[^\[\]]|\[[^\]]*\])*)\]\((<[^>]*>|[^)\s]+)((?:\s+\"[^\"]*\")?)\)")
 BOLD = re.compile(r"\*\*(.+?)\*\*")
 S = "\x00"  # sentinelle interne
@@ -184,6 +184,7 @@ def protect_templates(text, ctx):
 
 def encode(text, ctx):
     ctx.src = text
+    ctx.all_src = getattr(ctx, "all_src", "") + "\n" + text   # toutes les cellules d'une ligne de tableau
     text = protect_templates(text, ctx)   # {{ .Get "app" }}, {{< shortcode >}}... jamais traduits
     def link(m):
         title = re.match(r'\s+"([^"]*)"', m.group(4)) if m.group(4) else None
@@ -449,6 +450,10 @@ def decode(text, ctx):
         text = re.sub(f"{S}P(\\d+){S}", restore, text)
     text = re.sub(r"(<a\b[^>]*>)\s+", r"\1", text)      # "<a ...> texte </a>" -> "<a ...>texte</a>"
     text = re.sub(r"\s+(</a>)", r"\1", text)
+    # "A/B" collé dans la source (SAN/vSAN, BIS/BVMS, Kubernetes/K3s) : jamais "SAN /vSAN" ni "SAN/ vSAN"
+    src_plain = re.sub(r"\]\([^)]*\)|https?://\S+|<[^>]+>", " ", getattr(ctx, "all_src", ""))
+    for a, b in set(re.findall(r"(?<![\w/:.-])([A-Za-z0-9][\w.-]*)/([A-Za-z0-9][\w.-]*)(?![\w/])", src_plain)):
+        text = re.sub(r"(?<![\w/-])(%s) *\/ *(%s)(?![\w/])" % (re.escape(a), re.escape(b)), r"\1/\2", text)
     for pat, repl in GRAMMAR:   # accords autour des expressions imposées (ex. "une cluster" -> "un cluster")
         text = re.sub(pat, repl, text)
     for wrong, right in GLOSSARY.get("_rep", {}).items():  # corrections du glossaire
@@ -710,6 +715,17 @@ def main():
         for j in range(1, len(lines)):
             if lines[j].strip() == lines[0].strip():
                 fm_end = j; break
+    # lignes de tableau Markdown (en-tête + séparateur ---|--- + lignes suivantes jusqu'à une ligne vide) :
+    # une ligne à 2 colonnes n'a qu'un seul "|" ("Champ | Réponse") -> sinon traduite comme une phrase
+    # et Google supprime le "|" ("Volumen de datos recomendado: unos pocos terabytes")
+    table_lines = set()
+    for j, l in enumerate(lines):
+        if j > fm_end and "|" in l and "-" in l and re.fullmatch(r"\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*", l):
+            if j > 0 and "|" in lines[j - 1]:
+                table_lines.add(j - 1)
+            k = j + 1
+            while k < len(lines) and lines[k].strip() and "|" in lines[k]:
+                table_lines.add(k); k += 1
     for i, line in enumerate(lines):
         if 0 < i < fm_end:
             m = re.match(r'^(\s*lang\s*[:=]\s*)(["\']?).*?\2\s*$', line)
@@ -759,7 +775,7 @@ def main():
         if s.startswith("{{") and not re.sub(r"\s", "", "".join(
                 s[p:q] for p, q in zip([0] + [b for _, b in go_templates(s)], [a for a, _ in go_templates(s)] + [len(s)]))):
             continue   # ligne composée uniquement d'expressions Go Template / shortcodes
-        if "|" in s and (s.startswith("|") or s.count("|") >= 2):
+        if "|" in s and (s.startswith("|") or s.count("|") >= 2 or i in table_lines):
             # la ligne entière du tableau part en une seule requête (contexte complet) ;
             # les cellules sont séparées par des balises <td> que Google conserve
             cells = line.split("|")
