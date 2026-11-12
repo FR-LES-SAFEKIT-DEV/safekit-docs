@@ -43,15 +43,7 @@ translation: "translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation 
 网站 | [https://safekit.eviden.com](/zh-hans/)  
 首次发布 | 2000 年。已用于生产 20 多年。  
   
-## 支持的操作系统和平台 {#supported-operating-systems-platforms}
-
-Windows 操作系统 | Linux 操作系统 | 基础设施和虚拟化 | 云平台  
----|---|---|---  
-• Windows Server 2025 (x86-64) <br> • Windows Server 2022 (x86-64) <br> • Windows Server 2019 (x86-64) <br> • Windows 11 企业版 (x86-64) <br> • Windows 11 专业版 (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64) <br> • Red Hat Enterprise Linux 10 (AArch64) <br> • Red Hat Enterprise Linux 9 (x86-64) <br> • Red Hat Enterprise Linux 9 (AArch64) <br> • Red Hat Enterprise Linux 8 (x86-64) <br> • Ubuntu 24.04 LTS (x86-64)  |  • 任何品牌的任何边缘服务器 <br> • VMware <br> • Microsoft Hyper-V [1] <br> • Linux KVM [1] <br> • 任何虚拟机管理程序 <br> • Docker 容器 <br> • Podman 容器  |  • Amazon 网络服务 (AWS) [2] <br> • Microsoft Azure [2] <br> • Google Cloud Platform (GCP) [2] <br> • 任何具有标准虚拟机实例的 IaaS 云   
-  
-**[1]** SafeKit 为单个应用程序或整个虚拟机提供高可用性。
-
-**[2]** 在云中，在云负载均衡器上配置虚拟 IP 地址。
+{{%  insert-supported-os-zh-hans  %}}
 
 {{%  insert-safekit-usage-zh-hans  %}}
 

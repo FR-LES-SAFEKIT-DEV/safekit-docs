@@ -43,15 +43,7 @@ Versione attuale | SafeKit 8.2
 Sito web | [https://safekit.eviden.com](/it/)  
 Prima versione | 2000. Utilizzato in produzione per oltre 20 anni.  
   
-## Sistemi operativi e piattaforme supportati {#supported-operating-systems-platforms}
-
-Sistemi operativi Windows | Sistemi operativi Linux | Infrastruttura e virtualizzazione | Piattaforme cloud  
----|---|---|---  
-• Windows Server 2025 (x86-64) <br> • Windows Server 2022 (x86-64) <br> • Windows Server 2019 (x86-64) <br> • Windows 11 Enterprise (x86-64) <br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64) <br> • Red Hat Enterprise Linux 10 (AArch64) <br> • Red Hat Enterprise Linux 9 (x86-64) <br> • Red Hat Enterprise Linux 9 (AArch64) <br> • Red Hat Enterprise Linux 8 (x86-64) <br> • Ubuntu 24.04 LTS (x86-64)  |  • Qualsiasi server perimetrale di qualsiasi marca <br> • VMware <br> • Microsoft Hyper-V [1] <br> • Linux KVM [1] <br> • Qualsiasi hypervisor <br> • Container Docker <br> • Container Podman  |  • Amazon Web Services (AWS) [2] <br> • Microsoft Azure [2] <br> • Google Cloud Platform (GCP) [2] <br> • Qualsiasi cloud IaaS con istanze VM standard   
-  
-**[1]** SafeKit fornisce un’elevata disponibilità per singole applicazioni o intere macchine virtuali.
-
-**[2]** Nel cloud, configurare gli indirizzi IP virtuali sul bilanciatore del carico del cloud.
+{{%  insert-supported-os-it  %}}
 
 {{%  insert-safekit-usage-it  %}}
 

@@ -43,15 +43,7 @@ translation: "translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation 
 الموقع الإلكتروني | [https://safekit.eviden.com](/ar/)  
 الإصدار الأول | 2000. يُستخدم في الإنتاج منذ أكثر من 20 عامًا.  
   
-## أنظمة التشغيل والمنصات المدعومة {#supported-operating-systems-platforms}
-
-أنظمة تشغيل Windows | أنظمة تشغيل Linux | البنية التحتية والمحاكاة الافتراضية | منصات سحابية  
----|---|---|---  
-• Windows Server 2025 (x86-64) <br> • Windows Server 2022 (x86-64) <br> • Windows Server 2019 (x86-64) <br> • Windows 11 Enterprise (x86-64) <br> • Windows 11 برو (x86-64)  |  • ريد هات إنتربرايز Linux 10 (x86-64) <br> • ريد هات إنتربرايز Linux 10 (AArch64) <br> • Linux Red Hat Enterprise Linux 9 (x86-64) <br> • Red Hat Enterprise Linux 9 (AArch64) <br> • Red Hat Enterprise Linux 8 (x86-64) <br> • أوبونتو 24.04 LTS (x86-64)  |  • أي خادم حافة من أي علامة تجارية <br> • VMware <br> • Microsoft Hyper-V [1] <br> • Linux KVM [1] <br> • أي برنامج لمراقبة الأجهزة الافتراضية <br> • حاويات Docker <br> • حاويات Podman  |  • خدمات Amazon ويب (AWS) [2] <br> • Microsoft Azure [2] <br> • منصة جوجل السحابية (GCP) [2] <br> • أي سحابة من نوع البنية التحتية كخدمة (IaaS) تحتوي على نُسخ افتراضية قياسية   
-  
-**[1]** يوفر SafeKit إتاحة عالية للتطبيقات الفردية أو الأجهزة الافتراضية بأكملها.
-
-**[2]** في السحابة، قم بتكوين عناوين IP ظاهرية على موازن تحميل السحابة.
+{{%  insert-supported-os-ar  %}}
 
 {{%  insert-safekit-usage-ar  %}}
 

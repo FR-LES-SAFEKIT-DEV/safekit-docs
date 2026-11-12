@@ -43,15 +43,7 @@ translation: "translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation 
 ウェブサイト | [https://safekit.eviden.com](/ja/)  
 初回リリース | 2000 年。20 年以上にわたり本番環境で使用されています。  
   
-## サポートされているオペレーティングシステムとプラットフォーム {#supported-operating-systems-platforms}
-
-Windows オペレーティングシステム | Linux オペレーティングシステム | インフラストラクチャと仮想化 | クラウドプラットフォーム  
----|---|---|---  
-• Windows Server 2025 (x86-64) <br> • Windows Server 2022 (x86-64) <br> • Windows Server 2019 (x86-64) <br> • Windows 11 Enterprise (x86-64) <br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64) <br> • Red Hat Enterprise Linux 10 (AArch64) <br> • Red Hat Enterprise Linux 9 (x86-64) <br> • Red Hat Enterprise Linux 9 (AArch64) <br> • Red Hat Enterprise Linux 8 (x86-64) <br> • Ubuntu 24.04 LTS (x86-64)  |  • 任意のブランドのエッジサーバー <br> • VMware <br> • Microsoft Hyper-V [1] <br> • Linux KVM [1] <br> • 任意のハイパーバイザー <br> • Docker コンテナ <br> • Podman コンテナ  |  • Amazon Web Services (AWS) [2] <br> • Microsoft Azure [2] <br> • Google Cloud Platform (GCP) [2] <br> • 標準的な VM インスタンスを備えた IaaS クラウド   
-  
-**[1]** SafeKit、個々のアプリケーションまたは仮想マシン全体に高可用性を提供します。
-
-**[2]** クラウドでは、クラウドロードバランサーに仮想 IP アドレスを構成します。
+{{%  insert-supported-os-ja  %}}
 
 {{%  insert-safekit-usage-ja  %}}
 

@@ -43,15 +43,7 @@ Huidige versie | SafeKit 8.2
 Website | [https://safekit.eviden.com](/nl/)  
 Eerste release | 2000. Al meer dan 20 jaar in gebruik in de productie.  
   
-## Ondersteunde besturingssystemen en platforms {#supported-operating-systems-platforms}
-
-Windows-besturingssystemen | Linux-besturingssystemen | Infrastructuur en virtualisatie | Cloudplatforms  
----|---|---|---  
-• Windows Server 2025 (x86-64) <br> • Windows Server 2022 (x86-64) <br> • Windows Server 2019 (x86-64) <br> • Windows 11 Enterprise (x86-64) <br> • Windows 11 Pro (x86-64)  |  • Red Hat Enterprise Linux 10 (x86-64) <br> • Red Hat Enterprise Linux 10 (AArch64) <br> • Red Hat Enterprise Linux 9 (x86-64) <br> • Red Hat Enterprise Linux 9 (AArch64) <br> • Red Hat Enterprise Linux 8 (x86-64) <br> • Ubuntu 24.04 LTS (x86-64)  |  • Elke edge-server van elk merk <br> • VMware <br> • Microsoft Hyper-V [1] <br> • Linux KVM [1] <br> • Elke hypervisor <br> • Docker containers <br> • Podman containers  |  • Amazon Web Services (AWS) [2] <br> • Microsoft Azure [2] <br> • Google Cloud Platform (GCP) [2] <br> • Elke IaaS-cloud met standaard VM-instanties   
-  
-**[1]** SafeKit biedt hoge beschikbaarheid voor individuele applicaties of complete virtuele machines.
-
-**[2]** Configureer in de cloud virtuele IP-adressen op de cloud- load balancer.
+{{%  insert-supported-os-nl  %}}
 
 {{%  insert-safekit-usage-nl  %}}
 

@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-06.17 | glossaire 2026-11-06.10 | Translation LLM | 18 expressions */}}
+{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation LLM | 47 expressions */}}
 {{/* Shortcode: insert-safekit-training-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -7,9 +7,7 @@
 
 ## SafeKit HA Kostenlose Testversion & Technische Dokumentation {#safekit-ha-technical-resources}
 
-💡 Um Ihre Hochverfügbarkeitsreise mit SafeKit zu starten, **🛠️ [beginnen Sie mit den Schnellinstallationsanleitungen](/de/quick-install/)**.
-
-### 📦 HA-Softwarepakete von SafeKit – Version 8.2 {#-safekits-ha-software-packages---version-82}
+## 📦 HA-Softwarepakete von SafeKit – Version 8.2 {#-safekits-ha-software-packages---version-82}
 
 Diese Tabelle enthält die SafeKit-Installationsdateien für die aktuelle Version, sortiert nach Betriebssystem und Installationsprogrammtyp.
 
@@ -17,43 +15,45 @@ Betriebssystem / Plattform | Installationsart | Hauptvorteil / Dokumentation | D
 ---|---|---|---  
 Alle Plattformen | PDF-Dokument | Offizielles Software-Release-Bulletin (OS-Support und Korrekturen) | 🛠️ [SafeKit 8.2 SRB ansehen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "Offizielles Bulletin mit Details zu unterstützten Betriebssystemen und aktuellen Korrekturen für SafeKit 8.2.")  
 Windows (Intel 64-Bit) | .exe-Installer | Enthält Microsoft VC++ Redistributable | ⬇️ [SafeKit 8.2 Windows EXE herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.exe> "SafeKit 8.2 für Windows herunterladen (EXE-Installer mit VC++ Redistributable)")  
-Windows (Intel 64-Bit) | .msi-Installer | Enthält *nicht* das Microsoft VC++ Redistributable | ⬇️ [SafeKit 8.2 Windows MSI herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.msi> "SafeKit 8.2 für Windows herunterladen (MSI-Installer ohne VC++ Redistributable)")  
+Windows (Intel 64-Bit) | .msi-Installer | Enthält *nicht* Microsoft VC++ Redistributable | ⬇️ [SafeKit 8.2 Windows MSI herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.msi> "SafeKit 8.2 für Windows herunterladen (MSI-Installer ohne VC++ Redistributable)")  
 Linux (Intel 64-Bit) | Automatisch extrahierbare .BIN-Datei | Enthält Linux Paket und Installationsskript | ⬇️ [SafeKit 8.2 Linux BIN-Datei (Intel) herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "SafeKit 8.2 für Linux herunterladen (selbstanpackende BIN-Datei mit einem Standard Linux Paket und einem Installationsskript)")  
 Linux (ARM 64-Bit) | Automatisch extrahierbare .BIN-Datei | Enthält Linux Paket und Installationsskript | ⬇️ [SafeKit 8.2 Linux BIN-Datei (ARM) herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "SafeKit 8.2 für Linux herunterladen (selbstanpackende BIN-Datei mit einem Standard Linux Paket und einem Installationsskript)")  
 
-### 🔑 HA-Testschlüssel von SafeKit {#-safekits-ha-trial-key}
+{{%  insert-supported-os-de  %}}
 
-Der folgende Link bietet Zugang zu einer voll funktionsfähigen Testversion, die für das Testen und Einrichten eines Hochverfügbarkeits-Clusters mit SafeKit entwickelt wurde.
+## 🔑 HA-Testschlüssel von SafeKit {#-safekits-ha-trial-key}
+
+Der folgende Link bietet Zugang zu einer voll funktionsfähigen Testversion, die für das Testen und Einrichten eines Hochverfügbarkeitsclusters mit SafeKit entwickelt wurde.
 
   <a class="btn-action" href="/de/resources/high-availability-and-load-balancing-cluster-key/">1-Monats-Testschlüssel ›</a>
 
-### 📚 SafeKit-Konfigurationsanleitungen für Ihren HA-Cluster {#config-guides-heading}
+## 📚 SafeKit-Konfigurationsanleitungen für Ihren HA-Cluster {#config-guides-heading}
 
 Wesentliche Dokumentation für die Einrichtung und Verwaltung Ihres SafeKit-Hochverfügbarkeitsclusters.  
 
 
-  * 🛠️ [SafeKit-Schnellinstallationsanleitungen](</de/quick-install/> "Mit den Schnellinstallationsanleitungen für SafeKit sind Sie schnell einsatzbereit.")
-  * 🛠️ [SafeKit-Benutzerhandbuch (HTML, Version 8.2)](</de/resources/safekit-user-guide-82/> "Sehen Sie sich das umfassende Benutzerhandbuch für SafeKit Version 8.2 (HTML) an.") / 🛠️ [PDF herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "Sehen Sie sich das umfassende Benutzerhandbuch für SafeKit Version 8.2 (PDF) an.")
-  * 🛠️ [SafeKit-Versionshinweise (HTML, Version 8.2)](</de/resources/safekit-release-notes-8-2/> "Sehen Sie sich die Neuerungen, Änderungen und Korrekturen in SafeKit Version 8.2 an (HTML).") / 🛠️ [PDF herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "Sehen Sie sich die Neuerungen, Änderungen und Korrekturen in SafeKit Version 8.2 an (PDF).")
+  * 🛠️ [SafeKit Schnellinstallationsanleitungen](</de/quick-install/> "Mit den Schnellinstallationsanleitungen für SafeKit sind Sie im Handumdrehen einsatzbereit.")
+  * 🛠️ [SafeKit Benutzerhandbuch (HTML, Version 8.2)](</de/resources/safekit-user-guide-82/> "Sehen Sie sich das umfassende Benutzerhandbuch für SafeKit Version 8.2 (HTML) an.") / 🛠️ [PDF herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "Sehen Sie sich das umfassende Benutzerhandbuch für SafeKit Version 8.2 (PDF) an.")
+  * 🛠️ [SafeKit Versionshinweise (HTML, Version 8.2)](</de/resources/safekit-release-notes-8-2/> "Sehen Sie sich die Neuerungen, Änderungen und Korrekturen in SafeKit Version 8.2 an (HTML).") / 🛠️ [PDF herunterladen](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "Sehen Sie sich die Neuerungen, Änderungen und Korrekturen in SafeKit Version 8.2 an (PDF).")
   * 🛠️ [SafeKit 8.2 Software Release Bulletin (SRB)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "Offizielles Bulletin mit Details zu unterstützten Betriebssystemen und aktuellen Korrekturen für SafeKit 8.2.")
-  * 🛠️ [SafeKit-Wissensdatenbank](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "SafeKit-Wissensdatenbank: Tipps zur Fehlerbehebung und Antworten auf häufig gestellte Fragen.")
+  * 🛠️ [SafeKit Wissensdatenbank](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "SafeKit Wissensdatenbank: Tipps zur Fehlerbehebung und Antworten auf häufig gestellte Fragen.")
 
 
-### 📞 / 🤖 SafeKit-Support {#support}
+## 📞/🤖 SafeKit Support {#support}
 
   * 📞 [Kostenpflichtiger Support](/de/resources/safekit-support/#standard-support) / 🤖 [Kostenloser Support](/de/resources/safekit-support/#ai-support)
 
 
-### 🎓 Kostenlose Schulung und Zertifizierung für SafeKit {#-free-training-and-certification-on-safekit}
+## 🎓 Kostenlose Schulung und Zertifizierung für SafeKit {#-free-training-and-certification-on-safekit}
 
 Erwerben Sie wertvolles Fachwissen im Bereich Hochverfügbarkeit (HA) mit unserem kostenlosen Zertifizierungsprogramm.
 
   <a class="btn-action" href="/de/resources/safekit-on-line-training/">Kostenlose Zertifizierung ›</a>
 
 
-### ℹ️ Produktdokumentation {#ℹ-product-marketing-documentation}
+## ℹ️ Produktdokumentation {#ℹ-product-marketing-documentation}
 
-Entdecken Sie unsere Produktmarketing-Dokumentation für die SafeKit HA-Software, die ein detailliertes Datenblatt, ein Produkt-Whitepaper und eine technische Übersicht enthält.
+Entdecken Sie unsere Produktmarketing-Dokumentation für SafeKit HA-Software, die ein detailliertes Datenblatt, ein Produkt-Whitepaper und eine technische Übersicht enthält.
 
   * 📘 [SafeKit Hochverfügbarkeits-Cluster-Datenblatt (PDF)](/wp-content/uploads/documents/high-availability-overview.pdf)
   * 📘 [Whitepaper zur Hochverfügbarkeits-Cluster-Technologie (PDF)](/wp-content/uploads/documents/wp-safekit-en.pdf)

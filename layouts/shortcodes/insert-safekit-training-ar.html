@@ -1,15 +1,13 @@
-{{/* translation: translate_md 2026-11-06.17 | glossaire 2026-11-06.10 | Translation LLM | 17 expressions */}}
+{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation LLM | 43 expressions */}}
 {{/* Shortcode: insert-safekit-training-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
 
 
 
-## النسخة التجريبية المجانية من SafeKit HA والوثائق الفنية {#safekit-ha-technical-resources}
+## النسخة التجريبية المجانية SafeKit HA والوثائق الفنية {#safekit-ha-technical-resources}
 
-💡 لبدء رحلتك نحو التوافر العالي باستخدام SafeKit، **🛠️ [ابدأ بأدلة التثبيت السريع](/ar/quick-install/)**.
-
-### 📦 حزم برامج التوافر العالي من SafeKit - الإصدار 8.2 {#-safekits-ha-software-packages---version-82}
+## 📦 حزم برامج التوافر العالي من SafeKit - الإصدار 8.2 {#-safekits-ha-software-packages---version-82}
 
 يوفر هذا الجدول ملفات تثبيت SafeKit للإصدار الحالي، منظمة حسب نظام التشغيل ونوع المثبت.
 
@@ -21,37 +19,39 @@ Windows (Intel 64 بت) | مثبت .msi | *لا* يتضمن حزمة Microsoft V
 Linux (Intel 64 بت) | ملفات .BIN قابلة للاستخراج تلقائيًا | يتضمن حزمة Linux وبرنامج تثبيت | ⬇️ [تنزيل ملف SafeKit 8.2 Linux BIN (Intel)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "تنزيل SafeKit 8.2 لنظام Linux (ملف BIN قابل للاستخراج التلقائي مع حزمة Linux قياسية وبرنامج نصي للتثبيت)")  
 Linux (ARM 64 بت) | ملفات .BIN قابلة للاستخراج تلقائيًا | يتضمن حزمة Linux وبرنامج تثبيت | ⬇️ [تنزيل ملف SafeKit 8.2 Linux BIN (ARM)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "تنزيل SafeKit 8.2 لنظام Linux (ملف BIN قابل للاستخراج التلقائي مع حزمة Linux قياسية وبرنامج نصي للتثبيت)")  
 
-### 🔑 مفتاح تجربة التوافر العالي من SafeKit {#-safekits-ha-trial-key}
+{{%  insert-supported-os-ar  %}}
+
+## 🔑 مفتاح تجربة التوافر العالي من SafeKit {#-safekits-ha-trial-key}
 
 يوفر الرابط التالي إمكانية الوصول إلى نسخة تجريبية كاملة الميزات مصممة لاختبار وإعداد مجموعة عالية التوفر باستخدام SafeKit.
 
   <a class="btn-action" href="/ar/resources/high-availability-and-load-balancing-cluster-key/">مفتاح تجريبي لمدة شهر واحد ›</a>
 
-### 📚 أدلة تكوين SafeKit لمجموعة HA الخاصة بك {#config-guides-heading}
+## 📚 أدلة تكوين SafeKit لمجموعة HA الخاصة بك {#config-guides-heading}
 
 الوثائق الأساسية لإعداد وإدارة مجموعة التوافر العالي الخاصة بـ SafeKit.  
 
 
-  * 🛠️ [أدلة التثبيت السريع لـ SafeKit](</ar/quick-install/> "ابدأ العمل بسرعة باستخدام أدلة التثبيت السريع لبرنامج SafeKit.")
+  * 🛠️ [أدلة التثبيت السريع SafeKit](</ar/quick-install/> "ابدأ العمل بسرعة باستخدام أدلة التثبيت السريع لـ SafeKit.")
   * 🛠️ [دليل مستخدم SafeKit (HTML، الإصدار 8.2)](</ar/resources/safekit-user-guide-82/> "عرض دليل المستخدم الشامل لبرنامج SafeKit الإصدار 8.2 (HTML).") / 🛠️ [تنزيل ملف PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "عرض دليل المستخدم الشامل لبرنامج SafeKit الإصدار 8.2 (ملف PDF).")
   * 🛠️ [ملاحظات إصدار SafeKit (HTML، الإصدار 8.2)](</ar/resources/safekit-release-notes-8-2/> "اطلع على الجديد والتغييرات والإصلاحات في الإصدار 8.2 من SafeKit (HTML).") / 🛠️ [تنزيل ملف PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "اطلع على الجديد والتغييرات والإصلاحات في الإصدار 8.2 من SafeKit (ملف PDF).")
   * 🛠️ [نشرة إصدار برنامج SafeKit 8.2 (SRB)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "نشرة رسمية توضح بالتفصيل أنظمة التشغيل المدعومة وآخر الإصلاحات لبرنامج SafeKit 8.2.")
   * 🛠️ [قاعدة معارف SafeKit](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "قاعدة معارف SafeKit: نصائح لاستكشاف الأخطاء وإصلاحها وإجابات على الأسئلة الشائعة.")
 
 
-### 📞 / 🤖 دعم SafeKit {#support}
+## 📞/🤖 دعم SafeKit {#support}
 
   * 📞 [دعم مدفوع](/ar/resources/safekit-support/#standard-support) / 🤖 [دعم مجاني](/ar/resources/safekit-support/#ai-support)
 
 
-### 🎓 تدريب وشهادة مجانية على SafeKit {#-free-training-and-certification-on-safekit}
+## 🎓 تدريب وشهادة مجانية على SafeKit {#-free-training-and-certification-on-safekit}
 
 اكتسب خبرة قيّمة في مجال التوافرية العالية (HA) من خلال برنامجنا المجاني للحصول على الشهادات.
 
   <a class="btn-action" href="/ar/resources/safekit-on-line-training/">شهادة مجانية ›</a>
 
 
-### ℹ️ وثائق تسويق المنتج {#ℹ-product-marketing-documentation}
+## ℹ️ وثائق تسويق المنتج {#ℹ-product-marketing-documentation}
 
 استكشف وثائق تسويق منتجاتنا لبرنامج SafeKit HA، والتي تتضمن ورقة بيانات مفصلة، وورقة بيضاء عن المنتج، ونظرة عامة فنية.
 
