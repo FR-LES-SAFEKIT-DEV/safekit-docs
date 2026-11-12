@@ -55,28 +55,9 @@ Comparison criterion | Application high availability | Virtual machine high avai
 Configuration | You must know which application services to restart and which folders to replicate. You must also configure the virtual IP address used for failover. | You only need to specify the location of the virtual machine files. You do not need to know how the applications inside the virtual machine work. This approach protects the applications and operating system together.  
 Recommended use | Add high availability directly to a software solution, without depending on specific hardware or a specific hypervisor. | Manage several applications across multiple virtual machines with one high availability policy.  
   
-The table below lists all available `.safe` modules:
+The table below lists all available `.safe` modules.
 
-Application high availability | Virtual machine high availability  
----|---  
-New Windows app — mirror.safe | Hyper-V VM — hyperv.safe (Windows)  
-New Linux app — mirror.safe | KVM VM — kvm.safe (Linux)  
-Windows load balancing — farm.safe | Docker container — mirror.safe (Linux)  
-Linux load balancing — farm.safe | Podman container — mirror.safe (Linux)  
-Microsoft SQL Server — sqlserver.safe (Windows) | K3s Kubernetes — k3s.safe (Linux)  
-PostgreSQL — postgresql.safe (Windows & Linux) | Bosch AMS — hyperv.safe (Windows)  
-MySQL — mysql.safe (Windows & Linux) | Bosch BIS — hyperv.safe (Windows)  
-MariaDB — mysql.safe (Windows & Linux) | Bosch BVMS — hyperv.safe (Windows)  
-Oracle — oracle.safe (Windows & Linux) | Hanwha Vision — hyperv.safe (Windows)  
-Firebird — firebird.safe (Windows & Linux) | Hanwha Wisenet — hyperv.safe (Windows)  
-Apache — apache_farm.safe (Windows & Linux) | Siemens Siveillance suite — hyperv.safe (Windows)  
-IIS — iis_farm.safe (Windows) | Siemens Desigo CC — hyperv.safe (Windows)  
-NGINX — farm.safe (Windows & Linux) | Siemens SiPass — hyperv.safe (Windows)  
-Milestone XProtect — milestone.safe (Windows) | Siemens SIPORT — hyperv.safe (Windows)  
-Nedap AEOS — nedap.safe (Windows) | SIMATIC PCS 7 — hyperv.safe (Windows)  
-Genetec (SQL Server) — sqlserver.safe (Windows) | SIMATIC WinCC — hyperv.safe (Windows)  
-Siemens Siveillance VMS — SiveillanceVMS.safe (Windows) |   
-Cloud (AWS, Azure, GCP, generic) — mirror.safe / farm.safe |   
+{{%  insert-safekit-modules-en  %}}   
   
 ## Architecture and deployment {#architecture-deployment-model}
 
@@ -93,20 +74,20 @@ Requirement | SafeKit capabilities
 ---|---  
 Shared storage required? | No. SafeKit uses local disks. It does not need a SAN or shared storage.  
 Active Directory required? | No. SafeKit does not require a Windows domain or Active Directory. It also supports workgroups.  
-Number of nodes in a cluster | 2 nodes (mirror) or 2+ nodes (<span class="notranslate farm-term" translate="no">farm</span>)  
-Virtual IP address (VIP) | For application high availability, the virtual IP address moves automatically to the active node through Gratuitous ARP. For virtual machine high availability, traffic to the IP address inside the virtual machine is redirected automatically. No separate virtual IP address is needed. The nodes must share a LAN or a VLAN extended between sites.  
-Architecture with three nodes | SafeKit runs a two-node mirror cluster on a LAN or a VLAN extended between sites. It provides synchronous replication with zero data loss (RPO=0) and automatic failover. A separate backup product replicates data asynchronously to a third node over a WAN. This backup allows recovery to an earlier point in time and provides protection against ransomware.  
-Purpose of high availability | SafeKit replicates data synchronously to both nodes. This allows automatic failover without data loss after a hardware or software failure. However, logical errors, data corruption, and accidental deletions are also copied immediately to the standby node.  
+Number of nodes in a cluster | 2 nodes ([mirror](/architectures/file-replication-byte-level-with-failover-mirror-cluster/)) or 2+ nodes (<span class="notranslate farm-term" translate="no">[farm](/architectures/network-load-balancing-cluster/)</span>)  
+Virtual IP address (VIP) | For application high availability, the [virtual IP address](/best-practises/how-a-virtual-ip-address-works/) moves automatically to the active node through Gratuitous ARP. For virtual machine high availability, traffic to the IP address inside the virtual machine is redirected automatically. No separate virtual IP address is needed. The nodes must share a LAN or a VLAN extended between sites.  
+Architecture with three nodes | SafeKit runs a two-node mirror cluster on a LAN or a VLAN extended between sites. It provides synchronous replication with zero data loss (RPO=0) and automatic failover. A separate [backup product](/best-practises/high-availability-disaster-recovery-hadr/) replicates data asynchronously to a third node over a WAN. This backup allows recovery to an earlier point in time and provides protection against ransomware.  
+Purpose of high availability | SafeKit replicates data [synchronously](/best-practises/synchronous-replication-vs-asynchronous-replication/) to both nodes. This allows automatic failover without data loss after a hardware or software failure. However, logical errors, data corruption, and accidental deletions are also copied immediately to the standby node.  
 Purpose of backups | Backups let you restore data from an earlier point in time. A separate backup product, not SafeKit, provides this protection through asynchronous replication. Backups help recover from ransomware and human error. This recovery is not automatic failover. Restoring an older backup loses changes made after that backup.  
 Maximum modules running at the same time | A two-node cluster can manage up to 32 modules at the same time. For virtual machine protection, each module replicates and restarts a different virtual machine. Each module can be primary on either node, so both servers can share the workload. The total volume of data affects resynchronization time after failover or a node restart.  
 Is software installed on each node? | Yes. A lightweight software is installed on each node.  
-Supported applications | SafeKit can protect any Windows service or Linux daemon. Preconfigured modules are available for more than 30 applications.  
+Supported applications | SafeKit can protect any Windows service or Linux daemon. [Preconfigured modules](/quick-install/#safekit-ha-application-modules) are available for more than 30 applications.  
   
 ### Replication and data protection {#replication-data-protection}
 
 Requirement | SafeKit capabilities  
 ---|---  
-Replication method | SafeKit replicates file changes at byte level. It does not replicate disk blocks.  
+Replication method | SafeKit replicates file changes at [byte level](/best-practises/byte-level-file-replication-vs-block-level-disk-replication/). It does not replicate disk blocks.  
 Replication mode | Synchronous replication, with zero data loss  
 Network requirement | A round-trip latency below 5 ms between nodes is recommended for synchronous replication.  
 Recommended data volume | A few terabytes, to keep resynchronization time manageable  
@@ -121,8 +102,8 @@ Encryption during transfer | Replication traffic is encrypted with TLS/SSL.
 
 Metric | Mirror (mirror.safe) | <span class="notranslate farm-term" translate="no">Farm</span> (farm.safe)  
 ---|---|---  
-RPO (recovery point objective) | Zero data loss. A write operation is complete only when both nodes have written the data. | Not applicable to stateless services. The data is managed by a separate mirror cluster.  
-RTO (recovery time objective) | About one minute. This includes the <span class="notranslate farm-term" translate="no">heartbeat</span> timeout (30 seconds by default) and the time to restart the application. | A few seconds. Traffic is redistributed to the remaining active nodes.  
+RPO (recovery point objective) | [Zero data loss](/best-practises/what-is-rpo-and-rto-with-examples/#rpo-safekit-example). A write operation is complete only when both nodes have written the data. | Not applicable to stateless services. The data is managed by a separate mirror cluster.  
+RTO (recovery time objective) | [About one minute](/best-practises/what-is-rpo-and-rto-with-examples/#what-is-rto-safekit). This includes the <span class="notranslate farm-term" translate="no">heartbeat</span> timeout (30 seconds by default) and the time to restart the application. | A few seconds. Traffic is redistributed to the remaining active nodes.  
 Replication type | Synchronous, real-time, byte-level file replication | Not applicable  
 Failover trigger | Failover starts automatically when <span class="notranslate farm-term" translate="no">heartbeat</span> messages stop, when a process crashes, or when a checker detects a failure | Failover starts automatically when <span class="notranslate farm-term" translate="no">heartbeat</span> messages stop, when a process crashes, or when a checker detects a failure  
 Manual intervention required? | No. Failover and failback are automatic. | No. Failover and failback are automatic.  
