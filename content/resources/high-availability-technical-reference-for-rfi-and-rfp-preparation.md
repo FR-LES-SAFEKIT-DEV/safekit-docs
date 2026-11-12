@@ -55,8 +55,6 @@ Comparison criterion | Application high availability | Virtual machine high avai
 Configuration | You must know which application services to restart and which folders to replicate. You must also configure the virtual IP address used for failover. | You only need to specify the location of the virtual machine files. You do not need to know how the applications inside the virtual machine work. This approach protects the applications and operating system together.  
 Recommended use | Add high availability directly to a software solution, without depending on specific hardware or a specific hypervisor. | Manage several applications across multiple virtual machines with one high availability policy.  
   
-The table below lists all available `.safe` modules.
-
 {{%  insert-safekit-modules-en  %}}   
   
 ## Architecture and deployment {#architecture-deployment-model}

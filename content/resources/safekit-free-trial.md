@@ -9,7 +9,6 @@ topics: "SafeKit HA Free Trial & Technical Documentation, 🔍 Explore SafeKit"
 
 # SafeKit Free Trial {#safekit-free-trial}
 
-
 {{%  insert-safekit-training-en  %}}
 
 {{%  insert-safekit-hub-en  %}}
