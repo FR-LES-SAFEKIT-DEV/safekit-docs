@@ -1,44 +1,43 @@
-{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation LLM | 50 expressions */}}
+{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-12.4 | Translation LLM | 50 expressions */}}
 {{/* Shortcode: insert-safekit-training-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
 
 
-## SafeKit 高可用性软件套件 - 8.2 版 {#-safekits-ha-software-packages---version-82}
+## SafeKit HA 软件包 - 8.2 版 {#-safekits-ha-software-packages---version-82}
 
 此表按操作系统和安装程序类型整理了当前版本的 SafeKit 安装文件。
 
-操作系统/平台 | 安装程序类型 | 主要优势/文档 | 下载链接  
+操作系统/平台 | 安装程序类型 | 包含的组件 | 下载链接  
 ---|---|---|---  
-所有平台 | PDF 文档 | 官方软件发布公告（操作系统支持与修复） | 🛠️ [查看 SafeKit 8.2 SRB](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "官方公告，详细说明了 SafeKit 8.2 支持的操作系统和最新修复。")  
 Windows（Intel 64 位） | .exe 安装程序 | 包含 Microsoft VC++ Redistributable | ⬇️ [下载 SafeKit 8.2 Windows EXE](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.exe> "下载适用于 Windows 的 SafeKit 8.2（包含 VC++ Redistributable 的 EXE 安装程序）")  
 Windows（Intel 64 位） | .msi 安装程序 | *不*包括 Microsoft VC++ Redistributable | ⬇️ [下载 SafeKit 8.2 Windows MSI](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.msi> "下载适用于 Windows 的 SafeKit 8.2（不含 VC++ Redistributable 的 MSI 安装程序）")  
-Linux（Intel 64 位） | 可自动提取的 .BIN | 包括 Linux 软件包和安装脚本 | ⬇️ [下载 SafeKit 8.2 Linux BIN 文件（Intel）](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "下载适用于 Linux 的 SafeKit 8.2（包含标准 Linux 软件包和安装脚本的自动解压 BIN 文件）")  
-Linux（ARM 64 位） | 可自动提取的 .BIN | 包括 Linux 软件包和安装脚本 | ⬇️ [下载 SafeKit 8.2 Linux BIN 文件 (ARM)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "下载适用于 Linux 的 SafeKit 8.2（包含标准 Linux 软件包和安装脚本的自动解压 BIN 文件）")  
+Linux（Intel 64 位） | 自解压 .bin 文件 | 包含一个 Linux 软件包和一个安装脚本 | ⬇️ [下载 SafeKit 8.2 Linux BIN 文件（Intel）](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "下载适用于 Linux 的 SafeKit 8.2（自解压 BIN 文件，包含标准 Linux 软件包和安装脚本）")  
+Linux（ARM 64 位） | 自解压 .bin 文件 | 包含一个 Linux 软件包和一个安装脚本 | ⬇️ [下载 SafeKit 8.2 Linux BIN 文件 (ARM)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "下载适用于 Linux 的 SafeKit 8.2（自解压 BIN 文件，包含标准 Linux 软件包和安装脚本）")  
 
 {{ $.Page.RenderString "{{%  insert-supported-os-zh-hans  %}}" }}
 
 ## SafeKit HA 试用密钥 {#-safekits-ha-trial-key}
 
-以下链接提供了一个功能齐全的试用版，用于测试和设置使用 SafeKit 的高可用性集群。
+以下链接为您提供 SafeKit 的完整功能试用版。使用它来测试和设置高可用性集群。
 
   <a class="btn-action" href="/zh-hans/resources/high-availability-and-load-balancing-cluster-key/">1 个月试用密钥 ›</a>
 
 ## SafeKit 高可用性集群配置指南 {#config-guides-heading}
 
-设置和管理 SafeKit 高可用性集群的基本文档。  
+本文件可帮助您设置和管理 SafeKit 高可用性集群。  
 
 
   * 🛠️ [SafeKit 快速安装指南](</zh-hans/quick-install/> "使用 SafeKit 快速安装指南，快速上手。")
-  * 🛠️ [SafeKit 用户指南（HTML，版本 8.2）](</zh-hans/resources/safekit-user-guide-82/> "查看 SafeKit 8.2 版的综合用户手册 (HTML)。") / 🛠️ [下载 PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "查看 SafeKit 8.2 版的综合用户手册 (PDF)。")
-  * 🛠️ [SafeKit 发布说明（HTML，版本 8.2）](</zh-hans/resources/safekit-release-notes-8-2/> "查看 SafeKit 8.2 版本中的新增功能、更改和修复（HTML）。") / 🛠️ [下载 PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "查看 SafeKit 8.2 版本中的新增功能、更改和修复（PDF）。")
+  * 🛠️ [SafeKit 用户指南（HTML，版本 8.2）](</zh-hans/resources/safekit-user-guide-82/> "查看 SafeKit 8.2 的完整用户手册 (HTML)。") / 🛠️ [下载 PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "查看 SafeKit 8.2 的完整用户手册 (PDF)。")
+  * 🛠️ [SafeKit 发布说明（HTML，版本 8.2）](</zh-hans/resources/safekit-release-notes-8-2/> "查看 SafeKit 8.2 中的新功能、更改和修复 (HTML)。") / 🛠️ [下载 PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "查看 SafeKit 8.2 中的新功能、更改和修复 (PDF)。")
   * 🛠️ [SafeKit 8.2 软件发布公告 (SRB)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "官方公告，详细说明了 SafeKit 8.2 支持的操作系统和最新修复。")
-  * 🛠️ [SafeKit 知识库](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "SafeKit 知识库：故障排除技巧和常见问题解答。")
+  * 🛠️ [SafeKit 知识库](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "SafeKit 知识库提供故障排除技巧和常见问题解答。")
 
 
 ## SafeKit 支持 {#support}
 
-  * 📞 [付费支持](/zh-hans/resources/safekit-support/#standard-support)/ 🤖 [免费支持](/zh-hans/resources/safekit-support/#ai-support)
+  * 📞 [付费支持](/zh-hans/resources/safekit-support/#standard-support) / 🤖 [免费支持](/zh-hans/resources/safekit-support/#ai-support)
 
 
 ## SafeKit 免费培训和认证 {#-free-training-and-certification-on-safekit}
@@ -50,11 +49,11 @@ Linux（ARM 64 位） | 可自动提取的 .BIN | 包括 Linux 软件包和安�
 
 ## 产品营销文档 {#ℹ-product-marketing-documentation}
 
-浏览我们的 SafeKit HA 软件产品营销文档，其中包括详细的数据表、产品白皮书和技术概述。
+浏览 SafeKit HA 软件的产品营销文档。其中包含详细的数据表、产品白皮书和技术概述。
 
   * 📘 [RFI 和 RFP 技术参考](/zh-hans/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/)
   * 📘 [SafeKit 高可用性集群数据表 (PDF)](/wp-content/uploads/documents/high-availability-overview.pdf)
   * 📘 [高可用性集群技术白皮书 (PDF)](/wp-content/uploads/documents/wp-safekit-en.pdf)
-  * 📘 [白皮书 - 高可用性指南 (PDF)](/wp-content/uploads/documents/wp-hadecision-en.pdf)
+  * 📘 [白皮书：高可用性指南 (PDF)](/wp-content/uploads/documents/wp-hadecision-en.pdf)
  
 

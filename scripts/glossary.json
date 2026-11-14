@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-11.10",
+  "version": "2026-11-12.4",
   "keep": [
     "mirror",
     "farm",
@@ -109,7 +109,14 @@
     "SafeKit snapshots",
     "Windows Server",
     "BVMS",
-    "BIS"
+    "BIS",
+    "Red Hat Enterprise Linux",
+    "Ubuntu",
+    "Amazon Web Services",
+    "Google Cloud Platform",
+    "Microsoft Azure",
+    "Windows 11 Enterprise",
+    "Windows 11 Pro"
   ],
   "terms": {
     "farm cluster": {
@@ -1489,7 +1496,7 @@
         "\\1-"
       ],
       [
-        "\\b(Hyper-V|KVM|Windows|Linux) (Knoten|Cluster\\w*|Modul\\w*|Server\\w*)\\b",
+        "\\b(Hyper-V|KVM|Windows|Linux) (Knoten|Cluster\\w*|Modul\\w*|Server\\w*)\\b(?! \\d)(?<!Windows Server)",
         "\\1-\\2"
       ],
       [
@@ -1687,6 +1694,34 @@
       [
         "\\bzustandslos (Dienste|Diensten|Anwendungen)",
         "zustandslose \\1"
+      ],
+      [
+        "\\b(Docker|Podman) (Containern?)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bSafeKit (?!(?:Version|Sie|Ihre?[nmrs]?|Es|Der|Die|Das|Den|Dem|Des|Ein|Eine[nmrs]?|In|Im|Auf|Mit|Für|Und|Oder|Bei|Von|Zu|Zum|Zur|Nach|Als|Wenn|Wie|Was|Ist|Sind|Hat|Kann|Wird|Windows|Linux|Mirror|Farm|Hyper-V|KVM|Hochverfügbarkeit|Redundanz|Replikation|Failover|Folgendes|Technische|High|Apache|Lastausgleich|Echtzeit|Daten|Anwendungen)\\b)([A-ZÄÖÜ][a-zäöüß]{3,}(?:-[A-Za-zÄÖÜäöüß]+)*)\\b",
+        "SafeKit-\\1"
+      ],
+      [
+        "\\bSafeKit (HA-[A-ZÄÖÜ][a-zäöüß]+)\\b",
+        "SafeKit-\\1"
+      ],
+      [
+        "\\bStandard Linux (Paket\\w*)",
+        "Standard-Linux-\\1"
+      ],
+      [
+        "\\bLinux (Paket\\w*)",
+        "Linux-\\1"
+      ],
+      [
+        "selbstanpack",
+        "selbstentpack"
+      ],
+      [
+        "\\bSafeKit HA ([A-ZÄÖÜ][a-zäöüß]+)",
+        "SafeKit-HA-\\1"
       ]
     ],
     "ko": [
@@ -1839,7 +1874,7 @@
         "\\1SafeKit이 "
       ],
       [
-        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?!(?:애플리케이션|복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=(?:\\*\\*)?[가-힣])",
+        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?!(?:[^\\s]+ ){0,2}[^\\s]+(?:는|은|이|가) )(?![^\\s:：.!?。？]+(?: [^\\s:：.!?。？]+)?\\s*(?:[:：]|$))(?!(?:애플리케이션|복제|균일|레플리케이션|レプリケーション|アプリケーション|무료|버전|평가판|기능|소프트웨어|웹|고가용성|아키텍처|클러스터|모듈|콘솔|관리|라이선스|제품|솔루션|서버|살펴보기|평가|빠른|사용|mirror|farm|HA|vs)|[A-Za-z])(?=(?:\\*\\*)?[가-힣])",
         "\\1SafeKit은 "
       ],
       [
@@ -1907,7 +1942,7 @@
         "\\1SafeKit은 "
       ],
       [
-        "(^\\s*|[.!?]\\s+)SafeKit (?=[A-Z][\\w ]{0,30}의 )",
+        "(^\\s*|[.!?]\\s+)SafeKit (?!HA )(?=[A-Z][\\w ]{0,30}의 )",
         "\\1SafeKit은 "
       ],
       [
@@ -2077,6 +2112,14 @@
       [
         "경우 SafeKit (?=[A-Za-z])",
         "경우 SafeKit은 "
+      ],
+      [
+        "([A-Za-z0-9])\\s*[(（]\\s*(x86-64|AArch64|[A-Z]{2,5})\\s*[)）]",
+        "\\1 (\\2)"
+      ],
+      [
+        "\\)\\[(\\d+)\\]",
+        ") [\\1]"
       ]
     ],
     "ja": [
@@ -2181,7 +2224,7 @@
         "\\1SafeKit を"
       ],
       [
-        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?!(?:복제|균일|레플리케이션|レプリケーション|アプリケーション|無料|バージョン|ソフトウェア|コンソール|クラスター|モジュール|製品|ライセンス|ソリューション|サーバー|Web|ウェブ|管理|高可用性|アーキテクチャ|クイック|ユースケース|mirror|farm|HA|vs|の|は|が|を|で|と|に|も)|[A-Za-z])(?=[\\u3040-\\u30ff\\u4e00-\\u9fff])",
+        "(^|[.!?。！？]\\s*|[:：]\\*\\*\\s*)SafeKit (?![^\\s、。]{1,20}(?:には|では|は|が)[、\\s])(?![^\\s:：.!?。？]+(?: [^\\s:：.!?。？]+)?\\s*(?:[:：]|$))(?!(?:복제|균일|레플리케이션|レプリケーション|アプリケーション|無料|バージョン|ソフトウェア|コンソール|クラスター|モジュール|製品|ライセンス|ソリューション|サーバー|Web|ウェブ|管理|高可用性|アーキテクチャ|クイック|ユースケース|mirror|farm|HA|vs|の|は|が|を|で|と|に|も)|[A-Za-z])(?=[\\u3040-\\u30ff\\u4e00-\\u9fff])",
         "\\1SafeKit は"
       ],
       [
@@ -2359,6 +2402,14 @@
       [
         "(<span[^>]*>snapshots</span>) ?(?=使用)",
         "\\1 を"
+      ],
+      [
+        "(\\*\\* ?)SafeKit ?、",
+        "\\1SafeKit は"
+      ],
+      [
+        "(\\]\\([^)\\s]*\\))/ (?=\\S)",
+        "\\1 / "
       ]
     ],
     "zh-hans": [
@@ -2405,6 +2456,18 @@
       [
         "实施\\s*SafeKit\\s*是",
         "SafeKit 实现了"
+      ],
+      [
+        "(\\]\\([^)\\s]*\\))/ (?=\\S)",
+        "\\1 / "
+      ],
+      [
+        "软件软件包",
+        "软件包"
+      ],
+      [
+        "适用于 (Windows|Linux) SafeKit",
+        "适用于 \\1 的 SafeKit"
       ]
     ],
     "nl": [
@@ -2527,6 +2590,26 @@
       [
         "(heartbeat</span>) berichten",
         "\\1berichten"
+      ],
+      [
+        "\\b(Docker|Podman) (containers?)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bzeer beschikbaar\\b",
+        "hoogbeschikbaar"
+      ],
+      [
+        "\\bSafeKit (configuratiehandleidingen|configuratiehandleiding|kennisbank|ondersteuning|gebruikershandleiding|releaseopmerkingen|installatiebestanden|gegevensblad|snelinstallatiegidsen)\\b",
+        "SafeKit-\\1"
+      ],
+      [
+        "\\bLinux (pakket(?:ten)?)\\b",
+        "Linux-\\1"
+      ],
+      [
+        "\\bSafeKit HA ([a-z][a-z]+)\\b",
+        "SafeKit-HA-\\1"
       ]
     ]
   },

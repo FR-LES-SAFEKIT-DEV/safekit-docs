@@ -1,4 +1,4 @@
-{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation LLM | 49 expressions */}}
+{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-12.4 | Translation LLM | 49 expressions */}}
 {{/* Shortcode: insert-safekit-training-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
@@ -8,37 +8,36 @@
 
 この表は、現在のバージョンの SafeKit インストールファイルを、オペレーティングシステムとインストーラーの種類別にまとめたものです。
 
-OS / プラットフォーム | インストーラーの種類 | 主なメリット／資料 | ダウンロードリンク  
+OS / プラットフォーム | インストーラーの種類 | 同梱物 | ダウンロードリンク  
 ---|---|---|---  
-すべてのプラットフォーム | PDF 文書 | 公式ソフトウェアリリース速報（OS サポートと修正） | 🛠️ [SafeKit 8.2 SRB を表示](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "SafeKit 8.2 のサポート対象 OS と最近の修正プログラムを詳述した公式速報。")  
 Windows (Intel 64 ビット) | .exe インストーラー | Microsoft VC++ Redistributable が含まれています | ⬇️ [SafeKit 8.2 Windows EXE をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.exe> "Windows 用 SafeKit 8.2 をダウンロード（VC++再頒布可能パッケージを含む EXE インストーラー）")  
 Windows (Intel 64 ビット) | .msi インストーラー | Microsoft VC++ Redistributable は含まれて*いません。* | ⬇️ [SafeKit 8.2 Windows MSI をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.msi> "Windows 用 SafeKit 8.2 をダウンロード（VC++ Redistributable なしの MSI インストーラー）")  
-Linux (Intel 64 ビット) | 自動抽出可能な .BIN | Linux パッケージとインストールスクリプトが含まれています | ⬇️ [SafeKit 8.2 Linux BIN ファイル (Intel) をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "Linux 用 SafeKit 8.2 をダウンロード（標準 Linux パッケージとインストールスクリプトを含む自動展開可能な BIN ファイル）")  
-Linux (ARM 64 ビット) | 自動抽出可能な .BIN | Linux パッケージとインストールスクリプトが含まれています | ⬇️ [SafeKit 8.2 Linux BIN ファイル (ARM) をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "Linux 用 SafeKit 8.2 をダウンロード（標準 Linux パッケージとインストールスクリプトを含む自動展開可能な BIN ファイル）")  
+Linux (Intel 64 ビット) | 自己解凍型 .bin ファイル | Linux パッケージとインストールスクリプトが含まれています | ⬇️ [SafeKit 8.2 Linux BIN ファイル (Intel) をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "Linux 用 SafeKit 8.2 をダウンロード（標準 Linux パッケージとインストールスクリプトを含む自己解凍型 BIN ファイル）")  
+Linux (ARM 64 ビット) | 自己解凍型 .bin ファイル | Linux パッケージとインストールスクリプトが含まれています | ⬇️ [SafeKit 8.2 Linux BIN ファイル (ARM) をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "Linux 用 SafeKit 8.2 をダウンロード（標準 Linux パッケージとインストールスクリプトを含む自己解凍型 BIN ファイル）")  
 
 {{ $.Page.RenderString "{{%  insert-supported-os-ja  %}}" }}
 
-## SafeKit の HA トライアルキー {#-safekits-ha-trial-key}
+## SafeKit HA トライアルキー {#-safekits-ha-trial-key}
 
-以下のリンクから、SafeKit を使用した高可用性クラスターテストおよびセットアップ用に設計された、フル機能のトライアル版にアクセスできます。
+以下のリンクから、SafeKit のフル機能トライアル版をダウンロードできます。これを使用して、高可用性クラスターテストおよび設定してください。
 
   <a class="btn-action" href="/ja/resources/high-availability-and-load-balancing-cluster-key/">1 ヶ月間の試用キー ›</a>
 
 ## HA クラスター向け SafeKit 設定ガイド {#config-guides-heading}
 
-SafeKit の高可用性クラスターをセットアップおよび管理するための必須ドキュメント。  
+このドキュメントは、SafeKit 高可用性クラスターのセットアップと管理に役立ちます。  
 
 
   * 🛠️ [SafeKit クイックインストールガイド](</ja/quick-install/> "SafeKit のクイックインストールガイドで、すぐに作業を開始できます。")
-  * 🛠️ [SafeKit ユーザーガイド (HTML, バージョン 8.2)](</ja/resources/safekit-user-guide-82/> "SafeKit バージョン 8.2 の包括的なユーザーマニュアル（HTML）を表示します。") / 🛠️ [PDF をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "SafeKit バージョン 8.2 の包括的なユーザーマニュアル（PDF）を表示します。")
-  * 🛠️ [SafeKit リリースノート (HTML, バージョン 8.2)](</ja/resources/safekit-release-notes-8-2/> "SafeKit バージョン 8.2 の新機能、変更点、修正点については、こちらをご覧ください（HTML）。") / 🛠️ [PDF をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "SafeKit バージョン 8.2 の新機能、変更点、修正点については、こちら（PDF）をご覧ください。")
+  * 🛠️ [SafeKit ユーザーガイド (HTML, バージョン 8.2)](</ja/resources/safekit-user-guide-82/> "SafeKit 8.2 のユーザーマニュアル（HTML）をすべて表示します。") / 🛠️ [PDF をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "SafeKit 8.2 のユーザーマニュアル（PDF）全文を表示する。")
+  * 🛠️ [SafeKit リリースノート (HTML, バージョン 8.2)](</ja/resources/safekit-release-notes-8-2/> "SafeKit 8.2 の新機能、変更点、修正点については、こちらをご覧ください（HTML）。") / 🛠️ [PDF をダウンロード](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "SafeKit 8.2 の新機能、変更点、修正点については、こちら（PDF）をご覧ください。")
   * 🛠️ [SafeKit 8.2 ソフトウェアリリース速報 (SRB)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "SafeKit 8.2 のサポート対象 OS と最近の修正プログラムを詳述した公式速報。")
-  * 🛠️ [SafeKit ナレッジベース](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "SafeKit はナレッジベース：トラブルシューティングのヒントとよくある質問への回答。")
+  * 🛠️ [SafeKit ナレッジベース](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "SafeKit ナレッジベースには、トラブルシューティングのヒントやよくある質問への回答が掲載されています。")
 
 
-## SafeKit はサポート {#support}
+## SafeKit サポート {#support}
 
-  * 📞 [有料サポート](/ja/resources/safekit-support/#standard-support)/ 🤖 [無料サポート](/ja/resources/safekit-support/#ai-support)
+  * 📞 [有料サポート](/ja/resources/safekit-support/#standard-support) / 🤖 [無料サポート](/ja/resources/safekit-support/#ai-support)
 
 
 ## SafeKit の無料トレーニングと認定 {#-free-training-and-certification-on-safekit}
@@ -50,11 +49,11 @@ SafeKit の高可用性クラスターをセットアップおよび管理する
 
 ## 製品マーケティング資料 {#ℹ-product-marketing-documentation}
 
-SafeKit HA ソフトウェアの製品マーケティング資料（詳細なデータシート、製品ホワイトペーパー、技術概要を含む）をご覧ください。
+SafeKit HA ソフトウェアの製品マーケティング資料をご覧ください。詳細なデータシート、製品ホワイトペーパー、技術概要が含まれています。
 
   * 📘 [RFI および RFP の技術リファレンス](/ja/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/)
   * 📘 [SafeKit 高可用性クラスターデータシート (PDF)](/wp-content/uploads/documents/high-availability-overview.pdf)
-  * 📘 [高可用性クラスターテクノロジーホワイトペーパー (PDF)](/wp-content/uploads/documents/wp-safekit-en.pdf)
-  * 📘 [ホワイトペーパー - 高可用性ガイド (PDF)](/wp-content/uploads/documents/wp-hadecision-en.pdf)
+  * 📘 [高可用性クラスターテクノロジーに関するホワイトペーパー (PDF)](/wp-content/uploads/documents/wp-safekit-en.pdf)
+  * 📘 [ホワイトペーパー：高可用性ガイド（PDF）](/wp-content/uploads/documents/wp-hadecision-en.pdf)
  
 

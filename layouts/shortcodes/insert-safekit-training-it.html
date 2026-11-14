@@ -1,39 +1,38 @@
-{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-11.10 | Translation LLM | 40 expressions */}}
+{{/* translation: translate_md 2026-11-11.5 | glossaire 2026-11-12.4 | Translation LLM | 40 expressions */}}
 {{/* Shortcode: insert-safekit-training-en — 2 instances in 2 files */}}
 {{/* Parameters: none */}}
 {{/* Source: content\_index.md */}}
 
 
-## Pacchetti software HA di SafeKit - Versione 8.2 {#-safekits-ha-software-packages---version-82}
+## Pacchetti software SafeKit HA - Versione 8.2 {#-safekits-ha-software-packages---version-82}
 
 Questa tabella fornisce i file di installazione SafeKit per la versione corrente, organizzati per sistema operativo e tipo di programma di installazione.
 
-Sistema operativo/Piattaforma | Tipo di installatore | Vantaggio principale / Documentazione | Link per il download  
+Sistema operativo/Piattaforma | Tipo di installatore | Componenti inclusi | Link per il download  
 ---|---|---|---  
-Tutte le piattaforme | Documento PDF | Bollettino ufficiale sulle versioni software (supporto e correzioni) | 🛠️ [Visualizza SafeKit 8.2 SRB](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "Bollettino ufficiale con i dettagli sui sistemi operativi supportati e le correzioni recenti per SafeKit 8.2.")  
 Windows (Intel a 64 bit) | Programma di installazione .exe | Include Microsoft VC++ Redistributable | ⬇️ [Scarica SafeKit 8.2 Windows EXE](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.exe> "Scarica SafeKit 8.2 per Windows (installer EXE con VC++ Redistributable)")  
 Windows (Intel a 64 bit) | Programma di installazione .msi | *Non* include il pacchetto ridistribuibile Microsoft VC++ | ⬇️ [Scarica SafeKit 8.2 Windows MSI](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekit_windows_x86_64_8_2_6_5.msi> "Scarica SafeKit 8.2 per Windows (installer MSI senza VC++ Redistributable)")  
-Linux (Intel a 64 bit) | File .BIN autoestraibile | Include il pacchetto Linux e lo script di installazione | ⬇️ [Scarica il file BIN SafeKit 8.2 Linux (Intel)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "Scarica SafeKit 8.2 per Linux (file BIN autoestraibile con un pacchetto Linux standard e uno script di installazione)")  
-Linux (ARM a 64 bit) | File .BIN autoestraibile | Include il pacchetto Linux e lo script di installazione | ⬇️ [Scarica il file BIN SafeKit 8.2 Linux (ARM)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "Scarica SafeKit 8.2 per Linux (file BIN autoestraibile con un pacchetto Linux standard e uno script di installazione)")  
+Linux (Intel a 64 bit) | File .bin autoestraente | Include un pacchetto Linux e uno script di installazione | ⬇️ [Scarica il file BIN SafeKit 8.2 Linux (Intel)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_x86_64_8_2_6_4.bin> "Scarica SafeKit 8.2 per Linux (file BIN autoestraente con un pacchetto Linux standard e uno script di installazione)")  
+Linux (ARM a 64 bit) | File .bin autoestraente | Include un pacchetto Linux e uno script di installazione | ⬇️ [Scarica il file BIN SafeKit 8.2 Linux (ARM)](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/safekitlinux_aarch64_8_2_6_4.bin> "Scarica SafeKit 8.2 per Linux (file BIN autoestraente con un pacchetto Linux standard e uno script di installazione)")  
 
 {{ $.Page.RenderString "{{%  insert-supported-os-it  %}}" }}
 
-## Chiave di prova HA di SafeKit {#-safekits-ha-trial-key}
+## Chiave di prova SafeKit HA {#-safekits-ha-trial-key}
 
-Il seguente link fornisce l’accesso a una versione di prova completa, pensata per testare e configurare un cluster ad alta disponibilità con SafeKit.
+Il seguente link offre una versione di prova completa di SafeKit. Utilizzala per testare e configurare un cluster ad alta disponibilità.
 
   <a class="btn-action" href="/it/resources/high-availability-and-load-balancing-cluster-key/">Chiave di prova per 1 mese ›</a>
 
 ## Guide alla configurazione SafeKit per il tuo cluster HA {#config-guides-heading}
 
-Documentazione essenziale per la configurazione e la gestione del cluster ad alta disponibilità di SafeKit.  
+Questa documentazione consente di configurare e gestire il cluster ad alta disponibilità SafeKit.  
 
 
   * 🛠️ [Guide di installazione rapida SafeKit](</it/quick-install/> "Inizia subito a usare SafeKit con le guide rapide all’installazione.")
-  * 🛠️ [Guida per l’utente di SafeKit (HTML, versione 8.2)](</it/resources/safekit-user-guide-82/> "Visualizza il manuale utente completo per SafeKit versione 8.2 (HTML).") / 🛠️ [Scarica PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "Visualizza il manuale utente completo di SafeKit versione 8.2 (PDF).")
-  * 🛠️ [Note di rilascio di SafeKit (HTML, versione 8.2)](</it/resources/safekit-release-notes-8-2/> "Scopri le novità, le modifiche e le correzioni della versione 8.2 SafeKit (HTML).") / 🛠️ [Scarica PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "Scopri le novità, le modifiche e le correzioni della versione 8.2 SafeKit (PDF).")
+  * 🛠️ [Guida per l’utente di SafeKit (HTML, versione 8.2)](</it/resources/safekit-user-guide-82/> "Visualizza il manuale utente completo di SafeKit 8.2 (HTML).") / 🛠️ [Scarica PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_User_Guide.pdf> "Visualizza il manuale utente completo di SafeKit 8.2 (PDF).")
+  * 🛠️ [Note di rilascio di SafeKit (HTML, versione 8.2)](</it/resources/safekit-release-notes-8-2/> "Consulta le nuove funzionalità, le modifiche e le correzioni di SafeKit 8.2 (HTML).") / 🛠️ [Scarica PDF](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Release_Notes.pdf> "Consulta le nuove funzionalità, le modifiche e le correzioni di SafeKit 8.2 (PDF).")
   * 🛠️ [Bollettino di rilascio del software (SRB) SafeKit 8.2](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Software_Release_Bulletin.pdf> "Bollettino ufficiale con i dettagli sui sistemi operativi supportati e le correzioni recenti per SafeKit 8.2.")
-  * 🛠️ [Knowledge Base SafeKit](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "Knowledge Base SafeKit: suggerimenti per la risoluzione dei problemi e risposte alle domande più frequenti.")
+  * 🛠️ [Knowledge Base SafeKit](<https://github.com/FR-LES-SAFEKIT-DEV/safekit-packages/releases/download/v8.2/SafeKit_8.2_Knowledge_Base.pdf> "La Knowledge Base SafeKit fornisce suggerimenti per la risoluzione dei problemi e risposte alle domande più frequenti.")
 
 
 ## Supporto SafeKit {#support}
@@ -50,11 +49,11 @@ Acquisisci competenze preziose in materia di alta disponibilità (HA) con il nos
 
 ## Documentazione di marketing del prodotto {#ℹ-product-marketing-documentation}
 
-Esplora la nostra documentazione di marketing del prodotto per il software SafeKit HA, che include una scheda tecnica dettagliata, un white paper sul prodotto e una panoramica tecnica.
+Esplora la documentazione di marketing del prodotto per il software SafeKit HA. Include una scheda tecnica dettagliata, un white paper sul prodotto e una panoramica tecnica.
 
   * 📘 [Riferimento tecnico per RFI e RFP](/it/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/)
   * 📘 [Scheda tecnica del cluster ad alta disponibilità SafeKit (PDF)](/wp-content/uploads/documents/high-availability-overview.pdf)
   * 📘 [White paper sulla tecnologia dei cluster ad alta disponibilità (PDF)](/wp-content/uploads/documents/wp-safekit-en.pdf)
-  * 📘 [White Paper - Guida all’alta disponibilità (PDF)](/wp-content/uploads/documents/wp-hadecision-en.pdf)
+  * 📘 [White paper: guida all’alta disponibilità (PDF)](/wp-content/uploads/documents/wp-hadecision-en.pdf)
  
 
