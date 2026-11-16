@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-11.5"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-16.3"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -211,6 +211,8 @@ def encode(text, ctx):
     # chemins (C:/safekit/..., /opt/safekit/...) : jamais traduits ni coupés ("**C:/…/generic ab**")
     text = re.sub(r"(?<![\w/:.])(?:[A-Za-z]:[/\\]|/(?:opt|etc|var|usr|home|tmp|root|srv|mnt)/)[^\s*<>\"'`()]*[^\s*<>\"'`().,;:!?]",
                   lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    # "(Windows)" / "(Linux)" seuls entre parenthèses : protégés (sinon "kvm.safe (</a> Linux" : parenthèse perdue)
+    text = re.sub(r"\((?:Windows|Linux)\)", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     # noms de fichiers (mirror.safe, farm.safe, setup.exe...) : protégés en entier, sinon "mirror" seul est protégé
     text = re.sub(r"(?<![\w/.-])[\w-]+\.(?:safe|exe|msi|ps1|sh|cmd|bat|xml|conf|cfg|ini|txt|log|json|ya?ml|dll|vhdx?)\b(?![\w/-])", lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
     for rx, target in TERMS:
@@ -226,7 +228,12 @@ def encode(text, ctx):
             ctx.shown[n] = re.sub(r"<[^>]+>", "", m.group(0)).strip()   # Google voit le terme anglais
             return f"{S}P{n}{S}"
         text = rx.sub(term, text)
-    text = PROTECT.sub(lambda m: f"{S}P{ctx.add(m.group(0))}{S}", text)
+    def unlink(t):   # lien dans un élément notranslate : remis en Markdown tel quel ("<span notranslate>[farm](/fr/...)</span>")
+        def back(m):
+            bang, url, title, label = ctx.store[int(m.group(1))]
+            return f'{bang}[{label}]({url}' + (f' "{title}"' if title else "") + ")"
+        return re.sub(f"{S}A(\\d+){S}(.*?){S}/A{S}", back, t)
+    text = PROTECT.sub(lambda m: f"{S}P{ctx.add(unlink(m.group(0)))}{S}", text)
     for m in re.finditer(f"{S}P(\\d+){S}\\.(?=\\s|$)", text):   # `code`. -> phrase terminée
         if ctx.store[int(m.group(1))].startswith("`"):
             ctx.dot_after.add(int(m.group(1)))
@@ -493,6 +500,8 @@ def decode(text, ctx):
         parts = re.split(r"(\]\(<[^>]*>\)|\]\([^)\s]*\))", text)
         text = "".join(p if i % 2 else re.sub(r"\s*[（(](Ready|NotReady)[)）]\s*", r"（\1）", p) for i, p in enumerate(parts))
     text = re.sub(r"  +", " ", text)
+    text = re.sub(r'(<span[^>]*translate="no"[^>]*>)\s+(?=\[)', r"\1", text)   # "<span notranslate> [farm](...)" -> sans espace
+    text = re.sub(r"\((Windows|Linux)\) \*", r"(\1)*", text)   # "mirror.safe (Linux) *" -> "(Linux)*"
     text = re.sub(r"(?<!\.)\.\.(?!\.)", ".", text)   # ".." -> "." (pas "...")
     # gras Markdown invalide : espace avant le ** fermant ("ALSTEF **,") ou après le ** ouvrant ("** les")
     text = re.sub(r"(^|\s)\*\* +(?=\S)", r"\1**", text)
