@@ -1,31 +1,32 @@
 ---
-title: "Hohe Verfügbarkeit und Redundanz für Gebäudeleitsysteme (GLT)"
+title: "Hochverfügbarkeit und Redundanz für Gebäudemanagementsysteme (BMS)"
 canonical: "https://safekit.eviden.com/de/use-cases/building-management-system-software-bms-redundancy/"
-description: "Sichern Sie mit SafeKit die hundertprozentige Verfügbarkeit Ihres Smart Buildings. Unsere SAN-lose 2-Knoten-Redundanzsoftware bietet synchrone Echtzeit-Replikation und automatisches Failover für jedes Gebäudeleitsystem (BMS), einschließlich Siemens, Honeywell, Schneider Electric und Johnson Controls. Erreichen Sie mit Windows und Linux null Datenverlust (RPO=0) und maximale Betriebssicherheit für kritische HLK- und Sicherheitssysteme."
+description: "Sorgen Sie mit SafeKit für eine 100%ige Betriebszeit Ihres intelligenten Gebäudes. Unsere SANless-Redundanzsoftware für 2 Knoten bietet synchrone Echtzeit-Replikation und automatischen Failover für jedes BMS, einschließlich Siemens, Honeywell, Schneider Electric und Johnson Controls. Erzielen Sie null Datenverlust (RPO = 0) und betriebliche Ausfallsicherheit für kritische HLK- und Sicherheitssysteme unter Windows und Linux."
 category: "use-cases"
 lang: "de"
-topics: "Was ist ein Gebäudemanagementsystem (BMS)? Warum ist eine BMS-Software so wichtig? Wichtige Anbieter im BMS-Bereich. SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von BMS-Software. SafeKit ist eine anerkannte Lösung im Sicherheitsmarkt. 🔍 SafeKit entdecken"
+topics: "Was ist ein Gebäudemanagementsystem (BMS)?, Warum ist BMS-Software entscheidend?, Wichtige BMS-Anbieter, SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit von BMS-Software., SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 47 expressions"
 ---
 
-# Hochverfügbarkeit und Redundanz für Gebäudeleittechniksysteme (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
+# Hochverfügbarkeit und Redundanz für Gebäudemanagementsysteme (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
-##  Was ist ein Gebäudeleitsystem (GLT)? {#what-is-a-building-management-system-bms}
+##  Was ist ein Gebäudemanagementsystem (BMS)? {#what-is-a-building-management-system-bms}
 
-Ein Gebäudemanagementsystem (BMS) ermöglicht die automatische, zentrale Steuerung der Heizungs-, Lüftungs- und Klimaanlage (HLK), der Elektrik, der Beleuchtung usw. eines Gebäudes.
+Ein Gebäudemanagementsystem (BMS) bietet eine automatische und zentrale Steuerung von Gebäudeinstallationen: Heizung, Lüftung und Klimaanlage (HLK), Stromverteilung, Beleuchtung und mehr.
 
-Ein Gebäudemanagementsystem erhöht die Sicherheit der Gebäudebewohner, reduziert den Energieverbrauch und senkt die Betriebs- und Wartungskosten.
+Ein Gebäudemanagementsystem erhöht die Sicherheit für die Gebäudenutzer. Es reduziert außerdem den Energieverbrauch und senkt die Betriebs- und Wartungskosten.
 
-##  Warum ist eine BMS-Software so wichtig? {#why-a-bms-software-is-critical}
+##  Warum ist BMS-Software entscheidend? {#why-a-bms-software-is-critical}
 
-Eine Gebäudeleittechnik-Software steuert Brandmeldeanlagen, elektrische Verteilerkästen, Wasserverbrauch, Klimaanlagen und Beleuchtung.
+Die BMS-Software steuert Brandschutzsysteme, elektrische Verteiler, den Wasserverbrauch, Klimaanlagen und die Beleuchtung.
 
-Die Sicherheit von Menschenleben im Gebäude steht in direktem Zusammenhang mit der korrekten Ausführung der Gebäudeleittechnik (BMS).
+Die Sicherheit der Gebäudenutzer hängt direkt vom korrekten Betrieb der BMS-Software ab.
 
-Und genau deshalb muss das System für die Gebäudebetreiber jederzeit verfügbar sein, damit diese auf den geringsten Vorfall sofort reagieren können.
+Deshalb muss das System stets verfügbar sein. Die Gebäudebetreiber müssen sofort auf den geringsten Vorfall reagieren.
 
-##  Liste der wichtigsten Akteure in BMS {#key-players-list-in-bms}
+##  Wichtige BMS-Anbieter {#key-players-list-in-bms}
 
-Die wichtigsten Akteure im BMS sind:
+Die wichtigsten BMS-Anbieter sind:
 
   * Honeywell International Inc. (USA)
   * Johnson Controls (Irland)
@@ -41,14 +42,14 @@ Die wichtigsten Akteure im BMS sind:
 
   * Robert Bosch GmbH (Deutschland)
   * Singapore Technologies Engineering Ltd (Singapur)
-  * DEXMA SENSORS, SL (Spanien)
+  * DEXMA SENSORS, S.L. (Spanien)
   * Eagle Technology (Indien)
   * Legrand (Frankreich)
   * Lutron Electronics Co., Inc. (USA)
   * Technovator International Limited (Singapur)
-  * Airedale Klimaanlagen (UK)
+  * Airedale Air Conditioning (Vereinigtes Königreich)
   * BuildingIQ (USA)
-  * ACUITY BRANDS LIGHTING, INC. (USA)
+  * ACUITY BRANDS LIGHTING, INC. (US)
   * GridPoint (USA)
 
 

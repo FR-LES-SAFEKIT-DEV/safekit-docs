@@ -1,52 +1,53 @@
 ---
-title: "楼宇管理系统（BMS）的高可用性和冗余性"
+title: "楼宇管理系统 (BMS) 的高可用性和冗余"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/building-management-system-software-bms-redundancy/"
-description: "使用SafeKit确保您的智能建筑 100% 正常运行。我们这款无需 SAN 存储的双节点冗余软件可为任何楼宇管理系统 (BMS Linux Windows实现关键暖通空调和安防系统的零数据丢失 (RPO=0) 和运行弹性。"
+description: "使用 SafeKit 确保您的智能建筑 100% 正常运行。我们的无共享存储、双节点冗余软件为任何楼宇管理系统（包括 Siemens、Honeywell、Schneider Electric 和 Johnson Controls）提供实时同步复制和自动故障转移。在 Windows 和 Linux 上，为关键的暖通空调和安全系统实现零数据丢失 (RPO = 0) 和运行弹性。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "什么是楼宇管理系统 (BMS)？为什么 BMS 软件至关重要？BMS 主要厂商有哪些？ SafeKit提供两种 BMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 探索 SafeKit"
+topics: "什么是楼宇管理系统（BMS）？、为什么 BMS 软件至关重要？、主要 BMS 供应商、SafeKit 为 BMS 软件的冗余和高可用性提供了两种解决方案。、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
 ---
 
-# 楼宇管理系统 (BMS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-building-management-systems-bms}
+# 楼宇管理系统 (BMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-building-management-systems-bms}
 
-##  是楼宇管理系统（BMS）？ {#what-is-a-building-management-system-bms}
+##  什么是楼宇管理系统（BMS）？ {#what-is-a-building-management-system-bms}
 
-楼宇管理系统（BMS）可实现对建筑物的暖通空调（HVAC）、电气、照明等设备的自动集中控制……
+楼宇管理系统（BMS）提供对楼宇服务的自动和集中控制：供暖、通风和空调（HVAC）、配电、照明等。
 
-楼宇管理系统可以提高楼宇居民的安全，降低能源消耗，并减少运营和维护成本。
+楼宇管理系统可提高楼宇住户的安全性，还能降低能耗以及运营和维护成本。
 
-##  为什么电池管理系统 (BMS) 软件至关重要？ {#why-a-bms-software-is-critical}
+##  为什么 BMS 软件至关重要？ {#why-a-bms-software-is-critical}
 
-楼宇管理系统（BMS）软件控制消防系统、配电盘、用水量、空调系统和照明控制。
+楼宇管理系统软件可控制消防安全系统、配电盘、用水量、空调系统和照明。
 
-建筑物内的生命安全与楼宇管理系统（BMS）软件的正确运行直接相关。
+楼宇内人员的安全直接取决于楼宇管理系统软件的正确运行。
 
-因此，该系统必须始终可供楼宇运营人员使用，以便他们对任何轻微事件都能立即做出反应。
+因此，系统必须始终保持可用状态。楼宇运营商必须对最轻微的事件立即做出反应。
 
-##  BMS中的关键参与者列表 {#key-players-list-in-bms}
+##  主要 BMS 供应商 {#key-players-list-in-bms}
 
-BMS的关键参与者包括：
+主要的楼宇管理系统供应商是：
 
-  * 霍尼韦尔国际公司（美国）
-  * 江森自控（爱尔兰）
-  * 施耐德电气（法国）
-  * 西门子（德国）
-  * 联合技术公司（美国）
+  * Honeywell International Inc.（美国）
+  * Johnson Controls（爱尔兰）
+  * Schneider Electric（法国）
+  * Siemens（德国）
+  * United Technologies（美国）
   * ABB（瑞典）
-  * 阿兹比尔公司（日本）
+  * Azbil Corporation（日本）
   * Delta Controls（印度）
-  * 拉森与图布罗有限公司（印度）
-  * 三菱电机株式会社（日本）
+  * LARSEN & TOUBRO LIMITED（印度）
+  * Mitsubishi Electric Corporation（日本）
 
 
-  * 罗伯特·博世有限公司（德国）
-  * 新加坡科技工程有限公司（新加坡）
-  * DEXMA SENSORS, SL（西班牙）
-  * 鹰科技（印度）
-  * 勒格朗（法国）
-  * 路创电子有限公司（美国）
+  * Robert Bosch GmbH（德国）
+  * Singapore Technologies Engineering Ltd（新加坡）
+  * DEXMA SENSORS, S.L.（西班牙）
+  * Eagle Technology（印度）
+  * Legrand（法国）
+  * Lutron Electronics Co., Inc.（美国）
   * Technovator International Limited（新加坡）
-  * 艾尔代尔空调（英国）
+  * Airedale Air Conditioning（英国）
   * BuildingIQ（美国）
   * ACUITY BRANDS LIGHTING, INC.（美国）
   * GridPoint（美国）

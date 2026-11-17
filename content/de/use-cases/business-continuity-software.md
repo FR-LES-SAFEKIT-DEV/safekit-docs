@@ -1,31 +1,32 @@
 ---
-title: "Standardisierung von Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen"
+title: "Standardisierung der Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen"
 canonical: "https://safekit.eviden.com/de/use-cases/business-continuity-software/"
-description: "Sichern Sie jeden Standort Ihres verteilten Unternehmens mit SafeKit . Stellen Sie einen standardisierten, rein softwarebasierten HA-Cluster in großem Umfang bereit, um die Verfügbarkeit kritischer Anwendungen rund um die Uhr zu gewährleisten. Für Windows und Linux sind weder gemeinsam genutzter Speicher noch komplexe SANs oder IT-Fachkräfte vor Ort erforderlich."
+description: "Sichern Sie jede Niederlassung Ihres verteilten Unternehmens mit SafeKit. Stellen Sie einen standardisierten, rein softwarebasierten Hochverfügbarkeitscluster in großem Maßstab bereit. Gewährleisten Sie eine 24/7-Verfügbarkeit für geschäftskritische Anwendungen in jeder Niederlassung. SafeKit läuft unter Windows und Linux. Es erfordert keinen gemeinsam genutzten Speicher, kein komplexes SAN und keine IT-Expertise vor Ort."
 category: "use-cases"
 lang: "de"
 topics: "Geschäftskontinuität in einem verteilten Unternehmen, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 47 expressions"
 ---
 
-# Standardisierung von Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Standardisierung der Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
 
 ## Geschäftskontinuität in einem verteilten Unternehmen {#business-continuity-in-a-distributed-enterprise}
 
-### Geschäftskontinuität in einem verteilten Unternehmen {#business-continuity-in-a-distributed-enterprise-1}
+### Eine standardmäßige Hochverfügbarkeitslösung für viele Niederlassungen {#business-continuity-in-a-distributed-enterprise-1}
 
-Mit SafeKit ist die Bereitstellung von Dutzenden von Clustern unkompliziert.
-
-
-![ Business-Continuity-Softwarelösung in einem Unternehmen ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+Ein verteiltes Unternehmen betreibt dieselben geschäftskritischen Anwendungen in vielen Niederlassungen. Mit SafeKit ist die Bereitstellung von Dutzenden identischer Cluster einfach.
 
 
-### Wie implementiert man Business-Continuity-Software ohne spezielle IT-Kenntnisse? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
+![Business-Continuity-Software in einem verteilten Unternehmen](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
-Die Bereitstellung einer Business-Continuity-Lösung für mehrere Anwendungen in einem Unternehmen auf Windows oder Linux -Servern stellt wirtschaftliche und organisatorische Herausforderungen dar. SafeKit bietet hierfür eine einfache und kostengünstige Business-Continuity-Software.
 
-### Die Software SafeKit : eine einfache Lösung für Geschäftskontinuität {#the-safekit-software-a-simple-solution-for-business-continuity}
+### Wie kann man Business-Continuity-Software ohne spezielle IT-Kenntnisse bereitstellen? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
 
-SafeKit bietet zwei einfache Module <span class="notranslate farm-term" translate="no">farm</span> und mirror , zum Schutz Ihrer kritischen Anwendungen vor Ausfällen. Die Installation erfolgt auf Standardservern und erfordert keine IT-Kenntnisse für die Verwaltung der Lösung. Es werden weder gemeinsam genutzte Festplatten, replizierte SANs, Load Balancer noch Enterprise-Versionen von Betriebssystemen oder Datenbanken benötigt. 
+Die Gewährleistung der Geschäftskontinuität für mehrere Anwendungen auf Windows- oder Linux-Servern in jeder Niederlassung wirft wirtschaftliche und organisatorische Probleme auf. SafeKit löst diese Probleme mit einer einfachen und kostengünstigen Software für die Geschäftskontinuität.
+
+### Die SafeKit-Software: eine einfache Lösung für die Geschäftskontinuität {#the-safekit-software-a-simple-solution-for-business-continuity}
+
+SafeKit bietet zwei einfache Module: das Mirror-Modul und das <span class="notranslate farm-term" translate="no">Farm</span>-Modul. Sie schützen Ihre kritischen Anwendungen vor Ausfällen. Sie werden auf Standardservern bereitgestellt und Sie benötigen keine IT-Kenntnisse, um die Lösung zu verwalten. Sie benötigen keine gemeinsam genutzte Festplatte, kein repliziertes SAN, Load Balancer oder Enterprise-Editionen von Betriebssystemen oder Datenbanken.
 
 
 {{%  insert-safekit-hub-de  %}}

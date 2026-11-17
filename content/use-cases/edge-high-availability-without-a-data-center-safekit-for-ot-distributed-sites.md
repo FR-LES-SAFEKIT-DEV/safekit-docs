@@ -1,111 +1,104 @@
 ---
-title: "Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites"
+title: "Edge High Availability Without a Data Center: SafeKit for OT and Distributed Sites"
 canonical: "https://safekit.eviden.com/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Edge sites have no data center — but still need HA. SafeKit turns 2 standard servers into a plug-and-play HA cluster: no SAN, no IT staff, automatic failover."
+description: "Edge computing sites have no data center, but they still need high availability. SafeKit turns two standard servers into a plug-and-play high availability cluster. It requires no SAN and no IT staff, and failover is automatic."
 category: "use-cases"
 lang: "en"
-topics: "The Edge HA Challenge, What Makes SafeKit the Natural Fit for Edge, Edge & Distributed Deployment Suitability, Why Edge OT Environments Are Different, Ideal Edge Use Cases, Edge vs. Data Center HA: Key Differences, Technical Minimum Requirements, 🔍 Explore SafeKit"
+topics: "The high availability challenge at the edge, Why SafeKit is the natural fit for edge computing, Edge and distributed deployment suitability, Why edge OT environments are different, Ideal use cases at the edge, Edge vs. data center high availability: key differences, Supported operating systems and platforms, 🔍 Explore SafeKit"
 ---
 
-# Edge High Availability Without a Data Center: SafeKit for OT & Distributed Sites {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# Edge High Availability Without a Data Center: SafeKit for OT and Distributed Sites {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
 
-## The Edge HA Challenge {#the-edge-ha-challenge}
+## The high availability challenge at the edge {#the-edge-ha-challenge}
 
-Edge sites often have no data center and no HA expertise — yet business continuity is critical. A factory floor, an offshore oil platform, a hospital clinic, a retail store, or a 5G antenna site cannot afford downtime, but cannot justify the cost and complexity of a traditional data center HA cluster.
+Edge computing sites often have no data center and no high availability expertise. Yet business continuity is critical for them. A factory floor, an offshore oil platform, a hospital clinic, a retail store, or a 5G antenna site cannot afford downtime. But these sites cannot justify the cost and complexity of a traditional data center cluster.
 
-Traditional HA solutions — Microsoft Failover Cluster (WSFC), Pacemaker/Corosync, VMware HA — were designed for data centers: they assume shared storage (SAN/NAS), dedicated cluster hardware, permanent IT staff, and complex OS-level expertise. None of these exist at the edge.
+Traditional high availability solutions, such as Microsoft Failover Cluster (WSFC), Pacemaker with Corosync, or VMware HA, were designed for data centers. They require shared storage (SAN or NAS), dedicated cluster hardware, permanent IT staff, and complex operating system expertise. None of these exist at the edge.
 
-SafeKit was built for exactly this gap. It keeps edge applications running in factories, oil platforms, ships, building security, air traffic control, 5G networks, healthcare, retail, and more — with nothing more than two standard servers and a LAN.
-
-
-![SafeKit for Edge](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
+SafeKit was built for exactly this gap. It keeps edge applications running in factories, oil platforms, ships, building security, air traffic control, 5G networks, healthcare, retail, and more. It needs only two standard servers connected by a LAN.
 
 
-## What Makes SafeKit the Natural Fit for Edge {#what-makes-safekit-the-natural-fit-for-edge}
-
-SafeKit turns two standard edge servers (any brand, physical or virtual) into a plug-and-play HA cluster — no shared storage, no SAN, no special hardware. One lightweight software stack delivers:
-
-  * **Real-time synchronous file replication** — data is mirrored byte-level to the standby server at write time
-  * **Automatic failover** — if the primary server fails, the standby takes over without human intervention, within seconds
-  * **Optional network load balancing** — for active-active deployments where both servers share the workload
-  * **Web console** — browser-based management, remotely accessible over HTTPS, requiring no on-site expertise
-  * **Silent, scriptable install** — suitable for OEM embedding and mass deployment across hundreds of distributed sites
+![SafeKit for edge computing](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
 
 
-There is no SAN to procure, no Windows Server Datacenter license required, no Linux cluster OS expertise needed, and no dedicated cluster hardware. The entire HA stack is a single software package.
+## Why SafeKit is the natural fit for edge computing {#what-makes-safekit-the-natural-fit-for-edge}
 
-## Edge & Distributed Deployment Suitability {#edge--distributed-deployment-suitability}
+SafeKit turns two standard edge servers into a plug-and-play high availability cluster. The servers can be of any brand, physical or virtual. There is no shared storage, no SAN, and no special hardware. One lightweight software package delivers the following features:
 
-SafeKit is specifically designed for edge, branch office, and distributed enterprise scenarios:
+  * **Real-time synchronous file replication.** Data is mirrored at byte level to the standby server at write time.
+  * **Automatic failover.** If the primary server fails, the standby server takes over within seconds, without human intervention.
+  * **Optional network load balancing.** In active-active deployments, both servers share the workload.
+  * **Web console.** Management is browser-based and remotely accessible over HTTPS. It requires no on-site expertise.
+  * **Silent, scriptable installation.** It is suitable for mass deployment across hundreds of distributed sites and for embedding in OEM products.
 
-Edge Requirement | SafeKit Answer  
+
+You do not need to buy a SAN. You do not need a Windows Server Datacenter license either. You do not need Linux cluster expertise or dedicated cluster hardware. The entire high availability stack is a single software package.
+
+## Edge and distributed deployment suitability {#edge--distributed-deployment-suitability}
+
+SafeKit is specifically designed for edge computing, branch offices, and distributed enterprises:
+
+Edge computing requirement | SafeKit solution  
 ---|---  
-No dedicated IT staff on-site | Automatic failover, no manual intervention required  
-No SAN/NAS infrastructure | SANless architecture, local disks only  
+No dedicated IT staff on site | Automatic failover with no manual intervention  
+No SAN or NAS infrastructure | Architecture with local disks only and no SAN  
 Remote management | Web console accessible over HTTPS from any browser  
-Low hardware footprint | 2 standard servers or VMs, no special hardware  
-Works behind firewalls/NAT | Configurable ports, HTTPS-based console  
-Multi-site disaster recovery | Mirror between two geographic sites over stretched VLAN  
-Air-gapped / offline networks | No internet dependency; fully self-contained  
-OEM/embedded deployment | Silent install, scriptable, embeddable by software publishers  
-Hundreds of distributed clusters | Designed for distributed enterprises managing many branches  
+Low hardware footprint | Two standard servers or VMs with no special hardware  
+Works behind firewalls and NAT | Configurable ports and HTTPS-based console  
+Multi-site disaster recovery | Real-time replication with the mirror module between two geographic sites over a stretched VLAN  
+Isolated or offline networks | No internet dependency and fully self-contained  
+OEM or embedded deployment | Silent and scriptable installation that software vendors can embed  
+Hundreds of distributed clusters | Designed for distributed enterprises with many branch offices  
   
-## Why Edge OT Environments Are Different {#why-edge-ot-environments-are-different}
+## Why edge OT environments are different {#why-edge-ot-environments-are-different}
 
-OT (Operational Technology) environments — SCADA, BMS, physical security, industrial control — have requirements that differ fundamentally from IT data centers:
+Operational technology (OT) environments include SCADA, building management systems (BMS), physical security, and industrial control. Their requirements differ fundamentally from IT data centers:
 
-  * **No IT staff on-site.** A substation, a remote pump station, or a ship has no sysadmin. HA must be self-managing.
-  * **Air-gapped or constrained networks.** Many OT sites have no internet access and limited WAN bandwidth. HA software must work fully offline.
-  * **24/7 uptime, zero tolerance for complexity.** Stopping a production line, losing video surveillance, or interrupting access control costs far more than the HA software itself.
-  * **Long equipment lifecycles.** OT servers may run 10–15 years. The HA solution must be stable, low-maintenance, and not require constant updates.
-  * **Standard x86 hardware only.** No budget or justification for SAN or dedicated cluster nodes at a remote industrial site.
-  * **Intolerance for OS-level complexity.** Pacemaker, Corosync, or WSFC require cluster expertise that OT operators simply do not have and should not need.
+  * **No IT staff on site.** A substation, a remote pump station, or a ship has no system administrator. High availability must be self-managing.
+  * **Isolated or constrained networks.** Many OT sites have no internet access and limited WAN bandwidth. High availability software must work fully offline.
+  * **24/7 uptime and zero tolerance for complexity.** Stopping a production line, losing video surveillance, or interrupting access control costs far more than the high availability software itself.
+  * **Long equipment lifecycles.** OT servers may run for 10 to 15 years. The high availability solution must be stable and low-maintenance, and it must not require constant updates.
+  * **Standard x86 hardware only.** A remote industrial site has no budget or justification for a SAN or dedicated cluster nodes.
+  * **No tolerance for operating system complexity.** Traditional cluster software requires cluster expertise. OT operators do not have this expertise and should not need it.
 
 
-SafeKit's SANless, two-server, automatic-failover model addresses every one of these constraints directly.
+The SafeKit model directly addresses every one of these constraints: no SAN, two servers, and automatic failover.
 
-## Ideal Edge Use Cases {#ideal-edge-use-cases}
+## Ideal use cases at the edge {#ideal-edge-use-cases}
 
-Any site without a data center — where high availability still matters:
+SafeKit fits any site without a data center where high availability still matters:
 
-Vertical | Typical Edge Site | Critical Application  
+Industry | Typical edge site | Critical application  
 ---|---|---  
-Physical security & surveillance | Buildings, campuses, airports | VMS — Milestone, Genetec, Hanwha, Siemens Siveillance  
+Physical security and surveillance | Buildings, campuses, airports | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Building management (BMS) | Office buildings, hospitals, factories | Siemens Desigo CC, Bosch BIS/BVMS  
 Electronic access control (EACS) | Secure facilities, campuses | Siemens SiPass, Nedap, Bosch AMS  
-SCADA & industrial control | Factories, substations, water plants | Any SCADA, DCS, or HMI software on Windows or Linux  
-Air traffic control (ATC) | Airports, control towers | ATC management and radar systems  
+SCADA and industrial control | Factories, substations, water plants | Any SCADA, DCS, or HMI software on Windows or Linux  
+Air traffic control (ATC) | Airports, control towers | Air traffic management and radar systems  
 Operations control centers (OCC) | Metro, railway, transit hubs | Railway signaling and station management  
-Maritime | Ships, naval vessels | Navigation, cargo and onboard management systems  
-Oil & gas | Offshore platforms, remote rigs | Process control and safety systems  
+Maritime | Ships, naval vessels | Navigation, cargo, and onboard management systems  
+Oil and gas | Offshore platforms, remote rigs | Process control and safety systems  
 Telecommunications | 5G antenna sites, MEC nodes | Multi-access edge computing (MEC) servers  
 Healthcare | Clinics, remote diagnostic centers | Medical imaging, patient data, remote diagnostics  
 Retail | Stores, branches, warehouses | Point-of-sale and inventory management  
-Defense | Forward operating bases, field units | Mission-critical command and communications systems  
+Military and defense | Forward operating bases, field units | Mission-critical command and communications systems  
   
-## Edge vs. Data Center HA: Key Differences {#edge-vs-data-center-ha-key-differences}
+## Edge vs. data center high availability: key differences {#edge-vs-data-center-ha-key-differences}
 
-Criterion | Data Center HA (WSFC, Pacemaker, VMware HA) | SafeKit Edge HA  
+Criterion | Data center high availability (WSFC, Pacemaker, VMware HA) | SafeKit high availability at the edge  
 ---|---|---  
-Storage | Requires SAN/NAS shared storage | SANless — local disks only  
-Hardware | Dedicated cluster nodes, HBAs, switches | Any two standard x86 servers  
-OS expertise | Windows Datacenter or Linux cluster OS skills | Standard Windows/Linux admin skills  
-On-site staff | Required for setup and intervention | Not required — fully automatic  
-Internet/cloud dependency | Often cloud-managed | Fully air-gap capable  
+Storage | Requires shared storage (SAN or NAS) | SANless, with local disks only  
+Hardware | Dedicated cluster nodes, host bus adapters (HBAs), and switches | Two standard x86 servers of any brand  
+Operating system expertise | Windows Server Datacenter or Linux cluster skills | Standard Windows or Linux administration skills  
+On-site staff | Required for setup and intervention | Not required, because failover is fully automatic  
+Internet or cloud dependency | Often cloud-managed | Works on fully isolated networks  
 Deployment scale | Single data center | Hundreds of distributed sites  
-License cost | High (Datacenter OS, SAN licenses) | Single affordable software license per cluster  
-Typical RTO | 1–5 minutes | Under 1 minute (configurable)  
+License cost | High (Datacenter OS and SAN licenses) | One affordable software license per cluster  
+Typical RTO | 1 to 5 minutes | Under 1 minute (configurable)  
   
-## Technical Minimum Requirements {#technical-minimum-requirements}
+{{%  insert-supported-os-en  %}}
 
-  * **Servers:** 2 standard x86 servers or VMs (any hardware brand, physical or virtual) or ARM (Linux only)
-  * **OS:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * **Network:** 1 Gbps LAN for replication; dedicated heartbeat network recommended
-  * **Storage:** Local disks only — no SAN, no NAS, no shared storage of any kind
-  * **No special OS edition** — Windows Server Standard is sufficient; no Datacenter license required
-
-
-For full technical specifications, sizing constraints, and procurement criteria, see the 📘 [RFP/RFI Technical Reference](</resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>).
+For full technical specifications, sizing constraints, and procurement criteria, read the 📘 [RFI and RFP technical reference](</resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>).
 
 
 {{%  insert-safekit-hub-en  %}}

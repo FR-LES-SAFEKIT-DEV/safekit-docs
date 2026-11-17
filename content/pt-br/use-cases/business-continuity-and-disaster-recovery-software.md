@@ -1,10 +1,11 @@
 ---
 title: "Software de Continuidade de Negócios e Recuperação de Desastres para Clusters de 2 Nós com SafeKit"
 canonical: "https://safekit.eviden.com/pt-br/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "SafeKit é um software de continuidade de negócios e recuperação de desastres que implementa uma solução simples de alta disponibilidade entre duas salas de computadores remotas. Obtenha disponibilidade 24 horas por dia, 7 dias por semana, com SafeKit , o software de continuidade de negócios e recuperação de desastres mais fácil de usar. Elimine SANs dispendiosas e habilidades complexas de TI com replicação síncrona de 2 nós, failover automático e balanceamento de carga para Windows e Linux . Perda de dados zero (RPO=0) para aplicações críticas em qualquer ambiente de nuvem ou local."
+description: "SafeKit é um software de continuidade de negócios e recuperação de desastres. Ele implementa uma solução simples de alta disponibilidade entre duas salas de servidores remotas. Obtenha tempo de atividade 24 horas por dia, 7 dias por semana, com SafeKit, o software de continuidade de negócios e recuperação de desastres mais fácil de usar. Elimine SANs caras e habilidades de TI complexas com replicação síncrona de 2 nós, failover automático e balanceamento de carga para Windows e Linux. Perda de dados zero (RPO = 0) para aplicações críticas em qualquer nuvem ou ambiente local."
 category: "use-cases"
 lang: "pt-br"
-topics: "Software de continuidade de negócios e recuperação de desastres, 🔍 Explore o SafeKit"
+topics: "Software de continuidade de negócios e recuperação de desastres, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 50 expressions"
 ---
 
 # Software de Continuidade de Negócios e Recuperação de Desastres para Clusters de 2 Nós com SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
@@ -14,20 +15,20 @@ topics: "Software de continuidade de negócios e recuperação de desastres, �
 ### Motivos para escolher o software SafeKit para continuidade de negócios e recuperação de desastres {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}
 
 
-![ Software simples de continuidade de negócios e recuperação de desastres com SafeKit ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
+![Software simples de continuidade de negócios e recuperação de desastres com SafeKit](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
 
-Não há diferença de configuração ao implantar um cluster SafeKit na mesma sala de computadores ou em salas de computadores remotas, desde que uma LAN estendida ou uma VLAN estendida esteja disponível entre os locais remotos.
+A configuração é a mesma, quer você implemente um cluster SafeKit em uma sala de servidores ou em duas salas de servidores remotas. O único requisito é uma LAN estendida ou uma VLAN estendida entre os locais remotos.
 
-### Como implementar uma solução simples de alta disponibilidade entre duas salas de computadores remotas? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
+### Como implementar uma solução simples de alta disponibilidade entre duas salas de servidores remotas? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-Os módulos SafeKit mirror e <span class="notranslate farm-term" translate="no">farm</span> podem ser facilmente implementados em servidores localizados em salas de computadores remotas, sem qualquer configuração especial de cluster. Isso significa que SafeKit combina continuidade de negócios e recuperação de desastres em uma única arquitetura simples. SafeKit também gerencia o cenário de "split brain" (split brain) [ ](</pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) em caso de isolamento de rede, sem a necessidade de um terceiro servidor ou um disco de quorum especial.
+Com SafeKit, você pode implantar facilmente o módulo mirror e o módulo <span class="notranslate farm-term" translate="no">farm</span> em servidores em salas de servidores remotas. Nenhuma configuração especial de cluster é necessária. SafeKit, portanto, combina continuidade de negócios e recuperação de desastres em uma única arquitetura simples. SafeKit também lida com o isolamento de rede sem um terceiro servidor ou um disco de quórum especial. Leia mais sobre [o gerenciamento de split brain](</pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
-### Continuidade de negócios versus soluções de backup {#business-continuity-vs-backup-solutions}
+### Continuidade de negócios vs. soluções de backup {#business-continuity-vs-backup-solutions}
 
-As soluções de continuidade de negócios e backup abordam diferentes cenários de falha e são complementares, não intercambiáveis. A continuidade de negócios, fornecida pelo cluster de alta disponibilidade do SafeKit , mantém os aplicativos em execução com interrupção mínima em caso de falha de servidor ou aplicativo, por meio de replicação em tempo real e failover automático. As soluções de backup protegem contra perdas mais amplas, como ataques de ransomware ou erros de operação, e normalmente dependem de cópias de dados externas que podem ser restauradas posteriormente, com tempos de recuperação mais longos, mas sem failover automático.
+As soluções de continuidade de negócios e backup abordam diferentes cenários de falha. Elas são complementares, não intercambiáveis. O clustering de alta disponibilidade SafeKit garante a continuidade dos negócios. Ele mantém os aplicativos em execução com interrupção mínima quando um servidor ou um aplicativo falha, graças à replicação em tempo real e ao failover automático. As soluções de backup protegem contra perdas mais amplas, como ataques de ransomware ou erros do operador. Elas geralmente dependem de cópias de dados externas que você restaura posteriormente. A recuperação leva mais tempo e não há failover automático.
 
-Saiba mais em [ Combinando SafeKit Alta disponibilidade com backups de recuperação de desastres ](</pt-br/best-practises/high-availability-disaster-recovery-hadr/>) .
+Saiba mais sobre [como combinar a alta disponibilidade SafeKit com backups de recuperação de desastres](</pt-br/best-practises/high-availability-disaster-recovery-hadr/>).
 
 
 {{%  insert-safekit-hub-pt-br  %}}

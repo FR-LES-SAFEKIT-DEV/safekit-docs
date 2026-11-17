@@ -1,111 +1,105 @@
 ---
-title: "Elevata disponibilità edge senza data center: SafeKit per siti OT e distribuiti"
+title: "Elevata disponibilità perimetrale senza data center: SafeKit per OT e siti distribuiti"
 canonical: "https://safekit.eviden.com/it/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "I siti periferici non dispongono di un data center, ma necessitano comunque di alta disponibilità. SafeKit trasforma 2 server standard in un cluster HA plug-and-play: nessuna SAN, nessun personale IT necessario, failover automatico."
+description: "I siti di edge computing non dispongono di un data center, ma necessitano comunque di un’elevata disponibilità. SafeKit trasforma due server standard in un cluster ad alta disponibilità plug-and-play. Non richiede SAN né personale IT e il failover è automatico."
 category: "use-cases"
 lang: "it"
-topics: "La sfida dell'alta disponibilità di Edge, cosa rende SafeKit la soluzione ideale per Edge, idoneità per implementazioni Edge e distribuite, perché gli ambienti OT di Edge sono diversi, casi d'uso Edge ideali, alta disponibilità di Edge vs. Data Center: differenze chiave, requisiti tecnici minimi, 🔍 Esplora SafeKit"
+topics: "La sfida dell’alta disponibilità all’edge, Perché SafeKit è la soluzione naturale per l’edge computing, Idoneità all’implementazione edge e distribuita, Perché gli ambienti OT perimetrali sono diversi, Casi d’uso ideali per l’edge, Edge vs. data center: le differenze chiave in termini di alta disponibilità, Sistemi operativi e piattaforme supportati, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 40 expressions"
 ---
 
-# Elevata disponibilità Edge senza data center: SafeKit per siti OT e distribuiti {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# Elevata disponibilità perimetrale senza data center: SafeKit per OT e siti distribuiti {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
 
-## La sfida Edge HA {#the-edge-ha-challenge}
+## La sfida dell’alta disponibilità all’edge {#the-edge-ha-challenge}
 
-Spesso i siti periferici non dispongono di un data center né di competenze in materia di alta disponibilità (HA), eppure la continuità operativa è fondamentale. Un impianto di produzione, una piattaforma petrolifera offshore, una clinica ospedaliera, un negozio al dettaglio o un sito di antenne 5G non possono permettersi tempi di inattività, ma non possono giustificare i costi e la complessità di un cluster HA tradizionale basato su un data center.
+I siti di edge computing spesso non dispongono di un data center né di competenze in materia di alta disponibilità. Eppure la continuità operativa è fondamentale per loro. Un reparto di produzione, una piattaforma petrolifera offshore, una clinica ospedaliera, un negozio al dettaglio o un sito di antenne 5G non possono permettersi tempi di inattività. Ma questi siti non possono giustificare il costo e la complessità di un cluster di data center tradizionale.
 
-Le soluzioni HA tradizionali — Microsoft Failover Cluster (WSFC), Pacemaker/Corosync, VMware HA — sono state progettate per i data center: presuppongono storage condiviso (SAN/NAS), hardware cluster dedicato, personale IT permanente e competenze complesse a livello di sistema operativo. Nessuna di queste condizioni è presente ai margini della rete.
+Le soluzioni tradizionali ad alta disponibilità, come Microsoft Failover Cluster (WSFC), Pacemaker con Corosync o VMware HA, sono state progettate per i data center. Richiedono storage condiviso (SAN o NAS), hardware cluster dedicato, personale IT permanente e competenze complesse sul sistema operativo. Nessuno di questi elementi è presente all’edge.
 
-SafeKit è stato creato proprio per colmare questa lacuna. Consente alle applicazioni edge di continuare a funzionare in fabbriche, piattaforme petrolifere, navi, sistemi di sicurezza degli edifici, controllo del traffico aereo, reti 5G, strutture sanitarie, negozi al dettaglio e molto altro ancora, con nient'altro che due server standard e una LAN.
-
-
-![ SafeKit per Edge ](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
+SafeKit è stato creato proprio per colmare questa lacuna. Mantiene le applicazioni edge in funzione in fabbriche, piattaforme petrolifere, navi, sistemi di sicurezza degli edifici, controllo del traffico aereo, reti 5G, sanità, vendita al dettaglio e altro ancora. Richiede solo due server standard collegati da una LAN.
 
 
-## Cosa rende SafeKit la scelta naturale per Edge {#what-makes-safekit-the-natural-fit-for-edge}
-
-SafeKit trasforma due server edge standard (di qualsiasi marca, fisici o virtuali) in un cluster HA plug-and-play, senza storage condiviso, SAN o hardware speciale. Un unico stack software leggero offre:
-
-  * **Replica sincrona dei file in tempo reale** — i dati vengono replicati a livello di byte sul server di standby al momento della scrittura
-  * **Failover automatico** : se il server primario si guasta, il server di standby subentra senza intervento umano, entro pochi secondi
-  * **Bilanciamento del carico di rete opzionale** — per implementazioni attivo-attivo in cui entrambi i server condividono il carico di lavoro
-  * **Console web** : gestione basata su browser, accessibile da remoto tramite HTTPS, senza necessità di competenze in loco.
-  * **Installazione silenziosa e programmabile** — adatta per l'integrazione OEM e la distribuzione di massa su centinaia di siti distribuiti
+![SafeKit per l’edge computing](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
 
 
-Non è necessario acquistare una SAN, non è richiesta alcuna licenza Windows Server Datacenter, non è necessaria alcuna competenza specifica sul sistema operativo del cluster Linux e non è richiesto hardware dedicato per il cluster. L'intero stack HA è costituito da un singolo pacchetto software.
+## Perché SafeKit è la soluzione naturale per l’edge computing {#what-makes-safekit-the-natural-fit-for-edge}
 
-## Idoneità per implementazioni distribuite e edge computing {#edge--distributed-deployment-suitability}
+SafeKit trasforma due server edge standard in un cluster ad alta disponibilità plug-and-play. I server possono essere di qualsiasi marca, fisici o virtuali. Non è presente alcun dispositivo di archiviazione condiviso, né SAN, né hardware speciale. Un pacchetto software leggero offre le seguenti funzionalità:
 
-SafeKit è specificamente progettato per scenari di edge computing, filiali e aziende distribuite:
+  * **Replicazione sincrona dei file in tempo reale.** I dati vengono replicati a livello di byte sul server di standby al momento della scrittura.
+  * **Failover automatico.** Se il server primario si guasta, il server di standby subentra in pochi secondi, senza intervento umano.
+  * **Bilanciamento del carico di rete opzionale.** Nelle implementazioni attive-attive, entrambi i server condividono il carico di lavoro.
+  * **Console Web.** La gestione è basata su browser e accessibile in remoto tramite HTTPS. Non richiede competenze in loco.
+  * **Installazione silenziosa e automatizzabile.** Adatta per la distribuzione di massa in centinaia di siti distribuiti e per l’integrazione in prodotti OEM.
 
-Requisito del bordo | SafeKit Risposta  
+
+Non è necessario acquistare una SAN. Non è necessaria nemmeno una licenza Windows Server Datacenter. Non è necessaria alcuna esperienza con cluster Linux o hardware di cluster dedicato. L’intero stack ad alta disponibilità è un singolo pacchetto software.
+
+## Idoneità all’implementazione edge e distribuita {#edge--distributed-deployment-suitability}
+
+SafeKit è progettato specificamente per l’edge computing, le filiali e le aziende distribuite:
+
+Requisiti dell’edge computing | Soluzione SafeKit  
 ---|---  
-Nessun personale IT dedicato in loco | Failover automatico, nessun intervento manuale richiesto  
-Nessuna infrastruttura SAN/NAS | Architettura senza SAN, solo dischi locali  
-Console di gestione remota | accessibile tramite HTTPS da qualsiasi browser.  
-Ingombro hardware ridotto | 2 server o VM standard, nessun hardware speciale  
-Funziona dietro firewall/NAT | Porte configurabili, console basata su HTTPS  
-Ripristino di emergenza multisito | Mirror tra due siti geografici su VLAN estesa  
-Reti isolate dalla rete / offline | Nessuna dipendenza da Internet; completamente autosufficienti  
-Distribuzione OEM/integrata | Installazione silenziosa, programmabile, integrabile dagli sviluppatori di software  
-Centinaia di cluster distribuiti | Progettati per aziende distribuite che gestiscono numerose filiali  
+Nessun addetto IT dedicato in loco | Failover automatico senza intervento manuale  
+Nessuna infrastruttura SAN o NAS | Architettura con soli dischi locali e senza SAN  
+Gestione remota | Console web accessibile tramite HTTPS da qualsiasi browser  
+Basso ingombro hardware | Due server o macchine virtuali standard senza hardware speciale  
+Funziona dietro firewall e NAT | Porte configurabili e console basata su HTTPS  
+Disaster recovery multisito | Replica in tempo reale con il modulo mirror tra due siti geografici su una VLAN estesa  
+Reti isolate o offline | Nessuna dipendenza da Internet e completamente autonomo  
+Implementazione OEM o integrata | Installazione silenziosa e scriptabile che i fornitori di software possono integrare  
+Centinaia di cluster distribuiti | Progettato per aziende distribuite con molte filiali  
   
-## Perché gli ambienti Edge OT sono diversi {#why-edge-ot-environments-are-different}
+## Perché gli ambienti OT perimetrali sono diversi {#why-edge-ot-environments-are-different}
 
-Gli ambienti OT (Operational Technology) — SCADA, BMS, sicurezza fisica, controllo industriale — hanno requisiti che differiscono fondamentalmente da quelli dei data center IT:
+Gli ambienti di tecnologia operativa (OT) includono SCADA, sistemi di gestione degli edifici (BMS), sicurezza fisica e controllo industriale. I loro requisiti differiscono fondamentalmente dai data center IT:
 
-  * **Nessun personale IT in loco.** Una sottostazione, una stazione di pompaggio remota o una nave non hanno un amministratore di sistema. L'alta disponibilità deve essere autogestita.
-  * **Reti isolate o con accesso limitato.** Molti siti OT non hanno accesso a Internet e dispongono di larghezza di banda WAN limitata. Il software HA deve funzionare completamente offline.
-  * **Disponibilità 24 ore su 24, 7 giorni su 7, tolleranza zero per la complessità.** Arrestare una linea di produzione, perdere la videosorveglianza o interrompere il controllo degli accessi costa molto di più del software HA stesso.
-  * Cicli di vita lunghi per le apparecchiature **. I server OT** possono funzionare per 10-15 anni. La soluzione HA deve essere stabile, richiedere poca manutenzione e non necessitare di aggiornamenti costanti.
-  * **Solo hardware x86 standard.** Nessun budget o giustificazione per SAN o nodi cluster dedicati in un sito industriale remoto.
-  * **Intolleranza per la complessità a livello di sistema operativo.** Pacemaker, Corosync o WSFC richiedono competenze sui cluster che gli operatori OT semplicemente non hanno e non dovrebbero necessitare.
+  * **Nessun personale IT in loco.** Una sottostazione, una stazione di pompaggio remota o una nave non hanno un amministratore di sistema. L’alta disponibilità deve essere autogestita.
+  * **Reti isolate o con risorse limitate.** Molti siti OT non dispongono di accesso a Internet e hanno una larghezza di banda WAN limitata. Il software ad alta disponibilità deve funzionare completamente offline.
+  * **Disponibilità 24 ore su 24, 7 giorni su 7 e tolleranza zero per la complessità.** L’arresto di una linea di produzione, la perdita della videosorveglianza o l’interruzione del controllo degli accessi costano molto di più del software di alta disponibilità stesso.
+  * **Cicli di vita delle apparecchiature lunghi.** I server OT possono funzionare per 10-15 anni. La soluzione ad alta disponibilità deve essere stabile e richiedere poca manutenzione e non deve richiedere aggiornamenti costanti.
+  * **Solo hardware x86 standard.** Un sito industriale remoto non ha il budget né la giustificazione per una SAN o nodi cluster dedicati.
+  * **Nessuna tolleranza per la complessità del sistema operativo.** Il software di cluster tradizionale richiede competenze specifiche. Gli operatori OT non possiedono queste competenze e non dovrebbero averne bisogno.
 
 
-Il modello SANless a due server e con failover automatico di SafeKit affronta direttamente ognuno di questi vincoli.
+Il modello SafeKit risolve direttamente ognuno di questi vincoli: nessuna SAN, due server e failover automatico.
 
-## Casi d'uso ideali per l'edge computing {#ideal-edge-use-cases}
+## Casi d’uso ideali per l’edge {#ideal-edge-use-cases}
 
-Qualsiasi sito senza data center, dove l'alta disponibilità è comunque importante:
+SafeKit si adatta a qualsiasi sito senza data center in cui l’alta disponibilità sia comunque importante:
 
-Verticale | Sito di bordo tipico | Applicazione critica  
+Settore | Sito perimetrale tipico | Applicazione critica  
 ---|---|---  
-Sicurezza fisica e sorveglianza | Edifici, campus, aeroporti | VMS — Milestone , Genetec, Hanwha, Siemens Siveillance  
+Sicurezza fisica e sorveglianza | Edifici, campus, aeroporti | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gestione degli edifici (BMS) | Edifici per uffici, ospedali, fabbriche | Siemens Desigo CC, Bosch BIS/BVMS  
-Controllo accessi elettronico (EACS) | Strutture sicure, campus | Siemens SiPass, Nedap , Bosch AMS  
+Controllo elettronico degli accessi (EACS) | Strutture e campus sicuri | Siemens SiPass, Nedap, Bosch AMS  
 SCADA e controllo industriale | Fabbriche, sottostazioni, impianti idrici | Qualsiasi software SCADA, DCS o HMI su Windows o Linux  
-Controllo del traffico aereo (ATC) | Aeroporti, torri di controllo | Sistemi di gestione e radar dell'ATC  
-Centri di controllo operativo (OCC) | Metropolitana, ferrovia, hub di trasporto pubblico | Segnalamento ferroviario e gestione delle stazioni  
-Marittimo | Navi, imbarcazioni militari | Sistemi di navigazione, gestione del carico e di bordo  
+Controllo del traffico aereo (ATC) | Aeroporti, torri di controllo | Sistemi di gestione del traffico aereo e radar  
+Centri di controllo operativo (OCC) | Metropolitana, ferrovia, snodi di trasporto | Segnalamento ferroviario e gestione delle stazioni  
+Marittimo | Navi, navi militari | Sistemi di navigazione, di carico e di gestione di bordo  
 Petrolio e gas | Piattaforme offshore, impianti remoti | Sistemi di controllo di processo e di sicurezza  
-Siti di antenne 5G | , nodi MEC | Server di edge computing multiaccesso (MEC)  
-Assistenza sanitaria | Cliniche, centri di diagnostica remota | Diagnostica per immagini, dati dei pazienti, diagnostica remota  
-Vendita al dettaglio | Negozi, filiali, magazzini | Gestione del punto vendita e dell'inventario  
-Difesa | Basi operative avanzate, unità sul campo | Sistemi di comando e comunicazione critici per la missione  
+Telecomunicazioni | Siti di antenne 5G, nodi MEC | Server di multi-access edge computing (MEC)  
+Sanità | Cliniche, centri diagnostici remoti | Diagnostica per immagini, dati dei pazienti, diagnostica a distanza  
+Vendita al dettaglio | Negozi, filiali, magazzini | Gestione del punto vendita e dell’inventario  
+Militare e difesa | Basi operative avanzate, unità sul campo | Sistemi di comando e comunicazione mission-critical  
   
-## Alta disponibilità (HA) in ambiente edge e in data center: differenze chiave {#edge-vs-data-center-ha-key-differences}
+## Edge vs. data center: le differenze chiave in termini di alta disponibilità {#edge-vs-data-center-ha-key-differences}
 
-Criterion | HA del data center (WSFC, Pacemaker, VMware HA) | SafeKit HA di bordo  
+Criterio | Elevata disponibilità del data center (WSFC, Pacemaker, VMware HA) | Alta disponibilità SafeKit all’edge  
 ---|---|---  
-Archiviazione | Richiede archiviazione condivisa SAN/NAS | Senza SAN: solo dischi locali  
-Hardware | Nodi cluster dedicati, HBA, switch | Due server x86 standard qualsiasi  
-Competenza in sistemi operativi | Windows Competenze in sistemi operativi per data center o cluster Linux Competenze in sistemi operativi per cluster | Competenze standard in amministrazione Windows / Linux  
-Personale in loco | Necessario per l'installazione e l'intervento | Non richiesto - completamente automatico  
-Dipendenza da Internet/cloud | Spesso gestito tramite cloud | Completamente isolato dalla rete  
-Scala di implementazione | Centro dati singolo | Centinaia di siti distribuiti  
-Costo della licenza | Elevato (Sistema operativo del data center, licenze SAN) | Licenza software singola e conveniente per cluster  
-RTO tipico | 1–5 minuti | Meno di 1 minuto (configurabile)  
+Archiviazione | Richiede un’archiviazione condivisa (SAN o NAS) | Senza SAN, solo con dischi locali  
+Hardware | Nodi cluster dedicati, adattatori bus host (HBA) e switch | Due server x86 standard di qualsiasi marca  
+Competenza nei sistemi operativi | Competenze in cluster Windows Server Datacenter o Linux | Competenze standard di amministrazione Windows o Linux  
+Personale in loco | Necessario per la configurazione e l’intervento | Non è necessario, perché il failover è completamente automatico  
+Dipendenza da Internet o dal cloud | Spesso gestito tramite cloud | Funziona su reti completamente isolate  
+Scala di implementazione | Singolo data center | Centinaia di siti distribuiti  
+Costo della licenza | Elevato (licenze per sistema operativo del datacenter e SAN) | Una licenza software conveniente per cluster  
+RTO tipico | da 1 a 5 minuti | Meno di 1 minuto (configurabile)  
   
-## Requisiti tecnici minimi {#technical-minimum-requirements}
+{{%  insert-supported-os-it  %}}
 
-  * Server **:** 2 server x86 standard o VM (qualsiasi marca hardware, fisica o virtuale) o ARM (solo Linux )
-  * **OS:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * Rete **: LAN** da 1 Gbps per la replica; si consiglia una rete heartbeat dedicata.
-  * **Archiviazione:** Solo dischi locali — nessuna SAN, nessun NAS, nessuna archiviazione condivisa di alcun tipo
-  * **Nessuna edizione speciale del sistema operativo** — Windows Server Standard è sufficiente; non è richiesta alcuna licenza Datacenter
-
-
-Per le specifiche tecniche complete, i vincoli dimensionali e i criteri di approvvigionamento, consultare il documento di riferimento tecnico RFP/RFI [ ](</it/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) ).
+Per le specifiche tecniche complete, i vincoli di dimensionamento e i criteri di approvvigionamento, consultare il riferimento tecnico 📘 [RFI e RFP](</it/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>).
 
 
 {{%  insert-safekit-hub-it  %}}

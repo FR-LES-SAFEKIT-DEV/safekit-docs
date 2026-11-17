@@ -4,28 +4,28 @@ canonical: "https://safekit.eviden.com/use-cases/building-management-system-soft
 description: "Ensure 100% uptime for your smart building with SafeKit. Our SANless, 2-node redundancy software provides real-time synchronous replication and automatic failover for any BMS, including Siemens, Honeywell, Schneider Electric, and Johnson Controls. Achieve zero data loss (RPO=0) and operational resilience for critical HVAC and security systems on Windows and Linux."
 category: "use-cases"
 lang: "en"
-topics: "What is a building management system (BMS)?, Why a BMS software is critical?, Key players list in BMS, SafeKit brings two solutions for redundancy and high availability of a BMS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+topics: "What is a building management system (BMS)?, Why is BMS software critical?, Key BMS vendors, SafeKit brings two solutions for redundancy and high availability of a BMS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
 ---
 
 # High Availability and Redundancy for Building Management Systems (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
 ##  What is a building management system (BMS)? {#what-is-a-building-management-system-bms}
 
-A building management system (BMS) brings the automatic centralized control of building's HVAC (heating, ventilation and air conditioning), electrical, lighting...
+A building management system (BMS) provides automatic and centralized control of building services: heating, ventilation and air conditioning (HVAC), power distribution, lighting and more.
 
-A building management system increases safety for building residents, reduces energy consumption and reduces operating and maintenance costs.
+A building management system increases safety for building occupants. It also reduces energy consumption and lowers operating and maintenance costs.
 
-##  Why a BMS software is critical? {#why-a-bms-software-is-critical}
+##  Why is BMS software critical? {#why-a-bms-software-is-critical}
 
-A BMS software controls fire system, electrical distribution panels, water consumption, air conditioning systems, lighting control.
+BMS software controls fire safety systems, electrical distribution panels, water consumption, air conditioning systems and lighting.
 
-Life safety in the building is directly associated to the correct execution of the BMS software.
+The safety of building occupants depends directly on the correct operation of the BMS software.
 
-And that’s why, the system must be always available for building operators who must react immediately to the slightest incident.
+That is why the system must always be available. Building operators must react immediately to the slightest incident.
 
-##  Key players list in BMS {#key-players-list-in-bms}
+##  Key BMS vendors {#key-players-list-in-bms}
 
-The key players in BMS are:
+The key BMS vendors are:
 
   * Honeywell International Inc. (US)
   * Johnson Controls (Ireland)

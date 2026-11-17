@@ -13,17 +13,17 @@ topics: "The OEM high availability use case, 🔍 Explore SafeKit"
 
 ### A software-only high availability solution {#a-software-only-high-availability-solution}
 
-SafeKit is independant of the hardware and works with any physical or virtual servers.
+SafeKit does not depend on specific hardware. It works with any physical or virtual server.
 
 
 ![Application clustering software with SafeKit](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
-### Simple and economical application clustering software for a software publisher {#simple-and-economical-application-clustering-software-for-a-software-publisher}
+### Simple and cost-effective application clustering software for software vendors {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
-An increasing number of software publishers are integrating SafeKit as an OEM high availability option in their catalog. SafeKit is chosen because it is a simple and economical application clustering software. 
+More and more software vendors offer SafeKit as an OEM high availability option in their catalog. They choose SafeKit because it is simple and cost-effective application clustering software.
 
-If you are a software publisher and if you search for an application clustering solution easy to embed with your own software, you can take advantage of our OEM offer. You will be able to bundle SafeKit inside your software offer. And the solution does not require to modify your application.
+If you are a software vendor and you need application clustering that is easy to embed in your own software, join our OEM program. You can bundle SafeKit with your software offering. Your application does not need any modification.
 
 ### Application clustering with real-time replication, load balancing and failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
@@ -33,7 +33,7 @@ The [mirror module](/product/#safekit-mirror-cluster) implements real-time file 
 
 The [<span class="notranslate farm-term" translate="no">farm</span> module](/product/#safekit-farm-cluster) implements network load balancing and application failover. It is suited for applications with web services.
 
-And you can combine the modules.
+You can also combine both modules.
 
 
 {{%  insert-safekit-hub-en  %}}

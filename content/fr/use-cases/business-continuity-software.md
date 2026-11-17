@@ -1,31 +1,32 @@
 ---
-title: "Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales"
+title: "Standardiser la haute disponibilité pour les entreprises distribuées avec de nombreuses succursales"
 canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-software/"
-description: "Sécurisez chaque branche de votre entreprise distribuée avec SafeKit . Déployez un cluster HA standardisé et entièrement logiciel à grande échelle pour garantir une disponibilité 24h/24 et 7j/7 des applications critiques de vos succursales. Windows et Linux ne nécessitent ni stockage partagé, ni SAN complexes, ni expertise informatique sur site."
+description: "Sécurisez chaque succursale de votre entreprise distribuée avec SafeKit. Déployez un cluster de haute disponibilité standardisé, uniquement logiciel, à grande échelle. Assurez une disponibilité 24h/24 et 7j/7 pour les applications critiques dans chaque succursale. SafeKit fonctionne sous Windows et Linux. Il ne nécessite aucun stockage partagé, aucun SAN complexe et aucune expertise informatique sur site."
 category: "use-cases"
 lang: "fr"
-topics: "Continuité des activités dans une entreprise distribuée, 🔍 Explorez SafeKit"
+topics: "Continuité d’activité dans une entreprise distribuée, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 58 expressions"
 ---
 
-# Standardisation de la haute disponibilité pour les entreprises distribuées comportant de nombreuses succursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Standardiser la haute disponibilité pour les entreprises distribuées avec de nombreuses succursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
 
-## Continuité des activités dans une entreprise distribuée {#business-continuity-in-a-distributed-enterprise}
+## Continuité d’activité dans une entreprise distribuée {#business-continuity-in-a-distributed-enterprise}
 
-### Continuité des activités dans une entreprise distribuée {#business-continuity-in-a-distributed-enterprise-1}
+### Une solution standard de haute disponibilité pour de nombreuses succursales {#business-continuity-in-a-distributed-enterprise-1}
 
-Déployer des dizaines de clusters n'est pas compliqué avec SafeKit .
-
-
-![ Solution logicielle de continuité d'activité en entreprise ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+Une entreprise distribuée exécute les mêmes applications critiques dans de nombreuses succursales. Avec SafeKit, le déploiement de dizaines de clusters identiques est simple.
 
 
-### Comment déployer un logiciel de continuité d'activité sans compétences informatiques spécifiques ? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
+![logiciel de continuité d’activité dans une entreprise distribuée](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
-La mise en place d'une solution de continuité d'activité en entreprise pour plusieurs applications hébergées sur des serveurs Windows ou Linux pose des problèmes économiques et organisationnels. SafeKit offre une solution logicielle de continuité d'activité simple et économique adaptée à ce cas.
 
-### Le logiciel SafeKit : une solution simple pour la continuité des activités {#the-safekit-software-a-simple-solution-for-business-continuity}
+### Comment déployer un logiciel de continuité d’activité sans compétences informatiques spécifiques ? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
 
-SafeKit propose deux modules simples <span class="notranslate farm-term" translate="no">farm</span> et mirror pour protéger vos applications critiques contre les pannes. Le déploiement s'effectue sur des serveurs standard et ne requiert aucune compétence informatique pour la gestion de la solution. Aucun disque partagé, SAN répliqué, équilibreur de charge, système d'exploitation ou base de données en édition Entreprise n'est nécessaire. 
+Assurer la continuité d’activité pour de multiples applications sur des serveurs Windows ou Linux dans chaque succursale soulève des problèmes économiques et organisationnels. SafeKit résout ces problèmes avec un logiciel de continuité d’activité simple et économique.
+
+### Le logiciel SafeKit : une solution simple pour la continuité d’activité {#the-safekit-software-a-simple-solution-for-business-continuity}
+
+SafeKit propose deux modules simples : le module mirror et le module <span class="notranslate farm-term" translate="no">farm</span>. Ils protègent vos applications critiques contre les pannes. Vous les déployez sur des serveurs standards et vous n’avez pas besoin de compétences informatiques pour gérer la solution. Vous n’avez pas besoin d’un disque partagé, d’un SAN répliqué, d’équilibreurs de charge ou d’éditions d’entreprise de systèmes d’exploitation ou de bases de données.
 
 
 {{%  insert-safekit-hub-fr  %}}

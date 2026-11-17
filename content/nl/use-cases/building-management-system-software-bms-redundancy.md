@@ -1,37 +1,38 @@
 ---
 title: "Hoge beschikbaarheid en redundantie voor gebouwbeheersystemen (BMS)"
 canonical: "https://safekit.eviden.com/nl/use-cases/building-management-system-software-bms-redundancy/"
-description: "Garandeer 100% uptime voor uw slimme gebouw met SafeKit . Onze SAN-loze, 2-knoops redundantiesoftware biedt realtime synchrone replicatie en automatische failover voor elk gebouwbeheersysteem (BMS), inclusief Siemens, Honeywell, Schneider Electric en Johnson Controls. Bereik nul dataverlies (RPO=0) en operationele veerkracht voor kritieke HVAC- en beveiligingssystemen met Windows en Linux ."
+description: "Zorg voor 100% uptime voor uw slimme gebouw met SafeKit. Onze SANless, 2-node redundantiesoftware biedt real-time synchrone replicatie en automatische failover voor elk BMS, inclusief Siemens, Honeywell, Schneider Electric en Johnson Controls. Bereik nul gegevensverlies (RPO =0) en operationele veerkracht voor kritieke HVAC- en beveiligingssystemen op Windows en Linux."
 category: "use-cases"
 lang: "nl"
-topics: "Wat is een gebouwbeheersysteem (BMS)?, Waarom is BMS-software cruciaal?, Lijst met belangrijke spelers in de BMS-markt, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van BMS-software, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
+topics: "Wat is een gebouwbeheersysteem (BMS)?, Waarom is BMS-software cruciaal?, Belangrijkste BMS-leveranciers, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van BMS-software., SafeKit, een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 49 expressions"
 ---
 
 # Hoge beschikbaarheid en redundantie voor gebouwbeheersystemen (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
 ##  Wat is een gebouwbeheersysteem (BMS)? {#what-is-a-building-management-system-bms}
 
-Een gebouwbeheersysteem (BMS) zorgt voor de automatische, gecentraliseerde aansturing van de HVAC-installatie (verwarming, ventilatie en airconditioning), de elektrische installatie, de verlichting, enzovoort.
+Een gebouwbeheersysteem (BMS) biedt automatische en gecentraliseerde controle van gebouwinstallaties: verwarming, ventilatie en airconditioning (HVAC), stroomdistributie, verlichting en meer.
 
-Een gebouwbeheersysteem verhoogt de veiligheid voor de bewoners, verlaagt het energieverbruik en reduceert de exploitatie- en onderhoudskosten.
+Een gebouwbeheersysteem verhoogt de veiligheid voor de gebruikers van het gebouw. Het vermindert ook het energieverbruik en verlaagt de bedrijfs- en onderhoudskosten.
 
 ##  Waarom is BMS-software cruciaal? {#why-a-bms-software-is-critical}
 
-Een gebouwbeheersysteem (BMS) regelt brandmeldsystemen, elektrische verdeelborden, waterverbruik, airconditioningsystemen en verlichting.
+BMS-software regelt brandveiligheidssystemen, elektrische verdeelpanelen, waterverbruik, airconditioningsystemen en verlichting.
 
-De veiligheid van personen in het gebouw is direct gekoppeld aan de correcte werking van de gebouwbeheersoftware.
+De veiligheid van de gebruikers van het gebouw hangt rechtstreeks af van de correcte werking van de BMS-software.
 
-Daarom moet het systeem altijd beschikbaar zijn voor gebouwbeheerders, die onmiddellijk moeten kunnen reageren op het kleinste incident.
+Daarom moet het systeem altijd beschikbaar zijn. De gebouwbeheerders moeten onmiddellijk reageren op het geringste incident.
 
-##  Lijst met belangrijke spelers in BMS {#key-players-list-in-bms}
+##  Belangrijkste BMS-leveranciers {#key-players-list-in-bms}
 
-De belangrijkste spelers in BMS zijn:
+De belangrijkste BMS-leveranciers zijn:
 
   * Honeywell International Inc. (VS)
   * Johnson Controls (Ierland)
   * Schneider Electric (Frankrijk)
   * Siemens (Duitsland)
-  * Verenigde Technologieën (VS)
+  * United Technologies (VS)
   * ABB (Zweden)
   * Azbil Corporation (Japan)
   * Delta Controls (India)
@@ -41,12 +42,12 @@ De belangrijkste spelers in BMS zijn:
 
   * Robert Bosch GmbH (Duitsland)
   * Singapore Technologies Engineering Ltd (Singapore)
-  * DEXMA SENSORS, SL (Spanje)
+  * DEXMA SENSORS, S.L. (Spanje)
   * Eagle Technology (India)
   * Legrand (Frankrijk)
   * Lutron Electronics Co., Inc. (VS)
   * Technovator International Limited (Singapore)
-  * Airedale Airconditioning (VK)
+  * Airedale Air Conditioning (VK)
   * BuildingIQ (VS)
   * ACUITY BRANDS LIGHTING, INC. (VS)
   * GridPoint (VS)

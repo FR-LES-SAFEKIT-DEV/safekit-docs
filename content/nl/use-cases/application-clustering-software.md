@@ -1,39 +1,40 @@
 ---
-title: "OEM-hoge beschikbaarheid: SafeKit -clustering integreren in uw software"
+title: "OEM Hoge beschikbaarheid: SafeKit Clustering in uw software integreren"
 canonical: "https://safekit.eviden.com/nl/use-cases/application-clustering-software/"
-description: "Versterk uw software met SafeKit . Als OEM-partner kunt u geautomatiseerde failover en synchrone replicatie rechtstreeks in uw applicatie integreren. Bied uw klanten 24/7 uptime op Windows en Linux zonder de complexiteit van hardwareclusters."
+description: "Versterk uw software met SafeKit. Als OEM-partner kunt u geautomatiseerde failover en synchrone replicatie rechtstreeks in uw applicatie integreren. Bied uw klanten 24/7 uptime op Windows en Linux zonder de complexiteit van hardwareclusters."
 category: "use-cases"
 lang: "nl"
-topics: "Het OEM-gebruiksscenario voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"
+topics: "De OEM-usecase voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 49 expressions"
 ---
 
-# OEM-hoge beschikbaarheid: SafeKit -clustering integreren in uw software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# OEM Hoge beschikbaarheid: SafeKit Clustering in uw software integreren {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
-## De OEM-gebruikssituatie voor hoge beschikbaarheid {#the-oem-high-availability-use-case}
+## De OEM-usecase voor hoge beschikbaarheid {#the-oem-high-availability-use-case}
 
 ### Een softwarematige oplossing voor hoge beschikbaarheid {#a-software-only-high-availability-solution}
 
-SafeKit is onafhankelijk van de hardware en werkt met alle fysieke of virtuele servers.
+SafeKit is niet afhankelijk van specifieke hardware. Het werkt met elke fysieke of virtuele server.
 
 
-![ Applicatieclusteringssoftware met SafeKit ](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
+![Applicatieclusteringsoftware met SafeKit](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
-### Eenvoudige en economische applicatieclusteringssoftware voor een software-uitgever {#simple-and-economical-application-clustering-software-for-a-software-publisher}
+### Eenvoudige en kosteneffectieve software voor applicatieclustering voor softwareleveranciers {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
-Steeds meer softwareleveranciers integreren SafeKit als een OEM-optie voor hoge beschikbaarheid in hun catalogus. SafeKit is gekozen omdat het een eenvoudige en economische software voor applicatieclustering is. 
+Steeds meer softwareleveranciers bieden SafeKit als OEM-optie voor hoge beschikbaarheid in hun catalogus aan. Ze kiezen voor SafeKit omdat het eenvoudige en kosteneffectieve software voor applicatieclustering is.
 
-Bent u een software-uitgever en zoekt u een applicatieclusteringoplossing die eenvoudig in uw eigen software te integreren is? Dan kunt u profiteren van ons OEM-aanbod. U kunt SafeKit in uw softwareaanbod opnemen, zonder dat u uw applicatie hoeft aan te passen.
+Als u een softwareleverancier bent en u hebt behoefte aan applicatieclustering die eenvoudig in uw eigen software kan worden ingebed, neem dan deel aan ons OEM-programma. U kunt SafeKit bundelen met uw softwareaanbod. Uw applicatie hoeft niet te worden aangepast.
 
 ### Applicatieclustering met realtime replicatie, taakverdeling en failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-De SafeKit -software biedt twee generieke modules voor applicatieclustering: de mirror -module en de <span class="notranslate farm-term" translate="no">farm</span> -module.
+De SafeKit-software biedt twee generieke modules voor applicatieclustering: de mirror-module en de <span class="notranslate farm-term" translate="no">farm</span>-module.
 
-De module [ mirror ](/nl/product/#safekit-mirror-cluster) implementeert realtime bestandsreplicatie en failover voor applicaties. Deze module is geschikt voor applicaties met een database.
+De [mirror-module](/nl/product/#safekit-mirror-cluster) implementeert realtime bestandsreplicatie en applicatie-failover. Deze is geschikt voor applicaties met een database.
 
-De module [ <span class="notranslate farm-term" translate="no">farm</span> ](/nl/product/#safekit-farm-cluster) implementeert netwerkbelastingverdeling en applicatiefailover. Deze module is geschikt voor applicaties met webservices.
+De [<span class="notranslate farm-term" translate="no">farm</span>-module](/nl/product/#safekit-farm-cluster) implementeert netwerktaakverdeling en applicatie-failover. Deze module is geschikt voor applicaties met webservices.
 
-En je kunt de modules combineren.
+U kunt ook beide modules combineren.
 
 
 {{%  insert-safekit-hub-nl  %}}

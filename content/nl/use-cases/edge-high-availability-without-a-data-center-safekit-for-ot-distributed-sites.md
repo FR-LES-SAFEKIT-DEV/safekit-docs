@@ -1,111 +1,105 @@
 ---
-title: "Edge High Availability zonder datacenter: SafeKit voor OT- en gedistribueerde locaties"
+title: "Edge High Availability zonder datacenter: SafeKit voor OT en gedistribueerde locaties"
 canonical: "https://safekit.eviden.com/nl/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Edge-locaties hebben geen datacenter, maar hebben wel behoefte aan HA. SafeKit transformeert 2 standaardservers in een plug-and-play HA-cluster: geen SAN, geen IT-personeel, automatische failover."
+description: "Edge computing-locaties hebben geen datacenter, maar ze hebben wel hoge beschikbaarheid nodig. SafeKit verandert twee standaardservers in een plug-and-play high-availability cluster. Het vereist geen SAN en geen IT-personeel, en failover is automatisch."
 category: "use-cases"
 lang: "nl"
-topics: "De Edge HA-uitdaging, Waarom SafeKit de ideale keuze is voor Edge-omgevingen, Geschiktheid voor Edge- en gedistribueerde implementaties, Waarom Edge OT-omgevingen verschillen, Ideale Edge-gebruiksscenario's, Edge versus datacenter HA: Belangrijkste verschillen, Technische minimumvereisten, 🔍 Ontdek SafeKit"
+topics: "De uitdaging van hoge beschikbaarheid aan de edge, Waarom SafeKit de natuurlijke keuze is voor edgecomputing, Geschiktheid voor implementatie op de edge en gedistribueerde implementatie, Waarom OT-omgevingen aan de edge anders zijn, Ideale gebruiksscenario's aan de edge, Edge versus datacenter: de belangrijkste verschillen op het gebied van hoge beschikbaarheid, Ondersteunde besturingssystemen en platforms, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 49 expressions"
 ---
 
-# Edge High Availability zonder datacenter: SafeKit voor OT & gedistribueerde locaties {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
+# Edge High Availability zonder datacenter: SafeKit voor OT en gedistribueerde locaties {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
 
-## De Edge HA-uitdaging {#the-edge-ha-challenge}
+## De uitdaging van hoge beschikbaarheid aan de edge {#the-edge-ha-challenge}
 
-Edge-locaties beschikken vaak niet over een datacenter en geen expertise op het gebied van high availability (HA), terwijl bedrijfscontinuïteit cruciaal is. Een fabriekshal, een offshore olieplatform, een ziekenhuiskliniek, een winkel of een 5G-antennelocatie kunnen zich geen downtime veroorloven, maar de kosten en complexiteit van een traditioneel datacenter-HA-cluster zijn te hoog.
+Edgecomputinglocaties hebben vaak geen datacenter en geen expertise op het gebied van hoge beschikbaarheid. Toch is bedrijfscontinuïteit van cruciaal belang voor hen. Een fabrieksvloer, een offshore-olieplatform, een ziekenhuiskliniek, een winkel of een 5G-antennelocatie kan zich geen downtime veroorloven. Maar deze locaties kunnen de kosten en complexiteit van een traditioneel datacentercluster niet rechtvaardigen.
 
-Traditionele HA-oplossingen — Microsoft Failover Cluster (WSFC), Pacemaker/Corosync, VMware HA — zijn ontworpen voor datacenters: ze gaan uit van gedeelde opslag (SAN/NAS), dedicated clusterhardware, vast IT-personeel en complexe expertise op besturingssysteemniveau. Geen van deze zaken is aanwezig aan de rand van het netwerk.
+Traditionele oplossingen voor hoge beschikbaarheid, zoals Microsoft Failover Cluster (WSFC), Pacemaker met Corosync of VMware HA, zijn ontworpen voor datacenters. Ze vereisen gedeelde opslag (SAN of NAS), speciale clusterhardware, permanent IT-personeel en complexe expertise op het gebied van besturingssystemen. Geen van deze is aanwezig aan de edge.
 
-SafeKit is precies voor deze behoefte ontwikkeld. Het zorgt ervoor dat edge-applicaties blijven draaien in fabrieken, olieplatforms, schepen, gebouwbeveiliging, luchtverkeersleiding, 5G-netwerken, de gezondheidszorg, de detailhandel en meer – met niets meer dan twee standaardservers en een LAN.
-
-
-![ SafeKit voor Edge ](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
+SafeKit is precies voor deze leemte ontwikkeld. Het zorgt ervoor dat edge-applicaties blijven draaien in fabrieken, op olieplatforms, schepen, gebouwbeveiliging, luchtverkeersleiding, 5G-netwerken, de gezondheidszorg, de detailhandel en meer. Het heeft slechts twee standaardservers nodig die via een LAN zijn verbonden.
 
 
-## Waarom is SafeKit de ideale keuze voor Edge {#what-makes-safekit-the-natural-fit-for-edge}
-
-SafeKit transformeert twee standaard edge-servers (van elk merk, fysiek of virtueel) in een plug-and-play HA-cluster — zonder gedeelde opslag, SAN of speciale hardware. Eén lichtgewicht softwarepakket biedt:
-
-  * **Realtime synchrone bestandsreplicatie** — gegevens worden byte-niveau naar de standby-server gespiegeld op het moment van schrijven
-  * **Automatische failover** — als de primaire server uitvalt, neemt de standby-server het binnen enkele seconden over zonder menselijke tussenkomst.
-  * **Optionele netwerkbelastingverdeling** — voor actieve-actieve implementaties waarbij beide servers de werklast delen
-  * **Webconsole** — beheer via de browser, op afstand toegankelijk via HTTPS, vereist geen expertise ter plaatse
-  * **Stille, scriptbare installatie** — geschikt voor OEM-integratie en massale uitrol over honderden gedistribueerde locaties
+![SafeKit voor edgecomputing](/wp-content/uploads/2026/05/safekit-edge-512-512.jpg)
 
 
-Er hoeft geen SAN aangeschaft te worden, er is geen Windows Server Datacenter-licentie vereist, geen expertise in Linux clusterbesturingssysteem nodig en geen speciale clusterhardware. De volledige HA-stack is één softwarepakket.
+## Waarom SafeKit de natuurlijke keuze is voor edgecomputing {#what-makes-safekit-the-natural-fit-for-edge}
 
-## Geschiktheid voor edge- en gedistribueerde implementatie {#edge--distributed-deployment-suitability}
+SafeKit verandert twee standaard edge-servers in een plug-and-play-cluster met hoge beschikbaarheid. De servers kunnen van elk merk zijn, fysiek of virtueel. Er is geen gedeelde opslag, geen SAN en geen speciale hardware. Eén lichtgewicht softwarepakket levert de volgende functies:
 
-SafeKit is specifiek ontworpen voor edge-, filiaal- en gedistribueerde bedrijfsomgevingen:
+  * **Realtime synchrone bestandsreplicatie.** Gegevens worden op byteniveau gespiegeld naar de stand-by-server op het moment van schrijven.
+  * **Automatische failover.** Als de primaire server uitvalt, neemt de stand-by server binnen enkele seconden het over, zonder menselijke tussenkomst.
+  * **Optionele netwerktaakverdeling.** In actieve-actieve implementaties delen beide servers de werklast.
+  * **Webconsole.** Het beheer is browsergebaseerd en op afstand toegankelijk via HTTPS. Er is geen expertise ter plaatse vereist.
+  * **Stille, scriptbare installatie.** Geschikt voor grootschalige implementatie op honderden gedistribueerde locaties en voor integratie in OEM-producten.
 
-Randvereiste | SafeKit Antwoord  
+
+U hoeft geen SAN te kopen. U hebt ook geen Windows Server Datacenter-licentie nodig. U hebt geen Linux-clusterkennis of speciale clusterhardware nodig. De gehele high-availability-stack is één softwarepakket.
+
+## Geschiktheid voor implementatie op de edge en gedistribueerde implementatie {#edge--distributed-deployment-suitability}
+
+SafeKit is speciaal ontworpen voor edge computing, filialen en gedistribueerde ondernemingen:
+
+Vereiste voor edgecomputing | SafeKit-oplossing  
 ---|---  
-Geen speciaal IT-personeel ter plaatse | Automatische failover, geen handmatige tussenkomst vereist  
-Geen SAN/NAS-infrastructuur | SANloze architectuur, alleen lokale schijven  
-Beheer op afstand via | webconsole, toegankelijk via HTTPS vanuit elke browser.  
-Lage hardwarevoetafdruk | 2 standaardservers of VM's, geen speciale hardware nodig  
-Werkt achter firewalls/NAT | Configureerbare poorten, HTTPS-gebaseerde console  
-Rampenherstel op meerdere locaties | Mirror tussen twee geografische locaties via een uitgestrekt VLAN  
-Luchtgeïsoleerde / offline netwerken | Geen internetverbinding nodig; volledig zelfvoorzienend  
-OEM/embedded implementatie | Stille installatie, scriptbaar, inbedbaar door softwareleveranciers  
-Honderden gedistribueerde clusters | Ontworpen voor gedistribueerde ondernemingen die veel vestigingen beheren  
+Geen toegewijd IT-personeel ter plaatse | Automatische failover zonder handmatige tussenkomst  
+Geen SAN- of NAS-infrastructuur | Architectuur met alleen lokale schijven en geen SAN  
+Beheer op afstand | Webconsole toegankelijk via HTTPS vanuit elke browser  
+Lage hardwarevoetafdruk | Twee standaardservers of VM's zonder speciale hardware  
+Werkt achter firewalls en NAT | Configureerbare poorten en HTTPS-gebaseerde console  
+Herstel na noodgevallen op meerdere locaties | Realtime replicatie met de mirror-module tussen twee geografische locaties via een stretched VLAN  
+Geïsoleerde of offline netwerken | Geen internetverbinding nodig en volledig zelfvoorzienend  
+OEM of ingebedde implementatie | Stille en scriptbare installatie die softwareleveranciers kunnen inbedden  
+Honderden gedistribueerde clusters | Ontworpen voor gedistribueerde ondernemingen met veel vestigingen  
   
-## Waarom Edge OT-omgevingen anders zijn {#why-edge-ot-environments-are-different}
+## Waarom OT-omgevingen aan de edge anders zijn {#why-edge-ot-environments-are-different}
 
-OT-omgevingen (Operational Technology) — SCADA, BMS, fysieke beveiliging, industriële besturing — hebben eisen die fundamenteel verschillen van die van IT-datacenters:
+Omgevingen met operationele technologie (OT) omvatten SCADA, gebouwbeheersystemen (BMS), fysieke beveiliging en industriële besturing. De vereisten hiervan verschillen fundamenteel van die van IT-datacenters:
 
-  * **Geen IT-personeel ter plaatse.** Een onderstation, een afgelegen pompstation of een schip heeft geen systeembeheerder. HA moet zelfbeherend zijn.
-  * **Netwerken zonder internetverbinding of met beperkte bandbreedte.** Veel OT-locaties hebben geen internettoegang en een beperkte WAN-bandbreedte. HA-software moet volledig offline kunnen werken.
-  * **24/7 beschikbaarheid, geen tolerantie voor complexiteit.** Het stilleggen van een productielijn, het uitvallen van videobewaking of het onderbreken van toegangscontrole kost veel meer dan de HA-software zelf.
-  * **Lange levensduur van apparatuur.** OT-servers kunnen 10-15 jaar meegaan. De HA-oplossing moet stabiel en onderhoudsarm zijn en geen constante updates vereisen.
-  * **Alleen standaard x86-hardware.** Geen budget of rechtvaardiging voor SAN of dedicated clusterknooppunten op een externe industriële locatie.
-  * **Onverdraagzaamheid voor complexiteit op besturingssysteemniveau.** Pacemaker, Corosync of WSFC vereisen clusterexpertise die OT-operators simpelweg niet hebben en ook niet nodig zouden moeten hebben.
+  * **Geen IT-personeel ter plaatse.** Een onderstation, een afgelegen pompstation of een schip heeft geen systeembeheerder. Hoge beschikbaarheid moet zelfbeherend zijn.
+  * **Geïsoleerde of beperkte netwerken.** Veel OT-locaties hebben geen internettoegang en een beperkte WAN-bandbreedte. Software voor hoge beschikbaarheid moet volledig offline kunnen werken.
+  * **24/7 uptime en nultolerantie voor complexiteit.** Het stilleggen van een productielijn, het verliezen van videobewaking of het onderbreken van toegangscontrole kost veel meer dan de software voor hoge beschikbaarheid zelf.
+  * **Lange levensduur van apparatuur.** OT-servers kunnen 10 tot 15 jaar meegaan. De oplossing voor hoge beschikbaarheid moet stabiel en onderhoudsarm zijn en mag geen constante updates vereisen.
+  * **Alleen standaard x86-hardware.** Een externe industriële locatie heeft geen budget of rechtvaardiging voor een SAN of speciale clusterknooppunten.
+  * **Geen tolerantie voor complexiteit van het besturingssysteem.** Traditionele clustersoftware vereist clusterexpertise. OT-operators hebben deze expertise niet en zouden deze ook niet nodig moeten hebben.
 
 
-Het SAN-loze model met twee servers en automatische failover van SafeKit pakt al deze beperkingen direct aan.
+Het SafeKit-model pakt al deze beperkingen direct aan: geen SAN, twee servers en automatische failover.
 
-## Ideale Edge-gebruiksscenario's {#ideal-edge-use-cases}
+## Ideale gebruiksscenario's aan de edge {#ideal-edge-use-cases}
 
-Elke locatie zonder datacenter, waar hoge beschikbaarheid nog steeds van belang is:
+SafeKit is geschikt voor elke locatie zonder datacenter waar hoge beschikbaarheid nog steeds belangrijk is:
 
-Verticale | Typische randlocatie | Kritische toepassing  
+Industrie | Typische edge-locatie | Kritische toepassing  
 ---|---|---  
-Fysieke beveiliging en bewaking | Gebouwen, campussen, luchthavens | VMS — Milestone , Genetec, Hanwha, Siemens Siveillance  
+Fysieke beveiliging en bewaking | Gebouwen, campussen, luchthavens | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gebouwbeheersysteem (BMS) | Kantoorgebouwen, ziekenhuizen, fabrieken | Siemens Desigo CC, Bosch BIS/BVMS  
-Elektronische toegangscontrole (EACS) | Beveiligde faciliteiten, campussen | Siemens SiPass, Nedap , Bosch AMS  
-SCADA- en industriële besturing | Fabrieken, onderstations, waterzuiveringsinstallaties | Alle SCADA-, DCS- of HMI-software op Windows of Linux  
-Luchtverkeersleiding (ATC) | Luchthavens, verkeerstorens | ATC-beheer- en radarsystemen  
-Operationele controlecentra (OCC) | Metro-, spoorweg- en doorvoerknooppunten | Spoorwegsignalering en stationsbeheer  
-Maritiem | Schepen, marineschepen | Navigatie-, lading- en boordbeheersystemen  
-Olie en gas | Offshore platforms, boorplatformen op afstand | Procesbesturings- en veiligheidssystemen  
-Telecommunicatie | 5G-antennelocaties, MEC-nodes | Multi-access edge computing (MEC)-servers  
+Elektronische toegangscontrole (EACS) | Beveiligde faciliteiten, campussen | Siemens SiPass, Nedap, Bosch AMS  
+SCADA en industriële besturing | Fabrieken, onderstations, waterzuiveringsinstallaties | Elke SCADA-, DCS- of HMI-software op Windows of Linux  
+Luchtverkeersleiding (ATC) | Luchthavens, controletorens | Luchtverkeersbeheer en radarsystemen  
+Operationele controlecentra (OCC) | Metro, spoorwegen, OV-knooppunten | Spoorwegsignalering en stationsbeheer  
+Maritiem | Schepen, marineschepen | Navigatie-, vracht- en boordbeheersystemen  
+Olie en gas | Offshoreplatforms, afgelegen boorinstallaties | Procesbeheersings- en veiligheidssystemen  
+Telecommunicatie | 5G-antennesites, MEC-knooppunten | MEC-servers (Multi-access Edge Computing)  
 Gezondheidszorg | Klinieken, diagnostische centra op afstand | Medische beeldvorming, patiëntgegevens, diagnostiek op afstand  
-Detailhandel | Winkels, filialen, magazijnen | Kassa- en voorraadbeheer  
-Defensie | Vooruitgeschoven operationele bases, veldeenheden | Missiekritieke commando- en communicatiesystemen  
+Detailhandel | Winkels, filialen, magazijnen | Kassasysteem en voorraadbeheer  
+Militair en defensie | Vooruitgeschoven operatiebases, veldeenheden | Missiekritieke commando- en communicatiesystemen  
   
-## Edge versus datacenter HA: belangrijke verschillen {#edge-vs-data-center-ha-key-differences}
+## Edge versus datacenter: de belangrijkste verschillen op het gebied van hoge beschikbaarheid {#edge-vs-data-center-ha-key-differences}
 
-Criterium | Datacenter HA (WSFC, Pacemaker, VMware HA) | SafeKit Edge HA  
+Criterium | Hoge beschikbaarheid van datacenters (WSFC, Pacemaker, VMware HA) | SafeKit hoge beschikbaarheid aan de edge  
 ---|---|---  
-Opslag | vereist gedeelde SAN/NAS-opslag. | is SAN-loos — alleen lokale schijven.  
-Hardware | Toegewijde clusterknooppunten, HBA's, switches | Twee willekeurige standaard x86-servers  
-OS-expertise | Windows Datacenter of Linux cluster OS-vaardigheden | Standaard Windows / Linux beheerdersvaardigheden  
-Personeel ter plaatse vereist voor installatie en interventie | | ). Niet vereist — volledig automatisch.  
-Internet-/cloudafhankelijkheid | Vaak cloudbeheerd | Volledig geschikt voor luchtbruggen  
-Implementatieschaal | Eén datacenter | Honderden gedistribueerde locaties  
-Licentiekosten | Hoog (Datacenter OS, SAN-licenties) | Eén betaalbare softwarelicentie per cluster  
-Typische RTO | 1–5 minuten | Minder dan 1 minuut (configureerbaar)  
+Opslag | Vereist gedeelde opslag (SAN of NAS) | SANless, alleen met lokale schijven  
+Hardware | Speciale clusterknooppunten, hostbusadapters (HBA's) en switches | Twee standaard x86-servers van elk merk  
+Expertise in besturingssystemen | Vaardigheden met Windows Server Datacenter of Linux clusters | Standaard administratieve vaardigheden Windows of Linux  
+Personeel ter plaatse | Vereist voor installatie en interventie | Niet vereist, omdat de failover volledig automatisch is  
+Afhankelijkheid van internet of de cloud | Vaak cloud-beheerd | Werkt op volledig geïsoleerde netwerken  
+Implementatieschaal | Enkel datacenter | Honderden gedistribueerde sites  
+Licentiekosten | Hoog (Datacenter-besturingssysteem en SAN-licenties) | Eén betaalbare softwarelicentie per cluster  
+Typische RTO | 1 tot 5 minuten | Minder dan 1 minuut (configureerbaar)  
   
-## Technische minimumvereisten {#technical-minimum-requirements}
+{{%  insert-supported-os-nl  %}}
 
-  * **Servers:** 2 standaard x86-servers of VM's (elk hardwaremerk, fysiek of virtueel) of ARM (alleen Linux )
-  * **OS:** Windows Server 2019 / 2022 / 2025, Windows 11, RHEL 8/9, Ubuntu 24.04
-  * **Netwerk:** 1 Gbps LAN voor replicatie; een speciaal heartbeat-netwerk wordt aanbevolen.
-  * **Opslag:** Alleen lokale schijven — geen SAN, geen NAS, geen gedeelde opslag van welke aard dan ook.
-  * **Geen speciale OS-editie vereist.** — Windows Server Standard is voldoende; geen Datacenter-licentie vereist.
-
-
-Voor volledige technische specificaties, afmetingsbeperkingen en inkoopcriteria, zie de technische referentie 📘 [ RFP/RFI ](</nl/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) .
+Lees de 📘 [RFI en RFP technische referentie](</nl/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/>) voor de volledige technische specificaties, dimensionale beperkingen en inkoopcriteria.
 
 
 {{%  insert-safekit-hub-nl  %}}

@@ -1,39 +1,40 @@
 ---
-title: "Alta disponibilidade OEM: Incorporando o cluster SafeKit em seu software"
+title: "Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit ao seu Software"
 canonical: "https://safekit.eviden.com/pt-br/use-cases/application-clustering-software/"
-description: "Potencialize seu software com SafeKit . Como parceiro OEM, você pode incorporar failover automatizado e replicação síncrona diretamente em seu aplicativo. Ofereça aos seus clientes disponibilidade 24 horas por dia, 7 dias por semana, com Windows e Linux , sem a complexidade de clusters de hardware."
+description: "Capacite seu software com SafeKit. Como parceiro OEM, você pode incorporar o failover automatizado e a replicação síncrona diretamente em seu aplicativo. Ofereça aos seus clientes disponibilidade 24 horas por dia, 7 dias por semana, no Windows e Linux, sem a complexidade dos clusters de hardware."
 category: "use-cases"
 lang: "pt-br"
-topics: "Caso de uso de alta disponibilidade para OEMs, 🔍 Explore o SafeKit"
+topics: "O caso de uso de alta disponibilidade OEM, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 50 expressions"
 ---
 
-# Alta disponibilidade OEM: Incorporando o cluster SafeKit em seu software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit ao seu Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
-## Caso de uso de alta disponibilidade do OEM {#the-oem-high-availability-use-case}
+## O caso de uso de alta disponibilidade OEM {#the-oem-high-availability-use-case}
 
-### Uma solução de alta disponibilidade totalmente baseada em software {#a-software-only-high-availability-solution}
+### Uma solução de alta disponibilidade apenas de software {#a-software-only-high-availability-solution}
 
-SafeKit é independente do hardware e funciona com qualquer servidor físico ou virtual.
-
-
-Software de clusterização de aplicativos ![ com SafeKit ](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
+SafeKit não depende de hardware específico. Ele funciona com qualquer servidor físico ou virtual.
 
 
-### Software de clusterização de aplicações simples e econômico para uma editora de software {#simple-and-economical-application-clustering-software-for-a-software-publisher}
+![Software de agrupamento de aplicações com SafeKit](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
-Um número crescente de fornecedores de software está integrando SafeKit como uma opção de alta disponibilidade OEM em seus catálogos. SafeKit foi escolhido por ser um software de clusterização de aplicações simples e econômico. 
 
-Se você é um editor de software e busca uma solução de clusterização de aplicativos fácil de integrar ao seu próprio software, pode aproveitar nossa oferta OEM. Você poderá incluir SafeKit em sua oferta de software, sem precisar modificar seu aplicativo.
+### Software de agrupamento de aplicações simples e econômico para fornecedores de software {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
-### Clustering de aplicações com replicação em tempo real, balanceamento de carga e failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
+Cada vez mais fornecedores de software oferecem SafeKit como uma opção de alta disponibilidade OEM em seu catálogo. Eles escolhem SafeKit porque é um software de cluster de aplicativos simples e econômico.
 
-O software SafeKit oferece dois módulos genéricos para agrupamento de aplicações: o módulo mirror e o módulo <span class="notranslate farm-term" translate="no">farm</span> .
+Se você é um fornecedor de software e precisa de um sistema de cluster de aplicativos que seja fácil de integrar ao seu próprio software, junte-se ao nosso programa OEM. Você pode incluir SafeKit em sua oferta de software. Seu aplicativo não precisa de nenhuma modificação.
 
-O módulo [ mirror ](/pt-br/product/#safekit-mirror-cluster) implementa replicação de arquivos em tempo real e failover de aplicativos. É adequado para aplicativos com banco de dados.
+### Agrupamento de aplicações com replicação em tempo real, balanceamento de carga e failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-Os módulos [ <span class="notranslate farm-term" translate="no">farm</span> ](/pt-br/product/#safekit-farm-cluster) implementam balanceamento de carga de rede e failover de aplicações. São adequados para aplicações com serviços web.
+O software SafeKit oferece dois módulos genéricos para o agrupamento de aplicações: o módulo mirror e o módulo <span class="notranslate farm-term" translate="no">farm</span>.
 
-E você pode combinar os módulos.
+O [módulo mirror](/pt-br/product/#safekit-mirror-cluster) implementa a replicação de arquivos em tempo real e o failover de aplicativos. Ele é adequado para aplicativos com um banco de dados.
+
+O [módulo <span class="notranslate farm-term" translate="no">farm</span>](/pt-br/product/#safekit-farm-cluster) implementa o balanceamento de carga da rede e o failover de aplicativos. Ele é adequado para aplicativos com serviços web.
+
+Você também pode combinar os dois módulos.
 
 
 {{%  insert-safekit-hub-pt-br  %}}

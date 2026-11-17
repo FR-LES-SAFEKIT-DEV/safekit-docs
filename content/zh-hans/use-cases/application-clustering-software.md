@@ -1,39 +1,40 @@
 ---
-title: "OEM 高可用性：将SafeKit集群嵌入到您的软件中"
+title: "OEM 高可用性：将 SafeKit 集群技术嵌入您的软件"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/application-clustering-software/"
-description: "借助SafeKit为您的软件赋能。作为 OEM 合作伙伴，您可以将自动故障转移和同步复制功能直接嵌入到您的应用程序中。无需复杂的硬件集群，即可为您的客户提供Windows和Linux的 24/7 全天候正常运行时间。"
+description: "使用 SafeKit 为您的软件赋能。作为 OEM 合作伙伴，您可以将自动故障转移和同步复制直接嵌入到您的应用程序中。在 Windows 和 Linux 上为您的客户提供 24/7 全天候正常运行时间，而无需复杂的硬件集群。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "OEM 高可用性用例，🔍 探索 SafeKit"
+topics: "OEM 高可用性用例、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 50 expressions"
 ---
 
-# OEM 高可用性：将SafeKit集群嵌入到您的软件中 {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# OEM 高可用性：将 SafeKit 集群技术嵌入您的软件 {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
 ## OEM 高可用性用例 {#the-oem-high-availability-use-case}
 
 ### 纯软件高可用性解决方案 {#a-software-only-high-availability-solution}
 
-SafeKit与硬件无关，可与任何物理或虚拟服务器配合使用。
+SafeKit 不依赖于特定的硬件。它适用于任何物理或虚拟服务器。
 
 
-![应用集群软件，包含SafeKit和](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
+![使用 SafeKit 的应用程序集群软件](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
-### 面向软件发行商的简单经济型应用集群软件 {#simple-and-economical-application-clustering-software-for-a-software-publisher}
+### 面向软件供应商的简单且经济实惠的应用程序集群软件 {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
-越来越多的软件发行商将SafeKit作为 OEM 高可用性选项集成到其产品目录中。之所以选择SafeKit ，是因为它是一款简单且经济的应用集群软件。 
+越来越多的软件供应商在其产品目录中提供 SafeKit 作为 OEM 高可用性选项。他们选择 SafeKit 是因为它是一款简单且经济高效的应用程序集群软件。
 
-如果您是软件发行商，并且正在寻找易于嵌入您现有软件的应用集群解决方案，您可以利用我们的 OEM 服务。您可以将SafeKit集成到您的软件产品中。而且，该解决方案无需修改您的应用程序。
+如果您是软件供应商，并且需要易于嵌入到您自己的软件中的应用程序集群，请加入我们的 OEM 计划。您可以将 SafeKit 与您的软件产品捆绑在一起。您的应用程序无需任何修改。
 
-### 应用集群具备实时复制、负载均衡和故障转移功能 {#application-clustering-with-real-time-replication-load-balancing-and-failover}
+### 应用集群，支持实时复制、负载均衡和故障转移 {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
-SafeKit软件提供两个用于应用程序集群的通用模块： mirror模块和<span class="notranslate farm-term" translate="no">farm</span>模块。
+SafeKit 软件为应用程序集群提供了两个通用模块：mirror 模块和 <span class="notranslate farm-term" translate="no">farm</span> 模块。
 
-[ mirror ](/zh-hans/product/#safekit-mirror-cluster)模块实现了实时文件复制和应用程序故障转移功能，适用于带有数据库的应用程序。
+[mirror 模块](/zh-hans/product/#safekit-mirror-cluster)实现实时文件复制和应用程序故障转移。它适用于具有数据库的应用程序。
 
-[ <span class="notranslate farm-term" translate="no">farm</span> ](/zh-hans/product/#safekit-farm-cluster)模块实现了网络负载均衡和应用故障转移功能，适用于具有 Web 服务的应用。
+该[<span class="notranslate farm-term" translate="no">farm</span> 模块](/zh-hans/product/#safekit-farm-cluster)实现了网络负载均衡和应用故障转移。它适用于具有 Web 服务的应用程序。
 
-而且你可以将这些模块组合起来使用。
+您也可以同时使用这两个模块。
 
 
 {{%  insert-safekit-hub-zh-hans  %}}

@@ -1,33 +1,34 @@
 ---
-title: "Software voor bedrijfscontinuïteit en noodherstel voor 2-knoopsclusters met SafeKit"
+title: "Software voor bedrijfscontinuïteit en noodherstel voor clusters met 2 knooppunten met SafeKit"
 canonical: "https://safekit.eviden.com/nl/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "SafeKit is software voor bedrijfscontinuïteit en noodherstel en implementeert een eenvoudige oplossing voor hoge beschikbaarheid tussen twee externe computerruimtes. Bereik 24/7 uptime met SafeKit , de meest gebruiksvriendelijke software voor bedrijfscontinuïteit en noodherstel. Elimineer dure SAN's en complexe IT-vaardigheden met synchrone replicatie tussen twee knooppunten, automatische failover en load balancing voor Windows en Linux . Geen dataverlies (RPO=0) voor kritieke applicaties in elke cloud- of on-premise omgeving."
+description: "SafeKit is software voor bedrijfscontinuïteit en noodherstel. Het implementeert een eenvoudige hoge beschikbaarheidsoplossing tussen twee externe serverruimtes. Bereik 24/7 uptime met SafeKit, de gebruiksvriendelijkste software voor bedrijfscontinuïteit en noodherstel. Elimineer dure SAN's en complexe IT-vaardigheden met synchrone replicatie met 2 knooppunten, automatische failover en taakverdeling voor Windows en Linux. Nul gegevensverlies (RPO = 0) voor bedrijfskritieke toepassingen in elke cloud- of on-premises-omgeving."
 category: "use-cases"
 lang: "nl"
 topics: "Software voor bedrijfscontinuïteit en noodherstel, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 49 expressions"
 ---
 
-# Software voor bedrijfscontinuïteit en noodherstel voor 2-knoopsclusters met SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# Software voor bedrijfscontinuïteit en noodherstel voor clusters met 2 knooppunten met SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
 
 ## Software voor bedrijfscontinuïteit en noodherstel {#business-continuity-and-disaster-recovery-software}
 
-### Redenen om te kiezen voor de SafeKit -software voor bedrijfscontinuïteit en noodherstel {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}
+### Redenen om voor de SafeKit-software te kiezen voor bedrijfscontinuïteit en noodherstel {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}
 
 
-![ Eenvoudige software voor bedrijfscontinuïteit en noodherstel met SafeKit ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
+![Eenvoudige software voor bedrijfscontinuïteit en noodherstel met SafeKit](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
 
-Er is geen configuratieverschil bij het implementeren van een SafeKit -cluster in dezelfde computerruimte of in meerdere computerruimtes op afstand, mits er een uitgebreid LAN of een uitgestrekt VLAN beschikbaar is tussen de externe locaties.
+De configuratie is hetzelfde, of u nu een SafeKit-cluster in één serverruimte of in twee externe serverruimtes implementeert. De enige vereiste is een uitgebreid LAN of een stretched VLAN tussen de externe locaties.
 
-### Hoe implementeer ik een eenvoudige oplossing voor hoge beschikbaarheid tussen twee externe computerruimtes? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
+### Hoe implementeer je een eenvoudige hoge beschikbaarheidsoplossing tussen twee externe serverruimtes? {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-De modules SafeKit mirror en <span class="notranslate farm-term" translate="no">farm</span> kunnen eenvoudig worden geïmplementeerd op servers in externe computerruimtes, zonder speciale clusterconfiguratie. Dit betekent dat SafeKit bedrijfscontinuïteit en noodherstel combineert in één eenvoudige architectuur. SafeKit beheert bovendien [ ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) in geval van netwerkisolatie, zonder dat een derde server of een speciale quorumschijf nodig is.
+Met SafeKit kunt u de mirror-module en de <span class="notranslate farm-term" translate="no">farm</span>-module eenvoudig implementeren op servers in externe serverruimtes. Er is geen speciale clusterconfiguratie nodig. SafeKit combineert daarom bedrijfscontinuïteit en noodherstel in één eenvoudige architectuur. SafeKit regelt ook netwerkisolatie zonder een derde server of een speciale quorumschijf. Lees meer over [split-brainbeheer](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
 ### Bedrijfscontinuïteit versus back-upoplossingen {#business-continuity-vs-backup-solutions}
 
-Oplossingen voor bedrijfscontinuïteit en back-up behandelen verschillende faalscenario's en zijn complementair in plaats van uitwisselbaar. Bedrijfscontinuïteit, mogelijk gemaakt door de high-availability clustering van SafeKit , zorgt ervoor dat applicaties met minimale onderbrekingen blijven draaien in geval van een server- of applicatiestoring, dankzij realtime replicatie en automatische failover. Back-upoplossingen beschermen tegen een breder verlies, zoals ransomware-aanvallen of bedieningsfouten, en maken doorgaans gebruik van externe kopieën van gegevens die achteraf kunnen worden hersteld, met langere hersteltijden maar zonder automatische failover.
+Oplossingen voor bedrijfscontinuïteit en back-up zijn bedoeld voor verschillende storingsscenario's. Ze vullen elkaar aan en zijn niet uitwisselbaar. SafeKit-clustering voor hoge beschikbaarheid zorgt voor bedrijfscontinuïteit. Het zorgt ervoor dat applicaties met minimale onderbreking blijven draaien wanneer een server of een applicatie uitvalt, dankzij realtime replicatie en automatische failover. Back-upoplossingen beschermen tegen bredere verliezen, zoals ransomware-aanvallen of bedieningsfouten. Ze zijn meestal gebaseerd op externe kopieën van gegevens die u achteraf herstelt. Herstel duurt langer en er is geen automatische failover.
 
-Lees meer in [ De combinatie van SafeKit hoge beschikbaarheid met noodherstelback-ups ](</nl/best-practises/high-availability-disaster-recovery-hadr/>) .
+Lees meer over [het combineren van SafeKit hoge beschikbaarheid met back-ups voor noodherstel](</nl/best-practises/high-availability-disaster-recovery-hadr/>).
 
 
 {{%  insert-safekit-hub-nl  %}}

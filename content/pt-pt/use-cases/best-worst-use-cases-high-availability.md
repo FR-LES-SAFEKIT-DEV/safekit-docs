@@ -1,38 +1,39 @@
 ---
-title: "Melhores e piores casos de uso de alta disponibilidade: um guia de implementação SafeKit"
+title: "Melhores e Piores Casos de Uso de Alta Disponibilidade: Um Guia de Implementação SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/best-worst-use-cases-high-availability/"
-description: "Identifique os melhores e piores casos de uso para alta disponibilidade. Saiba onde SafeKit se destaca no clustering definido por software para Windows e Linux e descubra quando o armazenamento compartilhado tradicional ou a alta disponibilidade baseada em hardware podem falhar para sua empresa."
+description: "Identifique os melhores e os piores casos de uso para alta disponibilidade. Saiba onde SafeKit se destaca no clustering definido por software para Windows e Linux, e descubra quando o armazenamento partilhado tradicional ou a alta disponibilidade baseada em hardware podem falhar ao seu negócio."
 category: "use-cases"
 lang: "pt-pt"
-topics: "Melhores casos de uso, Limitações de alta disponibilidade SafeKit , 🔍 Explore o SafeKit"
+topics: "Melhores casos de uso, Limitações de Alta Disponibilidade SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 50 expressions"
 ---
 
-# Melhores e piores casos de uso de alta disponibilidade: um guia de implementação SafeKit {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
+# Melhores e Piores Casos de Uso de Alta Disponibilidade: Um Guia de Implementação SafeKit {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}
 
 ## Melhores casos de uso {#best-use-cases}
 
-### Software OEM {#oem-software}
+### Software de OEM {#oem-software}
 
-Uma editora de software utiliza [ SafeKit como software OEM ](</pt-pt/use-cases/application-clustering-software/>) para alta disponibilidade de sua aplicação.
+Um fornecedor de software utiliza SafeKit como software OEM para a alta disponibilidade da sua aplicação. Saiba mais sobre o [caso de uso OEM](</pt-pt/use-cases/application-clustering-software/>).
 
 
-![ Software de agrupamento de aplicativos para uma editora de software ](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:300")
+![Software de agrupamento de aplicações para um fornecedor de software](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:300")
 
 
 ### Empresa Distribuída {#distributed-enterprise}
 
-Uma empresa distribuída implementa [ SafeKit em várias filiais ](</pt-pt/use-cases/business-continuity-software/>) sem habilidades específicas de TI.
+Uma empresa distribuída implementa SafeKit em muitas filiais sem necessidade de conhecimentos específicos de TI. Saiba mais sobre o [caso de uso da empresa distribuída](</pt-pt/use-cases/business-continuity-software/>).
 
 
-![ Software de Alta Disponibilidade em uma Empresa Distribuída ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+![Software de alta disponibilidade numa empresa distribuída](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
-### Sites remotos {#remote-sites}
+### Locais Remotos {#remote-sites}
 
-[ SafeKit é implantado em dois locais remotos ](</pt-pt/best-practises/high-availability-disaster-recovery-hadr/>) sem a necessidade de compartimentos de discos replicados por meio de uma SAN.
+SafeKit é implementado em dois locais remotos. Não necessita de matrizes de discos replicadas através de uma SAN. Saiba mais sobre [alta disponibilidade e recuperação de desastres](</pt-pt/best-practises/high-availability-disaster-recovery-hadr/>).
 
 
-![ Continuidade de Negócios e Recuperação de Desastres sem SAN replicada ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
+![Continuidade de negócios e recuperação de desastres sem uma SAN replicada](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
 
 

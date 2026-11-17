@@ -1,55 +1,56 @@
 ---
-title: "Haute disponibilité et redondance pour les systèmes de gestion technique du bâtiment (GTB)"
+title: "Haute disponibilité et redondance pour les systèmes de gestion de bâtiment (BMS)"
 canonical: "https://safekit.eviden.com/fr/use-cases/building-management-system-software-bms-redundancy/"
-description: "Garantissez une disponibilité à 100 % pour votre bâtiment intelligent grâce à SafeKit. Notre logiciel sans SAN, doté d'une redondance à 2 nœuds, assure une réplication synchrone en temps réel et un basculement automatique pour tout système de gestion technique du bâtiment (GTB), notamment Siemens, Honeywell, Schneider Electric et Johnson Controls. Bénéficiez d'une garantie zéro perte de données (RPO=0) et d'une résilience opérationnelle optimale pour vos systèmes critiques de chauffage, ventilation, climatisation et sécurité sous Windows et Linux."
+description: "Assurez une disponibilité de 100 % pour votre bâtiment intelligent avec SafeKit. Notre logiciel de redondance sans SAN à 2 nœuds offre une réplication synchrone en temps réel et un basculement automatique pour tout système de gestion de bâtiment (BMS), y compris Siemens, Honeywell, Schneider Electric et Johnson Controls. Atteignez une perte de données nulle (RPO = 0) et une résilience opérationnelle pour les systèmes CVC et de sécurité critiques sous Windows et Linux."
 category: "use-cases"
 lang: "fr"
-topics: "Qu'est-ce qu'un système de gestion des bâtiments (BMS) ?, Pourquoi un logiciel BMS est critique ?, Liste des acteurs clés sur le marché BMS, SafeKit apporte deux solutions pour la redondance et la haute disponibilité des logiciels BMS, SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Explorez SafeKit"
+topics: "Qu’est-ce qu’un système de gestion de bâtiment (BMS) ?, Pourquoi le logiciel de gestion de bâtiment est-il essentiel ?, Principaux fournisseurs de systèmes de gestion de bâtiment (BMS), SafeKit propose deux solutions pour la redondance et la haute disponibilité d’un logiciel BMS., SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 58 expressions"
 ---
 
-# Haute disponibilité et redondance pour les systèmes de gestion technique du bâtiment (GTB) {#high-availability-and-redundancy-for-building-management-systems-bms}
+# Haute disponibilité et redondance pour les systèmes de gestion de bâtiment (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
-##  Qu'est-ce qu'un système de gestion des bâtiments (BMS) ? {#what-is-a-building-management-system-bms}
+##  Qu’est-ce qu’un système de gestion de bâtiment (BMS) ? {#what-is-a-building-management-system-bms}
 
-Un système de gestion des bâtiments (BMS - Building Management System) apporte le contrôle centralisé automatique du bâtiment: chauffage, ventilation, climatisation, électricité, éclairage...
+Un système de gestion de bâtiment (BMS) fournit un contrôle automatique et centralisé des services du bâtiment : chauffage, ventilation et climatisation (CVC), distribution d’énergie, éclairage et plus encore.
 
-Un système de gestion des bâtiments augmente la sécurité des résidents du bâtiment, réduit la consommation d'énergie et réduit les coûts d'exploitation et de maintenance.
+Un système de gestion de bâtiment augmente la sécurité des occupants. Il réduit également la consommation d’énergie et diminue les coûts d’exploitation et d’entretien.
 
-##  Pourquoi un logiciel BMS est critique ? {#why-a-bms-software-is-critical}
+##  Pourquoi le logiciel de gestion de bâtiment est-il essentiel ? {#why-a-bms-software-is-critical}
 
-Le logiciel BMS contrôle le système d'incendie, les panneaux de distribution électrique, la consommation d'eau, les systèmes de climatisation, le contrôle de l'éclairage.
+Le logiciel de gestion technique du bâtiment (BMS) contrôle les systèmes de sécurité incendie, les tableaux de distribution électrique, la consommation d’eau, les systèmes de climatisation et l’éclairage.
 
-La sécurité des personnes dans le bâtiment est directement associée à la bonne exécution du logiciel BMS.
+La sécurité des occupants d’un bâtiment dépend directement du bon fonctionnement du logiciel BMS.
 
-Et c'est pourquoi, le système doit être toujours disponible pour les exploitants d'immeubles qui doivent réagir immédiatement au moindre incident.
+C’est pourquoi le système doit toujours être disponible. Les exploitants du bâtiment doivent réagir immédiatement au moindre incident.
 
-##  Liste des acteurs clés sur le marché BMS {#key-players-list-in-bms}
+##  Principaux fournisseurs de systèmes de gestion de bâtiment (BMS) {#key-players-list-in-bms}
 
-Les acteurs clés du BMS sont :
+Les principaux fournisseurs de systèmes de gestion de bâtiment sont :
 
-  * Honeywell International Inc. (US)
-  * Johnson Controls (Ireland)
+  * Honeywell International Inc. (États-Unis)
+  * Johnson Controls (Irlande)
   * Schneider Electric (France)
-  * Siemens (Germany)
-  * United Technologies (US)
-  * ABB (Sweden)
-  * Azbil Corporation (Japan)
-  * Delta Controls (India)
-  * LARSEN & TOUBRO LIMITED (India)
-  * Mitsubishi Electric Corporation (Japan)
+  * Siemens (Allemagne)
+  * United Technologies (États-Unis)
+  * ABB (Suède)
+  * Azbil Corporation (Japon)
+  * Delta Controls (Inde)
+  * LARSEN & TOUBRO LIMITED (Inde)
+  * Mitsubishi Electric Corporation (Japon)
 
 
-  * Robert Bosch GmbH (Germany)
-  * Singapore Technologies Engineering Ltd (Singapore)
-  * DEXMA SENSORS, S.L. (Spain)
-  * Eagle Technology (India)
+  * Robert Bosch GmbH (Allemagne)
+  * Singapore Technologies Engineering Ltd (Singapour)
+  * DEXMA SENSORS, S.L. (Espagne)
+  * Eagle Technology (Inde)
   * Legrand (France)
-  * Lutron Electronics Co., Inc. (US)
-  * Technovator International Limited (Singapore)
-  * Airedale Air Conditioning (UK)
-  * BuildingIQ (US)
-  * ACUITY BRANDS LIGHTING, INC. (US)
-  * GridPoint (US)
+  * Lutron Electronics Co., Inc. (États-Unis)
+  * Technovator International Limited (Singapour)
+  * Airedale Air Conditioning (Royaume-Uni)
+  * BuildingIQ (États-Unis)
+  * ACUITY BRANDS LIGHTING, INC. (États-Unis)
+  * GridPoint (États-Unis)
 
 
 

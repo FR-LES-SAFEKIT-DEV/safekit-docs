@@ -1,31 +1,32 @@
 ---
-title: "Estandarización de la alta disponibilidad para empresas distribuidas con múltiples sucursales."
+title: "Estandarización de la alta disponibilidad para empresas distribuidas con numerosas sucursales"
 canonical: "https://safekit.eviden.com/es/use-cases/business-continuity-software/"
-description: "Proteja cada sucursal de su empresa distribuida con SafeKit . Implemente un clúster HA estandarizado, basado únicamente en software, a gran escala para garantizar la disponibilidad 24/7 de las aplicaciones críticas de las sucursales. Windows y Linux no requieren almacenamiento compartido, SAN complejas ni personal de TI in situ."
+description: "Asegure cada sucursal de su empresa distribuida con SafeKit. Implemente un clúster de alta disponibilidad estandarizado, solo de software y a escala. Garantice el tiempo de actividad 24/7 para las aplicaciones críticas en cada sucursal. SafeKit funciona en Windows y Linux. No requiere almacenamiento compartido, ni SAN compleja, ni experiencia en TI in situ."
 category: "use-cases"
 lang: "es"
 topics: "Continuidad del negocio en una empresa distribuida, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 48 expressions"
 ---
 
-# Estandarización de la alta disponibilidad para empresas distribuidas con múltiples sucursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
+# Estandarización de la alta disponibilidad para empresas distribuidas con numerosas sucursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
 
 ## Continuidad del negocio en una empresa distribuida {#business-continuity-in-a-distributed-enterprise}
 
-### Continuidad del negocio en una empresa distribuida {#business-continuity-in-a-distributed-enterprise-1}
+### Una solución estándar de alta disponibilidad para muchas sucursales {#business-continuity-in-a-distributed-enterprise-1}
 
-Implementar docenas de clústeres no es complicado con SafeKit .
+Una empresa distribuida ejecuta las mismas aplicaciones críticas en muchas sucursales. Con SafeKit, implementar docenas de clústeres idénticos es sencillo.
 
 
-![ Solución de software de continuidad empresarial en una empresa ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+![Software de continuidad de negocio en una empresa distribuida](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
 
 ### ¿Cómo implementar un software de continuidad de negocio sin conocimientos informáticos específicos? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
 
-Proporcionar una solución de continuidad de negocio en una empresa para múltiples aplicaciones en los servidores Windows o Linux plantea problemas económicos y organizativos. SafeKit ofrece un software de continuidad de negocio sencillo y económico para este caso.
+Proporcionar continuidad de negocio para múltiples aplicaciones en servidores Windows o Linux en cada sucursal plantea problemas económicos y organizativos. SafeKit resuelve estos problemas con un software de continuidad de negocio sencillo y rentable.
 
-### El software SafeKit : una solución sencilla para la continuidad del negocio {#the-safekit-software-a-simple-solution-for-business-continuity}
+### El software SafeKit: una solución sencilla para la continuidad del negocio {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit ofrece dos módulos sencillos <span class="notranslate farm-term" translate="no">farm</span> y mirror , para proteger sus aplicaciones críticas contra fallos. La implementación se realiza en servidores estándar sin necesidad de conocimientos de TI para su gestión. No se requieren discos compartidos, SAN replicada, balanceadores de carga, ediciones Enterprise de sistemas operativos ni bases de datos. 
+SafeKit ofrece dos módulos sencillos: el módulo mirror y el módulo <span class="notranslate farm-term" translate="no">farm</span>. Protegen sus aplicaciones críticas contra fallos. Se implementan en servidores estándar y no se necesitan conocimientos de TI para gestionar la solución. No se necesita un disco compartido, una SAN replicada, balanceadores de carga ni ediciones empresariales de sistemas operativos o bases de datos.
 
 
 {{%  insert-safekit-hub-es  %}}

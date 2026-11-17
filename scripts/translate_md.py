@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-16.3"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-16.4"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -956,6 +956,10 @@ def main():
         print("ATTENTION : nombre(s) disparu(s) à la traduction, lignes à vérifier :")
         for ln, miss in numbers:
             print(f"   ligne {ln + 1 + shift} : {', '.join(sorted(miss))}")
+    empty = [n for n, l in enumerate(lines) if re.search(r"(?<!!)\[\s*\]\(", l)]
+    if empty:
+        print("ATTENTION : lien au libellé vide [](...) (texte du lien perdu), lignes :",
+              ", ".join(str(n + 1) for n in empty))
     if bold:
         print("A vérifier : gras (**) mal placé par Google, lignes :",
               ", ".join(str(n + 1 + shift) for n in sorted(set(bold))))

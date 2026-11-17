@@ -1,31 +1,32 @@
 ---
 title: "多数の支店を持つ分散型企業における高可用性の標準化"
 canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-software/"
-description: "分散型企業のあらゆる支店を保護する SafeKit標準化されたソフトウェアのみのHAクラスタを大規模に展開し、重要なブランチアプリケーションの24時間365日の稼働時間を確保します。共有ストレージ、複雑なSAN、オンサイトのIT専門知識は不要です。 Windows そして Linux."
+description: "SafeKit で分散型エンタープライズのすべての支社を保護します。標準化されたソフトウェアのみの高可用性クラスターを大規模に展開します。すべての支社で重要なアプリケーションの 24 時間年中無休の稼働時間を保証します。SafeKit は Windows と Linux で動作します。共有ストレージ、複雑な SAN、オンサイトの IT 専門知識は必要ありません。"
 category: "use-cases"
 lang: "ja"
 topics: "分散型エンタープライズにおける事業継続性、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 49 expressions"
 ---
 
 # 多数の支店を持つ分散型企業における高可用性の標準化 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
 
-## 分散型企業における事業継続性 {#business-continuity-in-a-distributed-enterprise}
+## 分散型エンタープライズにおける事業継続性 {#business-continuity-in-a-distributed-enterprise}
 
-### 分散型企業における事業継続性 {#business-continuity-in-a-distributed-enterprise-1}
+### 多くの支店に標準的な高可用性ソリューションを提供 {#business-continuity-in-a-distributed-enterprise-1}
 
-SafeKitを使用すれば、数十個のクラスターのデプロイは複雑ではありません。
-
-
-![エンタープライズ向け事業継続ソフトウェアソリューション](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+分散型エンタープライズでは、同じ重要なアプリケーションを多数の支店で実行します。SafeKit を使用すると、数十の同一クラスターを簡単に展開できます。
 
 
-### 特定のITスキルがなくても、事業継続ソフトウェアを導入するにはどうすればよいでしょう？ {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
+![分散型エンタープライズにおける事業継続ソフトウェア](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
-複数のアプリケーション向けにエンタープライズでビジネス継続性ソリューションを提供する Windows または Linux サーバーは経済的および組織的な問題を引き起こす。 SafeKit は、このケースに適したシンプルで経済的な事業継続ソフトウェアを提供しています。
 
-### SafeKitソフトウェア：ビジネス継続のためのシンプルなソリューション {#the-safekit-software-a-simple-solution-for-business-continuity}
+### 特別な IT スキルがなくても事業継続ソフトウェアを導入するには？ {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
 
-SafeKit <span class="notranslate farm-term" translate="no">farm</span>とmirror 2つのシンプルなモジュールを提供し、重要なアプリケーションを障害から保護します。導入は標準的なサーバーで行われ、ソリューションの管理にITスキルは必要ありません。共有ディスク、レプリケートSAN、ロードバランサー、エンタープライズ版のオペレーティングシステムやデータベースも不要です。 
+各支社の Windows または Linux サーバー上で複数のアプリケーションの事業継続性を確保することは、経済的および組織的な問題を引き起こします。SafeKit は、シンプルで費用対効果の高い事業継続性ソフトウェアでこれらの問題を解決します。
+
+### SafeKit ソフトウェア：事業継続のためのシンプルなソリューション {#the-safekit-software-a-simple-solution-for-business-continuity}
+
+SafeKit は、mirror モジュールと <span class="notranslate farm-term" translate="no">farm</span> モジュールの 2 つのシンプルなモジュールを提供します。これらは、お客様の重要なアプリケーションを障害から保護します。標準的なサーバーに導入でき、ソリューションの管理に IT スキルは必要ありません。共有ディスク、レプリケートされた SAN、ロードバランサー、またはオペレーティングシステムやデータベースのエンタープライズ版は必要ありません。
 
 
 {{%  insert-safekit-hub-ja  %}}

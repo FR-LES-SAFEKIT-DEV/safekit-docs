@@ -1,33 +1,34 @@
 ---
-title: "SafeKitを搭載した2ノードクラスタ向け事業継続および災害復旧ソフトウェア"
+title: "SafeKit を使用した 2 ノードクラスター向け事業継続および災害復旧ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "SafeKit は、事業継続および災害復旧ソフトウェアであり、2 つの遠隔コンピュータ ルーム間でシンプルな高可用性ソリューションを実装します。 24 時間 365 日の稼働時間を実現します。 SafeKit最も使いやすいビジネス継続性および災害復旧ソフトウェア。2ノード同期レプリケーション、自動フェイルオーバー、ロードバランシングにより、高価なSANや複雑なITスキルを排除します。 Windows そして Linuxクラウド環境またはオンプレミス環境を問わず、重要なアプリケーションにおけるデータ損失ゼロ（RPO=0）。"
+description: "SafeKit は、事業継続および災害復旧のためのソフトウェアです。2 つのリモートサーバー室間でシンプルな高可用性ソリューションを実装します。最も使いやすい事業継続および災害復旧ソフトウェアである SafeKit で、24 時間 365 日の稼働時間を実現しましょう。Windows および Linux 向けの 2 ノード同期レプリケーション、自動フェイルオーバー、ロードバランシングにより、高価な SAN や複雑な IT スキルは不要になります。あらゆるクラウドまたはオンプレミス環境における重要なアプリケーションで、データ損失ゼロ（RPO = 0）を実現します。"
 category: "use-cases"
 lang: "ja"
 topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 49 expressions"
 ---
 
-# SafeKitを搭載した 2 ノード クラスタ向け事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
+# SafeKit を使用した 2 ノードクラスター向け事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}
 
 ## 事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software}
 
-### ビジネス継続性と災害復旧のためのソフトウェアとしてSafeKit選ぶ理由 {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}
+### 事業継続および災害復旧に SafeKit ソフトウェアを選択する理由 {#reasons-to-choose-the-safekit-software-for-business-continuity-and-disaster-recovery}
 
 
-![シンプルな事業継続および災害復旧ソフトウェアSafeKit ](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")付き）
+![SafeKit によるシンプルな事業継続および災害復旧ソフトウェア](/wp-content/uploads/2023/02/remote-datacenters.png "w:300")
 
 
-拡張LANまたはストレッチVLANがリモートサイト間で利用可能であれば、 SafeKitクラスタを同じコンピュータルーム内に展開する場合でも、リモートコンピュータルーム間で展開する場合でも、構成に違いはありません。
+SafeKit クラスターを 1 つのサーバー室に展開する場合でも、2 つのリモートサーバー室にまたがって展開する場合でも、構成は同じです。唯一の要件はリモートサイト間の拡張 LAN またはストレッチ VLAN です。
 
-### 2つの遠隔コンピュータ室間でシンプルな高可用性ソリューションを実装するにはどうすればよいでしょう？ {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
+### 2 つの離れたサーバールーム間で、シンプルな高可用性ソリューションを実装するにはどうすればよいですか？ {#how-to-implement-a-simple-high-availability-solution-between-two-remote-computer-rooms}
 
-SafeKit mirror 、および<span class="notranslate farm-term" translate="no">farm</span>モジュールは、特別なクラスタ構成を必要とせずに、遠隔地のコンピュータ室に設置されたサーバーに容易に展開できます。つまり、 SafeKit 、単一のシンプルなアーキテクチャ内で事業継続性と災害復旧を統合します。また、 SafeKit 、ネットワークが隔離された場合に、3台目のサーバーや特別なクォーラムディスクを必要とせずに、 [スプリットブレイン](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)を管理します。
+SafeKit を使用すると、mirror モジュールと <span class="notranslate farm-term" translate="no">farm</span> モジュールをリモートのサーバー室にあるサーバーに簡単に展開できます。特別なクラスター構成は必要ありません。そのため、SafeKit は事業継続と災害復旧を単一のシンプルなアーキテクチャに統合します。SafeKit は、3 台目のサーバーや特別なクォーラムディスクなしでネットワーク分離も処理します。[スプリットブレイン管理](</ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)の詳細については、こちらをご覧ください。
 
-### 事業継続性 vs バックアップソリューション {#business-continuity-vs-backup-solutions}
+### 事業継続とバックアップソリューション {#business-continuity-vs-backup-solutions}
 
-事業継続ソリューションとバックアップソリューションは、異なる障害シナリオに対応しており、互換性があるのではなく補完的な関係にあります。事業継続ソリューションは、 SafeKit高可用性クラスタリングにより、リアルタイムレプリケーションと自動フェイルオーバーを通じて、サーバーまたはアプリケーションの障害発生時にもアプリケーションの中断を最小限に抑えながらアプリケーションの実行を維持します。バックアップソリューションは、ランサムウェア攻撃やオペレーターのミスなど、より広範囲な損失から保護するもので、通常はオフサイトのデータコピーに依存しており、復旧時間は長くなりますが、自動フェイルオーバー機能はありません。
+事業継続ソリューションとバックアップソリューションは、異なる障害シナリオに対応します。これらは相互に置き換えるものではなく、補完的な関係にあります。SafeKit 高可用性クラスタリングは、事業継続性を提供します。リアルタイムレプリケーションと自動フェイルオーバーにより、サーバーまたはアプリケーションに障害が発生した場合でも、アプリケーションを最小限の中断で稼働させ続けます。バックアップソリューションは、ランサムウェア攻撃やオペレーターの誤操作など、より広範な損失から保護します。通常、これらは後で復元するデータのオフサイトコピーに依存します。復旧には時間がかかり、自動フェイルオーバーはありません。
 
-[ SafeKit高可用性と災害復旧バックアップの組み合わせ」 ](</ja/best-practises/high-availability-disaster-recovery-hadr/>)で詳細をご覧ください。
+[SafeKit 高可用性とディザスタリカバリバックアップの組み合わせ](</ja/best-practises/high-availability-disaster-recovery-hadr/>)について、さらに詳しくはこちらをご覧ください。
 
 
 {{%  insert-safekit-hub-ja  %}}

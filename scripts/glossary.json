@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-16.3",
+  "version": "2026-11-17.3",
   "keep": [
     "mirror",
     "farm",
@@ -116,7 +116,31 @@
     "Google Cloud Platform",
     "Microsoft Azure",
     "Windows 11 Enterprise",
-    "Windows 11 Pro"
+    "Windows 11 Pro",
+    "Honeywell International Inc.",
+    "Johnson Controls",
+    "Schneider Electric",
+    "United Technologies",
+    "Azbil Corporation",
+    "Delta Controls",
+    "LARSEN & TOUBRO LIMITED",
+    "Mitsubishi Electric Corporation",
+    "Robert Bosch GmbH",
+    "Singapore Technologies Engineering Ltd",
+    "DEXMA SENSORS, S.L.",
+    "Eagle Technology",
+    "Legrand",
+    "Lutron Electronics Co., Inc.",
+    "Technovator International Limited",
+    "Airedale Air Conditioning",
+    "BuildingIQ",
+    "ACUITY BRANDS LIGHTING, INC.",
+    "GridPoint",
+    "Honeywell",
+    "ABB",
+    "Pacemaker",
+    "Corosync",
+    "WSFC"
   ],
   "terms": {
     "farm cluster": {
@@ -1026,20 +1050,88 @@
         "Notifications par e-mail"
       ],
       [
-        "\\bde la reprise après sinistre (?=[^\"\\n]*avec Hyper-V)",
+        "\\bde la reprise après sinistre (?=[^\"\\n]*(?:avec Hyper-V|conteneurs))",
         "du basculement "
       ],
       [
-        "\\bpour la reprise après sinistre (?=[^\"\\n]*avec Hyper-V)",
+        "\\bpour la reprise après sinistre (?=[^\"\\n]*(?:avec Hyper-V|conteneurs))",
         "pour le basculement "
       ],
       [
-        "\\bla reprise après sinistre (?=[^\"\\n]*avec Hyper-V)",
+        "\\bla reprise après sinistre (?=[^\"\\n]*(?:avec Hyper-V|conteneurs))",
         "le basculement "
       ],
       [
         "\\b([Aa])utres nuages\\b",
         "\\1utres clouds"
+      ],
+      [
+        "\\b([Aa])utres fournisseurs de services (?:en nuage|cloud)\\b",
+        "\\1utres fournisseurs de cloud"
+      ],
+      [
+        "\\bregroupement d’applications",
+        "clustering d’applications"
+      ],
+      [
+        "équilibrage de charge du réseau",
+        "équilibrage de charge réseau"
+      ],
+      [
+        "\\b(pas|aucun|plus) besoin (?=[aeiouéèêhAEIOUÉ])(?!de\\b|d’|d')",
+        "\\1 besoin d’"
+      ],
+      [
+        "\\b(pas|aucun|plus) besoin (?!de\\b|d’|d'|des\\b|du\\b|d’)",
+        "\\1 besoin de "
+      ],
+      [
+        "\\((?:SGB|GTB)\\)",
+        "(BMS)"
+      ],
+      [
+        "\\blogiciel (?:de |du )?(?:GTB|SGB)\\b",
+        "logiciel BMS"
+      ],
+      [
+        "\\bdans le BMS\\b",
+        "du BMS"
+      ],
+      [
+        "\\bde la BMS\\b",
+        "du BMS"
+      ],
+      [
+        "\\(ÉTATS-UNIS\\)",
+        "(États-Unis)"
+      ],
+      [
+        "\\b([Cc])ontinuité des activités\\b",
+        "\\1ontinuité d’activité"
+      ],
+      [
+        "d’équilibrage de charge,? ou d’",
+        "d’équilibreurs de charge ou d’"
+      ],
+      [
+        "\\bpas SAN\\b",
+        "pas de SAN"
+      ],
+      [
+        "\\bOEM d’équipement d’origine\\b",
+        "OEM"
+      ],
+      [
+        "\\b([Ss])ites Edge\\b",
+        "\\1ites en périphérie"
+      ],
+      [
+        "\\bde nombreux bureaux\\b",
+        "de nombreuses succursales"
+      ],
+      [
+        "\\bfabricants d’équipement OEM\\b",
+        "OEM"
       ]
     ],
     "it": [
@@ -1268,6 +1360,14 @@
       [
         "(utiliza|utilice|usa|use) (<span[^>]*>snapshots</span>)",
         "\\1 los \\2"
+      ],
+      [
+        "\\b([Tt])ambién puedes\\b",
+        "\\1ambién puede"
+      ],
+      [
+        "\\btiempo de actividad del 100 ?%",
+        "tiempo de actividad 24/7"
       ]
     ],
     "pt": [
@@ -1374,6 +1474,26 @@
       [
         "(utiliza|utilize|usa|use) (<span[^>]*>snapshots</span>)",
         "\\1 os \\2"
+      ],
+      [
+        "\\b([Nn]ão) precisa (?!de\\b|d[aeo]s?\\b|ser\\b|\\w+r\\b)",
+        "\\1 precisa de "
+      ],
+      [
+        "\\b([Nn]ão) necessita (?!de\\b|d[aeo]s?\\b|ser\\b|\\w+r\\b)",
+        "\\1 necessita de "
+      ],
+      [
+        "gestão de baterias",
+        "gestão de edifícios"
+      ],
+      [
+        "\\bvocê resta\\b",
+        "você restaura"
+      ],
+      [
+        "\\bmuitos escritórios satélite\\b",
+        "muitas filiais"
       ]
     ],
     "ar": [
@@ -1496,6 +1616,26 @@
       [
         "غيوم أخرى",
         "سحابات أخرى"
+      ],
+      [
+        "بنية العالي \\S+ HA على مستوى",
+        "بنية HA على مستوى"
+      ],
+      [
+        "\\bالبنية واحدة",
+        "بنية واحدة"
+      ],
+      [
+        "غرفتي خادم",
+        "غرفتي خوادم"
+      ],
+      [
+        "ترخيص خادم بيانات Windows Server Datacenter\\)",
+        "ترخيص Windows Server Datacenter"
+      ],
+      [
+        "مجموعات Linux cluster\\)",
+        "مجموعات Linux"
       ]
     ],
     "de": [
@@ -1770,6 +1910,66 @@
       [
         "\\b([Aa])ndere Wolken\\b",
         "\\1ndere Clouds"
+      ],
+      [
+        "\\b(AWS|GCP|Azure) (Replikationscluster|Lastausgleichscluster)",
+        "\\1-\\2"
+      ],
+      [
+        "\\bOEM (?=[A-ZÄÖÜ][a-zäöüß])",
+        "OEM-"
+      ],
+      [
+        "([Aa])nwendungsklusterlösung",
+        "\\1nwendungsclusterlösung"
+      ],
+      [
+        "([Aa])nwendungsclusterungssoftware",
+        "\\1nwendungsclustering-Software"
+      ],
+      [
+        "\\((?:GLS|GA|GMS)\\)",
+        "(BMS)"
+      ],
+      [
+        "Gebäude(?:automations|leit)system(e?) \\(BMS\\)",
+        "Gebäudemanagementsystem\\1 (BMS)"
+      ],
+      [
+        "Gebäudeleitsysteme \\(BMS\\)",
+        "Gebäudemanagementsysteme (BMS)"
+      ],
+      [
+        "\\bBusiness-Continuity- und Backup-Lösungen\\b",
+        "Lösungen für Geschäftskontinuität und Backup"
+      ],
+      [
+        "\\bBusiness Continuity vs\\. Backup-Lösungen\\b",
+        "Geschäftskontinuität vs. Backup-Lösungen"
+      ],
+      [
+        "\\bBusiness Continuity\\b",
+        "Geschäftskontinuität"
+      ],
+      [
+        "\\bWindows oder Linux-(?=[A-ZÄÖÜ])",
+        "Windows- oder Linux-"
+      ],
+      [
+        "\\bWindows und Linux-(?=[A-ZÄÖÜ])",
+        "Windows- und Linux-"
+      ],
+      [
+        "\\bfreigegebene Festplatte\\b",
+        "gemeinsam genutzte Festplatte"
+      ],
+      [
+        "\\bSAN oder NAS-",
+        "SAN- oder NAS-"
+      ],
+      [
+        "\\bSAN Lizenzen\\b",
+        "SAN-Lizenzen"
       ]
     ],
     "ko": [
@@ -2188,6 +2388,66 @@
       [
         "기타 구름",
         "기타 클라우드"
+      ],
+      [
+        "SafeKit (?=OEM [^.\\n]*옵션으로)",
+        "SafeKit을 "
+      ],
+      [
+        "SafeKit (?=번들로)",
+        "SafeKit을 "
+      ],
+      [
+        "소프트웨어 게시자",
+        "소프트웨어 공급업체"
+      ],
+      [
+        "SafeKit은 (?=[^.\\n]*번들로 제공할 수)",
+        "SafeKit을 "
+      ],
+      [
+        "SafeKit (?=OEM [^.\\n]*?(?:으로|로) )",
+        "SafeKit을 "
+      ],
+      [
+        "배터리 관리 시스템",
+        "건물 관리 시스템"
+      ],
+      [
+        "타사 서버",
+        "세 번째 서버"
+      ],
+      [
+        "클러스터를 구성(은|이)",
+        "클러스터 구성\\1"
+      ],
+      [
+        "아키텍처 로(?=\\s|$)",
+        "아키텍처로"
+      ],
+      [
+        "분할 브레인",
+        "스플릿 브레인"
+      ],
+      [
+        "클러스터 (?=대규모로)",
+        "클러스터를 "
+      ],
+      [
+        "(^|[.!?]\\s+)SafeKit (?=(?:mirror|farm|<span[^>]*>farm</span>) 모듈과)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "SAN 이나",
+        "SAN이나"
+      ],
+      [
+        "VLAN 통해",
+        "VLAN을 통해"
+      ],
+      [
+        "\\b(SAN|VLAN|LAN|WAN)를",
+        "\\1을"
       ]
     ],
     "ja": [
@@ -2498,6 +2758,66 @@
       [
         "その他の雲",
         "その他のクラウド"
+      ],
+      [
+        "Hyper-V オーバー",
+        "Hyper-V フェイルオーバー"
+      ],
+      [
+        "SafeKit (?=OEM [^。\\n]*として)",
+        "SafeKit を "
+      ],
+      [
+        "ソフトウェア(?:出版社|パブリッシャー)",
+        "ソフトウェアベンダー"
+      ],
+      [
+        "SafeKit (?=カタログ)",
+        "SafeKit を"
+      ],
+      [
+        "SafeKit は(?=[^。\\n]*バンドルできます)",
+        "SafeKit を"
+      ],
+      [
+        "SafeKit (?=[^ 。、\\n]{1,15}に(?:導入|展開|デプロイ))",
+        "SafeKit を"
+      ],
+      [
+        "バッテリー管理システム",
+        "ビル管理システム"
+      ],
+      [
+        "サードサーバー",
+        "3 台目のサーバー"
+      ],
+      [
+        "あらゆるまたはオンプレミス",
+        "あらゆるクラウドまたはオンプレミス"
+      ],
+      [
+        "(\\d) つのリモートサーバー間",
+        "\\1 つのリモートサーバー室間"
+      ],
+      [
+        "のあらゆるブランチ",
+        "のあらゆる拠点"
+      ],
+      [
+        "ブランチオフィス",
+        "拠点"
+      ],
+      [
+        "(重要な)ブランチ(アプリケーション)",
+        "\\1拠点の\\2"
+      ],
+      [
+        "(^|[。．.]\\s*|\\\")SafeKit (?=(?:Windows|Linux) )",
+        "\\1SafeKit は "
+      ],
+      [
+        "(^|[。．.]\\s*|\\\")SafeKit (?=(?:\\d+|二|2) ?台)",
+        "\\1SafeKit は "
       ]
     ],
     "zh-hans": [
@@ -2560,6 +2880,38 @@
       [
         "\\.safe（([^）\\n]*)）(\\*?)",
         ".safe (\\1)\\2"
+      ],
+      [
+        "适用于 ([^\\s\\]]+(?: [^\\s\\]]+)*?) 虚拟机级",
+        "适用于 \\1 的虚拟机级"
+      ],
+      [
+        "软件(?:发布商|发行商)",
+        "软件供应商"
+      ],
+      [
+        "电池管理系统",
+        "楼宇管理系统"
+      ],
+      [
+        "阅读更多关于\\[([^\\]]+?)的\\]\\(([^)]*)\\)(?:信息)?。",
+        "阅读更多关于[\\1](\\2)的信息。"
+      ],
+      [
+        "可应对不同的场景",
+        "可应对不同的故障场景"
+      ],
+      [
+        "24/7 全天候正常(?!运行)",
+        "24/7 全天候正常运行"
+      ],
+      [
+        "(^|[。\\\"])计算站点",
+        "\\1边缘计算站点"
+      ],
+      [
+        "传统的可用性",
+        "传统的高可用性"
       ]
     ],
     "nl": [
@@ -2706,6 +3058,82 @@
       [
         "\\b([Aa])ndere wolken\\b",
         "\\1ndere clouds"
+      ],
+      [
+        "\\b(AWS|GCP|Azure) (replicatiecluster|loadbalancingcluster)",
+        "\\1-\\2"
+      ],
+      [
+        "\\bOEM (?=(?:aanbod|usecase|programma|partner)\\b)",
+        "OEM-"
+      ],
+      [
+        "\\((?:GBS)\\)",
+        "(BMS)"
+      ],
+      [
+        "\\bgebouwbezetters\\b",
+        "gebruikers van het gebouw"
+      ],
+      [
+        "\\bsplit brain brain(\\w+)",
+        "split-brain\\1"
+      ],
+      [
+        "\\b[Dd]e hoge beschikbaarheid van SafeKit clustering\\b",
+        "SafeKit-clustering voor hoge beschikbaarheid"
+      ],
+      [
+        "\\bon-premises omgeving",
+        "on-premises-omgeving"
+      ],
+      [
+        "\\bWindows of Linux-(?=[a-z])",
+        "Windows- of Linux-"
+      ],
+      [
+        "\\bWindows en Linux-(?=[a-z])",
+        "Windows- en Linux-"
+      ],
+      [
+        "\\bgeen gedeelde schijf, een ",
+        "geen gedeelde schijf, "
+      ],
+      [
+        "\\baan de rand\\b",
+        "aan de edge"
+      ],
+      [
+        "\\bOEM integratie\\b",
+        "OEM-integratie"
+      ],
+      [
+        "\\bLinux clusterkennis\\b",
+        "Linux-clusterkennis"
+      ],
+      [
+        "\\bSafeKit model\\b",
+        "SafeKit-model"
+      ],
+      [
+        "\\bSAN licenties\\b",
+        "SAN-licenties"
+      ],
+      [
+        "\\bCluster software\\b",
+        "Clustersoftware"
+      ],
+      [
+        "\\bcluster expertise\\b",
+        "clusterexpertise"
+      ],
+      [
+        "\\b([Cc])luster software\\b",
+        "\\1lustersoftware"
+      ],
+      [
+        "\\bSAN of NAS-",
+        "SAN- of NAS-"
       ]
     ]
   },

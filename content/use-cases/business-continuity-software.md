@@ -1,7 +1,7 @@
 ---
 title: "Standardizing High Availability for Distributed Enterprises with Many Branches"
 canonical: "https://safekit.eviden.com/use-cases/business-continuity-software/"
-description: "Secure every branch of your distributed enterprise with SafeKit. Deploy a standardized, software-only HA cluster at scale to ensure 24/7 uptime for critical branch applications. No shared storage, no complex SANs, and no on-site IT expertise required for Windows and Linux."
+description: "Secure every branch office of your distributed enterprise with SafeKit. Deploy a standardized, software-only high availability cluster at scale. Ensure 24/7 uptime for critical applications in every branch office. SafeKit runs on Windows and Linux. It requires no shared storage, no complex SAN, and no on-site IT expertise."
 category: "use-cases"
 lang: "en"
 topics: "Business continuity in a distributed enterprise, 🔍 Explore SafeKit"
@@ -11,21 +11,21 @@ topics: "Business continuity in a distributed enterprise, 🔍 Explore SafeKit"
 
 ## Business continuity in a distributed enterprise {#business-continuity-in-a-distributed-enterprise}
 
-### Business continuity in a distributed enterprise {#business-continuity-in-a-distributed-enterprise-1}
+### One standard high availability solution for many branch offices {#business-continuity-in-a-distributed-enterprise-1}
 
-Deploying dozens of clusters is not complicated with SafeKit.
-
-
-![Business continuity software solution in an Enterprise](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+A distributed enterprise runs the same critical applications in many branch offices. With SafeKit, deploying dozens of identical clusters is simple.
 
 
-### How to deploy a business continuity software without specific IT skills? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
+![business continuity software in a distributed enterprise](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
-Providing a business continuity solution in an Enterprise for multiple applications on Windows or Linux servers poses economical and organizational problems. SafeKit offers a simple and economical business continuity software for this case.
+
+### How to deploy business continuity software without specific IT skills? {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
+
+Providing business continuity for multiple applications on Windows or Linux servers in every branch office raises economic and organizational problems. SafeKit solves these problems with simple and cost-effective business continuity software.
 
 ### The SafeKit software: a simple solution for business continuity {#the-safekit-software-a-simple-solution-for-business-continuity}
 
-SafeKit offers two simple <span class="notranslate farm-term" translate="no">farm</span> and mirror modules to protect your critical applications against failures. The deployment is made on standard servers without the need for IT skills to manage the solution. There is no need for shared disk, replicated SAN, load balancers, Entreprise editions of Operating Systems or databases. 
+SafeKit offers two simple modules: the mirror module and the <span class="notranslate farm-term" translate="no">farm</span> module. They protect your critical applications against failures. You deploy them on standard servers, and you do not need IT skills to manage the solution. You do not need a shared disk, a replicated SAN, load balancers, or enterprise editions of operating systems or databases.
 
 
 {{%  insert-safekit-hub-en  %}}

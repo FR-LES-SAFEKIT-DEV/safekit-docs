@@ -1,31 +1,32 @@
 ---
 title: "توحيد معايير التوافر العالي للمؤسسات الموزعة ذات الفروع المتعددة"
 canonical: "https://safekit.eviden.com/ar/use-cases/business-continuity-software/"
-description: "احمِ جميع فروع مؤسستك الموزعة باستخدام SafeKit . انشر مجموعة خوادم عالية التوفر (HA) موحدة تعتمد على البرمجيات فقط، وعلى نطاق واسع لضمان استمرارية عمل تطبيقات الفروع الحيوية على مدار الساعة. لا حاجة إلى تخزين مشترك، أو شبكات تخزين معقدة (SANs)، أو خبرة تقنية معلومات في الموقع لـ Windows و Linux ."
+description: "قم بتأمين كل فرع من فروع مؤسستك الموزعة باستخدام SafeKit. انشر مجموعة عالية التوفر موحدة، تعتمد على البرامج فقط، على نطاق واسع. اضمن وقت تشغيل على مدار الساعة طوال أيام الأسبوع للتطبيقات الهامة في كل فرع. يعمل SafeKit على Windows و Linux. ولا يتطلب أي تخزين مشترك، ولا SAN معقدة، ولا خبرة تقنية في الموقع."
 category: "use-cases"
 lang: "ar"
-topics: "استمرارية الأعمال في مؤسسة موزعة، 🔍 استكشف SafeKit"
+topics: "استمرارية الأعمال في المؤسسات الموزعة، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 43 expressions"
 ---
 
 # توحيد معايير التوافر العالي للمؤسسات الموزعة ذات الفروع المتعددة {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}
 
-## استمرارية الأعمال في مؤسسة موزعة {#business-continuity-in-a-distributed-enterprise}
+## استمرارية الأعمال في المؤسسات الموزعة {#business-continuity-in-a-distributed-enterprise}
 
-### استمرارية الأعمال في مؤسسة موزعة {#business-continuity-in-a-distributed-enterprise-1}
+### حل قياسي واحد عالي التوافر للعديد من المكاتب الفرعية {#business-continuity-in-a-distributed-enterprise-1}
 
-إن نشر عشرات المجموعات ليس بالأمر المعقد مع SafeKit .
-
-
-![ حل برمجي لاستمرارية الأعمال في مؤسسة ](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
+تُشغِّل المؤسسة الموزعة نفس التطبيقات الهامة في العديد من المكاتب الفرعية. ومع SafeKit، أصبح نشر عشرات المجموعات المتطابقة أمرًا بسيطًا.
 
 
-### كيفية نشر برنامج استمرارية الأعمال بدون مهارات تقنية معلومات محددة؟ {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
+![برامج استمرارية الأعمال في المؤسسات الموزعة](/wp-content/uploads/2023/02/distributed-enterprise-1.png "w:300")
 
-يُشكّل توفير حلول استمرارية الأعمال في المؤسسات لتطبيقات متعددة على خوادم Windows أو Linux تحديات اقتصادية وتنظيمية. يوفر برنامج SafeKit حلاً بسيطاً واقتصادياً لاستمرارية الأعمال في هذه الحالة.
 
-### برنامج SafeKit : حل بسيط لاستمرارية الأعمال {#the-safekit-software-a-simple-solution-for-business-continuity}
+### كيفية نشر برامج استمرارية الأعمال دون مهارات تقنية معلومات محددة؟ {#how-to-deploy-a-business-continuity-software-without-specific-it-skills}
 
-يوفر SafeKit وحدتين بسيطتين <span class="notranslate farm-term" translate="no">farm</span> و mirror ، لحماية تطبيقاتك الحيوية من الأعطال. يتم النشر على خوادم قياسية دون الحاجة إلى مهارات تقنية لإدارة الحل. لا حاجة إلى قرص مشترك، أو شبكة تخزين مكررة، أو موازنات أحمال، أو إصدارات مؤسسية من أنظمة التشغيل أو قواعد البيانات. 
+إن توفير استمرارية الأعمال لتطبيقات متعددة على خوادم Windows أو Linux في كل مكتب فرعي يثير مشاكل اقتصادية وتنظيمية. يحل SafeKit هذه المشاكل ببرنامج بسيط وفعال من حيث التكلفة لاستمرارية الأعمال.
+
+### برنامج SafeKit: حل بسيط لاستمرارية الأعمال {#the-safekit-software-a-simple-solution-for-business-continuity}
+
+تقدم SafeKit وحدتين بسيطتين: وحدة mirror ووحدة <span class="notranslate farm-term" translate="no">farm</span>. وهما تحميان تطبيقاتك الهامة من الأعطال. يمكنك نشرهما على خوادم قياسية، ولا تحتاج إلى مهارات تقنية المعلومات لإدارة الحل. لا تحتاج إلى قرص مشترك، أو شبكة SAN مكررة، أو موازنات تحميل، أو إصدارات مؤسسية من أنظمة التشغيل أو قواعد البيانات.
 
 
 {{%  insert-safekit-hub-ar  %}}
