@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.13",
+  "version": "2026-11-17.18",
   "keep": [
     "mirror",
     "farm",
@@ -1186,6 +1186,10 @@
       [
         "\\b(RPO|RTO) ?= ?(\\d)",
         "\\1 = \\2"
+      ],
+      [
+        " et exploitation du métro",
+        " et l’exploitation du métro"
       ]
     ],
     "it": [
@@ -1308,6 +1312,10 @@
       [
         "\\bnon necessita (?=SAN\\b)",
         "non necessita di "
+      ],
+      [
+        "\\*\\* :(?=\\s)",
+        "**:"
       ]
     ],
     "es": [
@@ -1434,6 +1442,14 @@
       [
         "\\b(RPO|RTO) ?= ?(\\d)",
         "\\1 = \\2"
+      ],
+      [
+        "\\*\\* :(?=\\s)",
+        "**:"
+      ],
+      [
+        "Casos de uso del cliente",
+        "Casos de uso de clientes"
       ]
     ],
     "pt": [
@@ -1564,6 +1580,18 @@
       [
         "\\b(RPO|RTO) ?= ?(\\d)",
         "\\1 = \\2"
+      ],
+      [
+        "\\*\\* :(?=\\s)",
+        "**:"
+      ],
+      [
+        "Casos de [Uu]so do [Cc]liente",
+        "Casos de uso de clientes"
+      ],
+      [
+        "sem necessidade SAN",
+        "sem necessidade de SAN"
       ]
     ],
     "ar": [
@@ -1730,6 +1758,14 @@
       [
         "يعمل (Windows|Linux) أو",
         "يعمل بنظام \\1 أو"
+      ],
+      [
+        "SafeKit for Edge",
+        "SafeKit للحوسبة الطرفية"
+      ],
+      [
+        "\\((EACS|VMS|SCADA|BMS|OEM)،",
+        "(\\1)،"
       ]
     ],
     "de": [
@@ -2074,7 +2110,7 @@
         "automatisches Failover"
       ],
       [
-        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS) (?=(?:System|Systeme|Systems|Software|Speicher|Speichers|Anbieter|Markt|Lösung|Lösungen)\\b)",
+        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS) (?=(?:System|Systeme|Systems|Software|Speicher|Speichers|Anbieter|Markt|Lösung|Lösungen|Plattform|Plattformen)\\b)",
         "\\1-"
       ],
       [
@@ -2084,6 +2120,10 @@
       [
         "\\b(Windows) oder (Linux) (VMS|SCADA|BMS)\\b",
         "\\1- oder \\2-\\3"
+      ],
+      [
+        "Kundennutzungsfälle",
+        "Anwendungsfälle unserer Kunden"
       ]
     ],
     "ko": [
@@ -2578,6 +2618,22 @@
       [
         "(^|\")SafeKit (SCADA|EACS|BMS|VMS) 위한",
         "\\1SafeKit은 \\2를 위한"
+      ],
+      [
+        "(^|[.!?]\\s+)SafeKit (?=(?:서버|ATC|OCC|SCADA|EACS|BMS|VMS) [^.\\n]*니다\\.)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "\\*\\* (?=그 예(?:입니다|시입니다))",
+        "**가 "
+      ],
+      [
+        "(^|\")SafeKit (?=OEM )",
+        "\\1SafeKit은 "
+      ],
+      [
+        "(^|\")SafeKit (?=SAN )",
+        "\\1SafeKit은 "
       ]
     ],
     "ja": [
@@ -2954,12 +3010,24 @@
         "米国"
       ],
       [
-        "^SafeKit (?=SCADA|EACS|BMS|VMS)",
+        "^SafeKit (?=SCADA|EACS|BMS|VMS|ATC|OCC)",
         "SafeKit は "
       ],
       [
         "(^|[。．]\\s*)SafeKit (?=(?:SCADA|EACS|BMS|VMS) )",
         "\\1SafeKit は "
+      ],
+      [
+        "(📚)(?=\\*\\*)",
+        "\\1 "
+      ],
+      [
+        "(。\\s*)SafeKit (?=(?:SCADA|EACS|BMS|VMS|ATC|OCC) )",
+        "\\1SafeKit は "
+      ],
+      [
+        "SAN レス(?:の)?",
+        "SAN 不要の"
       ]
     ],
     "zh-hans": [
@@ -3330,7 +3398,7 @@
         "SAN-opslag"
       ],
       [
-        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS) (?=(?:software|systemen|systeem|opslag|leveranciers?|markt|oplossing(?:en)?)\\b)",
+        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS) (?=(?:software|systemen|systeem|opslag|leveranciers?|markt|oplossing(?:en)?|platforms?)\\b)",
         "\\1-"
       ],
       [

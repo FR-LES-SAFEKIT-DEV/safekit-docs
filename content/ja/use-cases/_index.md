@@ -1,11 +1,11 @@
 ---
 title: "顧客のユースケース"
 canonical: "https://safekit.eviden.com/ja/use-cases/"
-description: "SafeKit は、OEM ソフトウェア、エッジサイト、VMS、EACS、SCADA、BMS、航空交通管制、都市交通などの重要分野に、シンプルで SAN レスの高可用性を提供します。"
+description: "SafeKit は、SAN なしでシンプルな高可用性を提供します。重要なセクターを保護します。例としては、OEM ソフトウェア、エッジサイト、VMS、EACS、SCADA、BMS、航空交通管制、メトロオペレーションなどがあります。"
 category: "use-cases"
 lang: "ja"
-topics: "SafeKit のユースケース、🔍 SafeKit を詳しく見る"
-translation: "translate_md 2026-11-07.13 | glossaire 2026-11-07.10 | Translation LLM | 27 expressions"
+topics: "SafeKit ユースケース、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.18 | Translation LLM | 49 expressions"
 ---
 
 # 顧客のユースケース {#customer-use-cases}

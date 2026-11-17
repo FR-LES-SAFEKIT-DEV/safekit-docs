@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-17.2"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-17.3"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -100,6 +100,7 @@ S = "\x00"  # sentinelle interne
 
 GLOSSARY = {"keep": [], "replace": {}}
 APOS = False  # apostrophe typographique ’ (fr, it...)
+FRSP = False  # espace avant ; : ! ? (fr seulement)
 NATIVE = False  # ja/zh/ko : Google voit la traduction imposée (particules ajoutées naturellement)
 CJK = False   # chinois / japonais : ponctuation pleine chasse, espaces chinois-latin
 CJK_CHAR = "\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"
@@ -495,7 +496,7 @@ def decode(text, ctx):
     text = re.sub(r"([A-Za-zÀ-ÿ][’'])\s+(\*\*|\[)", r"\1\2", text)   # l' **adresse -> l'**adresse
     if ctx.apos:   # élision suivie d'une espace autour d'une expression imposée : "l’ architecture" -> "l’architecture"
         text = re.sub(r"(?<![\w’'])([lLdDjJmMnNsStTcC]|[Qq]u|[Uu]n|[Dd]ell|[Nn]ell|[Aa]ll|[Ss]ull|[Dd]all|[Qq]uell|[Ll]orsqu|[Pp]uisqu)([’'])\s+(?=[A-Za-zÀ-ÿ])", r"\1\2", text)
-    text = re.sub(r"\*\*([;:!?])", r"** \1", text) if ctx.apos else text  # espace avant ; : ! ?
+    text = re.sub(r"\*\*([;:!?])", r"** \1", text) if (ctx.apos and FRSP) else text  # espace avant ; : ! ? (fr seulement)
     if CJK:
         text = re.sub(f"\\s+([{CJK_PUNCT}])", r"\1", text)
         text = re.sub(r"([，。、；：！？])[ ]+(?=[`A-Za-z0-9<\[])", r"\1", text)   # 崩溃， `stop_prim`
@@ -721,10 +722,11 @@ def main():
     key = os.environ.get("GOOGLE_TRANSLATE_API_KEY")
     if not key and not a.dry_run:
         sys.exit("Variable GOOGLE_TRANSLATE_API_KEY absente.")
-    global APOS
+    global APOS, FRSP
     global CJK, NATIVE
     NATIVE = lang.split("-")[0] in ("zh", "ja", "ko")
     APOS = lang.split("-")[0] in ("fr", "it", "pt")
+    FRSP = lang.split("-")[0] == "fr"
     CJK = lang.split("-")[0] in ("zh", "ja")
     load_glossary(a.glossary, lang)
     raw = open(a.source, encoding="utf-8", newline="").read()
