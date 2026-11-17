@@ -5,7 +5,7 @@ description: "Versterk uw software met SafeKit. Als OEM-partner kunt u geautomat
 category: "use-cases"
 lang: "nl"
 topics: "De OEM-usecase voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"
-translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 49 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 ---
 
 # OEM Hoge beschikbaarheid: SafeKit Clustering in uw software integreren {#oem-high-availability-embedding-safekit-clustering-into-your-software}
@@ -24,15 +24,15 @@ SafeKit is niet afhankelijk van specifieke hardware. Het werkt met elke fysieke 
 
 Steeds meer softwareleveranciers bieden SafeKit als OEM-optie voor hoge beschikbaarheid in hun catalogus aan. Ze kiezen voor SafeKit omdat het eenvoudige en kosteneffectieve software voor applicatieclustering is.
 
-Als u een softwareleverancier bent en u hebt behoefte aan applicatieclustering die eenvoudig in uw eigen software kan worden ingebed, neem dan deel aan ons OEM-programma. U kunt SafeKit bundelen met uw softwareaanbod. Uw applicatie hoeft niet te worden aangepast.
+Als u een softwareleverancier bent en u hebt applicatieclustering nodig die eenvoudig in uw eigen software kan worden ingebed, neem dan deel aan ons OEM-programma. U kunt SafeKit bundelen met uw softwareaanbod. Uw applicatie hoeft niet te worden aangepast.
 
 ### Applicatieclustering met realtime replicatie, taakverdeling en failover {#application-clustering-with-real-time-replication-load-balancing-and-failover}
 
 De SafeKit-software biedt twee generieke modules voor applicatieclustering: de mirror-module en de <span class="notranslate farm-term" translate="no">farm</span>-module.
 
-De [mirror-module](/nl/product/#safekit-mirror-cluster) implementeert realtime bestandsreplicatie en applicatie-failover. Deze is geschikt voor applicaties met een database.
+De [mirror-module](/nl/architectures/file-replication-byte-level-with-failover-mirror-cluster/) implementeert real-time bestandsreplicatie en applicatie-failover. Deze is geschikt voor applicaties met een database.
 
-De [<span class="notranslate farm-term" translate="no">farm</span>-module](/nl/product/#safekit-farm-cluster) implementeert netwerktaakverdeling en applicatie-failover. Deze module is geschikt voor applicaties met webservices.
+De [<span class="notranslate farm-term" translate="no">farm</span>-module](/nl/architectures/network-load-balancing-cluster/) implementeert netwerktaakverdeling en applicatie-failover. Deze is geschikt voor applicaties met webservices.
 
 U kunt ook beide modules combineren.
 

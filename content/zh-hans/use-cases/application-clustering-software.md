@@ -1,11 +1,11 @@
 ---
 title: "OEM 高可用性：将 SafeKit 集群技术嵌入您的软件"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/application-clustering-software/"
-description: "使用 SafeKit 为您的软件赋能。作为 OEM 合作伙伴，您可以将自动故障转移和同步复制直接嵌入到您的应用程序中。在 Windows 和 Linux 上为您的客户提供 24/7 全天候正常运行时间，而无需复杂的硬件集群。"
+description: "使用 SafeKit 增强您的软件功能。作为 OEM 合作伙伴，您可以将自动故障转移和同步复制直接嵌入到您的应用程序中。在 Windows 和 Linux 上为您的客户提供 24/7 全天候正常运行时间，而无需复杂的硬件集群。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "OEM 高可用性用例、🔍 探索 SafeKit"
-translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 50 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 51 expressions"
 ---
 
 # OEM 高可用性：将 SafeKit 集群技术嵌入您的软件 {#oem-high-availability-embedding-safekit-clustering-into-your-software}
@@ -20,7 +20,7 @@ SafeKit 不依赖于特定的硬件。它适用于任何物理或虚拟服务器
 ![使用 SafeKit 的应用程序集群软件](/wp-content/uploads/2023/02/application-clustering-software-3.png "w:250")
 
 
-### 面向软件供应商的简单且经济实惠的应用程序集群软件 {#simple-and-economical-application-clustering-software-for-a-software-publisher}
+### 面向软件供应商的简单且经济高效的应用程序集群软件 {#simple-and-economical-application-clustering-software-for-a-software-publisher}
 
 越来越多的软件供应商在其产品目录中提供 SafeKit 作为 OEM 高可用性选项。他们选择 SafeKit 是因为它是一款简单且经济高效的应用程序集群软件。
 
@@ -30,9 +30,9 @@ SafeKit 不依赖于特定的硬件。它适用于任何物理或虚拟服务器
 
 SafeKit 软件为应用程序集群提供了两个通用模块：mirror 模块和 <span class="notranslate farm-term" translate="no">farm</span> 模块。
 
-[mirror 模块](/zh-hans/product/#safekit-mirror-cluster)实现实时文件复制和应用程序故障转移。它适用于具有数据库的应用程序。
+[mirror 模块](/zh-hans/architectures/file-replication-byte-level-with-failover-mirror-cluster/)实现实时文件复制和应用程序故障转移。它适用于具有数据库的应用程序。
 
-该[<span class="notranslate farm-term" translate="no">farm</span> 模块](/zh-hans/product/#safekit-farm-cluster)实现了网络负载均衡和应用故障转移。它适用于具有 Web 服务的应用程序。
+该[<span class="notranslate farm-term" translate="no">farm</span> 模块](/zh-hans/architectures/network-load-balancing-cluster/)实现了网络负载均衡和应用故障转移。它适用于具有 Web 服务的应用程序。
 
 您也可以同时使用这两个模块。
 

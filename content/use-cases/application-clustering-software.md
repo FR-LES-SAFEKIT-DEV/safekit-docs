@@ -29,9 +29,9 @@ If you are a software vendor and you need application clustering that is easy to
 
 The SafeKit software offers two generic modules for application clustering: the mirror module and the <span class="notranslate farm-term" translate="no">farm</span> module.
 
-The [mirror module](/product/#safekit-mirror-cluster) implements real-time file replication and application failover. It is suited for applications with a database.
+The [mirror module](/architectures/file-replication-byte-level-with-failover-mirror-cluster/) implements real-time file replication and application failover. It is suited for applications with a database.
 
-The [<span class="notranslate farm-term" translate="no">farm</span> module](/product/#safekit-farm-cluster) implements network load balancing and application failover. It is suited for applications with web services.
+The [<span class="notranslate farm-term" translate="no">farm</span> module](/architectures/network-load-balancing-cluster/) implements network load balancing and application failover. It is suited for applications with web services.
 
 You can also combine both modules.
 

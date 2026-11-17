@@ -5,14 +5,14 @@ description: "عزّز برامجك باستخدام SafeKit. بصفتك شري�
 category: "use-cases"
 lang: "ar"
 topics: "حالة استخدام التوافر العالي OEM، 🔍 استكشف SafeKit"
-translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 43 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 43 expressions"
 ---
 
 # التوافر العالي OEM: تضمين تجميع SafeKit في برامجك {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
 ## حالة استخدام التوافر العالي OEM {#the-oem-high-availability-use-case}
 
-### حل عالي التوافر يعتمد على البرامج فقط {#a-software-only-high-availability-solution}
+### حل عالي التوافر يعتمد على البرمجيات فقط {#a-software-only-high-availability-solution}
 
 لا يعتمد SafeKit على أجهزة معينة. فهو يعمل مع أي خادم مادي أو افتراضي.
 
@@ -30,9 +30,9 @@ translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation L
 
 يوفر برنامج SafeKit وحدتين عامتين لتجميع التطبيقات: وحدة mirror ووحدة <span class="notranslate farm-term" translate="no">farm</span>.
 
-تنفذ [وحدة mirror](/ar/product/#safekit-mirror-cluster) النسخ المتماثل للملفات في الوقت الفعلي وتجاوز الأعطال للتطبيقات. وهي مناسبة للتطبيقات التي تحتوي على قاعدة بيانات.
+تنفذ [وحدة mirror](/ar/architectures/file-replication-byte-level-with-failover-mirror-cluster/) النسخ المتماثل للملفات في الوقت الفعلي وتجاوز الأعطال للتطبيقات. وهي مناسبة للتطبيقات التي تحتوي على قاعدة بيانات.
 
-تنفذ [وحدة <span class="notranslate farm-term" translate="no">farm</span>](/ar/product/#safekit-farm-cluster) موازنة تحميل الشبكة وتجاوز الأعطال للتطبيقات. وهي مناسبة للتطبيقات التي تحتوي على خدمات ويب.
+تنفذ [وحدة <span class="notranslate farm-term" translate="no">farm</span>](/ar/architectures/network-load-balancing-cluster/) موازنة تحميل الشبكة وتجاوز الأعطال للتطبيقات. وهي مناسبة للتطبيقات التي تحتوي على خدمات ويب.
 
 يمكنك أيضًا الجمع بين كلتا الوحدتين.
 

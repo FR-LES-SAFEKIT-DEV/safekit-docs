@@ -1,11 +1,11 @@
 ---
 title: "OEM-Hochverfügbarkeit: SafeKit-Clustering in Ihre Software einbetten"
 canonical: "https://safekit.eviden.com/de/use-cases/application-clustering-software/"
-description: "Erweitern Sie Ihre Software mit SafeKit. Als OEM-Partner können Sie automatisierte Failover und synchrone Replikation direkt in Ihre Anwendung einbetten. Bieten Sie Ihren Kunden eine Betriebszeit von 24/7 unter Windows und Linux ohne die Komplexität von Hardware-Clustern."
+description: "Erweitern Sie Ihre Software mit SafeKit. Als OEM-Partner können Sie automatisierte Failover und synchrone Replikation direkt in Ihre Anwendung einbetten. Bieten Sie Ihren Kunden eine 24/7-Verfügbarkeit unter Windows und Linux ohne die Komplexität von Hardware-Clustern."
 category: "use-cases"
 lang: "de"
 topics: "Der OEM-Anwendungsfall für Hochverfügbarkeit, 🔍 SafeKit entdecken"
-translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 47 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 47 expressions"
 ---
 
 # OEM-Hochverfügbarkeit: SafeKit-Clustering in Ihre Software einbetten {#oem-high-availability-embedding-safekit-clustering-into-your-software}
@@ -30,9 +30,9 @@ Wenn Sie ein Softwareanbieter sind und ein Anwendungsclustering benötigen, das 
 
 Die SafeKit-Software bietet zwei generische Module für das Anwendungs-Clustering: das Mirror-Modul und das <span class="notranslate farm-term" translate="no">Farm</span>-Modul.
 
-Das [Mirror-Modul](/de/product/#safekit-mirror-cluster) implementiert die Dateireplikation in Echtzeit und das Anwendungsfailover. Es eignet sich für Anwendungen mit einer Datenbank.
+Das [Mirror-Modul](/de/architectures/file-replication-byte-level-with-failover-mirror-cluster/) implementiert die Dateireplikation in Echtzeit und das Anwendungs-Failover. Es eignet sich für Anwendungen mit einer Datenbank.
 
-Das [<span class="notranslate farm-term" translate="no">Farm</span>-Modul](/de/product/#safekit-farm-cluster) implementiert Lastausgleich und Anwendungsfailover. Es eignet sich für Anwendungen mit Webdiensten.
+Das [<span class="notranslate farm-term" translate="no">Farm</span>-Modul](/de/architectures/network-load-balancing-cluster/) implementiert die Netzwerklastverteilung und die Anwendungsfailover. Es ist für Anwendungen mit Webdiensten geeignet.
 
 Sie können auch beide Module kombinieren.
 

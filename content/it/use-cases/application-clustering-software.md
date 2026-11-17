@@ -5,7 +5,7 @@ description: "Potenzia il tuo software con SafeKit. In qualità di partner OEM, 
 category: "use-cases"
 lang: "it"
 topics: "Il caso d’uso OEM per l’alta disponibilità, 🔍 Esplora SafeKit"
-translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 40 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 40 expressions"
 ---
 
 # Alta disponibilità OEM: integrazione del clustering SafeKit nel software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
@@ -30,9 +30,9 @@ Se sei un fornitore di software e hai bisogno di un clustering di applicazioni f
 
 Il software SafeKit offre due moduli generici per il clustering delle applicazioni: il modulo mirror e il modulo <span class="notranslate farm-term" translate="no">farm</span>.
 
-Il [modulo mirror](/it/product/#safekit-mirror-cluster) implementa la replica dei file in tempo reale e il failover delle applicazioni. È adatto per applicazioni con un database.
+Il [modulo mirror](/it/architectures/file-replication-byte-level-with-failover-mirror-cluster/) implementa la replica dei file in tempo reale e il failover delle applicazioni. È adatto per applicazioni con un database.
 
-Il [modulo <span class="notranslate farm-term" translate="no">farm</span>](/it/product/#safekit-farm-cluster) implementa il bilanciamento del carico di rete e il failover delle applicazioni. È adatto per applicazioni con servizi web.
+Il [modulo <span class="notranslate farm-term" translate="no">farm</span>](/it/architectures/network-load-balancing-cluster/) implementa il bilanciamento del carico di rete e il failover delle applicazioni. È adatto per applicazioni con servizi web.
 
 È possibile combinare entrambi i moduli.
 

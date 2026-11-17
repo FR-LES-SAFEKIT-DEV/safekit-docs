@@ -1,14 +1,14 @@
 ---
-title: "Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit ao seu Software"
+title: "Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit ao Seu Software"
 canonical: "https://safekit.eviden.com/pt-br/use-cases/application-clustering-software/"
 description: "Capacite seu software com SafeKit. Como parceiro OEM, você pode incorporar o failover automatizado e a replicação síncrona diretamente em seu aplicativo. Ofereça aos seus clientes disponibilidade 24 horas por dia, 7 dias por semana, no Windows e Linux, sem a complexidade dos clusters de hardware."
 category: "use-cases"
 lang: "pt-br"
 topics: "O caso de uso de alta disponibilidade OEM, 🔍 Explore SafeKit"
-translation: "translate_md 2026-11-16.3 | glossaire 2026-11-16.5 | Translation LLM | 50 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 ---
 
-# Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit ao seu Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
+# Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit ao Seu Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
 ## O caso de uso de alta disponibilidade OEM {#the-oem-high-availability-use-case}
 
@@ -30,9 +30,9 @@ Se você é um fornecedor de software e precisa de um sistema de cluster de apli
 
 O software SafeKit oferece dois módulos genéricos para o agrupamento de aplicações: o módulo mirror e o módulo <span class="notranslate farm-term" translate="no">farm</span>.
 
-O [módulo mirror](/pt-br/product/#safekit-mirror-cluster) implementa a replicação de arquivos em tempo real e o failover de aplicativos. Ele é adequado para aplicativos com um banco de dados.
+O [módulo mirror](/pt-br/architectures/file-replication-byte-level-with-failover-mirror-cluster/) implementa a replicação de arquivos em tempo real e o failover de aplicativos. Ele é adequado para aplicativos com um banco de dados.
 
-O [módulo <span class="notranslate farm-term" translate="no">farm</span>](/pt-br/product/#safekit-farm-cluster) implementa o balanceamento de carga da rede e o failover de aplicativos. Ele é adequado para aplicativos com serviços web.
+O [módulo <span class="notranslate farm-term" translate="no">farm</span>](/pt-br/architectures/network-load-balancing-cluster/) implementa o balanceamento de carga da rede e o failover de aplicativos. Ele é adequado para aplicativos com serviços web.
 
 Você também pode combinar os dois módulos.
 
