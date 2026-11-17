@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.26",
+  "version": "2026-11-17.30",
   "keep": [
     "mirror",
     "farm",
@@ -20,6 +20,7 @@
     "WAIT",
     "UP",
     "DOWN",
+    "OEMs",
     "OEM",
     "Eviden",
     "Evidian",
@@ -1202,6 +1203,10 @@
       [
         "(Supervision des opérations de sécurité et) l’information",
         "\\1 de l’information"
+      ],
+      [
+        "\\bOEMs\\b",
+        "OEM"
       ]
     ],
     "it": [
@@ -1332,6 +1337,10 @@
       [
         "\\[ridondanza\\b",
         "[Ridondanza"
+      ],
+      [
+        "\\bOEMs\\b",
+        "OEM"
       ]
     ],
     "es": [
@@ -1822,6 +1831,10 @@
       [
         "شبكات? مناطق? التخزين \\(?SAN\\)?",
         "SAN"
+      ],
+      [
+        "\\bOEMs\\b",
+        "OEM"
       ]
     ],
     "de": [
@@ -2166,7 +2179,7 @@
         "automatisches Failover"
       ],
       [
-        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS) (?=(?:System|Systeme|Systems|Software|Speicher|Speichers|Anbieter|Markt|Lösung|Lösungen|Plattform|Plattformen)\\b)",
+        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS|OCC|ATC) (?=(?:System|Systeme|Systems|Software|Speicher|Speichers|Anbieter|Markt|Lösung|Lösungen|Plattform|Plattformen|Steuerungssystem|Steuerungssysteme|Ausfall|Ausfälle|Dienst|Dienste|Anwendung|Anwendungen|Server|Umgebung|Umgebungen|Betreiber|Hersteller)\\b)",
         "\\1-"
       ],
       [
@@ -2228,6 +2241,14 @@
       [
         "\\b(VMS|EACS|BMS|SCADA) Redundanz",
         "\\1-Redundanz"
+      ],
+      [
+        "\\(BKZ\\)",
+        "(OCC)"
+      ],
+      [
+        "\\bdie BKZ\\b",
+        "die OCC"
       ]
     ],
     "ko": [
@@ -2758,6 +2779,22 @@
       [
         "SafeKit (?=선택된)",
         "SafeKit이 "
+      ],
+      [
+        "\\bOEMs (위한|을 위한)",
+        "OEM을 위한"
+      ],
+      [
+        "\\bOEMs\\b",
+        "OEM"
+      ],
+      [
+        "SafeKit (?=[^.\\n]{0,20}옵션으로 [^.\\n]*추가)",
+        "SafeKit을 "
+      ],
+      [
+        "(^|[.!?]\\s+)(?:은|는) (?=[^.\\n]*솔루션입니다)",
+        "\\1SafeKit은 "
       ]
     ],
     "ja": [
@@ -3180,6 +3217,14 @@
       [
         "アクティブ/(アクティブ|パッシブ)(?=[^\\n]*アクティブ/\\1クラスター)",
         ""
+      ],
+      [
+        "\\bOEMs\\b",
+        "OEM"
+      ],
+      [
+        "SafeKit は(?=\\s*カタログに)",
+        "SafeKit を"
       ]
     ],
     "zh-hans": [
@@ -3326,6 +3371,14 @@
       [
         "功能双活集群",
         "功能的双活集群"
+      ],
+      [
+        "\\bOEMs\\b",
+        "OEM"
+      ],
+      [
+        "的下(?=[，,。])",
+        "的情况下"
       ]
     ],
     "nl": [
@@ -3608,6 +3661,10 @@
       [
         "\\b(VMS|EACS|BMS|SCADA) redundantie",
         "\\1-redundantie"
+      ],
+      [
+        "\\bOEMs\\b",
+        "OEM's"
       ]
     ],
     "pt-br": [
