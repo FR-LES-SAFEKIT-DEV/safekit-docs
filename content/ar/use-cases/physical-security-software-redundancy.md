@@ -1,10 +1,11 @@
 ---
 title: "التوافر العالي والتكرار لبرامج الأمن المادي"
 canonical: "https://safekit.eviden.com/ar/use-cases/physical-security-software-redundancy/"
-description: "يضمن SafeKit استمرارية عمل أنظمة الأمان الحيوية بنسبة 100%. وهو عبارة عن مجموعة برمجية ثنائية العقد، لا تعتمد على شبكة تخزين (SAN)، توفر نسخًا متزامنًا فوريًا وتجاوزًا تلقائيًا للأعطال لأنظمة إدارة الفيديو ( Milestone ، من Genetec)، وأنظمة التحكم في الوصول ( Nedap ، من Siemens)، وأنظمة SCADA. كما يوفر Windows و Linux نظام تكرار بسيطًا ومستقلًا عن نوع الأجهزة، دون تعقيدات التخزين التقليدية عبر شبكة التخزين (SAN)."
+description: "يحافظ SafeKit على توفر أنظمة الأمان الهامة على مدار الساعة طوال أيام الأسبوع. وهو عبارة عن مجموعة برمجيات ثنائية العقدة بدون شبكة منطقة التخزين (SAN). ويوفر النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لأنظمة إدارة الفيديو (Milestone، Genetec)، والتحكم في الوصول (Nedap، Siemens)، وأنظمة SCADA. يعمل هذا التكرار البسيط مع أي جهاز على نظامي التشغيل Windows و Linux، دون تعقيد تخزين SAN)."
 category: "use-cases"
 lang: "ar"
-topics: "يوفر SafeKit حلّين لضمان التكرار والتوافر العالي لبرامج الأمان المادي، 🔍 استكشف SafeKit"
+topics: "تقدم SafeKit حلولاً مزدوجة لتحقيق التكرار والتوافر العالي لبرامج الأمان المادية.، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 43 expressions"
 ---
 
 # التوافر العالي والتكرار لبرامج الأمن المادي {#high-availability-and-redundancy-for-physical-security-software}

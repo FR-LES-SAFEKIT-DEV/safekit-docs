@@ -1,21 +1,22 @@
 ---
-title: "Hochverfügbarkeitssoftware: Windows und Linux Clustering mit SafeKit"
+title: "Hochverfügbarkeitssoftware: Windows- und Linux-Clustering mit SafeKit"
 canonical: "https://safekit.eviden.com/de/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "Sichern Sie Ihre kritischen Anwendungen mit SafeKit , der führenden Hochverfügbarkeitssoftware für Windows und Linux . Erstellen Sie mühelos HA-Cluster ohne gemeinsam genutzten Speicher oder komplexe SANs. Profitieren Sie von Echtzeitreplikation, Failover und Lastausgleich in einer einzigen, einfachen, softwaredefinierten Lösung."
+description: "SafeKit ist die führende Hochverfügbarkeitssoftware für Windows und Linux. Sie schützt Ihre kritischen Anwendungen. Sie können problemlos HA-Cluster ohne Shared Storage oder ein komplexes SAN erstellen. Eine einfache Softwarelösung bietet Echtzeit-Replikation, Failover und Lastausgleich."
 category: "use-cases"
 lang: "de"
-topics: "Elevator Pitch in 30 Sekunden für SafeKit , 🔍 SafeKit entdecken"
+topics: "30-Sekunden-Elevator-Pitch für SafeKit, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 47 expressions"
 ---
 
-# Hochverfügbarkeitssoftware: Windows und Linux Clustering mit SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Hochverfügbarkeitssoftware: Windows- und Linux-Clustering mit SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
 ## 30-Sekunden-Elevator-Pitch für SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [ SafeKit Video: 30s Pitch (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [SafeKit-Video: 30-Sekunden-Pitch (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
-  * Sam ist für kritische Anwendungen verantwortlich.
-  * Kritische Anwendungen sind nicht mehr verfügbar!
-  * SafeKit gewährleistet 24/7-Verfügbarkeit mit sofortigem Failover
+  * Sam ist für geschäftskritische Anwendungen zuständig.
+  * Plötzlich sind die kritischen Anwendungen nicht mehr verfügbar!
+  * Mit sofortiger Failover-Funktion hält SafeKit die Anwendungen rund um die Uhr verfügbar.
 
 
 

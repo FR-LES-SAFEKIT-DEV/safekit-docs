@@ -1,7 +1,7 @@
 ---
 title: "High Availability Software: Windows and Linux Clustering with SafeKit"
 canonical: "https://safekit.eviden.com/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "Secure your critical applications with SafeKit, the leading high availability software for Windows and Linux. Easily create HA clusters without shared storage or complex SANs. Benefit from real-time replication, failover, and load balancing in one simple, software-defined solution."
+description: "SafeKit is the leading high availability software for Windows and Linux. It protects your critical applications. You can easily create HA clusters without shared storage or a complex SAN. One simple software solution provides real-time replication, failover, and load balancing."
 category: "use-cases"
 lang: "en"
 topics: "30 seconds elevator pitch for SafeKit, 🔍 Explore SafeKit"
@@ -11,11 +11,11 @@ topics: "30 seconds elevator pitch for SafeKit, 🔍 Explore SafeKit"
 
 ## 30 seconds elevator pitch for SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [SafeKit Video: 30s Pitch (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [SafeKit video: 30-second pitch (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
-  * Sam is responsible for critical applications
-  * Critical applications are no longer available!
-  * SafeKit ensures 24/7 uptime with instant failover
+  * Sam is responsible for critical applications.
+  * Suddenly, the critical applications are no longer available!
+  * With instant failover, SafeKit keeps the applications available 24/7.
 
 
 

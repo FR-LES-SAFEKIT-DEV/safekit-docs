@@ -1,21 +1,22 @@
 ---
-title: "高可用性ソフトウェア: WindowsとLinuxクラスタリングとSafeKitの連携"
+title: "高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング"
 canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "WindowsおよびLinux向けの高可用性ソフトウェアであるSafeKitを使用して、重要なアプリケーションを保護しましょう。共有ストレージや複雑なSANを使用せずに、簡単にHAクラスタを構築できます。シンプルなソフトウェア定義ソリューションで、リアルタイムレプリケーション、フェイルオーバー、ロードバランシングのメリットを享受できます。"
+description: "SafeKit は、Windows および Linux 向けの主要な高可用性ソフトウェアです。重要なアプリケーションを保護します。共有ストレージや複雑な SAN なしで、簡単に HA クラスターを作成できます。1 つのシンプルなソフトウェアソリューションで、リアルタイムレプリケーション、フェイルオーバー、ロードバランシングを提供します。"
 category: "use-cases"
 lang: "ja"
-topics: "SafeKit 、🔍 SafeKit を探索する"
+topics: "SafeKit の 30 秒エレベーターピッチ、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 49 expressions"
 ---
 
-# 高可用性ソフトウェア: WindowsとLinuxクラスタリングとSafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# 高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## SafeKitの30秒エレベーターピッチ {#30-seconds-elevator-pitch-for-safekit}
+## SafeKit の 30 秒エレベーターピッチ {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [ SafeKit動画: 30秒ピッチ (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [SafeKit 動画：30 秒間のプレゼンテーション (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
-  * サムは重要なアプリケーションを担当しています
-  * 重要なアプリケーションが利用できなくなりました！
-  * SafeKit 、即時フェイルオーバーにより24時間365日の稼働を保証します。
+  * サムは重要なアプリケーションを担当しています。
+  * 突然、重要なアプリケーションが利用できなくなりました！
+  * SafeKit はインスタントフェイルオーバーにより、アプリケーションを 24 時間年中無休で利用可能に保ちます。
 
 
 

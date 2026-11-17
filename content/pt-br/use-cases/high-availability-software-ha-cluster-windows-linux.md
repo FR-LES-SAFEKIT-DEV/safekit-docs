@@ -1,21 +1,22 @@
 ---
-title: "Software de Alta Disponibilidade: Clustering Windows e Linux com SafeKit"
+title: "Software de Alta Disponibilidade: Clusterização Windows e Linux com SafeKit"
 canonical: "https://safekit.eviden.com/pt-br/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "Proteja suas aplicações críticas com SafeKit , o software líder em alta disponibilidade para Windows e Linux . Crie clusters de alta disponibilidade facilmente, sem armazenamento compartilhado ou SANs complexas. Beneficie-se da replicação em tempo real, failover e balanceamento de carga em uma solução simples e definida por software."
+description: "SafeKit é o software líder em alta disponibilidade para Windows e Linux. Ele protege suas aplicações críticas. Você pode criar facilmente clusters de alta disponibilidade sem armazenamento compartilhado ou uma SAN complexa. Uma solução de software simples oferece replicação em tempo real, failover e balanceamento de carga."
 category: "use-cases"
 lang: "pt-br"
-topics: "Apresentação relâmpago de 30 segundos para SafeKit , 🔍 Explore o SafeKit"
+topics: "Apresentação rápida de 30 segundos do SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 50 expressions"
 ---
 
-# Software de Alta Disponibilidade: Clustering Windows e Linux com SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Software de Alta Disponibilidade: Clusterização Windows e Linux com SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## Apresentação relâmpago de 30 segundos para SafeKit {#30-seconds-elevator-pitch-for-safekit}
+## Apresentação rápida de 30 segundos do SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [ SafeKit Vídeo: Tom de 30s (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [Vídeo SafeKit: Apresentação de 30 segundos (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
-  * Sam é responsável por aplicações críticas.
-  * Os aplicativos críticos não estão mais disponíveis!
-  * SafeKit garante disponibilidade 24 horas por dia, 7 dias por semana, com failover instantâneo.
+  * Sam é responsável pelas aplicações críticas.
+  * De repente, os aplicativos essenciais não estão mais disponíveis!
+  * Com o failover instantâneo, SafeKit mantém os aplicativos disponíveis 24 horas por dia, 7 dias por semana.
 
 
 

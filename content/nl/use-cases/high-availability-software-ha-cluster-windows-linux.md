@@ -1,21 +1,22 @@
 ---
-title: "Software voor hoge beschikbaarheid: Windows en Linux clustering met SafeKit"
+title: "Software voor hoge beschikbaarheid: Windows- en Linux-clustering met SafeKit"
 canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "Beveilig uw kritieke applicaties met SafeKit , de toonaangevende software voor hoge beschikbaarheid (HA) voor Windows en Linux . Creëer eenvoudig HA-clusters zonder gedeelde opslag of complexe SAN's. Profiteer van realtime replicatie, failover en load balancing in één simpele, softwarematige oplossing."
+description: "SafeKit is de toonaangevende software voor hoge beschikbaarheid voor Windows en Linux. Het beschermt uw bedrijfskritische applicaties. U kunt eenvoudig HA-clusters creëren zonder gedeelde opslag of een complexe SAN. Eén eenvoudige softwareoplossing biedt real-time replicatie, failover en load balancing."
 category: "use-cases"
 lang: "nl"
-topics: "Korte presentatie (30 seconden) voor SafeKit , 🔍 Ontdek SafeKit"
+topics: "Elevatorpitch van 30 seconden voor SafeKit, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 49 expressions"
 ---
 
-# Software voor hoge beschikbaarheid: Windows en Linux clustering met SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Software voor hoge beschikbaarheid: Windows- en Linux-clustering met SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## Een korte presentatie van 30 seconden voor SafeKit {#30-seconds-elevator-pitch-for-safekit}
+## Elevatorpitch van 30 seconden voor SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [ SafeKit Video: 30s Pitch (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [SafeKit-video: pitch van 30 seconden (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
-  * Sam is verantwoordelijk voor kritieke applicaties.
-  * Essentiële applicaties zijn niet langer beschikbaar!
-  * SafeKit garandeert 24/7 beschikbaarheid met directe failover.
+  * Sam is verantwoordelijk voor bedrijfskritische applicaties.
+  * Plotseling zijn de bedrijfskritische applicaties niet meer beschikbaar!
+  * Met directe failover zorgt SafeKit ervoor dat de applicaties 24/7 beschikbaar blijven.
 
 
 

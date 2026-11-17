@@ -1,7 +1,7 @@
 ---
 title: "High Availability and Redundancy for Physical Security Software"
 canonical: "https://safekit.eviden.com/use-cases/physical-security-software-redundancy/"
-description: "Ensure 100% uptime for critical security systems with SafeKit. A SANless, 2-node software cluster providing real-time synchronous replication and automatic failover for VMS (Milestone, Genetec), Access Control (Nedap, Siemens), and SCADA. Simple, hardware-agnostic redundancy for Windows and Linux without the complexity of traditional SAN storage."
+description: "SafeKit keeps critical security systems available 24/7. It is a 2-node software cluster with no SAN. It provides real-time synchronous replication and automatic failover for video management systems (Milestone, Genetec), access control (Nedap, Siemens), and SCADA. This simple redundancy works with any hardware on Windows and Linux, without the complexity of SAN storage."
 category: "use-cases"
 lang: "en"
 topics: "SafeKit brings two solutions for redundancy and high availability of a physical security software, 🔍 Explore SafeKit"

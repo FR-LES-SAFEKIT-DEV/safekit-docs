@@ -1,13 +1,14 @@
 ---
-title: "Hochverfügbarkeit und Redundanz für physische Sicherheitssoftware"
+title: "Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit"
 canonical: "https://safekit.eviden.com/de/use-cases/physical-security-software-redundancy/"
-description: "Gewährleisten Sie mit SafeKit die hundertprozentige Verfügbarkeit Ihrer kritischen Sicherheitssysteme. Ein SAN-loser 2-Knoten-Softwarecluster bietet synchrone Echtzeitreplikation und automatisches Failover für VMS ( Milestone , Genetec), Zutrittskontrolle ( Nedap , Siemens) und SCADA. Einfache, hardwareunabhängige Redundanz für Windows und Linux ohne die Komplexität herkömmlicher SAN-Speicher."
+description: "SafeKit hält kritische Sicherheitssysteme rund um die Uhr verfügbar. Es handelt sich um einen 2-Knoten-Softwarecluster ohne SAN. Er bietet synchrone Replikation in Echtzeit und automatische Failover-Funktionen für Videomanagementsysteme (Milestone, Genetec), Zutrittskontrollsysteme (Nedap, Siemens) und SCADA. Diese einfache Redundanz funktioniert mit jeder Hardware unter Windows und Linux, ohne die Komplexität von SAN-Speichern."
 category: "use-cases"
 lang: "de"
-topics: "SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit physischer Sicherheitssoftware: 🔍 SafeKit entdecken"
+topics: "SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit einer physischen Sicherheitssoftware., 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 47 expressions"
 ---
 
-# Hochverfügbarkeit und Redundanz für physische Sicherheitssoftware {#high-availability-and-redundancy-for-physical-security-software}
+# Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit {#high-availability-and-redundancy-for-physical-security-software}
 
 
 {{%  insert-safekit-security-solutions-de app="physical security"  %}}

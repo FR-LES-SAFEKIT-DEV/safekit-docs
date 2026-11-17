@@ -1,21 +1,22 @@
 ---
-title: "برنامج عالي التوافر: Windows و Linux التجميع مع SafeKit"
+title: "برامج التوافر العالي: تجميع خوادم Windows و Linux باستخدام SafeKit"
 canonical: "https://safekit.eviden.com/ar/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "احمِ تطبيقاتك الحيوية باستخدام SafeKit ، البرنامج الرائد في مجال التوافر العالي لـ Windows و Linux . أنشئ مجموعات عالية التوافر بسهولة دون الحاجة إلى تخزين مشترك أو شبكات تخزين معقدة. استفد من النسخ المتماثل في الوقت الفعلي، والتحويل التلقائي في حالة الأعطال، وموازنة الأحمال في حل واحد بسيط مُعرّف برمجياً."
+description: "يُعد SafeKit برنامج التوافر العالي الرائد لأنظمة Windows و Linux. فهو يحمي تطبيقاتك الهامة. يمكنك بسهولة إنشاء مجموعات عالية التوافر دون الحاجة إلى تخزين مشترك أو شبكة SAN معقدة. يوفر حل برمجي واحد بسيط النسخ المتماثل في الوقت الفعلي، وتجاوز الأعطال، وموازنة التحميل."
 category: "use-cases"
 lang: "ar"
-topics: "عرض تقديمي موجز مدته 30 ثانية لمركز الملاحة عالي التوفر SafeKit ، 🔍 استكشف SafeKit"
+topics: "عرض تقديمي موجز لـ SafeKit في 30 ثانية، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 43 expressions"
 ---
 
-# برنامج التوافر العالي: Windows و Linux التجميع مع SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# برامج التوافر العالي: تجميع خوادم Windows و Linux باستخدام SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## عرض تقديمي موجز مدته 30 ثانية لـ SafeKit {#30-seconds-elevator-pitch-for-safekit}
+## عرض تقديمي موجز لـ SafeKit في 30 ثانية {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [ SafeKit فيديو: تغيير درجة الصوت لمدة 30 ثانية (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [فيديو SafeKit: عرض تقديمي مدته 30 ثانية (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
-  * سام مسؤول عن التطبيقات الحيوية
-  * لم تعد التطبيقات الحيوية متاحة!
-  * يضمن SafeKit استمرارية التشغيل على مدار الساعة طوال أيام الأسبوع مع إمكانية التبديل الفوري في حالة الفشل
+  * سام مسؤول عن التطبيقات الهامة.
+  * فجأة، لم تعد التطبيقات الهامة متاحة!
+  * بفضل ميزة تجاوز الفشل الفوري، يضمن SafeKit توفر التطبيقات على مدار الساعة طوال أيام الأسبوع.
 
 
 

@@ -1,21 +1,22 @@
 ---
-title: "Software de alta disponibilidad: Windows y Linux Agrupación en clústeres con SafeKit"
+title: "Software de alta disponibilidad: clústeres Windows y Linux con SafeKit"
 canonical: "https://safekit.eviden.com/es/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "Proteja sus aplicaciones críticas con SafeKit , el software líder de alta disponibilidad para Windows y Linux . Cree fácilmente clústeres de alta disponibilidad sin almacenamiento compartido ni SAN complejas. Benefíciese de la replicación en tiempo real, la conmutación por error y el equilibrio de carga en una solución sencilla definida por software."
+description: "SafeKit es el software líder en alta disponibilidad para Windows y Linux. Protege sus aplicaciones críticas. Puede crear fácilmente clústeres de alta disponibilidad sin almacenamiento compartido ni una compleja SAN. Una sencilla solución de software proporciona replicación en tiempo real, conmutación por error y equilibrio de carga."
 category: "use-cases"
 lang: "es"
-topics: "Presentación breve de 30 segundos para SafeKit , 🔍 Explora SafeKit"
+topics: "Presentación de SafeKit en 30 segundos, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 48 expressions"
 ---
 
-# Software de alta disponibilidad: Windows y Linux Agrupación en clústeres con SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# Software de alta disponibilidad: clústeres Windows y Linux con SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## Presentación breve de 30 segundos para SafeKit {#30-seconds-elevator-pitch-for-safekit}
+## Presentación de SafeKit en 30 segundos {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [ SafeKit Vídeo: Tono de 30 s (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [Vídeo SafeKit: Presentación de 30 segundos (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
   * Sam es responsable de las aplicaciones críticas.
-  * ¡Las aplicaciones críticas ya no están disponibles!
-  * SafeKit garantiza un funcionamiento ininterrumpido las 24 horas del día, los 7 días de la semana, con conmutación por error instantánea.
+  * ¡De repente, las aplicaciones críticas ya no están disponibles!
+  * Con la conmutación por error instantánea, SafeKit mantiene las aplicaciones disponibles las 24 horas del día, los 7 días de la semana.
 
 
 

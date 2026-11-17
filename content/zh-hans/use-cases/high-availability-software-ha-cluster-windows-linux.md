@@ -1,21 +1,22 @@
 ---
-title: "高可用性软件： Windows和Linux与SafeKit集群"
+title: "高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "使用领先的高可用性软件SafeKit保护您的关键应用程序，该软件适用于Windows和Linux 。无需共享存储或复杂的 SAN，即可轻松创建高可用性集群。在一个简单易用的软件定义解决方案中，即可享受实时复制、故障转移和负载均衡功能。"
+description: "SafeKit 是适用于 Windows 和 Linux 的领先高可用性软件。它可保护您的关键应用程序。您可以轻松创建 HA 集群，而无需共享存储或复杂的 SAN。一个简单的软件解决方案即可提供实时复制、故障转移和负载平衡。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "30 秒电梯演讲，介绍SafeKit和 🔍 探索 SafeKit"
+topics: "SafeKit 30 秒电梯演讲、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 51 expressions"
 ---
 
-# 高可用性软件： Windows和Linux与SafeKit和集群 {#high-availability-software-windows-and-linux-clustering-with-safekit}
+# 高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群 {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
-## 30秒电梯演讲稿，介绍SafeKit {#30-seconds-elevator-pitch-for-safekit}
+## SafeKit 30 秒电梯演讲 {#30-seconds-elevator-pitch-for-safekit}
 
-🎬 [ SafeKit视频：30秒推杆 (0:30) ](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
+🎬 [SafeKit 视频：30 秒宣传片 (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)
 
-  * Sam负责关键应用程序。
-  * 关键应用程序已不再可用！
-  * SafeKit确保全天候正常运行，并具备即时故障转移功能。
+  * Sam 负责关键应用程序。
+  * 突然，关键应用程序无法使用了！
+  * 借助即时故障转移功能，SafeKit 可确保应用程序全天候 24 小时可用。
 
 
 
