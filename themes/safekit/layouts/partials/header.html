@@ -68,6 +68,15 @@
                                 <a href="{{ .RelPermalink }}">SCADA Software</a>
                                 {{ end }}
                             </div>
+                            <div class="mega-column">
+                                <h4 class="mega-column-title">Transportation & Infrastructure</h4>
+                                {{ with or ($localSite.GetPage "/use-cases/high-availability-public-transport-centralized-control-room") ($enSite.GetPage "/use-cases/high-availability-public-transport-centralized-control-room") }}
+                                <a href="{{ .RelPermalink }}">Public Transport Control Room</a>
+                                {{ end }}
+                                {{ with or ($localSite.GetPage "/use-cases/high-availability-air-traffic-control-system") ($enSite.GetPage "/use-cases/high-availability-air-traffic-control-system") }}
+                                <a href="{{ .RelPermalink }}">Air Traffic Control System</a>
+                                {{ end }}
+                            </div>
                         </div>
                     </div>
                 </div>

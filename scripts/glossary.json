@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.18",
+  "version": "2026-11-17.26",
   "keep": [
     "mirror",
     "farm",
@@ -1190,6 +1190,18 @@
       [
         " et exploitation du métro",
         " et l’exploitation du métro"
+      ],
+      [
+        "\\bun agrégat (actif/actif|actif/passif)",
+        "un cluster \\1"
+      ],
+      [
+        "^(\\s*(?:\\* )?)Superviser les ",
+        "\\1Supervision des "
+      ],
+      [
+        "(Supervision des opérations de sécurité et) l’information",
+        "\\1 de l’information"
       ]
     ],
     "it": [
@@ -1316,6 +1328,10 @@
       [
         "\\*\\* :(?=\\s)",
         "**:"
+      ],
+      [
+        "\\[ridondanza\\b",
+        "[Ridondanza"
       ]
     ],
     "es": [
@@ -1592,6 +1608,10 @@
       [
         "sem necessidade SAN",
         "sem necessidade de SAN"
+      ],
+      [
+        "\\bpara linha (\\d)",
+        "para a linha \\1"
       ]
     ],
     "ar": [
@@ -1764,8 +1784,44 @@
         "SafeKit للحوسبة الطرفية"
       ],
       [
-        "\\((EACS|VMS|SCADA|BMS|OEM)،",
+        "\\(\\s*(EACS|VMS|SCADA|BMS|OEM)\\s*،",
         "(\\1)،"
+      ],
+      [
+        "زائدة عن الحاجة",
+        "احتياطية"
+      ],
+      [
+        "شبكة منطقة (?:التخزين )?\\(?SAN\\)?",
+        "SAN"
+      ],
+      [
+        "(?<![\\u0600-\\u06FF])ل(?=SAN|SafeKit|ATC)",
+        "لـ "
+      ],
+      [
+        "(يعمل|يعملان|تعمل|تعملان) (Windows|Linux)\\b",
+        "\\1 بنظام \\2"
+      ],
+      [
+        "(?:يعتبر|يُعتبر|تعتبر) برج المراقبة الجوية \\(ATC\\)",
+        "تُعد مراقبة الحركة الجوية"
+      ],
+      [
+        "وحدة mirror SafeKit",
+        "وحدة mirror في SafeKit"
+      ],
+      [
+        "يتم تكرار الملفات",
+        "يتم نسخ الملفات"
+      ],
+      [
+        "(?:وحدات )?تخزين شبكات? مناطق? التخزين \\(?SAN\\)?",
+        "تخزين SAN"
+      ],
+      [
+        "شبكات? مناطق? التخزين \\(?SAN\\)?",
+        "SAN"
       ]
     ],
     "de": [
@@ -2124,6 +2180,54 @@
       [
         "Kundennutzungsfälle",
         "Anwendungsfälle unserer Kunden"
+      ],
+      [
+        "\\bHigh Availability SafeKit\\b",
+        "SafeKit-Hochverfügbarkeit"
+      ],
+      [
+        "\\bStandard (Windows|Linux)-Server",
+        "Standard-\\1-Server"
+      ],
+      [
+        "\\bRAID ?(\\d) (Festplatte|Datenträger|Laufwerk)",
+        "RAID\\1-\\2"
+      ],
+      [
+        "\\bAnwendungskcluster",
+        "Anwendungscluster"
+      ],
+      [
+        "\\b(Windows) (als auch|noch) (Linux)-",
+        "\\1- \\2 \\3-"
+      ],
+      [
+        "\\b(Windows|Linux) (Plattform(?:en)?)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bder Kontrollraum\\b",
+        "die Leitstelle"
+      ],
+      [
+        "\\bLeitwarte\\b",
+        "Leitstelle"
+      ],
+      [
+        "\\bLeitstandbediener\\b",
+        "Mitarbeitenden der Leitstelle"
+      ],
+      [
+        "\\bZentraler Leitstand\\b",
+        "Zentrale Leitstelle"
+      ],
+      [
+        "\\bSafeKit Hochverfügbarkeit\\b",
+        "SafeKit-Hochverfügbarkeit"
+      ],
+      [
+        "\\b(VMS|EACS|BMS|SCADA) Redundanz",
+        "\\1-Redundanz"
       ]
     ],
     "ko": [
@@ -2634,6 +2738,26 @@
       [
         "(^|\")SafeKit (?=SAN )",
         "\\1SafeKit은 "
+      ],
+      [
+        "SafeKit (?=mirror 모듈의|자동으로)",
+        "SafeKit은 "
+      ],
+      [
+        "\\s*yoğun\\s*",
+        " "
+      ],
+      [
+        "(^\\s*|[.,]\\s+|\\\"|에서 )ADB SafeGate (?!(?:소프트웨어|의|는|가|를|에))",
+        "\\1ADB SafeGate는 "
+      ],
+      [
+        "SafeKit(?:은)? (?=[^,.\\n]*을 보호하는 방법)",
+        "SafeKit이 "
+      ],
+      [
+        "SafeKit (?=선택된)",
+        "SafeKit이 "
       ]
     ],
     "ja": [
@@ -3028,6 +3152,34 @@
       [
         "SAN レス(?:の)?",
         "SAN 不要の"
+      ],
+      [
+        "SafeKit (?=自動的に)",
+        "SafeKit は "
+      ],
+      [
+        "(すると、\\s*)SafeKit (?=mirror モジュールの)",
+        "\\1SafeKit は "
+      ],
+      [
+        "(^|[。、]\\s*)ADB SafeGate[、 ](?!(?:ソフトウェア|の|は|が|を|に|で|と|も))",
+        "\\1ADB SafeGate は "
+      ],
+      [
+        "SafeKit (?![がはを])(?=[^、。\\n]*を保護する方法)",
+        "SafeKit が "
+      ],
+      [
+        "ADB SafeGate は ([^。\\n]*を選んだ理由は)",
+        "ADB SafeGate が \\1"
+      ],
+      [
+        "SafeKit がが",
+        "SafeKit が"
+      ],
+      [
+        "アクティブ/(アクティブ|パッシブ)(?=[^\\n]*アクティブ/\\1クラスター)",
+        ""
       ]
     ],
     "zh-hans": [
@@ -3154,6 +3306,26 @@
       [
         "例如 SafeKit (?=[A-Z])",
         "例如 "
+      ],
+      [
+        "(可用|可用性) (?=SafeKit )",
+        "\\1。"
+      ],
+      [
+        "(?<!异步)(?<!同步)复制(?:产品)?无法提供(?:此|这种|这一)保证",
+        "异步复制无法提供此保证"
+      ],
+      [
+        "(?<![（(A-Za-z])\\s*(RATP)\\)",
+        " \\1"
+      ],
+      [
+        "(^|。|\")提供([^。\\n]*?)自动 SafeKit 转移",
+        "\\1SafeKit 提供\\2自动故障转移"
+      ],
+      [
+        "功能双活集群",
+        "功能的双活集群"
       ]
     ],
     "nl": [
@@ -3404,6 +3576,38 @@
       [
         "\\b(Windows) of (Linux) (VMS|SCADA|BMS)\\b",
         "\\1- of \\2-\\3"
+      ],
+      [
+        "\\bSAN (infrastructuur|omgeving)\\b",
+        "SAN-\\1"
+      ],
+      [
+        "\\b(Windows|Linux) (servers?|clusters?|knooppunten)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bRAID ?(\\d) (schijf|schijven)\\b",
+        "RAID\\1-\\2"
+      ],
+      [
+        "\\b(Windows|Linux) (platforms?)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\b(Windows) (als|en|of) (Linux)-",
+        "\\1- \\2 \\3-"
+      ],
+      [
+        "\\bSAN schijf",
+        "SAN-schijf"
+      ],
+      [
+        "\\bheeft SafeKit voor ([^.\\n\"]*)\\.",
+        "heeft SafeKit ingezet voor \\1."
+      ],
+      [
+        "\\b(VMS|EACS|BMS|SCADA) redundantie",
+        "\\1-redundantie"
       ]
     ],
     "pt-br": [
@@ -3422,6 +3626,10 @@
       [
         "gestão de vídeo",
         "gerenciamento de vídeo"
+      ],
+      [
+        "\\bpara linha (\\d)",
+        "para a linha \\1"
       ]
     ]
   },
