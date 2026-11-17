@@ -73,7 +73,7 @@ Settore | Sito perimetrale tipico | Applicazione critica
 ---|---|---  
 Sicurezza fisica e sorveglianza | Edifici, campus, aeroporti | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gestione degli edifici (BMS) | Edifici per uffici, ospedali, fabbriche | Siemens Desigo CC, Bosch BIS/BVMS  
-Controllo elettronico degli accessi (EACS) | Strutture e campus sicuri | Siemens SiPass, Nedap, Bosch AMS  
+Controllo elettronico degli accessi (EACS) | Strutture e campus sicuri | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA e controllo industriale | Fabbriche, sottostazioni, impianti idrici | Qualsiasi software SCADA, DCS o HMI su Windows o Linux  
 Controllo del traffico aereo (ATC) | Aeroporti, torri di controllo | Sistemi di gestione del traffico aereo e radar  
 Centri di controllo operativo (OCC) | Metropolitana, ferrovia, snodi di trasporto | Segnalamento ferroviario e gestione delle stazioni  
@@ -95,7 +95,6 @@ Personale in loco | Necessario per la configurazione e l’intervento | Non è n
 Dipendenza da Internet o dal cloud | Spesso gestito tramite cloud | Funziona su reti completamente isolate  
 Scala di implementazione | Singolo data center | Centinaia di siti distribuiti  
 Costo della licenza | Elevato (licenze per sistema operativo del datacenter e SAN) | Una licenza software conveniente per cluster  
-RTO tipico | da 1 a 5 minuti | Meno di 1 minuto (configurabile)  
   
 {{%  insert-supported-os-it  %}}
 

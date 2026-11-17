@@ -73,7 +73,7 @@ Industrie | Typische edge-locatie | Kritische toepassing
 ---|---|---  
 Fysieke beveiliging en bewaking | Gebouwen, campussen, luchthavens | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gebouwbeheersysteem (BMS) | Kantoorgebouwen, ziekenhuizen, fabrieken | Siemens Desigo CC, Bosch BIS/BVMS  
-Elektronische toegangscontrole (EACS) | Beveiligde faciliteiten, campussen | Siemens SiPass, Nedap, Bosch AMS  
+Elektronische toegangscontrole (EACS) | Beveiligde faciliteiten, campussen | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA en industriële besturing | Fabrieken, onderstations, waterzuiveringsinstallaties | Elke SCADA-, DCS- of HMI-software op Windows of Linux  
 Luchtverkeersleiding (ATC) | Luchthavens, controletorens | Luchtverkeersbeheer en radarsystemen  
 Operationele controlecentra (OCC) | Metro, spoorwegen, OV-knooppunten | Spoorwegsignalering en stationsbeheer  
@@ -95,7 +95,6 @@ Personeel ter plaatse | Vereist voor installatie en interventie | Niet vereist, 
 Afhankelijkheid van internet of de cloud | Vaak cloud-beheerd | Werkt op volledig geïsoleerde netwerken  
 Implementatieschaal | Enkel datacenter | Honderden gedistribueerde sites  
 Licentiekosten | Hoog (Datacenter-besturingssysteem en SAN-licenties) | Eén betaalbare softwarelicentie per cluster  
-Typische RTO | 1 tot 5 minuten | Minder dan 1 minuut (configureerbaar)  
   
 {{%  insert-supported-os-nl  %}}
 

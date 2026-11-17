@@ -73,7 +73,7 @@ Indústria | Localização típica de borda | Aplicação crítica
 ---|---|---  
 Segurança física e vigilância | Edifícios, campi, aeroportos | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gestão de edifícios (BMS) | Edifícios de escritórios, hospitais, fábricas | Siemens Desigo CC, Bosch BIS/BVMS  
-Controle de acesso eletrônico (EACS) | Instalações e campi seguros | Siemens SiPass, Nedap, Bosch AMS  
+Controle de acesso eletrônico (EACS) | Instalações e campi seguros | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA e controle industrial | Fábricas, subestações, estações de tratamento de água | Qualquer software SCADA, DCS ou HMI no Windows ou Linux  
 Controle de tráfego aéreo (ATC) | Aeroportos, torres de controle | Sistemas de gestão de tráfego aéreo e de radar  
 Centros de controle de operações (OCC) | Metrô, ferrovia, centros de transporte | Sinalização ferroviária e gestão de estações  
@@ -95,7 +95,6 @@ Equipe no local | Necessário para configuração e intervenção | Não é nece
 Dependência da internet ou da nuvem | Frequentemente gerenciado na nuvem | Funciona em redes totalmente isoladas  
 Escala de implantação | Centro de dados único | Centenas de sites distribuídos  
 Custo da licença | Alto (licenças de sistema operacional de data center e SAN) | Uma licença de software acessível por cluster  
-RTO típico | 1 a 5 minutos | Menos de 1 minuto (configurável)  
   
 {{%  insert-supported-os-pt-br  %}}
 

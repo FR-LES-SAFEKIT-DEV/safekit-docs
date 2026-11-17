@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad en el edge sin centro de datos: SafeKit para OT y sitios distribuidos"
 canonical: "https://safekit.eviden.com/es/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Los sitios de computación perimetral no tienen un centro de datos, pero aun así necesitan alta disponibilidad. SafeKit convierte dos servidores estándar en un clúster de alta disponibilidad \"plug-and-play\". No requiere SAN ni personal de TI, y la conmutación por error es automática."
+description: "Los sitios de computación perimetral no tienen un centro de datos, pero aun así necesitan alta disponibilidad. SafeKit convierte dos servidores estándar en un clúster de alta disponibilidad "plug-and-play". No requiere SAN ni personal de TI, y la conmutación por error es automática."
 category: "use-cases"
 lang: "es"
 topics: "El desafío de la alta disponibilidad en el edge, Por qué SafeKit es la solución natural para la computación perimetral, Idoneidad para la implementación en el borde y distribuida, Por qué los entornos OT perimetrales son diferentes, Casos de uso ideales en el edge, Alta disponibilidad en el edge frente a los centros de datos: diferencias clave, Sistemas operativos y plataformas compatibles, 🔍 Explora SafeKit"
@@ -73,7 +73,7 @@ Industria | Sitio perimetral típico | Aplicación crítica
 ---|---|---  
 Seguridad física y vigilancia | Edificios, campus, aeropuertos | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gestión de edificios (BMS) | Edificios de oficinas, hospitales, fábricas | Siemens Desigo CC, Bosch BIS/BVMS  
-Control de acceso electrónico (EACS) | Instalaciones y campus seguros | Siemens SiPass, Nedap, Bosch AMS  
+Control de acceso electrónico (EACS) | Instalaciones y campus seguros | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA y control industrial | Fábricas, subestaciones, plantas de tratamiento de agua | Cualquier software SCADA, DCS o HMI en Windows o Linux  
 Control del tráfico aéreo (ATC) | Aeropuertos, torres de control | Sistemas de gestión del tráfico aéreo y de radar  
 Centros de control de operaciones (OCC) | Metro, ferrocarril, centros de transporte | Señalización ferroviaria y gestión de estaciones  
@@ -95,7 +95,6 @@ Personal in situ | Necesario para la configuración y la intervención | No es n
 Dependencia de Internet o de la nube | A menudo gestionado en la nube | Funciona en redes totalmente aisladas  
 Escala de implementación | Centro de datos único | Cientos de sitios distribuidos  
 Costo de la licencia | Alto (licencias de sistema operativo de centro de datos y SAN) | Una licencia de software asequible por clúster  
-RTO típico | De 1 a 5 minutos | Menos de 1 minuto (configurable)  
   
 {{%  insert-supported-os-es  %}}
 

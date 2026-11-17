@@ -73,7 +73,7 @@ SafeKit は、データセンターのないサイトでも、高い可用性が
 ---|---|---  
 物理的セキュリティと監視 | ビル、キャンパス、空港 | VMS: Milestone、Genetec、Hanwha、Siemens Siveillance  
 ビル管理システム（BMS） | オフィスビル、病院、工場 | Siemens Desigo CC、Bosch BIS/BVMS  
-電子アクセス制御（EACS） | 施設、キャンパスのセキュリティ | Siemens SiPass、Nedap、Bosch AMS  
+電子アクセス制御（EACS） | 施設、キャンパスのセキュリティ | Siemens SiPass、Nedap、Bosch AMS、Hirsch MicroSesame  
 SCADA および産業用制御 | 工場、変電所、浄水場 | Windows または Linux 上の SCADA、DCS、HMI ソフトウェア  
 航空管制（ATC） | 空港、管制塔 | 航空交通管理およびレーダーシステム  
 オペレーションコントロールセンター（OCC） | 地下鉄、鉄道、交通ハブ | 鉄道信号および駅管理  
@@ -95,7 +95,6 @@ SCADA および産業用制御 | 工場、変電所、浄水場 | Windows また
 インターネットまたはクラウドへの依存 | 多くの場合、クラウドで管理されます | 完全に隔離されたネットワークで動作します  
 デプロイ規模 | 単一データセンター | 数百の分散サイト  
 ライセンス費用 | 高 (データセンター OS および SAN ライセンス) | クラスターごとに 1 つの手頃な価格のソフトウェアライセンス  
-標準的な RTO | 1～5 分 | 1 分未満（設定可能）  
   
 {{%  insert-supported-os-ja  %}}
 

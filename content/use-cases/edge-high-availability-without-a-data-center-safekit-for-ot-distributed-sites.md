@@ -72,7 +72,7 @@ Industry | Typical edge site | Critical application
 ---|---|---  
 Physical security and surveillance | Buildings, campuses, airports | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Building management (BMS) | Office buildings, hospitals, factories | Siemens Desigo CC, Bosch BIS/BVMS  
-Electronic access control (EACS) | Secure facilities, campuses | Siemens SiPass, Nedap, Bosch AMS  
+Electronic access control (EACS) | Secure facilities, campuses | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA and industrial control | Factories, substations, water plants | Any SCADA, DCS, or HMI software on Windows or Linux  
 Air traffic control (ATC) | Airports, control towers | Air traffic management and radar systems  
 Operations control centers (OCC) | Metro, railway, transit hubs | Railway signaling and station management  
@@ -94,7 +94,6 @@ On-site staff | Required for setup and intervention | Not required, because fail
 Internet or cloud dependency | Often cloud-managed | Works on fully isolated networks  
 Deployment scale | Single data center | Hundreds of distributed sites  
 License cost | High (Datacenter OS and SAN licenses) | One affordable software license per cluster  
-Typical RTO | 1 to 5 minutes | Under 1 minute (configurable)  
   
 {{%  insert-supported-os-en  %}}
 

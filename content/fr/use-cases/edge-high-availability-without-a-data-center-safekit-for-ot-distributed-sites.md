@@ -73,7 +73,7 @@ Secteur d’activité | Site de périphérie typique | Application critique
 ---|---|---  
 Sécurité physique et surveillance | Bâtiments, campus, aéroports | VMS : Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gestion technique du bâtiment (BMS) | Immeubles de bureaux, hôpitaux, usines | Siemens Desigo CC, Bosch BIS/BVMS  
-Contrôle d’accès électronique (EACS) | Installations et campus sécurisés | Siemens SiPass, Nedap, Bosch AMS  
+Contrôle d’accès électronique (EACS) | Installations et campus sécurisés | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA et contrôle industriel | Usines, sous-stations, usines de traitement de l’eau | Tout logiciel SCADA, DCS ou HMI sous Windows ou Linux  
 Contrôle du trafic aérien (CTA) | Aéroports, tours de contrôle | Gestion du trafic aérien et systèmes radar  
 Centres de contrôle des opérations (CCO) | Métro, chemins de fer, pôles de transport | Signalisation ferroviaire et gestion des gares  
@@ -95,7 +95,6 @@ Personnel sur place | Nécessaire pour l’installation et l’intervention | No
 Dépendance à Internet ou au cloud | Souvent géré dans le cloud | Fonctionne sur des réseaux entièrement isolés  
 Échelle de déploiement | Centre de données unique | Des centaines de sites distribués  
 Coût de la licence | Élevé (système d’exploitation de centre de données et licences SAN) | Une licence logicielle abordable par cluster  
-RTO typique | 1 à 5 minutes | Moins d’une minute (configurable)  
   
 {{%  insert-supported-os-fr  %}}
 

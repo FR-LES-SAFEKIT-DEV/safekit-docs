@@ -73,7 +73,7 @@ Industrie | Typischer Edge-Standort | Kritische Anwendung
 ---|---|---  
 Physische Sicherheit und Überwachung | Gebäude, Campusse, Flughäfen | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gebäudemanagement (BMS) | Bürogebäude, Krankenhäuser, Fabriken | Siemens Desigo CC, Bosch BIS/BVMS  
-Elektronische Zugangskontrolle (EACS) | Sichere Einrichtungen, Campusse | Siemens SiPass, Nedap, Bosch AMS  
+Elektronische Zugangskontrolle (EACS) | Sichere Einrichtungen, Campusse | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA und industrielle Steuerung | Fabriken, Umspannwerke, Wasserwerke | Jede SCADA-, DCS- oder HMI-Software unter Windows oder Linux  
 Flugverkehrskontrolle (ATC) | Flughäfen, Kontrolltürme | Flugverkehrsmanagement und Radarsysteme  
 Betriebsleitzentralen (OCC) | U-Bahn, Eisenbahn, Verkehrsknotenpunkte | Eisenbahnsignaltechnik und Bahnhofsmanagement  
@@ -95,7 +95,6 @@ Mitarbeiter vor Ort | Für Einrichtung und Eingriff erforderlich | Nicht erforde
 Internet- oder Cloud-Abhängigkeit | Oft cloudverwaltet | Funktioniert in vollständig isolierten Netzwerken  
 Bereitstellungsumfang | Einzelnes Rechenzentrum | Hunderte von verteilten Standorten  
 Lizenzkosten | Hoch (Rechenzentrums-Betriebssystem und SAN-Lizenzen) | Eine kostengünstige Softwarelizenz pro Cluster  
-Typische RTO | 1 bis 5 Minuten | Unter 1 Minute (konfigurierbar)  
   
 {{%  insert-supported-os-de  %}}
 

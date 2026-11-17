@@ -73,7 +73,7 @@ SafeKit 适用于任何没有数据中心但仍需高可用性的站点：
 ---|---|---  
 物理安全与监控 | 建筑、校园、机场 | 视频管理系统：Milestone、Genetec、Hanwha、Siemens Siveillance  
 楼宇管理系统 (BMS) | 办公楼、医院、工厂 | Siemens Desigo CC、Bosch BIS/BVMS  
-电子门禁系统 (EACS) | 安全设施、校园 | Siemens SiPass、Nedap、Bosch AMS  
+电子门禁系统 (EACS) | 安全设施、校园 | Siemens SiPass、Nedap、Bosch AMS、Hirsch MicroSesame  
 SCADA 和工业控制 | 工厂、变电站、水厂 | 任何运行于 Windows 或 Linux 上的 SCADA、DCS 或 HMI 软件  
 空中交通管制 (ATC) | 机场、控制塔 | 空中交通管理和雷达系统  
 运营控制中心 (OCC) | 地铁、铁路、交通枢纽 | 铁路信号与车站管理  
@@ -95,7 +95,6 @@ SCADA 和工业控制 | 工厂、变电站、水厂 | 任何运行于 Windows �
 对互联网或云的依赖 | 通常由云端管理 | 可在完全隔离的网络上运行  
 部署规模 | 单个数据中心 | 数百个分布式站点  
 许可证费用 | 高（数据中心操作系统和 SAN 许可证） | 每个集群一个经济实惠的软件许可证  
-典型 RTO | 1 到 5 分钟 | 不到 1 分钟（可配置）  
   
 {{%  insert-supported-os-zh-hans  %}}
 
