@@ -27,13 +27,27 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-16.4"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-17.2"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
 
 API = "https://translation.googleapis.com/language/translate/v2"
 FM_KEYS = ("title", "linkTitle", "description", "summary", "topics")
+
+# guillemets typographiques par langue, pour les valeurs du front matter entre guillemets droits
+FM_QUOTES = {"fr": ("«\u00a0", "\u00a0»"), "es": ("«", "»"), "it": ("«", "»"), "pt": ("“", "”"), "de": ("„", "“"),
+             "nl": ("‘", "’"), "ja": ("「", "」"), "zh": ("“", "”"), "ko": ("‘", "’"), "ar": ("«", "»")}
+
+def fm_quotes(t, delim, lang):
+    """Valeur de front matter : un guillemet identique au délimiteur casse le YAML/TOML
+    (Hugo : "value is not allowed in this context", ex. clúster "plug-and-play").
+    Paires -> guillemets typographiques de la langue ; guillemet isolé -> échappé."""
+    if delim == "'":
+        return t.replace("'", "’")
+    o, c = FM_QUOTES.get(lang.split("-")[0], ("“", "”"))
+    t = re.sub(r'"\s*([^"]+?)\s*"', lambda m: o + m.group(1) + c, t)
+    return t.replace('"', '\\"')
 
 MODEL = None  # None = modèle classique (NMT) ; sinon chemin du modèle Translation LLM
 
@@ -128,7 +142,9 @@ def load_glossary(path, lang):
         TERMS.append((re.compile(r"(?<![\w/.-])" + r"\s+".join(words) + r"(?![\w/-]|\.\w)", re.I), target))
     GRAMMAR.clear()
     g = GLOSSARY.get("grammar", {})
-    for pat, repl in g.get(lang) or g.get(lang.split("-")[0]) or []:
+    # règles de la langue de base ("pt") puis règles propres à la variante ("pt-br")
+    base = lang.split("-")[0]
+    for pat, repl in (g.get(base, []) if base != lang else []) + g.get(lang, []):
         GRAMMAR.append((re.compile(pat), repl))
     if TERMS:
         print(f"Expressions imposées pour '{lang}' : {len(TERMS)}"
@@ -925,6 +941,8 @@ def main():
                 t = re.sub(r"(</[a-zA-Z]+>)\s+(?=<)", r"\1", t)
             if before.lstrip().startswith("#") and not CJK:   # titre : majuscule initiale
                 t = re.sub(r"^((?:[*_\[(]|<[^>]+>)*)([a-zà-öø-ÿ])", lambda x: x.group(1) + x.group(2).upper(), t, count=1)
+            if idx < fm_end and after in ('"', "'"):
+                t = fm_quotes(t, after, lang)
             lines[idx] = before + t + after
     for row, cells in tables.items():
         lines[row] = "|".join(cells)

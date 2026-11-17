@@ -5,7 +5,7 @@ description: "Edge-Computing-Standorte verfügen über kein Rechenzentrum, benö
 category: "use-cases"
 lang: "de"
 topics: "Die Herausforderung der Hochverfügbarkeit am Edge, Warum SafeKit die natürliche Wahl für Edge Computing ist, Eignung für Edge- und verteilte Bereitstellungen, Warum OT-Umgebungen am Netzwerkrand anders sind, Ideale Anwendungsfälle am Edge, Edge vs. Rechenzentrum: Hochverfügbarkeit – die wichtigsten Unterschiede, Unterstützte Betriebssysteme und Plattformen, 🔍 SafeKit entdecken"
-translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 47 expressions"
+translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 47 expressions"
 ---
 
 # Hochverfügbarkeit am Edge ohne Rechenzentrum: SafeKit für OT und verteilte Standorte {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
@@ -73,7 +73,7 @@ Industrie | Typischer Edge-Standort | Kritische Anwendung
 ---|---|---  
 Physische Sicherheit und Überwachung | Gebäude, Campusse, Flughäfen | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 Gebäudemanagement (BMS) | Bürogebäude, Krankenhäuser, Fabriken | Siemens Desigo CC, Bosch BIS/BVMS  
-Elektronische Zugangskontrolle (EACS) | Sichere Einrichtungen, Campusse | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
+Elektronische Zutrittskontrolle (EACS) | Sichere Einrichtungen, Campusse | Siemens SiPass, Nedap, Bosch AMS, Hirsch MicroSesame  
 SCADA und industrielle Steuerung | Fabriken, Umspannwerke, Wasserwerke | Jede SCADA-, DCS- oder HMI-Software unter Windows oder Linux  
 Flugverkehrskontrolle (ATC) | Flughäfen, Kontrolltürme | Flugverkehrsmanagement und Radarsysteme  
 Betriebsleitzentralen (OCC) | U-Bahn, Eisenbahn, Verkehrsknotenpunkte | Eisenbahnsignaltechnik und Bahnhofsmanagement  

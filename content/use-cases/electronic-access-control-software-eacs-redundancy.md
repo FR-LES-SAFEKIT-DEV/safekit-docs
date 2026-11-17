@@ -1,48 +1,48 @@
 ---
 title: "High Availability and Redundancy for Electronic Access Control Software (EACS)"
 canonical: "https://safekit.eviden.com/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "Ensure 24/7 building security with SafeKit, the simplest high availability software for Electronic Access Control (EACS). Prevent system lockouts with SANless 2-node clustering, real-time synchronous replication, and automatic failover for Nedap, TIL Technologies, Siemens, HID, and any Windows/Linux EACS. Achieve zero data loss (RPO=0) without a SAN."
+description: "SafeKit is the simplest high availability software for electronic access control systems (EACS). It keeps building security available 24/7. The cluster has two nodes and needs no SAN. It provides real-time synchronous replication and automatic failover. It works with Nedap, TIL Technologies, Siemens, HID, and any EACS software on Windows or Linux. There is zero data loss (RPO=0)."
 category: "use-cases"
 lang: "en"
-topics: "What is an electronic access control system (EACS)?, Why an EACS software is critical?, Key players list in EACS, SafeKit brings two solutions for redundancy and high availability of a EACS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+topics: "What is an electronic access control system (EACS)?, Why is EACS software critical?, Main EACS vendors, SafeKit brings two solutions for redundancy and high availability of a EACS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
 ---
 
 # High Availability and Redundancy for Electronic Access Control Software (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
 ##  What is an electronic access control system (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
-Electronic access control systems consist of hardware devices that control entry into any private premises.
+An electronic access control system consists of hardware devices that control entry into private premises.
 
-Theft breaches and break-ins are common crimes in business environments. Electronic access control systems are widely used because of that.
+Theft and break-ins are common crimes in companies. That is why electronic access control systems are widely used.
 
-##  Why an EACS software is critical? {#why-an-eacs-software-is-critical}
+##  Why is EACS software critical? {#why-an-eacs-software-is-critical}
 
-EACS software manages hardware devices, and it denies entry to unauthorized users or raises alarms on intrusion by thieves or criminals.
+EACS software manages the hardware devices. It denies entry to unauthorized persons, and it raises an alarm when an intruder breaks in.
 
-The safety of people is directly associated with the proper execution of the EACS software.
+The safety of people depends directly on the correct operation of the EACS software.
 
-And that's why the system must always be available to security officers who must react immediately to the slightest incident.
+Security officers must react immediately to the slightest incident. The system must therefore always be available to them.
 
-##  Key players list in EACS {#key-players-list-in-eacs}
+##  Main EACS vendors {#key-players-list-in-eacs}
 
-The key players in EACS are:
+The main EACS vendors are:
 
-  * dormakaba Holding (Switzerland)
+  * dormakaba (Switzerland)
   * ASSA ABLOY (Sweden)
   * Johnson Controls (Ireland)
-  * Allegion plc (Ireland)
-  * Honeywell International (US)
-  * Identiv Inc. (US)
+  * Allegion (Ireland)
+  * Honeywell (United States)
+  * Identiv (United States)
 
 
-  * Nedap N.V. (Netherlands)
-  * Suprema HQ (South Korea)
-  * Thales Group (France)
-  * Bosch Security Systems (Germany)
-  * NEC Corporation (Japan)
-  * IDEMIAs (France)
-  * HID (US)
-  * TIL Technologies (France)
+  * Nedap (Netherlands)
+  * Suprema (South Korea)
+  * Thales (France)
+  * Bosch (Germany)
+  * NEC (Japan)
+  * IDEMIA (France)
+  * HID (United States)
+  * Hirsch (France)
 
 
 

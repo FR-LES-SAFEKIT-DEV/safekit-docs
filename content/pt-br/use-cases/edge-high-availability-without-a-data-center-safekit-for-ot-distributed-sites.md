@@ -5,7 +5,7 @@ description: "Os locais de computação de borda não possuem data center, mas a
 category: "use-cases"
 lang: "pt-br"
 topics: "O desafio da alta disponibilidade na borda, Por que SafeKit é a escolha natural para a computação de borda, Adequação para implantação em borda e distribuída, Por que os ambientes de OT de borda são diferentes, Casos de uso ideais na borda, Edge vs. data center: principais diferenças em alta disponibilidade, Sistemas operacionais e plataformas compatíveis, 🔍 Explore SafeKit"
-translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 50 expressions"
+translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 50 expressions"
 ---
 
 # Alta Disponibilidade de Edge sem um Data Center: SafeKit para OT e Sites Distribuídos {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

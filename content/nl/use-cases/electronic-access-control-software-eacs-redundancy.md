@@ -1,48 +1,49 @@
 ---
 title: "Hoge beschikbaarheid en redundantie voor software voor elektronische toegangscontrole (EACS)"
 canonical: "https://safekit.eviden.com/nl/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "Garandeer 24/7 gebouwbeveiliging met SafeKit , de eenvoudigste software voor hoge beschikbaarheid van elektronische toegangscontrole (EACS). Voorkom systeemblokkeringen met SAN-loze 2-knoops clustering, realtime synchrone replicatie en automatische failover voor Nedap , TIL Technologies, Siemens, HID en alle Windows / Linux EACS-systemen. Bereik nul dataverlies (RPO=0) zonder SAN."
+description: "SafeKit is de eenvoudigste software voor hoge beschikbaarheid voor elektronische toegangscontrolesystemen (EACS). Het zorgt ervoor dat de gebouwbeveiliging 24/7 beschikbaar is. Het cluster heeft twee knooppunten en heeft geen SAN nodig. Het biedt synchrone replicatie in realtime en automatische failover. Het werkt met Nedap, TIL Technologies, Siemens, HID en elke EACS-software op Windows of Linux. Er is geen gegevensverlies (RPO = 0)."
 category: "use-cases"
 lang: "nl"
-topics: "Wat is een elektronisch toegangscontrolesysteem (EACS)?, Waarom is EACS-software cruciaal?, Lijst met belangrijke spelers in EACS, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van EACS-software, SafeKit , een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
+topics: "Wat is een elektronisch toegangscontrolesysteem (EACS)?, Waarom is EACS-software essentieel?, Belangrijkste EACS-leveranciers, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van EACS-software., SafeKit, een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 49 expressions"
 ---
 
 # Hoge beschikbaarheid en redundantie voor software voor elektronische toegangscontrole (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
 ##  Wat is een elektronisch toegangscontrolesysteem (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
-Elektronische toegangscontrolesystemen bestaan uit hardwareapparaten die de toegang tot privéruimtes regelen.
+Een elektronisch toegangscontrolesysteem bestaat uit hardware die de toegang tot privéruimtes regelt.
 
-Diefstal, inbraak en andere vormen van diefstal komen vaak voor in bedrijfsomgevingen. Daarom worden elektronische toegangscontrolesystemen veelvuldig gebruikt.
+Diefstal en inbraken zijn veelvoorkomende misdrijven in bedrijven. Daarom worden elektronische toegangscontrolesystemen veel gebruikt.
 
-##  Waarom is EACS-software cruciaal? {#why-an-eacs-software-is-critical}
+##  Waarom is EACS-software essentieel? {#why-an-eacs-software-is-critical}
 
-EACS-software beheert hardwareapparaten en blokkeert de toegang voor onbevoegde gebruikers of slaat alarm bij inbraakpogingen door dieven of criminelen.
+EACS-software beheert de hardwareapparaten. Het weigert toegang aan onbevoegde personen en het slaat alarm wanneer een indringer inbreekt.
 
-De veiligheid van mensen is direct verbonden met de correcte werking van de EACS-software.
+De veiligheid van mensen hangt rechtstreeks af van de correcte werking van de EACS-software.
 
-Daarom moet het systeem altijd beschikbaar zijn voor beveiligingsmedewerkers, die onmiddellijk moeten kunnen reageren op het kleinste incident.
+Beveiligingsmedewerkers moeten onmiddellijk reageren op het geringste incident. Het systeem moet daarom altijd voor hen beschikbaar zijn.
 
-##  Lijst met belangrijke spelers in EACS {#key-players-list-in-eacs}
+##  Belangrijkste EACS-leveranciers {#key-players-list-in-eacs}
 
-De belangrijkste spelers binnen EACS zijn:
+De belangrijkste EACS-leveranciers zijn:
 
-  * dormakaba Holding (Zwitserland)
+  * dormakaba (Zwitserland)
   * ASSA ABLOY (Zweden)
   * Johnson Controls (Ierland)
-  * Allegion plc (Ierland)
-  * Honeywell International (VS)
-  * Identiv Inc. (VS)
+  * Allegion (Ierland)
+  * Honeywell (Verenigde Staten)
+  * Identiv (Verenigde Staten)
 
 
-  * Nedap NV (Nederland)
-  * Suprema hoofdkantoor (Zuid-Korea)
-  * Thales Groep (Frankrijk)
-  * Bosch Beveiligingssystemen (Duitsland)
-  * NEC Corporation (Japan)
-  * IDEMIAs (Frankrijk)
-  * HID (VS)
-  * TIL Technologies (Frankrijk)
+  * Nedap (Nederland)
+  * Suprema (Zuid-Korea)
+  * Thales (Frankrijk)
+  * Bosch (Duitsland)
+  * NEC (Japan)
+  * IDEMIA (Frankrijk)
+  * HID (Verenigde Staten)
+  * Hirsch (Frankrijk)
 
 
 

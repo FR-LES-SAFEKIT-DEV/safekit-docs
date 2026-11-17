@@ -5,7 +5,7 @@ description: "エッジコンピューティングサイトにはデータセン
 category: "use-cases"
 lang: "ja"
 topics: "エッジにおける高可用性の課題、SafeKit がエッジコンピューティングに最適な理由、エッジおよび分散配置の適合性、エッジ OT 環境が異なる理由、エッジでの理想的なユースケース、エッジとデータセンターの高可用性：主な違い、サポートされているオペレーティングシステムとプラットフォーム、🔍 SafeKit を探索する"
-translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 49 expressions"
+translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 49 expressions"
 ---
 
 # データセンター不要のエッジ高可用性：OT および分散サイト向け SafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

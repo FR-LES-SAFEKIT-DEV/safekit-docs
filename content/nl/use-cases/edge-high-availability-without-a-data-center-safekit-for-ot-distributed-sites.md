@@ -5,7 +5,7 @@ description: "Edge computing-locaties hebben geen datacenter, maar ze hebben wel
 category: "use-cases"
 lang: "nl"
 topics: "De uitdaging van hoge beschikbaarheid aan de edge, Waarom SafeKit de natuurlijke keuze is voor edgecomputing, Geschiktheid voor implementatie op de edge en gedistribueerde implementatie, Waarom OT-omgevingen aan de edge anders zijn, Ideale gebruiksscenario's aan de edge, Edge versus datacenter: de belangrijkste verschillen op het gebied van hoge beschikbaarheid, Ondersteunde besturingssystemen en platforms, 🔍 Ontdek SafeKit"
-translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 49 expressions"
+translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 49 expressions"
 ---
 
 # Edge High Availability zonder datacenter: SafeKit voor OT en gedistribueerde locaties {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

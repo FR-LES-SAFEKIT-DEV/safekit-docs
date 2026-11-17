@@ -1,48 +1,49 @@
 ---
 title: "電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性"
 canonical: "https://safekit.eviden.com/ja/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "電子アクセス制御（EACS）向けの最もシンプルな高可用性ソフトウェアであるSafeKitで、24時間365日のビルセキュリティを確保しましょう。SANレス2ノードクラスタリング、リアルタイム同期レプリケーション、自動フェイルオーバーにより、 Nedap 、TIL Technologies、Siemens、HID、およびあらゆるWindows / Linux EACSでシステムロックアウトを防止します。SANなしでデータ損失ゼロ（RPO=0）を実現します。"
+description: "SafeKit は電子アクセス制御システム（EACS）向けの最もシンプルな高可用性ソフトウェアです。建物のセキュリティを 24 時間年中無休で維持します。このクラスターは 2 つのノードで構成され、SAN 不要です。リアルタイムの同期レプリケーションと自動フェイルオーバーを提供します。Nedap、TIL Technologies、Siemens、HID、および Windows または Linux 上のあらゆる EACS ソフトウェアで動作します。データ損失はゼロです（RPO = 0）。"
 category: "use-cases"
 lang: "ja"
-topics: "電子アクセス制御システム（EACS）とは？、EACSソフトウェアが重要な理由、EACSの主要プレーヤー一覧、 SafeKitはEACSソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供、 SafeKitセキュリティ市場で定評のあるソリューション、🔍 SafeKit を探索する"
+topics: "電子アクセス制御システム（EACS）とは何ですか？、EACS ソフトウェアが重要な理由とは？、主な EACS ベンダー、SafeKit、EACS ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 49 expressions"
 ---
 
 # 電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
-##  電子アクセス制御システム（ ）とは何ですか？ {#what-is-an-electronic-access-control-system-eacs}
+##  電子アクセス制御システム（EACS）とは何ですか？ {#what-is-an-electronic-access-control-system-eacs}
 
-電子アクセス制御システムは、私有地への入退室を制御するハードウェア機器で構成されています。
+電子アクセス制御システムは、私有地への立ち入りを制御するハードウェアデバイスで構成されています。
 
-窃盗や侵入窃盗は、ビジネス環境においてよく見られる犯罪です。そのため、電子アクセス制御システムが広く利用されています。
+盗難や侵入は企業でよくある犯罪です。そのため、電子アクセス制御システムが広く利用されています。
 
-##  EACSソフトウェアが重要な理由とは？ {#why-an-eacs-software-is-critical}
+##  EACS ソフトウェアが重要な理由とは？ {#why-an-eacs-software-is-critical}
 
-EACSソフトウェアはハードウェアデバイスを管理し、不正ユーザーのアクセスを拒否したり、窃盗犯や犯罪者による侵入を検知して警報を発したりする。
+EACS ソフトウェアはハードウェアデバイスを管理します。権限のない人物の入室を拒否し、侵入者が侵入すると警報を発します。
 
-人々の安全は、EACSソフトウェアの適切な動作に直接的に関係している。
+人々の安全は、EACS ソフトウェアの正しい動作に直接かかっています。
 
-だからこそ、些細な出来事にも即座に対応しなければならない警備員が、常にこのシステムを利用できる状態にしておく必要があるのです。
+警備員は、どんなに些細なインシデントにも即座に対応しなければなりません。そのため、システムは常に利用可能な状態である必要があります。
 
-##  EACSの主要プレーヤー一覧 {#key-players-list-in-eacs}
+##  主な EACS ベンダー {#key-players-list-in-eacs}
 
-EACSの主要プレーヤーは以下のとおりです。
+主な EACS ベンダーは以下のとおりです：
 
-  * dormakaba Holding（スイス）
-  * アッサ・アブロイ（スウェーデン）
-  * ジョンソンコントロールズ（アイルランド）
-  * Allegion plc（アイルランド）
-  * ハネウェル・インターナショナル（米国）
-  * Identiv Inc.（米国）
+  * dormakaba（スイス）
+  * ASSA ABLOY（スウェーデン）
+  * Johnson Controls（アイルランド）
+  * Allegion（アイルランド）
+  * Honeywell（米国）
+  * Identiv（米国）
 
 
-  * Nedap NV（オランダ）
-  * スプレマ本社（韓国）
-  * タレスグループ（フランス）
-  * ボッシュ・セキュリティ・システムズ（ドイツ）
-  * NEC株式会社（日本）
-  * IDEMIAs（フランス）
+  * Nedap（オランダ）
+  * Suprema（韓国）
+  * Thales（フランス）
+  * Bosch（ドイツ）
+  * NEC（日本）
+  * IDEMIA（フランス）
   * HID（米国）
-  * TILテクノロジーズ（フランス）
+  * Hirsch（フランス）
 
 
 

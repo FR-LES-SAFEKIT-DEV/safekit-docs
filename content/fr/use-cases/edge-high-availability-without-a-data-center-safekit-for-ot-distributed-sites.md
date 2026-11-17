@@ -5,7 +5,7 @@ description: "Les sites de calcul en périphérie n’ont pas de centre de donn�
 category: "use-cases"
 lang: "fr"
 topics: "Le défi de la haute disponibilité en périphérie, Pourquoi SafeKit est la solution naturelle pour l’edge computing, Adéquation au déploiement en périphérie et distribué, Pourquoi les environnements OT en périphérie sont différents, Cas d’utilisation idéaux en périphérie, Haute disponibilité en périphérie vs. en centre de données : les principales différences, Systèmes d’exploitation et plateformes pris en charge, 🔍 Explorez SafeKit"
-translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 58 expressions"
+translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 58 expressions"
 ---
 
 # Haute disponibilité en périphérie sans centre de données : SafeKit pour les sites OT et distribués {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

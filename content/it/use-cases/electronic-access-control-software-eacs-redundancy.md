@@ -1,48 +1,49 @@
 ---
 title: "Elevata disponibilità e ridondanza per il software di controllo accessi elettronico (EACS)"
 canonical: "https://safekit.eviden.com/it/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "Garantisci la sicurezza dell'edificio 24 ore su 24, 7 giorni su 7 con SafeKit , il software di alta disponibilità più semplice per il controllo degli accessi elettronici (EACS). Previeni i blocchi del sistema con il clustering a 2 nodi senza SAN, la replica sincrona in tempo reale e il failover automatico per Nedap , TIL Technologies, Siemens, HID e qualsiasi sistema EACS Windows / Linux . Raggiungi zero perdita di dati (RPO=0) senza SAN."
+description: "SafeKit è il software di alta disponibilità più semplice per i sistemi elettronici di controllo accessi (EACS). Mantiene la sicurezza dell’edificio disponibile 24 ore su 24, 7 giorni su 7. Il cluster ha due nodi e non necessita di SAN. Fornisce replica sincrona in tempo reale e failover automatico. Funziona con Nedap, TIL Technologies, Siemens, HID e qualsiasi software EACS su Windows o Linux. Non c’è perdita di dati (RPO = 0)."
 category: "use-cases"
 lang: "it"
-topics: "Che cos'è un sistema di controllo accessi elettronico (EACS)?, Perché un software EACS è fondamentale?, Elenco dei principali attori nel settore EACS, SafeKit offre due soluzioni per la ridondanza e l'alta disponibilità di un software EACS, SafeKit , una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
+topics: "Che cos’è un sistema elettronico di controllo degli accessi (EACS)?, Perché il software EACS è fondamentale?, Principali fornitori EACS, SafeKit offre due soluzioni per la ridondanza e l’alta disponibilità di un software EACS, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 40 expressions"
 ---
 
 # Elevata disponibilità e ridondanza per il software di controllo accessi elettronico (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
-##  Che cos'è un sistema di controllo accessi elettronico (EACS)? {#what-is-an-electronic-access-control-system-eacs}
+##  Che cos’è un sistema elettronico di controllo degli accessi (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
-I sistemi di controllo accessi elettronici sono costituiti da dispositivi hardware che controllano l'ingresso in qualsiasi locale privato.
+Un sistema elettronico di controllo degli accessi è costituito da dispositivi hardware che controllano l’ingresso in locali privati.
 
-I furti e le effrazioni sono reati comuni negli ambienti aziendali. Per questo motivo, i sistemi di controllo degli accessi elettronici sono ampiamente utilizzati.
+I furti e le effrazioni sono reati comuni nelle aziende. Per questo motivo i sistemi elettronici di controllo degli accessi sono ampiamente utilizzati.
 
-##  Perché un software EACS è fondamentale? {#why-an-eacs-software-is-critical}
+##  Perché il software EACS è fondamentale? {#why-an-eacs-software-is-critical}
 
-Il software EACS gestisce i dispositivi hardware e nega l'accesso agli utenti non autorizzati oppure attiva allarmi in caso di intrusione da parte di ladri o criminali.
+Il software EACS gestisce i dispositivi hardware. Nega l’ingresso alle persone non autorizzate e fa scattare un allarme quando un intruso fa irruzione.
 
-La sicurezza delle persone è direttamente collegata alla corretta esecuzione del software EACS.
+La sicurezza delle persone dipende direttamente dal corretto funzionamento del software EACS.
 
-Ed è per questo che il sistema deve essere sempre a disposizione degli addetti alla sicurezza, che devono reagire immediatamente al minimo incidente.
+Gli addetti alla sicurezza devono reagire immediatamente al minimo incidente. Il sistema deve quindi essere sempre a loro disposizione.
 
-##  Elenco dei principali attori in EACS {#key-players-list-in-eacs}
+##  Principali fornitori EACS {#key-players-list-in-eacs}
 
-I principali attori della EACS sono:
+I principali fornitori EACS sono:
 
-  * dormakaba Holding (Svizzera)
+  * dormakaba (Svizzera)
   * ASSA ABLOY (Svezia)
   * Johnson Controls (Irlanda)
-  * Allegion plc (Irlanda)
-  * Honeywell International (USA)
-  * Identiv Inc. (USA)
+  * Allegion (Irlanda)
+  * Honeywell (Stati Uniti)
+  * Identiv (Stati Uniti)
 
 
-  * Nedap NV (Paesi Bassi)
-  * Sede centrale di Suprema (Corea del Sud)
-  * Gruppo Thales (Francia)
-  * Bosch Security Systems (Germania)
-  * NEC Corporation (Giappone)
+  * Nedap (Paesi Bassi)
+  * Suprema (Corea del Sud)
+  * Thales (Francia)
+  * Bosch (Germania)
+  * NEC (Giappone)
   * IDEMIA (Francia)
-  * HID (USA)
-  * TIL Technologies (Francia)
+  * HID (Stati Uniti)
+  * Hirsch (Francia)
 
 
 

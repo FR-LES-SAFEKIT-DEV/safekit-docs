@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.3",
+  "version": "2026-11-17.6",
   "keep": [
     "mirror",
     "farm",
@@ -140,7 +140,19 @@
     "ABB",
     "Pacemaker",
     "Corosync",
-    "WSFC"
+    "WSFC",
+    "EACS",
+    "dormakaba",
+    "ASSA ABLOY",
+    "Allegion",
+    "Identiv",
+    "Suprema",
+    "Thales",
+    "NEC",
+    "IDEMIA",
+    "HID",
+    "Hirsch",
+    "TIL Technologies"
   ],
   "terms": {
     "farm cluster": {
@@ -789,6 +801,9 @@
       "fr": "baie de disques",
       "pt": "array de discos",
       "pt-pt": "matriz de discos"
+    },
+    "high availability software": {
+      "zh-hans": "高可用性软件"
     }
   },
   "grammar": {
@@ -1132,6 +1147,10 @@
       [
         "\\bfabricants d’équipement OEM\\b",
         "OEM"
+      ],
+      [
+        "\\)\\?(?=\\s*$)",
+        ") ?"
       ]
     ],
     "it": [
@@ -1246,6 +1265,14 @@
       [
         "\\b([Aa])ltre nuvole\\b",
         "\\1ltri cloud"
+      ],
+      [
+        "\\bRPO\\s*=\\s*0\\b",
+        "RPO = 0"
+      ],
+      [
+        "\\bnon necessita (?=SAN\\b)",
+        "non necessita di "
       ]
     ],
     "es": [
@@ -1636,6 +1663,14 @@
       [
         "مجموعات Linux cluster\\)",
         "مجموعات Linux"
+      ],
+      [
+        "البائعون الرئيسيون EACS",
+        "أبرز موردي EACS"
+      ],
+      [
+        "تحويلًا تلقائيًا للأخطاء",
+        "تجاوزًا تلقائيًا للأعطال"
       ]
     ],
     "de": [
@@ -1970,6 +2005,14 @@
       [
         "\\bSAN Lizenzen\\b",
         "SAN-Lizenzen"
+      ],
+      [
+        "\\bEACS (?=[A-ZÄÖÜ][a-zäöüß])",
+        "EACS-"
+      ],
+      [
+        "\\bautomatische Failover(?![-\\w])",
+        "automatisches Failover"
       ]
     ],
     "ko": [
@@ -2448,6 +2491,10 @@
       [
         "\\b(SAN|VLAN|LAN|WAN)를",
         "\\1을"
+      ],
+      [
+        "\\bSAN 필요",
+        "SAN이 필요"
       ]
     ],
     "ja": [
@@ -2818,6 +2865,10 @@
       [
         "(^|[。．.]\\s*|\\\")SafeKit (?=(?:\\d+|二|2) ?台)",
         "\\1SafeKit は "
+      ],
+      [
+        "アメリカ合衆国",
+        "米国"
       ]
     ],
     "zh-hans": [
@@ -2912,6 +2963,14 @@
       [
         "传统的可用性",
         "传统的高可用性"
+      ],
+      [
+        "日本 ?NEC",
+        "NEC"
+      ],
+      [
+        "容错软件",
+        "高可用性软件"
       ]
     ],
     "nl": [
@@ -3134,6 +3193,28 @@
       [
         "\\bSAN of NAS-",
         "SAN- of NAS-"
+      ],
+      [
+        "\\bEACS (?=(?:software|leveranciers?|systemen|systeem)\\b)",
+        "EACS-"
+      ],
+      [
+        "\\bRPO\\s*=\\s*0\\b",
+        "RPO = 0"
+      ]
+    ],
+    "pt-br": [
+      [
+        "\\bcontrolo\\b",
+        "controle"
+      ],
+      [
+        "\\bcontrolos\\b",
+        "controles"
+      ],
+      [
+        "\\beletrónic",
+        "eletrônic"
       ]
     ]
   },

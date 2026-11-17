@@ -5,7 +5,7 @@ description: "엣지 컴퓨팅 사이트에는 데이터 센터가 없지만, �
 category: "use-cases"
 lang: "ko"
 topics: "엣지에서의 고가용성 과제, SafeKit이 엣지 컴퓨팅에 자연스럽게 적합한 이유, 엣지 및 분산 배포 적합성, 엣지 OT 환경이 다른 이유, 엣지에서의 이상적인 사용 사례, 엣지 vs. 데이터센터 고가용성: 주요 차이점, 지원되는 운영 체제 및 플랫폼, 🔍 SafeKit 살펴보기"
-translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 50 expressions"
+translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 50 expressions"
 ---
 
 # 데이터 센터 없이 엣지 고가용성 구현: OT 및 분산 사이트를 위한 SafeKit {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
@@ -73,7 +73,7 @@ SafeKit은 데이터 센터가 없는 모든 사이트에 적합하며, 이러�
 ---|---|---  
 물리적 보안 및 감시 | 건물, 캠퍼스, 공항 | VMS: Milestone, Genetec, Hanwha, Siemens Siveillance  
 건물 관리 시스템(BMS) | 사무실 건물, 병원, 공장 | Siemens Desigo CC, Bosch BIS/BVMS  
-전자식 출입 통제(EACS) | 보안 시설, 캠퍼스 | Siemens SiPass, Nedap, Bosch AMS, 허쉬 마이크로세사미  
+전자 출입 통제 시스템(EACS) | 보안 시설, 캠퍼스 | Siemens SiPass, Nedap, Bosch AMS, Hirsch 마이크로세사미  
 SCADA 및 산업 제어 | 공장, 변전소, 정수장 | Windows 또는 Linux 기반의 모든 SCADA, DCS 또는 HMI 소프트웨어  
 항공 교통 관제(ATC) | 공항, 관제탑 | 항공 교통 관리 및 레이더 시스템  
 운영 통제 센터(OCC) | 지하철, 철도, 대중교통 허브 | 철도 신호 및 역무 관리  

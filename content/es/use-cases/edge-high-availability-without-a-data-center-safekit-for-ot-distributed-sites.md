@@ -1,11 +1,11 @@
 ---
 title: "Alta disponibilidad en el edge sin centro de datos: SafeKit para OT y sitios distribuidos"
 canonical: "https://safekit.eviden.com/es/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Los sitios de computación perimetral no tienen un centro de datos, pero aun así necesitan alta disponibilidad. SafeKit convierte dos servidores estándar en un clúster de alta disponibilidad "plug-and-play". No requiere SAN ni personal de TI, y la conmutación por error es automática."
+description: "Los sitios de computación perimetral no tienen un centro de datos, pero aun así necesitan alta disponibilidad. SafeKit convierte dos servidores estándar en un clúster de alta disponibilidad «plug-and-play». No requiere SAN ni personal de TI, y la conmutación por error es automática."
 category: "use-cases"
 lang: "es"
 topics: "El desafío de la alta disponibilidad en el edge, Por qué SafeKit es la solución natural para la computación perimetral, Idoneidad para la implementación en el borde y distribuida, Por qué los entornos OT perimetrales son diferentes, Casos de uso ideales en el edge, Alta disponibilidad en el edge frente a los centros de datos: diferencias clave, Sistemas operativos y plataformas compatibles, 🔍 Explora SafeKit"
-translation: "translate_md 2026-11-16.4 | glossaire 2026-11-17.3 | Translation LLM | 48 expressions"
+translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 48 expressions"
 ---
 
 # Alta disponibilidad en el edge sin centro de datos: SafeKit para OT y sitios distribuidos {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}
