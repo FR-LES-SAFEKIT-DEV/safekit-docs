@@ -1,31 +1,32 @@
 ---
-title: "Hochverfügbarkeit und Redundanz für Videomanagementsoftware (VMS)"
+title: "Hochverfügbarkeit und Redundanz für Videomanagement-Software (VMS)"
 canonical: "https://safekit.eviden.com/de/use-cases/video-management-software-vms-redundancy/"
-description: "Verhindern Sie Videoverluste mit SafeKit , der einfachsten Hochverfügbarkeitssoftware für VMS-Redundanz. Profitieren Sie von der kontinuierlichen Verwaltung rund um die Uhr mit SAN-losem 2-Knoten-Clustering, synchroner Replikation und automatischem Failover. Kompatibel mit Milestone , XProtect , Genetec, Siemens, Bosch und allen VMS der Serien Windows und Linux . Erreichen Sie null Datenverlust (RPO=0) ohne komplexe Hardware."
+description: "SafeKit ist die einfachste Hochverfügbarkeitssoftware für VMS. Sie verhindert Videoverluste. Sie benötigt kein SAN. SafeKit hält die VMS-Software rund um die Uhr verfügbar. Beispiele hierfür sind Milestone XProtect, Genetec, Siemens und Bosch. Sie funktioniert mit jedem Windows- oder Linux-VMS. Sie bietet synchrone Replikation und automatisches Failover zwischen 2 Knoten. Es gibt keine Datenverluste (RPO = 0) und keine komplexe Hardware."
 category: "use-cases"
 lang: "de"
-topics: "Was ist Videomanagement-Software (VMS)? Warum ist eine VMS-Software so wichtig? Wichtige Anbieter im VMS-Bereich. SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von VMS-Software. SafeKit ist eine anerkannte Lösung im Sicherheitsmarkt. 🔍 SafeKit entdecken"
+topics: "Was ist eine Video-Management-Software (VMS)?, Warum ist VMS-Software unerlässlich?, Wichtigste VMS-Anbieter, SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit von VMS-Software., SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 47 expressions"
 ---
 
 # Hochverfügbarkeit und Redundanz für Videomanagement-Software (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
-##  Was ist Videomanagement-Software (VMS)? {#what-is-video-management-software-vms}
+##  Was ist eine Video-Management-Software (VMS)? {#what-is-video-management-software-vms}
 
-Videomanagement-Software (VMS) sammelt und speichert Kameravideos und bietet den Bedienern eine Schnittstelle zur Anzeige von Live- und aufgezeichneten Videos.
+Video-Management-Software (VMS) sammelt und zeichnet Kameravideos auf. Sie bietet eine Schnittstelle für Bediener, um Live- und aufgezeichnete Videos anzusehen.
 
-Videomanagement-Software erhöht die Sicherheit, reduziert Diebstähle und verbessert die Effizienz der Sicherheitskräfte.
+Videoüberwachungssoftware erhöht die Lebenssicherheit und reduziert Diebstähle. Sie verbessert auch die Effizienz von Sicherheitskräften.
 
-##  Warum ist eine VMS-Software so wichtig? {#why-a-vms-software-is-critical}
+##  Warum ist VMS-Software unerlässlich? {#why-a-vms-software-is-critical}
 
-Videomanagement-Software (VMS) zeichnet alle kriminellen Handlungen auf, vom Diebstahl bis zum Mord, und bietet ein Mittel zur Verfolgung von Kriminellen.
+VMS-Software zeichnet alle Straftaten auf, von Diebstahl bis Mord. Sie hilft auch bei der Verfolgung von Kriminellen.
 
-Die Sicherheit der Personen steht in direktem Zusammenhang mit der ordnungsgemäßen Ausführung der VMS-Software.
+Die Sicherheit von Menschen hängt direkt von der VMS-Software ab.
 
-Und genau deshalb muss das System den Sicherheitsbeamten jederzeit zur Verfügung stehen, damit diese auf den geringsten Vorfall sofort reagieren können.
+Sicherheitskräfte müssen sofort auf den geringsten Vorfall reagieren. Die VMS-Software muss ihnen daher stets zur Verfügung stehen.
 
-##  Liste der wichtigsten Akteure in VMS {#key-players-list-in-vms}
+##  Wichtigste VMS-Anbieter {#key-players-list-in-vms}
 
-Die wichtigsten Akteure im VMS sind:
+Die wichtigsten VMS-Anbieter sind:
 
   * Genetec (Kanada)
   * Milestone (Dänemark)
@@ -33,12 +34,12 @@ Die wichtigsten Akteure im VMS sind:
   * Dahua (China)
 
 
-  * Motorola (Avigilon) (Kanada)
+  * Avigilon (Motorola Solutions) (Kanada)
   * Johnson Controls (Irland)
   * Tiandy (China)
   * Eagle Eye Networks (USA)
-  * ISS (USA)
-  * Teledyne Flir (USA)
+  * ISS (US)
+  * Teledyne FLIR (USA)
 
 
 

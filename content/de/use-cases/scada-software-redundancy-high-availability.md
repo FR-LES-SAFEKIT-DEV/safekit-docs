@@ -1,48 +1,49 @@
 ---
-title: "Hohe Verfügbarkeit und Redundanz für SCADA- und industrielle Steuerungssysteme (ICS)"
+title: "Hochverfügbarkeit und Redundanz für SCADA und industrielle Steuerungssysteme (ICS)"
 canonical: "https://safekit.eviden.com/de/use-cases/scada-software-redundancy-high-availability/"
-description: "Schützen Sie Ihre kritische Infrastruktur mit SafeKit , der führenden SAN-losen Hochverfügbarkeitssoftware für SCADA. Gewährleisten Sie die unterbrechungsfreie Verfügbarkeit (24/7) von Wonderware, WinCC, iFix und Inductive Automation durch synchrone Echtzeitreplikation und automatisches Failover. Erreichen Sie null Datenverlust (RPO=0) für Ihre Industriedatenbank – ohne komplexe SAN-Speicherlösungen oder IT-Kenntnisse."
+description: "SafeKit ist die führende Hochverfügbarkeitssoftware für SCADA. Sie benötigt kein SAN. SafeKit hält SCADA-Software rund um die Uhr verfügbar. Beispiele hierfür sind Wonderware, WinCC, iFix und Inductive Automation. Es bietet synchrone Echtzeit-Replikation und automatisches Failover. Es gibt keinen Datenverlust (RPO = 0) für die industrielle Datenbank. Sie benötigen keinen komplexen SAN-Speicher und keine speziellen IT-Kenntnisse."
 category: "use-cases"
 lang: "de"
-topics: "Was ist ein SCADA-System? Warum ist SCADA-Software so wichtig? Wichtige Anbieter von SCADA-Software. SafeKit bietet zwei Lösungen für Redundanz und Hochverfügbarkeit von SCADA-Software. SafeKit ist eine anerkannte Lösung auf dem SCADA-Markt. 🔍 SafeKit entdecken"
+topics: "Was ist ein SCADA-System?, Warum ist SCADA-Software von entscheidender Bedeutung?, Wichtigste Anbieter SCADA-Software, SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit von SCADA-Software., SafeKit, eine anerkannte Lösung auf dem SCADA-Markt, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 47 expressions"
 ---
 
-# Hochverfügbarkeit und Redundanz für SCADA- und industrielle Steuerungssysteme (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# Hochverfügbarkeit und Redundanz für SCADA und industrielle Steuerungssysteme (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
 ##  Was ist ein SCADA-System? {#what-is-a-scada-system}
 
-SCADA-Systeme ermöglichen die Steuerung industrieller Prozesse und die direkte Interaktion mit Geräten wie Sensoren, Ventilen, Pumpen und Motoren über eine Mensch-Maschine-Schnittstellensoftware.
+Ein SCADA-System steuert industrielle Prozesse. Über eine Mensch-Maschine-Schnittstelle (HMI) interagiert es direkt mit Geräten wie Sensoren, Ventilen, Pumpen und Motoren.
 
-##  Warum ist eine SCADA-Software so wichtig? {#why-a-scada-software-is-critical}
+##  Warum ist SCADA-Software von entscheidender Bedeutung? {#why-a-scada-software-is-critical}
 
-Wenn die SCADA-Software ausfällt, steht die Produktion still.
+Wenn die SCADA-Software ausfällt, stoppt die Produktion.
 
-Deshalb muss die SCADA-Software den Bedienern jederzeit zur Verfügung stehen, damit diese auf das geringste Ereignis sofort reagieren können.
+Die Bediener müssen sofort auf den geringsten Vorfall reagieren. Die SCADA-Software muss ihnen daher stets zur Verfügung stehen.
 
-##  Liste der wichtigsten Akteure in der SCADA-Software {#key-players-list-in-scada-software}
+##  Wichtigste Anbieter SCADA-Software {#key-players-list-in-scada-software}
 
-Laut diesem Analystenbericht [ ](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>) sind die wichtigsten Akteure im Bereich SCADA-Software:
+Laut diesem [Analystenbericht](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>) sind die wichtigsten Anbieter von SCADA-Software:
 
   * Siemens
   * ABB
   * Rockwell Automation
-  * Senergy Intellution Pvt Ltd
+  * Senergy Intellution
   * Emerson
-  * Omron Automation
-  * Data Flow Systems, Inc.
+  * Omron
+  * Data Flow Systems
   * Alstom
 
 
   * Schneider Electric
   * Wonderware
   * Mitsubishi Heavy Industries
-  * Yokogawa Electric Corporation
+  * Yokogawa
   * Eaton
   * GE
   * Honeywell
   * Pilz
   * Survalent
-  * Valmet GmbH
+  * Valmet
   * Hitachi
 
 

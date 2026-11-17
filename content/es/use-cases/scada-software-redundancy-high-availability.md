@@ -1,48 +1,49 @@
 ---
-title: "Alta disponibilidad y redundancia para sistemas SCADA y sistemas de control industrial (ICS)"
+title: "Alta disponibilidad y redundancia para sistemas SCADA y de control industrial (ICS)"
 canonical: "https://safekit.eviden.com/es/use-cases/scada-software-redundancy-high-availability/"
-description: "Proteja su infraestructura crítica con SafeKit , el software líder de alta disponibilidad sin SAN para SCADA. Garantice la disponibilidad 24/7 para Wonderware, WinCC, iFix e Inductive Automation con replicación síncrona en tiempo real y conmutación por error automática. Logre cero pérdida de datos (RPO=0) para su base de datos industrial sin necesidad de almacenamiento SAN complejo ni conocimientos de TI."
+description: "SafeKit es el software de alta disponibilidad líder para SCADA. No necesita SAN. SafeKit mantiene el software SCADA disponible 24/7. Algunos ejemplos son Wonderware, WinCC, iFix e Inductive Automation. Proporciona replicación síncrona en tiempo real y conmutación por error automática. No hay pérdida de datos (RPO = 0) para la base de datos industrial. No necesita un complejo almacenamiento SAN ni conocimientos especiales de TI."
 category: "use-cases"
 lang: "es"
-topics: "¿Qué es un sistema SCADA?, ¿Por qué es fundamental un software SCADA?, Lista de los principales actores en el software SCADA, SafeKit ofrece dos soluciones para la redundancia y alta disponibilidad de un software SCADA, SafeKit , una solución reconocida en el mercado SCADA, 🔍 Explora SafeKit"
+topics: "¿Qué es un sistema SCADA?, ¿Por qué es fundamental el software SCADA?, Principales proveedores de software SCADA, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software SCADA, SafeKit, una solución reconocida en el mercado SCADA, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 48 expressions"
 ---
 
 # Alta disponibilidad y redundancia para sistemas SCADA y de control industrial (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
 ##  ¿Qué es un sistema SCADA? {#what-is-a-scada-system}
 
-Los sistemas SCADA permiten controlar los procesos industriales e interactuar directamente con dispositivos como sensores, válvulas, bombas y motores, mediante software de interfaz hombre-máquina.
+Un sistema SCADA controla los procesos industriales. A través del software de interfaz hombre-máquina (HMI), interactúa directamente con dispositivos como sensores, válvulas, bombas y motores.
 
-##  ¿Por qué es fundamental un software SCADA? {#why-a-scada-software-is-critical}
+##  ¿Por qué es fundamental el software SCADA? {#why-a-scada-software-is-critical}
 
 Si el software SCADA falla, la producción se detiene.
 
-Por eso, el software SCADA debe estar siempre disponible para los operadores, quienes deben reaccionar de inmediato ante el más mínimo incidente.
+Los operadores deben reaccionar de inmediato ante el más mínimo incidente. Por lo tanto, el software SCADA debe estar siempre a su disposición.
 
-##  Lista de actores clave en el software SCADA {#key-players-list-in-scada-software}
+##  Principales proveedores de software SCADA {#key-players-list-in-scada-software}
 
-Según este informe de analistas [ ](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>) , los principales actores en el software SCADA son:
+Según este [informe de analistas](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>), los principales proveedores de software SCADA son:
 
   * Siemens
-  * TEJIDO
-  * Automatización de Rockwell
-  * Senergy Intellution Pvt Ltd
+  * ABB
+  * Rockwell Automation
+  * Senergy Intellution
   * Emerson
-  * Automatización Omron
-  * Sistemas de Flujo de Datos, Inc.
+  * Omron
+  * Data Flow Systems
   * Alstom
 
 
   * Schneider Electric
   * Wonderware
-  * Industrias pesadas de Mitsubishi
-  * Corporación Eléctrica Yokogawa
+  * Mitsubishi Heavy Industries
+  * Yokogawa
   * Eaton
   * GE
   * Honeywell
   * Pilz
-  * Sobrevalente
-  * Valmet GmbH
+  * Survalent
+  * Valmet
   * Hitachi
 
 

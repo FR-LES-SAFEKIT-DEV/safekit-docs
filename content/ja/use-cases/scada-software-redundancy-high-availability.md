@@ -1,49 +1,50 @@
 ---
-title: "SCADAおよび産業制御システム（ICS）の高可用性と冗長性"
+title: "SCADA および産業用制御システム（ICS）の高可用性と冗長性"
 canonical: "https://safekit.eviden.com/ja/use-cases/scada-software-redundancy-high-availability/"
-description: "SCADA向けSANレス高可用性ソフトウェアのリーディングカンパニーであるSafeKitで、重要なインフラストラクチャを保護しましょう。リアルタイム同期レプリケーションと自動フェイルオーバーにより、Wonderware、WinCC、iFix、Inductive Automationの24時間365日稼働を保証します。複雑なSANストレージやITスキルを必要とせずに、産業用データベースのデータ損失ゼロ（RPO=0）を実現します。"
+description: "SafeKit は、SCADA 向けの主要な高可用性ソフトウェアです。SAN 不要です。SafeKit は SCADA ソフトウェアを 24 時間年中無休で利用可能に保ちます。例としては、Wonderware、WinCC、iFix、Inductive Automation などがあります。リアルタイムの同期レプリケーションと自動フェイルオーバーを提供します。産業用データベースではデータ損失はゼロ（RPO = 0）です。複雑な SAN ストレージや特別な IT スキルは必要ありません。"
 category: "use-cases"
 lang: "ja"
-topics: "SCADAシステムとは？、SCADAソフトウェアが重要な理由、SCADAソフトウェアの主要プレーヤー一覧、 SafeKitはSCADAソフトウェアの冗長性と高可用性を実現する2つのソリューションを提供、 SafeKit SCADA市場で定評のあるソリューション、🔍 SafeKit を探索する"
+topics: "SCADA システムとは何ですか？、SCADA ソフトウェアが重要な理由とは？、主要 SCADA ソフトウェアベンダー、SafeKit、SCADA ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、SCADA 市場で認められたソリューション、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 49 expressions"
 ---
 
-# SCADAおよび産業制御システム（ICS）の高可用性と冗長性 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# SCADA および産業用制御システム（ICS）の高可用性と冗長性 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
-##  システムとは何ですか？ {#what-is-a-scada-system}
+##  SCADA システムとは何ですか？ {#what-is-a-scada-system}
 
-SCADAシステムは、産業プロセスを制御し、ヒューマンマシンインターフェースソフトウェアを介して、センサー、バルブ、ポンプ、モーターなどの機器と直接やり取りすることを可能にします。
+SCADA システムは産業プロセスを制御します。ヒューマンマシンインターフェース（HMI）ソフトウェアを介して、センサー、バルブ、ポンプ、モーターなどのデバイスと直接対話します。
 
-##  SCADAソフトウェアが重要な理由と？ {#why-a-scada-software-is-critical}
+##  SCADA ソフトウェアが重要な理由とは？ {#why-a-scada-software-is-critical}
 
-SCADAソフトウェアがダウンすると、生産が停止する。
+SCADA ソフトウェアに障害が発生すると、生産が停止します。
 
-そのため、SCADAソフトウェアは、些細な事故にも即座に対応しなければならないオペレーターが常に利用できる状態にしておく必要がある。
+オペレーターは、どんなに小さなインシデントにも即座に対応しなければなりません。そのため、SCADA ソフトウェアは常に利用可能である必要があります。
 
-##  SCADAソフトウェアの主要プレーヤー一覧 {#key-players-list-in-scada-software}
+##  主要 SCADA ソフトウェアベンダー {#key-players-list-in-scada-software}
 
-[アナリストレポート](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>)によると、SCADAソフトウェアの主要プレーヤーは以下のとおりです。
+この[アナリストレポート](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>)によると、主な SCADA ソフトウェアベンダーは以下の通りです：
 
-  * シーメンス
+  * Siemens
   * ABB
-  * ロックウェル・オートメーション
-  * Senergy Intellution Pvt Ltd
-  * エマーソン
-  * オムロンオートメーション
-  * データフローシステムズ株式会社
-  * アルストム
+  * Rockwell Automation
+  * Senergy Intellution
+  * Emerson
+  * Omron
+  * Data Flow Systems
+  * Alstom
 
 
-  * シュナイダーエレクトリック
-  * ワンダーウェア
-  * 三菱重工業
-  * 横河電機株式会社
-  * イートン
+  * Schneider Electric
+  * Wonderware
+  * Mitsubishi Heavy Industries
+  * Yokogawa
+  * Eaton
   * GE
-  * ハネウェル
-  * ピルツ
-  * 同等
-  * Valmet GmbH
-  * 日立
+  * Honeywell
+  * Pilz
+  * Survalent
+  * Valmet
+  * Hitachi
 
 
 

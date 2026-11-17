@@ -1,48 +1,49 @@
 ---
-title: "Alta disponibilidade e redundância para sistemas SCADA e de controle industrial (ICS)"
+title: "Alta Disponibilidade e Redundância para Sistemas SCADA e de Controlo Industrial (ICS)"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/scada-software-redundancy-high-availability/"
-description: "Proteja infraestruturas críticas com SafeKit , o software líder em alta disponibilidade sem SAN para SCADA. Garanta disponibilidade 24 horas por dia, 7 dias por semana, para Wonderware, WinCC, iFix e Inductive Automation com replicação síncrona em tempo real e failover automático. Alcance zero perda de dados (RPO=0) para seu banco de dados industrial sem armazenamento SAN complexo ou conhecimentos de TI."
+description: "SafeKit é o software líder em alta disponibilidade para SCADA. Não necessita de SAN. SafeKit mantém o software SCADA disponível 24/7. Exemplos incluem Wonderware, WinCC, iFix e Inductive Automation. Fornece replicação síncrona em tempo real e failover automático. Não há perda de dados (RPO = 0) para a base de dados industrial. Não necessita de armazenamento SAN complexo nem de competências de TI especiais."
 category: "use-cases"
 lang: "pt-pt"
-topics: "O que é um sistema SCADA? Por que um software SCADA é essencial? Principais players no mercado de software SCADA: SafeKit oferece duas soluções para redundância e alta disponibilidade em um software SCADA; SafeKit é uma solução reconhecida no mercado SCADA; e SafeKit um hub de navegação de alta disponibilidade."
+topics: "O que é um sistema SCADA?, Por que o software SCADA é tão importante?, Principais fornecedores de software SCADA, SafeKit oferece duas soluções para redundância e alta disponibilidade de um software SCADA, SafeKit, uma solução reconhecida no mercado SCADA, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 50 expressions"
 ---
 
-# Alta disponibilidade e redundância para sistemas SCADA e de controle industrial (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# Alta Disponibilidade e Redundância para Sistemas SCADA e de Controlo Industrial (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
 ##  O que é um sistema SCADA? {#what-is-a-scada-system}
 
-Os sistemas SCADA permitem controlar processos industriais e interagir diretamente com dispositivos como sensores, válvulas, bombas e motores, através de software de interface homem-máquina.
+Um sistema SCADA controla processos industriais. Através de software de interface homem-máquina (HMI), interage diretamente com dispositivos como sensores, válvulas, bombas e motores.
 
-##  Por que um software SCADA é essencial? {#why-a-scada-software-is-critical}
+##  Por que o software SCADA é tão importante? {#why-a-scada-software-is-critical}
 
-Se o software SCADA estiver inativo, a produção para.
+Se o software SCADA falhar, a produção para.
 
-Por isso, o software SCADA deve estar sempre disponível para os operadores, que precisam reagir imediatamente ao menor incidente.
+Os operadores devem reagir imediatamente ao mais pequeno incidente. O software SCADA deve, portanto, estar sempre disponível para eles.
 
-##  Lista dos principais players em software SCADA {#key-players-list-in-scada-software}
+##  Principais fornecedores de software SCADA {#key-players-list-in-scada-software}
 
-De acordo com este relatório de análise [ ](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>) , os principais players no mercado de software SCADA são:
+De acordo com este [relatório de analista](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>), os principais fornecedores de software SCADA são:
 
   * Siemens
   * ABB
   * Rockwell Automation
-  * Senergy Intellution Pvt Ltd
+  * Senergy Intellution
   * Emerson
-  * Automação Omron
-  * Sistemas de Fluxo de Dados, Inc.
+  * Omron
+  * Data Flow Systems
   * Alstom
 
 
   * Schneider Electric
   * Wonderware
-  * Indústrias Pesadas Mitsubishi
-  * Corporação Elétrica Yokogawa
+  * Mitsubishi Heavy Industries
+  * Yokogawa
   * Eaton
   * GE
   * Honeywell
   * Pilz
-  * Sobrevalente
-  * Valmet GmbH
+  * Survalent
+  * Valmet
   * Hitachi
 
 

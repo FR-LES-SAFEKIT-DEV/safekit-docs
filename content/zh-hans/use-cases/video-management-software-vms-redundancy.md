@@ -1,44 +1,45 @@
 ---
-title: "视频管理软件 (VMS) 的高可用性和冗余性"
+title: "视频管理软件 (VMS) 的高可用性和冗余"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/video-management-software-vms-redundancy/"
-description: "使用SafeKit防止视频丢失，它是最简便的 VMS 冗余高可用性软件。借助无 SAN 双节点集群、同步复制和自动故障转移，实现 24/7 全天候不间断管理。兼容Milestone XProtect 、Genetec、Siemens、Bosch 以及所有Windows / Linux VMS。无需复杂的硬件即可实现零数据丢失 (RPO=0)。"
+description: "SafeKit 是最简单的 VMS 高可用性软件。它可防止视频丢失，无需 SAN。SafeKit 可使 VMS 软件 24/7 全天候可用。例如 Milestone XProtect、Genetec、Siemens 和 Bosch。它适用于任何 Windows 或 Linux VMS。它在 2 个节点之间提供同步复制和自动故障转移。没有数据丢失 (RPO = 0)，也没有复杂的硬件。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "什么是视频管理软件 (VMS)？为什么 VMS 软件至关重要？VMS 领域的主要厂商有哪些？ SafeKit提供两种 VMS 软件冗余和高可用性解决方案， SafeKit是安全市场公认的解决方案，🔍 探索 SafeKit"
+topics: "什么是视频管理软件 (VMS)？、为什么 VMS 软件至关重要？、主要 VMS 系统供应商、SafeKit 为 VMS 软件的冗余和高可用性提供了两种解决方案。、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 51 expressions"
 ---
 
 # 视频管理软件 (VMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-video-management-software-vms}
 
-##  是视频管理软件（VMS）？ {#what-is-video-management-software-vms}
+##  什么是视频管理软件 (VMS)？ {#what-is-video-management-software-vms}
 
-视频管理软件（VMS）收集和记录摄像机视频，并为操作员提供查看实时和录制视频的界面。
+视频管理软件 (VMS) 收集和记录摄像机视频。它为操作员提供了一个界面，用于查看实时和录制的视频。
 
-视频管理软件可以提高生命安全，减少盗窃，并提高保安人员的工作效率。
+视频管理软件可提高生命安全并减少盗窃。它还可以提高安保人员的效率。
 
-##  为什么视频管理系统 (VMS) 软件至关重要？ {#why-a-vms-software-is-critical}
+##  为什么 VMS 软件至关重要？ {#why-a-vms-software-is-critical}
 
-视频管理软件（VMS）记录所有犯罪行为，从盗窃到谋杀，并提供追踪罪犯的手段。
+VMS 软件记录所有犯罪行为，从盗窃到谋杀。它还有助于追踪罪犯。
 
-人员安全与视频管理系统软件的正确运行直接相关。
+人员安全直接取决于 VMS 软件。
 
-因此，该系统必须始终可供安保人员使用，以便他们对任何轻微事件都能立即做出反应。
+安保人员必须对最轻微的事件立即做出反应。因此，他们必须随时可以使用 VMS 软件。
 
-##  VMS中的关键参与者列表 {#key-players-list-in-vms}
+##  主要 VMS 系统供应商 {#key-players-list-in-vms}
 
-VMS的关键参与者包括：
+主要的 VMS 供应商是：
 
   * Genetec（加拿大）
-  * Milestone （丹麦）
-  * 海康威视（中国）
-  * 大华（中国）
+  * Milestone（丹麦）
+  * Hikvision（中国）
+  * Dahua（中国）
 
 
-  * 摩托罗拉（Avigilon）（加拿大）
-  * 江森自控（爱尔兰）
-  * 天地（中国）
-  * 鹰眼网络（美国）
-  * 国际空间站（美国）
-  * 泰莱福力尔（美国）
+  * Avigilon（Motorola Solutions）（加拿大）
+  * Johnson Controls（爱尔兰）
+  * Tiandy（中国）
+  * Eagle Eye Networks（美国）
+  * ISS（美国）
+  * Teledyne FLIR（美国）
 
 
 

@@ -1,49 +1,50 @@
 ---
-title: "التوافر العالي والتكرار لأنظمة التحكم الإشرافي وجمع البيانات (SCADA) وأنظمة التحكم الصناعية (ICS)"
+title: "التوافر العالي والتكرار لأنظمة SCADA والتحكم الصناعي (ICS)"
 canonical: "https://safekit.eviden.com/ar/use-cases/scada-software-redundancy-high-availability/"
-description: "احمِ البنية التحتية الحيوية باستخدام SafeKit ، البرنامج الرائد عالي التوافر لأنظمة SCADA بدون الحاجة إلى شبكة تخزين (SAN). اضمن استمرارية عمل Wonderware وWinCC وiFix وInductive Automation على مدار الساعة طوال أيام الأسبوع من خلال النسخ المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الأعطال. حقق انعدام فقدان البيانات (RPO=0) لقاعدة بياناتك الصناعية دون الحاجة إلى حلول تخزين SAN معقدة أو مهارات تقنية معلومات متقدمة."
+description: "يُعد SafeKit برنامج التوافر العالي الرائد لأنظمة SCADA. لا يحتاج إلى SAN. يحافظ SafeKit على توفر برنامج SCADA على مدار الساعة طوال أيام الأسبوع. من الأمثلة على ذلك Wonderware و WinCC و iFix و Inductive Automation. يوفر النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي عند الفشل. لا يوجد فقدان للبيانات (RPO = 0) لقاعدة البيانات الصناعية. لا تحتاج إلى تخزين SAN معقد ولا إلى مهارات تكنولوجيا معلومات خاصة."
 category: "use-cases"
 lang: "ar"
-topics: "ما هو نظام SCADA؟، لماذا يُعدّ برنامج SCADA بالغ الأهمية؟، قائمة بأهمّ الشركات في مجال برامج SCADA، يُقدّم SafeKit حلّين لضمان التكرار والتوافر العالي لبرنامج SCADA، SafeKit ، وهو حلّ معروف في سوق SCADA، 🔍 استكشف SafeKit"
+topics: "ما هو نظام SCADA؟، لماذا يُعد برنامج SCADA بالغ الأهمية؟، أهم بائعي برامج SCADA، تقدم SafeKit حلولاً مزدوجة لتحقيق التكرار والتوافر العالي لبرامج SCADA، SafeKit، حل معترف به في سوق SCADA، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 43 expressions"
 ---
 
-# التوافر العالي والتكرار لأنظمة التحكم الإشرافي وجمع البيانات (SCADA) وأنظمة التحكم الصناعية (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+# التوافر العالي والتكرار لأنظمة SCADA والتحكم الصناعي (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
 ##  ما هو نظام SCADA؟ {#what-is-a-scada-system}
 
-تتيح أنظمة SCADA التحكم في العمليات الصناعية، والتفاعل مباشرة مع الأجهزة مثل أجهزة الاستشعار والصمامات والمضخات والمحركات، من خلال برامج واجهة الإنسان والآلة.
+يتحكم نظام SCADA في العمليات الصناعية. ومن خلال برنامج واجهة الإنسان والآلة (HMI)، فإنه يتفاعل مباشرة مع الأجهزة مثل أجهزة الاستشعار والصمامات والمضخات والمحركات.
 
-##  لماذا يُعدّ برنامج SCADA بالغ الأهمية؟ {#why-a-scada-software-is-critical}
+##  لماذا يُعد برنامج SCADA بالغ الأهمية؟ {#why-a-scada-software-is-critical}
 
-إذا تعطل برنامج SCADA، يتوقف الإنتاج.
+في حال تعطل برنامج SCADA، يتوقف الإنتاج.
 
-ولهذا السبب، يجب أن يكون برنامج SCADA متاحًا دائمًا للمشغلين الذين يجب عليهم الاستجابة فورًا لأدنى حادث.
+يجب على المشغلين الاستجابة فورًا لأدنى حادث. لذلك، يجب أن يكون برنامج SCADA متاحًا لهم دائمًا.
 
-##  قائمة اللاعبين الرئيسيين في برمجيات SCADA {#key-players-list-in-scada-software}
+##  أهم بائعي برامج SCADA {#key-players-list-in-scada-software}
 
-وفقًا لتقرير المحلل [ ](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>) ، فإن اللاعبين الرئيسيين في برامج SCADA هم:
+وفقًا [لتقرير المحلل](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>) هذا، فإن الموردين الرئيسيين لبرامج SCADA هم:
 
-  * سيمنز
-  * شركة ABB
-  * روكويل أوتوميشن
-  * شركة سينرجي إنتليوشن الخاصة المحدودة
-  * إيمرسون
-  * أومرون أوتوميشن
-  * شركة أنظمة تدفق البيانات
-  * ألستوم
+  * Siemens
+  * ABB
+  * Rockwell Automation
+  * Senergy Intellution
+  * Emerson
+  * Omron
+  * Data Flow Systems
+  * Alstom
 
 
-  * شنايدر إلكتريك
-  * وندروير
-  * شركة ميتسوبيشي للصناعات الثقيلة
-  * شركة يوكوجاوا الكهربائية
-  * إيتون
-  * جنرال إلكتريك
-  * هانيويل
-  * بيلز
-  * سرفالنت
-  * شركة فالميت المحدودة
-  * هيتاشي
+  * Schneider Electric
+  * Wonderware
+  * Mitsubishi Heavy Industries
+  * Yokogawa
+  * Eaton
+  * GE
+  * Honeywell
+  * Pilz
+  * Survalent
+  * Valmet
+  * Hitachi
 
 
 

@@ -1,43 +1,45 @@
 ---
 title: "Haute disponibilité et redondance pour les logiciels de gestion vidéo (VMS)"
 canonical: "https://safekit.eviden.com/fr/use-cases/video-management-software-vms-redundancy/"
-description: "Évitez les pertes vidéo avec SafeKit, le logiciel de haute disponibilité le plus simple pour la redondance des systèmes de gestion vidéo (VMS). Bénéficiez d'une gestion continue 24h/24 et 7j/7 grâce au clustering sans SAN à 2 nœuds, à la réplication synchrone et au basculement automatique. Compatible avec Milestone XProtect, Genetec, Siemens, Bosch et tous les VMS Windows/Linux. Garantissez une disponibilité maximale (RPO=0) sans matériel complexe."
+description: "SafeKit est le logiciel de haute disponibilité le plus simple pour VMS. Il empêche la perte de vidéo. Il ne nécessite pas de SAN. SafeKit maintient le logiciel VMS disponible 24h/24 et 7j/7. Les exemples incluent Milestone XProtect, Genetec, Siemens et Bosch. Il fonctionne avec n’importe quel VMS Windows ou Linux. Il fournit une réplication synchrone et un basculement automatique entre 2 nœuds. Il n’y a pas de perte de données (RPO = 0) et pas de matériel complexe."
 category: "use-cases"
 lang: "fr"
-topics: "Qu'est-ce qu'un logiciel de gestion vidéo (VMS) ?, Pourquoi un logiciel VMS est critique ?, Liste des acteurs clés dans le marché VMS, SafeKit apporte deux solutions pour la redondance et la haute disponibilité des logiciels VMS, SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Explorez SafeKit"
+topics: "Qu’est-ce qu’un logiciel de gestion vidéo (VMS) ?, Pourquoi le logiciel VMS est-il essentiel ?, Principaux fournisseurs VMS, SafeKit propose deux solutions pour la redondance et la haute disponibilité d’un logiciel VMS, SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 58 expressions"
 ---
 
 # Haute disponibilité et redondance pour les logiciels de gestion vidéo (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
-##  Qu'est-ce qu'un logiciel de gestion vidéo (VMS) ? {#what-is-video-management-software-vms}
+##  Qu’est-ce qu’un logiciel de gestion vidéo (VMS) ? {#what-is-video-management-software-vms}
 
-Un logiciel de gestion vidéo (VMS - Video Management Software) collecte et enregistre les vidéos des caméras et fournit une interface aux opérateurs pour visualiser en direct les vidéos ou celles enregistrées.
+Le logiciel de gestion vidéo (VMS) collecte et enregistre les vidéos des caméras. Il fournit une interface permettant aux opérateurs de visualiser les vidéos en direct et enregistrées.
 
-Un logiciel de gestion vidéo augmente la sécurité des personnes, réduit les vols et améliore l'efficacité des agents de sécurité.
+Les logiciels de gestion vidéo améliorent la sécurité des personnes et réduisent les vols. Ils améliorent également l’efficacité des agents de sécurité.
 
-##  Pourquoi un logiciel VMS est critique ? {#why-a-vms-software-is-critical}
+##  Pourquoi le logiciel VMS est-il essentiel ? {#why-a-vms-software-is-critical}
 
-Un logiciel de gestion vidéo enregistre tous les actes criminels, du simple vol au meurtre, et fournit un moyen de traquer les criminels.
+Le logiciel VMS enregistre tous les actes criminels, du vol au meurtre. Il permet également de suivre les criminels.
 
-La sécurité des personnes est directement associée à la bonne exécution du logiciel VMS.
+La sécurité des personnes dépend directement du logiciel VMS.
 
-Et c'est pourquoi, le système doit toujours être disponible pour les agents de sécurité qui doivent réagir immédiatement au moindre incident.
+Les agents de sécurité doivent réagir immédiatement au moindre incident. Le logiciel VMS doit donc toujours être à leur disposition.
 
-##  Liste des acteurs clés dans le marché VMS {#key-players-list-in-vms}
+##  Principaux fournisseurs VMS {#key-players-list-in-vms}
+
+Les principaux fournisseurs VMS sont :
 
   * Genetec (Canada)
-  * Milestone (Denmark)
-  * Hikvision (China)
-  * Dahua (China)
-  * Motorola (Avigilon) (Canada)
-  * Johnson Controls (Ireland)
+  * Milestone (Danemark)
+  * Hikvision (Chine)
+  * Dahua (Chine)
 
 
-  * Uniview (China)
-  * Tiandy (China)
-  * Eagle Eye Networks (US)
-  * ISS (US)
-  * Teledyne Flir (US)
+  * Avigilon (Motorola Solutions) (Canada)
+  * Johnson Controls (Irlande)
+  * Tiandy (Chine)
+  * Eagle Eye Networks (États-Unis)
+  * ISS (États-Unis)
+  * Teledyne FLIR (États-Unis)
 
 
 

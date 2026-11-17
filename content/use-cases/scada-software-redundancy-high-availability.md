@@ -1,48 +1,48 @@
 ---
 title: "High Availability and Redundancy for SCADA and Industrial Control Systems (ICS)"
 canonical: "https://safekit.eviden.com/use-cases/scada-software-redundancy-high-availability/"
-description: "Protect critical infrastructure with SafeKit, the leading SANless high availability software for SCADA. Ensure 24/7 uptime for Wonderware, WinCC, iFix, and Inductive Automation with real-time synchronous replication and automatic failover. Achieve zero data loss (RPO=0) for your industrial database without complex SAN storage or IT skills."
+description: "SafeKit is the leading high availability software for SCADA. It needs no SAN. SafeKit keeps SCADA software available 24/7. Examples are Wonderware, WinCC, iFix, and Inductive Automation. It provides real-time synchronous replication and automatic failover. There is zero data loss (RPO=0) for the industrial database. You need no complex SAN storage and no special IT skills."
 category: "use-cases"
 lang: "en"
-topics: "What is a SCADA system?, Why a SCADA software is critical?, Key players list in SCADA software, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market, 🔍 Explore SafeKit"
+topics: "What is a SCADA system?, Why is SCADA software critical?, Main SCADA software vendors, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market, 🔍 Explore SafeKit"
 ---
 
 # High Availability and Redundancy for SCADA and Industrial Control Systems (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
 
 ##  What is a SCADA system? {#what-is-a-scada-system}
 
-SCADA systems make it possible to control industrial processes, to interact directly with devices such as sensors, valves, pumps, motors, through human-machine interface software.
+A SCADA system controls industrial processes. Through human-machine interface (HMI) software, it interacts directly with devices such as sensors, valves, pumps, and motors.
 
-##  Why a SCADA software is critical? {#why-a-scada-software-is-critical}
+##  Why is SCADA software critical? {#why-a-scada-software-is-critical}
 
-If the SCADA software is down, the production stops.
+If the SCADA software fails, production stops.
 
-That’s why, the SCADA software must be always available for operators who must react immediately to the slightest incident.
+Operators must react immediately to the slightest incident. The SCADA software must therefore always be available to them.
 
-##  Key players list in SCADA software {#key-players-list-in-scada-software}
+##  Main SCADA software vendors {#key-players-list-in-scada-software}
 
-According this [analyst report](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>), the key players in SCADA software are:
+According to this [analyst report](<https://www.linkedin.com/pulse/global-scada-market-size-reach-value-usd-/>), the main SCADA software vendors are:
 
   * Siemens
   * ABB
   * Rockwell Automation
-  * Senergy Intellution Pvt Ltd
+  * Senergy Intellution
   * Emerson
-  * Omron Automation
-  * Data Flow Systems, Inc.
+  * Omron
+  * Data Flow Systems
   * Alstom
 
 
   * Schneider Electric
   * Wonderware
   * Mitsubishi Heavy Industries
-  * Yokogawa Electric Corporation
+  * Yokogawa
   * Eaton
   * GE
   * Honeywell
   * Pilz
   * Survalent
-  * Valmet GmbH
+  * Valmet
   * Hitachi
 
 

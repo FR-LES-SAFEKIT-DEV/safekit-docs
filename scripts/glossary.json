@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.8",
+  "version": "2026-11-17.13",
   "keep": [
     "mirror",
     "farm",
@@ -152,7 +152,34 @@
     "IDEMIA",
     "HID",
     "Hirsch",
-    "TIL Technologies"
+    "TIL Technologies",
+    "SCADA",
+    "Rockwell Automation",
+    "Senergy Intellution",
+    "Emerson",
+    "Omron",
+    "Data Flow Systems",
+    "Alstom",
+    "Wonderware",
+    "Mitsubishi Heavy Industries",
+    "Yokogawa",
+    "Eaton",
+    "GE",
+    "Pilz",
+    "Survalent",
+    "Valmet",
+    "Hitachi",
+    "iFix",
+    "Inductive Automation",
+    "VMS",
+    "Hikvision",
+    "Dahua",
+    "Motorola Solutions",
+    "Avigilon",
+    "Tiandy",
+    "Eagle Eye Networks",
+    "ISS",
+    "Teledyne FLIR"
   ],
   "terms": {
     "farm cluster": {
@@ -1155,6 +1182,10 @@
       [
         "(: )Clustering\\b",
         "\\1clustering"
+      ],
+      [
+        "\\b(RPO|RTO) ?= ?(\\d)",
+        "\\1 = \\2"
       ]
     ],
     "it": [
@@ -1399,6 +1430,10 @@
       [
         "\\btiempo de actividad del 100 ?%",
         "tiempo de actividad 24/7"
+      ],
+      [
+        "\\b(RPO|RTO) ?= ?(\\d)",
+        "\\1 = \\2"
       ]
     ],
     "pt": [
@@ -1525,6 +1560,10 @@
       [
         "\\bmuitos escritórios satélite\\b",
         "muitas filiais"
+      ],
+      [
+        "\\b(RPO|RTO) ?= ?(\\d)",
+        "\\1 = \\2"
       ]
     ],
     "ar": [
@@ -1679,6 +1718,18 @@
       [
         "تخزين شبكة منطقة التخزين \\(?SAN\\)?",
         "تخزين SAN"
+      ],
+      [
+        "إدارة الأسطول \\(VMS\\)",
+        "إدارة الفيديو (VMS)"
+      ],
+      [
+        "(?<!تخزين )شبكة منطقة التخزين \\(?SAN\\)?",
+        "SAN"
+      ],
+      [
+        "يعمل (Windows|Linux) أو",
+        "يعمل بنظام \\1 أو"
       ]
     ],
     "de": [
@@ -2021,9 +2072,25 @@
       [
         "\\bautomatische Failover(?![-\\w])",
         "automatisches Failover"
+      ],
+      [
+        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS) (?=(?:System|Systeme|Systems|Software|Speicher|Speichers|Anbieter|Markt|Lösung|Lösungen)\\b)",
+        "\\1-"
+      ],
+      [
+        "\\b(RPO|RTO) ?= ?(\\d)",
+        "\\1 = \\2"
+      ],
+      [
+        "\\b(Windows) oder (Linux) (VMS|SCADA|BMS)\\b",
+        "\\1- oder \\2-\\3"
       ]
     ],
     "ko": [
+      [
+        "SafeKit 소프트웨어 (SCADA|EACS|BMS|VMS) ",
+        "SafeKit은 \\1 소프트웨어를 "
+      ],
       [
         "(클러스터|VLAN|ARP|IP|통합자|\\(PRIM\\)|\\(SECOND\\))\\s+(의|에서|에|용|를|을|은|는|이|가|과|와|으로|로|도|만)(?=[\\s.,:;)!?*]|$)",
         "\\1\\2"
@@ -2503,6 +2570,14 @@
       [
         "\\bSAN 필요",
         "SAN이 필요"
+      ],
+      [
+        "SafeKit (?=(?:SCADA|EACS|BMS|VMS) [^\\n.,\"]*(?:제공|유지|보장)합니다)",
+        "SafeKit은 "
+      ],
+      [
+        "(^|\")SafeKit (SCADA|EACS|BMS|VMS) 위한",
+        "\\1SafeKit은 \\2를 위한"
       ]
     ],
     "ja": [
@@ -2877,6 +2952,14 @@
       [
         "アメリカ合衆国",
         "米国"
+      ],
+      [
+        "^SafeKit (?=SCADA|EACS|BMS|VMS)",
+        "SafeKit は "
+      ],
+      [
+        "(^|[。．]\\s*)SafeKit (?=(?:SCADA|EACS|BMS|VMS) )",
+        "\\1SafeKit は "
       ]
     ],
     "zh-hans": [
@@ -2987,6 +3070,22 @@
       [
         "无 SAN (?=\\d)",
         "无 SAN 的"
+      ],
+      [
+        "不需要 SAN 可使",
+        "不需要 SAN。SafeKit 可使"
+      ],
+      [
+        "(^|。)([A-Z][\\w-]*) SafeKit (?=[A-Za-z][^。\\n]*、)",
+        "\\1例如 \\2、"
+      ],
+      [
+        "无需 SAN 可使",
+        "无需 SAN。SafeKit 可使"
+      ],
+      [
+        "例如 SafeKit (?=[A-Z])",
+        "例如 "
       ]
     ],
     "nl": [
@@ -3229,6 +3328,14 @@
       [
         "\\bSAN opslag\\b",
         "SAN-opslag"
+      ],
+      [
+        "\\b(SCADA|SAN|HMI|EACS|VMS|BMS) (?=(?:software|systemen|systeem|opslag|leveranciers?|markt|oplossing(?:en)?)\\b)",
+        "\\1-"
+      ],
+      [
+        "\\b(Windows) of (Linux) (VMS|SCADA|BMS)\\b",
+        "\\1- of \\2-\\3"
       ]
     ],
     "pt-br": [
@@ -3243,6 +3350,10 @@
       [
         "\\beletrónic",
         "eletrônic"
+      ],
+      [
+        "gestão de vídeo",
+        "gerenciamento de vídeo"
       ]
     ]
   },

@@ -1,31 +1,32 @@
 ---
-title: "Alta disponibilidad y redundancia para software de gestión de vídeo (VMS)"
+title: "Alta disponibilidad y redundancia para el software de gestión de vídeo (VMS)"
 canonical: "https://safekit.eviden.com/es/use-cases/video-management-software-vms-redundancy/"
-description: "Evite la pérdida de vídeo con SafeKit , el software de alta disponibilidad más sencillo para la redundancia de VMS. Obtenga gestión continua 24/7 con clúster de 2 nodos sin SAN, replicación síncrona y conmutación por error automática. Compatible con Milestone XProtect , Genetec, Siemens, Bosch y cualquier VMS Windows / Linux . Consiga cero pérdida de datos (RPO=0) sin hardware complejo."
+description: "SafeKit es el software de alta disponibilidad más sencillo para VMS. Evita la pérdida de vídeo. No necesita SAN. SafeKit mantiene el software VMS disponible 24/7. Algunos ejemplos son Milestone XProtect, Genetec, Siemens y Bosch. Funciona con cualquier VMS Windows o Linux. Proporciona replicación síncrona y conmutación por error automática entre 2 nodos. No hay pérdida de datos (RPO = 0) ni hardware complejo."
 category: "use-cases"
 lang: "es"
-topics: "¿Qué es un software de gestión de vídeo (VMS)?, ¿Por qué es fundamental un software VMS?, Lista de actores clave en VMS, SafeKit ofrece dos soluciones para redundancia y alta disponibilidad de un software VMS, SafeKit , una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"
+topics: "¿Qué es el software de gestión de vídeo (VMS)?, ¿Por qué es fundamental el software VMS?, Principales proveedores VMS, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software VMS, SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 48 expressions"
 ---
 
-# Alta disponibilidad y redundancia para software de gestión de vídeo (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
+# Alta disponibilidad y redundancia para el software de gestión de vídeo (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
-##  ¿Qué es un software de gestión de vídeo (VMS)? {#what-is-video-management-software-vms}
+##  ¿Qué es el software de gestión de vídeo (VMS)? {#what-is-video-management-software-vms}
 
-El software de gestión de vídeo (VMS) recopila y graba el vídeo de las cámaras y proporciona una interfaz para que los operadores puedan ver el vídeo en directo y grabado.
+El software de gestión de vídeo (VMS) recopila y graba el vídeo de las cámaras. Proporciona una interfaz para que los operadores puedan ver el vídeo en directo y grabado.
 
-El software de gestión de vídeo aumenta la seguridad, reduce los robos y mejora la eficiencia de los agentes de seguridad.
+El software de gestión de vídeo aumenta la seguridad de las personas y reduce los robos. También mejora la eficacia de los agentes de seguridad.
 
-##  ¿Por qué es fundamental un software VMS? {#why-a-vms-software-is-critical}
+##  ¿Por qué es fundamental el software VMS? {#why-a-vms-software-is-critical}
 
-El software de gestión de vídeo (VMS, por sus siglas en inglés) registra todos los actos delictivos, desde robos hasta asesinatos, y proporciona un medio para rastrear a los delincuentes.
+El software VMS registra todos los actos delictivos, desde robos hasta asesinatos. También ayuda a rastrear a los delincuentes.
 
-La seguridad de las personas está directamente relacionada con la correcta ejecución del software VMS.
+La seguridad de las personas depende directamente del software VMS.
 
-Y por eso el sistema debe estar siempre disponible para los agentes de seguridad, quienes deben reaccionar de inmediato ante el más mínimo incidente.
+Los agentes de seguridad deben reaccionar de inmediato ante el más mínimo incidente. Por lo tanto, el software VMS debe estar siempre a su disposición.
 
-##  Lista de actores clave en VMS {#key-players-list-in-vms}
+##  Principales proveedores VMS {#key-players-list-in-vms}
 
-Los principales actores en VMS son:
+Los principales proveedores VMS son:
 
   * Genetec (Canadá)
   * Milestone (Dinamarca)
@@ -33,12 +34,12 @@ Los principales actores en VMS son:
   * Dahua (China)
 
 
-  * Motorola (Avigilon) (Canadá)
+  * Avigilon (Motorola Solutions) (Canadá)
   * Johnson Controls (Irlanda)
   * Tiandy (China)
   * Eagle Eye Networks (EE. UU.)
   * ISS (EE. UU.)
-  * Teledyne Flir (EE. UU.)
+  * Teledyne FLIR (EE. UU.)
 
 
 
