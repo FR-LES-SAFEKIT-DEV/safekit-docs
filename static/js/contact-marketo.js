@@ -22,7 +22,8 @@
     displaySalutation: formElement.getAttribute("data-displaySalutation") || "true",
     destination: formElement.getAttribute("data-destination") || "/confirmation-safekit/",
     postUrl: formElement.getAttribute("data-postUrl") || "",
-    recaptchaSiteKey: formElement.getAttribute("data-recaptchaSiteKey") || ""
+    recaptchaSiteKey: formElement.getAttribute("data-recaptchaSiteKey") || "",
+    businessPhone: formElement.getAttribute("data-businessPhone") || ""
   };
 
   var formApi = null;
@@ -498,6 +499,11 @@
     var emailField = form.getFormElem()[0].querySelector('input[name="Email"]');
     if (emailField) {
       emailField.removeAttribute('data-email-validation');
+    }
+
+    // Handle business phone pre-fill and hiding
+    if (config.businessPhone) {
+      form.setValues({ "Phone": config.businessPhone });
     }
 
     form.onValidate(function (nativeValid) {

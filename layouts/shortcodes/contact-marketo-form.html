@@ -95,6 +95,7 @@
     data-customerIndustry="Other"
     data-Country="{{ .Get "Country" | default "" }}"
     data-displaySalutation="false"
+    data-businessPhone="{{ .Get "businessPhone" | default "" }}"
     form-type="Page Redirect"
     data-content="CONTACT Eviden"
     data-destination="{{ .Get "destination" | default "/confirmation-safekit/" }}"
