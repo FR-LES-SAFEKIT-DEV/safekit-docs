@@ -1,24 +1,24 @@
 ---
-title: "Preços do SafeKit"
+title: "Preços SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/safekit-pricing/"
-description: "Compreenda o modelo de licenciamento do SafeKit e solicite um orçamento personalizado para alta disponibilidade, replicação, failover e balanceamento de carga em Windows e Linux."
+description: "Compreenda o modelo de licenciamento SafeKit e solicite um orçamento personalizado para alta disponibilidade, replicação, failover e balanceamento de carga em Windows e Linux."
 category: "home"
 lang: "pt-pt"
-topics: "Modelo de licenciamento e preços, Suporte e manutenção padrão, Solicitar um orçamento"
-translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 13 expressions"
+topics: "Modelo de licenciamento e preços, Suporte e manutenção padrão, Solicite um orçamento"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 50 expressions"
 ---
 
-# Preços do SafeKit {#safekit-pricing}
+# Preços SafeKit {#safekit-pricing}
 
 ## Modelo de licenciamento e preços {#licensing-model-and-pricing}
 
-O SafeKit utiliza um **modelo de licenciamento perpétuo** : a licença é adquirida uma única vez e baseia-se nos nomes de anfitrião dos servidores protegidos. O licenciamento é definido por servidor (físico ou virtual). Um cluster SafeKit padrão utiliza normalmente 2 servidores.
+SafeKit utiliza um **modelo de licenciamento perpétuo**: a licença é adquirida uma única vez. Baseia-se nos nomes de anfitrião dos servidores protegidos. É necessária uma licença para cada servidor (físico ou virtual). Um cluster SafeKit padrão utiliza normalmente 2 servidores.
 
-O preço é independente do número de CPUs ou de soquetes e da edição do Windows ou do Linux.
+O preço não depende do número de CPUs ou de sockets. Também não depende da edição Windows ou Linux.
 
 Os módulos de aplicação `.safe` pré-configurados são fornecidos gratuitamente.
 
-O SafeKit suporta a ativação de licenças offline, pelo que não é necessária uma ligação à internet para ativar uma chave de licença.
+SafeKit suporta a ativação de licenças offline, pelo que não é necessária uma ligação à internet para ativar uma chave de licença.
 
 Uma versão de avaliação gratuita e completa está disponível para análise.
 
@@ -26,15 +26,21 @@ Uma versão de avaliação gratuita e completa está disponível para análise.
 
 O primeiro ano de suporte e manutenção padrão é obrigatório com a compra da licença. Os anos subsequentes podem ser renovados opcionalmente.
 
-Com um contrato de suporte ativo, o suporte padrão inclui acesso 24/7/365 ao portal de suporte online para até quatro Contactos Técnicos nomeados, acesso à Base de Conhecimento e todos os Service Packs, Atualizações e Upgrades sem custos adicionais. O suporte em tempo real está disponível no Centro de Suporte Europeu, de segunda a sexta-feira, das 9:00 às 17:00, com confirmação de receção de incidentes dentro de quatro Horas Úteis do Centro de Suporte.
+Com um contrato de suporte ativo, o suporte padrão inclui o seguinte sem custos adicionais:
+
+  * Acesso ao portal de suporte online 24 horas por dia, 7 dias por semana, 365 dias por ano. Até quatro contactos técnicos nomeados podem utilizá-lo.
+  * Acesso à Base de Conhecimento.
+  * Todos os pacotes de serviços, atualizações e melhorias.
+
+O suporte em tempo real está disponível no Centro de Suporte Europeu, de segunda a sexta-feira, das 9:00 às 17:00. Os incidentes são reconhecidos no prazo de quatro horas úteis após o contacto com o Centro de Suporte.
 
 ## Solicite um orçamento {#information-to-include-in-your-quote-request}
 
-  * Especifique o número de nós; um cluster SafeKit padrão tem normalmente 2 nós.
-  * Indique se os nós executam o Windows ou o Linux.
+  * Especifique o número de nós. Um cluster SafeKit padrão tem normalmente 2 nós.
+  * Indique se os nós executam Windows ou Linux.
   * Especifique a aplicação para a alta disponibilidade ao nível da aplicação ou o hipervisor para a alta disponibilidade ao nível da máquina virtual.
 
 
 **Nota:** Para HA ao nível da VM, `hyperv.safe` e `kvm.safe` requerem apenas duas licenças SafeKit para os dois anfitriões do hipervisor, independentemente do número de máquinas virtuais replicadas e reiniciadas.
 
-{{< contact-marketo-form preferredLanguage="PT-PT" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/pt-pt/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Portugal" >}}
+{{< contact-marketo-form preferredLanguage="PT-PT" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/pt-pt/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Portugal" businessPhone="0123456789" visibleFields="" >}}

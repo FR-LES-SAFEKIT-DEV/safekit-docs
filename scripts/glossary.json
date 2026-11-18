@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-17.30",
+  "version": "2026-11-18.3",
   "keep": [
     "mirror",
     "farm",
@@ -1207,6 +1207,30 @@
       [
         "\\bOEMs\\b",
         "OEM"
+      ],
+      [
+        "\\bAssistance et maintenance\\b",
+        "Support et maintenance"
+      ],
+      [
+        "\\bassistance et (?:de )?maintenance\\b",
+        "support et maintenance"
+      ],
+      [
+        "\\bportail d[’\\']assistance\\b",
+        "portail de support"
+      ],
+      [
+        "\\b([Cc])entre d[’\\']assistance\\b",
+        "\\1entre de support"
+      ],
+      [
+        "\\bL[’\\']assistance (en direct|standard|technique)\\b",
+        "Le support \\1"
+      ],
+      [
+        "\\bl[’\\']assistance (en direct|standard|technique)\\b",
+        "le support \\1"
       ]
     ],
     "it": [
@@ -1475,6 +1499,10 @@
       [
         "Casos de uso del cliente",
         "Casos de uso de clientes"
+      ],
+      [
+        "(horas laborables) desde el (Centro)",
+        "\\1 por parte del \\2"
       ]
     ],
     "pt": [
@@ -1835,6 +1863,14 @@
       [
         "\\bOEMs\\b",
         "OEM"
+      ],
+      [
+        "ترخيصين فقط SafeKit",
+        "ترخيصين فقط من SafeKit"
+      ],
+      [
+        "يمكن لأربعة جهات",
+        "يمكن لما يصل إلى أربع جهات"
       ]
     ],
     "de": [
@@ -2249,6 +2285,18 @@
       [
         "\\bdie BKZ\\b",
         "die OCC"
+      ],
+      [
+        "\\bStandard SafeKit-",
+        "Standard-SafeKit-"
+      ],
+      [
+        "\\b(Windows) oder (Linux) (?=(?:Edition|Version|Server|Umgebung|Plattform)\\b)",
+        "\\1- oder \\2-"
+      ],
+      [
+        "(`\\.safe`) (?=Anwendungsmodul|Modul)",
+        "\\1-"
       ]
     ],
     "ko": [
@@ -2795,6 +2843,10 @@
       [
         "(^|[.!?]\\s+)(?:은|는) (?=[^.\\n]*솔루션입니다)",
         "\\1SafeKit은 "
+      ],
+      [
+        "\\b(Windows|Linux) (?=실행)",
+        "\\1를 "
       ]
     ],
     "ja": [
@@ -3225,6 +3277,14 @@
       [
         "SafeKit は(?=\\s*カタログに)",
         "SafeKit を"
+      ],
+      [
+        "(^|。\\s*)SafeKit\\s+(?=\\*\\*\\s*[^*\\n]+?\\s*\\*\\*\\s*を)",
+        "\\1SafeKit は "
+      ],
+      [
+        "(`[^`\\n]+` および `[^`\\n]+`)、",
+        "\\1 は、"
       ]
     ],
     "zh-hans": [
@@ -3665,6 +3725,22 @@
       [
         "\\bOEMs\\b",
         "OEM's"
+      ],
+      [
+        "\\bSafeKit (prijzen|licenties|licentie)\\b",
+        "SafeKit-\\1"
+      ],
+      [
+        "\\blicentiemodel SafeKit\\b",
+        "SafeKit-licentiemodel"
+      ],
+      [
+        "\\bWindows of Linux (?=(?:editie|versie|server|servers|omgeving)\\b)",
+        "Windows- of Linux-"
+      ],
+      [
+        "(`\\.safe`) (?=applicatiemodule|module)",
+        "\\1-"
       ]
     ],
     "pt-br": [

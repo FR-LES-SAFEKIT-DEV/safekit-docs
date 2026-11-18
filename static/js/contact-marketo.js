@@ -505,12 +505,33 @@
     if (config.businessPhone) {
       form.setValues({ "Phone": config.businessPhone });
       
-      // Hide the phone field row
-      var phoneField = form.getFormElem()[0].querySelector('input[name="Phone"]');
-      if (phoneField) {
-        var phoneRow = phoneField.closest(".mktoFormRow");
-        if (phoneRow) phoneRow.style.display = "none";
+      // Hide phone field using MutationObserver
+      function hidePhoneField() {
+        var phoneField = form.getFormElem()[0].querySelector('input[name="Phone"]');
+        if (phoneField) {
+          var phoneRow = phoneField.closest(".mktoFormRow");
+          if (phoneRow) {
+            phoneRow.style.display = "none";
+            return true;
+          }
+        }
+        return false;
       }
+      
+      // Watch for DOM changes and hide phone field
+      var observer = new MutationObserver(function() {
+        if (hidePhoneField()) {
+          observer.disconnect();
+        }
+      });
+      observer.observe(form.getFormElem()[0], { 
+        childList: true, 
+        subtree: true,
+        attributes: true
+      });
+      
+      // Try initial hide
+      hidePhoneField();
     }
 
     form.onValidate(function (nativeValid) {

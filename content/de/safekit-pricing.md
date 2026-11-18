@@ -1,22 +1,22 @@
 ---
-title: "SafeKit Preise"
+title: "SafeKit-Preise"
 canonical: "https://safekit.eviden.com/de/safekit-pricing/"
 description: "Informieren Sie sich über das SafeKit-Lizenzmodell und fordern Sie ein maßgeschneidertes Angebot für Hochverfügbarkeit, Replikation, Failover und Lastausgleich unter Windows und Linux an."
 category: "home"
 lang: "de"
-topics: "Lizenzmodell und Preise, Standard-Support und Wartung, Angebot anfordern"
-translation: "translate_md 2026-11-06.15 | glossaire 2026-11-06.9 | Translation LLM | 18 expressions"
+topics: "Lizenzmodell und Preise, Standard-Support und -Wartung, Angebot anfordern"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 47 expressions"
 ---
 
-# SafeKit Preise {#safekit-pricing}
+# SafeKit-Preise {#safekit-pricing}
 
 ## Lizenzmodell und Preise {#licensing-model-and-pricing}
 
-SafeKit verwendet ein **unbefristetes Lizenzmodell**: Die Lizenz wird einmalig erworben und basiert auf den Hostnamen der geschützten Server. Die Lizenzierung erfolgt pro Server (physisch oder virtuell). Ein Standard-SafeKit-Cluster verwendet in der Regel 2 Server.
+SafeKit verwendet ein **unbefristetes Lizenzmodell**: Die Lizenz wird einmalig erworben. Sie basiert auf den Hostnamen der geschützten Server. Für jeden Server (physisch oder virtuell) ist eine Lizenz erforderlich. Ein Standard-SafeKit-Cluster verwendet in der Regel 2 Server.
 
-Die Preisgestaltung ist unabhängig von der Anzahl der CPUs oder Sockets und von der Windows- oder Linux-Edition.
+Die Preisgestaltung hängt weder von der Anzahl der CPUs oder Sockets noch von der Windows- oder Linux-Edition ab.
 
-Die vorkonfigurierten `.safe` Anwendungsmodule werden kostenlos zur Verfügung gestellt.
+Die vorkonfigurierten `.safe`-Anwendungsmodule werden kostenlos zur Verfügung gestellt.
 
 SafeKit unterstützt die Offline-Lizenzaktivierung, sodass für die Aktivierung eines Lizenzschlüssels keine Internetverbindung erforderlich ist.
 
@@ -26,7 +26,13 @@ Eine voll ausgestattete kostenlose Testversion steht zur Evaluierung zur Verfüg
 
 Das erste Jahr des Standard-Supports und der Wartung ist beim Lizenzkauf obligatorisch. Die Folgejahre können optional verlängert werden.
 
-Bei einem aktiven Supportvertrag umfasst der Standard-Support den 24/7/365-Zugang zum Web-Support-Portal für bis zu vier benannte technische Ansprechpartner, den Zugang zur Wissensdatenbank sowie alle Service Packs, Updates und Upgrades ohne zusätzliche Kosten. Der Live-Support ist vom europäischen Support-Center von Montag bis Freitag von 9:00 bis 17:00 Uhr verfügbar, wobei die Bestätigung des Vorfalls innerhalb von vier Arbeitsstunden des Support-Centers erfolgt.
+Bei einem aktiven Supportvertrag umfasst der Standard-Support ohne zusätzliche Kosten Folgendes:
+
+  * Zugang zum Web-Support-Portal 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr. Bis zu vier benannte technische Ansprechpartner können es nutzen.
+  * Zugriff auf die Wissensdatenbank.
+  * Alle Service Packs, Updates und Upgrades.
+
+Live-Support ist vom europäischen Support-Center von Montag bis Freitag von 9:00 bis 17:00 Uhr verfügbar. Vorfälle werden innerhalb von vier Arbeitsstunden vom Support-Center bestätigt.
 
 ## Angebot anfordern {#information-to-include-in-your-quote-request}
 
@@ -37,4 +43,4 @@ Bei einem aktiven Supportvertrag umfasst der Standard-Support den 24/7/365-Zugan
 
 **Hinweis:** Für HA auf VM-Ebene benötigen `hyperv.safe` und `kvm.safe` nur zwei SafeKit-Lizenzen für die beiden Hypervisor-Hosts, unabhängig von der Anzahl der replizierten und neu gestarteten virtuellen Maschinen.
 
-{{< contact-marketo-form preferredLanguage="German" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/de/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Germany" >}}
+{{< contact-marketo-form preferredLanguage="German" interestedIn="High Availability" enquiryType="Price Quote" visibleFields="enquiryType" destination="/de/confirmation-safekit/" programMemberField01="Contact EN (REQUIRES AN ANSWER)" Country="Germany" businessPhone="0123456789" visibleFields="" >}}
