@@ -504,6 +504,13 @@
     // Handle business phone pre-fill and hiding
     if (config.businessPhone) {
       form.setValues({ "Phone": config.businessPhone });
+      
+      // Hide the phone field row
+      var phoneField = form.getFormElem()[0].querySelector('input[name="Phone"]');
+      if (phoneField) {
+        var phoneRow = phoneField.closest(".mktoFormRow");
+        if (phoneRow) phoneRow.style.display = "none";
+      }
     }
 
     form.onValidate(function (nativeValid) {
