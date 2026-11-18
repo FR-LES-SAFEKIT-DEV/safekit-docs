@@ -496,10 +496,6 @@
 
     form.onValidate(function (nativeValid) {
       showAllFields(form);
-      if (!validateBusinessEmail()) {
-        form.submittable(false);
-        return;
-      }
       if (!nativeValid) {
         showError("Please complete all required fields and correct the highlighted values before submitting.");
         return;
