@@ -1,11 +1,11 @@
 ---
 title: "Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle"
 canonical: "https://safekit.eviden.com/de/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit gewährleistet eine hohe Verfügbarkeit für die Leitstellen des öffentlichen Nahverkehrs. Die RATP hat SafeKit für die Linie 1 der Pariser Metro eingesetzt. Diese Linie ist vollständig automatisiert und fahrerlos. SafeKit bietet Lastausgleich, automatische Failover-Funktion und Echtzeit-Datenreplikation. Es wird kein SAN benötigt. Dieselbe Software funktioniert auf Windows- und Linux-Servern."
+description: "SafeKit gewährleistet eine hohe Verfügbarkeit für die Leitstellen des öffentlichen Nahverkehrs. Die RATP hat SafeKit für die Linie 1 der Pariser Metro eingesetzt. Diese Linie ist vollautomatisch und fahrerlos. SafeKit bietet Lastausgleich, automatische Failover-Funktion und Echtzeit-Datenreplikation. Es wird kein SAN benötigt. Dieselbe Software funktioniert auf Windows- und Linux-Servern."
 category: "use-cases"
 lang: "de"
 topics: "Leitstellen des öffentlichen Nahverkehrs, Warum ist die Leitstelle entscheidend?, SafeKit-Hochverfügbarkeit für den öffentlichen Nahverkehr, Implementierung in der Praxis bei der RATP, 🔍 SafeKit entdecken"
-translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation LLM | 47 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 47 expressions"
 ---
 
 # Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle {#high-availability-for-public-transport-centralized-control-room}
@@ -18,7 +18,7 @@ Die RATP betreibt die Pariser U-Bahn. Sie befördert täglich mehr als 10 Millio
 
 ## Warum ist die Leitstelle entscheidend? {#why-is-a-centralized-control-room-critical}
 
-Die Betreiber einer U-Bahn-Linie müssen auf den geringsten Vorfall sofort reagieren. Ein IT-Ausfall darf die Betreiber niemals daran hindern, die Aktivität der Linie zu sehen.
+Die Betreiber einer U-Bahn-Linie müssen sofort auf den geringsten Vorfall reagieren. Ein IT-Ausfall darf die Betreiber niemals daran hindern, die Aktivität der Linie zu sehen.
 
 Die Hauptaufgaben der Mitarbeitenden der Leitstelle sind:
 
@@ -31,7 +31,7 @@ Ein Systemausfall in der Leitstelle wirkt sich direkt auf die Sicherheit der Fah
 
 ## SafeKit-Hochverfügbarkeit für den öffentlichen Nahverkehr {#safekit-high-availability-for-public-transport}
 
-Die RATP sah sich bei dem Automatisierungsprojekt der Linie 1 großen Einschränkungen gegenüber:
+Die RATP sah sich bei dem Automatisierungsprojekt der Linie 1 mit großen Einschränkungen konfrontiert:
 
   * Ein straffer Einsatzplan
   * Die meisten Anwendungen wurden ursprünglich nicht für Hochverfügbarkeit entwickelt
@@ -40,8 +40,8 @@ Die RATP sah sich bei dem Automatisierungsprojekt der Linie 1 großen Einschrän
 
 SafeKit wurde aus folgenden Gründen ausgewählt:
 
-  * Es handelt sich um eine reine Softwarelösung ohne gemeinsam genutzte Datenträger und ohne SAN
-  * Es bietet dieselbe Clustering-Lösung für Windows und Linux
+  * Es handelt sich um eine reine Softwarelösung ohne gemeinsam genutzte Festplatten und ohne SAN
+  * Es bietet dieselbe Lösung für Windows und Linux
   * Es erfüllt drei wichtige Funktionen: Lastausgleich, automatisches Failover und Echtzeit-Datenreplikation
   * Es ist einfach auf Standardservern zu implementieren, leicht zu verwalten und vielseitig
 
@@ -61,9 +61,9 @@ Ein SafeKit-Anwendungscluster verfügt über:
   * Zwei Server mit demselben Betriebssystem
   * Die Anwendung ist auf beiden Servern installiert
   * SafeKit auf beiden Servern installiert
-  * Ein oder mehrere Anwendungskonzepte, die für Hochverfügbarkeit und Lastausgleich konfiguriert sind
+  * Ein oder mehrere Anwendungsmodule, die für Hochverfügbarkeit und Lastausgleich konfiguriert sind
 
-Mehrere Anwendungsmodule können parallel auf demselben Cluster ausgeführt werden. Dies optimiert die Nutzung der Serverressourcen. RATP hat die SafeKit-Module in drei Infrastrukturphasen validiert: Test, Vorserienproduktion und Produktion.
+Mehrere Anwendungsmodule können parallel auf demselben Cluster ausgeführt werden. Dies optimiert die Nutzung der Serverressourcen. Die RATP hat die SafeKit-Module in drei Schritten validiert: Test, Vorableistung und Produktion.
 
 ### Tagesgeschäft {#daily-operations}
 
@@ -78,7 +78,7 @@ Die Backup-Server kritischer Anwendungen befinden sich in einem separaten Maschi
 
 ### Wesentliche Vorteile {#key-benefits}
 
-  * **Kostenreduzierung**: keine teure SAN-Infrastruktur mit gemeinsam genutzten Festplatten und keine Appliances für den Lastausgleich im Netzwerk
+  * **Kostenreduzierung**: keine teure SAN-Infrastruktur mit gemeinsam genutzten Festplatten und keine Appliances für die Netzwerklastverteilung
   * **Vereinfachte Verwaltung**: Eine Konsole verwaltet sowohl Windows- als auch Linux-Cluster
   * **Hohe Verfügbarkeit**: Lastausgleich, automatisches Failover und Echtzeit-Datenreplikation
   * **Minimale Auswirkungen auf das Projekt**: Bestehende Anwendungen erfordern keine Änderungen

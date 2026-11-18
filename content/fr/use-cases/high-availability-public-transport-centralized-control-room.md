@@ -5,7 +5,7 @@ description: "SafeKit assure une haute disponibilité pour les salles de contrô
 category: "use-cases"
 lang: "fr"
 topics: "Salles de contrôle des transports en commun, Pourquoi la salle de contrôle est-elle essentielle ?, Haute disponibilité SafeKit pour les transports publics, Mise en œuvre concrète à la RATP, 🔍 Explorez SafeKit"
-translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation LLM | 58 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 58 expressions"
 ---
 
 # Haute disponibilité pour les transports publics : salle de contrôle centralisée {#high-availability-for-public-transport-centralized-control-room}
@@ -25,9 +25,9 @@ Les principales tâches des opérateurs de la salle de contrôle sont les suivan
   * Surveillance des mouvements des trains sur les voies
   * Gestion des incidents détectés automatiquement par les caméras vidéo
   * Gestion des systèmes de communication et des annonces publiques
-  * Superviser les opérations de sécurité et l’information des passagers
+  * Supervision des opérations de sécurité et de l’information des passagers
 
-Une défaillance du système dans la salle de contrôle a un impact direct sur la sécurité des passagers et la continuité du service. Toutes les applications critiques de la salle de contrôle doivent être protégées par une haute disponibilité. Les passerelles, les bases de données et les interfaces Web en sont des exemples.
+Une défaillance du système dans la salle de contrôle a un impact direct sur la sécurité des passagers et la continuité du service. Toutes les applications critiques de la salle de contrôle doivent être protégées par une haute disponibilité. Les passerelles, les bases de données et les interfaces web en sont des exemples.
 
 ## Haute disponibilité SafeKit pour les transports publics {#safekit-high-availability-for-public-transport}
 
@@ -41,7 +41,7 @@ La RATP a été confrontée à des contraintes majeures pour le projet d’autom
 SafeKit a été choisi pour les raisons suivantes :
 
   * Il s’agit d’une solution purement logicielle, sans disques partagés ni SAN
-  * Il fournit la même solution de regroupement sous Windows et Linux
+  * Il fournit la même solution sous Windows et Linux
   * Il assure trois fonctions essentielles : l’équilibrage de charge, le basculement automatique et la réplication des données en temps réel
   * Il est simple à mettre en œuvre sur des serveurs standards, facile à administrer et polyvalent
 
@@ -63,7 +63,7 @@ Un cluster d’applications SafeKit comprend :
   * SafeKit installé sur les deux serveurs
   * Un ou plusieurs modules d’application configurés pour une haute disponibilité et un équilibrage de charge
 
-Plusieurs modules d’application peuvent s’exécuter en parallèle sur le même cluster. Cela optimise l’utilisation des ressources serveur. La RATP a validé les modules SafeKit sur trois étapes d’infrastructure : les tests, la pré-production et la production.
+Plusieurs modules d’application peuvent s’exécuter en parallèle sur le même cluster. Cela optimise l’utilisation des ressources serveur. La RATP a validé les modules SafeKit en trois étapes : test, pré-production et production.
 
 ### Opérations quotidiennes {#daily-operations}
 

@@ -5,7 +5,7 @@ description: "SafeKit garante alta disponibilidade para as salas de controlo de 
 category: "use-cases"
 lang: "pt-pt"
 topics: "Salas de Controlo de Transportes Públicos, Por que é que a sala de controlo é tão importante?, Alta disponibilidade SafeKit para transportes públicos, Implementação no mundo real na RATP, 🔍 Explore SafeKit"
-translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation LLM | 50 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 ---
 
 # Alta Disponibilidade para Transportes Públicos: Sala de Controlo Centralizada {#high-availability-for-public-transport-centralized-control-room}
@@ -41,7 +41,7 @@ A RATP enfrentou grandes restrições para o projeto de automação da linha 1:
 SafeKit foi escolhido pelas seguintes razões:
 
   * É uma solução puramente de software, sem discos partilhados e sem SAN
-  * Fornece a mesma solução de agrupamento em Windows e Linux
+  * Oferece a mesma solução no Windows e Linux
   * Oferece três funções essenciais: balanceamento de carga, comutação automática em caso de falha e replicação de dados em tempo real
   * É simples de implementar em servidores padrão, fácil de administrar e versátil
 
@@ -49,7 +49,7 @@ SafeKit foi escolhido pelas seguintes razões:
 
 A RATP implementou SafeKit com dois tipos de clusters:
 
-  * **Cluster farm**: um cluster ativo/ativo com balanceamento de carga de rede e failover automático
+  * **Cluster farm**: um cluster ativo/ativo com balanceamento de carga de rede e comutação automática de falhas
   * **Cluster mirror**: um cluster ativo/passivo com replicação de dados em tempo real e failover automático
 
 ### Abordagem de implementação {#deployment-approach}
@@ -63,24 +63,24 @@ Um cluster de aplicações SafeKit tem:
   * SafeKit foi instalado em ambos os servidores
   * Um ou mais módulos de aplicação configurados para alta disponibilidade e balanceamento de carga
 
-Vários módulos de aplicação podem ser executados em paralelo no mesmo cluster. Isto otimiza a utilização dos recursos do servidor. A RATP validou os módulos SafeKit em três fases de infraestrutura: teste, pré-produção e produção.
+Vários módulos de aplicação podem ser executados em paralelo no mesmo cluster. Isto otimiza a utilização dos recursos do servidor. A RATP validou os módulos SafeKit em três etapas: teste, pré-produção e produção.
 
 ### Operações diárias {#daily-operations}
 
-Os operadores de TI agora administram todos os clusters de aplicações com:
+Os operadores de TI administram agora todos os clusters de aplicações com:
 
   * A mesma solução de alta disponibilidade no Windows e Linux
   * A mesma consola de administração para todos os clusters
   * A mesma configuração e os mesmos comandos
   * Monitorização unificada para balanceamento de carga, alta disponibilidade e replicação de dados
 
-Os servidores de cópia de segurança das aplicações críticas estão localizados numa sala de máquinas separada. Funcionam com fontes de alimentação separadas. Se ocorrer um incidente, as operações continuam sem interrupção do serviço para os passageiros do metro de Paris.
+Os servidores de cópia de segurança das aplicações críticas estão localizados numa sala de máquinas separada. Funcionam com fontes de alimentação independentes. Se ocorrer um incidente, as operações continuam sem interrupção do serviço para os passageiros do metro de Paris.
 
 ### Principais vantagens {#key-benefits}
 
   * **Redução de custos**: sem infraestrutura SAN dispendiosa com discos partilhados e sem dispositivos de balanceamento de carga de rede
   * **Administração simplificada**: uma única consola gere clusters Windows e Linux
-  * **Alta disponibilidade**: balanceamento de carga, comutação automática de falhas e replicação de dados em tempo real
+  * **Alta disponibilidade**: balanceamento de carga, comutação automática por falha e replicação de dados em tempo real
   * **Impacto mínimo no projeto**: as aplicações existentes não requerem qualquer modificação
   * **Resiliência operacional**: a recuperação automática garante a continuidade do serviço aos passageiros
 

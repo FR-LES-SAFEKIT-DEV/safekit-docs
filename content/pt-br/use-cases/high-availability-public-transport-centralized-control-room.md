@@ -5,7 +5,7 @@ description: "SafeKit garante alta disponibilidade para salas de controle de tra
 category: "use-cases"
 lang: "pt-br"
 topics: "Salas de Controle de Transporte Público, Por que a sala de controle é tão importante?, Alta disponibilidade SafeKit para transporte público, Implementação no mundo real na RATP, 🔍 Explore SafeKit"
-translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation LLM | 50 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 ---
 
 # Alta Disponibilidade para o Transporte Público: Sala de Controle Centralizada {#high-availability-for-public-transport-centralized-control-room}
@@ -33,7 +33,7 @@ Uma falha no sistema da sala de controle afeta diretamente a segurança dos pass
 
 A RATP enfrentou grandes restrições para o projeto de automação da linha 1:
 
-  * Um cronograma de implantação apertado
+  * Um cronograma de implementação apertado
   * A maioria dos aplicativos não foi originalmente projetada para alta disponibilidade
   * Era necessária uma solução para servidores Windows e Linux
   * Não havia orçamento para hardware caro, como armazenamento SAN ou dispositivos de balanceamento de carga de rede
@@ -41,7 +41,7 @@ A RATP enfrentou grandes restrições para o projeto de automação da linha 1:
 SafeKit foi escolhido pelos seguintes motivos:
 
   * É uma solução puramente de software, sem discos compartilhados e sem SAN
-  * Ele oferece a mesma solução de cluster no Windows e Linux
+  * Ele oferece a mesma solução no Windows e Linux
   * Ele oferece três funções essenciais: balanceamento de carga, failover automático e replicação de dados em tempo real
   * É simples de implementar em servidores padrão, fácil de administrar e versátil
 
@@ -63,7 +63,7 @@ Um cluster de aplicações SafeKit tem:
   * SafeKit foi instalado em ambos os servidores
   * Um ou mais módulos de aplicação configurados para alta disponibilidade e balanceamento de carga
 
-Vários módulos de aplicação podem ser executados em paralelo no mesmo cluster. Isso otimiza o uso dos recursos do servidor. A RATP validou os módulos SafeKit em três estágios de infraestrutura: teste, pré-produção e produção.
+Vários módulos de aplicação podem ser executados em paralelo no mesmo cluster. Isso otimiza o uso dos recursos do servidor. A RATP validou os módulos SafeKit em três etapas: teste, pré-produção e produção.
 
 ### Operações diárias {#daily-operations}
 

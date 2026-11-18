@@ -40,7 +40,7 @@ RATP faced major constraints for the automation project of line 1:
 SafeKit was chosen for the following reasons:
 
   * It is a purely software solution with no shared disks and no SAN
-  * It provides the same clustering solution on Windows and Linux
+  * It provides the same solution on Windows and Linux
   * It delivers three critical functions: load balancing, automatic failover, and real-time data replication
   * It is simple to implement on standard servers, easy to administer, and versatile
 
@@ -62,7 +62,7 @@ A SafeKit application cluster has:
   * SafeKit installed on both servers
   * One or more application modules configured for high availability and load balancing
 
-Several application modules can run in parallel on the same cluster. This optimizes the use of server resources. RATP validated the SafeKit modules on three infrastructure stages: testing, pre-production, and production.
+Several application modules can run in parallel on the same cluster. This optimizes the use of server resources. RATP validated the SafeKit modules in three steps: testing, pre-production, and production.
 
 ### Daily operations
 

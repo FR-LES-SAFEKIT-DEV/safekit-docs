@@ -5,14 +5,14 @@ description: "SafeKit zorgt voor hoge beschikbaarheid voor controlekamers van he
 category: "use-cases"
 lang: "nl"
 topics: "Controlekamers openbaar vervoer, Waarom is de controlekamer cruciaal?, SafeKit hoge beschikbaarheid voor openbaar vervoer, Implementatie in de praktijk bij RATP, 🔍 Ontdek SafeKit"
-translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation LLM | 49 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 ---
 
 # Hoge beschikbaarheid voor openbaar vervoer: gecentraliseerde controlekamer {#high-availability-for-public-transport-centralized-control-room}
 
 ## Controlekamers openbaar vervoer {#public-transport-control-rooms}
 
-Een centrale controlekamer is het zenuwcentrum van moderne openbaarvervoersystemen. De controlekamer bewaakt hele metrolijnen, beheert geautomatiseerde activiteiten en zorgt voor de veiligheid van passagiers. Voor metrostelsels, geautomatiseerde metrolijnen en busnetwerken moet de controlekamer 24/7 zonder onderbreking werken.
+Een centrale controlekamer is het zenuwcentrum van moderne openbaarvervoersystemen. De controlekamer bewaakt hele metrolijnen, beheert geautomatiseerde processen en zorgt voor de veiligheid van passagiers. Voor metrostelsels, geautomatiseerde metrolijnen en busnetwerken moet de controlekamer 24/7 zonder onderbreking werken.
 
 De RATP beheert de Parijse metro. Dagelijks worden er meer dan 10 miljoen passagiers vervoerd. Lijn 1 van de Parijse metro is volledig geautomatiseerd en zonder bestuurder. Dit maakt de rol van de controlekamer nog belangrijker.
 
@@ -36,12 +36,12 @@ RATP werd geconfronteerd met grote beperkingen voor het automatiseringsproject v
   * Een strakke implementatieplanning
   * De meeste applicaties zijn oorspronkelijk niet ontworpen voor hoge beschikbaarheid
   * Er was een oplossing nodig voor zowel Windows- als Linux-servers
-  * Er was geen budget voor dure hardware, zoals SAN-opslag of apparaten voor netwerktaakverdeling
+  * Er was geen budget voor dure hardware, zoals SAN-opslag of appliances voor netwerktaakverdeling
 
 SafeKit werd om de volgende redenen gekozen:
 
   * Het is een puur softwarematige oplossing zonder gedeelde schijven en zonder SAN
-  * Het biedt dezelfde clusteringoplossing op Windows en Linux
+  * Het biedt dezelfde oplossing op Windows en Linux
   * Het levert drie cruciale functies: taakverdeling, automatische failover en realtime gegevensreplicatie
   * Het is eenvoudig te implementeren op standaardservers, gemakkelijk te beheren en veelzijdig
 
@@ -54,16 +54,16 @@ RATP heeft SafeKit ingezet met twee soorten clusters:
 
 ### Implementatieaanpak {#deployment-approach}
 
-Eerst definieerde RATP de functionele behoeften. Vervolgens werd SafeKit geconfigureerd voor elke beveiligde toepassing. De toepassingen zelf werden niet gewijzigd. SafeKit vereist geen fysieke wijzigingen aan de servers.
+Eerst heeft RATP de functionele behoeften gedefinieerd. Vervolgens werd SafeKit voor elke beveiligde toepassing geconfigureerd. De toepassingen zelf werden niet gewijzigd. SafeKit vereist geen fysieke wijzigingen aan de servers.
 
 Een SafeKit-applicatiecluster heeft:
 
   * Twee servers met hetzelfde besturingssysteem
   * De applicatie is op beide servers geïnstalleerd
-  * SafeKit geïnstalleerd op beide servers
+  * SafeKit is op beide servers geïnstalleerd
   * Een of meer applicatiemodules die zijn geconfigureerd voor hoge beschikbaarheid en taakverdeling
 
-Verschillende applicatiemodules kunnen parallel op hetzelfde cluster draaien. Dit optimaliseert het gebruik van serverbronnen. RATP heeft de SafeKit-modules gevalideerd op drie infrastructuurfasen: testen, preproductie en productie.
+Verschillende applicatiemodules kunnen parallel op hetzelfde cluster draaien. Dit optimaliseert het gebruik van serverbronnen. RATP heeft de SafeKit-modules in drie stappen gevalideerd: testen, preproductie en productie.
 
 ### Dagelijkse werkzaamheden {#daily-operations}
 
@@ -78,7 +78,7 @@ De back-upservers van bedrijfskritische applicaties bevinden zich in een aparte 
 
 ### Belangrijkste voordelen {#key-benefits}
 
-  * **Kostenreductie**: geen dure SAN-infrastructuur met gedeelde schijven en geen appliances voor netwerktaakverdeling
+  * **Kostenreductie**: geen dure SAN-infrastructuur met gedeelde schijven en geen appliances voor netwerkbelastingsverdeling
   * **Vereenvoudigd beheer**: één console beheert zowel Windows- als Linux-clusters
   * **Hoge beschikbaarheid**: taakverdeling, automatische failover en realtime gegevensreplicatie
   * **Minimale impact op het project**: bestaande applicaties vereisen geen aanpassingen

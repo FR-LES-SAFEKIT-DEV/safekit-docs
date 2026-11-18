@@ -5,7 +5,7 @@ description: "SafeKit garantisce un’elevata disponibilità per le sale di cont
 category: "use-cases"
 lang: "it"
 topics: "Sale di controllo del trasporto pubblico, Perché la sala di controllo è fondamentale?, Alta disponibilità SafeKit per il trasporto pubblico, Implementazione nel mondo reale presso RATP, 🔍 Esplora SafeKit"
-translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation LLM | 40 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 40 expressions"
 ---
 
 # Elevata disponibilità per il trasporto pubblico: sala di controllo centralizzata {#high-availability-for-public-transport-centralized-control-room}
@@ -18,14 +18,14 @@ RATP gestisce la metropolitana di Parigi. Trasporta più di 10 milioni di passeg
 
 ## Perché la sala di controllo è fondamentale? {#why-is-a-centralized-control-room-critical}
 
-Gli operatori di una linea metropolitana devono reagire immediatamente al minimo incidente. Un guasto informatico non deve mai impedire agli operatori di visualizzare l’attività della linea.
+Gli operatori di una linea della metropolitana devono reagire immediatamente al minimo incidente. Un guasto informatico non deve mai impedire agli operatori di visualizzare l’attività della linea.
 
 I compiti principali degli operatori della sala di controllo sono:
 
   * Monitoraggio dei movimenti dei treni sui binari
   * Gestione degli incidenti rilevati automaticamente dalle telecamere
   * Gestione dei sistemi di comunicazione e degli annunci pubblici
-  * Supervisione delle operazioni di sicurezza e dell’informazione ai passeggeri
+  * Supervisione delle operazioni di sicurezza e informazione ai passeggeri
 
 Un guasto di sistema nella sala di controllo ha un impatto diretto sulla sicurezza dei passeggeri e sulla continuità del servizio. Tutte le applicazioni critiche nella sala di controllo devono essere protette da un’elevata disponibilità. Esempi sono gateway, database e front-end web.
 
@@ -41,7 +41,7 @@ RATP ha dovuto affrontare importanti vincoli per il progetto di automazione dell
 SafeKit è stato scelto per i seguenti motivi:
 
   * Si tratta di una soluzione puramente software, senza dischi condivisi e senza SAN
-  * Fornisce la stessa soluzione di clustering su Windows e Linux
+  * Fornisce la stessa soluzione su Windows e Linux
   * Fornisce tre funzioni fondamentali: bilanciamento del carico, failover automatico e replica dei dati in tempo reale
   * È semplice da implementare su server standard, facile da amministrare e versatile
 
@@ -63,7 +63,7 @@ Un cluster di applicazioni SafeKit è composto da:
   * SafeKit installato su entrambi i server
   * Uno o più moduli applicativi configurati per l’alta disponibilità e il bilanciamento del carico
 
-Diversi moduli applicativi possono essere eseguiti in parallelo sullo stesso cluster. Ciò ottimizza l’utilizzo delle risorse del server. RATP ha convalidato i moduli SafeKit su tre fasi dell’infrastruttura: test, pre-produzione e produzione.
+Diversi moduli applicativi possono essere eseguiti in parallelo sullo stesso cluster. Ciò ottimizza l’utilizzo delle risorse del server. RATP ha convalidato i moduli SafeKit in tre fasi: test, pre-produzione e produzione.
 
 ### Operazioni quotidiane {#daily-operations}
 

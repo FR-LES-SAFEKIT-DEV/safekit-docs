@@ -1,11 +1,11 @@
 ---
 title: "公共交通高可用性：集中控制室"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit 可确保公共交通控制室的高可用性。RATP 为巴黎地铁 1 号线部署了 SafeKit。该线路是全自动无人驾驶线路。SafeKit 提供负载平衡、自动故障转移和实时数据复制。它不需要 SAN。同一软件可在 Windows 和 Linux 服务器上运行。"
+description: "SafeKit 可确保公共交通控制室的高可用性。RATP 为巴黎地铁 1 号线部署了 SafeKit。该线路是全自动无人驾驶线路。SafeKit 提供负载平衡、自动故障转移和实时数据复制。它不需要 SAN。相同的软件可在 Windows 和 Linux 服务器上运行。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "公共交通控制室、为什么控制室至关重要？、SafeKit 为公共交通提供高可用性、RATP 的实际应用、🔍 探索 SafeKit"
-translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation LLM | 51 expressions"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 51 expressions"
 ---
 
 # 公共交通高可用性：集中控制室 {#high-availability-for-public-transport-centralized-control-room}
@@ -22,7 +22,7 @@ translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.24 | Translation 
 
 控制室操作员的主要任务是：
 
-  * 监控轨道上的列车运行情况
+  * 监控轨道上列车的运行情况
   * 处理视频摄像头自动检测到的事件
   * 管理通信系统和公共广播
   * 监督安全运营和乘客信息
@@ -41,7 +41,7 @@ RATP 在 1 号线自动化项目上面临着诸多限制：
 选择 SafeKit 原因如下：
 
   * 这是一种纯软件解决方案，没有共享磁盘，也没有 SAN
-  * 它在 Windows 和 Linux 上提供相同的集群解决方案
+  * 它在 Windows 和 Linux 上提供相同的解决方案
   * 它提供三个关键功能：负载平衡、自动故障转移和实时数据复制
   * 它易于在标准服务器上实施，易于管理，并且用途广泛
 
@@ -50,7 +50,7 @@ RATP 在 1 号线自动化项目上面临着诸多限制：
 RATP 部署了两种类型的 SafeKit 集群：
 
   * **Farm 集群**：一个具有网络负载均衡和自动故障转移功能的双活集群
-  * **Mirror 集群**：一种主动/被动集群，具有实时数据复制和自动故障转移功能
+  * **Mirror 集群**：一个具有实时数据复制和自动故障转移功能的主动/被动集群
 
 ### 部署方法 {#deployment-approach}
 
@@ -63,7 +63,7 @@ SafeKit 应用集群具有：
   * SafeKit 已安装在两台服务器上
   * 一个或多个配置为高可用性和负载均衡的应用程序模块
 
-多个应用程序模块可以在同一集群上并行运行。这优化了服务器资源的使用。RATP 在三个基础设施阶段验证了 SafeKit 模块：测试、预生产和生产。
+多个应用程序模块可以在同一集群上并行运行。这优化了服务器资源的使用。RATP 通过三个步骤验证了 SafeKit 模块：测试、预生产和生产。
 
 ### 日常运营 {#daily-operations}
 
