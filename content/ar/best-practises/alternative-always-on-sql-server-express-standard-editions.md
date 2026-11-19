@@ -1,58 +1,59 @@
 ---
-title: "بديل لـ SQL Server Always On: HA للإصدارين Express و Standard"
+title: "بديل لـ SQL Server Always On: التوافر العالي للإصدارات Express و Standard"
 canonical: "https://safekit.eviden.com/ar/best-practises/alternative-always-on-sql-server-express-standard-editions/"
-description: "هل تبحث عن بديل اقتصادي لـ SQL Server Always On؟ يقدم SafeKit بنيةً بدون شبكة تخزين (SAN) توفر توافرًا عاليًا لإصداري SQL Server Express وStandard. استمتع بالنسخ المتزامن، وعنوان IP افتراضي، والتحويل التلقائي في حالة الأعطال دون الحاجة إلى شبكة تخزين أو Active Directory."
+description: "هل تبحث عن بديل فعال من حيث التكلفة لـ SQL Server Always On؟ يوفر SafeKit إتاحة عالية لإصدارات SQL Server Express و Standard. لا يحتاج إلى SAN ولا إلى Active Directory. يوفر نسخًا متزامنًا، وعنوان IP ظاهري، وتحويل تلقائي في حالة الفشل."
 category: "best-practises"
 lang: "ar"
-topics: "بديل لـ Always On SQL Server للإصدارين السريع والقياسي، كيف تعمل مجموعة SafeKit mirror مع Microsoft SQL Server ؟، دليل فيديو: تكوين مجموعة SafeKit HA mirror لـ SQL Server ، 🔍 استكشف SafeKit"
+topics: "بديل لـ Always On SQL Server لإصدارات Express و Standard، كيف تعمل مجموعة mirror SafeKit مع Microsoft SQL Server؟، دليل الفيديو: تهيئة مجموعة mirror (HA) SafeKit SQL Server، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 43 expressions"
 ---
 
-# بديل لـ SQL Server Always On: HA للإصدارين Express و Standard {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
+# بديل لـ SQL Server Always On: التوافر العالي للإصدارات Express و Standard {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
 
-## بديل لخاصية Always On SQL Server للإصدارين السريع والقياسي {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
+## بديل لـ Always On SQL Server لإصدارات Express و Standard {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 
-### الحل لـ Microsoft SQL Server {#the-solution-for-microsoft-sql-server}
+### الحل الخاص بـ Microsoft SQL Server {#the-solution-for-microsoft-sql-server}
 
-يوفر SafeKit إمكانية الوصول العالية إلى Microsoft SQL Server بين عقدتين زائدتين مع نسخ متزامن في الوقت الحقيقي للبيانات والتحويل التلقائي في حالة الفشل.
+يوفر SafeKit إتاحة عالية لخادم Microsoft SQL Server بين عقدتين متكررتين. ويوفر نسخًا متزامنًا للبيانات في الوقت الفعلي وتحويلًا تلقائيًا في حالة الفشل.
 
-الحل مستقل عن إصدار Microsoft SQL Server ويعمل مع الإصدارات السريعة والقياسية.
+لا يعتمد الحل على إصدار Microsoft SQL Server. فهو يعمل مع الإصدارات Express و Standard.
 
 ### منتج عام {#a-generic-product}
 
-SafeKit منتج عام. يمكنك نسخ أكثر من مجرد بيانات وسجلات خادم SQL. إذا كان تطبيقك يعتمد على SQL Server ويحتوي على مجلدات محددة تضم إعداداتك أو ملفات أخرى، فيمكنك نسخها بنفس الطريقة. كما يمكنك إعادة تشغيل خدماتك الخاصة بالإضافة إلى خدمات خادم SQL.
+SafeKit هو منتج عام. يمكنك تكرار أكثر من بيانات وسجلات SQL Server. قد يحتوي تطبيق SQL Server الخاص بك على مجلدات محددة لتكوينه أو ملفات أخرى. يمكنك تكرارها بنفس الطريقة. يمكنك أيضًا إعادة تشغيل خدماتك الخاصة بالإضافة إلى خدمات SQL Server.
 
-دليل تثبيت [ SafeKit مع الإصدارات السريعة والقياسية Microsoft و SQL Server ](</ar/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
+[دليل تثبيت SafeKit لإصدارات Microsoft SQL Server Express و Standard](</ar/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
 
 ### بدون مجموعة تجاوز الفشل Microsoft {#without-microsoft-failover-cluster}
 
-يعمل SafeKit بدون مجموعة تجاوز الفشل Microsoft كما هو الحال مع Always On SQL Server . إنه عرض متكامل يوفر عنوان IP افتراضي، ونسخًا متزامنًا فوريًا للمجلدات، وتجاوز الفشل التلقائي والعودة إلى الوضع السابق، والمزيد... يُغني SafeKit عن الحاجة إلى الأقراص المشتركة وإصدارات قواعد البيانات المؤسسية. 
+على عكس SQL Server Always On، لا يحتاج SafeKit إلى مجموعة تجاوز الفشل Microsoft. SafeKit هو حل شامل. فهو يوفر عنوان IP ظاهريًا، ونسخًا متماثلًا متزامنًا للمجلدات في الوقت الفعلي، وتجاوز الفشل التلقائي والعودة إليه. يزيل SafeKit الحاجة إلى الأقراص المشتركة وإصدارات المؤسسات من قاعدة البيانات.
 
-### بدون وحدة تحكم المجال ودليل نشط {#without-domain-controller-and-active-directory}
+### بدون وحدة تحكم بالنطاق أو Active Directory {#without-domain-controller-and-active-directory}
 
-يعمل SafeKit دون الحاجة إلى تهيئة وحدة تحكم المجال أو الدليل النشط، على عكس Always On SQL Server . هذا الحل سهل النشر وفعال من حيث التكلفة، ولا يتطلب أي مهارات خاصة.
+على عكس Always On SQL Server، لا يحتاج SafeKit إلى وحدة تحكم بالمجال أو Active Directory. هذا الحل فعال من حيث التكلفة وسهل النشر. ولا يتطلب أي مهارات خاصة.
 
-### بدون 3 عقد لتحقيق النصاب {#without-3-nodes-for-quorum}
+### لا توجد عقدة ثالثة للنصاب {#without-3-nodes-for-quorum}
 
-يعمل SafeKit دون الحاجة إلى 3 عقد لتحقيق النصاب القانوني، على عكس Always On SQL Server . في حالة عزل الشبكة، يُطبّق SafeKit آلية فحص انقسام الشبكة باستخدام اختبار اتصال (ping) مع جهاز توجيه يقوم بدور الشاهد. علاوة على ذلك، يُمكن بسهولة تهيئة عدة نبضات قلب في المنتج.
+على عكس SQL Server Always On، الذي يحتاج إلى 3 عُقد لتحقيق النصاب القانوني، يحتاج SafeKit إلى عقدتين فقط. في حالة عزل الشبكة، يستخدم SafeKit أداة مدقق split-brain التي ترسل إشارات إلى جهاز توجيه يعمل كشاهد. كما يسهل تكوين نبضات heartbeat متعددة.
 
 ### حلول أخرى للتكرار والتوافر العالي {#other-redundancy-and-high-availability-solutions}
 
-مع SafeKitيمكنك تنفيذ ذلك على Windows و Linux، النسخ المتماثل الفوري والتحويل التلقائي لأي مجلدات وخدمات وقواعد بيانات وأجهزة افتراضية كاملة من نوع Hyper-V أو KVM، Docker, Kubernetesتطبيقات الحوسبة السحابية.
+باستخدام SafeKit، يمكنك تطبيق النسخ المتماثل في الوقت الفعلي وتجاوز الأعطال على نظامي Windows و Linux. وينطبق هذا على أي مجلدات وخدمات وقواعد بيانات وأجهزة افتراضية كاملة من نوع Hyper-V أو KVM وتطبيقات Docker و Kubernetes والتطبيقات السحابية.
 
-### حل كامل {#a-complete-solution}
+### حل متكامل {#a-complete-solution}
 
-SafeKit يحل المشكلة التالية: 
+يحل SafeKit ثلاثة أنواع من المشاكل:
 
-  * أعطال الأجهزة (20% من المشاكل)، بما في ذلك العطل الكامل لغرفة الحاسوب، 
-  * أعطال البرامج (40% من المشاكل)، بما في ذلك إعادة تشغيل العمليات الحيوية، 
-  * والأخطاء البشرية (40% من المشاكل) بفضل سهولة استخدامه ووحدة التحكم عبر الويب.
+  * **أعطال الأجهزة** (20% من المشاكل)، وحتى العطل الكامل لغرفة الكمبيوتر.
+  * **إخفاقات البرامج** (40% من المشكلات)، مع إعادة التشغيل التلقائي للعمليات الحيوية.
+  * **الأخطاء البشرية** (40% من المشاكل)، والتي تم تقليلها بفضل سهولة استخدامه ووحدة التحكم الخاصة به عبر الويب.
 
 
 
 {{%  insert-safekit-mirror-ar app="Microsoft SQL Server"  %}}
  
 
-## دليل فيديو: تهيئة مجموعة SafeKit mirror لـ SQL Server {#videoguide-safekit-mirror-cluster}
+## دليل الفيديو: تهيئة مجموعة mirror (HA) SafeKit SQL Server {#videoguide-safekit-mirror-cluster}
 
 
 {{%  insert-safekit-mirror-video-ar  %}}

@@ -1,58 +1,59 @@
 ---
 title: "Alternativa a SQL Server Always On: HA per le edizioni Express e Standard"
 canonical: "https://safekit.eviden.com/it/best-practises/alternative-always-on-sql-server-express-standard-editions/"
-description: "Cerchi un'alternativa conveniente a SQL Server Always On? SafeKit propone un'architettura SANless che offre alta disponibilità alle edizioni Express e Standard SQL Server . Approfitta della replica sincrona, dell'IP virtuale e del failover automatico senza bisogno di SAN o Active Directory."
+description: "Cercate un’alternativa economica a SQL Server Always On? SafeKit offre un’elevata disponibilità per le edizioni SQL Server Express e Standard. Non richiede SAN né Active Directory. Fornisce replica sincrona, un IP virtuale e failover automatico."
 category: "best-practises"
 lang: "it"
-topics: "Alternativa ad Always On SQL Server per le edizioni express e standard, Come funziona il cluster SafeKit mirror con Microsoft SQL Server ?, Guida video: Configurazione di un cluster HA SafeKit mirror per SQL Server , 🔍 Esplora SafeKit"
+topics: "Alternativa ad Always On SQL Server per le edizioni Express e Standard, Come funziona il cluster mirror SafeKit con Microsoft SQL Server?, Guida video: configurazione di un cluster mirror SafeKit HA per SQL Server, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 40 expressions"
 ---
 
 # Alternativa a SQL Server Always On: HA per le edizioni Express e Standard {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
 
-## Alternativa ad Always On SQL Server per le edizioni express e standard {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
+## Alternativa ad Always On SQL Server per le edizioni Express e Standard {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 
 ### La soluzione per Microsoft SQL Server {#the-solution-for-microsoft-sql-server}
 
-SafeKit offre alta disponibilità a Microsoft SQL Server tra due nodi ridondanti con replica sincrona dei dati in tempo reale e failover automatico.
+SafeKit offre un’elevata disponibilità a Microsoft SQL Server tra due nodi ridondanti. Fornisce la replica sincrona dei dati in tempo reale e il failover automatico.
 
-La soluzione è indipendente dall'edizione Microsoft SQL Server e funziona con le edizioni express e standard.
+La soluzione non dipende dall’edizione Microsoft SQL Server. Funziona con le edizioni Express e Standard.
 
 ### Un prodotto generico {#a-generic-product}
 
-SafeKit è un prodotto generico. Consente di replicare non solo i dati e i log di SQL Server, ma anche altri elementi. Se la tua applicazione si basa su SQL Server e contiene cartelle specifiche con la configurazione o altri file, puoi replicarli allo stesso modo. Inoltre, oltre ai servizi di SQL Server, puoi riavviare anche i tuoi servizi.
+SafeKit è un prodotto generico. È possibile replicare più di dati e log SQL Server. L’applicazione SQL Server potrebbe avere cartelle specifiche per la sua configurazione o altri file. È possibile replicarli nello stesso modo. È anche possibile riavviare i propri servizi oltre ai servizi SQL Server.
 
-Guida all'installazione di [ SafeKit con le edizioni express e standard di Microsoft SQL Server ](</it/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
+[Guida all’installazione di SafeKit per le edizioni Microsoft SQL Server Express e Standard](</it/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
 
-### Senza cluster di failover Microsoft {#without-microsoft-failover-cluster}
+### Senza un cluster di failover Microsoft {#without-microsoft-failover-cluster}
 
-SafeKit funziona senza il cluster di failover Microsoft proprio come con Always On SQL Server . Si tratta di un'offerta completa che include indirizzo IP virtuale, replica sincrona in tempo reale delle cartelle, failover e failback automatici e molto altro ancora... SafeKit elimina la necessità di dischi condivisi e di edizioni enterprise del database. 
+A differenza di Always On SQL Server, SafeKit non necessita di un cluster di failover Microsoft. SafeKit è una soluzione all-in-one. Fornisce un indirizzo IP virtuale, la replica sincrona in tempo reale delle cartelle e il failover e failback automatici. SafeKit elimina la necessità di dischi condivisi e di edizioni Enterprise del database.
 
-### Senza controller di dominio e Active Directory {#without-domain-controller-and-active-directory}
+### Senza un controller di dominio o Active Directory {#without-domain-controller-and-active-directory}
 
-SafeKit funziona senza configurare il controller di dominio e Active Directory, a differenza di Always On SQL Server . Questa soluzione facile da implementare ed economicamente vantaggiosa non richiede competenze specifiche.
+A differenza di Always On SQL Server, SafeKit non necessita di un controller di dominio o Active Directory. Questa soluzione economica è facile da implementare e non richiede alcuna competenza specifica.
 
-### Senza 3 nodi per il quorum {#without-3-nodes-for-quorum}
+### Nessun terzo nodo per il quorum {#without-3-nodes-for-quorum}
 
-SafeKit funziona senza la necessità di 3 nodi per il quorum, a differenza di Always On SQL Server . In caso di isolamento di rete, SafeKit implementa un controllo split-brain con un ping a un router che funge da witness. Inoltre, è possibile configurare facilmente più heartbeat nel prodotto.
+A differenza di Always On SQL Server, che necessita di 3 nodi per il quorum, SafeKit necessita di soli 2 nodi. In caso di isolamento della rete, SafeKit utilizza un checker split-brain che esegue il ping di un router che funge da witness. Anche più heartbeat sono facili da configurare.
 
 ### Altre soluzioni di ridondanza e alta disponibilità {#other-redundancy-and-high-availability-solutions}
 
-Con SafeKit , è possibile implementare su Windows e Linux la replica e il failover in tempo reale di qualsiasi cartella e servizio, database, macchine virtuali Hyper-V o KVM complete, Docker , Kubernetes , applicazioni cloud.
+Con SafeKit, è possibile implementare la replica in tempo reale e il failover su Windows e Linux. Questo vale per qualsiasi cartella e servizio, database, macchine virtuali Hyper-V o KVM complete, Docker, Kubernetes e applicazioni cloud.
 
 ### Una soluzione completa {#a-complete-solution}
 
-SafeKit risolve: 
+SafeKit risolve tre tipi di problemi:
 
-  * guasti hardware (20% dei problemi), incluso il guasto completo di una sala computer, 
-  * guasti del software (40% dei problemi), incluso il riavvio dei processi critici, 
-  * e agli errori umani (40% dei problemi) grazie alla sua facilità d'uso e alla sua console web.
+  * **Guasti hardware** (20% dei problemi), persino il guasto completo di una sala computer.
+  * **Guasti del software** (40% dei problemi), con riavvio automatico dei processi critici.
+  * **Errori umani** (40% dei problemi), ridotti dalla sua facilità d’uso e dalla sua console web.
 
 
 
 {{%  insert-safekit-mirror-it app="Microsoft SQL Server"  %}}
  
 
-## Video guida: Configurazione di un cluster HA SafeKit mirror per SQL Server {#videoguide-safekit-mirror-cluster}
+## Guida video: configurazione di un cluster mirror SafeKit HA per SQL Server {#videoguide-safekit-mirror-cluster}
 
 
 {{%  insert-safekit-mirror-video-it  %}}

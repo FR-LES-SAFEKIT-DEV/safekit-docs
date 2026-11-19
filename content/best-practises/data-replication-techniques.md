@@ -1,7 +1,7 @@
 ---
 title: "Data Replication Techniques for High Availability: A Complete Comparison"
 canonical: "https://safekit.eviden.com/best-practises/data-replication-techniques/"
-description: "Compare data replication techniques at the database, disk, and file level. Learn why SafeKit proposes a SANless architecture for simple, real-time synchronous replication that ensures zero data loss and automatic failover on Windows and Linux."
+description: "Compare data replication techniques at the database, disk and file level. The SafeKit software provides simple, real-time synchronous replication without shared storage. It ensures zero data loss and automatic failover on Windows and Linux."
 category: "best-practises"
 lang: "en"
 topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques, 🔍 Explore SafeKit"
@@ -13,43 +13,43 @@ topics: "Data replication techniques at database level, disk level or file level
 
 ### Overview {#overview}
 
-This article explores the pros and cons of data replication techniques at database level, disk level and file level for high availability clusters. We are looking at failover, failback, simplicity of implementation.
+This article compares the pros and cons of data replication techniques at database level, disk level and file level in high availability clusters. It looks at three criteria: failover, failback and simplicity of implementation.
 
 
 ![Data replication techniques](/wp-content/uploads/2023/03/data-replication-techniques.png "w:128")
 
 
-The following comparative tables explain in detail the data replication techniques implemented by SafeKit, a high availability software product.
+The comparison tables below explain in detail the data replication techniques implemented by SafeKit, a high availability software product.
 
 ### What is the data replication technique at database level? {#what-is-the-data-replication-technique-at-database-level}
 
-It is the replication of log files between two servers made by the database management system (like the [SQL Server log](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>)).
+The database management system replicates its log files between two servers. An example is the [SQL Server transaction log](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
 
-For an automatic failover, it is mandatory to have synchronous replication otherwise the data of the last validated transactions will not be recovered on the secondary server after a failover.
+Automatic failover requires synchronous replication. Otherwise, the data of the last committed transactions is lost on the secondary server after a failover.
 
-This data replication technique replicates a database but not the other data of an application. Failover of many applications also requires the replication of other data such as configuration files.
+This technique replicates a database, but not the other data of an application. However, the failover of many applications also requires other data to be replicated, such as configuration files.
 
-When a server crashes and loses some database files, failback is not automatic. A skilled DBA must restore the database on the failed server.
+When a server crashes and loses some database files, the failback is not automatic. A skilled DBA must restore the database on the failed server.
 
 ### What is the data replication technique at disk level? {#what-is-the-data-replication-technique-at-disk-level}
 
-It is the replication of modifications inside disks between two servers (like [DRBD](<https://linbit.com/drbd/>)).
+The modifications inside a disk are replicated between two servers. An example is the [DRBD open source software](<https://linbit.com/drbd/>).
 
-For an automatic failover, synchronous replication between the disks is mandatory for having 0 data loss.
+To avoid any data loss on automatic failover, the replication between the disks must be synchronous.
 
-This data replication technique can replicate databases as well as other files. But, there is a strong impact on the organization of application data. All data must be localized in the relicated disk. This may be impossible if some data to replicate are in the system disk, because this disk must remain specific to each server.
+This technique can replicate databases as well as other files. But it has a strong impact on the organization of application data. All data must be stored on the replicated disk. This may be impossible if some data to replicate is on the system disk, because each server must keep its own system disk.
 
-Skills are required to configure a replicated disk with a file system and to configure application data in the replicated disk.
+Specific skills are required to configure a replicated disk with a file system. Skills are also required to move the application data to the replicated disk.
 
 ### What is the data replication technique at file level? {#what-is-the-data-replication-technique-at-file-level}
 
-It is the replication of modifications inside files between two servers (like [SafeKit](</>)).
+The modifications inside files are replicated between two servers. An example is the [SafeKit high availability software](</>).
 
-For an automatic failover, [real-time synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) is required for having 0 data loss.
+To avoid any data loss on automatic failover, [real-time synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) is required.
 
-This data replication technique can replicate databases as well as other files. There is no impact on data organization for an application. For instance, if an application has its data in the system disk, real-time file replication is working.
+This technique can replicate databases as well as other files. It has no impact on the data organization of an application. For example, real-time file replication works even if the application data is on the system disk.
 
-The solution is very simple to configure as only the paths of directories to replicate are configured.
+The solution is very simple to configure. You only configure the paths of the directories to replicate.
 
 ## Comparative tables between data replication techniques {#comparative-tables-between-data-replication-techniques}
 

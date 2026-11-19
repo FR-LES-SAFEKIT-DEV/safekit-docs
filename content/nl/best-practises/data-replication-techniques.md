@@ -1,58 +1,62 @@
 ---
-title: "Gegevensreplicatietechnieken voor hoge beschikbaarheid: een volledige vergelijking"
+title: "Datareplicatietechnieken voor hoge beschikbaarheid: een complete vergelijking"
 canonical: "https://safekit.eviden.com/nl/best-practises/data-replication-techniques/"
-description: "Vergelijk gegevensreplicatie op database-, schijf- en bestandsniveau. Ontdek waarom SafeKit een SANless-architectuur biedt voor eenvoudige, synchrone replicatie in realtime, zonder gegevensverlies en met automatische failover op Windows en Linux."
+description: "Vergelijk datareplicatietechnieken op database-, schijf- en bestandsniveau. De SafeKit-software biedt eenvoudige, real-time synchrone replicatie zonder gedeelde opslag. Het garandeert nul gegevensverlies en automatische failover op Windows en Linux."
 category: "best-practises"
 lang: "nl"
-topics: "Gegevensreplicatietechnieken op database-, schijf- of bestandsniveau, Vergelijkingstabellen van gegevensreplicatietechnieken, SafeKit-navigatiecentrum voor hoge beschikbaarheid"
+topics: "Datareplicatietechnieken op databaseniveau, Schijfniveau of bestandsniveau?, Vergelijkende tabellen tussen datareplicatietechnieken, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 52 expressions"
 ---
 
-# Gegevensreplicatietechnieken voor hoge beschikbaarheid: een volledige vergelijking {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Datareplicatietechnieken voor hoge beschikbaarheid: een complete vergelijking {#data-replication-techniques-for-high-availability-a-complete-comparison}
 
-## Gegevensreplicatie op database-, schijf- of bestandsniveau? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
+## Datareplicatietechnieken op database-, schijf- of bestandsniveau? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 
 ### Overzicht {#overview}
 
-Dit artikel bespreekt de voor- en nadelen van gegevensreplicatie op database-, schijf- en bestandsniveau voor clusters met hoge beschikbaarheid. Daarbij kijken we naar failover, failback en implementatiegemak.
+Dit artikel vergelijkt de voor- en nadelen van datareplicatietechnieken op database-, schijf- en bestandsniveau in clusters met hoge beschikbaarheid. Er wordt gekeken naar drie criteria: failover, failback en eenvoud van implementatie.
 
-![Gegevensreplicatietechnieken](/wp-content/uploads/2023/03/data-replication-techniques.png "w:128")
 
-De volgende vergelijkingstabellen beschrijven de gegevensreplicatietechnieken van SafeKit, software voor hoge beschikbaarheid, in detail.
+![Technieken voor datareplicatie](/wp-content/uploads/2023/03/data-replication-techniques.png "w:128")
 
-### Wat houdt gegevensreplicatie op databaseniveau in? {#what-is-the-data-replication-technique-at-database-level}
 
-Het databasebeheersysteem repliceert logbestanden tussen twee servers, zoals het [SQL Server-transactielogboek](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
+De onderstaande vergelijkingstabellen lichten de datareplicatietechnieken die door SafeKit, een softwareproduct voor hoge beschikbaarheid, worden geïmplementeerd, in detail toe.
 
-Voor automatische failover is synchrone replicatie noodzakelijk. Anders zijn de laatst bevestigde transacties na een failover niet beschikbaar op de secundaire server.
+### Wat is de datareplicatietechniek op databaseniveau? {#what-is-the-data-replication-technique-at-database-level}
 
-Deze techniek repliceert een database, maar niet de overige applicatiegegevens. Voor failover van veel toepassingen moeten ook andere gegevens, zoals configuratiebestanden, worden gerepliceerd.
+Het databasebeheersysteem repliceert zijn logbestanden tussen twee servers. Een voorbeeld hiervan is het [transactielogboek SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
 
-Als een server crasht en databasebestanden verliest, verloopt failback niet automatisch. Een ervaren DBA moet de database op de defecte server herstellen.
+Automatische failover vereist synchrone replicatie. Anders gaan de gegevens van de laatst vastgelegde transacties verloren op de secundaire server na een failover.
 
-### Wat houdt gegevensreplicatie op schijfniveau in? {#what-is-the-data-replication-technique-at-disk-level}
+Deze techniek repliceert een database, maar niet de andere gegevens van een toepassing. De failover van veel toepassingen vereist echter ook dat andere gegevens worden gerepliceerd, zoals configuratiebestanden.
 
-Hierbij worden wijzigingen op schijven tussen twee servers gerepliceerd, bijvoorbeeld met [DRBD](<https://linbit.com/drbd/>).
+Wanneer een server crasht en een aantal databasebestanden verliest, is de failback niet automatisch. Een ervaren DBA moet de database op de defecte server herstellen.
 
-Voor automatische failover zonder gegevensverlies is synchrone replicatie tussen de schijven noodzakelijk.
+### Wat is de datareplicatietechniek op schijfniveau? {#what-is-the-data-replication-technique-at-disk-level}
 
-Deze techniek kan databases en andere bestanden repliceren, maar heeft veel invloed op de indeling van applicatiegegevens. Alle gegevens moeten op de gerepliceerde schijf staan. Dit kan onmogelijk zijn als te repliceren gegevens op de systeemschijf staan, omdat die schijf per server eigen moet blijven.
+De wijzigingen op een schijf worden gerepliceerd tussen twee servers. Een voorbeeld hiervan is de [open-source software DRBD](<https://linbit.com/drbd/>).
 
-Er is specialistische kennis nodig om een gerepliceerde schijf met een bestandssysteem in te stellen en de applicatiegegevens daarop te plaatsen.
+Om gegevensverlies bij een automatische failover te voorkomen, moet de replicatie tussen de schijven synchroon zijn.
 
-### Wat houdt gegevensreplicatie op bestandsniveau in? {#what-is-the-data-replication-technique-at-file-level}
+Deze techniek kan databases en andere bestanden repliceren. Maar het heeft een grote impact op de organisatie van applicatiegegevens. Alle gegevens moeten op de gerepliceerde schijf worden opgeslagen. Dit kan onmogelijk zijn als sommige gegevens die moeten worden gerepliceerd zich op de systeemschijf bevinden, omdat elke server zijn eigen systeemschijf moet behouden.
 
-Hierbij worden bestandswijzigingen tussen twee servers gerepliceerd, bijvoorbeeld met [SafeKit](/nl/).
+Er zijn specifieke vaardigheden vereist om een gerepliceerde schijf met een bestandssysteem te configureren. Er zijn ook vaardigheden vereist om de toepassingsgegevens naar de gerepliceerde schijf te verplaatsen.
 
-Voor automatische failover zonder gegevensverlies is [synchrone replicatie in realtime](/nl/best-practises/synchronous-replication-vs-asynchronous-replication/) nodig.
+### Wat is de datareplicatietechniek op bestandsniveau? {#what-is-the-data-replication-technique-at-file-level}
 
-Deze techniek kan databases en andere bestanden repliceren zonder de indeling van applicatiegegevens te veranderen. Zelfs als een toepassing gegevens op de systeemschijf opslaat, werkt bestandsreplicatie in realtime.
+De wijzigingen in bestanden worden gerepliceerd tussen twee servers. Een voorbeeld hiervan is de [SafeKit-software voor hoge beschikbaarheid](</nl/>).
 
-De oplossing is eenvoudig te configureren: alleen de paden van de te repliceren mappen hoeven te worden opgegeven.
+Om gegevensverlies bij een automatische failover te voorkomen, is [synchrone replicatie in realtime](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>) vereist.
 
-## Vergelijkingstabellen van gegevensreplicatietechnieken {#comparative-tables-between-data-replication-techniques}
+Deze techniek kan databases en andere bestanden repliceren. Het heeft geen invloed op de gegevensorganisatie van een toepassing. Realtime bestandsreplicatie werkt bijvoorbeeld zelfs als de toepassingsgegevens zich op de systeemschijf bevinden.
 
-{{% insert-safekit-mirror-comparison-table-nl %}}
+De oplossing is heel eenvoudig te configureren. U hoeft alleen de paden van de te repliceren mappen te configureren.
 
-{{% insert-safekit-hub-nl %}}
+## Vergelijkende tabellen tussen datareplicatietechnieken {#comparative-tables-between-data-replication-techniques}
 
-{{% insert-safekit-4-buttons-nl %}}
+
+{{%  insert-safekit-mirror-comparison-table-nl  %}}
+
+{{%  insert-safekit-hub-nl  %}}
+
+{{%  insert-safekit-4-buttons-nl  %}}

@@ -1,58 +1,62 @@
 ---
-title: "Tecniche di replica dei dati per l'alta disponibilità: confronto completo"
+title: "Tecniche di replica dei dati per l’alta disponibilità: un confronto completo"
 canonical: "https://safekit.eviden.com/it/best-practises/data-replication-techniques/"
-description: "Confronta le tecniche di replica dei dati a livello di database, disco e file. Scopri perché SafeKit propone un'architettura senza SAN per una replica sincrona semplice e in tempo reale, che evita la perdita di dati e consente il failover automatico su Windows e Linux."
+description: "Confronta le tecniche di replica dei dati a livello di database, disco e file. Il software SafeKit offre una replica sincrona in tempo reale semplice e senza storage condiviso. Garantisce l’assenza di perdita di dati e il failover automatico su Windows e Linux."
 category: "best-practises"
 lang: "it"
-topics: "Tecniche di replica dei dati a livello di database, disco o file, Tabelle comparative delle tecniche di replica dei dati, Hub di navigazione dell'alta disponibilità SafeKit"
+topics: "Tecniche di replica dei dati a livello di database, A livello di disco o a livello di file?, Tabelle comparative tra le tecniche di replica dei dati, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 41 expressions"
 ---
 
-# Tecniche di replica dei dati per l'alta disponibilità: confronto completo {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Tecniche di replica dei dati per l’alta disponibilità: un confronto completo {#data-replication-techniques-for-high-availability-a-complete-comparison}
 
-## Tecniche di replica dei dati a livello di database, disco o file? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
+## Tecniche di replica dei dati a livello di database, a livello di disco o a livello di file? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 
 ### Panoramica {#overview}
 
-Questo articolo analizza vantaggi e svantaggi delle tecniche di replica dei dati a livello di database, disco e file per i cluster ad alta disponibilità. Considera failover, failback e semplicità di implementazione.
+Questo articolo confronta i pro e i contro delle tecniche di replica dei dati a livello di database, a livello di disco e a livello di file in cluster ad alta disponibilità. Vengono esaminati tre criteri: failover, failback e semplicità di implementazione.
+
 
 ![Tecniche di replica dei dati](/wp-content/uploads/2023/03/data-replication-techniques.png "w:128")
 
-Le tabelle comparative seguenti illustrano nel dettaglio le tecniche di replica dei dati implementate da SafeKit, un software per l'alta disponibilità.
 
-### Che cos'è la replica dei dati a livello di database? {#what-is-the-data-replication-technique-at-database-level}
+Le tabelle di confronto riportate di seguito illustrano in dettaglio le tecniche di replica dei dati implementate da SafeKit, un prodotto software ad alta disponibilità.
 
-È la replica dei file di log tra due server eseguita dal sistema di gestione del database, come il [log delle transazioni di SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
+### Qual è la tecnica di replica dei dati a livello di database? {#what-is-the-data-replication-technique-at-database-level}
 
-Per il failover automatico è obbligatoria la replica sincrona; in caso contrario, le ultime transazioni convalidate non saranno recuperate sul server secondario dopo il failover.
+Il sistema di gestione di database replica i suoi file di log tra due server. Un esempio è il [log delle transazioni SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
 
-Questa tecnica replica il database, ma non gli altri dati dell'applicazione. Il failover di molte applicazioni richiede anche la replica di dati aggiuntivi, ad esempio i file di configurazione.
+Il failover automatico richiede la replica sincrona. In caso contrario, i dati delle ultime transazioni confermate vengono persi sul server secondario dopo un failover.
 
-Se un server si arresta in modo anomalo e perde alcuni file del database, il failback non è automatico. Un DBA esperto deve ripristinare il database sul server guasto.
+Questa tecnica replica un database, ma non gli altri dati di un’applicazione. Tuttavia, il failover di molte applicazioni richiede anche la replica di altri dati, come i file di configurazione.
 
-### Che cos'è la replica dei dati a livello di disco? {#what-is-the-data-replication-technique-at-disk-level}
+Quando un server si arresta in modo anomalo e perde alcuni file di database, il failback non è automatico. Un DBA esperto deve ripristinare il database sul server guasto.
 
-È la replica delle modifiche sui dischi tra due server, come [DRBD](<https://linbit.com/drbd/>).
+### Qual è la tecnica di replica dei dati a livello di disco? {#what-is-the-data-replication-technique-at-disk-level}
 
-Per il failover automatico senza perdita di dati è necessaria la replica sincrona tra i dischi.
+Le modifiche all’interno di un disco vengono replicate tra due server. Un esempio è il [software open source DRBD](<https://linbit.com/drbd/>).
 
-Questa tecnica può replicare database e altri file, ma influisce notevolmente sull'organizzazione dei dati applicativi: tutti i dati devono trovarsi sul disco replicato. Ciò può essere impossibile se alcuni dati da replicare si trovano sul disco di sistema, che deve restare specifico per ciascun server.
+Per evitare la perdita di dati in caso di failover automatico, la replica tra i dischi deve essere sincrona.
 
-Sono necessarie competenze specifiche per configurare il disco replicato con un file system e collocarvi i dati applicativi.
+Questa tecnica può replicare database e altri file, ma ha un forte impatto sull’organizzazione dei dati dell’applicazione. Tutti i dati devono essere archiviati sul disco replicato. Ciò potrebbe essere impossibile se alcuni dati da replicare si trovano sul disco di sistema, perché ogni server deve conservare il proprio disco di sistema.
 
-### Che cos'è la replica dei dati a livello di file? {#what-is-the-data-replication-technique-at-file-level}
+Per configurare un disco replicato con un file system sono necessarie competenze specifiche. Sono inoltre necessarie competenze per spostare i dati dell’applicazione sul disco replicato.
 
-È la replica delle modifiche ai file tra due server, come [SafeKit](/it/).
+### Qual è la tecnica di replica dei dati a livello di file? {#what-is-the-data-replication-technique-at-file-level}
 
-Per il failover automatico senza perdita di dati è necessaria la [replica sincrona in tempo reale](/it/best-practises/synchronous-replication-vs-asynchronous-replication/).
+Le modifiche apportate ai file vengono replicate tra i due server. Un esempio è il [software di alta disponibilità SafeKit](</it/>).
 
-Questa tecnica può replicare database e altri file senza modificare l'organizzazione dei dati dell'applicazione. Ad esempio, la replica di file in tempo reale funziona anche quando i dati di un'applicazione si trovano sul disco di sistema.
+Per evitare qualsiasi perdita di dati in caso di failover automatico, è necessaria [la replica sincrona in tempo reale](</it/best-practises/synchronous-replication-vs-asynchronous-replication/>).
 
-La configurazione è molto semplice: basta specificare i percorsi delle directory da replicare.
+Questa tecnica può replicare database e altri file. Non ha alcun impatto sull’organizzazione dei dati di un’applicazione. Ad esempio, la replica di file in tempo reale funziona anche se i dati dell’applicazione si trovano sul disco di sistema.
 
-## Tabelle comparative delle tecniche di replica dei dati {#comparative-tables-between-data-replication-techniques}
+La soluzione è molto semplice da configurare. È sufficiente configurare i percorsi delle directory da replicare.
 
-{{% insert-safekit-mirror-comparison-table-it %}}
+## Tabelle comparative tra le tecniche di replica dei dati {#comparative-tables-between-data-replication-techniques}
 
-{{% insert-safekit-hub-it %}}
 
-{{% insert-safekit-4-buttons-it %}}
+{{%  insert-safekit-mirror-comparison-table-it  %}}
+
+{{%  insert-safekit-hub-it  %}}
+
+{{%  insert-safekit-4-buttons-it  %}}

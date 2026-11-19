@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-18.3",
+  "version": "2026-11-19.15",
   "keep": [
     "mirror",
     "farm",
@@ -180,7 +180,10 @@
     "Tiandy",
     "Eagle Eye Networks",
     "ISS",
-    "Teledyne FLIR"
+    "Teledyne FLIR",
+    "Always On",
+    "Active Directory",
+    "Express"
   ],
   "terms": {
     "farm cluster": {
@@ -806,14 +809,21 @@
       "nl": "quorum en split brain",
       "pt": "quórum e split brain",
       "ko": "쿼럼 및 스플릿 브레인",
-      "ar": "النصاب وانقسام الدماغ (split brain)"
+      "ar": "النصاب وانقسام الدماغ (split brain)",
+      "ja": "クォーラムとスプリットブレイン",
+      "zh-hans": "仲裁和脑裂",
+      "de": "Quorum und Split-Brain"
     },
     "split brain": {
       "fr": "split brain",
       "es": "split brain",
       "it": "split brain",
       "nl": "split brain",
-      "pt": "split brain"
+      "pt": "split brain",
+      "de": "Split-Brain",
+      "ja": "スプリットブレイン",
+      "ko": "스플릿 브레인",
+      "zh-hans": "脑裂"
     },
     "shared disk array": {
       "fr": "baie de disques partagée",
@@ -832,6 +842,37 @@
     },
     "high availability software": {
       "zh-hans": "高可用性软件"
+    },
+    "failback": {
+      "fr": "failback",
+      "es": "failback",
+      "pt": "failback",
+      "it": "failback",
+      "de": "Failback",
+      "nl": "failback",
+      "ja": "フェイルバック",
+      "zh-hans": "回切",
+      "ko": "페일백",
+      "ar": "الاسترجاع (failback)"
+    },
+    "failover": {
+      "pt": "failover"
+    },
+    "hardware load balancers": {
+      "de": "Hardware-Load-Balancer",
+      "nl": "hardwarematige load balancers",
+      "es": "balanceadores de carga de hardware"
+    },
+    "hardware load balancer": {
+      "de": "Hardware-Load-Balancer",
+      "nl": "hardwarematige load balancer",
+      "es": "balanceador de carga de hardware"
+    },
+    "data replication technique": {
+      "de": "Datenreplikationstechnik"
+    },
+    "data replication techniques": {
+      "de": "Datenreplikationstechniken"
     }
   },
   "grammar": {
@@ -1231,6 +1272,78 @@
       [
         "\\bl[’\\']assistance (en direct|standard|technique)\\b",
         "le support \\1"
+      ],
+      [
+        "(\\bpas besoin d[e’][^.,\\n]*?) ou Active Directory",
+        "\\1 ni d’Active Directory"
+      ],
+      [
+        "(?<!\\w)([Uu])ne(\\s+)split brain",
+        "\\1n\\2split brain"
+      ],
+      [
+        "(?<!\\w)([Ll])a(\\s+)split brain",
+        "\\1e\\2split brain"
+      ],
+      [
+        "(?<!\\w)(pour|gérer|après)\\s+split brain",
+        "\\1 le split brain"
+      ],
+      [
+        "au niveau des octets",
+        "au niveau de l’octet"
+      ],
+      [
+        "au niveau des blocs",
+        "au niveau du bloc"
+      ],
+      [
+        "(^|•\\s+|<br>\\s*)[Ss]plit brain(?= (?:est|ne|n’|peut))",
+        "\\1Le split brain"
+      ],
+      [
+        "(?<=[\\s(])(?<!\\bou )(?<!\\bvs )(?<!\\bvs\\. )(?<!\\bversus )(?<!\\bou\\xa0)(?<!\\bde )(?<!\\bdu )(?<!\\ble )(?<!\\bau )(?<!\\bun )(?<!\\bdes )(?<!\\bles )(?<!\\baux )clustering (logiciel|matériel)\\b",
+        "le clustering \\1"
+      ],
+      [
+        "(^|[.!?:]\\s+)Clustering (logiciel|matériel)(?= (?:pour|est|exige|nécessite|repose|se|avec SafeKit est))",
+        "\\1Le clustering \\2"
+      ],
+      [
+        "\\bsolutions le clustering",
+        "solutions de clustering"
+      ],
+      [
+        "\\bpar rapport le clustering",
+        "par rapport au clustering"
+      ],
+      [
+        "\\bà le clustering",
+        "au clustering"
+      ],
+      [
+        "\\bde le clustering",
+        "du clustering"
+      ],
+      [
+        "(du clustering (?:logiciel|matériel)(?: \\([^)]*\\))?(?:,| et)) le clustering",
+        "\\1 du clustering"
+      ],
+      [
+        "\\bComparaison le clustering",
+        "Comparaison du clustering"
+      ],
+      [
+        ",\\s+failback et\\b",
+        ", le failback et"
+      ],
+      [
+        "(^|[,;:]\\s+)failback (?=n’est|est|n'est)",
+        "\\1le failback "
+      ],
+      [
+        "(?<!\\w)([Dd])ans(\\s+)clusters\\b",
+        "\\1ans\\2les clusters"
       ]
     ],
     "it": [
@@ -1365,6 +1478,18 @@
       [
         "\\bOEMs\\b",
         "OEM"
+      ],
+      [
+        "(?<!\\w)([Pp]er|gestire)\\s+split brain",
+        "\\1 lo split brain"
+      ],
+      [
+        "(^|•\\s+|<br>\\s*)[Ss]plit brain(?= (?:viene|è|non|può))",
+        "\\1Lo split brain"
+      ],
+      [
+        "\\b([Cc])lustering del software\\b",
+        "\\1lustering software"
       ]
     ],
     "es": [
@@ -1503,6 +1628,70 @@
       [
         "(horas laborables) desde el (Centro)",
         "\\1 por parte del \\2"
+      ],
+      [
+        "(?<!\\w)([Uu])na(\\s+)split brain",
+        "\\1n\\2split brain"
+      ],
+      [
+        "(?<!\\w)([Ll])a(\\s+)split brain",
+        "el\\2split brain"
+      ],
+      [
+        "(?<!\\w)(gestionar|para|tras)\\s+split brain",
+        "\\1 el split brain"
+      ],
+      [
+        "(^|•\\s+|<br>\\s*)[Ss]plit brain(?= (?:se|es|no|está|puede))",
+        "\\1El split brain"
+      ],
+      [
+        "(?<=[\\s(])(?<!\\bou )(?<!\\bvs )(?<!\\bvs\\. )(?<!\\bversus )(?<!\\bou\\xa0)(?<!\\bfrente a )(?<!\\bo )(?<!\\bel )(?<!\\bdel )(?<!\\bal )(?<!\\bun )(?<!\\bde )(?<!\\blos )clustering de (software|hardware)\\b",
+        "el clustering de \\1"
+      ],
+      [
+        "(^|[.!?:¿]\\s*)Clustering de (software|hardware)(?= (?:para|se|es|requiere|necesita|con SafeKit es))",
+        "\\1El clustering de \\2"
+      ],
+      [
+        "\\bsoluciones el clustering",
+        "soluciones de clustering"
+      ],
+      [
+        "\\ba el clustering",
+        "al clustering"
+      ],
+      [
+        "\\bde el clustering",
+        "del clustering"
+      ],
+      [
+        "\\bde clustering de (software|hardware)((?: \\([^)]*\\))?(?:,| y)) el clustering",
+        "del clustering de \\1\\2 del clustering"
+      ],
+      [
+        "(del clustering de (?:software|hardware)(?: \\([^)]*\\))?(?:,| y)) el clustering",
+        "\\1 del clustering"
+      ],
+      [
+        "(^|[.!?]\\s+)[Bb]alanceadores de carga de hardware (?=necesitan|requieren|exigen)",
+        "\\1Los balanceadores de carga de hardware "
+      ],
+      [
+        "(?<!\\w)la(\\s+)(failback|failover)\\b",
+        "el\\1\\2"
+      ],
+      [
+        "(?<!\\w)La(\\s+)(failback|failover)\\b",
+        "El\\1\\2"
+      ],
+      [
+        "(?<!\\w)una(\\s+)(failback|failover)\\b",
+        "un\\1\\2"
+      ],
+      [
+        "\\b(failback|failover)( no)? es automática",
+        "\\1\\2 es automático"
       ]
     ],
     "pt": [
@@ -1649,6 +1838,78 @@
       [
         "\\bpara linha (\\d)",
         "para a linha \\1"
+      ],
+      [
+        "(?<!\\w)([Uu])ma(\\s+)split brain",
+        "\\1m\\2split brain"
+      ],
+      [
+        "(?<!\\w)(gerenciar|gerir|para)\\s+split brain",
+        "\\1 o split brain"
+      ],
+      [
+        "(?<!\\w)([Nn])enhuma metadados é replicada",
+        "\\1enhum metadado é replicado"
+      ],
+      [
+        "(?<!\\w)([Uu])ma(\\s+)failover",
+        "\\1m\\2failover"
+      ],
+      [
+        "(^|•\\s+|<br>\\s*)[Ss]plit brain(?= (?:é|não|pode|se))",
+        "\\1O split brain"
+      ],
+      [
+        "(O split brain (?:é|foi|está) \\w+?)a(?=\\s)",
+        "\\1o"
+      ],
+      [
+        "(?<=[\\s(])(?<!\\bou )(?<!\\bvs )(?<!\\bvs\\. )(?<!\\bversus )(?<!\\bou\\xa0)(?<!\\bo )(?<!\\bdo )(?<!\\bao )(?<!\\bno )(?<!\\bum )(?<!\\bde )(?<!\\bos )clustering de (software|hardware)\\b",
+        "o clustering de \\1"
+      ],
+      [
+        "(^|[.!?:]\\s+)Clustering de (software|hardware)(?= (?:para|é|baseia|se|requer|exige|precisa|com o SafeKit é|com SafeKit é))",
+        "\\1O clustering de \\2"
+      ],
+      [
+        "\\bsoluções o clustering",
+        "soluções de clustering"
+      ],
+      [
+        "\\bcom o o clustering",
+        "com o clustering"
+      ],
+      [
+        "\\bde clustering de (software|hardware)((?: \\([^)]*\\))?(?:,| e)) o clustering",
+        "do clustering de \\1\\2 do clustering"
+      ],
+      [
+        "(do clustering de (?:software|hardware)(?: \\([^)]*\\))?(?:,| e)) o clustering",
+        "\\1 do clustering"
+      ],
+      [
+        "(?<!\\w)[Aa] comutação automática failover",
+        "O failover automático"
+      ],
+      [
+        "(?<!\\w)a(\\s+)(failover|failback)\\b",
+        "o\\1\\2"
+      ],
+      [
+        "(?<!\\w)A(\\s+)(failover|failback)\\b",
+        "O\\1\\2"
+      ],
+      [
+        "(?<!\\w)([dn])a(\\s+)(failover|failback)\\b",
+        "\\1o\\2\\3"
+      ],
+      [
+        "(failover|failback) automática\\b",
+        "\\1 automático"
+      ],
+      [
+        "\\b(failback|failover)( não)? é automática",
+        "\\1\\2 é automático"
       ]
     ],
     "ar": [
@@ -1871,6 +2132,14 @@
       [
         "يمكن لأربعة جهات",
         "يمكن لما يصل إلى أربع جهات"
+      ],
+      [
+        "(\\(failback\\)) لا تكون",
+        "\\1 لا يكون"
+      ],
+      [
+        "لا يكون تلقائية",
+        "لا يكون تلقائيًا"
       ]
     ],
     "de": [
@@ -2297,6 +2566,38 @@
       [
         "(`\\.safe`) (?=Anwendungsmodul|Modul)",
         "\\1-"
+      ],
+      [
+        "\\bExpress und Standard[ -]Editionen",
+        "Express- und Standard-Editionen"
+      ],
+      [
+        "\\bSQL Server[ -](?=(?:Daten|Anwendung|Anwendungen|Dienste|Diensten|Instanz|Instanzen)\\b)",
+        "SQL-Server-"
+      ],
+      [
+        "\\b([Kk])ein drittes Knoten",
+        "\\1ein dritter Knoten"
+      ],
+      [
+        "\\bautomatischer Failback",
+        "automatisches Failback"
+      ],
+      [
+        "\\b(Hyper-V) oder (KVM) virtuelle(n?) Maschinen",
+        "virtuelle\\3 \\1- oder \\2-Maschinen"
+      ],
+      [
+        "\\bBereitstellung SafeKit\\b",
+        "Bereitstellung von SafeKit"
+      ],
+      [
+        "\\bStandard-physische Server",
+        "Physische Standardserver"
+      ],
+      [
+        "Datentachrichtungs-Technik",
+        "Datenreplikationstechnik"
       ]
     ],
     "ko": [
@@ -2847,6 +3148,50 @@
       [
         "\\b(Windows|Linux) (?=실행)",
         "\\1를 "
+      ],
+      [
+        "([?？]\\s*)SafeKit (?=SQL Server)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "(\\)[:：]\\s*)SafeKit (?=[가-힣])",
+        "\\1SafeKit은 "
+      ],
+      [
+        "\\bActive Directory (?=필요)",
+        "Active Directory가 "
+      ],
+      [
+        "(달리\\s+)SafeKit (?![은는이가을를])",
+        "\\1SafeKit은 "
+      ],
+      [
+        "(격리 시\\s+)SafeKit (?![은는이가을를])",
+        "\\1SafeKit은 "
+      ],
+      [
+        "까지도요\\.",
+        "까지 포함됩니다."
+      ],
+      [
+        "스플릿 브레인\\s+(?=관리하)",
+        "스플릿 브레인을 "
+      ],
+      [
+        "(스플릿 브레인|페일백)\\s+(은|는|을|를|이|가|의|에)(?=\\s|$)",
+        "\\1\\2"
+      ],
+      [
+        "(\\]\\([^)]*\\))\\s*이용한",
+        "\\1을 이용한"
+      ],
+      [
+        "클러스터를 구성에 필요한",
+        "클러스터 구성에 필요한"
+      ],
+      [
+        "페일백 자동",
+        "페일백은 자동"
       ]
     ],
     "ja": [
@@ -3285,6 +3630,74 @@
       [
         "(`[^`\\n]+` および `[^`\\n]+`)、",
         "\\1 は、"
+      ],
+      [
+        "([？?]\\s*)SafeKit (?=SQL Server)",
+        "\\1SafeKit は "
+      ],
+      [
+        "(）[:：]\\s*)SafeKit[、 ]\\s*(?![はがを])",
+        "\\1SafeKit は "
+      ],
+      [
+        "(\\S) は異なり、",
+        "\\1 とは異なり、"
+      ],
+      [
+        "(とは異なり、\\s*)SafeKit\\s*(?![はがを、])",
+        "\\1SafeKit は "
+      ],
+      [
+        "(の場合、\\s*)SafeKit (?![はがを])(?=[\\u30a0-\\u9fff])",
+        "\\1SafeKit は "
+      ],
+      [
+        "(^|。\\s*)SafeKit\\s+(?=高可用性ソフトウェア)",
+        "\\1SafeKit は "
+      ],
+      [
+        "サードマシン",
+        "第 3 のマシン"
+      ],
+      [
+        "サードパーティのクォーラムサーバー",
+        "第 3 のクォーラムサーバー"
+      ],
+      [
+        "(\\|\\s+)・\\s*",
+        "\\1• "
+      ],
+      [
+        "(^|\\s)・\\s+(?=\\S)",
+        "\\1• "
+      ],
+      [
+        "(^|•\\s*|<br>\\s*)スプリットブレイン\\s*(?=[0-9０-９第]|[^\\sはをがのに、。]*(?:なしで|不要))",
+        "\\1スプリットブレインは "
+      ],
+      [
+        "(^|。\\s*)SafeKit\\s+(?=[^\\s。、はがを]*製品です)",
+        "\\1SafeKit は "
+      ],
+      [
+        "フェイルバック(?=自動的)",
+        "フェイルバックは"
+      ],
+      [
+        "提供ます",
+        "提供します"
+      ],
+      [
+        "([A-Za-z0-9]+)\\[(が|は)\\]\\((<[^>]*>)\\)",
+        "[\\1](\\3)\\2"
+      ],
+      [
+        "ソフトウェア SafeKit (?=[^\\sはが、])",
+        "SafeKit ソフトウェアは、"
+      ],
+      [
+        "(?<![A-Za-z0-9])([A-Za-z][A-Za-z0-9]*)\\[([^\\]]+)\\]\\((<[^>]*>)\\)",
+        "[\\1 \\2](\\3)"
       ]
     ],
     "zh-hans": [
@@ -3439,6 +3852,26 @@
       [
         "的下(?=[，,。])",
         "的情况下"
+      ],
+      [
+        "(\\*\\*[^*\\n]+\\*\\*)\\s*([^（()\\n*\\s][^（()\\n*]{0,19}）)",
+        "\\1（\\2"
+      ],
+      [
+        "（\\s+",
+        "（"
+      ],
+      [
+        "本地化到",
+        "存储在"
+      ],
+      [
+        "(?<![A-Za-z])([A-Za-z]+) \\[\\1\\b",
+        "[\\1"
+      ],
+      [
+        "(?<![A-Za-z0-9])([A-Za-z][A-Za-z0-9]*)\\[([^\\]]+)\\]\\((<[^>]*>)\\)",
+        "[\\1 \\2](\\3)"
       ]
     ],
     "nl": [
@@ -3741,6 +4174,30 @@
       [
         "(`\\.safe`) (?=applicatiemodule|module)",
         "\\1-"
+      ],
+      [
+        "\\bExpress en Standard-edities",
+        "Express- en Standard-edities"
+      ],
+      [
+        "\\bSQL Server (?=(?:gegevens|toepassing|toepassingen|editie|services)\\b)",
+        "SQL Server-"
+      ],
+      [
+        "\\bHA- mirror-cluster",
+        "HA-mirror-cluster"
+      ],
+      [
+        "(^|[.!?]\\s+)load balancers (?=vereisen|hebben|zijn)",
+        "\\1Load balancers "
+      ],
+      [
+        "(^|[.!?]\\s+)hardwarematige\\b",
+        "\\1Hardwarematige"
+      ],
+      [
+        "op sch poziomie",
+        "op schijfniveau"
       ]
     ],
     "pt-br": [
@@ -3763,6 +4220,48 @@
       [
         "\\bpara linha (\\d)",
         "para a linha \\1"
+      ],
+      [
+        "\\b(?:a )?sua consola web",
+        "seu console web"
+      ],
+      [
+        "\\bconsola\\b",
+        "console"
+      ],
+      [
+        "(?<!\\w)em failover automátic[oa]",
+        "em um failover automático"
+      ],
+      [
+        "(^|\\. )Failover requer replicação síncrona",
+        "\\1O failover automático requer replicação síncrona"
+      ],
+      [
+        "ao nível da base de dados",
+        "em nível de banco de dados"
+      ],
+      [
+        "ao nível d[oe] disco",
+        "em nível de disco"
+      ],
+      [
+        "ao nível d[oe] ficheiro",
+        "em nível de arquivo"
+      ],
+      [
+        "\\bficheiro(s?)\\b",
+        "arquivo\\1"
+      ],
+      [
+        "\\bregisto(s?)\\b",
+        "registro\\1"
+      ]
+    ],
+    "pt-pt": [
+      [
+        "(?<!\\w)em failover automátic[oa]",
+        "num failover automático"
       ]
     ]
   },

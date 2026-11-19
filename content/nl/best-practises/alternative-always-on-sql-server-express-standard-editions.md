@@ -1,58 +1,59 @@
 ---
 title: "Alternatief voor SQL Server Always On: HA voor Express- en Standard-edities"
 canonical: "https://safekit.eviden.com/nl/best-practises/alternative-always-on-sql-server-express-standard-editions/"
-description: "Zoekt u een kosteneffectief alternatief voor SQL Server Always On? SafeKit biedt een SAN-loze architectuur die hoge beschikbaarheid biedt voor de SQL Server Express- en Standard-edities. Profiteer van synchrone replicatie, virtuele IP en automatische failover zonder SAN of Active Directory."
+description: "Op zoek naar een kosteneffectief alternatief voor SQL Server Always On? SafeKit biedt hoge beschikbaarheid voor SQL Server Express- en Standard-edities. Het heeft geen SAN en geen Active Directory nodig. Het biedt synchrone replicatie, een virtueel IP-adres en automatische failover."
 category: "best-practises"
 lang: "nl"
-topics: "Alternatief voor Always On SQL Server voor express- en standaardedities, Hoe werkt het SafeKit mirror cluster met Microsoft SQL Server ?, Videohandleiding: Een SafeKit HA mirror cluster configureren voor SQL Server , 🔍 Ontdek SafeKit"
+topics: "Alternatief voor Always On SQL Server voor Express- en Standard-edities, Hoe werkt het SafeKit mirror-cluster met Microsoft SQL Server?, Videogids: Een SafeKit HA-mirror-cluster configureren voor SQL Server, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 49 expressions"
 ---
 
-# Alternatief voor SQL Server Altijd Aan: HA voor Express- en Standard-edities {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
+# Alternatief voor SQL Server Always On: HA voor Express- en Standard-edities {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}
 
-## Alternatief voor Always On SQL Server voor express- en standaardedities {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
+## Alternatief voor Always On SQL Server voor Express- en Standard-edities {#alternative-to-always-on-sql-server-for-express-and-standard-editions}
 
 ### De oplossing voor Microsoft SQL Server {#the-solution-for-microsoft-sql-server}
 
-SafeKit zorgt voor hoge beschikbaarheid tussen Microsoft SQL Server twee redundante knooppunten met synchrone realtime replicatie van gegevens en automatische failover.
+SafeKit biedt hoge beschikbaarheid voor Microsoft SQL Server tussen twee redundante knooppunten. Het zorgt voor synchrone realtime gegevensreplicatie en automatische failover.
 
-De oplossing is onafhankelijk van de Microsoft SQL Server -editie en werkt met zowel de express- als de standaardeditie.
+De oplossing is niet afhankelijk van de Microsoft SQL Server-editie. Deze werkt met de Express- en Standard-edities.
 
 ### Een generiek product {#a-generic-product}
 
-SafeKit is een generiek product. U kunt er meer mee repliceren dan alleen SQL Server-gegevens en -logboeken. Als uw applicatie is gebaseerd op SQL Server met specifieke mappen die uw configuratie of andere bestanden bevatten, kunt u deze op dezelfde manier repliceren. Bovendien kunt u naast de SQL Server-services ook uw eigen services opnieuw starten.
+SafeKit is een generiek product. U kunt meer dan alleen SQL Server-gegevens en -logboeken repliceren. Uw SQL Server-toepassing kan specifieke mappen hebben voor de configuratie of andere bestanden. U kunt deze op dezelfde manier repliceren. U kunt ook uw eigen services opnieuw starten naast de SQL Server-services.
 
-Installatiehandleiding [ SafeKit met express- en standaardedities voor Microsoft SQL Server ](</nl/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
+[SafeKit-installatiegids voor Microsoft SQL Server Express- en Standard-edities](</nl/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/>)
 
-### Zonder Microsoft failover-cluster {#without-microsoft-failover-cluster}
+### Zonder een Microsoft failovercluster {#without-microsoft-failover-cluster}
 
-SafeKit werkt zonder het failovercluster Microsoft net als Always On SQL Server . Het is een alles-in-één oplossing met een virtueel IP-adres, synchrone realtime replicatie van mappen, automatische failover en failback, en meer. SafeKit maakt gedeelde schijven en database-enterprise-edities overbodig. 
+In tegenstelling tot Always On SQL Server heeft SafeKit geen Microsoft failovercluster nodig. SafeKit is een alles-in-één-oplossing. Het biedt een virtueel IP-adres, synchrone real-time replicatie van mappen en automatische failover en failback. SafeKit maakt gedeelde schijven en Enterprise-edities van de database overbodig.
 
-### Zonder domeincontroller en Active Directory {#without-domain-controller-and-active-directory}
+### Zonder domeincontroller of Active Directory {#without-domain-controller-and-active-directory}
 
-SafeKit werkt zonder configuratie van de domeincontroller en Active Directory, net als Always On SQL Server . Deze eenvoudig te implementeren, kosteneffectieve oplossing vereist geen specifieke vaardigheden.
+In tegenstelling tot Always On SQL Server heeft SafeKit geen domeincontroller of Active Directory nodig. Deze kosteneffectieve oplossing is eenvoudig te implementeren. Er zijn geen specifieke vaardigheden voor nodig.
 
-### Zonder 3 knooppunten voor quorum {#without-3-nodes-for-quorum}
+### Geen derde knooppunt voor quorum {#without-3-nodes-for-quorum}
 
-SafeKit werkt zonder dat er 3 knooppunten nodig zijn voor quorum, zoals bij Always On SQL Server . In geval van netwerkisolatie implementeert SafeKit een split-brain checker met een ping naar een router die als witness fungeert. Bovendien kunnen meerdere heartbeats eenvoudig in het product worden geconfigureerd.
+In tegenstelling tot Always On SQL Server, dat 3 knooppunten nodig heeft voor een quorum, heeft SafeKit slechts 2 knooppunten nodig. In geval van netwerkisolatie gebruikt SafeKit een split-brain-checker die een router pingt die als getuige fungeert. Meerdere heartbeats zijn ook eenvoudig te configureren.
 
 ### Andere oplossingen voor redundantie en hoge beschikbaarheid {#other-redundancy-and-high-availability-solutions}
 
-Met SafeKit kunt u op Windows en Linux realtime replicatie en failover implementeren van alle mappen en services, databases, complete Hyper-V- of KVM-virtuele machines, en Docker en Kubernetes cloudapplicaties.
+Met SafeKit kunt u real-time replicatie en failover implementeren op Windows en Linux. Dit geldt voor alle mappen en services, databases, complete Hyper-V of virtuele KVM-machines, Docker, Kubernetes en cloudtoepassingen.
 
 ### Een complete oplossing {#a-complete-solution}
 
-SafeKit lost op: 
+SafeKit lost drie soorten problemen op:
 
-  * hardwarestoringen (20% van de problemen), waaronder het volledig uitvallen van een computerruimte, 
-  * Softwarefouten (40% van de problemen), waaronder het herstarten van kritieke processen. 
-  * en menselijke fouten (40% van de problemen) dankzij het gebruiksgemak en de webconsole.
+  * **Hardwarestoringen** (20% van de problemen), zelfs het volledig uitvallen van een computerruimte.
+  * **Softwarestoringen** (40% van de problemen), met automatisch opnieuw opstarten van kritieke processen.
+  * **Menselijke fouten** (40% van de problemen), verminderd door het gebruiksgemak en de webconsole.
 
 
 
 {{%  insert-safekit-mirror-nl app="Microsoft SQL Server"  %}}
  
 
-## Videohandleiding: Een SafeKit HA mirror cluster configureren voor SQL Server {#videoguide-safekit-mirror-cluster}
+## Videogids: Een SafeKit HA-mirror-cluster configureren voor SQL Server {#videoguide-safekit-mirror-cluster}
 
 
 {{%  insert-safekit-mirror-video-nl  %}}

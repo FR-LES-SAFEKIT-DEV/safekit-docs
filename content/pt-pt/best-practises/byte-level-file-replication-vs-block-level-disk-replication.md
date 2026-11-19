@@ -1,64 +1,65 @@
 ---
-title: "Replicação de arquivos em nível de byte versus replicação de disco em nível de bloco para alta disponibilidade."
+title: "Replicação de Ficheiros ao Nível de Byte vs. Replicação de Disco ao Nível de Bloco para Alta Disponibilidade"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
-description: "Compare a replicação de arquivos em nível de byte com a replicação de disco em nível de bloco. Saiba por que SafeKit propõe uma arquitetura sem SAN que replica apenas os dados modificados dentro dos arquivos, garantindo zero perda de dados (RPO 0), recuperação mais rápida (RTO) e configuração simples no Windows e Linux ."
+description: "Compare a replicação de ficheiros ao nível de byte e a replicação de disco ao nível de bloco. SafeKit replica apenas os dados modificados dentro dos ficheiros, sem necessidade de SAN. Garante zero perda de dados (RPO 0), recuperação mais rápida (RTO) e configuração simples no Windows e Linux."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Replicação de arquivos em nível de byte versus replicação de disco em nível de bloco em um cluster de alta disponibilidade. Prós e contras da replicação de arquivos em nível de byte versus replicação de disco em nível de bloco. 🔍 Explore o SafeKit"
+topics: "Replicação de ficheiros ao nível de bytes versus replicação de disco ao nível de blocos num cluster de alta disponibilidade, Vantagens e desvantagens da replicação de ficheiros ao nível de bytes versus a replicação de discos ao nível de blocos, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 52 expressions"
 ---
 
-# Replicação de arquivos em nível de byte versus replicação de disco em nível de bloco para alta disponibilidade (HA) {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# Replicação de Ficheiros ao Nível de Byte vs. Replicação de Disco ao Nível de Bloco para Alta Disponibilidade {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
 
-## Replicação de arquivos em nível de byte versus replicação de disco em nível de bloco em um cluster de alta disponibilidade {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
+## Replicação de ficheiros ao nível de bytes versus replicação de disco ao nível de blocos num cluster de alta disponibilidade {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 
-### Visão geral {#overview}
+### Visão Geral {#overview}
 
-Este artigo explora as vantagens e desvantagens da replicação de arquivos em nível de byte versus a replicação de disco em nível de bloco em um cluster de alta disponibilidade. Analisamos o volume de dados replicados, o impacto na organização dos dados da aplicação, o tempo de recuperação e a simplicidade de implementação.
-
-
-![ Replicação de arquivos em nível de byte versus replicação de disco em nível de bloco ](/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png "w:200")
+Este artigo compara os prós e os contras da replicação de ficheiros ao nível de byte e da replicação de disco ao nível de bloco num cluster de alta disponibilidade. Analisa quatro critérios: o volume de dados replicados, o impacto na organização dos dados da aplicação, o tempo de recuperação e a simplicidade de implementação.
 
 
-As tabelas comparativas a seguir explicam detalhadamente a replicação de arquivos em nível de byte implementada pelo SafeKit , um produto de software de alta disponibilidade.
+![Replicação de ficheiros ao nível de bytes vs. replicação de discos ao nível de blocos](/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png "w:200")
 
-### O que é replicação de arquivos em nível de byte? {#what-is-byte-level-file-replication}
 
-A replicação de arquivos em nível de byte (como em [ SafeKit ](</>) ) significa que apenas as modificações dentro dos arquivos são replicadas. 
+A tabela comparativa abaixo explica em detalhe a replicação de ficheiros ao nível de byte implementada pelo SafeKit. SafeKit é um produto de software de alta disponibilidade.
 
-A replicação síncrona [ ](</pt-pt/best-practises/synchronous-replication-vs-asynchronous-replication/>) é necessária em um cluster de alta disponibilidade para garantir zero perda de dados em caso de falha. A replicação assíncrona é destinada a soluções de backup.
+### O que é a replicação de ficheiros ao nível de byte? {#what-is-byte-level-file-replication}
 
-O volume de dados replicados é reduzido às informações modificadas pelos aplicativos dentro de seus arquivos. Nenhum dado extra é replicado.
+Com a replicação de ficheiros ao nível de byte, apenas as modificações dentro dos ficheiros são replicadas. Esta tecnologia é utilizada pelo [software de alta disponibilidade SafeKit](</pt-pt/>).
 
-Não há impacto na organização dos dados de um aplicativo. Por exemplo, se um aplicativo tiver seus dados no disco do sistema, a replicação de arquivos em nível de byte funcionará normalmente.
+Para evitar qualquer perda de dados em caso de falha, um cluster de alta disponibilidade requer [replicação síncrona](</pt-pt/best-practises/synchronous-replication-vs-asynchronous-replication/>). A replicação assíncrona é adequada para soluções de cópia de segurança.
 
-O tempo de recuperação (RTO) em caso de falha é reduzido ao tempo de reinicialização do aplicativo nos arquivos replicados do servidor secundário.
+Apenas os dados modificados pelas aplicações dentro dos seus ficheiros são replicados. Nenhum dado adicional é replicado.
 
-Por fim, a solução é muito simples de configurar, pois apenas os caminhos dos diretórios a serem replicados precisam ser definidos.
+Não existe qualquer impacto na organização dos dados de uma aplicação. Por exemplo, a replicação de ficheiros ao nível de byte funciona mesmo que os dados da aplicação estejam no disco do sistema.
 
-### O que é replicação de disco em nível de bloco? {#what-is-block-level-disk-replication}
+Em caso de failover, o tempo de recuperação (RTO) é apenas o tempo necessário para reiniciar a aplicação no servidor secundário. A aplicação utiliza os ficheiros replicados.
 
-A replicação de disco em nível de bloco (como em [ DRBD ](<https://linbit.com/drbd/>) ) significa que apenas as modificações dentro de um disco são replicadas.
+Finalmente, a solução é muito simples de configurar. Basta configurar os caminhos dos diretórios a replicar.
 
-O volume de dados replicados não se limita às informações modificadas pelos aplicativos. Dados adicionais, como metadados para gerenciamento do disco (lista de blocos livres, informações internas do sistema de arquivos), também são replicados.
+### O que é a replicação de disco a nível de bloco? {#what-is-block-level-disk-replication}
 
-Há um forte impacto na organização dos dados da aplicação. Todos os dados devem ser localizados no disco replicado. No mínimo, isso exige uma reconfiguração da aplicação. Ou, torna-se impossível se alguns dados a serem replicados estiverem no disco do sistema, pois este disco deve permanecer específico para cada servidor.
+Com a replicação de disco ao nível de bloco, todas as modificações dentro de um disco são replicadas. Esta tecnologia é utilizada pelo [software de código aberto DRBD](<https://linbit.com/drbd/>).
 
-O tempo de recuperação (RTO) aumenta com o procedimento de recuperação do sistema de arquivos no disco replicado após uma falha.
+Os dados replicados não se limitam às informações modificadas pelas aplicações. São também replicados dados adicionais, como os metadados que gerem o disco. Exemplos disso são a lista de blocos livres e as informações internas do sistema de ficheiros.
 
-Por fim, a solução não é fácil de configurar, pois exige habilidades específicas para configurar um disco especial com um sistema de arquivos. Além disso, são necessários conhecimentos de aplicação para configurar os dados da aplicação no disco replicado.
+Existe um forte impacto na organização dos dados da aplicação. Todos os dados devem ser armazenados no disco replicado. Isto requer, no mínimo, uma reconfiguração da aplicação. É mesmo impossível se alguns dados a replicar estiverem no disco do sistema, porque cada servidor deve manter o seu próprio disco do sistema.
 
-## Prós e contras da replicação de arquivos em nível de byte versus replicação de disco em nível de bloco {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
+Após um failover, o sistema de ficheiros no disco replicado deve ser recuperado. Este procedimento de recuperação aumenta o tempo de recuperação (RTO).
 
-Critérios | **Cluster com replicação de arquivos em nível de byte** | **Cluster com replicação de disco em nível de bloco**  
+Por fim, a solução não é fácil de configurar. A configuração de um disco especial com um sistema de ficheiros requer competências específicas. A migração dos dados da aplicação para o disco replicado também requer um bom conhecimento da aplicação.
+
+## Vantagens e desvantagens da replicação de ficheiros ao nível de bytes versus a replicação de discos ao nível de blocos {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
+
+Critérios | **Cluster com replicação de ficheiros ao nível de byte** | **Cluster com replicação de disco a nível de bloco**  
 ---|---|---  
-Produto | • [ SafeKit em Windows e Linux ](/) | • Produtos de replicação de discos como [ DRBD ](https://linbit.com/drbd/)   
-Organização de dados do aplicativo | • 0 impacto na organização de dados do aplicativo com SafeKit . <br> • [ Basta definir os diretórios a serem replicados em tempo real ](/pt-pt/architectures/file-replication-byte-level-with-failover-mirror-cluster/) . <br> • Até mesmo diretórios dentro do disco do sistema podem ser replicados. | • Impacto na organização de dados do aplicativo. <br> • Configuração especial do aplicativo para colocar seus dados em um disco replicado. <br> • Os dados no disco do sistema não podem ser replicados.   
-Replicação de dados | • Replicação síncrona de arquivos em nível de byte. <br> • Replica operações de modificação de arquivos geradas pela atividade do aplicativo. <br> • Nenhum metadado é replicado. Somente os dados modificados nos arquivos são replicados, não os arquivos inteiros (replicação de arquivos em nível de byte). <br> • Replicação [ para evitar perda de dados em <br> ](/pt-pt/best-practises/synchronous-replication-vs-asynchronous-replication/) | <br> , o horário do último acesso a um arquivo é replicado (o horário do último acesso é modificado cada vez que o arquivo é lido).   
-Complexidade de implantação | • Não - instalar um software em 2 servidores | • Sim - requer habilidades específicas de TI para configurar o sistema operacional e o disco replicado   
-Failover | • Basta reiniciar o aplicativo no segundo servidor. | • Remonte o sistema de arquivos no disco replicado. <br> • Execute o procedimento de recuperação no sistema de arquivos. <br> • E então reinicie o aplicativo.   
-Failback | • Retorno automático em caso de falha. <br> • Ressincronização de dados no servidor secundário sem interromper o aplicativo no servidor primário. <br> • Sem failover do aplicativo enquanto os dados não forem ressincronizados. | • Nem todos os produtos possuem o mesmo nível de recursos.   
-Quorum e split brain | • Aplicativo executado em um único servidor após um isolamento de rede (split brain). <br> • Coerência dos dados após um split brain. <br> • Não há necessidade de uma terceira máquina, um disco de quorum ou uma linha de heartbeat especial para split brain. <br> • [ Mais informações sobre heartbeat, failover e quorum ](/pt-pt/best-practises/heartbeat-failover-quorum-windows-linux-cluster/) | • Requerem um disco de quorum especial ou um terceiro servidor de quorum para gerenciar split brain.   
-Indicado para: | • [ Editores de software que desejam adicionar uma opção simples de alta disponibilidade ao seu aplicativo; ](/pt-pt/use-cases/application-clustering-software/) | • Empresas com habilidades de TI em clustering.   
+Produto |  • [SafeKit no Windows e Linux](/pt-pt/)  |  • Produtos de replicação de disco, como [o DRBD](https://linbit.com/drbd/)   
+Organização dos dados da aplicação |  • O SafeKit não tem qualquer impacto na organização dos dados da aplicação. <br> • [Apenas defina os diretórios a replicar em tempo real](/pt-pt/architectures/file-replication-byte-level-with-failover-mirror-cluster/). <br> • Até mesmo os diretórios dentro do disco do sistema podem ser replicados.  |  • Impacto na organização dos dados da aplicação. <br> • A aplicação necessita de uma configuração especial para colocar os seus dados no disco replicado. <br> • Os dados no disco do sistema não podem ser replicados.   
+Replicação de dados |  • Replicação de ficheiros síncrona ao nível de byte. <br> • As operações de modificação de ficheiros geradas pela aplicação são replicadas. <br> • Os metadados não são replicados. Apenas os dados modificados dentro dos ficheiros são replicados, não os ficheiros inteiros. <br> • [Replicação síncrona para evitar perda de dados em caso de falha](/pt-pt/best-practises/synchronous-replication-vs-asynchronous-replication/).  |  • Todos os dados modificados no disco replicado são replicados. <br> • Tanto os dados da aplicação como os metadados são replicados. <br> • Por exemplo, a última hora de acesso de um ficheiro é replicada. Esta hora muda sempre que o ficheiro é lido.   
+Complexidade da implementação |  • Simples: instale o software em 2 servidores.  |  • Complexo: são necessárias competências informáticas específicas para configurar o sistema operativo e o disco replicado.   
+Failover |  • A aplicação é simplesmente reiniciada no servidor secundário.  |  • O sistema de ficheiros é remontado no disco replicado. <br> • Um procedimento de recuperação verifica e repara o sistema de ficheiros. <br> • Em seguida, a aplicação é reiniciada.   
+Failback |  • Failback automático. <br> • Ressincronização de dados no servidor secundário sem interrupção da aplicação no servidor principal. <br> • Failover não é possível até que os dados sejam ressincronizados.  |  • As características variam de um produto para outro.   
+Quórum e split brain |  • Após um isolamento de rede (split brain), a aplicação é executada num único servidor. <br> • Os dados permanecem consistentes após um split brain. <br> • O split brain é gerido sem uma terceira máquina, um disco de quórum ou uma linha heartbeat especial. <br> • [Mais informações sobre heartbeat, failover e o quorum](/pt-pt/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)  |  • É necessário um disco de quórum especial ou um terceiro servidor de quórum para gerir o split brain.   
+Adequado para |  • [Fornecedores de software que desejam adicionar uma opção simples de alta disponibilidade às suas aplicações](/pt-pt/use-cases/application-clustering-software/)  |  • Empresas com especialistas em clustering nas suas equipas de TI.   
   
 
 {{%  insert-safekit-hub-pt-pt  %}}

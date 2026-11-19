@@ -1,58 +1,62 @@
 ---
-title: "Técnicas de replicação de dados para alta disponibilidade: uma comparação completa"
+title: "Técnicas de Replicação de Dados para Alta Disponibilidade: Uma Comparação Completa"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/data-replication-techniques/"
-description: "Compare técnicas de replicação de dados em nível de banco de dados, disco e arquivo. Saiba por que o SafeKit propõe uma arquitetura sem SAN para replicação síncrona simples e em tempo real, que evita perda de dados e oferece failover automático no Windows e Linux."
+description: "Compare as técnicas de replicação de dados em nível de banco de dados, disco e arquivo. O software SafeKit oferece replicação síncrona simples e em tempo real, sem armazenamento compartilhado. Ele garante zero perda de dados e failover automático no Windows e Linux."
 category: "best-practises"
 lang: "pt-br"
-topics: "Técnicas de replicação de dados em nível de banco de dados, disco ou arquivo, Tabelas comparativas de técnicas de replicação de dados, Central de navegação de alta disponibilidade SafeKit"
+topics: "Técnicas de replicação de dados em nível de banco de dados, nível de disco ou nível de arquivo?, Tabelas comparativas entre técnicas de replicação de dados, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 52 expressions"
 ---
 
-# Técnicas de replicação de dados para alta disponibilidade: uma comparação completa {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Técnicas de Replicação de Dados para Alta Disponibilidade: Uma Comparação Completa {#data-replication-techniques-for-high-availability-a-complete-comparison}
 
-## Técnicas de replicação de dados em nível de banco de dados, disco ou arquivo? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
+## Técnicas de replicação de dados em nível de banco de dados, nível de disco ou nível de arquivo? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 
 ### Visão geral {#overview}
 
-Este artigo analisa as vantagens e desvantagens das técnicas de replicação de dados em nível de banco de dados, disco e arquivo para clusters de alta disponibilidade. Consideramos failover, failback e simplicidade de implementação.
+Este artigo compara os prós e os contras das técnicas de replicação de dados em nível de banco de dados, nível de disco e nível de arquivo em clusters de alta disponibilidade. Ele analisa três critérios: failover, failback e simplicidade de implementação.
+
 
 ![Técnicas de replicação de dados](/wp-content/uploads/2023/03/data-replication-techniques.png "w:128")
 
-As tabelas comparativas a seguir detalham as técnicas de replicação de dados implementadas pelo SafeKit, um software de alta disponibilidade.
 
-### O que é a técnica de replicação de dados em nível de banco de dados? {#what-is-the-data-replication-technique-at-database-level}
+As tabelas comparativas abaixo explicam em detalhes as técnicas de replicação de dados implementadas pelo SafeKit, um produto de software de alta disponibilidade.
 
-É a replicação dos arquivos de log entre dois servidores feita pelo sistema de gerenciamento de banco de dados, como o [log de transações do SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
+### Qual é a técnica de replicação de dados em nível de banco de dados? {#what-is-the-data-replication-technique-at-database-level}
 
-Para o failover automático, a replicação síncrona é obrigatória; caso contrário, as últimas transações confirmadas não serão recuperadas no servidor secundário após o failover.
+O sistema de gerenciamento de banco de dados replica seus arquivos de log entre dois servidores. Um exemplo é o [log de transações SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
 
-Essa técnica replica um banco de dados, mas não os outros dados do aplicativo. O failover de muitas aplicações também exige a replicação de outros dados, como arquivos de configuração.
+O failover automático requer replicação síncrona. Caso contrário, os dados das últimas transações confirmadas são perdidos no servidor secundário após um failover.
 
-Quando um servidor falha e perde arquivos do banco de dados, o failback não é automático. Um DBA experiente precisa restaurar o banco no servidor com falha.
+Essa técnica replica um banco de dados, mas não os outros dados de um aplicativo. No entanto, o failover de muitos aplicativos também requer que outros dados sejam replicados, como arquivos de configuração.
 
-### O que é a técnica de replicação de dados em nível de disco? {#what-is-the-data-replication-technique-at-disk-level}
+Quando um servidor falha e perde alguns arquivos de banco de dados, o failback não é automático. Um DBA experiente deve restaurar o banco de dados no servidor com falha.
 
-É a replicação das alterações nos discos entre dois servidores, como no [DRBD](<https://linbit.com/drbd/>).
+### Qual é a técnica de replicação de dados em nível de disco? {#what-is-the-data-replication-technique-at-disk-level}
 
-Para o failover automático sem perda de dados, é necessária a replicação síncrona entre os discos.
+As modificações dentro de um disco são replicadas entre dois servidores. Um exemplo é o [software de código aberto DRBD](<https://linbit.com/drbd/>).
 
-Essa técnica pode replicar bancos de dados e outros arquivos, mas afeta bastante a organização dos dados da aplicação. Todos os dados precisam estar no disco replicado. Isso pode ser impossível se alguns dados estiverem no disco do sistema, que deve ser específico de cada servidor.
+Para evitar qualquer perda de dados em um failover automático, a replicação entre os discos deve ser síncrona.
 
-São necessários conhecimentos especializados para configurar um disco replicado com sistema de arquivos e posicionar nele os dados da aplicação.
+Essa técnica pode replicar bancos de dados, bem como outros arquivos. Mas ela tem um forte impacto na organização dos dados do aplicativo. Todos os dados devem ser armazenados no disco replicado. Isso pode ser impossível se alguns dados a serem replicados estiverem no disco do sistema, porque cada servidor deve manter seu próprio disco do sistema.
 
-### O que é a técnica de replicação de dados em nível de arquivo? {#what-is-the-data-replication-technique-at-file-level}
+São necessárias competências específicas para configurar um disco replicado com um sistema de arquivos. Também são necessárias competências para mover os dados da aplicação para o disco replicado.
 
-É a replicação das alterações nos arquivos entre dois servidores, como no [SafeKit](/pt-br/).
+### Qual é a técnica de replicação de dados em nível de arquivo? {#what-is-the-data-replication-technique-at-file-level}
 
-Para o failover automático sem perda de dados, é necessária a [replicação síncrona em tempo real](/pt-br/best-practises/synchronous-replication-vs-asynchronous-replication/).
+As modificações nos arquivos são replicadas entre dois servidores. Um exemplo é o [software de alta disponibilidade SafeKit](</pt-br/>).
 
-Essa técnica replica bancos de dados e outros arquivos sem afetar a organização dos dados da aplicação. Por exemplo, a replicação de arquivos em tempo real funciona mesmo que a aplicação armazene dados no disco do sistema.
+Para evitar qualquer perda de dados em um failover automático, é necessária [a replicação síncrona em tempo real](</pt-br/best-practises/synchronous-replication-vs-asynchronous-replication/>).
 
-A solução é simples de configurar: basta especificar os caminhos dos diretórios que serão replicados.
+Essa técnica pode replicar bancos de dados, bem como outros arquivos. Ela não tem impacto na organização dos dados de um aplicativo. Por exemplo, a replicação de arquivos em tempo real funciona mesmo se os dados do aplicativo estiverem no disco do sistema.
 
-## Tabelas comparativas de técnicas de replicação de dados {#comparative-tables-between-data-replication-techniques}
+A solução é muito simples de configurar. Você só precisa configurar os caminhos dos diretórios a serem replicados.
 
-{{% insert-safekit-mirror-comparison-table-pt-br %}}
+## Tabelas comparativas entre técnicas de replicação de dados {#comparative-tables-between-data-replication-techniques}
 
-{{% insert-safekit-hub-pt-br %}}
 
-{{% insert-safekit-4-buttons-pt-br %}}
+{{%  insert-safekit-mirror-comparison-table-pt-br  %}}
+
+{{%  insert-safekit-hub-pt-br  %}}
+
+{{%  insert-safekit-4-buttons-pt-br  %}}

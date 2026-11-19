@@ -1,58 +1,62 @@
 ---
-title: "Técnicas de replicación de datos para alta disponibilidad: comparación completa"
+title: "Técnicas de replicación de datos para alta disponibilidad: una comparación completa"
 canonical: "https://safekit.eviden.com/es/best-practises/data-replication-techniques/"
-description: "Compare las técnicas de replicación de datos a nivel de base de datos, disco y archivo. Descubra por qué SafeKit propone una arquitectura sin SAN para una replicación síncrona sencilla y en tiempo real, que evita la pérdida de datos y permite la conmutación automática por error en Windows y Linux."
+description: "Compare las técnicas de replicación de datos a nivel de base de datos, disco y archivo. El software SafeKit proporciona una replicación síncrona simple y en tiempo real sin almacenamiento compartido. Garantiza cero pérdida de datos y conmutación por error automática en Windows y Linux."
 category: "best-practises"
 lang: "es"
-topics: "Técnicas de replicación de datos a nivel de base de datos, disco o archivo, Tablas comparativas de técnicas de replicación de datos, Centro de navegación de alta disponibilidad SafeKit"
+topics: "Técnicas de replicación de datos a nivel de base de datos, ¿A nivel de disco o a nivel de archivo?, Tablas comparativas entre técnicas de replicación de datos, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 51 expressions"
 ---
 
-# Técnicas de replicación de datos para alta disponibilidad: comparación completa {#data-replication-techniques-for-high-availability-a-complete-comparison}
+# Técnicas de replicación de datos para alta disponibilidad: una comparación completa {#data-replication-techniques-for-high-availability-a-complete-comparison}
 
-## ¿Técnicas de replicación de datos a nivel de base de datos, disco o archivo? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
+## ¿Técnicas de replicación de datos a nivel de base de datos, a nivel de disco o a nivel de archivo? {#data-replication-techniques-at-database-level-disk-level-or-file-level}
 
 ### Descripción general {#overview}
 
-Este artículo analiza las ventajas y desventajas de las técnicas de replicación de datos a nivel de base de datos, disco y archivo para clústeres de alta disponibilidad. Se consideran la conmutación por error, el retorno tras el fallo y la sencillez de implementación.
+Este artículo compara las ventajas y desventajas de las técnicas de replicación de datos a nivel de base de datos, a nivel de disco y a nivel de archivo en clústeres de alta disponibilidad. Se centra en tres criterios: conmutación por error, failback y simplicidad de implementación.
+
 
 ![Técnicas de replicación de datos](/wp-content/uploads/2023/03/data-replication-techniques.png "w:128")
 
-Las siguientes tablas comparativas explican en detalle las técnicas de replicación de datos implementadas por SafeKit, un producto de software de alta disponibilidad.
 
-### ¿En qué consiste la replicación de datos a nivel de base de datos? {#what-is-the-data-replication-technique-at-database-level}
+Las tablas comparativas que se muestran a continuación explican en detalle las técnicas de replicación de datos implementadas por SafeKit, un producto de software de alta disponibilidad.
 
-El sistema de gestión de bases de datos replica los archivos de registro entre dos servidores, como el [registro de transacciones de SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
+### ¿Cuál es la técnica de replicación de datos a nivel de base de datos? {#what-is-the-data-replication-technique-at-database-level}
 
-Para que la conmutación por error sea automática, la replicación síncrona es obligatoria; de lo contrario, las últimas transacciones confirmadas no estarán disponibles en el servidor secundario tras la conmutación.
+El sistema de gestión de bases de datos replica sus archivos de registro entre dos servidores. Un ejemplo de ello es el [registro de transacciones SQL Server](<https://learn.microsoft.com/en-us/sql/relational-databases/logs/the-transaction-log-sql-server>).
 
-Esta técnica replica la base de datos, pero no los demás datos de la aplicación. Para conmutar muchas aplicaciones también es necesario replicar otros datos, como los archivos de configuración.
+La conmutación por error automática requiere una replicación sincrónica. De lo contrario, los datos de las últimas transacciones confirmadas se pierden en el servidor secundario después de una conmutación por error.
 
-Si un servidor falla y pierde archivos de la base de datos, el retorno no es automático. Un administrador de bases de datos cualificado debe restaurar la base en el servidor averiado.
+Esta técnica replica una base de datos, pero no los demás datos de una aplicación. Sin embargo, la conmutación por error de muchas aplicaciones también requiere que se repliquen otros datos, como los archivos de configuración.
 
-### ¿En qué consiste la replicación de datos a nivel de disco? {#what-is-the-data-replication-technique-at-disk-level}
+Cuando un servidor falla y pierde algunos archivos de la base de datos, el failback no es automático. Un DBA experto debe restaurar la base de datos en el servidor fallido.
 
-Consiste en replicar las modificaciones de los discos entre dos servidores, por ejemplo con [DRBD](<https://linbit.com/drbd/>).
+### ¿Cuál es la técnica de replicación de datos a nivel de disco? {#what-is-the-data-replication-technique-at-disk-level}
 
-Para conseguir una conmutación automática sin pérdida de datos, es necesaria la replicación síncrona entre los discos.
+Las modificaciones dentro de un disco se replican entre dos servidores. Un ejemplo es el [software de código abierto DRBD](<https://linbit.com/drbd/>).
 
-Esta técnica puede replicar bases de datos y otros archivos, pero afecta considerablemente a la organización de los datos de la aplicación: todos deben estar ubicados en el disco replicado. Esto puede ser imposible si algunos datos que se deben replicar están en el disco del sistema, que debe ser distinto en cada servidor.
+Para evitar cualquier pérdida de datos en la conmutación por error automática, la replicación entre los discos debe ser síncrona.
 
-Se requieren conocimientos especializados para configurar el disco replicado con un sistema de archivos y ubicar allí los datos de la aplicación.
+Esta técnica puede replicar bases de datos, así como otros archivos. Pero tiene un fuerte impacto en la organización de los datos de la aplicación. Todos los datos deben almacenarse en el disco replicado. Esto puede ser imposible si algunos datos a replicar están en el disco del sistema, porque cada servidor debe mantener su propio disco del sistema.
 
-### ¿En qué consiste la replicación de datos a nivel de archivo? {#what-is-the-data-replication-technique-at-file-level}
+Se requieren habilidades específicas para configurar un disco replicado con un sistema de archivos. También se requieren habilidades para mover los datos de la aplicación al disco replicado.
 
-Consiste en replicar las modificaciones de los archivos entre dos servidores, por ejemplo con [SafeKit](/es/).
+### ¿Cuál es la técnica de replicación de datos a nivel de archivo? {#what-is-the-data-replication-technique-at-file-level}
 
-Para una conmutación automática sin pérdida de datos se requiere [replicación síncrona en tiempo real](/es/best-practises/synchronous-replication-vs-asynchronous-replication/).
+Las modificaciones dentro de los archivos se replican entre dos servidores. Un ejemplo es el [software de alta disponibilidad SafeKit](</es/>).
 
-Esta técnica replica bases de datos y otros archivos sin afectar a la organización de los datos. Por ejemplo, la replicación de archivos en tiempo real funciona aunque una aplicación almacene sus datos en el disco del sistema.
+Para evitar cualquier pérdida de datos en la conmutación por error automática, se requiere [una replicación síncrona en tiempo real](</es/best-practises/synchronous-replication-vs-asynchronous-replication/>).
 
-La configuración es muy sencilla: solo hay que indicar las rutas de los directorios que se van a replicar.
+Esta técnica puede replicar bases de datos, así como otros archivos. No tiene ningún impacto en la organización de datos de una aplicación. Por ejemplo, la replicación de archivos en tiempo real funciona incluso si los datos de la aplicación están en el disco del sistema.
 
-## Tablas comparativas de técnicas de replicación de datos {#comparative-tables-between-data-replication-techniques}
+La solución es muy sencilla de configurar. Solo hay que configurar las rutas de los directorios que se van a replicar.
 
-{{% insert-safekit-mirror-comparison-table-es %}}
+## Tablas comparativas entre técnicas de replicación de datos {#comparative-tables-between-data-replication-techniques}
 
-{{% insert-safekit-hub-es %}}
 
-{{% insert-safekit-4-buttons-es %}}
+{{%  insert-safekit-mirror-comparison-table-es  %}}
+
+{{%  insert-safekit-hub-es  %}}
+
+{{%  insert-safekit-4-buttons-es  %}}

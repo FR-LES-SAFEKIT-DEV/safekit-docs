@@ -1,7 +1,7 @@
 ---
 title: "Byte-Level File Replication vs. Block-Level Disk Replication for HA"
 canonical: "https://safekit.eviden.com/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
-description: "Compare byte-level file replication vs. block-level disk replication. Learn why SafeKit proposes a SANless architecture that replicates only modified data within files, ensuring zero data loss (RPO 0), faster recovery (RTO), and simple configuration on Windows and Linux."
+description: "Compare byte-level file replication and block-level disk replication. SafeKit replicates only the data modified inside files, with no SAN. It ensures zero data loss (RPO 0), faster recovery (RTO) and simple configuration on Windows and Linux."
 category: "best-practises"
 lang: "en"
 topics: "Byte-level file replication vs block-level disk replication in a high availability cluster, Pros and cons of byte-level file replication vs block-level disk replication, 🔍 Explore SafeKit"
@@ -13,52 +13,52 @@ topics: "Byte-level file replication vs block-level disk replication in a high a
 
 ### Overview {#overview}
 
-This article explores the pros and cons of byte-level file replication vs block-level disk replication in a high availability cluster. We are looking at volume of replicated data, impact on application data organization, recovery time, simplicity of implementation.
+This article compares the pros and cons of byte-level file replication and block-level disk replication in a high availability cluster. It looks at four criteria: the volume of replicated data, the impact on application data organization, the recovery time and the simplicity of implementation.
 
 
 ![Byte-level file replication vs block-level disk replication](/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png "w:200")
 
 
-The following comparative tables explain in detail the byte-level file replication implemented by SafeKit, a high availability software product.
+The comparison table below explains in detail the byte-level file replication implemented by SafeKit. SafeKit is a high availability software product.
 
 ### What is byte-level file replication? {#what-is-byte-level-file-replication}
 
-Byte-level file replication (like with [SafeKit](</>)) means that only modifications inside files are replicated. 
+With byte-level file replication, only the modifications inside files are replicated. This technology is used by the [SafeKit high availability software](</>).
 
-[Synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) is required in a high vailability cluster for having 0 data loss in case of failure. Asynchronous replication is for backup solutions.
+To avoid any data loss in case of failure, a high availability cluster requires [synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>). Asynchronous replication is suited for backup solutions.
 
-The volume of replicated data is reduced to information modified by applications inside their files. No extra data is replicated.
+Only the data modified by applications inside their files is replicated. No extra data is replicated.
 
-There is no impact on data organization for an application. For instance, if an application has its data in the system disk, byte-level file replication is working.
+There is no impact on the data organization of an application. For example, byte-level file replication works even if the application data is on the system disk.
 
-Recovery time (RTO) in the event of a failover is reduced to the application restart time on the secondary server's replicated files.
+In the event of a failover, the recovery time (RTO) is only the time needed to restart the application on the secondary server. The application uses the replicated files.
 
-Finally, the solution is very simple to configure as only the paths of directories to replicate are configured.
+Finally, the solution is very simple to configure. You only configure the paths of the directories to replicate.
 
 ### What is block-level disk replication? {#what-is-block-level-disk-replication}
 
-Block-level disk replication (like with [DRBD](<https://linbit.com/drbd/>)) means that only modifications inside a disk are replicated.
+With block-level disk replication, all the modifications inside a disk are replicated. This technology is used by the [DRBD open source software](<https://linbit.com/drbd/>).
 
-The volume of replicated data is not reduced to information modified by applications. Extra data are replicated like the meta data for managing the disk (list of free blocks, file system internal information).
+The replicated data is not limited to the information modified by applications. Extra data is also replicated, such as the metadata that manages the disk. Examples are the list of free blocks and the internal information of the file system.
 
-There is a strong impact on the organization of application data. All data must be localized in the replicated disk. At least, it requires an application reconfiguration. Or, it is impossible if some data to replicate are in the system disk, because this disk must remain specific to each server.
+There is a strong impact on the organization of application data. All data must be stored on the replicated disk. This requires at least a reconfiguration of the application. It is even impossible if some data to replicate is on the system disk, because each server must keep its own system disk.
 
-The recovery time (RTO) increases with the file system recovery procedure on the replicated disk after a failover.
+After a failover, the file system on the replicated disk must be recovered. This recovery procedure increases the recovery time (RTO).
 
-Finally, the solution is not easy to configure because skills are required to configure a special disk with a file system. Additionally, application skills are required to configure application data in the replicated disk.
+Finally, the solution is not easy to configure. Configuring a special disk with a file system requires specific skills. Moving the application data to the replicated disk also requires good knowledge of the application.
 
 ## Pros and cons of byte-level file replication vs block-level disk replication {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
 Criteria | **Cluster with byte-level file replication** | **Cluster with block-level disk replication**  
 ---|---|---  
-Product |  • [SafeKit on Windows and Linux](/)  |  • Disks replication products as [DRBD](https://linbit.com/drbd/)   
-Application data organization |  • 0 impact on application data organization with SafeKit.<br>• [Just define directories to replicate in real-time](/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Even directories inside the system disk can be replicated.  |  • Impact on application data organization.<br>• Special configuration of the application to put its data in a replicated disk.<br>• Data in the system disk cannot be replicated.   
-Data replication |  • Synchronous byte-level file replication.<br>• Replicates file modification operations generated by application activity.<br>• No meta data are replicated. Only data modified in files are replicated, not entire files (byte-level file replication).<br>• [Synchronous replication to avoid data loss on failure](/best-practises/synchronous-replication-vs-asynchronous-replication/).  |  • Replicate all data modified inside a replicated disk.<br>• Application data plus meta data are replicated.<br>• For instance, last access time on a file is replicated (last access time is modified each time the file is read).   
-Complexity of deployment |  • No - install a software on 2 servers  |  • Yes - require specific IT skills to configure OS and replicated disk   
-Failover |  • Just restart the application on the second server.  |  • Remount the file system on the replicated disk.<br>• Pass the recovery procedure on the file system.<br>• And then restart the application.   
-Failback |  • Automatic failback.<br>• Resynchronization of data on the secondary server without stopping the application on the primary server.<br>• No application failover while data are not resynchronized.  |  • All products are not at the same level of features.   
-Quorum and split brain |  • Application executed on a single server after a network isolation (split brain).<br>• Coherency of data after a split brain.<br>• No need for a third machine or a quorum disk or a special heartbeat line for split brain.<br>• [More information on heartbeat, failover and quorum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)  |  • Require a special quorum disk or a third quorum server to manage split brain.   
-Suited for |  • [Software editors which want to add a simple high availability option to their application](/use-cases/application-clustering-software/)  |  • Enterprise with IT skills in clustering.   
+Product |  • [SafeKit on Windows and Linux](/)  |  • Disk replication products such as [DRBD](https://linbit.com/drbd/)   
+Application data organization |  • No impact on application data organization with SafeKit.<br>• [You only define the directories to replicate in real time](/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• Even directories inside the system disk can be replicated.  |  • Impact on application data organization.<br>• The application needs a special configuration to put its data on the replicated disk.<br>• Data on the system disk cannot be replicated.   
+Data replication |  • Synchronous byte-level file replication.<br>• The file modification operations generated by the application are replicated.<br>• Metadata is not replicated. Only the data modified inside files is replicated, not entire files.<br>• [Synchronous replication to avoid data loss on failure](/best-practises/synchronous-replication-vs-asynchronous-replication/).  |  • All data modified on the replicated disk is replicated.<br>• Both application data and metadata are replicated.<br>• For example, the last access time of a file is replicated. This time changes each time the file is read.   
+Complexity of deployment |  • Simple: install the software on 2 servers.  |  • Complex: specific IT skills are required to configure the OS and the replicated disk.   
+Failover |  • The application is simply restarted on the secondary server.  |  • The file system is remounted on the replicated disk.<br>• A recovery procedure checks and repairs the file system.<br>• Then the application is restarted.   
+Failback |  • Automatic failback.<br>• Resynchronization of data on the secondary server without stopping the application on the primary server.<br>• Failover is not possible until the data is resynchronized.  |  • Features vary from one product to another.   
+Quorum and split brain |  • After a network isolation (split brain), the application runs on a single server.<br>• Data stays consistent after a split brain.<br>• Split brain is managed without a third machine, a quorum disk or a special heartbeat line.<br>• [More information on heartbeat, failover and quorum](/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)  |  • A special quorum disk or a third quorum server is required to manage split brain.   
+Suited for |  • [Software vendors who want to add a simple high availability option to their application](/use-cases/application-clustering-software/)  |  • Companies with clustering experts in their IT teams.   
   
 
 {{%  insert-safekit-hub-en  %}}

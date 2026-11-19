@@ -1,64 +1,65 @@
 ---
-title: "字节级文件复制与块级磁盘复制在高可用性方面的比较"
+title: "用于高可用性的字节级文件复制与块级磁盘复制"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
-description: "比较字节级文件复制与块级磁盘复制。了解SafeKit如何提出一种无 SAN 架构，该架构仅复制文件中已修改的数据，从而确保零数据丢失 (RPO 0)、更快的恢复速度 (RTO) 以及在Windows和Linux上的简单配置。"
+description: "比较字节级文件复制和块级磁盘复制。SafeKit 只复制文件内修改过的数据，无需 SAN。确保零数据丢失（RPO 0），更快的恢复（RTO）以及在 Windows 和 Linux 上的简单配置。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "高可用性集群中字节级文件复制与块级磁盘复制的比较，字节级文件复制与块级磁盘复制的优缺点，🔍 探索 SafeKit"
+topics: "高可用性集群中的字节级文件复制与块级磁盘复制、字节级文件复制与块级磁盘复制的优缺点、🔍 探索 SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 54 expressions"
 ---
 
-# 字节级文件复制与块级磁盘复制在高可用性方面的比较 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
+# 用于高可用性的字节级文件复制与块级磁盘复制 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}
 
-## 高可用性集群中字节级文件复制与块级磁盘复制的比较 {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
+## 高可用性集群中的字节级文件复制与块级磁盘复制 {#byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster}
 
 ### 概述 {#overview}
 
-本文探讨了高可用性集群中字节级文件复制与块级磁盘复制的优缺点。我们将考察复制数据量、对应用程序数据组织的影响、恢复时间以及实现的简易性。
+本文比较了高可用性集群中字节级文件复制和块级磁盘复制的优缺点。它考察了四个标准：复制数据的数量、对应用程序数据组织的影响、恢复时间和实施的简易性。
 
 
 ![字节级文件复制与块级磁盘复制](/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png "w:200")
 
 
-以下对比表详细解释了高可用性软件产品SafeKit实现的字节级文件复制。
+下表解释了 SafeKit 实现的字节级文件复制。SafeKit 是一款高可用性软件产品。
 
 ### 什么是字节级文件复制？ {#what-is-byte-level-file-replication}
 
-字节级文件复制（例如[ SafeKit ](</>) ）意味着只有文件内部的修改才会被复制。 
+通过字节级文件复制，仅复制文件内部的修改。[高可用性软件 SafeKit](</zh-hans/>)采用此技术。
 
-在可用性高的集群中，为了在发生故障时实现零数据丢失，需要使用同步复制[ ](</zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/>) 。异步复制则用于备份解决方案。
+为避免在发生故障时丢失任何数据，高可用性集群需要[同步复制](</zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/>)。异步复制适用于备份解决方案。
 
-复制的数据量减少到仅包含应用程序在其文件中修改的信息。不会复制任何额外数据。
+只有应用程序在其文件内修改的数据才会被复制。不会复制任何额外的数据。
 
-对应用程序的数据组织方式没有影响。例如，如果应用程序的数据位于系统磁盘上，则字节级文件复制仍然有效。
+这不会影响应用程序的数据组织。例如，即使应用程序数据位于系统磁盘上，字节级文件复制也能正常工作。
 
-发生故障转移时，恢复时间 (RTO) 缩短至辅助服务器上复制文件的应用程序重启时间。
+发生故障转移时，恢复时间 (RTO) 仅为在辅助服务器上重新启动应用程序所需的时间。应用程序使用复制的文件。
 
-最后，该解决方案配置起来非常简单，只需配置要复制的目录路径即可。
+最后，该解决方案的配置非常简单。您只需配置要复制的目录路径。
 
 ### 什么是块级磁盘复制？ {#what-is-block-level-disk-replication}
 
-块级磁盘复制（如[ DRBD ](<https://linbit.com/drbd/>) ）意味着仅复制磁盘内部的修改。
+通过块级磁盘复制，磁盘内的所有修改都会被复制。DRBD[开源软件](<https://linbit.com/drbd/>)就使用了这项技术。
 
-复制的数据量并不仅限于应用程序修改过的信息。额外的数据也会被复制，例如用于管理磁盘的元数据（空闲块列表、文件系统内部信息）。
+复制的数据不仅限于应用程序修改的信息。还会复制额外的数据，例如管理磁盘的元数据。例如，空闲块列表和文件系统的内部信息。
 
-这会对应用程序数据的组织方式产生重大影响。所有数据都必须位于复制磁盘上。至少，这需要重新配置应用程序。或者，如果某些要复制的数据位于系统磁盘上，则无法进行复制，因为该磁盘必须对每个服务器保持特定。
+这会对应用程序数据的组织产生强烈影响。所有数据都必须存储在复制磁盘上。这至少需要重新配置应用程序。如果某些要复制的数据位于系统磁盘上，则甚至不可能，因为每个服务器都必须保留其自己的系统磁盘。
 
-故障转移后，复制磁盘上的文件系统恢复过程会导致恢复时间 (RTO) 增加。
+故障转移后，必须恢复复制磁盘上的文件系统。此恢复过程会增加恢复时间 (RTO)。
 
-最后，该解决方案配置起来并不容易，因为需要一定的技能才能在专用磁盘上配置文件系统。此外，还需要一定的应用技能才能在复制磁盘上配置应用程序数据。
+最后，该解决方案不易配置。使用文件系统配置专用磁盘需要特定技能。将应用程序数据移动到复制磁盘也需要对应用程序有很好的了解。
 
 ## 字节级文件复制与块级磁盘复制的优缺点 {#pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication}
 
-标准| **字节级文件复制集群** | **块级磁盘复制集群**  
+标准 | **具有字节级文件复制功能的集群** | **具有块级磁盘复制功能的集群**  
 ---|---|---  
-产品| • [ SafeKit位于Windows和Linux ](/) |上 • 磁盘复制产品为[ DRBD ](https://linbit.com/drbd/)   
-应用程序数据组织 |  • 对应用程序数据组织没有影响 SafeKit.<br>• [只需定义要实时复制的目录即可](/zh-hans/architectures/file-replication-byte-level-with-failover-mirror-cluster/).<br>• 甚至系统磁盘内的目录也可以被复制。  |  • 对应用程序数据组织的影响。<br>• 对应用程序进行特殊配置，使其数据放置在复制磁盘中。<br>• 系统磁盘中的数据无法复制。   
-数据复制 |  • 同步字节级文件复制。<br>• 复制应用程序活动生成的文件修改操作。<br>• 不复制元数据。仅复制文件中修改过的数据，而不是整个文件（字节级文件复制）。<br>• [同步复制以避免故障时数据丢失](/zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/).  |  • 将复制磁盘内所有已修改的数据进行复制。<br>• 应用程序数据和元数据都会被复制。<br>• 例如，文件的最后访问时间会被复制（每次读取文件时都会修改最后访问时间）。   
-部署复杂性| • 否 - 只需在 2 台服务器上安装软件| • 是 - 需要特定的 IT 技能来配置操作系统和复制磁盘   
-故障转移 |  • 只需在第二个服务器上重启应用程序即可。  |  • 将文件系统重新挂载到复制磁盘上。<br>• 对文件系统执行恢复程序。<br>然后重新启动应用程序。   
-故障恢复 |  • 自动故障恢复。<br>• 在不停止主服务器上的应用程序的情况下，在辅助服务器上重新同步数据。<br>• 数据未重新同步时，应用程序无法进行故障转移。  |  • 并非所有产品的功能都处于同一水平。   
-法定人数和裂脑 |  • 网络隔离（脑裂）后，应用程序在单个服务器上执行。<br>• 脑裂后数据的连贯性。<br>• 无需第三台机器、法定人数盘或特殊的心跳线即可实现脑裂。<br>• [有关心跳、故障转移和仲裁的更多信息](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)  |  • 需要特殊的仲裁磁盘或第三个仲裁服务器来管理脑裂。   
-适用于| • [想要为其应用程序添加简单高可用性选项的软件编辑器](/zh-hans/use-cases/application-clustering-software/) | • 具有集群 IT 技能的企业。   
+产品 |  • [SafeKit 适用于 Windows 和 Linux](/zh-hans/)  |  • 磁盘复制产品，例如[DRBD](https://linbit.com/drbd/)   
+应用程序数据组织 |  • SafeKit 不会影响应用程序数据组织。<br> • [您只需定义要实时复制的目录](/zh-hans/architectures/file-replication-byte-level-with-failover-mirror-cluster/)。<br> • 即使是系统磁盘中的目录也可以复制。  |  • 对应用程序数据组织的影响。<br> • 该应用程序需要特殊配置，才能将其数据放在复制磁盘上。<br> • 系统磁盘上的数据无法复制。   
+数据复制 |  • 同步字节级文件复制。<br> • 应用程序生成的文件修改操作将被复制。<br> • 元数据不会被复制。只有文件内部修改过的数据会被复制，而不是整个文件。<br> • [同步复制，避免故障时数据丢失](/zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/)。  |  • 复制磁盘上修改的所有数据都会被复制。<br> • 应用程序数据和元数据都会被复制。<br> • 例如，文件的上次访问时间会被复制。每次读取文件时，此时间都会更改。   
+部署的复杂性 |  • 简单：在两台服务器上安装软件。  |  • 复杂：需要特定的 IT 技能来配置操作系统和复制磁盘。   
+故障转移 |  • 只需在辅助服务器上重新启动应用程序。  |  • 文件系统重新挂载到复制磁盘上。<br> • 恢复过程会检查并修复文件系统。<br> • 然后，应用程序将重新启动。   
+回切 |  • 自动回切。<br> • 无需停止主服务器上的应用程序，即可重新同步辅助服务器上的数据。<br> • 在数据重新同步之前，无法进行故障转移。  |  • 功能因产品而异。   
+仲裁和脑裂 |  • 网络隔离（脑裂）后，应用程序在单个服务器上运行。<br> • 脑裂后数据保持一致。<br> • 无需第三台机器、仲裁磁盘或专用心跳线即可管理脑裂。<br> • [有关心跳、故障转移和仲裁的更多信息](/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/)  |  • 需要一个特殊的仲裁磁盘或第三个仲裁服务器来管理脑裂。   
+适用于 |  • [希望为其应用程序添加简单高可用性选项的软件供应商](/zh-hans/use-cases/application-clustering-software/)  |  • 公司的 IT 团队中拥有集群专家。   
   
 
 {{%  insert-safekit-hub-zh-hans  %}}
