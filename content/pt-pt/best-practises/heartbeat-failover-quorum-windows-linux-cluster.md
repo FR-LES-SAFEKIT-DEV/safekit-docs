@@ -1,87 +1,86 @@
 ---
-title: "Pulsação cardíaca, failover e quorum nos clusters Windows e Linux"
+title: "Heartbeat, failover e quórum em clusters Windows e Linux"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Aprenda como funcionam os mecanismos de heartbeat, failover e quorum em um cluster. SafeKit propõe uma arquitetura sem SAN que elimina a necessidade de um terceiro servidor de quorum ou disco de quorum dedicado. Obtenha alta disponibilidade no Windows e Linux com um verificador de split-brain simples."
+description: "Saiba como funcionam os heartbeats, failover e o quórum num cluster. Com SafeKit, não são necessários um terceiro servidor de quórum nem um disco de quórum especial. Um simples checker split-brain é suficiente. SafeKit oferece alta disponibilidade no Windows e Linux."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Quais são os diferentes cenários em caso de isolamento de rede em um cluster? Como funcionam os heartbeats e o failover em um cluster Windows ou Linux ? Problema de split brain e quorum quando os servidores estão em duas salas de computadores remotas. Quorum de cluster simples com o verificador de split brain SafeKit . 🔍 Explore o SafeKit"
+topics: "Quais são os diferentes cenários em caso de isolamento de rede num cluster?, Como funcionam os heartbeats e failover num cluster Windows ou Linux?, Split brain e quórum com servidores em duas salas de computadores remotas, Quórum de cluster simples com o checker split-brain SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 52 expressions"
 ---
 
-# Pulsação, Failover e Quorum nos clusters Windows e Linux e {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# Heartbeat, failover e quórum em clusters Windows e Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
 
 
 {{%  insert-safekit-network-isolation-pt-pt  %}}
  
 
-## Como funcionam os heartbeats e o failover em um cluster Windows ou Linux ? {#how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster}
+## Como funcionam os heartbeats e failover num cluster Windows ou Linux? {#how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster}
 
-### O que é um batimento cardíaco? {#what-is-a-heartbeat}
+### O que é um heartbeat? {#what-is-a-heartbeat}
 
-O mecanismo básico para sincronizar dois servidores e detectar falhas em um servidor é o **heartbeat** , que consiste no monitoramento do fluxo de dados em uma rede compartilhada por um par de servidores.
+O mecanismo básico para sincronizar dois servidores e detetar falhas de servidor é o **heartbeat**. É um fluxo de dados de monitorização numa rede partilhada pelos dois servidores.
 
-O software SafeKit suporta tantos pulsos cardíacos quantas forem as redes compartilhadas por dois servidores. 
+O software SafeKit suporta vários heartbeats. Cada rede partilhada pelos dois servidores pode transmitir um heartbeat.
 
-O mecanismo de heartbeat é usado para implementar os clusters Windows e Linux . Ele está integrado ao cluster SafeKit mirror com replicação de arquivos em tempo real e failover.
+O mecanismo de heartbeat é usado para implementar clusters Windows e Linux. Está integrado no cluster mirror SafeKit com replicação de ficheiros em tempo real e failover.
 
-### SafeKit batimentos cardíacos {#safekit-heartbeats}
+### Heartbeats SafeKit {#safekit-heartbeats}
 
-Em operação normal, os dois servidores trocam seus estados (PRIM, SECOND, os estados dos recursos) através dos canais de pulsação e sincronizam seus procedimentos de inicialização e parada de aplicativos.
+Em funcionamento normal, os dois servidores trocam os seus estados através dos canais heartbeat. Estes estados são PRIM, SECOND e os estados dos recursos. Eles também sincronizam os procedimentos de início e paragem da aplicação.
 
-Em particular, no caso de uma falha agendada, o script de parada que interrompe a aplicação é executado primeiro no servidor primário, antes da execução do script de inicialização no servidor secundário. Dessa forma, os dados replicados no servidor secundário ficam em um estado seguro, correspondente a uma parada limpa da aplicação.
+Por exemplo, durante um failover programado, o script de paragem da aplicação é executado primeiro no servidor primário. Em seguida, o script de arranque é executado no servidor secundário. Assim, os dados replicados no servidor secundário estão num estado seguro. Este estado corresponde a uma paragem limpa da aplicação.
 
-### Perda de todos os batimentos cardíacos {#loss-of-all-heartbeats}
+### O que acontece quando todos os heartbeats se perdem? {#loss-of-all-heartbeats}
 
-Quando todos os sinais vitais são perdidos em um servidor, esse servidor considera o outro servidor como inativo e entra no estado ALONE.
+Quando um servidor perde todos os heartbeats, considera que o outro servidor está inativo. Em seguida, entra no estado ALONE.
 
-Se for o SEGUNDO servidor que entrar no estado SOZINHO, ocorrerá um failover da aplicação com reinicialização da mesma no servidor secundário.
+Se o servidor no estado SECOND passar para o estado ALONE, a aplicação é reiniciada nesse servidor. Isto é um failover de aplicação.
 
-Embora não seja obrigatório, é recomendável ter dois canais de heartbeat em duas redes diferentes para sincronizar os dois servidores, a fim de separar o caso de falha de rede do caso de falha do servidor.
+Recomendam-se dois canais heartbeat em duas redes diferentes, mas não é obrigatório. Com duas redes, uma falha de rede não é confundida com uma falha de servidor.
 
-## Problema de "cérebro dividido" e quorum quando os servidores estão em duas salas de computadores remotas {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
-
-
-![ Heartbeat, failover e quorum em um cluster Windows ou Linux ](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
+## Split brain e quórum com servidores em duas salas de computadores remotas {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
 
 
-### Salas de computadores remotas {#remote-computer-rooms}
+![Heartbeat, failover e quórum num cluster Windows ou Linux](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
 
-Um cluster de alta disponibilidade que protege uma aplicação crítica pode ser implementado com dois servidores em duas salas de computadores geograficamente remotas.
 
-Assim, a solução contribui para o desastre de uma sala cheia.
+### Duas salas de computadores remotas {#remote-computer-rooms}
 
-### Cérebro dividido {#split-brain}
+Com dois servidores em duas salas de computadores remotas, um cluster de alta disponibilidade pode proteger uma aplicação crítica.
 
-Em uma situação de isolamento de rede entre as duas salas de computadores, todos os sinais de atividade (heartbeats) são perdidos e surge o problema de "cérebro dividido" (split brain).
+Assim, a aplicação permanece disponível mesmo que um desastre destrua uma sala de computadores inteira.
 
-Ambos os servidores iniciam a aplicação crítica.
+### Split brain {#split-brain}
 
-### Complexidade das soluções {#complexity-of-solutions}
+Se a rede entre as duas salas de computadores estiver isolada, todos os heartbeats são perdidos. Este é o problema do split brain: ambos os servidores iniciam a aplicação crítica.
 
-Na maioria das vezes, para resolver o problema de "split brain", o quorum é implementado com um terceiro servidor de quorum ou um disco de quorum especial para evitar a existência de dois servidores mestres. 
+### Complexidade das soluções habituais {#complexity-of-solutions}
 
-Infelizmente, esses novos dispositivos de quorum aumentam o custo e a complexidade da arquitetura geral de clusterização.
+Na maioria das vezes, um quórum é usado para resolver o problema do split brain. O quórum utiliza um terceiro servidor de quórum ou um disco de quórum especial. Evita ter dois servidores primários ao mesmo tempo.
 
-## Quórum de cluster simples com o verificador de split brain SafeKit {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
+Infelizmente, estes dispositivos de quórum adicionam custo e complexidade à arquitetura de agrupamento.
 
-### Verificador de cérebro dividido SafeKit {#safekit-split-brain-checker}
+## Quórum de cluster simples com o checker split-brain SafeKit {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
 
-Com o software de alta disponibilidade SafeKit , o quorum dentro de um cluster Windows ou Linux não requer um terceiro servidor de quorum nem um disco de quorum. Um verificador de split-brain simples [ ](</pt-pt/resources/safekit-user-guide-82/#check_splitbrain>) é suficiente para evitar a execução dupla de um aplicativo.
+### Checker split-brain SafeKit {#safekit-split-brain-checker}
 
-Na perda de todos os sinais de pulsação entre os servidores, o verificador de "split brain" seleciona apenas um servidor para se tornar o primário. O outro servidor entra no estado de ESPERA até receber novamente os sinais de pulsação do outro servidor. Em seguida, ele retorna ao estado secundário após ter sincronizado os dados replicados do servidor primário.
+Com o software de alta disponibilidade SafeKit, o quórum de um cluster Windows ou Linux não requer um terceiro servidor de quórum nem um disco de quórum. Um simples 🛠️ [checker split-brain](</pt-pt/resources/safekit-user-guide-82/#check_splitbrain>) é suficiente para evitar a execução da aplicação em ambos os servidores.
 
-### Como funciona o verificador de cérebro dividido? {#how-the-split-brain-checker-works}
+Quando todos os heartbeats entre os servidores são perdidos, o checker split-brain seleciona apenas um servidor para se tornar o primário. O outro servidor entra no estado WAIT. Ele espera até receber novamente os heartbeats do outro servidor. Em seguida, sincroniza os dados replicados do servidor primário e volta ao estado secundário.
 
-A eleição do servidor primário é baseada no ping de um endereço IP, chamado de testemunha. A testemunha é normalmente um roteador que está sempre disponível. Em caso de isolamento de rede, apenas o servidor com acesso à testemunha será o primário (ALONE), os demais entrarão em estado de espera (WAIT).
+### Como funciona o checker split-brain? {#how-the-split-brain-checker-works}
 
-O servidor testemunha não é testado permanentemente, mas apenas quando todos os sinais de pulsação são perdidos. Se, nesse momento, o servidor testemunha estiver inativo, o cluster entra no estado WAIT-WAIT e um administrador pode optar por reiniciar um dos servidores como primário através do console web SafeKit .
+O servidor principal é eleito através de um ping para um endereço IP, chamado de testemunha. A testemunha é geralmente um router que está sempre disponível. Em caso de isolamento da rede, apenas o servidor que consegue alcançar a testemunha se torna principal no estado ALONE. O outro servidor entra no estado WAIT.
 
-### O que acontece sem um verificador de "split brain"? {#what-happens-without-a-split-brain-checker}
+A testemunha não é testada permanentemente. É testada apenas quando todos os heartbeats são perdidos. Se a testemunha estiver inativa nesse momento, o cluster entra no estado WAIT-WAIT. Um administrador pode então reiniciar um dos servidores como primário com a consola web SafeKit.
 
-Em caso de isolamento de rede, ambos os servidores entrarão no estado ALONE, executando a aplicação crítica. Os diretórios replicados ficam isolados e cada aplicação trabalha com seus próprios dados em seu próprio diretório.
+### O que acontece sem um checker split-brain? {#what-happens-without-a-split-brain-checker}
 
-Quando a rede é reconectada, SafeKit por padrão, escolhe o servidor que era PRIM antes do isolamento como o novo primário e força o outro como SECOND, com uma ressincronização de todos os seus dados a partir do PRIM.
+Em caso de isolamento da rede, ambos os servidores entram no estado ALONE e executam a aplicação crítica. Os diretórios replicados ficam isolados. Cada aplicação trabalha nos seus próprios dados, no seu próprio diretório.
 
-Nota: Windows pode detectar um endereço IP duplicado em um servidor e remover o endereço IP virtual desse servidor. SafeKit possui um verificador para forçar uma reinicialização nesse caso.
+Quando a rede é restabelecida, SafeKit escolhe, por predefinição, o servidor que era PRIM antes do isolamento como o novo servidor primário. O outro servidor é forçado para o estado SECOND. Todos os seus dados são ressincronizados a partir do servidor PRIM.
+
+Nota: no Windows, um servidor pode detetar um endereço IP duplicado e remover o seu endereço IP virtual. Nesse caso, um verificador SafeKit força um reinício.
 
 
 {{%  insert-safekit-hub-pt-pt  %}}

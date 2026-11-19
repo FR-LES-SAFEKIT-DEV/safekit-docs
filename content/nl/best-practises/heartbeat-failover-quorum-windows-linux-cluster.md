@@ -1,87 +1,86 @@
 ---
-title: "Heartbeat, failover en quorum in Windows en Linux -clusters"
+title: "Heartbeat, failover en quorum in Windows- en Linux-clusters"
 canonical: "https://safekit.eviden.com/nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Leer hoe heartbeats, failover en quorum werken in een cluster. SafeKit biedt een SAN-loze architectuur die de noodzaak voor een derde quorumserver of speciale quorumschijf elimineert. Bereik hoge beschikbaarheid op Windows en Linux met een eenvoudige split-brain checker."
+description: "Leer hoe heartbeats, failover en quorum werken in een cluster. Met SafeKit zijn geen derde quorumserver en geen speciale quorumschijf nodig. Een eenvoudige split-brain-checker is voldoende. SafeKit biedt hoge beschikbaarheid op Windows en Linux."
 category: "best-practises"
 lang: "nl"
-topics: "Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster? Hoe werken heartbeats en failover in een Windows of Linux -cluster? Het split-brain-probleem en quorum wanneer servers zich in twee externe computerruimtes bevinden. Eenvoudig clusterquorum met de SafeKit split-brain checker. 🔍 Ontdek SafeKit"
+topics: "Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?, Hoe werken heartbeats en failover in een Windows- of Linux-cluster?, Split brain en quorum met servers in twee externe computerruimtes, Eenvoudig clusterquorum met de SafeKit split-brain-checker, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 52 expressions"
 ---
 
-# Heartbeat, failover en quorum in Windows en Linux clusters {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# Heartbeat, failover en quorum in Windows- en Linux-clusters {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
 
 
 {{%  insert-safekit-network-isolation-nl  %}}
  
 
-## Hoe werken heartbeats en failover in een Windows of Linux -cluster? {#how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster}
+## Hoe werken heartbeats en failover in een Windows- of Linux-cluster? {#how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster}
 
-### Wat is een hartslag? {#what-is-a-heartbeat}
+### Wat is een heartbeat? {#what-is-a-heartbeat}
 
-Het basismechanisme voor het synchroniseren van twee servers en het detecteren van serverstoringen is de **heartbeat** , die de gegevensstroom bewaakt op een netwerk dat door twee servers wordt gedeeld.
+Het basismechanisme om twee servers te synchroniseren en serverstoringen te detecteren is de **heartbeat**. Het is een monitoringgegevensstroom op een netwerk dat door de twee servers wordt gedeeld.
 
-De SafeKit -software ondersteunt evenveel heartbeats als er netwerken zijn die door twee servers worden gedeeld. 
+De SafeKit-software ondersteunt meerdere heartbeats. Elk netwerk dat door de twee servers wordt gedeeld, kan één heartbeat dragen.
 
-Het heartbeat-mechanisme wordt gebruikt voor de implementatie van Windows en Linux -clusters. Het is geïntegreerd in de SafeKit mirror -clusters met realtime bestandsreplicatie en failover.
+Het heartbeatmechanisme wordt gebruikt om Windows- en Linux-clusters te implementeren. Het is geïntegreerd in het SafeKit mirror-cluster met real-time bestandsreplicatie en failover.
 
-### SafeKit hartslagen {#safekit-heartbeats}
+### SafeKit heartbeats {#safekit-heartbeats}
 
-Tijdens normaal gebruik wisselen de twee servers hun status (PRIM, SECOND, de status van de resources) uit via de heartbeat-kanalen en synchroniseren ze hun procedures voor het starten en stoppen van de applicatie.
+Tijdens normale werking wisselen de twee servers hun statussen uit via de heartbeat-kanalen. Deze statussen zijn PRIM, SECOND en de resourcestatussen. Ze synchroniseren ook de start- en stop-procedures van de applicatie.
 
-In het bijzonder wordt bij een geplande failover het stopscript dat de applicatie stopt, eerst op de primaire server uitgevoerd, voordat het startscript op de secundaire server wordt uitgevoerd. Hierdoor bevinden de gerepliceerde gegevens op de secundaire server zich in een veilige staat, wat overeenkomt met een correcte stop van de applicatie.
+Tijdens een geplande failover wordt bijvoorbeeld eerst het stop-script van de toepassing uitgevoerd op de primaire server. Vervolgens wordt het start-script uitgevoerd op de secundaire server. De gerepliceerde gegevens op de secundaire server bevinden zich dan in een veilige toestand. Deze toestand komt overeen met een schone stop van de toepassing.
 
-### Verlies van alle hartslagen {#loss-of-all-heartbeats}
+### Wat gebeurt er als alle heartbeats verloren gaan? {#loss-of-all-heartbeats}
 
-Wanneer alle hartslagen op één server wegvallen, beschouwt deze server de andere server als niet beschikbaar en schakelt over naar de ALONE-status.
+Wanneer een server alle heartbeats verliest, beschouwt deze de andere server als uitgevallen. De server gaat dan naar de ALONE-status.
 
-Als de TWEEDE server in de ALONE-status terechtkomt, vindt er een failover plaats waarbij de applicatie op de secundaire server opnieuw wordt opgestart.
+Als de server in de SECOND-status naar de ALONE-status gaat, wordt de toepassing opnieuw gestart op deze server. Dit is een failover van de toepassing.
 
-Hoewel niet verplicht, is het beter om twee heartbeat-kanalen op twee verschillende netwerken te hebben voor het synchroniseren van de twee servers. Zo kan een netwerkstoring worden gescheiden van een serverstoring.
+Twee heartbeatkanalen op twee verschillende netwerken worden aanbevolen, maar zijn niet verplicht. Met twee netwerken wordt een netwerkstoring niet verward met een serverstoring.
 
-## Split-brainprobleem en quorum wanneer servers zich in twee externe computerruimtes bevinden {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
-
-
-![ Heartbeat, failover en quorum in een Windows of Linux -cluster ](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
+## Split brain en quorum met servers in twee externe computerruimtes {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
 
 
-### Externe computerruimtes {#remote-computer-rooms}
+![Heartbeat, failover en quorum in een Windows- of Linux-cluster](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
 
-Een cluster met hoge beschikbaarheid dat een kritieke applicatie beveiligt, kan worden geïmplementeerd met twee servers in twee geografisch gescheiden computerruimtes.
 
-De oplossing ondersteunt dus de rampzalige situatie van een volle kamer.
+### Twee externe computerruimtes {#remote-computer-rooms}
 
-### Gespleten hersenen {#split-brain}
+Met twee servers in twee externe computerruimtes kan een high-availabilitycluster een bedrijfskritieke toepassing beschermen.
 
-In een situatie waarin de twee computerruimtes van elkaar gescheiden zijn, gaat alle communicatie verloren en ontstaat het split-brain-probleem.
+De applicatie blijft dus beschikbaar, zelfs als een ramp een hele computerruimte verwoest.
 
-Beide servers starten de kritieke applicatie.
+### Split brain {#split-brain}
 
-### Complexiteit van oplossingen {#complexity-of-solutions}
+Als het netwerk tussen de twee computerruimtes is geïsoleerd, gaan alle heartbeats verloren. Dit is het split-brainprobleem: beide servers starten de kritieke applicatie.
 
-Meestal wordt, om het split-brain-probleem op te lossen, een quorum geïmplementeerd met een derde quorumserver of een speciale quorumschijf om dubbele masters te voorkomen. 
+### Complexiteit van de gebruikelijke oplossingen {#complexity-of-solutions}
 
-Helaas brengen deze nieuwe quorumapparaten extra kosten en complexiteit met zich mee voor de algehele clusterarchitectuur.
+Meestal wordt een quorum gebruikt om het split brain op te lossen. Het quorum maakt gebruik van een derde quorumserver of een speciale quorumschijf. Het voorkomt dat er twee primaire servers tegelijkertijd zijn.
 
-## Eenvoudig clusterquorum met de SafeKit split-brain checker {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
+Helaas voegen deze quorumapparaten kosten en complexiteit toe aan de clusterarchitectuur.
 
-### SafeKit split brain checker {#safekit-split-brain-checker}
+## Eenvoudig clusterquorum met de SafeKit split-brain-checker {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
 
-Met de SafeKit -software voor hoge beschikbaarheid is er binnen een Windows of Linux cluster geen derde quorumserver en geen quorumschijf nodig voor het quorum. Een eenvoudige split-brain checker ](</nl/resources/safekit-user-guide-82/#check_splitbrain>) [ voldoende om te voorkomen dat een applicatie dubbel wordt uitgevoerd.
+### SafeKit split-brain-checker {#safekit-split-brain-checker}
 
-Bij het uitvallen van alle heartbeats tussen de servers selecteert de split-brain checker slechts één server als primaire server. De andere server gaat naar de wachtstand (WAIT) totdat deze de heartbeats van de primaire server weer ontvangt. Vervolgens keert deze terug naar de secundaire status nadat de gerepliceerde gegevens van de primaire server zijn gesynchroniseerd.
+Met de SafeKit high-availability software heeft het quorum van een Windows- of Linux-cluster geen derde quorumsamenwerkingsserver en geen quorumdisk nodig. Een eenvoudige 🛠️ [split-brain-checker](</nl/resources/safekit-user-guide-82/#check_splitbrain>) is voldoende om te voorkomen dat de applicatie op beide servers draait.
 
-### Hoe werkt de split-brain checker? {#how-the-split-brain-checker-works}
+Wanneer alle heartbeats tussen de servers verloren gaan, selecteert de split-brain-checker slechts één server om de primaire server te worden. De andere server gaat naar de WAIT-status. Deze wacht totdat hij de heartbeats van de andere server weer ontvangt. Vervolgens synchroniseert hij de gerepliceerde gegevens van de primaire server en gaat terug naar de secundaire status.
 
-De verkiezing van de primaire server is gebaseerd op de ping van een IP-adres, de zogenaamde witness. De witness is doorgaans een router die altijd beschikbaar is. In geval van netwerkisolatie is alleen de server met toegang tot de witness de primaire server (ALONE), de andere servers gaan in de wachtstand (WAIT).
+### Hoe werkt de split-brain-checker? {#how-the-split-brain-checker-works}
 
-De witness-server wordt niet permanent getest, maar alleen wanneer alle heartbeats verloren gaan. Als de witness-server op dat moment niet beschikbaar is, gaat het cluster naar de WAIT-WAIT-status en kan een beheerder ervoor kiezen om een van de servers opnieuw op te starten als primaire server via de SafeKit -webconsole.
+De primaire server wordt gekozen met een ping naar een IP-adres, de zogenoemde witness. De witness is meestal een router die altijd beschikbaar is. In geval van netwerkisolatie wordt alleen de server die de witness kan bereiken primair in de ALONE-status. De andere server gaat naar de WAIT-status.
 
-### Wat gebeurt er zonder een split-brain checker? {#what-happens-without-a-split-brain-checker}
+De witness wordt niet permanent getest. Er wordt alleen getest wanneer alle heartbeats verloren zijn gegaan. Als de witness op dat moment uitvalt, gaat het cluster in de WAIT-WAIT-status. Een beheerder kan dan een van de servers opnieuw opstarten als primair met de SafeKit webconsole.
 
-In geval van netwerkisolatie zullen beide servers in de ALONE-status gaan en de kritieke applicatie uitvoeren. De gerepliceerde mappen zijn geïsoleerd en elke applicatie werkt met zijn eigen gegevens in zijn eigen map.
+### Wat gebeurt er zonder een split-brain-checker? {#what-happens-without-a-split-brain-checker}
 
-Wanneer het netwerk opnieuw is verbonden, kiest SafeKit standaard de server die vóór de isolatie de primaire server was als de nieuwe primaire server en dwingt de andere server als secundaire server, waarbij alle gegevens van die server opnieuw worden gesynchroniseerd met de primaire server.
+In geval van netwerkisolatie gaan beide servers naar de ALONE-status en voeren ze de kritieke toepassing uit. De gerepliceerde mappen worden geïsoleerd. Elke toepassing werkt met zijn eigen gegevens in zijn eigen map.
 
-Opmerking: Windows kan een dubbel IP-adres op een server detecteren en het virtuele IP-adres op die server verwijderen. SafeKit heeft een controlemechanisme om in dat geval een herstart af te dwingen.
+Wanneer de verbinding met het netwerk is hersteld, kiest SafeKit standaard de server die vóór de isolatie PRIM was als de nieuwe primaire server. De andere server wordt gedwongen naar de SECOND-status. Al zijn gegevens worden opnieuw gesynchroniseerd vanaf de PRIM server.
+
+Opmerking: op Windows kan een server een dubbel IP-adres detecteren en zijn virtuele IP-adres verwijderen. In dat geval dwingt een SafeKit checker een herstart af.
 
 
 {{%  insert-safekit-hub-nl  %}}

@@ -1,87 +1,86 @@
 ---
-title: "Latido, conmutación por error y quórum en los clústeres Windows y Linux"
+title: "Heartbeat, conmutación por error y quórum en clústeres Windows y Linux"
 canonical: "https://safekit.eviden.com/es/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Aprenda cómo funcionan los latidos, la conmutación por error y el quórum en un clúster. SafeKit propone una arquitectura sin SAN que elimina la necesidad de un tercer servidor de quórum o un disco de quórum especial. Logre alta disponibilidad en Windows y Linux con un sencillo comprobador de división de clúster."
+description: "Aprenda cómo funcionan los heartbeats, la conmutación por error y el quórum en un clúster. Con SafeKit, no se necesita un tercer servidor de quórum ni un disco de quórum especial. Un simple checker split-brain es suficiente. SafeKit proporciona alta disponibilidad en Windows y Linux."
 category: "best-practises"
 lang: "es"
-topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cómo funcionan los latidos y la conmutación por error en un clúster Windows o Linux ?, Problema de división de clúster y quórum cuando los servidores están en dos salas de servidores remotas, Quórum de clúster simple con el verificador de división de clúster SafeKit , 🔍 Explora SafeKit"
+topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cómo funcionan los heartbeats y la conmutación por error en un clúster Windows o Linux?, Split brain y quórum con servidores en dos salas de ordenadores remotas, Quórum de clúster simple con el checker split-brain SafeKit, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 51 expressions"
 ---
 
-# Latido, conmutación por error y quórum en los clústeres Windows y Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# Heartbeat, conmutación por error y quórum en clústeres Windows y Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
 
 
 {{%  insert-safekit-network-isolation-es  %}}
  
 
-## ¿Cómo funcionan los latidos y la conmutación por error en un clúster Windows o Linux ? {#how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster}
+## ¿Cómo funcionan los heartbeats y la conmutación por error en un clúster Windows o Linux? {#how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster}
 
-### ¿Qué es un latido cardíaco? {#what-is-a-heartbeat}
+### ¿Qué es un heartbeat? {#what-is-a-heartbeat}
 
-El mecanismo básico para sincronizar dos servidores y detectar fallos en los mismos es el **latido (heartbeat)** , que consiste en un flujo de datos de monitorización en una red compartida por un par de servidores.
+El mecanismo básico para sincronizar dos servidores y detectar fallos del servidor es el **heartbeat**. Es un flujo de datos de supervisión en una red compartida por los dos servidores.
 
-El software SafeKit admite tantos latidos como redes compartidas por dos servidores. 
+El software SafeKit admite varios heartbeats. Cada red compartida por los dos servidores puede transmitir un heartbeat.
 
-El mecanismo de latido se utiliza para implementar los clústeres Windows y Linux . Está integrado en el clúster SafeKit mirror con replicación de archivos en tiempo real y conmutación por error.
+El mecanismo heartbeat se utiliza para implementar clústeres Windows y Linux. Está integrado en el clúster mirror SafeKit con replicación de archivos en tiempo real y conmutación por error.
 
-### Latidos del corazón SafeKit {#safekit-heartbeats}
+### Heartbeats SafeKit {#safekit-heartbeats}
 
-En funcionamiento normal, los dos servidores intercambian sus estados (PRIM, SECOND, los estados de los recursos) a través de los canales de latido y sincronizan sus procedimientos de inicio y parada de la aplicación.
+En el funcionamiento normal, los dos servidores intercambian sus estados a través de los canales heartbeat. Estos estados son PRIM, SECOND y los estados de los recursos. También sincronizan los procedimientos de inicio y parada de la aplicación.
 
-En concreto, en caso de conmutación por error programada, el script de detención que detiene la aplicación se ejecuta primero en el servidor principal, antes de ejecutar el script de inicio en el servidor secundario. De este modo, los datos replicados en el servidor secundario se encuentran en un estado seguro, lo que corresponde a una detención correcta de la aplicación.
+Por ejemplo, durante una conmutación por error programada, el script de detención de la aplicación se ejecuta primero en el servidor principal. A continuación, el script de inicio se ejecuta en el servidor secundario. De este modo, los datos replicados en el servidor secundario se encuentran en un estado seguro. Este estado corresponde a una detención limpia de la aplicación.
 
-### Pérdida total de latidos cardíacos {#loss-of-all-heartbeats}
+### ¿Qué ocurre cuando se pierden todos los heartbeats? {#loss-of-all-heartbeats}
 
-Cuando se pierde toda la señal de latido en un servidor, este servidor considera que el otro servidor está caído y pasa al estado SOLO.
+Cuando un servidor pierde todos los heartbeats, considera que el otro servidor está inactivo. Entonces pasa al estado ALONE.
 
-Si es el SEGUNDO servidor el que pasa al estado SOLO, entonces se produce una conmutación por error de la aplicación con el reinicio de la misma en el servidor secundario.
+Si el servidor en el estado SECOND pasa al estado ALONE, la aplicación se reinicia en este servidor. Esto es una conmutación por error de la aplicación.
 
-Aunque no es obligatorio, es mejor tener dos canales de latido en dos redes diferentes para sincronizar los dos servidores y así separar el caso de fallo de la red del caso de fallo del servidor.
+Se recomiendan dos canales heartbeat en dos redes diferentes, pero no es obligatorio. Con dos redes, un fallo de red no se confunde con un fallo del servidor.
 
-## Problema de división de cerebro y quórum cuando los servidores están en dos salas de computadoras remotas {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
-
-
-![ Latido, conmutación por error y quórum en un clúster Windows o Linux ](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
+## Split brain y quórum con servidores en dos salas de ordenadores remotas {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
 
 
-### Salas de computadoras remotas {#remote-computer-rooms}
+![Heartbeat, conmutación por error y quórum en un clúster Windows o Linux](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
 
-Se puede implementar un clúster de alta disponibilidad que proteja una aplicación crítica con dos servidores ubicados en dos salas de servidores geográficamente distantes.
 
-Por lo tanto, la solución respalda el desastre de una habitación llena.
+### Dos salas de ordenadores remotas {#remote-computer-rooms}
 
-### Cerebro dividido {#split-brain}
+Con dos servidores en dos salas de ordenadores remotas, un clúster de alta disponibilidad puede proteger una aplicación crítica.
 
-En caso de aislamiento de la red entre ambas salas de ordenadores, se pierde toda la comunicación y surge el problema de la división de la red (split brain).
+De este modo, la aplicación sigue estando disponible incluso si un desastre destruye una sala de ordenadores entera.
 
-Ambos servidores inician la aplicación crítica.
+### Split brain {#split-brain}
 
-### Complejidad de las soluciones {#complexity-of-solutions}
+Si la red entre las dos salas de computadoras está aislada, se pierden todos los heartbeats. Este es el problema del split brain: ambos servidores inician la aplicación crítica.
 
-En la mayoría de los casos, para solucionar el problema de la división de cerebro, el quórum se implementa con un tercer servidor de quórum o un disco de quórum especial para evitar la duplicación de maestros. 
+### Complejidad de las soluciones habituales {#complexity-of-solutions}
 
-Lamentablemente, estos nuevos dispositivos de quórum añaden coste y complejidad a la arquitectura de clúster general.
+La mayoría de las veces, se utiliza un quórum para resolver el problema del split brain. El quórum utiliza un tercer servidor de quórum o un disco de quórum especial. Evita tener dos servidores primarios al mismo tiempo.
 
-## Quórum de clúster simple con el verificador de cerebro dividido SafeKit {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
+Lamentablemente, estos dispositivos de quórum añaden coste y complejidad a la arquitectura de clústeres.
 
-### SafeKit comprobador de cerebro dividido {#safekit-split-brain-checker}
+## Quórum de clúster simple con el checker split-brain SafeKit {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
 
-Con el software de alta disponibilidad SafeKit , el quórum dentro de un clúster Windows o Linux no requiere un tercer servidor de quórum ni un disco de quórum. Un simple comprobador ](</es/resources/safekit-user-guide-82/#check_splitbrain>) [ suficiente para evitar la doble ejecución de una aplicación.
+### Checker split-brain SafeKit {#safekit-split-brain-checker}
 
-Tras la pérdida de la señal de latido entre los servidores, el verificador de división de cerebro selecciona un único servidor como principal. El otro servidor entra en estado de espera hasta que vuelve a recibir la señal del servidor principal. Una vez sincronizados los datos replicados del servidor principal, regresa al estado secundario.
+Con el software de alta disponibilidad SafeKit, el quórum de un clúster Windows o Linux no requiere un tercer servidor de quórum ni un disco de quórum. Un simple 🛠️ [checker split-brain](</es/resources/safekit-user-guide-82/#check_splitbrain>) es suficiente para evitar que la aplicación se ejecute en ambos servidores.
 
-### ¿Cómo funciona el comprobador de cerebro dividido? {#how-the-split-brain-checker-works}
+Cuando se pierden todos los heartbeats entre los servidores, el checker split-brain selecciona un solo servidor para que se convierta en el primario. El otro servidor entra en el estado WAIT. Espera hasta que recibe los heartbeats del otro servidor de nuevo. Luego sincroniza los datos replicados del servidor primario y vuelve al estado secundario.
 
-La elección del servidor principal se basa en el ping a una dirección IP, denominada testigo. El testigo suele ser un enrutador que siempre está disponible. En caso de aislamiento de red, solo el servidor con acceso al testigo será el principal; los demás permanecerán en estado de espera.
+### ¿Cómo funciona el checker split-brain? {#how-the-split-brain-checker-works}
 
-El testigo no se prueba de forma permanente, sino solo cuando se pierden todos los latidos. Si en ese momento el testigo no está disponible, el clúster entra en estado de ESPERA y un administrador puede reiniciar uno de los servidores como principal a través de la consola web SafeKit .
+El servidor principal se elige con un ping a una dirección IP, llamada testigo. El testigo suele ser un enrutador que siempre está disponible. En caso de aislamiento de la red, solo el servidor que puede llegar al testigo se convierte en principal en el estado ALONE. El otro servidor pasa al estado WAIT.
 
-### ¿Qué sucede sin un detector de división cerebral? {#what-happens-without-a-split-brain-checker}
+El testigo no se prueba de forma permanente. Solo se prueba cuando se pierden todos los heartbeats. Si el testigo está inactivo en ese momento, el clúster entra en el estado WAIT-WAIT. Un administrador puede entonces reiniciar uno de los servidores como primario con la consola web SafeKit.
 
-En caso de aislamiento de red, ambos servidores pasarán al estado ALONE, ejecutando la aplicación crítica. Los directorios replicados estarán aislados y cada aplicación trabajará con sus propios datos en su propio directorio.
+### ¿Qué ocurre sin un checker split-brain? {#what-happens-without-a-split-brain-checker}
 
-Cuando se restablece la conexión de la red, SafeKit elige por defecto el servidor que era PRIM antes del aislamiento como el nuevo primario y fuerza al otro a ser SEGUNDO con una resincronización de todos sus datos desde el PRIM.
+En caso de aislamiento de la red, ambos servidores pasan al estado ALONE y ejecutan la aplicación crítica. Los directorios replicados están aislados. Cada aplicación trabaja con sus propios datos en su propio directorio.
 
-Nota: Windows puede detectar una dirección IP duplicada en un servidor y eliminar la dirección IP virtual en dicho servidor. SafeKit dispone de un verificador para forzar un reinicio en ese caso.
+Cuando la red se vuelve a conectar, SafeKit elige por defecto el servidor que era PRIM antes del aislamiento como el nuevo primario. El otro servidor se fuerza al estado SECOND. Todos sus datos se resincronizan desde el servidor PRIM.
+
+Nota: en Windows, un servidor puede detectar una dirección IP duplicada y eliminar su dirección IP virtual. En ese caso, un verificador SafeKit fuerza un reinicio.
 
 
 {{%  insert-safekit-hub-es  %}}

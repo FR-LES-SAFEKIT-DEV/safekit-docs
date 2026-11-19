@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-19.15",
+  "version": "2026-11-19.23",
   "keep": [
     "mirror",
     "farm",
@@ -183,7 +183,8 @@
     "Teledyne FLIR",
     "Always On",
     "Active Directory",
-    "Express"
+    "Express",
+    "WAIT-WAIT"
   ],
   "terms": {
     "farm cluster": {
@@ -1344,6 +1345,38 @@
       [
         "(?<!\\w)([Dd])ans(\\s+)clusters\\b",
         "\\1ans\\2les clusters"
+      ],
+      [
+        "(?<!\\w)([Tt]ous|[Tt]outes|fonctionnent|[Cc]omment|[Aa]utant|à nouveau|[Pp]erte de tous) (heartbeats)\\b",
+        "\\1 les \\2"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "(?<!\\w)([Tt])outes les heartbeats",
+        "\\1ous les heartbeats"
+      ],
+      [
+        "(?<!\\w)problème split brain",
+        "problème du split brain"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "!\\[heartbeat, de basculement et de quorum",
+        "![Heartbeat, basculement et quorum"
+      ],
+      [
+        "!\\[heartbeat\\b",
+        "![Heartbeat"
+      ],
+      [
+        "(?<!\\w)implémente clusters\\b",
+        "implémente des clusters"
       ]
     ],
     "it": [
@@ -1490,6 +1523,42 @@
       [
         "\\b([Cc])lustering del software\\b",
         "\\1lustering software"
+      ],
+      [
+        "(?<!\\w)([Tt]utti|funzionano|nuovamente|riceve) (heartbeat)\\b",
+        "\\1 gli \\2"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "(?<!\\w)([Tt]utti) i (heartbeat)\\b",
+        "\\1 gli \\2"
+      ],
+      [
+        "(?<!\\w)nel SECOND stato",
+        "nello stato SECOND"
+      ],
+      [
+        "(?<!\\w)problema split brain",
+        "problema dello split brain"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "!\\[heartbeat\\b",
+        "![Heartbeat"
+      ],
+      [
+        "\\bReplicazione\\b",
+        "Replica"
+      ],
+      [
+        "\\breplicazione\\b",
+        "replica"
       ]
     ],
     "es": [
@@ -1692,6 +1761,54 @@
       [
         "\\b(failback|failover)( no)? es automática",
         "\\1\\2 es automático"
+      ],
+      [
+        "(?<!\\w)([Tt]od)[oa]s (heartbeats)\\b",
+        "\\1os los \\2"
+      ],
+      [
+        "(?<!\\w)(funcionan|recib[ea]|[Cc]ómo funcionan) (heartbeats)\\b",
+        "\\1 los \\2"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "(?<!\\w)([Ll])as heartbeats",
+        "\\1os heartbeats"
+      ],
+      [
+        "(?<!\\w)([Vv])arias heartbeats",
+        "\\1arios heartbeats"
+      ],
+      [
+        "(?<!\\w)([Tt])odas los heartbeats",
+        "\\1odos los heartbeats"
+      ],
+      [
+        "(?<!\\w)([Uu])na heartbeat\\b",
+        "\\1n heartbeat"
+      ],
+      [
+        "(?<!\\w)el SECOND estado",
+        "el estado SECOND"
+      ],
+      [
+        "(?<!\\w)problema split brain",
+        "problema del split brain"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "(?<!\\w)de el split brain",
+        "del split brain"
+      ],
+      [
+        "!\\[heartbeat\\b",
+        "![Heartbeat"
       ]
     ],
     "pt": [
@@ -1910,6 +2027,62 @@
       [
         "\\b(failback|failover)( não)? é automática",
         "\\1\\2 é automático"
+      ],
+      [
+        "(?<!\\w)([Tt]od)[oa]s (heartbeats)\\b",
+        "\\1os os \\2"
+      ],
+      [
+        "(?<!\\w)(funcionam|[Cc]omo|novamente|recebe|receber) (heartbeats)\\b",
+        "\\1 os \\2"
+      ],
+      [
+        "\\bfailover programada\\b",
+        "failover programado"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "(?<!\\w)as heartbeats",
+        "os heartbeats"
+      ],
+      [
+        "(?<!\\w)As heartbeats",
+        "Os heartbeats"
+      ],
+      [
+        "(?<!\\w)([Tt])odas os heartbeats",
+        "\\1odos os heartbeats"
+      ],
+      [
+        "(heartbeats\\b[^.]{0,40}?) perdidas\\b",
+        "\\1 perdidos"
+      ],
+      [
+        "verificador de divisão de rede (🛠️ \\[)",
+        "\\1"
+      ],
+      [
+        "\\[([^\\]]+)\\]\\((<[^>]+>)\\) 🛠️",
+        "🛠️ [\\1](\\2)"
+      ],
+      [
+        "(?<!\\w)problema split brain",
+        "problema do split brain"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "(\\]\\(<[^>]+>\\)) suficiente",
+        "\\1 é suficiente"
+      ],
+      [
+        "!\\[heartbeat\\b",
+        "![Heartbeat"
       ]
     ],
     "ar": [
@@ -2140,6 +2313,22 @@
       [
         "لا يكون تلقائية",
         "لا يكون تلقائيًا"
+      ],
+      [
+        "(heartbeat) \"\\. ",
+        "\\1. "
+      ],
+      [
+        "يكفي فاحص بسيط (🛠️ \\[مدقق)",
+        "يكفي \\1"
+      ],
+      [
+        "البنية التجميع",
+        "بنية التجميع"
+      ],
+      [
+        "\\[([^\\]]+)\\]\\((<[^>]+>)\\) 🛠️",
+        "🛠️ [\\1](\\2)"
       ]
     ],
     "de": [
@@ -2598,6 +2787,26 @@
       [
         "Datentachrichtungs-Technik",
         "Datenreplikationstechnik"
+      ],
+      [
+        "\\b(PRIM|SECOND|ALONE|WAIT) (Zustand|Zustands|Server|Status)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "Implementierung (Windows-)",
+        "Implementierung von \\1"
+      ],
+      [
+        "Split-Brain (Problem|Problems)\\b",
+        "Split-Brain-\\1"
+      ],
+      [
+        "Computeräume",
+        "Computerräume"
+      ],
+      [
+        "(farm</span>) \\((\\d+) oder mehr Server\\)",
+        "\\1 aus \\2 oder mehr Servern"
       ]
     ],
     "ko": [
@@ -3192,6 +3401,78 @@
       [
         "페일백 자동",
         "페일백은 자동"
+      ],
+      [
+        "(하트비트|체커) (가|이|를|을|로|는|은|이며|의)(?=[\\s,.]|$)",
+        "\\1\\2"
+      ],
+      [
+        "하트비트 손실",
+        "하트비트가 손실"
+      ],
+      [
+        "(스플릿 브레인 체커) (하나의|어떻게)",
+        "\\1는 \\2"
+      ],
+      [
+        "(스플릿 브레인 체커) 없으면",
+        "\\1가 없으면"
+      ],
+      [
+        "SafeKit은 (스플릿 브레인 체커)",
+        "SafeKit \\1"
+      ],
+      [
+        "하트비트 다시",
+        "하트비트를 다시"
+      ],
+      [
+        "타사 쿼럼 서버",
+        "세 번째 쿼럼 서버"
+      ],
+      [
+        "(체커\\]\\(<[^>]+>\\)) 만",
+        "\\1만"
+      ],
+      [
+        "체커 만",
+        "체커만"
+      ],
+      [
+        "하트비트 사라지면",
+        "하트비트가 사라지면"
+      ],
+      [
+        "하트비트 잃으면",
+        "하트비트를 잃으면"
+      ],
+      [
+        "고가용성 클러스터 (?=두)",
+        "고가용성 클러스터는 "
+      ],
+      [
+        "서버 는",
+        "서버는"
+      ],
+      [
+        "SafeKit 기본적으로",
+        "SafeKit은 기본적으로"
+      ],
+      [
+        "스플릿 브레인 쿼럼",
+        "스플릿 브레인은 쿼럼"
+      ],
+      [
+        "하트비트 (전송|지원)",
+        "하트비트를 \\1"
+      ],
+      [
+        "스플릿 브레인 (과|와)(?=\\s)",
+        "스플릿 브레인과"
+      ],
+      [
+        "정족수",
+        "쿼럼"
       ]
     ],
     "ja": [
@@ -3652,7 +3933,7 @@
         "\\1SafeKit は "
       ],
       [
-        "(^|。\\s*)SafeKit\\s+(?=高可用性ソフトウェア)",
+        "(^|。\\s*)SafeKit\\s+(?=高可用性ソフトウェア(?!を使用|で|の|によ|と))",
         "\\1SafeKit は "
       ],
       [
@@ -3698,6 +3979,50 @@
       [
         "(?<![A-Za-z0-9])([A-Za-z][A-Za-z0-9]*)\\[([^\\]]+)\\]\\((<[^>]*>)\\)",
         "[\\1 \\2](\\3)"
+      ],
+      [
+        "ハートビートすべて",
+        "ハートビートがすべて"
+      ],
+      [
+        "チェッカー仕組み",
+        "チェッカーの仕組み"
+      ],
+      [
+        "SafeKit デフォルトで",
+        "SafeKit はデフォルトで"
+      ],
+      [
+        "高可用性クラスター (?=\\d)",
+        "高可用性クラスターは "
+      ],
+      [
+        "チェッカー十分",
+        "チェッカーで十分"
+      ],
+      [
+        "(チェッカー\\]\\(<[^>]+>\\))あれば",
+        "\\1があれば"
+      ],
+      [
+        "チェッカーどのように",
+        "チェッカーはどのように"
+      ],
+      [
+        "高可用性クラスター(?=重要)",
+        "高可用性クラスターは"
+      ],
+      [
+        "SafeKit はチェッカーは",
+        "SafeKit のチェッカーが"
+      ],
+      [
+        "(チェッカー\\]\\(<[^>]+>\\))(?=[^\\sがでは、])",
+        "\\1で"
+      ],
+      [
+        "ソフトウェアは SafeKit (?=[^\\sはが、])",
+        "SafeKit ソフトウェアは、"
       ]
     ],
     "zh-hans": [
@@ -3872,6 +4197,14 @@
       [
         "(?<![A-Za-z0-9])([A-Za-z][A-Za-z0-9]*)\\[([^\\]]+)\\]\\((<[^>]*>)\\)",
         "[\\1 \\2](\\3)"
+      ],
+      [
+        "脑裂和法定人数",
+        "脑裂和仲裁"
+      ],
+      [
+        "集群无需共享磁盘",
+        "集群，无需共享磁盘"
       ]
     ],
     "nl": [
@@ -4198,6 +4531,38 @@
       [
         "op sch poziomie",
         "op schijfniveau"
+      ],
+      [
+        "\\b(PRIM|SECOND|ALONE|WAIT)[ -]status\\b",
+        "\\1-status"
+      ],
+      [
+        "\\bheartbeat (kanalen|kanaal|mechanisme)\\b",
+        "heartbeat\\1"
+      ],
+      [
+        "Computerrúms",
+        "Computerruimtes"
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "(?<!\\w)([Tt]wee|[Dd]rie) heartbeat (?=op)",
+        "\\1 heartbeatkanalen "
+      ],
+      [
+        "(^|<br>\\s*|\\?,\\s)split brain\\b",
+        "\\1Split brain"
+      ],
+      [
+        "!\\[heartbeat\\b",
+        "![Heartbeat"
+      ],
+      [
+        "quorumsamenwerkingsserver",
+        "quorumserver"
       ]
     ],
     "pt-br": [

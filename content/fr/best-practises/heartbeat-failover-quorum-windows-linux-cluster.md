@@ -1,13 +1,14 @@
 ---
-title: "Battement de cœur, basculement et quorum dans les clusters Windows et Linux"
+title: "Heartbeat, basculement et quorum dans les clusters Windows et Linux"
 canonical: "https://safekit.eviden.com/fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Découvrez le fonctionnement des pulsations, du basculement et du quorum dans un cluster. SafeKit propose une architecture sans SAN qui élimine le besoin d'un troisième serveur de quorum ou d'un disque de quorum dédié. Bénéficiez d'une haute disponibilité sous Windows et Linux grâce à un simple outil de vérification de la présence d'un système isolé."
+description: "Découvrez comment les heartbeats, le basculement et le quorum fonctionnent dans un cluster. Avec SafeKit, aucun serveur de quorum tiers ni aucun disque de quorum spécial ne sont nécessaires. Un simple checker split-brain suffit. SafeKit offre une haute disponibilité sous Windows et Linux."
 category: "best-practises"
 lang: "fr"
-topics: "Quels sont les différents scénarios en cas d'isolement réseau dans un cluster ?, Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ?, Problème de split brain et quorum lorsque les serveurs sont dans deux salles informatiques distantes, Quorum simple avec le split brain checker de SafeKit, 🔍 Explorez SafeKit"
+topics: "Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ?, Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ?, Split brain et quorum avec des serveurs dans deux salles informatiques distantes, Quorum de cluster simple avec le checker split-brain SafeKit, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 59 expressions"
 ---
 
-# Battement de cœur, basculement et quorum dans les clusters Windows et Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
+# Heartbeat, basculement et quorum dans les clusters Windows et Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}
 
 
 {{%  insert-safekit-network-isolation-fr  %}}
@@ -15,73 +16,71 @@ topics: "Quels sont les différents scénarios en cas d'isolement réseau dans u
 
 ## Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ? {#how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster}
 
-### Qu'est-ce qu'un heartbeat ? {#what-is-a-heartbeat}
+### Qu’est-ce qu’un heartbeat ? {#what-is-a-heartbeat}
 
-Le mécanisme de base pour synchroniser deux serveurs et détecter les pannes de serveur est le **heartbeat** , qui est un flux de données de surveillance sur un réseau partagé par une paire de serveurs.
+Le mécanisme de base pour synchroniser deux serveurs et détecter les pannes de serveur est le **heartbeat**. Il s’agit d’un flux de données de surveillance sur un réseau partagé par les deux serveurs.
 
-Le logiciel SafeKit supporte autant de heartbeats qu'il y a de réseaux partagés par les deux serveurs.
+Le logiciel SafeKit prend en charge plusieurs heartbeats. Chaque réseau partagé par les deux serveurs peut transporter un heartbeat.
 
-Le mécanisme de heartbeat est utilisé pour implémenter des clusters Windows et Linux. Il est intégré au cluster miroir de SafeKit avec réplication de fichiers en temps réel et basculement.
+Le mécanisme heartbeat est utilisé pour implémenter des clusters Windows et Linux. Il est intégré dans le cluster mirror SafeKit avec réplication de fichiers en temps réel et basculement.
 
-### Heartbeats de SafeKit {#safekit-heartbeats}
+### Les heartbeats SafeKit {#safekit-heartbeats}
 
-En fonctionnement normal, les deux serveurs échangent leurs états (PRIM, SECOND, les états des ressources) via les canaux de heartbeat et synchronisent leurs procédures de démarrage et d'arrêt des applications.
+En fonctionnement normal, les deux serveurs échangent leurs états par le biais des canaux heartbeat. Ces états sont PRIM, SECOND et les états des ressources. Ils synchronisent également les procédures de démarrage et d’arrêt de l’application.
 
-En particulier, en cas de basculement programmé, le script d'arrêt qui stoppe l'application est d'abord exécuté sur le serveur primaire, avant d'exécuter le script de démarrage sur le serveur secondaire. Ainsi, les données répliquées sur le serveur secondaire sont dans un état sûr correspondant à un arrêt propre de l'application.
+Par exemple, lors d’un basculement planifié, le script d’arrêt de l’application est d’abord exécuté sur le serveur principal. Ensuite, le script de démarrage est exécuté sur le serveur secondaire. Ainsi, les données répliquées sur le serveur secondaire sont dans un état sûr. Cet état correspond à un arrêt propre de l’application.
 
-### Perte de tous les heartbeats {#loss-of-all-heartbeats}
+### Que se passe-t-il lorsque tous les heartbeats sont perdus ? {#loss-of-all-heartbeats}
 
-Lorsque tous les heartbeats sont perdus sur un serveur, ce serveur considère que l'autre serveur est en panne et passe à l'état ALONE.
+Lorsqu’un serveur perd tous les heartbeats, il considère que l’autre serveur est en panne. Il passe alors à l’état ALONE.
 
-Si c'est le serveur SECOND qui passe à l'état ALONE, alors il y a basculement de l'application avec redémarrage de l'application sur le serveur secondaire.
+Si le serveur dans l’état SECOND passe à l’état ALONE, l’application est redémarrée sur ce serveur. Il s’agit d’un basculement d’application.
 
-Bien que non obligatoire, il est préférable d'avoir deux canaux de heartbeat sur deux réseaux différents pour synchroniser les deux serveurs afin de séparer le cas de la panne réseau de celui de la panne serveur.
+Deux canaux heartbeat sur deux réseaux différents sont recommandés, mais pas obligatoires. Avec deux réseaux, une défaillance du réseau n’est pas confondue avec une défaillance du serveur.
 
-## Problème de split brain et quorum lorsque les serveurs sont dans deux salles informatiques distantes {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
-
-
-![Heartbeat, failover et quorum dans un cluster Windows ou Linux](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
+## Split brain et quorum avec des serveurs dans deux salles informatiques distantes {#split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms}
 
 
-### Salles informatiques distantes {#remote-computer-rooms}
+![Heartbeat, basculement et quorum dans un cluster Windows ou Linux](/wp-content/uploads/2023/02/quorum-with-remote-sites.png "w:200")
 
-Un cluster de haute disponibilité sécurisant une application critique peut être mis en place avec deux serveurs dans deux salles informatiques géographiquement distantes.
 
-Ainsi, la solution prend en charge le sinistre d'une salle complète.
+### Deux salles informatiques distantes {#remote-computer-rooms}
+
+Avec deux serveurs dans deux salles informatiques distantes, un cluster de haute disponibilité peut protéger une application critique.
+
+Ainsi, l’application reste disponible même si une catastrophe détruit une salle informatique entière.
 
 ### Split brain {#split-brain}
 
-En cas d'isolation réseau entre les deux salles informatiques, tous les heartbeats sont perdus et le problème du split brain se pose.
+Si le réseau entre les deux salles informatiques est isolé, tous les heartbeats sont perdus. C’est le problème du split brain : les deux serveurs démarrent l’application critique.
 
-Les deux serveurs démarrent l'application critique.
+### Complexité des solutions habituelles {#complexity-of-solutions}
 
-### Complexité des solutions {#complexity-of-solutions}
+Le plus souvent, un quorum est utilisé pour résoudre le problème du split brain. Le quorum utilise un troisième serveur de quorum ou un disque de quorum spécial. Il évite d’avoir deux serveurs principaux en même temps.
 
-Le plus souvent, pour résoudre le split brain, le quorum est implémenté avec un troisième serveur de quorum ou un disque de quorum spécial pour éviter les doubles maîtres.
+Malheureusement, ces dispositifs de quorum ajoutent des coûts et de la complexité à l’architecture de clustering.
 
-Malheureusement, ces nouveaux dispositifs de quorum ajoutent des coûts et de la complexité à l'architecture de clustering globale.
+## Quorum de cluster simple avec le checker split-brain SafeKit {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
 
-## Quorum simple avec le split brain checker de SafeKit {#simple-cluster-quorum-with-the-safekit-split-brain-checker}
+### Checker split-brain SafeKit {#safekit-split-brain-checker}
 
-### Split brain checker de SafeKit {#safekit-split-brain-checker}
+Avec le logiciel de haute disponibilité SafeKit, le quorum d’un cluster Windows ou Linux ne nécessite aucun serveur de quorum tiers ni aucun disque de quorum. Un simple 🛠️ [checker split-brain](</fr/resources/safekit-user-guide-82/#check_splitbrain>) suffit à éviter d’exécuter l’application sur les deux serveurs.
 
-Avec le logiciel de haute disponibilité SafeKit, le quorum au sein d'un cluster Windows ou Linux ne nécessite pas de troisième serveur de quorum ni de disque quorum. Un 🛠️ [split brain checker simple](</fr/resources/safekit-user-guide-82/#check_splitbrain>) est suffisant pour éviter la double exécution d'une application.
+Lorsque tous les heartbeats entre les serveurs sont perdus, le checker split-brain sélectionne un seul serveur pour devenir le serveur principal. L’autre serveur passe à l’état WAIT. Il attend jusqu’à ce qu’il reçoive à nouveau les heartbeats de l’autre serveur. Ensuite, il synchronise les données répliquées à partir du serveur principal et revient à l’état secondaire.
 
-En cas de perte de tous les heartbeats entre les serveurs, le split brain checker sélectionne un seul serveur pour devenir le serveur primaire. L'autre serveur passe à l'état WAIT jusqu'à ce qu'il reçoive à nouveau les heartbeats. Il repasse alors en secondaire après avoir resynchronisé les données répliquées du serveur primaire.
+### Comment fonctionne le checker split-brain ? {#how-the-split-brain-checker-works}
 
-### Comment fonctionne le split brain checker ? {#how-the-split-brain-checker-works}
+Le serveur principal est élu par un ping à une adresse IP, appelée témoin. Le témoin est généralement un routeur qui est toujours disponible. En cas d’isolement du réseau, seul le serveur qui peut atteindre le témoin devient principal dans l’état ALONE. L’autre serveur passe à l’état WAIT.
 
-L'élection du serveur primaire est basée sur le ping d'une adresse IP, appelée témoin. Le témoin est généralement un routeur toujours disponible. En cas d'isolation réseau, seul le serveur ayant accès au témoin sera primaire et passera ALONE, l'autre ira en WAIT.
+Le témoin n’est pas testé en permanence. Il n’est testé que lorsque tous les heartbeats sont perdus. Si le témoin est en panne à ce moment-là, le cluster passe à l’état WAIT-WAIT. Un administrateur peut alors redémarrer l’un des serveurs en tant que primaire avec la console web SafeKit.
 
-Le témoin n'est pas testé en permanence mais seulement lorsque tous les heartbeats sont perdus. Si à ce moment-là, le témoin est en panne, le cluster passe à l'état WAIT-WAIT et un administrateur peut choisir de redémarrer l'un des serveurs en tant que serveur primaire via la console Web de SafeKit.
+### Que se passe-t-il sans checker split-brain ? {#what-happens-without-a-split-brain-checker}
 
-### Que se passe-t-il sans split brain checker ? {#what-happens-without-a-split-brain-checker}
+En cas d’isolement du réseau, les deux serveurs passent à l’état ALONE et exécutent l’application critique. Les répertoires répliqués sont isolés. Chaque application fonctionne sur ses propres données dans son propre répertoire.
 
-En cas d'isolation réseau, les deux serveurs passeront à l'état ALONE exécutant l'application critique. Les répertoires répliqués sont isolés et chaque application travaille sur ses propres données dans son propre répertoire.
+Lorsque le réseau est reconnecté, SafeKit choisit par défaut le serveur qui était PRIM avant l’isolement comme nouveau serveur principal. L’autre serveur est forcé à l’état SECOND. Toutes ses données sont resynchronisées à partir du serveur PRIM.
 
-A la reconnexion du réseau, SafeKit choisit par défaut le serveur qui était PRIM avant l'isolation comme nouveau primaire et force l'autre serveur en SECOND avec une resynchronisation de toutes ses données depuis le serveur PRIM.
-
-Remarque : Windows peut détecter une adresse IP en double sur un serveur et supprimer l'adresse IP virtuelle sur ce serveur. SafeKit dispose d'un checker pour forcer un redémarrage dans ce cas.
+Remarque : sous Windows, un serveur peut détecter une adresse IP en double et supprimer son adresse IP virtuelle. Dans ce cas, un vérificateur SafeKit force un redémarrage.
 
 
 {{%  insert-safekit-hub-fr  %}}

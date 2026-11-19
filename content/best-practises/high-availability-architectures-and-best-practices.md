@@ -1,7 +1,7 @@
 ---
 title: "High Availability Architectures & Software Clustering Best Practices"
 canonical: "https://safekit.eviden.com/best-practises/high-availability-architectures-and-best-practices/"
-description: "Explore high availability (HA) architectures and best practices for application clustering. Learn how SafeKit software implements mirror and farm clusters without shared disks, providing zero data loss and automatic failover for critical applications."
+description: "Explore high availability (HA) architectures and best practices for application clustering. The SafeKit software implements mirror and farm clusters without shared disks. It provides zero data loss and automatic failover for critical applications."
 category: "best-practises"
 lang: "en"
 topics: "What are the high availability architectures and the best practices?, Comparative tables on high availability architectures and best practices, 🔍 Explore SafeKit"
@@ -19,13 +19,13 @@ This article explores the different high availability architectures and the best
 ![High availability architectures and best practices](/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png "w:400")
 
 
-The following comparative tables explain in detail the SafeKit high availability architecture and its best practices (SafeKit is a software high availability product).
+The following comparative tables explain in detail the architecture and the best practices of SafeKit, a high availability software.
 
 ### What are the high availability architectures? {#what-are-the-high-availability-architectures}
 
 There are two types of [high availability](<https://www.techtarget.com/it-infrastructure/definition/What-is-high-availability-HA-Definition-and-guide>) architectures: those for backend applications such as databases and those for frontend applications such as web services.
 
-High availability architectures for backend are based on 2 servers sharing or replicating data with an automatic application failover in the event of hardware or software failures.
+High availability architectures for backend are based on 2 servers. The servers share or replicate data. In case of hardware or software failure, an automatic failover restarts the application on the other server.
 
 High availability architectures for frontend are based on a <span class="notranslate farm-term" translate="no">farm</span> of servers (2 servers or more). The load balancing is made by hardware or software and distributes the TCP sessions to the available servers in the farm.
 
@@ -35,16 +35,16 @@ Moreover, you have to choose between high availability at the application level 
 
 This article explores the best practices in high availability architectures by comparing:
 
-  * [software vs hardware clustering](</best-practises/clustering-software-vs-hardware-clustering/>),
-  * [shared nothing vs shared disk architecture](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>),
-  * [application vs virtual machine high availability](</best-practises/vm-ha-vs-application-ha/>),
-  * [high availability vs fault tolerance](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>),
-  * [synchronous vs asynchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>),
-  * [file vs disk replication](</best-practises/byte-level-file-replication-vs-block-level-disk-replication/>),
-  * [data replication techniques](</best-practises/data-replication-techniques/>),
-  * [RPO and RTO with examples](</best-practises/what-is-rpo-and-rto-with-examples/>),
-  * [split brain and quorum](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>),
-  * [virtual IP addresses](</best-practises/how-a-virtual-ip-address-works/>).
+  * [Software vs hardware clustering](</best-practises/clustering-software-vs-hardware-clustering/>)
+  * [Shared nothing vs shared disk architecture](</best-practises/shared-nothing-architecture-vs-shared-disk-architecture/>)
+  * [Application vs virtual machine high availability](</best-practises/vm-ha-vs-application-ha/>)
+  * [High availability vs fault tolerance](</best-practises/high-availability-cluster-vs-fault-tolerant-system/>)
+  * [Synchronous vs asynchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>)
+  * [File vs disk replication](</best-practises/byte-level-file-replication-vs-block-level-disk-replication/>)
+  * [Data replication techniques](</best-practises/data-replication-techniques/>)
+  * [RPO and RTO with examples](</best-practises/what-is-rpo-and-rto-with-examples/>)
+  * [Split brain and quorum](</best-practises/heartbeat-failover-quorum-windows-linux-cluster/>)
+  * [Virtual IP addresses](</best-practises/how-a-virtual-ip-address-works/>)
 
 
 ## Comparative tables on high availability architectures and best practices {#comparative-tables-on-high-availability-architectures-and-best-practices}
