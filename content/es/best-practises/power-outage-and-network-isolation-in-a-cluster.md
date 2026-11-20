@@ -1,13 +1,14 @@
 ---
-title: "Gestión de cortes de energía y aislamiento de red en un clúster de alta disponibilidad."
+title: "Gestión de cortes de energía y aislamiento de la red en un clúster de alta disponibilidad"
 canonical: "https://safekit.eviden.com/es/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "Aprenda a gestionar el aislamiento de la red y las interrupciones de energía en un clúster de alta disponibilidad. SafeKit propone una arquitectura sin SAN con comprobadores de división de clúster integrados y resincronización automática para garantizar la integridad de los datos y un funcionamiento ininterrumpido (24/7) sin necesidad de un disco compartido."
+description: "Aprenda a gestionar el aislamiento de la red y los cortes de energía en un clúster de alta disponibilidad. SafeKit incluye verificadores de división de clúster y resincronización automática. Estos garantizan la integridad de los datos y el funcionamiento ininterrumpido 24/7 sin necesidad de un disco compartido."
 category: "best-practises"
 lang: "es"
 topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster?, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 51 expressions"
 ---
 
-# Gestión de cortes de energía y aislamiento de red en un clúster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# Gestión de cortes de energía y aislamiento de la red en un clúster de alta disponibilidad {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
 
 
 {{%  insert-safekit-network-isolation-es  %}}
@@ -15,40 +16,42 @@ topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red e
 
 ## ¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster? {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
 
-### Apagón del nodo principal {#primary-node-power-outage}
+En los siguientes escenarios, el nodo 1 es inicialmente el nodo principal. El nodo 2 es inicialmente el nodo secundario.
+
+### Corte de energía del nodo principal {#primary-node-power-outage}
 
 Cuando un corte de energía detiene solo el nodo principal:
 
-  * Hay una conmutación por error automática en el nodo secundario, que se convierte en ALONE y reinicia la aplicación,
-  * Cuando se reinicia el nodo 1, se convierte en SEDOND después de la resincronización de los datos replicados.
-  * Los roles de principal y secundario pueden ser intercambiados por un administrador si es necesario.
+  * SafeKit conmuta automáticamente al nodo secundario. El nodo 2 se convierte en ALONE y reinicia la aplicación.
+  * Cuando el nodo 1 se reinicia, resincroniza los datos replicados. Luego se convierte en SECOND.
+  * Si es necesario, un administrador puede intercambiar los roles principal y secundario.
 
 
-### Apagón del nodo secundario {#secondary-node-power-outage}
+### Corte de energía del nodo secundario {#secondary-node-power-outage}
 
 Cuando un corte de energía detiene solo el nodo secundario:
 
-  * No hay conmutación por error, el nodo principal se convierte en SOLO y la aplicación continúa su ejecución en el nodo 1.
-  * Cuando se reinicia el nodo 2, se convierte en SEDOND después de la resincronización de los datos replicados.
+  * No se produce ninguna conmutación por error. El nodo 1 se convierte en ALONE. La aplicación continúa ejecutándose en el nodo 1.
+  * Cuando el nodo 2 se reinicia, resincroniza los datos replicados. Luego se convierte en SECOND.
 
 
-### Apagón general - caso 1 {#general-power-outage---case-1}
+### Corte de energía en ambos nodos - caso 1 {#general-power-outage---case-1}
 
-Cuando un corte de energía detiene ambos nodos, el comportamiento predeterminado es:
+Cuando un corte de energía detiene ambos nodos, el comportamiento predeterminado es el siguiente:
 
-  * ambos nodos van a STOP,
-  * Cuando se reinicia el nodo 1, no entra en estado SOLO y no reinicia la aplicación porque no sabe si tiene los datos actualizados. Por lo tanto, pasa al estado ESPERA esperando el reinicio del otro nodo.
-  * Cuando se reinicia el nodo 2, ambos nodos vuelven a sus estados PRIM/SEGUNDO anteriores.
+  * Ambos nodos pasan al estado STOP.
+  * Cuando el nodo 1 se reinicia, no pasa al estado ALONE. No reinicia la aplicación. No puede saber si sus datos están actualizados. Por lo tanto, pasa al estado WAIT y espera a que el otro nodo se reinicie.
+  * Cuando el nodo 2 se reinicia, ambos nodos vuelven a sus estados anteriores: PRIM y SECOND.
 
 
-### Apagón general - caso 2 {#general-power-outage---case-2}
+### Corte de energía en ambos nodos - caso 2 {#general-power-outage---case-2}
 
-Cuando un corte de energía detiene ambos nodos, el comportamiento con syncdelta es:
+Cuando un corte de energía detiene ambos nodos, el comportamiento con el parámetro `syncdelta` es el siguiente:
 
-  * syncdelta se establece, por ejemplo, en 10 minutos en la configuración, lo que significa que se acepta el inicio de un nodo incluso si sus datos están 10 minutos atrasados con respecto a la última sincronización.
-  * Cuando se reinicia el nodo 1, pasa a ALONE y reinicia la aplicación suponiendo que el reinicio se realiza dentro de los 10 minutos posteriores al fallo de alimentación,
-  * cuando se reinicia el nodo 2, se convierte en SEGUNDO después de la resincronización de los datos replicados,
-  * Nota: si el nodo 2 se reinicia primero, entonces se convierte en SOLO y el nodo 1 se convertirá en SEGUNDO al iniciarse.
+  * En este ejemplo, `syncdelta` se establece en 10 minutos en la configuración. Un nodo puede iniciarse incluso si sus datos están hasta 10 minutos por detrás de la última sincronización.
+  * Cuando el nodo 1 se reinicia en un plazo de 10 minutos tras el corte de energía, pasa al estado ALONE. Reinicia la aplicación.
+  * Cuando el nodo 2 se reinicia, resincroniza los datos replicados. Luego se convierte en SECOND.
+  * Nota: si el nodo 2 se reinicia primero, se convierte en ALONE. El nodo 1 se convierte entonces en SECOND cuando se inicia.
 
 
 

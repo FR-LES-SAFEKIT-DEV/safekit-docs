@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-20.3",
+  "version": "2026-11-20.6",
   "keep": [
     "mirror",
     "farm",
@@ -1413,6 +1413,38 @@
       [
         "^(\\s*\\* )Forcer ",
         "\\1Forcez "
+      ],
+      [
+        "\\b([Mm])ode (?:de )?multidiffusion\\b",
+        "\\1ode multicast"
+      ],
+      [
+        "\\bmultidiffusion\\b",
+        "multicast"
+      ],
+      [
+        "\\b([Mm])ode (?:de )?monodiffusion\\b",
+        "\\1ode unicast"
+      ],
+      [
+        "\\bmonodiffusion\\b",
+        "unicast"
+      ],
+      [
+        "\\b(du|le|de) NLB Microsoft\\b",
+        "\\1 Microsoft NLB"
+      ],
+      [
+        "\\bNLB Microsoft\\b",
+        "Microsoft NLB"
+      ],
+      [
+        "\\bdu Microsoft NLB\\b",
+        "de Microsoft NLB"
+      ],
+      [
+        "\\bde unicast\\b",
+        "d’unicast"
       ]
     ],
     "it": [
@@ -1615,6 +1647,10 @@
       [
         "\\bUn aggiornamento importante\\b",
         "Un aggiornamento di versione principale"
+      ],
+      [
+        "\\bdistribuzione Microsoft NLB\\b",
+        "distribuzione di Microsoft NLB"
       ]
     ],
     "es": [
@@ -1893,6 +1929,26 @@
       [
         "\\bUna actualización importante\\b",
         "Una actualización de versión mayor"
+      ],
+      [
+        "\\bmultidifusión\\b",
+        "multicast"
+      ],
+      [
+        "\\bunidifusión\\b",
+        "unicast"
+      ],
+      [
+        "\\b([Mm])odo de (multicast|unicast)\\b",
+        "\\1odo \\2"
+      ],
+      [
+        "\\bla (multicast|unicast)\\b",
+        "el \\1"
+      ],
+      [
+        "\\bNLB Microsoft\\b",
+        "Microsoft NLB"
       ]
     ],
     "pt": [
@@ -2195,6 +2251,22 @@
       [
         "\\bUma atualização importante\\b",
         "Uma atualização de versão principal"
+      ],
+      [
+        "\\b([Mm])odo de multidifusão\\b",
+        "\\1odo multicast"
+      ],
+      [
+        "\\bmultidifusão\\b",
+        "multicast"
+      ],
+      [
+        "\\bunidifusão\\b",
+        "unicast"
+      ],
+      [
+        "\\b(implantação|implementação) Microsoft NLB\\b",
+        "\\1 do Microsoft NLB"
       ]
     ],
     "ar": [
@@ -2493,6 +2565,18 @@
       [
         "جهاز VM بأكمله",
         "الجهاز الظاهري بأكمله"
+      ],
+      [
+        "حالة \"\\s*",
+        "حالة "
+      ],
+      [
+        "\\bPRIM SECOND\\b",
+        "PRIM و SECOND"
+      ],
+      [
+        "ينتقل كلا العقدتين",
+        "تنتقل كلتا العقدتين"
       ]
     ],
     "de": [
@@ -3023,6 +3107,18 @@
       [
         "Minor-Versionsupgrade",
         "Minor-Versions-Upgrade"
+      ],
+      [
+        "\\bBereitstellung Microsoft NLB\\b",
+        "Bereitstellung von Microsoft NLB"
+      ],
+      [
+        "\\b(STOP|ALONE|WAIT|PRIM|SECOND) Zustand\\b",
+        "\\1-Zustand"
+      ],
+      [
+        "\\b(STOP|ALONE|WAIT|PRIM|SECOND) wenn\\b",
+        "\\1, wenn"
       ]
     ],
     "ko": [
@@ -3769,6 +3865,26 @@
       [
         "((?:므로|하든|든),? )SafeKit (?=[가-힣])",
         "\\1SafeKit은 "
+      ],
+      [
+        "부하 분산 (?=모든 )",
+        "부하 분산은 "
+      ],
+      [
+        "ALONE가",
+        "ALONE이"
+      ],
+      [
+        "\\bSECOND 됩니다",
+        "SECOND가 됩니다"
+      ],
+      [
+        "\\bALONE 됩니다",
+        "ALONE이 됩니다"
+      ],
+      [
+        "\\bALONE 작동",
+        "ALONE 상태로 작동"
       ]
     ],
     "ja": [
@@ -4383,6 +4499,18 @@
       [
         "）\\s+(?=[をはがにでとの])",
         "）"
+      ],
+      [
+        "負荷分散(?=あらゆる)",
+        "負荷分散は"
+      ],
+      [
+        "\\b(ALONE|SECOND|PRIM|STOP|WAIT) なります",
+        "\\1 になります"
+      ],
+      [
+        "（([A-Z]+ と [A-Z]+)\\s*(?=[にへをはが])",
+        "（\\1）"
       ]
     ],
     "zh-hans": [
@@ -4625,6 +4753,18 @@
       [
         "）\\s*/\\s*([✅❌])",
         "）/\\1"
+      ],
+      [
+        "多播",
+        "组播"
+      ],
+      [
+        "(故障转移|负载均衡) (farm|mirror) 集群",
+        "\\1的 \\2 集群"
+      ],
+      [
+        "- 案例 (\\d)",
+        "- 情况 \\1"
       ]
     ],
     "nl": [
@@ -5047,6 +5187,14 @@
       [
         "\\btoepassinginstantie\\b",
         "toepassingsinstantie"
+      ],
+      [
+        "\\bKnooppunt\\b",
+        "Node"
+      ],
+      [
+        "\\b(STOP|ALONE|WAIT|PRIM|SECOND) status\\b",
+        "\\1-status"
       ]
     ],
     "pt-br": [
@@ -5129,6 +5277,18 @@
       [
         "\\ba aplicação continua a ser executada\\b",
         "o aplicativo continua sendo executado"
+      ],
+      [
+        "\\bSafeKit falha automaticamente para\\b",
+        "SafeKit executa automaticamente o failover para"
+      ],
+      [
+        "\\bNenhuma failover\\b",
+        "Nenhum failover"
+      ],
+      [
+        "\\b([Oo]) Nó (\\d)\\b",
+        "\\1 nó \\2"
       ]
     ],
     "pt-pt": [
@@ -5163,6 +5323,14 @@
       [
         "^(\\s*\\* )Restaurar a ",
         "\\1Restaure a "
+      ],
+      [
+        "\\bele se torna\\b",
+        "torna-se"
+      ],
+      [
+        "\\b([Oo]) Nó (\\d)\\b",
+        "\\1 nó \\2"
       ]
     ]
   },

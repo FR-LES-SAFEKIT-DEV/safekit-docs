@@ -1,25 +1,26 @@
 ---
-title: "Microsoft NLB VMware代替ソリューション：マルチキャストとユニキャストの問題を解決"
+title: "Microsoft NLB の VMware 代替ソリューション：マルチキャストとユニキャストの問題を解決"
 canonical: "https://safekit.eviden.com/ja/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "VMware 環境でMicrosoft NLB のマルチキャストまたはユニキャストに問題がありますか？ SafeKitシンプルな代替手段として SAN レスのfarmクラスタを提案します。静的 ARP エントリ、MAC スプーフィング、または特別なネットワーク構成なしで、 WindowsおよびLinuxで自動ロードバランシングとフェイルオーバーを実現します。"
+description: "VMware で Microsoft NLB のマルチキャストまたはユニキャストでお困りですか？SafeKit は、Windows と Linux で自動ロードバランシングとフェイルオーバーを備えた farm クラスターというシンプルな代替手段を提供します。静的 ARP エントリ、MAC スプーフィング、特殊なネットワーク設定は不要です。"
 category: "best-practises"
 lang: "ja"
-topics: "Microsoft NLB マルチキャスト モード、 Microsoft NLB ユニキャスト モード、 SafeKitとの代替、 farmモードのSafeKitクラスタはWindowsとどのように連携しますか?、🔍 SafeKit を探索する"
+topics: "Microsoft NLB マルチキャストモード、Microsoft NLB ユニキャストモード、SafeKit を使用した代替案、farm モードの SafeKit クラスターは Windows でどのように動作しますか？、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 52 expressions"
 ---
 
-# Microsoft NLB VMware 代替案: マルチキャストとユニキャストの問題が解決されました {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
+# Microsoft NLB の VMware 代替ソリューション：マルチキャストとユニキャストの問題を解決 {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
 
-## Microsoft NLBマルチキャストモード {#microsoft-nlb-multicast-mode}
+## Microsoft NLB マルチキャストモード {#microsoft-nlb-multicast-mode}
 
-ネットワーク負荷分散（NLB）マルチキャストモード構成に関するVMwareのナレッジベース（ [ ）で説明されているように、クラスタに接続する各ポートについて、スイッチまたはルータで静的ARP解決を手動で構成する必要があります。未知のネットワーク環境でNLBマルチキャストモードMicrosoft ](<https://knowledge.broadcom.com/external/article?articleNumber=414968>) ）を展開することは、複雑で骨の折れる作業になる可能性があります。
+マルチキャストモードでは、スイッチまたはルーターで静的 ARP 解決を手動で設定する必要があります。これは、クラスターに接続されている各ポートに必要です。詳細については、VMware ナレッジベースの記事[ネットワーク負荷分散(NLB)マルチキャストモードの構成](<https://knowledge.broadcom.com/external/article?articleNumber=414968>)を参照してください。不明なネットワーク環境では、マルチキャストモードで Microsoft NLB をデプロイすることは複雑で困難な場合があります。
 
-## Microsoft NLBユニキャストモード {#microsoft-nlb-unicast-mode}
+## Microsoft NLB ユニキャストモード {#microsoft-nlb-unicast-mode}
 
-Microsoft NLB ユニキャスト モードでは、ESXi/ESX ホストが仮想マシンの電源が入っているときに RARP パケットを送信しないように構成する必要があります。そのため、 [ Microsoft NLB は VMware ](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>)のユニキャスト モードでは正しく動作しません。
+ユニキャストモードでは、仮想マシンのいずれかの電源がオンになったときに ESXi/ESX ホストが RARP パケットを送信しないように設定する必要があります。そうしないと、Microsoft NLB が VMware と正しく連携しません。詳細については、VMware ナレッジベースの記事[Microsoft NLB not working properly in Unicast Mode](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>)を参照してください。
 
-## SafeKitの代替品 {#alternative-with-safekit}
+## SafeKit を使用した代替案 {#alternative-with-safekit}
 
-[ SafeKit ](</ja/best-practises/how-a-virtual-ip-address-works/>) IPアドレス構成は、特別なネットワーク構成を必要とせず、ネットワーク負荷分散はあらゆる環境で実行できます。これは、未知のスイッチやルーター、物理サーバーや仮想サーバーなど、未知のインフラストラクチャにソリューションをデプロイする必要がある場合に重要な機能です。
+SafeKit は、特別なネットワーク設定を必要としない[仮想 IP アドレス](</ja/best-practises/how-a-virtual-ip-address-works/>)を使用します。そのネットワーク負荷分散はあらゆる環境で動作します。これは、未知のインフラストラクチャ（未知のスイッチやルーター、物理サーバー、仮想サーバー）にソリューションを導入する場合に重要です。
 
 
 {{%  insert-safekit-farm-ja app="Windows"  %}}

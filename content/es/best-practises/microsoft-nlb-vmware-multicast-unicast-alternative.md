@@ -1,25 +1,26 @@
 ---
-title: "Alternativa a VMware NLB Microsoft : Solución a problemas de multidifusión y unidifusión"
+title: "Alternativa a Microsoft NLB VMware: problemas de multicast y unicast resueltos"
 canonical: "https://safekit.eviden.com/es/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "¿Problemas con el balanceo de carga de red (NLB) multicast o unicast en Microsoft en VMware? SafeKit propone un clúster farm sin SAN como una alternativa sencilla. Obtenga balanceo de carga y conmutación por error automáticos en Windows y Linux sin entradas ARP estáticas, suplantación de MAC ni configuración de red especializada."
+description: "¿Tiene problemas con el multicast o el unicast de Microsoft NLB en VMware? SafeKit ofrece una alternativa sencilla: un clúster farm con equilibrio de carga automático y conmutación por error en Windows y Linux. No requiere entradas ARP estáticas, ni suplantación de MAC, ni configuración de red especializada."
 category: "best-practises"
 lang: "es"
-topics: "Modo multidifusión NLB Microsoft , modo unidifusión NLB Microsoft , alternativa con SafeKit , ¿cómo funciona el clúster SafeKit en modo farm con Windows ?, 🔍 Explora SafeKit"
+topics: "Modo multicast de Microsoft NLB, Modo unicast de Microsoft NLB, Alternativa con SafeKit, ¿Cómo funciona el clúster SafeKit en modo farm con Windows?, 🔍 Explora SafeKit"
+translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 51 expressions"
 ---
 
-# Alternativa a VMware NLB Microsoft : Problemas de multidifusión y unidifusión resueltos {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
+# Alternativa a Microsoft NLB VMware: problemas de multicast y unicast resueltos {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
 
-## Microsoft Modo multidifusión NLB {#microsoft-nlb-multicast-mode}
+## Modo multicast de Microsoft NLB {#microsoft-nlb-multicast-mode}
 
-Como se explica en la base de conocimientos de [ sobre la configuración del modo multidifusión de balanceo de carga de red (NLB) ](<https://knowledge.broadcom.com/external/article?articleNumber=414968>) , es necesario configurar manualmente la resolución ARP estática en el conmutador o enrutador para cada puerto conectado al clúster. La implementación del modo multidifusión NLB Microsoft en un entorno de red desconocido puede resultar una tarea compleja y laboriosa.
+En el modo multicast, debe configurar manualmente la resolución ARP estática en el conmutador o el enrutador. Esto es necesario para cada puerto conectado al clúster. Para obtener más información, consulte el artículo de la base de conocimientos VMware [Configuración del modo multicast de Network Load Balancing (NLB)](<https://knowledge.broadcom.com/external/article?articleNumber=414968>). En un entorno de red desconocido, la implementación de Microsoft NLB en modo multicast puede ser compleja y exigente.
 
-## Microsoft Modo unidifusión NLB {#microsoft-nlb-unicast-mode}
+## Modo unicast de Microsoft NLB {#microsoft-nlb-unicast-mode}
 
-Con el modo unicast de Microsoft NLB, debe configurar el host ESXi/ESX para que no envíe paquetes RARP cuando cualquiera de sus máquinas virtuales esté encendida. Por eso, [ Microsoft NLB no funciona correctamente en modo unicast con VMware ](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>) .
+En el modo unicast, debe configurar el host ESXi/ESX para que no envíe paquetes RARP cuando una de sus máquinas virtuales se encienda. De lo contrario, Microsoft NLB no funcionará correctamente con VMware. Para obtener más información, consulte el artículo de la base de conocimientos VMware [Microsoft NLB no funciona correctamente en el modo Unicast](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>).
 
 ## Alternativa con SafeKit {#alternative-with-safekit}
 
-La configuración de la dirección IP virtual [ SafeKit ](</es/best-practises/how-a-virtual-ip-address-works/>) no requiere ninguna configuración de red especial y el balanceo de carga de red puede ejecutarse en cualquier entorno. Una característica importante cuando la solución debe implementarse en una infraestructura desconocida: conmutadores o enrutadores desconocidos, servidores físicos o virtuales.
+SafeKit utiliza una [dirección IP virtual](</es/best-practises/how-a-virtual-ip-address-works/>) que no requiere ninguna configuración de red especial. Su balanceo de carga de red funciona en cualquier entorno. Esto es importante cuando se implementa la solución en una infraestructura desconocida: conmutadores o routers desconocidos, servidores físicos o servidores virtuales.
 
 
 {{%  insert-safekit-farm-es app="Windows"  %}}

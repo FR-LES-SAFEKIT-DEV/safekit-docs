@@ -1,54 +1,57 @@
 ---
-title: "Het omgaan met stroomuitval en netwerkisolatie in een HA-cluster."
+title: "Omgaan met stroomuitval en netwerkisolatie in een HA-cluster"
 canonical: "https://safekit.eviden.com/nl/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "Leer hoe u netwerkisolatie en stroomuitval in een high availability-cluster beheert. SafeKit biedt een SANless-architectuur met geïntegreerde split-brain-controlemechanismen en automatische resynchronisatie om data-integriteit en 24/7 uptime te garanderen zonder gedeelde schijf."
+description: "Leer hoe u netwerkisolatie en stroomuitval beheert in een cluster met hoge beschikbaarheid. SafeKit bevat split-brain-checkers en automatische resynchronisatie. Deze zorgen voor gegevensintegriteit en 24/7 uptime zonder gedeelde schijf."
 category: "best-practises"
 lang: "nl"
-topics: "Wat zijn de verschillende scenario's bij netwerkisolatie in een cluster? Wat zijn de verschillende scenario's bij stroomuitval in een cluster? 🔍 Ontdek SafeKit"
+topics: "Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?, Wat zijn de verschillende scenario's in geval van een stroomstoring in een cluster?, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 ---
 
-# Het afhandelen van stroomuitval en netwerkisolatie in een HA-cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# Omgaan met stroomuitval en netwerkisolatie in een HA-cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
 
 
 {{%  insert-safekit-network-isolation-nl  %}}
  
 
-## Wat zijn de verschillende scenario's in geval van stroomuitval in een cluster? {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
+## Wat zijn de verschillende scenario's in geval van een stroomstoring in een cluster? {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
 
-### Stroomuitval primair knooppunt {#primary-node-power-outage}
+In de volgende scenario's is node 1 in eerste instantie de primaire node. Node 2 is in eerste instantie de secundaire node.
 
-Wanneer een stroomstoring alleen het primaire knooppunt uitschakelt:
+### Stroomstoring primaire node {#primary-node-power-outage}
 
-  * Er vindt een automatische failover plaats op het secundaire knooppunt, dat ALONE wordt en de applicatie opnieuw opstart.
-  * Wanneer knooppunt 1 opnieuw wordt opgestart, krijgt het de status SEDOND na resynchronisatie van de gerepliceerde gegevens.
-  * De rollen van primair en secundair kunnen indien nodig door een beheerder worden verwisseld.
+Wanneer een stroomstoring alleen de primaire node stopt:
 
-
-### Stroomuitval secundaire node {#secondary-node-power-outage}
-
-Wanneer een stroomstoring alleen het secundaire knooppunt uitschakelt:
-
-  * Er vindt geen failover plaats, de primaire server wordt ALONE en de applicatie blijft op node 1 draaien.
-  * Wanneer knooppunt 2 opnieuw wordt opgestart, krijgt het de status SEDOND na resynchronisatie van de gerepliceerde gegevens.
+  * SafeKit schakelt automatisch over naar de secundaire node. Node 2 wordt ALONE en start de applicatie opnieuw op.
+  * Wanneer node 1 opnieuw opstart, synchroniseert het de gerepliceerde gegevens opnieuw. Daarna wordt het SECOND.
+  * Indien nodig kan een beheerder de primaire en secundaire rollen omwisselen.
 
 
-### Algemene stroomuitval - geval 1 {#general-power-outage---case-1}
+### Stroomstoring secundaire node {#secondary-node-power-outage}
 
-Wanneer een stroomstoring beide knooppunten uitschakelt, is het standaardgedrag als volgt:
+Wanneer een stroomstoring alleen de secundaire node stopt:
 
-  * beide knooppunten gaan naar STOP,
-  * Wanneer knooppunt 1 opnieuw wordt opgestart, gaat het niet naar de ALONE-status en start het de applicatie niet opnieuw op, omdat het niet weet of het over de meest recente gegevens beschikt. Het gaat dus naar de WAIT-status en wacht op de herstart van het andere knooppunt.
-  * Wanneer knooppunt 2 opnieuw wordt opgestart, keren beide knooppunten terug naar hun vorige PRIM/SECOND-status.
+  * Er vindt geen failover plaats. Node 1 wordt ALONE. De toepassing blijft op node 1 draaien.
+  * Wanneer node 2 opnieuw opstart, synchroniseert het de gerepliceerde gegevens opnieuw. Daarna wordt het SECOND.
 
 
-### Algemene stroomuitval - geval 2 {#general-power-outage---case-2}
+### Stroomstoring op beide nodes - geval 1 {#general-power-outage---case-1}
 
-Wanneer een stroomstoring beide knooppunten uitschakelt, is het gedrag met syncdelta als volgt:
+Wanneer een stroomstoring beide nodes uitschakelt, is het standaardgedrag als volgt:
 
-  * Als syncdelta bijvoorbeeld in de configuratie op 10 minuten is ingesteld, betekent dit dat de start van een node wordt geaccepteerd, zelfs als de data 10 minuten achterloopt op de laatste synchronisatie.
-  * Wanneer knooppunt 1 opnieuw wordt opgestart, gaat het naar de ALONE-status en herstart de applicatie, ervan uitgaande dat de herstart binnen 10 minuten na de stroomuitval plaatsvindt.
-  * Wanneer knooppunt 2 opnieuw wordt opgestart, wordt het na de resynchronisatie van de gerepliceerde gegevens het TWEEDE knooppunt.
-  * Let op: als knooppunt 2 als eerste opnieuw wordt opgestart, wordt het ALONE en wordt knooppunt 1 SECOND bij het opstarten.
+  * Beide nodes gaan naar de STOP-status.
+  * Wanneer node 1 opnieuw opstart, gaat het niet naar de ALONE-status. Het herstart de applicatie niet. Het kan niet weten of de gegevens up-to-date zijn. Dus gaat het naar de WAIT-status en wacht het tot de andere node opnieuw opstart.
+  * Wanneer node 2 opnieuw opstart, keren beide nodes terug naar hun vorige status: PRIM en SECOND.
+
+
+### Stroomstoring op beide nodes - geval 2 {#general-power-outage---case-2}
+
+Wanneer een stroomstoring beide nodes stopt, is het gedrag met de parameter `syncdelta` als volgt:
+
+  * In dit voorbeeld is `syncdelta` ingesteld op 10 minuten in de configuratie. Een node kan dan starten, zelfs als de gegevens tot 10 minuten achterlopen op de laatste synchronisatie.
+  * Wanneer node 1 binnen 10 minuten na de stroomuitval opnieuw opstart, gaat het naar de ALONE-status. De toepassing wordt opnieuw gestart.
+  * Wanneer node 2 opnieuw opstart, synchroniseert het de gerepliceerde gegevens opnieuw. Daarna wordt het SECOND.
+  * Opmerking: als node 2 als eerste opnieuw opstart, wordt het ALONE. Node 1 wordt dan SECOND wanneer het opstart.
 
 
 

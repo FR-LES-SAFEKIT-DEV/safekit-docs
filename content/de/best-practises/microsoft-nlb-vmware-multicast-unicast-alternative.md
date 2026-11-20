@@ -1,25 +1,26 @@
 ---
-title: "Microsoft NLB VMware-Alternative: Multicast- und Unicast-Probleme gelöst"
+title: "Microsoft NLB VMware Alternative: Multicast- und Unicast-Probleme gelöst"
 canonical: "https://safekit.eviden.com/de/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "Haben Sie Probleme mit dem NLB-Multicast oder Unicast Microsoft in VMware? SafeKit bietet mit dem SANless-Cluster farm eine einfache Alternative. Profitieren Sie von automatischem Load Balancing und Failover auf Windows und Linux ohne statische ARP-Einträge, MAC-Spoofing oder spezielle Netzwerkkonfiguration."
+description: "Haben Sie Probleme mit Microsoft NLB Multicast oder Unicast in VMware? SafeKit bietet eine einfache Alternative: einen Farm-Cluster mit automatischer Lastverteilung und Failover unter Windows und Linux. Es sind keine statischen ARP-Einträge, kein MAC-Spoofing und keine spezielle Netzwerkkonfiguration erforderlich."
 category: "best-practises"
 lang: "de"
-topics: "Microsoft NLB-Multicast-Modus, Microsoft NLB-Unicast-Modus, Alternative zu SafeKit , Wie funktioniert der SafeKit Cluster im farm -Modus mit Windows ?, 🔍 SafeKit entdecken"
+topics: "Microsoft NLB-Multicast-Modus, Microsoft NLB Unicast-Modus, Alternative mit SafeKit, Wie funktioniert das SafeKit-Cluster im farm-Modus mit Windows?, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 54 expressions"
 ---
 
-# Microsoft NLB VMware-Alternative: Multicast- und Unicast-Probleme behoben {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
+# Microsoft NLB VMware Alternative: Multicast- und Unicast-Probleme gelöst {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
 
 ## Microsoft NLB-Multicast-Modus {#microsoft-nlb-multicast-mode}
 
-Wie in der VMware-Wissensdatenbank [ zur Konfiguration des Multicast-Modus für Netzwerklastausgleich (NLB) ](<https://knowledge.broadcom.com/external/article?articleNumber=414968>) erläutert, muss die statische ARP-Auflösung am Switch oder Router für jeden Port, der mit dem Cluster verbunden ist, manuell konfiguriert werden. Die Bereitstellung des NLB-Multicast-Modus Microsoft in einer unbekannten Netzwerkumgebung kann sich als komplex und aufwendig erweisen.
+Im Multicast-Modus müssen Sie die statische ARP-Auflösung auf dem Switch oder Router manuell konfigurieren. Dies ist für jeden mit dem Cluster verbundenen Port erforderlich. Weitere Informationen finden Sie im VMware Knowledge Base-Artikel [Konfiguration des Multicast-Modus von Network Load Balancing (NLB)](<https://knowledge.broadcom.com/external/article?articleNumber=414968>). In einer unbekannten Netzwerkumgebung kann die Bereitstellung von Microsoft NLB im Multicast-Modus komplex und anspruchsvoll sein.
 
 ## Microsoft NLB Unicast-Modus {#microsoft-nlb-unicast-mode}
 
-Im Unicast-Modus des NLB-Speichers Microsoft muss der ESXi/ESX-Host so konfiguriert werden, dass er keine RARP-Pakete sendet, sobald eine seiner virtuellen Maschinen eingeschaltet wird. Daher funktioniert der NLB-Speicher [ Microsoft im Unicast-Modus mit VMware ](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>) nicht ordnungsgemäß.
+Im Unicast-Modus müssen Sie den ESXi/ESX-Host so konfigurieren, dass er keine RARP-Pakete sendet, wenn eine seiner virtuellen Maschinen eingeschaltet wird. Andernfalls funktioniert Microsoft NLB nicht ordnungsgemäß mit VMware. Weitere Informationen finden Sie im VMware Knowledge-Base-Artikel [Microsoft NLB funktioniert nicht ordnungsgemäß im Unicast-Modus](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>).
 
 ## Alternative mit SafeKit {#alternative-with-safekit}
 
-Die Konfiguration der virtuellen IP-Adressen [ SafeKit ](</de/best-practises/how-a-virtual-ip-address-works/>) erfordert keine spezielle Netzwerkkonfiguration, und der Netzwerklastausgleich funktioniert in jeder Umgebung. Dies ist besonders wichtig, wenn die Lösung in einer unbekannten Infrastruktur eingesetzt werden muss: unbekannte Switches oder Router, physische oder virtuelle Server.
+SafeKit verwendet eine [virtuelle IP-Adresse](</de/best-practises/how-a-virtual-ip-address-works/>), die keine spezielle Netzwerkkonfiguration erfordert. Seine Netzwerklastverteilung läuft in jeder Umgebung. Dies ist wichtig, wenn Sie die Lösung in einer unbekannten Infrastruktur bereitstellen: unbekannte Switches oder Router, physische Server oder virtuelle Server.
 
 
 {{%  insert-safekit-farm-de app="Windows"  %}}

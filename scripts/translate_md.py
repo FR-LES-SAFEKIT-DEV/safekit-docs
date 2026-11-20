@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-20.1"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-20.2"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -57,6 +57,20 @@ def cjk_bold_pairs(text):
                 parts[i - 1], parts[i] = parts[i - 1] + m.group(1).rstrip() + " ", m.group(2)
         out.append("**".join(parts))
     return "\n".join(out)
+
+
+def link_quotes(t):
+    """Guillemets ajoutés par Google autour d'un texte de lien (titre d'article cité), souvent mal appariés :
+    "l’article [intitulé Microsoft NLB … »](url)", "[„ Microsoft NLB …“](url)", "《 [Microsoft NLB …》](url)" -> "[Microsoft NLB …](url)".
+    Appliqué seulement si la ligne source ne contient aucun guillemet."""
+    Q = "\"“”«»„「」《》『』"
+    t = re.sub(r"[%s]\s*\[" % Q, "[", t)                     # guillemet ouvrant avant le lien
+    t = re.sub(r"(?<=\s)'\s*\[", "[", t)
+    t = re.sub(r"\[\s*(?:intitulé|intitolato|titulado|intitulado|met de titel|بعنوان)\s+", "[", t)
+    t = re.sub(r"\[\s*[%s']\s*" % Q, "[", t)                 # guillemets au début / à la fin du texte du lien
+    t = re.sub(r"\s*[%s']\s*\]\(" % Q, "](", t)
+    t = re.sub(r"(\]\([^)\s]*\))\s?[%s]" % Q, r"\1", t)     # guillemet fermant après le lien
+    return t
 
 
 def fm_quotes(t, delim, lang):
@@ -970,6 +984,8 @@ def main():
                 t = re.sub(r"^((?:[*_\[(]|<[^>]+>)*)([a-zà-öø-ÿ])", lambda x: x.group(1) + x.group(2).upper(), t, count=1)
             if idx < fm_end and after in ('"', "'"):
                 t = fm_quotes(t, after, lang)
+            if "](" in t and not re.search(r"[\"“”«»„「」《》『』]", src_line):
+                t = link_quotes(t)
             lines[idx] = before + t + after
     for row, cells in tables.items():
         lines[row] = "|".join(cells)

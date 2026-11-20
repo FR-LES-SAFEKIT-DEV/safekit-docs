@@ -1,57 +1,58 @@
 ---
-title: "Gestion des pannes de courant et de l'isolation réseau dans un cluster HA"
+title: "Gestion des pannes de courant et de l’isolement du réseau dans un cluster HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "Découvrez comment gérer l'isolation réseau et les coupures de courant dans un cluster à haute disponibilité. SafeKit propose une architecture sans SAN avec des vérificateurs de split-brain intégrés et une resynchronisation automatique pour garantir l'intégrité des données et une disponibilité 24h/24 et 7j/7 sans disque partagé."
+description: "Découvrez comment gérer l’isolement du réseau et les pannes de courant dans un cluster de haute disponibilité. SafeKit inclut des vérificateurs de cerveau divisé et une resynchronisation automatique. Ils garantissent l’intégrité des données et une disponibilité 24h/24 et 7j/7 sans disque partagé."
 category: "best-practises"
 lang: "fr"
-topics: "Quels sont les différents scénarios en cas d'isolement réseau dans un cluster ?, Quels sont les différents scénarios en cas de coupure de courant dans un cluster ?, 🔍 Explorez SafeKit"
+topics: "Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ?, Quels sont les différents scénarios en cas de panne de courant dans un cluster ?, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 59 expressions"
 ---
 
-# Gestion des pannes de courant et de l'isolation réseau dans un cluster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
+# Gestion des pannes de courant et de l’isolement du réseau dans un cluster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}
 
 
 {{%  insert-safekit-network-isolation-fr  %}}
  
 
-## Quels sont les différents scénarios en cas de coupure de courant dans un cluster ? {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
+## Quels sont les différents scénarios en cas de panne de courant dans un cluster ? {#what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster}
 
-### Coupure de courant du nœud primaire {#primary-node-power-outage}
+Dans les scénarios suivants, le nœud 1 est initialement le nœud principal. Le nœud 2 est initialement le nœud secondaire.
 
-Lorsqu'une panne de courant arrête uniquement le nœud primaire :
+### Panne de courant du nœud principal {#primary-node-power-outage}
 
-  * il y a un basculement automatique sur le nœud secondaire, qui devient ALONE et redémarre l'application,
-  * lorsque le nœud 1 est redémarré, il devient SEDOND après resynchronisation des données répliquées,
-  * les rôles de primaire et de secondaire peuvent être échangés par un administrateur si nécessaire.
+Lorsqu’une panne de courant arrête uniquement le nœud principal :
 
-
-### Coupure de courant du nœud secondaire {#secondary-node-power-outage}
-
-Lorsqu'une panne de courant arrête uniquement le nœud secondaire :
-
-  * il n'y a pas de basculement, le primaire devient ALONE et l'application continue son exécution sur le nœud 1,
-  * lorsque le nœud 2 est redémarré, il devient SEDOND après resynchronisation des données répliquées.
+  * SafeKit bascule automatiquement sur le nœud secondaire. Le nœud 2 devient ALONE et redémarre l’application.
+  * Lorsque le nœud 1 redémarre, il resynchronise les données répliquées. Il devient alors SECOND.
+  * Si nécessaire, un administrateur peut permuter les rôles principal et secondaire.
 
 
-### Coupure de courant générale - cas 1 {#general-power-outage---case-1}
+### Panne de courant du nœud secondaire {#secondary-node-power-outage}
 
-Lorsqu'une panne de courant arrête les deux nœuds, le comportement par défaut est :
+Lorsqu’une panne de courant arrête uniquement le nœud secondaire :
 
-  * les deux nœuds passent à STOP,
-  * lorsque le nœud 1 est redémarré, il ne passe pas à l'état ALONE et ne redémarre pas l'application car il ne sait pas s'il dispose des données à jour. Il passe donc à l'état WAIT en attendant le redémarrage de l'autre nœud,
-  * lorsque le nœud 2 est redémarré, les deux nœuds reviennent à leurs états PRIM/SECOND précédents.
-
-
-### Coupure de courant générale - cas 2 {#general-power-outage---case-2}
-
-Lorsqu'il y a un isolement du réseau, le comportement avec un split-brain checker est :
-
-  * un split-brain checker a été configuré avec l'adresse IP d'un routeur (un témoin),
-  * en cas d'isolement du réseau, avant de passer en ALONE, les deux nœuds testent l'adresse IP,
-  * le nœud qui peut accéder à l'adresse IP passe à ALONE, l'autre passe à WAIT,
-  * lorsque l'isolation est réparée, le nœud WAIT resynchronise ses données et devient SECOND.
+  * Aucun basculement ne se produit. Le nœud 1 devient ALONE. L’application continue de s’exécuter sur le nœud 1.
+  * Lorsque le nœud 2 redémarre, il resynchronise les données répliquées. Il devient alors SECOND.
 
 
-Remarque : Si le témoin est en panne ou déconnecté, les deux nœuds passent à WAIT et l'application n'est plus en cours d'exécution. C'est pourquoi vous devez choisir un témoin robuste comme un routeur.
+### Panne de courant sur les deux nœuds - cas 1 {#general-power-outage---case-1}
+
+Lorsqu’une panne de courant arrête les deux nœuds, le comportement par défaut est le suivant :
+
+  * Les deux nœuds passent à l’état STOP.
+  * Lorsque le nœud 1 redémarre, il ne passe pas à l’état ALONE. Il ne redémarre pas l’application. Il ne peut pas savoir si ses données sont à jour. Il passe donc à l’état WAIT et attend que l’autre nœud redémarre.
+  * Lorsque le nœud 2 redémarre, les deux nœuds reprennent leurs états précédents : PRIM et SECOND.
+
+
+### Panne de courant sur les deux nœuds - cas 2 {#general-power-outage---case-2}
+
+Lorsqu’une panne de courant arrête les deux nœuds, le comportement avec le paramètre `syncdelta` est le suivant :
+
+  * Dans cet exemple, `syncdelta` est défini sur 10 minutes dans la configuration. Un nœud peut alors démarrer même si ses données ont jusqu’à 10 minutes de retard par rapport à la dernière synchronisation.
+  * Lorsque le nœud 1 redémarre dans les 10 minutes suivant la panne de courant, il passe à l’état ALONE. Il redémarre l’application.
+  * Lorsque le nœud 2 redémarre, il resynchronise les données répliquées. Il devient alors SECOND.
+  * Remarque : si le nœud 2 redémarre en premier, il devient ALONE. Le nœud 1 devient alors SECOND lorsqu’il démarre.
+
 
 
 {{%  insert-safekit-hub-fr  %}}

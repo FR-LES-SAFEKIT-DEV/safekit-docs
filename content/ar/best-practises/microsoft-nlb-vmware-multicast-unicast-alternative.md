@@ -1,25 +1,26 @@
 ---
-title: "Microsoft بديل NLB لـ VMware: تم حل مشكلات البث المتعدد والبث الأحادي"
+title: "بديل Microsoft NLB VMware: حل مشكلات البث المتعدد والبث الأحادي"
 canonical: "https://safekit.eviden.com/ar/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "هل تواجه صعوبة في استخدام خاصية البث المتعدد أو البث الأحادي مع موازنة الأحمال (NLB) في بيئة VMware مع Microsoft ؟ يقترح SafeKit مجموعة farm بدون شبكة تخزين (SAN) كبديل بسيط. احصل على موازنة أحمال تلقائية وتجاوز الأعطال على Windows و Linux بدون الحاجة إلى إدخالات ARP ثابتة أو انتحال عناوين MAC أو تكوين شبكة متخصص."
+description: "هل تواجه مشكلة في استخدام خاصية البث المتعدد أو البث الأحادي في Microsoft NLB في VMware؟ يوفر SafeKit بديلاً بسيطًا: مجموعة farm مع موازنة تحميل تلقائية وتجاوز للأعطال على نظامي التشغيل Windows و Linux. لا يتطلب هذا الحل أي إدخالات ARP ثابتة، ولا انتحال عنوان MAC، ولا تكوين شبكة متخصص."
 category: "best-practises"
 lang: "ar"
-topics: "وضع البث المتعدد لـ NLB لـ Microsoft ، وضع البث الأحادي لـ NLB Microsoft ، بديل مع SafeKit ، كيف تعمل مجموعة SafeKit في وضع farm مع Windows ؟، 🔍 استكشف SafeKit"
+topics: "وضع البث المتعدد Microsoft NLB، وضع البث الأحادي Microsoft NLB، بديل باستخدام SafeKit، كيف تعمل مجموعة SafeKit في وضع farm مع Windows؟، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 44 expressions"
 ---
 
-# Microsoft بديل VMware لموازنة تحميل الشبكة: تم حل مشكلات البث المتعدد والبث الأحادي {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
+# بديل Microsoft NLB VMware: حل مشكلات البث المتعدد والبث الأحادي {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}
 
-## وضع البث المتعدد لـ NLB Microsoft {#microsoft-nlb-multicast-mode}
+## وضع البث المتعدد Microsoft NLB {#microsoft-nlb-multicast-mode}
 
-كما هو موضح في قاعدة معارف VMware الخاصة بـ [ حول تكوين وضع البث المتعدد لموازنة تحميل الشبكة (NLB) ](<https://knowledge.broadcom.com/external/article?articleNumber=414968>) ، ستحتاج إلى تكوين حل ARP الثابت يدويًا على المحول أو الموجه لكل منفذ متصل بالمجموعة. قد يكون نشر وضع البث المتعدد لموازنة تحميل الشبكة (NLB) Microsoft في بيئة شبكة غير معروفة مهمة معقدة وشاقة.
+في وضع البث المتعدد، يجب عليك تكوين دقة ARP ثابتة يدويًا على المحول أو الموجه. وهذا مطلوب لكل منفذ متصل بالمجموعة. للحصول على التفاصيل، راجع مقالة قاعدة معارف VMware [حول تكوين وضع البث المتعدد لموازنة تحميل الشبكة (NLB)](<https://knowledge.broadcom.com/external/article?articleNumber=414968>). في بيئة شبكة غير معروفة، يمكن أن يكون نشر Microsoft NLB في وضع البث المتعدد معقدًا ومتطلبًا.
 
-## Microsoft وضع البث الأحادي NLB {#microsoft-nlb-unicast-mode}
+## وضع البث الأحادي Microsoft NLB {#microsoft-nlb-unicast-mode}
 
-في وضع البث الأحادي لـ NLB Microsoft ، يجب عليك ضبط مضيف ESXi/ESX بحيث لا يرسل حزم RARP عند تشغيل أي من أجهزته الافتراضية. ولهذا السبب، لا يعمل وضع البث الأحادي لـ NLB [ Microsoft بشكل صحيح مع VMware ](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>) .
+في وضع البث الأحادي، يجب عليك تكوين مضيف ESXi/ESX بحيث لا يرسل حزم RARP عند تشغيل إحدى أجهزته الافتراضية. وإلا، فلن يعمل Microsoft NLB بشكل صحيح مع VMware. للحصول على التفاصيل، راجع مقالة قاعدة معارف VMware [Microsoft NLB لا يعمل بشكل صحيح في وضع البث الأحادي](<https://knowledge.broadcom.com/external/article/344421/microsoft-nlb-not-working-properly-in-un.html>).
 
-## بديل مع SafeKit {#alternative-with-safekit}
+## بديل باستخدام SafeKit {#alternative-with-safekit}
 
-لا يتطلب تكوين عنوان IP الظاهري [ SafeKit ](</ar/best-practises/how-a-virtual-ip-address-works/>) أي إعدادات خاصة للشبكة، ويمكن تشغيل موازنة أحمال الشبكة في أي بيئة. تُعد هذه ميزة مهمة عند نشر الحل في بنية تحتية غير معروفة: مثل المحولات أو أجهزة التوجيه أو الخوادم الفعلية أو الافتراضية غير المعروفة.
+يستخدم SafeKit [عنوان IP ظاهريًا](</ar/best-practises/how-a-virtual-ip-address-works/>) لا يتطلب أي تهيئة خاصة للشبكة. ويعمل موازن تحميل الشبكة الخاص به في أي بيئة. وهذا أمر مهم عند نشر الحل في بنية تحتية غير معروفة: مثل المحولات أو الموجهات غير المعروفة، أو الخوادم المادية أو الخوادم الافتراضية.
 
 
 {{%  insert-safekit-farm-ar app="Windows"  %}}
