@@ -1,7 +1,7 @@
 ---
 title: "How to Implement Redundant Servers with Simple HA Software"
 canonical: "https://safekit.eviden.com/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
-description: "Learn how to implement redundant servers with a simple software-only approach. SafeKit proposes a SANless architecture for Windows and Linux, providing real-time data replication and automatic failover without shared disks or specialized IT skills."
+description: "Learn how to implement redundant servers with a simple software-only approach. SafeKit provides real-time data replication and automatic failover on Windows and Linux. It requires no shared disks and no specialized IT skills."
 category: "best-practises"
 lang: "en"
 topics: "How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?, 🔍 Explore SafeKit"
@@ -17,7 +17,7 @@ topics: "How to implement active/passive redundant servers with real-time replic
 ![Redundant servers with real-time file replication and failover](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-In a mirror cluster, the SafeKit software is installed on two physical or virtual servers running Windows or Linux (on premise or in the Cloud). The primary server is the active server and runs a critical application. The secondary is a passive redundant server receiving in real-time all modifications made by the application inside its files. Clients are connected to a [virtual IP address](</best-practises/how-a-virtual-ip-address-works/#virtual-ip-same-subnet-failover>). If the primary server is down, SafeKit restarts automatically the critical application on the passive redundant server which becomes primary and switches the virtual IP address. When the failed server is restarted, it is automatically resynchronized and becomes the passive redundant server running as secondary.
+In a mirror cluster, the SafeKit software is installed on two servers. The servers are physical or virtual. They run Windows or Linux, on premises or in the cloud. The primary server is the active server. It runs the critical application. The secondary server is a passive redundant server. It receives in real time all the changes made by the application in its files. Clients connect to a [virtual IP address](</best-practises/how-a-virtual-ip-address-works/#virtual-ip-same-subnet-failover>). If the primary server fails, SafeKit automatically restarts the critical application on the secondary server. This server becomes primary and takes over the virtual IP address. When the failed server restarts, SafeKit automatically resynchronizes its data. This server then becomes the passive redundant server, in the secondary state.
 
 ## How to implement active/active redundant servers with network load balancing and failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
@@ -27,7 +27,7 @@ In a mirror cluster, the SafeKit software is installed on two physical or virtua
 ![Redundant servers with network load balancing and failover](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
 
 
-In a <span class="notranslate farm-term" translate="no">farm</span> cluster, the SafeKit software is installed on redundant servers running Windows or Linux (on premise or in the Cloud). All redundant servers are active and run a same critical front-end application. Clients are connected to a [virtual IP address](</best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). TCP sessions are load balanced between all redundant servers . If one server is down, SafeKit automatically reconfigures load balancing of TCP sessions between the remaining active servers. When the failed server is restarted, it is automatically reintegrated as an active redundant server and receives new TCP sessions.
+In a <span class="notranslate farm-term" translate="no">farm</span> cluster, the SafeKit software is installed on several redundant servers. The servers run Windows or Linux, on premises or in the cloud. All redundant servers are active. They run the same critical front-end application. Clients connect to a [virtual IP address](</best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). TCP sessions are load balanced between all redundant servers. If one server fails, SafeKit automatically reconfigures the load balancing of TCP sessions between the remaining active servers. When the failed server restarts, SafeKit automatically reintegrates it as an active redundant server. This server then receives new TCP sessions.
 
 
 {{%  insert-safekit-hub-en  %}}

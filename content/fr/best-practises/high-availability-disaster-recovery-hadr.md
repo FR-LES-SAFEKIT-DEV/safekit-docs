@@ -1,142 +1,143 @@
 ---
-title: "Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre"
+title: "Combinaison de la haute disponibilité SafeKit avec les sauvegardes de reprise après sinistre"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-disaster-recovery-hadr/"
-description: "Élaborez une stratégie de haute disponibilité et de reprise après sinistre (HA/DR) robuste en combinant SafeKit pour la réplication synchrone (RPO=0) avec une sauvegarde asynchrone pour la reprise après sinistre hors site. Garantissez la disponibilité des applications et l'intégrité des données 24h/24 et 7j/7 sous Windows et Linux grâce à cette approche à deux niveaux."
+description: "Construisez une stratégie HA/DR résiliente en combinant SafeKit pour la réplication synchrone (RPO = 0) avec une sauvegarde asynchrone pour la reprise après sinistre hors site. Assurez la disponibilité des applications 24h/24 et 7j/7 et l’intégrité des données sous Windows et Linux avec cette approche à double couche."
 category: "best-practises"
 lang: "fr"
-topics: "Réplication synchrone SafeKit pour la haute disponibilité vs. réplication asynchrone de sauvegarde pour la reprise après sinistre, Table des matières, HADR Synchrone : Zéro perte de données sur réseaux rapides (LAN/VLAN), HADR Asynchrone : Reprise d'activité sur réseaux lents (WAN), Comment combiner HADR et sauvegarde pour une résilience totale du système, Comparatif des architectures HADR : Réseaux rapides vs Réseaux lents, Guide Vidéo : Comment implémenter le HADR avec SafeKit, 🔍 Explorez SafeKit"
+topics: "Réplication synchrone SafeKit pour la haute disponibilité (HA) vs. réplication de sauvegarde asynchrone pour la reprise après sinistre (DR), Table des matières, HADR synchrone : aucune perte de données sur les réseaux rapides (LAN/VLAN), HADR asynchrone : reprise après sinistre sur des réseaux lents (WAN), Comment combiner HADR et la sauvegarde pour une résilience système totale, Comparaison des architectures HADR : réseaux rapides et lents, Guide vidéo : Comment mettre en œuvre HADR avec SafeKit, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 59 expressions"
 ---
 
-# Combinaison de la haute disponibilité SafeKit et des sauvegardes de reprise après sinistre {#combining-safekit-high-availability-with-disaster-recovery-backups}
+# Combinaison de la haute disponibilité SafeKit avec les sauvegardes de reprise après sinistre {#combining-safekit-high-availability-with-disaster-recovery-backups}
 
-## Réplication synchrone SafeKit pour la haute disponibilité vs. réplication asynchrone de sauvegarde pour la reprise après sinistre {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
+## Réplication synchrone SafeKit pour la haute disponibilité (HA) vs. réplication de sauvegarde asynchrone pour la reprise après sinistre (DR) {#synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr}
 
-SafeKit offre une **architecture de Haute Disponibilité et de Reprise après Sinistre (HADR)** logicielle et flexible qui élimine le besoin de stockage partagé coûteux. En implémentant une **réplication synchrone** via un VLAN étendu entre le Serveur 1 et le Serveur 2, SafeKit garantit que vos applications critiques restent « en vie » et cohérentes entre deux sites redondants.
+SafeKit fournit une **architecture de haute disponibilité et de reprise après sinistre (HADR)** flexible et basée sur un logiciel qui élimine le besoin d’un stockage partagé coûteux. En mettant en œuvre **la réplication synchrone** sur un VLAN étendu entre le serveur 1 et le serveur 2, SafeKit garantit que vos applications critiques restent « actives » et cohérentes entre deux sites redondants.
 
-Pour répondre aux contraintes des réseaux WAN à faible bande passante, SafeKit est conçu pour être couplé à des **solutions de sauvegarde et de restauration**. Cela permet aux organisations de maintenir une disponibilité 24h/24 et 7j/7 grâce au basculement automatique, tout en sécurisant les données historiques pour une reprise après sinistre hors site.
+Pour répondre aux contraintes des WAN à faible bande passante, SafeKit est conçu pour être associé à **des solutions de sauvegarde et de restauration**. Cela permet aux organisations de maintenir une disponibilité 24h/24 et 7j/7 grâce au basculement automatique tout en sécurisant les données historiques pour la reprise après sinistre hors site.
 
-Par conséquent, l'environnement est protégé contre les défaillances matérielles ou logicielles via SafeKit, et sécurisé contre les erreurs logiques et les cybermenaces telles que les ransomwares grâce à la solution de sauvegarde.
+Par conséquent, l’environnement est protégé contre les pannes matérielles ou logicielles via SafeKit, et sécurisé contre les erreurs logiques et les cybermenaces telles que les rançongiciels grâce à la solution de sauvegarde.
 
 
-![Un schéma technique montrant pourquoi la haute disponibilité (SafeKit) et les sauvegardes sont complémentaires : SafeKit gère le basculement matériel/logiciel via la réplication synchrone, tandis que la sauvegarde asynchrone protège contre les ransomwares et les erreurs logiques.](/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg "w:512")
+![Un schéma technique montrant pourquoi la haute disponibilité (SafeKit) et les sauvegardes sont complémentaires : SafeKit gère le basculement matériel/logiciel via la réplication synchrone, tandis que la sauvegarde asynchrone protège contre les rançongiciels et les erreurs logiques.](/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg "w:512")
 
+**Haute disponibilité avec SafeKit et reprise après sinistre avec des sauvegardes**
 
 ## Table des matières {#table-of-contents}
 
-  * [HADR Synchrone : Zéro perte de données sur réseaux rapides (LAN/VLAN)](#synchronous-hadr-fast-network)
-  * [HADR Asynchrone : Reprise d'activité sur réseaux lents (WAN)](#asynchronous-hadr-slow-network)
-  * [Comment combiner HADR et sauvegarde pour une résilience totale](#hadr-resilience-strategy)
-  * [Comparatif des architectures HADR : réseaux rapides vs lents](#hadr-architectures-comparison)
-  * [Guide Vidéo : Comment implémenter le HADR avec SafeKit](#videoguide-hadr-safekit)
-  * [🔍 Explorez SafeKit
+  * [HADR synchrone : aucune perte de données sur les réseaux rapides (LAN/VLAN)](#synchronous-hadr-fast-network)
+  * [HADR asynchrone : reprise après sinistre sur des réseaux lents (WAN)](#asynchronous-hadr-slow-network)
+  * [Comment combiner HADR et la sauvegarde pour une résilience système totale](#hadr-resilience-strategy)
+  * [Comparaison des architectures HADR : réseaux rapides et lents](#hadr-architectures-comparison)
+  * [Guide vidéo : Comment mettre en œuvre HADR avec SafeKit](#videoguide-hadr-safekit)
+  * [🔍 Explorez SafeKit](#hub)
 
 
 
 {{%  insert-safekit-4-buttons-fr  %}}
  
 
-## HADR Synchrone : Zéro perte de données sur réseaux rapides (LAN/VLAN) {#synchronous-hadr-fast-network}
+## HADR synchrone : aucune perte de données sur les réseaux rapides (LAN/VLAN) {#synchronous-hadr-fast-network}
 
-### Comment implémenter le HADR sur un réseau rapide ? {#hadr-fast-network-architecture}
-
-
-![Architecture combinant la Haute Disponibilité et la Reprise d'Activité (HADR) sans disques partagés](/wp-content/uploads/2023/02/remote-datacenters.png "w:256")
+### Comment mettre en œuvre HADR sur un réseau rapide ? {#hadr-fast-network-architecture}
 
 
-Pour implémenter le HADR sur un réseau rapide, déployez deux nœuds sur des sites distants afin d'assurer simultanément la Haute Disponibilité et la Reprise d'Activité. Cette configuration garantit que votre application reste disponible même en cas de défaillance complète d'un site, sans la complexité d'une infrastructure de stockage partagée.
-
-### Pourquoi utiliser une solution HADR SANless pour les réseaux rapides ? {#sanless-hadr-solution}
-
-Une solution SANless telle que SafeKit est essentielle car elle réplique les données de manière synchrone et en temps réel entre deux nœuds, sans disques partagés. Comme la réplication synchrone garantit une perte de données nulle (RPO=0), le logiciel peut déclencher un basculement automatique de l'application instantanément en cas de défaillance matérielle ou logicielle.
-
-### Quels sont les prérequis réseau pour le HADR synchrone ? {#extended-lan-vlan-requirements}
-
-Le HADR synchrone nécessite un LAN étendu ou un VLAN étendu (stretched VLAN) pour trois raisons critiques :
-
-  * **Basculement de l'IP virtuelle :** Un sous-réseau unique est nécessaire pour basculer automatiquement l'[adresse IP virtuelle](</fr/best-practises/how-a-virtual-ip-address-works/>) entre les nœuds.
-  * **Faible latence :** La [réplication synchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) sans perte de données nécessite généralement un temps d'aller-retour réseau (RTT) inférieur à 5ms.
-  * **Bande passante élevée :** Une connexion de 1 Gb/s ou plus est requise pour garantir une resynchronisation rapide des données lors d'un retour après défaillance (failback).
+![Architecture combinant la haute disponibilité et la reprise après sinistre (HADR) sans disques partagés](/wp-content/uploads/2023/02/remote-datacenters.png "w:256")
 
 
-## HADR Asynchrone : Reprise d'activité sur réseaux lents (WAN) {#asynchronous-hadr-slow-network}
+Pour mettre en œuvre HADR sur un réseau rapide, déployez deux nœuds sur des sites distants pour fournir simultanément une haute disponibilité et une reprise après sinistre. Cette configuration garantit que votre application reste disponible même si un site entier tombe en panne, sans la complexité d’une infrastructure de stockage partagée.
 
-### Comment implémenter le HADR sur un réseau lent ? {#hadr-slow-network-architecture}
+### Pourquoi utiliser une solution HADR sans SAN pour les réseaux rapides ? {#sanless-hadr-solution}
+
+Une solution sans SAN comme SafeKit est essentielle, car elle réplique les données de manière synchrone et en temps réel entre deux nœuds sans disques partagés. Étant donné que la réplication synchrone garantit une perte de données nulle (RPO = 0), le logiciel peut déclencher instantanément un basculement automatique de l’application en cas de défaillance matérielle ou logicielle.
+
+### Quelles sont les exigences réseau pour l'architecture HADR synchrone ? {#extended-lan-vlan-requirements}
+
+L'architecture HADR synchrone nécessite un LAN étendu ou un VLAN étendu pour trois raisons essentielles :
+
+  * **Basculement d’adresse IP virtuelle :** Un seul sous-réseau est requis. L’[adresse IP virtuelle](</fr/best-practises/how-a-virtual-ip-address-works/>) peut ensuite se déplacer automatiquement entre les nœuds.
+  * **Faible latence :** [La réplication synchrone](</fr/best-practises/synchronous-replication-vs-asynchronous-replication/>) sans perte de données nécessite généralement un temps d’aller-retour du réseau inférieur à 5 ms.
+  * **Bande passante élevée :** Une connexion de 1 Gb/s ou plus est requise pour assurer une resynchronisation rapide des données lors d’un failback.
 
 
-![Architecture HADR séparant la Haute Disponibilité de la Reprise d'Activité](/wp-content/uploads/2023/03/hadr-slow-network-1.png "w:256")
+## HADR asynchrone : reprise après sinistre sur des réseaux lents (WAN) {#asynchronous-hadr-slow-network}
+
+### Comment mettre en œuvre HADR sur un réseau lent ? {#hadr-slow-network-architecture}
 
 
-Pour implémenter le HADR sur un réseau lent (WAN), l'architecture sépare généralement la **Haute Disponibilité** de la **Reprise d'Activité**. Dans ce scénario, deux nœuds sont déployés sur le site primaire pour la redondance locale, tandis qu'une stratégie distincte de sauvegarde ou de réplication asynchrone est utilisée pour protéger les données sur un site distant géographiquement éloigné.
+![Architecture HADR séparant la haute disponibilité de la reprise après sinistre](/wp-content/uploads/2023/03/hadr-slow-network-1.png "w:256")
+
+
+Pour mettre en œuvre HADR sur un réseau lent (WAN), l’architecture sépare généralement **la haute disponibilité** de **la reprise après sinistre**. Dans ce scénario, deux nœuds sont déployés sur le site principal pour la redondance locale, tandis qu’une stratégie de sauvegarde ou de réplication asynchrone distincte est utilisée pour protéger les données sur un site distant.
 
 ### Quelle est la meilleure solution HADR pour les connexions à faible bande passante ? {#sanless-ha-with-remote-dr}
 
-La solution optimale consiste à déployer **SafeKit** sur le site primaire pour la Haute Disponibilité locale, en utilisant la réplication synchrone en temps réel et le basculement automatique. Pour le site de reprise d'activité, les données sont protégées via une réplication asynchrone ou des sauvegardes programmées à travers le réseau lent, garantissant que la disponibilité locale n'est pas freinée par la latence du WAN. Pour réaliser cette architecture, une **solution de sauvegarde** dédiée (autre que SafeKit) est nécessaire pour gérer le transfert des données et la restauration sur le site distant. 
+La solution optimale consiste à déployer **SafeKit** sur le site principal pour une haute disponibilité locale à l’aide de la réplication synchrone en temps réel et du basculement automatique. Pour le site de reprise après sinistre, les données sont protégées par réplication asynchrone ou par des sauvegardes planifiées via le réseau lent, garantissant que la disponibilité locale est maintenue sans être limitée par la latence du WAN. Pour réaliser cette architecture, une **solution de sauvegarde** dédiée (autre que SafeKit) est nécessaire pour gérer le transfert et la restauration des données sur le site distant. 
 
-### Comment fonctionne le basculement vers un site distant de Reprise d'Activité ? {#dr-site-failover-process}
+### Comment fonctionne le basculement avec un site de reprise d’activité après sinistre distant ? {#dr-site-failover-process}
 
-Comme la réplication asynchrone sur un réseau lent implique une perte de données potentielle (RPO > 0), le processus de basculement vers un site de reprise d'activité (DR) est généralement manuel et piloté par un administrateur :
+Étant donné que la réplication asynchrone sur un réseau lent implique une perte de données potentielle (RPO > 0), le processus de basculement vers un site de reprise après sinistre est généralement manuel et géré par un administrateur :
 
-  * **Restauration des données :** Les sauvegardes sont restaurées sur les serveurs secondaires du site de DR. Des solutions modernes comme **Veeam** sont souvent utilisées pour restaurer rapidement les machines virtuelles (VM) afin de réduire le temps de reprise.
-  * **Routage DNS :** Le trafic est redirigé vers le site de DR au niveau du DNS. Le temps de rétablissement dépend des délais d'expiration du cache DNS (TTL), et certaines applications clientes peuvent nécessiter un redémarrage pour prendre en compte la nouvelle adresse IP.
-  * **Décision manuelle :** Un administrateur doit vérifier l'intégrité des données sur le site distant avant d'autoriser le basculement vers le centre de données secondaire.
+  * **Restauration des données :** les sauvegardes sont restaurées sur des serveurs secondaires sur le site de reprise d’activité après sinistre. Les solutions modernes restaurent rapidement les machines virtuelles (VM) pour réduire le temps de récupération. **Veeam** en est un exemple.
+  * **Redirection DNS :** Le trafic est redirigé vers le site de reprise après sinistre au niveau du DNS. Le temps de récupération dépend des délais d’expiration du cache DNS (TTL), et certaines applications clientes peuvent nécessiter un redémarrage pour prendre en compte la nouvelle adresse IP.
+  * **Décision manuelle :** un administrateur doit vérifier l’intégrité des données sur le site distant avant d’autoriser le basculement vers le centre de données secondaire.
 
 
-## Comment combiner HADR et sauvegarde pour une résilience totale du système {#hadr-resilience-strategy}
+## Comment combiner HADR et la sauvegarde pour une résilience système totale {#hadr-resilience-strategy}
 
-### Comparatif entre Haute Disponibilité et Sauvegarde de données {#ha-vs-backup-comparison}
+### Comparaison de la haute disponibilité et de la sauvegarde des données {#ha-vs-backup-comparison}
 
 
 ![Logo du logiciel de haute disponibilité SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png "w:64")
 
  
 
-![Icône de stratégie de sauvegarde de données](/wp-content/uploads/2026/01/backup-icon.png "w:64")
+![Icône de la stratégie de sauvegarde des données](/wp-content/uploads/2026/01/backup-icon.png "w:64")
 
 
-Bien que les deux soient critiques pour la protection des données, la **Haute Disponibilité (HA)** et les **solutions de sauvegarde** ciblent des risques différents. La **Haute Disponibilité** , propulsée par SafeKit, fournit un mécanisme de basculement « en direct » pour maintenir l'accès aux applications lors de pannes de serveurs ou de défaillances matérielles. À l'inverse, une **solution de sauvegarde** agit comme une archive « historique ». Tandis que la HA garantit une disponibilité système de 99,99 % en répliquant les données en temps réel, la sauvegarde se concentre sur l'intégrité des données, offrant les points de restauration nécessaires pour se remettre d'erreurs logiques, de suppressions accidentelles ou d'attaques par ransomware.
+Bien que les deux soient essentiels pour la protection des données, **la haute disponibilité (HA)** et **les solutions de sauvegarde** ciblent des risques différents. **La haute disponibilité**, optimisée par SafeKit, fournit un mécanisme de basculement « en direct » pour maintenir les applications accessibles pendant les pannes de serveur ou les défaillances matérielles. À l’inverse, une **solution de sauvegarde** agit comme une archive « historique ». Alors que la haute disponibilité assure une disponibilité du système de 99,99 % en répliquant les données en temps réel, la sauvegarde se concentre sur l’intégrité des données, fournissant les points de restauration nécessaires pour récupérer après des erreurs logiques, des suppressions accidentelles ou des attaques de rançongiciels.
 
-### La Haute Disponibilité peut-elle remplacer une stratégie de sauvegarde ? {#ha-vs-backup-ransomware}
+### La haute disponibilité peut-elle remplacer une stratégie de sauvegarde ? {#ha-vs-backup-ransomware}
 
-Non, la Haute Disponibilité et les sauvegardes sont complémentaires et non interchangeables. Bien que **SafeKit** assure la **continuité d'activité** en maintenant les applications opérationnelles lors d'une panne matérielle, il ne protège pas contre les erreurs logiques, les suppressions accidentelles ou les attaques par ransomware. Par exemple, comme la réplication en temps réel répercute instantanément chaque modification, une attaque par ransomware sur le nœud primaire sera immédiatement dupliquée sur le nœud secondaire. Pour se remettre de telles cybermenaces ou de suppressions accidentelles, vous avez besoin d'une **solution de sauvegarde** dédiée avec une politique de rétention robuste. Cela vous permet de « rembobiner » votre environnement vers un état sain, antérieur à la corruption.
+Non, la haute disponibilité et les sauvegardes sont complémentaires, pas interchangeables. Alors que **SafeKit** assure **la continuité d’activité** en maintenant les applications en fonctionnement en cas de panne matérielle, il ne protège pas contre les erreurs logiques, les suppressions accidentelles ou les attaques de rançongiciels. Par exemple, comme la réplication en temps réel reflète chaque modification instantanément, une attaque de rançongiciel sur le nœud principal sera immédiatement dupliquée sur le nœud secondaire. Pour récupérer de telles cybermenaces ou suppressions accidentelles, vous avez besoin d’une **solution de sauvegarde** dédiée avec une politique de rétention robuste. Cela vous permet de « rembobiner » votre environnement à un état sain antérieur à la corruption.
 
-### Optimiser le RTO et le RPO : La synergie entre HA et sauvegarde {#ha-backup-rpo-rto}
+### Optimisation RTO et RPO : la synergie entre la haute disponibilité et la sauvegarde {#ha-backup-rpo-rto}
 
-Pour bâtir une infrastructure véritablement résiliente, vous devez intégrer la Haute Disponibilité et la sauvegarde dans une stratégie unifiée. Ces deux technologies répondent à différentes dimensions de l'[équation du RTO (Recovery Time Objective) et du RPO (Recovery Point Objective)](</fr/best-practises/what-is-rpo-and-rto-with-examples/>) : 
+Pour construire une infrastructure véritablement résiliente, vous devez intégrer la haute disponibilité et la sauvegarde dans une stratégie unifiée. Ces deux technologies abordent différentes dimensions de l’objectif de temps de récupération (RTO) et de l’objectif de point de récupération (RPO). Pour plus de détails, consultez [RTO et RPO avec des exemples](</fr/best-practises/what-is-rpo-and-rto-with-examples/>).
 
-  * **Haute Disponibilité (via SafeKit) :** Vise une **récupération instantanée**. En maintenant un miroir synchrone et en direct de votre environnement, SafeKit atteint un RTO proche de zéro et un RPO nul. Si un serveur tombe en panne, l'application redémarre immédiatement sur le nœud secondaire, garantissant l'absence d'interruption de service ou de perte de données durant la transition.
-  * **Solutions de sauvegarde :** Visent la **résilience des données**. Tandis que la HA maintient le service opérationnel (« live »), la sauvegarde crée un historique « immuable ». C'est votre dernier recours lorsque les données actives elles-mêmes sont compromises, vous permettant de restaurer une version saine de votre base de données à partir d'un point précis dans le temps, avant l'apparition d'un virus ou d'une suppression accidentelle.
+  * **Haute disponibilité (via SafeKit) :** Son objectif est **la récupération instantanée**. SafeKit maintient une copie synchrone et active de votre environnement. Son RTO est proche de zéro. Son RPO est de zéro. En cas de défaillance d’un serveur, l’application reprend immédiatement sur le nœud secondaire, garantissant l’absence d’interruption de service ou de perte de données pendant la transition.
+  * **Solutions de sauvegarde :** leur objectif est **la résilience des données**. Alors que la haute disponibilité maintient le service « en ligne », la sauvegarde crée un historique « immuable ». La sauvegarde est votre filet de sécurité lorsque les données en direct sont elles-mêmes compromises. Elle vous permet de restaurer une version propre de votre base de données à partir d’un moment précis, avant qu’un virus ou une suppression accidentelle ne se produise.
 
 
-## Comparatif des architectures HADR : Réseaux rapides vs Réseaux lents {#hadr-architectures-comparison}
+## Comparaison des architectures HADR : réseaux rapides et lents {#hadr-architectures-comparison}
 
 Critères | Réseau rapide (LAN/VLAN) | Réseau lent (WAN)  
 ---|---|---  
-Objectif principal | Redondance locale & Haute Disponibilité | Reprise d'activité inter-sites (DR)  
-Cas d'usage | Même Data Center ou mode Campus | Data Centers distants ou régions Cloud  
-Type de réplication | Synchrone (Temps réel) | Asynchrone / Sauvegarde  
-RPO (Perte de données) | Nul (RPO = 0) | Perte de données potentielle (RPO > 0)  
-Processus de basculement | Automatique | Manuel (Décision de l'administrateur)  
-Routage du trafic | Adresse IP Virtuelle (VIP) | Niveau DNS (dépend du TTL)  
-Contrainte de latence | Faible (généralement < 5ms) | Supporte une latence élevée  
-But de récupération | Continuité d'activité immédiate | Sécurité & Rétention des données  
+Portée principale | Redondance locale et haute disponibilité | Reprise d’activité après sinistre intersites  
+Cas d’utilisation | Même centre de données ou campus | Centres de données distants ou régions cloud  
+Type de réplication | Synchrone (en temps réel) | Asynchrone / Sauvegarde  
+RPO (perte de données) | Zéro (RPO = 0) | Perte de données potentielle (RPO > 0)  
+Processus de basculement | Automatique | Manuel (décision Admin)  
+Détournement du trafic | Adresse IP virtuelle (VIP) | Niveau DNS (en fonction de la durée de vie en cache)  
+Exigence de latence | Faible (généralement < 5 ms) | Prend en charge une latence élevée  
+Objectif de récupération primaire | Continuité d’activité immédiate | Sécurité et conservation des données  
   
-## Guide Vidéo : Comment implémenter le HADR avec SafeKit {#videoguide-hadr-safekit}
+## Guide vidéo : Comment mettre en œuvre HADR avec SafeKit {#videoguide-hadr-safekit}
 
-###  Comment implémenter le HADR avec SafeKit : Réplication synchrone et basculement {#how-to-implement-hadr-with-safekit-synchronous-replication--failover}
+###  Comment implémenter HADR avec SafeKit : réplication synchrone et basculement {#how-to-implement-hadr-with-safekit-synchronous-replication--failover}
 
-Découvrez comment combiner la **Haute Disponibilité (HA)** et la **Reprise d'Activité (DR)** au sein d'une stratégie HADR unique avec SafeKit. Ce guide vidéo détaille l'architecture nécessaire pour garantir une disponibilité applicative de 100 % sans recourir à des disques partagés.
+Découvrez comment combiner **la haute disponibilité (HA)** et **la reprise après sinistre (DR)** en une seule stratégie HADR à l’aide de SafeKit. Ce guide vidéo explore l’architecture requise pour une disponibilité applicative de 100 % sans avoir besoin de disques partagés.
 
-### Points clés de la vidéo {#video-highlights}
+### Moments forts de la vidéo {#video-highlights}
 
-  1. 🎬 [Présentation de l'architecture : HADR SafeKit sur VLAN étendu](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=0s>) (0:56)
-  2. 🎬 [Comprendre le mirroring synchrone et le double acquittement](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=56s>) (1:26)
-  3. 🎬 [Mécanismes de basculement : Gratuitous ARP (GARP) et IP virtuelle](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=142s>) (1:53)
-  4. 🎬 [Conception pour WAN lent : Stratégies HA vs Sauvegarde](<https://www.youtube.com/watch?v=3zwEWDCiojQ&t=255s>) (2:27)
+  1. 🎬 [Introduction à SafeKit HADR sur VLAN étendus](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s>) (1:06)
+  2. 🎬 [Fonctionnement de la mise en miroir synchrone et de la double confirmation](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>) (1:41)
+  3. 🎬 [Mécanismes de basculement : ARP gratuit (GARP) et IP virtuelle](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s>) (2:10)
+  4. 🎬 [Conception pour les WAN lents : HA ou stratégies de sauvegarde](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s>) (2:45)
 
 
 ### Vidéo SafeKit : Comment mettre en œuvre la haute disponibilité et la reprise après sinistre (HADR) avec SafeKit (7:40) {#safekit-video-how-to-implement-high-availability-and-disaster-recovery-hadr-with-safekit-740}
 
-&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
 {{%  insert-safekit-hub-fr  %}}

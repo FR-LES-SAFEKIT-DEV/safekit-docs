@@ -1,33 +1,34 @@
 ---
 title: "Come implementare server ridondanti con un semplice software HA"
 canonical: "https://safekit.eviden.com/it/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
-description: "Scopri come implementare server ridondanti con un semplice approccio basato esclusivamente su software. SafeKit propone un'architettura SANless per Windows e Linux , offrendo replica dei dati in tempo reale e failover automatico senza dischi condivisi o competenze IT specializzate."
+description: "Scopri come implementare server ridondanti con un semplice approccio basato solo su software. SafeKit offre la replica dei dati in tempo reale e il failover automatico su Windows e Linux. Non richiede dischi condivisi né competenze informatiche specialistiche."
 category: "best-practises"
 lang: "it"
 topics: "Come implementare server ridondanti attivi/passivi con replica in tempo reale e failover?, Come implementare server ridondanti attivi/attivi con bilanciamento del carico di rete e failover?, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 41 expressions"
 ---
 
 # Come implementare server ridondanti con un semplice software HA {#how-to-implement-redundant-servers-with-simple-ha-software}
 
 ## Come implementare server ridondanti attivi/passivi con replica in tempo reale e failover? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 
-### Il cluster SafeKit mirror {#the-safekit-mirror-cluster}
+### Il cluster mirror SafeKit {#the-safekit-mirror-cluster}
 
 
-![ Server ridondanti con replica dei file in tempo reale e failover ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+![Server ridondanti con replica di file in tempo reale e failover](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-In un cluster mirror , il software SafeKit è installato su due server fisici o virtuali che eseguono Windows o Linux (in locale o nel cloud). Il server primario è il server attivo ed esegue un'applicazione critica. Il server secondario è un server passivo ridondante che riceve in tempo reale tutte le modifiche apportate dall'applicazione ai suoi file. I client sono connessi a un indirizzo IP virtuale [ ](</it/best-practises/how-a-virtual-ip-address-works/#virtual-ip-same-subnet-failover>) ). Se il server primario non è disponibile, SafeKit riavvia automaticamente l'applicazione critica sul server passivo ridondante, che diventa primario e commuta l'indirizzo IP virtuale. Quando il server guasto viene riavviato, viene automaticamente risincronizzato e diventa il server passivo ridondante che opera come secondario.
+In un cluster mirror, il software SafeKit è installato su due server. I server possono essere fisici o virtuali. Eseguono Windows o Linux, on-premise o nel cloud. Il server primario è il server attivo. Esegue l’applicazione critica. Il server secondario è un server ridondante passivo. Riceve in tempo reale tutte le modifiche apportate dall’applicazione ai suoi file. I client si connettono a un [indirizzo IP virtuale](</it/best-practises/how-a-virtual-ip-address-works/#virtual-ip-same-subnet-failover>). Se il server primario si guasta, SafeKit riavvia automaticamente l’applicazione critica sul server secondario. Questo server diventa primario e assume l’indirizzo IP virtuale. Quando il server guasto si riavvia, SafeKit risincronizza automaticamente i suoi dati. Questo server diventa quindi il server ridondante passivo, nello stato secondario.
 
-## Come implementare server ridondanti attivo/attivo con bilanciamento del carico di rete e failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
+## Come implementare server ridondanti attivi/attivi con bilanciamento del carico di rete e failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
 
-### Il cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
-
-
-![ Server ridondanti con bilanciamento del carico di rete e failover ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+### Il cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#the-safekit-farm-cluster}
 
 
-In un cluster <span class="notranslate farm-term" translate="no">farm</span> , il software SafeKit è installato su server ridondanti che eseguono Windows o Linux (in locale o nel cloud). Tutti i server ridondanti sono attivi ed eseguono la stessa applicazione front-end critica. I client sono connessi a un indirizzo IP virtuale [ , ](</it/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . Le sessioni TCP vengono bilanciate tra tutti i server ridondanti. Se un server non è disponibile, SafeKit riconfigura automaticamente il bilanciamento del carico delle sessioni TCP tra i server attivi rimanenti. Quando il server guasto viene riavviato, viene automaticamente reintegrato come server ridondante attivo e riceve nuove sessioni TCP.
+![Server ridondanti con bilanciamento del carico di rete e failover](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+
+
+In un cluster <span class="notranslate farm-term" translate="no">farm</span>, il software SafeKit viene installato su più server ridondanti. I server eseguono Windows o Linux, in locale o nel cloud. Tutti i server ridondanti sono attivi. Eseguono la stessa applicazione front-end critica. I client si connettono a un [indirizzo IP virtuale](</it/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). Le sessioni TCP sono bilanciate tra tutti i server ridondanti. Se un server si guasta, SafeKit riconfigura automaticamente il bilanciamento del carico delle sessioni TCP tra i server attivi rimanenti. Quando il server guasto si riavvia, SafeKit lo reintegra automaticamente come server ridondante attivo. Questo server riceve quindi nuove sessioni TCP.
 
 
 {{%  insert-safekit-hub-it  %}}

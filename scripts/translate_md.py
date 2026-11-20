@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-17.3"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-20.1"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -38,6 +38,26 @@ FM_KEYS = ("title", "linkTitle", "description", "summary", "topics")
 # guillemets typographiques par langue, pour les valeurs du front matter entre guillemets droits
 FM_QUOTES = {"fr": ("«\u00a0", "\u00a0»"), "es": ("«", "»"), "it": ("«", "»"), "pt": ("“", "”"), "de": ("„", "“"),
              "nl": ("‘", "’"), "ja": ("「", "」"), "zh": ("“", "”"), "ko": ("‘", "’"), "ar": ("«", "»")}
+
+def cjk_bold_pairs(text):
+    """Gras CJK étendu par Google, en respectant l'appariement des ** (un ** fermant n'est jamais pris pour un ouvrant) :
+    "**虚拟 IP。SafeKit**" -> "**虚拟 IP**。SafeKit" ; "**在此期间，状态为 ✅ ALONE（节点 1）**" -> "在此期间，状态为 **✅ ALONE（节点 1）**"."""
+    out = []
+    for line in text.split("\n"):
+        parts = line.split("**")
+        if len(parts) % 2 == 0:   # nombre impair de ** : on ne touche à rien
+            out.append(line)
+            continue
+        for i in range(1, len(parts), 2):
+            m = re.match(r"^(.+?)([。！？])(\S.*)$", parts[i])
+            if m:
+                parts[i], parts[i + 1] = m.group(1), m.group(2) + m.group(3) + parts[i + 1]
+            m = re.match(r"^([^✅❌]+?)\s*([✅❌].*)$", parts[i])
+            if m and m.group(1).strip():
+                parts[i - 1], parts[i] = parts[i - 1] + m.group(1).rstrip() + " ", m.group(2)
+        out.append("**".join(parts))
+    return "\n".join(out)
+
 
 def fm_quotes(t, delim, lang):
     """Valeur de front matter : un guillemet identique au délimiteur casse le YAML/TOML
@@ -502,7 +522,7 @@ def decode(text, ctx):
         text = re.sub(r"([，。、；：！？])[ ]+(?=[`A-Za-z0-9<\[])", r"\1", text)   # 崩溃， `stop_prim`
         text = re.sub(r"(?<=[A-Za-z0-9])/ +(?=[A-Za-z])", "/", text)           # / Direct -> /Direct
         # gras étendu par Google sur la phrase suivante : "**虚拟 IP。SafeKit**" -> "**虚拟 IP**。SafeKit"
-        text = re.sub(r"\*\*([^*\n]+?)([。！？])([^*\n]+?)\*\*", r"**\1**\2\3", text)
+        text = cjk_bold_pairs(text)
         text = cjk_bold(text)
         text = re.sub(r"→\*\*", "→ **", text)
         text = re.sub(f"([{CJK_CHAR}]) +(?=[{CJK_CHAR}])", r"\1", text)
@@ -912,9 +932,14 @@ def main():
         src_vis = re.sub(r"<[^>]+>", "", enc).strip()
         if src_vis and not re.search(r"[.!?。！？]$", src_vis):
             t = re.sub(r"(?<!\.)[.。](?=(?:\*\*)?\s*$)", "", t)   # aussi "**safekitinstall.**"
+        elif re.search(r"</a>\s*$", enc) and re.search(r"\]\([^)]*\)[.。]\s*$", t):
+            # image / lien en fin de ligne sans point dans la source ("![…errors.](x.jpg "w:512")") : pas de "." après ")"
+            t = re.sub(r"(\))[.。](?=\s*$)", r"\1", t)
         # ponctuation finale de la source perdue par Google (élément de liste "[lien](/x/)," ou phrase d'introduction "… :")
         # source finissant par "..." (ex. `<Failover>...`) : pas un point de fin de phrase
         end = src_vis[-1:] if src_vis and not re.search(r"(?:\.\.\.|…)`?$", src_vis) else ""
+        if end == "." and re.search(r"</a>\s*$", enc):   # point DANS le texte du lien / de l'image, pas après
+            end = "#"   # (pas "" : "" in ",:." est vrai en Python -> virgule ajoutée)
         if end in ",:." and not re.search(r"[,:;.!?、，：；،。！？…]\s*(?:\*\*)?\s*$", t) and t.strip():
             if end == ":":
                 add = "：" if CJK else (" :" if lang == "fr" else ":")

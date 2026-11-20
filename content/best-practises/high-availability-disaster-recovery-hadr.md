@@ -20,7 +20,7 @@ Consequently, the environment is protected against hardware or software failures
 
 ![A technical diagram showing why High Availability (SafeKit) and Backups are complementary: SafeKit handles hardware/software failover via synchronous replication, while asynchronous backup protects against ransomware and logical errors.](/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg "w:512")
 
-**HA vs Backup: Combining SafeKit Synchronous Replication with Asynchronous DR**
+**High availability with SafeKit and disaster recovery with backups**
 
 ## Table of Contents {#table-of-contents}
 
@@ -50,11 +50,11 @@ To implement HADR over a fast network, deploy two nodes across remote sites to p
 
 A SANless solution like SafeKit is essential because it replicates data synchronously and in real-time between two nodes without shared disks. Because synchronous replication ensures zero data loss (RPO=0), the software can trigger an automatic application failover instantly if a hardware or software failure occurs.
 
-### What are the network requirements for Synchronous HADR? {#extended-lan-vlan-requirements}
+### What are the network requirements for synchronous HADR? {#extended-lan-vlan-requirements}
 
 Synchronous HADR requires an extended LAN or a stretched VLAN for three critical reasons:
 
-  * **Virtual IP Failover:** A single subnet is required to automatically failover the [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) between nodes.
+  * **Virtual IP Failover:** A single subnet is required. The [virtual IP address](</best-practises/how-a-virtual-ip-address-works/>) can then move automatically between nodes.
   * **Low Latency:** [Synchronous replication](</best-practises/synchronous-replication-vs-asynchronous-replication/>) with no data loss typically requires a network round-trip time of less than 5ms.
   * **High Bandwidth:** A connection of 1 Gb/s or more is required to ensure rapid data resynchronization during a failback.
 
@@ -77,7 +77,7 @@ The optimal solution involves deploying **SafeKit** at the primary site for loca
 
 Because asynchronous replication over a slow network involves potential data loss (RPO > 0), the failover process to a disaster recovery site is typically manual and managed by an administrator:
 
-  * **Data Restoration:** Backups are restored onto secondary servers at the DR site. Modern solutions like **Veeam** are often used to restore virtual machines (VMs) quickly to reduce recovery time.
+  * **Data Restoration:** Backups are restored onto secondary servers at the DR site. Modern solutions restore virtual machines (VMs) quickly to reduce recovery time. An example is **Veeam**.
   * **DNS Rerouting:** Traffic is redirected to the DR site at the DNS level. The recovery time depends on DNS cache timeouts (TTL), and some client applications may require a restart to pick up the new IP address.
   * **Manual Decision:** An administrator must verify data integrity at the remote site before authorizing the switch to the secondary data center.
 
@@ -102,10 +102,10 @@ No, High Availability and backups are complementary, not interchangeable. While 
 
 ### Optimizing RTO and RPO: The Synergy Between HA and Backup {#ha-backup-rpo-rto}
 
-To build a truly resilient infrastructure, you must integrate both High Availability and backup into a unified strategy. These two technologies address different dimensions of the [RTO (Recovery Time Objective) and RPO (Recovery Point Objective) equation](</best-practises/what-is-rpo-and-rto-with-examples/>): 
+To build a truly resilient infrastructure, you must integrate both High Availability and backup into a unified strategy. These two technologies address different dimensions of the Recovery Time Objective (RTO) and the Recovery Point Objective (RPO). For more details, see [RTO and RPO with examples](</best-practises/what-is-rpo-and-rto-with-examples/>).
 
-  * **High Availability (via SafeKit):** Targets **Instant Recovery**. By maintaining a live, synchronous mirror of your environment, SafeKit achieves near-zero RTO and zero RPO. If a server fails, the application resumes on the secondary node immediately, ensuring no service interruption or data loss during the transition.
-  * **Backup Solutions:** Target **Data Resilience**. While HA keeps the service "live," backup creates an "immutable" history. It is your fallback for when the live data itself is compromised, allowing you to restore a clean version of your database from a specific point in time before a virus or accidental deletion occurred.
+  * **High Availability (via SafeKit):** Its goal is **Instant Recovery**. SafeKit maintains a live, synchronous copy of your environment. Its RTO is close to zero. Its RPO is zero. If a server fails, the application resumes on the secondary node immediately, ensuring no service interruption or data loss during the transition.
+  * **Backup Solutions:** Their goal is **Data Resilience**. While HA keeps the service "live," backup creates an "immutable" history. Backup is your safety net when the live data itself is compromised. It allows you to restore a clean version of your database from a specific point in time, before a virus or an accidental deletion occurred.
 
 
 ## Comparison of HADR Architectures: Fast vs. Slow Networks {#hadr-architectures-comparison}
@@ -130,14 +130,13 @@ Learn how to combine **High Availability (HA)** and **Disaster Recovery (DR)** i
 ### Video Highlights {#video-highlights}
 
   1. 🎬 [Introduction to SafeKit HADR over Stretched VLANs](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=0s>) (1:06)
-  2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works (1:41)](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>)
+  2. 🎬 [How Synchronous Mirroring & Double-Acknowledgment Works](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=65s>) (1:41)
   3. 🎬 [Failover Mechanics: Gratuitous ARP (GARP) & Virtual IP](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=166s>) (2:10)
   4. 🎬 [Designing for Slow WAN: HA vs. Backup Strategies](<https://www.youtube.com/watch?v=g5zcTjiY7T4&t=296s>) (2:45)
 
 
 ### SafeKit Video: How to implement High Availability and Disaster Recovery (HADR) with SafeKit (7:40) {#safekit-video-how-to-implement-high-availability-and-disaster-recovery-hadr-with-safekit-740}
 
-&amp;amp;amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;amp;amp;gt; 
 
 
 {{%  insert-safekit-hub-en  %}}

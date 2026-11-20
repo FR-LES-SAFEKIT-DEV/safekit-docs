@@ -1,126 +1,127 @@
 ---
-title: "Een applicatie die wordt beschermd door SafeKit upgraden in een HA-cluster."
+title: "Een door SafeKit beveiligde toepassing upgraden in een HA-cluster"
 canonical: "https://safekit.eviden.com/nl/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "Leer hoe u applicaties die beschermd worden door SafeKit veilig kunt upgraden. Vergelijk kleine en grote upgrades, rolling upgrades, terugdraaistrategieën en op VM's gebaseerde hoge beschikbaarheid."
+description: "Leer hoe u applicaties die beschermd zijn door SafeKit veilig kunt upgraden. Vergelijk kleine en grote upgrades, doorlopende upgrades, rollbackstrategieën en VM-gebaseerde hoge beschikbaarheid."
 category: "best-practises"
 lang: "nl"
-topics: "Upgraden van een applicatie met hoge beschikbaarheid die wordt beschermd door SafeKit , hoge beschikbaarheid op VM-niveau, hoge beschikbaarheid op applicatieniveau, de juiste upgradestrategie kiezen, conclusie, 🔍 Ontdek SafeKit"
+topics: "Een High Availability-applicatie beveiligen met SafeKit, Hoge beschikbaarheid op VM-niveau, Hoge beschikbaarheid op applicatieniveau, De juiste upgrade-strategie kiezen, Conclusie, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 ---
 
-# Een applicatie upgraden die wordt beschermd door SafeKit in een HA-cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
+# Een door SafeKit beveiligde toepassing upgraden in een HA-cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
 
-## Een applicatie met hoge beschikbaarheid upgraden die beveiligd is door SafeKit {#upgrading-a-high-availability-application-protected-by-safekit}
+## Een High Availability-applicatie beveiligen met SafeKit {#upgrading-a-high-availability-application-protected-by-safekit}
 
-Het up-to-date houden van bedrijfskritieke applicaties is essentieel voor de beveiliging, prestaties en toegang tot nieuwe functies. Wanneer een applicatie wordt beschermd door SafeKit , is de upgradeprocedure afhankelijk van de gebruikte architectuur voor hoge beschikbaarheid.
+Het up-to-date houden van bedrijfskritische applicaties is essentieel voor de beveiliging, prestaties en toegang tot nieuwe functies. Wanneer een applicatie wordt beschermd door SafeKit, hangt de upgradeprocedure af van de gebruikte high-availability-architectuur.
 
-Er zijn twee gangbare implementatiemodellen:
+Er zijn twee veelvoorkomende implementatiemodellen:
 
-  * **Virtuele machine Hoge Beschikbaarheid** , waarbij de applicatie draait binnen een beveiligde virtuele machine die wordt beheerd door SafeKit .
-  * **Hoge beschikbaarheid op applicatieniveau** , waarbij de applicatie op twee servers is geïnstalleerd.
+  * **Hoge beschikbaarheid van virtuele machines**, waarbij de toepassing binnen een beveiligde virtuele machine draait die wordt beheerd door SafeKit.
+  * **Hoge beschikbaarheid op applicatieniveau**, waarbij de applicatie op twee servers is geïnstalleerd.
 
 
-Elk model biedt verschillende upgrade-mechanismen en terugdraai-strategieën.
+Elk model biedt verschillende upgrademechanismen en rollbackstrategieën.
 
-## VM-niveau hoge beschikbaarheid {#vm-level-ha}
+## Hoge beschikbaarheid op VM-niveau {#vm-level-ha}
 
-Met SafeKit VM-failoveroplossingen zoals **hyperv.safe** en **kvm.safe** wordt de applicatie slechts één keer in een virtuele machine geïnstalleerd.
+Met SafeKit VM failover-oplossingen zoals **hyperv.safe** en **kvm.safe** wordt de applicatie slechts één keer geïnstalleerd in een virtuele machine.
 
-SafeKit beschermt de gehele virtuele machine in plaats van alleen de applicatie, wat onderhoudswerkzaamheden aanzienlijk vereenvoudigt.
+SafeKit beschermt de volledige VM, niet de toepassing zelf. Dit vereenvoudigt de onderhoudswerkzaamheden aanzienlijk.
 
 ### Vereenvoudigd upgradeproces {#simplified-upgrade-process}
 
-Omdat u met één enkele VM-instantie van de applicatie werkt, wordt het onderhoud op virtualisatieniveau afgehandeld in plaats van via failover op applicatieniveau.
+Omdat u met één VM-instantie van de toepassing werkt, wordt het onderhoud afgehandeld op de virtualisatielaag in plaats van via failover op applicatieniveau.
 
 De upgradeprocedure is eenvoudig:
 
-  1. Maak een checkpoint of snapshot van de virtuele machine met behulp van de Hyper-V- of KVM-beheerconsole.
+  1. Maak een controlepunt of momentopname van de virtuele machine met behulp van de Hyper-V of KVM beheerconsole.
   2. Voer de applicatie-upgrade uit in de virtuele machine.
-  3. Valideer de bijgewerkte applicatie.
-  4. Als de upgrade is geslaagd, verwijdert u de momentopname en kunt u de normale werkzaamheden hervatten.
-  5. Als er een probleem optreedt, herstel dan de virtuele machine vanuit de momentopname en keer onmiddellijk terug naar de vorige, naar behoren werkende staat.
+  3. Valideer de geüpgradede applicatie.
+  4. Als de upgrade succesvol is, verwijdert u de momentopname en gaat u verder met de normale werking.
+  5. Als er een probleem optreedt, herstelt u de virtuele machine vanuit de momentopname en keert u onmiddellijk terug naar de vorige bekende werkende status.
 
 
-De serviceonderbreking is beperkt tot de duur die normaal gesproken nodig is voor de upgradeprocedure van de applicatie zelf.
+De onderbreking van de dienstverlening is beperkt tot de duur die normaal gesproken vereist is voor de eigen upgradeprocedure van de toepassing.
 
-### Voordelen van VM-niveaubeveiliging {#benefits-of-vm-level-protection}
+### Voordelen van bescherming op VM-niveau {#benefits-of-vm-level-protection}
 
-  * Slechts één applicatie-instantie hoeft te worden onderhouden.
-  * Er bestaat geen clusterbewuste upgradeprocedure.
+  * Slechts één applicatie-instantie om te onderhouden.
+  * Geen clusterspecifieke upgradeprocedure.
   * Snel terugdraaien via VM-snapshots.
   * Verminderde operationele complexiteit.
-  * Een consistent upgradeproces, ongeacht de beveiligde applicatie.
+  * Consistent upgradeproces, ongeacht de beveiligde toepassing.
 
 
-Deze aanpak is met name aantrekkelijk voor standaardapplicaties en commerciële softwarepakketten waarbij applicatieclustering niet beschikbaar is of moeilijk te implementeren is.
+Deze aanpak is met name aantrekkelijk voor standaardtoepassingen en commerciële standaardsoftware waarbij applicatieclustering niet beschikbaar is of moeilijk te implementeren is.
 
 ## Hoge beschikbaarheid op applicatieniveau {#app-level-ha}
 
-In een traditioneel SafeKit cluster is de applicatie geïnstalleerd op twee knooppunten: knooppunt 1 en knooppunt 2. SafeKit synchroniseert applicatiegegevens tussen deze knooppunten en zorgt automatisch voor failover indien nodig.
+In een traditioneel SafeKit-cluster wordt de applicatie op twee nodes geïnstalleerd: node 1 en node 2. SafeKit synchroniseert applicatiegegevens tussen deze nodes en handelt automatisch failover af indien nodig.
 
-### Kleine applicatie-upgrade {#app-level-ha-minor}
+### Minorversie-upgrade van de applicatie {#app-level-ha-minor}
 
-Een kleine upgrade wijzigt alleen de binaire bestanden van de applicatie, terwijl de gerepliceerde gegevens volledig compatibel blijven tussen versies. Omdat het formaat van de gerepliceerde gegevens niet verandert, ondersteunt SafeKit een rolling upgrade met minimale downtime. 
+Een kleine upgrade wijzigt alleen de binaire bestanden van de toepassing, terwijl de gerepliceerde gegevens volledig compatibel blijven tussen de versies. Omdat het gerepliceerde gegevensformaat niet verandert, ondersteunt SafeKit een doorlopende upgrade met minimale downtime. 
 
-  1. Het cluster draait aanvankelijk in een **✅ PRIM (node 1) / ✅ SECOND (node 2)** -configuratie. De applicatie draait op de PRIM-node en gerepliceerde data wordt continu gesynchroniseerd met de SECOND-node. 
-  2. Stop de SafeKit module op het TWEEDE knooppunt ( **❌ STOP (knooppunt 2)** ), voer een upgrade uit van de applicatie en herstart de module. Tijdens deze bewerking blijft de applicatie gewoon draaien op de **✅ ALONE (knooppunt 1)** en treedt er geen serviceonderbreking op. 
-  3. Na de herstart voegt het geüpgrade knooppunt zich weer bij het cluster als **✅ SECOND (knooppunt 2)** en synchroniseert het de gerepliceerde gegevens opnieuw. 
-  4. Stop het PRIM-knooppunt ( **❌ STOP (knooppunt 1)** ). SafeKit voert automatisch een failover uit en het geüpgrade knooppunt wordt **✅ ALONE (knooppunt 2)** . De applicatie wordt op dit knooppunt opnieuw opgestart. De downtime is beperkt tot de failover en de tijd die nodig is voor het opnieuw opstarten van de applicatie. 
-  5. Als de bijgewerkte applicatie correct werkt in de ALONE-status, moet u het resterende knooppunt (knooppunt 1) upgraden en de SafeKit -module opnieuw starten. 
-  6. Na de resynchronisatie keert het cluster terug naar een normale **✅ SECOND (node 1) / ✅ PRIM (node 2)** -configuratie. De oorspronkelijke rollen kunnen handmatig worden hersteld via de SafeKit -beheerconsole of automatisch via de SafeKit -configuratie. 
-
-
-**Terugdraaiprocedure**
-
-  * Stop bij stap 5 de **✅ ALONE (node 2)** node.
-  * Dwing het oorspronkelijke knooppunt (knooppunt 1) om te starten als primaire **ALONE (knooppunt 1)** met de vorige applicatieversie.
-  * Installeer de vorige versie opnieuw op het geüpgrade knooppunt (knooppunt 2).
-  * Keer terug naar een normale **✅ PRIM (knooppunt 1) / ✅ SECOND (knooppunt 2)** -configuratie.
+  1. Het cluster draait in eerste instantie in een **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuratie. De applicatie draait op de PRIM node. De gerepliceerde gegevens worden continu gesynchroniseerd met de SECOND node.
+  2. Stop de SafeKit-module op de SECOND node. De status wordt **❌ STOP (node 2)**. Upgrade de applicatie en herstart de module. Tijdens deze bewerking blijft de applicatie draaien op node 1, in de status **✅ ALONE (node 1)**. Er vindt geen serviceonderbreking plaats.
+  3. Na het opnieuw opstarten wordt de geüpgradede node opnieuw lid van het cluster als **✅ SECOND (node 2)**. De gerepliceerde gegevens worden opnieuw gesynchroniseerd.
+  4. Stop de PRIM node. De status wordt **❌ STOP (node 1)**. SafeKit voert automatisch een failover uit. De geüpgradede node wordt **✅ ALONE (node 2)**. De toepassing wordt opnieuw gestart op deze node. De downtime is beperkt tot de failover- en de herstarttijd van de toepassing.
+  5. Als de geüpgradede applicatie correct werkt op node 2, upgrade dan de resterende node (node 1) en herstart de SafeKit-module.
+  6. Na resynchronisatie keert het cluster terug naar een normale **✅ SECOND (node 1) / ✅ PRIM (node 2)** configuratie. De oorspronkelijke rollen kunnen handmatig worden hersteld met behulp van de SafeKit Administration Console of automatisch via de SafeKit configuratie.
 
 
-De volledige upgrade wordt uitgevoerd met een downtime die beperkt is tot de overgang van **✅ PRIM / ✅ SECOND** naar **❌ STOP / ✅ ALONE** . 
+**Rollbackprocedure**
 
-### Belangrijke applicatie-upgrade {#app-level-ha-major}
-
-Een grote upgrade wijzigt de opmaak of structuur van gerepliceerde gegevens. Omdat de door de nieuwe versie gegenereerde gegevens niet langer compatibel zijn met de oude, kan een gefaseerde upgrade niet worden uitgevoerd. 
-
-  1. Het cluster draait aanvankelijk in een **✅ PRIM (node 1) / ✅ SECOND (node 2)** -configuratie. 
-  2. Stop eerst het TWEEDE knooppunt en daarna het PRIM-knooppunt. Het cluster gaat over naar **❌ STOP (knooppunt 1) / ❌ STOP (knooppunt 2)** . 
-  3. Upgrade het voormalige PRIM-knooppunt en herstart het. Het knooppunt start zelfstandig op als **✅ ALONE (knooppunt 1)** met de nieuwe applicatieversie. 
-  4. Valideer de bijgewerkte applicatie en controleer of deze correct werkt. 
-  5. Als de validatie succesvol is, moet u het resterende knooppunt upgraden en de SafeKit -module opnieuw opstarten. 
-  6. Het geüpgrade knooppunt wordt **✅ SECOND (knooppunt 2)** , synchroniseert de applicatiegegevens opnieuw en het cluster keert terug naar een normale **✅ PRIM (knooppunt 1) / ✅ SECOND (knooppunt 2)** -configuratie. 
+  * Stop bij stap 5 node 2, in de status **✅ ALONE (node 2)**.
+  * Start de oorspronkelijke node (node 1) opnieuw op als primair, met de vorige applicatieversie. De status is **✅ ALONE (node 1)**.
+  * Installeer de vorige versie opnieuw op de geüpgradede node (node 2).
+  * Herstel de normale **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuratie.
 
 
-**Terugdraaiprocedure**
+De downtime voor de volledige upgrade is beperkt tot de overgang van **✅ PRIM/✅ SECOND** naar **❌ STOP/✅ ALONE**.
 
-  * Stop bij stap 5 de geüpgrade **✅ ALONE (node 1)** node.
-  * Dwing het niet-geüpgrade knooppunt om als primair te starten **✅ ALONE (knooppunt 2)** .
-  * Installeer de vorige applicatieversie opnieuw op het geüpgrade knooppunt.
-  * Herstel de oorspronkelijke **✅ SECOND (node 1) / ✅ PRIM (node 2)** -configuratie.
+### Majorversie-upgrade van de applicatie {#app-level-ha-major}
+
+Een majorversie-upgrade wijzigt het formaat of de structuur van gerepliceerde gegevens. Omdat gegevens die door de nieuwe versie worden gegenereerd niet langer compatibel zijn met de oude, kan er geen doorlopende upgrade worden uitgevoerd.
+
+  1. Het cluster draait in eerste instantie in een **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuratie.
+  2. Stop de SECOND node en vervolgens de PRIM node. Het cluster gaat over naar **❌ STOP (node 1) / ❌ STOP (node 2)**.
+  3. Upgrade de voormalige PRIM node en start deze opnieuw. De node start alleen, met de nieuwe applicatieversie. De status is **✅ ALONE (node 1)**.
+  4. Valideer de geüpgradede toepassing en controleer of deze correct werkt.
+  5. Als de validatie succesvol is, upgrade dan de resterende node en start de SafeKit-module opnieuw op.
+  6. De geüpgradede node wordt **✅ SECOND (node 2)**. Deze synchroniseert de applicatiegegevens opnieuw. Het cluster keert terug naar een normale **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuratie.
 
 
-Omdat gerepliceerde gegevens tijdens de migratie worden gewijzigd, komt de downtime overeen met de periode tussen de status **❌ STOP / ❌ STOP** en de herstart van het eerste geüpgrade knooppunt als **✅ ALONE** . 
+**Rollbackprocedure**
 
-### Waarom SafeKit applicatie-upgrades vereenvoudigt {#why-safekit-simplifies-application-upgrades}
+  * Stop in stap 5 de geüpgradede node 1, in de status **✅ ALONE (node 1)**.
+  * Start de niet-geüpgradede node (node 2) opnieuw op als primair. De status is **✅ ALONE (node 2)**.
+  * Installeer de vorige versie van de toepassing opnieuw op de geüpgradede node.
+  * Herstel de oorspronkelijke **✅ SECOND (node 1) / ✅ PRIM (node 2)** configuratie.
 
-SafeKit minimaliseert operationele risico's door beheerders in staat te stellen:
 
-  * Voer de upgrade één knooppunt tegelijk uit.
-  * Zorg ervoor dat de dienstverlening zoveel mogelijk beschikbaar blijft.
-  * Valideer nieuwe versies voordat u overschakelt naar productieverkeer.
-  * Ga snel terug naar het vorige knooppunt als er onverwachte problemen worden gedetecteerd.
+Omdat gerepliceerde gegevens tijdens de migratie worden gewijzigd, komt de downtime overeen met de periode tussen de status **❌ STOP/❌ STOP** en de herstart van de eerste geüpgradede node als **✅ ALONE**.
+
+### Voordelen van SafeKit voor applicatie-upgrades {#why-safekit-simplifies-application-upgrades}
+
+SafeKit minimaliseert operationele risico's:
+
+  * Beheerders upgraden één node tegelijk.
+  * SafeKit handhaaft de beschikbaarheid van de dienst waar mogelijk.
+  * Nieuwe versies worden gevalideerd voordat het productieverkeer wordt overgeschakeld.
+  * Beheerders kunnen snel terugkeren naar de vorige node als er onverwachte problemen worden gedetecteerd.
 
 
 ## De juiste upgrade-strategie kiezen {#choosing-the-right-upgrade-strategy}
 
-Implementatiemodel | Applicatie-instanties | Impact op gerepliceerde gegevens | Upgradebenadering  
+Implementatiemodel | Applicatie-instanties | Impact van gerepliceerde gegevens | Upgradebenadering  
 ---|---|---|---  
-HA op applicatieniveau | Twee knooppunten | Afhankelijk van het upgradetype | Rolling upgrade met failover  
-HA op VM-niveau ( hyperv.safe / kvm.safe ) | Eén VM | Beheerd binnen de VM | Snapshot, upgrade, validatie, rollback indien nodig  
+HA op applicatieniveau | Twee nodes | Afhankelijk van het upgradetype | Rolling upgrade met failover  
+HA op VM-niveau met hyperv.safe of kvm.safe | Eén VM | Beheerd binnen de VM | Momentopname maken, upgraden, valideren, indien nodig terugdraaien  
   
 ## Conclusie {#conclusion}
 
-SafeKit biedt flexibele architecturen met hoge beschikbaarheid die zich aanpassen aan de operationele eisen van verschillende applicaties. Of u nu een geclusterde applicatie over twee knooppunten beschermt of een enkele applicatie-instantie die in een virtuele machine draait, SafeKit maakt gecontroleerde upgrades mogelijk, minimaliseert downtime en biedt betrouwbare herstelopties wanneer onderhoudswerkzaamheden nodig zijn.
+SafeKit biedt flexibele architecturen voor hoge beschikbaarheid die zich aanpassen aan de operationele vereisten van verschillende toepassingen. Of u nu een geclusterde toepassing op twee nodes of een enkele toepassingsinstantie die in een virtuele machine draait, beschermt, SafeKit maakt gecontroleerde upgrades mogelijk, minimaliseert downtime en biedt betrouwbare herstelopties wanneer onderhoudswerkzaamheden vereist zijn.
 
 
 {{%  insert-safekit-hub-nl  %}}

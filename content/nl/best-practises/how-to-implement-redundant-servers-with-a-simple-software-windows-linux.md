@@ -1,33 +1,34 @@
 ---
-title: "Hoe implementeer je redundante servers met eenvoudige HA-software?"
+title: "Redundante servers implementeren met eenvoudige HA-software"
 canonical: "https://safekit.eviden.com/nl/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
-description: "Leer hoe u redundante servers implementeert met een eenvoudige, volledig softwarematige aanpak. SafeKit biedt een SAN-loze architectuur voor Windows en Linux , die realtime datareplicatie en automatische failover mogelijk maakt zonder gedeelde schijven of specialistische IT-kennis."
+description: "Leer hoe u redundante servers implementeert met een eenvoudige softwarematige aanpak. SafeKit biedt realtime gegevensreplicatie en automatische failover op Windows en Linux. Het vereist geen gedeelde schijven en geen gespecialiseerde IT-vaardigheden."
 category: "best-practises"
 lang: "nl"
-topics: "Hoe implementeer ik actieve/passieve redundante servers met realtime replicatie en failover? Hoe implementeer ik actieve/actieve redundante servers met netwerkbelastingverdeling en failover? 🔍 Ontdek SafeKit"
+topics: "Hoe implementeer je actieve/passieve redundante servers met realtime replicatie en failover?, Hoe implementeer je actieve/actieve redundante servers met netwerktaakverdeling en failover?, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 52 expressions"
 ---
 
-# Hoe implementeer je redundante servers met eenvoudige HA-software {#how-to-implement-redundant-servers-with-simple-ha-software}
+# Redundante servers implementeren met eenvoudige HA-software {#how-to-implement-redundant-servers-with-simple-ha-software}
 
-## Hoe implementeer ik actieve/passieve redundante servers met realtime replicatie en failover? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
+## Hoe implementeer je actieve/passieve redundante servers met realtime replicatie en failover? {#how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover}
 
-### De cluster SafeKit mirror {#the-safekit-mirror-cluster}
-
-
-![ Redundante servers met realtime bestandsreplicatie en failover ](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
+### Het SafeKit mirror-cluster {#the-safekit-mirror-cluster}
 
 
-In een mirror cluster is de SafeKit -software geïnstalleerd op twee fysieke of virtuele servers waarop Windows of Linux draait (on-premise of in de cloud). De primaire server is de actieve server en voert een kritieke applicatie uit. De secundaire server is een passieve redundante server die in realtime alle wijzigingen ontvangt die de applicatie in zijn bestanden aanbrengt. Clients zijn verbonden met een virtueel IP-adres van [ ](</nl/best-practises/how-a-virtual-ip-address-works/#virtual-ip-same-subnet-failover>) ). Als de primaire server uitvalt, herstart SafeKit automatisch de kritieke applicatie op de passieve redundante server, die dan primair wordt en het virtuele IP-adres overneemt. Wanneer de uitgevallen server opnieuw wordt opgestart, wordt deze automatisch gesynchroniseerd en wordt de passieve redundante server die als secundaire server functioneert.
-
-## Hoe implementeer ik actieve/actieve redundante servers met netwerkbelastingverdeling en failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
-
-### De cluster SafeKit <span class="notranslate farm-term" translate="no">farm</span> {#the-safekit-farm-cluster}
+![Redundante servers met real-time bestandsreplicatie en failover](/wp-content/uploads/2023/02/safekit-prim-second-300.png "w:300")
 
 
-![ Redundante servers met netwerkbelastingverdeling en failover ](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+In een mirror-cluster is de SafeKit-software op twee servers geïnstalleerd. De servers zijn fysiek of virtueel. Ze draaien op Windows of Linux, on-premises of in de cloud. De primaire server is de actieve server. Deze draait de kritieke applicatie. De secundaire server is een passieve redundante server. Deze ontvangt in realtime alle wijzigingen die de applicatie in zijn bestanden aanbrengt. Clients maken verbinding met een [virtueel IP-adres](</nl/best-practises/how-a-virtual-ip-address-works/#virtual-ip-same-subnet-failover>). Als de primaire server uitvalt, start SafeKit de kritieke applicatie automatisch opnieuw op de secundaire server. Deze server wordt primair en neemt het virtuele IP-adres over. Wanneer de uitgevallen server opnieuw opstart, synchroniseert SafeKit de gegevens automatisch opnieuw. Deze server wordt dan de passieve redundante server, in de secundaire staat.
+
+## Hoe implementeer je actieve/actieve redundante servers met netwerktaakverdeling en failover? {#how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover}
+
+### Het SafeKit <span class="notranslate farm-term" translate="no">farm</span>-cluster {#the-safekit-farm-cluster}
 
 
-In een <span class="notranslate farm-term" translate="no">farm</span> cluster is de SafeKit -software geïnstalleerd op redundante servers waarop Windows of Linux draait (on-premise of in de cloud). Alle redundante servers zijn actief en draaien dezelfde kritieke front-endapplicatie. Clients maken verbinding met een virtueel IP-adres [ ](</nl/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>) . TCP-sessies worden verdeeld over alle redundante servers. Als een server uitvalt, herconfigureert SafeKit automatisch de load balancing van TCP-sessies over de resterende actieve servers. Wanneer de uitgevallen server opnieuw wordt opgestart, wordt deze automatisch opnieuw geïntegreerd als een actieve redundante server en ontvangt deze nieuwe TCP-sessies.
+![Redundante servers met netwerktaakverdeling en failover](/wp-content/uploads/2023/02/safekit-up-up-up-300.png "w:300")
+
+
+In een <span class="notranslate farm-term" translate="no">farm</span>-cluster wordt de SafeKit-software geïnstalleerd op verschillende redundante servers. De servers draaien op Windows of Linux, on-premises of in de cloud. Alle redundante servers zijn actief. Ze draaien dezelfde kritieke front-endapplicatie. Clients maken verbinding met een [virtueel IP-adres](</nl/best-practises/how-a-virtual-ip-address-works/#vip-load-balancing-same-subnet>). TCP-sessies worden verdeeld over alle redundante servers. Als één server uitvalt, herconfigureert SafeKit automatisch de taakverdeling van TCP-sessies tussen de resterende actieve servers. Wanneer de uitgevallen server opnieuw opstart, integreert SafeKit deze automatisch opnieuw als een actieve redundante server. Deze server ontvangt dan nieuwe TCP-sessies.
 
 
 {{%  insert-safekit-hub-nl  %}}

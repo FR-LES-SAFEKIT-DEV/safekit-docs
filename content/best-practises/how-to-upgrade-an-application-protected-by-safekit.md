@@ -15,17 +15,17 @@ Keeping business-critical applications up to date is essential for security, per
 
 There are two common deployment models:
 
-  * **Virtual Machine High Availability** , where the application runs inside a protected virtual machine managed by SafeKit.
-  * **Application-Level High Availability** , where the application is installed on two servers.
+  * **Virtual Machine High Availability**, where the application runs inside a protected virtual machine managed by SafeKit.
+  * **Application-Level High Availability**, where the application is installed on two servers.
 
 
 Each model offers different upgrade mechanisms and rollback strategies.
 
 ## VM-Level High Availability {#vm-level-ha}
 
-With SafeKit VM failover solutions such as **hyperv.safe** and **kvm.safe** , the application is installed only once inside a virtual machine.
+With SafeKit VM failover solutions such as **hyperv.safe** and **kvm.safe**, the application is installed only once inside a virtual machine.
 
-SafeKit protects the entire VM rather than the application itself, which significantly simplifies maintenance operations.
+SafeKit protects the entire VM, not the application itself. This significantly simplifies maintenance operations.
 
 ### Simplified Upgrade Process {#simplified-upgrade-process}
 
@@ -45,7 +45,7 @@ Service interruption is limited to the duration normally required by the applica
 ### Benefits of VM-Level Protection {#benefits-of-vm-level-protection}
 
   * Only one application instance to maintain.
-  * No cluster-aware upgrade procedure.
+  * No cluster-specific upgrade procedure.
   * Fast rollback through VM snapshots.
   * Reduced operational complexity.
   * Consistent upgrade process regardless of the protected application.
@@ -57,58 +57,58 @@ This approach is particularly attractive for packaged applications and commercia
 
 In a traditional SafeKit cluster, the application is installed on two nodes: node 1 and node 2. SafeKit synchronizes application data between these nodes and automatically handles failover if needed.
 
-### Minor Application Upgrade {#app-level-ha-minor}
+### Minor Version Upgrade of the Application {#app-level-ha-minor}
 
 A minor upgrade modifies only application binaries while keeping replicated data fully compatible between versions. Because the replicated data format does not change, SafeKit supports a rolling upgrade with minimal downtime. 
 
-  1. The cluster initially runs in a **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration. The application runs on the PRIM node and replicated data is continuously synchronized to the SECOND node. 
-  2. Stop the SafeKit module on the SECOND node (**❌ STOP (node 2)**), upgrade the application, and restart the module. During this operation, the application continues to run on the **✅ ALONE (node 1)** and no service interruption occurs. 
-  3. After restart, the upgraded node rejoins the cluster as **✅ SECOND (node 2)** and resynchronizes replicated data. 
-  4. Stop the PRIM node (**❌ STOP (node 1)**). SafeKit automatically performs a failover and the upgraded node becomes **✅ ALONE (node 2)**. The application is restarted on this node. Downtime is limited to the failover and application restart time. 
-  5. If the upgraded application operates correctly in the ALONE state, upgrade the remaining node (node 1) and restart its SafeKit module. 
-  6. After resynchronization, the cluster returns to a normal **✅ SECOND (node 1) / ✅ PRIM (node 2)** configuration. The original roles can be restored either manually using the SafeKit Administration Console or automatically through the SafeKit configuration. 
+  1. The cluster initially runs in a **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration. The application runs on the PRIM node. The replicated data is continuously synchronized to the SECOND node.
+  2. Stop the SafeKit module on the SECOND node. Its state becomes **❌ STOP (node 2)**. Upgrade the application and restart the module. During this operation, the application continues to run on node 1, in the **✅ ALONE (node 1)** state. No service interruption occurs.
+  3. After restart, the upgraded node rejoins the cluster as **✅ SECOND (node 2)**. It resynchronizes the replicated data.
+  4. Stop the PRIM node. Its state becomes **❌ STOP (node 1)**. SafeKit automatically performs a failover. The upgraded node becomes **✅ ALONE (node 2)**. The application is restarted on this node. Downtime is limited to the failover and application restart time.
+  5. If the upgraded application works correctly on node 2, upgrade the remaining node (node 1) and restart its SafeKit module.
+  6. After resynchronization, the cluster returns to a normal **✅ SECOND (node 1) / ✅ PRIM (node 2)** configuration. The original roles can be restored either manually using the SafeKit Administration Console or automatically through the SafeKit configuration.
 
 
 **Rollback procedure**
 
-  * At step 5, stop the **✅ ALONE (node 2)** node.
-  * Force the original node (node 1) to start as primary **ALONE (node 1)** with the previous application version.
+  * At step 5, stop node 2, in the **✅ ALONE (node 2)** state.
+  * Restart the original node (node 1) as primary, with the previous application version. Its state is **✅ ALONE (node 1)**.
   * Reinstall the previous version on the upgraded node (node 2).
-  * Return to a normal **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration.
+  * Restore the normal **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration.
 
 
-The complete upgrade is performed with downtime limited to the transition from **✅ PRIM / ✅ SECOND** to **❌ STOP / ✅ ALONE**. 
+Downtime for the complete upgrade is limited to the transition from **✅ PRIM / ✅ SECOND** to **❌ STOP / ✅ ALONE**.
 
-### Major Application Upgrade {#app-level-ha-major}
+### Major Version Upgrade of the Application {#app-level-ha-major}
 
-A major upgrade changes the format or structure of replicated data. Because data generated by the new version is no longer compatible with the old one, a rolling upgrade cannot be performed. 
+A major upgrade changes the format or structure of replicated data. Because data generated by the new version is no longer compatible with the old one, a rolling upgrade cannot be performed.
 
-  1. The cluster initially runs in a **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration. 
-  2. Stop the SECOND node and then the PRIM node. The cluster transitions to **❌ STOP (node 1) / ❌ STOP (node 2)**. 
-  3. Upgrade the former PRIM node and restart it. The node starts alone as **✅ ALONE (node 1)** with the new application version. 
-  4. Validate the upgraded application and verify that it operates correctly. 
-  5. If validation is successful, upgrade the remaining node and restart its SafeKit module. 
-  6. The upgraded node becomes **✅ SECOND (node 2)** , resynchronizes application data, and the cluster returns to a normal **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration. 
+  1. The cluster initially runs in a **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration.
+  2. Stop the SECOND node and then the PRIM node. The cluster transitions to **❌ STOP (node 1) / ❌ STOP (node 2)**.
+  3. Upgrade the former PRIM node and restart it. The node starts alone, with the new application version. Its state is **✅ ALONE (node 1)**.
+  4. Validate the upgraded application and verify that it works correctly.
+  5. If validation is successful, upgrade the remaining node and restart its SafeKit module.
+  6. The upgraded node becomes **✅ SECOND (node 2)**. It resynchronizes the application data. The cluster returns to a normal **✅ PRIM (node 1) / ✅ SECOND (node 2)** configuration.
 
 
 **Rollback procedure**
 
-  * At step 5, stop the upgraded **✅ ALONE (node 1)** node.
-  * Force the non-upgraded node to start as primary **✅ ALONE (node 2)**.
+  * At step 5, stop the upgraded node 1, in the **✅ ALONE (node 1)** state.
+  * Restart the non-upgraded node (node 2) as primary. Its state is **✅ ALONE (node 2)**.
   * Reinstall the previous application version on the upgraded node.
   * Restore the original **✅ SECOND (node 1) / ✅ PRIM (node 2)** configuration.
 
 
-Because replicated data is modified during the migration, downtime corresponds to the period between the **❌ STOP / ❌ STOP** state and the restart of the first upgraded node as **✅ ALONE**. 
+Because replicated data is modified during the migration, downtime corresponds to the period between the **❌ STOP / ❌ STOP** state and the restart of the first upgraded node as **✅ ALONE**.
 
-### Why SafeKit Simplifies Application Upgrades {#why-safekit-simplifies-application-upgrades}
+### Benefits of SafeKit for Application Upgrades {#why-safekit-simplifies-application-upgrades}
 
-SafeKit minimizes operational risk by allowing administrators to:
+SafeKit minimizes operational risk:
 
-  * Upgrade one node at a time.
-  * Maintain service availability whenever possible.
-  * Validate new versions before switching production traffic.
-  * Quickly revert to the previous node if unexpected issues are detected.
+  * Administrators upgrade one node at a time.
+  * SafeKit maintains service availability whenever possible.
+  * New versions are validated before production traffic is switched.
+  * Administrators can quickly revert to the previous node if unexpected issues are detected.
 
 
 ## Choosing the Right Upgrade Strategy {#choosing-the-right-upgrade-strategy}
@@ -116,7 +116,7 @@ SafeKit minimizes operational risk by allowing administrators to:
 Deployment Model | Application Instances | Replicated Data Impact | Upgrade Approach  
 ---|---|---|---  
 Application-Level HA | Two nodes | Depends on upgrade type | Rolling upgrade with failover  
-VM-Level HA (hyperv.safe / kvm.safe) | One VM | Managed inside VM | Snapshot, upgrade, validate, rollback if required  
+VM-Level HA with hyperv.safe or kvm.safe | One VM | Managed inside VM | Snapshot, upgrade, validate, rollback if required  
   
 ## Conclusion {#conclusion}
 

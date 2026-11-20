@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-19.23",
+  "version": "2026-11-20.3",
   "keep": [
     "mirror",
     "farm",
@@ -1377,6 +1377,42 @@
       [
         "(?<!\\w)implémente clusters\\b",
         "implémente des clusters"
+      ],
+      [
+        "(?<!\\w)des systèmes le clustering logiciel",
+        "du clustering logiciel"
+      ],
+      [
+        "(:\\s+\\*\\*)clustering logiciel\\*\\*",
+        "\\1le clustering logiciel**"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "(?<!\\w)(?:la )?reprise après sinistre (?:à )?haute disponibilité synchrone",
+        "l'architecture HADR synchrone"
+      ],
+      [
+        "[Ll]a reprise après sinistre haute disponibilité \\(HADR\\) synchrone",
+        "l'architecture HADR synchrone"
+      ],
+      [
+        "La reprise après sinistre synchrone \\(HADR\\)",
+        "L'architecture HADR synchrone"
+      ],
+      [
+        "fonctionnant (Windows|Linux)",
+        "fonctionnant sous \\1"
+      ],
+      [
+        "mise(s)? à niveau continue(s)?",
+        "mise\\1 à niveau progressive\\2"
+      ],
+      [
+        "^(\\s*\\* )Forcer ",
+        "\\1Forcez "
       ]
     ],
     "it": [
@@ -1559,6 +1595,26 @@
       [
         "\\breplicazione\\b",
         "replica"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "^(\\s*\\d+\\. )Convalida ",
+        "\\1Convalidare "
+      ],
+      [
+        "^(\\s*\\* )Ripristina ",
+        "\\1Ripristinare "
+      ],
+      [
+        "^(\\s*\\* )Al passaggio (\\d), arresta ",
+        "\\1Al passaggio \\2, arrestare "
+      ],
+      [
+        "\\bUn aggiornamento importante\\b",
+        "Un aggiornamento di versione principale"
       ]
     ],
     "es": [
@@ -1809,6 +1865,34 @@
       [
         "!\\[heartbeat\\b",
         "![Heartbeat"
+      ],
+      [
+        "(:\\s+\\*\\*)clustering de software\\*\\*",
+        "\\1el clustering de software**"
+      ],
+      [
+        "(?<!\\w)Comparación de clustering de software y los",
+        "Comparación entre el clustering de software y los"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "Se ejecutan (Windows|Linux)",
+        "Ejecutan \\1"
+      ],
+      [
+        "\\*\\*(de|del|en) ([✅❌])",
+        "\\1 **\\2"
+      ],
+      [
+        "versión principal de la aplicación",
+        "versión mayor de la aplicación"
+      ],
+      [
+        "\\bUna actualización importante\\b",
+        "Una actualización de versión mayor"
       ]
     ],
     "pt": [
@@ -2083,6 +2167,34 @@
       [
         "!\\[heartbeat\\b",
         "![Heartbeat"
+      ],
+      [
+        "\\bservidor failover\\b",
+        "servidor de failover"
+      ],
+      [
+        "(?<!\\w)de sistemas o clustering de software",
+        "do clustering de software"
+      ],
+      [
+        "(?<!\\w)do clustering de software e de sistemas",
+        "do clustering de software e dos sistemas"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "\\*\\*(o|a|os|as) ([A-Z][\\w-]*)\\*\\*",
+        "\\1 **\\2**"
+      ],
+      [
+        "\\btempo failover\\b",
+        "tempo de failover"
+      ],
+      [
+        "\\bUma atualização importante\\b",
+        "Uma atualização de versão principal"
       ]
     ],
     "ar": [
@@ -2329,6 +2441,58 @@
       [
         "\\[([^\\]]+)\\]\\((<[^>]+>)\\) 🛠️",
         "🛠️ [\\1](\\2)"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "\\*\\*البنية مرنة",
+        "**بنية مرنة"
+      ],
+      [
+        "\\[RTO RPO ",
+        "[RTO و RPO "
+      ],
+      [
+        "خوادم (?:زائدة|متكررة)",
+        "خوادم احتياطية"
+      ],
+      [
+        "تعمل الخوادم (Windows|Linux)",
+        "تعمل الخوادم بنظام \\1"
+      ],
+      [
+        "كخادم زائد عن الحاجة",
+        "كخادم احتياطي"
+      ],
+      [
+        "\\(node (\\d)\\)",
+        "(العقدة \\1)"
+      ],
+      [
+        "\\*\\*العقدة ✅",
+        "العقدة **✅"
+      ],
+      [
+        "ينضم العقدة",
+        "تنضم العقدة"
+      ],
+      [
+        "ينتقل المجموع ",
+        "تنتقل المجموعة "
+      ],
+      [
+        "يؤدي الترقية",
+        "تؤدي الترقية"
+      ],
+      [
+        "^(\\s*\\* )استعادة ",
+        "\\1استعد "
+      ],
+      [
+        "جهاز VM بأكمله",
+        "الجهاز الظاهري بأكمله"
       ]
     ],
     "de": [
@@ -2807,6 +2971,58 @@
       [
         "(farm</span>) \\((\\d+) oder mehr Server\\)",
         "\\1 aus \\2 oder mehr Servern"
+      ],
+      [
+        "\\b(Windows|Linux) Kernel\\b",
+        "\\1-Kernel"
+      ],
+      [
+        "Mainline Linux-Kernel",
+        "Mainline-Linux-Kernel"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "(?<!\\w)das automatisches Failover",
+        "das automatische Failover"
+      ],
+      [
+        " \\(\\)",
+        ""
+      ],
+      [
+        "Wiederherstellungszeitpunkts \\(RTO\\)",
+        "Wiederherstellungszeitziels (RTO)"
+      ],
+      [
+        "Wiederherstellungspunkts \\(RPO\\)",
+        "Wiederherstellungspunktziels (RPO)"
+      ],
+      [
+        "Der RPO ist",
+        "Die RPO ist"
+      ],
+      [
+        "\\*\\*([^*\\n]*?)(PRIM|SECOND|ALONE|STOP)-Konfiguration (\\(Knoten \\d\\))\\*\\*",
+        "**\\1\\2 \\3**-Konfiguration"
+      ],
+      [
+        "\\*\\* Konfiguration\\b",
+        "**-Konfiguration"
+      ],
+      [
+        "\\bDas Cluster\\b",
+        "Der Cluster"
+      ],
+      [
+        "\\bEin großes Upgrade\\b",
+        "Ein Major-Upgrade"
+      ],
+      [
+        "Minor-Versionsupgrade",
+        "Minor-Versions-Upgrade"
       ]
     ],
     "ko": [
@@ -3473,6 +3689,86 @@
       [
         "정족수",
         "쿼럼"
+      ],
+      [
+        "\\*\\* (이라는|라는)",
+        "**\\1"
+      ],
+      [
+        "RTO / 복구 지점 RPO",
+        "RTO/RPO"
+      ],
+      [
+        "Linux Windows 메인라인에",
+        "메인라인 Linux 커널에"
+      ],
+      [
+        "RTO 및 RPO 살펴",
+        "RTO 및 RPO를 살펴"
+      ],
+      [
+        "(\\]\\(<[^>]+>\\)) 참조하십시오",
+        "\\1를 참조하십시오"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "SafeKit 통한",
+        "SafeKit을 통한"
+      ],
+      [
+        "SafeKit (\\*\\*[^*]+\\*\\*[과와] 함께)",
+        "SafeKit은 \\1"
+      ],
+      [
+        "^SafeKit 고가의",
+        "SafeKit은 고가의"
+      ],
+      [
+        "SafeKit은 통한",
+        "SafeKit을 통한"
+      ],
+      [
+        "SafeKit (동기|비동기) 복제를 통해",
+        "SafeKit의 \\1 복제를 통해"
+      ],
+      [
+        "((?:면|되면|나면),? )SafeKit (?=[가-힣])",
+        "\\1SafeKit은 "
+      ],
+      [
+        "\\(node (\\d)\\)",
+        "(노드 \\1)"
+      ],
+      [
+        "SafeKit로",
+        "SafeKit으로"
+      ],
+      [
+        "주요 버전 업그레이드",
+        "메이저 버전 업그레이드"
+      ],
+      [
+        "주요 업그레이드",
+        "메이저 업그레이드"
+      ],
+      [
+        "순차 업그레이드",
+        "롤링 업그레이드"
+      ],
+      [
+        "원본 (\\*\\*[✅❌])",
+        "원래 \\1"
+      ],
+      [
+        "SafeKit (?=애플리케이션 자체)",
+        "SafeKit은 "
+      ],
+      [
+        "((?:므로|하든|든),? )SafeKit (?=[가-힣])",
+        "\\1SafeKit은 "
       ]
     ],
     "ja": [
@@ -3662,11 +3958,11 @@
       ],
       [
         "^(\\s*)SafeKit (?=\\d+ 台)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(、\\s*)SafeKit (?=\\*\\*)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "^(\\s*)データが複製されました(?=\\s*(?:\\||$))",
@@ -3678,7 +3974,7 @@
       ],
       [
         "(注\\s*[:：]\\s*)SafeKit\\s*(?!は)(?=[\\u30a0-\\u30ff\\u4e00-\\u9fff])",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "高可用性クラスター(?=シェアードナッシング|共有ディスク)",
@@ -3706,7 +4002,7 @@
       ],
       [
         "(^|。)SafeKit\\s*(?=[\\u30a0-\\u30ff]+を実装)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "ソフトウェア\\s*SafeKit\\s*(?=\\d)",
@@ -3838,11 +4134,11 @@
       ],
       [
         "(^|[。．.]\\s*|\\\")SafeKit (?=(?:Windows|Linux) )",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(^|[。．.]\\s*|\\\")SafeKit (?=(?:\\d+|二|2) ?台)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "アメリカ合衆国",
@@ -3854,7 +4150,7 @@
       ],
       [
         "(^|[。．]\\s*)SafeKit (?=(?:SCADA|EACS|BMS|VMS) )",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(📚)(?=\\*\\*)",
@@ -3862,7 +4158,7 @@
       ],
       [
         "(。\\s*)SafeKit (?=(?:SCADA|EACS|BMS|VMS|ATC|OCC) )",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "SAN レス(?:の)?",
@@ -3874,7 +4170,7 @@
       ],
       [
         "(すると、\\s*)SafeKit (?=mirror モジュールの)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(^|[。、]\\s*)ADB SafeGate[、 ](?!(?:ソフトウェア|の|は|が|を|に|で|と|も))",
@@ -3906,7 +4202,7 @@
       ],
       [
         "(^|。\\s*)SafeKit\\s+(?=\\*\\*\\s*[^*\\n]+?\\s*\\*\\*\\s*を)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(`[^`\\n]+` および `[^`\\n]+`)、",
@@ -3914,11 +4210,11 @@
       ],
       [
         "([？?]\\s*)SafeKit (?=SQL Server)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(）[:：]\\s*)SafeKit[、 ]\\s*(?![はがを])",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(\\S) は異なり、",
@@ -3926,15 +4222,15 @@
       ],
       [
         "(とは異なり、\\s*)SafeKit\\s*(?![はがを、])",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(の場合、\\s*)SafeKit (?![はがを])(?=[\\u30a0-\\u9fff])",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "(^|。\\s*)SafeKit\\s+(?=高可用性ソフトウェア(?!を使用|で|の|によ|と))",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "サードマシン",
@@ -3958,7 +4254,7 @@
       ],
       [
         "(^|。\\s*)SafeKit\\s+(?=[^\\s。、はがを]*製品です)",
-        "\\1SafeKit は "
+        "\\1SafeKit は"
       ],
       [
         "フェイルバック(?=自動的)",
@@ -4023,6 +4319,70 @@
       [
         "ソフトウェアは SafeKit (?=[^\\sはが、])",
         "SafeKit ソフトウェアは、"
+      ],
+      [
+        "\\*\\*([^*\\n]+?)です\\*\\*",
+        "**\\1**です"
+      ],
+      [
+        "(?:RTO|RPO) (\\[(?:RTO|RPO)\\]\\(<[^>]+>\\))",
+        "\\1"
+      ],
+      [
+        "(\\]\\(<[^>]+>\\))参照してください",
+        "\\1を参照してください"
+      ],
+      [
+        "\\*\\*([^*\\n]+?)の\\*\\*",
+        "**\\1**の"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "\\[RTO と RPO 例」を\\]\\(([^)]*)\\)を参照してください。?",
+        "[RTO と RPO の例](\\1)を参照してください。"
+      ],
+      [
+        "RTO ほぼゼロ、",
+        "RTO はほぼゼロ、"
+      ],
+      [
+        "(場合、|すると、)SafeKit (?=[^\\sはがもをのにでと、。（(])",
+        "\\1SafeKit は"
+      ],
+      [
+        "\\*\\*(PRIM|SECOND|ALONE|STOP) ([✅❌]) ノード (\\d)）\\*\\*",
+        "**\\2 \\1（ノード \\3）**"
+      ],
+      [
+        "\\*\\*([^*\\n✅❌]*?)([✅❌])\\s*（ノード (\\d) (PRIM|SECOND|ALONE|STOP)\\*\\*",
+        "\\1**\\2 \\4（ノード \\3）**"
+      ],
+      [
+        "\\*\\*([^*\\n✅❌]+?)([✅❌][^*\\n]*)\\*\\*",
+        "\\1**\\2**"
+      ],
+      [
+        "SafeKit (?=アプリケーション自体)",
+        "SafeKit は"
+      ],
+      [
+        "\\s*\\(ノード (\\d)\\)",
+        "（ノード \\1）"
+      ],
+      [
+        " +（ノード (\\d)）",
+        "（ノード \\1）"
+      ],
+      [
+        "）\\s*/\\s*([✅❌])",
+        "）/\\1"
+      ],
+      [
+        "）\\s+(?=[をはがにでとの])",
+        "）"
       ]
     ],
     "zh-hans": [
@@ -4205,6 +4565,66 @@
       [
         "集群无需共享磁盘",
         "集群，无需共享磁盘"
+      ],
+      [
+        "选项软件厂商",
+        "选项的软件厂商"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "\\*\\*([A-Za-z][\\w-]*) 就是一个例子\\*\\*",
+        "**\\1** 就是一个例子"
+      ],
+      [
+        "有弹性基础设施",
+        "有弹性的基础设施"
+      ],
+      [
+        "SafeKit 着",
+        "SafeKit 维护着"
+      ],
+      [
+        "其恢复 RPO 为",
+        "其 RPO 为"
+      ],
+      [
+        "。在 Windows 和 Linux 上提供([^。]*?)自动 SafeKit 转移",
+        "。SafeKit 在 Windows 和 Linux 上提供\\1自动故障转移"
+      ],
+      [
+        "自动 SafeKit 转移",
+        "自动故障转移"
+      ],
+      [
+        "(\\*\\*[^*\\n]*?)\\s*的\\*\\*",
+        "\\1**的"
+      ],
+      [
+        "\\(node (\\d)\\)",
+        "（节点 \\1）"
+      ],
+      [
+        "\\s*\\(节点 (\\d)\\)",
+        "（节点 \\1）"
+      ],
+      [
+        " +（节点 (\\d)）",
+        "（节点 \\1）"
+      ],
+      [
+        "\\*\\*([^*\\n✅❌]+?)([✅❌][^*\\n]*)\\*\\*",
+        "\\1**\\2**"
+      ],
+      [
+        "(^|。)(在[^。\\n]*?之间)同步 SafeKit 程序数据",
+        "\\1SafeKit \\2同步应用程序数据"
+      ],
+      [
+        "）\\s*/\\s*([✅❌])",
+        "）/\\1"
       ]
     ],
     "nl": [
@@ -4563,6 +4983,70 @@
       [
         "quorumsamenwerkingsserver",
         "quorumserver"
+      ],
+      [
+        "fouttolerantsysteem",
+        "fouttolerant systeem"
+      ],
+      [
+        "redundantestrategie",
+        "redundantiestrategie"
+      ],
+      [
+        "\\b([Ff])outtolerante systeem\\b",
+        "\\1outtolerant systeem"
+      ],
+      [
+        "hoge softwarebeschikbaarheid",
+        "softwarematige hoge beschikbaarheid"
+      ],
+      [
+        "(\"w:\\d+\"\\))[.。](?=\\s*$)",
+        "\\1"
+      ],
+      [
+        "\\(knooppunt (\\d)\\)",
+        "(node \\1)"
+      ],
+      [
+        "\\bHet ((?:[\\wëü-]+ ){0,2})knooppunt\\b",
+        "De \\1node"
+      ],
+      [
+        "\\bhet ((?:[\\wëü-]+ ){0,2})knooppunt\\b",
+        "de \\1node"
+      ],
+      [
+        "\\bdit knooppunt\\b",
+        "deze node"
+      ],
+      [
+        "\\bknooppunt\\b",
+        "node"
+      ],
+      [
+        "Stop bij stap (\\d), node (\\d),",
+        "Stop bij stap \\1 node \\2,"
+      ],
+      [
+        "Grote versie-upgrade",
+        "Majorversie-upgrade"
+      ],
+      [
+        "\\bEen belangrijke upgrade\\b",
+        "Een majorversie-upgrade"
+      ],
+      [
+        "\\bknooppunten\\b",
+        "nodes"
+      ],
+      [
+        "\\bnode en start het opnieuw\\b",
+        "node en start deze opnieuw"
+      ],
+      [
+        "\\btoepassinginstantie\\b",
+        "toepassingsinstantie"
       ]
     ],
     "pt-br": [
@@ -4621,12 +5105,64 @@
       [
         "\\bregisto(s?)\\b",
         "registro\\1"
+      ],
+      [
+        "\\bdetet(ar|a|ou|ado|ada)\\b",
+        "detect\\1"
+      ],
+      [
+        "\\bao nível de instrução",
+        "no nível de instrução"
+      ],
+      [
+        "\\bO seu estado torna-se\\b",
+        "Seu estado se torna"
+      ],
+      [
+        "\\b(nó|cluster|estado|aplicativo) (\\w+ )?torna-se\\b",
+        "\\1 \\2se torna"
+      ],
+      [
+        "\\bAtualize a aplicação\\b",
+        "Atualize o aplicativo"
+      ],
+      [
+        "\\ba aplicação continua a ser executada\\b",
+        "o aplicativo continua sendo executado"
       ]
     ],
     "pt-pt": [
       [
         "(?<!\\w)em failover automátic[oa]",
         "num failover automático"
+      ],
+      [
+        "processo failover",
+        "processo de failover"
+      ],
+      [
+        "\\b([Nn])uma cluster\\b",
+        "\\1um cluster"
+      ],
+      [
+        "ou uma cópia de segurança da máquina virtual",
+        "ou um instantâneo da máquina virtual"
+      ],
+      [
+        "remova a cópia de segurança e",
+        "remova o instantâneo e"
+      ],
+      [
+        "a partir da cópia de segurança e",
+        "a partir do instantâneo e"
+      ],
+      [
+        "Cria uma cópia de segurança, atualiza",
+        "Cria um instantâneo, atualiza"
+      ],
+      [
+        "^(\\s*\\* )Restaurar a ",
+        "\\1Restaure a "
       ]
     ]
   },

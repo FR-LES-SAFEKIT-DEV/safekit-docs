@@ -1,126 +1,127 @@
 ---
-title: "Aktualisierung einer durch SafeKit geschützten Anwendung in einem HA-Cluster"
+title: "Aktualisieren einer durch SafeKit geschützten Anwendung in einem HA-Cluster"
 canonical: "https://safekit.eviden.com/de/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "Erfahren Sie, wie Sie durch SafeKit geschützte Anwendungen sicher aktualisieren. Vergleichen Sie kleinere und größere Upgrades, rollierende Upgrades, Rollback-Strategien und VM-basierte Hochverfügbarkeit."
+description: "Erfahren Sie, wie Sie Anwendungen, die durch SafeKit geschützt sind, sicher aktualisieren. Vergleichen Sie Minor- und Major-Upgrades, Rolling Upgrades, Rollback-Strategien und VM-basierte Hochverfügbarkeit."
 category: "best-practises"
 lang: "de"
-topics: "Upgrade einer durch SafeKit geschützten Hochverfügbarkeitsanwendung, VM-basierte Hochverfügbarkeit, Anwendungsbasierte Hochverfügbarkeit, Wahl der richtigen Upgrade-Strategie, Fazit, 🔍 SafeKit entdecken"
+topics: "Aktualisierung einer Hochverfügbarkeitsanwendung, die durch SafeKit geschützt ist, Hochverfügbarkeit auf VM-Ebene, Hochverfügbarkeit auf Anwendungsebene, Die richtige Upgrade-Strategie wählen, Schlussfolgerung, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 54 expressions"
 ---
 
-# Aktualisierung einer durch SafeKit geschützten Anwendung in einem HA-Cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
+# Aktualisieren einer durch SafeKit geschützten Anwendung in einem HA-Cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}
 
-## Aktualisierung einer durch SafeKit geschützten Hochverfügbarkeitsanwendung {#upgrading-a-high-availability-application-protected-by-safekit}
+## Aktualisierung einer Hochverfügbarkeitsanwendung, die durch SafeKit geschützt ist {#upgrading-a-high-availability-application-protected-by-safekit}
 
-Die Aktualisierung geschäftskritischer Anwendungen ist unerlässlich für Sicherheit, Leistung und den Zugriff auf neue Funktionen. Wenn eine Anwendung durch SafeKit geschützt ist, hängt das Upgrade-Verfahren von der verwendeten Hochverfügbarkeitsarchitektur ab.
+Die Aktualisierung geschäftskritischer Anwendungen ist für Sicherheit, Leistung und den Zugriff auf neue Funktionen unerlässlich. Wenn eine Anwendung durch SafeKit geschützt ist, hängt das Upgrade-Verfahren von der verwendeten Hochverfügbarkeitsarchitektur ab.
 
 Es gibt zwei gängige Bereitstellungsmodelle:
 
-  * **Virtuelle Maschine Hochverfügbarkeit** , wobei die Anwendung in einer geschützten virtuellen Maschine ausgeführt wird, die von SafeKit verwaltet wird.
-  * **Anwendungsweite Hochverfügbarkeit** , wobei die Anwendung auf zwei Servern installiert ist.
+  * **Hochverfügbarkeit von virtuellen Maschinen**, bei der die Anwendung in einer geschützten virtuellen Maschine läuft, die von SafeKit verwaltet wird.
+  * **Hochverfügbarkeit auf Anwendungsebene**, bei der die Anwendung auf zwei Servern installiert ist.
 
 
 Jedes Modell bietet unterschiedliche Upgrade-Mechanismen und Rollback-Strategien.
 
 ## Hochverfügbarkeit auf VM-Ebene {#vm-level-ha}
 
-Bei SafeKit VM-Failover-Lösungen wie **hyperv.safe** und **kvm.safe** wird die Anwendung nur einmal in einer virtuellen Maschine installiert.
+Mit SafeKit VM-Failover-Lösungen wie **hyperv.safe** und **kvm.safe** wird die Anwendung nur einmal in einer virtuellen Maschine installiert.
 
-SafeKit schützt die gesamte VM und nicht nur die Anwendung selbst, was die Wartungsarbeiten erheblich vereinfacht.
+SafeKit schützt die gesamte VM und nicht die Anwendung selbst. Dies vereinfacht die Wartungsarbeiten erheblich.
 
 ### Vereinfachter Upgrade-Prozess {#simplified-upgrade-process}
 
-Da Sie mit einer einzelnen VM-Instanz der Anwendung arbeiten, erfolgt die Wartung auf der Virtualisierungsebene und nicht durch ein Failover auf Anwendungsebene.
+Da Sie mit einer einzelnen VM-Instanz der Anwendung arbeiten, wird die Wartung auf der Virtualisierungsebene und nicht durch Failover auf Anwendungsebene durchgeführt.
 
 Das Upgrade-Verfahren ist unkompliziert:
 
-  1. Erstellen Sie einen Prüfpunkt oder Snapshot der virtuellen Maschine mithilfe der Hyper-V- oder KVM-Verwaltungskonsole.
-  2. Führen Sie das Anwendungs-Upgrade innerhalb der virtuellen Maschine durch.
-  3. Überprüfen Sie die aktualisierte Anwendung.
+  1. Erstellen Sie einen Checkpoint oder einen Snapshot der virtuellen Maschine mithilfe der Hyper-V oder KVM Verwaltungskonsole.
+  2. Führen Sie das Anwendungsupgrade in der virtuellen Maschine durch.
+  3. Validieren Sie die aktualisierte Anwendung.
   4. Wenn das Upgrade erfolgreich war, entfernen Sie den Snapshot und setzen Sie den normalen Betrieb fort.
-  5. Im Falle eines Problems stellen Sie die virtuelle Maschine aus dem Snapshot wieder her und kehren Sie umgehend zum vorherigen, bekannten Funktionszustand zurück.
+  5. Wenn ein Problem auftritt, stellen Sie die virtuelle Maschine aus dem Snapshot wieder her und kehren Sie sofort zum vorherigen, bekannten funktionierenden Zustand zurück.
 
 
-Die Serviceunterbrechung ist auf die Dauer begrenzt, die normalerweise durch das eigene Aktualisierungsverfahren der Anwendung erforderlich ist.
+Die Dienstunterbrechung ist auf die Dauer beschränkt, die normalerweise für das Upgrade-Verfahren der Anwendung selbst erforderlich ist.
 
 ### Vorteile des VM-Level-Schutzes {#benefits-of-vm-level-protection}
 
-  * Es muss nur eine Anwendungsinstanz gewartet werden.
-  * Kein Cluster-fähiges Upgrade-Verfahren.
-  * Schnelles Rollback durch VM-Snapshots.
-  * Reduzierte betriebliche Komplexität.
-  * Einheitlicher Upgrade-Prozess unabhängig von der geschützten Anwendung.
+  * Nur eine Anwendungsinstanz muss verwaltet werden.
+  * Kein clusterspezifisches Upgrade-Verfahren.
+  * Schnelle Wiederherstellung durch VM-Snapshots.
+  * Reduzierte operative Komplexität.
+  * Konsistenter Upgrade-Prozess, unabhängig von der geschützten Anwendung.
 
 
-Dieser Ansatz ist besonders attraktiv für vorgefertigte Softwarepakete und kommerzielle Standardsoftware, bei denen Anwendungsclustering nicht verfügbar oder schwer zu implementieren ist.
+Dieser Ansatz ist besonders attraktiv für vorkonfigurierte Anwendungen und kommerzielle Standardsoftware, bei denen Anwendungsclusterung nicht verfügbar oder schwer zu implementieren ist.
 
 ## Hochverfügbarkeit auf Anwendungsebene {#app-level-ha}
 
-In einem herkömmlichen SafeKit Cluster wird die Anwendung auf zwei Knoten installiert: Knoten 1 und Knoten 2. SafeKit synchronisiert die Anwendungsdaten zwischen diesen Knoten und übernimmt bei Bedarf automatisch das Failover.
+In einem traditionellen SafeKit-Cluster wird die Anwendung auf zwei Knoten installiert: Knoten 1 und Knoten 2. SafeKit synchronisiert die Anwendungsdaten zwischen diesen Knoten und übernimmt bei Bedarf automatisch das Failover.
 
-### Geringfügiges Anwendungs-Upgrade {#app-level-ha-minor}
+### Minor-Versions-Upgrade der Anwendung {#app-level-ha-minor}
 
-Ein kleineres Upgrade ändert lediglich die Anwendungsdateien, während die replizierten Daten zwischen den Versionen vollständig kompatibel bleiben. Da sich das Format der replizierten Daten nicht ändert, unterstützt SafeKit ein rollierendes Upgrade mit minimaler Ausfallzeit. 
+Ein Minor-Upgrade modifiziert nur Anwendungsbinärdateien, während die replizierten Daten zwischen den Versionen vollständig kompatibel bleiben. Da sich das replizierte Datenformat nicht ändert, unterstützt SafeKit ein Rolling-Upgrade mit minimaler Ausfallzeit. 
 
-  1. Der Cluster läuft anfänglich in einer **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** -Konfiguration. Die Anwendung läuft auf dem PRIM-Knoten, und replizierte Daten werden kontinuierlich mit dem SECOND-Knoten synchronisiert. 
-  2. Stoppen Sie das Modul SafeKit auf dem zweiten Knoten ( **❌ STOP (Knoten 2)** ), aktualisieren Sie die Anwendung und starten Sie das Modul neu. Währenddessen läuft die Anwendung auf dem **✅ ALONE (Knoten 1)** weiter, und es kommt zu keiner Dienstunterbrechung. 
-  3. Nach dem Neustart tritt der aktualisierte Knoten dem Cluster als **✅ SECOND (Knoten 2)** wieder bei und synchronisiert die replizierten Daten neu. 
-  4. Der primäre Knoten ( **❌ STOP (Knoten 1)** ) wird gestoppt. SafeKit führt automatisch ein Failover durch, und der aktualisierte Knoten wird zu **✅ ALONE (Knoten 2)** . Die Anwendung wird auf diesem Knoten neu gestartet. Die Ausfallzeit ist auf die Dauer des Failovers und des Neustarts der Anwendung begrenzt. 
-  5. Wenn die aktualisierte Anwendung im ALONE-Zustand korrekt funktioniert, aktualisieren Sie den verbleibenden Knoten (Knoten 1) und starten Sie dessen SafeKit Modul neu. 
-  6. Nach der Resynchronisierung kehrt der Cluster zu seiner normalen **✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2)** -Konfiguration zurück. Die ursprünglichen Rollen können entweder manuell über die SafeKit -Administrationskonsole oder automatisch über die SafeKit Konfiguration wiederhergestellt werden. 
+  1. Der Cluster läuft zunächst in einer **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)**-Konfiguration. Die Anwendung läuft auf dem PRIM-Knoten. Die replizierten Daten werden kontinuierlich mit dem SECOND-Knoten synchronisiert.
+  2. Stoppen Sie das SafeKit-Modul auf dem SECOND-Knoten. Sein Status wird zu **❌ STOP (Knoten 2)**. Aktualisieren Sie die Anwendung und starten Sie das Modul neu. Während dieses Vorgangs läuft die Anwendung auf Knoten 1 im Status **✅ ALONE (Knoten 1)** weiter. Es kommt zu keiner Dienstunterbrechung.
+  3. Nach dem Neustart tritt der aktualisierte Knoten dem Cluster als **✅ SECOND (Knoten 2)** wieder bei. Er synchronisiert die replizierten Daten neu.
+  4. Stoppen Sie den PRIM-Knoten. Sein Status wird zu **❌ STOP (Knoten 1)**. SafeKit führt automatisch ein Failover durch. Der aktualisierte Knoten wird zu **✅ ALONE (Knoten 2)**. Die Anwendung wird auf diesem Knoten neu gestartet. Die Ausfallzeit ist auf die Failover- und Anwendungsneustartzeit beschränkt.
+  5. Wenn die aktualisierte Anwendung auf Knoten 2 korrekt funktioniert, aktualisieren Sie den verbleibenden Knoten (Knoten 1) und starten Sie sein SafeKit-Modul neu.
+  6. Nach der Resynchronisierung kehrt der Cluster zu einer normalen **✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2)**-Konfiguration zurück. Die ursprünglichen Rollen können entweder manuell über die SafeKit-Administrationskonsole oder automatisch über die SafeKit-Konfiguration wiederhergestellt werden.
 
 
-**Rollback-Prozedur**
+**Rollback-Verfahren**
 
-  * In Schritt 5 den Knoten **✅ ALONE (Knoten 2)** stoppen.
-  * Erzwinge, dass der ursprüngliche Knoten (Knoten 1) als primärer Knoten **ALONE (Knoten 1)** mit der vorherigen Anwendungsversion startet.
+  * Stoppen Sie in Schritt 5 den Knoten 2 im Zustand **✅ ALONE (Knoten 2)**.
+  * Starten Sie den ursprünglichen Knoten (Knoten 1) als primären Knoten mit der vorherigen Anwendungsversion neu. Sein Status ist **✅ ALONE (Knoten 1)**.
   * Installieren Sie die vorherige Version auf dem aktualisierten Knoten (Knoten 2) neu.
-  * Rückkehr zu einer normalen **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** Konfiguration.
+  * Stellen Sie die normale **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)**-Konfiguration wieder her.
 
 
-Das vollständige Upgrade wird mit einer Ausfallzeit durchgeführt, die auf den Übergang von **✅ PRIM / ✅ SECOND** zu **❌ STOP / ✅ ALONE** beschränkt ist. 
+Die Ausfallzeit für das vollständige Upgrade ist auf den Übergang von **✅ PRIM/✅ SECOND** zu **❌ STOP/✅ ALONE** beschränkt.
 
-### Wichtiges Anwendungs-Upgrade {#app-level-ha-major}
+### Major-Versions-Upgrade der Anwendung {#app-level-ha-major}
 
-Ein größeres Upgrade ändert das Format oder die Struktur der replizierten Daten. Da die von der neuen Version generierten Daten nicht mehr mit der alten Version kompatibel sind, kann kein rollierendes Upgrade durchgeführt werden. 
+Ein Major-Upgrade ändert das Format oder die Struktur der replizierten Daten. Da die von der neuen Version generierten Daten nicht mehr mit der alten Version kompatibel sind, kann kein rollierendes Upgrade durchgeführt werden.
 
-  1. Der Cluster läuft anfänglich in einer **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** Konfiguration. 
-  2. Stoppen Sie zuerst den zweiten Knoten und dann den primären Knoten. Der Cluster wechselt zu **❌ STOP (Knoten 1) / ❌ STOP (Knoten 2)** . 
-  3. Aktualisieren Sie den vorherigen PRIM-Knoten und starten Sie ihn neu. Der Knoten startet allein als **✅ ALONE (Knoten 1)** mit der neuen Anwendungsversion. 
-  4. Überprüfen Sie die aktualisierte Anwendung und stellen Sie sicher, dass sie ordnungsgemäß funktioniert. 
-  5. Wenn die Validierung erfolgreich ist, aktualisieren Sie den verbleibenden Knoten und starten Sie dessen SafeKit -Modul neu. 
-  6. Der aktualisierte Knoten wird zu **✅ SECOND (Knoten 2)** , resynchronisiert die Anwendungsdaten, und der Cluster kehrt zu einer normalen **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)** Konfiguration zurück. 
+  1. Der Cluster läuft zunächst in einer **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)**-Konfiguration.
+  2. Stoppen Sie den SECOND-Knoten und dann den PRIM-Knoten. Der Cluster wechselt zu **❌ STOP (Knoten 1) / ❌ STOP (Knoten 2)**.
+  3. Aktualisieren Sie den ehemaligen PRIM-Knoten und starten Sie ihn neu. Der Knoten startet allein mit der neuen Anwendungsversion. Sein Status ist **✅ ALONE (Knoten 1)**.
+  4. Validieren Sie die aktualisierte Anwendung und vergewissern Sie sich, dass sie korrekt funktioniert.
+  5. Wenn die Validierung erfolgreich ist, aktualisieren Sie den verbleibenden Knoten und starten Sie sein SafeKit-Modul neu.
+  6. Der aktualisierte Knoten wird zu **✅ SECOND (Knoten 2)**. Er synchronisiert die Anwendungsdaten neu. Der Cluster kehrt zu einer normalen **✅ PRIM (Knoten 1) / ✅ SECOND (Knoten 2)**-Konfiguration zurück.
 
 
-**Rollback-Prozedur**
+**Rollback-Verfahren**
 
-  * In Schritt 5 wird der aktualisierte Knoten **✅ ALONE (Knoten 1)** gestoppt.
-  * Erzwinge, dass der nicht aktualisierte Knoten als primärer Knoten **✅ ALLEIN (Knoten 2)** startet.
+  * Stoppen Sie in Schritt 5 den aktualisierten Knoten 1 im Status **✅ ALONE (Knoten 1)**.
+  * Starten Sie den nicht aktualisierten Knoten (Knoten 2) als primären Knoten neu. Sein Status ist **✅ ALONE (Knoten 2)**.
   * Installieren Sie die vorherige Anwendungsversion auf dem aktualisierten Knoten neu.
-  * Stellen Sie die ursprüngliche **✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2)** Konfiguration wieder her.
+  * Stellen Sie die ursprüngliche **✅ SECOND (Knoten 1) / ✅ PRIM (Knoten 2)**-Konfiguration wieder her.
 
 
-Da replizierte Daten während der Migration verändert werden, entspricht die Ausfallzeit dem Zeitraum zwischen dem Zustand **❌ STOP / ❌ STOP** und dem Neustart des ersten aktualisierten Knotens als **✅ ALONE** . 
+Da die replizierten Daten während der Migration geändert werden, entspricht die Ausfallzeit dem Zeitraum zwischen dem Status **❌ STOP/❌ STOP** und dem Neustart des ersten aktualisierten Knotens als **✅ ALONE**.
 
-### Warum SafeKit Anwendungs-Upgrades vereinfacht {#why-safekit-simplifies-application-upgrades}
+### Vorteile von SafeKit für Anwendungs-Upgrades {#why-safekit-simplifies-application-upgrades}
 
-SafeKit minimiert das Betriebsrisiko, indem es Administratoren Folgendes ermöglicht:
+SafeKit minimiert das Betriebsrisiko:
 
-  * Aktualisieren Sie jeweils einen Knoten.
-  * Die Verfügbarkeit des Dienstes sollte nach Möglichkeit sichergestellt werden.
-  * Neue Versionen sollten vor der Umstellung auf den Produktionsbetrieb validiert werden.
-  * Bei unerwarteten Problemen schnell zum vorherigen Knoten zurückkehren.
+  * Administratoren aktualisieren jeweils einen Knoten.
+  * SafeKit gewährleistet die Dienstverfügbarkeit, wann immer dies möglich ist.
+  * Neue Versionen werden validiert, bevor der Produktionsverkehr umgestellt wird.
+  * Administratoren können bei unerwarteten Problemen schnell zum vorherigen Knoten zurückkehren.
 
 
-## Die richtige Upgrade-Strategie auswählen {#choosing-the-right-upgrade-strategy}
+## Die richtige Upgrade-Strategie wählen {#choosing-the-right-upgrade-strategy}
 
-Bereitstellungsmodell | Anwendungsinstanzen | Auswirkungen auf replizierte Daten | Upgrade-Ansatz  
+Bereitstellungsmodell | Anwendungsinstanzen | Auswirkungen replizierter Daten | Upgrade-Ansatz  
 ---|---|---|---  
-Anwendungsebene HA | Zwei Knoten | Abhängig vom Upgrade-Typ | Rollierendes Upgrade mit Failover  
-VM-Level HA ( hyperv.safe / kvm.safe ) | Eine VM | Innerhalb der VM verwaltet | Snapshot, Upgrade, Validierung, Rollback bei Bedarf  
+Hochverfügbarkeit auf Anwendungsebene | Zwei Knoten | Abhängig von der Upgrade-Art | Rolling Upgrade mit Failover  
+VM-Level-HA mit hyperv.safe oder kvm.safe | Eine VM | Innerhalb der VM verwaltet | Snapshot erstellen, aktualisieren, validieren, bei Bedarf zurücksetzen  
   
 ## Schlussfolgerung {#conclusion}
 
-SafeKit bietet flexible Hochverfügbarkeitsarchitekturen, die sich an die Betriebsanforderungen verschiedener Anwendungen anpassen. Ob Sie eine Clusteranwendung über zwei Knoten oder eine einzelne Anwendungsinstanz in einer virtuellen Maschine schützen möchten: SafeKit ermöglicht kontrollierte Upgrades, minimiert Ausfallzeiten und bietet zuverlässige Wiederherstellungsoptionen für Wartungsarbeiten.
+SafeKit bietet flexible Hochverfügbarkeitsarchitekturen, die sich an die betrieblichen Anforderungen verschiedener Anwendungen anpassen. Egal, ob Sie eine geclusterte Anwendung über zwei Knoten oder eine einzelne Anwendungsinstanz, die in einer virtuellen Maschine läuft, schützen, SafeKit ermöglicht kontrollierte Upgrades, minimiert Ausfallzeiten und bietet zuverlässige Wiederherstellungsoptionen, wenn Wartungsarbeiten erforderlich sind.
 
 
 {{%  insert-safekit-hub-de  %}}
