@@ -1,11 +1,11 @@
 ---
 title: "Shared-nothing-architectuur versus architectuur met gedeelde schijf: de beste HA-cluster kiezen"
 canonical: "https://safekit.eviden.com/nl/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
-description: "Vergelijk shared-nothing-architecturen met architecturen met gedeelde schijf voor hoge beschikbaarheid. Ontdek hoe SafeKit een shared-nothing-benadering gebruikt om SAN-kosten te elimineren, failover te vereenvoudigen en synchrone replicatie te bieden zonder complexe hardwarebeperkingen."
+description: "Vergelijk shared-nothing-architecturen met architecturen met gedeelde schijf voor hoge beschikbaarheid. SafeKit maakt gebruik van een shared-nothing-benadering. Dit elimineert SAN-kosten en vereenvoudigt failover. Het biedt synchrone replicatie zonder complexe hardwarebeperkingen."
 category: "best-practises"
 lang: "nl"
 topics: "Shared-nothing-architectuur versus architectuur met gedeelde schijf voor high-availability-clusters, shared-nothing-architectuur versus architectuur met gedeelde schijf: voor- en nadelen, 🔍 Ontdek SafeKit"
-translation: "translate_md 2026-11-10.3 | glossaire 2026-11-10.4 | Translation LLM | 47 expressions"
+translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 ---
 
 # Shared-nothing-architectuur versus architectuur met gedeelde schijf: de beste HA-cluster kiezen {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
@@ -14,39 +14,39 @@ translation: "translate_md 2026-11-10.3 | glossaire 2026-11-10.4 | Translation L
 
 ### Overzicht {#overview}
 
-Dit artikel onderzoekt de voor- en nadelen van shared-nothing-architectuur versus architectuur met gedeelde schijf voor clusters met hoge beschikbaarheid. We bekijken hardwarebeperkingen, de impact op de organisatie van applicatiegegevens, de hersteltijd en de eenvoud van de implementatie.
+Dit artikel vergelijkt twee architecturen voor clusters met hoge beschikbaarheid: de shared-nothing-architectuur en de architectuur met gedeelde schijf. Het legt de voor- en nadelen ervan uit. Het behandelt hardwarebeperkingen, de impact op de organisatie van applicatiegegevens, de hersteltijd en de eenvoud van de implementatie.
 
 
 ![shared-nothing-architectuur versus architectuur met gedeelde schijf](/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png "w:200")
 
 
-De volgende vergelijkingstabellen lichten het verschil tussen architectuur met gedeelde schijf en SafeKit, een softwareclusterproduct dat een shared-nothing-architectuur implementeert, in detail toe.
+De onderstaande vergelijkingstabellen beschrijven de verschillen tussen een architectuur met gedeelde schijf en SafeKit. Dit softwareclusterproduct implementeert een shared-nothing-architectuur.
 
 ### Wat is een architectuur met gedeelde schijf? {#what-is-a-shared-disk-architecture}
 
-Een architectuur met gedeelde schijf (zoals bij [Microsoft failovercluster](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)) is gebaseerd op 2 servers die een schijf delen met een automatische applicatiefailover in geval van hardware- of softwarefouten.
+Een architectuur met gedeelde schijf is gebaseerd op twee servers die een schijf delen. In geval van hardware- of softwarefouten wordt de toepassing automatisch opnieuw gestart op de andere server. Microsoft-failoverclustering is een voorbeeld van een architectuur met gedeelde schijf. Zie [Hardwarevereisten voor failoverclustering](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>) voor meer informatie.
 
-Deze architectuur heeft hardwarebeperkingen: de specifieke externe gedeelde opslag, de specifieke kaarten die in de servers moeten worden geïnstalleerd en de specifieke switches tussen de servers en de gedeelde opslag.
+Deze architectuur heeft hardwarebeperkingen: specifieke externe gedeelde opslag, specifieke kaarten in de servers en specifieke switches tussen de servers en de gedeelde opslag.
 
-Een architectuur met gedeelde schijf heeft een grote invloed op de organisatie van applicatiegegevens. Alle applicatiegegevens moeten op de gedeelde schijf worden gelokaliseerd voor een herstart na een failover.
+Een architectuur met gedeelde schijf heeft een grote invloed op de organisatie van applicatiegegevens. Alle applicatiegegevens moeten zich op de gedeelde schijf bevinden, zodat de applicatie opnieuw kan worden gestart na een failover.
 
-Bovendien moet bij een failover de herstelprocedure van het bestandssysteem op de gedeelde schijf worden uitgevoerd. Dit verlengt de hersteltijd (RTO).
+Bovendien moet bij een failover een procedure voor het herstellen van het bestandssysteem op de gedeelde schijf worden uitgevoerd. Dit verlengt de hersteldoelstelling (RTO).
 
-Tot slot is de oplossing niet eenvoudig te configureren, omdat er vaardigheden nodig zijn om de specifieke hardware te configureren. Daarnaast zijn applicatievaardigheden vereist om applicatiegegevens op de gedeelde schijf te configureren.
+Tot slot is de oplossing niet eenvoudig te configureren. Er zijn hardwarevaardigheden vereist om de specifieke hardware te configureren. Er zijn ook applicatievaardigheden vereist om applicatiegegevens op de gedeelde schijf te plaatsen.
 
 ### Wat is een shared-nothing-architectuur? {#what-is-a-shared-nothing-architecture-}
 
-Een shared-nothing-architectuur (zoals bij [SafeKit](</nl/>)) is gebaseerd op 2 servers die gegevens in realtime repliceren met een automatische failover van de toepassing in geval van hardware- of softwarefouten.
+Een shared-nothing-architectuur is gebaseerd op twee servers die gegevens in realtime repliceren. In geval van hardware- of softwarefouten wordt de toepassing automatisch opnieuw gestart op de andere server. SafeKit is een voorbeeld van een shared-nothing-architectuur.
 
-Er zijn twee soorten gegevensreplicatie: [bestandsreplicatie op byteniveau versus schijfreplicatie op blokniveau](</nl/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>). We beschouwen hier bestandsreplicatie op byteniveau omdat deze veel voordelen heeft ten opzichte van schijfreplicatie op blokniveau.
+Er zijn twee soorten gegevensreplicatie: bestandsreplicatie op byteniveau en schijfreplicatie op blokniveau. Zie [Bestandsreplicatie op byteniveau versus schijfreplicatie op blokniveau](</nl/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>) voor meer informatie. In dit artikel wordt bestandsreplicatie op byteniveau behandeld, omdat dit veel voordelen heeft ten opzichte van schijfreplicatie op blokniveau.
 
-De shared-nothing-architectuur kent geen hardwarebeperkingen: de servers kunnen fysiek of virtueel zijn, met elk type schijforganisatie. Realtime bestandsreplicatie ([synchroon](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>) voor nul gegevensverlies) gebeurt via het standaardnetwerk tussen servers.
+De shared-nothing-architectuur kent geen hardwarebeperkingen. De servers kunnen fysiek of virtueel zijn, met elk type schijforganisatie. Realtime bestandsreplicatie verloopt via het standaardnetwerk tussen de servers. [Synchrone replicatie](</nl/best-practises/synchronous-replication-vs-asynchronous-replication/>) garandeert nul gegevensverlies.
 
-Deze architectuur heeft geen invloed op de organisatie van applicatiegegevens. Als een applicatie bijvoorbeeld zijn gegevens op de systeemschijf heeft staan, werkt de real-time bestandsreplicatie.
+Deze architectuur heeft geen invloed op de organisatie van applicatiegegevens. Realtime bestandsreplicatie werkt bijvoorbeeld zelfs als de applicatiegegevens zich op de systeemschijf bevinden.
 
-De hersteltijd (RTO) in geval van een failover wordt teruggebracht tot de applicatiestarttijd op de gerepliceerde bestanden van de secundaire server.
+In het geval van een failover wordt de hersteltijd (RTO) teruggebracht tot de herstarttijd van de toepassing. De toepassing wordt opnieuw gestart op de gerepliceerde bestanden van de secundaire server.
 
-Tot slot is de oplossing zeer eenvoudig te configureren, aangezien alleen de paden van de te repliceren mappen worden geconfigureerd.
+Tot slot is de oplossing zeer eenvoudig te configureren. U hoeft alleen de paden van de te repliceren mappen te configureren.
 
 ## Shared-nothing-architectuur versus architectuur met gedeelde schijf: voor- en nadelen {#shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons}
 

@@ -1,56 +1,58 @@
 ---
-title: "SAN vs. NAS: Armazenamento Compartilhado para Clustering de Failover: Uma Comparação Detalhada"
+title: "SAN vs. NAS: Armazenamento Compartilhado para Cluster failover – Uma Comparação Detalhada"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "Compare o armazenamento compartilhado SAN com o NAS para clusters de failover. Saiba por que SafeKit propõe uma arquitetura sem SAN que elimina a dependência de armazenamento compartilhado, simplifica os scripts de failover e evita a corrupção de dados sem hardware caro ou discos de quorum complexos."
+description: "Compare o armazenamento compartilhado SAN e NAS para clusters de failover. SafeKit não precisa de armazenamento compartilhado. Ele simplifica os scripts de failover e evita a corrupção de dados. Ele não requer hardware caro nem disco de quórum complexo."
 category: "best-practises"
 lang: "pt-br"
-topics: "Qual é a solução mais simples entre um armazenamento compartilhado SAN e um NAS para um cluster de failover?, 🔍 Explore o SafeKit"
+topics: "Armazenamento compartilhado SAN ou NAS: qual é o mais simples para um cluster de failover?, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 ---
 
-# SAN vs. NAS: Armazenamento Compartilhado para Clustering de Failover: Uma Comparação Detalhada {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN vs. NAS: Armazenamento Compartilhado para Cluster failover – Uma Comparação Detalhada {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
-## Qual é a solução mais simples entre um armazenamento compartilhado SAN e um NAS para um cluster de failover? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
+## Armazenamento compartilhado SAN ou NAS: qual é o mais simples para um cluster de failover? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
-###  Armazenamento compartilhado SAN ou armazenamento compartilhado NAS iSCSI para um cluster de failover {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
-
-
-![ Armazenamento compartilhado SAN ou armazenamento compartilhado NAS iSCSI para um cluster de failover ](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
+###  Armazenamento compartilhado SAN ou armazenamento compartilhado iSCSI NAS para um cluster de failover {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
-Existem diversos elementos que tornam essa arquitetura complexa de implementar:
+![Armazenamento compartilhado SAN ou armazenamento compartilhado iSCSI NAS para um cluster de failover](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
 
-  * Em caso de falha, a troca do armazenamento compartilhado requer instruções de baixo nível que dependem do fabricante do dispositivo de armazenamento.
-  * O procedimento de recuperação no sistema de arquivos (FS) deve ser concluído antes de reiniciar o aplicativo.
-  * Se ambos os sistemas de arquivos em ambos os nós acessarem o mesmo disco bruto ao mesmo tempo, todo o sistema de arquivos será corrompido.
-  * Para evitar acesso duplicado, é necessário configurar um disco de quorum.
+
+Vários elementos tornam essa arquitetura complexa de implementar:
+
+  * Em caso de failover, a troca do armazenamento compartilhado requer comandos de baixo nível. Esses comandos dependem do fabricante do armazenamento.
+  * Um procedimento de recuperação do sistema de arquivos deve ser executado antes que o aplicativo seja reiniciado.
+  * Se os sistemas de arquivos em ambos os nós acessarem o mesmo disco físico ao mesmo tempo, todo o sistema de arquivos será corrompido.
+  * Para evitar esse acesso duplo, você deve configurar um disco de quórum.
 
 
 ###  Armazenamento compartilhado NAS SMB ou armazenamento compartilhado NAS NFS para um cluster de failover {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
-![ Armazenamento compartilhado NAS SMB ou armazenamento compartilhado NAS NFS para um cluster de failover ](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
+![Armazenamento compartilhado NAS SMB ou armazenamento compartilhado NAS NFS para um cluster de failover](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
 
 
-Existem diversos elementos que tornam essa arquitetura simples de implementar: 
-  * Em caso de falha, a troca do armazenamento compartilhado significa apenas remontar o sistema de arquivos externo.
-  * Não é necessário executar nenhum procedimento de recuperação no sistema de arquivos antes de reiniciar o aplicativo.
-  * Se ambos os nós acessarem o mesmo sistema de arquivos compartilhado ao mesmo tempo, o sistema de arquivos completo não será corrompido.
-  * No entanto, ainda existe a possibilidade de uma execução dupla da mesma aplicação corromper seus dados no armazenamento compartilhado quando os nós estão isolados.
+Vários elementos tornam essa arquitetura simples de implementar:
+
+  * Em caso de failover, a troca do armazenamento compartilhado requer apenas a remontagem do sistema de arquivos externo.
+  * Não é necessário nenhum procedimento de recuperação do sistema de arquivos antes que o aplicativo seja reiniciado.
+  * Se ambos os nós acessarem o mesmo sistema de arquivos compartilhado ao mesmo tempo, o sistema de arquivos não será corrompido.
+  * No entanto, quando os nós são isolados, o mesmo aplicativo ainda pode ser executado em ambos os nós. Essa execução dupla pode corromper os dados do aplicativo no armazenamento compartilhado.
 
 
 ###  Replicação e failover em tempo real com Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}
 
 
-Replicação em tempo real e failover com ![ e SafeKit ](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
+![Replicação e failover em tempo real com SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
 
 
-Não existem esses problemas com SafeKit porque sua solução de replicação e failover não requer armazenamento compartilhado.
+SafeKit não tem esses problemas. Com SafeKit, a replicação e failover não exigem armazenamento compartilhado.
 
-No entanto, se SafeKit precisar gerenciar um armazenamento compartilhado:
+No entanto, se SafeKit precisar gerenciar o armazenamento compartilhado:
 
-  * Utilize um armazenamento compartilhado SMB em um NAS ou um armazenamento compartilhado NFS em um NAS.
-  * Inclua nos scripts de reinicialização a montagem/desmontagem do sistema de arquivos externo.
-  * Configure os verificadores de split brain [ SafeKit ](</pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) para evitar a execução dupla do mesmo aplicativo acessando o armazenamento compartilhado quando os nós estiverem isolados.
+  * Use o armazenamento compartilhado NAS SMB ou NAS NFS.
+  * Coloque os comandos de montagem e desmontagem para o sistema de arquivos externo nos scripts de reinicialização.
+  * Configure o [checker split-brain](</pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) SafeKit. Ele evita a execução dupla do mesmo aplicativo no armazenamento compartilhado quando os nós estão isolados.
 
 
 

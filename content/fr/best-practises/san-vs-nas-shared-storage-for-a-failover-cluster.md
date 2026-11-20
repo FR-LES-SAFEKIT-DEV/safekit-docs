@@ -1,56 +1,58 @@
 ---
-title: "Comparaison détaillée du stockage partagé SAN et NAS pour le clustering HA"
+title: "SAN ou NAS pour le stockage partagé en cluster de basculement : une comparaison détaillée"
 canonical: "https://safekit.eviden.com/fr/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "Comparez le stockage partagé SAN et NAS pour les clusters HA. Découvrez pourquoi SafeKit propose une architecture sans SAN qui élimine les dépendances au stockage partagé, simplifie les scripts de basculement et empêche la corruption des données sans matériel coûteux ni disques de quorum complexes."
+description: "Comparez le stockage partagé SAN et NAS pour les clusters à basculement. SafeKit n’a pas besoin de stockage partagé. Il simplifie les scripts de basculement et empêche la corruption des données. Il ne nécessite aucun matériel coûteux ni disque de quorum complexe."
 category: "best-practises"
 lang: "fr"
-topics: "Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ?, 🔍 Explorez SafeKit"
+topics: "Stockage partagé SAN ou NAS : lequel est le plus simple pour un cluster de basculement ?, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 59 expressions"
 ---
 
-# Comparaison détaillée du stockage partagé SAN et NAS pour le clustering HA {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN ou NAS pour le stockage partagé en cluster de basculement : une comparaison détaillée {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
-## Quelle est la solution la plus simple entre un stockage partagé SAN ou NAS pour un cluster de haute disponibilité ? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
+## Stockage partagé SAN ou NAS : lequel est le plus simple pour un cluster de basculement ? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
-###  Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
+###  Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de basculement {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
-![Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de haute disponibilité](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
+![Stockage partagé SAN ou stockage partagé NAS iSCSI pour un cluster de basculement](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
 
 
 Plusieurs éléments rendent cette architecture complexe à mettre en œuvre :
 
-  * en cas de basculement, la commutation du stockage partagé nécessite des instructions de bas niveau qui dépendent du fabricant du stockage,
-  * la procédure de récupération du système de fichiers (FS) doit être passée avant de redémarrer l'application,
-  * si les deux systèmes de fichiers sur les deux nœuds accèdent au même disque en même temps, le système de fichiers complet sera corrompu,
-  * pour éviter un double accès, un disque de quorum doit être configuré.
+  * En cas de basculement, le changement de stockage partagé nécessite des commandes de bas niveau. Ces commandes dépendent du fabricant du stockage.
+  * Une procédure de récupération du système de fichiers doit être exécutée avant le redémarrage de l’application.
+  * Si les systèmes de fichiers des deux nœuds accèdent au même disque brut en même temps, l’ensemble du système de fichiers est corrompu.
+  * Pour éviter ce double accès, vous devez configurer un disque de quorum.
 
 
-###  Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
+###  Stockage partagé SMB NAS ou stockage partagé NFS NAS pour un cluster de basculement {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
-![Stockage partagé NAS SMB ou NAS NFS pour cluster de haute disponibilité](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
+![Stockage partagé SMB NAS ou stockage partagé NFS NAS pour un cluster de basculement](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
 
 
-Plusieurs éléments rendent cette architecture simple à mettre en œuvre : 
-  * en cas de basculement, le basculement du stockage partagé consiste uniquement au remontage du système de fichiers externe,
-  * aucune procédure de récupération sur le système de fichiers ne doit être passée avant de redémarrer l'application,
-  * si les deux nœuds accèdent au même système de fichiers partagé en même temps, le système de fichiers complet ne sera pas corrompu,
-  * cependant, il existe toujours la possibilité qu'une double exécution de la même application corrompent ses données dans le stockage partagé lorsque les nœuds sont isolés.
+Plusieurs éléments rendent cette architecture simple à mettre en œuvre :
+
+  * En cas de basculement, le changement de stockage partagé ne nécessite que le remontage du système de fichiers externe.
+  * Aucune procédure de récupération du système de fichiers n’est requise avant le redémarrage de l’application.
+  * Si les deux nœuds accèdent simultanément au même système de fichiers partagé, le système de fichiers n’est pas corrompu.
+  * Cependant, lorsque les nœuds sont isolés, la même application peut toujours s’exécuter sur les deux nœuds. Cette double exécution peut corrompre les données de l’application dans le stockage partagé.
 
 
-###  Réplication en temps réel et basculement avec Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}
+###  Réplication et basculement en temps réel avec Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}
 
 
-![Réplication en temps réel et basculement avec SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
+![Réplication et basculement en temps réel avec SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
 
 
-Il n'y a pas de tels problèmes avec SafeKit car sa solution de réplication et de basculement ne nécessite pas de stockage partagé.
+SafeKit ne présente pas ces problèmes. Avec SafeKit, la réplication et le basculement ne nécessitent pas de stockage partagé.
 
-Cependant, si SafeKit doit gérer un stockage partagé :
+Toutefois, si SafeKit doit gérer le stockage partagé :
 
-  * utiliser un stockage partagé NAS SMB ou un stockage partagé NAS NFS,
-  * mettre dans les scripts de redémarrage le montage/démontage du système de fichiers externe,
-  * configurer le [split brain checker de SafeKit](</fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) pour éviter une double exécution de la même application accédant au stockage partagé lorsque les nœuds sont isolés.
+  * Utilisez le stockage partagé NAS SMB ou NAS NFS.
+  * Placez les commandes de montage et de démontage du système de fichiers externe dans les scripts de redémarrage.
+  * Configurez le [checker split-brain](</fr/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) SafeKit. Il empêche une double exécution de la même application sur le stockage partagé lorsque les nœuds sont isolés.
 
 
 

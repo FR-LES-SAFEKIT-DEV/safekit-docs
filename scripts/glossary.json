@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-20.6",
+  "version": "2026-11-20.24",
   "keep": [
     "mirror",
     "farm",
@@ -1445,6 +1445,70 @@
       [
         "\\bde unicast\\b",
         "d’unicast"
+      ],
+      [
+        "\\bet HA (applicative|de VM)",
+        "et la HA \\1"
+      ],
+      [
+        "\\bComparez HA",
+        "Comparez la HA"
+      ],
+      [
+        "\\bhaute HA\\b",
+        "HA"
+      ],
+      [
+        "\\bcet (RPO|RTO)\\b",
+        "ce \\1"
+      ],
+      [
+        "\\bHeure de redémarrage",
+        "Temps de redémarrage"
+      ],
+      [
+        "\\bperte heartbeat",
+        "perte du heartbeat"
+      ],
+      [
+        "\\bvia heartbeats",
+        "via les heartbeats"
+      ],
+      [
+        "\\bun (<span[^>]*farm-term[^>]*>farm</span> web)",
+        "une \\1"
+      ],
+      [
+        "\\b(atteindre|Atteindre|obtenir|Obtenir) (RPO|RTO)\\b",
+        "\\1 un \\2"
+      ],
+      [
+        "\\b(un \\**RPO nul\\**) et (\\**RTO)",
+        "\\1 et un \\2"
+      ],
+      [
+        "\\b(un RPO nul) et (RTO)",
+        "\\1 et un \\2"
+      ],
+      [
+        "\\bOptimisation RPO et RTO",
+        "Optimiser le RPO et le RTO"
+      ],
+      [
+        "\\b(calculer|déterminer|optimiser) RPO et RTO",
+        "\\1 le RPO et le RTO"
+      ],
+      [
+        "Optimise RTO pour qu’il soit proche de zéro et RPO pour qu’il soit nul",
+        "Optimise le RTO (proche de zéro) et le RPO (nul)"
+      ],
+      [
+        "délai d([’\\'])expiration heartbeat",
+        "délai d\\1expiration du heartbeat"
+      ],
+      [
+        "distinct en arrière-plan",
+        "distinct en back-end"
       ]
     ],
     "it": [
@@ -1651,6 +1715,70 @@
       [
         "\\bdistribuzione Microsoft NLB\\b",
         "distribuzione di Microsoft NLB"
+      ],
+      [
+        "\\b(Confronta|con|e) HA (delle VM|applicativa)",
+        "\\1 l’HA \\2"
+      ],
+      [
+        "\\bperdita heartbeat",
+        "perdita dell’heartbeat"
+      ],
+      [
+        "\\bOra di riavvio",
+        "Tempo di riavvio"
+      ],
+      [
+        "\\bun (<span[^>]*farm-term[^>]*>farm</span>)",
+        "una \\1"
+      ],
+      [
+        "\\bdel (<span[^>]*farm-term[^>]*>farm</span>)",
+        "della \\1"
+      ],
+      [
+        "\\bnel (<span[^>]*farm-term[^>]*>farm</span>)",
+        "nella \\1"
+      ],
+      [
+        "\\bal (<span[^>]*farm-term[^>]*>farm</span>)",
+        "alla \\1"
+      ],
+      [
+        "\\bil (<span[^>]*farm-term[^>]*>farm</span>)",
+        "la \\1"
+      ],
+      [
+        "\\bsul (<span[^>]*farm-term[^>]*>farm</span>)",
+        "sulla \\1"
+      ],
+      [
+        "\\bdal (<span[^>]*farm-term[^>]*>farm</span>)",
+        "dalla \\1"
+      ],
+      [
+        "SafeKit cluster mirror",
+        "cluster mirror SafeKit"
+      ],
+      [
+        "(?m)^(\\s*)\\*\\*(\\s*)cluster mirror SafeKit",
+        "\\1Il **\\2cluster mirror SafeKit"
+      ],
+      [
+        "cluster mirror SafeKit Mirror\\b",
+        "cluster mirror SafeKit"
+      ],
+      [
+        "\\bGuasto del software\\b",
+        "Guasto software"
+      ],
+      [
+        "Ottimizzazione (RPO e RTO)",
+        "Ottimizzazione di \\1"
+      ],
+      [
+        "RPO di destinazione",
+        "RPO target"
       ]
     ],
     "es": [
@@ -1949,6 +2077,54 @@
       [
         "\\bNLB Microsoft\\b",
         "Microsoft NLB"
+      ],
+      [
+        "\\by HA de (aplicación|VM)",
+        "y la HA de \\1"
+      ],
+      [
+        "\\bpérdida heartbeat",
+        "pérdida del heartbeat"
+      ],
+      [
+        "\\bun (<span[^>]*farm-term[^>]*>farm</span>)",
+        "una \\1"
+      ],
+      [
+        "\\bUn (<span[^>]*farm-term[^>]*>farm</span>)",
+        "Una \\1"
+      ],
+      [
+        "\\bel (<span[^>]*farm-term[^>]*>farm</span>)",
+        "la \\1"
+      ],
+      [
+        "\\bdel (<span[^>]*farm-term[^>]*>farm</span>)",
+        "de la \\1"
+      ],
+      [
+        "\\bal (<span[^>]*farm-term[^>]*>farm</span>)",
+        "a la \\1"
+      ],
+      [
+        "\\bdel latido\\b",
+        "del heartbeat"
+      ],
+      [
+        "\\blatido\\b",
+        "heartbeat"
+      ],
+      [
+        "\\bFallo del software\\b",
+        "Fallo de software"
+      ],
+      [
+        "Optimización RPO y RTO",
+        "Optimización del RPO y el RTO"
+      ],
+      [
+        "tiempo de heartbeat(\\s*\\*)",
+        "tiempo de espera del heartbeat\\1"
       ]
     ],
     "pt": [
@@ -2267,6 +2443,90 @@
       [
         "\\b(implantação|implementação) Microsoft NLB\\b",
         "\\1 do Microsoft NLB"
+      ],
+      [
+        "\\b(clusters?|clustering|scripts|[Ee]m caso) failover\\b",
+        "\\1 de failover"
+      ],
+      [
+        "\\b([Ee])m failover\\b",
+        "\\1m caso de failover"
+      ],
+      [
+        "(, como (?:o )?SafeKit) (?=(?:fornecem|proporcionam|oferecem|garantem)\\b)",
+        "\\1, "
+      ],
+      [
+        "\\bperda heartbeat",
+        "perda do heartbeat"
+      ],
+      [
+        "\\bpor meio heartbeats",
+        "por meio de heartbeats"
+      ],
+      [
+        "\\bvelocidade failover",
+        "velocidade de failover"
+      ],
+      [
+        "\\bsoftware failover",
+        "software de failover"
+      ],
+      [
+        "SafeKit cluster mirror",
+        "cluster mirror SafeKit"
+      ],
+      [
+        "tempo limite de pulsações",
+        "tempo limite do heartbeat"
+      ],
+      [
+        "\\btempo \\*de (dete[cç]?ção)",
+        "*tempo de \\1"
+      ],
+      [
+        "\\bum (<span[^>]*farm-term[^>]*>farm</span>)",
+        "uma \\1"
+      ],
+      [
+        "\\bdo (<span[^>]*farm-term[^>]*>farm</span>)",
+        "da \\1"
+      ],
+      [
+        "\\bno (<span[^>]*farm-term[^>]*>farm</span>)",
+        "na \\1"
+      ],
+      [
+        "\\bao (<span[^>]*farm-term[^>]*>farm</span>)",
+        "à \\1"
+      ],
+      [
+        "\\bpelo (<span[^>]*farm-term[^>]*>farm</span>)",
+        "pela \\1"
+      ],
+      [
+        "\\bo (<span[^>]*farm-term[^>]*>farm</span>)",
+        "a \\1"
+      ],
+      [
+        "Horas para Dias",
+        "Horas a dias"
+      ],
+      [
+        "heartbeat \\+ Reiniciar",
+        "heartbeat + reinício"
+      ],
+      [
+        "Otimização (RPO) e (RTO)",
+        "Otimização do \\1 e do \\2"
+      ],
+      [
+        "(?<![(（/\\w>])(?<![(（] )(?<![(（]  )((?:<span[^>]*>\\s*)?(?:RTO|RPO)(?:\\s*</span>)?)(\\s*\\*\\*)?\\s*\\)",
+        "\\1\\2"
+      ],
+      [
+        "tempo limite heartbeat",
+        "tempo limite do heartbeat"
       ]
     ],
     "ar": [
@@ -2577,6 +2837,178 @@
       [
         "ينتقل كلا العقدتين",
         "تنتقل كلتا العقدتين"
+      ],
+      [
+        "لا تواجه SafeKit",
+        "لا يواجه SafeKit"
+      ],
+      [
+        "(split-brain(?:\\]\\([^)\\s]*\\)|</a>) SafeKit)\\. فهي تمنع",
+        "\\1. فهو يمنع"
+      ],
+      [
+        "إذا قام كلتا",
+        "إذا قامت كلتا"
+      ],
+      [
+        "لا توجد (هذه المشكلات|هذه المشاكل) (?:في |لدى |مع )?SafeKit(?![\\w])",
+        "لا يواجه SafeKit \\1"
+      ],
+      [
+        "لا تتطلب النسخ المتماثل",
+        "لا يتطلب النسخ المتماثل"
+      ],
+      [
+        "(\\(shared-nothing\\)) (بنية)",
+        "\\1 و\\2"
+      ],
+      [
+        "أفضل البنية تناسب",
+        "أفضل بنية تناسب"
+      ],
+      [
+        "(\\*\\*)?البنية هجينة",
+        "\\1بنية هجينة"
+      ],
+      [
+        "تعمل (\\*\\*)?النسخ المتماثل",
+        "يعمل \\1النسخ المتماثل"
+      ],
+      [
+        "تتطلب (\\*\\*)?النسخ المتماثل",
+        "يتطلب \\1النسخ المتماثل"
+      ],
+      [
+        "فالمزامنة المتزامنة (باستخدام SafeKit )?تحمي (.{0,60}?)وتحافظ",
+        "فالنسخ المتماثل المتزامن \\1يحمي \\2ويحافظ"
+      ],
+      [
+        "المزامنة (غير )?المتزامنة",
+        "النسخ المتماثل \\1المتزامن"
+      ],
+      [
+        "SafeKit :",
+        "SafeKit:"
+      ],
+      [
+        "لا يمكن لحل النسخ الاحتياطي (?:الذي يحتوي على|المزود ب|مع) (سياسة [^.]{0,30}?) فقط (?:أن )?(?:يحل|حل) هذه المشكلة",
+        "لا يمكن حل هذه المشكلة إلا بحل نسخ احتياطي يتضمن \\1"
+      ],
+      [
+        "عن المشرف(?= على| في|[.،]|$)",
+        "عن برنامج Hypervisor"
+      ],
+      [
+        "التوافر (?:العالي )?HA",
+        "HA"
+      ],
+      [
+        "(^|[.،:] |\\. )ت(قدم|وفر|ستخدم|دعم|ضمن|تيح) SafeKit",
+        "\\1ي\\2 SafeKit"
+      ],
+      [
+        "\\bت(دير|قدم|وفر|ضمن|تيح) SafeKit",
+        "ي\\1 SafeKit"
+      ],
+      [
+        "البنية (تقنية|حديثة)",
+        "بنية \\1"
+      ],
+      [
+        "البنية يتم",
+        "بنية يتم"
+      ],
+      [
+        "يطبق البنية",
+        "يطبق بنية"
+      ],
+      [
+        "البيانات البنية الاسترداد",
+        "البيانات وبنية الاسترداد"
+      ],
+      [
+        "البنية (<span[^>]*farm-term[^>]*>farm</span>)",
+        "بنية \\1"
+      ],
+      [
+        "ما هي الموثوقية العالية",
+        "ما هو التوافر العالي"
+      ],
+      [
+        "لا حاجة SAN",
+        "لا حاجة إلى SAN"
+      ],
+      [
+        "(?<![(（/\\w>])(?<![(（] )(?<![(（]  )((?:<span[^>]*>\\s*)?(?:RTO|RPO)(?:\\s*</span>)?)(\\s*\\*\\*)?\\s*\\)",
+        "\\1\\2"
+      ],
+      [
+        "\\s*\\(\\s*\\)",
+        ""
+      ],
+      [
+        "معدل استعادة الوقت RTO",
+        "RTO"
+      ],
+      [
+        "RTO الاسترداد للنسخ",
+        "RTO للنسخ"
+      ],
+      [
+        "معدل استرداد مجموعة mirror RPO لمجموعة SafeKit المتطابقة",
+        "RPO لمجموعة mirror SafeKit"
+      ],
+      [
+        "انتهاء مهلة نبضات القلب",
+        "انتهاء مهلة heartbeat"
+      ],
+      [
+        "\\bتحمي SafeKit",
+        "يحمي SafeKit"
+      ],
+      [
+        "معايير وقت RTO مجموعة",
+        "معايير RTO لمجموعة"
+      ],
+      [
+        "ما هو مجموعة",
+        "ما هي مجموعة"
+      ],
+      [
+        "لمجموعة(\\s*)\\*\\*(\\s*)مجموعة",
+        "\\1**\\2لمجموعة"
+      ],
+      [
+        "معادلة نقطة استرداد RPO/RTO",
+        "معادلة RPO/RTO"
+      ],
+      [
+        "تعمل Apache",
+        "تعمل على Apache"
+      ],
+      [
+        "RPO و(?:وقت|زمن)(?: (?:استعادة|الاستعادة|الاسترداد))? RTO",
+        "RPO و RTO"
+      ],
+      [
+        "(?:نقطة|هدف) (?:استعادة |استرداد )?RPO و",
+        "RPO و"
+      ],
+      [
+        "(?<=\\S) +:(?!\\S)",
+        ":"
+      ],
+      [
+        "تستخدمه SafeKit",
+        "يستخدمه SafeKit"
+      ],
+      [
+        "لعدم فقدان البيانات تقريبًا ووقت",
+        "لعدم فقدان البيانات ووقت"
+      ],
+      [
+        "وقت استعادة قريب من الصفر RTO ووقت RPO صفرًا",
+        "RTO قريبًا من الصفر و RPO صفريًا"
       ]
     ],
     "de": [
@@ -3119,6 +3551,78 @@
       [
         "\\b(STOP|ALONE|WAIT|PRIM|SECOND) wenn\\b",
         "\\1, wenn"
+      ],
+      [
+        "\\bdie (SafeKit )?\\[Split-Brain-Checker\\]",
+        "den \\1[Split-Brain-Checker]"
+      ],
+      [
+        "(Split-Brain-Checker(?:\\]\\([^)\\s]*\\)|</a>))\\. Sie verhindert",
+        "\\1. Er verhindert"
+      ],
+      [
+        "(^|\\. |:\\*\\* )(RPO|RTO) geht es um",
+        "\\1Beim \\2 geht es um"
+      ],
+      [
+        "Geschäftskontinuität Plan(s?)\\b",
+        "Geschäftskontinuitätsplan\\1"
+      ],
+      [
+        "\\b(RPO|RTO) und (RTO|RPO) (Ziele|Benchmarks)\\b",
+        "\\1- und \\2-\\3"
+      ],
+      [
+        "\\b(RTO|RPO) (Ziele|Benchmarks|Gleichung)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "RPO/RTO Gleichung",
+        "RPO/RTO-Gleichung"
+      ],
+      [
+        "Optimierung (RPO und RTO)",
+        "Optimierung von \\1"
+      ],
+      [
+        "\\bim (<span[^>]*farm-term[^>]*>farm</span>)",
+        "in der \\1"
+      ],
+      [
+        "(farm</span>) Architektur",
+        "\\1-Architektur"
+      ],
+      [
+        "Zustandslos Vorgänge",
+        "Zustandslose Vorgänge"
+      ],
+      [
+        "Echtzeit-Synchronisationsreplikation",
+        "Synchrone Echtzeitreplikation"
+      ],
+      [
+        "wie SafeKit-Datenverlust",
+        "wie SafeKit Datenverlust"
+      ],
+      [
+        "\\bEine(\\s*\\*\\*\\s*)RPO von null",
+        "Ein\\1RPO von null"
+      ],
+      [
+        "einen nahezu null RTO",
+        "einen RTO nahe null"
+      ],
+      [
+        "einer nahezu nullbasierten RTO",
+        "eines RTO nahe null"
+      ],
+      [
+        "\\b([Dd])as(\\s+(?:\\*\\*\\s*)?)(?=(?:<[^>]+>)*SafeKit(?:</span>)?-(?:<[^>]+>)*(?:Mirror|Farm))",
+        "\\1er\\2"
+      ],
+      [
+        "einer nahezu null RTO",
+        "eines RTO nahe null"
       ]
     ],
     "ko": [
@@ -3885,6 +4389,174 @@
       [
         "\\bALONE 작동",
         "ALONE 상태로 작동"
+      ],
+      [
+        "(그러나|하지만) SafeKit (?=[가-힣])",
+        "\\1 SafeKit이 "
+      ],
+      [
+        "((?:\\]\\([^)\\s]*\\)|</a>)) 구성합니다",
+        "\\1를 구성합니다"
+      ],
+      [
+        "(^|[.!?]\\s+|\")SafeKit (?=[^.\\n]{0,20}(?:필요하지 않습니다|필요 없습니다))",
+        "\\1SafeKit은 "
+      ],
+      [
+        "SafeKit (?=비공유)",
+        "SafeKit은 "
+      ],
+      [
+        "(아키텍처) (?=[^.\\n]{0,40}기반으로 합니다)",
+        "\\1는 "
+      ],
+      [
+        "클러스터 위한",
+        "클러스터를 위한"
+      ],
+      [
+        "아키텍처 를",
+        "아키텍처를"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO|클러스터) 란",
+        "\\1란"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO|클러스터) (?=어떻게)",
+        "\\1는 "
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=0이 |0보다|더 )",
+        "\\1가 "
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=\\*\\*[^*\\s]|약 |몇 |단 |중요한|시간에서)",
+        "\\1는 "
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=달성(?!되))",
+        "\\1를 "
+      ],
+      [
+        "SafeKit 전체",
+        "SafeKit은 전체"
+      ],
+      [
+        "SAN 통한",
+        "SAN을 통한"
+      ],
+      [
+        "(:\\*\\*)(?=[가-힣])",
+        "\\1 "
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=달성되)",
+        "\\1가 "
+      ],
+      [
+        "하트비트가 손실(을|이)",
+        "하트비트 손실\\1"
+      ],
+      [
+        "하트비트 통해",
+        "하트비트를 통해"
+      ],
+      [
+        "([^\\s*]) :\\*\\*",
+        "\\1:**"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=위해)",
+        "\\1를 "
+      ],
+      [
+        "(RTO|RPO)\\*\\* (?=SafeKit)",
+        "\\1**는 "
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=모니터링|\\*)",
+        "\\1는 "
+      ],
+      [
+        "^SafeKit (?=Apache)",
+        "SafeKit이 "
+      ],
+      [
+        "(farm</span>) 관리하여",
+        "\\1를 관리하여"
+      ],
+      [
+        "아키텍처 에서는",
+        "아키텍처에서는"
+      ],
+      [
+        "RPO(\\s*\\*\\*)? 정의됩니다",
+        "RPO\\1가 정의됩니다"
+      ],
+      [
+        "RPO(\\s*\\*\\*)? 초래하며",
+        "RPO\\1를 초래하며"
+      ],
+      [
+        "RTO(\\s*\\*\\*)? 수동",
+        "RTO\\1는 수동"
+      ],
+      [
+        "경우 RTO 데이터",
+        "경우 RTO는 데이터"
+      ],
+      [
+        "클러스터(\\s*\\*\\*)? 두 가지",
+        "클러스터\\1는 두 가지"
+      ],
+      [
+        "(RTO|RPO) 제공합니다",
+        "\\1를 제공합니다"
+      ],
+      [
+        "클러스터 데이터 동기화보다는",
+        "클러스터는 데이터 동기화보다는"
+      ],
+      [
+        "부하 분산(\\s*\\*\\*)? 중점적으로",
+        "부하 분산\\1에 중점적으로"
+      ],
+      [
+        "SafeKit 사이트",
+        "SafeKit은 사이트"
+      ],
+      [
+        "RPO와 RTO 최적화하기",
+        "RPO와 RTO를 최적화하기"
+      ],
+      [
+        "Apache 실행하는",
+        "Apache를 실행하는"
+      ],
+      [
+        "(farm</span>)를",
+        "\\1을"
+      ],
+      [
+        "RPO 0으로(\\s*\\*\\*)? 달성",
+        "RPO 0을\\1 달성"
+      ],
+      [
+        "\\*\\*(\\s*)RTO 0(\\s*)\\*\\*(\\s*)을",
+        "**\\1거의 0에 가까운 RTO\\2**\\3를"
+      ],
+      [
+        "RPO가 0이 보장",
+        "RPO 0이 보장"
+      ],
+      [
+        "복구 시점 목표",
+        "복구 지점 목표"
+      ],
+      [
+        "복구 목표 시간",
+        "복구 시간 목표"
       ]
     ],
     "ja": [
@@ -4511,6 +5183,126 @@
       [
         "（([A-Z]+ と [A-Z]+)\\s*(?=[にへをはが])",
         "（\\1）"
+      ],
+      [
+        "ただし、SafeKit (?=[^\\sはがをの])",
+        "ただし、SafeKit が"
+      ],
+      [
+        "((?:\\]\\([^)\\s]*\\)|</a>))でを",
+        "\\1を"
+      ],
+      [
+        "フェールオーバー",
+        "フェイルオーバー"
+      ],
+      [
+        "SafeKit は(このような|これらの)問題はありません",
+        "SafeKit には\\1問題はありません"
+      ],
+      [
+        "(アーキテクチャ)、(?=[^。\\n]*に基づいています)",
+        "\\1は、"
+      ],
+      [
+        "(^|[。！？]\\s*|\")([\\u30a0-\\u30ff\\u4e00-\\u9fff]*アーキテクチャ)(?=[^\\sはがをのにでともや、。（(）)\\]」*])",
+        "\\1\\2は"
+      ],
+      [
+        "(^|[。！？]\\s*|\")SafeKit (?=[^\\sはがを][^。\\n]*を(?:採用|使用|提供|実装)し)",
+        "\\1SafeKit は"
+      ],
+      [
+        "([：:]\\s*)SafeKit (?=(?:どの|どう|なぜ|何))",
+        "\\1SafeKit は"
+      ],
+      [
+        "は\\*\\*は(?=[、\\s])",
+        "は**"
+      ],
+      [
+        "については\\*\\*は、?",
+        "については**、"
+      ],
+      [
+        "(同様に|一方|ただし|しかし|そのため)、\\s*SafeKit (?=[^\\sはがをのに])",
+        "\\1、SafeKit は"
+      ],
+      [
+        "(。\\s*)SafeKit (?=\\*\\*)",
+        "\\1SafeKit は"
+      ],
+      [
+        "SafeKit はのような",
+        "SafeKit のような"
+      ],
+      [
+        "セミシンクロナス",
+        "準同期"
+      ],
+      [
+        "セミ同期",
+        "準同期"
+      ],
+      [
+        "を比較する(?=。|$)",
+        "を比較します"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO)( ?)(?=(?:ほぼ)?ゼロに(?:\\*\\*)?\\s*すること|ゼロにできますか)",
+        "\\1 を"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=ゼロ(?!と|に(?:\\*\\*)?\\s*すること)|約|当然|最小限|数分|わずか|高く|時間から|\\*\\*[^*\\s])",
+        "\\1 は"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) (?=ほぼゼロに)(?!(?:\\*\\*)?\\s*すること)",
+        "\\1 は"
+      ],
+      [
+        "(?<!と )(?<![A-Za-z])(RTO|RPO)、",
+        "\\1 は、"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO) \\*、",
+        "\\1 は、*"
+      ],
+      [
+        "(?<![A-Za-z])(RTO|RPO)( ?)(?=ほぼゼロに\\**することは|ゼロにできますか)",
+        "\\1 を"
+      ],
+      [
+        "クラスター (?=\\d)",
+        "クラスターは "
+      ],
+      [
+        "クラスター\\*\\*\\s*\\*\\*",
+        "クラスター**は、**"
+      ],
+      [
+        "クラスターどのように",
+        "クラスターはどのように"
+      ],
+      [
+        "([Ff]arm</span> ?クラスター)データ(が|同期)",
+        "\\1は、データ\\2"
+      ],
+      [
+        "^SafeKit (?=Apache)",
+        "SafeKit が "
+      ],
+      [
+        "(?m)^インジケーター(?= *\\|)",
+        "指標"
+      ],
+      [
+        "\\*\\*(\\s*)事業継続へ(\\s*)\\*\\*の影響",
+        "**\\1事業継続\\2**への影響"
+      ],
+      [
+        "RTO どのように",
+        "RTO はどのように"
       ]
     ],
     "zh-hans": [
@@ -4765,6 +5557,62 @@
       [
         "- 案例 (\\d)",
         "- 情况 \\1"
+      ],
+      [
+        "群集",
+        "集群"
+      ],
+      [
+        "^特色(?= *(?:\\||$))",
+        "功能"
+      ],
+      [
+        "与管理程序无关",
+        "与虚拟机监控程序无关"
+      ],
+      [
+        "(?<=[与于对在])管理程序",
+        "虚拟机监控程序"
+      ],
+      [
+        "零恢复 (RPO|RTO)",
+        "零 \\1"
+      ],
+      [
+        "的恢复 (RPO|RTO)",
+        "的 \\1"
+      ],
+      [
+        " ?目标恢复 RPO 和目标 RTO",
+        " RPO 和 RTO 目标"
+      ],
+      [
+        " ?恢复(?:时间)?(?:目标)? ?RTO(?! ?[（(])",
+        " RTO"
+      ],
+      [
+        " ?恢复点(?:目标)? ?RPO(?! ?[（(])",
+        " RPO"
+      ],
+      [
+        "(?<![(（/\\w>])(?<![(（] )(?<![(（]  )((?:<span[^>]*>\\s*)?(?:RTO|RPO)(?:\\s*</span>)?)(\\s*\\*\\*)?\\s*\\)",
+        "\\1\\2"
+      ],
+      [
+        "真正的(\\s*\\*\\*\\s*)可用性",
+        "真正的\\1高可用性"
+      ],
+      [
+        "昂贵 SAN 传统",
+        "昂贵 SAN 的传统"
+      ],
+      [
+        "(farm</span>)(?=[\\u4e00-\\u9fff])",
+        "\\1 "
+      ],
+      [
+        "运行 Apache Web",
+        "运行 Apache 的 Web"
       ]
     ],
     "nl": [
@@ -5195,6 +6043,46 @@
       [
         "\\b(STOP|ALONE|WAIT|PRIM|SECOND) status\\b",
         "\\1-status"
+      ],
+      [
+        "\\bzijn gedeelde opslag\\b",
+        "is gedeelde opslag"
+      ],
+      [
+        "\\bverlies heartbeat",
+        "verlies van de heartbeat"
+      ],
+      [
+        "\\b(RPO|RTO) en (RTO|RPO)[ -](doelstellingen|benchmarks)\\b",
+        "\\1- en \\2-\\3"
+      ],
+      [
+        "\\b(RTO|RPO) (doelstellingen|benchmarks|vergelijking)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "RPO/RTO vergelijking",
+        "RPO/RTO-vergelijking"
+      ],
+      [
+        "\\bde doel RPO\\b",
+        "de beoogde RPO"
+      ],
+      [
+        "een RPO niet nul is",
+        "een RPO die niet nul is"
+      ],
+      [
+        "(\\w)- (RPO|RTO)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "het optimaliseren (RPO|RTO)\\b",
+        "het optimaliseren van \\1"
+      ],
+      [
+        "SafeKit aanpak",
+        "SafeKit-aanpak"
       ]
     ],
     "pt-br": [
@@ -5289,6 +6177,18 @@
       [
         "\\b([Oo]) Nó (\\d)\\b",
         "\\1 nó \\2"
+      ],
+      [
+        "\\bA sua solução\\b",
+        "Sua solução"
+      ],
+      [
+        "O aplicativo falha automaticamente",
+        "O aplicativo faz failover automaticamente"
+      ],
+      [
+        "\\b([Dd])eteção",
+        "\\1etecção"
       ]
     ],
     "pt-pt": [
@@ -5331,6 +6231,30 @@
       [
         "\\b([Oo]) Nó (\\d)\\b",
         "\\1 nó \\2"
+      ],
+      [
+        "(?<=[a-zà-ú] )Máquina Virtual",
+        "máquina virtual"
+      ],
+      [
+        "RTO da Operação\\) ",
+        "RTO "
+      ],
+      [
+        "\\ba rápida failover",
+        "um failover rápido"
+      ],
+      [
+        "failover instantânea",
+        "failover instantâneo"
+      ],
+      [
+        "Comutação Automática failover",
+        "Failover automático"
+      ],
+      [
+        "próprio grupo\\b",
+        "próprio cluster"
       ]
     ]
   },

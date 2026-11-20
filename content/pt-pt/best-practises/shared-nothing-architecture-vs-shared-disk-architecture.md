@@ -1,11 +1,11 @@
 ---
 title: "Arquitetura sem partilha vs. arquitetura de disco partilhado: Como escolher o melhor cluster de alta disponibilidade"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
-description: "Compare arquiteturas sem partilha e de disco partilhado para alta disponibilidade. Saiba como SafeKit utiliza uma abordagem sem partilha para eliminar os custos SAN, simplificar a recuperação de falhas e fornecer replicação síncrona sem restrições de hardware complexas."
+description: "Compare arquiteturas sem partilha e de disco partilhado para alta disponibilidade. SafeKit utiliza uma abordagem sem partilha. Elimina os custos SAN e simplifica failover. Fornece replicação síncrona sem restrições de hardware complexas."
 category: "best-practises"
 lang: "pt-pt"
 topics: "Arquitetura sem partilha vs. arquitetura de disco partilhado para clusters de alta disponibilidade, arquitetura sem partilha vs. arquitetura de disco partilhado: Prós e Contras, 🔍 Explore SafeKit"
-translation: "translate_md 2026-11-10.3 | glossaire 2026-11-10.4 | Translation LLM | 45 expressions"
+translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 ---
 
 # Arquitetura sem partilha vs. arquitetura de disco partilhado: Como escolher o melhor cluster de alta disponibilidade {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}
@@ -14,39 +14,39 @@ translation: "translate_md 2026-11-10.3 | glossaire 2026-11-10.4 | Translation L
 
 ### Visão Geral {#overview}
 
-Este artigo explora os prós e os contras da arquitetura sem partilha em comparação com a arquitetura de disco partilhado para clusters de alta disponibilidade. Analisamos as restrições de hardware, o impacto na organização dos dados da aplicação, o tempo de recuperação e a simplicidade de implementação.
+Este artigo compara duas arquiteturas para clusters de alta disponibilidade: a arquitetura sem partilha e a arquitetura de disco partilhado. Explica os seus prós e contras. Aborda as restrições de hardware, o impacto na organização dos dados da aplicação, o tempo de recuperação e a simplicidade de implementação.
 
 
 ![arquitetura sem partilha vs. arquitetura de disco partilhado](/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png "w:200")
 
 
-As tabelas comparativas seguintes explicam em detalhe a diferença entre a arquitetura de disco partilhado e SafeKit, um produto de clustering de software que implementa uma arquitetura sem partilha.
+As tabelas de comparação abaixo detalham as diferenças entre uma arquitetura de disco partilhado e SafeKit. Este produto de clustering de software implementa uma arquitetura sem partilha.
 
 ### O que é uma arquitetura de disco partilhado? {#what-is-a-shared-disk-architecture}
 
-Uma arquitetura de disco partilhado (como a do [cluster de failover Microsoft](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>)) baseia-se em 2 servidores que partilham um disco com um failover automático da aplicação em caso de falhas de hardware ou software.
+Uma arquitetura de disco partilhado baseia-se em dois servidores que partilham um disco. Em caso de falha de hardware ou software, a aplicação reinicia automaticamente no outro servidor. O clustering de failover Microsoft é um exemplo de uma arquitetura de disco partilhado. Para obter mais detalhes, consulte [Requisitos de hardware para clustering de failover](<https://learn.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements>).
 
-Esta arquitetura tem restrições de hardware: o armazenamento partilhado externo específico, as placas específicas a instalar dentro dos servidores e os comutadores específicos entre os servidores e o armazenamento partilhado.
+Esta arquitetura tem restrições de hardware: armazenamento partilhado externo específico, placas específicas dentro dos servidores e comutadores específicos entre os servidores e o armazenamento partilhado.
 
-Uma arquitetura de disco partilhado tem um forte impacto na organização dos dados da aplicação. Todos os dados da aplicação devem estar localizados no disco partilhado para um reinício após uma falha.
+Uma arquitetura de disco partilhado tem um forte impacto na organização dos dados da aplicação. Todos os dados da aplicação devem estar localizados no disco partilhado, para que a aplicação possa ser reiniciada após um failover.
 
-Além disso, em caso de falha, o procedimento de recuperação do sistema de ficheiros deve ser executado no disco partilhado. Isto aumenta o tempo de recuperação (RTO).
+Além disso, em caso de failover, um procedimento de recuperação do sistema de ficheiros deve ser executado no disco partilhado. Isto aumenta o tempo objetivo de recuperação (RTO).
 
-Finalmente, a solução não é fácil de configurar, pois são necessárias competências para configurar o hardware específico. Além disso, são necessárias competências de aplicação para configurar os dados da aplicação no disco partilhado.
+Finalmente, a solução não é fácil de configurar. São necessárias competências de hardware para configurar o hardware específico. São também necessárias competências de aplicação para colocar os dados da aplicação no disco partilhado.
 
 ### O que é uma arquitetura sem partilha? {#what-is-a-shared-nothing-architecture-}
 
-Uma arquitetura sem partilha (como a do [SafeKit](</pt-pt/>)) baseia-se em 2 servidores que replicam dados em tempo real, com um sistema automático de contingência de aplicações em caso de falhas de hardware ou software.
+Uma arquitetura sem partilha baseia-se em dois servidores que replicam dados em tempo real. Em caso de falha de hardware ou software, a aplicação reinicia automaticamente no outro servidor. SafeKit é um exemplo de uma arquitetura sem partilha.
 
-Existem dois tipos de replicação de dados: [replicação de ficheiros ao nível de byte versus replicação de disco ao nível de bloco](</pt-pt/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>). Consideramos aqui a replicação de ficheiros ao nível de byte porque possui muitas vantagens em relação à replicação de disco ao nível de bloco.
+Existem dois tipos de replicação de dados: replicação de ficheiros ao nível de byte e replicação de disco ao nível de bloco. Para mais detalhes, consulte [Replicação de ficheiros ao nível de byte vs. replicação de disco ao nível de bloco](</pt-pt/best-practises/byte-level-file-replication-vs-block-level-disk-replication/>). Este artigo considera a replicação de ficheiros ao nível de byte, porque tem muitas vantagens sobre a replicação de disco ao nível de bloco.
 
-A arquitetura sem partilha não possui restrições de hardware: os servidores podem ser físicos ou virtuais, com qualquer tipo de organização de disco. A replicação de ficheiros em tempo real ([síncrona](</pt-pt/best-practises/synchronous-replication-vs-asynchronous-replication/>) para perda zero de dados) é feita através da rede padrão entre os servidores.
+A arquitetura sem partilha não tem restrições de hardware. Os servidores podem ser físicos ou virtuais, com qualquer tipo de organização de disco. A replicação de ficheiros em tempo real é executada através da rede padrão entre os servidores. [A replicação síncrona](</pt-pt/best-practises/synchronous-replication-vs-asynchronous-replication/>) garante a perda zero de dados.
 
-Esta arquitetura não tem qualquer impacto na organização dos dados da aplicação. Por exemplo, se uma aplicação tiver os seus dados no disco do sistema, a replicação de ficheiros em tempo real funcionará.
+Esta arquitetura não tem qualquer impacto na organização dos dados da aplicação. Por exemplo, a replicação de ficheiros em tempo real funciona mesmo que os dados da aplicação estejam no disco do sistema.
 
-O tempo de recuperação (RTO) em caso de falha é reduzido ao tempo de reinício da aplicação nos ficheiros replicados do servidor secundário.
+Em caso de failover, o objetivo de tempo de recuperação (RTO) é reduzido ao tempo de reinício da aplicação. A aplicação reinicia nos ficheiros replicados do servidor secundário.
 
-Finalmente, a solução é muito simples de configurar, pois apenas os caminhos dos diretórios a replicar são configurados.
+Finalmente, a solução é muito simples de configurar. Basta configurar os caminhos dos diretórios a replicar.
 
 ## Arquitetura sem partilha vs. arquitetura de disco partilhado: Prós e Contras {#shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons}
 

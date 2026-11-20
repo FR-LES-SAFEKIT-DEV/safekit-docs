@@ -1,56 +1,58 @@
 ---
-title: "SAN vs. NAS: storage condiviso per cluster di failover, un confronto dettagliato"
+title: "SAN e NAS per l’archiviazione condivisa per il clustering di failover: un confronto dettagliato"
 canonical: "https://safekit.eviden.com/it/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "Confronta le soluzioni di storage condiviso SAN e NAS per cluster di failover. Scopri perché SafeKit propone un'architettura senza SAN che elimina le dipendenze dallo storage condiviso, semplifica gli script di failover e previene il danneggiamento dei dati senza la necessità di hardware costoso o di complessi dischi di quorum."
+description: "Confronta l’archiviazione condivisa SAN e NAS per i cluster di failover. SafeKit non necessita di archiviazione condivisa. Semplifica gli script di failover e previene il danneggiamento dei dati. Non richiede hardware costoso né un complesso disco di quorum."
 category: "best-practises"
 lang: "it"
-topics: "Qual è la soluzione più semplice tra una SAN e un NAS per lo storage condiviso di un cluster di failover?, 🔍 Esplora SafeKit"
+topics: "SAN o NAS: quale soluzione di archiviazione condivisa è più semplice per un cluster di failover?, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 41 expressions"
 ---
 
-# SAN vs. NAS: archiviazione condivisa per cluster di failover: un confronto dettagliato {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN e NAS per l’archiviazione condivisa per il clustering di failover: un confronto dettagliato {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
-## Qual è la soluzione più semplice tra una soluzione di storage condiviso SAN e una NAS per un cluster di failover? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
+## SAN o NAS: quale soluzione di archiviazione condivisa è più semplice per un cluster di failover? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
 ###  Archiviazione condivisa SAN o archiviazione condivisa NAS iSCSI per un cluster di failover {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
-![ Archiviazione condivisa SAN o archiviazione condivisa NAS iSCSI per un cluster di failover ](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
+![Archiviazione condivisa SAN o archiviazione condivisa NAS iSCSI per un cluster di failover](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
 
 
-Diversi elementi rendono complessa l'implementazione di questa architettura:
+Diversi elementi rendono questa architettura complessa da implementare:
 
-  * in caso di failover, il passaggio alla memoria condivisa richiede istruzioni di basso livello che dipendono dal produttore della memoria,
-  * La procedura di ripristino sul file system (FS) deve essere completata prima di riavviare l'applicazione.
-  * se entrambi i file system su entrambi i nodi accedono allo stesso disco raw contemporaneamente, l'intero file system verrà danneggiato,
-  * Per evitare un doppio accesso, è necessario configurare un disco di quorum.
-
-
-###  Archiviazione condivisa NAS SMB o archiviazione condivisa NAS NFS per cluster di failover {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
+  * In caso di failover, il passaggio all’unità di archiviazione condivisa richiede comandi di basso livello, che dipendono dal produttore dell’unità di archiviazione.
+  * Prima del riavvio dell’applicazione, è necessario eseguire una procedura di ripristino del file system.
+  * Se i file system su entrambi i nodi accedono contemporaneamente allo stesso disco fisico, l’intero file system viene danneggiato.
+  * Per evitare questo doppio accesso, è necessario configurare un disco di quorum.
 
 
-![ Archiviazione condivisa NAS SMB o archiviazione condivisa NAS NFS per un cluster di failover ](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
+###  Archiviazione condivisa NAS SMB o archiviazione condivisa NAS NFS per un cluster di failover {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
-Diversi elementi rendono questa architettura semplice da implementare: 
-  * in caso di failover, il passaggio alla memoria condivisa significa solo rimontare il file system esterno,
-  * Non è necessario eseguire alcuna procedura di ripristino sul file system prima di riavviare l'applicazione.
-  * se entrambi i nodi accedono allo stesso file system condiviso nello stesso momento, l'intero file system non verrà danneggiato,
-  * Tuttavia, sussiste ancora la possibilità che una doppia esecuzione della stessa applicazione corrompa i dati nella memoria condivisa quando i nodi sono isolati.
+![Archiviazione condivisa NAS SMB o archiviazione condivisa NAS NFS per un cluster di failover](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
+
+
+Diversi elementi rendono questa architettura semplice da implementare:
+
+  * In caso di failover, la commutazione dell’archiviazione condivisa richiede solo il rimontaggio del file system esterno.
+  * Non è richiesta alcuna procedura di ripristino del file system prima del riavvio dell’applicazione.
+  * Se entrambi i nodi accedono contemporaneamente allo stesso file system condiviso, il file system non viene danneggiato.
+  * Tuttavia, quando i nodi sono isolati, la stessa applicazione può comunque essere eseguita su entrambi i nodi. Questa doppia esecuzione può corrompere i dati dell’applicazione nell’archiviazione condivisa.
 
 
 ###  Replica e failover in tempo reale con Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}
 
 
-![ Replica e failover in tempo reale con SafeKit ](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
+![Replica e failover in tempo reale con SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
 
 
-SafeKit non presenta tali problemi perché la sua soluzione di replica e failover non richiede uno storage condiviso.
+SafeKit non presenta questi problemi. Con SafeKit, la replica e il failover non richiedono uno storage condiviso.
 
-Tuttavia, se SafeKit deve gestire una memoria condivisa:
+Tuttavia, se SafeKit deve gestire l’archiviazione condivisa:
 
-  * utilizzare una memoria condivisa NAS SMB o una memoria condivisa NAS NFS,
-  * inserire negli script di riavvio il montaggio/smontaggio del file system esterno,
-  * Configurare il controllo split brain [ SafeKit ](</it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) per evitare una doppia esecuzione della stessa applicazione che accede alla memoria condivisa quando i nodi sono isolati.
+  * Utilizzare l’archiviazione condivisa NAS SMB o NAS NFS.
+  * Inserire i comandi mount e umount per il file system esterno negli script di riavvio.
+  * Configurare il [checker split-brain](</it/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) SafeKit. Impedisce la doppia esecuzione della stessa applicazione sull’archiviazione condivisa quando i nodi sono isolati.
 
 
 

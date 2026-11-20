@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-20.2"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-20.9"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -38,6 +38,52 @@ FM_KEYS = ("title", "linkTitle", "description", "summary", "topics")
 # guillemets typographiques par langue, pour les valeurs du front matter entre guillemets droits
 FM_QUOTES = {"fr": ("«\u00a0", "\u00a0»"), "es": ("«", "»"), "it": ("«", "»"), "pt": ("“", "”"), "de": ("„", "“"),
              "nl": ("‘", "’"), "ja": ("「", "」"), "zh": ("“", "”"), "ko": ("‘", "’"), "ar": ("«", "»")}
+
+_ABBR = r"(?<!\bvs)(?<!\bVs)(?<!\be\.g)(?<!\bi\.e)(?<!\betc)(?<!\bMr)(?<!\bDr)"   # "vs.", "e.g." : pas une fin de phrase
+_SENT_SRC = re.compile(_ABBR + r"[.!?](?=\s|$)")
+_SENT_OUT = re.compile(r"[。！？]|[.!?](?=\s|$)")
+
+def _sent_index(text, pos, rx):
+    return len(rx.findall(re.sub(r"<[^>]*>", lambda m: " " * len(m.group(0)), text[:pos])))
+
+def displaced_marker(src, out):
+    """Vrai si Google a placé une expression protégée (span data-k) dans une autre phrase que dans la source,
+    ou l'a doublée par une copie en clair collée ("SafeKit <span>SafeKit</span>") : un mot voisin a alors souvent disparu."""
+    ks = re.findall(r'data-k="(\d+)"', src)
+    if not ks:
+        return False
+    plain_src, plain_out = re.sub(r"<[^>]*>", " ", src), re.sub(r"<[^>]*>", " ", out)
+    for word in {m.group(1).strip() for m in re.finditer(r'<span[^>]*data-k="\d+"[^>]*>([^<]+)</span>', out)}:
+        if re.search(r"[A-Za-z]", word):   # nom latin en plus du marqueur : copie en clair + marqueur déplacé
+            rx = r"(?<![A-Za-z0-9])" + re.escape(word) + r"(?![A-Za-z0-9])"
+            if len(re.findall(rx, plain_out)) > len(re.findall(rx, plain_src)):
+                return True
+    n_src = len(_SENT_SRC.findall(re.sub(r"<[^>]*>", "", src).strip()))
+    n_out = len(_SENT_OUT.findall(re.sub(r"<[^>]*>", "", out).strip()))
+    if n_src < 2 or n_src != n_out:
+        return False
+    for k in set(ks):
+        ps = [_sent_index(src, m.start(), _SENT_SRC) for m in re.finditer(r'data-k="%s"' % k, src)]
+        po = [_sent_index(out, m.start(), _SENT_OUT) for m in re.finditer(r'data-k="%s"' % k, out)]
+        if sorted(ps) != sorted(po):
+            return True
+    return False
+
+def split_sentences(text):
+    """Coupe un segment source en phrases, jamais à l'intérieur d'une balise ou d'un lien <a>...</a>."""
+    parts, start, depth = [], 0, 0
+    for m in re.finditer(r"<a\b[^>]*>|</a>|<[^>]*>|" + _ABBR + r"[.!?](?:</(?:b|strong|em|i)>)*(?=\s+\S)", text):
+        g = m.group(0)
+        if g.startswith("<a"):
+            depth += 1
+        elif g == "</a>":
+            depth = max(0, depth - 1)
+        elif not g.startswith("<") and depth == 0:
+            parts.append(text[start:m.end()])
+            start = m.end()
+    parts.append(text[start:])
+    return [x.strip() for x in parts if x.strip()]
+
 
 def cjk_bold_pairs(text):
     """Gras CJK étendu par Google, en respectant l'appariement des ** (un ** fermant n'est jamais pris pour un ouvrant) :
@@ -174,7 +220,7 @@ def load_glossary(path, lang):
                 words.append(r"(?:<span[^>]*>\s*%s\s*</span>|%s)" % (re.escape(w), re.escape(w)))
             else:
                 words.append(re.escape(w))
-        TERMS.append((re.compile(r"(?<![\w/.-])" + r"\s+".join(words) + r"(?![\w/-]|\.\w)", re.I), target))
+        TERMS.append((re.compile(r"(?<![^\W_]|[/.-])" + r"\s+".join(words) + r"(?![^\W_]|[/-]|\.\w)", re.I), target))  # "_heartbeat timeout_" (italique) reconnu
     GRAMMAR.clear()
     g = GLOSSARY.get("grammar", {})
     # règles de la langue de base ("pt") puis règles propres à la variante ("pt-br")
@@ -348,6 +394,8 @@ def decode(text, ctx):
         made = [plain(i) for i in range(len(st)) if isinstance(st[i], str)]
         for t in {x for x in made if (KEEP_RE and KEEP_RE.fullmatch(x)) or re.fullmatch(r"[A-Za-z]{2,}[0-9]+", x)}:
             n, seen_t = made.count(t), [0]
+            # nom inclus dans un mot de la source ("SANless" -> "sans SAN", "sin SAN") : la copie en clair est légitime
+            n += len(re.findall(r"(?<![A-Za-z0-9_#.-])" + re.escape(t) + r"(?=[a-z])", getattr(ctx, "src", "") or ""))
             pat = f"{S}P(\\d+){S}|(?<![A-Za-z0-9_#.-])" + re.escape(t) + r"(?![A-Za-z0-9_-])"   # collé au japonais : "SafeKit堅牢"
             total = sum(1 for mm in re.finditer(pat, text) if mm.group(1) is None or plain(int(mm.group(1))) == t)
             if total <= n:
@@ -512,6 +560,14 @@ def decode(text, ctx):
     src_plain = re.sub(r"\]\([^)]*\)|https?://\S+|<[^>]+>", " ", getattr(ctx, "all_src", ""))
     for a, b in set(re.findall(r"(?<![\w/:.-])([A-Za-z0-9][\w.-]*)/([A-Za-z0-9][\w.-]*)(?![\w/])", src_plain)):
         text = re.sub(r"(?<![\w/-])(%s) *\/ *(%s)(?![\w/])" % (re.escape(a), re.escape(b)), r"\1/\2", text)
+    if CJK:
+        # deux expressions protégées collées ("SafeKit<span>シェアードナッシング</span>") : espace latin/CJK avant les règles
+        text = re.sub(f"(?<=[A-Za-z0-9])(?=[{CJK_CHAR}])", " ", text)
+        # fin de l'expression répétée par Google ("シェアードナッシングナッシング", "…アーキテクチャナッシングアーキテクチャ")
+        for n in ctx.terms:
+            tr = re.sub(r"<[^>]+>", "", st[n]).strip() if isinstance(st[n], str) else ""
+            for k in range(1, len(tr) - 2):
+                text = text.replace(tr + tr[k:], tr)
     for pat, repl in GRAMMAR:   # accords autour des expressions imposées (ex. "une cluster" -> "un cluster")
         text = re.sub(pat, repl, text)
     for wrong, right in GLOSSARY.get("_rep", {}).items():  # corrections du glossaire
@@ -887,6 +943,24 @@ def main():
     else:
         print("Modèle : classique (NMT)")
     translate = (lambda texts: [MOCK(x) for x in texts]) if a.dry_run else (lambda texts: google(texts, a.src, a.to, key))
+    raw_pairs = []   # texte envoyé / réponse brute de Google (diagnostic, voir SAFEKIT_RAW_DIR)
+    _translate = translate
+    def translate(texts):
+        res = _translate(texts)
+        raw_pairs.extend(zip(texts, res))
+        # expression protégée déplacée par Google dans une autre phrase, à la place d'un mot qui disparaît
+        # ("如果发生硬件或<span>Microsoft</span>故障" : "软件" perdu) : le segment est retraduit phrase par phrase
+        bad = [k for k, (t, r) in enumerate(zip(texts, res)) if displaced_marker(t, r)]
+        if bad:
+            print(f"{len(bad)} segment(s) retraduit(s) phrase par phrase (expression protégée déplacée par Google)")
+            for k in bad:
+                parts = split_sentences(texts[k])
+                if len(parts) < 2:
+                    continue
+                tr = _translate(parts)
+                raw_pairs.extend(zip(parts, tr))
+                res[k] = ("" if CJK else " ").join(x.strip() for x in tr)
+        return res
     row_html = ["<table><tr>" + "".join(f"<td>{e}</td>" for _, _, e, _ in rc) + "</tr></table>" for _, rc, _ in rows]
     res = translate([j[2] for j in jobs] + row_html)
     out, row_out = res[:len(jobs)], res[len(jobs):]
@@ -1007,6 +1081,14 @@ def main():
         shift = 0
     Path(a.target).parent.mkdir(parents=True, exist_ok=True)
     open(a.target, "w", encoding="utf-8", newline="").write(eol.join(lines))
+    raw_dir = os.environ.get("SAFEKIT_RAW_DIR")
+    if raw_dir and raw_pairs:   # réponses brutes de Google, à côté de l'export (diagnostic des textes perdus)
+        try:
+            Path(raw_dir).mkdir(parents=True, exist_ok=True)
+            json.dump([{"in": i, "out": o} for i, o in raw_pairs],
+                      open(Path(raw_dir) / f"{lang}.raw.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        except OSError:
+            pass
     lost += row_lost
     n_cells = sum(1 for j in jobs if getattr(j[4], "row", False))
     print(f"{len(jobs) - n_cells + len(rows)} segments traduits"
@@ -1072,6 +1154,8 @@ def batch():
         cmd = [sys.executable, str(Path(__file__).resolve()), str(src), str(tgt), "--to", lang] + extra
         # sortie du sous-processus en UTF-8 (console Windows cp1252) et sans tampon (progression visible)
         env = dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONUNBUFFERED="1")
+        if a.export:   # réponses brutes de Google copiées dans l'export (<lang>.raw.json)
+            env["SAFEKIT_RAW_DIR"] = str(Path(a.export).resolve())
         idx = langs.index(lang) + 1
         for attempt in (1, 2, 3):
             print(f"[{idx}/{len(langs)}] {lang} : traduction en cours..." + (f" (essai {attempt})" if attempt > 1 else ""), flush=True)

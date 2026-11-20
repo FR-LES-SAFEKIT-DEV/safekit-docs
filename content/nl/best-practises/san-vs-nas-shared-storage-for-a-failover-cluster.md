@@ -1,56 +1,58 @@
 ---
-title: "SAN versus NAS gedeelde opslag voor failover-clustering: een gedetailleerde vergelijking"
+title: "SAN versus NAS-gedeelde opslag voor failoverclustering: een gedetailleerde vergelijking"
 canonical: "https://safekit.eviden.com/nl/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "Vergelijk SAN- en NAS-gedeelde opslag voor failoverclusters. Ontdek waarom SafeKit een SAN-loze architectuur voorstelt die de afhankelijkheid van gedeelde opslag elimineert, failoverscripts vereenvoudigt en gegevenscorruptie voorkomt zonder dure hardware of complexe quorumschijven."
+description: "Vergelijk gedeelde SAN en NAS-opslag voor failoverclusters. SafeKit heeft geen gedeelde opslag nodig. Het vereenvoudigt failover-scripts en voorkomt gegevensbeschadiging. Het vereist geen dure hardware en geen complexe quorumschijf."
 category: "best-practises"
 lang: "nl"
-topics: "Wat is de eenvoudigste oplossing voor een failovercluster: een SAN of een NAS met gedeelde opslag? 🔍 Ontdek SafeKit"
+topics: "SAN- of NAS-gedeelde opslag: wat is eenvoudiger voor een failovercluster?, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 ---
 
-# SAN versus NAS gedeelde opslag voor failover-clustering: een gedetailleerde vergelijking {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
+# SAN versus NAS-gedeelde opslag voor failoverclustering: een gedetailleerde vergelijking {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}
 
-## Wat is de eenvoudigste oplossing voor een failovercluster: een SAN of een NAS met gedeelde opslag? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
+## SAN- of NAS-gedeelde opslag: wat is eenvoudiger voor een failovercluster? {#what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster}
 
-###  SAN-gedeelde opslag of NAS iSCSI-gedeelde opslag voor een failovercluster {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
-
-
-![ SAN gedeelde opslag of NAS iSCSI gedeelde opslag voor een failover-cluster ](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
+###  SAN gedeelde opslag of NAS iSCSI-gedeelde opslag voor een failovercluster {#san-shared-storage-or-nas-iscsi-shared-storage-for-a-failover-cluster}
 
 
-Er zijn verschillende elementen die de implementatie van deze architectuur complex maken:
-
-  * Bij failover vereist het overschakelen naar de gedeelde opslag instructies op laag niveau die afhankelijk zijn van de fabrikant van de opslag.
-  * Voordat de applicatie opnieuw wordt opgestart, moet de herstelprocedure van het bestandssysteem (FS) worden uitgevoerd.
-  * Als beide bestandssystemen op beide knooppunten tegelijkertijd toegang hebben tot dezelfde onbewerkte schijf, raakt het volledige bestandssysteem beschadigd.
-  * Om dubbele toegang te voorkomen, moet een quorumschijf geconfigureerd worden.
+![SAN gedeelde opslag of NAS iSCSI-gedeelde opslag voor een failovercluster](/wp-content/uploads/2023/03/raw-disk-shared-storage.png "w:200")
 
 
-###  NAS SMB gedeelde opslag of NAS NFS gedeelde opslag voor een failover-cluster {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
+Verschillende elementen maken deze architectuur complex om te implementeren:
+
+  * Bij een failover vereist het overschakelen van de gedeelde opslag commando's op laag niveau. Deze commando's zijn afhankelijk van de opslagfabrikant.
+  * Voordat de toepassing opnieuw wordt gestart, moet een procedure voor het herstellen van het bestandssysteem worden uitgevoerd.
+  * Als de bestandssystemen op beide nodes tegelijkertijd toegang hebben tot dezelfde ruwe schijf, raakt het hele bestandssysteem beschadigd.
+  * Om deze dubbele toegang te voorkomen, moet u een quorumschijf configureren.
 
 
-![ NAS SMB gedeelde opslag of NAS NFS gedeelde opslag voor een failover-cluster ](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
+###  Gedeelde NAS SMB-opslag of gedeelde NAS NFS-opslag voor een failovercluster {#nas-smb-shared-storage-or-nas-nfs-shared-storage-for-a-failover-cluster}
 
 
-Er zijn verschillende elementen die de implementatie van deze architectuur vereenvoudigen: 
-  * Bij failover betekent het overschakelen naar de gedeelde opslag alleen het opnieuw aankoppelen van het externe bestandssysteem.
-  * Er hoeft geen herstelprocedure op het bestandssysteem te worden uitgevoerd voordat de applicatie opnieuw wordt gestart.
-  * Als beide knooppunten tegelijkertijd toegang hebben tot hetzelfde gedeelde bestandssysteem, zal het volledige bestandssysteem niet beschadigd raken.
-  * Er bestaat echter nog steeds de mogelijkheid dat een dubbele uitvoering van dezelfde applicatie de gegevens in de gedeelde opslag beschadigt wanneer de knooppunten geïsoleerd zijn.
+![Gedeelde NAS SMB-opslag of gedeelde NAS NFS-opslag voor een failovercluster](/wp-content/uploads/2023/03/nas-shared-storage-1.png "w:200")
+
+
+Verschillende elementen maken deze architectuur eenvoudig te implementeren:
+
+  * Bij een failover hoeft bij het wisselen van de gedeelde opslag alleen het externe bestandssysteem opnieuw te worden aangekoppeld.
+  * Er is geen procedure voor het herstellen van het bestandssysteem vereist voordat de toepassing opnieuw wordt gestart.
+  * Als beide nodes tegelijkertijd toegang hebben tot hetzelfde gedeelde bestandssysteem, raakt het bestandssysteem niet beschadigd.
+  * Wanneer nodes echter geïsoleerd zijn, kan dezelfde toepassing nog steeds op beide nodes worden uitgevoerd. Deze dubbele uitvoering kan de toepassingsgegevens in de gedeelde opslag beschadigen.
 
 
 ###  Realtime replicatie en failover met Eviden SafeKit {#real-time-replication-and-failover-with-eviden-safekit}
 
 
-![ Realtime replicatie en failover met SafeKit ](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
+![Realtime replicatie en failover met SafeKit](/wp-content/uploads/2023/03/no-shared-storage.png "w:200")
 
 
-Bij SafeKit doen zich dergelijke problemen niet voor, omdat de replicatie- en failoveroplossing geen gedeelde opslag vereist.
+SafeKit heeft deze problemen niet. Met SafeKit is gedeelde opslag voor replicatie en failover niet vereist.
 
-Als SafeKit echter een gedeelde opslag moet beheren:
+Als SafeKit echter gedeelde opslag moet beheren:
 
-  * gebruik een NAS SMB-gedeelde opslag of een NAS NFS-gedeelde opslag.
-  * Voeg in de herstartscripts het aan- en afkoppelen van het externe bestandssysteem toe.
-  * Configureer de [ SafeKit split-brain checker ](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) om te voorkomen dat dezelfde applicatie die toegang heeft tot de gedeelde opslag, dubbel wordt uitgevoerd wanneer knooppunten geïsoleerd zijn.
+  * Gebruik gedeelde NAS SMB- of NAS NFS-opslag.
+  * Plaats de mount- en umount-opdrachten voor het externe bestandssysteem in de herstartscripts.
+  * Configureer de SafeKit [split-brain-checker](</nl/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>). Deze voorkomt een dubbele uitvoering van dezelfde applicatie op de gedeelde opslag wanneer nodes geïsoleerd zijn.
 
 
 
