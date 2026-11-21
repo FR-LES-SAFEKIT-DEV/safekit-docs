@@ -1,39 +1,40 @@
 ---
-title: "Software de agrupación en clústeres para granjas de servidores y réplicas: alta disponibilidad y equilibrio de carga."
+title: "Software de clúster con equilibrio de carga y duplicación: alta disponibilidad y escalabilidad"
 canonical: "https://safekit.eviden.com/es/architectures/clustering-software-load-balancing-mirroring/"
-description: "Implemente arquitecturas avanzadas combinando los módulos SafeKit Farm y Mirror . Combine el balanceo de carga de red para escalar el front-end con la replicación síncrona en tiempo real para proteger los datos del back-end. Clustering sencillo y sin SAN para Windows y Linux sin necesidad de conocimientos técnicos especializados. Descargue su versión de prueba gratuita."
+description: "Cree arquitecturas avanzadas combinando los módulos farm y mirror SafeKit. El equilibrio de carga de red escala el front-end y la replicación síncrona en tiempo real protege los datos del back-end. Agrupación en clúster sin SAN sencilla para Windows y Linux, sin necesidad de conocimientos informáticos especializados. Descargue su prueba gratuita."
 category: "architectures"
 lang: "es"
-topics: "Alta disponibilidad y escalabilidad de aplicaciones web y de bases de datos críticas con el software de clúster SafeKit , 🔍 Explora SafeKit"
+topics: "Alta disponibilidad y escalabilidad de aplicaciones web y de bases de datos críticas con el software de clúster SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 51 expressions"
 ---
 
-# Software de agrupación en clústeres para granjas y réplicas: alta disponibilidad y equilibrio de carga {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# Software de clúster con equilibrio de carga y duplicación: alta disponibilidad y escalabilidad {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
 ## Alta disponibilidad y escalabilidad de aplicaciones web y de bases de datos críticas con el software de clúster SafeKit {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
-### Balanceo de carga, replicación y conmutación por error {#load-balancing-mirroring-and-failover}
+### Equilibrio de carga, duplicación y conmutación por error {#load-balancing-mirroring-and-failover}
 
 
-Agrupación ![ SafeKit con equilibrio de carga y duplicación ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+![Clustering SafeKit con balanceo de carga y duplicación](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-### Ejemplo con el software de agrupación SafeKit {#example-with-the-safekit-clustering-software}
+### Ejemplo con el software de clúster SafeKit {#example-with-the-safekit-clustering-software}
 
-Por ejemplo, con el software de agrupación en clústeres SafeKit , puede implementar el equilibrio de carga IIS y la replicación Microsoft SQL Server .
+Por ejemplo, con el software de clúster SafeKit, puede implementar el equilibrio de carga para IIS y la duplicación para Microsoft SQL Server.
 
-Para ello, debe implementar un módulo <span class="notranslate farm-term" translate="no">farm</span> para el servidor SQL IIS y un módulo mirror para el servidor SQL Microsoft . Cada módulo <span class="notranslate farm-term" translate="no">farm</span> y mirror está configurado con su propia dirección IP virtual y sus propios scripts de reinicio.
+Para ello, implemente un módulo <span class="notranslate farm-term" translate="no">farm</span> para IIS y un módulo mirror para Microsoft SQL Server. Cada módulo se configura con su propia dirección IP virtual y sus propios scripts de reinicio.
 
-Los módulos mirror y <span class="notranslate farm-term" translate="no">farm</span> pueden implementarse en un único clúster de dos servidores. Los módulos IIS , Microsoft y SQL Server se ejecutarán en estos dos servidores. También pueden implementarse en dos clústeres con servidores diferentes.
+Los dos módulos se pueden implementar en un único clúster de dos servidores, donde se ejecutan IIS y Microsoft SQL Server. Alternativamente, los dos módulos se pueden implementar en dos clústeres separados con diferentes servidores.
 
-Con el software de agrupación en clústeres SafeKit , no hay diferencia entre una implementación en los mismos servidores o en servidores diferentes.
+Con el software de clúster SafeKit, la implementación en los mismos servidores o en servidores diferentes funciona exactamente de la misma manera.
 
 ### Solución de alta disponibilidad y escalabilidad {#high-availability-and-scalability-solution}
 
 El software de clúster SafeKit proporciona una solución sencilla de alta disponibilidad y escalabilidad para aplicaciones web y de bases de datos críticas.
 
-Como resultado, el equilibrio de carga de la red, la replicación de datos en tiempo real y la conmutación por error de las aplicaciones se gestionan de forma coherente en un mismo producto.
+El equilibrio de carga de la red, la duplicación de datos en tiempo real y la conmutación por error de las aplicaciones se gestionan de forma coherente en un único producto.
 
-Al comparar el software de clúster SafeKit con el clúster de hardware, no se necesitan discos compartidos, SAN replicada, balanceadores de carga ni ediciones Enterprise del sistema operativo o la base de datos.
+A diferencia del clustering de hardware, el software de clúster SafeKit no requiere discos compartidos, SAN replicadas, balanceadores de carga de hardware ni ediciones Enterprise de sistemas operativos o bases de datos.
 
 
 {{%  insert-safekit-hub-es  %}}

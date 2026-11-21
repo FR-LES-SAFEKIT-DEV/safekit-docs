@@ -1,46 +1,47 @@
 ---
-title: "Active-Active-Clustering-Software mit Echtzeitreplikation und gegenseitigem Failover"
+title: "Aktiv-Aktiv-Clustering-Software mit Echtzeit-Replikation und gegenseitiger Ausfallsicherung"
 canonical: "https://safekit.eviden.com/de/architectures/active-active-cluster-real-time-replication/"
-description: "Optimieren Sie die Ressourcennutzung mit dem Active-Active-Clustering SafeKit . Implementieren Sie ein gegenseitiges Failover zwischen zwei Servern mithilfe von synchroner Echtzeitreplikation und mehreren mirror -Modulen. Gewährleisten Sie null Datenverlust (RPO=0) und automatische Wiederherstellung für Windows und Linux ohne SAN. Laden Sie die kostenlose Testversion herunter."
+description: "Maximieren Sie die Ressourcennutzung mit dem SafeKit-Aktiv-Aktiv-Clustering. Implementieren Sie gegenseitiges Failover zwischen zwei Servern mithilfe synchroner Echtzeit-Replikation und mehrerer Mirror-Module. Gewährleisten Sie null Datenverlust (RPO = 0) und automatische Wiederherstellung für Windows und Linux ohne SAN. Laden Sie die kostenlose Testversion herunter."
 category: "architectures"
 lang: "de"
-topics: "Wie funktioniert ein Active-Active-Cluster mit Echtzeitreplikation?, 🔍 SafeKit entdecken"
+topics: "Wie funktioniert ein Aktiv-Aktiv-Cluster mit Echtzeit-Replikation?, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 54 expressions"
 ---
 
-# Active-Active-Clustering-Software mit Echtzeitreplikation und gegenseitigem Failover {#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# Aktiv-Aktiv-Clustering-Software mit Echtzeit-Replikation und gegenseitiger Ausfallsicherung {#active-active-clustering-software-with-real-time-replication--mutual-failover}
 
-## Wie funktioniert ein Active-Active-Cluster mit Echtzeitreplikation? {#how-the-active-active-cluster-with-real-time-replication-works}
+## Wie funktioniert ein Aktiv-Aktiv-Cluster mit Echtzeit-Replikation? {#how-the-active-active-cluster-with-real-time-replication-works}
 
-### Aktiv-Aktiv-Cluster mit Echtzeitreplikation {#active--active-cluster-with-real-time-replication}
+### Aktiv-Aktiv-Cluster mit Echtzeit-Replikation {#active--active-cluster-with-real-time-replication}
 
-Die Anwendungen laufen auf zwei Servern im gegenseitigen Failover-System. Jeder Server dient als Backup für den anderen. Jede Anwendung arbeitet mit ihren eigenen replizierten Dateiverzeichnissen.
-
-
-![ SafeKit aktiver aktiver Cluster mit Echtzeitreplikation ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+Zwei Server führen Anwendungen aus und sichern sich gegenseitig. Dies wird als gegenseitiges Failover bezeichnet: Jeder Server ist die Sicherung des anderen Servers. Jede Anwendung verwendet ihre eigenen replizierten Dateiverzeichnisse.
 
 
-Fällt in einem Active-Active-Cluster ein Server aus, laufen alle Anwendungen auf demselben Server weiter. Nach dem Neustart des ausgefallenen Servers werden die Anwendungen wieder auf ihrem primären Standardserver ausgeführt.
+![SafeKit-Aktiv-Aktiv-Cluster mit Echtzeit-Replikation](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+
+
+Wenn ein Server in einem Aktiv-Aktiv-Cluster ausfällt, werden alle Anwendungen auf dem verbleibenden Server ausgeführt. Wenn der ausgefallene Server neu gestartet wird, kehrt jede Anwendung zu ihrem primären Standardserver zurück.
 
 ### Wie funktioniert es? {#how-it-works}
 
-Der Active-Active-Cluster SafeKit wird einfach durch die Bereitstellung zweier mirror -Module mit Echtzeitreplikation konfiguriert. Jedes mirror -Modul enthält seine eigene Konfiguration aus virtueller IP-Adresse, in Echtzeit replizierten Verzeichnissen und Neustartskripten.
+Um einen Aktiv-Aktiv-Cluster mit SafeKit zu konfigurieren, stellen Sie einfach zwei Mirror-Module mit Echtzeit-Replikation bereit. Jedes Mirror-Modul hat seine eigene Konfiguration: eine virtuelle IP-Adresse, in Echtzeit replizierte Verzeichnisse und Neustart-Skripte.
 
-Beachten Sie, dass:
+Anmerkungen:
 
-  * Für das Anwendungs-Failover müssen die beiden Anwendungen Appli1 und Appli2 auf jedem Server installiert sein.
-  * Diese Architektur ist nicht auf 2 Anwendungen beschränkt: N Anwendungsmodule können auf 2 Servern mit maximal 25 Modulen bereitgestellt werden.
-  * Jedes mirror Modul verfügt über eine eigene virtuelle IP-Adresse, eigene replizierte Dateiverzeichnisse und eigene Wiederherstellungsskripte.
+  * Für das Anwendungsfailover müssen beide Anwendungen (Appli1 und Appli2) auf jedem Server installiert sein.
+  * Diese Architektur ist nicht auf zwei Anwendungen beschränkt. Sie können bis zu 25 Anwendungsmodule auf denselben beiden Servern bereitstellen.
+  * Jedes Mirror-Modul verfügt über eine eigene virtuelle IP-Adresse, eigene replizierte Dateiverzeichnisse und eigene Wiederherstellungsskripte.
 
 
-### Beispiel eines aktiven Clusters {#example-of-an-active-active-cluster}
+### Beispiel für einen Aktiv-Aktiv-Cluster {#example-of-an-active-active-cluster}
 
-Die 💡 [ Hyper-V ](</de/solutions/hyper-v-replication-automatic-failover-load-balancing/>) oder 💡 [ KVM ](</de/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) Lösung mit Replikation, automatischem Failover und Lastausgleich von VMs ist ein Beispiel für einen Aktiv-Aktiv-Cluster mit N mirror Modulen, die N virtuelle Maschinen zwischen zwei physischen Servern replizieren.
+Die 💡 [Hyper-V](</de/solutions/hyper-v-replication-automatic-failover-load-balancing/>) oder 💡 [KVM](</de/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)-Lösung ist ein Beispiel für einen Aktiv-Aktiv-Cluster. Diese Lösung bietet Replikation, automatisches Failover und Lastausgleich von virtuellen Maschinen. In diesem Cluster replizieren N Mirror-Module N virtuelle Maschinen zwischen zwei physischen Servern.
 
-In dieser Konfiguration repliziert ein mirror -Modul eine vollständige virtuelle Maschine und startet die virtuelle Maschine im Fehlerfall neu. 
+In dieser Konfiguration repliziert jedes Mirror-Modul eine vollständige virtuelle Maschine und startet sie bei einem Fehler neu.
 
-In einem solchen Modul gibt es keine virtuelle IP-Adresse, da beim Neustart einer VM auf einem Server automatisch ein Failover der physischen IP-Adresse der VM erfolgt. 
+Diese Art von Modul benötigt keine virtuelle IP-Adresse. Wenn die virtuelle Maschine auf dem anderen Server neu gestartet wird, wird ihre eigene IP-Adresse automatisch mitverschoben.
 
-In dieser Architektur wird eine kritische Anwendung innerhalb einer VM installiert.
+Bei dieser Architektur ist die kritische Anwendung in einer virtuellen Maschine installiert.
 
 
 {{%  insert-safekit-hub-de  %}}

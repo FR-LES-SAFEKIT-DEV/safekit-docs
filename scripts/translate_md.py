@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-21.1"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-21.4"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -688,7 +688,7 @@ def native_terms(text, ctx):
         # coréen : nom + verbe en 하다 sans particule
         if re.match("[\uac00-\ud7a3]", tr[-1]):
             obj = "을" if (ord(tr[-1]) - 0xAC00) % 28 else "를"
-            text = re.sub(r"(%s(?:\*\*)?)(?= [\uac00-\ud7a3]+(?:하고|하여|합니다|하는|한다|해서|하며|하기))" % esc, r"\1" + obj, text)
+            text = re.sub(r"(%s(?:\*\*)?)(?= (?!작동|동작|실행되|발생)[\uac00-\ud7a3]+(?:하고|하여|합니다|하는|한다|해서|하며|하기))" % esc, r"\1" + obj, text)
     return text
 
 def _kind(c):
@@ -888,6 +888,12 @@ def main():
                 if lang in values:
                     line = lines[i] = re.sub(r'(\{\{[<%%][^\n]*?\b%s=")[^"]*(")' % re.escape(pname),
                                              lambda x, v=values[lang]: x.group(1) + v + x.group(2), line)
+            # valeurs de paramètres de shortcode affichées telles quelles (glossaire "shortcode_values") :
+            # app="Windows or Linux" -> app="Windows ou Linux"
+            for pval, values in GLOSSARY.get("shortcode_values", {}).items():
+                if lang in values:
+                    line = lines[i] = re.sub(r'(\{\{[<%%][^\n]*?\b\w+=")%s(")' % re.escape(pval),
+                                             lambda x, v=values[lang]: x.group(1) + v + x.group(2), line)
             s = line.strip()
         if in_code or not s or (re.fullmatch(r"\|?[\s:|-]+\|?", s) and "-" in s):
             continue
@@ -1017,6 +1023,8 @@ def main():
             numbers.append((idx[0] if isinstance(idx, tuple) else idx, miss))
         t = decode(t, ctx)
         if getattr(ctx, "list_sep", None):
+            # pas de point final sur un titre de la liste ("…SafeKit.، 🔍" / "…。、🔍")
+            t = re.sub(r"[.。]\s*(?=<br\s*/?>)", "", t)
             t = re.sub(r"\s*<br\s*/?>\s*", ctx.list_sep, t)
         # pas de point final ajouté quand la source n'en a pas ("[Lire le guide](/x/)。")
         src_vis = re.sub(r"<[^>]+>", "", enc).strip()

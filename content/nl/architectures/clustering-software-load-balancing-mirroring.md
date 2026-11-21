@@ -1,39 +1,40 @@
 ---
-title: "Clustersoftware voor farms en mirrors: hoge beschikbaarheid en load balancing"
+title: "Clusteringsoftware met taakverdeling en spiegeling: hoge beschikbaarheid en schaalbaarheid"
 canonical: "https://safekit.eviden.com/nl/architectures/clustering-software-load-balancing-mirroring/"
-description: "Implementeer geavanceerde architecturen door de modules SafeKit Farm en Mirror te combineren. Combineer load balancing voor schaalbaarheid aan de front-end met realtime synchrone replicatie voor gegevensbescherming aan de back-end. Eenvoudige, SAN-loze clustering voor Windows en Linux zonder specialistische IT-kennis. Download uw gratis proefversie."
+description: "Bouw geavanceerde architecturen door SafeKit farm- en mirror-modules te combineren. Netwerktaakverdeling schaalt de front-end en synchrone replicatie in realtime beschermt de back-endgegevens. Eenvoudige SANless-clustering voor Windows en Linux, zonder dat er gespecialiseerde IT-vaardigheden vereist zijn. Download uw gratis proefversie."
 category: "architectures"
 lang: "nl"
-topics: "Hoge beschikbaarheid en schaalbaarheid van kritieke web- en databaseapplicaties met de SafeKit clusteringsoftware, 🔍 Ontdek SafeKit"
+topics: "Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 ---
 
-# Clustersoftware voor farms en mirrors: hoge beschikbaarheid en load balancing {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# Clusteringsoftware met taakverdeling en spiegeling: hoge beschikbaarheid en schaalbaarheid {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## Hoge beschikbaarheid en schaalbaarheid van kritieke web- en databaseapplicaties met de clusteringsoftware SafeKit {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
+## Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
-### Load balancing, mirroring en failover {#load-balancing-mirroring-and-failover}
-
-
-![ SafeKit clustering met load balancing en mirroring ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+### Taakverdeling, spiegeling en failover {#load-balancing-mirroring-and-failover}
 
 
-### Voorbeeld met de clusteringsoftware SafeKit {#example-with-the-safekit-clustering-software}
+![SafeKit clustering met taakverdeling en mirroring](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
-Met de clusteringsoftware SafeKit kunt u bijvoorbeeld load balancing met IIS en mirroring Microsoft SQL Server implementeren.
 
-Hiervoor moet u een <span class="notranslate farm-term" translate="no">farm</span> module implementeren voor IIS SQL-server en een mirror module voor Microsoft -SQL-server. Elke <span class="notranslate farm-term" translate="no">farm</span> en mirror -module is geconfigureerd met een eigen virtueel IP-adres en eigen herstartscripts.
+### Voorbeeld met de SafeKit-clusteringsoftware {#example-with-the-safekit-clustering-software}
 
-Zowel mirror als <span class="notranslate farm-term" translate="no">farm</span> -module kunnen op één cluster van twee servers worden geïmplementeerd. IIS en Microsoft SQL Server zullen op deze twee servers draaien. De twee modules kunnen ook op twee clusters met verschillende servers worden geïmplementeerd.
+Met de SafeKit-clusteringsoftware kunt u bijvoorbeeld loadbalancing voor IIS en mirroring voor Microsoft SQL Server implementeren.
 
-Met de SafeKit clusteringsoftware is er geen verschil tussen een implementatie op dezelfde servers of op verschillende servers.
+Implementeer hiervoor een <span class="notranslate farm-term" translate="no">farm</span>-module voor IIS en een mirror-module voor Microsoft SQL Server. Elke module wordt geconfigureerd met een eigen virtueel IP-adres en eigen herstartscripts.
 
-### Zeer betrouwbare en schaalbare oplossing {#high-availability-and-scalability-solution}
+De twee modules kunnen worden geïmplementeerd op een enkel cluster van twee servers, waar zowel IIS als Microsoft SQL Server worden uitgevoerd. Als alternatief kunnen de twee modules worden geïmplementeerd op twee afzonderlijke clusters met verschillende servers.
 
-De SafeKit clusteringsoftware biedt een eenvoudige oplossing met hoge beschikbaarheid en schaalbaarheid voor kritieke web- en databaseapplicaties.
+Met de SafeKit-clusteringsoftware werkt de implementatie op dezelfde servers of op verschillende servers precies op dezelfde manier.
 
-Hierdoor worden netwerkbelastingverdeling, realtime dataspiegeling en applicatiefailover op een samenhangende manier beheerd in één product.
+### Oplossing voor hoge beschikbaarheid en schaalbaarheid {#high-availability-and-scalability-solution}
 
-Bij een vergelijking van de SafeKit clusteringsoftware met hardwareclustering zijn gedeelde schijven, gerepliceerde SAN, load balancers, Enterprise-edities van het besturingssysteem of databases niet nodig.
+De SafeKit-clusteringsoftware biedt een eenvoudige oplossing voor hoge beschikbaarheid en schaalbaarheid voor bedrijfskritische web- en databaseapplicaties.
+
+Netwerkbelastingsverdeling, real-time gegevensspiegeling en applicatie-failover worden consistent beheerd in één enkel product.
+
+In tegenstelling tot hardwareclustering vereist de SafeKit-clusteringsoftware geen gedeelde schijven, gerepliceerde SAN's, hardwarematige load balancers of Enterprise-edities van besturingssystemen of databases.
 
 
 {{%  insert-safekit-hub-nl  %}}

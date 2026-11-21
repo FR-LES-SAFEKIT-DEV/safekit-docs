@@ -1,39 +1,40 @@
 ---
-title: "ファームとミラー向けのクラスタリングソフトウェア：高可用性と負荷分散"
+title: "ロードバランシングとミラーリング機能を備えたクラスタリングソフトウェア：高可用性とスケーラビリティ"
 canonical: "https://safekit.eviden.com/ja/architectures/clustering-software-load-balancing-mirroring/"
-description: "高度なアーキテクチャをミックスして展開する SafeKit Farm そして Mirror モジュール。フロントエンドのスケーラビリティのためのネットワーク負荷分散と、バックエンドのデータ保護のためのリアルタイム同期レプリケーションを組み合わせます。シンプルなSANレスクラスタリングで Windows そして Linux 専門的なITスキルは不要です。無料トライアルをダウンロードしてください。"
+description: "SafeKit farm および mirror モジュールを組み合わせて、高度なアーキテクチャを構築します。ネットワーク負荷分散によってフロントエンドをスケーリングし、リアルタイムの同期レプリケーションによってバックエンドデータを保護します。Windows および Linux 向けのシンプルな SAN 不要のクラスタリング。特別な IT スキルは不要です。無料トライアルをダウンロード。"
 category: "architectures"
 lang: "ja"
-topics: "SafeKitクラスタリングソフトウェア、🔍 SafeKit を探索する"
+topics: "SafeKit クラスタリングソフトウェアによる、重要な Web アプリケーションとデータベースアプリケーションの可用性とスケーラビリティの向上、🔍 SafeKit を探索する"
+translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 ---
 
-# ファームとミラー向けのクラスタリングソフトウェア：高可用性と負荷分散 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# ロードバランシングとミラーリング機能を備えたクラスタリングソフトウェア：高可用性とスケーラビリティ {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## SafeKitクラスタリングソフトウェアによる、重要なWebアプリケーションおよびデータベースアプリケーションの高可用性と拡張性 {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
+## SafeKit クラスタリングソフトウェアによる、重要な Web アプリケーションとデータベースアプリケーションの可用性とスケーラビリティの向上 {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
 ### ロードバランシング、ミラーリング、フェイルオーバー {#load-balancing-mirroring-and-failover}
 
 
-![ SafeKit負荷分散とミラーリングによるクラスタリング](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+![ロードバランシングとミラーリングによる SafeKit クラスタリング](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
 
-### SafeKitクラスタリングソフトウェアを使用した例 {#example-with-the-safekit-clustering-software}
+### SafeKit クラスタリングソフトウェアの例 {#example-with-the-safekit-clustering-software}
 
-例えば、 SafeKitクラスタリングソフトウェアを使用すると、 IISロードバランシングとMicrosoftおよびSQL Serverミラーリングを実装できます。
+例えば、SafeKit クラスタリングソフトウェアを使用すると、IIS のロードバランシングや Microsoft SQL Server のミラーリングを実装できます。
 
-そのためには、 <span class="notranslate farm-term" translate="no">farm</span> モジュール IIS そして mirror モジュール Microsoft SQLサーバー。各 <span class="notranslate farm-term" translate="no">farm</span> そして mirror このモジュールは、独自の仮想IPアドレスと独自の再起動スクリプトで構成されています。
+これを行うには、IIS 用の <span class="notranslate farm-term" translate="no">farm</span> モジュールと Microsoft SQL Server 用の mirror モジュールをデプロイします。各モジュールは、独自の仮想 IP アドレスと独自の再起動スクリプトで構成されます。
 
-両方 mirror そして <span class="notranslate farm-term" translate="no">farm</span> モジュールは、2台のサーバーからなる単一のクラスターにデプロイできます。 IIS そして Microsoft SQL Server これらの2台のサーバー上で実行されます。あるいは、2つのモジュールを異なるサーバーで構成される2つのクラスターにデプロイすることも可能です。
+2 つのモジュールは、IIS と Microsoft SQL Server の両方が実行される 2 台のサーバーの単一クラスターにデプロイできます。あるいは、2 つのモジュールを異なるサーバーを持つ 2 つの別々のクラスターにデプロイすることもできます。
 
-SafeKitクラスタリングソフトウェアでは、同一サーバー上での展開と異なるサーバー上での展開に違いはありません。
+SafeKit クラスタリングソフトウェアでは、同じサーバーにデプロイする場合でも、異なるサーバーにデプロイする場合でも、まったく同じ方法で動作します。
 
-### 高可用性と拡張性ソリューション {#high-availability-and-scalability-solution}
+### 高可用性とスケーラビリティのソリューション {#high-availability-and-scalability-solution}
 
-SafeKitクラスタリングソフトウェアは、重要なWebアプリケーションおよびデータベースアプリケーション向けに、シンプルで高可用性と拡張性に優れたソリューションを提供します。
+SafeKit クラスタリングソフトウェアは、重要な Web アプリケーションやデータベースアプリケーションに、シンプルな高可用性とスケーラビリティソリューションを提供します。
 
-その結果、ネットワーク負荷分散、リアルタイムデータミラーリング、およびアプリケーションフェイルオーバーが、同一製品内で一貫して管理される。
+ネットワーク負荷分散、リアルタイムデータミラーリング、アプリケーションフェイルオーバーは、単一の製品で一貫して管理されます。
 
-SafeKitクラスタリングソフトウェアをハードウェアクラスタリングと比較すると、共有ディスク、レプリケートSAN、ロードバランサー、エンタープライズ版のOSやデータベースは必要ありません。
+ハードウェアクラスタリングとは異なり、SafeKit クラスタリングソフトウェアは、共有ディスク、レプリケートされた SAN、ハードウェアロードバランサー、またはオペレーティングシステムやデータベースのエンタープライズエディションを必要としません。
 
 
 {{%  insert-safekit-hub-ja  %}}

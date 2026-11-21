@@ -1,10 +1,11 @@
 ---
 title: "Software di clustering attivo-attivo con replica in tempo reale e failover reciproco"
 canonical: "https://safekit.eviden.com/it/architectures/active-active-cluster-real-time-replication/"
-description: "Massimizza l'utilizzo delle risorse con il clustering attivo-attivo SafeKit . Implementa il failover reciproco tra due server utilizzando la replica sincrona in tempo reale e più moduli mirror . Garantisci zero perdita di dati (RPO=0) e ripristino automatico per Windows e Linux senza SAN. Scarica la versione di prova gratuita."
+description: "Massimizza l’utilizzo delle risorse con il clustering attivo-attivo SafeKit. Implementa il failover reciproco tra due server utilizzando la replica sincrona in tempo reale e più moduli mirror. Garantisci zero perdita di dati (RPO = 0) e il ripristino automatico per Windows e Linux senza una SAN. Scarica la versione di prova gratuita."
 category: "architectures"
 lang: "it"
-topics: "Come funziona il cluster attivo-attivo con replica in tempo reale?, 🔍 Esplora SafeKit"
+topics: "Come funziona un cluster attivo-attivo con replica in tempo reale?, 🔍 Esplora SafeKit"
+translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 41 expressions"
 ---
 
 # Software di clustering attivo-attivo con replica in tempo reale e failover reciproco {#active-active-clustering-software-with-real-time-replication--mutual-failover}
@@ -13,34 +14,34 @@ topics: "Come funziona il cluster attivo-attivo con replica in tempo reale?, �
 
 ### Cluster attivo-attivo con replica in tempo reale {#active--active-cluster-with-real-time-replication}
 
-Le applicazioni sono in esecuzione su due server in modalità di failover reciproco. Ciascun server funge da backup dell'altro. Ogni applicazione opera sulle proprie directory di file replicate.
+Due server eseguono applicazioni e si eseguono il backup a vicenda. Questo processo è chiamato failover reciproco: ogni server è il backup dell’altro server. Ogni applicazione utilizza le proprie directory di file replicate.
 
 
-![ SafeKit cluster attivo attivo con replica in tempo reale ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+![Cluster attivo-attivo SafeKit con replica in tempo reale](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-Se in un cluster attivo-attivo un server si guasta, tutte le applicazioni saranno attive sullo stesso server. Dopo il riavvio del server guasto, le applicazioni torneranno a essere eseguite sul loro server primario predefinito.
+Se un server in un cluster attivo-attivo si guasta, tutte le applicazioni vengono eseguite sul server rimanente. Quando il server guasto si riavvia, ogni applicazione ritorna al suo server primario predefinito.
 
 ### Come funziona? {#how-it-works}
 
-Il cluster attivo-attivo SafeKit si configura semplicemente implementando due moduli mirror con replica in tempo reale. Ciascun modulo mirror contiene la propria configurazione di indirizzo IP virtuale, directory replicate in tempo reale e script di riavvio.
+Per configurare un cluster attivo-attivo con SafeKit, è sufficiente distribuire due moduli mirror con replica in tempo reale. Ogni modulo mirror ha la propria configurazione: un indirizzo IP virtuale, directory replicate in tempo reale e script di riavvio.
 
-Notare che:
+Note:
 
-  * le 2 applicazioni Appli1 e Appli2 devono essere installate su ciascun server per il failover dell'applicazione,
-  * questa architettura non si riduce a 2 applicazioni: N moduli applicativi possono essere distribuiti su 2 server con un massimo di 25 moduli,
-  * Ciascun modulo mirror avrà il proprio indirizzo IP virtuale, le proprie directory di file replicate e i propri script di ripristino.
+  * Entrambe le applicazioni (Appli1 e Appli2) devono essere installate su ciascun server per il failover dell’applicazione.
+  * Questa architettura non è limitata a due applicazioni. È possibile distribuire fino a 25 moduli applicativi sugli stessi due server.
+  * Ogni modulo mirror ha il proprio indirizzo IP virtuale, le proprie directory di file replicate e i propri script di ripristino.
 
 
 ### Esempio di cluster attivo-attivo {#example-of-an-active-active-cluster}
 
-](</it/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) [ [ , failover automatico e bilanciamento del carico delle VM è un esempio di cluster attivo-attivo con N moduli mirror che replicano N macchine virtuali tra due server ](</it/solutions/hyper-v-replication-automatic-failover-load-balancing/>) .
+La soluzione 💡 [Hyper-V](</it/solutions/hyper-v-replication-automatic-failover-load-balancing/>) o 💡 [KVM](</it/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) è un esempio di cluster attivo-attivo. Questa soluzione fornisce la replica, il failover automatico e il bilanciamento del carico delle macchine virtuali. In questo cluster, N moduli mirror replicano N macchine virtuali tra due server fisici.
 
-In questa configurazione, un modulo mirror replica un'intera macchina virtuale e la riavvia in caso di errore. 
+In questa configurazione, ogni modulo mirror replica una macchina virtuale completa e la riavvia in caso di errore.
 
-In un modulo di questo tipo non è presente alcun indirizzo IP virtuale, poiché il riavvio di una macchina virtuale su un server comporta automaticamente il failover dell'indirizzo IP fisico della macchina virtuale. 
+Questo tipo di modulo non necessita di un indirizzo IP virtuale. Quando la macchina virtuale si riavvia sull’altro server, il suo indirizzo IP si sposta automaticamente con essa.
 
-In questa architettura, un'applicazione critica viene installata all'interno di una macchina virtuale.
+In questa architettura, l’applicazione critica è installata all’interno di una macchina virtuale.
 
 
 {{%  insert-safekit-hub-it  %}}

@@ -1,39 +1,40 @@
 ---
-title: "برامج تجميع البيانات للمزارع والخوادم المتطابقة: التوافر العالي وموازنة الأحمال"
+title: "برنامج التجميع مع موازنة التحميل والنسخ المتطابق: التوافر العالي وقابلية التوسع"
 canonical: "https://safekit.eviden.com/ar/architectures/clustering-software-load-balancing-mirroring/"
-description: "انشر بنىً متقدمةً من خلال دمج وحدات SafeKit و Farm و Mirror . اجمع بين موازنة أحمال الشبكة لتوسيع نطاق الواجهة الأمامية، والنسخ المتزامن في الوقت الفعلي لحماية بيانات الواجهة الخلفية. نظام تجميع بسيط بدون شبكة تخزين (SAN) لوحدات Windows و Linux دون الحاجة إلى مهارات تقنية معلومات متخصصة. حمّل نسختك التجريبية المجانية."
+description: "قم ببناء بنى متقدمة من خلال الجمع بين وحدات SafeKit farm ووحدات mirror. يوسع موازن تحميل الشبكة الواجهة الأمامية، ويحمي النسخ المتماثل المتزامن في الوقت الفعلي بيانات الواجهة الخلفية. تجميع بسيط بدون شبكة منطقة تخزين (SAN) لأنظمة Windows و Linux، دون الحاجة إلى مهارات تكنولوجيا معلومات متخصصة. قم بتنزيل نسختك التجريبية المجانية."
 category: "architectures"
 lang: "ar"
-topics: "توفر برامج التجميع SafeKit إمكانية عالية للتوافر وقابلية التوسع لتطبيقات الويب وقواعد البيانات الحيوية، 🔍 استكشف SafeKit"
+topics: "التوافر العالي وقابلية التوسع لتطبيقات الويب وقواعد البيانات الهامة باستخدام برنامج SafeKit للتجميع، 🔍 استكشف SafeKit"
+translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 44 expressions"
 ---
 
-# برنامج تجميع البيانات للمزارع والخوادم المتطابقة: توافر عالٍ وموازنة الأحمال {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
+# برنامج التجميع مع موازنة التحميل والنسخ المتطابق: التوافر العالي وقابلية التوسع {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}
 
-## توفر برامج التجميع SafeKit إمكانية عالية للتوافر وقابلية التوسع لتطبيقات الويب وقواعد البيانات الحيوية {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
+## التوافر العالي وقابلية التوسع لتطبيقات الويب وقواعد البيانات الهامة باستخدام برنامج SafeKit للتجميع {#high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software}
 
-### موازنة الأحمال، والنسخ المتطابق، والتحويل التلقائي في حالة الفشل {#load-balancing-mirroring-and-failover}
-
-
-![ SafeKit التجميع مع موازنة الأحمال والنسخ المتطابق ](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
+### موازنة التحميل، والنسخ المتطابق، وتجاوز الفشل {#load-balancing-mirroring-and-failover}
 
 
-### مثال باستخدام برنامج التجميع SafeKit {#example-with-the-safekit-clustering-software}
+![تجميع SafeKit مع موازنة التحميل والنسخ المتطابق](/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png "w:300")
 
-على سبيل المثال، باستخدام برنامج التجميع SafeKit ، يمكنك تنفيذ موازنة التحميل IIS والنسخ المتطابق Microsoft SQL Server .
 
-لذلك، عليك تثبيت وحدة <span class="notranslate farm-term" translate="no">farm</span> لخادم SQL IIS ووحدة mirror لخادم SQL Microsoft . يتم تكوين كل وحدة من وحدات <span class="notranslate farm-term" translate="no">farm</span> و mirror بعنوان IP افتراضي خاص بها ونصوص إعادة تشغيل خاصة بها.
+### مثال باستخدام برنامج SafeKit للتجميع {#example-with-the-safekit-clustering-software}
 
-يمكن نشر كل من وحدتي mirror و <span class="notranslate farm-term" translate="no">farm</span> على مجموعة واحدة من خادمين. ستعمل وحدات IIS و Microsoft SQL Server على هذين الخادمين. أو يمكن نشر الوحدتين على مجموعتين مختلفتين من الخوادم.
+على سبيل المثال، باستخدام برنامج SafeKit للتجميع، يمكنك تطبيق موازنة التحميل لـ IIS والنسخ المتطابق لـ Microsoft SQL Server.
 
-باستخدام برنامج التجميع SafeKit ، لا يوجد فرق بين النشر على نفس الخوادم أو على خوادم مختلفة.
+للقيام بذلك، قم بنشر وحدة <span class="notranslate farm-term" translate="no">farm</span> لـ IIS ووحدة mirror لـ Microsoft SQL Server. يتم تكوين كل وحدة بعنوان IP ظاهري خاص بها ونصوص إعادة التشغيل الخاصة بها.
 
-### حل عالي التوافر وقابل للتوسع {#high-availability-and-scalability-solution}
+يمكن نشر الوحدتين على مجموعة واحدة من خادمين، حيث يعمل كل من IIS وMicrosoft SQL Server. بدلاً من ذلك، يمكن نشر الوحدتين على مجموعتين منفصلتين بخوادم مختلفة.
 
-يوفر برنامج التجميع SafeKit حلاً بسيطاً عالي التوافر وقابلية التوسع لتطبيقات الويب وقواعد البيانات الهامة.
+باستخدام برنامج SafeKit للتجميع، يعمل النشر على نفس الخوادم أو على خوادم مختلفة بنفس الطريقة تمامًا.
 
-ونتيجة لذلك، تتم إدارة موازنة تحميل الشبكة، ونسخ البيانات في الوقت الفعلي، وتجاوز فشل التطبيق بشكل متماسك في منتج واحد.
+### حلول عالية التوافر وقابلة للتوسع {#high-availability-and-scalability-solution}
 
-عند مقارنة برنامج التجميع SafeKit مع التجميع باستخدام الأجهزة، لن تحتاج إلى قرص مشترك، أو شبكة تخزين مكررة، أو موازنات تحميل، أو إصدارات المؤسسات من نظام التشغيل أو قاعدة البيانات.
+يوفر برنامج SafeKit للتجميع حلاً بسيطًا عالي التوافر وقابلًا للتوسع لتطبيقات الويب وقواعد البيانات الهامة.
+
+تتم إدارة موازنة تحميل الشبكة، ونسخ البيانات في الوقت الفعلي، وتجاوز الأعطال في التطبيقات بشكل متسق في منتج واحد.
+
+على عكس تجميع الأجهزة، لا يتطلب برنامج تجميع SafeKit أقراصًا مشتركة أو شبكات SAN مكررة أو موازنات تحميل للأجهزة أو إصدارات مؤسسية من أنظمة التشغيل أو قواعد البيانات.
 
 
 {{%  insert-safekit-hub-ar  %}}

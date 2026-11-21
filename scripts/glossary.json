@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-21.5",
+  "version": "2026-11-21.14",
   "keep": [
     "mirror",
     "farm",
@@ -1533,6 +1533,18 @@
       [
         "((?:<[^>]+>)*[Hh]eartbeat(?:\\s*</[^>]+>)*)\\s*, le basculement et le quorum\\b",
         "\\1, basculement et quorum"
+      ],
+      [
+        "\\bmodule de mise (mirror)\\b",
+        "module \\1"
+      ],
+      [
+        "\\b([Cc]ontrairement) le\\b",
+        "\\1 au"
+      ],
+      [
+        "\\b([Cc]ontrairement) la\\b",
+        "\\1 à la"
       ]
     ],
     "it": [
@@ -1811,6 +1823,14 @@
       [
         "best practice di alta disponibilità ((?:<span[^>]*>)?SafeKit(?:</span>)?)(?=\\s*:)",
         "best practice di alta disponibilità di \\1"
+      ],
+      [
+        "(?m)^Nota che:",
+        "Note:"
+      ],
+      [
+        "\\bElevata disponibilità\\b",
+        "Alta disponibilità"
       ]
     ],
     "es": [
@@ -2173,6 +2193,18 @@
       [
         "(\\*\\*\\s*)Los errores humanos",
         "\\1Errores humanos"
+      ],
+      [
+        "(\\bfarm(?:\\s*</[^>]+>)*) de servidores\\b",
+        "\\1"
+      ],
+      [
+        "\\b(A diferencia) de (clustering|clúster)\\b",
+        "\\1 del \\2"
+      ],
+      [
+        "\\bsoftware de agrupación en clústeres\\b",
+        "software de clúster"
       ]
     ],
     "pt": [
@@ -2595,6 +2627,22 @@
       [
         "Combinando a Alta Disponibilidade ((?:<span[^>]*>)?SafeKit(?:</span>)?) com a Recuperação de Desastres",
         "Combinar a alta disponibilidade do \\1 com a recuperação de desastres"
+      ],
+      [
+        "\\bAgrupamento SafeKit\\b",
+        "Clustering SafeKit"
+      ],
+      [
+        "\\b(Ao contrário) o\\b",
+        "\\1 do"
+      ],
+      [
+        "\\b(Ao contrário) a\\b",
+        "\\1 da"
+      ],
+      [
+        "\\bvs\\. Outras Soluções de Clusterização\\b",
+        "vs. outras soluções de cluster"
       ]
     ],
     "ar": [
@@ -3097,6 +3145,38 @@
       [
         "ميزة التوافر العالي ((?:<span[^>]*>)?SafeKit(?:</span>)?) High Availability\\)\\s*وميزة التعافي من الكوارث \\(Disaster Recovery\\)\\s*",
         "التوافر العالي في \\1 والتعافي من الكوارث "
+      ],
+      [
+        "مجموعة التجميع النشطة-النشطة",
+        "مجموعة نشطة-نشطة"
+      ],
+      [
+        "\\(\\s*((?:<[^>]+>)*Appli1(?:\\s*</[^>]+>)*)\\s+((?:<[^>]+>)*Appli2(?:\\s*</[^>]+>)*)\\s*\\)",
+        "(\\1 و\\2)"
+      ],
+      [
+        "تعود كل تطبيق",
+        "يعود كل تطبيق"
+      ],
+      [
+        "وحدات mirror N\\b",
+        "N من وحدات mirror"
+      ],
+      [
+        "وتحمي النسخ المتماثل",
+        "ويحمي النسخ المتماثل"
+      ],
+      [
+        "وخادم (Microsoft SQL Server)",
+        "و\\1"
+      ],
+      [
+        "(mirror SafeKit) المرآتية",
+        "\\1"
+      ],
+      [
+        "(mirror) متطابق(?=\\s)",
+        "\\1"
       ]
     ],
     "de": [
@@ -3767,6 +3847,42 @@
       [
         "Implementierung & Migration",
         "Implementierung und Migration"
+      ],
+      [
+        "\\bActive-Active-",
+        "Aktiv-Aktiv-"
+      ],
+      [
+        "\\b(einem|einen|eines|im) aktiv-aktiven Cluster",
+        "\\1 Aktiv-Aktiv-Cluster"
+      ],
+      [
+        "\\b(dem|Der|der|den|Das|das) (Aktiv-Aktiv-Cluster(?:ing)?) ((?:<span[^>]*>)?SafeKit(?:</span>)?)",
+        "\\1 \\3-\\2"
+      ],
+      [
+        "(\\]\\([^)]*\\)) (Lösung)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bAktiv-aktiv-",
+        "Aktiv-Aktiv-"
+      ],
+      [
+        "automatisch mitverschiebt",
+        "automatisch mitverschoben"
+      ],
+      [
+        "\\bHohe Verfügbarkeit und Skalierbarkeit\\b",
+        "Hochverfügbarkeit und Skalierbarkeit"
+      ],
+      [
+        "\\bSafeKit [Ff]arm und [Mm]irror-Modul",
+        "SafeKit-Farm- und -Mirror-Modul"
+      ],
+      [
+        "\\b(eines (?:[A-Za-z]+-)+Cluster)(?![\\w-])",
+        "\\1s"
       ]
     ],
     "ko": [
@@ -4717,6 +4833,58 @@
       [
         "\\*\\*(소프트웨어 오류)가 발생하면\\*\\*",
         "**\\1**가 발생하면"
+      ],
+      [
+        "(이 아키텍처) (?=\\d|N)",
+        "\\1는 "
+      ],
+      [
+        "SafeKit은 (액티브-액티브 클러스터링으로)",
+        "SafeKit \\1"
+      ],
+      [
+        "(이 아키텍처) (?=두|세|여러)",
+        "\\1는 "
+      ],
+      [
+        " 서버 로 ",
+        " 서버로 "
+      ],
+      [
+        "SafeKit은 (?=(?:<[^>]+>)*(?:[Ff]arm|[Mm]irror)(?![A-Za-z]))",
+        "SafeKit "
+      ],
+      [
+        "\\b([Mm]irror(?:\\s*</[^>]+>)*)과\\b",
+        "\\1와"
+      ],
+      [
+        "\\b(SQL Server(?:\\s*</[^>]+>)*)이 ",
+        "\\1가 "
+      ],
+      [
+        "부하 분산 과 ",
+        "부하 분산과 "
+      ],
+      [
+        "네트워크 부하 분산 (?=프런트)",
+        "네트워크 부하 분산은 "
+      ],
+      [
+        "SafeKit은 (?=클러스터링)",
+        "SafeKit "
+      ],
+      [
+        "(SafeKit mirror 클러스터) (?=[^、,<]*어떻게)",
+        "\\1가 "
+      ],
+      [
+        "(클러스터(?:\\s*</[^>]+>)*)\\s*(?:를 )?(?=작동하는|동작하는)",
+        "\\1가 "
+      ],
+      [
+        "(클러스터(?:\\s*</[^>]+>)*)\\s*를 구성(?=\\s*[,\\\"<]|\\s*$)",
+        "\\1 구성"
       ]
     ],
     "ja": [
@@ -5479,6 +5647,42 @@
       [
         "ネットワーク負荷分散代替手段",
         "ネットワーク負荷分散の代替手段"
+      ],
+      [
+        "アクティブ(?:・|/|-|－| )?アクティブ",
+        "アクティブ/アクティブ"
+      ],
+      [
+        "(このアーキテクチャ) ?(?=\\d|[0-9０-９]|N)",
+        "\\1は "
+      ],
+      [
+        "リカバリストリプト",
+        "リカバリスクリプト"
+      ],
+      [
+        "アクティブ/アクティブ・(?=クラスタ)",
+        "アクティブ/アクティブ"
+      ],
+      [
+        "SafeKit は(?=クラスタリング)",
+        "SafeKit "
+      ],
+      [
+        "([A-Za-z0-9]) 両方が",
+        "\\1 の両方が"
+      ],
+      [
+        "(mirror クラスター(?:\\s*</[^>]+>)*)\\s*(?=(?:(?!<br)[^、。])*どのように)",
+        "\\1は"
+      ],
+      [
+        "(mirror クラスター(?:\\s*</[^>]+>)*)\\s*(?=(?:(?!<br)[^、。])*仕組み)",
+        "\\1が"
+      ],
+      [
+        "クラスターは(?=どのように[^、。？]*実装)",
+        "クラスターを"
       ]
     ],
     "zh-hans": [
@@ -5793,6 +5997,26 @@
       [
         "负载平衡",
         "负载均衡"
+      ],
+      [
+        "主动-主动集群",
+        "双活集群"
+      ],
+      [
+        "同一两台服务器",
+        "同样的两台服务器"
+      ],
+      [
+        "(Windows 和 Linux) 简单",
+        "\\1 的简单"
+      ],
+      [
+        "(Windows 或 Linux) SafeKit 与",
+        "\\1 的 SafeKit 与"
+      ],
+      [
+        "没有 SAN 情况下",
+        "没有 SAN 的情况下"
       ]
     ],
     "nl": [
@@ -6299,6 +6523,30 @@
       [
         "(?:<span[^>]*>)?SafeKit(?:</span>)? High Availability combineren met Disaster Recovery",
         "Hoge beschikbaarheid van SafeKit combineren met noodherstel"
+      ],
+      [
+        "\\b([Aa])ctive-[Aa]ctive(?=[- ]?cluster)",
+        "\\1ctief-actief"
+      ],
+      [
+        "een eigen gerepliceerde bestandsmap en een eigen herstelscripts",
+        "eigen gerepliceerde bestandsmappen en eigen herstelscripts"
+      ],
+      [
+        "(\\]\\([^)]*\\)) (oplossing)\\b",
+        "\\1-\\2"
+      ],
+      [
+        "\\bSafeKit[ -]clusterings?software\\b",
+        "SafeKit-clusteringsoftware"
+      ],
+      [
+        "\\bclusteringssoftware\\b",
+        "clusteringsoftware"
+      ],
+      [
+        "\\b(SafeKit [Ff]arm) en (mirror-module)",
+        "\\1- en \\2"
       ]
     ],
     "pt-br": [
@@ -6413,6 +6661,22 @@
       [
         "Teste Grátis e Documentação Técnica SafeKit HA",
         "Teste grátis e documentação técnica do SafeKit HA"
+      ],
+      [
+        "\\bsoftware de clusterização\\b",
+        "software de cluster"
+      ],
+      [
+        "\\bsoftware de clustering SafeKit\\b",
+        "software de cluster SafeKit"
+      ],
+      [
+        "\\bSoftware de Agrupamento\\b",
+        "Software de Cluster"
+      ],
+      [
+        "\\b(cluster mirror) alta disponibilidade\\b",
+        "\\1 de alta disponibilidade"
       ]
     ],
     "pt-pt": [
@@ -6491,6 +6755,18 @@
       [
         "SafeKit HA: Versão de Avaliação Gratuita e Documentação Técnica",
         "SafeKit HA: versão de avaliação gratuita e documentação técnica"
+      ],
+      [
+        "failover mútua\\b",
+        "failover mútuo"
+      ],
+      [
+        "\\bIsto é chamado de\\b",
+        "Isto chama-se"
+      ],
+      [
+        "\\bSoftware de Agrupamento\\b",
+        "Software de Clustering"
       ]
     ]
   },
@@ -6519,6 +6795,21 @@
       "pt-br": "Brazil",
       "pt-pt": "Portugal",
       "zh-hans": "China"
+    }
+  },
+  "shortcode_values": {
+    "Windows or Linux": {
+      "ar": "Windows أو Linux",
+      "de": "Windows oder Linux",
+      "es": "Windows o Linux",
+      "fr": "Windows ou Linux",
+      "it": "Windows o Linux",
+      "ja": "Windows または Linux",
+      "ko": "Windows 또는 Linux",
+      "nl": "Windows of Linux",
+      "pt-br": "Windows ou Linux",
+      "pt-pt": "Windows ou Linux",
+      "zh-hans": "Windows 或 Linux"
     }
   }
 }

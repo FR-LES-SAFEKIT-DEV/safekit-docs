@@ -1,46 +1,47 @@
 ---
 title: "Logiciel de clustering actif-actif avec réplication en temps réel et basculement mutuel"
 canonical: "https://safekit.eviden.com/fr/architectures/active-active-cluster-real-time-replication/"
-description: "Optimisez l'utilisation de vos ressources grâce au clustering actif-actif de SafeKit. Déployez un basculement mutuel entre deux serveurs grâce à la réplication synchrone en temps réel et à plusieurs modules miroirs. Garantissez l'absence de perte de données (RPO=0) et une restauration automatique pour Windows et Linux, même sans SAN. Téléchargez la version d'essai gratuite."
+description: "Optimisez l’utilisation des ressources avec le clustering actif-actif SafeKit. Déployez le basculement mutuel entre deux serveurs à l’aide de la réplication synchrone en temps réel et de plusieurs modules mirror. Assurez l’absence de perte de données (RPO = 0) et la récupération automatique pour Windows et Linux sans SAN. Téléchargez la version d’essai gratuite."
 category: "architectures"
 lang: "fr"
-topics: "Comment fonctionne le cluster actif actif avec réplication en temps réel ?, 🔍 Explorez SafeKit"
+topics: "Comment fonctionne un cluster actif-actif avec réplication en temps réel ?, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 59 expressions"
 ---
 
 # Logiciel de clustering actif-actif avec réplication en temps réel et basculement mutuel {#active-active-clustering-software-with-real-time-replication--mutual-failover}
 
-## Comment fonctionne le cluster actif actif avec réplication en temps réel ? {#how-the-active-active-cluster-with-real-time-replication-works}
+## Comment fonctionne un cluster actif-actif avec réplication en temps réel ? {#how-the-active-active-cluster-with-real-time-replication-works}
 
 ### Cluster actif-actif avec réplication en temps réel {#active--active-cluster-with-real-time-replication}
 
-Les applications s'exécutent sur deux serveurs en basculement mutuel. Chaque serveur est le backup de l'autre serveur. Et chaque application fonctionne sur ses propres répertoires de fichiers répliqués.
+Deux serveurs exécutent des applications et se sauvegardent mutuellement. C’est ce qu’on appelle le basculement mutuel : chaque serveur est la sauvegarde de l’autre serveur. Chaque application utilise ses propres répertoires de fichiers répliqués.
 
 
-![Cluster actif actif SafeKit avec réplication en temps réel](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+![Cluster actif-actif SafeKit avec réplication en temps réel](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
 
 
-Si un serveur tombe en panne dans un cluster actif actif, toutes les applications seront actives sur le même serveur. Après le redémarrage du serveur défaillant, les applications recommenceront à s'exécuter sur leur serveur principal par défaut.
+Si un serveur tombe en panne dans un cluster actif-actif, toutes les applications s’exécutent sur le serveur restant. Lorsque le serveur défaillant redémarre, chaque application retourne à son serveur principal par défaut.
 
 ### Comment ça marche ? {#how-it-works}
 
-Le cluster actif actif de SafeKit est simplement configuré en déployant deux modules miroirs avec réplication en temps réel. Chaque module miroir contient sa propre configuration d'adresse IP virtuelle, de répertoires répliqués en temps réel et de scripts de redémarrage.
+Pour configurer un cluster actif-actif avec SafeKit, il suffit de déployer deux modules mirror avec réplication en temps réel. Chaque module mirror a sa propre configuration : une adresse IP virtuelle, des répertoires répliqués en temps réel et des scripts de redémarrage.
 
-Noter que:
+Remarques :
 
-  * les 2 applications Appli1 et Appli2 doivent être installées sur chaque serveur pour le basculement applicatif,
-  * cette architecture n'est pas réduite à 2 applications : N modules applicatifs peuvent être déployés sur 2 serveurs avec un maximum de 25 modules,
-  * chaque module miroir aura sa propre adresse IP virtuelle, ses propres répertoires de fichiers répliqués et ses propres scripts de reprise.
+  * Les deux applications (Appli1 et Appli2) doivent être installées sur chaque serveur pour le basculement d’application.
+  * Cette architecture ne se limite pas à deux applications. Vous pouvez déployer jusqu’à 25 modules d’application sur les deux mêmes serveurs.
+  * Chaque module mirror possède sa propre adresse IP virtuelle, ses propres répertoires de fichiers répliqués et ses propres scripts de récupération.
 
 
-### Exemple de cluster actif actif {#example-of-an-active-active-cluster}
+### Exemple de cluster actif-actif {#example-of-an-active-active-cluster}
 
-Les solutions 💡 [Hyper-V](</fr/solutions/hyper-v-replication-automatic-failover-load-balancing/>) ou 💡 [KVM](</fr/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) avec réplication, basculement automatique et équilibrage de charge des VMs est un exemple de cluster actif-actif avec N modules miroirs répliquant N machines virtuelles entre deux serveurs physiques.
+La solution 💡 [Hyper-V](</fr/solutions/hyper-v-replication-automatic-failover-load-balancing/>) ou 💡 [KVM](</fr/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) est un exemple de cluster actif-actif. Cette solution fournit la réplication, le basculement automatique et l’équilibrage de charge des machines virtuelles. Dans ce cluster, N modules mirror répliquent N machines virtuelles entre deux serveurs physiques.
 
-Dans cette configuration, un module miroir réplique une machine virtuelle complète et redémarre la machine virtuelle en cas de panne.
+Dans cette configuration, chaque module mirror réplique une machine virtuelle complète et la redémarre en cas de défaillance.
 
-Il n'y a pas d'adresse IP virtuelle dans un tel module car le redémarrage d'une VM sur un serveur provoque automatiquement le basculement de l'adresse IP physique de la VM. 
+Ce type de module n’a pas besoin d’une adresse IP virtuelle. Lorsque la machine virtuelle redémarre sur l’autre serveur, sa propre adresse IP se déplace automatiquement avec elle.
 
-Et une application critique est installée à l'intérieur d'une VM dans cette architecture.
+Dans cette architecture, l’application critique est installée à l’intérieur d’une machine virtuelle.
 
 
 {{%  insert-safekit-hub-fr  %}}

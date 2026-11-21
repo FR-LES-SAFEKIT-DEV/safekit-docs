@@ -1,46 +1,47 @@
 ---
-title: "Actieve-actieve clusteringsoftware met realtime replicatie en wederzijdse failover."
+title: "Actief-actief clusteringsoftware met real-time replicatie en wederzijdse failover"
 canonical: "https://safekit.eviden.com/nl/architectures/active-active-cluster-real-time-replication/"
-description: "Maximaliseer het gebruik van resources met SafeKit actieve-actieve clustering. Implementeer wederzijdse failover tussen twee servers met behulp van realtime synchrone replicatie en meerdere mirror -modules. Garandeer nul dataverlies (RPO=0) en automatisch herstel voor Windows en Linux zonder SAN. Download de gratis proefversie."
+description: "Maximaliseer het gebruik van uw middelen met SafeKit actief-actief clustering. Implementeer wederzijdse failover tussen twee servers met behulp van synchrone realtime-replicatie en meerdere mirror-modules. Zorg voor nul gegevensverlies (RPO = 0) en automatisch herstel voor Windows en Linux zonder SAN. Download de gratis proefversie."
 category: "architectures"
 lang: "nl"
-topics: "Hoe werkt een actief-actief cluster met realtime replicatie? 🔍 Ontdek SafeKit"
+topics: "Hoe werkt een actief-actief cluster met realtime replicatie?, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 52 expressions"
 ---
 
-# Actieve-actieve clusteringsoftware met realtime replicatie en wederzijdse failover {#active-active-clustering-software-with-real-time-replication--mutual-failover}
+# Actief-actief clusteringsoftware met real-time replicatie en wederzijdse failover {#active-active-clustering-software-with-real-time-replication--mutual-failover}
 
 ## Hoe werkt een actief-actief cluster met realtime replicatie? {#how-the-active-active-cluster-with-real-time-replication-works}
 
-### Actief-actief cluster met realtime replicatie {#active--active-cluster-with-real-time-replication}
+### Actief-actief-cluster met realtime-replicatie {#active--active-cluster-with-real-time-replication}
 
-De applicaties draaien op twee servers in een failover-configuratie. Elke server dient als back-up voor de andere server. Bovendien werkt elke applicatie met zijn eigen, gerepliceerde bestandsmappen.
-
-
-![ SafeKit actief actief cluster met realtime replicatie ](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+Twee servers voeren applicaties uit en fungeren als back-up voor elkaar. Dit wordt wederzijdse failover genoemd: elke server is de back-up van de andere server. Elke applicatie gebruikt zijn eigen gerepliceerde bestandsmappen.
 
 
-Als één server in een actief-actief cluster uitvalt, blijven alle applicaties op dezelfde server actief. Na het herstarten van de uitgevallen server zullen de applicaties weer op hun standaard primaire server draaien.
+![SafeKit actief-actiefcluster met realtime replicatie](/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png "w:300")
+
+
+Als één server uitvalt in een actief-actief cluster, worden alle toepassingen uitgevoerd op de resterende server. Wanneer de uitgevallen server opnieuw wordt opgestart, keert elke toepassing terug naar de standaard primaire server.
 
 ### Hoe werkt het? {#how-it-works}
 
-Het SafeKit actieve-actieve cluster wordt eenvoudig geconfigureerd door twee mirror -modules met realtime replicatie te implementeren. Elke mirror module bevat zijn eigen configuratie van virtueel IP-adres, realtime gerepliceerde mappen en herstartscripts.
+Om een actief-actief cluster met SafeKit te configureren, implementeert u eenvoudigweg twee mirror-modules met realtime replicatie. Elke mirror-module heeft zijn eigen configuratie: een virtueel IP-adres, realtime gerepliceerde mappen en herstartscripts.
 
-Let op:
+Opmerkingen:
 
-  * Voor applicatiefailover moeten de twee applicaties Appli1 en Appli2 op elke server geïnstalleerd zijn.
-  * Deze architectuur is niet beperkt tot 2 applicaties: er kunnen N applicatiemodules worden geïmplementeerd op 2 servers met een maximum van 25 modules.
-  * Elke mirror module krijgt een eigen virtueel IP-adres, eigen gerepliceerde bestandsmappen en eigen herstelscripts.
+  * Beide applicaties (Appli1 en Appli2) moeten op elke server worden geïnstalleerd voor applicatie-failover.
+  * Deze architectuur is niet beperkt tot twee toepassingen. U kunt tot 25 applicatiemodules op dezelfde twee servers implementeren.
+  * Elke mirror-module heeft een eigen virtueel IP-adres, eigen gerepliceerde bestandsmappen en eigen herstelscripts.
 
 
-### Voorbeeld van een actief actieve cluster {#example-of-an-active-active-cluster}
+### Voorbeeld van een actief-actief cluster {#example-of-an-active-active-cluster}
 
-De 💡 [ Hyper-V ](</nl/solutions/hyper-v-replication-automatic-failover-load-balancing/>) of 💡 [ KVM ](</nl/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>) oplossing met replicatie, automatische failover en load balancing van VM's is een voorbeeld van een actief-actief cluster met N mirror modules die N virtuele machines repliceren tussen twee fysieke servers.
+De 💡 [Hyper-V](</nl/solutions/hyper-v-replication-automatic-failover-load-balancing/>) of 💡 [KVM](</nl/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/>)-oplossing is een voorbeeld van een actief-actief cluster. Deze oplossing biedt replicatie, automatische failover en load balancing van virtuele machines. In dit cluster repliceren N mirror-modules N virtuele machines tussen twee fysieke servers.
 
-In deze configuratie repliceert een mirror -module een volledige virtuele machine en herstart de virtuele machine in geval van een storing. 
+In deze configuratie repliceert elke mirror-module een volledige virtuele machine en start deze opnieuw op als er een storing optreedt.
 
-Een dergelijke module heeft geen virtueel IP-adres, omdat het herstarten van een VM op een server automatisch zorgt voor de failover van het fysieke IP-adres van de VM. 
+Dit type module heeft geen virtueel IP-adres nodig. Wanneer de virtuele machine opnieuw wordt opgestart op de andere server, wordt het eigen IP-adres automatisch mee verplaatst.
 
-En in deze architectuur is een cruciale applicatie geïnstalleerd in een virtuele machine.
+In deze architectuur wordt de bedrijfskritische toepassing binnen een virtuele machine geïnstalleerd.
 
 
 {{%  insert-safekit-hub-nl  %}}
