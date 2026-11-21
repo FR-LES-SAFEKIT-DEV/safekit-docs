@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-21.2",
+  "version": "2026-11-21.5",
   "keep": [
     "mirror",
     "farm",
@@ -1513,6 +1513,26 @@
       [
         "(\\*\\*\\s*)Les erreurs humaines",
         "\\1Erreurs humaines"
+      ],
+      [
+        "\\bHaute HA de VM\\b",
+        "HA de VM"
+      ],
+      [
+        "\\bGrappe HA\\b",
+        "Cluster HA"
+      ],
+      [
+        "Guide complet sur le clustering, la réplication et la redondance",
+        "Guide complet sur le clustering haute disponibilité, la réplication et la redondance"
+      ],
+      [
+        "\\bQue sont (RPO|(?:<span[^>]*>)RPO(?:</span>)?) et (RTO|(?:<span[^>]*>)RTO(?:</span>)?) \\?",
+        "Que sont le \\1 et le \\2 ?"
+      ],
+      [
+        "((?:<[^>]+>)*[Hh]eartbeat(?:\\s*</[^>]+>)*)\\s*, le basculement et le quorum\\b",
+        "\\1, basculement et quorum"
       ]
     ],
     "it": [
@@ -1787,6 +1807,10 @@
       [
         "Limitazioni SafeKit High Availability",
         "Limiti dell’alta disponibilità SafeKit"
+      ],
+      [
+        "best practice di alta disponibilità ((?:<span[^>]*>)?SafeKit(?:</span>)?)(?=\\s*:)",
+        "best practice di alta disponibilità di \\1"
       ]
     ],
     "es": [
@@ -2563,6 +2587,14 @@
       [
         "Biblioteca de Módulos de Aplicação SafeKit: Soluções de Alta Disponibilidade Prontas a Usar",
         "Biblioteca de módulos de aplicação SafeKit: soluções de alta disponibilidade prontas a usar"
+      ],
+      [
+        "melhores práticas de alta disponibilidade ((?:<span[^>]*>)?SafeKit(?:</span>)?)(?=\\s*:)",
+        "melhores práticas de alta disponibilidade do \\1"
+      ],
+      [
+        "Combinando a Alta Disponibilidade ((?:<span[^>]*>)?SafeKit(?:</span>)?) com a Recuperação de Desastres",
+        "Combinar a alta disponibilidade do \\1 com a recuperação de desastres"
       ]
     ],
     "ar": [
@@ -3057,6 +3089,14 @@
       [
         "و(موازنة) (\\*\\*\\s*)(?:التحميل|الأحمال)(\\s*\\*\\*)",
         "\\2و\\1 الأحمال\\3"
+      ],
+      [
+        "أنماط البنية العالي",
+        "أنماط بنية التوافر العالي"
+      ],
+      [
+        "ميزة التوافر العالي ((?:<span[^>]*>)?SafeKit(?:</span>)?) High Availability\\)\\s*وميزة التعافي من الكوارث \\(Disaster Recovery\\)\\s*",
+        "التوافر العالي في \\1 والتعافي من الكوارث "
       ]
     ],
     "de": [
@@ -3707,6 +3747,26 @@
       [
         "SafeKit HA kostenlose Testversion",
         "Kostenlose Testversion von SafeKit HA"
+      ],
+      [
+        "Best Practices für Hochverfügbarkeit ((?:<span[^>]*>)?SafeKit(?:</span>)?)(?=\\s*:)",
+        "\\1-Best-Practices für Hochverfügbarkeit"
+      ],
+      [
+        "\\bVIP (Failover)\\b",
+        "VIP-\\1"
+      ],
+      [
+        "für das Lastausgleichsverfahren",
+        "für den Lastausgleich"
+      ],
+      [
+        "Speicher & Infrastruktur",
+        "Speicher und Infrastruktur"
+      ],
+      [
+        "Implementierung & Migration",
+        "Implementierung und Migration"
       ]
     ],
     "ko": [
@@ -5411,6 +5471,14 @@
       [
         "リアルタイム(\\s*\\*\\*\\s*)の",
         "\\1リアルタイムの"
+      ],
+      [
+        "RPO/RTO は、(Windows)",
+        "RPO/RTO、\\1"
+      ],
+      [
+        "ネットワーク負荷分散代替手段",
+        "ネットワーク負荷分散の代替手段"
       ]
     ],
     "zh-hans": [
@@ -6211,6 +6279,26 @@
       [
         "\\b(Windows|Linux) (omgeving\\w*)",
         "\\1-\\2"
+      ],
+      [
+        "best practices voor hoge beschikbaarheid ((?:<span[^>]*>)?SafeKit(?:</span>)?)(?=\\s*:)",
+        "best practices voor hoge beschikbaarheid van \\1"
+      ],
+      [
+        "\\bVIP (failover)\\b",
+        "VIP-\\1"
+      ],
+      [
+        "Implementatie & Migratie",
+        "Implementatie en migratie"
+      ],
+      [
+        "\\bhigh-availabilitycluster",
+        "cluster met hoge beschikbaarheid"
+      ],
+      [
+        "(?:<span[^>]*>)?SafeKit(?:</span>)? High Availability combineren met Disaster Recovery",
+        "Hoge beschikbaarheid van SafeKit combineren met noodherstel"
       ]
     ],
     "pt-br": [

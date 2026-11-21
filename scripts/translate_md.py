@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-20.9"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-21.1"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -644,8 +644,10 @@ def decode(text, ctx):
     # puce collée au texte ("•应用级 HA") ou remplacée par le point médian japonais ("<br> ・高可用性")
     text = re.sub(r"(^|\s)・(?=\S)", r"\1• ", text)
     text = re.sub(r"•(?=[^\s•])", "• ", text)
-    if not CJK:   # puce en minuscule après une expression imposée ("• clustering matériel complexe") -> majuscule
-        text = re.sub(r"(•\s+)([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), text)
+    # point d'interrogation/exclamation espagnol sorti du lien : "• ¿ [Qué son…]" -> "• [¿Qué son…]"
+    text = re.sub(r"([¿¡])\s*\[", r"[\1", text)
+    if not CJK:   # puce en minuscule après une expression imposée ("• clustering matériel complexe", "• [heartbeat, …](…)") -> majuscule
+        text = re.sub(r"(•\s+\[?[¿¡]?)([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), text)
     # parenthèse ouvrante perdue autour d'un sigle protégé dans un texte de lien : "[복구 시간 목표 RTO) 약 1분]" -> "[복구 시간 목표(RTO) 약 1분]"
     text = re.sub(r"(\[[^\]()]*?)\s+([A-Z][A-Z0-9/]{1,})\)(?=[^\]()]*\])", lambda m: m.group(1) + ("" if re.search(f"[\uac00-\ud7a3{CJK_CHAR}]$", m.group(1)) else " ") + "(" + m.group(2) + ")", text)
     # espaces parasites entre guillemets droits/chinois/allemands et `code` ou **gras** : '" `stop` "' -> '"`stop`"' (pas « » en français)
