@@ -1,37 +1,36 @@
 ---
-title: "SafeKit: Software de Alta Disponibilidade SANless Tudo-em-Um e Clustering de Aplicações"
+title: "SafeKit: Software tudo-em-um para alta disponibilidade e agrupamento de aplicações sem SAN"
 canonical: "https://safekit.eviden.com/pt-pt/product/"
-description: "SafeKit é o software de HA SANless tudo-em-um para Windows e Linux. Obtenha replicação síncrona em tempo real, failover automático e balanceamento de carga num pacote único, simples e económico. Comece o seu teste gratuito de 30 dias."
+description: "SafeKit é o software de alta disponibilidade (HA) tudo-em-um sem SAN para Windows e Linux. Obtenha replicação síncrona em tempo real, failover automático e balanceamento de carga num pacote simples e económico. Inicie o seu teste gratuito de 30 dias."
 category: "product"
 lang: "pt-pt"
-topics: "O que é o SafeKit?, 🔍 Explore o SafeKit, Porquê Escolher o SafeKit para uma Alta Disponibilidade Simples e Económica?, Porque é Essencial um Produto de Alta Disponibilidade SANless Tudo-em-Um?, Escolher a sua estratégia de Alta Disponibilidade: HA de VM vs. HA de Aplicação, Limitações de Alta Disponibilidade do SafeKit, Biblioteca de vídeos SafeKit, Comparação do SafeKit com Clusters de Alta Disponibilidade (HA) Tradicionais, Teste Gratuito do SafeKit HA & Documentação Técnica, Biblioteca de Módulos de Aplicação SafeKit: Soluções HA Prontas a Utilizar"
+topics: "O que é SafeKit?, 🔍 Explore SafeKit, Porquê escolher SafeKit para uma alta disponibilidade simples e económica?, Porque é que um produto de alta disponibilidade SANless tudo-em-um é essencial?, Escolher a sua estratégia de alta disponibilidade: HA de VM vs. HA de aplicação, Limitações de alta disponibilidade do SafeKit, Videoteca SafeKit, Comparação do SafeKit com os clusters tradicionais de alta disponibilidade (HA), SafeKit HA: versão de avaliação gratuita e documentação técnica, Biblioteca de módulos de aplicação SafeKit: soluções de alta disponibilidade prontas a usar"
+translation: "translate_md 2026-11-20.9 | glossaire 2026-11-21.2 | Translation LLM | 52 expressions"
 ---
 
-# SafeKit: Software de Alta Disponibilidade SANless Tudo-em-Um e Clustering de Aplicações {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
+# SafeKit: Software tudo-em-um para alta disponibilidade e agrupamento de aplicações sem SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
 
-## O que é o SafeKit? {#what-is-safekit}
+## O que é SafeKit? {#what-is-safekit}
 
-O **SafeKit** é **software de alta disponibilidade tudo-em-um**. Combina **replicação baseada no anfitrião** em tempo real, **failover** automático e **balanceamento de carga** num único pacote, para que a aplicação seja reiniciada num segundo servidor em cerca de um minuto, sem perda de dados.
+**SafeKit** é **um software de alta disponibilidade tudo-em-um**. Combina **replicação em tempo real baseada no anfitrião**, **failover automático** e **balanceamento de carga** num único pacote, para que a sua aplicação reinicie num segundo servidor em cerca de um minuto, sem perda de dados.
 
-Ao sincronizar dados entre servidores padrão, o **SafeKit** elimina a necessidade de armazenamento partilhado (SAN) dispendioso ou competências de TI especializadas, proporcionando uma forma simples e económica de proteger **bases de dados empresariais** (como SQL Server), **sistemas de segurança críticos** (como o software de gestão de vídeo Milestone XProtect) e **software de controlo industrial SCADA** (como aplicações Siemens) em ambientes Windows e Linux.
-
-
-O SafeKit protege as suas aplicações contra:
-
-* **falhas de hardware**, incluindo a falha completa de uma sala de informática
-* **falhas de software**, como a falha ou o bloqueio de processos críticos, detectados e reiniciados automaticamente
-* **erros humanos**, reduzidos através de uma configuração simples e de uma única consola Web
-
-![Logótipo oficial do Evidian SafeKit - Software de alta disponibilidade (HA) e clustering de aplicações sem SAN (SANless)](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png "w:128")
+Ao sincronizar dados entre servidores padrão, **SafeKit** elimina a necessidade de armazenamento partilhado dispendioso (SAN) ou de competências de TI especializadas, proporcionando uma forma simples e económica de proteger **bases de dados empresariais** (como SQL Server), **sistemas de segurança críticos** (como o software de gestão de vídeo Milestone XProtect) e **software de controlo industrial SCADA** (como aplicações Siemens) em ambientes Windows e Linux.
 
 
+SafeKit protege as suas aplicações contra:
+
+* **Falhas de hardware**, incluindo a falha completa de uma sala de computadores
+* **Falhas de software**, como a paragem ou o bloqueio de um processo crítico. SafeKit deteta a falha e reinicia o processo automaticamente
+* **Erros humanos**, que são reduzidos por uma configuração simples e uma única consola web
+
+![Logótipo oficial Evidian SafeKit – Ícone do software de alta disponibilidade e agrupamento de aplicações SANless](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png "w:128")
 
 {{%  insert-safekit-4-buttons-pt-pt  %}}
 
 {{%  insert-safekit-sanless-pt-pt  %}}
 
 {{%  insert-vm-vs-app-ha-pt-pt  %}}
-
+ 
 {{%  insert-safekit-usage-pt-pt  %}}
 
 {{%  insert-safekit-videos-table-pt-pt  %}}

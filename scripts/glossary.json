@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-20.24",
+  "version": "2026-11-21.2",
   "keep": [
     "mirror",
     "farm",
@@ -1509,6 +1509,10 @@
       [
         "distinct en arrière-plan",
         "distinct en back-end"
+      ],
+      [
+        "(\\*\\*\\s*)Les erreurs humaines",
+        "\\1Erreurs humaines"
       ]
     ],
     "it": [
@@ -1779,6 +1783,10 @@
       [
         "RPO di destinazione",
         "RPO target"
+      ],
+      [
+        "Limitazioni SafeKit High Availability",
+        "Limiti dell’alta disponibilità SafeKit"
       ]
     ],
     "es": [
@@ -2125,6 +2133,22 @@
       [
         "tiempo de heartbeat(\\s*\\*)",
         "tiempo de espera del heartbeat\\1"
+      ],
+      [
+        "🔍 Explora SafeKit",
+        "🔍 Explore SafeKit"
+      ],
+      [
+        "(alta disponibilidad|documentación técnica) SafeKit\\b",
+        "\\1 de SafeKit"
+      ],
+      [
+        "Averías del hardware",
+        "Averías de hardware"
+      ],
+      [
+        "(\\*\\*\\s*)Los errores humanos",
+        "\\1Errores humanos"
       ]
     ],
     "pt": [
@@ -2527,6 +2551,18 @@
       [
         "tempo limite heartbeat",
         "tempo limite do heartbeat"
+      ],
+      [
+        "Comparação do SafeKit com os Clusters Tradicionais de Alta Disponibilidade",
+        "Comparação do SafeKit com os clusters tradicionais de alta disponibilidade"
+      ],
+      [
+        "Biblioteca de Módulos de Aplicação SafeKit: Soluções de Alta Disponibilidade Prontas para Uso",
+        "Biblioteca de módulos de aplicação SafeKit: soluções de alta disponibilidade prontas para uso"
+      ],
+      [
+        "Biblioteca de Módulos de Aplicação SafeKit: Soluções de Alta Disponibilidade Prontas a Usar",
+        "Biblioteca de módulos de aplicação SafeKit: soluções de alta disponibilidade prontas a usar"
       ]
     ],
     "ar": [
@@ -3009,6 +3045,18 @@
       [
         "وقت استعادة قريب من الصفر RTO ووقت RPO صفرًا",
         "RTO قريبًا من الصفر و RPO صفريًا"
+      ],
+      [
+        "قيود التوافر العالي SafeKit",
+        "قيود التوافر العالي في SafeKit"
+      ],
+      [
+        "النسخة التجريبية المجانية SafeKit HA",
+        "النسخة التجريبية المجانية من SafeKit HA"
+      ],
+      [
+        "و(موازنة) (\\*\\*\\s*)(?:التحميل|الأحمال)(\\s*\\*\\*)",
+        "\\2و\\1 الأحمال\\3"
       ]
     ],
     "de": [
@@ -3623,6 +3671,42 @@
       [
         "einer nahezu null RTO",
         "eines RTO nahe null"
+      ],
+      [
+        "\\bteure Shared Storage\\b",
+        "teuren Shared Storage"
+      ],
+      [
+        "\\bSCADA Industrie",
+        "SCADA-Industrie"
+      ],
+      [
+        "\\b(Windows|Linux) (Umgebung\\w*)",
+        "\\1-\\2"
+      ],
+      [
+        "\\bHardwareausfälle(\\s*\\*\\*\\s*,\\s*einschließlich)",
+        "Hardwareausfällen\\1"
+      ],
+      [
+        "\\bSoftwarefehler(\\s*\\*\\*\\s*,\\s*(?:einschließlich|wie))",
+        "Softwarefehlern\\1"
+      ],
+      [
+        "\\bMenschliche Fehler(\\s*\\*\\*\\s*,)",
+        "Menschlichen Fehlern\\1"
+      ],
+      [
+        "Einschränkungen SafeKit-Hochverfügbarkeit",
+        "Einschränkungen der SafeKit-Hochverfügbarkeit"
+      ],
+      [
+        "SafeKit-Application Module Library",
+        "SafeKit-Bibliothek der Anwendungsmodule"
+      ],
+      [
+        "SafeKit HA kostenlose Testversion",
+        "Kostenlose Testversion von SafeKit HA"
       ]
     ],
     "ko": [
@@ -4557,6 +4641,22 @@
       [
         "복구 목표 시간",
         "복구 시간 목표"
+      ],
+      [
+        "SafeKit\\s*은\\s*이란",
+        "SafeKit이란"
+      ],
+      [
+        "(?m)^(\\s*\\*\\*\\s*(?:<span[^>]*>)?SafeKit(?:</span>)?\\s*\\*\\*) (?=[가-힣])(?!(?:은|는|이|가|의|을|를|에|로|과|와)[\\s,])",
+        "\\1은 "
+      ],
+      [
+        "(?m)(^|[.!?]\\s+)SafeKit (?=다음과 같은)",
+        "\\1SafeKit은 "
+      ],
+      [
+        "\\*\\*(소프트웨어 오류)가 발생하면\\*\\*",
+        "**\\1**가 발생하면"
       ]
     ],
     "ja": [
@@ -5303,6 +5403,14 @@
       [
         "RTO どのように",
         "RTO はどのように"
+      ],
+      [
+        "SafeKit High Availability\\s*の制限事項",
+        "SafeKit 高可用性の制限事項"
+      ],
+      [
+        "リアルタイム(\\s*\\*\\*\\s*)の",
+        "\\1リアルタイムの"
       ]
     ],
     "zh-hans": [
@@ -5613,6 +5721,10 @@
       [
         "运行 Apache Web",
         "运行 Apache 的 Web"
+      ],
+      [
+        "负载平衡",
+        "负载均衡"
       ]
     ],
     "nl": [
@@ -6083,6 +6195,22 @@
       [
         "SafeKit aanpak",
         "SafeKit-aanpak"
+      ],
+      [
+        "Beperkingen SafeKit High Availability",
+        "Beperkingen van de hoge beschikbaarheid van SafeKit"
+      ],
+      [
+        "SafeKit Application Module Library",
+        "SafeKit-bibliotheek met applicatiemodules"
+      ],
+      [
+        "SafeKit-HA-gratis proefversie en technische documentatie",
+        "Gratis proefversie en technische documentatie van SafeKit HA"
+      ],
+      [
+        "\\b(Windows|Linux) (omgeving\\w*)",
+        "\\1-\\2"
       ]
     ],
     "pt-br": [
@@ -6189,6 +6317,14 @@
       [
         "\\b([Dd])eteção",
         "\\1etecção"
+      ],
+      [
+        "Limitações SafeKit de Alta Disponibilidade",
+        "Limitações de alta disponibilidade do SafeKit"
+      ],
+      [
+        "Teste Grátis e Documentação Técnica SafeKit HA",
+        "Teste grátis e documentação técnica do SafeKit HA"
       ]
     ],
     "pt-pt": [
@@ -6255,6 +6391,18 @@
       [
         "próprio grupo\\b",
         "próprio cluster"
+      ],
+      [
+        "Limitações de Alta Disponibilidade SafeKit",
+        "Limitações de alta disponibilidade do SafeKit"
+      ],
+      [
+        "\\bPor que um produto",
+        "Porque é que um produto"
+      ],
+      [
+        "SafeKit HA: Versão de Avaliação Gratuita e Documentação Técnica",
+        "SafeKit HA: versão de avaliação gratuita e documentação técnica"
       ]
     ]
   },

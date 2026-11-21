@@ -11,7 +11,7 @@ topics: "What is SafeKit?, 🔍 Explore SafeKit, Why Choose SafeKit for Simple a
 
 ## What is SafeKit? {#what-is-safekit}
 
-**SafeKit** is **all-in-one high availability software**. It combines real-time **host-based replication**, automatic **failover**, and **load balancing** into a single package, so your application restarts on a second server in about a minute with no data loss.
+**SafeKit** is **all-in-one high availability software**. It combines real-time **host-based replication**, **automatic failover**, and **load balancing** in a single package, so your application restarts on a second server in about a minute with no data loss.
 
 By synchronizing data between standard servers, **SafeKit** eliminates the need for expensive shared storage (SAN) or specialized IT skills, providing a simple, cost-effective way to protect **enterprise databases** (like SQL Server), **critical security systems** (like Milestone XProtect Video Management Software), and **SCADA industrial control software** (like Siemens applications) across both Windows and Linux environments.
 
@@ -19,7 +19,7 @@ By synchronizing data between standard servers, **SafeKit** eliminates the need 
 SafeKit protects your applications against:
 
 * **Hardware failures**, including the complete failure of a computer room
-* **Software failures**, including the crash or freeze of critical processes, which are detected and restarted automatically
+* **Software failures**, such as the crash or freeze of a critical process. SafeKit detects the failure and restarts the process automatically
 * **Human errors**, which are reduced by a simple configuration and a single web console
 
 ![Evidian SafeKit official logo - SANless high availability and application clustering software icon](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png "w:128")
