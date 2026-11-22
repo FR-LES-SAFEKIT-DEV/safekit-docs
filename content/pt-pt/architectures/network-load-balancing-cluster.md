@@ -1,16 +1,17 @@
 ---
-title: "Cluster SafeKit Farm : balanceamento de carga e alta disponibilidade"
+title: "Cluster farm SafeKit: balanceamento de carga de rede e alta disponibilidade para Windows e Linux"
 canonical: "https://safekit.eviden.com/pt-pt/architectures/network-load-balancing-cluster/"
-description: "SafeKit oferece balanceamento de carga de rede (NLB) de alto desempenho e failover automático em um único pacote de software. Substitua balanceadores de hardware caros pelo gerenciamento de IP virtual em nível de kernel do SafeKit para Windows e Linux . Ideal para integração OEM e gerenciamento simplificado de clusters."
+description: "SafeKit oferece balanceamento de carga de rede (NLB) de alto desempenho e failover automático num único pacote de software. Substitua os dispendiosos balanceadores de carga de hardware pela gestão de IP virtual ao nível do kernel do SafeKit para Windows e Linux. Ideal para integração OEM e gestão simplificada de clusters."
 category: "architectures"
 lang: "pt-pt"
-topics: "Cluster SafeKit Farm : NLB somente por software e failover automático para Windows / Linux , Sumário, Como o software SafeKit implementa de forma simples um cluster de balanceamento de carga de rede (NLB) Windows / Linux ?, Como o cluster SafeKit no modo farm funciona com Windows / Linux ?, Comparação: Cluster SafeKit Farm para Windows / Linux vs. outras soluções de cluster NLB, Guia em vídeo: Configurando um cluster NLB SafeKit Farm , 🔍 Explore o SafeKit"
+topics: "Cluster farm SafeKit: balanceamento de carga de software e failover automático para Windows e Linux, Índice, Como é que o SafeKit implementa um cluster de balanceamento de carga de rede (NLB) no Windows e Linux?, Como funciona um cluster farm SafeKit no Windows e Linux?, Comparação do cluster farm SafeKit com outras soluções de clustering NLB, Guia em vídeo: como configurar um cluster NLB farm SafeKit, 🔍 Explore SafeKit"
+translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.4 | Translation LLM | 52 expressions"
 ---
 
-# Cluster SafeKit <span class="notranslate farm-term" translate="no">Farm</span> : balanceamento de carga e alta disponibilidade {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# Cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit: balanceamento de carga de rede e alta disponibilidade para Windows e Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
 
 
-{{%  insert-safekit-solution-farm-2-pt-pt app="Windows / Linux" guide="/pt-pt/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}
+{{%  insert-safekit-solution-farm-2-pt-pt app="Windows/Linux" guide="/pt-pt/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}
 
 {{%  insert-safekit-hub-pt-pt  %}}
 

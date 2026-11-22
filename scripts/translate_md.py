@@ -27,7 +27,7 @@ Avertissements : glossaire introuvable, nombres disparus, fins de phrase perdues
 Glossaire (glossary.json à côté du script) : termes jamais traduits + corrections par langue.
 Shortcodes xxx-en : remplacés par xxx-<lang> si layouts/shortcodes/xxx-<lang>.* existe.
 """
-VERSION = "2026-11-21.4"   # version du script, affichée et écrite dans la page traduite
+VERSION = "2026-11-22.1"   # version du script, affichée et écrite dans la page traduite
 
 import argparse, html, json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from pathlib import Path
@@ -568,8 +568,15 @@ def decode(text, ctx):
             tr = re.sub(r"<[^>]+>", "", st[n]).strip() if isinstance(st[n], str) else ""
             for k in range(1, len(tr) - 2):
                 text = text.replace(tr + tr[k:], tr)
+    # cibles de liens masquées pendant les règles de grammaire (une règle ne doit jamais modifier une URL :
+    # "](</nl/architectures/active-active-cluster-…/>)" devenait "actief-actief-cluster-…")
+    _urls = []
+    def _mask(m):   # seul le chemin est masqué : "](<…>)" reste visible pour les règles qui en dépendent
+        _urls.append(m.group(2)); return "%s\x00U%d\x00%s" % (m.group(1), len(_urls) - 1, m.group(3))
+    text = re.sub(r"(\]\(<?)((?:/|https?:)[^<>()\s]*)(>?\))", _mask, text)   # pas les ancres "](#…)"
     for pat, repl in GRAMMAR:   # accords autour des expressions imposées (ex. "une cluster" -> "un cluster")
         text = re.sub(pat, repl, text)
+    text = re.sub(r"\x00U(\d+)\x00", lambda m: _urls[int(m.group(1))], text)
     for wrong, right in GLOSSARY.get("_rep", {}).items():  # corrections du glossaire
         if ctx.apos:
             wrong, right = wrong.replace("'", "’"), right.replace("'", "’")

@@ -1,38 +1,39 @@
 ---
-title: "Clustering à redondance N-1 : Haute disponibilité pour plusieurs applications avec une seule sauvegarde"
+title: "Cluster de redondance N-1 : haute disponibilité pour de multiples applications avec un seul serveur de secours"
 canonical: "https://safekit.eviden.com/fr/architectures/n-1-redundancy/"
-description: "Optimisez votre centre de données avec la redondance SafeKit N-1. Déployez N modules miroirs sur N+1 serveurs pour garantir une haute disponibilité pour plusieurs applications grâce à une sauvegarde partagée unique. Éliminez les besoins en SAN et réduisez les coûts matériels grâce à la réplication en temps réel pour Windows et Linux. En savoir plus."
+description: "Optimisez votre centre de données avec la redondance N-1 SafeKit. Déployez N modules mirror sur N+1 serveurs pour assurer une haute disponibilité pour de multiples applications avec un seul serveur de secours partagé. Éliminez les exigences SAN et réduisez les coûts matériels grâce à la réplication en temps réel pour Windows et Linux. En savoir plus."
 category: "architectures"
 lang: "fr"
-topics: "Cluster N-1 avec réplication de données et basculement applicatif entre N serveurs actifs et 1 serveur de secours, 🔍 Explorez SafeKit"
+topics: "Haute disponibilité avec réplication des données et basculement des applications de N serveurs vers 1, 🔍 Explorez SafeKit"
+translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 59 expressions"
 ---
 
-# Clustering à redondance N-1 : Haute disponibilité pour plusieurs applications avec une seule sauvegarde {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
+# Cluster de redondance N-1 : haute disponibilité pour de multiples applications avec un seul serveur de secours {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}
 
-## Cluster N-1 avec réplication de données et basculement applicatif entre N serveurs actifs et 1 serveur de secours {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
+## Haute disponibilité avec réplication des données et basculement des applications de N serveurs vers 1 {#high-availability-with-data-replication-and-application-failover-from-n-servers-to-1}
 
 ### Redondance N-1 {#n-1-redundancy}
 
 
-![Cluster SafeKit avec redondance N-1](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
+![Cluster de redondance N-1 avec SafeKit](/wp-content/uploads/2023/02/safekit-n-1-300-3.png "w:300")
 
 
 ### Comment fonctionne la redondance N-1 ? {#how-the-n-1-redundancy-works}
 
-SafeKit fournit un cluster en redondance N-1 simple avec N applications exécutées sur N serveurs et avec un seul serveur de secours pour le basculement. Dans un cluster SafeKit en redondance N-1, chaque application fonctionne sur ses propres répertoires répliqués.
+SafeKit fournit un cluster de redondance N-1 simple : N applications s’exécutent sur N serveurs principaux, et un seul serveur de secours prend le relais en cas de défaillance. Dans un cluster de redondance N-1 SafeKit, chaque application fonctionne sur ses propres répertoires répliqués.
 
-En cas de panne d'un serveur principal contrairement à un [cluster actif actif](</fr/architectures/active-active-cluster-real-time-replication/>), le serveur de secours n'a pas à gérer une double charge de travail.
+Contrairement à un [cluster actif-actif](</fr/architectures/active-active-cluster-real-time-replication/>), lorsqu’un serveur principal tombe en panne, le serveur de secours n’a pas à gérer une double charge de travail.
 
-Cela suppose qu'il n'y ait qu'une seule panne à la fois dans le cluster en redondance N-1. La solution peut prendre en charge plusieurs pannes de serveurs principaux en même temps, mais dans ce cas, le serveur de secours unique devra gérer la charge de travail combinée de tous les serveurs défaillants.
+Cela suppose qu’un seul serveur principal tombe en panne à la fois dans le cluster de redondance N-1. La solution peut également gérer plusieurs pannes de serveur principal en même temps. Dans ce cas, le serveur de secours unique exécute la charge de travail combinée de tous les serveurs en panne.
 
-### Comment mettre en place la redondance N-1 ? {#how-to-implement-n-1-redundancy}
+### Comment mettre en œuvre la redondance N-1 ? {#how-to-implement-n-1-redundancy}
 
-Le cluster SafeKit en redondance N-1 se configure simplement en déployant N modules miroirs sur N+1 serveurs.
+Pour configurer un cluster de redondance N-1 SafeKit, il suffit de déployer N modules mirror sur N+1 serveurs.
 
-Notez que :
+Remarques :
 
-  * toutes les applications (Appli1, Appli2, Appli3) doivent être installées sur le serveur de secours unique pour le basculement des applications,
-  * chaque module miroir aura sa propre adresse IP virtuelle, ses propres répertoires de fichiers répliqués et ses propres scripts de reprise.
+  * Toutes les applications (Appli1, Appli2, Appli3) doivent être installées sur le serveur de secours pour le basculement des applications.
+  * Chaque module mirror possède sa propre adresse IP virtuelle, ses propres répertoires de fichiers répliqués et ses propres scripts de récupération.
 
 
 

@@ -1,162 +1,161 @@
 ---
-title: "SafeKit Smart Console: Ihr hochverfügbarer Cluster in Ihrer Tasche"
+title: "SafeKit-Smart Console: Ihr Hochverfügbarkeitscluster für die Hosentasche"
 canonical: "https://safekit.eviden.com/de/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
-description: "Verwalten Sie SafeKit -Cluster mühelos mit unserer Smart Console. Profitieren Sie von der Konfiguration ohne Programmierung, der Smartphone-Kompatibilität und PWA-Benachrichtigungen in Echtzeit. Vermeiden Sie menschliche Fehler und gewährleisten Sie höchste Verfügbarkeit. Erfahren Sie mehr."
+description: "Verwalten Sie SafeKit-Cluster mühelos mit unserer Smart Console. Profitieren Sie von der Zero-Code-Konfiguration, der Smartphone-Kompatibilität und Echtzeit-PWA-Benachrichtigungen. Eliminieren Sie menschliche Fehler und gewährleisten Sie Hochverfügbarkeit auf Knopfdruck. Erfahren Sie mehr."
 category: "architectures"
 lang: "de"
-topics: "Smart Console: Intuitive, mobile und fehlerfreie Hochverfügbarkeit, Inhaltsverzeichnis, Wie funktioniert ein SafeKit mirror -Cluster mit der Webkonsole?, Wie funktioniert ein SafeKit farm -Cluster mit der Webkonsole?, Wie überwacht man mehrere Module und Cluster über die Webkonsole?, Wie überwacht man Warnmeldungen in der Konsole und verwaltet E-Mail-Benachrichtigungen?, 🔍 SafeKit entdecken"
+topics: "Smart Console: intuitive und fehlerfreie Hochverfügbarkeit auf Desktop und Mobilgeräten, Inhaltsverzeichnis, Wie funktioniert ein SafeKit-Mirror-Cluster mit der Webkonsole?, Wie funktioniert ein SafeKit-Farm-Cluster mit der Webkonsole?, Wie kann man mehrere Module und mehrere Cluster über die Webkonsole überwachen?, Wie können Warnmeldungen in der Konsole überwacht und E-Mail-Benachrichtigungen verwaltet werden?, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 54 expressions"
 ---
 
-# SafeKit Smart Console: Ihr hochverfügbarer Cluster in der Hosentasche {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
+# SafeKit-Smart Console: Ihr Hochverfügbarkeitscluster für die Hosentasche {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}
 
-## Smart Console: Intuitiv, mobil und fehlerfrei – Hochverfügbarkeit {#smart-console-intuitive-mobile-and-error-free-high-availability}
+## Smart Console: intuitive und fehlerfreie Hochverfügbarkeit auf Desktop und Mobilgeräten {#smart-console-intuitive-mobile-and-error-free-high-availability}
 
-Definieren Sie Ihr Hochverfügbarkeitsmanagement neu – mit einer Lösung, die auf **Geschwindigkeit und Einfachheit** ausgelegt ist. Die SafeKit Webkonsole bietet eine intuitive Bedienung **ohne Einarbeitungszeit** und ermöglicht Ihnen die Konfiguration und Steuerung Ihrer Infrastruktur ohne **Programmierkenntnisse** .
+Definieren Sie die Verwaltung der Hochverfügbarkeit mit einer Lösung neu, die auf **Geschwindigkeit und Einfachheit** ausgelegt ist. Die SafeKit Web Console bietet eine Erfahrung **ohne Lernkurve**, sodass Sie Ihre Infrastruktur konfigurieren und steuern können, **ohne Code zu schreiben**.
 
-Ob am Schreibtisch oder unterwegs – mit dem Smartphone-kompatiblen Dashboard haben Sie die volle Kontrolle über Ihr Cluster. Durch die optimierte Verwaltung der Module mirror und <span class="notranslate farm-term" translate="no">farm</span> minimiert die Smart Console **menschliche Fehler** und gewährleistet einen reibungslosen Failover für Ihre wichtigsten Systeme.
+Ob Sie an Ihrem Schreibtisch oder unterwegs sind, das Smartphone-kompatible Dashboard bietet Ihnen die volle Kontrolle über das Cluster. Durch die Rationalisierung der Verwaltung von mirror und <span class="notranslate farm-term" translate="no">Farm</span>-Modulen eliminiert die Smart Console **menschliche Fehler** und gewährleistet einen nahtlosen Failover-Prozess für Ihre wichtigsten Systeme.
 
 ## Inhaltsverzeichnis {#table-of-contents}
 
-  * [ Wie funktioniert ein SafeKit mirror Cluster mit der Webkonsole? ](#safekit-mirror-cluster)
-  * [ Wie funktioniert ein SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster mit der Webkonsole? ](#safekit-farm-cluster)
-  * [ Wie kann man mehrere Module und mehrere Cluster über die Webkonsole überwachen? ](#multipe-modules-clusters)
-  * [ Wie kann ich Warnmeldungen in der Konsole überwachen und E-Mail-Benachrichtigungen verwalten? ](#safekit-notifications-cluster)
+  * [Wie funktioniert ein SafeKit-Mirror-Cluster mit der Webkonsole?](#safekit-mirror-cluster)
+  * [Wie funktioniert ein SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster mit der Webkonsole?](#safekit-farm-cluster)
+  * [Wie kann man mehrere Module und mehrere Cluster über die Webkonsole überwachen?](#multipe-modules-clusters)
+  * [Wie können Warnmeldungen in der Konsole überwacht und E-Mail-Benachrichtigungen verwaltet werden?](#safekit-notifications-cluster)
 
 
-## Wie funktioniert ein SafeKit mirror Cluster mit der Webkonsole? {#safekit-mirror-cluster}
+## Wie funktioniert ein SafeKit-Mirror-Cluster mit der Webkonsole? {#safekit-mirror-cluster}
 
-### Wie konfiguriert man einen SafeKit Mirror Cluster? {#safekit-mirror-cluster-configure}
-
-
-![ SafeKit Webkonsole: Dashboard für die Konfiguration von Hochverfügbarkeit mit Anzeige von Heartbeat-Netzwerken, virtueller IP-Einrichtung und Echtzeit-Verzeichnisreplikation für einen mirror -Cluster. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
+### Wie konfiguriert man einen SafeKit-Mirror-Cluster? {#safekit-mirror-cluster-configure}
 
 
-Die Webkonsole **SafeKit** bietet eine intuitive Benutzeroberfläche zur Orchestrierung von Hochverfügbarkeit für Ihre kritischen Anwendungen. In nur wenigen Schritten können Sie einen Cluster **SafeKit mirror** konfigurieren, um die Geschäftskontinuität sicherzustellen.
-
-  * **Anwendungsausfall (Registerkarte „Makros“):** Definieren Sie die spezifischen Anwendungsdienste, die im Fehlerfall automatisch neu gestartet werden sollen.
-  * **Heartbeat-Netzwerk(e):** Dedizierte Kommunikationspfade, die von den Clusterknoten verwendet werden, um den Zustand und die Verfügbarkeit der anderen Knoten kontinuierlich zu überwachen und Failover-Entscheidungen zu synchronisieren.
-  * **Verwaltung virtueller IP-Adressen:** Virtuelle IP-Adresse (VIP) für die transparente Wiederverbindung von Clients nach einem Failover einrichten.
-  * **Echtzeitreplikation:** Wählen Sie die kritischen Verzeichnisse für die hostbasierte, synchrone Replikation auf Byte-Ebene aus.
-  * **-Prüfer:** Überwachen den Zustand der Anwendung und lösen eine automatische Wiederherstellung aus, wenn ein Prozessfehler erkannt wird.
+![SafeKit Web Console: Dashboard für die Hochverfügbarkeitskonfiguration, Heartbeat-Netzwerke, die virtuelle IP-Konfiguration und die Echtzeit-Verzeichnisreplikation für einen Mirror-Cluster anzeigt.](/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png "w:763")
 
 
-Der Cluster SafeKit verfügt über einen dedizierten Split-Brain-Checker ](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>) [
+Die **SafeKit-Webkonsole** bietet eine intuitive Schnittstelle zur Orchestrierung der Hochverfügbarkeit für Ihre kritischen Anwendungen. In nur wenigen Schritten können Sie einen **SafeKit-Mirror-Cluster** konfigurieren, um die Geschäftskontinuität zu gewährleisten:
 
-### Wie überwacht man einen SafeKit mirror Cluster? {#safekit-mirror-cluster-monitoring}
-
-
-![ SafeKit Webkonsole: Echtzeitüberwachung eines 2-Knoten-Clusters mirror mit Anzeige der Zustände PRIM und SECOND bei aktiver Datenreplikation. ](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
-
-
-Die **Managementkonsole SafeKit** bietet eine einheitliche Ansicht Ihrer Hochverfügbarkeitsinfrastruktur. Administratoren können damit den **Betriebszustand** des Clusters überwachen und die Datensynchronisierung in Echtzeit verfolgen.
-
-Bei einem 2-Knoten-Cluster vom Typ mirror werden die Rollen der einzelnen Server in der Konsole übersichtlich angezeigt:
-
-  * **PRIM (Primär):** Der aktive Knoten, auf dem die Anwendung aktuell ausgeführt wird und der die virtuelle IP-Adresse verwaltet. Er führt Schreibvorgänge im lokalen Speicher und Echtzeitreplikation auf den sekundären Knoten durch.
-  * **SECOND (Sekundär):** Der Standby-Knoten empfängt synchrone Byte-Updates. Er ist bereit, im Falle eines Ausfalls des Primärknotens sofort die Funktion zu übernehmen.
-  * **ALONE Status:** Zeigt visuell an, wenn der Cluster auf einem einzelnen Knoten läuft (z. B. während Wartungsarbeiten oder nach einem Ausfall), was darauf hinweist, dass die Redundanz vorübergehend verloren geht.
-  * **Resynchronisierungsfortschritt:** Wenn ein ausgefallener Knoten wiederhergestellt ist, ändert sich sein Status während der Datenreintegration im Hintergrund in Orange, um sicherzustellen, dass es während der Phase "Rückkehr zum Normalzustand" zu keinen Ausfallzeiten kommt.
+  * **Anwendungsfailover (Registerkarte „Makros“):** Definieren Sie die spezifischen Anwendungsdienste, die im Falle eines Ausfalls automatisch neu gestartet werden sollen.
+  * **Heartbeat-Netzwerk(e):** Dedizierte Kommunikationspfade, die von Clusterknoten verwendet werden, um kontinuierlich den Zustand und die Verfügbarkeit der anderen Knoten zu überwachen und Failover-Entscheidungen zu synchronisieren.
+  * **Virtuelles IP-Management:** Richten Sie die virtuelle IP (VIP) für eine transparente Client-Wiederverbindung nach einem Failover ein.
+  * **Echtzeit-Replikation:** Wählen Sie die kritischen Verzeichnisse für die hostbasierte, synchrone Replikation auf Byteebene aus.
+  * **Checkers:** Überwachen Sie den Zustand der Anwendung und lösen Sie eine automatische Wiederherstellung aus, wenn ein Prozessfehler erkannt wird.
 
 
-Über einfache Statussymbole hinaus bietet die Benutzeroberfläche **eine One-Click-Failover-Orchestrierung** ( **`...` -Menü** ), mit der Sie die primäre Rolle für geplante Wartungsarbeiten manuell neu zuweisen und gleichzeitig die kontinuierliche Verfügbarkeit für Benutzeraktivitäten gewährleisten können.
+Das SafeKit-Cluster verfügt über eine spezielle Split-Brain-Checker, um Probleme mit der Netzwerktrennung zu lösen, ohne dass ein dritter Witness-Computer oder ein zusätzliches Heartbeat-Netzwerk erforderlich ist. Erfahren Sie mehr über [Heartbeat, Failover und Quorum in einem Cluster](</de/best-practises/heartbeat-failover-quorum-windows-linux-cluster/>).
 
-## Wie funktioniert ein SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster mit der Webkonsole? {#safekit-farm-cluster}
-
-### Wie konfiguriert man einen SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster? {#safekit-farm-cluster-configuration}
+### Wie überwacht man einen SafeKit-Mirror-Cluster? {#safekit-mirror-cluster-monitoring}
 
 
-![ SafeKit Webkonsole: Farm Clusterkonfiguration für Netzwerklastausgleich und Verwaltung virtueller IPs. ](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
+![SafeKit Web Console: Echtzeitüberwachung eines 2-Knoten Mirror-Cluster die PRIM und SECOND Zustände mit aktiver Datenreplikation anzeigt.](/wp-content/uploads/2026/01/safekit-mirror-cluster-monitor.png "w:478")
 
 
-Der Cluster **SafeKit <span class="notranslate farm-term" translate="no">farm</span>** ist auf hohe Verfügbarkeit und Skalierbarkeit von Diensten ausgelegt. Die Konfiguration konzentriert sich auf die gleichzeitige Verteilung des eingehenden Datenverkehrs auf beide Knoten.
+Die **SafeKit-Managementkonsole** bietet eine einheitliche Ansicht Ihrer Hochverfügbarkeitsinfrastruktur. Sie ermöglicht es Administratoren, den **Betriebsstatus** des Clusters zu überwachen und die Datensynchronisierung in Echtzeit zu verfolgen.
 
-  * **Load Balanced Services (Makros-Registerkarte):** Definiert die spezifischen Anwendungsdienste (z. B. Apache, IIS , Nginx ), die auf allen Knoten aktiv gehalten werden sollen.
-  * **Heartbeat-Netzwerk(e):** Kommunikationspfad(e), die verwendet werden, um zu erkennen, ob ein Knoten das <span class="notranslate farm-term" translate="no">farm</span> verlassen hat, was eine sofortige Umverteilung der Last auslöst.
-  * Virtuelle IP-Adresse **( <span class="notranslate farm-term" translate="no">Farm</span> VIP):** Im Gegensatz zu einem mirror -Cluster wird die VIP <span class="notranslate farm-term" translate="no">Farm</span> zwischen den Knoten geteilt, wobei ein Kernel-Filteralgorithmus zur Verteilung des Netzwerkverkehrs verwendet wird.
-  * **Load-Balancing-Regeln:** Definieren Sie die Richtlinie zur Verkehrsverteilung basierend auf der Quell-IP-Adresse oder dem Quellport.
-  * **-Prüfer:** Überwachen den Zustand der Anwendung und lösen einen automatischen Neustart aus, wenn ein Prozessfehler erkannt wird.
+Bei einem Mirror-Cluster mit zwei Knoten zeigt die Konsole die Rollen der einzelnen Server deutlich an:
 
-
-### Wie überwacht man einen SafeKit <span class="notranslate farm-term" translate="no">farm</span> Cluster? {#safekit-farm-cluster-monitoring}
+  * **PRIM (Primär):** Der aktive Knoten, auf dem die Anwendung derzeit ausgeführt wird und der die virtuelle IP-Adresse verwaltet. Er führt Schreibvorgänge in den lokalen Speicher und die Echtzeitreplikation auf den sekundären Knoten durch.
+  * **SECOND (Sekundär):** Der Standby-Knoten empfängt synchrone Updates auf Byte-Ebene. Er ist bereit, sofort die Übernahme zu übernehmen, falls der primäre Knoten ausfällt.
+  * **ALONE-Status:** Warnt Sie visuell, wenn der Cluster auf einem einzelnen Knoten ausgeführt wird (z. B. während der Wartung oder nach einem Fehler), was darauf hinweist, dass die Redundanz vorübergehend verloren gegangen ist.
+  * **Resynchronisierungsfortschritt:** Wenn sich ein ausgefallener Knoten erholt, wird sein Status während der Hintergrunddatenneuintegration orange, um sicherzustellen, dass es während der Phase "Rückkehr zum Normalzustand" keine Ausfallzeiten gibt.
 
 
-![ SafeKit Konsole: Überwachung eines 2-Knoten-Clusters Farm ), beide Knoten im Status „UP“ mit aktivem Lastausgleich. ](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+Über einfache Status-Symbole hinaus bietet die Benutzeroberfläche **eine Failover-Orchestrierung mit einem Klick** über das **`...` Menü**, mit der Sie die primäre Rolle für geplante Wartungsarbeiten manuell neu zuweisen und gleichzeitig die kontinuierliche Verfügbarkeit für Benutzeraktivitäten gewährleisten können.
+
+## Wie funktioniert ein SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster mit der Webkonsole? {#safekit-farm-cluster}
+
+### Wie konfiguriere ich einen SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster? {#safekit-farm-cluster-configuration}
 
 
-Die Überwachung eines <span class="notranslate farm-term" translate="no">farm</span> Clusters ermöglicht die Visualisierung der **Active-Active** Architektur der Infrastruktur, bei der alle Knoten zur Anwendungsleistung beitragen (in diesem Beispiel werden 2 Knoten gezeigt; skalierbar auf zusätzliche Knoten):
-
-  * **UP-Status (50 % auf 2 Knoten):** In einem gesunden <span class="notranslate farm-term" translate="no">farm</span> befinden sich beide Knoten im Zustand „UP“ (50 %), was bedeutet, dass sie beide aktiv Client-Anfragen über die gemeinsam genutzte virtuelle IP empfangen und verarbeiten.
-  * Automatischer Lastausgleich: **Fällt ein Knoten aus, zeigt die Konsole an** dass der verbleibende Knoten 100 % des Datenverkehrs übernimmt. Es gibt keine Verzögerung beim Failover, da der funktionierende Knoten bereits aktiv ist (abgesehen von einer Erkennungszeit von wenigen Sekunden).
-  * **Knoteneinfügung:** Wenn ein reparierter Knoten neu gestartet wird, wechselt er von "STOP" zu "UP" und beginnt automatisch, seinen Anteil an der Last ohne Eingriff des Administrators zu empfangen.
-  * **Keine Datensynchronisierung:** Hinweis: In einem <span class="notranslate farm-term" translate="no">farm</span> -Cluster gibt es keinen Resynchronisierungsstatus "Orange", da die Knoten entweder zustandslos sind oder eine gemeinsame Backend-Datenbank nutzen (die in einem mirror Cluster separat geschützt werden kann).
+![SafeKit Web Console: Farm-Cluster-Konfiguration für Netzwerk-Lastausgleich und virtuelle IP-Verwaltung.](/wp-content/uploads/2026/01/safekit-farm-cluster-config.png "w:966")
 
 
-Über einfache Statussymbole hinaus bietet die Benutzeroberfläche eine Ein-Klick-Knotenverwaltung ( **`...` Menü** ), mit der Sie einen Knoten für geplante Wartungsarbeiten manuell stoppen oder starten können, während die gemeinsam genutzte virtuelle IP den Datenverkehr automatisch neu verteilt, ohne die Benutzeraktivität zu unterbrechen.
+Der **SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster** ist für Hochverfügbarkeit und Skalierbarkeit von Diensten ausgelegt. Die Konfiguration konzentriert sich auf die gleichzeitige Verteilung des eingehenden Datenverkehrs auf beide Knoten:
+
+  * **Lastverteilungsdienste (Registerkarte „Makros“):** Definieren Sie die spezifischen Anwendungsdienste (z. B. Apache, IIS, Nginx), die auf allen Knoten aktiv bleiben sollen.
+  * **Heartbeat-Netzwerk(e):** Kommunikationspfad(e), die verwendet werden, um zu erkennen, ob ein Knoten die <span class="notranslate farm-term" translate="no">farm</span> verlassen hat, wodurch eine sofortige Umverteilung der Last ausgelöst wird.
+  * **Virtuelle IP (<span class="notranslate farm-term" translate="no">farm</span> VIP):** Im Gegensatz zu einem Mirror-Cluster wird die virtuelle IP-Adresse eines <span class="notranslate farm-term" translate="no">Farm</span>-Clusters zwischen allen Knoten gemeinsam genutzt und ein Kernel-Filteralgorithmus verteilt den Netzwerkverkehr.
+  * **Lastausgleichsregeln:** Definieren Sie die Richtlinie für die Datenverkehrsverteilung basierend auf der Quell-IP-Adresse oder dem Port.
+  * **Checkers:** Überwachen Sie den Zustand der Anwendung und lösen Sie einen automatischen Neustart aus, wenn ein Prozessfehler erkannt wird.
+
+
+### Wie überwacht man einen SafeKit-<span class="notranslate farm-term" translate="no">Farm</span>-Cluster? {#safekit-farm-cluster-monitoring}
+
+
+![SafeKit-Konsole: Überwachung eines 2-Knoten Farm-Cluster der beide Knoten im UP Zustand mit aktiver Lastverteilung anzeigt.](/wp-content/uploads/2026/01/safekit-farm-cluster-monitor.png "w:473")
+
+
+Die Überwachung eines <span class="notranslate farm-term" translate="no">Farm</span>-Clusters bietet Einblick in den **Aktiv-Aktiv**-Charakter der Infrastruktur, bei dem alle Knoten zur Leistung der Anwendung beitragen (in diesem Beispiel werden 2 Knoten angezeigt; skalierbar auf zusätzliche Knoten):
+
+  * **UP Status (50 % auf 2 Knoten):** In einer gesunden <span class="notranslate farm-term" translate="no">farm</span> befinden sich beide Knoten im Status „ UP “ (50 %), was bedeutet, dass beide aktiv Client-Anfragen über die gemeinsam genutzte virtuelle IP-Adresse empfangen und verarbeiten.
+  * **Automatische Neuausrichtung:** Wenn ein Knoten ausfällt, zeigt die Konsole visuell an, dass der verbleibende Knoten 100 % des Datenverkehrs übernimmt. Es gibt keine „Failover“-Verzögerung, da der überlebende Knoten bereits aktiv ist (abgesehen von einer Erkennungszeit von einigen Sekunden).
+  * **Knoteneinfügung:** Wenn ein reparierter Knoten neu gestartet wird, wechselt er von „ STOP “ zu „ UP “ und beginnt automatisch, ohne Eingreifen des Administrators, mit dem Empfang seines Teils der Last.
+  * **Keine Datensynchronisation:** Beachten Sie, dass in einem <span class="notranslate farm-term" translate="no">Farm</span>-Cluster kein orangefarbener Resynchronisationsstatus vorhanden ist, da die Knoten zustandslos sein oder eine Backend-Datenbank gemeinsam nutzen sollen (die in einem Mirror-Cluster separat geschützt werden kann).
+
+
+Über einfache Status-Symbole hinaus bietet die Benutzeroberfläche eine Ein-Klick-Knotenverwaltung über das **`...` Menü**, mit der Sie einen Knoten für geplante Wartungsarbeiten manuell stoppen oder starten können, während die gemeinsam genutzte virtuelle IP den Datenverkehr automatisch neu verteilt, ohne die Benutzeraktivität zu unterbrechen.
 
 ## Wie kann man mehrere Module und mehrere Cluster über die Webkonsole überwachen? {#multipe-modules-clusters}
 
-### Visualisierung mehrerer Module innerhalb eines einzelnen Clusters {#safekit-multi-module}
+### Multi-Modul-Visualisierung innerhalb eines einzelnen Clusters {#safekit-multi-module}
 
 
-![ SafeKit Webkonsole: 4 Hyper-V-Module wurden auf demselben 2-Knoten-Cluster bereitgestellt. ](/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg "w:966")
+![SafeKit Web Console: 4 Hyper-V-Module, die auf demselben 2-Knoten-Cluster bereitgestellt werden.](/wp-content/uploads/2026/05/safekit-hyperv-console-4.jpg "w:966")
 
 
-Bei der Bereitstellung **mehrere Module** auf einem einzelnen 2-Knoten-Cluster, SafeKit Die Webkonsole bietet **individuelle Überwachungs-Widgets** für jedes Modul. Dies ist besonders wertvoll für **SafeKit Hyper-V** Lösungen. 
+Bei der Bereitstellung **mehrerer Module** auf einem einzelnen 2-Knoten-Cluster bietet die SafeKit Web Console **individuelle Überwachungswidgets** für jedes Modul. Dies ist besonders wertvoll für **SafeKit Hyper-V** Lösungen. 
 
-**Beispiel:** In der Abbildung mit einer Konfiguration mit 4 geschützten VMs:
+**Beispiel:** In der Abbildung mit einem Setup mit 4 geschützten VMs:
 
-  * Die Konsole ist mit Knoten 1 verbunden, der als Proxy für die Kommunikation mit Knoten 2 fungiert.
+  * Die Konsole ist mit node1 verbunden, der als Proxy für die Kommunikation mit node2 fungiert.
   * Die Konsole zeigt **4 Widgets** an (eines für jede VM).
   * Jede VM läuft auf ihrem PRIM-Knoten und wird auf ihren SECOND-Knoten repliziert.
-  * Administratoren können in Echtzeit sehen, dass VM1 und VM2 auf Knoten 1 aktiv sind, während VM2 und VM3 auf Knoten 2 aktiv sind.
-  * Administratoren können eine VM einfach von einem Knoten auf einen anderen migrieren, indem sie das Menü **`...`** verwenden.
+  * Administratoren können in Echtzeit sehen, welche VMs auf jedem Knoten aktiv sind: VM1 und VM2 auf node1, VM3 und VM4 auf node2.
+  * Administratoren können eine VM mithilfe des **Menüs `...`** problemlos von einem Knoten auf den anderen migrieren.
 
 
-Diese detaillierte Transparenz gewährleistet, dass Sie auch in Umgebungen mit hoher Dichte die volle Kontrolle und sofortige Kenntnis über jede replizierte Arbeitslast behalten. 
+Diese granulare Transparenz stellt sicher, dass Sie selbst in Umgebungen mit hoher Dichte die vollständige Kontrolle und sofortige Übersicht über jede replizierte Arbeitslast behalten. 
 
 ### Multi-Cluster-Visualisierung {#safekit-multi-cluster}
 
 
-![ SafeKit Webkonsole: 4 Cluster auf 8 Servern bereitgestellt. ](/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg "w:966")
+![SafeKit Web Console: 4 Cluster auf 8 Servern bereitgestellt.](/wp-content/uploads/2026/05/safekit-console-north-south-east-west-801.jpg "w:966")
 
 
-Beim Bereitstellen mehrerer **-Cluster** ) auf verschiedenen Servern können Sie entweder mehrere Browser-Tabs verwenden, um sich mit jedem Cluster zu verbinden, oder die PWA-Funktion (Progressive Web App) der Konsole nutzen. Durch die Verwendung der PWA werden die Navigationsmenüs des Browsers ausgeblendet, wodurch Bildschirmplatz gespart und die Clusterüberwachung auf Ihrem Desktop übersichtlicher gestaltet wird. 
+Wenn Sie **mehrere Cluster** auf mehreren Servern bereitstellen, können Sie entweder mehrere Browser-Registerkarten verwenden, um eine Verbindung zu jedem Cluster herzustellen, oder die PWA-Funktion (Progressive Web App) der Konsole nutzen. Durch die Verwendung der PWA werden die Navigationsmenüs des Browsers entfernt, wodurch Bildschirmplatz gespart wird, um die Clusterüberwachung auf Ihrem Desktop besser zu organisieren. 
 
-**Beispiel:** Die Abbildung zeigt vier PWA-Konsolen, die vier Videoüberwachungscluster überwachen: einen im Norden, Süden, Westen und Osten.
+**Beispiel:** Die Abbildung zeigt vier PWA-Konsolen, die vier Videoüberwachungscluster in Norden, Süden, Westen und Osten überwachen.
 
-**Hinweis:** Wenn Sie zu viele Cluster haben, um sie auf einem einzelnen Desktop anzuzeigen, bietet SafeKit Benachrichtigungen an, um Fehler in zahlreichen Clustern zu erkennen. 
+**Hinweis:** Wenn Sie zu viele Cluster haben, um sie auf einem einzigen Desktop anzuzeigen, bietet SafeKit-Benachrichtigungen, um Fehler in zahlreichen Clustern zu erkennen. 
 
-## Wie kann ich Warnmeldungen in der Konsole überwachen und E-Mail-Benachrichtigungen verwalten? {#safekit-notifications-cluster}
+## Wie können Warnmeldungen in der Konsole überwacht und E-Mail-Benachrichtigungen verwaltet werden? {#safekit-notifications-cluster}
 
-### Wie kann ich sofortige Benachrichtigungen über Modulstatusänderungen und kritische Ereignisse erhalten? {#how-can-i-receive-instant-alerts-for-module-state-changes-and-critical-events}
+### Wie kann ich sofortige Benachrichtigungen bei Modulstatusänderungen und kritischen Ereignissen erhalten? {#how-can-i-receive-instant-alerts-for-module-state-changes-and-critical-events}
 
-Die Webkonsole SafeKit nutzt native Browserfunktionen, um bei jeder Änderung des Modulstatus **sofortige Benachrichtigungen** auszugeben. So werden Sie umgehend über wichtige Ereignisse informiert, selbst wenn die Konsole in einem Hintergrundtab geöffnet ist.
+Die SafeKit-Webkonsole nutzt native Browserfunktionen, um **sofortige Benachrichtigungen** auszugeben, wenn eine Zustandsänderung eines Moduls auftritt. Dadurch wird sichergestellt, dass kritische Ereignisse sofort zur Kenntnis gebracht werden, auch wenn sich die Konsole in einem Hintergrund-Tab befindet.
 
-  * **Sicherheit:** Benachrichtigungen erfordern Zugriff über **HTTPS** oder localhost.
-  * **PWA-Integration:** Installieren Sie die Konsole als Progressive Web App (PWA) auf Desktop- oder Mobilgeräten für ein natives App-ähnliches Erlebnis.
-  * **Mobile Alerts:** Auf Mobilgeräten sind Benachrichtigungen ausschließlich über die PWA verfügbar, wobei HTTPS obligatorisch ist.
-
-
-Dieser Mechanismus alarmiert die Benutzer sofort über kritische Ereignisse, verbessert so das schnelle Verständnis des Clusterstatus und verkürzt die Reaktionszeiten.
-
-### SafeKit Video: Konsole auf dem Smartphone (0:54) {#demo-console}
-
-<br /> 
-
-### Wie kann ich in SafeKit automatische E-Mail-Benachrichtigungen einrichten? {#how-can-i-set-up-automated-email-alerts-in-safekit}
-
-SafeKit protokolliert automatisch alle wichtigen Clusterereignisse **in den Systemprotokollen** ) und ermöglicht so die nahtlose Integration mit jedem gängigen Überwachungstool. Zusätzlich beinhaltet es einen dedizierten E-Mail-Benachrichtigungsagenten **einen E-Mail-Benachrichtigungsagenten** , der diese Protokolle überwacht und wichtige Warnmeldungen direkt an Ihren Posteingang sendet. Dadurch wird sichergestellt, dass alle Beteiligten auch dann informiert bleiben, wenn die Webkonsole nicht aktiv überwacht wird. 
-
-  * **Intelligente Gruppierung:** Um Störungen zu reduzieren, gruppiert der Agent Ereignisse, die innerhalb eines kurzen Zeitraums auftreten, in einer einzigen zusammenfassenden E-Mail.
-  * **Vollständige Abdeckung:** Der Agent ist auf allen Knoten installiert und muss explizit mit SMTP-Details konfiguriert werden, um aktiviert zu werden.
-  * **Anpassbare Empfänger:** Direkte Benachrichtigungen an bestimmte IT-Teams oder Management-Aliasse, um eine schnelle Reaktion zu gewährleisten.
+  * **Sicherheit:** Benachrichtigungen erfordern den Zugriff über **HTTPS** oder localhost.
+  * **PWA-Integration:** Installieren Sie die Konsole als Progressive Web App (PWA) auf dem Desktop oder Mobilgerät, um ein natives App-ähnliches Erlebnis zu erhalten.
+  * **Mobile Benachrichtigungen:** Auf Mobilgeräten sind Benachrichtigungen ausschließlich über die PWA verfügbar, wobei HTTPS zwingend erforderlich ist.
 
 
-Durch die Kombination von Echtzeit-PWA-Warnungen mit intelligenter E-Mail-Gruppierung bietet SafeKit eine mehrschichtige Benachrichtigungsstrategie für unternehmenskritische Vorgänge.
+Dieser Mechanismus benachrichtigt Benutzer sofort über kritische Ereignisse, wodurch das Bewusstsein für den Cluster-Status verbessert und die Reaktionszeiten verkürzt werden.
 
-### SafeKit Video: E-Mail-Benachrichtigungen bei Failover (1:04) {#demo-notifications}
+### SafeKit-Video: Konsole auf dem Smartphone (0:54) {#demo-console}
 
-<br /> 
+
+### Wie kann ich in SafeKit automatisierte E-Mail-Benachrichtigungen einrichten? {#how-can-i-set-up-automated-email-alerts-in-safekit}
+
+SafeKit protokolliert automatisch alle **wichtigen Cluster-Ereignisse in den Systemprotokollen**, was eine nahtlose Integration mit jedem gängigen Überwachungstool auf dem Markt ermöglicht. Darüber hinaus enthält es einen speziellen **E-Mail-Benachrichtigungsagenten**, der diese Protokolle überwacht und kritische Warnmeldungen direkt an Ihren Posteingang liefert. So bleiben die Beteiligten auch dann informiert, wenn die Webkonsole nicht aktiv überwacht wird. 
+
+  * **Intelligente Gruppierung:** Um die Anzahl der Benachrichtigungen zu reduzieren, fasst der Agent Ereignisse, die innerhalb eines kurzen Zeitraums auftreten, in einer einzigen zusammenfassenden E-Mail zusammen.
+  * **Vollständige Abdeckung:** Der Agent wird auf allen Knoten installiert und muss explizit mit SMTP-Details konfiguriert werden, um aktiviert zu werden.
+  * **Anpassbare Empfänger:** Leiten Sie Warnmeldungen direkt an bestimmte IT-Teams oder Management-Aliase weiter, um eine schnelle Reaktion zu gewährleisten.
+
+
+Durch die Kombination von Echtzeit-PWA-Benachrichtigungen mit intelligenter E-Mail-Gruppierung bietet SafeKit eine mehrschichtige Benachrichtigungsstrategie für geschäftskritische Vorgänge.
+
+### SafeKit-Video: E-Mail-Benachrichtigungen bei Failover (1:04) {#demo-notifications}
+
 
 
 {{%  insert-safekit-hub-de  %}}

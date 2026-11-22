@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-21.14",
+  "version": "2026-11-22.7",
   "keep": [
     "mirror",
     "farm",
@@ -184,7 +184,8 @@
     "Always On",
     "Active Directory",
     "Express",
-    "WAIT-WAIT"
+    "WAIT-WAIT",
+    "Smart Console"
   ],
   "terms": {
     "farm cluster": {
@@ -1545,6 +1546,30 @@
       [
         "\\b([Cc]ontrairement) la\\b",
         "\\1 à la"
+      ],
+      [
+        "\\bserveur(s?) de sauvegarde\\b",
+        "serveur\\1 de secours"
+      ],
+      [
+        "\\b(redondance) ((?:<[^>]+>)*\\s*SafeKit(?:\\s*</[^>]+>)*)\\s*(N-1)\\b",
+        "\\1 \\3 \\2"
+      ],
+      [
+        "\\brépartition de charge logicielle\\b",
+        "équilibrage de charge logiciel"
+      ],
+      [
+        "(\\*\\*Checkers\\s*:\\*\\*\\s*)[Ss]urveille l’état de l’application et déclenche",
+        "\\1Surveillez l’état de l’application et déclenchez"
+      ],
+      [
+        "\\bgrappes de vidéosurveillance situées\\b",
+        "clusters de vidéosurveillance situés"
+      ],
+      [
+        "\\bgrappe(s?)\\b",
+        "cluster\\1"
       ]
     ],
     "it": [
@@ -1831,6 +1856,18 @@
       [
         "\\bElevata disponibilità\\b",
         "Alta disponibilità"
+      ],
+      [
+        "\\bun[’']elevata disponibilità\\b",
+        "alta disponibilità"
+      ],
+      [
+        "\\belevata disponibilità\\b",
+        "alta disponibilità"
+      ],
+      [
+        "\\b(ridondanza) ((?:<[^>]+>)*\\s*SafeKit(?:\\s*</[^>]+>)*)\\s*(N-1)\\b",
+        "\\1 \\3 \\2"
       ]
     ],
     "es": [
@@ -2205,6 +2242,14 @@
       [
         "\\bsoftware de agrupación en clústeres\\b",
         "software de clúster"
+      ],
+      [
+        "\\bservidor(es)? de copia de seguridad\\b",
+        "servidor\\1 de respaldo"
+      ],
+      [
+        "\\b(redundancia) ((?:<[^>]+>)*\\s*SafeKit(?:\\s*</[^>]+>)*)\\s*(N-1)\\b",
+        "\\1 \\3 \\2"
       ]
     ],
     "pt": [
@@ -2643,6 +2688,14 @@
       [
         "\\bvs\\. Outras Soluções de Clusterização\\b",
         "vs. outras soluções de cluster"
+      ],
+      [
+        "\\b(redundância) ((?:<[^>]+>)*\\s*SafeKit(?:\\s*</[^>]+>)*)\\s*(N-1)\\b",
+        "\\1 \\3 \\2"
+      ],
+      [
+        "\\b(Como(?: é que)?) (?=(?:<[^>]+>)*\\s*SafeKit)",
+        "\\1 o "
       ]
     ],
     "ar": [
@@ -3177,6 +3230,46 @@
       [
         "(mirror) متطابق(?=\\s)",
         "\\1"
+      ],
+      [
+        "أدلةه\\b",
+        "أدلته"
+      ],
+      [
+        "(^|\\s)N (?:وحدات|وحدة) (mirror|farm)\\b",
+        "\\1N من وحدات \\2"
+      ],
+      [
+        "خادم النسخ الاحتياطي",
+        "الخادم الاحتياطي"
+      ],
+      [
+        "خادم نسخ احتياطي",
+        "خادم احتياطي"
+      ],
+      [
+        "توفر عالٍ",
+        "توافر عالٍ"
+      ],
+      [
+        "إتاحة عالية",
+        "توافر عالٍ"
+      ],
+      [
+        "(farm(?:\\s*</[^>]+>)*)\\s+(?=(?:<[^>]+>)*Windows و)",
+        "\\1 على "
+      ],
+      [
+        "حلول التجميع الأخرى من NLB",
+        "حلول تجميع NLB الأخرى"
+      ],
+      [
+        "(VM\\d) والجهاز (VM\\d)",
+        "\\1 و\\2"
+      ],
+      [
+        "(حالة) ([A-Z]{2,}) \" (?=\\()",
+        "\\1 \"\\2\" "
       ]
     ],
     "de": [
@@ -3883,6 +3976,30 @@
       [
         "\\b(eines (?:[A-Za-z]+-)+Cluster)(?![\\w-])",
         "\\1s"
+      ],
+      [
+        "\\bSAN Anforderungen\\b",
+        "SAN-Anforderungen"
+      ],
+      [
+        "\\beine hohe Verfügbarkeit\\b",
+        "Hochverfügbarkeit"
+      ],
+      [
+        "\\bHohe Verfügbarkeit\\b",
+        "Hochverfügbarkeit"
+      ],
+      [
+        "\\bSafeKit N-1[ -]Redundanz",
+        "SafeKit-N-1-Redundanz"
+      ],
+      [
+        "\\bN-1 Redundanz",
+        "N-1-Redundanz"
+      ],
+      [
+        "\\bActive-Active(?=\\W)",
+        "Aktiv-Aktiv"
       ]
     ],
     "ko": [
@@ -4885,6 +5002,54 @@
       [
         "(클러스터(?:\\s*</[^>]+>)*)\\s*를 구성(?=\\s*[,\\\"<]|\\s*$)",
         "\\1 구성"
+      ],
+      [
+        "(?<![\\w+])N (?=(?:<[^>]+>)*(?:mirror|farm) 모듈)",
+        "N개의 "
+      ],
+      [
+        "하나 (?=(?:기본|주) 서버)",
+        "하나의 "
+      ],
+      [
+        "(서버)\\s+만(?=\\s)",
+        "\\1만"
+      ],
+      [
+        "(Linux(?:\\s*</[^>]+>)*)\\s+위한",
+        "\\1를 위한"
+      ],
+      [
+        "(SafeKit(?:\\s*</[^>]+>)*)\\s+(?=(?:<[^>]+>)*Windows 및 Linux에서)",
+        "\\1은 "
+      ],
+      [
+        "(클러스터(?:\\s*</[^>]+>)*)\\s+(?=(?:<[^>]+>)*Windows 및 Linux에서)",
+        "\\1는 "
+      ],
+      [
+        "(클러스터(?:\\s*</[^>]+>)*)\\s*를 구성 방법",
+        "\\1 구성 방법"
+      ],
+      [
+        "(클러스터(?:\\s*</[^>]+>)*)\\s+(?=웹 콘솔과)",
+        "\\1가 "
+      ],
+      [
+        "(클러스터(?:\\s*</[^>]+>)*)\\s+(?=모니터링하면)",
+        "\\1를 "
+      ],
+      [
+        "(node\\d)\\s+(?=에서)",
+        "\\1"
+      ],
+      [
+        "(VM[24])\\s+(?=활성화)",
+        "\\1가 "
+      ],
+      [
+        "(VM[13])\\s+(?=활성화)",
+        "\\1이 "
       ]
     ],
     "ja": [
@@ -5683,6 +5848,18 @@
       [
         "クラスターは(?=どのように[^、。？]*実装)",
         "クラスターを"
+      ],
+      [
+        "(\\b(?:N|\\d+)) 個 (?=(?:<[^>]+>)*(?:mirror|farm)\\b)",
+        "\\1 個の "
+      ],
+      [
+        "(SafeKit(?:\\s*</[^>]+>)*)\\s*、\\s*(?=(?:<[^>]+>)*Windows および Linux 上で)",
+        "\\1 は "
+      ],
+      [
+        "(SafeKit(?:\\s*</[^>]+>)*)\\s*は\\s*(?=Web コンソールは)",
+        "\\1 "
       ]
     ],
     "zh-hans": [
@@ -6017,6 +6194,22 @@
       [
         "没有 SAN 情况下",
         "没有 SAN 的情况下"
+      ],
+      [
+        "([\\u4e00-\\u9fff])\\(([A-Za-z0-9 ]+)\\)\\s*(?=[\\u4e00-\\u9fff])",
+        "\\1 (\\2) "
+      ],
+      [
+        "适用于 (Windows 和 Linux)\\s*(?=网络)",
+        "适用于 \\1 的"
+      ],
+      [
+        "适用于 Windows 的 ((?:<[^>]+>)*SafeKit(?:\\s*</[^>]+>)*)\\s*和 Linux 的",
+        "\\1 适用于 Windows 和 Linux 的"
+      ],
+      [
+        "无错误的可用性",
+        "无错误的高可用性"
       ]
     ],
     "nl": [
@@ -6547,6 +6740,34 @@
       [
         "\\b(SafeKit [Ff]arm) en (mirror-module)",
         "\\1- en \\2"
+      ],
+      [
+        "\\bgestoringen servers\\b",
+        "uitgevallen servers"
+      ],
+      [
+        "\\b(N\\+1)-servers\\b",
+        "\\1 servers"
+      ],
+      [
+        "\\bSAN vereisten\\b",
+        "SAN-vereisten"
+      ],
+      [
+        "\\b(SafeKit) N-1[ -]redundantie",
+        "\\1 N-1-redundantie"
+      ],
+      [
+        "\\bN-1 redundantie(?=cluster)",
+        "N-1-redundantie"
+      ],
+      [
+        "\\bHoe implementeer je\\b",
+        "Hoe implementeert u"
+      ],
+      [
+        "(SafeKit(?:\\s*</[^>]+>)*)\\s+\\'s\\b",
+        "\\1's"
       ]
     ],
     "pt-br": [
@@ -6677,6 +6898,10 @@
       [
         "\\b(cluster mirror) alta disponibilidade\\b",
         "\\1 de alta disponibilidade"
+      ],
+      [
+        "\\b(pressup[õo]e que apenas um servidor primário) falha\\b",
+        "\\1 falhe"
       ]
     ],
     "pt-pt": [
@@ -6767,6 +6992,22 @@
       [
         "\\bSoftware de Agrupamento\\b",
         "Software de Clustering"
+      ],
+      [
+        "\\bcomutação por failover\\b",
+        "failover"
+      ],
+      [
+        "\\bservidor(es)? de cópia de segurança\\b",
+        "servidor\\1 de backup"
+      ],
+      [
+        "\\bElevada disponibilidade\\b",
+        "Alta disponibilidade"
+      ],
+      [
+        "\\belevada disponibilidade\\b",
+        "alta disponibilidade"
       ]
     ]
   },

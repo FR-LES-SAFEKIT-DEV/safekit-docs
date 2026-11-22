@@ -1,16 +1,17 @@
 ---
-title: "SafeKit Farm -cluster: taakverdeling en hoge beschikbaarheid"
+title: "SafeKit farm-cluster: netwerkloadbalancing en hoge beschikbaarheid voor Windows en Linux"
 canonical: "https://safekit.eviden.com/nl/architectures/network-load-balancing-cluster/"
-description: "SafeKit biedt krachtige netwerkbelastingverdeling (NLB) en automatische failover in één softwarepakket. Vervang dure hardwarematige loadbalancers door het virtuele IP-beheer op kernelniveau van SafeKit voor Windows en Linux . Ideaal voor OEM-integratie en vereenvoudigd clusterbeheer."
+description: "SafeKit levert hoogwaardige netwerktaakverdeling (NLB) en automatische failover in één softwarepakket. Vervang dure hardwarematige load balancers door het virtuele IP-beheer op kernelniveau van SafeKit voor Windows en Linux. Ideaal voor OEM-integratie en vereenvoudigd clusterbeheer."
 category: "architectures"
 lang: "nl"
-topics: "Het SafeKit Farm cluster: NLB op softwarebasis en automatische failover voor Windows / Linux , Inhoudsopgave, Hoe implementeert de SafeKit -software eenvoudig een Windows / Linux Network Load Balancing (NLB)-cluster?, Hoe werkt het SafeKit cluster in farm modus met Windows / Linux ?, Vergelijking: SafeKit Farm cluster voor Windows / Linux versus andere NLB-clusteroplossingen, Videogids: Een SafeKit Farm NLB configureren Cluster, 🔍 Ontdek SafeKit"
+topics: "SafeKit farm-cluster: softwarematige taakverdeling en automatische failover voor Windows en Linux, Inhoudsopgave, Hoe implementeert SafeKit een netwerkloadbalancingcluster (NLB) op Windows en Linux?, Hoe werkt een SafeKit farm-cluster op Windows en Linux?, Vergelijking van het SafeKit farm-cluster met andere NLB-clusteroplossingen, Videogids: een SafeKit farm-NLB-cluster configureren, 🔍 Ontdek SafeKit"
+translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.4 | Translation LLM | 52 expressions"
 ---
 
-# SafeKit <span class="notranslate farm-term" translate="no">Farm</span> -cluster: taakverdeling en hoge beschikbaarheid {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
+# SafeKit <span class="notranslate farm-term" translate="no">farm</span>-cluster: netwerkloadbalancing en hoge beschikbaarheid voor Windows en Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}
 
 
-{{%  insert-safekit-solution-farm-2-nl app="Windows / Linux" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}
+{{%  insert-safekit-solution-farm-2-nl app="Windows/Linux" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"  %}}
 
 {{%  insert-safekit-hub-nl  %}}
 
