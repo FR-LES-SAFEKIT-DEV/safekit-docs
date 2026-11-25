@@ -38,7 +38,8 @@
     {{ $isArticle := in (slice "Article" "TechArticle") $schemaType }}
     {{ $fragment := "webpage" }}
     {{ if $isArticle }}{{ $fragment = "article" }}{{ end }}
-    {{ $pageSchema := dict "@context" "https://schema.org" "@type" $schemaType "@id" (printf "%s#%s" $pageURL $fragment) "url" $pageURL "name" .Title "inLanguage" .Lang }}
+    {{ $author := dict "@type" "Organization" "name" "Eviden" "url" "https://eviden.com/" }}
+    {{ $pageSchema := dict "@context" "https://schema.org" "@type" $schemaType "@id" (printf "%s#%s" $pageURL $fragment) "url" $pageURL "name" .Title "inLanguage" .Lang "author" $author }}
     {{ with .Params.description }}{{ $pageSchema = merge $pageSchema (dict "description" .) }}{{ end }}
     {{ with .Params.image }}
     {{ $imageURL := replace (absURL .) $.Site.BaseURL $realBase }}

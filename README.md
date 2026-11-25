@@ -40,6 +40,7 @@ front matter to override the default with `WebPage`, `CollectionPage`,
 `ContactPage`, `Article`, or `TechArticle`. Home, product, and individual
 solution pages link to the same SafeKit software entity. Pages marked
 `noindex`, redirects, and 404 pages do not receive this structured data.
+Every page JSON-LD identifies Eviden as its organizational author.
 The `image` front matter field sets the page's JSON-LD image independently of
 `socialImage`. Prefer a representative image visible on the page; the SafeKit
 icon is used where no suitable image was found and may be ignored by Google.
