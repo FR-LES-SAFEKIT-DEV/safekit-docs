@@ -19,6 +19,32 @@
     {{ $realBase := .Site.Params.sitemapBaseURL | default .Site.BaseURL }}
     {{ if and (not .Params.noindex) (not .Params.redirectURL) }}
     {{ $pageURL := .Params.canonical | default (replace .Permalink .Site.BaseURL $realBase) }}
+    {{ $softwareID := printf "%s/#software" (strings.TrimSuffix "/" $realBase) }}
+    {{ $isProductPage := and .IsSection (eq .Section "product") .Parent.IsHome }}
+    {{ $schemaType := "WebPage" }}
+    {{ if and .IsSection (not $isProductPage) }}
+    {{ $schemaType = "CollectionPage" }}
+    {{ else if and .IsPage (in (slice "quick-install" "best-practises") .Section) }}
+    {{ $schemaType = "TechArticle" }}
+    {{ else if and .IsPage .File (in (slice "contact-us-for-safekit" "contact-safekit" "contact-marketo") .File.TranslationBaseName) }}
+    {{ $schemaType = "ContactPage" }}
+    {{ end }}
+    {{ with .Params.schemaType }}
+    {{ if not (in (slice "WebPage" "CollectionPage" "ContactPage" "Article" "TechArticle") .) }}
+    {{ errorf "Invalid schemaType %q for %s" . $pageURL }}
+    {{ end }}
+    {{ $schemaType = . }}
+    {{ end }}
+    {{ $isArticle := in (slice "Article" "TechArticle") $schemaType }}
+    {{ $fragment := "webpage" }}
+    {{ if $isArticle }}{{ $fragment = "article" }}{{ end }}
+    {{ $pageSchema := dict "@context" "https://schema.org" "@type" $schemaType "@id" (printf "%s#%s" $pageURL $fragment) "url" $pageURL "name" .Title "inLanguage" .Lang }}
+    {{ with .Params.description }}{{ $pageSchema = merge $pageSchema (dict "description" .) }}{{ end }}
+    {{ if $isArticle }}{{ $pageSchema = merge $pageSchema (dict "headline" .Title "mainEntityOfPage" $pageURL) }}{{ end }}
+    {{ if or .IsHome $isProductPage (and .IsPage (eq .Section "solutions")) }}
+    {{ $pageSchema = merge $pageSchema (dict "about" (dict "@id" $softwareID "@type" "SoftwareApplication" "name" "SafeKit")) }}
+    {{ end }}
+    <script type="application/ld+json">{{ $pageSchema | jsonify | safeJS }}</script>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SafeKit">
     <meta property="og:title" content="{{ .Title }}">
@@ -32,9 +58,9 @@
     <meta property="og:image" content="{{ $imageURL }}">
     <meta name="twitter:image" content="{{ $imageURL }}">
     {{ end }}
-    {{ if or .IsHome (and .IsSection (eq .Section "product") .Parent.IsHome) }}
+    {{ if or .IsHome $isProductPage }}
     {{ $publisher := dict "@type" "Organization" "name" "Eviden" }}
-    {{ $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "name" "SafeKit" "applicationCategory" "High Availability Software" "operatingSystem" "Windows, Linux" "publisher" $publisher }}
+    {{ $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "@id" $softwareID "name" "SafeKit" "applicationCategory" "High Availability Software" "operatingSystem" "Windows, Linux" "publisher" $publisher }}
     <script type="application/ld+json">{{ $software | jsonify | safeJS }}</script>
     {{ end }}
     {{ if and .IsHome (eq .Lang "en") }}

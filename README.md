@@ -33,6 +33,14 @@ so Twitter cards use the `summary` layout.
 The home and product pages also describe SafeKit with `SoftwareApplication`
 structured data in every language.
 
+Indexable pages receive page-specific JSON-LD: `TechArticle` for individual
+quick-install and best-practises pages, `CollectionPage` for section indexes,
+`ContactPage` for contact forms, and `WebPage` otherwise. Set `schemaType` in
+front matter to override the default with `WebPage`, `CollectionPage`,
+`ContactPage`, `Article`, or `TechArticle`. Home, product, and individual
+solution pages link to the same SafeKit software entity. Pages marked
+`noindex`, redirects, and 404 pages do not receive this structured data.
+
 The HTML head and language sitemaps advertise the same available, indexable
 translations using `hreflang`. English is also the `x-default` where available.
 Pages excluded from the sitemap, marked `noindex`, or redirected are excluded
