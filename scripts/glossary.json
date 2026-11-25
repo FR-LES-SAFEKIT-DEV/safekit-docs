@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-22.7",
+  "version": "2026-11-25.4",
   "keep": [
     "mirror",
     "farm",
@@ -875,6 +875,15 @@
     },
     "data replication techniques": {
       "de": "Datenreplikationstechniken"
+    },
+    "metro operations control (OCC)": {
+      "fr": "Poste de commande centralisé du métro (PCC)",
+      "de": "U-Bahn-Betriebsleitzentrale (OCC)",
+      "it": "Centro di controllo operativo della metropolitana (OCC)",
+      "es": "Centro de control de operaciones del metro (OCC)",
+      "nl": "Metroverkeersleiding (OCC)",
+      "pt-br": "Centro de controle operacional do metrô (OCC)",
+      "pt-pt": "Centro de controlo operacional do metro (OCC)"
     }
   },
   "grammar": {
@@ -1570,6 +1579,34 @@
       [
         "\\bgrappe(s?)\\b",
         "cluster\\1"
+      ],
+      [
+        "SafeKit\\s*:\\s*Logiciel de haute disponibilité",
+        "SafeKit : logiciel de haute disponibilité"
+      ],
+      [
+        "\\bserveurs standards\\b",
+        "serveurs standard"
+      ],
+      [
+        "(d’un disque de quorum), Active Directory\\b",
+        "\\1, d’Active Directory"
+      ],
+      [
+        "\\bComparer HA applicative\\b",
+        "Comparer la HA applicative"
+      ],
+      [
+        "\\b(lors de l’utilisation|en cas d’utilisation) de HA de VM\\b",
+        "\\1 de la HA de VM"
+      ],
+      [
+        "\\ben tant qu’option logicielle uniquement\\b",
+        "sous forme d’option purement logicielle"
+      ],
+      [
+        "\\bconvient bien à quelques téraoctets\\b",
+        "convient bien jusqu’à quelques téraoctets"
       ]
     ],
     "it": [
@@ -1868,6 +1905,34 @@
       [
         "\\b(ridondanza) ((?:<[^>]+>)*\\s*SafeKit(?:\\s*</[^>]+>)*)\\s*(N-1)\\b",
         "\\1 \\3 \\2"
+      ],
+      [
+        "\\breplica e failover dell’intera macchina virtuale",
+        "replica l’intera macchina virtuale e ne esegue il failover"
+      ],
+      [
+        "\\bConfronto tra HA applicativa e l’HA delle VM",
+        "Confronta l’HA applicativa e l’HA delle VM"
+      ],
+      [
+        "\\bquando si utilizza HA delle VM\\b",
+        "quando si utilizza l’HA delle VM"
+      ],
+      [
+        "\\bSicurezza fisica e settore\\b",
+        "Sicurezza fisica e industria"
+      ],
+      [
+        "\\be i vostri database, quindi non dovrete pagare",
+        "e i tuoi database, quindi non dovrai pagare"
+      ],
+      [
+        "\\bapplicazioni critiche del settore aereo\\b",
+        "applicazioni critiche lato aria"
+      ],
+      [
+        "\\bGuasti del software\\b",
+        "Guasti software"
       ]
     ],
     "es": [
@@ -2250,6 +2315,34 @@
       [
         "\\b(redundancia) ((?:<[^>]+>)*\\s*SafeKit(?:\\s*</[^>]+>)*)\\s*(N-1)\\b",
         "\\1 \\3 \\2"
+      ],
+      [
+        "\\bComienza tu prueba gratuita",
+        "Comience su prueba gratuita"
+      ],
+      [
+        "\\bExplora todos los casos de uso",
+        "Explore todos los casos de uso"
+      ],
+      [
+        "\\bsin necesidad balanceador",
+        "sin necesidad de balanceador"
+      ],
+      [
+        "\\bComparación de HA de aplicación y la HA de VM",
+        "Comparar la HA de aplicación y la HA de VM"
+      ],
+      [
+        "\\bcuando se utiliza HA de VM\\b",
+        "cuando se utiliza la HA de VM"
+      ],
+      [
+        "\\bElige tu nivel de protección",
+        "Elija su nivel de protección"
+      ],
+      [
+        "\\bMódulos listos para usar para sus\\b",
+        "Módulos listos para usar con sus"
       ]
     ],
     "pt": [
@@ -2696,6 +2789,18 @@
       [
         "\\b(Como(?: é que)?) (?=(?:<[^>]+>)*\\s*SafeKit)",
         "\\1 o "
+      ],
+      [
+        "SafeKit: Software de [Aa]lta [Dd]isponibilidade",
+        "SafeKit: software de alta disponibilidade"
+      ],
+      [
+        "\\bcluster mirror (\\d+) nós\\b",
+        "cluster mirror de \\1 nós"
+      ],
+      [
+        "\\bO que (?=(?:<[^>]+>)*\\s*SafeKit)",
+        "O que o "
       ]
     ],
     "ar": [
@@ -3270,6 +3375,38 @@
       [
         "(حالة) ([A-Z]{2,}) \" (?=\\()",
         "\\1 \"\\2\" "
+      ],
+      [
+        "تجمع SafeKit أربع",
+        "يجمع SafeKit أربع"
+      ],
+      [
+        "وتوفر HA على مستوى الأجهزة الافتراضية",
+        "وHA على مستوى الأجهزة الافتراضية"
+      ],
+      [
+        "أنظمة التحكم الإشرافي وجمع SCADA",
+        "SCADA"
+      ],
+      [
+        "Genetec، و Nedap، و Bosch،",
+        "Genetec، Nedap، Bosch،"
+      ],
+      [
+        "AWS، و Azure، و GCP",
+        "AWS وAzure وGCP"
+      ],
+      [
+        "من بروبات\\s*Probat",
+        "من Probat"
+      ],
+      [
+        "SafeKit\\s*\\)\\s*:",
+        "SafeKit:"
+      ],
+      [
+        "لتوفرية عالية",
+        "للتوافر العالي"
       ]
     ],
     "de": [
@@ -4000,6 +4137,34 @@
       [
         "\\bActive-Active(?=\\W)",
         "Aktiv-Aktiv"
+      ],
+      [
+        "keine Quorum-Festplatte, Active Directory und keine",
+        "keine Quorum-Festplatte, kein Active Directory und keine"
+      ],
+      [
+        "eines (\\d+)-Knoten[ -]Mirror-Cluster\\b(?!s)",
+        "eines Mirror-Clusters mit \\1 Knoten"
+      ],
+      [
+        "repliziert und übernimmt die gesamte virtuelle Maschine",
+        "repliziert die gesamte virtuelle Maschine und führt deren Failover durch"
+      ],
+      [
+        "\\bbei Verwendung VM-HA\\b",
+        "bei Verwendung von VM-HA"
+      ],
+      [
+        "\\bermöglicht es Betreibern\\b",
+        "Ermöglicht es Betreibern"
+      ],
+      [
+        "\\bstellt die Überwachung für\\b",
+        "Stellt die Überwachung für"
+      ],
+      [
+        "(?<=\\. )Verwendet mit ([^.]+)\\.",
+        "Wird mit \\1 verwendet."
       ]
     ],
     "ko": [
@@ -5050,6 +5215,34 @@
       [
         "(VM[13])\\s+(?=활성화)",
         "\\1이 "
+      ],
+      [
+        "네트워크 부하 분산 외부",
+        "네트워크 부하 분산은 외부"
+      ],
+      [
+        "KVM 포함한",
+        "KVM을 포함한"
+      ],
+      [
+        "보호 수준을 선택하세요(?!\\s*\\.)",
+        "보호 수준 선택"
+      ],
+      [
+        "SafeKit(\\*\\*|</[^>]+>)\\s*는",
+        "SafeKit\\1은"
+      ],
+      [
+        "SafeKit(\\*\\*|</[^>]+>)\\s*를",
+        "SafeKit\\1을"
+      ],
+      [
+        "SafeKit(\\*\\*|</[^>]+>)\\s*가(?=\\s)",
+        "SafeKit\\1이"
+      ],
+      [
+        "(^\\s*|[.!?]\\s+)SafeKit\\s+(?=Windows 및)",
+        "\\1SafeKit은 "
       ]
     ],
     "ja": [
@@ -5860,6 +6053,54 @@
       [
         "(SafeKit(?:\\s*</[^>]+>)*)\\s*は\\s*(?=Web コンソールは)",
         "\\1 "
+      ],
+      [
+        "SafeKit\\s*は?\\s*機能(?![\\u3040-\\u30ff\\u4e00-\\u9fff])",
+        "SafeKit の機能"
+      ],
+      [
+        "ネットワーク負荷分散外部の",
+        "ネットワーク負荷分散は、外部の"
+      ],
+      [
+        "(VM HA(?:\\*\\*)?)\\s*[(（]\\s*(`hyperv\\.safe`)\\s*[、,]\\s*(`kvm\\.safe`)\\s*[)）]\\s*は",
+        "\\1（\\2、\\3）は"
+      ],
+      [
+        "ADB SafeGate\\s*は\\s*などの",
+        "ADB SafeGate などの"
+      ],
+      [
+        "監視を可能にする。",
+        "監視を可能にします。"
+      ],
+      [
+        "ソフトウェア発行元\\s*[(（]\\s*OEM\\s*[)）]\\s*[:：]",
+        "ソフトウェア発行元（OEM）："
+      ],
+      [
+        "物理的セキュリティと業界",
+        "物理セキュリティと産業"
+      ],
+      [
+        "保護レベルを選択してください(?!\\s*。)",
+        "保護レベルの選択"
+      ],
+      [
+        "ハイアベイラビリティソフトウェア",
+        "高可用性ソフトウェア"
+      ],
+      [
+        "(\\d+)\\s*番目のサーバー",
+        "\\1 台目のサーバー"
+      ],
+      [
+        "(^\\s*|[。！？]\\s*)((?:\\*\\*)?SafeKit(?:\\*\\*)?)\\s+(?=標準)",
+        "\\1\\2 は"
+      ],
+      [
+        "負荷分散\\s*組み合わせ",
+        "負荷分散を組み合わせ"
       ]
     ],
     "zh-hans": [
@@ -6210,6 +6451,26 @@
       [
         "无错误的可用性",
         "无错误的高可用性"
+      ],
+      [
+        "适用于 Windows 和 Linux (?!的)(?=[\\u4e00-\\u9fff])",
+        "适用于 Windows 和 Linux 的"
+      ],
+      [
+        "（包括 VMware、Hyper-V 和 KVM 上的虚拟机",
+        "（包括 VMware、Hyper-V 和 KVM）上的虚拟机"
+      ],
+      [
+        "\\s*\\(\\s*([A-Z]{2,5})\\s*\\)\\s*(?=[:：])",
+        "（\\1）"
+      ],
+      [
+        "LAN 或虚拟局域网",
+        "LAN 或 VLAN"
+      ],
+      [
+        "定价简单且可预测",
+        "简单且可预测的定价"
       ]
     ],
     "nl": [
@@ -6768,6 +7029,22 @@
       [
         "(SafeKit(?:\\s*</[^>]+>)*)\\s+\\'s\\b",
         "\\1's"
+      ],
+      [
+        "\\bmirror-cluster (\\d+) nodes\\b",
+        "mirror-cluster met \\1 nodes"
+      ],
+      [
+        "\\bU hebt geen SAN, een quorumschijf\\b",
+        "U hebt geen SAN, quorumschijf"
+      ],
+      [
+        "\\bwelk virtueel IP-adres u moet failoveren\\b",
+        "voor welk virtueel IP-adres u een failover moet uitvoeren"
+      ],
+      [
+        "\\brepliceert en failovert de hele virtuele machine\\b",
+        "repliceert de hele virtuele machine en voert er een failover van uit"
       ]
     ],
     "pt-br": [
@@ -6902,6 +7179,26 @@
       [
         "\\b(pressup[õo]e que apenas um servidor primário) falha\\b",
         "\\1 falhe"
+      ],
+      [
+        "\\bControlo\\b",
+        "Controle"
+      ],
+      [
+        "\\bcontrolo\\b",
+        "controle"
+      ],
+      [
+        "\\bligados a aplicações\\b",
+        "conectados a aplicações"
+      ],
+      [
+        "\\bAVAC\\b",
+        "HVAC"
+      ],
+      [
+        "\\blinhas de metro\\b",
+        "linhas de metrô"
       ]
     ],
     "pt-pt": [
@@ -7008,6 +7305,18 @@
       [
         "\\belevada disponibilidade\\b",
         "alta disponibilidade"
+      ],
+      [
+        "\\bFailover automática de emergência\\b",
+        "Failover automático"
+      ],
+      [
+        "(de um disco de quórum), Active Directory, nem\\b",
+        "\\1, de Active Directory, nem"
+      ],
+      [
+        "\\bMódulos pré-fabricados\\b",
+        "Módulos prontos a usar"
       ]
     ]
   },

@@ -1,34 +1,34 @@
 ---
-title: "SafeKit: Hochverfügbarkeitssoftware für Windows und Linux ohne SAN"
+title: "SafeKit: Hochverfügbarkeitssoftware für Windows und Linux, ohne SAN"
 canonical: "https://safekit.eviden.com/de/"
-description: "SafeKit ist die All-in-One-SANless-HA-Software für Windows und Linux. Erhalten Sie synchrone Replikation in Echtzeit, automatische Failover und Lastausgleich in einem einfachen, kostengünstigen Paket. Starten Sie Ihre 30-tägige kostenlose Testversion."
+description: "SafeKit bietet Hochverfügbarkeit für Windows und Linux mit synchroner Replikation, automatischem Failover und Lastausgleich auf zwei Standardservern, ohne SAN."
 category: "home"
 lang: "de"
-topics: "Was SafeKit leistet, Wählen Sie Ihr Schutzniveau, Vorgefertigte Module für Ihre Anwendungen, Kundenanwendungsfälle, Einfache, vorhersehbare Preise, Kennen Sie die Grenzen, bevor Sie beginnen, SafeKit-Videobibliothek, 🔍 SafeKit entdecken"
-translation: "translate_md 2026-11-05.8 | glossaire 2026-11-05.12 | Translation LLM | 15 expressions"
+topics: "Was SafeKit tut, Wählen Sie Ihr Schutzniveau, Fertige Module für Ihre Anwendungen, Anwendungsfälle unserer Kunden, Einfache und vorhersehbare Preise, Zu berücksichtigende Einschränkungen, SafeKit-Videobibliothek, 🔍 SafeKit entdecken"
+translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 55 expressions"
 ---
 
-# SafeKit: Hochverfügbarkeitssoftware für Windows und Linux ohne SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
+# SafeKit: Hochverfügbarkeitssoftware für Windows und Linux, ohne SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
 
 SafeKit verwandelt zwei Standardserver in einen SANless-Hochverfügbarkeitscluster, der Ihre Anwendungen am Laufen hält. Es repliziert Ihre Daten in Echtzeit, startet Ihre Anwendung auf dem zweiten Server neu, wenn der erste ausfällt, und integriert den ausgefallenen Server automatisch wieder, sobald er repariert ist. Sie installieren es auf den Servern, die Sie bereits haben, ohne dass ein gemeinsamer Speicher oder Cluster-Kenntnisse erforderlich sind.
 
-Die Replikation ist synchron, sodass keine Daten verloren gehen, wenn ein Server ausfällt, und Ihre Anwendung ist in etwa einer Minute oder weniger wieder verfügbar. Die Lizenzen sind unbefristet und werden pro Server berechnet.
+Die Replikation ist synchron, sodass keine Daten verloren gehen, wenn ein Server ausfällt, und Ihre Anwendung in etwa einer Minute oder weniger wieder verfügbar ist. Die Lizenzen sind unbefristet und werden pro Server berechnet.
 
 <a class="btn-download" href="/de/resources/safekit-free-trial/">Starten Sie Ihre 30-tägige kostenlose Testphase ›</a>
 
 
-## Was SafeKit leistet {#features}
+## Was SafeKit tut {#features}
 
-SafeKit vereint vier Funktionen in einem einzigen Produkt, das über eine einzige Webkonsole oder Befehlszeile unter Windows und Linux verwaltet wird.
+SafeKit vereint vier Funktionen in einem einzigen Produkt, das über eine einzige Webkonsole oder eine einzige Befehlszeile unter Windows und Linux verwaltet wird.
 
 | Funktion | So funktioniert es |
 |---|---|
 | **Echtzeit-Replikation** | Jede an Ihren Dateien vorgenommene Änderung wird sofort auf den zweiten Server kopiert, sodass bei einem Ausfall keine Daten verloren gehen. |
 | **Automatischer Failover** | SafeKit erkennt den Fehler, verschiebt die virtuelle IP-Adresse und startet die Anwendung auf dem anderen Server neu. |
 | **Automatischer Failback** | Der reparierte Server wird im Hintergrund resynchronisiert, während die Anwendung weiterläuft. |
-| **Lastverteilung** | Die Netzwerklastverteilung läuft innerhalb der Server, ohne externen Load Balancer oder Proxy. |
+| **Lastverteilung** | Das Netzwerk-Load-Balancing läuft innerhalb der Server, ohne externen Load Balancer oder Proxy. |
 
-![SafeKit-Webkonsole zur Überwachung eines 2-Knoten Mirror-Cluster für Windows und Linux mit PRIM und SECOND Servern und aktiver Datenreplikation](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png)
+![SafeKit-Webkonsole zur Überwachung eines Mirror-Clusters mit 2 Knoten für Windows und Linux mit PRIM und SECOND-Servern und aktiver Datenreplikation](/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png)
 
 Sie benötigen kein SAN, keine Quorum-Festplatte, kein Active Directory und keine Enterprise-Editionen Ihres Betriebssystems oder Ihrer Datenbank.
 
@@ -37,9 +37,9 @@ Sie benötigen kein SAN, keine Quorum-Festplatte, kein Active Directory und kein
 
 ## Wählen Sie Ihr Schutzniveau {#protection-levels}
 
-**Anwendungs-HA** (`mirror.safe`, `farm.safe` und die Anwendungsmodule) repliziert nur Ihre Anwendungsdaten und startet die Anwendung auf dem zweiten Server neu. Sie müssen wissen, welche Dienste neu gestartet werden müssen, welche Ordner in Echtzeit repliziert werden müssen und welche virtuelle IP-Adresse für das Failover verwendet werden soll. Es funktioniert auf physischen Servern, in virtuellen Maschinen auf allen Hypervisoren, einschließlich VMware, Hyper-V und KVM, und in der Cloud, und es bietet die schnellste Wiederherstellung.
+**Anwendungs-HA** (`mirror.safe`, `farm.safe` und die Anwendungsmodule) repliziert nur Ihre Anwendungsdaten und startet die Anwendung auf dem zweiten Server neu. Sie müssen wissen, welche Dienste neu gestartet werden müssen, welche Ordner in Echtzeit repliziert werden müssen und welche virtuelle IP-Adresse für das Failover verwendet werden soll. Sie funktioniert auf physischen Servern, in virtuellen Maschinen auf allen Hypervisoren, einschließlich VMware, Hyper-V und KVM, sowie in der Cloud, und sie bietet die schnellste Wiederherstellung.
 
-**VM-HA** (`hyperv.safe`, `kvm.safe`) repliziert und übernimmt das Failover der gesamten virtuellen Maschine, sodass Sie nicht wissen müssen, wie die Anwendung funktioniert. Es eignet sich für Umgebungen mit mehreren Anwendungen, die auf mehrere VMs verteilt sind.
+**VM-HA** (`hyperv.safe`, `kvm.safe`) repliziert und übernimmt das Failover der gesamten virtuellen Maschine, sodass Sie nicht wissen müssen, wie die Anwendung funktioniert. Dieser Ansatz eignet sich für Umgebungen mit mehreren Anwendungen, die auf mehrere VMs verteilt sind.
 
 <a class="btn-download" href="/de/best-practises/vm-ha-vs-application-ha/">Anwendungs-HA und VM-HA vergleichen ›</a>
 
@@ -57,34 +57,34 @@ Vorkonfigurierte Module sind kostenlos und im Produkt enthalten. Jedes Modul def
 <a class="btn-download" href="/de/solutions/">Alle Lösungen und Module durchsuchen ›</a>
 
 
-## Kundennutzungsfälle {#use-cases}
+## Anwendungsfälle unserer Kunden {#use-cases}
 
 - **Videomanagement (VMS):** Hält Live- und aufgezeichnete Videos auch bei einem Serverausfall verfügbar. Wird mit Milestone, Genetec und Hanwha verwendet.
 - **Zutrittskontrolle (EACS):** Hält Anmeldeinformationen und Alarme jederzeit verfügbar. Wird mit Hirsch Microsesame, Nedap AEOS und Siemens SiPass verwendet.
-- **SCADA und Industrie:** behält die Kontrolle über Produktionslinien, zum Beispiel Probat-Kaffeeröster und ALSTEF-Gepäcksortieranlagen.
+- **SCADA und Industrie:** Ermöglicht es Betreibern, die Kontrolle über Produktionslinien zu behalten, zum Beispiel Probat Kaffeeröster und ALSTEF Gepäcksortieranlagen.
 - **Gebäudemanagement (BMS):** Hält HLK-, Sicherheits- und Energiesysteme am Laufen. Wird mit Siemens Desigo CC und Bosch BIS verwendet.
 - **Flugverkehrskontrolle (ATC):** Verbindet die Fluglotsen mit wichtigen Anwendungen auf dem Flughafengelände, zum Beispiel mit ADB SafeGate.
-- **Betriebskontrollzentrum (OCC) der Metro:** stellt die Überwachung für automatisierte, fahrerlose Pariser Metrolinien sicher.
+- **U-Bahn-Betriebsleitzentrale (OCC):** Stellt die Überwachung für automatisierte, fahrerlose Pariser Metrolinien sicher.
 - **Edge-Standorte:** Verwandelt zwei Standardserver in einen HA-Cluster, wenn kein Rechenzentrum vorhanden ist.
-- **Softwarehersteller (OEM):** Erweitert Ihren Katalog um Hochverfügbarkeit als reine Softwareoption.
+- **Softwarehersteller (OEM):** Ermöglicht es Ihnen, Ihrem Katalog als reine Softwareoption Hochverfügbarkeit hinzuzufügen.
 
 <a class="btn-download" href="/de/use-cases/">Alle Anwendungsfälle entdecken ›</a>
 
 
-## Einfache, vorhersehbare Preise {#pricing}
+## Einfache und vorhersehbare Preise {#pricing}
 
-SafeKit wird mit einer unbefristeten Lizenz verkauft, es gibt also kein obligatorisches Abonnement. Der Preis hängt nur von der Anzahl der Server ab, nicht von CPU-Kernen oder Sockets, und alle Anwendungsmodule sind kostenlos. Es funktioniert auch mit Standard Editionen von Windows, Linux und Ihren Datenbanken, sodass Sie nicht für Enterprise Editionen bezahlen.
+SafeKit wird mit einer unbefristeten Lizenz verkauft, es gibt also kein obligatorisches Abonnement. Der Preis hängt nur von der Anzahl der Server ab, nicht von CPU-Kernen oder Sockets, und alle Anwendungsmodule sind kostenlos. Es funktioniert auch mit Standard-Editionen von Windows, Linux und Ihren Datenbanken, sodass Sie nicht für Enterprise-Editionen bezahlen.
 
 <a class="btn-download" href="/de/safekit-pricing/">Angebot anfordern ›</a>
 
 
-## Kennen Sie die Grenzen, bevor Sie anfangen {#limits}
+## Zu berücksichtigende Einschränkungen {#limits}
 
-SafeKit ist auf Einfachheit ausgelegt, nicht für jeden Fall. Es eignet sich gut für bis zu einige Terabyte replizierter Daten, weniger als 1.000.000 Dateien, bis zu 32 VMs bei Verwendung VM-HA und zwei Knoten im selben LAN oder VLAN mit geringer Latenz (typischerweise unter 5 ms Roundtrip).
+SafeKit ist auf Einfachheit ausgelegt, nicht für jeden Fall. Es eignet sich gut für bis zu einige Terabyte replizierter Daten, weniger als 1.000.000 Dateien, bis zu 32 VMs bei Verwendung von VM-HA und zwei Knoten im selben LAN oder VLAN mit geringer Latenz (typischerweise unter 5 ms Roundtrip).
 
 Bei größeren Datenmengen sind ein gemeinsam genutzter Speicher oder ein anderer Ansatz die bessere Wahl.
 
-<a class="btn-download" href="/de/product/#safekit-ha-limitations">Siehe die vollständige Liste der Einschränkungen ›</a>
+<a class="btn-download" href="/de/product/#safekit-ha-limitations">Die vollständige Liste der Einschränkungen anzeigen ›</a>
 
 
 {{%  insert-safekit-videos-table-de  %}}

@@ -11,7 +11,7 @@
         {{ end }}
             {{ if or (eq .Kind "404") .Params.noindex }}<meta name="robots" content="noindex">{{ end }}
             {{ with .Params.redirectURL }}<meta http-equiv="refresh" content="0; url={{ . }}">{{ end }}
-    <title>{{ .Title }} - SafeKit</title>
+    <title>{{ .Title }}{{ if not (strings.Contains (strings.ToLower .Title) "safekit") }} - SafeKit{{ end }}</title>
     {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     <link rel="icon" href="{{ "wp-content/themes/safekit/computer-safekit-icon-svg.svg" | relURL }}" type="image/svg+xml">
     {{ with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ end }}

@@ -1,29 +1,29 @@
 ---
 title: "SafeKit: software tutto in uno per l’alta disponibilità e il clustering delle applicazioni senza SAN"
 canonical: "https://safekit.eviden.com/it/product/"
-description: "SafeKit è il software HA SANless tutto in uno per Windows e Linux. Ottieni replica sincrona in tempo reale, failover automatico e bilanciamento del carico in un unico pacchetto semplice ed economico. Inizia la tua prova gratuita di 30 giorni."
+description: "SafeKit è un software ad alta disponibilità per Windows e Linux. Combina la replica in tempo reale, il failover automatico e il bilanciamento del carico di rete, senza storage condiviso."
 category: "product"
 lang: "it"
 topics: "Che cos’è SafeKit?, 🔍 Esplora SafeKit, Perché scegliere SafeKit per un’alta disponibilità semplice ed economica?, Perché un prodotto all-in-one SANless ad alta disponibilità è essenziale?, Scelta della strategia di alta disponibilità: HA delle VM o HA applicativa, Limiti dell’alta disponibilità SafeKit, Videoteca SafeKit, Confronto tra SafeKit e i cluster tradizionali ad alta disponibilità (HA), SafeKit HA: prova gratuita e documentazione tecnica, Libreria di moduli applicativi SafeKit: soluzioni HA pronte all’uso"
-translation: "translate_md 2026-11-20.9 | glossaire 2026-11-21.2 | Translation LLM | 41 expressions"
+translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 42 expressions"
 ---
 
 # SafeKit: software tutto in uno per l’alta disponibilità e il clustering delle applicazioni senza SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}
 
 ## Che cos’è SafeKit? {#what-is-safekit}
 
-**SafeKit** è **un software di alta disponibilità tutto in uno**. Combina **la replica in tempo reale basata sull’host**, **il failover automatico** e **il bilanciamento del carico** in un unico pacchetto, in modo che l’applicazione si riavvii su un secondo server in circa un minuto senza perdita di dati.
+**SafeKit** è **un software di alta disponibilità tutto in uno**. Combina **la replica in tempo reale basata sull’host**, **il failover automatico** e **il bilanciamento del carico** in un unico prodotto, in modo che l’applicazione si riavvii su un secondo server in circa un minuto senza perdita di dati.
 
-Sincronizzando i dati tra server standard, **SafeKit** elimina la necessità di costosi storage condivisi (SAN) o competenze IT specializzate, fornendo un modo semplice ed economico per proteggere **i database aziendali** (come SQL Server), **i sistemi di sicurezza critici** (come il software di gestione video Milestone XProtect) e **il software di controllo industriale SCADA** (come le applicazioni Siemens) negli ambienti Windows e Linux.
+SafeKit sincronizza i dati tra server standard, eliminando la necessità di costosi sistemi di archiviazione condivisa (SAN) o di competenze informatiche specializzate. Offre un modo semplice ed economico per proteggere **database aziendali** (come SQL Server), **sistemi di sicurezza critici** (come il software di gestione video Milestone XProtect) e **software di controllo industriale SCADA** (come le applicazioni Siemens) sia su Windows che Linux.
 
 
 SafeKit protegge le tue applicazioni da:
 
-* **Guasti hardware**, inclusa la completa avaria di una sala computer
-* **Errori del software**, come l’arresto anomalo o il blocco di un processo critico. SafeKit rileva l’errore e riavvia automaticamente il processo
-* **Errori umani**, ridotti da una semplice configurazione e da un’unica console web
+* **Guasti hardware:** SafeKit copre anche la perdita di un’intera sala server.
+* **Guasti software:** SafeKit rileva un processo critico che si arresta in modo anomalo o si blocca e lo riavvia automaticamente.
+* **Errori umani:** una configurazione semplice e un’unica console web riducono il rischio di errori.
 
-![Logo ufficiale Evidian SafeKit - Icona del software SANless per l’alta disponibilità e il clustering delle applicazioni](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png "w:128")
+![Logo Evidian SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png "w:128")
 
 {{%  insert-safekit-4-buttons-it  %}}
 
