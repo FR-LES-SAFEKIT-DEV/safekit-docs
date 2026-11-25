@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Hyper-V, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Hyper-V Lösung, Installation der SafeKit/Hyper-V Lösung unter Windows (hyperv.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Hyper-V Lösung, Demonstration der SafeKit/Hyper-V Lösung, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Hyper-V Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul hyperv.safe für Failover {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}

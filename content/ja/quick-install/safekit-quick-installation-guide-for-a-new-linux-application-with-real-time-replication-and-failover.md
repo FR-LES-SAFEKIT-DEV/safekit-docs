@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "ja"
 topics: "Linux 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Linux ソリューションの概要、SafeKit/Linux ソリューションのインストール (mirror.safe)、SafeKit/Linux ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # SafeKit による Linux 高可用性：フェイルオーバーのための mirror.safe モジュールのインストール {#linux-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

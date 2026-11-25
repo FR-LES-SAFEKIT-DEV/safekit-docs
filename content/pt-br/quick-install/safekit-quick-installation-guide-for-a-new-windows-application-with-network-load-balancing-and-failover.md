@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para Windows, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Windows, Instalação da solução SafeKit/Windows (farm.safe), Configuração passo a passo da solução SafeKit/Windows, Demonstração da solução farm SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 ---
 
 # Balanceamento de Carga e Failover de Rede Windows: Instale o Módulo farm.safe SafeKit {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione di High Availability per Windows, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Windows, Installazione sulle soluzioni SafeKit/Windows (mirror.safe), Configurazione passo-passo della soluzione SafeKit/Windows, Dimostrazione della soluzione mirror SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Alta disponibilità Windows con SafeKit: installare il modulo mirror.safe per il failover {#windows-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

@@ -5,7 +5,7 @@ description: "Deploy the mirror.safe module for SafeKit to enable synchronous re
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (mirror.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Linux High Availability with SafeKit: Install the mirror.safe Module for Failover {#linux-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

@@ -5,7 +5,7 @@ description: "Deploy the mirror.safe module for SafeKit in Azre to enable synchr
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Azure, SafeKit High Availability Limitations, Overview of the SafeKit / Azure mirror solution, Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / Azure mirror solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Azure High Availability with SafeKit: Install the mirror.safe Module for Failover {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

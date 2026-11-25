@@ -5,7 +5,7 @@ description: "Deploy the postgresql.safe module for SafeKit to enable synchronou
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for PostgreSQL, SafeKit High Availability Limitations, Overview of the SafeKit / PostgreSQL solution, Installation of the SafeKit / PostgreSQL solution on Windows and Linux (postgresql.safe), Step by step configuration of the SafeKit / PostgreSQL solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # PostgreSQL High Availability with SafeKit: Install the postgresql.safe Module for Failover {#postgresql-high-availability-with-safekit-install-the-postgresqlsafe-module-for-failover}

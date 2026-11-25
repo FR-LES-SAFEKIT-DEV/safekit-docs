@@ -5,7 +5,7 @@ description: "Deploy the firebird.safe module for SafeKit to enable synchronous 
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Firebird, SafeKit High Availability Limitations, Overview of the SafeKit / Firebird solution, Installation of the SafeKit / Firebird solution on Windows and Linux (firebird.safe), Step by step configuration of the SafeKit / Firebird solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Firebird High Availability with SafeKit: Install the firebird.safe Module for Failover {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

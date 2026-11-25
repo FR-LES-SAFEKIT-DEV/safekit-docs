@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione di Apache per l’alta disponibilità, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Apache, Installazione della soluzione SafeKit/Apache su Windows e Linux (apache_farm.safe), Configurazione passo-passo della soluzione SafeKit/Apache, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 ---
 
 # Bilanciamento del carico e failover di Apache Network: installare il modulo SafeKit apache_farm.safe {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

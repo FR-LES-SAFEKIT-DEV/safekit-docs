@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "zh-hans"
 topics: "PostgreSQL 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/PostgreSQL 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/PostgreSQL 解决方案 (postgresql.safe)、SafeKit/PostgreSQL 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # 使用 SafeKit 实现 PostgreSQL 高可用性：安装 postgresql.safe 模块以实现故障转移 {#postgresql-high-availability-with-safekit-install-the-postgresqlsafe-module-for-failover}

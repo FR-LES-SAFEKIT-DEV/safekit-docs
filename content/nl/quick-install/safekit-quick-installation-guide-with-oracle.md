@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Oracle, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Oracle-oplossing, Installatie van de SafeKit/Oracle-oplossing op Windows en Linux (oracle.safe), Stapsgewijze configuratie van de SafeKit/Oracle-oplossing, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Oracle High Availability met SafeKit: Installeer de oracle.safe-module voor failover {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}

@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع عالي التوافر لـ Nedap، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Nedap، تثبيت حل SafeKit/Nedap على Windows (nedap.safe)، تكوين حل SafeKit/Nedap خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Nedap High Availability مع SafeKit: قم بتثبيت وحدة nedap.safe للتحويل التلقائي عند الفشل {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

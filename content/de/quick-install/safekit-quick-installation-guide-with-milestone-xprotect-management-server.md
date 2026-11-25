@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Milestone XProtect, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Milestone XProtect-Lösung, Installation der SafeKit/Milestone XProtect Lösung unter Windows (milestone.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Milestone XProtect-Lösung, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Milestone XProtect High Availability mit SafeKit: Installieren Sie das Modul milestone.safe für Failover {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

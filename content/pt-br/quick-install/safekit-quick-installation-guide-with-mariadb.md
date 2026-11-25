@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para MariaDB, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/MariaDB, Instalação da solução SafeKit/MariaDB no Windows e Linux (mysql.safe), Configuração passo a passo da solução SafeKit/MariaDB, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Alta Disponibilidade MariaDB com SafeKit: Instale o Módulo mysql.safe para Failover {#mariadb-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}

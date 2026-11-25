@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "pt-pt"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para Firebird, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução SafeKit/Firebird, Instalação da solução SafeKit/Firebird no Windows e no Linux (firebird.safe), Configuração passo a passo da solução SafeKit/Firebird, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Alta Disponibilidade Firebird com SafeKit: Instale o Módulo firebird.safe para Failover {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

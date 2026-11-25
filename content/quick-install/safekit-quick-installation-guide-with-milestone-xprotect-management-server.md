@@ -5,7 +5,7 @@ description: "Deploy the milestone.safe module for SafeKit to enable synchronous
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Milestone XProtect, SafeKit High Availability Limitations, Overview of the SafeKit / Milestone XProtect solution, Installation of the SafeKit / Milestone XProtect solution on Windows (milestone.safe), Step by step configuration of the SafeKit / Milestone XProtect solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Milestone XProtect High Availability with SafeKit: Install the milestone.safe Module for Failover {#milestone-xprotect-high-availability-with-safekit-install-the-milestonesafe-module-for-failover}

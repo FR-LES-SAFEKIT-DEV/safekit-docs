@@ -5,7 +5,7 @@ description: "Learn how to migrate Milestone XProtect Management Server in a Saf
 category: "quick-install"
 lang: "en"
 topics: "Eviden SafeKit"
-image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Milestone Management Migration with SafeKit {#milestone-management-migration-with-safekit}

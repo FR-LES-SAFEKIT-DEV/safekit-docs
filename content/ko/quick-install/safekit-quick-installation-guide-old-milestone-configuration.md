@@ -5,7 +5,7 @@ category: "quick-install"
 lang: "ko"
 topics: "SafeKit/Milestone XProtect 솔루션의 이전 단계별 구성"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
-image: "/wp-content/uploads/2023/01/appli-3.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # 이전 SafeKit Milestone 구성 {#old-safekit-milestone-configuration}

@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor IIS, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/IIS-oplossing, Installatie van de SafeKit/IIS-oplossing op Windows (iis_farm.safe), Stapsgewijze configuratie van de SafeKit/IIS-oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 ---
 
 # IIS-netwerkbelastingverdeling en failover: Installeer de SafeKit iis_farm.safe-module {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}

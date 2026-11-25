@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor KVM, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/KVM oplossing, Installatie van de SafeKit/KVM-oplossing op Linux (kvm.safe), Stapsgewijze configuratie van de SafeKit/KVM oplossing, Demonstratie van een high-availability-oplossing op VM-niveau, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # KVM High Availability met SafeKit: Installeer de kvm.safe module voor failover {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}

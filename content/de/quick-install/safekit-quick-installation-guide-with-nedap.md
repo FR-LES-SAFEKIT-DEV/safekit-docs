@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Nedap, Einschränkungen SafeKit Hochverfügbarkeit, Überblick über die SafeKit/Nedap-Lösung, Installation der SafeKit/Nedap-Lösung unter Windows (nedap.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Nedap-Lösung, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Nedap Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul nedap.safe für Failover {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

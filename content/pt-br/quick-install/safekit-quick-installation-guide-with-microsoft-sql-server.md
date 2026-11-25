@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para Microsoft SQL Server, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Microsoft SQL Server, Instalação da solução SafeKit/Microsoft SQL Server no Windows (sqlserver.safe), Configuração passo a passo da solução SafeKit/Microsoft SQL Server, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Alta Disponibilidade Microsoft SQL Server com SafeKit: Instale o Módulo sqlserver.safe para Failover {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}

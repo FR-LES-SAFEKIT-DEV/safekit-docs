@@ -5,7 +5,7 @@ description: "Deploy the nedap.safe module for SafeKit to enable synchronous rea
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Nedap, SafeKit High Availability Limitations, Overview of the SafeKit / Nedap solution, Installation of the SafeKit / Nedap solution on Windows (nedap.safe), Step by step configuration of the SafeKit / Nedap solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # Nedap High Availability with SafeKit: Install the nedap.safe Module for Failover {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

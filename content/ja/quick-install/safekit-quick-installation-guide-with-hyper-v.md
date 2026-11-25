@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "ja"
 topics: "Hyper-V 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Hyper-V ソリューションの概要、Windows への SafeKit/Hyper-V ソリューションのインストール (hyperv.safe)、SafeKit/Hyper-V ソリューションのステップバイステップ設定、SafeKit/Hyper-V ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # SafeKit による Hyper-V 高可用性：フェイルオーバー用の hyperv.safe モジュールをインストールする {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}

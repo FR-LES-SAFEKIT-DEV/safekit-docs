@@ -5,7 +5,7 @@ description: "Learn how to deploy the apache_farm.safe module on Windows and Lin
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Apache, SafeKit High Availability Limitations, Overview of the SafeKit / Apache solution, Installation of the SafeKit / Apache solution on Windows and Linux (apache_farm.safe), Step by step configuration of the SafeKit / Apache solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 ---
 
 # Apache Network Load Balancing & Failover: Install the SafeKit apache_farm.safe Module {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

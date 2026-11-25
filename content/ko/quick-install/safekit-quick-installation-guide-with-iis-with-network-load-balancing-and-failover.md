@@ -6,7 +6,7 @@ category: "quick-install"
 lang: "ko"
 topics: "IIS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/IIS 솔루션 개요, Windows에 SafeKit/IIS 솔루션 설치 (iis_farm.safe), SafeKit/IIS 솔루션의 단계별 구성, SafeKit farm 솔루션 시연, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
-image: "/wp-content/uploads/2024/03/01-login-large.png"
+image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 ---
 
 # IIS 네트워크 부하 분산 및 장애 조치: SafeKit iis_farm.safe 모듈 설치 {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}
