@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "nl"
 topics: "De OEM-usecase voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 
 # OEM Hoge beschikbaarheid: SafeKit Clustering in uw software integreren {#oem-high-availability-embedding-safekit-clustering-into-your-software}

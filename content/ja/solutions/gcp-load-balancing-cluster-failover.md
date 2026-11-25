@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "アプリケーションレベルのモニタリングと自動修復機能で Cloud Load Balancer を強化、目次、SafeKit ソフトウェアは、GCP ネットワーク負荷分散(NLB)クラスターをどのように簡単に実装しますか？、SafeKit farm クラスターが GCP とどのように連携しますか？、比較：オンプレミスの SafeKit farm クラスターとクラウドの SafeKit farm クラスター、ビデオガイド：SafeKit farm NLB クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"
 ---
 
 # SafeKit：Google GCP ロードバランシングとアプリケーションの高可用性 <span class="notranslate farm-term" translate="no">farm</span> クラスター {#safekit-google-gcp-load-balancing--application-high-availability-farm-cluster}

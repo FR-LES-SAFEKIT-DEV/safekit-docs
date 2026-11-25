@@ -5,6 +5,7 @@ description: "Este documento proporciona información sobre las versiones SafeKi
 category: "resources"
 lang: "es"
 layout: userguide
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="userguide-container">

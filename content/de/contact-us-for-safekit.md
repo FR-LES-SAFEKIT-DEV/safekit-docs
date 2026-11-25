@@ -5,6 +5,7 @@ description: "Kontaktieren Sie Eviden bezüglich der Hochverfügbarkeitssoftware
 lang: "de"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 47 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Kontaktieren Sie uns bezüglich SafeKit {#contact-us-for-safekit}

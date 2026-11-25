@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ko"
 topics: "분산형 기업의 비즈니스 연속성, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 ---
 
 # 다수의 지점을 보유한 분산 기업을 위한 고가용성 표준화 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

@@ -6,6 +6,7 @@ category: "home"
 lang: "ar"
 topics: "نموذج الترخيص والتسعير، الدعم والصيانة القياسية، اطلب عرض سعر"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # أسعار SafeKit {#safekit-pricing}

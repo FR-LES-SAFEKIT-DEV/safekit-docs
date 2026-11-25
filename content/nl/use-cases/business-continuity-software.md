@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "nl"
 topics: "Bedrijfscontinuïteit in een gedistribueerde onderneming, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 ---
 
 # Standaardisatie van hoge beschikbaarheid voor gedistribueerde ondernemingen met veel vestigingen {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

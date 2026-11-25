@@ -6,6 +6,7 @@ category: "solutions"
 lang: "de"
 topics: "SafeKit für Bosch BIS: SANless Hyper-V-Cluster mit 2 Knoten, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Bosch BIS Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert der SafeKit Bosch BIS Cluster?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Bosch BIS vs. natives Hyper-V-Clustering, Videoanleitung: Konfigurieren eines SafeKit-HA-Cluster für Bosch BIS, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # SafeKit Hochverfügbarkeit für Bosch BIS: 2-Knoten-Cluster ohne gemeinsam genutzte Festplatte {#safekit-high-availability-for-bosch-bis-2-node-cluster-without-shared-disk}

@@ -6,6 +6,7 @@ category: "resources"
 lang: "nl"
 topics: "Overzicht, Inhoudsopgave, Productinformatie, Ondersteunde besturingssystemen en platforms, Beperkingen SafeKit High Availability, Vooraf geconfigureerde applicatiemodules, Architectuur en implementatie, Gegevensverlies en hersteltijden (RPO en RTO), Locaties op afstand en gedistribueerde implementaties, Monitoring en waarschuwingen, Beveiliging en naleving, Licentieverlening, Ondersteuning en onderhoud, Vergelijking met andere oplossingen, Handige links"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Technische referentie SafeKit voor RFI en RFP-documenten {#high-availability-technical-reference-for-rfi-and-rfp-preparation}

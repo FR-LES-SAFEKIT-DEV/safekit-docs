@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-br"
 topics: "Arquitetura e Padrões de Projeto, Alta Disponibilidade e Recuperação de Desastres, Estratégias de Replicação, Agrupamento e failover, Armazenamento e Infraestrutura, Implementação e Migração"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Melhores Práticas de Alta Disponibilidade {#high-availability-best-practices}

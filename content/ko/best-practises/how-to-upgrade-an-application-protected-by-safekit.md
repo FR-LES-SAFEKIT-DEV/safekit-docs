@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ko"
 topics: "SafeKit으로 보호되는 고가용성 애플리케이션 업그레이드, VM 수준의 고가용성, 애플리케이션 수준의 고가용성, 올바른 업그레이드 전략 선택하기, 결론, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # HA 클러스터에서 SafeKit으로 보호된 애플리케이션 업그레이드 {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}

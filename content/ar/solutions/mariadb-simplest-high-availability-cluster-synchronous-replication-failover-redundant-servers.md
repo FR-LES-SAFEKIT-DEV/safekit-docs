@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit الخالية من شبكة التخزين (SANless) مع MariaDB، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة MariaDB عالية التوفر بدون شبكة تخزين (SANless)؟، كيف تعمل مجموعة mirror SafeKit مع MariaDB؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ MariaDB مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"
 ---
 
 # أبسط طريقة لتحقيق التوافر العالي MariaDB: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بعقدتين {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}

@@ -5,6 +5,7 @@ description: "下载SafeKit免费试用版，访问Windows和Linux高可用性�
 category: "resources"
 lang: "zh-hans"
 topics: "免费试用、技术文档和产品信息，适用于SafeKit高可用性导航中心和 🔍 探索 SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit资源 {#safekit-resources}

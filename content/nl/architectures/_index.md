@@ -6,6 +6,7 @@ category: "architectures"
 lang: "nl"
 topics: "Wat zijn de verschillende high-availability-architecturen en de verschillende softwareclusters met SafeKit?, Hoe bouw je high-availability-clusters met SafeKit?, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 21 expressions"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # SafeKit-architecturen {#safekit-architectures}

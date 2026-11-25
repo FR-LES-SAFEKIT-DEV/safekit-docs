@@ -6,6 +6,7 @@ category: "architectures"
 lang: "pt-br"
 topics: "Alta disponibilidade e escalabilidade de aplicações web e de banco de dados críticas com o software de cluster SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # Software de Cluster com Balanceamento de Carga e Espelhamento: Alta Disponibilidade e Escalabilidade {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

@@ -5,6 +5,7 @@ description: "SafeKit provides a powerful, software-only IIS load balancing and 
 category: "solutions"
 lang: "en"
 topics: "The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for IIS, Table of Contents, How the SafeKit software simply implements a IIS Network Load Balancing (NLB) cluster?, How the SafeKit cluster in farm mode works with IIS?, Comparison: SafeKit Farm Cluster for IIS vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit Farm NLB Cluster, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"
 ---
 
 # SafeKit: All-in-One IIS Load Balancing & High Availability Software {#safekit-all-in-one-iis-load-balancing--high-availability-software}

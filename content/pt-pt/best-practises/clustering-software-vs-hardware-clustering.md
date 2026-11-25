@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-pt"
 topics: "Qual é a diferença entre o clustering de software e o clustering de hardware?, o clustering de software vs. clustering de hardware: Vantagens e Desvantagens, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 ---
 
 # Clustering de software vs. clustering de hardware para Alta Disponibilidade {#software-clustering-vs-hardware-clustering-for-high-availability}

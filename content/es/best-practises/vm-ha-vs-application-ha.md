@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "es"
 topics: "Cómo elegir su estrategia de alta disponibilidad: HA de VM frente a HA de aplicación, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 51 expressions"
+image: "/wp-content/uploads/2023/02/vm-ha-4.png"
 ---
 
 # HA de VM frente a HA de aplicación {#vm-ha-vs-application-ha}

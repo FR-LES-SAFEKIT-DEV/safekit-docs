@@ -5,6 +5,7 @@ lang: "en"
 category: "home"
 sitemap:
   disable: true
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="contact-safekit-page contact-safekit-confirmation">

@@ -5,6 +5,7 @@ description: "Dit document bevat informatie over SafeKit -releases: belangrijke 
 category: "resources"
 lang: "nl"
 layout: userguide
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="userguide-container">

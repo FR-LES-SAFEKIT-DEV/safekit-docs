@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ko"
 topics: "최고의 사용 사례, SafeKit 고가용성 제한 사항, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 ---
 
 # 고가용성 모범 사례 및 최악의 사용 사례: SafeKit 구현 가이드 {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

@@ -5,6 +5,7 @@ description: "Edge computing sites have no data center, but they still need high
 category: "use-cases"
 lang: "en"
 topics: "The high availability challenge at the edge, Why SafeKit is the natural fit for edge computing, Edge and distributed deployment suitability, Why edge OT environments are different, Ideal use cases at the edge, Edge vs. data center high availability: key differences, Supported operating systems and platforms, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 ---
 
 # Edge High Availability Without a Data Center: SafeKit for OT and Distributed Sites {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

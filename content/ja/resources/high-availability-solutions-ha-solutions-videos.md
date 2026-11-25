@@ -5,6 +5,7 @@ description: "SafeKit のデモを見て、Windows と Linux の 2 ノード SAN
 category: "resources"
 lang: "ja"
 topics: "SafeKit テクニカル フェールオーバー チュートリアルとデモ、🔍 SafeKit を探索する"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 高可用性およびフェイルオーバーのデモ: SANless クラスタリングのビデオ チュートリアル {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

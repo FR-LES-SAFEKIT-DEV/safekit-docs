@@ -5,6 +5,7 @@ description: "Compare SAN and NAS shared storage for failover clusters. SafeKit 
 category: "best-practises"
 lang: "en"
 topics: "SAN or NAS shared storage: which is simpler for a failover cluster?, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 ---
 
 # SAN vs. NAS Shared Storage for Failover Clustering: A Detailed Comparison {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

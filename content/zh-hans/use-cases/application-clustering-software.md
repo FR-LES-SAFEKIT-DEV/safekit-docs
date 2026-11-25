@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "zh-hans"
 topics: "OEM 高可用性用例、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 51 expressions"
+image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 
 # OEM 高可用性：将 SafeKit 集群技术嵌入您的软件 {#oem-high-availability-embedding-safekit-clustering-into-your-software}

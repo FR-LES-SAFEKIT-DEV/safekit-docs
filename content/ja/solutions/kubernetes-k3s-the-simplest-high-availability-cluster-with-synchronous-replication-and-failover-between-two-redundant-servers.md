@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "K3s HA の簡素化：MetalLB や Longhorn ではなく SafeKit を選ぶ理由とは？、目次、SafeKit ソフトウェアは、Kubernetes K3s 高可用性クラスターどのように簡単に実装しますか？、SafeKit mirror クラスター Kubernetes K3S とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit と標準的な K3s スタック（MetalLB と Longhorn）、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 36 expressions"
+image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 ---
 
 # Kubernetes K3s 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}

@@ -5,6 +5,7 @@ description: "Download SafeKit free trial, access technical documentation, quick
 category: "resources"
 lang: "en"
 topics: "Free Trial, Technical Documentation & Product Information for SafeKit High Availability, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit Resources {#safekit-resources}

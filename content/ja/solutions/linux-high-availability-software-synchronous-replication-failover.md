@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターが Linux での動作方法、目次、SafeKit ソフトウェアは、SAN レス Linux 高可用性クラスターどのように簡単に実装するのか？、SafeKit mirror クラスターが Linux でどのように動作しますか？、SafeKit High Availability の制限事項、比較：Linux 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"
 ---
 
 # 最もシンプルな Linux 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}

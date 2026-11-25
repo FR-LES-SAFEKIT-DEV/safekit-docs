@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ar"
 topics: "المبادئ الأساسية، المتطلب الأساسي: فسيفساء SafeKit (mosaic) ، الاختبار 1 – توزيع الاتصالات، الاختبار 2 – تغيير خادم الإرسال، الاختبار 3 – التحقق من إعادة توجيه GARP باستخدام arp -a، الاختبار 4 – التحقق من طرف إلى طرف باستخدام Wireshark (Windows) أو tcpdump (Linux)، محطات العمل التي سيتم الاختبار منها، ملخص النتائج المتوقعة، استكشاف الأخطاء وإصلاحها، عرض توضيحي لحل farm SafeKit"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 16 expressions"
+image: "/wp-content/uploads/2024/03/appli-19.png"
 ---
 
 # اختبار عنوان IP الظاهري لموازنة التحميل في مجموعة <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}

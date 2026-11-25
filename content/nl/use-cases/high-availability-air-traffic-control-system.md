@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "nl"
 topics: "Luchtverkeersleidingssystemen, Waarom is luchtverkeersleiding van cruciaal belang?, Hoe SafeKit de luchtverkeersleiding beschermt, Implementatie in de praktijk bij ADB SafeGate, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 ---
 
 # Hoge beschikbaarheid voor luchtverkeersleidingssystemen {#high-availability-for-air-traffic-control-systems}

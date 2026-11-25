@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-br"
 topics: "Qual a diferença entre alta disponibilidade e tolerância a falhas?, Prós e contras da alta disponibilidade e da tolerância a falhas, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Cluster HA vs. Sistema Tolerante a Falhas: Escolhendo a Estratégia de Redundância Certa {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

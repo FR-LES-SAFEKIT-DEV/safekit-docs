@@ -6,6 +6,7 @@ category: "solutions"
 lang: "nl"
 topics: "Hoe de SANless SafeKit mirror-cluster werkt met Oracle, Inhoudsopgave, Hoe de SafeKit-software eenvoudig een SANless Oracle cluster met hoge beschikbaarheid implementeert?, Hoe werkt het SafeKit mirror-cluster met Oracle?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Oracle versus andere clusteringoplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
+image: "/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"
 ---
 
 # De eenvoudigste Oracle High Availability: synchrone replicatie en failover met 2 knooppunten {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}

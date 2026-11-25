@@ -6,6 +6,7 @@ category: "solutions"
 lang: "zh-hans"
 topics: "SANless SafeKit mirror 集群如何与 Docker 配合使用，目录，SafeKit 软件如何简单地实现 Docker 高可用性集群？，SafeKit mirror 集群如何与 Docker 配合使用？，SafeKit 高可用性限制，比较：SafeKit SANless 集群与传统 Docker HA，比较：SafeKit 与开源 Linux HA (Pacemaker/Corosync/DRBD)，Docker 高可用性总结，🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.2 | glossaire 2026-11-08.1 | Translation LLM | 36 expressions"
+image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 ---
 
 # SafeKit：Docker 高可用性和实时数据复制软件 {#safekit-docker-high-availability--real-time-data-replication-software}

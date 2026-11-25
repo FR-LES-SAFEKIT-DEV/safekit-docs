@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性集群中的虚拟 IP 地址是什么？, SafeKit 中的虚拟 IP 实现, 虚拟 IP 在同一子网中如何工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过负载均衡器工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过云提供商 CLI 工作（mirror 集群）, 虚拟 IP 在不同子网中如何通过 BGP 工作（mirror 集群）, DNS 重定向在不同子网中如何工作（mirror 集群）, 虚拟 IP 负载均衡在同一子网 farm 集群中如何工作, 负载均衡的虚拟 IP 在不同子网中如何工作（farm 集群）, 比较：虚拟 IP 实现、延迟和应用程序透明度, 关于虚拟 IP 的常见问题, 🔍 探索 SafeKit"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 23 expressions"
+image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 ---
 
 # 虚拟 IP 地址在高可用性集群中是如何工作的？ {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}

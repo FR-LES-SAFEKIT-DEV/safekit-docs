@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターが MySQL で動作する仕組み、目次、SafeKit ソフトウェアは、SAN レス MySQL 高可用性クラスターどのように簡単に実装するのか？、SafeKit mirror クラスターが MySQL とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit for MySQL とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"
 ---
 
 # 最もシンプルな MySQL 高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-mysql-high-availability-2-node-synchronous-replication--failover}

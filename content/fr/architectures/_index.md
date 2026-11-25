@@ -6,6 +6,7 @@ category: "architectures"
 lang: "fr"
 topics: "Quelles sont les différentes architectures de haute disponibilité et les différents clusters logiciels avec SafeKit ?, Comment construire des clusters de haute disponibilité avec SafeKit ?, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 21 expressions"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # Architectures SafeKit {#safekit-architectures}

@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "es"
 topics: "Principios clave, Prerrequisito: el mosaico de SafeKit, Prueba 1 - Distribución de conexiones, Prueba 2 - Cambio de servidor de distribución, Prueba 3 - Comprobación de la redirección GARP con arp -a, Prueba 4 - Comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), Desde qué estaciones de trabajo probar, Resumen de los resultados esperados, Solución de problemas, Demostración de la solución farm de SafeKit"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 14 expressions"
+image: "/wp-content/uploads/2024/03/appli-19.png"
 ---
 
 # Prueba de la dirección IP virtual de equilibrio de carga en un clúster <span class="notranslate farm-term" translate="no">farm</span> de SafeKit {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}

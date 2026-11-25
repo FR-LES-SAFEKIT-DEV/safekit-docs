@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ja"
 topics: "Firebird 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Firebird ソリューションの概要、Windows および Linux への SafeKit/Firebird ソリューションのインストール (firebird.safe)、SafeKit/Firebird ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # SafeKit による Firebird 高可用性：フェイルオーバー用の firebird.safe モジュールをインストールする {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

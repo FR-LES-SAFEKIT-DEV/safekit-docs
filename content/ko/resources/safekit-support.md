@@ -5,6 +5,7 @@ description: "SafeKit 세 가지 지원 채널을 제공합니다. 연중무휴 
 category: "resources"
 lang: "ko"
 topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지 보수, 무료 인증 및 교육 프로그램, 🔍 SafeKit 살펴보기"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit AI 및 지원 {#safekit-ai--support}

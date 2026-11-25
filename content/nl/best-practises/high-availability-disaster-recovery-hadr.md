@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "nl"
 topics: "Synchrone SafeKit replicatie voor HA versus asynchrone back-upreplicatie voor DR, Inhoudsopgave, Synchrone HADR: nul gegevensverlies via snelle netwerken (LAN/VLAN), Asynchrone HADR: herstel na noodgevallen via trage netwerken (WAN), HADR en back-up combineren voor totale systeemveerkracht, Vergelijking van HADR-architecturen: snelle versus trage netwerken, Videogids: HADR implementeren met SafeKit, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 ---
 
 # SafeKit High Availability combineren met back-ups voor noodherstel {#combining-safekit-high-availability-with-disaster-recovery-backups}

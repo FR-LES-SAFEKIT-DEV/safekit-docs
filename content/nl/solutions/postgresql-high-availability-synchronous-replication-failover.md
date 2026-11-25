@@ -6,6 +6,7 @@ category: "solutions"
 lang: "nl"
 topics: "Hoe de SANless SafeKit mirror-cluster werkt met PostgreSQL, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een SANless PostgreSQL cluster met hoge beschikbaarheid?, Hoe werkt het SafeKit mirror-cluster met PostgreSQL?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor PostgreSQL versus andere clusteringoplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
+image: "/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"
 ---
 
 # De eenvoudigste PostgreSQL High Availability: 2-node synchrone replicatie en failover {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}

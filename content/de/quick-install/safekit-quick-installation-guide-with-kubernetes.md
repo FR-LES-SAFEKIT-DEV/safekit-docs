@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in Kubernetes, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Kubernetes-Lösung, Installation und Konfiguration der SafeKit/Kubernetes-Lösung unter Linux (k3s.safe), Welche verschiedenen Szenarien gibt es bei Netzwerktrennung in einem Cluster?, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # K3S Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul k3s.safe für Failover {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}

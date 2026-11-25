@@ -5,6 +5,7 @@ description: "SafeKit bietet drei Supportkanäle: standardmäßigen Vertragssupp
 category: "resources"
 lang: "de"
 topics: "Kostenloser KI-Support (Level 1), Standard-Support und -Wartung, kostenloses Zertifizierungs- und Schulungsprogramm, 🔍 SafeKit entdecken"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit KI & Unterstützung {#safekit-ai--support}

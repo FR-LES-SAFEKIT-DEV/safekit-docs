@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "zh-hans"
 topics: "SafeKit 30 秒电梯演讲、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 51 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # 高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群 {#high-availability-software-windows-and-linux-clustering-with-safekit}

@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "fr"
 topics: "Résumé rapide : RPO vs RTO, Table des matières, Comment calculer le RPO et le RTO pour une solution de haute disponibilité et de continuité d’activité ?, Comment déterminer le RPO et le RTO pour une solution de sauvegarde et de reprise après sinistre ?, Comment un cluster mirror SafeKit permet-il d’atteindre un RPO nul et un RTO faible ?, Quels sont les indicateurs RTO pour un cluster farm SafeKit avec répartition de charge ?, Tableaux comparatifs : RTO et RPO, Haute disponibilité en action : démonstrations en temps réel de la perte de données nulle et des temps d’arrêt quasi nuls, FAQ : Optimiser le RPO et le RTO pour la continuité d’activité, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 59 expressions"
+image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 ---
 
 # Que sont RPO et RTO ? Définitions, exemples et stratégies de haute disponibilité {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}

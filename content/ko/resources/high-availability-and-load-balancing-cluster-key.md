@@ -5,6 +5,7 @@ description: "Windows 및 Linux에서 한 달간 사용할 SafeKit 클러스터 
 category: "resources"
 lang: "ko"
 topics: "Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이메일로 받기, 🔍 SafeKit 살펴보기"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 1개월 무료 평가판 키 {#safekit-one-month-free-trial-key}

@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "nl"
 topics: "Hoe implementeer je actieve/passieve redundante servers met realtime replicatie en failover?, Hoe implementeer je actieve/actieve redundante servers met netwerktaakverdeling en failover?, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 ---
 
 # Redundante servers implementeren met eenvoudige HA-software {#how-to-implement-redundant-servers-with-simple-ha-software}

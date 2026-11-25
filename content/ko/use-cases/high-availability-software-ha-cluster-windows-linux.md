@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ko"
 topics: "SafeKit 30초 엘리베이터 스피치, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # 고가용성 소프트웨어: SafeKit을 사용한 Windows 및 Linux 클러스터링 {#high-availability-software-windows-and-linux-clustering-with-safekit}

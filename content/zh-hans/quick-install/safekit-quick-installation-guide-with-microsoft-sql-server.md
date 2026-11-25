@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "zh-hans"
 topics: "Microsoft SQL Server 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Microsoft SQL Server 解决方案概述、在 Windows 上安装 SafeKit/Microsoft SQL Server 解决方案 (sqlserver.safe)、SafeKit/Microsoft SQL Server 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # 使用 SafeKit 实现 Microsoft SQL Server 高可用性：安装 sqlserver.safe 模块以实现故障转移 {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}

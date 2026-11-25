@@ -5,6 +5,7 @@ category: "quick-install"
 lang: "pt-pt"
 topics: "Antiga configuração passo a passo da solução SafeKit/Milestone XProtect"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
+image: "/wp-content/uploads/2023/01/appli-3.png"
 ---
 
 # Configuração antiga SafeKit Milestone {#old-safekit-milestone-configuration}

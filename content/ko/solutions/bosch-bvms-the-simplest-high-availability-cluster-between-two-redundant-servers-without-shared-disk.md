@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ko"
 topics: "Bosch BVMS용 SafeKit: 2노드 SANless Hyper-V 클러스터, 목차, SafeKit 소프트웨어는 SAN에 공유 스토리지가 없는 Bosch BVMS 고가용성 클러스터를 어떻게 간단하게 구현할까요?, SafeKit Bosch BVMS 클러스터는 어떻게 작동하나요?, SafeKit 고가용성 제한 사항, 비교: Bosch BVMS용 SafeKit vs. 기본 Hyper-V 클러스터링, 비디오 가이드: Bosch BVMS용 SafeKit HA 클러스터를 구성, SafeKit, 보안 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # Bosch BVMS용 SafeKit 고가용성: SANless 비디오 관리 이중화 {#safekit-high-availability-for-bosch-bvms-sanless-video-management-redundancy}

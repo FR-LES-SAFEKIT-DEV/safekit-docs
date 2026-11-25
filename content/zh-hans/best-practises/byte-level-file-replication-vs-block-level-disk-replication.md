@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性集群中的字节级文件复制与块级磁盘复制、字节级文件复制与块级磁盘复制的优缺点、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 ---
 
 # 用于高可用性的字节级文件复制与块级磁盘复制 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

@@ -5,6 +5,7 @@ description: "申请适用于 Windows 和 Linux 的 SafeKit 集群密钥，免�
 category: "resources"
 lang: "zh-hans"
 topics: "通过电子邮件获取适用于 Windows 或 Linux 的 SafeKit 一个月免费许可证密钥，🔍 探索 SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 一个月免费试用密钥 {#safekit-one-month-free-trial-key}

@@ -5,6 +5,7 @@ description: "Dit document beschrijft alle fasen van de SafeKit -implementatie: 
 category: "resources"
 lang: "nl"
 layout: userguide
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="userguide-container">

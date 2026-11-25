@@ -6,6 +6,7 @@ category: "product"
 lang: "ar"
 topics: "ما هو SafeKit؟، 🔍 استكشف SafeKit، لماذا تختار SafeKit لتحقيق التوافر العالي بطريقة بسيطة وفعالة من حيث التكلفة؟، لماذا يُعد المنتج الشامل عالي التوافر الذي لا يحتاج إلى SAN ضروريًا؟، اختيار استراتيجية التوافر العالي: HA على مستوى الأجهزة الافتراضية مقابل HA على مستوى التطبيق، قيود التوافر العالي في SafeKit، مكتبة فيديوهات SafeKit، مقارنة بين SafeKit وعناقيد التوافر العالي التقليدية (HA)، النسخة التجريبية المجانية من SafeKit HA والوثائق الفنية، مكتبة وحدات تطبيقات SafeKit: حلول جاهزة للاستخدام لضمان استمرارية العمل"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 44 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit: برنامج شامل للتوافر العالي وتجميع التطبيقات دون الحاجة إلى SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}

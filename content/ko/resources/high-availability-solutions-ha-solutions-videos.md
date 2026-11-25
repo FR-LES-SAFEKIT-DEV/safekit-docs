@@ -5,6 +5,7 @@ description: "Windows 및 Linux용 2노드 SANless 고가용성, 실시간 복�
 category: "resources"
 lang: "ko"
 topics: "SafeKit 기술 장애 조치 튜토리얼 및 데모, 🔍 SafeKit 살펴보기"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 고가용성 및 장애 조치 데모: SANless 클러스터링 비디오 튜토리얼 {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

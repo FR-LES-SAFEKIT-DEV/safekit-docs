@@ -5,6 +5,7 @@ description: "SafeKit SANless HA 마스터 교육을 무료로 받으세요. 소
 category: "resources"
 lang: "ko"
 topics: "교육 플랫폼에 접속하는 방법은 무엇인가요?, SafeKit 8 교육 자료를 받으세요, 🔍 SafeKit 살펴보기"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 고가용성 교육: 무료 온라인 인증 프로그램 {#safekit-high-availability-training-free-online-certification-program}

@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ja"
 topics: "Cloud 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit / Cloud ソリューションの概要、Windows および Linux への SafeKit /Cloud ソリューションのインストール (farm.safe)、SafeKit / Cloud ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # クラウドネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

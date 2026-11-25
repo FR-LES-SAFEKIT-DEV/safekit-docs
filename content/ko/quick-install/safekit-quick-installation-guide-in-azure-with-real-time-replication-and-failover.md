@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ko"
 topics: "Azure 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Azure mirror 솔루션 개요, Windows 및 Linux에 SafeKit/Azure mirror 솔루션 설치 (mirror.safe), SafeKit/Azure mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # SafeKit을 사용한 Azure 고가용성: 장애 조치를 위한 mirror.safe 모듈 설치 {#azure-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

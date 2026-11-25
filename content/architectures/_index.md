@@ -5,6 +5,7 @@ description: "Explore high availability architectures with SafeKit. Learn about 
 category: "architectures"
 lang: "en"
 topics: "What are the different high availability architectures and the different software clusters with SafeKit?, How to build high availability clusters with SafeKit?, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # SafeKit Architectures {#safekit-architectures}

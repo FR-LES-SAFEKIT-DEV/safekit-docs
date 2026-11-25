@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-br"
 topics: "Arquitetura sem compartilhamento versus arquitetura de disco compartilhado para clusters de alta disponibilidade, arquitetura sem compartilhamento vs. arquitetura de disco compartilhado: prós e contras, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 ---
 
 # Arquitetura sem compartilhamento vs. arquitetura de disco compartilhado: como escolher o melhor cluster de alta disponibilidade {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

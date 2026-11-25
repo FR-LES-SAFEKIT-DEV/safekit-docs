@@ -6,6 +6,7 @@ category: "solutions"
 lang: "de"
 topics: "SafeKit für Siemens SiPass: 2-Knoten-SANless Hyper-V-Cluster, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Siemens SiPass Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert das SafeKit Siemens SiPass Cluster?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Siemens SiPass vs. natives Hyper-V-Clustering, Videoanleitung: Konfigurieren eines SafeKit-HA-Cluster für Siemens SiPass, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # Hochverfügbarkeit und Redundanz für Siemens SiPass Zutrittskontrolle: 2-Knoten-SANless-Cluster {#high-availability-and-redundancy-for-siemens-sipass-access-control-2-node-sanless-cluster}

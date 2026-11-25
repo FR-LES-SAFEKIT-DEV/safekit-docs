@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "it"
 topics: "I dati vengono persi in caso di failover dell’applicazione con replica sincrona o asincrona?, Indice, Come funziona la replica asincrona?, Come funziona la replica sincrona?, Come funziona la replica semi-sincrona?, Verdetto finale: scegliere la replica giusta per un’elevata disponibilità, Tabella comparativa: sincrono, asincrono e semi-sincrono, Guida video: configurazione della replica sincrona in tempo reale e dell’alta disponibilità, Domande frequenti: strategie di replica nei cluster ad alta disponibilità, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 41 expressions"
+image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 ---
 
 # Replica sincrona o asincrona: in che modo SafeKit garantisce l’assenza di perdita di dati? {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}

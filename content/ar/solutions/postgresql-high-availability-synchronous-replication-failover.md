@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع PostgreSQL، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة PostgreSQL عالية التوفر بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع PostgreSQL؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ PostgreSQL مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"
 ---
 
 # أبسط طرق تحقيق التوافر العالي PostgreSQL: النسخ المتماثل المتزامن بين عقدتين وتجاوز الأعطال {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}

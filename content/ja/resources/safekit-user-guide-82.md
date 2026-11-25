@@ -5,6 +5,7 @@ description: "このドキュメントでは、 SafeKit実装におけるすべ�
 category: "resources"
 lang: "ja"
 layout: userguide
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="userguide-container">

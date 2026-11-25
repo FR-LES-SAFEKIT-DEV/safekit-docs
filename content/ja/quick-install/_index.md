@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ja"
 topics: "SafeKit アプリケーションモジュールライブラリ：すぐに使える HA ソリューション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit クイックインストールガイド {#safekit-quick-installation-guides}

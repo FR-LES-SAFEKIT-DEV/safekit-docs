@@ -6,6 +6,7 @@ category: "home"
 lang: "ja"
 topics: "SafeKit の機能、保護レベルの選択、アプリケーション向けの既製モジュール、顧客のユースケース、シンプルで分かりやすい料金体系、考慮すべき制限事項、SafeKit ビデオライブラリ、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png"
 ---
 
 # SafeKit：SAN 不要の Windows および Linux 向け高可用性ソフトウェア {#safekit-high-availability-software-for-windows-and-linux-without-a-san}

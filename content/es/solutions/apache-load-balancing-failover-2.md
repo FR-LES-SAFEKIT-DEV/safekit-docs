@@ -6,6 +6,7 @@ category: "solutions"
 lang: "es"
 topics: "El clúster farm SafeKit: NLB solo de software y conmutación por error automática para Apache, Índice, ¿Cómo implementa el software SafeKit un clúster de equilibrio de carga de red (NLB) Apache?, ¿Cómo funciona el clúster SafeKit en modo farm con Apache?, Comparación: clúster farm SafeKit para Apache frente a otras soluciones de clúster NLB, Guía en vídeo: Configuración de un clúster NLB farm SafeKit, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"
 ---
 
 # SafeKit: software todo en uno para balanceo de carga y alta disponibilidad Apache {#safekit-all-in-one-apache-load-balancing--high-availability-software}

@@ -5,6 +5,7 @@ description: "SafeKit delivers simple high availability with no SAN. It protects
 category: "use-cases"
 lang: "en"
 topics: "SafeKit Use Cases, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 
 # Customer Use Cases {#customer-use-cases}

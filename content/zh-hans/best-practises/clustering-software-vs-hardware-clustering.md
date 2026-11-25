@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "zh-hans"
 topics: "软件集群和硬件集群有什么区别？、软件集群与硬件集群：优缺点、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 ---
 
 # 用于高可用性的软件集群与硬件集群 {#software-clustering-vs-hardware-clustering-for-high-availability}

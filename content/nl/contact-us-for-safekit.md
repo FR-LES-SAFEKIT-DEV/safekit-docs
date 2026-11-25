@@ -5,6 +5,7 @@ description: "Neem contact op met Eviden over SafeKit-software voor hoge beschik
 lang: "nl"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Neem contact met ons op over SafeKit {#contact-us-for-safekit}

@@ -6,6 +6,7 @@ category: "solutions"
 lang: "fr"
 topics: "SafeKit sans partage HA dans Azure : éliminez les disques partagés sans aucune perte de données, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Azure sans partage de ressources ?, Comment le cluster mirror SafeKit fonctionne-t-il avec Azure ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour Azure et les solutions HA/DR natives du cloud, Guide vidéo : Configuration d’un cluster mirror SafeKit HA, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 32 expressions"
+image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 ---
 
 # Haute disponibilité Microsoft Azure : réplication synchrone et basculement SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}

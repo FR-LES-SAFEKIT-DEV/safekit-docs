@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "zh-hans"
 topics: "空中交通管制系统、为什么空中交通管制至关重要？、SafeKit 如何保护空中交通管制、ADB SafeGate 的实际应用、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 51 expressions"
+image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 ---
 
 # 空中交通管制系统的高可用性 {#high-availability-for-air-traffic-control-systems}

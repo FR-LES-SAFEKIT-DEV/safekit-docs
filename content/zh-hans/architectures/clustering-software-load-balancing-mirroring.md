@@ -6,6 +6,7 @@ category: "architectures"
 lang: "zh-hans"
 topics: "使用 SafeKit 集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # 具有负载均衡和镜像功能的集群软件：高可用性和可扩展性 {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

@@ -5,6 +5,7 @@ description: "联系 Eviden 了解 SafeKit 高可用性软件。"
 lang: "zh-hans"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 51 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # 联系我们，了解 SafeKit {#contact-us-for-safekit}

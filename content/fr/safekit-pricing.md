@@ -6,6 +6,7 @@ category: "home"
 lang: "fr"
 topics: "Modèle de licence et tarification, Support et maintenance standard, Demander un devis"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 58 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Tarification SafeKit {#safekit-pricing}

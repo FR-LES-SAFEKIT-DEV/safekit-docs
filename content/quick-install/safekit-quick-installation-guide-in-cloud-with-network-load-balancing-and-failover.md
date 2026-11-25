@@ -5,6 +5,7 @@ description: "Enhance Cloud Network Load Balancing with SafeKit's intelligent ap
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Cloud, SafeKit High Availability Limitations, Overview of the SafeKit / Cloud solution, Installation of the SafeKit / Cloud solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Cloud solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Cloud Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

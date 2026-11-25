@@ -5,6 +5,7 @@ description: "SafeKit provides real-time, byte-level file replication and synchr
 category: "architectures"
 lang: "en"
 topics: "How the SafeKit mirror cluster works with Windows or Linux without a SAN, Table of Contents, How does the SafeKit software simply implement a high availability cluster without a SAN on Windows or Linux?, How does the SafeKit mirror cluster work with Windows or Linux?, SafeKit High Availability Limitations, Comparison: SafeKit for Windows or Linux vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit mirror cluster, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"
 ---
 
 # SafeKit mirror cluster: real-time file replication and high availability {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}

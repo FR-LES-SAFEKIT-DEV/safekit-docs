@@ -6,6 +6,7 @@ category: "architectures"
 lang: "zh-hans"
 topics: "SafeKit farm 集群：适用于 Windows 和 Linux 的软件负载均衡和自动故障转移、目录、SafeKit 如何在 Windows 和 Linux 上实现网络负载均衡 (NLB) 集群？、SafeKit farm 集群如何在 Windows 和 Linux 上运行？、SafeKit farm 集群与其它 NLB 集群解决方案的比较、视频指南：如何配置 SafeKit farm NLB 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.4 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 ---
 
 # SafeKit <span class="notranslate farm-term" translate="no">farm</span> 集群：适用于 Windows 和 Linux 的网络负载均衡和高可用性 {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}

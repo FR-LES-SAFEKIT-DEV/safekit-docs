@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione ad alta disponibilità per Podman, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Podman, Installazione della soluzione SafeKit/Podman su Linux (mirror.safe), Configurazione passo-passo della soluzione SafeKit/Podman, Dimostrazione della soluzione mirror SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Alta disponibilità Podman con SafeKit: installare il modulo mirror.safe per il failover {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

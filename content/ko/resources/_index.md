@@ -5,6 +5,7 @@ description: "SafeKit 무료 평가판을 다운로드하고, Windows 및 Linux 
 category: "resources"
 lang: "ko"
 topics: "SafeKit 고가용성, 🔍 SafeKit 살펴보기, 기술 문서 및 제품 정보"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 리소스 {#safekit-resources}

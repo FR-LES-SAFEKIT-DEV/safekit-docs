@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "Bosch BVMS 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで Bosch BVMS 高可用性クラスターどのように簡単に実装するのでしょうか？、SafeKit Bosch BVMS クラスターの仕組み、SafeKit High Availability の制限事項、比較：Bosch BVMS 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Bosch BVMS 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # Bosch BVMS 向け SafeKit 高可用性：SAN レスビデオ管理冗長化 {#safekit-high-availability-for-bosch-bvms-sanless-video-management-redundancy}

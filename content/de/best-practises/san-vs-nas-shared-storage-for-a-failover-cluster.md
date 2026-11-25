@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "de"
 topics: "SAN- oder NAS-Gemeinsamspeicher: Was ist für einen Failover-Cluster einfacher?, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 ---
 
 # SAN vs. NAS: Gemeinsamer Speicher für Failover-Clustering – ein detaillierter Vergleich {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

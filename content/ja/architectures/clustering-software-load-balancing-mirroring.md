@@ -6,6 +6,7 @@ category: "architectures"
 lang: "ja"
 topics: "SafeKit クラスタリングソフトウェアによる、重要な Web アプリケーションとデータベースアプリケーションの可用性とスケーラビリティの向上、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # ロードバランシングとミラーリング機能を備えたクラスタリングソフトウェア：高可用性とスケーラビリティ {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

@@ -5,6 +5,7 @@ description: "Domina SafeKit SANless HA con nuestra capacitación gratuita. Incl
 category: "resources"
 lang: "es"
 topics: "¿Cómo acceder a la plataforma de formación?, Obtenga los materiales de formación de SafeKit 8, 🔍 Explora SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Capacitación en alta disponibilidad de SafeKit: Programa de certificación en línea gratuito {#safekit-high-availability-training-free-online-certification-program}

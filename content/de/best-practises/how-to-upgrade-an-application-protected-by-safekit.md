@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "de"
 topics: "Aktualisierung einer Hochverfügbarkeitsanwendung, die durch SafeKit geschützt ist, Hochverfügbarkeit auf VM-Ebene, Hochverfügbarkeit auf Anwendungsebene, Die richtige Upgrade-Strategie wählen, Schlussfolgerung, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Aktualisieren einer durch SafeKit geschützten Anwendung in einem HA-Cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}

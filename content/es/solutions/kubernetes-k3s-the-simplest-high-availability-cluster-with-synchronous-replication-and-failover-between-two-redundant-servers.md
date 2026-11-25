@@ -6,6 +6,7 @@ category: "solutions"
 lang: "es"
 topics: "Simplificando la alta disponibilidad de K3s: ¿Por qué elegir SafeKit en lugar de MetalLB y Longhorn?, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Kubernetes K3s?, ¿Cómo funciona el clúster mirror SafeKit con Kubernetes K3S?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit vs. pila K3s estándar (MetalLB y Longhorn), Guía en vídeo: Configuración de un clúster mirror SafeKit HA, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 24 expressions"
+image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 ---
 
 # Alta disponibilidad Kubernetes K3s: replicación síncrona y conmutación por error de 2 nodos {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}

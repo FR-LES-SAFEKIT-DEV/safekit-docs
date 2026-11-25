@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ar"
 topics: "أنماط البنية والهندسة المعمارية، التوافر العالي والتعافي من الكوارث، استراتيجيات النسخ المتماثل، التجميع وتجاوز الفشل، التخزين والبنية التحتية، التنفيذ والترحيل"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 44 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # أفضل الممارسات لضمان التوافر العالي {#high-availability-best-practices}

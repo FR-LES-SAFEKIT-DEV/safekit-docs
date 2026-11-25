@@ -5,6 +5,7 @@ description: "Demandez votre clé de cluster SafeKit pour un essai d’un mois s
 category: "resources"
 lang: "fr"
 topics: "Recevoir par e-mail une clé de licence SafeKit gratuite d’un mois pour Windows ou Linux, 🔍 Explorez SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Clé d’essai gratuite SafeKit d’un mois {#safekit-one-month-free-trial-key}

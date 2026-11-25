@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "fr"
 topics: "Systèmes de contrôle du trafic aérien, Pourquoi le contrôle du trafic aérien est-il essentiel ?, Comment SafeKit protège le contrôle du trafic aérien, Mise en œuvre dans le monde réel chez ADB SafeGate, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 58 expressions"
+image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 ---
 
 # Haute disponibilité pour les systèmes de contrôle du trafic aérien {#high-availability-for-air-traffic-control-systems}

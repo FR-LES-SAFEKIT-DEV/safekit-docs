@@ -5,6 +5,7 @@ description: "Maîtrisez la haute disponibilité sans SAN de SafeKit grâce à n
 category: "resources"
 lang: "fr"
 topics: "Comment accéder à la plateforme de formation ? Obtenez les supports de formation SafeKit 8. 🔍 Explorez SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Formation SafeKit Haute Disponibilité : Programme de certification en ligne gratuit {#safekit-high-availability-training-free-online-certification-program}

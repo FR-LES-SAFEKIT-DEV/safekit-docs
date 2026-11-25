@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ko"
 topics: "Firebird 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Firebird 솔루션 개요, Windows 및 Linux에 SafeKit/Firebird 솔루션 설치 (firebird.safe), SafeKit/Firebird 솔루션의 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # SafeKit을 사용한 Firebird 고가용성: 장애 조치용 firebird.safe 모듈 설치 {#firebird-high-availability-with-safekit-install-the-firebirdsafe-module-for-failover}

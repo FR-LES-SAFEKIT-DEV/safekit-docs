@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ar"
 topics: "حالات استخدام SafeKit، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.18 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 
 # حالات استخدام العملاء {#customer-use-cases}

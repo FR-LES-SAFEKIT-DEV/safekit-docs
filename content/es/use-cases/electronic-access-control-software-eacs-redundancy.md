@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "es"
 topics: "¿Qué es un sistema electrónico de control de acceso (EACS)?, ¿Por qué es fundamental el software EACS?, Principales proveedores EACS, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software EACS, SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 48 expressions"
+image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 ---
 
 # Alta disponibilidad y redundancia para el software de control de acceso electrónico (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}

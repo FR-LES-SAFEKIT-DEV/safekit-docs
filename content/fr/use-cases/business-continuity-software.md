@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "fr"
 topics: "Continuité d’activité dans une entreprise distribuée, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 58 expressions"
+image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 ---
 
 # Standardiser la haute disponibilité pour les entreprises distribuées avec de nombreuses succursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

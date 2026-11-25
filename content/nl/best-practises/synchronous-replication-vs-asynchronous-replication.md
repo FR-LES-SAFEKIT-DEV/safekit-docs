@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "nl"
 topics: "Gaat data verloren bij een applicatie-failover met synchrone of asynchrone replicatie?, Inhoudsopgave, Hoe werkt asynchrone replicatie?, Hoe werkt synchrone replicatie?, Hoe werkt semi-synchrone replicatie?, Eindoordeel: de juiste replicatie kiezen voor hoge beschikbaarheid, Vergelijkingstabel: synchroon, asynchroon en semi-synchroon, Videogids: Synchrone realtime-replicatie en hoge beschikbaarheid configureren, Veelgestelde vragen: replicatiestrategieën in clusters met hoge beschikbaarheid, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 ---
 
 # Synchrone versus asynchrone replicatie: hoe zorgt SafeKit voor nul gegevensverlies? {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}

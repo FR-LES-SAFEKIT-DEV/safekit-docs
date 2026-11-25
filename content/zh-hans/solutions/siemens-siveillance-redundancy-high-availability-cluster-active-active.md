@@ -6,6 +6,7 @@ category: "solutions"
 lang: "zh-hans"
 topics: "适用于 Siemens Siveillance SafeKit：2 节点无共享存储 Hyper-V 集群、目录、SafeKit 软件如何简单地在没有 SAN 上共享存储的情况下实现 Siemens Siveillance 高可用性集群？、SafeKit Siemens Siveillance 集群如何工作？、SafeKit 高可用性限制、比较：用于 Siemens Siveillance SafeKit 与原生 Hyper-V 群集、视频指南：为 Siemens Siveillance 配置 SafeKit HA 集群、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # Siemens Siveillance Suite 的高可用性和冗余：主动-主动无共享存储集群 {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}

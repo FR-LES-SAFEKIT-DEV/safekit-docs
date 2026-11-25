@@ -5,6 +5,7 @@ description: "Achieve K3s high availability on 2 nodes without external storage 
 category: "solutions"
 lang: "en"
 topics: "Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn?, Table of Contents, How the SafeKit software simply implements a Kubernetes K3s high availability cluster?, How the SafeKit mirror cluster works with Kubernetes K3S?, SafeKit High Availability Limitations, Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn), Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 ---
 
 # Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}

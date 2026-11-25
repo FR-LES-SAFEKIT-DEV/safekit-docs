@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ja"
 topics: "リアルタイムレプリケーションとフェイルオーバーを用いたアクティブ/パッシブ冗長サーバーの実装方法、ネットワーク負荷分散とフェイルオーバーを用いたアクティブ/アクティブ冗長サーバーを実装する方法は？、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 ---
 
 # シンプルな HA ソフトウェアで冗長サーバーを実装する方法 {#how-to-implement-redundant-servers-with-simple-ha-software}

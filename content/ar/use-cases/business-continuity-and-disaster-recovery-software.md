@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ar"
 topics: "برامج استمرارية الأعمال والتعافي من الكوارث، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 ---
 
 # برنامج استمرارية الأعمال والتعافي من الكوارث للمجموعات المكونة من عقدتين باستخدام SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

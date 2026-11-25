@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ja"
 topics: "MySQL 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/MySQL ソリューションの概要、Windows および Linux への SafeKit/MySQL ソリューションのインストール (mysql.safe)、SafeKit/MySQL Server ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # SafeKit による MySQL 高可用性：フェイルオーバーのための mysql.safe モジュールのインストール {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}

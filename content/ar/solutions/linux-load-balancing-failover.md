@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ar"
 topics: "مجموعة SafeKit farm: موازن تحميل للشبكة (NLB) يعتمد على البرمجيات فقط وتجاوز تلقائي للأعطال لنظام Linux، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Linux ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع Linux؟، مقارنة: مجموعة SafeKit farm لـ Linux مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 ---
 
 # SafeKit: برنامج متكامل لموازنة الأحمال وتوفير التوافر العالي Linux {#safekit-all-in-one-linux-load-balancing--high-availability-software}

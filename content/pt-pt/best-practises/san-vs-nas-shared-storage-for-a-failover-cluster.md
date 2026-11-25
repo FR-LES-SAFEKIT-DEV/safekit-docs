@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-pt"
 topics: "Armazenamento partilhado SAN ou NAS: qual é o mais simples para um cluster de failover?, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 ---
 
 # SAN vs. NAS: Armazenamento Partilhado para Agrupamento de failover: Uma Comparação Detalhada {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

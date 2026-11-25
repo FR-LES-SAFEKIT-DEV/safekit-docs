@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ar"
 topics: "المبادئ الأساسية، المتطلب الأساسي: تكوين عنوان IP الظاهري (VIP)، الاختبار 1 – عنوان IP الظاهري (VIP) الذي يحتفظ به الخادم الأساسي، الاختبار 2 – تجاوز الفشل اليدوي (إيقاف الخادم الأساسي)، الاختبار 3 – التحقق من إعادة توجيه GARP باستخدام arp -a، الاختبار 4 – التحقق من طرف إلى طرف باستخدام Wireshark (Windows) أو tcpdump (Linux)، محطات العمل التي سيتم الاختبار منها، ملخص النتائج المتوقعة، استكشاف الأخطاء وإصلاحها"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 16 expressions"
+image: "/wp-content/uploads/2024/03/appli-20.png"
 ---
 
 # اختبار عنوان IP الظاهري مجموعة mirror في شبكتك {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}

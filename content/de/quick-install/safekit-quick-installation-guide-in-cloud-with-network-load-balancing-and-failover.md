@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in der Cloud, Einschränkungen SafeKit Hochverfügbarkeit, Überblick über die SafeKit /Cloud-Lösung, Installation der SafeKit /Cloud-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit /Cloud-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Cloud-Netzwerk-Lastausgleich und Failover: Installieren Sie das SafeKit farm.safe-Modul {#cloud-network-load-balancing--failover-install-the-safekit-farmsafe-module}

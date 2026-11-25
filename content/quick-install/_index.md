@@ -5,6 +5,7 @@ description: "Access the complete library of SafeKit quick installation guides. 
 category: "quick-install"
 lang: "en"
 topics: "SafeKit Application Module Library: Ready-to-Use HA Solutions, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit Quick Installation Guides {#safekit-quick-installation-guides}

@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "pt-pt"
 topics: "Continuidade de negócios numa empresa distribuída, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 ---
 
 # Padronização da Alta Disponibilidade para Empresas Distribuídas com Múltiplas Filiais {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

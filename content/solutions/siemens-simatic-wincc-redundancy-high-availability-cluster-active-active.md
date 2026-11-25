@@ -5,6 +5,7 @@ description: "Build a Siemens SIMATIC WinCC SCADA high availability cluster with
 category: "solutions"
 lang: "en"
 topics: "SafeKit for Siemens SIMATIC WinCC: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens SIMATIC WinCC high availability cluster without shared storage on a SAN?, How the SafeKit Siemens SIMATIC WinCC cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens SIMATIC WinCC vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens SIMATIC WinCC, SafeKit, a recognized solution on the SCADA market, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # Siemens SIMATIC WinCC SCADA High Availability: 2-Node SANless Cluster {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}

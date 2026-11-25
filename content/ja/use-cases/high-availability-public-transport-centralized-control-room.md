@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ja"
 topics: "公共交通機関の運行管理室、なぜコントロールルームは重要なのでしょうか？、公共交通機関向け SafeKit 高可用性ソリューション、RATP における実世界での導入、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 ---
 
 # 公共交通機関の高可用性：集中管理室 {#high-availability-for-public-transport-centralized-control-room}

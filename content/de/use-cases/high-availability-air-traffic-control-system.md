@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "de"
 topics: "Flugverkehrskontrollsysteme, Warum ist die Flugsicherung so wichtig?, Wie SafeKit die Flugsicherung schützt, Implementierung in der Praxis bei ADB SafeGate, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 47 expressions"
+image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 ---
 
 # Hochverfügbarkeit für Flugverkehrskontrollsysteme {#high-availability-for-air-traffic-control-systems}

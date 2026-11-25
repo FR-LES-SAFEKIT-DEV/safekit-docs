@@ -6,6 +6,7 @@ category: "architectures"
 lang: "fr"
 topics: "Haute disponibilité et évolutivité des applications web et de bases de données critiques avec le logiciel de clustering SafeKit, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 59 expressions"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # Logiciel de clustering avec équilibrage de charge et mise en miroir : haute disponibilité et évolutivité {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

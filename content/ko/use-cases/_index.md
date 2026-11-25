@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ko"
 topics: "SafeKit 사용 사례, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.18 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 
 # 고객 사용 사례 {#customer-use-cases}

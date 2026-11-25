@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "es"
 topics: "Principios clave, Prerrequisito: configuración de IP virtual (VIP), Prueba 1: IP virtual (VIP) mantenida por el servidor principal, Prueba 2: conmutación por error manual (detención del principal), Prueba 3: comprobación del redireccionamiento GARP con arp -a, Prueba 4: comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), Desde qué estaciones de trabajo realizar las pruebas, Resumen de los resultados esperados, Solución de problemas"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 14 expressions"
+image: "/wp-content/uploads/2024/03/appli-20.png"
 ---
 
 # Prueba de la dirección IP virtual de un clúster mirror de SafeKit en tu red {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}

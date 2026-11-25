@@ -5,6 +5,7 @@ description: "Master SafeKit SANless HA with our free training. Covers software 
 category: "resources"
 lang: "en"
 topics: "How to Access the Training Platform?, Get SafeKit 8 Training Materials, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit High Availability Training: Free Online Certification Program {#safekit-high-availability-training-free-online-certification-program}

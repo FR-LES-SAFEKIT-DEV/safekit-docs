@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "Microsoft Azure で SafeKit を試す、Google GCP で SafeKit 検索、Amazon AWS で SafeKit 発見、Eviden SafeKit を使用したその他のクラウドソリューション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 ---
 
 # クラウドコンピューティングにおけるクラスター：Amazon AWS、Microsoft Azure、Google GCP、その他のクラウドに対応する汎用ソリューション {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

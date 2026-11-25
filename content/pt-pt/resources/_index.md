@@ -5,6 +5,7 @@ description: "Baixe a versão de avaliação gratuita SafeKit e acesse a documen
 category: "resources"
 lang: "pt-pt"
 topics: "Teste gratuito, documentação técnica e informações sobre o produto para o hub de navegação de alta disponibilidade SafeKit e SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Recursos SafeKit {#safekit-resources}

@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "fr"
 topics: "Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ?, Quels sont les différents scénarios en cas de panne de courant dans un cluster ?, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 59 expressions"
+image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 ---
 
 # Gestion des pannes de courant et de l’isolement du réseau dans un cluster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

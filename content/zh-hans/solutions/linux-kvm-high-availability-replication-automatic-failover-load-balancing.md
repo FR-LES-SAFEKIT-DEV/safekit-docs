@@ -6,6 +6,7 @@ category: "solutions"
 lang: "zh-hans"
 topics: "SafeKit for KVM：双节点无共享存储 KVM 集群、目录、SafeKit 软件如何简单地在没有 SAN 共享存储的情况下实现 KVM 高可用性集群？、SafeKit KVM 集群的工作原理是什么？、SafeKit 高可用性限制、比较：适用于 KVM 的 SafeKit 与传统集群、视频指南：为 KVM 配置 SafeKit HA 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # 无需共享存储的简单 Linux KVM 高可用性 {#simple-linux-kvm-high-availability-without-shared-storage}

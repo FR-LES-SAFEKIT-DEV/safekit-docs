@@ -5,6 +5,7 @@ description: "Request your SafeKit cluster key for a one-month trial on Windows 
 category: "resources"
 lang: "en"
 topics: "Receive a free SafeKit one-month license key by email for Windows or Linux, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit One-Month Free Trial Key {#safekit-one-month-free-trial-key}

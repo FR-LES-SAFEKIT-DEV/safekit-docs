@@ -6,6 +6,7 @@ category: "solutions"
 lang: "fr"
 topics: "Le cluster farm SafeKit : NLB purement logiciel et basculement automatique pour Apache, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster d’équilibrage de charge réseau (NLB) Apache ?, Comment le cluster SafeKit en mode farm fonctionne-t-il avec Apache ?, Comparaison : cluster farm SafeKit pour Apache et autres solutions de clustering NLB, Guide vidéo : Configuration d’un cluster NLB farm SafeKit, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 32 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"
 ---
 
 # SafeKit : Logiciel tout-en-un d’équilibrage de charge et de haute disponibilité Apache {#safekit-all-in-one-apache-load-balancing--high-availability-software}

@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "pt-pt"
 topics: "O caso de uso de alta disponibilidade OEM, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 
 # Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit no Seu Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}

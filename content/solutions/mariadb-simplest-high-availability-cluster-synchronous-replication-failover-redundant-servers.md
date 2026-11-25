@@ -5,6 +5,7 @@ description: "The simplest way to implement MariaDB High Availability. SafeKit p
 category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with MariaDB, Table of Contents, How the SafeKit software simply implements a SANless MariaDB high availability cluster?, How the SafeKit mirror cluster works with MariaDB?, SafeKit High Availability Limitations, Comparison: SafeKit for MariaDB vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"
 ---
 
 # The Simplest MariaDB High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}

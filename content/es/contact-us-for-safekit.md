@@ -5,6 +5,7 @@ description: "Póngase en contacto con Eviden para obtener información sobre el
 lang: "es"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 48 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Contáctenos sobre SafeKit {#contact-us-for-safekit}

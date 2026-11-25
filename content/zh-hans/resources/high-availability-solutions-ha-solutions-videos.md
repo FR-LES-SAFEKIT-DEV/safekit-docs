@@ -5,6 +5,7 @@ description: "观看 SafeKit 演示，了解如何为 Windows 和 Linux 实现 2
 category: "resources"
 lang: "zh-hans"
 topics: "SafeKit 技术故障转移教程和演示，🔍 探索 SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 高可用性和故障转移演示：SANless 集群视频教程 {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

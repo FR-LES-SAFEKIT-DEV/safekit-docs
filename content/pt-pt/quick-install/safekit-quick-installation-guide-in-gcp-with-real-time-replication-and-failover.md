@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "pt-pt"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para GCP, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução mirror SafeKit/GCP, Instalação da solução mirror SafeKit/GCP no Windows e Linux (mirror.safe), Configuração passo a passo da solução mirror SafeKit/GCP, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Alta Disponibilidade GCP com SafeKit: Instale o Módulo mirror.safe para Failover {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

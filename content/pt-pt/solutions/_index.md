@@ -6,6 +6,7 @@ category: "solutions"
 lang: "pt-pt"
 topics: "Biblioteca de Módulos de Aplicação SafeKit: Soluções de Alta Disponibilidade Prontas a Usar, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 14 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Soluções SafeKit {#safekit-solutions}

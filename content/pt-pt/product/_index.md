@@ -6,6 +6,7 @@ category: "product"
 lang: "pt-pt"
 topics: "O que é SafeKit?, 🔍 Explore SafeKit, Porquê escolher SafeKit para uma alta disponibilidade simples e económica?, Porque é que um produto de alta disponibilidade SANless tudo-em-um é essencial?, Escolher a sua estratégia de alta disponibilidade: HA de VM vs. HA de aplicação, Limitações de alta disponibilidade do SafeKit, Videoteca SafeKit, Comparação do SafeKit com os clusters tradicionais de alta disponibilidade (HA), SafeKit HA: versão de avaliação gratuita e documentação técnica, Biblioteca de módulos de aplicação SafeKit: soluções de alta disponibilidade prontas a usar"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 53 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit: software tudo-em-um para alta disponibilidade e agrupamento de aplicações sem SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}

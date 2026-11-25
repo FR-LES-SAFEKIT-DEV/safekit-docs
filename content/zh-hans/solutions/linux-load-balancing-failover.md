@@ -6,6 +6,7 @@ category: "solutions"
 lang: "zh-hans"
 topics: "SafeKit farm 集群：适用于 Linux 的纯软件 NLB 和自动故障转移、目录、SafeKit 软件如何简单地实现 Linux 网络负载均衡(NLB) 集群？、SafeKit 集群在 farm 模式下如何与 Linux 配合使用？、比较：适用于 Linux SafeKit farm 集群与其它 NLB 集群解决方案、视频指南：配置 SafeKit farm NLB 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 ---
 
 # SafeKit：一体化 Linux 负载均衡和高可用性软件 {#safekit-all-in-one-linux-load-balancing--high-availability-software}

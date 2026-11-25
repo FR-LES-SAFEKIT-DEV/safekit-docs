@@ -5,6 +5,7 @@ description: "Compare shared nothing vs. shared disk architectures for high avai
 category: "best-practises"
 lang: "en"
 topics: "Shared nothing architecture vs shared disk architecture for high availability clusters, Shared Nothing Architecture vs Shared Disk Architecture: Pros and Cons, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 ---
 
 # Shared Nothing vs. Shared Disk Architecture: Choosing the Best HA Cluster {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

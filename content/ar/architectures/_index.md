@@ -6,6 +6,7 @@ category: "architectures"
 lang: "ar"
 topics: "ما هي معماريات التوافر العالي المختلفة ومجموعات البرامج المختلفة مع SafeKit؟، كيف يمكن بناء مجموعات التوافر العالي باستخدام SafeKit؟، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 17 expressions"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # بُنى SafeKit {#safekit-architectures}

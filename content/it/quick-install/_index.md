@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "it"
 topics: "Libreria di moduli applicativi SafeKit: soluzioni HA pronte all’uso, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Guide di installazione rapida SafeKit {#safekit-quick-installation-guides}

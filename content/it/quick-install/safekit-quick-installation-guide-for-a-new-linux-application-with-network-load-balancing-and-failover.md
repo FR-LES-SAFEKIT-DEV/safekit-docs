@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione per l’alta disponibilità per Linux, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Linux, Installazione della soluzione SafeKit/Linux (farm.safe), Configurazione passo-passo della soluzione SafeKit/Linux, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Bilanciamento del carico e failover della rete Linux: installare il modulo farm.safe SafeKit {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

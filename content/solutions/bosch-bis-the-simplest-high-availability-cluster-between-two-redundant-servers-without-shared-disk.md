@@ -5,6 +5,7 @@ description: "Achieve 24/7 uptime for Bosch Building Integration System (BIS) wi
 category: "solutions"
 lang: "en"
 topics: "SafeKit for Bosch BIS: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Bosch BIS high availability cluster without shared storage on a SAN?, How the SafeKit Bosch BIS cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Bosch BIS vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Bosch BIS, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # SafeKit High Availability for Bosch BIS: 2-Node Cluster Without Shared Disk {#safekit-high-availability-for-bosch-bis-2-node-cluster-without-shared-disk}

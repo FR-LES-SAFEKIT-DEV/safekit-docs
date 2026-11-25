@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "es"
 topics: "Replicación síncrona SafeKit para alta disponibilidad (HA) frente a replicación asíncrona de copias de seguridad para recuperación ante desastres (DR), Índice, HADR síncrono: cero pérdida de datos en redes rápidas (LAN/VLAN), HADR asíncrono: recuperación ante desastres en redes lentas (WAN), Cómo combinar HADR y copias de seguridad para lograr una resiliencia total del sistema, Comparación de las arquitecturas HADR: redes rápidas frente a redes lentas, Guía en vídeo: Cómo implementar HADR con SafeKit, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 51 expressions"
+image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 ---
 
 # Combinación de la alta disponibilidad SafeKit con las copias de seguridad para la recuperación ante desastres {#combining-safekit-high-availability-with-disaster-recovery-backups}

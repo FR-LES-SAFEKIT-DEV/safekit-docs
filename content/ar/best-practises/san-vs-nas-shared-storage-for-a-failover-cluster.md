@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ar"
 topics: "التخزين المشترك من نوع SAN أو NAS: أيهما أبسط لمجموعة تجاوز الفشل؟، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 44 expressions"
+image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 ---
 
 # مقارنة مفصلة بين التخزين المشترك من نوع SAN وNAS لتجميعات تجاوز الفشل {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

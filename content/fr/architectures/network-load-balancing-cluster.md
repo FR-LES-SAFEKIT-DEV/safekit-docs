@@ -6,6 +6,7 @@ category: "architectures"
 lang: "fr"
 topics: "Cluster farm SafeKit : équilibrage de charge logiciel et basculement automatique pour Windows et Linux, Table des matières, Comment SafeKit implémente-t-il un cluster d’équilibrage de charge réseau (NLB) sous Windows et Linux ?, Comment fonctionne un cluster farm SafeKit sous Windows et Linux ?, Comparaison du cluster farm SafeKit avec d’autres solutions de clustering NLB, Guide vidéo : comment configurer un cluster NLB farm SafeKit, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.4 | Translation LLM | 59 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 ---
 
 # Cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit : équilibrage de charge réseau et haute disponibilité pour Windows et Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}

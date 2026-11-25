@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ko"
 topics: "건물 관리 시스템(BMS)이란 무엇인가요?, BMS 소프트웨어가 중요한 이유는 무엇일까요?, 주요 BMS 공급업체, SafeKit BMS 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다., SafeKit, 보안 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 ---
 
 # 건물 관리 시스템(BMS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-building-management-systems-bms}

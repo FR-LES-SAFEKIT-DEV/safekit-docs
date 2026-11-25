@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-br"
 topics: "Como implementar servidores redundantes ativos/passivos com replicação em tempo real e failover?, Como implementar servidores redundantes ativos/ativos com balanceamento de carga de rede e failover?, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 ---
 
 # Como implementar servidores redundantes com um software de alta disponibilidade simples {#how-to-implement-redundant-servers-with-simple-ha-software}

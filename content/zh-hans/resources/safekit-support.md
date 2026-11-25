@@ -5,6 +5,7 @@ description: "SafeKit提供三种支持渠道：标准合同支持（含 24/7 �
 category: "resources"
 lang: "zh-hans"
 topics: "免费人工智能一级支持、标准支持与维护、免费认证与培训计划、🔍 探索 SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit AI & 支持 {#safekit-ai--support}

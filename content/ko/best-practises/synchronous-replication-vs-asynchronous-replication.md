@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ko"
 topics: "동기 또는 비동기 복제 시 애플리케이션 장애 조치로 인해 데이터가 손실될 수 있나요?, 목차, 비동기 복제는 어떻게 작동하나요?, 동기 복제는 어떻게 작동하나요?, 반동기 복제는 어떻게 작동하나요?, 최종 결론: 고가용성을 위한 올바른 복제 방식 선택, 비교표: 동기식, 비동기식, 반동기식, 비디오 가이드: 동기식 실시간 복제 및 고가용성 구성, 자주 묻는 질문: 고가용성 클러스터의 복제 전략, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 ---
 
 # 동기식 복제 vs. 비동기식 복제: SafeKit은 어떻게 데이터 손실 제로를 보장하는가? {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}

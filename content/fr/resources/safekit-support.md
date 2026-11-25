@@ -5,6 +5,7 @@ description: "SafeKit propose trois canaux d'assistance : une assistance contrac
 category: "resources"
 lang: "fr"
 topics: "Assistance IA de niveau 1 gratuite, assistance et maintenance standard, programme de certification et de formation gratuit, 🔍 Explorez SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit IA et support {#safekit-ai--support}

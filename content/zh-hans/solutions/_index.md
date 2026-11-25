@@ -6,6 +6,7 @@ category: "solutions"
 lang: "zh-hans"
 topics: "SafeKit 应用模块库：即用型高可用性解决方案，🔍 探索 SafeKit"
 translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 解决方案 {#safekit-solutions}

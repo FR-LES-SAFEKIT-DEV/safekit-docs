@@ -5,6 +5,7 @@ description: "Entre em contato com Eviden sobre o software de alta disponibilida
 lang: "pt-br"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Fale Conosco Sobre SafeKit {#contact-us-for-safekit}

@@ -5,6 +5,7 @@ description: "Explore SafeKit high availability best practices: HA architecture 
 category: "best-practises"
 lang: "en"
 topics: "Architecture & Design Patterns, High Availability & Disaster Recovery, Replication Strategies, Clustering & Failover, Storage & Infrastructure, Implementation & Migration"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # High Availability Best Practices {#high-availability-best-practices}

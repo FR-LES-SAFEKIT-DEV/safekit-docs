@@ -5,6 +5,7 @@ description: "Ensure 100% uptime for your smart building with SafeKit. Our SANle
 category: "use-cases"
 lang: "en"
 topics: "What is a building management system (BMS)?, Why is BMS software critical?, Key BMS vendors, SafeKit brings two solutions for redundancy and high availability of a BMS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 ---
 
 # High Availability and Redundancy for Building Management Systems (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}

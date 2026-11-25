@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "it"
 topics: "Aggiornamento di un’applicazione ad alta disponibilità protetta da SafeKit, Elevata disponibilità a livello di VM, Alta disponibilità a livello di applicazione, Scegliere la giusta strategia di aggiornamento, Conclusione, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 41 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Aggiornamento di un’applicazione protetta da SafeKit in un cluster HA {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}

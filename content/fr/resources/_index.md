@@ -5,6 +5,7 @@ description: "Téléchargez la version d'essai gratuite SafeKit , accédez à la
 category: "resources"
 lang: "fr"
 topics: "Essai gratuit, documentation technique et informations produit pour SafeKit Haute Disponibilité, 🔍 Explorez SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Ressources SafeKit {#safekit-resources}

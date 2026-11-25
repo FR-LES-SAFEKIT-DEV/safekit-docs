@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ko"
 topics: "SafeKit 애플리케이션 모듈 라이브러리: 즉시 사용 가능한 HA 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 솔루션 {#safekit-solutions}

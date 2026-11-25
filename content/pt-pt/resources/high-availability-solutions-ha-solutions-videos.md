@@ -5,6 +5,7 @@ description: "Assista às demonstrações do SafeKit para ver como implementar a
 category: "resources"
 lang: "pt-pt"
 topics: "Tutoriais e demonstrações técnicas de failover do SafeKit, 🔍 Explore o SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Demonstrações de alta disponibilidade e failover SafeKit: tutoriais em vídeo sobre clustering sem SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

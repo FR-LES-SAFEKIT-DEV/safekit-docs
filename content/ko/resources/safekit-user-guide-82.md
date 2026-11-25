@@ -5,6 +5,7 @@ description: "이 문서에서는 SafeKit 구현의 모든 단계(아키텍처, 
 category: "resources"
 lang: "ko"
 layout: userguide
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="userguide-container">

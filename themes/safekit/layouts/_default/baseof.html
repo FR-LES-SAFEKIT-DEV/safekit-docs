@@ -40,6 +40,10 @@
     {{ if $isArticle }}{{ $fragment = "article" }}{{ end }}
     {{ $pageSchema := dict "@context" "https://schema.org" "@type" $schemaType "@id" (printf "%s#%s" $pageURL $fragment) "url" $pageURL "name" .Title "inLanguage" .Lang }}
     {{ with .Params.description }}{{ $pageSchema = merge $pageSchema (dict "description" .) }}{{ end }}
+    {{ with .Params.image }}
+    {{ $imageURL := replace (absURL .) $.Site.BaseURL $realBase }}
+    {{ $pageSchema = merge $pageSchema (dict "image" $imageURL) }}
+    {{ end }}
     {{ if $isArticle }}{{ $pageSchema = merge $pageSchema (dict "headline" .Title "mainEntityOfPage" $pageURL) }}{{ end }}
     {{ if or .IsHome $isProductPage (and .IsPage (eq .Section "solutions")) }}
     {{ $pageSchema = merge $pageSchema (dict "about" (dict "@id" $softwareID "@type" "SoftwareApplication" "name" "SafeKit")) }}

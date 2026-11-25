@@ -4,6 +4,7 @@ canonical: "https://safekit.eviden.com/contact-us-for-safekit/"
 description: "Contact Eviden about SafeKit high availability software."
 lang: "en"
 category: "home"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Contact Us About SafeKit {#contact-us-for-safekit}

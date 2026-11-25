@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "pt-br"
 topics: "O que é um sistema de gestão predial (BMS)?, Por que o software BMS é fundamental?, Principais fornecedores de BMS, SafeKit oferece duas soluções para redundância e alta disponibilidade de um software BMS., SafeKit, uma solução reconhecida no mercado de segurança, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 ---
 
 # Alta Disponibilidade e Redundância para Sistemas de Gerenciamento Predial (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}

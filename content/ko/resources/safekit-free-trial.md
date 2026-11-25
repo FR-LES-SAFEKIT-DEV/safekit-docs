@@ -6,6 +6,7 @@ category: "resources"
 lang: "ko"
 topics: "SafeKit HA 무료 평가판 및 기술 문서, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-06.17 | glossaire 2026-11-06.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 무료 체험 {#safekit-free-trial}

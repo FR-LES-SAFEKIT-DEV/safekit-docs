@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Azure, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Azure-oplossing, Installatie van de SafeKit/Azure-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit/Azure-oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Azure Network Load Balancing & Failover: Installeer de SafeKit farm.safe-module {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}

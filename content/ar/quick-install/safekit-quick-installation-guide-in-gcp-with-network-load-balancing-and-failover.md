@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ GCP، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/GCP، تثبيت حل SafeKit/GCP على نظامي التشغيل Windows و Linux (farm.safe)، تهيئة حل SafeKit/GCP خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # موازنة تحميل الشبكة وتجاوز الأعطال GCP: تثبيت وحدة SafeKit farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}

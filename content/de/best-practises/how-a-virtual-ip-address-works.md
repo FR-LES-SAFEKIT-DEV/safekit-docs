@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "de"
 topics: "Was ist eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster?, Implementierung einer virtuellen IP in SafeKit, Wie eine virtuelle IP im selben Subnetz funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit einem Load Balancer funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit Cloud-Provider-CLIs funktioniert (Mirror-Cluster), Wie eine virtuelle IP über verschiedene Subnetze mit BGP funktioniert (Mirror-Cluster), Wie die DNS-Umleitung über verschiedene Subnetze funktioniert (Mirror-Cluster), Wie das Lastausgleichsverfahren für virtuelle IPs in einem Farm-Cluster im selben Subnetz funktioniert, Wie eine lastausgeglichene virtuelle IP über verschiedene Subnetze funktioniert (Farm-Cluster), Vergleich: Implementierung virtueller IPs, Latenz und Anwendungstransparenz, Häufig gestellte Fragen zu virtuellen IPs, 🔍 SafeKit erkunden"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 17 expressions"
+image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 ---
 
 # Wie funktioniert eine virtuelle IP-Adresse in einem Hochverfügbarkeitscluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}

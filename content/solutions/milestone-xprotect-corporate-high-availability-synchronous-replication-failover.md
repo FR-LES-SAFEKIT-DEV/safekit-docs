@@ -5,6 +5,7 @@ description: "The simplest way to implement Milestone XProtect High Availability
 category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Milestone XProtect, Table of Contents, How the SafeKit software simply implements a SANless Milestone XProtect high availability cluster?, How the SafeKit mirror cluster works with Milestone XProtect?, SafeKit High Availability Limitations, Comparison: SafeKit for Milestone XProtect vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"
 ---
 
 # The Simplest Milestone XProtect High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}

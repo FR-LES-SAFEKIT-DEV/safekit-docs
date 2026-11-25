@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ja"
 topics: "主要原則、前提条件：SafeKit モザイク、テスト 1 – 接続の分散、テスト 2 – ディスパッチサーバーの変更、テスト 3 – arp -a を使用した GARP ルーティングの確認、テスト 4 – Wireshark (Windows) または tcpdump (Linux) を使用したエンドツーエンドの確認、テストを行うワークステーション、期待される結果の概要、トラブルシューティング、SafeKit farm ソリューションのデモンストレーション"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
+image: "/wp-content/uploads/2024/03/appli-19.png"
 ---
 
 # SafeKit <span class="notranslate farm-term" translate="no">farm</span> クラスターにおけるロードバランシング仮想 IP アドレスのテスト {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}

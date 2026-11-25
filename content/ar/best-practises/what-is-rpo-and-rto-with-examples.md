@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ar"
 topics: "ملخص سريع: RPO مقابل RTO، جدول المحتويات، كيف يمكنني حساب RPO و RTO لحل عالي التوافر واستمرارية الأعمال؟، كيف أحدد RPO و RTO لحل النسخ الاحتياطي والتعافي من الكوارث؟، كيف تحقق مجموعة mirror SafeKit RPO صفريًا ووقت RTO منخفضًا؟، ما هي معايير RTO لمجموعة SafeKit farm مع موازنة التحميل؟، جداول المقارنة: RTO مقابل RPO، التوافر العالي قيد التنفيذ: عروض توضيحية في الوقت الفعلي لعدم فقدان البيانات ووقت التعطل شبه المعدوم، الأسئلة الشائعة: تحسين RPO و RTO لاستمرارية الأعمال، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 44 expressions"
+image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 ---
 
 # ما هما RPO و RTO؟ التعريفات والأمثلة واستراتيجيات التوافر العالي (HA) {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}

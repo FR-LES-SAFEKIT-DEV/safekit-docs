@@ -5,6 +5,7 @@ description: "本文档提供有关SafeKit版本的信息：主要变更、限�
 category: "resources"
 lang: "zh-hans"
 layout: userguide
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="userguide-container">

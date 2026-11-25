@@ -6,6 +6,7 @@ category: "solutions"
 lang: "de"
 topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit MariaDB, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless MariaDB Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit MariaDB?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für MariaDB im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
+image: "/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"
 ---
 
 # Die einfachste MariaDB Hochverfügbarkeit: synchrone Replikation und Failover mit 2 Knoten {#the-simplest-mariadb-high-availability-2-node-synchronous-replication--failover}

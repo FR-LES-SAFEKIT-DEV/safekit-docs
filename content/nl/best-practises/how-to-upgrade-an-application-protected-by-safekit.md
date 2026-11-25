@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "nl"
 topics: "Een High Availability-applicatie beveiligen met SafeKit, Hoge beschikbaarheid op VM-niveau, Hoge beschikbaarheid op applicatieniveau, De juiste upgrade-strategie kiezen, Conclusie, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Een door SafeKit beveiligde toepassing upgraden in een HA-cluster {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}

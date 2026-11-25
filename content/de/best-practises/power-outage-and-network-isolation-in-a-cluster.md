@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "de"
 topics: "Welche verschiedenen Szenarien gibt es bei Netzwerktrennung in einem Cluster?, Welche verschiedenen Szenarien gibt es bei einem Stromausfall in einem Cluster?, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 ---
 
 # Umgang mit Stromausfällen und Netzwerktrennung in einem HA-Cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

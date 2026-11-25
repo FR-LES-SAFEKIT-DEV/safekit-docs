@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ko"
 topics: "Microsoft Azure에서 SafeKit 살펴보세요., Google GCP에서 SafeKit 살펴보세요, 아마존 AWS에서 SafeKit 찾아보세요, Eviden SafeKit을 활용한 다른 클라우드 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 ---
 
 # 클라우드 컴퓨팅의 클러스터: Amazon AWS, Microsoft Azure, Google GCP 및 기타 클라우드를 위한 일반적인 솔루션 {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

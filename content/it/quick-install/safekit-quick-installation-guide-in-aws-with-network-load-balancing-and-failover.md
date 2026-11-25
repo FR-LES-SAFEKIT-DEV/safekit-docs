@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione ad alta disponibilità per AWS, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/AWS, Installazione della soluzione SafeKit/AWS su Windows e Linux (farm.safe), Configurazione passo-passo della soluzione SafeKit/AWS, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Bilanciamento del carico di rete e failover AWS: installare il modulo farm.safe SafeKit {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ko"
 topics: "대중교통 통제실, 관제실이 왜 중요할까요?, 대중교통을 위한 SafeKit 고가용성, RATP의 실제 적용 사례, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 ---
 
 # 대중교통의 고가용성: 중앙 제어실 {#high-availability-for-public-transport-centralized-control-room}

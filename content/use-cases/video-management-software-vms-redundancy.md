@@ -5,6 +5,7 @@ description: "SafeKit is the simplest high availability software for VMS. It pre
 category: "use-cases"
 lang: "en"
 topics: "What is video management software (VMS)?, Why is VMS software critical?, Main VMS vendors, SafeKit brings two solutions for redundancy and high availability of a VMS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 ---
 
 # High Availability and Redundancy for Video Management Software (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}

@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ar"
 topics: "SafeKit HA بدون مشاركة أقراص مشتركة في السحابة: تخلص من الأقراص المشتركة مع عدم فقدان أي بيانات، جدول المحتويات، كيف تُنفّذ حزمة برامج SafeKit ببساطة مجموعة حوسبة سحابية عالية التوافر بدون مشاركة ؟، كيف تعمل مجموعة mirror SafeKit مع السحابة؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit for Cloud مقابل حلول التوافر العالي/التعافي من الكوارث السحابية الأصلية، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
 ---
 
 # التوافر العالي المستقل عن السحابة: النسخ المتماثل المتزامن وتجاوز الأعطال SafeKit {#cloud-agnostic-high-availability-safekit-synchronous-replication--failover}

@@ -5,6 +5,7 @@ description: "Download de gratis proefversie SafeKit en krijg toegang tot techni
 category: "resources"
 lang: "nl"
 topics: "Gratis proefversie, technische documentatie en productinformatie voor SafeKit High Availability en 🔍 Ontdek SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit Bronnen {#safekit-resources}

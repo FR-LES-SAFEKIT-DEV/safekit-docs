@@ -5,6 +5,7 @@ description: "Enhance AWS Network Load Balancing with SafeKit's intelligent appl
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for AWS, SafeKit High Availability Limitations, Overview of the SafeKit / AWS solution, Installation of the SafeKit / AWS solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / AWS solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # AWS Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#aws-network-load-balancing--failover-install-the-safekit-farmsafe-module}

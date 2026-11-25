@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ja"
 topics: "ビル管理システム（BMS）とは？、BMS ソフトウェアが重要な理由とは？、主要 BMS ベンダー、SafeKit、BMS ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 ---
 
 # ビル管理システム（BMS）の高可用性と冗長性 {#high-availability-and-redundancy-for-building-management-systems-bms}

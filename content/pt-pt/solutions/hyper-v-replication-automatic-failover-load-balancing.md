@@ -6,6 +6,7 @@ category: "solutions"
 lang: "pt-pt"
 topics: "SafeKit para Hyper-V: Cluster Hyper-V sem SAN de 2 nós, Índice, Como é que o software SafeKit implementa de forma simples um cluster de alta disponibilidade Hyper-V sem armazenamento partilhado numa SAN?, Como funciona o cluster Hyper-V SafeKit?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit para Hyper-V vs. Agrupamento de Clusters Nativo Hyper-V, Guia em Vídeo: Configuração de um cluster HA SafeKit para Hyper-V, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
+image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 ---
 
 # Alta Disponibilidade Simples Hyper-V Sem Armazenamento Partilhado (SAN) {#simple-hyper-v-high-availability-without-shared-storage-san}

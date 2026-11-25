@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-br"
 topics: "Quais são as arquiteturas de alta disponibilidade e as melhores práticas?, Tabelas comparativas sobre arquiteturas de alta disponibilidade e melhores práticas, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 ---
 
 # Arquiteturas de Alta Disponibilidade e Melhores Práticas de clustering de software {#high-availability-architectures--software-clustering-best-practices}

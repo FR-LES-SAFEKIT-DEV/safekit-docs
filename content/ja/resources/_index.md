@@ -5,6 +5,7 @@ description: "SafeKit無料トライアルをダウンロードし、 Windowsお
 category: "resources"
 lang: "ja"
 topics: "SafeKit高可用性、🔍 SafeKit を探索する"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKitリソース {#safekit-resources}

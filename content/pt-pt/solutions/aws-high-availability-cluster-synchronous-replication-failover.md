@@ -6,6 +6,7 @@ category: "solutions"
 lang: "pt-pt"
 topics: "SafeKit sem compartilhamento HA na AWS: Elimine os Discos Partilhados com Perda Zero de Dados, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade AWS sem compartilhamento?, Como funciona o cluster mirror SafeKit com AWS?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit para AWS vs. Soluções Nativas de HA/DR na Nuvem, Guia em Vídeo: Configuração de um cluster mirror HA SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
+image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
 ---
 
 # Amazon AWS Alta Disponibilidade: Replicação Síncrona e Failover SafeKit {#amazon-aws-high-availability-safekit-synchronous-replication--failover}

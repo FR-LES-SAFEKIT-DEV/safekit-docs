@@ -5,6 +5,7 @@ description: "Download the SafeKit free trial to test high availability at the a
 category: "resources"
 lang: "en"
 topics: "SafeKit HA Free Trial & Technical Documentation, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit Free Trial {#safekit-free-trial}

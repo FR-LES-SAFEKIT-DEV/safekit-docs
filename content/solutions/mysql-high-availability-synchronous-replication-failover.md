@@ -5,6 +5,7 @@ description: "The simplest way to implement MySQL High Availability. SafeKit pro
 category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with MySQL, Table of Contents, How the SafeKit software simply implements a SANless MySQL high availability cluster?, How the SafeKit mirror cluster works with MySQL?, SafeKit High Availability Limitations, Comparison: SafeKit for MySQL vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"
 ---
 
 # The Simplest MySQL High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-mysql-high-availability-2-node-synchronous-replication--failover}

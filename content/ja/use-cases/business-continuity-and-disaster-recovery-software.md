@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ja"
 topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 ---
 
 # SafeKit を使用した 2 ノードクラスター向け事業継続および災害復旧ソフトウェア {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

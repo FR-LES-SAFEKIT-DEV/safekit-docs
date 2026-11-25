@@ -5,6 +5,7 @@ description: "Learn about configuring hyperv.safe for an active/active Hyper-V c
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Hyper-V, SafeKit High Availability Limitations, Overview of the SafeKit / Hyper-V solution, Installation of the SafeKit / Hyper-V solution on Windows (hyperv.safe), Step by step configuration of the SafeKit / Hyper-V solution, Demonstration of the SafeKit / Hyper-V solution, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Hyper-V High Availability with SafeKit: Install the hyperv.safe Module for Failover {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}

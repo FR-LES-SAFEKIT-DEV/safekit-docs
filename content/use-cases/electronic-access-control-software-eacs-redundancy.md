@@ -5,6 +5,7 @@ description: "SafeKit is the simplest high availability software for electronic 
 category: "use-cases"
 lang: "en"
 topics: "What is an electronic access control system (EACS)?, Why is EACS software critical?, Main EACS vendors, SafeKit brings two solutions for redundancy and high availability of a EACS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 ---
 
 # High Availability and Redundancy for Electronic Access Control Software (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}

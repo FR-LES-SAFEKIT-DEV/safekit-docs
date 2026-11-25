@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "zh-hans"
 topics: "最佳用例、SafeKit 高可用性限制、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 ---
 
 # 高可用性最佳和最差用例：SafeKit 实施指南 {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

@@ -5,6 +5,7 @@ description: "Maximize resource utilization with SafeKit active-active clusterin
 category: "architectures"
 lang: "en"
 topics: "How Does an Active-Active Cluster with Real-Time Replication Work?, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 ---
 
 # Active-Active Clustering Software with Real-Time Replication & Mutual Failover {#active-active-clustering-software-with-real-time-replication--mutual-failover}

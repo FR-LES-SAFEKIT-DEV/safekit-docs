@@ -6,6 +6,7 @@ category: "solutions"
 lang: "es"
 topics: "Cómo funciona el clúster mirror SANless SafeKit con Docker, Tabla de contenido, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Docker ?, ¿Cómo funciona el clúster mirror SafeKit con Docker ?, Limitaciones de alta disponibilidad SafeKit, Comparación: Clúster SANless SafeKit vs. Docker HA tradicional, Comparación: SafeKit vs. Linux HA de código abierto (Pacemaker/Corosync/DRBD), Resumen de alta disponibilidad Docker, 🔍 Explorar SafeKit"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 24 expressions"
+image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 ---
 
 # SafeKit: Software de alta disponibilidad y replicación de datos en tiempo real Docker {#safekit-docker-high-availability--real-time-data-replication-software}

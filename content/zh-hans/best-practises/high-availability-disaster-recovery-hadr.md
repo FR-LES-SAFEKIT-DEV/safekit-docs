@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "zh-hans"
 topics: "用于高可用性的同步 SafeKit 复制与用于灾难恢复的异步备份复制、目录、同步 HADR：通过高速网络（LAN /虚拟局域网）实现零数据丢失、异步 HADR：通过慢速网络（广域网）进行灾难恢复、如何结合 HADR 和备份实现全面的系统弹性、HADR 架构比较：快速网络与慢速网络、视频指南：如何使用 SafeKit 实现 HADR、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 ---
 
 # 将 SafeKit 高可用性与灾难恢复备份相结合 {#combining-safekit-high-availability-with-disaster-recovery-backups}

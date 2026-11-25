@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "zh-hans"
 topics: "无共享架构与共享磁盘架构在高可用性集群、无共享架构与共享磁盘架构：优缺点、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 ---
 
 # 无共享架构与共享磁盘架构：选择最佳高可用性集群 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

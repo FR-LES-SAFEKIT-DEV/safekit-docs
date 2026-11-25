@@ -5,6 +5,7 @@ description: "Scarica la versione di prova gratuita SafeKit , accedi alla docume
 category: "resources"
 lang: "it"
 topics: "Prova gratuita, documentazione tecnica e informazioni sul prodotto per SafeKit High Availability, 🔍 Esplora SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Risorse SafeKit {#safekit-resources}

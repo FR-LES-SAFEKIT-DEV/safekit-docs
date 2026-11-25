@@ -6,6 +6,7 @@ category: "architectures"
 lang: "zh-hans"
 topics: "具有实时复制功能的双活集群如何工作？、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 ---
 
 # 具有实时复制和相互故障转移功能的双活集群软件 {#active-active-clustering-software-with-real-time-replication--mutual-failover}

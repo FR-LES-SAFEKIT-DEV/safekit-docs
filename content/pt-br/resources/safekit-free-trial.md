@@ -6,6 +6,7 @@ category: "resources"
 lang: "pt-br"
 topics: "Teste Grátis e Documentação Técnica do SafeKit HA, 🔍 Explore o SafeKit"
 translation: "translate_md 2026-11-06.17 | glossaire 2026-11-06.11 | Translation LLM | 13 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Teste Grátis do SafeKit {#safekit-free-trial}

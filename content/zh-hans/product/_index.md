@@ -6,6 +6,7 @@ category: "product"
 lang: "zh-hans"
 topics: "什么是 SafeKit？、🔍 探索 SafeKit、为何选择 SafeKit 实现简单且经济高效的高可用性？、为什么一体化无共享存储高可用性产品至关重要？、选择高可用性策略：虚拟机级 HA 与应用级 HA、SafeKit 高可用性限制、SafeKit 视频库、SafeKit 与传统高可用性 (HA) 集群的比较、SafeKit HA 免费试用版和技术文档、SafeKit 应用模块库：即用型高可用性解决方案"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit：一体化高可用性和应用集群软件，无需 SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}

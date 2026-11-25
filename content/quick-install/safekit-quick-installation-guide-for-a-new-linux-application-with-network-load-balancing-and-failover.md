@@ -5,6 +5,7 @@ description: "Learn how to deploy the farm.safe module for Linux Network Load Ba
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (farm.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Linux Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -5,6 +5,7 @@ description: "Understand the SafeKit licensing model and request a tailored quot
 category: "home"
 lang: "en"
 topics: "Licensing model and pricing, Standard support and maintenance, Request a quote"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit Pricing {#safekit-pricing}

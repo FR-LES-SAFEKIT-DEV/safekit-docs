@@ -5,6 +5,7 @@ description: "Secure every branch office of your distributed enterprise with Saf
 category: "use-cases"
 lang: "en"
 topics: "Business continuity in a distributed enterprise, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 ---
 
 # Standardizing High Availability for Distributed Enterprises with Many Branches {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

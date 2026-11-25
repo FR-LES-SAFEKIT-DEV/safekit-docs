@@ -6,6 +6,7 @@ category: "home"
 lang: "pt-br"
 topics: "Modelo de licenciamento e preços, Suporte e manutenção padrão, Solicite um orçamento"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Preços SafeKit {#safekit-pricing}

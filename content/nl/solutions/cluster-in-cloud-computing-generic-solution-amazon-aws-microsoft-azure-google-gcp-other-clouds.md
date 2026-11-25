@@ -6,6 +6,7 @@ category: "solutions"
 lang: "nl"
 topics: "Ontdek SafeKit in Microsoft Azure, Ontdek SafeKit in Google GCP, Ontdek SafeKit in Amazon AWS, Andere cloudoplossingen met Eviden SafeKit, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
+image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 ---
 
 # Cluster in cloudcomputing: een generieke oplossing voor Amazon AWS, Microsoft Azure, Google GCP en andere clouds {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

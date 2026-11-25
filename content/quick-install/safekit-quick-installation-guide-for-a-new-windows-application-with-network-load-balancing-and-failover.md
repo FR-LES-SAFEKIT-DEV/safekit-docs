@@ -5,6 +5,7 @@ description: "Learn how to deploy the farm.safe module for Windows Network Load 
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Windows, SafeKit High Availability Limitations, Overview of the SafeKit / Windows solution, Installation of the SafeKit / Windows solution (farm.safe), Step by step configuration of the SafeKit / Windows solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Windows Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}

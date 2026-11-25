@@ -5,6 +5,7 @@ description: "Build advanced architectures by combining SafeKit farm and mirror 
 category: "architectures"
 lang: "en"
 topics: "High availability and scalability of critical web and database applications with the SafeKit clustering software, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 
 # Clustering Software with Load Balancing and Mirroring: High Availability and Scalability {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

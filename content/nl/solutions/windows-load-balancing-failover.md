@@ -6,6 +6,7 @@ category: "solutions"
 lang: "nl"
 topics: "De SafeKit farm-cluster: software-only NLB en automatische failover voor Windows, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een Windows Network Load Balancing (NLB)-cluster?, Hoe werkt het SafeKit cluster in farm met Windows?, Vergelijking: SafeKit farm-cluster voor Windows versus andere NLB-clusteroplossingen, Videohandleiding: Een SafeKit farm-NLB-cluster configureren, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 ---
 
 # SafeKit: alles-in-één software voor taakverdeling en hoge beschikbaarheid Windows {#safekit-all-in-one-windows-load-balancing--high-availability-software}

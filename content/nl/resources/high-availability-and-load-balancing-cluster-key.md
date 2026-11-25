@@ -5,6 +5,7 @@ description: "Vraag uw SafeKit-clustersleutel aan voor een proefperiode van éé
 category: "resources"
 lang: "nl"
 topics: "Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux, 🔍 Ontdek SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Gratis SafeKit-proefsleutel voor één maand {#safekit-one-month-free-trial-key}

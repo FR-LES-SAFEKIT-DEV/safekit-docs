@@ -5,6 +5,7 @@ description: "SafeKit biedt drie ondersteuningskanalen: standaard contractuele o
 category: "resources"
 lang: "nl"
 topics: "Gratis AI Level 1-ondersteuning, standaard ondersteuning en onderhoud, gratis certificerings- en trainingsprogramma, 🔍 Ontdek SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit AI & Ondersteuning {#safekit-ai--support}

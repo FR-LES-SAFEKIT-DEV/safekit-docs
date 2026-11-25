@@ -6,6 +6,7 @@ category: "architectures"
 lang: "ja"
 topics: "N 台のサーバーから 1 台へのデータレプリケーションとアプリケーションフェイルオーバーによる高可用性、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 ---
 
 # N-1 冗長クラスター：単一のバックアップサーバーで複数のアプリケーションに高可用性を提供 {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

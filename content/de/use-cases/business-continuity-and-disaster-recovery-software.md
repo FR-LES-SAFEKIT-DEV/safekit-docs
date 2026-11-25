@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "de"
 topics: "Software für Geschäftskontinuität und Notfallwiederherstellung, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 47 expressions"
+image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 ---
 
 # Software für Geschäftskontinuität und Notfallwiederherstellung für 2-Knoten-Cluster mit SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

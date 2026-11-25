@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ko"
 topics: "데이터베이스 수준의 데이터 복제 기술, 디스크 수준 또는 파일 수준?, 데이터 복제 기술 비교표, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 ---
 
 # 고가용성을 위한 데이터 복제 기술: 완벽 비교 {#data-replication-techniques-for-high-availability-a-complete-comparison}

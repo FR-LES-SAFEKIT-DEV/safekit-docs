@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ar"
 topics: "دليل التثبيت السريع SafeKit مع Siemens Siveillance VMS SQL (وحدة SiveillanceVMS.safe mirror)، كيف تعمل مجموعة mirror SafeKit من SANless مع Milestone XProtect، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر Milestone XProtect بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع Milestone XProtect؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Milestone XProtect مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 ---
 
 # Siemens Siveillance VMS: مجموعة من عقدتين بدون مشاركة باستخدام SafeKit {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}

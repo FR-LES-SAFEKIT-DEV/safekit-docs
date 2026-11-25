@@ -6,6 +6,7 @@ category: "solutions"
 lang: "it"
 topics: "Scopri SafeKit in Microsoft Azure, Scopri SafeKit in Google GCP, Scopri SafeKit su Amazon AWS, Altre soluzioni cloud con Eviden SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
+image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 ---
 
 # Cluster nel cloud computing: una soluzione generica per Amazon AWS, Microsoft Azure, Google GCP e altri cloud {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

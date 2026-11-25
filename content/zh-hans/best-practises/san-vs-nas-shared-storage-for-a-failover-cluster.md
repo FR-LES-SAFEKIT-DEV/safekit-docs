@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "zh-hans"
 topics: "SAN 或 NAS 共享存储：哪种更适合故障转移集群？、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 ---
 
 # SAN 与 NAS 共享存储在故障转移集群中的详细比较 {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

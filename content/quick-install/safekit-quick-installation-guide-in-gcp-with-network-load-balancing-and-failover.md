@@ -5,6 +5,7 @@ description: "Enhance GCP Network Load Balancing with SafeKit's intelligent appl
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for GCP, SafeKit High Availability Limitations, Overview of the SafeKit / GCP solution, Installation of the SafeKit / GCP solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / GCP solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # GCP Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}

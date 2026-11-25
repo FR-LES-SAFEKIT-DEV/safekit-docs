@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para AWS, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução mirror SafeKit/AWS, Instalação da solução mirror SafeKit/AWS no Windows e Linux (mirror.safe), Configuração passo a passo da solução mirror SafeKit/AWS, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Alta disponibilidade AWS com SafeKit: instale o módulo mirror.safe para failover {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

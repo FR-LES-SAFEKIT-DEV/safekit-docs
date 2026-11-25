@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "de"
 topics: "Beste Anwendungsfälle, Einschränkungen SafeKit Hochverfügbarkeit, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 47 expressions"
+image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 ---
 
 # Die besten und schlechtesten Anwendungsfälle für Hochverfügbarkeit: Ein SafeKit-Implementierungsleitfaden {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

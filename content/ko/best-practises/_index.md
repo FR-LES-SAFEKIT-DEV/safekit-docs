@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ko"
 topics: "아키텍처 및 디자인 패턴, 고가용성 및 재해 복구, 복제 전략, 클러스터링 및 장애 조치, 스토리지 및 인프라, 구현 및 마이그레이션"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # 고가용성 모범 사례 {#high-availability-best-practices}

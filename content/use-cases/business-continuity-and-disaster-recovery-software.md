@@ -5,6 +5,7 @@ description: "SafeKit is business continuity and disaster recovery software. It 
 category: "use-cases"
 lang: "en"
 topics: "Business continuity and disaster recovery software, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 ---
 
 # Business Continuity and Disaster Recovery Software for 2-Node Clusters with SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "nl"
 topics: "Wat is een virtueel IP-adres in een high-availabilitycluster?, Implementatie van virtueel IP in SafeKit, Hoe een virtueel IP werkt in hetzelfde subnet (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met een load balancer (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met cloudprovider-CLI's (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met BGP (mirror-cluster), Hoe DNS-omleiding werkt in verschillende subnets (mirror-cluster), Hoe virtuele IP-loadbalancing werkt in een farm-cluster op hetzelfde subnet, Hoe een loadbalanced virtueel IP werkt in verschillende subnets (farm-cluster), Vergelijking: implementatie van virtueel IP, latentie en applicatietransparantie, Veelgestelde vragen over virtueel IP, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 16 expressions"
+image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 ---
 
 # Hoe werkt een virtueel IP-adres in een high-availability-cluster? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}

@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "it"
 topics: "Qual è la differenza tra clustering software e clustering hardware?, Clustering software e clustering hardware: pro e contro, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 41 expressions"
+image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 ---
 
 # Clustering software e clustering hardware per l’alta disponibilità {#software-clustering-vs-hardware-clustering-for-high-availability}

@@ -5,6 +5,7 @@ description: "SafeKit offers three support channels: standard contractual suppor
 category: "resources"
 lang: "en"
 topics: "Free AI Level 1 Support, Standard Support & Maintenance, Free Certification & Training Program, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit AI & Support {#safekit-ai--support}

@@ -6,6 +6,7 @@ category: "solutions"
 lang: "de"
 topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Oracle, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless Oracle Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit Oracle?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Oracle im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
+image: "/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"
 ---
 
 # Die einfachste Oracle Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover {#the-simplest-oracle-high-availability-2-node-synchronous-replication--failover}

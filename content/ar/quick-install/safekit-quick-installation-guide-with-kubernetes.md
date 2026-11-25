@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ Kubernetes، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Kubernetes، تثبيت وتهيئة حل SafeKit/Kubernetes على Linux (k3s.safe)، ما هي السيناريوهات المختلفة في حالة عزل الشبكة في مجموعة؟، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
+image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 ---
 
 # التوفر العالي K3S باستخدام SafeKit: تثبيت وحدة k3s.safe للتحويل التلقائي عند الفشل {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}

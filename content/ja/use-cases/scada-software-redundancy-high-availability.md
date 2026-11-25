@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "ja"
 topics: "SCADA システムとは何ですか？、SCADA ソフトウェアが重要な理由とは？、主要 SCADA ソフトウェアベンダー、SafeKit、SCADA ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、SCADA 市場で認められたソリューション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 ---
 
 # SCADA および産業用制御システム（ICS）の高可用性と冗長性 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

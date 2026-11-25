@@ -5,6 +5,7 @@ description: "Meistern Sie SafeKit SANless HA mit unserem kostenlosen Training. 
 category: "resources"
 lang: "de"
 topics: "Wie greife ich auf die Schulungsplattform zu?, SafeKit 8-Schulungsmaterialien herunterladen, 🔍 SafeKit entdecken"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit-Hochverfügbarkeitsschulung: Kostenloses Online-Zertifizierungsprogramm {#safekit-high-availability-training-free-online-certification-program}

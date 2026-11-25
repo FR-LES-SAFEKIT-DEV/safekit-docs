@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "nl"
 topics: "Kernprincipes, Vereiste: het SafeKit-mozaïek, Test 1 – Distributie van verbindingen, Test 2 – Wijziging van dispatching-server, Test 3 – Controleren van GARP -omleiding met arp -a, Test 4 – End-to-end-controle met Wireshark (Windows) of tcpdump (Linux), Vanaf welke werkstations testen, Samenvatting van de verwachte resultaten, Probleemoplossing, Demonstratie van de SafeKit farm"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 16 expressions"
+image: "/wp-content/uploads/2024/03/appli-19.png"
 ---
 
 # Het virtuele IP-adres voor taakverdeling testen in een SafeKit <span class="notranslate farm-term" translate="no">farm</span>-cluster {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}

@@ -6,6 +6,7 @@ category: "solutions"
 lang: "de"
 topics: "SafeKit Shared-Nothing HA in GCP: Eliminieren Sie gemeinsam genutzte Datenträger ohne Datenverlust, Inhaltsverzeichnis, Wie implementiert die SafeKit Software einfach einen Shared-Nothing GCP Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit GCP?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für GCP vs. native Cloud-HA/DR-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
+image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
 ---
 
 # Google GCP Hochverfügbarkeit: Synchrone Replikation und Failover SafeKit {#google-gcp-high-availability-safekit-synchronous-replication--failover}

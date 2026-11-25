@@ -5,6 +5,7 @@ description: "本文档涵盖了SafeKit实现的各个阶段：架构、安装�
 category: "resources"
 lang: "zh-hans"
 layout: userguide
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 <div class="userguide-container">

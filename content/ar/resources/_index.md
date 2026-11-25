@@ -5,6 +5,7 @@ description: "قم بتنزيل النسخة التجريبية المجانية
 category: "resources"
 lang: "ar"
 topics: "تجربة مجانية، ووثائق فنية، ومعلومات عن المنتج لـ SafeKit عالي التوفر، 🔍 استكشف SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # موارد SafeKit {#safekit-resources}

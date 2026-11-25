@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ja"
 topics: "高可用性とフォールトトレランスの違いは何ですか？、高可用性とフォールトトレランスの長所と短所、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # HA クラスターとフォールトトレラントシステム：適切な冗長化戦略の選択 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

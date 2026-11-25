@@ -5,6 +5,7 @@ description: "SafeKit ofrece tres canales de soporte: soporte contractual están
 category: "resources"
 lang: "es"
 topics: "Soporte de IA de nivel 1 gratuito, soporte y mantenimiento estándar, programa de certificación y capacitación gratuito, 🔍 Explora SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit IA y soporte {#safekit-ai--support}

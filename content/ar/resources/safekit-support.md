@@ -5,6 +5,7 @@ description: "يقدم SafeKit ثلاث قنوات دعم: دعم تعاقدي �
 category: "resources"
 lang: "ar"
 topics: "دعم مجاني من المستوى الأول للذكاء الاصطناعي، ودعم وصيانة قياسيان، وبرنامج تدريب وشهادات مجاني، 🔍 استكشف SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit الذكاء الاصطناعي والدعم {#safekit-ai--support}

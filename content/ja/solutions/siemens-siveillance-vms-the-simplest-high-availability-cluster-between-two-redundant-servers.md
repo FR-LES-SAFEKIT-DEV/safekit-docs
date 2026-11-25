@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "SafeKit Siemens Siveillance VMS および SQL（SiveillanceVMS.safe mirror モジュール）クイックインストールガイド、SANless SafeKit mirror クラスターと Milestone XProtect の連携方法、目次、SafeKit ソフトウェアは、SAN レスの Milestone XProtect 高可用性クラスターどのように簡単に実装しますか？、SafeKit mirror クラスターが Milestone XProtect とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit for Milestone XProtect とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 ---
 
 # Siemens Siveillance VMS 高可用性：SafeKit を使用した 2 ノードのシェアードナッシングナッシングクラスター {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}

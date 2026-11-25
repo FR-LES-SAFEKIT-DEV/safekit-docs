@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "pt-pt"
 topics: "O que é um endereço IP virtual num cluster de alta disponibilidade?, Implementação de IP virtual no SafeKit, Como funciona um IP virtual na mesma sub-rede (cluster mirror), Como funciona um IP virtual em diferentes sub-redes com um balanceador de carga (cluster mirror), Como funciona um IP virtual em diferentes sub-redes com CLIs de fornecedor de nuvem (cluster mirror), Como funciona um IP virtual em diferentes sub-redes com BGP (cluster mirror), Como funciona o redirecionamento de DNS em diferentes sub-redes (cluster mirror), Como funciona o balanceamento de carga de IP virtual num cluster farm na mesma sub-rede, Como funciona um IP virtual com balanceamento de carga em diferentes sub-redes (cluster farm), Comparação: implementação de IP virtual, latência e transparência da aplicação, Perguntas frequentes sobre IP virtual, 🔍 Explorar o SafeKit"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 12 expressions"
+image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 ---
 
 # Como funciona um endereço IP virtual num cluster de alta disponibilidade? {#how-a-virtual-ip-address-vip-works-in-high-availability-clustering}

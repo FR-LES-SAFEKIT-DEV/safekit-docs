@@ -5,6 +5,7 @@ description: "Test virtual IP availability and failover in a SafeKit mirror clus
 category: "best-practises"
 lang: "en"
 topics: "Key principles, Prerequisite: Virtual IP (VIP) configuration, Test 1 – Virtual IP (VIP) held by the primary server, Test 2 – Manual failover (stop of the primary), Test 3 – Checking GARP rerouting with arp -a, Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), Which workstations to test from, Summary of expected results, Troubleshooting"
+image: "/wp-content/uploads/2024/03/appli-20.png"
 ---
 
 # Testing the virtual IP address of a SafeKit mirror cluster in your network

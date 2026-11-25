@@ -5,6 +5,7 @@ description: "SafeKit 高可用性ソフトウェアについては、Eviden に
 lang: "ja"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit に関するお問い合わせ {#contact-us-for-safekit}

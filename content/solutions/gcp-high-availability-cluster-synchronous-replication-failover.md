@@ -5,6 +5,7 @@ description: "Deploy a simple Google GCP HA cluster with SafeKit. Our shared-not
 category: "solutions"
 lang: "en"
 topics: "SafeKit Shared-Nothing HA in GCP: Eliminate Shared Disks with Zero Data Loss, Table of Contents, How the SafeKit software simply implements a shared-nothing GCP high availability cluster?, How the SafeKit mirror cluster works with GCP?, SafeKit High Availability Limitations, Comparison: SafeKit for GCP vs. Native Cloud HA/DR Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
 ---
 
 # Google GCP High Availability: SafeKit Synchronous Replication & Failover {#google-gcp-high-availability-safekit-synchronous-replication--failover}

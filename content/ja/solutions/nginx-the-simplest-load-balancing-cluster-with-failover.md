@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ja"
 topics: "SafeKit farm クラスター：NGINX 向けソフトウェアのみの NLB と自動フェイルオーバー、目次、SafeKit ソフトウェアは、どのようにして NGINX ネットワーク負荷分散(NLB)クラスターを簡単に実装するのでしょうか？、farm モードの SafeKit クラスターは NGINX とどのように連携しますか？、比較：NGINX 向け SafeKit farm クラスターとその他の NLB クラスタリングソリューション、ビデオガイド：SafeKit farm NLB クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"
 ---
 
 # SafeKit：オールインワンの NGINX ロードバランシング＆高可用性ソフトウェア {#safekit-all-in-one-nginx-load-balancing--high-availability-software}

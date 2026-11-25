@@ -5,6 +5,7 @@ description: "أتقن تقنية SafeKit SANless HA من خلال تدريبن�
 category: "resources"
 lang: "ar"
 topics: "كيفية الوصول إلى منصة التدريب؟، احصل على مواد تدريب SafeKit 8، 🔍 استكشف SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # برنامج التدريب على التوافر العالي من SafeKit: برنامج شهادة مجاني عبر الإنترنت {#safekit-high-availability-training-free-online-certification-program}

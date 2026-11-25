@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "zh-hans"
 topics: "关键原则，前提条件：SafeKit 马赛克，测试 1 – 连接的分配，测试 2 – 调度服务器的更改，测试 3 – 使用 arp -a 检查 GARP 重路由，测试 4 – 使用 Wireshark (Windows) 或 tcpdump (Linux) 进行端到端检查，从哪些工作站进行测试，预期结果摘要，故障排除，SafeKit farm 解决方案演示"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
+image: "/wp-content/uploads/2024/03/appli-19.png"
 ---
 
 # 在 SafeKit <span class="notranslate farm-term" translate="no">farm</span> 集群中测试负载均衡虚拟 IP 地址 {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}

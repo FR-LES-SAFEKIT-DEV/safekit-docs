@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "de"
 topics: "Wie implementiert man aktive/passive redundante Server mit Echtzeit-Replikation und Failover?, Wie implementiert man aktive/aktive redundante Server mit Netzwerk-Lastausgleich und Failover?, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 54 expressions"
+image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 ---
 
 # So implementieren Sie redundante Server mit einfacher HA-Software {#how-to-implement-redundant-servers-with-simple-ha-software}

@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ko"
 topics: "Eviden SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit을 이용한 Milestone 관리 마이그레이션 {#milestone-management-migration-with-safekit}

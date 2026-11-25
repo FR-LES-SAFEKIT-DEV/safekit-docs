@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "de"
 topics: "Alternative zu Always On SQL Server für Express- und Standard-Editionen, Wie funktioniert der SafeKit-Mirror-Cluster mit Microsoft SQL Server?, Videoanleitung: Konfigurieren eines SafeKit-HA-Mirror-Cluster für SQL Server, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 47 expressions"
+image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 ---
 
 # Alternative zu SQL Server Always On: Hochverfügbarkeit für Express- und Standard-Editionen {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}

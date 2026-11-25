@@ -6,6 +6,7 @@ category: "resources"
 lang: "zh-hans"
 topics: "SafeKit HA 免费试用版和技术文档，🔍 探索 SafeKit"
 translation: "translate_md 2026-11-06.17 | glossaire 2026-11-06.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 免费试用 {#safekit-free-trial}

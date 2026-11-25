@@ -5,6 +5,7 @@ description: "تواصل مع Eviden بخصوص برنامج SafeKit عالي ا
 lang: "ar"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # اتصل بنا بخصوص SafeKit {#contact-us-for-safekit}

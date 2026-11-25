@@ -5,6 +5,7 @@ description: "Learn how to test SafeKit load balancing across cluster nodes and 
 category: "best-practises"
 lang: "en"
 topics: "Key principles, Prerequisite: the SafeKit mosaic, Test 1 – Distribution of connections, Test 2 – Change of dispatching server, Test 3 – Checking GARP rerouting with arp -a, Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), Which workstations to test from, Summary of expected results, Troubleshooting, Demonstration of the SafeKit farm solution"
+image: "/wp-content/uploads/2024/03/appli-19.png"
 ---
 
 # Testing the load balancing virtual IP address in a SafeKit <span class="notranslate farm-term" translate="no">farm</span> cluster

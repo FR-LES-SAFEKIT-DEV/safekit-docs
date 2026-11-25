@@ -5,6 +5,7 @@ description: "Domine a alta disponibilidade sem SAN do SafeKit com nosso treinam
 category: "resources"
 lang: "pt-br"
 topics: "Como acessar a plataforma de treinamento?, Obtenha os materiais de treinamento do SafeKit 8, 🔍 Explore o SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Treinamento de Alta Disponibilidade do SafeKit: Programa de Certificação Online Gratuito {#safekit-high-availability-training-free-online-certification-program}

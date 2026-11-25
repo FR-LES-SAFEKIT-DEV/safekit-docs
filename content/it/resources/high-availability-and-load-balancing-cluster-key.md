@@ -5,6 +5,7 @@ description: "Richiedi la chiave del cluster SafeKit per una prova di un mese su
 category: "resources"
 lang: "it"
 topics: "Ricevi via e-mail una chiave di licenza SafeKit gratuita di un mese per Windows o Linux, 🔍 Esplora SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Chiave di prova gratuita SafeKit di un mese {#safekit-one-month-free-trial-key}

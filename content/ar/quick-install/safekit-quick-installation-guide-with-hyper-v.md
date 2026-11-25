@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع لـ Hyper-V عالي التوفر، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Hyper-V، تثبيت حل SafeKit/Hyper-V على Windows (hyperv.safe)، إعداد حل SafeKit/Hyper-V خطوة بخطوة، عرض توضيحي لحل SafeKit/Hyper-V، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # التوفر العالي Hyper-V باستخدام SafeKit: تثبيت وحدة hyperv.safe للتحويل التلقائي عند الفشل {#hyper-v-high-availability-with-safekit-install-the-hypervsafe-module-for-failover}

@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ko"
 topics: "SafeKit은 애플리케이션 모듈 라이브러리: 즉시 사용 가능한 HA 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit 빠른 설치 가이드 {#safekit-quick-installation-guides}

@@ -6,6 +6,7 @@ category: "architectures"
 lang: "ar"
 topics: "التوافر العالي مع تكرار البيانات وتحويل التطبيقات من N خادم إلى خادم واحد، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 44 expressions"
+image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 ---
 
 # مجموعة التكرار N-1: توافر عالٍ لتطبيقات متعددة باستخدام خادم احتياطي واحد {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

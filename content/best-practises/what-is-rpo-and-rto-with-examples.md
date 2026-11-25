@@ -5,6 +5,7 @@ description: "Learn the definitions of RPO (Recovery Point Objective) and RTO (R
 category: "best-practises"
 lang: "en"
 topics: "Quick Summary: RPO vs. RTO, Table of Contents, How do I calculate RPO and RTO for a High Availability and Business Continuity solution?, How do I determine RPO and RTO for a Backup and Disaster Recovery solution?, How does a SafeKit Mirror Cluster achieve zero RPO and low RTO?, What are the RTO benchmarks for a SafeKit Farm Cluster with Load Balancing?, Comparison tables: RTO vs RPO, High Availability in Action: Real-Time Demos of Zero Data Loss and Near-Zero Downtime, FAQ: Optimizing RPO and RTO for Business Continuity, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 ---
 
 # What are RPO and RTO? Definitions, Examples, and HA Strategies {#what-are-rpo-and-rto-definitions-examples-and-ha-strategies}

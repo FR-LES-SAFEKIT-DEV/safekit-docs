@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ar"
 topics: "اكتشف SafeKit في Microsoft Azure، اكتشف SafeKit في Google GCP، اكتشف SafeKit في Amazon AWS، حلول سحابية أخرى مع Eviden SafeKit، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 ---
 
 # الكتلة في الحوسبة السحابية: حل عام لخدمات أمازون ويب سيرفيسز (Amazon AWS، Azure (Microsoft)، وجوجل كلاود بلاتفورم (Google GCP، وغيرها من الخدمات السحابية {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

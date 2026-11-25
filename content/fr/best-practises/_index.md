@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "fr"
 topics: "Architecture et modèles de conception, Haute disponibilité et reprise après sinistre, Stratégies de réplication, Clustering et basculement, Stockage et infrastructure, Mise en œuvre et migration"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 59 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # Meilleures pratiques en matière de haute disponibilité {#high-availability-best-practices}

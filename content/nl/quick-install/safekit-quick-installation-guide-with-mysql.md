@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor MySQL, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/MySQL-oplossing, Installatie van de SafeKit/MySQL-oplossing op Windows en Linux (mysql.safe), Stapsgewijze configuratie van de SafeKit/MySQL Server-oplossing, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # MySQL High Availability met SafeKit: Installeer de mysql.safe-module voor failover {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}

@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ko"
 topics: "고가용성 전략 선택: VM HA vs. 애플리케이션 HA, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2023/02/vm-ha-4.png"
 ---
 
 # VM HA와 애플리케이션 HA 비교 {#vm-ha-vs-application-ha}

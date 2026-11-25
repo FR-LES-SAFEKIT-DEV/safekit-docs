@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "it"
 topics: "Quali sono i diversi scenari in caso di isolamento della rete in un cluster?, Come funzionano gli heartbeat e il failover in un cluster Windows o Linux?, Split brain e quorum con server in due sale server remote, Quorum di cluster semplice con il checker split-brain SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 41 expressions"
+image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 ---
 
 # Heartbeat, failover e quorum nei cluster Windows e Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

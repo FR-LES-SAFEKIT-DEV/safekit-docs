@@ -6,6 +6,7 @@ category: "solutions"
 lang: "de"
 topics: "Das SafeKit-Farm-Cluster: Software-Only NLB und automatisches Failover für NGINX, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen NGINX Network Load Balancing (NLB)-Cluster?, Wie funktioniert das SafeKit Cluster im farm-Modus mit NGINX?, Vergleich: SafeKit-Farm-Cluster für NGINX im Vergleich zu anderen NLB-Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit-Farm-NLB-Cluster, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"
 ---
 
 # SafeKit: All-in-One-Software NGINX-Lastausgleich und Hochverfügbarkeit {#safekit-all-in-one-nginx-load-balancing--high-availability-software}

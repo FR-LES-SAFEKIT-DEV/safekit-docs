@@ -5,6 +5,7 @@ description: "Cluster configuration on Windows and Linux can be very simple if y
 category: "solutions"
 lang: "en"
 topics: "SafeKit Application Module Library: Ready-to-Use HA Solutions, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit Solutions {#safekit-solutions}

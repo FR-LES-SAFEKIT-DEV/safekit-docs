@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "zh-hans"
 topics: "什么是楼宇管理系统（BMS）？、为什么 BMS 软件至关重要？、主要 BMS 供应商、SafeKit 为 BMS 软件的冗余和高可用性提供了两种解决方案。、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
+image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 ---
 
 # 楼宇管理系统 (BMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-building-management-systems-bms}

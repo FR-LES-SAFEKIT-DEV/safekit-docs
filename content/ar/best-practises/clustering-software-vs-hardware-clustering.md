@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ar"
 topics: "ما الفرق بين تجميع البرمجيات وتجميع الأجهزة؟، تجميع البرمجيات مقابل تجميع الأجهزة: الإيجابيات والسلبيات، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 44 expressions"
+image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 ---
 
 # تجميع البرامج مقابل تجميع الأجهزة لتحقيق التوافر العالي {#software-clustering-vs-hardware-clustering-for-high-availability}

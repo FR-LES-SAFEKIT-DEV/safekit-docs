@@ -6,6 +6,7 @@ category: "architectures"
 lang: "nl"
 topics: "Hoe het SafeKit mirror-cluster werkt met Windows of Linux zonder SAN, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een high-availability-cluster zonder SAN op Windows of Linux?, Hoe werkt het SafeKit mirror-cluster met Windows of Linux?, Beperkingen van de hoge beschikbaarheid van SafeKit, Vergelijking: SafeKit voor Windows of Linux versus andere clusteringoplossingen, Videogids: Een SafeKit mirror-cluster configureren, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-21.4 | glossaire 2026-11-21.14 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"
 ---
 
 # SafeKit mirror-cluster: realtime bestandsreplicatie en hoge beschikbaarheid {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}

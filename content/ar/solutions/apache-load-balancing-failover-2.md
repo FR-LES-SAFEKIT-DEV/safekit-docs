@@ -6,6 +6,7 @@ category: "solutions"
 lang: "ar"
 topics: "مجموعة SafeKit farm: موازن تحميل للشبكة (NLB) يعتمد على البرمجيات فقط وتجاوز تلقائي للأعطال لـ Apache، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Apache ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع Apache؟، مقارنة: مجموعة SafeKit farm لـ Apache مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"
 ---
 
 # SafeKit: برنامج متكامل لموازنة تحميل Apache وتوفير التوافر العالي {#safekit-all-in-one-apache-load-balancing--high-availability-software}

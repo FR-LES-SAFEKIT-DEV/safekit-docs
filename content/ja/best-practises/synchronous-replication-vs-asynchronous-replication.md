@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ja"
 topics: "同期または非同期レプリケーションでアプリケーションのフェイルオーバー時にデータが失われることはありますか？、目次、非同期レプリケーションの仕組み、同期レプリケーションの仕組み、準同期レプリケーションの仕組み、最終結論：高可用性のための適切なレプリケーションの選択、比較表：同期、非同期、準同期、ビデオガイド：同期リアルタイムレプリケーションと高可用性の設定、よくある質問：高可用性クラスターにおけるレプリケーション戦略、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 ---
 
 # 同期レプリケーションと非同期レプリケーション：SafeKit はどのようにしてゼロデータロスを保証するのか？ {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}

@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "ja"
 topics: "Azure 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Azure ソリューションの概要、Windows および Linux への SafeKit/Azure ソリューションのインストール (farm.safe)、SafeKit/Azure ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # Azure ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}

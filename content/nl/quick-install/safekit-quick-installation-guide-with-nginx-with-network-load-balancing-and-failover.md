@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor NGINX, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/NGINX oplossing, Installatie van de SafeKit/NGINX-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit/NGINX oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
+image: "/wp-content/uploads/2024/03/01-login-large.png"
 ---
 
 # NGINX netwerktaakverdeling en failover: Installeer de SafeKit farm.safe module {#nginx-network-load-balancing--failover-install-the-safekit-farmsafe-module}

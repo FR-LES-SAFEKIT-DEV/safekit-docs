@@ -5,6 +5,7 @@ description: "اطلب مفتاح مجموعة SafeKit لتجربة لمدة ش�
 category: "resources"
 lang: "ar"
 topics: "احصل على مفتاح ترخيص SafeKit مجاني لمدة شهر عبر البريد الإلكتروني لأنظمة Windows أو Linux، 🔍 استكشف SafeKit"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # مفتاح تجربة SafeKit المجانية لمدة شهر {#safekit-one-month-free-trial-key}

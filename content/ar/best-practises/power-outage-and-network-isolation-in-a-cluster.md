@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ar"
 topics: "ما هي السيناريوهات المختلفة في حالة عزل الشبكة في مجموعة؟، ما هي السيناريوهات المختلفة في حالة انقطاع التيار الكهربائي في مجموعة؟، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 44 expressions"
+image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 ---
 
 # التعامل مع انقطاع التيار الكهربائي وعزل الشبكة في مجموعة عالية التوافر (HA) {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

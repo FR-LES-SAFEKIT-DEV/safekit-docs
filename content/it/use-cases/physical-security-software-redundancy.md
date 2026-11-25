@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "it"
 topics: "SafeKit offre due soluzioni per la ridondanza e l’alta disponibilità di un software di sicurezza fisica., 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 40 expressions"
+image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 ---
 
 # Elevata disponibilità e ridondanza per il software di sicurezza fisica {#high-availability-and-redundancy-for-physical-security-software}

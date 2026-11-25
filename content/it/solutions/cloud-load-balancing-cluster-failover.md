@@ -6,6 +6,7 @@ category: "solutions"
 lang: "it"
 topics: "Migliora il Cloud Load Balancer con il monitoraggio a livello di applicazione e l’autoriparazione, Indice, In che modo il software SafeKit implementa semplicemente un cluster di bilanciamento del carico della rete cloud (NLB)?, Come funziona il cluster farm SafeKit con il Cloud?, Confronto: cluster farm SafeKit On-Premises e cluster farm SafeKit nel Cloud, Guida video: configurazione di un cluster NLB farm SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
+image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 ---
 
 # SafeKit: Bilanciamento del carico nel cloud e cluster <span class="notranslate farm-term" translate="no">farm</span> per l’alta disponibilità delle applicazioni {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}

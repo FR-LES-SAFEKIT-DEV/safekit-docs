@@ -5,6 +5,7 @@ description: "Empower your software with SafeKit. As an OEM partner, you can emb
 category: "use-cases"
 lang: "en"
 topics: "The OEM high availability use case, 🔍 Explore SafeKit"
+image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 
 # OEM High Availability: Embedding SafeKit Clustering into Your Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}

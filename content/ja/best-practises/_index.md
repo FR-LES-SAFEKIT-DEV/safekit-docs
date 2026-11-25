@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "ja"
 topics: "アーキテクチャとデザインパターン、高可用性とディザスタリカバリ、レプリケーション戦略、クラスタリングとフェイルオーバー、ストレージとインフラストラクチャ、導入と移行"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 52 expressions"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # 高可用性のベストプラクティス {#high-availability-best-practices}
