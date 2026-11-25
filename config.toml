@@ -148,6 +148,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   sitemapBaseURL = "https://safekit.eviden.com/"
+  socialImage = "wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 
 [outputs]
   home = ["HTML"]

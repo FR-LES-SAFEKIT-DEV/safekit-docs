@@ -1,24 +1,11 @@
 <nav class="breadcrumb" aria-label="Breadcrumb">
-{{ if .IsHome }}
-    <span class="current">SafeKit</span>
-{{ else }}
-    <a href="{{ .Site.Home.RelPermalink }}">SafeKit</a>
-    {{ if .Parent }}
-        {{ if and .Parent (not .Parent.IsHome) }}
-        {{ $parentLink := .Parent.RelPermalink }}
-        {{ $parentTitle := .Parent.Title }}
-        {{ if and (ne .Lang "en") (not .Parent.File) }}
-            {{ $englishSite := index (where hugo.Sites "Language.Lang" "en") 0 }}
-            {{ with $englishSite.GetPage (printf "/%s" .Parent.Section) }}
-                {{ $parentLink = .RelPermalink }}
-                {{ $parentTitle = .Title }}
-            {{ end }}
-        {{ end }}
-        <span class="sep">›</span>
-        <a href="{{ $parentLink }}">{{ $parentTitle }}</a>
-        {{ end }}
+{{ $items := partial "breadcrumb-items.html" . }}
+{{ range $index, $item := $items }}
+    {{ if gt $index 0 }}<span class="sep">›</span>{{ end }}
+    {{ if eq $index (sub (len $items) 1) }}
+    <span class="current">{{ $item.name }}</span>
+    {{ else }}
+    <a href="{{ $item.relativeURL }}">{{ $item.name }}</a>
     {{ end }}
-    <span class="sep">›</span>
-    <span class="current">{{ .Title }}</span>
 {{ end }}
 </nav>

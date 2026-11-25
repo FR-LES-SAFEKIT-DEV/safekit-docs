@@ -26,6 +26,13 @@ GitHub Actions runs this script automatically during deployment.
 
 Documentation is stored in `content/` and organized by language and topic.
 
+Social sharing metadata uses the default `params.socialImage` from `config.toml`.
+Set `socialImage` in a page's front matter to override it with an absolute URL
+or a site-root-relative image path. The default image is a square SafeKit icon,
+so Twitter cards use the `summary` layout.
+The home and product pages also describe SafeKit with `SoftwareApplication`
+structured data in every language.
+
 The HTML head and language sitemaps advertise the same available, indexable
 translations using `hreflang`. English is also the `x-default` where available.
 Pages excluded from the sitemap, marked `noindex`, or redirected are excluded

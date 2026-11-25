@@ -1,0 +1,17 @@
+{{- $items := slice (dict "name" "SafeKit" "url" .Site.Home.Permalink "relativeURL" .Site.Home.RelPermalink) -}}
+{{- if not .IsHome -}}
+  {{- with .Parent -}}
+    {{- if not .IsHome -}}
+      {{- $parent := . -}}
+      {{- if and (ne $.Lang "en") (not .File) -}}
+        {{- $englishSite := index (where hugo.Sites "Language.Lang" "en") 0 -}}
+        {{- with $englishSite.GetPage (printf "/%s" .Section) -}}
+          {{- $parent = . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $items = $items | append (dict "name" $parent.Title "url" $parent.Permalink "relativeURL" $parent.RelPermalink) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $items = $items | append (dict "name" .Title "url" .Permalink "relativeURL" .RelPermalink) -}}
+{{- end -}}
+{{- return $items -}}

@@ -17,6 +17,42 @@
     {{ with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ end }}
     {{ if ne .Kind "404" }}
     {{ $realBase := .Site.Params.sitemapBaseURL | default .Site.BaseURL }}
+    {{ if and (not .Params.noindex) (not .Params.redirectURL) }}
+    {{ $pageURL := .Params.canonical | default (replace .Permalink .Site.BaseURL $realBase) }}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SafeKit">
+    <meta property="og:title" content="{{ .Title }}">
+    {{ with .Params.description }}<meta property="og:description" content="{{ . }}">{{ end }}
+    <meta property="og:url" content="{{ $pageURL }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ .Title }}">
+    {{ with .Params.description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+    {{ with .Params.socialImage | default .Site.Params.socialImage }}
+    {{ $imageURL := replace (absURL .) $.Site.BaseURL $realBase }}
+    <meta property="og:image" content="{{ $imageURL }}">
+    <meta name="twitter:image" content="{{ $imageURL }}">
+    {{ end }}
+    {{ if or .IsHome (and .IsSection (eq .Section "product") .Parent.IsHome) }}
+    {{ $publisher := dict "@type" "Organization" "name" "Eviden" }}
+    {{ $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "name" "SafeKit" "applicationCategory" "High Availability Software" "operatingSystem" "Windows, Linux" "publisher" $publisher }}
+    <script type="application/ld+json">{{ $software | jsonify | safeJS }}</script>
+    {{ end }}
+    {{ if and .IsHome (eq .Lang "en") }}
+    {{ $website := dict "@context" "https://schema.org" "@type" "WebSite" "name" "SafeKit" "url" $pageURL }}
+    <script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+    {{ $logo := replace ("wp-content/uploads/2026/08/logo_eviden_orange-256w.png" | absURL) .Site.BaseURL $realBase }}
+    {{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "name" "Eviden" "url" "https://eviden.com/" "logo" $logo }}
+    <script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>
+    {{ end }}
+    {{ if and (not .IsHome) (ne .Layout "userguide") }}
+    {{ $elements := slice }}
+    {{ range $index, $item := partial "breadcrumb-items.html" . }}
+    {{ $elements = $elements | append (dict "@type" "ListItem" "position" (add $index 1) "name" $item.name "item" (replace $item.url $.Site.BaseURL $realBase)) }}
+    {{ end }}
+    {{ $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $elements }}
+    <script type="application/ld+json">{{ $breadcrumb | jsonify | safeJS }}</script>
+    {{ end }}
+    {{ end }}
     {{ range partial "hreflang-pages.html" . }}
     <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ replace .Permalink $.Site.BaseURL $realBase }}">
     {{ if eq .Language.Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ replace .Permalink $.Site.BaseURL $realBase }}">{{ end }}
