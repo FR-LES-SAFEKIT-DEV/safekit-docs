@@ -1,6 +1,6 @@
 ---
 title: "SafeKit 고가용성 교육: 무료 온라인 인증 프로그램"
-canonical: "https://safekit.eviden.com/ko/ko/resources/safekit-on-line-training/"
+canonical: "https://safekit.eviden.com/ko/resources/safekit-on-line-training/"
 description: "SafeKit SANless HA 마스터 교육을 무료로 받으세요. 소프트웨어 설치, 웹 콘솔 관리 및 CLI를 다룹니다. 24시간 연중무휴 고가용성을 보장하기 위한 고급 구성 및 문제 해결 방법을 배우세요. 온라인으로 공식 인증서를 받으세요."
 category: "resources"
 lang: "ko"

@@ -1,6 +1,6 @@
 ---
 title: "برنامج التدريب على التوافر العالي من SafeKit: برنامج شهادة مجاني عبر الإنترنت"
-canonical: "https://safekit.eviden.com/ar/ar/resources/safekit-on-line-training/"
+canonical: "https://safekit.eviden.com/ar/resources/safekit-on-line-training/"
 description: "أتقن تقنية SafeKit SANless HA من خلال تدريبنا المجاني. يشمل التدريب تثبيت البرامج، وإدارة وحدة التحكم عبر الويب، وواجهة سطر الأوامر. تعلّم الإعدادات المتقدمة واستكشاف الأخطاء وإصلاحها لضمان توافر عالٍ على مدار الساعة. احصل على شهادتك الرسمية عبر الإنترنت."
 category: "resources"
 lang: "ar"

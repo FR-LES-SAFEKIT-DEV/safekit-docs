@@ -1,6 +1,6 @@
 ---
 title: "Capacitación en alta disponibilidad de SafeKit: Programa de certificación en línea gratuito"
-canonical: "https://safekit.eviden.com/es/es/resources/safekit-on-line-training/"
+canonical: "https://safekit.eviden.com/es/resources/safekit-on-line-training/"
 description: "Domina SafeKit SANless HA con nuestra capacitación gratuita. Incluye instalación de software, administración mediante consola web y CLI. Aprende configuración avanzada y resolución de problemas para garantizar alta disponibilidad 24/7. Obtén tu certificación oficial en línea."
 category: "resources"
 lang: "es"

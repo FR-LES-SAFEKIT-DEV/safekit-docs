@@ -1,0 +1,18 @@
+{{- $pages := slice -}}
+{{- $realBase := .Site.Params.sitemapBaseURL | default .Site.BaseURL -}}
+{{- $siteBase := .Site.BaseURL -}}
+{{- $excludedSection := and .IsSection (eq .Section "best-practises") (not (in (slice "en" "fr") .Language.Lang)) -}}
+{{- $canonical := replace .Permalink $siteBase $realBase -}}
+{{- if and .IsTranslated (not .Sitemap.Disable) (not .Params.noindex) (not .Params.redirectURL) (not $excludedSection) (eq (.Params.canonical | default "") $canonical) -}}
+  {{- range .AllTranslations -}}
+    {{- $excludedSection := and .IsSection (eq .Section "best-practises") (not (in (slice "en" "fr") .Language.Lang)) -}}
+    {{- $canonical := replace .Permalink $siteBase $realBase -}}
+    {{- if and (not .Sitemap.Disable) (not .Params.noindex) (not .Params.redirectURL) (not $excludedSection) (eq (.Params.canonical | default "") $canonical) -}}
+      {{- $pages = $pages | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if lt (len $pages) 2 -}}
+  {{- $pages = slice -}}
+{{- end -}}
+{{- return $pages -}}
