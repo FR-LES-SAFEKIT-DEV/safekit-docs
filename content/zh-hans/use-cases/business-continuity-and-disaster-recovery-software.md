@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "业务连续性和灾难恢复软件、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
+schemaType: "Article"
 ---
 
 # 适用于 SafeKit 双节点集群的业务连续性和灾难恢复软件 {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

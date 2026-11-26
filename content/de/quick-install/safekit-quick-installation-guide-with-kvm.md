@@ -7,6 +7,7 @@ lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für KVM, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/KVM-Lösung, Installation der SafeKit/KVM-Lösung unter Linux (kvm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/KVM-Lösung, Demonstration einer Hochverfügbarkeitslösung auf VM-Ebene, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # KVM Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul kvm.safe für Failover {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}

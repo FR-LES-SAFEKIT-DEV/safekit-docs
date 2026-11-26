@@ -7,6 +7,7 @@ lang: "it"
 topics: "Quali sono le architetture ad alta disponibilità e le best practice?, Tabelle comparative sulle architetture ad alta disponibilità e sulle best practice, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
+schemaType: "TechArticle"
 ---
 
 # Architetture ad alta disponibilità e best practice per il clustering software {#high-availability-architectures--software-clustering-best-practices}

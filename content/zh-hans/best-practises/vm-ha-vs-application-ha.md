@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "选择高可用性策略：虚拟机级 HA 与应用级 HA、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # 虚拟机级 HA 与应用级 HA {#vm-ha-vs-application-ha}

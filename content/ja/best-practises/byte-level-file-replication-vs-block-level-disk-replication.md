@@ -7,6 +7,7 @@ lang: "ja"
 topics: "高可用性クラスターにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較、バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
+schemaType: "TechArticle"
 ---
 
 # HA におけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

@@ -7,6 +7,7 @@ lang: "pt-pt"
 topics: "Atualização de uma Aplicação de Alta Disponibilidade Protegida pelo SafeKit, Alta Disponibilidade ao Nível da Máquina Virtual, Alta Disponibilidade ao Nível da Aplicação, Escolher a Estratégia de Atualização Certa, Conclusão, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # Atualização de uma Aplicação Protegida pelo SafeKit num Cluster de Alta Disponibilidade {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}

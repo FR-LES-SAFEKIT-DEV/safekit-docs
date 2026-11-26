@@ -7,6 +7,7 @@ lang: "de"
 topics: "Geschäftskontinuität in einem verteilten Unternehmen, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
+schemaType: "Article"
 ---
 
 # Standardisierung der Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

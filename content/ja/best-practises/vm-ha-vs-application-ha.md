@@ -7,6 +7,7 @@ lang: "ja"
 topics: "高可用性戦略の選択：VM HA とアプリケーション HA、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # VM HA とアプリケーション HA の比較 {#vm-ha-vs-application-ha}

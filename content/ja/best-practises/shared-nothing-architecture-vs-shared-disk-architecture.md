@@ -7,6 +7,7 @@ lang: "ja"
 topics: "高可用性クラスターにおけるシェアードナッシングアーキテクチャと共有ディスクアーキテクチャ、シェアードナッシングアーキテクチャと共有ディスクアーキテクチャ：長所と短所、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
+schemaType: "TechArticle"
 ---
 
 # シェアードナッシングアーキテクチャと共有ディスクアーキテクチャ：最適な HA クラスターの選択 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

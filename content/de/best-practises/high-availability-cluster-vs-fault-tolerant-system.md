@@ -7,6 +7,7 @@ lang: "de"
 topics: "Was ist der Unterschied zwischen Hochverfügbarkeit und Fehlertoleranz?, Vor- und Nachteile von Hochverfügbarkeit und Fehlertoleranz, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # HA-Cluster vs. fehlertolerantes System: Die Wahl der richtigen Redundanzstrategie {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

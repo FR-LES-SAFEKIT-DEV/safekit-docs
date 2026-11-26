@@ -7,6 +7,8 @@ lang: "ja"
 topics: "Siemens Siveillance 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、どのようにして Siemens Siveillance 高可用性クラスター簡単に実装するのでしょうか？、SafeKit Siemens Siveillance クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens Siveillance 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens Siveillance 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Siemens Siveillance"]
 ---
 
 # Siemens Siveillance Suite の高可用性と冗長性：アクティブ/アクティブ SAN レスクラスタリング {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}

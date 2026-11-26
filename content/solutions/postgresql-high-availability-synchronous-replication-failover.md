@@ -6,6 +6,8 @@ category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with PostgreSQL, Table of Contents, How the SafeKit software simply implements a SANless PostgreSQL high availability cluster?, How the SafeKit mirror cluster works with PostgreSQL?, SafeKit High Availability Limitations, Comparison: SafeKit for PostgreSQL vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["PostgreSQL"]
 ---
 
 # The Simplest PostgreSQL High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-postgresql-high-availability-2-node-synchronous-replication--failover}

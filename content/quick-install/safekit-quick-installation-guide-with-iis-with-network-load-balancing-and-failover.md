@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for IIS, SafeKit High Availability Limitations, Overview of the SafeKit / IIS solution, Installation of the SafeKit / IIS solution on Windows (iis_farm.safe), Step by step configuration of the SafeKit / IIS solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # IIS Network Load Balancing & Failover: Install the SafeKit iis_farm.safe Module {#iis-network-load-balancing--failover-install-the-safekit-iis_farmsafe-module}

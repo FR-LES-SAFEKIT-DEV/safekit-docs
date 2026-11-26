@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "数据库层面的数据复制技术、磁盘级别还是文件级别？、数据复制技术对比表、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
+schemaType: "TechArticle"
 ---
 
 # 高可用性数据复制技术：完整比较 {#data-replication-techniques-for-high-availability-a-complete-comparison}

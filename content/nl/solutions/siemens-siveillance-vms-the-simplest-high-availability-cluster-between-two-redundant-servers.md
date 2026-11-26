@@ -7,6 +7,8 @@ lang: "nl"
 topics: "Snelle installatiegids SafeKit met Siemens Siveillance VMS en SQL (SiveillanceVMS.safe mirror-module), Hoe de SANless SafeKit mirror-cluster werkt met Milestone XProtect, Inhoudsopgave, Hoe de SafeKit-software eenvoudig een SANless Milestone XProtect cluster met hoge beschikbaarheid implementeert?, Hoe werkt het SafeKit mirror-cluster met Milestone XProtect?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Milestone XProtect versus andere clusteroplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Siemens Siveillance VMS"]
 ---
 
 # Siemens Siveillance VMS High Availability: 2-node shared-nothing cluster met SafeKit {#siemens-siveillance-vms-high-availability-2-node-shared-nothing-cluster-with-safekit}

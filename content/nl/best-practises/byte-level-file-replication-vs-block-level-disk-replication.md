@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau in een high-availability-cluster, Voor- en nadelen van bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
+schemaType: "TechArticle"
 ---
 
 # Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau voor HA {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

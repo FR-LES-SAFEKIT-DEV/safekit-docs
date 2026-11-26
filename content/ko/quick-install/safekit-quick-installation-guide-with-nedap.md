@@ -7,6 +7,7 @@ lang: "ko"
 topics: "Nedap 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Nedap 솔루션 개요, Windows에 SafeKit/Nedap 솔루션 설치 (nedap.safe), SafeKit/Nedap 솔루션의 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # SafeKit을 사용한 Nedap 고가용성: 장애 조치용 nedap.safe 모듈 설치 {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

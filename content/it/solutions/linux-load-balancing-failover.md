@@ -7,6 +7,7 @@ lang: "it"
 topics: "Cluster farm SafeKit: NLB solo software e failover automatico per Linux, Indice, In che modo il software SafeKit implementa semplicemente un cluster di bilanciamento del carico di rete (NLB) Linux?, Come funziona il cluster SafeKit in modalità farm con Linux?, Confronto: cluster farm SafeKit per Linux e altre soluzioni di clustering NLB, Guida video: configurazione di un cluster NLB farm SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # SafeKit: software tutto in uno per il bilanciamento del carico e l’alta disponibilità Linux {#safekit-all-in-one-linux-load-balancing--high-availability-software}

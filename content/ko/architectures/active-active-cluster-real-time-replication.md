@@ -7,6 +7,7 @@ lang: "ko"
 topics: "실시간 복제를 사용하는 액티브-액티브 클러스터는 어떻게 작동하나요?, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
+schemaType: "TechArticle"
 ---
 
 # 실시간 복제 및 상호 장애 조치를 지원하는 액티브-액티브 클러스터링 소프트웨어 {#active-active-clustering-software-with-real-time-replication--mutual-failover}

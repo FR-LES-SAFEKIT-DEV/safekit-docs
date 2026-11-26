@@ -7,6 +7,7 @@ lang: "ja"
 topics: "クラスターでネットワークが分離された場合、どのようなシナリオが考えられますか？、クラスターで停電が発生した場合、どのようなシナリオが考えられますか？、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # HA クラスターにおける停電とネットワーク分離の処理 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

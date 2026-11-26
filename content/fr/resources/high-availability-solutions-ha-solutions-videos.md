@@ -6,6 +6,7 @@ category: "resources"
 lang: "fr"
 topics: "Tutoriels techniques et démos sur le basculement SafeKit, 🔍 Explorez SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # Démonstrations de haute disponibilité et de basculement SafeKit : Tutoriels vidéo sur le clustering sans SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

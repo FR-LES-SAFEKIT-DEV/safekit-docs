@@ -7,6 +7,7 @@ lang: "ko"
 topics: "N개 서버에서 1개 서버로의 데이터 복제 및 애플리케이션 장애 조치를 통한 고가용성, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
+schemaType: "TechArticle"
 ---
 
 # N-1 이중화 클러스터: 단일 백업 서버로 여러 애플리케이션의 고가용성 확보 {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

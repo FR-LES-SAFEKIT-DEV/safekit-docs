@@ -7,6 +7,8 @@ lang: "ar"
 topics: "تبسيط التوافر العالي (HA) في K3s: لماذا تختار SafeKit بدلاً من MetalLB و Longhorn؟، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Kubernetes K3s عالية التوافر ببساطة؟، كيف تعمل مجموعة mirror SafeKit مع Kubernetes K3S؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit مقابل حزمة K3s القياسية (MetalLB و Longhorn)، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 26 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["K3s"]
 ---
 
 # التوافر العالي Kubernetes K3s: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}

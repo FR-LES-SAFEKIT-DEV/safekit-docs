@@ -7,6 +7,7 @@ lang: "ar"
 topics: "SafeKit HA بدون مشاركة في AWS: تخلص من الأقراص المشتركة مع عدم فقدان أي بيانات، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة AWS عالية التوافر بدون مشاركة ؟، كيف تعمل مجموعة mirror SafeKit مع AWS؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit for AWS مقابل حلول التوافر العالي/التعافي من الكوارث السحابية الأصلية، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # التوافر العالي لخدمات أمازون AWS: النسخ المتماثل المتزامن وتجاوز الأعطال SafeKit {#amazon-aws-high-availability-safekit-synchronous-replication--failover}

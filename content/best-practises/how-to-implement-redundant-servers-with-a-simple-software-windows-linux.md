@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
+schemaType: "TechArticle"
 ---
 
 # How to Implement Redundant Servers with Simple HA Software {#how-to-implement-redundant-servers-with-simple-ha-software}

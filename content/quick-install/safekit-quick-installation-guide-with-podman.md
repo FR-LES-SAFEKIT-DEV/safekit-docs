@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Podman, SafeKit High Availability Limitations, Overview of the SafeKit / Podman solution, Installation of the SafeKit / Podman solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Podman solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Podman High Availability with SafeKit: Install the mirror.safe Module for Failover {#podman-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

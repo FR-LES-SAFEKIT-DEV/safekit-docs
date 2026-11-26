@@ -5,6 +5,7 @@ category: "quick-install"
 lang: "en"
 topics: "Old step by step configuration of the SafeKit / Milestone XProtect solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Old SafeKit Milestone Configuration {#old-safekit-milestone-configuration}

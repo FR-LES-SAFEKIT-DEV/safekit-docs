@@ -7,6 +7,8 @@ lang: "pt-pt"
 topics: "O cluster farm SafeKit: Balanceador de Carga de Software e Failover Automático para NGINX, Índice, Como o software SafeKit implementa de forma simples um cluster de balanceamento de carga de rede (NLB) NGINX?, Como funciona o cluster SafeKit em modo farm com NGINX?, Comparação: cluster farm SafeKit para NGINX vs. Outras Soluções de Agrupamento NLB, Guia em Vídeo: Configuração de um cluster NLB farm SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["NGINX"]
 ---
 
 # SafeKit: Software tudo-em-um para balanceamento de carga e alta disponibilidade NGINX {#safekit-all-in-one-nginx-load-balancing--high-availability-software}

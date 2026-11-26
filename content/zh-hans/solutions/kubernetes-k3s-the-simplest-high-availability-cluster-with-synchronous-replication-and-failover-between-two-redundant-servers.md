@@ -7,6 +7,8 @@ lang: "zh-hans"
 topics: "简化 K3s 高可用性：为什么选择 SafeKit 而不是 MetalLB 和 Longhorn？、目录、SafeKit 软件如何简单地实现 Kubernetes K3s 高可用性集群？、SafeKit mirror 集群如何与 Kubernetes K3S 配合使用？、SafeKit 高可用性限制、比较：SafeKit 与标准 K3s 堆栈（MetalLB 和 Longhorn）、视频指南：配置 SafeKit HA mirror 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["K3s"]
 ---
 
 # Kubernetes K3s 高可用性：2 节点同步复制和故障转移 {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}

@@ -7,6 +7,7 @@ lang: "pt-pt"
 topics: "Apresentação rápida de 30 segundos do SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "Article"
 ---
 
 # Software de Alta Disponibilidade: Agrupamento de Servidores Windows e Linux com SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}

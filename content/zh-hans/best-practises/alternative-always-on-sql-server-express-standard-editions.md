@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "Express 和 Standard 版本 SQL Server Always On 的替代方案、SafeKit mirror 集群如何与 Microsoft SQL Server 配合使用？、视频指南：为 SQL Server 配置 SafeKit HA mirror 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # SQL Server Always On 的替代方案：Express 和 Standard 版本的 HA {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}

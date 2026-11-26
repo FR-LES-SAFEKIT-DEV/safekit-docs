@@ -7,6 +7,7 @@ lang: "ja"
 topics: "分散型エンタープライズにおける事業継続性、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
+schemaType: "Article"
 ---
 
 # 多数の支店を持つ分散型企業における高可用性の標準化 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

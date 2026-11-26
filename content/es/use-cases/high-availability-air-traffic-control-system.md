@@ -7,6 +7,8 @@ lang: "es"
 topics: "Sistemas de control del tráfico aéreo, ¿Por qué es fundamental el control del tráfico aéreo?, Cómo protege SafeKit el control del tráfico aéreo, Implementación en el mundo real en ADB SafeGate, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["ADB SafeGate"]
 ---
 
 # Alta disponibilidad para sistemas de control del tráfico aéreo {#high-availability-for-air-traffic-control-systems}

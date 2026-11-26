@@ -6,6 +6,7 @@ category: "solutions"
 lang: "en"
 topics: "SafeKit Shared-Nothing HA in AWS: Eliminate Shared Disks with Zero Data Loss, Table of Contents, How the SafeKit software simply implements a shared-nothing AWS high availability cluster?, How the SafeKit mirror cluster works with AWS?, SafeKit High Availability Limitations, Comparison: SafeKit for AWS vs. Native Cloud HA/DR Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Amazon AWS High Availability: SafeKit Synchronous Replication & Failover {#amazon-aws-high-availability-safekit-synchronous-replication--failover}

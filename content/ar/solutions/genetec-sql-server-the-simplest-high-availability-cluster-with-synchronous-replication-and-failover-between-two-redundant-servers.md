@@ -7,6 +7,8 @@ lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Genetec SQL، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر Genetec SQL بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع Genetec SQL؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit for Genetec SQL مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Genetec SQL"]
 ---
 
 # أبسط طريقة لتحقيق التوافر العالي Genetec SQL: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بين عقدتين {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}

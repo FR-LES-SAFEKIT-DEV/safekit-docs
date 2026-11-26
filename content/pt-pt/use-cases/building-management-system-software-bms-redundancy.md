@@ -7,6 +7,8 @@ lang: "pt-pt"
 topics: "O que é um sistema de gestão de edifícios (BMS)?, Por que é que o software BMS é tão importante?, Principais fornecedores de sistemas de gestão de edifícios, SafeKit oferece duas soluções para redundância e alta disponibilidade de um software BMS., SafeKit, uma solução reconhecida no mercado da segurança, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
+schemaType: "Article"
+schemaSector: "BMS"
 ---
 
 # Alta Disponibilidade e Redundância para Sistemas de Gestão de Edifícios (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}

@@ -7,6 +7,8 @@ lang: "ko"
 topics: "K3s HA 간소화: MetalLB 및 Longhorn 대신 SafeKit을 선택해야 하는 이유, 목차, SafeKit 소프트웨어는 Kubernetes K3s 고가용성 클러스터를 어떻게 간단하게 구현할까요?, SafeKit mirror 클러스터 Kubernetes K3S와 어떻게 연동되나요?, SafeKit 고가용성 제한 사항, 비교: SafeKit vs. 표준 K3s 스택(MetalLB 및 Longhorn), 비디오 가이드: SafeKit HA mirror 클러스터를 구성, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.9 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["K3s"]
 ---
 
 # Kubernetes K3s 고가용성: 2노드 동기 복제 및 장애 조치 {#kubernetes-k3s-high-availability-2-node-synchronous-replication--failover}

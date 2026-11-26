@@ -7,6 +7,7 @@ lang: "it"
 topics: "Panoramica, Indice, Informazioni sul prodotto, Sistemi operativi e piattaforme supportati, Limitazioni SafeKit High Availability, Moduli applicativi preconfigurati, Architettura e implementazione, Perdita di dati e tempi di ripristino (RPO e RTO), Siti remoti e implementazioni distribuite, Monitoraggio e avvisi, Sicurezza e conformità, Licenze, Supporto e manutenzione, Confronto con altre soluzioni, Link utili"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # Riferimento tecnico SafeKit per i documenti RFI e RFP {#high-availability-technical-reference-for-rfi-and-rfp-preparation}

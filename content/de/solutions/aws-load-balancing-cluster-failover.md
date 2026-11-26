@@ -7,6 +7,7 @@ lang: "de"
 topics: "Erweitern Sie den Cloud Load Balancer um anwendungsorientiertes Monitoring und Self-Healing., Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen AWS Network Load Balancing (NLB)-Cluster?, Wie funktioniert das SafeKit-Farm-Cluster mit AWS?, Vergleich: SafeKit-Farm-Cluster On-Premises vs. SafeKit-Farm-Cluster in der Cloud, Videoanleitung: Konfigurieren eines SafeKit-Farm-NLB-Cluster, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # SafeKit: Amazon AWS Lastausgleich und Anwendungs-Hochverfügbarkeits <span class="notranslate farm-term" translate="no">Farm</span>-Cluster {#safekit-amazon-aws-load-balancing--application-high-availability-farm-cluster}

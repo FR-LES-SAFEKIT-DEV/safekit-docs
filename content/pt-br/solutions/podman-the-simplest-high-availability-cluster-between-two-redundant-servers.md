@@ -7,6 +7,8 @@ lang: "pt-br"
 topics: "Como o SANless SafeKit cluster mirror funciona com Podman, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Podman?, Como o cluster mirror SafeKit funciona com Podman?, Limitações SafeKit de Alta Disponibilidade, Comparação: Cluster SANless SafeKit vs. HA Tradicional Podman, Comparação: SafeKit vs. Linux HA de código aberto (Pacemaker/Corosync/DRBD), Resumo da Alta Disponibilidade Podman, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.7 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Podman"]
 ---
 
 # SafeKit: Software de Replicação de Dados em Tempo Real e Alta Disponibilidade Podman {#safekit-podman-high-availability--real-time-data-replication-software}

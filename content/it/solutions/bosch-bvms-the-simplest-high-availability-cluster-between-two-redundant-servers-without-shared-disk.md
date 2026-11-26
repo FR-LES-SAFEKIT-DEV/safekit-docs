@@ -7,6 +7,8 @@ lang: "it"
 topics: "SafeKit per Bosch BVMS: cluster Hyper-V a 2 nodi senza SAN, Indice, In che modo il software SafeKit implementa semplicemente un cluster ad alta disponibilità Bosch BVMS senza storage condiviso su una SAN?, Come funziona il cluster SafeKit Bosch BVMS?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Bosch BVMS e clustering nativo di Hyper-V, Guida video: configurazione di un cluster HA SafeKit per Bosch BVMS, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Bosch BVMS"]
 ---
 
 # Alta disponibilità SafeKit per Bosch BVMS: ridondanza di gestione video senza SAN {#safekit-high-availability-for-bosch-bvms-sanless-video-management-redundancy}

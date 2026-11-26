@@ -7,6 +7,7 @@ lang: "de"
 topics: "30-Sekunden-Elevator-Pitch für SafeKit, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "Article"
 ---
 
 # Hochverfügbarkeitssoftware: Windows- und Linux-Clustering mit SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}

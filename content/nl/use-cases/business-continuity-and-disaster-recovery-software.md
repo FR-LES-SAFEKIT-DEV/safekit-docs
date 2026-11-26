@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Software voor bedrijfscontinuïteit en noodherstel, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
+schemaType: "Article"
 ---
 
 # Software voor bedrijfscontinuïteit en noodherstel voor clusters met 2 knooppunten met SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

@@ -7,6 +7,8 @@ lang: "ar"
 topics: "كيف تعمل مجموعة النسخ المتطابق SafeKit مجموعة mirror مع MySQL، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة MySQL عالية التوافر بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع MySQL؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ MySQL مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["MySQL"]
 ---
 
 # أبسط طرق تحقيق التوافر العالي MySQL: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بعقدتين {#the-simplest-mysql-high-availability-2-node-synchronous-replication--failover}

@@ -6,6 +6,7 @@ category: "resources"
 lang: "zh-hans"
 topics: "如何访问培训平台？获取 SafeKit 8 培训资料，🔍 探索 SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "Course"
 ---
 
 # SafeKit 高可用性培训：免费在线认证课程 {#safekit-high-availability-training-free-online-certification-program}

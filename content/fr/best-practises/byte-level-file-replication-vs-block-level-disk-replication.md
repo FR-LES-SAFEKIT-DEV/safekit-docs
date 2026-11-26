@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Réplication de fichiers au niveau de l’octet ou réplication de disque au niveau du bloc dans un cluster de haute disponibilité, Avantages et inconvénients de la réplication de fichiers au niveau de l’octet par rapport à la réplication de disque au niveau du bloc, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
+schemaType: "TechArticle"
 ---
 
 # Réplication de fichiers au niveau de l’octet ou réplication de disques au niveau du bloc pour la haute disponibilité {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

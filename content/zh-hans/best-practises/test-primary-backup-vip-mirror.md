@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "关键原则、前提条件：虚拟 IP (VIP) 配置、测试 1 – 主服务器持有的虚拟 IP (VIP)、测试 2 – 手动故障转移（主服务器停止）、测试 3 – 使用 arp -a 检查 GARP 重路由、测试 4 – 使用 Wireshark (Windows) 或 tcpdump (Linux) 进行端到端检查、从哪些工作站进行测试、预期结果摘要、故障排除"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
+schemaType: "TechArticle"
 ---
 
 # 测试网络中 SafeKit mirror 集群的虚拟 IP 地址 {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}

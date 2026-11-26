@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for AWS, SafeKit High Availability Limitations, Overview of the SafeKit / AWS mirror solution, Installation of the SafeKit / AWS mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / AWS mirror solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # AWS High Availability with SafeKit: Install the mirror.safe Module for Failover {#aws-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

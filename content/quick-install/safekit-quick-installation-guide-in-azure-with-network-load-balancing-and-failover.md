@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Azure, SafeKit High Availability Limitations, Overview of the SafeKit / Azure solution, Installation of the SafeKit / Azure solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Azure solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # Azure Network Load Balancing & Failover: Install the SafeKit farm.safe Module {#azure-network-load-balancing--failover-install-the-safekit-farmsafe-module}

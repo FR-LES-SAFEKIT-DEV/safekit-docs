@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "en"
 topics: "SafeKit brings two solutions for redundancy and high availability of a physical security software, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
+schemaType: "Article"
 ---
 
 # High Availability and Redundancy for Physical Security Software {#high-availability-and-redundancy-for-physical-security-software}

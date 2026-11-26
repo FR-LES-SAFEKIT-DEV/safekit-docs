@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Stockage partagé SAN ou NAS : lequel est le plus simple pour un cluster de basculement ?, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
+schemaType: "TechArticle"
 ---
 
 # SAN ou NAS pour le stockage partagé en cluster de basculement : une comparaison détaillée {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

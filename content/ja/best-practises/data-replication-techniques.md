@@ -7,6 +7,7 @@ lang: "ja"
 topics: "データベースレベルでのデータレプリケーション技術、ディスクレベルですか、それともファイルレベルですか？、データレプリケーション技術の比較表、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
+schemaType: "TechArticle"
 ---
 
 # 高可用性のためのデータレプリケーション技術：完全比較 {#data-replication-techniques-for-high-availability-a-complete-comparison}

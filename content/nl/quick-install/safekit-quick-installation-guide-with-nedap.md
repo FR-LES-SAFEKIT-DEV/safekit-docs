@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Nedap, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Nedap-oplossing, Installatie van de SafeKit/Nedap-oplossing op Windows (nedap.safe), Stapsgewijze configuratie van de SafeKit/Nedap-oplossing, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Nedap High Availability met SafeKit: Installeer de nedap.safe module voor failover {#nedap-high-availability-with-safekit-install-the-nedapsafe-module-for-failover}

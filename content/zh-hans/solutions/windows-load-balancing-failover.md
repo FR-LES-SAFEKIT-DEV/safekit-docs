@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "SafeKit farm 集群：适用于 Windows 的纯软件 NLB 和自动故障转移、目录、SafeKit 软件如何简单地实现 Windows 网络负载均衡(NLB) 集群？、SafeKit 集群在 farm 模式下如何与 Windows 配合使用？、比较：适用于 Windows SafeKit farm 集群与其它 NLB 集群解决方案、视频指南：配置 SafeKit farm NLB 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # SafeKit：一体化 Windows 负载均衡和高可用性软件 {#safekit-all-in-one-windows-load-balancing--high-availability-software}

@@ -7,6 +7,7 @@ lang: "de"
 topics: "Schlüsselprinzipien, Voraussetzung: Konfiguration der virtuellen IP (VIP), Test 1 – Virtuelle IP (VIP), die vom primären Server gehalten wird, Test 2 – Manueller Failover (Stopp des Primärservers), Test 3 – Überprüfung GARP Umleitung mit arp -a, Test 4 – End-to-End-Prüfung mit Wireshark (Windows) oder tcpdump (Linux), Von welchen Workstations aus getestet werden soll, Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 17 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
+schemaType: "TechArticle"
 ---
 
 # Testen der virtuellen IP-Adresse eines SafeKit Mirror-Cluster in Ihrem Netzwerk {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}

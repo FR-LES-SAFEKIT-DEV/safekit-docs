@@ -7,6 +7,8 @@ lang: "zh-hans"
 topics: "什么是视频管理软件 (VMS)？、为什么 VMS 软件至关重要？、主要 VMS 系统供应商、SafeKit 为 VMS 软件的冗余和高可用性提供了两种解决方案。、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
+schemaType: "Article"
+schemaSector: "VMS"
 ---
 
 # 视频管理软件 (VMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-video-management-software-vms}

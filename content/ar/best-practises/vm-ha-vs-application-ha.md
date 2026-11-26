@@ -7,6 +7,7 @@ lang: "ar"
 topics: "اختيار استراتيجية التوافر العالي: HA على مستوى الأجهزة الافتراضية مقابل HA على مستوى التطبيق، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # HA على مستوى الأجهزة الافتراضية مقابل HA على مستوى التطبيق {#vm-ha-vs-application-ha}

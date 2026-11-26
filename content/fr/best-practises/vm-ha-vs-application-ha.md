@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Choisir votre stratégie de haute disponibilité : HA de VM ou HA applicative, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # HA de VM ou HA applicative {#vm-ha-vs-application-ha}

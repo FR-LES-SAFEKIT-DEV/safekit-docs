@@ -7,6 +7,8 @@ lang: "ko"
 topics: "비디오 관리 소프트웨어(VMS)란 무엇인가요?, VMS 소프트웨어가 중요한 이유는 무엇일까요?, 주요 VMS 공급업체, SafeKit은 VMS 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다., SafeKit, 보안 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
+schemaType: "Article"
+schemaSector: "VMS"
 ---
 
 # 비디오 관리 소프트웨어(VMS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-video-management-software-vms}

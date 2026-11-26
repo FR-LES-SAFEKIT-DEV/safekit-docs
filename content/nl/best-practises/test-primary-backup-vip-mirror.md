@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Belangrijkste principes, Vereiste: configuratie van virtueel IP (VIP), Test 1 – Virtueel IP (VIP) in handen van de primaire server, Test 2 – Handmatige failover (stoppen van de primaire), Test 3 – GARP omleiding controleren met arp -a, Test 4 – End-to-end controle met Wireshark (Windows) of tcpdump (Linux), Vanaf welke werkstations testen, Samenvatting van de verwachte resultaten, Probleemoplossing"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
+schemaType: "TechArticle"
 ---
 
 # Het virtuele IP-adres van een SafeKit mirror-cluster in uw netwerk testen {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}

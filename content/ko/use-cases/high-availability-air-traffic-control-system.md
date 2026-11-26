@@ -7,6 +7,8 @@ lang: "ko"
 topics: "항공 교통 관제 시스템, 항공 교통 관제가 왜 중요할까요?, SafeKit이 항공 교통 관제 시스템을 보호하는 방법, ADB SafeGate의 실제 구현, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["ADB SafeGate"]
 ---
 
 # 항공 교통 관제 시스템의 고가용성 {#high-availability-for-air-traffic-control-systems}

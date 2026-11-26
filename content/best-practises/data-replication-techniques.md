@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
+schemaType: "TechArticle"
 ---
 
 # Data Replication Techniques for High Availability: A Complete Comparison {#data-replication-techniques-for-high-availability-a-complete-comparison}

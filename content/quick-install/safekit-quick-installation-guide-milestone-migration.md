@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "Eviden SafeKit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Milestone Management Migration with SafeKit {#milestone-management-migration-with-safekit}

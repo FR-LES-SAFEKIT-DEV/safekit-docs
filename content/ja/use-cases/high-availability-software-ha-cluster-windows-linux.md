@@ -7,6 +7,7 @@ lang: "ja"
 topics: "SafeKit の 30 秒エレベーターピッチ、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "Article"
 ---
 
 # 高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング {#high-availability-software-windows-and-linux-clustering-with-safekit}

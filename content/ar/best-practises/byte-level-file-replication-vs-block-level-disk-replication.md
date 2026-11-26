@@ -7,6 +7,7 @@ lang: "ar"
 topics: "نسخ الملفات على مستوى البايت مقابل نسخ الأقراص على مستوى الكتلة في مجموعة عالية التوفر، إيجابيات وسلبيات تكرار الملفات على مستوى البايت مقابل تكرار الأقراص على مستوى الكتلة، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
+schemaType: "TechArticle"
 ---
 
 # نسخ الملفات على مستوى البايت مقابل نسخ الأقراص على مستوى الكتلة للتوافر العالي {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

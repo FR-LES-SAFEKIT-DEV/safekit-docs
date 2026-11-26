@@ -7,6 +7,7 @@ lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in der Cloud, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit /Cloud- mirror-Lösung, Installation der SafeKit /Cloud mirror unter Windows und Linux (mirror.safe), Schritt-für-Schritt-Konfiguration der SafeKit /Cloud- mirror, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Hohe Cloud-Verfügbarkeit mit SafeKit: Installieren Sie das Modul mirror.safe für Failover {#cloud-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

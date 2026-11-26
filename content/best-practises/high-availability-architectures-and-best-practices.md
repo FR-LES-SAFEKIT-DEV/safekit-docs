@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "What are the high availability architectures and the best practices?, Comparative tables on high availability architectures and best practices, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
+schemaType: "TechArticle"
 ---
 
 # High Availability Architectures & Software Clustering Best Practices {#high-availability-architectures--software-clustering-best-practices}

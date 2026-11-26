@@ -7,6 +7,7 @@ lang: "ja"
 topics: "Apache 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Apache ソリューションの概要、Windows および Linux への SafeKit/Apache ソリューションのインストール (apache_farm.safe)、SafeKit/Apache ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # Apache ネットワーク負荷分散とフェイルオーバー：SafeKit apache_farm.safe モジュールのインストール {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

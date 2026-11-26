@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "通过应用级监控和自我修复功能增强云负载均衡器、目录、SafeKit 软件如何简单地实现云网络负载均衡(NLB) 集群？、SafeKit farm 集群如何与云协同工作？、比较：本地 SafeKit farm 集群与云端 SafeKit farm 集群、视频指南：配置 SafeKit farm NLB 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # SafeKit：云负载均衡和应用高可用性 <span class="notranslate farm-term" translate="no">farm</span> 集群 {#safekit-cloud-load-balancing--application-high-availability-farm-cluster}

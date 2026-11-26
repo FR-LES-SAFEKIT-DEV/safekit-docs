@@ -7,6 +7,8 @@ lang: "it"
 topics: "Che cos’è un software di gestione video (VMS)?, Perché il software VMS è fondamentale?, Principali fornitori VMS, SafeKit offre due soluzioni per la ridondanza e l’alta disponibilità di un software VMS, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
+schemaType: "Article"
+schemaSector: "VMS"
 ---
 
 # Elevata disponibilità e ridondanza per il software di gestione video (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}

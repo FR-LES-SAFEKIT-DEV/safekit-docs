@@ -7,6 +7,7 @@ lang: "ar"
 topics: "نظرة عامة، جدول المحتويات، معلومات المنتج، أنظمة التشغيل والمنصات المدعومة، قيود التوافر العالي SafeKit، وحدات التطبيق المعدة مسبقًا، البنية والنشر، فقدان البيانات وأوقات الاسترداد (RPO ووقت RTO)، المواقع البعيدة وعمليات النشر الموزعة، المراقبة والتنبيهات، الأمن والامتثال، الترخيص، الدعم والصيانة، مقارنة مع الحلول الأخرى، روابط مفيدة"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # المرجع الفني لـ SafeKit لوثائق RFI المعلومات RFP {#high-availability-technical-reference-for-rfi-and-rfp-preparation}

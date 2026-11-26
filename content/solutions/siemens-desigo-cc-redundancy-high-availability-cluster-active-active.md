@@ -6,6 +6,8 @@ category: "solutions"
 lang: "en"
 topics: "SafeKit for Siemens Desigo CC: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens Desigo CC high availability cluster without shared storage on a SAN?, How the SafeKit Siemens Desigo CC cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens Desigo CC vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens Desigo CC, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Siemens Desigo CC"]
 ---
 
 # Siemens Desigo CC High Availability: SANless 2-Node Redundancy {#siemens-desigo-cc-high-availability-sanless-2-node-redundancy}

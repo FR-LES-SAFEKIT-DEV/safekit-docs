@@ -7,6 +7,7 @@ lang: "ko"
 topics: "Apache 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Apache 솔루션 개요, Windows 및 Linux에 SafeKit/Apache 솔루션 설치 (apache_farm.safe), SafeKit/Apache 솔루션 단계별 구성, SafeKit farm 솔루션 시연, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # Apache 네트워크 부하 분산 및 장애 조치: SafeKit apache_farm.safe 모듈 설치 {#apache-network-load-balancing--failover-install-the-safekit-apache_farmsafe-module}

@@ -7,6 +7,7 @@ lang: "ja"
 topics: "リアルタイムレプリケーションを伴うアクティブ/アクティブクラスターはどのように機能しますか？、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
+schemaType: "TechArticle"
 ---
 
 # リアルタイムレプリケーションと相互フェイルオーバー機能を備えたアクティブ/アクティブクラスタリングソフトウェア {#active-active-clustering-software-with-real-time-replication--mutual-failover}

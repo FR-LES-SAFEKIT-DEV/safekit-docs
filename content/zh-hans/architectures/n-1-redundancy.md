@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "通过数据复制和应用程序故障转移，实现从 N 台服务器到 1 台服务器的高可用性、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
+schemaType: "TechArticle"
 ---
 
 # N-1 冗余集群：使用单个备份服务器为多个应用程序提供高可用性 {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

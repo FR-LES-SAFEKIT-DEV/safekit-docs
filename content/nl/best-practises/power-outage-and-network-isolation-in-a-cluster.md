@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?, Wat zijn de verschillende scenario's in geval van een stroomstoring in een cluster?, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # Omgaan met stroomuitval en netwerkisolatie in een HA-cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

@@ -7,6 +7,7 @@ lang: "ar"
 topics: "كيف تعمل مجموعة النسخ المتطابق SafeKit مجموعة mirror مع Windows، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Windows عالية التوافر بدون شبكة تخزين (SANless)؟، كيف تعمل مجموعة mirror SafeKit مع Windows؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لنظام Windows مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # أبسط طرق تحقيق التوافر العالي Windows: النسخ المتماثل المتزامن وتجاوز الفشل بعقدتين {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}

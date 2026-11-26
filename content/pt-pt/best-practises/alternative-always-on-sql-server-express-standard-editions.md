@@ -7,6 +7,7 @@ lang: "pt-pt"
 topics: "Alternativa ao Always On SQL Server para as edições Express e Standard, Como funciona o cluster mirror SafeKit com Microsoft SQL Server?, Guia em Vídeo: Configuração de um cluster mirror de alta disponibilidade SafeKit para SQL Server, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # Alternativa ao SQL Server Always On: HA para as Edições Express e Standard {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}

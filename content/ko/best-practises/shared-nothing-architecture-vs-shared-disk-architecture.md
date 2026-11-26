@@ -7,6 +7,7 @@ lang: "ko"
 topics: "고가용성 클러스터를 위한 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처, 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 장단점, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
+schemaType: "TechArticle"
 ---
 
 # 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 최적의 HA 클러스터 선택 {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

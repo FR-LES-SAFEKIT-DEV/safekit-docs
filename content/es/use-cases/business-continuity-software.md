@@ -7,6 +7,7 @@ lang: "es"
 topics: "Continuidad del negocio en una empresa distribuida, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
+schemaType: "Article"
 ---
 
 # Estandarización de la alta disponibilidad para empresas distribuidas con numerosas sucursales {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

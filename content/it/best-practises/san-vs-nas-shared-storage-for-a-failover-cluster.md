@@ -7,6 +7,7 @@ lang: "it"
 topics: "SAN o NAS: quale soluzione di archiviazione condivisa è più semplice per un cluster di failover?, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
+schemaType: "TechArticle"
 ---
 
 # SAN e NAS per l’archiviazione condivisa per il clustering di failover: un confronto dettagliato {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

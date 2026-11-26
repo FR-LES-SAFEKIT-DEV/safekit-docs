@@ -7,6 +7,7 @@ lang: "ja"
 topics: "クラスターでネットワークが分離された場合、どのようなシナリオが考えられますか？、Windows または Linux クラスターにおけるハートビートとフェイルオーバーの仕組みを教えてください。、2 つのリモートコンピュータールームにあるサーバーによるスプリットブレインとクォーラム、SafeKit スプリットブレインチェッカーによるシンプルなクラスタークォーラム、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # Windows および Linux クラスターにおけるハートビート、フェイルオーバー、およびクォーラム {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

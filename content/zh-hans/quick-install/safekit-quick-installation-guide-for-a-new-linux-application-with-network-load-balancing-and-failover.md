@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "Linux 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Linux 解决方案概述、安装 SafeKit/Linux 解决方案 (farm.safe)、SafeKit/Linux 解决方案的分步配置、SafeKit farm 解决方案演示、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # Linux 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块 {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

@@ -7,6 +7,7 @@ lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Linux, Einschränkungen SafeKit Hochverfügbarkeit, Überblick über die SafeKit/Linux-Lösung, Installation der SafeKit/Linux-Lösung (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Linux-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # Linux Netzwerk-Lastverteilung und Failover: Installieren Sie das SafeKit Modul farm.safe {#linux-network-load-balancing--failover-install-the-safekit-farmsafe-module}

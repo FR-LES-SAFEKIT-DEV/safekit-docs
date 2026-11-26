@@ -7,6 +7,7 @@ lang: "ko"
 topics: "주요 원칙, 필수 구성 요소: SafeKit 모자이크, 테스트 1 – 연결 분배, 테스트 2 – 디스패칭 서버 변경, 테스트 3 – arp -a를 사용한 GARP 재라우팅 확인, 테스트 4 – Wireshark(Windows) 또는 tcpdump(Linux)를 사용한 종단 간 확인, 테스트할 워크스테이션, 예상 결과 요약, 문제 해결, SafeKit farm 솔루션 시연"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
+schemaType: "TechArticle"
 ---
 
 # SafeKit <span class="notranslate farm-term" translate="no">farm</span> 클러스터에서 로드 밸런싱 가상 IP 주소 테스트 {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}

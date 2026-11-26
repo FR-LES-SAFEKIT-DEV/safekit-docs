@@ -7,6 +7,7 @@ lang: "ko"
 topics: "고가용성 클러스터에서 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교, 바이트 수준 파일 복제와 블록 수준 디스크 복제의 장단점, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
+schemaType: "TechArticle"
 ---
 
 # HA를 위한 바이트 수준 파일 복제와 블록 수준 디스크 복제 비교 {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

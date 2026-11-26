@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for GCP, SafeKit High Availability Limitations, Overview of the SafeKit / GCP mirror solution, Installation of the SafeKit / GCP mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / GCP mirror solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # GCP High Availability with SafeKit: Install the mirror.safe Module for Failover {#gcp-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

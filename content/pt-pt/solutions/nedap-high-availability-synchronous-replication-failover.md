@@ -7,6 +7,8 @@ lang: "pt-pt"
 topics: "Como o SANless SafeKit cluster mirror funciona com Nedap, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Nedap sem SAN?, Como funciona o cluster mirror SafeKit com Nedap?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit para Nedap vs. Outras Soluções de Agrupamento, Guia em Vídeo: Configuração de um cluster mirror HA SafeKit, SafeKit, uma solução reconhecida no mercado da segurança, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Nedap"]
 ---
 
 # A Mais Simples Solução de Alta Disponibilidade Nedap: Replicação Síncrona e Failover de 2 Nós {#the-simplest-nedap-high-availability-2-node-synchronous-replication--failover}

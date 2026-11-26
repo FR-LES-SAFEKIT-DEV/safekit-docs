@@ -7,6 +7,8 @@ lang: "ja"
 topics: "SANless SafeKit mirror クラスター Docker と連携する仕組み、目次、SafeKit ソフトウェアが Docker 高可用性クラスタークラスターを簡単に実装する仕組み、SafeKit mirror クラスターが Docker と連携する仕組み、SafeKit 高可用性の制限事項、比較：SafeKit SANless クラスターと従来の Docker HA、比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）、Docker 高可用性の概要、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.2 | glossaire 2026-11-08.1 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Docker"]
 ---
 
 # SafeKit：Docker 高可用性＆リアルタイムデータレプリケーションソフトウェア {#safekit-docker-high-availability--real-time-data-replication-software}

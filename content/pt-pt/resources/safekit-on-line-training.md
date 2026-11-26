@@ -6,6 +6,7 @@ category: "resources"
 lang: "pt-pt"
 topics: "Como acessar a plataforma de treinamento?, Obtenha os materiais de treinamento do SafeKit 8, 🔍 Explore o SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "Course"
 ---
 
 # Treinamento de Alta Disponibilidade do SafeKit: Programa de Certificação Online Gratuito {#safekit-high-availability-training-free-online-certification-program}

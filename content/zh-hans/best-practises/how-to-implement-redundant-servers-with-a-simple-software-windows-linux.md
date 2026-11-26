@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "如何通过实时复制和故障转移实现主动/被动冗余服务器？、如何使用网络负载均衡和故障转移来实现双活冗余服务器？、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
+schemaType: "TechArticle"
 ---
 
 # 如何使用简单的 HA 软件实现冗余服务器 {#how-to-implement-redundant-servers-with-simple-ha-software}

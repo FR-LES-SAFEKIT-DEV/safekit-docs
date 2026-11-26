@@ -7,6 +7,7 @@ lang: "es"
 topics: "Almacenamiento compartido SAN o NAS: ¿cuál es más sencillo para un clúster de conmutación por error?, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
+schemaType: "TechArticle"
 ---
 
 # SAN vs. NAS: almacenamiento compartido para clústeres de conmutación por error. Una comparación detallada {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

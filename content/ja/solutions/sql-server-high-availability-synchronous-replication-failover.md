@@ -7,6 +7,8 @@ lang: "ja"
 topics: "SANless SafeKit mirror クラスターと Microsoft SQL Server の連携方法、目次、SafeKit ソフトウェアは、SAN レスの Microsoft SQL Server 高可用性クラスターをどのように簡単に実装しますか？、SafeKit mirror クラスターが Microsoft SQL Server とどのように連携しますか？、SafeKit High Availability の制限事項、比較：Microsoft SQL Server 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Microsoft SQL Server"]
 ---
 
 # Microsoft SQL Server 高可用性を実現する最もシンプルな方法：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}

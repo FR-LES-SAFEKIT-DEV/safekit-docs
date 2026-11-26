@@ -6,6 +6,8 @@ category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Firebird, Table of Contents, How the SafeKit software simply implements a SANless Firebird high availability cluster?, How the SafeKit mirror cluster works with Firebird?, SafeKit High Availability Limitations, Comparison: SafeKit for Firebird vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Firebird"]
 ---
 
 # The Simplest Firebird High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-firebird-high-availability-2-node-synchronous-replication--failover}

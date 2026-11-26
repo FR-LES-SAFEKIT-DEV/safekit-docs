@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "分布式企业中的业务连续性、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
+schemaType: "Article"
 ---
 
 # 为拥有众多分支机构的分布式企业实现高可用性的标准化 {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

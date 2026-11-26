@@ -7,6 +7,7 @@ lang: "ar"
 topics: "دليل التثبيت السريع عالي التوافر لـ KVM، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/KVM، تثبيت حل SafeKit/KVM على Linux (kvm.safe)، إعداد حل SafeKit/KVM خطوة بخطوة، عرض حل عالي التوافر على مستوى الجهاز الظاهري، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # التوافر العالي KVM باستخدام SafeKit: تثبيت وحدة kvm.safe للتحويل التلقائي عند الفشل {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}

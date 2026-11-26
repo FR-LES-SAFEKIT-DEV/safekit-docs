@@ -7,6 +7,7 @@ lang: "ko"
 topics: "고가용성 아키텍처와 모범 사례는 무엇인가요?, 고가용성 아키텍처 및 모범 사례에 대한 비교표, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
+schemaType: "TechArticle"
 ---
 
 # 고가용성 아키텍처 및 소프트웨어 클러스터링 모범 사례 {#high-availability-architectures--software-clustering-best-practices}

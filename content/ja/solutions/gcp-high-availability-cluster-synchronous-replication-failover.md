@@ -7,6 +7,7 @@ lang: "ja"
 topics: "GCP における SafeKit シェアードナッシング HA：共有ディスクを排除し、データ損失ゼロを実現、目次、SafeKit ソフトウェアは、どのようにしてシンプルなシェアードナッシング GCP 高可用性クラスターを実装するのでしょうか？、SafeKit mirror クラスターが GCP でどのように機能しますか？、SafeKit High Availability の制限事項、比較：GCP 向け SafeKit とネイティブクラウド HA/DR ソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Google GCP 高可用性：SafeKit 同期レプリケーションとフェイルオーバー {#google-gcp-high-availability-safekit-synchronous-replication--failover}

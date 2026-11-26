@@ -7,6 +7,7 @@ lang: "es"
 topics: "Smart Console: alta disponibilidad intuitiva y sin errores en ordenadores de sobremesa y dispositivos móviles, Índice, ¿Cómo funciona un clúster mirror SafeKit con la consola web?, ¿Cómo funciona un clúster farm SafeKit con la consola web?, ¿Cómo supervisar varios módulos y varios clústeres a través de la consola web?, ¿Cómo supervisar las alertas en la consola y gestionar las notificaciones por correo electrónico?, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # SafeKit Smart Console: su clúster de alta disponibilidad en el bolsillo {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

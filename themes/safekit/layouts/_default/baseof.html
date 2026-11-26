@@ -20,17 +20,21 @@
     {{ if and (not .Params.noindex) (not .Params.redirectURL) }}
     {{ $pageURL := .Params.canonical | default (replace .Permalink .Site.BaseURL $realBase) }}
     {{ $softwareID := printf "%s/#software" (strings.TrimSuffix "/" $realBase) }}
+    {{ $websiteID := printf "%s/#website" (strings.TrimSuffix "/" $realBase) }}
+    {{ $organizationID := printf "%s/#organization" (strings.TrimSuffix "/" $realBase) }}
     {{ $isProductPage := and .IsSection (eq .Section "product") .Parent.IsHome }}
     {{ $schemaType := "WebPage" }}
     {{ if and .IsSection (not $isProductPage) }}
     {{ $schemaType = "CollectionPage" }}
-    {{ else if and .IsPage (in (slice "quick-install" "best-practises") .Section) }}
+    {{ else if and .IsPage (in (slice "quick-install" "best-practises" "architectures" "solutions") .Section) }}
     {{ $schemaType = "TechArticle" }}
+    {{ else if and .IsPage (eq .Section "use-cases") }}
+    {{ $schemaType = "Article" }}
     {{ else if and .IsPage .File (in (slice "contact-us-for-safekit" "contact-safekit" "contact-marketo") .File.TranslationBaseName) }}
     {{ $schemaType = "ContactPage" }}
     {{ end }}
     {{ with .Params.schemaType }}
-    {{ if not (in (slice "WebPage" "CollectionPage" "ContactPage" "Article" "TechArticle") .) }}
+    {{ if not (in (slice "WebPage" "CollectionPage" "ContactPage" "Article" "TechArticle" "Course") .) }}
     {{ errorf "Invalid schemaType %q for %s" . $pageURL }}
     {{ end }}
     {{ $schemaType = . }}
@@ -38,18 +42,68 @@
     {{ $isArticle := in (slice "Article" "TechArticle") $schemaType }}
     {{ $fragment := "webpage" }}
     {{ if $isArticle }}{{ $fragment = "article" }}{{ end }}
-    {{ $author := dict "@type" "Organization" "name" "Eviden" "url" "https://eviden.com/" }}
-    {{ $pageSchema := dict "@context" "https://schema.org" "@type" $schemaType "@id" (printf "%s#%s" $pageURL $fragment) "url" $pageURL "name" .Title "inLanguage" .Lang "author" $author }}
+    {{ $author := dict "@id" $organizationID "@type" "Organization" "name" "Eviden" "url" "https://eviden.com/" }}
+    {{ $pageSchema := dict "@context" "https://schema.org" "@type" $schemaType "@id" (printf "%s#%s" $pageURL $fragment) "url" $pageURL "name" .Title "inLanguage" .Lang "author" $author "isPartOf" (dict "@id" $websiteID) }}
     {{ with .Params.description }}{{ $pageSchema = merge $pageSchema (dict "description" .) }}{{ end }}
     {{ with .Params.image }}
     {{ $imageURL := replace (absURL .) $.Site.BaseURL $realBase }}
     {{ $pageSchema = merge $pageSchema (dict "image" $imageURL) }}
     {{ end }}
     {{ if $isArticle }}{{ $pageSchema = merge $pageSchema (dict "headline" .Title "mainEntityOfPage" $pageURL) }}{{ end }}
-    {{ if or .IsHome $isProductPage (and .IsPage (eq .Section "solutions")) }}
-    {{ $pageSchema = merge $pageSchema (dict "about" (dict "@id" $softwareID "@type" "SoftwareApplication" "name" "SafeKit")) }}
+    {{ $subjects := slice (dict "@id" $softwareID "@type" "SoftwareApplication" "name" "SafeKit") }}
+    {{ range .Params.schemaApplications }}
+    {{ $subjects = $subjects | append (dict "@type" "SoftwareApplication" "name" .) }}
+    {{ end }}
+    {{ with .Params.schemaSector }}{{ $subjects = $subjects | append (dict "@type" "Thing" "name" .) }}{{ end }}
+    {{ $pageSchema = merge $pageSchema (dict "about" $subjects) }}
+    {{ with .Params.schemaMentions }}
+    {{ $mentions := slice }}
+    {{ range . }}{{ $mentions = $mentions | append (dict "@type" "Organization" "name" .) }}{{ end }}
+    {{ $pageSchema = merge $pageSchema (dict "mentions" $mentions) }}
+    {{ end }}
+    {{ if or $isProductPage .Params.schemaTrial }}
+    {{ $pageSchema = merge $pageSchema (dict "mainEntity" (dict "@id" $softwareID)) }}
+    {{ else if eq $schemaType "Course" }}
+    {{ $pageSchema = merge $pageSchema (dict "provider" (dict "@id" $organizationID) "offers" (dict "@type" "Offer" "price" 0)) }}
+    {{ else if and .IsPage .File (eq .File.TranslationBaseName "safekit-support") }}
+    {{ $pageSchema = merge $pageSchema (dict "mainEntity" (dict "@type" "Service" "name" .Title "provider" (dict "@id" $organizationID))) }}
+    {{ end }}
+    {{ if and .IsPage (eq .Section "quick-install") }}
+    {{ $downloads := slice }}
+    {{ range findRE `href="[^"]+\.safe"` .Content }}
+    {{ $downloadURL := replaceRE `^href="([^"]+)"$` "$1" . | absURL }}
+    {{ $downloadURL = replace $downloadURL $.Site.BaseURL $realBase }}
+    {{ $downloads = $downloads | append (dict "@type" "DataDownload" "contentUrl" $downloadURL) }}
+    {{ end }}
+    {{ with $downloads }}{{ $pageSchema = merge $pageSchema (dict "associatedMedia" .) }}{{ end }}
     {{ end }}
     <script type="application/ld+json">{{ $pageSchema | jsonify | safeJS }}</script>
+    {{ if and .IsSection (eq $schemaType "CollectionPage") (in (slice "use-cases" "solutions" "quick-install" "best-practises" "architectures") .Section) }}
+    {{ $pages := .RegularPages }}
+    {{ $listItems := slice }}
+    {{ $listedPages := slice }}
+    {{ range findRE `href="[^"]+"` .Content }}
+    {{ $link := . }}
+    {{ range $pages }}
+    {{ if and (not .Params.noindex) (not .Params.redirectURL) (not (in $listedPages .RelPermalink)) (eq $link (printf "href=%q" .RelPermalink)) }}
+    {{ $itemURL := .Params.canonical | default (replace .Permalink .Site.BaseURL $realBase) }}
+    {{ $listItems = $listItems | append (dict "@type" "ListItem" "position" (add (len $listItems) 1) "url" $itemURL "name" .Title) }}
+    {{ $listedPages = $listedPages | append .RelPermalink }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ with $listItems }}
+    <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "ItemList" "itemListElement" . | jsonify | safeJS }}</script>
+    {{ end }}
+    {{ end }}
+    {{ with .Params.schemaFaq }}
+    {{ $questions := slice }}
+    {{ range . }}
+    {{ $answer := .answer | markdownify | plainify }}
+    {{ $questions = $questions | append (dict "@type" "Question" "name" (.question | markdownify | plainify) "acceptedAnswer" (dict "@type" "Answer" "text" $answer)) }}
+    {{ end }}
+    <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $questions | jsonify | safeJS }}</script>
+    {{ end }}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SafeKit">
     <meta property="og:title" content="{{ .Title }}">
@@ -63,16 +117,25 @@
     <meta property="og:image" content="{{ $imageURL }}">
     <meta name="twitter:image" content="{{ $imageURL }}">
     {{ end }}
-    {{ if or .IsHome $isProductPage }}
+    {{ if or .IsHome $isProductPage .Params.schemaTrial }}
     {{ $publisher := dict "@type" "Organization" "name" "Eviden" }}
-    {{ $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "@id" $softwareID "name" "SafeKit" "applicationCategory" "High Availability Software" "operatingSystem" "Windows, Linux" "publisher" $publisher }}
+    {{ $software := dict "@context" "https://schema.org" "@type" "SoftwareApplication" "@id" $softwareID "name" "SafeKit" "applicationCategory" "BusinessApplication" "operatingSystem" "Windows, Linux" "softwareVersion" "8.2" "publisher" $publisher }}
+    {{ if .Params.schemaTrial }}
+    {{ $software = merge $software (dict "downloadUrl" .Params.schemaDownloads "offers" (dict "@type" "Offer" "name" .Title "price" 0 "url" $pageURL)) }}
+    {{ else if $isProductPage }}
+    {{ with .Site.GetPage "/resources/safekit-free-trial" }}
+    {{ $trialURL := .Params.canonical | default (replace .Permalink .Site.BaseURL $realBase) }}
+    {{ $software = merge $software (dict "offers" (dict "@type" "Offer" "name" .Title "price" 0 "url" $trialURL)) }}
+    {{ end }}
+    {{ end }}
     <script type="application/ld+json">{{ $software | jsonify | safeJS }}</script>
     {{ end }}
     {{ if and .IsHome (eq .Lang "en") }}
-    {{ $website := dict "@context" "https://schema.org" "@type" "WebSite" "name" "SafeKit" "url" $pageURL }}
+    {{ $website := dict "@context" "https://schema.org" "@type" "WebSite" "@id" $websiteID "name" "SafeKit" "url" $pageURL "publisher" (dict "@id" $organizationID) }}
     <script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
     {{ $logo := replace ("wp-content/uploads/2026/08/logo_eviden_orange-256w.png" | absURL) .Site.BaseURL $realBase }}
-    {{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "name" "Eviden" "url" "https://eviden.com/" "logo" $logo }}
+    {{ $contact := dict "@type" "ContactPoint" "url" (printf "%s/contact-us-for-safekit/" (strings.TrimSuffix "/" $realBase)) }}
+    {{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "@id" $organizationID "name" "Eviden" "url" "https://eviden.com/" "logo" $logo "contactPoint" $contact }}
     <script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>
     {{ end }}
     {{ if and (not .IsHome) (ne .Layout "userguide") }}

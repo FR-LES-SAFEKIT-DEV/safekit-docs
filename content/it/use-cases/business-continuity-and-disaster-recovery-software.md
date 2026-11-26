@@ -7,6 +7,7 @@ lang: "it"
 topics: "Software per la continuità aziendale e il disaster recovery, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
+schemaType: "Article"
 ---
 
 # Software di continuità operativa e ripristino di emergenza per cluster a 2 nodi con SafeKit {#business-continuity-and-disaster-recovery-software-for-2-node-clusters-with-safekit}

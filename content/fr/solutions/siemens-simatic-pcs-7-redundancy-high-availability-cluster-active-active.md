@@ -7,6 +7,8 @@ lang: "fr"
 topics: "SafeKit pour Siemens SIMATIC PCS7 : cluster Hyper-V sans SAN à 2 nœuds, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Siemens SIMATIC PCS7 sans stockage partagé sur un SAN ?, Comment fonctionne le cluster SafeKit Siemens SIMATIC PCS7 ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour Siemens SIMATIC PCS7 et le clustering natif Hyper-V, Guide vidéo : Configuration d’un cluster HA SafeKit pour Siemens SIMATIC PCS7, SafeKit, une solution reconnue sur le marché des systèmes SCADA, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 32 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Siemens SIMATIC PCS7"]
 ---
 
 # Haute disponibilité pour Siemens SIMATIC PCS 7 : cluster sans SAN à 2 nœuds {#high-availability-for-siemens-simatic-pcs-7-2-node-sanless-cluster}

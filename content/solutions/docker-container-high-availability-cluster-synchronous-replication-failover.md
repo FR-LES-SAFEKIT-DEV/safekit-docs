@@ -6,6 +6,8 @@ category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Docker, Table of Contents, How the SafeKit software simply implements a Docker high availability cluster?, How the SafeKit mirror cluster works with Docker?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Docker HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker High Availability Summary, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Docker"]
 ---
 
 # SafeKit: Docker High Availability & Real-Time Data Replication Software {#safekit-docker-high-availability--real-time-data-replication-software}

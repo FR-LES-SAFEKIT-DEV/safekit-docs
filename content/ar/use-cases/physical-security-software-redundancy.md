@@ -7,6 +7,7 @@ lang: "ar"
 topics: "تقدم SafeKit حلولاً مزدوجة لتحقيق التكرار والتوافر العالي لبرامج الأمان المادية.، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
+schemaType: "Article"
 ---
 
 # التوافر العالي والتكرار لبرامج الأمن المادي {#high-availability-and-redundancy-for-physical-security-software}

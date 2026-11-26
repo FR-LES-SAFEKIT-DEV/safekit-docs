@@ -7,6 +7,7 @@ lang: "pt-br"
 topics: "Quais são os diferentes cenários em caso de isolamento de rede em um cluster?, Quais são os diferentes cenários em caso de falta de energia em um cluster?, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # Lidando com interrupções de energia e isolamento de rede em um cluster de alta disponibilidade {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

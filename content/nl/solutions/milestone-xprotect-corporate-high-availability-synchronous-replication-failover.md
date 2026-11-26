@@ -7,6 +7,8 @@ lang: "nl"
 topics: "Hoe de SANless SafeKit mirror-cluster werkt met Milestone XProtect, Inhoudsopgave, Hoe de SafeKit-software eenvoudig een SANless Milestone XProtect cluster met hoge beschikbaarheid implementeert?, Hoe werkt het SafeKit mirror-cluster met Milestone XProtect?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Milestone XProtect versus andere clusteroplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, SafeKit, een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Milestone XProtect"]
 ---
 
 # De eenvoudigste Milestone XProtect High Availability: synchrone replicatie en failover met 2 knooppunten {#the-simplest-milestone-xprotect-high-availability-2-node-synchronous-replication--failover}

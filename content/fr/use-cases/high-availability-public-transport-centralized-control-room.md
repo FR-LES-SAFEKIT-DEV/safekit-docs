@@ -7,6 +7,8 @@ lang: "fr"
 topics: "Salles de contrôle des transports en commun, Pourquoi la salle de contrôle est-elle essentielle ?, Haute disponibilité SafeKit pour les transports publics, Mise en œuvre concrète à la RATP, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["RATP"]
 ---
 
 # Haute disponibilité pour les transports publics : salle de contrôle centralisée {#high-availability-for-public-transport-centralized-control-room}

@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Smart Console: intuïtieve en foutloze hoge beschikbaarheid op desktop en mobiel, Inhoudsopgave, Hoe werkt een SafeKit mirror-cluster met de webconsole?, Hoe werkt een SafeKit farm-cluster met de webconsole?, Hoe kan ik meerdere modules en clusters via de webconsole monitoren?, Hoe kunt u waarschuwingen in de console controleren en e-mailmeldingen beheren?, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # SafeKit Smart Console: uw cluster met hoge beschikbaarheid in uw broekzak {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

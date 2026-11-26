@@ -7,6 +7,7 @@ lang: "ar"
 topics: "حالة استخدام التوافر العالي OEM، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
+schemaType: "Article"
 ---
 
 # التوافر العالي OEM: تضمين تجميع SafeKit في برامجك {#oem-high-availability-embedding-safekit-clustering-into-your-software}

@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "SafeKit 在 AWS 中无共享高可用性：消除共享磁盘，实现零数据丢失、目录、SafeKit 软件如何简单地实现无共享 AWS 高可用性集群？、SafeKit mirror 集群如何与 AWS 配合使用？、SafeKit 高可用性限制、比较：AWS SafeKit 与原生云高可用性/灾难恢复解决方案、视频指南：配置 SafeKit HA mirror 集群、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # 亚马逊 AWS 高可用性：SafeKit 同步复制和故障转移 {#amazon-aws-high-availability-safekit-synchronous-replication--failover}

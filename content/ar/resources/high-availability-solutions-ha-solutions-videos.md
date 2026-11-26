@@ -6,6 +6,7 @@ category: "resources"
 lang: "ar"
 topics: "البرامج التعليمية والعروض التوضيحية لتجاوز الأعطال من SafeKit، 🔍 استكشف SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # العروض التوضيحية للتوفر العالي وتجاوز الفشل SafeKit: دروس فيديو للمجموعات بدون شبكة SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

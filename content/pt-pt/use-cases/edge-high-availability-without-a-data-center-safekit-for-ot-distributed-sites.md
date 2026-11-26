@@ -7,6 +7,7 @@ lang: "pt-pt"
 topics: "O desafio da alta disponibilidade na periferia, Por que SafeKit é a solução natural para a computação de ponta, Adequação para implementação em rede e distribuída, Por que os ambientes de OT na borda são diferentes, Casos de uso ideais na periferia, Alta disponibilidade em Edge vs. centro de dados: principais diferenças, Sistemas operativos e plataformas suportados, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
+schemaType: "Article"
 ---
 
 # Alta Disponibilidade na Borda Sem um Centro de Dados: SafeKit para OT e Locais Distribuídos {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

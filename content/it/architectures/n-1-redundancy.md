@@ -7,6 +7,7 @@ lang: "it"
 topics: "Alta disponibilità con replica dei dati e failover delle applicazioni da N server a 1, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
+schemaType: "TechArticle"
 ---
 
 # Cluster di ridondanza N-1: alta disponibilità per più applicazioni con un singolo server di backup {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

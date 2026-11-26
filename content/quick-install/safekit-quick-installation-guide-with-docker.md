@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Docker, SafeKit High Availability Limitations, Overview of the SafeKit / Docker solution, Installation of the SafeKit / Docker solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Docker solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Docker High Availability with SafeKit: Install the mirror.safe Module for Failover {#docker-high-availability-with-safekit-install-the-mirrorsafe-module-for-failover}

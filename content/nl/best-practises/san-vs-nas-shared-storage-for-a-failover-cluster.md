@@ -7,6 +7,7 @@ lang: "nl"
 topics: "SAN- of NAS-gedeelde opslag: wat is eenvoudiger voor een failovercluster?, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
+schemaType: "TechArticle"
 ---
 
 # SAN versus NAS-gedeelde opslag voor failoverclustering: een gedetailleerde vergelijking {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

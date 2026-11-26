@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "en"
 topics: "30 seconds elevator pitch for SafeKit, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "Article"
 ---
 
 # High Availability Software: Windows and Linux Clustering with SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}

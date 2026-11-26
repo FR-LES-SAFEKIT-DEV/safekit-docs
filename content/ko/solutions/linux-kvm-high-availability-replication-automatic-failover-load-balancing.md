@@ -7,6 +7,8 @@ lang: "ko"
 topics: "KVM용 SafeKit: 2노드 SANless KVM 클러스터, 목차, SafeKit 소프트웨어는 SAN의 공유 스토리지 없이 KVM 고가용성 클러스터를 어떻게 간단하게 구현하나요?, SafeKit KVM 클러스터는 어떻게 작동하나요?, SafeKit 고가용성 제한 사항, 비교: KVM용 SafeKit과 기존 클러스터링, 비디오 가이드: KVM용 SafeKit HA 클러스터를 구성, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["KVM"]
 ---
 
 # 공유 스토리지 없이 간단하게 Linux KVM 고가용성 구현하기 {#simple-linux-kvm-high-availability-without-shared-storage}

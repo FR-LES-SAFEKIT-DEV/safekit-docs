@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Quelle est la différence entre la haute disponibilité et la tolérance aux pannes ?, Avantages et inconvénients de la haute disponibilité et de la tolérance aux pannes, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # Cluster HA ou système tolérant aux pannes : choisir la bonne stratégie de redondance {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

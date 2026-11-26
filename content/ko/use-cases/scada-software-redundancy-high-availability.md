@@ -7,6 +7,8 @@ lang: "ko"
 topics: "SCADA 시스템이란 무엇인가요?, SCADA 소프트웨어가 중요한 이유는 무엇일까요?, 주요 SCADA 소프트웨어 공급업체, SafeKit은 SCADA 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다., SafeKit, SCADA 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
+schemaType: "Article"
+schemaSector: "SCADA"
 ---
 
 # SCADA 및 산업 제어 시스템(ICS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

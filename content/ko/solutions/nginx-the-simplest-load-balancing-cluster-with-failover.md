@@ -7,6 +7,8 @@ lang: "ko"
 topics: "SafeKit farm 클러스터: NGINX용 소프트웨어 전용 NLB 및 자동 장애 조치, 목차, SafeKit 소프트웨어는 NGINX 네트워크 부하 분산 (NLB) 클러스터를 어떻게 간단하게 구현하나요?, farm 모드의 SafeKit 클러스터는 NGINX와 어떻게 연동되나요?, 비교: NGINX용 SafeKit farm 클러스터 vs. 기타 NLB 클러스터링 솔루션, 비디오 가이드: SafeKit farm NLB 클러스터를 구성, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["NGINX"]
 ---
 
 # SafeKit: 올인원 NGINX 로드 밸런싱 및 고가용성 소프트웨어 {#safekit-all-in-one-nginx-load-balancing--high-availability-software}

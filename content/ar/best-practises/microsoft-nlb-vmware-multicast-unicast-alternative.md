@@ -7,6 +7,7 @@ lang: "ar"
 topics: "وضع البث المتعدد Microsoft NLB، وضع البث الأحادي Microsoft NLB، بديل باستخدام SafeKit، كيف تعمل مجموعة SafeKit في وضع farm مع Windows؟، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # بديل Microsoft NLB VMware: حل مشكلات البث المتعدد والبث الأحادي {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

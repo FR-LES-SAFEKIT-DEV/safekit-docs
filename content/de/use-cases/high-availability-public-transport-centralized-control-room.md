@@ -7,6 +7,8 @@ lang: "de"
 topics: "Leitstellen des öffentlichen Nahverkehrs, Warum ist die Leitstelle entscheidend?, SafeKit-Hochverfügbarkeit für den öffentlichen Nahverkehr, Implementierung in der Praxis bei der RATP, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["RATP"]
 ---
 
 # Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle {#high-availability-for-public-transport-centralized-control-room}

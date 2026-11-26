@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Architecture sans partage ou architecture à disque partagé pour clusters de haute disponibilité, architecture sans partage ou architecture à disque partagé : avantages et inconvénients, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
+schemaType: "TechArticle"
 ---
 
 # Architecture sans partage vs architecture à disque partagé : choisir le meilleur cluster HA {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

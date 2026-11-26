@@ -7,6 +7,7 @@ lang: "es"
 topics: "Técnicas de replicación de datos a nivel de base de datos, ¿A nivel de disco o a nivel de archivo?, Tablas comparativas entre técnicas de replicación de datos, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
+schemaType: "TechArticle"
 ---
 
 # Técnicas de replicación de datos para alta disponibilidad: una comparación completa {#data-replication-techniques-for-high-availability-a-complete-comparison}

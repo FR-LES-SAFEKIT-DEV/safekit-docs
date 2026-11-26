@@ -7,6 +7,8 @@ lang: "de"
 topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Podman, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Podman Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit Podman?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit SANless Cluster vs. traditionelles Podman HA, Vergleich: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Zusammenfassung der Hochverfügbarkeit Podman, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Podman"]
 ---
 
 # SafeKit: Podman-Software für Hochverfügbarkeit und Echtzeit-Datenreplikation {#safekit-podman-high-availability--real-time-data-replication-software}

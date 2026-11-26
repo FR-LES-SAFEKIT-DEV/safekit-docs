@@ -7,6 +7,7 @@ lang: "ja"
 topics: "SAN と NAS の共有ストレージ：フェイルオーバークラスターにはどちらがシンプルですか？、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
+schemaType: "TechArticle"
 ---
 
 # フェイルオーバークラスタリングにおける SAN と NAS 共有ストレージの詳細な比較 {#san-vs-nas-shared-storage-for-failover-clustering-a-detailed-comparison}

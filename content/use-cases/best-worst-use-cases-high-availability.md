@@ -6,6 +6,7 @@ category: "use-cases"
 lang: "en"
 topics: "Best use cases, SafeKit High Availability Limitations, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
+schemaType: "Article"
 ---
 
 # Best and Worst High Availability Use Cases: A SafeKit Implementation Guide {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

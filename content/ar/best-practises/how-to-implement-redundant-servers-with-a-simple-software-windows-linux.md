@@ -7,6 +7,7 @@ lang: "ar"
 topics: "كيفية تطبيق خوادم احتياطية نشطة/خاملة مع النسخ المتماثل في الوقت الفعلي وتجاوز الفشل؟، كيفية تطبيق خوادم احتياطية نشطة/نشطة مع موازنة تحميل الشبكة وتجاوز الفشل؟، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
+schemaType: "TechArticle"
 ---
 
 # كيفية تطبيق الخوادم الاحتياطية باستخدام برامج التوافر العالي البسيطة {#how-to-implement-redundant-servers-with-simple-ha-software}

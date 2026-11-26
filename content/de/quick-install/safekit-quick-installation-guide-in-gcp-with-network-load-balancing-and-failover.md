@@ -7,6 +7,7 @@ lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für GCP, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/GCP-Lösung, Installation der SafeKit/GCP-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/GCP-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # GCP-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe {#gcp-network-load-balancing--failover-install-the-safekit-farmsafe-module}

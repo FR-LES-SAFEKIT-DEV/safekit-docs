@@ -7,6 +7,7 @@ lang: "fr"
 topics: "SafeKit propose deux solutions pour la redondance et la haute disponibilité d’un logiciel de sécurité physique., 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
+schemaType: "Article"
 ---
 
 # Haute disponibilité et redondance pour les logiciels de sécurité physique {#high-availability-and-redundancy-for-physical-security-software}

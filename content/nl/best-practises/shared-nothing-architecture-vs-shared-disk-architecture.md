@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Shared-nothing-architectuur versus architectuur met gedeelde schijf voor high-availability-clusters, shared-nothing-architectuur versus architectuur met gedeelde schijf: voor- en nadelen, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
+schemaType: "TechArticle"
 ---
 
 # Shared-nothing-architectuur versus architectuur met gedeelde schijf: de beste HA-cluster kiezen {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

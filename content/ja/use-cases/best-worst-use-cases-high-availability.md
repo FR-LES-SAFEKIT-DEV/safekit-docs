@@ -7,6 +7,7 @@ lang: "ja"
 topics: "最適なユースケース、SafeKit High Availability の制限事項、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
+schemaType: "Article"
 ---
 
 # 高可用性のベストユースケースとワーストユースケース：SafeKit 実装ガイド {#best-and-worst-high-availability-use-cases-a-safekit-implementation-guide}

@@ -7,6 +7,7 @@ lang: "ja"
 topics: "SANless SafeKit mirror クラスターが Windows で動作する仕組み、目次、SafeKit ソフトウェアは、SAN レスの Windows 高可用性クラスターをどのように簡単に実装しますか？、SafeKit mirror クラスターが Windows でどのように動作しますか？、SafeKit High Availability の制限事項、比較：SafeKit for Windows とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Windows 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー {#the-simplest-windows-high-availability-2-node-synchronous-replication--failover}

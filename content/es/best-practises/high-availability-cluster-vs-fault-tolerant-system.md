@@ -7,6 +7,7 @@ lang: "es"
 topics: "¿Cuál es la diferencia entre alta disponibilidad y tolerancia a fallos?, Ventajas y desventajas de la alta disponibilidad y la tolerancia a fallos, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # Clúster HA vs. sistema tolerante a fallos: cómo elegir la estrategia de redundancia adecuada {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

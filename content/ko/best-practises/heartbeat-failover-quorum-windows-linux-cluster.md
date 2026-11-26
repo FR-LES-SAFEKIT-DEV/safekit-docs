@@ -7,6 +7,7 @@ lang: "ko"
 topics: "클러스터에서 네트워크가 고립될 경우 발생할 수 있는 다양한 시나리오는 무엇인가요?, Windows 또는 Linux 클러스터에서 하트비트와 장애 조치는 어떻게 작동하나요?, 두 개의 원격 컴퓨터실에 있는 서버를 사용한 스플릿 브레인 및 쿼럼, SafeKit 스플릿 브레인 체커를 사용한 간단한 클러스터 쿼럼, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # Windows 및 Linux 클러스터의 하트비트, 장애 조치 및 쿼럼 {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

@@ -7,6 +7,7 @@ lang: "ar"
 topics: "ما هي معماريات التوافر العالي وأفضل الممارسات؟، جداول مقارنة حول معماريات التوافر العالي وأفضل الممارسات، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
+schemaType: "TechArticle"
 ---
 
 # بنى تحتية عالية التوافر وأفضل ممارسات تجميع البرامج {#high-availability-architectures--software-clustering-best-practices}

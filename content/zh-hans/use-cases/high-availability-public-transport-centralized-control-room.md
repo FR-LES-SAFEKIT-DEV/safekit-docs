@@ -7,6 +7,8 @@ lang: "zh-hans"
 topics: "公共交通控制室、为什么控制室至关重要？、SafeKit 为公共交通提供高可用性、RATP 的实际应用、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["RATP"]
 ---
 
 # 公共交通高可用性：集中控制室 {#high-availability-for-public-transport-centralized-control-room}

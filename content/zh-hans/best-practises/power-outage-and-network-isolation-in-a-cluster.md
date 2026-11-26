@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "集群中网络隔离的不同场景有哪些？、集群断电时有哪些不同的情况？、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # 处理高可用性集群中的断电和网络隔离问题 {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

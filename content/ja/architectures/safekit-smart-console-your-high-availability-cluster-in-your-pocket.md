@@ -7,6 +7,7 @@ lang: "ja"
 topics: "Smart Console：デスクトップとモバイルで直感的かつエラーのない高可用性を実現、目次、SafeKit mirror クラスターはウェブコンソールとどのように連携しますか？、SafeKit farm クラスターは、ウェブコンソールとどのように連携しますか？、Web コンソールで複数のモジュールと複数のクラスターを監視するにはどうすればよいですか？、コンソールでアラートを監視し、メール通知を管理する方法、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # SafeKit Smart Console：ポケットサイズの高可用性クラスター {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

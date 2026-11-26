@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "什么是高可用性架构和最佳实践？、高可用性架构和最佳实践的比较表、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
+schemaType: "TechArticle"
 ---
 
 # 高可用性架构与软件集群最佳实践 {#high-availability-architectures--software-clustering-best-practices}

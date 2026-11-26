@@ -7,6 +7,8 @@ lang: "zh-hans"
 topics: "什么是 SCADA 系统？、为什么 SCADA 软件至关重要？、主要 SCADA 软件供应商、SafeKit 为 SCADA 软件的冗余和高可用性提供了两种解决方案。、SafeKit、SCADA 市场上的公认解决方案、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
+schemaType: "Article"
+schemaSector: "SCADA"
 ---
 
 # SCADA 和工业控制系统 (ICS) 的高可用性和冗余 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

@@ -6,6 +6,7 @@ category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Linux, Table of Contents, How the SafeKit software simply implements a SANless Linux high availability cluster?, How the SafeKit mirror cluster works with Linux?, SafeKit High Availability Limitations, Comparison: SafeKit for Linux vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # The Simplest Linux High Availability: 2-Node Synchronous Replication & Failover {#the-simplest-linux-high-availability-2-node-synchronous-replication--failover}

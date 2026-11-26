@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "Byte-level file replication vs block-level disk replication in a high availability cluster, Pros and cons of byte-level file replication vs block-level disk replication, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
+schemaType: "TechArticle"
 ---
 
 # Byte-Level File Replication vs. Block-Level Disk Replication for HA {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

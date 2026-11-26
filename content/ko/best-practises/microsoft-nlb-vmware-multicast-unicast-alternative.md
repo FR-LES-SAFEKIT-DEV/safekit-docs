@@ -7,6 +7,7 @@ lang: "ko"
 topics: "Microsoft NLB 멀티캐스트 모드, Microsoft NLB 유니캐스트 모드, SafeKit을 사용한 대안, farm 모드의 SafeKit 클러스터는 Windows와 어떻게 연동되나요?, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # Microsoft NLB VMware 대안: 멀티캐스트 및 유니캐스트 문제 해결 {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

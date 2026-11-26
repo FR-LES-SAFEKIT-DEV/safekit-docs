@@ -6,6 +6,7 @@ category: "solutions"
 lang: "en"
 topics: "SafeKit Shared-Nothing HA in Cloud: Eliminate Shared Disks with Zero Data Loss, Table of Contents, How the SafeKit software simply implements a shared-nothing Cloud high availability cluster?, How the SafeKit mirror cluster works with Cloud?, SafeKit High Availability Limitations, Comparison: SafeKit for Cloud vs. Native Cloud HA/DR Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Cloud-Agnostic High Availability: SafeKit Synchronous Replication & Failover {#cloud-agnostic-high-availability-safekit-synchronous-replication--failover}

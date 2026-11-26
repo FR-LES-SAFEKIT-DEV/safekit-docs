@@ -7,6 +7,8 @@ lang: "pt-pt"
 topics: "O cluster farm SafeKit: Balanceador de Carga de Software e Failover Automático para IIS, Índice, Como o software SafeKit implementa de forma simples um cluster de Balanceamento de Carga de Rede (NLB) IIS?, Como funciona o cluster SafeKit em modo farm com IIS?, Comparação: cluster farm SafeKit para IIS vs. Outras Soluções de Agrupamento NLB, Guia em Vídeo: Configuração de um cluster NLB farm SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["IIS"]
 ---
 
 # SafeKit: Software tudo-em-um para balanceamento de carga e alta disponibilidade IIS {#safekit-all-in-one-iis-load-balancing--high-availability-software}

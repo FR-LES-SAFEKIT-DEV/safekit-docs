@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "Choosing Your High Availability Strategy: VM HA vs. Application HA, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # VM HA vs. Application HA {#vm-ha-vs-application-ha}

@@ -7,6 +7,7 @@ lang: "it"
 topics: "La sfida dell’alta disponibilità all’edge, Perché SafeKit è la soluzione naturale per l’edge computing, Idoneità all’implementazione edge e distribuita, Perché gli ambienti OT perimetrali sono diversi, Casi d’uso ideali per l’edge, Edge vs. data center: le differenze chiave in termini di alta disponibilità, Sistemi operativi e piattaforme supportati, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
+schemaType: "Article"
 ---
 
 # Elevata disponibilità perimetrale senza data center: SafeKit per OT e siti distribuiti {#edge-high-availability-without-a-data-center-safekit-for-ot--distributed-sites}

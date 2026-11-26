@@ -7,6 +7,7 @@ lang: "ar"
 topics: "التوافر العالي وقابلية التوسع لتطبيقات الويب وقواعد البيانات الهامة باستخدام برنامج SafeKit للتجميع، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
+schemaType: "TechArticle"
 ---
 
 # برنامج التجميع مع موازنة التحميل والنسخ المتطابق: التوافر العالي وقابلية التوسع {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

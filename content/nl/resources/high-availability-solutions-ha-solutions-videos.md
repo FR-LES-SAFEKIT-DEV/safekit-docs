@@ -6,6 +6,7 @@ category: "resources"
 lang: "nl"
 topics: "SafeKit technische failover-tutorials en demo's, 🔍 Ontdek SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit Demo's voor hoge beschikbaarheid en failover: video-tutorials voor SANless Clustering {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

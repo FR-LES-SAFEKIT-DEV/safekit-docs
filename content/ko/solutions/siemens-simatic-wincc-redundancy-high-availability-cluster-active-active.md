@@ -7,6 +7,8 @@ lang: "ko"
 topics: "Siemens SIMATIC WinCC용 SafeKit: 2노드 SANless Hyper-V 클러스터, 목차, SafeKit 소프트웨어는 SAN의 공유 스토리지 없이 Siemens SIMATIC WinCC 고가용성 클러스터를 어떻게 간단하게 구현하나요?, SafeKit Siemens SIMATIC WinCC 클러스터는 어떻게 작동하나요?, SafeKit 고가용성 제한 사항, 비교: Siemens SIMATIC WinCC용 SafeKit과 기본 Hyper-V 클러스터링, 비디오 가이드: Siemens SIMATIC WinCC용 SafeKit HA 클러스터를 구성, SafeKit, SCADA 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Siemens SIMATIC WinCC"]
 ---
 
 # Siemens SIMATIC WinCC SCADA 고가용성: 2노드 SANless 클러스터 {#siemens-simatic-wincc-scada-high-availability-2-node-sanless-cluster}

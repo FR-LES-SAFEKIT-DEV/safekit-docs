@@ -7,6 +7,7 @@ lang: "ja"
 topics: "SafeKit で保護された高可用性アプリケーションのアップグレード、VM レベルの高可用性、アプリケーションレベルの高可用性、適切なアップグレード戦略の選択、結論、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # HA クラスターで SafeKit によって保護されたアプリケーションをアップグレードする {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}

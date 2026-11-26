@@ -7,6 +7,7 @@ lang: "ko"
 topics: "SafeKit은 물리적 보안 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다., 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
+schemaType: "Article"
 ---
 
 # 물리적 보안 소프트웨어의 고가용성 및 이중화 {#high-availability-and-redundancy-for-physical-security-software}

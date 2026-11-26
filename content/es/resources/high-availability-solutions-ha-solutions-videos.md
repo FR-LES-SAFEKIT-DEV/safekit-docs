@@ -6,6 +6,7 @@ category: "resources"
 lang: "es"
 topics: "Tutoriales y demostraciones técnicas de conmutación por error de SafeKit, 🔍 Explora SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit Demostraciones de alta disponibilidad y conmutación por error: tutoriales en vídeo sobre agrupación en clústeres sin SAN {#safekit-high-availability--failover-demos-sanless-clustering-video-tutorials}

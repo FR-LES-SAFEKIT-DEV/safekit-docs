@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "升级由 SafeKit 保护的高可用性应用程序、虚拟机级高可用性、应用级高可用性、选择正确的升级策略、结论、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # 在 HA 集群中升级 SafeKit 保护的应用程序 {#upgrading-an-application-protected-by-safekit-in-an-ha-cluster}

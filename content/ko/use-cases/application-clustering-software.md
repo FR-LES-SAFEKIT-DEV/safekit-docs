@@ -7,6 +7,7 @@ lang: "ko"
 topics: "OEM 고가용성 사용 사례, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
+schemaType: "Article"
 ---
 
 # OEM 고가용성: 소프트웨어에 SafeKit 클러스터링 내장하기 {#oem-high-availability-embedding-safekit-clustering-into-your-software}

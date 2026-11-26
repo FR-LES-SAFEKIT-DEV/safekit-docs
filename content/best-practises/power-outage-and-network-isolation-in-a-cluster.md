@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "What are the different scenarios in case of network isolation in a cluster?, What are the different scenarios in case of power outage in a cluster?, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # Handling Power Outages and Network Isolation in an HA Cluster {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

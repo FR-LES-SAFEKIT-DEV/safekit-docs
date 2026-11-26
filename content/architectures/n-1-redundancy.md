@@ -6,6 +6,7 @@ category: "architectures"
 lang: "en"
 topics: "High availability with data replication and application failover from N servers to 1, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
+schemaType: "TechArticle"
 ---
 
 # N-1 Redundancy Cluster: High Availability for Multiple Applications with a Single Backup Server {#n-1-redundancy-clustering-high-availability-for-multiple-applications-with-one-backup}

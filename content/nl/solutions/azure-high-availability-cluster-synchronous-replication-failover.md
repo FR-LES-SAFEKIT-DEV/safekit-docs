@@ -7,6 +7,7 @@ lang: "nl"
 topics: "SafeKit shared-nothing HA in Azure: elimineer gedeelde schijven met nul gegevensverlies, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een Azure shared-nothing?, Hoe werkt het SafeKit mirror-cluster met Azure?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Azure versus native cloud-HA/DR-oplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Microsoft Azure hoge beschikbaarheid: synchrone replicatie en failover SafeKit {#microsoft-azure-high-availability-safekit-synchronous-replication--failover}

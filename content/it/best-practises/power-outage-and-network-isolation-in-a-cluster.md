@@ -7,6 +7,7 @@ lang: "it"
 topics: "Quali sono i diversi scenari in caso di isolamento della rete in un cluster?, Quali sono i diversi scenari in caso di interruzione di corrente in un cluster?, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # Gestione delle interruzioni di corrente e dell’isolamento della rete in un cluster HA {#handling-power-outages-and-network-isolation-in-a-ha-cluster}

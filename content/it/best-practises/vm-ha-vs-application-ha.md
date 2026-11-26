@@ -7,6 +7,7 @@ lang: "it"
 topics: "Scelta della strategia di alta disponibilità: HA delle VM o HA applicativa, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # HA delle VM vs. HA applicativa {#vm-ha-vs-application-ha}

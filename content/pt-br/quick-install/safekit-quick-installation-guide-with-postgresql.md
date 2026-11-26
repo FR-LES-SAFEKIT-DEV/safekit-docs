@@ -7,6 +7,7 @@ lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para PostgreSQL, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/PostgreSQL, Instalação da solução SafeKit/PostgreSQL no Windows e Linux (postgresql.safe), Configuração passo a passo da solução SafeKit/PostgreSQL, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Alta Disponibilidade PostgreSQL com SafeKit: Instale o Módulo postgresql.safe para Failover {#postgresql-high-availability-with-safekit-install-the-postgresqlsafe-module-for-failover}

@@ -7,6 +7,8 @@ lang: "ar"
 topics: "أنظمة مراقبة الحركة الجوية، لماذا يُعد التحكم في الحركة الجوية أمرًا بالغ الأهمية؟، كيف تحمي SafeKit أنظمة المراقبة الجوية؟، التطبيق على أرض الواقع في ADB SafeGate، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["ADB SafeGate"]
 ---
 
 # التوافرية العالية لأنظمة مراقبة الحركة الجوية {#high-availability-for-air-traffic-control-systems}

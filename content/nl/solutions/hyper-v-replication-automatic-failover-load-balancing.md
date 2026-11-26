@@ -7,6 +7,8 @@ lang: "nl"
 topics: "SafeKit voor Hyper-V: SANless Hyper-V-cluster met 2 knooppunten, Inhoudsopgave, Hoe implementeert de SafeKit software eenvoudig een Hyper-V-high-availabilitycluster zonder gedeelde opslag op een SAN?, Hoe werkt het SafeKit Hyper-V cluster?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Hyper-V versus native Hyper-V-clustering, Videogids: Een SafeKit HA-cluster configureren voor Hyper-V, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Hyper-V"]
 ---
 
 # Eenvoudige Hyper-V-hoge beschikbaarheid zonder gedeelde opslag (SAN) {#simple-hyper-v-high-availability-without-shared-storage-san}

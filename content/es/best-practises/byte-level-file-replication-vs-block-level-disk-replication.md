@@ -7,6 +7,7 @@ lang: "es"
 topics: "Replicación de archivos a nivel de byte frente a replicación de discos a nivel de bloque en un clúster de alta disponibilidad, Ventajas y desventajas de la replicación de archivos a nivel de byte frente a la replicación de discos a nivel de bloque, 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
+schemaType: "TechArticle"
 ---
 
 # Replicación de archivos a nivel de byte frente a replicación de discos a nivel de bloque para alta disponibilidad {#byte-level-file-replication-vs-block-level-disk-replication-for-ha}

@@ -7,6 +7,7 @@ lang: "de"
 topics: "Auswahl Ihrer Hochverfügbarkeitsstrategie: VM-HA vs. Anwendungs-HA, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # VM-HA vs. Anwendungs-HA {#vm-ha-vs-application-ha}

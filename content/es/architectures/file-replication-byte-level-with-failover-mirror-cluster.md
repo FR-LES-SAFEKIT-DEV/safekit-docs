@@ -7,6 +7,7 @@ lang: "es"
 topics: "Cómo funciona el clúster mirror SafeKit con Windows o Linux sin una SAN, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad sin una SAN en Windows o Linux?, ¿Cómo funciona el clúster mirror SafeKit con Windows o Linux?, Limitaciones de alta disponibilidad de SafeKit, Comparación: SafeKit para Windows o Linux frente a otras soluciones de clúster, Guía en vídeo: Configuración de un clúster mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-21.4 | glossaire 2026-11-21.14 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Clúster mirror SafeKit: replicación de archivos en tiempo real y alta disponibilidad {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}

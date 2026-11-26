@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "Alternative to Always On SQL Server for Express and Standard editions, How the SafeKit mirror cluster works with Microsoft SQL Server?, Video Guide: Configuring a SafeKit HA mirror cluster for SQL Server, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # Alternative to SQL Server Always On: HA for Express and Standard Editions {#alternative-to-sql-server-always-on-ha-for-express-and-standard-editions}

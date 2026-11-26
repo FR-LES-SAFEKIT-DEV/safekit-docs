@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "Smart Console：在台式机和移动设备上实现直观且无差错的高可用性、目录、SafeKit mirror 集群如何与 Web 控制台配合使用？、SafeKit farm 集群如何与 Web 控制台配合使用？、如何通过 Web 控制台监控多个模块和多个集群？、如何在控制台中监控警报并管理电子邮件通知？、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # SafeKit Smart Console：您的高可用性集群，尽在掌握 {#safekit-smart-console-your-high-availability-cluster-in-your-pocket}

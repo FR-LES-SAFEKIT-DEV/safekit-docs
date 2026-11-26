@@ -7,6 +7,8 @@ lang: "nl"
 topics: "SafeKit voor Siemens Siveillance: SANless Hyper-V cluster met 2 knooppunten, Inhoudsopgave, Hoe implementeert de SafeKit software eenvoudig een Siemens Siveillance cluster met hoge beschikbaarheid zonder gedeelde opslag op een SAN?, Hoe werkt het SafeKit Siemens Siveillance cluster?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Siemens Siveillance versus native Hyper-V-clustering, Videogids: Een SafeKit HA-cluster configureren voor Siemens Siveillance, SafeKit, een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Siemens Siveillance"]
 ---
 
 # Hoge beschikbaarheid en redundantie voor Siemens Siveillance Suite: Active-Active SANless Clustering {#high-availability-and-redundancy-for-siemens-siveillance-suite-active-active-sanless-clustering}

@@ -7,6 +7,7 @@ lang: "de"
 topics: "SafeKit Shared-Nothing HA in AWS: Eliminieren Sie gemeinsam genutzte Festplatten ohne Datenverlust, Inhaltsverzeichnis, Wie implementiert die SafeKit Software einfach einen Shared-Nothing AWS Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit AWS?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für AWS vs. native Cloud-HA/DR-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Amazon AWS Hochverfügbarkeit: SafeKit synchrone Replikation und Failover {#amazon-aws-high-availability-safekit-synchronous-replication--failover}

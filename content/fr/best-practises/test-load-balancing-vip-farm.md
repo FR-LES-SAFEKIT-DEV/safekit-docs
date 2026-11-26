@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Principes clés, Prérequis : la mosaïque SafeKit, Test 1 – Distribution des connexions, Test 2 – Changement de serveur de répartition, Test 3 – Vérification du réacheminement GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Quelles stations de travail tester, Résumé des résultats attendus, Dépannage, Démonstration de la solution farm SafeKit"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 20 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
+schemaType: "TechArticle"
 ---
 
 # Test de l’adresse IP virtuelle d’équilibrage de charge dans un cluster <span class="notranslate farm-term" translate="no">farm</span> SafeKit {#testing-the-load-balancing-virtual-ip-address-in-a-safekit-farm-cluster}

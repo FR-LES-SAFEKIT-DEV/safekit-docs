@@ -7,6 +7,8 @@ lang: "it"
 topics: "SafeKit per Hanwha Vision: cluster Hyper-V SANless a 2 nodi, Indice, In che modo il software SafeKit implementa semplicemente un cluster ad alta disponibilità Hanwha Vision senza storage condiviso su una SAN?, Come funziona il cluster SafeKit Hanwha Vision?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Hanwha Vision e clustering nativo di Hyper-V, Guida video: configurazione di un cluster HA SafeKit per Hanwha Vision, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Hanwha Vision"]
 ---
 
 # Alta disponibilità SafeKit per Hanwha Vision: ridondanza SANless per la gestione degli edifici {#safekit-high-availability-for-hanwha-vision-sanless-building-management-redundancy}

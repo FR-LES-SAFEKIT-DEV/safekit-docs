@@ -7,6 +7,7 @@ lang: "ko"
 topics: "실시간 복제 및 장애 조치를 통해 능동/수동 이중화 서버를 구현하는 방법은 무엇입니까?, 네트워크 부하 분산 및 장애 조치를 통해 액티브/액티브 이중화 서버를 구현하는 방법은 무엇입니까?, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
+schemaType: "TechArticle"
 ---
 
 # 간단한 HA 소프트웨어로 이중화 서버를 구현하는 방법 {#how-to-implement-redundant-servers-with-simple-ha-software}

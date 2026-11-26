@@ -7,6 +7,7 @@ lang: "ja"
 topics: "OEM 高可用性ユースケース、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
+schemaType: "Article"
 ---
 
 # OEM 高可用性：SafeKit クラスタリングをソフトウェアに組み込む {#oem-high-availability-embedding-safekit-clustering-into-your-software}

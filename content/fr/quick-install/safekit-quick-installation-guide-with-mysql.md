@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour MySQL, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/MySQL, Installation de la solution SafeKit/MySQL sous Windows et Linux (mysql.safe), Configuration pas à pas de la solution SafeKit / serveur MySQL, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Haute disponibilité MySQL avec SafeKit : installer le module mysql.safe pour le basculement {#mysql-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}

@@ -7,6 +7,7 @@ lang: "it"
 topics: "Architettura shared-nothing vs. architettura a disco condiviso per cluster ad alta disponibilità, architettura shared-nothing vs. architettura a disco condiviso: pro e contro, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
+schemaType: "TechArticle"
 ---
 
 # Architettura shared-nothing vs. architettura a disco condiviso: come scegliere il miglior cluster HA {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

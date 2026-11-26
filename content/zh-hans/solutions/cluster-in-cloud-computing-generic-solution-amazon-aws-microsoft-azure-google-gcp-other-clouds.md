@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "在 Microsoft Azure 中发现 SafeKit、在 Google GCP 中发现 SafeKit、在 Amazon AWS 上发现 SafeKit、其他采用 Eviden SafeKit 的云解决方案、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
+schemaType: "TechArticle"
 ---
 
 # 云计算中的集群：适用于 Amazon AWS、Microsoft Azure、Google GCP 和其他云的通用解决方案 {#cluster-in-cloud-computing-a-generic-solution-for-amazon-aws-microsoft-azure-google-gcp-and-other-clouds}

@@ -7,6 +7,7 @@ lang: "ja"
 topics: "Oracle 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Oracle ソリューションの概要、Windows および Linux への SafeKit/Oracle ソリューションのインストール (oracle.safe)、SafeKit/Oracle ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # SafeKit による Oracle 高可用性：フェイルオーバー用の oracle.safe モジュールをインストールする {#oracle-high-availability-with-safekit-install-the-oraclesafe-module-for-failover}

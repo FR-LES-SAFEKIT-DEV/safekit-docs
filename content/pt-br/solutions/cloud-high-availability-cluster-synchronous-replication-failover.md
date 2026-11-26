@@ -7,6 +7,7 @@ lang: "pt-br"
 topics: "HA SafeKit sem compartilhamento na nuvem: elimine discos compartilhados com perda zero de dados, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade em nuvem sem compartilhamento?, Como o cluster mirror SafeKit funciona com a nuvem?, Limitações SafeKit de Alta Disponibilidade, Comparação: SafeKit para nuvem vs. soluções nativas de alta disponibilidade/recuperação de desastres na nuvem, Guia em vídeo: Configurando um cluster mirror de alta disponibilidade com o SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Alta Disponibilidade Independente de Nuvem: Replicação Síncrona e Failover SafeKit {#cloud-agnostic-high-availability-safekit-synchronous-replication--failover}

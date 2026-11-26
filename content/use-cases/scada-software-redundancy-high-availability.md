@@ -6,6 +6,8 @@ category: "use-cases"
 lang: "en"
 topics: "What is a SCADA system?, Why is SCADA software critical?, Main SCADA software vendors, SafeKit brings two solutions for redundancy and high availability of a SCADA software, SafeKit, a recognized solution on the SCADA market, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
+schemaType: "Article"
+schemaSector: "SCADA"
 ---
 
 # High Availability and Redundancy for SCADA and Industrial Control Systems (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}

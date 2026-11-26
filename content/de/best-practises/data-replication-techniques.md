@@ -7,6 +7,7 @@ lang: "de"
 topics: "Datenreplikationstechniken auf Datenbankebene, Festplattenebene oder Dateiebene?, Vergleichstabellen zwischen Datenreplikationstechniken, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
+schemaType: "TechArticle"
 ---
 
 # Datenreplikationstechniken für Hochverfügbarkeit: Ein vollständiger Vergleich {#data-replication-techniques-for-high-availability-a-complete-comparison}

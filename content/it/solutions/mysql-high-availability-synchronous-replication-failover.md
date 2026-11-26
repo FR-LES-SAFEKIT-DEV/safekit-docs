@@ -7,6 +7,8 @@ lang: "it"
 topics: "Come funziona il cluster mirror SafeKit SANless con MySQL, Indice, In che modo il software SafeKit implementa semplicemente un cluster MySQL ad alta disponibilità senza SAN?, Come funziona il cluster mirror SafeKit con MySQL?, Limitazioni SafeKit High Availability, Confronto: SafeKit per MySQL e altre soluzioni di clustering, Guida video: configurazione di un cluster mirror SafeKit HA, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["MySQL"]
 ---
 
 # La più semplice alta disponibilità MySQL: replica sincrona e failover a 2 nodi {#the-simplest-mysql-high-availability-2-node-synchronous-replication--failover}

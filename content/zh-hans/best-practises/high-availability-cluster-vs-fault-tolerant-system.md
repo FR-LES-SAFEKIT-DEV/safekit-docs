@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "高可用性和容错性之间有什么区别？、高可用性和容错性的优缺点、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "TechArticle"
 ---
 
 # HA 集群与容错系统：选择正确的冗余策略 {#ha-cluster-vs-fault-tolerant-system-choosing-the-right-redundancy-strategy}

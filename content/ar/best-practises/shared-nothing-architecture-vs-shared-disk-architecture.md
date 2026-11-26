@@ -7,6 +7,7 @@ lang: "ar"
 topics: "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك لمجموعات التوافر العالي، بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك: الإيجابيات والسلبيات، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
+schemaType: "TechArticle"
 ---
 
 # بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك: اختيار أفضل مجموعة عالية التوافر {#shared-nothing-vs-shared-disk-architecture-choosing-the-best-ha-cluster}

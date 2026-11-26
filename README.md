@@ -33,14 +33,23 @@ so Twitter cards use the `summary` layout.
 The home and product pages also describe SafeKit with `SoftwareApplication`
 structured data in every language.
 
-Indexable pages receive page-specific JSON-LD: `TechArticle` for individual
-quick-install and best-practises pages, `CollectionPage` for section indexes,
+Indexable pages receive page-specific JSON-LD: `Article` for individual
+use-cases pages, `TechArticle` for individual quick-install, best-practises,
+architectures, and solutions pages, `CollectionPage` for section indexes,
 `ContactPage` for contact forms, and `WebPage` otherwise. Set `schemaType` in
 front matter to override the default with `WebPage`, `CollectionPage`,
-`ContactPage`, `Article`, or `TechArticle`. Home, product, and individual
-solution pages link to the same SafeKit software entity. Pages marked
-`noindex`, redirects, and 404 pages do not receive this structured data.
-Every page JSON-LD identifies Eviden as its organizational author.
+`ContactPage`, `Article`, `TechArticle`, or `Course`. Pages link to the same
+SafeKit software and website entities and identify Eviden as their
+organizational author. Pages marked `noindex`, redirects, and 404 pages do not
+receive this structured data.
+
+Optional front matter fields `schemaApplications`, `schemaSector`, and
+`schemaMentions` identify applications, sectors, and organizations discussed
+on the page. `schemaFaq` holds questions and answers already visible on the
+page; keep it synchronized with the content. `schemaTrial` and
+`schemaDownloads` describe the free trial and its visible download links.
+Section `ItemList` entries and quick-install module downloads are derived from
+links visible in the page content.
 The `image` front matter field sets the page's JSON-LD image independently of
 `socialImage`. Prefer a representative image visible on the page; the SafeKit
 icon is used where no suitable image was found and may be ignored by Google.

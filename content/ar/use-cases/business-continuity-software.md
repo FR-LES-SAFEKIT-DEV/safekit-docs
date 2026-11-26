@@ -7,6 +7,7 @@ lang: "ar"
 topics: "استمرارية الأعمال في المؤسسات الموزعة، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
+schemaType: "Article"
 ---
 
 # توحيد معايير التوافر العالي للمؤسسات الموزعة ذات الفروع المتعددة {#standardizing-high-availability-for-distributed-enterprises-with-many-branches}

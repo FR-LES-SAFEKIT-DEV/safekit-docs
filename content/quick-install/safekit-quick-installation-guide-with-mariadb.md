@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for MariaDB, SafeKit High Availability Limitations, Overview of the SafeKit / MariaDB solution, Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe), Step by step configuration of the SafeKit / MariaDB solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # MariaDB High Availability with SafeKit: Install the mysql.safe Module for Failover {#mariadb-high-availability-with-safekit-install-the-mysqlsafe-module-for-failover}

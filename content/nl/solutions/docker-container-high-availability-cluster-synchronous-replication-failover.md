@@ -7,6 +7,8 @@ lang: "nl"
 topics: "Hoe de SANless SafeKit mirror-cluster werkt met Docker, Inhoudsopgave, Hoe de SafeKit-software eenvoudig een Docker cluster met hoge beschikbaarheid implementeert?, Hoe de SafeKit mirror-cluster werkt met Docker ?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit SANless Cluster vs. Traditionele Docker HA, Vergelijking: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Samenvatting Docker High Availability, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 32 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Docker"]
 ---
 
 # SafeKit: software voor hoge beschikbaarheid en realtime gegevensreplicatie Docker {#safekit-docker-high-availability--real-time-data-replication-software}

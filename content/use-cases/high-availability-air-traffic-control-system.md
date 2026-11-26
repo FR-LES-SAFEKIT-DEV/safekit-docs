@@ -6,6 +6,8 @@ category: "use-cases"
 lang: "en"
 topics: "Air Traffic Control Systems, Why is air traffic control critical?, How SafeKit protects air traffic control, Real-world implementation at ADB SafeGate, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["ADB SafeGate"]
 ---
 
 # High Availability for Air Traffic Control Systems {#high-availability-for-air-traffic-control-systems}

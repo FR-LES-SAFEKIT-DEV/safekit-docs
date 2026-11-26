@@ -7,6 +7,7 @@ lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para Kubernetes, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Kubernetes, Instalação e configuração da solução SafeKit/Kubernetes no Linux (k3s.safe), Quais são os diferentes cenários em caso de isolamento de rede em um cluster?, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Alta Disponibilidade K3S com SafeKit: Instale o Módulo k3s.safe para Failover {#k3s-high-availability-with-safekit-install-the-k3ssafe-module-for-failover}

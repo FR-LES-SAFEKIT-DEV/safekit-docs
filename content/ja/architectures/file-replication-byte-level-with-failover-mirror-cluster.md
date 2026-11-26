@@ -7,6 +7,7 @@ lang: "ja"
 topics: "SafeKit mirror クラスターが SAN なしで Windows または Linux で動作する仕組み、目次、SafeKit ソフトウェアは、Windows または Linux 上で SAN なしで高可用性クラスターをどのように簡単に実装するのですか？、SafeKit mirror クラスターは Windows または Linux でどのように動作しますか？、SafeKit 高可用性の制限事項、比較：Windows または Linux 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit mirror クラスターの構成、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-21.4 | glossaire 2026-11-21.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # SafeKit mirror クラスター：リアルタイムファイルレプリケーションと高可用性 {#safekit-real-time-byte-level-file-replication--mirror-cluster-software}

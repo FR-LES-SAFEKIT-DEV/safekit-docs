@@ -7,6 +7,8 @@ lang: "de"
 topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Microsoft SQL Server, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless-Hochverfügbarkeitscluster Microsoft SQL Server?, Wie funktioniert der SafeKit-Mirror-Cluster mit Microsoft SQL Server?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Microsoft SQL Server im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 image: "/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Microsoft SQL Server"]
 ---
 
 # Die einfachste Hochverfügbarkeit Microsoft SQL Server: synchrone Replikation und Failover mit 2 Knoten {#the-simplest-microsoft-sql-server-high-availability-2-node-synchronous-replication--failover}

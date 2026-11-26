@@ -7,6 +7,8 @@ lang: "de"
 topics: "Wie der SANless SafeKit-Mirror-Cluster mit Docker funktioniert, Inhaltsverzeichnis, Wie die SafeKit-Software einfach einen Docker Hochverfügbarkeitscluster implementiert?, Wie der SafeKit-Mirror-Cluster mit Docker funktioniert?, SafeKit Hochverfügbarkeitsbeschränkungen, Vergleich: SafeKit SANless Cluster vs. Traditionelle Docker HA, Vergleich: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker Hochverfügbarkeit Zusammenfassung, 🔍 SafeKit erkunden"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Docker"]
 ---
 
 # SafeKit: Docker Software für Hochverfügbarkeit und Echtzeit-Datenreplikation {#safekit-docker-high-availability--real-time-data-replication-software}

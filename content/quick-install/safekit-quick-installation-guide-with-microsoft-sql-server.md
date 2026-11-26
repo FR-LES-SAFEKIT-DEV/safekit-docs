@@ -6,6 +6,7 @@ category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Microsoft SQL Server, SafeKit High Availability Limitations, Overview of the SafeKit / Microsoft SQL Server solution, Installation of the SafeKit / Microsoft SQL Server solution on Windows (sqlserver.safe), Step by step configuration of the SafeKit / Microsoft SQL Server solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Microsoft SQL Server High Availability with SafeKit: Install the sqlserver.safe Module for Failover {#microsoft-sql-server-high-availability-with-safekit-install-the-sqlserversafe-module-for-failover}

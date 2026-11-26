@@ -7,6 +7,8 @@ lang: "ja"
 topics: "SANless SafeKit mirror クラスターが Podman で動作する仕組み、目次、SafeKit ソフトウェアは、どのようにして Podman 高可用性クラスターを簡単に実装するのでしょうか？、SafeKit mirror クラスターが Podman とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit SANless Cluster と従来の Podman HA、比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）、Podman 高可用性概要、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Podman"]
 ---
 
 # SafeKit：Podman 高可用性＆リアルタイムデータレプリケーションソフトウェア {#safekit-podman-high-availability--real-time-data-replication-software}

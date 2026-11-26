@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "SafeKit 为物理安全软件的冗余和高可用性提供了两种解决方案。、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
+schemaType: "Article"
 ---
 
 # 物理安全软件的高可用性和冗余性 {#high-availability-and-redundancy-for-physical-security-software}

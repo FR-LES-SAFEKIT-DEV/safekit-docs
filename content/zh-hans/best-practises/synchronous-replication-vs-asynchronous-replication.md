@@ -7,6 +7,8 @@ lang: "zh-hans"
 topics: "在同步或异步复制的情况下，应用程序故障转移时会丢失数据吗？、目录、异步复制的工作原理是什么？、同步复制的工作原理是什么？、半同步复制的工作原理是什么？、最终结论：为高可用性选择合适的复制方案、比较表：同步、异步和半同步、视频指南：配置同步实时复制和高可用性、常见问题：高可用性集群中的复制策略、🔍 探索 SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
+schemaType: "TechArticle"
+schemaFaq: [{"question": "SafeKit 每次修改文件时都会通过网络发送完整文件吗？", "answer": "**不**。SafeKit 采用**字节级复制**。它会拦截文件内部的特定 I/O 修改，并且只复制已更改的字节，从而最大程度地减少网络流量。"}, {"question": "每次应用程序写入文件时，都会触发复制吗？", "answer": "**不**。仅当应用程序请求**将 I/O 提交**到本地磁盘时，才会发生复制。SafeKit 确保在完成写入之前，辅助服务器已确认这些数据。"}, {"question": "同步复制会降低我的应用程序速度吗？", "answer": "延迟与**网络往返时间 (RTT)** 相关。在 LAN 中，影响可以忽略不计（类似于 NAS/SAN 存储）。在高延迟广域网上，通常首选异步模式以避免性能瓶颈，并且需要备份解决方案（非 SafeKit）。"}, {"question": "我必须何时选择同步复制与异步复制？", "answer": "选择**同步**以实现高可用性（自动故障转移，零数据丢失）。选择**异步**以进行备份/灾难恢复，其中距离会阻止实时同步，并且不需要自动故障转移。"}, {"question": "SafeKit 是否支持异步复制？", "answer": "**不**。SafeKit 是一种高可用性解决方案，可在**自动故障转移**期间实现零数据丢失。如果只需要纯异步功能，请寻找备份解决方案。"}, {"question": "高可用性是否消除了对备份解决方案的需求？", "answer": "**不，高可用性并不能取代全面的备份解决方案**。\r\n\r\nSafeKit 等实时复制解决方案可确保业务连续性。但是，它们的作用与备份不同。实时复制旨在防止硬件故障和服务器停机，但它无法防止勒索软件同时加密两个节点等网络威胁。只有具有保留策略的备份解决方案才能解决此问题。"}, {"question": "如何结合使用同步复制和异步复制？", "answer": "您可以使用 **3 节点混合架构**：一个具有同步复制的 2 节点本地集群用于高可用性，以及通过具有异步复制的备份解决方案进行灾难恢复的第三个远程副本。\r\n\r\n**如需了解更多信息，请参阅：**[SafeKit 高可用性和灾难恢复 (HADR)](</zh-hans/best-practises/high-availability-disaster-recovery-hadr/>)"}]
 ---
 
 # 同步复制与异步复制：SafeKit 如何确保零数据丢失？ {#synchronous-vs-asynchronous-replication-how-safekit-ensures-zero-data-loss}

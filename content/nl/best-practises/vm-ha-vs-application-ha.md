@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Uw strategie voor hoge beschikbaarheid kiezen: VM-HA versus applicatie-HA, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.19 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/vm-ha-4.png"
+schemaType: "TechArticle"
 ---
 
 # VM-HA versus applicatie-HA {#vm-ha-vs-application-ha}

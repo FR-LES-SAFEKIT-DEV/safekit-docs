@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware, 🔍 Ontdek SafeKit"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
+schemaType: "TechArticle"
 ---
 
 # Clusteringsoftware met taakverdeling en spiegeling: hoge beschikbaarheid en schaalbaarheid {#clustering-software-for-farms-and-mirrors-high-availability--load-balancing}

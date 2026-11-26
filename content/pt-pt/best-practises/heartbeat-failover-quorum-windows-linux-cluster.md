@@ -7,6 +7,7 @@ lang: "pt-pt"
 topics: "Quais são os diferentes cenários em caso de isolamento de rede num cluster?, Como funcionam os heartbeats e failover num cluster Windows ou Linux?, Split brain e quórum com servidores em duas salas de computadores remotas, Quórum de cluster simples com o checker split-brain SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # Heartbeat, failover e quórum em clusters Windows e Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

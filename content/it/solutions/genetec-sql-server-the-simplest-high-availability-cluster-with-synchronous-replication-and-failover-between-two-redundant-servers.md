@@ -7,6 +7,8 @@ lang: "it"
 topics: "Come funziona il cluster mirror SANless SafeKit con Genetec SQL, Indice, In che modo il software SafeKit implementa semplicemente un cluster di alta disponibilità SANless Genetec SQL?, Come funziona il cluster mirror SafeKit con Genetec SQL?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Genetec SQL e altre soluzioni di clustering, Guida video: configurazione di un cluster mirror SafeKit HA, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 25 expressions"
 image: "/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Genetec SQL"]
 ---
 
 # La più semplice alta disponibilità Genetec SQL: replica sincrona e failover a 2 nodi {#the-simplest-genetec-sql-high-availability-2-node-synchronous-replication--failover}

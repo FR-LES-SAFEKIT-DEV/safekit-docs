@@ -6,6 +6,7 @@ category: "best-practises"
 lang: "en"
 topics: "Microsoft NLB multicast mode, Microsoft NLB unicast mode, Alternative with SafeKit, How the SafeKit cluster in farm mode works with Windows?, 🔍 Explore SafeKit"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
+schemaType: "TechArticle"
 ---
 
 # Microsoft NLB VMware Alternative: Multicast and Unicast Issues Solved {#microsoft-nlb-vmware-alternative-multicast-and-unicast-issues-solved}

@@ -7,6 +7,8 @@ lang: "de"
 topics: "SafeKit für KVM: SANless KVM-Cluster mit 2 Knoten, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen KVM Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert der SafeKit KVM-Cluster?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für KVM vs. traditionelles Clustering, Videoanleitung: Konfigurieren eines SafeKit-HA-Cluster für KVM, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 34 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["KVM"]
 ---
 
 # Einfache Linux KVM Hochverfügbarkeit ohne Shared Storage {#simple-linux-kvm-high-availability-without-shared-storage}

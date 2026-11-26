@@ -7,6 +7,7 @@ lang: "ar"
 topics: "ما هي السيناريوهات المختلفة في حالة عزل الشبكة في مجموعة؟، كيف تعمل نبضات heartbeat والتحويل التلقائي (failover) في مجموعة حواسيب تعمل بنظام Windows أو Linux؟، split-brain والنصاب (quorum) مع الخوادم في غرفتي حاسوب منفصلتين، نظام نصاب بسيط للمجموعات باستخدام أداة SafeKit مدقق split-brain، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
+schemaType: "TechArticle"
 ---
 
 # نبضة heartbeat، وتجاوز الفشل، والنصاب في مجموعات Windows و Linux {#heartbeat-failover-and-quorum-in-windows-and-linux-clusters}

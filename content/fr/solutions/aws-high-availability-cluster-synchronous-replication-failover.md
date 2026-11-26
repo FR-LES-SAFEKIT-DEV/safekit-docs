@@ -7,6 +7,7 @@ lang: "fr"
 topics: "SafeKit sans partage HA sur AWS : éliminez les disques partagés sans aucune perte de données, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité AWS sans partage de ressources ?, Comment le cluster mirror SafeKit fonctionne-t-il avec AWS ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour AWS et les solutions natives de haute disponibilité/reprise après sinistre dans le cloud, Guide vidéo : Configuration d’un cluster mirror SafeKit HA, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 32 expressions"
 image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # Haute disponibilité Amazon AWS : réplication synchrone et basculement SafeKit {#amazon-aws-high-availability-safekit-synchronous-replication--failover}

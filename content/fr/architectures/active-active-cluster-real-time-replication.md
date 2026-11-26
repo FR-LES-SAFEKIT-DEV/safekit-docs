@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Comment fonctionne un cluster actif-actif avec réplication en temps réel ?, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
+schemaType: "TechArticle"
 ---
 
 # Logiciel de clustering actif-actif avec réplication en temps réel et basculement mutuel {#active-active-clustering-software-with-real-time-replication--mutual-failover}

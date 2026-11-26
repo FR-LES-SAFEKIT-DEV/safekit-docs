@@ -7,6 +7,7 @@ lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para KVM, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/KVM, Instalación de la solución SafeKit/KVM en Linux (kvm.safe), Configuración paso a paso de la solución SafeKit/KVM, Demostración de una solución de alta disponibilidad a nivel de máquina virtual., 🔍 Explora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
+schemaType: "TechArticle"
 ---
 
 # Alta disponibilidad KVM con SafeKit: instale el módulo kvm.safe para la conmutación por error {#kvm-high-availability-with-safekit-install-the-kvmsafe-module-for-failover}

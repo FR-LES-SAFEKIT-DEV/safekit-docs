@@ -7,6 +7,8 @@ lang: "ja"
 topics: "航空交通管制システム、航空管制が重要なのはなぜですか？、SafeKit が航空管制を保護する方法、ADB SafeGate での実環境導入、🔍 SafeKit を探索する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
+schemaType: "Article"
+schemaMentions: ["ADB SafeGate"]
 ---
 
 # 航空交通管制システムの高可用性 {#high-availability-for-air-traffic-control-systems}

@@ -7,6 +7,7 @@ lang: "ar"
 topics: "مجموعة SafeKit farm: موازنة تحميل البرامج وتجاوز الأعطال التلقائي لنظامي التشغيل Windows و Linux، جدول المحتويات، كيف يقوم SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) على نظامي التشغيل Windows و Linux؟، كيف تعمل مجموعة SafeKit farm على Windows و Linux؟، مقارنة مجموعة SafeKit farm مع حلول تجميع NLB الأخرى، دليل الفيديو: كيفية تكوين مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.4 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
+schemaType: "TechArticle"
 ---
 
 # مجموعة SafeKit <span class="notranslate farm-term" translate="no">farm</span>: موازنة تحميل الشبكة والتوافر العالي لنظامي التشغيل Windows و Linux {#safekit-all-in-one-windows-or-linux-network-load-balancing--high-availability-software}

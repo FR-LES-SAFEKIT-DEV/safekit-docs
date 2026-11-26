@@ -7,6 +7,8 @@ lang: "pt-br"
 topics: "SafeKit para Bosch AMS: Cluster Hyper-V SANless de 2 nós, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Bosch AMS sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit Bosch AMS?, Limitações SafeKit de Alta Disponibilidade, Comparação: SafeKit para Bosch AMS vs. Cluster nativo Hyper-V, Guia em vídeo: Configurando um cluster HA SafeKit para Bosch AMS, SafeKit, uma solução reconhecida no mercado de segurança, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["Bosch AMS"]
 ---
 
 # Alta Disponibilidade SafeKit para Bosch AMS: Redundância e Failover sem SAN {#safekit-high-availability-for-bosch-ams-sanless-redundancy-and-failover}

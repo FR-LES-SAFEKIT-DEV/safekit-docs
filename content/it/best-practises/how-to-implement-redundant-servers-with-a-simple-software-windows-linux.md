@@ -7,6 +7,7 @@ lang: "it"
 topics: "Come implementare server ridondanti attivi/passivi con replica in tempo reale e failover?, Come implementare server ridondanti attivi/attivi con bilanciamento del carico di rete e failover?, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
+schemaType: "TechArticle"
 ---
 
 # Come implementare server ridondanti con un semplice software HA {#how-to-implement-redundant-servers-with-simple-ha-software}

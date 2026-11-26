@@ -7,6 +7,7 @@ lang: "pt-br"
 topics: "Princípios-chave, Pré-requisito: configuração de IP virtual (VIP), Teste 1 – IP virtual (VIP) mantido pelo servidor primário, Teste 2 – Failover manual (parada do primário), Teste 3 – Verificação do redirecionamento GARP com arp -a, Teste 4 – Verificação de ponta a ponta com Wireshark (Windows) ou tcpdump (Linux), Quais estações de trabalho testar, Resumo dos resultados esperados, Solução de problemas"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 12 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
+schemaType: "TechArticle"
 ---
 
 # Testando o endereço IP virtual de um cluster mirror do SafeKit na sua rede {#testing-the-virtual-ip-address-of-a-safekit-mirror-cluster-in-your-network}

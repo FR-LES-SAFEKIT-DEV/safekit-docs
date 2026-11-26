@@ -6,6 +6,7 @@ category: "resources"
 lang: "nl"
 topics: "Hoe krijg ik toegang tot het trainingsplatform? Download het SafeKit 8-trainingsmateriaal. 🔍 Ontdek SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "Course"
 ---
 
 # SafeKit High Availability-training: gratis online certificeringsprogramma {#safekit-high-availability-training-free-online-certification-program}

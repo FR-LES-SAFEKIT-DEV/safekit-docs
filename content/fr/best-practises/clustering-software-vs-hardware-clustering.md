@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Quelle est la différence entre le clustering logiciel et le clustering matériel ?, le clustering logiciel ou clustering matériel : avantages et inconvénients, 🔍 Explorez SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
+schemaType: "TechArticle"
 ---
 
 # Clustering logiciel ou clustering matériel pour une haute disponibilité {#software-clustering-vs-hardware-clustering-for-high-availability}

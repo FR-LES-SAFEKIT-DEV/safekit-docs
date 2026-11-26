@@ -7,6 +7,8 @@ lang: "ar"
 topics: "مجموعة SafeKit farm: موازن تحميل للبرامج فقط وتجاوز تلقائي للأعطال لـ NGINX، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) الخاصة NGINX ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع NGINX؟، مقارنة: مجموعة SafeKit farm لـ NGINX مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"
+schemaType: "TechArticle"
+schemaApplications: ["NGINX"]
 ---
 
 # SafeKit: برنامج متكامل لموازنة تحميل NGINX وتوفير التوافر العالي {#safekit-all-in-one-nginx-load-balancing--high-availability-software}

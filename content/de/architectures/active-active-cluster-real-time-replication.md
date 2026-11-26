@@ -7,6 +7,7 @@ lang: "de"
 topics: "Wie funktioniert ein Aktiv-Aktiv-Cluster mit Echtzeit-Replikation?, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
+schemaType: "TechArticle"
 ---
 
 # Aktiv-Aktiv-Clustering-Software mit Echtzeit-Replikation und gegenseitiger Ausfallsicherung {#active-active-clustering-software-with-real-time-replication--mutual-failover}

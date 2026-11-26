@@ -7,6 +7,7 @@ lang: "it"
 topics: "Guida rapida all’installazione di High Availability per Windows, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Windows, Installazione della soluzione SafeKit/Windows (farm.safe), Configurazione passo-passo della soluzione SafeKit/Windows, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
+schemaType: "TechArticle"
 ---
 
 # Bilanciamento del carico e failover della rete Windows: installare il modulo farm.safe SafeKit {#windows-network-load-balancing--failover-install-the-safekit-farmsafe-module}

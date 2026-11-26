@@ -7,6 +7,7 @@ lang: "de"
 topics: "SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit einer physischen Sicherheitssoftware., 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.8 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
+schemaType: "Article"
 ---
 
 # Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit {#high-availability-and-redundancy-for-physical-security-software}

@@ -7,6 +7,8 @@ lang: "de"
 topics: "Was ist eine Video-Management-Software (VMS)?, Warum ist VMS-Software unerlässlich?, Wichtigste VMS-Anbieter, SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit von VMS-Software., SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
+schemaType: "Article"
+schemaSector: "VMS"
 ---
 
 # Hochverfügbarkeit und Redundanz für Videomanagement-Software (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
