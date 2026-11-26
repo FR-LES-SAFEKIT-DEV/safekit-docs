@@ -6,7 +6,7 @@ category: "home"
 lang: "pt-pt"
 topics: "O que o SafeKit faz, Escolha o seu nível de proteção, Módulos prontos a usar para as suas aplicações, Casos de uso de clientes, Preços simples e previsíveis, Limitações a considerar, Videoteca SafeKit, 🔍 Explore SafeKit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 53 expressions"
-image: "/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit: software de alta disponibilidade para Windows e Linux, sem necessidade de SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}

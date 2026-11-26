@@ -5,7 +5,7 @@ description: "SafeKit provides high availability for Windows and Linux with sync
 category: "home"
 lang: "en"
 topics: "What SafeKit does, Choose your protection level, Ready-made modules for your applications, Customer use cases, Simple and predictable pricing, Limitations to consider, SafeKit Video Library, 🔍 Explore SafeKit"
-image: "/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit: high availability software for Windows and Linux, without a SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}

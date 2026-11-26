@@ -6,7 +6,7 @@ category: "home"
 lang: "ko"
 topics: "SafeKit의 기능, 보호 수준 선택, 애플리케이션용 기성 모듈, 고객 사용 사례, 간단하고 예측 가능한 가격 책정, 고려해야 할 제한 사항, SafeKit 동영상 라이브러리, 🔍 SafeKit 살펴보기"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 52 expressions"
-image: "/wp-content/uploads/2026/05/mirror-monitoring-prim-second.png"
+image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 
 # SafeKit: SAN 없이 Windows 및 Linux용 고가용성 소프트웨어 {#safekit-high-availability-software-for-windows-and-linux-without-a-san}
