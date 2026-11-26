@@ -1,7 +1,7 @@
 ---
 title: "Melhores e Piores Casos de Uso de Alta Disponibilidade: Um Guia de Implementação SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/best-worst-use-cases-high-availability/"
-description: "Identifique os melhores e os piores casos de uso para alta disponibilidade. Saiba onde SafeKit se destaca no clustering definido por software para Windows e Linux, e descubra quando o armazenamento partilhado tradicional ou a alta disponibilidade baseada em hardware podem falhar ao seu negócio."
+description: "Melhores e piores casos de utilização do SafeKit: onde o clustering de software em Windows e Linux é adequado e quando o armazenamento partilhado ou outra abordagem é melhor."
 category: "use-cases"
 lang: "pt-pt"
 topics: "Melhores casos de uso, Limitações de Alta Disponibilidade SafeKit, 🔍 Explore SafeKit"

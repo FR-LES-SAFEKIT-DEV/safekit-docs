@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي والتكرار لمجموعة Siemens Siveillance: التجميع النشط-النشط بدون شبكة تخزين (SANless)"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
-description: "اضمن وقت تشغيل بنسبة 100% لحزمة Siemens Siveillance Suite باستخدام SafeKit. حقق توفرًا عاليًا بدون شبكة SAN، ونسخًا متزامنًا، وتجميعًا نشطًا-نشطًا بدون أجهزة معقدة. قم بتنزيل النسخة التجريبية المجانية اليوم."
+description: "التوفر العالي لمجموعة Siemens Siveillance: ينسخ SafeKit أجهزة Hyper-V الافتراضية بين خادمين نشطين مع تجاوز فشل تلقائي."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit لبرنامج Siemens Siveillance: مجموعة Hyper-V بدون شبكة SAN مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر Siemens Siveillance ببساطة دون تخزين مشترك على شبكة منطقة التخزين (SAN)؟، كيف تعمل مجموعة SafeKit Siemens Siveillance؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Siemens Siveillance مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لبرنامج Siemens Siveillance، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

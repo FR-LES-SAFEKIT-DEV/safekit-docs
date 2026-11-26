@@ -1,7 +1,7 @@
 ---
 title: "SafeKit을 사용한 KVM 고가용성: 장애 조치를 위한 kvm.safe 모듈 설치"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-kvm/"
-description: "SafeKit을 사용하여 액티브/액티브 KVM 클러스터용 kvm.safe 구성하는 방법을 알아보세요. 2노드 비공유(shared-nothing) 아키텍처 로 VM 수준에서 고가용성을 달성하세요. SAN 또는 공유 스토리지 비용 없이 여러 VM을 노드 간에 동기식으로 복제하여 자동 장애 조치를 수행하세요."
+description: "단계별 가이드: Linux에서 KVM 가상 머신의 복제 및 장애 조치로 VM 수준 고가용성을 제공하는 SafeKit kvm.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
 topics: "KVM 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/KVM 솔루션 개요, Linux에 SafeKit/KVM 솔루션 설치 (kvm.safe), SafeKit/KVM 솔루션 단계별 구성, VM 수준의 고가용성 솔루션 시연, 🔍 SafeKit 살펴보기"

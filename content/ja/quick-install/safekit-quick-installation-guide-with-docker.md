@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Docker 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-docker/"
-description: "SafeKit は用の mirror.safe モジュールをデプロイして、Linux 上の Docker コンテナの同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしでクリティカルアプリケーション用の 2 ノードシェアードナッシングクラスターをセットアップする手順を説明します。"
+description: "手順ガイド：Linux 上の Docker 向けに SafeKit の mirror.safe モジュールを導入し、コンテナデータのリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Docker 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Docker ソリューションの概要、Linux への SafeKit/Docker ソリューションのインストール (mirror.safe)、SafeKit/Docker ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

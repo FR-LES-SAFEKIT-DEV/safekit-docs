@@ -1,7 +1,7 @@
 ---
 title: "Bosch BVMS 向け SafeKit 高可用性：SAN レスビデオ管理冗長化"
 canonical: "https://safekit.eviden.com/ja/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "SafeKit で Bosch BVMS の 24 時間 365 日の可用性を確保しましょう。当社の最もシンプルな 2 ノード SAN レスクラスターは、高価な共有ディスクなしで自動フェイルオーバーとリアルタイムレプリケーションを提供します。今すぐビデオ管理システムとビル管理システムを保護しましょう。"
+description: "Bosch BVMS ビデオ管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "Bosch BVMS 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで Bosch BVMS 高可用性クラスターどのように簡単に実装するのでしょうか？、SafeKit Bosch BVMS クラスターの仕組み、SafeKit High Availability の制限事項、比較：Bosch BVMS 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Bosch BVMS 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

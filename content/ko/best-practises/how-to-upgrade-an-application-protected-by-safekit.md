@@ -1,7 +1,7 @@
 ---
 title: "HA 클러스터에서 SafeKit으로 보호된 애플리케이션 업그레이드"
 canonical: "https://safekit.eviden.com/ko/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "SafeKit으로 보호되는 애플리케이션을 안전하게 업그레이드하는 방법을 알아보세요. 마이너 및 메이저 업그레이드, 롤링 업그레이드, 롤백 전략, VM 기반 고가용성을 비교합니다."
+description: "SafeKit으로 보호되는 애플리케이션의 업그레이드 방법: 마이너 및 메이저 업그레이드, 롤링 업그레이드, 롤백 옵션, VM HA 방식."
 category: "best-practises"
 lang: "ko"
 topics: "SafeKit으로 보호되는 고가용성 애플리케이션 업그레이드, VM 수준의 고가용성, 애플리케이션 수준의 고가용성, 올바른 업그레이드 전략 선택하기, 결론, 🔍 SafeKit 살펴보기"

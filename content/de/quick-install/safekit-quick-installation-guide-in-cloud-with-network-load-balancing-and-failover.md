@@ -1,7 +1,7 @@
 ---
 title: "Cloud-Netzwerk-Lastausgleich und Failover: Installieren Sie das SafeKit farm.safe-Modul"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
-description: "Verbessern Sie das Cloud-Netzwerk-Lastausgleichsverfahren mit dem intelligenten Anwendungsmonitoring von SafeKit. Das Modul farm.safe bietet eine dedizierte Zustandsprüfung für den Cloud-Load Balancer, die eine nahtlose Hochverfügbarkeit auf Anwendungsebene ermöglicht. Erzielen Sie automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe in jeder Cloud: Es prüft den Anwendungszustand für den Load Balancer der Cloud und steuert das Failover."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in der Cloud, Einschränkungen SafeKit Hochverfügbarkeit, Überblick über die SafeKit /Cloud-Lösung, Installation der SafeKit /Cloud-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit /Cloud-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"

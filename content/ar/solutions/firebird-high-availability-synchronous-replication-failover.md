@@ -1,7 +1,7 @@
 ---
 title: "أبسط طريقة لتحقيق التوافر العالي Firebird: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/firebird-high-availability-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق التوافر العالي Firebird. يوفر SafeKit مجموعة من عقدتين بدون شبكة SAN مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر وجود Active Directory أو مهارات متخصصة."
+description: "التوفر العالي لـ Firebird مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Firebird، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Firebird عالية التوافر بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع Firebird؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Firebird مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

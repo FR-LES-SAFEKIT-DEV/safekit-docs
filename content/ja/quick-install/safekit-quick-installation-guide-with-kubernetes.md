@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による K3S 高可用性：フェイルオーバー用の k3s.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-kubernetes/"
-description: "SafeKit は用の k3s.safe モジュールをデプロイして、Linux 上の Kubernetes の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで、重要な Linux アプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：SafeKit の k3s.safe モジュールを導入し、Linux 上の 2 ノード Kubernetes K3s クラスターでリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Kubernetes 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Kubernetes ソリューションの概要、Linux (k3s.safe) への SafeKit/Kubernetes ソリューションのインストールと設定、クラスターでネットワークが分離された場合、どのようなシナリオが考えられますか？、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

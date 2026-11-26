@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidade AWS com SafeKit: instale o módulo mirror.safe para failover"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/"
-description: "Implemente o módulo mirror.safe para SafeKit na AWS para habilitar a replicação síncrona em tempo real e o failover automático no Windows e Linux. Este guia mostra como configurar um cluster de 2 nós sem armazenamento sem compartilhamento para aplicações críticas."
+description: "Guia passo a passo: instale o módulo SafeKit mirror.safe na AWS para replicação em tempo real e failover entre duas instâncias Windows ou Linux."
 category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para AWS, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução mirror SafeKit/AWS, Instalação da solução mirror SafeKit/AWS no Windows e Linux (mirror.safe), Configuração passo a passo da solução mirror SafeKit/AWS, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"

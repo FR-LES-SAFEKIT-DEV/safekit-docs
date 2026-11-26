@@ -1,7 +1,7 @@
 ---
 title: "Arquitecturas SafeKit"
 canonical: "https://safekit.eviden.com/es/architectures/"
-description: "Explore las arquitecturas de alta disponibilidad con SafeKit. Obtenga información sobre los clústeres Mirror, Farm y Farm + clústeres mirror para la conmutación por error de aplicaciones y el equilibrio de carga sin SAN."
+description: "Arquitecturas de clúster SafeKit: clústeres mirror con replicación en tiempo real, clústeres farm con equilibrio de carga, activo-activo y redundancia N-1, sin SAN."
 category: "architectures"
 lang: "es"
 topics: "¿Cuáles son las diferentes arquitecturas de alta disponibilidad y los diferentes clústeres de software con SafeKit?, ¿Cómo crear clústeres de alta disponibilidad con SafeKit?, 🔍 Explora SafeKit"

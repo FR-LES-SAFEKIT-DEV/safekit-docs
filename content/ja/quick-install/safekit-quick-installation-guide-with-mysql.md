@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による MySQL 高可用性：フェイルオーバーのための mysql.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-mysql/"
-description: "SafeKit は用の mysql.safe モジュールをデプロイして、Windows および Linux 上の MySQL の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで重要なアプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：SafeKit の mysql.safe モジュールを導入し、Windows または Linux 上の MySQL のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "MySQL 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/MySQL ソリューションの概要、Windows および Linux への SafeKit/MySQL ソリューションのインストール (mysql.safe)、SafeKit/MySQL Server ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

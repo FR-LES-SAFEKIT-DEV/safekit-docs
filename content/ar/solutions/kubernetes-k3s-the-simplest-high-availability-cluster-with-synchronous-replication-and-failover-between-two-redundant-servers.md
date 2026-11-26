@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي Kubernetes K3s: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل لعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "حقق التوافر العالي لـ K3s على عقدتين دون الحاجة إلى تخزين خارجي أو نصاب etcd. تعرف على كيفية توفير SafeKit للنسخ المتماثل بدون فقدان للبيانات وتجاوز الأعطال التلقائي."
+description: "التوفر العالي لـ Kubernetes K3s على عقدتين مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي، دون تخزين خارجي أو نصاب etcd."
 category: "solutions"
 lang: "ar"
 topics: "تبسيط التوافر العالي (HA) في K3s: لماذا تختار SafeKit بدلاً من MetalLB و Longhorn؟، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Kubernetes K3s عالية التوافر ببساطة؟، كيف تعمل مجموعة mirror SafeKit مع Kubernetes K3S؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit مقابل حزمة K3s القياسية (MetalLB و Longhorn)، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

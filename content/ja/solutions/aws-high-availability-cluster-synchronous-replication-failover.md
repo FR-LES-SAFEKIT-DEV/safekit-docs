@@ -1,7 +1,7 @@
 ---
 title: "Amazon AWS 高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit を使用して、シンプルな Amazon AWS HA クラスターをデプロイします。当社のシェアードナッシングアーキテクチャ共有ディスクのコストなしで、Windows および Linux アプリケーションに同期レプリケーション、自動フェイルオーバー、および RPO = 0 を提供します。"
+description: "SafeKit による AWS の高可用性：Windows または Linux インスタンス 2 台間で同期レプリケーションと自動フェイルオーバー。クラウド共有ディスク不要。"
 category: "solutions"
 lang: "ja"
 topics: "AWS における SafeKit シェアードナッシング HA：共有ディスクを排除し、データ損失ゼロを実現、目次、SafeKit ソフトウェアは、どのようにしてシンプルなシェアードナッシング AWS 高可用性クラスターを実装するのでしょうか？、SafeKit mirror クラスターが AWS とどのように連携しますか？、SafeKit High Availability の制限事項、比較：AWS 向け SafeKit とネイティブクラウド HA/DR ソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"

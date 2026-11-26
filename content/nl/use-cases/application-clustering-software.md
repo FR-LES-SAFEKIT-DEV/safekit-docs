@@ -1,7 +1,7 @@
 ---
 title: "OEM Hoge beschikbaarheid: SafeKit Clustering in uw software integreren"
 canonical: "https://safekit.eviden.com/nl/use-cases/application-clustering-software/"
-description: "Versterk uw software met SafeKit. Als OEM-partner kunt u geautomatiseerde failover en synchrone replicatie rechtstreeks in uw applicatie integreren. Bied uw klanten 24/7 uptime op Windows en Linux zonder de complexiteit van hardwareclusters."
+description: "OEM-hoge beschikbaarheid: integreer replicatie en failover van SafeKit in uw software en bied uw klanten een Windows- of Linux-cluster zonder HA-expertise."
 category: "use-cases"
 lang: "nl"
 topics: "De OEM-usecase voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Hoe werkt een virtueel IP-adres in een high-availability-cluster?"
 canonical: "https://safekit.eviden.com/nl/best-practises/how-a-virtual-ip-address-works/"
-description: "Hoe SafeKit een virtueel IP-adres verplaatst bij failover: gratuitous ARP in hetzelfde subnet, load balancer, cloud CLI of BGP over subnetten. Waarom een lokaal virtueel IP-adres belangrijk is."
+description: "Hoe een virtueel IP-adres verhuist bij failover: gratuitous ARP binnen één subnet, of een load balancer, cloudroutes of BGP over subnetten heen, uitgelegd met SafeKit."
 category: "best-practises"
 lang: "nl"
 topics: "Wat is een virtueel IP-adres in een high-availabilitycluster?, Implementatie van virtueel IP in SafeKit, Hoe een virtueel IP werkt in hetzelfde subnet (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met een load balancer (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met cloudprovider-CLI's (mirror-cluster), Hoe een virtueel IP werkt in verschillende subnets met BGP (mirror-cluster), Hoe DNS-omleiding werkt in verschillende subnets (mirror-cluster), Hoe virtuele IP-loadbalancing werkt in een farm-cluster op hetzelfde subnet, Hoe een loadbalanced virtueel IP werkt in verschillende subnets (farm-cluster), Vergelijking: implementatie van virtueel IP, latentie en applicatietransparantie, Veelgestelde vragen over virtueel IP, 🔍 Ontdek SafeKit"

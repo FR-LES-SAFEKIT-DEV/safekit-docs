@@ -1,7 +1,7 @@
 ---
 title: "Alternativa VMware Microsoft NLB: Problemas de Multicast e Unicast Resolvidos"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "Está com dificuldades com o multicast ou unicast Microsoft NLB no VMware? SafeKit oferece uma alternativa simples: um cluster farm com balanceamento de carga automático e failover no Windows e Linux. Não requer entradas ARP estáticas, nem falsificação de MAC, nem configuração de rede especializada."
+description: "Uma alternativa ao Microsoft NLB em VMware: os clusters farm SafeKit balanceiam a carga e fazem failover sem multicast, entradas ARP estáticas nem MAC spoofing."
 category: "best-practises"
 lang: "pt-pt"
 topics: "Modo multicast Microsoft NLB, Modo unicast Microsoft NLB, Alternativa com SafeKit, Como funciona o cluster SafeKit em modo farm com Windows?, 🔍 Explore SafeKit"

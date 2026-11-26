@@ -1,7 +1,7 @@
 ---
 title: "SAN vs. NAS: Armazenamento Partilhado para Agrupamento de failover: Uma Comparação Detalhada"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "Compare o armazenamento partilhado SAN e NAS para clusters de failover. SafeKit não necessita de armazenamento partilhado. Simplifica os scripts de failover e previne a corrupção de dados. Não requer hardware dispendioso nem um disco de quórum complexo."
+description: "Armazenamento partilhado SAN vs NAS para clusters de failover: limites, custos e riscos, e porque a replicação SafeKit elimina a necessidade de armazenamento partilhado."
 category: "best-practises"
 lang: "pt-pt"
 topics: "Armazenamento partilhado SAN ou NAS: qual é o mais simples para um cluster de failover?, 🔍 Explore SafeKit"

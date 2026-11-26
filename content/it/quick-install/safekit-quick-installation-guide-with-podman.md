@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilità Podman con SafeKit: installare il modulo mirror.safe per il failover"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-podman/"
-description: "Implementare il modulo mirror.safe per SafeKit per abilitare la replica sincrona in tempo reale e il failover automatico dei container Podman su Linux. Questa guida illustra come configurare un cluster SANless a 2 nodi per applicazioni critiche senza storage condiviso."
+description: "Guida passo passo: installa il modulo SafeKit mirror.safe per Podman su Linux, con replica in tempo reale dei dati dei container e failover automatico."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione ad alta disponibilità per Podman, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Podman, Installazione della soluzione SafeKit/Podman su Linux (mirror.safe), Configurazione passo-passo della soluzione SafeKit/Podman, Dimostrazione della soluzione mirror SafeKit, 🔍 Esplora SafeKit"

@@ -1,7 +1,7 @@
 ---
-title: "Guía de instalación rápida SafeKit en Azure (módulo mirror.safe para replicación en tiempo real y conmutación por error)"
+title: "Alta disponibilidad Azure con SafeKit: Instale el módulo mirror.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
-description: "Implemente el módulo mirror.safe para SafeKit en Azure para habilitar la replicación síncrona en tiempo real y la conmutación por error automática en Windows y Linux. Esta guía le muestra cómo configurar un clúster de 2 nodos sin recursos compartidos para aplicaciones críticas sin almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit mirror.safe en Azure para replicación en tiempo real y conmutación por error entre dos máquinas virtuales Windows o Linux."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para Azure, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución mirror SafeKit/Azure, Instalación de la solución mirror SafeKit/Azure en Windows y Linux (mirror.safe), Configuración paso a paso de la solución mirror SafeKit/Azure, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"

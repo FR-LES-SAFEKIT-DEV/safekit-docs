@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad K3S con SafeKit: Instale el módulo k3s.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-kubernetes/"
-description: "Implemente el módulo k3s.safe para SafeKit para habilitar la replicación síncrona en tiempo real y la conmutación por error automática de Kubernetes en Linux. Esta guía le muestra cómo configurar un clúster sin SAN de 2 nodos para aplicaciones críticas Linux sin almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit k3s.safe para un clúster Kubernetes K3s de dos nodos en Linux, con replicación en tiempo real y conmutación por error automática."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para Kubernetes, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/Kubernetes, Instalación y configuración de la solución SafeKit/Kubernetes en Linux (k3s.safe), ¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"

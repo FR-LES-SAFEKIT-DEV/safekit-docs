@@ -1,7 +1,7 @@
 ---
 title: "أسعار SafeKit"
 canonical: "https://safekit.eviden.com/ar/safekit-pricing/"
-description: "تعرّف على نموذج ترخيص SafeKit واطلب عرض أسعار مخصصًا لضمان التوافر العالي، والنسخ المتماثل، وتجاوز الفشل، وموازنة التحميل على أنظمة التشغيل Windows و Linux."
+description: "أسعار SafeKit: تراخيص دائمة لكل خادم، ووحدات تطبيقات مجانية، ولا حاجة إلى إصدارات Enterprise. اطلب عرض سعر لمجموعات Windows أو Linux."
 category: "home"
 lang: "ar"
 topics: "نموذج الترخيص والتسعير، الدعم والصيانة القياسية، اطلب عرض سعر"

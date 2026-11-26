@@ -1,7 +1,7 @@
 ---
 title: "الكتلة في الحوسبة السحابية: حل عام لخدمات أمازون ويب سيرفيسز (Amazon AWS، Azure (Microsoft)، وجوجل كلاود بلاتفورم (Google GCP، وغيرها من الخدمات السحابية"
 canonical: "https://safekit.eviden.com/ar/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
-description: "كيف يوفر برنامج Eviden SafeKit حلاً عامًا للتجمعات في الحوسبة السحابية (Amazon AWS و Microsoft Azure و Google GCP وغيرها من السحابات)"
+description: "المجموعات في السحابة مع SafeKit: حل عام واحد للنسخ وتجاوز الفشل وموازنة الأحمال في AWS و Azure و Google Cloud وغيرها من السحابات."
 category: "solutions"
 lang: "ar"
 topics: "اكتشف SafeKit في Microsoft Azure، اكتشف SafeKit في Google GCP، اكتشف SafeKit في Amazon AWS، حلول سحابية أخرى مع Eviden SafeKit، 🔍 استكشف SafeKit"

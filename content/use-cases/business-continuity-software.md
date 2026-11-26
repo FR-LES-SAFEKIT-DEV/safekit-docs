@@ -1,7 +1,7 @@
 ---
 title: "Standardizing High Availability for Distributed Enterprises with Many Branches"
 canonical: "https://safekit.eviden.com/use-cases/business-continuity-software/"
-description: "Secure every branch office of your distributed enterprise with SafeKit. Deploy a standardized, software-only high availability cluster at scale. Ensure 24/7 uptime for critical applications in every branch office. SafeKit runs on Windows and Linux. It requires no shared storage, no complex SAN, and no on-site IT expertise."
+description: "High availability for distributed enterprises: deploy the same SafeKit cluster in every branch, with no SAN and no IT staff on site, on Windows or Linux."
 category: "use-cases"
 lang: "en"
 topics: "Business continuity in a distributed enterprise, 🔍 Explore SafeKit"

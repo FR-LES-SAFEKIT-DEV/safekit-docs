@@ -1,7 +1,7 @@
 ---
 title: "将 SafeKit 高可用性与灾难恢复备份相结合"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-disaster-recovery-hadr/"
-description: "通过将 SafeKit 同步复制（RPO = 0）与异地灾难恢复的异步备份相结合，构建弹性 HA/DR 策略。这种双层方法可确保 Windows 和 Linux 上的应用程序 24/7 全天候正常运行和数据完整性。"
+description: "将 SafeKit 高可用性（同步复制，RPO 0）与异步备份结合，在 Windows 和 Linux 上实现异地灾难恢复。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "用于高可用性的同步 SafeKit 复制与用于灾难恢复的异步备份复制、目录、同步 HADR：通过高速网络（LAN /虚拟局域网）实现零数据丢失、异步 HADR：通过慢速网络（广域网）进行灾难恢复、如何结合 HADR 和备份实现全面的系统弹性、HADR 架构比较：快速网络与慢速网络、视频指南：如何使用 SafeKit 实现 HADR、🔍 探索 SafeKit"

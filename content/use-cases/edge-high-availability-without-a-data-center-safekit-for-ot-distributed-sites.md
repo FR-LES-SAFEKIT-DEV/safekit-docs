@@ -1,7 +1,7 @@
 ---
 title: "Edge High Availability Without a Data Center: SafeKit for OT and Distributed Sites"
 canonical: "https://safekit.eviden.com/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Edge computing sites have no data center, but they still need high availability. SafeKit turns two standard servers into a plug-and-play high availability cluster. It requires no SAN and no IT staff, and failover is automatic."
+description: "Edge high availability without a data center: SafeKit turns two standard servers into a plug-and-play cluster for OT and distributed sites, with no SAN."
 category: "use-cases"
 lang: "en"
 topics: "The high availability challenge at the edge, Why SafeKit is the natural fit for edge computing, Edge and distributed deployment suitability, Why edge OT environments are different, Ideal use cases at the edge, Edge vs. data center high availability: key differences, Supported operating systems and platforms, 🔍 Explore SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "고가용성 클러스터에서 가상 IP 주소는 어떻게 작동하나요?"
 canonical: "https://safekit.eviden.com/ko/best-practises/how-a-virtual-ip-address-works/"
-description: "SafeKit이 장애 조치 시 가상 IP를 이동하는 방법: 동일 서브넷 내 Gratuitous ARP, 로드 밸런서, 클라우드 CLI 또는 서브넷 간 BGP. 로컬 가상 IP가 중요한 이유."
+description: "장애 조치 시 가상 IP 주소의 이동 방식: 단일 서브넷에서는 Gratuitous ARP, 서브넷 간에는 부하 분산 장치, 클라우드 라우트 또는 BGP. SafeKit으로 설명합니다."
 category: "best-practises"
 lang: "ko"
 topics: "고가용성 클러스터의 가상 IP 주소란?, SafeKit의 가상 IP 구현, 동일 서브넷에서 가상 IP가 작동하는 방식(mirror 클러스터), 로드 밸런서를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), 클라우드 공급자 CLI를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), BGP를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), DNS 리디렉션이 서로 다른 서브넷 간에 작동하는 방식(mirror 클러스터), 동일 서브넷의 farm 클러스터에서 가상 IP 로드 밸런싱이 작동하는 방식, 로드 밸런싱된 가상 IP가 서로 다른 서브넷 간에 작동하는 방식(farm 클러스터), 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 가상 IP에 대한 자주 묻는 질문, 🔍 SafeKit 살펴보기"

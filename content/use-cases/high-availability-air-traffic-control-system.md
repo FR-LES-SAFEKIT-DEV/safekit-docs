@@ -1,7 +1,7 @@
 ---
 title: "High Availability for Air Traffic Control Systems"
 canonical: "https://safekit.eviden.com/use-cases/high-availability-air-traffic-control-system/"
-description: "SafeKit ensures high availability for air traffic control systems. ADB SafeGate deployed SafeKit in airports worldwide. Critical applications are available 24/7. SafeKit replicates data in real time with no data loss. It provides automatic failover on standard Windows servers. No shared storage is needed."
+description: "High availability for air traffic control: ADB SafeGate uses SafeKit in airports worldwide for real-time replication and automatic failover on Windows."
 category: "use-cases"
 lang: "en"
 topics: "Air Traffic Control Systems, Why is air traffic control critical?, How SafeKit protects air traffic control, Real-world implementation at ADB SafeGate, 🔍 Explore SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Anwendungsfälle unserer Kunden"
 canonical: "https://safekit.eviden.com/de/use-cases/"
-description: "SafeKit bietet einfache Hochverfügbarkeit ohne SAN. Es schützt kritische Bereiche. Beispiele hierfür sind OEM-Software, Edge-Sites, VMS, EACS, SCADA, BMS, Flugverkehrskontrolle und U-Bahn-Betrieb."
+description: "SafeKit-Anwendungsfälle von Kunden: Hochverfügbarkeit für OEM-Software, Edge-Standorte, VMS, Zutrittskontrolle, SCADA, Gebäudemanagement, Flugverkehrs- und U-Bahn-Steuerung."
 category: "use-cases"
 lang: "de"
 topics: "SafeKit-Anwendungsfälle, 🔍 SafeKit entdecken"

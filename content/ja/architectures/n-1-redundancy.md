@@ -1,7 +1,7 @@
 ---
 title: "N-1 冗長クラスター：単一のバックアップサーバーで複数のアプリケーションに高可用性を提供"
 canonical: "https://safekit.eviden.com/ja/architectures/n-1-redundancy/"
-description: "SafeKit N-1 冗長化でデータセンターを最適化しましょう。N+1 台のサーバーに N 個の mirror モジュールをデプロイし、単一の共有バックアップサーバーで複数のアプリケーションに高可用性を提供します。Windows および Linux 向けのリアルタイムレプリケーションにより、SAN の要件を排除し、ハードウェアコストを削減します。詳細はこちら。"
+description: "SafeKit の N-1 冗長化：N+1 台のサーバー上の N 個のアプリケーションが 1 台のバックアップサーバーを共有。リアルタイムレプリケーションと自動フェイルオーバー、SAN 不要。"
 category: "architectures"
 lang: "ja"
 topics: "N 台のサーバーから 1 台へのデータレプリケーションとアプリケーションフェイルオーバーによる高可用性、🔍 SafeKit を探索する"

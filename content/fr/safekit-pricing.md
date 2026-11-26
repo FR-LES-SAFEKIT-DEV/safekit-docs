@@ -1,7 +1,7 @@
 ---
 title: "Tarification SafeKit"
 canonical: "https://safekit.eviden.com/fr/safekit-pricing/"
-description: "Comprenez le modèle de licence SafeKit et demandez un devis personnalisé pour la haute disponibilité, la réplication, le basculement et l’équilibrage de charge sous Windows et Linux."
+description: "Tarifs SafeKit : licences perpétuelles par serveur, modules applicatifs gratuits, aucune édition Enterprise requise. Demandez un devis pour vos clusters Windows ou Linux."
 category: "home"
 lang: "fr"
 topics: "Modèle de licence et tarification, Support et maintenance standard, Demander un devis"

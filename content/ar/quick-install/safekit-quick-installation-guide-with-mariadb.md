@@ -1,7 +1,7 @@
 ---
 title: "التوفر العالي MariaDB باستخدام SafeKit: تثبيت وحدة mysql.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-mariadb/"
-description: "انشر وحدة mysql.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الأعطال التلقائي لـ MariaDB على نظامي التشغيل Windows و Linux. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة منطقة تخزين (SANless) للتطبيقات الهامة بدون تخزين مشترك."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit mysql.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لـ MariaDB على Windows أو Linux."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ MariaDB، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/MariaDB، تثبيت حل SafeKit/MariaDB على نظامي التشغيل Windows و Linux (mysql.safe)، إعداد حل SafeKit/MariaDB خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"

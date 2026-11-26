@@ -1,7 +1,7 @@
 ---
 title: "Siemens SIMATIC PCS 7 の高可用性：2 ノード SAN レスクラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
-description: "SAN なしで Siemens SIMATIC PCS 7 の高可用性を実現します。SafeKit HA、同期レプリケーション、2 ノードフェイルオーバー、ゼロデータロスを提供します。"
+description: "Siemens SIMATIC PCS 7 の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "Siemens SIMATIC PCS7 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、Siemens SIMATIC PCS7 高可用性クラスターどのように簡単に実装しますか？、SafeKit Siemens SIMATIC PCS7 クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens SIMATIC PCS7 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens SIMATIC PCS7 用 SafeKit HA クラスターの構成、SafeKit、SCADA 市場で認められたソリューション、🔍 SafeKit を探索する"

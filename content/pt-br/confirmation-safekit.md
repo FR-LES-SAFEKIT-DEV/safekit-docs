@@ -1,6 +1,6 @@
 ---
-title: "Obrigado por entrar em contato conosco"
-description: "Página de confirmação exibida após o envio do formulário de contato do SafeKit."
+title: "Obrigado por entrar em contato conosco."
+description: "Obrigado por entrar em contato conosco sobre o SafeKit. Sua solicitação foi enviada e a equipe Eviden responderá em breve."
 lang: "pt-br"
 category: "home"
 sitemap:

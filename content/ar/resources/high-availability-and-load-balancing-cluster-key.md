@@ -1,7 +1,7 @@
 ---
 title: "مفتاح تجربة SafeKit المجانية لمدة شهر"
 canonical: "https://safekit.eviden.com/ar/resources/high-availability-and-load-balancing-cluster-key/"
-description: "اطلب مفتاح مجموعة SafeKit لتجربة لمدة شهر على Windows وLinux. تقدم SafeKit بنية متكاملة وبسيطة للتوافر العالي وتجميع التطبيقات دون SAN."
+description: "اطلب مفتاح SafeKit مجانيًا لمدة شهر لاختبار مجموعات التوفر العالي والنسخ وموازنة الأحمال على Windows و Linux."
 category: "resources"
 lang: "ar"
 topics: "احصل على مفتاح ترخيص SafeKit مجاني لمدة شهر عبر البريد الإلكتروني لأنظمة Windows أو Linux، 🔍 استكشف SafeKit"

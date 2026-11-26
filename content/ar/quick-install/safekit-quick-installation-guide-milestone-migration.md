@@ -1,7 +1,7 @@
 ---
 title: "إدارة ترحيل Milestone باستخدام SafeKit"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-milestone-migration/"
-description: "تعرّف على كيفية ترحيل خادم إدارة Milestone XProtect في مجموعة SafeKit عالية التوفر. يغطي هذا الدليل المفصل ترحيل قاعدة البيانات، ونسخ خادم SQL، وتكوين تجاوز الفشل للانتقال السلس إلى إصدارات Milestone الجديدة."
+description: "كيفية ترحيل Milestone XProtect Management Server المحمي بـ SafeKit: ترحيل قاعدة البيانات، ونسخ SQL Server، وضبط تجاوز الفشل."
 category: "quick-install"
 lang: "ar"
 topics: "Eviden SafeKit"

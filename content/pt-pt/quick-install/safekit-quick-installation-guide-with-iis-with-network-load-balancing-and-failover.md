@@ -1,7 +1,7 @@
 ---
 title: "Balanceamento de Carga e Redundância IIS: Instale o Módulo SafeKit iis_farm.safe"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
-description: "Saiba como implementar o módulo iis_farm.safe no Windows para IIS Network Load Balancing e failover automático. Este guia mostra como construir um cluster de alta disponibilidade para serviços e aplicações web utilizando um IP virtual, sem a necessidade de balanceadores de carga de hardware externos ou configuração complexa."
+description: "Guia passo a passo: instale o módulo SafeKit iis_farm.safe em Windows para balanceamento de carga de rede e failover de servidores web IIS num IP virtual."
 category: "quick-install"
 lang: "pt-pt"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para IIS, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução SafeKit/IIS, Instalação da solução SafeKit/IIS no Windows (iis_farm.safe), Configuração passo a passo da solução SafeKit/IIS, Demonstração da solução farm SafeKit, 🔍 Explore SafeKit"

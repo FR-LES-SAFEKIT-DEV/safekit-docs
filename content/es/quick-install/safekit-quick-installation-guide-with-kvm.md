@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad KVM con SafeKit: instale el módulo kvm.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-kvm/"
-description: "Aprenda a configurar kvm.safe para un clúster KVM activo/activo con SafeKit. Consiga alta disponibilidad a nivel de máquina virtual con una arquitectura de 2 nodos sin recursos compartidos. Replique de forma síncrona varias máquinas virtuales entre nodos para una conmutación por error automática sin el coste de una SAN o almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit kvm.safe para alta disponibilidad a nivel de VM, con replicación y conmutación por error de máquinas virtuales KVM en Linux."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para KVM, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/KVM, Instalación de la solución SafeKit/KVM en Linux (kvm.safe), Configuración paso a paso de la solución SafeKit/KVM, Demostración de una solución de alta disponibilidad a nivel de máquina virtual., 🔍 Explora SafeKit"

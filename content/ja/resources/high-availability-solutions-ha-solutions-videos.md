@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 高可用性およびフェイルオーバーのデモ: SANless クラスタリングのビデオ チュートリアル"
 canonical: "https://safekit.eviden.com/ja/resources/high-availability-solutions-ha-solutions-videos/"
-description: "SafeKit のデモを見て、Windows と Linux の 2 ノード SAN レス高可用性、リアルタイム レプリケーション、自動フェイルオーバーを実装する方法を確認してください。高価な共有ストレージや複雑なハードウェア ロード バランサーを使用せずに、SQL Server、Hyper-V、および VMS 用のソフトウェアのみのクラスターを構築する方法を学びます。"
+description: "SafeKit デモ動画：SQL Server、Hyper-V、VMS などでのリアルタイムレプリケーション、自動フェイルオーバー、負荷分散を備えた 2 ノードクラスター。"
 category: "resources"
 lang: "ja"
 topics: "SafeKit テクニカル フェールオーバー チュートリアルとデモ、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: برنامج متكامل لموازنة تحميل Apache وتوفير التوافر العالي"
 canonical: "https://safekit.eviden.com/ar/solutions/apache-load-balancing-failover-2/"
-description: "يوفر SafeKit حلاً قوياً لوازن تحميل Apache عالي التوافر يعتمد على البرمجيات فقط. استبدل أجهزة NLB المعقدة بـ SafeKit الذي يضم عنوان IP ظاهري متكامل، ومراقبة التطبيقات، وتجاوز تلقائي للأعطال. يمكنك بسهولة نشر مجموعة Apache على خوادم Windows القياسية اليوم."
+description: "موازنة أحمال Apache وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم قياسية، دون أجهزة NLB."
 category: "solutions"
 lang: "ar"
 topics: "مجموعة SafeKit farm: موازن تحميل للشبكة (NLB) يعتمد على البرمجيات فقط وتجاوز تلقائي للأعطال لـ Apache، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Apache ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع Apache؟، مقارنة: مجموعة SafeKit farm لـ Apache مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

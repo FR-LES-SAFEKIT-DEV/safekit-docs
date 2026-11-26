@@ -1,7 +1,7 @@
 ---
 title: "SafeKit Smart Console：您的高可用性集群，尽在掌握"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
-description: "使用我们的 Smart Console 轻松管理 SafeKit 集群。享受零代码配置、智能手机兼容性和实时 PWA 通知。消除人为错误，确保高可用性触手可及。了解更多。"
+description: "SafeKit Smart Console：通过浏览器或智能手机配置和监控高可用性集群，无需编写代码，并提供实时通知。"
 category: "architectures"
 lang: "zh-hans"
 topics: "Smart Console：在台式机和移动设备上实现直观且无差错的高可用性、目录、SafeKit mirror 集群如何与 Web 控制台配合使用？、SafeKit farm 集群如何与 Web 控制台配合使用？、如何通过 Web 控制台监控多个模块和多个集群？、如何在控制台中监控警报并管理电子邮件通知？、🔍 探索 SafeKit"

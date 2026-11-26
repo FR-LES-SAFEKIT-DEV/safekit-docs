@@ -1,7 +1,7 @@
 ---
 title: "Gebruikershandleiding SafeKit 8.2"
 canonical: "https://safekit.eviden.com/nl/resources/safekit-user-guide-82/"
-description: "Dit document beschrijft alle fasen van de SafeKit -implementatie: architectuur, installatie, testen, beheer en probleemoplossing, ondersteuning en de commandoregelinterface."
+description: "Gebruikershandleiding van SafeKit 8.2: architecturen, installatie, tests, beheer, probleemoplossing, support en opdrachtregel voor Windows- en Linux-clusters."
 category: "resources"
 lang: "nl"
 layout: userguide

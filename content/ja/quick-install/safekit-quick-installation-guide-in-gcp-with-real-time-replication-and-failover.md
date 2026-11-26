@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による GCP 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
-description: "GCP で SafeKit 用の mirror.safe モジュールをデプロイし、Windows および Linux で同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしでミッションクリティカルなアプリケーション向けに 2 ノードのシェアードナッシングクラスターをセットアップする手順を説明します。"
+description: "手順ガイド：GCP に SafeKit の mirror.safe モジュールを導入し、Windows または Linux VM 2 台間でリアルタイムレプリケーションとフェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "GCP 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/GCP mirror ソリューションの概要、Windows および Linux への SafeKit/GCP mirror ソリューションのインストール (mirror.safe)、SafeKit/GCP mirror ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

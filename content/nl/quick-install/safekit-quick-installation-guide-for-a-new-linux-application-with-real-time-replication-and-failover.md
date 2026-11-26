@@ -1,7 +1,7 @@
 ---
 title: "Linux High Availability met SafeKit: Installeer de mirror.safe module voor failover"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
-description: "Implementeer de mirror.safe module voor SafeKit om synchrone real-time replicatie en automatische failover op Linux mogelijk te maken. Deze handleiding begeleidt u bij het opzetten van een SANless-cluster met 2 knooppunten voor bedrijfskritieke Linux toepassingen zonder gedeelde opslag."
+description: "Stapsgewijze handleiding: installeer de SafeKit-module mirror.safe op Linux voor realtime replicatie en automatische failover van uw applicatie op twee servers."
 category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Linux, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Linux oplossing, Installatie van de SafeKit/Linux-oplossing (mirror.safe), Stapsgewijze configuratie van de SafeKit/Linux oplossing, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"

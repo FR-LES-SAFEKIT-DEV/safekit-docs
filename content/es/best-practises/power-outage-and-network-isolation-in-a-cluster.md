@@ -1,7 +1,7 @@
 ---
 title: "Gestión de cortes de energía y aislamiento de la red en un clúster de alta disponibilidad"
 canonical: "https://safekit.eviden.com/es/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "Aprenda a gestionar el aislamiento de la red y los cortes de energía en un clúster de alta disponibilidad. SafeKit incluye verificadores de división de clúster y resincronización automática. Estos garantizan la integridad de los datos y el funcionamiento ininterrumpido 24/7 sin necesidad de un disco compartido."
+description: "Cortes de energía y aislamiento de red en un clúster de alta disponibilidad: el checker split-brain y la resincronización automática de SafeKit protegen sus datos."
 category: "best-practises"
 lang: "es"
 topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster?, 🔍 Explora SafeKit"

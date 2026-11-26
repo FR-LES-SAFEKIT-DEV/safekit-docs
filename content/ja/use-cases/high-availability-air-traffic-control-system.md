@@ -1,7 +1,7 @@
 ---
 title: "航空交通管制システムの高可用性"
 canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-air-traffic-control-system/"
-description: "SafeKit は航空管制システムの高可用性を保証します。ADB SafeGate は世界中の空港に SafeKit を導入しました。重要なアプリケーションは 24 時間年中無休で利用可能です。SafeKit はデータ損失なしにリアルタイムでデータを複製します。標準的な Windows サーバーで自動フェイルオーバーを提供します。共有ストレージは必要ありません。"
+description: "航空管制の高可用性：ADB SafeGate は世界中の空港で SafeKit を採用し、Windows 上でリアルタイムレプリケーションと自動フェイルオーバーを実現しています。"
 category: "use-cases"
 lang: "ja"
 topics: "航空交通管制システム、航空管制が重要なのはなぜですか？、SafeKit が航空管制を保護する方法、ADB SafeGate での実環境導入、🔍 SafeKit を探索する"

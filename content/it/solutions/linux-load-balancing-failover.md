@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: software tutto in uno per il bilanciamento del carico e l’alta disponibilità Linux"
 canonical: "https://safekit.eviden.com/it/solutions/linux-load-balancing-failover/"
-description: "SafeKit offre una potente soluzione di bilanciamento del carico e alta disponibilità Linux, basata esclusivamente su software. Sostituisci l’hardware NLB complesso con l’IP virtuale integrato, il monitoraggio delle applicazioni e il failover automatico di SafeKit. Implementa facilmente un cluster SafeKit su server Linux standard oggi stesso."
+description: "Bilanciamento del carico e alta disponibilità Linux con SafeKit: IP virtuale, monitoraggio applicativo e failover automatico su server Linux standard."
 category: "solutions"
 lang: "it"
 topics: "Cluster farm SafeKit: NLB solo software e failover automatico per Linux, Indice, In che modo il software SafeKit implementa semplicemente un cluster di bilanciamento del carico di rete (NLB) Linux?, Come funziona il cluster SafeKit in modalità farm con Linux?, Confronto: cluster farm SafeKit per Linux e altre soluzioni di clustering NLB, Guida video: configurazione di un cluster NLB farm SafeKit, 🔍 Esplora SafeKit"

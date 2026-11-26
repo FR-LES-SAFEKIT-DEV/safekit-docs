@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade de Edge sem um Data Center: SafeKit para OT e Sites Distribuídos"
 canonical: "https://safekit.eviden.com/pt-br/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Os locais de computação de borda não possuem data center, mas ainda precisam de alta disponibilidade. SafeKit transforma dois servidores padrão em um cluster de alta disponibilidade plug-and-play. Ele não requer SAN nem equipe de TI, e o failover é automático."
+description: "Alta disponibilidade na borda sem data center: o SafeKit transforma dois servidores padrão em um cluster plug-and-play para OT e sites distribuídos, sem SAN."
 category: "use-cases"
 lang: "pt-br"
 topics: "O desafio da alta disponibilidade na borda, Por que SafeKit é a escolha natural para a computação de borda, Adequação para implantação em borda e distribuída, Por que os ambientes de OT de borda são diferentes, Casos de uso ideais na borda, Edge vs. data center: principais diferenças em alta disponibilidade, Sistemas operacionais e plataformas compatíveis, 🔍 Explore SafeKit"

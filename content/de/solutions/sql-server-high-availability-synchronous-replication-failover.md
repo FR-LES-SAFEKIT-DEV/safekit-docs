@@ -1,7 +1,7 @@
 ---
 title: "Die einfachste Hochverfügbarkeit Microsoft SQL Server: synchrone Replikation und Failover mit 2 Knoten"
 canonical: "https://safekit.eviden.com/de/solutions/sql-server-high-availability-synchronous-replication-failover/"
-description: "Die einfachste Methode zur Implementierung der Hochverfügbarkeit Microsoft SQL Server. SafeKit bietet einen SANless-Cluster mit 2 Knoten, synchroner Replikation und automatischem Failover – ohne AD oder spezielle Kenntnisse erforderlich."
+description: "Hochverfügbarkeit für SQL Server mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover, für alle Editionen, ohne SAN."
 category: "solutions"
 lang: "de"
 topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Microsoft SQL Server, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless-Hochverfügbarkeitscluster Microsoft SQL Server?, Wie funktioniert der SafeKit-Mirror-Cluster mit Microsoft SQL Server?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Microsoft SQL Server im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"

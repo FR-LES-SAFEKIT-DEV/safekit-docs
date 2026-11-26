@@ -1,7 +1,7 @@
 ---
 title: "Contacte-nos sobre SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/contact-us-for-safekit/"
-description: "Contacte Eviden para obter informações sobre o software de alta disponibilidade SafeKit."
+description: "Contacte a Eviden sobre o software de alta disponibilidade SafeKit para Windows e Linux: preços, questões técnicas, parcerias ou uma demonstração."
 lang: "pt-pt"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"

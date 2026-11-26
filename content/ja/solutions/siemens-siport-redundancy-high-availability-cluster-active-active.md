@@ -1,7 +1,7 @@
 ---
 title: "Siemens SIPORT アクセス制御の高可用性：SAN レス冗長化とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
-description: 'SafeKit で Siemens SIPORT の 24 時間 365 日稼働を確保しましょう。当社の 2 ノード SAN レスクラスターは、SAN のコストなしで同期レプリケーションと自動フェイルオーバーを提供します。シンプルで信頼性が高く、高性能な冗長化を実現します。無料トライアルをダウンロードしてください。'
+description: "Siemens SIPORT 入退室管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "Siemens SIPORT 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、どのようにして Siemens SIPORT 高可用性クラスター簡単に実装するのでしょうか？、SafeKit Siemens SIPORT クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens SIPORT 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens SIPORT 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

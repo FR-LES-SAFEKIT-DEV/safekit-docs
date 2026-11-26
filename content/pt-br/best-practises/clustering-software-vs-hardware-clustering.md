@@ -1,7 +1,7 @@
 ---
 title: "Clustering de software versus clustering de hardware para alta disponibilidade"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/clustering-software-vs-hardware-clustering/"
-description: "Compare o clustering de software e o clustering de hardware para alta disponibilidade. SafeKit não precisa de armazenamento SAN caro, nem de dispositivos de balanceamento de carga e nem de habilidades de TI especializadas. Ele oferece alta disponibilidade 24 horas por dia, 7 dias por semana, em servidores padrão."
+description: "Clustering de software vs clustering de hardware: por que o SafeKit garante alta disponibilidade em servidores padrão sem SAN, appliance de balanceamento ou especialista HA."
 category: "best-practises"
 lang: "pt-br"
 topics: "Qual é a diferença entre o clustering de software e o clustering de hardware?, o clustering de software vs. clustering de hardware: prós e contras, 🔍 Explore SafeKit"

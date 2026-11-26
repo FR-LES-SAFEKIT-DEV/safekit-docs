@@ -1,7 +1,7 @@
 ---
 title: "SafeKit-prijzen"
 canonical: "https://safekit.eviden.com/nl/safekit-pricing/"
-description: "Lees meer over het SafeKit-licentiemodel en vraag een offerte op maat aan voor hoge beschikbaarheid, replicatie, failover en load balancing op Windows en Linux."
+description: "SafeKit-prijzen: eeuwigdurende licenties per server, gratis applicatiemodules en geen Enterprise-edities nodig. Vraag een offerte aan voor Windows- of Linux-clusters."
 category: "home"
 lang: "nl"
 topics: "Licentiemodel en prijzen, Standaardondersteuning en -onderhoud, Vraag een offerte aan"

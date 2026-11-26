@@ -1,7 +1,7 @@
 ---
 title: "在 HA 集群中升级 SafeKit 保护的应用程序"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "了解如何安全地升级受 SafeKit 保护的应用程序。比较次要升级和主要升级、滚动升级、回滚策略和基于虚拟机的容错。"
+description: "如何升级受 SafeKit 保护的应用：小版本与大版本升级、滚动升级、回滚选项及虚拟机级 HA 方法。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "升级由 SafeKit 保护的高可用性应用程序、虚拟机级高可用性、应用级高可用性、选择正确的升级策略、结论、🔍 探索 SafeKit"

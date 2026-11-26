@@ -1,7 +1,7 @@
 ---
 title: "Alternative to SQL Server Always On: HA for Express and Standard Editions"
 canonical: "https://safekit.eviden.com/best-practises/alternative-always-on-sql-server-express-standard-editions/"
-description: "Looking for a cost-effective alternative to SQL Server Always On? SafeKit brings high availability to SQL Server Express and Standard editions. It needs no SAN and no Active Directory. It provides synchronous replication, a virtual IP and automatic failover."
+description: "An alternative to SQL Server Always On for Express and Standard editions: SafeKit adds synchronous replication and failover, with no SAN or Active Directory."
 category: "best-practises"
 lang: "en"
 topics: "Alternative to Always On SQL Server for Express and Standard editions, How the SafeKit mirror cluster works with Microsoft SQL Server?, Video Guide: Configuring a SafeKit HA mirror cluster for SQL Server, 🔍 Explore SafeKit"

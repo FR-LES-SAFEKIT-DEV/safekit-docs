@@ -1,7 +1,7 @@
 ---
 title: "Recursos SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/resources/"
-description: "Baixe a versão de avaliação gratuita SafeKit e acesse a documentação técnica, guias de instalação rápida, guias do usuário, artigos técnicos e recursos do produto para clusters de alta disponibilidade Windows e Linux ."
+description: "Recursos SafeKit: avaliação gratuita, guia do utilizador, notas de versão, guias de instalação rápida, formação, vídeos e referência técnica para clusters Windows e Linux."
 category: "resources"
 lang: "pt-pt"
 topics: "Teste gratuito, documentação técnica e informações sobre o produto para o hub de navegação de alta disponibilidade SafeKit e SafeKit"

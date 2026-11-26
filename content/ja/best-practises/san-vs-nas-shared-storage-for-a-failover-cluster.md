@@ -1,7 +1,7 @@
 ---
 title: "フェイルオーバークラスタリングにおける SAN と NAS 共有ストレージの詳細な比較"
 canonical: "https://safekit.eviden.com/ja/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "フェイルオーバークラスターの SAN と NAS の共有ストレージを比較します。SafeKit は共有ストレージを必要としません。フェイルオーバースクリプトを簡素化し、データ破損を防ぎます。高価なハードウェアや複雑なクォーラムディスクは必要ありません。"
+description: "フェイルオーバークラスター向け SAN と NAS 共有ストレージの比較：制約、コスト、リスクと、SafeKit のレプリケーションで共有ストレージが不要になる理由。"
 category: "best-practises"
 lang: "ja"
 topics: "SAN と NAS の共有ストレージ：フェイルオーバークラスターにはどちらがシンプルですか？、🔍 SafeKit を探索する"

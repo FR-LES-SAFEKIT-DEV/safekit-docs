@@ -1,7 +1,7 @@
 ---
 title: "SafeKit アーキテクチャ"
 canonical: "https://safekit.eviden.com/ja/architectures/"
-description: "SafeKit で高可用性アーキテクチャを探索しましょう。SAN レスアプリケーションのフェイルオーバーとロードバランシングのための Mirror、Farm、Farm + mirror クラスターについて学びましょう。"
+description: "SafeKit のクラスターアーキテクチャ：リアルタイムレプリケーションの mirror クラスター、負荷分散の farm クラスター、アクティブ/アクティブ、N-1 冗長化。SAN 不要。"
 category: "architectures"
 lang: "ja"
 topics: "SafeKit にはどのような高可用性アーキテクチャとソフトウェアクラスターがありますか？、SafeKit で高可用性クラスターを構築するには？、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "使用 SafeKit 实现 Hyper-V 高可用性：安装 hyperv.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/"
-description: "了解如何为使用 SafeKit 的双活 Hyper-V 集群配置 hyperv.safe。通过 2 节点无共享架构在虚拟机级别实现高可用性。在节点之间同步复制多个虚拟机以实现自动故障转移，而无需 SAN 或共享存储的成本。"
+description: "分步指南：安装 SafeKit hyperv.safe 模块实现虚拟机级高可用性，在两台服务器间复制 Hyper-V VM 并故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "Hyper-V 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Hyper-V 解决方案概述、在 Windows 上安装 SafeKit/Hyper-V 解决方案 (hyperv.safe)、SafeKit/Hyper-V 解决方案的分步配置、SafeKit/Hyper-V 解决方案演示、🔍 探索 SafeKit"

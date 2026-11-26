@@ -1,7 +1,7 @@
 ---
 title: "Google GCP 高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit を使用して、シンプルな Google GCP HA クラスターをデプロイします。当社のシェアードナッシングアーキテクチャ、クラウド共有ディスクのコストなしで、Windows および Linux アプリケーションに同期レプリケーション、自動フェイルオーバー、RPO =0 を提供します。"
+description: "SafeKit による Google Cloud の高可用性：Windows または Linux VM 2 台間で同期レプリケーションと自動フェイルオーバー。共有ディスク不要。"
 category: "solutions"
 lang: "ja"
 topics: "GCP における SafeKit シェアードナッシング HA：共有ディスクを排除し、データ損失ゼロを実現、目次、SafeKit ソフトウェアは、どのようにしてシンプルなシェアードナッシング GCP 高可用性クラスターを実装するのでしょうか？、SafeKit mirror クラスターが GCP でどのように機能しますか？、SafeKit High Availability の制限事項、比較：GCP 向け SafeKit とネイティブクラウド HA/DR ソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"

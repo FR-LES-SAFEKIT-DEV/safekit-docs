@@ -1,7 +1,7 @@
 ---
 title: "La alta disponibilidad más sencilla MariaDB: replicación síncrona y conmutación por error de 2 nodos"
 canonical: "https://safekit.eviden.com/es/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
-description: "La forma más sencilla de implementar la alta disponibilidad MariaDB. SafeKit proporciona un clúster sin SAN de 2 nodos con replicación síncrona y conmutación por error automática, sin necesidad de AD ni conocimientos especializados."
+description: "Alta disponibilidad de MariaDB con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error automática en Windows o Linux, sin SAN."
 category: "solutions"
 lang: "es"
 topics: "Cómo funciona el clúster mirror SafeKit de SANless con MariaDB, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad MariaDB sin SAN?, ¿Cómo funciona el clúster mirror SafeKit con MariaDB?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para MariaDB frente a otras soluciones de clúster, Guía en vídeo: Configuración de un clúster mirror SafeKit HA, 🔍 Explora SafeKit"

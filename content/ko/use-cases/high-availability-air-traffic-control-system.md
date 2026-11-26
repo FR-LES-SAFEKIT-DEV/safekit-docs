@@ -1,7 +1,7 @@
 ---
 title: "항공 교통 관제 시스템의 고가용성"
 canonical: "https://safekit.eviden.com/ko/use-cases/high-availability-air-traffic-control-system/"
-description: "SafeKit은 항공 교통 관제 시스템의 고가용성을 보장합니다. ADB SafeGate는 전 세계 공항에 SafeKit을 배포했습니다. 중요 애플리케이션은 연중무휴 24시간 이용 가능합니다. SafeKit은 데이터 손실 없이 실시간으로 데이터를 복제합니다. 표준 Windows 서버에서 자동 장애 조치를 제공합니다. 공유 스토리지가 필요하지 않습니다."
+description: "항공 교통 관제 고가용성: ADB SafeGate는 전 세계 공항에서 Windows 기반 실시간 복제 및 자동 장애 조치에 SafeKit을 사용합니다."
 category: "use-cases"
 lang: "ko"
 topics: "항공 교통 관제 시스템, 항공 교통 관제가 왜 중요할까요?, SafeKit이 항공 교통 관제 시스템을 보호하는 방법, ADB SafeGate의 실제 구현, 🔍 SafeKit 살펴보기"

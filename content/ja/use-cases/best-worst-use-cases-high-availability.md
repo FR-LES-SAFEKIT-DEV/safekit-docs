@@ -1,7 +1,7 @@
 ---
 title: "高可用性のベストユースケースとワーストユースケース：SafeKit 実装ガイド"
 canonical: "https://safekit.eviden.com/ja/use-cases/best-worst-use-cases-high-availability/"
-description: "高可用性の最適なユースケースと最悪のユースケースを特定します。SafeKit Windows および Linux 向けのソフトウェア定義クラスタリングで優れている点、そして従来の共有ストレージまたはハードウェアベースの HA がお客様のビジネスで失敗する可能性のあるケースについて学びます。"
+description: "SafeKit の最適・不適なユースケース：Windows と Linux のソフトウェアクラスタリングが適する場面と、共有ストレージや別の方式が適する場面。"
 category: "use-cases"
 lang: "ja"
 topics: "最適なユースケース、SafeKit High Availability の制限事項、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Firebird 高可用性：フェイルオーバー用の firebird.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-firebird/"
-description: "SafeKit は用の firebird.safe モジュールをデプロイして、Windows および Linux 上の Firebird の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで重要なアプリケーション向けに 2 ノードの SAN レスクラスターをセットアップする手順を説明します。"
+description: "手順ガイド：SafeKit の firebird.safe モジュールを導入し、Windows または Linux 上の Firebird のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Firebird 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Firebird ソリューションの概要、Windows および Linux への SafeKit/Firebird ソリューションのインストール (firebird.safe)、SafeKit/Firebird ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

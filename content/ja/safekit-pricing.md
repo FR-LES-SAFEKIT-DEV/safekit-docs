@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 価格"
 canonical: "https://safekit.eviden.com/ja/safekit-pricing/"
-description: "SafeKit ライセンスモデルについて理解し、Windows および Linux での高可用性、レプリケーション、フェイルオーバー、ロードバランシングに関する個別見積もりをご依頼ください。"
+description: "SafeKit の価格：サーバー単位の永久ライセンス、無料のアプリケーションモジュール、Enterprise 版不要。Windows または Linux クラスターのお見積もり。"
 category: "home"
 lang: "ja"
 topics: "ライセンスモデルと価格、標準サポートおよびメンテナンス、お見積もりを依頼する"

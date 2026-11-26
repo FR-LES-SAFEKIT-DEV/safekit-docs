@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Docker Software für Hochverfügbarkeit und Echtzeit-Datenreplikation"
 canonical: "https://safekit.eviden.com/de/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit bietet eine robuste Docker Hochverfügbarkeitslösung mit integrierter synchroner Datenreplikation. Implementieren Sie einen zustandsbehafteten Container-Cluster mit automatischem Failover und ohne Datenverlust auf Standard Linux-Servern. Kein SAN oder Shared Storage erforderlich. In wenigen Minuten einsatzbereit."
+description: "Hochverfügbarkeit für Docker mit SafeKit: synchrone Replikation der Containerdaten und automatisches Failover zwischen zwei Linux-Servern, ohne SAN."
 category: "solutions"
 lang: "de"
 topics: "Wie der SANless SafeKit-Mirror-Cluster mit Docker funktioniert, Inhaltsverzeichnis, Wie die SafeKit-Software einfach einen Docker Hochverfügbarkeitscluster implementiert?, Wie der SafeKit-Mirror-Cluster mit Docker funktioniert?, SafeKit Hochverfügbarkeitsbeschränkungen, Vergleich: SafeKit SANless Cluster vs. Traditionelle Docker HA, Vergleich: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker Hochverfügbarkeit Zusammenfassung, 🔍 SafeKit erkunden"

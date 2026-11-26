@@ -1,7 +1,7 @@
 ---
 title: "Siemens Siveillance VMS 高可用性：SafeKit を使用した 2 ノードのシェアードナッシングナッシングクラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
-description: "SafeKit を使用して、Siemens Siveillance VMS のアプリケーションレベルで HA を実現します。当社の 2 ノードシェアードナッシングソリューションは、SiveillanceVMS.safe モジュールを使用して、SAN なしでリアルタイムレプリケーションと自動フェイルオーバーを実現します。シンプルなソフトウェアのみのクラスターで、継続的なビデオ管理を保証します。"
+description: "Siemens Siveillance VMS の高可用性：SafeKit の SiveillanceVMS.safe モジュールで 2 台間のリアルタイムレプリケーションとフェイルオーバー。"
 category: "solutions"
 lang: "ja"
 topics: "SafeKit Siemens Siveillance VMS および SQL（SiveillanceVMS.safe mirror モジュール）クイックインストールガイド、SANless SafeKit mirror クラスターと Milestone XProtect の連携方法、目次、SafeKit ソフトウェアは、SAN レスの Milestone XProtect 高可用性クラスターどのように簡単に実装しますか？、SafeKit mirror クラスターが Milestone XProtect とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit for Milestone XProtect とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "データセンター不要のエッジ高可用性：OT および分散サイト向け SafeKit"
 canonical: "https://safekit.eviden.com/ja/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "エッジコンピューティングサイトにはデータセンターがありませんが、それでも高い可用性が必要です。SafeKit は 2 台の標準サーバーをプラグアンドプレイの高可用性クラスターに変えます。SAN や IT スタッフは不要で、フェイルオーバーは自動です。"
+description: "データセンター不要のエッジ高可用性：SafeKit が 2 台の標準サーバーを OT・分散拠点向けのプラグアンドプレイクラスターに変えます。SAN 不要。"
 category: "use-cases"
 lang: "ja"
 topics: "エッジにおける高可用性の課題、SafeKit がエッジコンピューティングに最適な理由、エッジおよび分散配置の適合性、エッジ OT 環境が異なる理由、エッジでの理想的なユースケース、エッジとデータセンターの高可用性：主な違い、サポートされているオペレーティングシステムとプラットフォーム、🔍 SafeKit を探索する"

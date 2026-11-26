@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：Podman 高可用性＆リアルタイムデータレプリケーションソフトウェア"
 canonical: "https://safekit.eviden.com/ja/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/"
-description: "SafeKit は、同期データレプリケーションを統合した堅牢な Podman 高可用性ソリューションを提供します。標準的な Linux サーバー上で、自動フェイルオーバーとデータ損失ゼロのステートフルコンテナクラスターを実装します。SAN や共有ストレージは不要です。数分でデプロイできます。"
+description: "SafeKit による Podman の高可用性：Linux サーバー 2 台間でコンテナデータの同期レプリケーションと自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターが Podman で動作する仕組み、目次、SafeKit ソフトウェアは、どのようにして Podman 高可用性クラスターを簡単に実装するのでしょうか？、SafeKit mirror クラスターが Podman とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit SANless Cluster と従来の Podman HA、比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）、Podman 高可用性概要、🔍 SafeKit を探索する"

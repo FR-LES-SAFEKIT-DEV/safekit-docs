@@ -1,7 +1,7 @@
 ---
 title: "Guia do Usuário SafeKit 8.2"
 canonical: "https://safekit.eviden.com/pt-br/resources/safekit-user-guide-82/"
-description: "Este documento abrange todas as fases da implementação do SafeKit : arquitetura, instalação, testes, administração e resolução de problemas, suporte e interface de linha de comando."
+description: "Guia do usuário do SafeKit 8.2: arquiteturas, instalação, testes, administração, solução de problemas, suporte e linha de comando para clusters Windows e Linux."
 category: "resources"
 lang: "pt-br"
 layout: userguide

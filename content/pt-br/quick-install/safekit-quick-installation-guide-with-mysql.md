@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade MySQL com SafeKit: Instale o Módulo mysql.safe para Failover"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-with-mysql/"
-description: "Implemente o módulo mysql.safe para SafeKit para habilitar a replicação síncrona em tempo real e o failover automático do MySQL no Windows e Linux. Este guia mostra como configurar um cluster SANless de 2 nós para aplicações críticas sem armazenamento compartilhado."
+description: "Guia passo a passo: instale o módulo SafeKit mysql.safe para replicação em tempo real e failover automático do MySQL no Windows ou Linux."
 category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para MySQL, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/MySQL, Instalação da solução SafeKit/MySQL no Windows e Linux (mysql.safe), Configuração passo a passo da solução SafeKit/MySQL Server, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"

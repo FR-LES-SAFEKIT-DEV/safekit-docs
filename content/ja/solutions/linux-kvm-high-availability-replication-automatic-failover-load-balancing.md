@@ -1,7 +1,7 @@
 ---
 title: "共有ストレージなしで実現するシンプルな Linux KVM 高可用性"
 canonical: "https://safekit.eviden.com/ja/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
-description: "SAN なしで Linux KVM 高可用性を実現。SafeKit は、2 ノード KVM クラスターに同期レプリケーションと自動フェイルオーバーを提供します。Linux VM 冗長性を簡素化し、TCO を削減しましょう。"
+description: "SAN 不要の KVM 高可用性：SafeKit が 2 台のサーバー間で Linux 仮想マシンをリアルタイムにレプリケートし、障害時に自動で再起動します。"
 category: "solutions"
 lang: "ja"
 topics: "SafeKit for KVM：2 ノード SAN レス KVM クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで KVM 高可用性クラスターどのように簡単に実装しますか？、SafeKit KVM クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：KVM 向け SafeKit と従来のクラスタリング、ビデオガイド：KVM 向け SafeKit HA クラスターの構成、🔍 SafeKit を探索する"

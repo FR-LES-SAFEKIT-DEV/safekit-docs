@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 一个月免费试用密钥"
 canonical: "https://safekit.eviden.com/zh-hans/resources/high-availability-and-load-balancing-cluster-key/"
-description: "申请适用于 Windows 和 Linux 的 SafeKit 集群密钥，免费试用一个月。SafeKit 提供简单的一体化无 SAN 架构，实现高可用性和应用程序集群。"
+description: "申请为期一个月的免费 SafeKit 密钥，在 Windows 和 Linux 上测试高可用性、复制和负载均衡集群。"
 category: "resources"
 lang: "zh-hans"
 topics: "通过电子邮件获取适用于 Windows 或 Linux 的 SafeKit 一个月免费许可证密钥，🔍 探索 SafeKit"

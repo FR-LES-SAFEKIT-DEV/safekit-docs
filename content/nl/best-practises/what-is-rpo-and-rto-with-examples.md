@@ -1,7 +1,7 @@
 ---
 title: "Wat zijn RPO en RTO? Definities, voorbeelden en HA-strategieën"
 canonical: "https://safekit.eviden.com/nl/best-practises/what-is-rpo-and-rto-with-examples/"
-description: "Leer de definities van RPO (Recovery Point Objective) en RTO (Recovery Time Objective) met duidelijke voorbeelden. Ontdek hoe SafeKit nul dataverlies (RPO = 0) en snelle failover bereikt om 24/7 bedrijfscontinuïteit te garanderen."
+description: "Wat RPO en RTO betekenen, met voorbeelden, en hoe SafeKit geen gegevensverlies (RPO 0) en snelle automatische failover bereikt voor bedrijfscontinuïteit."
 category: "best-practises"
 lang: "nl"
 topics: "Korte samenvatting: RPO versus RTO, Inhoudsopgave, Hoe bereken ik RPO en RTO voor een oplossing voor hoge beschikbaarheid en bedrijfscontinuïteit?, Hoe bepaal ik RPO en RTO voor een back-up- en noodhersteloplossing?, Hoe bereikt een SafeKit mirror-cluster RPO van nul en een lage RTO?, Wat zijn de RTO-benchmarks voor een SafeKit farm-cluster met loadbalancing?, Vergelijkingstabellen: RTO vs. RPO, Hoge beschikbaarheid in de praktijk: realtime demo's van nul gegevensverlies en bijna nul downtime, Veelgestelde vragen: RPO en RTO optimaliseren voor bedrijfscontinuïteit, 🔍 Ontdek SafeKit"

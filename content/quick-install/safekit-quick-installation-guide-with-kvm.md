@@ -1,7 +1,7 @@
 ---
 title: "KVM High Availability with SafeKit: Install the kvm.safe Module for Failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-kvm/"
-description: "Learn about configuring kvm.safe for an active/active KVM cluster with SafeKit. Achieve High Availability at the VM level with a 2-node shared-nothing architecture. Synchronously replicate several VMs across nodes for automatic failover without the cost of a SAN or shared storage."
+description: "Step-by-step guide: install the SafeKit kvm.safe module for VM-level high availability, with replication and failover of KVM virtual machines on Linux."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for KVM, SafeKit High Availability Limitations, Overview of the SafeKit / KVM solution, Installation of the SafeKit / KVM solution on Linux (kvm.safe), Step by step configuration of the SafeKit / KVM solution, Demonstration of a VM-level high availability solution, 🔍 Explore SafeKit"

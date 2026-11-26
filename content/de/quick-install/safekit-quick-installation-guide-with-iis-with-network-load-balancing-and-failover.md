@@ -1,7 +1,7 @@
 ---
 title: "IIS-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul iis_farm.safe"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
-description: "Erfahren Sie, wie Sie das Modul iis_farm.safe unter Windows für IIS Network Load Balancing und automatische Failover bereitstellen. Diese Anleitung zeigt Ihnen, wie Sie einen hochverfügbaren Cluster für Webdienste und Anwendungen mit einer virtuellen IP erstellen, ohne dass externe Hardware Load Balancer oder eine komplexe Konfiguration erforderlich sind."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul iis_farm.safe unter Windows für Netzwerk-Lastverteilung und Failover von IIS-Webservern auf einer virtuellen IP."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für IIS, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/IIS-Lösung, Installation der SafeKit/IIS-Lösung unter Windows (iis_farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/IIS-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"

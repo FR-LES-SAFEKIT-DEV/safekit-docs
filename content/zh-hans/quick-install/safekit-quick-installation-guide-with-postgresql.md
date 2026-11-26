@@ -1,7 +1,7 @@
 ---
 title: "使用 SafeKit 实现 PostgreSQL 高可用性：安装 postgresql.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-postgresql/"
-description: "部署 postgresql.safe 模块以启用 SafeKit，从而在 Windows 和 Linux 上实现 PostgreSQL 的同步实时复制和自动故障转移。本指南将引导您为关键应用程序设置一个无共享存储的 2 节点 SANless 集群。"
+description: "分步指南：安装 SafeKit postgresql.safe 模块，在 Windows 或 Linux 上实现 PostgreSQL 的实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "PostgreSQL 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/PostgreSQL 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/PostgreSQL 解决方案 (postgresql.safe)、SafeKit/PostgreSQL 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"

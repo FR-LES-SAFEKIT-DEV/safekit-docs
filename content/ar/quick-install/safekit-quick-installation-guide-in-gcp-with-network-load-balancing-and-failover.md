@@ -1,7 +1,7 @@
 ---
 title: "موازنة تحميل الشبكة وتجاوز الأعطال GCP: تثبيت وحدة SafeKit farm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
-description: "عزّز موازنة تحميل الشبكة في GCP باستخدام المراقبة الذكية للتطبيقات من SafeKit. توفر وحدة farm.safe فحصًا مخصصًا لسلامة موازن تحميل GCP، مما يتيح التوافر العالي (HA) بسلاسة على مستوى التطبيق. حقق الشفاء الذاتي التلقائي والتحويل التلقائي في حالة الفشل للتطبيقات ذات المهام الحرجة."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe في Google Cloud، حيث تتحقق من سلامة التطبيق لموازن أحمال GCP وتتولى تجاوز الفشل."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ GCP، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/GCP، تثبيت حل SafeKit/GCP على نظامي التشغيل Windows و Linux (farm.safe)، تهيئة حل SafeKit/GCP خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"

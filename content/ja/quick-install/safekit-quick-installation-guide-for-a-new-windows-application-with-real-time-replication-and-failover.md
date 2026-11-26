@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Windows 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
-description: "SafeKit は用の mirror.safe モジュールをデプロイして、Windows で同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで、重要な Windows アプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：Windows に SafeKit の mirror.safe モジュールを導入し、2 台のサーバーでアプリケーションのリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Windows 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Windows ソリューションの概要、SafeKit/Windows ソリューションへのインストール (mirror.safe)、SafeKit/Windows ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

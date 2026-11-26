@@ -1,7 +1,7 @@
 ---
 title: "Shared-Nothing- vs. Shared-Disk-Architektur: Auswahl des besten HA-Clusters"
 canonical: "https://safekit.eviden.com/de/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
-description: "Vergleichen Sie Architekturen Shared-Nothing vs. gemeinsam genutzten Festplatten für Hochverfügbarkeit. SafeKit verwendet einen Ansatz Shared-Nothing. Er eliminiert SAN-Kosten und vereinfacht das Failover. Er bietet synchrone Replikation ohne komplexe Hardware-Beschränkungen."
+description: "Shared-Nothing- vs. Shared-Disk-Architektur für Hochverfügbarkeit: Wie SafeKit Daten zwischen Servern repliziert, um SAN-Kosten zu vermeiden und Failover zu vereinfachen."
 category: "best-practises"
 lang: "de"
 topics: "Shared-Nothing-Architektur vs. Shared-Disk-Architektur für Hochverfügbarkeitscluster, Shared-Nothing-Architektur vs. Shared-Disk-Architektur: Vor- und Nachteile, 🔍 SafeKit entdecken"

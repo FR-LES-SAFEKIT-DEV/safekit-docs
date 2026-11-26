@@ -1,7 +1,7 @@
 ---
 title: "Software di continuità operativa e ripristino di emergenza per cluster a 2 nodi con SafeKit"
 canonical: "https://safekit.eviden.com/it/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "SafeKit è un software per la continuità operativa e il ripristino di emergenza. Implementa una semplice soluzione ad alta disponibilità tra due sale server remote. Ottieni un uptime 24 ore su 24, 7 giorni su 7 con SafeKit, il software per la continuità operativa e il ripristino di emergenza più facile da usare. Elimina costose SAN e complesse competenze IT con la replica sincrona a 2 nodi, il failover automatico e il bilanciamento del carico per Windows e Linux. Perdita di dati zero (RPO =0) per applicazioni critiche in qualsiasi ambiente cloud o on-premise."
+description: "Continuità operativa e disaster recovery con SafeKit: un cluster a due nodi su due sale server, con replica sincrona e failover automatico."
 category: "use-cases"
 lang: "it"
 topics: "Software per la continuità aziendale e il disaster recovery, 🔍 Esplora SafeKit"

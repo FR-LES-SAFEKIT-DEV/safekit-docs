@@ -1,6 +1,6 @@
 ---
-title: "شكرًا لتواصلكم معنا"
-description: "تظهر صفحة التأكيد بعد إرسال نموذج الاتصال الخاص بـ SafeKit."
+title: "شكرًا لتواصلكم معنا."
+description: "شكرًا لتواصلك معنا بشأن SafeKit. تم إرسال طلبك وسيرد عليك فريق Eviden قريبًا."
 lang: "ar"
 category: "home"
 sitemap:

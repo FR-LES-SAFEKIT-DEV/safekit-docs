@@ -1,7 +1,7 @@
 ---
 title: "物理セキュリティソフトウェアの高可用性と冗長性"
 canonical: "https://safekit.eviden.com/ja/use-cases/physical-security-software-redundancy/"
-description: "SafeKit は、重要なセキュリティシステムを 24 時間年中無休で利用可能に保ちます。SAN を使用しない 2 ノードのソフトウェアクラスターです。ビデオ管理システム（Milestone、Genetec）、アクセス制御（Nedap、Siemens）、SCADA 向けに、リアルタイムの同期レプリケーションと自動フェイルオーバーを提供します。このシンプルな冗長化は、SAN ストレージの複雑さなしに、Windows および Linux 上のあらゆるハードウェアで機能します。"
+description: "SafeKit による物理セキュリティ冗長化：ビデオ管理、入退室管理、SCADA 向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
 lang: "ja"
 topics: "SafeKit は物理セキュリティソフトウェアの冗長性と高可用性のための 2 つのソリューションを提供します。、🔍 SafeKit を探索する"

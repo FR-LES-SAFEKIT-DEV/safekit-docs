@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilità Oracle con SafeKit: installare il modulo oracle.safe per il failover"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-oracle/"
-description: "Implementare il modulo oracle.safe per SafeKit per abilitare la replica sincrona in tempo reale e il failover automatico di Oracle su Windows e Linux. Questa guida illustra la configurazione di un cluster SANless a 2 nodi per applicazioni critiche senza storage condiviso."
+description: "Guida passo passo: installa il modulo SafeKit oracle.safe per la replica in tempo reale e il failover automatico dei database Oracle su Windows o Linux."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione di High Availability per Oracle, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Oracle, Installazione della soluzione SafeKit/Oracle su Windows e Linux (oracle.safe), Configurazione passo-passo della soluzione SafeKit/Oracle, Dimostrazione della soluzione mirror SafeKit, 🔍 Esplora SafeKit"

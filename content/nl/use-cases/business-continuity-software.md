@@ -1,7 +1,7 @@
 ---
 title: "Standaardisatie van hoge beschikbaarheid voor gedistribueerde ondernemingen met veel vestigingen"
 canonical: "https://safekit.eviden.com/nl/use-cases/business-continuity-software/"
-description: "Beveilig elk filiaal van uw gedistribueerde onderneming met SafeKit. Implementeer een gestandaardiseerd, uitsluitend softwarematig high-availability cluster op schaal. Zorg voor 24/7 uptime voor bedrijfskritieke applicaties in elk filiaal. SafeKit draait op Windows en Linux. Het vereist geen gedeelde opslag, geen complexe SAN en geen IT-expertise ter plaatse."
+description: "Hoge beschikbaarheid voor gedistribueerde ondernemingen: implementeer hetzelfde SafeKit-cluster in elke vestiging, zonder SAN of IT-personeel ter plaatse, op Windows of Linux."
 category: "use-cases"
 lang: "nl"
 topics: "Bedrijfscontinuïteit in een gedistribueerde onderneming, 🔍 Ontdek SafeKit"

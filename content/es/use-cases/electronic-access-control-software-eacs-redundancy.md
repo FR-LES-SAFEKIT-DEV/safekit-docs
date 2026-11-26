@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad y redundancia para el software de control de acceso electrónico (EACS)"
 canonical: "https://safekit.eviden.com/es/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "SafeKit es el software de alta disponibilidad más sencillo para sistemas de control de acceso electrónico (EACS). Mantiene la seguridad del edificio disponible 24/7. El clúster tiene dos nodos y no necesita SAN. Proporciona replicación síncrona en tiempo real y conmutación por error automática. Funciona con Nedap, TIL Technologies, Siemens, HID y cualquier software EACS en Windows o Linux. No hay pérdida de datos (RPO = 0)."
+description: "Redundancia del control de acceso (EACS) con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error para Nedap, Siemens, HID y otros sistemas."
 category: "use-cases"
 lang: "es"
 topics: "¿Qué es un sistema electrónico de control de acceso (EACS)?, ¿Por qué es fundamental el software EACS?, Principales proveedores EACS, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software EACS, SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "OEM High Availability: Embedding SafeKit Clustering into Your Software"
 canonical: "https://safekit.eviden.com/use-cases/application-clustering-software/"
-description: "Empower your software with SafeKit. As an OEM partner, you can embed automated failover and synchronous replication directly into your application. Offer your customers 24/7 uptime on Windows and Linux without the complexity of hardware clusters."
+description: "OEM high availability: embed SafeKit replication and failover in your software and offer your customers a Windows or Linux cluster without HA expertise."
 category: "use-cases"
 lang: "en"
 topics: "The OEM high availability use case, 🔍 Explore SafeKit"

@@ -1,5 +1,6 @@
 ---
 title: "旧 SafeKit Milestone 設定"
+description: "Milestone XProtect 向け SafeKit の旧手順設定。フェイルオーバーに必要な仮想 IP の設定を含みます。参考用に保存しています。"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
 lang: "ja"

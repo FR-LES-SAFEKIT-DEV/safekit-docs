@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité Linux avec SafeKit : installer le module mirror.safe pour le basculement"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
-description: "Déployez le module mirror.safe pour SafeKit afin d’activer la réplication synchrone en temps réel et le basculement automatique sur Linux. Ce guide vous explique comment configurer un cluster SANless à 2 nœuds pour des applications Linux critiques sans stockage partagé."
+description: "Guide pas à pas : installez le module SafeKit mirror.safe sous Linux pour la réplication en temps réel et le basculement automatique de votre application sur deux serveurs."
 category: "quick-install"
 lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour Linux, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Linux, Installation de la solution SafeKit/Linux (mirror.safe), Configuration pas à pas de la solution SafeKit/Linux, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"

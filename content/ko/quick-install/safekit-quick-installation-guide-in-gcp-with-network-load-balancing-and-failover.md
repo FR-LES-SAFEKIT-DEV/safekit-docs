@@ -1,7 +1,7 @@
 ---
 title: "GCP 네트워크 부하 분산 및 장애 조치: SafeKit farm.safe 모듈 설치"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
-description: "SafeKit의 지능형 애플리케이션 모니터링으로 GCP 네트워크 부하 분산 강화하세요. farm.safe 모듈은 GCP 부하 분산기를 위한 전용 상태 확인 기능을 제공하여 애플리케이션 수준에서 원활한 HA(고가용성)를 지원합니다. 미션 크리티컬 애플리케이션에 대한 자동 자가 복구 및 장애 조치 기능을 구현하세요."
+description: "단계별 가이드: Google Cloud용 SafeKit farm.safe 모듈 설치. GCP 부하 분산 장치를 위해 애플리케이션 상태를 확인하고 장애 조치를 처리합니다."
 category: "quick-install"
 lang: "ko"
 topics: "GCP 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/GCP 솔루션 개요, Windows 및 Linux에 SafeKit/GCP 솔루션 설치 (farm.safe), SafeKit/GCP 솔루션 단계별 구성, SafeKit farm 솔루션 시연, 🔍 SafeKit 살펴보기"

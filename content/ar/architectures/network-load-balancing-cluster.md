@@ -1,7 +1,7 @@
 ---
 title: "مجموعة SafeKit farm: موازنة تحميل الشبكة والتوافر العالي لنظامي التشغيل Windows و Linux"
 canonical: "https://safekit.eviden.com/ar/architectures/network-load-balancing-cluster/"
-description: "يوفر SafeKit موازنة تحميل الشبكة (NLB) عالية الأداء وتجاوز الأعطال التلقائي في حزمة برامج واحدة. استبدل موازنات تحميل الأجهزة باهظة الثمن بإدارة IP الظاهرية على مستوى النواة من SafeKit لنظامي Windows و Linux. مثالي للتكامل مع الشركات المصنعة OEM وإدارة المجموعات المبسطة."
+description: "مجموعة SafeKit farm: موازنة أحمال الشبكة على عنوان IP افتراضي مع تجاوز فشل تلقائي بين خوادم Windows أو Linux، دون موازن أحمال مادي."
 category: "architectures"
 lang: "ar"
 topics: "مجموعة SafeKit farm: موازنة تحميل البرامج وتجاوز الأعطال التلقائي لنظامي التشغيل Windows و Linux، جدول المحتويات، كيف يقوم SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) على نظامي التشغيل Windows و Linux؟، كيف تعمل مجموعة SafeKit farm على Windows و Linux؟، مقارنة مجموعة SafeKit farm مع حلول تجميع NLB الأخرى، دليل الفيديو: كيفية تكوين مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

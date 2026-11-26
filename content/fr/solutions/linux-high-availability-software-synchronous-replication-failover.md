@@ -1,7 +1,7 @@
 ---
 title: "La haute disponibilité la plus simple Linux : réplication synchrone et basculement à 2 nœuds"
 canonical: "https://safekit.eviden.com/fr/solutions/linux-high-availability-software-synchronous-replication-failover/"
-description: "La façon la plus simple de mettre en œuvre la haute disponibilité Linux. SafeKit fournit un cluster SANless à 2 nœuds avec réplication synchrone et basculement automatique, sans nécessiter d’AD ou de compétences spécialisées."
+description: "Haute disponibilité Linux avec SafeKit : cluster à deux nœuds avec réplication synchrone et basculement automatique de votre application, sans SAN."
 category: "solutions"
 lang: "fr"
 topics: "Fonctionnement du cluster mirror SafeKit SANless sous Linux, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Linux sans SAN ?, Comment fonctionne le cluster mirror SafeKit sous Linux ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour Linux et autres solutions de clustering, Guide vidéo : Configuration d’un cluster mirror SafeKit HA, 🔍 Explorez SafeKit"

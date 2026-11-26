@@ -1,7 +1,7 @@
 ---
 title: "Gratis SafeKit-proefsleutel voor één maand"
 canonical: "https://safekit.eviden.com/nl/resources/high-availability-and-load-balancing-cluster-key/"
-description: "Vraag uw SafeKit-clustersleutel aan voor een proefperiode van één maand op Windows en Linux. SafeKit biedt een eenvoudige, alles-in-één architectuur voor hoge beschikbaarheid en applicatieclustering zonder SAN."
+description: "Vraag een gratis SafeKit-sleutel voor één maand aan om clusters voor hoge beschikbaarheid, replicatie en loadbalancing te testen op Windows en Linux."
 category: "resources"
 lang: "nl"
 topics: "Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux, 🔍 Ontdek SafeKit"

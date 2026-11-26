@@ -1,7 +1,7 @@
 ---
 title: "HA 클러스터 vs. 내결함성 시스템: 올바른 이중화 전략 선택하기"
 canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
-description: "HA 클러스터와 내결함성 시스템을 비교해 보세요. SafeKit 소프트웨어는 공유 스토리지 없이 HA 클러스터를 제공합니다. 하드웨어 및 소프트웨어 장애로부터 보호합니다. 특수 FT 하드웨어가 필요 없어 비용이 절감됩니다. 데이터 손실이 없습니다(RPO 0)."
+description: "HA 클러스터와 내결함성 시스템 비교: 비용, 복구, 소프트웨어 장애 대비 보호를 비교하고 SafeKit이 표준 서버에서 작동하는 방식을 알아보세요."
 category: "best-practises"
 lang: "ko"
 topics: "고가용성과 내결함성의 차이점은 무엇인가요?, 고가용성 및 내결함성의 장단점, 🔍 SafeKit 살펴보기"

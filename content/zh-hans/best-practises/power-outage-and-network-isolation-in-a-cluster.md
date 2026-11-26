@@ -1,7 +1,7 @@
 ---
 title: "处理高可用性集群中的断电和网络隔离问题"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "了解如何在高可用性集群中管理网络隔离和电源中断。SafeKit 包括裂脑检查器和自动重新同步。它们确保数据完整性和 24/7 全天候正常运行而无需共享磁盘。"
+description: "高可用性集群如何应对断电和网络隔离：SafeKit 脑裂检测器和自动重新同步保护您的数据。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "集群中网络隔离的不同场景有哪些？、集群断电时有哪些不同的情况？、🔍 探索 SafeKit"

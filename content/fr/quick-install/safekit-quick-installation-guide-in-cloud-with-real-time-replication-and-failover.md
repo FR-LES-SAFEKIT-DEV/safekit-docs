@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité dans le cloud avec SafeKit : installez le module mirror.safe pour le basculement"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
-description: "Déployez le module mirror.safe pour SafeKit in Cloud afin d’activer la réplication synchrone en temps réel et le basculement automatique sous Windows et Linux. Ce guide vous explique comment configurer un cluster à 2 nœuds sans stockage sans partage pour les applications critiques."
+description: "Guide pas à pas : installez le module SafeKit mirror.safe dans tout cloud pour la réplication en temps réel et le basculement entre deux VM Windows ou Linux."
 category: "quick-install"
 lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour le cloud, Limitations de la haute disponibilité SafeKit, Présentation de la solution mirror SafeKit / Cloud, Installation de la solution mirror SafeKit / Cloud sous Windows et Linux (mirror.safe), Configuration pas à pas de la solution mirror SafeKit / Cloud, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"

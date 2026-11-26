@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：Docker 高可用性和实时数据复制软件"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit 提供了一个强大的 Docker 高可用性解决方案，集成了同步数据复制。在标准 Linux 服务器上实现有状态容器集群，具有自动故障转移和零数据丢失功能。无需 SAN 或共享存储。几分钟即可部署。"
+description: "使用 SafeKit 实现 Docker 高可用性：在两台 Linux 服务器间同步复制容器数据并自动故障转移，无需 SAN。"
 category: "solutions"
 lang: "zh-hans"
 topics: "SANless SafeKit mirror 集群如何与 Docker 配合使用，目录，SafeKit 软件如何简单地实现 Docker 高可用性集群？，SafeKit mirror 集群如何与 Docker 配合使用？，SafeKit 高可用性限制，比较：SafeKit SANless 集群与传统 Docker HA，比较：SafeKit 与开源 Linux HA (Pacemaker/Corosync/DRBD)，Docker 高可用性总结，🔍 探索 SafeKit"

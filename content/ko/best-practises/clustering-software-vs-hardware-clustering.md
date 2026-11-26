@@ -1,7 +1,7 @@
 ---
 title: "고가용성을 위한 소프트웨어 클러스터링과 하드웨어 클러스터링"
 canonical: "https://safekit.eviden.com/ko/best-practises/clustering-software-vs-hardware-clustering/"
-description: "고가용성을 위한 소프트웨어 클러스터링과 하드웨어 클러스터링을 비교해 보세요. SafeKit은 값비싼 SAN 스토리지, 부하 분산 장치, 전문 IT 기술이 필요하지 않습니다. 표준 서버에서 연중무휴 24시간 고가용성을 제공합니다."
+description: "소프트웨어 클러스터링과 하드웨어 클러스터링 비교: SafeKit이 SAN, 부하 분산 어플라이언스, HA 전문가 없이 표준 서버에서 고가용성을 제공하는 이유."
 category: "best-practises"
 lang: "ko"
 topics: "소프트웨어 클러스터링과 하드웨어 클러스터링의 차이점은 무엇인가요?, 소프트웨어 클러스터링 vs 하드웨어 클러스터링: 장단점, 🔍 SafeKit 살펴보기"

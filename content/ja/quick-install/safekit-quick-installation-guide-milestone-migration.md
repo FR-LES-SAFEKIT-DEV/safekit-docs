@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Milestone Management の移行"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-milestone-migration/"
-description: "SafeKit 高可用性クラスターで Milestone XProtect Management Server を移行する方法を学びましょう。このステップバイステップガイドでは、データベースの移行、SQL サーバーのレプリケーション、およびフェイルオーバーの構成について説明し、新しい Milestone バージョンへのシームレスな移行を可能にします。"
+description: "SafeKit で保護した Milestone XProtect Management Server の移行：データベース移行、SQL Server の複製とフェイルオーバー設定。"
 category: "quick-install"
 lang: "ja"
 topics: "Eviden SafeKit"

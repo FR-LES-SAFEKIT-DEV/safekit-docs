@@ -1,7 +1,7 @@
 ---
 title: "أبسط طرق تحقيق التوافر العالي Nedap: النسخ المتماثل المتزامن و تجاوز الفشل بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/nedap-high-availability-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق Nedap High Availability. يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SANless) مع تكرار متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر وجود Active Directory أو مهارات متخصصة."
+description: "التوفر العالي لـ Nedap AEOS مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي للتحكم في الوصول، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Nedap، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Nedap عالية التوفر بدون شبكة تخزين (SANless)؟، كيف تعمل مجموعة mirror SafeKit مع Nedap؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit for Nedap مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

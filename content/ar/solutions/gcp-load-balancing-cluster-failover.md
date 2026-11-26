@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: موازنة تحميل جوجل GCP مجموعة farm التطبيقات عالية التوافر"
 canonical: "https://safekit.eviden.com/ar/solutions/gcp-load-balancing-cluster-failover/"
-description: "عزّز موازن تحميل GCP بمراقبة التطبيقات الذكية من SafeKit. حقّق توفرًا عاليًا سلسًا مع فحوصات صحية عميقة، وإصلاح ذاتي تلقائي، وتجاوز للأعطال مجموعات farm ذات المهام الحرجة."
+description: "مجموعات SafeKit farm في Google Cloud: فحص سلامة التطبيقات لموازن أحمال GCP، وإعادة تشغيل تلقائية وتجاوز فشل على Windows أو Linux."
 category: "solutions"
 lang: "ar"
 topics: "تحسين موازن تحميل السحابة من خلال المراقبة على مستوى التطبيق والشفاء الذاتي، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) الخاصة بـ GCP ببساطة؟، كيف تعمل مجموعة SafeKit farm مع GCP؟، مقارنة: مجموعة SafeKit farm المحلية مقابل مجموعة SafeKit farm السحابية، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

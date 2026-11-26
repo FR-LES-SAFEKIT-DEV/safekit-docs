@@ -1,7 +1,7 @@
 ---
 title: "Semplice alta disponibilità Hyper-V senza storage condiviso (SAN)"
 canonical: "https://safekit.eviden.com/it/solutions/hyper-v-replication-automatic-failover-load-balancing/"
-description: "Ottieni l’alta disponibilità Hyper-V senza una SAN. SafeKit offre la replica in tempo reale e il failover automatico per cluster a 2 nodi. Scarica subito la tua versione di prova gratuita."
+description: "Alta disponibilità Hyper-V senza SAN: SafeKit replica le macchine virtuali in tempo reale tra due server e le riavvia automaticamente in caso di guasto."
 category: "solutions"
 lang: "it"
 topics: "SafeKit per Hyper-V: cluster Hyper-V SANless a 2 nodi, Indice, In che modo il software SafeKit implementa semplicemente un cluster Hyper-V ad alta disponibilità senza storage condiviso su una SAN?, Come funziona il cluster Hyper-V SafeKit?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Hyper-V e clustering nativo di Hyper-V, Guida video: configurazione di un cluster HA SafeKit per Hyper-V, 🔍 Esplora SafeKit"

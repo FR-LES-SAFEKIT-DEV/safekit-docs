@@ -1,6 +1,6 @@
 ---
-title: "Thank you for contacting us"
-description: "Confirmation page displayed after you submit the SafeKit contact form."
+title: "Thank you for contacting us."
+description: "Thank you for contacting us about SafeKit. Your request has been sent and the Eviden team will reply soon."
 lang: "en"
 category: "home"
 sitemap:

@@ -1,7 +1,7 @@
 ---
 title: "Hochverfügbarkeit für Flugverkehrskontrollsysteme"
 canonical: "https://safekit.eviden.com/de/use-cases/high-availability-air-traffic-control-system/"
-description: "SafeKit gewährleistet eine hohe Verfügbarkeit für Flugsicherungssysteme. ADB SafeGate hat SafeKit an Flughäfen weltweit eingesetzt. Kritische Anwendungen sind rund um die Uhr verfügbar. SafeKit repliziert Daten in Echtzeit ohne Datenverlust. Es bietet automatisches Failover auf Standard-Windows-Servern. Es wird kein gemeinsamer Speicher benötigt."
+description: "Hochverfügbarkeit für die Flugverkehrskontrolle: ADB SafeGate nutzt SafeKit weltweit in Flughäfen für Echtzeit-Replikation und automatisches Failover unter Windows."
 category: "use-cases"
 lang: "de"
 topics: "Flugverkehrskontrollsysteme, Warum ist die Flugsicherung so wichtig?, Wie SafeKit die Flugsicherung schützt, Implementierung in der Praxis bei ADB SafeGate, 🔍 SafeKit entdecken"

@@ -1,7 +1,7 @@
 ---
 title: "موازنة تحميل الشبكة وتجاوز الفشل في نظام Windows: تثبيت وحدة SafeKit farm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
-description: "تعرّف على كيفية نشر وحدة farm.safe لموازنة تحميل الشبكة في Windows وتجاوز الفشل التلقائي. يوضح لك هذا الدليل كيفية بناء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP ظاهري، دون الحاجة إلى موازنات تحميل أجهزة خارجية أو تكوين معقد."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe على Windows لموازنة أحمال الشبكة وتجاوز الفشل لتطبيقك على عنوان IP افتراضي."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لنظام Windows، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Windows، تثبيت حل SafeKit/Windows (farm.safe)، تهيئة حل SafeKit/Windows خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"

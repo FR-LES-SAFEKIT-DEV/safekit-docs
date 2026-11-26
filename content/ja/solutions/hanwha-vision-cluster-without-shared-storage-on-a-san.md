@@ -1,7 +1,7 @@
 ---
 title: "Hanwha Vision 向け SafeKit 高可用性：SAN レスビル管理冗長化"
 canonical: "https://safekit.eviden.com/ja/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
-description: "SafeKit で Hanwha Vision の 24 時間年中無休の稼働時間を確保しましょう。当社の最もシンプルな 2 ノード SAN レスクラスターは、SAN なしで自動フェイルオーバーとリアルタイムレプリケーションを提供します。ビル管理システムの高可用性を実現します。無料トライアルをダウンロードしてください。"
+description: "Hanwha Vision ビデオ管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "Hanwha Vision 向け SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、Hanwha Vision 高可用性クラスターどのように簡単に実装しますか？、SafeKit Hanwha Vision クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Hanwha Vision 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Hanwha Vision 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

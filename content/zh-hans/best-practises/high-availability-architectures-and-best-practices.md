@@ -1,7 +1,7 @@
 ---
 title: "高可用性架构与软件集群最佳实践"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-architectures-and-best-practices/"
-description: "探索高可用性 (HA) 架构和应用程序集群的最佳实践。SafeKit 可实现 mirror 和 farm 集群而无需共享磁盘。它为关键应用程序提供零数据丢失和自动故障转移。"
+description: "应用集群的高可用性架构与最佳实践：mirror 和 farm 集群、复制与故障转移，附 SafeKit 示例。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "什么是高可用性架构和最佳实践？、高可用性架构和最佳实践的比较表、🔍 探索 SafeKit"

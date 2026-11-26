@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Oracle 高可用性：フェイルオーバー用の oracle.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-oracle/"
-description: "SafeKit は用の oracle.safe モジュールをデプロイして、Windows および Linux 上の Oracle の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしでクリティカルアプリケーション用の 2 ノード SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：SafeKit の oracle.safe モジュールを導入し、Windows または Linux 上の Oracle のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Oracle 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Oracle ソリューションの概要、Windows および Linux への SafeKit/Oracle ソリューションのインストール (oracle.safe)、SafeKit/Oracle ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

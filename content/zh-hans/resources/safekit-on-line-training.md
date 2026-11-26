@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 高可用性培训：免费在线认证课程"
 canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-on-line-training/"
-description: "通过我们的免费培训，掌握 SafeKit 无 SAN 高可用性解决方案。培训内容涵盖软件安装、Web 控制台管理和命令行界面 (CLI)。学习高级配置和故障排除技巧，确保 24/7 全天候高可用性。在线获取官方认证。"
+description: "免费 SafeKit 在线培训与认证：HA 集群的安装、Web 控制台、命令行、高级配置和故障排除。"
 category: "resources"
 lang: "zh-hans"
 topics: "如何访问培训平台？获取 SafeKit 8 培训资料，🔍 探索 SafeKit"

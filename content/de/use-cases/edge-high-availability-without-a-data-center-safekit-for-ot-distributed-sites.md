@@ -1,7 +1,7 @@
 ---
 title: "Hochverfügbarkeit am Edge ohne Rechenzentrum: SafeKit für OT und verteilte Standorte"
 canonical: "https://safekit.eviden.com/de/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Edge-Computing-Standorte verfügen über kein Rechenzentrum, benötigen aber dennoch eine hohe Verfügbarkeit. SafeKit verwandelt zwei Standardserver in einen Plug-and-Play-Hochverfügbarkeitscluster. Es sind weder SAN noch IT-Personal erforderlich, und das Failover erfolgt automatisch."
+description: "Edge-Hochverfügbarkeit ohne Rechenzentrum: SafeKit macht zwei Standardserver zu einem Plug-and-Play-Cluster für OT und verteilte Standorte, ohne SAN."
 category: "use-cases"
 lang: "de"
 topics: "Die Herausforderung der Hochverfügbarkeit am Edge, Warum SafeKit die natürliche Wahl für Edge Computing ist, Eignung für Edge- und verteilte Bereitstellungen, Warum OT-Umgebungen am Netzwerkrand anders sind, Ideale Anwendungsfälle am Edge, Edge vs. Rechenzentrum: Hochverfügbarkeit – die wichtigsten Unterschiede, Unterstützte Betriebssysteme und Plattformen, 🔍 SafeKit entdecken"

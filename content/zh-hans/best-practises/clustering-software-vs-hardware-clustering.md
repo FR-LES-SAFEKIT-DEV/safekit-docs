@@ -1,7 +1,7 @@
 ---
 title: "用于高可用性的软件集群与硬件集群"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/clustering-software-vs-hardware-clustering/"
-description: "比较高可用性的软件集群和硬件集群。不需要昂贵的 SAN 存储、SafeKit 均衡设备和专业的 IT 技能。它在标准服务器上提供 24/7 全天候高可用性。"
+description: "软件集群与硬件集群对比：为何 SafeKit 能在标准服务器上提供高可用性，无需 SAN、负载均衡设备或 HA 专家。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "软件集群和硬件集群有什么区别？、软件集群与硬件集群：优缺点、🔍 探索 SafeKit"

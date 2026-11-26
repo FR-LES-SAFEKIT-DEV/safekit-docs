@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Bilanciamento del carico nel cloud e cluster farm per l’alta disponibilità delle applicazioni"
 canonical: "https://safekit.eviden.com/it/solutions/cloud-load-balancing-cluster-failover/"
-description: "Migliora il tuo Cloud Load Balancer con il monitoraggio intelligente delle applicazioni di SafeKit. Ottieni un’elevata disponibilità senza interruzioni grazie a controlli approfonditi dello stato di salute, ripristino automatico e failover per cluster farm mission-critical."
+description: "Cluster farm SafeKit in qualsiasi cloud: controlli di stato applicativi per il bilanciatore cloud, riavvio e failover automatici della tua applicazione Windows o Linux."
 category: "solutions"
 lang: "it"
 topics: "Migliora il Cloud Load Balancer con il monitoraggio a livello di applicazione e l’autoriparazione, Indice, In che modo il software SafeKit implementa semplicemente un cluster di bilanciamento del carico della rete cloud (NLB)?, Come funziona il cluster farm SafeKit con il Cloud?, Confronto: cluster farm SafeKit On-Premises e cluster farm SafeKit nel Cloud, Guida video: configurazione di un cluster NLB farm SafeKit, 🔍 Esplora SafeKit"

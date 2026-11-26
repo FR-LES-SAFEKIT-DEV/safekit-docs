@@ -1,7 +1,7 @@
 ---
 title: "Datareplicatietechnieken voor hoge beschikbaarheid: een complete vergelijking"
 canonical: "https://safekit.eviden.com/nl/best-practises/data-replication-techniques/"
-description: "Vergelijk datareplicatietechnieken op database-, schijf- en bestandsniveau. De SafeKit-software biedt eenvoudige, real-time synchrone replicatie zonder gedeelde opslag. Het garandeert nul gegevensverlies en automatische failover op Windows en Linux."
+description: "Technieken voor gegevensreplicatie vergeleken op database-, schijf- en bestandsniveau, en hoe SafeKit synchrone replicatie en failover biedt zonder gedeelde opslag."
 category: "best-practises"
 lang: "nl"
 topics: "Datareplicatietechnieken op databaseniveau, Schijfniveau of bestandsniveau?, Vergelijkende tabellen tussen datareplicatietechnieken, 🔍 Ontdek SafeKit"

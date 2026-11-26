@@ -1,7 +1,7 @@
 ---
 title: "GCP-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
-description: "Erweitern Sie GCP Network Load Balancing mit dem intelligenten Anwendungsmonitoring von SafeKit. Das Modul farm.safe bietet einen dedizierten Health-Check für den GCP Load Balancer, der eine nahtlose Hochverfügbarkeit auf Anwendungsebene ermöglicht. Erzielen Sie automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe in Google Cloud: Es prüft den Anwendungszustand für den Load Balancer von GCP und steuert das Failover."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für GCP, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/GCP-Lösung, Installation der SafeKit/GCP-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/GCP-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"

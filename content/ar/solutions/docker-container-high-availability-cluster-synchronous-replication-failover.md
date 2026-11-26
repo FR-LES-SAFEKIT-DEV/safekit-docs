@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: برنامج Docker لضمان التوافر العالي وتكرار البيانات في الوقت الفعلي"
 canonical: "https://safekit.eviden.com/ar/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
-description: "يوفر SafeKit حلاً قوياً عالي التوافر Docker مع تكرار متزامن للبيانات مدمج. قم بتنفيذ مجموعة حاويات ذات الحالة مع تجاوز تلقائي للأعطال وعدم فقدان البيانات على خوادم Linux القياسية. لا يلزم وجود شبكة منطقة تخزين (SAN) أو تخزين مشترك. يمكن النشر في دقائق."
+description: "التوفر العالي لـ Docker مع SafeKit: نسخ متزامن لبيانات الحاويات وتجاوز فشل تلقائي بين خادمين Linux، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة SafeKit مجموعة mirror الخالية من شبكة التخزين (SANless) مع Docker، جدول المحتويات، كيف يقوم برنامج SafeKit بتنفيذ مجموعة Docker عالية التوفر ببساطة؟، كيف تعمل مجموعة SafeKit مجموعة mirror مع Docker ؟، قيود SafeKit على التوفر العالي، مقارنة: مجموعة SafeKit الخالية من شبكة التخزين (SANless) مقابل Docker HA التقليدية، مقارنة: SafeKit مقابل Linux HA مفتوح المصدر (Pacemaker/Corosync/DRBD)، ملخص توفر Docker العالي، 🔍 استكشف SafeKit"

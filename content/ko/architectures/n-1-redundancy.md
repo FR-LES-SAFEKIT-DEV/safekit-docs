@@ -1,7 +1,7 @@
 ---
 title: "N-1 이중화 클러스터: 단일 백업 서버로 여러 애플리케이션의 고가용성 확보"
 canonical: "https://safekit.eviden.com/ko/architectures/n-1-redundancy/"
-description: "SafeKit N-1 이중화로 데이터 센터를 최적화하세요. N+1 서버에 N개의 mirror 모듈을 배포하여 단일 공유 백업 서버로 여러 애플리케이션에 대한 고가용성을 제공합니다. Windows 및 Linux용 실시간 복제로 SAN 요구 사항을 없애고 하드웨어 비용을 절감하세요. 자세히 알아보기."
+description: "SafeKit N-1 이중화: N+1대 서버의 N개 애플리케이션이 단일 백업 서버를 공유하며, SAN 없이 실시간 복제와 자동 장애 조치를 제공합니다."
 category: "architectures"
 lang: "ko"
 topics: "N개 서버에서 1개 서버로의 데이터 복제 및 애플리케이션 장애 조치를 통한 고가용성, 🔍 SafeKit 살펴보기"

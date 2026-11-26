@@ -1,6 +1,6 @@
 ---
-title: "感谢您联系我们"
-description: "提交 SafeKit 联系表单后，将显示确认页面。"
+title: "感谢您联系我们。"
+description: "感谢您就 SafeKit 与我们联系。您的请求已发送，Eviden 团队将尽快回复。"
 lang: "zh-hans"
 category: "home"
 sitemap:

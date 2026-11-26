@@ -1,7 +1,7 @@
 ---
 title: "Chave de avaliação gratuita do SafeKit por um mês"
 canonical: "https://safekit.eviden.com/pt-br/resources/high-availability-and-load-balancing-cluster-key/"
-description: "Solicite sua chave de cluster do SafeKit para uma avaliação de um mês no Windows e no Linux. O SafeKit oferece uma arquitetura simples e integrada de alta disponibilidade e clustering de aplicações sem SAN."
+description: "Solicite uma chave SafeKit gratuita de um mês para testar clusters de alta disponibilidade, replicação e balanceamento de carga no Windows e Linux."
 category: "resources"
 lang: "pt-br"
 topics: "Receba por e-mail uma chave de licença gratuita do SafeKit por um mês para Windows ou Linux, 🔍 Explore o SafeKit"

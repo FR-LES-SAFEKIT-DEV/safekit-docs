@@ -1,7 +1,7 @@
 ---
 title: "シェアードナッシングアーキテクチャと共有ディスクアーキテクチャ：最適な HA クラスターの選択"
 canonical: "https://safekit.eviden.com/ja/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
-description: "高可用性のためのシェアードナッシングと共有ディスクアーキテクチャを比較してください。SafeKit はシェアードナッシングアプローチを採用しています。SAN コストを削減し、フェイルオーバーを簡素化します。複雑なハードウェアの制約なしに、同期レプリケーションを提供します。"
+description: "高可用性のためのシェアードナッシングと共有ディスクアーキテクチャの比較：SafeKit がサーバー間でデータを複製し、SAN コストを避けてフェイルオーバーを簡素化する方法。"
 category: "best-practises"
 lang: "ja"
 topics: "高可用性クラスターにおけるシェアードナッシングアーキテクチャと共有ディスクアーキテクチャ、シェアードナッシングアーキテクチャと共有ディスクアーキテクチャ：長所と短所、🔍 SafeKit を探索する"

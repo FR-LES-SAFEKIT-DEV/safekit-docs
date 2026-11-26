@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：Google GCP ロードバランシングとアプリケーションの高可用性 farm クラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/gcp-load-balancing-cluster-failover/"
-description: "SafeKit のインテリジェントなアプリケーション監視機能で GCP ロードバランサーを強化しましょう。詳細なヘルスチェック、自動セルフヒーリング、ミッションクリティカルな farm クラスターのフェイルオーバーにより、シームレスな高可用性を実現します。"
+description: "Google Cloud の SafeKit farm クラスター：GCP ロードバランサー向けヘルスチェック、Windows または Linux で自動再起動とフェイルオーバー。"
 category: "solutions"
 lang: "ja"
 topics: "アプリケーションレベルのモニタリングと自動修復機能で Cloud Load Balancer を強化、目次、SafeKit ソフトウェアは、GCP ネットワーク負荷分散(NLB)クラスターをどのように簡単に実装しますか？、SafeKit farm クラスターが GCP とどのように連携しますか？、比較：オンプレミスの SafeKit farm クラスターとクラウドの SafeKit farm クラスター、ビデオガイド：SafeKit farm NLB クラスターの構成、🔍 SafeKit を探索する"

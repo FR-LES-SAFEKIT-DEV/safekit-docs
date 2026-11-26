@@ -1,7 +1,7 @@
 ---
 title: "HA de VM vs. HA de aplicação"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/vm-ha-vs-application-ha/"
-description: "Compare HA de VM e HA de aplicação. SafeKit oferece ambas as soluções. Cada uma delas fornece replicação em tempo real e failover automático sem um disco compartilhado. Escolha a redundância total da VM para simplificar ou a HA no nível do aplicativo para proteção independente do hipervisor no Windows e Linux."
+description: "HA de VM vs HA de aplicação: o SafeKit oferece ambos, com replicação em tempo real e failover sem disco compartilhado. Compare-os para escolher a abordagem certa."
 category: "best-practises"
 lang: "pt-br"
 topics: "Escolhendo sua estratégia de alta disponibilidade: HA de VM vs. HA de aplicação, 🔍 Explore SafeKit"

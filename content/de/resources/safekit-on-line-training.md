@@ -1,7 +1,7 @@
 ---
 title: "SafeKit-Hochverfügbarkeitsschulung: Kostenloses Online-Zertifizierungsprogramm"
 canonical: "https://safekit.eviden.com/de/resources/safekit-on-line-training/"
-description: "Meistern Sie SafeKit SANless HA mit unserem kostenlosen Training. Es umfasst Softwareinstallation, Webkonsolenverwaltung und CLI. Lernen Sie fortgeschrittene Konfigurations- und Fehlerbehebungsmethoden, um eine hohe Verfügbarkeit rund um die Uhr zu gewährleisten. Erhalten Sie Ihr offizielles Zertifikat online."
+description: "Kostenlose SafeKit-Online-Schulung und -Zertifizierung: Installation, Webkonsole, Befehlszeile, erweiterte Konfiguration und Fehlerbehebung von HA-Clustern."
 category: "resources"
 lang: "de"
 topics: "Wie greife ich auf die Schulungsplattform zu?, SafeKit 8-Schulungsmaterialien herunterladen, 🔍 SafeKit entdecken"

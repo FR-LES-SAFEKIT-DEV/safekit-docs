@@ -1,7 +1,7 @@
 ---
 title: "Logiciel de clustering actif-actif avec réplication en temps réel et basculement mutuel"
 canonical: "https://safekit.eviden.com/fr/architectures/active-active-cluster-real-time-replication/"
-description: "Optimisez l’utilisation des ressources avec le clustering actif-actif SafeKit. Déployez le basculement mutuel entre deux serveurs à l’aide de la réplication synchrone en temps réel et de plusieurs modules mirror. Assurez l’absence de perte de données (RPO = 0) et la récupération automatique pour Windows et Linux sans SAN. Téléchargez la version d’essai gratuite."
+description: "Cluster SafeKit actif-actif : deux serveurs se secourent mutuellement avec plusieurs modules mirror, réplication synchrone et basculement croisé sous Windows et Linux."
 category: "architectures"
 lang: "fr"
 topics: "Comment fonctionne un cluster actif-actif avec réplication en temps réel ?, 🔍 Explorez SafeKit"

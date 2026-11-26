@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: software completo de alta disponibilidade e clusterização de aplicações sem SAN"
 canonical: "https://safekit.eviden.com/pt-br/product/"
-description: "SafeKit é um software de alta disponibilidade para Windows e Linux. Ele combina replicação em tempo real, failover automático e balanceamento de carga de rede, sem armazenamento compartilhado."
+description: "O SafeKit combina replicação em tempo real, failover automático e balanceamento de carga de rede em um único software para Windows e Linux, sem armazenamento compartilhado."
 category: "product"
 lang: "pt-br"
 topics: "O que é SafeKit?, 🔍 Explore SafeKit, Por que escolher SafeKit para alta disponibilidade simples e econômica?, Por que um produto de alta disponibilidade SANless “tudo em um” é essencial?, Escolhendo sua estratégia de alta disponibilidade: HA de VM vs. HA de aplicação, Limitações de alta disponibilidade do SafeKit, Videoteca SafeKit, Comparação do SafeKit com os clusters tradicionais de alta disponibilidade (HA), Teste grátis e documentação técnica do SafeKit HA, Biblioteca de módulos de aplicação SafeKit: soluções de alta disponibilidade prontas para uso"

@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي OEM: تضمين تجميع SafeKit في برامجك"
 canonical: "https://safekit.eviden.com/ar/use-cases/application-clustering-software/"
-description: "عزّز برامجك باستخدام SafeKit. بصفتك شريكًا في OEM، يمكنك تضمين ميزة تجاوز الفشل التلقائي والنسخ المتماثل المتزامن مباشرةً في تطبيقك. قدّم لعملائك وقت تشغيل على مدار الساعة طوال أيام الأسبوع على Windows و Linux دون تعقيد المجموعات المادية."
+description: "التوفر العالي لمصنّعي OEM: ادمج نسخ SafeKit وتجاوز الفشل في برنامجك وقدّم لعملائك مجموعة Windows أو Linux دون الحاجة إلى خبرة HA."
 category: "use-cases"
 lang: "ar"
 topics: "حالة استخدام التوافر العالي OEM، 🔍 استكشف SafeKit"

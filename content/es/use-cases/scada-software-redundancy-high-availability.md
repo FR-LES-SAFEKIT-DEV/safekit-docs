@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad y redundancia para sistemas SCADA y de control industrial (ICS)"
 canonical: "https://safekit.eviden.com/es/use-cases/scada-software-redundancy-high-availability/"
-description: "SafeKit es el software de alta disponibilidad líder para SCADA. No necesita SAN. SafeKit mantiene el software SCADA disponible 24/7. Algunos ejemplos son Wonderware, WinCC, iFix e Inductive Automation. Proporciona replicación síncrona en tiempo real y conmutación por error automática. No hay pérdida de datos (RPO = 0) para la base de datos industrial. No necesita un complejo almacenamiento SAN ni conocimientos especiales de TI."
+description: "Redundancia SCADA con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error para WinCC, Wonderware, iFix y otros sistemas industriales."
 category: "use-cases"
 lang: "es"
 topics: "¿Qué es un sistema SCADA?, ¿Por qué es fundamental el software SCADA?, Principales proveedores de software SCADA, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software SCADA, SafeKit, una solución reconocida en el mercado SCADA, 🔍 Explora SafeKit"

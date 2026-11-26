@@ -1,7 +1,7 @@
 ---
 title: "リアルタイムレプリケーションと相互フェイルオーバー機能を備えたアクティブ/アクティブクラスタリングソフトウェア"
 canonical: "https://safekit.eviden.com/ja/architectures/active-active-cluster-real-time-replication/"
-description: "SafeKit はアクティブ/アクティブクラスタリングでリソース利用率を最大化します。リアルタイム同期レプリケーションと複数の mirror モジュールを使用して、2 台のサーバー間で相互フェイルオーバーを導入します。SAN なしで Windows および Linux のデータ損失ゼロ（RPO = 0）と自動リカバリを保証します。無料体験版をダウンロードする。"
+description: "アクティブ/アクティブ SafeKit クラスター：複数の mirror モジュールと同期レプリケーションで 2 台が相互にバックアップ。Windows と Linux 対応。"
 category: "architectures"
 lang: "ja"
 topics: "リアルタイムレプリケーションを伴うアクティブ/アクティブクラスターはどのように機能しますか？、🔍 SafeKit を探索する"

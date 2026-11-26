@@ -1,6 +1,6 @@
 ---
-title: "Formulaire de contact SafeKit"
-description: "Formulaire autonome pour les demandes d'information sur SafeKit."
+title: "Contacter SafeKit"
+description: "Contactez l’équipe Eviden au sujet du logiciel de haute disponibilité SafeKit : questions, devis, partenariats ou démonstration."
 lang: "fr"
 category: "home"
 noindex: true

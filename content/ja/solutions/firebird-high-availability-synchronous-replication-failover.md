@@ -1,7 +1,7 @@
 ---
 title: "Firebird 最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/firebird-high-availability-synchronous-replication-failover/"
-description: "Firebird 高可用性を実装する最も簡単な方法。SafeKit は、同期レプリケーションと自動フェイルオーバーを備えた 2 ノードの SAN レス・クラスターを提供します。AD や専門的なスキルは必要ありません。"
+description: "SafeKit による Firebird の高可用性：Windows または Linux で同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターと Firebird の連携方法、目次、SafeKit ソフトウェアは、SAN レスの Firebird 高可用性クラスターどのように簡単に実装するのでしょうか？、SafeKit mirror クラスターが Firebird とどのように連携しますか？、SafeKit High Availability の制限事項、比較：Firebird 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"

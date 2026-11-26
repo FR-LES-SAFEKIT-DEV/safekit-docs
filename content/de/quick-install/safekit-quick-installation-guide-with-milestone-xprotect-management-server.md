@@ -1,7 +1,7 @@
 ---
 title: "Milestone XProtect High Availability mit SafeKit: Installieren Sie das Modul milestone.safe für Failover"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/"
-description: "Setzen Sie das milestone.safe-Modul für SafeKit ein, um die synchrone Echtzeit-Replikation und das automatische Failover von Milestone XProtect unter Windows zu ermöglichen. Diese Anleitung führt Sie durch die Einrichtung eines SANless-Clusters mit 2 Knoten für kritische Anwendungen ohne gemeinsam genutzten Speicher."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul milestone.safe für Echtzeit-Replikation und Failover des Milestone XProtect Management Server."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für Milestone XProtect, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Milestone XProtect-Lösung, Installation der SafeKit/Milestone XProtect Lösung unter Windows (milestone.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Milestone XProtect-Lösung, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"

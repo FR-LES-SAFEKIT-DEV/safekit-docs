@@ -1,7 +1,7 @@
 ---
 title: "使用 SafeKit 实现 Windows 高可用性：安装 mirror.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
-description: "部署 mirror.safe 模块以实现 SafeKit 同步实时复制和 Windows 上的自动故障转移。本指南将引导您为关键 Windows 应用程序设置一个无共享存储的 2 节点 SANless 集群。"
+description: "分步指南：在 Windows 上安装 SafeKit mirror.safe 模块，在两台服务器上为您的应用实现实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "Windows 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Windows 解决方案概述、在 SafeKit/Windows 解决方案上安装 (mirror.safe)、SafeKit/Windows 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"

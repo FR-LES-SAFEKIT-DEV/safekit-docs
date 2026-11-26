@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité Oracle avec SafeKit : installer le module oracle.safe pour le basculement"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-oracle/"
-description: "Déployez le module oracle.safe pour SafeKit afin d’activer la réplication synchrone en temps réel et le basculement automatique d’ Oracle sous Windows et Linux. Ce guide vous explique comment configurer un cluster SANless à 2 nœuds pour des applications critiques sans stockage partagé."
+description: "Guide pas à pas : installez le module SafeKit oracle.safe pour la réplication en temps réel et le basculement automatique des bases Oracle sous Windows ou Linux."
 category: "quick-install"
 lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour Oracle, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Oracle, Installation de la solution SafeKit/Oracle sous Windows et Linux (oracle.safe), Configuration pas à pas de la solution SafeKit/Oracle, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"

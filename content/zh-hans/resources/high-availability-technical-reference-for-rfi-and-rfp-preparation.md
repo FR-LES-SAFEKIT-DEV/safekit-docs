@@ -1,7 +1,7 @@
 ---
-title: "SafeKit 技术参考：RFI 和 RFP 文件"
+title: "SafeKit 技术参考，适用于 RFI 和 RFP 文件"
 canonical: "https://safekit.eviden.com/zh-hans/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "查找有关 SafeKit 技术信息，以准备信息请求 (RFI) 和建议请求 (RFP)。了解支持的系统、架构、恢复时间、安全性、许可和支持。"
+description: "用于回复 RFI 和 RFP 的 SafeKit 技术参考：支持的系统、架构、恢复时间、安全性、许可和支持。"
 category: "resources"
 lang: "zh-hans"
 topics: "概述、目录、产品信息、支持的操作系统和平台、SafeKit 高可用性限制、预配置的应用程序模块、架构与部署、数据丢失和恢复时间（RPO 和 RTO）、远程站点和分布式部署、监控和警报、安全与合规、许可、支持与维护、与其他解决方案的比较、实用链接"

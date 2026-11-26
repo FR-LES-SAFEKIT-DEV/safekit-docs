@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Software tudo-em-um para balanceamento de carga e alta disponibilidade NGINX"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
-description: "SafeKit oferece uma solução poderosa de balanceamento de carga e alta disponibilidade NGINX, baseada apenas em software. Substitua o hardware complexo de NLB pelo IP virtual integrado, monitorização de aplicações e failover automático do SafeKit. Implemente facilmente um cluster NGINX em servidores Windows padrão hoje mesmo."
+description: "Balanceamento de carga e alta disponibilidade do NGINX com SafeKit: IP virtual, monitorização da aplicação e failover automático em servidores padrão."
 category: "solutions"
 lang: "pt-pt"
 topics: "O cluster farm SafeKit: Balanceador de Carga de Software e Failover Automático para NGINX, Índice, Como o software SafeKit implementa de forma simples um cluster de balanceamento de carga de rede (NLB) NGINX?, Como funciona o cluster SafeKit em modo farm com NGINX?, Comparação: cluster farm SafeKit para NGINX vs. Outras Soluções de Agrupamento NLB, Guia em Vídeo: Configuração de um cluster NLB farm SafeKit, 🔍 Explore SafeKit"

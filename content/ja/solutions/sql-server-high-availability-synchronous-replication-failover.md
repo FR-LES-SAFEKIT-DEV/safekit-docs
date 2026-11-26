@@ -1,7 +1,7 @@
 ---
 title: "Microsoft SQL Server 高可用性を実現する最もシンプルな方法：2 ノード同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/sql-server-high-availability-synchronous-replication-failover/"
-description: "Microsoft SQL Server 高可用性を実装する最も簡単な方法です。SafeKit は、同期レプリケーションと自動フェイルオーバーを備えた 2 ノードの SAN レスクラスターを提供します。AD や専門的なスキルは必要ありません。"
+description: "SafeKit による SQL Server の高可用性：同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。全エディション対応、SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターと Microsoft SQL Server の連携方法、目次、SafeKit ソフトウェアは、SAN レスの Microsoft SQL Server 高可用性クラスターをどのように簡単に実装しますか？、SafeKit mirror クラスターが Microsoft SQL Server とどのように連携しますか？、SafeKit High Availability の制限事項、比較：Microsoft SQL Server 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"

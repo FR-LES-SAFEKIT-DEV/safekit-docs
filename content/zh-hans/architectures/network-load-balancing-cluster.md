@@ -1,7 +1,7 @@
 ---
 title: "SafeKit farm 集群：适用于 Windows 和 Linux 的网络负载均衡和高可用性"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/network-load-balancing-cluster/"
-description: "SafeKit 以单一软件包的形式提供高性能网络负载均衡 (NLB) 和自动故障转移。使用 SafeKit 适用于 Windows 和 Linux 的内核级虚拟 IP 管理功能，取代昂贵的硬件负载均衡器。非常适合 OEM 集成和简化的集群管理。"
+description: "SafeKit farm 集群：基于虚拟 IP 的网络负载均衡，在 Windows 或 Linux 服务器间自动故障转移，无需硬件负载均衡器。"
 category: "architectures"
 lang: "zh-hans"
 topics: "SafeKit farm 集群：适用于 Windows 和 Linux 的软件负载均衡和自动故障转移、目录、SafeKit 如何在 Windows 和 Linux 上实现网络负载均衡 (NLB) 集群？、SafeKit farm 集群如何在 Windows 和 Linux 上运行？、SafeKit farm 集群与其它 NLB 集群解决方案的比较、视频指南：如何配置 SafeKit farm NLB 集群、🔍 探索 SafeKit"

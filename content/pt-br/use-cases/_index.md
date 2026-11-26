@@ -1,7 +1,7 @@
 ---
 title: "Casos de uso de clientes"
 canonical: "https://safekit.eviden.com/pt-br/use-cases/"
-description: "SafeKit oferece alta disponibilidade simples, sem SAN. Ele protege setores críticos. Exemplos incluem software OEM, sites de borda, VMS, EACS, SCADA, BMS, controle de tráfego aéreo e operações de metrô."
+description: "Casos de uso de clientes SafeKit: alta disponibilidade para software OEM, sites de borda, VMS, controle de acesso, SCADA, gestão predial, tráfego aéreo e controle de metrô."
 category: "use-cases"
 lang: "pt-br"
 topics: "Casos de uso SafeKit, 🔍 Explore SafeKit"

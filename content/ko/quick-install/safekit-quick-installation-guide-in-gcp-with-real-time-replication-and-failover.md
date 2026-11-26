@@ -1,7 +1,7 @@
 ---
 title: "SafeKit을 사용한 GCP 고가용성: 장애 조치를 위한 mirror.safe 모듈 설치"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
-description: "GCP에서 SafeKit용 mirror.safe 모듈을 배포하여 Windows 및 Linux에서 동기식 실시간 복제 및 자동 장애 조치를 활성화하세요. 이 가이드는 공유 스토리지 없이 중요 애플리케이션을 위한 2노드 비공유(shared-nothing) 클러스터를 설정하는 방법을 안내합니다."
+description: "단계별 가이드: Windows 또는 Linux VM 2대 간 실시간 복제 및 장애 조치를 위한 Google Cloud용 SafeKit mirror.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
 topics: "GCP 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/GCP mirror 솔루션 개요, Windows 및 Linux에 SafeKit/GCP mirror 솔루션 설치 (mirror.safe), SafeKit/GCP mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"

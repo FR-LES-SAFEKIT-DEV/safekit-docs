@@ -1,7 +1,7 @@
 ---
 title: "Umgang mit Stromausfällen und Netzwerktrennung in einem HA-Cluster"
 canonical: "https://safekit.eviden.com/de/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "Erfahren Sie, wie Sie Netzwerktrennung und Stromausfälle in einem Hochverfügbarkeitscluster verwalten. SafeKit umfasst Split-Brain-Prüfungen und automatische Resynchronisierung. Sie gewährleisten Datenintegrität und 24/7-Betriebszeit ohne gemeinsame Festplatte."
+description: "Wie ein Hochverfügbarkeitscluster Stromausfälle und Netzwerkisolation bewältigt: Der SafeKit Split-Brain-Checker und die automatische Resynchronisation schützen Ihre Daten."
 category: "best-practises"
 lang: "de"
 topics: "Welche verschiedenen Szenarien gibt es bei Netzwerktrennung in einem Cluster?, Welche verschiedenen Szenarien gibt es bei einem Stromausfall in einem Cluster?, 🔍 SafeKit entdecken"

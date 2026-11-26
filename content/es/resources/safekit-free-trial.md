@@ -1,7 +1,7 @@
 ---
 title: "Prueba gratuita de SafeKit"
 canonical: "https://safekit.eviden.com/es/resources/safekit-free-trial/"
-description: "Descargue la versión de prueba gratuita de SafeKit para probar la alta disponibilidad a nivel de aplicación y a nivel de máquina virtual. SafeKit proporciona una arquitectura sin SAN para Windows y Linux, con cero pérdida de datos y conmutación por error automática."
+description: "Descargue la prueba gratuita de SafeKit y pruebe la alta disponibilidad a nivel de aplicación o de VM en Windows y Linux, con replicación y conmutación por error automática."
 category: "resources"
 lang: "es"
 topics: "Prueba gratuita y documentación técnica de SafeKit HA, 🔍 Explora SafeKit"

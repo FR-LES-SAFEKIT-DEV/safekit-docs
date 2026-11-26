@@ -1,7 +1,7 @@
 ---
 title: "La più semplice alta disponibilità Genetec SQL: replica sincrona e failover a 2 nodi"
 canonical: "https://safekit.eviden.com/it/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Il modo più semplice per implementare l’alta disponibilità Genetec SQL. SafeKit fornisce un cluster SANless a 2 nodi con replica sincrona e failover automatico, senza necessità di AD o competenze specialistiche."
+description: "Alta disponibilità per il database Genetec SQL Server: cluster SafeKit a due nodi con replica sincrona e failover automatico, senza SAN."
 category: "solutions"
 lang: "it"
 topics: "Come funziona il cluster mirror SANless SafeKit con Genetec SQL, Indice, In che modo il software SafeKit implementa semplicemente un cluster di alta disponibilità SANless Genetec SQL?, Come funziona il cluster mirror SafeKit con Genetec SQL?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Genetec SQL e altre soluzioni di clustering, Guida video: configurazione di un cluster mirror SafeKit HA, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"

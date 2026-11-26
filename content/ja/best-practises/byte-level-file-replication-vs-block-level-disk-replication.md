@@ -1,7 +1,7 @@
 ---
 title: "HA におけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較"
 canonical: "https://safekit.eviden.com/ja/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
-description: "バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションを比較します。SafeKit は、SAN なしでファイル内で変更されたデータのみをレプリケートします。これにより、データ損失ゼロ（RPO 0）、高速リカバリ（RTO）、Windows および Linux でのシンプルな設定が保証されます。"
+description: "バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーション：SafeKit はファイル内の変更データのみを複製し、データ損失ゼロと高速フェイルオーバーを実現。"
 category: "best-practises"
 lang: "ja"
 topics: "高可用性クラスターにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較、バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所、🔍 SafeKit を探索する"

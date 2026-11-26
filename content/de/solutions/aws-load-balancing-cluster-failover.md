@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Amazon AWS Lastausgleich und Anwendungs-Hochverfügbarkeits Farm-Cluster"
 canonical: "https://safekit.eviden.com/de/solutions/aws-load-balancing-cluster-failover/"
-description: "Erweitern Sie AWS Load Balancer mit der intelligenten Anwendungsüberwachung von SafeKit. Erzielen Sie nahtlose Hochverfügbarkeit mit umfassenden Zustandsprüfungen, automatischer Selbstheilung und Failover für geschäftskritische Farm-Cluster."
+description: "SafeKit-Farm-Cluster in AWS: Zustandsprüfungen der Anwendung für den Load Balancer von AWS, automatischer Neustart und Failover Ihrer Anwendung unter Windows oder Linux."
 category: "solutions"
 lang: "de"
 topics: "Erweitern Sie den Cloud Load Balancer um anwendungsorientiertes Monitoring und Self-Healing., Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen AWS Network Load Balancing (NLB)-Cluster?, Wie funktioniert das SafeKit-Farm-Cluster mit AWS?, Vergleich: SafeKit-Farm-Cluster On-Premises vs. SafeKit-Farm-Cluster in der Cloud, Videoanleitung: Konfigurieren eines SafeKit-Farm-NLB-Cluster, 🔍 SafeKit entdecken"

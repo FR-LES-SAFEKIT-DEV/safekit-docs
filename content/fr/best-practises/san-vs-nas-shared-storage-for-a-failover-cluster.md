@@ -1,7 +1,7 @@
 ---
 title: "SAN ou NAS pour le stockage partagé en cluster de basculement : une comparaison détaillée"
 canonical: "https://safekit.eviden.com/fr/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "Comparez le stockage partagé SAN et NAS pour les clusters à basculement. SafeKit n’a pas besoin de stockage partagé. Il simplifie les scripts de basculement et empêche la corruption des données. Il ne nécessite aucun matériel coûteux ni disque de quorum complexe."
+description: "Stockage partagé SAN vs NAS pour les clusters de basculement : limites, coûts et risques, et pourquoi la réplication SafeKit supprime le besoin de stockage partagé."
 category: "best-practises"
 lang: "fr"
 topics: "Stockage partagé SAN ou NAS : lequel est le plus simple pour un cluster de basculement ?, 🔍 Explorez SafeKit"

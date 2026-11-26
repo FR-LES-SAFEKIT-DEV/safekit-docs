@@ -1,7 +1,7 @@
 ---
 title: "Siemens Siveillance Suite の高可用性と冗長性：アクティブ/アクティブ SAN レスクラスタリング"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
-description: "SafeKit で Siemens Siveillance Suite の 100% の稼働時間を確保しましょう。複雑なハードウェアなしで、SAN レスの高可用性、同期レプリケーション、アクティブ/アクティブクラスタリングを実現します。無料トライアルを今すぐダウンロードしてください。"
+description: "Siemens Siveillance スイートの高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のアクティブサーバー間でレプリケートし、自動フェイルオーバー。"
 category: "solutions"
 lang: "ja"
 topics: "Siemens Siveillance 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、どのようにして Siemens Siveillance 高可用性クラスター簡単に実装するのでしょうか？、SafeKit Siemens Siveillance クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens Siveillance 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens Siveillance 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

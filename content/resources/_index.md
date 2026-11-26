@@ -1,7 +1,7 @@
 ---
 title: "SafeKit Resources"
 canonical: "https://safekit.eviden.com/resources/"
-description: "Download SafeKit free trial, access technical documentation, quick installation guides, user guides, white papers, and product resources for Windows and Linux high availability clustering."
+description: "SafeKit resources: free trial, user guide, release notes, quick installation guides, training, videos and technical reference for Windows and Linux clusters."
 category: "resources"
 lang: "en"
 topics: "Free Trial, Technical Documentation & Product Information for SafeKit High Availability, 🔍 Explore SafeKit"

@@ -1,7 +1,7 @@
 ---
-title: "SafeKit IA et assistance"
+title: "SafeKit IA et support"
 canonical: "https://safekit.eviden.com/fr/resources/safekit-support/"
-description: "SafeKit propose trois canaux d'assistance : une assistance contractuelle standard avec signalement des incidents 24h/24 et 7j/7, une assistance gratuite basée sur l'IA via SafeKit AI et un programme gratuit de certification et de formation en ligne."
+description: "Support SafeKit : support contractuel avec déclaration d’incidents 24h/24 et 7j/7, aide gratuite de SafeKit AI et programme gratuit de formation et certification en ligne."
 category: "resources"
 lang: "fr"
 topics: "Assistance IA de niveau 1 gratuite, assistance et maintenance standard, programme de certification et de formation gratuit, 🔍 Explorez SafeKit"

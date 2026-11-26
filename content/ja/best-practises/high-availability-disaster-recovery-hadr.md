@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 高可用性とディザスタリカバリバックアップの組み合わせ"
 canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-disaster-recovery-hadr/"
-description: "SafeKit による同期レプリケーション（RPO = 0）と、オフサイトの災害復旧のための非同期バックアップを組み合わせることで、回復力のある HA/DR 戦略を構築します。この二重構造のアプローチにより、Windows および Linux で 24 時間 365 日のアプリケーション稼働時間とデータの整合性を確保します。"
+description: "SafeKit の高可用性（同期レプリケーション、RPO 0）と非同期バックアップを組み合わせ、Windows と Linux でオフサイトの災害復旧を実現。"
 category: "best-practises"
 lang: "ja"
 topics: "HA のための同期 SafeKit レプリケーションと DR のための非同期バックアップレプリケーションの比較、目次、同期 HADR：高速ネットワーク（LAN/VLAN）経由でのゼロデータロス、非同期 HADR：低速ネットワーク（WAN）を介したディザスタリカバリ、HADR とバックアップを組み合わせて、システム全体の耐障害性を高める方法、HADR アーキテクチャの比較：高速ネットワークと低速ネットワーク、ビデオガイド：SafeKit で HADR を実装する方法、🔍 SafeKit を探索する"

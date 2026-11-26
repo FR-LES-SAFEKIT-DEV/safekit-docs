@@ -1,7 +1,7 @@
 ---
 title: "SafeKit Smart Console：ポケットサイズの高可用性クラスター"
 canonical: "https://safekit.eviden.com/ja/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
-description: "Smart Console を使えば、SafeKit クラスターを簡単に管理できます。コード不要の設定、スマートフォンとの互換性、リアルタイムの PWA 通知をお楽しみください。ヒューマンエラーを排除し、指先ひとつで高可用性を確保します。詳細はこちら。"
+description: "SafeKit Smart Console：ブラウザーやスマートフォンから高可用性クラスターをコード不要で設定・監視。リアルタイム通知にも対応します。"
 category: "architectures"
 lang: "ja"
 topics: "Smart Console：デスクトップとモバイルで直感的かつエラーのない高可用性を実現、目次、SafeKit mirror クラスターはウェブコンソールとどのように連携しますか？、SafeKit farm クラスターは、ウェブコンソールとどのように連携しますか？、Web コンソールで複数のモジュールと複数のクラスターを監視するにはどうすればよいですか？、コンソールでアラートを監視し、メール通知を管理する方法、🔍 SafeKit を探索する"

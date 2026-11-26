@@ -1,7 +1,7 @@
 ---
 title: "بنى تحتية عالية التوافر وأفضل ممارسات تجميع البرامج"
 canonical: "https://safekit.eviden.com/ar/best-practises/high-availability-architectures-and-best-practices/"
-description: "استكشف معماريات التوافر العالي (HA) وأفضل الممارسات لتجميع التطبيقات. ينفذ برنامج SafeKit مجموعات mirror و farm بدون أقراص مشتركة. ويوفر حماية من فقدان البيانات وانتقال تلقائي في حالة الفشل للتطبيقات الهامة."
+description: "بنيات التوفر العالي وأفضل الممارسات لتجميع التطبيقات: مجموعات mirror و farm، والنسخ وتجاوز الفشل، مع أمثلة من SafeKit."
 category: "best-practises"
 lang: "ar"
 topics: "ما هي معماريات التوافر العالي وأفضل الممارسات؟، جداول مقارنة حول معماريات التوافر العالي وأفضل الممارسات، 🔍 استكشف SafeKit"

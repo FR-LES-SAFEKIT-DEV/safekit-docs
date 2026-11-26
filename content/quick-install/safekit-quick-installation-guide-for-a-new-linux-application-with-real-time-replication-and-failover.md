@@ -1,7 +1,7 @@
 ---
 title: "Linux High Availability with SafeKit: Install the mirror.safe Module for Failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
-description: "Deploy the mirror.safe module for SafeKit to enable synchronous real-time replication and automatic failover on Linux. This guide walks you through setting up a 2-node SANless cluster for critical Linux applications without shared storage."
+description: "Step-by-step guide: install the SafeKit mirror.safe module on Linux for real-time replication and automatic failover of your application on two servers."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (mirror.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"

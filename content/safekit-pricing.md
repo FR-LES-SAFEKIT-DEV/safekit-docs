@@ -1,7 +1,7 @@
 ---
 title: "SafeKit Pricing"
 canonical: "https://safekit.eviden.com/safekit-pricing/"
-description: "Understand the SafeKit licensing model and request a tailored quote for high availability, replication, failover and load balancing on Windows and Linux."
+description: "SafeKit pricing: perpetual licences per server, free application modules and no Enterprise editions needed. Request a quote for Windows or Linux clusters."
 category: "home"
 lang: "en"
 topics: "Licensing model and pricing, Standard support and maintenance, Request a quote"

@@ -1,7 +1,7 @@
 ---
 title: "Bilanciamento del carico e failover della rete Windows: installare il modulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
-description: "Scopri come distribuire il modulo farm.safe per il bilanciamento del carico di rete Windows e il failover automatico. Questa guida mostra come creare un cluster ad alta disponibilità per servizi e applicazioni Web utilizzando un IP virtuale, senza la necessità di bilanciatori del carico hardware esterni o configurazioni complesse."
+description: "Guida passo passo: installa il modulo SafeKit farm.safe su Windows per il bilanciamento del carico di rete e il failover della tua applicazione su un IP virtuale."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione di High Availability per Windows, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Windows, Installazione della soluzione SafeKit/Windows (farm.safe), Configurazione passo-passo della soluzione SafeKit/Windows, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 架构"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/"
-description: "使用 SafeKit 探索高可用性架构。了解 Mirror、Farm 和 Farm + mirror 集群，以实现无 SAN 应用故障转移和负载平衡。"
+description: "SafeKit 集群架构：实时复制的 mirror 集群、负载均衡的 farm 集群、双活及 N-1 冗余，无需 SAN。"
 category: "architectures"
 lang: "zh-hans"
 topics: "SafeKit 有哪些不同的高可用性架构和不同的软件集群？如何使用 SafeKit 构建高可用性集群？🔍 探索 SafeKit"

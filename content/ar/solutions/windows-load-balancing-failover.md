@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: برنامج متكامل لموازنة التحميل وتوفير التوافر العالي لنظام التشغيل Windows"
 canonical: "https://safekit.eviden.com/ar/solutions/windows-load-balancing-failover/"
-description: "يوفر SafeKit حلاً قوياً لبرامج موازنة التحميل والتوافر العالي لنظام التشغيل Windows. استبدل أجهزة NLB المعقدة ببروتوكول الإنترنت الظاهري المتكامل من SafeKit، ومراقبة التطبيقات، وتجاوز الفشل التلقائي. يمكنك بسهولة نشر مجموعة SafeKit على خوادم Windows القياسية اليوم."
+description: "موازنة الأحمال على Windows وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم Windows قياسية."
 category: "solutions"
 lang: "ar"
 topics: "مجموعة SafeKit farm: موازن تحميل الشبكة (NLB) القائم على البرامج فقط وتجاوز الفشل التلقائي لنظام Windows، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Windows ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع Windows؟، مقارنة: مجموعة SafeKit farm لـ Windows مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

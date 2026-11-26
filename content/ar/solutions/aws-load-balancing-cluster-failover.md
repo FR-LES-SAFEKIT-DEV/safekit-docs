@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: مجموعة farm موازنة تحميل وتوافر عالٍ للتطبيقات على Amazon AWS"
 canonical: "https://safekit.eviden.com/ar/solutions/aws-load-balancing-cluster-failover/"
-description: "عزّز موازن تحميل AWS بمراقبة التطبيقات الذكية من SafeKit. حقّق توفُّرًا عاليًا سلسًا مع فحوصات صحية عميقة، ومعالجة ذاتية تلقائية، وتجاوز للأعطال مجموعات farm ذات المهام الحرجة."
+description: "مجموعات SafeKit farm في AWS: فحص سلامة التطبيقات لموازن أحمال AWS، وإعادة تشغيل تلقائية وتجاوز فشل لتطبيقك على Windows أو Linux."
 category: "solutions"
 lang: "ar"
 topics: "تحسين موازن تحميل السحابة من خلال المراقبة على مستوى التطبيق والشفاء الذاتي، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) AWS ببساطة؟، كيف تعمل مجموعة SafeKit farm مع AWS؟، مقارنة: مجموعة SafeKit farm المحلية مقابل مجموعة SafeKit farm السحابية، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

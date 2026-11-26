@@ -1,7 +1,7 @@
 ---
 title: "Best practice per l’alta disponibilità"
 canonical: "https://safekit.eviden.com/it/best-practises/"
-description: "Esplora le best practice di alta disponibilità di SafeKit: modelli di architettura HA, replica sincrona e asincrona, strategie di clustering, failover VIP, RPO/RTO e progettazione della ridondanza per Windows e Linux."
+description: "Best practice di alta disponibilità: architetture HA, replica sincrona e asincrona, failover dell’IP virtuale, quorum, RPO e RTO, spiegati con SafeKit."
 category: "best-practises"
 lang: "it"
 topics: "Architettura e modelli di progettazione, Alta disponibilità e disaster recovery, Strategie di replica, Clustering e failover, Archiviazione e infrastruttura, Implementazione e migrazione"

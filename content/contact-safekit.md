@@ -1,6 +1,6 @@
 ---
-title: "SafeKit contact form"
-description: "Standalone contact form for SafeKit information requests."
+title: "Contact SafeKit"
+description: "Contact the Eviden team about SafeKit high availability software: questions, quotes, partnerships or a demo."
 lang: "en"
 category: "home"
 sitemap:

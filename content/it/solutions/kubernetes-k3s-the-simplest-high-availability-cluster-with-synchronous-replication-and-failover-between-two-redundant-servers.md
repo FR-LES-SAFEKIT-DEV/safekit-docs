@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes K3s ad alta disponibilità: replica sincrona e failover a 2 nodi"
 canonical: "https://safekit.eviden.com/it/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Ottieni l’alta disponibilità di K3s su 2 nodi senza storage esterno o quorum etcd. Scopri come SafeKit fornisce la replica senza perdita di dati e il failover automatico."
+description: "Alta disponibilità Kubernetes K3s su due nodi con SafeKit: replica sincrona e failover automatico, senza storage esterno né quorum etcd."
 category: "solutions"
 lang: "it"
 topics: "Semplificare l’alta disponibilità di K3s: perché scegliere SafeKit invece di MetalLB e Longhorn?, Indice, Come implementa il software SafeKit un cluster Kubernetes K3s ad alta disponibilità?, Come funziona il cluster mirror SafeKit con Kubernetes K3S?, Limitazioni SafeKit High Availability, Confronto: SafeKit vs. stack K3s standard (MetalLB e Longhorn), Guida video: configurazione di un cluster mirror SafeKit HA, 🔍 Esplora SafeKit"

@@ -1,7 +1,7 @@
 ---
-title: "SafeKit Technical Reference for RFI and RFP Documents"
+title: "SafeKit technical reference for RFI and RFP documents"
 canonical: "https://safekit.eviden.com/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "Find technical information about SafeKit to prepare requests for information (RFI) and requests for proposals (RFP). Learn about supported systems, architectures, recovery times, security, licensing, and support."
+description: "SafeKit technical reference for RFI and RFP answers: supported systems, architectures, recovery times, security, licensing and support."
 category: "resources"
 lang: "en"
 topics: "Overview, Table of contents, Product information, Supported operating systems and platforms, SafeKit High Availability Limitations, Preconfigured application modules, Architecture and deployment, Data loss and recovery times (RPO and RTO), Remote sites and distributed deployments, Monitoring and alerts, Security and compliance, Licensing, Support and maintenance, Comparison with other solutions, Useful links"

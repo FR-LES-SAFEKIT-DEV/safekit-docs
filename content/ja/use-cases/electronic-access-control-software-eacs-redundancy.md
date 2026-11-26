@@ -1,7 +1,7 @@
 ---
 title: "電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性"
 canonical: "https://safekit.eviden.com/ja/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "SafeKit は電子アクセス制御システム（EACS）向けの最もシンプルな高可用性ソフトウェアです。建物のセキュリティを 24 時間年中無休で維持します。このクラスターは 2 つのノードで構成され、SAN 不要です。リアルタイムの同期レプリケーションと自動フェイルオーバーを提供します。Nedap、TIL Technologies、Siemens、HID、および Windows または Linux 上のあらゆる EACS ソフトウェアで動作します。データ損失はゼロです（RPO = 0）。"
+description: "SafeKit による入退室管理（EACS）冗長化：Nedap、Siemens、HID 等のシステム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
 lang: "ja"
 topics: "電子アクセス制御システム（EACS）とは何ですか？、EACS ソフトウェアが重要な理由とは？、主な EACS ベンダー、SafeKit、EACS ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

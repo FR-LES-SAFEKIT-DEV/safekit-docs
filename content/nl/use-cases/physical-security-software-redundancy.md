@@ -1,7 +1,7 @@
 ---
 title: "Hoge beschikbaarheid en redundantie voor fysieke beveiligingssoftware"
 canonical: "https://safekit.eviden.com/nl/use-cases/physical-security-software-redundancy/"
-description: "SafeKit houdt kritieke beveiligingssystemen 24/7 beschikbaar. Het is een softwarecluster met 2 nodes zonder SAN. Het biedt synchrone replicatie in realtime en automatische failover voor videobeheersystemen (Milestone, Genetec), toegangscontrole (Nedap, Siemens) en SCADA. Deze eenvoudige redundantie werkt met elke hardware op Windows en Linux, zonder de complexiteit van SAN-opslag."
+description: "Redundantie voor fysieke beveiliging met SafeKit: cluster met twee nodes, synchrone replicatie en failover voor videobeheer, toegangscontrole en SCADA."
 category: "use-cases"
 lang: "nl"
 topics: "SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van fysieke beveiligingssoftware., 🔍 Ontdek SafeKit"

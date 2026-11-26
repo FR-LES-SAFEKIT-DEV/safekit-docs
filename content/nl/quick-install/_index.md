@@ -1,7 +1,7 @@
 ---
 title: "SafeKit Snelinstallatiegidsen"
 canonical: "https://safekit.eviden.com/nl/quick-install/"
-description: "Krijg toegang tot de complete bibliotheek met SafeKit-snelinstallatiegidsen. Download vooraf geconfigureerde modules zoals mirror.safe en farm.safe voor realtime replicatie, taakverdeling en failover. Implementeer SANless-hoge beschikbaarheid voor SQL Server, Oracle, Hyper-V en Linux toepassingen in enkele minuten."
+description: "Snelle installatiehandleidingen voor SafeKit: stapsgewijze installatie van mirror- en farm-modules voor SQL Server, Oracle, Hyper-V, Docker, cloud enz., op Windows en Linux."
 category: "quick-install"
 lang: "nl"
 topics: "SafeKit Application Module Library: kant-en-klare HA-oplossingen, 🔍 Ontdek SafeKit"

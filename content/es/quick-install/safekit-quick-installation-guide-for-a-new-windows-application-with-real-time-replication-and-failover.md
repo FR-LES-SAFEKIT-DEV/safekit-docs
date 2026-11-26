@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad Windows con SafeKit: Instale el módulo mirror.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
-description: "Implemente el módulo mirror.safe para SafeKit para habilitar la replicación síncrona en tiempo real y la conmutación por error automática en Windows. Esta guía le muestra cómo configurar un clúster SANless de 2 nodos para aplicaciones críticas Windows sin almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit mirror.safe en Windows para replicación en tiempo real y conmutación por error automática de su aplicación en dos servidores."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para Windows, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/Windows, Instalación en las soluciones SafeKit/Windows (mirror.safe), Configuración paso a paso de la solución SafeKit/Windows, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"

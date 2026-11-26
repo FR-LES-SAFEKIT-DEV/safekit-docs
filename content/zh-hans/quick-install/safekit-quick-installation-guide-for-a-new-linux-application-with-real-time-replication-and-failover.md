@@ -1,7 +1,7 @@
 ---
 title: "使用 SafeKit 实现 Linux 高可用性：安装 mirror.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
-description: "部署 mirror.safe 模块以在 Linux 上启用 SafeKit 的同步实时复制和自动故障转移。本指南将引导您为关键的 Linux 应用程序设置一个无共享存储的 2 节点 SANless 集群。"
+description: "分步指南：在 Linux 上安装 SafeKit mirror.safe 模块，在两台服务器上为您的应用实现实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "Linux 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Linux 解决方案概述、安装 SafeKit/Linux 解决方案 (mirror.safe)、SafeKit/Linux 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"

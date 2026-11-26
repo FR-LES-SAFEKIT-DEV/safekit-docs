@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي لنظام Siemens SIMATIC PCS 7: مجموعة من عقدتين بدون شبكة SAN"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
-description: "طبّق التوافر العالي لنظام Siemens SIMATIC PCS 7 بدون شبكة SAN. يوفر SafeKit HA النسخ المتماثل المتزامن، وتجاوز الفشل ثنائي العقدة، وعدم فقدان البيانات."
+description: "التوفر العالي لـ Siemens SIMATIC PCS 7: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي ودون SAN."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit لـ Siemens SIMATIC PCS7: مجموعة Hyper-V بدون شبكة تخزين (SANless) مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر Siemens SIMATIC PCS7 ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Siemens SIMATIC PCS7؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Siemens SIMATIC PCS7 مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لبرنامج Siemens SIMATIC PCS7، SafeKit، حل معترف به في سوق أنظمة التحكم الإشرافي وجمع البيانات (SCADA)، 🔍 استكشف SafeKit"

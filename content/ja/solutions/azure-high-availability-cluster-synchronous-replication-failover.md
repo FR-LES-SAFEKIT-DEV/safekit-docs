@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Azure 高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit を使用して、シンプルな Microsoft Azure HA クラスターをデプロイします。当社のシェアードナッシングアーキテクチャクラウド共有ディスクのコストなしで、Windows および Linux アプリケーションに同期レプリケーション、自動フェイルオーバー、および RPO = 0 を提供します。"
+description: "SafeKit による Azure の高可用性：Windows または Linux VM 2 台間の同期レプリケーションと自動フェイルオーバー。共有ディスク不要。"
 category: "solutions"
 lang: "ja"
 topics: "Azure における SafeKit シェアードナッシング HA：共有ディスクをゼロデータロスで排除、目次、SafeKit ソフトウェアは、どのようにしてシンプルなシェアードナッシング Azure 高可用性クラスターを実装するのでしょうか？、SafeKit mirror クラスターが Azure とどのように連携しますか？、SafeKit High Availability の制限事項、比較：Azure 向け SafeKit とネイティブクラウド HA/DR ソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"

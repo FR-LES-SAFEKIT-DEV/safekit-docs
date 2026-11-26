@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Nedap 高可用性：フェイルオーバー用に nedap.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-nedap/"
-description: "SafeKit は用の nedap.safe モジュールをデプロイして、Windows 上の Nedap の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで重要なアプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：SafeKit の nedap.safe モジュールを導入し、Windows 上の Nedap AEOS 入退室管理のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Nedap 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Nedap ソリューションの概要、Windows への SafeKit/Nedap ソリューションのインストール (nedap.safe)、SafeKit/Nedap ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

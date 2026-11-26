@@ -1,7 +1,7 @@
 ---
 title: "Genetec SQL の最もシンプルな高可用性：2 ノード同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Genetec SQL の高可用性を実装する最も簡単な方法。SafeKit は、同期レプリケーションと自動フェイルオーバーを備えた 2 ノードの SAN レスクラスターを提供します。AD や専門的なスキルは必要ありません。"
+description: "Genetec SQL Server データベースの高可用性：同期レプリケーションと自動フェイルオーバーを備えた SafeKit 2 ノードクラスター。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターと Genetec SQL の連携方法、目次、SafeKit ソフトウェアは、SAN レスの Genetec SQL 高可用性クラスターどのように簡単に実装しますか？、SafeKit mirror クラスターが Genetec SQL とどのように連携しますか？、SafeKit High Availability の制限事項、比較：Genetec SQL 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

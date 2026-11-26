@@ -1,7 +1,7 @@
 ---
 title: "Hochverfügbarkeit für Siemens SIPORT Zutrittskontrolle: SANless-Redundanz und Failover"
 canonical: "https://safekit.eviden.com/de/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
-description: '„Gewährleisten Sie mit SafeKit eine 24/7-Verfügbarkeit für Siemens SIPORT. Unser SANless-Cluster mit 2 Knoten bietet synchrone Replikation und automatisches Failover ohne die Kosten eines SAN. Einfache, zuverlässige und hochleistungsfähige Redundanz. Laden Sie die kostenlose Testversion herunter.'
+description: "Hochverfügbarkeit für die Zutrittskontrolle Siemens SIPORT: SafeKit repliziert deren Hyper-V-VM zwischen zwei Servern mit automatischem Failover, ohne SAN."
 category: "solutions"
 lang: "de"
 topics: "SafeKit für Siemens SIPORT: SANless Hyper-V-Cluster mit 2 Knoten, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Siemens SIPORT Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert der SafeKit Siemens SIPORT Cluster?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Siemens SIPORT vs. natives Hyper-V-Clustering, Videoanleitung: Konfigurieren eines SafeKit-HA-Cluster für Siemens SIPORT, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"

@@ -1,7 +1,7 @@
 ---
 title: "Precios SafeKit"
 canonical: "https://safekit.eviden.com/es/safekit-pricing/"
-description: "Comprenda el modelo de licencias SafeKit y solicite un presupuesto personalizado para alta disponibilidad, replicación, conmutación por error y equilibrio de carga en Windows y Linux."
+description: "Precios de SafeKit: licencias perpetuas por servidor, módulos de aplicación gratuitos, sin ediciones Enterprise. Solicite presupuesto para clústeres Windows o Linux."
 category: "home"
 lang: "es"
 topics: "Modelo de licencias y precios, Soporte y mantenimiento estándar, Solicitar un presupuesto"

@@ -1,7 +1,7 @@
 ---
-title: "Formazione SafeKit sull&#39;alta disponibilità: programma di certificazione online gratuito"
+title: "Formazione SafeKit sull'alta disponibilità: programma di certificazione online gratuito"
 canonical: "https://safekit.eviden.com/it/resources/safekit-on-line-training/"
-description: "Padroneggia SafeKit SANless HA con il nostro corso di formazione gratuito. Il corso copre l&#39;installazione del software, la gestione tramite console web e la CLI. Impara la configurazione avanzata e la risoluzione dei problemi per garantire un&#39;elevata disponibilità 24 ore su 24, 7 giorni su 7. Ottieni la tua certificazione ufficiale online."
+description: "Formazione e certificazione online SafeKit gratuite: installazione, console web, riga di comando, configurazione avanzata e troubleshooting dei cluster HA."
 category: "resources"
 lang: "it"
 topics: "Come accedere alla piattaforma di formazione?, Ottieni i materiali di formazione di SafeKit 8, 🔍 Esplora SafeKit"

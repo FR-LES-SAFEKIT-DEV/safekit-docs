@@ -1,7 +1,7 @@
 ---
 title: "ビル管理システム（BMS）の高可用性と冗長性"
 canonical: "https://safekit.eviden.com/ja/use-cases/building-management-system-software-bms-redundancy/"
-description: "SafeKit でスマートビルディングの稼働率 100% を確保しましょう。当社の SAN レス 2 ノード冗長化ソフトウェアは、Siemens、Honeywell、Schneider Electric、Johnson Controls など、あらゆる BMS にリアルタイム同期レプリケーションと自動フェイルオーバーを提供します。および Linux 上で Windows 重要な HVAC およびセキュリティシステムのデータ損失ゼロ（RPO = 0）と運用レジリエンスを実現します。"
+description: "SafeKit による BMS 冗長化：Siemens、Honeywell、Schneider 等のビル設備向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
 lang: "ja"
 topics: "ビル管理システム（BMS）とは？、BMS ソフトウェアが重要な理由とは？、主要 BMS ベンダー、SafeKit、BMS ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

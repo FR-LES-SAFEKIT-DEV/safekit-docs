@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad para Siemens SIMATIC PCS 7: clúster sin SAN de 2 nodos"
 canonical: "https://safekit.eviden.com/es/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
-description: "Implemente alta disponibilidad para Siemens SIMATIC PCS 7 sin una SAN. SafeKit HA proporciona replicación síncrona, conmutación por error de 2 nodos y cero pérdida de datos."
+description: "Alta disponibilidad para Siemens SIMATIC PCS 7: SafeKit replica su máquina virtual Hyper-V entre dos servidores con conmutación por error automática, sin SAN."
 category: "solutions"
 lang: "es"
 topics: "SafeKit para Siemens SIMATIC PCS7: clúster Hyper-V sin SAN de 2 nodos, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Siemens SIMATIC PCS7 sin almacenamiento compartido en una SAN?, ¿Cómo funciona el clúster SafeKit Siemens SIMATIC PCS7?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para Siemens SIMATIC PCS7 frente a la agrupación en clústeres nativa Hyper-V, Guía en vídeo: Configuración de un clúster HA SafeKit para Siemens SIMATIC PCS7, SafeKit, una solución reconocida en el mercado SCADA, 🔍 Explora SafeKit"

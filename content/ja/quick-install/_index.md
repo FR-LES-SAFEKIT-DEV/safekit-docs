@@ -1,7 +1,7 @@
 ---
 title: "SafeKit クイックインストールガイド"
 canonical: "https://safekit.eviden.com/ja/quick-install/"
-description: "SafeKit のクイックインストールガイドの全ライブラリにアクセスできます。リアルタイムレプリケーション、ロードバランシング、フェイルオーバー用の mirror.safe や farm.safe などの事前設定済みモジュールをダウンロードできます。SQL Server、Oracle、Hyper-V、Linux アプリケーション向けに、SAN レスの高可用性を数分で実装できます。"
+description: "SafeKit 導入ガイド：SQL Server、Oracle、Hyper-V、Docker、クラウド等の mirror・farm モジュール設定。Windows と Linux。"
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit アプリケーションモジュールライブラリ：すぐに使える HA ソリューション、🔍 SafeKit を探索する"

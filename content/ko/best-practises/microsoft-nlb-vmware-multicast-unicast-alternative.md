@@ -1,7 +1,7 @@
 ---
 title: "Microsoft NLB VMware 대안: 멀티캐스트 및 유니캐스트 문제 해결"
 canonical: "https://safekit.eviden.com/ko/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "VMware에서 Microsoft NLB 멀티캐스트 또는 유니캐스트로 어려움을 겪고 계신가요? SafeKit은 간단한 대안을 제공합니다. Windows 및 Linux에서 자동 로드 밸런싱 및 장애 조치를 지원하는 farm 클러스터입니다. 정적 ARP 항목, MAC 스푸핑 및 특수 네트워크 구성이 필요하지 않습니다."
+description: "VMware에서 Microsoft NLB의 대안: SafeKit farm 클러스터는 멀티캐스트, 정적 ARP 항목, MAC 스푸핑 없이 부하 분산과 장애 조치를 수행합니다."
 category: "best-practises"
 lang: "ko"
 topics: "Microsoft NLB 멀티캐스트 모드, Microsoft NLB 유니캐스트 모드, SafeKit을 사용한 대안, farm 모드의 SafeKit 클러스터는 Windows와 어떻게 연동되나요?, 🔍 SafeKit 살펴보기"

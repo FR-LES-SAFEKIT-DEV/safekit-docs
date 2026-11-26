@@ -1,7 +1,7 @@
 ---
 title: "Eenvoudige Hyper-V-hoge beschikbaarheid zonder gedeelde opslag (SAN)"
 canonical: "https://safekit.eviden.com/nl/solutions/hyper-v-replication-automatic-failover-load-balancing/"
-description: "Realiseer Hyper-V HA zonder SAN. SafeKit biedt real-time replicatie en automatische failover voor clusters met 2 knooppunten. Download nu uw gratis proefversie."
+description: "Hoge beschikbaarheid voor Hyper-V zonder SAN: SafeKit repliceert virtuele machines in realtime tussen twee servers en herstart ze automatisch bij een storing."
 category: "solutions"
 lang: "nl"
 topics: "SafeKit voor Hyper-V: SANless Hyper-V-cluster met 2 knooppunten, Inhoudsopgave, Hoe implementeert de SafeKit software eenvoudig een Hyper-V-high-availabilitycluster zonder gedeelde opslag op een SAN?, Hoe werkt het SafeKit Hyper-V cluster?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Hyper-V versus native Hyper-V-clustering, Videogids: Een SafeKit HA-cluster configureren voor Hyper-V, 🔍 Ontdek SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit-Architekturen"
 canonical: "https://safekit.eviden.com/de/architectures/"
-description: "Entdecken Sie Hochverfügbarkeitsarchitekturen mit SafeKit. Erfahren Sie mehr über Mirror, Farm und Farm + Mirror-Cluster für SANless-Anwendungsfailover und Lastausgleich."
+description: "SafeKit-Clusterarchitekturen: Mirror-Cluster mit Echtzeit-Replikation, Farm-Cluster mit Lastverteilung, Aktiv-Aktiv und N-1-Redundanz, ohne SAN."
 category: "architectures"
 lang: "de"
 topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwarecluster gibt es mit SafeKit?, Wie baut man Hochverfügbarkeitscluster mit SafeKit?, 🔍 SafeKit entdecken"

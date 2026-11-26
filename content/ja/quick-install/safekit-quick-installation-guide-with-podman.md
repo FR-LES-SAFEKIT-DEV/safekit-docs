@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Podman 高可用性：フェイルオーバー用の mirror.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-podman/"
-description: "SafeKit は用の mirror.safe モジュールをデプロイして、Linux 上の Podman コンテナの同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで重要なアプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：Linux 上の Podman 向けに SafeKit の mirror.safe モジュールを導入し、コンテナデータのリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Podman 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Podman ソリューションの概要、Linux への SafeKit/Podman ソリューションのインストール (mirror.safe)、SafeKit/Podman ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "Software per l’alta disponibilità: clustering Windows e Linux con SafeKit"
 canonical: "https://safekit.eviden.com/it/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "SafeKit è il software leader per l’alta disponibilità per Windows e Linux. Protegge le tue applicazioni critiche. Puoi creare facilmente cluster HA senza storage condiviso o una SAN complessa. Un’unica semplice soluzione software fornisce replica in tempo reale, failover e bilanciamento del carico."
+description: "Software di alta disponibilità per Windows e Linux: i cluster SafeKit offrono replica in tempo reale, failover e bilanciamento del carico senza storage condiviso."
 category: "use-cases"
 lang: "it"
 topics: "Elevator pitch di 30 secondi per SafeKit, 🔍 Esplora SafeKit"

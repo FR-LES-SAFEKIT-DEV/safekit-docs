@@ -1,7 +1,7 @@
 ---
 title: "Apache Network Load Balancing & Failover: Installeer de SafeKit apache_farm.safe-module"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
-description: "Leer hoe u de apache_farm.safe-module implementeert op Windows en Linux voor Apache Network Load Balancing en automatische failover. Deze handleiding laat u zien hoe u een zeer beschikbaar cluster voor webservices en -toepassingen bouwt met behulp van een virtueel IP-adres, zonder dat er externe hardware load balancers of complexe configuratie nodig zijn."
+description: "Stapsgewijze handleiding: installeer de SafeKit-module apache_farm.safe op Windows of Linux voor netwerkloadbalancing en failover van Apache-webservers."
 category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Apache, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Apache-oplossing, Installatie van de SafeKit/Apache-oplossing op Windows en Linux (apache_farm.safe), Stapsgewijze configuratie van de SafeKit/Apache-oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"

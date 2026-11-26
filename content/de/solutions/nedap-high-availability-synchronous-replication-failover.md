@@ -1,7 +1,7 @@
 ---
 title: "Die einfachste Nedap Hochverfügbarkeit: 2-Knoten-Synchronreplikation und Failover"
 canonical: "https://safekit.eviden.com/de/solutions/nedap-high-availability-synchronous-replication-failover/"
-description: "Die einfachste Methode zur Implementierung Nedap High Availability. SafeKit bietet einen SANless-Cluster mit 2 Knoten, synchroner Replikation und automatischem Failover – ohne AD oder spezielle Kenntnisse."
+description: "Hochverfügbarkeit für Nedap AEOS mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover der Zutrittskontrolle, ohne SAN."
 category: "solutions"
 lang: "de"
 topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Nedap, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless-Nedap Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit Nedap?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Nedap im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"

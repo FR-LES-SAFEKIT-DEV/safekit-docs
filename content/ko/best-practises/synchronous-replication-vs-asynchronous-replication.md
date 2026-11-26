@@ -1,7 +1,7 @@
 ---
 title: "동기식 복제 vs. 비동기식 복제: SafeKit은 어떻게 데이터 손실 제로를 보장하는가?"
 canonical: "https://safekit.eviden.com/ko/best-practises/synchronous-replication-vs-asynchronous-replication/"
-description: "비즈니스 연속성을 위한 동기식 복제와 비동기식 복제를 비교해 보세요. SafeKit은 실시간 동기식 복제를 사용하여 HA 클러스터에서 데이터 손실 제로(RPO = 0)를 보장합니다. 비동기식 복제는 장거리 재해 복구에 더 적합합니다."
+description: "동기 복제와 비동기 복제 비교: SafeKit 클러스터에서 동기 복제가 데이터 손실 제로(RPO 0)를 보장하는 이유와 비동기가 더 적합한 경우."
 category: "best-practises"
 lang: "ko"
 topics: "동기 또는 비동기 복제 시 애플리케이션 장애 조치로 인해 데이터가 손실될 수 있나요?, 목차, 비동기 복제는 어떻게 작동하나요?, 동기 복제는 어떻게 작동하나요?, 반동기 복제는 어떻게 작동하나요?, 최종 결론: 고가용성을 위한 올바른 복제 방식 선택, 비교표: 동기식, 비동기식, 반동기식, 비디오 가이드: 동기식 실시간 복제 및 고가용성 구성, 자주 묻는 질문: 고가용성 클러스터의 복제 전략, 🔍 SafeKit 살펴보기"

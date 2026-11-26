@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad y redundancia para sistemas de gestión de edificios (BMS)"
 canonical: "https://safekit.eviden.com/es/use-cases/building-management-system-software-bms-redundancy/"
-description: "Garantice un tiempo de actividad del 100 % para su edificio inteligente con SafeKit. Nuestro software de redundancia sin SAN y de 2 nodos proporciona replicación síncrona en tiempo real y conmutación por error automática para cualquier BMS, incluidos Siemens, Honeywell, Schneider Electric y Johnson Controls. Logre cero pérdida de datos (RPO = 0) y resiliencia operativa para sistemas críticos de climatización y seguridad en Windows y Linux."
+description: "Redundancia BMS con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error para Siemens, Honeywell, Schneider y otros sistemas de edificios."
 category: "use-cases"
 lang: "es"
 topics: "¿Qué es un sistema de gestión de edificios (BMS)?, ¿Por qué es fundamental el software BMS?, Principales proveedores de BMS, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software BMS., SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 解决方案"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/"
-description: "如果您使用 SafeKit 高可用性软件的 HA 模块，则可以在 Windows 和 Linux 上非常简单地进行集群配置。"
+description: "SafeKit 解决方案：适用于数据库、Web 服务器、虚拟机、容器、云和安防软件的即用型高可用性模块，支持 Windows 和 Linux。"
 category: "solutions"
 lang: "zh-hans"
 topics: "SafeKit 应用模块库：即用型高可用性解决方案，🔍 探索 SafeKit"

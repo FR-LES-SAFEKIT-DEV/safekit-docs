@@ -1,7 +1,7 @@
 ---
 title: "Gestione delle interruzioni di corrente e dell’isolamento della rete in un cluster HA"
 canonical: "https://safekit.eviden.com/it/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "Scopri come gestire l’isolamento della rete e le interruzioni di corrente in un cluster ad alta disponibilità. SafeKit include controlli per il split-brain e la risincronizzazione automatica. Questi garantiscono l’integrità dei dati e un uptime 24/7 senza un disco condiviso."
+description: "Come un cluster ad alta disponibilità gestisce blackout e isolamento di rete: il checker split-brain e la risincronizzazione automatica di SafeKit proteggono i tuoi dati."
 category: "best-practises"
 lang: "it"
 topics: "Quali sono i diversi scenari in caso di isolamento della rete in un cluster?, Quali sono i diversi scenari in caso di interruzione di corrente in un cluster?, 🔍 Esplora SafeKit"

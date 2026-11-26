@@ -1,7 +1,7 @@
 ---
 title: "使用 SafeKit 实现 Microsoft SQL Server 高可用性：安装 sqlserver.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
-description: "部署 SafeKit 的 sqlserver.safe 模块，为 Microsoft SQL Server 启用同步实时复制和自动故障转移。本指南将引导您为关键应用程序设置一个无共享存储的 2 节点 SANless 集群。"
+description: "分步指南：安装 SafeKit sqlserver.safe 模块，在两台服务器上实现 Microsoft SQL Server 的实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "Microsoft SQL Server 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Microsoft SQL Server 解决方案概述、在 Windows 上安装 SafeKit/Microsoft SQL Server 解决方案 (sqlserver.safe)、SafeKit/Microsoft SQL Server 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"

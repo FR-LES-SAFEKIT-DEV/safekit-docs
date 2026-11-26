@@ -1,7 +1,7 @@
 ---
 title: "SCADA 和工业控制系统 (ICS) 的高可用性和冗余"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/scada-software-redundancy-high-availability/"
-description: "SafeKit 是 SCADA 的领先高可用性软件。它不需要 SAN。SafeKit 可使 SCADA 软件 24/7 全天候可用。例如 Wonderware、WinCC、iFix 和 Inductive Automation。它提供实时同步复制和自动故障转移。工业数据库没有数据丢失 (RPO = 0)。您不需要复杂的 SAN 存储，也不需要特殊的 IT 技能。"
+description: "使用 SafeKit 实现 SCADA 冗余：双节点集群，同步复制和故障转移，适用于 WinCC、Wonderware、iFix 等工业系统。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "什么是 SCADA 系统？、为什么 SCADA 软件至关重要？、主要 SCADA 软件供应商、SafeKit 为 SCADA 软件的冗余和高可用性提供了两种解决方案。、SafeKit、SCADA 市场上的公认解决方案、🔍 探索 SafeKit"

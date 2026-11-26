@@ -1,6 +1,6 @@
 ---
-title: "Agradecemos o seu contacto"
-description: "A página de confirmação é exibida após o envio do formulário de contacto do SafeKit."
+title: "Agradecemos o seu contacto."
+description: "Obrigado por nos contactar sobre o SafeKit. O seu pedido foi enviado e a equipa Eviden responderá em breve."
 lang: "pt-pt"
 category: "home"
 sitemap:

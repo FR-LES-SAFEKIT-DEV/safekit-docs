@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade Simples Linux KVM sem Armazenamento Compartilhado"
 canonical: "https://safekit.eviden.com/pt-br/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
-description: "Obtenha alta disponibilidade Linux KVM sem uma SAN. SafeKit oferece replicação síncrona e failover automático para clusters KVM de 2 nós. Simplifique a redundância da sua VM Linux e reduza o TCO hoje mesmo."
+description: "Alta disponibilidade do KVM sem SAN: o SafeKit replica máquinas virtuais Linux em tempo real entre dois servidores e as reinicia automaticamente em caso de falha."
 category: "solutions"
 lang: "pt-br"
 topics: "SafeKit para KVM: Cluster KVM SANless de 2 Nós, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade KVM sem armazenamento compartilhado em uma SAN?, Como funciona o cluster KVM SafeKit?, Limitações SafeKit de Alta Disponibilidade, Comparação: SafeKit para KVM vs. Agrupamento Tradicional, Guia em vídeo: Configurando um cluster HA SafeKit para KVM, 🔍 Explore SafeKit"

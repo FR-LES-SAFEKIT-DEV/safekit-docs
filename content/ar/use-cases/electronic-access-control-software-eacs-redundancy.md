@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي والتكرار لبرنامج التحكم الإلكتروني في الوصول (EACS)"
 canonical: "https://safekit.eviden.com/ar/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "يُعد SafeKit أبسط برامج التوافر العالي لأنظمة التحكم الإلكتروني في الوصول (EACS). فهو يحافظ على أمان المبنى على مدار الساعة طوال أيام الأسبوع. تحتوي المجموعة على عقدتين ولا تحتاج إلى شبكة منطقة التخزين (SAN). ويوفر تكرارًا متزامنًا في الوقت الفعلي وتجاوزًا تلقائيًا للأعطال. ويعمل مع Nedap و TIL Technologies و Siemens و HID وأي برامج EACS على نظامي التشغيل Windows أو Linux. ولا يوجد أي فقدان للبيانات (RPO = 0)."
+description: "تكرار أنظمة التحكم في الوصول (EACS) مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لـ Nedap و Siemens و HID وغيرها من الأنظمة."
 category: "use-cases"
 lang: "ar"
 topics: "ما هو نظام التحكم الإلكتروني بالوصول (EACS)؟، لماذا يُعد برنامج EACS بالغ الأهمية؟، أبرز موردي EACS، توفر SafeKit حلّين لتحقيق التكرار والتوافر العالي لبرنامج EACS، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Testando o endereço IP virtual de balanceamento de carga numa cluster farm SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/test-load-balancing-vip-farm/"
-description: "Aprenda a testar o balanceamento de carga do SafeKit em nós de cluster e a verificar a redundância de IP virtual, o redirecionamento GARP e o comportamento da rede."
+description: "Como testar o IP virtual de balanceamento de carga de um cluster farm SafeKit: distribuição do tráfego entre nós, failover, reencaminhamento GARP e verificações de rede."
 category: "best-practises"
 lang: "pt-pt"
 topics: "Princípios-chave, Pré-requisito: o mosaico do SafeKit, Teste 1 – Distribuição de ligações, Teste 2 – Alteração do servidor de distribuição, Teste 3 – Verificação do redirecionamento GARP com arp -a, Teste 4 – Verificação de ponta a ponta com Wireshark (Windows) ou tcpdump (Linux), Quais estações de trabalho testar, Resumo dos resultados esperados, Resolução de problemas, Demonstração da solução farm do SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Always On 的替代方案：Express 和 Standard 版本的 HA"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/alternative-always-on-sql-server-express-standard-editions/"
-description: "正在寻找 SQL Server Always On 的经济高效的替代方案？SafeKit 可为 SQL Server Express 和 Standard 版本提供高可用性。它不需要 SAN 和 Active Directory。它提供同步复制、虚拟 IP 和自动故障转移。"
+description: "SQL Server Express 和 Standard 版的 Always On 替代方案：SafeKit 同步复制和故障转移，无需 SAN 或 AD。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "Express 和 Standard 版本 SQL Server Always On 的替代方案、SafeKit mirror 集群如何与 Microsoft SQL Server 配合使用？、视频指南：为 SQL Server 配置 SafeKit HA mirror 集群、🔍 探索 SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Combinaison de la haute disponibilité SafeKit avec les sauvegardes de reprise après sinistre"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-disaster-recovery-hadr/"
-description: "Construisez une stratégie HA/DR résiliente en combinant SafeKit pour la réplication synchrone (RPO = 0) avec une sauvegarde asynchrone pour la reprise après sinistre hors site. Assurez la disponibilité des applications 24h/24 et 7j/7 et l’intégrité des données sous Windows et Linux avec cette approche à double couche."
+description: "Combinez la haute disponibilité SafeKit (réplication synchrone, RPO 0) et des sauvegardes asynchrones pour une reprise après sinistre hors site sous Windows et Linux."
 category: "best-practises"
 lang: "fr"
 topics: "Réplication synchrone SafeKit pour la haute disponibilité (HA) vs. réplication de sauvegarde asynchrone pour la reprise après sinistre (DR), Table des matières, HADR synchrone : aucune perte de données sur les réseaux rapides (LAN/VLAN), HADR asynchrone : reprise après sinistre sur des réseaux lents (WAN), Comment combiner HADR et la sauvegarde pour une résilience système totale, Comparaison des architectures HADR : réseaux rapides et lents, Guide vidéo : Comment mettre en œuvre HADR avec SafeKit, 🔍 Explorez SafeKit"

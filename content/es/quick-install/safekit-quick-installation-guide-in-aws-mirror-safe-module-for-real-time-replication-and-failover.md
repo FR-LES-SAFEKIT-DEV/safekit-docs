@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad AWS con SafeKit: Instale el módulo mirror.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/"
-description: "Implemente el módulo mirror.safe para SafeKit en AWS para habilitar la replicación síncrona en tiempo real y la conmutación por error automática en Windows y Linux. Esta guía le muestra cómo configurar un clúster de 2 nodos sin almacenamiento sin recursos compartidos para aplicaciones críticas."
+description: "Guía paso a paso: instale el módulo SafeKit mirror.safe en AWS para replicación en tiempo real y conmutación por error entre dos instancias Windows o Linux."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para AWS, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución mirror SafeKit/AWS, Instalación de la solución mirror SafeKit/AWS en Windows y Linux (mirror.safe), Configuración paso a paso de la solución mirror SafeKit/AWS, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"

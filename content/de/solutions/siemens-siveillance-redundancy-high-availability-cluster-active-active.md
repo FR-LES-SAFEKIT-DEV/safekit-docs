@@ -1,7 +1,7 @@
 ---
 title: "Hochverfügbarkeit und Redundanz für Siemens Siveillance Suite: Active-Active SANless-Clustering"
 canonical: "https://safekit.eviden.com/de/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
-description: "Sorgen Sie mit SafeKit für eine 100%ige Betriebszeit Siemens Siveillance Suite. Erreichen Sie SANless-Hochverfügbarkeit, synchrone Replikation und Active-Active-Clustering ohne komplexe Hardware. Laden Sie noch heute die kostenlose Testversion herunter."
+description: "Hochverfügbarkeit für die Siemens Siveillance Suite: SafeKit repliziert Hyper-V-VMs zwischen zwei aktiven Servern mit automatischem Failover."
 category: "solutions"
 lang: "de"
 topics: "SafeKit für Siemens Siveillance: 2-Knoten-SANless Hyper-V-Cluster, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Siemens Siveillance Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert der SafeKit Siemens Siveillance Cluster?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Siemens Siveillance vs. natives Hyper-V-Clustering, Videoanleitung: Konfigurieren eines SafeKit-HA-Cluster für Siemens Siveillance, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"

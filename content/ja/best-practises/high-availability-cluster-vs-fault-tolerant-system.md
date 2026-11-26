@@ -1,7 +1,7 @@
 ---
 title: "HA クラスターとフォールトトレラントシステム：適切な冗長化戦略の選択"
 canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
-description: "HA クラスターとフォールトトレラントシステムを比較します。SafeKit は、共有ストレージなしで HA クラスターを提供します。ハードウェア障害とソフトウェア障害の両方から保護します。特殊な FT ハードウェアは不要で、コストを削減できます。データ損失はありません（RPO 0）。"
+description: "HA クラスターとフォールトトレラントシステムの比較：コスト、復旧、ソフトウェア障害への保護を比べ、標準サーバーで動作する SafeKit の仕組みを紹介します。"
 category: "best-practises"
 lang: "ja"
 topics: "高可用性とフォールトトレランスの違いは何ですか？、高可用性とフォールトトレランスの長所と短所、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "고가용성 아키텍처 및 소프트웨어 클러스터링 모범 사례"
 canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-architectures-and-best-practices/"
-description: "애플리케이션 클러스터링을 위한 고가용성(HA) 아키텍처 및 모범 사례를 살펴보세요. SafeKit 소프트웨어는 공유 디스크 없이 mirror 및 farm 클러스터를 구현합니다. 이 소프트웨어는 중요한 애플리케이션에 대해 데이터 손실 제로 및 자동 장애 조치를 제공합니다."
+description: "애플리케이션 클러스터링을 위한 고가용성 아키텍처와 모범 사례: mirror 및 farm 클러스터, 복제와 장애 조치를 SafeKit 예시로 설명합니다."
 category: "best-practises"
 lang: "ko"
 topics: "고가용성 아키텍처와 모범 사례는 무엇인가요?, 고가용성 아키텍처 및 모범 사례에 대한 비교표, 🔍 SafeKit 살펴보기"

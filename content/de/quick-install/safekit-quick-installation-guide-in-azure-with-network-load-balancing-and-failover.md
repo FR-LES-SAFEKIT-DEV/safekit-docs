@@ -1,7 +1,7 @@
 ---
 title: "Azure-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul farm.safe"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
-description: "Erweitern Sie Azure Network Load Balancing mit dem intelligenten Anwendungsmonitoring von SafeKit. Das Modul farm.safe bietet eine dedizierte Zustandsprüfung für den Azure Load Balancer, die eine nahtlose Hochverfügbarkeit auf Anwendungsebene ermöglicht. Erzielen Sie automatische Selbstheilung und Failover für geschäftskritische Anwendungen."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe in Azure: Es prüft den Anwendungszustand für den Load Balancer von Azure und steuert das Failover."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in Azure, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Azure-Lösung, Installation der SafeKit/Azure-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Azure-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"

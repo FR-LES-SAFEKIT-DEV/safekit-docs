@@ -1,7 +1,7 @@
 ---
 title: "موازنة تحميل الشبكة وتجاوز الأعطال NGINX: تثبيت وحدة farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
-description: "تعرّف على كيفية نشر وحدة farm.safe على نظامي Windows و Linux لتحقيق موازنة تحميل الشبكة التلقائية وتجاوز الفشل التلقائي باستخدام NGINX. يوضح لك هذا الدليل كيفية بناء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP ظاهري، دون الحاجة إلى موازنات تحميل أجهزة خارجية أو تكوين معقد."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe على Windows أو Linux لموازنة أحمال الشبكة وتجاوز الفشل لخوادم NGINX."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ NGINX، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/NGINX، تثبيت حل SafeKit/NGINX على نظامي Windows و Linux (farm.safe)، إعداد حل SafeKit/NGINX خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"

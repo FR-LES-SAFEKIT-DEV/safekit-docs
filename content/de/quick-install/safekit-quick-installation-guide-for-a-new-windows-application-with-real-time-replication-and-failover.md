@@ -1,7 +1,7 @@
 ---
 title: "Windows Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul mirror.safe für Failover"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
-description: "Setzen Sie das Modul mirror.safe für SafeKit ein, um eine synchrone Echtzeit-Replikation und ein automatisches Failover unter Windows zu ermöglichen. Diese Anleitung führt Sie durch die Einrichtung eines SANless-Clusters mit 2 Knoten für kritische Windows Anwendungen ohne gemeinsam genutzten Speicher."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul mirror.safe unter Windows für Echtzeit-Replikation und automatisches Failover Ihrer Anwendung auf zwei Servern."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Windows-Lösung, Installation auf den SafeKit/Windows-Lösungen (mirror.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Windows-Lösung, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"

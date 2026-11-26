@@ -1,7 +1,7 @@
 ---
 title: "HA クラスターで SafeKit によって保護されたアプリケーションをアップグレードする"
 canonical: "https://safekit.eviden.com/ja/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "SafeKit で保護されたアプリケーションを安全にアップグレードする方法を学びましょう。マイナーアップグレードとメジャーアップグレード、ローリングアップグレード、ロールバック戦略、VM ベースの高可用性を比較します。"
+description: "SafeKit で保護されたアプリケーションのアップグレード方法：マイナー・メジャーアップグレード、ローリングアップグレード、ロールバック、VM HA のアプローチ。"
 category: "best-practises"
 lang: "ja"
 topics: "SafeKit で保護された高可用性アプリケーションのアップグレード、VM レベルの高可用性、アプリケーションレベルの高可用性、適切なアップグレード戦略の選択、結論、🔍 SafeKit を探索する"

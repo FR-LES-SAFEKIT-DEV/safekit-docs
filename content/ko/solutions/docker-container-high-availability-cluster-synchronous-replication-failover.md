@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Docker 고가용성 및 실시간 데이터 복제 소프트웨어"
 canonical: "https://safekit.eviden.com/ko/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit 통합된 동기식 데이터 복제를 통해 강력한 Docker 고가용성 솔루션을 제공합니다. 표준 Linux 서버에서 자동 장애 조치 및 데이터 손실 없는 상태 저장 컨테이너 클러스터를 구현하세요. SAN 또는 공유 스토리지가 필요하지 않습니다. 몇 분 안에 배포할 수 있습니다."
+description: "SafeKit으로 구현하는 Docker 고가용성: SAN 없이 Linux 서버 2대 간 컨테이너 데이터의 동기 복제 및 자동 장애 조치."
 category: "solutions"
 lang: "ko"
 topics: "SANless SafeKit mirror 클러스터 Docker와 함께 작동하는 방식, 목차, SafeKit 소프트웨어가 Docker 고가용성 클러스터 간단하게 구현하는 방법, SafeKit mirror 클러스터 Docker와 함께 작동하는 방식, SafeKit 고가용성 제한 사항, 비교: SafeKit SANless 클러스터 vs. 기존 Docker HA, 비교: SafeKit vs. 오픈 소스 Linux HA(Pacemaker/Corosync/DRBD), Docker 고가용성 요약, 🔍 SafeKit 살펴보기"

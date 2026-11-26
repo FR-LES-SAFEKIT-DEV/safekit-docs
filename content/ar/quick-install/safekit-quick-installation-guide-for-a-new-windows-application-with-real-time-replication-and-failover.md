@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي لنظام التشغيل Windows باستخدام SafeKit: تثبيت وحدة mirror.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
-description: "انشر وحدة mirror.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الأعطال التلقائي على Windows. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة منطقة تخزين (SANless) لتطبيقات Windows الهامة بدون تخزين مشترك."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit mirror.safe على Windows للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لتطبيقك على خادمين."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لنظام Windows، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Windows، التثبيت على حلول SafeKit/Windows (mirror.safe)، تهيئة حل SafeKit/Windows خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"

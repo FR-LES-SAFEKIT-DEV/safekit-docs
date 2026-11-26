@@ -1,7 +1,7 @@
 ---
 title: "أبسط طرق تحقيق التوافر العالي MySQL: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/mysql-high-availability-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق التوافر العالي MySQL. يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SANless) مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر وجود Active Directory أو مهارات متخصصة."
+description: "التوفر العالي لـ MySQL مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة النسخ المتطابق SafeKit مجموعة mirror مع MySQL، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة MySQL عالية التوافر بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع MySQL؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ MySQL مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

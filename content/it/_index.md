@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: software ad alta disponibilità per Windows e Linux, senza SAN"
 canonical: "https://safekit.eviden.com/it/"
-description: "SafeKit offre alta disponibilità per Windows e Linux con replica sincrona, failover automatico e bilanciamento del carico su due server standard, senza SAN."
+description: "Software di alta disponibilità SafeKit per Windows e Linux: replica sincrona, failover automatico e bilanciamento del carico su due server standard, senza SAN."
 category: "home"
 lang: "it"
 topics: "Cosa fa SafeKit, Scegli il tuo livello di protezione, Moduli pronti all’uso per le tue applicazioni, Casi d’uso dei clienti, Prezzi semplici e prevedibili, Limitazioni da considerare, Videoteca SafeKit, 🔍 Esplora SafeKit"

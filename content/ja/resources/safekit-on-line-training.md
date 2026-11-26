@@ -1,7 +1,7 @@
 ---
 title: "SafeKit高可用性トレーニング：無料オンライン認定プログラム"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-on-line-training/"
-description: "無料トレーニングでSafeKit SANless HAをマスターしましょう。ソフトウェアのインストール、Webコンソール管理、CLIについて解説します。高度な設定とトラブルシューティングを習得し、24時間365日の高可用性を確保しましょう。公式認定資格をオンラインで取得できます。"
+description: "SafeKit の無料オンライントレーニングと認定：HA クラスターのインストール、Web コンソール、コマンドライン、高度な設定、トラブルシューティング。"
 category: "resources"
 lang: "ja"
 topics: "トレーニングプラットフォームへのアクセス方法、SafeKit 8 トレーニング資料の入手方法、🔍 SafeKit を探索する"

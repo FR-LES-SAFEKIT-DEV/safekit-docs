@@ -1,7 +1,7 @@
 ---
 title: "高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング"
 canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "SafeKit は、Windows および Linux 向けの主要な高可用性ソフトウェアです。重要なアプリケーションを保護します。共有ストレージや複雑な SAN なしで、簡単に HA クラスターを作成できます。1 つのシンプルなソフトウェアソリューションで、リアルタイムレプリケーション、フェイルオーバー、ロードバランシングを提供します。"
+description: "Windows と Linux 向け高可用性ソフトウェア：SafeKit クラスターは共有ストレージなしでリアルタイムレプリケーション、フェイルオーバー、負荷分散を提供します。"
 category: "use-cases"
 lang: "ja"
 topics: "SafeKit の 30 秒エレベーターピッチ、🔍 SafeKit を探索する"

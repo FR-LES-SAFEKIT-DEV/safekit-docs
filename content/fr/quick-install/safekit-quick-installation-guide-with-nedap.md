@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité Nedap avec SafeKit : Installez le module nedap.safe pour le basculement"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-nedap/"
-description: "Déployez le module nedap.safe pour SafeKit afin d’activer la réplication synchrone en temps réel et le basculement automatique de Nedap sous Windows. Ce guide vous explique comment configurer un cluster SANless à 2 nœuds pour des applications critiques sans stockage partagé."
+description: "Guide pas à pas : installez le module SafeKit nedap.safe pour la réplication en temps réel et le basculement automatique du contrôle d’accès Nedap AEOS sous Windows."
 category: "quick-install"
 lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour Nedap, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Nedap, Installation de la solution SafeKit/Nedap sous Windows (nedap.safe), Configuration pas à pas de la solution SafeKit/Nedap, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"

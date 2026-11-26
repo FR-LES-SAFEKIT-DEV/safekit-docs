@@ -1,7 +1,7 @@
 ---
 title: "Heartbeat, conmutación por error y quórum en clústeres Windows y Linux"
 canonical: "https://safekit.eviden.com/es/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Aprenda cómo funcionan los heartbeats, la conmutación por error y el quórum en un clúster. Con SafeKit, no se necesita un tercer servidor de quórum ni un disco de quórum especial. Un simple checker split-brain es suficiente. SafeKit proporciona alta disponibilidad en Windows y Linux."
+description: "Cómo funcionan el heartbeat, la conmutación por error y el quórum en clústeres Windows y Linux, y cómo SafeKit evita el split brain sin disco de quórum ni tercer servidor."
 category: "best-practises"
 lang: "es"
 topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cómo funcionan los heartbeats y la conmutación por error en un clúster Windows o Linux?, Split brain y quórum con servidores en dos salas de ordenadores remotas, Quórum de clúster simple con el checker split-brain SafeKit, 🔍 Explora SafeKit"

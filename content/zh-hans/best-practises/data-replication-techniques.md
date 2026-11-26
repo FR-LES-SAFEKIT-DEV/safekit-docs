@@ -1,7 +1,7 @@
 ---
 title: "高可用性数据复制技术：完整比较"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/data-replication-techniques/"
-description: "比较数据库、磁盘和文件级别的数据复制技术。SafeKit 提供简单、实时的同步复制，无需共享存储。它确保零数据丢失，并在 Windows 和 Linux 上实现自动故障转移。"
+description: "比较数据库级、磁盘级和文件级数据复制技术，以及 SafeKit 如何在无共享存储的情况下实现同步复制和故障转移。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "数据库层面的数据复制技术、磁盘级别还是文件级别？、数据复制技术对比表、🔍 探索 SafeKit"

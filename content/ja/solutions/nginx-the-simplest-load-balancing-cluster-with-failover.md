@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：オールインワンの NGINX ロードバランシング＆高可用性ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
-description: "SafeKit は、強力なソフトウェアのみの NGINX ロードバランシングおよび高可用性ソリューションを提供します。複雑な NLB ハードウェアを、SafeKit の統合仮想 IP、アプリケーション監視、および自動フェイルオーバーに置き換えます。標準の Windows サーバーに NGINX クラスターを今すぐ簡単に展開できます。"
+description: "SafeKit による NGINX の負荷分散と高可用性：標準サーバー上で仮想 IP、アプリケーション監視、自動フェイルオーバーを実現。"
 category: "solutions"
 lang: "ja"
 topics: "SafeKit farm クラスター：NGINX 向けソフトウェアのみの NLB と自動フェイルオーバー、目次、SafeKit ソフトウェアは、どのようにして NGINX ネットワーク負荷分散(NLB)クラスターを簡単に実装するのでしょうか？、farm モードの SafeKit クラスターは NGINX とどのように連携しますか？、比較：NGINX 向け SafeKit farm クラスターとその他の NLB クラスタリングソリューション、ビデオガイド：SafeKit farm NLB クラスターの構成、🔍 SafeKit を探索する"

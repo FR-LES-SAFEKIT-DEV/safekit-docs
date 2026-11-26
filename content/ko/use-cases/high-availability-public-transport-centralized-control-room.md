@@ -1,7 +1,7 @@
 ---
 title: "대중교통의 고가용성: 중앙 제어실"
 canonical: "https://safekit.eviden.com/ko/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit은 대중교통 관제실의 고가용성을 보장합니다. RATP는 파리 메트로 1호선에 SafeKit을 도입했습니다. 이 노선은 완전 자동화되어 있으며 운전사가 없습니다. SafeKit은 로드 밸런싱, 자동 장애 조치 및 실시간 데이터 복제를 제공합니다. SAN이 필요하지 않습니다. 동일한 소프트웨어가 Windows 및 Linux 서버에서 작동합니다."
+description: "대중교통 관제실 고가용성: RATP는 무인 파리 지하철 1호선에 복제, 장애 조치, 부하 분산을 위해 SafeKit을 사용합니다."
 category: "use-cases"
 lang: "ko"
 topics: "대중교통 통제실, 관제실이 왜 중요할까요?, 대중교통을 위한 SafeKit 고가용성, RATP의 실제 적용 사례, 🔍 SafeKit 살펴보기"

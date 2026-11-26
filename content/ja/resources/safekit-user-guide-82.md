@@ -1,7 +1,7 @@
 ---
 title: "SafeKitユーザーガイド 8.2"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-user-guide-82/"
-description: "このドキュメントでは、 SafeKit実装におけるすべての段階（アーキテクチャ、インストール、テスト、管理とトラブルシューティング、サポート、コマンドラインインターフェース）について説明します。"
+description: "SafeKit 8.2 ユーザーガイド：Windows と Linux クラスターのアーキテクチャ、インストール、テスト、管理、トラブルシューティング、サポート、コマンドライン。"
 category: "resources"
 lang: "ja"
 layout: userguide

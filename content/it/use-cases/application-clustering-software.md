@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilità OEM: integrazione del clustering SafeKit nel software"
 canonical: "https://safekit.eviden.com/it/use-cases/application-clustering-software/"
-description: "Potenzia il tuo software con SafeKit. In qualità di partner OEM, puoi integrare il failover automatico e la replica sincrona direttamente nella tua applicazione. Offri ai tuoi clienti un uptime 24/7 su Windows e Linux senza la complessità dei cluster hardware."
+description: "HA per OEM: integra replica e failover SafeKit nel tuo software e offri ai tuoi clienti un cluster Windows o Linux senza competenze HA."
 category: "use-cases"
 lang: "it"
 topics: "Il caso d’uso OEM per l’alta disponibilità, 🔍 Esplora SafeKit"

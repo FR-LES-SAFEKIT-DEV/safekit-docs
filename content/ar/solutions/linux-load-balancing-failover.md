@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: برنامج متكامل لموازنة الأحمال وتوفير التوافر العالي Linux"
 canonical: "https://safekit.eviden.com/ar/solutions/linux-load-balancing-failover/"
-description: "يوفر SafeKit حلاً قوياً ومقتصراً على البرمجيات لتحقيق التوازن في التحميل وتوافر عالٍ Linux. استبدل أجهزة NLB المعقدة ببروتوكول الإنترنت الظاهري المتكامل من SafeKit، ومراقبة التطبيقات، وتجاوز الأعطال التلقائي. انشر مجموعة SafeKit بسهولة على خوادم Linux القياسية اليوم."
+description: "موازنة الأحمال على Linux وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم Linux قياسية."
 category: "solutions"
 lang: "ar"
 topics: "مجموعة SafeKit farm: موازن تحميل للشبكة (NLB) يعتمد على البرمجيات فقط وتجاوز تلقائي للأعطال لنظام Linux، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Linux ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع Linux؟، مقارنة: مجموعة SafeKit farm لـ Linux مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

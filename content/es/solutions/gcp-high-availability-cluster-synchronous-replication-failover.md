@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad de Google GCP: replicación y conmutación por error sincrónicas SafeKit"
 canonical: "https://safekit.eviden.com/es/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
-description: "Implemente un clúster HA simple de Google GCP con SafeKit. Nuestra arquitectura sin recursos compartidos proporciona replicación síncrona, conmutación por error automática y RPO = 0 para aplicaciones Windows y Linux sin el coste de los discos compartidos en la nube."
+description: "Alta disponibilidad en Google Cloud con SafeKit: replicación síncrona y conmutación por error automática entre dos VM Windows o Linux, sin disco compartido."
 category: "solutions"
 lang: "es"
 topics: "Alta disponibilidad sin recursos compartidos SafeKit en GCP: elimine los discos compartidos con cero pérdida de datos, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad GCP sin recursos compartidos?, ¿Cómo funciona el clúster mirror SafeKit con GCP?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para GCP frente a las soluciones nativas de alta disponibilidad y recuperación ante desastres en la nube, Guía en vídeo: Configuración de un clúster mirror SafeKit HA, 🔍 Explora SafeKit"

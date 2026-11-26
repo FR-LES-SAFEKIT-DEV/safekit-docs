@@ -1,7 +1,7 @@
 ---
 title: "Mise à niveau d’une application protégée par SafeKit dans un cluster HA"
 canonical: "https://safekit.eviden.com/fr/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "Découvrez comment mettre à niveau en toute sécurité les applications protégées par SafeKit. Comparez les mises à niveau mineures et majeures, les mises à niveau progressives, les stratégies de restauration et la haute disponibilité basée sur les machines virtuelles."
+description: "Mettre à niveau une application protégée par SafeKit : mises à jour mineures et majeures, mises à niveau progressives, options de retour arrière et approche HA de VM."
 category: "best-practises"
 lang: "fr"
 topics: "Mise à niveau d’une application haute disponibilité protégée par SafeKit, Haute disponibilité au niveau des machines virtuelles, Haute disponibilité au niveau de l’application, Choisir la bonne stratégie de mise à niveau, Conclusion, 🔍 Explorez SafeKit"

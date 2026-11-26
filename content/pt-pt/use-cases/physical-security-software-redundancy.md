@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade e Redundância para Software de Segurança Física"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/physical-security-software-redundancy/"
-description: "SafeKit mantém os sistemas de segurança críticos disponíveis 24 horas por dia, 7 dias por semana. É um cluster de software de 2 nós sem SAN. Fornece replicação síncrona em tempo real e failover automático para sistemas de gestão de vídeo (Milestone, Genetec), controlo de acesso (Nedap, Siemens) e SCADA. Esta redundância simples funciona com qualquer hardware no Windows e Linux, sem a complexidade do armazenamento SAN."
+description: "Redundância de segurança física com SafeKit: cluster de dois nós com replicação síncrona e failover para gestão de vídeo, controlo de acessos e SCADA."
 category: "use-cases"
 lang: "pt-pt"
 topics: "SafeKit oferece duas soluções para redundância e alta disponibilidade de um software de segurança física., 🔍 Explore SafeKit"

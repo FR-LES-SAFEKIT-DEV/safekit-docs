@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: bilanciamento del carico di Microsoft Azure e cluster farm ad alta disponibilità delle applicazioni"
 canonical: "https://safekit.eviden.com/it/solutions/azure-load-balancing-cluster-failover/"
-description: "Migliora Azure Load Balancer con il monitoraggio intelligente delle applicazioni di SafeKit. Ottieni un’elevata disponibilità senza interruzioni con controlli approfonditi dello stato di salute, ripristino automatico e failover per cluster farm mission-critical."
+description: "Cluster farm SafeKit in Azure: controlli di stato applicativi per il bilanciatore del carico Azure, riavvio e failover automatici della tua applicazione su Windows o Linux."
 category: "solutions"
 lang: "it"
 topics: "Migliora il Cloud Load Balancer con il monitoraggio a livello di applicazione e l’autoriparazione, Indice, In che modo il software SafeKit implementa semplicemente un cluster di bilanciamento del carico di rete (NLB) Azure?, Come funziona il cluster farm SafeKit con Azure?, Confronto: cluster farm SafeKit On-Premises e cluster farm SafeKit nel Cloud, Guida video: configurazione di un cluster NLB farm SafeKit, 🔍 Esplora SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "云计算中的集群：适用于 Amazon AWS、Microsoft Azure、Google GCP 和其他云的通用解决方案"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
-description: "Eviden SafeKit 软件如何为云计算（Amazon AWS、Microsoft Azure、Google GCP 和其他云）中的集群提供通用解决方案"
+description: "使用 SafeKit 构建云端集群：一套通用方案，在 AWS、Azure、Google Cloud 及其他云中实现复制、故障转移和负载均衡。"
 category: "solutions"
 lang: "zh-hans"
 topics: "在 Microsoft Azure 中发现 SafeKit、在 Google GCP 中发现 SafeKit、在 Amazon AWS 上发现 SafeKit、其他采用 Eviden SafeKit 的云解决方案、🔍 探索 SafeKit"

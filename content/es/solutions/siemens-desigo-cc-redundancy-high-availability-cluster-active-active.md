@@ -1,7 +1,7 @@
 ---
 title: "Siemens Desigo CC de alta disponibilidad: redundancia de 2 nodos sin SAN"
 canonical: "https://safekit.eviden.com/es/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
-description: "Garantice la disponibilidad ininterrumpida de Siemens Desigo CC con SafeKit. Consiga alta disponibilidad sin SAN, replicación en tiempo real y conmutación por error automática en solo 2 nodos. Reduzca el coste total de propiedad (TCO) al eliminar el almacenamiento compartido."
+description: "Alta disponibilidad para Siemens Desigo CC: SafeKit replica su máquina virtual Hyper-V en tiempo real entre dos servidores con conmutación por error automática, sin SAN."
 category: "solutions"
 lang: "es"
 topics: "SafeKit para Siemens Desigo CC: clúster Hyper-V sin SAN de 2 nodos, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Siemens Desigo CC sin almacenamiento compartido en una SAN?, ¿Cómo funciona el clúster SafeKit Siemens Desigo CC?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para Siemens Desigo CC frente a la agrupación en clústeres nativa Hyper-V, Guía en vídeo: Configuración de un clúster HA SafeKit para Siemens Desigo CC, SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"

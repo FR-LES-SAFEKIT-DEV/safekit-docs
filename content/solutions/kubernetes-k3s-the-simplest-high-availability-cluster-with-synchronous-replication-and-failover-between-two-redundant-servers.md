@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes K3s High Availability: 2-Node Synchronous Replication & Failover"
 canonical: "https://safekit.eviden.com/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Achieve K3s high availability on 2 nodes without external storage or etcd quorum. Learn how SafeKit provides zero-data-loss replication and automatic failover."
+description: "Kubernetes K3s high availability on two nodes with SafeKit: synchronous replication and automatic failover, without external storage or an etcd quorum."
 category: "solutions"
 lang: "en"
 topics: "Simplifying K3s HA: Why Choose SafeKit Over MetalLB and Longhorn?, Table of Contents, How the SafeKit software simply implements a Kubernetes K3s high availability cluster?, How the SafeKit mirror cluster works with Kubernetes K3S?, SafeKit High Availability Limitations, Comparison: SafeKit vs. Standard K3s Stack (MetalLB & Longhorn), Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"

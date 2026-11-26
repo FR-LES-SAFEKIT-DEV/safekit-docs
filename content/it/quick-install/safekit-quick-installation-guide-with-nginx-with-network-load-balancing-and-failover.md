@@ -1,7 +1,7 @@
 ---
 title: "Bilanciamento del carico di rete e failover NGINX: installare il modulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
-description: "Scopri come distribuire il modulo farm.safe su Windows e Linux per il bilanciamento del carico di rete NGINX e il failover automatico. Questa guida mostra come creare un cluster ad alta disponibilità per servizi e applicazioni web utilizzando un IP virtuale, senza la necessità di bilanciatori di carico hardware esterni o configurazioni complesse."
+description: "Guida passo passo: installa il modulo SafeKit farm.safe su Windows o Linux per il bilanciamento del carico di rete e il failover dei server NGINX."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione ad alta disponibilità per NGINX, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/NGINX, Installazione della soluzione SafeKit/NGINX su Windows e Linux (farm.safe), Configurazione passo-passo della soluzione SafeKit/NGINX, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"

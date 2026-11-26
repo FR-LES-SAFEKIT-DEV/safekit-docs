@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité et redondance pour les systèmes de gestion de bâtiment (BMS)"
 canonical: "https://safekit.eviden.com/fr/use-cases/building-management-system-software-bms-redundancy/"
-description: "Assurez une disponibilité de 100 % pour votre bâtiment intelligent avec SafeKit. Notre logiciel de redondance sans SAN à 2 nœuds offre une réplication synchrone en temps réel et un basculement automatique pour tout système de gestion de bâtiment (BMS), y compris Siemens, Honeywell, Schneider Electric et Johnson Controls. Atteignez une perte de données nulle (RPO = 0) et une résilience opérationnelle pour les systèmes CVC et de sécurité critiques sous Windows et Linux."
+description: "Redondance BMS avec SafeKit : cluster à deux nœuds avec réplication synchrone et basculement pour Siemens, Honeywell, Schneider et autres systèmes de gestion de bâtiment."
 category: "use-cases"
 lang: "fr"
 topics: "Qu’est-ce qu’un système de gestion de bâtiment (BMS) ?, Pourquoi le logiciel de gestion de bâtiment est-il essentiel ?, Principaux fournisseurs de systèmes de gestion de bâtiment (BMS), SafeKit propose deux solutions pour la redondance et la haute disponibilité d’un logiciel BMS., SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Explorez SafeKit"

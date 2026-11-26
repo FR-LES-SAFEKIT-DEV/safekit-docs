@@ -1,6 +1,6 @@
 ---
-title: "문의해 주셔서 감사합니다"
-description: "SafeKit 문의 양식을 제출하면 확인 페이지가 표시됩니다."
+title: "문의해 주셔서 감사합니다."
+description: "SafeKit에 관해 문의해 주셔서 감사합니다. 요청이 전송되었으며 Eviden 팀이 곧 답변드리겠습니다."
 lang: "ko"
 category: "home"
 sitemap:

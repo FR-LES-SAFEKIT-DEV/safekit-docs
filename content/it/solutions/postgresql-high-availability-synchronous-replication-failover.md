@@ -1,7 +1,7 @@
 ---
 title: "La più semplice alta disponibilità PostgreSQL: replica sincrona e failover a 2 nodi"
 canonical: "https://safekit.eviden.com/it/solutions/postgresql-high-availability-synchronous-replication-failover/"
-description: "Il modo più semplice per implementare l’alta disponibilità PostgreSQL. SafeKit fornisce un cluster a 2 nodi senza SAN con replica sincrona e failover automatico, senza bisogno di AD o competenze specialistiche."
+description: "Alta disponibilità PostgreSQL con SafeKit: cluster a due nodi con replica sincrona e failover automatico su Windows o Linux, senza SAN."
 category: "solutions"
 lang: "it"
 topics: "Come funziona il cluster mirror SafeKit di SANless con PostgreSQL, Indice, Come implementa il software SafeKit un cluster PostgreSQL ad alta disponibilità senza SAN?, Come funziona il cluster mirror SafeKit con PostgreSQL?, Limitazioni SafeKit High Availability, Confronto: SafeKit per PostgreSQL e altre soluzioni di clustering, Guida video: configurazione di un cluster mirror SafeKit HA, 🔍 Esplora SafeKit"

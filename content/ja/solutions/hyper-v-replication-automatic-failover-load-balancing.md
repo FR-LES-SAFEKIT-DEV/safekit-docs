@@ -1,7 +1,7 @@
 ---
 title: "共有ストレージ（SAN）なしで Hyper-V 高可用性を実現するシンプルな方法"
 canonical: "https://safekit.eviden.com/ja/solutions/hyper-v-replication-automatic-failover-load-balancing/"
-description: "SAN なしで Hyper-V HA を実現。SafeKit は、2 ノードクラスター向けにリアルタイムレプリケーションと自動フェイルオーバーを提供します。今すぐ無料トライアルをダウンロードしてください。"
+description: "SAN 不要の Hyper-V 高可用性：SafeKit が 2 台のサーバー間で仮想マシンをリアルタイムにレプリケートし、障害時に自動で再起動します。"
 category: "solutions"
 lang: "ja"
 topics: "SafeKit for Hyper-V：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで Hyper-V 高可用性クラスターどのように簡単に実装しますか？、SafeKit Hyper-V クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：SafeKit for Hyper-V とネイティブ Hyper-V クラスタリング、ビデオガイド：Hyper-V 用 SafeKit HA クラスターの構成、🔍 SafeKit を探索する"

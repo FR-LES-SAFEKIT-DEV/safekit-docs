@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes K3s 高可用性：2 节点同步复制和故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "在两个节点上实现 K3s 高可用性，无需外部存储或 etcd 仲裁。了解 SafeKit 如何提供零数据丢失复制和自动故障转移。"
+description: "使用 SafeKit 在双节点上实现 Kubernetes K3s 高可用性：同步复制和自动故障转移，无需外部存储或 etcd 仲裁。"
 category: "solutions"
 lang: "zh-hans"
 topics: "简化 K3s 高可用性：为什么选择 SafeKit 而不是 MetalLB 和 Longhorn？、目录、SafeKit 软件如何简单地实现 Kubernetes K3s 高可用性集群？、SafeKit mirror 集群如何与 Kubernetes K3S 配合使用？、SafeKit 高可用性限制、比较：SafeKit 与标准 K3s 堆栈（MetalLB 和 Longhorn）、视频指南：配置 SafeKit HA mirror 集群、🔍 探索 SafeKit"

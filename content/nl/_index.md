@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: software voor hoge beschikbaarheid voor Windows en Linux, zonder SAN"
 canonical: "https://safekit.eviden.com/nl/"
-description: "SafeKit biedt hoge beschikbaarheid voor Windows en Linux met synchrone replicatie, automatische failover en loadbalancing op twee standaardservers, zonder SAN."
+description: "SafeKit-software voor hoge beschikbaarheid op Windows en Linux: synchrone replicatie, automatische failover en loadbalancing op twee standaardservers, zonder SAN."
 category: "home"
 lang: "nl"
 topics: "Wat SafeKit doet, Kies uw beschermingsniveau, Kant-en-klare modules voor uw applicaties, Gebruiksscenario's van klanten, Eenvoudige en voorspelbare prijzen, Beperkingen om rekening mee te houden, SafeKit-videobibliotheek, 🔍 Ontdek SafeKit"

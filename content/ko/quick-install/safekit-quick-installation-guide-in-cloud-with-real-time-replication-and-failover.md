@@ -1,7 +1,7 @@
 ---
 title: "SafeKit을 사용한 클라우드 고가용성: 장애 조치를 위한 mirror.safe 모듈 설치"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
-description: "클라우드용 SafeKit의 mirror.safe 모듈을 배포하여 Windows 및 Linux에서 동기식 실시간 복제 및 자동 장애 조치를 활성화하십시오. 이 가이드는 공유 스토리지 없이 중요한 애플리케이션을 위한 2노드 비공유(shared-nothing) 클러스터 설정 방법을 안내합니다."
+description: "단계별 가이드: Windows 또는 Linux 가상 머신 2대 간 실시간 복제 및 장애 조치를 위한 모든 클라우드용 SafeKit mirror.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
 topics: "클라우드용 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit / 클라우드 mirror 솔루션 개요, Windows 및 Linux에 SafeKit / Cloud mirror 솔루션 설치 (mirror.safe), SafeKit /클라우드 mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"

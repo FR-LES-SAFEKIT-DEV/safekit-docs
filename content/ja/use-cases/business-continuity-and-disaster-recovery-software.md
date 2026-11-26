@@ -1,7 +1,7 @@
 ---
 title: "SafeKit を使用した 2 ノードクラスター向け事業継続および災害復旧ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "SafeKit は、事業継続および災害復旧のためのソフトウェアです。2 つのリモートサーバー室間でシンプルな高可用性ソリューションを実装します。最も使いやすい事業継続および災害復旧ソフトウェアである SafeKit で、24 時間 365 日の稼働時間を実現しましょう。Windows および Linux 向けの 2 ノード同期レプリケーション、自動フェイルオーバー、ロードバランシングにより、高価な SAN や複雑な IT スキルは不要になります。あらゆるクラウドまたはオンプレミス環境における重要なアプリケーションで、データ損失ゼロ（RPO = 0）を実現します。"
+description: "SafeKit による事業継続と災害復旧：2 つのサーバールームにまたがる 2 ノードクラスターで、同期レプリケーションと自動フェイルオーバーを実現。"
 category: "use-cases"
 lang: "ja"
 topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit を探索する"

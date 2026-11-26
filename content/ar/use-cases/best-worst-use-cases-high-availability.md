@@ -1,7 +1,7 @@
 ---
 title: "أفضل وأسوأ حالات استخدام التوافر العالي: دليل تطبيق SafeKit"
 canonical: "https://safekit.eviden.com/ar/use-cases/best-worst-use-cases-high-availability/"
-description: "حدد أفضل وأسوأ حالات الاستخدام للتوافر العالي. تعرّف على نقاط تميز SafeKit في التجميع المعرّف بالبرمجيات لأنظمة Windows و Linux، واكتشف متى قد تفشل حلول التخزين المشترك التقليدية أو حلول التوافر العالي القائمة على الأجهزة في دعم أعمالك."
+description: "أفضل وأسوأ حالات استخدام SafeKit: متى يناسب التجميع البرمجي على Windows و Linux، ومتى يكون التخزين المشترك أو نهج آخر أفضل."
 category: "use-cases"
 lang: "ar"
 topics: "أفضل حالات الاستخدام، قيود التوافر العالي SafeKit، 🔍 استكشف SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：オールインワンの Apache ロードバランシング＆高可用性ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/solutions/apache-load-balancing-failover-2/"
-description: "SafeKit は、強力なソフトウェアのみの Apache ロードバランシングおよび高可用性ソリューションを提供します。複雑な NLB ハードウェアを、SafeKit の統合仮想 IP、アプリケーション監視、および自動フェイルオーバーに置き換えます。標準の Windows サーバーに Apache クラスターを今すぐ簡単にデプロイできます。"
+description: "SafeKit による Apache の負荷分散と高可用性：標準サーバー上で仮想 IP、アプリケーション監視、自動フェイルオーバーを実現。NLB ハードウェア不要。"
 category: "solutions"
 lang: "ja"
 topics: "SafeKit farm クラスター：ソフトウェアのみの NLB と Apache の自動フェイルオーバー、目次、SafeKit ソフトウェアは、Apache ネットワーク負荷分散(NLB)クラスターをどのように簡単に実装しますか？、farm モードの SafeKit クラスターは Apache とどのように連携しますか？、比較：Apache 用 SafeKit farm クラスターとその他の NLB クラスタリングソリューション、ビデオガイド：SafeKit farm NLB クラスターの構成、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
-title: "SafeKit人工智能与支持"
+title: "SafeKit AI & 支持"
 canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-support/"
-description: "SafeKit提供三种支持渠道：标准合同支持（含 24/7 事件报告）、通过SafeKit AI 提供的免费 AI 辅助，以及免费的在线认证和培训计划。"
+description: "SafeKit 支持：提供 7x24 小时事件报告的合同支持、SafeKit AI 免费帮助以及免费在线培训与认证计划。"
 category: "resources"
 lang: "zh-hans"
 topics: "免费人工智能一级支持、标准支持与维护、免费认证与培训计划、🔍 探索 SafeKit"

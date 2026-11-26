@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilità Microsoft SQL Server con SafeKit: installare il modulo sqlserver.safe per il failover"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
-description: "Implementare il modulo sqlserver.safe per SafeKit per abilitare la replica sincrona in tempo reale e il failover automatico per Microsoft SQL Server. Questa guida illustra come configurare un cluster SANless a 2 nodi per applicazioni critiche senza storage condiviso."
+description: "Guida passo passo: installa il modulo SafeKit sqlserver.safe per la replica in tempo reale e il failover automatico di Microsoft SQL Server su due server."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione ad alta disponibilità per Microsoft SQL Server, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Microsoft SQL Server, Installazione della soluzione SafeKit/Microsoft SQL Server su Windows (sqlserver.safe), Configurazione passo-passo della soluzione SafeKit/Microsoft SQL Server, Dimostrazione della soluzione mirror SafeKit, 🔍 Esplora SafeKit"

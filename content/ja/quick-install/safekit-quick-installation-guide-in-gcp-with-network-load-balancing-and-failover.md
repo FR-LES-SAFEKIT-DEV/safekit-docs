@@ -1,7 +1,7 @@
 ---
 title: "GCP ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
-description: "SafeKit のインテリジェントなアプリケーション監視で GCP ネットワーク負荷分散を強化します。farm.safe farm.safe は、GCP ロードバランサー専用のヘルスチェックを提供し、アプリケーションレベルでのシームレスな HA を可能にします。ミッションクリティカルなアプリケーションの自動セルフヒーリングとフェイルオーバーを実現します。"
+description: "手順ガイド：GCP に SafeKit の farm.safe モジュールを導入。GCP ロードバランサー向けにアプリケーションの状態を確認し、フェイルオーバーを処理。"
 category: "quick-install"
 lang: "ja"
 topics: "GCP 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/GCP ソリューションの概要、Windows および Linux への SafeKit/GCP ソリューションのインストール (farm.safe)、SafeKit/GCP ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"

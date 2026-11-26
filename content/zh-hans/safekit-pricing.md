@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 定价"
 canonical: "https://safekit.eviden.com/zh-hans/safekit-pricing/"
-description: "了解 SafeKit 许可模式，并为 Windows 和 Linux 上的高可用性、复制、故障转移和负载平衡请求量身定制的报价。"
+description: "SafeKit 定价：按服务器授予永久许可证，应用模块免费，无需企业版。可为 Windows 或 Linux 集群申请报价。"
 category: "home"
 lang: "zh-hans"
 topics: "许可模式和定价、标准支持与维护、询价"

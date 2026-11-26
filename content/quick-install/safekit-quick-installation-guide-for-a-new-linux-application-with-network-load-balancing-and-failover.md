@@ -1,7 +1,7 @@
 ---
 title: "Linux Network Load Balancing & Failover: Install the SafeKit farm.safe Module"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
-description: "Learn how to deploy the farm.safe module for Linux Network Load Balancing and automatic failover. This guide shows you how to build a highly available cluster for web services and applications using a virtual IP, without the need for external hardware load balancers or complex configuration."
+description: "Step-by-step guide: install the SafeKit farm.safe module on Linux for network load balancing and failover of your application on a virtual IP."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (farm.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"

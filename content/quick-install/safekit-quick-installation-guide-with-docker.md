@@ -1,7 +1,7 @@
 ---
 title: "Docker High Availability with SafeKit: Install the mirror.safe Module for Failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-docker/"
-description: "Deploy the mirror.safe module for SafeKit to enable synchronous real-time replication and automatic failover of Docker containers on Linux. This guide walks you through setting up a 2-node shared-nothing cluster for critical applications without shared storage."
+description: "Step-by-step guide: install the SafeKit mirror.safe module for Docker on Linux, with real-time replication of container data and automatic failover."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for Docker, SafeKit High Availability Limitations, Overview of the SafeKit / Docker solution, Installation of the SafeKit / Docker solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Docker solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"

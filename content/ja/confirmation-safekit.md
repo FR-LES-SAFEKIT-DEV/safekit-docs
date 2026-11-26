@@ -1,6 +1,6 @@
 ---
-title: "お問い合わせいただきありがとうございます"
-description: "SafeKit のお問い合わせフォームを送信すると、確認ページが表示されます。"
+title: "お問い合わせいただきありがとうございます。"
+description: "SafeKit についてお問い合わせいただきありがとうございます。リクエストは送信されました。Eviden チームより折り返しご連絡いたします。"
 lang: "ja"
 category: "home"
 sitemap:

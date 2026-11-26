@@ -1,7 +1,7 @@
 ---
-title: "Demo di failover e disponibilità elevata di SafeKit: tutorial video sul clustering SANless"
+title: "SafeKit Demo di disponibilità elevata e failover: tutorial video sul clustering SANless"
 canonical: "https://safekit.eviden.com/it/resources/high-availability-solutions-ha-solutions-videos/"
-description: "Guarda le demo di SafeKit per scoprire come implementare alta disponibilità SANless a 2 nodi, replica in tempo reale e failover automatico per Windows e Linux. Impara a creare cluster solo software per SQL Server, Hyper-V e VMS senza costosi sistemi di archiviazione condivisi o complessi bilanciatori del carico hardware."
+description: "Video demo SafeKit: guarda cluster a due nodi con replica in tempo reale, failover automatico e bilanciamento del carico per SQL Server, Hyper-V, VMS e altro."
 category: "resources"
 lang: "it"
 topics: "Tutorial e demo tecniche sul failover di SafeKit, 🔍 Esplora SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Hochverfügbarkeitsarchitekturen und Best Practices für Software-Clustering"
 canonical: "https://safekit.eviden.com/de/best-practises/high-availability-architectures-and-best-practices/"
-description: "Erfahren Sie mehr über Hochverfügbarkeitsarchitekturen (HA) und Best Practices für das Anwendungsclustering. Die SafeKit-Software implementiert Mirror- und Farm-Cluster ohne gemeinsam genutzte Festplatten. Sie bietet null Datenverlust und automatisches Failover für geschäftskritische Anwendungen."
+description: "Hochverfügbarkeitsarchitekturen und Best Practices für Anwendungscluster: Mirror- und Farm-Cluster, Replikation und Failover, mit Beispielen aus SafeKit."
 category: "best-practises"
 lang: "de"
 topics: "Was sind die Architekturen für Hochverfügbarkeit und die bewährten Verfahren?, Vergleichstabellen zu Hochverfügbarkeitsarchitekturen und Best Practices, 🔍 SafeKit entdecken"

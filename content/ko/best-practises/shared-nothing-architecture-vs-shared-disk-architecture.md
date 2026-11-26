@@ -1,7 +1,7 @@
 ---
 title: "비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 최적의 HA 클러스터 선택"
 canonical: "https://safekit.eviden.com/ko/best-practises/shared-nothing-architecture-vs-shared-disk-architecture/"
-description: "고가용성을 위한 비공유(shared-nothing) 아키텍처와 공유 디스크 아키텍처를 비교해 보세요. SafeKit은 비공유(shared-nothing) 방식을 사용합니다. 이를 통해 SAN 비용을 없애고 장애 조치를 간소화합니다. 또한 복잡한 하드웨어 제약 없이 동기 복제를 제공합니다."
+description: "고가용성을 위한 비공유(shared-nothing)와 공유 디스크 아키텍처 비교: SafeKit이 서버 간 데이터를 복제해 SAN 비용을 없애고 장애 조치를 단순화하는 방법."
 category: "best-practises"
 lang: "ko"
 topics: "고가용성 클러스터를 위한 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처, 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 장단점, 🔍 SafeKit 살펴보기"

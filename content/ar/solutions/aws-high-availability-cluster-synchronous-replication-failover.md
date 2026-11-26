@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي لخدمات أمازون AWS: النسخ المتماثل المتزامن وتجاوز الأعطال SafeKit"
 canonical: "https://safekit.eviden.com/ar/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
-description: "انشر مجموعة عالية التوافر (HA) بسيطة من Amazon AWS باستخدام SafeKit. توفر البنية بدون مشاركة نسخًا متزامنًا، وتحويلًا تلقائيًا للأخطاء، وهدف RPO يساوي صفرًا لتطبيقات Windows و Linux دون تكلفة الأقراص المشتركة السحابية."
+description: "التوفر العالي في AWS مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي بين مثيلين Windows أو Linux، دون قرص سحابي مشترك."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit HA بدون مشاركة في AWS: تخلص من الأقراص المشتركة مع عدم فقدان أي بيانات، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة AWS عالية التوافر بدون مشاركة ؟، كيف تعمل مجموعة mirror SafeKit مع AWS؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit for AWS مقابل حلول التوافر العالي/التعافي من الكوارث السحابية الأصلية، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

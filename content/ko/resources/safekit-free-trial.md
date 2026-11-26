@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 무료 체험"
 canonical: "https://safekit.eviden.com/ko/resources/safekit-free-trial/"
-description: "SafeKit 무료 평가판을 다운로드하여 애플리케이션 수준 및 VM 수준에서 고가용성을 테스트해 보세요. SafeKit은 데이터 손실 없이 자동 장애 조치를 지원하는 SANless 아키텍처 Windows 및 Linux 용으로 제공합니다."
+description: "SafeKit 무료 평가판을 다운로드하여 Windows 및 Linux에서 복제와 자동 장애 조치로 애플리케이션 수준 또는 VM 수준 고가용성을 테스트하세요."
 category: "resources"
 lang: "ko"
 topics: "SafeKit HA 무료 평가판 및 기술 문서, 🔍 SafeKit 살펴보기"

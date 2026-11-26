@@ -1,6 +1,6 @@
 ---
-title: "Grazie per averci contattato"
-description: "Pagina di conferma visualizzata dopo l’invio del modulo di contatto SafeKit."
+title: "Grazie per averci contattato."
+description: "Grazie per averci contattato riguardo a SafeKit. La tua richiesta è stata inviata e il team Eviden ti risponderà a breve."
 lang: "it"
 category: "home"
 sitemap:

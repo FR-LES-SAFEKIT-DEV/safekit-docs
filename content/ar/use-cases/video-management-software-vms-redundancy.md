@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي والتكرار لبرامج إدارة الفيديو (VMS)"
 canonical: "https://safekit.eviden.com/ar/use-cases/video-management-software-vms-redundancy/"
-description: "SafeKit هو أبسط برنامج عالي التوافر لأنظمة VMS. يمنع فقدان الفيديو. لا يحتاج إلى SAN. يحافظ SafeKit على توفر برنامج VMS على مدار الساعة طوال أيام الأسبوع. من الأمثلة على ذلك Milestone XProtect و Genetec و Siemens و Bosch. يعمل مع أي VMS يعمل بنظام Windows أو Linux. يوفر النسخ المتماثل المتزامن والتحويل التلقائي بين عقدتين. لا يوجد فقدان للبيانات (RPO = 0) ولا أجهزة معقدة."
+description: "تكرار أنظمة VMS مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لـ Milestone و Genetec و Bosch وغيرها من أنظمة إدارة الفيديو."
 category: "use-cases"
 lang: "ar"
 topics: "ما هو برنامج إدارة الفيديو (VMS)؟، لماذا يُعد برنامج VMS بالغ الأهمية؟، أهم موردي VMS، تقدم SafeKit حلولاً مزدوجة لتحقيق التكرار والتوافر العالي لبرامج VMS، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

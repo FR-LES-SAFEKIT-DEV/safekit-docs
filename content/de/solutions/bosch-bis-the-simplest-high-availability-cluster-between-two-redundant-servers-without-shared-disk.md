@@ -1,7 +1,7 @@
 ---
 title: "SafeKit Hochverfügbarkeit für Bosch BIS: 2-Knoten-Cluster ohne gemeinsam genutzte Festplatte"
 canonical: "https://safekit.eviden.com/de/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "Erreichen Sie mit SafeKit eine 24/7-Verfügbarkeit für Bosch Building Integration System (BIS). Unser einfachstes 2-Knoten-Cluster bietet Echtzeit-Replikation und automatische Failover-Funktion ohne SAN oder freigegebene Festplatte. Kostengünstig und einfach zu implementieren. Laden Sie die kostenlose Testversion herunter."
+description: "Hochverfügbarkeit für Bosch BIS: SafeKit repliziert dessen Hyper-V-VM in Echtzeit zwischen zwei Servern mit automatischem Failover, ohne SAN."
 category: "solutions"
 lang: "de"
 topics: "SafeKit für Bosch BIS: SANless Hyper-V-Cluster mit 2 Knoten, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Bosch BIS Hochverfügbarkeitscluster ohne gemeinsam genutzten Speicher auf einem SAN?, Wie funktioniert der SafeKit Bosch BIS Cluster?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Bosch BIS vs. natives Hyper-V-Clustering, Videoanleitung: Konfigurieren eines SafeKit-HA-Cluster für Bosch BIS, SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"

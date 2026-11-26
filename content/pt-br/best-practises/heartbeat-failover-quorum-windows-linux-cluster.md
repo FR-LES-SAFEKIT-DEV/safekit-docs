@@ -1,7 +1,7 @@
 ---
 title: "Heartbeat, failover e Quorum em Clusters Windows e Linux"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Saiba como os heartbeats, failover e o quórum funcionam em um cluster. Com SafeKit, não são necessários um terceiro servidor de quórum nem um disco de quórum especial. Um simples checker split-brain é suficiente. SafeKit oferece alta disponibilidade no Windows e Linux."
+description: "Como funcionam heartbeat, failover e quórum em clusters Windows e Linux, e como o SafeKit evita o split brain sem disco de quórum nem terceiro servidor."
 category: "best-practises"
 lang: "pt-br"
 topics: "Quais são os diferentes cenários em caso de isolamento de rede em um cluster?, Como funcionam os heartbeats e failover em um cluster Windows ou Linux?, Split brain e quórum com servidores em duas salas de computadores remotas, Quórum de cluster simples com o checker split-brain SafeKit, 🔍 Explore SafeKit"

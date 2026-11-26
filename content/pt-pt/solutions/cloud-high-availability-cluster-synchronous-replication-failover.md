@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade Agnóstica à Nuvem: Replicação Síncrona e Failover SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
-description: "Implemente uma solução simples de Alta Disponibilidade independente da nuvem: cluster de replicação síncrona e failover de alta disponibilidade SafeKit com SafeKit. A nossa arquitetura sem compartilhamento oferece replicação síncrona, failover automático e RPO = 0 para aplicações Windows e Linux, sem o custo de discos partilhados na nuvem."
+description: "Alta disponibilidade em qualquer cloud com SafeKit: replicação síncrona e failover automático entre duas VMs Windows ou Linux, sem disco partilhado na cloud."
 category: "solutions"
 lang: "pt-pt"
 topics: "SafeKit HA sem compartilhamento na nuvem: elimine discos partilhados com perda de dados zero, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade na nuvem sem compartilhamento?, Como funciona o cluster mirror SafeKit com a nuvem?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit para Cloud vs. Soluções Nativas de HA/DR na Cloud, Guia em Vídeo: Configuração de um cluster mirror HA SafeKit, 🔍 Explore SafeKit"

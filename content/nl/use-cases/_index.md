@@ -1,7 +1,7 @@
 ---
-title: "Gebruiksscenario's van klanten"
+title: "Gebruiksscenario’s van klanten"
 canonical: "https://safekit.eviden.com/nl/use-cases/"
-description: "SafeKit levert eenvoudige hoge beschikbaarheid zonder SAN. Het beschermt kritieke sectoren. Voorbeelden zijn OEM-software, edge-sites, VMS, EACS, SCADA, BMS, luchtverkeersleiding en metrobedrijf."
+description: "Klantcases van SafeKit: hoge beschikbaarheid voor OEM-software, edge-locaties, VMS, toegangscontrole, SCADA, gebouwbeheer, luchtverkeersleiding en metrobesturing."
 category: "use-cases"
 lang: "nl"
 topics: "SafeKit gebruiksscenario's, 🔍 Ontdek SafeKit"

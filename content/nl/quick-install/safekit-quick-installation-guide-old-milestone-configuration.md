@@ -1,5 +1,6 @@
 ---
 title: "Oude SafeKit Milestone-configuratie"
+description: "Eerdere stapsgewijze configuratie van SafeKit voor Milestone XProtect, inclusief de voor failover vereiste instellingen van het virtuele IP-adres. Ter referentie bewaard."
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
 lang: "nl"

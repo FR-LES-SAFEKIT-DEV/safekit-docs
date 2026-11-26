@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité Siemens Siveillance VMS : cluster à 2 nœuds sans partage avec SafeKit"
 canonical: "https://safekit.eviden.com/fr/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
-description: "Atteignez la haute disponibilité au niveau de l’application pour Siemens Siveillance VMS en utilisant SafeKit. Notre solution à 2 nœuds sans partage utilise le module SiveillanceVMS.safe pour la réplication en temps réel et le basculement automatique sans SAN. Assurez une gestion vidéo continue avec un cluster simple, uniquement logiciel."
+description: "Haute disponibilité Siemens Siveillance VMS avec SafeKit : le module SiveillanceVMS.safe assure réplication en temps réel et basculement sur deux serveurs."
 category: "solutions"
 lang: "fr"
 topics: "Guide d’installation rapide SafeKit avec Siemens Siveillance VMS et SQL (module mirror SiveillanceVMS.safe), Fonctionnement du cluster mirror SafeKit SANless avec Milestone XProtect, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Milestone XProtect sans SAN ?, Comment le cluster mirror SafeKit fonctionne-t-il avec Milestone XProtect ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour Milestone XProtect et autres solutions de clustering, Guide vidéo : Configuration d’un cluster mirror SafeKit HA, 🔍 Explorez SafeKit"

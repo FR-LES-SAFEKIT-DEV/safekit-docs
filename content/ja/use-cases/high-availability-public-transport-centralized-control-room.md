@@ -1,7 +1,7 @@
 ---
 title: "公共交通機関の高可用性：集中管理室"
 canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit は、公共交通機関の管制室に高い可用性をもたらします。RATP はパリメトロ 1 号線に SafeKit を導入しました。この路線は完全に自動化されており、運転手は不要です。SafeKit は、負荷分散、自動フェイルオーバー、リアルタイムデータレプリケーションを提供します。SAN 必要ありません。同じソフトウェアが Windows および Linux サーバーで動作します。"
+description: "公共交通管制室の高可用性：RATP は無人運転のパリメトロ 1 号線に SafeKit を採用し、レプリケーション、フェイルオーバー、負荷分散を実現しています。"
 category: "use-cases"
 lang: "ja"
 topics: "公共交通機関の運行管理室、なぜコントロールルームは重要なのでしょうか？、公共交通機関向け SafeKit 高可用性ソリューション、RATP における実世界での導入、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "Bilanciamento del carico e failover di Apache Network: installare il modulo SafeKit apache_farm.safe"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
-description: "Scopri come distribuire il modulo apache_farm.safe su Windows e Linux per il bilanciamento del carico di rete Apache e il failover automatico. Questa guida mostra come creare un cluster ad alta disponibilità per servizi e applicazioni web utilizzando un IP virtuale, senza la necessità di bilanciatori del carico hardware esterni o configurazioni complesse."
+description: "Guida passo passo: installa il modulo SafeKit apache_farm.safe su Windows o Linux per il bilanciamento del carico di rete e il failover dei server web Apache."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione di Apache per l’alta disponibilità, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Apache, Installazione della soluzione SafeKit/Apache su Windows e Linux (apache_farm.safe), Configurazione passo-passo della soluzione SafeKit/Apache, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"

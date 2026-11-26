@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: All-in-One-Software für Lastausgleich und Hochverfügbarkeit Windows"
 canonical: "https://safekit.eviden.com/de/solutions/windows-load-balancing-failover/"
-description: "SafeKit bietet eine leistungsstarke, reine Softwarelösung Windows Lastausgleich und Hochverfügbarkeit. Ersetzen Sie komplexe NLB-Hardware durch die integrierte virtuelle IP, Anwendungsüberwachung und automatische Failover-Funktion von SafeKit. Stellen Sie noch heute einfach einen SafeKit Cluster auf Standard Windows-Servern bereit."
+description: "Lastverteilung und Hochverfügbarkeit für Windows mit SafeKit: virtuelle IP, Anwendungsüberwachung und automatisches Failover auf Windows-Standardservern."
 category: "solutions"
 lang: "de"
 topics: "Das SafeKit-Farm-Cluster: Software-Only NLB und automatisches Failover für Windows, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Windows Network Load Balancing (NLB)-Cluster?, Wie funktioniert das SafeKit Cluster im farm-Modus mit Windows?, Vergleich: SafeKit-Farm-Cluster für Windows im Vergleich zu anderen NLB-Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit-Farm-NLB-Cluster, 🔍 SafeKit entdecken"

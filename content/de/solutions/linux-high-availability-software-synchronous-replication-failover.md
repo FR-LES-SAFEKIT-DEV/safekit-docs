@@ -1,7 +1,7 @@
 ---
 title: "Die einfachste Hochverfügbarkeit Linux: synchrone Replikation und Failover mit 2 Knoten"
 canonical: "https://safekit.eviden.com/de/solutions/linux-high-availability-software-synchronous-replication-failover/"
-description: "Die einfachste Methode zur Implementierung Linux High Availability. SafeKit bietet einen SANless-Cluster mit 2 Knoten, synchroner Replikation und automatischem Failover – ohne AD oder spezielle Kenntnisse."
+description: "Hochverfügbarkeit für Linux mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover Ihrer Anwendung, ohne SAN."
 category: "solutions"
 lang: "de"
 topics: "So funktioniert der SANless SafeKit-Mirror-Cluster mit Linux, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen SANless-Linux Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster unter Linux?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für Linux im Vergleich zu anderen Clustering-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"

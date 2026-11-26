@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad MySQL con SafeKit: Instale el módulo mysql.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-mysql/"
-description: "Implemente el módulo mysql.safe para SafeKit para habilitar la replicación síncrona en tiempo real y la conmutación por error automática de MySQL en Windows y Linux. Esta guía le muestra cómo configurar un clúster SANless de 2 nodos para aplicaciones críticas sin almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit mysql.safe para replicación en tiempo real y conmutación por error automática de MySQL en Windows o Linux."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para MySQL, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/MySQL, Instalación de la solución SafeKit/MySQL en Windows y Linux (mysql.safe), Configuración paso a paso de la solución SafeKit / Servidor MySQL, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"

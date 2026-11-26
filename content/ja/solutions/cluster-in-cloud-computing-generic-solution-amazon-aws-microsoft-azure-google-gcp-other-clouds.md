@@ -1,7 +1,7 @@
 ---
 title: "クラウドコンピューティングにおけるクラスター：Amazon AWS、Microsoft Azure、Google GCP、その他のクラウドに対応する汎用ソリューション"
 canonical: "https://safekit.eviden.com/ja/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
-description: "Eviden SafeKit ソフトウェアがクラウドコンピューティング（Amazon AWS、Microsoft Azure、Google GCP、その他のクラウド）のクラスターに汎用ソリューションを提供する仕組み"
+description: "SafeKit によるクラウドクラスター：AWS、Azure、Google Cloud などでレプリケーション、フェイルオーバー、負荷分散を実現する 1 つの汎用ソリューション。"
 category: "solutions"
 lang: "ja"
 topics: "Microsoft Azure で SafeKit を試す、Google GCP で SafeKit 検索、Amazon AWS で SafeKit 発見、Eviden SafeKit を使用したその他のクラウドソリューション、🔍 SafeKit を探索する"

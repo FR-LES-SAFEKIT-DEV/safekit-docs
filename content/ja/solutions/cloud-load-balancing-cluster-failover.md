@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：クラウドロードバランシングとアプリケーションの高可用性 farm クラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/cloud-load-balancing-cluster-failover/"
-description: "SafeKit のインテリジェントなアプリケーション監視機能で、クラウドロードバランサーを強化します。ミッションクリティカルな farm クラスター向けに、詳細なヘルスチェック、自動セルフヒーリング、フェイルオーバーを実現し、シームレスな高可用性を達成します。"
+description: "あらゆるクラウドの SafeKit farm クラスター：ロードバランサー向けヘルスチェック、Windows または Linux でのアプリの自動再起動とフェイルオーバー。"
 category: "solutions"
 lang: "ja"
 topics: "アプリケーションレベルのモニタリングと自動修復機能で Cloud Load Balancer を強化、目次、SafeKit ソフトウェアは、どのようにしてクラウドネットワーク負荷分散（NLB）クラスターを簡単に実装するのでしょうか？、SafeKit farm クラスタークラウドとどのように連携しますか？、比較：オンプレミスの SafeKit farm クラスターとクラウドの SafeKit farm クラスター、ビデオガイド：SafeKit farm NLB クラスターの構成、🔍 SafeKit を探索する"

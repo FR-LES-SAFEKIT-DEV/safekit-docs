@@ -1,7 +1,7 @@
 ---
 title: "Gestão de Migração Milestone com SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-milestone-migration/"
-description: "Aprenda a migrar Milestone XProtect Management Server para um cluster de alta disponibilidade SafeKit. Este guia passo a passo abrange a migração da base de dados, a replicação do servidor SQL e a configuração de failover para uma transição suave para novas versões Milestone."
+description: "Como migrar um Milestone XProtect Management Server protegido pelo SafeKit: migração da base de dados, replicação SQL Server e configuração do failover."
 category: "quick-install"
 lang: "pt-pt"
 topics: "Eviden SafeKit"

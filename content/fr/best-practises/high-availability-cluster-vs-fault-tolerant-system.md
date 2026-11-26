@@ -1,7 +1,7 @@
 ---
 title: "Cluster HA ou système tolérant aux pannes : choisir la bonne stratégie de redondance"
 canonical: "https://safekit.eviden.com/fr/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
-description: "Comparez les clusters HA et les systèmes tolérants aux pannes. Le logiciel SafeKit fournit un cluster HA sans stockage partagé. Il protège contre les pannes matérielles et logicielles. Aucun matériel FT spécialisé n’est nécessaire, ce qui réduit les coûts. Il n’y a pas de perte de données (RPO 0)."
+description: "Cluster HA vs système tolérant aux pannes : comparez coûts, reprise et protection contre les pannes logicielles, et découvrez SafeKit sur des serveurs standard."
 category: "best-practises"
 lang: "fr"
 topics: "Quelle est la différence entre la haute disponibilité et la tolérance aux pannes ?, Avantages et inconvénients de la haute disponibilité et de la tolérance aux pannes, 🔍 Explorez SafeKit"

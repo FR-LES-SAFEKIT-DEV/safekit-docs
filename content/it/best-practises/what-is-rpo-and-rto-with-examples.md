@@ -1,7 +1,7 @@
 ---
 title: "Cosa sono RPO e RTO? Definizioni, esempi e strategie HA"
 canonical: "https://safekit.eviden.com/it/best-practises/what-is-rpo-and-rto-with-examples/"
-description: "Impara le definizioni di RPO (Recovery Point Objective) e RTO (Recovery Time Objective) con esempi chiari. Scopri come SafeKit raggiunge l’obiettivo di perdita di dati zero (RPO = 0) e un failover rapido per garantire la continuità aziendale 24 ore su 24, 7 giorni su 7."
+description: "Cosa significano RPO e RTO, con esempi, e come SafeKit raggiunge zero perdita di dati (RPO 0) e un failover automatico rapido per la continuità operativa."
 category: "best-practises"
 lang: "it"
 topics: "Riepilogo rapido: RPO vs. RTO, Indice, Come si calcolano RPO e RTO per una soluzione di alta disponibilità e continuità aziendale?, Come si determinano RPO e RTO per una soluzione di backup e disaster recovery?, In che modo un cluster mirror SafeKit raggiunge RPO pari a zero e RTO basso?, Quali sono i parametri di riferimento RTO per un cluster farm SafeKit con bilanciamento del carico?, Tabelle di confronto: RTO vs RPO, Alta disponibilità in azione: dimostrazioni in tempo reale di perdita di dati pari a zero e tempi di inattività prossimi allo zero, FAQ: Ottimizzazione di RPO e RTO per la continuità aziendale, 🔍 Esplora SafeKit"

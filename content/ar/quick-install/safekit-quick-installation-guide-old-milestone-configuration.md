@@ -1,5 +1,6 @@
 ---
 title: "تكوين SafeKit Milestone القديم"
+description: "الإعداد السابق خطوة بخطوة لـ SafeKit مع Milestone XProtect، بما في ذلك إعدادات IP الافتراضي اللازمة لتجاوز الفشل. محفوظ للرجوع إليه."
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
 lang: "ar"

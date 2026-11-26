@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilità MariaDB con SafeKit: installazione del modulo mysql.safe per il failover"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-mariadb/"
-description: "Implementare il modulo mysql.safe per SafeKit per abilitare la replica sincrona in tempo reale e il failover automatico di MariaDB su Windows e Linux. Questa guida illustra come configurare un cluster SANless a 2 nodi per applicazioni critiche senza storage condiviso."
+description: "Guida passo passo: installa il modulo SafeKit mysql.safe per la replica in tempo reale e il failover automatico di MariaDB su Windows o Linux."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione di MariaDB ad alta disponibilità, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/MariaDB, Installazione della soluzione SafeKit/MariaDB su Windows e Linux (mysql.safe), Configurazione passo-passo della soluzione SafeKit/MariaDB, Dimostrazione della soluzione mirror SafeKit, 🔍 Esplora SafeKit"

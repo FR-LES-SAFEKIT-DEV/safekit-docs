@@ -1,7 +1,7 @@
 ---
 title: "高可用性クラスターにおいて、仮想 IP アドレスはどのように機能しますか？"
 canonical: "https://safekit.eviden.com/ja/best-practises/how-a-virtual-ip-address-works/"
-description: "SafeKit がフェイルオーバー時に仮想 IP を移動する方法：同じサブネット内の Gratuitous ARP、ロードバランサー、クラウド CLI、またはサブネットを跨いでの BGP。ローカル仮想 IP が重要である理由。"
+description: "フェイルオーバー時の仮想 IP の移動：同一サブネットでは Gratuitous ARP、サブネット間ではロードバランサー、クラウドルート、BGP。SafeKit で解説。"
 category: "best-practises"
 lang: "ja"
 topics: "高可用性クラスターにおける仮想 IP アドレスとは？、SafeKit における仮想 IP の実装、同一サブネット内での仮想 IP の動作（mirror クラスター）、ロードバランサーを用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、クラウドプロバイダー CLI を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、BGP を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、異なるサブネット間での DNS リダイレクトの動作（mirror クラスター）、同一サブネット上の farm クラスターにおける仮想 IP ロードバランシングの動作、異なるサブネット間でのロードバランシングされた仮想 IP の動作（farm クラスター）、比較：仮想 IP の実装、レイテンシー、およびアプリケーションの透過性、仮想 IP に関するよくある質問、🔍 SafeKit を探索する"

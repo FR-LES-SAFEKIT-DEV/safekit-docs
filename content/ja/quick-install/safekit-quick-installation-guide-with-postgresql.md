@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による PostgreSQL 高可用性：フェイルオーバーのための postgresql.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-postgresql/"
-description: "SafeKit は用の postgresql.safe モジュールをデプロイして、Windows および Linux 上の PostgreSQL の同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで重要なアプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：SafeKit の postgresql.safe モジュールを導入し、Windows または Linux 上の PostgreSQL のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "PostgreSQL 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/PostgreSQL ソリューションの概要、Windows および Linux への SafeKit/PostgreSQL ソリューションのインストール (postgresql.safe)、SafeKit/PostgreSQL ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

@@ -1,7 +1,7 @@
 ---
 title: "多数の支店を持つ分散型企業における高可用性の標準化"
 canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-software/"
-description: "SafeKit で分散型エンタープライズのすべての支社を保護します。標準化されたソフトウェアのみの高可用性クラスターを大規模に展開します。すべての支社で重要なアプリケーションの 24 時間年中無休の稼働時間を保証します。SafeKit は Windows と Linux で動作します。共有ストレージ、複雑な SAN、オンサイトの IT 専門知識は必要ありません。"
+description: "分散型企業の高可用性：すべての拠点に同じ SafeKit クラスターを展開。SAN も現地の IT スタッフも不要。Windows または Linux 対応。"
 category: "use-cases"
 lang: "ja"
 topics: "分散型エンタープライズにおける事業継続性、🔍 SafeKit を探索する"

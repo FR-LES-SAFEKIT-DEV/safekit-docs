@@ -1,7 +1,7 @@
 ---
 title: "مقارنة مفصلة بين التخزين المشترك من نوع SAN وNAS لتجميعات تجاوز الفشل"
 canonical: "https://safekit.eviden.com/ar/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "قارن بين التخزين المشترك من نوع SAN وNAS لمجموعات تجاوز الفشل. لا يحتاج SafeKit إلى تخزين مشترك. فهو يبسط نصوص تجاوز الفشل ويمنع تلف البيانات. ولا يتطلب أي أجهزة باهظة الثمن ولا قرص نصاب معقد."
+description: "التخزين المشترك SAN مقابل NAS لمجموعات تجاوز الفشل: الحدود والتكاليف والمخاطر، ولماذا يلغي النسخ في SafeKit الحاجة إلى التخزين المشترك."
 category: "best-practises"
 lang: "ar"
 topics: "التخزين المشترك من نوع SAN أو NAS: أيهما أبسط لمجموعة تجاوز الفشل؟، 🔍 استكشف SafeKit"

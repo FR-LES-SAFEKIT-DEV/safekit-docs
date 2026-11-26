@@ -1,7 +1,7 @@
 ---
 title: "장애 조치 클러스터링을 위한 SAN 대 NAS 공유 스토리지: 상세 비교"
 canonical: "https://safekit.eviden.com/ko/best-practises/san-vs-nas-shared-storage-for-a-failover-cluster/"
-description: "장애 조치 클러스터를 위한 SAN 및 NAS 공유 스토리지 비교. SafeKit은 공유 스토리지가 필요하지 않습니다. 장애 조치 스크립트를 단순화하고 데이터 손상을 방지합니다. 값비싼 하드웨어나 복잡한 쿼럼 디스크가 필요하지 않습니다."
+description: "장애 조치 클러스터용 SAN과 NAS 공유 스토리지 비교: 한계, 비용, 위험, 그리고 SafeKit 복제로 공유 스토리지가 필요 없는 이유."
 category: "best-practises"
 lang: "ko"
 topics: "SAN 또는 NAS 공유 스토리지: 장애 조치 클러스터에 더 간단한 것은 무엇일까요?, 🔍 SafeKit 살펴보기"

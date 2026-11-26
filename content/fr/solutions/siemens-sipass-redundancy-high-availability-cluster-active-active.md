@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité et redondance pour le contrôle d’accès Siemens SiPass : cluster sans SAN à 2 nœuds"
 canonical: "https://safekit.eviden.com/fr/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
-description: "Assurez une disponibilité 24h/24 et 7j/7 pour le contrôle d’accès Siemens SiPass. SafeKit offre une haute disponibilité simple et sans SAN avec réplication en temps réel et basculement automatique sur deux serveurs standard. Aucun SAN ni compétences informatiques spécialisées ne sont requis. Téléchargez la version d’essai gratuite."
+description: "Haute disponibilité pour le contrôle d’accès Siemens SiPass : SafeKit réplique sa machine virtuelle Hyper-V entre deux serveurs avec basculement automatique, sans SAN."
 category: "solutions"
 lang: "fr"
 topics: "SafeKit pour Siemens SiPass : cluster Hyper-V sans SAN à 2 nœuds, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Siemens SiPass sans stockage partagé sur un SAN ?, Comment fonctionne le cluster SafeKit Siemens SiPass ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour Siemens SiPass et le clustering natif Hyper-V, Guide vidéo : Configuration d’un cluster HA SafeKit pour Siemens SiPass, SafeKit, une solution reconnue sur le marché de la sécurité, 🔍 Explorez SafeKit"

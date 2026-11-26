@@ -1,7 +1,7 @@
 ---
 title: "توفير إمكانية الوصول العالية Milestone XProtect باستخدام SafeKit: تثبيت وحدة milestone.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/"
-description: "انشر وحدة milestone.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الأعطال التلقائي لـ Milestone XProtect على Windows. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة منطقة تخزين (SANless) للتطبيقات الهامة بدون تخزين مشترك."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit milestone.safe للنسخ في الوقت الفعلي وتجاوز الفشل لـ Milestone XProtect Management Server."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع لـ Milestone XProtect عالي التوافر، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Milestone XProtect، تثبيت حل SafeKit/Milestone XProtect على Windows (milestone.safe)، إعداد حل SafeKit/Milestone XProtect خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Amazon AWS Alta Disponibilidade: Replicação Síncrona e Failover SafeKit"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
-description: "Implemente um cluster simples de alta disponibilidade (HA) da Amazon AWS com SafeKit. A nossa arquitetura sem compartilhamento oferece replicação síncrona, failover automático e RPO =0 para aplicações Windows e Linux, sem o custo de discos partilhados na nuvem."
+description: "Alta disponibilidade na AWS com SafeKit: replicação síncrona e failover automático entre duas instâncias Windows ou Linux, sem disco partilhado na cloud."
 category: "solutions"
 lang: "pt-pt"
 topics: "SafeKit sem compartilhamento HA na AWS: Elimine os Discos Partilhados com Perda Zero de Dados, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade AWS sem compartilhamento?, Como funciona o cluster mirror SafeKit com AWS?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit para AWS vs. Soluções Nativas de HA/DR na Nuvem, Guia em Vídeo: Configuração de um cluster mirror HA SafeKit, 🔍 Explore SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Amazon AWS hoge beschikbaarheid: synchrone replicatie en failover SafeKit"
 canonical: "https://safekit.eviden.com/nl/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
-description: "Implementeer een eenvoudig Amazon AWS HA-cluster met SafeKit. Onze shared-nothing-architectuur biedt synchrone replicatie, automatische failover en RPO =0 voor Windows en Linux toepassingen zonder de kosten van gedeelde cloudschijven."
+description: "Hoge beschikbaarheid in AWS met SafeKit: synchrone replicatie en automatische failover tussen twee Windows- of Linux-instances, zonder gedeelde cloudschijf."
 category: "solutions"
 lang: "nl"
 topics: "SafeKit shared-nothing HA in AWS: elimineer gedeelde schijven met nul gegevensverlies, Inhoudsopgave, Hoe implementeert de SafeKit software eenvoudig een AWS shared-nothing?, Hoe werkt het SafeKit mirror-cluster met AWS?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor AWS versus native cloud HA/DR-oplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"

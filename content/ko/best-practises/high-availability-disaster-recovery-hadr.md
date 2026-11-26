@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 고가용성과 재해 복구 백업의 결합"
 canonical: "https://safekit.eviden.com/ko/best-practises/high-availability-disaster-recovery-hadr/"
-description: "동기식 복제(RPO = 0)를 위한 SafeKit과 원격지 재해 복구를 위한 비동기식 백업을 결합하여 탄력적인 HA/DR 전략을 구축하십시오. 이 이중 계층 접근 방식을 통해 Windows 및 Linux에서 연중무휴 24시간 애플리케이션 가동 시간과 데이터 무결성을 보장합니다."
+description: "Windows 및 Linux에서 SafeKit 고가용성(동기 복제, RPO 0)과 원격지 재해 복구용 비동기 백업을 결합하세요."
 category: "best-practises"
 lang: "ko"
 topics: "HA를 위한 동기식 SafeKit 복제와 DR을 위한 비동기식 백업 복제, 목차, 동기식 HADR: 고속 네트워크(LAN/VLAN)를 통한 제로 데이터 손실, 비동기 HADR: 느린 네트워크(WAN)를 통한 재해 복구, HADR과 백업을 결합하여 완벽한 시스템 복원력을 확보하는 방법, HADR 아키텍처 비교: 고속 네트워크 vs. 저속 네트워크, 동영상 가이드: SafeKit을 사용하여 HADR을 구현하는 방법, 🔍 SafeKit 살펴보기"

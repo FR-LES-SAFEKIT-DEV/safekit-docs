@@ -1,7 +1,7 @@
 ---
 title: "高可用性最佳实践"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/"
-description: "探索 SafeKit 高可用性最佳实践：HA 架构模式、同步与异步复制、集群策略、VIP 故障转移、RPO/RTO 以及 Windows 和 Linux 的冗余设计。"
+description: "高可用性最佳实践：HA 架构、同步与异步复制、虚拟 IP 故障转移、仲裁、RPO 和 RTO，结合 SafeKit 讲解。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "架构与设计模式、高可用性和灾难恢复、复制策略、集群与故障转移、存储与基础设施、实施与迁移"

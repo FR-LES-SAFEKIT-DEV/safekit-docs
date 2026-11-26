@@ -1,7 +1,7 @@
 ---
 title: "云无关型高可用性：SafeKit 同步复制和故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
-description: "使用 SafeKit 部署一个简单的云无关高可用性：SafeKit 同步复制和故障转移 HA 集群。我们的无共享架构为 Windows 和 Linux 应用程序提供同步复制、自动故障转移和 RPO = 0，而无需云共享磁盘的成本。"
+description: "使用 SafeKit 在任意云中实现高可用性：在两台 Windows 或 Linux VM 间同步复制并自动故障转移，无需云共享磁盘。"
 category: "solutions"
 lang: "zh-hans"
 topics: "SafeKit 云端无共享高可用性：消除共享磁盘，实现零数据丢失、目录、SafeKit 软件如何简单地实现无共享云高可用性集群？、SafeKit mirror 集群如何与云端协同工作？、SafeKit 高可用性限制、比较：适用于 Cloud 的 SafeKit 与原生云高可用/灾难恢复解决方案、视频指南：配置 SafeKit HA mirror 集群、🔍 探索 SafeKit"

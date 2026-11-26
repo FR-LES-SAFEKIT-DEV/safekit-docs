@@ -1,7 +1,7 @@
 ---
 title: "SafeKit-architecturen"
 canonical: "https://safekit.eviden.com/nl/architectures/"
-description: "Ontdek architecturen met hoge beschikbaarheid met SafeKit. Leer meer over Mirror, Farm en Farm + mirror-clusters voor SANless-applicatieoverdracht en taakverdeling."
+description: "SafeKit-clusterarchitecturen: mirror-clusters met realtime replicatie, farm-clusters met loadbalancing, actief-actief en N-1-redundantie, zonder SAN."
 category: "architectures"
 lang: "nl"
 topics: "Wat zijn de verschillende high-availability-architecturen en de verschillende softwareclusters met SafeKit?, Hoe bouw je high-availability-clusters met SafeKit?, 🔍 Ontdek SafeKit"

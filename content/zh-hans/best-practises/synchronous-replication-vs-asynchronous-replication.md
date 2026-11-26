@@ -1,7 +1,7 @@
 ---
 title: "同步复制与异步复制：SafeKit 如何确保零数据丢失？"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/synchronous-replication-vs-asynchronous-replication/"
-description: "比较同步复制和异步复制在业务连续性方面的区别。SafeKit 使用实时同步复制，以保证高可用性集群中的零数据丢失（RPO = 0）。异步复制更适合远距离灾难恢复。"
+description: "同步复制与异步复制对比：为何同步复制在 SafeKit 集群中实现零数据丢失（RPO 0），以及何时更适合异步复制。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "在同步或异步复制的情况下，应用程序故障转移时会丢失数据吗？、目录、异步复制的工作原理是什么？、同步复制的工作原理是什么？、半同步复制的工作原理是什么？、最终结论：为高可用性选择合适的复制方案、比较表：同步、异步和半同步、视频指南：配置同步实时复制和高可用性、常见问题：高可用性集群中的复制策略、🔍 探索 SafeKit"

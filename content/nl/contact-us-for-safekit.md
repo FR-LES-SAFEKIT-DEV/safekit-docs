@@ -1,7 +1,7 @@
 ---
 title: "Neem contact met ons op over SafeKit"
 canonical: "https://safekit.eviden.com/nl/contact-us-for-safekit/"
-description: "Neem contact op met Eviden over SafeKit-software voor hoge beschikbaarheid."
+description: "Neem contact op met Eviden over SafeKit-software voor hoge beschikbaarheid op Windows en Linux: prijzen, technische vragen, partnerschappen of een demo."
 lang: "nl"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"

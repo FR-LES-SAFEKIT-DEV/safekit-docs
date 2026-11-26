@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade PostgreSQL com SafeKit: Instale o Módulo postgresql.safe para o Failover"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-with-postgresql/"
-description: "Implemente o módulo postgresql.safe para SafeKit para ativar a replicação síncrona em tempo real e o failover automático do PostgreSQL no Windows e Linux. Este guia explica como configurar um cluster SANless de 2 nós para aplicações críticas sem armazenamento partilhado."
+description: "Guia passo a passo: instale o módulo SafeKit postgresql.safe para replicação em tempo real e failover automático do PostgreSQL em Windows ou Linux."
 category: "quick-install"
 lang: "pt-pt"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para PostgreSQL, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução SafeKit/PostgreSQL, Instalação da solução SafeKit/PostgreSQL no Windows e Linux (postgresql.safe), Configuração passo a passo da solução SafeKit/PostgreSQL, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"

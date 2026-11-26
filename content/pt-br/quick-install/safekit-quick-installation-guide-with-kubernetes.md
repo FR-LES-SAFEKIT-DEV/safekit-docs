@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade K3S com SafeKit: Instale o Módulo k3s.safe para Failover"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-with-kubernetes/"
-description: "Implemente o módulo k3s.safe para SafeKit para habilitar a replicação síncrona em tempo real e o failover automático do Kubernetes no Linux. Este guia mostra como configurar um cluster SANless de 2 nós para aplicações críticas Linux sem armazenamento compartilhado."
+description: "Guia passo a passo: instale o módulo SafeKit k3s.safe para um cluster Kubernetes K3s de dois nós no Linux, com replicação em tempo real e failover automático."
 category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para Kubernetes, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Kubernetes, Instalação e configuração da solução SafeKit/Kubernetes no Linux (k3s.safe), Quais são os diferentes cenários em caso de isolamento de rede em um cluster?, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"

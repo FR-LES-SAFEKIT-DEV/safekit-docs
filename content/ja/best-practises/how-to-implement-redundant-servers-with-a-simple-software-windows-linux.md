@@ -1,7 +1,7 @@
 ---
 title: "シンプルな HA ソフトウェアで冗長サーバーを実装する方法"
 canonical: "https://safekit.eviden.com/ja/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
-description: "シンプルなソフトウェアのみのアプローチで、冗長サーバーを実装する方法を学びましょう。SafeKit は、Windows および Linux 上でリアルタイムのデータレプリケーションと自動フェイルオーバーを提供します。共有ディスクや専門的な IT スキルは必要ありません。"
+description: "ソフトウェアのみで冗長サーバーを実装する方法：SafeKit は Windows と Linux でリアルタイムレプリケーションと自動フェイルオーバーを提供。共有ディスク不要です。"
 category: "best-practises"
 lang: "ja"
 topics: "リアルタイムレプリケーションとフェイルオーバーを用いたアクティブ/パッシブ冗長サーバーの実装方法、ネットワーク負荷分散とフェイルオーバーを用いたアクティブ/アクティブ冗長サーバーを実装する方法は？、🔍 SafeKit を探索する"

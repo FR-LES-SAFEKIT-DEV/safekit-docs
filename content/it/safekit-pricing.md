@@ -1,7 +1,7 @@
 ---
 title: "Prezzi SafeKit"
 canonical: "https://safekit.eviden.com/it/safekit-pricing/"
-description: "Comprendete il modello di licenza SafeKit e richiedete un preventivo personalizzato per alta disponibilità, replica, failover e bilanciamento del carico su Windows e Linux."
+description: "Prezzi SafeKit: licenze perpetue per server, moduli applicativi gratuiti e nessuna edizione Enterprise necessaria. Richiedi un preventivo per cluster Windows o Linux."
 category: "home"
 lang: "it"
 topics: "Modello di licenza e prezzi, Supporto e manutenzione standard, Richiedi un preventivo"

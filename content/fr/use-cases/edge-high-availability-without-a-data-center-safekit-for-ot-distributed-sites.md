@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité en périphérie sans centre de données : SafeKit pour les sites OT et distribués"
 canonical: "https://safekit.eviden.com/fr/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "Les sites de calcul en périphérie n’ont pas de centre de données, mais ils ont toujours besoin d’une haute disponibilité. SafeKit transforme deux serveurs standard en un cluster de haute disponibilité prêt à l’emploi. Il ne nécessite aucun SAN ni personnel informatique, et le basculement est automatique."
+description: "Haute disponibilité edge sans data center : SafeKit transforme deux serveurs standard en cluster prêt à l’emploi pour l’OT et les sites distribués, sans SAN."
 category: "use-cases"
 lang: "fr"
 topics: "Le défi de la haute disponibilité en périphérie, Pourquoi SafeKit est la solution naturelle pour l’edge computing, Adéquation au déploiement en périphérie et distribué, Pourquoi les environnements OT en périphérie sont différents, Cas d’utilisation idéaux en périphérie, Haute disponibilité en périphérie vs. en centre de données : les principales différences, Systèmes d’exploitation et plateformes pris en charge, 🔍 Explorez SafeKit"

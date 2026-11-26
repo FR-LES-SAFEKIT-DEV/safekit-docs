@@ -1,7 +1,7 @@
 ---
 title: "SafeKit Smart Console: 고가용성 클러스터 내 손안에"
 canonical: "https://safekit.eviden.com/ko/architectures/safekit-smart-console-your-high-availability-cluster-in-your-pocket/"
-description: "Smart Console를 사용하여 SafeKit 클러스터를 손쉽게 관리하세요. 코딩이 필요 없는 구성, 스마트폰 호환성, 실시간 PWA 알림을 누리세요. 인적 오류를 제거하고 손끝에서 고가용성을 보장하세요. 자세히 알아보기."
+description: "SafeKit Smart Console: 코드 없이 브라우저나 스마트폰에서 고가용성 클러스터를 구성하고 모니터링하며 실시간 알림을 받습니다."
 category: "architectures"
 lang: "ko"
 topics: "Smart Console: 데스크톱 및 모바일에서 직관적이고 오류 없는 고가용성 제공, 목차, SafeKit mirror 클러스터가 웹 콘솔과 어떻게 연동되나요?, SafeKit farm 클러스터가 웹 콘솔과 어떻게 연동되나요?, 웹 콘솔을 통해 여러 모듈과 여러 클러스터를 모니터링하는 방법은 무엇인가요?, 콘솔에서 경고를 모니터링하고 이메일 알림을 관리하는 방법, 🔍 SafeKit 살펴보기"

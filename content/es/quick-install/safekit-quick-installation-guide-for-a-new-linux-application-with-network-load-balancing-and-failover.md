@@ -1,7 +1,7 @@
 ---
 title: "Balanceo de carga y conmutación por error de red Linux: Instale el módulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
-description: "Aprenda a implementar el módulo farm.safe para el equilibrio de carga de red Linux y la conmutación por error automática. Esta guía muestra cómo crear un clúster de alta disponibilidad para servicios y aplicaciones web mediante una IP virtual, sin necesidad de balanceadores de carga de hardware externos ni configuraciones complejas."
+description: "Guía paso a paso: instale el módulo SafeKit farm.safe en Linux para equilibrio de carga de red y conmutación por error de su aplicación en una IP virtual."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para Linux, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/Linux, Instalación de la solución SafeKit/Linux (farm.safe), Configuración paso a paso de la solución SafeKit/Linux, Demostración de la solución farm SafeKit, 🔍 Explora SafeKit"

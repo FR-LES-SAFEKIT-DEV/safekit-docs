@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité pour les systèmes de contrôle du trafic aérien"
 canonical: "https://safekit.eviden.com/fr/use-cases/high-availability-air-traffic-control-system/"
-description: "SafeKit assure une haute disponibilité pour les systèmes de contrôle du trafic aérien. ADB SafeGate a déployé SafeKit dans des aéroports du monde entier. Les applications critiques sont disponibles 24h/24 et 7j/7. SafeKit réplique les données en temps réel sans aucune perte de données. Il assure un basculement automatique sur des serveurs Windows standards. Aucun stockage partagé n’est nécessaire."
+description: "Haute disponibilité du contrôle aérien : ADB SafeGate utilise SafeKit dans des aéroports du monde entier pour la réplication en temps réel et le basculement sous Windows."
 category: "use-cases"
 lang: "fr"
 topics: "Systèmes de contrôle du trafic aérien, Pourquoi le contrôle du trafic aérien est-il essentiel ?, Comment SafeKit protège le contrôle du trafic aérien, Mise en œuvre dans le monde réel chez ADB SafeGate, 🔍 Explorez SafeKit"

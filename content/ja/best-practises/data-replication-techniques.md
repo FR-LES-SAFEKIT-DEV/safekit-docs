@@ -1,7 +1,7 @@
 ---
 title: "高可用性のためのデータレプリケーション技術：完全比較"
 canonical: "https://safekit.eviden.com/ja/best-practises/data-replication-techniques/"
-description: "データベース、ディスク、ファイルレベルでのデータレプリケーション技術を比較します。SafeKit ソフトウェアは、共有ストレージなしでシンプルかつリアルタイムな同期レプリケーションを提供します。Windows および Linux でゼロデータ損失と自動フェイルオーバーを保証します。"
+description: "データベース、ディスク、ファイルレベルのデータレプリケーション技術を比較し、SafeKit が共有ストレージなしで同期レプリケーションとフェイルオーバーを実現する方法を解説。"
 category: "best-practises"
 lang: "ja"
 topics: "データベースレベルでのデータレプリケーション技術、ディスクレベルですか、それともファイルレベルですか？、データレプリケーション技術の比較表、🔍 SafeKit を探索する"

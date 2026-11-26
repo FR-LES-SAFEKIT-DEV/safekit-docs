@@ -1,7 +1,7 @@
 ---
 title: "Balanceo de carga y conmutación por error de la red en la nube: Instale el módulo farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
-description: "Mejore el equilibrio de carga de la red en la nube con la supervisión inteligente de aplicaciones de SafeKit. El módulo farm.safe proporciona una comprobación de estado dedicada para el balanceador de carga en la nube, lo que permite una alta disponibilidad (HA) sin interrupciones a nivel de aplicación. Consiga la autocorrección y la conmutación por error automáticas para aplicaciones de misión crítica."
+description: "Guía paso a paso: instale el módulo SafeKit farm.safe en cualquier nube: comprueba el estado de la aplicación para el balanceador de carga cloud y gestiona la conmutación."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para la nube, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit / Cloud, Instalación de la solución SafeKit / Cloud en Windows y Linux (farm.safe), Configuración paso a paso de la solución SafeKit / Cloud, Demostración de la solución farm SafeKit, 🔍 Explora SafeKit"

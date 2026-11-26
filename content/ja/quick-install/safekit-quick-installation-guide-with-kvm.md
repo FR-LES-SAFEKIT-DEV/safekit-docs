@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による KVM 高可用性：フェイルオーバー用の kvm.safe モジュールをインストールする"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-kvm/"
-description: "SafeKit を使用したアクティブ/アクティブ KVM クラスター向けに kvm.safe を設定する方法について説明します。2 ノードのシェアードナッシングアーキテクチャで、VM レベルでの高可用性を実現します。や共有ストレージのコストをかけずに、複数の VM をノード間で同期レプリケートし SAN 自動フェイルオーバーを実現します。"
+description: "手順ガイド：SafeKit の kvm.safe モジュールを導入し、Linux 上の KVM 仮想マシンを複製・フェイルオーバー。VM レベルの高可用性を実現。"
 category: "quick-install"
 lang: "ja"
 topics: "KVM 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/KVM ソリューションの概要、Linux への SafeKit/KVM ソリューションのインストール (kvm.safe)、SafeKit/KVM ソリューションのステップバイステップ設定、VM レベルの高可用性ソリューションのデモンストレーション、🔍 SafeKit を探索する"

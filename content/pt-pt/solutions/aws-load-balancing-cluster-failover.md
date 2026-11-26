@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: cluster farm Alta Disponibilidade para Balanceamento de Carga e Aplicações na Amazon AWS"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/aws-load-balancing-cluster-failover/"
-description: "Melhore AWS Load Balancer com a monitorização inteligente de aplicações do SafeKit. Obtenha alta disponibilidade contínua com verificações de estado aprofundadas, auto-reparação automática e failover para clusters farm de missão crítica."
+description: "Clusters farm SafeKit na AWS: verificações de estado da aplicação para o balanceador de carga AWS, reinício automático e failover da sua aplicação em Windows ou Linux."
 category: "solutions"
 lang: "pt-pt"
 topics: "Melhore o Balanceador de Carga na Nuvem com Monitorização ao Nível da Aplicação e Autocorreção, Índice, Como o software SafeKit implementa de forma simples um cluster de balanceamento de carga de rede (NLB) AWS?, Como funciona o cluster farm SafeKit com AWS?, Comparação: cluster farm SafeKit On-Premises vs. cluster farm SafeKit na Nuvem, Guia em Vídeo: Configuração de um cluster NLB farm SafeKit, 🔍 Explore SafeKit"

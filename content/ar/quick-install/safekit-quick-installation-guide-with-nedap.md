@@ -1,7 +1,7 @@
 ---
 title: "Nedap High Availability مع SafeKit: قم بتثبيت وحدة nedap.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-nedap/"
-description: "انشر وحدة nedap.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الأعطال التلقائي لـ Nedap على Windows. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة SAN للتطبيقات الهامة بدون تخزين مشترك."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit nedap.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لنظام التحكم في الوصول Nedap AEOS على Windows."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع عالي التوافر لـ Nedap، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Nedap، تثبيت حل SafeKit/Nedap على Windows (nedap.safe)، تكوين حل SafeKit/Nedap خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "고가용성을 위한 데이터 복제 기술: 완벽 비교"
 canonical: "https://safekit.eviden.com/ko/best-practises/data-replication-techniques/"
-description: "데이터베이스, 디스크 및 파일 수준의 데이터 복제 기술을 비교해 보세요. SafeKit 소프트웨어는 공유 스토리지 없이 간단하고 실시간 동기 복제를 제공합니다. 이를 통해 데이터 손실을 방지하고 Windows 및 Linux에서 자동 장애 조치를 보장합니다."
+description: "데이터베이스, 디스크, 파일 수준의 데이터 복제 기술 비교와 SafeKit이 공유 스토리지 없이 동기 복제 및 장애 조치를 제공하는 방법."
 category: "best-practises"
 lang: "ko"
 topics: "데이터베이스 수준의 데이터 복제 기술, 디스크 수준 또는 파일 수준?, 데이터 복제 기술 비교표, 🔍 SafeKit 살펴보기"

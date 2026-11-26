@@ -1,7 +1,7 @@
 ---
 title: "Linux ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
-description: "Linux ネットワーク負荷分散と自動フェイルオーバーのために farm.safe モジュールをデプロイする方法を学びます。このガイドでは、外部ハードウェアロードバランサーや複雑な設定を必要とせずに、仮想 IP を使用して Web サービスおよびアプリケーションの高可用性クラスターを構築する方法を説明します。"
+description: "手順ガイド：Linux に SafeKit の farm.safe モジュールを導入し、仮想 IP でアプリケーションのネットワーク負荷分散とフェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Linux 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Linux ソリューションの概要、SafeKit/Linux ソリューション (farm.safe) のインストール、SafeKit/Linux ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"

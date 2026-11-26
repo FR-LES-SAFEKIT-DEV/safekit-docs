@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي لبرنامج Siemens Desigo CC: التكرار بدون شبكة SAN بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
-description: "اضمن وقت تشغيل على مدار الساعة طوال أيام الأسبوع لنظام Siemens Desigo CC باستخدام SafeKit. حقق توفرًا عاليًا بدون شبكة SAN، ونسخًا متماثلًا في الوقت الفعلي، وتحويلًا تلقائيًا في حالة الفشل على عقدتين فقط. خفض التكلفة الإجمالية للملكية عن طريق التخلص من التخزين المشترك."
+description: "التوفر العالي لـ Siemens Desigo CC: ينسخ SafeKit جهازه الافتراضي Hyper-V في الوقت الفعلي بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit لبرنامج Siemens Desigo CC: مجموعة Hyper-V بدون شبكة SAN مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Siemens Desigo CC عالية التوافر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Siemens Desigo CC؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Siemens Desigo CC مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لبرنامج Siemens Desigo CC، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

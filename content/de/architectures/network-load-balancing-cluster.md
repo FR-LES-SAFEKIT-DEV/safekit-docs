@@ -1,7 +1,7 @@
 ---
 title: "SafeKit-Farm-Cluster: Netzwerk-Lastausgleich und Hochverfügbarkeit für Windows und Linux"
 canonical: "https://safekit.eviden.com/de/architectures/network-load-balancing-cluster/"
-description: "SafeKit bietet leistungsstarkes Netzwerk-Load-Balancing (NLB) und automatisches Failover in einem einzigen Softwarepaket. Ersetzen Sie teure Hardware-Load-Balancer durch das virtuelle IP-Management auf Kernel-Ebene von SafeKit für Windows und Linux. Ideal für die OEM-Integration und vereinfachtes Cluster-Management."
+description: "SafeKit-Farm-Cluster: Netzwerk-Lastverteilung auf einer virtuellen IP mit automatischem Failover zwischen Windows- oder Linux-Servern, ohne Hardware-Load-Balancer."
 category: "architectures"
 lang: "de"
 topics: "SafeKit-Farm-Cluster: Software-Load-Balancing und automatisches Failover für Windows und Linux, Inhaltsverzeichnis, Wie implementiert SafeKit einen NLB-Cluster (Network Load Balancing) unter Windows und Linux?, Wie funktioniert ein SafeKit-Farm-Cluster unter Windows und Linux?, Vergleich des SafeKit-Farm-Clusters mit anderen NLB-Clustering-Lösungen, Videoanleitung: So konfigurieren Sie einen SafeKit-Farm-NLB-Cluster, 🔍 SafeKit entdecken"

@@ -1,7 +1,7 @@
 ---
 title: "使用 SafeKit 实现 KVM 高可用性：安装 kvm.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-kvm/"
-description: "了解如何为使用 SafeKit 的双活 KVM 集群配置 kvm.safe。通过 2 节点无共享架构在 VM 级别实现高可用性。在节点之间同步复制多个 VM 以实现自动故障转移，而无需 SAN 或共享存储的成本。"
+description: "分步指南：安装 SafeKit kvm.safe 模块实现虚拟机级高可用性，在 Linux 上复制 KVM 虚拟机并故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "KVM 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/KVM 解决方案概述、在 Linux 上安装 SafeKit/KVM 解决方案 (kvm.safe)、SafeKit/KVM 解决方案的分步配置、虚拟机级别高可用性解决方案演示、🔍 探索 SafeKit"

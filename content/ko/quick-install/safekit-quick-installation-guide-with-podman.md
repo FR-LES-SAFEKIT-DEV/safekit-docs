@@ -1,7 +1,7 @@
 ---
 title: "SafeKit을 사용한 Podman 고가용성: 장애 조치를 위한 mirror.safe 모듈 설치"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-podman/"
-description: "SafeKit용 mirror.safe 모듈을 배포하여 Linux에서 Podman 컨테이너의 동기식 실시간 복제 및 자동 장애 조치를 활성화하세요. 이 가이드는 공유 스토리지 없이 중요한 애플리케이션을 위한 2노드 SANless 클러스터를 설정하는 방법을 안내합니다."
+description: "단계별 가이드: 컨테이너 데이터의 실시간 복제 및 자동 장애 조치를 위한 Linux 기반 Podman용 SafeKit mirror.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
 topics: "Podman 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Podman 솔루션 개요, Linux에 SafeKit/Podman 솔루션 설치 (mirror.safe), SafeKit/Podman 솔루션의 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"

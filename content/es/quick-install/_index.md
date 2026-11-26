@@ -1,7 +1,7 @@
 ---
 title: "Guías de instalación rápida SafeKit"
 canonical: "https://safekit.eviden.com/es/quick-install/"
-description: "Acceda a la biblioteca completa de guías de instalación rápida SafeKit. Descargue módulos preconfigurados como mirror.safe y farm.safe para la replicación en tiempo real, el equilibrio de carga y la conmutación por error. Implemente alta disponibilidad sin SAN para aplicaciones SQL Server, Oracle, Hyper-V y Linux en cuestión de minutos."
+description: "Guías de instalación rápida SafeKit: configuración paso a paso de módulos mirror y farm para SQL Server, Oracle, Hyper-V, Docker, la nube y más, en Windows y Linux."
 category: "quick-install"
 lang: "es"
 topics: "Biblioteca de módulos de aplicación SafeKit: soluciones de alta disponibilidad listas para usar, 🔍 Explora SafeKit"

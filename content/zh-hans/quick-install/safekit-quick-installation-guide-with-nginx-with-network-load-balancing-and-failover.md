@@ -1,7 +1,7 @@
 ---
 title: "NGINX 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
-description: "了解如何在 Windows 和 Linux 上部署 farm.safe 模块，以实现 NGINX 网络负载均衡和自动故障转移。本指南将向您展示如何使用虚拟 IP 为 Web 服务和应用程序构建高可用性集群，而无需外部硬件负载均衡器或复杂的配置。"
+description: "分步指南：在 Windows 或 Linux 上安装 SafeKit farm.safe 模块，实现 NGINX 服务器的网络负载均衡和故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "NGINX 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/NGINX 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/NGINX 解决方案 (farm.safe)、SafeKit/NGINX 解决方案的分步配置、SafeKit farm 解决方案演示、🔍 探索 SafeKit"

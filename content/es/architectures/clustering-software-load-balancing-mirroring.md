@@ -1,7 +1,7 @@
 ---
 title: "Software de clúster con equilibrio de carga y duplicación: alta disponibilidad y escalabilidad"
 canonical: "https://safekit.eviden.com/es/architectures/clustering-software-load-balancing-mirroring/"
-description: "Cree arquitecturas avanzadas combinando los módulos farm y mirror SafeKit. El equilibrio de carga de red escala el front-end y la replicación síncrona en tiempo real protege los datos del back-end. Agrupación en clúster sin SAN sencilla para Windows y Linux, sin necesidad de conocimientos informáticos especializados. Descargue su prueba gratuita."
+description: "Combine los módulos farm y mirror de SafeKit: el equilibrio de carga escala el front-end y la replicación síncrona protege los datos del back-end, en Windows y Linux."
 category: "architectures"
 lang: "es"
 topics: "Alta disponibilidad y escalabilidad de aplicaciones web y de bases de datos críticas con el software de clúster SafeKit, 🔍 Explore SafeKit"

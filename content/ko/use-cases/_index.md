@@ -1,7 +1,7 @@
 ---
 title: "고객 사용 사례"
 canonical: "https://safekit.eviden.com/ko/use-cases/"
-description: "SafeKit은 SAN 없이도 간단한 고가용성을 제공합니다. 이 솔루션은 OEM 소프트웨어, 엣지 사이트, VMS, EACS, SCADA, BMS, 항공 교통 관제, 지하철 운영 등과 같은 중요한 부문을 보호합니다."
+description: "SafeKit 고객 사례: OEM 소프트웨어, 엣지 사이트, VMS, 출입 통제, SCADA, 빌딩 관리, 항공 교통 관제, 지하철 관제를 위한 고가용성."
 category: "use-cases"
 lang: "ko"
 topics: "SafeKit 사용 사례, 🔍 SafeKit 살펴보기"

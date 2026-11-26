@@ -1,7 +1,7 @@
 ---
 title: "Hoge beschikbaarheid en redundantie voor SCADA en industriële controlesystemen (ICS)"
 canonical: "https://safekit.eviden.com/nl/use-cases/scada-software-redundancy-high-availability/"
-description: "SafeKit is de toonaangevende software voor hoge beschikbaarheid voor SCADA. Het heeft geen SAN nodig. SafeKit houdt SCADA-software 24/7 beschikbaar. Voorbeelden zijn Wonderware, WinCC, iFix en Inductive Automation. Het biedt synchrone replicatie in realtime en automatische failover. Er is geen gegevensverlies (RPO = 0) voor de industriële database. U hebt geen complexe SAN-opslag en geen speciale IT-vaardigheden nodig."
+description: "SCADA-redundantie met SafeKit: cluster met twee nodes, synchrone replicatie en failover voor WinCC, Wonderware, iFix en andere industriële systemen."
 category: "use-cases"
 lang: "nl"
 topics: "Wat is een SCADA-systeem?, Waarom is SCADA-software cruciaal?, Belangrijkste leveranciers SCADA-software, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van SCADA-software., SafeKit, een erkende oplossing op de SCADA-markt, 🔍 Ontdek SafeKit"

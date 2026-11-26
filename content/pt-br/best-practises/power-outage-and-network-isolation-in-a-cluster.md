@@ -1,7 +1,7 @@
 ---
 title: "Lidando com interrupções de energia e isolamento de rede em um cluster de alta disponibilidade"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/power-outage-and-network-isolation-in-a-cluster/"
-description: "Aprenda a gerenciar o isolamento de rede e as interrupções de energia em um cluster de alta disponibilidade. SafeKit inclui verificadores de divisão de rede e ressincronização automática. Eles garantem a integridade dos dados e o tempo de atividade 24 horas por dia, 7 dias por semana, sem um disco compartilhado."
+description: "Como um cluster de alta disponibilidade lida com quedas de energia e isolamento de rede: o checker split-brain e a ressincronização automática do SafeKit protegem seus dados."
 category: "best-practises"
 lang: "pt-br"
 topics: "Quais são os diferentes cenários em caso de isolamento de rede em um cluster?, Quais são os diferentes cenários em caso de falta de energia em um cluster?, 🔍 Explore SafeKit"

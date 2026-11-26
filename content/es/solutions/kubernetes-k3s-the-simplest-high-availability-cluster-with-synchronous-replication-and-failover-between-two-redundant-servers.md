@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad Kubernetes K3s: replicación síncrona y conmutación por error de 2 nodos"
 canonical: "https://safekit.eviden.com/es/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Consiga alta disponibilidad de K3s en 2 nodos sin almacenamiento externo ni quórum de etcd. Descubra cómo SafeKit proporciona replicación sin pérdida de datos y conmutación por error automática."
+description: "Alta disponibilidad de Kubernetes K3s en dos nodos con SafeKit: replicación síncrona y conmutación por error automática, sin almacenamiento externo ni quórum etcd."
 category: "solutions"
 lang: "es"
 topics: "Simplificando la alta disponibilidad de K3s: ¿Por qué elegir SafeKit en lugar de MetalLB y Longhorn?, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Kubernetes K3s?, ¿Cómo funciona el clúster mirror SafeKit con Kubernetes K3S?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit vs. pila K3s estándar (MetalLB y Longhorn), Guía en vídeo: Configuración de un clúster mirror SafeKit HA, 🔍 Explora SafeKit"

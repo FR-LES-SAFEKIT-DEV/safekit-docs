@@ -1,7 +1,7 @@
 ---
 title: "موازنة تحميل الشبكة وتجاوز الأعطال Linux: تثبيت وحدة SafeKit farm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
-description: "تعرّف على كيفية نشر وحدة farm.safe لموازنة تحميل الشبكة في نظام Linux وتجاوز الفشل التلقائي. يوضح لك هذا الدليل كيفية بناء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP ظاهري، دون الحاجة إلى موازنات تحميل الأجهزة الخارجية أو تكوين معقد."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe على Linux لموازنة أحمال الشبكة وتجاوز الفشل لتطبيقك على عنوان IP افتراضي."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لنظام Linux، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Linux، تثبيت حل SafeKit/Linux (farm.safe)، إعداد حل SafeKit/Linux خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"

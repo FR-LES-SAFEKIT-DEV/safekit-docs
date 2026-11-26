@@ -1,7 +1,7 @@
 ---
 title: "SafeKit One-Month Free Trial Key"
 canonical: "https://safekit.eviden.com/resources/high-availability-and-load-balancing-cluster-key/"
-description: "Request your SafeKit cluster key for a one-month trial on Windows and Linux. SafeKit proposes a SANless architecture for simple, all-in-one high availability and application clustering without a SAN."
+description: "Request a free one-month SafeKit key to test high availability, replication and load balancing clusters on Windows and Linux."
 category: "resources"
 lang: "en"
 topics: "Receive a free SafeKit one-month license key by email for Windows or Linux, 🔍 Explore SafeKit"

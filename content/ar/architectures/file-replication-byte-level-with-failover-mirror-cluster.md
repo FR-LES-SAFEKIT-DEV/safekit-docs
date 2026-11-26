@@ -1,7 +1,7 @@
 ---
 title: "مجموعة mirror SafeKit: نسخ الملفات في الوقت الفعلي وتوافر عالٍ"
 canonical: "https://safekit.eviden.com/ar/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
-description: "يوفر SafeKit نسخًا متماثلًا للملفات على مستوى البايت في الوقت الفعلي ونسخًا متطابقًا متزامنًا للبيانات لأنظمة Windows و Linux. قم بتنفيذ مجموعة mirror عالية التوفر مع تجاوز تلقائي للأعطال دون تكلفة SAN. اضمن عدم فقدان البيانات واستعادة مبسطة للكوارث اليوم."
+description: "مجموعة SafeKit mirror: نسخ متزامن للملفات على مستوى البايت وتجاوز فشل تلقائي بين خادمين Windows أو Linux، دون فقدان للبيانات ودون SAN."
 category: "architectures"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit مع نظامي التشغيل Windows أو Linux بدون SAN، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر ببساطة دون شبكة منطقة تخزين SAN على Windows أو Linux؟، كيف تعمل مجموعة mirror SafeKit لنسخ البيانات المتطابقة مع نظامي التشغيل Windows أو Linux؟، قيود التوافر العالي في SafeKit، مقارنة: SafeKit لأنظمة Windows أو Linux مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit، 🔍 استكشف SafeKit"

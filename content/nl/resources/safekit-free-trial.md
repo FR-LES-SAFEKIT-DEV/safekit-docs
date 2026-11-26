@@ -1,7 +1,7 @@
 ---
 title: "SafeKit gratis proefversie"
 canonical: "https://safekit.eviden.com/nl/resources/safekit-free-trial/"
-description: "Download de gratis proefversie van SafeKit om hoge beschikbaarheid op applicatie- en VM-niveau te testen. SafeKit biedt een SANless-architectuur voor Windows en Linux, met nul gegevensverlies en automatische failover."
+description: "Download de gratis proefversie van SafeKit en test hoge beschikbaarheid op applicatie- of VM-niveau op Windows en Linux, met replicatie en automatische failover."
 category: "resources"
 lang: "nl"
 topics: "Gratis proefversie en technische documentatie van SafeKit HA, 🔍 Ontdek SafeKit"

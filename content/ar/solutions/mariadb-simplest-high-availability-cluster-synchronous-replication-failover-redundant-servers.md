@@ -1,7 +1,7 @@
 ---
 title: "أبسط طريقة لتحقيق التوافر العالي MariaDB: النسخ المتماثل المتزامن والتحويل التلقائي في حالة الفشل بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
-description: "أبسط طريقة لتطبيق التوافر العالي MariaDB. يوفر SafeKit مجموعة من عقدتين بدون شبكة تخزين (SANless) مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر وجود Active Directory أو مهارات متخصصة."
+description: "التوفر العالي لـ MariaDB مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit الخالية من شبكة التخزين (SANless) مع MariaDB، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة MariaDB عالية التوفر بدون شبكة تخزين (SANless)؟، كيف تعمل مجموعة mirror SafeKit مع MariaDB؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ MariaDB مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

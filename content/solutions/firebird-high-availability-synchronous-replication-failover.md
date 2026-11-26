@@ -1,7 +1,7 @@
 ---
 title: "The Simplest Firebird High Availability: 2-Node Synchronous Replication & Failover"
 canonical: "https://safekit.eviden.com/solutions/firebird-high-availability-synchronous-replication-failover/"
-description: "The simplest way to implement Firebird High Availability. SafeKit provides a 2-node SANless cluster with synchronous replication and automatic failover—no AD or specialized skills required."
+description: "Firebird high availability with SafeKit: two-node cluster with synchronous replication and automatic failover on Windows or Linux, with no SAN."
 category: "solutions"
 lang: "en"
 topics: "How the SANless SafeKit Mirror Cluster Works with Firebird, Table of Contents, How the SafeKit software simply implements a SANless Firebird high availability cluster?, How the SafeKit mirror cluster works with Firebird?, SafeKit High Availability Limitations, Comparison: SafeKit for Firebird vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"

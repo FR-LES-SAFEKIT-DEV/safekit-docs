@@ -1,7 +1,7 @@
 ---
 title: "Azure ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
-description: "SafeKit のインテリジェントなアプリケーション監視で Azure ネットワーク負荷分散を強化します。farm.safe farm.safe は、Azure ロードバランサー専用のヘルスチェックを提供し、アプリケーションレベルでのシームレスな HA を可能にします。ミッションクリティカルなアプリケーションの自動セルフヒーリングとフェイルオーバーを実現します。"
+description: "手順ガイド：Azure に SafeKit の farm.safe モジュールを導入。Azure ロードバランサー向けにアプリケーションの状態を確認し、フェイルオーバーを処理。"
 category: "quick-install"
 lang: "ja"
 topics: "Azure 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Azure ソリューションの概要、Windows および Linux への SafeKit/Azure ソリューションのインストール (farm.safe)、SafeKit/Azure ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"

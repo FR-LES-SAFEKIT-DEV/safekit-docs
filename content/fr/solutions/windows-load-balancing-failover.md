@@ -1,7 +1,7 @@
 ---
 title: "SafeKit : Logiciel tout-en-un d’équilibrage de charge et de haute disponibilité Windows"
 canonical: "https://safekit.eviden.com/fr/solutions/windows-load-balancing-failover/"
-description: "SafeKit fournit une solution puissante de répartition de charge et de haute disponibilité Windows, uniquement logicielle. Remplacez le matériel NLB complexe par l’IP virtuelle intégrée, la surveillance des applications et le basculement automatique de SafeKit. Déployez facilement un cluster SafeKit sur des serveurs Windows standard dès aujourd’hui."
+description: "Équilibrage de charge et haute disponibilité Windows avec SafeKit : IP virtuelle, surveillance applicative et basculement automatique sur serveurs Windows standard."
 category: "solutions"
 lang: "fr"
 topics: "Le cluster farm SafeKit : NLB (équilibrage de charge réseau) uniquement logiciel et basculement automatique pour Windows, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de répartition de charge réseau (NLB) Windows ?, Comment fonctionne le cluster SafeKit en mode farm sous Windows ?, Comparaison : cluster farm SafeKit pour Windows et autres solutions de clustering NLB, Guide vidéo : Configuration d’un cluster NLB farm SafeKit, 🔍 Explorez SafeKit"

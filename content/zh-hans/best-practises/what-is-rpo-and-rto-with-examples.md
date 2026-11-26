@@ -1,7 +1,7 @@
 ---
 title: "什么是 RPO 和 RTO？定义、示例和 HA 策略"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/what-is-rpo-and-rto-with-examples/"
-description: "通过清晰的示例了解 RPO（恢复点目标）和 RTO（恢复时间目标）的定义。了解 SafeKit 如何实现零数据丢失（RPO = 0）和快速故障转移，以确保 24/7 全天候业务连续性。"
+description: "RPO 和 RTO 的含义及示例，以及 SafeKit 如何实现零数据丢失（RPO 0）和快速自动故障转移，保障业务连续性。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "快速总结：RPO 与 RTO、目录、如何计算高可用性和业务连续性解决方案的 RPO 和 RTO？、如何确定备份和灾难恢复解决方案的 RPO 和 RTO？、SafeKit mirror 集群如何实现零 RPO 和低 RTO？、对于带有负载均衡的 SafeKit farm 集群 RTO 基准是什么？、对比表：RTO 与 RPO、高可用性实践：零数据丢失和近乎零停机的实时演示、常见问题：优化业务连续性的 RPO 和 RTO、🔍 探索 SafeKit"

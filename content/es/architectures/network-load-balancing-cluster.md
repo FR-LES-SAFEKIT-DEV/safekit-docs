@@ -1,7 +1,7 @@
 ---
 title: "Clúster farm SafeKit: equilibrio de carga de red y alta disponibilidad para Windows y Linux"
 canonical: "https://safekit.eviden.com/es/architectures/network-load-balancing-cluster/"
-description: "SafeKit ofrece un equilibrio de carga de red (NLB) de alto rendimiento y conmutación por error automática en un único paquete de software. Sustituya los costosos balanceadores de carga de hardware por la gestión de IP virtual a nivel de kernel de SafeKit para Windows y Linux. Ideal para la integración OEM y la gestión simplificada de clústeres."
+description: "Clúster farm SafeKit: equilibrio de carga de red en una IP virtual con conmutación por error automática entre servidores Windows o Linux, sin balanceador de carga de hardware."
 category: "architectures"
 lang: "es"
 topics: "Clúster farm SafeKit: equilibrio de carga de software y conmutación por error automática para Windows y Linux, Índice, ¿Cómo implementa SafeKit un clúster de equilibrio de carga de red (NLB) en Windows y Linux?, ¿Cómo funciona un clúster farm SafeKit en Windows y Linux?, Comparación del clúster farm SafeKit con otras soluciones de clúster NLB, Guía en vídeo: cómo configurar un clúster NLB farm SafeKit, 🔍 Explore SafeKit"

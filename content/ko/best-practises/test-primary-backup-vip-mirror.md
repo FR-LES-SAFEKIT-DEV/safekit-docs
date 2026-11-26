@@ -1,7 +1,7 @@
 ---
-title: "SafeKit mirror 클러스터의 가상 IP 주소 테스트"
+title: "네트워크에서 SafeKit mirror 클러스터의 가상 IP 주소 테스트하기"
 canonical: "https://safekit.eviden.com/ko/best-practises/test-primary-backup-vip-mirror/"
-description: "GARP 재라우팅, ARP 확인 및 패킷 캡처를 포함하여 SafeKit mirror 클러스터에서 가상 IP 가용성 및 장애 조치를 테스트합니다."
+description: "SafeKit mirror 클러스터의 가상 IP 테스트 방법: 가용성, 장애 조치, GARP 재라우팅, ARP 테이블 확인, 패킷 캡처."
 category: "best-practises"
 lang: "ko"
 topics: "주요 원칙, 필수 구성 요소: 가상 IP(VIP) 구성, 테스트 1 – 기본 서버 가 보유한 가상 IP(VIP), 테스트 2 – 수동 장애 조치(기본 서버 중지), 테스트 3 – arp -a를 사용한 GARP 재라우팅 확인, 테스트 4 – Wireshark(Windows) 또는 tcpdump(Linux)를 사용한 엔드투엔드 확인, 테스트할 워크스테이션, 예상 결과 요약, 문제 해결"

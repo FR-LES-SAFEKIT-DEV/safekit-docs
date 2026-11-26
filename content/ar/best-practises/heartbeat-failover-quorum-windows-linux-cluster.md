@@ -1,7 +1,7 @@
 ---
 title: "نبضة heartbeat، وتجاوز الفشل، والنصاب في مجموعات Windows و Linux"
 canonical: "https://safekit.eviden.com/ar/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "تعرّف على كيفية عمل نبضات heartbeat، وتجاوز الفشل، والنصاب القانوني في مجموعة. مع SafeKit، لا حاجة لخادم نصاب قانوني ثالث ولا قرص نصاب قانوني خاص. يكفي مدقق split-brain. يوفر SafeKit توافرًا عاليًا على Windows و Linux."
+description: "كيف تعمل نبضة heartbeat وتجاوز الفشل والنصاب في مجموعات Windows و Linux، وكيف يتجنب SafeKit حالة split-brain دون قرص نصاب أو خادم ثالث."
 category: "best-practises"
 lang: "ar"
 topics: "ما هي السيناريوهات المختلفة في حالة عزل الشبكة في مجموعة؟، كيف تعمل نبضات heartbeat والتحويل التلقائي (failover) في مجموعة حواسيب تعمل بنظام Windows أو Linux؟، split-brain والنصاب (quorum) مع الخوادم في غرفتي حاسوب منفصلتين، نظام نصاب بسيط للمجموعات باستخدام أداة SafeKit مدقق split-brain، 🔍 استكشف SafeKit"

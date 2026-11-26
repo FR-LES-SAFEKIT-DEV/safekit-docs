@@ -1,7 +1,7 @@
 ---
 title: "How does a virtual IP address work in a high availability cluster?"
 canonical: "https://safekit.eviden.com/best-practises/how-a-virtual-ip-address-works/"
-description: "How SafeKit moves a virtual IP on failover: gratuitous ARP in the same subnet, load balancer, cloud CLI or BGP across subnets. Why a local virtual IP matters."
+description: "How a virtual IP address moves during failover: gratuitous ARP in one subnet, or a load balancer, cloud routes or BGP across subnets, explained with SafeKit."
 category: "best-practises"
 lang: "en"
 topics: "What is a virtual IP address in a high availability cluster?, Virtual IP implementation in SafeKit, How a virtual IP works in the same subnet (mirror cluster), How a virtual IP works across different subnets with a load balancer (mirror cluster), How a virtual IP works across different subnets with cloud provider CLIs (mirror cluster), How a virtual IP works across different subnets with BGP (mirror cluster), How DNS redirection works across different subnets (mirror cluster), How virtual IP load balancing works in a farm cluster on the same subnet, How a load balanced virtual IP works across different subnets (farm cluster), Comparison: virtual IP implementation, latency, and application transparency, Frequently asked questions on virtual IP, 🔍 Explore SafeKit"

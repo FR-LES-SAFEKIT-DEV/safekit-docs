@@ -1,7 +1,7 @@
 ---
 title: "SafeKit farm 클러스터에서 로드 밸런싱 가상 IP 주소 테스트"
 canonical: "https://safekit.eviden.com/ko/best-practises/test-load-balancing-vip-farm/"
-description: "클러스터 노드 전반에 걸쳐 SafeKit 로드 밸런싱을 테스트하고 가상 IP 장애 조치, GARP 재라우팅 및 네트워크 동작을 확인하는 방법을 알아보세요."
+description: "SafeKit farm 클러스터의 부하 분산 가상 IP 테스트 방법: 노드 간 트래픽 분배, 장애 조치, GARP 재라우팅, 네트워크 점검."
 category: "best-practises"
 lang: "ko"
 topics: "주요 원칙, 필수 구성 요소: SafeKit 모자이크, 테스트 1 – 연결 분배, 테스트 2 – 디스패칭 서버 변경, 테스트 3 – arp -a를 사용한 GARP 재라우팅 확인, 테스트 4 – Wireshark(Windows) 또는 tcpdump(Linux)를 사용한 종단 간 확인, 테스트할 워크스테이션, 예상 결과 요약, 문제 해결, SafeKit farm 솔루션 시연"

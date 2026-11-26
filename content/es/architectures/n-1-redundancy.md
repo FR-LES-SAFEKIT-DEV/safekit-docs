@@ -1,7 +1,7 @@
 ---
 title: "Clúster de redundancia N-1: alta disponibilidad para múltiples aplicaciones con un único servidor de respaldo"
 canonical: "https://safekit.eviden.com/es/architectures/n-1-redundancy/"
-description: "Optimice su centro de datos con la redundancia N-1 SafeKit. Implemente N módulos mirror en N+1 servidores para proporcionar alta disponibilidad a múltiples aplicaciones con un único servidor de respaldo compartido. Elimine los requisitos SAN y reduzca los costes de hardware con la replicación en tiempo real para Windows y Linux. Más información."
+description: "Redundancia N-1 con SafeKit: N aplicaciones en N+1 servidores comparten un único servidor de respaldo, con replicación en tiempo real y conmutación automática, sin SAN."
 category: "architectures"
 lang: "es"
 topics: "Alta disponibilidad con replicación de datos y conmutación por error de aplicaciones de N servidores a 1, 🔍 Explore SafeKit"

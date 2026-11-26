@@ -1,7 +1,7 @@
 ---
 title: "다수의 지점을 보유한 분산 기업을 위한 고가용성 표준화"
 canonical: "https://safekit.eviden.com/ko/use-cases/business-continuity-software/"
-description: "SafeKit으로 분산된 기업의 모든 지사를 안전하게 보호하세요. 표준화된 소프트웨어 전용 고가용성 클러스터를 대규모로 배포하세요. 모든 지사에서 중요한 애플리케이션의 24시간 연중무휴 가동 시간을 보장하세요. SafeKit은 Windows 및 Linux에서 실행됩니다. 공유 스토리지, 복잡한 SAN 또는 현장 IT 전문 지식이 필요하지 않습니다."
+description: "분산 기업을 위한 고가용성: SAN과 현장 IT 인력 없이 모든 지사에 동일한 SafeKit 클러스터를 Windows 또는 Linux로 배포하세요."
 category: "use-cases"
 lang: "ko"
 topics: "분산형 기업의 비즈니스 연속성, 🔍 SafeKit 살펴보기"

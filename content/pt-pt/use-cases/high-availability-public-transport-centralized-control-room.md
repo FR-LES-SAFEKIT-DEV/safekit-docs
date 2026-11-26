@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade para Transportes Públicos: Sala de Controlo Centralizada"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit garante alta disponibilidade para as salas de controlo de transportes públicos. A RATP implementou SafeKit para a linha 1 do metro de Paris. Esta linha é totalmente automatizada e sem condutor. SafeKit oferece balanceamento de carga, failover automático e replicação de dados em tempo real. Não necessita de SAN. O mesmo software funciona em servidores Windows e Linux."
+description: "Alta disponibilidade em salas de controlo de transportes: a RATP usa o SafeKit na linha 1 automática do Metro de Paris, com replicação, failover e balanceamento de carga."
 category: "use-cases"
 lang: "pt-pt"
 topics: "Salas de Controlo de Transportes Públicos, Por que é que a sala de controlo é tão importante?, Alta disponibilidade SafeKit para transportes públicos, Implementação no mundo real na RATP, 🔍 Explore SafeKit"

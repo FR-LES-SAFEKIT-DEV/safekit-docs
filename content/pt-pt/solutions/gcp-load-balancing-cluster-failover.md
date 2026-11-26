@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Balanceamento de Carga e cluster farm Alta Disponibilidade de Aplicações no Google GCP"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/gcp-load-balancing-cluster-failover/"
-description: "Melhore GCP Load Balancer com a monitorização inteligente de aplicações do SafeKit. Obtenha alta disponibilidade contínua com verificações de estado aprofundadas, autorreparação automática e failover para clusters farm de missão crítica."
+description: "Clusters farm SafeKit no Google Cloud: verificações de estado da aplicação para o balanceador de carga GCP, reinício automático e failover em Windows ou Linux."
 category: "solutions"
 lang: "pt-pt"
 topics: "Melhore o Balanceador de Carga na Nuvem com Monitorização ao Nível da Aplicação e Autocorreção, Índice, Como o software SafeKit implementa de forma simples um cluster de balanceamento de carga de rede (NLB) do GCP?, Como funciona o cluster farm SafeKit com GCP?, Comparação: cluster farm SafeKit On-Premises vs. cluster farm SafeKit na Nuvem, Guia em Vídeo: Configuração de um cluster NLB farm SafeKit, 🔍 Explore SafeKit"

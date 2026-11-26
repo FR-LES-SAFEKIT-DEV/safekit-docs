@@ -1,7 +1,7 @@
 ---
 title: "A Mais Simples Alta Disponibilidade MySQL: Replicação Síncrona e Failover de 2 Nós"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/mysql-high-availability-synchronous-replication-failover/"
-description: "A forma mais simples de implementar alta disponibilidade MySQL. SafeKit oferece um cluster SANless de 2 nós com replicação síncrona e failover automático — sem necessidade de AD ou competências especializadas."
+description: "Alta disponibilidade de MySQL com SafeKit: cluster de dois nós com replicação síncrona e failover automático em Windows ou Linux, sem SAN."
 category: "solutions"
 lang: "pt-pt"
 topics: "Como o SANless SafeKit cluster mirror funciona com MySQL, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade MySQL sem SAN?, Como funciona o cluster mirror SafeKit com MySQL?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit para MySQL vs. Outras Soluções de Clustering, Guia em Vídeo: Configuração de um cluster mirror HA SafeKit, 🔍 Explore SafeKit"

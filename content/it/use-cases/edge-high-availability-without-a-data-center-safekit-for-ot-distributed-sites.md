@@ -1,7 +1,7 @@
 ---
 title: "Elevata disponibilità perimetrale senza data center: SafeKit per OT e siti distribuiti"
 canonical: "https://safekit.eviden.com/it/use-cases/edge-high-availability-without-a-data-center-safekit-for-ot-distributed-sites/"
-description: "I siti di edge computing non dispongono di un data center, ma necessitano comunque di un’elevata disponibilità. SafeKit trasforma due server standard in un cluster ad alta disponibilità plug-and-play. Non richiede SAN né personale IT e il failover è automatico."
+description: "Alta disponibilità edge senza data center: SafeKit trasforma due server standard in un cluster plug-and-play per siti OT e distribuiti, senza SAN."
 category: "use-cases"
 lang: "it"
 topics: "La sfida dell’alta disponibilità all’edge, Perché SafeKit è la soluzione naturale per l’edge computing, Idoneità all’implementazione edge e distribuita, Perché gli ambienti OT perimetrali sono diversi, Casi d’uso ideali per l’edge, Edge vs. data center: le differenze chiave in termini di alta disponibilità, Sistemi operativi e piattaforme supportati, 🔍 Esplora SafeKit"

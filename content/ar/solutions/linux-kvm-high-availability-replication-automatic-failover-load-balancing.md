@@ -1,7 +1,7 @@
 ---
 title: "توفير إمكانية التوافر العالي البسيطة Linux KVM بدون تخزين مشترك"
 canonical: "https://safekit.eviden.com/ar/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
-description: "حقق توافرًا عاليًا Linux KVM بدون شبكة SAN. يوفر SafeKit النسخ المتماثل المتزامن وتجاوز الفشل التلقائي لمجموعات KVM ذات العقدتين. بسّط تكرار جهاز Linux الافتراضي الخاص بك وخفّض التكلفة الإجمالية للملكية اليوم."
+description: "التوفر العالي لـ KVM دون SAN: ينسخ SafeKit أجهزة Linux الافتراضية في الوقت الفعلي بين خادمين ويعيد تشغيلها تلقائيًا عند حدوث عطل."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit for KVM: مجموعة KVM بدون شبكة تخزين (SANless) مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة KVM عالية التوافر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit KVM؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ KVM مقابل التجميع التقليدي، دليل الفيديو: تهيئة مجموعة SafeKit HA لـ KVM، 🔍 استكشف SafeKit"

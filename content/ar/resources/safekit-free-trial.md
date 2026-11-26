@@ -1,7 +1,7 @@
 ---
 title: "نسخة تجريبية مجانية من SafeKit"
 canonical: "https://safekit.eviden.com/ar/resources/safekit-free-trial/"
-description: "قم بتنزيل النسخة التجريبية المجانية من SafeKit لاختبار التوافر العالي على مستوى التطبيق ومستوى الجهاز الظاهري. يوفر SafeKit البنية خالية من شبكات التخزين (SANless) لأنظمة Windows و Linux، مع عدم فقدان البيانات والتحويل التلقائي عند الفشل."
+description: "نزّل النسخة التجريبية المجانية من SafeKit واختبر HA على مستوى التطبيق أو على مستوى الأجهزة الافتراضية على Windows و Linux، مع النسخ وتجاوز الفشل التلقائي."
 category: "resources"
 lang: "ar"
 topics: "النسخة التجريبية المجانية من SafeKit HA والوثائق الفنية، 🔍 استكشف SafeKit"

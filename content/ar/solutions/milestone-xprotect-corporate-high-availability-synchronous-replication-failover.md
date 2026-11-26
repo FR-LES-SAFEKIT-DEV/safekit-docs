@@ -1,7 +1,7 @@
 ---
 title: "أبسط إنجازات Milestone XProtect في تحقيق التوافر العالي: النسخ المتزامن ثنائي العقدة وتجاوز الأعطال"
 canonical: "https://safekit.eviden.com/ar/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق Milestone XProtect عالي التوافر. يوفر SafeKit مجموعة من عقدتين بدون شبكة SAN مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر أي خدمات Active Directory أو مهارات متخصصة."
+description: "التوفر العالي لـ Milestone XProtect مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي لـ Management Server وقاعدة بيانات SQL الخاصة به."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Milestone XProtect، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر Milestone XProtect بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع Milestone XProtect؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Milestone XProtect مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "无需共享存储 (SAN) 的简单 Hyper-V 高可用性"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/hyper-v-replication-automatic-failover-load-balancing/"
-description: "无需 SAN 即可实现 Hyper-V HA。SafeKit 为双节点集群提供实时复制和自动转移。立即下载免费试用版。"
+description: "无需 SAN 的 Hyper-V 高可用性：SafeKit 在两台服务器间实时复制虚拟机，并在故障时自动重启。"
 category: "solutions"
 lang: "zh-hans"
 topics: "SafeKit for Hyper-V：2 节点无共享存储 Hyper-V 集群、目录、SafeKit 软件如何简单地在没有 SAN 共享存储的情况下实现 Hyper-V 高可用性集群？、SafeKit Hyper-V 集群的工作原理是什么？、SafeKit 高可用性限制、比较：适用于 Hyper-V 的 SafeKit 与原生 Hyper-V 群集、视频指南：为 Hyper-V 配置 SafeKit HA 集群、🔍 探索 SafeKit"

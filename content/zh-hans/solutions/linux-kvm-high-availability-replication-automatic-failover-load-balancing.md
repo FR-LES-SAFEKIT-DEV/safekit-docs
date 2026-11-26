@@ -1,7 +1,7 @@
 ---
 title: "无需共享存储的简单 Linux KVM 高可用性"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
-description: "无需 SAN 即可实现 Linux KVM 高可用性。SafeKit 为双节点 KVM 集群提供同步复制和自动转移。立即简化您的 Linux 虚拟机冗余并降低总拥有成本。"
+description: "无需 SAN 的 KVM 高可用性：SafeKit 在两台服务器间实时复制 Linux 虚拟机，并在故障时自动重启。"
 category: "solutions"
 lang: "zh-hans"
 topics: "SafeKit for KVM：双节点无共享存储 KVM 集群、目录、SafeKit 软件如何简单地在没有 SAN 共享存储的情况下实现 KVM 高可用性集群？、SafeKit KVM 集群的工作原理是什么？、SafeKit 高可用性限制、比较：适用于 KVM 的 SafeKit 与传统集群、视频指南：为 KVM 配置 SafeKit HA 集群、🔍 探索 SafeKit"

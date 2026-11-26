@@ -1,7 +1,7 @@
 ---
 title: "La pietra miliare più semplice Milestone XProtect High Availability: replica sincrona e failover a 2 nodi"
 canonical: "https://safekit.eviden.com/it/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/"
-description: "Il modo più semplice per implementare Milestone XProtect High Availability. SafeKit fornisce un cluster SANless a 2 nodi con replica sincrona e failover automatico, senza necessità di AD o competenze specialistiche."
+description: "Alta disponibilità Milestone XProtect con SafeKit: replica sincrona e failover automatico del Management Server e del suo database SQL."
 category: "solutions"
 lang: "it"
 topics: "Come funziona il cluster mirror SANless SafeKit con Milestone XProtect, Indice, In che modo il software SafeKit implementa semplicemente un cluster ad alta disponibilità SANless Milestone XProtect?, Come funziona il cluster mirror SafeKit con Milestone XProtect?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Milestone XProtect e altre soluzioni di clustering, Guida video: configurazione di un cluster mirror SafeKit HA, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"

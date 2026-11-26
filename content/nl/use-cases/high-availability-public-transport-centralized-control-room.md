@@ -1,7 +1,7 @@
 ---
 title: "Hoge beschikbaarheid voor openbaar vervoer: gecentraliseerde controlekamer"
 canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit zorgt voor hoge beschikbaarheid voor controlekamers van het openbaar vervoer. RATP heeft SafeKit ingezet voor lijn 1 van de Parijse metro. Deze lijn is volledig geautomatiseerd en zonder bestuurder. SafeKit biedt taakverdeling, automatische failover en realtime gegevensreplicatie. Er is geen SAN nodig. Dezelfde software werkt op Windows- en Linux-servers."
+description: "Hoge beschikbaarheid voor controlekamers van het openbaar vervoer: RATP gebruikt SafeKit voor de bestuurderloze Parijse metrolijn 1, met replicatie, failover en loadbalancing."
 category: "use-cases"
 lang: "nl"
 topics: "Controlekamers openbaar vervoer, Waarom is de controlekamer cruciaal?, SafeKit hoge beschikbaarheid voor openbaar vervoer, Implementatie in de praktijk bij RATP, 🔍 Ontdek SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Haute disponibilité KVM avec SafeKit : Installez le module kvm.safe pour le basculement"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-kvm/"
-description: "Découvrez comment configurer kvm.safe pour un cluster KVM actif/actif avec SafeKit. Atteignez une haute disponibilité au niveau des machines virtuelles avec une architecture à 2 nœuds sans partage. Répliquez de manière synchrone plusieurs machines virtuelles sur les nœuds pour un basculement automatique sans le coût d’un SAN ou d’un stockage partagé."
+description: "Guide pas à pas : installez le module SafeKit kvm.safe pour la haute disponibilité des VM, avec réplication et basculement des machines virtuelles KVM sous Linux."
 category: "quick-install"
 lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour KVM, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/KVM, Installation de la solution SafeKit/KVM sous Linux (kvm.safe), Configuration pas à pas de la solution SafeKit/KVM, Démonstration d’une solution de haute disponibilité au niveau des machines virtuelles, 🔍 Explorez SafeKit"

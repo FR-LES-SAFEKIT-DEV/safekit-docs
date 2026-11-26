@@ -1,7 +1,7 @@
 ---
 title: "실시간 복제 및 상호 장애 조치를 지원하는 액티브-액티브 클러스터링 소프트웨어"
 canonical: "https://safekit.eviden.com/ko/architectures/active-active-cluster-real-time-replication/"
-description: "SafeKit 액티브-액티브 클러스터링으로 리소스 활용도를 극대화하세요. 실시간 동기 복제 및 다중 mirror 모듈을 사용하여 두 서버 간에 상호 장애 조치를 배포하세요. SAN 없이 Windows 및 Linux에서 데이터 손실 제로(RPO = 0) 및 자동 복구를 보장합니다. 무료 평가판을 다운로드하세요."
+description: "액티브-액티브 SafeKit 클러스터: Windows 및 Linux에서 여러 mirror 모듈, 동기 복제, 상호 장애 조치로 두 서버가 서로를 백업합니다."
 category: "architectures"
 lang: "ko"
 topics: "실시간 복제를 사용하는 액티브-액티브 클러스터는 어떻게 작동하나요?, 🔍 SafeKit 살펴보기"

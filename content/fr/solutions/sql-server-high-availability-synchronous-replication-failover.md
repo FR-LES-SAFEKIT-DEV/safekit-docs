@@ -1,7 +1,7 @@
 ---
 title: "La plus simple des solutions de haute disponibilité Microsoft SQL Server : réplication synchrone et basculement à deux nœuds"
 canonical: "https://safekit.eviden.com/fr/solutions/sql-server-high-availability-synchronous-replication-failover/"
-description: "La manière la plus simple de mettre en œuvre la haute disponibilité Microsoft SQL Server. SafeKit fournit un cluster SANless à 2 nœuds avec réplication synchrone et basculement automatique, sans nécessiter d’AD ou de compétences spécialisées."
+description: "Haute disponibilité SQL Server avec SafeKit : cluster à deux nœuds avec réplication synchrone et basculement automatique, pour toutes les éditions, sans SAN."
 category: "solutions"
 lang: "fr"
 topics: "Fonctionnement du cluster mirror SafeKit SANless avec Microsoft SQL Server, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Microsoft SQL Server sans SAN ?, Comment le cluster mirror SafeKit fonctionne-t-il avec Microsoft SQL Server ?, Limitations de la haute disponibilité SafeKit, Comparaison : SafeKit pour Microsoft SQL Server et autres solutions de clustering, Guide vidéo : Configuration d’un cluster mirror SafeKit HA, 🔍 Explorez SafeKit"

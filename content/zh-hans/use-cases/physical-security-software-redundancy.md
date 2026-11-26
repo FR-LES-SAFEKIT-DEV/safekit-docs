@@ -1,7 +1,7 @@
 ---
 title: "物理安全软件的高可用性和冗余性"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/physical-security-software-redundancy/"
-description: "SafeKit 可让关键安全系统 24/7 全天候可用。它是一个无 SAN 的 2 节点软件集群。它为视频管理系统（Milestone、Genetec）、访问控制（Nedap、Siemens）和 SCADA 提供实时同步复制和自动故障转移。这种简单的冗余适用于 Windows 和 Linux 上的任何硬件，而无需复杂的 SAN 存储。"
+description: "使用 SafeKit 实现物理安防冗余：双节点集群，同步复制和故障转移，适用于视频管理、门禁和 SCADA。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "SafeKit 为物理安全软件的冗余和高可用性提供了两种解决方案。、🔍 探索 SafeKit"

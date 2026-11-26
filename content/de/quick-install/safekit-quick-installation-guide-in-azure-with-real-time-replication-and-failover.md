@@ -1,7 +1,7 @@
 ---
-title: "SafeKit Schnellinstallationsanleitung in Azure (mirror.safe-Modul für Echtzeit-Replikation und Failover)"
+title: "Azure Hochverfügbarkeit mit SafeKit: Installieren Sie das Modul mirror.safe für Failover"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
-description: "Setzen Sie das Modul mirror.safe für SafeKit in Azure ein, um synchrone Echtzeit-Replikation und automatische Failover auf Windows und Linux zu ermöglichen. Diese Anleitung führt Sie durch die Einrichtung eines 2-Knoten Shared-Nothing Clusters für kritische Anwendungen ohne gemeinsam genutzten Speicher."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul mirror.safe in Azure für Echtzeit-Replikation und Failover zwischen zwei Windows- oder Linux-VMs."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in Azure, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Azure mirror, Installation der SafeKit/Azure mirror unter Windows und Linux (mirror.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Azure mirror, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"

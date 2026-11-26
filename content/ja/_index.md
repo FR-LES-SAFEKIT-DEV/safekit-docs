@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：SAN 不要の Windows および Linux 向け高可用性ソフトウェア"
 canonical: "https://safekit.eviden.com/ja/"
-description: "SafeKit は、SAN なしで 2 台の標準サーバー上で同期レプリケーション、自動フェイルオーバー、ロードバランシングを提供し、Windows および Linux の高可用性を実現します。"
+description: "Windows と Linux 向け SafeKit 高可用性ソフトウェア：2 台の標準サーバーで同期レプリケーション、自動フェイルオーバー、負荷分散を実現。SAN 不要です。"
 category: "home"
 lang: "ja"
 topics: "SafeKit の機能、保護レベルの選択、アプリケーション向けの既製モジュール、顧客のユースケース、シンプルで分かりやすい料金体系、考慮すべき制限事項、SafeKit ビデオライブラリ、🔍 SafeKit を探索する"

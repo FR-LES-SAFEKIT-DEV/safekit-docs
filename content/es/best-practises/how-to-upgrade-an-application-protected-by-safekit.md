@@ -1,7 +1,7 @@
 ---
 title: "Actualización de una aplicación protegida por SafeKit en un clúster de alta disponibilidad"
 canonical: "https://safekit.eviden.com/es/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "Aprenda a actualizar de forma segura las aplicaciones protegidas por SafeKit. Compare las actualizaciones menores y mayores, las actualizaciones continuas, las estrategias de reversión y la alta disponibilidad basada en máquinas virtuales."
+description: "Cómo actualizar una aplicación protegida por SafeKit: actualizaciones menores y mayores, actualizaciones continuas, opciones de reversión y el enfoque HA de VM."
 category: "best-practises"
 lang: "es"
 topics: "Actualización de una aplicación de alta disponibilidad protegida por SafeKit, Alta disponibilidad a nivel de máquina virtual, Alta disponibilidad a nivel de aplicación, Cómo elegir la estrategia de actualización adecuada, Conclusión, 🔍 Explora SafeKit"

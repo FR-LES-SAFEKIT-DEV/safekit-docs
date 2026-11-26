@@ -1,7 +1,7 @@
 ---
 title: "Siemens Siveillance Suite 的高可用性和冗余：主动-主动无共享存储集群"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
-description: "使用 SafeKit 确保 Siemens Siveillance Suite 100% 的正常运行时间。无需复杂的硬件即可实现无共享存储的高可用性、同步复制和主动-主动集群。立即下载免费试用版。"
+description: "Siemens Siveillance 套件高可用性：SafeKit 在两台活动服务器间复制 Hyper-V 虚拟机并自动故障转移。"
 category: "solutions"
 lang: "zh-hans"
 topics: "适用于 Siemens Siveillance SafeKit：2 节点无共享存储 Hyper-V 集群、目录、SafeKit 软件如何简单地在没有 SAN 上共享存储的情况下实现 Siemens Siveillance 高可用性集群？、SafeKit Siemens Siveillance 集群如何工作？、SafeKit 高可用性限制、比较：用于 Siemens Siveillance SafeKit 与原生 Hyper-V 群集、视频指南：为 Siemens Siveillance 配置 SafeKit HA 集群、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"

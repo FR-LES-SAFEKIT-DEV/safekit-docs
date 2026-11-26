@@ -1,7 +1,7 @@
 ---
 title: "Testen der virtuellen IP-Adresse für das Lastausgleichsverfahren in einem SafeKit Farm-Cluster"
 canonical: "https://safekit.eviden.com/de/best-practises/test-load-balancing-vip-farm/"
-description: "Erfahren Sie, wie Sie das SafeKit-Lastausgleichsverfahren über Clusterknoten hinweg testen und das Failover virtueller IPs, GARP Umlenkung und das Netzwerkverhalten überprüfen."
+description: "So testen Sie die virtuelle IP für Lastverteilung eines SafeKit-Farm-Clusters: Verkehrsverteilung zwischen Knoten, Failover, GARP-Umleitung und Netzwerkprüfungen."
 category: "best-practises"
 lang: "de"
 topics: "Schlüsselprinzipien, Voraussetzung: das SafeKit-Mosaik, Test 1 – Verteilung der Verbindungen, Test 2 – Änderung des Dispatching-Servers, Test 3 – Überprüfung GARP Umleitung mit arp -a, Test 4 – End-to-End-Überprüfung mit Wireshark (Windows) oder tcpdump (Linux), Von welchen Workstations aus getestet werden soll, Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung, Demonstration der SafeKit farm -Lösung"

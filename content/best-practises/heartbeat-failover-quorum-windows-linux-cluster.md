@@ -1,7 +1,7 @@
 ---
 title: "Heartbeat, Failover and Quorum in Windows and Linux Clusters"
 canonical: "https://safekit.eviden.com/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "Learn how heartbeats, failover and quorum work in a cluster. With SafeKit, no third quorum server and no special quorum disk are needed. A simple split brain checker is enough. SafeKit provides high availability on Windows and Linux."
+description: "How heartbeat, failover and quorum work in Windows and Linux clusters, and how SafeKit avoids split brain without a quorum disk or a third server."
 category: "best-practises"
 lang: "en"
 topics: "What are the different scenarios in case of network isolation in a cluster?, How do heartbeats and failover work in a Windows or Linux cluster?, Split brain and quorum with servers in two remote computer rooms, Simple cluster quorum with the SafeKit split brain checker, 🔍 Explore SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit mirror クラスター：リアルタイムファイルレプリケーションと高可用性"
 canonical: "https://safekit.eviden.com/ja/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
-description: "SafeKit は、Windows および Linux 向けに、リアルタイムのバイトレベルファイルレプリケーションと同期データミラーリングを提供します。SAN のコストをかけずに、自動フェイルオーバー機能付きの高可用性 mirror クラスターを実装します。データ損失ゼロと簡素化された災害復旧を今すぐ実現。"
+description: "SafeKit mirror クラスター：Windows または Linux サーバー 2 台間のバイトレベル同期ファイル複製と自動フェイルオーバー。データ損失なし、SAN 不要。"
 category: "architectures"
 lang: "ja"
 topics: "SafeKit mirror クラスターが SAN なしで Windows または Linux で動作する仕組み、目次、SafeKit ソフトウェアは、Windows または Linux 上で SAN なしで高可用性クラスターをどのように簡単に実装するのですか？、SafeKit mirror クラスターは Windows または Linux でどのように動作しますか？、SafeKit 高可用性の制限事項、比較：Windows または Linux 向け SafeKit とその他のクラスタリングソリューション、ビデオガイド：SafeKit mirror クラスターの構成、🔍 SafeKit を探索する"

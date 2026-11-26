@@ -1,7 +1,7 @@
 ---
 title: "بُنى SafeKit"
 canonical: "https://safekit.eviden.com/ar/architectures/"
-description: "استكشف معماريات التوافر العالي باستخدام SafeKit. تعرّف على مجموعات Mirror و Farm و Farm + مجموعات mirror لتجاوز الأعطال في التطبيقات بدون شبكة SAN وتحقيق توازن الأحمال."
+description: "بنيات مجموعات SafeKit: مجموعات mirror مع النسخ في الوقت الفعلي، ومجموعات farm مع موازنة الأحمال، وبنية نشط-نشط وتكرار N-1، دون SAN."
 category: "architectures"
 lang: "ar"
 topics: "ما هي معماريات التوافر العالي المختلفة ومجموعات البرامج المختلفة مع SafeKit؟، كيف يمكن بناء مجموعات التوافر العالي باستخدام SafeKit؟، 🔍 استكشف SafeKit"

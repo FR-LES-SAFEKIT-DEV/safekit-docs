@@ -1,7 +1,7 @@
 ---
 title: "VM-HA versus applicatie-HA"
 canonical: "https://safekit.eviden.com/nl/best-practises/vm-ha-vs-application-ha/"
-description: "Vergelijk VM-HA en applicatie-HA. SafeKit biedt beide oplossingen. Elke oplossing biedt real-time replicatie en automatische failover zonder gedeelde schijf. Kies voor volledige VM-redundantie voor eenvoud, of HA op applicatieniveau voor hypervisor-onafhankelijke bescherming op Windows en Linux."
+description: "VM-HA vs. applicatie-HA: SafeKit biedt beide, met realtime replicatie en failover zonder gedeelde schijf. Vergelijk ze om de juiste aanpak te kiezen."
 category: "best-practises"
 lang: "nl"
 topics: "Uw strategie voor hoge beschikbaarheid kiezen: VM-HA versus applicatie-HA, 🔍 Ontdek SafeKit"

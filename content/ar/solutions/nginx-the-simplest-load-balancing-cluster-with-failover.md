@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: برنامج متكامل لموازنة تحميل NGINX وتوفير التوافر العالي"
 canonical: "https://safekit.eviden.com/ar/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
-description: "يوفر SafeKit حلاً قوياً ومقتصراً على البرمجيات لموازنة تحميل NGINX وتوفير التوافر العالي. استبدل أجهزة NLB المعقدة بـ SafeKit الذي يضم عنوان IP ظاهري متكامل، ومراقبة التطبيقات، وتجاوز تلقائي للأعطال. يمكنك بسهولة نشر مجموعة NGINX على خوادم Windows القياسية اليوم."
+description: "موازنة أحمال NGINX وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم قياسية."
 category: "solutions"
 lang: "ar"
 topics: "مجموعة SafeKit farm: موازن تحميل للبرامج فقط وتجاوز تلقائي للأعطال لـ NGINX، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) الخاصة NGINX ببساطة؟، كيف تعمل مجموعة SafeKit في وضع farm مع NGINX؟، مقارنة: مجموعة SafeKit farm لـ NGINX مقابل حلول تجميع NLB الأخرى، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

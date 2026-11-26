@@ -1,7 +1,7 @@
 ---
 title: "Een door SafeKit beveiligde toepassing upgraden in een HA-cluster"
 canonical: "https://safekit.eviden.com/nl/best-practises/how-to-upgrade-an-application-protected-by-safekit/"
-description: "Leer hoe u applicaties die beschermd zijn door SafeKit veilig kunt upgraden. Vergelijk kleine en grote upgrades, doorlopende upgrades, rollbackstrategieën en VM-gebaseerde hoge beschikbaarheid."
+description: "Een door SafeKit beschermde applicatie upgraden: kleine en grote upgrades, rolling upgrades, rollbackopties en de VM-HA-aanpak."
 category: "best-practises"
 lang: "nl"
 topics: "Een High Availability-applicatie beveiligen met SafeKit, Hoge beschikbaarheid op VM-niveau, Hoge beschikbaarheid op applicatieniveau, De juiste upgrade-strategie kiezen, Conclusie, 🔍 Ontdek SafeKit"

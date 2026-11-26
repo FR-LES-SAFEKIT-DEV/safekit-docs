@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Cloud Load Balancing & Application High Availability Farm Cluster"
 canonical: "https://safekit.eviden.com/solutions/cloud-load-balancing-cluster-failover/"
-description: "Enhance Cloud Load Balancer with SafeKit's intelligent application monitoring. Achieve seamless high availability with deep health checks, automatic self-healing, and failover for mission-critical farm clusters."
+description: "SafeKit farm clusters in any cloud: application health checks for the cloud load balancer, automatic restart and failover of your Windows or Linux application."
 category: "solutions"
 lang: "en"
 topics: "Enhance the Cloud Load Balancer with Application-Level Monitoring and Self-Healing, Table of Contents, How the SafeKit software simply implements a Cloud Network Load Balancing (NLB) cluster?, How the SafeKit farm cluster works with Cloud?, Comparison: SafeKit Farm Cluster On-Premises vs. SafeKit Farm Cluster in the Cloud, Video Guide: Configuring a SafeKit Farm NLB Cluster, 🔍 Explore SafeKit"

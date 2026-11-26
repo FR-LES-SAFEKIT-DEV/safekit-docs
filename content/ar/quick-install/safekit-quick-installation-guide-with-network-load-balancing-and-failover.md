@@ -1,7 +1,7 @@
 ---
 title: "موازنة تحميل الشبكة وتجاوز الفشل Apache: تثبيت وحدة SafeKit apache_farm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
-description: "تعرّف على كيفية نشر وحدة apache_farm.safe على نظامي Windows و Linux لتحقيق موازنة تحميل الشبكة التلقائية Apache وتجاوز الفشل التلقائي. يوضح لك هذا الدليل كيفية بناء مجموعة عالية التوفر لخدمات وتطبيقات الويب باستخدام عنوان IP ظاهري، دون الحاجة إلى موازنات تحميل أجهزة خارجية أو تكوين معقد."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit apache_farm.safe على Windows أو Linux لموازنة أحمال الشبكة وتجاوز الفشل لخوادم الويب Apache."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ Apache، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Apache، تثبيت حل SafeKit/Apache على نظامي Windows و Linux (apache_farm.safe)، إعداد حل SafeKit/Apache خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"

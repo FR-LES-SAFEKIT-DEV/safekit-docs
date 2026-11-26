@@ -1,7 +1,7 @@
 ---
 title: "Siemens SiPass アクセス制御のハイアベイラビリティと冗長性：2 ノード SAN レスクラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
-description: "Siemens SiPass アクセス制御の 24 時間年中無休の稼働を保証します。SafeKit は、2 台の標準サーバーでリアルタイムレプリケーションと自動フェイルオーバーによるシンプルな SAN レス高可用性を提供します。SAN や専門的な IT スキルは不要です。無料トライアルをダウンロードしてください。"
+description: "Siemens SiPass 入退室管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "Siemens SiPass 用 SafeKit：2 ノード SAN レス Hyper-V クラスター、目次、SafeKit ソフトウェアは、SAN 上の共有ストレージなしで、どのようにして Siemens SiPass 高可用性クラスター簡単に実装するのですか？、SafeKit Siemens SiPass クラスターの仕組みは？、SafeKit High Availability の制限事項、比較：Siemens SiPass 向け SafeKit とネイティブ Hyper-V クラスタリング、ビデオガイド：Siemens SiPass 向け SafeKit HA クラスターの構成、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

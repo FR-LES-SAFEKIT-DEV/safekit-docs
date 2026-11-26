@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade Nedap com SafeKit: Instale o Módulo nedap.safe para Failover"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-with-nedap/"
-description: "Implemente o módulo nedap.safe para SafeKit para permitir a replicação síncrona em tempo real e o failover automático do Nedap no Windows. Este guia explica como configurar um cluster SANless de 2 nós para aplicações críticas sem armazenamento partilhado."
+description: "Guia passo a passo: instale o módulo SafeKit nedap.safe para replicação em tempo real e failover automático do controlo de acessos Nedap AEOS em Windows."
 category: "quick-install"
 lang: "pt-pt"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para Nedap, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução SafeKit/Nedap, Instalação da solução SafeKit/Nedap no Windows (nedap.safe), Configuração passo a passo da solução SafeKit/Nedap, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"

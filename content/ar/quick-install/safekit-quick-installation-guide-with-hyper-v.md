@@ -1,7 +1,7 @@
 ---
 title: "التوفر العالي Hyper-V باستخدام SafeKit: تثبيت وحدة hyperv.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-hyper-v/"
-description: "تعرّف على كيفية تهيئة hyperv.safe لمجموعة Hyper-V نشطة/نشطة باستخدام SafeKit. حقق توافرًا عاليًا على مستوى الجهاز الظاهري باستخدام البنية من عقدتين بدون مشاركة. انسخ العديد من الأجهزة الظاهرية بشكل متزامن عبر العقد لإجراء تجاوز الفشل التلقائي دون تكلفة شبكة منطقة التخزين SAN أو التخزين المشترك."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit hyperv.safe للتوفر العالي على مستوى الأجهزة الافتراضية، مع نسخ أجهزة Hyper-V الافتراضية وتجاوز فشلها بين خادمين."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع لـ Hyper-V عالي التوفر، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Hyper-V، تثبيت حل SafeKit/Hyper-V على Windows (hyperv.safe)، إعداد حل SafeKit/Hyper-V خطوة بخطوة، عرض توضيحي لحل SafeKit/Hyper-V، 🔍 استكشف SafeKit"

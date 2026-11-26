@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad Linux con SafeKit: Instale el módulo mirror.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
-description: "Implemente el módulo mirror.safe para SafeKit para habilitar la replicación síncrona en tiempo real y la conmutación por error automática en Linux. Esta guía le muestra cómo configurar un clúster SANless de 2 nodos para aplicaciones críticas Linux sin almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit mirror.safe en Linux para replicación en tiempo real y conmutación por error automática de su aplicación en dos servidores."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para Linux, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/Linux, Instalación de la solución SafeKit/Linux (mirror.safe), Configuración paso a paso de la solución SafeKit/Linux, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"

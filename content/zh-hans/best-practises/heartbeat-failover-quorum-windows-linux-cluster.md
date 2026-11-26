@@ -1,7 +1,7 @@
 ---
 title: "Windows 和 Linux 集群中的心跳、故障转移和仲裁"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "了解心跳、故障转移和仲裁在集群中的工作原理。使用 SafeKit，无需第三个仲裁服务器，也无需特殊的仲裁磁盘。一个简单的脑裂检测器就足够了。SafeKit 在 Windows 和 Linux 上提供高可用性。"
+description: "Windows 和 Linux 集群中心跳、故障转移和仲裁的工作原理，以及 SafeKit 如何在无仲裁磁盘或第三台服务器的情况下避免脑裂。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "集群中网络隔离的不同场景有哪些？、在 Windows 或 Linux 集群中，心跳和故障转移是如何工作的？、脑裂和仲裁，服务器位于两个远程机房、使用 SafeKit 脑裂检测器实现简单的集群仲裁、🔍 探索 SafeKit"

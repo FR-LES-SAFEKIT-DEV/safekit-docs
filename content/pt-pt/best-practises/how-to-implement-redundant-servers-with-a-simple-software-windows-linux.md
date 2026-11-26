@@ -1,7 +1,7 @@
 ---
 title: "Como Implementar Servidores Redundantes com Software de Alta Disponibilidade Simples"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
-description: "Aprenda a implementar servidores redundantes com uma abordagem simples, apenas com software. SafeKit oferece replicação de dados em tempo real e failover automático em Windows e Linux. Não requer discos partilhados nem conhecimentos especializados de TI."
+description: "Como implementar servidores redundantes só com software: o SafeKit oferece replicação em tempo real e failover automático em Windows e Linux, sem disco partilhado."
 category: "best-practises"
 lang: "pt-pt"
 topics: "Como implementar servidores redundantes ativos/passivos com replicação em tempo real e failover?, Como implementar servidores redundantes ativos/ativos com balanceamento de carga de rede e failover?, 🔍 Explore SafeKit"

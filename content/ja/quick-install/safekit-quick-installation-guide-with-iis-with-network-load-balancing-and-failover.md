@@ -1,7 +1,7 @@
 ---
 title: "IIS ネットワーク負荷分散とフェイルオーバー：SafeKit iis_farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
-description: "IIS ネットワーク負荷分散と自動フェイルオーバーのために、Windows で iis_farm.safe モジュールをデプロイする方法を学びます。このガイドでは、外部ハードウェアロードバランサーや複雑な設定を必要とせずに、仮想 IP を使用して Web サービスとアプリケーションの高可用性クラスターを構築する方法を説明します。"
+description: "手順ガイド：Windows に SafeKit の iis_farm.safe モジュールを導入し、仮想 IP で IIS Web サーバーのネットワーク負荷分散とフェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "IIS 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/IIS ソリューションの概要、Windows への SafeKit/IIS ソリューションのインストール (iis_farm.safe)、SafeKit/IIS ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"

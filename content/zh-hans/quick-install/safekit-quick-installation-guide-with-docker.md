@@ -1,7 +1,7 @@
 ---
 title: "使用 SafeKit 实现 Docker 高可用性：安装 mirror.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-docker/"
-description: "部署 mirror.safe 模块以实现 SafeKit，从而在 Linux 上启用 Docker 容器的同步实时复制和自动故障转移。本指南将引导您为关键应用程序设置一个无共享存储的 2 节点集群。"
+description: "分步指南：在 Linux 上安装用于 Docker 的 SafeKit mirror.safe 模块，实现容器数据实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "Docker 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Docker 解决方案概述、在 Linux 上安装 SafeKit/Docker 解决方案 (mirror.safe)、SafeKit/Docker 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"

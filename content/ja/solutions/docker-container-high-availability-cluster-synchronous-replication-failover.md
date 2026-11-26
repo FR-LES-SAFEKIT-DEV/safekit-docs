@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：Docker 高可用性＆リアルタイムデータレプリケーションソフトウェア"
 canonical: "https://safekit.eviden.com/ja/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit は、同期データレプリケーションを統合した堅牢な Docker 高可用性ソリューションを提供します。標準的な Linux サーバー上で、自動フェイルオーバーとデータ損失ゼロのステートフルコンテナクラスターを実装します。SAN や共有ストレージは不要です。数分でデプロイできます。"
+description: "SafeKit による Docker の高可用性：Linux サーバー 2 台間でコンテナデータの同期レプリケーションと自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスター Docker と連携する仕組み、目次、SafeKit ソフトウェアが Docker 高可用性クラスタークラスターを簡単に実装する仕組み、SafeKit mirror クラスターが Docker と連携する仕組み、SafeKit 高可用性の制限事項、比較：SafeKit SANless クラスターと従来の Docker HA、比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）、Docker 高可用性の概要、🔍 SafeKit を探索する"

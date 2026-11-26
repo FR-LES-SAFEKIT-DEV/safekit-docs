@@ -1,7 +1,7 @@
 ---
 title: "أبسط طرق تحقيق التوافر العالي Microsoft SQL Server: النسخ المتماثل المتزامن وتجاوز الفشل بعقدتين"
 canonical: "https://safekit.eviden.com/ar/solutions/sql-server-high-availability-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق ميزة التوافر العالي Microsoft SQL Server. يوفر SafeKit مجموعة من عقدتين بدون شبكة SAN مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر أي مهارات متخصصة أو معرفة بـ AD."
+description: "التوفر العالي لـ SQL Server مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي، لجميع الإصدارات، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Microsoft SQL Server، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة خوادم Microsoft SQL Server عالية التوافر بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع Microsoft SQL Server؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Microsoft SQL Server مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

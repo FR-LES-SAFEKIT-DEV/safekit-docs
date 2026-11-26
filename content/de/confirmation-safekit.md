@@ -1,6 +1,6 @@
 ---
-title: "Vielen Dank für Ihre Kontaktaufnahme"
-description: "Bestätigungsseite, die nach dem Absenden des SafeKit-Kontaktformulars angezeigt wird."
+title: "Vielen Dank für Ihre Kontaktaufnahme."
+description: "Vielen Dank für Ihre Kontaktaufnahme zu SafeKit. Ihre Anfrage wurde gesendet und das Eviden-Team wird Ihnen in Kürze antworten."
 lang: "de"
 category: "home"
 sitemap:

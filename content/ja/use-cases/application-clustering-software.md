@@ -1,7 +1,7 @@
 ---
 title: "OEM 高可用性：SafeKit クラスタリングをソフトウェアに組み込む"
 canonical: "https://safekit.eviden.com/ja/use-cases/application-clustering-software/"
-description: "SafeKit でソフトウェアを強化しましょう。OEM として、自動フェイルオーバーと同期レプリケーションをアプリケーションに直接組み込むことができます。ハードウェアクラスターの複雑さなしに、Windows と Linux で 24 時間年中無休の稼働時間をお客様に提供できます。"
+description: "OEM 向け高可用性：SafeKit のレプリケーションとフェイルオーバーを自社ソフトに組み込み、HA の専門知識不要の Windows または Linux クラスターを提供。"
 category: "use-cases"
 lang: "ja"
 topics: "OEM 高可用性ユースケース、🔍 SafeKit を探索する"

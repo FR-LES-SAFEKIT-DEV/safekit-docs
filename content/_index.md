@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: high availability software for Windows and Linux, without a SAN"
 canonical: "https://safekit.eviden.com/"
-description: "SafeKit provides high availability for Windows and Linux with synchronous replication, automatic failover and load balancing on two standard servers, without a SAN."
+description: "SafeKit high availability software for Windows and Linux: synchronous replication, automatic failover and load balancing on two standard servers, no SAN."
 category: "home"
 lang: "en"
 topics: "What SafeKit does, Choose your protection level, Ready-made modules for your applications, Customer use cases, Simple and predictable pricing, Limitations to consider, SafeKit Video Library, 🔍 Explore SafeKit"

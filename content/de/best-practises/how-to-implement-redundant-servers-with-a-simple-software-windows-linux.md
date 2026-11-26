@@ -1,7 +1,7 @@
 ---
 title: "So implementieren Sie redundante Server mit einfacher HA-Software"
 canonical: "https://safekit.eviden.com/de/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
-description: "Erfahren Sie, wie Sie redundante Server mit einem einfachen Software-Ansatz implementieren. SafeKit bietet Echtzeit-Datenreplikation und automatische Failover-Funktionen unter Windows und Linux. Es erfordert keine gemeinsam genutzten Festplatten und keine speziellen IT-Kenntnisse."
+description: "Redundante Server nur mit Software umsetzen: SafeKit bietet Echtzeit-Replikation und automatisches Failover unter Windows und Linux, ohne gemeinsame Festplatte."
 category: "best-practises"
 lang: "de"
 topics: "Wie implementiert man aktive/passive redundante Server mit Echtzeit-Replikation und Failover?, Wie implementiert man aktive/aktive redundante Server mit Netzwerk-Lastausgleich und Failover?, 🔍 SafeKit entdecken"

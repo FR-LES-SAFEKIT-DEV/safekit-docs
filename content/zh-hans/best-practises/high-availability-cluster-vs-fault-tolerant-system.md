@@ -1,7 +1,7 @@
 ---
 title: "HA 集群与容错系统：选择正确的冗余策略"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
-description: "比较 HA 集群和容错系统。SafeKit 提供了一个没有共享存储的 HA 集群。它可防止硬件和软件故障。不需要专门的 FT 硬件，从而降低了成本。没有数据丢失（RPO 0）。"
+description: "HA 集群与容错系统对比：成本、恢复能力及软件故障防护，了解 SafeKit 如何在标准服务器上运行。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性和容错性之间有什么区别？、高可用性和容错性的优缺点、🔍 探索 SafeKit"

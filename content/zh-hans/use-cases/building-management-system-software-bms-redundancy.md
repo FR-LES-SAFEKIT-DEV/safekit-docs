@@ -1,7 +1,7 @@
 ---
 title: "楼宇管理系统 (BMS) 的高可用性和冗余"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/building-management-system-software-bms-redundancy/"
-description: "使用 SafeKit 确保您的智能建筑 100% 正常运行。我们的无共享存储、双节点冗余软件为任何楼宇管理系统（包括 Siemens、Honeywell、Schneider Electric 和 Johnson Controls）提供实时同步复制和自动故障转移。在 Windows 和 Linux 上，为关键的暖通空调和安全系统实现零数据丢失 (RPO = 0) 和运行弹性。"
+description: "使用 SafeKit 实现 BMS 冗余：双节点集群，同步复制和故障转移，适用于 Siemens、Honeywell、Schneider 等楼宇系统。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "什么是楼宇管理系统（BMS）？、为什么 BMS 软件至关重要？、主要 BMS 供应商、SafeKit 为 BMS 软件的冗余和高可用性提供了两种解决方案。、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"

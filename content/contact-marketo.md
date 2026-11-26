@@ -1,6 +1,6 @@
 ---
-title: "Contact - Marketo"
-description: "Contact Eviden with a Marketo Form"
+title: "Contact Marketo"
+description: "Contact form used to send your SafeKit request to the Eviden team."
 lang: "en"
 category: "home"
 sitemap:

@@ -1,7 +1,7 @@
 ---
 title: "Nedap 高可用性与 SafeKit：安装 nedap.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-nedap/"
-description: "部署 nedap.safe 模块以实现 SafeKit，从而在 Windows 上实现 Nedap 的同步实时复制和自动故障转移。本指南将引导您为没有共享存储的临界应用程序设置 2 节点 SANless 集群。"
+description: "分步指南：安装 SafeKit nedap.safe 模块，在 Windows 上实现 Nedap AEOS 门禁系统的实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "Nedap 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Nedap 解决方案概述、在 Windows 上安装 SafeKit/Nedap 解决方案 (nedap.safe)、SafeKit/Nedap 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"

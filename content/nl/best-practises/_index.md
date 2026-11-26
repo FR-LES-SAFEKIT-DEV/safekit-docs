@@ -1,7 +1,7 @@
 ---
 title: "Best practices voor hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/best-practises/"
-description: "Ontdek de best practices voor hoge beschikbaarheid van SafeKit: HA-architectuurpatronen, synchrone versus asynchrone replicatie, clusterstrategieën, VIP-failover, RPO/RTO en redundantieontwerp voor Windows en Linux."
+description: "Best practices voor hoge beschikbaarheid: HA-architecturen, synchrone en asynchrone replicatie, failover van virtuele IP-adressen, quorum, RPO en RTO, uitgelegd met SafeKit."
 category: "best-practises"
 lang: "nl"
 topics: "Architectuur en ontwerppatronen, Hoge beschikbaarheid en herstel na noodgevallen, Replicatiestrategieën, Clustering en failover, Opslag en infrastructuur, Implementatie en migratie"

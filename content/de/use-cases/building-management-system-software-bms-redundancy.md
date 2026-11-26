@@ -1,7 +1,7 @@
 ---
 title: "Hochverfügbarkeit und Redundanz für Gebäudemanagementsysteme (BMS)"
 canonical: "https://safekit.eviden.com/de/use-cases/building-management-system-software-bms-redundancy/"
-description: "Sorgen Sie mit SafeKit für eine 100%ige Betriebszeit Ihres intelligenten Gebäudes. Unsere SANless-Redundanzsoftware für 2 Knoten bietet synchrone Echtzeit-Replikation und automatischen Failover für jedes BMS, einschließlich Siemens, Honeywell, Schneider Electric und Johnson Controls. Erzielen Sie null Datenverlust (RPO = 0) und betriebliche Ausfallsicherheit für kritische HLK- und Sicherheitssysteme unter Windows und Linux."
+description: "BMS-Redundanz mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und Failover für Siemens, Honeywell, Schneider und andere Gebäudesysteme."
 category: "use-cases"
 lang: "de"
 topics: "Was ist ein Gebäudemanagementsystem (BMS)?, Warum ist BMS-Software entscheidend?, Wichtige BMS-Anbieter, SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit von BMS-Software., SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"

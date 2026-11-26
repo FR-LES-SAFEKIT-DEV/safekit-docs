@@ -1,7 +1,7 @@
 ---
 title: "HA-cluster versus fouttolerant systeem: de juiste redundantiestrategie kiezen"
 canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-cluster-vs-fault-tolerant-system/"
-description: "Vergelijk HA-clusters en fouttolerante systemen. De SafeKit-software biedt een HA-cluster zonder gedeelde opslag. Het beschermt tegen zowel hardware- als softwarestoringen. Er is geen gespecialiseerde FT-hardware nodig, wat de kosten verlaagt. Er is geen gegevensverlies (RPO 0)."
+description: "HA-cluster vs. fouttolerant systeem: vergelijk kosten, herstel en bescherming tegen softwarestoringen, en ontdek hoe SafeKit werkt op standaardservers."
 category: "best-practises"
 lang: "nl"
 topics: "Wat is het verschil tussen hoge beschikbaarheid en fouttolerantie?, Voor- en nadelen van hoge beschikbaarheid en fouttolerantie, 🔍 Ontdek SafeKit"

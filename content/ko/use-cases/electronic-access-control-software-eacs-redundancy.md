@@ -1,7 +1,7 @@
 ---
 title: "전자 출입 통제 소프트웨어(EACS)의 고가용성 및 이중화"
 canonical: "https://safekit.eviden.com/ko/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "SafeKit은 전자 출입 통제 시스템(EACS)을 위한 가장 간단한 고가용성 소프트웨어입니다. 24시간 연중무휴로 건물 보안을 유지합니다. 클러스터는 두 개의 노드로 구성되며 SAN이 필요 없습니다. 실시간 동기 복제 및 자동 장애 조치를 제공합니다. Nedap, TIL Technologies, Siemens, HID 및 Windows 또는 Linux 기반의 모든 EACS 소프트웨어와 함께 작동합니다. 데이터 손실은 전혀 없습니다(RPO = 0)."
+description: "SafeKit으로 구현하는 출입 통제(EACS) 이중화: Nedap, Siemens, HID 등 시스템를 위한 동기 복제 및 장애 조치 기반 2노드 클러스터."
 category: "use-cases"
 lang: "ko"
 topics: "전자식 출입 통제 시스템(EACS)이란 무엇인가요?, EACS 소프트웨어가 중요한 이유는 무엇입니까?, 주요 EACS 공급업체, SafeKit EACS 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다., SafeKit, 보안 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"

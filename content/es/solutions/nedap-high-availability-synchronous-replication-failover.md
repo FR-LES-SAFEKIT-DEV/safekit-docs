@@ -1,7 +1,7 @@
 ---
 title: "La alta disponibilidad más sencilla Nedap: replicación y conmutación por error sincrónicas de 2 nodos"
 canonical: "https://safekit.eviden.com/es/solutions/nedap-high-availability-synchronous-replication-failover/"
-description: "La forma más sencilla de implementar la alta disponibilidad Nedap. SafeKit proporciona un clúster sin SAN de 2 nodos con replicación síncrona y conmutación por error automática, sin necesidad de AD ni conocimientos especializados."
+description: "Alta disponibilidad de Nedap AEOS con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error automática del control de acceso, sin SAN."
 category: "solutions"
 lang: "es"
 topics: "Cómo funciona el clúster mirror SANless SafeKit con Nedap, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Nedap sin SAN?, ¿Cómo funciona el clúster mirror SafeKit con Nedap?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para Nedap frente a otras soluciones de clúster, Guía en vídeo: Configuración de un clúster mirror SafeKit HA, SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"

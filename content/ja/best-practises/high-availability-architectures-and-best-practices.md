@@ -1,7 +1,7 @@
 ---
 title: "高可用性アーキテクチャとソフトウェアクラスタリングのベストプラクティス"
 canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-architectures-and-best-practices/"
-description: "アプリケーションクラスタリングにおける高可用性（HA）アーキテクチャとベストプラクティスについてご紹介します。SafeKit ソフトウェアは、共有ディスクなしで mirror クラスターと farm クラスターを実装します。重要なアプリケーションに対して、データ損失ゼロと自動フェイルオーバーを提供します。"
+description: "アプリケーションクラスタリングの高可用性アーキテクチャとベストプラクティス：mirror・farm クラスター、レプリケーション、フェイルオーバーを SafeKit の例で解説。"
 category: "best-practises"
 lang: "ja"
 topics: "高可用性アーキテクチャとベストプラクティスとは何ですか？、高可用性アーキテクチャとベストプラクティスに関する比較表、🔍 SafeKit を探索する"

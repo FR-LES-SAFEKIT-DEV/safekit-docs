@@ -1,7 +1,7 @@
 ---
 title: "Architecturen voor hoge beschikbaarheid en best practices voor softwareclustering"
 canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-architectures-and-best-practices/"
-description: "Ontdek architecturen met hoge beschikbaarheid (HA) en best practices voor applicatieclustering. De SafeKit-software implementeert mirror- en farm-clusters zonder gedeelde schijven. Het biedt nul gegevensverlies en automatische failover voor bedrijfskritieke applicaties."
+description: "Architecturen en best practices voor hoge beschikbaarheid bij applicatieclustering: mirror- en farm-clusters, replicatie en failover, met voorbeelden van SafeKit."
 category: "best-practises"
 lang: "nl"
 topics: "Wat zijn de architecturen voor hoge beschikbaarheid en de best practices?, Vergelijkende tabellen over architecturen en best practices voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"

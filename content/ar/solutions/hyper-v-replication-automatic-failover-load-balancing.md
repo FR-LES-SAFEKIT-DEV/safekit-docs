@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي البسيط Hyper-V بدون تخزين مشترك (SAN)"
 canonical: "https://safekit.eviden.com/ar/solutions/hyper-v-replication-automatic-failover-load-balancing/"
-description: "حقق التوافر العالي لـ Hyper-V بدون شبكة منطقة التخزين (SAN). يوفر SafeKit النسخ المتماثل في الوقت الفعلي وتجاوز الأعطال التلقائي للمجموعات المكونة من عقدتين. قم بتنزيل نسختك التجريبية المجانية الآن."
+description: "التوفر العالي لـ Hyper-V دون SAN: ينسخ SafeKit الأجهزة الافتراضية في الوقت الفعلي بين خادمين ويعيد تشغيلها تلقائيًا عند حدوث عطل."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit for Hyper-V: مجموعة Hyper-V بدون SAN مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Hyper-V عالية التوفر ببساطة دون تخزين مشترك على شبكة منطقة التخزين (SAN)؟، كيف تعمل مجموعة SafeKit Hyper-V؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Hyper-V مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لـ Hyper-V، 🔍 استكشف SafeKit"

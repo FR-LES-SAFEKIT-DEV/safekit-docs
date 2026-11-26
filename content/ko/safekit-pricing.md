@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 가격"
 canonical: "https://safekit.eviden.com/ko/safekit-pricing/"
-description: "SafeKit 라이선스 모델을 이해하고 Windows 및 Linux 환경에서 고가용성, 복제, 장애 조치 및 부하 분산을 위한 맞춤형 견적을 요청하세요."
+description: "SafeKit 가격: 서버당 영구 라이선스, 무료 애플리케이션 모듈, Enterprise 에디션 불필요. Windows 또는 Linux 클러스터 견적을 요청하세요."
 category: "home"
 lang: "ko"
 topics: "라이선스 모델 및 가격 책정, 표준 지원 및 유지보수, 견적 요청"

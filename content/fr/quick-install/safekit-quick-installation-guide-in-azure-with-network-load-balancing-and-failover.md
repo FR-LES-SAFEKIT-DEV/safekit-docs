@@ -1,7 +1,7 @@
 ---
 title: "Équilibrage de charge et basculement réseau Azure : installer le module SafeKit farm.safe"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
-description: "Améliorez l’équilibrage de charge réseau Azure avec la surveillance intelligente des applications de SafeKit. Le module farm.safe fournit une vérification de l’intégrité dédiée pour l’équilibreur de charge Azure, permettant une haute disponibilité transparente au niveau de l’application. Obtenez une auto-réparation et un basculement automatiques pour les applications critiques."
+description: "Guide pas à pas : installez le module SafeKit farm.safe dans Azure : il contrôle la santé de l’application pour l’équilibreur de charge Azure et gère le basculement."
 category: "quick-install"
 lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour Azure, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Azure, Installation de la solution SafeKit/Azure sous Windows et Linux (farm.safe), Configuration pas à pas de la solution SafeKit/Azure, Démonstration de la solution farm SafeKit, 🔍 Explorez SafeKit"

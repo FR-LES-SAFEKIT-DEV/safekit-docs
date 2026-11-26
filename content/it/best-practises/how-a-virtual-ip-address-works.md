@@ -1,7 +1,7 @@
 ---
 title: "Come funziona un indirizzo IP virtuale in un cluster ad alta disponibilità?"
 canonical: "https://safekit.eviden.com/it/best-practises/how-a-virtual-ip-address-works/"
-description: "Come SafeKit sposta un IP virtuale in caso di failover: ARP gratuito nella stessa sottorete, load balancer, cloud CLI o BGP tra sottoreti. Perché un IP virtuale locale è importante."
+description: "Come si sposta un IP virtuale durante il failover: ARP gratuito nella stessa sottorete, oppure load balancer, route cloud o BGP tra sottoreti, spiegato con SafeKit."
 category: "best-practises"
 lang: "it"
 topics: "Che cos’è un indirizzo IP virtuale in un cluster ad alta disponibilità?, Implementazione dell’IP virtuale in SafeKit, Come funziona un IP virtuale nella stessa sottorete (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con un bilanciatore del carico (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con le CLI dei provider cloud (cluster mirror), Come funziona un IP virtuale su sottoreti diverse con BGP (cluster mirror), Come funziona il reindirizzamento DNS su sottoreti diverse (cluster mirror), Come funziona il bilanciamento del carico dell’IP virtuale in un cluster farm sulla stessa sottorete, Come funziona un IP virtuale bilanciato su sottoreti diverse (cluster farm), Confronto: implementazione dell’IP virtuale, latenza e trasparenza dell’applicazione, Domande frequenti sull’IP virtuale, 🔍 Esplora SafeKit"

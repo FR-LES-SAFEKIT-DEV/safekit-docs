@@ -1,7 +1,7 @@
 ---
 title: "HA delle VM vs. HA applicativa"
 canonical: "https://safekit.eviden.com/it/best-practises/vm-ha-vs-application-ha/"
-description: "Confronta l’HA delle VM e l’HA applicativa. SafeKit offre entrambe le soluzioni. Ciascuna fornisce la replica in tempo reale e il failover automatico senza un disco condiviso. Scegli la ridondanza completa della VM per la semplicità, o la HA a livello di applicazione per la protezione indipendente dall’hypervisor su Windows e Linux."
+description: "HA delle VM o HA applicativa: SafeKit offre entrambe, con replica in tempo reale e failover senza disco condiviso. Confrontale per scegliere l’approccio giusto."
 category: "best-practises"
 lang: "it"
 topics: "Scelta della strategia di alta disponibilità: HA delle VM o HA applicativa, 🔍 Esplora SafeKit"

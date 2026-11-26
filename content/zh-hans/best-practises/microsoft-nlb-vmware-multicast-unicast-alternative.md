@@ -1,7 +1,7 @@
 ---
 title: "Microsoft NLB VMware 替代方案：解决组播和单播问题"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/microsoft-nlb-vmware-multicast-unicast-alternative/"
-description: "在 VMware 中使用 Microsoft NLB 组播或单播时遇到问题？SafeKit 提供了一个简单的替代方案：一个在 Windows 和 Linux 上具有自动负载均衡和故障转移的 farm 集群。它不需要静态 ARP 条目、MAC 欺骗和专门的网络配置。"
+description: "VMware 上 Microsoft NLB 的替代方案：SafeKit farm 集群实现负载均衡和故障转移，无需组播、静态 ARP 条目或 MAC 欺骗。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "Microsoft NLB 组播模式、Microsoft NLB 单播模式、SafeKit 替代方案、SafeKit 集群在 farm 模式下如何与 Windows 配合使用？、🔍 探索 SafeKit"

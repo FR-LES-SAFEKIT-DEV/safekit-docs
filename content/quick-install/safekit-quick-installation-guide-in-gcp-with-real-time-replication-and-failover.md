@@ -1,7 +1,7 @@
 ---
 title: "GCP High Availability with SafeKit: Install the mirror.safe Module for Failover"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
-description: "Deploy the mirror.safe module for SafeKit in GCP to enable synchronous real-time replication and automatic failover on Windows and Linux. This guide walks you through setting up a 2-node shared-nothing cluster for critical applications without shared storage."
+description: "Step-by-step guide: install the SafeKit mirror.safe module in Google Cloud for real-time replication and failover between two Windows or Linux VMs."
 category: "quick-install"
 lang: "en"
 topics: "High Availability Quick Installation Guide for GCP, SafeKit High Availability Limitations, Overview of the SafeKit / GCP mirror solution, Installation of the SafeKit / GCP mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / GCP mirror solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"

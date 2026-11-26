@@ -1,7 +1,7 @@
 ---
 title: "موازنة تحميل الشبكة وتجاوز الأعطال AWS: تثبيت وحدة SafeKit farm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
-description: "عزّز موازنة تحميل الشبكة في AWS باستخدام المراقبة الذكية للتطبيقات من SafeKit. توفر وحدة farm.safe فحصًا مخصصًا لسلامة موازن تحميل AWS، مما يتيح التوافر العالي السلس على مستوى التطبيق. حقق الشفاء الذاتي التلقائي وتجاوز الأعطال للتطبيقات ذات المهام الحرجة."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe في AWS، حيث تتحقق من سلامة التطبيق لموازن أحمال AWS وتتولى تجاوز الفشل."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ AWS، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/AWS، تثبيت حل SafeKit/AWS على نظامي التشغيل Windows و Linux (farm.safe)، تهيئة حل SafeKit/AWS خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"

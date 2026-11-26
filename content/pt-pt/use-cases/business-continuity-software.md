@@ -1,7 +1,7 @@
 ---
 title: "Padronização da Alta Disponibilidade para Empresas Distribuídas com Múltiplas Filiais"
 canonical: "https://safekit.eviden.com/pt-pt/use-cases/business-continuity-software/"
-description: "Proteja todas as filiais da sua empresa distribuída com SafeKit. Implemente um cluster de alta disponibilidade padronizado, apenas com software, em grande escala. Garanta o funcionamento 24/7 para aplicações críticas em todas as filiais. SafeKit funciona em Windows e Linux. Não requer armazenamento partilhado, nem SAN complexa, nem conhecimentos de TI no local."
+description: "Alta disponibilidade para empresas distribuídas: implemente o mesmo cluster SafeKit em cada filial, sem SAN e sem equipa de TI no local, em Windows ou Linux."
 category: "use-cases"
 lang: "pt-pt"
 topics: "Continuidade de negócios numa empresa distribuída, 🔍 Explore SafeKit"

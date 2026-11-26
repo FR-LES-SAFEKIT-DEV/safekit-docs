@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي والتكرار لنظام التحكم في الوصول Siemens SiPass: مجموعة من عقدتين بدون شبكة تخزين (SANless)"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
-description: "اضمن وقت تشغيل على مدار الساعة طوال أيام الأسبوع لنظام التحكم في الوصول Siemens SiPass. يوفر SafeKit توفرًا عاليًا بسيطًا بدون شبكة SAN مع النسخ المتماثل في الوقت الفعلي وتجاوز الأعطال التلقائي على خادمين قياسيين. لا يلزم وجود شبكة SAN أو مهارات تكنولوجيا معلومات متخصصة. قم بتنزيل النسخة التجريبية المجانية."
+description: "التوفر العالي لنظام التحكم في الوصول Siemens SiPass: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit لـ Siemens SiPass: مجموعة Hyper-V بدون شبكة SAN مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Siemens SiPass عالية التوافر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Siemens SiPass؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Siemens SiPass مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لـ Siemens SiPass، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

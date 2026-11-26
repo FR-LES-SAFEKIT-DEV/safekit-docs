@@ -1,7 +1,7 @@
 ---
 title: "SafeKit kostenlose Testversion"
 canonical: "https://safekit.eviden.com/de/resources/safekit-free-trial/"
-description: "Laden Sie die kostenlose Testversion von SafeKit herunter, um die Hochverfügbarkeit auf Anwendungs- und VM-Ebene zu testen. SafeKit bietet eine SANless-Architektur für Windows und Linux mit null Datenverlust und automatischem Failover."
+description: "Laden Sie die kostenlose SafeKit-Testversion herunter: Testen Sie HA auf Anwendungs- oder VM-Ebene unter Windows und Linux, mit Replikation und automatischem Failover."
 category: "resources"
 lang: "de"
 topics: "SafeKit HA Kostenlose Testversion & Technische Dokumentation, 🔍 SafeKit entdecken"

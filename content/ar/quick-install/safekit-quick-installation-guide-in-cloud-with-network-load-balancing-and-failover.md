@@ -1,7 +1,7 @@
 ---
 title: "موازنة تحميل الشبكة السحابية وتجاوز الأعطال: تثبيت وحدة farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
-description: "عزّز موازنة تحميل الشبكة السحابية باستخدام ميزة مراقبة التطبيقات الذكية من SafeKit. توفر وحدة farm.safe فحصًا مخصصًا لصحة موازن تحميل السحابة، مما يتيح التوافر العالي (HA) بسلاسة على مستوى التطبيق. حقق المعالجة الذاتية التلقائية والتحويل التلقائي عند الفشل للتطبيقات ذات المهام الحرجة."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe في أي سحابة، حيث تتحقق من سلامة التطبيق لموازن الأحمال السحابي وتتولى تجاوز الفشل."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي للسحابة، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit / Cloud، تثبيت حل SafeKit / Cloud على نظامي التشغيل Windows و Linux (farm.safe)، تهيئة حل SafeKit / Cloud خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"

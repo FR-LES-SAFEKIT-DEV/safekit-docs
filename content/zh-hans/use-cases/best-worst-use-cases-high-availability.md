@@ -1,7 +1,7 @@
 ---
 title: "高可用性最佳和最差用例：SafeKit 实施指南"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/best-worst-use-cases-high-availability/"
-description: "确定高可用性的最佳和最差用例。了解 SafeKit 在 Windows 和 Linux 的软件定义集群方面表现出色，并了解传统共享存储或基于硬件的 HA 何时可能会让您的业务失败。"
+description: "SafeKit 的最佳与最差用例：Windows 和 Linux 上的软件集群适用于哪些场景，何时共享存储或其他方法更合适。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "最佳用例、SafeKit 高可用性限制、🔍 探索 SafeKit"

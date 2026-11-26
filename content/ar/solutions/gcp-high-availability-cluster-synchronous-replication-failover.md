@@ -1,7 +1,7 @@
 ---
 title: "التوفر العالي لـ Google GCP: النسخ المتماثل المتزامن وتجاوز الأعطال SafeKit"
 canonical: "https://safekit.eviden.com/ar/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
-description: "انشر مجموعة Google GCP HA بسيطة باستخدام SafeKit. توفر البنية بدون مشاركة النسخ المتماثل المتزامن، وتجاوز الفشل التلقائي، واستعادة RPO = 0 لتطبيقات Windows و Linux دون تكلفة الأقراص السحابية المشتركة."
+description: "التوفر العالي في Google Cloud مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي بين جهازين افتراضيين Windows أو Linux، دون قرص مشترك."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit HA بدون مشاركة في GCP: تخلص من الأقراص المشتركة مع عدم فقدان أي بيانات، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر من نوع GCP مجموعة بدون مشاركة ببساطة؟، كيف تعمل مجموعة mirror SafeKit مع GCP؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ GCP مقابل حلول التوافر العالي/التعافي من الكوارث السحابية الأصلية، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

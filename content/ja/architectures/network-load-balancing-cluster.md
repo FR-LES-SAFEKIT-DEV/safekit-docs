@@ -1,7 +1,7 @@
 ---
 title: "SafeKit farm クラスター：Windows および Linux 向けのネットワーク負荷分散と高可用性"
 canonical: "https://safekit.eviden.com/ja/architectures/network-load-balancing-cluster/"
-description: "SafeKit は、高性能なネットワーク負荷分散（NLB）と自動フェイルオーバーを単一のソフトウェアパッケージで提供します。高価なハードウェアロードバランサーを、Windows および Linux 向け SafeKit のカーネルレベル仮想 IP 管理に置き換えます。OEM 統合や簡素化されたクラスター管理に最適です。"
+description: "SafeKit farm クラスター：Windows または Linux サーバー間で仮想 IP によるネットワーク負荷分散と自動フェイルオーバー。ハードウェア負荷分散装置不要。"
 category: "architectures"
 lang: "ja"
 topics: "SafeKit farm クラスター：Windows および Linux 向けのソフトウェアロードバランシングと自動フェイルオーバー、目次、SafeKit は Windows および Linux 上でネットワーク負荷分散（NLB）クラスターをどのように実装しますか？、SafeKit farm クラスターが Windows と Linux でどのように動作しますか？、SafeKit farm クラスターと他の NLB クラスタリングソリューションの比較、ビデオガイド：SafeKit farm NLB クラスターの構成方法、🔍 SafeKit を探索する"

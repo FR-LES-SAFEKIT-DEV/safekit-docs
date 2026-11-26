@@ -1,7 +1,7 @@
 ---
 title: "Software voor bedrijfscontinuïteit en noodherstel voor clusters met 2 knooppunten met SafeKit"
 canonical: "https://safekit.eviden.com/nl/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "SafeKit is software voor bedrijfscontinuïteit en noodherstel. Het implementeert een eenvoudige hoge beschikbaarheidsoplossing tussen twee externe serverruimtes. Bereik 24/7 uptime met SafeKit, de gebruiksvriendelijkste software voor bedrijfscontinuïteit en noodherstel. Elimineer dure SAN's en complexe IT-vaardigheden met synchrone replicatie met 2 knooppunten, automatische failover en taakverdeling voor Windows en Linux. Nul gegevensverlies (RPO = 0) voor bedrijfskritieke toepassingen in elke cloud- of on-premises-omgeving."
+description: "Bedrijfscontinuïteit en disaster recovery met SafeKit: een cluster met twee nodes verdeeld over twee serverruimtes, met synchrone replicatie en automatische failover."
 category: "use-cases"
 lang: "nl"
 topics: "Software voor bedrijfscontinuïteit en noodherstel, 🔍 Ontdek SafeKit"

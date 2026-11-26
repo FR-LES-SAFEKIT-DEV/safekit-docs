@@ -1,7 +1,7 @@
 ---
 title: "Bilanciamento del carico e failover della rete GCP: installare il modulo SafeKit farm.safe"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
-description: "Migliora il bilanciamento del carico di rete GCP con il monitoraggio intelligente delle applicazioni di SafeKit. Il modulo farm.safe fornisce un controllo di integrità dedicato per il bilanciatore del carico GCP, consentendo un’alta disponibilità (HA) senza interruzioni a livello di applicazione. Ottieni l’autoriparazione automatica e il failover per le applicazioni mission-critical."
+description: "Guida passo passo: installa il modulo SafeKit farm.safe in Google Cloud, dove verifica lo stato dell’applicazione per il bilanciatore GCP e gestisce il failover."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione ad alta disponibilità per GCP, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/GCP, Installazione della soluzione SafeKit/GCP su Windows e Linux (farm.safe), Configurazione passo-passo della soluzione SafeKit/GCP, Dimostrazione della soluzione farm SafeKit, 🔍 Esplora SafeKit"

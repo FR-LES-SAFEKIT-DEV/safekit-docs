@@ -1,7 +1,7 @@
 ---
 title: "SafeKit に関するお問い合わせ"
 canonical: "https://safekit.eviden.com/ja/contact-us-for-safekit/"
-description: "SafeKit 高可用性ソフトウェアについては、Eviden にお問い合わせください。"
+description: "Windows と Linux 向け SafeKit 高可用性ソフトウェアについて Eviden にお問い合わせください：価格、技術的なご質問、パートナーシップ、デモ。"
 lang: "ja"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"

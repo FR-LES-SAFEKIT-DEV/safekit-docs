@@ -1,7 +1,7 @@
 ---
 title: "SafeKit ソリューション"
 canonical: "https://safekit.eviden.com/ja/solutions/"
-description: "SafeKit 高可用性ソフトウェアの HA モジュールを使用すれば、Windows および Linux でのクラスター構成は非常に簡単になります。"
+description: "SafeKit ソリューション：データベース、Web サーバー、VM、コンテナ、クラウド、セキュリティソフト向けの既製の高可用性モジュール。Windows と Linux 対応。"
 category: "solutions"
 lang: "ja"
 topics: "SafeKit アプリケーションモジュールライブラリ：すぐに使える HA ソリューション、🔍 SafeKit を詳しく見る"

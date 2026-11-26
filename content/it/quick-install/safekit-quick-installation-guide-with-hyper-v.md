@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilità Hyper-V con SafeKit: installare il modulo hyperv.safe per il failover"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-hyper-v/"
-description: "Scopri come configurare hyperv.safe per un cluster Hyper-V attivo/attivo con SafeKit. Ottieni un’elevata disponibilità a livello di VM con un’architettura a 2 nodi shared-nothing. Replica in modo sincrono più VM tra i nodi per il failover automatico senza il costo di una SAN o di un’archiviazione condivisa."
+description: "Guida passo passo: installa il modulo SafeKit hyperv.safe per l’alta disponibilità a livello di VM, con replica e failover delle VM Hyper-V tra due server."
 category: "quick-install"
 lang: "it"
 topics: "Guida rapida all’installazione dell’alta disponibilità per Hyper-V, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/Hyper-V, Installazione della soluzione SafeKit/Hyper-V su Windows (hyperv.safe), Configurazione passo-passo della soluzione SafeKit/Hyper-V, Dimostrazione della soluzione SafeKit/Hyper-V, 🔍 Esplora SafeKit"

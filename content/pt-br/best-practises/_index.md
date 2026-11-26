@@ -1,7 +1,7 @@
 ---
 title: "Melhores Práticas de Alta Disponibilidade"
 canonical: "https://safekit.eviden.com/pt-br/best-practises/"
-description: "Explore as melhores práticas de alta disponibilidade do SafeKit: padrões de arquitetura de HA, replicação síncrona vs. assíncrona, estratégias de clusterização, failover VIP, RPO/RTO e projeto de redundância para Windows e Linux."
+description: "Boas práticas de alta disponibilidade: arquiteturas HA, replicação síncrona e assíncrona, failover de IP virtual, quórum, RPO e RTO, explicados com o SafeKit."
 category: "best-practises"
 lang: "pt-br"
 topics: "Arquitetura e Padrões de Projeto, Alta Disponibilidade e Recuperação de Desastres, Estratégias de Replicação, Agrupamento e failover, Armazenamento e Infraestrutura, Implementação e Migração"

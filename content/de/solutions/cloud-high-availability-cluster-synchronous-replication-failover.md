@@ -1,7 +1,7 @@
 ---
 title: "Cloud-agnostische Hochverfügbarkeit: Synchronous Replication & Failover SafeKit"
 canonical: "https://safekit.eviden.com/de/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
-description: "Implementieren Sie eine einfache, Cloud-agnostische Hochverfügbarkeit: SafeKit Synchronous Replication & Failover HA-Cluster mit SafeKit. Unsere Shared-Nothing-Architektur bietet synchrone Replikation, automatische Failover und RPO =0 für Windows und Linux Anwendungen ohne die Kosten für Cloud-Shared-Disks."
+description: "Hochverfügbarkeit in jeder Cloud mit SafeKit: synchrone Replikation und automatisches Failover zwischen zwei Windows- oder Linux-VMs, ohne gemeinsame Cloud-Festplatte."
 category: "solutions"
 lang: "de"
 topics: "SafeKit Shared-Nothing HA in der Cloud: Eliminieren Sie gemeinsam genutzte Festplatten ohne Datenverlust, Inhaltsverzeichnis, Wie implementiert die SafeKit Software einfach einen Shared-Nothing Cloud-Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit der Cloud?, Einschränkungen SafeKit Hochverfügbarkeit, Vergleich: SafeKit für die Cloud vs. native Cloud-HA/DR-Lösungen, Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster, 🔍 SafeKit entdecken"

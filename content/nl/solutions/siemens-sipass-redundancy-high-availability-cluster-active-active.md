@@ -1,7 +1,7 @@
 ---
 title: "Hoge beschikbaarheid en redundantie voor Siemens SiPass toegangscontrole: SANless-cluster met 2 knooppunten"
 canonical: "https://safekit.eviden.com/nl/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
-description: "Zorg voor 24/7 uptime voor Siemens SiPass toegangscontrole. SafeKit biedt eenvoudige SANless hoge beschikbaarheid met real-time replicatie en automatische failover op twee standaardservers. Geen SAN of gespecialiseerde IT-vaardigheden vereist. Download de gratis proefversie."
+description: "Hoge beschikbaarheid voor Siemens SiPass-toegangscontrole: SafeKit repliceert de virtuele Hyper-V-machine tussen twee servers met automatische failover, zonder SAN."
 category: "solutions"
 lang: "nl"
 topics: "SafeKit voor Siemens SiPass: SANless Hyper-V cluster met 2 knooppunten, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een Siemens SiPass cluster met hoge beschikbaarheid zonder gedeelde opslag op een SAN?, Hoe werkt het SafeKit Siemens SiPass cluster?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Siemens SiPass versus native Hyper-V-clustering, Videogids: Een SafeKit HA-cluster configureren voor Siemens SiPass, SafeKit, een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"

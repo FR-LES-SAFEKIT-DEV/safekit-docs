@@ -1,7 +1,7 @@
 ---
 title: "Notas de versão SafeKit 8.2"
 canonical: "https://safekit.eviden.com/pt-br/resources/safekit-release-notes-8-2/"
-description: "Este documento fornece informações sobre as versões do SafeKit : principais alterações, restrições e problemas conhecidos, além de instruções de migração."
+description: "Notas de versão do SafeKit 8.2: principais mudanças, restrições, problemas conhecidos e instruções de migração para Windows e Linux."
 category: "resources"
 lang: "pt-br"
 layout: userguide

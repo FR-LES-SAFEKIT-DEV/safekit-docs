@@ -1,7 +1,7 @@
 ---
 title: "SafeKit AIとサポート"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-support/"
-description: "SafeKit 、24時間365日のインシデント報告を含む標準的な契約サポート、 SafeKit AIによる無料のAI支援、および無料のオンライン認定・トレーニングプログラムの3つのサポートチャネルを提供しています。"
+description: "SafeKit サポート：24 時間 365 日のインシデント報告を含む契約サポート、SafeKit AI による無料支援、無料のオンライントレーニングと認定プログラム。"
 category: "resources"
 lang: "ja"
 topics: "無料のAIレベル1サポート、標準サポートとメンテナンス、無料の認定とトレーニングプログラム、🔍 SafeKit を探索する"

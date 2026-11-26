@@ -1,7 +1,7 @@
 ---
 title: "La più semplice alta disponibilità Linux: replica sincrona e failover a 2 nodi"
 canonical: "https://safekit.eviden.com/it/solutions/linux-high-availability-software-synchronous-replication-failover/"
-description: "Il modo più semplice per implementare l’alta disponibilità Linux. SafeKit fornisce un cluster SANless a 2 nodi con replica sincrona e failover automatico, senza bisogno di AD o competenze specialistiche."
+description: "Alta disponibilità Linux con SafeKit: cluster a due nodi con replica sincrona e failover automatico della tua applicazione, senza SAN."
 category: "solutions"
 lang: "it"
 topics: "Come funziona il cluster mirror SafeKit SANless con Linux, Indice, In che modo il software SafeKit implementa semplicemente un cluster Linux ad alta disponibilità SANless?, Come funziona il cluster mirror SafeKit con Linux?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Linux e le altre soluzioni di clustering, Guida video: configurazione di un cluster mirror SafeKit HA, 🔍 Esplora SafeKit"

@@ -1,7 +1,7 @@
 ---
-title: "测试 SafeKit mirror 集群的虚拟 IP 地址"
+title: "测试网络中 SafeKit mirror 集群的虚拟 IP 地址"
 canonical: "https://safekit.eviden.com/zh-hans/best-practises/test-primary-backup-vip-mirror/"
-description: "测试 SafeKit mirror 集群中的虚拟 IP 可用性和故障转移，包括 GARP 重路由、ARP 检查和数据包捕获。"
+description: "如何测试 SafeKit mirror 集群的虚拟 IP：可用性、故障转移、GARP 重路由、ARP 表检查和数据包捕获。"
 category: "best-practises"
 lang: "zh-hans"
 topics: "关键原则、前提条件：虚拟 IP (VIP) 配置、测试 1 – 主服务器持有的虚拟 IP (VIP)、测试 2 – 手动故障转移（主服务器停止）、测试 3 – 使用 arp -a 检查 GARP 重路由、测试 4 – 使用 Wireshark (Windows) 或 tcpdump (Linux) 进行端到端检查、从哪些工作站进行测试、预期结果摘要、故障排除"

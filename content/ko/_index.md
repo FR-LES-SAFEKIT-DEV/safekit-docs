@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: SAN 없이 Windows 및 Linux용 고가용성 소프트웨어"
 canonical: "https://safekit.eviden.com/ko/"
-description: "SafeKit은 SAN 없이 두 개의 표준 서버에서 동기 복제, 자동 장애 조치 및 부하 분산을 통해 Windows 및 Linux에 대한 고가용성을 제공합니다."
+description: "Windows 및 Linux용 SafeKit 고가용성 소프트웨어: SAN 없이 표준 서버 2대에서 동기 복제, 자동 장애 조치, 부하 분산을 제공합니다."
 category: "home"
 lang: "ko"
 topics: "SafeKit의 기능, 보호 수준 선택, 애플리케이션용 기성 모듈, 고객 사용 사례, 간단하고 예측 가능한 가격 책정, 고려해야 할 제한 사항, SafeKit 동영상 라이브러리, 🔍 SafeKit 살펴보기"

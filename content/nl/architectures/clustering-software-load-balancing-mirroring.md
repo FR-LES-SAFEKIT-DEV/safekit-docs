@@ -1,7 +1,7 @@
 ---
 title: "Clusteringsoftware met taakverdeling en spiegeling: hoge beschikbaarheid en schaalbaarheid"
 canonical: "https://safekit.eviden.com/nl/architectures/clustering-software-load-balancing-mirroring/"
-description: "Bouw geavanceerde architecturen door SafeKit farm- en mirror-modules te combineren. Netwerktaakverdeling schaalt de front-end en synchrone replicatie in realtime beschermt de back-endgegevens. Eenvoudige SANless-clustering voor Windows en Linux, zonder dat er gespecialiseerde IT-vaardigheden vereist zijn. Download uw gratis proefversie."
+description: "Combineer SafeKit farm- en mirror-modules: loadbalancing schaalt de front-end, terwijl synchrone replicatie de back-endgegevens beschermt, op Windows en Linux."
 category: "architectures"
 lang: "nl"
 topics: "Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware, 🔍 Ontdek SafeKit"

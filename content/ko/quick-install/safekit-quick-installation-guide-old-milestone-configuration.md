@@ -1,5 +1,6 @@
 ---
 title: "이전 SafeKit Milestone 구성"
+description: "장애 조치에 필요한 가상 IP 설정을 포함한 Milestone XProtect용 SafeKit의 이전 단계별 구성입니다. 참고용으로 보관합니다."
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-old-milestone-configuration/"
 category: "quick-install"
 lang: "ko"

@@ -1,7 +1,7 @@
 ---
 title: "适用于 SafeKit 双节点集群的业务连续性和灾难恢复软件"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/business-continuity-and-disaster-recovery-software/"
-description: "SafeKit 是一款业务连续性和灾难恢复软件。它在两个远程机房之间实现了一个简单的高可用性解决方案。使用 SafeKit，这款最易于使用的业务连续性和灾难恢复软件，实现 24/7 全天候正常运行。通过适用于 Windows 和 Linux 的双节点同步复制、自动故障转移和负载平衡，消除昂贵的 SAN 和复杂的 IT 技能。对于任何云或本地环境中的关键应用程序，实现零数据丢失 (RPO = 0)。"
+description: "使用 SafeKit 实现业务连续性和灾难恢复：跨两个机房的双节点集群，同步复制和自动故障转移。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "业务连续性和灾难恢复软件、🔍 探索 SafeKit"

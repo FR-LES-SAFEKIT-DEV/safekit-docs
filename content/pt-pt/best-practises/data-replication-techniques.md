@@ -1,7 +1,7 @@
 ---
 title: "Técnicas de Replicação de Dados para Alta Disponibilidade: Uma Comparação Completa"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/data-replication-techniques/"
-description: "Compare as técnicas de replicação de dados ao nível da base de dados, disco e ficheiro. O software SafeKit oferece replicação síncrona simples e em tempo real, sem necessidade de armazenamento partilhado. Garante zero perda de dados e failover automático em Windows e Linux."
+description: "Técnicas de replicação de dados comparadas ao nível de base de dados, disco e ficheiro, e como o SafeKit oferece replicação síncrona e failover sem armazenamento partilhado."
 category: "best-practises"
 lang: "pt-pt"
 topics: "Técnicas de replicação de dados ao nível da base de dados, nível de disco ou nível de ficheiro?, Tabelas comparativas entre técnicas de replicação de dados, 🔍 Explore SafeKit"

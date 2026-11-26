@@ -1,7 +1,7 @@
 ---
 title: "로드 밸런싱 및 미러링을 갖춘 클러스터링 소프트웨어: 고가용성 및 확장성"
 canonical: "https://safekit.eviden.com/ko/architectures/clustering-software-load-balancing-mirroring/"
-description: "SafeKit farm 및 mirror 모듈을 결합하여 고급 아키텍처를 구축하세요. 네트워크 부하 분산은 프런트 엔드를 확장하고 실시간 동기 복제는 백엔드 데이터를 보호합니다. 전문 IT 기술이 필요 없는 Windows 및 Linux용 간편한 SANless 클러스터링을 경험해 보세요. 무료 평가판을 다운로드하세요."
+description: "SafeKit farm 및 mirror 모듈 결합: Windows 및 Linux에서 부하 분산은 프런트엔드를 확장하고 동기 복제는 백엔드 데이터를 보호합니다."
 category: "architectures"
 lang: "ko"
 topics: "SafeKit 클러스터링 소프트웨어로 핵심 웹 및 데이터베이스 애플리케이션의 고가용성 및 확장성 확보, 🔍 SafeKit 살펴보기"

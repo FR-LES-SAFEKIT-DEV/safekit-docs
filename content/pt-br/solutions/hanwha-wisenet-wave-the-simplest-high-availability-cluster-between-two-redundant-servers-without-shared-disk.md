@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade SafeKit para Hanwha Wisenet: Redundância SANless do BMS"
 canonical: "https://safekit.eviden.com/pt-br/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "Proteja Hanwha Wisenet com SafeKit. Nosso cluster SANless de 2 nós oferece o failover automático mais simples e a replicação em tempo real para o seu Sistema de Gerenciamento Predial sem uma SAN. Fácil de implantar e gerenciar. Obtenha sua avaliação gratuita."
+description: "Alta disponibilidade para o Hanwha Wisenet WAVE: o SafeKit replica sua máquina virtual Hyper-V entre dois servidores com failover automático, sem SAN."
 category: "solutions"
 lang: "pt-br"
 topics: "SafeKit para Hanwha Wisenet: Cluster Hyper-V SANless de 2 nós, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Hanwha Wisenet sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit Hanwha Wisenet?, Limitações SafeKit de Alta Disponibilidade, Comparação: SafeKit para Hanwha Wisenet vs. Cluster Nativo Hyper-V, Guia em vídeo: Configurando um cluster HA SafeKit para Hanwha Wisenet, SafeKit, uma solução reconhecida no mercado de segurança, 🔍 Explore SafeKit"

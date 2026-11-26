@@ -1,7 +1,7 @@
 ---
 title: "NGINX ネットワーク負荷分散とフェイルオーバー：SafeKit farm.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
-description: "NGINX ネットワーク負荷分散と自動フェイルオーバーのために、Windows および Linux で farm.safe モジュールをデプロイする方法を学びます。このガイドでは、外部ハードウェアロードバランサーや複雑な設定を必要とせずに、仮想 IP を使用して Web サービスおよびアプリケーションの高可用性クラスターを構築する方法を説明します。"
+description: "手順ガイド：Windows または Linux に SafeKit の farm.safe モジュールを導入し、NGINX サーバーのネットワーク負荷分散とフェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "NGINX 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/NGINX ソリューションの概要、Windows および Linux への SafeKit/NGINX ソリューションのインストール (farm.safe)、SafeKit/NGINX ソリューションのステップバイステップ設定、SafeKit farm ソリューションのデモンストレーション、🔍 SafeKit を探索する"

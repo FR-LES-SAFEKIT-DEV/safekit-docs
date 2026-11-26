@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad de Microsoft Azure: replicación síncrona y conmutación por error SafeKit"
 canonical: "https://safekit.eviden.com/es/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
-description: "Implemente un clúster de alta disponibilidad (HA) simple de Microsoft Azure con SafeKit. Nuestra arquitectura sin recursos compartidos proporciona replicación síncrona, conmutación por error automática y RPO = 0 para aplicaciones Windows y Linux sin el coste de los discos compartidos en la nube."
+description: "Alta disponibilidad en Microsoft Azure con SafeKit: replicación síncrona y conmutación por error automática entre dos VM Windows o Linux, sin disco compartido."
 category: "solutions"
 lang: "es"
 topics: "Alta disponibilidad sin recursos compartidos SafeKit en Azure: elimine los discos compartidos con cero pérdida de datos, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Azure sin recursos compartidos?, ¿Cómo funciona el clúster mirror SafeKit con Azure?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para Azure frente a las soluciones nativas de alta disponibilidad y recuperación ante desastres en la nube, Guía en vídeo: Configuración de un clúster mirror SafeKit HA, 🔍 Explora SafeKit"

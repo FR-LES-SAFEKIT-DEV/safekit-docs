@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade SafeKit para Hanwha Vision: Redundância de Gerenciamento Predial sem SAN"
 canonical: "https://safekit.eviden.com/pt-br/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
-description: "Garanta 24 horas por dia, 7 dias por semana de tempo de atividade para Hanwha Vision com SafeKit. Nosso cluster SANless de 2 nós mais simples oferece failover automático e replicação em tempo real sem uma SAN. Alta disponibilidade para o seu Sistema de Gestão Predial. Baixe a avaliação gratuita."
+description: "Alta disponibilidade para o gerenciamento de vídeo Hanwha Vision: o SafeKit replica sua máquina virtual Hyper-V entre dois servidores com failover automático, sem SAN."
 category: "solutions"
 lang: "pt-br"
 topics: "SafeKit para Hanwha Vision: Cluster Hyper-V sem SAN de 2 nós, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Hanwha Vision sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit Hanwha Vision?, Limitações SafeKit de Alta Disponibilidade, Comparação: SafeKit para Hanwha Vision vs. Cluster Nativo Hyper-V, Guia em vídeo: Configurando um cluster HA SafeKit para Hanwha Vision, SafeKit, uma solução reconhecida no mercado de segurança, 🔍 Explore SafeKit"

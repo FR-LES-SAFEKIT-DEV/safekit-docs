@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Amazon AWS loadbalancing en farm-cluster met hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/solutions/aws-load-balancing-cluster-failover/"
-description: "Verbeter AWS load balancer met de intelligente applicatiemonitoring van SafeKit. Bereik naadloze hoge beschikbaarheid met diepgaande gezondheidscontroles, automatisch herstel en failover voor bedrijfskritieke farm-clusters."
+description: "SafeKit farm-clusters in AWS: health checks van de applicatie voor de AWS load balancer, automatische herstart en failover van uw applicatie op Windows of Linux."
 category: "solutions"
 lang: "nl"
 topics: "Verbeter de Cloud load balancer met monitoring op applicatieniveau en zelfherstel, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een AWS Network Load Balancing (NLB)-cluster?, Hoe werkt het SafeKit farm-cluster met AWS?, Vergelijking: SafeKit farm-cluster On-Premises versus SafeKit farm-cluster in de cloud, Videohandleiding: Een SafeKit farm-NLB-cluster configureren, 🔍 Ontdek SafeKit"

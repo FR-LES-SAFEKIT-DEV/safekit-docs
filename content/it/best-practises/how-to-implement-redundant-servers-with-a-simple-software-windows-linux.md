@@ -1,7 +1,7 @@
 ---
 title: "Come implementare server ridondanti con un semplice software HA"
 canonical: "https://safekit.eviden.com/it/best-practises/how-to-implement-redundant-servers-with-a-simple-software-windows-linux/"
-description: "Scopri come implementare server ridondanti con un semplice approccio basato solo su software. SafeKit offre la replica dei dati in tempo reale e il failover automatico su Windows e Linux. Non richiede dischi condivisi né competenze informatiche specialistiche."
+description: "Come realizzare server ridondanti solo via software: SafeKit offre replica in tempo reale e failover automatico su Windows e Linux, senza disco condiviso."
 category: "best-practises"
 lang: "it"
 topics: "Come implementare server ridondanti attivi/passivi con replica in tempo reale e failover?, Come implementare server ridondanti attivi/attivi con bilanciamento del carico di rete e failover?, 🔍 Esplora SafeKit"

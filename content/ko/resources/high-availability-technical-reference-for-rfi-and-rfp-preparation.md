@@ -1,7 +1,7 @@
 ---
-title: "RFI 및 RFP 문서용 SafeKit 기술 참조서"
+title: "RFI 및 RFP 문서용 SafeKit 기술 참조"
 canonical: "https://safekit.eviden.com/ko/resources/high-availability-technical-reference-for-rfi-and-rfp-preparation/"
-description: "SafeKit에 대한 기술 정보를 찾아 정보 요청(RFI) 및 제안 요청(RFP)을 준비하세요. 지원되는 시스템, 아키텍처, 복구 시간, 보안, 라이선스 및 지원에 대해 알아보세요."
+description: "RFI 및 RFP 답변을 위한 SafeKit 기술 참조 자료: 지원 시스템, 아키텍처, 복구 시간, 보안, 라이선스, 지원."
 category: "resources"
 lang: "ko"
 topics: "개요, 목차, 제품 정보, 지원되는 운영 체제 및 플랫폼, SafeKit 고가용성 제한 사항, 사전 구성된 애플리케이션 모듈, 아키텍처 및 배포, 데이터 손실 및 복구 시간(RPO 및 RTO), 원격 사이트 및 분산 배포, 모니터링 및 알림, 보안 및 규정 준수, 라이선싱, 지원 및 유지보수, 다른 솔루션과의 비교, 유용한 링크"

@@ -1,6 +1,6 @@
 ---
-title: "Bedankt dat u contact met ons hebt opgenomen"
-description: "Bevestigingspagina die wordt weergegeven nadat u het SafeKit-contactformulier hebt ingediend."
+title: "Bedankt dat u contact met ons hebt opgenomen."
+description: "Bedankt voor uw bericht over SafeKit. Uw aanvraag is verzonden en het Eviden-team neemt binnenkort contact met u op."
 lang: "nl"
 category: "home"
 sitemap:

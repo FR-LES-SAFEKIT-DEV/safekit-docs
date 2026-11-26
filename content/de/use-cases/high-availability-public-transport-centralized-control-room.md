@@ -1,7 +1,7 @@
 ---
 title: "Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle"
 canonical: "https://safekit.eviden.com/de/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit gewährleistet eine hohe Verfügbarkeit für die Leitstellen des öffentlichen Nahverkehrs. Die RATP hat SafeKit für die Linie 1 der Pariser Metro eingesetzt. Diese Linie ist vollautomatisch und fahrerlos. SafeKit bietet Lastausgleich, automatische Failover-Funktion und Echtzeit-Datenreplikation. Es wird kein SAN benötigt. Dieselbe Software funktioniert auf Windows- und Linux-Servern."
+description: "Hochverfügbarkeit für ÖPNV-Leitstellen: RATP nutzt SafeKit für die fahrerlose Pariser Metrolinie 1, mit Replikation, Failover und Lastverteilung."
 category: "use-cases"
 lang: "de"
 topics: "Leitstellen des öffentlichen Nahverkehrs, Warum ist die Leitstelle entscheidend?, SafeKit-Hochverfügbarkeit für den öffentlichen Nahverkehr, Implementierung in der Praxis bei der RATP, 🔍 SafeKit entdecken"

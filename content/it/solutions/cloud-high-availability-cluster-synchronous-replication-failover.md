@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilità indipendente dal cloud: replica sincrona e failover SafeKit"
 canonical: "https://safekit.eviden.com/it/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
-description: "Implementa un semplice cluster HA (High Availability) di replica sincrona e failover SafeKit, indipendente dal SafeKit. La nostra architettura shared-nothing offre replica sincrona, failover automatico e RPO =0 per applicazioni Windows e Linux senza il costo dei dischi condivisi nel cloud."
+description: "Alta disponibilità in qualsiasi cloud con SafeKit: replica sincrona e failover automatico tra due VM Windows o Linux, senza disco condiviso nel cloud."
 category: "solutions"
 lang: "it"
 topics: "SafeKit shared-nothing HA nel cloud: elimina i dischi condivisi con zero perdita di dati, Indice, In che modo il software SafeKit implementa semplicemente un cluster ad alta disponibilità in cloud shared-nothing?, Come funziona il cluster mirror SafeKit con il cloud?, Limitazioni SafeKit High Availability, Confronto: SafeKit per Cloud e soluzioni HA/DR cloud native, Guida video: configurazione di un cluster mirror SafeKit HA, 🔍 Esplora SafeKit"

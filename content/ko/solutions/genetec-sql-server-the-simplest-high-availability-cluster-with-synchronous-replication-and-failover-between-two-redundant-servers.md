@@ -1,7 +1,7 @@
 ---
 title: "가장 간단한 Genetec SQL 고가용성: 2노드 동기 복제 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
-description: "Genetec SQL 고가용성을 구현하는 가장 간단한 방법입니다. SafeKit은 동기식 복제 및 자동 장애 조치를 지원하는 2노드 SANless 클러스터를 제공하며, AD 또는 전문 기술이 필요하지 않습니다."
+description: "Genetec SQL Server 데이터베이스 고가용성: SAN 없이 동기 복제 및 자동 장애 조치를 제공하는 SafeKit 2노드 클러스터."
 category: "solutions"
 lang: "ko"
 topics: "SANless SafeKit mirror 클러스터가 Genetec SQL과 연동되는 방식, 목차, SafeKit 소프트웨어는 SANless Genetec SQL 고가용성 클러스터를 어떻게 간단하게 구현할까요?, SafeKit mirror 클러스터가 Genetec SQL과 어떻게 연동되나요?, SafeKit 고가용성 제한 사항, 비교: Genetec SQL용 SafeKit vs. 기타 클러스터링 솔루션, 비디오 가이드: SafeKit HA mirror 클러스터를 구성, SafeKit, 보안 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"

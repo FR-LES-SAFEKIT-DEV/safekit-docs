@@ -1,7 +1,7 @@
 ---
 title: "クラウド非依存の高可用性：SafeKit 同期レプリケーションとフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
-description: "SafeKit で、シンプルなクラウド非依存型高可用性：SafeKit 同期レプリケーション＆フェイルオーバー HA クラスターを導入しましょう。当社のシェアードナッシングアーキテクチャは、クラウド共有ディスクのコストなしに、Windows および Linux アプリケーション向けに同期レプリケーション、自動フェイルオーバー、RPO =0 を提供します。"
+description: "SafeKit によるあらゆるクラウドの高可用性：Windows または Linux VM 2 台間で同期レプリケーションと自動フェイルオーバー。クラウド共有ディスク不要。"
 category: "solutions"
 lang: "ja"
 topics: "SafeKit シェアードナッシング HA in Cloud：共有ディスクを排除し、データ損失ゼロを実現、目次、SafeKit ソフトウェアは、どのようにしてシンプルなシェアードナッシングクラウド高可用性クラスターを実装するのでしょうか？、SafeKit mirror クラスタークラウドとどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit for Cloud とネイティブクラウド HA/DR ソリューション、ビデオガイド：SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"

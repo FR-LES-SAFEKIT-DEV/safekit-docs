@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 为 Bosch AMS 提供高可用性：无共享冗余和故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "使用 SafeKit 确保 Bosch AMS 100% 的正常运行时间。我们的双节点无共享存储集群提供实时复制和自动故障转移，而无需 SAN 的复杂性。易于部署，为访问管理提供高性能冗余。下载免费试用版。"
+description: "Bosch AMS 门禁管理高可用性：SafeKit 在两台服务器间复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
 lang: "zh-hans"
 topics: "Bosch AMS 的 SafeKit：2 节点无共享存储 Hyper-V 集群、目录、SafeKit 软件如何简单地在没有 SAN 共享存储的情况下实现 Bosch AMS 高可用性集群？、SafeKit Bosch AMS 集群如何工作？、SafeKit 高可用性限制、比较：适用于 Bosch AMS 的 SafeKit 与原生 Hyper-V 群集、视频指南：为 Bosch AMS 配置 SafeKit HA 集群、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"

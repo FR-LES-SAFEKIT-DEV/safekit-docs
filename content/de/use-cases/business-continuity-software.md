@@ -1,7 +1,7 @@
 ---
 title: "Standardisierung der Hochverfügbarkeit für verteilte Unternehmen mit vielen Niederlassungen"
 canonical: "https://safekit.eviden.com/de/use-cases/business-continuity-software/"
-description: "Sichern Sie jede Niederlassung Ihres verteilten Unternehmens mit SafeKit. Stellen Sie einen standardisierten, rein softwarebasierten Hochverfügbarkeitscluster in großem Maßstab bereit. Gewährleisten Sie eine 24/7-Verfügbarkeit für geschäftskritische Anwendungen in jeder Niederlassung. SafeKit läuft unter Windows und Linux. Es erfordert keinen gemeinsam genutzten Speicher, kein komplexes SAN und keine IT-Expertise vor Ort."
+description: "Hochverfügbarkeit für verteilte Unternehmen: Setzen Sie in jeder Filiale denselben SafeKit-Cluster ein, ohne SAN und ohne IT-Personal vor Ort, unter Windows oder Linux."
 category: "use-cases"
 lang: "de"
 topics: "Geschäftskontinuität in einem verteilten Unternehmen, 🔍 SafeKit entdecken"

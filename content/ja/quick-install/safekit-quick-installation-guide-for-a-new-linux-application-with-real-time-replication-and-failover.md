@@ -1,7 +1,7 @@
 ---
 title: "SafeKit による Linux 高可用性：フェイルオーバーのための mirror.safe モジュールのインストール"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
-description: "SafeKit は用の mirror.safe モジュールをデプロイして、Linux 上で同期リアルタイムレプリケーションと自動フェイルオーバーを有効にします。このガイドでは、共有ストレージなしで、重要な Linux アプリケーション向けに 2 ノードの SANless クラスターをセットアップする手順を説明します。"
+description: "手順ガイド：Linux に SafeKit の mirror.safe モジュールを導入し、2 台のサーバーでアプリケーションのリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
 topics: "Linux 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Linux ソリューションの概要、SafeKit/Linux ソリューションのインストール (mirror.safe)、SafeKit/Linux ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"

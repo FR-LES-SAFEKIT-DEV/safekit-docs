@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 免费试用"
 canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-free-trial/"
-description: "下载 SafeKit 免费试用版，测试应用程序级别和虚拟机级别的可用性。SafeKit 为 Windows 和 Linux 提供无共享架构，实现零数据丢失和自动故障转移。"
+description: "下载 SafeKit 免费试用版，在 Windows 和 Linux 上测试应用级或虚拟机级高可用性，支持复制和自动故障转移。"
 category: "resources"
 lang: "zh-hans"
 topics: "SafeKit HA 免费试用版和技术文档，🔍 探索 SafeKit"

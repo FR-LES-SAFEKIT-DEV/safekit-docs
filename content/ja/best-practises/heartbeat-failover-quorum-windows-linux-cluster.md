@@ -1,7 +1,7 @@
 ---
 title: "Windows および Linux クラスターにおけるハートビート、フェイルオーバー、およびクォーラム"
 canonical: "https://safekit.eviden.com/ja/best-practises/heartbeat-failover-quorum-windows-linux-cluster/"
-description: "クラスターにおけるハートビート、フェイルオーバー、およびクォーラムの仕組みを学びましょう。SafeKit を使用すれば、第 3 のクォーラムサーバーや特別なクォーラムディスクは必要ありません。シンプルなスプリットブレインチェッカーで十分です。SafeKit は Windows と Linux で高可用性を提供します。"
+description: "Windows と Linux クラスターのハートビート、フェイルオーバー、クォーラム。SafeKit はクォーラムディスクや第 3 サーバーなしでスプリットブレインを回避。"
 category: "best-practises"
 lang: "ja"
 topics: "クラスターでネットワークが分離された場合、どのようなシナリオが考えられますか？、Windows または Linux クラスターにおけるハートビートとフェイルオーバーの仕組みを教えてください。、2 つのリモートコンピュータールームにあるサーバーによるスプリットブレインとクォーラム、SafeKit スプリットブレインチェッカーによるシンプルなクラスタークォーラム、🔍 SafeKit を探索する"

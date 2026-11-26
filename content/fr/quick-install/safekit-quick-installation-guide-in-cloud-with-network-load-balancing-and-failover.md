@@ -1,7 +1,7 @@
 ---
 title: "Équilibrage de charge et basculement du réseau Cloud : Installez le module farm.safe SafeKit"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
-description: "Améliorez l’équilibrage de charge du réseau cloud avec la surveillance intelligente des applications de SafeKit. Le module farm.safe fournit un contrôle d’intégrité dédié pour l’équilibreur de charge cloud, permettant une haute disponibilité transparente au niveau de l’application. Obtenez une autoréparation et un basculement automatiques pour les applications critiques."
+description: "Guide pas à pas : installez le module SafeKit farm.safe dans tout cloud : il contrôle la santé de l’application pour l’équilibreur de charge cloud et gère le basculement."
 category: "quick-install"
 lang: "fr"
 topics: "Guide d’installation rapide de la haute disponibilité pour le cloud, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit / Cloud, Installation de la solution SafeKit / Cloud sous Windows et Linux (farm.safe), Configuration pas à pas de la solution SafeKit / Cloud, Démonstration de la solution farm SafeKit, 🔍 Explorez SafeKit"

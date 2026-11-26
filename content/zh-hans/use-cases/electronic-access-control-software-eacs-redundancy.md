@@ -1,7 +1,7 @@
 ---
 title: "电子门禁控制软件 (EACS) 的高可用性和冗余性"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/electronic-access-control-software-eacs-redundancy/"
-description: "SafeKit 是电子门禁系统（EACS）最简单的高可用性软件。它使建筑安全系统全天候可用。集群有两个节点，不需要 SAN。它提供实时同步复制和自动故障转移。它与 Nedap、TIL Technologies、Siemens、HID 以及 Windows 或 Linux 上的任何 EACS 软件配合使用。数据零丢失（RPO = 0）。"
+description: "使用 SafeKit 实现门禁系统（EACS）冗余：双节点集群，同步复制和故障转移，适用于 Nedap、Siemens、HID 等系统。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "什么是电子门禁系统 (EACS)？、为什么 EACS 软件至关重要？、主要 EACS 供应商、SafeKit 为 EACS 软件的冗余和高可用性提供了两种解决方案。、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"

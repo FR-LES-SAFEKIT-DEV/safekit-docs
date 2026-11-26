@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade SafeKit para Bosch BVMS: Redundância de Gerenciamento de Vídeo sem SAN"
 canonical: "https://safekit.eviden.com/pt-br/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "Garanta a disponibilidade 24 horas por dia, 7 dias por semana para Bosch BVMS com SafeKit. Nosso cluster SANless de 2 nós mais simples oferece failover automático e replicação em tempo real sem a necessidade de discos compartilhados caros. Proteja seu sistema de gerenciamento de vídeo e gerenciamento predial hoje mesmo."
+description: "Alta disponibilidade para o gerenciamento de vídeo Bosch BVMS: o SafeKit replica sua máquina virtual Hyper-V entre dois servidores com failover automático, sem SAN."
 category: "solutions"
 lang: "pt-br"
 topics: "SafeKit para Bosch BVMS: Cluster Hyper-V sem SAN de 2 nós, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Bosch BVMS sem armazenamento compartilhado em uma SAN?, Como funciona o cluster SafeKit Bosch BVMS?, Limitações SafeKit de Alta Disponibilidade, Comparação: SafeKit para Bosch BVMS vs. Cluster Nativo Hyper-V, Guia em vídeo: Configurando um cluster HA SafeKit para Bosch BVMS, SafeKit, uma solução reconhecida no mercado de segurança, 🔍 Explore SafeKit"

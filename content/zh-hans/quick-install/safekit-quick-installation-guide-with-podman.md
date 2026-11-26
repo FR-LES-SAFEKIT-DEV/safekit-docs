@@ -1,7 +1,7 @@
 ---
 title: "Podman 高可用性与 SafeKit：安装 mirror.safe 模块以实现故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-podman/"
-description: "部署 mirror.safe 模块以启用 SafeKit，从而实现 Podman 容器在 Linux 上的同步实时复制和自动故障转移。本指南将引导您为没有共享存储的关键应用程序设置一个 2 节点无共享存储集群。"
+description: "分步指南：在 Linux 上安装用于 Podman 的 SafeKit mirror.safe 模块，实现容器数据实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "Podman 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/Podman 解决方案概述、在 Linux 上安装 SafeKit/Podman 解决方案 (mirror.safe)、SafeKit/Podman 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Software de clúster activo-activo con replicación en tiempo real y conmutación por error mutua"
 canonical: "https://safekit.eviden.com/es/architectures/active-active-cluster-real-time-replication/"
-description: "Maximice la utilización de los recursos con la agrupación en clústeres activa-activa SafeKit. Implemente la conmutación por error mutua entre dos servidores utilizando la replicación síncrona en tiempo real y múltiples módulos mirror. Garantice la pérdida cero de datos (RPO = 0) y la recuperación automática para Windows y Linux sin una SAN. Descargue la versión de prueba gratuita."
+description: "Clúster SafeKit activo-activo: dos servidores se respaldan mutuamente con varios módulos mirror, replicación síncrona y conmutación por error mutua en Windows y Linux."
 category: "architectures"
 lang: "es"
 topics: "¿Cómo funciona un clúster activo-activo con replicación en tiempo real?, 🔍 Explore SafeKit"

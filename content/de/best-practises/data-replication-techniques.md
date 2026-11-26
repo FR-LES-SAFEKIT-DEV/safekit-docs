@@ -1,7 +1,7 @@
 ---
 title: "Datenreplikationstechniken für Hochverfügbarkeit: Ein vollständiger Vergleich"
 canonical: "https://safekit.eviden.com/de/best-practises/data-replication-techniques/"
-description: "Vergleichen Sie Datenreplikationstechniken auf Datenbank-, Festplatten- und Dateiebene. Die SafeKit-Software bietet eine einfache, synchrone Echtzeitreplikation ohne gemeinsam genutzten Speicher. Sie gewährleistet keinen Datenverlust und automatisches Failover unter Windows und Linux."
+description: "Datenreplikationstechniken auf Datenbank-, Festplatten- und Dateiebene im Vergleich, und wie SafeKit synchrone Replikation und Failover ohne gemeinsamen Speicher bietet."
 category: "best-practises"
 lang: "de"
 topics: "Datenreplikationstechniken auf Datenbankebene, Festplattenebene oder Dateiebene?, Vergleichstabellen zwischen Datenreplikationstechniken, 🔍 SafeKit entdecken"

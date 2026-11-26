@@ -1,7 +1,7 @@
 ---
 title: "التوافر العالي والتكرار لأنظمة إدارة المباني (BMS)"
 canonical: "https://safekit.eviden.com/ar/use-cases/building-management-system-software-bms-redundancy/"
-description: "اضمن وقت تشغيل بنسبة 100% لمبناك الذكي مع SafeKit. يوفر برنامجنا الخاص بالنسخ المتماثل بدون شبكة تخزين (SANless) وذو العقدتين، النسخ المتماثل المتزامن في الوقت الفعلي والتحويل التلقائي في حالة الفشل لأي نظام إدارة مباني (BMS)، بما في ذلك Siemens و Honeywell و Schneider Electric و Johnson Controls. حقق انعدام فقدان البيانات (RPO = 0) والمرونة التشغيلية لأنظمة التدفئة والتهوية وتكييف الهواء (HVAC) وأنظمة الأمان الهامة على أنظمة Windows و Linux."
+description: "تكرار أنظمة BMS مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لـ Siemens و Honeywell و Schneider وغيرها من أنظمة المباني."
 category: "use-cases"
 lang: "ar"
 topics: "ما هو نظام إدارة المباني (BMS)؟، لماذا يُعد برنامج إدارة المباني (BMS) بالغ الأهمية؟، أهم موردي أنظمة إدارة المباني، تقدم SafeKit حلولاً مزدوجة لتحقيق التكرار والتوافر العالي لبرنامج إدارة المباني (BMS).، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

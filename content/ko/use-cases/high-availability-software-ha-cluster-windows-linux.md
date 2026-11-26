@@ -1,7 +1,7 @@
 ---
 title: "고가용성 소프트웨어: SafeKit을 사용한 Windows 및 Linux 클러스터링"
 canonical: "https://safekit.eviden.com/ko/use-cases/high-availability-software-ha-cluster-windows-linux/"
-description: "SafeKit은 Windows 및 Linux용 선도적인 고가용성 소프트웨어입니다. 이 소프트웨어는 중요한 애플리케이션을 보호합니다. 공유 스토리지나 복잡한 SAN 없이도 HA 클러스터를 쉽게 만들 수 있습니다. 하나의 간단한 소프트웨어 솔루션으로 실시간 복제, 장애 조치 및 부하 분산을 제공합니다."
+description: "Windows 및 Linux용 고가용성 소프트웨어: SafeKit 클러스터는 공유 스토리지 없이 실시간 복제, 장애 조치, 부하 분산을 제공합니다."
 category: "use-cases"
 lang: "ko"
 topics: "SafeKit 30초 엘리베이터 스피치, 🔍 SafeKit 살펴보기"

@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad Hyper-V con SafeKit: Instale el módulo hyperv.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-hyper-v/"
-description: "Aprenda a configurar hyperv.safe para un clúster Hyper-V activo/activo con SafeKit. Consiga alta disponibilidad a nivel de máquina virtual con una arquitectura de 2 nodos sin recursos compartidos. Replique varias máquinas virtuales de forma síncrona entre nodos para una conmutación por error automática sin el coste de una SAN o almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit hyperv.safe para alta disponibilidad a nivel de VM, con replicación y conmutación por error de VM Hyper-V entre dos servidores."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para Hyper-V, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/Hyper-V, Instalación de la solución SafeKit/Hyper-V en Windows (hyperv.safe), Configuración paso a paso de la solución SafeKit/Hyper-V, Demostración de la solución SafeKit/Hyper-V, 🔍 Explora SafeKit"

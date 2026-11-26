@@ -1,7 +1,7 @@
 ---
 title: "التوفر العالي K3S باستخدام SafeKit: تثبيت وحدة k3s.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-kubernetes/"
-description: "انشر وحدة k3s.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الأعطال التلقائي لـ Kubernetes على Linux. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة منطقة تخزين (SANless) لتطبيقات Linux الهامة بدون تخزين مشترك."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit k3s.safe لمجموعة Kubernetes K3s من عقدتين على Linux، مع النسخ في الوقت الفعلي وتجاوز الفشل التلقائي."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ Kubernetes، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Kubernetes، تثبيت وتهيئة حل SafeKit/Kubernetes على Linux (k3s.safe)، ما هي السيناريوهات المختلفة في حالة عزل الشبكة في مجموعة؟، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"

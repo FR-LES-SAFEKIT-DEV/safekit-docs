@@ -1,7 +1,7 @@
 ---
 title: "Windows Network Load Balancing & Failover: Installieren Sie das SafeKit farm.safe-Modul"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
-description: "Erfahren Sie, wie Sie das farm.safe-Modul für Windows Network Load Balancing und automatische Failover bereitstellen. Diese Anleitung zeigt Ihnen, wie Sie einen hochverfügbaren Cluster für Webdienste und Anwendungen mit einer virtuellen IP-Adresse erstellen, ohne dass externe Hardware Load Balancer oder eine komplexe Konfiguration erforderlich sind."
+description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe unter Windows für Netzwerk-Lastverteilung und Failover Ihrer Anwendung auf einer virtuellen IP."
 category: "quick-install"
 lang: "de"
 topics: "Schnellinstallationsanleitung für Hochverfügbarkeit unter Windows, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/Windows-Lösung, Installation der SafeKit/Windows-Lösung (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Windows-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"

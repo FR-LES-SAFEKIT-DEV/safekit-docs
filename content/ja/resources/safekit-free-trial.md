@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 無料トライアル"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-free-trial/"
-description: "SafeKit の無料トライアルをダウンロードして、アプリケーションレベルと VM レベルでの高可用性をテストしてください。SafeKit は、Windows および Linux 向けに、データ損失ゼロと自動フェイルアーキテクチャを提供します。"
+description: "SafeKit 無料トライアル：Windows と Linux で、レプリケーションと自動フェイルオーバーによるアプリケーションレベル／VM レベルの高可用性をお試しください。"
 category: "resources"
 lang: "ja"
 topics: "SafeKit HA 無料トライアルと技術ドキュメント、🔍 SafeKit を探索する"

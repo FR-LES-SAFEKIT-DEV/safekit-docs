@@ -1,7 +1,7 @@
 ---
 title: "SafeKit 릴리스 노트 8.2"
 canonical: "https://safekit.eviden.com/ko/resources/safekit-release-notes-8-2/"
-description: "이 문서에서는 SafeKit 릴리스에 대한 정보(주요 변경 사항, 제한 사항 및 알려진 문제, 마이그레이션 지침)를 제공합니다."
+description: "SafeKit 8.2 릴리스 노트: Windows 및 Linux용 주요 변경 사항, 제한 사항, 알려진 문제, 마이그레이션 지침."
 category: "resources"
 lang: "ko"
 layout: userguide

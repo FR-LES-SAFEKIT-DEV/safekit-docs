@@ -1,7 +1,7 @@
 ---
 title: "고가용성 모범 사례"
 canonical: "https://safekit.eviden.com/ko/best-practises/"
-description: "SafeKit 고가용성 모범 사례를 살펴보세요. HA 아키텍처 패턴, 동기식 대 비동기식 복제, 클러스터링 전략, VIP 장애 조치, RPO/RTO, Windows 및 Linux용 이중화 설계."
+description: "고가용성 모범 사례: HA 아키텍처, 동기 및 비동기 복제, 가상 IP 장애 조치, 쿼럼, RPO와 RTO를 SafeKit으로 설명합니다."
 category: "best-practises"
 lang: "ko"
 topics: "아키텍처 및 디자인 패턴, 고가용성 및 재해 복구, 복제 전략, 클러스터링 및 장애 조치, 스토리지 및 인프라, 구현 및 마이그레이션"

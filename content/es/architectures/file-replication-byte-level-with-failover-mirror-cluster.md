@@ -1,7 +1,7 @@
 ---
 title: "Clúster mirror SafeKit: replicación de archivos en tiempo real y alta disponibilidad"
 canonical: "https://safekit.eviden.com/es/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
-description: "SafeKit proporciona replicación de archivos a nivel de byte en tiempo real y duplicación de datos síncrona para Windows y Linux. Implemente un clúster mirror de alta disponibilidad con conmutación por error automática sin el coste de una SAN. Garantice la pérdida cero de datos y la recuperación simplificada ante desastres hoy mismo."
+description: "Clúster mirror SafeKit: replicación síncrona de archivos a nivel de byte y conmutación por error automática entre dos servidores Windows o Linux, sin pérdida de datos ni SAN."
 category: "architectures"
 lang: "es"
 topics: "Cómo funciona el clúster mirror SafeKit con Windows o Linux sin una SAN, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad sin una SAN en Windows o Linux?, ¿Cómo funciona el clúster mirror SafeKit con Windows o Linux?, Limitaciones de alta disponibilidad de SafeKit, Comparación: SafeKit para Windows o Linux frente a otras soluciones de clúster, Guía en vídeo: Configuración de un clúster mirror SafeKit, 🔍 Explore SafeKit"

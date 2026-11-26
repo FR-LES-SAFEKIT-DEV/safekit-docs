@@ -1,7 +1,7 @@
 ---
 title: "De eenvoudigste Windows hoge beschikbaarheid: synchrone replicatie en failover met 2 knooppunten"
 canonical: "https://safekit.eviden.com/nl/solutions/windows-high-availability-software-synchronous-replication-failover/"
-description: "De eenvoudigste manier om Windows High Availability te implementeren. SafeKit biedt een SANless-cluster met 2 knooppunten, synchrone replicatie en automatische failover – geen AD of gespecialiseerde vaardigheden vereist."
+description: "Hoge beschikbaarheid voor Windows met SafeKit: cluster met twee nodes, synchrone replicatie en automatische failover van uw applicatie, zonder SAN."
 category: "solutions"
 lang: "nl"
 topics: "Hoe de SANless SafeKit mirror-cluster werkt met Windows, Inhoudsopgave, Hoe de SafeKit-software eenvoudig een SANless Windows cluster met hoge beschikbaarheid implementeert?, Hoe werkt het SafeKit mirror-cluster met Windows?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Windows versus andere clusteringoplossingen, Videogids: Een SafeKit HA- mirror-cluster configureren, 🔍 Ontdek SafeKit"

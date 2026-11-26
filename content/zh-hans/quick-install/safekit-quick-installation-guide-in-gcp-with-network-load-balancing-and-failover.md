@@ -1,7 +1,7 @@
 ---
 title: "GCP 网络负载均衡和故障转移：安装 SafeKit farm.safe 模块"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
-description: "使用 SafeKit 的智能应用程序监控功能增强 GCP 网络负载均衡。farm.safe farm.safe 为 GCP 负载均衡器提供专用健康检查，从而在应用程序级别实现无缝高可用性。为关键任务应用程序实现自动自我修复和故障转移。"
+description: "分步指南：在 Google Cloud 中安装 SafeKit farm.safe 模块，为 GCP 负载均衡器检查应用健康状态并处理故障转移。"
 category: "quick-install"
 lang: "zh-hans"
 topics: "GCP 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/GCP 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/GCP 解决方案 (farm.safe)、SafeKit/GCP 解决方案的分步配置、SafeKit farm 解决方案演示、🔍 探索 SafeKit"

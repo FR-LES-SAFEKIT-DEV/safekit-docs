@@ -1,7 +1,7 @@
 ---
 title: "SafeKitリリースノート 8.2"
 canonical: "https://safekit.eviden.com/ja/resources/safekit-release-notes-8-2/"
-description: "このドキュメントでは、 SafeKitリリースに関する情報（主な変更点、制限事項、既知の問題、移行手順など）を提供します。"
+description: "SafeKit 8.2 リリースノート：Windows と Linux における主な変更点、制限事項、既知の問題、移行手順。"
 category: "resources"
 lang: "ja"
 layout: userguide

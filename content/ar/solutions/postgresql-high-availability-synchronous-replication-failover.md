@@ -1,7 +1,7 @@
 ---
 title: "أبسط طرق تحقيق التوافر العالي PostgreSQL: النسخ المتماثل المتزامن بين عقدتين وتجاوز الأعطال"
 canonical: "https://safekit.eviden.com/ar/solutions/postgresql-high-availability-synchronous-replication-failover/"
-description: "أبسط طريقة لتطبيق التوافر العالي PostgreSQL. يوفر SafeKit مجموعة من عقدتين بدون شبكة SAN مع نسخ متماثل متزامن وتجاوز تلقائي للأعطال - لا يتطلب الأمر وجود Active Directory أو مهارات متخصصة."
+description: "التوفر العالي لـ PostgreSQL مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع PostgreSQL، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة PostgreSQL عالية التوفر بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع PostgreSQL؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ PostgreSQL مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

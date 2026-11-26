@@ -1,7 +1,7 @@
 ---
 title: "N-1 冗余集群：使用单个备份服务器为多个应用程序提供高可用性"
 canonical: "https://safekit.eviden.com/zh-hans/architectures/n-1-redundancy/"
-description: "使用 SafeKit N-1 冗余优化您的数据中心。在 N+1 台服务器上部署 N 个 mirror 模块，以通过单个共享备份服务器为多个应用程序提供高可用性。通过 Windows 和 Linux 的实时复制，消除 SAN 要求并降低硬件成本。了解更多。"
+description: "SafeKit 的 N-1 冗余：N+1 台服务器上的 N 个应用共享一台备用服务器，实时复制并自动故障转移，无需 SAN。"
 category: "architectures"
 lang: "zh-hans"
 topics: "通过数据复制和应用程序故障转移，实现从 N 台服务器到 1 台服务器的高可用性、🔍 探索 SafeKit"

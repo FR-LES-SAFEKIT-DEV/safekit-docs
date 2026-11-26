@@ -1,7 +1,7 @@
 ---
 title: "Hoge beschikbaarheid voor luchtverkeersleidingssystemen"
 canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-air-traffic-control-system/"
-description: "SafeKit zorgt voor een hoge beschikbaarheid van luchtverkeersleidingssystemen. ADB SafeGate heeft SafeKit geïmplementeerd op luchthavens wereldwijd. Kritieke applicaties zijn 24/7 beschikbaar. SafeKit repliceert gegevens in realtime zonder gegevensverlies. Het biedt automatische failover op standaard Windows-servers. Er is geen gedeelde opslag nodig."
+description: "Hoge beschikbaarheid voor luchtverkeersleiding: ADB SafeGate gebruikt SafeKit op luchthavens wereldwijd voor realtime replicatie en automatische failover op Windows."
 category: "use-cases"
 lang: "nl"
 topics: "Luchtverkeersleidingssystemen, Waarom is luchtverkeersleiding van cruciaal belang?, Hoe SafeKit de luchtverkeersleiding beschermt, Implementatie in de praktijk bij ADB SafeGate, 🔍 Ontdek SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "Replica sincrona o asincrona: in che modo SafeKit garantisce l’assenza di perdita di dati?"
 canonical: "https://safekit.eviden.com/it/best-practises/synchronous-replication-vs-asynchronous-replication/"
-description: "Confronta la replica sincrona e asincrona per la continuità aziendale. SafeKit utilizza la replica sincrona in tempo reale per garantire la perdita zero di dati (RPO = 0) nei cluster HA. La replica asincrona è più adatta per il disaster recovery a lunga distanza."
+description: "Replica sincrona o asincrona: perché la replica sincrona garantisce zero perdita di dati (RPO 0) in un cluster SafeKit e quando l’asincrona è più adatta."
 category: "best-practises"
 lang: "it"
 topics: "I dati vengono persi in caso di failover dell’applicazione con replica sincrona o asincrona?, Indice, Come funziona la replica asincrona?, Come funziona la replica sincrona?, Come funziona la replica semi-sincrona?, Verdetto finale: scegliere la replica giusta per un’elevata disponibilità, Tabella comparativa: sincrono, asincrono e semi-sincrono, Guida video: configurazione della replica sincrona in tempo reale e dell’alta disponibilità, Domande frequenti: strategie di replica nei cluster ad alta disponibilità, 🔍 Esplora SafeKit"

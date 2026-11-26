@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad de Amazon AWS: replicación y conmutación por error sincrónicas SafeKit"
 canonical: "https://safekit.eviden.com/es/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
-description: "Implemente un clúster HA simple de Amazon AWS con SafeKit. Nuestra arquitectura sin recursos compartidos proporciona replicación síncrona, conmutación por error automática y RPO = 0 para aplicaciones Windows y Linux sin el coste de los discos compartidos en la nube."
+description: "Alta disponibilidad en AWS con SafeKit: replicación síncrona y conmutación por error automática entre dos instancias Windows o Linux, sin disco compartido cloud."
 category: "solutions"
 lang: "es"
 topics: "SafeKit sin recursos compartidos HA en AWS: elimine los discos compartidos con cero pérdida de datos, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad AWS sin recursos compartidos?, ¿Cómo funciona el clúster mirror SafeKit con AWS?, Limitaciones de alta disponibilidad SafeKit, Comparación: SafeKit para AWS frente a las soluciones nativas de alta disponibilidad/recuperación ante desastres en la nube, Guía en vídeo: Configuración de un clúster mirror SafeKit HA, 🔍 Explora SafeKit"

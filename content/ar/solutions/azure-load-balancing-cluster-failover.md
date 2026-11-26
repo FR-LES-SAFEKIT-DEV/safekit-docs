@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: موازنة تحميل Microsoft Azure مجموعة farm عالية الإتاحة للتطبيقات"
 canonical: "https://safekit.eviden.com/ar/solutions/azure-load-balancing-cluster-failover/"
-description: "عزّز Azure Load Balancer بمراقبة التطبيقات الذكية من SafeKit. حقّق توفرًا عاليًا سلسًا من خلال فحوصات صحية عميقة، وإصلاح ذاتي تلقائي، وتجاوز للأعطال مجموعات farm ذات المهام الحرجة."
+description: "مجموعات SafeKit farm في Azure: فحص سلامة التطبيقات لموازن أحمال Azure، وإعادة تشغيل تلقائية وتجاوز فشل لتطبيقك على Windows أو Linux."
 category: "solutions"
 lang: "ar"
 topics: "تحسين موازن تحميل السحابة من خلال المراقبة على مستوى التطبيق والشفاء الذاتي، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة موازنة تحميل الشبكة (NLB) Azure ببساطة؟، كيف تعمل مجموعة SafeKit farm مع Azure؟، مقارنة: مجموعة SafeKit farm المحلية مقابل مجموعة SafeKit farm السحابية، دليل الفيديو: تهيئة مجموعة NLB من SafeKit farm، 🔍 استكشف SafeKit"

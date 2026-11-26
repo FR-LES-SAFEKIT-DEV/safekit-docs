@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: software tutto in uno per il bilanciamento del carico e l’alta disponibilità IIS"
 canonical: "https://safekit.eviden.com/it/solutions/iis-load-balancing-failover/"
-description: "SafeKit offre una potente soluzione di bilanciamento del carico e alta disponibilità IIS, basata esclusivamente su software. Sostituisci il complesso hardware NLB con l’IP virtuale integrato di SafeKit, il monitoraggio delle applicazioni e il failover automatico. Implementa facilmente un cluster IIS su server Windows standard oggi stesso."
+description: "Bilanciamento del carico e alta disponibilità IIS con SafeKit: IP virtuale, monitoraggio applicativo e failover automatico su server Windows standard."
 category: "solutions"
 lang: "it"
 topics: "Cluster farm SafeKit: NLB solo software e failover automatico per IIS, Indice, In che modo il software SafeKit implementa semplicemente un cluster di bilanciamento del carico di rete (NLB) IIS?, Come funziona il cluster SafeKit in modalità farm con IIS?, Confronto: cluster farm SafeKit per IIS e altre soluzioni di clustering NLB, Guida video: configurazione di un cluster NLB farm SafeKit, 🔍 Esplora SafeKit"

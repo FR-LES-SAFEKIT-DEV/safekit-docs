@@ -1,7 +1,7 @@
 ---
 title: "SafeKit을 사용한 Microsoft SQL Server 고가용성: 장애 조치를 위한 sqlserver.safe 모듈 설치"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
-description: "SafeKit용 sqlserver.safe 모듈을 배포하여 Microsoft SQL Server의 동기식 실시간 복제 및 자동 장애 조치를 활성화하십시오. 이 가이드는 공유 스토리지 없이 중요 애플리케이션을 위한 2노드 SANless 클러스터를 설정하는 과정을 안내합니다."
+description: "단계별 가이드: 서버 2대에서 Microsoft SQL Server의 실시간 복제 및 자동 장애 조치를 위한 SafeKit sqlserver.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
 topics: "Microsoft SQL Server 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Microsoft SQL Server 솔루션 개요, Windows에 SafeKit/Microsoft SQL Server 솔루션 설치 (sqlserver.safe), SafeKit/Microsoft SQL Server 솔루션의 단계별 구성, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit用户指南 8.2"
 canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-user-guide-82/"
-description: "本文档涵盖了SafeKit实现的各个阶段：架构、安装、测试、管理和故障排除、支持以及命令行界面。"
+description: "SafeKit 8.2 用户指南：Windows 和 Linux 集群的架构、安装、测试、管理、故障排除、支持和命令行。"
 category: "resources"
 lang: "zh-hans"
 layout: userguide

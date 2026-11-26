@@ -1,7 +1,7 @@
 ---
 title: "Alta disponibilidad en la nube con SafeKit: instale el módulo mirror.safe para la conmutación por error"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
-description: "Implemente el módulo mirror.safe para SafeKit en la nube para habilitar la replicación síncrona en tiempo real y la conmutación por error automática en Windows y Linux. Esta guía le guiará a través de la configuración de un clúster de 2 nodos sin recursos compartidos para aplicaciones críticas sin almacenamiento compartido."
+description: "Guía paso a paso: instale el módulo SafeKit mirror.safe en cualquier nube para replicación en tiempo real y conmutación por error entre dos máquinas virtuales Windows o Linux."
 category: "quick-install"
 lang: "es"
 topics: "Guía de instalación rápida de alta disponibilidad para la nube, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución mirror la nube de SafeKit, Instalación de la solución mirror SafeKit / Cloud en Windows y Linux (mirror.safe), Configuración paso a paso de la solución mirror SafeKit / Cloud, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"

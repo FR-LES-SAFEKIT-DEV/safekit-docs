@@ -1,7 +1,7 @@
 ---
 title: "NGINX netwerktaakverdeling en failover: Installeer de SafeKit farm.safe module"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
-description: "Leer hoe u de farm.safe module implementeert op Windows en Linux voor NGINX Network Load Balancing en automatische failover. Deze handleiding laat zien hoe u een zeer beschikbaar cluster voor webservices en applicaties bouwt met behulp van een virtueel IP-adres, zonder dat u externe hardware load balancers of complexe configuratie nodig hebt."
+description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe op Windows of Linux voor netwerkloadbalancing en failover van NGINX-servers."
 category: "quick-install"
 lang: "nl"
 topics: "Snelinstallatiegids voor hoge beschikbaarheid voor NGINX, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/NGINX oplossing, Installatie van de SafeKit/NGINX-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit/NGINX oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"

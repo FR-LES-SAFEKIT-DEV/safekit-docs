@@ -1,7 +1,7 @@
 ---
 title: "为拥有众多分支机构的分布式企业实现高可用性的标准化"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/business-continuity-software/"
-description: "使用 SafeKit 保护您分布式企业的每个分支机构。大规模部署标准化的纯软件高可用性集群。确保每个分支机构的关键应用程序 24/7 全天候正常运行。SafeKit 可在 Windows 和 Linux 上运行。它不需要共享存储、复杂的 SAN，也不需要现场 IT 专业知识。"
+description: "分布式企业的高可用性：在每个分支机构部署相同的 SafeKit 集群，无需 SAN 和现场 IT 人员，支持 Windows 或 Linux。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "分布式企业中的业务连续性、🔍 探索 SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit High Availability voor Bosch AMS: SANless-redundantie en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "Zorg voor 100% uptime voor Bosch AMS met SafeKit. Ons SANless-cluster met 2 knooppunten biedt realtime replicatie en automatische failover zonder de complexiteit van een SAN. Eenvoudig te implementeren, krachtige redundantie voor toegangsbeheer. Download de gratis proefversie."
+description: "Hoge beschikbaarheid voor Bosch AMS-toegangsbeheer: SafeKit repliceert de virtuele Hyper-V-machine tussen twee servers met automatische failover, zonder SAN."
 category: "solutions"
 lang: "nl"
 topics: "SafeKit voor Bosch AMS: SANless Hyper-V cluster met 2 knooppunten, Inhoudsopgave, Hoe implementeert de SafeKit software eenvoudig een Bosch AMS cluster met hoge beschikbaarheid zonder gedeelde opslag op een SAN?, Hoe werkt het SafeKit Bosch AMS cluster?, Beperkingen SafeKit High Availability, Vergelijking: SafeKit voor Bosch AMS versus native Hyper-V-clustering, Videogids: Een SafeKit HA-cluster configureren voor Bosch AMS, SafeKit, een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"

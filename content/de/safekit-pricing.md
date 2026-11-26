@@ -1,7 +1,7 @@
 ---
 title: "SafeKit-Preise"
 canonical: "https://safekit.eviden.com/de/safekit-pricing/"
-description: "Informieren Sie sich über das SafeKit-Lizenzmodell und fordern Sie ein maßgeschneidertes Angebot für Hochverfügbarkeit, Replikation, Failover und Lastausgleich unter Windows und Linux an."
+description: "SafeKit-Preise: unbefristete Lizenzen pro Server, kostenlose Anwendungsmodule, keine Enterprise-Editionen nötig. Fordern Sie ein Angebot für Windows- oder Linux-Cluster an."
 category: "home"
 lang: "de"
 topics: "Lizenzmodell und Preise, Standard-Support und -Wartung, Angebot anfordern"

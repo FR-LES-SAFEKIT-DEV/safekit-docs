@@ -1,7 +1,7 @@
 ---
 title: "ビデオ管理ソフトウェア（VMS）の高可用性と冗長性"
 canonical: "https://safekit.eviden.com/ja/use-cases/video-management-software-vms-redundancy/"
-description: "SafeKit は、VMS 向けの最もシンプルな高可用性ソフトウェアです。映像の損失を防ぎ、SAN 不要です。SafeKit は VMS ソフトウェアを 24 時間 365 日利用可能に保ちます。Milestone XProtect、Genetec、Siemens、Bosch などがその例です。あらゆる Windows または Linux VMS で動作し、2 つのノード間で同期レプリケーションと自動フェイルオーバーを提供します。データ損失（RPO = 0）はなく、複雑なハードウェアも必要ありません。"
+description: "SafeKit による VMS 冗長化：Milestone、Genetec、Bosch 等のビデオ管理システム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
 lang: "ja"
 topics: "ビデオ管理ソフトウェア（VMS）とは？、VMS ソフトウェアが重要な理由とは？、主な VMS ベンダー、SafeKit、VMS ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"

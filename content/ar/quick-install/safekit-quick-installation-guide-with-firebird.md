@@ -1,7 +1,7 @@
 ---
 title: "التوفر العالي Firebird باستخدام SafeKit: تثبيت وحدة firebird.safe للتحويل التلقائي عند الفشل"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-firebird/"
-description: "انشر وحدة firebird.safe الخاصة بـ SafeKit لتمكين النسخ المتماثل المتزامن في الوقت الفعلي وتجاوز الأعطال التلقائي لـ Firebird على Windows و Linux. يرشدك هذا الدليل خلال إعداد مجموعة من عقدتين بدون شبكة منطقة تخزين (SANless) للتطبيقات الهامة بدون تخزين مشترك."
+description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit firebird.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لـ Firebird على Windows أو Linux."
 category: "quick-install"
 lang: "ar"
 topics: "دليل التثبيت السريع للتوافر العالي لـ Firebird، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Firebird، تثبيت حل SafeKit/Firebird على نظامي التشغيل Windows و Linux (firebird.safe)، إعداد حل SafeKit/Firebird خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"

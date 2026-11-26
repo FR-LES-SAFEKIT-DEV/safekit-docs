@@ -1,7 +1,7 @@
 ---
 title: "التوفر العالي لـ Microsoft Azure: النسخ المتماثل المتزامن وتجاوز الفشل SafeKit"
 canonical: "https://safekit.eviden.com/ar/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
-description: "انشر مجموعة Microsoft Azure HA بسيطة باستخدام SafeKit. توفر البنية بدون مشاركة النسخ المتماثل المتزامن، وتجاوز الفشل التلقائي، واستعادة RPO = 0 لتطبيقات Windows و Linux دون تكلفة الأقراص السحابية المشتركة."
+description: "التوفر العالي في Microsoft Azure مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي بين جهازين افتراضيين Windows أو Linux، دون قرص مشترك."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit HA بدون مشاركة في Azure: تخلص من الأقراص المشتركة مع عدم فقدان أي بيانات، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Azure عالية التوفر بدون مشاركة ؟، كيف تعمل مجموعة mirror SafeKit مع Azure؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit for Azure مقابل حلول التوافر العالي/التعافي من الكوارث السحابية الأصلية، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"

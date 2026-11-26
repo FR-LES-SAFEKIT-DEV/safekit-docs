@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Google GCP Lastausgleich und Anwendungs-Hochverfügbarkeits Farm-Cluster"
 canonical: "https://safekit.eviden.com/de/solutions/gcp-load-balancing-cluster-failover/"
-description: "Erweitern Sie GCP Load Balancer mit dem intelligenten Anwendungsmonitoring von SafeKit. Erzielen Sie nahtlose Hochverfügbarkeit mit tiefgehenden Health Checks, automatischer Selbstheilung und Failover für geschäftskritische Farm-Cluster."
+description: "SafeKit-Farm-Cluster in Google Cloud: Zustandsprüfungen der Anwendung für den Load Balancer von GCP, automatischer Neustart und Failover unter Windows oder Linux."
 category: "solutions"
 lang: "de"
 topics: "Erweitern Sie den Cloud Load Balancer um anwendungsorientiertes Monitoring und Self-Healing., Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen GCP Network Load Balancing (NLB)-Cluster?, Wie funktioniert das SafeKit-Farm-Cluster mit GCP?, Vergleich: SafeKit-Farm-Cluster On-Premises vs. SafeKit-Farm-Cluster in der Cloud, Videoanleitung: Konfigurieren eines SafeKit-Farm-NLB-Cluster, 🔍 SafeKit entdecken"

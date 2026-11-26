@@ -1,7 +1,7 @@
 ---
 title: "SafeKit: Microsoft Azure Load Balancing & Application High Availability Farm Cluster"
 canonical: "https://safekit.eviden.com/solutions/azure-load-balancing-cluster-failover/"
-description: "Enhance Azure Load Balancer with SafeKit's intelligent application monitoring. Achieve seamless high availability with deep health checks, automatic self-healing, and failover for mission-critical farm clusters."
+description: "SafeKit farm clusters in Azure: application health checks for the Azure load balancer, automatic restart and failover of your application on Windows or Linux."
 category: "solutions"
 lang: "en"
 topics: "Enhance the Cloud Load Balancer with Application-Level Monitoring and Self-Healing, Table of Contents, How the SafeKit software simply implements a Azure Network Load Balancing (NLB) cluster?, How the SafeKit farm cluster works with Azure?, Comparison: SafeKit Farm Cluster On-Premises vs. SafeKit Farm Cluster in the Cloud, Video Guide: Configuring a SafeKit Farm NLB Cluster, 🔍 Explore SafeKit"

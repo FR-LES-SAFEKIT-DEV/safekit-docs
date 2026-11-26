@@ -1,7 +1,7 @@
 ---
 title: "비디오 관리 소프트웨어(VMS)의 고가용성 및 이중화"
 canonical: "https://safekit.eviden.com/ko/use-cases/video-management-software-vms-redundancy/"
-description: "SafeKit은 VMS를 위한 가장 간단한 고가용성 소프트웨어입니다. 비디오 손실을 방지합니다. SAN이 필요 없습니다. SafeKit은 VMS 소프트웨어를 연중무휴 24시간 사용할 수 있도록 유지합니다. 예시로는 Milestone XProtect, Genetec, Siemens, Bosch 등이 있습니다. 모든 Windows 또는 Linux VMS에서 작동합니다. 2개 노드 간에 동기 복제 및 자동 장애 조치를 제공합니다. 데이터 손실(RPO = 0)이 없으며 복잡한 하드웨어도 필요 없습니다."
+description: "SafeKit으로 구현하는 VMS 이중화: Milestone, Genetec, Bosch 등 영상 관리 시스템를 위한 동기 복제 및 장애 조치 기반 2노드 클러스터."
 category: "use-cases"
 lang: "ko"
 topics: "비디오 관리 소프트웨어(VMS)란 무엇인가요?, VMS 소프트웨어가 중요한 이유는 무엇일까요?, 주요 VMS 공급업체, SafeKit은 VMS 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다., SafeKit, 보안 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"

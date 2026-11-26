@@ -1,7 +1,7 @@
 ---
 title: "SafeKit لضمان التوافر العالي لأنظمة Bosch AMS: التكرار وتجاوز الأعطال بدون شبكة SAN"
 canonical: "https://safekit.eviden.com/ar/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
-description: "اضمن وقت تشغيل بنسبة 100% لنظام Bosch AMS باستخدام SafeKit. توفر مجموعتنا المكونة من عقدتين بدون شبكة SAN نسخًا متماثلًا في الوقت الفعلي وتجاوزًا تلقائيًا للأعطال دون تعقيد شبكة SAN. سهولة في النشر، وتكرار عالي الأداء لإدارة الوصول. قم بتنزيل النسخة التجريبية المجانية."
+description: "التوفر العالي لنظام إدارة الوصول Bosch AMS: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
 lang: "ar"
 topics: "SafeKit لشركة Bosch AMS: مجموعة Hyper-V بدون شبكة تخزين (SANless) مكونة من عقدتين، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Bosch AMS عالية التوفر ببساطة دون تخزين مشترك على شبكة SAN؟، كيف تعمل مجموعة SafeKit Bosch AMS؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Bosch AMS مقابل تجميع Hyper-V الأصلي، دليل الفيديو: تهيئة مجموعة SafeKit HA لتطبيق Bosch AMS، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"

@@ -1,7 +1,7 @@
 ---
 title: "SafeKit mirror-cluster: realtime bestandsreplicatie en hoge beschikbaarheid"
 canonical: "https://safekit.eviden.com/nl/architectures/file-replication-byte-level-with-failover-mirror-cluster/"
-description: "SafeKit biedt realtime bestandsreplicatie op byteniveau en synchrone gegevensspiegeling voor Windows en Linux. Implementeer een mirror-cluster met hoge beschikbaarheid en automatische failover zonder de kosten van een SAN. Zorg vandaag nog voor nul gegevensverlies en een vereenvoudigd herstel na noodgevallen."
+description: "SafeKit mirror-cluster: synchrone bestandsreplicatie op byteniveau en automatische failover tussen twee Windows- of Linux-servers, zonder gegevensverlies en zonder SAN."
 category: "architectures"
 lang: "nl"
 topics: "Hoe het SafeKit mirror-cluster werkt met Windows of Linux zonder SAN, Inhoudsopgave, Hoe implementeert de SafeKit-software eenvoudig een high-availability-cluster zonder SAN op Windows of Linux?, Hoe werkt het SafeKit mirror-cluster met Windows of Linux?, Beperkingen van de hoge beschikbaarheid van SafeKit, Vergelijking: SafeKit voor Windows of Linux versus andere clusteringoplossingen, Videogids: Een SafeKit mirror-cluster configureren, 🔍 Ontdek SafeKit"

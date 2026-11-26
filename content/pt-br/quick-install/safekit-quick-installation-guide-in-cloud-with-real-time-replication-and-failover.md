@@ -1,7 +1,7 @@
 ---
 title: "Alta Disponibilidade na Nuvem com SafeKit: Instale o Módulo mirror.safe para Failover"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
-description: "Implemente o módulo mirror.safe para SafeKit na nuvem para habilitar a replicação síncrona em tempo real e o failover automático no Windows e Linux. Este guia mostra como configurar um cluster de 2 nós sem armazenamento sem compartilhamento para aplicações críticas."
+description: "Guia passo a passo: instale o módulo SafeKit mirror.safe em qualquer nuvem para replicação em tempo real e failover entre duas máquinas virtuais Windows ou Linux."
 category: "quick-install"
 lang: "pt-br"
 topics: "Guia de Instalação Rápida de Alta Disponibilidade para Nuvem, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução mirror SafeKit / Cloud, Instalação da solução mirror SafeKit / Cloud no Windows e Linux (mirror.safe), Configuração passo a passo da solução mirror SafeKit / Cloud, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"

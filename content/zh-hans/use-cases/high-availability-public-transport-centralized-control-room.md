@@ -1,7 +1,7 @@
 ---
 title: "公共交通高可用性：集中控制室"
 canonical: "https://safekit.eviden.com/zh-hans/use-cases/high-availability-public-transport-centralized-control-room/"
-description: "SafeKit 可确保公共交通控制室的高可用性。RATP 为巴黎地铁 1 号线部署了 SafeKit。该线路是全自动无人驾驶线路。SafeKit 提供负载平衡、自动故障转移和实时数据复制。它不需要 SAN。相同的软件可在 Windows 和 Linux 服务器上运行。"
+description: "公共交通控制室高可用性：RATP 在巴黎地铁 1 号无人驾驶线路使用 SafeKit，实现复制、故障转移和负载均衡。"
 category: "use-cases"
 lang: "zh-hans"
 topics: "公共交通控制室、为什么控制室至关重要？、SafeKit 为公共交通提供高可用性、RATP 的实际应用、🔍 探索 SafeKit"

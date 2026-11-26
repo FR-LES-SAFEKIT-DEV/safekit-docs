@@ -1,7 +1,7 @@
 ---
 title: "SafeKit：云负载均衡和应用高可用性 farm 集群"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cloud-load-balancing-cluster-failover/"
-description: "使用 SafeKit 的智能应用程序监控功能增强云负载均衡器。通过深度运行状况检查、自动自我修复和故障转移，为关键任务 farm 集群实现无缝高可用性。"
+description: "任意云中的 SafeKit farm 集群：为云负载均衡器提供应用健康检查，自动重启并故障转移您的 Windows 或 Linux 应用。"
 category: "solutions"
 lang: "zh-hans"
 topics: "通过应用级监控和自我修复功能增强云负载均衡器、目录、SafeKit 软件如何简单地实现云网络负载均衡(NLB) 集群？、SafeKit farm 集群如何与云协同工作？、比较：本地 SafeKit farm 集群与云端 SafeKit farm 集群、视频指南：配置 SafeKit farm NLB 集群、🔍 探索 SafeKit"

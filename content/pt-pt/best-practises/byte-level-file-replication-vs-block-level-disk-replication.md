@@ -1,7 +1,7 @@
 ---
 title: "Replicação de Ficheiros ao Nível de Byte vs. Replicação de Disco ao Nível de Bloco para Alta Disponibilidade"
 canonical: "https://safekit.eviden.com/pt-pt/best-practises/byte-level-file-replication-vs-block-level-disk-replication/"
-description: "Compare a replicação de ficheiros ao nível de byte e a replicação de disco ao nível de bloco. SafeKit replica apenas os dados modificados dentro dos ficheiros, sem necessidade de SAN. Garante zero perda de dados (RPO 0), recuperação mais rápida (RTO) e configuração simples no Windows e Linux."
+description: "Replicação de ficheiros ao nível do byte vs replicação de disco ao nível do bloco: como o SafeKit replica só os dados alterados, sem perda de dados e com failover rápido."
 category: "best-practises"
 lang: "pt-pt"
 topics: "Replicação de ficheiros ao nível de bytes versus replicação de disco ao nível de blocos num cluster de alta disponibilidade, Vantagens e desvantagens da replicação de ficheiros ao nível de bytes versus a replicação de discos ao nível de blocos, 🔍 Explore SafeKit"
