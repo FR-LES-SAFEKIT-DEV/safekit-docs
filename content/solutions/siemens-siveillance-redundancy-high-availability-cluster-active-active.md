@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/solutions/siemens-siveillance-redundancy-
 description: "High availability for the Siemens Siveillance suite: SafeKit replicates Hyper-V virtual machines between two active servers with automatic failover."
 category: "solutions"
 lang: "en"
-topics: "SafeKit for Siemens Siveillance: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens Siveillance high availability cluster without shared storage on a SAN?, How the SafeKit Siemens Siveillance cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens Siveillance vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens Siveillance, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+topics: "SafeKit for Siemens Siveillance: 2-Node SANless Hyper-V Cluster, Table of Contents, How the SafeKit software simply implements a Siemens Siveillance high availability cluster without shared storage on a SAN?, How the SafeKit Siemens Siveillance cluster works?, SafeKit High Availability Limitations, Comparison: SafeKit for Siemens Siveillance vs. Native Hyper-V Clustering, Video Guide: Configuring a SafeKit HA cluster for Siemens Siveillance, SafeKit a recognized solution on the security market"
+hashpart: "safekit-hyperv-tco, toc, safekit-hyperv-ha-cluster, safekit-hyperv-ha-how-it-works, safekit-ha-limitations, safekit-hyperv-ha-comparison, videoguide-safekit-hyperv-cluster, safekit-a-recognized-solution-on-the-security-market"
 image: "/wp-content/uploads/2026/01/safekit-vm-repli-720-720.jpg"
 schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance"]

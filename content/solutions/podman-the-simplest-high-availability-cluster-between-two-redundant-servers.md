@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/solutions/podman-the-simplest-high-availa
 description: "Podman high availability with SafeKit: synchronous replication of container data and automatic failover between two Linux servers, with no SAN."
 category: "solutions"
 lang: "en"
-topics: "How the SANless SafeKit Mirror Cluster Works with Podman, Table of Contents, How the SafeKit software simply implements a Podman high availability cluster?, Comparison: SafeKit SANless Cluster vs. Traditional Podman HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Podman High Availability Summary"
-hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-podman, table-of-contents, how-safekit-implements-podman-ha, safekit-podman-comparison, safekit-vs-linux-ha-stack, podman-ha-summary-quick-installation-guide"
+topics: "How the SANless SafeKit Mirror Cluster Works with Podman, Table of Contents, How the SafeKit software simply implements a Podman high availability cluster?, How the SafeKit mirror cluster works with Podman?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Podman HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Podman High Availability Summary"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-podman, table-of-contents, how-safekit-implements-podman-ha, safekit-mirror-cluster, safekit-ha-limitations, safekit-podman-comparison, safekit-vs-linux-ha-stack, podman-ha-summary-quick-installation-guide"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
 schemaType: "TechArticle"
 schemaApplications: ["Podman"]

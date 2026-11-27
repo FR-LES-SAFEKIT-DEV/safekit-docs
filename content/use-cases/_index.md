@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/use-cases/"
 description: "SafeKit customer use cases: high availability for OEM software, edge sites, VMS, access control, SCADA, building management, air traffic and metro control."
 category: "use-cases"
 lang: "en"
-topics: "SafeKit Use Cases, 🔍 Explore SafeKit"
+topics: "SafeKit Use Cases"
+hashpart: "safekit-use-cases"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 ---
 

@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/pt-br/resources/high-availability-solutio
 description: "Demonstrações em vídeo do SafeKit: veja clusters de dois nós com replicação em tempo real, failover automático e balanceamento de carga para SQL Server, Hyper-V, VMS e mais."
 category: "resources"
 lang: "pt-br"
-topics: "Tutoriais e demonstrações técnicas de failover do SafeKit, 🔍 Explore o SafeKit"
+topics: "Videoteca SafeKit, Tutoriais e demonstrações de failover técnico do SafeKit"
+hashpart: "safekit-video-library, safekit-failover-tutorials"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---

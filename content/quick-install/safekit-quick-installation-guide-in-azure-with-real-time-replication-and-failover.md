@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit mirror.safe module in Azure for real-time replication and failover between two Windows or Linux virtual machines."
 category: "quick-install"
 lang: "en"
-topics: "Overview of the SafeKit / Azure mirror solution, Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / Azure mirror solution, Demonstration of the SafeKit mirror solution"
-hashpart: "overview-of-the-safekit--azure-mirror-solution, installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--azure-mirror-solution, demonstration-of-the-safekit-mirror-solution"
+topics: "High Availability Quick Installation Guide for Azure, SafeKit High Availability Limitations, Overview of the SafeKit / Azure mirror solution, Installation of the SafeKit / Azure mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / Azure mirror solution, Demonstration of the SafeKit mirror solution"
+hashpart: "quick-guide, safekit-ha-limitations, overview-of-the-safekit--azure-mirror-solution, installation-of-the-safekit--azure-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--azure-mirror-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

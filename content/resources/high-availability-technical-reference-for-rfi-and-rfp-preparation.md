@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/resources/high-availability-technical-ref
 description: "SafeKit technical reference for RFI and RFP answers: supported systems, architectures, recovery times, security, licensing and support."
 category: "resources"
 lang: "en"
-topics: "Overview, Table of contents, Product information, Preconfigured application modules, Architecture and deployment, Data loss and recovery times (RPO and RTO), Remote sites and distributed deployments, Monitoring and alerts, Security and compliance, Licensing, Support and maintenance, Comparison with other solutions, Useful links"
-hashpart: "overview, table-of-contents, product-identity, pre-built-application-modules, architecture-deployment-model, rpo-rto-capabilities, edge-distributed-deployment-suitability, monitoring-management-alerting, security-compliance, licensing-model, support-maintenance-slas, comparison-vs-alternatives, quick-reference-links"
+topics: "Overview, Table of contents, Product information, Supported operating systems and platforms, SafeKit High Availability Limitations, Preconfigured application modules, SafeKit HA Modules & Quick Installation Guides, Architecture and deployment, Data loss and recovery times (RPO and RTO), Remote sites and distributed deployments, Monitoring and alerts, Security and compliance, Licensing, Support and maintenance, Comparison with other solutions, Useful links"
+hashpart: "overview, table-of-contents, product-identity, supported-operating-systems-platforms, safekit-ha-limitations, pre-built-application-modules, safekit-ha-application-modules, architecture-deployment-model, rpo-rto-capabilities, edge-distributed-deployment-suitability, monitoring-management-alerting, security-compliance, licensing-model, support-maintenance-slas, comparison-vs-alternatives, quick-reference-links"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---

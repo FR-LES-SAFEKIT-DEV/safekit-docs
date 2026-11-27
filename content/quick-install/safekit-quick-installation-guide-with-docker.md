@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit mirror.safe module for Docker on Linux, with real-time replication of container data and automatic failover."
 category: "quick-install"
 lang: "en"
-topics: "Overview of the SafeKit / Docker solution, Installation of the SafeKit / Docker solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Docker solution, Demonstration of the SafeKit mirror solution"
-hashpart: "overview-of-the-safekit--docker-solution, installation-of-the-safekit--docker-solution-on-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--docker-solution, demonstration-of-the-safekit-mirror-solution"
+topics: "High Availability Quick Installation Guide for Docker, SafeKit High Availability Limitations, Overview of the SafeKit / Docker solution, Installation of the SafeKit / Docker solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Docker solution, Demonstration of the SafeKit mirror solution"
+hashpart: "quick-guide, safekit-ha-limitations, overview-of-the-safekit--docker-solution, installation-of-the-safekit--docker-solution-on-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--docker-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

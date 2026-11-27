@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/ja/resources/high-availability-solutions-
 description: "SafeKit デモ動画：SQL Server、Hyper-V、VMS などでのリアルタイムレプリケーション、自動フェイルオーバー、負荷分散を備えた 2 ノードクラスター。"
 category: "resources"
 lang: "ja"
-topics: "SafeKit テクニカル フェールオーバー チュートリアルとデモ、🔍 SafeKit を探索する"
+topics: "SafeKit ビデオライブラリ, SafeKit テクニカルフェイルオーバーチュートリアルとデモ"
+hashpart: "safekit-video-library, safekit-failover-tutorials"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---

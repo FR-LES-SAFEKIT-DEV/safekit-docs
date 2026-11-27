@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/es/resources/high-availability-solutions-
 description: "Demos en vídeo de SafeKit: clústeres de dos nodos con replicación en tiempo real, conmutación por error automática y equilibrio de carga para SQL Server, Hyper-V, VMS y más."
 category: "resources"
 lang: "es"
-topics: "Tutoriales y demostraciones técnicas de conmutación por error de SafeKit, 🔍 Explora SafeKit"
+topics: "Videoteca de SafeKit, Tutoriales y demostraciones de conmutación por error técnica de SafeKit"
+hashpart: "safekit-video-library, safekit-failover-tutorials"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---

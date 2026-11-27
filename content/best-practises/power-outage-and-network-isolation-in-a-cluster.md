@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/best-practises/power-outage-and-network-i
 description: "How a high availability cluster handles power outages and network isolation: SafeKit split-brain checker and automatic resynchronization protect your data."
 category: "best-practises"
 lang: "en"
-topics: "What are the different scenarios in case of power outage in a cluster?"
-hashpart: "what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
+topics: "What are the different scenarios in case of network isolation in a cluster?, What are the different scenarios in case of power outage in a cluster?"
+hashpart: "isolation, what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"
 ---

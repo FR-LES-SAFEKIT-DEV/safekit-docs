@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit mirror.safe module on Windows for real-time replication and automatic failover of your application on two servers."
 category: "quick-install"
 lang: "en"
-topics: "Overview of the SafeKit / Windows solution, Installation on the SafeKit / Windows solutions (mirror.safe), Step by step configuration of the SafeKit / Windows solution, Demonstration of the SafeKit mirror solution"
-hashpart: "overview-of-the-safekit--windows-solution, installation-on-the-safekit--windows-solutions-mirrorsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-mirror-solution"
+topics: "High Availability Quick Installation Guide for Windows, SafeKit High Availability Limitations, Overview of the SafeKit / Windows solution, Installation on the SafeKit / Windows solutions (mirror.safe), Step by step configuration of the SafeKit / Windows solution, Demonstration of the SafeKit mirror solution"
+hashpart: "quick-guide, safekit-ha-limitations, overview-of-the-safekit--windows-solution, installation-on-the-safekit--windows-solutions-mirrorsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

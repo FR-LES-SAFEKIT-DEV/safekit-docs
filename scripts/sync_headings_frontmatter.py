@@ -4,24 +4,28 @@ Usage (from the repository root):
     python scripts/sync_headings_frontmatter.py                  # apply
     python scripts/sync_headings_frontmatter.py --dry-run        # simulate
 
-The first H1 becomes title. H2 headings become comma-separated topics and a
-matching comma-separated hashpart line immediately below topics. Commas in H2
-titles are replaced by spaces so the topics separator remains unambiguous.
-Pages without an H1 keep their title.
+The first H1 becomes title. H2 headings from Markdown expanded by
+expand_all_shortcodes.py become comma-separated topics and matching hashpart
+anchor IDs immediately below topics. The expander's shortcode exclusions apply.
+Commas in H2 titles are replaced by spaces. Pages without an H1 keep their title.
 """
 import argparse
 import html
 import json
 import re
+import tempfile
 from pathlib import Path
 
+from expand_all_shortcodes import expand_file
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
+SHORTCODES = ROOT / "layouts" / "shortcodes"
 FRONT_MATTER_FIELD = re.compile(r"^(title|topics|haspart|hashpart)\s*:")
 HEADING = re.compile(r"^[ \t]{0,3}(#{1,6})(?:[ \t]+|$)(.*?)\s*$")
 FENCE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})")
 EXPLICIT_ID = re.compile(r"\s*\{#([^\s}]+)[^}]*\}\s*$")
+UNEXPANDED_SHORTCODE = re.compile(r"\{\{[%<]\s*[\w-]+")
 
 
 def yaml_string(value):
@@ -85,7 +89,7 @@ def extract_headings(lines):
     return headings
 
 
-def update_file(path, write):
+def update_file(path, write, expanded_path):
     raw = path.read_bytes().decode("utf-8")
     has_bom = raw.startswith("\ufeff")
     text = raw[1:] if has_bom else raw
@@ -105,10 +109,24 @@ def update_file(path, write):
     if end is None:
         return "unclosed front matter", False, False
 
-    headings = extract_headings([line_text(line) for line in lines[end + 1 :]])
-    title = headings[1][0] if headings[1] else None
-    topics = ", ".join(clean_topic(topic) for topic, _ in headings[2])
-    hashparts = ", ".join(hashpart for _, hashpart in headings[2])
+    source_headings = extract_headings([line_text(line) for line in lines[end + 1 :]])
+    expand_file(path, expanded_path, SHORTCODES)
+    expanded_lines = expanded_path.read_text(encoding="utf-8").splitlines()
+    expanded_end = next(
+        (i for i in range(1, len(expanded_lines)) if expanded_lines[i].strip() == "---"),
+        None,
+    )
+    if not expanded_lines or expanded_lines[0].strip() != "---" or expanded_end is None:
+        raise ValueError(f"{path}: expanded Markdown has no valid front matter")
+    expanded_body = expanded_lines[expanded_end + 1 :]
+    if any(UNEXPANDED_SHORTCODE.search(line) for line in expanded_body):
+        raise ValueError(f"{path}: unexpanded shortcode in generated Markdown")
+    headings = extract_headings(expanded_body)[2]
+    if any(not anchor or "," in anchor for _, anchor in headings):
+        raise ValueError(f"{path}: empty or invalid H2 anchor")
+    title = source_headings[1][0] if source_headings[1] else None
+    topics = ", ".join(clean_topic(topic) for topic, _ in headings)
+    hashparts = ", ".join(hashpart for _, hashpart in headings)
 
     fields = {}
     for i in range(1, end):
@@ -122,7 +140,7 @@ def update_file(path, write):
     replacements = {}
     if title is not None:
         replacements["title"] = f"title: {yaml_string(title)}"
-    if headings[2]:
+    if headings:
         replacements["topics"] = f"topics: {yaml_string(topics)}"
         replacements["hashpart"] = f"hashpart: {yaml_string(hashparts)}"
 
@@ -175,7 +193,7 @@ def update_file(path, write):
             output = "\ufeff" + output
         path.write_bytes(output.encode("utf-8"))
 
-    return ("updated" if changed else "unchanged"), not headings[1], not headings[2]
+    return ("updated" if changed else "unchanged"), not source_headings[1], not headings
 
 
 def main():
@@ -191,15 +209,17 @@ def main():
     missing_h2 = []
     errors = []
 
-    for path in sorted(CONTENT.rglob("*.md")):
-        status, no_h1, no_h2 = update_file(path, write)
-        stats[status] = stats.get(status, 0) + 1
-        if no_h1:
-            missing_h1.append(path.relative_to(ROOT))
-        if no_h2:
-            missing_h2.append(path.relative_to(ROOT))
-        if status in {"no front matter", "unclosed front matter"}:
-            errors.append((path.relative_to(ROOT), status))
+    with tempfile.TemporaryDirectory(prefix="safekit-headings-") as temp_dir:
+        expanded_path = Path(temp_dir) / "expanded.md"
+        for path in sorted(CONTENT.rglob("*.md")):
+            status, no_h1, no_h2 = update_file(path, write, expanded_path)
+            stats[status] = stats.get(status, 0) + 1
+            if no_h1:
+                missing_h1.append(path.relative_to(ROOT))
+            if no_h2:
+                missing_h2.append(path.relative_to(ROOT))
+            if status in {"no front matter", "unclosed front matter"}:
+                errors.append((path.relative_to(ROOT), status))
 
     print(("APPLIED" if write else "DRY RUN") + f": {sum(stats.values())} files")
     for status, count in sorted(stats.items()):
@@ -208,6 +228,8 @@ def main():
     print(f"  pages without H2 (topics kept): {len(missing_h2)}")
     for path, error in errors:
         print(f"  {error}: {path}")
+    if errors:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

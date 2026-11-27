@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit mirror.safe module in Google Cloud for real-time replication and failover between two Windows or Linux VMs."
 category: "quick-install"
 lang: "en"
-topics: "Overview of the SafeKit / GCP mirror solution, Installation of the SafeKit / GCP mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / GCP mirror solution, Demonstration of the SafeKit mirror solution"
-hashpart: "overview-of-the-safekit--gcp-mirror-solution, installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--gcp-mirror-solution, demonstration-of-the-safekit-mirror-solution"
+topics: "High Availability Quick Installation Guide for GCP, SafeKit High Availability Limitations, Overview of the SafeKit / GCP mirror solution, Installation of the SafeKit / GCP mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / GCP mirror solution, Demonstration of the SafeKit mirror solution"
+hashpart: "quick-guide, safekit-ha-limitations, overview-of-the-safekit--gcp-mirror-solution, installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--gcp-mirror-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

@@ -22,6 +22,12 @@ python scripts/expand_all_shortcodes.py
 
 GitHub Actions runs this script automatically during deployment.
 
+To update `title`, `topics`, and `hashpart` in content front matter using the
+expanded Markdown headings, run `python scripts/sync_headings_frontmatter.py`.
+Add `--dry-run` to preview changes. Expansion uses a temporary directory, does
+not modify `public/`, and follows the exporter's shortcode exclusions, including
+the SafeKit hub and four-buttons shortcodes.
+
 ## Content
 
 Documentation is stored in `content/` and organized by language and topic.

@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/solutions/cluster-in-cloud-computing-gene
 description: "Clusters in the cloud with SafeKit: one generic solution for replication, failover and load balancing in AWS, Azure, Google Cloud and other clouds."
 category: "solutions"
 lang: "en"
-topics: "Other cloud solutions with Eviden SafeKit"
-hashpart: "other-cloud-solutions-with-eviden-safekit"
+topics: "Discover SafeKit in Microsoft Azure, Discover SafeKit in Google GCP, Discover SafeKit in Amazon AWS, Other cloud solutions with Eviden SafeKit"
+hashpart: "discover-safekit-in-microsoft-azure, discover-safekit-in-google-gcp, discover-safekit-in-amazon-aws, other-cloud-solutions-with-eviden-safekit"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"
 ---

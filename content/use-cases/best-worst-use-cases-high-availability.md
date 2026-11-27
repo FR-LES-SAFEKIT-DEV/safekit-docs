@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/use-cases/best-worst-use-cases-high-avail
 description: "Best and worst use cases for SafeKit: where software clustering on Windows and Linux fits well, and when shared storage or another approach is better."
 category: "use-cases"
 lang: "en"
-topics: "Best use cases"
-hashpart: "best-use-cases"
+topics: "Best use cases, SafeKit High Availability Limitations"
+hashpart: "best-use-cases, safekit-ha-limitations"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"
 ---

@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit farm.safe module in Azure, where it checks application health for the Azure load balancer and handles failover."
 category: "quick-install"
 lang: "en"
-topics: "Overview of the SafeKit / Azure solution, Installation of the SafeKit / Azure solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Azure solution, Demonstration of the SafeKit farm solution"
-hashpart: "overview-of-the-safekit--azure-solution, installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--azure-solution, demonstration-of-the-safekit-farm-solution"
+topics: "High Availability Quick Installation Guide for Azure, SafeKit High Availability Limitations, Overview of the SafeKit / Azure solution, Installation of the SafeKit / Azure solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Azure solution, Demonstration of the SafeKit farm solution"
+hashpart: "quick-guide, safekit-ha-limitations, overview-of-the-safekit--azure-solution, installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--azure-solution, demonstration-of-the-safekit-farm-solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

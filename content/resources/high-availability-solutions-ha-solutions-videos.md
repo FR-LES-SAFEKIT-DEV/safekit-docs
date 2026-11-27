@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/resources/high-availability-solutions-ha-
 description: "SafeKit video demos: see two-node clusters with real-time replication, automatic failover and load balancing for SQL Server, Hyper-V, VMS and more."
 category: "resources"
 lang: "en"
-topics: "SafeKit Technical Failover Tutorials & Demos, 🔍 Explore SafeKit"
+topics: "SafeKit Video Library, SafeKit Technical Failover Tutorials & Demos"
+hashpart: "safekit-video-library, safekit-failover-tutorials"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---

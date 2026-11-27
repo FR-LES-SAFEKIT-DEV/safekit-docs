@@ -4,8 +4,8 @@ canonical: "https://safekit.eviden.com/solutions/docker-container-high-availabil
 description: "Docker high availability with SafeKit: synchronous replication of container data and automatic failover between two Linux servers, with no SAN."
 category: "solutions"
 lang: "en"
-topics: "How the SANless SafeKit Mirror Cluster Works with Docker, Table of Contents, How the SafeKit software simply implements a Docker high availability cluster?, Comparison: SafeKit SANless Cluster vs. Traditional Docker HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker High Availability Summary"
-hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-docker, table-of-contents, how-safekit-implements-docker-ha, safekit-docker-comparison, safekit-vs-linux-ha-stack, docker-ha-summary-quick-installation-guide"
+topics: "How the SANless SafeKit Mirror Cluster Works with Docker, Table of Contents, How the SafeKit software simply implements a Docker high availability cluster?, How the SafeKit mirror cluster works with Docker?, SafeKit High Availability Limitations, Comparison: SafeKit SANless Cluster vs. Traditional Docker HA, Comparison: SafeKit vs. Open-Source Linux HA (Pacemaker/Corosync/DRBD), Docker High Availability Summary"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-docker, table-of-contents, how-safekit-implements-docker-ha, safekit-mirror-cluster, safekit-ha-limitations, safekit-docker-comparison, safekit-vs-linux-ha-stack, docker-ha-summary-quick-installation-guide"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"
 schemaApplications: ["Docker"]

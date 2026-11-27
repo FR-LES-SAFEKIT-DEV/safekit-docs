@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/de/resources/high-availability-solutions-
 description: "SafeKit-Videodemos: Zwei-Knoten-Cluster mit Echtzeit-Replikation, automatischem Failover und Lastverteilung für SQL Server, Hyper-V, VMS und mehr."
 category: "resources"
 lang: "de"
-topics: "Tutorials und Demos zum technischen Failover von SafeKit, 🔍 SafeKit entdecken"
+topics: "SafeKit-Videobibliothek, SafeKit Technische Failover-Tutorials & Demos"
+hashpart: "safekit-video-library, safekit-failover-tutorials"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "CollectionPage"
 ---

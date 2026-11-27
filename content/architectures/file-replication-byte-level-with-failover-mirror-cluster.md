@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/architectures/file-replication-byte-level
 description: "SafeKit mirror cluster: byte-level synchronous file replication and automatic failover between two Windows or Linux servers, with no data loss and no SAN."
 category: "architectures"
 lang: "en"
-topics: "How the SafeKit mirror cluster works with Windows or Linux without a SAN, Table of Contents, How does the SafeKit software simply implement a high availability cluster without a SAN on Windows or Linux?, How does the SafeKit mirror cluster work with Windows or Linux?, SafeKit High Availability Limitations, Comparison: SafeKit for Windows or Linux vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit mirror cluster, 🔍 Explore SafeKit"
+topics: "How the SANless SafeKit Mirror Cluster Works with Windows or Linux, Table of Contents, How the SafeKit software simply implements a SANless Windows or Linux high availability cluster?, How the SafeKit mirror cluster works with Windows or Linux?, SafeKit High Availability Limitations, Comparison: SafeKit for Windows or Linux vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster"
+hashpart: "safekit-hyperv-tco, toc, safekit-mirror-ha-cluster, safekit-mirror-cluster, safekit-ha-limitations, safekit-mirror-ha-comparison, videoguide-safekit-mirror-cluster"
 image: "/wp-content/uploads/2026/02/safekit-mirror-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---

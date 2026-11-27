@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/solutions/azure-high-availability-cluster
 description: "High availability in Microsoft Azure with SafeKit: synchronous replication and automatic failover between two Windows or Linux VMs, with no shared disk."
 category: "solutions"
 lang: "en"
-topics: "SafeKit Shared-Nothing HA in Azure: Eliminate Shared Disks with Zero Data Loss, Table of Contents, How the SafeKit software simply implements a shared-nothing Azure high availability cluster?, How the SafeKit mirror cluster works with Azure?, SafeKit High Availability Limitations, Comparison: SafeKit for Azure vs. Native Cloud HA/DR Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
+topics: "SafeKit Shared-Nothing HA in Azure: Eliminate Shared Disks with Zero Data Loss, Table of Contents, How the SafeKit software simply implements a shared-nothing Azure high availability cluster?, How the SafeKit mirror cluster works with Azure?, SafeKit High Availability Limitations, Comparison: SafeKit for Azure vs. Native Cloud HA/DR Solutions, Video Guide: Configuring a SafeKit HA mirror cluster"
+hashpart: "cloud-ha-limitation, toc, safekit-mirror-ha-cluster, safekit-mirror-cluster, safekit-ha-limitations, safekit-mirror-ha-comparison, videoguide-safekit-mirror-cluster"
 image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---

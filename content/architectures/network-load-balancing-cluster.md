@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/architectures/network-load-balancing-clus
 description: "SafeKit farm cluster: network load balancing on a virtual IP with automatic failover between Windows or Linux servers, with no hardware load balancer."
 category: "architectures"
 lang: "en"
-topics: "SafeKit farm cluster: software load balancing and automatic failover for Windows and Linux, Table of contents, How does SafeKit implement a network load balancing (NLB) cluster on Windows and Linux?, How does a SafeKit farm cluster work on Windows and Linux?, Comparison of the SafeKit farm cluster with other NLB clustering solutions, Video guide: how to configure a SafeKit farm NLB cluster, 🔍 Explore SafeKit"
+topics: "The SafeKit Farm Cluster: Software-Only NLB and Automatic Failover for Windows/Linux, Table of Contents, How the SafeKit software simply implements a Windows/Linux Network Load Balancing (NLB) cluster?, How the SafeKit cluster in farm mode works with Windows/Linux?, Comparison: SafeKit Farm Cluster for Windows/Linux vs. Other NLB Clustering Solutions, Video Guide: Configuring a SafeKit Farm NLB Cluster"
+hashpart: "safekit-farm-cluster-overview, toc, safekit-farm-ha-cluster, safekit-farm-cluster, safekit-farm-ha-comparison, videoguide-safekit-farm-cluster"
 image: "/wp-content/uploads/2026/02/safekit-farm-windows-or-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
