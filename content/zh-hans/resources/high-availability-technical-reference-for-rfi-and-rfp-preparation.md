@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/resources/high-availability-techn
 description: "用于回复 RFI 和 RFP 的 SafeKit 技术参考：支持的系统、架构、恢复时间、安全性、许可和支持。"
 category: "resources"
 lang: "zh-hans"
-topics: "概述、目录、产品信息、支持的操作系统和平台、SafeKit 高可用性限制、预配置的应用程序模块、架构与部署、数据丢失和恢复时间（RPO 和 RTO）、远程站点和分布式部署、监控和警报、安全与合规、许可、支持与维护、与其他解决方案的比较、实用链接"
+topics: "概述, 目录, 产品信息, 预配置的应用程序模块, 架构与部署, 数据丢失和恢复时间（RPO 和 RTO）, 远程站点和分布式部署, 监控和警报, 安全与合规, 许可, 支持与维护, 与其他解决方案的比较, 实用链接"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

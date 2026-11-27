@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/resources/"
 description: "Ressources SafeKit : essai gratuit, guide utilisateur, notes de version, guides d’installation rapide, formation, vidéos et référence technique pour clusters Windows et Linux."
 category: "resources"
 lang: "fr"
-topics: "Essai gratuit, documentation technique et informations produit pour SafeKit Haute Disponibilité, 🔍 Explorez SafeKit"
+topics: "Essai gratuit, documentation technique et informations produit pour SafeKit Haute disponibilité"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

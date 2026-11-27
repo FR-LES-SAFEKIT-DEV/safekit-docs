@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/cluster-in-cloud-computing-g
 description: "SafeKit によるクラウドクラスター：AWS、Azure、Google Cloud などでレプリケーション、フェイルオーバー、負荷分散を実現する 1 つの汎用ソリューション。"
 category: "solutions"
 lang: "ja"
-topics: "Microsoft Azure で SafeKit を試す、Google GCP で SafeKit 検索、Amazon AWS で SafeKit 発見、Eviden SafeKit を使用したその他のクラウドソリューション、🔍 SafeKit を探索する"
+topics: "Eviden SafeKit を使用したその他のクラウドソリューション"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

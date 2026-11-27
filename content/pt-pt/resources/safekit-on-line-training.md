@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/resources/safekit-on-line-training/
 description: "Formação e certificação online gratuitas SafeKit: instalação, consola web, linha de comandos, configuração avançada e resolução de problemas de clusters HA."
 category: "resources"
 lang: "pt-pt"
-topics: "Como acessar a plataforma de treinamento?, Obtenha os materiais de treinamento do SafeKit 8, 🔍 Explore o SafeKit"
+topics: "Como acessar a plataforma de treinamento?, Vídeos de treinamento do SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

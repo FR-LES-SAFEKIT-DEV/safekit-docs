@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/power-outage-and-networ
 description: "Cortes de energía y aislamiento de red en un clúster de alta disponibilidad: el checker split-brain y la resincronización automática de SafeKit protegen sus datos."
 category: "best-practises"
 lang: "es"
-topics: "¿Cuáles son los diferentes escenarios en caso de aislamiento de red en un clúster?, ¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster?, 🔍 Explora SafeKit"
+topics: "¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster?"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/high-availability-archi
 description: "Hochverfügbarkeitsarchitekturen und Best Practices für Anwendungscluster: Mirror- und Farm-Cluster, Replikation und Failover, mit Beispielen aus SafeKit."
 category: "best-practises"
 lang: "de"
-topics: "Was sind die Architekturen für Hochverfügbarkeit und die bewährten Verfahren?, Vergleichstabellen zu Hochverfügbarkeitsarchitekturen und Best Practices, 🔍 SafeKit entdecken"
+topics: "Was sind die Architekturen für Hochverfügbarkeit und die bewährten Verfahren?, Vergleichstabellen zu Hochverfügbarkeitsarchitekturen und Best Practices"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

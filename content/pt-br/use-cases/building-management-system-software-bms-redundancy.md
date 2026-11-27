@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/use-cases/building-management-syste
 description: "Redundância de BMS com SafeKit: cluster de dois nós com replicação síncrona e failover para Siemens, Honeywell, Schneider e outros sistemas prediais."
 category: "use-cases"
 lang: "pt-br"
-topics: "O que é um sistema de gestão predial (BMS)?, Por que o software BMS é fundamental?, Principais fornecedores de BMS, SafeKit oferece duas soluções para redundância e alta disponibilidade de um software BMS., SafeKit, uma solução reconhecida no mercado de segurança, 🔍 Explore SafeKit"
+topics: "O que é um sistema de gestão predial (BMS)?, Por que o software BMS é fundamental?, Principais fornecedores de BMS"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/business-continuity-and-disa
 description: "SafeKit による事業継続と災害復旧：2 つのサーバールームにまたがる 2 ノードクラスターで、同期レプリケーションと自動フェイルオーバーを実現。"
 category: "use-cases"
 lang: "ja"
-topics: "事業継続および災害復旧ソフトウェア、🔍 SafeKit を探索する"
+topics: "事業継続および災害復旧ソフトウェア"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

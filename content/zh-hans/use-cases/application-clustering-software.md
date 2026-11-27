@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/application-clustering-
 description: "OEM 高可用性：将 SafeKit 复制和故障转移嵌入您的软件，为客户提供无需 HA 专业知识的 Windows 或 Linux 集群。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "OEM 高可用性用例、🔍 探索 SafeKit"
+topics: "OEM 高可用性用例"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

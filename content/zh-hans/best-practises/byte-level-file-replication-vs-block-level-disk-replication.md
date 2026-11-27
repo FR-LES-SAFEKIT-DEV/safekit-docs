@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/byte-level-file-re
 description: "字节级文件复制与块级磁盘复制对比：SafeKit 如何仅复制文件中变更的数据，实现零数据丢失和快速故障转移。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "高可用性集群中的字节级文件复制与块级磁盘复制、字节级文件复制与块级磁盘复制的优缺点、🔍 探索 SafeKit"
+topics: "高可用性集群中的字节级文件复制与块级磁盘复制, 字节级文件复制与块级磁盘复制的优缺点"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/solutions/cluster-in-cloud-computing-g
 description: "Clusters dans le cloud avec SafeKit : une solution générique de réplication, de basculement et d’équilibrage de charge dans AWS, Azure, Google Cloud et autres clouds."
 category: "solutions"
 lang: "fr"
-topics: "Découvrez SafeKit dans Microsoft Azure, Découvrez SafeKit dans Google GCP, Découvrez SafeKit sur Amazon AWS, Autres solutions cloud avec Eviden SafeKit, 🔍 Explorez SafeKit"
+topics: "Autres solutions cloud avec Eviden SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 32 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/high-availability-cl
 description: "Cluster HA vs sistema tolerante a falhas: compare custos, recuperação e proteção contra falhas de software, e veja como o SafeKit funciona em servidores padrão."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Qual é a diferença entre alta disponibilidade e tolerância a falhas?, Vantagens e desvantagens da alta disponibilidade e da tolerância a falhas, 🔍 Explore SafeKit"
+topics: "Qual é a diferença entre alta disponibilidade e tolerância a falhas?, Vantagens e desvantagens da alta disponibilidade e da tolerância a falhas"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

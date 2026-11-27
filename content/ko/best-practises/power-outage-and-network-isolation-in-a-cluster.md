@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/power-outage-and-networ
 description: "고가용성 클러스터의 정전 및 네트워크 격리 대처 방법: SafeKit 스플릿 브레인 체커와 자동 재동기화가 데이터를 보호합니다."
 category: "best-practises"
 lang: "ko"
-topics: "클러스터에서 네트워크가 고립될 경우 발생할 수 있는 다양한 시나리오는 무엇인가요?, 클러스터에 정전이 발생할 경우 발생할 수 있는 다양한 시나리오는 무엇인가요?, 🔍 SafeKit 살펴보기"
+topics: "클러스터에 정전이 발생할 경우 발생할 수 있는 다양한 시나리오는 무엇인가요?"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/test-primary-backup-
 description: "Como testar o IP virtual de um cluster mirror SafeKit: disponibilidade, failover, reencaminhamento GARP, verificação das tabelas ARP e capturas de pacotes."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Princípios-chave, Pré-requisito: configuração de IP virtual (VIP), Teste 1 – IP virtual (VIP) detido pelo servidor principal, Teste 2 – Failover manual (paragem do principal), Teste 3 – Verificação do redirecionamento GARP com arp -a, Teste 4 – Verificação de ponta a ponta com Wireshark (Windows) ou tcpdump (Linux), Quais estações de trabalho testar, Resumo dos resultados esperados, Resolução de problemas"
+topics: "1. Princípios-chave, 2. Pré-requisito: Configuração de IP virtual (VIP), 3. Teste 1 – Endereço IP virtual (VIP) detido pelo servidor principal, 4. Teste 2 – Comutação manual de contingência (paragem do primário), 5. Teste 3 – Verificação do redirecionamento MAC com arp -a, 6. Teste 4 – Verificação completa com Wireshark (Windows) ou tcpdump (Linux), 7. De quais estações de trabalho testar, 8. Resumo dos resultados esperados, 9. Resolução de problemas"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 12 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"

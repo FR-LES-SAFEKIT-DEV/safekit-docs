@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-
 description: "应用集群的高可用性架构与最佳实践：mirror 和 farm 集群、复制与故障转移，附 SafeKit 示例。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "什么是高可用性架构和最佳实践？、高可用性架构和最佳实践的比较表、🔍 探索 SafeKit"
+topics: "什么是高可用性架构和最佳实践？, 高可用性架构和最佳实践的比较表"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

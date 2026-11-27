@@ -1,10 +1,10 @@
 ---
-title: "IIS Network Load Balancing & Failover: Install the SafeKit iis_farm.safe Module"
+title: "IIS Network Load Balancing & Failover: Install the SafeKit iisfarm.safe Module"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "Step-by-step guide: install the SafeKit iis_farm.safe module on Windows for network load balancing and failover of IIS web servers on a virtual IP."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for IIS, SafeKit High Availability Limitations, Overview of the SafeKit / IIS solution, Installation of the SafeKit / IIS solution on Windows (iis_farm.safe), Step by step configuration of the SafeKit / IIS solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
+topics: "Overview of the SafeKit / IIS solution, Installation of the SafeKit / IIS solution on Windows (iisfarm.safe), Step by step configuration of the SafeKit / IIS solution, Demonstration of the SafeKit farm solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

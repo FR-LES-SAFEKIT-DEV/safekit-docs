@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Guide pas à pas : installez le module SafeKit k3s.safe pour un cluster Kubernetes K3s à deux nœuds sous Linux, avec réplication en temps réel et basculement automatique."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d’installation rapide de la haute disponibilité pour Kubernetes, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Kubernetes, Installation et configuration de la solution SafeKit/Kubernetes sous Linux (k3s.safe), Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ?, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"
+topics: "Présentation de la solution SafeKit/Kubernetes, Installation et configuration de la solution SafeKit/Kubernetes sous Linux (k3s.safe), Démonstration de la solution mirror SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

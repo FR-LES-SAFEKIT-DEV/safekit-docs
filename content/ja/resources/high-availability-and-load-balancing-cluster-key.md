@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/resources/high-availability-and-load-b
 description: "SafeKit の 1 か月無料キーをお申し込みいただき、Windows と Linux で高可用性、レプリケーション、負荷分散クラスターをお試しください。"
 category: "resources"
 lang: "ja"
-topics: "WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る、🔍 SafeKit を探索する"
+topics: "WindowsまたはLinux用のSafeKit 1か月無料ライセンスキーをメールで受け取る"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

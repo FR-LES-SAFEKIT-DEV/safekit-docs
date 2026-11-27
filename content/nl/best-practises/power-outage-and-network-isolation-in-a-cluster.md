@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/power-outage-and-networ
 description: "Hoe een cluster voor hoge beschikbaarheid omgaat met stroomuitval en netwerkisolatie: de SafeKit split-brain-checker en automatische hersynchronisatie beschermen uw gegevens."
 category: "best-practises"
 lang: "nl"
-topics: "Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?, Wat zijn de verschillende scenario's in geval van een stroomstoring in een cluster?, 🔍 Ontdek SafeKit"
+topics: "Wat zijn de verschillende scenario's in geval van een stroomstoring in een cluster?"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

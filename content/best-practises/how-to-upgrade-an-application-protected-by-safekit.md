@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/how-to-upgrade-an-applicat
 description: "How to upgrade an application protected by SafeKit: minor and major upgrades, rolling upgrades, rollback options and the VM HA approach."
 category: "best-practises"
 lang: "en"
-topics: "Upgrading a High Availability Application Protected by SafeKit, VM-Level High Availability, Application-Level High Availability, Choosing the Right Upgrade Strategy, Conclusion, 🔍 Explore SafeKit"
+topics: "Upgrading a High Availability Application Protected by SafeKit, VM-Level High Availability, Application-Level High Availability, Choosing the Right Upgrade Strategy, Conclusion"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---

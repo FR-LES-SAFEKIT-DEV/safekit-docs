@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/resources/high-availability-technical-
 description: "Referencia técnica de SafeKit para responder a RFI y RFP: sistemas compatibles, arquitecturas, tiempos de recuperación, seguridad, licencias y soporte."
 category: "resources"
 lang: "es"
-topics: "Descripción general, Índice, Información del producto, Sistemas operativos y plataformas compatibles, Limitaciones de alta disponibilidad SafeKit, Módulos de aplicación preconfigurados, Arquitectura e implementación, Pérdida de datos y tiempos de recuperación (RPO y RTO), Sitios remotos e implementaciones distribuidas, Supervisión y alertas, Seguridad y cumplimiento normativo, Licencias, Soporte y mantenimiento, Comparación con otras soluciones, Enlaces útiles"
+topics: "Descripción general, Índice, Información del producto, Módulos de aplicación preconfigurados, Arquitectura e implementación, Pérdida de datos y tiempos de recuperación (RPO y RTO), Sitios remotos e implementaciones distribuidas, Supervisión y alertas, Seguridad y cumplimiento normativo, Licencias, Soporte y mantenimiento, Comparación con otras soluciones, Enlaces útiles"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

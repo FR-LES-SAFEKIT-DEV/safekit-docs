@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/resources/high-availability-and-load-b
 description: "Fordern Sie einen kostenlosen SafeKit-Schlüssel für einen Monat an, um Cluster für Hochverfügbarkeit, Replikation und Lastverteilung unter Windows und Linux zu testen."
 category: "resources"
 lang: "de"
-topics: "Kostenlosen SafeKit-Einmonats-Lizenzschlüssel per E-Mail für Windows oder Linux erhalten, 🔍 SafeKit entdecken"
+topics: "Erhalten Sie per E-Mail einen kostenlosen SafeKit-Lizenzschlüssel für einen Monat unter Windows oder Linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

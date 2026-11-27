@@ -1,10 +1,10 @@
 ---
-title: "Balanceamento de Carga e Failover do Apache: Instale o Módulo SafeKit apache_farm.safe"
+title: "Balanceamento de Carga e Failover do Apache: Instale o Módulo SafeKit apachefarm.safe"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "Guia passo a passo: instale o módulo SafeKit apache_farm.safe no Windows ou Linux para balanceamento de carga de rede e failover de servidores web Apache."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para Apache, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Apache, Instalação da solução SafeKit/Apache no Windows e Linux (apache_farm.safe), Configuração passo a passo da solução SafeKit/Apache, Demonstração da solução farm SafeKit, 🔍 Explore SafeKit"
+topics: "Visão geral da solução SafeKit/Apache, Instalação da solução SafeKit/Apache no Windows e Linux (apachefarm.safe), Configuração passo a passo da solução SafeKit/Apache, Demonstração da solução farm SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

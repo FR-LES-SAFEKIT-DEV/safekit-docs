@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/alternative-always-on-s
 description: "Express 및 Standard 에디션을 위한 SQL Server Always On 대안: SafeKit은 SAN이나 Active Directory 없이 동기 복제와 장애 조치를 추가합니다."
 category: "best-practises"
 lang: "ko"
-topics: "Express 및 Standard 에디션용 Always On SQL Server의 대안, SafeKit mirror 클러스터가 Microsoft SQL Server와 어떻게 연동되나요?, 비디오 가이드: SQL Server용 SafeKit HA mirror 클러스터를 구성, 🔍 SafeKit 살펴보기"
+topics: "Express 및 Standard 에디션용 Always On SQL Server의 대안, 비디오 가이드: SQL Server용 SafeKit HA mirror 클러스터를 구성"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/test-load-balancing-vip
 description: "Cómo probar la IP virtual de equilibrio de carga de un clúster farm SafeKit: reparto del tráfico entre nodos, conmutación por error, redirección GARP y comprobaciones de red."
 category: "best-practises"
 lang: "es"
-topics: "Principios clave, Prerrequisito: el mosaico de SafeKit, Prueba 1 - Distribución de conexiones, Prueba 2 - Cambio de servidor de distribución, Prueba 3 - Comprobación de la redirección GARP con arp -a, Prueba 4 - Comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), Desde qué estaciones de trabajo probar, Resumen de los resultados esperados, Solución de problemas, Demostración de la solución farm de SafeKit"
+topics: "1. Principios clave, 2. Requisito previo: el mosaico de SafeKit, 3. Prueba 1 – Distribución de las conexiones, 4. Prueba 2 – Cambio de servidor de envío, 5. Prueba 3: Comprobación del redireccionamiento GARP con arp -a, 6. Prueba 4: Comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), 7. Desde qué estaciones de trabajo realizar las pruebas, 8. Resumen de los resultados esperados, 9. Solución de problemas, Demostración de la solución farm de SafeKit"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 14 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

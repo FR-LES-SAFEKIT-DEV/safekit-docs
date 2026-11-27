@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "手順ガイド：SafeKit の postgresql.safe モジュールを導入し、Windows または Linux 上の PostgreSQL のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
-topics: "PostgreSQL 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/PostgreSQL ソリューションの概要、Windows および Linux への SafeKit/PostgreSQL ソリューションのインストール (postgresql.safe)、SafeKit/PostgreSQL ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+topics: "SafeKit/PostgreSQL ソリューションの概要, Windows および Linux への SafeKit/PostgreSQL ソリューションのインストール (postgresql.safe), SafeKit/PostgreSQL ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

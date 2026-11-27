@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/high-availability-clust
 description: "مجموعة HA مقابل نظام متحمل للأعطال: قارن التكاليف والاستعادة والحماية من أعطال البرمجيات، واكتشف كيف يعمل SafeKit على خوادم قياسية."
 category: "best-practises"
 lang: "ar"
-topics: "ما الفرق بين التوافر العالي وتحمل الأخطاء؟، إيجابيات وسلبيات التوافر العالي وتحمل الأخطاء، 🔍 استكشف SafeKit"
+topics: "ما الفرق بين التوافر العالي وتحمل الأخطاء؟, إيجابيات وسلبيات التوافر العالي وتحمل الأخطاء"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

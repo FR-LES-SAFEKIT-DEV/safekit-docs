@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-public-tra
 description: "公共交通管制室の高可用性：RATP は無人運転のパリメトロ 1 号線に SafeKit を採用し、レプリケーション、フェイルオーバー、負荷分散を実現しています。"
 category: "use-cases"
 lang: "ja"
-topics: "公共交通機関の運行管理室、なぜコントロールルームは重要なのでしょうか？、公共交通機関向け SafeKit 高可用性ソリューション、RATP における実世界での導入、🔍 SafeKit を探索する"
+topics: "公共交通機関の運行管理室, なぜコントロールルームは重要なのでしょうか？, 公共交通機関向け SafeKit 高可用性ソリューション, RATP における実世界での導入"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/microsoft-nlb-vmware-mu
 description: "VMware 上の Microsoft NLB の代替：SafeKit farm クラスターがマルチキャスト、静的 ARP、MAC スプーフィングなしで負荷分散・フェイルオーバー。"
 category: "best-practises"
 lang: "ja"
-topics: "Microsoft NLB マルチキャストモード、Microsoft NLB ユニキャストモード、SafeKit を使用した代替案、farm モードの SafeKit クラスターは Windows でどのように動作しますか？、🔍 SafeKit を探索する"
+topics: "Microsoft NLB マルチキャストモード, Microsoft NLB ユニキャストモード, SafeKit を使用した代替案"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"

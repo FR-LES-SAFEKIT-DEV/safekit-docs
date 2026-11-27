@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/san-vs-nas-shared-stora
 description: "Almacenamiento compartido SAN frente a NAS para clústeres de conmutación por error: límites, costes y riesgos, y por qué la replicación SafeKit lo hace innecesario."
 category: "best-practises"
 lang: "es"
-topics: "Almacenamiento compartido SAN o NAS: ¿cuál es más sencillo para un clúster de conmutación por error?, 🔍 Explora SafeKit"
+topics: "Almacenamiento compartido SAN o NAS: ¿cuál es más sencillo para un clúster de conmutación por error?"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

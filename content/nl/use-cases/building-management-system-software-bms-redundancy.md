@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/building-management-system-s
 description: "BMS-redundantie met SafeKit: cluster met twee nodes, synchrone replicatie en failover voor Siemens, Honeywell, Schneider en andere gebouwbeheersystemen."
 category: "use-cases"
 lang: "nl"
-topics: "Wat is een gebouwbeheersysteem (BMS)?, Waarom is BMS-software cruciaal?, Belangrijkste BMS-leveranciers, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van BMS-software., SafeKit, een erkende oplossing op de beveiligingsmarkt, 🔍 Ontdek SafeKit"
+topics: "Wat is een gebouwbeheersysteem (BMS)?, Waarom is BMS-software cruciaal?, Belangrijkste BMS-leveranciers"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

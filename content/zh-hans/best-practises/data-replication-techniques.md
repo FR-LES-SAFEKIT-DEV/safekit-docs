@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/data-replication-t
 description: "比较数据库级、磁盘级和文件级数据复制技术，以及 SafeKit 如何在无共享存储的情况下实现同步复制和故障转移。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "数据库层面的数据复制技术、磁盘级别还是文件级别？、数据复制技术对比表、🔍 探索 SafeKit"
+topics: "数据库级、磁盘级还是文件级的数据复制技术？, 数据复制技术对比表"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/architectures/"
 description: "SafeKit 클러스터 아키텍처: SAN 없이 실시간 복제 기반 mirror 클러스터, 부하 분산 기반 farm 클러스터, 액티브-액티브, N-1 이중화."
 category: "architectures"
 lang: "ko"
-topics: "SafeKit의 다양한 고가용성 아키텍처와 소프트웨어 클러스터는 무엇인가요?, SafeKit으로 고가용성 클러스터를 구축하는 방법은 무엇인가요?, 🔍 SafeKit 살펴보기"
+topics: "SafeKit를 사용한 다양한 고가용성 아키텍처와 다양한 소프트웨어 클러스터는 무엇인가요?, SafeKit으로 고가용성 클러스터를 구축하는 방법은 무엇인가요?"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---

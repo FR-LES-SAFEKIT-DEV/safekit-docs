@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/solutions/kubernetes-k3s-the-simple
 description: "Alta disponibilidade de Kubernetes K3s em dois nós com SafeKit: replicação síncrona e failover automático, sem armazenamento externo nem quórum etcd."
 category: "solutions"
 lang: "pt-pt"
-topics: "Simplificando a Alta Disponibilidade (HA) do K3s: Porquê escolher SafeKit em vez do MetalLB e do Longhorn?, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Kubernetes K3s?, Como funciona o cluster mirror SafeKit com Kubernetes K3S?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit vs. Stack K3s Padrão (MetalLB & Longhorn), Guia em Vídeo: Configuração de um cluster mirror HA SafeKit, 🔍 Explore SafeKit"
+topics: "Simplificando a Alta Disponibilidade (HA) do K3s: Porquê escolher SafeKit em vez do MetalLB e do Longhorn?, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Kubernetes K3s?, Como funciona o cluster mirror SafeKit com Kubernetes K3S?, Comparação: SafeKit vs. Stack K3s Padrão (MetalLB & Longhorn), Guia em Vídeo: Configuração de um cluster mirror HA SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 schemaType: "TechArticle"

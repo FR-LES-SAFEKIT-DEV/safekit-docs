@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/best-practises/power-outage-and-networ
 description: "Come un cluster ad alta disponibilità gestisce blackout e isolamento di rete: il checker split-brain e la risincronizzazione automatica di SafeKit proteggono i tuoi dati."
 category: "best-practises"
 lang: "it"
-topics: "Quali sono i diversi scenari in caso di isolamento della rete in un cluster?, Quali sono i diversi scenari in caso di interruzione di corrente in un cluster?, 🔍 Esplora SafeKit"
+topics: "Quali sono i diversi scenari in caso di interruzione di corrente in un cluster?"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

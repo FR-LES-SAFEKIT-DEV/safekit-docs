@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/high-availability-software-h
 description: "Windows と Linux 向け高可用性ソフトウェア：SafeKit クラスターは共有ストレージなしでリアルタイムレプリケーション、フェイルオーバー、負荷分散を提供します。"
 category: "use-cases"
 lang: "ja"
-topics: "SafeKit の 30 秒エレベーターピッチ、🔍 SafeKit を探索する"
+topics: "SafeKit の 30 秒エレベーターピッチ"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

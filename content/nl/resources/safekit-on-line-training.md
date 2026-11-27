@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/resources/safekit-on-line-training/"
 description: "Gratis online training en certificering voor SafeKit: installatie, webconsole, opdrachtregel, geavanceerde configuratie en probleemoplossing van HA-clusters."
 category: "resources"
 lang: "nl"
-topics: "Hoe krijg ik toegang tot het trainingsplatform? Download het SafeKit 8-trainingsmateriaal. 🔍 Ontdek SafeKit"
+topics: "Hoe krijg ik toegang tot het trainingsplatform?, SafeKit-trainingsvideo's"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

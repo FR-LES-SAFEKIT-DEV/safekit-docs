@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/test-primary-backup-vip-mi
 description: "How to test the virtual IP of a SafeKit mirror cluster: availability, failover, GARP rerouting, ARP table checks and packet captures."
 category: "best-practises"
 lang: "en"
-topics: "Key principles, Prerequisite: Virtual IP (VIP) configuration, Test 1 – Virtual IP (VIP) held by the primary server, Test 2 – Manual failover (stop of the primary), Test 3 – Checking GARP rerouting with arp -a, Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), Which workstations to test from, Summary of expected results, Troubleshooting"
+topics: "1. Key principles, 2. Prerequisite: Virtual IP (VIP) configuration, 3. Test 1 – Virtual IP (VIP) held by the primary server, 4. Test 2 – Manual failover (stop of the primary), 5. Test 3 – Checking MAC rerouting with arp -a, 6. Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), 7. Which workstations to test from, 8. Summary of expected results, 9. Troubleshooting"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"
 ---

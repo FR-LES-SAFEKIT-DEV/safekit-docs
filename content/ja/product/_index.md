@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/product/"
 description: "SafeKit は、リアルタイムレプリケーション、自動フェイルオーバー、ネットワーク負荷分散を 1 つの製品に統合。Windows と Linux 対応、共有ストレージ不要。"
 category: "product"
 lang: "ja"
-topics: "SafeKit とは？、🔍 SafeKit を探索する、シンプルで費用対効果の高い高可用性のために SafeKit を選ぶ理由、オールインワンの SAN 不要の高可用性製品が不可欠な理由とは？、高可用性戦略の選択：VM HA とアプリケーション HA、SafeKit 高可用性の制限事項、SafeKit ビデオライブラリ、SafeKit と従来の高可用性 (HA) クラスターの比較、SafeKit HA 無料トライアルと技術ドキュメント、SafeKit アプリケーションモジュールライブラリ：すぐに使える HA ソリューション"
+topics: "SafeKit とは？"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

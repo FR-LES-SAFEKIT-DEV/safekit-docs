@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/use-cases/scada-software-redundancy-hi
 description: "Redundancia SCADA con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error para WinCC, Wonderware, iFix y otros sistemas industriales."
 category: "use-cases"
 lang: "es"
-topics: "¿Qué es un sistema SCADA?, ¿Por qué es fundamental el software SCADA?, Principales proveedores de software SCADA, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software SCADA, SafeKit, una solución reconocida en el mercado SCADA, 🔍 Explora SafeKit"
+topics: "¿Qué es un sistema SCADA?, ¿Por qué es fundamental el software SCADA?, Principales proveedores de software SCADA"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

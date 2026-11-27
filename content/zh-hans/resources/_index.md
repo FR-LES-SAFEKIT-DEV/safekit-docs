@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/resources/"
 description: "SafeKit 资源：免费试用、用户指南、发行说明、快速安装指南、培训、视频及 Windows 和 Linux 集群技术参考。"
 category: "resources"
 lang: "zh-hans"
-topics: "免费试用、技术文档和产品信息，适用于SafeKit高可用性导航中心和 🔍 探索 SafeKit"
+topics: "SafeKit高可用性的免费试用、技术文档和产品信息"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

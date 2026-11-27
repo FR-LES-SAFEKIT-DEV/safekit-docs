@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/alternative-always-on-s
 description: "Express・Standard 版向けの SQL Server Always On 代替：SafeKit で同期レプリケーションとフェイルオーバーを追加。SAN・AD 不要。"
 category: "best-practises"
 lang: "ja"
-topics: "Express および Standard Edition の Always On SQL Server 代替機能、SafeKit mirror クラスターが Microsoft SQL Server とどのように連携しますか？、ビデオガイド：SQL Server 用 SafeKit HA mirror クラスターの構成、🔍 SafeKit を探索する"
+topics: "Express および Standard Edition の Always On SQL Server 代替機能, ビデオガイド：SQL Server 用 SafeKit HA mirror クラスターの構成"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

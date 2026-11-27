@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/how-to-implement-redund
 description: "Redundante servers implementeren met alleen software: SafeKit biedt realtime replicatie en automatische failover op Windows en Linux, zonder gedeelde schijf."
 category: "best-practises"
 lang: "nl"
-topics: "Hoe implementeer je actieve/passieve redundante servers met realtime replicatie en failover?, Hoe implementeer je actieve/actieve redundante servers met netwerktaakverdeling en failover?, 🔍 Ontdek SafeKit"
+topics: "Hoe implementeer je actieve/passieve redundante servers met realtime replicatie en failover?, Hoe implementeer je actieve/actieve redundante servers met netwerktaakverdeling en failover?"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

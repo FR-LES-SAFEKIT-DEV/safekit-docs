@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/what-is-rpo-and-rto-wit
 description: "Wat RPO en RTO betekenen, met voorbeelden, en hoe SafeKit geen gegevensverlies (RPO 0) en snelle automatische failover bereikt voor bedrijfscontinuïteit."
 category: "best-practises"
 lang: "nl"
-topics: "Korte samenvatting: RPO versus RTO, Inhoudsopgave, Hoe bereken ik RPO en RTO voor een oplossing voor hoge beschikbaarheid en bedrijfscontinuïteit?, Hoe bepaal ik RPO en RTO voor een back-up- en noodhersteloplossing?, Hoe bereikt een SafeKit mirror-cluster RPO van nul en een lage RTO?, Wat zijn de RTO-benchmarks voor een SafeKit farm-cluster met loadbalancing?, Vergelijkingstabellen: RTO vs. RPO, Hoge beschikbaarheid in de praktijk: realtime demo's van nul gegevensverlies en bijna nul downtime, Veelgestelde vragen: RPO en RTO optimaliseren voor bedrijfscontinuïteit, 🔍 Ontdek SafeKit"
+topics: "Korte samenvatting: RPO versus RTO, Inhoudsopgave, Hoe bereken ik RPO en RTO voor een oplossing voor hoge beschikbaarheid en bedrijfscontinuïteit?, Hoe bepaal ik RPO en RTO voor een back-up- en noodhersteloplossing?, Hoe bereikt een SafeKit mirror-cluster RPO van nul en een lage RTO?, Wat zijn de RTO-benchmarks voor een SafeKit farm-cluster met loadbalancing?, Vergelijkingstabellen: RTO vs. RPO, Hoge beschikbaarheid in de praktijk: realtime demo's van nul gegevensverlies en bijna nul downtime, Veelgestelde vragen: RPO en RTO optimaliseren voor bedrijfscontinuïteit"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/electronic-access-control-so
 description: "تكرار أنظمة التحكم في الوصول (EACS) مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل لـ Nedap و Siemens و HID وغيرها من الأنظمة."
 category: "use-cases"
 lang: "ar"
-topics: "ما هو نظام التحكم الإلكتروني بالوصول (EACS)؟، لماذا يُعد برنامج EACS بالغ الأهمية؟، أبرز موردي EACS، توفر SafeKit حلّين لتحقيق التكرار والتوافر العالي لبرنامج EACS، SafeKit، حل معترف به في سوق الأمن، 🔍 استكشف SafeKit"
+topics: "ما هو نظام التحكم الإلكتروني بالوصول (EACS)؟, لماذا يُعد برنامج EACS بالغ الأهمية؟, أبرز موردي EACS"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/use-cases/building-management-system-s
 description: "Redundancia BMS con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error para Siemens, Honeywell, Schneider y otros sistemas de edificios."
 category: "use-cases"
 lang: "es"
-topics: "¿Qué es un sistema de gestión de edificios (BMS)?, ¿Por qué es fundamental el software BMS?, Principales proveedores de BMS, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software BMS., SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"
+topics: "¿Qué es un sistema de gestión de edificios (BMS)?, ¿Por qué es fundamental el software BMS?, Principales proveedores de BMS"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/"
 description: "Bonnes pratiques de haute disponibilité : architectures HA, réplication synchrone et asynchrone, basculement d’IP virtuelle, quorum, RPO et RTO, expliqués avec SafeKit."
 category: "best-practises"
 lang: "fr"
-topics: "Architecture et modèles de conception, Haute disponibilité et reprise après sinistre, Stratégies de réplication, Clustering et basculement, Stockage et infrastructure, Mise en œuvre et migration"
+topics: "Bonnes pratiques de clustering SafeKit : architecture HA, réplication et redondance, Architecture et modèles de conception, Haute disponibilité et reprise après sinistre, Stratégies de réplication, Clustering et basculement, Stockage et infrastructure, Mise en œuvre et migration"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

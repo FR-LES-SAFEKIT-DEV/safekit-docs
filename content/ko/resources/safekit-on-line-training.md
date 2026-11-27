@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/resources/safekit-on-line-training/"
 description: "무료 SafeKit 온라인 교육 및 인증: HA 클러스터의 설치, 웹 콘솔, 명령줄, 고급 구성, 문제 해결."
 category: "resources"
 lang: "ko"
-topics: "교육 플랫폼에 접속하는 방법은 무엇인가요?, SafeKit 8 교육 자료를 받으세요, 🔍 SafeKit 살펴보기"
+topics: "교육 플랫폼에 접속하는 방법은 무엇인가요?, SafeKit 교육 영상"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

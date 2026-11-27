@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/resources/high-availability-technical-ref
 description: "SafeKit technical reference for RFI and RFP answers: supported systems, architectures, recovery times, security, licensing and support."
 category: "resources"
 lang: "en"
-topics: "Overview, Table of contents, Product information, Supported operating systems and platforms, SafeKit High Availability Limitations, Preconfigured application modules, Architecture and deployment, Data loss and recovery times (RPO and RTO), Remote sites and distributed deployments, Monitoring and alerts, Security and compliance, Licensing, Support and maintenance, Comparison with other solutions, Useful links"
+topics: "Overview, Table of contents, Product information, Preconfigured application modules, Architecture and deployment, Data loss and recovery times (RPO and RTO), Remote sites and distributed deployments, Monitoring and alerts, Security and compliance, Licensing, Support and maintenance, Comparison with other solutions, Useful links"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---

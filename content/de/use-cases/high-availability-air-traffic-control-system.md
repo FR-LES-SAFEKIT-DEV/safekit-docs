@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/high-availability-air-traffi
 description: "Hochverfügbarkeit für die Flugverkehrskontrolle: ADB SafeGate nutzt SafeKit weltweit in Flughäfen für Echtzeit-Replikation und automatisches Failover unter Windows."
 category: "use-cases"
 lang: "de"
-topics: "Flugverkehrskontrollsysteme, Warum ist die Flugsicherung so wichtig?, Wie SafeKit die Flugsicherung schützt, Implementierung in der Praxis bei ADB SafeGate, 🔍 SafeKit entdecken"
+topics: "Flugverkehrskontrollsysteme, Warum ist die Flugsicherung so wichtig?, Wie SafeKit die Flugsicherung schützt, Implementierung in der Praxis bei ADB SafeGate"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

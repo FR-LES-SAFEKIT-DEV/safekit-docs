@@ -1,10 +1,10 @@
 ---
-title: "Apache Network Load Balancing & Failover: Installeer de SafeKit apache_farm.safe-module"
+title: "Apache Network Load Balancing & Failover: Installeer de SafeKit apachefarm.safe-module"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module apache_farm.safe op Windows of Linux voor netwerkloadbalancing en failover van Apache-webservers."
 category: "quick-install"
 lang: "nl"
-topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Apache, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Apache-oplossing, Installatie van de SafeKit/Apache-oplossing op Windows en Linux (apache_farm.safe), Stapsgewijze configuratie van de SafeKit/Apache-oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"
+topics: "Overzicht van de SafeKit/Apache-oplossing, Installatie van de SafeKit/Apache-oplossing op Windows en Linux (apachefarm.safe), Stapsgewijze configuratie van de SafeKit/Apache-oplossing, Demonstratie van de SafeKit farm"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

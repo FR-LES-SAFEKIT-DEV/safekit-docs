@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe in Google Cloud, waar deze de applicatiestatus controleert voor de GCP load balancer en de failover afhandelt."
 category: "quick-install"
 lang: "nl"
-topics: "Snelinstallatiegids voor hoge beschikbaarheid voor GCP, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/GCP-oplossing, Installatie van de SafeKit/GCP-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit/GCP-oplossing, Demonstratie van de SafeKit farm, 🔍 Ontdek SafeKit"
+topics: "Overzicht van de SafeKit/GCP-oplossing, Installatie van de SafeKit/GCP-oplossing op Windows en Linux (farm.safe), Stapsgewijze configuratie van de SafeKit/GCP-oplossing, Demonstratie van de SafeKit farm"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

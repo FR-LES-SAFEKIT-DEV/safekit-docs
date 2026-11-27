@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/data-replication-technique
 description: "Data replication techniques compared at database, disk and file level, and how SafeKit provides synchronous replication and failover without shared storage."
 category: "best-practises"
 lang: "en"
-topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques, 🔍 Explore SafeKit"
+topics: "Data replication techniques at database level, disk level or file level?, Comparative tables between data replication techniques"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"
 ---

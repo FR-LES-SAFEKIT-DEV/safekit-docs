@@ -1,5 +1,5 @@
 ---
-title: "Gebruiksscenario’s van klanten"
+title: "Gebruiksscenario's van klanten"
 canonical: "https://safekit.eviden.com/nl/use-cases/"
 description: "Klantcases van SafeKit: hoge beschikbaarheid voor OEM-software, edge-locaties, VMS, toegangscontrole, SCADA, gebouwbeheer, luchtverkeersleiding en metrobesturing."
 category: "use-cases"

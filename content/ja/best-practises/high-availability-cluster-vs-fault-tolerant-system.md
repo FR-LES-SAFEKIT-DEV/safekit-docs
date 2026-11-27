@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-clust
 description: "HA クラスターとフォールトトレラントシステムの比較：コスト、復旧、ソフトウェア障害への保護を比べ、標準サーバーで動作する SafeKit の仕組みを紹介します。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性とフォールトトレランスの違いは何ですか？、高可用性とフォールトトレランスの長所と短所、🔍 SafeKit を探索する"
+topics: "高可用性とフォールトトレランスの違いは何ですか？, 高可用性とフォールトトレランスの長所と短所"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

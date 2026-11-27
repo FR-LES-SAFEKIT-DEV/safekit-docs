@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/alternative-always-on-s
 description: "بديل لـ SQL Server Always On لإصداري Express و Standard: يضيف SafeKit النسخ المتزامن وتجاوز الفشل، دون SAN أو Active Directory."
 category: "best-practises"
 lang: "ar"
-topics: "بديل لـ Always On SQL Server لإصدارات Express و Standard، كيف تعمل مجموعة mirror SafeKit مع Microsoft SQL Server؟، دليل الفيديو: تهيئة مجموعة mirror (HA) SafeKit SQL Server، 🔍 استكشف SafeKit"
+topics: "بديل لـ Always On SQL Server لإصدارات Express و Standard, دليل الفيديو: تهيئة مجموعة mirror (HA) SafeKit SQL Server"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/synchronous-replication
 description: "Synchrone vs. asynchrone replicatie: waarom synchrone replicatie geen gegevensverlies (RPO 0) geeft in een SafeKit-cluster en wanneer asynchrone replicatie beter past."
 category: "best-practises"
 lang: "nl"
-topics: "Gaat data verloren bij een applicatie-failover met synchrone of asynchrone replicatie?, Inhoudsopgave, Hoe werkt asynchrone replicatie?, Hoe werkt synchrone replicatie?, Hoe werkt semi-synchrone replicatie?, Eindoordeel: de juiste replicatie kiezen voor hoge beschikbaarheid, Vergelijkingstabel: synchroon, asynchroon en semi-synchroon, Videogids: Synchrone realtime-replicatie en hoge beschikbaarheid configureren, Veelgestelde vragen: replicatiestrategieën in clusters met hoge beschikbaarheid, 🔍 Ontdek SafeKit"
+topics: "Gaat data verloren bij een applicatie-failover met synchrone of asynchrone replicatie?, Inhoudsopgave, Hoe werkt asynchrone replicatie?, Hoe werkt synchrone replicatie?, Hoe werkt semi-synchrone replicatie?, Eindoordeel: de juiste replicatie kiezen voor hoge beschikbaarheid, Vergelijkingstabel: synchroon, asynchroon en semi-synchroon, Videogids: Synchrone realtime-replicatie en hoge beschikbaarheid configureren, Veelgestelde vragen: replicatiestrategieën in clusters met hoge beschikbaarheid"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 schemaType: "TechArticle"

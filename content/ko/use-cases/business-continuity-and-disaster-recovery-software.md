@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/business-continuity-and-disa
 description: "SafeKit을 활용한 비즈니스 연속성 및 재해 복구: 두 서버실에 걸친 2노드 클러스터로 동기 복제 및 자동 장애 조치를 제공합니다."
 category: "use-cases"
 lang: "ko"
-topics: "비즈니스 연속성 및 재해 복구 소프트웨어, 🔍 SafeKit 살펴보기"
+topics: "비즈니스 연속성 및 재해 복구 소프트웨어"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

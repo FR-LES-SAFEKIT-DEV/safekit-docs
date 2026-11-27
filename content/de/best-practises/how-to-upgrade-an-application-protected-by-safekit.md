@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/how-to-upgrade-an-appli
 description: "So aktualisieren Sie eine durch SafeKit geschützte Anwendung: kleine und große Upgrades, Rolling Upgrades, Rollback-Optionen und der VM-HA-Ansatz."
 category: "best-practises"
 lang: "de"
-topics: "Aktualisierung einer Hochverfügbarkeitsanwendung, die durch SafeKit geschützt ist, Hochverfügbarkeit auf VM-Ebene, Hochverfügbarkeit auf Anwendungsebene, Die richtige Upgrade-Strategie wählen, Schlussfolgerung, 🔍 SafeKit entdecken"
+topics: "Aktualisierung einer Hochverfügbarkeitsanwendung, die durch SafeKit geschützt ist, Hochverfügbarkeit auf VM-Ebene, Hochverfügbarkeit auf Anwendungsebene, Die richtige Upgrade-Strategie wählen, Schlussfolgerung"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

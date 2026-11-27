@@ -1,10 +1,10 @@
 ---
-title: "موازنة تحميل الشبكة وتجاوز الفشل Apache: تثبيت وحدة SafeKit apache_farm.safe"
+title: "موازنة تحميل الشبكة وتجاوز الفشل Apache: تثبيت وحدة SafeKit apachefarm.safe"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit apache_farm.safe على Windows أو Linux لموازنة أحمال الشبكة وتجاوز الفشل لخوادم الويب Apache."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Apache، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Apache، تثبيت حل SafeKit/Apache على نظامي Windows و Linux (apache_farm.safe)، إعداد حل SafeKit/Apache خطوة بخطوة، عرض حل SafeKit farm، 🔍 استكشف SafeKit"
+topics: "نظرة عامة على حل SafeKit/Apache, تثبيت حل SafeKit/Apache على نظامي Windows و Linux (apachefarm.safe), إعداد حل SafeKit/Apache خطوة بخطوة, عرض حل SafeKit farm"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

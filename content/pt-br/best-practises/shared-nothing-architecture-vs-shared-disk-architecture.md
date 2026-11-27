@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/shared-nothing-archi
 description: "Arquitetura sem compartilhamento vs disco compartilhado em alta disponibilidade: o SafeKit replica dados entre servidores para evitar custos de SAN e simplificar o failover."
 category: "best-practises"
 lang: "pt-br"
-topics: "Arquitetura sem compartilhamento versus arquitetura de disco compartilhado para clusters de alta disponibilidade, arquitetura sem compartilhamento vs. arquitetura de disco compartilhado: prós e contras, 🔍 Explore SafeKit"
+topics: "Arquitetura sem compartilhamento versus arquitetura de disco compartilhado para clusters de alta disponibilidade, Arquitetura sem compartilhamento vs. arquitetura de disco compartilhado: prós e contras"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

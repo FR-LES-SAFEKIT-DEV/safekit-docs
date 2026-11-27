@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/how-to-upgrade-an-appli
 description: "Een door SafeKit beschermde applicatie upgraden: kleine en grote upgrades, rolling upgrades, rollbackopties en de VM-HA-aanpak."
 category: "best-practises"
 lang: "nl"
-topics: "Een High Availability-applicatie beveiligen met SafeKit, Hoge beschikbaarheid op VM-niveau, Hoge beschikbaarheid op applicatieniveau, De juiste upgrade-strategie kiezen, Conclusie, 🔍 Ontdek SafeKit"
+topics: "Een High Availability-applicatie beveiligen met SafeKit, Hoge beschikbaarheid op VM-niveau, Hoge beschikbaarheid op applicatieniveau, De juiste upgrade-strategie kiezen, Conclusie"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

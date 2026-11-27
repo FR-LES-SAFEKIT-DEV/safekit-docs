@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "手順ガイド：AWS に SafeKit の mirror.safe モジュールを導入し、Windows または Linux インスタンス 2 台間でリアルタイムレプリケーションとフェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
-topics: "AWS 向け高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/AWS mirror ソリューションの概要、Windows および Linux への SafeKit/AWS mirror ソリューションのインストール (mirror.safe)、SafeKit/AWS mirror ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+topics: "SafeKit/AWS mirror ソリューションの概要, Windows および Linux への SafeKit/AWS mirror ソリューションのインストール (mirror.safe), SafeKit/AWS mirror ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

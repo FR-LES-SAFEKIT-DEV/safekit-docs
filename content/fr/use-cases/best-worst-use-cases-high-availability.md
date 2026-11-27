@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/use-cases/best-worst-use-cases-high-av
 description: "Meilleurs et pires cas d’usage de SafeKit : quand le clustering logiciel sous Windows et Linux est adapté, et quand un stockage partagé ou une autre approche est préférable."
 category: "use-cases"
 lang: "fr"
-topics: "Meilleurs cas d’utilisation, Limitations de la haute disponibilité SafeKit, 🔍 Explorez SafeKit"
+topics: "Meilleurs cas d’utilisation"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/use-cases/high-availability-air-traffi
 description: "Alta disponibilidad en control de tráfico aéreo: ADB SafeGate usa SafeKit en aeropuertos de todo el mundo para replicación en tiempo real y conmutación automática en Windows."
 category: "use-cases"
 lang: "es"
-topics: "Sistemas de control del tráfico aéreo, ¿Por qué es fundamental el control del tráfico aéreo?, Cómo protege SafeKit el control del tráfico aéreo, Implementación en el mundo real en ADB SafeGate, 🔍 Explora SafeKit"
+topics: "Sistemas de control del tráfico aéreo, ¿Por qué es fundamental el control del tráfico aéreo?, Cómo protege SafeKit el control del tráfico aéreo, Implementación en el mundo real en ADB SafeGate"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

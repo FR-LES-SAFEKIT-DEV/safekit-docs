@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/shared-nothing-architec
 description: "Arquitectura sin recursos compartidos frente a disco compartido en HA: cómo SafeKit replica los datos entre servidores para evitar costes de SAN y simplificar la conmutación."
 category: "best-practises"
 lang: "es"
-topics: "Arquitectura sin recursos compartidos frente a arquitectura de disco compartido para clústeres de alta disponibilidad, arquitectura sin recursos compartidos frente a arquitectura de disco compartido: ventajas y desventajas, 🔍 Explora SafeKit"
+topics: "Arquitectura sin recursos compartidos frente a arquitectura de disco compartido para clústeres de alta disponibilidad, Arquitectura sin recursos compartidos frente a arquitectura de disco compartido: ventajas y desventajas"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

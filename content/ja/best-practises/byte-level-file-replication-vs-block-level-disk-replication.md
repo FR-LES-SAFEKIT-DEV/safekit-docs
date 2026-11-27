@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/byte-level-file-replica
 description: "バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーション：SafeKit はファイル内の変更データのみを複製し、データ損失ゼロと高速フェイルオーバーを実現。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性クラスターにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較、バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所、🔍 SafeKit を探索する"
+topics: "高可用性クラスターにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較, バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

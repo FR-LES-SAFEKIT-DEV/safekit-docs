@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/resources/high-availability-and-load-b
 description: "Vraag een gratis SafeKit-sleutel voor één maand aan om clusters voor hoge beschikbaarheid, replicatie en loadbalancing te testen op Windows en Linux."
 category: "resources"
 lang: "nl"
-topics: "Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux, 🔍 Ontdek SafeKit"
+topics: "Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

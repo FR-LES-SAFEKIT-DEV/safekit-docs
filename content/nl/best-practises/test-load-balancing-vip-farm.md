@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/test-load-balancing-vip
 description: "Het virtuele IP-adres voor loadbalancing van een SafeKit farm-cluster testen: verkeersverdeling tussen nodes, failover, GARP-omleiding en netwerkcontroles."
 category: "best-practises"
 lang: "nl"
-topics: "Kernprincipes, Vereiste: het SafeKit-mozaïek, Test 1 – Distributie van verbindingen, Test 2 – Wijziging van dispatching-server, Test 3 – Controleren van GARP -omleiding met arp -a, Test 4 – End-to-end-controle met Wireshark (Windows) of tcpdump (Linux), Vanaf welke werkstations testen, Samenvatting van de verwachte resultaten, Probleemoplossing, Demonstratie van de SafeKit farm"
+topics: "1. Kernprincipes, 2. Vereiste: het SafeKit-mozaïek, 3. Test 1 – Verdeling van verbindingen, 4. Test 2 – Wijziging van de verzendserver, 5. Test 3 – GARP omleiding controleren met arp -a, 6. Test 4 – End-to-end-controle met Wireshark (Windows) of tcpdump (Linux), 7. Vanaf welke werkstations testen?, 8. Samenvatting van de verwachte resultaten, 9. Probleemoplossing, Demonstratie van de SafeKit farm"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

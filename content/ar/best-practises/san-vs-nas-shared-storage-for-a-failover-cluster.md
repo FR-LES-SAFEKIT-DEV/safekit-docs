@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/san-vs-nas-shared-stora
 description: "التخزين المشترك SAN مقابل NAS لمجموعات تجاوز الفشل: الحدود والتكاليف والمخاطر، ولماذا يلغي النسخ في SafeKit الحاجة إلى التخزين المشترك."
 category: "best-practises"
 lang: "ar"
-topics: "التخزين المشترك من نوع SAN أو NAS: أيهما أبسط لمجموعة تجاوز الفشل؟، 🔍 استكشف SafeKit"
+topics: "التخزين المشترك من نوع SAN أو NAS: أيهما أبسط لمجموعة تجاوز الفشل؟"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

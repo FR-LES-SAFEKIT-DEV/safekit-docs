@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/test-load-balancing-vip
 description: "SafeKit farm 클러스터의 부하 분산 가상 IP 테스트 방법: 노드 간 트래픽 분배, 장애 조치, GARP 재라우팅, 네트워크 점검."
 category: "best-practises"
 lang: "ko"
-topics: "주요 원칙, 필수 구성 요소: SafeKit 모자이크, 테스트 1 – 연결 분배, 테스트 2 – 디스패칭 서버 변경, 테스트 3 – arp -a를 사용한 GARP 재라우팅 확인, 테스트 4 – Wireshark(Windows) 또는 tcpdump(Linux)를 사용한 종단 간 확인, 테스트할 워크스테이션, 예상 결과 요약, 문제 해결, SafeKit farm 솔루션 시연"
+topics: "1. 주요 원칙, 2. 필수 구성 요소: SafeKit 모자이크, 3. 테스트 1 – 연결 분포, 4. 테스트 2 – 디스패칭 서버 변경, 5. 테스트 3 – arp -a 사용하여 GARP 재라우팅 확인, 6. 테스트 4 – Wireshark(Windows) 또는 tcpdump(Linux)를 사용한 엔드투엔드 확인, 7. 테스트할 워크스테이션, 8. 예상 결과 요약, 9. 문제 해결, SafeKit farm 솔루션 시연"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/use-cases/best-worst-use-cases-high-av
 description: "Mejores y peores casos de uso de SafeKit: dónde encaja bien el clustering de software en Windows y Linux, y cuándo es mejor el almacenamiento compartido u otro enfoque."
 category: "use-cases"
 lang: "es"
-topics: "Mejores casos de uso, Limitaciones de alta disponibilidad SafeKit, 🔍 Explora SafeKit"
+topics: "Mejores casos de uso"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"

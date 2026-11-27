@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/solutions/siemens-siveillance-vms-t
 description: "Alta disponibilidade do Siemens Siveillance VMS com SafeKit: o módulo SiveillanceVMS.safe oferece replicação em tempo real e failover em dois servidores."
 category: "solutions"
 lang: "pt-br"
-topics: "Guia de instalação rápida SafeKit com Siemens Siveillance VMS e SQL (módulo mirror SiveillanceVMS.safe), Como o SANless SafeKit cluster mirror funciona com Milestone XProtect, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade SANless Milestone XProtect?, Como o cluster mirror SafeKit funciona com Milestone XProtect?, Limitações SafeKit de Alta Disponibilidade, Comparação: SafeKit para Milestone XProtect vs. Outras Soluções de Clusterização, Guia em vídeo: Configurando um cluster mirror de alta disponibilidade com o SafeKit, 🔍 Explore SafeKit"
+topics: "Guia de instalação rápida SafeKit com Siemens Siveillance VMS e SQL (módulo mirror SiveillanceVMS.safe)"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"

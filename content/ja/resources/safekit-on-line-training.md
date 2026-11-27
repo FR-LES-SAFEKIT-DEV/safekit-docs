@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/resources/safekit-on-line-training/"
 description: "SafeKit の無料オンライントレーニングと認定：HA クラスターのインストール、Web コンソール、コマンドライン、高度な設定、トラブルシューティング。"
 category: "resources"
 lang: "ja"
-topics: "トレーニングプラットフォームへのアクセス方法、SafeKit 8 トレーニング資料の入手方法、🔍 SafeKit を探索する"
+topics: "トレーニングプラットフォームへのアクセス方法, SafeKitトレーニングビデオ"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

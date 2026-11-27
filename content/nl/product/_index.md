@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/product/"
 description: "SafeKit combineert realtime replicatie, automatische failover en netwerkloadbalancing in één softwareproduct voor Windows en Linux, zonder gedeelde opslag."
 category: "product"
 lang: "nl"
-topics: "Wat is SafeKit?, 🔍 Ontdek SafeKit, Waarom kiezen voor SafeKit voor eenvoudige en kosteneffectieve hoge beschikbaarheid?, Waarom is een alles-in-één SANless-product voor hoge beschikbaarheid essentieel?, Uw strategie voor hoge beschikbaarheid kiezen: VM-HA versus applicatie-HA, Beperkingen van de hoge beschikbaarheid van SafeKit, SafeKit-videobibliotheek, Vergelijking van SafeKit met traditionele high-availability (HA)-clusters, Gratis proefversie en technische documentatie van SafeKit HA, SafeKit-bibliotheek met applicatiemodules: kant-en-klare HA-oplossingen"
+topics: "Wat is SafeKit?"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 53 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

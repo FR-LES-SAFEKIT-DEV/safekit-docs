@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/test-load-balancing-vip
 description: "Tester l’IP virtuelle d’équilibrage de charge d’un cluster farm SafeKit : répartition du trafic entre nœuds, basculement, réacheminement GARP et vérifications réseau."
 category: "best-practises"
 lang: "fr"
-topics: "Principes clés, Prérequis : la mosaïque SafeKit, Test 1 – Distribution des connexions, Test 2 – Changement de serveur de répartition, Test 3 – Vérification du réacheminement GARP avec arp -a, Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), Quelles stations de travail tester, Résumé des résultats attendus, Dépannage, Démonstration de la solution farm SafeKit"
+topics: "1. Principes clés, 2. Prérequis : la mosaïque SafeKit, 3. Test 1 – Répartition des connexions, 4. Test 2 – Changement de serveur d’expédition, 5. Test 3 – Vérification du réacheminement GARP avec arp -a, 6. Test 4 – Vérification de bout en bout avec Wireshark (Windows) ou tcpdump (Linux), 7. À partir de quels postes de travail effectuer les tests, 8. Synthèse des résultats attendus, 9. Dépannage, Démonstration de la solution farm SafeKit"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 20 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/heartbeat-failover-quor
 description: "Heartbeat, basculement et quorum dans les clusters Windows et Linux, et comment SafeKit évite le split brain sans disque de quorum ni troisième serveur."
 category: "best-practises"
 lang: "fr"
-topics: "Quels sont les différents scénarios en cas d’isolement du réseau dans un cluster ?, Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ?, Split brain et quorum avec des serveurs dans deux salles informatiques distantes, Quorum de cluster simple avec le checker split-brain SafeKit, 🔍 Explorez SafeKit"
+topics: "Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ?, Split brain et quorum avec des serveurs dans deux salles informatiques distantes, Quorum de cluster simple avec le checker split-brain SafeKit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

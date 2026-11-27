@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/"
 description: "بنيات مجموعات SafeKit: مجموعات mirror مع النسخ في الوقت الفعلي، ومجموعات farm مع موازنة الأحمال، وبنية نشط-نشط وتكرار N-1، دون SAN."
 category: "architectures"
 lang: "ar"
-topics: "ما هي معماريات التوافر العالي المختلفة ومجموعات البرامج المختلفة مع SafeKit؟، كيف يمكن بناء مجموعات التوافر العالي باستخدام SafeKit؟، 🔍 استكشف SafeKit"
+topics: "ما هي معماريات التوافر العالي المختلفة ومجموعات البرامج المختلفة مع SafeKit؟, كيفية بناء مجموعات عالية التوافر باستخدام SafeKit؟"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 17 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---

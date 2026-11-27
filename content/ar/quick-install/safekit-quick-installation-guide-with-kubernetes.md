@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit k3s.safe لمجموعة Kubernetes K3s من عقدتين على Linux، مع النسخ في الوقت الفعلي وتجاوز الفشل التلقائي."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لـ Kubernetes، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Kubernetes، تثبيت وتهيئة حل SafeKit/Kubernetes على Linux (k3s.safe)، ما هي السيناريوهات المختلفة في حالة عزل الشبكة في مجموعة؟، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+topics: "نظرة عامة على حل SafeKit/Kubernetes, تثبيت وتهيئة حل SafeKit/Kubernetes على Linux (k3s.safe), عرض حل mirror من SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

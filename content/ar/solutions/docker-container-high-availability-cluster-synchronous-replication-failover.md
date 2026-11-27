@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/docker-container-high-availa
 description: "التوفر العالي لـ Docker مع SafeKit: نسخ متزامن لبيانات الحاويات وتجاوز فشل تلقائي بين خادمين Linux، دون SAN."
 category: "solutions"
 lang: "ar"
-topics: "كيف تعمل مجموعة SafeKit مجموعة mirror الخالية من شبكة التخزين (SANless) مع Docker، جدول المحتويات، كيف يقوم برنامج SafeKit بتنفيذ مجموعة Docker عالية التوفر ببساطة؟، كيف تعمل مجموعة SafeKit مجموعة mirror مع Docker ؟، قيود SafeKit على التوفر العالي، مقارنة: مجموعة SafeKit الخالية من شبكة التخزين (SANless) مقابل Docker HA التقليدية، مقارنة: SafeKit مقابل Linux HA مفتوح المصدر (Pacemaker/Corosync/DRBD)، ملخص توفر Docker العالي، 🔍 استكشف SafeKit"
+topics: "كيف تعمل مجموعة mirror SafeKit الخالية من شبكة التخزين (SANless) مع Docker, جدول المحتويات, كيف يقوم برنامج SafeKit بتطبيق مجموعة Docker عالية التوفر ببساطة؟, مقارنة: مجموعة SafeKit SANless مقابل Docker HA التقليدية, مقارنة: SafeKit مقابل حلول التوافر العالي مفتوحة المصدر Linux (Pacemaker/Corosync/DRBD), ملخص التوافر العالي Docker"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 26 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"

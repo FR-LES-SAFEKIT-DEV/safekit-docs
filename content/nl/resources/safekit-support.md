@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/resources/safekit-support/"
 description: "SafeKit-support: contractuele ondersteuning met 24/7 melding van incidenten, gratis hulp van SafeKit AI en een gratis online trainings- en certificeringsprogramma."
 category: "resources"
 lang: "nl"
-topics: "Gratis AI Level 1-ondersteuning, standaard ondersteuning en onderhoud, gratis certificerings- en trainingsprogramma, 🔍 Ontdek SafeKit"
+topics: "Gratis AI-ondersteuning niveau 1, Standaard ondersteuning en onderhoud, Gratis certificerings- en trainingsprogramma"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

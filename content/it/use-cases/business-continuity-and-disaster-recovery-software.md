@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/business-continuity-and-disa
 description: "Continuità operativa e disaster recovery con SafeKit: un cluster a due nodi su due sale server, con replica sincrona e failover automatico."
 category: "use-cases"
 lang: "it"
-topics: "Software per la continuità aziendale e il disaster recovery, 🔍 Esplora SafeKit"
+topics: "Software per la continuità aziendale e il disaster recovery"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

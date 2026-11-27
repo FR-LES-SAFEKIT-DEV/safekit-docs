@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/use-cases/business-continuity-software/"
 description: "High availability for distributed enterprises: deploy the same SafeKit cluster in every branch, with no SAN and no IT staff on site, on Windows or Linux."
 category: "use-cases"
 lang: "en"
-topics: "Business continuity in a distributed enterprise, 🔍 Explore SafeKit"
+topics: "Business continuity in a distributed enterprise"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---

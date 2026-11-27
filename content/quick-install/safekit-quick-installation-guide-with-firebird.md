@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit firebird.safe module for real-time replication and automatic failover of Firebird on Windows or Linux."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Firebird, SafeKit High Availability Limitations, Overview of the SafeKit / Firebird solution, Installation of the SafeKit / Firebird solution on Windows and Linux (firebird.safe), Step by step configuration of the SafeKit / Firebird solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
+topics: "Overview of the SafeKit / Firebird solution, Installation of the SafeKit / Firebird solution on Windows and Linux (firebird.safe), Step by step configuration of the SafeKit / Firebird solution, Demonstration of the SafeKit mirror solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

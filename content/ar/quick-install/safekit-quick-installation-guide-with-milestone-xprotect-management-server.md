@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit milestone.safe للنسخ في الوقت الفعلي وتجاوز الفشل لـ Milestone XProtect Management Server."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع لـ Milestone XProtect عالي التوافر، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Milestone XProtect، تثبيت حل SafeKit/Milestone XProtect على Windows (milestone.safe)، إعداد حل SafeKit/Milestone XProtect خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+topics: "نظرة عامة على حل SafeKit/Milestone XProtect, تثبيت حل SafeKit/Milestone XProtect على Windows (milestone.safe), إعداد حل SafeKit/Milestone XProtect خطوة بخطوة, عرض حل mirror من SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/architectures/clustering-software-load
 description: "SafeKit farm 및 mirror 모듈 결합: Windows 및 Linux에서 부하 분산은 프런트엔드를 확장하고 동기 복제는 백엔드 데이터를 보호합니다."
 category: "architectures"
 lang: "ko"
-topics: "SafeKit 클러스터링 소프트웨어로 핵심 웹 및 데이터베이스 애플리케이션의 고가용성 및 확장성 확보, 🔍 SafeKit 살펴보기"
+topics: "SafeKit 클러스터링 소프트웨어로 핵심 웹 및 데이터베이스 애플리케이션의 고가용성 및 확장성 확보"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

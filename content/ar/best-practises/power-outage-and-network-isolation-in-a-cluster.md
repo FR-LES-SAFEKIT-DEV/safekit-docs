@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/power-outage-and-networ
 description: "كيف تتعامل مجموعة التوفر العالي مع انقطاع الكهرباء وعزل الشبكة: يحمي مدقق split-brain وإعادة المزامنة التلقائية في SafeKit بياناتك."
 category: "best-practises"
 lang: "ar"
-topics: "ما هي السيناريوهات المختلفة في حالة عزل الشبكة في مجموعة؟، ما هي السيناريوهات المختلفة في حالة انقطاع التيار الكهربائي في مجموعة؟، 🔍 استكشف SafeKit"
+topics: "ما هي السيناريوهات المختلفة في حالة انقطاع التيار الكهربائي في مجموعة؟"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

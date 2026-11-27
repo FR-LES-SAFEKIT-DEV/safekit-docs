@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/high-availability-software-h
 description: "Software di alta disponibilità per Windows e Linux: i cluster SafeKit offrono replica in tempo reale, failover e bilanciamento del carico senza storage condiviso."
 category: "use-cases"
 lang: "it"
-topics: "Elevator pitch di 30 secondi per SafeKit, 🔍 Esplora SafeKit"
+topics: "Elevator pitch di 30 secondi per SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

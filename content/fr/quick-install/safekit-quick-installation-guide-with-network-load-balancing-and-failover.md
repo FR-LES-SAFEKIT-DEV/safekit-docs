@@ -1,10 +1,10 @@
 ---
-title: "Équilibrage de charge et basculement réseau Apache : installer le module SafeKit apache_farm.safe"
+title: "Équilibrage de charge et basculement réseau Apache : installer le module SafeKit apachefarm.safe"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit apache_farm.safe sous Windows ou Linux pour l’équilibrage de charge réseau et le basculement des serveurs web Apache."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d’installation rapide de la haute disponibilité pour Apache, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Apache, Installation de la solution SafeKit/Apache sous Windows et Linux (apache_farm.safe), Configuration pas à pas de la solution SafeKit/Apache, Démonstration de la solution farm SafeKit, 🔍 Explorez SafeKit"
+topics: "Présentation de la solution SafeKit/Apache, Installation de la solution SafeKit/Apache sous Windows et Linux (apachefarm.safe), Configuration pas à pas de la solution SafeKit/Apache, Démonstration de la solution farm SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/product/"
 description: "SafeKit은 공유 스토리지 없이 실시간 복제, 자동 장애 조치, 네트워크 부하 분산을 Windows 및 Linux용 단일 소프트웨어 제품에 결합합니다."
 category: "product"
 lang: "ko"
-topics: "SafeKit이란 무엇인가요?, 🔍 SafeKit 살펴보기, 간편하고 비용 효율적인 고가용성을 위해 SafeKit을 선택해야 하는 이유, 올인원 SANless 고가용성 제품이 필수적인 이유는 무엇일까요?, 고가용성 전략 선택: VM HA vs. 애플리케이션 HA, SafeKit 고가용성 제한 사항, SafeKit 동영상 라이브러리, SafeKit과 기존 고가용성(HA) 클러스터 비교, SafeKit HA 무료 평가판 및 기술 문서, SafeKit 애플리케이션 모듈 라이브러리: 즉시 사용 가능한 HA 솔루션"
+topics: "SafeKit이란 무엇인가요?"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/shared-nothing-architec
 description: "고가용성을 위한 비공유(shared-nothing)와 공유 디스크 아키텍처 비교: SafeKit이 서버 간 데이터를 복제해 SAN 비용을 없애고 장애 조치를 단순화하는 방법."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성 클러스터를 위한 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처, 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 장단점, 🔍 SafeKit 살펴보기"
+topics: "고가용성 클러스터를 위한 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처, 비공유(shared-nothing) 아키텍처 vs 공유 디스크 아키텍처: 장단점"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

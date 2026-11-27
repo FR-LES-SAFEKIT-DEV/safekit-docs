@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/how-to-upgrade-an-appli
 description: "Mettre à niveau une application protégée par SafeKit : mises à jour mineures et majeures, mises à niveau progressives, options de retour arrière et approche HA de VM."
 category: "best-practises"
 lang: "fr"
-topics: "Mise à niveau d’une application haute disponibilité protégée par SafeKit, Haute disponibilité au niveau des machines virtuelles, Haute disponibilité au niveau de l’application, Choisir la bonne stratégie de mise à niveau, Conclusion, 🔍 Explorez SafeKit"
+topics: "Mise à niveau d’une application haute disponibilité protégée par SafeKit, Haute disponibilité au niveau des machines virtuelles, Haute disponibilité au niveau de l’application, Choisir la bonne stratégie de mise à niveau, Conclusion"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

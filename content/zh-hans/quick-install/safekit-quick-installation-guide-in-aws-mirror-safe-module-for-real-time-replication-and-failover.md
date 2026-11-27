@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "分步指南：在 AWS 中安装 SafeKit mirror.safe 模块，在两台 Windows 或 Linux 实例间实现实时复制和故障转移。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "AWS 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/AWS mirror 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/AWS mirror 解决方案 (mirror.safe)、SafeKit/AWS mirror 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"
+topics: "SafeKit/AWS mirror 解决方案概述, 在 Windows 和 Linux 上安装 SafeKit/AWS mirror 解决方案 (mirror.safe), SafeKit/AWS mirror 解决方案的分步配置, SafeKit mirror 解决方案演示"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

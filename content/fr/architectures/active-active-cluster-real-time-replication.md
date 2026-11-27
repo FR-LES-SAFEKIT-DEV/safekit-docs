@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/architectures/active-active-cluster-re
 description: "Cluster SafeKit actif-actif : deux serveurs se secourent mutuellement avec plusieurs modules mirror, réplication synchrone et basculement croisé sous Windows et Linux."
 category: "architectures"
 lang: "fr"
-topics: "Comment fonctionne un cluster actif-actif avec réplication en temps réel ?, 🔍 Explorez SafeKit"
+topics: "Comment fonctionne un cluster actif-actif avec réplication en temps réel ?"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

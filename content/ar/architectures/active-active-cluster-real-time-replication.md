@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/active-active-cluster-re
 description: "مجموعة SafeKit نشط-نشط: خادمان يدعم كل منهما الآخر بعدة وحدات mirror، مع نسخ متزامن وتجاوز فشل متبادل على Windows و Linux."
 category: "architectures"
 lang: "ar"
-topics: "كيف تعمل مجموعة نشطة-نشطة ذات النسخ المتماثل في الوقت الفعلي؟، 🔍 استكشف SafeKit"
+topics: "كيف تعمل مجموعة نشطة-نشطة ذات النسخ المتماثل في الوقت الفعلي؟"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

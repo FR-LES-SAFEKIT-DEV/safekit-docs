@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/power-outage-and-net
 description: "Como um cluster de alta disponibilidade lida com quedas de energia e isolamento de rede: o checker split-brain e a ressincronização automática do SafeKit protegem seus dados."
 category: "best-practises"
 lang: "pt-br"
-topics: "Quais são os diferentes cenários em caso de isolamento de rede em um cluster?, Quais são os diferentes cenários em caso de falta de energia em um cluster?, 🔍 Explore SafeKit"
+topics: "Quais são os diferentes cenários em caso de falta de energia em um cluster?"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

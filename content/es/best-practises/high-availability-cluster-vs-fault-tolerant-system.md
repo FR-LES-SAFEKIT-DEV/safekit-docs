@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/high-availability-clust
 description: "Clúster HA frente a sistema tolerante a fallos: compare costes, recuperación y protección ante fallos de software, y vea cómo funciona SafeKit en servidores estándar."
 category: "best-practises"
 lang: "es"
-topics: "¿Cuál es la diferencia entre alta disponibilidad y tolerancia a fallos?, Ventajas y desventajas de la alta disponibilidad y la tolerancia a fallos, 🔍 Explora SafeKit"
+topics: "¿Cuál es la diferencia entre alta disponibilidad y tolerancia a fallos?, Ventajas y desventajas de la alta disponibilidad y la tolerancia a fallos"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

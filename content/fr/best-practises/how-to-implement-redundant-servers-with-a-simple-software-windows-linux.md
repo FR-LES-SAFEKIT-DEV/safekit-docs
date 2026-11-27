@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/how-to-implement-redund
 description: "Serveurs redondants par le seul logiciel : SafeKit assure réplication en temps réel et basculement automatique sous Windows et Linux, sans disque partagé."
 category: "best-practises"
 lang: "fr"
-topics: "Comment mettre en œuvre des serveurs redondants actifs/passifs avec réplication en temps réel et basculement ?, Comment mettre en œuvre des serveurs redondants actifs/actifs avec équilibrage de charge réseau et basculement ?, 🔍 Explorez SafeKit"
+topics: "Comment mettre en œuvre des serveurs redondants actifs/passifs avec réplication en temps réel et basculement ?, Comment mettre en œuvre des serveurs redondants actifs/actifs avec équilibrage de charge réseau et basculement ?"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

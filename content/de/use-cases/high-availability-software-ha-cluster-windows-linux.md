@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/high-availability-software-h
 description: "Hochverfügbarkeitssoftware für Windows und Linux: SafeKit-Cluster bieten Echtzeit-Replikation, Failover und Lastverteilung ohne gemeinsamen Speicher."
 category: "use-cases"
 lang: "de"
-topics: "30-Sekunden-Elevator-Pitch für SafeKit, 🔍 SafeKit entdecken"
+topics: "30-Sekunden-Elevator-Pitch für SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

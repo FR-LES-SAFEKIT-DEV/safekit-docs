@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "手順ガイド：SafeKit の sqlserver.safe モジュールを導入し、2 台で Microsoft SQL Server のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
-topics: "Microsoft SQL Server 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Microsoft SQL Server ソリューションの概要、Windows への SafeKit/Microsoft SQL Server ソリューションのインストール (sqlserver.safe)、SafeKit/Microsoft SQL Server ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+topics: "SafeKit/Microsoft SQL Server ソリューションの概要, Windows への SafeKit/Microsoft SQL Server ソリューションのインストール (sqlserver.safe), SafeKit/Microsoft SQL Server ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

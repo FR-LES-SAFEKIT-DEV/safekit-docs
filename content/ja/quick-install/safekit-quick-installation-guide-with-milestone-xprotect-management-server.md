@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "手順ガイド：SafeKit の milestone.safe モジュールを導入し、Milestone XProtect Management Server のリアルタイムレプリケーションとフェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
-topics: "Milestone XProtect 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/Milestone XProtect ソリューションの概要、Windows への SafeKit/Milestone XProtect ソリューションのインストール (milestone.safe)、SafeKit/Milestone XProtect ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+topics: "SafeKit/Milestone XProtect ソリューションの概要, Windows への SafeKit/Milestone XProtect ソリューションのインストール (milestone.safe), SafeKit/Milestone XProtect ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

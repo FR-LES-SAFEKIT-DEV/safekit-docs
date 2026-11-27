@@ -1,10 +1,10 @@
 ---
-title: "IIS 네트워크 부하 분산 및 장애 조치: SafeKit iis_farm.safe 모듈 설치"
+title: "IIS 네트워크 부하 분산 및 장애 조치: SafeKit iisfarm.safe 모듈 설치"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: 가상 IP 기반 IIS 웹 서버의 네트워크 부하 분산 및 장애 조치를 위한 Windows용 SafeKit iis_farm.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
-topics: "IIS 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/IIS 솔루션 개요, Windows에 SafeKit/IIS 솔루션 설치 (iis_farm.safe), SafeKit/IIS 솔루션의 단계별 구성, SafeKit farm 솔루션 시연, 🔍 SafeKit 살펴보기"
+topics: "SafeKit/IIS 솔루션 개요, Windows에 SafeKit/IIS 솔루션 설치 (iisfarm.safe), SafeKit/IIS 솔루션의 단계별 구성, SafeKit farm 솔루션 시연"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

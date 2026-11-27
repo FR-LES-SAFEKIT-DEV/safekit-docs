@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-public-tra
 description: "Hoge beschikbaarheid voor controlekamers van het openbaar vervoer: RATP gebruikt SafeKit voor de bestuurderloze Parijse metrolijn 1, met replicatie, failover en loadbalancing."
 category: "use-cases"
 lang: "nl"
-topics: "Controlekamers openbaar vervoer, Waarom is de controlekamer cruciaal?, SafeKit hoge beschikbaarheid voor openbaar vervoer, Implementatie in de praktijk bij RATP, 🔍 Ontdek SafeKit"
+topics: "Controlekamers openbaar vervoer, Waarom is de controlekamer cruciaal?, SafeKit hoge beschikbaarheid voor openbaar vervoer, Implementatie in de praktijk bij RATP"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

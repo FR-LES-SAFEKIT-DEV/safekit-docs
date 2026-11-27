@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/use-cases/high-availability-software-ha-c
 description: "High availability software for Windows and Linux: SafeKit clusters provide real-time replication, failover and load balancing with no shared storage."
 category: "use-cases"
 lang: "en"
-topics: "30 seconds elevator pitch for SafeKit, 🔍 Explore SafeKit"
+topics: "30 seconds elevator pitch for SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---

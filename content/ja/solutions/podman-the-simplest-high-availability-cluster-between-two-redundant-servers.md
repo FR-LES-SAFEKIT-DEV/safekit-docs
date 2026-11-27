@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/podman-the-simplest-high-ava
 description: "SafeKit による Podman の高可用性：Linux サーバー 2 台間でコンテナデータの同期レプリケーションと自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
-topics: "SANless SafeKit mirror クラスターが Podman で動作する仕組み、目次、SafeKit ソフトウェアは、どのようにして Podman 高可用性クラスターを簡単に実装するのでしょうか？、SafeKit mirror クラスターが Podman とどのように連携しますか？、SafeKit High Availability の制限事項、比較：SafeKit SANless Cluster と従来の Podman HA、比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）、Podman 高可用性概要、🔍 SafeKit を探索する"
+topics: "SANless SafeKit mirror クラスターが Podman で動作する仕組み, 目次, SafeKit ソフトウェアは、どのようにして Podman 高可用性クラスターを簡単に実装するのでしょうか？, 比較：SafeKit SANless Cluster と従来の Podman HA, 比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）, Podman 高可用性概要"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
 schemaType: "TechArticle"

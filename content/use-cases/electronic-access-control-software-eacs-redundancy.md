@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/use-cases/electronic-access-control-softw
 description: "Access control (EACS) redundancy with SafeKit: two-node cluster with synchronous replication and failover for Nedap, Siemens, HID and other systems."
 category: "use-cases"
 lang: "en"
-topics: "What is an electronic access control system (EACS)?, Why is EACS software critical?, Main EACS vendors, SafeKit brings two solutions for redundancy and high availability of a EACS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+topics: "What is an electronic access control system (EACS)?, Why is EACS software critical?, Main EACS vendors"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 schemaSector: "EACS"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/"
 description: "SafeKit のクラスターアーキテクチャ：リアルタイムレプリケーションの mirror クラスター、負荷分散の farm クラスター、アクティブ/アクティブ、N-1 冗長化。SAN 不要。"
 category: "architectures"
 lang: "ja"
-topics: "SafeKit にはどのような高可用性アーキテクチャとソフトウェアクラスターがありますか？、SafeKit で高可用性クラスターを構築するには？、🔍 SafeKit を探索する"
+topics: "SafeKit にはどのような高可用性アーキテクチャとソフトウェアクラスターがありますか？, SafeKit で高可用性クラスターを構築する方法"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---

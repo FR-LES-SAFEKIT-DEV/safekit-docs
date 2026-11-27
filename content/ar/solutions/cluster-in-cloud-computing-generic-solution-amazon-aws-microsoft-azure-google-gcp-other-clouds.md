@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/cluster-in-cloud-computing-g
 description: "المجموعات في السحابة مع SafeKit: حل عام واحد للنسخ وتجاوز الفشل وموازنة الأحمال في AWS و Azure و Google Cloud وغيرها من السحابات."
 category: "solutions"
 lang: "ar"
-topics: "اكتشف SafeKit في Microsoft Azure، اكتشف SafeKit في Google GCP، اكتشف SafeKit في Amazon AWS، حلول سحابية أخرى مع Eviden SafeKit، 🔍 استكشف SafeKit"
+topics: "حلول سحابية أخرى مع Eviden SafeKit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

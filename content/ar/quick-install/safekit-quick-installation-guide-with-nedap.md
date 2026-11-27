@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit nedap.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لنظام التحكم في الوصول Nedap AEOS على Windows."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع عالي التوافر لـ Nedap، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Nedap، تثبيت حل SafeKit/Nedap على Windows (nedap.safe)، تكوين حل SafeKit/Nedap خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+topics: "نظرة عامة على حل SafeKit/Nedap, تثبيت حل SafeKit/Nedap على Windows (nedap.safe), تكوين حل SafeKit/Nedap خطوة بخطوة, عرض حل mirror من SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

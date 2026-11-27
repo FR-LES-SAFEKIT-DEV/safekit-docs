@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/high-availability-air-traffi
 description: "항공 교통 관제 고가용성: ADB SafeGate는 전 세계 공항에서 Windows 기반 실시간 복제 및 자동 장애 조치에 SafeKit을 사용합니다."
 category: "use-cases"
 lang: "ko"
-topics: "항공 교통 관제 시스템, 항공 교통 관제가 왜 중요할까요?, SafeKit이 항공 교통 관제 시스템을 보호하는 방법, ADB SafeGate의 실제 구현, 🔍 SafeKit 살펴보기"
+topics: "항공 교통 관제 시스템, 항공 교통 관제가 왜 중요할까요?, SafeKit이 항공 교통 관제 시스템을 보호하는 방법, ADB SafeGate의 실제 구현"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

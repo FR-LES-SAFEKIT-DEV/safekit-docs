@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/architectures/active-active-cluster-re
 description: "액티브-액티브 SafeKit 클러스터: Windows 및 Linux에서 여러 mirror 모듈, 동기 복제, 상호 장애 조치로 두 서버가 서로를 백업합니다."
 category: "architectures"
 lang: "ko"
-topics: "실시간 복제를 사용하는 액티브-액티브 클러스터는 어떻게 작동하나요?, 🔍 SafeKit 살펴보기"
+topics: "실시간 복제를 사용하는 액티브-액티브 클러스터는 어떻게 작동하나요?"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

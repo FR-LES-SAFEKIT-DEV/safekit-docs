@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/architectures/clustering-software-load
 description: "SafeKit の farm と mirror を併用：負荷分散でフロントエンドを拡張し、同期レプリケーションでバックエンドデータを保護。Windows と Linux 対応。"
 category: "architectures"
 lang: "ja"
-topics: "SafeKit クラスタリングソフトウェアによる、重要な Web アプリケーションとデータベースアプリケーションの可用性とスケーラビリティの向上、🔍 SafeKit を探索する"
+topics: "SafeKit クラスタリングソフトウェアによる、重要な Web アプリケーションとデータベースアプリケーションの可用性とスケーラビリティの向上"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

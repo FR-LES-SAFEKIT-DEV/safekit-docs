@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installati
 description: "Guía paso a paso: instale el módulo SafeKit sqlserver.safe para replicación en tiempo real y conmutación por error automática de Microsoft SQL Server en dos servidores."
 category: "quick-install"
 lang: "es"
-topics: "Guía de instalación rápida de alta disponibilidad para Microsoft SQL Server, Limitaciones de alta disponibilidad SafeKit, Descripción general de la solución SafeKit/Microsoft SQL Server, Instalación de la solución SafeKit/Microsoft SQL Server en Windows (sqlserver.safe), Configuración paso a paso de la solución SafeKit/Microsoft SQL Server, Demostración de la solución mirror SafeKit, 🔍 Explora SafeKit"
+topics: "Descripción general de la solución SafeKit/Microsoft SQL Server, Instalación de la solución SafeKit/Microsoft SQL Server en Windows (sqlserver.safe), Configuración paso a paso de la solución SafeKit/Microsoft SQL Server, Demostración de la solución mirror SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

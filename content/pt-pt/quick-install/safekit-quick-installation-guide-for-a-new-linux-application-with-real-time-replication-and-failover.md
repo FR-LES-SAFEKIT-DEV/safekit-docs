@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-install
 description: "Guia passo a passo: instale o módulo SafeKit mirror.safe em Linux para replicação em tempo real e failover automático da sua aplicação em dois servidores."
 category: "quick-install"
 lang: "pt-pt"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para Linux, Limitações de Alta Disponibilidade SafeKit, Visão geral da solução SafeKit/Linux, Instalação da solução SafeKit/Linux (mirror.safe), Configuração passo a passo da solução SafeKit/Linux, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+topics: "Visão geral da solução SafeKit/Linux, Instalação da solução SafeKit/Linux (mirror.safe), Configuração passo a passo da solução SafeKit/Linux, Demonstração da solução mirror SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

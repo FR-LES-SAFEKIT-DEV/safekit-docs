@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/how-to-implement-redund
 description: "소프트웨어만으로 이중화 서버를 구현하는 방법: SafeKit은 공유 디스크 없이 Windows 및 Linux에서 실시간 복제와 자동 장애 조치를 제공합니다."
 category: "best-practises"
 lang: "ko"
-topics: "실시간 복제 및 장애 조치를 통해 능동/수동 이중화 서버를 구현하는 방법은 무엇입니까?, 네트워크 부하 분산 및 장애 조치를 통해 액티브/액티브 이중화 서버를 구현하는 방법은 무엇입니까?, 🔍 SafeKit 살펴보기"
+topics: "실시간 복제 및 장애 조치를 통해 능동/수동 이중화 서버를 구현하는 방법은 무엇입니까?, 네트워크 부하 분산 및 장애 조치를 통해 액티브/액티브 이중화 서버를 구현하는 방법은 무엇입니까?"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

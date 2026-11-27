@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/solutions/docker-container-high-ava
 description: "Alta disponibilidade de Docker com SafeKit: replicação síncrona dos dados dos contentores e failover automático entre dois servidores Linux, sem SAN."
 category: "solutions"
 lang: "pt-pt"
-topics: "Como o SANless SafeKit cluster mirror funciona com Docker, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Docker ?, Como o SafeKit cluster mirror funciona com Docker ?, Limitações de Alta Disponibilidade SafeKit, Comparação: SafeKit SANless Cluster vs. Docker HA Tradicional, Comparação: SafeKit vs. Linux HA de Código Aberto (Pacemaker/Corosync/DRBD), Resumo de Alta Disponibilidade Docker, 🔍 Explorar SafeKit"
+topics: "Como o SANless SafeKit cluster mirror funciona com Docker, Índice, Como o software SafeKit implementa de forma simples um cluster de alta disponibilidade Docker ?, Comparação: Cluster SANless SafeKit vs. HA Docker Tradicional, Comparação: SafeKit vs. Soluções de Alta Disponibilidade (HA) de Código Aberto Linux (Pacemaker/Corosync/DRBD), Resumo da Alta Disponibilidade Docker"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/high-availability-disas
 description: "Kombinieren Sie SafeKit-Hochverfügbarkeit (synchrone Replikation, RPO 0) mit asynchronen Backups für externes Disaster Recovery unter Windows und Linux."
 category: "best-practises"
 lang: "de"
-topics: "Synchrone SafeKit-Replikation für Hochverfügbarkeit (HA) vs. asynchrone Backup-Replikation für Notfallwiederherstellung (DR), Inhaltsverzeichnis, Synchrones HADR: Null Datenverlust über schnelle Netzwerke (LAN/VLAN), Asynchrones HADR: Disaster Recovery über langsame Netzwerke (WAN), HADR und Backup für vollständige Systemresilienz kombinieren, Vergleich von HADR-Architekturen: Schnelle vs. langsame Netzwerke, Videoanleitung: Implementierung von HADR mit SafeKit, 🔍 SafeKit entdecken"
+topics: "Synchrone SafeKit-Replikation für Hochverfügbarkeit (HA) vs. asynchrone Backup-Replikation für Notfallwiederherstellung (DR), Inhaltsverzeichnis, Synchrones HADR: Null Datenverlust über schnelle Netzwerke (LAN/VLAN), Asynchrones HADR: Disaster Recovery über langsame Netzwerke (WAN), HADR und Backup für vollständige Systemresilienz kombinieren, Vergleich von HADR-Architekturen: Schnelle vs. langsame Netzwerke, Videoanleitung: Implementierung von HADR mit SafeKit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"

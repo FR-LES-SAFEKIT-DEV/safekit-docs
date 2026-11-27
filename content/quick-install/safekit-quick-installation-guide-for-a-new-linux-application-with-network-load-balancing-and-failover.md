@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit farm.safe module on Linux for network load balancing and failover of your application on a virtual IP."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Linux, SafeKit High Availability Limitations, Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (farm.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit farm solution, 🔍 Explore SafeKit"
+topics: "Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (farm.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit farm solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

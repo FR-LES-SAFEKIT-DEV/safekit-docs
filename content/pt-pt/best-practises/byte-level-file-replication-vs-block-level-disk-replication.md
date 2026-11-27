@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/byte-level-file-repl
 description: "Replicação de ficheiros ao nível do byte vs replicação de disco ao nível do bloco: como o SafeKit replica só os dados alterados, sem perda de dados e com failover rápido."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Replicação de ficheiros ao nível de bytes versus replicação de disco ao nível de blocos num cluster de alta disponibilidade, Vantagens e desvantagens da replicação de ficheiros ao nível de bytes versus a replicação de discos ao nível de blocos, 🔍 Explore SafeKit"
+topics: "Replicação de ficheiros ao nível de bytes versus replicação de disco ao nível de blocos num cluster de alta disponibilidade, Vantagens e desvantagens da replicação de ficheiros ao nível de bytes versus a replicação de discos ao nível de blocos"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/resources/safekit-support/"
 description: "SafeKit 지원: 연중무휴 24시간 장애 신고가 가능한 계약 지원, SafeKit AI의 무료 도움말, 무료 온라인 교육 및 인증 프로그램."
 category: "resources"
 lang: "ko"
-topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지 보수, 무료 인증 및 교육 프로그램, 🔍 SafeKit 살펴보기"
+topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지보수, 무료 인증 및 교육 프로그램"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

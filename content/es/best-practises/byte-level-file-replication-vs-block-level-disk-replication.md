@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/byte-level-file-replica
 description: "Replicación de archivos por bytes frente a replicación de discos por bloques: cómo SafeKit replica solo los datos modificados, sin pérdida de datos y con conmutación rápida."
 category: "best-practises"
 lang: "es"
-topics: "Replicación de archivos a nivel de byte frente a replicación de discos a nivel de bloque en un clúster de alta disponibilidad, Ventajas y desventajas de la replicación de archivos a nivel de byte frente a la replicación de discos a nivel de bloque, 🔍 Explora SafeKit"
+topics: "Replicación de archivos a nivel de byte frente a replicación de discos a nivel de bloque en un clúster de alta disponibilidad, Ventajas y desventajas de la replicación de archivos a nivel de byte frente a la replicación de discos a nivel de bloque"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

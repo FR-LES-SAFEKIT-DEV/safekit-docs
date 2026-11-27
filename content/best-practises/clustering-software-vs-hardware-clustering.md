@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/clustering-software-vs-har
 description: "Software clustering vs hardware clustering: why SafeKit provides high availability on standard servers with no SAN, no load balancer appliance and no HA expert."
 category: "best-practises"
 lang: "en"
-topics: "What is the difference between software clustering and hardware clustering?, Software Clustering vs Hardware Clustering: Pros and Cons, 🔍 Explore SafeKit"
+topics: "What is the difference between software clustering and hardware clustering?, Software Clustering vs Hardware Clustering: Pros and Cons"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"
 ---

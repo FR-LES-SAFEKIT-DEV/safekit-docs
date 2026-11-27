@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/byte-level-file-replica
 description: "Réplication de fichiers au niveau octet vs de disque au niveau bloc : SafeKit ne réplique que les données modifiées des fichiers : zéro perte de données et basculement rapide."
 category: "best-practises"
 lang: "fr"
-topics: "Réplication de fichiers au niveau de l’octet ou réplication de disque au niveau du bloc dans un cluster de haute disponibilité, Avantages et inconvénients de la réplication de fichiers au niveau de l’octet par rapport à la réplication de disque au niveau du bloc, 🔍 Explorez SafeKit"
+topics: "Réplication de fichiers au niveau de l’octet ou réplication de disque au niveau du bloc dans un cluster de haute disponibilité, Avantages et inconvénients de la réplication de fichiers au niveau de l’octet par rapport à la réplication de disque au niveau du bloc"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

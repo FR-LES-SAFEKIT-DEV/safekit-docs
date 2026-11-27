@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/best-worst-use-cases-high-av
 description: "SafeKit の最適・不適なユースケース：Windows と Linux のソフトウェアクラスタリングが適する場面と、共有ストレージや別の方式が適する場面。"
 category: "use-cases"
 lang: "ja"
-topics: "最適なユースケース、SafeKit High Availability の制限事項、🔍 SafeKit を探索する"
+topics: "最適なユースケース"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"

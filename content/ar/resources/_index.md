@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/resources/"
 description: "موارد SafeKit: نسخة تجريبية مجانية، ودليل المستخدم، وملاحظات الإصدار، وأدلة التثبيت السريع، والتدريب، والفيديوهات، والمرجع التقني لمجموعات Windows و Linux."
 category: "resources"
 lang: "ar"
-topics: "تجربة مجانية، ووثائق فنية، ومعلومات عن المنتج لـ SafeKit عالي التوفر، 🔍 استكشف SafeKit"
+topics: "تجربة مجانية، ووثائق فنية، ومعلومات عن المنتج لـ SafeKit عالي التوفر"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

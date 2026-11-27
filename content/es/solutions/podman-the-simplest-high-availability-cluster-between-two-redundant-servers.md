@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/solutions/podman-the-simplest-high-ava
 description: "Alta disponibilidad de Podman con SafeKit: replicación síncrona de los datos de los contenedores y conmutación por error automática entre dos servidores Linux, sin SAN."
 category: "solutions"
 lang: "es"
-topics: "Cómo funciona el clúster mirror SANless SafeKit con Podman, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Podman?, ¿Cómo funciona el clúster mirror SafeKit con Podman?, Limitaciones de alta disponibilidad SafeKit, Comparación: clúster SANless SafeKit frente a HA Podman tradicional, Comparación: SafeKit vs. Linux HA de código abierto (Pacemaker/Corosync/DRBD), Resumen de alta disponibilidad Podman, 🔍 Explora SafeKit"
+topics: "Cómo funciona el clúster mirror SANless SafeKit con Podman, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Podman?, Comparación: clúster SANless SafeKit frente a HA Podman tradicional, Comparación: SafeKit vs. Linux HA de código abierto (Pacemaker/Corosync/DRBD), Resumen de alta disponibilidad Podman"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
 schemaType: "TechArticle"

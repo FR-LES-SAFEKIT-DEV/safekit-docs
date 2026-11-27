@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/high-availability-software-h
 description: "برنامج التوفر العالي لـ Windows و Linux: توفر مجموعات SafeKit النسخ في الوقت الفعلي وتجاوز الفشل وموازنة الأحمال دون تخزين مشترك."
 category: "use-cases"
 lang: "ar"
-topics: "عرض تقديمي موجز لـ SafeKit في 30 ثانية، 🔍 استكشف SafeKit"
+topics: "عرض تقديمي موجز لـ SafeKit في 30 ثانية"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

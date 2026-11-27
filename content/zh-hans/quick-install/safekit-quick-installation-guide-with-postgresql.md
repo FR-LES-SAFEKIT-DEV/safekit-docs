@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-insta
 description: "分步指南：安装 SafeKit postgresql.safe 模块，在 Windows 或 Linux 上实现 PostgreSQL 的实时复制和自动故障转移。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "PostgreSQL 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/PostgreSQL 解决方案概述、在 Windows 和 Linux 上安装 SafeKit/PostgreSQL 解决方案 (postgresql.safe)、SafeKit/PostgreSQL 解决方案的分步配置、SafeKit mirror 解决方案演示、🔍 探索 SafeKit"
+topics: "SafeKit/PostgreSQL 解决方案概述, 在 Windows 和 Linux 上安装 SafeKit/PostgreSQL 解决方案 (postgresql.safe), SafeKit/PostgreSQL 解决方案的分步配置, SafeKit mirror 解决方案演示"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

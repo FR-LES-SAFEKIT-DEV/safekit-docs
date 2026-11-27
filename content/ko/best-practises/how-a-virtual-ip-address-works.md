@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/how-a-virtual-ip-addres
 description: "장애 조치 시 가상 IP 주소의 이동 방식: 단일 서브넷에서는 Gratuitous ARP, 서브넷 간에는 부하 분산 장치, 클라우드 라우트 또는 BGP. SafeKit으로 설명합니다."
 category: "best-practises"
 lang: "ko"
-topics: "고가용성 클러스터의 가상 IP 주소란?, SafeKit의 가상 IP 구현, 동일 서브넷에서 가상 IP가 작동하는 방식(mirror 클러스터), 로드 밸런서를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), 클라우드 공급자 CLI를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), BGP를 사용하여 서로 다른 서브넷 간에 가상 IP가 작동하는 방식(mirror 클러스터), DNS 리디렉션이 서로 다른 서브넷 간에 작동하는 방식(mirror 클러스터), 동일 서브넷의 farm 클러스터에서 가상 IP 로드 밸런싱이 작동하는 방식, 로드 밸런싱된 가상 IP가 서로 다른 서브넷 간에 작동하는 방식(farm 클러스터), 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 가상 IP에 대한 자주 묻는 질문, 🔍 SafeKit 살펴보기"
+topics: "고가용성 클러스터에서 가상 IP 주소란 무엇인가요?, SafeKit의 가상 IP 구현, 가상 IP가 동일한 서브넷(mirror 클러스터)에서 작동하는 방식, 로드 밸런서(mirror 클러스터)를 사용하여 서로 다른 서브넷에서 가상 IP가 작동하는 방식, 클라우드 제공업체 CLI를 사용하여 서로 다른 서브넷에서 가상 IP가 작동하는 방식(mirror 클러스터), BGP(mirror 클러스터)를 사용하여 서로 다른 서브넷에서 가상 IP가 작동하는 방식, DNS 리디렉션이 서로 다른 서브넷(mirror 클러스터)에서 작동하는 방식, 동일 서브넷의 farm 클러스터에서 가상 IP 로드 밸런싱이 작동하는 방식, 로드 밸런싱된 가상 IP가 서로 다른 서브넷(farm 클러스터)에서 작동하는 방식, 비교: 가상 IP 구현, 지연 시간 및 애플리케이션 투명성, 가상 IP에 대한 자주 묻는 질문"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 schemaType: "TechArticle"

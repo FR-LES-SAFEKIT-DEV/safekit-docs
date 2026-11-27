@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/application-clustering-softw
 description: "OEM 向け高可用性：SafeKit のレプリケーションとフェイルオーバーを自社ソフトに組み込み、HA の専門知識不要の Windows または Linux クラスターを提供。"
 category: "use-cases"
 lang: "ja"
-topics: "OEM 高可用性ユースケース、🔍 SafeKit を探索する"
+topics: "OEM 高可用性ユースケース"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

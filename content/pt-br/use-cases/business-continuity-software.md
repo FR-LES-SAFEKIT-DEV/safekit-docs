@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/use-cases/business-continuity-softw
 description: "Alta disponibilidade para empresas distribuídas: implante o mesmo cluster SafeKit em cada filial, sem SAN e sem equipe de TI no local, no Windows ou Linux."
 category: "use-cases"
 lang: "pt-br"
-topics: "Continuidade de negócios em uma empresa distribuída, 🔍 Explore SafeKit"
+topics: "Continuidade de negócios em uma empresa distribuída"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

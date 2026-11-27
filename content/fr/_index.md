@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/"
 description: "Logiciel de haute disponibilité SafeKit pour Windows et Linux : réplication synchrone, basculement automatique et équilibrage de charge sur deux serveurs standard, sans SAN."
 category: "home"
 lang: "fr"
-topics: "Ce que fait SafeKit, Choisissez votre niveau de protection, Modules prêts à l’emploi pour vos applications, Cas d’utilisation des clients, Tarification simple et prévisible, Limites à prendre en compte, Vidéothèque SafeKit, 🔍 Explorez SafeKit"
+topics: "Ce que fait SafeKit, Choisissez votre niveau de protection, Modules prêts à l’emploi pour vos applications, Cas d’utilisation des clients, Tarification simple et prévisible, Limites à prendre en compte"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 60 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

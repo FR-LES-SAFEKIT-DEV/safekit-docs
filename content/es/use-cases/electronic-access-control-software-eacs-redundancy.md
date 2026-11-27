@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/use-cases/electronic-access-control-so
 description: "Redundancia del control de acceso (EACS) con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error para Nedap, Siemens, HID y otros sistemas."
 category: "use-cases"
 lang: "es"
-topics: "¿Qué es un sistema electrónico de control de acceso (EACS)?, ¿Por qué es fundamental el software EACS?, Principales proveedores EACS, SafeKit ofrece dos soluciones para la redundancia y la alta disponibilidad de un software EACS, SafeKit, una solución reconocida en el mercado de la seguridad, 🔍 Explora SafeKit"
+topics: "¿Qué es un sistema electrónico de control de acceso (EACS)?, ¿Por qué es fundamental el software EACS?, Principales proveedores EACS"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

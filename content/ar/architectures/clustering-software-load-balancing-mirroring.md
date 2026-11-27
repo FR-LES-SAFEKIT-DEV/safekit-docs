@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/clustering-software-load
 description: "الجمع بين وحدات SafeKit farm و mirror: موازنة الأحمال توسّع الواجهة الأمامية بينما يحمي النسخ المتزامن بيانات الواجهة الخلفية، على Windows و Linux."
 category: "architectures"
 lang: "ar"
-topics: "التوافر العالي وقابلية التوسع لتطبيقات الويب وقواعد البيانات الهامة باستخدام برنامج SafeKit للتجميع، 🔍 استكشف SafeKit"
+topics: "التوافر العالي وقابلية التوسع لتطبيقات الويب وقواعد البيانات الهامة باستخدام برنامج SafeKit للتجميع"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

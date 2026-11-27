@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Guide pas à pas : installez le module SafeKit mirror.safe dans tout cloud pour la réplication en temps réel et le basculement entre deux VM Windows ou Linux."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d’installation rapide de la haute disponibilité pour le cloud, Limitations de la haute disponibilité SafeKit, Présentation de la solution mirror SafeKit / Cloud, Installation de la solution mirror SafeKit / Cloud sous Windows et Linux (mirror.safe), Configuration pas à pas de la solution mirror SafeKit / Cloud, Démonstration de la solution mirror SafeKit, 🔍 Explorez SafeKit"
+topics: "Présentation de la solution mirror SafeKit / Cloud, Installation de la solution mirror SafeKit / Cloud sous Windows et Linux (mirror.safe), Configuration pas à pas de la solution mirror SafeKit / Cloud, Démonstration de la solution mirror SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

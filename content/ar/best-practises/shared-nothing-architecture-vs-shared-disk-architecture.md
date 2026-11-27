@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/shared-nothing-architec
 description: "البنية بدون مشاركة مقابل بنية القرص المشترك للتوفر العالي: كيف ينسخ SafeKit البيانات بين الخوادم لتجنب تكاليف SAN وتبسيط تجاوز الفشل."
 category: "best-practises"
 lang: "ar"
-topics: "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك لمجموعات التوافر العالي، بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك: الإيجابيات والسلبيات، 🔍 استكشف SafeKit"
+topics: "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك لمجموعات التوافر العالي, بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك: الإيجابيات والسلبيات"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

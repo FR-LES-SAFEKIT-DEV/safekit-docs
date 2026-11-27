@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/best-worst-use-cases-hi
 description: "SafeKit 的最佳与最差用例：Windows 和 Linux 上的软件集群适用于哪些场景，何时共享存储或其他方法更合适。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "最佳用例、SafeKit 高可用性限制、🔍 探索 SafeKit"
+topics: "最佳用例"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"

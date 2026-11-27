@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/test-primary-backup-vip
 description: "So testen Sie die virtuelle IP eines SafeKit-Mirror-Clusters: Verfügbarkeit, Failover, GARP-Umleitung, Prüfung der ARP-Tabellen und Paketmitschnitte."
 category: "best-practises"
 lang: "de"
-topics: "Schlüsselprinzipien, Voraussetzung: Konfiguration der virtuellen IP (VIP), Test 1 – Virtuelle IP (VIP), die vom primären Server gehalten wird, Test 2 – Manueller Failover (Stopp des Primärservers), Test 3 – Überprüfung GARP Umleitung mit arp -a, Test 4 – End-to-End-Prüfung mit Wireshark (Windows) oder tcpdump (Linux), Von welchen Workstations aus getestet werden soll, Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung"
+topics: "1. Grundprinzipien, 2. Voraussetzung: Konfiguration der virtuellen IP (VIP), 3. Test 1 – Virtuelle IP-Adresse (VIP), die vom primären Server gehalten wird, 4. Test 2 – Manuelle Fehlerübernahme (Stoppen des Primärsystems), 5. Test 3 – Überprüfung der MAC-Umleitung mit arp -a, 6. Test 4 – End-to-End-Prüfung mit Wireshark (Windows) oder tcpdump (Linux), 7. Von welchen Arbeitsplätzen aus testen?, 8. Zusammenfassung der erwarteten Ergebnisse, 9. Fehlerbehebung"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 17 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"

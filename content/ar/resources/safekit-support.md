@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/resources/safekit-support/"
 description: "دعم SafeKit: دعم تعاقدي مع الإبلاغ عن الحوادث على مدار الساعة طوال الأسبوع، ومساعدة مجانية من SafeKit AI، وبرنامج تدريب وشهادة مجاني عبر الإنترنت."
 category: "resources"
 lang: "ar"
-topics: "دعم مجاني من المستوى الأول للذكاء الاصطناعي، ودعم وصيانة قياسيان، وبرنامج تدريب وشهادات مجاني، 🔍 استكشف SafeKit"
+topics: "دعم مجاني للذكاء الاصطناعي من المستوى الأول, الدعم والصيانة القياسيان, برنامج الشهادات والتدريب المجاني"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

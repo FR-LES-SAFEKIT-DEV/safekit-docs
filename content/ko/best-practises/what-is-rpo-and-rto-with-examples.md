@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/what-is-rpo-and-rto-wit
 description: "예시로 보는 RPO와 RTO의 의미, 그리고 SafeKit이 비즈니스 연속성을 위해 데이터 손실 제로(RPO 0)와 빠른 자동 장애 조치를 실현하는 방법."
 category: "best-practises"
 lang: "ko"
-topics: "간략 요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 솔루션의 RPO와 RTO는 어떻게 계산하나요?, 백업 및 재해 복구 솔루션의 RPO와 RTO는 어떻게 결정하나요?, SafeKit mirror 클러스터는 어떻게 제로 RPO와 낮은 RTO를 달성하나요?, 로드 밸런싱이 적용된 SafeKit farm 클러스터의 RTO 벤치마크는 무엇입니까?, 비교표: RTO vs RPO, 실무에 적용된 고가용성: 데이터 손실 제로 및 다운타임 거의 없는 실시간 데모, 자주 묻는 질문: 비즈니스 연속성을 위한 RPO 및 RTO 최적화, 🔍 SafeKit 살펴보기"
+topics: "간략 요약: RPO vs. RTO, 목차, 고가용성 및 비즈니스 연속성 솔루션의 RPO와 RTO는 어떻게 계산하나요?, 백업 및 재해 복구 솔루션의 RPO와 RTO는 어떻게 결정하나요?, SafeKit mirror 클러스터는 어떻게 제로 RPO와 낮은 RTO를 달성하나요?, 로드 밸런싱이 적용된 SafeKit farm 클러스터의 RTO 벤치마크는 무엇입니까?, 비교표: RTO vs RPO, 실무에 적용된 고가용성: 데이터 손실 제로 및 다운타임 거의 없는 실시간 데모, 자주 묻는 질문: 비즈니스 연속성을 위한 RPO 및 RTO 최적화"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 schemaType: "TechArticle"

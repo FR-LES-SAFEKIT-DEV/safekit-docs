@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/best-practises/how-to-upgrade-an-appli
 description: "SafeKit으로 보호되는 애플리케이션의 업그레이드 방법: 마이너 및 메이저 업그레이드, 롤링 업그레이드, 롤백 옵션, VM HA 방식."
 category: "best-practises"
 lang: "ko"
-topics: "SafeKit으로 보호되는 고가용성 애플리케이션 업그레이드, VM 수준의 고가용성, 애플리케이션 수준의 고가용성, 올바른 업그레이드 전략 선택하기, 결론, 🔍 SafeKit 살펴보기"
+topics: "SafeKit으로 보호되는 고가용성 애플리케이션 업그레이드, VM 수준의 고가용성, 애플리케이션 수준의 고가용성, 올바른 업그레이드 전략 선택하기, 결론"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

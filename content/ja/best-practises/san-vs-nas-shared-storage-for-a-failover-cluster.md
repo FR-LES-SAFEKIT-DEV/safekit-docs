@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/san-vs-nas-shared-stora
 description: "フェイルオーバークラスター向け SAN と NAS 共有ストレージの比較：制約、コスト、リスクと、SafeKit のレプリケーションで共有ストレージが不要になる理由。"
 category: "best-practises"
 lang: "ja"
-topics: "SAN と NAS の共有ストレージ：フェイルオーバークラスターにはどちらがシンプルですか？、🔍 SafeKit を探索する"
+topics: "SAN と NAS の共有ストレージ：フェイルオーバークラスターにはどちらがシンプルですか？"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

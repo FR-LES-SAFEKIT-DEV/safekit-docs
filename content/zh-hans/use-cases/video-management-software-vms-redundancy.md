@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/video-management-softwa
 description: "使用 SafeKit 实现 VMS 冗余：双节点集群，同步复制和故障转移，适用于 Milestone、Genetec、Bosch 等视频管理系统。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "什么是视频管理软件 (VMS)？、为什么 VMS 软件至关重要？、主要 VMS 系统供应商、SafeKit 为 VMS 软件的冗余和高可用性提供了两种解决方案。、SafeKit、安全市场公认的解决方案、🔍 探索 SafeKit"
+topics: "什么是视频管理软件 (VMS)？, 为什么 VMS 软件至关重要？, 主要 VMS 系统供应商"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

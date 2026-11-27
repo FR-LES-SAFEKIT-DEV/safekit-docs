@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 description: "手順ガイド：SafeKit の mysql.safe モジュールを導入し、Windows または Linux 上の MariaDB のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
 lang: "ja"
-topics: "MariaDB 高可用性クイックインストールガイド、SafeKit High Availability の制限事項、SafeKit/MariaDB ソリューションの概要、Windows および Linux への SafeKit/MariaDB ソリューションのインストール (mysql.safe)、SafeKit/MariaDB ソリューションのステップバイステップ設定、SafeKit mirror ソリューションのデモンストレーション、🔍 SafeKit を探索する"
+topics: "SafeKit/MariaDB ソリューションの概要, Windows および Linux への SafeKit/MariaDB ソリューションのインストール (mysql.safe), SafeKit/MariaDB ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

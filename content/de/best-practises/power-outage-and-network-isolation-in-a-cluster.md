@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/power-outage-and-networ
 description: "Wie ein Hochverfügbarkeitscluster Stromausfälle und Netzwerkisolation bewältigt: Der SafeKit Split-Brain-Checker und die automatische Resynchronisation schützen Ihre Daten."
 category: "best-practises"
 lang: "de"
-topics: "Welche verschiedenen Szenarien gibt es bei Netzwerktrennung in einem Cluster?, Welche verschiedenen Szenarien gibt es bei einem Stromausfall in einem Cluster?, 🔍 SafeKit entdecken"
+topics: "Welche verschiedenen Szenarien gibt es bei einem Stromausfall in einem Cluster?"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/high-availability-public-tra
 description: "Hochverfügbarkeit für ÖPNV-Leitstellen: RATP nutzt SafeKit für die fahrerlose Pariser Metrolinie 1, mit Replikation, Failover und Lastverteilung."
 category: "use-cases"
 lang: "de"
-topics: "Leitstellen des öffentlichen Nahverkehrs, Warum ist die Leitstelle entscheidend?, SafeKit-Hochverfügbarkeit für den öffentlichen Nahverkehr, Implementierung in der Praxis bei der RATP, 🔍 SafeKit entdecken"
+topics: "Leitstellen des öffentlichen Nahverkehrs, Warum ist die Leitstelle entscheidend?, SafeKit-Hochverfügbarkeit für den öffentlichen Nahverkehr, Implementierung in der Praxis bei der RATP"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

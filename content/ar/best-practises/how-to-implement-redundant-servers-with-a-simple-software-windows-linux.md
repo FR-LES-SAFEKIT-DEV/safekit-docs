@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/how-to-implement-redund
 description: "كيفية تنفيذ خوادم مكررة بالبرمجيات فقط: يوفر SafeKit النسخ في الوقت الفعلي وتجاوز الفشل التلقائي على Windows و Linux، دون قرص مشترك."
 category: "best-practises"
 lang: "ar"
-topics: "كيفية تطبيق خوادم احتياطية نشطة/خاملة مع النسخ المتماثل في الوقت الفعلي وتجاوز الفشل؟، كيفية تطبيق خوادم احتياطية نشطة/نشطة مع موازنة تحميل الشبكة وتجاوز الفشل؟، 🔍 استكشف SafeKit"
+topics: "كيفية تطبيق خوادم احتياطية نشطة/خاملة مع النسخ المتماثل في الوقت الفعلي وتجاوز الفشل؟, كيفية تطبيق خوادم احتياطية نشطة/نشطة مع موازنة تحميل الشبكة وتجاوز الفشل؟"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

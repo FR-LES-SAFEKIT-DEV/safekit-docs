@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul kvm.safe für Hochverfügbarkeit auf VM-Ebene, mit Replikation und Failover von KVM-VMs unter Linux."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für KVM, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/KVM-Lösung, Installation der SafeKit/KVM-Lösung unter Linux (kvm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/KVM-Lösung, Demonstration einer Hochverfügbarkeitslösung auf VM-Ebene, 🔍 SafeKit entdecken"
+topics: "Übersicht über die SafeKit/KVM-Lösung, Installation der SafeKit/KVM-Lösung unter Linux (kvm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/KVM-Lösung, Demonstration einer Hochverfügbarkeitslösung auf VM-Ebene"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

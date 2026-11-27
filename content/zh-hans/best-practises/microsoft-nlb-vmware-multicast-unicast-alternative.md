@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/microsoft-nlb-vmwa
 description: "VMware 上 Microsoft NLB 的替代方案：SafeKit farm 集群实现负载均衡和故障转移，无需组播、静态 ARP 条目或 MAC 欺骗。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "Microsoft NLB 组播模式、Microsoft NLB 单播模式、SafeKit 替代方案、SafeKit 集群在 farm 模式下如何与 Windows 配合使用？、🔍 探索 SafeKit"
+topics: "Microsoft NLB 组播模式, Microsoft NLB 单播模式, SafeKit 替代方案"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/product/"
 description: "SafeKit réunit réplication en temps réel, basculement automatique et équilibrage de charge réseau dans un seul logiciel pour Windows et Linux, sans stockage partagé."
 category: "product"
 lang: "fr"
-topics: "Qu’est-ce que SafeKit ?, 🔍 Explorez SafeKit, Pourquoi choisir SafeKit pour une haute disponibilité simple et économique ?, Pourquoi un produit tout-en-un de haute disponibilité sans SAN est-il essentiel ?, Choisir votre stratégie de haute disponibilité : HA de VM ou HA applicative, Limitations de la haute disponibilité SafeKit, Vidéothèque SafeKit, Comparaison de SafeKit avec les clusters de haute disponibilité (HA) traditionnels, Essai gratuit et documentation technique SafeKit HA, Bibliothèque de modules d’application SafeKit : des solutions HA prêtes à l’emploi"
+topics: "Qu’est-ce que SafeKit ?"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 60 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

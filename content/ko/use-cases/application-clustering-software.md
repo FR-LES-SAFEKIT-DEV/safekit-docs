@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/application-clustering-softw
 description: "OEM 고가용성: SafeKit 복제 및 장애 조치를 소프트웨어에 내장하여 HA 전문 지식 없이 고객에게 Windows 또는 Linux 클러스터를 제공하세요."
 category: "use-cases"
 lang: "ko"
-topics: "OEM 고가용성 사용 사례, 🔍 SafeKit 살펴보기"
+topics: "OEM 고가용성 사용 사례"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

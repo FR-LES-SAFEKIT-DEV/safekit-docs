@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/safekit-pricing/"
 description: "أسعار SafeKit: تراخيص دائمة لكل خادم، ووحدات تطبيقات مجانية، ولا حاجة إلى إصدارات Enterprise. اطلب عرض سعر لمجموعات Windows أو Linux."
 category: "home"
 lang: "ar"
-topics: "نموذج الترخيص والتسعير، الدعم والصيانة القياسية، اطلب عرض سعر"
+topics: "نموذج الترخيص والتسعير, الدعم والصيانة القياسية, اطلب عرض سعر"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

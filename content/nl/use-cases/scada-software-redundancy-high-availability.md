@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/scada-software-redundancy-hi
 description: "SCADA-redundantie met SafeKit: cluster met twee nodes, synchrone replicatie en failover voor WinCC, Wonderware, iFix en andere industriële systemen."
 category: "use-cases"
 lang: "nl"
-topics: "Wat is een SCADA-systeem?, Waarom is SCADA-software cruciaal?, Belangrijkste leveranciers SCADA-software, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van SCADA-software., SafeKit, een erkende oplossing op de SCADA-markt, 🔍 Ontdek SafeKit"
+topics: "Wat is een SCADA-systeem?, Waarom is SCADA-software cruciaal?, Belangrijkste leveranciers SCADA-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

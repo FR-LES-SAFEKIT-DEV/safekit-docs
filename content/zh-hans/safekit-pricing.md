@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/safekit-pricing/"
 description: "SafeKit 定价：按服务器授予永久许可证，应用模块免费，无需企业版。可为 Windows 或 Linux 集群申请报价。"
 category: "home"
 lang: "zh-hans"
-topics: "许可模式和定价、标准支持与维护、询价"
+topics: "许可模式和定价, 标准支持与维护, 询价"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

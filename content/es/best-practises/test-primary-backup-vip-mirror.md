@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/test-primary-backup-vip
 description: "Cómo probar la IP virtual de un clúster mirror SafeKit: disponibilidad, conmutación por error, redirección GARP, comprobación de tablas ARP y capturas de paquetes."
 category: "best-practises"
 lang: "es"
-topics: "Principios clave, Prerrequisito: configuración de IP virtual (VIP), Prueba 1: IP virtual (VIP) mantenida por el servidor principal, Prueba 2: conmutación por error manual (detención del principal), Prueba 3: comprobación del redireccionamiento GARP con arp -a, Prueba 4: comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), Desde qué estaciones de trabajo realizar las pruebas, Resumen de los resultados esperados, Solución de problemas"
+topics: "1. Principios clave, 2. Requisito previo: configuración de la IP virtual (VIP), 3. Prueba 1: IP virtual (VIP) en poder del servidor principal, 4. Prueba 2: Conmutación por error manual (detención del primario), 5. Prueba 3: Comprobación del redireccionamiento MAC con arp -a, 6. Prueba 4: Comprobación de extremo a extremo con Wireshark (Windows) o tcpdump (Linux), 7. Desde qué estaciones de trabajo realizar las pruebas, 8. Resumen de los resultados esperados, 9. Solución de problemas"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 14 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/test-load-balancin
 description: "如何测试 SafeKit farm 集群的负载均衡虚拟 IP：节点间流量分配、故障转移、GARP 重路由和网络检查。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "关键原则，前提条件：SafeKit 马赛克，测试 1 – 连接的分配，测试 2 – 调度服务器的更改，测试 3 – 使用 arp -a 检查 GARP 重路由，测试 4 – 使用 Wireshark (Windows) 或 tcpdump (Linux) 进行端到端检查，从哪些工作站进行测试，预期结果摘要，故障排除，SafeKit farm 解决方案演示"
+topics: "1. 主要原则, 2. 先决条件：SafeKit 马赛克, 3. 测试 1 – 连接分布, 4. 测试 2 – 更改调度服务器, 5. 测试 3 – 使用 arp -a 检查 GARP 重路由, 6. 测试 4 – 使用 Wireshark (Windows) 或 tcpdump (Linux) 进行端到端检查, 7. 从哪个工作站进行测试, 8. 预期成果总结, 9. 故障排除, SafeKit farm 解决方案演示"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

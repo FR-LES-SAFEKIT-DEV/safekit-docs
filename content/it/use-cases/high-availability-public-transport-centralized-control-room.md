@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/high-availability-public-tra
 description: "Alta disponibilità per le sale di controllo dei trasporti: RATP usa SafeKit per la linea 1 senza conducente della metro di Parigi, con replica, failover e bilanciamento."
 category: "use-cases"
 lang: "it"
-topics: "Sale di controllo del trasporto pubblico, Perché la sala di controllo è fondamentale?, Alta disponibilità SafeKit per il trasporto pubblico, Implementazione nel mondo reale presso RATP, 🔍 Esplora SafeKit"
+topics: "Sale di controllo del trasporto pubblico, Perché la sala di controllo è fondamentale?, Alta disponibilità SafeKit per il trasporto pubblico, Implementazione nel mondo reale presso RATP"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

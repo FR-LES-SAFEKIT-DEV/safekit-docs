@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul mirror.safe in AWS für Echtzeit-Replikation und Failover zwischen zwei Windows- oder Linux-Instanzen."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in AWS, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/AWS mirror, Installation der SafeKit/AWS mirror unter Windows und Linux (mirror.safe), Schritt-für-Schritt-Konfiguration der SafeKit/AWS mirror, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"
+topics: "Übersicht über die SafeKit/AWS mirror, Installation der SafeKit/AWS mirror unter Windows und Linux (mirror.safe), Schritt-für-Schritt-Konfiguration der SafeKit/AWS mirror, Demonstration der SafeKit mirror"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

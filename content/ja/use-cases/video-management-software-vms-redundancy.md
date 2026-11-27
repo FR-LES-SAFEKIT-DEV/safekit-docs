@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/video-management-software-vm
 description: "SafeKit による VMS 冗長化：Milestone、Genetec、Bosch 等のビデオ管理システム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
 lang: "ja"
-topics: "ビデオ管理ソフトウェア（VMS）とは？、VMS ソフトウェアが重要な理由とは？、主な VMS ベンダー、SafeKit、VMS ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+topics: "ビデオ管理ソフトウェア（VMS）とは？, VMS ソフトウェアが重要な理由とは？, 主な VMS ベンダー"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

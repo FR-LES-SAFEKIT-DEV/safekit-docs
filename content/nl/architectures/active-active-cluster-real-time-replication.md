@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/architectures/active-active-cluster-re
 description: "Actief-actief SafeKit-cluster: twee servers vormen elkaars back-up met meerdere mirror-modules, synchrone replicatie en wederzijdse failover op Windows en Linux."
 category: "architectures"
 lang: "nl"
-topics: "Hoe werkt een actief-actief cluster met realtime replicatie?, 🔍 Ontdek SafeKit"
+topics: "Hoe werkt een actief-actief cluster met realtime replicatie?"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/test-load-balancing-vip
 description: "SafeKit farm クラスターの負荷分散仮想 IP のテスト方法：ノード間のトラフィック分散、フェイルオーバー、GARP による再ルーティング、ネットワークの確認。"
 category: "best-practises"
 lang: "ja"
-topics: "主要原則、前提条件：SafeKit モザイク、テスト 1 – 接続の分散、テスト 2 – ディスパッチサーバーの変更、テスト 3 – arp -a を使用した GARP ルーティングの確認、テスト 4 – Wireshark (Windows) または tcpdump (Linux) を使用したエンドツーエンドの確認、テストを行うワークステーション、期待される結果の概要、トラブルシューティング、SafeKit farm ソリューションのデモンストレーション"
+topics: "1. 主要原則, 2. 前提条件：SafeKit モザイク, 3. テスト 1 – 接続の分布, 4. テスト 2 – ディスパッチサーバーの変更, 5. テスト 3 – arp -a を使用した GARP ルーティングの確認, 6. テスト 4 – Wireshark (Windows) または tcpdump (Linux) を使用したエンドツーエンドチェック, 7. テストを行うワークステーション, 8. 期待される結果の概要, 9. トラブルシューティング, SafeKit farm ソリューションのデモンストレーション"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

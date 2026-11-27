@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/podman-the-simplest-high-ava
 description: "التوفر العالي لـ Podman مع SafeKit: نسخ متزامن لبيانات الحاويات وتجاوز فشل تلقائي بين خادمين Linux، دون SAN."
 category: "solutions"
 lang: "ar"
-topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Podman، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Podman عالية التوفر ببساطة؟، كيف تعمل مجموعة mirror SafeKit مع Podman؟، قيود التوافر العالي SafeKit، مقارنة: مجموعة SafeKit SANless مقابل Podman HA التقليدية، مقارنة: SafeKit مقابل حلول التوافر العالي مفتوحة المصدر Linux (Pacemaker/Corosync/DRBD)، ملخص التوافر العالي Podman، 🔍 استكشف SafeKit"
+topics: "كيف تعمل مجموعة mirror SafeKit من SANless مع Podman, جدول المحتويات, كيف يقوم برنامج SafeKit بتطبيق مجموعة Podman عالية التوفر ببساطة؟, مقارنة: مجموعة SafeKit SANless مقابل Podman HA التقليدية, مقارنة: SafeKit مقابل حلول التوافر العالي مفتوحة المصدر Linux (Pacemaker/Corosync/DRBD), ملخص التوافر العالي Podman"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 26 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
 schemaType: "TechArticle"

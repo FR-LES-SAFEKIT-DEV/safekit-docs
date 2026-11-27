@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Stapsgewijze handleiding: installeer de SafeKit-module mirror.safe op Windows voor realtime replicatie en automatische failover van uw applicatie op twee servers."
 category: "quick-install"
 lang: "nl"
-topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Windows, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Windows oplossing, Installatie op de SafeKit/Windows oplossingen (mirror.safe), Stapsgewijze configuratie van de SafeKit/Windows-oplossing, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"
+topics: "Overzicht van de SafeKit/Windows oplossing, Installatie op de SafeKit/Windows oplossingen (mirror.safe), Stapsgewijze configuratie van de SafeKit/Windows-oplossing, Demonstratie van de SafeKit mirror"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/use-cases/video-management-software-vm
 description: "Ridondanza VMS con SafeKit: cluster a due nodi con replica sincrona e failover per Milestone, Genetec, Bosch e altri sistemi di gestione video."
 category: "use-cases"
 lang: "it"
-topics: "Che cos’è un software di gestione video (VMS)?, Perché il software VMS è fondamentale?, Principali fornitori VMS, SafeKit offre due soluzioni per la ridondanza e l’alta disponibilità di un software VMS, SafeKit, una soluzione riconosciuta sul mercato della sicurezza, 🔍 Esplora SafeKit"
+topics: "Che cos’è un software di gestione video (VMS)?, Perché il software VMS è fondamentale?, Principali fornitori VMS"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

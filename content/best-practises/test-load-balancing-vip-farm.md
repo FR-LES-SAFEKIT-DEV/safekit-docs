@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/test-load-balancing-vip-fa
 description: "How to test the load balancing virtual IP of a SafeKit farm cluster: traffic distribution between nodes, failover, GARP rerouting and network checks."
 category: "best-practises"
 lang: "en"
-topics: "Key principles, Prerequisite: the SafeKit mosaic, Test 1 – Distribution of connections, Test 2 – Change of dispatching server, Test 3 – Checking GARP rerouting with arp -a, Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), Which workstations to test from, Summary of expected results, Troubleshooting, Demonstration of the SafeKit farm solution"
+topics: "1. Key principles, 2. Prerequisite: the SafeKit mosaic, 3. Test 1 – Distribution of connections, 4. Test 2 – Change of dispatching server, 5. Test 3 – Checking GARP rerouting with arp -a, 6. Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), 7. Which workstations to test from, 8. Summary of expected results, 9. Troubleshooting, Demonstration of the SafeKit farm solution"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"
 ---

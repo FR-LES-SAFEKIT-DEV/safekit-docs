@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installati
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit oracle.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لقواعد بيانات Oracle على Windows أو Linux."
 category: "quick-install"
 lang: "ar"
-topics: "دليل التثبيت السريع للتوافر العالي لبرنامج Oracle، قيود التوافر العالي SafeKit، نظرة عامة على حل SafeKit/Oracle، تثبيت حل SafeKit/Oracle على نظامي التشغيل Windows و Linux (oracle.safe)، تهيئة حل SafeKit/Oracle خطوة بخطوة، عرض حل mirror من SafeKit، 🔍 استكشف SafeKit"
+topics: "نظرة عامة على حل SafeKit/Oracle, تثبيت حل SafeKit/Oracle على نظامي التشغيل Windows و Linux (oracle.safe), تهيئة حل SafeKit/Oracle خطوة بخطوة, عرض حل mirror من SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

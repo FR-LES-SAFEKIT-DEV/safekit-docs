@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/high-availability-
 description: "HA 集群与容错系统对比：成本、恢复能力及软件故障防护，了解 SafeKit 如何在标准服务器上运行。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "高可用性和容错性之间有什么区别？、高可用性和容错性的优缺点、🔍 探索 SafeKit"
+topics: "高可用性和容错性之间有什么区别？, 高可用性和容错性的优缺点"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/business-continuity-and-disa
 description: "Geschäftskontinuität und Disaster Recovery mit SafeKit: ein Cluster mit zwei Knoten über zwei Serverräume, mit synchroner Replikation und automatischem Failover."
 category: "use-cases"
 lang: "de"
-topics: "Software für Geschäftskontinuität und Notfallwiederherstellung, 🔍 SafeKit entdecken"
+topics: "Software für Geschäftskontinuität und Notfallwiederherstellung"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/san-vs-nas-shared-st
 description: "Armazenamento compartilhado SAN vs NAS para clusters de failover: limites, custos e riscos, e por que a replicação SafeKit dispensa o armazenamento compartilhado."
 category: "best-practises"
 lang: "pt-br"
-topics: "Armazenamento compartilhado SAN ou NAS: qual é o mais simples para um cluster de failover?, 🔍 Explore SafeKit"
+topics: "Armazenamento compartilhado SAN ou NAS: qual é o mais simples para um cluster de failover?"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/how-a-virtual-ip-addres
 description: "フェイルオーバー時の仮想 IP の移動：同一サブネットでは Gratuitous ARP、サブネット間ではロードバランサー、クラウドルート、BGP。SafeKit で解説。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性クラスターにおける仮想 IP アドレスとは？、SafeKit における仮想 IP の実装、同一サブネット内での仮想 IP の動作（mirror クラスター）、ロードバランサーを用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、クラウドプロバイダー CLI を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、BGP を用いた異なるサブネット間での仮想 IP の動作（mirror クラスター）、異なるサブネット間での DNS リダイレクトの動作（mirror クラスター）、同一サブネット上の farm クラスターにおける仮想 IP ロードバランシングの動作、異なるサブネット間でのロードバランシングされた仮想 IP の動作（farm クラスター）、比較：仮想 IP の実装、レイテンシー、およびアプリケーションの透過性、仮想 IP に関するよくある質問、🔍 SafeKit を探索する"
+topics: "高可用性クラスターにおける仮想 IP アドレスとは何ですか？, SafeKit における仮想 IP の実装, 同一サブネット内で仮想 IP が動作する仕組み（mirror クラスター）, ロードバランサー（mirror クラスター）を使用した仮想 IP の異なるサブネット間での動作方法, クラウドプロバイダーの CLI で仮想 IP を異なるサブネット間で機能させる方法（mirror クラスター）, BGP（mirror クラスター）で仮想 IP が異なるサブネット間でどのように機能するか, 異なるサブネット間での DNS リダイレクトの仕組み（mirror クラスター）, 同じサブネット上の farm クラスターで仮想 IP ロードバランシングがどのように機能するか, ロードバランシングされた仮想 IP が異なるサブネット（farm クラスター）間でどのように機能するか, 比較：仮想 IP の実装、レイテンシ、およびアプリケーションの透過性, 仮想 IP に関するよくある質問"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 schemaType: "TechArticle"

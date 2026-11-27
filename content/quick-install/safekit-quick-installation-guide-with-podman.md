@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit mirror.safe module for Podman on Linux, with real-time replication of container data and automatic failover."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Podman, SafeKit High Availability Limitations, Overview of the SafeKit / Podman solution, Installation of the SafeKit / Podman solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Podman solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
+topics: "Overview of the SafeKit / Podman solution, Installation of the SafeKit / Podman solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Podman solution, Demonstration of the SafeKit mirror solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

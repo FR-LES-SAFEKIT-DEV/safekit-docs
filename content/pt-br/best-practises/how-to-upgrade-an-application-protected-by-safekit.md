@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/how-to-upgrade-an-ap
 description: "Como atualizar uma aplicação protegida pelo SafeKit: atualizações menores e maiores, atualizações contínuas, opções de rollback e a abordagem HA de VM."
 category: "best-practises"
 lang: "pt-br"
-topics: "Atualizando um aplicativo de alta disponibilidade protegido pelo SafeKit, Alta Disponibilidade em Nível de Máquina Virtual, Alta Disponibilidade em Nível de Aplicação, Escolhendo a Estratégia de Atualização Certa, Conclusão, 🔍 Explore SafeKit"
+topics: "Atualizando um aplicativo de alta disponibilidade protegido pelo SafeKit, Alta Disponibilidade em Nível de Máquina Virtual, Alta Disponibilidade em Nível de Aplicação, Escolhendo a Estratégia de Atualização Certa, Conclusão"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit nedap.safe module for real-time replication and automatic failover of Nedap AEOS access control on Windows."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Nedap, SafeKit High Availability Limitations, Overview of the SafeKit / Nedap solution, Installation of the SafeKit / Nedap solution on Windows (nedap.safe), Step by step configuration of the SafeKit / Nedap solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
+topics: "Overview of the SafeKit / Nedap solution, Installation of the SafeKit / Nedap solution on Windows (nedap.safe), Step by step configuration of the SafeKit / Nedap solution, Demonstration of the SafeKit mirror solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

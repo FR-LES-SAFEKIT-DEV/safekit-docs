@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/business-continuity-and-disa
 description: "استمرارية الأعمال والتعافي من الكوارث مع SafeKit: مجموعة من عقدتين عبر غرفتي خوادم، مع نسخ متزامن وتجاوز فشل تلقائي."
 category: "use-cases"
 lang: "ar"
-topics: "برامج استمرارية الأعمال والتعافي من الكوارث، 🔍 استكشف SafeKit"
+topics: "برامج استمرارية الأعمال والتعافي من الكوارث"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/architectures/clustering-software
 description: "组合 SafeKit farm 与 mirror 模块：负载均衡扩展前端，同步复制保护后端数据，适用于 Windows 和 Linux。"
 category: "architectures"
 lang: "zh-hans"
-topics: "使用 SafeKit 集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性、🔍 探索 SafeKit"
+topics: "使用 SafeKit 集群软件，实现关键 Web 和数据库应用程序的高可用性和可扩展性"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

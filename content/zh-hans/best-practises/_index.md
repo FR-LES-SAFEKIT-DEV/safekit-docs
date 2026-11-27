@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/"
 description: "高可用性最佳实践：HA 架构、同步与异步复制、虚拟 IP 故障转移、仲裁、RPO 和 RTO，结合 SafeKit 讲解。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "架构与设计模式、高可用性和灾难恢复、复制策略、集群与故障转移、存储与基础设施、实施与迁移"
+topics: "SafeKit 集群最佳实践：高可用性架构、复制和冗余, 架构与设计模式, 高可用性和灾难恢复, 复制策略, 集群与故障转移, 存储与基础设施, 实施与迁移"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

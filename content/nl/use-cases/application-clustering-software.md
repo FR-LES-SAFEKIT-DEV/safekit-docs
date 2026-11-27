@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/application-clustering-softw
 description: "OEM-hoge beschikbaarheid: integreer replicatie en failover van SafeKit in uw software en bied uw klanten een Windows- of Linux-cluster zonder HA-expertise."
 category: "use-cases"
 lang: "nl"
-topics: "De OEM-usecase voor hoge beschikbaarheid, 🔍 Ontdek SafeKit"
+topics: "De OEM-usecase voor hoge beschikbaarheid"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/architectures/safekit-smart-console-yo
 description: "SafeKit Smart Console: configureer en bewaak uw clusters voor hoge beschikbaarheid vanuit een browser of smartphone, zonder code en met realtime meldingen."
 category: "architectures"
 lang: "nl"
-topics: "Smart Console: intuïtieve en foutloze hoge beschikbaarheid op desktop en mobiel, Inhoudsopgave, Hoe werkt een SafeKit mirror-cluster met de webconsole?, Hoe werkt een SafeKit farm-cluster met de webconsole?, Hoe kan ik meerdere modules en clusters via de webconsole monitoren?, Hoe kunt u waarschuwingen in de console controleren en e-mailmeldingen beheren?, 🔍 Ontdek SafeKit"
+topics: "Smart Console: intuïtieve en foutloze hoge beschikbaarheid op desktop en mobiel, Inhoudsopgave, Hoe werkt een SafeKit mirror-cluster met de webconsole?, Hoe werkt een SafeKit farm-cluster met de webconsole?, Hoe kan ik meerdere modules en clusters via de webconsole monitoren?, Hoe kunt u waarschuwingen in de console controleren en e-mailmeldingen beheren?"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

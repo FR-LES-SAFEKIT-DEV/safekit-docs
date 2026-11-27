@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/how-to-upgrade-an-appli
 description: "كيفية ترقية تطبيق يحميه SafeKit: الترقيات الثانوية والرئيسية، والترقيات المتتالية، وخيارات التراجع، ونهج HA على مستوى الأجهزة الافتراضية."
 category: "best-practises"
 lang: "ar"
-topics: "ترقية تطبيق عالي التوافر محمي بواسطة SafeKit، التوافر العالي على مستوى الأجهزة الافتراضية، التوافر العالي على مستوى التطبيق، اختيار استراتيجية الترقية المناسبة، الخاتمة، 🔍 استكشف SafeKit"
+topics: "ترقية تطبيق عالي التوافر محمي بواسطة SafeKit, التوافر العالي على مستوى الأجهزة الافتراضية, التوافر العالي على مستوى التطبيق, اختيار استراتيجية الترقية المناسبة, الخاتمة"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

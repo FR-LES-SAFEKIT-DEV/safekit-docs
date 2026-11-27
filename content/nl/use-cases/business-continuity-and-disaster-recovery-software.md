@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/business-continuity-and-disa
 description: "Bedrijfscontinuïteit en disaster recovery met SafeKit: een cluster met twee nodes verdeeld over twee serverruimtes, met synchrone replicatie en automatische failover."
 category: "use-cases"
 lang: "nl"
-topics: "Software voor bedrijfscontinuïteit en noodherstel, 🔍 Ontdek SafeKit"
+topics: "Software voor bedrijfscontinuïteit en noodherstel"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

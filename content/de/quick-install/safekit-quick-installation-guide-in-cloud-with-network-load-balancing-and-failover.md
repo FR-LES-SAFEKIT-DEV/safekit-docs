@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe in jeder Cloud: Es prüft den Anwendungszustand für den Load Balancer der Cloud und steuert das Failover."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit in der Cloud, Einschränkungen SafeKit Hochverfügbarkeit, Überblick über die SafeKit /Cloud-Lösung, Installation der SafeKit /Cloud-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit /Cloud-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
+topics: "Überblick über die SafeKit /Cloud-Lösung, Installation der SafeKit /Cloud-Lösung unter Windows und Linux (farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit /Cloud-Lösung, Demonstration der SafeKit farm Lösung"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

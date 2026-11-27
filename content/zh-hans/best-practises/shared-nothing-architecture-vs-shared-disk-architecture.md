@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/shared-nothing-arc
 description: "高可用性的无共享架构与共享磁盘架构对比：SafeKit 如何在服务器间复制数据，省去 SAN 成本并简化故障转移。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "无共享架构与共享磁盘架构在高可用性集群、无共享架构与共享磁盘架构：优缺点、🔍 探索 SafeKit"
+topics: "无共享架构与共享磁盘架构在高可用性集群中的比较, 无共享架构与共享磁盘架构：优缺点"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

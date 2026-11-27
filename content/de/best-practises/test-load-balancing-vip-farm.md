@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/test-load-balancing-vip
 description: "So testen Sie die virtuelle IP für Lastverteilung eines SafeKit-Farm-Clusters: Verkehrsverteilung zwischen Knoten, Failover, GARP-Umleitung und Netzwerkprüfungen."
 category: "best-practises"
 lang: "de"
-topics: "Schlüsselprinzipien, Voraussetzung: das SafeKit-Mosaik, Test 1 – Verteilung der Verbindungen, Test 2 – Änderung des Dispatching-Servers, Test 3 – Überprüfung GARP Umleitung mit arp -a, Test 4 – End-to-End-Überprüfung mit Wireshark (Windows) oder tcpdump (Linux), Von welchen Workstations aus getestet werden soll, Zusammenfassung der erwarteten Ergebnisse, Fehlerbehebung, Demonstration der SafeKit farm -Lösung"
+topics: "1. Grundprinzipien, 2. Voraussetzung: das SafeKit-Mosaik, 3. Test 1 – Verteilung der Verbindungen, 4. Test 2 – Wechsel des Dispatching-Servers, 5. Test 3 – Überprüfung GARP -Umleitung mit arp -a, 6. Test 4 – End-to-End-Prüfung mit Wireshark (Windows) oder tcpdump (Linux), 7. Von welchen Arbeitsplätzen aus testen?, 8. Zusammenfassung der erwarteten Ergebnisse, 9. Fehlerbehebung, Demonstration der SafeKit farm Lösung"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 17 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

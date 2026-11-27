@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/"
 description: "برنامج SafeKit للتوفر العالي على Windows و Linux: نسخ متزامن وتجاوز فشل تلقائي وموازنة أحمال على خادمين قياسيين، دون SAN."
 category: "home"
 lang: "ar"
-topics: "ماذا يفعل SafeKit؟، اختر مستوى الحماية الخاص بك، وحدات جاهزة لتطبيقاتك، حالات استخدام العملاء، أسعار بسيطة ويمكن التنبؤ بها، القيود التي يجب مراعاتها، مكتبة فيديوهات SafeKit، 🔍 استكشف SafeKit"
+topics: "ماذا يفعل SafeKit؟, اختر مستوى الحماية الخاص بك, وحدات جاهزة لتطبيقاتك, حالات استخدام العملاء, أسعار بسيطة ويمكن التنبؤ بها, القيود التي يجب مراعاتها"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

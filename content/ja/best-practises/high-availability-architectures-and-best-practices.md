@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/high-availability-archi
 description: "アプリケーションクラスタリングの高可用性アーキテクチャとベストプラクティス：mirror・farm クラスター、レプリケーション、フェイルオーバーを SafeKit の例で解説。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性アーキテクチャとベストプラクティスとは何ですか？、高可用性アーキテクチャとベストプラクティスに関する比較表、🔍 SafeKit を探索する"
+topics: "高可用性アーキテクチャとベストプラクティスとは何ですか？, 高可用性アーキテクチャとベストプラクティスに関する比較表"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

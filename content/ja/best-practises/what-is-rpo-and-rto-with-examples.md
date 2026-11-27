@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/what-is-rpo-and-rto-wit
 description: "RPO と RTO の意味を例で解説し、SafeKit が事業継続のためにデータ損失ゼロ（RPO 0）と迅速な自動フェイルオーバーを実現する方法を紹介します。"
 category: "best-practises"
 lang: "ja"
-topics: "クイックサマリー：RPO と RTO、目次、高可用性および事業継続ソリューションの RPO と RTO を計算するにはどうすればよいですか？、バックアップおよびディザスタリカバリソリューションの RPO と RTO を決定するにはどうすればよいですか？、SafeKit mirror クラスターはどのようにしてゼロ RPO と低 RTO を実現するのでしょうか？、ロードバランシング機能付きの SafeKit farm クラスターの RTO ベンチマークは何ですか？、比較表：RTO と RPO、高可用性の実演：データ損失ゼロとダウンタイムほぼゼロのリアルタイムデモ、よくある質問：事業継続のための RPO と RTO の最適化、🔍 SafeKit を探索する"
+topics: "クイックサマリー：RPO と RTO, 目次, 高可用性および事業継続ソリューションの RPO と RTO を計算するにはどうすればよいですか？, バックアップおよびディザスタリカバリソリューションの RPO と RTO を決定するにはどうすればよいですか？, SafeKit mirror クラスターはどのようにしてゼロ RPO と低 RTO を実現するのでしょうか？, ロードバランシング機能付きの SafeKit farm クラスターの RTO ベンチマークは何ですか？, 比較表：RTO と RPO, 高可用性の実演：データ損失ゼロとダウンタイムほぼゼロのリアルタイムデモ, よくある質問：事業継続のための RPO と RTO の最適化"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 schemaType: "TechArticle"

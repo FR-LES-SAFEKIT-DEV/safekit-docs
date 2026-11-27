@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/microsoft-nlb-vmware-mu
 description: "Alternative à Microsoft NLB sur VMware : les clusters farm SafeKit équilibrent la charge et basculent sans multicast, entrées ARP statiques ni usurpation d’adresse MAC."
 category: "best-practises"
 lang: "fr"
-topics: "Mode multicast Microsoft NLB, Mode unicast de Microsoft NLB, Alternative avec SafeKit, Comment fonctionne le cluster SafeKit en mode farm sous Windows ?, 🔍 Explorez SafeKit"
+topics: "Mode multicast Microsoft NLB, Mode unicast de Microsoft NLB, Alternative avec SafeKit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"

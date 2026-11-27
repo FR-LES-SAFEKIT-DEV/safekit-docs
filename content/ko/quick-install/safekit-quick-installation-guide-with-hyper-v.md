@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "단계별 가이드: 서버 2대 간 Hyper-V VM의 복제 및 장애 조치로 VM 수준 고가용성을 제공하는 SafeKit hyperv.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
-topics: "Hyper-V 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Hyper-V 솔루션 개요, Windows에 SafeKit/Hyper-V 솔루션 설치 (hyperv.safe), SafeKit/Hyper-V 솔루션 단계별 구성, SafeKit/Hyper-V 솔루션 시연, 🔍 SafeKit 살펴보기"
+topics: "SafeKit/Hyper-V 솔루션 개요, Windows에 SafeKit/Hyper-V 솔루션 설치 (hyperv.safe), SafeKit/Hyper-V 솔루션 단계별 구성, SafeKit/Hyper-V 솔루션 시연"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

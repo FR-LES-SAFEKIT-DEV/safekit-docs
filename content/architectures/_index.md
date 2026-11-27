@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/architectures/"
 description: "SafeKit cluster architectures: mirror clusters with real-time replication, farm clusters with load balancing, active-active and N-1 redundancy, with no SAN."
 category: "architectures"
 lang: "en"
-topics: "What are the different high availability architectures and the different software clusters with SafeKit?, How to build high availability clusters with SafeKit?, 🔍 Explore SafeKit"
+topics: "What are the different high availability architectures and the different software clusters with SafeKit?, How to build high availability clusters with SafeKit?"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---
 

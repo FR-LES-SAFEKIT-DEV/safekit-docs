@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/use-cases/business-continuity-software
 description: "Haute disponibilité pour entreprises multisites : déployez le même cluster SafeKit dans chaque agence, sans SAN ni informaticien sur place, sous Windows ou Linux."
 category: "use-cases"
 lang: "fr"
-topics: "Continuité d’activité dans une entreprise distribuée, 🔍 Explorez SafeKit"
+topics: "Continuité d’activité dans une entreprise distribuée"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

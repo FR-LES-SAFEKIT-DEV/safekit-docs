@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/architectures/n-1-redundancy/"
 description: "N-1 redundancy with SafeKit: N applications on N+1 servers share a single backup server, with real-time replication and automatic failover, without a SAN."
 category: "architectures"
 lang: "en"
-topics: "High availability with data replication and application failover from N servers to 1, 🔍 Explore SafeKit"
+topics: "High availability with data replication and application failover from N servers to 1"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"
 ---

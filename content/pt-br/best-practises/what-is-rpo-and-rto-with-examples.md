@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/best-practises/what-is-rpo-and-rto-
 description: "O que significam RPO e RTO, com exemplos, e como o SafeKit alcança zero perda de dados (RPO 0) e failover automático rápido para a continuidade dos negócios."
 category: "best-practises"
 lang: "pt-br"
-topics: "Resumo rápido: RPO vs. RTO, Índice, Como calculo RPO e RTO para uma solução de alta disponibilidade e continuidade de negócios?, Como determinar RPO e RTO para uma solução de backup e recuperação de desastres?, Como um cluster mirror SafeKit consegue atingir RPO zero e RTO baixo?, Quais são os parâmetros RTO para um cluster farm SafeKit com balanceamento de carga?, Tabelas comparativas: RTO vs. RPO, Alta Disponibilidade em Ação: Demonstrações em Tempo Real de Perda de Dados Zero e Tempo de Inatividade Próximo de Zero, Perguntas Frequentes: Otimizando RPO e RTO para a Continuidade dos Negócios, 🔍 Explore SafeKit"
+topics: "Resumo rápido: RPO vs. RTO, Índice, Como calculo RPO e RTO para uma solução de alta disponibilidade e continuidade de negócios?, Como determinar RPO e RTO para uma solução de backup e recuperação de desastres?, Como um cluster mirror SafeKit consegue atingir RPO zero e RTO baixo?, Quais são os parâmetros RTO para um cluster farm SafeKit com balanceamento de carga?, Tabelas comparativas: RTO vs. RPO, Alta Disponibilidade em Ação: Demonstrações em Tempo Real de Perda de Dados Zero e Tempo de Inatividade Próximo de Zero, Perguntas Frequentes: Otimizando RPO e RTO para a Continuidade dos Negócios"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 schemaType: "TechArticle"

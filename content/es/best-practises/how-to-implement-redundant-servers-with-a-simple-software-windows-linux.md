@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/best-practises/how-to-implement-redund
 description: "Cómo implementar servidores redundantes solo con software: SafeKit ofrece replicación en tiempo real y conmutación automática en Windows y Linux, sin disco compartido."
 category: "best-practises"
 lang: "es"
-topics: "¿Cómo implementar servidores redundantes activos/pasivos con replicación en tiempo real y conmutación por error?, ¿Cómo implementar servidores redundantes activos/activos con equilibrio de carga de red y conmutación por error?, 🔍 Explora SafeKit"
+topics: "¿Cómo implementar servidores redundantes activos/pasivos con replicación en tiempo real y conmutación por error?, ¿Cómo implementar servidores redundantes activos/activos con equilibrio de carga de red y conmutación por error?"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

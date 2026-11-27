@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installati
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul mirror.safe für Docker unter Linux, mit Echtzeit-Replikation der Containerdaten und automatischem Failover."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit mit Docker, Einschränkungen SafeKit Hochverfügbarkeit, Überblick über die SafeKit/Docker-Lösung, Installation der SafeKit/Docker-Lösung unter Linux (mirror.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Docker-Lösung, Demonstration der SafeKit mirror, 🔍 SafeKit entdecken"
+topics: "Überblick über die SafeKit/Docker-Lösung, Installation der SafeKit/Docker-Lösung unter Linux (mirror.safe), Schritt-für-Schritt-Konfiguration der SafeKit/Docker-Lösung, Demonstration der SafeKit mirror"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

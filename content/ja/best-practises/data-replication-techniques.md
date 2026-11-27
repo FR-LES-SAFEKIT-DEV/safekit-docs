@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/data-replication-techni
 description: "データベース、ディスク、ファイルレベルのデータレプリケーション技術を比較し、SafeKit が共有ストレージなしで同期レプリケーションとフェイルオーバーを実現する方法を解説。"
 category: "best-practises"
 lang: "ja"
-topics: "データベースレベルでのデータレプリケーション技術、ディスクレベルですか、それともファイルレベルですか？、データレプリケーション技術の比較表、🔍 SafeKit を探索する"
+topics: "データベースレベル、ディスクレベル、ファイルレベルのデータレプリケーション技術とは？, データレプリケーション技術の比較表"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"

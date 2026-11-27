@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/synchronous-replication
 description: "同期レプリケーションと非同期レプリケーションの比較：SafeKit クラスターで同期レプリケーションがデータ損失ゼロ（RPO 0）を実現する理由と、非同期が適する場面。"
 category: "best-practises"
 lang: "ja"
-topics: "同期または非同期レプリケーションでアプリケーションのフェイルオーバー時にデータが失われることはありますか？、目次、非同期レプリケーションの仕組み、同期レプリケーションの仕組み、準同期レプリケーションの仕組み、最終結論：高可用性のための適切なレプリケーションの選択、比較表：同期、非同期、準同期、ビデオガイド：同期リアルタイムレプリケーションと高可用性の設定、よくある質問：高可用性クラスターにおけるレプリケーション戦略、🔍 SafeKit を探索する"
+topics: "同期または非同期レプリケーションでアプリケーションのフェイルオーバー時にデータが失われることはありますか？, 目次, 非同期レプリケーションの仕組み, 同期レプリケーションの仕組み, 準同期レプリケーションの仕組み, 最終結論：高可用性のための適切なレプリケーションの選択, 比較表：同期、非同期、準同期, ビデオガイド：同期リアルタイムレプリケーションと高可用性の設定, よくある質問：高可用性クラスターにおけるレプリケーション戦略"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 schemaType: "TechArticle"

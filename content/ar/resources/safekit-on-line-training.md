@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/resources/safekit-on-line-training/"
 description: "تدريب وشهادة SafeKit المجانيان عبر الإنترنت: التثبيت، ووحدة تحكم الويب، وسطر الأوامر، والإعداد المتقدم، واستكشاف أخطاء مجموعات HA وإصلاحها."
 category: "resources"
 lang: "ar"
-topics: "كيفية الوصول إلى منصة التدريب؟، احصل على مواد تدريب SafeKit 8، 🔍 استكشف SafeKit"
+topics: "كيفية الوصول إلى منصة التدريب؟, فيديوهات تدريبية على نظام SafeKit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

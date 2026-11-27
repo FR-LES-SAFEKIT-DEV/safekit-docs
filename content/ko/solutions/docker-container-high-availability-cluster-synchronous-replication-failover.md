@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/solutions/docker-container-high-availa
 description: "SafeKit으로 구현하는 Docker 고가용성: SAN 없이 Linux 서버 2대 간 컨테이너 데이터의 동기 복제 및 자동 장애 조치."
 category: "solutions"
 lang: "ko"
-topics: "SANless SafeKit mirror 클러스터 Docker와 함께 작동하는 방식, 목차, SafeKit 소프트웨어가 Docker 고가용성 클러스터 간단하게 구현하는 방법, SafeKit mirror 클러스터 Docker와 함께 작동하는 방식, SafeKit 고가용성 제한 사항, 비교: SafeKit SANless 클러스터 vs. 기존 Docker HA, 비교: SafeKit vs. 오픈 소스 Linux HA(Pacemaker/Corosync/DRBD), Docker 고가용성 요약, 🔍 SafeKit 살펴보기"
+topics: "SANless SafeKit mirror 클러스터 Docker와 함께 작동하는 방식, 목차, SafeKit 소프트웨어는 Docker 고가용성 클러스터 어떻게 간단하게 구현할까요?, 비교: SafeKit SANless 클러스터 vs. 기존 Docker HA, 비교: SafeKit vs. 오픈소스 Linux HA (Pacemaker/Corosync/DRBD), Docker 고가용성 요약"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"

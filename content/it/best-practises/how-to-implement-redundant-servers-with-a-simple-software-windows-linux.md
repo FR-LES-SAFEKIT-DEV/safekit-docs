@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/best-practises/how-to-implement-redund
 description: "Come realizzare server ridondanti solo via software: SafeKit offre replica in tempo reale e failover automatico su Windows e Linux, senza disco condiviso."
 category: "best-practises"
 lang: "it"
-topics: "Come implementare server ridondanti attivi/passivi con replica in tempo reale e failover?, Come implementare server ridondanti attivi/attivi con bilanciamento del carico di rete e failover?, 🔍 Esplora SafeKit"
+topics: "Come implementare server ridondanti attivi/passivi con replica in tempo reale e failover?, Come implementare server ridondanti attivi/attivi con bilanciamento del carico di rete e failover?"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

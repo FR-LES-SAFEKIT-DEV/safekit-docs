@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/best-practises/high-availability-archi
 description: "Architetture e best practice di alta disponibilità per il clustering applicativo: cluster mirror e farm, replica e failover, con esempi SafeKit."
 category: "best-practises"
 lang: "it"
-topics: "Quali sono le architetture ad alta disponibilità e le best practice?, Tabelle comparative sulle architetture ad alta disponibilità e sulle best practice, 🔍 Esplora SafeKit"
+topics: "Quali sono le architetture ad alta disponibilità e le best practice?, Tabelle comparative sulle architetture ad alta disponibilità e sulle best practice"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

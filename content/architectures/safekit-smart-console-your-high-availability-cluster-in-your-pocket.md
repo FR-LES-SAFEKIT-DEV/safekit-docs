@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/architectures/safekit-smart-console-your-
 description: "SafeKit Smart Console: configure and monitor your high availability clusters from a browser or a smartphone, with no code and with real-time notifications."
 category: "architectures"
 lang: "en"
-topics: "Smart Console: intuitive and error-free high availability on desktop and mobile, Table of contents, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit farm cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?, 🔍 Explore SafeKit"
+topics: "Smart Console: intuitive and error-free high availability on desktop and mobile, Table of contents, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit farm cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/solutions/siemens-siveillance-vms-the-sim
 description: "Siemens Siveillance VMS high availability with SafeKit: the SiveillanceVMS.safe module provides real-time replication and failover on two servers."
 category: "solutions"
 lang: "en"
-topics: "SafeKit quick installation guide with Siemens Siveillance VMS and SQL (SiveillanceVMS.safe mirror module), How the SANless SafeKit Mirror Cluster Works with Milestone XProtect, Table of Contents, How the SafeKit software simply implements a SANless Milestone XProtect high availability cluster?, How the SafeKit mirror cluster works with Milestone XProtect?, SafeKit High Availability Limitations, Comparison: SafeKit for Milestone XProtect vs. Other Clustering Solutions, Video Guide: Configuring a SafeKit HA mirror cluster, 🔍 Explore SafeKit"
+topics: "SafeKit quick installation guide with Siemens Siveillance VMS and SQL (SiveillanceVMS.safe mirror module)"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance VMS"]

@@ -1,10 +1,10 @@
 ---
-title: "IIS-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul iis_farm.safe"
+title: "IIS-Netzwerklastenausgleich und Failover: Installieren Sie das SafeKit Modul iisfarm.safe"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul iis_farm.safe unter Windows für Netzwerk-Lastverteilung und Failover von IIS-Webservern auf einer virtuellen IP."
 category: "quick-install"
 lang: "de"
-topics: "Schnellinstallationsanleitung für Hochverfügbarkeit für IIS, Einschränkungen SafeKit Hochverfügbarkeit, Übersicht über die SafeKit/IIS-Lösung, Installation der SafeKit/IIS-Lösung unter Windows (iis_farm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/IIS-Lösung, Demonstration der SafeKit farm Lösung, 🔍 SafeKit entdecken"
+topics: "Übersicht über die SafeKit/IIS-Lösung, Installation der SafeKit/IIS-Lösung unter Windows (iisfarm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/IIS-Lösung, Demonstration der SafeKit farm Lösung"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

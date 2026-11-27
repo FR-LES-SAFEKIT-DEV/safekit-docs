@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/electronic-access-control-so
 description: "SafeKit による入退室管理（EACS）冗長化：Nedap、Siemens、HID 等のシステム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
 lang: "ja"
-topics: "電子アクセス制御システム（EACS）とは何ですか？、EACS ソフトウェアが重要な理由とは？、主な EACS ベンダー、SafeKit、EACS ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、セキュリティ市場で認められたソリューション、🔍 SafeKit を探索する"
+topics: "電子アクセス制御システム（EACS）とは何ですか？, EACS ソフトウェアが重要な理由とは？, 主な EACS ベンダー"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

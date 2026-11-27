@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/business-continuity-software
 description: "التوفر العالي للمؤسسات الموزعة: انشر مجموعة SafeKit نفسها في كل فرع، دون SAN ودون موظفي تقنية معلومات في الموقع، على Windows أو Linux."
 category: "use-cases"
 lang: "ar"
-topics: "استمرارية الأعمال في المؤسسات الموزعة، 🔍 استكشف SafeKit"
+topics: "استمرارية الأعمال في المؤسسات الموزعة"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

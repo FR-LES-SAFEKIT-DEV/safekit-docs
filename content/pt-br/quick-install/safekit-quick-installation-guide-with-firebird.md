@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-install
 description: "Guia passo a passo: instale o módulo SafeKit firebird.safe para replicação em tempo real e failover automático do Firebird no Windows ou Linux."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para Firebird, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Firebird, Instalação da solução SafeKit/Firebird no Windows e Linux (firebird.safe), Configuração passo a passo da solução SafeKit/Firebird, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+topics: "Visão geral da solução SafeKit/Firebird, Instalação da solução SafeKit/Firebird no Windows e Linux (firebird.safe), Configuração passo a passo da solução SafeKit/Firebird, Demonstração da solução mirror SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

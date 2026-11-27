@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installati
 description: "Guida passo passo: installa il modulo SafeKit postgresql.safe per la replica in tempo reale e il failover automatico di PostgreSQL su Windows o Linux."
 category: "quick-install"
 lang: "it"
-topics: "Guida rapida all’installazione ad alta disponibilità per PostgreSQL, Limitazioni SafeKit High Availability, Panoramica della soluzione SafeKit/PostgreSQL, Installazione della soluzione SafeKit/PostgreSQL su Windows e Linux (postgresql.safe), Configurazione passo-passo della soluzione SafeKit/PostgreSQL, Dimostrazione della soluzione mirror SafeKit, 🔍 Esplora SafeKit"
+topics: "Panoramica della soluzione SafeKit/PostgreSQL, Installazione della soluzione SafeKit/PostgreSQL su Windows e Linux (postgresql.safe), Configurazione passo-passo della soluzione SafeKit/PostgreSQL, Dimostrazione della soluzione mirror SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

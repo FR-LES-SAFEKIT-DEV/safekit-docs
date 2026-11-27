@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/high-availability-clust
 description: "HA-Cluster vs. fehlertolerantes System: Vergleichen Sie Kosten, Wiederherstellung und Schutz vor Softwarefehlern und sehen Sie, wie SafeKit auf Standardservern arbeitet."
 category: "best-practises"
 lang: "de"
-topics: "Was ist der Unterschied zwischen Hochverfügbarkeit und Fehlertoleranz?, Vor- und Nachteile von Hochverfügbarkeit und Fehlertoleranz, 🔍 SafeKit entdecken"
+topics: "Was ist der Unterschied zwischen Hochverfügbarkeit und Fehlertoleranz?, Vor- und Nachteile von Hochverfügbarkeit und Fehlertoleranz"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

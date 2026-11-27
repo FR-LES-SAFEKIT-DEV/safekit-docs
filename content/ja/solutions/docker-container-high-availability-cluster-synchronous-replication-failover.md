@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/solutions/docker-container-high-availa
 description: "SafeKit による Docker の高可用性：Linux サーバー 2 台間でコンテナデータの同期レプリケーションと自動フェイルオーバー。SAN 不要。"
 category: "solutions"
 lang: "ja"
-topics: "SANless SafeKit mirror クラスター Docker と連携する仕組み、目次、SafeKit ソフトウェアが Docker 高可用性クラスタークラスターを簡単に実装する仕組み、SafeKit mirror クラスターが Docker と連携する仕組み、SafeKit 高可用性の制限事項、比較：SafeKit SANless クラスターと従来の Docker HA、比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）、Docker 高可用性の概要、🔍 SafeKit を探索する"
+topics: "SANless SafeKit mirror クラスターと Docker の連携方法, 目次, SafeKit ソフトウェアは、どのようにして Docker 高可用性クラスターを簡単に実装するのでしょうか？, 比較：SafeKit SANless Cluster と従来の Docker HA, 比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）, Docker 高可用性に関する概要"
 translation: "translate_md 2026-11-08.2 | glossaire 2026-11-08.1 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"

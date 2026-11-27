@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/san-vs-nas-shared-stora
 description: "SAN vs. NAS als gedeelde opslag voor failoverclusters: beperkingen, kosten en risico's, en waarom replicatie met SafeKit gedeelde opslag overbodig maakt."
 category: "best-practises"
 lang: "nl"
-topics: "SAN- of NAS-gedeelde opslag: wat is eenvoudiger voor een failovercluster?, 🔍 Ontdek SafeKit"
+topics: "SAN- of NAS-gedeelde opslag: wat is eenvoudiger voor een failovercluster?"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/business-continuity-and
 description: "使用 SafeKit 实现业务连续性和灾难恢复：跨两个机房的双节点集群，同步复制和自动故障转移。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "业务连续性和灾难恢复软件、🔍 探索 SafeKit"
+topics: "业务连续性和灾难恢复软件"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

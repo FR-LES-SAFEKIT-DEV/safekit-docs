@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/architectures/active-active-clust
 description: "双活 SafeKit 集群：两台服务器通过多个 mirror 模块互为备份，在 Windows 和 Linux 上实现同步复制与相互故障转移。"
 category: "architectures"
 lang: "zh-hans"
-topics: "具有实时复制功能的双活集群如何工作？、🔍 探索 SafeKit"
+topics: "具有实时复制功能的双活集群如何工作？"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/synchronous-replication
 description: "Réplication synchrone vs asynchrone : pourquoi la synchrone garantit zéro perte de données (RPO 0) dans un cluster SafeKit et quand l’asynchrone convient mieux."
 category: "best-practises"
 lang: "fr"
-topics: "Les données sont-elles perdues lors du basculement d’application avec la réplication synchrone ou asynchrone ?, Table des matières, Comment fonctionne la réplication asynchrone ?, Comment fonctionne la réplication synchrone ?, Comment fonctionne la réplication semi-synchrone ?, Verdict final : Choisir la bonne réplication pour une haute disponibilité, Tableau comparatif : synchrone, asynchrone et semi-synchrone, Guide vidéo : Configuration de la réplication synchrone en temps réel et de la haute disponibilité, FAQ : Stratégies de réplication dans les clusters de haute disponibilité, 🔍 Explorez SafeKit"
+topics: "Les données sont-elles perdues lors du basculement d’application avec la réplication synchrone ou asynchrone ?, Table des matières, Comment fonctionne la réplication asynchrone ?, Comment fonctionne la réplication synchrone ?, Comment fonctionne la réplication semi-synchrone ?, Verdict final : Choisir la bonne réplication pour une haute disponibilité, Tableau comparatif : synchrone, asynchrone et semi-synchrone, Guide vidéo : Configuration de la réplication synchrone en temps réel et de la haute disponibilité, FAQ : Stratégies de réplication dans les clusters de haute disponibilité"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 schemaType: "TechArticle"

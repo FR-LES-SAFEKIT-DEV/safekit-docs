@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/edge-high-availability-witho
 description: "データセンター不要のエッジ高可用性：SafeKit が 2 台の標準サーバーを OT・分散拠点向けのプラグアンドプレイクラスターに変えます。SAN 不要。"
 category: "use-cases"
 lang: "ja"
-topics: "エッジにおける高可用性の課題、SafeKit がエッジコンピューティングに最適な理由、エッジおよび分散配置の適合性、エッジ OT 環境が異なる理由、エッジでの理想的なユースケース、エッジとデータセンターの高可用性：主な違い、サポートされているオペレーティングシステムとプラットフォーム、🔍 SafeKit を探索する"
+topics: "エッジにおける高可用性の課題, SafeKit がエッジコンピューティングに最適な理由, エッジおよび分散配置の適合性, エッジ OT 環境が異なる理由, エッジでの理想的なユースケース, エッジとデータセンターの高可用性：主な違い"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

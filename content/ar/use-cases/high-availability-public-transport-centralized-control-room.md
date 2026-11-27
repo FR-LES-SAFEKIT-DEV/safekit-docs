@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/use-cases/high-availability-public-tra
 description: "التوفر العالي لغرف التحكم في النقل العام: تستخدم RATP برنامج SafeKit للخط 1 الآلي من مترو باريس، مع النسخ وتجاوز الفشل وموازنة الأحمال."
 category: "use-cases"
 lang: "ar"
-topics: "غرف التحكم في وسائل النقل العام، لماذا تعتبر غرفة التحكم بالغة الأهمية؟، التوافر العالي SafeKit في وسائل النقل العام، التطبيق على أرض الواقع في RATP، 🔍 استكشف SafeKit"
+topics: "غرف التحكم في وسائل النقل العام, لماذا تعتبر غرفة التحكم بالغة الأهمية؟, التوافر العالي SafeKit في وسائل النقل العام, التطبيق على أرض الواقع في RATP"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

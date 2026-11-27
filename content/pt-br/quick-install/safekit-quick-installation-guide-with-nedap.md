@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-install
 description: "Guia passo a passo: instale o módulo SafeKit nedap.safe para replicação em tempo real e failover automático do controle de acesso Nedap AEOS no Windows."
 category: "quick-install"
 lang: "pt-br"
-topics: "Guia de Instalação Rápida de Alta Disponibilidade para Nedap, Limitações SafeKit de Alta Disponibilidade, Visão geral da solução SafeKit/Nedap, Instalação da solução SafeKit/Nedap no Windows (nedap.safe), Configuração passo a passo da solução SafeKit/Nedap, Demonstração da solução mirror SafeKit, 🔍 Explore SafeKit"
+topics: "Visão geral da solução SafeKit/Nedap, Instalação da solução SafeKit/Nedap no Windows (nedap.safe), Configuração passo a passo da solução SafeKit/Nedap, Demonstração da solução mirror SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

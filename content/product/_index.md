@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/product/"
 description: "SafeKit combines real-time replication, automatic failover and network load balancing in one software product for Windows and Linux, with no shared storage."
 category: "product"
 lang: "en"
-topics: "What is SafeKit?, 🔍 Explore SafeKit, Why Choose SafeKit for Simple and Cost-Effective High Availability?, Why an All-in-One SANless High Availability Product is Essential?, Choosing Your High Availability Strategy: VM HA vs. Application HA, SafeKit High Availability Limitations, SafeKit Video Library, Comparison of SafeKit with Traditional High Availability (HA) Clusters, SafeKit HA Free Trial & Technical Documentation, SafeKit Application Module Library: Ready-to-Use HA Solutions"
+topics: "What is SafeKit?"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

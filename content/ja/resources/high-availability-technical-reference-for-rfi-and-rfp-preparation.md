@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/resources/high-availability-technical-
 description: "RFI・RFP 回答のための SafeKit 技術リファレンス：対応システム、アーキテクチャ、復旧時間、セキュリティ、ライセンス、サポート。"
 category: "resources"
 lang: "ja"
-topics: "概要、目次、製品情報、サポートされているオペレーティングシステムとプラットフォーム、SafeKit High Availability の制限事項、事前設定済みのアプリケーションモジュール、アーキテクチャとデプロイメント、データ損失と復旧時間（RPO と RTO）、リモートサイトと分散配置、監視とアラート、セキュリティとコンプライアンス、ライセンス、サポートとメンテナンス、他のソリューションとの比較、便利なリンク"
+topics: "概要, 目次, 製品情報, 事前設定済みのアプリケーションモジュール, アーキテクチャとデプロイメント, データ損失と復旧時間（RPO と RTO）, リモートサイトと分散配置, 監視とアラート, セキュリティとコンプライアンス, ライセンス, サポートとメンテナンス, 他のソリューションとの比較, 便利なリンク"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

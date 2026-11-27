@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installati
 description: "단계별 가이드: 실시간 복제 및 자동 장애 조치를 갖춘 Linux 기반 2노드 Kubernetes K3s 클러스터용 SafeKit k3s.safe 모듈 설치."
 category: "quick-install"
 lang: "ko"
-topics: "Kubernetes 고가용성 빠른 설치 가이드, SafeKit 고가용성 제한 사항, SafeKit/Kubernetes 솔루션 개요, Linux에 SafeKit/Kubernetes 솔루션 설치 및 구성(k3s.safe), 클러스터에서 네트워크가 고립될 경우 발생할 수 있는 다양한 시나리오는 무엇인가요?, SafeKit mirror 솔루션 시연, 🔍 SafeKit 살펴보기"
+topics: "SafeKit/Kubernetes 솔루션 개요, Linux에 SafeKit/Kubernetes 솔루션 설치 및 구성(k3s.safe), SafeKit mirror 솔루션 시연"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/data-replication-techni
 description: "Technieken voor gegevensreplicatie vergeleken op database-, schijf- en bestandsniveau, en hoe SafeKit synchrone replicatie en failover biedt zonder gedeelde opslag."
 category: "best-practises"
 lang: "nl"
-topics: "Datareplicatietechnieken op databaseniveau, Schijfniveau of bestandsniveau?, Vergelijkende tabellen tussen datareplicatietechnieken, 🔍 Ontdek SafeKit"
+topics: "Datareplicatietechnieken op database-, schijf- of bestandsniveau?, Vergelijkende tabellen tussen datareplicatietechnieken"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/"
 description: "SafeKit-Hochverfügbarkeitssoftware für Windows und Linux: synchrone Replikation, automatisches Failover und Lastverteilung auf zwei Standardservern, ohne SAN."
 category: "home"
 lang: "de"
-topics: "Was SafeKit tut, Wählen Sie Ihr Schutzniveau, Fertige Module für Ihre Anwendungen, Anwendungsfälle unserer Kunden, Einfache und vorhersehbare Preise, Zu berücksichtigende Einschränkungen, SafeKit-Videobibliothek, 🔍 SafeKit entdecken"
+topics: "Was SafeKit tut, Wählen Sie Ihr Schutzniveau, Fertige Module für Ihre Anwendungen, Anwendungsfälle unserer Kunden, Einfache und vorhersehbare Preise, Zu berücksichtigende Einschränkungen"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 55 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

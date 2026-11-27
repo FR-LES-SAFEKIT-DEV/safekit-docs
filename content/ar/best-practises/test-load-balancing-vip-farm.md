@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/test-load-balancing-vip
 description: "كيفية اختبار عنوان IP الافتراضي لموازنة الأحمال في مجموعة SafeKit farm: توزيع الحركة بين العقد، وتجاوز الفشل، وإعادة التوجيه عبر GARP، وفحوص الشبكة."
 category: "best-practises"
 lang: "ar"
-topics: "المبادئ الأساسية، المتطلب الأساسي: فسيفساء SafeKit (mosaic) ، الاختبار 1 – توزيع الاتصالات، الاختبار 2 – تغيير خادم الإرسال، الاختبار 3 – التحقق من إعادة توجيه GARP باستخدام arp -a، الاختبار 4 – التحقق من طرف إلى طرف باستخدام Wireshark (Windows) أو tcpdump (Linux)، محطات العمل التي سيتم الاختبار منها، ملخص النتائج المتوقعة، استكشاف الأخطاء وإصلاحها، عرض توضيحي لحل farm SafeKit"
+topics: "1. المبادئ الأساسية, 2. المتطلب السابق: فسيفساء SafeKit (mosaic), 3. الاختبار الأول – توزيع الاتصالات, 4. الاختبار الثاني – تغيير خادم الإرسال, 5. الاختبار 3 – التحقق من إعادة توجيه GARP باستخدام arp -a, 6. الاختبار 4 – فحص شامل باستخدام Wireshark (نظام التشغيل Windows) أو tcpdump (نظام التشغيل Linux), 7. محطات العمل التي سيتم الاختبار منها, 8. ملخص النتائج المتوقعة, 9. استكشاف الأخطاء وإصلاحها, عرض حل SafeKit farm"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

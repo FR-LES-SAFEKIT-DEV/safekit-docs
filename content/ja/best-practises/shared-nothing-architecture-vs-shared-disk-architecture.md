@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/shared-nothing-architec
 description: "高可用性のためのシェアードナッシングと共有ディスクアーキテクチャの比較：SafeKit がサーバー間でデータを複製し、SAN コストを避けてフェイルオーバーを簡素化する方法。"
 category: "best-practises"
 lang: "ja"
-topics: "高可用性クラスターにおけるシェアードナッシングアーキテクチャと共有ディスクアーキテクチャ、シェアードナッシングアーキテクチャと共有ディスクアーキテクチャ：長所と短所、🔍 SafeKit を探索する"
+topics: "高可用性クラスターにおけるシェアードナッシングアーキテクチャと共有ディスクアーキテクチャ, シェアードナッシングアーキテクチャと共有ディスクアーキテクチャ：長所と短所"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/edge-high-availability-witho
 description: "데이터 센터 없는 엣지 고가용성: SafeKit은 SAN 없이 표준 서버 2대를 OT 및 분산 사이트용 플러그 앤 플레이 클러스터로 바꿉니다."
 category: "use-cases"
 lang: "ko"
-topics: "엣지에서의 고가용성 과제, SafeKit이 엣지 컴퓨팅에 자연스럽게 적합한 이유, 엣지 및 분산 배포 적합성, 엣지 OT 환경이 다른 이유, 엣지에서의 이상적인 사용 사례, 엣지 vs. 데이터센터 고가용성: 주요 차이점, 지원되는 운영 체제 및 플랫폼, 🔍 SafeKit 살펴보기"
+topics: "엣지에서의 고가용성 과제, SafeKit이 엣지 컴퓨팅에 자연스럽게 적합한 이유, 엣지 및 분산 배포 적합성, 엣지 OT 환경이 다른 이유, 엣지에서의 이상적인 사용 사례, 엣지 vs. 데이터센터 고가용성: 주요 차이점"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

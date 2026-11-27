@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/power-outage-and-networ
 description: "高可用性クラスターでの停電とネットワーク分離への対処：SafeKit のスプリットブレインチェッカーと自動再同期がデータを保護します。"
 category: "best-practises"
 lang: "ja"
-topics: "クラスターでネットワークが分離された場合、どのようなシナリオが考えられますか？、クラスターで停電が発生した場合、どのようなシナリオが考えられますか？、🔍 SafeKit を探索する"
+topics: "クラスターで停電が発生した場合、どのようなシナリオが考えられますか？"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

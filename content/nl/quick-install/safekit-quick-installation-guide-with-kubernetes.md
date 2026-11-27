@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Stapsgewijze handleiding: installeer de SafeKit-module k3s.safe voor een Kubernetes K3s-cluster met twee nodes op Linux, met realtime replicatie en automatische failover."
 category: "quick-install"
 lang: "nl"
-topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Kubernetes, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Kubernetes-oplossing, Installatie en configuratie van de SafeKit/Kubernetes-oplossing op Linux (k3s.safe), Wat zijn de verschillende scenario's in geval van netwerkisolatie in een cluster?, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"
+topics: "Overzicht van de SafeKit/Kubernetes-oplossing, Installatie en configuratie van de SafeKit/Kubernetes-oplossing op Linux (k3s.safe), Demonstratie van de SafeKit mirror"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

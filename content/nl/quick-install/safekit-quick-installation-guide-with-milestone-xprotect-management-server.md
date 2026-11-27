@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Stapsgewijze handleiding: installeer de SafeKit-module milestone.safe voor realtime replicatie en failover van de Milestone XProtect Management Server."
 category: "quick-install"
 lang: "nl"
-topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Milestone XProtect, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Milestone XProtect oplossing, Installatie van de SafeKit/Milestone XProtect oplossing op Windows (milestone.safe), Stapsgewijze configuratie van de SafeKit/Milestone XProtect oplossing, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"
+topics: "Overzicht van de SafeKit/Milestone XProtect oplossing, Installatie van de SafeKit/Milestone XProtect oplossing op Windows (milestone.safe), Stapsgewijze configuratie van de SafeKit/Milestone XProtect oplossing, Demonstratie van de SafeKit mirror"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

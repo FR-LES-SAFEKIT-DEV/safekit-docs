@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/architectures/"
 description: "Architetture cluster SafeKit: cluster mirror con replica in tempo reale, cluster farm con bilanciamento del carico, attivo-attivo e ridondanza N-1, senza SAN."
 category: "architectures"
 lang: "it"
-topics: "Quali sono le diverse architetture ad alta disponibilità e i diversi cluster software con SafeKit?, Come creare cluster ad alta disponibilità con SafeKit?, 🔍 Esplora SafeKit"
+topics: "Quali sono le diverse architetture ad alta disponibilità e i diversi cluster software con SafeKit?, Come creare cluster ad alta disponibilità con SafeKit?"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 13 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---

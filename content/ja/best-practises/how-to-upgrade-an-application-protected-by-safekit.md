@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/best-practises/how-to-upgrade-an-appli
 description: "SafeKit で保護されたアプリケーションのアップグレード方法：マイナー・メジャーアップグレード、ローリングアップグレード、ロールバック、VM HA のアプローチ。"
 category: "best-practises"
 lang: "ja"
-topics: "SafeKit で保護された高可用性アプリケーションのアップグレード、VM レベルの高可用性、アプリケーションレベルの高可用性、適切なアップグレード戦略の選択、結論、🔍 SafeKit を探索する"
+topics: "SafeKit で保護された高可用性アプリケーションのアップグレード, VM レベルの高可用性, アプリケーションレベルの高可用性, 適切なアップグレード戦略の選択, 結論"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/use-cases/high-availability-public-transp
 description: "High availability for public transport control rooms: RATP uses SafeKit for driverless Paris Metro line 1, with replication, failover and load balancing."
 category: "use-cases"
 lang: "en"
-topics: "Public Transport Control Rooms, Why is the control room critical?, SafeKit high availability for public transport, Real-world implementation at RATP, 🔍 Explore SafeKit"
+topics: "Public Transport Control Rooms, Why is the control room critical?, SafeKit high availability for public transport, Real-world implementation at RATP"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"
 schemaMentions: ["RATP"]

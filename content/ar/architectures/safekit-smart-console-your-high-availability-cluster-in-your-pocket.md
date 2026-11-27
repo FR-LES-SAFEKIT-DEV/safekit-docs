@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/architectures/safekit-smart-console-yo
 description: "SafeKit Smart Console: اضبط مجموعات التوفر العالي وراقبها من متصفح أو هاتف ذكي، دون برمجة ومع إشعارات في الوقت الفعلي."
 category: "architectures"
 lang: "ar"
-topics: "Smart Console: سهولة الاستخدام وتوافر عالٍ خالٍ من الأخطاء على أجهزة الكمبيوتر المكتبية والهواتف المحمولة، جدول المحتويات، كيف تعمل مجموعة mirror SafeKit مع وحدة التحكم بالويب؟، كيف تعمل مجموعة SafeKit farm مع وحدة التحكم بالويب؟، كيفية مراقبة وحدات نمطية متعددة ومجموعات متعددة عبر وحدة التحكم على الويب؟، كيفية مراقبة التنبيهات في وحدة التحكم وإدارة إشعارات البريد الإلكتروني؟، 🔍 استكشف SafeKit"
+topics: "Smart Console: سهولة الاستخدام وتوافر عالٍ خالٍ من الأخطاء على أجهزة الكمبيوتر المكتبية والهواتف المحمولة, جدول المحتويات, كيف تعمل مجموعة mirror SafeKit مع وحدة التحكم بالويب؟, كيف تعمل مجموعة SafeKit farm مع وحدة التحكم بالويب؟, كيفية مراقبة وحدات نمطية متعددة ومجموعات متعددة عبر وحدة التحكم على الويب؟, كيفية مراقبة التنبيهات في وحدة التحكم وإدارة إشعارات البريد الإلكتروني؟"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

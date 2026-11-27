@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/shared-nothing-architec
 description: "Shared-Nothing- vs. Shared-Disk-Architektur für Hochverfügbarkeit: Wie SafeKit Daten zwischen Servern repliziert, um SAN-Kosten zu vermeiden und Failover zu vereinfachen."
 category: "best-practises"
 lang: "de"
-topics: "Shared-Nothing-Architektur vs. Shared-Disk-Architektur für Hochverfügbarkeitscluster, Shared-Nothing-Architektur vs. Shared-Disk-Architektur: Vor- und Nachteile, 🔍 SafeKit entdecken"
+topics: "Shared-Nothing-Architektur vs. Shared-Disk-Architektur für Hochverfügbarkeitscluster, Shared-Nothing-Architektur vs. Shared-Disk-Architektur: Vor- und Nachteile"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

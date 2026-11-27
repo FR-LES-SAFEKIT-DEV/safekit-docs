@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/application-clustering-softw
 description: "OEM-Hochverfügbarkeit: Integrieren Sie SafeKit-Replikation und -Failover in Ihre Software und bieten Sie Ihren Kunden einen Windows- oder Linux-Cluster ohne HA-Know-how."
 category: "use-cases"
 lang: "de"
-topics: "Der OEM-Anwendungsfall für Hochverfügbarkeit, 🔍 SafeKit entdecken"
+topics: "Der OEM-Anwendungsfall für Hochverfügbarkeit"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/use-cases/building-management-system-soft
 description: "BMS redundancy with SafeKit: two-node cluster with synchronous replication and failover for Siemens, Honeywell, Schneider and other building systems."
 category: "use-cases"
 lang: "en"
-topics: "What is a building management system (BMS)?, Why is BMS software critical?, Key BMS vendors, SafeKit brings two solutions for redundancy and high availability of a BMS software, SafeKit, a recognized solution on the security market, 🔍 Explore SafeKit"
+topics: "What is a building management system (BMS)?, Why is BMS software critical?, Key BMS vendors"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"
 schemaSector: "BMS"

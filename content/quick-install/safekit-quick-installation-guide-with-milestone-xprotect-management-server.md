@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit milestone.safe module for real-time replication and failover of the Milestone XProtect Management Server."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for Milestone XProtect, SafeKit High Availability Limitations, Overview of the SafeKit / Milestone XProtect solution, Installation of the SafeKit / Milestone XProtect solution on Windows (milestone.safe), Step by step configuration of the SafeKit / Milestone XProtect solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
+topics: "Overview of the SafeKit / Milestone XProtect solution, Installation of the SafeKit / Milestone XProtect solution on Windows (milestone.safe), Step by step configuration of the SafeKit / Milestone XProtect solution, Demonstration of the SafeKit mirror solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

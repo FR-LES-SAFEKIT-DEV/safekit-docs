@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/architectures/active-active-cluster-re
 description: "Cluster SafeKit attivo-attivo: due server si proteggono a vicenda con più moduli mirror, replica sincrona e failover reciproco su Windows e Linux."
 category: "architectures"
 lang: "it"
-topics: "Come funziona un cluster attivo-attivo con replica in tempo reale?, 🔍 Esplora SafeKit"
+topics: "Come funziona un cluster attivo-attivo con replica in tempo reale?"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

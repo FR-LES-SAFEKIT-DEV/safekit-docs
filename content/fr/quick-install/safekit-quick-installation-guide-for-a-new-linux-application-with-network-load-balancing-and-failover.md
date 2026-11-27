@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installati
 description: "Guide pas à pas : installez le module SafeKit farm.safe sous Linux pour l’équilibrage de charge réseau et le basculement de votre application sur une IP virtuelle."
 category: "quick-install"
 lang: "fr"
-topics: "Guide d’installation rapide de la haute disponibilité pour Linux, Limitations de la haute disponibilité SafeKit, Présentation de la solution SafeKit/Linux, Installation de la solution SafeKit/Linux (farm.safe), Configuration pas à pas de la solution SafeKit/Linux, Démonstration de la solution farm SafeKit, 🔍 Explorez SafeKit"
+topics: "Présentation de la solution SafeKit/Linux, Installation de la solution SafeKit/Linux (farm.safe), Configuration pas à pas de la solution SafeKit/Linux, Démonstration de la solution farm SafeKit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/siemens-siveillance-vms-the-
 description: "التوفر العالي لـ Siemens Siveillance VMS مع SafeKit: توفر وحدة SiveillanceVMS.safe النسخ في الوقت الفعلي وتجاوز الفشل على خادمين."
 category: "solutions"
 lang: "ar"
-topics: "دليل التثبيت السريع SafeKit مع Siemens Siveillance VMS SQL (وحدة SiveillanceVMS.safe mirror)، كيف تعمل مجموعة mirror SafeKit من SANless مع Milestone XProtect، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة عالية التوافر Milestone XProtect بدون شبكة SAN؟، كيف تعمل مجموعة mirror SafeKit مع Milestone XProtect؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit لـ Milestone XProtect مقابل حلول التجميع الأخرى، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
+topics: "دليل التثبيت السريع SafeKit مع Siemens Siveillance VMS SQL (وحدة SiveillanceVMS.safe mirror)"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"

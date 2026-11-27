@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/use-cases/business-continuity-sof
 description: "分布式企业的高可用性：在每个分支机构部署相同的 SafeKit 集群，无需 SAN 和现场 IT 人员，支持 Windows 或 Linux。"
 category: "use-cases"
 lang: "zh-hans"
-topics: "分布式企业中的业务连续性、🔍 探索 SafeKit"
+topics: "分布式企业中的业务连续性"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

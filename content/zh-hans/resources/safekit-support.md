@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/resources/safekit-support/"
 description: "SafeKit 支持：提供 7x24 小时事件报告的合同支持、SafeKit AI 免费帮助以及免费在线培训与认证计划。"
 category: "resources"
 lang: "zh-hans"
-topics: "免费人工智能一级支持、标准支持与维护、免费认证与培训计划、🔍 探索 SafeKit"
+topics: "免费AI一级支持, 标准支持与维护, 免费认证和培训计划"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

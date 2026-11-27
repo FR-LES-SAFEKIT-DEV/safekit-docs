@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/use-cases/high-availability-air-traffi
 description: "Hoge beschikbaarheid voor luchtverkeersleiding: ADB SafeGate gebruikt SafeKit op luchthavens wereldwijd voor realtime replicatie en automatische failover op Windows."
 category: "use-cases"
 lang: "nl"
-topics: "Luchtverkeersleidingssystemen, Waarom is luchtverkeersleiding van cruciaal belang?, Hoe SafeKit de luchtverkeersleiding beschermt, Implementatie in de praktijk bij ADB SafeGate, 🔍 Ontdek SafeKit"
+topics: "Luchtverkeersleidingssystemen, Waarom is luchtverkeersleiding van cruciaal belang?, Hoe SafeKit de luchtverkeersleiding beschermt, Implementatie in de praktijk bij ADB SafeGate"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

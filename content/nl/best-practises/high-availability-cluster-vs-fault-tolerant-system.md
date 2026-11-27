@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/high-availability-clust
 description: "HA-cluster vs. fouttolerant systeem: vergelijk kosten, herstel en bescherming tegen softwarestoringen, en ontdek hoe SafeKit werkt op standaardservers."
 category: "best-practises"
 lang: "nl"
-topics: "Wat is het verschil tussen hoge beschikbaarheid en fouttolerantie?, Voor- en nadelen van hoge beschikbaarheid en fouttolerantie, 🔍 Ontdek SafeKit"
+topics: "Wat is het verschil tussen hoge beschikbaarheid en fouttolerantie?, Voor- en nadelen van hoge beschikbaarheid en fouttolerantie"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/use-cases/high-availability-softwar
 description: "Software de alta disponibilidade para Windows e Linux: os clusters SafeKit oferecem replicação em tempo real, failover e balanceamento de carga sem armazenamento partilhado."
 category: "use-cases"
 lang: "pt-pt"
-topics: "Apresentação rápida de 30 segundos do SafeKit, 🔍 Explore SafeKit"
+topics: "Apresentação rápida de 30 segundos do SafeKit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

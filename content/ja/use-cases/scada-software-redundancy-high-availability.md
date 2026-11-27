@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/use-cases/scada-software-redundancy-hi
 description: "SafeKit による SCADA 冗長化：WinCC、Wonderware、iFix 等の産業システム向け、同期レプリケーションとフェイルオーバーの 2 ノードクラスター。"
 category: "use-cases"
 lang: "ja"
-topics: "SCADA システムとは何ですか？、SCADA ソフトウェアが重要な理由とは？、主要 SCADA ソフトウェアベンダー、SafeKit、SCADA ソフトウェアの冗長化と高可用性のための 2 つのソリューションを提供します。、SafeKit、SCADA 市場で認められたソリューション、🔍 SafeKit を探索する"
+topics: "SCADA システムとは何ですか？, SCADA ソフトウェアが重要な理由とは？, 主要 SCADA ソフトウェアベンダー"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

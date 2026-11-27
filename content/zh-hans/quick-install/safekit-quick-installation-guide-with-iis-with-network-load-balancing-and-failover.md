@@ -1,10 +1,10 @@
 ---
-title: "IIS 网络负载均衡和故障转移：安装 SafeKit iis_farm.safe 模块"
+title: "IIS 网络负载均衡和故障转移：安装 SafeKit iisfarm.safe 模块"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/"
 description: "分步指南：在 Windows 上安装 SafeKit iis_farm.safe 模块，基于虚拟 IP 实现 IIS Web 服务器的网络负载均衡和故障转移。"
 category: "quick-install"
 lang: "zh-hans"
-topics: "IIS 高可用性快速安装指南、SafeKit 高可用性限制、SafeKit/IIS 解决方案概述、在 Windows 上安装 SafeKit/IIS 解决方案 (iis_farm.safe)、SafeKit/IIS 解决方案的分步配置、SafeKit farm 解决方案演示、🔍 探索 SafeKit"
+topics: "SafeKit/IIS 解决方案概述, 在 Windows 上安装 SafeKit/IIS 解决方案 (iisfarm.safe), SafeKit/IIS 解决方案的分步配置, SafeKit farm 解决方案演示"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

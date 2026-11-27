@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/architectures/clustering-software-load
 description: "Combineer SafeKit farm- en mirror-modules: loadbalancing schaalt de front-end, terwijl synchrone replicatie de back-endgegevens beschermt, op Windows en Linux."
 category: "architectures"
 lang: "nl"
-topics: "Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware, 🔍 Ontdek SafeKit"
+topics: "Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

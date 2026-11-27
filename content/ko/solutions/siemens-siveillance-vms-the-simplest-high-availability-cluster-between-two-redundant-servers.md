@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/solutions/siemens-siveillance-vms-the-
 description: "SafeKit으로 구현하는 Siemens Siveillance VMS 고가용성: SiveillanceVMS.safe 모듈이 서버 2대에서 실시간 복제 및 장애 조치를 제공합니다."
 category: "solutions"
 lang: "ko"
-topics: "Siemens Siveillance VMS 및 SQL을 사용한 SafeKit 빠른 설치 가이드(SiveillanceVMS.safe mirror 모듈), SANless SafeKit mirror 클러스터가 Milestone XProtect와 연동되는 방식, 목차, SafeKit 소프트웨어는 SANless Milestone XProtect 고가용성 클러스터를 어떻게 간단하게 구현할까요?, SafeKit mirror 클러스터가 Milestone XProtect와 어떻게 연동되나요?, SafeKit 고가용성 제한 사항, 비교: Milestone XProtect용 SafeKit과 다른 클러스터링 솔루션, 비디오 가이드: SafeKit HA mirror 클러스터를 구성, 🔍 SafeKit 살펴보기"
+topics: "Siemens Siveillance VMS 및 SQL을 사용한 SafeKit 빠른 설치 가이드(SiveillanceVMS.safe mirror 모듈)"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/san-vs-nas-shared-
 description: "故障转移集群的 SAN 与 NAS 共享存储对比：局限、成本和风险，以及为何 SafeKit 复制无需共享存储。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "SAN 或 NAS 共享存储：哪种更适合故障转移集群？、🔍 探索 SafeKit"
+topics: "SAN 或 NAS 共享存储：哪种更适合故障转移集群？"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

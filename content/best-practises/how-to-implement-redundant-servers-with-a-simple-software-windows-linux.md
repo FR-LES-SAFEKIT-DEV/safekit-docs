@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/best-practises/how-to-implement-redundant
 description: "How to implement redundant servers with software only: SafeKit provides real-time replication and automatic failover on Windows and Linux, with no shared disk."
 category: "best-practises"
 lang: "en"
-topics: "How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?, 🔍 Explore SafeKit"
+topics: "How to implement active/passive redundant servers with real-time replication and failover?, How to implement active/active redundant servers with network load balancing and failover?"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"
 ---

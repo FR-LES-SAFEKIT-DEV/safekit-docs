@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/architectures/clustering-software-l
 description: "Combine módulos farm e mirror do SafeKit: o balanceamento de carga escala o front-end e a replicação síncrona protege os dados do back-end, no Windows e Linux."
 category: "architectures"
 lang: "pt-br"
-topics: "Alta disponibilidade e escalabilidade de aplicações web e de banco de dados críticas com o software de cluster SafeKit, 🔍 Explore SafeKit"
+topics: "Alta disponibilidade e escalabilidade de aplicações web e de banco de dados críticas com o software de cluster SafeKit"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

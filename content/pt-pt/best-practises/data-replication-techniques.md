@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-pt/best-practises/data-replication-tec
 description: "Técnicas de replicação de dados comparadas ao nível de base de dados, disco e ficheiro, e como o SafeKit oferece replicação síncrona e failover sem armazenamento partilhado."
 category: "best-practises"
 lang: "pt-pt"
-topics: "Técnicas de replicação de dados ao nível da base de dados, nível de disco ou nível de ficheiro?, Tabelas comparativas entre técnicas de replicação de dados, 🔍 Explore SafeKit"
+topics: "Técnicas de replicação de dados ao nível da base de dados, ao nível do disco ou ao nível do ficheiro?, Tabelas comparativas entre técnicas de replicação de dados"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"

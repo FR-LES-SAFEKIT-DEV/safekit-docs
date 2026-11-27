@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ja/safekit-pricing/"
 description: "SafeKit の価格：サーバー単位の永久ライセンス、無料のアプリケーションモジュール、Enterprise 版不要。Windows または Linux クラスターのお見積もり。"
 category: "home"
 lang: "ja"
-topics: "ライセンスモデルと価格、標準サポートおよびメンテナンス、お見積もりを依頼する"
+topics: "ライセンスモデルと価格, 標準サポートおよびメンテナンス, お見積もりを依頼する"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

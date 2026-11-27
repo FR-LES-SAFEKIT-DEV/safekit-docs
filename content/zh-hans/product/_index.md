@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/product/"
 description: "SafeKit 将实时复制、自动故障转移和网络负载均衡集成于一款适用于 Windows 和 Linux 的软件产品中，无需共享存储。"
 category: "product"
 lang: "zh-hans"
-topics: "什么是 SafeKit？、🔍 探索 SafeKit、为何选择 SafeKit 实现简单且经济高效的高可用性？、为什么一体化无共享存储高可用性产品至关重要？、选择高可用性策略：虚拟机级 HA 与应用级 HA、SafeKit 高可用性限制、SafeKit 视频库、SafeKit 与传统高可用性 (HA) 集群的比较、SafeKit HA 免费试用版和技术文档、SafeKit 应用模块库：即用型高可用性解决方案"
+topics: "什么是 SafeKit？"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

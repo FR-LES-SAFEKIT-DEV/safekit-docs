@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/it/best-practises/shared-nothing-architec
 description: "Architettura shared-nothing o a disco condiviso per l’alta disponibilità: come SafeKit replica i dati tra server per evitare i costi SAN e semplificare il failover."
 category: "best-practises"
 lang: "it"
-topics: "Architettura shared-nothing vs. architettura a disco condiviso per cluster ad alta disponibilità, architettura shared-nothing vs. architettura a disco condiviso: pro e contro, 🔍 Esplora SafeKit"
+topics: "Architettura shared-nothing vs. architettura a disco condiviso per cluster ad alta disponibilità, Architettura shared-nothing vs. architettura a disco condiviso: pro e contro"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

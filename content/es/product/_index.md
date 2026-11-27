@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/es/product/"
 description: "SafeKit combina replicación en tiempo real, conmutación por error automática y equilibrio de carga de red en un único software para Windows y Linux, sin disco compartido."
 category: "product"
 lang: "es"
-topics: "¿Qué es SafeKit?, 🔍 Explore SafeKit, ¿Por qué elegir SafeKit para una alta disponibilidad sencilla y rentable?, ¿Por qué es esencial un producto todo en uno de alta disponibilidad sin SAN?, Cómo elegir su estrategia de alta disponibilidad: HA de VM frente a HA de aplicación, Limitaciones de alta disponibilidad de SafeKit, Videoteca SafeKit, Comparación de SafeKit con los clústeres tradicionales de alta disponibilidad (HA), Prueba gratuita y documentación técnica de SafeKit HA, Biblioteca de módulos de aplicación SafeKit: soluciones de alta disponibilidad listas para usar"
+topics: "¿Qué es SafeKit?"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

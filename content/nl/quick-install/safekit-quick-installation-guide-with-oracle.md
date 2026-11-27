@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installati
 description: "Stapsgewijze handleiding: installeer de SafeKit-module oracle.safe voor realtime replicatie en automatische failover van Oracle-databases op Windows of Linux."
 category: "quick-install"
 lang: "nl"
-topics: "Snelinstallatiegids voor hoge beschikbaarheid voor Oracle, Beperkingen SafeKit High Availability, Overzicht van de SafeKit/Oracle-oplossing, Installatie van de SafeKit/Oracle-oplossing op Windows en Linux (oracle.safe), Stapsgewijze configuratie van de SafeKit/Oracle-oplossing, Demonstratie van de SafeKit mirror, 🔍 Ontdek SafeKit"
+topics: "Overzicht van de SafeKit/Oracle-oplossing, Installatie van de SafeKit/Oracle-oplossing op Windows en Linux (oracle.safe), Stapsgewijze configuratie van de SafeKit/Oracle-oplossing, Demonstratie van de SafeKit mirror"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

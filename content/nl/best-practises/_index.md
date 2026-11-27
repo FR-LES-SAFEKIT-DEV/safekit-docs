@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/nl/best-practises/"
 description: "Best practices voor hoge beschikbaarheid: HA-architecturen, synchrone en asynchrone replicatie, failover van virtuele IP-adressen, quorum, RPO en RTO, uitgelegd met SafeKit."
 category: "best-practises"
 lang: "nl"
-topics: "Architectuur en ontwerppatronen, Hoge beschikbaarheid en herstel na noodgevallen, Replicatiestrategieën, Clustering en failover, Opslag en infrastructuur, Implementatie en migratie"
+topics: "Best practices voor SafeKit-clustering: HA-architectuur, replicatie en redundantie, Architectuur en ontwerppatronen, Hoge beschikbaarheid en herstel na noodgevallen, Replicatiestrategieën, Clustering en failover, Opslag en infrastructuur, Implementatie en migratie"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

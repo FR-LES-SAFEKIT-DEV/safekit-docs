@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/fr/best-practises/data-replication-techni
 description: "Techniques de réplication comparées au niveau base de données, disque et fichier, et comment SafeKit assure réplication synchrone et basculement sans stockage partagé."
 category: "best-practises"
 lang: "fr"
-topics: "Techniques de réplication de données au niveau de la base de données, Au niveau du disque ou au niveau du fichier ?, Tableaux comparatifs des techniques de réplication de données, 🔍 Explorez SafeKit"
+topics: "Techniques de réplication de données au niveau de la base de données, du disque ou du fichier ?, Tableaux comparatifs des techniques de réplication de données"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.15 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/03/data-replication-techniques.png"
 schemaType: "TechArticle"

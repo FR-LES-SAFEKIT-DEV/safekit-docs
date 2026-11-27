@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/architectures/clustering-software-load-ba
 description: "Combine SafeKit farm and mirror modules: load balancing scales the front end while synchronous replication protects back-end data, on Windows and Linux."
 category: "architectures"
 lang: "en"
-topics: "High availability and scalability of critical web and database applications with the SafeKit clustering software, 🔍 Explore SafeKit"
+topics: "High availability and scalability of critical web and database applications with the SafeKit clustering software"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---

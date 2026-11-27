@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/use-cases/video-management-software-vm
 description: "VMS-Redundanz mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und Failover für Milestone, Genetec, Bosch und andere Videomanagementsysteme."
 category: "use-cases"
 lang: "de"
-topics: "Was ist eine Video-Management-Software (VMS)?, Warum ist VMS-Software unerlässlich?, Wichtigste VMS-Anbieter, SafeKit bietet zwei Lösungen für die Redundanz und Hochverfügbarkeit von VMS-Software., SafeKit, eine anerkannte Lösung auf dem Sicherheitsmarkt, 🔍 SafeKit entdecken"
+topics: "Was ist eine Video-Management-Software (VMS)?, Warum ist VMS-Software unerlässlich?, Wichtigste VMS-Anbieter"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

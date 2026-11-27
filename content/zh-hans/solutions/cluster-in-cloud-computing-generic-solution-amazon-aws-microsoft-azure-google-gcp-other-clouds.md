@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/solutions/cluster-in-cloud-comput
 description: "使用 SafeKit 构建云端集群：一套通用方案，在 AWS、Azure、Google Cloud 及其他云中实现复制、故障转移和负载均衡。"
 category: "solutions"
 lang: "zh-hans"
-topics: "在 Microsoft Azure 中发现 SafeKit、在 Google GCP 中发现 SafeKit、在 Amazon AWS 上发现 SafeKit、其他采用 Eviden SafeKit 的云解决方案、🔍 探索 SafeKit"
+topics: "其他采用 Eviden SafeKit 的云解决方案"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

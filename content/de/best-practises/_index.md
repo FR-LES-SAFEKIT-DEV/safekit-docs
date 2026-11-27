@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/"
 description: "Best Practices für Hochverfügbarkeit: HA-Architekturen, synchrone und asynchrone Replikation, Failover der virtuellen IP, Quorum, RPO und RTO, erklärt mit SafeKit."
 category: "best-practises"
 lang: "de"
-topics: "Architektur und Entwurfsmuster, Hochverfügbarkeit und Disaster Recovery, Replikationsstrategien, Clustering und Failover, Speicher und Infrastruktur, Implementierung und Migration"
+topics: "SafeKit-Clustering – Best Practices: HA-Architektur, Replikation und Redundanz, Architektur und Entwurfsmuster, Hochverfügbarkeit und Disaster Recovery, Replikationsstrategien, Clustering und Failover, Speicher und Infrastruktur, Implementierung und Migration"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/pt-br/resources/safekit-support/"
 description: "Suporte SafeKit: suporte contratual com registro de incidentes 24/7, ajuda gratuita do SafeKit AI e um programa gratuito de treinamento e certificação online."
 category: "resources"
 lang: "pt-br"
-topics: "Suporte gratuito de IA nível 1, suporte e manutenção padrão, programa gratuito de certificação e treinamento, 🔍 Explore o SafeKit"
+topics: "Suporte gratuito de IA nível 1, Suporte e manutenção padrão, Programa gratuito de certificação e treinamento"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

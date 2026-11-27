@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/high-availability-public-tra
 description: "대중교통 관제실 고가용성: RATP는 무인 파리 지하철 1호선에 복제, 장애 조치, 부하 분산을 위해 SafeKit을 사용합니다."
 category: "use-cases"
 lang: "ko"
-topics: "대중교통 통제실, 관제실이 왜 중요할까요?, 대중교통을 위한 SafeKit 고가용성, RATP의 실제 적용 사례, 🔍 SafeKit 살펴보기"
+topics: "대중교통 통제실, 관제실이 왜 중요할까요?, 대중교통을 위한 SafeKit 고가용성, RATP의 실제 적용 사례"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

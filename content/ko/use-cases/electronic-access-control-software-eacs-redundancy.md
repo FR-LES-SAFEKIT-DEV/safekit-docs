@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ko/use-cases/electronic-access-control-so
 description: "SafeKit으로 구현하는 출입 통제(EACS) 이중화: Nedap, Siemens, HID 등 시스템를 위한 동기 복제 및 장애 조치 기반 2노드 클러스터."
 category: "use-cases"
 lang: "ko"
-topics: "전자식 출입 통제 시스템(EACS)이란 무엇인가요?, EACS 소프트웨어가 중요한 이유는 무엇입니까?, 주요 EACS 공급업체, SafeKit EACS 소프트웨어의 이중화 및 고가용성을 위한 두 가지 솔루션을 제공합니다., SafeKit, 보안 시장에서 인정받은 솔루션, 🔍 SafeKit 살펴보기"
+topics: "전자식 출입 통제 시스템(EACS)이란 무엇인가요?, EACS 소프트웨어가 중요한 이유는 무엇입니까?, 주요 EACS 공급업체"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

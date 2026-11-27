@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/solutions/kubernetes-k3s-the-simplest-
 description: "التوفر العالي لـ Kubernetes K3s على عقدتين مع SafeKit: نسخ متزامن وتجاوز فشل تلقائي، دون تخزين خارجي أو نصاب etcd."
 category: "solutions"
 lang: "ar"
-topics: "تبسيط التوافر العالي (HA) في K3s: لماذا تختار SafeKit بدلاً من MetalLB و Longhorn؟، جدول المحتويات، كيف يقوم برنامج SafeKit بتطبيق مجموعة Kubernetes K3s عالية التوافر ببساطة؟، كيف تعمل مجموعة mirror SafeKit مع Kubernetes K3S؟، قيود التوافر العالي SafeKit، مقارنة: SafeKit مقابل حزمة K3s القياسية (MetalLB و Longhorn)، دليل الفيديو: تهيئة مجموعة mirror SafeKit HA، 🔍 استكشف SafeKit"
+topics: "تبسيط التوافر العالي (HA) في K3s: لماذا تختار SafeKit بدلاً من MetalLB و Longhorn؟, جدول المحتويات, كيف يقوم برنامج SafeKit بتطبيق مجموعة Kubernetes K3s عالية التوافر ببساطة؟, كيف تعمل مجموعة mirror SafeKit مع Kubernetes K3S؟, مقارنة: SafeKit مقابل حزمة K3s القياسية (MetalLB و Longhorn), دليل الفيديو: تهيئة مجموعة mirror SafeKit HA"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 26 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 schemaType: "TechArticle"

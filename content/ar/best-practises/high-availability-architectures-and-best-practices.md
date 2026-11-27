@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/ar/best-practises/high-availability-archi
 description: "بنيات التوفر العالي وأفضل الممارسات لتجميع التطبيقات: مجموعات mirror و farm، والنسخ وتجاوز الفشل، مع أمثلة من SafeKit."
 category: "best-practises"
 lang: "ar"
-topics: "ما هي معماريات التوافر العالي وأفضل الممارسات؟، جداول مقارنة حول معماريات التوافر العالي وأفضل الممارسات، 🔍 استكشف SafeKit"
+topics: "ما هي معماريات التوافر العالي وأفضل الممارسات؟, جداول مقارنة حول معماريات التوافر العالي وأفضل الممارسات"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

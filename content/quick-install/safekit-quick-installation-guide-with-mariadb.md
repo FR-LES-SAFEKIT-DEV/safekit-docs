@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 description: "Step-by-step guide: install the SafeKit mysql.safe module for real-time replication and automatic failover of MariaDB on Windows or Linux."
 category: "quick-install"
 lang: "en"
-topics: "High Availability Quick Installation Guide for MariaDB, SafeKit High Availability Limitations, Overview of the SafeKit / MariaDB solution, Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe), Step by step configuration of the SafeKit / MariaDB solution, Demonstration of the SafeKit mirror solution, 🔍 Explore SafeKit"
+topics: "Overview of the SafeKit / MariaDB solution, Installation of the SafeKit / MariaDB solution on Windows and Linux (mysql.safe), Step by step configuration of the SafeKit / MariaDB solution, Demonstration of the SafeKit mirror solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

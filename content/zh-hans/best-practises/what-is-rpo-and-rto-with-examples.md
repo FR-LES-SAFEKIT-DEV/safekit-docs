@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/zh-hans/best-practises/what-is-rpo-and-rt
 description: "RPO 和 RTO 的含义及示例，以及 SafeKit 如何实现零数据丢失（RPO 0）和快速自动故障转移，保障业务连续性。"
 category: "best-practises"
 lang: "zh-hans"
-topics: "快速总结：RPO 与 RTO、目录、如何计算高可用性和业务连续性解决方案的 RPO 和 RTO？、如何确定备份和灾难恢复解决方案的 RPO 和 RTO？、SafeKit mirror 集群如何实现零 RPO 和低 RTO？、对于带有负载均衡的 SafeKit farm 集群 RTO 基准是什么？、对比表：RTO 与 RPO、高可用性实践：零数据丢失和近乎零停机的实时演示、常见问题：优化业务连续性的 RPO 和 RTO、🔍 探索 SafeKit"
+topics: "快速总结：RPO 与 RTO, 目录, 如何计算高可用性和业务连续性解决方案的 RPO 和 RTO？, 如何确定备份和灾难恢复解决方案的 RPO 和 RTO？, SafeKit mirror 集群如何实现零 RPO 和低 RTO？, 对于带有负载均衡的 SafeKit farm 集群 RTO 基准是什么？, 对比表：RTO 与 RPO, 高可用性实践：零数据丢失和近乎零停机的实时演示, 常见问题：优化业务连续性的 RPO 和 RTO"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 schemaType: "TechArticle"

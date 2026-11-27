@@ -4,7 +4,7 @@ canonical: "https://safekit.eviden.com/de/best-practises/san-vs-nas-shared-stora
 description: "SAN vs. NAS als gemeinsamer Speicher für Failover-Cluster: Grenzen, Kosten und Risiken, und warum die SafeKit-Replikation gemeinsamen Speicher überflüssig macht."
 category: "best-practises"
 lang: "de"
-topics: "SAN- oder NAS-Gemeinsamspeicher: Was ist für einen Failover-Cluster einfacher?, 🔍 SafeKit entdecken"
+topics: "SAN- oder NAS-Gemeinsamspeicher: Was ist für einen Failover-Cluster einfacher?"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"
