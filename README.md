@@ -46,8 +46,10 @@ architectures, and solutions pages, `CollectionPage` for section indexes,
 front matter to override the default with `WebPage`, `CollectionPage`,
 `ContactPage`, `Article`, `TechArticle`, or `Course`. Pages link to the same
 SafeKit software and website entities and identify Eviden as their
-organizational author. Pages marked `noindex`, redirects, and 404 pages do not
-receive this structured data.
+organizational author. `Article` and `TechArticle` pages reference SafeKit by
+its `@id` without declaring a separate software application on each article.
+Pages marked `noindex`, redirects, and 404 pages do not receive this structured
+data.
 
 Optional front matter fields `schemaApplications`, `schemaSector`, and
 `schemaMentions` identify applications, sectors, and organizations discussed
