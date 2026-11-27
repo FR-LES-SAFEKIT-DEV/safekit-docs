@@ -7,6 +7,7 @@ lang: "en"
 topics: "Free AI Level 1 Support, Standard Support & Maintenance, Free Certification & Training Program"
 hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit AI & Support {#safekit-ai--support}

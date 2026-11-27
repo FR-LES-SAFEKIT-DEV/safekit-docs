@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Gratis AI-ondersteuning niveau 1, Standaard ondersteuning en onderhoud, Gratis certificerings- en trainingsprogramma"
 hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit AI & Ondersteuning {#safekit-ai--support}

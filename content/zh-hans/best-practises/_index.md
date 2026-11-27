@@ -8,6 +8,7 @@ topics: "SafeKit 集群最佳实践：高可用性架构、复制和冗余, 架�
 hashpart: "safekit-clustering-best-practices-ha-architecture-replication--redundancy, architecture--design-patterns, high-availability--disaster-recovery, replication-strategies, clustering--failover, storage--infrastructure, implementation--migration"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # 高可用性最佳实践 {#high-availability-best-practices}

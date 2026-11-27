@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Gratis proefversie technische documentatie en productinformatie voor SafeKit High Availability"
 hashpart: "free-trial-technical-documentation--product-information-for-safekit-high-availability"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit Bronnen {#safekit-resources}

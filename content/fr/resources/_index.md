@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Essai gratuit documentation technique et informations produit pour SafeKit Haute disponibilité"
 hashpart: "free-trial-technical-documentation--product-information-for-safekit-high-availability"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # Ressources SafeKit {#safekit-resources}

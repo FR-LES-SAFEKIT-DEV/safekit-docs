@@ -7,6 +7,7 @@ lang: "es"
 topics: "Soporte gratuito de IA de nivel 1, Soporte y mantenimiento estándar, Programa gratuito de certificación y capacitación"
 hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit IA y soporte {#safekit-ai--support}

@@ -6,6 +6,7 @@ category: "resources"
 lang: "ko"
 layout: userguide
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 <div class="userguide-container">

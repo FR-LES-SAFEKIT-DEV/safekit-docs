@@ -8,6 +8,7 @@ topics: "Che cos’è SafeKit?, Perché un prodotto all-in-one SANless ad alta d
 hashpart: "what-is-safekit, all-in-one-sanless-ha, safekit-ha-redundancy-choices, safekit-ha-limitations, safekit-video-library, safekit-ha-comparison, -safekits-ha-software-packages---version-82, supported-operating-systems-platforms, -safekits-ha-trial-key, config-guides-heading, support, -free-training-and-certification-on-safekit, ℹ-product-marketing-documentation, safekit-ha-application-modules"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 42 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit: software tutto in uno per l’alta disponibilità e il clustering delle applicazioni senza SAN {#safekit-all-in-one-sanless-high-availability--application-clustering-software}

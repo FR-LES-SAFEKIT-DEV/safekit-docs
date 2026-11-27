@@ -8,6 +8,7 @@ topics: "SafeKit이란 무엇인가요?, 올인원 SAN리스 고가용성 제품
 hashpart: "what-is-safekit, all-in-one-sanless-ha, safekit-ha-redundancy-choices, safekit-ha-limitations, safekit-video-library, safekit-ha-comparison, -safekits-ha-software-packages---version-82, supported-operating-systems-platforms, -safekits-ha-trial-key, config-guides-heading, support, -free-training-and-certification-on-safekit, ℹ-product-marketing-documentation, safekit-ha-application-modules"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit: SAN 없이도 고가용성 및 애플리케이션 클러스터링을 지원하는 올인원 소프트웨어 {#safekit-all-in-one-sanless-high-availability--application-clustering-software}

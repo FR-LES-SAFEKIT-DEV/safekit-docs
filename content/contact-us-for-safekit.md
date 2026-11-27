@@ -5,6 +5,7 @@ description: "Contact Eviden about SafeKit high availability software for Window
 lang: "en"
 category: "home"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "ContactPage"
 ---
 
 # Contact Us About SafeKit {#contact-us-for-safekit}

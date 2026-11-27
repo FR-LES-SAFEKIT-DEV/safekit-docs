@@ -7,6 +7,7 @@ lang: "en"
 topics: "Licensing model and pricing, Standard support and maintenance, Request a quote"
 hashpart: "licensing-model-and-pricing, standard-support-and-maintenance, information-to-include-in-your-quote-request"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit Pricing {#safekit-pricing}

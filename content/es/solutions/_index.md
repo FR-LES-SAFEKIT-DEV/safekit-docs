@@ -8,6 +8,7 @@ topics: "Módulos de alta disponibilidad SafeKit y guías de instalación rápid
 hashpart: "safekit-ha-application-modules"
 translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 15 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # Soluciones SafeKit {#safekit-solutions}

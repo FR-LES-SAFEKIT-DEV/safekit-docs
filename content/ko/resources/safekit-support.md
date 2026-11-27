@@ -7,6 +7,7 @@ lang: "ko"
 topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지보수, 무료 인증 및 교육 프로그램"
 hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit AI 및 지원 {#safekit-ai--support}

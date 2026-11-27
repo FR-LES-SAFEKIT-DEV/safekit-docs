@@ -7,6 +7,7 @@ lang: "en"
 topics: "SafeKit Clustering Best Practices: HA Architecture Replication & Redundancy, Architecture & Design Patterns, High Availability & Disaster Recovery, Replication Strategies, Clustering & Failover, Storage & Infrastructure, Implementation & Migration"
 hashpart: "safekit-clustering-best-practices-ha-architecture-replication--redundancy, architecture--design-patterns, high-availability--disaster-recovery, replication-strategies, clustering--failover, storage--infrastructure, implementation--migration"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # High Availability Best Practices {#high-availability-best-practices}

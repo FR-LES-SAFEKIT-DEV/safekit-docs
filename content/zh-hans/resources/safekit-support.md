@@ -7,6 +7,7 @@ lang: "zh-hans"
 topics: "免费AI一级支持, 标准支持与维护, 免费认证和培训计划"
 hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit AI & 支持 {#safekit-ai--support}

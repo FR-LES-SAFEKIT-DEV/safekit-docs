@@ -8,6 +8,7 @@ topics: "Wat zijn de verschillende high-availability-architecturen en de verschi
 hashpart: "what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit, how-to-build-high-availability-clusters-with-safekit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 21 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit-architecturen {#safekit-architectures}

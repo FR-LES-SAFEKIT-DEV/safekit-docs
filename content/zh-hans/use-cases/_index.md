@@ -8,6 +8,7 @@ topics: "SafeKit 用例"
 hashpart: "safekit-use-cases"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.18 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
+schemaType: "CollectionPage"
 ---
 
 # 客户用例 {#customer-use-cases}

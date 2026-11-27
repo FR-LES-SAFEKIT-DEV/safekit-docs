@@ -7,6 +7,7 @@ lang: "ko"
 topics: "Windows 또는 Linux용 SafeKit 1개월 무료 라이선스 키를 이메일로 받기"
 hashpart: "receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit 1개월 무료 평가판 키 {#safekit-one-month-free-trial-key}

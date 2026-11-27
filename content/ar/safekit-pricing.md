@@ -8,6 +8,7 @@ topics: "نموذج الترخيص والتسعير, الدعم والصيانة
 hashpart: "licensing-model-and-pricing, standard-support-and-maintenance, information-to-include-in-your-quote-request"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # أسعار SafeKit {#safekit-pricing}

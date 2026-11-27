@@ -7,6 +7,7 @@ sitemap:
   disable: true
 translation: "translate_md 2026-11-06.13 | glossaire 2026-11-06.6 | Translation LLM | 17 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 <div class="contact-safekit-page contact-safekit-confirmation">

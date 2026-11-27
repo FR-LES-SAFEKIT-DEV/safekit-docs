@@ -7,6 +7,7 @@ lang: "ko"
 topics: "SafeKit 고가용성 제품 무료 체험 기술 문서 및 제품 정보"
 hashpart: "free-trial-technical-documentation--product-information-for-safekit-high-availability"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit 리소스 {#safekit-resources}

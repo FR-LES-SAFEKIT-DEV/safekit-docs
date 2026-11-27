@@ -7,6 +7,7 @@ lang: "nl"
 topics: "Ontvang per e-mail een gratis SafeKit-licentiesleutel voor één maand voor Windows of Linux"
 hashpart: "receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # Gratis SafeKit-proefsleutel voor één maand {#safekit-one-month-free-trial-key}

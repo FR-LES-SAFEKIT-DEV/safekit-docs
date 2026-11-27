@@ -8,6 +8,7 @@ topics: "ما هي معماريات التوافر العالي المختلفة
 hashpart: "what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit, how-to-build-high-availability-clusters-with-safekit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 17 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
+schemaType: "CollectionPage"
 ---
 
 # بُنى SafeKit {#safekit-architectures}

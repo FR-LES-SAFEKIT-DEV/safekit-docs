@@ -8,6 +8,7 @@ topics: "SafeKit를 사용한 다양한 고가용성 아키텍처와 다양한 �
 hashpart: "what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit, how-to-build-high-availability-clusters-with-safekit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit 아키텍처 {#safekit-architectures}

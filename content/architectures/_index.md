@@ -7,6 +7,7 @@ lang: "en"
 topics: "What are the different high availability architectures and the different software clusters with SafeKit?, How to build high availability clusters with SafeKit?"
 hashpart: "what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit, how-to-build-high-availability-clusters-with-safekit"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit Architectures {#safekit-architectures}

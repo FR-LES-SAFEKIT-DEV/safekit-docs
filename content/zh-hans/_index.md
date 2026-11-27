@@ -8,6 +8,7 @@ topics: "SafeKit 功能, 选择您的保护级别, 适用于您应用程序的�
 hashpart: "features, protection-levels, modules, use-cases, pricing, limits, safekit-video-library"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit：适用于 Windows 和 Linux 的高可用性软件，无需 SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}

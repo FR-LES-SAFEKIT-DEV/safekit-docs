@@ -7,6 +7,7 @@ lang: "fr"
 topics: "Recevez par e-mail une clé de licence SafeKit gratuite d’un mois pour Windows ou Linux"
 hashpart: "receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # Clé d’essai gratuite SafeKit d’un mois {#safekit-one-month-free-trial-key}

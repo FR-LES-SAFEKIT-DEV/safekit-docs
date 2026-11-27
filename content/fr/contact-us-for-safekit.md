@@ -6,6 +6,7 @@ lang: "fr"
 category: "home"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "ContactPage"
 ---
 
 # Contactez-nous à propos de SafeKit {#contact-us-for-safekit}

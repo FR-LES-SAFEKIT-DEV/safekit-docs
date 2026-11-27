@@ -7,6 +7,7 @@ lang: "ar"
 topics: "دعم مجاني للذكاء الاصطناعي من المستوى الأول, الدعم والصيانة القياسيان, برنامج الشهادات والتدريب المجاني"
 hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit الذكاء الاصطناعي والدعم {#safekit-ai--support}

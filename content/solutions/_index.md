@@ -7,6 +7,7 @@ lang: "en"
 topics: "SafeKit HA Modules & Quick Installation Guides"
 hashpart: "safekit-ha-application-modules"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit Solutions {#safekit-solutions}

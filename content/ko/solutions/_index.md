@@ -8,6 +8,7 @@ topics: "SafeKit HA 모듈 및 빠른 설치 가이드"
 hashpart: "safekit-ha-application-modules"
 translation: "translate_md 2026-11-07.11 | glossaire 2026-11-07.6 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # SafeKit 솔루션 {#safekit-solutions}

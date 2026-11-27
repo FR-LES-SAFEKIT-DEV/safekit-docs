@@ -8,6 +8,7 @@ topics: "라이선스 모델 및 가격 책정, 표준 지원 및 유지보수, 
 hashpart: "licensing-model-and-pricing, standard-support-and-maintenance, information-to-include-in-your-quote-request"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit 가격 {#safekit-pricing}

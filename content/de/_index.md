@@ -8,6 +8,7 @@ topics: "Was SafeKit tut, Wählen Sie Ihr Schutzniveau, Fertige Module für Ihre
 hashpart: "features, protection-levels, modules, use-cases, pricing, limits, safekit-video-library"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 55 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "WebPage"
 ---
 
 # SafeKit: Hochverfügbarkeitssoftware für Windows und Linux, ohne SAN {#safekit-high-availability-software-for-windows-and-linux-without-a-san}

@@ -8,6 +8,7 @@ topics: "SafeKit 클러스터링 모범 사례: HA 아키텍처 복제 및 이�
 hashpart: "safekit-clustering-best-practices-ha-architecture-replication--redundancy, architecture--design-patterns, high-availability--disaster-recovery, replication-strategies, clustering--failover, storage--infrastructure, implementation--migration"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
+schemaType: "CollectionPage"
 ---
 
 # 고가용성 모범 사례 {#high-availability-best-practices}
