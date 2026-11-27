@@ -5,6 +5,7 @@ description: "Het virtuele IP-adres voor loadbalancing van een SafeKit farm-clus
 category: "best-practises"
 lang: "nl"
 topics: "1. Kernprincipes, 2. Vereiste: het SafeKit-mozaïek, 3. Test 1 – Verdeling van verbindingen, 4. Test 2 – Wijziging van de verzendserver, 5. Test 3 – GARP omleiding controleren met arp -a, 6. Test 4 – End-to-end-controle met Wireshark (Windows) of tcpdump (Linux), 7. Vanaf welke werkstations testen?, 8. Samenvatting van de verwachte resultaten, 9. Probleemoplossing, Demonstratie van de SafeKit farm"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

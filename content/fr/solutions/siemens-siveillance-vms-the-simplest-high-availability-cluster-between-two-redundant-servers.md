@@ -5,6 +5,7 @@ description: "Haute disponibilité Siemens Siveillance VMS avec SafeKit : le mod
 category: "solutions"
 lang: "fr"
 topics: "Guide d’installation rapide SafeKit avec Siemens Siveillance VMS et SQL (module mirror SiveillanceVMS.safe)"
+hashpart: "safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 32 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"

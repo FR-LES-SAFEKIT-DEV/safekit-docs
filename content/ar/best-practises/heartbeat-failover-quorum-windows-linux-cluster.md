@@ -5,6 +5,7 @@ description: "كيف تعمل نبضة heartbeat وتجاوز الفشل وال�
 category: "best-practises"
 lang: "ar"
 topics: "كيف تعمل نبضات heartbeat والتحويل التلقائي (failover) في مجموعة حواسيب تعمل بنظام Windows أو Linux؟, Split-brain والنصاب (quorum) مع الخوادم في غرفتي حاسوب منفصلتين, نظام نصاب بسيط للمجموعات باستخدام أداة SafeKit مدقق split-brain"
+hashpart: "how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster, split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms, simple-cluster-quorum-with-the-safekit-split-brain-checker"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

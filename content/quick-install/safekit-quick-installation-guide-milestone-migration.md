@@ -5,6 +5,7 @@ description: "How to migrate a Milestone XProtect Management Server protected by
 category: "quick-install"
 lang: "en"
 topics: "Eviden SafeKit"
+hashpart: "eviden-safekit"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

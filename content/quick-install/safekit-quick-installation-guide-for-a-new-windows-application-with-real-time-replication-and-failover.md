@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit mirror.safe module on Wind
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Windows solution, Installation on the SafeKit / Windows solutions (mirror.safe), Step by step configuration of the SafeKit / Windows solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--windows-solution, installation-on-the-safekit--windows-solutions-mirrorsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

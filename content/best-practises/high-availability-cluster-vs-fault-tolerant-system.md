@@ -5,6 +5,7 @@ description: "HA cluster vs fault-tolerant system: compare costs, recovery and p
 category: "best-practises"
 lang: "en"
 topics: "What is the difference between high availability and fault tolerance?, Pros and cons of high availability and fault tolerance"
+hashpart: "what-is-the-difference-between-high-availability-and-fault-tolerance, pros-and-cons-of-high-availability-and-fault-tolerance"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---

@@ -5,6 +5,7 @@ description: "HA 클러스터와 내결함성 시스템 비교: 비용, 복구, 
 category: "best-practises"
 lang: "ko"
 topics: "고가용성과 내결함성의 차이점은 무엇인가요?, 고가용성 및 내결함성의 장단점"
+hashpart: "what-is-the-difference-between-high-availability-and-fault-tolerance, pros-and-cons-of-high-availability-and-fault-tolerance"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

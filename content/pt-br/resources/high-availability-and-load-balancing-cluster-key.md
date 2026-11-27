@@ -5,6 +5,7 @@ description: "Solicite uma chave SafeKit gratuita de um mês para testar cluster
 category: "resources"
 lang: "pt-br"
 topics: "Receba por e-mail uma chave de licença gratuita do SafeKit por um mês para Windows ou Linux"
+hashpart: "receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

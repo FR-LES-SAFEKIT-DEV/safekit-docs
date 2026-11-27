@@ -5,6 +5,7 @@ description: "适用于 Windows 和 Linux 的高可用性软件：SafeKit 集群
 category: "use-cases"
 lang: "zh-hans"
 topics: "SafeKit 30 秒电梯演讲"
+hashpart: "30-seconds-elevator-pitch-for-safekit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

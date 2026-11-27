@@ -5,6 +5,7 @@ description: "التوفر العالي على الحافة دون مركز بي
 category: "use-cases"
 lang: "ar"
 topics: "تحدي التوافر العالي في الحافة, لماذا يُعد SafeKit الخيار الطبيعي للحوسبة الطرفية؟, مدى ملاءمة النشر على الحافة والموزع, لماذا تختلف بيئات تكنولوجيا التشغيل الطرفية؟, حالات الاستخدام المثالية على الحافة, الوصول إلى الحافة مقابل مركز البيانات عالي التوافر: الفروق الرئيسية"
+hashpart: "the-edge-ha-challenge, what-makes-safekit-the-natural-fit-for-edge, edge--distributed-deployment-suitability, why-edge-ot-environments-are-different, ideal-edge-use-cases, edge-vs-data-center-ha-key-differences"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

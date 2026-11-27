@@ -5,6 +5,7 @@ description: "Alta disponibilidade OEM: integre a replicação e o failover Safe
 category: "use-cases"
 lang: "pt-pt"
 topics: "O caso de uso de alta disponibilidade OEM"
+hashpart: "the-oem-high-availability-use-case"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

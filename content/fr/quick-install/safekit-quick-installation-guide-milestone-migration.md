@@ -5,6 +5,7 @@ description: "Migrer un Milestone XProtect Management Server protégé par SafeK
 category: "quick-install"
 lang: "fr"
 topics: "Eviden SafeKit"
+hashpart: "eviden-safekit"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

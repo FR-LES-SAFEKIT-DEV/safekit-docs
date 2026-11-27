@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit farm.safe module in Azure,
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Azure solution, Installation of the SafeKit / Azure solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / Azure solution, Demonstration of the SafeKit farm solution"
+hashpart: "overview-of-the-safekit--azure-solution, installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--azure-solution, demonstration-of-the-safekit-farm-solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

@@ -5,6 +5,7 @@ description: "手順ガイド：任意のクラウドに SafeKit の farm.safe �
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit / Cloud ソリューションの概要, Windows および Linux への SafeKit /Cloud ソリューションのインストール (farm.safe), SafeKit / Cloud ソリューションのステップバイステップ設定, SafeKit farm ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--cloud-solution, installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--cloud-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

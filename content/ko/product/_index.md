@@ -5,6 +5,7 @@ description: "SafeKit은 공유 스토리지 없이 실시간 복제, 자동 장
 category: "product"
 lang: "ko"
 topics: "SafeKit이란 무엇인가요?"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

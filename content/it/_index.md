@@ -5,6 +5,7 @@ description: "Software di alta disponibilità SafeKit per Windows e Linux: repli
 category: "home"
 lang: "it"
 topics: "Cosa fa SafeKit, Scegli il tuo livello di protezione, Moduli pronti all’uso per le tue applicazioni, Casi d’uso dei clienti, Prezzi semplici e prevedibili, Limitazioni da considerare"
+hashpart: "features, protection-levels, modules, use-cases, pricing, limits"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 42 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

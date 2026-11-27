@@ -5,6 +5,7 @@ description: "Clusters dans le cloud avec SafeKit : une solution générique de 
 category: "solutions"
 lang: "fr"
 topics: "Autres solutions cloud avec Eviden SafeKit"
+hashpart: "other-cloud-solutions-with-eviden-safekit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 32 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

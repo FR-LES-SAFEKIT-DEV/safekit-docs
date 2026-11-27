@@ -5,6 +5,7 @@ description: "Gratis online training en certificering voor SafeKit: installatie,
 category: "resources"
 lang: "nl"
 topics: "Hoe krijg ik toegang tot het trainingsplatform?, SafeKit-trainingsvideo's"
+hashpart: "certif, training82"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

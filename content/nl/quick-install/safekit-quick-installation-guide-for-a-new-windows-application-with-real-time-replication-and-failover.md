@@ -5,6 +5,7 @@ description: "Stapsgewijze handleiding: installeer de SafeKit-module mirror.safe
 category: "quick-install"
 lang: "nl"
 topics: "Overzicht van de SafeKit/Windows oplossing, Installatie op de SafeKit/Windows oplossingen (mirror.safe), Stapsgewijze configuratie van de SafeKit/Windows-oplossing, Demonstratie van de SafeKit mirror"
+hashpart: "overview-of-the-safekit--windows-solution, installation-on-the-safekit--windows-solutions-mirrorsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

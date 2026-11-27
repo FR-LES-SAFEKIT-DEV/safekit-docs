@@ -5,6 +5,7 @@ description: "SafeKit N-1 이중화: N+1대 서버의 N개 애플리케이션이
 category: "architectures"
 lang: "ko"
 topics: "N개 서버에서 1개 서버로의 데이터 복제 및 애플리케이션 장애 조치를 통한 고가용성"
+hashpart: "high-availability-with-data-replication-and-application-failover-from-n-servers-to-1"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "Stapsgewijze handleiding: installeer de SafeKit-module hyperv.safe
 category: "quick-install"
 lang: "nl"
 topics: "Overzicht van de SafeKit/Hyper-V oplossing, Installatie van de SafeKit/Hyper-V oplossing op Windows (hyperv.safe), Stapsgewijze configuratie van de SafeKit/Hyper-V oplossing, Demonstratie van de SafeKit/Hyper-V oplossing"
+hashpart: "overview-of-the-safekit--hyper-v-solution, installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe, step-by-step-configuration-of-the-safekit--hyper-v-solution, demonstration-of-the-safekit--hyper-v-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

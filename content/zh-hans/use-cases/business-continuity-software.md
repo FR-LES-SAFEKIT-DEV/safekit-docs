@@ -5,6 +5,7 @@ description: "分布式企业的高可用性：在每个分支机构部署相同
 category: "use-cases"
 lang: "zh-hans"
 topics: "分布式企业中的业务连续性"
+hashpart: "business-continuity-in-a-distributed-enterprise"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

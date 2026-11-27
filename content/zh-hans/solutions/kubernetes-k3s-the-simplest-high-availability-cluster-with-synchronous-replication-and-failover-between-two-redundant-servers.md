@@ -5,6 +5,7 @@ description: "使用 SafeKit 在双节点上实现 Kubernetes K3s 高可用性�
 category: "solutions"
 lang: "zh-hans"
 topics: "简化 K3s 高可用性：为什么选择 SafeKit 而不是 MetalLB 和 Longhorn？, 目录, SafeKit 软件如何简单地实现 Kubernetes K3s 高可用性集群？, SafeKit mirror 集群如何与 Kubernetes K3S 配合使用？, 比较：SafeKit 与标准 K3s 堆栈（MetalLB 和 Longhorn）, 视频指南：配置 SafeKit HA mirror 集群"
+hashpart: "safekit-k3s-ha-introduction, toc, safekit-mirror-k3s-cluster, safekit-mirror-cluster, safekit-k3s-ha-comparison, videoguide-safekit-mirror-cluster"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 schemaType: "TechArticle"

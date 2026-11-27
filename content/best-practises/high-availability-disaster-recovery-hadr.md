@@ -5,6 +5,7 @@ description: "Combine SafeKit high availability (synchronous replication, RPO 0)
 category: "best-practises"
 lang: "en"
 topics: "Synchronous SafeKit Replication for HA vs. Asynchronous Backup Replication for DR, Table of Contents, Synchronous HADR: Zero Data Loss over Fast Networks (LAN/VLAN), Asynchronous HADR: Disaster Recovery over Slow Networks (WAN), How to Combine HADR and Backup for Total System Resilience, Comparison of HADR Architectures: Fast vs. Slow Networks, Video Guide: How to Implement HADR with SafeKit"
+hashpart: "synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr, table-of-contents, synchronous-hadr-fast-network, asynchronous-hadr-slow-network, hadr-resilience-strategy, hadr-architectures-comparison, videoguide-hadr-safekit"
 image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"
 ---

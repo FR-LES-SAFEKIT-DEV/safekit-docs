@@ -5,6 +5,7 @@ description: "使用 SafeKit 实现业务连续性和灾难恢复：跨两个机
 category: "use-cases"
 lang: "zh-hans"
 topics: "业务连续性和灾难恢复软件"
+hashpart: "business-continuity-and-disaster-recovery-software"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

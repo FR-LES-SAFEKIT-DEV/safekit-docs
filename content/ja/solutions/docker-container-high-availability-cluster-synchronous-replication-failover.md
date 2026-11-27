@@ -5,6 +5,7 @@ description: "SafeKit による Docker の高可用性：Linux サーバー 2 �
 category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターと Docker の連携方法, 目次, SafeKit ソフトウェアは、どのようにして Docker 高可用性クラスターを簡単に実装するのでしょうか？, 比較：SafeKit SANless Cluster と従来の Docker HA, 比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）, Docker 高可用性に関する概要"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-docker, table-of-contents, how-safekit-implements-docker-ha, safekit-docker-comparison, safekit-vs-linux-ha-stack, docker-ha-summary-quick-installation-guide"
 translation: "translate_md 2026-11-08.2 | glossaire 2026-11-08.1 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "التوفر العالي لغرف التحكم في النقل ا
 category: "use-cases"
 lang: "ar"
 topics: "غرف التحكم في وسائل النقل العام, لماذا تعتبر غرفة التحكم بالغة الأهمية؟, التوافر العالي SafeKit في وسائل النقل العام, التطبيق على أرض الواقع في RATP"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

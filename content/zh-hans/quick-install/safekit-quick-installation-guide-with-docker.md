@@ -5,6 +5,7 @@ description: "分步指南：在 Linux 上安装用于 Docker 的 SafeKit mirror
 category: "quick-install"
 lang: "zh-hans"
 topics: "SafeKit/Docker 解决方案概述, 在 Linux 上安装 SafeKit/Docker 解决方案 (mirror.safe), SafeKit/Docker 解决方案的分步配置, SafeKit mirror 解决方案演示"
+hashpart: "overview-of-the-safekit--docker-solution, installation-of-the-safekit--docker-solution-on-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--docker-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

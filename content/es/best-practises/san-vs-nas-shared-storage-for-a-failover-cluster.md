@@ -5,6 +5,7 @@ description: "Almacenamiento compartido SAN frente a NAS para clústeres de conm
 category: "best-practises"
 lang: "es"
 topics: "Almacenamiento compartido SAN o NAS: ¿cuál es más sencillo para un clúster de conmutación por error?"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

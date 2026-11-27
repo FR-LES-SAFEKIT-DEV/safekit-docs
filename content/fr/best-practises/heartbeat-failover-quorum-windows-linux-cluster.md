@@ -5,6 +5,7 @@ description: "Heartbeat, basculement et quorum dans les clusters Windows et Linu
 category: "best-practises"
 lang: "fr"
 topics: "Comment fonctionnent les heartbeats et le basculement dans un cluster Windows ou Linux ?, Split brain et quorum avec des serveurs dans deux salles informatiques distantes, Quorum de cluster simple avec le checker split-brain SafeKit"
+hashpart: "how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster, split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms, simple-cluster-quorum-with-the-safekit-split-brain-checker"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

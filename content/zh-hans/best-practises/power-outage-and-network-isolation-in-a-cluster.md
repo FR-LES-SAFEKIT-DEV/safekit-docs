@@ -5,6 +5,7 @@ description: "高可用性集群如何应对断电和网络隔离：SafeKit 脑�
 category: "best-practises"
 lang: "zh-hans"
 topics: "集群断电时有哪些不同的情况？"
+hashpart: "what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

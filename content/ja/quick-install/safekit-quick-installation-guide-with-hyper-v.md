@@ -5,6 +5,7 @@ description: "手順ガイド：SafeKit の hyperv.safe モジュールを導入
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/Hyper-V ソリューションの概要, Windows への SafeKit/Hyper-V ソリューションのインストール (hyperv.safe), SafeKit/Hyper-V ソリューションのステップバイステップ設定, SafeKit/Hyper-V ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--hyper-v-solution, installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe, step-by-step-configuration-of-the-safekit--hyper-v-solution, demonstration-of-the-safekit--hyper-v-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

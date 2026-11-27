@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit mysql.safe module for real
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / MySQL solution, Installation of the SafeKit / MySQL solution on Windows and Linux (mysql.safe), Step by step configuration of the SafeKit / MySQL Server solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--mysql-solution, installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe, step-by-step-configuration-of-the-safekit--mysql-server-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

@@ -5,6 +5,7 @@ description: "단계별 가이드: 실시간 복제 및 자동 장애 조치를 
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/Kubernetes 솔루션 개요, Linux에 SafeKit/Kubernetes 솔루션 설치 및 구성(k3s.safe), SafeKit mirror 솔루션 시연"
+hashpart: "overview-of-the-safekit--kubernetes-solution, installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

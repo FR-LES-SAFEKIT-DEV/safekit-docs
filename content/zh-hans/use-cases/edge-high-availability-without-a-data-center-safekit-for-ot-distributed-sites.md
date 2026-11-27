@@ -5,6 +5,7 @@ description: "无需数据中心的边缘高可用性：SafeKit 将两台标准�
 category: "use-cases"
 lang: "zh-hans"
 topics: "边缘计算的高可用性挑战, 为什么 SafeKit 是边缘计算的天然之选, 边缘和分布式部署的适用性, 为什么边缘 OT 环境与众不同, 边缘计算的理想用例, 边缘计算与数据中心高可用性：主要区别"
+hashpart: "the-edge-ha-challenge, what-makes-safekit-the-natural-fit-for-edge, edge--distributed-deployment-suitability, why-edge-ot-environments-are-different, ideal-edge-use-cases, edge-vs-data-center-ha-key-differences"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

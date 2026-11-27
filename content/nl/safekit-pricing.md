@@ -5,6 +5,7 @@ description: "SafeKit-prijzen: eeuwigdurende licenties per server, gratis applic
 category: "home"
 lang: "nl"
 topics: "Licentiemodel en prijzen, Standaardondersteuning en -onderhoud, Vraag een offerte aan"
+hashpart: "licensing-model-and-pricing, standard-support-and-maintenance, information-to-include-in-your-quote-request"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-18.3 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

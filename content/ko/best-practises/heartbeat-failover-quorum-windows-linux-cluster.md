@@ -5,6 +5,7 @@ description: "Windows 및 Linux 클러스터에서 하트비트, 장애 조치, 
 category: "best-practises"
 lang: "ko"
 topics: "Windows 또는 Linux 클러스터에서 하트비트와 장애 조치는 어떻게 작동하나요?, 두 개의 원격 컴퓨터실에 있는 서버를 사용한 스플릿 브레인 및 쿼럼, SafeKit 스플릿 브레인 체커를 사용한 간단한 클러스터 쿼럼"
+hashpart: "how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster, split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms, simple-cluster-quorum-with-the-safekit-split-brain-checker"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "So testen Sie die virtuelle IP für Lastverteilung eines SafeKit-F
 category: "best-practises"
 lang: "de"
 topics: "1. Grundprinzipien, 2. Voraussetzung: das SafeKit-Mosaik, 3. Test 1 – Verteilung der Verbindungen, 4. Test 2 – Wechsel des Dispatching-Servers, 5. Test 3 – Überprüfung GARP -Umleitung mit arp -a, 6. Test 4 – End-to-End-Prüfung mit Wireshark (Windows) oder tcpdump (Linux), 7. Von welchen Arbeitsplätzen aus testen?, 8. Zusammenfassung der erwarteten Ergebnisse, 9. Fehlerbehebung, Demonstration der SafeKit farm Lösung"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 17 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

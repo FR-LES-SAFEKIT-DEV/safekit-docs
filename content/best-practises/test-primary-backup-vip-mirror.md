@@ -5,6 +5,7 @@ description: "How to test the virtual IP of a SafeKit mirror cluster: availabili
 category: "best-practises"
 lang: "en"
 topics: "1. Key principles, 2. Prerequisite: Virtual IP (VIP) configuration, 3. Test 1 – Virtual IP (VIP) held by the primary server, 4. Test 2 – Manual failover (stop of the primary), 5. Test 3 – Checking MAC rerouting with arp -a, 6. Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), 7. Which workstations to test from, 8. Summary of expected results, 9. Troubleshooting"
+hashpart: "1-key-principles, 2-prerequisite-virtual-ip-vip-configuration, 3-test-1--virtual-ip-vip-held-by-the-primary-server, 4-test-2--manual-failover-stop-of-the-primary, 5-test-3--checking-mac-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"
 ---

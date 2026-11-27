@@ -5,6 +5,7 @@ description: "Redundância de BMS com SafeKit: cluster de dois nós com replica�
 category: "use-cases"
 lang: "pt-br"
 topics: "O que é um sistema de gestão predial (BMS)?, Por que o software BMS é fundamental?, Principais fornecedores de BMS"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

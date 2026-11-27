@@ -5,6 +5,7 @@ description: "公共交通控制室高可用性：RATP 在巴黎地铁 1 号无�
 category: "use-cases"
 lang: "zh-hans"
 topics: "公共交通控制室, 为什么控制室至关重要？, SafeKit 为公共交通提供高可用性, RATP 的实际应用"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

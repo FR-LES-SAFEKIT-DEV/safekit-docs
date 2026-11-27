@@ -5,6 +5,7 @@ description: "SafeKit réunit réplication en temps réel, basculement automatiq
 category: "product"
 lang: "fr"
 topics: "Qu’est-ce que SafeKit ?"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 60 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

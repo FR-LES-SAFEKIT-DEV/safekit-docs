@@ -5,6 +5,7 @@ description: "How to upgrade an application protected by SafeKit: minor and majo
 category: "best-practises"
 lang: "en"
 topics: "Upgrading a High Availability Application Protected by SafeKit, VM-Level High Availability, Application-Level High Availability, Choosing the Right Upgrade Strategy, Conclusion"
+hashpart: "upgrading-a-high-availability-application-protected-by-safekit, vm-level-ha, app-level-ha, choosing-the-right-upgrade-strategy, conclusion"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"
 ---

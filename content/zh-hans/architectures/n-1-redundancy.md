@@ -5,6 +5,7 @@ description: "SafeKit 的 N-1 冗余：N+1 台服务器上的 N 个应用共享�
 category: "architectures"
 lang: "zh-hans"
 topics: "通过数据复制和应用程序故障转移，实现从 N 台服务器到 1 台服务器的高可用性"
+hashpart: "high-availability-with-data-replication-and-application-failover-from-n-servers-to-1"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"

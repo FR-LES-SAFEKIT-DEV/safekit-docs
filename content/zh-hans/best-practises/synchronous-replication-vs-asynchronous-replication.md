@@ -5,6 +5,7 @@ description: "同步复制与异步复制对比：为何同步复制在 SafeKit 
 category: "best-practises"
 lang: "zh-hans"
 topics: "在同步或异步复制的情况下，应用程序故障转移时会丢失数据吗？, 目录, 异步复制的工作原理是什么？, 同步复制的工作原理是什么？, 半同步复制的工作原理是什么？, 最终结论：为高可用性选择合适的复制方案, 比较表：同步、异步和半同步, 视频指南：配置同步实时复制和高可用性, 常见问题：高可用性集群中的复制策略"
+hashpart: "data-loss-risk-synchronous-vs-asynchronous-failover, table-of-contents, how-asynchronous-replication-works, how-synchronous-replication-works, how-semi-synchronous-replication-works, best-practices-synchronous-vs-asynchronous-replication, comparison-synchronous-asynchronous-replication, videoguide-synchronous-real-time-replication-ha, faq-replication-high-availability"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 schemaType: "TechArticle"

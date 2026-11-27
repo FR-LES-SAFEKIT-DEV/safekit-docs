@@ -5,6 +5,7 @@ description: "SafeKit vereint Echtzeit-Replikation, automatisches Failover und N
 category: "product"
 lang: "de"
 topics: "Was ist SafeKit?"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 55 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

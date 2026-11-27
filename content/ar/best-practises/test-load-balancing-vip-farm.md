@@ -5,6 +5,7 @@ description: "كيفية اختبار عنوان IP الافتراضي لموا�
 category: "best-practises"
 lang: "ar"
 topics: "1. المبادئ الأساسية, 2. المتطلب السابق: فسيفساء SafeKit (mosaic), 3. الاختبار الأول – توزيع الاتصالات, 4. الاختبار الثاني – تغيير خادم الإرسال, 5. الاختبار 3 – التحقق من إعادة توجيه GARP باستخدام arp -a, 6. الاختبار 4 – فحص شامل باستخدام Wireshark (نظام التشغيل Windows) أو tcpdump (نظام التشغيل Linux), 7. محطات العمل التي سيتم الاختبار منها, 8. ملخص النتائج المتوقعة, 9. استكشاف الأخطاء وإصلاحها, عرض حل SafeKit farm"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

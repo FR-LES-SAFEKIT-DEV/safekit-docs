@@ -5,6 +5,7 @@ description: "Guida passo passo: installa il modulo SafeKit oracle.safe per la r
 category: "quick-install"
 lang: "it"
 topics: "Panoramica della soluzione SafeKit/Oracle, Installazione della soluzione SafeKit/Oracle su Windows e Linux (oracle.safe), Configurazione passo-passo della soluzione SafeKit/Oracle, Dimostrazione della soluzione mirror SafeKit"
+hashpart: "overview-of-the-safekit--oracle-solution, installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe, step-by-step-configuration-of-the-safekit--oracle-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

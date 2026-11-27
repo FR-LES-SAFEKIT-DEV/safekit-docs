@@ -5,6 +5,7 @@ description: "Alta disponibilità per aziende distribuite: implementa lo stesso 
 category: "use-cases"
 lang: "it"
 topics: "Continuità operativa in un’azienda distribuita"
+hashpart: "business-continuity-in-a-distributed-enterprise"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

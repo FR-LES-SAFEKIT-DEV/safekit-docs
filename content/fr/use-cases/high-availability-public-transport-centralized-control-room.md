@@ -5,6 +5,7 @@ description: "Haute disponibilité des salles de contrôle : la RATP utilise Saf
 category: "use-cases"
 lang: "fr"
 topics: "Salles de contrôle des transports en commun, Pourquoi la salle de contrôle est-elle essentielle ?, Haute disponibilité SafeKit pour les transports publics, Mise en œuvre concrète à la RATP"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

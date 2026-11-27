@@ -5,6 +5,7 @@ description: "VMS-redundantie met SafeKit: cluster met twee nodes, synchrone rep
 category: "use-cases"
 lang: "nl"
 topics: "Wat is videobeheersoftware (VMS)?, Waarom is VMS-software essentieel?, Belangrijkste VMS-leveranciers"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

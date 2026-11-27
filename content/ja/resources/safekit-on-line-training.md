@@ -5,6 +5,7 @@ description: "SafeKit の無料オンライントレーニングと認定：HA �
 category: "resources"
 lang: "ja"
 topics: "トレーニングプラットフォームへのアクセス方法, SafeKitトレーニングビデオ"
+hashpart: "certif, training82"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

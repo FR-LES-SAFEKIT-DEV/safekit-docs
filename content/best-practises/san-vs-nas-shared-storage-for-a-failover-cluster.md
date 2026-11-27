@@ -5,6 +5,7 @@ description: "SAN vs NAS shared storage for failover clusters: limits, costs and
 category: "best-practises"
 lang: "en"
 topics: "SAN or NAS shared storage: which is simpler for a failover cluster?"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"
 ---

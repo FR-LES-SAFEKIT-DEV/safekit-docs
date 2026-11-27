@@ -5,6 +5,7 @@ description: "SafeKit による Podman の高可用性：Linux サーバー 2 �
 category: "solutions"
 lang: "ja"
 topics: "SANless SafeKit mirror クラスターが Podman で動作する仕組み, 目次, SafeKit ソフトウェアは、どのようにして Podman 高可用性クラスターを簡単に実装するのでしょうか？, 比較：SafeKit SANless Cluster と従来の Podman HA, 比較：SafeKit とオープンソース Linux HA（Pacemaker/Corosync/DRBD）, Podman 高可用性概要"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-podman, table-of-contents, how-safekit-implements-podman-ha, safekit-podman-comparison, safekit-vs-linux-ha-stack, podman-ha-summary-quick-installation-guide"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
 schemaType: "TechArticle"

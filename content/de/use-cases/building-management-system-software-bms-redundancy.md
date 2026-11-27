@@ -5,6 +5,7 @@ description: "BMS-Redundanz mit SafeKit: Cluster mit zwei Knoten, synchroner Rep
 category: "use-cases"
 lang: "de"
 topics: "Was ist ein Gebäudemanagementsystem (BMS)?, Warum ist BMS-Software entscheidend?, Wichtige BMS-Anbieter"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

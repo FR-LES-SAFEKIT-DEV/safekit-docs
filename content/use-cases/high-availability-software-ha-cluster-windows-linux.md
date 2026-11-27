@@ -5,6 +5,7 @@ description: "High availability software for Windows and Linux: SafeKit clusters
 category: "use-cases"
 lang: "en"
 topics: "30 seconds elevator pitch for SafeKit"
+hashpart: "30-seconds-elevator-pitch-for-safekit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"
 ---

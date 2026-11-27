@@ -5,6 +5,7 @@ description: "단계별 가이드: 서버 2대 간 Hyper-V VM의 복제 및 장�
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/Hyper-V 솔루션 개요, Windows에 SafeKit/Hyper-V 솔루션 설치 (hyperv.safe), SafeKit/Hyper-V 솔루션 단계별 구성, SafeKit/Hyper-V 솔루션 시연"
+hashpart: "overview-of-the-safekit--hyper-v-solution, installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe, step-by-step-configuration-of-the-safekit--hyper-v-solution, demonstration-of-the-safekit--hyper-v-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "تكرار N-1 مع SafeKit: يتشارك N تطبيقًا على 
 category: "architectures"
 lang: "ar"
 topics: "التوافر العالي مع تكرار البيانات وتحويل التطبيقات من N خادم إلى خادم واحد"
+hashpart: "high-availability-with-data-replication-and-application-failover-from-n-servers-to-1"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"

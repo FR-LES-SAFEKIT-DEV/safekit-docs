@@ -5,6 +5,7 @@ description: "Arquiteturas e boas práticas de alta disponibilidade para cluster
 category: "best-practises"
 lang: "pt-br"
 topics: "Quais são as arquiteturas de alta disponibilidade e as melhores práticas?, Tabelas comparativas sobre arquiteturas de alta disponibilidade e melhores práticas"
+hashpart: "what-are-the-high-availability-architectures-and-the-best-practices, comparative-tables-on-high-availability-architectures-and-best-practices"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

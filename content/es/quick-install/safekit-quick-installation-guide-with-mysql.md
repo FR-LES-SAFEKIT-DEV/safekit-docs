@@ -5,6 +5,7 @@ description: "Guía paso a paso: instale el módulo SafeKit mysql.safe para repl
 category: "quick-install"
 lang: "es"
 topics: "Descripción general de la solución SafeKit/MySQL, Instalación de la solución SafeKit/MySQL en Windows y Linux (mysql.safe), Configuración paso a paso de la solución SafeKit / Servidor MySQL, Demostración de la solución mirror SafeKit"
+hashpart: "overview-of-the-safekit--mysql-solution, installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe, step-by-step-configuration-of-the-safekit--mysql-server-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

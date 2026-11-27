@@ -4,8 +4,10 @@ Usage (from the repository root):
     python scripts/sync_headings_frontmatter.py                  # apply
     python scripts/sync_headings_frontmatter.py --dry-run        # simulate
 
-The first H1 becomes title. All H2 headings become the comma-separated topics
-string used by the site's front matter. Pages without an H1 keep their title.
+The first H1 becomes title. H2 headings become comma-separated topics and a
+matching comma-separated hashpart line immediately below topics. Commas in H2
+titles are replaced by spaces so the topics separator remains unambiguous.
+Pages without an H1 keep their title.
 """
 import argparse
 import html
@@ -16,9 +18,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
-FRONT_MATTER_FIELD = re.compile(r"^(title|topics)\s*:")
+FRONT_MATTER_FIELD = re.compile(r"^(title|topics|haspart|hashpart)\s*:")
 HEADING = re.compile(r"^[ \t]{0,3}(#{1,6})(?:[ \t]+|$)(.*?)\s*$")
 FENCE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})")
+EXPLICIT_ID = re.compile(r"\s*\{#([^\s}]+)[^}]*\}\s*$")
 
 
 def yaml_string(value):
@@ -34,6 +37,20 @@ def clean_heading(value):
     value = re.sub(r"(?<!\\)(?:\*\*|__|~~|\*|_)", "", value)
     value = re.sub(r"<[^>]*>", "", value)
     return html.unescape(value).strip()
+
+
+def clean_topic(value):
+    return re.sub(r"\s+", " ", value.replace(",", " ")).strip()
+
+
+def auto_hashpart(value):
+    slug = []
+    for char in value.lower():
+        if char.isspace():
+            slug.append("-")
+        elif char.isalnum() or char in "-_":
+            slug.append(char)
+    return "".join(slug).strip("-")
 
 
 def extract_headings(lines):
@@ -55,9 +72,15 @@ def extract_headings(lines):
 
         match = HEADING.match(line)
         if match and len(match.group(1)) in headings:
-            text = clean_heading(match.group(2))
+            raw_heading = match.group(2)
+            text = clean_heading(raw_heading)
             if text:
-                headings[len(match.group(1))].append(text)
+                if len(match.group(1)) == 1:
+                    headings[1].append(text)
+                else:
+                    explicit_id = EXPLICIT_ID.search(raw_heading)
+                    hashpart = explicit_id.group(1) if explicit_id else auto_hashpart(text)
+                    headings[2].append((text, hashpart))
 
     return headings
 
@@ -84,19 +107,24 @@ def update_file(path, write):
 
     headings = extract_headings([line_text(line) for line in lines[end + 1 :]])
     title = headings[1][0] if headings[1] else None
-    topics = ", ".join(headings[2])
+    topics = ", ".join(clean_topic(topic) for topic, _ in headings[2])
+    hashparts = ", ".join(hashpart for _, hashpart in headings[2])
 
     fields = {}
     for i in range(1, end):
         match = FRONT_MATTER_FIELD.match(line_text(lines[i]))
-        if match and match.group(1) not in fields:
-            fields[match.group(1)] = i
+        if match:
+            field = match.group(1)
+            field = "hashpart" if field in {"haspart", "hashpart"} else field
+            if field not in fields:
+                fields[field] = i
 
     replacements = {}
     if title is not None:
         replacements["title"] = f"title: {yaml_string(title)}"
     if headings[2]:
         replacements["topics"] = f"topics: {yaml_string(topics)}"
+        replacements["hashpart"] = f"hashpart: {yaml_string(hashparts)}"
 
     changed = False
     updated = list(lines)
@@ -115,8 +143,31 @@ def update_file(path, write):
             changed = True
 
     if insertions:
-        insert_at = fields.get("title", end - 1) + 1
+        insert_at = fields.get("topics", fields.get("title", end - 1)) + 1
         updated[insert_at:insert_at] = [value + newline for value in insertions]
+
+    updated_end = next(
+        (i for i in range(1, len(updated)) if line_text(updated[i]).strip() == "---"),
+        None,
+    )
+    updated_fields = {}
+    if updated_end is not None:
+        for i in range(1, updated_end):
+            match = FRONT_MATTER_FIELD.match(line_text(updated[i]))
+            if match:
+                field = match.group(1)
+                field = "hashpart" if field in {"haspart", "hashpart"} else field
+                updated_fields.setdefault(field, i)
+
+    if "topics" in updated_fields and "hashpart" in updated_fields:
+        topics_index = updated_fields["topics"]
+        hashpart_index = updated_fields["hashpart"]
+        if hashpart_index != topics_index + 1:
+            hashpart_line = updated.pop(hashpart_index)
+            if hashpart_index < topics_index:
+                topics_index -= 1
+            updated.insert(topics_index + 1, hashpart_line)
+            changed = True
 
     if changed and write:
         output = "".join(updated)

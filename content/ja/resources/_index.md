@@ -5,6 +5,7 @@ description: "SafeKit リソース：無料トライアル、ユーザーガイ�
 category: "resources"
 lang: "ja"
 topics: "SafeKit高可用性の無料トライアル、技術文書、製品情報"
+hashpart: "free-trial-technical-documentation--product-information-for-safekit-high-availability"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

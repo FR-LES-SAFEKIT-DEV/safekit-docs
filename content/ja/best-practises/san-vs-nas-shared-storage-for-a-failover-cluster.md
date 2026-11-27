@@ -5,6 +5,7 @@ description: "フェイルオーバークラスター向け SAN と NAS 共有�
 category: "best-practises"
 lang: "ja"
 topics: "SAN と NAS の共有ストレージ：フェイルオーバークラスターにはどちらがシンプルですか？"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "SafeKit unisce replica in tempo reale, failover automatico e bilan
 category: "product"
 lang: "it"
 topics: "Che cos’è SafeKit?"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 42 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

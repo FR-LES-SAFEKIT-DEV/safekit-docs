@@ -5,6 +5,7 @@ description: "Replicação síncrona vs assíncrona: porque a replicação sínc
 category: "best-practises"
 lang: "pt-pt"
 topics: "Os dados são perdidos em caso de failover da aplicação com replicação síncrona ou assíncrona?, Índice, Como funciona a replicação assíncrona?, Como funciona a replicação síncrona?, Como funciona a replicação semi-síncrona?, Veredicto Final: Escolher a Replicação Certa para Alta Disponibilidade, Tabela Comparativa: Síncrono vs. Assíncrono vs. Semi-Síncrono, Guia em Vídeo: Configuração da Replicação Síncrona em Tempo Real e da Alta Disponibilidade, Perguntas Frequentes: Estratégias de Replicação em Agrupamentos de Alta Disponibilidade"
+hashpart: "data-loss-risk-synchronous-vs-asynchronous-failover, table-of-contents, how-asynchronous-replication-works, how-synchronous-replication-works, how-semi-synchronous-replication-works, best-practices-synchronous-vs-asynchronous-replication, comparison-synchronous-asynchronous-replication, videoguide-synchronous-real-time-replication-ha, faq-replication-high-availability"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 schemaType: "TechArticle"

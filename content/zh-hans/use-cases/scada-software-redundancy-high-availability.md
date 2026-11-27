@@ -5,6 +5,7 @@ description: "使用 SafeKit 实现 SCADA 冗余：双节点集群，同步复�
 category: "use-cases"
 lang: "zh-hans"
 topics: "什么是 SCADA 系统？, 为什么 SCADA 软件至关重要？, 主要 SCADA 软件供应商"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

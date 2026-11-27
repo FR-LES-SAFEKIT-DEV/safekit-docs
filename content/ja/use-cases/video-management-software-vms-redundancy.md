@@ -5,6 +5,7 @@ description: "SafeKit による VMS 冗長化：Milestone、Genetec、Bosch 等�
 category: "use-cases"
 lang: "ja"
 topics: "ビデオ管理ソフトウェア（VMS）とは？, VMS ソフトウェアが重要な理由とは？, 主な VMS ベンダー"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "SafeKit は、リアルタイムレプリケーション、自動�
 category: "product"
 lang: "ja"
 topics: "SafeKit とは？"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

@@ -5,6 +5,7 @@ description: "Haute disponibilité Podman avec SafeKit : réplication synchrone 
 category: "solutions"
 lang: "fr"
 topics: "Fonctionnement du cluster mirror SafeKit SANless avec Podman, Table des matières, Comment le logiciel SafeKit implémente-t-il simplement un cluster de haute disponibilité Podman ?, Comparaison : cluster SafeKit SANless et haute disponibilité Podman traditionnelle, Comparaison : SafeKit et les solutions HA Linux open source (Pacemaker/Corosync/DRBD), Résumé de la haute disponibilité Podman"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-podman, table-of-contents, how-safekit-implements-podman-ha, safekit-podman-comparison, safekit-vs-linux-ha-stack, podman-ha-summary-quick-installation-guide"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
 schemaType: "TechArticle"

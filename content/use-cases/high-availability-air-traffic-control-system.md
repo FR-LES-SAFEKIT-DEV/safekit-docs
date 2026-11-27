@@ -5,6 +5,7 @@ description: "High availability for air traffic control: ADB SafeGate uses SafeK
 category: "use-cases"
 lang: "en"
 topics: "Air Traffic Control Systems, Why is air traffic control critical?, How SafeKit protects air traffic control, Real-world implementation at ADB SafeGate"
+hashpart: "air-traffic-control-systems, why-is-air-traffic-control-critical, safekit-high-availability-for-atc, real-world-implementation-at-adb-safegate"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"
 schemaMentions: ["ADB SafeGate"]

@@ -5,6 +5,7 @@ description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit kvm.safe
 category: "quick-install"
 lang: "ar"
 topics: "نظرة عامة على حل SafeKit/KVM, تثبيت حل SafeKit/KVM على Linux (kvm.safe), إعداد حل SafeKit/KVM خطوة بخطوة, عرض حل عالي التوافر على مستوى الجهاز الظاهري"
+hashpart: "overview-of-the-safekit--kvm-solution, installation-of-the-safekit--kvm-solution-on-linux-kvmsafe, step-by-step-configuration-of-the-safekit--kvm-solution, demonstration-of-a-vm-level-high-availability-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

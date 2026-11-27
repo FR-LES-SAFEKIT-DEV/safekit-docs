@@ -5,6 +5,7 @@ description: "OEM-Hochverfügbarkeit: Integrieren Sie SafeKit-Replikation und -F
 category: "use-cases"
 lang: "de"
 topics: "Der OEM-Anwendungsfall für Hochverfügbarkeit"
+hashpart: "the-oem-high-availability-use-case"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

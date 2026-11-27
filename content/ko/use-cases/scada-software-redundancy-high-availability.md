@@ -5,6 +5,7 @@ description: "SafeKit으로 구현하는 SCADA 이중화: WinCC, Wonderware, iFi
 category: "use-cases"
 lang: "ko"
 topics: "SCADA 시스템이란 무엇인가요?, SCADA 소프트웨어가 중요한 이유는 무엇일까요?, 주요 SCADA 소프트웨어 공급업체"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

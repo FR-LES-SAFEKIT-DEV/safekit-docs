@@ -5,6 +5,7 @@ description: "SafeKit-software voor hoge beschikbaarheid op Windows en Linux: sy
 category: "home"
 lang: "nl"
 topics: "Wat SafeKit doet, Kies uw beschermingsniveau, Kant-en-klare modules voor uw applicaties, Gebruiksscenario's van klanten, Eenvoudige en voorspelbare prijzen, Beperkingen om rekening mee te houden"
+hashpart: "features, protection-levels, modules, use-cases, pricing, limits"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 53 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

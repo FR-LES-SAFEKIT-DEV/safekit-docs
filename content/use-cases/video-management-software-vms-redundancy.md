@@ -5,6 +5,7 @@ description: "VMS redundancy with SafeKit: two-node cluster with synchronous rep
 category: "use-cases"
 lang: "en"
 topics: "What is video management software (VMS)?, Why is VMS software critical?, Main VMS vendors"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"
 schemaSector: "VMS"

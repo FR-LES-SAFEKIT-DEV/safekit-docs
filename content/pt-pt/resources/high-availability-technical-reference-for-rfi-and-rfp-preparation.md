@@ -5,6 +5,7 @@ description: "Referência técnica SafeKit para respostas a RFI e RFP: sistemas 
 category: "resources"
 lang: "pt-pt"
 topics: "Visão Geral, Índice, Informações do produto, Módulos de aplicação pré-configurados, Arquitetura e implementação, Perda de dados e tempos de recuperação (RPO e RTO), Locais remotos e implementações distribuídas, Monitorização e alertas, Segurança e conformidade, Licenciamento, Apoio e manutenção, Comparação com outras soluções, Ligações úteis"
+hashpart: "overview, table-of-contents, product-identity, pre-built-application-modules, architecture-deployment-model, rpo-rto-capabilities, edge-distributed-deployment-suitability, monitoring-management-alerting, security-compliance, licensing-model, support-maintenance-slas, comparison-vs-alternatives, quick-reference-links"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

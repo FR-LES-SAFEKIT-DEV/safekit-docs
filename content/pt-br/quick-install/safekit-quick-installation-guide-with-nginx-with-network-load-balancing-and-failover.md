@@ -5,6 +5,7 @@ description: "Guia passo a passo: instale o módulo SafeKit farm.safe no Windows
 category: "quick-install"
 lang: "pt-br"
 topics: "Visão geral da solução SafeKit/NGINX, Instalação da solução SafeKit/NGINX no Windows e Linux (farm.safe), Configuração passo a passo da solução SafeKit/NGINX, Demonstração da solução farm SafeKit"
+hashpart: "overview-of-the-safekit--nginx-solution, installation-of-the-safekit--nginx-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--nginx-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

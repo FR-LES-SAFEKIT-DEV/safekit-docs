@@ -5,6 +5,7 @@ description: "使用 SafeKit 实现 VMS 冗余：双节点集群，同步复制�
 category: "use-cases"
 lang: "zh-hans"
 topics: "什么是视频管理软件 (VMS)？, 为什么 VMS 软件至关重要？, 主要 VMS 系统供应商"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

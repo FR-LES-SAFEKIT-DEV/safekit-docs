@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit mirror.safe module on Linu
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Linux solution, Installation of the SafeKit / Linux solution (mirror.safe), Step by step configuration of the SafeKit / Linux solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--linux-solution, installation-of-the-safekit--linux-solution-mirrorsafe, step-by-step-configuration-of-the-safekit--linux-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

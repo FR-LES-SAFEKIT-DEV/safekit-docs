@@ -5,6 +5,7 @@ description: "Ridondanza N-1 con SafeKit: N applicazioni su N+1 server condivido
 category: "architectures"
 lang: "it"
 topics: "Alta disponibilità con replica dei dati e failover delle applicazioni da N server a 1"
+hashpart: "high-availability-with-data-replication-and-application-failover-from-n-servers-to-1"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"

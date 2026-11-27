@@ -5,6 +5,7 @@ description: "Ridondanza BMS con SafeKit: cluster a due nodi con replica sincron
 category: "use-cases"
 lang: "it"
 topics: "Che cos’è un sistema di gestione degli edifici (BMS)?, Perché il software BMS è fondamentale?, Principali fornitori di BMS"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

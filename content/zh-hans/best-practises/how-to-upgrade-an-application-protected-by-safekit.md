@@ -5,6 +5,7 @@ description: "如何升级受 SafeKit 保护的应用：小版本与大版本升
 category: "best-practises"
 lang: "zh-hans"
 topics: "升级由 SafeKit 保护的高可用性应用程序, 虚拟机级高可用性, 应用级高可用性, 选择正确的升级策略, 结论"
+hashpart: "upgrading-a-high-availability-application-protected-by-safekit, vm-level-ha, app-level-ha, choosing-the-right-upgrade-strategy, conclusion"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

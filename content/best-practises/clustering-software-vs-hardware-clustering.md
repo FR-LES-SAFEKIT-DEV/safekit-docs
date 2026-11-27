@@ -5,6 +5,7 @@ description: "Software clustering vs hardware clustering: why SafeKit provides h
 category: "best-practises"
 lang: "en"
 topics: "What is the difference between software clustering and hardware clustering?, Software Clustering vs Hardware Clustering: Pros and Cons"
+hashpart: "difference-between-software-clustering-and-hardware-clustering, software-clustering-vs-hardware-clustering-pros-and-cons"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"
 ---

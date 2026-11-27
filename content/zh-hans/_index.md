@@ -5,6 +5,7 @@ description: "SafeKit 是适用于 Windows 和 Linux 的高可用性软件：在
 category: "home"
 lang: "zh-hans"
 topics: "SafeKit 功能, 选择您的保护级别, 适用于您应用程序的现成模块, 客户用例, 简单且可预测的定价, 需要考虑的局限性"
+hashpart: "features, protection-levels, modules, use-cases, pricing, limits"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

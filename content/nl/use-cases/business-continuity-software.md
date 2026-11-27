@@ -5,6 +5,7 @@ description: "Hoge beschikbaarheid voor gedistribueerde ondernemingen: implement
 category: "use-cases"
 lang: "nl"
 topics: "Bedrijfscontinuïteit in een gedistribueerde onderneming"
+hashpart: "business-continuity-in-a-distributed-enterprise"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

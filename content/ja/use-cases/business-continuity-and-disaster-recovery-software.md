@@ -5,6 +5,7 @@ description: "SafeKit による事業継続と災害復旧：2 つのサーバ�
 category: "use-cases"
 lang: "ja"
 topics: "事業継続および災害復旧ソフトウェア"
+hashpart: "business-continuity-and-disaster-recovery-software"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

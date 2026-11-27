@@ -5,6 +5,7 @@ description: "Hochverfügbarkeit für die Flugverkehrskontrolle: ADB SafeGate nu
 category: "use-cases"
 lang: "de"
 topics: "Flugverkehrskontrollsysteme, Warum ist die Flugsicherung so wichtig?, Wie SafeKit die Flugsicherung schützt, Implementierung in der Praxis bei ADB SafeGate"
+hashpart: "air-traffic-control-systems, why-is-air-traffic-control-critical, safekit-high-availability-for-atc, real-world-implementation-at-adb-safegate"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

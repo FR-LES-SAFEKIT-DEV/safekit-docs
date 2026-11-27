@@ -5,6 +5,7 @@ description: "Alta disponibilidade em salas de controlo de transportes: a RATP u
 category: "use-cases"
 lang: "pt-pt"
 topics: "Salas de Controlo de Transportes Públicos, Por que é que a sala de controlo é tão importante?, Alta disponibilidade SafeKit para transportes públicos, Implementação no mundo real na RATP"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

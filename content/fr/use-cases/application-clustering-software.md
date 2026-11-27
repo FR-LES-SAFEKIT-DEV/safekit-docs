@@ -5,6 +5,7 @@ description: "HA pour OEM : intégrez la réplication et le basculement SafeKit 
 category: "use-cases"
 lang: "fr"
 topics: "Le cas d’utilisation de haute disponibilité OEM"
+hashpart: "the-oem-high-availability-use-case"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

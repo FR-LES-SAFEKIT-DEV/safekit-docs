@@ -5,6 +5,7 @@ description: "Combine SafeKit farm and mirror modules: load balancing scales the
 category: "architectures"
 lang: "en"
 topics: "High availability and scalability of critical web and database applications with the SafeKit clustering software"
+hashpart: "high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"
 ---

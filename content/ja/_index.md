@@ -5,6 +5,7 @@ description: "Windows と Linux 向け SafeKit 高可用性ソフトウェア：
 category: "home"
 lang: "ja"
 topics: "SafeKit の機能, 保護レベルの選択, アプリケーション向けの既製モジュール, 顧客のユースケース, シンプルで分かりやすい料金体系, 考慮すべき制限事項"
+hashpart: "features, protection-levels, modules, use-cases, pricing, limits"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.2 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

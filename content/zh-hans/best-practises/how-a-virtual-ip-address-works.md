@@ -5,6 +5,7 @@ description: "故障转移时虚拟 IP 地址如何切换：同一子网内用�
 category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性集群中的虚拟 IP 地址是什么？, SafeKit 中的虚拟 IP 实现, 虚拟 IP 在同一子网（mirror 集群）中的工作原理, 虚拟 IP 如何通过负载均衡器（mirror 集群）在不同子网之间工作, 虚拟 IP 如何通过云提供商 CLI（mirror 集群）在不同子网之间工作, BGP（mirror 集群）如何使虚拟 IP 跨不同子网工作, DNS 重定向如何在不同子网（mirror 集群）之间工作, 虚拟 IP 负载均衡器在同一子网上的 farm 集群中如何工作, 负载均衡虚拟 IP 如何在不同子网（farm 集群）之间工作, 比较：虚拟 IP 的实现、延迟和应用程序透明度, 虚拟 IP 常见问题"
+hashpart: "virtual-ip-definition, safekit-virtual-ip-implementation, virtual-ip-same-subnet-failover, virtual-ip-different-subnets-failover, virtual-ip-cloud-cli-failover, virtual-ip-bgp-failover, virtual-ip-vs-dns-redirection-failover, virtual-ip-load-balancing-same-subnet, virtual-ip-load-balancing-different-subnets, virtual-ip-methods-comparison, virtual-ip-faq"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 schemaType: "TechArticle"

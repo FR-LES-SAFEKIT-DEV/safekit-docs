@@ -5,6 +5,7 @@ description: "يجمع SafeKit بين النسخ في الوقت الفعلي و
 category: "product"
 lang: "ar"
 topics: "ما هو SafeKit؟"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

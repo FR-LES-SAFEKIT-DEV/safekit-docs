@@ -5,6 +5,7 @@ description: "SafeKit으로 구현하는 BMS 이중화: Siemens, Honeywell, Schn
 category: "use-cases"
 lang: "ko"
 topics: "건물 관리 시스템(BMS)이란 무엇인가요?, BMS 소프트웨어가 중요한 이유는 무엇일까요?, 주요 BMS 공급업체"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

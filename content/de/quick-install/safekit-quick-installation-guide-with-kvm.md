@@ -5,6 +5,7 @@ description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul kvm.safe 
 category: "quick-install"
 lang: "de"
 topics: "Übersicht über die SafeKit/KVM-Lösung, Installation der SafeKit/KVM-Lösung unter Linux (kvm.safe), Schritt-für-Schritt-Konfiguration der SafeKit/KVM-Lösung, Demonstration einer Hochverfügbarkeitslösung auf VM-Ebene"
+hashpart: "overview-of-the-safekit--kvm-solution, installation-of-the-safekit--kvm-solution-on-linux-kvmsafe, step-by-step-configuration-of-the-safekit--kvm-solution, demonstration-of-a-vm-level-high-availability-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

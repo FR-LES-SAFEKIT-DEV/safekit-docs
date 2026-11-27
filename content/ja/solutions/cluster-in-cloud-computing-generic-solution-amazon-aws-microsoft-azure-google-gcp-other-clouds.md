@@ -5,6 +5,7 @@ description: "SafeKit によるクラウドクラスター：AWS、Azure、Googl
 category: "solutions"
 lang: "ja"
 topics: "Eviden SafeKit を使用したその他のクラウドソリューション"
+hashpart: "other-cloud-solutions-with-eviden-safekit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

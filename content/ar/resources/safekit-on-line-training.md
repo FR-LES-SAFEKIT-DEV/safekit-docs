@@ -5,6 +5,7 @@ description: "تدريب وشهادة SafeKit المجانيان عبر الإن
 category: "resources"
 lang: "ar"
 topics: "كيفية الوصول إلى منصة التدريب؟, فيديوهات تدريبية على نظام SafeKit"
+hashpart: "certif, training82"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

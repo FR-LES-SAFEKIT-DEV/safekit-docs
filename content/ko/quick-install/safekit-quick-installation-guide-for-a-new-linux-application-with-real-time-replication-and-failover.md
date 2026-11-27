@@ -5,6 +5,7 @@ description: "단계별 가이드: 서버 2대에서 애플리케이션의 실�
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/Linux 솔루션 개요, SafeKit/Linux 솔루션 설치 (mirror.safe), SafeKit/Linux 솔루션 단계별 구성, SafeKit mirror 솔루션 시연"
+hashpart: "overview-of-the-safekit--linux-solution, installation-of-the-safekit--linux-solution-mirrorsafe, step-by-step-configuration-of-the-safekit--linux-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

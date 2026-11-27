@@ -5,6 +5,7 @@ description: "分步指南：安装 SafeKit mysql.safe 模块，在 Windows 或 
 category: "quick-install"
 lang: "zh-hans"
 topics: "SafeKit/MariaDB 解决方案概述, 在 Windows 和 Linux 上安装 SafeKit/MariaDB 解决方案 (mysql.safe), SafeKit/MariaDB 解决方案的分步配置, SafeKit mirror 解决方案演示"
+hashpart: "overview-of-the-safekit--mariadb-solution, installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe, step-by-step-configuration-of-the-safekit--mariadb-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

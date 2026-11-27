@@ -5,6 +5,7 @@ description: "Hoe een cluster voor hoge beschikbaarheid omgaat met stroomuitval 
 category: "best-practises"
 lang: "nl"
 topics: "Wat zijn de verschillende scenario's in geval van een stroomstoring in een cluster?"
+hashpart: "what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

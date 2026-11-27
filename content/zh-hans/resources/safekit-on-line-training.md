@@ -5,6 +5,7 @@ description: "免费 SafeKit 在线培训与认证：HA 集群的安装、Web �
 category: "resources"
 lang: "zh-hans"
 topics: "如何访问培训平台？, SafeKit 培训视频"
+hashpart: "certif, training82"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

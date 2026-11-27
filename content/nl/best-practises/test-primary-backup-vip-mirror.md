@@ -5,6 +5,7 @@ description: "Het virtuele IP-adres van een SafeKit mirror-cluster testen: besch
 category: "best-practises"
 lang: "nl"
 topics: "1. Kernprincipes, 2. Vereiste: configuratie van virtueel IP-adres (VIP), 3. Test 1 – Virtueel IP-adres (VIP) in handen van de primaire server, 4. Test 2 – Handmatige failover (stoppen van de primaire), 5. Test 3 – MAC-omleiding controleren met arp -a, 6. Test 4 – End-to-end-controle met Wireshark (Windows) of tcpdump (Linux), 7. Vanaf welke werkstations testen?, 8. Samenvatting van de verwachte resultaten, 9. Probleemoplossing"
+hashpart: "1-key-principles, 2-prerequisite-virtual-ip-vip-configuration, 3-test-1--virtual-ip-vip-held-by-the-primary-server, 4-test-2--manual-failover-stop-of-the-primary, 5-test-3--checking-mac-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"

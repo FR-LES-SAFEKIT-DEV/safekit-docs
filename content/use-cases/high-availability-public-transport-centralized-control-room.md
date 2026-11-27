@@ -5,6 +5,7 @@ description: "High availability for public transport control rooms: RATP uses Sa
 category: "use-cases"
 lang: "en"
 topics: "Public Transport Control Rooms, Why is the control room critical?, SafeKit high availability for public transport, Real-world implementation at RATP"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"
 schemaMentions: ["RATP"]

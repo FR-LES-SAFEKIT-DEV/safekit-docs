@@ -5,6 +5,7 @@ description: "분산 기업을 위한 고가용성: SAN과 현장 IT 인력 없�
 category: "use-cases"
 lang: "ko"
 topics: "분산형 기업의 비즈니스 연속성"
+hashpart: "business-continuity-in-a-distributed-enterprise"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

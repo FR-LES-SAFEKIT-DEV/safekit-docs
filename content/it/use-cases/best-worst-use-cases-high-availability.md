@@ -5,6 +5,7 @@ description: "Casi d’uso migliori e peggiori per SafeKit: dove il clustering s
 category: "use-cases"
 lang: "it"
 topics: "Casi d’uso migliori"
+hashpart: "best-use-cases"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"

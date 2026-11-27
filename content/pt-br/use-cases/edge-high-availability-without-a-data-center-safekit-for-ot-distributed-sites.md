@@ -5,6 +5,7 @@ description: "Alta disponibilidade na borda sem data center: o SafeKit transform
 category: "use-cases"
 lang: "pt-br"
 topics: "O desafio da alta disponibilidade na borda, Por que SafeKit é a escolha natural para a computação de borda, Adequação para implantação em borda e distribuída, Por que os ambientes de OT de borda são diferentes, Casos de uso ideais na borda, Edge vs. data center: principais diferenças em alta disponibilidade"
+hashpart: "the-edge-ha-challenge, what-makes-safekit-the-natural-fit-for-edge, edge--distributed-deployment-suitability, why-edge-ot-environments-are-different, ideal-edge-use-cases, edge-vs-data-center-ha-key-differences"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

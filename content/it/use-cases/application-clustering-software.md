@@ -5,6 +5,7 @@ description: "HA per OEM: integra replica e failover SafeKit nel tuo software e 
 category: "use-cases"
 lang: "it"
 topics: "Il caso d’uso OEM per l’alta disponibilità"
+hashpart: "the-oem-high-availability-use-case"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

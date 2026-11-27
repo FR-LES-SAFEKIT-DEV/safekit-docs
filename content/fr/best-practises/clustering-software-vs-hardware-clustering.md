@@ -5,6 +5,7 @@ description: "Clustering logiciel vs clustering matériel : pourquoi SafeKit ass
 category: "best-practises"
 lang: "fr"
 topics: "Quelle est la différence entre le clustering logiciel et le clustering matériel ?, Clustering logiciel ou clustering matériel : avantages et inconvénients"
+hashpart: "difference-between-software-clustering-and-hardware-clustering, software-clustering-vs-hardware-clustering-pros-and-cons"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

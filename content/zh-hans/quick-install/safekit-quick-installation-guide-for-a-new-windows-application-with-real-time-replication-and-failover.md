@@ -5,6 +5,7 @@ description: "分步指南：在 Windows 上安装 SafeKit mirror.safe 模块，
 category: "quick-install"
 lang: "zh-hans"
 topics: "SafeKit/Windows 解决方案概述, 在 SafeKit/Windows 解决方案上安装 (mirror.safe), SafeKit/Windows 解决方案的分步配置, SafeKit mirror 解决方案演示"
+hashpart: "overview-of-the-safekit--windows-solution, installation-on-the-safekit--windows-solutions-mirrorsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

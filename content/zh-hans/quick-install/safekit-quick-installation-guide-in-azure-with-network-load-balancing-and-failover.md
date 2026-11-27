@@ -5,6 +5,7 @@ description: "分步指南：在 Azure 中安装 SafeKit farm.safe 模块，为 
 category: "quick-install"
 lang: "zh-hans"
 topics: "SafeKit/Azure 解决方案概述, 在 Windows 和 Linux 上安装 SafeKit/Azure 解决方案 (farm.safe), SafeKit/Azure 解决方案的分步配置, SafeKit farm 解决方案演示"
+hashpart: "overview-of-the-safekit--azure-solution, installation-of-the-safekit--azure-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--azure-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "SafeKit による BMS 冗長化：Siemens、Honeywell、Schneider 
 category: "use-cases"
 lang: "ja"
 topics: "ビル管理システム（BMS）とは？, BMS ソフトウェアが重要な理由とは？, 主要 BMS ベンダー"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

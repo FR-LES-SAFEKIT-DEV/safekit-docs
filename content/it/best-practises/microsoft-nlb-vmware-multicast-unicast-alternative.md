@@ -5,6 +5,7 @@ description: "Un’alternativa a Microsoft NLB su VMware: i cluster farm SafeKit
 category: "best-practises"
 lang: "it"
 topics: "Modalità multicast Microsoft NLB, Modalità unicast Microsoft NLB, Alternativa con SafeKit"
+hashpart: "microsoft-nlb-multicast-mode, microsoft-nlb-unicast-mode, alternative-with-safekit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "SafeKit Smart Console: configure e monitorize os seus clusters de 
 category: "architectures"
 lang: "pt-pt"
 topics: "Smart Console: alta disponibilidade intuitiva e sem erros em computadores e dispositivos móveis, Índice, Como funciona um cluster mirror SafeKit com a consola web?, Como funciona um cluster farm SafeKit com a consola web?, Como monitorizar vários módulos e vários clusters através da consola web?, Como monitorizar os alertas na consola e gerir as notificações por e-mail?"
+hashpart: "smart-console-intuitive-mobile-and-error-free-high-availability, table-of-contents, safekit-mirror-cluster, safekit-farm-cluster, multipe-modules-clusters, safekit-notifications-cluster"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

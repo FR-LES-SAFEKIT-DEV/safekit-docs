@@ -5,6 +5,7 @@ description: "如何测试 SafeKit farm 集群的负载均衡虚拟 IP：节点�
 category: "best-practises"
 lang: "zh-hans"
 topics: "1. 主要原则, 2. 先决条件：SafeKit 马赛克, 3. 测试 1 – 连接分布, 4. 测试 2 – 更改调度服务器, 5. 测试 3 – 使用 arp -a 检查 GARP 重路由, 6. 测试 4 – 使用 Wireshark (Windows) 或 tcpdump (Linux) 进行端到端检查, 7. 从哪个工作站进行测试, 8. 预期成果总结, 9. 故障排除, SafeKit farm 解决方案演示"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

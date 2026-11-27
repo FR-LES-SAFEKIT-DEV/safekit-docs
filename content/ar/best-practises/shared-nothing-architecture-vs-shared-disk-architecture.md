@@ -5,6 +5,7 @@ description: "البنية بدون مشاركة مقابل بنية القرص 
 category: "best-practises"
 lang: "ar"
 topics: "بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك لمجموعات التوافر العالي, بنية عدم المشاركة (shared-nothing) مقابل بنية القرص المشترك: الإيجابيات والسلبيات"
+hashpart: "shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters, shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

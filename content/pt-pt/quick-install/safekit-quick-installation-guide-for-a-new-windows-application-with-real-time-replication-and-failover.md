@@ -5,6 +5,7 @@ description: "Guia passo a passo: instale o módulo SafeKit mirror.safe em Windo
 category: "quick-install"
 lang: "pt-pt"
 topics: "Visão geral da solução SafeKit/Windows, Instalação das soluções SafeKit/Windows (mirror.safe), Configuração passo a passo da solução SafeKit/Windows, Demonstração da solução mirror SafeKit"
+hashpart: "overview-of-the-safekit--windows-solution, installation-on-the-safekit--windows-solutions-mirrorsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

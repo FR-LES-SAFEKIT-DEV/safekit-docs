@@ -5,6 +5,7 @@ description: "Continuità operativa e disaster recovery con SafeKit: un cluster 
 category: "use-cases"
 lang: "it"
 topics: "Software per la continuità aziendale e il disaster recovery"
+hashpart: "business-continuity-and-disaster-recovery-software"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

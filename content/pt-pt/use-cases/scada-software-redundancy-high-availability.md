@@ -5,6 +5,7 @@ description: "Redundância SCADA com SafeKit: cluster de dois nós com replicaç
 category: "use-cases"
 lang: "pt-pt"
 topics: "O que é um sistema SCADA?, Por que o software SCADA é tão importante?, Principais fornecedores de software SCADA"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

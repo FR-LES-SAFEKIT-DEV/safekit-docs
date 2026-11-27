@@ -5,6 +5,7 @@ description: "Guida passo passo: installa il modulo SafeKit iis_farm.safe su Win
 category: "quick-install"
 lang: "it"
 topics: "Panoramica della soluzione SafeKit/IIS, Installazione della soluzione SafeKit/IIS su Windows (iisfarm.safe), Configurazione passo-passo della soluzione SafeKit/IIS, Dimostrazione della soluzione farm SafeKit"
+hashpart: "overview-of-the-safekit--iis-solution, installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe, step-by-step-configuration-of-the-safekit--iis-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

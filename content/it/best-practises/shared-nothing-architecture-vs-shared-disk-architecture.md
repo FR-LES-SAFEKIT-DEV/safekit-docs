@@ -5,6 +5,7 @@ description: "Architettura shared-nothing o a disco condiviso per l’alta dispo
 category: "best-practises"
 lang: "it"
 topics: "Architettura shared-nothing vs. architettura a disco condiviso per cluster ad alta disponibilità, Architettura shared-nothing vs. architettura a disco condiviso: pro e contro"
+hashpart: "shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters, shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

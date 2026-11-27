@@ -5,6 +5,7 @@ description: "단계별 가이드: Milestone XProtect Management Server의 실�
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/Milestone XProtect 솔루션 개요, Windows에 SafeKit/Milestone XProtect 솔루션 설치 (milestone.safe), SafeKit/Milestone XProtect 솔루션의 단계별 구성, SafeKit mirror 솔루션 시연"
+hashpart: "overview-of-the-safekit--milestone-xprotect-solution, installation-of-the-safekit--milestone-xprotect-solution-on-windows-milestonesafe, step-by-step-configuration-of-the-safekit--milestone-xprotect-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

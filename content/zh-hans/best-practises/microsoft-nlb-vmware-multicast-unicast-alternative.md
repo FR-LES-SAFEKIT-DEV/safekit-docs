@@ -5,6 +5,7 @@ description: "VMware 上 Microsoft NLB 的替代方案：SafeKit farm 集群实�
 category: "best-practises"
 lang: "zh-hans"
 topics: "Microsoft NLB 组播模式, Microsoft NLB 单播模式, SafeKit 替代方案"
+hashpart: "microsoft-nlb-multicast-mode, microsoft-nlb-unicast-mode, alternative-with-safekit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"

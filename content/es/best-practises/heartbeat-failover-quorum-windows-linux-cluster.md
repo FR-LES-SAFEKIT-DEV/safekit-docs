@@ -5,6 +5,7 @@ description: "Cómo funcionan el heartbeat, la conmutación por error y el quór
 category: "best-practises"
 lang: "es"
 topics: "¿Cómo funcionan los heartbeats y la conmutación por error en un clúster Windows o Linux?, Split brain y quórum con servidores en dos salas de ordenadores remotas, Quórum de clúster simple con el checker split-brain SafeKit"
+hashpart: "how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster, split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms, simple-cluster-quorum-with-the-safekit-split-brain-checker"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

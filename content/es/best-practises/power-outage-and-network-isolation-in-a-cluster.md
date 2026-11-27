@@ -5,6 +5,7 @@ description: "Cortes de energía y aislamiento de red en un clúster de alta dis
 category: "best-practises"
 lang: "es"
 topics: "¿Cuáles son los diferentes escenarios en caso de un corte de energía en un clúster?"
+hashpart: "what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

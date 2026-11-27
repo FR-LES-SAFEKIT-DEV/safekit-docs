@@ -5,6 +5,7 @@ description: "SafeKit 支持：提供 7x24 小时事件报告的合同支持、S
 category: "resources"
 lang: "zh-hans"
 topics: "免费AI一级支持, 标准支持与维护, 免费认证和培训计划"
+hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

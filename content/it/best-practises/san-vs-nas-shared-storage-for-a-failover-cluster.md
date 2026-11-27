@@ -5,6 +5,7 @@ description: "Storage condiviso SAN o NAS per i cluster di failover: limiti, cos
 category: "best-practises"
 lang: "it"
 topics: "SAN o NAS: quale soluzione di archiviazione condivisa è più semplice per un cluster di failover?"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

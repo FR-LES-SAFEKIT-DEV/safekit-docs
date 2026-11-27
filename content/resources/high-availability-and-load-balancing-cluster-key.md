@@ -5,6 +5,7 @@ description: "Request a free one-month SafeKit key to test high availability, re
 category: "resources"
 lang: "en"
 topics: "Receive a free SafeKit one-month license key by email for Windows or Linux"
+hashpart: "receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

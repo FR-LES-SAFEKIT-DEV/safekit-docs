@@ -5,6 +5,7 @@ description: "Edge high availability without a data center: SafeKit turns two st
 category: "use-cases"
 lang: "en"
 topics: "The high availability challenge at the edge, Why SafeKit is the natural fit for edge computing, Edge and distributed deployment suitability, Why edge OT environments are different, Ideal use cases at the edge, Edge vs. data center high availability: key differences"
+hashpart: "the-edge-ha-challenge, what-makes-safekit-the-natural-fit-for-edge, edge--distributed-deployment-suitability, why-edge-ot-environments-are-different, ideal-edge-use-cases, edge-vs-data-center-ha-key-differences"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"
 ---

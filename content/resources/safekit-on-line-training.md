@@ -5,6 +5,7 @@ description: "Free SafeKit online training and certification: installation, web 
 category: "resources"
 lang: "en"
 topics: "How to Access the Training Platform?, SafeKit Training Videos"
+hashpart: "certif, training82"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

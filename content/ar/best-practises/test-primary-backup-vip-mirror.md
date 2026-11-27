@@ -5,6 +5,7 @@ description: "كيفية اختبار عنوان IP الافتراضي لمجم�
 category: "best-practises"
 lang: "ar"
 topics: "1. المبادئ الأساسية, 2. المتطلب الأساسي: تكوين عنوان IP الظاهري (VIP), 3. الاختبار 1 – عنوان IP الظاهري (VIP) الذي يحتفظ به الخادم الأساسي, 4. الاختبار 2 – تجاوز الفشل اليدوي (إيقاف الأساسي), 5. الاختبار 3 – التحقق من إعادة توجيه MAC باستخدام arp -a, 6. الاختبار 4 – فحص شامل باستخدام Wireshark (نظام التشغيل Windows) أو tcpdump (نظام التشغيل Linux), 7. محطات العمل التي سيتم الاختبار منها, 8. ملخص النتائج المتوقعة, 9. استكشاف الأخطاء وإصلاحها"
+hashpart: "1-key-principles, 2-prerequisite-virtual-ip-vip-configuration, 3-test-1--virtual-ip-vip-held-by-the-primary-server, 4-test-2--manual-failover-stop-of-the-primary, 5-test-3--checking-mac-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.16 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"

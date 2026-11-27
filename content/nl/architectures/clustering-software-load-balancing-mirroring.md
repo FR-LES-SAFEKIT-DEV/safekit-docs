@@ -5,6 +5,7 @@ description: "Combineer SafeKit farm- en mirror-modules: loadbalancing schaalt d
 category: "architectures"
 lang: "nl"
 topics: "Hoge beschikbaarheid en schaalbaarheid van bedrijfskritische web- en databaseapplicaties met de SafeKit-clusteringsoftware"
+hashpart: "high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

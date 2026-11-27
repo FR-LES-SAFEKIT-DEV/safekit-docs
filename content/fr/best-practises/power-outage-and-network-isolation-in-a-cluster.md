@@ -5,6 +5,7 @@ description: "Coupures de courant et isolement réseau dans un cluster de haute 
 category: "best-practises"
 lang: "fr"
 topics: "Quels sont les différents scénarios en cas de panne de courant dans un cluster ?"
+hashpart: "what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

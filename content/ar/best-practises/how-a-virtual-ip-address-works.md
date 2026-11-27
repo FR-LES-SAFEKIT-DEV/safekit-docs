@@ -5,6 +5,7 @@ description: "كيف ينتقل عنوان IP الافتراضي أثناء تج
 category: "best-practises"
 lang: "ar"
 topics: "ما هو عنوان IP الظاهري في مجموعة عالية التوافر؟, تطبيق عنوان IP الظاهري في SafeKit, كيف يعمل عنوان IP الظاهري في نفس الشبكة الفرعية (مجموعة mirror), كيف يعمل عنوان IP الظاهري عبر الشبكات الفرعية المختلفة باستخدام موازن تحميل (مجموعة mirror), كيف يعمل عنوان IP الظاهري عبر الشبكات الفرعية المختلفة باستخدام واجهات سطر الأوامر لمزود الخدمة السحابية (مجموعة mirror), كيف يعمل عنوان IP الظاهري عبر الشبكات الفرعية المختلفة باستخدام بروتوكول BGP (مجموعة mirror), كيف تعمل إعادة توجيه نظام أسماء النطاقات (DNS) عبر الشبكات الفرعية المختلفة (مجموعة mirror), كيف يعمل موازن تحميل بروتوكول الإنترنت الظاهري في مجموعة farm على نفس الشبكة الفرعية, كيف يعمل عنوان IP ظاهري متوازن الأحمال عبر الشبكات الفرعية المختلفة (مجموعة farm), المقارنة: تطبيق عنوان IP الظاهري، وزمن الانتقال، وشفافية التطبيق, الأسئلة الشائعة حول عنوان IP الظاهري"
+hashpart: "virtual-ip-definition, safekit-virtual-ip-implementation, virtual-ip-same-subnet-failover, virtual-ip-different-subnets-failover, virtual-ip-cloud-cli-failover, virtual-ip-bgp-failover, virtual-ip-vs-dns-redirection-failover, virtual-ip-load-balancing-same-subnet, virtual-ip-load-balancing-different-subnets, virtual-ip-methods-comparison, virtual-ip-faq"
 translation: "translate_md 2026-11-05.13 | glossaire 2026-11-05.17 | Translation LLM | 16 expressions"
 image: "/wp-content/uploads/2026/01/vip-3-1024.jpg"
 schemaType: "TechArticle"

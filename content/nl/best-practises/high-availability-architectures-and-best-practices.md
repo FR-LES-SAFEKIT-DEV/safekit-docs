@@ -5,6 +5,7 @@ description: "Architecturen en best practices voor hoge beschikbaarheid bij appl
 category: "best-practises"
 lang: "nl"
 topics: "Wat zijn de architecturen voor hoge beschikbaarheid en de best practices?, Vergelijkende tabellen over architecturen en best practices voor hoge beschikbaarheid"
+hashpart: "what-are-the-high-availability-architectures-and-the-best-practices, comparative-tables-on-high-availability-architectures-and-best-practices"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

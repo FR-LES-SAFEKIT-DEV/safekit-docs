@@ -5,6 +5,7 @@ description: "كيف تتعامل مجموعة التوفر العالي مع ا
 category: "best-practises"
 lang: "ar"
 topics: "ما هي السيناريوهات المختلفة في حالة انقطاع التيار الكهربائي في مجموعة؟"
+hashpart: "what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

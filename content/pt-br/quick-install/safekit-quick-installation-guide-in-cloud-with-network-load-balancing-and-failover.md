@@ -5,6 +5,7 @@ description: "Guia passo a passo: instale o módulo SafeKit farm.safe em qualque
 category: "quick-install"
 lang: "pt-br"
 topics: "Visão geral da solução SafeKit / Cloud, Instalação da solução SafeKit / Cloud no Windows e Linux (farm.safe), Configuração passo a passo da solução SafeKit / Cloud, Demonstração da solução farm SafeKit"
+hashpart: "overview-of-the-safekit--cloud-solution, installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--cloud-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

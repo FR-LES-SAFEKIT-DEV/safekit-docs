@@ -5,6 +5,7 @@ description: "SQL Server Express 和 Standard 版的 Always On 替代方案：Sa
 category: "best-practises"
 lang: "zh-hans"
 topics: "Express 和 Standard 版本 SQL Server Always On 的替代方案, 视频指南：为 SQL Server 配置 SafeKit HA mirror 集群"
+hashpart: "alternative-to-always-on-sql-server-for-express-and-standard-editions, videoguide-safekit-mirror-cluster"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

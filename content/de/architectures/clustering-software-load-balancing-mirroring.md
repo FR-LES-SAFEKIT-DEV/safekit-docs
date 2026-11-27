@@ -5,6 +5,7 @@ description: "Kombinieren Sie SafeKit-Farm- und Mirror-Module: Lastverteilung sk
 category: "architectures"
 lang: "de"
 topics: "Hochverfügbarkeit und Skalierbarkeit kritischer Web- und Datenbankanwendungen mit der Clustering-Software SafeKit"
+hashpart: "high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

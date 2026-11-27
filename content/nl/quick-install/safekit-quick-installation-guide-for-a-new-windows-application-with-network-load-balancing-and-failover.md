@@ -5,6 +5,7 @@ description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe o
 category: "quick-install"
 lang: "nl"
 topics: "Overzicht van de SafeKit/Windows oplossing, Installatie van de SafeKit/Windows-oplossing (farm.safe), Stapsgewijze configuratie van de SafeKit/Windows-oplossing, Demonstratie van de SafeKit farm"
+hashpart: "overview-of-the-safekit--windows-solution, installation-of-the-safekit--windows-solution-farmsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

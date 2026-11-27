@@ -5,6 +5,7 @@ description: "كيفية تنفيذ خوادم مكررة بالبرمجيات �
 category: "best-practises"
 lang: "ar"
 topics: "كيفية تطبيق خوادم احتياطية نشطة/خاملة مع النسخ المتماثل في الوقت الفعلي وتجاوز الفشل؟, كيفية تطبيق خوادم احتياطية نشطة/نشطة مع موازنة تحميل الشبكة وتجاوز الفشل؟"
+hashpart: "how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover, how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

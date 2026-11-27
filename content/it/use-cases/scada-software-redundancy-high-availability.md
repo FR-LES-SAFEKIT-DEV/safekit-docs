@@ -5,6 +5,7 @@ description: "Ridondanza SCADA con SafeKit: cluster a due nodi con replica sincr
 category: "use-cases"
 lang: "it"
 topics: "Che cos’è un sistema SCADA?, Perché il software SCADA è fondamentale?, Principali fornitori di software SCADA"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

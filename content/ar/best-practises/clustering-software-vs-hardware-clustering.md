@@ -5,6 +5,7 @@ description: "التجميع البرمجي مقابل التجميع الماد
 category: "best-practises"
 lang: "ar"
 topics: "ما الفرق بين تجميع البرمجيات وتجميع الأجهزة؟, تجميع البرمجيات مقابل تجميع الأجهزة: الإيجابيات والسلبيات"
+hashpart: "difference-between-software-clustering-and-hardware-clustering, software-clustering-vs-hardware-clustering-pros-and-cons"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

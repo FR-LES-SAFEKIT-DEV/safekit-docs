@@ -5,6 +5,7 @@ description: "公共交通管制室の高可用性：RATP は無人運転のパ�
 category: "use-cases"
 lang: "ja"
 topics: "公共交通機関の運行管理室, なぜコントロールルームは重要なのでしょうか？, 公共交通機関向け SafeKit 高可用性ソリューション, RATP における実世界での導入"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

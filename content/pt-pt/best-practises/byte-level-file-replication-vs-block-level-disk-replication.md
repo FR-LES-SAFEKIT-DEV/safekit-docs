@@ -5,6 +5,7 @@ description: "Replicação de ficheiros ao nível do byte vs replicação de dis
 category: "best-practises"
 lang: "pt-pt"
 topics: "Replicação de ficheiros ao nível de bytes versus replicação de disco ao nível de blocos num cluster de alta disponibilidade, Vantagens e desvantagens da replicação de ficheiros ao nível de bytes versus a replicação de discos ao nível de blocos"
+hashpart: "byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster, pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

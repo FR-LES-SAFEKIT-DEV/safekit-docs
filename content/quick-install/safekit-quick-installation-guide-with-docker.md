@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit mirror.safe module for Doc
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Docker solution, Installation of the SafeKit / Docker solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Docker solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--docker-solution, installation-of-the-safekit--docker-solution-on-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--docker-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

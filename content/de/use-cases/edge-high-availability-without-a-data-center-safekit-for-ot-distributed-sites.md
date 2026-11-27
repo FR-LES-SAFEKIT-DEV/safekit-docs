@@ -5,6 +5,7 @@ description: "Edge-Hochverfügbarkeit ohne Rechenzentrum: SafeKit macht zwei Sta
 category: "use-cases"
 lang: "de"
 topics: "Die Herausforderung der Hochverfügbarkeit am Edge, Warum SafeKit die natürliche Wahl für Edge Computing ist, Eignung für Edge- und verteilte Bereitstellungen, Warum OT-Umgebungen am Netzwerkrand anders sind, Ideale Anwendungsfälle am Edge, Edge vs. Rechenzentrum: Hochverfügbarkeit – die wichtigsten Unterschiede"
+hashpart: "the-edge-ha-challenge, what-makes-safekit-the-natural-fit-for-edge, edge--distributed-deployment-suitability, why-edge-ot-environments-are-different, ideal-edge-use-cases, edge-vs-data-center-ha-key-differences"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

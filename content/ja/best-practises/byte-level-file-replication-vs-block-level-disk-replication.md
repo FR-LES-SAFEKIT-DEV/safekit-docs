@@ -5,6 +5,7 @@ description: "バイトレベルのファイルレプリケーションとブロ
 category: "best-practises"
 lang: "ja"
 topics: "高可用性クラスターにおけるバイトレベルファイルレプリケーションとブロックレベルディスクレプリケーションの比較, バイトレベルのファイルレプリケーションとブロックレベルのディスクレプリケーションの長所と短所"
+hashpart: "byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster, pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

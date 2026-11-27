@@ -5,6 +5,7 @@ description: "대중교통 관제실 고가용성: RATP는 무인 파리 지하�
 category: "use-cases"
 lang: "ko"
 topics: "대중교통 통제실, 관제실이 왜 중요할까요?, 대중교통을 위한 SafeKit 고가용성, RATP의 실제 적용 사례"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "SafeKit の高可用性（同期レプリケーション、RPO 0�
 category: "best-practises"
 lang: "ja"
 topics: "HA のための同期 SafeKit レプリケーションと DR のための非同期バックアップレプリケーションの比較, 目次, 同期 HADR：高速ネットワーク（LAN/VLAN）経由でのゼロデータロス, 非同期 HADR：低速ネットワーク（WAN）を介したディザスタリカバリ, HADR とバックアップを組み合わせて、システム全体の耐障害性を高める方法, HADR アーキテクチャの比較：高速ネットワークと低速ネットワーク, ビデオガイド：SafeKit で HADR を実装する方法"
+hashpart: "synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr, table-of-contents, synchronous-hadr-fast-network, asynchronous-hadr-slow-network, hadr-resilience-strategy, hadr-architectures-comparison, videoguide-hadr-safekit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"

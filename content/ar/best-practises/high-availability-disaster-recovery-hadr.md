@@ -5,6 +5,7 @@ description: "اجمع بين التوفر العالي في SafeKit (نسخ م�
 category: "best-practises"
 lang: "ar"
 topics: "النسخ المتزامن الآمن لـ SafeKit للتوافر العالي مقابل النسخ الاحتياطي غير المتزامن للتعافي من الكوارث, جدول المحتويات, التوفر العالي للبيانات المتزامن (HADR): لا فقدان للبيانات عبر الشبكات السريعة (LAN/VLAN), التعافي من الكوارث غير المتزامن عبر الشبكات البطيئة (WAN), كيفية الجمع بين ميزة التوفر العالي والتعافي من الكوارث (HADR) والنسخ الاحتياطي لتحقيق المرونة الكاملة للنظام, مقارنة بين معماريات HADR: الشبكات السريعة مقابل الشبكات البطيئة, دليل الفيديو: كيفية تطبيق التوافر العالي والتعافي من الكوارث (HADR) باستخدام SafeKit"
+hashpart: "synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr, table-of-contents, synchronous-hadr-fast-network, asynchronous-hadr-slow-network, hadr-resilience-strategy, hadr-architectures-comparison, videoguide-hadr-safekit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"

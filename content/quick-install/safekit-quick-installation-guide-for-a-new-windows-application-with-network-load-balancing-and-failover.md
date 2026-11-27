@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit farm.safe module on Window
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Windows solution, Installation of the SafeKit / Windows solution (farm.safe), Step by step configuration of the SafeKit / Windows solution, Demonstration of the SafeKit farm solution"
+hashpart: "overview-of-the-safekit--windows-solution, installation-of-the-safekit--windows-solution-farmsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-farm-solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

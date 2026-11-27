@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit farm.safe module in Google
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / GCP solution, Installation of the SafeKit / GCP solution on Windows and Linux (farm.safe), Step by step configuration of the SafeKit / GCP solution, Demonstration of the SafeKit farm solution"
+hashpart: "overview-of-the-safekit--gcp-solution, installation-of-the-safekit--gcp-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--gcp-solution, demonstration-of-the-safekit-farm-solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

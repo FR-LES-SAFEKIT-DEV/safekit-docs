@@ -5,6 +5,7 @@ description: "단계별 가이드: Windows 또는 Linux에서 Oracle 데이터�
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/Oracle 솔루션 개요, Windows 및 Linux에 SafeKit/Oracle 솔루션 설치 (oracle.safe), SafeKit/Oracle 솔루션 단계별 구성, SafeKit mirror 솔루션 시연"
+hashpart: "overview-of-the-safekit--oracle-solution, installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe, step-by-step-configuration-of-the-safekit--oracle-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "SafeKit combineert realtime replicatie, automatische failover en n
 category: "product"
 lang: "nl"
 topics: "Wat is SafeKit?"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 53 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

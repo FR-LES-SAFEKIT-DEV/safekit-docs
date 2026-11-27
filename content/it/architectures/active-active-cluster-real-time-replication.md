@@ -5,6 +5,7 @@ description: "Cluster SafeKit attivo-attivo: due server si proteggono a vicenda 
 category: "architectures"
 lang: "it"
 topics: "Come funziona un cluster attivo-attivo con replica in tempo reale?"
+hashpart: "how-the-active-active-cluster-with-real-time-replication-works"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

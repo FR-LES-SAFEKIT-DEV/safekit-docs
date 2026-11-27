@@ -5,6 +5,7 @@ description: "المجموعات في السحابة مع SafeKit: حل عام �
 category: "solutions"
 lang: "ar"
 topics: "حلول سحابية أخرى مع Eviden SafeKit"
+hashpart: "other-cloud-solutions-with-eviden-safekit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 27 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

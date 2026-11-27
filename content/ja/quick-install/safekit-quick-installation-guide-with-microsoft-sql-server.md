@@ -5,6 +5,7 @@ description: "手順ガイド：SafeKit の sqlserver.safe モジュールを導
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/Microsoft SQL Server ソリューションの概要, Windows への SafeKit/Microsoft SQL Server ソリューションのインストール (sqlserver.safe), SafeKit/Microsoft SQL Server ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--microsoft-sql-server-solution, installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe, step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

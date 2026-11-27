@@ -5,6 +5,7 @@ description: "SafeKit 将实时复制、自动故障转移和网络负载均衡�
 category: "product"
 lang: "zh-hans"
 topics: "什么是 SafeKit？"
+hashpart: "what-is-safekit"
 translation: "translate_md 2026-11-25.1 | glossary 2026-11-25.4 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

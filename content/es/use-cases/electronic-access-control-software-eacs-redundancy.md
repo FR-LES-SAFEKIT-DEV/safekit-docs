@@ -5,6 +5,7 @@ description: "Redundancia del control de acceso (EACS) con SafeKit: clúster de 
 category: "use-cases"
 lang: "es"
 topics: "¿Qué es un sistema electrónico de control de acceso (EACS)?, ¿Por qué es fundamental el software EACS?, Principales proveedores EACS"
+hashpart: "what-is-an-electronic-access-control-system-eacs, why-an-eacs-software-is-critical, key-players-list-in-eacs"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

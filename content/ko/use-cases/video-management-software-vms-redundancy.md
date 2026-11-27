@@ -5,6 +5,7 @@ description: "SafeKit으로 구현하는 VMS 이중화: Milestone, Genetec, Bosc
 category: "use-cases"
 lang: "ko"
 topics: "비디오 관리 소프트웨어(VMS)란 무엇인가요?, VMS 소프트웨어가 중요한 이유는 무엇일까요?, 주요 VMS 공급업체"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

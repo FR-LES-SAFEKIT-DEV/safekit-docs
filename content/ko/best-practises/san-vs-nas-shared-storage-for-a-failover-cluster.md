@@ -5,6 +5,7 @@ description: "장애 조치 클러스터용 SAN과 NAS 공유 스토리지 비�
 category: "best-practises"
 lang: "ko"
 topics: "SAN 또는 NAS 공유 스토리지: 장애 조치 클러스터에 더 간단한 것은 무엇일까요?"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

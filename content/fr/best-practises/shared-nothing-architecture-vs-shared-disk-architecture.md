@@ -5,6 +5,7 @@ description: "Architecture sans partage vs à disque partagé pour la haute disp
 category: "best-practises"
 lang: "fr"
 topics: "Architecture sans partage ou architecture à disque partagé pour clusters de haute disponibilité, Architecture sans partage ou architecture à disque partagé : avantages et inconvénients"
+hashpart: "shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters, shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

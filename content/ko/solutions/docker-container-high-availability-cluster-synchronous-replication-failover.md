@@ -5,6 +5,7 @@ description: "SafeKit으로 구현하는 Docker 고가용성: SAN 없이 Linux �
 category: "solutions"
 lang: "ko"
 topics: "SANless SafeKit mirror 클러스터 Docker와 함께 작동하는 방식, 목차, SafeKit 소프트웨어는 Docker 고가용성 클러스터 어떻게 간단하게 구현할까요?, 비교: SafeKit SANless 클러스터 vs. 기존 Docker HA, 비교: SafeKit vs. 오픈소스 Linux HA (Pacemaker/Corosync/DRBD), Docker 고가용성 요약"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-docker, table-of-contents, how-safekit-implements-docker-ha, safekit-docker-comparison, safekit-vs-linux-ha-stack, docker-ha-summary-quick-installation-guide"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 36 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"

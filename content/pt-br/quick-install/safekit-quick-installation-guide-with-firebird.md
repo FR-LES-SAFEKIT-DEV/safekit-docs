@@ -5,6 +5,7 @@ description: "Guia passo a passo: instale o módulo SafeKit firebird.safe para r
 category: "quick-install"
 lang: "pt-br"
 topics: "Visão geral da solução SafeKit/Firebird, Instalação da solução SafeKit/Firebird no Windows e Linux (firebird.safe), Configuração passo a passo da solução SafeKit/Firebird, Demonstração da solução mirror SafeKit"
+hashpart: "overview-of-the-safekit--firebird-solution, installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe, step-by-step-configuration-of-the-safekit--firebird-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

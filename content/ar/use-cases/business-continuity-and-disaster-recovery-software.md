@@ -5,6 +5,7 @@ description: "استمرارية الأعمال والتعافي من الكوا
 category: "use-cases"
 lang: "ar"
 topics: "برامج استمرارية الأعمال والتعافي من الكوارث"
+hashpart: "business-continuity-and-disaster-recovery-software"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "단계별 가이드: Windows 또는 Linux 가상 머신 2대 간 �
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit / 클라우드 mirror 솔루션 개요, Windows 및 Linux에 SafeKit / Cloud mirror 솔루션 설치 (mirror.safe), SafeKit /클라우드 mirror 솔루션 단계별 구성, SafeKit mirror 솔루션 시연"
+hashpart: "overview-of-the-safekit--cloud-mirror-solution, installation-of-the-safekit--cloud-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--cloud-mirror-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "Formation et certification SafeKit gratuites en ligne : installati
 category: "resources"
 lang: "fr"
 topics: "Comment accéder à la plateforme de formation ?, Vidéos de formation SafeKit"
+hashpart: "certif, training82"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

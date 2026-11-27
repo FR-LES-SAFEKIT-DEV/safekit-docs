@@ -5,6 +5,7 @@ description: "SafeKit による SCADA 冗長化：WinCC、Wonderware、iFix 等�
 category: "use-cases"
 lang: "ja"
 topics: "SCADA システムとは何ですか？, SCADA ソフトウェアが重要な理由とは？, 主要 SCADA ソフトウェアベンダー"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

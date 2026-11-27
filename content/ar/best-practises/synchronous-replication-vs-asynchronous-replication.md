@@ -5,6 +5,7 @@ description: "النسخ المتزامن مقابل غير المتزامن: ل
 category: "best-practises"
 lang: "ar"
 topics: "هل تُفقد البيانات عند فشل التطبيق مع النسخ المتماثل المتزامن أو غير المتزامن؟, جدول المحتويات, كيف يعمل النسخ المتماثل غير المتزامن؟, كيف يعمل النسخ المتزامن؟, كيف يعمل النسخ المتماثل شبه المتزامن؟, الخلاصة النهائية: اختيار طريقة النسخ المتماثل المناسبة لضمان التوافر العالي, جدول المقارنة: متزامن مقابل غير متزامن مقابل شبه متزامن, دليل الفيديو: تكوين النسخ المتماثل المتزامن في الوقت الفعلي وزيادة التوافر, الأسئلة الشائعة: استراتيجيات النسخ المتماثل في المجموعات عالية التوافر"
+hashpart: "data-loss-risk-synchronous-vs-asynchronous-failover, table-of-contents, how-asynchronous-replication-works, how-synchronous-replication-works, how-semi-synchronous-replication-works, best-practices-synchronous-vs-asynchronous-replication, comparison-synchronous-asynchronous-replication, videoguide-synchronous-real-time-replication-ha, faq-replication-high-availability"
 translation: "translate_md 2026-11-20.8 | glossaire 2026-11-20.17 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/01/synchronous-asynchronous-replication-3-1024.jpg"
 schemaType: "TechArticle"

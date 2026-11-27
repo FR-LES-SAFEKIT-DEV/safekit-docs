@@ -5,6 +5,7 @@ description: "SAN vs. NAS als gemeinsamer Speicher für Failover-Cluster: Grenze
 category: "best-practises"
 lang: "de"
 topics: "SAN- oder NAS-Gemeinsamspeicher: Was ist für einen Failover-Cluster einfacher?"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

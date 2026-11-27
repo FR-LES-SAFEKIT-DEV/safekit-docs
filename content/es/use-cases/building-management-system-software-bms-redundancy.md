@@ -5,6 +5,7 @@ description: "Redundancia BMS con SafeKit: clúster de dos nodos con replicació
 category: "use-cases"
 lang: "es"
 topics: "¿Qué es un sistema de gestión de edificios (BMS)?, ¿Por qué es fundamental el software BMS?, Principales proveedores de BMS"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

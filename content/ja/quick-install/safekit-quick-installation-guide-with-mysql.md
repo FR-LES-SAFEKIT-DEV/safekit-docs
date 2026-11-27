@@ -5,6 +5,7 @@ description: "手順ガイド：SafeKit の mysql.safe モジュールを導入�
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/MySQL ソリューションの概要, Windows および Linux への SafeKit/MySQL ソリューションのインストール (mysql.safe), SafeKit/MySQL Server ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--mysql-solution, installation-of-the-safekit--mysql-solution-on-windows-and-linux-mysqlsafe, step-by-step-configuration-of-the-safekit--mysql-server-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

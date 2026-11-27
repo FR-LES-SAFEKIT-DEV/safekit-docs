@@ -5,6 +5,7 @@ description: "المرجع التقني لـ SafeKit للرد على طلبات 
 category: "resources"
 lang: "ar"
 topics: "نظرة عامة, جدول المحتويات, معلومات المنتج, وحدات التطبيق المعدة مسبقًا, البنية والنشر, فقدان البيانات وأوقات الاسترداد (RPO ووقت RTO), المواقع البعيدة وعمليات النشر الموزعة, المراقبة والتنبيهات, الأمن والامتثال, الترخيص, الدعم والصيانة, مقارنة مع الحلول الأخرى, روابط مفيدة"
+hashpart: "overview, table-of-contents, product-identity, pre-built-application-modules, architecture-deployment-model, rpo-rto-capabilities, edge-distributed-deployment-suitability, monitoring-management-alerting, security-compliance, licensing-model, support-maintenance-slas, comparison-vs-alternatives, quick-reference-links"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

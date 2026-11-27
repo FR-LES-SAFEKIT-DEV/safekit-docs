@@ -5,6 +5,7 @@ description: "SCADA-Redundanz mit SafeKit: Cluster mit zwei Knoten, synchroner R
 category: "use-cases"
 lang: "de"
 topics: "Was ist ein SCADA-System?, Warum ist SCADA-Software von entscheidender Bedeutung?, Wichtigste Anbieter SCADA-Software"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "SafeKit으로 구현하는 출입 통제(EACS) 이중화: Nedap, S
 category: "use-cases"
 lang: "ko"
 topics: "전자식 출입 통제 시스템(EACS)이란 무엇인가요?, EACS 소프트웨어가 중요한 이유는 무엇입니까?, 주요 EACS 공급업체"
+hashpart: "what-is-an-electronic-access-control-system-eacs, why-an-eacs-software-is-critical, key-players-list-in-eacs"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "Guia passo a passo: instale o módulo SafeKit mirror.safe para Doc
 category: "quick-install"
 lang: "pt-pt"
 topics: "Visão geral da solução SafeKit/Docker, Instalação da solução SafeKit/Docker no Linux (mirror.safe), Configuração passo a passo da solução SafeKit/Docker, Demonstração da solução mirror SafeKit"
+hashpart: "overview-of-the-safekit--docker-solution, installation-of-the-safekit--docker-solution-on-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--docker-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 30 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "高可用性クラスターでの停電とネットワーク分離
 category: "best-practises"
 lang: "ja"
 topics: "クラスターで停電が発生した場合、どのようなシナリオが考えられますか？"
+hashpart: "what-are-the-different-scenarios-in-case-of-power-outage-in-a-cluster"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.6 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

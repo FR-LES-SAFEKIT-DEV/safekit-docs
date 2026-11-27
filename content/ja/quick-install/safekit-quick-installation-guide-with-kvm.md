@@ -5,6 +5,7 @@ description: "手順ガイド：SafeKit の kvm.safe モジュールを導入し
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/KVM ソリューションの概要, Linux への SafeKit/KVM ソリューションのインストール (kvm.safe), SafeKit/KVM ソリューションのステップバイステップ設定, VM レベルの高可用性ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--kvm-solution, installation-of-the-safekit--kvm-solution-on-linux-kvmsafe, step-by-step-configuration-of-the-safekit--kvm-solution, demonstration-of-a-vm-level-high-availability-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

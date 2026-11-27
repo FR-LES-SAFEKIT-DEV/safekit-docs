@@ -5,6 +5,7 @@ description: "SafeKit-Clusterarchitekturen: Mirror-Cluster mit Echtzeit-Replikat
 category: "architectures"
 lang: "de"
 topics: "Welche verschiedenen Hochverfügbarkeitsarchitekturen und Softwarecluster gibt es mit SafeKit?, Wie baut man Hochverfügbarkeitscluster mit SafeKit?"
+hashpart: "what-are-the-different-high-availability-architectures-and-the-different-software-clusters-with-safekit, how-to-build-high-availability-clusters-with-safekit"
 translation: "translate_md 2026-11-06.18 | glossaire 2026-11-06.13 | Translation LLM | 22 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 ---

@@ -5,6 +5,7 @@ description: "Mettre à niveau une application protégée par SafeKit : mises à
 category: "best-practises"
 lang: "fr"
 topics: "Mise à niveau d’une application haute disponibilité protégée par SafeKit, Haute disponibilité au niveau des machines virtuelles, Haute disponibilité au niveau de l’application, Choisir la bonne stratégie de mise à niveau, Conclusion"
+hashpart: "upgrading-a-high-availability-application-protected-by-safekit, vm-level-ha, app-level-ha, choosing-the-right-upgrade-strategy, conclusion"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

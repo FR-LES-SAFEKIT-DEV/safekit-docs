@@ -5,6 +5,7 @@ description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.saf
 category: "quick-install"
 lang: "ar"
 topics: "نظرة عامة على حل SafeKit/Linux, تثبيت حل SafeKit/Linux (farm.safe), إعداد حل SafeKit/Linux خطوة بخطوة, عرض حل SafeKit farm"
+hashpart: "overview-of-the-safekit--linux-solution, installation-of-the-safekit--linux-solution-farmsafe, step-by-step-configuration-of-the-safekit--linux-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

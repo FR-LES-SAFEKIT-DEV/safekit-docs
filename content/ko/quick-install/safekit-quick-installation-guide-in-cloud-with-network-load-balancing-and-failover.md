@@ -5,6 +5,7 @@ description: "단계별 가이드: 모든 클라우드용 SafeKit farm.safe 모�
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit / Cloud 솔루션 개요, Windows 및 Linux에 SafeKit / Cloud 솔루션 설치 (farm.safe), SafeKit / Cloud 솔루션의 단계별 구성, SafeKit farm 솔루션 시연"
+hashpart: "overview-of-the-safekit--cloud-solution, installation-of-the-safekit--cloud-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--cloud-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

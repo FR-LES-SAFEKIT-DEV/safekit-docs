@@ -5,6 +5,7 @@ description: "SafeKit-Support: vertraglicher Support mit Störungsmeldung 24/7, 
 category: "resources"
 lang: "de"
 topics: "Kostenloser KI-Support der Stufe 1, Standard Support & Maintenance, Kostenloses Zertifizierungs- und Schulungsprogramm"
+hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

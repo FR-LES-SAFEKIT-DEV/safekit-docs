@@ -5,6 +5,7 @@ description: "SafeKit 지원: 연중무휴 24시간 장애 신고가 가능한 �
 category: "resources"
 lang: "ko"
 topics: "무료 AI 레벨 1 지원, 표준 지원 및 유지보수, 무료 인증 및 교육 프로그램"
+hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

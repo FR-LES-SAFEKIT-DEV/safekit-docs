@@ -5,6 +5,7 @@ description: "使用 SafeKit 构建云端集群：一套通用方案，在 AWS�
 category: "solutions"
 lang: "zh-hans"
 topics: "其他采用 Eviden SafeKit 的云解决方案"
+hashpart: "other-cloud-solutions-with-eviden-safekit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

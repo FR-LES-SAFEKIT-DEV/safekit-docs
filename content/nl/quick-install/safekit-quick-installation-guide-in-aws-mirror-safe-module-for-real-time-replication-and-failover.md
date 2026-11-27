@@ -5,6 +5,7 @@ description: "Stapsgewijze handleiding: installeer de SafeKit-module mirror.safe
 category: "quick-install"
 lang: "nl"
 topics: "Overzicht van de SafeKit/AWS mirror, Installatie van de SafeKit/AWS mirror op Windows en Linux (mirror.safe), Stapsgewijze configuratie van de SafeKit/AWS mirror, Demonstratie van de SafeKit mirror"
+hashpart: "overview-of-the-safekit--aws-mirror-solution, installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--aws-mirror-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

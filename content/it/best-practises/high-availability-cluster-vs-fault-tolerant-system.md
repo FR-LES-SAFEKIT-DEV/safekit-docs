@@ -5,6 +5,7 @@ description: "Cluster HA o sistema fault-tolerant: confronta costi, ripristino e
 category: "best-practises"
 lang: "it"
 topics: "Qual è la differenza tra alta disponibilità e tolleranza ai guasti?, Vantaggi e svantaggi dell’alta disponibilità e della tolleranza ai guasti"
+hashpart: "what-is-the-difference-between-high-availability-and-fault-tolerance, pros-and-cons-of-high-availability-and-fault-tolerance"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

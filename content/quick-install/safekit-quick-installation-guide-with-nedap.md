@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit nedap.safe module for real
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Nedap solution, Installation of the SafeKit / Nedap solution on Windows (nedap.safe), Step by step configuration of the SafeKit / Nedap solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--nedap-solution, installation-of-the-safekit--nedap-solution-on-windows-nedapsafe, step-by-step-configuration-of-the-safekit--nedap-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

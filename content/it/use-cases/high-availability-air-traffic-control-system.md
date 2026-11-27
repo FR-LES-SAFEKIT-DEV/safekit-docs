@@ -5,6 +5,7 @@ description: "Alta disponibilità per il controllo del traffico aereo: ADB SafeG
 category: "use-cases"
 lang: "it"
 topics: "Sistemi di controllo del traffico aereo, Perché il controllo del traffico aereo è fondamentale?, Come SafeKit protegge il controllo del traffico aereo, Implementazione nel mondo reale presso ADB SafeGate"
+hashpart: "air-traffic-control-systems, why-is-air-traffic-control-critical, safekit-high-availability-for-atc, real-world-implementation-at-adb-safegate"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

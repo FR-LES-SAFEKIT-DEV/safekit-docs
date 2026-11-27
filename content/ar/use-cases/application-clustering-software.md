@@ -5,6 +5,7 @@ description: "التوفر العالي لمصنّعي OEM: ادمج نسخ Safe
 category: "use-cases"
 lang: "ar"
 topics: "حالة استخدام التوافر العالي OEM"
+hashpart: "the-oem-high-availability-use-case"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

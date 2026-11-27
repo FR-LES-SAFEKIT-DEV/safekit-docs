@@ -5,6 +5,7 @@ description: "Aktiv-Aktiv-SafeKit-Cluster: Zwei Server sichern sich mit mehreren
 category: "architectures"
 lang: "de"
 topics: "Wie funktioniert ein Aktiv-Aktiv-Cluster mit Echtzeit-Replikation?"
+hashpart: "how-the-active-active-cluster-with-real-time-replication-works"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.9 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"

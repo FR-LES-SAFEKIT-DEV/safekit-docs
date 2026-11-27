@@ -5,6 +5,7 @@ description: "手順ガイド：SafeKit の k3s.safe モジュールを導入し
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/Kubernetes ソリューションの概要, Linux (k3s.safe) への SafeKit/Kubernetes ソリューションのインストールと設定, SafeKit mirror ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--kubernetes-solution, installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

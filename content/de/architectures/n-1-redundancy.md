@@ -5,6 +5,7 @@ description: "N-1-Redundanz mit SafeKit: N Anwendungen auf N+1 Servern teilen si
 category: "architectures"
 lang: "de"
 topics: "Hochverfügbarkeit mit Datenreplikation und Anwendungs-Failover von N Servern auf 1"
+hashpart: "high-availability-with-data-replication-and-application-failover-from-n-servers-to-1"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"

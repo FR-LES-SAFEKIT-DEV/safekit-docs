@@ -5,6 +5,7 @@ description: "التوفر العالي للمؤسسات الموزعة: انش�
 category: "use-cases"
 lang: "ar"
 topics: "استمرارية الأعمال في المؤسسات الموزعة"
+hashpart: "business-continuity-in-a-distributed-enterprise"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.14 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "故障转移集群的 SAN 与 NAS 共享存储对比：局限、�
 category: "best-practises"
 lang: "zh-hans"
 topics: "SAN 或 NAS 共享存储：哪种更适合故障转移集群？"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

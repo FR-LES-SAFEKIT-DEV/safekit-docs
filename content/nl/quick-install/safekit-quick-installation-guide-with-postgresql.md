@@ -5,6 +5,7 @@ description: "Stapsgewijze handleiding: installeer de SafeKit-module postgresql.
 category: "quick-install"
 lang: "nl"
 topics: "Overzicht van de SafeKit/PostgreSQL-oplossing, Installatie van de SafeKit/PostgreSQL-oplossing op Windows en Linux (postgresql.safe), Stapsgewijze configuratie van de SafeKit/PostgreSQL-oplossing, Demonstratie van de SafeKit mirror"
+hashpart: "overview-of-the-safekit--postgresql-solution, installation-of-the-safekit--postgresql-solution-on-windows-and-linux-postgresqlsafe, step-by-step-configuration-of-the-safekit--postgresql-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

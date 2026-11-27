@@ -5,6 +5,7 @@ description: "手順ガイド：Windows または Linux に SafeKit の apache_f
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/Apache ソリューションの概要, Windows および Linux への SafeKit/Apache ソリューションのインストール (apachefarm.safe), SafeKit/Apache ソリューションのステップバイステップ設定, SafeKit farm ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--apache-solution, installation-of-the-safekit--apache-solution-on-windows-and-linux-apache_farmsafe, step-by-step-configuration-of-the-safekit--apache-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

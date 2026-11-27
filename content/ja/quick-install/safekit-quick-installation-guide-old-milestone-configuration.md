@@ -5,6 +5,7 @@ canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installati
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/Milestone XProtect ソリューションの旧バージョンのステップバイステップ設定"
+hashpart: "old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

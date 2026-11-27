@@ -5,6 +5,7 @@ description: "Armazenamento partilhado SAN vs NAS para clusters de failover: lim
 category: "best-practises"
 lang: "pt-pt"
 topics: "Armazenamento partilhado SAN ou NAS: qual é o mais simples para um cluster de failover?"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

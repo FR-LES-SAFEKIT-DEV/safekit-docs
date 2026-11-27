@@ -5,6 +5,7 @@ description: "Hoge beschikbaarheid voor luchtverkeersleiding: ADB SafeGate gebru
 category: "use-cases"
 lang: "nl"
 topics: "Luchtverkeersleidingssystemen, Waarom is luchtverkeersleiding van cruciaal belang?, Hoe SafeKit de luchtverkeersleiding beschermt, Implementatie in de praktijk bij ADB SafeGate"
+hashpart: "air-traffic-control-systems, why-is-air-traffic-control-critical, safekit-high-availability-for-atc, real-world-implementation-at-adb-safegate"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

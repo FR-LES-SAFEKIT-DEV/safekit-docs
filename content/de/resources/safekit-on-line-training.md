@@ -5,6 +5,7 @@ description: "Kostenlose SafeKit-Online-Schulung und -Zertifizierung: Installati
 category: "resources"
 lang: "de"
 topics: "Wie erhalte ich Zugriff auf die Trainingsplattform?, SafeKit-Schulungsvideos"
+hashpart: "certif, training82"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Course"
 ---

@@ -5,6 +5,7 @@ description: "Como testar o IP virtual de um cluster mirror SafeKit: disponibili
 category: "best-practises"
 lang: "pt-pt"
 topics: "1. Princípios-chave, 2. Pré-requisito: Configuração de IP virtual (VIP), 3. Teste 1 – Endereço IP virtual (VIP) detido pelo servidor principal, 4. Teste 2 – Comutação manual de contingência (paragem do primário), 5. Teste 3 – Verificação do redirecionamento MAC com arp -a, 6. Teste 4 – Verificação completa com Wireshark (Windows) ou tcpdump (Linux), 7. De quais estações de trabalho testar, 8. Resumo dos resultados esperados, 9. Resolução de problemas"
+hashpart: "1-key-principles, 2-prerequisite-virtual-ip-vip-configuration, 3-test-1--virtual-ip-vip-held-by-the-primary-server, 4-test-2--manual-failover-stop-of-the-primary, 5-test-3--checking-mac-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 12 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"

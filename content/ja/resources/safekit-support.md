@@ -5,6 +5,7 @@ description: "SafeKit サポート：24 時間 365 日のインシデント報�
 category: "resources"
 lang: "ja"
 topics: "無料AIレベル1サポート, 標準サポートおよびメンテナンス, 無料認定およびトレーニングプログラム"
+hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

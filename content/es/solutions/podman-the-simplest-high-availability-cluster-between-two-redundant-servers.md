@@ -5,6 +5,7 @@ description: "Alta disponibilidad de Podman con SafeKit: replicación síncrona 
 category: "solutions"
 lang: "es"
 topics: "Cómo funciona el clúster mirror SANless SafeKit con Podman, Índice, ¿Cómo implementa el software SafeKit un clúster de alta disponibilidad Podman?, Comparación: clúster SANless SafeKit frente a HA Podman tradicional, Comparación: SafeKit vs. Linux HA de código abierto (Pacemaker/Corosync/DRBD), Resumen de alta disponibilidad Podman"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-podman, table-of-contents, how-safekit-implements-podman-ha, safekit-podman-comparison, safekit-vs-linux-ha-stack, podman-ha-summary-quick-installation-guide"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.6 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-podman-5-1024.jpg"
 schemaType: "TechArticle"

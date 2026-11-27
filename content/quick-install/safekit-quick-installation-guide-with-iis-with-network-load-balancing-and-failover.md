@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit iis_farm.safe module on Wi
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / IIS solution, Installation of the SafeKit / IIS solution on Windows (iisfarm.safe), Step by step configuration of the SafeKit / IIS solution, Demonstration of the SafeKit farm solution"
+hashpart: "overview-of-the-safekit--iis-solution, installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe, step-by-step-configuration-of-the-safekit--iis-solution, demonstration-of-the-safekit-farm-solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

@@ -5,6 +5,7 @@ description: "Réplication de fichiers au niveau octet vs de disque au niveau bl
 category: "best-practises"
 lang: "fr"
 topics: "Réplication de fichiers au niveau de l’octet ou réplication de disque au niveau du bloc dans un cluster de haute disponibilité, Avantages et inconvénients de la réplication de fichiers au niveau de l’octet par rapport à la réplication de disque au niveau du bloc"
+hashpart: "byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster, pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "Windows 및 Linux용 고가용성 소프트웨어: SafeKit 클러�
 category: "use-cases"
 lang: "ko"
 topics: "SafeKit 30초 엘리베이터 스피치"
+hashpart: "30-seconds-elevator-pitch-for-safekit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

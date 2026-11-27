@@ -5,6 +5,7 @@ description: "SCADA redundancy with SafeKit: two-node cluster with synchronous r
 category: "use-cases"
 lang: "en"
 topics: "What is a SCADA system?, Why is SCADA software critical?, Main SCADA software vendors"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"
 schemaSector: "SCADA"

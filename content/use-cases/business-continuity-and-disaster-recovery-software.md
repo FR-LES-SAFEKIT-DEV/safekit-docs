@@ -5,6 +5,7 @@ description: "Business continuity and disaster recovery with SafeKit: a two-node
 category: "use-cases"
 lang: "en"
 topics: "Business continuity and disaster recovery software"
+hashpart: "business-continuity-and-disaster-recovery-software"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"
 ---

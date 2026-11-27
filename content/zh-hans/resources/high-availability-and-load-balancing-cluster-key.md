@@ -5,6 +5,7 @@ description: "申请为期一个月的免费 SafeKit 密钥，在 Windows 和 Li
 category: "resources"
 lang: "zh-hans"
 topics: "通过电子邮件获取适用于 Windows 或 Linux 的 SafeKit 一个月免费许可证密钥"
+hashpart: "receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

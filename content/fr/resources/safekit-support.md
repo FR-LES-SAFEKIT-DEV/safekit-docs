@@ -5,6 +5,7 @@ description: "Support SafeKit : support contractuel avec déclaration d’incide
 category: "resources"
 lang: "fr"
 topics: "Assistance gratuite en IA de niveau 1, Assistance et maintenance standard, Programme de certification et de formation gratuit"
+hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

@@ -5,6 +5,7 @@ description: "ソフトウェアクラスタリングとハードウェアクラ
 category: "best-practises"
 lang: "ja"
 topics: "ソフトウェアクラスタリングとハードウェアクラスタリングの違いは何ですか？, ソフトウェアクラスタリングとハードウェアクラスタリング：長所と短所"
+hashpart: "difference-between-software-clustering-and-hardware-clustering, software-clustering-vs-hardware-clustering-pros-and-cons"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

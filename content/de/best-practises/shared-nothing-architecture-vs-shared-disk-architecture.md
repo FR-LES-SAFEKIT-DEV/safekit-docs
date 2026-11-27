@@ -5,6 +5,7 @@ description: "Shared-Nothing- vs. Shared-Disk-Architektur für Hochverfügbarkei
 category: "best-practises"
 lang: "de"
 topics: "Shared-Nothing-Architektur vs. Shared-Disk-Architektur für Hochverfügbarkeitscluster, Shared-Nothing-Architektur vs. Shared-Disk-Architektur: Vor- und Nachteile"
+hashpart: "shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters, shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

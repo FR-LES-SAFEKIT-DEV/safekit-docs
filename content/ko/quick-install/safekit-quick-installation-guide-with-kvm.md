@@ -5,6 +5,7 @@ description: "단계별 가이드: Linux에서 KVM 가상 머신의 복제 및 �
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/KVM 솔루션 개요, Linux에 SafeKit/KVM 솔루션 설치 (kvm.safe), SafeKit/KVM 솔루션 단계별 구성, VM 수준의 고가용성 솔루션 시연"
+hashpart: "overview-of-the-safekit--kvm-solution, installation-of-the-safekit--kvm-solution-on-linux-kvmsafe, step-by-step-configuration-of-the-safekit--kvm-solution, demonstration-of-a-vm-level-high-availability-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

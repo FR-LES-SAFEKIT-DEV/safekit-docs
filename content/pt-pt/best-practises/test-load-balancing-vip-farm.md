@@ -5,6 +5,7 @@ description: "Como testar o IP virtual de balanceamento de carga de um cluster f
 category: "best-practises"
 lang: "pt-pt"
 topics: "1. Princípios-chave, 2. Pré-requisito: o mosaico do SafeKit, 3. Teste 1 – Distribuição das ligações, 4. Teste 2 – Alteração do servidor de envio, 5. Teste 3 – Verificação do redirecionamento GARP com arp -a, 6. Teste 4 – Verificação completa com Wireshark (Windows) ou tcpdump (Linux), 7. De quais estações de trabalho testar, 8. Resumo dos resultados esperados, 9. Resolução de problemas, Demonstração da solução farm SafeKit"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 12 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

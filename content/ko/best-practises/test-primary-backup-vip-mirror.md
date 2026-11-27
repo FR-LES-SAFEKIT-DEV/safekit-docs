@@ -5,6 +5,7 @@ description: "SafeKit mirror 클러스터의 가상 IP 테스트 방법: 가용�
 category: "best-practises"
 lang: "ko"
 topics: "1. 주요 원칙, 2. 사전 요구 사항: 가상 IP(VIP) 구성, 3. 테스트 1 – 기본 서버 가 보유한 가상 IP(VIP), 4. 테스트 2 – 수동 장애 조치(기본 서버 중지), 5. 테스트 3 – arp -a 사용하여 MAC 재라우팅 확인, 6. 테스트 4 – Wireshark(Windows) 또는 tcpdump(Linux)를 사용한 엔드투엔드 확인, 7. 테스트할 워크스테이션, 8. 예상 결과 요약, 9. 문제 해결"
+hashpart: "1-key-principles, 2-prerequisite-virtual-ip-vip-configuration, 3-test-1--virtual-ip-vip-held-by-the-primary-server, 4-test-2--manual-failover-stop-of-the-primary, 5-test-3--checking-mac-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting"
 translation: "translate_md 2026-11-05.10 | glossaire 2026-11-05.14 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-20.png"
 schemaType: "TechArticle"

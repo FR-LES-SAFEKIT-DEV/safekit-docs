@@ -5,6 +5,7 @@ description: "OEM 고가용성: SafeKit 복제 및 장애 조치를 소프트웨
 category: "use-cases"
 lang: "ko"
 topics: "OEM 고가용성 사용 사례"
+hashpart: "the-oem-high-availability-use-case"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

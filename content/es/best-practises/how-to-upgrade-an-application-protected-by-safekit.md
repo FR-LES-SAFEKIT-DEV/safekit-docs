@@ -5,6 +5,7 @@ description: "Cómo actualizar una aplicación protegida por SafeKit: actualizac
 category: "best-practises"
 lang: "es"
 topics: "Actualización de una aplicación de alta disponibilidad protegida por SafeKit, Alta disponibilidad a nivel de máquina virtual, Alta disponibilidad a nivel de aplicación, Cómo elegir la estrategia de actualización adecuada, Conclusión"
+hashpart: "upgrading-a-high-availability-application-protected-by-safekit, vm-level-ha, app-level-ha, choosing-the-right-upgrade-strategy, conclusion"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

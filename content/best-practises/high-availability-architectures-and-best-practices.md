@@ -5,6 +5,7 @@ description: "High availability architectures and best practices for application
 category: "best-practises"
 lang: "en"
 topics: "What are the high availability architectures and the best practices?, Comparative tables on high availability architectures and best practices"
+hashpart: "what-are-the-high-availability-architectures-and-the-best-practices, comparative-tables-on-high-availability-architectures-and-best-practices"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"
 ---

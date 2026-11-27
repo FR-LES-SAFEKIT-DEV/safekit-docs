@@ -5,6 +5,7 @@ description: "단계별 가이드: 가상 IP 기반 IIS 웹 서버의 네트워�
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/IIS 솔루션 개요, Windows에 SafeKit/IIS 솔루션 설치 (iisfarm.safe), SafeKit/IIS 솔루션의 단계별 구성, SafeKit farm 솔루션 시연"
+hashpart: "overview-of-the-safekit--iis-solution, installation-of-the-safekit--iis-solution-on-windows-iis_farmsafe, step-by-step-configuration-of-the-safekit--iis-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

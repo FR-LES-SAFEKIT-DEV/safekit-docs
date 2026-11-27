@@ -5,6 +5,7 @@ description: "Combina moduli farm e mirror SafeKit: il bilanciamento del carico 
 category: "architectures"
 lang: "it"
 topics: "Alta disponibilità e scalabilità di applicazioni web e di database critiche con il software di clustering SafeKit"
+hashpart: "high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

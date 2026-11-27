@@ -5,6 +5,7 @@ description: "Alta disponibilità edge senza data center: SafeKit trasforma due 
 category: "use-cases"
 lang: "it"
 topics: "La sfida dell’alta disponibilità all’edge, Perché SafeKit è la soluzione naturale per l’edge computing, Idoneità all’implementazione edge e distribuita, Perché gli ambienti OT perimetrali sono diversi, Casi d’uso ideali per l’edge, Edge vs. data center: le differenze chiave in termini di alta disponibilità"
+hashpart: "the-edge-ha-challenge, what-makes-safekit-the-natural-fit-for-edge, edge--distributed-deployment-suitability, why-edge-ot-environments-are-different, ideal-edge-use-cases, edge-vs-data-center-ha-key-differences"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

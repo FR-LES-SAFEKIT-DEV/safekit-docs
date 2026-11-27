@@ -5,6 +5,7 @@ description: "Bestandsreplicatie op byteniveau vs. schijfreplicatie op bloknivea
 category: "best-practises"
 lang: "nl"
 topics: "Bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau in een high-availability-cluster, Voor- en nadelen van bestandsreplicatie op byte-niveau versus schijfreplicatie op blokniveau"
+hashpart: "byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster, pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

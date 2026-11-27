@@ -5,6 +5,7 @@ description: "Express 및 Standard 에디션을 위한 SQL Server Always On 대�
 category: "best-practises"
 lang: "ko"
 topics: "Express 및 Standard 에디션용 Always On SQL Server의 대안, 비디오 가이드: SQL Server용 SafeKit HA mirror 클러스터를 구성"
+hashpart: "alternative-to-always-on-sql-server-for-express-and-standard-editions, videoguide-safekit-mirror-cluster"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.3 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

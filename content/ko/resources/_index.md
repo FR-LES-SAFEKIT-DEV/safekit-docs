@@ -4,7 +4,8 @@ canonical: "https://safekit.eviden.com/ko/resources/"
 description: "SafeKit 자료: Windows 및 Linux 클러스터를 위한 무료 평가판, 사용자 가이드, 릴리스 노트, 빠른 설치 가이드, 교육, 동영상, 기술 참조 자료."
 category: "resources"
 lang: "ko"
-topics: "SafeKit 고가용성 제품 무료 체험, 기술 문서 및 제품 정보"
+topics: "SafeKit 고가용성 제품 무료 체험 기술 문서 및 제품 정보"
+hashpart: "free-trial-technical-documentation--product-information-for-safekit-high-availability"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

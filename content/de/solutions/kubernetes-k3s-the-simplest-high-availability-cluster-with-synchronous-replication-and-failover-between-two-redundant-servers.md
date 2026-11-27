@@ -5,6 +5,7 @@ description: "Hochverfügbarkeit für Kubernetes K3s auf zwei Knoten mit SafeKit
 category: "solutions"
 lang: "de"
 topics: "K3s HA vereinfachen: Warum SafeKit MetalLB und Longhorn vorziehen?, Inhaltsverzeichnis, Wie implementiert die SafeKit-Software einfach einen Kubernetes K3s-Hochverfügbarkeitscluster?, Wie funktioniert der SafeKit-Mirror-Cluster mit Kubernetes K3S?, Vergleich: SafeKit vs. Standard-K3s-Stack (MetalLB & Longhorn), Videoanleitung: Konfigurieren eines SafeKit HA-Mirror-Cluster"
+hashpart: "safekit-k3s-ha-introduction, toc, safekit-mirror-k3s-cluster, safekit-mirror-cluster, safekit-k3s-ha-comparison, videoguide-safekit-mirror-cluster"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 33 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 schemaType: "TechArticle"

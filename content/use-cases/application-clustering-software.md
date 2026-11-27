@@ -5,6 +5,7 @@ description: "OEM high availability: embed SafeKit replication and failover in y
 category: "use-cases"
 lang: "en"
 topics: "The OEM high availability use case"
+hashpart: "the-oem-high-availability-use-case"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"
 ---

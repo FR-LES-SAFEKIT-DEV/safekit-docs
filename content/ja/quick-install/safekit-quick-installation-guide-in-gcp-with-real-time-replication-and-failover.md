@@ -5,6 +5,7 @@ description: "手順ガイド：GCP に SafeKit の mirror.safe モジュール�
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/GCP mirror ソリューションの概要, Windows および Linux への SafeKit/GCP mirror ソリューションのインストール (mirror.safe), SafeKit/GCP mirror ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--gcp-mirror-solution, installation-of-the-safekit--gcp-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--gcp-mirror-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

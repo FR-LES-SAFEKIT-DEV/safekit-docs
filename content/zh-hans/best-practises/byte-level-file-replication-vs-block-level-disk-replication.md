@@ -5,6 +5,7 @@ description: "字节级文件复制与块级磁盘复制对比：SafeKit 如何�
 category: "best-practises"
 lang: "zh-hans"
 topics: "高可用性集群中的字节级文件复制与块级磁盘复制, 字节级文件复制与块级磁盘复制的优缺点"
+hashpart: "byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster, pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

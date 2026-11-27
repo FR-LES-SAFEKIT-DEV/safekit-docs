@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit oracle.safe module for rea
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Oracle solution, Installation of the SafeKit / Oracle solution on Windows and Linux (oracle.safe), Step by step configuration of the SafeKit / Oracle solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--oracle-solution, installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe, step-by-step-configuration-of-the-safekit--oracle-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

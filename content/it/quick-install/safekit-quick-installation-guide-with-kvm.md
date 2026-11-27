@@ -5,6 +5,7 @@ description: "Guida passo passo: installa il modulo SafeKit kvm.safe per l’alt
 category: "quick-install"
 lang: "it"
 topics: "Panoramica della soluzione SafeKit/KVM, Installazione della soluzione SafeKit/KVM su Linux (kvm.safe), Configurazione passo-passo della soluzione SafeKit/KVM, Dimostrazione di una soluzione di alta disponibilità a livello di VM"
+hashpart: "overview-of-the-safekit--kvm-solution, installation-of-the-safekit--kvm-solution-on-linux-kvmsafe, step-by-step-configuration-of-the-safekit--kvm-solution, demonstration-of-a-vm-level-high-availability-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

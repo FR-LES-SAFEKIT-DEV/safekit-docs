@@ -5,6 +5,7 @@ description: "كيفية ترقية تطبيق يحميه SafeKit: الترقي�
 category: "best-practises"
 lang: "ar"
 topics: "ترقية تطبيق عالي التوافر محمي بواسطة SafeKit, التوافر العالي على مستوى الأجهزة الافتراضية, التوافر العالي على مستوى التطبيق, اختيار استراتيجية الترقية المناسبة, الخاتمة"
+hashpart: "upgrading-a-high-availability-application-protected-by-safekit, vm-level-ha, app-level-ha, choosing-the-right-upgrade-strategy, conclusion"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

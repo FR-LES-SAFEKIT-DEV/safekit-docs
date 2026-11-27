@@ -5,6 +5,7 @@ description: "Cosa significano RPO e RTO, con esempi, e come SafeKit raggiunge z
 category: "best-practises"
 lang: "it"
 topics: "Riepilogo rapido: RPO vs. RTO, Indice, Come si calcolano RPO e RTO per una soluzione di alta disponibilità e continuità aziendale?, Come si determinano RPO e RTO per una soluzione di backup e disaster recovery?, In che modo un cluster mirror SafeKit raggiunge RPO pari a zero e RTO basso?, Quali sono i parametri di riferimento RTO per un cluster farm SafeKit con bilanciamento del carico?, Tabelle di confronto: RTO vs RPO, Alta disponibilità in azione: dimostrazioni in tempo reale di perdita di dati pari a zero e tempi di inattività prossimi allo zero, FAQ: Ottimizzazione di RPO e RTO per la continuità aziendale"
+hashpart: "article-summary, table-of-contents, calculate-rpo-rto-high-availability, calculate-rpo-rto-backup-solution, rpo-rto-safekit-mirror-cluster, rpo-rto-safekit-farm-cluster, rpo-vs-rto-comparison, safekit-rpo-rto-video-demos, faq-rpo-rto"
 translation: "translate_md 2026-11-20.9 | glossaire 2026-11-20.24 | Translation LLM | 41 expressions"
 image: "/wp-content/uploads/2026/08/rto-rpo-5-1024-en-2.jpg"
 schemaType: "TechArticle"

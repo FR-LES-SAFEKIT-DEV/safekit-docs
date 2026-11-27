@@ -5,6 +5,7 @@ description: "Technische referentie van SafeKit voor het beantwoorden van RFI's 
 category: "resources"
 lang: "nl"
 topics: "Overzicht, Inhoudsopgave, Productinformatie, Vooraf geconfigureerde applicatiemodules, Architectuur en implementatie, Gegevensverlies en hersteltijden (RPO en RTO), Locaties op afstand en gedistribueerde implementaties, Monitoring en waarschuwingen, Beveiliging en naleving, Licentieverlening, Ondersteuning en onderhoud, Vergelijking met andere oplossingen, Handige links"
+hashpart: "overview, table-of-contents, product-identity, pre-built-application-modules, architecture-deployment-model, rpo-rto-capabilities, edge-distributed-deployment-suitability, monitoring-management-alerting, security-compliance, licensing-model, support-maintenance-slas, comparison-vs-alternatives, quick-reference-links"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

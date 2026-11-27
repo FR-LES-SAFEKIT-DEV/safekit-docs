@@ -5,6 +5,7 @@ description: "Guide pas à pas : installez le module SafeKit farm.safe sous Linu
 category: "quick-install"
 lang: "fr"
 topics: "Présentation de la solution SafeKit/Linux, Installation de la solution SafeKit/Linux (farm.safe), Configuration pas à pas de la solution SafeKit/Linux, Démonstration de la solution farm SafeKit"
+hashpart: "overview-of-the-safekit--linux-solution, installation-of-the-safekit--linux-solution-farmsafe, step-by-step-configuration-of-the-safekit--linux-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 38 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

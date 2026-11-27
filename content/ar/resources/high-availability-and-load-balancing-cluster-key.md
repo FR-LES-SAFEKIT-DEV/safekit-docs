@@ -5,6 +5,7 @@ description: "اطلب مفتاح SafeKit مجانيًا لمدة شهر لاخ�
 category: "resources"
 lang: "ar"
 topics: "استلم عبر البريد الإلكتروني مفتاح ترخيص SafeKit مجانيًا لمدة شهر لأنظمة Windows أو Linux"
+hashpart: "receive-a-free-safekit-one-month-license-key-by-email-for-windows-or-linux"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

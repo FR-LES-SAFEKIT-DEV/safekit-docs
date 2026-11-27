@@ -5,6 +5,7 @@ description: "Geschäftskontinuität und Disaster Recovery mit SafeKit: ein Clus
 category: "use-cases"
 lang: "de"
 topics: "Software für Geschäftskontinuität und Notfallwiederherstellung"
+hashpart: "business-continuity-and-disaster-recovery-software"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

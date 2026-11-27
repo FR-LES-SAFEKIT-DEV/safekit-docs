@@ -5,6 +5,7 @@ description: "SAN vs. NAS als gedeelde opslag voor failoverclusters: beperkingen
 category: "best-practises"
 lang: "nl"
 topics: "SAN- of NAS-gedeelde opslag: wat is eenvoudiger voor een failovercluster?"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

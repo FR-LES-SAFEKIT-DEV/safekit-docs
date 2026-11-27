@@ -5,6 +5,7 @@ description: "Combinez modules farm et mirror SafeKit : l’équilibrage de char
 category: "architectures"
 lang: "fr"
 topics: "Haute disponibilité et évolutivité des applications web et de bases de données critiques avec le logiciel de clustering SafeKit"
+hashpart: "high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

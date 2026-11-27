@@ -5,6 +5,7 @@ description: "أفضل ممارسات التوفر العالي: بنيات HA،
 category: "best-practises"
 lang: "ar"
 topics: "أفضل الممارسات لتجميع SafeKit: البنية (HA)، والنسخ المتماثل، والتكرار, أنماط البنية والهندسة المعمارية, التوافر العالي والتعافي من الكوارث, استراتيجيات النسخ المتماثل, التجميع وتجاوز الفشل, التخزين والبنية التحتية, التنفيذ والترحيل"
+hashpart: "safekit-clustering-best-practices-ha-architecture-replication--redundancy, architecture--design-patterns, high-availability--disaster-recovery, replication-strategies, clustering--failover, storage--infrastructure, implementation--migration"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

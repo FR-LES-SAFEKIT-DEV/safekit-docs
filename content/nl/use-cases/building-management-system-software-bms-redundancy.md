@@ -5,6 +5,7 @@ description: "BMS-redundantie met SafeKit: cluster met twee nodes, synchrone rep
 category: "use-cases"
 lang: "nl"
 topics: "Wat is een gebouwbeheersysteem (BMS)?, Waarom is BMS-software cruciaal?, Belangrijkste BMS-leveranciers"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

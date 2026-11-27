@@ -5,6 +5,7 @@ description: "Windows 和 Linux 集群中心跳、故障转移和仲裁的工作
 category: "best-practises"
 lang: "zh-hans"
 topics: "在 Windows 或 Linux 集群中，心跳和故障转移是如何工作的？, 脑裂和仲裁，服务器位于两个远程机房, 使用 SafeKit 脑裂检测器实现简单的集群仲裁"
+hashpart: "how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster, split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms, simple-cluster-quorum-with-the-safekit-split-brain-checker"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

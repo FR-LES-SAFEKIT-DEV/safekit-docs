@@ -5,6 +5,7 @@ description: "Redondance SCADA avec SafeKit : cluster à deux nœuds avec répli
 category: "use-cases"
 lang: "fr"
 topics: "Qu’est-ce qu’un système SCADA ?, Pourquoi le logiciel SCADA est-il essentiel ?, Principaux fournisseurs de logiciels SCADA"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "SafeKit Smart Console: 코드 없이 브라우저나 스마트폰�
 category: "architectures"
 lang: "ko"
 topics: "Smart Console: 데스크톱 및 모바일에서 직관적이고 오류 없는 고가용성 제공, 목차, SafeKit mirror 클러스터가 웹 콘솔과 어떻게 연동되나요?, SafeKit farm 클러스터가 웹 콘솔과 어떻게 연동되나요?, 웹 콘솔을 통해 여러 모듈과 여러 클러스터를 모니터링하는 방법은 무엇인가요?, 콘솔에서 경고를 모니터링하고 이메일 알림을 관리하는 방법"
+hashpart: "smart-console-intuitive-mobile-and-error-free-high-availability, table-of-contents, safekit-mirror-cluster, safekit-farm-cluster, multipe-modules-clusters, safekit-notifications-cluster"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

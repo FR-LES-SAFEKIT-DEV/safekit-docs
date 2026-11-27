@@ -5,6 +5,7 @@ description: "단계별 가이드: 컨테이너 데이터의 실시간 복제 �
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/Docker 솔루션 개요, Linux에 SafeKit/Docker 솔루션 설치 (mirror.safe), SafeKit/Docker 솔루션 단계별 구성, SafeKit mirror 솔루션 시연"
+hashpart: "overview-of-the-safekit--docker-solution, installation-of-the-safekit--docker-solution-on-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--docker-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

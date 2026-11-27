@@ -5,6 +5,7 @@ description: "手順ガイド：Windows に SafeKit の farm.safe モジュー�
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/Windows ソリューションの概要, SafeKit/Windows ソリューション (farm.safe) のインストール, SafeKit/Windows ソリューションのステップバイステップ設定, SafeKit farm ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--windows-solution, installation-of-the-safekit--windows-solution-farmsafe, step-by-step-configuration-of-the-safekit--windows-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

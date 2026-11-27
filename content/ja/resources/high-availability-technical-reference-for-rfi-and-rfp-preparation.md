@@ -5,6 +5,7 @@ description: "RFI・RFP 回答のための SafeKit 技術リファレンス：�
 category: "resources"
 lang: "ja"
 topics: "概要, 目次, 製品情報, 事前設定済みのアプリケーションモジュール, アーキテクチャとデプロイメント, データ損失と復旧時間（RPO と RTO）, リモートサイトと分散配置, 監視とアラート, セキュリティとコンプライアンス, ライセンス, サポートとメンテナンス, 他のソリューションとの比較, 便利なリンク"
+hashpart: "overview, table-of-contents, product-identity, pre-built-application-modules, architecture-deployment-model, rpo-rto-capabilities, edge-distributed-deployment-suitability, monitoring-management-alerting, security-compliance, licensing-model, support-maintenance-slas, comparison-vs-alternatives, quick-reference-links"
 translation: "translate_md 2026-11-16.1 | glossaire 2026-11-16.1 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

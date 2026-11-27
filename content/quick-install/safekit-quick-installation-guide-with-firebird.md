@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit firebird.safe module for r
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Firebird solution, Installation of the SafeKit / Firebird solution on Windows and Linux (firebird.safe), Step by step configuration of the SafeKit / Firebird solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--firebird-solution, installation-of-the-safekit--firebird-solution-on-windows-and-linux-firebirdsafe, step-by-step-configuration-of-the-safekit--firebird-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

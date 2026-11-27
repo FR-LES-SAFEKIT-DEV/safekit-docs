@@ -5,6 +5,7 @@ description: "使用 SafeKit 实现 BMS 冗余：双节点集群，同步复制�
 category: "use-cases"
 lang: "zh-hans"
 topics: "什么是楼宇管理系统（BMS）？, 为什么 BMS 软件至关重要？, 主要 BMS 供应商"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

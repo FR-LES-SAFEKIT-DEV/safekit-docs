@@ -5,6 +5,7 @@ description: "Guida passo passo: installa il modulo SafeKit farm.safe in AWS, do
 category: "quick-install"
 lang: "it"
 topics: "Panoramica della soluzione SafeKit/AWS, Installazione della soluzione SafeKit/AWS su Windows e Linux (farm.safe), Configurazione passo-passo della soluzione SafeKit/AWS, Dimostrazione della soluzione farm SafeKit"
+hashpart: "overview-of-the-safekit--aws-solution, installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--aws-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

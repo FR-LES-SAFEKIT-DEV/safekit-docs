@@ -5,6 +5,7 @@ description: "Beste en slechtste use cases voor SafeKit: waar softwareclustering
 category: "use-cases"
 lang: "nl"
 topics: "Beste gebruiksscenario's"
+hashpart: "best-use-cases"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "SafeKit으로 구현하는 Siemens Siveillance VMS 고가용성: S
 category: "solutions"
 lang: "ko"
 topics: "Siemens Siveillance VMS 및 SQL을 사용한 SafeKit 빠른 설치 가이드(SiveillanceVMS.safe mirror 모듈)"
+hashpart: "safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"

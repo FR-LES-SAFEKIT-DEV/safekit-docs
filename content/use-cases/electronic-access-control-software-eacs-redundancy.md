@@ -5,6 +5,7 @@ description: "Access control (EACS) redundancy with SafeKit: two-node cluster wi
 category: "use-cases"
 lang: "en"
 topics: "What is an electronic access control system (EACS)?, Why is EACS software critical?, Main EACS vendors"
+hashpart: "what-is-an-electronic-access-control-system-eacs, why-an-eacs-software-is-critical, key-players-list-in-eacs"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"
 schemaSector: "EACS"

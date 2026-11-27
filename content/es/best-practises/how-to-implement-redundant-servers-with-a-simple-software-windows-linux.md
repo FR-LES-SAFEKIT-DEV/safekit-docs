@@ -5,6 +5,7 @@ description: "Cómo implementar servidores redundantes solo con software: SafeKi
 category: "best-practises"
 lang: "es"
 topics: "¿Cómo implementar servidores redundantes activos/pasivos con replicación en tiempo real y conmutación por error?, ¿Cómo implementar servidores redundantes activos/activos con equilibrio de carga de red y conmutación por error?"
+hashpart: "how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover, how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

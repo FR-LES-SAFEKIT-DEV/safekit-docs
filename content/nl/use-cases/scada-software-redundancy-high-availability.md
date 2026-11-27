@@ -5,6 +5,7 @@ description: "SCADA-redundantie met SafeKit: cluster met twee nodes, synchrone r
 category: "use-cases"
 lang: "nl"
 topics: "Wat is een SCADA-systeem?, Waarom is SCADA-software cruciaal?, Belangrijkste leveranciers SCADA-software"
+hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
 schemaType: "Article"

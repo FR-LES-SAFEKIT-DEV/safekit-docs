@@ -5,6 +5,7 @@ description: "تكرار أنظمة BMS مع SafeKit: مجموعة من عقدت
 category: "use-cases"
 lang: "ar"
 topics: "ما هو نظام إدارة المباني (BMS)؟, لماذا يُعد برنامج إدارة المباني (BMS) بالغ الأهمية؟, أهم موردي أنظمة إدارة المباني"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.9 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"

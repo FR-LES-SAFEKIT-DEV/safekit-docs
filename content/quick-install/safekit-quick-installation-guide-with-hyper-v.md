@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit hyperv.safe module for VM-
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Hyper-V solution, Installation of the SafeKit / Hyper-V solution on Windows (hyperv.safe), Step by step configuration of the SafeKit / Hyper-V solution, Demonstration of the SafeKit / Hyper-V solution"
+hashpart: "overview-of-the-safekit--hyper-v-solution, installation-of-the-safekit--hyper-v-solution-on-windows-hypervsafe, step-by-step-configuration-of-the-safekit--hyper-v-solution, demonstration-of-the-safekit--hyper-v-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

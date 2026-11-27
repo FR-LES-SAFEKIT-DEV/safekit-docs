@@ -5,6 +5,7 @@ description: "Hoge beschikbaarheid voor controlekamers van het openbaar vervoer:
 category: "use-cases"
 lang: "nl"
 topics: "Controlekamers openbaar vervoer, Waarom is de controlekamer cruciaal?, SafeKit hoge beschikbaarheid voor openbaar vervoer, Implementatie in de praktijk bij RATP"
+hashpart: "public-transport-control-rooms, why-is-a-centralized-control-room-critical, safekit-high-availability-for-public-transport, real-world-implementation-at-ratp"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-occ-512-512.jpg"
 schemaType: "Article"

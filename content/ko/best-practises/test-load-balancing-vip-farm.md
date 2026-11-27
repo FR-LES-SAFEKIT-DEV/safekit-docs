@@ -5,6 +5,7 @@ description: "SafeKit farm 클러스터의 부하 분산 가상 IP 테스트 방
 category: "best-practises"
 lang: "ko"
 topics: "1. 주요 원칙, 2. 필수 구성 요소: SafeKit 모자이크, 3. 테스트 1 – 연결 분포, 4. 테스트 2 – 디스패칭 서버 변경, 5. 테스트 3 – arp -a 사용하여 GARP 재라우팅 확인, 6. 테스트 4 – Wireshark(Windows) 또는 tcpdump(Linux)를 사용한 엔드투엔드 확인, 7. 테스트할 워크스테이션, 8. 예상 결과 요약, 9. 문제 해결, SafeKit farm 솔루션 시연"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

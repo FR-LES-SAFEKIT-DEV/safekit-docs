@@ -5,6 +5,7 @@ description: "High availability for distributed enterprises: deploy the same Saf
 category: "use-cases"
 lang: "en"
 topics: "Business continuity in a distributed enterprise"
+hashpart: "business-continuity-in-a-distributed-enterprise"
 image: "/wp-content/uploads/2023/02/distributed-enterprise-1.png"
 schemaType: "Article"
 ---

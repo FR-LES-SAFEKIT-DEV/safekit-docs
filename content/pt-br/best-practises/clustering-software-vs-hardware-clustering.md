@@ -5,6 +5,7 @@ description: "Clustering de software vs clustering de hardware: por que o SafeKi
 category: "best-practises"
 lang: "pt-br"
 topics: "Qual é a diferença entre o clustering de software e o clustering de hardware?, Clustering de software vs. clustering de hardware: prós e contras"
+hashpart: "difference-between-software-clustering-and-hardware-clustering, software-clustering-vs-hardware-clustering-pros-and-cons"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

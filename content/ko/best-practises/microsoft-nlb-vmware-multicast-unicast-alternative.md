@@ -5,6 +5,7 @@ description: "VMware에서 Microsoft NLB의 대안: SafeKit farm 클러스터는
 category: "best-practises"
 lang: "ko"
 topics: "Microsoft NLB 멀티캐스트 모드, Microsoft NLB 유니캐스트 모드, SafeKit을 사용한 대안"
+hashpart: "microsoft-nlb-multicast-mode, microsoft-nlb-unicast-mode, alternative-with-safekit"
 translation: "translate_md 2026-11-20.2 | glossaire 2026-11-20.5 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/01/safekit-farm-cluster-config.png"
 schemaType: "TechArticle"

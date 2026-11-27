@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit sqlserver.safe module for 
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Microsoft SQL Server solution, Installation of the SafeKit / Microsoft SQL Server solution on Windows (sqlserver.safe), Step by step configuration of the SafeKit / Microsoft SQL Server solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--microsoft-sql-server-solution, installation-of-the-safekit--microsoft-sql-server-solution-on-windows-sqlserversafe, step-by-step-configuration-of-the-safekit--microsoft-sql-server-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

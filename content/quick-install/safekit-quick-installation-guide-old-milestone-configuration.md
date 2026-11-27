@@ -5,6 +5,7 @@ canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-
 category: "quick-install"
 lang: "en"
 topics: "Old step by step configuration of the SafeKit / Milestone XProtect solution"
+hashpart: "old-step-by-step-configuration-of-the-safekit--milestone-xprotect-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

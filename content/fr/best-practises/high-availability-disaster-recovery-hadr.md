@@ -5,6 +5,7 @@ description: "Combinez la haute disponibilité SafeKit (réplication synchrone, 
 category: "best-practises"
 lang: "fr"
 topics: "Réplication synchrone SafeKit pour la haute disponibilité (HA) vs. réplication de sauvegarde asynchrone pour la reprise après sinistre (DR), Table des matières, HADR synchrone : aucune perte de données sur les réseaux rapides (LAN/VLAN), HADR asynchrone : reprise après sinistre sur des réseaux lents (WAN), Comment combiner HADR et la sauvegarde pour une résilience système totale, Comparaison des architectures HADR : réseaux rapides et lents, Guide vidéo : Comment mettre en œuvre HADR avec SafeKit"
+hashpart: "synchronous-safekit-replication-for-ha-vs-asynchronous-backup-replication-for-dr, table-of-contents, synchronous-hadr-fast-network, asynchronous-hadr-slow-network, hadr-resilience-strategy, hadr-architectures-comparison, videoguide-hadr-safekit"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.28 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/01/safekit-backup-3-nodes-5-1024.jpg"
 schemaType: "TechArticle"

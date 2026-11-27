@@ -5,6 +5,7 @@ description: "分步指南：安装 SafeKit k3s.safe 模块，在 Linux 上构�
 category: "quick-install"
 lang: "zh-hans"
 topics: "SafeKit/Kubernetes 解决方案概述, 在 Linux 上安装和配置 SafeKit/Kubernetes 解决方案 (k3s.safe), SafeKit mirror 解决方案演示"
+hashpart: "overview-of-the-safekit--kubernetes-solution, installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

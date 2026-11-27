@@ -5,6 +5,7 @@ description: "التوفر العالي لـ Docker مع SafeKit: نسخ متز�
 category: "solutions"
 lang: "ar"
 topics: "كيف تعمل مجموعة mirror SafeKit الخالية من شبكة التخزين (SANless) مع Docker, جدول المحتويات, كيف يقوم برنامج SafeKit بتطبيق مجموعة Docker عالية التوفر ببساطة؟, مقارنة: مجموعة SafeKit SANless مقابل Docker HA التقليدية, مقارنة: SafeKit مقابل حلول التوافر العالي مفتوحة المصدر Linux (Pacemaker/Corosync/DRBD), ملخص التوافر العالي Docker"
+hashpart: "how-the-sanless-safekit-mirror-cluster-works-with-docker, table-of-contents, how-safekit-implements-docker-ha, safekit-docker-comparison, safekit-vs-linux-ha-stack, docker-ha-summary-quick-installation-guide"
 translation: "translate_md 2026-11-08.1 | glossaire 2026-11-08.1 | Translation LLM | 26 expressions"
 image: "/wp-content/uploads/2026/02/safekit-docker-5-1024.jpg"
 schemaType: "TechArticle"

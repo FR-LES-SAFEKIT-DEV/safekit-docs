@@ -5,6 +5,7 @@ description: "Active-active SafeKit cluster: two servers back each other up with
 category: "architectures"
 lang: "en"
 topics: "How Does an Active-Active Cluster with Real-Time Replication Work?"
+hashpart: "how-the-active-active-cluster-with-real-time-replication-works"
 image: "/wp-content/uploads/2023/02/safekit-mirror-mirror-300-1.png"
 schemaType: "TechArticle"
 ---

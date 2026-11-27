@@ -5,6 +5,7 @@ description: "موارد SafeKit: نسخة تجريبية مجانية، ودل�
 category: "resources"
 lang: "ar"
 topics: "تجربة مجانية، ووثائق فنية، ومعلومات عن المنتج لـ SafeKit عالي التوفر"
+hashpart: "free-trial-technical-documentation--product-information-for-safekit-high-availability"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

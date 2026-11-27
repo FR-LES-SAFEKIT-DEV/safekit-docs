@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit apache_farm.safe module on
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Apache solution, Installation of the SafeKit / Apache solution on Windows and Linux (apachefarm.safe), Step by step configuration of the SafeKit / Apache solution, Demonstration of the SafeKit farm solution"
+hashpart: "overview-of-the-safekit--apache-solution, installation-of-the-safekit--apache-solution-on-windows-and-linux-apache_farmsafe, step-by-step-configuration-of-the-safekit--apache-solution, demonstration-of-the-safekit-farm-solution"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---

@@ -5,6 +5,7 @@ description: "Ridondanza VMS con SafeKit: cluster a due nodi con replica sincron
 category: "use-cases"
 lang: "it"
 topics: "Che cos’è un software di gestione video (VMS)?, Perché il software VMS è fondamentale?, Principali fornitori VMS"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

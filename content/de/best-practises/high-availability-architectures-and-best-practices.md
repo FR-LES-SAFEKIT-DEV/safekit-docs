@@ -5,6 +5,7 @@ description: "Hochverfügbarkeitsarchitekturen und Best Practices für Anwendung
 category: "best-practises"
 lang: "de"
 topics: "Was sind die Architekturen für Hochverfügbarkeit und die bewährten Verfahren?, Vergleichstabellen zu Hochverfügbarkeitsarchitekturen und Best Practices"
+hashpart: "what-are-the-high-availability-architectures-and-the-best-practices, comparative-tables-on-high-availability-architectures-and-best-practices"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

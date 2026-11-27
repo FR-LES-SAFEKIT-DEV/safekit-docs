@@ -5,6 +5,7 @@ description: "SafeKit Smart Console: اضبط مجموعات التوفر الع
 category: "architectures"
 lang: "ar"
 topics: "Smart Console: سهولة الاستخدام وتوافر عالٍ خالٍ من الأخطاء على أجهزة الكمبيوتر المكتبية والهواتف المحمولة, جدول المحتويات, كيف تعمل مجموعة mirror SafeKit مع وحدة التحكم بالويب؟, كيف تعمل مجموعة SafeKit farm مع وحدة التحكم بالويب؟, كيفية مراقبة وحدات نمطية متعددة ومجموعات متعددة عبر وحدة التحكم على الويب؟, كيفية مراقبة التنبيهات في وحدة التحكم وإدارة إشعارات البريد الإلكتروني؟"
+hashpart: "smart-console-intuitive-mobile-and-error-free-high-availability, table-of-contents, safekit-mirror-cluster, safekit-farm-cluster, multipe-modules-clusters, safekit-notifications-cluster"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.7 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "التخزين المشترك SAN مقابل NAS لمجموعات 
 category: "best-practises"
 lang: "ar"
 topics: "التخزين المشترك من نوع SAN أو NAS: أيهما أبسط لمجموعة تجاوز الفشل؟"
+hashpart: "what-is-the-simplest-solution-between-a-san-vs-a-nas-shared-storage-for-a-failover-cluster"
 translation: "translate_md 2026-11-20.3 | glossaire 2026-11-20.10 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/03/raw-disk-shared-storage.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "Continuidad del negocio y recuperación ante desastres con SafeKit
 category: "use-cases"
 lang: "es"
 topics: "Software de continuidad de negocio y recuperación ante desastres"
+hashpart: "business-continuity-and-disaster-recovery-software"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

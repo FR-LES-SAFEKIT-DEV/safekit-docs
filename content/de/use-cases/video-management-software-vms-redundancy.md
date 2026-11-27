@@ -5,6 +5,7 @@ description: "VMS-Redundanz mit SafeKit: Cluster mit zwei Knoten, synchroner Rep
 category: "use-cases"
 lang: "de"
 topics: "Was ist eine Video-Management-Software (VMS)?, Warum ist VMS-Software unerlässlich?, Wichtigste VMS-Anbieter"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 47 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "SafeKit の farm と mirror を併用：負荷分散でフロン�
 category: "architectures"
 lang: "ja"
 topics: "SafeKit クラスタリングソフトウェアによる、重要な Web アプリケーションとデータベースアプリケーションの可用性とスケーラビリティの向上"
+hashpart: "high-availability-and-scalability-of-critical-web-and-database-applications-with-the-safekit-clustering-software"
 translation: "translate_md 2026-11-21.2 | glossaire 2026-11-21.11 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/safekit-farm-mirror-300-4.png"
 schemaType: "TechArticle"

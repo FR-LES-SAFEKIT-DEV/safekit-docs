@@ -5,6 +5,7 @@ description: "Hoe heartbeat, failover en quorum werken in Windows- en Linux-clus
 category: "best-practises"
 lang: "nl"
 topics: "Hoe werken heartbeats en failover in een Windows- of Linux-cluster?, Split brain en quorum met servers in twee externe computerruimtes, Eenvoudig clusterquorum met de SafeKit split-brain-checker"
+hashpart: "how-heartbeats-and-failover-work-in-a-windows-or-linux-cluster, split-brain-problem-and-quorum-when-servers-are-in-two-remote-computer-rooms, simple-cluster-quorum-with-the-safekit-split-brain-checker"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.19 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/quorum-with-remote-sites.png"
 schemaType: "TechArticle"

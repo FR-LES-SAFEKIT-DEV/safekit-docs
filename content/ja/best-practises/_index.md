@@ -5,6 +5,7 @@ description: "高可用性のベストプラクティス：HA アーキテクチ
 category: "best-practises"
 lang: "ja"
 topics: "SafeKit クラスタリングのベストプラクティス：HA アーキテクチャ、レプリケーション、冗長性, アーキテクチャとデザインパターン, 高可用性とディザスタリカバリ, レプリケーション戦略, クラスタリングとフェイルオーバー, ストレージとインフラストラクチャ, 導入と移行"
+hashpart: "safekit-clustering-best-practices-ha-architecture-replication--redundancy, architecture--design-patterns, high-availability--disaster-recovery, replication-strategies, clustering--failover, storage--infrastructure, implementation--migration"
 translation: "translate_md 2026-11-21.1 | glossaire 2026-11-21.5 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---

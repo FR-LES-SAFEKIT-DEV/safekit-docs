@@ -5,6 +5,7 @@ description: "Stapsgewijze handleiding: installeer de SafeKit-module milestone.s
 category: "quick-install"
 lang: "nl"
 topics: "Overzicht van de SafeKit/Milestone XProtect oplossing, Installatie van de SafeKit/Milestone XProtect oplossing op Windows (milestone.safe), Stapsgewijze configuratie van de SafeKit/Milestone XProtect oplossing, Demonstratie van de SafeKit mirror"
+hashpart: "overview-of-the-safekit--milestone-xprotect-solution, installation-of-the-safekit--milestone-xprotect-solution-on-windows-milestonesafe, step-by-step-configuration-of-the-safekit--milestone-xprotect-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 39 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

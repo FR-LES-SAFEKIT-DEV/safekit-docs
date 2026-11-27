@@ -5,6 +5,7 @@ description: "Shared-nothing- vs. shared-disk-architectuur voor hoge beschikbaar
 category: "best-practises"
 lang: "nl"
 topics: "Shared-nothing-architectuur versus architectuur met gedeelde schijf voor high-availability-clusters, Shared-nothing-architectuur versus architectuur met gedeelde schijf: voor- en nadelen"
+hashpart: "shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters, shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

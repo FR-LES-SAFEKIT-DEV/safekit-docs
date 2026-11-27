@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit mirror.safe module for Pod
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / Podman solution, Installation of the SafeKit / Podman solution on Linux (mirror.safe), Step by step configuration of the SafeKit / Podman solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--podman-solution, installation-of-the-safekit--podman-solution-on-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--podman-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

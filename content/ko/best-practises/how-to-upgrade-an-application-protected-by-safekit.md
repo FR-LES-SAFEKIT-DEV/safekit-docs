@@ -5,6 +5,7 @@ description: "SafeKit으로 보호되는 애플리케이션의 업그레이드 �
 category: "best-practises"
 lang: "ko"
 topics: "SafeKit으로 보호되는 고가용성 애플리케이션 업그레이드, VM 수준의 고가용성, 애플리케이션 수준의 고가용성, 올바른 업그레이드 전략 선택하기, 결론"
+hashpart: "upgrading-a-high-availability-application-protected-by-safekit, vm-level-ha, app-level-ha, choosing-the-right-upgrade-strategy, conclusion"
 translation: "translate_md 2026-11-20.1 | glossaire 2026-11-20.3 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

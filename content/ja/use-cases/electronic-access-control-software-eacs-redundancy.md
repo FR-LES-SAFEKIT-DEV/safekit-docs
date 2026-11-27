@@ -5,6 +5,7 @@ description: "SafeKit による入退室管理（EACS）冗長化：Nedap、Siem
 category: "use-cases"
 lang: "ja"
 topics: "電子アクセス制御システム（EACS）とは何ですか？, EACS ソフトウェアが重要な理由とは？, 主な EACS ベンダー"
+hashpart: "what-is-an-electronic-access-control-system-eacs, why-an-eacs-software-is-critical, key-players-list-in-eacs"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

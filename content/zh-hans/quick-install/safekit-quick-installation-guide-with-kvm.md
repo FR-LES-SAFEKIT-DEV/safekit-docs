@@ -5,6 +5,7 @@ description: "分步指南：安装 SafeKit kvm.safe 模块实现虚拟机级高
 category: "quick-install"
 lang: "zh-hans"
 topics: "SafeKit/KVM 解决方案概述, 在 Linux 上安装 SafeKit/KVM 解决方案 (kvm.safe), SafeKit/KVM 解决方案的分步配置, 虚拟机级别高可用性解决方案演示"
+hashpart: "overview-of-the-safekit--kvm-solution, installation-of-the-safekit--kvm-solution-on-linux-kvmsafe, step-by-step-configuration-of-the-safekit--kvm-solution, demonstration-of-a-vm-level-high-availability-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "데이터 센터 없는 엣지 고가용성: SafeKit은 SAN 없이
 category: "use-cases"
 lang: "ko"
 topics: "엣지에서의 고가용성 과제, SafeKit이 엣지 컴퓨팅에 자연스럽게 적합한 이유, 엣지 및 분산 배포 적합성, 엣지 OT 환경이 다른 이유, 엣지에서의 이상적인 사용 사례, 엣지 vs. 데이터센터 고가용성: 주요 차이점"
+hashpart: "the-edge-ha-challenge, what-makes-safekit-the-natural-fit-for-edge, edge--distributed-deployment-suitability, why-edge-ot-environments-are-different, ideal-edge-use-cases, edge-vs-data-center-ha-key-differences"
 translation: "translate_md 2026-11-17.1 | glossaire 2026-11-17.4 | Translation LLM | 50 expressions"
 image: "/wp-content/uploads/2026/05/safekit-edge-512-512.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "手順ガイド：SafeKit の mysql.safe モジュールを導入�
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/MariaDB ソリューションの概要, Windows および Linux への SafeKit/MariaDB ソリューションのインストール (mysql.safe), SafeKit/MariaDB ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--mariadb-solution, installation-of-the-safekit--mariadb-solution-on-windows-and-linux-mysqlsafe, step-by-step-configuration-of-the-safekit--mariadb-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

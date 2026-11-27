@@ -5,6 +5,7 @@ description: "航空管制の高可用性：ADB SafeGate は世界中の空港�
 category: "use-cases"
 lang: "ja"
 topics: "航空交通管制システム, 航空管制が重要なのはなぜですか？, SafeKit が航空管制を保護する方法, ADB SafeGate での実環境導入"
+hashpart: "air-traffic-control-systems, why-is-air-traffic-control-critical, safekit-high-availability-for-atc, real-world-implementation-at-adb-safegate"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.22 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-atc-512-512.jpg"
 schemaType: "Article"

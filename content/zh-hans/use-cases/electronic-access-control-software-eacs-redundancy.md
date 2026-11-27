@@ -5,6 +5,7 @@ description: "使用 SafeKit 实现门禁系统（EACS）冗余：双节点集�
 category: "use-cases"
 lang: "zh-hans"
 topics: "什么是电子门禁系统 (EACS)？, 为什么 EACS 软件至关重要？, 主要 EACS 供应商"
+hashpart: "what-is-an-electronic-access-control-system-eacs, why-an-eacs-software-is-critical, key-players-list-in-eacs"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

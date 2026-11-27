@@ -5,6 +5,7 @@ description: "أفضل وأسوأ حالات استخدام SafeKit: متى ين
 category: "use-cases"
 lang: "ar"
 topics: "أفضل حالات الاستخدام"
+hashpart: "best-use-cases"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.7 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"

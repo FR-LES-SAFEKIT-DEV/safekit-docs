@@ -5,6 +5,7 @@ description: "SafeKit 클라우드 클러스터: AWS, Azure, Google Cloud 및 �
 category: "solutions"
 lang: "ko"
 topics: "Eviden SafeKit을 활용한 다른 클라우드 솔루션"
+hashpart: "other-cloud-solutions-with-eviden-safekit"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.11 | Translation LLM | 37 expressions"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"

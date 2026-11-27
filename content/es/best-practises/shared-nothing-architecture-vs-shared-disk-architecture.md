@@ -5,6 +5,7 @@ description: "Arquitectura sin recursos compartidos frente a disco compartido en
 category: "best-practises"
 lang: "es"
 topics: "Arquitectura sin recursos compartidos frente a arquitectura de disco compartido para clústeres de alta disponibilidad, Arquitectura sin recursos compartidos frente a arquitectura de disco compartido: ventajas y desventajas"
+hashpart: "shared-nothing-architecture-vs-shared-disk-architecture-for-high-availability-clusters, shared-nothing-architecture-vs-shared-disk-architecture-pros-and-cons"
 translation: "translate_md 2026-11-20.7 | glossaire 2026-11-20.14 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-shared-disk.png"
 schemaType: "TechArticle"

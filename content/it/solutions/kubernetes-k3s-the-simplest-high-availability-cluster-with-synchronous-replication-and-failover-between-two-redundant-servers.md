@@ -5,6 +5,7 @@ description: "Alta disponibilità Kubernetes K3s su due nodi con SafeKit: replic
 category: "solutions"
 lang: "it"
 topics: "Semplificare l’alta disponibilità di K3s: perché scegliere SafeKit invece di MetalLB e Longhorn?, Indice, Come implementa il software SafeKit un cluster Kubernetes K3s ad alta disponibilità?, Come funziona il cluster mirror SafeKit con Kubernetes K3S?, Confronto: SafeKit vs. stack K3s standard (MetalLB e Longhorn), Guida video: configurazione di un cluster mirror SafeKit HA"
+hashpart: "safekit-k3s-ha-introduction, toc, safekit-mirror-k3s-cluster, safekit-mirror-cluster, safekit-k3s-ha-comparison, videoguide-safekit-mirror-cluster"
 translation: "translate_md 2026-11-08.3 | glossaire 2026-11-08.8 | Translation LLM | 24 expressions"
 image: "/wp-content/uploads/2026/02/safekit-mirror-k3s-1024.jpg"
 schemaType: "TechArticle"

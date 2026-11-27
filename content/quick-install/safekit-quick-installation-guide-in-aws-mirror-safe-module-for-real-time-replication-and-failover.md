@@ -5,6 +5,7 @@ description: "Step-by-step guide: install the SafeKit mirror.safe module in AWS 
 category: "quick-install"
 lang: "en"
 topics: "Overview of the SafeKit / AWS mirror solution, Installation of the SafeKit / AWS mirror solution on Windows and Linux (mirror.safe), Step by step configuration of the SafeKit / AWS mirror solution, Demonstration of the SafeKit mirror solution"
+hashpart: "overview-of-the-safekit--aws-mirror-solution, installation-of-the-safekit--aws-mirror-solution-on-windows-and-linux-mirrorsafe, step-by-step-configuration-of-the-safekit--aws-mirror-solution, demonstration-of-the-safekit-mirror-solution"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---

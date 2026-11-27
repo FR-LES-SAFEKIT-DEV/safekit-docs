@@ -5,6 +5,7 @@ description: "Clusters in the cloud with SafeKit: one generic solution for repli
 category: "solutions"
 lang: "en"
 topics: "Other cloud solutions with Eviden SafeKit"
+hashpart: "other-cloud-solutions-with-eviden-safekit"
 image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"
 ---

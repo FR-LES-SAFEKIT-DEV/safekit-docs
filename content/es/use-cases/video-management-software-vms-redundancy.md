@@ -5,6 +5,7 @@ description: "Redundancia VMS con SafeKit: clúster de dos nodos con replicació
 category: "use-cases"
 lang: "es"
 topics: "¿Qué es el software de gestión de vídeo (VMS)?, ¿Por qué es fundamental el software VMS?, Principales proveedores VMS"
+hashpart: "what-is-video-management-software-vms, why-a-vms-software-is-critical, key-players-list-in-vms"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.13 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/05/safekit-vms-512-512.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "How to test the load balancing virtual IP of a SafeKit farm cluste
 category: "best-practises"
 lang: "en"
 topics: "1. Key principles, 2. Prerequisite: the SafeKit mosaic, 3. Test 1 – Distribution of connections, 4. Test 2 – Change of dispatching server, 5. Test 3 – Checking GARP rerouting with arp -a, 6. Test 4 – End-to-end check with Wireshark (Windows) or tcpdump (Linux), 7. Which workstations to test from, 8. Summary of expected results, 9. Troubleshooting, Demonstration of the SafeKit farm solution"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"
 ---

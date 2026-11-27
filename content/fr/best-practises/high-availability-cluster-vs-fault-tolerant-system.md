@@ -5,6 +5,7 @@ description: "Cluster HA vs système tolérant aux pannes : comparez coûts, rep
 category: "best-practises"
 lang: "fr"
 topics: "Quelle est la différence entre la haute disponibilité et la tolérance aux pannes ?, Avantages et inconvénients de la haute disponibilité et de la tolérance aux pannes"
+hashpart: "what-is-the-difference-between-high-availability-and-fault-tolerance, pros-and-cons-of-high-availability-and-fault-tolerance"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

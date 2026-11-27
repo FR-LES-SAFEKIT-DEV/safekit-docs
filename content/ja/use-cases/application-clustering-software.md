@@ -5,6 +5,7 @@ description: "OEM 向け高可用性：SafeKit のレプリケーションとフ
 category: "use-cases"
 lang: "ja"
 topics: "OEM 高可用性ユースケース"
+hashpart: "the-oem-high-availability-use-case"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-17.30 | Translation LLM | 49 expressions"
 image: "/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg"
 schemaType: "Article"

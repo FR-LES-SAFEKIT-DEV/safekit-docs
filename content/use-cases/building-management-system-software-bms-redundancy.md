@@ -5,6 +5,7 @@ description: "BMS redundancy with SafeKit: two-node cluster with synchronous rep
 category: "use-cases"
 lang: "en"
 topics: "What is a building management system (BMS)?, Why is BMS software critical?, Key BMS vendors"
+hashpart: "what-is-a-building-management-system-bms, why-a-bms-software-is-critical, key-players-list-in-bms"
 image: "/wp-content/uploads/2026/05/safekit-bms-512-512.jpg"
 schemaType: "Article"
 schemaSector: "BMS"

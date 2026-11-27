@@ -5,6 +5,7 @@ description: "Continuité d’activité et reprise après sinistre avec SafeKit 
 category: "use-cases"
 lang: "fr"
 topics: "Logiciel de continuité d’activité et de reprise après sinistre"
+hashpart: "business-continuity-and-disaster-recovery-software"
 translation: "translate_md 2026-11-16.4 | glossaire 2026-11-16.12 | Translation LLM | 58 expressions"
 image: "/wp-content/uploads/2023/02/remote-datacenters.png"
 schemaType: "Article"

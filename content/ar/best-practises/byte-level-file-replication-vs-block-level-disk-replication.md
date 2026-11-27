@@ -5,6 +5,7 @@ description: "نسخ الملفات على مستوى البايت مقابل ن
 category: "best-practises"
 lang: "ar"
 topics: "نسخ الملفات على مستوى البايت مقابل نسخ الأقراص على مستوى الكتلة في مجموعة عالية التوفر, إيجابيات وسلبيات تكرار الملفات على مستوى البايت مقابل تكرار الأقراص على مستوى الكتلة"
+hashpart: "byte-level-file-replication-vs-block-level-disk-replication-in-a-high-availability-cluster, pros-and-cons-of-byte-level-file-replication-vs-block-level-disk-replication"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.9 | Translation LLM | 44 expressions"
 image: "/wp-content/uploads/2023/02/file-replication-vs-disk-replication.png"
 schemaType: "TechArticle"

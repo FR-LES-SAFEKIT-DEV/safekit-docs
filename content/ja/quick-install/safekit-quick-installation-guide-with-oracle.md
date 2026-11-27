@@ -5,6 +5,7 @@ description: "手順ガイド：SafeKit の oracle.safe モジュールを導入
 category: "quick-install"
 lang: "ja"
 topics: "SafeKit/Oracle ソリューションの概要, Windows および Linux への SafeKit/Oracle ソリューションのインストール (oracle.safe), SafeKit/Oracle ソリューションのステップバイステップ設定, SafeKit mirror ソリューションのデモンストレーション"
+hashpart: "overview-of-the-safekit--oracle-solution, installation-of-the-safekit--oracle-solution-on-windows-and-linux-oraclesafe, step-by-step-configuration-of-the-safekit--oracle-solution, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

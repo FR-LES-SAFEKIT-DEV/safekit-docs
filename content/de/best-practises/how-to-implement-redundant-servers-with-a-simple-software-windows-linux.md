@@ -5,6 +5,7 @@ description: "Redundante Server nur mit Software umsetzen: SafeKit bietet Echtze
 category: "best-practises"
 lang: "de"
 topics: "Wie implementiert man aktive/passive redundante Server mit Echtzeit-Replikation und Failover?, Wie implementiert man aktive/aktive redundante Server mit Netzwerk-Lastausgleich und Failover?"
+hashpart: "how-to-implement-activepassive-redundant-servers-with-real-time-replication-and-failover, how-to-implement-activeactive-redundant-servers-with-network-load-balancing-and-failover"
 translation: "translate_md 2026-11-19.2 | glossaire 2026-11-19.30 | Translation LLM | 54 expressions"
 image: "/wp-content/uploads/2023/02/safekit-prim-second-300.png"
 schemaType: "TechArticle"

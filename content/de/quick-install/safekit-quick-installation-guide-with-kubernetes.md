@@ -5,6 +5,7 @@ description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul k3s.safe 
 category: "quick-install"
 lang: "de"
 topics: "Übersicht über die SafeKit/Kubernetes-Lösung, Installation und Konfiguration der SafeKit/Kubernetes-Lösung unter Linux (k3s.safe), Demonstration der SafeKit mirror"
+hashpart: "overview-of-the-safekit--kubernetes-solution, installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 40 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

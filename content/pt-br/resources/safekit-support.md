@@ -5,6 +5,7 @@ description: "Suporte SafeKit: suporte contratual com registro de incidentes 24/
 category: "resources"
 lang: "pt-br"
 topics: "Suporte gratuito de IA nível 1, Suporte e manutenção padrão, Programa gratuito de certificação e treinamento"
+hashpart: "ai-support, standard-support, training"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

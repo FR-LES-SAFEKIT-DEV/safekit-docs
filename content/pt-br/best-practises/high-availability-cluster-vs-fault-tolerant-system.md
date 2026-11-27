@@ -5,6 +5,7 @@ description: "Cluster HA vs sistema tolerante a falhas: compare custos, recupera
 category: "best-practises"
 lang: "pt-br"
 topics: "Qual a diferença entre alta disponibilidade e tolerância a falhas?, Prós e contras da alta disponibilidade e da tolerância a falhas"
+hashpart: "what-is-the-difference-between-high-availability-and-fault-tolerance, pros-and-cons-of-high-availability-and-fault-tolerance"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.25 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "TechArticle"

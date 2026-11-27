@@ -50,6 +50,25 @@
     {{ $pageSchema = merge $pageSchema (dict "image" $imageURL) }}
     {{ end }}
     {{ if $isArticle }}{{ $pageSchema = merge $pageSchema (dict "headline" .Title "mainEntityOfPage" $pageURL) }}{{ end }}
+    {{ with .Params.hashpart }}
+    {{ $topics := split ($.Params.topics | default "") ", " }}
+    {{ $hashparts := split . ", " }}
+    {{ if ne (len $topics) (len $hashparts) }}
+    {{ errorf "topics/hashpart count mismatch for %s: %d topics, %d anchors" $pageURL (len $topics) (len $hashparts) }}
+    {{ else }}
+    {{ $parts := slice }}
+    {{ range $index, $topic := $topics }}
+    {{ $hashpart := index $hashparts $index }}
+    {{ if or (eq $topic "") (eq $hashpart "") }}
+    {{ errorf "empty topic or hashpart anchor for %s at position %d" $pageURL (add $index 1) }}
+    {{ else }}
+    {{ $sectionURL := printf "%s#%s" $pageURL $hashpart }}
+    {{ $parts = $parts | append (dict "@type" "WebPageElement" "@id" $sectionURL "url" $sectionURL "name" $topic) }}
+    {{ end }}
+    {{ end }}
+    {{ $pageSchema = merge $pageSchema (dict "hasPart" $parts) }}
+    {{ end }}
+    {{ end }}
     {{ $subjects := slice (dict "@id" $softwareID "@type" "SoftwareApplication" "name" "SafeKit") }}
     {{ range .Params.schemaApplications }}
     {{ $subjects = $subjects | append (dict "@type" "SoftwareApplication" "name" .) }}

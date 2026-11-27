@@ -5,6 +5,7 @@ description: "SafeKit combines real-time replication, automatic failover and net
 category: "product"
 lang: "en"
 topics: "What is SafeKit?"
+hashpart: "what-is-safekit"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

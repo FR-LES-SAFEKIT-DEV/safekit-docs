@@ -5,6 +5,7 @@ description: "SafeKit 资源：免费试用、用户指南、发行说明、快�
 category: "resources"
 lang: "zh-hans"
 topics: "SafeKit高可用性的免费试用、技术文档和产品信息"
+hashpart: "free-trial-technical-documentation--product-information-for-safekit-high-availability"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 ---
 

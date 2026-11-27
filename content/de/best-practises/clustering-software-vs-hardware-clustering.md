@@ -5,6 +5,7 @@ description: "Software- vs. Hardware-Clustering: Warum SafeKit Hochverfügbarkei
 category: "best-practises"
 lang: "de"
 topics: "Was ist der Unterschied zwischen Software-Clustering und Hardware-Clustering?, Software-Clustering vs. Hardware-Clustering: Vor- und Nachteile"
+hashpart: "difference-between-software-clustering-and-hardware-clustering, software-clustering-vs-hardware-clustering-pros-and-cons"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

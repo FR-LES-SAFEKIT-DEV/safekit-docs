@@ -5,6 +5,7 @@ description: "Software de alta disponibilidad para Windows y Linux: los clúster
 category: "use-cases"
 lang: "es"
 topics: "Presentación de SafeKit en 30 segundos"
+hashpart: "30-seconds-elevator-pitch-for-safekit"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.7 | Translation LLM | 48 expressions"
 image: "/wp-content/uploads/2026/04/safekit-icon-512x512-1.png"
 schemaType: "Article"

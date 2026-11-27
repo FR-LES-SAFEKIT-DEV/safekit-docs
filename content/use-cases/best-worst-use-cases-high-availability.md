@@ -5,6 +5,7 @@ description: "Best and worst use cases for SafeKit: where software clustering on
 category: "use-cases"
 lang: "en"
 topics: "Best use cases"
+hashpart: "best-use-cases"
 image: "/wp-content/uploads/2023/02/application-clustering-software-3.png"
 schemaType: "Article"
 ---

@@ -5,6 +5,7 @@ description: "소프트웨어 클러스터링과 하드웨어 클러스터링 �
 category: "best-practises"
 lang: "ko"
 topics: "소프트웨어 클러스터링과 하드웨어 클러스터링의 차이점은 무엇인가요?, 소프트웨어 클러스터링 vs 하드웨어 클러스터링: 장단점"
+hashpart: "difference-between-software-clustering-and-hardware-clustering, software-clustering-vs-hardware-clustering-pros-and-cons"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.12 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

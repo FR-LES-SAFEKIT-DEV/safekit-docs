@@ -5,6 +5,7 @@ description: "Guida passo passo: installa il modulo SafeKit k3s.safe per un clus
 category: "quick-install"
 lang: "it"
 topics: "Panoramica della soluzione SafeKit/Kubernetes, Installazione e configurazione della soluzione SafeKit/Kubernetes su Linux (k3s.safe), Dimostrazione della soluzione mirror SafeKit"
+hashpart: "overview-of-the-safekit--kubernetes-solution, installation-and-configuration-of-the-safekit--kubernetes-solution-on-linux-k3ssafe, demonstration-of-the-safekit-mirror-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 31 expressions"
 image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"

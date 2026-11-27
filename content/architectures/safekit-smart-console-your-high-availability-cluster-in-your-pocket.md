@@ -5,6 +5,7 @@ description: "SafeKit Smart Console: configure and monitor your high availabilit
 category: "architectures"
 lang: "en"
 topics: "Smart Console: intuitive and error-free high availability on desktop and mobile, Table of contents, How does a SafeKit mirror cluster work with the web console?, How does a SafeKit farm cluster work with the web console?, How to monitor multiple modules and multiple clusters via the web console?, How to monitor alerts in the console and manage email notifications?"
+hashpart: "smart-console-intuitive-mobile-and-error-free-high-availability, table-of-contents, safekit-mirror-cluster, safekit-farm-cluster, multipe-modules-clusters, safekit-notifications-cluster"
 image: "/wp-content/uploads/2026/01/safekit-mirror-cluster-config.png"
 schemaType: "TechArticle"
 ---

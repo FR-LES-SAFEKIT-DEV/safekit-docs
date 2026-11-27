@@ -5,6 +5,7 @@ description: "تكرار أنظمة التحكم في الوصول (EACS) مع S
 category: "use-cases"
 lang: "ar"
 topics: "ما هو نظام التحكم الإلكتروني بالوصول (EACS)؟, لماذا يُعد برنامج EACS بالغ الأهمية؟, أبرز موردي EACS"
+hashpart: "what-is-an-electronic-access-control-system-eacs, why-an-eacs-software-is-critical, key-players-list-in-eacs"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.6 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg"
 schemaType: "Article"

@@ -5,6 +5,7 @@ description: "Architectures de haute disponibilité et bonnes pratiques du clust
 category: "best-practises"
 lang: "fr"
 topics: "Quelles sont les architectures de haute disponibilité et les meilleures pratiques ?, Tableaux comparatifs sur les architectures de haute disponibilité et les meilleures pratiques"
+hashpart: "what-are-the-high-availability-architectures-and-the-best-practices, comparative-tables-on-high-availability-architectures-and-best-practices"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 59 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"

@@ -5,6 +5,7 @@ description: "단계별 가이드: AWS용 SafeKit farm.safe 모듈 설치. AWS �
 category: "quick-install"
 lang: "ko"
 topics: "SafeKit/AWS 솔루션 개요, Windows 및 Linux에 SafeKit/AWS 솔루션 설치 (farm.safe), SafeKit/AWS 솔루션 단계별 구성, SafeKit farm 솔루션 시연"
+hashpart: "overview-of-the-safekit--aws-solution, installation-of-the-safekit--aws-solution-on-windows-and-linux-farmsafe, step-by-step-configuration-of-the-safekit--aws-solution, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-08.15 | glossaire 2026-11-09.11 | Translation LLM | 43 expressions"
 image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"

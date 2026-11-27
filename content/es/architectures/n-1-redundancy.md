@@ -5,6 +5,7 @@ description: "Redundancia N-1 con SafeKit: N aplicaciones en N+1 servidores comp
 category: "architectures"
 lang: "es"
 topics: "Alta disponibilidad con replicación de datos y conmutación por error de aplicaciones de N servidores a 1"
+hashpart: "high-availability-with-data-replication-and-application-failover-from-n-servers-to-1"
 translation: "translate_md 2026-11-22.1 | glossaire 2026-11-22.2 | Translation LLM | 51 expressions"
 image: "/wp-content/uploads/2023/02/safekit-n-1-300-3.png"
 schemaType: "TechArticle"

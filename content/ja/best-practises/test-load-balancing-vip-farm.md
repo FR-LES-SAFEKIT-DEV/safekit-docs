@@ -5,6 +5,7 @@ description: "SafeKit farm クラスターの負荷分散仮想 IP のテスト�
 category: "best-practises"
 lang: "ja"
 topics: "1. 主要原則, 2. 前提条件：SafeKit モザイク, 3. テスト 1 – 接続の分布, 4. テスト 2 – ディスパッチサーバーの変更, 5. テスト 3 – arp -a を使用した GARP ルーティングの確認, 6. テスト 4 – Wireshark (Windows) または tcpdump (Linux) を使用したエンドツーエンドチェック, 7. テストを行うワークステーション, 8. 期待される結果の概要, 9. トラブルシューティング, SafeKit farm ソリューションのデモンストレーション"
+hashpart: "1-key-principles, 2-prerequisite-the-safekit-mosaic, 3-test-1--distribution-of-connections, 4-test-2--change-of-dispatching-server, 5-test-3--checking-garp-rerouting-with-arp--a, 6-test-4--end-to-end-check-with-wireshark-windows-or-tcpdump-linux, 7-which-workstations-to-test-from, 8-summary-of-expected-results, 9-troubleshooting, demonstration-of-the-safekit-farm-solution"
 translation: "translate_md 2026-11-05.12 | glossaire 2026-11-05.15 | Translation LLM | 23 expressions"
 image: "/wp-content/uploads/2024/03/appli-19.png"
 schemaType: "TechArticle"

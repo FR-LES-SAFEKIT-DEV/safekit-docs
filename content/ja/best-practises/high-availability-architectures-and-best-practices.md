@@ -5,6 +5,7 @@ description: "アプリケーションクラスタリングの高可用性アー
 category: "best-practises"
 lang: "ja"
 topics: "高可用性アーキテクチャとベストプラクティスとは何ですか？, 高可用性アーキテクチャとベストプラクティスに関する比較表"
+hashpart: "what-are-the-high-availability-architectures-and-the-best-practices, comparative-tables-on-high-availability-architectures-and-best-practices"
 translation: "translate_md 2026-11-17.3 | glossaire 2026-11-19.23 | Translation LLM | 52 expressions"
 image: "/wp-content/uploads/2023/03/high-availability-architectures-and-best-practices.png"
 schemaType: "TechArticle"
