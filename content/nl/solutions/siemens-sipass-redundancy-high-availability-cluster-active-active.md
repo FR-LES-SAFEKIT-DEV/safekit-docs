@@ -1,5 +1,5 @@
 ---
-title: "Siemens SiPass: hoge beschikbaarheid"
+title: "Siemens SiPass: redundantie met automatische failover"
 canonical: "https://safekit.eviden.com/nl/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "Hoge beschikbaarheid voor Siemens SiPass-toegangscontrole: SafeKit repliceert de virtuele Hyper-V-machine tussen twee servers met automatische failover, zonder SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# Siemens SiPass: hoge beschikbaarheid {#siemens-sipass-high-availability}
+# Siemens SiPass: redundantie met automatische failover {#siemens-sipass-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-nl app="Siemens SiPass"  %}}

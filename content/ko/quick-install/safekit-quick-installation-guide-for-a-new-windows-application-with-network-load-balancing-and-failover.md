@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 설치: Windows 부하 분산"
+title: "SafeKit 설치: Windows 부하 분산 (farm.safe)"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "단계별 가이드: 가상 IP 기반 애플리케이션의 네트워크 부하 분산 및 장애 조치를 위한 Windows용 SafeKit farm.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit 설치: Windows 부하 분산 {#install-safekit-for-windows-load-balancing}
+# SafeKit 설치: Windows 부하 분산 (farm.safe) {#install-safekit-for-windows-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ko app="Windows" mod="farm"  %}}

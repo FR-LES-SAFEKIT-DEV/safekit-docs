@@ -1,5 +1,5 @@
 ---
-title: "مجموعة HA في AWS و Azure و Google Cloud"
+title: "مجموعة HA واحدة لـ AWS و Azure و Google Cloud"
 canonical: "https://safekit.eviden.com/ar/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
 description: "المجموعات في السحابة مع SafeKit: حل عام واحد للنسخ وتجاوز الفشل وموازنة الأحمال في AWS و Azure و Google Cloud وغيرها من السحابات."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"
 ---
 
-# مجموعة HA في AWS و Azure و Google Cloud {#ha-cluster-in-aws-azure-and-google-cloud}
+# مجموعة HA واحدة لـ AWS و Azure و Google Cloud {#one-ha-cluster-for-aws-azure-and-google-cloud}
 
 
 {{%  insert-safekit-all-cloud-solutions-ar  %}}

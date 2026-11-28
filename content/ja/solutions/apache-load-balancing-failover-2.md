@@ -1,5 +1,5 @@
 ---
-title: "Apache の負荷分散とフェイルオーバー"
+title: "Apache 向け組み込み型の負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/apache-load-balancing-failover-2/"
 description: "SafeKit による Apache の負荷分散と高可用性：標準サーバー上で仮想 IP、アプリケーション監視、自動フェイルオーバーを実現。NLB ハードウェア不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# Apache の負荷分散とフェイルオーバー {#apache-load-balancing-and-failover}
+# Apache 向け組み込み型の負荷分散とフェイルオーバー {#built-in-load-balancing-and-failover-for-apache}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="Apache" guide="/ja/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

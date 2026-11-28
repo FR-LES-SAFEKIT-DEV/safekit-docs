@@ -1,5 +1,5 @@
 ---
-title: "Cloud: SafeKit installeren voor hoge beschikbaarheid"
+title: "Cloud: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module mirror.safe in elke cloud voor realtime replicatie en failover tussen twee virtuele Windows- of Linux-machines."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Cloud: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-cloud-high-availability}
+# Cloud: SafeKit installeren voor hoge beschikbaarheid (mirror.safe) {#install-safekit-for-cloud-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-nl app="Cloud" mod="mirror"  %}}

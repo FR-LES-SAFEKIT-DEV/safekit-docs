@@ -1,5 +1,5 @@
 ---
-title: "Lastverteilung und Failover für NGINX"
+title: "NGINX: integrierte Lastverteilung und Failover"
 canonical: "https://safekit.eviden.com/de/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
 description: "Lastverteilung und Hochverfügbarkeit für NGINX mit SafeKit: virtuelle IP, Anwendungsüberwachung und automatisches Failover auf Standardservern."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["NGINX"]
 ---
 
-# Lastverteilung und Failover für NGINX {#nginx-load-balancing-and-failover}
+# NGINX: integrierte Lastverteilung und Failover {#built-in-load-balancing-and-failover-for-nginx}
 
 
 {{%  insert-safekit-solution-farm-2-de app="NGINX" guide="/de/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

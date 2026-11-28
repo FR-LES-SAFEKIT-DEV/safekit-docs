@@ -1,5 +1,5 @@
 ---
-title: "Installa SafeKit per l’alta disponibilità di SQL Server"
+title: "Installa SafeKit per l’alta disponibilità di SQL Server (sqlserver.safe)"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
 description: "Guida passo passo: installa il modulo SafeKit sqlserver.safe per la replica in tempo reale e il failover automatico di Microsoft SQL Server su due server."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Installa SafeKit per l’alta disponibilità di SQL Server {#install-safekit-for-sql-server-high-availability}
+# Installa SafeKit per l’alta disponibilità di SQL Server (sqlserver.safe) {#install-safekit-for-sql-server-high-availability-sqlserversafe}
 
 
 {{%  insert-safekit-mirror-guide-it app="Microsoft SQL Server" mod="sqlserver"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité Siemens Siveillance VMS"
+title: "Redondance Siemens Siveillance VMS avec basculement automatique"
 canonical: "https://safekit.eviden.com/fr/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "Haute disponibilité Siemens Siveillance VMS avec SafeKit : le module SiveillanceVMS.safe assure réplication en temps réel et basculement sur deux serveurs."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance VMS"]
 ---
 
-# Haute disponibilité Siemens Siveillance VMS {#siemens-siveillance-vms-high-availability}
+# Redondance Siemens Siveillance VMS avec basculement automatique {#siemens-siveillance-vms-redundancy-with-automatic-failover}
 
 ## Guide d’installation rapide SafeKit avec Siemens Siveillance VMS et SQL (module mirror SiveillanceVMS.safe) {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

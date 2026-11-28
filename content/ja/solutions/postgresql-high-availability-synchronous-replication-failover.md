@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL の高可用性とレプリケーション"
+title: "PostgreSQL の高可用性（データ損失ゼロ）"
 canonical: "https://safekit.eviden.com/ja/solutions/postgresql-high-availability-synchronous-replication-failover/"
 description: "SafeKit による PostgreSQL の高可用性：Windows または Linux で同期レプリケーションと自動フェイルオーバーの 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["PostgreSQL"]
 ---
 
-# PostgreSQL の高可用性とレプリケーション {#postgresql-high-availability-and-replication}
+# PostgreSQL の高可用性（データ損失ゼロ） {#postgresql-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="PostgreSQL" guide="/ja/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}

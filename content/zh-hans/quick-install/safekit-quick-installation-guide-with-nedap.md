@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：Nedap AEOS 高可用"
+title: "安装 SafeKit：Nedap AEOS 高可用（nedap.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-nedap/"
 description: "分步指南：安装 SafeKit nedap.safe 模块，在 Windows 上实现 Nedap AEOS 门禁系统的实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：Nedap AEOS 高可用 {#install-safekit-for-nedap-aeos-high-availability}
+# 安装 SafeKit：Nedap AEOS 高可用（nedap.safe） {#install-safekit-for-nedap-aeos-high-availability-nedapsafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Nedap" mod="nedap"  %}}

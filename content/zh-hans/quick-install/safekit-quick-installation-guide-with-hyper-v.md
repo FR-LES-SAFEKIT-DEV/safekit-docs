@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：Hyper-V 高可用"
+title: "安装 SafeKit：Hyper-V 高可用（hyperv.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-hyper-v/"
 description: "分步指南：安装 SafeKit hyperv.safe 模块实现虚拟机级高可用性，在两台服务器间复制 Hyper-V VM 并故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：Hyper-V 高可用 {#install-safekit-for-hyper-v-high-availability}
+# 安装 SafeKit：Hyper-V 高可用（hyperv.safe） {#install-safekit-for-hyper-v-high-availability-hypervsafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Hyper-V" mod="hyperv"  %}}

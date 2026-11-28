@@ -1,5 +1,5 @@
 ---
-title: "Apache: balanceamento de carga e failover"
+title: "Apache: balanceamento de carga e failover integrados"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/apache-load-balancing-failover-2/"
 description: "Balanceamento de carga e alta disponibilidade do Apache com SafeKit: IP virtual, monitorização da aplicação e failover automático em servidores padrão, sem hardware NLB."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# Apache: balanceamento de carga e failover {#apache-load-balancing-and-failover}
+# Apache: balanceamento de carga e failover integrados {#built-in-load-balancing-and-failover-for-apache}
 
 
 {{%  insert-safekit-solution-farm-2-pt-pt app="Apache" guide="/pt-pt/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Oracle: SafeKit installeren voor hoge beschikbaarheid"
+title: "Oracle: SafeKit installeren voor hoge beschikbaarheid (oracle.safe)"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module oracle.safe voor realtime replicatie en automatische failover van Oracle-databases op Windows of Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Oracle: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-oracle-high-availability}
+# Oracle: SafeKit installeren voor hoge beschikbaarheid (oracle.safe) {#install-safekit-for-oracle-high-availability-oraclesafe}
 
 
 {{%  insert-safekit-mirror-guide-nl app="Oracle" mod="oracle"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL 高可用与复制"
+title: "PostgreSQL 零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/postgresql-high-availability-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 PostgreSQL 高可用性：双节点集群，同步复制和自动故障转移，支持 Windows 或 Linux，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["PostgreSQL"]
 ---
 
-# PostgreSQL 高可用与复制 {#postgresql-high-availability-and-replication}
+# PostgreSQL 零数据丢失高可用 {#postgresql-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="PostgreSQL" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}

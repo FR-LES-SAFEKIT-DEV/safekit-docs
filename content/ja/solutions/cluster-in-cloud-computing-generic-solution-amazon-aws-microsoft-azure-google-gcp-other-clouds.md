@@ -1,5 +1,5 @@
 ---
-title: "AWS、Azure、Google Cloud の HA クラスター"
+title: "AWS、Azure、Google Cloud に共通の HA クラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
 description: "SafeKit によるクラウドクラスター：AWS、Azure、Google Cloud などでレプリケーション、フェイルオーバー、負荷分散を実現する 1 つの汎用ソリューション。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"
 ---
 
-# AWS、Azure、Google Cloud の HA クラスター {#ha-cluster-in-aws-azure-and-google-cloud}
+# AWS、Azure、Google Cloud に共通の HA クラスター {#one-ha-cluster-for-aws-azure-and-google-cloud}
 
 
 {{%  insert-safekit-all-cloud-solutions-ja  %}}

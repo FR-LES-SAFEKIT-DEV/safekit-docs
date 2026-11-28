@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Milestone XProtect の高可用性"
+title: "SafeKit のインストール：Milestone XProtect の高可用性（milestone.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/"
 description: "手順ガイド：SafeKit の milestone.safe モジュールを導入し、Milestone XProtect Management Server のリアルタイムレプリケーションとフェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Milestone XProtect の高可用性 {#install-safekit-for-milestone-xprotect-high-availability}
+# SafeKit のインストール：Milestone XProtect の高可用性（milestone.safe） {#install-safekit-for-milestone-xprotect-ha-milestonesafe}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Milestone XProtect" mod="milestone"  %}}

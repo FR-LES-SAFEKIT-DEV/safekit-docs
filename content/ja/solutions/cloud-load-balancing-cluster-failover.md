@@ -1,5 +1,5 @@
 ---
-title: "クラウドの負荷分散とフェイルオーバー"
+title: "クラウドの負荷分散と自動フェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/cloud-load-balancing-cluster-failover/"
 description: "あらゆるクラウドの SafeKit farm クラスター：ロードバランサー向けヘルスチェック、Windows または Linux でのアプリの自動再起動とフェイルオーバー。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# クラウドの負荷分散とフェイルオーバー {#cloud-load-balancing-and-failover}
+# クラウドの負荷分散と自動フェイルオーバー {#cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ja app="Cloud" guide="/ja/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

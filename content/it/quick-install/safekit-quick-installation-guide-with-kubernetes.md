@@ -1,5 +1,5 @@
 ---
-title: "Installa SafeKit per l’alta disponibilità di Kubernetes K3s"
+title: "Installa SafeKit per l’alta disponibilità di Kubernetes K3s (k3s.safe)"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-with-kubernetes/"
 description: "Guida passo passo: installa il modulo SafeKit k3s.safe per un cluster Kubernetes K3s a due nodi su Linux, con replica in tempo reale e failover automatico."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Installa SafeKit per l’alta disponibilità di Kubernetes K3s {#install-safekit-for-kubernetes-k3s-high-availability}
+# Installa SafeKit per l’alta disponibilità di Kubernetes K3s (k3s.safe) {#install-safekit-for-kubernetes-k3s-high-availability-k3ssafe}
 
 
 {{%  insert-safekit-mirror-guide-it app="Kubernetes" mod="k3s"  %}}

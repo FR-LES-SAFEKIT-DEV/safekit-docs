@@ -1,5 +1,5 @@
 ---
-title: "NGINX の負荷分散とフェイルオーバー"
+title: "NGINX 向け組み込み型の負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
 description: "SafeKit による NGINX の負荷分散と高可用性：標準サーバー上で仮想 IP、アプリケーション監視、自動フェイルオーバーを実現。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["NGINX"]
 ---
 
-# NGINX の負荷分散とフェイルオーバー {#nginx-load-balancing-and-failover}
+# NGINX 向け組み込み型の負荷分散とフェイルオーバー {#built-in-load-balancing-and-failover-for-nginx}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="NGINX" guide="/ja/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

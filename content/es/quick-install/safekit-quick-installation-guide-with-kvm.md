@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit: alta disponibilidad de KVM"
+title: "Instalar SafeKit: alta disponibilidad de KVM (kvm.safe)"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-kvm/"
 description: "Guía paso a paso: instale el módulo SafeKit kvm.safe para alta disponibilidad a nivel de VM, con replicación y conmutación por error de máquinas virtuales KVM en Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit: alta disponibilidad de KVM {#install-safekit-for-kvm-high-availability}
+# Instalar SafeKit: alta disponibilidad de KVM (kvm.safe) {#install-safekit-for-kvm-high-availability-kvmsafe}
 
 
 {{%  insert-safekit-mirror-guide-es app="KVM" mod="kvm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Bosch BIS の高可用性（SAN 不要）"
+title: "Bosch BIS の冗長化（自動フェイルオーバー）"
 canonical: "https://safekit.eviden.com/ja/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Bosch BIS の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でリアルタイムにレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch BIS"]
 ---
 
-# Bosch BIS の高可用性（SAN 不要） {#bosch-bis-high-availability-without-a-san}
+# Bosch BIS の冗長化（自動フェイルオーバー） {#bosch-bis-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Bosch BIS"  %}}

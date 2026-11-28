@@ -1,5 +1,5 @@
 ---
-title: "موازنة الحمل وتجاوز الفشل لـ Google Cloud"
+title: "موازنة الحمل لـ Google Cloud مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/gcp-load-balancing-cluster-failover/"
 description: "مجموعات SafeKit farm في Google Cloud: فحص سلامة التطبيقات لموازن أحمال GCP، وإعادة تشغيل تلقائية وتجاوز فشل على Windows أو Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# موازنة الحمل وتجاوز الفشل لـ Google Cloud {#google-cloud-load-balancing-and-failover}
+# موازنة الحمل لـ Google Cloud مع تجاوز الفشل التلقائي {#google-cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="GCP" guide="/ar/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

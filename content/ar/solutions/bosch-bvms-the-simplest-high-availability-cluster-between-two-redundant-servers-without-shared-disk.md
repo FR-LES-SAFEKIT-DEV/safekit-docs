@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لـ Bosch BVMS بدون SAN"
+title: "التكرار لـ Bosch BVMS مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "التوفر العالي لنظام إدارة الفيديو Bosch BVMS: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch BVMS"]
 ---
 
-# التوافر العالي لـ Bosch BVMS بدون SAN {#bosch-bvms-high-availability-without-a-san}
+# التكرار لـ Bosch BVMS مع تجاوز الفشل التلقائي {#bosch-bvms-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Bosch BVMS"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit لموازنة الحمل لـ AWS"
+title: "تثبيت SafeKit لموازنة الحمل لـ AWS (farm.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe في AWS، حيث تتحقق من سلامة التطبيق لموازن أحمال AWS وتتولى تجاوز الفشل."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit لموازنة الحمل لـ AWS {#install-safekit-for-aws-load-balancing}
+# تثبيت SafeKit لموازنة الحمل لـ AWS (farm.safe) {#install-safekit-for-aws-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ar app="AWS" mod="farm"  %}}

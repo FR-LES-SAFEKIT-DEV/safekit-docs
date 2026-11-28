@@ -1,5 +1,5 @@
 ---
-title: "클라우드 부하 분산 및 장애 조치"
+title: "클라우드 부하 분산 및 자동 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/cloud-load-balancing-cluster-failover/"
 description: "모든 클라우드의 SafeKit farm 클러스터: 클라우드 부하 분산 장치를 위한 애플리케이션 상태 확인, Windows 또는 Linux 애플리케이션의 자동 재시작 및 장애 조치."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# 클라우드 부하 분산 및 장애 조치 {#cloud-load-balancing-and-failover}
+# 클라우드 부하 분산 및 자동 장애 조치 {#cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ko app="Cloud" guide="/ko/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

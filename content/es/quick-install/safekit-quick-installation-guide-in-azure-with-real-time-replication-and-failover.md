@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit: alta disponibilidad de Azure"
+title: "Instalar SafeKit: alta disponibilidad de Azure (mirror.safe)"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/"
 description: "Guía paso a paso: instale el módulo SafeKit mirror.safe en Azure para replicación en tiempo real y conmutación por error entre dos máquinas virtuales Windows o Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit: alta disponibilidad de Azure {#install-safekit-for-azure-high-availability}
+# Instalar SafeKit: alta disponibilidad de Azure (mirror.safe) {#install-safekit-for-azure-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-es app="Azure" mod="mirror"  %}}

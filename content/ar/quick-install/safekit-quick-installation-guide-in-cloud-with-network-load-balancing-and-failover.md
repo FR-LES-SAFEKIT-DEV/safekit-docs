@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit لموازنة الحمل في السحابة"
+title: "تثبيت SafeKit لموازنة الحمل في السحابة (farm.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe في أي سحابة، حيث تتحقق من سلامة التطبيق لموازن الأحمال السحابي وتتولى تجاوز الفشل."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit لموازنة الحمل في السحابة {#install-safekit-for-cloud-load-balancing}
+# تثبيت SafeKit لموازنة الحمل في السحابة (farm.safe) {#install-safekit-for-cloud-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ar app="Cloud" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 고가용성 및 복제"
+title: "데이터 손실 없는 SQL Server 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 SQL Server 고가용성: 모든 에디션에서 SAN 없이 동기 복제 및 자동 장애 조치를 제공하는 2노드 클러스터."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# SQL Server 고가용성 및 복제 {#sql-server-high-availability-and-replication}
+# 데이터 손실 없는 SQL Server 고가용성 {#sql-server-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ko app="Microsoft SQL Server" guide="/ko/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

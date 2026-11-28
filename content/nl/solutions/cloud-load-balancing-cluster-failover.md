@@ -1,5 +1,5 @@
 ---
-title: "Cloud: load balancing en failover"
+title: "Cloud: load balancing met automatische failover"
 canonical: "https://safekit.eviden.com/nl/solutions/cloud-load-balancing-cluster-failover/"
 description: "SafeKit farm-clusters in elke cloud: health checks van de applicatie voor de cloud-load balancer, automatische herstart en failover van uw Windows- of Linux-applicatie."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Cloud: load balancing en failover {#cloud-load-balancing-and-failover}
+# Cloud: load balancing met automatische failover {#cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-nl app="Cloud" guide="/nl/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

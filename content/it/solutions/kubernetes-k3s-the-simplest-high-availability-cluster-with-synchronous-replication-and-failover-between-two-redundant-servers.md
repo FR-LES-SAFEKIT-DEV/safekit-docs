@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilità per Kubernetes K3s su due nodi"
+title: "Alta disponibilità per Kubernetes K3s con soli due nodi"
 canonical: "https://safekit.eviden.com/it/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Alta disponibilità Kubernetes K3s su due nodi con SafeKit: replica sincrona e failover automatico, senza storage esterno né quorum etcd."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["K3s"]
 ---
 
-# Alta disponibilità per Kubernetes K3s su due nodi {#kubernetes-k3s-high-availability-on-two-nodes}
+# Alta disponibilità per Kubernetes K3s con soli due nodi {#kubernetes-k3s-high-availability-with-just-two-nodes}
 
 ## Semplificare l’alta disponibilità di K3s: perché scegliere SafeKit invece di MetalLB e Longhorn? {#safekit-k3s-ha-introduction}
 

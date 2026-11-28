@@ -1,5 +1,5 @@
 ---
-title: "Hyper-V high availability without shared storage"
+title: "Hyper-V failover cluster without shared storage"
 canonical: "https://safekit.eviden.com/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "Hyper-V high availability without a SAN: SafeKit replicates virtual machines in real time between two servers and restarts them automatically on failure."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hyper-V"]
 ---
 
-# Hyper-V high availability without shared storage {#hyper-v-high-availability-without-shared-storage}
+# Hyper-V failover cluster without shared storage {#hyper-v-failover-cluster-without-shared-storage}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-en app="Hyper-V"  %}}

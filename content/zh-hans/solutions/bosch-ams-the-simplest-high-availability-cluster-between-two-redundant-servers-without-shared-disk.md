@@ -1,5 +1,5 @@
 ---
-title: "Bosch AMS 无 SAN 高可用"
+title: "Bosch AMS 冗余与自动故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Bosch AMS 门禁管理高可用性：SafeKit 在两台服务器间复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch AMS"]
 ---
 
-# Bosch AMS 无 SAN 高可用 {#bosch-ams-high-availability-without-a-san}
+# Bosch AMS 冗余与自动故障转移 {#bosch-ams-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Bosch AMS"  %}}

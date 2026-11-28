@@ -1,5 +1,5 @@
 ---
-title: "IIS の負荷分散とフェイルオーバー"
+title: "IIS 向け組み込み型の負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/iis-load-balancing-failover/"
 description: "SafeKit による IIS の負荷分散と高可用性：標準 Windows サーバー上で仮想 IP、アプリケーション監視、自動フェイルオーバーを実現。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# IIS の負荷分散とフェイルオーバー {#iis-load-balancing-and-failover}
+# IIS 向け組み込み型の負荷分散とフェイルオーバー {#built-in-load-balancing-and-failover-for-iis}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="IIS" guide="/ja/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

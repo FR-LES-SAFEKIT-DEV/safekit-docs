@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：Milestone XProtect 高可用"
+title: "安装 SafeKit：Milestone XProtect 高可用（milestone.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/"
 description: "分步指南：安装 SafeKit milestone.safe 模块，实现 Milestone XProtect Management Server 的实时复制和故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：Milestone XProtect 高可用 {#install-safekit-for-milestone-xprotect-high-availability}
+# 安装 SafeKit：Milestone XProtect 高可用（milestone.safe） {#install-safekit-for-milestone-xprotect-ha-milestonesafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Milestone XProtect" mod="milestone"  %}}

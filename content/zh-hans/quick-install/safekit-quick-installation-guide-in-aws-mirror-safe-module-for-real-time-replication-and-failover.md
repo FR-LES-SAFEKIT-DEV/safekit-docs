@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：AWS 高可用"
+title: "安装 SafeKit：AWS 高可用（mirror.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/"
 description: "分步指南：在 AWS 中安装 SafeKit mirror.safe 模块，在两台 Windows 或 Linux 实例间实现实时复制和故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：AWS 高可用 {#install-safekit-for-aws-high-availability}
+# 安装 SafeKit：AWS 高可用（mirror.safe） {#install-safekit-for-aws-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="AWS" mod="mirror"  %}}

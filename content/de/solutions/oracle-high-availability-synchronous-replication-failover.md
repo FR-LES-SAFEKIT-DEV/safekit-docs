@@ -1,5 +1,5 @@
 ---
-title: "Hochverfügbarkeit und Replikation für Oracle"
+title: "Oracle: Hochverfügbarkeit ohne Datenverlust"
 canonical: "https://safekit.eviden.com/de/solutions/oracle-high-availability-synchronous-replication-failover/"
 description: "Hochverfügbarkeit für Oracle mit SafeKit: Cluster mit zwei Knoten, synchroner Replikation und automatischem Failover unter Windows oder Linux, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Oracle"]
 ---
 
-# Hochverfügbarkeit und Replikation für Oracle {#oracle-high-availability-and-replication}
+# Oracle: Hochverfügbarkeit ohne Datenverlust {#oracle-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Oracle" guide="/de/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}

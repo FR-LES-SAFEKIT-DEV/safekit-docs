@@ -1,5 +1,5 @@
 ---
-title: "Windows 부하 분산 및 장애 조치"
+title: "Windows용 내장 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/windows-load-balancing-failover/"
 description: "SafeKit으로 구현하는 Windows 부하 분산 및 고가용성: 가상 IP, 애플리케이션 모니터링, 자동 장애 조치를 표준 Windows 서버에서 제공합니다."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Windows 부하 분산 및 장애 조치 {#windows-load-balancing-and-failover}
+# Windows용 내장 부하 분산 및 장애 조치 {#built-in-load-balancing-and-failover-for-windows}
 
 
 {{%  insert-safekit-solution-farm-2-ko app="Windows" guide="/ko/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

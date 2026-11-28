@@ -1,5 +1,5 @@
 ---
-title: "SQL Server の高可用性とレプリケーション"
+title: "SQL Server の高可用性（データ損失ゼロ）"
 canonical: "https://safekit.eviden.com/ja/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "SafeKit による SQL Server の高可用性：同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。全エディション対応、SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# SQL Server の高可用性とレプリケーション {#sql-server-high-availability-and-replication}
+# SQL Server の高可用性（データ損失ゼロ） {#sql-server-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Microsoft SQL Server" guide="/ja/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

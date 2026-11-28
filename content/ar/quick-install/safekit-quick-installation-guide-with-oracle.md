@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit للتوافر العالي لـ Oracle"
+title: "تثبيت SafeKit للتوافر العالي لـ Oracle (oracle.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit oracle.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لقواعد بيانات Oracle على Windows أو Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit للتوافر العالي لـ Oracle {#install-safekit-for-oracle-high-availability}
+# تثبيت SafeKit للتوافر العالي لـ Oracle (oracle.safe) {#install-safekit-for-oracle-high-availability-oraclesafe}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Oracle" mod="oracle"  %}}

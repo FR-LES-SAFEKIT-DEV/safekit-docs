@@ -1,5 +1,5 @@
 ---
-title: "Windows: SafeKit installeren voor load balancing"
+title: "Windows: SafeKit installeren voor load balancing (farm.safe)"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe op Windows voor netwerkloadbalancing en failover van uw applicatie op een virtueel IP-adres."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Windows: SafeKit installeren voor load balancing {#install-safekit-for-windows-load-balancing}
+# Windows: SafeKit installeren voor load balancing (farm.safe) {#install-safekit-for-windows-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-nl app="Windows" mod="farm"  %}}

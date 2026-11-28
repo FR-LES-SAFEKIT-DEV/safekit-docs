@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والنسخ المتماثل لـ PostgreSQL"
+title: "التوافر العالي لـ PostgreSQL دون فقدان البيانات"
 canonical: "https://safekit.eviden.com/ar/solutions/postgresql-high-availability-synchronous-replication-failover/"
 description: "التوفر العالي لـ PostgreSQL مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["PostgreSQL"]
 ---
 
-# التوافر العالي والنسخ المتماثل لـ PostgreSQL {#postgresql-high-availability-and-replication}
+# التوافر العالي لـ PostgreSQL دون فقدان البيانات {#postgresql-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="PostgreSQL" guide="/ar/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "AWS, Azure 및 Google Cloud의 HA 클러스터"
+title: "AWS, Azure, Google Cloud를 위한 단일 HA 클러스터"
 canonical: "https://safekit.eviden.com/ko/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
 description: "SafeKit 클라우드 클러스터: AWS, Azure, Google Cloud 및 기타 클라우드에서 복제, 장애 조치, 부하 분산을 위한 하나의 범용 솔루션."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"
 ---
 
-# AWS, Azure 및 Google Cloud의 HA 클러스터 {#ha-cluster-in-aws-azure-and-google-cloud}
+# AWS, Azure, Google Cloud를 위한 단일 HA 클러스터 {#one-ha-cluster-for-aws-azure-and-google-cloud}
 
 
 {{%  insert-safekit-all-cloud-solutions-ko  %}}

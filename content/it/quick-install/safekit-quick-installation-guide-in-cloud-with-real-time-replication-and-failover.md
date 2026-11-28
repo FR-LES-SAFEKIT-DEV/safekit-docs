@@ -1,5 +1,5 @@
 ---
-title: "Installa SafeKit per l’alta disponibilità nel cloud"
+title: "Installa SafeKit per l’alta disponibilità nel cloud (mirror.safe)"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
 description: "Guida passo passo: installa il modulo SafeKit mirror.safe in qualsiasi cloud per la replica in tempo reale e il failover tra due macchine virtuali Windows o Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Installa SafeKit per l’alta disponibilità nel cloud {#install-safekit-for-cloud-high-availability}
+# Installa SafeKit per l’alta disponibilità nel cloud (mirror.safe) {#install-safekit-for-cloud-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-it app="Cloud" mod="mirror"  %}}

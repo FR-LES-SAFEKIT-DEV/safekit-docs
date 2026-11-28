@@ -1,5 +1,5 @@
 ---
-title: "Oracle の高可用性とレプリケーション"
+title: "Oracle の高可用性（データ損失ゼロ）"
 canonical: "https://safekit.eviden.com/ja/solutions/oracle-high-availability-synchronous-replication-failover/"
 description: "SafeKit による Oracle の高可用性：Windows または Linux で同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Oracle"]
 ---
 
-# Oracle の高可用性とレプリケーション {#oracle-high-availability-and-replication}
+# Oracle の高可用性（データ損失ゼロ） {#oracle-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Oracle" guide="/ja/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}

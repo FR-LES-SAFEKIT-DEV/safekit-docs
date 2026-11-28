@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité et réplication Firebird"
+title: "Haute disponibilité Firebird sans perte de données"
 canonical: "https://safekit.eviden.com/fr/solutions/firebird-high-availability-synchronous-replication-failover/"
 description: "Haute disponibilité Firebird avec SafeKit : cluster à deux nœuds avec réplication synchrone et basculement automatique sous Windows ou Linux, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Firebird"]
 ---
 
-# Haute disponibilité et réplication Firebird {#firebird-high-availability-and-replication}
+# Haute disponibilité Firebird sans perte de données {#firebird-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-fr app="Firebird" guide="/fr/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad de Siemens Siveillance Suite"
+title: "Redundancia de Siemens Siveillance Suite con failover automático"
 canonical: "https://safekit.eviden.com/es/solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active/"
 description: "Alta disponibilidad para la suite Siemens Siveillance: SafeKit replica máquinas virtuales Hyper-V entre dos servidores activos con conmutación por error automática."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance"]
 ---
 
-# Alta disponibilidad de Siemens Siveillance Suite {#siemens-siveillance-suite-high-availability}
+# Redundancia de Siemens Siveillance Suite con failover automático {#siemens-siveillance-suite-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-es app="Siemens Siveillance"  %}}

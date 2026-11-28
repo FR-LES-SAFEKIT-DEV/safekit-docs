@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit لموازنة الحمل لـ Windows"
+title: "تثبيت SafeKit لموازنة الحمل لـ Windows (farm.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit farm.safe على Windows لموازنة أحمال الشبكة وتجاوز الفشل لتطبيقك على عنوان IP افتراضي."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit لموازنة الحمل لـ Windows {#install-safekit-for-windows-load-balancing}
+# تثبيت SafeKit لموازنة الحمل لـ Windows (farm.safe) {#install-safekit-for-windows-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ar app="Windows" mod="farm"  %}}

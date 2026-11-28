@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité Siemens SIMATIC PCS 7"
+title: "Redondance Siemens SIMATIC PCS 7 avec basculement automatique"
 canonical: "https://safekit.eviden.com/fr/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
 description: "Haute disponibilité pour Siemens SIMATIC PCS 7 : SafeKit réplique sa machine virtuelle Hyper-V entre deux serveurs avec basculement automatique, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC PCS7"]
 ---
 
-# Haute disponibilité Siemens SIMATIC PCS 7 {#siemens-simatic-pcs-7-high-availability}
+# Redondance Siemens SIMATIC PCS 7 avec basculement automatique {#siemens-simatic-pcs-7-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-fr app="Siemens SIMATIC PCS7"  %}}

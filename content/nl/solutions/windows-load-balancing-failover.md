@@ -1,5 +1,5 @@
 ---
-title: "Windows: load balancing en failover"
+title: "Windows: ingebouwde load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/windows-load-balancing-failover/"
 description: "Loadbalancing en hoge beschikbaarheid voor Windows met SafeKit: virtueel IP-adres, applicatiebewaking en automatische failover op standaard Windows-servers."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Windows: load balancing en failover {#windows-load-balancing-and-failover}
+# Windows: ingebouwde load balancing en failover {#built-in-load-balancing-and-failover-for-windows}
 
 
 {{%  insert-safekit-solution-farm-2-nl app="Windows" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

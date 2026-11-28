@@ -1,5 +1,5 @@
 ---
-title: "Installa SafeKit per il bilanciamento del carico di AWS"
+title: "Installa SafeKit per il bilanciamento del carico di AWS (farm.safe)"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "Guida passo passo: installa il modulo SafeKit farm.safe in AWS, dove verifica lo stato dell’applicazione per il bilanciatore del carico AWS e gestisce il failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Installa SafeKit per il bilanciamento del carico di AWS {#install-safekit-for-aws-load-balancing}
+# Installa SafeKit per il bilanciamento del carico di AWS (farm.safe) {#install-safekit-for-aws-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-it app="AWS" mod="farm"  %}}

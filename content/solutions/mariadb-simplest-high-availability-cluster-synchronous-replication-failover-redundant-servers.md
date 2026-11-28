@@ -1,5 +1,5 @@
 ---
-title: "MariaDB high availability and replication"
+title: "MariaDB high availability with zero data loss"
 canonical: "https://safekit.eviden.com/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
 description: "MariaDB high availability with SafeKit: two-node cluster with synchronous replication and automatic failover on Windows or Linux, with no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MariaDB"]
 ---
 
-# MariaDB high availability and replication {#mariadb-high-availability-and-replication}
+# MariaDB high availability with zero data loss {#mariadb-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-en app="MariaDB" guide="/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

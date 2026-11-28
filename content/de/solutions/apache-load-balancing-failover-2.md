@@ -1,5 +1,5 @@
 ---
-title: "Lastverteilung und Failover für Apache"
+title: "Apache: integrierte Lastverteilung und Failover"
 canonical: "https://safekit.eviden.com/de/solutions/apache-load-balancing-failover-2/"
 description: "Lastverteilung und Hochverfügbarkeit für Apache mit SafeKit: virtuelle IP, Anwendungsüberwachung und automatisches Failover auf Standardservern, ohne NLB-Hardware."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# Lastverteilung und Failover für Apache {#apache-load-balancing-and-failover}
+# Apache: integrierte Lastverteilung und Failover {#built-in-load-balancing-and-failover-for-apache}
 
 
 {{%  insert-safekit-solution-farm-2-de app="Apache" guide="/de/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

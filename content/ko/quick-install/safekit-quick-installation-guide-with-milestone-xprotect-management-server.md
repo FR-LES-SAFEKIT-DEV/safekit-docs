@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 설치: Milestone XProtect 고가용성"
+title: "SafeKit 설치: Milestone XProtect 고가용성 (milestone.safe)"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/"
 description: "단계별 가이드: Milestone XProtect Management Server의 실시간 복제 및 장애 조치를 위한 SafeKit milestone.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit 설치: Milestone XProtect 고가용성 {#install-safekit-for-milestone-xprotect-high-availability}
+# SafeKit 설치: Milestone XProtect 고가용성 (milestone.safe) {#install-safekit-for-milestone-xprotect-ha-milestonesafe}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Milestone XProtect" mod="milestone"  %}}

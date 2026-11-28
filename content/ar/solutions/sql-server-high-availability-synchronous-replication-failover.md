@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والنسخ المتماثل لـ SQL Server"
+title: "التوافر العالي لـ SQL Server دون فقدان البيانات"
 canonical: "https://safekit.eviden.com/ar/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "التوفر العالي لـ SQL Server مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي، لجميع الإصدارات، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# التوافر العالي والنسخ المتماثل لـ SQL Server {#sql-server-high-availability-and-replication}
+# التوافر العالي لـ SQL Server دون فقدان البيانات {#sql-server-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="Microsoft SQL Server" guide="/ar/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

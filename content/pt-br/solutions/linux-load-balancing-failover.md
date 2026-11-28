@@ -1,5 +1,5 @@
 ---
-title: "Linux: balanceamento de carga e failover"
+title: "Linux: balanceamento de carga e failover integrados"
 canonical: "https://safekit.eviden.com/pt-br/solutions/linux-load-balancing-failover/"
 description: "Balanceamento de carga e alta disponibilidade do Linux com SafeKit: IP virtual, monitoramento da aplicação e failover automático em servidores Linux padrão."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Linux: balanceamento de carga e failover {#linux-load-balancing-and-failover}
+# Linux: balanceamento de carga e failover integrados {#built-in-load-balancing-and-failover-for-linux}
 
 
 {{%  insert-safekit-solution-farm-2-pt-br app="Linux" guide="/pt-br/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

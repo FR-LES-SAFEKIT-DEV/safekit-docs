@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والنسخ المتماثل لـ Firebird"
+title: "التوافر العالي لـ Firebird دون فقدان البيانات"
 canonical: "https://safekit.eviden.com/ar/solutions/firebird-high-availability-synchronous-replication-failover/"
 description: "التوفر العالي لـ Firebird مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Firebird"]
 ---
 
-# التوافر العالي والنسخ المتماثل لـ Firebird {#firebird-high-availability-and-replication}
+# التوافر العالي لـ Firebird دون فقدان البيانات {#firebird-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="Firebird" guide="/ar/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

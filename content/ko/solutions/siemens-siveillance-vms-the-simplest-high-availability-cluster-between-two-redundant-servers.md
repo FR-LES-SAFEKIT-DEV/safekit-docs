@@ -1,5 +1,5 @@
 ---
-title: "Siemens Siveillance VMS 고가용성"
+title: "자동 장애 조치를 지원하는 Siemens Siveillance VMS 이중화"
 canonical: "https://safekit.eviden.com/ko/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "SafeKit으로 구현하는 Siemens Siveillance VMS 고가용성: SiveillanceVMS.safe 모듈이 서버 2대에서 실시간 복제 및 장애 조치를 제공합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance VMS"]
 ---
 
-# Siemens Siveillance VMS 고가용성 {#siemens-siveillance-vms-high-availability}
+# 자동 장애 조치를 지원하는 Siemens Siveillance VMS 이중화 {#siemens-siveillance-vms-redundancy-with-automatic-failover}
 
 ## Siemens Siveillance VMS 및 SQL을 사용한 SafeKit 빠른 설치 가이드(SiveillanceVMS.safe mirror 모듈) {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

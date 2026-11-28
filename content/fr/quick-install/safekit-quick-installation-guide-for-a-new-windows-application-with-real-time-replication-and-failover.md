@@ -1,5 +1,5 @@
 ---
-title: "Installer SafeKit pour la haute disponibilité Windows"
+title: "Installer SafeKit pour la haute disponibilité Windows (mirror.safe)"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit mirror.safe sous Windows pour la réplication en temps réel et le basculement automatique de votre application sur deux serveurs."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Installer SafeKit pour la haute disponibilité Windows {#install-safekit-for-windows-high-availability}
+# Installer SafeKit pour la haute disponibilité Windows (mirror.safe) {#install-safekit-for-windows-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-fr app="Windows" mod="mirror"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit installieren: Hochverfügbarkeit für Oracle"
+title: "SafeKit installieren: Hochverfügbarkeit für Oracle (oracle.safe)"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul oracle.safe für Echtzeit-Replikation und automatisches Failover von Oracle-Datenbanken unter Windows oder Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit installieren: Hochverfügbarkeit für Oracle {#install-safekit-for-oracle-high-availability}
+# SafeKit installieren: Hochverfügbarkeit für Oracle (oracle.safe) {#install-safekit-for-oracle-high-availability-oraclesafe}
 
 
 {{%  insert-safekit-mirror-guide-de app="Oracle" mod="oracle"  %}}

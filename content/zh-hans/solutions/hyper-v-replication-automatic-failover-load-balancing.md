@@ -1,5 +1,5 @@
 ---
-title: "无共享存储的 Hyper-V 高可用"
+title: "无共享存储的 Hyper-V 故障转移集群"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "无需 SAN 的 Hyper-V 高可用性：SafeKit 在两台服务器间实时复制虚拟机，并在故障时自动重启。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hyper-V"]
 ---
 
-# 无共享存储的 Hyper-V 高可用 {#hyper-v-high-availability-without-shared-storage}
+# 无共享存储的 Hyper-V 故障转移集群 {#hyper-v-failover-cluster-without-shared-storage}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Hyper-V"  %}}

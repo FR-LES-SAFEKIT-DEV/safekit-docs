@@ -1,5 +1,5 @@
 ---
-title: "Siemens Siveillance VMS 高可用"
+title: "Siemens Siveillance VMS 冗余与自动故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "使用 SafeKit 实现 Siemens Siveillance VMS 高可用性：SiveillanceVMS.safe 模块在两台服务器上提供实时复制和故障转移。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance VMS"]
 ---
 
-# Siemens Siveillance VMS 高可用 {#siemens-siveillance-vms-high-availability}
+# Siemens Siveillance VMS 冗余与自动故障转移 {#siemens-siveillance-vms-redundancy-with-automatic-failover}
 
 ## SafeKit 快速安装指南，适用于 Siemens Siveillance VMS 和 SQL（SiveillanceVMS.safe mirror 模块） {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

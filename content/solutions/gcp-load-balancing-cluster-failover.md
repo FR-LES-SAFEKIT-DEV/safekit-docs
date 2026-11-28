@@ -1,5 +1,5 @@
 ---
-title: "Google Cloud load balancing and failover"
+title: "Google Cloud load balancing with automatic failover"
 canonical: "https://safekit.eviden.com/solutions/gcp-load-balancing-cluster-failover/"
 description: "SafeKit farm clusters in Google Cloud: application health checks for the GCP load balancer, automatic restart and failover on Windows or Linux."
 category: "solutions"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Google Cloud load balancing and failover {#google-cloud-load-balancing-and-failover}
+# Google Cloud load balancing with automatic failover {#google-cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-en app="GCP" guide="/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

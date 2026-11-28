@@ -1,5 +1,5 @@
 ---
-title: "Oracle high availability and replication"
+title: "Oracle high availability with zero data loss"
 canonical: "https://safekit.eviden.com/solutions/oracle-high-availability-synchronous-replication-failover/"
 description: "Oracle high availability with SafeKit: two-node cluster with synchronous replication and automatic failover on Windows or Linux, with no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Oracle"]
 ---
 
-# Oracle high availability and replication {#oracle-high-availability-and-replication}
+# Oracle high availability with zero data loss {#oracle-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-en app="Oracle" guide="/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}

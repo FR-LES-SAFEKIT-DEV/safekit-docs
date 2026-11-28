@@ -1,5 +1,5 @@
 ---
-title: "Podman の高可用性とレプリケーション"
+title: "Podman の高可用性（データ損失ゼロ）"
 canonical: "https://safekit.eviden.com/ja/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "SafeKit による Podman の高可用性：Linux サーバー 2 台間でコンテナデータの同期レプリケーションと自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Podman"]
 ---
 
-# Podman の高可用性とレプリケーション {#podman-high-availability-and-replication}
+# Podman の高可用性（データ損失ゼロ） {#podman-high-availability-with-zero-data-loss}
 
 ## SANless SafeKit mirror クラスターが Podman で動作する仕組み {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 

@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad de Nedap AEOS"
+title: "Redundancia de Nedap AEOS con failover automático"
 canonical: "https://safekit.eviden.com/es/solutions/nedap-high-availability-synchronous-replication-failover/"
 description: "Alta disponibilidad de Nedap AEOS con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error automática del control de acceso, sin SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Nedap"]
 ---
 
-# Alta disponibilidad de Nedap AEOS {#nedap-aeos-high-availability}
+# Redundancia de Nedap AEOS con failover automático {#nedap-aeos-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-es app="Nedap" guide="/es/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}

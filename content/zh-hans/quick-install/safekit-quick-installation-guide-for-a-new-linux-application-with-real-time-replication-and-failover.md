@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：Linux 高可用"
+title: "安装 SafeKit：Linux 高可用（mirror.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
 description: "分步指南：在 Linux 上安装 SafeKit mirror.safe 模块，在两台服务器上为您的应用实现实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：Linux 高可用 {#install-safekit-for-linux-high-availability}
+# 安装 SafeKit：Linux 高可用（mirror.safe） {#install-safekit-for-linux-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Linux" mod="mirror"  %}}

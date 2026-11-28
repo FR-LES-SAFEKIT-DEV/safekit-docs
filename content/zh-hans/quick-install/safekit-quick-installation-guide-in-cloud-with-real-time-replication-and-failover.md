@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：云高可用"
+title: "安装 SafeKit：云高可用（mirror.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/"
 description: "分步指南：在任意云中安装 SafeKit mirror.safe 模块，在两台 Windows 或 Linux 虚拟机间实现实时复制和故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：云高可用 {#install-safekit-for-cloud-high-availability}
+# 安装 SafeKit：云高可用（mirror.safe） {#install-safekit-for-cloud-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Cloud" mod="mirror"  %}}

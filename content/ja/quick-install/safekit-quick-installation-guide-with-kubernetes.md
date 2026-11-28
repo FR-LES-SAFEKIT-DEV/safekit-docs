@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Kubernetes K3s の高可用性"
+title: "SafeKit のインストール：Kubernetes K3s の高可用性（k3s.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-kubernetes/"
 description: "手順ガイド：SafeKit の k3s.safe モジュールを導入し、Linux 上の 2 ノード Kubernetes K3s クラスターでリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Kubernetes K3s の高可用性 {#install-safekit-for-kubernetes-k3s-high-availability}
+# SafeKit のインストール：Kubernetes K3s の高可用性（k3s.safe） {#install-safekit-for-kubernetes-k3s-high-availability-k3ssafe}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Kubernetes" mod="k3s"  %}}

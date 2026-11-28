@@ -1,5 +1,5 @@
 ---
-title: "IIS 负载均衡与故障转移"
+title: "面向 IIS 的内置负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/iis-load-balancing-failover/"
 description: "使用 SafeKit 实现 IIS 负载均衡与高可用性：虚拟 IP、应用监控和自动故障转移，基于标准 Windows 服务器。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# IIS 负载均衡与故障转移 {#iis-load-balancing-and-failover}
+# 面向 IIS 的内置负载均衡与故障转移 {#built-in-load-balancing-and-failover-for-iis}
 
 
 {{%  insert-safekit-solution-farm-2-zh-hans app="IIS" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Hochverfügbarkeit für Milestone XProtect"
+title: "Milestone XProtect: Redundanz mit automatischem Failover"
 canonical: "https://safekit.eviden.com/de/solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover/"
 description: "Hochverfügbarkeit für Milestone XProtect mit SafeKit: synchrone Replikation und automatisches Failover des Management Server und seiner SQL-Datenbank."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Milestone XProtect"]
 ---
 
-# Hochverfügbarkeit für Milestone XProtect {#milestone-xprotect-high-availability}
+# Milestone XProtect: Redundanz mit automatischem Failover {#milestone-xprotect-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-de app="Milestone XProtect" guide="/de/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/" img="/wp-content/uploads/2026/02/safekit-milestone-xprotect-1024.jpg"  %}}

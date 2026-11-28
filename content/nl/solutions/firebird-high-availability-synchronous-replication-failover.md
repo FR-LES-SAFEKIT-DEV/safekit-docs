@@ -1,5 +1,5 @@
 ---
-title: "Firebird: hoge beschikbaarheid en replicatie"
+title: "Firebird: hoge beschikbaarheid zonder dataverlies"
 canonical: "https://safekit.eviden.com/nl/solutions/firebird-high-availability-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid voor Firebird met SafeKit: cluster met twee nodes, synchrone replicatie en automatische failover op Windows of Linux, zonder SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Firebird"]
 ---
 
-# Firebird: hoge beschikbaarheid en replicatie {#firebird-high-availability-and-replication}
+# Firebird: hoge beschikbaarheid zonder dataverlies {#firebird-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-nl app="Firebird" guide="/nl/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

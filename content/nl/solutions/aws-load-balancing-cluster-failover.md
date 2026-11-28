@@ -1,5 +1,5 @@
 ---
-title: "AWS: load balancing en failover"
+title: "AWS: load balancing met automatische failover"
 canonical: "https://safekit.eviden.com/nl/solutions/aws-load-balancing-cluster-failover/"
 description: "SafeKit farm-clusters in AWS: health checks van de applicatie voor de AWS load balancer, automatische herstart en failover van uw applicatie op Windows of Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# AWS: load balancing en failover {#aws-load-balancing-and-failover}
+# AWS: load balancing met automatische failover {#aws-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-nl app="AWS" guide="/nl/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

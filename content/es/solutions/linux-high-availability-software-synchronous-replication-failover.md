@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad y replicación de Linux"
+title: "Alta disponibilidad de Linux sin pérdida de datos"
 canonical: "https://safekit.eviden.com/es/solutions/linux-high-availability-software-synchronous-replication-failover/"
 description: "Alta disponibilidad de Linux con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error automática de su aplicación, sin SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Alta disponibilidad y replicación de Linux {#linux-high-availability-and-replication}
+# Alta disponibilidad de Linux sin pérdida de datos {#linux-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-es app="Linux" guide="/es/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Oracle 高可用与复制"
+title: "Oracle 零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/oracle-high-availability-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 Oracle 高可用性：双节点集群，同步复制和自动故障转移，支持 Windows 或 Linux，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Oracle"]
 ---
 
-# Oracle 高可用与复制 {#oracle-high-availability-and-replication}
+# Oracle 零数据丢失高可用 {#oracle-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Oracle" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-oracle/" img="/wp-content/uploads/2026/02/safekit-oracle-1024.jpg"  %}}

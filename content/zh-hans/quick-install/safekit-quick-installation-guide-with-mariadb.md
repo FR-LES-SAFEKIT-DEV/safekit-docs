@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：MariaDB 高可用"
+title: "安装 SafeKit：MariaDB 高可用（mysql.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-mariadb/"
 description: "分步指南：安装 SafeKit mysql.safe 模块，在 Windows 或 Linux 上实现 MariaDB 的实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：MariaDB 高可用 {#install-safekit-for-mariadb-high-availability}
+# 安装 SafeKit：MariaDB 高可用（mysql.safe） {#install-safekit-for-mariadb-high-availability-mysqlsafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="MariaDB" mod="mysql"  %}}

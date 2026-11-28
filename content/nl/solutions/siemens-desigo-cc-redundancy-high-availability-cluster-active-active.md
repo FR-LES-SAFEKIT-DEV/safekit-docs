@@ -1,5 +1,5 @@
 ---
-title: "Siemens Desigo CC: hoge beschikbaarheid zonder SAN"
+title: "Siemens Desigo CC: redundantie met automatische failover"
 canonical: "https://safekit.eviden.com/nl/solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active/"
 description: "Hoge beschikbaarheid voor Siemens Desigo CC: SafeKit repliceert de virtuele Hyper-V-machine in realtime tussen twee servers met automatische failover, zonder SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Desigo CC"]
 ---
 
-# Siemens Desigo CC: hoge beschikbaarheid zonder SAN {#siemens-desigo-cc-high-availability-without-a-san}
+# Siemens Desigo CC: redundantie met automatische failover {#siemens-desigo-cc-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-nl app="Siemens Desigo CC"  %}}

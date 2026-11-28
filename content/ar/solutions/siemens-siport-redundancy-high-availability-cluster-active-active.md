@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لـ Siemens SIPORT"
+title: "التكرار لـ Siemens SIPORT مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لنظام التحكم في الوصول Siemens SIPORT: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIPORT"]
 ---
 
-# التوافر العالي لـ Siemens SIPORT {#siemens-siport-high-availability}
+# التكرار لـ Siemens SIPORT مع تجاوز الفشل التلقائي {#siemens-siport-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SIPORT"  %}}

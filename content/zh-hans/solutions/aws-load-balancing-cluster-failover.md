@@ -1,5 +1,5 @@
 ---
-title: "AWS 负载均衡与故障转移"
+title: "AWS 负载均衡与自动故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/aws-load-balancing-cluster-failover/"
 description: "AWS 中的 SafeKit farm 集群：为 AWS 负载均衡器提供应用健康检查，在 Windows 或 Linux 上自动重启并故障转移您的应用。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# AWS 负载均衡与故障转移 {#aws-load-balancing-and-failover}
+# AWS 负载均衡与自动故障转移 {#aws-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-zh-hans app="AWS" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

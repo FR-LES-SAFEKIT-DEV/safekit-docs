@@ -1,5 +1,5 @@
 ---
-title: "Cloud: alta disponibilidade e replicação"
+title: "Alta disponibilidade na cloud sem perda de dados"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
 description: "Alta disponibilidade em qualquer cloud com SafeKit: replicação síncrona e failover automático entre duas VMs Windows ou Linux, sem disco partilhado na cloud."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Cloud: alta disponibilidade e replicação {#cloud-high-availability-and-replication}
+# Alta disponibilidade na cloud sem perda de dados {#cloud-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-pt-pt app="Cloud" guide="/pt-pt/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"  %}}

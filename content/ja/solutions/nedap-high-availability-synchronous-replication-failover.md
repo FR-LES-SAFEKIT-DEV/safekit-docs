@@ -1,5 +1,5 @@
 ---
-title: "Nedap AEOS の高可用性"
+title: "Nedap AEOS の冗長化（自動フェイルオーバー）"
 canonical: "https://safekit.eviden.com/ja/solutions/nedap-high-availability-synchronous-replication-failover/"
 description: "SafeKit による Nedap AEOS の高可用性：入退室管理の同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Nedap"]
 ---
 
-# Nedap AEOS の高可用性 {#nedap-aeos-high-availability}
+# Nedap AEOS の冗長化（自動フェイルオーバー） {#nedap-aeos-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Nedap" guide="/ja/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}

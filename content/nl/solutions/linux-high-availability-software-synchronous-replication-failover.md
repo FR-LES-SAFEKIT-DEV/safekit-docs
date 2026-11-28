@@ -1,5 +1,5 @@
 ---
-title: "Linux: hoge beschikbaarheid en replicatie"
+title: "Linux: hoge beschikbaarheid zonder dataverlies"
 canonical: "https://safekit.eviden.com/nl/solutions/linux-high-availability-software-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid voor Linux met SafeKit: cluster met twee nodes, synchrone replicatie en automatische failover van uw applicatie, zonder SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Linux: hoge beschikbaarheid en replicatie {#linux-high-availability-and-replication}
+# Linux: hoge beschikbaarheid zonder dataverlies {#linux-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-nl app="Linux" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

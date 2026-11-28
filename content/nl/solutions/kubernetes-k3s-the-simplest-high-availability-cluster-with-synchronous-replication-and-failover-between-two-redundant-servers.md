@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes K3s: hoge beschikbaarheid op twee nodes"
+title: "Kubernetes K3s: hoge beschikbaarheid met slechts twee nodes"
 canonical: "https://safekit.eviden.com/nl/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Hoge beschikbaarheid voor Kubernetes K3s op twee nodes met SafeKit: synchrone replicatie en automatische failover, zonder externe opslag of etcd-quorum."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["K3s"]
 ---
 
-# Kubernetes K3s: hoge beschikbaarheid op twee nodes {#kubernetes-k3s-high-availability-on-two-nodes}
+# Kubernetes K3s: hoge beschikbaarheid met slechts twee nodes {#kubernetes-k3s-high-availability-with-just-two-nodes}
 
 ## K3s HA vereenvoudigen: Waarom SafeKit kiezen boven MetalLB en Longhorn? {#safekit-k3s-ha-introduction}
 

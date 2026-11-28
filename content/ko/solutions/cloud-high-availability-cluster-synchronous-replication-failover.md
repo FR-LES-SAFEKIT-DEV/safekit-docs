@@ -1,5 +1,5 @@
 ---
-title: "클라우드 고가용성 및 복제"
+title: "데이터 손실 없는 클라우드 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 모든 클라우드의 고가용성: 클라우드 공유 디스크 없이 Windows 또는 Linux VM 2대 간 동기 복제 및 자동 장애 조치."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# 클라우드 고가용성 및 복제 {#cloud-high-availability-and-replication}
+# 데이터 손실 없는 클라우드 고가용성 {#cloud-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ko app="Cloud" guide="/ko/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"  %}}

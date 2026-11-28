@@ -1,5 +1,5 @@
 ---
-title: "AWS: hoge beschikbaarheid en replicatie"
+title: "AWS: hoge beschikbaarheid zonder dataverlies"
 canonical: "https://safekit.eviden.com/nl/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
 description: "Hoge beschikbaarheid in AWS met SafeKit: synchrone replicatie en automatische failover tussen twee Windows- of Linux-instances, zonder gedeelde cloudschijf."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# AWS: hoge beschikbaarheid en replicatie {#aws-high-availability-and-replication}
+# AWS: hoge beschikbaarheid zonder dataverlies {#aws-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-nl app="AWS" guide="/nl/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}

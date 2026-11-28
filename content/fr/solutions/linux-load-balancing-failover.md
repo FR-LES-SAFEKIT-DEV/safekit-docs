@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement Linux"
+title: "Équilibrage de charge et basculement intégrés pour Linux"
 canonical: "https://safekit.eviden.com/fr/solutions/linux-load-balancing-failover/"
 description: "Équilibrage de charge et haute disponibilité Linux avec SafeKit : IP virtuelle, surveillance applicative et basculement automatique sur serveurs Linux standard."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement Linux {#linux-load-balancing-and-failover}
+# Équilibrage de charge et basculement intégrés pour Linux {#built-in-load-balancing-and-failover-for-linux}
 
 
 {{%  insert-safekit-solution-farm-2-fr app="Linux" guide="/fr/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

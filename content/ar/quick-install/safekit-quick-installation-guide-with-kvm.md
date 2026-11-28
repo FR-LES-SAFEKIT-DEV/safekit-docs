@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit للتوافر العالي لـ KVM"
+title: "تثبيت SafeKit للتوافر العالي لـ KVM (kvm.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-kvm/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit kvm.safe للتوفر العالي على مستوى الأجهزة الافتراضية، مع نسخ أجهزة KVM الافتراضية وتجاوز فشلها على Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit للتوافر العالي لـ KVM {#install-safekit-for-kvm-high-availability}
+# تثبيت SafeKit للتوافر العالي لـ KVM (kvm.safe) {#install-safekit-for-kvm-high-availability-kvmsafe}
 
 
 {{%  insert-safekit-mirror-guide-ar app="KVM" mod="kvm"  %}}

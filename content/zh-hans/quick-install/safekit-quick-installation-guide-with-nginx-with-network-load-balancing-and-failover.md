@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：NGINX 负载均衡"
+title: "安装 SafeKit：NGINX 负载均衡（farm.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
 description: "分步指南：在 Windows 或 Linux 上安装 SafeKit farm.safe 模块，实现 NGINX 服务器的网络负载均衡和故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：NGINX 负载均衡 {#install-safekit-for-nginx-load-balancing}
+# 安装 SafeKit：NGINX 负载均衡（farm.safe） {#install-safekit-for-nginx-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="NGINX" mod="farm"  %}}

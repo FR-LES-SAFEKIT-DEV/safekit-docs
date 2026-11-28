@@ -1,5 +1,5 @@
 ---
-title: "Azure: balanceamento de carga e failover"
+title: "Azure: balanceamento de carga com failover automático"
 canonical: "https://safekit.eviden.com/pt-br/solutions/azure-load-balancing-cluster-failover/"
 description: "Clusters farm SafeKit no Azure: checagem de integridade da aplicação para o balanceador de carga Azure, reinício e failover automáticos da sua aplicação no Windows ou Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Azure: balanceamento de carga e failover {#azure-load-balancing-and-failover}
+# Azure: balanceamento de carga com failover automático {#azure-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-pt-br app="Azure" guide="/pt-br/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

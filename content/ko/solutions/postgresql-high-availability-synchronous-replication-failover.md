@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL 고가용성 및 복제"
+title: "데이터 손실 없는 PostgreSQL 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/postgresql-high-availability-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 PostgreSQL 고가용성: Windows 또는 Linux에서 SAN 없이 동기 복제 및 자동 장애 조치를 제공하는 2노드 클러스터."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["PostgreSQL"]
 ---
 
-# PostgreSQL 고가용성 및 복제 {#postgresql-high-availability-and-replication}
+# 데이터 손실 없는 PostgreSQL 고가용성 {#postgresql-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ko app="PostgreSQL" guide="/ko/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}

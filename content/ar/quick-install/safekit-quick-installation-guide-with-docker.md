@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit للتوافر العالي لـ Docker"
+title: "تثبيت SafeKit للتوافر العالي لـ Docker (mirror.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-docker/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit mirror.safe لـ Docker على Linux، مع النسخ في الوقت الفعلي لبيانات الحاويات وتجاوز الفشل التلقائي."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit للتوافر العالي لـ Docker {#install-safekit-for-docker-high-availability}
+# تثبيت SafeKit للتوافر العالي لـ Docker (mirror.safe) {#install-safekit-for-docker-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Docker" mod="mirror"  %}}

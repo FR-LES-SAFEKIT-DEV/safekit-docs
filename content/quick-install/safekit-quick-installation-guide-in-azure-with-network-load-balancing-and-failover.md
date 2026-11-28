@@ -1,5 +1,5 @@
 ---
-title: "Install SafeKit for Azure load balancing"
+title: "Install SafeKit for Azure load balancing (farm.safe)"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "Step-by-step guide: install the SafeKit farm.safe module in Azure, where it checks application health for the Azure load balancer and handles failover."
 category: "quick-install"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Install SafeKit for Azure load balancing {#install-safekit-for-azure-load-balancing}
+# Install SafeKit for Azure load balancing (farm.safe) {#install-safekit-for-azure-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-en app="Azure" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "موازنة الحمل وتجاوز الفشل لـ AWS"
+title: "موازنة الحمل لـ AWS مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/aws-load-balancing-cluster-failover/"
 description: "مجموعات SafeKit farm في AWS: فحص سلامة التطبيقات لموازن أحمال AWS، وإعادة تشغيل تلقائية وتجاوز فشل لتطبيقك على Windows أو Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# موازنة الحمل وتجاوز الفشل لـ AWS {#aws-load-balancing-and-failover}
+# موازنة الحمل لـ AWS مع تجاوز الفشل التلقائي {#aws-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ar app="AWS" guide="/ar/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

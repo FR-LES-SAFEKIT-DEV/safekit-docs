@@ -1,5 +1,5 @@
 ---
-title: "Windows: balanceamento de carga e failover"
+title: "Windows: balanceamento de carga e failover integrados"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/windows-load-balancing-failover/"
 description: "Balanceamento de carga e alta disponibilidade Windows com SafeKit: IP virtual, monitorização da aplicação e failover automático em servidores Windows padrão."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Windows: balanceamento de carga e failover {#windows-load-balancing-and-failover}
+# Windows: balanceamento de carga e failover integrados {#built-in-load-balancing-and-failover-for-windows}
 
 
 {{%  insert-safekit-solution-farm-2-pt-pt app="Windows" guide="/pt-pt/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilità per Hanwha Vision VMS senza SAN"
+title: "Ridondanza per Hanwha Vision VMS con failover automatico"
 canonical: "https://safekit.eviden.com/it/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
 description: "Alta disponibilità per la gestione video Hanwha Vision: SafeKit replica la sua macchina virtuale Hyper-V tra due server con failover automatico, senza SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hanwha Vision"]
 ---
 
-# Alta disponibilità per Hanwha Vision VMS senza SAN {#hanwha-vision-vms-high-availability-without-a-san}
+# Ridondanza per Hanwha Vision VMS con failover automatico {#hanwha-vision-vms-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-it app="Hanwha Vision"  %}}

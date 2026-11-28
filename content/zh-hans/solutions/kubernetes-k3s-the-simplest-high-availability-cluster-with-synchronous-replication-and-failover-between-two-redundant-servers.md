@@ -1,5 +1,5 @@
 ---
-title: "双节点 Kubernetes K3s 高可用"
+title: "仅需双节点的 Kubernetes K3s 高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "使用 SafeKit 在双节点上实现 Kubernetes K3s 高可用性：同步复制和自动故障转移，无需外部存储或 etcd 仲裁。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["K3s"]
 ---
 
-# 双节点 Kubernetes K3s 高可用 {#kubernetes-k3s-high-availability-on-two-nodes}
+# 仅需双节点的 Kubernetes K3s 高可用 {#kubernetes-k3s-high-availability-with-just-two-nodes}
 
 ## 简化 K3s 高可用性：为什么选择 SafeKit 而不是 MetalLB 和 Longhorn？ {#safekit-k3s-ha-introduction}
 

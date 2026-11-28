@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：AWS の負荷分散"
+title: "SafeKit のインストール：AWS の負荷分散（farm.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/"
 description: "手順ガイド：AWS に SafeKit の farm.safe モジュールを導入。AWS ロードバランサー向けにアプリケーションの状態を確認し、フェイルオーバーを処理。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：AWS の負荷分散 {#install-safekit-for-aws-load-balancing}
+# SafeKit のインストール：AWS の負荷分散（farm.safe） {#install-safekit-for-aws-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ja app="AWS" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "AWS high availability and replication"
+title: "AWS high availability with zero data loss"
 canonical: "https://safekit.eviden.com/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
 description: "High availability in AWS with SafeKit: synchronous replication and automatic failover between two Windows or Linux instances, with no cloud shared disk."
 category: "solutions"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# AWS high availability and replication {#aws-high-availability-and-replication}
+# AWS high availability with zero data loss {#aws-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-en app="AWS" guide="/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}

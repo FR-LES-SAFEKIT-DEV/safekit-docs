@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：PostgreSQL の高可用性"
+title: "SafeKit のインストール：PostgreSQL の高可用性（postgresql.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-postgresql/"
 description: "手順ガイド：SafeKit の postgresql.safe モジュールを導入し、Windows または Linux 上の PostgreSQL のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：PostgreSQL の高可用性 {#install-safekit-for-postgresql-high-availability}
+# SafeKit のインストール：PostgreSQL の高可用性（postgresql.safe） {#install-safekit-for-postgresql-high-availability-postgresqlsafe}
 
 
 {{%  insert-safekit-mirror-guide-ja app="PostgreSQL" mod="postgresql.safe"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit للتوافر العالي لـ Nedap AEOS"
+title: "تثبيت SafeKit للتوافر العالي لـ Nedap AEOS (nedap.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-nedap/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit nedap.safe للنسخ في الوقت الفعلي وتجاوز الفشل التلقائي لنظام التحكم في الوصول Nedap AEOS على Windows."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit للتوافر العالي لـ Nedap AEOS {#install-safekit-for-nedap-aeos-high-availability}
+# تثبيت SafeKit للتوافر العالي لـ Nedap AEOS (nedap.safe) {#install-safekit-for-nedap-aeos-high-availability-nedapsafe}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Nedap" mod="nedap"  %}}

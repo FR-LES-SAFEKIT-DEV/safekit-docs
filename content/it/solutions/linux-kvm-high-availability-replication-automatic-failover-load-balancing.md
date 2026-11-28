@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilità Linux KVM senza storage condiviso"
+title: "Cluster di failover Linux KVM senza storage condiviso"
 canonical: "https://safekit.eviden.com/it/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
 description: "Alta disponibilità KVM senza SAN: SafeKit replica le macchine virtuali Linux in tempo reale tra due server e le riavvia automaticamente in caso di guasto."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["KVM"]
 ---
 
-# Alta disponibilità Linux KVM senza storage condiviso {#linux-kvm-high-availability-without-shared-storage}
+# Cluster di failover Linux KVM senza storage condiviso {#linux-kvm-failover-cluster-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-it app="KVM"  %}}

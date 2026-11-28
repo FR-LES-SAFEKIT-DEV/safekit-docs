@@ -1,5 +1,5 @@
 ---
-title: "Linux: load balancing en failover"
+title: "Linux: ingebouwde load balancing en failover"
 canonical: "https://safekit.eviden.com/nl/solutions/linux-load-balancing-failover/"
 description: "Loadbalancing en hoge beschikbaarheid voor Linux met SafeKit: virtueel IP-adres, applicatiebewaking en automatische failover op standaard Linux-servers."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Linux: load balancing en failover {#linux-load-balancing-and-failover}
+# Linux: ingebouwde load balancing en failover {#built-in-load-balancing-and-failover-for-linux}
 
 
 {{%  insert-safekit-solution-farm-2-nl app="Linux" guide="/nl/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-linux-app-1024.jpg"  %}}

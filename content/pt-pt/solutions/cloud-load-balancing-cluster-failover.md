@@ -1,5 +1,5 @@
 ---
-title: "Cloud: balanceamento de carga e failover"
+title: "Balanceamento de carga na cloud com failover automático"
 canonical: "https://safekit.eviden.com/pt-pt/solutions/cloud-load-balancing-cluster-failover/"
 description: "Clusters farm SafeKit em qualquer cloud: verificações de estado da aplicação para o balanceador de carga cloud, reinício automático e failover da aplicação Windows ou Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Cloud: balanceamento de carga e failover {#cloud-load-balancing-and-failover}
+# Balanceamento de carga na cloud com failover automático {#cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-pt-pt app="Cloud" guide="/pt-pt/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

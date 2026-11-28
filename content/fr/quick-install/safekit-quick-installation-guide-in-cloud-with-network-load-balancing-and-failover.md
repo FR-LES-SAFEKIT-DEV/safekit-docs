@@ -1,5 +1,5 @@
 ---
-title: "Installer SafeKit pour l’équilibrage de charge dans le cloud"
+title: "Installer SafeKit pour l’équilibrage de charge dans le cloud (farm.safe)"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit farm.safe dans tout cloud : il contrôle la santé de l’application pour l’équilibreur de charge cloud et gère le basculement."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Installer SafeKit pour l’équilibrage de charge dans le cloud {#install-safekit-for-cloud-load-balancing}
+# Installer SafeKit pour l’équilibrage de charge dans le cloud (farm.safe) {#install-safekit-for-cloud-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-fr app="Cloud" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：Azure 负载均衡"
+title: "安装 SafeKit：Azure 负载均衡（farm.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "分步指南：在 Azure 中安装 SafeKit farm.safe 模块，为 Azure 负载均衡器检查应用健康状态并处理故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：Azure 负载均衡 {#install-safekit-for-azure-load-balancing}
+# 安装 SafeKit：Azure 负载均衡（farm.safe） {#install-safekit-for-azure-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-zh-hans app="Azure" mod="farm"  %}}

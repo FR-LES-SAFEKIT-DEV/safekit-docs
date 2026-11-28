@@ -1,5 +1,5 @@
 ---
-title: "Bosch BVMS: hoge beschikbaarheid zonder SAN"
+title: "Bosch BVMS: redundantie met automatische failover"
 canonical: "https://safekit.eviden.com/nl/solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Hoge beschikbaarheid voor Bosch BVMS-videobeheer: SafeKit repliceert de virtuele Hyper-V-machine tussen twee servers met automatische failover, zonder SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch BVMS"]
 ---
 
-# Bosch BVMS: hoge beschikbaarheid zonder SAN {#bosch-bvms-high-availability-without-a-san}
+# Bosch BVMS: redundantie met automatische failover {#bosch-bvms-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-nl app="Bosch BVMS"  %}}

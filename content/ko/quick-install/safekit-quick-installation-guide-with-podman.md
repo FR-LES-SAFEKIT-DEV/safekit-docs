@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 설치: Podman 고가용성"
+title: "SafeKit 설치: Podman 고가용성 (mirror.safe)"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-podman/"
 description: "단계별 가이드: 컨테이너 데이터의 실시간 복제 및 자동 장애 조치를 위한 Linux 기반 Podman용 SafeKit mirror.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit 설치: Podman 고가용성 {#install-safekit-for-podman-high-availability}
+# SafeKit 설치: Podman 고가용성 (mirror.safe) {#install-safekit-for-podman-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Podman" mod="mirror"  %}}

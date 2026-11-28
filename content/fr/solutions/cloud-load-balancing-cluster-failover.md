@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement dans le cloud"
+title: "Équilibrage de charge dans le cloud avec basculement automatique"
 canonical: "https://safekit.eviden.com/fr/solutions/cloud-load-balancing-cluster-failover/"
 description: "Clusters farm SafeKit dans tout cloud : contrôle de santé applicatif pour l’équilibreur de charge cloud, redémarrage et basculement automatiques sous Windows ou Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement dans le cloud {#cloud-load-balancing-and-failover}
+# Équilibrage de charge dans le cloud avec basculement automatique {#cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-fr app="Cloud" guide="/fr/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

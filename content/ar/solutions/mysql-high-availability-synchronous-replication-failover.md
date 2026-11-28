@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والنسخ المتماثل لـ MySQL"
+title: "التوافر العالي لـ MySQL دون فقدان البيانات"
 canonical: "https://safekit.eviden.com/ar/solutions/mysql-high-availability-synchronous-replication-failover/"
 description: "التوفر العالي لـ MySQL مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي على Windows أو Linux، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MySQL"]
 ---
 
-# التوافر العالي والنسخ المتماثل لـ MySQL {#mysql-high-availability-and-replication}
+# التوافر العالي لـ MySQL دون فقدان البيانات {#mysql-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="MySQL" guide="/ar/quick-install/safekit-quick-installation-guide-with-mysql/" img="/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit installieren: Hochverfügbarkeit für Linux"
+title: "SafeKit installieren: Hochverfügbarkeit für Linux (mirror.safe)"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul mirror.safe unter Linux für Echtzeit-Replikation und automatisches Failover Ihrer Anwendung auf zwei Servern."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit installieren: Hochverfügbarkeit für Linux {#install-safekit-for-linux-high-availability}
+# SafeKit installieren: Hochverfügbarkeit für Linux (mirror.safe) {#install-safekit-for-linux-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-de app="Linux" mod="mirror"  %}}

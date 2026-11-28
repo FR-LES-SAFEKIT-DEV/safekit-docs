@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 설치: Windows 고가용성"
+title: "SafeKit 설치: Windows 고가용성 (mirror.safe)"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
 description: "단계별 가이드: 서버 2대에서 애플리케이션의 실시간 복제 및 자동 장애 조치를 위한 Windows용 SafeKit mirror.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit 설치: Windows 고가용성 {#install-safekit-for-windows-high-availability}
+# SafeKit 설치: Windows 고가용성 (mirror.safe) {#install-safekit-for-windows-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Windows" mod="mirror"  %}}

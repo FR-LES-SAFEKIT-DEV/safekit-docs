@@ -1,5 +1,5 @@
 ---
-title: "Azure: SafeKit installeren voor load balancing"
+title: "Azure: SafeKit installeren voor load balancing (farm.safe)"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module farm.safe in Azure, waar deze de applicatiestatus controleert voor de Azure load balancer en de failover afhandelt."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Azure: SafeKit installeren voor load balancing {#install-safekit-for-azure-load-balancing}
+# Azure: SafeKit installeren voor load balancing (farm.safe) {#install-safekit-for-azure-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-nl app="Azure" mod="farm"  %}}

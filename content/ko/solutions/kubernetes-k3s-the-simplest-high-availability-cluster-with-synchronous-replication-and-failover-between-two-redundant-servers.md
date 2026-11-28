@@ -1,5 +1,5 @@
 ---
-title: "2노드 Kubernetes K3s 고가용성"
+title: "단 2개 노드로 구현하는 Kubernetes K3s 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "SafeKit으로 구현하는 2노드 Kubernetes K3s 고가용성: 외부 스토리지나 etcd 쿼럼 없이 동기 복제 및 자동 장애 조치."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["K3s"]
 ---
 
-# 2노드 Kubernetes K3s 고가용성 {#kubernetes-k3s-high-availability-on-two-nodes}
+# 단 2개 노드로 구현하는 Kubernetes K3s 고가용성 {#kubernetes-k3s-high-availability-with-just-two-nodes}
 
 ## K3s HA 간소화: MetalLB 및 Longhorn 대신 SafeKit을 선택해야 하는 이유 {#safekit-k3s-ha-introduction}
 

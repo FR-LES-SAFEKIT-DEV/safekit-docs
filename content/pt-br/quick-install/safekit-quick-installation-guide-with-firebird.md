@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit para alta disponibilidade de Firebird"
+title: "Instalar SafeKit para alta disponibilidade de Firebird (firebird.safe)"
 canonical: "https://safekit.eviden.com/pt-br/quick-install/safekit-quick-installation-guide-with-firebird/"
 description: "Guia passo a passo: instale o módulo SafeKit firebird.safe para replicação em tempo real e failover automático do Firebird no Windows ou Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit para alta disponibilidade de Firebird {#install-safekit-for-firebird-high-availability}
+# Instalar SafeKit para alta disponibilidade de Firebird (firebird.safe) {#install-safekit-for-firebird-high-availability-firebirdsafe}
 
 
 {{%  insert-safekit-mirror-guide-pt-br app="Firebird" mod="firebird"  %}}

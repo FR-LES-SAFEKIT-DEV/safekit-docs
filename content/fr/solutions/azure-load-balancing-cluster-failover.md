@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement Azure"
+title: "Équilibrage de charge Azure avec basculement automatique"
 canonical: "https://safekit.eviden.com/fr/solutions/azure-load-balancing-cluster-failover/"
 description: "Clusters farm SafeKit dans Azure : contrôle de santé applicatif pour l’équilibreur de charge Azure, redémarrage et basculement automatiques sous Windows ou Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement Azure {#azure-load-balancing-and-failover}
+# Équilibrage de charge Azure avec basculement automatique {#azure-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-fr app="Azure" guide="/fr/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

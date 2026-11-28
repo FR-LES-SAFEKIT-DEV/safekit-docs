@@ -1,5 +1,5 @@
 ---
-title: "HA cluster in AWS, Azure and Google Cloud"
+title: "One HA cluster for AWS, Azure and Google Cloud"
 canonical: "https://safekit.eviden.com/solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds/"
 description: "Clusters in the cloud with SafeKit: one generic solution for replication, failover and load balancing in AWS, Azure, Google Cloud and other clouds."
 category: "solutions"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2023/06/safekit-cloud-orange.png"
 schemaType: "TechArticle"
 ---
 
-# HA cluster in AWS, Azure and Google Cloud {#ha-cluster-in-aws-azure-and-google-cloud}
+# One HA cluster for AWS, Azure and Google Cloud {#one-ha-cluster-for-aws-azure-and-google-cloud}
 
 
 {{%  insert-safekit-all-cloud-solutions-en  %}}

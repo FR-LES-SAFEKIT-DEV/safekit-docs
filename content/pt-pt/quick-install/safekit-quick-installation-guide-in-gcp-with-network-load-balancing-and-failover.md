@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit: balanceamento de carga de Google Cloud"
+title: "Instalar SafeKit: balanceamento de carga de Google Cloud (farm.safe)"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
 description: "Guia passo a passo: instale o módulo SafeKit farm.safe no Google Cloud, onde verifica o estado da aplicação para o balanceador de carga GCP e gere o failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit: balanceamento de carga de Google Cloud {#install-safekit-for-google-cloud-load-balancing}
+# Instalar SafeKit: balanceamento de carga de Google Cloud (farm.safe) {#install-safekit-for-google-cloud-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-pt-pt app="GCP" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：SQL Server 高可用"
+title: "安装 SafeKit：SQL Server 高可用（sqlserver.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/"
 description: "分步指南：安装 SafeKit sqlserver.safe 模块，在两台服务器上实现 Microsoft SQL Server 的实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：SQL Server 高可用 {#install-safekit-for-sql-server-high-availability}
+# 安装 SafeKit：SQL Server 高可用（sqlserver.safe） {#install-safekit-for-sql-server-high-availability-sqlserversafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Microsoft SQL Server" mod="sqlserver"  %}}

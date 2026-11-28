@@ -1,5 +1,5 @@
 ---
-title: "Azure load balancing and failover"
+title: "Azure load balancing with automatic failover"
 canonical: "https://safekit.eviden.com/solutions/azure-load-balancing-cluster-failover/"
 description: "SafeKit farm clusters in Azure: application health checks for the Azure load balancer, automatic restart and failover of your application on Windows or Linux."
 category: "solutions"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Azure load balancing and failover {#azure-load-balancing-and-failover}
+# Azure load balancing with automatic failover {#azure-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-en app="Azure" guide="/quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-azure-app-1024.jpg"  %}}

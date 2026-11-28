@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad y replicación de SQL Server"
+title: "Alta disponibilidad de SQL Server sin pérdida de datos"
 canonical: "https://safekit.eviden.com/es/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "Alta disponibilidad de SQL Server con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error automática, para todas las ediciones, sin SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# Alta disponibilidad y replicación de SQL Server {#sql-server-high-availability-and-replication}
+# Alta disponibilidad de SQL Server sin pérdida de datos {#sql-server-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-es app="Microsoft SQL Server" guide="/es/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit: alta disponibilidade de Podman"
+title: "Instalar SafeKit: alta disponibilidade de Podman (mirror.safe)"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-with-podman/"
 description: "Guia passo a passo: instale o módulo SafeKit mirror.safe para Podman em Linux, com replicação em tempo real dos dados dos contentores e failover automático."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit: alta disponibilidade de Podman {#install-safekit-for-podman-high-availability}
+# Instalar SafeKit: alta disponibilidade de Podman (mirror.safe) {#install-safekit-for-podman-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-pt-pt app="Podman" mod="mirror"  %}}

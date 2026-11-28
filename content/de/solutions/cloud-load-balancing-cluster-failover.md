@@ -1,5 +1,5 @@
 ---
-title: "Lastverteilung und Failover in der Cloud"
+title: "Cloud: Lastverteilung mit automatischem Failover"
 canonical: "https://safekit.eviden.com/de/solutions/cloud-load-balancing-cluster-failover/"
 description: "SafeKit-Farm-Cluster in jeder Cloud: Zustandsprüfungen der Anwendung für den Load Balancer der Cloud, automatischer Neustart und Failover Ihrer Windows- oder Linux-Anwendung."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Lastverteilung und Failover in der Cloud {#cloud-load-balancing-and-failover}
+# Cloud: Lastverteilung mit automatischem Failover {#cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-de app="Cloud" guide="/de/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-cloud-app-1024.jpg"  %}}

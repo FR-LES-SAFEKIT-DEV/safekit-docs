@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：KVM 高可用"
+title: "安装 SafeKit：KVM 高可用（kvm.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-kvm/"
 description: "分步指南：安装 SafeKit kvm.safe 模块实现虚拟机级高可用性，在 Linux 上复制 KVM 虚拟机并故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：KVM 高可用 {#install-safekit-for-kvm-high-availability}
+# 安装 SafeKit：KVM 高可用（kvm.safe） {#install-safekit-for-kvm-high-availability-kvmsafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="KVM" mod="kvm"  %}}

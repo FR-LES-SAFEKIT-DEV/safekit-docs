@@ -1,5 +1,5 @@
 ---
-title: "SafeKit 설치: Oracle 고가용성"
+title: "SafeKit 설치: Oracle 고가용성 (oracle.safe)"
 canonical: "https://safekit.eviden.com/ko/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "단계별 가이드: Windows 또는 Linux에서 Oracle 데이터베이스의 실시간 복제 및 자동 장애 조치를 위한 SafeKit oracle.safe 모듈 설치."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit 설치: Oracle 고가용성 {#install-safekit-for-oracle-high-availability}
+# SafeKit 설치: Oracle 고가용성 (oracle.safe) {#install-safekit-for-oracle-high-availability-oraclesafe}
 
 
 {{%  insert-safekit-mirror-guide-ko app="Oracle" mod="oracle"  %}}

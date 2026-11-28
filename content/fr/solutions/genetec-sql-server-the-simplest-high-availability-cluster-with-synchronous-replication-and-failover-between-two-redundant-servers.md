@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité Genetec SQL Server"
+title: "Haute disponibilité Genetec SQL Server sans perte de données"
 canonical: "https://safekit.eviden.com/fr/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Haute disponibilité pour la base Genetec SQL Server : cluster SafeKit à deux nœuds avec réplication synchrone et basculement automatique, sans SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Genetec SQL"]
 ---
 
-# Haute disponibilité Genetec SQL Server {#genetec-sql-server-high-availability}
+# Haute disponibilité Genetec SQL Server sans perte de données {#genetec-sql-server-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-fr app="Genetec SQL" guide="/fr/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"  %}}

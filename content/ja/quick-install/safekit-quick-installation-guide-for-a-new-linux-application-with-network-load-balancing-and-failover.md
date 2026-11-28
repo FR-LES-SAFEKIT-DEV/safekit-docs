@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Linux の負荷分散"
+title: "SafeKit のインストール：Linux の負荷分散（farm.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
 description: "手順ガイド：Linux に SafeKit の farm.safe モジュールを導入し、仮想 IP でアプリケーションのネットワーク負荷分散とフェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Linux の負荷分散 {#install-safekit-for-linux-load-balancing}
+# SafeKit のインストール：Linux の負荷分散（farm.safe） {#install-safekit-for-linux-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ja app="Linux" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "موازنة الحمل وتجاوز الفشل لـ IIS"
+title: "موازنة حمل وتجاوز فشل مدمجان لـ IIS"
 canonical: "https://safekit.eviden.com/ar/solutions/iis-load-balancing-failover/"
 description: "موازنة أحمال IIS وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم Windows قياسية."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# موازنة الحمل وتجاوز الفشل لـ IIS {#iis-load-balancing-and-failover}
+# موازنة حمل وتجاوز فشل مدمجان لـ IIS {#built-in-load-balancing-and-failover-for-iis}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="IIS" guide="/ar/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لـ Nedap AEOS"
+title: "التكرار لـ Nedap AEOS مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/nedap-high-availability-synchronous-replication-failover/"
 description: "التوفر العالي لـ Nedap AEOS مع SafeKit: مجموعة من عقدتين مع نسخ متزامن وتجاوز فشل تلقائي للتحكم في الوصول، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Nedap"]
 ---
 
-# التوافر العالي لـ Nedap AEOS {#nedap-aeos-high-availability}
+# التكرار لـ Nedap AEOS مع تجاوز الفشل التلقائي {#nedap-aeos-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-ar app="Nedap" guide="/ar/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}

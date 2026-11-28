@@ -1,5 +1,5 @@
 ---
-title: "Genetec SQL Server 고가용성"
+title: "데이터 손실 없는 Genetec SQL Server 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers/"
 description: "Genetec SQL Server 데이터베이스 고가용성: SAN 없이 동기 복제 및 자동 장애 조치를 제공하는 SafeKit 2노드 클러스터."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Genetec SQL"]
 ---
 
-# Genetec SQL Server 고가용성 {#genetec-sql-server-high-availability}
+# 데이터 손실 없는 Genetec SQL Server 고가용성 {#genetec-sql-server-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ko app="Genetec SQL" guide="/ko/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-genetec-sql-1024.jpg"  %}}

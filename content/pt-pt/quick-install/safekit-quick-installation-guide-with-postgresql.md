@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit: alta disponibilidade de PostgreSQL"
+title: "Instalar SafeKit: alta disponibilidade de PostgreSQL (postgresql.safe)"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-with-postgresql/"
 description: "Guia passo a passo: instale o módulo SafeKit postgresql.safe para replicação em tempo real e failover automático do PostgreSQL em Windows ou Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit: alta disponibilidade de PostgreSQL {#install-safekit-for-postgresql-high-availability}
+# Instalar SafeKit: alta disponibilidade de PostgreSQL (postgresql.safe) {#install-safekit-for-postgresql-high-availability-postgresqlsafe}
 
 
 {{%  insert-safekit-mirror-guide-pt-pt app="PostgreSQL" mod="postgresql.safe"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Hanwha Vision VMS 无 SAN 高可用"
+title: "Hanwha Vision VMS 冗余与自动故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/hanwha-vision-cluster-without-shared-storage-on-a-san/"
 description: "Hanwha Vision 视频管理高可用性：SafeKit 在两台服务器间复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hanwha Vision"]
 ---
 
-# Hanwha Vision VMS 无 SAN 高可用 {#hanwha-vision-vms-high-availability-without-a-san}
+# Hanwha Vision VMS 冗余与自动故障转移 {#hanwha-vision-vms-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Hanwha Vision"  %}}

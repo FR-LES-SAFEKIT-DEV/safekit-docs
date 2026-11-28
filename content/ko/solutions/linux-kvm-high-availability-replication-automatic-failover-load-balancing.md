@@ -1,5 +1,5 @@
 ---
-title: "공유 스토리지 없는 Linux KVM 고가용성"
+title: "공유 스토리지 없는 Linux KVM 장애 조치 클러스터"
 canonical: "https://safekit.eviden.com/ko/solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing/"
 description: "SAN 없는 KVM 고가용성: SafeKit은 서버 2대 간에 Linux 가상 머신을 실시간 복제하고 장애 시 자동으로 재시작합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["KVM"]
 ---
 
-# 공유 스토리지 없는 Linux KVM 고가용성 {#linux-kvm-high-availability-without-shared-storage}
+# 공유 스토리지 없는 Linux KVM 장애 조치 클러스터 {#linux-kvm-failover-cluster-without-shared-storage}
 
 
 {{%  insert-safekit-kvm-solution-mirror-ko app="KVM"  %}}

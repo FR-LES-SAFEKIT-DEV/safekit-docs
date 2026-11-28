@@ -1,5 +1,5 @@
 ---
-title: "Firebird 高可用与复制"
+title: "Firebird 零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/firebird-high-availability-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 Firebird 高可用性：双节点集群，同步复制和自动故障转移，支持 Windows 或 Linux，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Firebird"]
 ---
 
-# Firebird 高可用与复制 {#firebird-high-availability-and-replication}
+# Firebird 零数据丢失高可用 {#firebird-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Firebird" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-firebird/" img="/wp-content/uploads/2026/02/safekit-firebird-1024.jpg"  %}}

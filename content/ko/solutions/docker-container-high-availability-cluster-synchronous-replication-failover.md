@@ -1,5 +1,5 @@
 ---
-title: "Docker 고가용성 및 복제"
+title: "데이터 손실 없는 Docker 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 Docker 고가용성: SAN 없이 Linux 서버 2대 간 컨테이너 데이터의 동기 복제 및 자동 장애 조치."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Docker"]
 ---
 
-# Docker 고가용성 및 복제 {#docker-high-availability-and-replication}
+# 데이터 손실 없는 Docker 고가용성 {#docker-high-availability-with-zero-data-loss}
 
 ## SANless SafeKit mirror 클러스터 Docker와 함께 작동하는 방식 {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 

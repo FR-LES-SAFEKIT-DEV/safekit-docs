@@ -1,5 +1,5 @@
 ---
-title: "SafeKit installieren: Lastverteilung für Linux"
+title: "SafeKit installieren: Lastverteilung für Linux (farm.safe)"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe unter Linux für Netzwerk-Lastverteilung und Failover Ihrer Anwendung auf einer virtuellen IP."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit installieren: Lastverteilung für Linux {#install-safekit-for-linux-load-balancing}
+# SafeKit installieren: Lastverteilung für Linux (farm.safe) {#install-safekit-for-linux-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-de app="Linux" mod="farm"  %}}

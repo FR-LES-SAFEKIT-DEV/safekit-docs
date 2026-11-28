@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit لموازنة الحمل لـ Apache"
+title: "تثبيت SafeKit لموازنة الحمل لـ Apache (apache_farm.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit apache_farm.safe على Windows أو Linux لموازنة أحمال الشبكة وتجاوز الفشل لخوادم الويب Apache."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit لموازنة الحمل لـ Apache {#install-safekit-for-apache-load-balancing}
+# تثبيت SafeKit لموازنة الحمل لـ Apache (apache_farm.safe) {#install-safekit-for-apache-load-balancing-apache_farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ar app="Apache" mod="apache_farm"  %}}

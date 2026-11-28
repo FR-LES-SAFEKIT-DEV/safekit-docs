@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit: alta disponibilidad de MySQL"
+title: "Instalar SafeKit: alta disponibilidad de MySQL (mysql.safe)"
 canonical: "https://safekit.eviden.com/es/quick-install/safekit-quick-installation-guide-with-mysql/"
 description: "Guía paso a paso: instale el módulo SafeKit mysql.safe para replicación en tiempo real y conmutación por error automática de MySQL en Windows o Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit: alta disponibilidad de MySQL {#install-safekit-for-mysql-high-availability}
+# Instalar SafeKit: alta disponibilidad de MySQL (mysql.safe) {#install-safekit-for-mysql-high-availability-mysqlsafe}
 
 
 {{%  insert-safekit-mirror-guide-es app="MySQL" mod="mysql"  %}}

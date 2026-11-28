@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement NGINX"
+title: "Équilibrage de charge et basculement intégrés pour NGINX"
 canonical: "https://safekit.eviden.com/fr/solutions/nginx-the-simplest-load-balancing-cluster-with-failover/"
 description: "Équilibrage de charge et haute disponibilité NGINX avec SafeKit : IP virtuelle, surveillance applicative et basculement automatique sur serveurs standard."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["NGINX"]
 ---
 
-# Équilibrage de charge et basculement NGINX {#nginx-load-balancing-and-failover}
+# Équilibrage de charge et basculement intégrés pour NGINX {#built-in-load-balancing-and-failover-for-nginx}
 
 
 {{%  insert-safekit-solution-farm-2-fr app="NGINX" guide="/fr/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-nginx-1024.jpg"  %}}

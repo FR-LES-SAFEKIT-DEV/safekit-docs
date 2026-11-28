@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Oracle の高可用性"
+title: "SafeKit のインストール：Oracle の高可用性（oracle.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-oracle/"
 description: "手順ガイド：SafeKit の oracle.safe モジュールを導入し、Windows または Linux 上の Oracle のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Oracle の高可用性 {#install-safekit-for-oracle-high-availability}
+# SafeKit のインストール：Oracle の高可用性（oracle.safe） {#install-safekit-for-oracle-high-availability-oraclesafe}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Oracle" mod="oracle"  %}}

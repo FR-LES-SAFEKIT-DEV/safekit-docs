@@ -1,5 +1,5 @@
 ---
-title: "Windows の高可用性とレプリケーション"
+title: "Windows の高可用性（データ損失ゼロ）"
 canonical: "https://safekit.eviden.com/ja/solutions/windows-high-availability-software-synchronous-replication-failover/"
 description: "SafeKit による Windows の高可用性：アプリケーションの同期レプリケーションと自動フェイルオーバーを備えた 2 ノードクラスター。SAN 不要。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Windows の高可用性とレプリケーション {#windows-high-availability-and-replication}
+# Windows の高可用性（データ損失ゼロ） {#windows-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-ja app="Windows" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

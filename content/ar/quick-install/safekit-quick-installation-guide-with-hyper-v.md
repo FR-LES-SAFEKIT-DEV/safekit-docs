@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit للتوافر العالي لـ Hyper-V"
+title: "تثبيت SafeKit للتوافر العالي لـ Hyper-V (hyperv.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-hyper-v/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit hyperv.safe للتوفر العالي على مستوى الأجهزة الافتراضية، مع نسخ أجهزة Hyper-V الافتراضية وتجاوز فشلها بين خادمين."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit للتوافر العالي لـ Hyper-V {#install-safekit-for-hyper-v-high-availability}
+# تثبيت SafeKit للتوافر العالي لـ Hyper-V (hyperv.safe) {#install-safekit-for-hyper-v-high-availability-hypervsafe}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Hyper-V" mod="hyperv"  %}}

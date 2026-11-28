@@ -1,5 +1,5 @@
 ---
-title: "SafeKit installieren: Lastverteilung für NGINX"
+title: "SafeKit installieren: Lastverteilung für NGINX (farm.safe)"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe unter Windows oder Linux für Netzwerk-Lastverteilung und Failover von NGINX-Servern."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit installieren: Lastverteilung für NGINX {#install-safekit-for-nginx-load-balancing}
+# SafeKit installieren: Lastverteilung für NGINX (farm.safe) {#install-safekit-for-nginx-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-de app="NGINX" mod="farm"  %}}

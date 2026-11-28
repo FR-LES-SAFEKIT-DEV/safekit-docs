@@ -1,5 +1,5 @@
 ---
-title: "Siemens Siveillance VMS: hoge beschikbaarheid"
+title: "Siemens Siveillance VMS: redundantie met automatische failover"
 canonical: "https://safekit.eviden.com/nl/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "Hoge beschikbaarheid voor Siemens Siveillance VMS met SafeKit: de module SiveillanceVMS.safe biedt realtime replicatie en failover op twee servers."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance VMS"]
 ---
 
-# Siemens Siveillance VMS: hoge beschikbaarheid {#siemens-siveillance-vms-high-availability}
+# Siemens Siveillance VMS: redundantie met automatische failover {#siemens-siveillance-vms-redundancy-with-automatic-failover}
 
 ## Snelle installatiegids SafeKit met Siemens Siveillance VMS en SQL (SiveillanceVMS.safe mirror-module) {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

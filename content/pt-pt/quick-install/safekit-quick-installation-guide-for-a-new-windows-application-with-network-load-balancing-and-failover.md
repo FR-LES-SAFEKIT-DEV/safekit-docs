@@ -1,5 +1,5 @@
 ---
-title: "Instalar SafeKit: balanceamento de carga de Windows"
+title: "Instalar SafeKit: balanceamento de carga de Windows (farm.safe)"
 canonical: "https://safekit.eviden.com/pt-pt/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/"
 description: "Guia passo a passo: instale o módulo SafeKit farm.safe em Windows para balanceamento de carga de rede e failover da sua aplicação num IP virtual."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Instalar SafeKit: balanceamento de carga de Windows {#install-safekit-for-windows-load-balancing}
+# Instalar SafeKit: balanceamento de carga de Windows (farm.safe) {#install-safekit-for-windows-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-pt-pt app="Windows" mod="farm"  %}}

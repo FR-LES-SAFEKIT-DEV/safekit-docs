@@ -1,5 +1,5 @@
 ---
-title: "Balanceo de carga y failover de IIS"
+title: "Balanceo de carga y failover integrados para IIS"
 canonical: "https://safekit.eviden.com/es/solutions/iis-load-balancing-failover/"
 description: "Equilibrio de carga y alta disponibilidad de IIS con SafeKit: IP virtual, supervisión de la aplicación y conmutación por error automática en servidores Windows estándar."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["IIS"]
 ---
 
-# Balanceo de carga y failover de IIS {#iis-load-balancing-and-failover}
+# Balanceo de carga y failover integrados para IIS {#built-in-load-balancing-and-failover-for-iis}
 
 
 {{%  insert-safekit-solution-farm-2-es app="IIS" guide="/es/quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-iis-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Windows の高可用性"
+title: "SafeKit のインストール：Windows の高可用性（mirror.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/"
 description: "手順ガイド：Windows に SafeKit の mirror.safe モジュールを導入し、2 台のサーバーでアプリケーションのリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Windows の高可用性 {#install-safekit-for-windows-high-availability}
+# SafeKit のインストール：Windows の高可用性（mirror.safe） {#install-safekit-for-windows-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Windows" mod="mirror"  %}}

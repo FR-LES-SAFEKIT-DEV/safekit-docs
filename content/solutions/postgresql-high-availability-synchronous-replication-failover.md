@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL high availability and replication"
+title: "PostgreSQL high availability with zero data loss"
 canonical: "https://safekit.eviden.com/solutions/postgresql-high-availability-synchronous-replication-failover/"
 description: "PostgreSQL high availability with SafeKit: two-node cluster with synchronous replication and automatic failover on Windows or Linux, with no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["PostgreSQL"]
 ---
 
-# PostgreSQL high availability and replication {#postgresql-high-availability-and-replication}
+# PostgreSQL high availability with zero data loss {#postgresql-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-en app="PostgreSQL" guide="/quick-install/safekit-quick-installation-guide-with-postgresql/" img="/wp-content/uploads/2026/02/safekit-postgresql-1024.jpg"  %}}

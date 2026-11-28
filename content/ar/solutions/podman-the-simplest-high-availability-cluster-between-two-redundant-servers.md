@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي والنسخ المتماثل لـ Podman"
+title: "التوافر العالي لـ Podman دون فقدان البيانات"
 canonical: "https://safekit.eviden.com/ar/solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "التوفر العالي لـ Podman مع SafeKit: نسخ متزامن لبيانات الحاويات وتجاوز فشل تلقائي بين خادمين Linux، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Podman"]
 ---
 
-# التوافر العالي والنسخ المتماثل لـ Podman {#podman-high-availability-and-replication}
+# التوافر العالي لـ Podman دون فقدان البيانات {#podman-high-availability-with-zero-data-loss}
 
 ## كيف تعمل مجموعة mirror SafeKit من SANless مع Podman {#how-the-sanless-safekit-mirror-cluster-works-with-podman}
 

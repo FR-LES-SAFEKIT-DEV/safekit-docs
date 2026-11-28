@@ -1,5 +1,5 @@
 ---
-title: "安装 SafeKit：Kubernetes K3s 高可用"
+title: "安装 SafeKit：Kubernetes K3s 高可用（k3s.safe）"
 canonical: "https://safekit.eviden.com/zh-hans/quick-install/safekit-quick-installation-guide-with-kubernetes/"
 description: "分步指南：安装 SafeKit k3s.safe 模块，在 Linux 上构建双节点 Kubernetes K3s 集群，实现实时复制和自动故障转移。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# 安装 SafeKit：Kubernetes K3s 高可用 {#install-safekit-for-kubernetes-k3s-high-availability}
+# 安装 SafeKit：Kubernetes K3s 高可用（k3s.safe） {#install-safekit-for-kubernetes-k3s-high-availability-k3ssafe}
 
 
 {{%  insert-safekit-mirror-guide-zh-hans app="Kubernetes" mod="k3s"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Google Cloud の負荷分散とフェイルオーバー"
+title: "Google Cloud の負荷分散と自動フェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/gcp-load-balancing-cluster-failover/"
 description: "Google Cloud の SafeKit farm クラスター：GCP ロードバランサー向けヘルスチェック、Windows または Linux で自動再起動とフェイルオーバー。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Google Cloud の負荷分散とフェイルオーバー {#google-cloud-load-balancing-and-failover}
+# Google Cloud の負荷分散と自動フェイルオーバー {#google-cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-ja app="GCP" guide="/ja/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

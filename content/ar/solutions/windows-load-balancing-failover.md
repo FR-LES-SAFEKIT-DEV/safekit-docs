@@ -1,5 +1,5 @@
 ---
-title: "موازنة الحمل وتجاوز الفشل لـ Windows"
+title: "موازنة حمل وتجاوز فشل مدمجان لـ Windows"
 canonical: "https://safekit.eviden.com/ar/solutions/windows-load-balancing-failover/"
 description: "موازنة الأحمال على Windows وتوفر عالٍ مع SafeKit: عنوان IP افتراضي، ومراقبة التطبيقات، وتجاوز فشل تلقائي على خوادم Windows قياسية."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# موازنة الحمل وتجاوز الفشل لـ Windows {#windows-load-balancing-and-failover}
+# موازنة حمل وتجاوز فشل مدمجان لـ Windows {#built-in-load-balancing-and-failover-for-windows}
 
 
 {{%  insert-safekit-solution-farm-2-ar app="Windows" guide="/ar/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

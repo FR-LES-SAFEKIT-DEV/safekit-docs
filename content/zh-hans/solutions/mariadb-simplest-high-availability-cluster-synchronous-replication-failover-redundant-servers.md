@@ -1,5 +1,5 @@
 ---
-title: "MariaDB 高可用与复制"
+title: "MariaDB 零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers/"
 description: "使用 SafeKit 实现 MariaDB 高可用性：双节点集群，同步复制和自动故障转移，支持 Windows 或 Linux，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MariaDB"]
 ---
 
-# MariaDB 高可用与复制 {#mariadb-high-availability-and-replication}
+# MariaDB 零数据丢失高可用 {#mariadb-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="MariaDB" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-mariadb/" img="/wp-content/uploads/2026/02/safekit-mariadb-1024.jpg"  %}}

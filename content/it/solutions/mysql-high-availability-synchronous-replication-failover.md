@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilità e replica per MySQL"
+title: "Alta disponibilità per MySQL senza perdita di dati"
 canonical: "https://safekit.eviden.com/it/solutions/mysql-high-availability-synchronous-replication-failover/"
 description: "Alta disponibilità MySQL con SafeKit: cluster a due nodi con replica sincrona e failover automatico su Windows o Linux, senza SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["MySQL"]
 ---
 
-# Alta disponibilità e replica per MySQL {#mysql-high-availability-and-replication}
+# Alta disponibilità per MySQL senza perdita di dati {#mysql-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-it app="MySQL" guide="/it/quick-install/safekit-quick-installation-guide-with-mysql/" img="/wp-content/uploads/2026/02/safekit-mysql-1024.jpg"  %}}

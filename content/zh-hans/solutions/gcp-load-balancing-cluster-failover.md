@@ -1,5 +1,5 @@
 ---
-title: "Google Cloud 负载均衡与故障转移"
+title: "Google Cloud 负载均衡与自动故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/gcp-load-balancing-cluster-failover/"
 description: "Google Cloud 中的 SafeKit farm 集群：为 GCP 负载均衡器提供应用健康检查，在 Windows 或 Linux 上自动重启并故障转移。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Google Cloud 负载均衡与故障转移 {#google-cloud-load-balancing-and-failover}
+# Google Cloud 负载均衡与自动故障转移 {#google-cloud-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-zh-hans app="GCP" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-gcp-app-1024.jpg"  %}}

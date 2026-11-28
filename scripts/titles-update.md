@@ -870,633 +870,633 @@ if __name__ == "__main__":
 
 ### solutions/apache-load-balancing-failover-2.md
 
-- en: Apache load balancing and failover
-- fr: Équilibrage de charge et basculement Apache
-- de: Lastverteilung und Failover für Apache
-- es: Balanceo de carga y failover de Apache
-- it: Bilanciamento del carico e failover per Apache
-- nl: Apache: load balancing en failover
-- pt-br: Apache: balanceamento de carga e failover
-- pt-pt: Apache: balanceamento de carga e failover
-- ja: Apache の負荷分散とフェイルオーバー
-- ko: Apache 부하 분산 및 장애 조치
-- zh-hans: Apache 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ Apache
+- en: Built-in load balancing and failover for Apache
+- fr: Équilibrage de charge et basculement intégrés pour Apache
+- de: Apache: integrierte Lastverteilung und Failover
+- es: Balanceo de carga y failover integrados para Apache
+- it: Bilanciamento del carico e failover integrati per Apache
+- nl: Apache: ingebouwde load balancing en failover
+- pt-br: Apache: balanceamento de carga e failover integrados
+- pt-pt: Apache: balanceamento de carga e failover integrados
+- ja: Apache 向け組み込み型の負荷分散とフェイルオーバー
+- ko: Apache용 내장 부하 분산 및 장애 조치
+- zh-hans: 面向 Apache 的内置负载均衡与故障转移
+- ar: موازنة حمل وتجاوز فشل مدمجان لـ Apache
 
 ### solutions/aws-high-availability-cluster-synchronous-replication-failover.md
 
-- en: AWS high availability and replication
-- fr: Haute disponibilité et réplication AWS
-- de: Hochverfügbarkeit und Replikation für AWS
-- es: Alta disponibilidad y replicación de AWS
-- it: Alta disponibilità e replica per AWS
-- nl: AWS: hoge beschikbaarheid en replicatie
-- pt-br: AWS: alta disponibilidade e replicação
-- pt-pt: AWS: alta disponibilidade e replicação
-- ja: AWS の高可用性とレプリケーション
-- ko: AWS 고가용성 및 복제
-- zh-hans: AWS 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ AWS
+- en: AWS high availability with zero data loss
+- fr: Haute disponibilité AWS sans perte de données
+- de: AWS: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de AWS sin pérdida de datos
+- it: Alta disponibilità per AWS senza perdita di dati
+- nl: AWS: hoge beschikbaarheid zonder dataverlies
+- pt-br: AWS: alta disponibilidade sem perda de dados
+- pt-pt: AWS: alta disponibilidade sem perda de dados
+- ja: AWS の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 AWS 고가용성
+- zh-hans: AWS 零数据丢失高可用
+- ar: التوافر العالي لـ AWS دون فقدان البيانات
 
 ### solutions/aws-load-balancing-cluster-failover.md
 
-- en: AWS load balancing and failover
-- fr: Équilibrage de charge et basculement AWS
-- de: Lastverteilung und Failover für AWS
-- es: Balanceo de carga y failover de AWS
-- it: Bilanciamento del carico e failover per AWS
-- nl: AWS: load balancing en failover
-- pt-br: AWS: balanceamento de carga e failover
-- pt-pt: AWS: balanceamento de carga e failover
-- ja: AWS の負荷分散とフェイルオーバー
-- ko: AWS 부하 분산 및 장애 조치
-- zh-hans: AWS 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ AWS
+- en: AWS load balancing with automatic failover
+- fr: Équilibrage de charge AWS avec basculement automatique
+- de: AWS: Lastverteilung mit automatischem Failover
+- es: Balanceo de carga de AWS con failover automático
+- it: Bilanciamento del carico per AWS con failover automatico
+- nl: AWS: load balancing met automatische failover
+- pt-br: AWS: balanceamento de carga com failover automático
+- pt-pt: AWS: balanceamento de carga com failover automático
+- ja: AWS の負荷分散と自動フェイルオーバー
+- ko: AWS 부하 분산 및 자동 장애 조치
+- zh-hans: AWS 负载均衡与自动故障转移
+- ar: موازنة الحمل لـ AWS مع تجاوز الفشل التلقائي
 
 ### solutions/azure-high-availability-cluster-synchronous-replication-failover.md
 
-- en: Azure high availability and replication
-- fr: Haute disponibilité et réplication Azure
-- de: Hochverfügbarkeit und Replikation für Azure
-- es: Alta disponibilidad y replicación de Azure
-- it: Alta disponibilità e replica per Azure
-- nl: Azure: hoge beschikbaarheid en replicatie
-- pt-br: Azure: alta disponibilidade e replicação
-- pt-pt: Azure: alta disponibilidade e replicação
-- ja: Azure の高可用性とレプリケーション
-- ko: Azure 고가용성 및 복제
-- zh-hans: Azure 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Azure
+- en: Azure high availability with zero data loss
+- fr: Haute disponibilité Azure sans perte de données
+- de: Azure: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Azure sin pérdida de datos
+- it: Alta disponibilità per Azure senza perdita di dati
+- nl: Azure: hoge beschikbaarheid zonder dataverlies
+- pt-br: Azure: alta disponibilidade sem perda de dados
+- pt-pt: Azure: alta disponibilidade sem perda de dados
+- ja: Azure の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Azure 고가용성
+- zh-hans: Azure 零数据丢失高可用
+- ar: التوافر العالي لـ Azure دون فقدان البيانات
 
 ### solutions/azure-load-balancing-cluster-failover.md
 
-- en: Azure load balancing and failover
-- fr: Équilibrage de charge et basculement Azure
-- de: Lastverteilung und Failover für Azure
-- es: Balanceo de carga y failover de Azure
-- it: Bilanciamento del carico e failover per Azure
-- nl: Azure: load balancing en failover
-- pt-br: Azure: balanceamento de carga e failover
-- pt-pt: Azure: balanceamento de carga e failover
-- ja: Azure の負荷分散とフェイルオーバー
-- ko: Azure 부하 분산 및 장애 조치
-- zh-hans: Azure 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ Azure
+- en: Azure load balancing with automatic failover
+- fr: Équilibrage de charge Azure avec basculement automatique
+- de: Azure: Lastverteilung mit automatischem Failover
+- es: Balanceo de carga de Azure con failover automático
+- it: Bilanciamento del carico per Azure con failover automatico
+- nl: Azure: load balancing met automatische failover
+- pt-br: Azure: balanceamento de carga com failover automático
+- pt-pt: Azure: balanceamento de carga com failover automático
+- ja: Azure の負荷分散と自動フェイルオーバー
+- ko: Azure 부하 분산 및 자동 장애 조치
+- zh-hans: Azure 负载均衡与自动故障转移
+- ar: موازنة الحمل لـ Azure مع تجاوز الفشل التلقائي
 
 ### solutions/bosch-ams-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk.md
 
-- en: Bosch AMS high availability without a SAN
-- fr: Haute disponibilité Bosch AMS sans SAN
-- de: Hochverfügbarkeit für Bosch AMS ohne SAN
-- es: Alta disponibilidad de Bosch AMS sin SAN
-- it: Alta disponibilità per Bosch AMS senza SAN
-- nl: Bosch AMS: hoge beschikbaarheid zonder SAN
-- pt-br: Bosch AMS: alta disponibilidade sem SAN
-- pt-pt: Bosch AMS: alta disponibilidade sem SAN
-- ja: Bosch AMS の高可用性（SAN 不要）
-- ko: SAN 없는 Bosch AMS 고가용성
-- zh-hans: Bosch AMS 无 SAN 高可用
-- ar: التوافر العالي لـ Bosch AMS بدون SAN
+- en: Bosch AMS redundancy with automatic failover
+- fr: Redondance Bosch AMS avec basculement automatique
+- de: Bosch AMS: Redundanz mit automatischem Failover
+- es: Redundancia de Bosch AMS con failover automático
+- it: Ridondanza per Bosch AMS con failover automatico
+- nl: Bosch AMS: redundantie met automatische failover
+- pt-br: Bosch AMS: redundância com failover automático
+- pt-pt: Bosch AMS: redundância com failover automático
+- ja: Bosch AMS の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Bosch AMS 이중화
+- zh-hans: Bosch AMS 冗余与自动故障转移
+- ar: التكرار لـ Bosch AMS مع تجاوز الفشل التلقائي
 
 ### solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk.md
 
-- en: Bosch BIS high availability without a SAN
-- fr: Haute disponibilité Bosch BIS sans SAN
-- de: Hochverfügbarkeit für Bosch BIS ohne SAN
-- es: Alta disponibilidad de Bosch BIS sin SAN
-- it: Alta disponibilità per Bosch BIS senza SAN
-- nl: Bosch BIS: hoge beschikbaarheid zonder SAN
-- pt-br: Bosch BIS: alta disponibilidade sem SAN
-- pt-pt: Bosch BIS: alta disponibilidade sem SAN
-- ja: Bosch BIS の高可用性（SAN 不要）
-- ko: SAN 없는 Bosch BIS 고가용성
-- zh-hans: Bosch BIS 无 SAN 高可用
-- ar: التوافر العالي لـ Bosch BIS بدون SAN
+- en: Bosch BIS redundancy with automatic failover
+- fr: Redondance Bosch BIS avec basculement automatique
+- de: Bosch BIS: Redundanz mit automatischem Failover
+- es: Redundancia de Bosch BIS con failover automático
+- it: Ridondanza per Bosch BIS con failover automatico
+- nl: Bosch BIS: redundantie met automatische failover
+- pt-br: Bosch BIS: redundância com failover automático
+- pt-pt: Bosch BIS: redundância com failover automático
+- ja: Bosch BIS の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Bosch BIS 이중화
+- zh-hans: Bosch BIS 冗余与自动故障转移
+- ar: التكرار لـ Bosch BIS مع تجاوز الفشل التلقائي
 
 ### solutions/bosch-bvms-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk.md
 
-- en: Bosch BVMS high availability without a SAN
-- fr: Haute disponibilité Bosch BVMS sans SAN
-- de: Hochverfügbarkeit für Bosch BVMS ohne SAN
-- es: Alta disponibilidad de Bosch BVMS sin SAN
-- it: Alta disponibilità per Bosch BVMS senza SAN
-- nl: Bosch BVMS: hoge beschikbaarheid zonder SAN
-- pt-br: Bosch BVMS: alta disponibilidade sem SAN
-- pt-pt: Bosch BVMS: alta disponibilidade sem SAN
-- ja: Bosch BVMS の高可用性（SAN 不要）
-- ko: SAN 없는 Bosch BVMS 고가용성
-- zh-hans: Bosch BVMS 无 SAN 高可用
-- ar: التوافر العالي لـ Bosch BVMS بدون SAN
+- en: Bosch BVMS redundancy with automatic failover
+- fr: Redondance Bosch BVMS avec basculement automatique
+- de: Bosch BVMS: Redundanz mit automatischem Failover
+- es: Redundancia de Bosch BVMS con failover automático
+- it: Ridondanza per Bosch BVMS con failover automatico
+- nl: Bosch BVMS: redundantie met automatische failover
+- pt-br: Bosch BVMS: redundância com failover automático
+- pt-pt: Bosch BVMS: redundância com failover automático
+- ja: Bosch BVMS の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Bosch BVMS 이중화
+- zh-hans: Bosch BVMS 冗余与自动故障转移
+- ar: التكرار لـ Bosch BVMS مع تجاوز الفشل التلقائي
 
 ### solutions/cloud-high-availability-cluster-synchronous-replication-failover.md
 
-- en: Cloud high availability and replication
-- fr: Haute disponibilité et réplication dans le cloud
-- de: Hochverfügbarkeit und Replikation in der Cloud
-- es: Alta disponibilidad y replicación en la nube
-- it: Alta disponibilità e replica nel cloud
-- nl: Cloud: hoge beschikbaarheid en replicatie
-- pt-br: Nuvem: alta disponibilidade e replicação
-- pt-pt: Cloud: alta disponibilidade e replicação
-- ja: クラウドの高可用性とレプリケーション
-- ko: 클라우드 고가용성 및 복제
-- zh-hans: 云高可用与复制
-- ar: التوافر العالي والنسخ المتماثل للسحابة
+- en: Cloud high availability with zero data loss
+- fr: Haute disponibilité dans le cloud sans perte de données
+- de: Cloud: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad en la nube sin pérdida de datos
+- it: Alta disponibilità nel cloud senza perdita di dati
+- nl: Cloud: hoge beschikbaarheid zonder dataverlies
+- pt-br: Alta disponibilidade na nuvem sem perda de dados
+- pt-pt: Alta disponibilidade na cloud sem perda de dados
+- ja: クラウドの高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 클라우드 고가용성
+- zh-hans: 云端零数据丢失高可用
+- ar: التوافر العالي في السحابة دون فقدان البيانات
 
 ### solutions/cloud-load-balancing-cluster-failover.md
 
-- en: Cloud load balancing and failover
-- fr: Équilibrage de charge et basculement dans le cloud
-- de: Lastverteilung und Failover in der Cloud
-- es: Balanceo de carga y failover en la nube
-- it: Bilanciamento del carico e failover nel cloud
-- nl: Cloud: load balancing en failover
-- pt-br: Nuvem: balanceamento de carga e failover
-- pt-pt: Cloud: balanceamento de carga e failover
-- ja: クラウドの負荷分散とフェイルオーバー
-- ko: 클라우드 부하 분산 및 장애 조치
-- zh-hans: 云负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل للسحابة
+- en: Cloud load balancing with automatic failover
+- fr: Équilibrage de charge dans le cloud avec basculement automatique
+- de: Cloud: Lastverteilung mit automatischem Failover
+- es: Balanceo de carga en la nube con failover automático
+- it: Bilanciamento del carico nel cloud con failover automatico
+- nl: Cloud: load balancing met automatische failover
+- pt-br: Balanceamento de carga na nuvem com failover automático
+- pt-pt: Balanceamento de carga na cloud com failover automático
+- ja: クラウドの負荷分散と自動フェイルオーバー
+- ko: 클라우드 부하 분산 및 자동 장애 조치
+- zh-hans: 云负载均衡与自动故障转移
+- ar: موازنة الحمل في السحابة مع تجاوز الفشل التلقائي
 
 ### solutions/cluster-in-cloud-computing-generic-solution-amazon-aws-microsoft-azure-google-gcp-other-clouds.md
 
-- en: HA cluster in AWS, Azure and Google Cloud
-- fr: Cluster HA dans AWS, Azure et Google Cloud
-- de: HA-Cluster in AWS, Azure und Google Cloud
-- es: Clúster HA en AWS, Azure y Google Cloud
-- it: Cluster HA in AWS, Azure e Google Cloud
-- nl: HA-cluster in AWS, Azure en Google Cloud
-- pt-br: Cluster HA na AWS, Azure e Google Cloud
-- pt-pt: Cluster HA em AWS, Azure e Google Cloud
-- ja: AWS、Azure、Google Cloud の HA クラスター
-- ko: AWS, Azure 및 Google Cloud의 HA 클러스터
-- zh-hans: AWS、Azure 和 Google Cloud 中的 HA 集群
-- ar: مجموعة HA في AWS و Azure و Google Cloud
+- en: One HA cluster for AWS, Azure and Google Cloud
+- fr: Un seul cluster HA pour AWS, Azure et Google Cloud
+- de: Ein HA-Cluster für AWS, Azure und Google Cloud
+- es: Un único clúster HA para AWS, Azure y Google Cloud
+- it: Un unico cluster HA per AWS, Azure e Google Cloud
+- nl: Eén HA-cluster voor AWS, Azure en Google Cloud
+- pt-br: Um único cluster HA para AWS, Azure e Google Cloud
+- pt-pt: Um único cluster HA para AWS, Azure e Google Cloud
+- ja: AWS、Azure、Google Cloud に共通の HA クラスター
+- ko: AWS, Azure, Google Cloud를 위한 단일 HA 클러스터
+- zh-hans: 适用于 AWS、Azure 和 Google Cloud 的统一 HA 集群
+- ar: مجموعة HA واحدة لـ AWS و Azure و Google Cloud
 
 ### solutions/docker-container-high-availability-cluster-synchronous-replication-failover.md
 
-- en: Docker high availability and replication
-- fr: Haute disponibilité et réplication Docker
-- de: Hochverfügbarkeit und Replikation für Docker
-- es: Alta disponibilidad y replicación de Docker
-- it: Alta disponibilità e replica per Docker
-- nl: Docker: hoge beschikbaarheid en replicatie
-- pt-br: Docker: alta disponibilidade e replicação
-- pt-pt: Docker: alta disponibilidade e replicação
-- ja: Docker の高可用性とレプリケーション
-- ko: Docker 고가용성 및 복제
-- zh-hans: Docker 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Docker
+- en: Docker high availability with zero data loss
+- fr: Haute disponibilité Docker sans perte de données
+- de: Docker: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Docker sin pérdida de datos
+- it: Alta disponibilità per Docker senza perdita di dati
+- nl: Docker: hoge beschikbaarheid zonder dataverlies
+- pt-br: Docker: alta disponibilidade sem perda de dados
+- pt-pt: Docker: alta disponibilidade sem perda de dados
+- ja: Docker の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Docker 고가용성
+- zh-hans: Docker 零数据丢失高可用
+- ar: التوافر العالي لـ Docker دون فقدان البيانات
 
 ### solutions/firebird-high-availability-synchronous-replication-failover.md
 
-- en: Firebird high availability and replication
-- fr: Haute disponibilité et réplication Firebird
-- de: Hochverfügbarkeit und Replikation für Firebird
-- es: Alta disponibilidad y replicación de Firebird
-- it: Alta disponibilità e replica per Firebird
-- nl: Firebird: hoge beschikbaarheid en replicatie
-- pt-br: Firebird: alta disponibilidade e replicação
-- pt-pt: Firebird: alta disponibilidade e replicação
-- ja: Firebird の高可用性とレプリケーション
-- ko: Firebird 고가용성 및 복제
-- zh-hans: Firebird 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Firebird
+- en: Firebird high availability with zero data loss
+- fr: Haute disponibilité Firebird sans perte de données
+- de: Firebird: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Firebird sin pérdida de datos
+- it: Alta disponibilità per Firebird senza perdita di dati
+- nl: Firebird: hoge beschikbaarheid zonder dataverlies
+- pt-br: Firebird: alta disponibilidade sem perda de dados
+- pt-pt: Firebird: alta disponibilidade sem perda de dados
+- ja: Firebird の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Firebird 고가용성
+- zh-hans: Firebird 零数据丢失高可用
+- ar: التوافر العالي لـ Firebird دون فقدان البيانات
 
 ### solutions/gcp-high-availability-cluster-synchronous-replication-failover.md
 
-- en: Google Cloud high availability and replication
-- fr: Haute disponibilité et réplication Google Cloud
-- de: Hochverfügbarkeit und Replikation für Google Cloud
-- es: Alta disponibilidad y replicación de Google Cloud
-- it: Alta disponibilità e replica per Google Cloud
-- nl: Google Cloud: hoge beschikbaarheid en replicatie
-- pt-br: Google Cloud: alta disponibilidade e replicação
-- pt-pt: Google Cloud: alta disponibilidade e replicação
-- ja: Google Cloud の高可用性とレプリケーション
-- ko: Google Cloud 고가용성 및 복제
-- zh-hans: Google Cloud 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Google Cloud
+- en: Google Cloud high availability with zero data loss
+- fr: Haute disponibilité Google Cloud sans perte de données
+- de: Google Cloud: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Google Cloud sin pérdida de datos
+- it: Alta disponibilità per Google Cloud senza perdita di dati
+- nl: Google Cloud: hoge beschikbaarheid zonder dataverlies
+- pt-br: Google Cloud: alta disponibilidade sem perda de dados
+- pt-pt: Google Cloud: alta disponibilidade sem perda de dados
+- ja: Google Cloud の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Google Cloud 고가용성
+- zh-hans: Google Cloud 零数据丢失高可用
+- ar: التوافر العالي لـ Google Cloud دون فقدان البيانات
 
 ### solutions/gcp-load-balancing-cluster-failover.md
 
-- en: Google Cloud load balancing and failover
-- fr: Équilibrage de charge et basculement Google Cloud
-- de: Lastverteilung und Failover für Google Cloud
-- es: Balanceo de carga y failover de Google Cloud
-- it: Bilanciamento del carico e failover per Google Cloud
-- nl: Google Cloud: load balancing en failover
-- pt-br: Google Cloud: balanceamento de carga e failover
-- pt-pt: Google Cloud: balanceamento de carga e failover
-- ja: Google Cloud の負荷分散とフェイルオーバー
-- ko: Google Cloud 부하 분산 및 장애 조치
-- zh-hans: Google Cloud 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ Google Cloud
+- en: Google Cloud load balancing with automatic failover
+- fr: Équilibrage de charge Google Cloud avec basculement automatique
+- de: Google Cloud: Lastverteilung mit automatischem Failover
+- es: Balanceo de carga de Google Cloud con failover automático
+- it: Bilanciamento del carico per Google Cloud con failover automatico
+- nl: Google Cloud: load balancing met automatische failover
+- pt-br: Google Cloud: balanceamento de carga com failover automático
+- pt-pt: Google Cloud: balanceamento de carga com failover automático
+- ja: Google Cloud の負荷分散と自動フェイルオーバー
+- ko: Google Cloud 부하 분산 및 자동 장애 조치
+- zh-hans: Google Cloud 负载均衡与自动故障转移
+- ar: موازنة الحمل لـ Google Cloud مع تجاوز الفشل التلقائي
 
 ### solutions/genetec-sql-server-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers.md
 
-- en: Genetec SQL Server high availability
-- fr: Haute disponibilité Genetec SQL Server
-- de: Hochverfügbarkeit für Genetec SQL Server
-- es: Alta disponibilidad de Genetec SQL Server
-- it: Alta disponibilità per Genetec SQL Server
-- nl: Genetec SQL Server: hoge beschikbaarheid
-- pt-br: Genetec SQL Server: alta disponibilidade
-- pt-pt: Genetec SQL Server: alta disponibilidade
-- ja: Genetec SQL Server の高可用性
-- ko: Genetec SQL Server 고가용성
-- zh-hans: Genetec SQL Server 高可用
-- ar: التوافر العالي لـ Genetec SQL Server
+- en: Genetec SQL Server high availability with zero data loss
+- fr: Haute disponibilité Genetec SQL Server sans perte de données
+- de: Genetec SQL Server: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Genetec SQL Server sin pérdida de datos
+- it: Alta disponibilità per Genetec SQL Server senza perdita di dati
+- nl: Genetec SQL Server: hoge beschikbaarheid zonder dataverlies
+- pt-br: Genetec SQL Server: alta disponibilidade sem perda de dados
+- pt-pt: Genetec SQL Server: alta disponibilidade sem perda de dados
+- ja: Genetec SQL Server の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Genetec SQL Server 고가용성
+- zh-hans: Genetec SQL Server 零数据丢失高可用
+- ar: التوافر العالي لـ Genetec SQL Server دون فقدان البيانات
 
 ### solutions/hanwha-vision-cluster-without-shared-storage-on-a-san.md
 
-- en: Hanwha Vision VMS high availability without a SAN
-- fr: Haute disponibilité Hanwha Vision VMS sans SAN
-- de: Hochverfügbarkeit für Hanwha Vision VMS ohne SAN
-- es: Alta disponibilidad de Hanwha Vision VMS sin SAN
-- it: Alta disponibilità per Hanwha Vision VMS senza SAN
-- nl: Hanwha Vision VMS: hoge beschikbaarheid zonder SAN
-- pt-br: Hanwha Vision VMS: alta disponibilidade sem SAN
-- pt-pt: Hanwha Vision VMS: alta disponibilidade sem SAN
-- ja: Hanwha Vision VMS の高可用性（SAN 不要）
-- ko: SAN 없는 Hanwha Vision VMS 고가용성
-- zh-hans: Hanwha Vision VMS 无 SAN 高可用
-- ar: التوافر العالي لـ Hanwha Vision VMS بدون SAN
+- en: Hanwha Vision VMS redundancy with automatic failover
+- fr: Redondance Hanwha Vision VMS avec basculement automatique
+- de: Hanwha Vision VMS: Redundanz mit automatischem Failover
+- es: Redundancia de Hanwha Vision VMS con failover automático
+- it: Ridondanza per Hanwha Vision VMS con failover automatico
+- nl: Hanwha Vision VMS: redundantie met automatische failover
+- pt-br: Hanwha Vision VMS: redundância com failover automático
+- pt-pt: Hanwha Vision VMS: redundância com failover automático
+- ja: Hanwha Vision VMS の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Hanwha Vision VMS 이중화
+- zh-hans: Hanwha Vision VMS 冗余与自动故障转移
+- ar: التكرار لـ Hanwha Vision VMS مع تجاوز الفشل التلقائي
 
 ### solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk.md
 
-- en: Hanwha Wisenet WAVE high availability
-- fr: Haute disponibilité Hanwha Wisenet WAVE
-- de: Hochverfügbarkeit für Hanwha Wisenet WAVE
-- es: Alta disponibilidad de Hanwha Wisenet WAVE
-- it: Alta disponibilità per Hanwha Wisenet WAVE
-- nl: Hanwha Wisenet WAVE: hoge beschikbaarheid
-- pt-br: Hanwha Wisenet WAVE: alta disponibilidade
-- pt-pt: Hanwha Wisenet WAVE: alta disponibilidade
-- ja: Hanwha Wisenet WAVE の高可用性
-- ko: Hanwha Wisenet WAVE 고가용성
-- zh-hans: Hanwha Wisenet WAVE 高可用
-- ar: التوافر العالي لـ Hanwha Wisenet WAVE
+- en: Hanwha Wisenet WAVE redundancy with automatic failover
+- fr: Redondance Hanwha Wisenet WAVE avec basculement automatique
+- de: Hanwha Wisenet WAVE: Redundanz mit automatischem Failover
+- es: Redundancia de Hanwha Wisenet WAVE con failover automático
+- it: Ridondanza per Hanwha Wisenet WAVE con failover automatico
+- nl: Hanwha Wisenet WAVE: redundantie met automatische failover
+- pt-br: Hanwha Wisenet WAVE: redundância com failover automático
+- pt-pt: Hanwha Wisenet WAVE: redundância com failover automático
+- ja: Hanwha Wisenet WAVE の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Hanwha Wisenet WAVE 이중화
+- zh-hans: Hanwha Wisenet WAVE 冗余与自动故障转移
+- ar: التكرار لـ Hanwha Wisenet WAVE مع تجاوز الفشل التلقائي
 
 ### solutions/hyper-v-replication-automatic-failover-load-balancing.md
 
-- en: Hyper-V high availability without shared storage
-- fr: Haute disponibilité Hyper-V sans disque partagé
-- de: Hyper-V: Hochverfügbarkeit ohne Shared Storage
-- es: Alta disponibilidad de Hyper-V sin disco compartido
-- it: Alta disponibilità Hyper-V senza storage condiviso
-- nl: Hyper-V: hoge beschikbaarheid zonder gedeelde opslag
-- pt-br: Hyper-V: alta disponibilidade sem disco compartilhado
-- pt-pt: Hyper-V: alta disponibilidade sem disco partilhado
-- ja: Hyper-V の高可用性（共有ストレージ不要）
-- ko: 공유 스토리지 없는 Hyper-V 고가용성
-- zh-hans: 无共享存储的 Hyper-V 高可用
-- ar: التوافر العالي لـ Hyper-V بدون تخزين مشترك
+- en: Hyper-V failover cluster without shared storage
+- fr: Cluster de basculement Hyper-V sans disque partagé
+- de: Hyper-V-Failover-Cluster ohne Shared Storage
+- es: Clúster de failover Hyper-V sin disco compartido
+- it: Cluster di failover Hyper-V senza storage condiviso
+- nl: Hyper-V-failovercluster zonder gedeelde opslag
+- pt-br: Cluster de failover Hyper-V sem disco compartilhado
+- pt-pt: Cluster de failover Hyper-V sem disco partilhado
+- ja: 共有ストレージ不要の Hyper-V フェイルオーバークラスター
+- ko: 공유 스토리지 없는 Hyper-V 장애 조치 클러스터
+- zh-hans: 无共享存储的 Hyper-V 故障转移集群
+- ar: مجموعة تجاوز الفشل لـ Hyper-V بدون تخزين مشترك
 
 ### solutions/iis-load-balancing-failover.md
 
-- en: IIS load balancing and failover
-- fr: Équilibrage de charge et basculement IIS
-- de: Lastverteilung und Failover für IIS
-- es: Balanceo de carga y failover de IIS
-- it: Bilanciamento del carico e failover per IIS
-- nl: IIS: load balancing en failover
-- pt-br: IIS: balanceamento de carga e failover
-- pt-pt: IIS: balanceamento de carga e failover
-- ja: IIS の負荷分散とフェイルオーバー
-- ko: IIS 부하 분산 및 장애 조치
-- zh-hans: IIS 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ IIS
+- en: Built-in load balancing and failover for IIS
+- fr: Équilibrage de charge et basculement intégrés pour IIS
+- de: IIS: integrierte Lastverteilung und Failover
+- es: Balanceo de carga y failover integrados para IIS
+- it: Bilanciamento del carico e failover integrati per IIS
+- nl: IIS: ingebouwde load balancing en failover
+- pt-br: IIS: balanceamento de carga e failover integrados
+- pt-pt: IIS: balanceamento de carga e failover integrados
+- ja: IIS 向け組み込み型の負荷分散とフェイルオーバー
+- ko: IIS용 내장 부하 분산 및 장애 조치
+- zh-hans: 面向 IIS 的内置负载均衡与故障转移
+- ar: موازنة حمل وتجاوز فشل مدمجان لـ IIS
 
 ### solutions/kubernetes-k3s-the-simplest-high-availability-cluster-with-synchronous-replication-and-failover-between-two-redundant-servers.md
 
-- en: Kubernetes K3s high availability on two nodes
-- fr: Haute disponibilité Kubernetes K3s sur deux nœuds
-- de: Kubernetes K3s: Hochverfügbarkeit auf zwei Knoten
-- es: Alta disponibilidad de Kubernetes K3s en dos nodos
-- it: Alta disponibilità per Kubernetes K3s su due nodi
-- nl: Kubernetes K3s: hoge beschikbaarheid op twee nodes
-- pt-br: Kubernetes K3s: alta disponibilidade em dois nós
-- pt-pt: Kubernetes K3s: alta disponibilidade em dois nós
-- ja: 2 ノードでの Kubernetes K3s の高可用性
-- ko: 2노드 Kubernetes K3s 고가용성
-- zh-hans: 双节点 Kubernetes K3s 高可用
-- ar: التوافر العالي لـ Kubernetes K3s على عقدتين
+- en: Kubernetes K3s high availability with just two nodes
+- fr: Haute disponibilité Kubernetes K3s avec seulement deux nœuds
+- de: Kubernetes K3s: Hochverfügbarkeit mit nur zwei Knoten
+- es: Alta disponibilidad de Kubernetes K3s con solo dos nodos
+- it: Alta disponibilità per Kubernetes K3s con soli due nodi
+- nl: Kubernetes K3s: hoge beschikbaarheid met slechts twee nodes
+- pt-br: Kubernetes K3s: alta disponibilidade com apenas dois nós
+- pt-pt: Kubernetes K3s: alta disponibilidade com apenas dois nós
+- ja: 2 ノードだけで実現する Kubernetes K3s の高可用性
+- ko: 단 2개 노드로 구현하는 Kubernetes K3s 고가용성
+- zh-hans: 仅需双节点的 Kubernetes K3s 高可用
+- ar: التوافر العالي لـ Kubernetes K3s بعقدتين فقط
 
 ### solutions/linux-high-availability-software-synchronous-replication-failover.md
 
-- en: Linux high availability and replication
-- fr: Haute disponibilité et réplication Linux
-- de: Hochverfügbarkeit und Replikation für Linux
-- es: Alta disponibilidad y replicación de Linux
-- it: Alta disponibilità e replica per Linux
-- nl: Linux: hoge beschikbaarheid en replicatie
-- pt-br: Linux: alta disponibilidade e replicação
-- pt-pt: Linux: alta disponibilidade e replicação
-- ja: Linux の高可用性とレプリケーション
-- ko: Linux 고가용성 및 복제
-- zh-hans: Linux 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Linux
+- en: Linux high availability with zero data loss
+- fr: Haute disponibilité Linux sans perte de données
+- de: Linux: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Linux sin pérdida de datos
+- it: Alta disponibilità per Linux senza perdita di dati
+- nl: Linux: hoge beschikbaarheid zonder dataverlies
+- pt-br: Linux: alta disponibilidade sem perda de dados
+- pt-pt: Linux: alta disponibilidade sem perda de dados
+- ja: Linux の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Linux 고가용성
+- zh-hans: Linux 零数据丢失高可用
+- ar: التوافر العالي لـ Linux دون فقدان البيانات
 
 ### solutions/linux-kvm-high-availability-replication-automatic-failover-load-balancing.md
 
-- en: Linux KVM high availability without shared storage
-- fr: Haute disponibilité Linux KVM sans disque partagé
-- de: Linux KVM: Hochverfügbarkeit ohne Shared Storage
-- es: Alta disponibilidad de Linux KVM sin disco compartido
-- it: Alta disponibilità Linux KVM senza storage condiviso
-- nl: Linux KVM: hoge beschikbaarheid zonder gedeelde opslag
-- pt-br: Linux KVM: alta disponibilidade sem disco compartilhado
-- pt-pt: Linux KVM: alta disponibilidade sem disco partilhado
-- ja: Linux KVM の高可用性（共有ストレージ不要）
-- ko: 공유 스토리지 없는 Linux KVM 고가용성
-- zh-hans: 无共享存储的 Linux KVM 高可用
-- ar: التوافر العالي لـ Linux KVM بدون تخزين مشترك
+- en: Linux KVM failover cluster without shared storage
+- fr: Cluster de basculement Linux KVM sans disque partagé
+- de: Linux-KVM-Failover-Cluster ohne Shared Storage
+- es: Clúster de failover Linux KVM sin disco compartido
+- it: Cluster di failover Linux KVM senza storage condiviso
+- nl: Linux KVM-failovercluster zonder gedeelde opslag
+- pt-br: Cluster de failover Linux KVM sem disco compartilhado
+- pt-pt: Cluster de failover Linux KVM sem disco partilhado
+- ja: 共有ストレージ不要の Linux KVM フェイルオーバークラスター
+- ko: 공유 스토리지 없는 Linux KVM 장애 조치 클러스터
+- zh-hans: 无共享存储的 Linux KVM 故障转移集群
+- ar: مجموعة تجاوز الفشل لـ Linux KVM بدون تخزين مشترك
 
 ### solutions/linux-load-balancing-failover.md
 
-- en: Linux load balancing and failover
-- fr: Équilibrage de charge et basculement Linux
-- de: Lastverteilung und Failover für Linux
-- es: Balanceo de carga y failover de Linux
-- it: Bilanciamento del carico e failover per Linux
-- nl: Linux: load balancing en failover
-- pt-br: Linux: balanceamento de carga e failover
-- pt-pt: Linux: balanceamento de carga e failover
-- ja: Linux の負荷分散とフェイルオーバー
-- ko: Linux 부하 분산 및 장애 조치
-- zh-hans: Linux 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ Linux
+- en: Built-in load balancing and failover for Linux
+- fr: Équilibrage de charge et basculement intégrés pour Linux
+- de: Linux: integrierte Lastverteilung und Failover
+- es: Balanceo de carga y failover integrados para Linux
+- it: Bilanciamento del carico e failover integrati per Linux
+- nl: Linux: ingebouwde load balancing en failover
+- pt-br: Linux: balanceamento de carga e failover integrados
+- pt-pt: Linux: balanceamento de carga e failover integrados
+- ja: Linux 向け組み込み型の負荷分散とフェイルオーバー
+- ko: Linux용 내장 부하 분산 및 장애 조치
+- zh-hans: 面向 Linux 的内置负载均衡与故障转移
+- ar: موازنة حمل وتجاوز فشل مدمجان لـ Linux
 
 ### solutions/mariadb-simplest-high-availability-cluster-synchronous-replication-failover-redundant-servers.md
 
-- en: MariaDB high availability and replication
-- fr: Haute disponibilité et réplication MariaDB
-- de: Hochverfügbarkeit und Replikation für MariaDB
-- es: Alta disponibilidad y replicación de MariaDB
-- it: Alta disponibilità e replica per MariaDB
-- nl: MariaDB: hoge beschikbaarheid en replicatie
-- pt-br: MariaDB: alta disponibilidade e replicação
-- pt-pt: MariaDB: alta disponibilidade e replicação
-- ja: MariaDB の高可用性とレプリケーション
-- ko: MariaDB 고가용성 및 복제
-- zh-hans: MariaDB 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ MariaDB
+- en: MariaDB high availability with zero data loss
+- fr: Haute disponibilité MariaDB sans perte de données
+- de: MariaDB: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de MariaDB sin pérdida de datos
+- it: Alta disponibilità per MariaDB senza perdita di dati
+- nl: MariaDB: hoge beschikbaarheid zonder dataverlies
+- pt-br: MariaDB: alta disponibilidade sem perda de dados
+- pt-pt: MariaDB: alta disponibilidade sem perda de dados
+- ja: MariaDB の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 MariaDB 고가용성
+- zh-hans: MariaDB 零数据丢失高可用
+- ar: التوافر العالي لـ MariaDB دون فقدان البيانات
 
 ### solutions/milestone-xprotect-corporate-high-availability-synchronous-replication-failover.md
 
-- en: Milestone XProtect high availability
-- fr: Haute disponibilité Milestone XProtect
-- de: Hochverfügbarkeit für Milestone XProtect
-- es: Alta disponibilidad de Milestone XProtect
-- it: Alta disponibilità per Milestone XProtect
-- nl: Milestone XProtect: hoge beschikbaarheid
-- pt-br: Milestone XProtect: alta disponibilidade
-- pt-pt: Milestone XProtect: alta disponibilidade
-- ja: Milestone XProtect の高可用性
-- ko: Milestone XProtect 고가용성
-- zh-hans: Milestone XProtect 高可用
-- ar: التوافر العالي لـ Milestone XProtect
+- en: Milestone XProtect redundancy with automatic failover
+- fr: Redondance Milestone XProtect avec basculement automatique
+- de: Milestone XProtect: Redundanz mit automatischem Failover
+- es: Redundancia de Milestone XProtect con failover automático
+- it: Ridondanza per Milestone XProtect con failover automatico
+- nl: Milestone XProtect: redundantie met automatische failover
+- pt-br: Milestone XProtect: redundância com failover automático
+- pt-pt: Milestone XProtect: redundância com failover automático
+- ja: Milestone XProtect の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Milestone XProtect 이중화
+- zh-hans: Milestone XProtect 冗余与自动故障转移
+- ar: التكرار لـ Milestone XProtect مع تجاوز الفشل التلقائي
 
 ### solutions/mysql-high-availability-synchronous-replication-failover.md
 
-- en: MySQL high availability and replication
-- fr: Haute disponibilité et réplication MySQL
-- de: Hochverfügbarkeit und Replikation für MySQL
-- es: Alta disponibilidad y replicación de MySQL
-- it: Alta disponibilità e replica per MySQL
-- nl: MySQL: hoge beschikbaarheid en replicatie
-- pt-br: MySQL: alta disponibilidade e replicação
-- pt-pt: MySQL: alta disponibilidade e replicação
-- ja: MySQL の高可用性とレプリケーション
-- ko: MySQL 고가용성 및 복제
-- zh-hans: MySQL 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ MySQL
+- en: MySQL high availability with zero data loss
+- fr: Haute disponibilité MySQL sans perte de données
+- de: MySQL: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de MySQL sin pérdida de datos
+- it: Alta disponibilità per MySQL senza perdita di dati
+- nl: MySQL: hoge beschikbaarheid zonder dataverlies
+- pt-br: MySQL: alta disponibilidade sem perda de dados
+- pt-pt: MySQL: alta disponibilidade sem perda de dados
+- ja: MySQL の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 MySQL 고가용성
+- zh-hans: MySQL 零数据丢失高可用
+- ar: التوافر العالي لـ MySQL دون فقدان البيانات
 
 ### solutions/nedap-high-availability-synchronous-replication-failover.md
 
-- en: Nedap AEOS high availability
-- fr: Haute disponibilité Nedap AEOS
-- de: Hochverfügbarkeit für Nedap AEOS
-- es: Alta disponibilidad de Nedap AEOS
-- it: Alta disponibilità per Nedap AEOS
-- nl: Nedap AEOS: hoge beschikbaarheid
-- pt-br: Nedap AEOS: alta disponibilidade
-- pt-pt: Nedap AEOS: alta disponibilidade
-- ja: Nedap AEOS の高可用性
-- ko: Nedap AEOS 고가용성
-- zh-hans: Nedap AEOS 高可用
-- ar: التوافر العالي لـ Nedap AEOS
+- en: Nedap AEOS redundancy with automatic failover
+- fr: Redondance Nedap AEOS avec basculement automatique
+- de: Nedap AEOS: Redundanz mit automatischem Failover
+- es: Redundancia de Nedap AEOS con failover automático
+- it: Ridondanza per Nedap AEOS con failover automatico
+- nl: Nedap AEOS: redundantie met automatische failover
+- pt-br: Nedap AEOS: redundância com failover automático
+- pt-pt: Nedap AEOS: redundância com failover automático
+- ja: Nedap AEOS の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Nedap AEOS 이중화
+- zh-hans: Nedap AEOS 冗余与自动故障转移
+- ar: التكرار لـ Nedap AEOS مع تجاوز الفشل التلقائي
 
 ### solutions/nginx-the-simplest-load-balancing-cluster-with-failover.md
 
-- en: NGINX load balancing and failover
-- fr: Équilibrage de charge et basculement NGINX
-- de: Lastverteilung und Failover für NGINX
-- es: Balanceo de carga y failover de NGINX
-- it: Bilanciamento del carico e failover per NGINX
-- nl: NGINX: load balancing en failover
-- pt-br: NGINX: balanceamento de carga e failover
-- pt-pt: NGINX: balanceamento de carga e failover
-- ja: NGINX の負荷分散とフェイルオーバー
-- ko: NGINX 부하 분산 및 장애 조치
-- zh-hans: NGINX 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ NGINX
+- en: Built-in load balancing and failover for NGINX
+- fr: Équilibrage de charge et basculement intégrés pour NGINX
+- de: NGINX: integrierte Lastverteilung und Failover
+- es: Balanceo de carga y failover integrados para NGINX
+- it: Bilanciamento del carico e failover integrati per NGINX
+- nl: NGINX: ingebouwde load balancing en failover
+- pt-br: NGINX: balanceamento de carga e failover integrados
+- pt-pt: NGINX: balanceamento de carga e failover integrados
+- ja: NGINX 向け組み込み型の負荷分散とフェイルオーバー
+- ko: NGINX용 내장 부하 분산 및 장애 조치
+- zh-hans: 面向 NGINX 的内置负载均衡与故障转移
+- ar: موازنة حمل وتجاوز فشل مدمجان لـ NGINX
 
 ### solutions/oracle-high-availability-synchronous-replication-failover.md
 
-- en: Oracle high availability and replication
-- fr: Haute disponibilité et réplication Oracle
-- de: Hochverfügbarkeit und Replikation für Oracle
-- es: Alta disponibilidad y replicación de Oracle
-- it: Alta disponibilità e replica per Oracle
-- nl: Oracle: hoge beschikbaarheid en replicatie
-- pt-br: Oracle: alta disponibilidade e replicação
-- pt-pt: Oracle: alta disponibilidade e replicação
-- ja: Oracle の高可用性とレプリケーション
-- ko: Oracle 고가용성 및 복제
-- zh-hans: Oracle 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Oracle
+- en: Oracle high availability with zero data loss
+- fr: Haute disponibilité Oracle sans perte de données
+- de: Oracle: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Oracle sin pérdida de datos
+- it: Alta disponibilità per Oracle senza perdita di dati
+- nl: Oracle: hoge beschikbaarheid zonder dataverlies
+- pt-br: Oracle: alta disponibilidade sem perda de dados
+- pt-pt: Oracle: alta disponibilidade sem perda de dados
+- ja: Oracle の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Oracle 고가용성
+- zh-hans: Oracle 零数据丢失高可用
+- ar: التوافر العالي لـ Oracle دون فقدان البيانات
 
 ### solutions/podman-the-simplest-high-availability-cluster-between-two-redundant-servers.md
 
-- en: Podman high availability and replication
-- fr: Haute disponibilité et réplication Podman
-- de: Hochverfügbarkeit und Replikation für Podman
-- es: Alta disponibilidad y replicación de Podman
-- it: Alta disponibilità e replica per Podman
-- nl: Podman: hoge beschikbaarheid en replicatie
-- pt-br: Podman: alta disponibilidade e replicação
-- pt-pt: Podman: alta disponibilidade e replicação
-- ja: Podman の高可用性とレプリケーション
-- ko: Podman 고가용성 및 복제
-- zh-hans: Podman 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Podman
+- en: Podman high availability with zero data loss
+- fr: Haute disponibilité Podman sans perte de données
+- de: Podman: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Podman sin pérdida de datos
+- it: Alta disponibilità per Podman senza perdita di dati
+- nl: Podman: hoge beschikbaarheid zonder dataverlies
+- pt-br: Podman: alta disponibilidade sem perda de dados
+- pt-pt: Podman: alta disponibilidade sem perda de dados
+- ja: Podman の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Podman 고가용성
+- zh-hans: Podman 零数据丢失高可用
+- ar: التوافر العالي لـ Podman دون فقدان البيانات
 
 ### solutions/postgresql-high-availability-synchronous-replication-failover.md
 
-- en: PostgreSQL high availability and replication
-- fr: Haute disponibilité et réplication PostgreSQL
-- de: Hochverfügbarkeit und Replikation für PostgreSQL
-- es: Alta disponibilidad y replicación de PostgreSQL
-- it: Alta disponibilità e replica per PostgreSQL
-- nl: PostgreSQL: hoge beschikbaarheid en replicatie
-- pt-br: PostgreSQL: alta disponibilidade e replicação
-- pt-pt: PostgreSQL: alta disponibilidade e replicação
-- ja: PostgreSQL の高可用性とレプリケーション
-- ko: PostgreSQL 고가용성 및 복제
-- zh-hans: PostgreSQL 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ PostgreSQL
+- en: PostgreSQL high availability with zero data loss
+- fr: Haute disponibilité PostgreSQL sans perte de données
+- de: PostgreSQL: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de PostgreSQL sin pérdida de datos
+- it: Alta disponibilità per PostgreSQL senza perdita di dati
+- nl: PostgreSQL: hoge beschikbaarheid zonder dataverlies
+- pt-br: PostgreSQL: alta disponibilidade sem perda de dados
+- pt-pt: PostgreSQL: alta disponibilidade sem perda de dados
+- ja: PostgreSQL の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 PostgreSQL 고가용성
+- zh-hans: PostgreSQL 零数据丢失高可用
+- ar: التوافر العالي لـ PostgreSQL دون فقدان البيانات
 
 ### solutions/siemens-desigo-cc-redundancy-high-availability-cluster-active-active.md
 
-- en: Siemens Desigo CC high availability without a SAN
-- fr: Haute disponibilité Siemens Desigo CC sans SAN
-- de: Hochverfügbarkeit für Siemens Desigo CC ohne SAN
-- es: Alta disponibilidad de Siemens Desigo CC sin SAN
-- it: Alta disponibilità per Siemens Desigo CC senza SAN
-- nl: Siemens Desigo CC: hoge beschikbaarheid zonder SAN
-- pt-br: Siemens Desigo CC: alta disponibilidade sem SAN
-- pt-pt: Siemens Desigo CC: alta disponibilidade sem SAN
-- ja: Siemens Desigo CC の高可用性（SAN 不要）
-- ko: SAN 없는 Siemens Desigo CC 고가용성
-- zh-hans: Siemens Desigo CC 无 SAN 高可用
-- ar: التوافر العالي لـ Siemens Desigo CC بدون SAN
+- en: Siemens Desigo CC redundancy with automatic failover
+- fr: Redondance Siemens Desigo CC avec basculement automatique
+- de: Siemens Desigo CC: Redundanz mit automatischem Failover
+- es: Redundancia de Siemens Desigo CC con failover automático
+- it: Ridondanza per Siemens Desigo CC con failover automatico
+- nl: Siemens Desigo CC: redundantie met automatische failover
+- pt-br: Siemens Desigo CC: redundância com failover automático
+- pt-pt: Siemens Desigo CC: redundância com failover automático
+- ja: Siemens Desigo CC の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Siemens Desigo CC 이중화
+- zh-hans: Siemens Desigo CC 冗余与自动故障转移
+- ar: التكرار لـ Siemens Desigo CC مع تجاوز الفشل التلقائي
 
 ### solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active.md
 
-- en: Siemens SIMATIC PCS 7 high availability
-- fr: Haute disponibilité Siemens SIMATIC PCS 7
-- de: Hochverfügbarkeit für Siemens SIMATIC PCS 7
-- es: Alta disponibilidad de Siemens SIMATIC PCS 7
-- it: Alta disponibilità per Siemens SIMATIC PCS 7
-- nl: Siemens SIMATIC PCS 7: hoge beschikbaarheid
-- pt-br: Siemens SIMATIC PCS 7: alta disponibilidade
-- pt-pt: Siemens SIMATIC PCS 7: alta disponibilidade
-- ja: Siemens SIMATIC PCS 7 の高可用性
-- ko: Siemens SIMATIC PCS 7 고가용성
-- zh-hans: Siemens SIMATIC PCS 7 高可用
-- ar: التوافر العالي لـ Siemens SIMATIC PCS 7
+- en: Siemens SIMATIC PCS 7 redundancy with automatic failover
+- fr: Redondance Siemens SIMATIC PCS 7 avec basculement automatique
+- de: Siemens SIMATIC PCS 7: Redundanz mit automatischem Failover
+- es: Redundancia de Siemens SIMATIC PCS 7 con failover automático
+- it: Ridondanza per Siemens SIMATIC PCS 7 con failover automatico
+- nl: Siemens SIMATIC PCS 7: redundantie met automatische failover
+- pt-br: Siemens SIMATIC PCS 7: redundância com failover automático
+- pt-pt: Siemens SIMATIC PCS 7: redundância com failover automático
+- ja: Siemens SIMATIC PCS 7 の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Siemens SIMATIC PCS 7 이중화
+- zh-hans: Siemens SIMATIC PCS 7 冗余与自动故障转移
+- ar: التكرار لـ Siemens SIMATIC PCS 7 مع تجاوز الفشل التلقائي
 
 ### solutions/siemens-simatic-wincc-redundancy-high-availability-cluster-active-active.md
 
-- en: Siemens SIMATIC WinCC high availability
-- fr: Haute disponibilité Siemens SIMATIC WinCC
-- de: Hochverfügbarkeit für Siemens SIMATIC WinCC
-- es: Alta disponibilidad de Siemens SIMATIC WinCC
-- it: Alta disponibilità per Siemens SIMATIC WinCC
-- nl: Siemens SIMATIC WinCC: hoge beschikbaarheid
-- pt-br: Siemens SIMATIC WinCC: alta disponibilidade
-- pt-pt: Siemens SIMATIC WinCC: alta disponibilidade
-- ja: Siemens SIMATIC WinCC の高可用性
-- ko: Siemens SIMATIC WinCC 고가용성
-- zh-hans: Siemens SIMATIC WinCC 高可用
-- ar: التوافر العالي لـ Siemens SIMATIC WinCC
+- en: Siemens SIMATIC WinCC redundancy with automatic failover
+- fr: Redondance Siemens SIMATIC WinCC avec basculement automatique
+- de: Siemens SIMATIC WinCC: Redundanz mit automatischem Failover
+- es: Redundancia de Siemens SIMATIC WinCC con failover automático
+- it: Ridondanza per Siemens SIMATIC WinCC con failover automatico
+- nl: Siemens SIMATIC WinCC: redundantie met automatische failover
+- pt-br: Siemens SIMATIC WinCC: redundância com failover automático
+- pt-pt: Siemens SIMATIC WinCC: redundância com failover automático
+- ja: Siemens SIMATIC WinCC の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Siemens SIMATIC WinCC 이중화
+- zh-hans: Siemens SIMATIC WinCC 冗余与自动故障转移
+- ar: التكرار لـ Siemens SIMATIC WinCC مع تجاوز الفشل التلقائي
 
 ### solutions/siemens-sipass-redundancy-high-availability-cluster-active-active.md
 
-- en: Siemens SiPass high availability
-- fr: Haute disponibilité Siemens SiPass
-- de: Hochverfügbarkeit für Siemens SiPass
-- es: Alta disponibilidad de Siemens SiPass
-- it: Alta disponibilità per Siemens SiPass
-- nl: Siemens SiPass: hoge beschikbaarheid
-- pt-br: Siemens SiPass: alta disponibilidade
-- pt-pt: Siemens SiPass: alta disponibilidade
-- ja: Siemens SiPass の高可用性
-- ko: Siemens SiPass 고가용성
-- zh-hans: Siemens SiPass 高可用
-- ar: التوافر العالي لـ Siemens SiPass
+- en: Siemens SiPass redundancy with automatic failover
+- fr: Redondance Siemens SiPass avec basculement automatique
+- de: Siemens SiPass: Redundanz mit automatischem Failover
+- es: Redundancia de Siemens SiPass con failover automático
+- it: Ridondanza per Siemens SiPass con failover automatico
+- nl: Siemens SiPass: redundantie met automatische failover
+- pt-br: Siemens SiPass: redundância com failover automático
+- pt-pt: Siemens SiPass: redundância com failover automático
+- ja: Siemens SiPass の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Siemens SiPass 이중화
+- zh-hans: Siemens SiPass 冗余与自动故障转移
+- ar: التكرار لـ Siemens SiPass مع تجاوز الفشل التلقائي
 
 ### solutions/siemens-siport-redundancy-high-availability-cluster-active-active.md
 
-- en: Siemens SIPORT high availability
-- fr: Haute disponibilité Siemens SIPORT
-- de: Hochverfügbarkeit für Siemens SIPORT
-- es: Alta disponibilidad de Siemens SIPORT
-- it: Alta disponibilità per Siemens SIPORT
-- nl: Siemens SIPORT: hoge beschikbaarheid
-- pt-br: Siemens SIPORT: alta disponibilidade
-- pt-pt: Siemens SIPORT: alta disponibilidade
-- ja: Siemens SIPORT の高可用性
-- ko: Siemens SIPORT 고가용성
-- zh-hans: Siemens SIPORT 高可用
-- ar: التوافر العالي لـ Siemens SIPORT
+- en: Siemens SIPORT redundancy with automatic failover
+- fr: Redondance Siemens SIPORT avec basculement automatique
+- de: Siemens SIPORT: Redundanz mit automatischem Failover
+- es: Redundancia de Siemens SIPORT con failover automático
+- it: Ridondanza per Siemens SIPORT con failover automatico
+- nl: Siemens SIPORT: redundantie met automatische failover
+- pt-br: Siemens SIPORT: redundância com failover automático
+- pt-pt: Siemens SIPORT: redundância com failover automático
+- ja: Siemens SIPORT の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Siemens SIPORT 이중화
+- zh-hans: Siemens SIPORT 冗余与自动故障转移
+- ar: التكرار لـ Siemens SIPORT مع تجاوز الفشل التلقائي
 
 ### solutions/siemens-siveillance-redundancy-high-availability-cluster-active-active.md
 
-- en: Siemens Siveillance Suite high availability
-- fr: Haute disponibilité Siemens Siveillance Suite
-- de: Hochverfügbarkeit für Siemens Siveillance Suite
-- es: Alta disponibilidad de Siemens Siveillance Suite
-- it: Alta disponibilità per Siemens Siveillance Suite
-- nl: Siemens Siveillance Suite: hoge beschikbaarheid
-- pt-br: Siemens Siveillance Suite: alta disponibilidade
-- pt-pt: Siemens Siveillance Suite: alta disponibilidade
-- ja: Siemens Siveillance Suite の高可用性
-- ko: Siemens Siveillance Suite 고가용성
-- zh-hans: Siemens Siveillance Suite 高可用
-- ar: التوافر العالي لـ Siemens Siveillance Suite
+- en: Siemens Siveillance Suite redundancy with automatic failover
+- fr: Redondance Siemens Siveillance Suite avec basculement automatique
+- de: Siemens Siveillance Suite: Redundanz mit automatischem Failover
+- es: Redundancia de Siemens Siveillance Suite con failover automático
+- it: Ridondanza per Siemens Siveillance Suite con failover automatico
+- nl: Siemens Siveillance Suite: redundantie met automatische failover
+- pt-br: Siemens Siveillance Suite: redundância com failover automático
+- pt-pt: Siemens Siveillance Suite: redundância com failover automático
+- ja: Siemens Siveillance Suite の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Siemens Siveillance Suite 이중화
+- zh-hans: Siemens Siveillance Suite 冗余与自动故障转移
+- ar: التكرار لـ Siemens Siveillance Suite مع تجاوز الفشل التلقائي
 
 ### solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers.md
 
-- en: Siemens Siveillance VMS high availability
-- fr: Haute disponibilité Siemens Siveillance VMS
-- de: Hochverfügbarkeit für Siemens Siveillance VMS
-- es: Alta disponibilidad de Siemens Siveillance VMS
-- it: Alta disponibilità per Siemens Siveillance VMS
-- nl: Siemens Siveillance VMS: hoge beschikbaarheid
-- pt-br: Siemens Siveillance VMS: alta disponibilidade
-- pt-pt: Siemens Siveillance VMS: alta disponibilidade
-- ja: Siemens Siveillance VMS の高可用性
-- ko: Siemens Siveillance VMS 고가용성
-- zh-hans: Siemens Siveillance VMS 高可用
-- ar: التوافر العالي لـ Siemens Siveillance VMS
+- en: Siemens Siveillance VMS redundancy with automatic failover
+- fr: Redondance Siemens Siveillance VMS avec basculement automatique
+- de: Siemens Siveillance VMS: Redundanz mit automatischem Failover
+- es: Redundancia de Siemens Siveillance VMS con failover automático
+- it: Ridondanza per Siemens Siveillance VMS con failover automatico
+- nl: Siemens Siveillance VMS: redundantie met automatische failover
+- pt-br: Siemens Siveillance VMS: redundância com failover automático
+- pt-pt: Siemens Siveillance VMS: redundância com failover automático
+- ja: Siemens Siveillance VMS の冗長化（自動フェイルオーバー）
+- ko: 자동 장애 조치를 지원하는 Siemens Siveillance VMS 이중화
+- zh-hans: Siemens Siveillance VMS 冗余与自动故障转移
+- ar: التكرار لـ Siemens Siveillance VMS مع تجاوز الفشل التلقائي
 
 ### solutions/sql-server-high-availability-synchronous-replication-failover.md
 
-- en: SQL Server high availability and replication
-- fr: Haute disponibilité et réplication SQL Server
-- de: Hochverfügbarkeit und Replikation für SQL Server
-- es: Alta disponibilidad y replicación de SQL Server
-- it: Alta disponibilità e replica per SQL Server
-- nl: SQL Server: hoge beschikbaarheid en replicatie
-- pt-br: SQL Server: alta disponibilidade e replicação
-- pt-pt: SQL Server: alta disponibilidade e replicação
-- ja: SQL Server の高可用性とレプリケーション
-- ko: SQL Server 고가용성 및 복제
-- zh-hans: SQL Server 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ SQL Server
+- en: SQL Server high availability with zero data loss
+- fr: Haute disponibilité SQL Server sans perte de données
+- de: SQL Server: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de SQL Server sin pérdida de datos
+- it: Alta disponibilità per SQL Server senza perdita di dati
+- nl: SQL Server: hoge beschikbaarheid zonder dataverlies
+- pt-br: SQL Server: alta disponibilidade sem perda de dados
+- pt-pt: SQL Server: alta disponibilidade sem perda de dados
+- ja: SQL Server の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 SQL Server 고가용성
+- zh-hans: SQL Server 零数据丢失高可用
+- ar: التوافر العالي لـ SQL Server دون فقدان البيانات
 
 ### solutions/windows-high-availability-software-synchronous-replication-failover.md
 
-- en: Windows high availability and replication
-- fr: Haute disponibilité et réplication Windows
-- de: Hochverfügbarkeit und Replikation für Windows
-- es: Alta disponibilidad y replicación de Windows
-- it: Alta disponibilità e replica per Windows
-- nl: Windows: hoge beschikbaarheid en replicatie
-- pt-br: Windows: alta disponibilidade e replicação
-- pt-pt: Windows: alta disponibilidade e replicação
-- ja: Windows の高可用性とレプリケーション
-- ko: Windows 고가용성 및 복제
-- zh-hans: Windows 高可用与复制
-- ar: التوافر العالي والنسخ المتماثل لـ Windows
+- en: Windows high availability with zero data loss
+- fr: Haute disponibilité Windows sans perte de données
+- de: Windows: Hochverfügbarkeit ohne Datenverlust
+- es: Alta disponibilidad de Windows sin pérdida de datos
+- it: Alta disponibilità per Windows senza perdita di dati
+- nl: Windows: hoge beschikbaarheid zonder dataverlies
+- pt-br: Windows: alta disponibilidade sem perda de dados
+- pt-pt: Windows: alta disponibilidade sem perda de dados
+- ja: Windows の高可用性（データ損失ゼロ）
+- ko: 데이터 손실 없는 Windows 고가용성
+- zh-hans: Windows 零数据丢失高可用
+- ar: التوافر العالي لـ Windows دون فقدان البيانات
 
 ### solutions/windows-load-balancing-failover.md
 
-- en: Windows load balancing and failover
-- fr: Équilibrage de charge et basculement Windows
-- de: Lastverteilung und Failover für Windows
-- es: Balanceo de carga y failover de Windows
-- it: Bilanciamento del carico e failover per Windows
-- nl: Windows: load balancing en failover
-- pt-br: Windows: balanceamento de carga e failover
-- pt-pt: Windows: balanceamento de carga e failover
-- ja: Windows の負荷分散とフェイルオーバー
-- ko: Windows 부하 분산 및 장애 조치
-- zh-hans: Windows 负载均衡与故障转移
-- ar: موازنة الحمل وتجاوز الفشل لـ Windows
+- en: Built-in load balancing and failover for Windows
+- fr: Équilibrage de charge et basculement intégrés pour Windows
+- de: Windows: integrierte Lastverteilung und Failover
+- es: Balanceo de carga y failover integrados para Windows
+- it: Bilanciamento del carico e failover integrati per Windows
+- nl: Windows: ingebouwde load balancing en failover
+- pt-br: Windows: balanceamento de carga e failover integrados
+- pt-pt: Windows: balanceamento de carga e failover integrados
+- ja: Windows 向け組み込み型の負荷分散とフェイルオーバー
+- ko: Windows용 내장 부하 분산 및 장애 조치
+- zh-hans: 面向 Windows 的内置负载均衡与故障转移
+- ar: موازنة حمل وتجاوز فشل مدمجان لـ Windows
 
 ### use-cases/_index.md
 
@@ -1710,420 +1710,420 @@ if __name__ == "__main__":
 
 ### quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for Linux load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge Linux
-- de: SafeKit installieren: Lastverteilung für Linux
-- es: Instalar SafeKit: balanceo de carga de Linux
-- it: Installa SafeKit per il bilanciamento del carico di Linux
-- nl: Linux: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de Linux
-- pt-pt: Instalar SafeKit: balanceamento de carga de Linux
-- ja: SafeKit のインストール：Linux の負荷分散
-- ko: SafeKit 설치: Linux 부하 분산
-- zh-hans: 安装 SafeKit：Linux 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ Linux
+- en: Install SafeKit for Linux load balancing (farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge Linux (farm.safe)
+- de: SafeKit installieren: Lastverteilung für Linux (farm.safe)
+- es: Instalar SafeKit: balanceo de carga de Linux (farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di Linux (farm.safe)
+- nl: Linux: SafeKit installeren voor load balancing (farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de Linux (farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de Linux (farm.safe)
+- ja: SafeKit のインストール：Linux の負荷分散（farm.safe）
+- ko: SafeKit 설치: Linux 부하 분산 (farm.safe)
+- zh-hans: 安装 SafeKit：Linux 负载均衡（farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ Linux (farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover.md
 
-- en: Install SafeKit for Linux high availability
-- fr: Installer SafeKit pour la haute disponibilité Linux
-- de: SafeKit installieren: Hochverfügbarkeit für Linux
-- es: Instalar SafeKit: alta disponibilidad de Linux
-- it: Installa SafeKit per l’alta disponibilità di Linux
-- nl: Linux: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Linux
-- pt-pt: Instalar SafeKit: alta disponibilidade de Linux
-- ja: SafeKit のインストール：Linux の高可用性
-- ko: SafeKit 설치: Linux 고가용성
-- zh-hans: 安装 SafeKit：Linux 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Linux
+- en: Install SafeKit for Linux high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité Linux (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Linux (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad de Linux (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità di Linux (mirror.safe)
+- nl: Linux: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Linux (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Linux (mirror.safe)
+- ja: SafeKit のインストール：Linux の高可用性（mirror.safe）
+- ko: SafeKit 설치: Linux 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：Linux 高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Linux (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for Windows load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge Windows
-- de: SafeKit installieren: Lastverteilung für Windows
-- es: Instalar SafeKit: balanceo de carga de Windows
-- it: Installa SafeKit per il bilanciamento del carico di Windows
-- nl: Windows: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de Windows
-- pt-pt: Instalar SafeKit: balanceamento de carga de Windows
-- ja: SafeKit のインストール：Windows の負荷分散
-- ko: SafeKit 설치: Windows 부하 분산
-- zh-hans: 安装 SafeKit：Windows 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ Windows
+- en: Install SafeKit for Windows load balancing (farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge Windows (farm.safe)
+- de: SafeKit installieren: Lastverteilung für Windows (farm.safe)
+- es: Instalar SafeKit: balanceo de carga de Windows (farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di Windows (farm.safe)
+- nl: Windows: SafeKit installeren voor load balancing (farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de Windows (farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de Windows (farm.safe)
+- ja: SafeKit のインストール：Windows の負荷分散（farm.safe）
+- ko: SafeKit 설치: Windows 부하 분산 (farm.safe)
+- zh-hans: 安装 SafeKit：Windows 负载均衡（farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ Windows (farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover.md
 
-- en: Install SafeKit for Windows high availability
-- fr: Installer SafeKit pour la haute disponibilité Windows
-- de: SafeKit installieren: Hochverfügbarkeit für Windows
-- es: Instalar SafeKit: alta disponibilidad de Windows
-- it: Installa SafeKit per l’alta disponibilità di Windows
-- nl: Windows: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Windows
-- pt-pt: Instalar SafeKit: alta disponibilidade de Windows
-- ja: SafeKit のインストール：Windows の高可用性
-- ko: SafeKit 설치: Windows 고가용성
-- zh-hans: 安装 SafeKit：Windows 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Windows
+- en: Install SafeKit for Windows high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité Windows (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Windows (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad de Windows (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità di Windows (mirror.safe)
+- nl: Windows: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Windows (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Windows (mirror.safe)
+- ja: SafeKit のインストール：Windows の高可用性（mirror.safe）
+- ko: SafeKit 설치: Windows 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：Windows 高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Windows (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover.md
 
-- en: Install SafeKit for AWS high availability
-- fr: Installer SafeKit pour la haute disponibilité AWS
-- de: SafeKit installieren: Hochverfügbarkeit für AWS
-- es: Instalar SafeKit: alta disponibilidad de AWS
-- it: Installa SafeKit per l’alta disponibilità di AWS
-- nl: AWS: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de AWS
-- pt-pt: Instalar SafeKit: alta disponibilidade de AWS
-- ja: SafeKit のインストール：AWS の高可用性
-- ko: SafeKit 설치: AWS 고가용성
-- zh-hans: 安装 SafeKit：AWS 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ AWS
+- en: Install SafeKit for AWS high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité AWS (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für AWS (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad de AWS (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità di AWS (mirror.safe)
+- nl: AWS: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de AWS (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de AWS (mirror.safe)
+- ja: SafeKit のインストール：AWS の高可用性（mirror.safe）
+- ko: SafeKit 설치: AWS 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：AWS 高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ AWS (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for AWS load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge AWS
-- de: SafeKit installieren: Lastverteilung für AWS
-- es: Instalar SafeKit: balanceo de carga de AWS
-- it: Installa SafeKit per il bilanciamento del carico di AWS
-- nl: AWS: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de AWS
-- pt-pt: Instalar SafeKit: balanceamento de carga de AWS
-- ja: SafeKit のインストール：AWS の負荷分散
-- ko: SafeKit 설치: AWS 부하 분산
-- zh-hans: 安装 SafeKit：AWS 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ AWS
+- en: Install SafeKit for AWS load balancing (farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge AWS (farm.safe)
+- de: SafeKit installieren: Lastverteilung für AWS (farm.safe)
+- es: Instalar SafeKit: balanceo de carga de AWS (farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di AWS (farm.safe)
+- nl: AWS: SafeKit installeren voor load balancing (farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de AWS (farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de AWS (farm.safe)
+- ja: SafeKit のインストール：AWS の負荷分散（farm.safe）
+- ko: SafeKit 설치: AWS 부하 분산 (farm.safe)
+- zh-hans: 安装 SafeKit：AWS 负载均衡（farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ AWS (farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-azure-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for Azure load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge Azure
-- de: SafeKit installieren: Lastverteilung für Azure
-- es: Instalar SafeKit: balanceo de carga de Azure
-- it: Installa SafeKit per il bilanciamento del carico di Azure
-- nl: Azure: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de Azure
-- pt-pt: Instalar SafeKit: balanceamento de carga de Azure
-- ja: SafeKit のインストール：Azure の負荷分散
-- ko: SafeKit 설치: Azure 부하 분산
-- zh-hans: 安装 SafeKit：Azure 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ Azure
+- en: Install SafeKit for Azure load balancing (farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge Azure (farm.safe)
+- de: SafeKit installieren: Lastverteilung für Azure (farm.safe)
+- es: Instalar SafeKit: balanceo de carga de Azure (farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di Azure (farm.safe)
+- nl: Azure: SafeKit installeren voor load balancing (farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de Azure (farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de Azure (farm.safe)
+- ja: SafeKit のインストール：Azure の負荷分散（farm.safe）
+- ko: SafeKit 설치: Azure 부하 분산 (farm.safe)
+- zh-hans: 安装 SafeKit：Azure 负载均衡（farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ Azure (farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover.md
 
-- en: Install SafeKit for Azure high availability
-- fr: Installer SafeKit pour la haute disponibilité Azure
-- de: SafeKit installieren: Hochverfügbarkeit für Azure
-- es: Instalar SafeKit: alta disponibilidad de Azure
-- it: Installa SafeKit per l’alta disponibilità di Azure
-- nl: Azure: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Azure
-- pt-pt: Instalar SafeKit: alta disponibilidade de Azure
-- ja: SafeKit のインストール：Azure の高可用性
-- ko: SafeKit 설치: Azure 고가용성
-- zh-hans: 安装 SafeKit：Azure 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Azure
+- en: Install SafeKit for Azure high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité Azure (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Azure (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad de Azure (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità di Azure (mirror.safe)
+- nl: Azure: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Azure (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Azure (mirror.safe)
+- ja: SafeKit のインストール：Azure の高可用性（mirror.safe）
+- ko: SafeKit 설치: Azure 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：Azure 高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Azure (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for cloud load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge dans le cloud
-- de: SafeKit installieren: Lastverteilung in der Cloud
-- es: Instalar SafeKit: balanceo de carga en la nube
-- it: Installa SafeKit per il bilanciamento del carico nel cloud
-- nl: Cloud: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga na nuvem
-- pt-pt: Instalar SafeKit: balanceamento de carga na cloud
-- ja: SafeKit のインストール：クラウドの負荷分散
-- ko: SafeKit 설치: 클라우드 부하 분산
-- zh-hans: 安装 SafeKit：云负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل في السحابة
+- en: Install SafeKit for cloud load balancing (farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge dans le cloud (farm.safe)
+- de: SafeKit installieren: Lastverteilung in der Cloud (farm.safe)
+- es: Instalar SafeKit: balanceo de carga en la nube (farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico nel cloud (farm.safe)
+- nl: Cloud: SafeKit installeren voor load balancing (farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga na nuvem (farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga na cloud (farm.safe)
+- ja: SafeKit のインストール：クラウドの負荷分散（farm.safe）
+- ko: SafeKit 설치: 클라우드 부하 분산 (farm.safe)
+- zh-hans: 安装 SafeKit：云负载均衡（farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل في السحابة (farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover.md
 
-- en: Install SafeKit for cloud high availability
-- fr: Installer SafeKit pour la haute disponibilité dans le cloud
-- de: SafeKit installieren: Hochverfügbarkeit in der Cloud
-- es: Instalar SafeKit: alta disponibilidad en la nube
-- it: Installa SafeKit per l’alta disponibilità nel cloud
-- nl: Cloud: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade na nuvem
-- pt-pt: Instalar SafeKit: alta disponibilidade na cloud
-- ja: SafeKit のインストール：クラウドの高可用性
-- ko: SafeKit 설치: 클라우드 고가용성
-- zh-hans: 安装 SafeKit：云高可用
-- ar: تثبيت SafeKit للتوافر العالي في السحابة
+- en: Install SafeKit for cloud high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité dans le cloud (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit in der Cloud (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad en la nube (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità nel cloud (mirror.safe)
+- nl: Cloud: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade na nuvem (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade na cloud (mirror.safe)
+- ja: SafeKit のインストール：クラウドの高可用性（mirror.safe）
+- ko: SafeKit 설치: 클라우드 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：云高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي في السحابة (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for Google Cloud load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge Google Cloud
-- de: SafeKit installieren: Lastverteilung für Google Cloud
-- es: Instalar SafeKit: balanceo de carga de Google Cloud
-- it: Installa SafeKit per il bilanciamento del carico di Google Cloud
-- nl: Google Cloud: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de Google Cloud
-- pt-pt: Instalar SafeKit: balanceamento de carga de Google Cloud
-- ja: SafeKit のインストール：Google Cloud の負荷分散
-- ko: SafeKit 설치: Google Cloud 부하 분산
-- zh-hans: 安装 SafeKit：Google Cloud 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ Google Cloud
+- en: Install SafeKit for Google Cloud load balancing (farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge Google Cloud (farm.safe)
+- de: SafeKit installieren: Lastverteilung für Google Cloud (farm.safe)
+- es: Instalar SafeKit: balanceo de carga de Google Cloud (farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di Google Cloud (farm.safe)
+- nl: Google Cloud: SafeKit installeren voor load balancing (farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de Google Cloud (farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de Google Cloud (farm.safe)
+- ja: SafeKit のインストール：Google Cloud の負荷分散（farm.safe）
+- ko: SafeKit 설치: Google Cloud 부하 분산 (farm.safe)
+- zh-hans: 安装 SafeKit：Google Cloud 负载均衡（farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ Google Cloud (farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover.md
 
-- en: Install SafeKit for Google Cloud high availability
-- fr: Installer SafeKit pour la haute disponibilité Google Cloud
-- de: SafeKit installieren: Hochverfügbarkeit für Google Cloud
-- es: Instalar SafeKit: alta disponibilidad de Google Cloud
-- it: Installa SafeKit per l’alta disponibilità di Google Cloud
-- nl: Google Cloud: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Google Cloud
-- pt-pt: Instalar SafeKit: alta disponibilidade de Google Cloud
-- ja: SafeKit のインストール：Google Cloud の高可用性
-- ko: SafeKit 설치: Google Cloud 고가용성
-- zh-hans: 安装 SafeKit：Google Cloud 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Google Cloud
+- en: Install SafeKit for Google Cloud high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité Google Cloud (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Google Cloud (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad de Google Cloud (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità di Google Cloud (mirror.safe)
+- nl: Google Cloud: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Google Cloud (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Google Cloud (mirror.safe)
+- ja: SafeKit のインストール：Google Cloud の高可用性（mirror.safe）
+- ko: SafeKit 설치: Google Cloud 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：Google Cloud 高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Google Cloud (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-docker.md
 
-- en: Install SafeKit for Docker high availability
-- fr: Installer SafeKit pour la haute disponibilité Docker
-- de: SafeKit installieren: Hochverfügbarkeit für Docker
-- es: Instalar SafeKit: alta disponibilidad de Docker
-- it: Installa SafeKit per l’alta disponibilità di Docker
-- nl: Docker: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Docker
-- pt-pt: Instalar SafeKit: alta disponibilidade de Docker
-- ja: SafeKit のインストール：Docker の高可用性
-- ko: SafeKit 설치: Docker 고가용성
-- zh-hans: 安装 SafeKit：Docker 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Docker
+- en: Install SafeKit for Docker high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité Docker (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Docker (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad de Docker (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità di Docker (mirror.safe)
+- nl: Docker: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Docker (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Docker (mirror.safe)
+- ja: SafeKit のインストール：Docker の高可用性（mirror.safe）
+- ko: SafeKit 설치: Docker 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：Docker 高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Docker (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-firebird.md
 
-- en: Install SafeKit for Firebird high availability
-- fr: Installer SafeKit pour la haute disponibilité Firebird
-- de: SafeKit installieren: Hochverfügbarkeit für Firebird
-- es: Instalar SafeKit: alta disponibilidad de Firebird
-- it: Installa SafeKit per l’alta disponibilità di Firebird
-- nl: Firebird: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Firebird
-- pt-pt: Instalar SafeKit: alta disponibilidade de Firebird
-- ja: SafeKit のインストール：Firebird の高可用性
-- ko: SafeKit 설치: Firebird 고가용성
-- zh-hans: 安装 SafeKit：Firebird 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Firebird
+- en: Install SafeKit for Firebird high availability (firebird.safe)
+- fr: Installer SafeKit pour la haute disponibilité Firebird (firebird.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Firebird (firebird.safe)
+- es: Instalar SafeKit: alta disponibilidad de Firebird (firebird.safe)
+- it: Installa SafeKit per l’alta disponibilità di Firebird (firebird.safe)
+- nl: Firebird: SafeKit installeren voor hoge beschikbaarheid (firebird.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Firebird (firebird.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Firebird (firebird.safe)
+- ja: SafeKit のインストール：Firebird の高可用性（firebird.safe）
+- ko: SafeKit 설치: Firebird 고가용성 (firebird.safe)
+- zh-hans: 安装 SafeKit：Firebird 高可用（firebird.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Firebird (firebird.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-hyper-v.md
 
-- en: Install SafeKit for Hyper-V high availability
-- fr: Installer SafeKit pour la haute disponibilité Hyper-V
-- de: SafeKit installieren: Hochverfügbarkeit für Hyper-V
-- es: Instalar SafeKit: alta disponibilidad de Hyper-V
-- it: Installa SafeKit per l’alta disponibilità di Hyper-V
-- nl: Hyper-V: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Hyper-V
-- pt-pt: Instalar SafeKit: alta disponibilidade de Hyper-V
-- ja: SafeKit のインストール：Hyper-V の高可用性
-- ko: SafeKit 설치: Hyper-V 고가용성
-- zh-hans: 安装 SafeKit：Hyper-V 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Hyper-V
+- en: Install SafeKit for Hyper-V high availability (hyperv.safe)
+- fr: Installer SafeKit pour la haute disponibilité Hyper-V (hyperv.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Hyper-V (hyperv.safe)
+- es: Instalar SafeKit: alta disponibilidad de Hyper-V (hyperv.safe)
+- it: Installa SafeKit per l’alta disponibilità di Hyper-V (hyperv.safe)
+- nl: Hyper-V: SafeKit installeren voor hoge beschikbaarheid (hyperv.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Hyper-V (hyperv.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Hyper-V (hyperv.safe)
+- ja: SafeKit のインストール：Hyper-V の高可用性（hyperv.safe）
+- ko: SafeKit 설치: Hyper-V 고가용성 (hyperv.safe)
+- zh-hans: 安装 SafeKit：Hyper-V 高可用（hyperv.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Hyper-V (hyperv.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-iis-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for IIS load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge IIS
-- de: SafeKit installieren: Lastverteilung für IIS
-- es: Instalar SafeKit: balanceo de carga de IIS
-- it: Installa SafeKit per il bilanciamento del carico di IIS
-- nl: IIS: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de IIS
-- pt-pt: Instalar SafeKit: balanceamento de carga de IIS
-- ja: SafeKit のインストール：IIS の負荷分散
-- ko: SafeKit 설치: IIS 부하 분산
-- zh-hans: 安装 SafeKit：IIS 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ IIS
+- en: Install SafeKit for IIS load balancing (iis_farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge IIS (iis_farm.safe)
+- de: SafeKit installieren: Lastverteilung für IIS (iis_farm.safe)
+- es: Instalar SafeKit: balanceo de carga de IIS (iis_farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di IIS (iis_farm.safe)
+- nl: IIS: SafeKit installeren voor load balancing (iis_farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de IIS (iis_farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de IIS (iis_farm.safe)
+- ja: SafeKit のインストール：IIS の負荷分散（iis_farm.safe）
+- ko: SafeKit 설치: IIS 부하 분산 (iis_farm.safe)
+- zh-hans: 安装 SafeKit：IIS 负载均衡（iis_farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ IIS (iis_farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-kubernetes.md
 
-- en: Install SafeKit for Kubernetes K3s high availability
-- fr: Installer SafeKit pour la haute disponibilité Kubernetes K3s
-- de: SafeKit installieren: Hochverfügbarkeit für Kubernetes K3s
-- es: Instalar SafeKit: alta disponibilidad de Kubernetes K3s
-- it: Installa SafeKit per l’alta disponibilità di Kubernetes K3s
-- nl: Kubernetes K3s: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Kubernetes K3s
-- pt-pt: Instalar SafeKit: alta disponibilidade de Kubernetes K3s
-- ja: SafeKit のインストール：Kubernetes K3s の高可用性
-- ko: SafeKit 설치: Kubernetes K3s 고가용성
-- zh-hans: 安装 SafeKit：Kubernetes K3s 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Kubernetes K3s
+- en: Install SafeKit for Kubernetes K3s high availability (k3s.safe)
+- fr: Installer SafeKit pour la haute disponibilité Kubernetes K3s (k3s.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Kubernetes K3s (k3s.safe)
+- es: Instalar SafeKit: alta disponibilidad de Kubernetes K3s (k3s.safe)
+- it: Installa SafeKit per l’alta disponibilità di Kubernetes K3s (k3s.safe)
+- nl: Kubernetes K3s: SafeKit installeren voor hoge beschikbaarheid (k3s.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Kubernetes K3s (k3s.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Kubernetes K3s (k3s.safe)
+- ja: SafeKit のインストール：Kubernetes K3s の高可用性（k3s.safe）
+- ko: SafeKit 설치: Kubernetes K3s 고가용성 (k3s.safe)
+- zh-hans: 安装 SafeKit：Kubernetes K3s 高可用（k3s.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Kubernetes K3s (k3s.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-kvm.md
 
-- en: Install SafeKit for KVM high availability
-- fr: Installer SafeKit pour la haute disponibilité KVM
-- de: SafeKit installieren: Hochverfügbarkeit für KVM
-- es: Instalar SafeKit: alta disponibilidad de KVM
-- it: Installa SafeKit per l’alta disponibilità di KVM
-- nl: KVM: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de KVM
-- pt-pt: Instalar SafeKit: alta disponibilidade de KVM
-- ja: SafeKit のインストール：KVM の高可用性
-- ko: SafeKit 설치: KVM 고가용성
-- zh-hans: 安装 SafeKit：KVM 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ KVM
+- en: Install SafeKit for KVM high availability (kvm.safe)
+- fr: Installer SafeKit pour la haute disponibilité KVM (kvm.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für KVM (kvm.safe)
+- es: Instalar SafeKit: alta disponibilidad de KVM (kvm.safe)
+- it: Installa SafeKit per l’alta disponibilità di KVM (kvm.safe)
+- nl: KVM: SafeKit installeren voor hoge beschikbaarheid (kvm.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de KVM (kvm.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de KVM (kvm.safe)
+- ja: SafeKit のインストール：KVM の高可用性（kvm.safe）
+- ko: SafeKit 설치: KVM 고가용성 (kvm.safe)
+- zh-hans: 安装 SafeKit：KVM 高可用（kvm.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ KVM (kvm.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-mariadb.md
 
-- en: Install SafeKit for MariaDB high availability
-- fr: Installer SafeKit pour la haute disponibilité MariaDB
-- de: SafeKit installieren: Hochverfügbarkeit für MariaDB
-- es: Instalar SafeKit: alta disponibilidad de MariaDB
-- it: Installa SafeKit per l’alta disponibilità di MariaDB
-- nl: MariaDB: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de MariaDB
-- pt-pt: Instalar SafeKit: alta disponibilidade de MariaDB
-- ja: SafeKit のインストール：MariaDB の高可用性
-- ko: SafeKit 설치: MariaDB 고가용성
-- zh-hans: 安装 SafeKit：MariaDB 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ MariaDB
+- en: Install SafeKit for MariaDB high availability (mysql.safe)
+- fr: Installer SafeKit pour la haute disponibilité MariaDB (mysql.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für MariaDB (mysql.safe)
+- es: Instalar SafeKit: alta disponibilidad de MariaDB (mysql.safe)
+- it: Installa SafeKit per l’alta disponibilità di MariaDB (mysql.safe)
+- nl: MariaDB: SafeKit installeren voor hoge beschikbaarheid (mysql.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de MariaDB (mysql.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de MariaDB (mysql.safe)
+- ja: SafeKit のインストール：MariaDB の高可用性（mysql.safe）
+- ko: SafeKit 설치: MariaDB 고가용성 (mysql.safe)
+- zh-hans: 安装 SafeKit：MariaDB 高可用（mysql.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ MariaDB (mysql.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-microsoft-sql-server.md
 
-- en: Install SafeKit for SQL Server high availability
-- fr: Installer SafeKit pour la haute disponibilité SQL Server
-- de: SafeKit installieren: Hochverfügbarkeit für SQL Server
-- es: Instalar SafeKit: alta disponibilidad de SQL Server
-- it: Installa SafeKit per l’alta disponibilità di SQL Server
-- nl: SQL Server: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de SQL Server
-- pt-pt: Instalar SafeKit: alta disponibilidade de SQL Server
-- ja: SafeKit のインストール：SQL Server の高可用性
-- ko: SafeKit 설치: SQL Server 고가용성
-- zh-hans: 安装 SafeKit：SQL Server 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ SQL Server
+- en: Install SafeKit for SQL Server high availability (sqlserver.safe)
+- fr: Installer SafeKit pour la haute disponibilité SQL Server (sqlserver.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für SQL Server (sqlserver.safe)
+- es: Instalar SafeKit: alta disponibilidad de SQL Server (sqlserver.safe)
+- it: Installa SafeKit per l’alta disponibilità di SQL Server (sqlserver.safe)
+- nl: SQL Server: SafeKit installeren voor hoge beschikbaarheid (sqlserver.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de SQL Server (sqlserver.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de SQL Server (sqlserver.safe)
+- ja: SafeKit のインストール：SQL Server の高可用性（sqlserver.safe）
+- ko: SafeKit 설치: SQL Server 고가용성 (sqlserver.safe)
+- zh-hans: 安装 SafeKit：SQL Server 高可用（sqlserver.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ SQL Server (sqlserver.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server.md
 
-- en: Install SafeKit for Milestone XProtect high availability
-- fr: Installer SafeKit pour la haute disponibilité Milestone XProtect
-- de: SafeKit installieren: Hochverfügbarkeit für Milestone XProtect
-- es: Instalar SafeKit: alta disponibilidad de Milestone XProtect
-- it: Installa SafeKit per l’alta disponibilità di Milestone XProtect
-- nl: Milestone XProtect: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Milestone XProtect
-- pt-pt: Instalar SafeKit: alta disponibilidade de Milestone XProtect
-- ja: SafeKit のインストール：Milestone XProtect の高可用性
-- ko: SafeKit 설치: Milestone XProtect 고가용성
-- zh-hans: 安装 SafeKit：Milestone XProtect 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Milestone XProtect
+- en: Install SafeKit for Milestone XProtect HA (milestone.safe)
+- fr: Installer SafeKit : HA pour Milestone XProtect (milestone.safe)
+- de: SafeKit installieren: HA für Milestone XProtect (milestone.safe)
+- es: Instalar SafeKit: HA de Milestone XProtect (milestone.safe)
+- it: Installa SafeKit per l’HA di Milestone XProtect (milestone.safe)
+- nl: Milestone XProtect: SafeKit installeren voor HA (milestone.safe)
+- pt-br: Instalar SafeKit para HA de Milestone XProtect (milestone.safe)
+- pt-pt: Instalar SafeKit: HA de Milestone XProtect (milestone.safe)
+- ja: SafeKit のインストール：Milestone XProtect の高可用性（milestone.safe）
+- ko: SafeKit 설치: Milestone XProtect 고가용성 (milestone.safe)
+- zh-hans: 安装 SafeKit：Milestone XProtect 高可用（milestone.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Milestone XProtect (milestone.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-mysql.md
 
-- en: Install SafeKit for MySQL high availability
-- fr: Installer SafeKit pour la haute disponibilité MySQL
-- de: SafeKit installieren: Hochverfügbarkeit für MySQL
-- es: Instalar SafeKit: alta disponibilidad de MySQL
-- it: Installa SafeKit per l’alta disponibilità di MySQL
-- nl: MySQL: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de MySQL
-- pt-pt: Instalar SafeKit: alta disponibilidade de MySQL
-- ja: SafeKit のインストール：MySQL の高可用性
-- ko: SafeKit 설치: MySQL 고가용성
-- zh-hans: 安装 SafeKit：MySQL 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ MySQL
+- en: Install SafeKit for MySQL high availability (mysql.safe)
+- fr: Installer SafeKit pour la haute disponibilité MySQL (mysql.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für MySQL (mysql.safe)
+- es: Instalar SafeKit: alta disponibilidad de MySQL (mysql.safe)
+- it: Installa SafeKit per l’alta disponibilità di MySQL (mysql.safe)
+- nl: MySQL: SafeKit installeren voor hoge beschikbaarheid (mysql.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de MySQL (mysql.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de MySQL (mysql.safe)
+- ja: SafeKit のインストール：MySQL の高可用性（mysql.safe）
+- ko: SafeKit 설치: MySQL 고가용성 (mysql.safe)
+- zh-hans: 安装 SafeKit：MySQL 高可用（mysql.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ MySQL (mysql.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-nedap.md
 
-- en: Install SafeKit for Nedap AEOS high availability
-- fr: Installer SafeKit pour la haute disponibilité Nedap AEOS
-- de: SafeKit installieren: Hochverfügbarkeit für Nedap AEOS
-- es: Instalar SafeKit: alta disponibilidad de Nedap AEOS
-- it: Installa SafeKit per l’alta disponibilità di Nedap AEOS
-- nl: Nedap AEOS: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Nedap AEOS
-- pt-pt: Instalar SafeKit: alta disponibilidade de Nedap AEOS
-- ja: SafeKit のインストール：Nedap AEOS の高可用性
-- ko: SafeKit 설치: Nedap AEOS 고가용성
-- zh-hans: 安装 SafeKit：Nedap AEOS 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Nedap AEOS
+- en: Install SafeKit for Nedap AEOS high availability (nedap.safe)
+- fr: Installer SafeKit pour la haute disponibilité Nedap AEOS (nedap.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Nedap AEOS (nedap.safe)
+- es: Instalar SafeKit: alta disponibilidad de Nedap AEOS (nedap.safe)
+- it: Installa SafeKit per l’alta disponibilità di Nedap AEOS (nedap.safe)
+- nl: Nedap AEOS: SafeKit installeren voor hoge beschikbaarheid (nedap.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Nedap AEOS (nedap.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Nedap AEOS (nedap.safe)
+- ja: SafeKit のインストール：Nedap AEOS の高可用性（nedap.safe）
+- ko: SafeKit 설치: Nedap AEOS 고가용성 (nedap.safe)
+- zh-hans: 安装 SafeKit：Nedap AEOS 高可用（nedap.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Nedap AEOS (nedap.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for Apache load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge Apache
-- de: SafeKit installieren: Lastverteilung für Apache
-- es: Instalar SafeKit: balanceo de carga de Apache
-- it: Installa SafeKit per il bilanciamento del carico di Apache
-- nl: Apache: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de Apache
-- pt-pt: Instalar SafeKit: balanceamento de carga de Apache
-- ja: SafeKit のインストール：Apache の負荷分散
-- ko: SafeKit 설치: Apache 부하 분산
-- zh-hans: 安装 SafeKit：Apache 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ Apache
+- en: Install SafeKit for Apache load balancing (apache_farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge Apache (apache_farm.safe)
+- de: SafeKit installieren: Lastverteilung für Apache (apache_farm.safe)
+- es: Instalar SafeKit: balanceo de carga de Apache (apache_farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di Apache (apache_farm.safe)
+- nl: Apache: SafeKit installeren voor load balancing (apache_farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de Apache (apache_farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de Apache (apache_farm.safe)
+- ja: SafeKit のインストール：Apache の負荷分散（apache_farm.safe）
+- ko: SafeKit 설치: Apache 부하 분산 (apache_farm.safe)
+- zh-hans: 安装 SafeKit：Apache 负载均衡（apache_farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ Apache (apache_farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-nginx-with-network-load-balancing-and-failover.md
 
-- en: Install SafeKit for NGINX load balancing
-- fr: Installer SafeKit pour l’équilibrage de charge NGINX
-- de: SafeKit installieren: Lastverteilung für NGINX
-- es: Instalar SafeKit: balanceo de carga de NGINX
-- it: Installa SafeKit per il bilanciamento del carico di NGINX
-- nl: NGINX: SafeKit installeren voor load balancing
-- pt-br: Instalar SafeKit para balanceamento de carga de NGINX
-- pt-pt: Instalar SafeKit: balanceamento de carga de NGINX
-- ja: SafeKit のインストール：NGINX の負荷分散
-- ko: SafeKit 설치: NGINX 부하 분산
-- zh-hans: 安装 SafeKit：NGINX 负载均衡
-- ar: تثبيت SafeKit لموازنة الحمل لـ NGINX
+- en: Install SafeKit for NGINX load balancing (farm.safe)
+- fr: Installer SafeKit pour l’équilibrage de charge NGINX (farm.safe)
+- de: SafeKit installieren: Lastverteilung für NGINX (farm.safe)
+- es: Instalar SafeKit: balanceo de carga de NGINX (farm.safe)
+- it: Installa SafeKit per il bilanciamento del carico di NGINX (farm.safe)
+- nl: NGINX: SafeKit installeren voor load balancing (farm.safe)
+- pt-br: Instalar SafeKit para balanceamento de carga de NGINX (farm.safe)
+- pt-pt: Instalar SafeKit: balanceamento de carga de NGINX (farm.safe)
+- ja: SafeKit のインストール：NGINX の負荷分散（farm.safe）
+- ko: SafeKit 설치: NGINX 부하 분산 (farm.safe)
+- zh-hans: 安装 SafeKit：NGINX 负载均衡（farm.safe）
+- ar: تثبيت SafeKit لموازنة الحمل لـ NGINX (farm.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-oracle.md
 
-- en: Install SafeKit for Oracle high availability
-- fr: Installer SafeKit pour la haute disponibilité Oracle
-- de: SafeKit installieren: Hochverfügbarkeit für Oracle
-- es: Instalar SafeKit: alta disponibilidad de Oracle
-- it: Installa SafeKit per l’alta disponibilità di Oracle
-- nl: Oracle: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Oracle
-- pt-pt: Instalar SafeKit: alta disponibilidade de Oracle
-- ja: SafeKit のインストール：Oracle の高可用性
-- ko: SafeKit 설치: Oracle 고가용성
-- zh-hans: 安装 SafeKit：Oracle 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Oracle
+- en: Install SafeKit for Oracle high availability (oracle.safe)
+- fr: Installer SafeKit pour la haute disponibilité Oracle (oracle.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Oracle (oracle.safe)
+- es: Instalar SafeKit: alta disponibilidad de Oracle (oracle.safe)
+- it: Installa SafeKit per l’alta disponibilità di Oracle (oracle.safe)
+- nl: Oracle: SafeKit installeren voor hoge beschikbaarheid (oracle.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Oracle (oracle.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Oracle (oracle.safe)
+- ja: SafeKit のインストール：Oracle の高可用性（oracle.safe）
+- ko: SafeKit 설치: Oracle 고가용성 (oracle.safe)
+- zh-hans: 安装 SafeKit：Oracle 高可用（oracle.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Oracle (oracle.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-podman.md
 
-- en: Install SafeKit for Podman high availability
-- fr: Installer SafeKit pour la haute disponibilité Podman
-- de: SafeKit installieren: Hochverfügbarkeit für Podman
-- es: Instalar SafeKit: alta disponibilidad de Podman
-- it: Installa SafeKit per l’alta disponibilità di Podman
-- nl: Podman: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de Podman
-- pt-pt: Instalar SafeKit: alta disponibilidade de Podman
-- ja: SafeKit のインストール：Podman の高可用性
-- ko: SafeKit 설치: Podman 고가용성
-- zh-hans: 安装 SafeKit：Podman 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ Podman
+- en: Install SafeKit for Podman high availability (mirror.safe)
+- fr: Installer SafeKit pour la haute disponibilité Podman (mirror.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für Podman (mirror.safe)
+- es: Instalar SafeKit: alta disponibilidad de Podman (mirror.safe)
+- it: Installa SafeKit per l’alta disponibilità di Podman (mirror.safe)
+- nl: Podman: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de Podman (mirror.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de Podman (mirror.safe)
+- ja: SafeKit のインストール：Podman の高可用性（mirror.safe）
+- ko: SafeKit 설치: Podman 고가용성 (mirror.safe)
+- zh-hans: 安装 SafeKit：Podman 高可用（mirror.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ Podman (mirror.safe)
 
 ### quick-install/safekit-quick-installation-guide-with-postgresql.md
 
-- en: Install SafeKit for PostgreSQL high availability
-- fr: Installer SafeKit pour la haute disponibilité PostgreSQL
-- de: SafeKit installieren: Hochverfügbarkeit für PostgreSQL
-- es: Instalar SafeKit: alta disponibilidad de PostgreSQL
-- it: Installa SafeKit per l’alta disponibilità di PostgreSQL
-- nl: PostgreSQL: SafeKit installeren voor hoge beschikbaarheid
-- pt-br: Instalar SafeKit para alta disponibilidade de PostgreSQL
-- pt-pt: Instalar SafeKit: alta disponibilidade de PostgreSQL
-- ja: SafeKit のインストール：PostgreSQL の高可用性
-- ko: SafeKit 설치: PostgreSQL 고가용성
-- zh-hans: 安装 SafeKit：PostgreSQL 高可用
-- ar: تثبيت SafeKit للتوافر العالي لـ PostgreSQL
+- en: Install SafeKit for PostgreSQL high availability (postgresql.safe)
+- fr: Installer SafeKit pour la haute disponibilité PostgreSQL (postgresql.safe)
+- de: SafeKit installieren: Hochverfügbarkeit für PostgreSQL (postgresql.safe)
+- es: Instalar SafeKit: alta disponibilidad de PostgreSQL (postgresql.safe)
+- it: Installa SafeKit per l’alta disponibilità di PostgreSQL (postgresql.safe)
+- nl: PostgreSQL: SafeKit installeren voor hoge beschikbaarheid (postgresql.safe)
+- pt-br: Instalar SafeKit para alta disponibilidade de PostgreSQL (postgresql.safe)
+- pt-pt: Instalar SafeKit: alta disponibilidade de PostgreSQL (postgresql.safe)
+- ja: SafeKit のインストール：PostgreSQL の高可用性（postgresql.safe）
+- ko: SafeKit 설치: PostgreSQL 고가용성 (postgresql.safe)
+- zh-hans: 安装 SafeKit：PostgreSQL 高可用（postgresql.safe）
+- ar: تثبيت SafeKit للتوافر العالي لـ PostgreSQL (postgresql.safe)

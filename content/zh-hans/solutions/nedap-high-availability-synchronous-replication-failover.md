@@ -1,5 +1,5 @@
 ---
-title: "Nedap AEOS 高可用"
+title: "Nedap AEOS 冗余与自动故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/nedap-high-availability-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 Nedap AEOS 高可用性：双节点集群，门禁系统的同步复制和自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Nedap"]
 ---
 
-# Nedap AEOS 高可用 {#nedap-aeos-high-availability}
+# Nedap AEOS 冗余与自动故障转移 {#nedap-aeos-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Nedap" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-nedap/" img="/wp-content/uploads/2026/02/safekit-nedap-1024.jpg"  %}}

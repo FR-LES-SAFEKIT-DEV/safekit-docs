@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Nedap AEOS の高可用性"
+title: "SafeKit のインストール：Nedap AEOS の高可用性（nedap.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-nedap/"
 description: "手順ガイド：SafeKit の nedap.safe モジュールを導入し、Windows 上の Nedap AEOS 入退室管理のリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Nedap AEOS の高可用性 {#install-safekit-for-nedap-aeos-high-availability}
+# SafeKit のインストール：Nedap AEOS の高可用性（nedap.safe） {#install-safekit-for-nedap-aeos-high-availability-nedapsafe}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Nedap" mod="nedap"  %}}

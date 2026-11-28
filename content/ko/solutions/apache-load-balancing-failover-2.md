@@ -1,5 +1,5 @@
 ---
-title: "Apache 부하 분산 및 장애 조치"
+title: "Apache용 내장 부하 분산 및 장애 조치"
 canonical: "https://safekit.eviden.com/ko/solutions/apache-load-balancing-failover-2/"
 description: "SafeKit으로 구현하는 Apache 부하 분산 및 고가용성: 가상 IP, 애플리케이션 모니터링, 자동 장애 조치를 NLB 하드웨어 없이 표준 서버에서 제공합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# Apache 부하 분산 및 장애 조치 {#apache-load-balancing-and-failover}
+# Apache용 내장 부하 분산 및 장애 조치 {#built-in-load-balancing-and-failover-for-apache}
 
 
 {{%  insert-safekit-solution-farm-2-ko app="Apache" guide="/ko/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

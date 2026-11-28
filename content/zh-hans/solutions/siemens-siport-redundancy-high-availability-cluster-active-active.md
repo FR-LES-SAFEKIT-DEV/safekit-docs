@@ -1,5 +1,5 @@
 ---
-title: "Siemens SIPORT 高可用"
+title: "Siemens SIPORT 冗余与自动故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/siemens-siport-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SIPORT 门禁系统高可用性：SafeKit 在两台服务器间复制其 Hyper-V 虚拟机并自动故障转移，无需 SAN。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIPORT"]
 ---
 
-# Siemens SIPORT 高可用 {#siemens-siport-high-availability}
+# Siemens SIPORT 冗余与自动故障转移 {#siemens-siport-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-zh-hans app="Siemens SIPORT"  %}}

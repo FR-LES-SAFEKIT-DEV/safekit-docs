@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Google Cloud の負荷分散"
+title: "SafeKit のインストール：Google Cloud の負荷分散（farm.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-in-gcp-with-network-load-balancing-and-failover/"
 description: "手順ガイド：GCP に SafeKit の farm.safe モジュールを導入。GCP ロードバランサー向けにアプリケーションの状態を確認し、フェイルオーバーを処理。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Google Cloud の負荷分散 {#install-safekit-for-google-cloud-load-balancing}
+# SafeKit のインストール：Google Cloud の負荷分散（farm.safe） {#install-safekit-for-google-cloud-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ja app="GCP" mod="farm"  %}}

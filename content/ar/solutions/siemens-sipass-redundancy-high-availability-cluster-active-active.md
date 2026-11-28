@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لـ Siemens SiPass"
+title: "التكرار لـ Siemens SiPass مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لنظام التحكم في الوصول Siemens SiPass: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# التوافر العالي لـ Siemens SiPass {#siemens-sipass-high-availability}
+# التكرار لـ Siemens SiPass مع تجاوز الفشل التلقائي {#siemens-sipass-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SiPass"  %}}

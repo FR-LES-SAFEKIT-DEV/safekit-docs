@@ -1,5 +1,5 @@
 ---
-title: "Hochverfügbarkeit und Replikation für Docker"
+title: "Docker: Hochverfügbarkeit ohne Datenverlust"
 canonical: "https://safekit.eviden.com/de/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "Hochverfügbarkeit für Docker mit SafeKit: synchrone Replikation der Containerdaten und automatisches Failover zwischen zwei Linux-Servern, ohne SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Docker"]
 ---
 
-# Hochverfügbarkeit und Replikation für Docker {#docker-high-availability-and-replication}
+# Docker: Hochverfügbarkeit ohne Datenverlust {#docker-high-availability-with-zero-data-loss}
 
 ## So funktioniert der SANless SafeKit-Mirror-Cluster mit Docker {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 

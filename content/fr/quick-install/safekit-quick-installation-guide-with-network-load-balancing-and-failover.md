@@ -1,5 +1,5 @@
 ---
-title: "Installer SafeKit pour l’équilibrage de charge Apache"
+title: "Installer SafeKit pour l’équilibrage de charge Apache (apache_farm.safe)"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "Guide pas à pas : installez le module SafeKit apache_farm.safe sous Windows ou Linux pour l’équilibrage de charge réseau et le basculement des serveurs web Apache."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Installer SafeKit pour l’équilibrage de charge Apache {#install-safekit-for-apache-load-balancing}
+# Installer SafeKit pour l’équilibrage de charge Apache (apache_farm.safe) {#install-safekit-for-apache-load-balancing-apache_farmsafe}
 
 
 {{%  insert-safekit-farm-guide-fr app="Apache" mod="apache_farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Hyper-V の高可用性（共有ストレージ不要）"
+title: "共有ストレージ不要の Hyper-V フェイルオーバークラスター"
 canonical: "https://safekit.eviden.com/ja/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "SAN 不要の Hyper-V 高可用性：SafeKit が 2 台のサーバー間で仮想マシンをリアルタイムにレプリケートし、障害時に自動で再起動します。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hyper-V"]
 ---
 
-# Hyper-V の高可用性（共有ストレージ不要） {#hyper-v-high-availability-without-shared-storage}
+# 共有ストレージ不要の Hyper-V フェイルオーバークラスター {#hyper-v-failover-cluster-without-shared-storage}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Hyper-V"  %}}

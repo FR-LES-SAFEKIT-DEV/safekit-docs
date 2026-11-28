@@ -1,5 +1,5 @@
 ---
-title: "Siemens Siveillance VMS の高可用性"
+title: "Siemens Siveillance VMS の冗長化（自動フェイルオーバー）"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-siveillance-vms-the-simplest-high-availability-cluster-between-two-redundant-servers/"
 description: "Siemens Siveillance VMS の高可用性：SafeKit の SiveillanceVMS.safe モジュールで 2 台間のリアルタイムレプリケーションとフェイルオーバー。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens Siveillance VMS"]
 ---
 
-# Siemens Siveillance VMS の高可用性 {#siemens-siveillance-vms-high-availability}
+# Siemens Siveillance VMS の冗長化（自動フェイルオーバー） {#siemens-siveillance-vms-redundancy-with-automatic-failover}
 
 ## SafeKit Siemens Siveillance VMS および SQL（SiveillanceVMS.safe mirror モジュール）クイックインストールガイド {#safekit-quick-installation-guide-with-siemens-siveillance-vms-and-sql-siveillancevmssafe-mirror-module}
 

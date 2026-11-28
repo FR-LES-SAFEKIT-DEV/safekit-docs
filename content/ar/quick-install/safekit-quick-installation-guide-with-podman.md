@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit للتوافر العالي لـ Podman"
+title: "تثبيت SafeKit للتوافر العالي لـ Podman (mirror.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-podman/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit mirror.safe لـ Podman على Linux، مع النسخ في الوقت الفعلي لبيانات الحاويات وتجاوز الفشل التلقائي."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit للتوافر العالي لـ Podman {#install-safekit-for-podman-high-availability}
+# تثبيت SafeKit للتوافر العالي لـ Podman (mirror.safe) {#install-safekit-for-podman-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Podman" mod="mirror"  %}}

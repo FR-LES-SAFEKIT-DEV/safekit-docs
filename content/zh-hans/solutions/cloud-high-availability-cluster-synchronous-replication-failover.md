@@ -1,5 +1,5 @@
 ---
-title: "云高可用与复制"
+title: "云端零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/cloud-high-availability-cluster-synchronous-replication-failover/"
 description: "使用 SafeKit 在任意云中实现高可用性：在两台 Windows 或 Linux VM 间同步复制并自动故障转移，无需云共享磁盘。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# 云高可用与复制 {#cloud-high-availability-and-replication}
+# 云端零数据丢失高可用 {#cloud-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-zh-hans app="Cloud" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-cloud-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-cloud-app-1024.jpg"  %}}

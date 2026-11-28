@@ -1,5 +1,5 @@
 ---
-title: "Installa SafeKit per il bilanciamento del carico nel cloud"
+title: "Installa SafeKit per il bilanciamento del carico nel cloud (farm.safe)"
 canonical: "https://safekit.eviden.com/it/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
 description: "Guida passo passo: installa il modulo SafeKit farm.safe in qualsiasi cloud, dove verifica lo stato dell’applicazione per il bilanciatore cloud e gestisce il failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Installa SafeKit per il bilanciamento del carico nel cloud {#install-safekit-for-cloud-load-balancing}
+# Installa SafeKit per il bilanciamento del carico nel cloud (farm.safe) {#install-safekit-for-cloud-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-it app="Cloud" mod="farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilità per Bosch BIS senza SAN"
+title: "Ridondanza per Bosch BIS con failover automatico"
 canonical: "https://safekit.eviden.com/it/solutions/bosch-bis-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Alta disponibilità per Bosch BIS: SafeKit replica la sua macchina virtuale Hyper-V in tempo reale tra due server con failover automatico, senza SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Bosch BIS"]
 ---
 
-# Alta disponibilità per Bosch BIS senza SAN {#bosch-bis-high-availability-without-a-san}
+# Ridondanza per Bosch BIS con failover automatico {#bosch-bis-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-it app="Bosch BIS"  %}}

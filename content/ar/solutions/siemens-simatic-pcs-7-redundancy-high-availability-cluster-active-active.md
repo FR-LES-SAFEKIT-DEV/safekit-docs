@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لـ Siemens SIMATIC PCS 7"
+title: "التكرار لـ Siemens SIMATIC PCS 7 مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/siemens-simatic-pcs-7-redundancy-high-availability-cluster-active-active/"
 description: "التوفر العالي لـ Siemens SIMATIC PCS 7: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي ودون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SIMATIC PCS7"]
 ---
 
-# التوافر العالي لـ Siemens SIMATIC PCS 7 {#siemens-simatic-pcs-7-high-availability}
+# التكرار لـ Siemens SIMATIC PCS 7 مع تجاوز الفشل التلقائي {#siemens-simatic-pcs-7-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Siemens SIMATIC PCS7"  %}}

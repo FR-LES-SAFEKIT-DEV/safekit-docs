@@ -1,5 +1,5 @@
 ---
-title: "Haute disponibilité et réplication Google Cloud"
+title: "Haute disponibilité Google Cloud sans perte de données"
 canonical: "https://safekit.eviden.com/fr/solutions/gcp-high-availability-cluster-synchronous-replication-failover/"
 description: "Haute disponibilité dans Google Cloud avec SafeKit : réplication synchrone et basculement automatique entre deux VM Windows ou Linux, sans disque partagé."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Haute disponibilité et réplication Google Cloud {#google-cloud-high-availability-and-replication}
+# Haute disponibilité Google Cloud sans perte de données {#google-cloud-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-fr app="GCP" guide="/fr/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-gcp-app-1024.jpg"  %}}

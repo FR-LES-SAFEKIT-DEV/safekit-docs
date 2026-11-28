@@ -1,5 +1,5 @@
 ---
-title: "SQL Server high availability and replication"
+title: "SQL Server high availability with zero data loss"
 canonical: "https://safekit.eviden.com/solutions/sql-server-high-availability-synchronous-replication-failover/"
 description: "SQL Server high availability with SafeKit: two-node cluster with synchronous replication and automatic failover, for all editions, with no SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Microsoft SQL Server"]
 ---
 
-# SQL Server high availability and replication {#sql-server-high-availability-and-replication}
+# SQL Server high availability with zero data loss {#sql-server-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-en app="Microsoft SQL Server" guide="/quick-install/safekit-quick-installation-guide-with-microsoft-sql-server/" img="/wp-content/uploads/2026/02/safekit-sql-server-6-1024.jpg"  %}}

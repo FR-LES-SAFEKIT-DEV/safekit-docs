@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Apache の負荷分散"
+title: "SafeKit のインストール：Apache の負荷分散（apache_farm.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "手順ガイド：Windows または Linux に SafeKit の apache_farm.safe モジュールを導入し、Apache サーバーの負荷分散とフェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Apache の負荷分散 {#install-safekit-for-apache-load-balancing}
+# SafeKit のインストール：Apache の負荷分散（apache_farm.safe） {#install-safekit-for-apache-load-balancing-apache_farmsafe}
 
 
 {{%  insert-safekit-farm-guide-ja app="Apache" mod="apache_farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Google Cloud: SafeKit installeren voor hoge beschikbaarheid"
+title: "Google Cloud: SafeKit installeren voor hoge beschikbaarheid (mirror.safe)"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-in-gcp-with-real-time-replication-and-failover/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module mirror.safe in Google Cloud voor realtime replicatie en failover tussen twee Windows- of Linux-VM's."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Google Cloud: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-google-cloud-high-availability}
+# Google Cloud: SafeKit installeren voor hoge beschikbaarheid (mirror.safe) {#install-safekit-for-google-cloud-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-nl app="GCP" mod="mirror"  %}}

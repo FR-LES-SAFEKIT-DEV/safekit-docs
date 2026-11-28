@@ -1,5 +1,5 @@
 ---
-title: "MariaDB: SafeKit installeren voor hoge beschikbaarheid"
+title: "MariaDB: SafeKit installeren voor hoge beschikbaarheid (mysql.safe)"
 canonical: "https://safekit.eviden.com/nl/quick-install/safekit-quick-installation-guide-with-mariadb/"
 description: "Stapsgewijze handleiding: installeer de SafeKit-module mysql.safe voor realtime replicatie en automatische failover van MariaDB op Windows of Linux."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# MariaDB: SafeKit installeren voor hoge beschikbaarheid {#install-safekit-for-mariadb-high-availability}
+# MariaDB: SafeKit installeren voor hoge beschikbaarheid (mysql.safe) {#install-safekit-for-mariadb-high-availability-mysqlsafe}
 
 
 {{%  insert-safekit-mirror-guide-nl app="MariaDB" mod="mysql"  %}}

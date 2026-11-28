@@ -1,5 +1,5 @@
 ---
-title: "Docker の高可用性とレプリケーション"
+title: "Docker の高可用性（データ損失ゼロ）"
 canonical: "https://safekit.eviden.com/ja/solutions/docker-container-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit による Docker の高可用性：Linux サーバー 2 台間でコンテナデータの同期レプリケーションと自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Docker"]
 ---
 
-# Docker の高可用性とレプリケーション {#docker-high-availability-and-replication}
+# Docker の高可用性（データ損失ゼロ） {#docker-high-availability-with-zero-data-loss}
 
 ## SANless SafeKit mirror クラスターと Docker の連携方法 {#how-the-sanless-safekit-mirror-cluster-works-with-docker}
 

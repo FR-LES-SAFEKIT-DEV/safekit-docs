@@ -1,5 +1,5 @@
 ---
-title: "التوافر العالي لـ Hanwha Wisenet WAVE"
+title: "التكرار لـ Hanwha Wisenet WAVE مع تجاوز الفشل التلقائي"
 canonical: "https://safekit.eviden.com/ar/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "التوفر العالي لـ Hanwha Wisenet WAVE: ينسخ SafeKit جهازه الافتراضي Hyper-V بين خادمين مع تجاوز فشل تلقائي، دون SAN."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hanwha Wisenet"]
 ---
 
-# التوافر العالي لـ Hanwha Wisenet WAVE {#hanwha-wisenet-wave-high-availability}
+# التكرار لـ Hanwha Wisenet WAVE مع تجاوز الفشل التلقائي {#hanwha-wisenet-wave-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ar app="Hanwha Wisenet"  %}}

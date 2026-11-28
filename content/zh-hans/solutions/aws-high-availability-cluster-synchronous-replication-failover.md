@@ -1,5 +1,5 @@
 ---
-title: "AWS 高可用与复制"
+title: "AWS 零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
 description: "使用 SafeKit 在 AWS 中实现高可用性：在两台 Windows 或 Linux 实例间同步复制并自动故障转移，无需云共享磁盘。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# AWS 高可用与复制 {#aws-high-availability-and-replication}
+# AWS 零数据丢失高可用 {#aws-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-zh-hans app="AWS" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Apache 负载均衡与故障转移"
+title: "面向 Apache 的内置负载均衡与故障转移"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/apache-load-balancing-failover-2/"
 description: "使用 SafeKit 实现 Apache 负载均衡与高可用性：虚拟 IP、应用监控和自动故障转移，基于标准服务器，无需 NLB 硬件。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Apache"]
 ---
 
-# Apache 负载均衡与故障转移 {#apache-load-balancing-and-failover}
+# 面向 Apache 的内置负载均衡与故障转移 {#built-in-load-balancing-and-failover-for-apache}
 
 
 {{%  insert-safekit-solution-farm-2-zh-hans app="Apache" guide="/zh-hans/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-apache-1024.jpg"  %}}

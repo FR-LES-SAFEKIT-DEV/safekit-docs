@@ -1,5 +1,5 @@
 ---
-title: "Lastverteilung und Failover für AWS"
+title: "AWS: Lastverteilung mit automatischem Failover"
 canonical: "https://safekit.eviden.com/de/solutions/aws-load-balancing-cluster-failover/"
 description: "SafeKit-Farm-Cluster in AWS: Zustandsprüfungen der Anwendung für den Load Balancer von AWS, automatischer Neustart und Failover Ihrer Anwendung unter Windows oder Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Lastverteilung und Failover für AWS {#aws-load-balancing-and-failover}
+# AWS: Lastverteilung mit automatischem Failover {#aws-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-de app="AWS" guide="/de/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Équilibrage de charge et basculement AWS"
+title: "Équilibrage de charge AWS avec basculement automatique"
 canonical: "https://safekit.eviden.com/fr/solutions/aws-load-balancing-cluster-failover/"
 description: "Clusters farm SafeKit dans AWS : contrôle de santé applicatif pour l’équilibreur de charge AWS, redémarrage et basculement automatiques sous Windows ou Linux."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Équilibrage de charge et basculement AWS {#aws-load-balancing-and-failover}
+# Équilibrage de charge AWS avec basculement automatique {#aws-load-balancing-with-automatic-failover}
 
 
 {{%  insert-safekit-solution-farm-cloud-fr app="AWS" guide="/fr/quick-install/safekit-quick-installation-guide-in-aws-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-aws-app-1024.jpg"  %}}

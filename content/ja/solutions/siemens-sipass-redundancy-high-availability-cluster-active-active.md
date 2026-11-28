@@ -1,5 +1,5 @@
 ---
-title: "Siemens SiPass の高可用性"
+title: "Siemens SiPass の冗長化（自動フェイルオーバー）"
 canonical: "https://safekit.eviden.com/ja/solutions/siemens-sipass-redundancy-high-availability-cluster-active-active/"
 description: "Siemens SiPass 入退室管理の高可用性：SafeKit が Hyper-V 仮想マシンを 2 台のサーバー間でレプリケートし、自動フェイルオーバー。SAN 不要。"
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Siemens SiPass"]
 ---
 
-# Siemens SiPass の高可用性 {#siemens-sipass-high-availability}
+# Siemens SiPass の冗長化（自動フェイルオーバー） {#siemens-sipass-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ja app="Siemens SiPass"  %}}

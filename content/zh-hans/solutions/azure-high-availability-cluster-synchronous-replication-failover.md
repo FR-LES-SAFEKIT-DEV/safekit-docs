@@ -1,5 +1,5 @@
 ---
-title: "Azure 高可用与复制"
+title: "Azure 零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/azure-high-availability-cluster-synchronous-replication-failover/"
 description: "使用 SafeKit 在 Microsoft Azure 中实现高可用性：在两台 Windows 或 Linux VM 间同步复制并自动故障转移，无需共享磁盘。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Azure 高可用与复制 {#azure-high-availability-and-replication}
+# Azure 零数据丢失高可用 {#azure-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-zh-hans app="Azure" guide="/zh-hans/quick-install/safekit-quick-installation-guide-in-azure-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-azure-app-1024.jpg"  %}}

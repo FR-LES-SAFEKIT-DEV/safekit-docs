@@ -1,5 +1,5 @@
 ---
-title: "SafeKit installieren: Lastverteilung in der Cloud"
+title: "SafeKit installieren: Lastverteilung in der Cloud (farm.safe)"
 canonical: "https://safekit.eviden.com/de/quick-install/safekit-quick-installation-guide-in-cloud-with-network-load-balancing-and-failover/"
 description: "Schritt für Schritt: Installieren Sie das SafeKit-Modul farm.safe in jeder Cloud: Es prüft den Anwendungszustand für den Load Balancer der Cloud und steuert das Failover."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit installieren: Lastverteilung in der Cloud {#install-safekit-for-cloud-load-balancing}
+# SafeKit installieren: Lastverteilung in der Cloud (farm.safe) {#install-safekit-for-cloud-load-balancing-farmsafe}
 
 
 {{%  insert-safekit-farm-guide-de app="Cloud" mod="farm"  %}}

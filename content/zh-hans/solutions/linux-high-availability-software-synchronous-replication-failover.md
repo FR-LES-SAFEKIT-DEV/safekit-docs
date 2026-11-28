@@ -1,5 +1,5 @@
 ---
-title: "Linux 高可用与复制"
+title: "Linux 零数据丢失高可用"
 canonical: "https://safekit.eviden.com/zh-hans/solutions/linux-high-availability-software-synchronous-replication-failover/"
 description: "使用 SafeKit 实现 Linux 高可用性：双节点集群，同步复制并自动故障转移您的应用，无需 SAN。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Linux 高可用与复制 {#linux-high-availability-and-replication}
+# Linux 零数据丢失高可用 {#linux-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-zh-hans app="Linux" guide="/zh-hans/quick-install/safekit-quick-installation-guide-for-a-new-linux-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-linux-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "SafeKit のインストール：Docker の高可用性"
+title: "SafeKit のインストール：Docker の高可用性（mirror.safe）"
 canonical: "https://safekit.eviden.com/ja/quick-install/safekit-quick-installation-guide-with-docker/"
 description: "手順ガイド：Linux 上の Docker 向けに SafeKit の mirror.safe モジュールを導入し、コンテナデータのリアルタイムレプリケーションと自動フェイルオーバーを実現。"
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# SafeKit のインストール：Docker の高可用性 {#install-safekit-for-docker-high-availability}
+# SafeKit のインストール：Docker の高可用性（mirror.safe） {#install-safekit-for-docker-high-availability-mirrorsafe}
 
 
 {{%  insert-safekit-mirror-guide-ja app="Docker" mod="mirror"  %}}

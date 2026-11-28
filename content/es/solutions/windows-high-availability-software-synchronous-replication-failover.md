@@ -1,5 +1,5 @@
 ---
-title: "Alta disponibilidad y replicación de Windows"
+title: "Alta disponibilidad de Windows sin pérdida de datos"
 canonical: "https://safekit.eviden.com/es/solutions/windows-high-availability-software-synchronous-replication-failover/"
 description: "Alta disponibilidad de Windows con SafeKit: clúster de dos nodos con replicación síncrona y conmutación por error automática de su aplicación, sin SAN."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Alta disponibilidad y replicación de Windows {#windows-high-availability-and-replication}
+# Alta disponibilidad de Windows sin pérdida de datos {#windows-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-2-es app="Windows" guide="/es/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-windows-app-1024.jpg"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Windows の負荷分散とフェイルオーバー"
+title: "Windows 向け組み込み型の負荷分散とフェイルオーバー"
 canonical: "https://safekit.eviden.com/ja/solutions/windows-load-balancing-failover/"
 description: "SafeKit による Windows の負荷分散と高可用性：標準 Windows サーバー上で仮想 IP、アプリケーション監視、自動フェイルオーバーを実現。"
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# Windows の負荷分散とフェイルオーバー {#windows-load-balancing-and-failover}
+# Windows 向け組み込み型の負荷分散とフェイルオーバー {#built-in-load-balancing-and-failover-for-windows}
 
 
 {{%  insert-safekit-solution-farm-2-ja app="Windows" guide="/ja/quick-install/safekit-quick-installation-guide-for-a-new-windows-application-with-network-load-balancing-and-failover/" img="/wp-content/uploads/2026/02/safekit-farm-windows-app-1024.jpg"  %}}

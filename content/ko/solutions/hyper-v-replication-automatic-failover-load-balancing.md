@@ -1,5 +1,5 @@
 ---
-title: "공유 스토리지 없는 Hyper-V 고가용성"
+title: "공유 스토리지 없는 Hyper-V 장애 조치 클러스터"
 canonical: "https://safekit.eviden.com/ko/solutions/hyper-v-replication-automatic-failover-load-balancing/"
 description: "SAN 없는 Hyper-V 고가용성: SafeKit은 서버 2대 간에 가상 머신을 실시간 복제하고 장애 시 자동으로 재시작합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hyper-V"]
 ---
 
-# 공유 스토리지 없는 Hyper-V 고가용성 {#hyper-v-high-availability-without-shared-storage}
+# 공유 스토리지 없는 Hyper-V 장애 조치 클러스터 {#hyper-v-failover-cluster-without-shared-storage}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Hyper-V"  %}}

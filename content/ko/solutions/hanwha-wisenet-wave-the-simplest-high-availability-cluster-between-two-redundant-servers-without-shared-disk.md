@@ -1,5 +1,5 @@
 ---
-title: "Hanwha Wisenet WAVE 고가용성"
+title: "자동 장애 조치를 지원하는 Hanwha Wisenet WAVE 이중화"
 canonical: "https://safekit.eviden.com/ko/solutions/hanwha-wisenet-wave-the-simplest-high-availability-cluster-between-two-redundant-servers-without-shared-disk/"
 description: "Hanwha Wisenet WAVE 고가용성: SafeKit은 SAN 없이 Hyper-V 가상 머신을 서버 2대 간에 복제하고 자동 장애 조치를 수행합니다."
 category: "solutions"
@@ -12,7 +12,7 @@ schemaType: "TechArticle"
 schemaApplications: ["Hanwha Wisenet"]
 ---
 
-# Hanwha Wisenet WAVE 고가용성 {#hanwha-wisenet-wave-high-availability}
+# 자동 장애 조치를 지원하는 Hanwha Wisenet WAVE 이중화 {#hanwha-wisenet-wave-redundancy-with-automatic-failover}
 
 
 {{%  insert-safekit-hyperv-solution-mirror-ko app="Hanwha Wisenet"  %}}

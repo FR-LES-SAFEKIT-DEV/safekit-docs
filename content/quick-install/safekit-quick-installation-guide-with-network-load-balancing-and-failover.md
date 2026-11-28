@@ -1,5 +1,5 @@
 ---
-title: "Install SafeKit for Apache load balancing"
+title: "Install SafeKit for Apache load balancing (apache_farm.safe)"
 canonical: "https://safekit.eviden.com/quick-install/safekit-quick-installation-guide-with-network-load-balancing-and-failover/"
 description: "Step-by-step guide: install the SafeKit apache_farm.safe module on Windows or Linux for network load balancing and failover of Apache web servers."
 category: "quick-install"
@@ -10,7 +10,7 @@ image: "/wp-content/uploads/2024/03/15-monitoring-up-up.png"
 schemaType: "TechArticle"
 ---
 
-# Install SafeKit for Apache load balancing {#install-safekit-for-apache-load-balancing}
+# Install SafeKit for Apache load balancing (apache_farm.safe) {#install-safekit-for-apache-load-balancing-apache_farmsafe}
 
 
 {{%  insert-safekit-farm-guide-en app="Apache" mod="apache_farm"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "Installer SafeKit pour la haute disponibilité Nedap AEOS"
+title: "Installer SafeKit pour la haute disponibilité Nedap AEOS (nedap.safe)"
 canonical: "https://safekit.eviden.com/fr/quick-install/safekit-quick-installation-guide-with-nedap/"
 description: "Guide pas à pas : installez le module SafeKit nedap.safe pour la réplication en temps réel et le basculement automatique du contrôle d’accès Nedap AEOS sous Windows."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# Installer SafeKit pour la haute disponibilité Nedap AEOS {#install-safekit-for-nedap-aeos-high-availability}
+# Installer SafeKit pour la haute disponibilité Nedap AEOS (nedap.safe) {#install-safekit-for-nedap-aeos-high-availability-nedapsafe}
 
 
 {{%  insert-safekit-mirror-guide-fr app="Nedap" mod="nedap"  %}}

@@ -1,5 +1,5 @@
 ---
-title: "تثبيت SafeKit للتوافر العالي لـ Milestone XProtect"
+title: "تثبيت SafeKit للتوافر العالي لـ Milestone XProtect (milestone.safe)"
 canonical: "https://safekit.eviden.com/ar/quick-install/safekit-quick-installation-guide-with-milestone-xprotect-management-server/"
 description: "دليل خطوة بخطوة: تثبيت وحدة SafeKit milestone.safe للنسخ في الوقت الفعلي وتجاوز الفشل لـ Milestone XProtect Management Server."
 category: "quick-install"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2024/03/14-monitoring-prim-second.png"
 schemaType: "TechArticle"
 ---
 
-# تثبيت SafeKit للتوافر العالي لـ Milestone XProtect {#install-safekit-for-milestone-xprotect-high-availability}
+# تثبيت SafeKit للتوافر العالي لـ Milestone XProtect (milestone.safe) {#install-safekit-for-milestone-xprotect-ha-milestonesafe}
 
 
 {{%  insert-safekit-mirror-guide-ar app="Milestone XProtect" mod="milestone"  %}}

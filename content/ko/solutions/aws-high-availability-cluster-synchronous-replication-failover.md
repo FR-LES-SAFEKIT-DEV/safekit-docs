@@ -1,5 +1,5 @@
 ---
-title: "AWS 고가용성 및 복제"
+title: "데이터 손실 없는 AWS 고가용성"
 canonical: "https://safekit.eviden.com/ko/solutions/aws-high-availability-cluster-synchronous-replication-failover/"
 description: "SafeKit으로 구현하는 AWS 고가용성: 클라우드 공유 디스크 없이 Windows 또는 Linux 인스턴스 2대 간 동기 복제 및 자동 장애 조치."
 category: "solutions"
@@ -11,7 +11,7 @@ image: "/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"
 schemaType: "TechArticle"
 ---
 
-# AWS 고가용성 및 복제 {#aws-high-availability-and-replication}
+# 데이터 손실 없는 AWS 고가용성 {#aws-high-availability-with-zero-data-loss}
 
 
 {{%  insert-safekit-solution-mirror-cloud-ko app="AWS" guide="/ko/quick-install/safekit-quick-installation-guide-in-aws-mirror-safe-module-for-real-time-replication-and-failover/" img="/wp-content/uploads/2026/02/safekit-aws-app-1024.jpg"  %}}
