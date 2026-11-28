@@ -14,6 +14,8 @@ schemaSector: "EACS"
 
 # التوافر العالي والتكرار لبرنامج التحكم الإلكتروني في الوصول (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![التوافر العالي والتكرار لبرنامج التحكم الإلكتروني في الوصول (EACS)](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  ما هو نظام التحكم الإلكتروني بالوصول (EACS)؟ {#what-is-an-electronic-access-control-system-eacs}
 
 يتكون نظام التحكم الإلكتروني بالوصول من أجهزة تتحكم في الدخول إلى الأماكن الخاصة.

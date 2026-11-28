@@ -14,6 +14,8 @@ schemaSector: "VMS"
 
 # Hochverfügbarkeit und Redundanz für Videomanagement-Software (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
+![Hochverfügbarkeit und Redundanz für Videomanagement-Software (VMS)](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
+
 ##  Was ist eine Video-Management-Software (VMS)? {#what-is-video-management-software-vms}
 
 Video-Management-Software (VMS) sammelt und zeichnet Kameravideos auf. Sie bietet eine Schnittstelle für Bediener, um Live- und aufgezeichnete Videos anzusehen.

@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # برامج التوافر العالي: تجميع خوادم Windows و Linux باستخدام SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![برامج التوافر العالي: تجميع خوادم Windows و Linux باستخدام SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## عرض تقديمي موجز لـ SafeKit في 30 ثانية {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [فيديو SafeKit: عرض تقديمي مدته 30 ثانية (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

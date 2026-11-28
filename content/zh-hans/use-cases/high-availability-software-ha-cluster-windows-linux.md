@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # 高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群 {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![高可用性软件：使用 SafeKit 实现 Windows 和 Linux 集群](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## SafeKit 30 秒电梯演讲 {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [SafeKit 视频：30 秒宣传片 (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

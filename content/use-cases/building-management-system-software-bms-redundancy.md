@@ -13,6 +13,8 @@ schemaSector: "BMS"
 
 # High Availability and Redundancy for Building Management Systems (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![High Availability and Redundancy for Building Management Systems (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  What is a building management system (BMS)? {#what-is-a-building-management-system-bms}
 
 A building management system (BMS) provides automatic and centralized control of building services: heating, ventilation and air conditioning (HVAC), power distribution, lighting and more.

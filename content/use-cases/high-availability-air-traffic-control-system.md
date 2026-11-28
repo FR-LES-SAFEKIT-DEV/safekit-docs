@@ -13,6 +13,8 @@ schemaMentions: ["ADB SafeGate"]
 
 # High Availability for Air Traffic Control Systems {#high-availability-for-air-traffic-control-systems}
 
+![High Availability for Air Traffic Control Systems](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
+
 ## Air Traffic Control Systems {#air-traffic-control-systems}
 
 Air traffic controllers have one of the most complex and stressful tasks imaginable. Today, airspace is busy and air traffic is intense. A single error in directing aircraft can have catastrophic consequences. Modern air traffic control systems depend on sophisticated software applications. These applications help controllers make critical decisions.

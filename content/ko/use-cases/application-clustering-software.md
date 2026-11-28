@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # OEM 고가용성: 소프트웨어에 SafeKit 클러스터링 내장하기 {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
+![OEM 고가용성: 소프트웨어에 SafeKit 클러스터링 내장하기](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
+
 ## OEM 고가용성 사용 사례 {#the-oem-high-availability-use-case}
 
 ### 소프트웨어 전용 고가용성 솔루션 {#a-software-only-high-availability-solution}

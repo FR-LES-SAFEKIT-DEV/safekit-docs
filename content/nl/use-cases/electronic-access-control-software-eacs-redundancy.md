@@ -14,6 +14,8 @@ schemaSector: "EACS"
 
 # Hoge beschikbaarheid en redundantie voor software voor elektronische toegangscontrole (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![Hoge beschikbaarheid en redundantie voor software voor elektronische toegangscontrole (EACS)](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  Wat is een elektronisch toegangscontrolesysteem (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
 Een elektronisch toegangscontrolesysteem bestaat uit hardware die de toegang tot privéruimtes regelt.

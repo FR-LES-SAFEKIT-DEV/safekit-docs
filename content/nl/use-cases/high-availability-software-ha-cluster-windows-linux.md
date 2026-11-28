@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # Software voor hoge beschikbaarheid: Windows- en Linux-clustering met SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![Software voor hoge beschikbaarheid: Windows- en Linux-clustering met SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## Elevatorpitch van 30 seconden voor SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [SafeKit-video: pitch van 30 seconden (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

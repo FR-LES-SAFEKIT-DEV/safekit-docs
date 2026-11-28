@@ -14,6 +14,8 @@ schemaMentions: ["ADB SafeGate"]
 
 # 항공 교통 관제 시스템의 고가용성 {#high-availability-for-air-traffic-control-systems}
 
+![항공 교통 관제 시스템의 고가용성](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
+
 ## 항공 교통 관제 시스템 {#air-traffic-control-systems}
 
 항공 교통 관제사는 상상할 수 있는 가장 복잡하고 스트레스가 많은 업무 중 하나를 수행합니다. 오늘날 영공은 혼잡하고 항공 교통은 매우 활발합니다. 항공기 유도에 단 한 번의 오류라도 발생하면 치명적인 결과를 초래할 수 있습니다. 현대의 항공 교통 관제 시스템은 정교한 소프트웨어 애플리케이션에 의존합니다. 이러한 애플리케이션은 관제사가 중요한 결정을 내리는 데 도움을 줍니다.

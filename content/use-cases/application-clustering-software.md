@@ -12,6 +12,8 @@ schemaType: "Article"
 
 # OEM High Availability: Embedding SafeKit Clustering into Your Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
+![OEM High Availability: Embedding SafeKit Clustering into Your Software](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
+
 ## The OEM high availability use case {#the-oem-high-availability-use-case}
 
 ### A software-only high availability solution {#a-software-only-high-availability-solution}

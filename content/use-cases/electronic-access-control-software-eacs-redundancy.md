@@ -13,6 +13,8 @@ schemaSector: "EACS"
 
 # High Availability and Redundancy for Electronic Access Control Software (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![High Availability and Redundancy for Electronic Access Control Software (EACS)](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  What is an electronic access control system (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
 An electronic access control system consists of hardware devices that control entry into private premises.

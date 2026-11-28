@@ -14,6 +14,8 @@ schemaSector: "EACS"
 
 # Elevata disponibilità e ridondanza per il software di controllo accessi elettronico (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![Elevata disponibilità e ridondanza per il software di controllo accessi elettronico (EACS)](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  Che cos’è un sistema elettronico di controllo degli accessi (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
 Un sistema elettronico di controllo degli accessi è costituito da dispositivi hardware che controllano l’ingresso in locali privati.

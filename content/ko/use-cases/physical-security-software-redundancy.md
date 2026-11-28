@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # 물리적 보안 소프트웨어의 고가용성 및 이중화 {#high-availability-and-redundancy-for-physical-security-software}
 
+![물리적 보안 소프트웨어의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 
 {{%  insert-safekit-security-solutions-ko app="physical security"  %}}
 

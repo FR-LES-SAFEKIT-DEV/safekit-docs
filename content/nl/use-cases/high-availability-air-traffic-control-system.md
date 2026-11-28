@@ -14,6 +14,8 @@ schemaMentions: ["ADB SafeGate"]
 
 # Hoge beschikbaarheid voor luchtverkeersleidingssystemen {#high-availability-for-air-traffic-control-systems}
 
+![Hoge beschikbaarheid voor luchtverkeersleidingssystemen](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
+
 ## Luchtverkeersleidingssystemen {#air-traffic-control-systems}
 
 Luchtverkeersleiders hebben een van de meest complexe en stressvolle taken die denkbaar zijn. Tegenwoordig is het luchtruim druk en is het luchtverkeer intens. Een enkele fout bij het leiden van vliegtuigen kan catastrofale gevolgen hebben. Moderne luchtverkeersleidingssystemen zijn afhankelijk van geavanceerde softwaretoepassingen. Deze toepassingen helpen verkeersleiders bij het nemen van cruciale beslissingen.

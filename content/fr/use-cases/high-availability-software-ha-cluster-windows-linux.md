@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # Logiciel de haute disponibilité : clustering Windows et Linux avec SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![Logiciel de haute disponibilité : clustering Windows et Linux avec SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## Présentation de SafeKit en 30 secondes {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [Vidéo SafeKit : présentation en 30 secondes (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

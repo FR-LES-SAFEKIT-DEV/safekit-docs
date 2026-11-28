@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # 건물 관리 시스템(BMS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![건물 관리 시스템(BMS)의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  건물 관리 시스템(BMS)이란 무엇인가요? {#what-is-a-building-management-system-bms}
 
 건물 관리 시스템(BMS)은 난방, 환기 및 공조(HVAC), 전력 분배, 조명 등 건물 서비스를 자동으로 중앙 집중식으로 제어합니다.

@@ -12,6 +12,8 @@ schemaType: "Article"
 
 # High Availability Software: Windows and Linux Clustering with SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![High Availability Software: Windows and Linux Clustering with SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## 30 seconds elevator pitch for SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [SafeKit video: 30-second pitch (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

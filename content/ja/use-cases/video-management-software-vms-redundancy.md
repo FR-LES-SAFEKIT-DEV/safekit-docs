@@ -14,6 +14,8 @@ schemaSector: "VMS"
 
 # ビデオ管理ソフトウェア（VMS）の高可用性と冗長性 {#high-availability-and-redundancy-for-video-management-software-vms}
 
+![ビデオ管理ソフトウェア（VMS）の高可用性と冗長性](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
+
 ##  ビデオ管理ソフトウェア（VMS）とは？ {#what-is-video-management-software-vms}
 
 ビデオ管理ソフトウェア（VMS）は、カメラの映像を収集・記録します。オペレーターがライブ映像や録画映像を閲覧するためのインターフェースを提供します。

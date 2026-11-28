@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # OEM 高可用性：将 SafeKit 集群技术嵌入您的软件 {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
+![OEM 高可用性：将 SafeKit 集群技术嵌入您的软件](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
+
 ## OEM 高可用性用例 {#the-oem-high-availability-use-case}
 
 ### 纯软件高可用性解决方案 {#a-software-only-high-availability-solution}

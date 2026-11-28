@@ -14,6 +14,8 @@ schemaSector: "VMS"
 
 # التوافر العالي والتكرار لبرامج إدارة الفيديو (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
+![التوافر العالي والتكرار لبرامج إدارة الفيديو (VMS)](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
+
 ##  ما هو برنامج إدارة الفيديو (VMS)؟ {#what-is-video-management-software-vms}
 
 يجمع برنامج إدارة الفيديو (VMS) ويسجل فيديو الكاميرا. ويوفر واجهة للمشغلين لعرض الفيديو المباشر والمسجل.

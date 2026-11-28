@@ -14,6 +14,8 @@ schemaSector: "VMS"
 
 # Hoge beschikbaarheid en redundantie voor videobeheersoftware (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
+![Hoge beschikbaarheid en redundantie voor videobeheersoftware (VMS)](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
+
 ##  Wat is videobeheersoftware (VMS)? {#what-is-video-management-software-vms}
 
 Videomanagementsoftware (VMS) verzamelt en neemt camerabeelden op. Het biedt een interface voor operators om live en opgenomen video te bekijken.

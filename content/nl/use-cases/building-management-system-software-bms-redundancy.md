@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # Hoge beschikbaarheid en redundantie voor gebouwbeheersystemen (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![Hoge beschikbaarheid en redundantie voor gebouwbeheersystemen (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  Wat is een gebouwbeheersysteem (BMS)? {#what-is-a-building-management-system-bms}
 
 Een gebouwbeheersysteem (BMS) biedt automatische en gecentraliseerde controle van gebouwinstallaties: verwarming, ventilatie en airconditioning (HVAC), stroomdistributie, verlichting en meer.

@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # ビル管理システム（BMS）の高可用性と冗長性 {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![ビル管理システム（BMS）の高可用性と冗長性](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  ビル管理システム（BMS）とは？ {#what-is-a-building-management-system-bms}
 
 ビル管理システム（BMS）は、暖房、換気、空調（HVAC）、電力供給、照明などのビルサービスを自動かつ一元的に制御します。

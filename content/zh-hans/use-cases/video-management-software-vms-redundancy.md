@@ -14,6 +14,8 @@ schemaSector: "VMS"
 
 # 视频管理软件 (VMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-video-management-software-vms}
 
+![视频管理软件 (VMS) 的高可用性和冗余](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
+
 ##  什么是视频管理软件 (VMS)？ {#what-is-video-management-software-vms}
 
 视频管理软件 (VMS) 收集和记录摄像机视频。它为操作员提供了一个界面，用于查看实时和录制的视频。

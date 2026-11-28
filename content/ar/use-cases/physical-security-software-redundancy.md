@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # التوافر العالي والتكرار لبرامج الأمن المادي {#high-availability-and-redundancy-for-physical-security-software}
 
+![التوافر العالي والتكرار لبرامج الأمن المادي](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 
 {{%  insert-safekit-security-solutions-ar app="physical security"  %}}
 

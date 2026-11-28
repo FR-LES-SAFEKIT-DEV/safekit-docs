@@ -14,6 +14,8 @@ schemaSector: "EACS"
 
 # 전자 출입 통제 소프트웨어(EACS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![전자 출입 통제 소프트웨어(EACS)의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  전자식 출입 통제 시스템(EACS)이란 무엇인가요? {#what-is-an-electronic-access-control-system-eacs}
 
 전자식 출입 통제 시스템은 사유지 출입을 통제하는 하드웨어 장치로 구성됩니다.

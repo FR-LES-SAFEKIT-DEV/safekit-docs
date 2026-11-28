@@ -14,6 +14,8 @@ schemaSector: "VMS"
 
 # Alta Disponibilidade e Redundância para Software de Gestão de Vídeo (VMS) {#high-availability-and-redundancy-for-video-management-software-vms}
 
+![Alta Disponibilidade e Redundância para Software de Gestão de Vídeo (VMS)](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
+
 ##  O que é um software de gestão de vídeo (VMS)? {#what-is-video-management-software-vms}
 
 O software de gestão de vídeo (VMS) recolhe e grava o vídeo das câmaras. Fornece uma interface para os operadores visualizarem o vídeo em direto e gravado.

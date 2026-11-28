@@ -14,6 +14,8 @@ schemaSector: "EACS"
 
 # 电子门禁控制软件 (EACS) 的高可用性和冗余性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![电子门禁控制软件 (EACS) 的高可用性和冗余性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  什么是电子门禁系统 (EACS)？ {#what-is-an-electronic-access-control-system-eacs}
 
 电子门禁系统由控制私人场所出入的硬件设备组成。

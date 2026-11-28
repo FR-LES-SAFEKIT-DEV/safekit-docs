@@ -14,6 +14,8 @@ schemaMentions: ["RATP"]
 
 # Alta Disponibilidade para o Transporte Público: Sala de Controle Centralizada {#high-availability-for-public-transport-centralized-control-room}
 
+![Alta Disponibilidade para o Transporte Público: Sala de Controle Centralizada](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
+
 ## Salas de Controle de Transporte Público {#public-transport-control-rooms}
 
 Uma sala de controle centralizada é o centro nevrálgico dos sistemas modernos de transporte público. A sala de controle monitora linhas inteiras de metrô, gerencia operações automatizadas e garante a segurança dos passageiros. Para sistemas de metrô, linhas de metrô automatizadas e redes de ônibus, a sala de controle deve operar 24 horas por dia, 7 dias por semana, sem interrupção.

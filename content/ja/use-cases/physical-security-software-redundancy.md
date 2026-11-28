@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # 物理セキュリティソフトウェアの高可用性と冗長性 {#high-availability-and-redundancy-for-physical-security-software}
 
+![物理セキュリティソフトウェアの高可用性と冗長性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 
 {{%  insert-safekit-security-solutions-ja app="physical security"  %}}
 

@@ -14,6 +14,8 @@ schemaMentions: ["RATP"]
 
 # 公共交通高可用性：集中控制室 {#high-availability-for-public-transport-centralized-control-room}
 
+![公共交通高可用性：集中控制室](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
+
 ## 公共交通控制室 {#public-transport-control-rooms}
 
 集中控制室是现代公共交通系统的神经中枢。控制室监控整个地铁线路，管理自动化运营，并确保乘客安全。对于地铁系统、自动化地铁线路和公交网络，控制室必须不间断地全天候运行。

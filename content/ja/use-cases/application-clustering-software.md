@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # OEM 高可用性：SafeKit クラスタリングをソフトウェアに組み込む {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
+![OEM 高可用性：SafeKit クラスタリングをソフトウェアに組み込む](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
+
 ## OEM 高可用性ユースケース {#the-oem-high-availability-use-case}
 
 ### ソフトウェアのみのハイアベイラビリティソリューション {#a-software-only-high-availability-solution}

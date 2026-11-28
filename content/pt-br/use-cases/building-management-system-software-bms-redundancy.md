@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # Alta Disponibilidade e Redundância para Sistemas de Gerenciamento Predial (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![Alta Disponibilidade e Redundância para Sistemas de Gerenciamento Predial (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  O que é um sistema de gestão predial (BMS)? {#what-is-a-building-management-system-bms}
 
 Um sistema de gestão de edifícios (BMS) fornece controle automático e centralizado dos serviços do edifício: aquecimento, ventilação e ar condicionado (HVAC), distribuição de energia, iluminação e muito mais.

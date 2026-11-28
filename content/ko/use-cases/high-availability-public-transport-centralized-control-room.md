@@ -14,6 +14,8 @@ schemaMentions: ["RATP"]
 
 # 대중교통의 고가용성: 중앙 제어실 {#high-availability-for-public-transport-centralized-control-room}
 
+![대중교통의 고가용성: 중앙 제어실](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
+
 ## 대중교통 통제실 {#public-transport-control-rooms}
 
 중앙 집중식 제어실은 현대 대중교통 시스템의 신경 중추입니다. 제어실은 전체 지하철 노선을 모니터링하고, 자동화된 운영을 관리하며, 승객의 안전을 보장합니다. 지하철 시스템, 자동화된 지하철 노선 및 버스 네트워크의 경우 제어실은 중단 없이 24시간 연중무휴로 운영되어야 합니다.

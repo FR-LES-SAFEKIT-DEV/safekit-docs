@@ -14,6 +14,8 @@ schemaSector: "EACS"
 
 # 電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性 {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![電子アクセス制御ソフトウェア（EACS）の高可用性と冗長性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  電子アクセス制御システム（EACS）とは何ですか？ {#what-is-an-electronic-access-control-system-eacs}
 
 電子アクセス制御システムは、私有地への立ち入りを制御するハードウェアデバイスで構成されています。

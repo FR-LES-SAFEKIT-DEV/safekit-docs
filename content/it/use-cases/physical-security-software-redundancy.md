@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # Elevata disponibilità e ridondanza per il software di sicurezza fisica {#high-availability-and-redundancy-for-physical-security-software}
 
+![Elevata disponibilità e ridondanza per il software di sicurezza fisica](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 
 {{%  insert-safekit-security-solutions-it app="physical security"  %}}
 

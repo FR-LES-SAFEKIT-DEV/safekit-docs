@@ -14,6 +14,8 @@ schemaSector: "EACS"
 
 # Hochverfügbarkeit und Redundanz für elektronische Zutrittskontrollsoftware (EACS) {#high-availability-and-redundancy-for-electronic-access-control-software-eacs}
 
+![Hochverfügbarkeit und Redundanz für elektronische Zutrittskontrollsoftware (EACS)](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 ##  Was ist ein elektronisches Zutrittskontrollsystem (EACS)? {#what-is-an-electronic-access-control-system-eacs}
 
 Ein elektronisches Zutrittskontrollsystem besteht aus Hardwaregeräten, die den Zutritt zu privaten Räumlichkeiten steuern.

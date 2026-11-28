@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # OEM-Hochverfügbarkeit: SafeKit-Clustering in Ihre Software einbetten {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
+![OEM-Hochverfügbarkeit: SafeKit-Clustering in Ihre Software einbetten](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
+
 ## Der OEM-Anwendungsfall für Hochverfügbarkeit {#the-oem-high-availability-use-case}
 
 ### Eine reine Softwarelösung für Hochverfügbarkeit {#a-software-only-high-availability-solution}

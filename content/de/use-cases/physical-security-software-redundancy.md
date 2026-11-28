@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit {#high-availability-and-redundancy-for-physical-security-software}
 
+![Hochverfügbarkeit und Redundanz für Software für die physische Sicherheit](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 
 {{%  insert-safekit-security-solutions-de app="physical security"  %}}
 

@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # Hochverfügbarkeit und Redundanz für Gebäudemanagementsysteme (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![Hochverfügbarkeit und Redundanz für Gebäudemanagementsysteme (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  Was ist ein Gebäudemanagementsystem (BMS)? {#what-is-a-building-management-system-bms}
 
 Ein Gebäudemanagementsystem (BMS) bietet eine automatische und zentrale Steuerung von Gebäudeinstallationen: Heizung, Lüftung und Klimaanlage (HLK), Stromverteilung, Beleuchtung und mehr.

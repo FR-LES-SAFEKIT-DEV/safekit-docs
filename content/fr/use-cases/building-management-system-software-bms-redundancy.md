@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # Haute disponibilité et redondance pour les systèmes de gestion de bâtiment (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![Haute disponibilité et redondance pour les systèmes de gestion de bâtiment (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  Qu’est-ce qu’un système de gestion de bâtiment (BMS) ? {#what-is-a-building-management-system-bms}
 
 Un système de gestion de bâtiment (BMS) fournit un contrôle automatique et centralisé des services du bâtiment : chauffage, ventilation et climatisation (CVC), distribution d’énergie, éclairage et plus encore.

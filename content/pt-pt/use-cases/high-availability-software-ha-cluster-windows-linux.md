@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # Software de Alta Disponibilidade: Agrupamento de Servidores Windows e Linux com SafeKit {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![Software de Alta Disponibilidade: Agrupamento de Servidores Windows e Linux com SafeKit](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## Apresentação rápida de 30 segundos do SafeKit {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [Vídeo SafeKit: Apresentação em 30 segundos (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

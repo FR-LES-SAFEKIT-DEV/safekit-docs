@@ -14,6 +14,8 @@ schemaMentions: ["RATP"]
 
 # Hoge beschikbaarheid voor openbaar vervoer: gecentraliseerde controlekamer {#high-availability-for-public-transport-centralized-control-room}
 
+![Hoge beschikbaarheid voor openbaar vervoer: gecentraliseerde controlekamer](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
+
 ## Controlekamers openbaar vervoer {#public-transport-control-rooms}
 
 Een centrale controlekamer is het zenuwcentrum van moderne openbaarvervoersystemen. De controlekamer bewaakt hele metrolijnen, beheert geautomatiseerde processen en zorgt voor de veiligheid van passagiers. Voor metrostelsels, geautomatiseerde metrolijnen en busnetwerken moet de controlekamer 24/7 zonder onderbreking werken.

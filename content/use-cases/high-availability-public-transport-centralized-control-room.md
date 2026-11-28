@@ -13,6 +13,8 @@ schemaMentions: ["RATP"]
 
 # High Availability for Public Transport: Centralized Control Room {#high-availability-for-public-transport-centralized-control-room}
 
+![High Availability for Public Transport: Centralized Control Room](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
+
 ## Public Transport Control Rooms {#public-transport-control-rooms}
 
 A centralized control room is the nerve center of modern public transportation systems. The control room monitors entire metro lines, manages automated operations, and ensures passenger safety. For subway systems, automated metro lines, and bus networks, the control room must operate 24/7 without interruption.

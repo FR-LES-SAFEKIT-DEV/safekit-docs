@@ -14,6 +14,8 @@ schemaMentions: ["ADB SafeGate"]
 
 # Alta Disponibilidade para Sistemas de Controlo de Tráfego Aéreo {#high-availability-for-air-traffic-control-systems}
 
+![Alta Disponibilidade para Sistemas de Controlo de Tráfego Aéreo](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
+
 ## Sistemas de Controlo de Tráfego Aéreo {#air-traffic-control-systems}
 
 Os controladores de tráfego aéreo têm uma das tarefas mais complexas e stressantes que se possa imaginar. Hoje em dia, o espaço aéreo é movimentado e o tráfego aéreo é intenso. Um único erro na direção das aeronaves pode ter consequências catastróficas. Os sistemas modernos de controlo de tráfego aéreo dependem de aplicações de software sofisticadas. Estas aplicações ajudam os controladores a tomar decisões críticas.

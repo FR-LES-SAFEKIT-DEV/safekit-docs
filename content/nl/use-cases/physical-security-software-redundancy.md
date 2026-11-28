@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # Hoge beschikbaarheid en redundantie voor fysieke beveiligingssoftware {#high-availability-and-redundancy-for-physical-security-software}
 
+![Hoge beschikbaarheid en redundantie voor fysieke beveiligingssoftware](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 
 {{%  insert-safekit-security-solutions-nl app="physical security"  %}}
 

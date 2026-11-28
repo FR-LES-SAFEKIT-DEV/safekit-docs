@@ -14,6 +14,8 @@ schemaMentions: ["ADB SafeGate"]
 
 # 空中交通管制系统的高可用性 {#high-availability-for-air-traffic-control-systems}
 
+![空中交通管制系统的高可用性](/wp-content/uploads/2026/05/safekit-atc-512-512.jpg)
+
 ## 空中交通管制系统 {#air-traffic-control-systems}
 
 空中交通管制员的工作是人们所能想象的最复杂、压力最大的工作之一。如今，空域繁忙，空中交通繁忙。指挥飞机时出现的一个错误都可能造成灾难性的后果。现代空中交通管制系统依赖于复杂的软件应用程序。这些应用程序可帮助管制员做出关键决策。

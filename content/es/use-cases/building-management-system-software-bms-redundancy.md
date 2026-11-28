@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # Alta disponibilidad y redundancia para sistemas de gestión de edificios (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![Alta disponibilidad y redundancia para sistemas de gestión de edificios (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  ¿Qué es un sistema de gestión de edificios (BMS)? {#what-is-a-building-management-system-bms}
 
 Un sistema de gestión de edificios (BMS) proporciona un control automático y centralizado de los servicios del edificio: calefacción, ventilación y aire acondicionado (HVAC), distribución de energía, iluminación y más.

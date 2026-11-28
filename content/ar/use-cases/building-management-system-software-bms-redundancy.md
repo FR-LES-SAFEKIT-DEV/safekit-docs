@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # التوافر العالي والتكرار لأنظمة إدارة المباني (BMS) {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![التوافر العالي والتكرار لأنظمة إدارة المباني (BMS)](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  ما هو نظام إدارة المباني (BMS)؟ {#what-is-a-building-management-system-bms}
 
 يوفر نظام إدارة المباني (BMS) تحكمًا تلقائيًا ومركزيًا في خدمات المبنى: التدفئة والتهوية وتكييف الهواء (HVAC)، وتوزيع الطاقة، والإضاءة، وغير ذلك.

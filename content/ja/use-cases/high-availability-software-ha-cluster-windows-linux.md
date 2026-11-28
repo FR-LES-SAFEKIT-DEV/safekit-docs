@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # 高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![高可用性ソフトウェア：SafeKit による Windows および Linux クラスタリング](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## SafeKit の 30 秒エレベーターピッチ {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [SafeKit 動画：30 秒間のプレゼンテーション (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

@@ -14,6 +14,8 @@ schemaSector: "BMS"
 
 # 楼宇管理系统 (BMS) 的高可用性和冗余 {#high-availability-and-redundancy-for-building-management-systems-bms}
 
+![楼宇管理系统 (BMS) 的高可用性和冗余](/wp-content/uploads/2026/05/safekit-bms-512-512.jpg)
+
 ##  什么是楼宇管理系统（BMS）？ {#what-is-a-building-management-system-bms}
 
 楼宇管理系统（BMS）提供对楼宇服务的自动和集中控制：供暖、通风和空调（HVAC）、配电、照明等。

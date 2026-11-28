@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # 고가용성 소프트웨어: SafeKit을 사용한 Windows 및 Linux 클러스터링 {#high-availability-software-windows-and-linux-clustering-with-safekit}
 
+![고가용성 소프트웨어: SafeKit을 사용한 Windows 및 Linux 클러스터링](/wp-content/uploads/2026/04/safekit-icon-512x512-1.png)
+
 ## SafeKit 30초 엘리베이터 스피치 {#30-seconds-elevator-pitch-for-safekit}
 
 🎬 [SafeKit 동영상: 30초짜리 홍보 영상 (0:30)](<https://www.youtube.com/watch?v=zME3RnJGCCg>)

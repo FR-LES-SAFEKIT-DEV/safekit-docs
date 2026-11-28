@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit no Seu Software {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
+![Alta Disponibilidade OEM: Incorporando o Agrupamento SafeKit no Seu Software](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
+
 ## O caso de uso de alta disponibilidade OEM {#the-oem-high-availability-use-case}
 
 ### Uma solução de alta disponibilidade apenas em software {#a-software-only-high-availability-solution}

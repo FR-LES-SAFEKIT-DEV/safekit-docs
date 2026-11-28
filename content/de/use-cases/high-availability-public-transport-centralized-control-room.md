@@ -14,6 +14,8 @@ schemaMentions: ["RATP"]
 
 # Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle {#high-availability-for-public-transport-centralized-control-room}
 
+![Hohe Verfügbarkeit im öffentlichen Nahverkehr: Zentrale Leitstelle](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
+
 ## Leitstellen des öffentlichen Nahverkehrs {#public-transport-control-rooms}
 
 Eine zentrale Leitstelle ist das Nervenzentrum moderner öffentlicher Verkehrssysteme. Die Leitstelle überwacht ganze U-Bahn-Linien, steuert den automatisierten Betrieb und gewährleistet die Sicherheit der Fahrgäste. Für U-Bahn-Systeme, automatisierte U-Bahn-Linien und Busnetze muss die Leitstelle rund um die Uhr ohne Unterbrechung betrieben werden.

@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # التوافر العالي OEM: تضمين تجميع SafeKit في برامجك {#oem-high-availability-embedding-safekit-clustering-into-your-software}
 
+![التوافر العالي OEM: تضمين تجميع SafeKit في برامجك](/wp-content/uploads/2026/05/safekit-for-oem-512-512.jpg)
+
 ## حالة استخدام التوافر العالي OEM {#the-oem-high-availability-use-case}
 
 ### حل عالي التوافر يعتمد على البرمجيات فقط {#a-software-only-high-availability-solution}

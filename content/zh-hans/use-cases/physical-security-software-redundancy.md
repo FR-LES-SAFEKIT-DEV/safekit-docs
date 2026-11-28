@@ -13,6 +13,8 @@ schemaType: "Article"
 
 # 物理安全软件的高可用性和冗余性 {#high-availability-and-redundancy-for-physical-security-software}
 
+![物理安全软件的高可用性和冗余性](/wp-content/uploads/2026/05/safekit-eacs-512-512.jpg)
+
 
 {{%  insert-safekit-security-solutions-zh-hans app="physical security"  %}}
 

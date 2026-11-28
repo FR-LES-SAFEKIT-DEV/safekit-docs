@@ -14,6 +14,8 @@ schemaMentions: ["RATP"]
 
 # 公共交通機関の高可用性：集中管理室 {#high-availability-for-public-transport-centralized-control-room}
 
+![公共交通機関の高可用性：集中管理室](/wp-content/uploads/2026/05/safekit-occ-512-512.jpg)
+
 ## 公共交通機関の運行管理室 {#public-transport-control-rooms}
 
 集中制御室は、現代の公共交通機関の神経中枢です。制御室は、地下鉄路線全体を監視し、自動化された運用を管理し、乗客の安全を確保します。地下鉄システム、自動化された地下鉄路線、およびバスネットワークの場合、制御室は中断することなく 24 時間年中無休で運用する必要があります。

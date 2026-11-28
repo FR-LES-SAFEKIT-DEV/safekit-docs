@@ -14,6 +14,8 @@ schemaSector: "VMS"
 
 # 비디오 관리 소프트웨어(VMS)의 고가용성 및 이중화 {#high-availability-and-redundancy-for-video-management-software-vms}
 
+![비디오 관리 소프트웨어(VMS)의 고가용성 및 이중화](/wp-content/uploads/2026/05/safekit-vms-512-512.jpg)
+
 ##  비디오 관리 소프트웨어(VMS)란 무엇인가요? {#what-is-video-management-software-vms}
 
 영상 관리 소프트웨어(VMS)는 카메라 영상을 수집하고 기록합니다. 또한 운영자가 실시간 및 녹화된 영상을 볼 수 있는 인터페이스를 제공합니다.
