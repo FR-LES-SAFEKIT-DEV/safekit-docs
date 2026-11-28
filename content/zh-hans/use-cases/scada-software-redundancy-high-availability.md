@@ -7,12 +7,14 @@ lang: "zh-hans"
 topics: "什么是 SCADA 系统？, 为什么 SCADA 软件至关重要？, 主要 SCADA 软件供应商, SafeKit 为 SCADA 软件的冗余和高可用性提供了两种解决方案, SafeKit，SCADA 市场公认的解决方案"
 hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software, safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software, safekit-a-recognized-solution-on-the-scada-market"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 51 expressions"
-image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
+image: "/wp-content/uploads/2026/05/safekit-scada-512-512.jpg"
 schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
 # SCADA 和工业控制系统 (ICS) 的高可用性和冗余 {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+
+![SCADA 和工业控制系统 (ICS) 的高可用性和冗余](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 
 ##  什么是 SCADA 系统？ {#what-is-a-scada-system}
 

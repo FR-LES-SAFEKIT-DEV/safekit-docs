@@ -7,12 +7,14 @@ lang: "fr"
 topics: "Qu’est-ce qu’un système SCADA ?, Pourquoi le logiciel SCADA est-il essentiel ?, Principaux fournisseurs de logiciels SCADA, SafeKit propose deux solutions pour la redondance et la haute disponibilité d’un logiciel SCADA, SafeKit une solution reconnue sur le marché SCADA"
 hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software, safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software, safekit-a-recognized-solution-on-the-scada-market"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 58 expressions"
-image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
+image: "/wp-content/uploads/2026/05/safekit-scada-512-512.jpg"
 schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
 # Haute disponibilité et redondance pour les systèmes SCADA et les systèmes de contrôle industriel (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+
+![Haute disponibilité et redondance pour les systèmes SCADA et les systèmes de contrôle industriel (ICS)](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 
 ##  Qu’est-ce qu’un système SCADA ? {#what-is-a-scada-system}
 

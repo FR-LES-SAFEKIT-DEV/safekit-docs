@@ -7,12 +7,14 @@ lang: "nl"
 topics: "Wat is een SCADA-systeem?, Waarom is SCADA-software cruciaal?, Belangrijkste leveranciers SCADA-software, SafeKit biedt twee oplossingen voor redundantie en hoge beschikbaarheid van SCADA-software, SafeKit een erkende oplossing op de SCADA-markt"
 hashpart: "what-is-a-scada-system, why-a-scada-software-is-critical, key-players-list-in-scada-software, safekit-brings-two-solutions-for-redundancy-and-high-availability-of-a-scada-software, safekit-a-recognized-solution-on-the-scada-market"
 translation: "translate_md 2026-11-17.2 | glossaire 2026-11-17.11 | Translation LLM | 49 expressions"
-image: "/wp-content/uploads/2023/01/desigo-cc-1280-250-1.jpg"
+image: "/wp-content/uploads/2026/05/safekit-scada-512-512.jpg"
 schemaType: "Article"
 schemaSector: "SCADA"
 ---
 
 # Hoge beschikbaarheid en redundantie voor SCADA en industriële controlesystemen (ICS) {#high-availability-and-redundancy-for-scada-and-industrial-control-systems-ics}
+
+![Hoge beschikbaarheid en redundantie voor SCADA en industriële controlesystemen (ICS)](/wp-content/uploads/2026/05/safekit-scada-512-512.jpg)
 
 ##  Wat is een SCADA-systeem? {#what-is-a-scada-system}
 
